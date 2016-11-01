@@ -16,7 +16,7 @@
     }
   ],
   "notification_subscribers": [
-    "ndolci@microsoft.com"
+    "kasouz@microsoft.com"
   ],
   "branches_to_filter": [
     "master-oldev",
@@ -24,5 +24,12 @@
   ],
   "git_repository_url_open_to_public_contributors": "",
   "skip_source_output_uploading": false,
-  "dependent_repositories": []
+  "dependent_repositories": [
+        {
+            "path_to_root": "_repo.en-us",
+            "url": "https://cpubwin.visualstudio.com/_git/windows-uwp",
+            "branch": "live",
+            "branch_mapping": {}
+        }
+  ]
 }
