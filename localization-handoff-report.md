@@ -6,24 +6,24 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\monetize\ui-and-user-experience-guidelines.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/c10134343b6776bbe38d9ea59fdacea542d7bd6f?path=windows-apps-src%2Fmonetize%2Fui-and-user-experience-guidelines.md&_a=contents) | HandedOffSuccess | [Details](#fc481b0f5e83d3e8b7ba42f024d9211ab92147675224)
+ [windows-apps-src\networking\networking-basics.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/28cf7084fd7ea6ad41c7c2817522891617928abb?path=windows-apps-src%2Fnetworking%2Fnetworking-basics.md&_a=contents) | HandedOffSuccess | [Details](#13457b7da3472f3530805198a74b3a6b2ff78f505247)
 
 ## Item Details
-##### <a name='fc481b0f5e83d3e8b7ba42f024d9211ab92147675224'></a> Source: [windows-apps-src\monetize\ui-and-user-experience-guidelines.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/c10134343b6776bbe38d9ea59fdacea542d7bd6f?path=windows-apps-src%2Fmonetize%2Fui-and-user-experience-guidelines.md&_a=contents)
+##### <a name='13457b7da3472f3530805198a74b3a6b2ff78f505247'></a> Source: [windows-apps-src\networking\networking-basics.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/28cf7084fd7ea6ad41c7c2817522891617928abb?path=windows-apps-src%2Fnetworking%2Fnetworking-basics.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [ui-and-user-experience-guidelines.600d817be1f5d0a7af7d2a83c06a9c3454c1c7f9.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/2748170fc841ad34dbbcd06673743fdf4bacfbac?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fui-and-user-experience-guidelines.600d817be1f5d0a7af7d2a83c06a9c3454c1c7f9.de-de.xlf&_a=contents)
-* Handoff Datetime: 2016-11-07 19:15:39
+* Handoff File: [networking-basics.1ef0558ddfd03583f74afa064763b4b28e0dad43.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/f9b6c70f559ab9fda54992a6eabafe57d6dc479e?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fnetworking-basics.1ef0558ddfd03583f74afa064763b4b28e0dad43.de-de.xlf&_a=contents)
+* Handoff Datetime: 2016-11-07 19:53:49
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\monetize\ui-and-user-experience-guidelines.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/c3cc6ddc6f3b2e0e594b3a771a3787b6567d88e5?path=windows-apps-src%2Fmonetize%2Fui-and-user-experience-guidelines.md&_a=contents)
-* Current Handback File: [ui-and-user-experience-guidelines.600d817be1f5d0a7af7d2a83c06a9c3454c1c7f9.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/af7251542093aa676fc710fa76cce8c29961cc27?path=ol-handback%2FMicrosoft%2Fwindows-apps.de-de%2Fmaster%2Fui-and-user-experience-guidelines.600d817be1f5d0a7af7d2a83c06a9c3454c1c7f9.de-de.xlf&_a=contents)
-* Current Handback Datetime: 2016-10-21 15:17:04
-* Bilingual File: [ui-and-user-experience-guidelines.600d817be1f5d0a7af7d2a83c06a9c3454c1c7f9.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/af7251542093aa676fc710fa76cce8c29961cc27?path=ol-handback%2FMicrosoft%2Fwindows-apps.de-de%2Fmaster%2Fui-and-user-experience-guidelines.600d817be1f5d0a7af7d2a83c06a9c3454c1c7f9.de-de.xlf&_a=contents)
-* Bilingual Datetime: 2016-10-24 15:46:17
+* Current Target File: [windows-apps-src\networking\networking-basics.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/bd18ae6d5d38832091e0ddecaff4b7000623d830?path=windows-apps-src%2Fnetworking%2Fnetworking-basics.md&_a=contents)
+* Current Handback File: [networking-basics.1ef0558ddfd03583f74afa064763b4b28e0dad43.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/628ba96e56c142c61ba716ca85d7a08ad45914fb?path=ol-handback%2FMicrosoft%2Fwindows-apps.de-de%2Fmaster%2Fnetworking-basics.1ef0558ddfd03583f74afa064763b4b28e0dad43.de-de.xlf&_a=contents)
+* Current Handback Datetime: 2016-09-26 12:44:19
+* Bilingual File: [networking-basics.1ef0558ddfd03583f74afa064763b4b28e0dad43.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/628ba96e56c142c61ba716ca85d7a08ad45914fb?path=ol-handback%2FMicrosoft%2Fwindows-apps.de-de%2Fmaster%2Fnetworking-basics.1ef0558ddfd03583f74afa064763b4b28e0dad43.de-de.xlf&_a=contents)
+* Bilingual Datetime: 2016-10-18 13:24:42
 * [Back to Top](#report-top)
 
 
