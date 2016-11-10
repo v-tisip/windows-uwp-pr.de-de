@@ -1,28 +1,46 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\launch-resume\web-to-app-linking.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/77127e3a387839aba423ff109a8898085b585b73?path=windows-apps-src%2Flaunch-resume%2Fweb-to-app-linking.md&_a=contents) | HandedOffSuccess | [Details](#9a26170d567107bb05cd2257b904ea032bc5b14f4780)
+ [windows-apps-src\monetize\manage-your-experiment.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/bedaa31018d24f23e3e63c6b552b0d3116d7f415?path=windows-apps-src%2Fmonetize%2Fmanage-your-experiment.md&_a=contents) | HandedOffSuccess | [Details](#18e7956e627589dca694b46472fea631c1ebe6b75203)
+ [windows-apps-src\TOC.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/168e80778be38895179402861aee57b86286ff1a?path=windows-apps-src%2FTOC.md&_a=contents) | HandedOffSuccess | [Details](#e899f3561060cf80f6a44f99ff0e436f9bb5d8038398)
 
 ## Item Details
-##### <a name='9a26170d567107bb05cd2257b904ea032bc5b14f4780'></a> Source: [windows-apps-src\launch-resume\web-to-app-linking.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/77127e3a387839aba423ff109a8898085b585b73?path=windows-apps-src%2Flaunch-resume%2Fweb-to-app-linking.md&_a=contents)
+##### <a name='18e7956e627589dca694b46472fea631c1ebe6b75203'></a> Source: [windows-apps-src\monetize\manage-your-experiment.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/bedaa31018d24f23e3e63c6b552b0d3116d7f415?path=windows-apps-src%2Fmonetize%2Fmanage-your-experiment.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [web-to-app-linking.9921741de4371fb28911eab4f61e57b633dfc955.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/3f2043f84f449384a6e9c70b858f0405d0958978?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fweb-to-app-linking.9921741de4371fb28911eab4f61e57b633dfc955.de-de.xlf&_a=contents)
-* Handoff Datetime: 2016-11-10 00:46:06
+* Handoff File: [manage-your-experiment.bf04c15762ccb0b30f4711939844018736814d88.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/9274b516c48a7b0c2c8357a390c863ed2584ab0a?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fmanage-your-experiment.bf04c15762ccb0b30f4711939844018736814d88.de-de.xlf&_a=contents)
+* Handoff Datetime: 2016-11-10 19:13:34
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\launch-resume\web-to-app-linking.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/bd18ae6d5d38832091e0ddecaff4b7000623d830?path=windows-apps-src%2Flaunch-resume%2Fweb-to-app-linking.md&_a=contents)
-* Current Handback File: [web-to-app-linking.9921741de4371fb28911eab4f61e57b633dfc955.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/628ba96e56c142c61ba716ca85d7a08ad45914fb?path=ol-handback%2FMicrosoft%2Fwindows-apps.de-de%2Fmaster%2Fweb-to-app-linking.9921741de4371fb28911eab4f61e57b633dfc955.de-de.xlf&_a=contents)
-* Current Handback Datetime: 2016-09-26 12:44:19
-* Bilingual File: [web-to-app-linking.9921741de4371fb28911eab4f61e57b633dfc955.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/628ba96e56c142c61ba716ca85d7a08ad45914fb?path=ol-handback%2FMicrosoft%2Fwindows-apps.de-de%2Fmaster%2Fweb-to-app-linking.9921741de4371fb28911eab4f61e57b633dfc955.de-de.xlf&_a=contents)
+* Current Target File: [windows-apps-src\monetize\manage-your-experiment.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/c3cc6ddc6f3b2e0e594b3a771a3787b6567d88e5?path=windows-apps-src%2Fmonetize%2Fmanage-your-experiment.md&_a=contents)
+* Current Handback File: [manage-your-experiment.bf04c15762ccb0b30f4711939844018736814d88.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/af7251542093aa676fc710fa76cce8c29961cc27?path=ol-handback%2FMicrosoft%2Fwindows-apps.de-de%2Fmaster%2Fmanage-your-experiment.bf04c15762ccb0b30f4711939844018736814d88.de-de.xlf&_a=contents)
+* Current Handback Datetime: 2016-10-21 15:17:04
+* Bilingual File: [manage-your-experiment.bf04c15762ccb0b30f4711939844018736814d88.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/af7251542093aa676fc710fa76cce8c29961cc27?path=ol-handback%2FMicrosoft%2Fwindows-apps.de-de%2Fmaster%2Fmanage-your-experiment.bf04c15762ccb0b30f4711939844018736814d88.de-de.xlf&_a=contents)
+* Bilingual Datetime: 2016-10-24 15:46:17
+* [Back to Top](#report-top)
+
+##### <a name='e899f3561060cf80f6a44f99ff0e436f9bb5d8038398'></a> Source: [windows-apps-src\TOC.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/168e80778be38895179402861aee57b86286ff1a?path=windows-apps-src%2FTOC.md&_a=contents)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/9274b516c48a7b0c2c8357a390c863ed2584ab0a?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2FTOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf&_a=contents)
+* Handoff Datetime: 2016-11-10 19:13:34
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\TOC.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/3b01e445a9e4185441be41c49323187747d9f283?path=windows-apps-src%2FTOC.md&_a=contents)
+* Current Handback File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/a2d77446d88b1f0e720000966feb39911ed176a0?path=ol-handback%2FMicrosoft%2Fwindows-apps.de-de%2Fmaster%2FTOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf&_a=contents)
+* Current Handback Datetime: 2016-09-22 15:48:35
+* Bilingual File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/a2d77446d88b1f0e720000966feb39911ed176a0?path=ol-handback%2FMicrosoft%2Fwindows-apps.de-de%2Fmaster%2FTOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf&_a=contents)
 * Bilingual Datetime: 2016-10-18 13:24:42
 * [Back to Top](#report-top)
 
