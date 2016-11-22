@@ -4,8 +4,8 @@ ms.assetid:
 description: "In diesem Artikel finden Sie eine Liste der für UWP-Apps unterstützten Tags für das HLS-Protokoll (HTTP Live Streaming)."
 title: "Unterstützung von HLS-Tags (HTTP Live Streaming)"
 translationtype: Human Translation
-ms.sourcegitcommit: 599e7dd52145d695247b12427c1ebdddbfc4ffe1
-ms.openlocfilehash: 779e5d0da7186a6f94251b89cf27636170923d5c
+ms.sourcegitcommit: 3d61f5272e4d11acfb7e0a85436ca60ba458dcae
+ms.openlocfilehash: a561f11a1638d5fea21d1d3b3f8bc47f71271f3f
 
 ---
 
@@ -16,7 +16,7 @@ In der folgenden Tabelle sind die HLS-Tags aufgeführt, die für UWP-Apps unters
 > Auf benutzerdefinierte Tags, die mit „X-” beginnen, kann wie im Artikel zu [Medienelementen, Wiedergabelisten und Titeln](media-playback-with-mediasource.md) beschrieben als zeitgesteuerte Metadaten zugegriffen werden.
 
 |Tag |Eingeführt in HLS-Protokollversion|Entwurfsversion des HLS-Protokolldokuments|Erforderlich auf dem Client|Juliversion von Windows 10|Windows 10, Version 1511|Windows 10, Version 1606 |
-|---------------------|-----------|--------------|---------|--------------|
+|---------------------|-----------|--------------|---------|--------------|-----|-----|
 |4.3.1.  Grundlegende Tags                 |             |                   |         |             |     |    |
 | 4.3.1.1.  EXTM3U |1|0|ERFORDERLICH|Unterstützt|Unterstützt|Unterstützt|
 | 4.3.1.2.  EXT-X-VERSION |2|3|ERFORDERLICH|Unterstützt|Unterstützt|Unterstützt
@@ -86,6 +86,6 @@ In der folgenden Tabelle sind die HLS-Tags aufgeführt, die für UWP-Apps unters
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -1,11 +1,11 @@
 ---
 author: GrantMeStrength
 ms.assetid: CFB3601D-3459-465F-80E2-520F57B88F62
-title: Erstellen der App Hello, world (JS)
-description: "In diesem Lernprogramm erfahren Sie, wie Sie JavaScript und HTML zum Erstellen einer einfachen Hello, world-App für die Universelle Windows-Plattform (UWP) unter Windows 10 verwenden."
+title: Create a "Hello, world" app (JS)
+description: "In diesem Lernprogramm erfahren Sie, wie Sie JavaScript und HTML zum Erstellen einer einfachen &\\#0034;Hello, World&\\#0034;-App für die universelle Windows-Plattform (UWP) unter Windows10 verwenden."
 translationtype: Human Translation
-ms.sourcegitcommit: 2e0965f964f6f2e10b895d99244b66458eb15903
-ms.openlocfilehash: 6c81b24f7fa9abe036d4ccd22ee8fa24c011fe77
+ms.sourcegitcommit: 7b4676e5c5a66450b321ab6f5f8670f9491b7a9d
+ms.openlocfilehash: 31bd2d40750e5acf09679d8ff5ea1a1540f60934
 
 ---
 # Erstellen der App „Hello, world“ (JS)
@@ -338,7 +338,7 @@ Im Gegensatz zu HTML-Steuerelementen besitzen WinJS-Steuerelemente keine dedizie
 
 1.  Fügen Sie in der Datei „index.html“ ein [label](https://msdn.microsoft.com/library/windows/apps/Hh453321)- und ein [Rating](https://msdn.microsoft.com/library/windows/apps/BR211895)-Steuerelement nach dem `greetingOutput` **div**-Element hinzu.
 
-    ```html
+```html
     <body class="win-type-body">
         <h1>Hello, world!</h1>
         <p>What's your name?</p>
@@ -351,7 +351,7 @@ Im Gegensatz zu HTML-Steuerelementen besitzen WinJS-Steuerelemente keine dedizie
         <div id="ratingControlDiv" data-win-control="WinJS.UI.Rating">
         </div>
     </body>
-    ```
+```
 
 2.  Führen Sie die App auf dem lokalen Computer aus. Beachten Sie das neue [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895)-Steuerelement.
 
@@ -384,7 +384,7 @@ Durch Einfügen Ihres Codes in eine completed-Funktion und deren Übergabe an di
 
 1.  Erstellen Sie in der Datei „index.html“ ein [**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133)-Element, das den Bewertungswert anzeigt, und weisen Sie ihm die **ID** „ratingOutput“ zu.
 
-    ```html
+```html
         <body class="win-type-body">
         <h1>Hello, world!</h1>
         <p>What's your name?</p>
@@ -402,7 +402,7 @@ Durch Einfügen Ihres Codes in eine completed-Funktion und deren Übergabe an di
 
 2.  Erstellen Sie in der Datei „main.js“ einen Ereignishandler für das [change](https://msdn.microsoft.com/library/windows/apps/BR211891)-Ereignis des **Rating**-Steuerelements namens `ratingChanged`. Der [eventInfo](https://msdn.microsoft.com/library/windows/apps/Hh465776)-Parameter enthält eine **detail.tentativeRating**-Eigenschaft, welche die neue Benutzerbewertung liefert. Rufen Sie diesen Wert ab, und zeigen Sie ihn im **div**-Element der Ausgabe an.
 
-    ```javascript
+```javascript
         function ratingChanged(eventInfo) {
 
             var ratingOutput = document.getElementById("ratingOutput");
@@ -412,7 +412,7 @@ Durch Einfügen Ihres Codes in eine completed-Funktion und deren Übergabe an di
 
 3.  Aktualisieren Sie den Code im [onactivated](https://msdn.microsoft.com/library/windows/apps/BR212679)-Ereignishhandler, der [WinJS.UI.processAll](https://msdn.microsoft.com/library/windows/apps/Hh440975) aufruft, indem Sie einen Aufruf der [then](https://msdn.microsoft.com/library/windows/apps/BR229728)-Methode hinzufügen und ihr eine `completed`-Funktion übergeben. Rufen Sie in der `completed`-Funktion das `ratingControlDiv`-Element ab, in dem sich das [Rating](https://msdn.microsoft.com/library/windows/apps/BR211895)-Steuerelement befindet. Rufen Sie dann mithilfe der [winControl](https://msdn.microsoft.com/library/windows/apps/Hh770814)-Eigenschaft das eigentliche **Rating**-Steuerelement ab. (In diesem Beispiel wird die `completed` -Funktion inline definiert.)
 
-    ```javascript
+```javascript
            args.setPromise(WinJS.UI.processAll().then(function completed() {
 
                     // Retrieve the div that hosts the Rating control.
@@ -427,11 +427,11 @@ Durch Einfügen Ihres Codes in eine completed-Funktion und deren Übergabe an di
                 }));
 ```
 
-4.  Es ist zwar eleganter, Ereignishandler für HTML-Steuerelemente nach dem Aufruf von [**WinJS.UI.processAll**](https://msdn.microsoft.com/library/windows/apps/Hh440975) zu registrieren, sie können jedoch auch innerhalb der `completed`-Funktion registriert werden. Der Einfachheit halber fahren wir fort und verlegen alle Registrierungen von Ereignishandlern ins Innere des [**then**](https://msdn.microsoft.com/library/windows/apps/BR229728)-Ereignishandlers.
+4.  Es ist zwar eleganter, Ereignishandler für HTML-Steuerelemente nach dem Aufruf von [**WinJS.UI.processAll**](https://msdn.microsoft.com/library/windows/apps/Hh440975) zu registrieren, sie können jedoch auch innerhalb der `completed`-Funktion registriert werden. Der Einfachheit halber verlegen wir alle Registrierungen von Ereignishandlern ins Innere des [**then**](https://msdn.microsoft.com/library/windows/apps/BR229728)-Ereignishandlers.
 
     Hier ist der aktualisierte [**onactivated**](https://msdn.microsoft.com/library/windows/apps/BR212679)-Ereignishandler:
 
-    ```javascript
+```javascript
     (function () {
     "use strict";
 
@@ -484,18 +484,18 @@ Durch Einfügen Ihres Codes in eine completed-Funktion und deren Übergabe an di
         isFirstActivation = false;
     };
 
-    ```        
+```        
 
-    Führen Sie die App aus. Wenn Sie einen Bewertungswert auswählen, wird der numerische Wert unter dem [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895)-Steuerelement ausgegeben.
+    Run the app. When you select a rating value, it outputs the numeric value below the [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895) control.
 
 ![Die fertig gestellte App „Hello World“ auf einem PC](images/helloworld-5-winjs.png)
 
 ## Zusammenfassung
 
-Herzlichen Glückwunsch, Sie haben Ihre erste App für Windows 10 und die universelle Windows-Plattform mit JavaScript und HTML erstellt!
+Herzlichen Glückwunsch, Sie haben Ihre erste App für Windows10 und die UWP mit JavaScript und HTML erstellt!
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -4,8 +4,8 @@ ms.assetid: E3DF5D11-8791-4CFC-8131-4F59B928A228
 description: "Verwenden Sie diese Methode aus der Windows Store-Übermittlungs-API zum Abrufen von Daten für eine vorhandene Add-On-Übermittlung."
 title: "Abrufen einer Add-On-Übermittlung mit der Windows Store-Übermittlungs-API"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: 699f26e8a73e1777f5966faf346945807d460315
+ms.sourcegitcommit: 03942eb9015487cfd5690e4b1933e4febd705971
+ms.openlocfilehash: ecdd4292c7980a647075c55abf7d14edd39d23d6
 
 ---
 
@@ -14,15 +14,17 @@ ms.openlocfilehash: 699f26e8a73e1777f5966faf346945807d460315
 
 
 
-Verwenden Sie diese Methode der Windows Store-Übermittlungs-API zum Abrufen der Daten für eine vorhandene Add-On-Übermittlung (auch als In-App-Produkt oder IAP bezeichnet). Weitere Informationen über den Erstellungsprozess einer Add-On-Übermittlung mithilfe der Windows Store-Übermittlungs-API finden Sie unter [Verwalten von Add-On-Übermittlungen](manage-add-on-submissions.md).
+Verwenden Sie diese Methode der Windows Store-Übermittlungs-API zum Abrufen der Daten für eine vorhandene Add-On-Übermittlung (auch als In-App-Produkt oder IAP bezeichnet). Weitere Informationen zum Erstellungsprozess einer Add-On-Übermittlung mithilfe der Windows Store-Übermittlungs-API finden Sie unter [Verwalten von Add-On-Übermittlungen](manage-add-on-submissions.md).
+
+>**Wichtig**&nbsp;&nbsp;Demnächst ändert Microsoft das Preismodell für Add-On-Übermittlungen im Windows Dev Center. Nach dem Implementieren dieser Änderung ist die Ressource **Pricing** in den Antwortdaten für diese Methode leer. Zudem können Sie mit dieser Methode vorübergehend keine Preis- und Verkaufsdaten für eine Add-On-Übermittlung abrufen. Wir werden die Windows Store-Übermittlungs-API aktualisieren, um eine neue Methode für den programmgesteuerten Zugriff auf Preisinformationen für Add-On-Übermittlungen einzuführen. Weitere Informationen finden Sie unter [Ressource für Preise](manage-add-on-submissions.md#pricing-object).
 
 ## Voraussetzungen
 
 Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
 * Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](create-and-manage-submissions-using-windows-store-services.md#prerequisites) für die Windows Store-Übermittlungs-API.
-* [Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken erhalten haben, haben Sie 60Minuten Zeit, das Token zu verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
-* Erstellen Sie eine Add-On-Übermittlung für eine App im Dev Center-Konto. Sie können dies im Dev Center-Dashboard oder unter Verwendung der Methode [Erstellen einer Add-On-Übermittlung](create-an-add-on-submission.md) ausführen.
+* [Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
+* Erstellen Sie eine Add-On-Übermittlung für eine App im Dev Center-Konto. Sie können dies im Dev Center-Dashboard oder mithilfe der Methode [Erstellen einer Add-On-Übermittlung](create-an-add-on-submission.md) erreichen.
 
 >**Hinweis**&nbsp;&nbsp;Diese Methode kann nur für Windows Dev Center-Konten verwendet werden, die eine Berechtigung zur Verwendung der Windows Store-Übermittlungs-API erhalten haben. Diese Berechtigung ist nicht für alle Konten aktiviert.
 
@@ -167,6 +169,6 @@ Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die A
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

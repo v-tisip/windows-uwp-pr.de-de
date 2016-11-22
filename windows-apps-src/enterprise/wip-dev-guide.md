@@ -5,8 +5,8 @@ MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: "Erstellen Sie eine optimierte App, die Unternehmensdaten und persönlichen Daten verwendet."
 translationtype: Human Translation
-ms.sourcegitcommit: 0da731e1211544ce6b07e783ddc2407da57781c2
-ms.openlocfilehash: 8ead30471371b9b6aca32088f115da9f68784922
+ms.sourcegitcommit: bf1c47e9cca45b626a45ca664bf2bb4be9c529e0
+ms.openlocfilehash: 82b674c72126c66aff34b0396a2c32f88023dd25
 
 ---
 
@@ -22,31 +22,23 @@ Weitere Informationen zu WIP und optimierten Apps hier: [Windows Information Pro
 
 Ein vollständiges Beispiel finden Sie [hier](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/EnterpriseDataProtection).
 
-Wenn Sie bereit sind, durch die einzelnen Aufgaben zu wechseln, lassen Sie uns starten.
+Wenn Sie bereit sind, die einzelnen Aufgaben durchzugehen, lassen Sie uns starten.
 
-## Sammeln Sie zuerst die gewünschten Informationen
+## Sammeln Sie zuerst die gewünschten Informationen.
 
 Sie benötigen Folgendes:
 
-* Zugriff auf ein Microsoft Intune-Konto.
+* Einen virtuellen Testcomputer mit Windows 10, Version 1607. Sie debuggen Ihre App unter Verwendung dieses virtuellen Testcomputers.
 
-* Einen Entwicklungscomputer, der Windows 10, Version 1607 ausführt.
+* Einen Entwicklungscomputer mit Windows 10, Version 1607. Dies kann Ihr virtueller Testcomputer sein, wenn Visual Studio darauf installiert ist.
 
-* Ein Testgerät, das Windows 10, Version 1607 ausführt. Sie müssen Ihre App gegen dieses Testgerät debuggen.
+## Richten Sie Ihre Entwicklungsumgebung ein.
 
-  Sie können nicht mit dem gleichen Gerät debuggen, das in MDM registriert ist. Deshalb benötigen Sie ein separates Testgerät.
+Sie führen folgende Schritte aus:
 
-  Einfachheitshalber wird davon ausgegangen, dass Ihr Testgerät ein Computer oder virtueller Computer ist.
+* Installieren Sie den WIP Setup Developer Assistant auf dem virtuellen Testcomputer.
 
-## Richten Sie Ihre Entwicklungsumgebung ein
-
-Sie können diese Schritte ausführen:
-
-* Registrieren Sie Ihren Testcomputer.
-
-* Erstellen Sie eine Schutzrichtlinie.
-
-* Laden Sie die Richtlinie auf den Testcomputer herunter.
+* Erstellen Sie eine Schutzrichtlinie mit dem WIP Setup Developer Assistant.
 
 * Richten Sie ein Visual Studio-Projekt ein.
 
@@ -54,23 +46,17 @@ Sie können diese Schritte ausführen:
 
 * Fügen Sie die Namespaces zu Ihren Codedateien hinzu.
 
-**Registrieren Sie Ihren Testcomputer.**
+**Installieren Sie den WIP Setup Developer Assistant auf dem virtuellen Testcomputer.**
 
- Um den Testcomputer zu registrieren, fügen Sie Ihr Intune-Konto zur Seite **Einstellungen**->**Auf Arbeit oder Schule zugreifen** auf dem Testcomputer hinzu.
+ Verwenden Sie dieses Tool, um eine Windows Information Protection-Richtlinie auf Ihrem virtuellen Testcomputer einzurichten.
 
- ![Verbindung mit MDM herstellen](images/connect-v2.png)
+ Laden Sie das Tool hier herunter: [WIP Setup Developer Assistant](https://www.microsoft.com/store/p/wip-setup-developer-assistant/9nblggh526jf).
 
- Der Name Ihres Computers wird dann in der Intune-Administratorkonsole angezeigt.
+**Erstellen Sie eine Schutzrichtlinie.**
 
-**Erstellen Sie eine Schutzrichtlinie**
+Definieren Sie die Richtlinie, indem Sie in jedem Abschnitt des WIP Setup Developer Assistant Informationen eingeben. Um mehr über die Verwendung der einzelnen Einstellungen zu erfahren, wählen Sie das daneben angezeigte Hilfesymbol aus.
 
-Erstellen Sie eine Richtlinie, und stellen Sie diese auf dem Testcomputer bereit. Siehe [Erstellen einer Windows Information Protection (WIP)-Richtlinie mithilfe von Microsoft Intune](https://technet.microsoft.com/itpro/windows/keep-secure/create-edp-policy-using-intune).
-
-**Laden Sie die Richtlinie auf Ihr Gerät herunter**
-
-Rufen Sie auf dem Testcomputer die Seite **Einstellungen** auf, und wählen Sie dann  **Auf Arbeit oder Schule zugreifen**-> **Informationen**->**Synchronisieren** aus.
-
-![Synchronisieren Sie die Einstellungen mit MDM](images/sync.png)
+Allgemeine Informationen zur Verwendung dieses Tools finden Sie im Abschnitt „Versionshinweise“ auf der Downloadseite der App.
 
 **Richten Sie ein Visual Studio-Projekt ein.**
 
@@ -101,11 +87,11 @@ Rufen Sie auf dem Testcomputer die Seite **Einstellungen** auf, und wählen Sie 
 
     Auf diese Weise ignoriert Windows die ``enterpriseDataPolicy``-Funktion, wenn Ihre App auf einer Version des Windows-Betriebssystems ausgeführt wird, die eingeschränkte Funktionen nicht unterstützt.
 
-**Richten Sie das Remotedebuggen ein**
+**Richten Sie das Remotedebuggen ein.**
 
-Installieren Sie Visual Studio-Remotetools auf dem Testcomputer. Starten Sie den Remotedebugger auf dem Entwicklungscomputer, und überprüfen Sie, ob Ihre App auf dem Zielcomputer ausgeführt wird.
+Installieren Sie Visual Studio-Remotetools auf Ihrem virtuellen Testcomputer nur dann, wenn Sie Ihre App auf einem anderem Computer als einem virtuellen Computer entwickeln. Starten Sie den Remotedebugger auf dem Entwicklungscomputer, und überprüfen Sie, ob Ihre App auf dem virtuellen Testcomputer ausgeführt wird.
 
-Siehe [Anweisungen für Remote-PCs](https://msdn.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps#remote-pc-instructions).
+Siehe [Anweisungen zu Remote-PCs](https://msdn.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps#remote-pc-instructions).
 
 **Fügen Sie diese Namespaces zu Ihren Codedateien hinzu.**
 
@@ -1104,6 +1090,6 @@ private void ProtectionPolicyManager_ProtectedContentRevoked(object sender, Prot
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

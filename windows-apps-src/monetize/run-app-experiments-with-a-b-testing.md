@@ -4,8 +4,8 @@ Description: "Sie können über das Windows Dev Center-Dashboard Experimente fü
 title: "Ausführen von Experimenten mit A/B-Tests"
 ms.assetid: 790B4B37-C72D-4CEA-97AF-D226B2216DCC
 translationtype: Human Translation
-ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
-ms.openlocfilehash: 50f7ad90c04d5b5672fa7910f2df669798761472
+ms.sourcegitcommit: 126fee708d82f64fd2a49b844306c53bb3d4cc86
+ms.openlocfilehash: f6c8e830a3ffcff8db9c280b6a9df5b515b1a356
 
 ---
 
@@ -33,9 +33,9 @@ A/B-Tests im Windows Dev Center werden nur für UWP-Apps unterstützt.
 Damit Sie Experimente mit A/B-Tests ausführen können, müssen Sie den Entwicklungscomputer einrichten:
 
 * Führen Sie [diese Anweisungen](../get-started/get-set-up.md) aus, um den Entwicklungscomputer für die UWP-Entwicklung einzurichten.
-* Installieren Sie das [Microsoft Store Services SDK](http://aka.ms/store-em-sdk). Neben der API für Experimente bietet dieses SDK auch APIs für andere Features, z.B. das Anzeigen von Werbung und das Weiterleiten von Kunden zum Feedback-Hub, um Feedback zur App zu erfassen. Weitere Informationen zu diesem SDK finden Sie unter [Microsoft Store Services SDK](microsoft-store-services-sdk.md).
+* [Installieren Sie das Microsoft Store Services SDK](microsoft-store-services-sdk.md#install-the-sdk). Zusätzlich zur API für Experimente bietet dieses SDK auch APIs für weitere Features wie z.B. das Anzeigen von Werbung und das Weiterleiten von Kunden zum Feedback-Hub, um Feedback zur App zu erfassen. 
 
-## Bewährte Methoden
+## Bewährte Verfahren
 
 Um möglichst aussagekräftige Ergebnisse zu erzielen, sollten Sie beim Durchführen von Experimenten mit A/B-Tests diese Empfehlungen berücksichtigen:
 
@@ -65,6 +65,6 @@ Um möglichst aussagekräftige Ergebnisse zu erzielen, sollten Sie beim Durchfü
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

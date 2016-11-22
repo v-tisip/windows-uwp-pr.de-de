@@ -4,8 +4,8 @@ ms.assetid: a2751e22-6842-073a-daec-425fb981bafe
 title: Visuelle Ebene
 description: "Die Windows.UI.Composition-API ermöglicht den Zugriff auf die Kompositionsebene zwischen der Frameworkebene (XAML) und der Grafikebene (DirectX)."
 translationtype: Human Translation
-ms.sourcegitcommit: 4a00847f0559d93eea199d7ddca0844b5ccaa5aa
-ms.openlocfilehash: 3a3dbf7b529d5d2848b161869d2f77fef3651488
+ms.sourcegitcommit: ad262cc6dcfd53156f3f3a3e850f9cfe99e87dc6
+ms.openlocfilehash: 066e5aea48340f96878a41aa28f0fef0c3bda9f5
 
 ---
 # Visuelle Ebene
@@ -30,6 +30,7 @@ Visuelle Elemente können Container für andere visuelle Elemente sein oder Inha
 -   [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) – das Basisobjekt. Die meisten Eigenschaften befinden sich hier und werden von den anderen visuellen Objekten geerbt.
 -   [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) – wird von [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) abgeleitet und bietet die Möglichkeit, untergeordnete visuelle Elemente einzusetzen.
 -   [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) – wird von [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) abgeleitet und enthält Inhalte in Form von Bildern, Effekten und Swapchains.
+-   [**LayerVisual**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.layervisual.aspx) – ein ContainerVisual-Element, dessen untergeordnete Elemente in einer einzelnen Ebene vereinfacht werden.  
 -   [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789) – die Objektfactory, die die Beziehung zwischen einer Anwendung und dem Kompositorprozess des Systems verwaltet.
 
 Der Kompositor ist auch eine Factory für zahlreiche andere Kompositionsobjekte, die dazu verwendet werden, um visuelle Elemente in der Struktur sowie eine Reihe von Animationen und Effekten zu beschneiden und umzuwandeln.
@@ -63,9 +64,9 @@ Dieser Artikel ist für Windows10-Entwickler bestimmt, die Apps für die Univers
 ## <span id="Additional_Resources_"></span><span id="additional_resources_"></span><span id="ADDITIONAL_RESOURCES_"></span>Weitere Ressourcen:
 
 -   Lesen Sie den MSDN-Artikel von Kenny Kerr zu dieser API: [Grafiken und Animationen – Windows Composition wird 10](https://msdn.microsoft.com/magazine/mt590968)
--   Erweiterte Beispiele für Benutzeroberfläche und Composition finden Sie im [WindowsUIDevLabs-GitHub](https://github.com/microsoft/windowsuidevlabs).
--   [**Vollständige Dokumentation zur Referenz für die API**](https://msdn.microsoft.com/library/windows/apps/Dn706878).
--   Bekannte Probleme: [Bekannte Probleme](http://go.microsoft.com/fwlink/?LinkId=823237).
+-   Erweiterte Beispiele für Benutzeroberfläche und Komposition finden Sie im [WindowsUIDevLabs-GitHub](https://github.com/microsoft/windowsuidevlabs).
+-   [**Vollständige Referenzdokumentation für die API**](https://msdn.microsoft.com/library/windows/apps/Dn706878).
+-   [Bekannte Probleme](http://go.microsoft.com/fwlink/?LinkId=823237).
 
  
 
@@ -77,6 +78,6 @@ Dieser Artikel ist für Windows10-Entwickler bestimmt, die Apps für die Univers
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

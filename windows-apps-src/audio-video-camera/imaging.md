@@ -1,11 +1,11 @@
 ---
-author: drewbatgit
+author: laurenhughes
 ms.assetid: 3FD2AA71-EF67-47B2-9332-3FFA5D3703EA
 description: "In diesem Artikel wird das Laden und Speichern von Bilddateien mit BitmapDecoder und BitmapEncoder sowie das Verwenden des SoftwareBitmap-Objekts zum Darstellen von Bitmapbildern erläutert."
 title: Erstellen, Bearbeiten und Speichern von Bitmapbildern
 translationtype: Human Translation
-ms.sourcegitcommit: c61bad4b4a5440531c0177247c425addaf452920
-ms.openlocfilehash: ff6bff692c4e0e73b2c99e06b46e8a3050ba12c4
+ms.sourcegitcommit: fd5b52a1d431b9396a4b162077d4f8d6246cd597
+ms.openlocfilehash: ed153b4ebd2f1b6b26f922786b3c005a57d8255d
 
 ---
 
@@ -132,6 +132,6 @@ Sie können eine Bilddatei direkt von einem [**BitmapDecoder**](https://msdn.mic
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -4,29 +4,33 @@ ms.assetid: C7428551-4B31-4259-93CD-EE229007C4B8
 description: "Verwenden Sie diese Methoden in der Windows Store-Übermittlungs-API, um Übermittlungen für Apps zu verwalten, die in Ihrem Windows Dev Center-Konto registriert wurden."
 title: "Verwalten von App-Übermittlungen mithilfe der Windows Store-Übermittlungs-API"
 translationtype: Human Translation
-ms.sourcegitcommit: 178b70db1583790c174d65e060c8bce6e4f69243
-ms.openlocfilehash: 448eafbdadb21476da43e7408bb8bad354ba486d
+ms.sourcegitcommit: 9b76a11adfab838b21713cb384cdf31eada3286e
+ms.openlocfilehash: 49d60048a0dd5dae3e80abb9fd4e21b8cf7b417e
 
 ---
 
 # Verwalten von App-Übermittlungen mithilfe der Windows Store-Übermittlungs-API
 
 
-
-
 Verwenden Sie diese Methoden in der Windows Store-Übermittlungs-API, um Übermittlungen für Apps zu verwalten, die in Ihrem Windows Dev Center-Konto registriert wurden. Eine Einführung in die Windows Store-Übermittlungs-API einschließlich der Voraussetzungen für die Verwendung der API finden Sie unter [Erstellen und Verwalten von Übermittlungen mit WindowsStore-Diensten](create-and-manage-submissions-using-windows-store-services.md).
 
 >**Hinweis**&nbsp;&nbsp;Diese Methoden können nur für Windows Dev Center-Konten verwendet werden, die eine Berechtigung zur Verwendung der Windows Store-Übermittlungs-API erhalten haben. Diese Berechtigung ist nicht für alle Konten aktiviert.
 
+>**Wichtig**&nbsp;&nbsp;Demnächst ändert Microsoft das Preisdatenmodell für App-Übermittlungen in Windows Dev Center. Nach der Implementierung dieser Änderung wird die **Preis**-Ressource nicht mehr unterstützt, und Sie werden vorübergehend nicht in der Lage sein, die Testzeitraum-, Preis-und Verkaufsdaten für eine App-Übermittlung mit der Windows Store-Übermittlungs-API abzurufen oder zu ändern. Wir werden die API aktualisieren, um eine neue Methode für den programmgesteuerten Zugriff auf Preisinformationen für App-Übermittlungen einzuführen. Weitere Informationen finden Sie im Abschnitt [Preisressource](#pricing-object).
+
 
 | Methode        | URI    | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}``` | Ruft Daten für eine vorhandene App-Übermittlung ab. Weitere Informationen finden Sie unter [Abrufen einer App-Übermittlung](get-an-app-submission.md). |
-| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/status``` | Ruft den Status einer vorhandenen App-Übermittlung ab. Weitere Informationen finden Sie unter [Abrufen des Status einer App-Übermittlung](get-status-for-an-app-submission.md). |
-| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions``` | Erstellt eine neue Übermittlung für eine App, die in Ihrem Windows Dev Center-Konto registriert wurde. Weitere Informationen finden Sie unter [Erstellen einer App-Übermittlung](create-an-app-submission.md). |
-| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/commit``` | Führt ein Commit für eine neue oder aktualisierte App-Übermittlung an Windows Dev Center aus. Weitere Informationen finden Sie unter [Ausführen eines Commit für eine App-Übermittlung](commit-an-app-submission.md). |
-| PUT | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}``` | Aktualisiert eine vorhandene App-Übermittlung. Weitere Informationen finden Sie unter [Aktualisieren einer App-Übermittlung](update-an-app-submission.md). |
-| DELETE | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}``` | Löscht einer App-Übermittlung. Weitere Informationen finden Sie unter [Löschen einer App-Übermittlung](delete-an-app-submission.md). |
+| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}``` | Ruft Daten für eine vorhandene App-Übermittlung ab. Weitere Informationen finden Sie in [diesem Artikel](get-an-app-submission.md). |
+| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/status``` | Ruft den Status einer vorhandenen App-Übermittlung ab. Weitere Informationen finden Sie in [diesem Artikel](get-status-for-an-app-submission.md). |
+| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions``` | Erstellt eine neue Übermittlung für eine App, die in Ihrem Windows Dev Center-Konto registriert wurde. Weitere Informationen finden Sie in [diesem Artikel](create-an-app-submission.md). |
+| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/commit``` | Führt ein Commit für eine neue oder aktualisierte App-Übermittlung an Windows Dev Center aus. Weitere Informationen finden Sie in [diesem Artikel](commit-an-app-submission.md). |
+| PUT | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}``` | Aktualisiert eine vorhandene App-Übermittlung. Weitere Informationen finden Sie in [diesem Artikel](update-an-app-submission.md). |
+| DELETE | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}``` | Löscht eine App-Übermittlung. Weitere Informationen finden Sie in [diesem Artikel](delete-an-app-submission.md). |
+| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/packagerollout``` | Ruft die Informationen zum graduellen Rollout einer App-Übermittlung ab. Weitere Informationen finden Sie in [diesem Artikel](get-package-rollout-info-for-an-app-submission.md). |
+| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/updatepackagerolloutpercentage``` | Aktualisiert den graduellen Rollout-Prozentsatz für eine App-Übermittlung. Weitere Informationen finden Sie in [diesem Artikel](update-the-package-rollout-percentage-for-an-app-submission.md). |
+| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/haltpackagerollout``` | Hält das graduelle Rollout einer App-Übermittlung an. Weitere Informationen finden Sie in [diesem Artikel](halt-the-package-rollout-for-an-app-submission.md). |
+| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/finalizepackagerollout``` | Schließt den graduellen Rollout für eine App-Übermittlung ab. Weitere Informationen finden Sie in [diesem Artikel](finalize-the-package-rollout-for-an-app-submission.md). |
 
 <span id="create-an-app-submission">
 ## Erstellen einer App-Übermittlung
@@ -37,9 +41,9 @@ Folgen Sie diesem Prozess, um eine Übermittlung für eine App zu erstellen.
 
   >**Hinweis**&nbsp;&nbsp;Stellen Sie sicher, dass für die App mindestens eine abgeschlossene Übermittlung mit abgeschlossenen Informationen zu den [Altersfreigaben](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) vorhanden ist.
 
-3. [Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Sie müssen dieses Zugriffstoken an die Methoden in der Windows Store-Übermittlungs-API übergeben. Sie können ein abgerufenes Zugriffstoken 60Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
+2. [Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Sie müssen dieses Zugriffstoken an die Methoden in der Windows Store-Übermittlungs-API übergeben. Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
 
-4. Führen Sie die folgende Methode in der Windows Store-Übermittlungs-API aus. Diese Methode erstellt eine neue laufende Übermittlung, die eine Kopie der letzten veröffentlichten Übermittlung ist. Weitere Informationen finden Sie unter [Erstellen einer App-Übermittlung](create-an-app-submission.md).
+3. [Erstellen Sie eine App-Übermittlung](create-an-app-submission.md) mithilfe der folgenden Methode in der Windows Store-Übermittlungs-API. Diese Methode erstellt eine neue laufende Übermittlung, die eine Kopie der letzten veröffentlichten Übermittlung ist.
 
   ```
   POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions
@@ -47,9 +51,9 @@ Folgen Sie diesem Prozess, um eine Übermittlung für eine App zu erstellen.
 
   Der Antworttext enthält drei Elemente: die ID der neuen Übermittlung, die Daten für die neue Übermittlung (einschließlich aller Einträge und Preisinformationen) und die Shared Access-Signatur (SAS)-URI, um alle App-Pakete und Eintragsbilder für die Übermittlung hochzuladen. Weitere Informationen zu SAS finden Sie unter [Shared Access-Signaturen, Teil 1: Verstehen des SAS-Modells](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).
 
-3. Wenn Sie neue Pakete oder Bilder für die Übermittlung hinzufügen, [müssen Sie die App-Pakete vorbereiten](https://msdn.microsoft.com/windows/uwp/publish/app-package-requirements) und auch [die App-Screenshots und -Bilder vorbereiten](https://msdn.microsoft.com/windows/uwp/publish/app-screenshots-and-images). Fügen Sie all diese Dateien einem ZIP-Archiv hinzu.
+4. Wenn Sie neue Pakete oder Bilder für die Übermittlung hinzufügen, [müssen Sie die App-Pakete vorbereiten](https://msdn.microsoft.com/windows/uwp/publish/app-package-requirements) und auch [die App-Screenshots und -Bilder vorbereiten](https://msdn.microsoft.com/windows/uwp/publish/app-screenshots-and-images). Fügen Sie all diese Dateien einem ZIP-Archiv hinzu.
 
-4. Aktualisieren Sie die Übermittlungsdaten mit alle erforderlichen Änderungen für die neue Übermittlung, und führen Sie die folgende Methode aus, um die Übermittlung zu aktualisieren. Weitere Informationen finden Sie unter [Aktualisieren einer App-Übermittlung](update-an-app-submission.md).
+5. Revidieren Sie die Übermittlungsdaten mit allen erforderlichen Änderungen für die neue Übermittlung, und führen Sie die folgende Methode aus, um die [Übermittlung zu aktualisieren](update-an-app-submission.md).
 
   ```
   PUT https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}
@@ -69,13 +73,13 @@ Folgen Sie diesem Prozess, um eine Übermittlung für eine App zu erstellen.
   await blockBob.UploadFromStreamAsync(stream);
   ```
 
-5. Sie führen das Commit für die Übermittlung durch Ausführen der folgenden Methode aus. Hierdurch wird Dev Center darüber benachrichtigt, dass Sie Ihre Übermittlung fertig gestellt haben und die Updates nun auf Ihr Konto jetzt angewendet werden sollen. Weitere Informationen finden Sie unter [Ausführen eines Commit für eine App-Übermittlung](commit-an-app-submission.md).
+5. [Führen Sie das Commit für die Übermittlung](commit-an-app-submission.md) durch Ausführen der folgenden Methode aus. Hierdurch wird Dev Center darüber benachrichtigt, dass Sie Ihre Übermittlung fertig gestellt haben und die Updates nun auf Ihr Konto jetzt angewendet werden sollen.
 
   ```
   POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/commit
   ```
 
-6. Sie überprüfen den Status des Commit durch Ausführen der folgenden Methode. Weitere Informationen finden Sie unter [Abrufen des Status einer App-Übermittlung](get-status-for-an-app-submission.md).
+6. Überprüfen Sie den Commit-Status, indem Sie die folgende Methode ausführen, um [den Status der App-Übermittlung abzurufen](get-status-for-an-app-submission.md).
 
     ```
     GET https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/status
@@ -84,6 +88,51 @@ Folgen Sie diesem Prozess, um eine Übermittlung für eine App zu erstellen.
     Um den Status der Übermittlung zu überprüfen, zeigen Sie den Wert *status* im Antworttext an. Dieser Wert sollte von **CommitStarted** entweder in **PreProcessing** geändert worden sein, wenn die Anforderung erfolgreich war, oder in **CommitFailed**, wenn die Anforderung Fehler enthalten hat. Wenn Fehler aufgetreten sind, enthält das Feld *StatusDetails* Feld weitere Details zu den Fehlern.
 
 7. Nachdem das Commit erfolgreich abgeschlossen wurde, wird die Übermittlung zur Aufnahme an den Store gesendet. Sie können die Übermittlung mithilfe der vorherigen Methode oder durch Aufruf des Dev Center-Dashboards weiter überwachen.
+
+<span id="manage-gradual-package-rollout">
+## Verwalten eines graduellen Paketrollouts für eine App-Übermittlung
+
+Sie können die aktualisierten Pakete in einer App-Übermittlung graduell für einen bestimmten Prozentsatz der Kunden Ihrer App unter Windows 10 einführen. So können Sie Feedback und Analysedaten für die jeweiligen Pakete überwachen und vor einem umfassenden Rollout sicherstellen, dass das Update ordnungsgemäß funktioniert. Sie können den Rollout-Prozentwert für eine veröffentlichte Übermittlung ändern (oder die Aktualisierung anhalten), ohne dass Sie eine neue Übermittlung erstellen müssen. Weitere Informationen und Anleitungen zur Aktivierung und Verwaltung eines graduellen Paketrollouts im Dev Center-Dashboard finden Sie in [diesem Artikel](../publish/gradual-package-rollout.md).
+
+Sie können einen graduellen Paketrollout für eine App-Übermittlung auch programmgesteuert aktivieren und verwalten, indem Sie in der Windows Store-Übermittlungs-API wie folgt vorgehen.
+
+* So aktivieren Sie einen graduellen Paketrollout für eine App-Übermittlung
+
+  1. [Erstellen Sie eine App-Übermittlung](create-an-app-submission.md) oder [rufen Sie eine App-Übermittlung ab](get-an-app-submission.md).
+  2. Suchen Sie in den Antwortdaten die [packageRollout](#package-rollout-object)-Ressource, setzen Sie das Feld *isPackageRollout* auf „true“ und das Feld *packageRolloutPercentage* auf den Prozentsatz der Kunden Ihrer App, die die aktualisierten Pakete erhalten sollen.
+  3. Übergeben Sie die aktualisierten App-Übermittlungsdaten an die Methode [Aktualisierung einer App-Übermittlung](update-an-app-submission.md).
+
+<span/>
+
+* Gehen Sie zum [Abruf der Paketrollout-Informationen für eine App-Übermittlung](get-package-rollout-info-for-an-app-submission.md) wie folgt vor.
+
+  ```
+  GET https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/packagerollout
+  ```
+
+<span/>
+
+* Gehen Sie zum [Aktualisieren des Paketrollout-Prozentsatzes für eine App-Übermittlung](update-the-package-rollout-percentage-for-an-app-submission.md) wie folgt vor.
+
+  ```
+  POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/updatepackagerolloutpercentage  
+  ```
+
+<span/>
+
+* Gehen Sie zum [Anhalten des Paketrollouts für eine App-Übermittlung](halt-the-package-rollout-for-an-app-submission.md) wie folgt vor.
+
+  ```
+  POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/haltpackagerollout   
+  ```  
+
+<span/>
+
+* Gehen Sie zum [Abschluss des Paketrollouts für eine App-Übermittlung](finalize-the-package-rollout-for-an-app-submission.md) wie folgt vor.
+
+  ```
+  POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/finalizepackagerollout
+  ```
 
 ## Ressourcen
 
@@ -171,6 +220,16 @@ Diese Ressource stellt eine Übermittlung für eine App dar. Das folgende Beispi
       ]
     }
   ],
+  "packageDeliveryOptions": {
+    "packageRollout": {
+        "isPackageRollout": false,
+        "packageRolloutPercentage": 0,
+        "packageRolloutStatus": "PackageRolloutNotStarted",
+        "fallbackSubmissionId": "0"
+    },
+    "isMandatoryUpdate": false,
+    "mandatoryUpdateEffectiveDate": "1601-01-01T00:00:00.0000000Z"
+  },
   "enterpriseLicensing": "Online",
   "allowMicrosoftDecideAppAvailabilityToFutureDeviceFamilies": true,
   "allowTargetFutureDeviceFamilies": {
@@ -186,27 +245,28 @@ Diese Ressource stellt eine Übermittlung für eine App dar. Das folgende Beispi
 
 Diese Ressource hat die folgenden Werte.
 
-| Wert      | Typ   | Beschreibung                                                                                                                                                                                                                                                                         |
-|------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Wert      | Typ   | Beschreibung      |
+|------------|--------|-------------------|
 | id            | string  | Die ID der Übermittlung.  |
-| applicationCategory           | string  |   Eine Zeichenfolge, die die [Kategorie und/oder Unterkategorie](https://msdn.microsoft.com/windows/uwp/publish/category-and-subcategory-table) für Ihre App angibt. Kategorien und Unterkategorien werden mit einem Unterstrich „_“ zu einer einzigen Zeichenfolge zusammengefasst, z.B. **BooksAndReference_EReader**.      |  
+| applicationCategory           | string  |   Eine Zeichenfolge, die die [Kategorie und/oder Unterkategorie](https://msdn.microsoft.com/windows/uwp/publish/category-and-subcategory-table) für Ihre App angibt. Kategorien und Unterkategorien werden mit einem Unterstrich "_" zu einer einzigen Zeichenfolge zusammengefasst, z.B. **BooksAndReference_EReader**.      |  
 | pricing           |  object  | Ein Objekt, das Preisinfos für die App enthält. Weitere Informationen finden Sie unten im Abschnitt [Preisressource](#pricing-object).       |   
 | visibility           |  string  |  Die Sichtbarkeit der App. Folgende Werte sind möglich: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>       |   
-| targetPublishMode           | string  | Der Veröffentlichungsmodus für die Übermittlung. Folgende Werte sind möglich: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
+| targetPublishMode           | string  | Der Publish-Modus für die Übermittlung. Folgende Werte sind möglich: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
 | targetPublishDate           | string  | Das Veröffentlichungsdatum der Übermittlung im ISO 8601-Format, wenn *TargetPublishMode* den Wert SpecificDate hat.  |  
 | listings           |   object  |  Ein Verzeichnis von Schlüssel-Wert-Paaren, wobei ein Schlüssel ein Ländercode und ein Wert ein [Eintragsressourcen](#listing-object)-Objekt ist, das Eintragsinfos für die App enthält.       |   
-| hardwarePreferences           |  array  |   Ein Array von Zeichenfolgen, die die [Hardwareeinstellungen](https://msdn.microsoft.com/windows/uwp/publish/enter-app-properties#hardware_preferences) für die App definieren. Folgende Werte sind möglich: <ul><li>Touch</li><li>Keyboard</li><li>Mouse</li><li>Kamera</li><li>NfcHce</li><li>Nfc</li><li>BluetoothLE</li><li>Telephony</li></ul>     |   
-| automaticBackupEnabled           |  boolean  |   Gibt an, ob Windows die App-Daten in automatische Sicherungen auf OneDrive aufnehmen kann. Weitere Informationen finden Sie unter [App-Deklarationen](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).   |   
+| hardwarePreferences           |  array  |   Ein Array von Zeichenfolgen, die die [Hardwareeinstellungen](https://msdn.microsoft.com/windows/uwp/publish/enter-app-properties#hardware_preferences) für die App definieren. Folgende Werte sind möglich: <ul><li>Touch</li><li>Keyboard</li><li>Mouse</li><li>Camera</li><li>NfcHce</li><li>Nfc</li><li>BluetoothLE</li><li>Telephony</li></ul>     |   
+| automaticBackupEnabled           |  boolean  |   Gibt an, ob Windows die App-Daten in automatische Sicherungen auf OneDrive aufnehmen können. Weitere Informationen finden Sie unter [App-Deklarationen](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).   |   
 | canInstallOnRemovableMedia           |  boolean  |   Gibt an, ob Kunden die App auf Wechselmedien installieren können. Weitere Informationen finden Sie unter [App-Deklarationen](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).     |   
 | isGameDvrEnabled           |  boolean |   Gibt an, ob game DVR für die App aktiviert ist.    |   
-| hasExternalInAppProducts           |     boolean          |   Gibt an, ob die App Benutzern Käufe außerhalb des E-Commerce-Systems des Windows Store gestattet. Weitere Informationen finden Sie unter [App-Deklarationen](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).     |   
+| hasExternalInAppProducts           |     boolean          |   Gibt an, ob die App Benutzern Käufe außerhalb der Windows Store-e-Commerce-Systems gestattet. Weitere Informationen finden Sie unter [App-Deklarationen](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).     |   
 | meetAccessibilityGuidelines           |    boolean           |  Gibt an, ob getestet wurde, ob die App die Richtlinien zur Barrierefreiheit erfüllt. Weitere Informationen finden Sie unter [App-Deklarationen](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).      |   
 | notesForCertification           |  string  |   Enthält [Hinweise zur Zertifizierung](https://msdn.microsoft.com/windows/uwp/publish/notes-for-certification) für Ihre App.    |    
 | status           |   string  |  Der Status der Übermittlung. Folgende Werte sind möglich: <ul><li>None</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>Release</li><li>ReleaseFailed</li></ul>      |    
 | statusDetails           |   object  |  Enthält zusätzliche Details über den Status der Übermittlung, einschließlich Informationen zu Fehlern. Weitere Informationen finden Sie unten im Abschnitt [Statusdetails](#status-details-object).       |    
 | fileUploadUrl           |   string  | Die Shared Access-(SAS)-URI für das Hochladen der Pakete für die Übermittlung. Wenn Sie neue Pakete oder Bilder für die Übermittlung hinzufügen, müssen Sie das ZIP-Archiv, das die Pakete und Bilder enthält, zu dieser URI hochladen. Weitere Informationen finden Sie unter [Erstellen einer App-Übermittlung](#create-an-app-submission).       |    
 | applicationPackages           |   array  | Enthält Objekte, die Details über die einzelnen Pakete der Übermittlung bereitstellen. Weitere Informationen finden Sie unten im Abschnitt [Anwendungspaket](#application-package-object). |    
-| enterpriseLicensing           |  string  |  Einer der Werte für die [Enterprise-Lizenzierung](#enterprise-licensing), die das Verhalten der Enterprise-Lizenzierung für die App angeben.  |    
+| packageDeliveryOptions    | object  | Enthält Einstellungen für den graduellen Paketrollout und verpflichtende Aktualisierungen für die Übermittlung. Weitere Informationen finden Sie im Abschnitt [options-Objekt für die Paketübermittlung](#package-delivery-options-object) weiter unten.  |
+| enterpriseLicensing           |  string  |  Einer der [Werte für Enterprise-Lizenzierung](#enterprise-licensing)-Werte, die das Verhalten der Enterprise-Lizenzierung für die App angeben.  |    
 | allowMicrosftDecideAppAvailabilityToFutureDeviceFamilies           |  boolean   |  Gibt an, ob Microsoft [die App für zukünftige Windows10-Gerätefamilien verfügbar machen](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) darf.    |    
 | allowTargetFutureDeviceFamilies           | object   |  Ein Verzeichnis von Schlüssel-Wert-Paaren, wobei jeder Schlüssel eine [Windows10-Gerätefamilie](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) ist und jeder Wert ein boolescher Wert ist, der angibt, ob Ihre App auf die angegebene Gerätefamilie ausgerichtet werden darf.     |    
 | friendlyName           |   string  |  Der Anzeigename der App, der für die Anzeige verwendet wird.       |  
@@ -227,7 +287,7 @@ Diese Ressource enthält die Eintragsinformationen für eine App. Diese Ressourc
 
 Diese Ressource enthält die Basiseintragsinformationen für eine App. Diese Ressource hat die folgenden Werte.
 
-| Wert           | Typ    | Beschreibung                                                                                                                                                                                                                          |
+| Wert           | Typ    | Beschreibung       |
 |-----------------|---------|------|
 |  copyrightAndTrademarkInfo                |   string      |  Optionale [Copyright- und/oder Markeninformationen](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#copyright-and-trademark-info).  |
 |  keywords                |  array       |  Ein Array von [keyword](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#keywords), um die Anzeige Ihrer App in Suchergebnissen zu unterstützen.    |
@@ -248,7 +308,7 @@ Diese Ressource enthält die Basiseintragsinformationen für eine App. Diese Res
 
 Diese Ressource enthält Bild- und Symboldaten für einen App-Eintrag. Weitere Informationen zu Bildern und Symbolen für Einträge finden Sie unter [App-Screenshots und -Bilder](https://msdn.microsoft.com/windows/uwp/publish/app-screenshots-and-images). Diese Ressource hat die folgenden Werte.
 
-| Wert           | Typ    | Beschreibung                                                                                                                                                                                                                          |
+| Wert           | Typ    | Beschreibung           |
 |-----------------|---------|------|
 |  fileName               |    string     |   Der Name der Bilddatei im ZIP-Archiv, das Sie für die Übermittlung hochgeladen haben.    |     
 |  fileStatus               |   string      |  Der Status der Bilddatei. Folgende Werte sind möglich: <ul><li>None</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>   |
@@ -260,20 +320,33 @@ Diese Ressource enthält Bild- und Symboldaten für einen App-Eintrag. Weitere I
 <span id="pricing-object" />
 ### Preise
 
-Diese Ressource enthält Preisinformationen für die App. Diese Ressource hat die folgenden Werte.
+Diese Ressource enthält Preisinformationen für die App.
+
+>**Wichtig**&nbsp;&nbsp;Demnächst ändert Microsoft das Preisdatenmodell für App-Übermittlungen in Windows Dev Center. Nach der Implementierung dieser Änderung wird die **Preis**-Ressource nicht mehr unterstützt, und Sie werden vorübergehend nicht in der Lage sein, die Testzeitraum-, Preis-und Verkaufsdaten für eine App-Übermittlung mit der Windows Store-Übermittlungs-API abzurufen oder zu ändern. Die folgenden Verhaltensweisen werden sich geändert haben:
+
+   > * Nach dem Aufruf der [GET-Methode zum Abruf einer App-Übermittlung](get-an-app-submission.md) ist die **Preis**-Ressource leer. Sie können das Dev Center-Dashboard weiterhin verwenden, um die Preisdaten für Ihre App-Übermittlung abzurufen.
+   > * Beim Aufrufen der [PUT-Methode zur Aktualisierung einer App-Übermittlung](update-an-app-submission.md) werden die Informationen in der **Preis**-Ressource ignoriert. Sie können das Dev Center-Dashboard weiterhin verwenden, um die Preisdaten für Ihre App-Übermittlung zu ändern.
+
+> Wir werden die Windows Store-Übermittlungs-API aktualisieren, um eine neue Methode für den programmatischen Abruf und die Änderung von Preisinformationen für App-Übermittlungen einzuführen.
+
+Diese Ressource hat die folgenden Werte.
 
 | Wert           | Typ    | Beschreibung                                                                                                                                                                                                                          |
 |-----------------|---------|------|
 |  trialPeriod               |    string     |  Eine Zeichenfolge, die den Testzeitraum für die App angibt. Folgende Werte sind möglich: <ul><li>NoFreeTrial</li><li>OneDay</li><li>TrialNeverExpires</li><li>SevenDays</li><li>FifteenDays</li><li>ThirtyDays</li></ul>    |
 |  marketSpecificPricings               |    object     |  Ein Verzeichnis von Schlüssel-Wert-Paaren, wobei jeder Schlüssel ein aus zwei Buchstaben bestehender ISO3166-1-Alpha-2-Ländercode ist und jeder Wert ein [Preisniveau](#price-tiers) ist. Diese Elemente stellen die [benutzerdefinierten Preise für Ihre App in bestimmten Märkten](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices) dar. Alle Elemente in diesem Verzeichnis überschreiben für den angegebenen Markt den Basispreis, der durch den Wert *priceId* angegeben wird.      |     
 |  sales               |   array      |  Ein Array von Objekten, die Verkaufsinformationen für die App enthalten. Weitere Informationen finden Sie unten im Abschnitt [Verkauf](#sale-object).    |     
-|  priceId               |   string      |  Ein [Preisniveau](#price-tier), das den [Basispreis](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#base-price) für die App angibt.   |
+|  priceId               |   string      |  Ein [Preisniveau](#price-tiers), das den [Basispreis](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#base-price) für die App angibt.   |
 
 
 <span id="sale-object" />
 ### Verkauf
 
-Diese Ressource enthält die Verkaufsinformationen für eine App. Diese Ressource hat die folgenden Werte.
+Diese Ressource enthält die Verkaufsinformationen für eine App.
+
+>**Wichtig**&nbsp;&nbsp;Demnächst ändert Microsoft das Preisdatenmodell für App-Übermittlungen in Windows Dev Center. Nach der Implementierung dieser Änderung wird die **Verkaufs**-Ressource nicht mehr unterstützt, und Sie werden vorübergehend nicht in der Lage sein, die Preis-und Verkaufsdaten für eine App-Übermittlung mit der Windows Store-Übermittlungs-API abzurufen oder zu ändern. Wir werden die API aktualisieren, um eine neue Methode für den programmgesteuerten Zugriff auf Verkaufsinformationen für App-Übermittlungen einzuführen. Weitere Informationen finden Sie im Abschnitt [Preisressource](#pricing-object).
+
+Diese Ressource hat die folgenden Werte.
 
 | Wert           | Typ    | Beschreibung                                                                                                                                                                                                                          |
 |-----------------|---------|------|
@@ -369,6 +442,47 @@ Diese Ressource stellt den Zugriff auf die Zertifizierungsberichtdaten für eine
 |     reportUrl            |    string     |  Die URL, unter der Sie auf den Bericht zugreifen können.    |
 
 
+<span id="package-delivery-options-object" />
+### options-Objekt für die Paketübermittlung
+
+Diese Ressource enthält Einstellungen für graduelle Paketrollouts und Pflichtaktualisierungen für die Übermittlung. Das folgende Beispiel veranschaulicht das Format der Ressource.
+
+```json
+{
+  "packageDeliveryOptions": {
+    "packageRollout": {
+        "isPackageRollout": false,
+        "packageRolloutPercentage": 0,
+        "packageRolloutStatus": "PackageRolloutNotStarted",
+        "fallbackSubmissionId": "0"
+    },
+    "isMandatoryUpdate": false,
+    "mandatoryUpdateEffectiveDate": "1601-01-01T00:00:00.0000000Z"
+  },
+}
+```
+
+Diese Ressource hat die folgenden Werte.
+
+| Wert           | Typ    | Beschreibung        |
+|-----------------|---------|------|
+| packageRollout   |   object      |  Enthält Einstellungen für den graduellen Paketrollout für die Übermittlung. Weitere Informationen finden Sie unten im Abschnitt [Paketrolloutobjekt](#package-rollout-object).    |  
+| isMandatoryUpdate    | boolean    |  Gibt an, ob die Pakete in dieser Übermittlung als verpflichtend für automatisch installierte App-Aktualisierungen behandelt werden sollen. Weitere Informationen zu verpflichtenden Paketen für automatisch installierte App-Aktualisierungen finden Sie unter [Herunterladen und Installieren von Paketupdates für Ihre App](../packaging/self-install-package-updates.md).    |  
+| mandatoryUpdateEffectiveDate    |  date   |  Datum und Uhrzeit, an der/dem die Pakete in dieser Übermittlung verpflichtend werden, im ISO 8601-Format und gemäß UTC-Zeitzone.   |        
+
+<span id="package-rollout-object" />
+### Paketrolloutobjekt
+
+Diese Ressource enthält Einstellungen für [graduelle Paketrollouts](#manage-gradual-package-rollout) für die Übermittlung. Diese Ressource hat die folgenden Werte.
+
+| Wert           | Typ    | Beschreibung        |
+|-----------------|---------|------|
+| isPackageRollout   |   boolean      |  Gibt an, ob für die Übermittlung der graduelle Paketrollout aktiviert ist.    |  
+| packageRolloutPercentage    | float    |  Der Prozentsatz der Benutzer, die im Rahmen des graduellen Paketrollouts die Pakete erhalten.    |  
+| packageRolloutStatus    |  string   |  Eine der folgenden Zeichenfolgen, die den Status des graduellen Paketrollouts angeben: <ul><li>PackageRolloutNotStarted</li><li>PackageRolloutInProgress</li><li>PackageRolloutComplete</li><li>PackageRolloutStopped</li></ul>  |  
+| fallbackSubmissionId    |  string   |  Die ID der Übermittlung, die die Kunden erhalten, die keine Pakete im Rahmen des graduellen Paketrollouts erhalten.   |          
+
+<span/>
 
 ## Enumerationen
 
@@ -432,6 +546,6 @@ Die folgenden Werte stellen den Statuscode einer Übermittlung dar.
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

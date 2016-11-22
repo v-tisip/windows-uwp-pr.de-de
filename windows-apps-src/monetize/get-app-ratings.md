@@ -4,17 +4,14 @@ ms.assetid: DD4F6BC4-67CD-4AEF-9444-F184353B0072
 description: "Mittels dieser Methode in der Windows Store-Analyse-API können Sie gesammelte Bewertungsdaten für einen bestimmten Zeitraum und andere optionale Filter abrufen."
 title: Abrufen von App-Bewertungen
 translationtype: Human Translation
-ms.sourcegitcommit: 6d0fa3d3b57bcc01234aac7d6856416fcf9f4419
-ms.openlocfilehash: 8ec588ceb0a7c8bd6a75f72bf0a2d48c697a8e6a
+ms.sourcegitcommit: 67845c76448ed13fd458cb3ee9eb2b75430faade
+ms.openlocfilehash: 45df3a1296ba06551e08705e9d72a693ad3d33e5
 
 ---
 
 # Abrufen von App-Bewertungen
 
-
-
-
-Mittels dieser Methode in der Windows Store-Analyse-API können Sie gesammelte Bewertungsdaten für einen bestimmten Zeitraum und andere optionale Filter abrufen. Diese Methode gibt die Daten im JSON-Format zurück.
+Mit dieser Methode der Windows Store-Analyse-API können Sie aggregierte Bewertungsdaten (im JSON-Format) für einen bestimmten Zeitraum und andere optionale Filter abrufen. Diese Informationen sind auch im [Bericht „Bewertungen“](../publish/ratings-report.md) im Windows Dev Center-Dashboard verfügbar.
 
 ## Voraussetzungen
 
@@ -118,6 +115,31 @@ Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 <p>Der Parameter <em>order</em> ist optional und kann <strong>asc</strong> oder <strong>desc</strong> sein, um die auf- oder absteigende Anordnung der einzelnen Felder anzugeben. Der Standard ist <strong>asc</strong>.</p>
 <p>Dies ist eine Beispielzeichenfolge für <em>orderby</em>: <em>orderby=date,market</em></p></td>
 <td align="left">Nein</td>
+</tr>
+<tr class="odd">
+<td align="left">groupby</td>
+<td align="left">string</td>
+<td align="left"><p>Eine Anweisung, die nur auf die angegebenen Felder Datenaggregationen anwendet. Sie können die folgenden Felder angeben:</p>
+<ul>
+<li><strong>date</strong></li>
+<li><strong>applicationName</strong></li>
+<li><strong>market</strong></li>
+<li><strong>osVersion</strong></li>
+<li><strong>deviceType</strong></li>
+<li><strong>isRevised</strong></li>
+</ul>
+<p>Die zurückgegebenen Datenzeilen enthalten die Felder, die im Parameter <em>groupby</em> angegeben sind, sowie die folgenden:</p>
+<ul>
+<li><strong>date</strong></li>
+<li><strong>applicationId</strong></li>
+<li><strong>fiveStars</strong></li>
+<li><strong>fourStars</strong></li>
+<li><strong>threeStars</strong></li>
+<li><strong>twoStars</strong></li>
+<li><strong>oneStar</strong></li>
+</ul>
+<p>Der Parameter <em>groupby</em> kann mit dem Parameter <em>aggregationLevel</em> verwendet werden. Beispiel: <em>&amp;groupby=osVersion,market&amp;aggregationLevel=week</em></p></td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
@@ -261,6 +283,7 @@ Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese 
 
 ## Verwandte Themen
 
+* [Bericht „Bewertungen“](../publish/ratings-report.md)
 * [Zugreifen auf Analysedaten mit WindowsStore-Diensten](access-analytics-data-using-windows-store-services.md)
 * [Abrufen von App-Käufen](get-app-acquisitions.md)
 * [Abrufen von Add-On-Käufen](get-in-app-acquisitions.md)
@@ -269,6 +292,6 @@ Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese 
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

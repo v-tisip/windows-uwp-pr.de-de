@@ -6,8 +6,8 @@ MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: Windows Information Protection (WIP)
 translationtype: Human Translation
-ms.sourcegitcommit: 1070561ea95cd1d884303fdd476b40a9ec88e390
-ms.openlocfilehash: 2beec354ed7dbb3cc2d4cb502977ce028b4eaf1d
+ms.sourcegitcommit: 724d9edf67d0f73ceb3eb2ac323e0a0f42f2dd0d
+ms.openlocfilehash: f9cfa8d1d7ea4e78208a4fb3fc853884a13a676c
 
 ---
 
@@ -66,9 +66,6 @@ Unter anderem bieten unternehmensoptimierte Apps die folgenden Vorteile:
 
   Beispielsweise verhindern sie, dass Daten an einen Endpunkt außerhalb des Unternehmens gesendet werden, umschließen Daten vor dem Zulassen des Roamings in einem portablen verschlüsselten Format und fordern den Benutzer ggf. (abhängig von Richtlinieneinstellungen) zur Zustimmung auf, bevor Unternehmensdaten in einer App eingefügt werden, die nicht in der Liste der zulässigen Apps enthalten ist.
 
-> **Hinweis**  Der WIP-Dateischutz nutzt RMS-Schlüssel (Rights Management Service, Rechteverwaltungsdienst), wenn diese bereitgestellt werden, da diese Schlüssel auf verschiedenen Geräten bereitgestellt werden können, wodurch ein Roaming der geschützten Daten ermöglicht wird. Wenn keine RMS-Schlüssel vorhanden sind, greifen diese APIs auf lokale Schlüssel für die selektive Zurücksetzung zurück und schränken die Roaming-Funktionen ein. Auf Daten mit verschlüsseltem Roaming kann auf Geräten mit älteren Windows-Versionen und auf Drittanbietergeräten über plattformspezifische RMS-Apps zugegriffen werden, die von Microsoft bereitgestellt werden, sowie mit für RMS optimierten Apps von Drittanbietern.
-
-
 
 
 
@@ -79,6 +76,6 @@ Unter anderem bieten unternehmensoptimierte Apps die folgenden Vorteile:
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

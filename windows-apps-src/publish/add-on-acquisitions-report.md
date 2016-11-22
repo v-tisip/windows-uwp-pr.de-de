@@ -4,15 +4,15 @@ Description: "Im Bericht zu Add-On-Käufen im Windows Dev Center-Dashboard sehen
 title: "Bericht zu Add-On-Käufen"
 ms.assetid: F2DF9188-0A98-4AC3-81C0-3E2C37B15582
 translationtype: Human Translation
-ms.sourcegitcommit: 0edf45e997f36a82a8bfcb92c1d8fd2c79242461
-ms.openlocfilehash: 144a8400acf0333fcd50e698b333c02942081ef3
+ms.sourcegitcommit: 7b73682ea36574f8b675193a174d6e4b4ef85841
+ms.openlocfilehash: 76ea807f1f8306bb964a61d1c81e9bf578e4b344
 
 ---
 
 # Bericht zu Add-On-Käufen
 
 
-Im Bericht **Add-On-Käufe** im Windows Dev Center-Dashboard sehen Sie, wie viele Add-Ons Sie verkauft haben, und Sie können demografische und plattformspezifische Details einsehen. Sie können diese Informationen in Ihrem Dashboard anzeigen oder [den Bericht herunterladen](download-analytic-reports.md), um die Daten offline anzuzeigen. Sie können diese Daten aber auch programmgesteuert mit der [Windows Store-REST-API für Analysen](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
+Im Bericht **Add-On-Käufe** im Windows Dev Center-Dashboard sehen Sie, wie viele Add-Ons Sie verkauft haben, und Sie können demografische und plattformspezifische Details einsehen. Sie können diese Informationen in Ihrem Dashboard anzeigen oder [den Bericht herunterladen](download-analytic-reports.md), um die Daten offline anzuzeigen. Sie können diese Daten auch programmgesteuert mit der Methode [get add-on acquisitions](../monetize/get-in-app-acquisitions.md) der [Windows Store-Analyse-REST-API](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
 
 In diesem Bericht steht „Add-On-Kauf“ für einen Kunden, der ein Add-On von Ihnen erworben hat. Wenn ein Kunde mehrere Käufe desselben konsumierbaren Add-Ons getätigt hat, werden diese als separate Add-On-Käufe aufgeführt.
 
@@ -66,6 +66,6 @@ Im Diagramm **Betriebssystemversion** wird die Gesamtzahl der Käufe entsprechen
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

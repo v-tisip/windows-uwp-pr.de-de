@@ -1,26 +1,24 @@
 ---
 author: jnHs
 Description: "Sie können für Ihre Apps detaillierte Analysen im Windows Dev Center-Dashboard anzeigen."
-title: Analyse
+title: Analysen
 ms.assetid: 3A3C6F10-0DB1-416D-B632-CD388EA66759
 translationtype: Human Translation
-ms.sourcegitcommit: 3afdf00864e023d913b635beef0c506735881b23
-ms.openlocfilehash: fd03b13d4169f265575de921ef9c42303babe972
+ms.sourcegitcommit: fa6e5945855defc99e9f5636543ec072eb777a5a
+ms.openlocfilehash: c628b1fb29601ff1d4ff3629da45409586274f6b
 
 ---
 
-# Analyse
+# Analysen
 
 Sie können für Ihre Apps detaillierte Analysen im Windows Dev Center-Dashboard anzeigen. Statistiken und Diagramme geben Aufschluss über den Erfolg Ihrer Apps, z.B. wie viele Kunden Sie erreichen, wie die Kunden Ihre App einsetzen und was die Kunden über die App denken. Außerdem finden Sie dort Informationen zur App-Integrität, Anzeigennutzung und vieles mehr. Zeigen Sie die Berichte im Dashboard an, oder [laden Sie die erforderlichen Berichte herunter](download-analytic-reports.md), um Ihre Daten offline zu analysieren. Wir stellen Ihnen auch verschiedene Möglichkeiten für den [Zugriff auf Analysedaten ohne das Dashboard](#no-dashboard) zur Verfügung.
 
 > [!NOTE]
-> Zusätzlich zu den Dashboardberichten können Sie auf einige Analysedaten auch programmgesteuert mithilfe der [Windows Store-REST-API für Analysen](../monetize/access-analytics-data-using-windows-store-services.md) zugreifen.
+> Zusätzlich zu den Dashboardberichten können Sie auf einige Analysedaten auch programmgesteuert mithilfe der [Windows Store-Analyse-REST-API](../monetize/access-analytics-data-using-windows-store-services.md) zugreifen.
 
 ## Analysen für Ihre gesamten Apps
 
-Ihre Seite „Dashboardübersicht“ enthält auch eine Rollupansicht zum Durchblättern aller Details zu Ihren Apps. Welche Statistikdaten auf der Übersichtsseite angezeigt werden, hängt von Ihren Apps ab.
-
-Wenn Sie [Analyseberichte herunterladen](download-analytic-reports.md), haben Sie auch die Möglichkeit, Berichte über Ihre gesamten Apps herunterzuladen. Beachten Sie, dass Sie auf die Seite **Berichte herunterladen** im Abschnitt **Analysen** einer Ihrer Apps zugreifen müssen. Dies bedeutet jedoch nicht, dass Sie nur für diese bestimmte App Daten herunterladen können.
+Um die wichtigsten Analysen zu den am häufigsten heruntergeladenen Apps anzuzeigen, wählen Sie im oberen Navigationsmenü **Analysen** > **Übersicht** aus. Auf der Seite **Analyseübersicht** werden standardmäßig Informationen zu den fünf während ihrer Lebensdauer am häufigsten gekauften Apps angezeigt. Um andere Apps auszuwählen und anzuzeigen, wählen Sie **Filter ändern** aus.
 
 ## Verfügbare Berichte für die einzelnen Apps
 
@@ -35,8 +33,9 @@ In diesem Abschnitt erhalten Sie Details zu den Informationen, die in den folgen
 -   [Bericht zu Add-On-Käufen](add-on-acquisitions-report.md)
 -   [Bericht „Anzeigenvermittlung“](ad-mediation-report.md)
 -   [Bericht zur Anzeigen-Performance](advertising-performance-report.md)
+-   [Bericht zur Partneranzeigen-Performance](affiliates-performance-report.md)
 -   [Bericht „Anzeigen für die App-Installation“](app-install-ads-reports.md)
--   [Bericht zu Kanälen und Konvertierungen](channels-and-conversions-report.md)
+-   [Bericht zu Kanälen und Abschlüssen](channels-and-conversions-report.md)
 
 > [!NOTE]
 > Abhängig von den spezifischen Features und der Implementierung Ihrer App enthalten einige dieser Berichte möglicherweise keine Daten.
@@ -73,13 +72,13 @@ Verwenden Sie die folgenden Ressourcen, um mit Power BI auf Ihre Analysedaten zu
 
 ### DevCenter-App
 
-Installieren Sie die [Dev Center](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws)-App, um schnell Details über den Zustand und die Leistung Ihrer Apps auf Windows 10-Geräten anzuzeigen. 
+Installieren Sie die [Dev Center](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws)-App, um schnell Details über den Zustand und die Leistung Ihrer Apps auf Windows 10-Geräten anzuzeigen.
 
 ## Verwandte Themen
 - [Veröffentlichen von Windows-Apps](index.md)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

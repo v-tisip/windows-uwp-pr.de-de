@@ -4,8 +4,8 @@ ms.assetid: EFCF84D0-2F4C-454D-97DA-249E9EAA806C
 description: "Mit der SystemMediaTransportControls-Klasse kann Ihre App die Steuerelemente für den Systemmedientransport verwenden, die in Windows integriert sind, und die Metadaten aktualisieren, die die Steuerelemente zu den von der App aktuell wiedergegebenen Medien anzeigen."
 title: "Manuelle Steuerung der Steuerelemente für den Systemmedientransport"
 translationtype: Human Translation
-ms.sourcegitcommit: 2cf432bc9d6eb0e564b6d6aa7fdbfd78c7eef272
-ms.openlocfilehash: 6643f6bee55c1c9631ca20d2fe7eb6ac1c5ae3e2
+ms.sourcegitcommit: 34cb2fec3071add8617fe2bee2eaf50356611ac6
+ms.openlocfilehash: 471cf095109fc9bbfcb241dd6eb480603c3df655
 
 ---
 
@@ -19,6 +19,9 @@ In verschiedenen Szenarien müssen Sie eine manuelle Steuerung der SMTC implemen
 
 ## Einrichten von Transportsteuerelementen
 Wenn Sie für die Medienwiedergabe **MediaPlayer** verwenden, können Sie eine Instanz der [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.SystemMediaTransportControls)-Klasse abrufen, indem Sie auf die [**MediaPlayer.SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.SystemMediaTransportControls)-Eigenschaft zugreifen. Wenn Sie die SMTC manuell steuern möchten, sollten Sie die automatische Integration von **MediaPlayer** deaktivieren, indem Sie die [**CommandManager.IsEnabled**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager.IsEnabled)-Eigenschaft auf „false“ festlegen.
+
+> [!NOTE] 
+> Wenn Sie [**MediaPlaybackCommandManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager) für [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) deaktivieren, indem Sie [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager.IsEnabled) auf „false“ festlegen, wird die von **MediaPlayerElement** bereitgestellte Verknüpfung zwischen **MediaPlayer** und [**TransportControls**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement.TransportControls) getrennt, sodass die integrierten Transportsteuerelemente nicht mehr automatisch die Wiedergabe des Players steuern. Stattdessen müssen Sie Ihre eigenen Steuerelemente zum Steuern des **MediaPlayers** implementieren.
 
 [!code-cs[InitSMTCMediaPlayer](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetInitSMTCMediaPlayer)]
 
@@ -116,6 +119,6 @@ Weitere Informationen zur Audiowiedergabe im Hintergrund finden Sie unter [Wiede
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

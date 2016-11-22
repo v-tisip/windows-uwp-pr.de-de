@@ -4,8 +4,8 @@ ms.assetid: 0fc12d26-f1cf-4da7-b5a7-735a5074b74a
 description: "Dieser Abschnitt stellt Informationen zum Erstellen von Apps für die universelle Windows-Plattform (UWP) bereit, mit denen Fotos, Videos oder Audioaufnahmen aufgenommen, wiedergegeben oder bearbeitet werden können."
 title: Audio, Video und Kamera
 translationtype: Human Translation
-ms.sourcegitcommit: 18e97dd5e607960c1c1fd640fe6fe6ae5e9f9085
-ms.openlocfilehash: 1914690b6417a5ae382e74ec76b54d9db411c213
+ms.sourcegitcommit: fd5b52a1d431b9396a4b162077d4f8d6246cd597
+ms.openlocfilehash: 6e67f57fbc00e596bb07cc37f2c9f762a5c9f557
 
 ---
 
@@ -30,10 +30,10 @@ Dieser Abschnitt stellt Informationen zum Erstellen von Apps für die universell
 | [MIDI](midi.md) | Zeigt Ihnen, wie Sie MIDI-Geräte (Musical Instrument Digital Interface) aufzählen und MIDI-Nachrichten in einer UWP-App senden und empfangen. |
 | [Importieren von Medien von einem Gerät](import-media-from-a-device.md) | Beschreibt, wie Medien aus einem Gerät importiert werden, einschließlich der Suche nach verfügbaren Medienquellen, des Importierens von Dateien wie Videos, Fotos und Sidecarddateien und des Löschens der importierten Dateien im Quellgerät. |
 | [Kameraunabhängige Taschenlampe](camera-independent-flashlight.md) | Zeigt Ihnen, wie Sie auf die Taschenlampe eines Geräts zugreifen und diese verwenden, wenn vorhanden. Die Taschenlampenfunktion wird unabhängig von der Kamera des Geräts und der Blitzfunktion der Kamera verwaltet. |
-| [Unterstützte Codecs](supported-codecs.md) | Listet die unterstützten Audio- und Videocodecs und unterstützten Formate für UWP-Apps auf. |
+| [Unterstützte Codecs](supported-codecs.md) | Listet die unterstützten Audio-, Video- und Bildcodecs und unterstützten Formate für UWP-Apps auf. |
 
 
-## Siehe auch
+## Weitere Informationen finden Sie unter
 - [Entwickeln von UWP-Apps](https://developer.microsoft.com/en-us/windows/develop)
 
  
@@ -48,6 +48,6 @@ Dieser Abschnitt stellt Informationen zum Erstellen von Apps für die universell
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

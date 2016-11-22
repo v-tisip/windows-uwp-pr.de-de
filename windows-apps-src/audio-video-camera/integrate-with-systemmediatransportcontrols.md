@@ -4,8 +4,8 @@ ms.assetid:
 description: "In diesem Artikel wird erläutert, wie Sie mit den Steuerelementen für den Systemmedientransport arbeiten."
 title: "Integration in die Steuerelemente für den Systemmedientransport"
 translationtype: Human Translation
-ms.sourcegitcommit: 53b1cb94f90cd697a96bca49c5f2109d4749dbd1
-ms.openlocfilehash: c490ea43a6f49e09828cb6b07a6fbf1920acca74
+ms.sourcegitcommit: 34cb2fec3071add8617fe2bee2eaf50356611ac6
+ms.openlocfilehash: 702d5911f6e76d6c047fcc97c1117456ae04c3e5
 
 ---
 
@@ -70,6 +70,7 @@ Schließlich wird für das Deferral-Objekt die Funktion [**Complete**](https://m
 Wie weiter oben in diesem Artikel bereits erwähnt, erkennt der SMTC automatisch die Informationen für jede einzelne Instanz von **MediaPlayer**, die Ihre App erstellt, und zeigt diese an. Wenn Sie mehrere Instanzen von **MediaPlayer** verwenden möchten, SMTC jedoch noch einen einzelnen Eintrag für Ihre App bereitstellt, müssen Sie das Verhalten von SMTC manuell steuern anstatt sich auf die automatische Integration zu verlassen. Auch wenn Sie [**MediaTimelineController**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.MediaTimelineController) verwenden, um mindestens ein MediaPlayer zu steuern, müssen Sie die SMTC-Integration manuell durchführen. Dies gilt außerdem, wenn Ihre App ein anderes API als **MediaPlayer** verwendet, um Medien wiederzugeben, z. B. die [**AudioGraph**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioGraph)-Klasse. Auch in diesem Fall müssen Sie die SMTC-Integration manuell durchführen, damit der Benutzer Ihre App mit den Steuerelementen für den Systemmedientransport bedienen kann. Informationen zur manuellen Bedienung der Steuerelemente für den Systemmedientransport finden Sie unter [Manuelle Steuerung der Steuerelemente für den Systemmedientransport](system-media-transport-controls.md).
 
 
+
 ## Verwandte Themen
 * [Medienwiedergabe](media-playback.md)
 * [Wiedergeben von Audio- und Videoinhalten mit „MediaPlayer“](play-audio-and-video-with-mediaplayer.md)
@@ -85,6 +86,6 @@ Wie weiter oben in diesem Artikel bereits erwähnt, erkennt der SMTC automatisch
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

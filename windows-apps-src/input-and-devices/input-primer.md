@@ -6,8 +6,8 @@ ms.assetid: 73008F80-FE62-457D-BAEC-412ED6BAB0C8
 label: Interaction primer
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: fe012189566a20203b2bf8cae72f80655eeadfd1
-ms.openlocfilehash: 29a33550c3b8c80c1ae2c8349fc0b771717325f1
+ms.sourcegitcommit: 19e033455caf677c4e65ffb7bd7ce11a5a93b7a9
+ms.openlocfilehash: 5f6aee51984f86c67db9dc77eace614e385df088
 
 ---
 
@@ -22,9 +22,27 @@ Die UWP verwendet ein intelligentes, kontextbezogenes Interaktionssystem, mit de
 
 Machen Sie sich mit den verschiedenen Arten von Eingabegeräten sowie ihren Verhaltensweisen, Möglichkeiten und Einschränkungen in Verbindung mit bestimmten Formfaktoren vertraut. Dies erleichtert Ihnen die Entscheidung, ob die Steuerelemente und Angebote der Plattform für die App ausreichend sind oder ob Sie angepasste Funktionen für die Benutzerinteraktion bereitstellen müssen.
 
+## Surface Dial
+
+Für das Windows10 Anniversary Update führen wir eine neue Kategorie von Eingabegeräten, Windows Wheel, ein. Surface Dial ist das erste Angebot dieser Art. 
+
+### Unterstützung von Geräten
+
+-   Tablet
+-   PCs und Laptops
+
+### Typische Verwendung
+
+Der Formfaktor von Surface Dial entspricht einer Drehaktion (oder -geste). Surface Dial soll als sekundäres, multimodales Eingabegerät genutzt werden, das Eingaben über ein primäres Gerät ergänzt oder modifiziert. In den meisten Fällen wird das Gerät von einem Benutzer mit der nicht dominanten Hand bedient, während er mit seiner dominanten Hand eine Aufgabe ausführt (z.B. Freihandzeichnen mit einem Stift).
+
+### Weitere Informationen
+
+[Surface Dial-Entwurfsrichtlinien](windows-wheel-interactions.md)
+
+
 ## Cortana
 
-In Windows 10 können Sie mit der Erweiterung von **Cortana** Sprachbefehle von einem Benutzer behandeln und die Anwendung zum Ausführen einer einzelnen Aktion starten.
+In Windows10 können Sie mit der Erweiterung **Cortana** Sprachbefehle von einem Benutzer behandeln und die Anwendung zum Ausführen einer einzelnen Aktion starten.
 
 ### Unterstützung von Geräten
 
@@ -332,6 +350,6 @@ Personen kommunizieren untereinander mit einer Mischung aus Sprache und Gesten, 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

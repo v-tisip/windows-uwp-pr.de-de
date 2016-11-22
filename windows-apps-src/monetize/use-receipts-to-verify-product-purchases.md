@@ -4,17 +4,15 @@ ms.assetid: E322DFFE-8EEC-499D-87BC-EDA5CFC27551
 description: "Jede WindowsStore-Transaktion, die zu einem erfolgreichen Produktkauf führt, kann optional einen Transaktionsbeleg zurückgeben."
 title: "Überprüfen von Produktkäufen anhand von Belegen"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: 01b75d25c385d8dd856af79581fb4a346064c400
+ms.sourcegitcommit: 18d5c2ecf7d438355c3103ad2aae32dc84fc89ed
+ms.openlocfilehash: ea79a33a52bc45a9c8609e12bfac953c3f92db09
 
 ---
 
 # Überprüfen von Produktkäufen anhand von Belegen
 
 
-
-
->**Hinweis**&nbsp;&nbsp;In den Beispielen in diesem Artikel werden Member des [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) Namespace verwendet. Wenn Ihre App auf Windows10, Version 1607 oder höher, ausgerichtet ist, wird empfohlen, Member des [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) -Namespace und nicht den Windows.ApplicationModel.Store-Namespace zur Verwaltung von In-App-Einkäufen zu verwenden. Weitere Informationen finden Sie unter [In-App-Einkäufe und Testversionen](in-app-purchases-and-trials.md).
+>**Hinweis**&nbsp;&nbsp;In den Beispielen in diesem Artikel werden Member des [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) Namespace verwendet. Wenn Ihre App für Windows10, Version 1607, oder höher entwickelt wurde, empfehlen wir Ihnen, Member des [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace und nicht des **Windows.ApplicationModel.Store**-Namespace zur Verwaltung von In-App-Einkäufen zu verwenden. Weitere Informationen finden Sie unter [In-App-Einkäufe und Testversionen](in-app-purchases-and-trials.md).
 
 **Wichtige APIs**
 
@@ -242,6 +240,6 @@ namespace ReceiptVerificationSample
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

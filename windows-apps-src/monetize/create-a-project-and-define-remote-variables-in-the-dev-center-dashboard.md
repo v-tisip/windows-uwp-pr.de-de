@@ -4,14 +4,18 @@ Description: "Bevor Sie in Ihrer App für die universelle Windows-Plattform (UWP
 title: Erstellen eines Projekts und Festlegen von Remotevariablen im Dev Center-Dashboard
 ms.assetid: C3809FF1-0A6A-4715-B989-BE9D0E8C9013
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: ea455892717546f7f789054609664ca1c0017699
+ms.sourcegitcommit: 32c1b379ee3913e267664e6d125fbc3daf480bb3
+ms.openlocfilehash: 88a55c9ed64d5f52f959a1c68618dc5296dc24d6
 
 ---
 
 # Erstellen eines Projekts und Festlegen von Remotevariablen im Dev Center-Dashboard
 
-Erstellen Sie zunächst für das Experiment ein [Projekt](run-app-experiments-with-a-b-testing.md#terms) für Ihre App im Dev Center-Dashboard und definieren Sie die Remotevariablen, auf die Ihre App zugreifen kann.
+Erstellen Sie zunächst für das Experiment ein [Projekt](run-app-experiments-with-a-b-testing.md#terms) für Ihre App im Dev Center-Dashboard, und definieren Sie die Remotevariablen, auf die Ihre App zugreifen kann.
+
+Die folgenden Anweisungen beschreiben die wichtigsten Schritte für die Erstellung eines Projekts. Eine ausführliche Erläuterung, die den gesamten Erstellungs- und Ausführungsprozess für ein Projekt und die Durchführung eines Experiments veranschaulicht, finden Sie unter [Erstellen und Durchführen eines ersten Experiments mit A/B-Tests](create-and-run-your-first-experiment-with-a-b-testing.md).
+
+## Anweisungen
 
 1. Melden Sie sich beim [Dev Center-Dashboard](https://dev.windows.com/overview) an.
 2. Wählen Sie unter **Ihre Apps** die App aus, für die Sie ein Experiment erstellen möchten.
@@ -41,6 +45,6 @@ Nachdem Sie ein Projekt erstellt haben, können Sie mit dem [Codieren der App f�
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

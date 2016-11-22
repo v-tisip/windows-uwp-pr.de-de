@@ -4,8 +4,8 @@ Description: "Auf der Seite „Preise und Verfügbarkeit“ des App-Übermittlun
 title: "Festlegen von Preisen und Verfügbarkeit von Apps"
 ms.assetid: 37BE7C25-AA74-43CD-8969-CBA3BD481575
 translationtype: Human Translation
-ms.sourcegitcommit: fc5265cf7d455e34225fd74f9792cdb46b0029d7
-ms.openlocfilehash: 91a65020c29e990d96ab26f5abbd777da7810658
+ms.sourcegitcommit: 2ce776b69eed7d5803db7a37b54c4b00f58dc6c0
+ms.openlocfilehash: e5b956f819af3cbbd7e00d77de77a15678a2ab4c
 
 ---
 
@@ -26,7 +26,7 @@ Weitere Informationen erhalten Sie unter [Festlegen des Preises und Auswählen d
 
 Viele Entwickler bieten Kunden die Möglichkeit, ihre App mithilfe der im Store verfügbaren Testfunktionen kostenlos auszuprobieren. Eine App wird standardmäßig nicht als kostenlose Testversion bereitgestellt. Falls Sie jedoch eine Testversion anbieten möchten, wählen Sie einen Wert aus der Dropdownliste **Kostenlose Testversion** aus.
 
-Wählen Sie **Testversion läuft nie ab**, damit Kunden unbegrenzte Zeit kostenlos auf Ihre App zugreifen dürfen. Da Sie Ihre Kunden zum Kauf der Vollversion animieren möchten, achten Sie darauf, mithilfe des geeigneten Codes [Features in der Testversion auszuschließen oder einzuschränken](https://msdn.microsoft.com/library/windows/apps/mt219685).
+Wählen Sie **Testversion läuft nie ab**, damit Kunden unbegrenzte Zeit kostenlos auf Ihre App zugreifen dürfen. Da Sie Ihre Kunden zum Kauf der Vollversion animieren möchten, achten Sie darauf, mithilfe des geeigneten Codes [Features in der Testversion auszuschließen oder einzuschränken](../monetize/in-app-purchases-and-trials.md).
 
 Sie können die Nutzung der Testversion auch auf **1**,**7**, **15** oder **30 Tage** begrenzen. Sie können während des Testzeitraums zusätzlich Features einschränken oder Kunden den Zugriff auf den gesamten Funktionsumfang gewähren.
 
@@ -86,10 +86,6 @@ Sie können das Veröffentlichungsdatum auch nach dem Einreichen der App ändern
 
 
 
-
-
-
-
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

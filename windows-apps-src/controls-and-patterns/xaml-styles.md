@@ -9,13 +9,13 @@ ms.assetid: AB469A46-FAF5-42D0-9340-948D0EDF4150
 label: XAML styles
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 3aad0049bdd43935fa61b6146b81030494ff5bdb
+ms.sourcegitcommit: 86f28a0509ead0632c942c6746fea19acac54931
+ms.openlocfilehash: d12358e6fcab2afa039426532d47616d74b22ef4
 
 ---
 # XAML-Formatvorlagen
 
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 
 
@@ -143,6 +143,63 @@ Der Basisstil hat als Ziel [**ContentControl**](https://msdn.microsoft.com/libra
 
 Wenn Sie schnell einen Stil auf Ihr Steuerelement anwenden möchten, klicken Sie auf der Microsoft Visual Studio XAML-Entwicklungsoberfläche mit der rechten Maustaste auf das Steuerelement, und wählen Sie **Stil bearbeiten** oder **Vorlage bearbeiten** aus (je nach Steuerelement). Anschließend können Sie einen vorhandenen Stil anwenden, indem Sie **Ressource übernehmen** auswählen, oder einen neuen erstellen, indem Sie **Leer erstellen** auswählen. Wenn Sie einen leeren Stil erstellen, haben Sie die Möglichkeit, diesen auf der Seite, in der Datei App.xaml oder in einem eigenen Ressourcenverzeichnis zu definieren.
 
+## Einfache Formatierung
+
+Das Überschreiben der Systempinsel geschieht gewöhnlich auf App- oder Seitenebene, und in keinem Fall wirkt sich die Farbüberschreibung auf alle Steuerelemente aus, die auf diesen Pinsel verweisen – und in XAML können zahlreiche Steuerelemente auf denselben Pinsel verweisen.
+
+![Formatierte Schaltflächen](images/LightweightStyling_ButtonStatesExample.png)
+
+```XAML
+<Page.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.ThemeDictionaries>
+            <ResourceDictionary x:Key="Light">
+                 <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
+                 <SolidColorBrush x:Key="ButtonForeground" Color="MediumSlateBlue"/>
+                 <SolidColorBrush x:Key="ButtonBorderBrush" Color="MediumSlateBlue"/>
+            </ResourceDictionary>
+        </ResourceDictionary.ThemeDictionaries>
+    </ResourceDictionary>
+</Page.Resources>
+```
+
+Für Zustände wie PointerOver (Mauszeiger über der Schaltfläche), **PointerPressed** (Schaltfläche betätigt) oder Deaktiviert (Schaltfläche erlaubt keine Interaktion). Diese Endungen werden an die ursprünglichen einfachen Formatnahmen angehängt: **ButtonBackgroundPointerOver**, **ButtonForegroundPointerPressed**, **ButtonBorderBrushDisabled** usw. Wenn Sie auch diese Pinsel modifizieren, stellen Sie sicher, dass Ihre Steuerelemente konsistent gemäß dem Thema Ihrer App gestaltet sind.
+
+Die Verwendung dieser Pinselüberschreibungen auf der **App.Resources**-Ebene verändert alle Schaltflächen in der gesamten App und nicht nur auf einer Seite.
+
+### Formatierung pro Steuerelement
+
+In anderen Fällen ist es möglicherweise erwünscht, nur ein einzelnes Steuerelement auf einer Seite in einer bestimmten Weise zu gestalten, ohne dass dies andere Versionen dieses Steuerelements betrifft:
+
+![Formatierte Schaltflächen](images/LightweightStyling_CheckboxExample.png)
+
+```XAML
+<CheckBox Content="Normal CheckBox" Margin="5"/>
+    <CheckBox Content="Special CheckBox" Margin="5">
+        <CheckBox.Resources>
+            <ResourceDictionary>
+                <ResourceDictionary.ThemeDictionaries>
+                    <ResourceDictionary x:Key="Light">
+                        <SolidColorBrush x:Key="CheckBoxForegroundUnchecked"
+                            Color="Purple"/>
+                        <SolidColorBrush x:Key="CheckBoxForegroundChecked"
+                            Color="Purple"/>
+                        <SolidColorBrush x:Key="CheckBoxCheckGlyphForegroundChecked"
+                            Color="White"/>
+                        <SolidColorBrush x:Key="CheckBoxCheckBackgroundStrokeChecked"  
+                            Color="Purple"/>
+                        <SolidColorBrush x:Key="CheckBoxCheckBackgroundFillChecked"
+                            Color="Purple"/>
+                    </ResourceDictionary>
+                </ResourceDictionary.ThemeDictionaries>
+            </ResourceDictionary>
+        </CheckBox.Resources>
+    </CheckBox>
+<CheckBox Content="Normal CheckBox" Margin="5"/>
+```
+
+Dies betrifft nur das eine „besondere Kontrollkästchen“ (Special CheckBox) auf der Seite, auf der dieses Steuerelement vorhanden ist.
+
 ## Ändern der standardmäßigen Systemstile
 
 Verwenden Sie nach Möglichkeit die Stile der standardmäßigen Windows-Runtime-XAML-Ressourcen. Wenn Sie eigene Formatierungen definieren müssen, leiten Sie Ihre Stile am besten von diesen Standardstilen ab (indem Sie, wie zuvor erläutert, abgeleitete Stile verwenden oder eine Kopie des Originalstandardstils bearbeiten).
@@ -153,6 +210,6 @@ Für die [**Template**](https://msdn.microsoft.com/library/windows/apps/br209465
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

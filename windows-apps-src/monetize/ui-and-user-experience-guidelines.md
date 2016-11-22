@@ -4,8 +4,8 @@ ms.assetid: 7a38a352-6e54-4949-87b1-992395a959fd
 description: "Erfahren Sie mehr über UI- und Benutzererfahrungsrichtlinien in App-Anzeigen."
 title: UI- und Benutzererfahrungsrichtlinien in App-Anzeigen
 translationtype: Human Translation
-ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
-ms.openlocfilehash: d464a2de442e6f1833f429c8460c27bf85e577d1
+ms.sourcegitcommit: 8574695fe12042e44831227f81e1f6ea45e9c0da
+ms.openlocfilehash: 3019834a314e552654d74358f4b1eed8451d5119
 
 
 ---
@@ -43,7 +43,7 @@ Informationen zur Gestaltung des Erscheinungsbilds von Apps finden Sie unter [De
 * Nutzer von ihren Kernaufgaben ablenken. Der Schwerpunkt sollte immer auf der App liegen. Werbeflächen sollten so eingebettet werden, dass sie eine untergeordnete Rolle spielen.
 
 <span id="interstitialbestpractices10"/>
-## Bewährte Methoden für Interstitialanzeigen
+## Richtlinien und bewährte Methoden für Interstitialanzeigen
 
 * [Bewährte Methoden für Interstitialanzeigen: EFFEKTIV](#interstitialbestpracticesdo10)
 * [Bewährte Methoden für Interstitialanzeigen: INEFFEKTIV](#interstitialbestpracticesavoid10)
@@ -124,18 +124,23 @@ Wir bemühen uns, Ihnen bei der geschickten Umsetzung behilflich zu sein. Da Sie
 <span id="interstitialbestpracticesnever10"/>
 ### Bewährte Methoden für Interstitialanzeigen: NIEMALS (Richtlinien werden durchgesetzt)
 
-* Platzieren von UI-Elementen auf den Anzeigen-Container.
+* Platzieren Sie niemals UI-Elemente auf dem Anzeigen-Container.
 
     * Werbekunden, haben für den gesamten Bildschirm bezahlt.
 
+<span/>
 
-* Aufrufen der **Show**, während der Benutzer mit der App beschäftigt ist.
+* Rufen Sie niemals **Show** auf, während der Benutzer mit der App beschäftigt ist.
 
     * Da die **InterstitialAd** eine Vollbildüberlagerung erstellt, könnten Nutzer dies als störend empfinden.
 
     * Es könnten auch zu übertriebenen „Durchklick“-Raten führen.
 
-* Verwendung der Anzeigen, um etwas zu erhalten, das als Währung eingesetzt oder mit anderen Nutzern getauscht werden könnte.
+* Verwenden Sie niemals Anzeigen, um etwas zu erhalten, das als Währung eingesetzt oder mit anderen Nutzern getauscht werden könnte.
+
+* Fordern Sie niemals eine neue Anzeige im Kontext des Ereignishandlers für das Ereignis [ErrorOccurred](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.erroroccurred.aspx) an. Dies kann zu einer Endlosschleife und Problemen beim Werbedienst führen.
+
+* Fordern Sie niemals eine Interstitialanzeige an, um anschließend auf das Anzeigen der für Ihre App bereitgestellten Werbung zu verzichten. Wenn Sie eine Anzeige anfordern und anschließend als Reaktion das [AdReady](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.adready.aspx)-Ereignis erhalten, müssen Sie die Werbung anzeigen. Wenn Sie Ihre eigene Anzeigenvermittlungslösung über andere Werbenetzwerke implementieren, fordern Sie erst dann eine Anzeige für das Steuerelement **InterstitialAd** an, wenn Anfragen an andere Werbenetzwerke nicht erfolgreich waren.
 
  
 
@@ -143,6 +148,6 @@ Wir bemühen uns, Ihnen bei der geschickten Umsetzung behilflich zu sein. Da Sie
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

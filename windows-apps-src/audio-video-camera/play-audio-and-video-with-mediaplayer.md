@@ -4,8 +4,8 @@ ms.assetid:
 description: "In diesem Artikel erfahren Sie, wie Sie in Ihrer universellen Windows-App mithilfe von „MediaPlayer“ Medien wiedergeben."
 title: "Wiedergeben von Audio- und Videoinhalten mit „MediaPlayer“"
 translationtype: Human Translation
-ms.sourcegitcommit: 3d6f79ea55718d988415557bc4ac9a1f746f9053
-ms.openlocfilehash: 32df2810710e78eeb8c257548c39c0d5d978e888
+ms.sourcegitcommit: 34cb2fec3071add8617fe2bee2eaf50356611ac6
+ms.openlocfilehash: 66240809d47247312d9d4c49c7bf36ff70295559
 
 ---
 
@@ -39,6 +39,9 @@ Sie können die **MediaPlayer** -Instanz festlegen, an die das Element gebunden 
 Sie können für das **MediaPlayerElement** auch die Wiedergabequelle festlegen. Das Element erstellt dann automatisch eine neue **MediaPlayer**-Instanz, auf die Sie mithilfe der [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement.MediaPlayer)-Eigenschaft zugreifen können.
 
 [!code-cs[GetPlayerFromElement](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetGetPlayerFromElement)]
+
+> [!NOTE] 
+> Wenn Sie [**MediaPlaybackCommandManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager) für [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) deaktivieren, indem Sie [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager.IsEnabled) auf „false“ setzen, wird die von **MediaPlayerElement** bereitgestellte Verknüpfung zwischen **MediaPlayer** und [**TransportControls**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement.TransportControls) getrennt, sodass die integrierten Transportsteuerelemente nicht mehr automatisch die Wiedergabe des Players steuern. Stattdessen müssen Sie Ihre eigenen Steuerelemente zum Steuern des **MediaPlayers** implementieren.
 
 ##Allgemeine MediaPlayer-Aufgaben
 In diesem Abschnitt erfahren Sie, wie Sie verschiedene Features des **MediaPlayers** verwenden.
@@ -174,6 +177,6 @@ Beachten Sie: Wird der Offsetwert eines Players einer negativen Wiedergabepositi
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

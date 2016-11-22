@@ -4,15 +4,15 @@ Description: "Der Bericht „Rezensionen“ im Windows Dev Center-Dashboard gibt
 title: "Bericht „Rezensionen“"
 ms.assetid: E50C3A4D-1D8A-4E5B-8182-3FAD049F2A2D
 translationtype: Human Translation
-ms.sourcegitcommit: ccadaad34ac0854ab95646eda4e3451d1b178b7e
-ms.openlocfilehash: d08eb446977ebab2eeee346f8f17ff79ae57c19b
+ms.sourcegitcommit: 7b73682ea36574f8b675193a174d6e4b4ef85841
+ms.openlocfilehash: b4667c5a3b2af76bc2ceea3013ffcf951909907a
 
 ---
 
 # Bericht „Rezensionen“
 
 
-Der Bericht **Rezensionen** im Windows Dev Center-Dashboard gibt Aufschluss über die Kommentare, die Kunden beim Bewerten Ihrer App im Store eingegeben haben. Sie können diese Informationen in Ihrem Dashboard anzeigen oder [den Bericht herunterladen](download-analytic-reports.md), um Ihre Daten offline anzuzeigen. Sie können diese Daten jedoch auch programmgesteuert mit der [Windows Store-REST-API für Analysen](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
+Der Bericht **Rezensionen** im Windows Dev Center-Dashboard gibt Aufschluss über die Kommentare, die Kunden beim Bewerten Ihrer App im Store eingegeben haben. Sie können diese Informationen in Ihrem Dashboard anzeigen oder [den Bericht herunterladen](download-analytic-reports.md), um Ihre Daten offline anzuzeigen. Sie können diese Daten auch programmgesteuert mit der [get app reviews](../monetize/get-app-reviews.md)-Methode der [Windows Store-REST-API für Analysen](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
 
 > **Hinweis:** Auf dieser Seite können Sie auch [auf Kundenrezensionen reagieren](respond-to-customer-reviews.md).
 
@@ -42,7 +42,7 @@ Im oberen Seitenbereich können Sie **Filter anwenden** erweitern, um alle Daten
 
 -   **Bewertung**: Standardmäßig ist die Bewertung „Alle Sterne“ aktiviert, Sie können jedoch einzelne Bewertungen (von 1 bis 5 Sternen) aktivieren bzw. deaktivieren, wenn Sie nur Rezensionen mit einer bestimmten Sternebewertung anzeigen möchten.
 -   **Ab**: Der Standardwert (leer) zeigt Rezensionen ab der ersten Veröffentlichung Ihrer App an. Sie können ein anderes Datum auswählen, wenn Sie nur Rezensionen anzeigen möchten, die am oder nach dem ausgewählten Datum geschrieben wurden.
--   **Bis**: Der Standardwert (leer) zeigt Rezensionen bis zum aktuellen Datum an. Sie können ein anderes Datum auswählen, wenn Sie nur Rezensionen anzeigen möchten, die vor oder an dem ausgewählten Datum geschrieben wurden. 
+-   **Bis**: Der Standardwert (leer) zeigt Rezensionen bis zum aktuellen Datum an. Sie können ein anderes Datum auswählen, wenn Sie nur Rezensionen anzeigen möchten, die vor oder an dem ausgewählten Datum geschrieben wurden.
 -   **Rezensionsinhalt**: Die Standardeinstellung ist **Alle** und schließt Bewertungen ohne Rezensionstext ein. Sie können **Bewertungen mit Rezensionsinhalt** auswählen, um nur Bewertungen mit geschriebenen Rezensionsinhalten anzuzeigen.
 -   **Zielbetriebssystem**: Die Standardeinstellung ist **Alle**. Sie können ein bestimmtes Zielbetriebssystem auswählen, wenn auf dieser Seite nur Bewertungen von Kunden angezeigt werden sollen, die Ihre für das spezifische Betriebssystem ausgelegten Pakete verwenden.
 -   **Antworten**: Die Standardeinstellung ist **Alle**. Sie können die Rezensionen so filtern, dass nur die Kundenrezensionen angezeigt werden, auf die Sie [geantwortet](respond-to-customer-reviews.md) haben, oder nur die, auf die Sie noch nicht geantwortet haben.
@@ -85,6 +85,6 @@ Im Folgenden finden Sie einige zusätzliche Aktionen, die Sie basierend auf den 
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

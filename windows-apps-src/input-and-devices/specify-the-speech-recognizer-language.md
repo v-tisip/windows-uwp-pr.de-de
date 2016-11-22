@@ -6,8 +6,8 @@ ms.assetid: 4C463A1B-AF6A-46FD-A839-5D6724955B38
 label: Specify the speech recognizer language
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 1a70ac671c11d2ab3c34a95f2571685f4f851836
+ms.sourcegitcommit: 526493614666424089199063013b5fc72d9bc5d8
+ms.openlocfilehash: 9abde4aa5489780f3ee2e9b5e7ecbdfa4dd53b93
 
 ---
 
@@ -106,12 +106,16 @@ Bei einer SRGS-Grammatik handelt es sich um ein offenes XML-Standardformat, das 
 
 ## Verwandte Artikel
 
-
 **Entwickler**
+
 * [Interaktionen mit der Spracherkennung](speech-interactions.md)
+
 **Designer**
-* [Entwicklungsrichtlinien für die Spracherkennung](https://msdn.microsoft.com/library/windows/apps/dn596121)
+
+* [Designrichtlinien für die Spracherkennung] (https://msdn.microsoft.com/library/windows/apps/dn59612)
+
 **Beispiele**
+
 * [Beispiel zu Spracherkennung und Sprachsynthese](http://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
@@ -123,6 +127,6 @@ Bei einer SRGS-Grammatik handelt es sich um ein offenes XML-Standardformat, das 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

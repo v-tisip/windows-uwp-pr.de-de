@@ -4,8 +4,8 @@ ms.assetid: 9BA3F85A-970F-411C-ACB1-B65768B8548A
 description: Dieser Artikel beschreibt, wie Sie in einer UWP (Universelle Windows-Plattform)-App innerhalb einer XAML-Seite schnell den Datenstrom der Kameravorschau anzeigen.
 title: Anzeigen der Kameravorschau
 translationtype: Human Translation
-ms.sourcegitcommit: 599e7dd52145d695247b12427c1ebdddbfc4ffe1
-ms.openlocfilehash: 8330ee43089207faab5f6f72e2ac7b32aada72ce
+ms.sourcegitcommit: 6aacd5ef8043c9c89116a1d287174210f02f7d62
+ms.openlocfilehash: 5eb53d1527f2cd002dfb66110f1f1f3618458b3a
 
 ---
 
@@ -37,7 +37,7 @@ Mithilfe eines [**CaptureElement**](https://msdn.microsoft.com/library/windows/a
 
 ## Verwenden von MediaCapture zum Starten des Vorschaudatenstroms
 
-Das [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124)-Objekt ist die Schnittstelle Ihrer App mit der Kamera des Geräts. Diese Klasse ist ein Mitglied des Namespace „Windows.Media.Capture“. Im Beispiel in diesem Artikel werden neben den in der Standard-Projektvorlage enthaltenen APIs auch APIs aus den Namespaces [**Windows.ApplicationModel**](https://msdn.microsoft.com/library/windows/apps/br224691) und [System.Threading.Tasks](https://msdn.microsoft.com/library/windows/apps/xaml/system.threading.tasks.aspx) verwendet.
+Das [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124)-Objekt ist die Schnittstelle Ihrer App mit der Kamera des Geräts. Diese Klasse ist ein Mitglied des Windows.Media.Capture-Namespace. Im Beispiel in diesem Artikel werden neben den in der Standard-Projektvorlage enthaltenen APIs auch APIs aus den Namespaces [**Windows.ApplicationModel**](https://msdn.microsoft.com/library/windows/apps/br224691) und [System.Threading.Tasks](https://msdn.microsoft.com/library/windows/apps/xaml/system.threading.tasks.aspx) verwendet.
 
 Fügen Sie using-Direktiven hinzu, um die folgenden Namespaces in die CS-Datei Ihrer Seite einzubeziehen.
 
@@ -65,8 +65,8 @@ Verbinden Sie das **MediaCapture**-Objekt mit der **CaptureElement**-Klasse, ind
 Wenn Sie den Vorschaudatenstrom nicht mehr benötigen, sollten Sie ihn stets beenden und die dazugehörigen Ressourcen ordnungsgemäß löschen, um sicherzustellen, dass die Kamera für andere Apps auf dem Gerät verfügbar ist. Folgende Schritte sind zum Beenden des Vorschaudatenstroms erforderlich:
 
 -   Wenn die Vorschau der Kamera gerade aktiv ist, rufen Sie [**StopPreviewAsync**](https://msdn.microsoft.com/library/windows/apps/br226622) auf, um den Vorschaudatenstrom zu beenden. Wenn Sie **StopPreviewAsync** aufrufen, während die Vorschau nicht ausgeführt, wird eine Ausnahme ausgelöst.
--   Legen Sie die [**Source**](https://msdn.microsoft.com/library/windows/apps/br209280)-Eigenschaft von **CaptureElement** auf NULL fest. Stellen Sie mithilfe von [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Core.CoreDispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority,Windows.UI.Core.DispatchedHandler) sicher, dass dieser Aufruf im UI-Thread ausgeführt wird.
--   Rufen Sie die [**Dispose**](https://msdn.microsoft.com/library/windows/apps/dn278858)-Methode des **MediaCapture**-Objekts auf, um es freizugeben. Verwenden Sie erneut [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Core.CoreDispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority,Windows.UI.Core.DispatchedHandler), um sicherzustellen, dass dieser Aufruf im UI-Thread ausgeführt wird.
+-   Legen Sie die [**Source**](https://msdn.microsoft.com/library/windows/apps/br209280)-Eigenschaft von **CaptureElement** auf NULL fest. Verwenden Sie [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.core.coredispatcher.runasync.aspx), um sicherzustellen, dass dieser Aufruf im UI-Thread ausgeführt wird.
+-   Rufen Sie die [**Dispose**](https://msdn.microsoft.com/library/windows/apps/dn278858)-Methode des **MediaCapture**-Objekts auf, um es freizugeben. Stellen Sie erneut mit [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.core.coredispatcher.runasync.aspx) sicher, dass dieser Aufruf im UI-Thread ausgeführt wird.
 -   Legen Sie die **MediaCapture**-Membervariable auf NULL fest.
 -   Rufen Sie [**RequestRelease**](https://msdn.microsoft.com/library/windows/apps/Windows.System.Display.DisplayRequest.RequestRelease) auf, wenn der Bildschirm bei Inaktivität ausgeschaltet werden soll.
 
@@ -93,6 +93,6 @@ Stellen Sie im **Suspending**-Ereignishandler zunächst sicher, dass die Seite i
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

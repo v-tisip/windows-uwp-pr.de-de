@@ -4,8 +4,8 @@ ms.assetid: 03A74239-D4B6-4E41-B2FA-6C04F225B844
 title: "Erstellen der App „Hello, world“ (XAML)"
 description: "In diesem Lernprogramm erfahren Sie, wie Sie XAML (Extensible Application Markup Language) mit C# zum Erstellen einer einfachen „Hello, World“-App verwenden, die auf die universelle Windows Plattform (UWP) unter Windows10 abzielt."
 translationtype: Human Translation
-ms.sourcegitcommit: 275c5cf8f8960f2be7cd9566e59eeb3bf4ee8f46
-ms.openlocfilehash: 272eb87e47c398218df85fa33f70bf9fbf240a3e
+ms.sourcegitcommit: 344ffda398c789f82973b5f08a0e3b791fc5ad10
+ms.openlocfilehash: 6cf960781862649588f361b6bfcd87605f3e8d55
 
 ---
 
@@ -109,21 +109,21 @@ Fügen wir nun der Seite eine Schaltfläche hinzu. In diesem Lernprogramm verwen
 
     Wenn Sie das Fenster mit dem XAML-Code betrachten, sehen Sie, dass die Schaltfläche auch dort hinzugefügt wurde:
 
-    ```XAML
+ ```XAML
 <Button x:name="button" Content="Button" HorizontalAlignment="Left" Margin = "152,293,0,0" VerticalAlignment="Top"/>
-```
+ ```
 
 4.  Ändern Sie den Text der Schaltfläche.
 
     Klicken Sie in der XAML-Codeansicht, und ändern Sie den Inhalt von „Schaltfläche“ in „Hello, World!“.
 
-    ```XAML
+```XAML
 <Button x:name="button" Content="Hello, world!" HorizontalAlignment="Left" Margin = "152,293,0,0" VerticalAlignment="Top"/>
 ```
 
-    Beachten Sie, wie die in der Design-Canvas angezeigte Schaltfläche aktualisiert wird, um den neuen Text anzuzeigen.
+Beachten Sie, wie die in der Design-Canvas angezeigte Schaltfläche aktualisiert wird, um den neuen Text anzuzeigen.
 
-    ![Das Fenster „Projektmappen-Explorer“](images/win10-cs-07.png)
+![Das Fenster „Projektmappen-Explorer“](images/win10-cs-07.png)
 
 ## Schritt3: Starten der App
 
@@ -253,10 +253,10 @@ Wenn Sie die App ausführen und auf die Schaltfläche klicken, sagt Ihr Computer
 ## Zusammenfassung
 
 
-Herzlichen Glückwunsch, Sie haben Ihre erste App für Windows10 und die UWP erstellt!
+Herzlichen Glückwunsch, Sie haben Ihre erste App für Windows10 und die UWP erstellt! Sind Sie bereit für den [nächsten Schritt](learn-more.md)?
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Nov16_HO1-->
 
 

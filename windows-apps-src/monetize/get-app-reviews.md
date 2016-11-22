@@ -4,8 +4,8 @@ ms.assetid: 2967C757-9D8A-4B37-8AA4-A325F7A060C5
 description: "Mittels dieser Methode in der Windows Store-Analyse-API können Sie Rezensionsdaten für einen bestimmten Zeitraum und andere optionale Filter abrufen."
 title: Abrufen von App-Rezensionen
 translationtype: Human Translation
-ms.sourcegitcommit: 6d0fa3d3b57bcc01234aac7d6856416fcf9f4419
-ms.openlocfilehash: 4190012c08e22f4efb086c711183332b23ccee38
+ms.sourcegitcommit: 7b73682ea36574f8b675193a174d6e4b4ef85841
+ms.openlocfilehash: 581532b56851d486f7804364d1d555b81829c1d1
 
 ---
 
@@ -14,7 +14,7 @@ ms.openlocfilehash: 4190012c08e22f4efb086c711183332b23ccee38
 
 
 
-Mittels dieser Methode in der Windows Store-Analyse-API können Sie Rezensionsdaten für einen bestimmten Zeitraum und andere optionale Filter abrufen. Diese Methode gibt die Daten im JSON-Format zurück.
+Mit dieser Methode in der Windows Store-Analyse-API können Sie Rezensionsdaten im JSON-Format für einen bestimmten Zeitraum sowie weitere optionale Filter abrufen. Diese Informationen sind auch im [Bericht "Rezensionen"](../publish/reviews-report.md) im Windows Dev Center-Dashboard verfügbar.
 
 ## Voraussetzungen
 
@@ -378,6 +378,7 @@ Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese 
 
 ## Verwandte Themen
 
+* [Bericht „Rezensionen“](../publish/reviews-report.md)
 * [Zugreifen auf Analysedaten mit WindowsStore-Diensten](access-analytics-data-using-windows-store-services.md)
 * [Abrufen von App-Käufen](get-app-acquisitions.md)
 * [Abrufen von Add-On-Käufen](get-in-app-acquisitions.md)
@@ -386,6 +387,6 @@ Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese 
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

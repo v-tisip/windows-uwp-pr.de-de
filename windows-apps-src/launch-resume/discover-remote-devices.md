@@ -1,15 +1,15 @@
 ---
 author: PatrickFarley
 title: "Ermitteln von Remotegeräten"
-description: "Erfahren Sie, wie Sie Remotegeräte über Ihre App mit Project &quot;Rome&quot; ermitteln können."
+description: Learn how to discover remote devices from your app using Project "Rome".
 translationtype: Human Translation
-ms.sourcegitcommit: ff8e16d0e376d502157ae42b9cdae11875008554
-ms.openlocfilehash: cb1f9cf6915378203919fdf63bcebc935af74a30
+ms.sourcegitcommit: dc5030fea8e149b3926b926b09bfec3eeb5092ee
+ms.openlocfilehash: b4b4eb28ea56ab3d84e2fe0bc0c281cb53149d5d
 
 ---
 
 # Ermitteln von Remotegeräten
-Ihre App kann WLAN, Bluetooth und eine Cloud-Verbindung verwenden, um Windows-basierte Geräte zu ermitteln, die mit demselben Microsoft-Konto wie das ermittelnde Gerät angemeldet sind. Kommunale Geräte, die anonyme Verbindungen akzeptieren können, wie z. B. Surface Hub und Xbox One, können ebenfalls ermittelt werden. Auf den Remotegeräten muss keine spezielle Software installiert sein, damit sie erkennbar sind.
+Ihre App kann das WLAN, Bluetooth und eine Cloudverbindung verwenden, um Windows-Geräte zu ermitteln, die mit demselben Microsoft-Konto wie das ermittelnde Gerät angemeldet sind. Kommunale Geräte, die anonyme Verbindungen akzeptieren können, wie z. B. Surface Hub und Xbox One, können ebenfalls ermittelt werden. Auf den Remotegeräten muss keine spezielle Software installiert sein, damit sie erkennbar sind.
 
 > [!NOTE]
 > In diesem Handbuch wird davon ausgegangen, dass Ihnen bereits Zugriff auf das Remotesysteme-Feature gewährt wurde, indem Sie die Schritte in [Starten einer Remote-App](launch-a-remote-app.md) befolgt haben.
@@ -50,6 +50,6 @@ Das [Beispiel für Remotesysteme](https://github.com/Microsoft/Windows-universal
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

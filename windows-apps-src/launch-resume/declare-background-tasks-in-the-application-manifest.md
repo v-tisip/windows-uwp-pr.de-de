@@ -4,8 +4,8 @@ title: Deklarieren von Hintergrundaufgaben im Anwendungsmanifest
 description: "Sie können die Verwendung von Hintergrundaufgaben aktivieren, indem Sie diese im App-Manifest als Erweiterungen deklarieren."
 ms.assetid: 6B4DD3F8-3C24-4692-9084-40999A37A200
 translationtype: Human Translation
-ms.sourcegitcommit: b877ec7a02082cbfeb7cdfd6c66490ec608d9a50
-ms.openlocfilehash: 6ec298a956673c114d34d64b026394ece2c33506
+ms.sourcegitcommit: 7d1c160f8b725cd848bf8357325c6ca284b632ae
+ms.openlocfilehash: b3518780600b9fe8f9be5af48eb5ee6022ec350f
 
 ---
 
@@ -23,9 +23,9 @@ ms.openlocfilehash: 6ec298a956673c114d34d64b026394ece2c33506
 Sie können die Verwendung von Hintergrundaufgaben aktivieren, indem Sie diese im App-Manifest als Erweiterungen deklarieren.
 
 > [!Important]
->  In diesem Artikel geht es insbesondere um Hintergrundaufgaben, die als separater Prozess ausgeführt werden. Einzelprozess-Hintergrundaufgaben werden nicht im Manifest deklariert.
+>  Dieser Artikel befasst sich speziell mit Out-of-Process-Hintergrundaufgaben. In-Process-Hintergrundaufgaben werden nicht im Manifest deklariert.
 
-In einem separaten Prozess ausgeführte Hintergrundaufgaben müssen im App-Manifest deklariert sein, da sie ansonsten nicht von der App registriert werden können (eine Ausnahme wird ausgelöst). Zudem müssen Hintergrundaufgaben im Anwendungsmanifest deklariert werden, um zertifiziert zu werden.
+Out-of-Process-Hintergrundaufgaben müssen im App-Manifest deklariert sein, da sie ansonsten nicht von der App registriert werden können (eine Ausnahme wird ausgelöst). Zudem müssen Out-of-Process-Hintergrundaufgaben im Anwendungsmanifest deklariert werden, um zertifiziert werden zu können.
 
 In diesem Thema wird davon ausgegangen, dass Sie eine oder mehrere Hintergrundaufgabenklassen erstellt haben und dass Ihre App die Hintergrundaufgabe so registriert, dass sie als Reaktion auf mindestens einen Auslöser ausgeführt wird.
 
@@ -212,6 +212,6 @@ Hier finden Sie ein XML-Beispiel, mit dem eine Hintergrundaufgabe deklariert wir
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

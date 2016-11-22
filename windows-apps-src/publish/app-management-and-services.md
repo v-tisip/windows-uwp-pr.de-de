@@ -1,19 +1,19 @@
 ---
 author: jnHs
-Description: "Im WindowsDevCenter-Dashboard können Sie Details zu einzelnen Apps anzeigen und verwalten sowie Dienste wie Pushbenachrichtigungen und Karten konfigurieren."
+Description: "Im WindowsDevCenter-Dashboard können Sie Details zu einzelnen Apps verwalten und anzeigen sowie Dienste wie Pushbenachrichtigungen, A/B-Tests und Karten konfigurieren."
 title: App-Verwaltung und -Dienste
 ms.assetid: 99DA2BC1-9B5D-4746-8BC0-EC723D516EEF
 translationtype: Human Translation
-ms.sourcegitcommit: 3afdf00864e023d913b635beef0c506735881b23
-ms.openlocfilehash: 9787ef724622a95d291b4631196b3e13bcb1298a
+ms.sourcegitcommit: 9611b3cc87c29e29a19b87a5b5f37bef1a71dfbb
+ms.openlocfilehash: d5244bda2cefa146e3c481270fe72fdb8f2d35cf
 
 ---
 
 # App-Verwaltung und -Dienste
 
-Im WindowsDevCenter-Dashboard können Sie Details zu einzelnen Apps anzeigen und verwalten sowie Dienste wie Pushbenachrichtigungen und Karten konfigurieren.
+Im Windows Dev Center-Dashboard können Sie Details zu einzelnen Apps verwalten und anzeigen sowie Dienste wie Pushbenachrichtigungen, A/B-Tests und Karten konfigurieren.
 
-Wenn Sie in Ihrem Dashboard mit einer App arbeiten, sehen Sie im linken Navigationsmenü Abschnitte für die Dienst- und App-Verwaltung. Sie können diese Abschnitte erweitern, um auf die unten beschriebenen Funktionen zuzugreifen.
+Wenn Sie in Ihrem Dashboard mit einer App arbeiten, sehen Sie im linken Navigationsmenü Abschnitte für **Dienste** und **App-Verwaltung**. Sie können diese Abschnitte erweitern, um auf die unten beschriebenen Funktionen zuzugreifen.
 
 ## Dienste
 
@@ -21,7 +21,9 @@ Im Abschnitt **Dienste** können Sie verschiedene Dienste für Ihre Apps verwalt
 
 ### Pushbenachrichtigungen
 
-Abhängig vom Pakettyp Ihrer App und den jeweiligen Anforderungen können Sie eine der folgenden Optionen für Pushbenachrichtigungen verwenden:
+Im Abschnitt **Pushbenachrichtigungen** können Sie benutzerorientierte Pushbenachrichtigungen für die Kunden Ihrer App erstellen und senden. Sie können die Benachrichtigungen an alle Kunden Ihrer App oder an eine Teilmenge Ihrer Windows10-Kunden senden, die die in einem [Kundensegment](create-customer-segments.md) definierten Kriterien erfüllen. Weitere Informationen finden Sie unter [Senden von benutzerorientierten Pushbenachrichtigung an die Kunden Ihrer App](send-push-notifications-to-your-apps-customers.md).
+
+Je nach Pakettyp Ihrer App und den jeweiligen Anforderungen können Sie auch eine der folgenden Optionen für Pushbenachrichtigungen verwenden, indem Sie im linken Navigationsmenü auf die Seite **WNS/MPNS** klicken: 
 
 -   **Windows-Pushbenachrichtigungsdienste (Windows Push Notification Services, WNS)** ermöglichen es, Popup-, Kachel- und Badgeupdates sowie unformatierte Updates von Ihren eigenen Clouddiensten aus zu senden. Weitere Informationen finden Sie unter [Übersicht über den Windows-Pushbenachrichtigungsdienst (Windows Push Notification Service, WNS)](https://msdn.microsoft.com/library/windows/apps/mt187203).
 
@@ -31,7 +33,7 @@ Abhängig vom Pakettyp Ihrer App und den jeweiligen Anforderungen können Sie ei
 
 ### Experimentation
 
-Auf der Seite **Experimentation** können Sie Experimente mit A/B-Tests für Ihre Apps für die universelle Windows-Plattform (UWP) erstellen und ausführen. Bei einem A/B-Test wird die Effektivität von Featureänderungen (oder Varianten) in Ihrer App für einige Kunden zu ermittelt, bevor die Änderungen für die Allgemeinheit aktiviert werden.
+Auf der Seite **Experimentation** können Sie Experimente mit A/B-Tests für Ihre Apps für die universelle Windows-Plattform (UWP) erstellen und ausführen. Bei einem A/B-Test wird die Effektivität von Featureänderungen (oder Abweichungen) in Ihrer App für einige Kunden ermittelt, bevor die Änderungen für die Allgemeinheit aktiviert werden.
 
 Weitere Informationen finden Sie unter [Ausführen von App-Experimenten mit A/B-Tests](../monetize/run-app-experiments-with-a-b-testing.md).
 
@@ -39,7 +41,7 @@ Weitere Informationen finden Sie unter [Ausführen von App-Experimenten mit A/B-
 
 Wenn Sie Kartendienste in Apps unter Windows Phone8.1 und früheren Versionen verwenden möchten, müssen Sie eine Kartendienst-Anwendungs-ID und ein Token in Ihren App-Code einfügen. Sie finden das Token auf der Seite **Karten** im Abschnitt **Dienste**.
 
-> **Hinweis**  Um Kartendienste in Apps zu verwenden, die auf andere Betriebssysteme ausgerichtet sind, besuchen Sie das [Bing Maps Dev Center](http://go.microsoft.com/fwlink/p/?LinkId=614880). Weitere Informationen finden Sie unter [Anfordern eines Kartenauthentifizierungsschlüssels](https://msdn.microsoft.com/library/windows/apps/mt219694).
+> **Hinweis:**  Um Kartendienste in Apps zu verwenden, die auf Windows 10 or Windows 8.x ausgerichtet sind, besuchen Sie das [Bing Karten Dev Center](http://go.microsoft.com/fwlink/p/?LinkId=614880). Weitere Informationen finden Sie unter [Anfordern eines Kartenauthentifizierungsschlüssels](https://msdn.microsoft.com/library/windows/apps/mt219694).
 
 Weitere Informationen finden Sie unter [Verwenden von Kartendiensten](use-map-services.md).
 
@@ -71,9 +73,7 @@ Auf dieser Seite können Sie Details zu allen veröffentlichten Paketen anzeigen
 
 > **Hinweis**  Hier werden erst Informationen angezeigt, nachdem Ihre App veröffentlicht wurde.
 
-Der Name, die Version und die Architektur der einzelnen Pakete werden angezeigt. Klicken Sie auf **Details**, um zusätzliche Informationen wie z. B. unterstützte Sprache, App-Funktionen und Dateigrößen anzuzeigen.
-
-Welche Informationen jeweils für ein Paket angezeigt werden, hängt vom Zielbetriebssystem und anderen Faktoren ab. Falls Sie Ihrem Paket beispielsweise die [Windows-Anzeigenvermittlung](https://msdn.microsoft.com/library/windows/apps/mt219691) hinzugefügt haben, sehen Sie hier einen Link zum Konfigurieren der Vermittlung für dieses Paket.
+Der Name, die Version und die Architektur der einzelnen Pakete werden angezeigt. Klicken Sie auf **Details**, um zusätzliche Informationen wie z. B. unterstützte Sprache, App-Funktionen und Dateigrößen anzuzeigen. Welche Informationen jeweils für ein Paket angezeigt werden, variiert abhängig vom Zielbetriebssystem und anderen Faktoren. 
 
 Entwickler mit OEM-Berechtigungen können auf der Seite **Aktuelle Pakete** außerdem [Vorinstallationspakete generieren](generate-preinstall-packages-for-oems.md).
 
@@ -83,6 +83,6 @@ Entwickler mit OEM-Berechtigungen können auf der Seite **Aktuelle Pakete** auß
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -4,8 +4,8 @@ description: "Die xBind-Markuperweiterung ist eine Alternative zur Bindung. xBin
 title: xBind-Markuperweiterung
 ms.assetid: 529FBEB5-E589-486F-A204-B310ACDC5C06
 translationtype: Human Translation
-ms.sourcegitcommit: 0f9955b897c626e7f6abb5557658e1b1e5937ffd
-ms.openlocfilehash: 7380386a77338c1fce7a7184b558a06605ffdf33
+ms.sourcegitcommit: 2dc706412684ded7fe4e98c6d01fb75ae65abd5f
+ms.openlocfilehash: b7d1dd183ba35e4b694a80d3e43628c928b218e5
 
 ---
 
@@ -191,7 +191,7 @@ Kompilierte Bindungen hängen von der Codegenerierung ab. Wenn Sie daher **{x:Bi
 
 Bei Seiten und Benutzersteuerelementen, die kompilierte Bindungen umfassen, befindet sich im generierten Code eine "Bindings"-Eigenschaft. Dazu gehören folgende Methoden:
 - **Update()** - Hiermit werden die Werte aller kompilierten Bindungen aktualisiert. Für alle unidirektionalen und bidirektionalen Bindungen werden zur Erkennung von Änderungen Listener eingehängt.
-- **Initialize()** - Wenn die Bindungen nicht bereits initialisiert wurden, wird zur Initialisierung der Bindungen Update() aufgerufen
+- **Initialize()**: Wenn die Bindungen nicht bereits initialisiert wurden, wird zur Initialisierung der Bindungen Update() aufgerufen
 - **StopTracking()** - Hängt die für uni- und bidirektionale Bindungen erstellen Listener aus. Sie können mit der Methode Update() erneut initialisiert werden.
 
 > [!NOTE]
@@ -224,6 +224,6 @@ Dieser beispielhafte XAML-Code verwendet **{x:Bind}** mit einer **ListView.ItemT
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

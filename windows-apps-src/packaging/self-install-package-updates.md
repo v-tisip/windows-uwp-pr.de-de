@@ -4,8 +4,8 @@ ms.assetid: 414ACC73-2A72-465C-BD15-1B51CB2334F2
 title: "Herunterladen und Installieren von Paketupdates für Ihre App"
 description: Erfahren Sie, wie Sie Pakete im Dev Center-Dashboard als obligatorisch kennzeichnen und Code in Ihrer App zum Herunterladen und Installieren von Paketupdates schreiben.
 translationtype: Human Translation
-ms.sourcegitcommit: 7df130e13685b519d5cc1353c8d64878ecc3d213
-ms.openlocfilehash: adb9b999c88649fc2c8ade838dfa0dabc407c075
+ms.sourcegitcommit: b96d4074a8960db314313c612955900c6a05dc48
+ms.openlocfilehash: 4da8ffe72435501876a1e859d10a16cf19eb11fd
 
 ---
 # Herunterladen und Installieren von Paketupdates für Ihre App
@@ -16,22 +16,28 @@ Ab Windows10 (Version 1607) können Sie eine API im Namespace [Windows.Services.
 
 Mithilfe dieser Features können Sie Benutzer automatisch mit der neuesten Version Ihrer App und der zugehörigen Dienste auf dem neuesten Stand halten.
 
-## Herunterladen und Installieren von Paketupdates in Ihrer App
+## API-Übersicht
 
-Apps für Windows10 (Version 1607 oder höher) können Sie die folgenden Methoden der [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Klasse verwenden, um Paketupdates herunterzuladen und zu installieren:
+In Apps für Windows10 (ab Version1607) können Sie die folgenden Methoden der [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Klasse verwenden, um Paketupdates herunterzuladen und zu installieren.
 
-* Verwenden Sie [GetAppAndOptionalStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getappandoptionalstorepackageupdatesasync.aspx), um zu bestimmen, welche Paketupdates verfügbar sind.
-* Verwenden Sie [RequestDownloadStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/mt706586.aspx), um die Paketupdates herunterzuladen (aber nicht zu installieren).
-* Verwenden Sie [RequestDownloadAndInstallStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/mt706585.aspx), um die Paketupdates herunterzuladen und zu installieren. Wenn Sie die Paketupdates durch Aufrufen von [RequestDownloadStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/mt706586.aspx) bereits heruntergeladen haben, überspringt diese Methode den Downloadvorgang und installiert nur die Updates.
+|  Methode  |  Beschreibung  |
+|----------|---------------|
+| [GetAppAndOptionalStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getappandoptionalstorepackageupdatesasync.aspx) | Rufen Sie diese Methode auf, um die Liste der verfügbaren Paketupdates abzurufen.<br/><br/>**Wichtig**&nbsp;&nbsp;Es besteht eine Wartezeit von bis zu einem Tag zwischen dem Zeitpunkt, an dem ein Paket den Zertifizierungsprozess durchläuft, und dem Zeitpunkt, an dem die [GetAppAndOptionalStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getappandoptionalstorepackageupdatesasync.aspx)-Methode erkennt, dass das Paketupdate für die App zur Verfügung steht. |
+| [RequestDownloadStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/mt706586.aspx) | Rufen Sie diese Methode auf, um die verfügbaren Paketupdates herunterzuladen (jedoch nicht zu installieren). Unter diesem Betriebssystem wird ein Dialogfeld angezeigt, in dem der Benutzer dem Herunterladen der Updates zustimmen muss. |
+| [RequestDownloadAndInstallStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/mt706585.aspx) | Rufen Sie diese Methode auf, um die verfügbaren Paketupdates herunterzuladen und zu installieren. Unter dem Betriebssystem werden Dialogfelder angezeigt, in denen der Benutzer dem Herunterladen und Installieren der Updates zustimmen muss. Wenn Sie die Paketupdates durch Aufrufen von [RequestDownloadStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/mt706586.aspx) bereits heruntergeladen haben, überspringt diese Methode den Downloadvorgang und installiert nur die Updates.  |
 
-Die [StorePackageUpdate](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storepackageupdate.aspx)-Klasse stellt ein verfügbares Updatepaket dar:
-* Verwenden Sie die Eigenschaft [Mandatory](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storepackageupdate.mandatory.aspx), um zu bestimmen, ob das Paket im Dev Center-Dashboard als obligatorisch gekennzeichnet ist.
-* Verwenden Sie die Eigenschaft [Package](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storepackageupdate.package.aspx), um auf andere paketbezogene Daten zuzugreifen.
+<span/>
 
->**Hinweis**: Es besteht eine Wartezeit von bis zu einem Tag zwischen dem Zeitpunkt, an dem ein Paket den Zertifizierungsprozess durchläuft, und dem Zeitpunkt, an dem die Methode [GetAppAndOptionalStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getappandoptionalstorepackageupdatesasync.aspx) erkennt, dass das Paketupdate für die App zur Verfügung steht.
+Diese Methoden verwenden [StorePackageUpdate](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storepackageupdate.aspx)-Objekte, die den verfügbaren Updatepaketen entsprechen. Verwenden Sie die folgenden [StorePackageUpdate](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storepackageupdate.aspx)-Eigenschaften zum Abrufen von Informationen über ein Updatepaket.
 
+|  Eigenschaft  |  Beschreibung  |
+|----------|---------------|
+| [Mandatory](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storepackageupdate.mandatory.aspx) | Verwenden Sie diese Eigenschaft, um zu ermitteln, ob das Paket im Dev Center-Dashboard als obligatorisch gekennzeichnet ist. |
+| [Package](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storepackageupdate.package.aspx) | Verwenden Sie diese Eigenschaft, um die zugrunde liegenden paketbezogenen Daten abzurufen. |
 
-### Codebeispiele
+<span/>
+
+## Codebeispiele
 
 Die folgenden Codebeispiele zeigen, wie Paketupdates in Ihrer App heruntergeladen und installiert werden. In diesem Beispiel wird Folgendes vorausgesetzt:
 * Der Code wird im Kontext einer [Seite](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx) ausgeführt.
@@ -39,7 +45,9 @@ Die folgenden Codebeispiele zeigen, wie Paketupdates in Ihrer App heruntergelade
 * Die Codedatei enthält eine **using**-Anweisung für den Namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx).
 * Die App ist eine Einzelbenutzer-App, die nur im Kontext des Benutzers ausgeführt wird, der die App gestartet hat. Verwenden Sie für eine [Multi-User-App](https://msdn.microsoft.com/windows/uwp/xbox-apps/multi-user-applications) die [GetForUser](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getforuser.aspx)-Methode, um ein [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Objekt anstelle der [GetDefault](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getdefault.aspx)-Methode abzurufen.
 
-#### Herunterladen und Installieren aller Paketupdates
+<span/>
+
+### Herunterladen und Installieren aller Paketupdates
 
 Im folgenden Codebeispiel wird veranschaulicht, wie alle verfügbaren Paketupdates heruntergeladen und installiert werden.  
 
@@ -90,7 +98,7 @@ public async Task DownloadAndInstallAllUpdatesAsync()
 }
 ```
 
-#### Behandeln von obligatorischen Paketupdates
+### Behandeln von obligatorischen Paketupdates
 
 Im folgenden Codebeispiel, das sich vom vorherigen Beispiel ableitet, wird veranschaulicht, wie Sie ermitteln, ob Updatepakete [im Windows Dev Center-Dashboard als obligatorisch gekennzeichnet](#mandatory-dashboard) wurden. In der Regel sollten Sie Ihre App-Funktionen kontrolliert für den Benutzer herabstufen, wenn ein obligatorisches Paketupdate nicht erfolgreich heruntergeladen oder installiert werden kann.
 
@@ -209,7 +217,7 @@ private void HandleMandatoryPackageError()
 
 Wenn Sie eine Paketübermittlung für eine App für Windows10 (Version 1607 oder höher) erstellen, können Sie das Paket als obligatorisch kennzeichnen und das Datum/die Uhrzeit angeben, wann es obligatorisch wird. Wenn diese Eigenschaft festgelegt wurde und Ihre App mithilfe der oben in diesem Artikel beschriebenen API erkennt, dass das Paketupdate verfügbar ist, kann die App ermitteln, ob das Updatepaket obligatorisch ist, und ihr Verhalten ändern, bis das Update installiert ist (z.B. kann Ihre App Features deaktivieren).
 
->**Hinweis**: Der Status „Obligatorisch” eines Pakets wird von Microsoft nicht erzwungen. Entwickler sollten die Einstellung „Obligatorisch” verwenden, um erforderliche Updates in ihrem eigenen Code zu erzwingen.
+>**Hinweis**&nbsp;&nbsp;Der obligatorische Status eines Pakets wird von Microsoft nicht erzwungen, und das Betriebssystem verfügt über keine Benutzeroberfläche, die den Benutzer darauf hinweist, dass ein erforderliches App-Update installiert werden muss. Entwickler sollten die Einstellung „Obligatorisch” verwenden, um erforderliche App-Updates in ihrem eigenen Code zu erzwingen.  
 
 So kennzeichnen Sie eine Paketübermittlung als obligatorisch:
 
@@ -219,10 +227,10 @@ So kennzeichnen Sie eine Paketübermittlung als obligatorisch:
 
 Weitere Informationen zum Konfigurieren von Paketen im Dev Center-Dashboard finden Sie unter [Hochladen von App-Paketen](https://msdn.microsoft.com/windows/uwp/publish/upload-app-packages).
 
-  >**Hinweis**: Wenn Sie ein [Flight-Paket](https://msdn.microsoft.com/windows/uwp/publish/package-flights) erstellen, können Sie die Pakete mit einer ähnlichen Benutzeroberfläche auf der **Pakete**-Seite für das Flight als obligatorisch kennzeichnen. In diesem Fall gilt das obligatorische Paketupdate nur für die Kunden, die Teil der Flight-Gruppe sind.
+  >**Hinweis**&nbsp;&nbsp;Wenn Sie ein [Flight-Paket](https://msdn.microsoft.com/windows/uwp/publish/package-flights) erstellen, können Sie die Pakete mit einer ähnlichen Benutzeroberfläche auf der **Pakete**-Seite für das Flight als obligatorisch kennzeichnen. In diesem Fall gilt das obligatorische Paketupdate nur für die Kunden, die Teil der Flight-Gruppe sind.
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

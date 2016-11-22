@@ -5,8 +5,8 @@ description: "In diesem Thema wird der Lebenszyklus einer Windows 10-UWP-App (Un
 keywords: App-Lebenszyklus angehalten fortsetzen starten aktivieren
 ms.assetid: 6C469E77-F1E3-4859-A27B-C326F9616D10
 translationtype: Human Translation
-ms.sourcegitcommit: 79d0b4c7208d2fa79ceb7f5e212255ff94d6fe3a
-ms.openlocfilehash: 86e0f10e45445df82585bd58b0f2583c07a19cb7
+ms.sourcegitcommit: df297d442a4c636fac886b113ada8a01aa37a015
+ms.openlocfilehash: 6e7b92e81aa0a00e579e0ca89234a90e68c253f1
 
 ---
 
@@ -85,7 +85,7 @@ Die Ereignisdaten für diese Methoden enthalten dieselbe [**PreviousExecutionSta
 
 ## Ausführung im Hintergrund ##
 
-Ab Windows 10, Version 1607, haben Sie die Möglichkeit, Code im Hintergrund innerhalb eines einzelnen Prozesses auszuführen. Weitere Informationen dazu finden Sie unter [Hintergrundaktivität mit dem Einzelprozessmodell](https://blogs.windows.com/buildingapps/2016/06/07/background-activity-with-the-single-process-model/#tMmI7wUuYu5CEeRm.99). In diesem Artikel gehen wir nicht weiter auf die Einzelprozessverarbeitung im Hintergrund ein. Sie beeinflusst den App-Lebenszyklus jedoch insofern, dass zwei neue Ereignisse implementiert wurden, die sich auf die Ausführung der App im Hintergrund beziehen. Die Ereignisse sind [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground) und [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground).
+Ab Windows10, Version 1607, können Apps Hintergrundaufgaben im selben Prozess wie die App selbst ausführen. Weitere Informationen dazu finden Sie unter [Hintergrundaktivität mit dem Einzelprozessmodell](https://blogs.windows.com/buildingapps/2016/06/07/background-activity-with-the-single-process-model/#tMmI7wUuYu5CEeRm.99). In diesem Artikel gehen wir nicht weiter auf die In-Process-Verarbeitung im Hintergrund ein. Sie beeinflusst den App-Lebenszyklus jedoch insofern, dass zwei neue Ereignisse implementiert wurden, die sich auf die Ausführung der App im Hintergrund beziehen. Die Ereignisse sind [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground) und [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground).
 
 Sie geben auch wieder, ob die Benutzeroberfläche Ihrer App für den Benutzer sichtbar ist.
 
@@ -220,7 +220,6 @@ Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die univer
 * [Behandeln der App-Aktivierung](activate-an-app.md)
 * [Behandeln des Anhaltens von Apps](suspend-an-app.md)
 * [Behandeln der App-Fortsetzung](resume-an-app.md)
-* [Behandeln des Vorabstarts von Apps](handle-app-prelaunch.md)
 * [Hintergrundaktivität mit dem Einzelprozessmodell](https://blogs.windows.com/buildingapps/2016/06/07/background-activity-with-the-single-process-model/#tMmI7wUuYu5CEeRm.99)
 * [Wiedergeben von Medien im Hintergrund](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/background-audio)
 
@@ -230,6 +229,6 @@ Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die univer
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

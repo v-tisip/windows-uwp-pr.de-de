@@ -5,8 +5,8 @@ description: Erfahren Sie, wie Sie den Windows.Services.Store-Namespace verwende
 title: "Unterstützen von Endverbraucher-Add-On-Käufen"
 keywords: In-App-Angebot, Codebeispiel
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: 1e9ecad5abb9addbe41b38d0b56b84404716f2a8
+ms.sourcegitcommit: 962bee0cae8c50407fe1509b8000dc9cf9e847f8
+ms.openlocfilehash: eb188ed8e69f90727c5b57af1c407fac07eaf87d
 
 ---
 
@@ -46,14 +46,16 @@ Für diese Beispiele gelten die folgenden Voraussetzungen:
 Der Code in diesen Beispielen geht von Folgendem aus:
 * Die Ausführung des Codes erfolgt im Kontext einer [Seite](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx), die einen [ProgressRing](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressring.aspx) mit dem Namen ```workingProgressRing``` und einen [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) mit dem Namen ```textBlock``` enthält. Diese Objekte werden verwendet, um anzugeben, dass ein asynchroner Vorgang ausgeführt wird, bzw. um Ausgabemeldungen anzuzeigen.
 * Die Codedatei enthält eine **using**-Anweisung für den **Windows.Services.Store**-Namespace.
-* Die App ist eine Einzelbenutzer-App, die nur im Kontext des Benutzers ausgeführt wird, der die App gestartet hat. Weitere Informationen finden Sie unter [In-App-Einkäufe und Testversionen](in-app-purchases-and-trials.md#api_intro).
+* Die App ist eine Einzelbenutzer-App, die nur im Kontext des Benutzers ausgeführt wird, der die App gestartet hat. Weitere Informationen finden Sie unter [In-App-Käufe und Testversionen](in-app-purchases-and-trials.md#api_intro).
 
 Eine vollständige Beispielanwendung finden Sie im [Store-Beispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
+
+>**Hinweis**&nbsp;&nbsp;Wenn Sie über eine Desktopanwendung verfügen, die die [Desktop-Brücke](https://developer.microsoft.com/windows/bridges/desktop) verwendet, müssen Sie möglicherweise zusätzlichen, in diesen Beispielen nicht aufgeführten Code hinzufügen, um das [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Objekt zu konfigurieren. Weitere Informationen finden Sie unter [Verwenden der StoreContext-Klasse in einer Desktopanwendung, die die Desktop-Brücke verwendet](in-app-purchases-and-trials.md#desktop).
 
 <span id="report_fulfilled" />
 ## Melden eines Endverbraucher-Add-Ons als erfüllt
 
-Nachdem der Benutzer den [Erwerb des Add-ons](enable-in-app-purchases-of-apps-and-add-ons.md) über Ihre App tätigt und das Add-On nutzt, muss Ihre App durch Aufrufen der [ReportConsumableFulfillmentAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.reportconsumablefulfillmentasync.aspx)-Methode der [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Klasse das Add-on als erfüllt melden. Sie müssen die folgenden Informationen an diese Methode übergeben:
+Nachdem der Benutzer den [Kauf des Add-Ons](enable-in-app-purchases-of-apps-and-add-ons.md) über Ihre App tätigt und das Add-On nutzt, muss Ihre App durch Aufrufen der [ReportConsumableFulfillmentAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.reportconsumablefulfillmentasync.aspx)-Methode der [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Klasse das Add-On als erfüllt melden. Sie müssen die folgenden Informationen an diese Methode übergeben:
 
 * Die [Store ID](in-app-purchases-and-trials.md#store_ids) des Add-Ons, das Sie als erfüllt melden möchten.
 * Die Einheiten des Add-Ons, das Sie als erfüllt melden möchten.
@@ -71,6 +73,9 @@ public async void ConsumeAddOn(string storeId)
     if (context == null)
     {
         context = StoreContext.GetDefault();
+        // If your app is a desktop app that uses the Desktop Bridge, you
+        // may need additional code to configure the StoreContext object.
+        // For more info, see https://aka.ms/storecontext-for-desktop.
     }
 
     // This is an example for a Store-managed consumable, where you specify the actual number
@@ -133,6 +138,9 @@ public async void GetRemainingBalance(string storeId)
     if (context == null)
     {
         context = StoreContext.GetDefault();
+        // If your app is a desktop app that uses the Desktop Bridge, you
+        // may need additional code to configure the StoreContext object.
+        // For more info, see https://aka.ms/storecontext-for-desktop.
     }
 
     string addOnStoreId = "9NBLGGH4TNNR";
@@ -180,6 +188,6 @@ public async void GetRemainingBalance(string storeId)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -4,8 +4,8 @@ Description: "Add-Ons werden über das Windows Dev Center-Dashboard veröffentli
 title: "Add-On-Übermittlungen"
 ms.assetid: E175AF9E-A1D4-45DF-B353-5E24E573AE67
 translationtype: Human Translation
-ms.sourcegitcommit: d67931b4ab23d2b6aef945e839d193e140240cf9
-ms.openlocfilehash: 400c2e2ee65e408c996193230b05c68264830f0d
+ms.sourcegitcommit: b0d877e46ba6958bfc61dd87687c30e91b6cd937
+ms.openlocfilehash: 7b44dabfd4badcad795e38a97590d98e1601092d
 
 ---
 
@@ -17,7 +17,7 @@ Add-Ons werden über das Windows Dev Center-Dashboard veröffentlicht. Sie müss
 
 Der erste Schritt bei der Add-On-Übermittlung besteht darin, das Add-On im Dashboard zu erstellen, indem Sie den [Produkt-Typ und die Produkt-ID definieren](set-your-add-on-product-id.md). Danach können Sie eine Übermittlung erstellen, damit Ihr Add-On über den Windows Store erworben werden kann. Sie können ein Add-On gleichzeitig mit [Ihrer App einreichen](app-submissions.md) oder unabhängig vorgehen. Außerdem können Sie [Updates](#updating-an-add-on-after-submission) für Add-Ons ausführen, nachdem die App im Store eingetragen wurde, ohne dass die App erneut übermittelt werden muss.
 
-> **Hinweis**&nbsp;&nbsp;In diesem Abschnitt der Dokumentation wird das Erstellen einer Add-On-Übermittlung über das Dev Center-Dashboard beschrieben. Alternativ dazu können Sie auch die [Windows Store-Übermittlungs-API](../monetize/create-and-manage-submissions-using-windows-store-services.md) verwenden, um Add-On-Übermittlungen zu automatisieren.
+> **Hinweis**&nbsp;&nbsp;In diesem Abschnitt der Dokumentation wird das Übermitteln von Add-Ons im Dev Center-Dashboard beschrieben. Alternativ dazu können Sie auch die [Windows Store-Übermittlungs-API](../monetize/create-and-manage-submissions-using-windows-store-services.md) verwenden, um Add-On-Übermittlungen zu automatisieren.
 
 ## Prüfliste für die Übermittlung eines Add-Ons
 
@@ -81,6 +81,6 @@ Wenn Sie ein zuvor angebotenes Add-On entfernen möchten, können Sie dies tun, 
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

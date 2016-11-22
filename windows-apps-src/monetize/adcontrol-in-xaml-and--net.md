@@ -4,8 +4,8 @@ ms.assetid: 4e7c2388-b94e-4828-a104-14fa33f6eb2d
 description: "Hier erfahren Sie, wie Sie die AdControl-Klasse nutzen können, um Werbebanner in einer XAML-App für Windows 10 (UWP), Windows 8.1 oder Windows Phone 8.1 anzuzeigen."
 title: "„AdControl“ in XAML und .NET"
 translationtype: Human Translation
-ms.sourcegitcommit: 2f0835638f330de0ac2d17dae28347686cc7ed97
-ms.openlocfilehash: e3cc04e2c039223729a1e24224ddd19d6485d434
+ms.sourcegitcommit: 35f07c73a72e5242d59c6b45e6d5b4ac62f40741
+ms.openlocfilehash: 0652bd1c3e52c9026b26e14b2475a4b34997ac91
 
 ---
 
@@ -145,13 +145,13 @@ Ein vollständiges Beispiel-Projekt, das veranschaulicht, wie Sie einer XAML-App
 
 ## Hinweise
 
-C#: Unter [Beispiel für XAML-Eigenschaften](xaml-properties-example.md) finden Sie ein Beispiel dafür, wie Sie **AdControl**-Ereignissen Ereignishandler zuweisen. Sehen Sie sich daraufhin [AdControl-Ereignisse in C#](adcontrol-events-in-c.md) an. Hier finden Sie Beispielcode, der in C# geschriebene Ereignishandlers zeigt.
+* C#: Unter [Beispiel für XAML-Eigenschaften](xaml-properties-example.md) finden Sie ein Beispiel dafür, wie Sie **AdControl**-Ereignissen Ereignishandler zuweisen. Sehen Sie sich daraufhin [AdControl-Ereignisse in C#](adcontrol-events-in-c.md) an. Hier finden Sie Beispielcode, der in C# geschriebene Ereignishandler zeigt.
 
-Visual Basic: Unter [Beispiel für XAML-Eigenschaften](xaml-properties-example.md) finden Sie ein Beispiel dafür, wie Sie **AdControl**-Ereignissen Ereignishandler zuweisen.
+* C++: Die aktuelle Version der Microsoft Advertising-Bibliotheken unterstützt C++. Die **AdControl**-Klasse wird in systemeigenem C++ implementiert und bewirkt nicht, dass die .NET CLR geladen wird. Codebeispiele, die die Verwendung von **AdControl** in C++ veranschaulichen, finden Sie unter den [Anzeigenbeispielen auf GitHub](http://aka.ms/githubads).
 
-C++: Die aktuelle Version der Microsoft Advertising-Bibliotheken unterstützt C++. Die **AdControl** lädt die CLR und verwendet verwaltetes C++.
+* Visual Basic: Unter [Beispiel für XAML-Eigenschaften](xaml-properties-example.md) finden Sie ein Beispiel dafür, wie Sie **AdControl**-Ereignissen Ereignishandler zuweisen.
 
-Fehlerbehandlung: Weitere Informationen zum Behandeln von Fehlern erhalten Sie unter [AdControl-Fehlerbehandlung](adcontrol-error-handling.md).
+* Fehlerbehandlung: Weitere Informationen zum Behandeln von Fehlern erhalten Sie unter [AdControl-Fehlerbehandlung](adcontrol-error-handling.md).
 
 ## Verwandte Themen
 
@@ -161,6 +161,6 @@ Fehlerbehandlung: Weitere Informationen zum Behandeln von Fehlern erhalten Sie u
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

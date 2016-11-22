@@ -4,8 +4,8 @@ title: "Unterstützung der Verknüpfung zwischen Web und App mit App-URI-Handler
 description: "Fördern Sie die Bindung der Nutzer zu Ihrer App mithilfe von App-URI-Handler"
 keywords: Deep Linking Windows
 translationtype: Human Translation
-ms.sourcegitcommit: 9ef86dcd4ae3d922b713d585543f1def48fcb645
-ms.openlocfilehash: c9833f29d6080509c849e9d624f2bfcd0b0af04c
+ms.sourcegitcommit: cb3dbf7fd55c92339c77124bd22b3484fa389285
+ms.openlocfilehash: d7ce1dbfdf8ce0069b4d882323de8fd6f1b242f7
 
 ---
 
@@ -47,13 +47,13 @@ Um sicherzustellen, dass nur Ihre App die Inhalte auf Ihrer Website öffnen kann
 >[!Important]
 > Die JSON-Datei sollte kein .json Dateisuffix aufweisen.
 
-Erstellen Sie eine JSON-Datei (ohne die Erweiterung .json) mit dem Namen **Windows-App-Web-Link** und stellen Sie den Paketfamiliennamen Ihrer App bereit. Zum Beispiel:
+Erstellen Sie eine JSON-Datei (ohne die Erweiterung .json) mit dem Namen **Windows-App-Web-Link** und stellen Sie den Paketfamiliennamen Ihrer App bereit. Beispiel:
 
 ``` JSON
 [{
   "packageFamilyName": "YourAppsPFN",
   "paths": [ "*" ],
-  "excludePaths" : [ "/news/*, /blog/*" ]
+  "excludePaths" : [ "/news/*", "/blog/*" ]
  }]
 ```
 
@@ -68,7 +68,7 @@ Das obige für eine JSON-Datei veranschaulicht die Verwendung von Platzhaltern. 
 | *****       | Repräsentiert eine beliebige Teilzeichenfolge      |
 | **?**        | Steht für ein einzelnes Zeichen |
 
-Zum Beispiel, wenn `"excludePaths" : [ "/news/*, /blog/*" ]` in dem obigen Beispiel gegeben ist, wird Ihre App alle Pfade unterstützen, die mit Ihrer Website-Adresse (z.B. msn.com) beginnen, **mit Ausnahme** der Pfade unter `/news/` und `/blog/`. **msn.com/weather.html** wird unterstützt, aber nicht ****msn.com/news/topnews.html****.
+Zum Beispiel, wenn `"excludePaths" : [ "/news/*", "/blog/*" ]` in dem obigen Beispiel gegeben ist, wird Ihre App alle Pfade unterstützen, die mit Ihrer Website-Adresse (z.B. msn.com) beginnen, **mit Ausnahme** der Pfade unter `/news/` und `/blog/`. **msn.com/weather.html** wird unterstützt, aber nicht ****msn.com/news/topnews.html****.
 
 
 ### Mehrere Apps
@@ -79,17 +79,17 @@ Wenn Sie zwei Apps haben, die Sie mit Ihrer Website verknüpfen möchten, listen
 [{
   "packageFamilyName": "YourAppsPFN",
   "paths": [ "*" ],
-  "excludedPaths" : [ "/news/*, /blog/*" ]
+  "excludePaths" : [ "/news/*", "/blog/*" ]
  },
  {
   "packageFamilyName": "Your2ndAppsPFN",
-  "paths": [ "/example/*, /links/*" ]
+  "paths": [ "/example/*", "/links/*" ]
  }]
 ```
 
-Um Ihren Benutzern die bestmögliche Erfahrung zu bieten, benutzen Sie ausgeschlossene Pfade, um sicherzustellen, dass der nur online verfügbare Inhalt von den unterstützten Pfaden in der JSON-Datei ausgenommen ist.
+Um Ihren Benutzern die bestmögliche Erfahrung zu bieten, verwenden Sie Ausschlusspfade, um sicherzustellen, dass der nur online verfügbare Inhalt von den unterstützten Pfaden in der JSON-Datei ausgenommen ist.
 
-Ausgeschlossene Pfade werden zuerst überprüft, und wenn eine Übereinstimmung vorliegt wird die entsprechende Seite mit dem Browser anstelle der angegebenen App geöffnet. Im obigen Beispiel enthält "/ News / \ *" alle Seiten unter diesem Pfad, während "/ News\ *" (keine vorwärts-Slash "news") Pfade unter "News\ *" wie "Newslocal /", "Newsinternational /" usw.. enthält.
+Ausschlusspfade werden zuerst überprüft, und wenn eine Übereinstimmung vorliegt wird die entsprechende Seite mit dem Browser anstelle der angegebenen App geöffnet. Im obigen Beispiel enthält "/ News / \ *" alle Seiten unter diesem Pfad, während "/ News\ *" (keine vorwärts-Slash "news") Pfade unter "News\ *" wie "Newslocal /", "Newsinternational /" usw.. enthält.
 
 ## Behandeln Sie Links auf Aktivierung, um Links mit Inhalt zu verbinden.
 
@@ -195,6 +195,6 @@ Wenn Sie der protocol activation logic zu folgen möchten, legen Sie einen Halte
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Nov16_HO1-->
 
 

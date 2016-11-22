@@ -4,17 +4,14 @@ ms.assetid: 252C44DF-A2B8-4F4F-9D47-33E423F48584
 description: "Mittels dieser Methode in der Windows Store-Analyse-API können Sie gesammelte Fehlerberichtsdaten für einen bestimmten Zeitraum und andere optionale Filter abrufen."
 title: Abrufen von Fehlerberichtsdaten
 translationtype: Human Translation
-ms.sourcegitcommit: 6d0fa3d3b57bcc01234aac7d6856416fcf9f4419
-ms.openlocfilehash: 64bd3491bc8ff37f5eb7ca852ad6dc738f6e2711
+ms.sourcegitcommit: 7b73682ea36574f8b675193a174d6e4b4ef85841
+ms.openlocfilehash: 89b1c9b44aaabb49f78953877ae11d2d7a0a2a2f
 
 ---
 
 # Abrufen von Fehlerberichtsdaten
 
-
-
-
-Mittels dieser Methode in der Windows Store-Analyse-API können Sie gesammelte Fehlerberichtsdaten für einen bestimmten Zeitraum und andere optionale Filter abrufen. Diese Methode gibt die Daten im JSON-Format zurück.
+Mittels dieser Methode in der Windows Store-Analyse-API können Sie gesammelte Fehlerberichtsdaten (im JSON-Format) für einen bestimmten Zeitraum und andere optionale Filter abrufen. Diese Informationen sind auch im [Bericht „Integrität“](../publish/health-report.md) im Windows Dev Center-Dashboard verfügbar.
 
 ## Voraussetzungen
 
@@ -322,6 +319,7 @@ Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese 
 
 ## Verwandte Themen
 
+* [Bericht „Integrität“](../publish/health-report.md)
 * [Zugreifen auf Analysedaten mit WindowsStore-Diensten](access-analytics-data-using-windows-store-services.md)
 * [Abrufen von App-Käufen](get-app-acquisitions.md)
 * [Abrufen von Add-On-Käufen](get-in-app-acquisitions.md)
@@ -330,6 +328,6 @@ Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese 
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

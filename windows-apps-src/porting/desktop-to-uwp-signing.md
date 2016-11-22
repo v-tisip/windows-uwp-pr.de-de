@@ -1,6 +1,17 @@
-# Signieren der konvertierten Desktop-App
+---
+author: awkoren
+Description: "In diesem Artikel wird erläutert, wie Sie eine Desktop-App signieren, die Sie für die universelle Windows-Plattform (UWP) konvertiert haben."
+Search.Product: eADQiWindows 10XVcnh
+title: "Signieren Sie eine App, die mit der Desktop-zu-UWP-Brücke konvertiert wurde."
+translationtype: Human Translation
+ms.sourcegitcommit: fe96945759739e9260d0cdfc501e3e59fb915b1e
+ms.openlocfilehash: 2db978089a6334214c3b4c85dbde8d4a4e846092
 
-In diesem Artikel wird erläutert, wie Sie eine Desktop-App signieren, die Sie auf die universelle Windows-Plattform (UWP) konvertiert haben. Sie müssen Ihr .appx-Paket mit einem Zertifikat signieren, bevor Sie es bereitstellen können.
+---
+
+# Signieren einer App, die mit der Desktop-Brücke konvertiert wurde
+
+In diesem Artikel wird erläutert, wie Sie eine Desktop-App signieren, die Sie für die universelle Windows-Plattform (UWP) konvertiert haben. Sie müssen Ihr .appx-Paket mit einem Zertifikat signieren, bevor Sie es bereitstellen können.
 
 ## Automatisches Signieren mit Desktop App Converter (DAC)
 
@@ -66,7 +77,7 @@ Damit die Authenticode-Signatur korrekt ist, muss für die Authenticode-Signatur
 - Der Anfang des **WIN_CERTIFICATE**-Eintrags in der übertragbaren ausführbaren Datei kann nicht über das Ende der ausführbaren Datei hinausgehen.
 - Der **WIN_CERTIFCATE**-Eintrag sollte sich am Ende des Bilds befinden
 - Die Größe des **WIN_CERTIFICATE**-Eintrags muss positiv sein
-- Der **WIN_CERTIFICATE**-Eintrag muss bei ausführbaren 32-Bit-Dateien nach der **IMAGE_NT_HEADERS32**-Struktur und bei ausführbaren 64-Bit-Dateien nach der IMAGE_NT_HEADERS64-Struktur starten
+- Der **WIN_CERTIFICATE**-Eintrag muss bei ausführbaren 32-Bit-Dateien nach der **IMAGE_NT_HEADERS32**-Struktur und bei ausführbaren 64-Bit-Dateien nach der IMAGE_NT_HEADERS64-Struktur beginnen.
 
 Weitere Informationen finden Sie in der [Spezifikation zu übertragbaren ausführbaren Authenticode-Dateien](http://download.microsoft.com/download/9/c/5/9c5b2167-8017-4bae-9fde-d599bac8184a/Authenticode_PE.docx) und der [Spezifikation zum Format übertragbarer ausführbarer Dateien](https://msdn.microsoft.com/windows/hardware/gg463119.aspx). 
 
@@ -80,6 +91,7 @@ Um diese falsch formatierten Binärdateien zu korrigieren, stellen Sie sicher, d
 - [SignTool.exe (Signaturtool)](https://msdn.microsoft.com/library/8s9b9yaz.aspx)
 - [Signieren eines App-Pakets mithilfe von SignTool](https://msdn.microsoft.com/library/windows/desktop/jj835835.aspx)
 
-<!--HONumber=Sep16_HO2-->
+
+<!--HONumber=Nov16_HO1-->
 
 

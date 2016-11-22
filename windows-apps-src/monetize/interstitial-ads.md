@@ -4,8 +4,8 @@ ms.assetid: 1f970d38-2338-470e-b5ba-811402752fc4
 description: "Erfahren Sie mehr über die Verwendung von interstitiellen Anzeigen in Windows10-, Windows8.1- oder Windows Phone8.1-Apps mithilfe der Microsoft Advertising-Bibliotheken im Microsoft Store Services SDK."
 title: Interstitielle Anzeigen
 translationtype: Human Translation
-ms.sourcegitcommit: 2f0835638f330de0ac2d17dae28347686cc7ed97
-ms.openlocfilehash: 4082fdd17ba42fd2b6a7659095b019c1ad4875a0
+ms.sourcegitcommit: 8574695fe12042e44831227f81e1f6ea45e9c0da
+ms.openlocfilehash: fdc9bddafc7b80f66bb160183a6c416a8573883a
 
 ---
 
@@ -360,10 +360,10 @@ In diesem Beispiel wird angenommen, dass Sie ein Universal App-Projekt für XAML
 4.  Überprüfen Sie die [Anzeigenvermittlungsberichte](../publish/advertising-performance-report.md) im Dev Center-Dashboard.
 
 <span id="interstitialbestpractices10"/>
-## Bewährte Methoden für Interstitialanzeigen
+## Richtlinien und bewährte Methoden für Interstitialanzeigen
 
 
-Weitere Informationen zur effektiven Verwendung von Interstitialanzeigen finden Sie unter [Richtlinien für Benutzeroberfläche und Benutzerumgebung](ui-and-user-experience-guidelines.md).
+Weitere Informationen zur effizienten Nutzung von Interstitialanzeigen und zu Richtlinien, die Sie befolgen müssen, finden Sie unter [Richtlinien und bewährte Methoden für Interstitialanzeigen](ui-and-user-experience-guidelines.md#interstitialbestpractices10).
 
 <span id="targetplatform10"/>
 ## Entfernen von Verweisfehlern: Ausrichtung auf eine bestimmte CPU-Plattform (XAML und HTML)
@@ -384,6 +384,6 @@ Wenn Sie die Microsoft Advertising-Bibliotheken verwenden, können Sie in Ihrem 
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

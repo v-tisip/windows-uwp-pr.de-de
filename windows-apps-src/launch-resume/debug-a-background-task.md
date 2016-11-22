@@ -4,8 +4,8 @@ title: Debuggen einer Hintergrundaufgabe
 description: "Hier erfahren Sie, wie Sie eine Hintergrundaufgabe einschließlich Hintergrundaufgabenaktivierung und Debugablaufverfolgung im Windows-Ereignisprotokoll debuggen."
 ms.assetid: 24E5AC88-1FD3-46ED-9811-C7E102E01E9C
 translationtype: Human Translation
-ms.sourcegitcommit: c05c004f99e5892291aaca0dcc85c176a821d351
-ms.openlocfilehash: f7b311cef1d6a28b472f47985ebca437b7a80e3d
+ms.sourcegitcommit: e094ed9e0110fee33275721c4b6547ba53c1da3e
+ms.openlocfilehash: c4717ac41992d9a0c04d098067881ce5ca6952f0
 
 ---
 
@@ -18,12 +18,12 @@ ms.openlocfilehash: f7b311cef1d6a28b472f47985ebca437b7a80e3d
 
 Hier erfahren Sie, wie Sie eine Hintergrundaufgabe einschließlich Hintergrundaufgabenaktivierung und Debugablaufverfolgung im Windows-Ereignisprotokoll debuggen.
 
-## Debuggen von Multiprozess- im Vergleich zu Einzelprozess-Hintergrundaufgaben
-In diesem Thema werden hauptsächlich Hintergrundaufgaben behandelt, die in einem von der Host-App separaten Prozess ausgeführt werden. Wenn Sie eine Einzelprozess-Hintergrundaufgabe debuggen, verfügen Sie über kein separates Hintergrundaufgabenprojekt und können einen Haltepunkt auf **OnBackgroundActivated()** (wo Ihr Einzelprozess-Hintergrundcode ausgeführt wird) festlegen. Anleitungen zum Auslösen des Hintergrundcodes finden Sie unter Schritt 2 in [Manuelles Auslösen von Hintergrundaufgaben, um Hintergrundaufgabencode zu debuggen](#Trigger-background-tasks-manually-to-debug-background-task-code) unten.
+## Debuggen von Out-of-Process- im Vergleich zu In-Process-Hintergrundaufgaben
+In diesem Thema werden hauptsächlich Hintergrundaufgaben behandelt, die in einem von der Host-App separaten Prozess ausgeführt werden. Wenn Sie eine In-Process-Hintergrundaufgabe debuggen, verfügen Sie über kein separates Hintergrundaufgabenprojekt und können einen Haltepunkt auf **OnBackgroundActivated()** (wo Ihr In-Process-Hintergrundcode ausgeführt wird) festlegen. Anleitungen zum Auslösen des Hintergrundcodes finden Sie unter Schritt2 in [Manuelles Auslösen von Hintergrundaufgaben, um Hintergrundaufgabencode zu debuggen](#Trigger-background-tasks-manually-to-debug-background-task-code) unten.
 
 ## Sicherstellen, dass das Hintergrundaufgabenprojekt richtig eingerichtet wurde
 
-In diesem Thema wird vorausgesetzt, dass Sie bereits über eine App mit einer Hintergrundaufgabe verfügen, die Sie debuggen möchten. Der folgende Code ist speziell für Hintergrundaufgaben geeignet, die in einem separaten Prozess ausgeführt werden und gilt nicht für Einzelprozess-Hintergrundaufgaben.
+In diesem Thema wird vorausgesetzt, dass Sie bereits über eine App mit einer Hintergrundaufgabe verfügen, die Sie debuggen möchten. Der folgende Code ist speziell für Hintergrundaufgaben geeignet, die außerhalb des Prozesses ausgeführt werden, und gilt nicht für In-Process-Hintergrundaufgaben.
 
 -   Stellen Sie für C# und C++ sicher, dass das Hauptprojekt auf das Hintergrundaufgabenprojekt verweist. Ist dieser Verweis nicht vorhanden, wird die Hintergrundaufgabe nicht in das App-Paket eingebunden.
 -   Stellen Sie für C# und C++ sicher, dass der **Ausgabetyp** des Hintergrundaufgabenprojekts „Komponente für Windows-Runtime“ lautet.
@@ -33,9 +33,9 @@ In diesem Thema wird vorausgesetzt, dass Sie bereits über eine App mit einer Hi
 
 Hintergrundaufgaben können mit Microsoft Visual Studio manuell ausgelöst werden. Anschließend können Sie den Code schrittweise durchlaufen und ihn debuggen.
 
-1.  Setzen Sie in C# einen Haltepunkt in der Run-Methode der Hintergrundklasse (für Einzelprozessaufgaben den Haltepunkt in App.OnBackgroundActivated()) festlegen) und/oder schreiben Sie mithilfe von [**System.Diagnostics**](https://msdn.microsoft.com/library/windows/apps/xaml/hh441592.aspx) eine Debuggerausgabe.
+1.  Setzen Sie in C# einen Haltepunkt in der Run-Methode der Hintergrundklasse (für In-Process-Aufgaben den Haltepunkt in App.OnBackgroundActivated()) festlegen), und/oder schreiben Sie mithilfe von [**System.Diagnostics**](https://msdn.microsoft.com/library/windows/apps/xaml/hh441592.aspx) eine Debuggerausgabe.
 
-    Setzne Sie in C++ einen Haltepunkt in der Run-Funktion der Hintergrundklasse (für Einzelprozessaufgaben den Haltepunkt in App.OnBackgroundActivated()) festlegen, und/oder schreiben Sie mithilfe von [**OutputDebugString**](https://msdn.microsoft.com/library/windows/desktop/aa363362) eine Debuggerausgabe.
+    Setzen Sie in C++ einen Haltepunkt in der Run-Funktion der Hintergrundklasse (für In-Process-Aufgaben den Haltepunkt in App.OnBackgroundActivated()) festlegen, und/oder schreiben Sie mithilfe von [**OutputDebugString**](https://msdn.microsoft.com/library/windows/desktop/aa363362) eine Debuggerausgabe.
 
 2.  Führen Sie Ihre Anwendung im Debugger aus, und lösen Sie dann die Hintergrundaufgabe über die Symbolleiste **Zyklusereignisse** aus. In diesem Dropdownmenü werden die Namen der Hintergrundaufgaben angezeigt, die von Visual Studio aktiviert werden können.
 
@@ -52,9 +52,9 @@ Hintergrundaufgaben können mit Microsoft Visual Studio manuell ausgelöst werde
 ## Debuggen der Aktivierung der Hintergrundaufgabe
 
 > [!NOTE]
-> Dieser Abschnitt behandelt speziell Hintergrundaufgaben, die in einem separaten Prozess ausgeführt werden und gilt nicht für Einzelprozess-Hintergrundaufgaben.
+> Dieser Abschnitt behandelt speziell Hintergrundaufgaben, die außerhalb des Prozesses ausgeführt werden, und gilt nicht für In-Process-Hintergrundaufgaben.
 
-Die Aktivierung von Hintergrundaufgaben hängt von drei Dingen ab:
+Die Aktivierung von Hintergrundaufgaben hängt von drei Faktoren ab:
 
 -   Der Name und Namespace der Hintergrundaufgabenklasse
 -   Das im Paketmanifest angegebene Einstiegspunktattribut
@@ -102,13 +102,13 @@ Weitere Informationen zum Debuggen einer Hintergrundaufgabe mit VS finden Sie un
 
 ## Verwandte Themen
 
-* [Erstellen und Registrieren einer in einem separaten Prozess ausgeführten Hintergrundaufgabe](create-and-register-a-background-task.md)
-* [Erstellen und Registrieren einer Einzelprozess-Hintergrundaufgabe](create-and-register-a-singleprocess-background-task.md)
+* [Erstellen und Registrieren einer Out-of-Process-Hintergrundaufgabe](create-and-register-an-outofproc-background-task.md)
+* [Erstellen und Registrieren einer In-Process-Hintergrundaufgabe](create-and-register-an-inproc-background-task.md)
 * [Registrieren einer Hintergrundaufgabe](register-a-background-task.md)
 * [Deklarieren von Hintergrundaufgaben im Anwendungsmanifest](declare-background-tasks-in-the-application-manifest.md)
 * [Richtlinien für Hintergrundaufgaben](guidelines-for-background-tasks.md)
 * [So wird's gemacht: Auslösen von Anhalte-, Fortsetzungs- und Hintergrundereignissen in Windows Store-Apps](https://msdn.microsoft.com/library/windows/apps/xaml/hh974425.aspx)
-* [Analysieren der Codequalität von Windows Store-Apps mit der Codeanalyse von Visual Studio](https://msdn.microsoft.com/library/windows/apps/xaml/hh441471.aspx)
+* [Analysieren der Codequalität von WindowsStore-Apps mit der Codeanalyse von Visual Studio](https://msdn.microsoft.com/library/windows/apps/xaml/hh441471.aspx)
 
  
 
@@ -116,6 +116,6 @@ Weitere Informationen zum Debuggen einer Hintergrundaufgabe mit VS finden Sie un
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

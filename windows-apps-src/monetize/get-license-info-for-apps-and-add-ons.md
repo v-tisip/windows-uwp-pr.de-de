@@ -1,19 +1,19 @@
 ---
 author: mcleanbyron
 ms.assetid: 9630AF6D-6887-4BE3-A3CB-D058F275B58F
-description: "Erfahren Sie, wie Sie den Windows.Services.Store-Namespace verwenden, um Lizenzinformationen für die aktuelle App und ihre Add-ons abzurufen."
-title: "Abrufen von Lizenzinformationen für Ihre Apps und Add-ons"
+description: "Erfahren Sie, wie Sie den Windows.Services.Store-Namespace verwenden, um Lizenzinformationen für die aktuelle App und ihre Add-Ons abzurufen."
+title: "Abrufen von Lizenzinformationen für Ihre Apps und Add-Ons"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: 5cd43b951cededad24bf4e88156634906e5c5165
+ms.sourcegitcommit: 18d5c2ecf7d438355c3103ad2aae32dc84fc89ed
+ms.openlocfilehash: 710800bcd5491407d90e8293006a687e27d06d2d
 
 ---
 
-# Abrufen von Lizenzinformationen für Ihre Apps und Add-Ons
+# Abrufen von Lizenzinformationen zu Apps und Add-Ons
 
-Apps für Windows 10, Version 1607 oder höher, können Methoden der [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Klasse im [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace verwenden, um Lizenzinformationen für die aktuelle App und deren Add-Ons (auch als In-App-Produkte oder IAPs bezeichnet) abrufen. Mit diesen Informationen können Sie ermitteln, ob die Lizenzen für die App oder deren Add-ons aktiv sind, oder ob es sich um Testversionen handelt.
+Apps für Windows 10, Version 1607 oder höher, können Methoden der [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Klasse im [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace verwenden, um Lizenzinformationen für die aktuelle App und deren Add-Ons (auch als In-App-Produkte oder IAPs bezeichnet) abzurufen. Mit diesen Informationen können Sie ermitteln, ob die Lizenzen für die App oder deren Add-Ons aktiv sind, oder ob es sich um Testversionen handelt.
 
->**Hinweis**&nbsp;&nbsp;Dieser Artikel bezieht sich auf Apps für Windows 10, Version 1607 oder höher. Wenn Ihre App für eine frühere Version von Windows 10 geeignet ist, müssen Sie den [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)-Namespace anstelle des **Windows.Services.Store**-Namespace verwenden. Weitere Informationen finden Sie unter [In-App-Einkäufe und Testversionen mit dem Windows.ApplicationModel.Store-Namespace](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
+>**Hinweis**&nbsp;&nbsp;Dieser Artikel bezieht sich auf Apps für Windows 10, Version 1607 oder höher. Wenn Ihre App für eine frühere Version von Windows 10 geeignet ist, müssen Sie den [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)-Namespace anstelle des **Windows.Services.Store**-Namespace verwenden. Weitere Informationen finden Sie unter [In-App-Käufe und Testversionen mit dem Windows.ApplicationModel.Store-Namespace](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
 
 ## Voraussetzungen
 
@@ -24,11 +24,15 @@ Für dieses Beispiel gelten die folgenden Voraussetzungen:
 Der Code in diesem Beispiel geht von folgenden Voraussetzungen aus:
 * Die Ausführung des Codes erfolgt im Kontext einer [Seite](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx), die einen [ProgressRing](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressring.aspx) mit dem Namen ```workingProgressRing``` und einen [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) mit dem Namen ```textBlock``` enthält. Diese Objekte werden verwendet, um anzugeben, dass ein asynchroner Vorgang ausgeführt wird, bzw. um Ausgabemeldungen anzuzeigen.
 * Die Codedatei enthält eine **using**-Anweisung für den **Windows.Services.Store**-Namespace.
-* Die App ist eine Einzelbenutzer-App, die nur im Kontext des Benutzers ausgeführt wird, der die App gestartet hat. Weitere Informationen finden Sie unter [In-App-Einkäufe und Testversionen](in-app-purchases-and-trials.md#api_intro).
+* Die App ist eine Einzelbenutzer-App, die nur im Kontext des Benutzers ausgeführt wird, der die App gestartet hat. Weitere Informationen finden Sie unter [In-App-Käufe und Testversionen](in-app-purchases-and-trials.md#api_intro).
+
+>**Hinweis**&nbsp;&nbsp;Wenn Sie über eine Desktopanwendung verfügen, die die [Desktop-Brücke](https://developer.microsoft.com/windows/bridges/desktop) verwendet, müssen Sie möglicherweise zusätzlichen, in diesem Beispiel nicht aufgeführten Code hinzufügen, um das [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)Objekt zu konfigurieren. Weitere Informationen finden Sie unter [Verwenden der StoreContext-Klasse in einer Desktopanwendung, die die Desktop-Brücke verwendet](in-app-purchases-and-trials.md#desktop).
 
 ## Codebeispiel
 
-Verwenden Sie zum Abrufen von Lizenzinformationen für die aktuelle App und deren Add-ons die [GetAppLicenseAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getapplicenseasync.aspx)-Methode. Hierbei handelt es sich um eine asynchrone Methode, die ein [StoreAppLicense](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeapplicense.aspx)-Objekt zurück gibt, das Lizenzinformationen bereitstellt. Die [AddOnLicenses](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Eigenschaft ermöglicht den Zugriff auf Informationen über die Add-on-Lizenzen für die App.
+Verwenden Sie zum Abrufen von Lizenzinformationen für die aktuelle App die [GetAppLicenseAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getapplicenseasync.aspx)-Methode. Hierbei handelt es sich um eine asynchrone Methode, die ein [StoreAppLicense](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeapplicense.aspx)-Objekt mit Lizenzinformationen für die App zurückgibt, darunter die Eigenschaften, die angeben, ob der Benutzer über eine Lizenz für die App verfügt ([IsActive](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeapplicense.isactive.aspx)), oder ob die Lizenz für eine Testversion gilt ([IsTrial](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeapplicense.istrial.aspx)).
+
+Rufen Sie die Add-On-Lizenzen für die App mit der [AddOnLicenses](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeapplicense.addonlicenses.aspx)-Eigenschaft des [StoreAppLicense](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeapplicense.aspx)-Objekts ab. Diese Eigenschaft gibt eine Sammlung von [StoreLicense](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storelicense.aspx)-Objekten zurück, die den Add-On-Lizenzen für die App entsprechen. Um festzustellen, ob der Benutzer über eine Lizenz für ein Add-On verfügt, verwenden Sie die [IsActive](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storelicense.isactive.aspx)-Eigenschaft.
 
 ```csharp
 private StoreContext context = null;
@@ -38,6 +42,9 @@ public async void GetLicenseInfo()
     if (context == null)
     {
         context = StoreContext.GetDefault();
+        // If your app is a desktop app that uses the Desktop Bridge, you
+        // may need additional code to configure the StoreContext object.
+        // For more info, see https://aka.ms/storecontext-for-desktop.
     }
 
     workingProgressRing.IsActive = true;
@@ -66,15 +73,15 @@ Eine vollständige Beispielanwendung finden Sie im [Store-Beispiel](https://gith
 
 ## Verwandte Themen
 
-* [In-App-Einkäufe und Testversionen](in-app-purchases-and-trials.md)
+* [In-App-Käufe und Testversionen](in-app-purchases-and-trials.md)
 * [Abrufen von Produktinformationen zu Apps und Add-Ons](get-product-info-for-apps-and-add-ons.md)
-* [Aktivieren von In-App-Einkäufen von Apps und Add-Ons](enable-in-app-purchases-of-apps-and-add-ons.md)
+* [Aktivieren von In-App-Käufen von Apps und Add-Ons](enable-in-app-purchases-of-apps-and-add-ons.md)
 * [Unterstützen von Endverbraucher-Add-On-Käufen](enable-consumable-add-on-purchases.md)
 * [Implementieren einer Testversion der App](implement-a-trial-version-of-your-app.md)
 * [Store-Beispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

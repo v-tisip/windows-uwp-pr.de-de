@@ -4,8 +4,8 @@ title: "Ausführen einer Hintergrundaufgabe für einen Timer"
 description: "Hier erfahren Sie, wie Sie eine einmalige Hintergrundaufgabe planen oder eine regelmäßige Hintergrundaufgabe ausführen."
 ms.assetid: 0B7F0BFF-535A-471E-AC87-783C740A61E9
 translationtype: Human Translation
-ms.sourcegitcommit: 16202eeb37421acf75a9032dfc1eec397d23ce4f
-ms.openlocfilehash: dd0d0fe0081eac112ce22e8a035b4bb70be3bef0
+ms.sourcegitcommit: 7d1c160f8b725cd848bf8357325c6ca284b632ae
+ms.openlocfilehash: 1ad44208b3442e80212656db943ff088514cc954
 
 ---
 
@@ -22,7 +22,7 @@ ms.openlocfilehash: dd0d0fe0081eac112ce22e8a035b4bb70be3bef0
 Hier erfahren Sie, wie Sie eine einmalige Hintergrundaufgabe planen oder eine regelmäßige Hintergrundaufgabe ausführen.
 
 -   In diesem Beispiel wird davon ausgegangen, dass eine Hintergrundaufgabe regelmäßig oder zu einer bestimmten Uhrzeit ausgeführt werden muss, um die App zu unterstützen. Eine Hintergrundaufgabe wird nur mithilfe eines [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843) ausgeführt, wenn Sie [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) aufgerufen haben.
--   Bei diesem Thema wird vorausgesetzt, dass Sie bereits eine Hintergrundaufgabenklasse erstellt haben. Um schnell mit der Erstellung einer Hintergrundaufgabe zu beginnen, lesen Sie [Erstellen und Registrieren einer Einzelprozess-Hintergrundaufgabe](create-and-register-a-singleprocess-background-task.md) oder [Erstellen und Registrieren einer in einem separaten Prozess ausgeführten Hintergrundaufgabe](create-and-register-a-background-task.md). Ausführlichere Informationen zu Bedingungen und Triggern finden Sie unter [Unterstützen der App mit Hintergrundaufgaben](support-your-app-with-background-tasks.md).
+-   Bei diesem Thema wird vorausgesetzt, dass Sie bereits eine Hintergrundaufgabenklasse erstellt haben. Um schnell mit dem Erstellen einer Hintergrundaufgabe zu beginnen, lesen Sie [Erstellen und Registrieren einer Hintergrundaufgabe innerhalb von Prozessen](create-and-register-an-inproc-background-task.md) oder [Erstellen und Registrieren einer Hintergrundaufgabe außerhalb von Prozessen](create-and-register-an-outofproc-background-task.md). Ausführlichere Informationen zu Bedingungen und Triggern finden Sie unter [Unterstützen der App mit Hintergrundaufgaben](support-your-app-with-background-tasks.md).
 
 ## Erstellen eines Zeitauslösers
 
@@ -80,7 +80,7 @@ Hier erfahren Sie, wie Sie eine einmalige Hintergrundaufgabe planen oder eine re
 > [!Important]
 > Für Hintergrundaufgaben, die im gleichen Prozess wie Ihre App ausgeführt werden, legen Sie `entryPoint` nicht fest. Für Hintergrundaufgaben, die in einem von Ihrer App separaten Prozess ausgeführt werden, legen Sie `entryPoint` auf den Namespace '.' und den Namen der Klasse fest, die die Implementierung der Hintergrundaufgabe enthält.
 
-    The following code registers a background task that runs in a separate process:
+    The following code registers a background task that runs out-of-process:
 
     > > [!div class="tabbedCodeSnippets"]
     > ```cs
@@ -103,12 +103,12 @@ Hier erfahren Sie, wie Sie eine einmalige Hintergrundaufgabe planen oder eine re
 
 > **Hinweis**: Ab Windows10 muss der Benutzer Ihre App nicht mehr zum Sperrbildschirm hinzufügen, um Hintergrundaufgaben zu nutzen. Die verschiedenen Arten von Auslösern für Hintergrundaufgaben werden unter [Unterstützen der App mit Hintergrundaufgaben](support-your-app-with-background-tasks.md)erläutert.
 
-> **Hinweis:** Dieser Artikel ist für Windows10-Entwickler gedacht, die Apps für die Universelle Windows-Plattform (UWP) schreiben. Informationen für die Entwicklung unter Windows8.x oder Windows Phone8.x finden Sie in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **Hinweis:** Dieser Artikel ist für Windows10-Entwickler gedacht, die Apps für die Universelle Windows-Plattform (UWP) schreiben. Informationen zur Entwicklung unter Windows8.x oder Windows Phone8.x finden Sie in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
 ## Verwandte Themen
 
-* [Erstellen und Registrieren einer Einzelprozess-Hintergrundaufgabe](create-and-register-a-singleprocess-background-task.md).
-* [Erstellen und Registrieren einer in einem separaten Prozess ausgeführten Hintergrundaufgabe](create-and-register-a-background-task.md)
+* [Erstellen und Registrieren einer Hintergrundaufgabe innerhalb von Prozessen](create-and-register-an-inproc-background-task.md).
+* [Erstellen und Registrieren einer Hintergrundaufgabe außerhalb von Prozessen](create-and-register-an-outofproc-background-task.md)
 * [Deklarieren von Hintergrundaufgaben im Anwendungsmanifest](declare-background-tasks-in-the-application-manifest.md)
 * [Behandeln einer abgebrochenen Hintergrundaufgabe](handle-a-cancelled-background-task.md)
 * [Überwachen des Status und Abschlusses von Hintergrundaufgaben](monitor-background-task-progress-and-completion.md)
@@ -123,6 +123,6 @@ Hier erfahren Sie, wie Sie eine einmalige Hintergrundaufgabe planen oder eine re
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

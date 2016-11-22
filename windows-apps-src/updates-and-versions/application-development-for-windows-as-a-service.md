@@ -3,8 +3,8 @@ title: "Anwendungsentwicklung für Windows as a Service (Windows10)"
 description: "Entkoppeln Sie die App-Freigabe und -Unterstützung von bestimmten Windows-Builds."
 author: jdeckerMS
 translationtype: Human Translation
-ms.sourcegitcommit: a86002c944841536d37735bb8c4b657905582144
-ms.openlocfilehash: 72ac67b17fc519d374798e5121b309f664ff6b1b
+ms.sourcegitcommit: a98d35162c81f720e4d45990befa289abd2f2c5c
+ms.openlocfilehash: c61800c32e8ab98c13a356e7a61b11ff5b364ffe
 
 ---
 
@@ -151,14 +151,14 @@ Nach dem Update auf einen Test-Flight-Build sollen Ihnen die folgenden Beispielt
 
 Lassen Sie uns wissen, wie Ihre App mit Test-Flight-Builds funktioniert. Wenn die App während der Tests Fehler verursacht, sollten Sie diese über das Partnerportal melden (sofern Sie Zugriff haben) oder Kontakt zu Microsoft aufnehmen. Ihr Feedback ist uns wichtig, da es hilft, gemeinsam mit unseren Partnern eine optimale Benutzererfahrung zu schaffen.
 
-### Schritt 4: Für Windows10 registrieren
-Auf der Website [Bereit für Windows10](http://go.microsoft.com/fwlink/?LinkID=780580) finden Sie ein Verzeichnis der Softwarelösungen, die Windows10 unterstützen. Sie richtet sich an IT-Administratoren in Unternehmen und Organisationen weltweit, die die Bereitstellung von Windows10 auf ihren Systemen in Betracht ziehen. IT-Administratoren können anhand der Website feststellen, ob die in ihrem Unternehmen bereitgestellte Software unter Windows10 unterstützt wird.
+### Schritt4: Registrieren bei Ready for Windows
+Auf der Website [Ready for Windows](http://go.microsoft.com/fwlink/?LinkID=780580) finden Sie ein Verzeichnis der Softwarelösungen, die Windows10 unterstützen. Sie richtet sich an IT-Administratoren in Unternehmen und Organisationen weltweit, die die Bereitstellung von Windows10 auf ihren Systemen in Betracht ziehen. IT-Administratoren können anhand der Website feststellen, ob die in ihrem Unternehmen bereitgestellte Software unter Windows10 unterstützt wird.
 
 ## Verwandte Themen
 [Windows10-Wartungsoptionen für Updates und Upgrades](https://technet.microsoft.com/itpro/windows/manage/introduction-to-windows-10-servicing)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

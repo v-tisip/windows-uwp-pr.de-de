@@ -4,8 +4,8 @@ ms.assetid: B5E3A66D-0453-4D95-A3DB-8E650540A300
 description: In diesem Artikel wird beschrieben, wie Sie den MediaProcessingTrigger und eine Hintergrundaufgabe verwenden, um Mediendateien im Hintergrund zu verarbeiten.
 title: Verarbeiten von Mediendateien im Hintergrund
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 704fa52a9e98382940b7863d6196ca0af5d33460
+ms.sourcegitcommit: fb0e8a535ff4e27530fa45aca80b21f17a523c7b
+ms.openlocfilehash: 8a65ce9ed9de050bbcee2612bf53c5bfd44ffc72
 
 ---
 
@@ -78,6 +78,10 @@ Die **SendToastNotification**-Hilfsmethode erstellt eine neue Popupbenachrichtig
 
 [!code-cs[SendToastNotification](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetSendToastNotification)]
 
+Im Handler für das [**Canceled**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Background.IBackgroundTaskInstance.Canceled)-Ereignis, das aufgerufen wird, wenn das System die Hintergrundaufgabe abbricht, können Sie den Fehler zu Telemetriezwecken protokollieren.
+
+[!code-cs[OnCanceled](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetOnCanceled)]
+
 ## Registrieren und Starten der Hintergrundaufgabe
 
 Bevor die Hintergrundaufgabe aus der Vordergrund-App gestartet werden kann, müssen Sie die Datei „Package.appmanifest“ der Vordergrund-App aktualisieren, um dem System mitzuteilen, dass Ihre App eine Hintergrundaufgabe verwendet.
@@ -140,6 +144,6 @@ Der **OnCompleted**-Ereignishandler wird aufgerufen, wenn die Ausführung der Hi
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

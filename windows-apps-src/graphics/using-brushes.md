@@ -4,8 +4,8 @@ ms.assetid: 02141F86-355E-4046-86EA-2A89D615B7DB
 title: Verwenden von Pinseln
 description: "Mit Brush-Objekten werden Innenbereiche oder Ränder von Formen, Text und Teilen von Steuerelementen gezeichnet, damit das gezeichnete Objekt auf einer Benutzeroberfläche sichtbar ist."
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: cc16b07931cf3f7740957c222e8c8821ddbab08a
+ms.sourcegitcommit: f5934600cc185c952acc57ae38e0b190466e0dfa
+ms.openlocfilehash: dc415135a05a63226a6b2d0b828245fe2f713788
 
 ---
 # Verwenden von Pinseln
@@ -13,7 +13,7 @@ ms.openlocfilehash: cc16b07931cf3f7740957c222e8c8821ddbab08a
 \[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-** Wichtige APIs **
+**Wichtige APIs**
 
 -   [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076)
 
@@ -179,6 +179,6 @@ Codebeispiele finden Sie auf den Referenzseiten für [**WebViewBrush**](https://
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

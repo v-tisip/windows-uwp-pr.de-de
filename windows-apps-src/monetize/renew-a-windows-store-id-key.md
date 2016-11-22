@@ -4,30 +4,27 @@ ms.assetid: 3569C505-8D8C-4D85-B383-4839F13B2466
 description: "Verwenden Sie diese Methode zum Verlängern eines Windows Store-Schlüssels."
 title: "Verlängern eines Windows Store-ID-Schlüssels"
 translationtype: Human Translation
-ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
-ms.openlocfilehash: 1a2cb625f95a5ad8e94911ead2402cb2589e209a
+ms.sourcegitcommit: ac9c921c7f39a1bdc6dc9fc9283bc667f67cd820
+ms.openlocfilehash: 4e0ca6fe88218faef1f7c9192a5e19569e9c00b4
 
 ---
 
 # Verlängern eines Windows Store-ID-Schlüssels
 
 
-
-
-Verwenden Sie diese Methode zum Verlängern eines Windows Store-Schlüssels. Wenn Sie einen Windows Store-ID-Schlüssel durch Aufrufen der [**GetCustomerCollectionsIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608674)-Methode oder [**GetCustomerPurchaseIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608675)-Methode generieren, ist der Schlüssel 90 Tage lang gültig. Nach Ablauf des Schlüssels können Sie anhand des abgelaufenen Schlüssels einen neuen Schlüssel aushandeln, indem Sie diese Methode verwenden.
+Verwenden Sie diese Methode zum Verlängern eines Windows Store-Schlüssels. Wenn Sie einen [Windows Store-ID-Schlüssel generieren](view-and-grant-products-from-a-service.md#step-4), ist dieser 90Tage lang gültig. Nach Ablauf des Schlüssels können Sie anhand des abgelaufenen Schlüssels einen neuen Schlüssel aushandeln, indem Sie diese Methode anwenden.
 
 ## Voraussetzungen
 
 
 Zur Verwendung dieser Methode benötigen Sie:
 
--   Ein AzureAD-Zugriffstoken, das mit dem Zielgruppen-URI `https://onestore.microsoft.com` erstellt wurde.
--   Einen abgelaufenen WindowsStore-ID-Schlüssel, der durch Aufrufen der [**GetCustomerCollectionsIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608674)-Methode oder [**GetCustomerPurchaseIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608675)-Methode im clientseitigen Code der App generiert wurde.
+* Ein AzureAD-Zugriffstoken, das mit dem Zielgruppen-URI `https://onestore.microsoft.com` erstellt wurde.
+* Ein abgelaufener WindowsStore-ID-Schlüssel, der [aus clientseitigem Code in Ihrer App generiert wurde](view-and-grant-products-from-a-service.md#step-4).
 
 Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von Produktansprüchen aus einem Dienst](view-and-grant-products-from-a-service.md).
 
 ## Anforderung
-
 
 ### Anforderungssyntax
 
@@ -119,6 +116,6 @@ Date: Tue, 13 Sep 2015 07:31:12 GMT
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

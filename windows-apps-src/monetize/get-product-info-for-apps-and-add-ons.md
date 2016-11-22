@@ -1,11 +1,11 @@
 ---
 author: mcleanbyron
 ms.assetid: 89178FD9-850B-462F-9016-1AD86D1F6F7F
-description: "Erfahren Sie, wie Sie den Windows.Services.Store-Namespace verwenden, um Store-bezogene Produktinformationen für die aktuelle App oder eines ihrer Add-ons abzurufen."
+description: "Erfahren Sie, wie Sie den Windows.Services.Store-Namespace verwenden, um Store-bezogene Produktinformationen für die aktuelle App oder eines ihrer Add-Ons abzurufen."
 title: Abrufen von Produktinformationen zu Apps und Add-Ons
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: c453dc74730fc451bbe9babdffb2ce4d72712082
+ms.sourcegitcommit: 962bee0cae8c50407fe1509b8000dc9cf9e847f8
+ms.openlocfilehash: 8471dfd24b189ff6ca4f50c4461b72ac5d81659d
 
 ---
 
@@ -13,7 +13,7 @@ ms.openlocfilehash: c453dc74730fc451bbe9babdffb2ce4d72712082
 
 Apps für Windows 10, Version 1607 oder höher, können Methoden der [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Klasse im [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace verwenden, um auf Store-bezogene Informationen für die aktuelle App oder eines ihrer Add-Ons (auch als In-App-Produkte oder IAPs bezeichnet) zuzugreifen. Die folgenden Beispiele in diesem Artikel zeigen, wie dies für verschiedene Szenarien durchgeführt wird. Eine vollständige Beispielanwendung finden Sie im [Store-Beispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
 
->**Hinweis**&nbsp;&nbsp;Dieser Artikel bezieht sich auf Apps für Windows 10, Version 1607 oder höher. Wenn Ihre App für eine frühere Version von Windows 10 geeignet ist, müssen Sie den [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)-Namespace anstelle des **Windows.Services.Store**-Namespace verwenden. Weitere Informationen finden Sie unter [In-App-Einkäufe und Testversionen mit dem Windows.ApplicationModel.Store-Namespace](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
+>**Hinweis**&nbsp;&nbsp;Dieser Artikel bezieht sich auf Apps für Windows 10, Version 1607 oder höher. Wenn Ihre App für eine frühere Version von Windows 10 geeignet ist, müssen Sie den [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)-Namespace anstelle des **Windows.Services.Store**-Namespace verwenden. Weitere Informationen finden Sie unter [In-App-Käufe und Testversionen mit dem Windows.ApplicationModel.Store-Namespace](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
 
 ## Voraussetzungen
 
@@ -24,9 +24,11 @@ Für diese Beispiele gelten die folgenden Voraussetzungen:
 Der Code in diesen Beispielen geht von Folgendem aus:
 * Die Ausführung des Codes erfolgt im Kontext einer [Seite](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx), die einen [ProgressRing](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressring.aspx) mit dem Namen ```workingProgressRing``` und einen [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) mit dem Namen ```textBlock``` enthält. Diese Objekte werden verwendet, um anzugeben, dass ein asynchroner Vorgang ausgeführt wird, bzw. um Ausgabemeldungen anzuzeigen.
 * Die Codedatei enthält eine **using**-Anweisung für den **Windows.Services.Store**-Namespace.
-* Die App ist eine Einzelbenutzer-App, die nur im Kontext des Benutzers ausgeführt wird, der die App gestartet hat. Weitere Informationen finden Sie unter [In-App-Einkäufe und Testversionen](in-app-purchases-and-trials.md#api_intro).
+* Die App ist eine Einzelbenutzer-App, die nur im Kontext des Benutzers ausgeführt wird, der die App gestartet hat. Weitere Informationen finden Sie unter [In-App-Käufe und Testversionen](in-app-purchases-and-trials.md#api_intro).
 
 Eine vollständige Beispielanwendung finden Sie im [Store-Beispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
+
+>**Hinweis**&nbsp;&nbsp;Wenn Sie über eine Desktopanwendung verfügen, die die [Desktop-Brücke](https://developer.microsoft.com/windows/bridges/desktop) verwendet, müssen Sie möglicherweise zusätzlichen, in diesen Beispielen nicht aufgeführten Code hinzufügen, um das [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Objekt zu konfigurieren. Weitere Informationen finden Sie unter [Verwenden der StoreContext-Klasse in einer Desktopanwendung, die die Desktop-Brücke verwendet](in-app-purchases-and-trials.md#desktop).
 
 ## Abrufen von Informationen für die aktuelle App
 
@@ -40,6 +42,9 @@ public async void GetAppInfo()
     if (context == null)
     {
         context = StoreContext.GetDefault();
+        // If your app is a desktop app that uses the Desktop Bridge, you
+        // may need additional code to configure the StoreContext object.
+        // For more info, see https://aka.ms/storecontext-for-desktop.
     }
 
     // Get app store product details. Because this might take several moments,   
@@ -69,9 +74,9 @@ public async void GetAppInfo()
 
 ## Abrufen von Informationen zu Produkten mit bekannten Store-IDs
 
-Verwenden Sie zum Abrufen von Store-Produktinformationen für Apps oder Add-ons, deren [Store-IDs](in-app-purchases-and-trials.md#store_ids) Sie bereits kennen, die [GetStoreProductsAsync](https://msdn.microsoft.com/library/windows/apps/mt706579.aspx)-Methode. Hierbei handelt es sich um eine asynchrone Methode, die eine Sammlung von [StoreProduct](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.aspx)-Objekten zurück gibt, die alle Apps oder Add-ons darstellen. Zusätzlich zu den Store-IDs müssen Sie eine Liste mit Zeichenfolgen an diese Methode übergeben, welche die Typen der Add-ons identifizieren. Eine Liste der unterstützten Zeichenfolgenwerte finden Sie in der [ProductKind](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.productkind.aspx)-Eigenschaft.
+Verwenden Sie zum Abrufen von Store-Produktinformationen für Apps oder Add-Ons, deren [Store-IDs](in-app-purchases-and-trials.md#store_ids) Sie bereits kennen, die [GetStoreProductsAsync](https://msdn.microsoft.com/library/windows/apps/mt706579.aspx)-Methode. Hierbei handelt es sich um eine asynchrone Methode, die eine Sammlung von [StoreProduct](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.aspx)-Objekten zurück gibt, die alle Apps oder Add-Ons darstellen. Zusätzlich zu den Store-IDs müssen Sie eine Liste mit Zeichenfolgen an diese Methode übergeben, welche die Typen der Add-Ons identifizieren. Eine Liste der unterstützten Zeichenfolgenwerte finden Sie in der [ProductKind](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.productkind.aspx)-Eigenschaft.
 
-Im folgenden Beispiel werden Informationen für dauerhafte Add-ons mit den angegebenen Store-IDs abgerufen.
+Im folgenden Beispiel werden Informationen für dauerhafte Add-Ons mit den angegebenen Store-IDs abgerufen.
 
 ```csharp
 private StoreContext context = null;
@@ -81,6 +86,9 @@ public async void GetProductInfo()
     if (context == null)
     {
         context = StoreContext.GetDefault();
+        // If your app is a desktop app that uses the Desktop Bridge, you
+        // may need additional code to configure the StoreContext object.
+        // For more info, see https://aka.ms/storecontext-for-desktop.
     }
 
     // Specify the kinds of add-ons to retrieve.
@@ -112,11 +120,11 @@ public async void GetProductInfo()
 }
 ```
 
-## Abrufen von Informationen für Add-ons, die für die aktuelle App verfügbar sind
+## Abrufen von Informationen für Add-Ons, die für die aktuelle App verfügbar sind
 
-Verwenden Sie zum Abrufen von Store-Produktinformationen für die Add-ons, die für die aktuelle App verfügbar sind, die [GetAssociatedStoreProductsAsync](https://msdn.microsoft.com/library/windows/apps/mt706571.aspx)-Methode. Hierbei handelt es sich um eine asynchrone Methode, die eine Sammlung von [StoreProduct](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.aspx)-Objekten zurück gibt, die alle verfügbaren Add-ons darstellen. Sie müssen eine Liste mit Zeichenfolgen an diese Methode übergeben, welche die Typen von Add-ons identifizieren, die Sie abrufen möchten. Eine Liste der unterstützten Zeichenfolgenwerte finden Sie in der [ProductKind](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.productkind.aspx)-Eigenschaft.
+Verwenden Sie zum Abrufen von Store-Produktinformationen für die Add-Ons, die für die aktuelle App verfügbar sind, die [GetAssociatedStoreProductsAsync](https://msdn.microsoft.com/library/windows/apps/mt706571.aspx)-Methode. Hierbei handelt es sich um eine asynchrone Methode, die eine Sammlung von [StoreProduct](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.aspx)-Objekten zurück gibt, die alle verfügbaren Add-Ons darstellen. Sie müssen eine Liste mit Zeichenfolgen an diese Methode übergeben, welche die Typen von Add-Ons identifizieren, die Sie abrufen möchten. Eine Liste der unterstützten Zeichenfolgenwerte finden Sie in der [ProductKind](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.productkind.aspx)-Eigenschaft.
 
-Im folgenden Beispiel werden Informationen für alle dauerhaften Add-ons, vom Store verwalteten Endverbraucher-Add-ons und von Entwicklern verwalteten Endverbraucher-Add-ons abgerufen.
+Im folgenden Beispiel werden Informationen für alle dauerhaften Add-Ons, vom Store verwalteten Endverbraucher-Add-Ons und von Entwicklern verwalteten Endverbraucher-Add-Ons abgerufen.
 
 ```csharp
 private StoreContext context = null;
@@ -126,6 +134,9 @@ public async void GetAddOnInfo()
     if (context == null)
     {
         context = StoreContext.GetDefault();
+        // If your app is a desktop app that uses the Desktop Bridge, you
+        // may need additional code to configure the StoreContext object.
+        // For more info, see https://aka.ms/storecontext-for-desktop.
     }
 
     // Specify the kinds of add-ons to retrieve.
@@ -153,14 +164,14 @@ public async void GetAddOnInfo()
 }
 ```
 
->**Hinweis**&nbsp;&nbsp;Wenn die App über viele Add-ons verfügt, können Sie alternativ die [GetAssociatedStoreProductsWithPagingAsync](https://msdn.microsoft.com/library/windows/apps/mt706572.aspx)-Methode verwenden, um für die Rückgabe der Add-on-Ergebnisse Paging zu verwenden.
+>**Hinweis**&nbsp;&nbsp;Wenn die App über viele Add-Ons verfügt, können Sie alternativ die [GetAssociatedStoreProductsWithPagingAsync](https://msdn.microsoft.com/library/windows/apps/mt706572.aspx)-Methode verwenden, um für die Rückgabe der Add-On-Ergebnisse Paging zu verwenden.
 
 
-## Abrufen von Informationen zu Add-ons für die aktuelle App, zu deren Verwendung der Benutzer berechtigt ist
+## Abrufen von Informationen zu Add-Ons für die aktuelle App, zu deren Verwendung der Benutzer berechtigt ist
 
-Verwenden Sie zum Abrufen von Store-Produktinformationen für Add-ons, zu deren Verwendung der Benutzer berechtigt ist, die [GetUserCollectionAsync](https://msdn.microsoft.com/library/windows/apps/mt706580.aspx)-Methode. Hierbei handelt es sich um eine asynchrone Methode, die eine Sammlung von [StoreProduct](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.aspx)-Objekten zurück gibt, die alle Add-ons darstellen. Sie müssen eine Liste mit Zeichenfolgen an diese Methode übergeben, welche die Typen von Add-ons identifizieren, die Sie abrufen möchten. Eine Liste der unterstützten Zeichenfolgenwerte finden Sie in der [ProductKind](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.productkind.aspx)-Eigenschaft.
+Verwenden Sie zum Abrufen von Store-Produktinformationen für Add-Ons, zu deren Verwendung der Benutzer berechtigt ist, die [GetUserCollectionAsync](https://msdn.microsoft.com/library/windows/apps/mt706580.aspx)-Methode. Hierbei handelt es sich um eine asynchrone Methode, die eine Sammlung von [StoreProduct](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.aspx)-Objekten zurück gibt, die alle Add-Ons darstellen. Sie müssen eine Liste mit Zeichenfolgen an diese Methode übergeben, welche die Typen von Add-Ons identifizieren, die Sie abrufen möchten. Eine Liste der unterstützten Zeichenfolgenwerte finden Sie in der [ProductKind](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.productkind.aspx)-Eigenschaft.
 
-Im folgenden Beispiel werden Informationen für dauerhafte Add-ons mit den angegebenen Store-IDs abgerufen.
+Im folgenden Beispiel werden Informationen für dauerhafte Add-Ons mit den angegebenen Store-IDs abgerufen.
 
 ```csharp
 private StoreContext context = null;
@@ -170,6 +181,9 @@ public async void GetUserCollection()
     if (context == null)
     {
         context = StoreContext.GetDefault();
+        // If your app is a desktop app that uses the Desktop Bridge, you
+        // may need additional code to configure the StoreContext object.
+        // For more info, see https://aka.ms/storecontext-for-desktop.
     }
 
     // Specify the kinds of add-ons to retrieve.
@@ -196,19 +210,19 @@ public async void GetUserCollection()
 }
 ```
 
->**Hinweis**&nbsp;&nbsp;Wenn die App über viele Add-ons verfügt, können Sie alternativ die [GetUserCollectionWithPagingAsync](https://msdn.microsoft.com/library/windows/apps/mt706581.aspx)-Methode verwenden, um für die Rückgabe der Add-on-Ergebnisse Paging zu verwenden.
+>**Hinweis**&nbsp;&nbsp;Wenn die App über viele Add-Ons verfügt, können Sie alternativ die [GetUserCollectionWithPagingAsync](https://msdn.microsoft.com/library/windows/apps/mt706581.aspx)-Methode verwenden, um für die Rückgabe der Add-On-Ergebnisse Paging zu verwenden.
 
 ## Verwandte Themen
 
-* [In-App-Einkäufe und Testversionen](in-app-purchases-and-trials.md)
+* [In-App-Käufe und Testversionen](in-app-purchases-and-trials.md)
 * [Abrufen von Lizenzinformationen zu Apps und Add-Ons](get-license-info-for-apps-and-add-ons.md)
-* [Aktivieren von In-App-Einkäufen von Apps und Add-Ons](enable-in-app-purchases-of-apps-and-add-ons.md)
+* [Aktivieren von In-App-Käufen von Apps und Add-Ons](enable-in-app-purchases-of-apps-and-add-ons.md)
 * [Unterstützen von Endverbraucher-Add-On-Käufen](enable-consumable-add-on-purchases.md)
 * [Implementieren einer Testversion der App](implement-a-trial-version-of-your-app.md)
 * [Store-Beispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

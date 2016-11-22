@@ -4,8 +4,8 @@ Description: "Der Windows Store ermöglicht die „Abrechnung über den Mobilfun
 title: "Abrechnung über den Mobilfunkanbieter"
 ms.assetid: C8A5A4BA-6B39-42FC-B8C4-ED1B7F774CC1
 translationtype: Human Translation
-ms.sourcegitcommit: 3afac16fb79262dd6a75cd44804747d173e60edf
-ms.openlocfilehash: 114783cb93d1d49eb1b2cd0d5218a35318a02df0
+ms.sourcegitcommit: ac4cf2fd0514fba5446f11f07719f62bec75d960
+ms.openlocfilehash: 827a07f45c64722eaf8be25c4f3eb3fb03780494
 
 ---
 
@@ -16,16 +16,13 @@ Der Windows Store ermöglicht die „Abrechnung über den Mobilfunkanbieter“ a
 
 > **Hinweis**  Wenn der Mobilfunkanbieter eines Kunden die Abrechnung über das Mobilfunkkonto anbietet, diese Option auf dem Gerät des Kunden jedoch nicht verfügbar ist, finden Sie hier [Schritte zur Problembehandlung](http://go.microsoft.com/fwlink/p/?LinkId=523993).
 
- 
-
 Wir arbeiten ständig mit Mobilfunkanbietern zusammen, um die Verfügbarkeit dieser Zahlungsmethode auszubauen. Wenden Sie sich an den Mobilfunkanbieter, wenn Sie die Unterstützung eines Mobilfunkanbieters vorschlagen möchten, der unten in der Liste nicht aufgeführt ist.
 
-## Abrechnung über den Mobilfunkanbieter für Windows 10-Geräte
+## Abrechnung über den Mobilfunkanbieter für Windows10- und Xbox One-Geräte
 
+Unter Windows10 wird eine neue Implementierung der Abrechnung über den Mobilfunkanbieter eingeführt. Diese Implementierung ist für alle Geräte mit Windows10, Smartphones mit Windows10 Mobile und Xbox One-Konsolen verfügbar. Kunden können auf diesen Geräten die Abrechnung über den Mobilfunkanbieter als Zahlungsmethode hinzufügen und verwenden, um Einkäufe zu tätigen. 
 
-Unter Windows 10 wird eine neue Implementierung der Abrechnung über den Mobilfunkanbieter eingeführt. Auf Geräten, die diese Implementierung enthalten, können Kunden die Abrechnung über den Mobilfunkanbieter als Zahlungsmethode hinzufügen. Diese Implementierung ist für PCs und Tablets mit Windows 10 und Smartphones mit Windows 10 Mobile verfügbar.
-
-Die Windows 10-Implementierung der Abrechnung über den Mobilfunkanbieter wird derzeit von den folgenden Mobilfunkanbietern unterstützt:
+Die Windows10-Implementierung der Abrechnung über den Mobilfunkanbieter wird derzeit von den folgenden Mobilfunkanbietern unterstützt:
 
 | Land/Region  | Mobilfunkanbieter |
 |-----------------|------------------|
@@ -34,6 +31,9 @@ Die Windows 10-Implementierung der Abrechnung über den Mobilfunkanbieter wird d
 | Ungarn         | Telenor          |
 | Italien           | Wind             |
 | Norwegen          | Telenor          |
+| Polen          | Orange           |
+| Russland          | Beeline          |
+| Schweden          | Telenor          |
 | Schweiz     | Swisscom         |
 | Vereinigte Staaten   | Sprint           |
 | Vereinigtes Königreich  | O2               |
@@ -98,7 +98,6 @@ Die Legacyimplementierung der Abrechnung über den Mobilfunkanbieter wird von de
 | Südafrika         | Vodacom                                                            |
 | Spanien                | Movistar, Vodafone, Orange                                         |
 | Schweden               | Telenor, Tele2                                                     |
-| Schweiz          | Swisscom                                                           |
 | Vereinigte Arabische Emirate | Etisalat, Du                                                       |
 | Vereinigtes Königreich       | Everything Everywhere (T-Mobile), Telefonica (O2), Three, Vodafone |
 | Vereinigte Staaten        | AT&T, Sprint, T-Mobile, Verizon                                    |
@@ -118,6 +117,6 @@ Diese Liste wird regelmäßig aktualisiert, wenn wir die Unterstützung für die
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

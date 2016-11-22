@@ -4,15 +4,15 @@ Description: "Im Bericht Käufe des Windows Dev Center-Dashboards können Sie se
 title: "Bericht „Käufe“"
 ms.assetid: 21126362-F3CD-4006-AD3F-82FC88E3B862
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 2556e7bd8f827287c917c3b9ffa2da980d0d5d88
+ms.sourcegitcommit: 7b73682ea36574f8b675193a174d6e4b4ef85841
+ms.openlocfilehash: afac76ac5b1e1ef2a0ffef3dddf10e8e0023a275
 
 ---
 
 # Bericht „Käufe“
 
 
-Im Bericht **Käufe** des Windows Dev Center-Dashboards können Sie sehen, wer Ihre App erworben hat. Außerdem können Sie demografische und plattformspezifische Details einsehen. Sie können diese Informationen in Ihrem Dashboard anzeigen oder [den Bericht herunterladen](download-analytic-reports.md), um die Daten offline anzuzeigen. Sie können diese Daten aber auch programmgesteuert mit der [Windows Store-REST-API für Analysen](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
+Im Bericht **Käufe** des Windows Dev Center-Dashboards können Sie sehen, wer Ihre App erworben hat. Außerdem können Sie demografische und plattformspezifische Details einsehen. Sie können diese Informationen in Ihrem Dashboard anzeigen oder [den Bericht herunterladen](download-analytic-reports.md), um die Daten offline anzuzeigen. Sie können diese Daten auch programmgesteuert mit der Methode [get app acquisitions](../monetize/get-app-acquisitions.md) der [Windows Store-Analyse-REST-API](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
 
 In diesem Bericht steht „Kauf“ für einen neuen Kunden, der eine Lizenz Ihrer App erworben hat (entweder für eine kostenpflichtige oder eine kostenlose App).
 
@@ -68,6 +68,6 @@ Im Diagramm **Betriebssystemversion** wird die Gesamtzahl der Käufe entsprechen
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

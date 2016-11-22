@@ -4,14 +4,16 @@ Description: "Vor dem Ausführen eines Experiments in Ihrer Universellen Windows
 title: Definieren Ihres Experiments im Dev Center-Dashboard
 ms.assetid: 675F2ADE-0D4B-41EB-AA4E-56B9C8F32C41
 translationtype: Human Translation
-ms.sourcegitcommit: ce0431243866125eff83569e3b9b1c75e0703358
-ms.openlocfilehash: df6744cb9f4dd60c9eef07dc89f2265ac4244aab
+ms.sourcegitcommit: b33e003af6e12df5eedfe150155db6777c5c62f6
+ms.openlocfilehash: fa209464e247e7073da2197ddd0b9a5344f3763b
 
 ---
 
 # Definieren Ihres Experiments im Dev Center-Dashboard
 
 Im Anschluss an die Schritte [Erstellen eines Projekts und Festlegen von Remotevariablen im Dev Center-Dashboard](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md) und [Codieren der App für das Experiment](code-your-experiment-in-your-app.md) können Sie im Projekt ein Experiment erstellen. Beim Erstellen des Experiments definieren Sie die Ziele und Abweichungen, die Ihre Benutzer erhalten.
+
+Eine exemplarische Vorgehensweise, die den gesamten Erstellungs- und Ausführungsprozess für ein Experiment veranschaulicht, finden Sie unter [Erstellen und Durchführen eines ersten Experiments mit A/B-Tests](create-and-run-your-first-experiment-with-a-b-testing.md).
 
 <span id="get-an-api-key" />
 <span id="create-an-experiment" />
@@ -85,6 +87,6 @@ Nachdem Sie Ihr Experiment im DevCenter-Dashboard definiert und in Ihrer App pro
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Nov16_HO1-->
 
 

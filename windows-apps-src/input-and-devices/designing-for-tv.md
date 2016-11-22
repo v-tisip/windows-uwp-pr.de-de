@@ -7,8 +7,8 @@ label: Designing for Xbox and TV
 template: detail.hbs
 isNew: true
 translationtype: Human Translation
-ms.sourcegitcommit: 96a35ded526b09dd1ce1cb8528bb4a99e3511b32
-ms.openlocfilehash: 734a0f0574ac7698dd6bd963bf3e20225b26d401
+ms.sourcegitcommit: 8bf3a4384d97d59d2844614b981a2e837ccb493d
+ms.openlocfilehash: d168c358a3dd68f05b5d0962edb1fb62dfe0570e
 
 ---
 
@@ -164,11 +164,12 @@ Die folgende Tabelle zeigt die in die UWP integrierte Beschleunigerunterstützun
 | Bild auf/Bild ab  | Bild auf/Bild ab | Linker/rechter Trigger | [CalendarView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.calendarview.aspx), [ListBox](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listbox.aspx), [ListViewBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.aspx), [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx), `ScrollViewer`, [Selector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.aspx), [LoopingSelector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.loopingselector.aspx), [ComboBox](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.combobox.aspx), [FlipView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx) | Ansichten, die den vertikalen Bildlauf unterstützen
 | Seite nach links/rechts | Keine | Linker/rechter Bumper | [Pivot](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.pivot.aspx), [ListBox](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listbox.aspx), [ListViewBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.aspx), [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx), `ScrollViewer`, [Selector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.aspx), [LoopingSelector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.loopingselector.aspx), [FlipView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx) | Ansichten, die den horizontalen Bildlauf unterstützen
 | Vergrößern/Verkleinern        | STRG +/- | Linker/rechter Trigger | Keine | `ScrollViewer`, Ansichten, die das Vergrößern/Verkleinern unterstützen |
-| Navigationsbereich öffnen/schließen | Keine | Ansicht | Keine | Navigationsbereiche
+| Navigationsbereich öffnen/schließen | Keine | Ansicht | Keine | Navigationsbereiche |
+| [Suche](#search-experience) | Keine | Y-Taste | Keine | Verknüpfung mit der Hauptsuchfunktion in der App |
 
 ## XY-Fokusnavigation und -interaktion
 
-Wenn Ihre App eine korrekte Fokusnavigation für Tastaturen unterstützt, wird dies gut auf Gamepads und Fernbedienungen übertragen. Die Pfeiltastennavigation ist dem **Steuerkreuz** und dem **linken Stick** auf Gamepads zugeordnet. Interaktionen mit Benutzeroberflächenelementen sind der Taste **Eingabe/Auswahl** zugeordnet (siehe [Gamepad und Fernbedienung](#gamepad-and-remote-control)). 
+Wenn Ihre App die korrekte Fokusnavigation für Tastaturen unterstützt, wird dies gut auf Gamepads und Fernbedienungen übertragen. Die Pfeiltastennavigation ist dem **Steuerkreuz** und dem **linken Stick** auf Gamepads zugeordnet. Interaktionen mit Benutzeroberflächenelementen sind der Taste **Eingabe/Auswahl** zugeordnet (siehe [Gamepad und Fernbedienung](#gamepad-and-remote-control)). 
 
 Viele Ereignisse und Eigenschaften werden von der Tastatur und dem Gamepad verwendet. Beide lösen die Ereignisse `KeyDown` und `KeyUp` aus, und beide navigieren nur zu Steuerelementen mit den Eigenschaften `IsTabStop="True"` und `Visibility="Visible"`. Designanleitungen für die Tastaturnutzung finden Sie unter [Tastaturinteraktionen](keyboard-interactions.md).
 
@@ -1030,6 +1031,16 @@ Weitere Informationen zum Hinzufügen von Medien zu Ihrer App finden Sie unter [
 
 > ![HINWEIS:] `MediaPlayerElement` steht erst ab der Windows10-Version1607 zur Verfügung. Bei Apps für niedrigere Windows10-Versionen muss stattdessen [MediaElement](https://msdn.microsoft.com/library/windows/apps/br242926) verwendet werden. Die hier angegebenen Empfehlungen gelten auch für `MediaElement`, und der Zugriff auf die `TransportControls`-Eigenschaft erfolgt auf die gleiche Weise.
 
+### Suchvorgang
+
+Die Suche nach Inhalten ist eine der am häufigsten ausgeführten Funktionen in der 10-Fuß-Erfahrung. Wenn Ihre App eine Suchfunktion zur Verfügung stellt, sollte der Benutzer auf diese schnell über die **Y**-Taste auf dem Gamepad zugreifen können.
+
+Die meisten Kunden sollten mit dieser Beschleunigungsfunktion bereits vertraut sein. Sie können aber auch der Benutzeroberfläche eine visuelle **Y**-Glyphe hinzufügen, um anzuzeigen, dass der Benutzer mit dieser Taste auf die Suchfunktion zugreifen kann. In diesem Fall verwenden Sie das Symbol aus dem Font **Segoe Xbox Symbol MDL2** (E426), um die Konsistenz mit der Xbox-Shell und anderen Apps zu wahren.
+
+Da die **Y**-Taste nur auf dem Gamepad verfügbar ist, stellen Sie auch andere Möglichkeiten für den Zugriff auf die Suche zur Verfügung, wie etwa Schaltflächen in der Benutzeroberfläche. Andernfalls können einige Kunden möglicherweise nicht auf diese Funktion zugreifen.
+
+In der 10-Fuß-Erfahrung ist es für Kunden oft einfacher, eine Vollbildschirm-Suche durchzuführen, da der Platz auf dem Display begrenzt ist. Unabhängig davon, ob Sie eine Voll- oder Teilbildschirm-Direktsuche haben, empfehlen wir, dass die Bildschirmtastatur bereits geöffnet ist, wenn der Benutzer die Suchfunktion öffnet, damit sofort Suchbegriffe eingegeben werden können.
+
 ## Benutzerdefinierter visueller Zustandsauslöser für Xbox
 
 Um Ihre UWP-App an die 10-Fuß-Erfahrung anzupassen, empfehlen wir Ihnen, das Layout zu ändern, wenn die App erkennt, dass sie auf einer Xbox-Konsole gestartet wurde. Eine Möglichkeit, um dies zu erreichen ist die Verwendung eines benutzerdefinierten *visuellen Zustandsauslösers*. Visuelle Zustandsauslöser sind besonders dann nützlich, wenn Sie in **Blend für Visual Studio** arbeiten möchten. Der folgende Codeausschnitt zeigt, wie ein visueller Zustandsauslöser für Xbox erstellt wird:
@@ -1105,6 +1116,6 @@ Beim Entwerfen für die 10 Fuß-Erfahrung müssen einige besondere Punkte berüc
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

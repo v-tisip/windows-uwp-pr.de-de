@@ -4,8 +4,8 @@ ms.assetid: D1F233EC-24B5-4F84-A92F-2030753E608E
 description: "Verwenden Sie diese Methode in der Windows Store-Sammlungs-API, um alle Produkte, die sich im Besitz eines Kunden befinden, für Apps abzurufen, die Ihrer Azure AD-Client-ID zugeordnet sind. Sie können die Abfrage auf ein bestimmtes Produkt beschränken oder weitere Filter verwenden."
 title: Produktabfrage
 translationtype: Human Translation
-ms.sourcegitcommit: 6d0fa3d3b57bcc01234aac7d6856416fcf9f4419
-ms.openlocfilehash: ea517d66dbb6f373b191937de8c1cbe42c74846f
+ms.sourcegitcommit: ac9c921c7f39a1bdc6dc9fc9283bc667f67cd820
+ms.openlocfilehash: d614919debd979a475e93909199851390d242deb
 
 ---
 
@@ -23,8 +23,8 @@ Diese Methode ist so konzipiert, dass sie von Ihrem Dienst als Reaktion auf eine
 
 Zur Verwendung dieser Methode benötigen Sie:
 
--   Ein AzureAD-Zugriffstoken, das mit dem Zielgruppen-URI `https://onestore.microsoft.com` erstellt wurde.
--   Einen WindowsStore-ID-Schlüssel, der durch Aufrufen der [**GetCustomerCollectionsIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608674)-Methode im clientseitigen Code der App generiert wurde.
+* Ein AzureAD-Zugriffstoken, das mit dem Zielgruppen-URI `https://onestore.microsoft.com` erstellt wurde.
+* Ein WindowsStore-ID-Schlüssel, der [aus clientseitigem Code in Ihrer App generiert wurde](view-and-grant-products-from-a-service.md#step-4).
 
 Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von Produktansprüchen aus einem Dienst](view-and-grant-products-from-a-service.md).
 
@@ -69,8 +69,8 @@ Das UserIdentity-Objekt enthält die folgenden Parameter.
 | Parameter            | Typ   | Beschreibung                                                                                                                                                                                                                  | Erforderlich |
 |----------------------|--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
 | identityType         | string | Gibt den Zeichenfolgenwert **b2b** an.                                                                                                                                                                                            | Ja      |
-| identityValue        | string | Zeichenfolgenwert des Windows Store-ID-Schlüssels.                                                                                                                                                                                    | Ja      |
-| localTicketReference | string | Angeforderter Bezeichner für die zurückgegebenen Produkte. Die zurückgegebenen Elemente im Antworttext verfügen über ein übereinstimmendes *localTicketReference*-Element. Es wird empfohlen, denselben Wert als *userId*-Anspruch im Windows Store-ID-Schlüssel zu verwenden. | Ja      |
+| identityValue        | string | Der WindowsStore-ID-Schlüssel, der [aus clientseitigem Code in Ihrer App generiert wurde](view-and-grant-products-from-a-service.md#step-4).                                                                                                                                                                                     | Ja      |
+| localTicketReference | string | Der angeforderte Bezeichner für die zurückgegebenen Produkte. Die zurückgegebenen Elemente im Antworttext verfügen über ein übereinstimmendes *localTicketReference*-Element. Es wird empfohlen, denselben Wert als *userId*-Anspruch im Windows Store-ID-Schlüssel zu verwenden. | Ja      |
 
 <span/> 
 
@@ -217,6 +217,6 @@ Date: Tue, 22 Sep 2015 20:28:18 GMT
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

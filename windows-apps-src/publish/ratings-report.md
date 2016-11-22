@@ -4,15 +4,15 @@ Description: "Dem Bericht „Bewertungen“ im Windows Dev Center-Dashboard kön
 title: "Bericht „Bewertungen“"
 ms.assetid: CAFEC20B-04FB-48C8-B663-1238C0B85ECD
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 1613c8a5e5a28ba431fcfb186a0fcd5fe9bd7582
+ms.sourcegitcommit: 7b73682ea36574f8b675193a174d6e4b4ef85841
+ms.openlocfilehash: 45d22b46a750655cc723658b476ba40d18b4f745
 
 ---
 
 # Bericht „Bewertungen“
 
 
-Dem Bericht **Bewertungen** im Windows Dev Center-Dashboard können Sie entnehmen, wie Kunden Ihre App im Windows Store bewerten. Sie können diese Informationen in Ihrem Dashboard anzeigen oder den [Bericht herunterladen](download-analytic-reports.md), um Ihre Daten offline anzuzeigen. Sie können diese Daten jedoch auch programmgesteuert mit der [Windows Store-REST-API für Analysen](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
+Dem Bericht **Bewertungen** im Windows Dev Center-Dashboard können Sie entnehmen, wie Kunden Ihre App im Windows Store bewerten. Sie können diese Informationen in Ihrem Dashboard anzeigen oder den [Bericht herunterladen](download-analytic-reports.md), um Ihre Daten offline anzuzeigen. Sie können diese Daten auch programmgesteuert mit der Methode [Abrufen von App-Bewertungen](../monetize/get-app-ratings.md) der [Windows Store-REST-API für Analysen](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
 
 Eine Bewertung wird in diesem Bericht anhand der Anzahl von Sternen (von 1 bis 5) ausgedrückt, die ein Kunde Ihrer App bei der Bewertung im Store gegeben hat. Der Bericht **Bewertungen** enthält keine individuellen Kommentare, die als Rezensionen abgegeben wurden. Diese sind im [Bericht „Rezensionen“](reviews-report.md) enthalten.
 
@@ -73,6 +73,6 @@ Standardmäßig wird der Markt mit den meisten Rezensionen zuerst angezeigt, gef
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -1,6 +1,16 @@
-# Unterstützte UWP-APIs für konvertierte Desktop-Apps
+---
+author: awkoren
+Description: "In diesem Artikel wird erläutert, wie Sie eine Desktop-App signieren, die Sie für die universelle Windows-Plattform (UWP) konvertiert haben."
+Search.Product: eADQiWindows 10XVcnh
+title: "Unterstützte UWP-APIs für konvertierte Desktop-Apps"
+translationtype: Human Translation
+ms.sourcegitcommit: 3751b16837a1e12f68954b2dec7dfaf0fb8554b6
+ms.openlocfilehash: c99d103fe5d613c5b654ba2b0bb83987a7fcb944
 
-Konvertierte Desktop-Apps können eine Vielzahl von UWP (Universelle Windows Plattform)-APIs verwenden, selbst wenn ihre Umwandlung in eine UWP-App nicht vollständig ist. Dieser Artikel führt die verfügbaren Klassen auf, die Ihre konvertierte App verwenden kann. 
+---
+# Unterstützte UWP-APIs für mit der Desktop-Brücke konvertierte Apps
+
+Konvertierte Desktop-Apps können eine Vielzahl von UWP-APIs (Universelle Windows Plattform) verwenden, selbst wenn ihre Umwandlung in eine UWP-App nicht vollständig ist. Dieser Artikel führt die verfügbaren Klassen auf, die Ihre konvertierte App verwenden kann. 
 
 Die meisten UWP-APIs funktionieren problemlos für konvertierte Desktop-Apps. Allerdings sind einige Featurebereiche noch nicht vollständig getestet oder funktionieren derzeit noch nicht wie vorgesehen. 
 
@@ -32,7 +42,7 @@ Einige UWP-APIs, die für vollständige Desktop-Anwendungen verfügbar sind, wer
 
 Im folgenden finden Sie eine vollständige Liste der UWP-APIs, die in konvertierten Apps unterstützt werden. Sie können [In konvertierten Apps neu unterstützte APIs](#new) oder [In konvertierten Apps und Desktopanwendungen unterstützte APIs](#both) anzeigen. 
 
-Beispiele für das Aufrufen von UWP-APIs in konvertierten Apps finden Sie in den [Codebeispielen zur Desktop-Brücke auf GitHub](https://github.com/Microsoft/DesktopBridgeToUWP-Samples).
+Beispiele zur Verwendung von WinRT-APIs finden Sie auf GitHub unter [Desktop-App-Brücke zu UWP: Beispiele](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) und [Apps für die universelle Windows-Plattform (UWP): Beispiele](https://github.com/Microsoft/Windows-universal-samples).
 
 <span id="new" />
 ### In konvertierten Apps neu unterstützte APIs
@@ -1030,6 +1040,6 @@ Beispiele für das Aufrufen von UWP-APIs in konvertierten Apps finden Sie in den
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

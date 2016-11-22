@@ -4,8 +4,8 @@ ms.assetid: C5623861-6280-4352-8F22-80EB009D662C
 description: "In diesem Artikel wird erläutert, wie Sie die MediaSource-Klasse verwenden, die allgemein zum Verweisen auf Medien aus verschiedenen Quellen (etwa lokale Dateien oder Remotedateien) sowie zum Wiedergeben dieser Medien verwendet wird und ein gemeinsames Modell für den Mediendatenzugriff verfügbar macht – unabhängig vom zugrunde liegenden Medienformat."
 title: Medienelemente, Wiedergabelisten und Titel
 translationtype: Human Translation
-ms.sourcegitcommit: c2e337e88f9dda3380dd62c32ca6e5d942366636
-ms.openlocfilehash: bb49af7a386356647000e268bcc6983351eaf4b8
+ms.sourcegitcommit: 9999805c8a3bf946aa323b921cea6d63f9a48789
+ms.openlocfilehash: 4c4c6fdb1ea2d42d5bda1034df082bf836d8b803
 
 ---
 
@@ -128,7 +128,7 @@ Im [**OpenFailed**](https://msdn.microsoft.com/library/windows/apps/Windows.Medi
 [!code-cs[OpenFailed](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetOpenFailed)]
 
 ## Festlegen der Anzeigeeigenschaften, die für den Medientransportsteuerelemente des Systems verwendet werden
-Ab Windows10, Version1607, werden Medien, die in einem [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) wiedergegeben werden, standardmäßig automatisch in System Media Transport Controls (SMTC) integriert. Sie können die Metadaten angeben, die SMTC anzeigt, indem Sie die Anzeigeeigenschaften für ein **MediaPlaybackItem** aktualisieren. Rufen Sie ein Objekt ab, das die Anzeigeeigenschaften für ein Element darstellt, indem Sie [**GetDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem.GetDisplayProperties) aufrufen. Legen Sie fest, ob das Wiedergabeelement Musik oder Video ist, indem Sie die [**Type**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.Type)-Eigenschaft festlegen. Legen Sie anschließend die Eigenschaften von [**VideoProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.VideoProperties) oder [**MusicProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.MusicProperties) des Objekts fest. Rufen Sie [**ApplyDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/mt489923) auf, um die Eigenschaften des Elements auf die von Ihnen angegebenen Werte zu aktualisieren bzw. festzulegen. In der Regel ruft eine App die Anzeigewerte dynamisch aus einem Webdienst ab. Das folgende Beispiel zeigt diesen Vorgang jedoch anhand hartcodierter Werte.
+Ab Windows10, Version1607, werden Medien, die in einem [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) wiedergegeben werden, standardmäßig automatisch in System Media Transport Controls (SMTC) integriert. Sie können die Metadaten angeben, die SMTC anzeigt, indem Sie die Anzeigeeigenschaften für ein **MediaPlaybackItem** aktualisieren. Rufen Sie ein Objekt ab, das die Anzeigeeigenschaften für ein Element darstellt, indem Sie [**GetDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem.GetDisplayProperties) aufrufen. Legen Sie fest, ob das Wiedergabeelement Musik oder Video ist, indem Sie die [**Type**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.Type)-Eigenschaft festlegen. Legen Sie anschließend die Eigenschaften von [**VideoProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.VideoProperties) oder [**MusicProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.MusicProperties) des Objekts fest. Rufen Sie [**ApplyDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/mt489923) auf, um die Eigenschaften des Elements auf die von Ihnen angegebenen Werte zu aktualisieren. In der Regel ruft eine App die Anzeigewerte dynamisch aus einem Webdienst ab. Das folgende Beispiel zeigt diesen Vorgang jedoch anhand hartcodierter Werte.
 
 [!code-cs[SetVideoProperties](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetSetVideoProperties)]
 
@@ -226,6 +226,6 @@ Das [**ItemFailed**](https://msdn.microsoft.com/library/windows/apps/Windows.Med
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

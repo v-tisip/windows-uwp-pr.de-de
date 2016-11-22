@@ -5,8 +5,8 @@ title: "Nächste Schritte"
 description: "Nachdem Sie Ihre erste App erstellt haben, sollten Sie sich mit dem Rest des Dev Center vertraut machen. Hier finden Sie eine Einführung in die verschiedenen Bereiche."
 keywords: Dev Center, Erste Schritte
 translationtype: Human Translation
-ms.sourcegitcommit: 743a3649613d39083520f8d79f4c0daf97336568
-ms.openlocfilehash: 5a1b5dbb3b9d841ca0c3f14f591acd716c153c54
+ms.sourcegitcommit: 1c059edde92a48af610af1033c3b18ca729410aa
+ms.openlocfilehash: 6b7985137e02a348fafabf0aaf298c5d20095bd7
 
 ---
 
@@ -16,15 +16,14 @@ ms.openlocfilehash: 5a1b5dbb3b9d841ca0c3f14f591acd716c153c54
 
 Sie möchten eine App schreiben – wo fangen Sie an? Dies sind einige DevCenter-Themen, die Ihnen bei den ersten Schritten helfen. Wenn die UWP-Plattform für Sie völlig neu, schauen Sie sich einige der <a href="https://channel9.msdn.com/">Channel 9</a>-Videos an, und führen Sie einige der <a href="https://www.microsoftvirtualacademy.com">Microsoft Virtual Academy</a>-Kurse durch. Wenn Sie mit XAML und C# bereits vertraut sind, können Sie die folgenden Themen lesen, um mit dem Schreiben von Apps zu beginnen.
 
-Unsere Empfehlung besteht darin, dass Sie sich die UWP-Themen ansehen, um ein Gefühl für die Plattform zu erhalten, anschließend untersuchen, wie Sie Ihre Benutzeroberfläche erstellen können, indem Sie XAML-Steuerelemente verwenden und anpassen. Die Stärke von XAML beruht vor allem auf der Verwendung der *Datenbindung*, die die Steuerelemente mit den Informationen verbindet, die Ihre App anzeigen soll. Wenn die Windows-Plattform für Sie neu ist, ist es wichtig, dieses Konzept zu verstehen.
+Unsere Empfehlung besteht darin, dass Sie sich die UWP-Themen ansehen, um ein Gefühl für die Plattform zu erhalten, anschließend untersuchen, wie Sie Ihre Benutzeroberfläche erstellen können, indem Sie XAML-Steuerelemente verwenden und anpassen. Die Stärke von XAML beruht vor allem auf der Verwendung der *Datenbindung*, die die Steuerelemente mit den Informationen koppelt, die Ihre App anzeigen soll. Wenn die Windows-Plattform für Sie neu ist, ist es wichtig, dieses Konzept zu verstehen.
 
-Möglicherweise finden Sie auch die Website für den [Developer Toolkit](https://developer.microsoft.com/windows/projects/campaigns/welcome-toolbox) nützlich, auf der Sie zahlreiche Informationen für die ersten Schritte an einer zentralen Stelle finden können.
+Wenn Sie die neuesten Windows10-Programmiertechniken, z.B. das Hinzufügen von Animationen und Effekten zu Ihren Apps, kennen lernen möchten, sehen Sie sich den [Windows-Entwicklerblog](https://blogs.windows.com/buildingapps) an.
 
 <table class="wdg-noborder">
-
 <tr>
  <td width=60><img src="images/icon3.png" width=64></td>
-    <td><h2>UWP und der Lebenszyklus von UWP-Apps</h2><p>Wie wird eine App gestartet, was passiert, wenn Sie eine weitere App starten? Hier finden Sie Informationen hierzu.</p> <ul>
+    <td><h2>UWP und der Lebenszyklus von UWP-Apps</h2><p>Wie wird eine App gestartet, und was passiert, wenn Sie eine weitere App starten? Hier finden Sie Informationen hierzu.</p> <ul>
     <li><a href="https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide">Anleitung für Apps für die Universelle Windows-Plattform (UWP)</a></li>
     <li><a href="https://msdn.microsoft.com/windows/uwp/launch-resume/app-lifecycle">Lebenszyklus von UWP-Apps</a></li>
     <li><a href="https://developer.microsoft.com/windows/windows-10-for-developers">Die Highlights in Windows10</a></ul></td>  
@@ -40,6 +39,7 @@ Möglicherweise finden Sie auch die Website für den [Developer Toolkit](https:/
       <li><a href="https://msdn.microsoft.com/windows/uwp/controls-and-patterns/controls-and-events-intro">Einführung in Steuerelemente und Muster</a></li>
      <li><a href="https://msdn.microsoft.com/windows/uwp/controls-and-patterns/styling-controls">Formatieren von Steuerelementen</a></li>
       <li><a href="https://msdn.microsoft.com/windows/uwp/layout/screen-sizes-and-breakpoints-for-responsive-design">Bildschirmgrößen und Haltepunkte für reaktionsfähiges Design</a></li>
+      <li><a href="https://developer.microsoft.com/windows/projects/campaigns/welcome-toolbox">Verwenden Sie das UWP Community Toolkit für eine Auswahl vordefinierter Steuerelemente und Muster</a></li>
     </ul></td>  
 </tr>
  
@@ -162,6 +162,6 @@ Dies ist eine Liste der wichtigsten Abschnitte des Dev Center.
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

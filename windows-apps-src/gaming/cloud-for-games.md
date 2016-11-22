@@ -4,8 +4,8 @@ title: "Nutzen von Clouddiensten für UWP-Spiele"
 description: "Erfahren Sie mehr über die Implementierung der Cloud als Back-End für Ihre UWP-Spiele."
 ms.assetid: 1a7088e0-0d7b-11e6-8e05-0002a5d5c51b
 translationtype: Human Translation
-ms.sourcegitcommit: 0b2d81daa8bd0fd5694b81fa14fcd064e1600d35
-ms.openlocfilehash: b23c33fac9ac8fe5e2d5563a0af6824c82a3969b
+ms.sourcegitcommit: 2584a08e0a869ab3c5f11c192f0a5a6eeb223d61
+ms.openlocfilehash: 598384993e0e2931773cdb30e0909af6b771590e
 
 ---
 #  Nutzen von Clouddiensten für UWP-Spiele
@@ -111,7 +111,7 @@ Hier erfahren Sie, wie andere Entwickler Cloudlösungen in ihre Spiele implement
 
 ## Design des Cloud-Back-Ends
 
-Schon während die Spieldesigner und Produzenten über die erforderlichen Features und Funktionalitäten eines neuen Spieles sprechen, sollten Sie das Design der Spieleinfrastruktur berücksichtigen. Wenn Sie Spiele für unterschiedliche Geräte und die wichtigsten Plattformen entwickeln möchten, können Sie die Azure-Cloud als Back-End für das Spiel nutzen.
+Schon während die Spieldesigner und Produzenten über die erforderlichen Features und Funktionalitäten eines neuen Spieles sprechen, sollten Sie das Design der Spieleinfrastruktur berücksichtigen. Wenn Sie Spiele für unterschiedliche Geräte und die wichtigsten Plattformen entwickeln möchten, können Sie Azure als Back-End für das Spiel nutzen.
 
 ### Schritt-für-Schritt-Lernanleitungen
 
@@ -138,7 +138,7 @@ Zunächst müssen Sie entscheiden, welche Dienstform für Spiel am besten geeign
 
 ### Entwerfen der Spieleinfrastruktur mit Azure
 
-In diesem Abschnitt lernen Sie Möglichkeiten zur Nutzung der Azure Cloudangebote für ein Spiel kennen. Azure arbeitet mit Windows, Linux und bekannten Open-Source-Technologien wie Ruby, Python, Java und PHP. Weitere Informationen finden Sie unter [Azure-Cloud](https://azure.microsoft.com).
+In diesem Abschnitt lernen Sie Möglichkeiten zur Nutzung der Azure Cloudangebote für ein Spiel kennen. Azure arbeitet mit Windows, Linux und bekannten Open-Source-Technologien wie Ruby, Python, Java und PHP. Weitere Informationen finden Sie unter [Azure für Gaming](https://azure.microsoft.com/solutions/gaming/).
 
 | Anforderungen                 | Aktivitätsszenarien                            | Produktangebot                      | Produktfunktionen                               |
 |-----------------------------------|-----------------------------------------------|---------------------------------------|----------------------------------------------------|
@@ -186,12 +186,12 @@ Dieser Abschnitt stellt einige Unternehmen vor, die Cloud-Back-Ends über wichti
 
 * [Playfab](https://playfab.com/)
 
-    Playfab bietet eine erstklassige Back-End-Technologie für das Live-Game-Management von Smartphone-, PC- und Konsolenspielen.
+    Mit Playfab erhalten Sie schnell und einfach eine erstklassige Live-Game-Management- und Back-End-Technologie für Mobilgeräte-, PC- und Konsolenspiele.
 
 ## Verwandte Links
 
-* [Handbuch zur Entwicklung von Spielen unter Windows 10](https://msdn.microsoft.com/windows/uwp/gaming/e2e)
-* [Microsoft Azure](https://azure.microsoft.com/)
+* [Handbuch zur Entwicklung von Spielen unter Windows10](https://msdn.microsoft.com/windows/uwp/gaming/e2e)
+* [Azure für Gaming](https://azure.microsoft.com/solutions/gaming/)
 * [Microsoft BizSpark](https://www.microsoft.com/bizspark/)
 * [ID@Xbox](http://www.xbox.com/Developers/id)
 
@@ -202,6 +202,6 @@ Dieser Abschnitt stellt einige Unternehmen vor, die Cloud-Back-Ends über wichti
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -4,8 +4,8 @@ ms.assetid: FA55C65C-584A-4B9B-8451-E9C659882EDE
 description: "Verwenden Sie diese Methode in der Windows Store-Einkaufs-API, um einem bestimmten Benutzer eine kostenlose App oder ein kostenloses Add-On zu gewähren."
 title: "Gewähren kostenloser Produkte"
 translationtype: Human Translation
-ms.sourcegitcommit: 6d0fa3d3b57bcc01234aac7d6856416fcf9f4419
-ms.openlocfilehash: a04918a562d132f6a721b96c7f4ad78218eb8819
+ms.sourcegitcommit: ac9c921c7f39a1bdc6dc9fc9283bc667f67cd820
+ms.openlocfilehash: 2eca8712075ce1f9d876f3ae441381734bd52370
 
 ---
 
@@ -21,8 +21,8 @@ Derzeit können Sie nur kostenlose Produkte gewähren. Wenn Ihr Dienst versucht,
 
 Zur Verwendung dieser Methode benötigen Sie:
 
--   Ein AzureAD-Zugriffstoken, das mit dem Zielgruppen-URI `https://onestore.microsoft.com` erstellt wurde.
--   Einen Windows Store-ID-Schlüssel, der durch Aufrufen der [**GetCustomerPurchaseIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608675)-Methode im clientseitigen Code der App generiert wurde.
+* Ein AzureAD-Zugriffstoken, das mit dem Zielgruppen-URI `https://onestore.microsoft.com` erstellt wurde.
+* Ein WindowsStore-ID-Schlüssel, der [aus clientseitigem Code in Ihrer App generiert wurde](view-and-grant-products-from-a-service.md#step-4).
 
 Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von Produktansprüchen aus einem Dienst](view-and-grant-products-from-a-service.md).
 
@@ -53,7 +53,7 @@ Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von
 | Parameter      | Typ   | Beschreibung                                                                                                                                                                                                                                                                                                            | Erforderlich |
 |----------------|--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
 | availabilityId | string | Die Verfügbarkeits-ID des Produkts, das aus dem Windows Store-Katalog erworben werden soll.                                                                                                                                                                                                                                     | Ja      |
-| b2bKey         | string | Der Windows Store-ID-Schlüssel, der die Identität des Kunden darstellt.                                                                                                                                                                                                                                                        | Ja      |
+| b2bKey         | string | Der WindowsStore-ID-Schlüssel, der [aus clientseitigem Code in Ihrer App generiert wurde](view-and-grant-products-from-a-service.md#step-4).                                                                                                                                                                                                                                                        | Ja      |
 | devOfferId     | string | Eine vom Entwickler angegebene Angebotskennung, die nach dem Kauf im Auflistungselement angezeigt wird.                                                                                                                                                                                                                                 | Nein       |
 | language       | string | Die Sprache des Benutzers.                                                                                                                                                                                                                                                                                              | Ja      |
 | market         | string | Der Markt des Benutzers.                                                                                                                                                                                                                                                                                                | Ja      |
@@ -245,6 +245,6 @@ Date: Tue, 13 Oct 2015 21:21:51 GMT
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -4,8 +4,8 @@ ms.assetid: 7CC11888-8DC6-4FEE-ACED-9FA476B2125E
 description: "Verwenden Sie die Windows Store-Übermittlungs-API, um Übermittlungen für Apps programmgesteuert zu erstellen und zu verwalten, die für Ihr Windows Dev Center-Konto registriert sind."
 title: "Erstellen und Verwalten von Übermittlungen mit WindowsStore-Diensten"
 translationtype: Human Translation
-ms.sourcegitcommit: 47e0ac11178af98589e75cc562631c6904b40da4
-ms.openlocfilehash: 0a566dfee8f7fe08c06ce4963435a70c30b1650d
+ms.sourcegitcommit: 03942eb9015487cfd5690e4b1933e4febd705971
+ms.openlocfilehash: 40855465fa2f9b1c32602b1b636761b608d88fc0
 
 ---
 
@@ -26,8 +26,11 @@ Die folgenden Schritte beschreiben den gesamten Prozess der Verwendung der Windo
 >**Wichtig**
 
 > * Diese API kann nur für Windows Dev Center-Konten verwendet werden, die eine Berechtigung zur Verwendung der API erhalten haben. Diese Berechtigung wird für Entwicklerkonten phasenweise aktiviert, und die Berechtigung ist zu diesem Zeitpunkt nicht für alle Konten aktiviert. Um früheren Zugriff anfordern, melden Sie sich beim Dev Center-Dashboard an, klicken Sie am unteren Rand des Dashboards auf **Feedback**, wählen Sie **Übermittlungs-API** für den Feedback-Bereich, und übermitteln Sie Ihre Anforderung. Sie erhalten eine E-Mail, wenn diese Berechtigung für Ihr Konto aktiviert ist.
-
+<br/><br/>
 > * Diese API kann nicht mit Apps oder Add-Ons mit bestimmten Features verwendet werden, die im Dev Center-Dashboard im August2016 eingeführt wurden, einschließlich (aber nicht beschränkt auf) erforderliche App-Updates und vom Store verwaltete Endverbraucher-Add-Ons. Bei Verwendung der Windows Store-Übermittlungs-API mit einer App oder einem Add-On, das eines dieser Features verwendet, gibt die API den Fehlercode409 zurück. In diesem Fall müssen Sie das Dashboard verwenden, um die Übermittlungen für die App bzw. das Add-On zu verwalten.
+<br/><br/>
+> * Demnächst ändert Microsoft das Preismodell für App-Übermittlungen im Windows Dev Center. Nach der Implementierung dieser Änderung werden die **Preis**-Ressourcen für App- und Add-On-Übermittlungen nicht mehr unterstützt, und Sie werden mithilfe der Windows Store-Übermittlungs-API vorübergehend keine Testzeitraum-, Preis- und Vertriebsdaten für diese Übermittlungen erhalten können. Wir werden die API aktualisieren, um eine neue Methode für den programmgesteuerten Zugriff auf Preisinformationen für App- und Add-On-Übermittlungen einzuführen. Weitere Informationen finden Sie unter [Preis-Ressource für App-Übermittlungen](manage-app-submissions.md#pricing-object) und [Preis-Ressource für Add-On-Übermittlungen](manage-add-on-submissions.md#pricing-object).
+
 
 <span id="prerequisites" />
 ## Schritt1: Erfüllen der Voraussetzungen für die Verwendung der Windows Store-Übermittlungs-API
@@ -135,6 +138,6 @@ Wenn Sie Fragen zur Windows Store-Übermittlungs-API haben oder Hilfe beim Verwa
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Nov16_HO1-->
 
 

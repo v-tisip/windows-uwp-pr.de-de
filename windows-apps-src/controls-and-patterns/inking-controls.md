@@ -5,8 +5,8 @@ title: "Steuerelemente für Freihandeingaben"
 label: Inking Controls
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 7198f4084df8ce484cdc5f6b3231a4bdb02f18b5
+ms.sourcegitcommit: 2fe53747da7995b5442eda0a6c20b120b3b615e5
+ms.openlocfilehash: aacf45c90458d3ca1bd295f904e8f2393d27542d
 
 ---
 # Steuerelemente für Freihandeingaben
@@ -142,8 +142,9 @@ Der Radierer verfügt ebenfalls über ein Flyout mit dem Befehl **Freihand volls
 - Das InkCanvas-Steuerelement und die Freihandeingabe im Allgemeinen bieten bei der Verwendung eines aktiven Stifts die beste Benutzerfreundlichkeit. Es wird jedoch empfohlen, die Freihandeingabe mit Maus- und Toucheingabe (einschließlich des passiven Stifts) zu unterstützen, wenn dies für Ihre App erforderlich ist.
 - Verwenden Sie ein InkToolbar-Steuerelement mit dem InkCanvas-Steuerelement, um grundlegende Freihandfeatures und -einstellungen bereitzustellen. Sowohl das InkCanvas- als auch das InkToolbar-Steuerelement können programmgesteuert angepasst werden.
 - Das InkToolbar-Steuerelement und die Freihandeingabe im Allgemeinen bieten bei der Verwendung eines aktiven Stifts die beste Benutzerfreundlichkeit. Die Freihandeingabe mit Maus- und Toucheingabe kann aber unterstützt werden, wenn dies für Ihre App erforderlich ist.
-- Wenn Sie die Freihandeingabe per Toucheingabe unterstützen, wird empfohlen, das Symbol ED5F aus der Schriftart „Segoe MLD2 Assets” für die Umschaltfläche mit einer QuickInfo „Schreiben durch Berühren” zu verwenden.
-- Wenn Sie mehrere InkCanvas-Steuerelemente verwenden, empfehlen wir die Verwendung eines einzelnen InkToolbar-Steuerelements zum Steuern der Freihandeingabe auf allen Canvas.
+- Bei Unterstützung der Freihandfunktion per Toucheingabe wird empfohlen, das Symbol ED5F aus der Schriftart „Segoe MLD2 Assets” für die Umschaltfläche mit einer QuickInfo „Schreiben durch Berühren” zu verwenden.
+- Für die Bereitstellung der Strichauswahl empfehlen wir die Verwendung des EF20-Symbols aus der Schriftart „Segoe MLD2 Assets“ für die Toolschaltfläche, mit einer QuickInfo „Auswahltool“.
+- Wenn Sie mehrere InkCanvas-Steuerelemente verwenden, empfehlen wir die Verwendung eines einzelnen InkToolbar-Steuerelements zum Steuern der Freihandeingabe in allen Zeichenbereichen.
 - Für eine optimale Leistung empfehlen wir, das Standardflyout zu ändern, anstatt ein benutzerdefiniertes Flyoutmenü für standardmäßige und benutzerdefinierte Tools zu erstellen.
 
 ## Beispiele herunterladen
@@ -160,6 +161,6 @@ Erweiterte Szenarien finden Sie im [komplexen Freihandbeispiel](https://github.c
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -4,8 +4,8 @@ ms.assetid: C4DB495D-1F91-40EF-A55C-5CABBF3269A2
 description: "Mithilfe der APIs im Windows.Media.Editing-Namespace können Sie schnell Apps entwickeln, die Benutzern das Erstellen von Medienkompositionen aus Audio- und Videoquelldateien ermöglichen."
 title: Medienkompositionen und -bearbeitung
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: ee46b6d4ad116034cd84f062e7bf710ff8600479
+ms.sourcegitcommit: 018d7c85aae007a1fd887de0daf6625ccce37a64
+ms.openlocfilehash: a317c0e1714cc782c951733cf65a4c02c4a0ad9c
 
 ---
 
@@ -21,6 +21,7 @@ In diesem Artikel wird beschrieben, wie Sie mithilfe der APIs im [**Windows.Medi
 Die [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646)-Klasse ist der Container für alle Medienclips, aus denen die Komposition besteht, und dient zum Rendern der endgültigen Komposition, zum Laden und Speichern von Kompositionen auf Datenträger und zum Bereitstellen eines Vorschaudatenstroms der Komposition zur Anzeige in der Benutzeroberfläche. Um **MediaComposition** in einer App zu verwenden, schließen Sie den [**Windows.Media.Editing**](https://msdn.microsoft.com/library/windows/apps/dn640565)-Namespace und den [**Windows.Media.Core**](https://msdn.microsoft.com/library/windows/apps/dn278962)-Namespace ein, der zugehörige benötigte APIs bereitstellt.
 
 [!code-cs[Namespace1](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetNamespace1)]
+
 
 Auf das **MediaComposition**-Objekt wird von mehreren Punkten im Code aus zugegriffen. Daher deklarieren Sie normalerweise eine Membervariable, um das Objekt darin zu speichern.
 
@@ -54,7 +55,7 @@ Medienkompositionen enthalten in der Regel einen oder mehrere Videoclips. Sie k�
 
 ## Anzeigen einer Vorschau der Komposition in einem MediaElement
 
-Damit der Benutzer die Medienkomposition anzeigen kann, fügen Sie der XAML-Datei, die die Benutzeroberfläche definiert, ein [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) hinzu.
+Damit der Benutzer die Medienkomposition anzeigen kann, fügen Sie der XAML-Datei, die die Benutzeroberfläche definiert, ein [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement) hinzu.
 
 [!code-xml[MediaElement](./code/MediaEditing/cs/MainPage.xaml#SnippetMediaElement)]
 
@@ -63,16 +64,16 @@ Deklarieren Sie eine Membervariable vom Typ [**MediaStreamSource**](https://msdn
 
 [!code-cs[DeclareMediaStreamSource](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetDeclareMediaStreamSource)]
 
-Rufen Sie die [**GeneratePreviewMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn652674)-Methode des **MediaComposition**-Objekts auf, um eine **MediaStreamSource** für die Komposition zu erstellen. Rufen Sie dann die [**SetMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn299029)-Methode von **MediaElement** auf. Jetzt kann die Komposition in der Benutzeroberfläche angezeigt werden.
+Rufen Sie für das **MediaComposition**-Objekt die [**GeneratePreviewMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn652674)-Methode auf, um eine **MediaStreamSource** für die Komposition zu erstellen. Erstellen Sie ein [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource)-Objekt durch Aufrufen der Factorymethode [**CreateFromMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn930907) und weisen Sie diese der Eigenschaft [**Quelle**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement.Source) Eigenschaft des **MediaPlayerElement** zu. Jetzt kann die Komposition in der Benutzeroberfläche angezeigt werden.
 
 
 [!code-cs[UpdateMediaElementSource](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetUpdateMediaElementSource)]
 
 -   Die **MediaComposition** muss mindestens einen Medienclip enthalten, bevor [**GeneratePreviewMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn652674) aufgerufen wird; andernfalls ist das zurückgegebene Objekt NULL.
 
--   Die **MediaElement**-Zeitachse wird nicht automatisch mit den Änderungen an der Komposition aktualisiert. Es wird empfohlen, sowohl **GeneratePreviewMediaStreamSource** als auch **SetMediaStreamSource** jedes Mal aufzurufen, wenn Sie eine Reihe von Änderungen an der Komposition vornehmen und die Benutzeroberfläche aktualisieren möchten.
+-   Die **MediaElement**-Zeitachse wird nicht automatisch mit den Änderungen an der Komposition aktualisiert. Es wird empfohlen, sowohl die Eigenschaft **GeneratePreviewMediaStreamSource** als auch **MediaPlayerElement** **Source** jedes Mal aufzurufen, wenn Sie eine Reihe von Änderungen an der Komposition vornehmen und die Benutzeroberfläche aktualisieren möchten.
 
-Es wird empfohlen, das **MediaStreamSource**-Objekt und die [**Source**](https://msdn.microsoft.com/library/windows/apps/br227419)-Eigenschaft von **MediaElement** auf NULL festzulegen, wenn der Benutzer die Seite verlässt, um die zugehörigen Ressourcen freizugeben.
+Es wird empfohlen, das **MediaStreamSource**-Objekt und die [**Source**](https://msdn.microsoft.com/library/windows/apps/br227419)-Eigenschaft von **MediaPlayerElement** auf Null festzulegen, wenn der Benutzer die Seite verlässt, um die zugehörigen Ressourcen freizugeben.
 
 [!code-cs[OnNavigatedFrom](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetOnNavigatedFrom)]
 
@@ -94,7 +95,7 @@ Um die Dauer eines Videoclips in einer Komposition zu kürzen, legen Sie die [**
 
 [!code-cs[TrimClipBeforeCurrentPosition](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetTrimClipBeforeCurrentPosition)]
 
--   Sie können jede beliebige Benutzeroberfläche verwenden, um dem Benutzer die Angabe des Start- und Endwerts für die Kürzung zu ermöglichen. Im vorstehenden Beispiel wird die [**Position**](https://msdn.microsoft.com/library/windows/apps/br227407)-Eigenschaft des **MediaElement** verwendet, um zunächst zu ermitteln, welcher MediaClip an der aktuellen Position in der Komposition wiedergegeben wird, indem [**StartTimeInComposition**](https://msdn.microsoft.com/library/windows/apps/dn652629) und [**EndTimeInComposition**](https://msdn.microsoft.com/library/windows/apps/dn652618) überprüft werden. Anschließend werden die Eigenschaften **Position** und **StartTimeInComposition** erneut verwendet, um die Zeitspanne zu berechnen, um die der Clipanfang gekürzt werden muss. Die **FirstOrDefault**-Methode ist eine Erweiterungsmethode aus dem **System.Linq**-Namespace, die den Code zur Auswahl von Elementen aus einer Liste vereinfacht.
+-   Sie können jede beliebige Benutzeroberfläche verwenden, um dem Benutzer die Angabe des Start- und Endwerts für die Kürzung zu ermöglichen. Das obige Beispiel verwendet die [**Position**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.Position)-Eigenschaft der [**MediaPlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession) zu dem **MediaPlayerElement**, um festzustellen welcher **MediaClip** an der aktuellen Position in der Komposition abgespielt wird; dazu werden [**StartTimeInComposition**](https://msdn.microsoft.com/library/windows/apps/dn652629) und [**EndTimeInComposition**](https://msdn.microsoft.com/library/windows/apps/dn652618) überprüft. Anschließend werden die Eigenschaften **Position** und **StartTimeInComposition** erneut verwendet, um die Zeitspanne zu berechnen, um die der Clipanfang gekürzt werden muss. Die **FirstOrDefault**-Methode ist eine Erweiterungsmethode aus dem **System.Linq**-Namespace, die den Code zur Auswahl von Elementen aus einer Liste vereinfacht.
 -   Mit der [**OriginalDuration**](https://msdn.microsoft.com/library/windows/apps/dn652625)-Eigenschaft des **MediaClip**-Objekts können Sie die Dauer des Medienclips ermitteln, ohne dass eine Kürzung angewendet wird.
 -   Die [**TrimmedDuration**](https://msdn.microsoft.com/library/windows/apps/dn652631)-Eigenschaft informiert Sie über die Dauer des Medienclips nach der Kürzung.
 -   Wenn Sie einen Kürzungswert angeben, der größer als die ursprüngliche Dauer des Clips ist, wird kein Fehler ausgelöst. Wenn jedoch eine Komposition nur einen einzigen Clip enthält und dieser durch Angabe eines hohen Kürzungswerts auf die Länge null gekürzt wird, wird bei einem nachfolgenden Aufruf von [**GeneratePreviewMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn652674) NULL zurückgegeben, so als enthielte die Komposition keine Clips.
@@ -127,7 +128,7 @@ Mithilfe von Überlagerungen können Sie mehrere Videoebenen in einer Kompositio
 
 ## Hinzufügen von Effekten zu einem Medienclip
 
-Jeder **MediaClip** in einer Komposition enthält eine Liste von Audio- und Videoeffekten, der mehrere Effekte hinzugefügt werden können. Die Effekte müssen [**IAudioEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn608044) bzw. [**IVideoEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn608047) implementieren. Im folgenden Beispiel wird anhand der aktuellen Medienelementposition der aktuell angezeigte **MediaClip** gewählt und dann eine neue Instanz der [**VideoStabilizationEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn926762) erstellt und an die [**VideoEffectDefinitions**](https://msdn.microsoft.com/library/windows/apps/dn652643)-Liste des Medienclips angefügt.
+Jeder **MediaClip** in einer Komposition enthält eine Liste von Audio- und Videoeffekten, der mehrere Effekte hinzugefügt werden können. Die Effekte müssen [**IAudioEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn608044) bzw. [**IVideoEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn608047) implementieren. Im folgenden Beispiel wird anhand der aktuellen **MediaPlayerElement**-Position der aktuell angezeigte **MediaClip** gewählt und dann eine neue Instanz der [**VideoStabilizationEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn926762) erstellt und an die [**VideoEffectDefinitions**](https://msdn.microsoft.com/library/windows/apps/dn652643)-Liste des Medienclips angefügt.
 
 [!code-cs[AddVideoEffect](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetAddVideoEffect)]
 
@@ -155,6 +156,6 @@ Medienkompositionen können aus einer Datei deserialisiert werden, sodass der Be
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

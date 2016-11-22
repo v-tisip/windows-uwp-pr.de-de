@@ -4,8 +4,8 @@ title: Handbuch zur Entwicklung von Spielen unter Windows10
 description: "Ein umfassender Leitfaden für Ressourcen und Informationen zur Entwicklung von Spielen für die universelle Windows-Plattform (UWP)."
 ms.assetid: 6061F498-96A8-44EF-9711-68AE5A1218C9
 translationtype: Human Translation
-ms.sourcegitcommit: 1c3f222b4b3ddb14a48cef138984b07ac58cc66b
-ms.openlocfilehash: 7bc6694f94eeeb6188470fee00d432b2d71e52e6
+ms.sourcegitcommit: 2584a08e0a869ab3c5f11c192f0a5a6eeb223d61
+ms.openlocfilehash: af9252d172bab96ce50eb7ff12d8f0503f010d15
 
 ---
 
@@ -63,6 +63,10 @@ In diesem Handbuch finden Sie immer wieder direkte Links zu relevanten Dokumenta
     <tr>
         <td>DirectX-Referenz und -Übersichten</td>
         <td>[DirectX-Grafiken und -Spiele](https://msdn.microsoft.com/library/windows/desktop/ee663274)</td>
+    </tr>
+    <tr>
+        <td>Azure für Gaming</td>
+        <td>[Erstellen und Skalieren von Spielen mit Azure](https://azure.microsoft.com/solutions/gaming/)</td>
     </tr>
     <tr>
         <td>UWP auf XboxOne</td>
@@ -644,7 +648,7 @@ Mit den Tools und Technologien aus der modular aufgebauten Suite von Havok errei
         <td>[Havok](http://www.havok.com/)</td>
     </tr>
     <tr>
-        <td>Tool-Suite von Havok</td>
+        <td>Havok-Toolsuite</td>
         <td>[Havok-Produktübersicht](http://www.havok.com/products/)</td>
     </tr>
     <tr>
@@ -653,6 +657,30 @@ Mit den Tools und Technologien aus der modular aufgebauten Suite von Havok errei
     </tr>
 </table>
  
+
+#### MonoGame
+
+MonoGame ist ein plattformübergreifendes Open-Source-Framework für die Spieleentwicklung, das ursprünglich auf XNA Framework 4.0 von Microsoft basierte. MonoGame unterstützt derzeit Windows, Windows Phone und Xbox sowie Linux, macOS, iOS, Android und verschiedene andere Plattformen.
+
+<table>
+    <colgroup>
+    <col width="50%" />
+    <col width="50%" />
+    </colgroup>
+    <tr>
+        <td>MonoGame</td>
+        <td>[MonoGame-Website](http://www.monogame.net)</td>
+    </tr>
+    <tr>
+        <td>MonoGame-Dokumentation</td>
+        <td>[MonoGame-Dokumentation (aktuell)](http://www.monogame.net/documentation/)</td>
+    </tr>
+    <tr>
+        <td>MonoGame-Downloads</td>
+        <td>[Laden Sie Versionen, Entwicklungsbuilds und Quellcode](http://www.monogame.net/downloads/) von der MonoGame-Website herunter, oder [rufen Sie die neueste Version über NuGet ab](https://www.nuget.org/profiles/MonoGame).
+    </tr>
+</table>
+
 
 #### Cocos2d
 
@@ -1506,6 +1534,6 @@ Zum Aktualisieren Ihres veröffentlichten Spiels übermitteln Sie ein neues App-
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

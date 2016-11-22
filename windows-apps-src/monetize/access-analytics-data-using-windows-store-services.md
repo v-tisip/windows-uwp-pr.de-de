@@ -4,8 +4,8 @@ ms.assetid: 4BF9EF21-E9F0-49DB-81E4-062D6E68C8B1
 description: "Verwenden Sie zum programmgesteuerten Abrufen von Analysedaten für Apps, die für Ihr WindowsDevCenter-Konto oder für das Konto Ihrer Organisation registriert sind, die WindowsStore-Analyse-API."
 title: Zugreifen auf Analysedaten mit WindowsStore-Diensten
 translationtype: Human Translation
-ms.sourcegitcommit: 47e0ac11178af98589e75cc562631c6904b40da4
-ms.openlocfilehash: 1293bb5beb927425928d832f887129263db5a895
+ms.sourcegitcommit: 67845c76448ed13fd458cb3ee9eb2b75430faade
+ms.openlocfilehash: 468be96b70d07567163b2caccebaa8e2f6ecd592
 
 ---
 
@@ -28,7 +28,7 @@ Stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllt haben, bevor
 
 * Sie müssen Ihrem Dev Center-Konto eine Azure AD-Anwendung zuordnen, die Mandanten-ID und die Client-ID für die Anwendung abrufen und einen Schlüssel generieren. Die Azure AD-Anwendung stellt die App oder den Dienst dar, aus denen Sie die Windows Store-Analyse-API aufrufen möchten. Sie benötigen die Mandanten-ID, die Client-ID und den Schlüssel zum Abrufen eines Azure AD-Zugriffstokens, das Sie an die API übergeben.
 
-  >**Hinweis**&nbsp;&nbsp;Sie müssen dies nur einmal durchführen. Wenn Sie im Besitz der Mandanten-ID, der Client-ID und des Schlüssel sind, können Sie diese Daten jederzeit wiederverwenden, um ein neues Azure AD-Zugriffstoken zu erstellen.
+  >**Hinweis**&nbsp;&nbsp;Sie müssen diesen Schritt nur einmal ausführen. Wenn Sie im Besitz der Mandanten-ID, der Client-ID und des Schlüssel sind, können Sie diese Daten jederzeit wiederverwenden, um ein neues Azure AD-Zugriffstoken zu erstellen.
 
 Gehen Sie wie folgt vor, um Ihrem Dev Center-Konto eine Azure AD-Anwendung zuzuordnen und die erforderlichen Werte abzurufen:
 
@@ -43,7 +43,7 @@ Gehen Sie wie folgt vor, um Ihrem Dev Center-Konto eine Azure AD-Anwendung zuzuo
 <span id="obtain-an-azure-ad-access-token" />
 ## Schritt 2: Abrufen eines Azure AD-Zugriffstokens
 
-Bevor Sie die Methoden in der Windows Store-Analyse-API aufrufen, müssen Sie zuerst ein Azure AD-Zugriffstoken abrufen, das Sie für jede Methode in der API an den **Authorization**-Header übergeben. Nachdem Sie ein Zugriffstoken erhalten haben, haben Sie 60Minuten Zeit, das Token zu verwenden, bevor es abläuft. Nachdem das Token abgelaufen ist, können Sie es aktualisieren, um es in weiteren Aufrufen der API zu verwenden.
+Bevor Sie die Methoden in der Windows Store-Analyse-API aufrufen, müssen Sie zuerst ein Azure AD-Zugriffstoken abrufen, das Sie für jede Methode in der API an den **Authorization**-Header übergeben. Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60 Minuten lang verwenden, bevor es abläuft. Nachdem das Token abgelaufen ist, können Sie es aktualisieren, um es in weiteren Aufrufen an die API zu verwenden.
 
 Befolgen Sie zum Abrufen des Zugriffstokens die Anweisungen unter [Aufrufe zwischen Diensten mithilfe von Clientanmeldeinformationen](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-service-to-service/), um eine HTTP POST-Anforderung an den ```https://login.microsoftonline.com/<tenant_id>/oauth2/token```-Endpunkt zu senden. Hier ist ein Beispiel für eine Anforderung angegeben.
 
@@ -58,7 +58,7 @@ grant_type=client_credentials
 &resource=https://manage.devcenter.microsoft.com
 ```
 
-Geben Sie für die Parameter *tenant\_id*, *client\_id* und *client\_secret* die Mandanten-ID, die Client-ID und den Schlüssel für Ihre Anwendung als die Daten an, die Sie im vorherigen Abschnitt aus Dev Center abgerufen haben. Für den Parameter *resource* müssen Sie den URI ```https://manage.devcenter.microsoft.com``` angeben.
+Geben Sie für die Parameter *tenant\_id*, *client\_id* und *client\_secret* die Mandanten-ID, die Client-ID und den Schlüssel für Ihre Anwendung an, die Sie im vorherigen Abschnitt aus Dev Center abgerufen haben. Für den Parameter *resource* müssen Sie den URI ```https://manage.devcenter.microsoft.com``` angeben.
 
 Nachdem das Zugriffstoken abgelaufen ist, können Sie es aktualisieren, indem Sie [diese Anleitung](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-code/#refreshing-the-access-tokens) befolgen.
 
@@ -72,6 +72,8 @@ Nachdem Sie ein AzureAD-Zugriffstoken abgerufen haben, können Sie die WindowsSt
 -   [Abrufen von Fehlerberichtsdaten](get-error-reporting-data.md)
 -   [Abrufen von App-Bewertungen](get-app-ratings.md)
 -   [Abrufen von App-Rezensionen](get-app-reviews.md)
+-   [Abrufen von Daten zur Anzeigen-Performance](get-ad-performance-data.md)
+-   [Abrufen von Daten zur Anzeigenkampagnen-Performance](get-ad-campaign-performance-data.md)
 
 ## Codebeispiel
 
@@ -233,10 +235,12 @@ Die Windows Store-Analyse-API gibt Fehlerantworten in einem JSON-Objekt zurück,
 * [Abrufen von Fehlerberichtsdaten](get-error-reporting-data.md)
 * [Abrufen von App-Bewertungen](get-app-ratings.md)
 * [Abrufen von App-Rezensionen](get-app-reviews.md)
+* [Abrufen von Daten zur Anzeigen-Performance](get-ad-performance-data.md)
+* [Abrufen von Daten zur Anzeigenkampagnen-Performance](get-ad-campaign-performance-data.md)
  
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Nov16_HO1-->
 
 

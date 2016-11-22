@@ -5,8 +5,8 @@ title: Dialogfelder und Flyouts
 label: Dialogs
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: ff9940c06276165dc139e120c4e9cdeb005ff125
+ms.sourcegitcommit: 86f28a0509ead0632c942c6746fea19acac54931
+ms.openlocfilehash: 6b0b680cd85d6f57c3ca06758ab7dcaef3f7ffe5
 
 ---
 # Dialogfelder und Flyouts
@@ -48,7 +48,7 @@ Dialogfelder und Flyouts sind vorübergehende UI-Elemente, die angezeigt werden,
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
    <p><b>Dialogfelder</b> <br/><br/>
-   ![Beispiel für ein Dialogfeld mit einer Schaltfläche](images/controls_dialog_twobutton.png)</p>
+    ![Beispiel für ein Dialogfeld](images/dialogs/dialog-delete-file-example.png)</p>
 <p>Dialogfelder sind modale Benutzeroberflächenüberlagerungen, die kontextbezogene App-Informationen enthalten. Dialogfelder blockieren Interaktionen mit dem App-Fenster, bis sie explizit geschlossen werden. Sie verlangen häufig eine Aktion vom Benutzer.   
 </p><br/>
 
@@ -130,9 +130,10 @@ Angesichts der Tatsache, dass Dialogfelder im Gegensatz zu Flyouts Interaktionen
 
 
 
-## Nutzungsrichtlinien zur Verwendung von Dialogfeldern
+## Dialogfelder
+### Allgemeine Richtlinien
 
--   Sie sollten das Problem oder das Ziel direkt in der ersten Zeile des Dialogfeldtexts deutlich benennen.
+-   Sie sollten das Problem oder das Ziel des Benutzers in der ersten Zeile des Dialogfeldtexts deutlich benennen.
 -   Der Dialogfeldtitel ist die Hauptanweisung und optional.
     -   Verwenden Sie einen kurzen Titel, um dem Benutzer die erforderlichen Aktionen im Dialogfeld zu erklären. Lange Titel werden nicht umgebrochen und daher abgeschnitten.
     -   Wenn Sie mit dem Dialogfeld eine einfache Meldung, einen Fehler oder eine Frage anzeigen möchten, können Sie den Titel optional auslassen. Vermitteln Sie dann im Inhalt die wichtigsten Informationen.
@@ -144,9 +145,25 @@ Angesichts der Tatsache, dass Dialogfelder im Gegensatz zu Flyouts Interaktionen
     -   Schaltflächen sind die einzigen Mechanismen, mit denen Benutzer das Dialogfeld schließen können.
     -   Verwenden Sie Schaltflächen mit Text, die eine konkrete Reaktion auf die Hauptanweisung oder den Inhalt repräsentieren. Beispiel: "Möchten Sie AppName den Zugriff auf Ihren Standort erlauben?", gefolgt von den Schaltflächen "Zulassen" und "Blockieren". Klare Antworten erleichtern das Verständnis und damit die schnelle Entscheidungsfindung.
 -   Bei Fehlerdialogfeldern wird die Fehlermeldung im Dialogfeld zusammen mit allen relevanten Informationen angezeigt. Die einzige in einem Fehlerdialogfeld verwendete Schaltfläche sollte „Schließen“ oder eine ähnliche Aktion sein.
--   Kontextbezogene Fehler, die sich auf eine bestimmte Stelle auf der Seite beziehen, beispielsweise Validierungsfehler (wie in Kennwortfeldern), verwenden die Canvas der App selbst zum Anzeigen von Inlinefehlern.
+-   Verwenden Sie Dialogfelder nicht für kontextbezogene Fehler, die sich auf eine bestimmte Stelle auf der Seite beziehen, beispielsweise Validierungsfehler (wie in Kennwortfeldern). Verwenden Sie die Canvas der App selbst zum Anzeigen von Inlinefehlern.
 
-## Erstellen eines Dialogfelds
+### Bestätigungsdialogfelder (OK/Abbrechen)
+In einem Bestätigungsdialogfeld können Benutzer bestätigen, dass sie eine Aktion ausführen möchten. Sie können die Aktion bestätigen oder den Vorgang abbrechen.  
+Ein typisches Bestätigungsdialogfeld verfügt über zwei Schaltflächen: eine Schaltfläche zur Bestätigung („OK“) und eine Schaltfläche zum Abbrechen.  
+
+<ul>
+    <li>
+        <p>Die Bestätigungsschaltfläche sollte sich im Allgemeinen auf der linken Seite (die primäre Schaltfläche) und die Abbruchschaltfläche (die sekundäre Schaltfläche) auf der rechten Seite befinden.</p>
+         ![Dialogfeld zum Bestätigen/Abbrechen einer Aktion](images/dialogs/dialog-delete-file-example.png)
+        
+    </li>
+    <li>Wie in den allgemeinen Empfehlungen erwähnt, sollten Sie Schaltflächen mit Text verwenden, der konkrete Antworten auf die Hauptanweisung bzw. den Hauptinhalt bietet.
+    </li>
+</ul>
+
+> Auf einigen Plattformen befindet sich die Bestätigungsschaltfläche auf der rechten anstatt auf der linken Seite. Warum empfehlen wir die Platzierung auf der linken Seite?  Wenn Sie davon ausgehen, dass die meisten Benutzer Rechtshänder sind und ihr Telefon in dieser Hand halten, ist es bequemer, eine Bestätigungsschaltfläche zu drücken, die sich auf der linken Seite befindet, weil sie für den Benutzer wahrscheinlich einfacher mit dem Daumen erreichbar ist. Bei Schaltflächen auf der rechten Bildschirmseite muss der Benutzer seinen Daumen in eine weniger bequeme Position nach innen bewegen.
+
+### Erstellen eines Dialogfelds
 Um ein Dialogfeld zu erstellen, verwenden Sie die [ContentDialog-Klasse](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx). Sie können ein Dialogfeld im Code oder Markup erstellen. Obwohl es in der Regel leichter ist, UI-Elemente in XAML zu definieren, ist es bei einem einfachen Dialogfeld unkomplizierter, Code zu verwenden. In diesem Beispiel wird ein Dialogfeld erstellt, um dem Benutzer mitzuteilen, dass keine WLAN-Verbindung vorhanden ist. Für die Anzeige wird die Methode [ShowAsync](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.contentdialog.showasync.aspx) verwendet.
 
 ```csharp
@@ -174,23 +191,23 @@ private async void displayDeleteFileDialog()
     {
         Title = "Delete file permanently?",
         Content = "If you delete this file, you won't be able to recover it. Do you want to delete it?",
-        PrimaryButtonText = "Cancel",
-        SecondaryButtonText = "Delete file permanently"
+        PrimaryButtonText = "Delete",
+        SecondaryButtonText = "Cancel"
     };
 
     ContentDialogResult result = await deleteFileDialog.ShowAsync();
     
-    // Delete the file if the user clicked the second button. 
+    // Delete the file if the user clicked the primary button. 
     /// Otherwise, do nothing. 
-    if (result == ContentDialogResult.Secondary)
+    if (result == ContentDialogResult.Primary)
     {
         // Delete the file. 
     }
 }
 ```
 
-
-##  Erstellen eines Flyouts
+## Flyouts
+###  Erstellen eines Flyouts
 
 Ein Flyout ist ein offener Container, der beliebige UI als Inhalt anzeigen kann.  
 
@@ -278,7 +295,7 @@ private void Image_Tapped(object sender, TappedRoutedEventArgs e)
 }
 ````
 
-## Gestalten eines Flyouts
+### Gestalten eines Flyouts
 Um ein Flyout zu formatieren, ändern Sie den [FlyoutPresenterStyle](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flyout.flyoutpresenterstyle.aspx). In diesem Beispiel wird ein Absatz mit Textumbruch dargestellt. Zudem wird der Textblock für ein Bildschirmleseprogramm zugänglich gemacht.
 
 ````xaml
@@ -308,6 +325,6 @@ Um ein Flyout zu formatieren, ändern Sie den [FlyoutPresenterStyle](https://msd
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

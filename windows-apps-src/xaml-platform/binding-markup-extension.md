@@ -4,8 +4,8 @@ description: Die Binding-Markuperweiterung wird beim Laden von XAML in eine Inst
 title: Binding-Markuperweiterung
 ms.assetid: 3BAFE7B5-AF33-487F-9AD5-BEAFD65D04C3
 translationtype: Human Translation
-ms.sourcegitcommit: 0f9955b897c626e7f6abb5557658e1b1e5937ffd
-ms.openlocfilehash: 95b48b55f11c4de0b4a51106b6cf5439bfa784b9
+ms.sourcegitcommit: 3ad7dd8261ceb549de6bd9a5ae513e6f6fdb8d49
+ms.openlocfilehash: a6431aed9941079bd05c623229f4ae3236a1b327
 
 ---
 
@@ -21,11 +21,6 @@ Die Markuperweiterung **{Binding}** wird verwendet, um Eigenschaften von Steuere
 
 **{Binding}** weist die gleiche Rangfolge für Abhängigkeitseigenschaften wie ein lokaler Wert auf. So wird beim Festlegen eines lokalen Werts im imperativen Code der Effekt aller im Markup festgelegten **{Binding}**-Objekte entfernt.
 
-**Beispiel-Apps zur Veranschaulichung von {Binding}**
-
--   Laden Sie die App [Bookstore1](http://go.microsoft.com/fwlink/?linkid=532950) herunter.
--   Laden Sie die App [Bookstore2](http://go.microsoft.com/fwlink/?linkid=532952) herunter.
-
 ## XAML-Attributsyntax
 
 
@@ -39,7 +34,7 @@ Die Markuperweiterung **{Binding}** wird verwendet, um Eigenschaften von Steuere
 <object property="{Binding propertyPath, bindingProperties}" .../>
 ```
 
-| Benennung | Beschreibung |
+| Begriff | Beschreibung |
 |------|-------------|
 | *propertyPath* | Eine Zeichenfolge, die den Eigenschaftspfad für die Bindung angibt. Weitere Informationen finden Sie unten im Abschnitt [Eigenschaftspfad](#property-path). |
 | *bindingProperties* | *propName*=*value*\[, *propName*=*value*\]*<br/>Eine oder mehrere Bindungseigenschaften, die mithilfe einer Name-/Wert-Paarsyntax angegeben werden. |
@@ -48,9 +43,9 @@ Die Markuperweiterung **{Binding}** wird verwendet, um Eigenschaften von Steuere
 
 ## Eigenschaftspfad
 
-*PropertyPath* legt den Wert der [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830)-Eigenschaft fest. Hiermit wird die Eigenschaft beschrieben, an die die Bindung erfolgt (die Quelleigenschaft). PropertyPath ist ein positionsbezogener Parameter, den Sie als ersten unbenannten Parameter angeben können: `{Binding Path=...}`. Sie können den Parameternamen auch explizit verwenden: `{Binding Path=...}`.
+[**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) beschreibt die Eigenschaft, an die Sie binden (die Quelleigenschaft). „Path“ ist ein Positionsparameter. Das bedeutet, dass Sie den Parameternamen explizit verwenden können (`{Binding Path=EmployeeID}`) oder dass Sie ihn als ersten nicht benannten Parameter angeben können (`{Binding EmployeeID}`).
 
-Der [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830)-Typ ist ein Eigenschaftspfad. Es handelt sich dabei um eine Zeichenfolge, die als eine Eigenschaft oder Untereigenschaft des benutzerdefinierten Typs oder eines anderen Frameworktyps betrachtet wird. Der Typ kann auch eine [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)-Klasse sein. Die Schritte in einem Eigenschaftspfad werden durch Punkte (.) getrennt, und Sie können mehrere Trennzeichen angeben, um aufeinanderfolgende untergeordnete Eigenschaften zu durchlaufen. Verwenden Sie unabhängig von der verwendeten Programmiersprache einen Punkt als Trennzeichen, um das Objekt zu implementieren, an das die Bindung erfolgt.
+Der [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830)-Typ ist ein Eigenschaftspfad. Es handelt sich dabei um eine Zeichenfolge, die als Eigenschaft oder Untereigenschaft Ihres benutzerdefinierten Typs oder eines Frameworktyps ausgewertet wird. Der Typ kann auch eine [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)-Klasse sein. Die Schritte in einem Eigenschaftspfad werden durch Punkte (.) getrennt, und Sie können mehrere Trennzeichen angeben, um aufeinanderfolgende untergeordnete Eigenschaften zu durchlaufen. Verwenden Sie unabhängig von der verwendeten Programmiersprache einen Punkt als Trennzeichen, um das Objekt zu implementieren, an das die Bindung erfolgt.
 
 Zum Binden der Benutzeroberfläche an die Vornameneigenschaft eines Mitarbeiterobjekts können Sie z.B. „Employee.FirstName“ als Eigenschaftspfad verwenden. Wenn Sie ein ItemsControl-Element an eine Eigenschaft binden, die die abhängigen Elemente des Mitarbeiters enthält, kann der Eigenschaftspfad „Employee.Dependents“ lauten, und die Elementvorlage des ItemsControl-Elements wäre für die Anzeige der Elemente „Dependents“ verantwortlich.
 
@@ -131,6 +126,6 @@ Mit Microsoft IntelliSense in Microsoft Visual Studio werden die Eigenschaften d
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

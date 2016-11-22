@@ -4,8 +4,8 @@ title: Starten, Fortsetzen und Hintergrundaufgaben
 description: In diesem Abschnitt wird beschrieben, was passiert, wenn eine UWP-App (Universelle Windows-Plattform) gestartet, angehalten, fortgesetzt und beendet wird.
 ms.assetid: 75011D52-1511-4ECF-9DF6-52CBBDB15BD7
 translationtype: Human Translation
-ms.sourcegitcommit: 5d0fffc46b1fc4ca2fba1422f2094bd411a65058
-ms.openlocfilehash: 6950f2f4eeee947eb2f7e8b37f72de7c03f53b01
+ms.sourcegitcommit: 7ed2596c33338c3954b6cfe1e779284283ae7769
+ms.openlocfilehash: 3b1be5b6951b72d5699e7b31e95702b827b741b5
 
 ---
 
@@ -59,9 +59,9 @@ In diesem Abschnitt wird Folgendes beschrieben:
 | [Unterstützen Ihrer App mit Hintergrundaufgaben](support-your-app-with-background-tasks.md)                             | In den Themen in diesem Abschnitt erfahren Sie, wie Sie einfachen Code im Hintergrund ausführen, indem Sie mit Hintergrundaufgaben auf Trigger reagieren.                                                       |
 | [Zugreifen auf Sensoren und Geräte von einer Hintergrundaufgabe](access-sensors-and-devices-from-a-background-task.md)       | [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) ermöglicht es Ihrer universellen Windows-App, im Hintergrund auf Sensoren und Peripheriegeräte zuzugreifen. Dies ist selbst dann möglich, wenn die Vordergrund-App angehalten wird. |
 | [Richtlinien für Hintergrundaufgaben](guidelines-for-background-tasks.md)                                           | Stellen Sie sicher, dass Ihre App die Anforderungen für die Ausführung von Hintergrundaufgaben erfüllt.                                                                                                                          |
-| [Erstellen und Registrieren einer in einem separaten Prozess ausgeführten Hintergrundaufgabe](create-and-register-a-background-task.md)                               | Erstellen Sie eine Hintergrundaufgabenklasse, und registrieren Sie sie für die Ausführung in einem separaten Prozess, wenn Ihre App nicht im Vordergrund ausgeführt wird.                                                                                                 |
-| [Erstellen und Registrieren einer in einem Einzelprozess ausgeführten Hintergrundaufgabe](create-and-register-a-singleprocess-background-task.md)                               | Erstellen Sie eine Hintergrundaufgabenklasse, die in demselben Prozess ausgeführt wird wie Ihre Vordergrund-App.                                                                                                 |
-| [Umwandeln einer aus mehreren Prozessen bestehenden Hintergrundaufgabe in eine Einzelprozess-Hintergrundaufgabe](convert-multiple-process-background-task.md)                               | Erfahren Sie, wie Sie die Hintergrundaufgabe, die Sie für Ihre Hintergrund-App zur Ausführung in einem separaten Prozess erstellt haben, in eine Einzelprozess-Hintergrundaufgabe umwandeln, die in demselben Prozess ausgeführt wird wie Ihre Vordergrund-App.
+| [Erstellen und Registrieren einer Out-of-Process-Hintergrundaufgabe](create-and-register-an-outofproc-background-task.md)                               | Erstellen und registrieren Sie eine Hintergrundaufgabe, die in einem von Ihrer App getrennten Prozess ausgeführt wird, und registrieren Sie sie für die Ausführung, wenn sich die App nicht im Vordergrund befindet.                                                                                                 |
+| [Erstellen und Registrieren einer In-Process-Hintergrundaufgabe](create-and-register-an-inproc-background-task.md)                               | Erstellen und registrieren Sie eine Hintergrundaufgabe, die im gleichen Prozess wie die Vordergrund-App ausgeführt wird.                                                                                                 |
+| [Konvertieren einer Out-of-Process-Hintergrundaufgabe in eine In-Process-Hintergrundaufgabe](convert-out-of-process-background-task.md)                               | Erfahren Sie, wie Sie eine Out-of-Process-Hintergrundaufgabe in eine In-Process-Hintergrundaufgabe konvertieren, die im gleichen Prozess wie die Vordergrund-App ausgeführt wird.
 | [Debuggen einer Hintergrundaufgabe](debug-a-background-task.md)                                                           | Erfahren Sie, wie Sie eine Hintergrundaufgabe (einschließlich Hintergrundaufgabenaktivierung und Debugablaufverfolgung) im Windows-Ereignisprotokoll debuggen.                                                                        |
 | [Deklarieren von Hintergrundaufgaben im Anwendungsmanifest](declare-background-tasks-in-the-application-manifest.md) | Sie können die Verwendung von Hintergrundaufgaben aktivieren, indem Sie diese im App-Manifest als Erweiterungen deklarieren.                                                                                                       |
 | [Behandeln einer abgebrochenen Hintergrundaufgabe](handle-a-cancelled-background-task.md)                                     | Hier erfahren Sie, wie Sie eine Hintergrundaufgabe erstellen, die Abbruchanforderungen erkennt, die Ausführung beendet und den Abbruch mithilfe des beständigen Speichers an die App meldet.                                     |
@@ -80,11 +80,11 @@ In diesem Abschnitt wird Folgendes beschrieben:
 |------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Erstellen und Verwenden eines App-Diensts](how-to-create-and-consume-an-app-service.md)                                | Erfahren Sie, wie Sie eine UWP-App (Universelle Windows-Plattform) erstellen, die Dienste für andere UWP-Apps bereitstellen kann, und wie Sie diese Dienste nutzen.                                                                                  |
 | [Kommunikation mit einem App-Remotedienst](communicate-with-a-remote-app-service.md) | Erfahren Sie, wie Sie Nachrichten mit einem App-Dienst auf einem Remotegerät austauschen. |
-| [Umwandeln eines App-Diensts für die Ausführung im gleichen Prozess wie die Host-App](convert-app-service-single-process.md)                                | Erfahren Sie, wie Sie in einem separaten Hintergrundprozess ausgeführten App-Dienstcode in Code umwandeln, der in demselben Prozess ausgeführt wird wie der Host-App Ihres App-Diensts.                                                                                  |
+| [Umwandeln eines App-Diensts für die Ausführung im gleichen Prozess wie die Host-App](convert-app-service-in-process.md)                                | Erfahren Sie, wie Sie in einem separaten Hintergrundprozess ausgeführten App-Dienstcode in Code konvertieren, der in der App ausgeführt wird, die Ihren App-Dienst hostet.                                                                                  |
 
 ## Hinzufügen eines Begrüßungsbildschirms
 
-Sämtliche UWP-Apps müssen einen Begrüßungsbildschirm aufweisen, der sich aus einem Begrüßungsbildschirmbild und einer Hintergrundfarbe zusammensetzt (beide können angepasst werden).
+Alle UWP-Apps müssen einen Begrüßungsbildschirm haben, der sich aus einem Begrüßungsbildschirmbild und einer Hintergrundfarbe zusammensetzt (beide können angepasst werden).
 
 Ihr Begrüßungsbildschirm wird sofort angezeigt, wenn Benutzer die App starten. Dadurch erhalten die Benutzer eine sofortige Rückmeldung, während die App-Ressourcen initialisiert werden. Sobald die App bereit für Interaktionen ist, wird der Begrüßungsbildschirm geschlossen.
 
@@ -111,6 +111,6 @@ Außerdem können Sie mit der [**SplashScreen**](https://msdn.microsoft.com/libr
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

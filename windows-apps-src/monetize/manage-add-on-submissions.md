@@ -4,8 +4,8 @@ ms.assetid: 66400066-24BF-4AF2-B52A-577F5C3CA474
 description: "Verwenden Sie diese Methoden in der Windows Store-Übermittlungs-API, um Übermittlungen von Add-Ons für Apps zu verwalten, die in Ihrem Windows Dev Center-Konto registriert wurden."
 title: "Verwalten von Add-On-Übermittlungen mithilfe der Windows Store-Übermittlungs-API"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: 52e589c90a8d78905a9617dc2802d76a2f0f0360
+ms.sourcegitcommit: 4a1ea50d72e0f754658d8ee99755b873619e1969
+ms.openlocfilehash: 9d19ecae9d5c43c28e887627372aabb58bf0aab2
 
 ---
 
@@ -16,6 +16,8 @@ ms.openlocfilehash: 52e589c90a8d78905a9617dc2802d76a2f0f0360
 Verwenden Sie die folgenden Methoden in der Windows Store-Übermittlungs-API, um Add-On-Übermittlungen (auch bekannt als In-App-Produkt- oder IAP-Übermittlungen) zu verwalten, die in Ihrem Windows Dev Center-Konto registriert wurden. Eine Einführung in die Windows Store-Übermittlungs-API einschließlich der Voraussetzungen für die Verwendung der API finden Sie unter [Erstellen und Verwalten von Übermittlungen mit WindowsStore-Diensten](create-and-manage-submissions-using-windows-store-services.md).
 
 >**Hinweis**&nbsp;&nbsp;Diese Methoden können nur für Windows Dev Center-Konten verwendet werden, die eine Berechtigung zur Verwendung der Windows Store-Übermittlungs-API erhalten haben. Diese Berechtigung ist nicht für alle Konten aktiviert. Um die folgenden Methoden für das Erstellen oder Verwalten von Add-Ons verwenden zu können, muss das Add-On bereits in Ihrem Dev Center-Konto vorhanden sein. Sie können Add-Ons [über das Dev Center-Dashboard](https://msdn.microsoft.com/windows/uwp/publish/iap-submissions) oder mithilfe der Methoden der Windows Store-Übermittlungs-API erstellen, die in [Verwalten von Add-Ons](manage-add-ons.md) beschrieben werden.
+
+>**Wichtig**&nbsp;&nbsp;Demnächst ändert Microsoft das Preismodell für Add-On-Übermittlungen in Windows Dev Center. Nach der Implementierung dieser Änderung wird die Ressource **Preis** nicht mehr unterstützt, und Sie werden vorübergehend nicht in der Lage sein, die Preis-und Verkaufsdaten für eine Add-On-Übermittlung mit der Windows Store-Übermittlungs-API abzurufen oder zu ändern. Wir werden die API aktualisieren, um eine neue Methode für den programmgesteuerten Zugriff auf Preisinformationen für Add-On-Übermittlungen einzuführen. Weitere Informationen finden Sie im Abschnitt [Preisressource](#pricing-object).
 
 | Methode        | URI    | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -168,14 +170,14 @@ Diese Ressource hat die folgenden Werte.
 | Wert      | Typ   | Beschreibung                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | id            | string  | Die ID der Übermittlung.  |
-| contentType           | string  |  Der [Inhaltstyp](https://msdn.microsoft.com/windows/uwp/publish/enter-iap-properties#content-type), der im Add-On bereitgestellt wird. Folgende Werte sind möglich: <ul><li>NotSet</li><li>BookDownload</li><li>EMagazine</li><li>ENewspaper</li><li>MusicDownload</li><li>MusicStream</li><li>OnlineDataStorage</li><li>VideoDownload</li><li>VideoStream</li><li>Asp</li><li>OnlineDownload</li></ul> |  
-| keywords           | array  | Ein Array von Zeichenfolgen, das bis zu 10 [Schlüsselwörter](../publish/enter-iap-properties.md#keywords) für das Add-On enthalten kann. Die App kann mit diesen Schlüsselwörter Add-Ons abfragen.   |
+| contentType           | string  |  Der [Inhaltstyp](../publish/enter-add-on-properties.md#content-type), der im Add-On bereitgestellt wird. Folgende Werte sind möglich: <ul><li>NotSet</li><li>BookDownload</li><li>EMagazine</li><li>ENewspaper</li><li>MusicDownload</li><li>MusicStream</li><li>OnlineDataStorage</li><li>VideoDownload</li><li>VideoStream</li><li>Asp</li><li>OnlineDownload</li></ul> |  
+| keywords           | array  | Ein Array von Zeichenfolgen, das bis zu 10 [Schlüsselwörter](../publish/enter-add-on-properties.md#keywords) für das Add-On enthalten kann. Die App kann mit diesen Schlüsselwörter Add-Ons abfragen.   |
 | lifetime           | string  |  Die Lebensdauer des Add-Ons. Folgende Werte sind möglich: <ul><li>Forever</li><li>OneDay</li><li>ThreeDays</li><li>FiveDays</li><li>OneWeek</li><li>TwoWeeks</li><li>OneMonth</li><li>TwoMonths</li><li>ThreeMonths</li><li>SixMonths</li><li>OneYear</li></ul> |
 | listings           | object  |  Ein Verzeichnis von Schlüssel-Wert-Paaren, wobei jeder Schlüssel ein aus zwei Buchstaben bestehender ISO3166-1-Alpha-2-Ländercode ist und jeder Wert ein [Eintragsressourcen](#listing-object)-Objekt ist, das Eintragsinformationen für das Add-On enthält.  |
 | pricing           | object  | Ein Objekt, das Eintragsinformationen für das Add-On enthält. Weitere Informationen finden Sie unten im Abschnitt [Preisressource](#pricing-object).  |
 | targetPublishMode           | string  | Der Veröffentlichungsmodus für die Übermittlung. Folgende Werte sind möglich: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
 | targetPublishDate           | string  | Das Veröffentlichungsdatum der Übermittlung im ISO 8601-Format, wenn *TargetPublishMode* den Wert SpecificDate hat.  |
-| tag           | string  |  Das [Tag](../publish/enter-iap-properties.md#tag) für das Add-On.   |
+| tag           | string  |  Die [benutzerdefinierten Entwicklerdaten](../publish/enter-add-on-properties.md#custom-developer-data) für das Add-On (diese Informationen wurden zuvor als *Tag* bezeichnet).   |
 | visibility  | string  |  Die Sichtbarkeit des Add-Ons. Folgende Werte sind möglich: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>  |
 | status  | string  |  Der Status der Übermittlung. Folgende Werte sind möglich: <ul><li>None</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>Release</li><li>ReleaseFailed</li></ul>   |
 | statusDetails           | object  |  Enthält zusätzliche Details über den Status der Übermittlung, einschließlich Informationen zu Fehlern. Weitere Informationen finden Sie unten im Abschnitt [Statusdetails](#status-details-object). |
@@ -206,19 +208,32 @@ Diese Ressource enthält Symboldaten für einen Add-On-Eintrag. Diese Ressource 
 <span id="pricing-object" />
 ### Preise
 
-Diese Ressource enthält Preisinformationen für das Add-On. Diese Ressource hat die folgenden Werte.
+Diese Ressource enthält Preisinformationen für das Add-On.
+
+>**Wichtig**&nbsp;&nbsp;Demnächst ändert Microsoft das Preismodell für Add-On-Übermittlungen in Windows Dev Center. Nach der Implementierung dieser Änderung wird die Ressource **Preis** nicht mehr unterstützt, und Sie werden vorübergehend nicht in der Lage sein, die Preis-und Verkaufsdaten für eine Add-On-Übermittlung mit der Windows Store-Übermittlungs-API abzurufen oder zu ändern. Die folgenden Verhaltensweisen werden sich geändert haben:
+
+   > * Nach dem Aufruf der [GET-Methode zum Abruf einer Add-On-Übermittlung](get-an-add-on-submission.md) ist die **Preis**-Ressource leer. Sie können das Dev Center-Dashboard weiterhin verwenden, um die Preisdaten für Ihre Add-On-Übermittlung abzurufen.
+   > * Beim Aufrufen der [PUT-Methode zur Aktualisierung einer Add-On-Übermittlung](update-an-add-on-submission.md) werden die Informationen in der **Preis**-Ressource ignoriert. Sie können das Dev Center-Dashboard weiterhin verwenden, um die Preisdaten für Ihre Add-On-Übermittlung zu ändern.
+
+> Wir werden die Windows Store-Übermittlungs-API aktualisieren, um eine neue Methode für den programmatischen Abruf und die Änderung von Preisinformationen für Add-On-Übermittlungen einzuführen.
+
+Diese Ressource hat die folgenden Werte.
 
 | Wert           | Typ    | Beschreibung                                                                                                                                                                                                                          |
 |-----------------|---------|------|
 |  marketSpecificPricings               |    object     |  Ein Verzeichnis von Schlüssel-Wert-Paaren, wobei jeder Schlüssel ein aus zwei Buchstaben bestehender ISO3166-1-Alpha-2-Ländercode ist und jeder Wert ein [Preisniveau](#price-tiers) ist. Diese Elemente stellen die [benutzerdefinierten Preise für Ihr Add-On in bestimmten Märkten](https://msdn.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability#markets-and-custom-prices) dar. Alle Elemente in diesem Verzeichnis überschreiben für den angegebenen Markt den Basispreis, der durch den Wert *priceId* angegeben wird.     |     
 |  sales               |   array      |  Ein Array von Objekten, die Verkaufsinformationen für das Add-On enthalten. Weitere Informationen finden Sie unten im Abschnitt [Verkauf](#sale-object).    |     
-|  priceId               |   string      |  Ein [Preisniveau](#price-tier), das den [Basispreis](https://msdn.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability#base-price) für das Add-On angibt.    |
+|  priceId               |   string      |  Ein [Preisniveau](#price-tiers), das den [Basispreis](https://msdn.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability#base-price) für das Add-On angibt.    |
 
 
 <span id="sale-object" />
 ### Verkauf
 
-Diese Ressource enthält die Verkaufsinformationen für ein Add-On. Diese Ressource hat die folgenden Werte.
+Diese Ressource enthält die Verkaufsinformationen für ein Add-On.
+
+>**Wichtig**&nbsp;&nbsp;Demnächst ändert Microsoft das Preismodell für Add-On-Übermittlungen in Windows Dev Center. Nach der Implementierung dieser Änderung wird die **Verkaufs**-Ressource nicht mehr unterstützt, und Sie werden vorübergehend nicht in der Lage sein, die Preis-und Verkaufsdaten für eine Add-On-Übermittlung mit der Windows Store-Übermittlungs-API abzurufen oder zu ändern. Wir werden die API aktualisieren, um eine neue Methode für den programmgesteuerten Zugriff auf Verkaufsinformationen für Add-On-Übermittlungen einzuführen. Weitere Informationen finden Sie im Abschnitt [Preisressource](#pricing-object).
+
+Diese Ressource hat die folgenden Werte.
 
 | Wert           | Typ    | Beschreibung                                                                                                                                                                                                                          |
 |-----------------|---------|------|
@@ -250,7 +265,7 @@ Diese Ressource enthält weitere Informationen zu Fehlern oder Warnungen für ei
 | Wert           | Typ    | Beschreibung                                                                                                                                                                                                                          |
 |-----------------|---------|------|
 |  code               |    string     |   Eine Zeichenfolge, die den Typ des Fehlers oder der Warnung beschreibt. Weitere Informationen finden Sie unten im Abschnitt [Übermittlungsstatuscode](#submission-status-code).   |     
-|  Details               |     string    |  Eine Meldung mit weiteren Details zum Problem.     |
+|  details               |     string    |  Eine Meldung mit weiteren Details zum Problem.     |
 
 
 <span id="certification-report-object" />
@@ -315,6 +330,6 @@ Die folgenden Werte stellen den Statuscode einer Übermittlung dar.
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

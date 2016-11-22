@@ -4,8 +4,8 @@ title: "Einführung in die Universelle Windows-Plattform"
 description: "Erfahren Sie mehr über Apps für die Universelle Windows-Plattform (UWP), die auf einer Vielzahl von Geräten unter Windows 10 ausgeführt werden können."
 ms.assetid: 59849197-B5C7-493C-8581-ADD6F5F8800B
 translationtype: Human Translation
-ms.sourcegitcommit: 0f2ed552898f7cbb476055a6d6b7aa76545113b1
-ms.openlocfilehash: c433bd2eba2a5be114680f52a8da0b5c7b563186
+ms.sourcegitcommit: 98dd2da8e16552fcde9790bd77f17a2100b63d4f
+ms.openlocfilehash: 170bbb4e22b3ac642b0dfd0c9136d3dd39d519d0
 
 ---
 
@@ -189,7 +189,6 @@ Die folgenden APIs bieten Zugriff auf Eingaben:
 
 ## Schreiben von Code
 
-
 Als Programmiersprachen für Ihr [Windows10-Projekt in Visual Studio](https://msdn.microsoft.com/library/windows/apps/dn609832.aspx#target_win10) können Sie Visual C++, C#, Visual Basic und JavaScript verwenden. Bei Verwendung von Visual C++, C# und Visual Basic können Sie XAML für eine qualitativ hochwertige, systemeigene Benutzeroberfläche verwenden. Bei Verwendung von Visual C++ können Sie statt XAML, oder auch zusätzlich dazu, das Zeichnen mit DirectX wählen. Bei der Verwendung von JavaScript ist die Darstellungsschicht HTML, wobei es sich um einen plattformübergreifenden Webstandard handelt. Ein Großteil Ihres Codes und der Benutzeroberfläche ist universell und kann überall auf die gleiche Weise ausgeführt werden. Wenn Code jedoch speziell auf bestimmte Gerätefamilien und die Benutzeroberfläche auf bestimmte Formfaktoren zugeschnitten ist, können Sie adaptiven Code und adaptive UI verwenden. Betrachten wir nun diese verschiedenen Fälle.
 
 **Aufrufen einer API, die von Ihrer Zielgerätefamilie implementiert wird**
@@ -279,8 +278,11 @@ Im neuen einheitlichen WindowsDevCenter-Dashboard können Sie all Ihre Apps für
 
 Unter [Verwenden des einheitlichen Windows Dev Center-Dashboards](../publish/using-the-windows-dev-center-dashboard.md) erfahren Sie, wie Sie Ihre Apps zur Veröffentlichung im WindowsStore übermitteln.
 
+## Weitere Informationen ##
+Weitere einführende Informationen finden Sie unter [Windows10 – Einführung in das Entwickeln von Windows-Apps für Windows 10-Geräte](https://msdn.microsoft.com/en-us/magazine/dn973012.aspx)
 
 
-<!--HONumber=Sep16_HO3-->
+
+<!--HONumber=Nov16_HO1-->
 
 

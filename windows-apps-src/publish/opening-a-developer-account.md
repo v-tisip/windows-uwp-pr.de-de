@@ -4,8 +4,8 @@ ms.assetid: 284EBA1F-BFB4-4CDA-9F05-4927CDACDAA7
 title: "Eröffnen eines Entwicklerkontos"
 description: "Diese Übersicht zur Registrierung eines Entwicklerkontos für Windows Store und andere Microsoft-Programme erleichtert Ihnen das Einrichten Ihres Kontos."
 translationtype: Human Translation
-ms.sourcegitcommit: c4a753b7642354c4fe42cff721fb21337b14528f
-ms.openlocfilehash: b9ccd8e4756dd35fd775d91747710dd13b9ca7ed
+ms.sourcegitcommit: 10446e136d324cd8490f7547f853e75b534368b0
+ms.openlocfilehash: 1f847b9c3302b092dce6eb73dd01f761ec17c0a5
 
 ---
 # Eröffnen eines Entwicklerkontos
@@ -27,9 +27,13 @@ Diese Übersicht zur Registrierung eines Entwicklerkontos für Windows Store und
 
    Wenn Sie sich als Unternehmen registrieren, müssen Sie auch den Namen, die E-Mail-Adresse und die Telefonnummer der Person eingeben, die das Konto Ihres Unternehmens genehmigt.
 
-5.  Geben Sie den **Anzeigenamen des Herausgebers** an, den Sie verwenden möchten (maximal 50Zeichen). Wenn Sie einen Namen eingeben, der bereits von einem anderen Benutzer ausgewählt wurde oder dessen Nutzungsrechte bei einer anderen Person liegen, können Sie diesen Namen nicht auswählen. Für Unternehmenskonten muss der Anzeigename des Herausgebers der eingetragene Unternehmens- oder Handelsname Ihrer Organisation sein. Wählen Sie den Namen mit Bedacht, da Kunden diesen Namen sehen und Ihre Apps unter diesem Namen kennenlernen.
+5.  Geben Sie für individuelle Konten den **Anzeigenamen des Herausgebers** an, den Sie verwenden möchten (maximal 50Zeichen). Wählen Sie den Namen mit Bedacht, da Kunden diesen Namen sehen und Ihre Apps unter diesem Namen kennenlernen.
 
-  >  **Hinweis**  Stellen Sie sicher, dass Sie zur Verwendung dieses Namens berechtigt sind. Wurde der von Ihnen gewählte Name bereits als Marke eingetragen oder urheberrechtlich geschützt, wird Ihr Konto unter Umständen geschlossen. Weitere Informationen finden Sie unter [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/Hh694058). Wenn eine andere Person einen Herausgeberanzeigenamen verwendet, den Sie markenrechtlich oder anderweitig geschützt haben, [wenden Sie sich an Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=233777).    
+    Geben Sie für Unternehmenskonten den **registrierten Namen** Ihres Unternehmens (den eingetragenen Unternehmens- oder Handelsnamen Ihrer Organisation) ein. Dieser wird als Anzeigename für den Herausgeber verwendet.
+    
+    Wenn Sie einen Namen eingeben, der bereits von einem anderen Benutzer ausgewählt wurde oder dessen Nutzungsrechte bei einer anderen Person liegen, können Sie diesen Namen nicht verwenden. 
+
+  >  **Hinweis**  Stellen Sie sicher, dass sie zum Verwenden des hier eingegebenen Namens berechtigt sind. Wurde der von Ihnen gewählte Name bereits als Marke eingetragen oder urheberrechtlich geschützt, wird Ihr Konto unter Umständen geschlossen. Weitere Informationen finden Sie unter [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/Hh694058). Wenn eine andere Person einen Herausgeberanzeigenamen verwendet, den Sie markenrechtlich oder anderweitig geschützt haben, [wenden Sie sich an Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=233777).    
 
 6.  Geben Sie die Kontaktinformationen für das Konto ein. Bei einem Unternehmenskonto müssen außerdem Kontaktinformationen für die Person angegeben werden, die bestätigen kann, dass Sie zur Erstellung des Kontos für Ihre Organisation autorisiert sind. Klicken Sie anschließend auf **Weiter** , um zum **Zahlungsabschnitt** zu gelangen.
 
@@ -39,7 +43,9 @@ Diese Übersicht zur Registrierung eines Entwicklerkontos für Windows Store und
 
 9.  Klicken Sie auf **Fertig stellen**, um den Kauf zu bestätigen. Wir senden eine Bestätigungsnachricht an Ihre Entwickler-E-Mail-Adresse.
 
-## Zusätzliche Richtlinien für Firmenkonten
+Nach Abschluss der Registrierung durchläuft Ihr Konto den Überprüfungsprozess. Bei individuellen Konten wird sichergestellt, dass der Anzeigename für den Herausgeber nicht bereits von einem anderen Unternehmen verwendet wird. Bei Unternehmenskonten dauert der Vorgang etwas länger, da zusätzlich geprüft werden muss, dass Sie zur Einrichtung des Kontos für Ihr Unternehmen autorisiert sind. Diese Überprüfung kann zwischen wenigen Tagen und mehreren Wochen dauern und umfasst häufig einen Telefonanruf bei Ihrem Unternehmen. Sie können den Überprüfungsstatus auf der Seite **Kontoeinstellungen** überprüfen. 
+
+## Zusätzliche Richtlinien für Unternehmenskonten
 
 Beachten Sie beim Erstellen eines Unternehmenskontos die folgenden Richtlinien, wenn mehrere Personen auf das Konto zugreifen müssen und sich dazu mit dem Microsoft-Konto anmelden, mit dem das Konto erstellt wurde. 
 
@@ -82,6 +88,6 @@ Wenn Sie Ihr Konto schließen, sollten Sie wissen, was mit Ihren im Windows Stor
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

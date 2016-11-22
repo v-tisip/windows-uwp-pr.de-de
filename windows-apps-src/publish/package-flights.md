@@ -1,11 +1,11 @@
 ---
 author: jnHs
-Description: "Wenn Ihre App ein AdMediatorControl- oder ein AdControl-Element zum Anzeigen von Werbebannern verwendet, können Sie Ihre Anzeigenfüllrate und Ihren Umsatz steigern, indem Sie in Ihrer App Microsoft-Partneranzeigen anzeigen."
+Description: "Mithilfe von Flight-Paketen können Sie Pakete an eine begrenzte Testgruppe verteilen."
 title: Flight-Pakete
 ms.assetid: 5B094822-A8DE-4EE3-B55D-3E306C04EE79
 translationtype: Human Translation
-ms.sourcegitcommit: baa8212b7ec26be1f50e051fa06bff4bf8095227
-ms.openlocfilehash: 34321a5fd3db10833b958049597ebf830599cfb4
+ms.sourcegitcommit: 0eef2f719dce460662215e9b5d692d6caebe5a37
+ms.openlocfilehash: 4fd74afc3935b443a5723c3ebdb0ebcf8bef18f0
 
 ---
 
@@ -17,7 +17,7 @@ Flight-Pakete ermöglichen Ihnen das Bereitstellen anderer Pakete für eine fest
 
 Beachten Sie, dass Flight-Pakete ebenso wie eine reguläre Übermittlung ohne Test-Flight den [Zertifizierungsprozess](the-app-certification-process.md) bestehen müssen. Wenn Sie später Pakete aus einem Flight-Paket für alle Ihre Kunden bereitstellen möchten, können Sie diese Pakete wie unten beschrieben in Ihre Übermittlung ohne Test-Flight ziehen.
 
-Beim Einrichten von Flight-Paketen können Sie bestimmte Personen auswählen, die bestimmte Pakete erhalten sollen, indem Sie sie einer Test-Flight-Gruppe hinzufügen. Benutzer in einer Test-Flight-Gruppe, die ein Gerät mit einer Windows 10-Version verwenden, die Flight-Pakete unterstützt (Windows.Desktop Build 10586 oder höher; Windows.Mobile Build 10586.63 oder höher; oder Xbox One), erhalten die Pakete aus dem für die jeweilige Gruppe festlegten Test-Flight. Benutzer, die nicht einer Ihrer Test-Flight-Gruppen hinzugefügt wurden, oder ein Gerät verwenden, das Flight-Pakete nicht unterstützt, erhalten Pakete aus der Übermittlung ohne Test-Flight.
+Beim Einrichten von Flight-Paketen können Sie bestimmte Personen auswählen, die bestimmte Pakete erhalten sollen, indem Sie sie einer **Test-Flight-Gruppe** hinzufügen. Benutzer in einer Test-Flight-Gruppe, die ein Gerät mit einer Windows 10-Version verwenden, die Flight-Pakete unterstützt (Windows.Desktop Build 10586 oder höher; Windows.Mobile Build 10586.63 oder höher; oder Xbox One), erhalten die Pakete aus dem für die jeweilige Gruppe festlegten Test-Flight. (Flight-Pakete umfassen ggf. Pakete, die für eine beliebige Betriebssystemversion erstellt wurden, einschließlich Windows 8.1/Windows Phone 8.1 oder früher.) Benutzer, die zu keiner Test-Flight-Gruppe hinzugefügt wurden oder ein Gerät verwenden, das Flight-Pakete nicht unterstützt, erhalten Pakete aus der Übermittlung ohne Test-Flight.
 
 > **Wichtig** Personen in Ihren Test-Flight-Gruppen erhalten auf Desktops und mobilen Geräten die Pakete in Ihrem Test-Flight jedes Mal automatisch, wenn Sie Updates bereitstellen. **Personen in Ihren Test-Flight-Gruppen, die Xbox-Geräte verwenden, müssen jedoch manuell nach Updates suchen**, um die neuesten Pakete zu erhalten. Dabei müssen sie sicherstellen, dass sie mit ihrem Microsoft-Konto am Gerät angemeldet sind (mit der zugeordneten E-Mail-Adresse, die Sie in Ihre Test-Flight-Gruppe eingefügt haben).
 
@@ -38,9 +38,10 @@ Wenn Sie eine Test-Flight-Gruppe erstellen, müssen Sie ihr einen Namen geben. J
 Klicken Sie auf **Gruppe erstellen**, um die Gruppe zu speichern und mit der Einrichtung des Flight-Pakets fortzufahren.
 
 > **Wichtig** Vergewissern Sie sich, dass Sie alle erforderlichen Einverständniserklärungen von den Personen eingeholt haben, die Sie Ihrer Test-Flight-Gruppe hinzufügen, und dass diese Personen sich bewusst sind, dass sie andere Pakete als die aus Ihrer Übermittlung ohne Test-Flight erhalten. 
-> Sie sollten sich auch überlegen, wie die Personen in Ihrem Flight-Paket Ihnen Feedback zur App geben können. Wir empfehlen das [Hinzufügen eines Steuerelements in Ihre App, um den Feedback-Hub zu starten](../monetize/launch-feedback-hub-from-your-app.md). Kunden können auf diese Weise ihre Eingabe direkt bereitstellen. Prüfen Sie das Feedback anschließend im [Feedbackbericht](feedback-report.md)) der App.
 
-Wenn Sie Ihre Test-Flight-Gruppe später bearbeiten möchten, klicken Sie auf **Export .csv**, um die Gruppeninformationen in einer CSV-Datei zu speichern. Nehmen Sie in dieser Datei Ihre Änderungen vor, und klicken Sie dann auf **CSV importieren**, um die Gruppenmitgliedschaft mit der neuen Version zu aktualisieren. Beachten Sie, dass es bis zu 30Minuten dauern kann, bis Änderungen an der Mitgliedschaft der Test-Flight-Gruppe implementiert werden. Wenn Sie nach der Veröffentlichung des zugehörigen Flight-Pakets Personen zu einer Test-Flight-Gruppe hinzufügen, werden die Pakete für die neuen Personen automatisch bereitgestellt. Sie müssen keine neue Übermittlung für das Flight-Paket erstellen und veröffentlichen. 
+> Sie sollten sich auch überlegen, wie die Personen in Ihrem Flight-Paket Ihnen Feedback zur App geben können. Wir empfehlen das [Hinzufügen eines Steuerelements zu Ihrer App, um den Feedback-Hub zu starten](../monetize/launch-feedback-hub-from-your-app.md). Kunden können auf diese Weise ihre Eingabe direkt bereitstellen. Prüfen Sie das Feedback anschließend im [Feedbackbericht](feedback-report.md)) der App.
+
+Damit Sie später eine Test-Flight-Gruppe bearbeiten können, klicken Sie beim Erstellen eines neuen Test-Flight auf **View and manage existing groups**, und wählen Sie die Test-Flight-Gruppe aus, die geändert werden soll, oder klicken Sie in der Übersicht eines Flight-Pakets auf den Namen der Test-Flight-Gruppe. Sie können E-Mail-Adressen direkt im Feld hinzufügen oder entfernen. Klicken Sie für umfangreichere Änderungen auf **CSV exportieren**, um Ihre Mitgliedschaftsinformationen zu einer Test-Flight-Gruppe in einer CSV-Datei zu speichern. Nehmen Sie in dieser Datei Ihre Änderungen vor, und klicken Sie dann auf **CSV importieren**, um die Gruppenmitgliedschaft mit der neuen Version zu aktualisieren. Beachten Sie, dass es bis zu 30Minuten dauern kann, bis Änderungen an der Mitgliedschaft der Test-Flight-Gruppe implementiert werden. Wenn Sie nach der Veröffentlichung des zugehörigen Flight-Pakets Personen zu einer Test-Flight-Gruppe hinzufügen, werden die Pakete für die neuen Personen automatisch bereitgestellt. Sie müssen keine neue Übermittlung für das Flight-Paket erstellen und veröffentlichen. 
 
 ## Erstellen eines neuen Flight-Pakets
 
@@ -52,9 +53,9 @@ Klicken Sie auf **Create flight**, nachdem Sie den Namen eingegeben und die Test
 
 ## Festlegen von Paketen zum Einfügen in Ihr Flight-Paket
 
-Nachdem Sie die Details des Flight-Pakets gespeichert haben, wird die Übersicht dazu angezeigt. Klicken Sie auf **Pakete**, um festzulegen, welche Pakete das Test-Flight enthalten soll.
+Nachdem Sie die Details des Flight-Pakets gespeichert haben, wird die Übersicht dazu angezeigt. Klicken Sie auf **Pakete**, um festzulegen, welche Pakete das Test-Flight enthalten soll. Sie können Pakete einbeziehen, die für jede Betriebssystemversion (einschließlich Windows10, Windows8.x und Windows Phone 8.x oder früher) erstellt wurden.
 
-Sie haben die Option, Pakete auszuwählen, die einer vorherigen Übermittlung zugeordnet waren (entweder einer Übermittlung ohne Test-Flight einem Ihrer anderen Flight-Pakete, falls Sie mehrere haben). Wenn Sie für dieses Flight-Paket neue Pakete verwenden möchten, können Sie diese hier hochladen (mit dem gleichen Verfahren wie beim [Hochladen von App-Paketen](upload-app-packages.md) bei einer regulären Übermittlung ohne Test-Flight). Wenn Sie alle Pakete für dieses Flight-Paket angegeben haben, klicken Sie auf **Speichern**.
+Sie haben die Option, Pakete auszuwählen, die einer vorherigen Übermittlung zugeordnet waren (entweder einer Übermittlung ohne Test-Flight oder einem Ihrer anderen Flight-Pakete, falls Sie mehrere haben). Wenn Sie für dieses Flight-Paket neue Pakete verwenden möchten, können Sie diese hier hochladen (mit dem gleichen Verfahren wie beim [Hochladen von App-Paketen](upload-app-packages.md) bei einer regulären Übermittlung ohne Test-Flight). Wenn Sie alle Pakete für dieses Flight-Paket angegeben haben, klicken Sie auf **Speichern**.
 
 Wenn Ihre App mehrere Gerätefamilien unterstützt, stellen Sie sicher, dass Sie Pakete einschließen, um den gleichen Satz von Gerätefamilien in Ihrem Test-Flight zu unterstützen. Die Mitglieder Ihrer Test-Flight-Gruppen können **nur** Pakete aus diesem Test-Flight erhalten. Sie können nicht auf Pakete aus anderen Test-Flights oder aus Ihren Übermittlungen ohne Test-Flights zugreifen. 
 
@@ -124,6 +125,6 @@ Wenn Sie ein Flight-Paket löschen, erhalten alle Kunden mit Paketen, die Sie in
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

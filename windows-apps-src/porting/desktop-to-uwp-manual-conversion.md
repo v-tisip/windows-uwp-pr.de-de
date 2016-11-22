@@ -1,18 +1,17 @@
 ---
+author: awkoren
 Description: Zeigt, wie Sie eine Windows-Desktopanwendung (z. B. Win32, WPF und Windows Forms) manuell in eine UWP-App (Universelle Windows-Plattform) konvertieren.
 Search.Product: eADQiWindows 10XVcnh
 title: Manuelles Konvertieren einer Windows-Desktopanwendung in eine UWP-App (Universelle Windows-Plattform)
 translationtype: Human Translation
-ms.sourcegitcommit: 2c1a8ea38081c947f90ea835447a617c388aec08
-ms.openlocfilehash: 646a5b88cb7ca97f18bf4552950979a2ceead398
+ms.sourcegitcommit: fe96945759739e9260d0cdfc501e3e59fb915b1e
+ms.openlocfilehash: 6ca48fd829b7437fe2db8aa1251f6ed8976919ab
 
 ---
 
-# Manuelles Konvertieren Ihrer Windows-Desktopanwendung in eine UWP-App (Universelle Windows-Plattform)
+# Manuelles Konvertieren Ihrer App zu UWP mithilfe der Desktop-Brücke
 
-\[Einige Informationen beziehen sich auf die Vorabversion, die vor der kommerziellen Freigabe möglicherweise wesentlichen Änderungen unterliegt. Microsoft übernimmt für die hier bereitgestellten Informationen keine Garantie, weder ausdrücklicher noch impliziter Art.\]
-
-Die Verwendung des Konverters ist praktisch und automatisch, und es ist hilfreich, wenn Unsicherheiten darüber bestehen, was das Installationsprogramm tut. Wenn Ihre App aber mithilfe von Xcopy installiert wurde, oder wenn Sie mit den Änderungen vertraut sind, die das Installationsprogramm Ihrer App am System vornimmt, können Sie sich entscheiden, ein App-Paket und -Manifest manuell zu erstellen.
+Die Verwendung von Desktop App Converter (DAC) ist praktisch und automatisch, und es ist hilfreich, wenn Unsicherheiten darüber bestehen, was das Installationsprogramm tut. Wenn Ihre App aber mithilfe von Xcopy installiert wurde, oder wenn Sie mit den Änderungen vertraut sind, die das Installationsprogramm Ihrer App am System vornimmt, können Sie sich entscheiden, ein App-Paket und -Manifest manuell zu erstellen.
 
 Im Folgenden sind die Schritte zum manuellen Erstellen eines Pakets beschrieben:
 
@@ -103,6 +102,6 @@ Wenn Sie beim Ausführen von MakeCert.exe zum Eingeben eines Kennworts aufgeford
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

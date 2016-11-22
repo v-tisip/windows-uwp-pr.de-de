@@ -3,8 +3,8 @@ title: "Verbinden mit Identitätsanbietern über Web Account Manager"
 description: "In diesem Artikel wird beschrieben, wie Sie AccountsSettingsPane verwenden, um Ihre App für die universelle Windows-Plattform (UWP) mit externen Identitätsanbietern wie Microsoft oder Facebook zu verbinden. Dazu verwenden Sie die neuen Web Account Manager-APIs in Windows 10."
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: f3cdb187ec4056d4c7db6acde471b0bc91c78390
-ms.openlocfilehash: 093ca8906853121bbf33a729c523717d26cb7b0d
+ms.sourcegitcommit: e16977a9a11b292ea9624ff421aa964c11d615be
+ms.openlocfilehash: d234811b395790a35ad50dea9ef4cc56d60458e8
 
 ---
 # Verbinden mit Identitätsanbietern über Web Account Manager
@@ -106,7 +106,7 @@ private async void BuildPaneAsync(AccountsSettingsPane s,
 }
 ```
 
-Als Nächstes rufen Sie einen Anbieter mit der WebAuthenticationCoreManager.FindAccountProviderAsync-Methode ab. Die Anbieter-URL ist je nach Anbieter verschieden und kann in der Anbieterdokumentation nachgeschlagen werden. Für Microsoft-Konten und Azure Active Directory lautet die URL "https://login.microsoft.com". 
+Als Nächstes rufen Sie einen Anbieter mit der WebAuthenticationCoreManager.FindAccountProviderAsync-Methode ab. Die Anbieter-URL ist je nach Anbieter verschieden und kann in der Anbieterdokumentation nachgeschlagen werden. Für Microsoft-Konten und Azure Active Directory lautet die URL „https://login.microsoft.com“. 
 
 ```C#
 private async void BuildPaneAsync(AccountsSettingsPane s,
@@ -121,9 +121,7 @@ private async void BuildPaneAsync(AccountsSettingsPane s,
 }
 ```
 
-Beachten Sie, dass auch die Zeichenfolge „consumers“ an den optionalen *authority*-Parameter übergeben wird. Dies liegt daran, dass Microsoft zwei verschiedene Authentifizierungsmethoden bereitstellt: Microsoft-Konten (MSA) für „Consumer“ und Azure Active Directory (AAD) für „Organisationen“. Durch die Autorität „consumers“ wird dem Anbieter mitgeteilt, dass die erste Methode bevorzugt wird.
-
-Wenn Sie eine Unternehmens-App entwickeln, können Sie stattdessen den AAD Graph-Endpunkt verwenden. Weitere Informationen finden Sie im vollständigen [WebAccountManagement-Beispiel auf GitHub](http://go.microsoft.com/fwlink/p/?LinkId=620621) und in der Azure-Dokumentation. 
+Beachten Sie, dass auch die Zeichenfolge „consumers“ an den optionalen *authority*-Parameter übergeben wird. Dies liegt daran, dass Microsoft zwei verschiedene Authentifizierungsmethoden bereitstellt: Microsoft-Konten (MSA) für „Heimanwender“ und Azure Active Directory (AAD) für „Organisationen“. Die Autorität „consumers“ gibt an, dass die MSA-Option verwendet werden soll. Wenn Sie eine Unternehmens-App entwickeln, verwenden Sie stattdessen die Zeichenfolge „organizations“.
 
 Schließlich fügen Sie AccountsSettingsPane den Anbieter hinzu, indem Sie wie folgt einen neuen WebAccountProviderCommand erstellen: 
 
@@ -168,13 +166,26 @@ In diesem Beispiel wird die Zeichenfolge „wl.basic“ an den scope-Parameter �
 
 Dienstanbieter stellen in ihrer Dokumentation Informationen dazu bereit, welche Bereiche angegeben werden müssen, um die für den betreffenden Dienst zu verwendenden Token anzufordern. 
 
-Informationen zu den Bereichen Office 365 und Outlook.com finden Sie unter (Authentifizieren von Office 365- und Outlook.com-APIs mit dem v2.0-Authentifizierungsendpunkt)[https://msdn.microsoft.com/office/office365/howto/authenticate-Office-365-APIs-using-v2]. 
+* Informationen zu den Bereichen Office 365 und Outlook.com finden Sie unter (Authentifizieren von Office 365- und Outlook.com-APIs mit dem v2.0-Authentifizierungsendpunkt)[https://msdn.microsoft.com/office/office365/howto/authenticate-Office-365-APIs-using-v2]. 
+* Informationen zu OneDrive finden Sie unter (Authentifizierung und Anmeldung bei OneDrive)[https://dev.onedrive.com/auth/msa_oauth.htm#authentication-scopes]. 
 
-Informationen zu OneDrive finden Sie unter (Authentifizierung und Anmeldung bei OneDrive)[https://dev.onedrive.com/auth/msa_oauth.htm#authentication-scopes]. 
+Wenn Sie eine Unternehmens-App entwickeln, möchten Sie wahrscheinlich eine Verbindung mit einer Azure Active Directory (AAD)-Instanz herstellen und die Microsoft Graph-API anstelle regulärer MSA-Dienste verwenden. Verwenden Sie in diesem Szenario stattdessen folgenden Code: 
+
+```C#
+private async void GetAadTokenAsync(WebAccountProviderCommand command)
+{
+    string clientId = "your_guid_here"; // Obtain your clientId from the Azure Portal
+    WebTokenRequest request = new WebTokenRequest(provider, "User.Read", clientId);
+    request.Properties.Add("resource", "https://graph.microsoft.com");
+    WebTokenRequestResult = await WebAuthenticationCoreManager.RequestTokenAsync(request);
+}
+```
+
+Im weiteren Verlauf dieses Artikels wird das MSA-Szenario beschrieben, der Code für AAD ist allerdings sehr ähnlich. Weitere Informationen zu AAD/Graph einschließlich eines vollständigen Beispiels auf GitHub finden Sie in der [Microsoft Graph-Dokumentation](https://graph.microsoft.io/docs/platform/get-started).
 
 ## Verwenden des Tokens
 
-Die RequestTokenAsync-Methode sendet ein WebTokenRequestResult-Objekt zurück, das die Ergebnisse für Ihre Anforderung enthält. Wenn die Anforderung erfolgreich war, enthält sie ein Token.  
+Die RequestTokenAsync-Methode gibt ein WebTokenRequestResult-Objekt zurück, das die Ergebnisse für Ihre Anforderung enthält. Wenn die Anforderung erfolgreich war, enthält sie ein Token.  
 
 ```C#
 private async void GetMsaTokenAsync(WebAccountProviderCommand command)
@@ -390,6 +401,6 @@ Einstellungsbefehle lassen sich grundsätzlich überall verwenden. Es wird jedoc
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -4,8 +4,8 @@ title: Registrieren einer Hintergrundaufgabe
 description: Hier erfahren Sie, wie eine Funktion erstellt wird, die zum sicheren Registrieren der meisten Hintergrundaufgaben wiederverwendet werden kann.
 ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 translationtype: Human Translation
-ms.sourcegitcommit: b877ec7a02082cbfeb7cdfd6c66490ec608d9a50
-ms.openlocfilehash: 36352e3ce5b7d853da0d4aca47e7fc5839ccbfbb
+ms.sourcegitcommit: 0f1bf88b1470cc5205f2e98ef15300da705203b1
+ms.openlocfilehash: 2d27b46caefcae12e3ff3aeb300129eec0c5b7d7
 
 ---
 
@@ -21,7 +21,7 @@ ms.openlocfilehash: 36352e3ce5b7d853da0d4aca47e7fc5839ccbfbb
 
 Hier erfahren Sie, wie eine Funktion erstellt wird, die zum sicheren Registrieren der meisten Hintergrundaufgaben wiederverwendet werden kann.
 
-Dieses Thema gilt für Einzelprozess-Hintergrundaufgaben und für Hintergrundaufgaben, die in einem separaten Prozess ausgeführt werden. In diesem Thema wird davon ausgegangen, dass Sie bereits über eine Hintergrundaufgabe verfügen, die registriert werden muss. (Vgl. [Erstellen und Registrieren einer in einem separaten Prozess ausgeführten Hintergrundaufgabe](create-and-register-a-background-task.md) oder [Erstellen und Registrieren einer Einzelprozess-Hintergrundaufgabe](create-and-register-a-singleprocess-background-task.md) für Informationen zum Erstellen einer Hintergrundaufgabe).
+Dieses Thema gilt für In-Process-Hintergrundaufgaben sowie für Out-of-Process-Hintergrundaufgaben. In diesem Thema wird davon ausgegangen, dass Sie bereits über eine Hintergrundaufgabe verfügen, die registriert werden muss. (Informationen zum Erstellen einer Hintergrundaufgabe finden Sie unter [Erstellen und Registrieren einer außerhalb des Prozesses ausgeführten Hintergrundaufgabe](create-and-register-an-outofproc-background-task.md) oder [Erstellen und Registrieren einer In-Process-Hintergrundaufgabe](create-and-register-an-inproc-background-task.md)).
 
 Dieses Thema behandelt schrittweise eine Hilfsfunktion, die Hintergrundaufgaben registriert. Diese Hilfsfunktion sucht zuerst nach vorhandenen Registrierungen, um Probleme mit mehrfachen Registrierungen zu vermeiden. Sie kann außerdem eine Systembedingung auf die Hintergrundaufgabe anwenden. Die exemplarische Vorgehensweise enthält ein vollständiges lauffähiges Beispiel für diese Hilfsfunktion.
 
@@ -36,8 +36,8 @@ Rufen Sie [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh7
 Diese Methode übernimmt den Einstiegspunkt der Aufgabe, den Namen der Aufgabe, einen vorgefertigten Trigger für die Hintergrundaufgabe und (optional) eine [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834) für die Hintergrundaufgabe. Diese Methode gibt ein [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786)-Objekt zurück.
 
 > [!Important]
-> `taskEntryPoint` – für Hintergrundaufgaben, die in einem separaten Prozess ausgeführt werden, muss dies als der Namespace-Name, '.' und der Name der Klasse, die Ihre Hintergrund-Klasse enthält. konstruiert werden. Die Zeichenfolge beachtet die Groß-/Kleinschreibung.  Wenn Sie beispielsweise den Namespace „MyBackgroundTasks“ und eine Klasse „BackgroundTask1“ haben, die Ihren Hintergrund-Klassen-Code enthält, ist die Zeichenfolge für `taskEntryPoint` „MyBackgroundTasks.BackgruondTask1“.
-> Wenn Ihre Hintergrundaufgabe im gleichen Prozess wie Ihre App (d. h. als einzelne Prozess-Hintergrundaufgabe) ausgeführt wird, sollte `taskEntryPoint` nicht festgelegt werden.
+> `taskEntryPoint` – für Hintergrundaufgaben, die außerhalb eines Prozesses ausgeführt werden, muss dies als der Namespace-Name, '.', und der Name der Klasse, die Ihre Hintergrund-Klasse enthält, konstruiert werden. Die Zeichenfolge beachtet die Groß-/Kleinschreibung.  Wenn Sie beispielsweise den Namespace „MyBackgroundTasks“ und eine Klasse „BackgroundTask1“ haben, die Ihren Hintergrund-Klassen-Code enthält, ist die Zeichenfolge für `taskEntryPoint` „MyBackgroundTasks.BackgruondTask1“.
+> Wenn Ihre Hintergrundaufgabe im gleichen Prozess wie Ihre App (d. h. als In-Prozess-Hintergrundaufgabe) ausgeführt wird, sollte `taskEntryPoint` nicht festgelegt werden.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -182,7 +182,7 @@ Im folgenden Beispiel wird entweder die vorhandene Aufgabe zurückgegeben, oder 
 >
 >     builder.Name = name;
 >
->     // single-process background tasks don't set TaskEntryPoint
+>     // in-process background tasks don't set TaskEntryPoint
 >     if ( taskEntryPoint != null && taskEntryPoint != String.Empty)
 >     {
 >         builder.TaskEntryPoint = taskEntryPoint;
@@ -371,14 +371,14 @@ Dieses Beispiel zeigt die Hilfsfunktion zur Registrierung der abgeschlossenen Hi
 > }
 > ```
 
-> **Hinweis**: Dieser Artikel ist für Windows10-Entwickler gedacht, die Apps für die Universelle Windows-Plattform (UWP) schreiben. Informationen zur Entwicklung unter Windows8.x oder Windows Phone8.x finden Sie in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **Hinweis**: Dieser Artikel ist für Windows10-Entwickler gedacht, die Apps für die Universelle Windows-Plattform (UWP) schreiben. Informationen zur Entwicklung für Windows8.x oder Windows Phone8.x finden Sie in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
 ## Verwandte Themen
 
 ****
 
-* [Erstellen und Registrieren einer in einem separaten Prozess ausgeführten Hintergrundaufgabe](create-and-register-a-background-task.md)
-* [Erstellen und Registrieren einer Einzelprozess-Hintergrundaufgabe](create-and-register-a-singleprocess-background-task.md)
+* [Erstellen und Registrieren einer Hintergrundaufgabe außerhalb des Prozesses](create-and-register-an-outofproc-background-task.md)
+* [Erstellen und Registrieren einer In-Process-Hintergrundaufgabe](create-and-register-an-inproc-background-task.md)
 * [Deklarieren von Hintergrundaufgaben im Anwendungsmanifest](declare-background-tasks-in-the-application-manifest.md)
 * [Behandeln einer abgebrochenen Hintergrundaufgabe](handle-a-cancelled-background-task.md)
 * [Überwachen des Status und Abschlusses von Hintergrundaufgaben](monitor-background-task-progress-and-completion.md)
@@ -388,9 +388,6 @@ Dieses Beispiel zeigt die Hilfsfunktion zur Registrierung der abgeschlossenen Hi
 * [Verwenden eines Wartungsauslösers](use-a-maintenance-trigger.md)
 * [Ausführen einer Hintergrundaufgabe für einen Timer](run-a-background-task-on-a-timer-.md)
 * [Richtlinien für Hintergrundaufgaben](guidelines-for-background-tasks.md)
-
-****
-
 * [Debuggen einer Hintergrundaufgabe](debug-a-background-task.md)
 * [So wird's gemacht: Auslösen von Anhalte-, Fortsetzungs- und Hintergrundereignissen in Windows Store-Apps (beim Debuggen)](http://go.microsoft.com/fwlink/p/?linkid=254345)
 
@@ -400,6 +397,6 @@ Dieses Beispiel zeigt die Hilfsfunktion zur Registrierung der abgeschlossenen Hi
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

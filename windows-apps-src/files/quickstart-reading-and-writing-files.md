@@ -4,8 +4,8 @@ ms.assetid: 27914C0A-2A02-473F-BDD5-C931E3943AA0
 title: Erstellen, Schreiben und Lesen einer Datei
 description: Lesen und Schreiben Sie eine Datei mithilfe eines StorageFile-Objekts.
 translationtype: Human Translation
-ms.sourcegitcommit: de0b23cfd8f6323d3618c3424a27a7d0ce5e1374
-ms.openlocfilehash: 145acd5a5a6143a31b792df721d94f9ddc5718fa
+ms.sourcegitcommit: 24f50f2c4ac7fcfe931759d42ba73e758d77f6e8
+ms.openlocfilehash: 2a9f5de71712e657bc9a0a39b668085c399ce9fb
 
 ---
 
@@ -27,7 +27,7 @@ Lesen und Schreiben Sie eine Datei mithilfe eines [**StorageFile**](https://msdn
 
 ## Voraussetzungen
 
--   **Verstehen der asynchronen Programmierung für UWP-Apps (Universelle Windows-Plattform)**
+-   **Kenntnisse in der asynchronen Programmierung für Apps für die universelle Windows-Plattform (UWP)**
 
     Informationen zum Schreiben von asynchronen Apps in C# oder Visual Basic finden Sie unter [Aufrufen asynchroner APIs in C# oder Visual Basic](https://msdn.microsoft.com/library/windows/apps/mt187337). Informationen zum Schreiben von asynchronen Apps in C++ finden Sie unter [Asynchrone Programmierung in C++](https://msdn.microsoft.com/library/windows/apps/mt187334).
 
@@ -139,7 +139,6 @@ using (var dataWriter = new Windows.Storage.Streams.DataWriter(outputStream))
 ```
 ```vb
     Dim dataWriter As New DataWriter(outputStream)
-
     dataWriter.WriteString("DataWriter has methods to write to various types, such as DataTimeOffset.")
 ```
 
@@ -181,9 +180,9 @@ string text = await Windows.Storage.FileIO.ReadTextAsync(sampleFile);
 Dim text As String = Await Windows.Storage.FileIO.ReadTextAsync(sampleFile)
 ```
 
-**Lesen von Bytes aus einer Datei mithilfe eines Puffers (2 Schritte)**
+**Lesen von Text aus einer Datei mithilfe eines Puffers (2 Schritte)**
 
-1.  Lesen Sie zunächst Bytes aus dem Puffer in die Datei, indem Sie die [**ReadBufferAsync**](https://msdn.microsoft.com/library/windows/apps/hh701468)-Methode der [**FileIO**](https://msdn.microsoft.com/library/windows/apps/hh701440)-Klasse aufrufen.
+1.  Rufen Sie zuerst die [**ReadBufferAsync**](https://msdn.microsoft.com/library/windows/apps/hh701468)-Methode der [**FileIO**](https://msdn.microsoft.com/library/windows/apps/hh701440)-Klasse auf.
 > [!div class="tabbedCodeSnippets"]
 ```cs
 var buffer = await Windows.Storage.FileIO.ReadBufferAsync(sampleFile);
@@ -260,6 +259,6 @@ Dim dataReader As New DataReader(inputStream)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

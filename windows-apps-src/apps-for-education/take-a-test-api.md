@@ -1,41 +1,40 @@
 ---
 author: TylerMSFT
 Description: "Mit der JavaScript-API für die App „Prüfung“ von Microsoft können Sie zuverlässige Bewertungen durchführen. „Prüfung“ stellt einen sicheren Browser bereit, der die Lernenden daran hindert, während eines Tests andere Computer- oder Internet-Ressourcen zu verwenden."
-title: "JavaScript-API für Microsoft Prüfung."
+title: "JavaScript-API für Prüfung."
 translationtype: Human Translation
-ms.sourcegitcommit: f2838d95da66eda32d9cea725a33fc4084d32359
-ms.openlocfilehash: d7f185e83e81583fd6d7920e5412f76f3a97edd0
+ms.sourcegitcommit: 7f578d73a9a625b0ac7d9c10f6dc8118c36b07d0
+ms.openlocfilehash: c2e1832489d36f4ccbeae4e2f67e18caf941a68f
 
 ---
 
-# JavaScript-API für Microsoft Prüfung
+# JavaScript-API für Prüfung
 
-Bei **Prüfung** handelt es sich um eine browserbasierte App, die gesperrte Onlinebewertungen für wichtige Prüfungen rendert. Es werden API-Standards des SBAC-Browsers für wichtige Tests nach dem Common-Core-Bildungsplan unterstützt. Sie können sich auf den Inhalt der Bewertung anstatt auf das Sperren von Windows konzentrieren.
+Bei [Prüfung](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) handelt es sich um eine browserbasierte App, die gesperrte Onlinebewertungen für wichtige Prüfungen rendert. Es werden API-Standards des SBAC-Browsers für wichtige Tests nach dem Common-Core-Bildungsplan unterstützt. Sie können sich auf den Inhalt der Bewertung anstatt auf das Sperren von Windows konzentrieren.
 
-**Prüfung** wird vom Microsoft-Browser Edge unterstützt und bietet eine JavaScript-API, mit der Webanwendungen Geräte für Tests sperren können.
+Prüfung wird vom Microsoft-Browser Edge unterstützt und bietet eine JavaScript-API, mit der Webanwendungen Geräte für Prüfungen sperren können.
 
 Die API (basierend auf der [Common Core SBAC API](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf)) stellt Text-zu-Sprache und die Möglichkeit von diversen Abfragen bereit (z.B. ob das Gerät gesperrt ist, wer der ausführende Benutzer ist oder welche Prozesse auf dem System ausgeführt werden).
 
 Weitere Informationen zur App selbst finden Sie unter [Technische Referenz zur App „Prüfung“](https://technet.microsoft.com/en-us/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396).
 
-**Wichtig**
-
-Die APIs funktionieren nicht in Remotesitzungen.  
-„Prüfung“ behandelt keine HTTP-Anforderungen für neue Fenster.
+> [!Important]
+> Diese APIs funktionieren nicht in Remotesitzungen.  
 
 Hilfe zur Problembehandlung finden Sie unter [Problembehandlung bei Microsoft Prüfung mithilfe der Ereignisanzeige](troubleshooting.md).
 
-**Das API von „Prüfung“ umfasst die folgenden Namespaces:**  
+## Referenzdokumentation
+Die Prüfungs-API umfasst die folgenden Namespaces. 
 
 | Namespace | Beschreibung |
 |-----------|-------------|
-|[Sicherheitsnamespace](#security-namespace)| Text-zu-Sprache-Funktion|
-|[TTS-Namespace](#tts-namespace)|Ermöglicht das Sperren des Geräts|
+|[Sicherheitsnamespace](#security-namespace)|Ermöglicht das Sperren des Geräts|
+|[TTS-Namespace](#tts-namespace)|Text-zu-Sprache-Funktion|
 
 
- ## Sicherheitsnamespace
+ ### Sicherheitsnamespace
 
-Ermöglicht das Sperren des Geräts, das Überprüfen der Liste der Benutzer- und Systemprozesse, das Abrufen von MAC- und IP-Adressen und das Löschen von zwischengespeicherten Webressourcen.
+Der Sicherheitsnamespace ermöglicht das Sperren des Geräts, das Überprüfen der Liste der Benutzer- und Systemprozesse, das Abrufen von MAC- und IP-Adressen und das Löschen von zwischengespeicherten Webressourcen.
 
 | Methode | Beschreibung   |
 |--------|---------------|
@@ -45,9 +44,10 @@ Ermöglicht das Sperren des Geräts, das Überprüfen der Liste der Benutzer- un
 |[getIPAddressList](#getIPAddressList) | Ruft die Liste der IP-Adressen für das Gerät ab |
 |[getMACAddress](#getMACAddress)|Ruft die Liste der MAC-Adressen für das Gerät ab|
 |[getProcessList](#getProcessList)|Ruft die Liste der ausgeführten Benutzer- und Systemprozesse ab|
-|[isEnvironmentSecure](#isEnvironmentSecure)|Stellt fest, ob auf das Gerät noch der Sperrmodus-Kontext angewendet wird|
+|[isEnvironmentSecure](#isEnvironmentSecure)|Stellt fest, ob auf das Gerät noch der Sperrmodus-Kontext angewendet wird|  
 
-<span id="clearCache" />
+---
+<span id="clearCache"/>
 ### void clearCache()
 Löscht zwischengespeicherte Webressourcen.
 
@@ -114,6 +114,8 @@ Ruft die Liste der IP-Adressen für das Gerät ab.
 **Rückgabewert**  
 `An array of IP addresses.`
 
+---
+
 <span id="getMACAddress" />
 ### string[] getMACAddress()
 Ruft die Liste der MAC-Adressen für das Gerät ab.
@@ -170,7 +172,10 @@ Windows10, Version1607
 
 ---
 
-## TTS-Namespace
+### TTS-Namespace
+
+Der TTS-Namespace behandelt die Text-zu-Sprache-Funktion der App.
+
 | Methode | Beschreibung |
 |--------|-------------|
 |[getStatus](#getStatus) | Ruft den Status der Sprachwiedergabe ab|
@@ -181,7 +186,9 @@ Windows10, Version1607
 |[stop](#stop)|Beendet die Sprachsynthese|
 
 > [!Tip]
-> Die [Microsoft Edge Speech Synthesis API](https://blogs.windows.com/msedgedev/2016/06/01/introducing-speech-synthesis-api/) ist eine Implementierung der [W3C-Sprach-API](https://dvcs.w3.org/hg/speech-api/raw-file/tip/webspeechapi.html). Wir empfehlen Entwicklern, diese API nach Möglichkeit zu verwenden.
+> Die [Microsoft Edge Speech Synthesis API](https://blogs.windows.com/msedgedev/2016/06/01/introducing-speech-synthesis-api/) ist eine Implementierung der [W3C-Sprach-API](https://dvcs.w3.org/hg/speech-api/raw-file/tip/webspeechapi.html). Entwicklern wird empfohlen, diese API nach Möglichkeit zu verwenden.
+
+---
 
 <span id="getStatus" />
 ### string getStatus()
@@ -260,7 +267,7 @@ Windows10, Version1607
 
 <span id="speak" />
 ### void speak(string text, object options, function callback)
-Clientseitige Text-zu-Sprache-Synthese.
+Startet die clientseitige Text-zu-Sprache-Synthese.
 
 **Syntax**  
 `void browser.tts.speak(“Hello world”, options, callback);`
@@ -283,13 +290,13 @@ var options = {
 
 **Anmerkung** Optionsvariablen müssen mit Kleinbuchstaben geschrieben werden. Die Parameter „gender“, „language“ und „voice“ müssen als Zeichenfolgen angegeben werden.
 Das Markup für Lautstärke und Tonhöhe muss innerhalb der SSML-Datei (Speech Synthesis Markup Language) und nicht innerhalb des options-Objekts erfolgen.
-
 Beim options-Objekt müssen Reihenfolge, Bezeichnung und Groß-/Kleinschreibung dem obigen Beispiel entsprechen.
 
 **Anforderungen**  
 Windows10, Version1607
 
 ---
+
 <span id="stop" />
 ### void stop()
 Beendet die Sprachsynthese.
@@ -308,6 +315,6 @@ Windows10, Version1607
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -4,8 +4,8 @@ ms.assetid: B4A550E7-1639-4C9A-A229-31E22B1415E7
 title: Sensorausrichtung
 description: "Sensordaten der Klassen Accelerometer, Gyrometer, Compass, Inclinometer und OrientationSensor sind durch ihre Referenzachsen definiert. Diese Achsen werden durch das Querformat des Geräts bestimmt und drehen sich mit dem Gerät, wenn es vom Benutzer gedreht wird."
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: f0f9c7184c81edf8136849bf8a7bd9d04c340f62
+ms.sourcegitcommit: 62b4042cf1c6296c908a12feb5b2fcbd2b9b8734
+ms.openlocfilehash: 9deb0327f67350af49ba19224a75e766ff9805d7
 
 ---
 # Sensorausrichtung
@@ -21,30 +21,30 @@ Sensordaten der Klassen [**Accelerometer**](https://msdn.microsoft.com/library/w
 
 ## Bildschirmausrichtung und Geräteausrichtung
 
-Um die Referenzachse für Sensoren begreifen zu können, muss zwischen Bildschirmausrichtung und Geräteausrichtung unterschieden werden. Bei der Bildschirmausrichtung handelt es sich um die Richtung, in der Text und Bilder auf dem Bildschirm angezeigt werden, wohingegen es sich bei der Geräteausrichtung um die physische Position des Geräts handelt. Im folgenden Bild sind sowohl Bildschirm- als auch Geräteausrichtung im **Landscape**-Format.
+Um die Referenzachse für Sensoren begreifen zu können, muss zwischen Bildschirmausrichtung und Geräteausrichtung unterschieden werden. Bei der Bildschirmausrichtung handelt es sich um die Richtung, in der Text und Bilder auf dem Bildschirm angezeigt werden, wohingegen es sich bei der Geräteausrichtung um die physische Position des Geräts handelt. Im folgenden Bild sind sowohl das Gerät als auch die Anzeige im **Querformat** ausgerichtet. (Beachten Sie, dass die abgebildeten Sensorachsen nur für Geräte gelten, die für das Querformat ausgelegt sind).
 
-![Bildschirm- und Geräteausrichtung im Querformat](images/accelerometer-axis-orientation-landscape-with-text.png)
+![Bildschirm- und Geräteausrichtung im Querformat](images/sensor-orientation-a.PNG)
 
 Im folgenden Bild sind sowohl Bildschirm- als auch Geräteausrichtung im **LandscapeFlipped**-Format.
 
-![Bildschirm- und Geräteausrichtung im LandscapeFlipped-Format](images/accelerometer-axis-orientation-landscape-180-with-text.png)
+![Bildschirm- und Geräteausrichtung im LandscapeFlipped-Format](images/sensor-orientation-b.PNG)
 
 Das nächste Bild zeigt die Anzeigeausrichtung im Querformat und die Geräteausrichtung im LandscapeFlipped-Format.
 
-![Bildschirmausrichtung im Querformat und Geräteausrichtung im LandscapeFlipped-Format](images/accelerometer-axis-orientation-landscape-180-with-text-inverted.png)
+![Bildschirmausrichtung im Querformat und Geräteausrichtung im LandscapeFlipped-Format](images/sensor-orientation-c.PNG)
 
 Sie können die Ausrichtungswerte mithilfe der [**DisplayInformation**](https://msdn.microsoft.com/library/windows/apps/Dn264258)-Klasse abfragen, indem Sie die [**GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.display.displayinformation.getforcurrentview.aspx)-Methode mit der [**CurrentOrientation**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.display.displayinformation.currentorientation.aspx)-Eigenschaft verwenden. Anschließend können Sie durch einen Vergleich mit der [**DisplayOrientations**](https://msdn.microsoft.com/library/windows/apps/BR226142)-Enumeration eine Logik erstellen. Bedenken Sie, dass Sie für jede unterstützte Ausrichtung eine Konvertierung der Referenzachsen in die jeweilige Ausrichtung unterstützen müssen.
 
 ## Für Querformat und für Hochformat ausgelegte Geräte
 
-Hersteller bieten Geräte an, die sowohl für das Quer- als auch das Hochformat ausgelegt sind. Wenn Hersteller Komponenten in Geräte integrieren, erfolgt dies auf einheitliche und konsistente Weise, damit alle Geräte innerhalb desselben Referenzrahmens betrieben werden. Die folgende Tabelle enthält die Gerätesensorachsen (Hoch- und Querformat).
+Hersteller bieten Geräte an, die sowohl für das Quer- als auch das Hochformat ausgelegt sind. Der Referenzrahmen weicht zwischen Geräten ab, die für das Querformat (z.B. Desktops und Laptops) und das Hochformat (z.B. Smartphones und einige Tablets) ausgelegt sind. Die folgende Tabelle enthält die Gerätesensorachsen für Geräte, die jeweils für Hoch- oder Querformat ausgelegt sind.
 
 | Ausrichtung | Für Querformat ausgelegt | Für Hochformat ausgelegt |
 |-------------|-----------------|----------------|
-| **Querformat** | ![Querformatgerät im Querformat](images/accelerometer-axis-orientation-landscape.png) | ![Hochformatgerät im Querformat](images/accelerometer-axis-orientation-portrait-270.png) |
-| **Hochformat** | ![Querformatgerät im Hochformat](images/accelerometer-axis-orientation-landscape-90.png) | ![Hochformatgerät im Hochformat](images/accelerometer-axis-orientation-portrait.png) |
-| **LandscapeFlipped ** | ![Querformatgerät in LandscapeFlipped-Ausrichtung](images/accelerometer-axis-orientation-landscape-180.png) | ![Hochformatgerät in LandscapeFlipped-Ausrichtung](images/accelerometer-axis-orientation-portrait-90.png) | 
-| **PortraitFlipped** | ![Querformatgerät in PortraitFlipped-Ausrichtung](images/accelerometer-axis-orientation-landscape-270.png)| ![Hochformatgerät in PortraitFlipped-Ausrichtung](images/accelerometer-axis-orientation-portrait-180.png) |
+| **Querformat** | ![Querformatgerät im Querformat](images/sensor-orientation-0.PNG) | ![Hochformatgerät im Querformat](images/sensor-orientation-1.PNG) |
+| **Hochformat** | ![Querformatgerät im Hochformat](images/sensor-orientation-2.PNG) | ![Hochformatgerät im Hochformat](images/sensor-orientation-3.PNG) |
+| **LandscapeFlipped ** | ![Querformatgerät in LandscapeFlipped-Ausrichtung](images/sensor-orientation-4.PNG) | ![Hochformatgerät in LandscapeFlipped-Ausrichtung](images/sensor-orientation-5.PNG) | 
+| **PortraitFlipped** | ![Querformatgerät in PortraitFlipped-Ausrichtung](images/sensor-orientation-6.PNG)| ![Hochformatgerät in PortraitFlipped-Ausrichtung](images/sensor-orientation-7.PNG) |
 
 ## Geräte, die die Anzeige übertragen, und monitorlose Geräte
 
@@ -171,6 +171,6 @@ Die [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR20
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

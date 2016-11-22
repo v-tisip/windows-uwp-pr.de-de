@@ -4,8 +4,8 @@ title: Spiele und DirectX
 description: "Die Universelle Windows-Plattform (UWP) bietet neue Möglichkeiten zum Erstellen, Verteilen und Monetisieren von Spielen. Hier erhalten Sie Informationen zum Starten eines neuen Spiels oder Portieren eines vorhandenen Spiels."
 ms.assetid: 4073b835-c900-4ff2-9fc5-da52f9432a1f
 translationtype: Human Translation
-ms.sourcegitcommit: adaff9abeb0ae8f9c9deb964b18e673c4d4c5f73
-ms.openlocfilehash: fccc85584e84bf3364130fe80c61b75c6377c0c8
+ms.sourcegitcommit: 708e998e414f01bc6544d7f2435e7145ac84902b
+ms.openlocfilehash: 6437f3620afadd0b421bf11f1aa4f86558d50de1
 
 ---
 
@@ -42,6 +42,7 @@ Die Universelle Windows-Plattform (UWP) bietet neue Möglichkeiten zum Erstellen
 | [Netzwerkfunktionen für Spiele](work-with-networking-in-your-directx-game.md) | Erfahren Sie, wie Sie Netzwerkfeatures entwickeln und in ein DirectX-Spiel integrieren. |
 | [Barrierefreiheit von Spielen](accessibility-for-games.md) | Erfahren Sie, wie Sie die Barrierefreiheit von Spielen verbessern. |
 | [Cloud für Spiele](cloud-for-games.md) | Erfahren Sie, wie Sie Cloudtechnologien für die Entwicklung von Spielen nutzen können. |
+| [Gewinnbringende Nutzung von Spielen](monetization-for-games.md) | Hier erfahren Sie, wie Sie Ihr Spiel gewinnbringend nutzen können. |
 | [Interoperabilität von DirectX und XAML](directx-and-xaml-interop.md) | In Ihrem UWP-Spiel können Sie eine Kombination aus Extensible Application Markup Language (XAML) und Microsoft DirectX verwenden. |
 | [Packen Ihres Spiels](package-your-windows-store-directx-game.md) | Umfangreichere UWP-Spiele können leicht relativ groß werden. Dies gilt besonders für Spiele, bei denen mehrere Sprachen mit regionsspezifischen Ressourcen unterstützt werden oder die über optionale HD-Ressourcen verfügen. In diesem Thema erfahren Sie, wie Sie App-Pakete und App-Bündel zum Anpassen der App verwenden, damit Kunden nur die wirklich benötigten Ressourcen erhalten. |
 | [Konzeptgenehmigung](concept-approval.md) | Hier erfahren Sie, wie Sie Ihr Produkt zur Konzeptgenehmigung übermitteln, die Sie benötigen, wenn das Produkt auf der Xbox ausgeführt wird oder Xbox Live verwendet. |
@@ -72,6 +73,6 @@ Damit Sie die Übersichten und Lernprogramme zur Spieleentwicklung optimal nutze
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

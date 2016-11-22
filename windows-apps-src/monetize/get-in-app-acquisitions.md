@@ -4,8 +4,8 @@ ms.assetid: 1599605B-4243-4081-8D14-40F6F7734E25
 description: "Verwenden Sie diese Methode in der Windows Store-Analyse-API, um die aggregierten Kaufdaten für ein Add-On während eines bestimmten Zeitraums und andere optionale Filter abzurufen."
 title: "Abrufen von Add-On-Käufen"
 translationtype: Human Translation
-ms.sourcegitcommit: ecb0f5263b7f7f470484e9bd579b7bdb6efcdfa4
-ms.openlocfilehash: 9d895200e6d1bc823ebcb52e0b034883f5a059e0
+ms.sourcegitcommit: 7b73682ea36574f8b675193a174d6e4b4ef85841
+ms.openlocfilehash: 642bcab934a18631477e3709dcdeab0a9289844e
 
 ---
 
@@ -14,7 +14,7 @@ ms.openlocfilehash: 9d895200e6d1bc823ebcb52e0b034883f5a059e0
 
 
 
-Verwenden Sie diese Methode in der Windows Store-Analyse-API, um die aggregierten Kaufdaten für ein Add-On (auch als In-App-Produkte (IAPs) bezeichnet) während eines bestimmten Zeitraums und andere optionale Filter abzurufen. Diese Methode gibt die Daten im JSON-Format zurück.
+Verwenden Sie diese Methode in der Windows Store-Analyse-API, um die aggregierten Kaufdaten für Add-Ons (auch als In-App-Produkte oder IAPs bezeichnet) für Ihre App im JSON-Format während eines bestimmten Zeitraums und andere optionale Filter abrufen. Diese Informationen sind auch im [Bericht "Add-On-Käufe"](../publish/add-on-acquisitions-report.md) im Windows Dev Center-Dashboard verfügbar.
 
 ## Voraussetzungen
 
@@ -129,6 +129,33 @@ Die Parameter *applicationId* oder *inAppProductId* sind erforderlich. Um Kaufda
 <p>Der Parameter <em>order</em> ist optional und kann <strong>asc</strong> oder <strong>desc</strong> sein, um die auf- oder absteigende Anordnung der einzelnen Felder anzugeben. Der Standard ist <strong>asc</strong>.</p>
 <p>Dies ist eine Beispielzeichenfolge für <em>orderby</em>: <em>orderby=date,market</em></p></td>
 <td align="left">Nein</td>
+</tr>
+<tr class="even">
+<td align="left">groupby</td>
+<td align="left">string</td>
+<td align="left"><p>Eine Anweisung, die nur auf die angegebenen Felder Datenaggregationen anwendet. Sie können die folgenden Felder angeben:</p>
+<ul>
+<li><strong>date</strong></li>
+<li><strong>applicationName</strong></li>
+<li><strong>inAppProductName</strong></li>
+<li><strong>acquisitionType</strong></li>
+<li><strong>ageGroup</strong></li>
+<li><strong>storeClient</strong></li>
+<li><strong>gender</strong></li>
+<li><strong>market</strong></li>
+<li><strong>osVersion</strong></li>
+<li><strong>deviceType</strong></li>
+<li><strong>orderName</strong></li>
+</ul>
+<p>Die zurückgegebenen Datenzeilen enthalten die Felder, die im Parameter <em>groupby</em> angegeben sind, sowie die folgenden:</p>
+<ul>
+<li><strong>date</strong></li>
+<li><strong>applicationId</strong></li>
+<li><strong>inAppProductId</strong></li>
+<li><strong>acquisitionQuantity</strong></li>
+</ul>
+<p>Der Parameter <em>groupby</em> kann mit dem Parameter <em>aggregationLevel</em> verwendet werden. Beispiel: <em>&amp;groupby=ageGroup,market&amp;aggregationLevel=week</em></p></td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
@@ -264,7 +291,7 @@ Authorization: Bearer <your access token>
 
 | Wert      | Typ   | Beschreibung                                                                                                                                                                                                                                                                                |
 |------------|--------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Wert      | Array  | Ein Array von Objekten, die aggregierte Add-On-Kaufdaten enthalten. Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie unten im Abschnitt [Add-On-Kaufwerte](#add-on-acquisition-values).                                                                                                              |
+| Value      | array  | Ein Array von Objekten, die aggregierte Add-On-Kaufdaten enthalten. Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie unten im Abschnitt [Add-On-Kaufwerte](#add-on-acquisition-values).                                                                                                              |
 | @nextLink  | string | Wenn weitere Seiten mit Daten vorhanden sind, enthält diese Zeichenfolge einen URI, mit dem Sie die nächste Seite mit Daten anfordern können. Beispielsweise wird dieser Wert zurückgegeben, wenn der Parameter **top** der Anforderung auf 10000 festgelegt ist, es jedoch mehr als 10.000 Zeilen mit Add-On-Kaufdaten für die Abfrage gibt. |
 | TotalCount | int    | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.                                                                                                                                                                                                                                 |
 
@@ -279,7 +306,7 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 |---------------------|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | date                | string  | Das erste Datum im Datumsbereich für die Kaufdaten. Wenn die Anforderung einen einzelnen Tag angibt, ist dieses Datum dieser Wert. Wenn die Anforderung eine Woche, einen Monat oder einen anderen Datumsbereich angibt, ist dieser Wert das erste Datum in diesem Datumsbereich. |
 | inAppProductId      | string  | Die Store-ID des Add-Ons, für das Sie Kaufdaten abrufen.                                                                                                                                                                 |
-| inAppProductName    | string  | Der Anzeigename des Add-Ons.                                                                                                                                                                                                             |
+| inAppProductName    | string  | Der Anzeigename des Add-Ons. Dieser Wert wird in den zurückgegebenen Daten nur angezeigt, wenn der Parameter *aggregationLevel* auf **day** festgelegt ist. Dies gilt nicht, wenn im *groupby*-Parameter das Feld **InAppProductName** angegeben wurde.                                                                                                                                                                                                            |
 | applicationId       | string  | Die Store-ID der App, für die Sie die Add-On-Kaufdaten abrufen möchten.                                                                                                                                                           |
 | applicationName     | string  | Der Anzeigename der App.                                                                                                                                                                                                             |
 | deviceType          | string  | Der Typ des Geräts, auf dem der Kauf ausgeführt wurde. Eine Liste der unterstützten Zeichenfolgen finden Sie oben im Abschnitt [Filterfelder](#filter-fields).                                                                                                  |
@@ -325,7 +352,8 @@ Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese 
 
 ## Verwandte Themen
 
-* [Zugreifen auf Analysedaten mit Windows Store-Diensten](access-analytics-data-using-windows-store-services.md)
+* [Bericht zu Add-On-Käufen](../publish/add-on-acquisitions-report.md)
+* [Zugreifen auf Analysedaten mit WindowsStore-Diensten](access-analytics-data-using-windows-store-services.md)
 * [Abrufen von App-Käufen](get-app-acquisitions.md)
 * [Abrufen von Fehlerberichtsdaten](get-error-reporting-data.md)
 * [Abrufen von App-Bewertungen](get-app-ratings.md)
@@ -337,6 +365,6 @@ Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese 
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

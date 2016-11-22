@@ -1,33 +1,35 @@
 ---
 author: jnHs
-Description: "Sie können Dateien mit Analysedaten herunterladen, um Statistikdaten und Informationen offline anzuzeigen."
+Description: "Sie können TSV-Dateien mit Analysedaten herunterladen, um Statistikdaten und Informationen offline anzuzeigen."
 title: Herunterladen von Analyseberichten
 ms.assetid: BCA61ABF-16ED-42C3-9014-68629CB5A24F
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 99b751146adc2394e10c6deae58bd0fdb124888d
+ms.sourcegitcommit: 0cd83d5e93952689386bf2ae08fa3bf4e924dbdb
+ms.openlocfilehash: 7ec649d0847e60a6bedadc4164809324a17bf377
 
 ---
 
 # Herunterladen von Analyseberichten
 
 
-Sie können Dateien mit Analysedaten herunterladen, um Statistikdaten und Informationen offline anzuzeigen. Daten werden im TSV-Dateiformat (durch Trennzeichen getrennte Werte) bereitgestellt, das in einer Vielzahl von Programmen geöffnet werden kann.
+Sie können Dateien mit Analysedaten herunterladen, um Statistikdaten und Informationen offline anzuzeigen.
 
 ## So laden Sie einen bestimmten Bericht herunter
 
-1.  Wählen Sie zunächst die App aus, für die Sie Informationen herunterladen möchten.
+1.  Wählen Sie im Windows Dev Center-Dashboard im oberen Navigationsbereich **Apps** aus.
+2.  Wählen Sie auf der Seite **Apps** eine Ihrer Apps aus.
+3.  Erweitern Sie im linken Navigationsmenü **Analysen**, und wählen Sie dann einen der verfügbaren Berichte aus.
+4.  Wählen Sie auf der Berichtsseite **Bericht herunterladen** aus.
+5.  Geben Sie in der Dropdownliste **App auswählen** an, für welche App der Bericht generiert werden soll. Wenn der Bericht alle Apps abdecken soll, wählen Sie **Alle Apps** aus.
+6.  Geben Sie in der Dropdownliste **Zum Download verfügbare Berichte** an, welchen Bericht Sie herunterladen möchten.
+7.  Wählen Sie in den Dropdownlisten **Aggregationsebene** und **Datumsbereich** die für den Bericht gewünschten Optionen aus. Beachten Sie, dass je nach ausgewähltem Berichtstyp unterschiedliche Optionen angezeigt werden können.
+8.  Wählen Sie die Schaltfläche **Berichte herunterladen** aus, speichern Sie die TSV-Datei, und öffnen Sie die Datei in Microsoft Excel oder einem anderen Programm, das das TSV-Dateiformat (durch Tabstopp getrennte Datei) unterstützt.
 
-    > **Tipp** Sie können Informationen für alle Apps oder für eine bestimmte App herunterladen. Beim Herunterladen von Berichten sind Sie nicht auf die App beschränkt, in der Sie gearbeitet haben, als Sie die Seite **Berichte herunterladen** im Abschnitt **Analyse** geöffnet haben.
-
-2.  Wählen Sie einen der verfügbaren Berichte aus.
-
-3.  Wählen Sie aus den Dropdownlisten **Aggregationsebene** und **Datumsbereich** unter den verfügbaren Werten aus. Beachten Sie, dass je nach ausgewähltem Berichtstyp unterschiedliche Optionen angezeigt werden können.
-
-4.  Klicken Sie auf die Schaltfläche **Berichte herunterladen**, und speichern oder öffnen Sie die TSV-Datei.
+## Verwandte Themen
+- [Analysen](analytics.md)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

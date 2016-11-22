@@ -1,11 +1,11 @@
 ---
-author: drewbatgit
+author: laurenhughes
 ms.assetid: 98BD79B3-F420-43C5-98D3-52EBDDB479A0
 description: "In diesem Artikel sind die Codierungsoptionen aufgeführt, die mit BitmapEncoder verwendet werden können."
 title: Referenz zu BitmapEncoder-Optionen
 translationtype: Human Translation
-ms.sourcegitcommit: de54d389488d8298ea1341b0a6f27a476d38584e
-ms.openlocfilehash: 0ccaf55215cb82633313e145a126db92aa6d16e6
+ms.sourcegitcommit: fd5b52a1d431b9396a4b162077d4f8d6246cd597
+ms.openlocfilehash: 4edf119d0f8830fec9ece34f1a7eb8f3ffbe67dd
 
 ---
 
@@ -27,14 +27,14 @@ In diesem Artikel sind die Codierungsoptionen aufgeführt, die mit [**BitmapEnco
 | Chrominance             | uint32Array  | Ein Array mit 64Elementen, das die Quantifizierungskonstanten für die Chrominanz enthält                             | JPEG          |
 | JpegYCrCbSubsampling    | uint8        | Verwenden Sie die [**JpegSubsamplingMode**](https://msdn.microsoft.com/library/windows/apps/br226386)-Enumeration                    | JPEG          |
 | SuppressApp0            | boolean      | Gibt an, ob die Erstellung eines App0-Metadatenblocks unterdrückt wird                                        | JPEG          |
-| EnableV5Header32bppBGRA | boolean      | Gibt an, ob als Version5 des BMP-Formats, die Alpha-Werte unterstützt, codiert werden soll                                         | BMP           |
+| EnableV5Header32bppBGRA | boolean      | Gibt an, ob die Codierung als Version5 des BMP-Formats erfolgen soll, die Alphawerte unterstützt.                                         | BMP           |
 
  
 
 ## Verwandte Themen
 
 * [Erstellen, Bearbeiten und Speichern von Bitmapbildern](imaging.md)
- 
+* [Unterstützte Codecs](supported-codecs.md)
 
  
 
@@ -44,6 +44,6 @@ In diesem Artikel sind die Codierungsoptionen aufgeführt, die mit [**BitmapEnco
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

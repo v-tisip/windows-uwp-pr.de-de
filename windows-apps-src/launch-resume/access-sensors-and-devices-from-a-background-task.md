@@ -4,8 +4,8 @@ title: "Zugreifen auf Sensoren und Geräte von einer Hintergrundaufgabe"
 description: "Mit DeviceUseTrigger kann Ihre universelle Windows-App im Hintergrund auf Sensoren und Peripheriegeräte zugreifen. Dies ist selbst dann möglich, wenn die Vordergrund-App angehalten wird."
 ms.assetid: B540200D-9FF2-49AF-A224-50877705156B
 translationtype: Human Translation
-ms.sourcegitcommit: 42697a185eb941d44714a682931b3e418a123ad1
-ms.openlocfilehash: dcaae6cace6a95cbd03af1571395656a8ee3a4fa
+ms.sourcegitcommit: 7d1c160f8b725cd848bf8357325c6ca284b632ae
+ms.openlocfilehash: 060cec50933860407679edbad5d2cd8a6d3e0396
 
 ---
 
@@ -20,7 +20,7 @@ ms.openlocfilehash: dcaae6cace6a95cbd03af1571395656a8ee3a4fa
 Erstellen Sie zum Zugreifen auf Sensoren oder Peripheriegeräte im Hintergrund eine Hintergrundaufgabe, für die [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) verwendet wird. Ein Beispiel für die Vorgehensweise auf einem PC finden Sie unter [Beispiel für ein benutzerdefiniertes USB-Gerät](http://go.microsoft.com/fwlink/p/?LinkId=301975 ). Ein Beispiel für ein Smartphone finden Sie unter [Beispiel für Hintergrundsensoren](http://go.microsoft.com/fwlink/p/?LinkId=393307).
 
 > [!Important]
-> **DeviceUseTrigger** kann nicht für Einzelprozess-Hintergrundaufgaben verwendet werden. Die Informationen in diesem Thema gelten nur für Hintergrundaufgaben, die in einem separaten Prozess ausgeführt werden.
+> **DeviceUseTrigger** kann nicht für In-Process-Hintergrundaufgaben verwendet werden. Die Informationen in diesem Thema gelten nur für Out-of-Process-Hintergrundaufgaben.
 
 ## Hintergrundaufgabe für Geräte – Übersicht
 
@@ -178,6 +178,6 @@ Zusätzlich zu [**Unregister**](https://msdn.microsoft.com/library/windows/apps/
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

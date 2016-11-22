@@ -4,12 +4,12 @@ Description: "Neben den normalen, für alle UWP-Apps verfügbaren APIs gibt es a
 Search.Product: eADQiWindows 10XVcnh
 title: "Erweiterungen für konvertierte Desktop-Apps"
 translationtype: Human Translation
-ms.sourcegitcommit: 09ddc8cad403a568a43e08f32abeaf0bbd40d59a
-ms.openlocfilehash: 2aa55797ed3a6588b3a27158282a02827fbd2109
+ms.sourcegitcommit: 8429e6e21319a03fc2a0260c68223437b9aed02e
+ms.openlocfilehash: 405b9b100be93f7098eb384d6b48b8690f5e6309
 
 ---
 
-# Erweiterungen für konvertierte Desktop-Apps
+# App-Erweiterungen für die Desktop-Brücke
 
 Konvertierte Desktopanwendungen können mit einer breiten Palette von UWP-APIs (APIs der universellen Windows-Plattform) erweitert werden. Neben den normalen, für alle UWP-Apps verfügbaren APIs gibt es aber auch einige Erweiterungen und APIs, die nur für konvertierte Desktop-Apps zur Verfügung stehen. Diese Features sind für Szenarien wie das Starten eines Prozesses, wenn sich der Benutzer anmeldet, oder die Integration des Explorers vorgesehen und sollen einen reibungslosen Übergang von der ursprünglichen Desktop-App zum konvertierten App-Paket ermöglichen.
 
@@ -106,7 +106,7 @@ Beispiel:
 
 - *FileType* ist die von Ihrer App unterstützte Erweiterung.
 
-### Kontextmenüverben 
+### Dateikontextmenüverben 
 
 Benutzer öffnen Dateien in der Regel per Doppelklick. Klickt ein Benutzer dagegen mit der rechten Maustaste auf eine Datei, erscheint ein Kontextmenü mit verschiedenen Optionen (üblicherweise Verben wie „Öffnen“, „Bearbeiten“ und „Drucken“, aber auch Optionen wie „Vorschau“), die eine differenziertere Interaktion mit der Datei ermöglichen. 
 
@@ -125,6 +125,10 @@ Beispiel:
 - *Verb Parameters* ist die Liste mit Argumentparametern und -werten für das Verb. Bei vertrauenswürdigen konvertierten Apps werden diese bei der Aktivierung als Ereignisargumente übergeben, um eine Anpassung des Verhaltens für unterschiedliche Aktivierungsverben zu ermöglichen. Wenn eine Variable einen Pfad enthalten kann, sollten Sie den Wert in Anführungszeichen einschließen, damit auch Pfade mit Leerzeichen ordnungsgemäß übergeben werden. Beachten Sie, dass bei UWP-Apps keine Parameter übergeben werden können. Diese erhalten stattdessen die ID (siehe vorheriger Aufzählungspunkt). 
 - *Verb Extended* gibt an, dass das Verb nur angezeigt werden soll, wenn der Benutzer **UMSCHALT** gedrückt hält, wenn er zum Anzeigen des Kontextmenüs mit der rechten Maustaste auf die Datei klickt. Dieses Attribut ist optional und standardmäßig auf *False* (Verb soll immer angezeigt werden) festgelegt. Dieses Verhalten muss für jedes Verb einzeln angegeben werden – mit Ausnahme von „Öffnen“: Bei diesem Verb ist der Wert immer *False*. 
 - *Verb* ist der Name, der im Kontextmenü des Datei-Explorers angezeigt wird. Diese Zeichenfolge kann mithilfe von ```ms-resource``` lokalisiert werden.
+
+### Shellkontextmenüverben
+
+Das Hinzufügen von Elementen zum Ordnerkontextmenü der Shell wird derzeit nicht unterstützt. 
 
 ### Mehrfachauswahlmodell
 
@@ -179,6 +183,6 @@ Im Anschluss finden Sie ein vollständiges Beispiel mit vielen der oben beschrie
 - [App-Paketmanifest](https://msdn.microsoft.com/library/windows/apps/br211474.aspx)
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 
