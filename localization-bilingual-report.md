@@ -1,28 +1,11 @@
 # <a name='report-top'></a> Localization Bilingual Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [windows-apps-src\launch-resume\how-to-create-and-consume-an-app-service.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/8b3ad18a3a0561d344b0d88a529cd929dafd9e4b?path=windows-apps-src%2Flaunch-resume%2Fhow-to-create-and-consume-an-app-service.md&_a=contents) | InSyncHandedBackSuccess | [Details](#c925015e9f74edcb1859ca10279beefc31286b1e4754)
 
 ## Item Details
-##### <a name='c925015e9f74edcb1859ca10279beefc31286b1e4754'></a> Source: [windows-apps-src\launch-resume\how-to-create-and-consume-an-app-service.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/8b3ad18a3a0561d344b0d88a529cd929dafd9e4b?path=windows-apps-src%2Flaunch-resume%2Fhow-to-create-and-consume-an-app-service.md&_a=contents)
-* Status: InSyncHandedBackSuccess
-* Target File: [windows-apps-src\launch-resume\how-to-create-and-consume-an-app-service.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/4148853fe613a4ed0ac5d22b7d6dec6603f31b00?path=windows-apps-src%2Flaunch-resume%2Fhow-to-create-and-consume-an-app-service.md&_a=contents)
-* Handoff File: [how-to-create-and-consume-an-app-service.a15dae966f1f3c76bc61f81f7ed50b4a7fe0e782.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/ec8e50328908a22186e6cafafc92774f018a2509?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fhow-to-create-and-consume-an-app-service.a15dae966f1f3c76bc61f81f7ed50b4a7fe0e782.de-de.xlf&_a=contents)
-* Handoff Datetime: 2016-11-22 18:58:52
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [how-to-create-and-consume-an-app-service.a15dae966f1f3c76bc61f81f7ed50b4a7fe0e782.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/43805d0152f14d4022b2d3ccd5c4994292bb5ca5?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fhow-to-create-and-consume-an-app-service.a15dae966f1f3c76bc61f81f7ed50b4a7fe0e782.de-de.xlf&_a=contents)
-* Handback Datetime: 2016-11-23 16:40:26
-* Bilingual File: [how-to-create-and-consume-an-app-service.a15dae966f1f3c76bc61f81f7ed50b4a7fe0e782.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/43805d0152f14d4022b2d3ccd5c4994292bb5ca5?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fhow-to-create-and-consume-an-app-service.a15dae966f1f3c76bc61f81f7ed50b4a7fe0e782.de-de.xlf&_a=contents)
-* Bilingual Datetime: 2016-11-23 16:43:51
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
