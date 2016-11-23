@@ -3,10 +3,10 @@ author: TylerMSFT
 title: Erstellen und Verwenden eines App-Diensts
 description: "Hier erfahren Sie, wie Sie eine App für die Universelle Windows-Plattform (UWP) erstellen, die Dienste für andere UWP-Apps bereitstellen kann, und wie Sie diese Dienste nutzen."
 ms.assetid: 6E48B8B6-D3BF-4AE2-85FB-D463C448C9D3
-keywords: app to app communication interprocess communication IPC Background messaging background communication app to app
+keyword: app to app communication, interprocess communication, IPC, Background messaging, background communication, app to app
 translationtype: Human Translation
-ms.sourcegitcommit: aec7b768ae3bcf0a45a48b2f9a204484b9059dc9
-ms.openlocfilehash: 2449a3198e9265d187557608e097c1369eb471c2
+ms.sourcegitcommit: 8b3ad18a3a0561d344b0d88a529cd929dafd9e4b
+ms.openlocfilehash: c925015e9f74edcb1859ca10279beefc31286b1e
 
 ---
 
@@ -380,6 +380,6 @@ namespace MyAppService
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO4-->
 
 
