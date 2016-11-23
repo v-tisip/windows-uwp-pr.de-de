@@ -1,49 +1,12 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 2
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [windows-apps-src\launch-resume\how-to-create-and-consume-an-app-service.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/8b3ad18a3a0561d344b0d88a529cd929dafd9e4b?path=windows-apps-src%2Flaunch-resume%2Fhow-to-create-and-consume-an-app-service.md&_a=contents) | InSyncHandedBackSuccess | [Details](#c925015e9f74edcb1859ca10279beefc31286b1e4754)
- [windows-apps-src\publish\payment-thresholds-methods-and-timeframes.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/85b9993334ecfb3ea2dc5a196cb5b5f9dc99c985?path=windows-apps-src%2Fpublish%2Fpayment-thresholds-methods-and-timeframes.md&_a=contents) | HandedBackFailed | [Details](#b4f98e31b52b77f6675771fc09bb492ca5cf90215514)
 
 ## Item Details
-##### <a name='c925015e9f74edcb1859ca10279beefc31286b1e4754'></a> Source: [windows-apps-src\launch-resume\how-to-create-and-consume-an-app-service.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/8b3ad18a3a0561d344b0d88a529cd929dafd9e4b?path=windows-apps-src%2Flaunch-resume%2Fhow-to-create-and-consume-an-app-service.md&_a=contents)
-* Status: InSyncHandedBackSuccess
-* Target File: [windows-apps-src\launch-resume\how-to-create-and-consume-an-app-service.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/4148853fe613a4ed0ac5d22b7d6dec6603f31b00?path=windows-apps-src%2Flaunch-resume%2Fhow-to-create-and-consume-an-app-service.md&_a=contents)
-* Handoff File: [how-to-create-and-consume-an-app-service.a15dae966f1f3c76bc61f81f7ed50b4a7fe0e782.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/ec8e50328908a22186e6cafafc92774f018a2509?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fhow-to-create-and-consume-an-app-service.a15dae966f1f3c76bc61f81f7ed50b4a7fe0e782.de-de.xlf&_a=contents)
-* Handoff Datetime: 2016-11-22 18:58:52
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [how-to-create-and-consume-an-app-service.a15dae966f1f3c76bc61f81f7ed50b4a7fe0e782.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/43805d0152f14d4022b2d3ccd5c4994292bb5ca5?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fhow-to-create-and-consume-an-app-service.a15dae966f1f3c76bc61f81f7ed50b4a7fe0e782.de-de.xlf&_a=contents)
-* Handback Datetime: 2016-11-23 16:40:26
-* Bilingual File: [how-to-create-and-consume-an-app-service.a15dae966f1f3c76bc61f81f7ed50b4a7fe0e782.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/12566e93599f1ee81d9b6a7cabef374d5cf62482?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fhow-to-create-and-consume-an-app-service.a15dae966f1f3c76bc61f81f7ed50b4a7fe0e782.de-de.xlf&_a=contents)
-* Bilingual Datetime: 2016-11-22 11:06:01
-* [Back to Top](#report-top)
-
-##### <a name='b4f98e31b52b77f6675771fc09bb492ca5cf90215514'></a> Source: [windows-apps-src\publish\payment-thresholds-methods-and-timeframes.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/85b9993334ecfb3ea2dc5a196cb5b5f9dc99c985?path=windows-apps-src%2Fpublish%2Fpayment-thresholds-methods-and-timeframes.md&_a=contents)
-* Status: HandedBackFailed
-* Target File: 
-* Handoff File: [payment-thresholds-methods-and-timeframes.a7bdbb15553090183b0fa2cbdd54710d90be2ed3.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/13e033ac6d598cfacd66bcbdc955de29a97d0b25?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fpayment-thresholds-methods-and-timeframes.a7bdbb15553090183b0fa2cbdd54710d90be2ed3.de-de.xlf&_a=contents)
-* Handoff Datetime: 2016-11-01 05:55:19
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 2016-11-23 16:40:26
-* Handback Error: [handback_transform_failed](#b4f98e31b52b77f6675771fc09bb492ca5cf90215514handback_transform_failed)
-* [Back to Top](#report-top)
-
 
 ## Error Details
-##### <a name='b4f98e31b52b77f6675771fc09bb492ca5cf90215514handback_transform_failed'></a> Source: [windows-apps-src\publish\payment-thresholds-methods-and-timeframes.md](#b4f98e31b52b77f6675771fc09bb492ca5cf90215514)
-* Error Code: handback_transform_failed
-* Error Message: Handback file: C:\ol\master\WDCLib.handback\2b5a5b\ol-handback\cpubwin\windows-uwp.de-de\master\payment-thresholds-methods-and-timeframes.a7bdbb15553090183b0fa2cbdd54710d90be2ed3.de-de.xlf failed.
-* Retriable: False
-* Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\WDCLib.handback\\2b5a5b\\ol-handback\\cpubwin\\windows-uwp.de-de\\master\\payment-thresholds-methods-and-timeframes.a7bdbb15553090183b0fa2cbdd54710d90be2ed3.de-de.xlf failed.","internal_error_retriable":false,"exception_message":"Fail to transform from xliff to markdown with invalid metadata: Invalid yaml header when parsing:\nauthor: jnHs Description: Die geschätzte Zeit bis zum Übertragen von Zahlungen, geltende Zahlungsschwellenwerte und Microsoft-Marketplaces, von denen Sie Zahlungen erhalten können, sind von Land/Region und Zahlungskontotyp abhängig. In diesem Thema werden die Schwellenwerte und Zahlungsmethoden beschrieben, die in den einzelnen Ländern/Regionen unterstützt werden.\ntitle: Zahlungsschwellenwerte, Methoden und Zeiträume\nError message: (Line: 1, Col: 25, Idx: 24) - (Line: 1, Col: 25, Idx: 24): Mapping values are not allowed in this context.","exception_type":"System.IO.InvalidDataException","stack_trace":"   at Microsoft.OpenLocalization.Transformer.TransformerClient.XliffToMarkdown(Stream xliffStream, Stream skeletonStream, Stream targetStream) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization.Transformer.Core\\TransformerClient.cs:line 127\r\n   at Microsoft.OpenLocalization.Helper.XliffTransformUtil.XliffToMarkdown(String skeletonFile, String xliffFile, String mdfile, Boolean useJavascriptTransformer) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Helper\\XliffTransformUtil.cs:line 114\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass7_0.<GetHandbackFiles>b__1(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 519","extended_information":null}
-
 
 Generated by OpenLocalization.
