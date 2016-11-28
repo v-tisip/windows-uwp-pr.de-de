@@ -6,23 +6,23 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\app-to-app\index.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ea67ae5b568d1c51af3bb951fe3a68a8def8a556?path=windows-apps-src%2Fapp-to-app%2Findex.md&_a=contents) | HandedOffSuccess | [Details](#951e2ea29a47e362d9fdee0f597d2e7c808212b6142)
+ [windows-apps-src\launch-resume\reserved-uri-scheme-names.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/e84b798a5fe0b4cfca853a0adc86ae701379ff07?path=windows-apps-src%2Flaunch-resume%2Freserved-uri-scheme-names.md&_a=contents) | HandedOffSuccess | [Details](#230b117d99fca1a36bc4e8bfc8e1c1e427a41cd64783)
 
 ## Item Details
-##### <a name='951e2ea29a47e362d9fdee0f597d2e7c808212b6142'></a> Source: [windows-apps-src\app-to-app\index.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ea67ae5b568d1c51af3bb951fe3a68a8def8a556?path=windows-apps-src%2Fapp-to-app%2Findex.md&_a=contents)
+##### <a name='230b117d99fca1a36bc4e8bfc8e1c1e427a41cd64783'></a> Source: [windows-apps-src\launch-resume\reserved-uri-scheme-names.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/e84b798a5fe0b4cfca853a0adc86ae701379ff07?path=windows-apps-src%2Flaunch-resume%2Freserved-uri-scheme-names.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [index.41a30c2304522206dc610cca50cfa8c5d9af32f3.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/044adb8a9e210d1655b3f734f471adb890d070ff?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Findex.41a30c2304522206dc610cca50cfa8c5d9af32f3.de-de.xlf&_a=contents)
-* Handoff Datetime: 2016-11-28 18:40:22
+* Handoff File: [reserved-uri-scheme-names.6fce7ecb3f48ec0466c056cef411b95fdfbe5fe5.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/15c5fd0e40afe51f7b584845f199e2742acc3a4d?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Freserved-uri-scheme-names.6fce7ecb3f48ec0466c056cef411b95fdfbe5fe5.de-de.xlf&_a=contents)
+* Handoff Datetime: 2016-11-28 22:35:19
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\app-to-app\index.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/c3cc6ddc6f3b2e0e594b3a771a3787b6567d88e5?path=windows-apps-src%2Fapp-to-app%2Findex.md&_a=contents)
-* Current Handback File: [index.41a30c2304522206dc610cca50cfa8c5d9af32f3.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/af7251542093aa676fc710fa76cce8c29961cc27?path=ol-handback%2FMicrosoft%2Fwindows-apps.de-de%2Fmaster%2Findex.41a30c2304522206dc610cca50cfa8c5d9af32f3.de-de.xlf&_a=contents)
+* Current Target File: [windows-apps-src\launch-resume\reserved-uri-scheme-names.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/c3cc6ddc6f3b2e0e594b3a771a3787b6567d88e5?path=windows-apps-src%2Flaunch-resume%2Freserved-uri-scheme-names.md&_a=contents)
+* Current Handback File: [reserved-uri-scheme-names.6fce7ecb3f48ec0466c056cef411b95fdfbe5fe5.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/af7251542093aa676fc710fa76cce8c29961cc27?path=ol-handback%2FMicrosoft%2Fwindows-apps.de-de%2Fmaster%2Freserved-uri-scheme-names.6fce7ecb3f48ec0466c056cef411b95fdfbe5fe5.de-de.xlf&_a=contents)
 * Current Handback Datetime: 2016-10-21 15:17:04
-* Bilingual File: [index.41a30c2304522206dc610cca50cfa8c5d9af32f3.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/af7251542093aa676fc710fa76cce8c29961cc27?path=ol-handback%2FMicrosoft%2Fwindows-apps.de-de%2Fmaster%2Findex.41a30c2304522206dc610cca50cfa8c5d9af32f3.de-de.xlf&_a=contents)
+* Bilingual File: [reserved-uri-scheme-names.6fce7ecb3f48ec0466c056cef411b95fdfbe5fe5.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/af7251542093aa676fc710fa76cce8c29961cc27?path=ol-handback%2FMicrosoft%2Fwindows-apps.de-de%2Fmaster%2Freserved-uri-scheme-names.6fce7ecb3f48ec0466c056cef411b95fdfbe5fe5.de-de.xlf&_a=contents)
 * Bilingual Datetime: 2016-10-24 15:46:17
 * [Back to Top](#report-top)
 
