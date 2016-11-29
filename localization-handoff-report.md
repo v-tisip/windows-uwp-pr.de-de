@@ -1,31 +1,11 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [windows-apps-src\input-and-devices\designing-for-tv.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/1f1cf56a7855bda6a1f2a6a6f999a8897a86e201?path=windows-apps-src%2Finput-and-devices%2Fdesigning-for-tv.md&_a=contents) | HandedOffSuccess | [Details](#c5c44c3aa73b96e6dd85a555390e2d4c795704be4357)
 
 ## Item Details
-##### <a name='c5c44c3aa73b96e6dd85a555390e2d4c795704be4357'></a> Source: [windows-apps-src\input-and-devices\designing-for-tv.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/1f1cf56a7855bda6a1f2a6a6f999a8897a86e201?path=windows-apps-src%2Finput-and-devices%2Fdesigning-for-tv.md&_a=contents)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [designing-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/53e104ac65c0b26e1dab453e875d70349e1b1723?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fdesigning-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.de-de.xlf&_a=contents)
-* Handoff Datetime: 2016-11-29 00:38:47
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\input-and-devices\designing-for-tv.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/95a09d495d6e39ca0f5562d864b8e009e4e150d2?path=windows-apps-src%2Finput-and-devices%2Fdesigning-for-tv.md&_a=contents)
-* Current Handback File: [designing-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/12566e93599f1ee81d9b6a7cabef374d5cf62482?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fdesigning-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.de-de.xlf&_a=contents)
-* Current Handback Datetime: 2016-11-22 11:01:46
-* Bilingual File: [designing-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/12566e93599f1ee81d9b6a7cabef374d5cf62482?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fdesigning-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.de-de.xlf&_a=contents)
-* Bilingual Datetime: 2016-11-22 11:06:01
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
