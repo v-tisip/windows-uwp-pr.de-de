@@ -4,31 +4,27 @@ ms.assetid: BF296C25-A2E6-48E4-9D08-0CCDB5FAE0C8
 description: "Verwenden Sie diese Methode aus der Windows Store-Übermittlungs-API zum Abrufen von Daten für eine vorhandene App-Übermittlung."
 title: "Abrufen einer App-Übermittlung mit der Windows Store-Übermittlungs-API"
 translationtype: Human Translation
-ms.sourcegitcommit: 27d8385c7250feba89c6970033ad7ec170f0646c
-ms.openlocfilehash: d7e4e0f355828b3d9b7bbcdd5ceee43dad9fe37c
+ms.sourcegitcommit: f52059a37194b78db2f9bb29a5e8959b2df435b4
+ms.openlocfilehash: b092658a22b76f044000fb6accc90382dc3bd360
 
 ---
 
-# Abrufen einer App-Übermittlung mit der Windows Store-Übermittlungs-API
+# <a name="get-an-app-submission-using-the-windows-store-submission-api"></a>Abrufen einer App-Übermittlung mit der Windows Store-Übermittlungs-API
 
 
+Verwenden Sie diese Methode aus der Windows Store-Übermittlungs-API zum Abrufen von Daten für eine vorhandene App-Übermittlung. Weitere Informationen über den Erstellungsprozess einer App-Übermittlung mithilfe der Windows Store-Übermittlungs-API finden Sie unter [Verwalten von App-Übermittlungen](manage-app-submissions.md).
 
-
-Verwenden Sie diese Methode aus der Windows Store-Übermittlungs-API zum Abrufen von Daten für eine vorhandene App-Übermittlung. Weitere Informationen zum Erstellungsprozess einer App-Übermittlung mithilfe der Windows Store-Übermittlungs-API finden Sie unter [Verwalten von App-Übermittlungen](manage-app-submissions.md).
-
->**Wichtig**&nbsp;&nbsp;Demnächst ändert Microsoft das Preismodell für App-Übermittlungen im Windows Dev Center. Nach dem Implementieren dieser Änderung ist die Ressource **Pricing** in den Antwortdaten für diese Methode leer. Zudem können Sie mit dieser Methode vorübergehend keine Testzeitraum-, Preis- und Verkaufsdaten für eine App-Übermittlung abrufen. Wir werden die Windows Store-Übermittlungs-API aktualisieren, um eine neue Methode für den programmgesteuerten Zugriff auf Preisinformationen für App-Übermittlungen einzuführen. Weitere Informationen finden Sie unter [Ressource für Preise](manage-app-submissions.md#pricing-object).
-
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
 * Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](create-and-manage-submissions-using-windows-store-services.md#prerequisites) für die Windows Store-Übermittlungs-API.
 * [Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60 Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
-* Erstellen Sie Übermittlung für eine App im Dev Center-Konto. Sie können dies im Dev Center-Dashboard oder mithilfe der Methode [Erstellen einer App-Übermittlung](create-an-app-submission.md) erreichen.
+* Erstellen Sie Übermittlung für eine App im Dev Center-Konto. Sie können dies im Dev Center-Dashboard oder durch Verwenden der Methode [Erstellen einer App-Übermittlung](create-an-app-submission.md) erreichen.
 
 >**Hinweis**&nbsp;&nbsp;Diese Methode kann nur für Windows Dev Center-Konten verwendet werden, die eine Berechtigung zur Verwendung der Windows Store-Übermittlungs-API erhalten haben. Diese Berechtigung ist nicht für alle Konten aktiviert.
 
-## Anforderung
+## <a name="request"></a>Anforderung
 
 Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie Verwendungsbeispiele und Beschreibungen des Header und Anforderungstexts.
 
@@ -39,7 +35,7 @@ Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie V
 <span/>
  
 
-### Anforderungsheader
+### <a name="request-header"></a>Anforderungsheader
 
 | Header        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -47,7 +43,7 @@ Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie V
 
 <span/>
 
-### Anforderungsparameter
+### <a name="request-parameters"></a>Anforderungsparameter
 
 | Name        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -56,11 +52,11 @@ Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie V
 
 <span/>
 
-### Anforderungstext
+### <a name="request-body"></a>Anforderungstext
 
 Stellen Sie keinen Anforderungstext für diese Methode bereit.
 
-### Anforderungsbeispiel
+### <a name="request-example"></a>Anforderungsbeispiel
 
 Im folgenden Beispiel wird das Abrufen einer App-Übermittlung veranschaulicht.
 
@@ -69,7 +65,7 @@ GET https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/sub
 Authorization: Bearer <your access token>
 ```
 
-## Antwort
+## <a name="response"></a>Antwort
 
 Das folgende Beispiel veranschaulicht den JSON-Antworttext für einen erfolgreichen Aufruf dieser Methode. Der Antworttext enthält Informationen über die angegebene Übermittlung. Weitere Informationen zu den Werten im Antworttext finden Sie unter [App-Übermittlungsressource](manage-app-submissions.md#app-submission-object).
 
@@ -173,7 +169,7 @@ Das folgende Beispiel veranschaulicht den JSON-Antworttext für einen erfolgreic
 }
 ```
 
-## Fehlercodes
+## <a name="error-codes"></a>Fehlercodes
 
 Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die Antwort einen der folgenden HTTP-Fehlercodes.
 
@@ -185,9 +181,9 @@ Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die A
 <span/>
 
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
-* [Erstellen und Verwalten von Übermittlungen mit WindowsStore-Diensten](create-and-manage-submissions-using-windows-store-services.md)
+* [Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten](create-and-manage-submissions-using-windows-store-services.md)
 * [Erstellen einer App-Übermittlung](create-an-app-submission.md)
 * [Ausführen eines Commit für eine App-Übermittlung](commit-an-app-submission.md)
 * [Aktualisieren einer App-Übermittlung](update-an-app-submission.md)
@@ -196,6 +192,6 @@ Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die A
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

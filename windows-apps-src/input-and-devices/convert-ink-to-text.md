@@ -5,16 +5,16 @@ title: Erkennen von Windows Ink-Strichen als Text
 ms.assetid: C2F3F3CE-737F-4652-98B7-5278A462F9D3
 label: Recognize Windows Ink strokes as text
 template: detail.hbs
-keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas, handwriting recognition
+keywords: Windows Ink, Windows-Freihandeingabe, DirectInk, InkPresenter, InkCanvas, Handschrifterkennung
 translationtype: Human Translation
-ms.sourcegitcommit: dfb790980a8016da0ed9a080d7cf56b5a8a784ff
-ms.openlocfilehash: 26dc8910c779dc46d19be75abd49c20b750a9843
+ms.sourcegitcommit: 0f7f54c5c5baccdedfe32bc7c71994e43a93f032
+ms.openlocfilehash: c402843cce752a54d8ff7301d892ef8014350a07
 
 ---
 
-# Erkennen von Windows Ink-Strichen als Text
+# <a name="recognize-windows-ink-strokes-as-text"></a>Erkennen von Windows Ink-Strichen als Text
 
-Konvertieren Sie letzte Striche mit der Unterstützung der Schrifterkennung in Windows Ink in Text.
+Konvertieren Sie mithilfe der Handschrifterkennung in Windows Ink Freihandstriche in Text.
 
 **Wichtige APIs**
 
@@ -26,7 +26,7 @@ Die Schrifterkennung ist in die Windows-Freihandplattform integriert und unterst
 
 Fügen Sie bei allen hier aufgeführten Beispielen die für die Freihandfunktion benötigten Namespaceverweise hinzu. Hierzu gehört „Windows.UI.Input.Inking“.
 
-## Grundlegende Schrifterkennung
+## <a name="basic-handwriting-recognition"></a>Grundlegende Schrifterkennung
 
 
 Hier wird veranschaulicht, wie mit dem Schrifterkennungsmodul in Verbindung mit dem standardmäßig installierten Sprachpaket, ein Satz von Freihandstrichen in einer [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Klasse interpretiert wird.
@@ -203,7 +203,7 @@ string str = "Recognition result\n";
     }
 ```
 
-## Internationale Erkennung
+## <a name="international-recognition"></a>Internationale Erkennung
 
 
 Für die Schrifterkennung können viele der durch Windows unterstützten Sprachen verwendet werden.
@@ -213,7 +213,7 @@ Eine Liste der vom [**InkRecognizer**](https://msdn.microsoft.com/library/window
 Ihre App kann den Satz der installierten Schrifterkennungsmodule abfragen und eines davon verwenden, oder der Benutzer wählt die bevorzugte Sprache aus.
 
 **Hinweis**  
-Die Benutzer können über **Einstellungen -&gt; Zeit& Sprache** eine Liste der installierten Sprachen anzeigen. Die installierten Sprachen werden unter **Sprachen** aufgeführt.
+Die Benutzer können über **Einstellungen -&gt; Zeit & Sprache** eine Liste der installierten Sprachen anzeigen. Die installierten Sprachen werden unter **Sprachen** aufgeführt.
 
 So installieren Sie ein neues Sprachpaket und aktivieren die Schrifterkennung für die Sprache
 
@@ -448,7 +448,7 @@ string str = "Recognition result\n";
     }
 ```
 
-## Dynamische Schrifterkennung
+## <a name="dynamic-handwriting-recognition"></a>Dynamische Schrifterkennung
 
 
 In den beiden vorherigen Beispielen musste der Benutzer auf eine Schaltfläche klicken, um die Erkennung zu starten. Wenn die Freihandstricheingabe mit einer einfachen Timing-Funktion kombiniert wird, kann die App auch eine dynamische Erkennung ausführen.
@@ -660,7 +660,7 @@ string str = "Recognition result\n";
     }
 ```
 
-## Verwandte Artikel
+## <a name="related-articles"></a>Verwandte Artikel
 
 * [Zeichen- und Eingabestiftinteraktionen](pen-and-stylus-interactions.md)
 
@@ -668,12 +668,14 @@ string str = "Recognition result\n";
 * [Freihandbeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620308)
 * [Einfaches Freihandbeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620312)
 * [Komplexes Freihandbeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [Malbuchbeispiel](https://aka.ms/cpubsample-coloringbook)
+* [Familiennotizbeispiel](https://aka.ms/cpubsample-familynotessample)
+
+
  
 
- 
 
 
-
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

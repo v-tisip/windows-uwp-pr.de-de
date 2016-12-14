@@ -4,28 +4,28 @@ ms.assetid: DD4F6BC4-67CD-4AEF-9444-F184353B0072
 description: "Mittels dieser Methode in der Windows Store-Analyse-API können Sie gesammelte Bewertungsdaten für einen bestimmten Zeitraum und andere optionale Filter abrufen."
 title: Abrufen von App-Bewertungen
 translationtype: Human Translation
-ms.sourcegitcommit: 67845c76448ed13fd458cb3ee9eb2b75430faade
-ms.openlocfilehash: 45df3a1296ba06551e08705e9d72a693ad3d33e5
+ms.sourcegitcommit: 7d05c8953f1f50be0b388a044fe996f345d45006
+ms.openlocfilehash: 86685984256459e0bb125340daa1616b09982429
 
 ---
 
-# Abrufen von App-Bewertungen
+# <a name="get-app-ratings"></a>Abrufen von App-Bewertungen
 
 Mit dieser Methode der Windows Store-Analyse-API können Sie aggregierte Bewertungsdaten (im JSON-Format) für einen bestimmten Zeitraum und andere optionale Filter abrufen. Diese Informationen sind auch im [Bericht „Bewertungen“](../publish/ratings-report.md) im Windows Dev Center-Dashboard verfügbar.
 
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 
 Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
 * Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](access-analytics-data-using-windows-store-services.md#prerequisites) für die Windows Store-Analyse-API.
-* [Rufen Sie ein Azure AD-Zugriffstoken ab](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken erhalten haben, haben Sie 60Minuten Zeit, das Token zu verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
+* [Rufen Sie ein Azure AD-Zugriffstoken ab](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken erhalten haben, haben Sie 60 Minuten Zeit, das Token zu verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
 
 
-## Anforderung
+## <a name="request"></a>Anforderung
 
 
-### Anforderungssyntax
+### <a name="request-syntax"></a>Anforderungssyntax
 
 | Methode | Anforderungs-URI                                                      |
 |--------|------------------------------------------------------------------|
@@ -33,7 +33,7 @@ Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
  
 
-### Anforderungsheader
+### <a name="request-header"></a>Anforderungsheader
 
 | Header        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -41,173 +41,40 @@ Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
 <span/> 
 
-### Anforderungsparameter
+### <a name="request-parameters"></a>Anforderungsparameter
 
-<table>
-<colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Parameter</th>
-<th align="left">Typ</th>
-<th align="left">Beschreibung</th>
-<th align="left">Erforderlich</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">applicationId</td>
-<td align="left">string</td>
-<td align="left">Die Store-ID der App, für die Sie Bewertungsdaten abrufen möchten. Die Store-ID ist auf der [Seite mit der App-Identität](../publish/view-app-identity-details.md) des DevCenter-Dashboards verfügbar. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8.</td>
-<td align="left">Ja</td>
-</tr>
-<tr class="even">
-<td align="left">startDate</td>
-<td align="left">date</td>
-<td align="left">Das Startdatum im Datumsbereich der Bewertungsdaten, die abgerufen werden sollen. Der Standardwert ist das aktuelle Datum.</td>
-<td align="left">Nein</td>
-</tr>
-<tr class="odd">
-<td align="left">endDate</td>
-<td align="left">date</td>
-<td align="left">Das Enddatum im Datumsbereich der Bewertungsdaten, die abgerufen werden sollen. Der Standardwert ist das aktuelle Datum.</td>
-<td align="left">Nein</td>
-</tr>
-<tr class="even">
-<td align="left">top</td>
-<td align="left">int</td>
-<td align="left">Die Anzahl der Datenzeilen, die in der Anforderung zurückgegeben werden sollen. Der Maximal- und Standardwert ist 10.000, wenn nicht anders angegeben. Wenn die Abfrage keine weiteren Zeilen enthält, entält der Antworttext den Link „Weiter“, den Sie verwenden können, um die nächste Seite mit Daten anzufordern.</td>
-<td align="left">Nein</td>
-</tr>
-<tr class="odd">
-<td align="left">skip</td>
-<td align="left">int</td>
-<td align="left">Die Anzahl der Zeilen, die in der Abfrage übersprungen werden sollen. Verwenden Sie diesen Parameter, um große Datensätze durchzublättern. Beispielsweise rufen „top=10000“ und „skip=0“ die ersten 10.000Datenzeilen ab, „top=10000“ und „skip=10000“ die nächsten 10.000Datenzeilen usw.</td>
-<td align="left">Nein</td>
-</tr>
-<tr class="even">
-<td align="left">filter</td>
-<td align="left">string</td>
-<td align="left">Mindestens eine Anweisung, die die Zeilen in der Antwort filtert. Weitere Informationen finden Sie unten im Abschnitt [Filterfelder](#filter-fields).</td>
-<td align="left">Nein</td>
-</tr>
-<tr class="odd">
-<td align="left">aggregationLevel</td>
-<td align="left">string</td>
-<td align="left">Gibt den Zeitraum an, für den aggregierte Daten abgerufen werden sollen. Dies kann eine der folgenden Zeichenfolgen sein: <strong>day</strong>, <strong>week</strong> oder <strong>month</strong>. Wenn keine Angabe erfolgt, lautet der Standardwert <strong>day</strong>.</td>
-<td align="left">Nein</td>
-</tr>
-<tr class="even">
-<td align="left">orderby</td>
-<td align="left">string</td>
-<td align="left">Eine Anweisung, die die Ergebnisdatenwerte für die einzelnen Bewertungen anfordert. Die Syntax ist <em>orderby=field [order],field [order],...</em>. Der Parameter <em>field</em> kann eine der folgenden Zeichenfolgen sein:
-<ul>
-<li><strong>date</strong></li>
-<li><strong>osVersion</strong></li>
-<li><strong>market</strong></li>
-<li><strong>deviceType</strong></li>
-<li><strong>isRevised</strong></li>
-</ul>
-<p>Der Parameter <em>order</em> ist optional und kann <strong>asc</strong> oder <strong>desc</strong> sein, um die auf- oder absteigende Anordnung der einzelnen Felder anzugeben. Der Standard ist <strong>asc</strong>.</p>
-<p>Dies ist eine Beispielzeichenfolge für <em>orderby</em>: <em>orderby=date,market</em></p></td>
-<td align="left">Nein</td>
-</tr>
-<tr class="odd">
-<td align="left">groupby</td>
-<td align="left">string</td>
-<td align="left"><p>Eine Anweisung, die nur auf die angegebenen Felder Datenaggregationen anwendet. Sie können die folgenden Felder angeben:</p>
-<ul>
-<li><strong>date</strong></li>
-<li><strong>applicationName</strong></li>
-<li><strong>market</strong></li>
-<li><strong>osVersion</strong></li>
-<li><strong>deviceType</strong></li>
-<li><strong>isRevised</strong></li>
-</ul>
-<p>Die zurückgegebenen Datenzeilen enthalten die Felder, die im Parameter <em>groupby</em> angegeben sind, sowie die folgenden:</p>
-<ul>
-<li><strong>date</strong></li>
-<li><strong>applicationId</strong></li>
-<li><strong>fiveStars</strong></li>
-<li><strong>fourStars</strong></li>
-<li><strong>threeStars</strong></li>
-<li><strong>twoStars</strong></li>
-<li><strong>oneStar</strong></li>
-</ul>
-<p>Der Parameter <em>groupby</em> kann mit dem Parameter <em>aggregationLevel</em> verwendet werden. Beispiel: <em>&amp;groupby=osVersion,market&amp;aggregationLevel=week</em></p></td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+| Parameter        | Typ   |  Beschreibung      |  Erforderlich  
+|---------------|--------|---------------|------|
+| applicationId | string | Die Store-ID der App, für die Sie Bewertungsdaten abrufen möchten. Die Store-ID ist auf der [Seite mit der App-Identität](../publish/view-app-identity-details.md) des Dev Center-Dashboards verfügbar. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8. |  Ja  |
+| startDate | date | Das Startdatum im Datumsbereich der Bewertungsdaten, die abgerufen werden sollen. Der Standardwert ist das aktuelle Datum. |  Nein  |
+| endDate | date | Das Enddatum im Datumsbereich der Bewertungsdaten, die abgerufen werden sollen. Der Standardwert ist das aktuelle Datum. |  Nein  |
+| top | int | Die Anzahl der Datenzeilen, die in der Anforderung zurückgegeben werden sollen. Der Maximal- und Standardwert ist 10.000, wenn nicht anders angegeben. Wenn die Abfrage keine weiteren Zeilen enthält, entält der Antworttext den Link „Weiter“, den Sie verwenden können, um die nächste Seite mit Daten anzufordern. |  Nein  |
+| skip | int | Die Anzahl der Zeilen, die in der Abfrage übersprungen werden sollen. Verwenden Sie diesen Parameter, um große Datensätze durchzublättern. Beispielsweise rufen „top=10000“ und „skip=0“ die ersten 10.000 Datenzeilen ab, „top=10000“ und „skip=10000“ die nächsten 10.000 Datenzeilen usw. |  Nein  |
+| filter | string  | Mindestens eine Anweisung, die die Zeilen in der Antwort filtert. Weitere Informationen finden Sie unten im Abschnitt [Filterfelder](#filter-fields). | Nein   |
+| aggregationLevel | string | Gibt den Zeitraum an, für den aggregierte Daten abgerufen werden sollen. Dies kann eine der folgenden Zeichenfolgen sein: <strong>day</strong>, <strong>week</strong> oder <strong>month</strong>. Wenn keine Angabe erfolgt, lautet der Standardwert <strong>day</strong>. | Nein |
+| orderby | string | Eine Anweisung, die die Ergebnisdatenwerte für die einzelnen Bewertungen anfordert. Die Syntax ist <em>orderby=field [order],field [order],...</em>. Der Parameter <em>field</em> kann eine der folgenden Zeichenfolgen sein:<ul><li><strong>date</strong></li><li><strong>osVersion</strong></li><li><strong>market</strong></li><li><strong>deviceType</strong></li><li><strong>isRevised</strong></li></ul><p>Der Parameter <em>order</em> ist optional und kann <strong>asc</strong> oder <strong>desc</strong> sein, um die auf- oder absteigende Anordnung der einzelnen Felder anzugeben. Der Standard ist <strong>asc</strong>.</p><p>Dies ist eine Beispielzeichenfolge für <em>orderby</em>: <em>orderby=date,market</em></p> |  Nein  |
+| groupby | string | Eine Anweisung, die nur auf die angegebenen Felder Datenaggregationen anwendet. Sie können die folgenden Felder angeben:<ul><li><strong>date</strong></li><li><strong>applicationName</strong></li><li><strong>market</strong></li><li><strong>osVersion</strong></li><li><strong>deviceType</strong></li><li><strong>isRevised</strong></li></ul><p>Die zurückgegebenen Datenzeilen enthalten die Felder, die im Parameter <em>groupby</em> angegeben sind, sowie die folgenden:</p><ul><li><strong>date</strong></li><li><strong>applicationId</strong></li><li><strong>fiveStars</strong></li><li><strong>fourStars</strong></li><li><strong>threeStars</strong></li><li><strong>twoStars</strong></li><li><strong>oneStar</strong></li></ul><p>Der Parameter <em>groupby</em> kann mit dem Parameter <em>aggregationLevel</em> verwendet werden. Beispiel: <em>&amp;groupby=osVersion,market&amp;aggregationLevel=week</em></p> |  Nein  |
 
 <span/>
  
-### Filterfelder
+### <a name="filter-fields"></a>Filterfelder
 
-Der Parameter *Filter* der Anforderung enthält mindestens eine Anweisung, die die Zeilen in der Antwort filtert. Jede Anweisung enthält ein Feld und einen Wert, das/der mit den Operatoren **eq** oder **ne** verknüpft ist. Anweisungen können mit **and** oder **or** kombiniert werden.
+Der Parameter *filter* der Anforderung enthält mindestens eine Anweisung, die die Zeilen in der Antwort filtert. Jede Anweisung enthält ein Feld und einen Wert, das/der mit den Operatoren **eq** oder **ne** verknüpft ist. Anweisungen können mit **and** oder **or** kombiniert werden.
 
 Dies ist eine Beispielzeichenfolge für *Filter*: *filter=market eq 'US' and deviceType eq 'phone' and isRevised eq true"*
 
 Die Liste der unterstützten Felder finden Sie in der folgenden Tabelle. Zeichenfolgenwerte im Parameter *Filter* müssen von einfachen Anführungszeichen eingeschlossen werden.
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Felder</th>
-<th align="left">Beschreibung</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">market</td>
-<td align="left">Eine Zeichenfolge, die den ISO 3166-Ländercode des Gerätemarkts enthält.</td>
-</tr>
-<tr class="even">
-<td align="left">osVersion</td>
-<td align="left">Eine der folgenden Zeichenfolgen:
-<ul>
-<li><strong>Windows Phone 7.5</strong></li>
-<li><strong>Windows Phone 8</strong></li>
-<li><strong>Windows Phone 8.1</strong></li>
-<li><strong>Windows Phone 10</strong></li>
-<li><strong>Windows8</strong></li>
-<li><strong>Windows 8.1</strong></li>
-<li><strong>Windows10</strong></li>
-<li><strong>Unknown</strong></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td align="left">deviceType</td>
-<td align="left">Eine der folgenden Zeichenfolgen:
-<ul>
-<li><strong>PC</strong></li>
-<li><strong>Tablet</strong></li>
-<li><strong>Smartphone</strong></li>
-<li><strong>IoT</strong></li>
-<li><strong>Wearable</strong></li>
-<li><strong>Server</strong></li>
-<li><strong>Collaborative</strong></li>
-<li><strong>Other</strong></li>
-</ul></td>
-</tr>
-<tr class="even">
-<td align="left">isRevised</td>
-<td align="left">Geben Sie <strong>true</strong> an, um nach Bewertungen zu filtern, die überprüft wurden. Geben Sie andernfalls <strong>false</strong> an.</td>
-</tr>
-</tbody>
-</table>
+| Felder        |  Beschreibung        |
+|---------------|-----------------|
+| market | Eine Zeichenfolge, die den ISO 3166-Ländercode des Markts enthält, in dem die App bewertet wurde. |
+| osVersion | Eine der folgenden Zeichenfolgen:<ul><li><strong>Windows Phone 7.5</strong></li><li><strong>Windows Phone 8</strong></li><li><strong>Windows Phone 8.1</strong></li><li><strong>Windows Phone 10</strong></li><li><strong>Windows 8</strong></li><li><strong>Windows 8.1</strong></li><li><strong>Windows 10</strong></li><li><strong>Unknown</strong></li></ul> |
+| deviceType | Eine der folgenden Zeichenfolgen:<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>Unknown</strong></li></ul> |
+| isRevised | Geben Sie <strong>true</strong> an, um nach Bewertungen zu filtern, die überprüft wurden. Geben Sie andernfalls <strong>false</strong> an. |
 
 <span/> 
 
-### Anforderungsbeispiel
+### <a name="request-example"></a>Anforderungsbeispiel
 
 Die folgenden Beispiele zeigen verschiedene Anforderungen für das Abrufen von Bewertungsdaten. Ersetzen Sie den Wert *ApplicationId* durch die Store-ID Ihrer App.
 
@@ -219,20 +86,20 @@ GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/ratings?application
 Authorization: Bearer <your access token>
 ```
 
-## Antwort
+## <a name="response"></a>Antwort
 
 
-### Antworttext
+### <a name="response-body"></a>Antworttext
 
 | Wert      | Typ   | Beschreibung                                                                                                                                                                                                                                                                            |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Wert      | array  | Ein Array von Objekten, die gesammelte Bewertungsdaten enthalten. Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie unten im Abschnitt [Bewertungswerte](#rating-values).                                                                                                                           |
-| @nextLink  | string | Wenn weitere Seiten mit Daten vorhanden sind, enthält diese Zeichenfolge einen URI, mit dem Sie die nächste Seite mit Daten anfordern können. Beispielsweise wird dieser Wert zurückgegeben, wenn der Parameter **top** der Anforderung auf 10000 festgelegt ist, es jedoch mehr als 10.000 Zeilen mit Kaufdaten für die Abfrage gibt. |
+| @nextLink  | string | Wenn weitere Seiten mit Daten vorhanden sind, enthält diese Zeichenfolge einen URI, mit dem Sie die nächste Seite mit Daten anfordern können. Beispielsweise wird dieser Wert zurückgegeben, wenn der Parameter **top** der Anforderung auf 10000 festgelegt ist, es jedoch mehr als 10000 Zeilen mit Bewertungsdaten für die Abfrage gibt. |
 | TotalCount | int    | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.                                                                                                                                                                                                                             |
 
 <span/>
 
-### Bewertungswerte
+### <a name="rating-values"></a>Bewertungswerte
 
 Elemente im Array *Value* enthalten die folgenden Werte.
 
@@ -253,7 +120,7 @@ Elemente im Array *Value* enthalten die folgenden Werte.
  
 <span/>
 
-### Antwortbeispiel
+### <a name="response-example"></a>Antwortbeispiel
 
 Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese Anforderung.
 
@@ -281,10 +148,10 @@ Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese 
 
 ```
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Bericht „Bewertungen“](../publish/ratings-report.md)
-* [Zugreifen auf Analysedaten mit WindowsStore-Diensten](access-analytics-data-using-windows-store-services.md)
+* [Zugreifen auf Analysedaten mit Windows Store-Diensten](access-analytics-data-using-windows-store-services.md)
 * [Abrufen von App-Käufen](get-app-acquisitions.md)
 * [Abrufen von Add-On-Käufen](get-in-app-acquisitions.md)
 * [Abrufen von Fehlerberichtsdaten](get-error-reporting-data.md)
@@ -292,6 +159,6 @@ Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

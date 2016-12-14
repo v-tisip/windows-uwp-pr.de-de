@@ -4,23 +4,18 @@ ms.assetid: E8751EBF-AE0F-4107-80A1-23C186453B1C
 description: "Verwenden Sie diese Methode aus der Windows Store-Übermittlungs-Api zur Aktualisierung einer vorhandenen App-Übermittlung."
 title: "Aktualisieren einer App-Übermittlung mit der Windows Store-Übermittlungs-API"
 translationtype: Human Translation
-ms.sourcegitcommit: 819843c8ba1e4a073f70f7de36fe98dd4087cdc6
-ms.openlocfilehash: 8b1a6da557b966e69345e90c48f90a6df0f27442
+ms.sourcegitcommit: f52059a37194b78db2f9bb29a5e8959b2df435b4
+ms.openlocfilehash: ec533c5a021d006787a7d217fa7f5eb98835fdd3
 
 ---
 
-# Aktualisieren einer App-Übermittlung mit der Windows Store-Übermittlungs-API
-
-
-
+# <a name="update-an-app-submission-using-the-windows-store-submission-api"></a>Aktualisieren einer App-Übermittlung mit der Windows Store-Übermittlungs-API
 
 Verwenden Sie diese Methode aus der Windows Store-Übermittlungs-Api zur Aktualisierung einer vorhandenen App-Übermittlung. Nachdem Sie mit dieser Methode eine Übermittlung erfolgreich aktualisiert haben, müssen Sie ein [Commit für die Übermittlung](commit-an-app-submission.md) für Aufnahme und Veröffentlichung durchführen.
 
-Weitere Informationen dazu, wie diese Methode in den Prozess zum Erstellen einer App-Übermittlung mithilfe der Windows Store-Übermittlungs-API passt, finden Sie unter [Verwalten von App-Übermittlungen](manage-app-submissions.md).
+Weitere Informationen dazu, wie diese Methode zum Erstellen einer App-Übermittlung mithilfe der Windows Store-Übermittlungs-API passt, finden Sie unter [Verwalten von App-Übermittlungen](manage-app-submissions.md).
 
->**Wichtig**&nbsp;&nbsp;Demnächst ändert Microsoft das Preismodell für App-Übermittlungen in Windows Dev Center. Nach dem Implementieren dieser Änderung wird die Ressource **Pricing** im Anforderungstext für diese Methode ignoriert. Zudem können Sie mit dieser Methode vorübergehend keine Testzeitraum-, Preis- und Verkaufsdaten für eine App-Übermittlung ändern. Wir werden die Windows Store-Übermittlungs-API aktualisieren, um eine neue Methode für den programmgesteuerten Zugriff auf Preisinformationen für App-Übermittlungen einzuführen. Weitere Informationen finden Sie unter der [Ressource zu Preisen](manage-app-submissions.md#pricing-object).
-
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
@@ -30,7 +25,7 @@ Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
 >**Hinweis**&nbsp;&nbsp;Diese Methode kann nur für Windows Dev Center-Konten verwendet werden, die eine Berechtigung zur Verwendung der Windows Store-Übermittlungs-API erhalten haben. Diese Berechtigung ist nicht für alle Konten aktiviert.
 
-## Anforderung
+## <a name="request"></a>Anforderung
 
 Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie Verwendungsbeispiele und Beschreibungen des Header und Anforderungstexts.
 
@@ -41,7 +36,7 @@ Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie V
 <span/>
  
 
-### Anforderungsheader
+### <a name="request-header"></a>Anforderungsheader
 
 | Header        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -49,7 +44,7 @@ Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie V
 
 <span/>
 
-### Anforderungsparameter
+### <a name="request-parameters"></a>Anforderungsparameter
 
 | Name        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -58,13 +53,13 @@ Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie V
 
 <span/>
 
-### Anforderungstext
+### <a name="request-body"></a>Anforderungstext
 
 Der Anforderungstext hat folgende Parameter.
 
 | Wert      | Typ   | Beschreibung                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| applicationCategory           | string  |   Eine Zeichenfolge, die [Kategorie und/oder Unterkategorie](https://msdn.microsoft.com/windows/uwp/publish/category-and-subcategory-table) für Ihre App angibt. Kategorien und Unterkategorien werden mit einem Unterstrich "_" zu einer einzigen Zeichenfolge zusammengefasst, z.B. **BooksAndReference_EReader**.      |  
+| applicationCategory           | string  |   Eine Zeichenfolge, die [Kategorie und/oder Unterkategorie](https://msdn.microsoft.com/windows/uwp/publish/category-and-subcategory-table) für Ihre App angibt. Kategorien und Unterkategorien werden mit einem Unterstrich "_" zu einer einzigen Zeichenfolge zusammengefasst, z. B. **BooksAndReference_EReader**.      |  
 | pricing           |  object  | Ein Objekt, das Preisinfos für die App enthält. Weitere Informationen finden Sie im Abschnitt [Preisressource](manage-app-submissions.md#pricing-object).       |   
 | visibility           |  string  |  Die Sichtbarkeit der App. Folgende Werte sind möglich: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>       |   
 | targetPublishMode           | string  | Der Publish-Modus für die Übermittlung. Folgende Werte sind möglich: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
@@ -80,12 +75,12 @@ Der Anforderungstext hat folgende Parameter.
 | applicationPackages           |   array  | Enthält Objekte, die Details über die einzelnen Pakete der Übermittlung bereitstellen. Weitere Informationen finden Sie unten im Abschnitt [Anwendungspaket](manage-app-submissions.md#application-package-object). Beim Aufruf dieser Methode zur Aktualisierung einer App-Übermittlung sind im Antworttext nur die *fileName*-, *fileStatus*-, *minimumDirectXVersion*- und *minimumSystemRam*-Werte dieser Objekte erforderlich. Die übrigen Werte werden von Dev Center aufgefüllt.   |    
 | packageDeliveryOptions    | object  | Enthält den schrittweisen Paketrollout sowie erforderliche Einstellungen für die Übermittlung. Weitere Informationen finden Sie unter [options-Objekt für die Paketübermittlung](manage-app-submissions.md#package-delivery-options-object).  |
 | enterpriseLicensing           |  string  |  Einer der [Werte für Enterprise-Lizenzierung](manage-app-submissions.md#enterprise-licensing), die das Verhalten der Enterprise-Lizenzierung für die App angeben.  |    
-| allowMicrosftDecideAppAvailabilityToFutureDeviceFamilies           |  boolean   |  Gibt an, ob Microsoft [die App für zukünftige Windows10-Gerätefamilien verfügbar machen](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) darf.    |    
-| allowTargetFutureDeviceFamilies           | boolean   |  Gibt an, ob die App [auf zukünftige Windows10-Gerätefamilien abzielen](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) darf.     |    
+| allowMicrosftDecideAppAvailabilityToFutureDeviceFamilies           |  boolean   |  Gibt an, ob Microsoft [die App für zukünftige Windows 10-Gerätefamilien verfügbar machen](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) darf.    |    
+| allowTargetFutureDeviceFamilies           | boolean   |  Gibt an, ob die App [auf zukünftige Windows 10-Gerätefamilien abzielen](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) darf.     |    
 
 <span/>
 
-### Anforderungsbeispiel
+### <a name="request-example"></a>Anforderungsbeispiel
 
 Im folgenden Beispiel wird die Aktualisierung einer App-Übermittlung veranschaulicht.
 
@@ -169,7 +164,7 @@ Content-Type: application/json
 }
 ```
 
-## Antwort
+## <a name="response"></a>Antwort
 
 Das folgende Beispiel veranschaulicht den JSON-Antworttext für einen erfolgreichen Aufruf dieser Methode. Der Antworttext enthält Informationen zur aktualisierten Übermittlung. Weitere Informationen zu den Werten im Antworttext finden Sie unter [App-Übermittlungsressource](manage-app-submissions.md#app-submission-object).
 
@@ -273,7 +268,7 @@ Das folgende Beispiel veranschaulicht den JSON-Antworttext für einen erfolgreic
 }
 ```
 
-## Fehlercodes
+## <a name="error-codes"></a>Fehlercodes
 
 Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die Antwort einen der folgenden HTTP-Fehlercodes.
 
@@ -285,9 +280,9 @@ Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die A
 <span/>
 
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
-* [Erstellen und Verwalten von Übermittlungen mit WindowsStore-Diensten](create-and-manage-submissions-using-windows-store-services.md)
+* [Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten](create-and-manage-submissions-using-windows-store-services.md)
 * [Abrufen einer App-Übermittlung](get-an-app-submission.md)
 * [Erstellen einer App-Übermittlung](create-an-app-submission.md)
 * [Ausführen eines Commit für eine App-Übermittlung](commit-an-app-submission.md)
@@ -296,6 +291,6 @@ Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die A
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

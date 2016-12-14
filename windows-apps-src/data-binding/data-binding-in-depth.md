@@ -4,11 +4,11 @@ ms.assetid: 41E1B4F1-6CAF-4128-A61A-4E400B149011
 title: Datenbindung im Detail
 description: "Die Datenbindung ist eine Methode, mit der die Benutzeroberfläche Ihrer App Daten anzeigen und diese Daten optional synchronisieren kann."
 translationtype: Human Translation
-ms.sourcegitcommit: ef5e2819a7fd18fb3ed3162fd8debe750f29c378
-ms.openlocfilehash: fa1616c88d475393311055561a7bd219c2373f76
+ms.sourcegitcommit: 8dee2c7bf5ec44f913e34f1150223c1172ba6c02
+ms.openlocfilehash: 48db13fec4ce9c6a9a998c84ddaaba30f7a24d83
 
 ---
-# Datenbindung im Detail
+# <a name="data-binding-in-depth"></a>Datenbindung im Detail
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -30,7 +30,7 @@ Sie können die Datenbindung einfach verwenden, um nur Werte aus einer Datenquel
 -   Sie können die unidirektionale Bindung verwenden, um ein [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)-Objekt an eine Sammlung von Nachrichtenartikeln in Echtzeit nach Zeitungsteil gruppiert zu binden.
 -   Sie könnten eine bidirektionale Bindung verwenden, um ein [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683)-Objekt an den Namen eines Kunden in einem Formular zu binden.
 
-Es gibt zwei Arten von Bindungen. Diese werden in der Regel beide im Benutzeroberflächenmarkup deklariert. Sie können entweder die [{x:Bind}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204783) oder die [{Binding}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204782) verwenden. Sie können sogar eine Mischung aus den beiden in derselben App verwenden – sogar im gleichen Benutzeroberflächenelement. {x:Bind} ist neu in Windows10 und bietet eine bessere Leistung. Alle in diesem Thema beschriebenen Details gelten für beide Arten von Bindungen, es sei denn, es wird ausdrücklich auf eine Abweichung hingewiesen.
+Es gibt zwei Arten von Bindungen. Diese werden in der Regel beide im Benutzeroberflächenmarkup deklariert. Sie können entweder die [{x:Bind}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204783) oder die [{Binding}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204782) verwenden. Sie können sogar eine Mischung aus den beiden in derselben App verwenden – sogar im gleichen Benutzeroberflächenelement. {x:Bind} ist neu in Windows 10 und bietet eine bessere Leistung. Alle in diesem Thema beschriebenen Details gelten für beide Arten von Bindungen, es sei denn, es wird ausdrücklich auf eine Abweichung hingewiesen.
 
 **Beispiel-Apps zur Veranschaulichung von {x:Bind}**
 
@@ -43,7 +43,7 @@ Es gibt zwei Arten von Bindungen. Diese werden in der Regel beide im Benutzerobe
 -   Laden Sie die App [Bookstore1](http://go.microsoft.com/fwlink/?linkid=532950) herunter.
 -   Laden Sie die App [Bookstore2](http://go.microsoft.com/fwlink/?linkid=532952) herunter.
 
-## Was zu jeder Bindung gehört
+## <a name="every-binding-involves-these-pieces"></a>Was zu jeder Bindung gehört
 
 -   Eine *Bindungsquelle*: Dies ist die Quelle der Daten für die Bindung und kann eine Instanz einer Klasse mit Membern sein, deren Werte Sie in der Benutzeroberfläche anzeigen möchten.
 -   Ein *Bindungsziel*: Dies ist eine [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/BR242362) des [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/BR208706) in Ihrer Benutzeroberfläche, die die Daten anzeigt.
@@ -51,7 +51,7 @@ Es gibt zwei Arten von Bindungen. Diese werden in der Regel beide im Benutzerobe
 
 In den folgenden Abschnitten betrachten wird die Bindungsquelle, das Bindungsziel und das Bindungsobjekt genauer. Außerdem verknüpfen wir die Abschnitte durch ein Beispiel, bei dem der Inhalt einer Schaltfläche an eine Zeichenfolgeneigenschaft mit dem Namen **NextButtonText** gebunden wird, die zur Klasse **HostViewModel** gehört.
 
-### Bindungsquelle
+### <a name="binding-source"></a>Bindungsquelle
 
 Nachfolgend wird eine sehr einfache Implementierung einer Klasse gezeigt, die wir als Bindungsquelle verwenden könnten.
 
@@ -145,7 +145,7 @@ Eine Bindungsquelle kann entweder als einzelnes Objekt behandelt werden, dessen 
 
 Sie können mithilfe von inkrementellem Laden Listensteuerelemente an beliebig große Datenquellen binden und dennoch eine hohe Leistung erreichen. Zum Beispiel können Sie Listensteuerelemente an Ergebnisse von Bildabfragen in Bing binden, ohne alle Ergebnisse auf einmal laden zu müssen. Stattdessen laden Sie nur einige der Ergebnisse sofort und weitere Ergebnisse nach Bedarf. Sie müssen [**ISupportIncrementalLoading**](https://msdn.microsoft.com/library/windows/apps/Hh701916) für eine Datenquelle umsetzen, die die Sammlungsänderungsbenachrichtigung unterstützt, um das inkrementelle Laden zu unterstützen. Wenn das Datenbindungsmodul weitere Daten anfordert, muss Ihre Datenquelle die entsprechenden Anforderungen senden, die Ergebnisse integrieren und anschließend die entsprechende Benachrichtigung senden, um die UI zu aktualisieren.
 
-### Bindungsziel
+### <a name="binding-target"></a>Bindungsziel
 
 In den folgenden beiden Beispielen ist die **Button.Content**-Eigenschaft das Bindungsziel. Ihr Wert ist auf eine Markuperweiterung festgelegt, die das Bindungsobjekt deklariert. Es wird zuerst [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) angezeigt, dann [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782). Das Deklarieren von Bindungen im Markup wird häufig verwendet (es ist praktisch, lesbar und toolfreundlich). Sie können Markups jedoch auch vermeiden und eine Instanz der [**Binding**](https://msdn.microsoft.com/library/windows/apps/BR209820)-Klasse stattdessen auch bei Bedarf imperativ (programmgesteuert) erstellen.
 
@@ -158,7 +158,7 @@ In den folgenden beiden Beispielen ist die **Button.Content**-Eigenschaft das Bi
 <Button Content="{Binding ...}" ... />
 ```
 
-### Mit {x:Bind} deklariertes Bindungsobjekt
+### <a name="binding-object-declared-using-xbind"></a>Mit {x:Bind} deklariertes Bindungsobjekt
 
 Vor dem Erstellen des [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)-Markups müssen wir jedoch noch einen Schritt durchführen. Wir müssen die Bindungsquellenklasse aus der Klasse verfügbar machen, die die Markupseite darstellt. Hierzu fügen wir eine Eigenschaft (in diesem Fall des Typs **HostViewModel**) zur **HostView**-Seitenklasse hinzu.
 
@@ -215,9 +215,9 @@ Code zur Unterstützung von **{X:Bind}** wird während der Kompilierung in den p
 
 **Einschränkungen**
 
-**{x:Bind}** eignet sich weder für spät gebundene Szenarien, z.B. das Navigieren in der Wörterbuchstruktur eines JSON-Objekts, noch Duck-Typing, was eine schwache Form der Eingabe basierend auf lexikalischen Übereinstimmungen von Eigenschaftennamen ist („Wenn ich einen Vogel sehe, der wie eine Ente läuft, wie eine Ente schwimmt und wie eine Ente schnattert, dann nenne ich diesen Vogel eine Ente.“). Im Fall von Duck-Typing könnte eine Bindung zur Alter-Eigenschaft auch mit einem Objekt vom Typ „Person“ oder „Wein“ erfüllt werden. Verwenden Sie für diese Szenarien **{Binding}**.
+**{x:Bind}** eignet sich weder für spät gebundene Szenarien, z. B. das Navigieren in der Wörterbuchstruktur eines JSON-Objekts, noch Duck-Typing, was eine schwache Form der Eingabe basierend auf lexikalischen Übereinstimmungen von Eigenschaftennamen ist („Wenn ich einen Vogel sehe, der wie eine Ente läuft, wie eine Ente schwimmt und wie eine Ente schnattert, dann nenne ich diesen Vogel eine Ente.“). Im Fall von Duck-Typing könnte eine Bindung zur Alter-Eigenschaft auch mit einem Objekt vom Typ „Person“ oder „Wein“ erfüllt werden. Verwenden Sie für diese Szenarien **{Binding}**.
 
-### Mit {Binding} deklariertes Bindungsobjekt
+### <a name="binding-object-declared-using-binding"></a>Mit {Binding} deklariertes Bindungsobjekt
 
 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) geht standardmäßig davon aus, dass Sie eine Bindung an den [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) der Markupseite vornehmen. Daher legen wir den **DataContext** der Seite als eine Instanz der Bindungsquellenklasse fest (in diesem Fall des Typs **HostViewModel**). Das folgende Beispiel zeigt das Markup, mit dem das Bindungsobjekt deklariert wird. Wir verwenden das gleiche **Button.Content**-Bindungsziel, das wir bereits weiter oben im Abschnitt „Bindungsziel“ verwendet haben, und führen eine Bindung an die **HostViewModel.NextButtonText**-Eigenschaft vor.
 
@@ -252,14 +252,14 @@ Innerhalb von [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps
 
 Die [**Path**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.path)-Eigenschaft unterstützt eine Vielzahl von Syntaxoptionen zum Binden geschachtelter Eigenschaften, angefügter Eigenschaften sowie von Ganzzahl- und Zeichenfolgenindexern. Weitere Informationen finden Sie unter [Property-path-Syntax](https://msdn.microsoft.com/library/windows/apps/Mt185586). Die Bindung an Zeichenfolgenindexer hat dieselbe Wirkung wie die Bindung an dynamische Eigenschaften, ohne [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878) implementieren zu müssen. Die [**ElementName**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.elementname)-Eigenschaft ist hilfreich für eine Element-an-Element-Bindung. Die [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.relativesource)-Eigenschaft hat mehrere Funktionen. Eine davon ist, dass sie eine leistungsfähigere Alternative zur Vorlagenbindung innerhalb von [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/BR209391) ist. Informationen zu anderen Einstellungen finden Sie unter [{Binding}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204782) und der [**Binding**](https://msdn.microsoft.com/library/windows/apps/BR209820)-Klasse.
 
-## Was geschieht, wenn die Quelle und das Ziel nicht den gleichen Typ haben?
+## <a name="what-if-the-source-and-the-target-are-not-the-same-type"></a>Was geschieht, wenn die Quelle und das Ziel nicht den gleichen Typ haben?
 
 Wenn Sie die Sichtbarkeit eines Benutzeroberflächenelements basierend auf dem Wert einer booleschen Eigenschaft steuern möchten, oder wenn Sie ein Benutzeroberflächenelement mit einer Farbe rendern möchten, die eine Funktion des Bereichs oder Trends eines numerischen Werts ist, oder wenn Sie einen Datums- und/oder Uhrzeitwert in einer Benutzeroberflächen-Elementeigenschaft angezeigt möchten, die eine Zeichenfolge erwartet, müssen Sie Werte von einem Typ in einen anderen konvertieren. Es wird Fälle geben, bei denen die richtige Lösung ist, eine andere Eigenschaft des richtigen Typs über die Bindungsquellenklasse verfügbar zu machen und die Konvertierungslogik dort gekapselt und testfähig zu belassen. Dies ist jedoch weder eine flexible noch eine skalierbare Lösung, wenn Sie über eine große Anzahl bzw. umfangreiche Kombinationen von Quell- und Zieleigenschaften verfügen. In diesem Fall verfügen Sie über verschiedene Optionen:
 
 * Bei Verwendung von {X:Bind} können Sie für diese Konvertierung direkt an eine Funktion binden.
 * Sie können zudem einen Wertkonverter als Objekt zum Durchführen der Konvertierung angeben. 
 
-## Wertkonverter
+## <a name="value-converters"></a>Wertkonverter
 
 Nachfolgend ist ein Wertkonverter dargestellt, der sich für eine einmalige oder eine unidirektionale Bindung eignet und der einen [**DateTime**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetime.aspx)-Wert in einen Zeichenfolgenwert mit dem Monat konvertiert. Die Klasse implementiert [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/BR209903).
 
@@ -367,13 +367,14 @@ Um immer dann einen Standardwert anzuzeigen, wenn die Bindungsquelle nicht aufge
 Wenn Sie ein Textsteuerelement an einen Wert binden, bei dem es sich nicht um eine Zeichenfolge handelt, wird der Wert vom Datenbindungsmodul in eine Zeichenfolge konvertiert. Wenn der Wert ein Verweistyp ist, ruft das Datenbindungsmodul den Zeichenfolgenwert ab, indem [**ICustomPropertyProvider.GetStringRepresentation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.icustompropertyprovider.getstringrepresentation) oder [**IStringable.ToString**](https://msdn.microsoft.com/library/Dn302136) abgerufen wird (falls verfügbar). Andernfalls wird [**Object.ToString**](https://msdn.microsoft.com/library/windows/apps/system.object.tostring.aspx) aufgerufen. Beachten Sie jedoch, dass das Bindungsmodul alle **ToString**-Implementierungen ignoriert, bei denen die Basisklassenimplementierung ausgeblendet wird. Stattdessen sollte bei Implementierungen von Unterklassen die **ToString**-Basisklassenmethode überschrieben werden. Auf ähnliche Weise werden in systemeigenen Sprachen analog dazu scheinbar [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878) und [**IStringable**](https://msdn.microsoft.com/library/Dn302135) implementiert. Alle Aufrufe von **GetStringRepresentation** und **IStringable.ToString** werden jedoch an **Object.ToString** oder eine Überschreibung dieser Methode weitergeleitet, und niemals an eine neue **ToString**-Implementierung, bei der die Basisklassenimplementierung ausgeblendet wird.
 
 > [!NOTE]
-> Ab Windows10, Version1607, wird über das XAML-Framework ein integrierter Konverter für die Konvertierung eines booleschen Operanden in einen Sichtbarkeitszustand bereitgestellt. Der Konverter verknüpft **true** mit dem Enumerationswert **Visible** und **false** mit dem Wert **Collapsed**, sodass Sie eine Visibility-Eigenschaft an einen booleschen Wert binden können, ohne einen Konverter zu erstellen. Für die Verwendung des integrierten Konverters muss die SDK-Zielversion der App mindestens 14393 lauten. Die Verwendung ist nicht möglich, wenn Ihre App für frühere Windows10-Versionen bestimmt ist. Weitere Informationen zu Zielversionen finden Sie unter [Versionsadaptiver Code](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
+> Ab Windows 10, Version 1607, wird über das XAML-Framework ein integrierter Konverter für die Konvertierung eines booleschen Operanden in einen Sichtbarkeitszustand bereitgestellt. Der Konverter verknüpft **true** mit dem Enumerationswert **Visible** und **false** mit dem Wert **Collapsed**, sodass Sie eine Visibility-Eigenschaft an einen booleschen Wert binden können, ohne einen Konverter zu erstellen. Für die Verwendung des integrierten Konverters muss die SDK-Zielversion der App mindestens 14393 lauten. Die Verwendung ist nicht möglich, wenn Ihre App für frühere Versionen von Windows 10 bestimmt ist. Weitere Informationen zu Zielversionen finden Sie unter [Versionsadaptiver Code](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
 
-## Funktionsbindung in {x:Bind}
+## <a name="function-binding-in-xbind"></a>Funktionsbindung in {x:Bind}
 
 {x:Bind} ermöglicht den letzten Schritt beim Umwandeln eines Bindungspfads in eine Funktion. Hiermit können Konvertierungen und Bindungen durchgeführt werden, die von mehreren Eigenschaften abhängen. Siehe [**{x:Bind}-Markuperweiterung**](https://msdn.microsoft.com/en-us/windows/uwp/xaml-platform/x-bind-markup-extension)
 
-## Ressourcenwörterbücher mit {x:Bind}
+<span id="resource-dictionaries-with-x-bind"/>
+## <a name="resource-dictionaries-with-xbind"></a>Ressourcenwörterbücher mit {x:Bind}
 
 Die [{x:Bind}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204783) hängt von der Codegenerierung ab. Sie benötigt daher eine CodeBehind-Datei mit einem Konstruktor, der **InitializeComponent** aufruft (um den generierten Code zu initialisieren). Sie verwenden das Ressourcenwörterbuch erneut, indem Sie seinen Typ instanziieren (sodass **InitializeComponent** aufgerufen wird), anstatt auf den Dateinamen zu verweisen. Nachfolgend ist ein Beispiel dafür aufgeführt, was Sie tun müssen, wenn Sie über ein vorhandenes Ressourcenwörterbuch verfügen und hierfür {x:Bind} verwenden möchten.
 
@@ -428,7 +429,7 @@ MainPage.xaml
 </Page>
 ```
 
-## Ereignisbindung und ICommand
+## <a name="event-binding-and-icommand"></a>Ereignisbindung und ICommand
 
 [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) unterstützt das Feature „Ereignisbindung“. Mit diesem Feature können Sie den Handler für ein Ereignis mit einer Bindung angeben, wobei es sich zusätzlich zum Behandeln von Ereignissen mit einer Methode in der CodeBehind-Datei um eine weitere Option handelt. Angenommen, Sie haben eine **RootFrame**-Eigenschaft für Ihre **MainPage**-Klasse.
 
@@ -453,7 +454,7 @@ Anschließend können Sie das **Click**-Ereignis einer Schaltfläche an das **Fr
 Das Verfahren zu Ereignisbindung ist ähnlich der Implementierung und Nutzung von Befehlen (ein Befehl ist eine Eigenschaft, die ein Objekt zurückgibt, das die [**ICommand**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.icommand.aspx)-Schnittstelle implementiert). Sowohl [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) als auch [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) kann mit Befehlen verwendet werden. Damit Sie das Befehlsmuster nicht mehrmals implementieren müssen, können Sie die **DelegateCommand**-Hilfsklasse verwenden, die Sie im [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame)-Beispiel (im Ordner „Common“) finden.
 
 
-## Binden an eine Sammlung von Dateien oder Ordnern
+## <a name="binding-to-a-collection-of-folders-or-files"></a>Binden an eine Sammlung von Dateien oder Ordnern
 
 Sie können die APIs im [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346)-Namespace verwenden, um Ordner- und Dateidaten abzurufen. Die verschiedenen **GetFilesAsync**-, **GetFoldersAsync**- und **GetItemsAsync**-Methoden geben jedoch keine Werte zurück, die zur Bindung an Listensteuerelemente geeignet sind. Stattdessen müssen Sie die Bindung an die Rückgabewerte der [**GetVirtualizedFilesVector**](https://msdn.microsoft.com/library/windows/apps/Hh701422)-, [**GetVirtualizedFoldersVector**](https://msdn.microsoft.com/library/windows/apps/Hh701428)-, und [**GetVirtualizedItemsVector**](https://msdn.microsoft.com/library/windows/apps/Hh701430)-Methoden der [**FileInformationFactory**](https://msdn.microsoft.com/library/windows/apps/BR207501)-Klasse vornehmen. Das folgende Codebeispiel aus dem [Beispiel für StorageDataSource und GetVirtualizedFilesVector](http://go.microsoft.com/fwlink/p/?linkid=228621) veranschaulicht das typische Verwendungsmuster. Vergessen Sie nicht, die **picturesLibrary**-Funktion im App-Paketmanifest zu deklarieren, und bestätigen Sie, dass Bilder im Bildbibliotheksordner vorhanden sind.
 
@@ -486,7 +487,7 @@ Beachten Sie, dass eine Zwei-Wege-Bindung mit dieser Technik nur für indizierte
 
 Darüber hinaus kann der Wert **null** von einem virtualisierten Vektor für einige Elemente vor dem Füllen des Werts zurückgegeben werden. Beispielsweise sollten Sie nach **null** suchen, bevor Sie den [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/BR209770)-Wert eines Listensteuerelements verwenden, das an einen virtualisierten Vektor gebunden ist. Sie können stattdessen jedoch auch [**SelectedIndex**](https://msdn.microsoft.com/library/windows/apps/BR209768) verwenden.
 
-## Binden an Daten, die durch einen Schlüssel gruppiert werden
+## <a name="binding-to-data-grouped-by-a-key"></a>Binden an Daten, die durch einen Schlüssel gruppiert werden
 
 Wenn Sie eine flache Sammlung von Elementen aufnehmen – beispielsweise Bücher, dargestellt durch eine **BookSku**-Klasse – und die Elemente mithilfe einer allgemeinen Eigenschaft als Schlüssel gruppieren – beispielsweise der Eigenschaft **BookSku.AuthorName** – werden als Ergebnis gruppierte Daten aufgerufen. Wenn Sie Daten gruppieren, handelt es sich nicht mehr um eine flache Sammlung. Gruppierte Daten sind eine Sammlung von Gruppenobjekten, wobei jedes Gruppenobjekt (a) über einen Schlüssel und (b) über eine Sammlung von Elementen verfügt, deren Eigenschaft dem Schlüssel entspricht. Im Fall des Beispiels mit den Büchern resultiert die Gruppierung der Bücher nach Autorennamen in einer Sammlung von Autorennamengruppen, wobei jede Gruppe a) über einen Schlüssel verfügt, bei dem es sich um den Autorennamen handelt, und b) über eine Sammlung der **BookSku**s verfügt, deren **AuthorName**-Eigenschaft dem Gruppenschlüssel entspricht.
 
@@ -575,7 +576,8 @@ Mit einem [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/Hh7
 
 Wenn Sie eine Bindung an hierarchische Daten vornehmen, wie z. B. Unterkategorien von Kategorien, können Sie die Hierarchieebenen in der Benutzeroberfläche mit einer Reihe von Elementsteuerelementen anzeigen. Eine Auswahl in einem Elementsteuerelement bestimmt den Inhalt der nachfolgenden Elementsteuerelemente. Die Listen können synchron gehalten werden, indem jede Liste jeweils an ihre eigene [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833) und die **CollectionViewSource**-Instanzen in einer Kette gebunden werden. Dies wird als „Master-/Detailansicht“ (oder „Listen-/Detailansicht“) bezeichnet. Weitere Informationen finden Sie unter [Binden an hierarchische Daten und Erstellen einer Master-/Detailansicht](how-to-bind-to-hierarchical-data-and-create-a-master-details-view.md).
 
-## Diagnose und Debuggen von Problemen bei der Datenbindung
+<span id="debugging"/>
+## <a name="diagnosing-and-debugging-data-binding-problems"></a>Diagnose und Debuggen von Problemen bei der Datenbindung
 
 Ihr Bindungsmarkup enthält die Namen der Eigenschaften (und für C# manchmal Felder und Methoden). Wenn Sie eine Eigenschaft umbenennen, müssen Sie daher außerdem alle Bindungen ändern, die darauf verweisen. Wenn Sie dies vergessen, führt dies zu einem typischen Beispiel eines Datenbindungsfehlers, und Ihre App kann nicht kompiliert oder ordnungsgemäß ausgeführt werden.
 
@@ -583,7 +585,7 @@ Die von [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) und
 
 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) verfügt nicht über Typinformationen für die Bindungsquelle. Wenn Sie jedoch die App mit angefügtem Debugger ausführen, werden alle Bindungsfehler in Visual Studio im Fenster **Ausgabe** angezeigt.
 
-## Erstellen von Bindungen im Code
+## <a name="creating-bindings-in-code"></a>Erstellen von Bindungen im Code
 
 **Hinweis** Dieser Abschnitt gilt nur für [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782), da Sie [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)-Bindungen nicht im Code erstellen können. Allerdings können einige der Vorteile von {x:Bind} auch mit [**DependencyObject.RegisterPropertyChangedCallback**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyobject.registerpropertychangedcallback.aspx) erzielt werden, das Ihnen die Registrierung von Änderungsbenachrichtigungen für Abhängigkeitseigenschaften ermöglicht.
 
@@ -627,7 +629,7 @@ Dim binding As New Binding() With {.Path = New PropertyPath("Brush1")}
 MyTextBox.SetBinding(TextBox.ForegroundProperty, binding)
 ```
 
-## Vergleich der Features von {x:Bind} und {Binding}
+## <a name="xbind-and-binding-feature-comparison"></a>Vergleich der Features von {x:Bind} und {Binding}
 
 | Feature | {X:Bind} | {Binding} | Hinweise |
 |---------|----------|-----------|-------|
@@ -651,6 +653,6 @@ MyTextBox.SetBinding(TextBox.ForegroundProperty, binding)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

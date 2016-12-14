@@ -1,15 +1,15 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: 27914C0A-2A02-473F-BDD5-C931E3943AA0
 title: Erstellen, Schreiben und Lesen einer Datei
 description: Lesen und Schreiben Sie eine Datei mithilfe eines StorageFile-Objekts.
 translationtype: Human Translation
-ms.sourcegitcommit: 24f50f2c4ac7fcfe931759d42ba73e758d77f6e8
-ms.openlocfilehash: 2a9f5de71712e657bc9a0a39b668085c399ce9fb
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: 0709d9c9126dc4523eae58d5db8d9037a2fb618e
 
 ---
 
-# Erstellen, Schreiben und Lesen einer Datei
+# <a name="create-write-and-read-a-file"></a>Erstellen, Schreiben und Lesen einer Datei
 
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -25,7 +25,7 @@ Lesen und Schreiben Sie eine Datei mithilfe eines [**StorageFile**](https://msdn
 
 > **Hinweis**  Weitere Informationen finden Sie im [Beispiel zum Dateizugriff](http://go.microsoft.com/fwlink/p/?linkid=619995).
 
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 -   **Kenntnisse in der asynchronen Programmierung für Apps für die universelle Windows-Plattform (UWP)**
 
@@ -35,7 +35,7 @@ Lesen und Schreiben Sie eine Datei mithilfe eines [**StorageFile**](https://msdn
 
     Unter [Öffnen von Dateien und Ordnern mit einer Auswahl](quickstart-using-file-and-folder-pickers.md) erfahren Sie, wie Sie eine Datei mit einer Dateiauswahl abrufen können.
 
-## Erstellen einer Datei
+## <a name="creating-a-file"></a>Erstellen einer Datei
 
 Nachfolgend finden Sie Informationen zum Erstellen einer Datei im lokalen Ordner der App. Wenn sie bereits vorhanden ist, ersetzen Sie sie.
 > [!div class="tabbedCodeSnippets"]
@@ -53,7 +53,7 @@ Dim storageFolder As StorageFolder = Windows.Storage.ApplicationData.Current.Loc
 Dim sampleFile As StorageFile = Await storageFolder.CreateFileAsync("sample.txt", CreationCollisionOption.ReplaceExisting)
 ```
 
-## Schreiben in eine Datei
+## <a name="writing-to-a-file"></a>Schreiben in eine Datei
 
 
 Im Folgenden finden Sie Informationen zum Schreiben in eine beschreibbare Datei auf dem Datenträger mithilfe der [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)-Klasse. Der allgemein erste Schritt für die verschiedenen Methoden zum Schreiben in eine Datei ist das Abrufen der Datei mit [**StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272). (Es sei denn, Sie schreiben sofort nach dem Erstellen in die Datei.)
@@ -153,7 +153,7 @@ using (var dataWriter = new Windows.Storage.Streams.DataWriter(outputStream))
         Await outputStream.FlushAsync()
 ```
 
-## Lesen aus einer Datei
+## <a name="reading-from-a-file"></a>Lesen aus einer Datei
 
 
 Nachfolgend finden Sie Informationen zum Lesen aus einer Datei auf dem Datenträger mithilfe der [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)-Klasse. Der allgemein erste Schritt für die einzelnen Methoden zum Lesen von Daten aus einer Datei ist das Abrufen der Datei mit [**StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272).
@@ -259,6 +259,6 @@ Dim dataReader As New DataReader(inputStream)
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

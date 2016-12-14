@@ -4,11 +4,11 @@ ms.assetid: 0C8DEE75-FB7B-4E59-81E3-55F8D65CD982
 title: "Übersicht über Animationen"
 description: Verwenden Sie die Animationen aus der Windows-Runtime-Animationsbibliothek, um das Windows-Erscheinungsbild in Ihre App zu integrieren.
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: d622465ce3da70cdb8dbd064b68ea6983f9fe3f7
+ms.sourcegitcommit: 2a08d1def7c4d2fde0ae08eb26076526058e8aae
+ms.openlocfilehash: e3e21c55ea8ddeab0969e304080394b940da010d
 
 ---
-# Übersicht über Animationen
+# <a name="animations-overview"></a>Übersicht über Animationen
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -25,13 +25,13 @@ Animationen von der Windows-Runtime-Animationsbibliothek bieten folgende Vorteil
 
 Wenn der Benutzer beispielsweise einer Liste ein Element hinzufügt und das neue Element nicht unmittelbar in der Liste angezeigt wird, wird das neue Element entsprechend animiert. Die anderen Elemente werden innerhalb kurzer Zeit an ihren neuen Positionen animiert und machen Platz für das hinzugefügte Element. Das Übergangsverhalten macht die Steuerelementinteraktion für den Benutzer offensichtlicher.
 
-In der Windows10-Version1607 wird eine neue [**ConnectedAnimationService**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.connectedanimationservice.aspx)-API für die Implementierung von Animationen eingeführt, bei denen während einer Navigation ein Element erscheint, um den Wechsel zwischen Ansichten zu animieren. Das Verwendungsmuster dieser API unterscheidet sich vom Verwendungsmuster anderer Animationsbibliothek-APIs. Die Verwendung von **ConnectedAnimationService** wird auf der [Referenzseite](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.connectedanimationservice.aspx) behandelt.
+In der Windows 10-Version 1607 wird eine neue [**ConnectedAnimationService**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.connectedanimationservice.aspx)-API für die Implementierung von Animationen eingeführt, bei denen während einer Navigation ein Element erscheint, um den Wechsel zwischen Ansichten zu animieren. Das Verwendungsmuster dieser API unterscheidet sich vom Verwendungsmuster anderer Animationsbibliothek-APIs. Die Verwendung von **ConnectedAnimationService** wird auf der [Referenzseite](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.connectedanimationservice.aspx) behandelt.
 
 Die Animationsbibliothek stellt keine Animationen für jedes mögliche Szenario bereit. Es gibt Fälle, in denen Sie es vielleicht vorziehen würden, eine benutzerdefinierte Animation in XAML zu erstellen. Weitere Informationen finden Sie unter [Storyboardanimationen](storyboarded-animations.md).
 
 Außerdem möchten Entwickler für bestimmte erweiterte Szenarien wie das Animieren eines Artikels basierend auf der Bildlaufposition eines ScrollViewer möglicherweise Interoperabilität mit visuellen Ebenen verwenden, um benutzerdefinierte Animationen zu implementieren. Weitere Informationen finden Sie unter [Visuelle Ebene](https://msdn.microsoft.com/windows/uwp/graphics/visual-layer).
 
-## Arten der Animation
+## <a name="types-of-animations"></a>Arten der Animation
 
 Das Windows-Runtime-Animationssystem und die Animationsbibliothek können mit dem Ziel verwendet werden, Steuerelemente und andere Elemente der Benutzeroberfläche zu aktivieren, um ein animiertes Verhalten zu erreichen. Es sind verschiedene Animationsarten verfügbar.
 
@@ -39,9 +39,9 @@ Das Windows-Runtime-Animationssystem und die Animationsbibliothek können mit de
 -   *Designanimationen* sind Animationen für eine oder mehrere Eigenschaften vordefinierter Windows-Runtime-XAML-UI-Typen. Designanimationen weichen von Designübergängen ab, da Designanimationen auf ein bestimmtes Element abzielen und in spezifischen visuellen Zuständen innerhalb eines Steuerelements vorhanden sind. Wohingegen Designübergänge Eigenschaften des Steuerelements zugewiesen sind, die sich außerhalb der visuellen Zustände befinden und sich auf die Übergänge zwischen diesen Zuständen auswirken. Viele der Windows-Runtime-XAML-Steuerelemente enthalten Designanimationen innerhalb von Storyboards, die Teil der Steuerelementvorlage sind, wobei die Animationen von visuellen Zuständen ausgelöst werden. So lange die Vorlagen also nicht geändert werden, sind die integrierten Designanimationen in Ihrer UI verfügbar. Ersetzen Sie jedoch die Vorlagen, ersetzen Sie ebenfalls die integrierten Steuerelement-Designanimationen. Um sie zurückzuerhalten, definieren Sie ein Storyboard mit Designanimationen innerhalb des Satzes visueller Zustände des Steuerelements. Sie können auch Designanimationen von Storyboards ausführen, die sich nicht innerhalb visueller Zustände befinden, und mit der [**Begin**](https://msdn.microsoft.com/library/windows/apps/BR210491)-Methode starten. Das ist jedoch keine gängige Vorgehensweise. Die Designanimationen sind Teil der Animationsbibliothek.
 -   *Visuelle Übergänge* werden angewendet, wenn ein Steuerelement von einem seiner definierten visuellen Zustände in einen anderen Zustand übergeht. Es handelt sich um benutzerdefinierte Animationen, die Sie schreiben, und sind normalerweise mit der benutzerdefinierten Vorlage, die Sie für ein Steuerelement schreiben, und den Definitionen für visuelle Zustände in dieser Vorlage verknüpft. Die Animation wird nur in der Zeit zwischen den Zuständen ausgeführt. Dies ist i. d. R. eine kurze Zeitdauer von höchstens einigen Sekunden. Weitere Informationen finden Sie im Abschnitt ["Visuelle Übergänge" der Storyboardanimationen für visuelle Zustände](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808#VisualTransition).
 -   *Storyboardanimationen* animieren den Wert einer Windows-Runtime-Abhängigkeitseigenschaft im Laufe der Zeit. Storyboards können als Teil eines visuellen Übergangs definiert oder zur Laufzeit von der Anwendung ausgelöst werden. Weitere Informationen finden Sie unter [Storyboardanimationen](storyboarded-animations.md). Weitere Informationen zu Abhängigkeitseigenschaften und ihren Vorkommen finden Sie unter [Übersicht über Abhängigkeitseigenschaften](https://msdn.microsoft.com/library/windows/apps/Mt185583).
--   *Verbundene Animationen* werden von der neuen [**ConnectedAnimationService**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.connectedanimationservice.aspx)-API bereitgestellt und ermöglichen Entwicklern die einfache Erstellung eines Effekts, bei dem während einer Navigation ein Element erscheint, um den Wechsel zwischen Ansichten zu animieren. Diese API steht ab der Windows10-Version1607 zur Verfügung. Weitere Informationen finden Sie unter [**ConnectedAnimationService**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.connectedanimationservice.aspx).
+-   *Verbundene Animationen* werden von der neuen [**ConnectedAnimationService**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.connectedanimationservice.aspx)-API bereitgestellt und ermöglichen Entwicklern die einfache Erstellung eines Effekts, bei dem während einer Navigation ein Element erscheint, um den Wechsel zwischen Ansichten zu animieren. Diese API steht ab der Windows 10-Version 1607 zur Verfügung. Weitere Informationen finden Sie unter [**ConnectedAnimationService**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.connectedanimationservice.aspx).
 
-## In der Bibliothek verfügbare Animationen
+## <a name="animations-available-in-the-library"></a>In der Bibliothek verfügbare Animationen
 
 Die folgenden Animationen werden in der Animationsbibliothek bereitgestellt. Klicken Sie auf den Namen einer Animation, um mehr über die Hauptnutzungsszenarios und ihre Definition zu erfahren und eine Beispielanimation anzuzeigen.
 
@@ -51,49 +51,52 @@ Die folgenden Animationen werden in der Animationsbibliothek bereitgestellt. Kli
 -   [Zeiger hoch/runter](./animations-overview.md#pointer-up-down): Gibt visuelles Feedback beim Tippen oder Klicken auf eine Kachel.
 -   [Ändern der Position](./animations-overview.md#reposition): Verschiebt ein Element an eine neue Position.
 -   [Popup einblenden/ausblenden](./animations-overview.md#show-hide-popup): Zeigt Kontext-UI oben in der Ansicht an.
--   [Rand-UI einblenden/ausblenden](./animations-overview.md#show-hide-edge-ui): Verschiebt UI am Bildschirmrand (auch große UI, z.B. ein Panel) in die oder aus der Ansicht.
+-   [Rand-UI einblenden/ausblenden](./animations-overview.md#show-hide-edge-ui): Verschiebt UI am Bildschirmrand (auch große UI, z. B. ein Panel) in die oder aus der Ansicht.
 -   [Listenelementänderungen](./animations-overview.md#list-item-changes): Fügt einer Liste Elemente hinzu, entfernt sie oder ordnet sie neu an.
--   [Drag&Drop](./animations-overview.md#drag-drop): Gibt visuelles Feedback während eines Drag&Drop-Vorgangs.
+-   [Drag & Drop](./animations-overview.md#drag-drop): Gibt visuelles Feedback während eines Drag & Drop-Vorgangs.
 
-### Seitenübergang
+### <a name="page-transition"></a>Seitenübergang
 
 Verwenden Sie Seitenübergänge zum Animieren von Navigation innerhalb einer App. Da nahezu alle Apps irgendeine Art von Navigation verwenden, sind Animationen für Seitenübergänge der am häufigsten von Apps verwendete Designanimationstyp. Weitere Informationen zu Seitenübergangs-APIs finden Sie unter [**NavigationThemeTransition**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.navigationthemetransition).
 
 
 
-### Inhalts- und Eingangsübergang
+### <a name="content-transition-and-entrance-transition"></a>Inhalts- und Eingangsübergang
 
-Verwenden Sie Inhaltsübergangsanimationen ([**ContentThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR243103)), um Inhalte in die oder aus der aktuelle(n) Ansicht zu verschieben. Die Inhaltsübergangsanimationen werden z.B. verwendet, um Inhalt anzuzeigen, der beim ersten Laden der Seite noch nicht anzeigebereit war, oder wenn der Inhalt eines Seitenabschnitts geändert wird.
+Verwenden Sie Inhaltsübergangsanimationen ([**ContentThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR243103)), um Inhalte in die oder aus der aktuelle(n) Ansicht zu verschieben. Die Inhaltsübergangsanimationen werden z. B. verwendet, um Inhalt anzuzeigen, der beim ersten Laden der Seite noch nicht anzeigebereit war, oder wenn der Inhalt eines Seitenabschnitts geändert wird.
 
 [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210288) steht für eine Bewegung, die auf Inhalte angewendet werden kann, wenn eine Seite oder ein großer Teil der UI zum ersten Mal geladen wird. Daher kann der erste Eindruck eines Inhalts anderes Feedback vermitteln als eine Inhaltsänderung. [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210288) entspricht einer [**NavigationThemeTransition**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.navigationthemetransition) mit den Standardparametern, kann aber außerhalb eines [**Frames**](https://msdn.microsoft.com/library/windows/apps/br242682) verwendet werden.
  
  
-
-### Ein-, Aus- und Überblenden
+<span id="fade-in-out-and-crossfade"/>
+### <a name="fade-inout-and-crossfade"></a>Ein-, Aus- und Überblenden
 
 Verwenden Sie die Ein-und Ausblendungsanimationen, um vorübergehend angezeigte Benutzeroberflächen oder Steuerelemente ein- bzw. auszublenden. In XAML werden diese als [**FadeInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210298) und [**FadeOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210302) dargestellt. Ein Beispiel ist eine App-Leiste, auf der aufgrund einer Benutzerinteraktion neue Steuerelemente angezeigt werden können. Ein anderes Beispiel ist eine vorübergehend angezeigte Bildlaufleiste oder Schwenkmarkierung, die ausgeblendet wird, wenn eine Zeit lang keine Benutzereingabe erkannt wurde. Apps sollten die Einblendungsanimation auch für den Übergang zwischen einem Platzhalterelement und dem endgültigen Element verwenden, wenn Inhalte dynamisch geladen werden.
 
-Verwenden Sie eine Überblendungsanimation, um einen weichen Übergang zu erreichen, wenn sich der Zustand eines Elements ändert, z.B. wenn die aktuellen Inhalte einer Ansicht aktualisiert werden. Die XAML-Animationsbibliothek stellt keine dedizierte Überblendungsanimation (keine Entsprechung für [**crossFade**](https://msdn.microsoft.com/library/windows/apps/BR212661)) bereit, aber Sie können dasselbe Ergebnis durch Verwendung von [**FadeInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210298) und [**FadeOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210302) mit überlappendem Timing erzielen.
+Verwenden Sie eine Überblendungsanimation, um einen weichen Übergang zu erreichen, wenn sich der Zustand eines Elements ändert, z. B. wenn die aktuellen Inhalte einer Ansicht aktualisiert werden. Die XAML-Animationsbibliothek stellt keine dedizierte Überblendungsanimation (keine Entsprechung für [**crossFade**](https://msdn.microsoft.com/library/windows/apps/BR212661)) bereit, aber Sie können dasselbe Ergebnis durch Verwendung von [**FadeInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210298) und [**FadeOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210302) mit überlappendem Timing erzielen.
 
-### Zeiger hoch/runter
+<span id="pointer-up-down"/>
+### <a name="pointer-updown"></a>Zeiger hoch/runter
 
 Verwenden Sie die Animationen [**PointerUpThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/Hh969168) und [**PointerDownThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/Hh969164), um dem Benutzer Feedback bei einem erfolgreichen Tippen oder Klicken auf eine Kachel zu geben. Wenn ein Benutzer beispielsweise auf eine Kachel klickt oder tippt, wird die Animation für Zeiger runter wiedergegeben. Sobald das Klicken oder Tippen beendet wird, wird die Animation für Zeiger hoch wiedergegeben.
 
-### Ändern der Position
+### <a name="reposition"></a>Ändern der Position
 
 Verwenden Sie die Animationen für das Ändern der Position ([**RepositionThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210421) oder [**RepositionThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210429)), um eines oder mehrere Elemente an eine neue Position zu verschieben. Das Verschieben der Kopfzeilen in einem Elementsteuerelement verwendet beispielsweise die Animation für das Ändern der Position.
 
-### Popup einblenden/ausblenden
+<span id="show-hide-popup"/>
+### <a name="showhide-popup"></a>Popup einblenden/ausblenden
 
 Verwenden Sie [**PopInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210383) und [**PopOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210391), wenn Sie ein [**Popup**](https://msdn.microsoft.com/library/windows/apps/BR227842) oder ähnliche kontextabhängige UI oben in der aktuellen Ansicht ein- und ausblenden möchten. [**PopupThemeTransition**](https://msdn.microsoft.com/library/windows/apps/Hh969172) ist ein Designübergang, der hilfreiches Feedback bietet, wenn Sie ein Popup einfach ausblenden möchten.
 
-### Rand-UI einblenden/ausblenden
+<span id="show-hide-edge-ui"/>
+### <a name="showhide-edge-ui"></a>Rand-UI einblenden/ausblenden
 
 Verwenden Sie die [**EdgeUIThemeTransition**](https://msdn.microsoft.com/library/windows/apps/Hh702324)-Animationen, um kleine UI-Elemente am Bildschirmrand in die und aus der Ansicht zu verschieben. Verwenden Sie diese Animationen zum Beispiel, wenn Sie eine benutzerdefinierte App-Leiste oben oder unten auf dem Bildschirm oder ein Benutzeroberfläche für Fehler und Warnungen oben auf dem Bildschirm anzeigen.
 
 Verwenden Sie die [**PaneThemeTransition**](https://msdn.microsoft.com/library/windows/apps/Hh969160)-Animation, um einen Bereich oder ein Panel ein- oder auszublenden. Dies ist für große randbasierte UI vorgesehen, z. B. eine benutzerdefinierte Tastatur oder ein Aufgabenbereich.
 
-### Listenelementänderungen
+### <a name="list-item-changes"></a>Listenelementänderungen
 
 Verwenden Sie die [**AddDeleteThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR243047)-Animation, um dem Hinzufügen oder Löschen von Listenelementen animiertes Verhalten hinzuzufügen. Beim Hinzufügen ordnet der Übergang zunächst vorhandene Elemente in der Liste neu an, um Platz für die neuen Elemente zu schaffen, und fügt dann die neuen Elemente hinzu. Beim Löschen entfernt der Übergang Elemente aus einer Liste und ordnet die verbleibenden Listenelemente bei Bedarf neu an, wenn die gelöschten Elemente entfernt wurden.
 
@@ -101,13 +104,14 @@ Es besteht zudem eine separate [**ReorderThemeTransition**](https://msdn.microso
 
 Beachten Sie, dass diese Animationen in den standardmäßigen [**ListView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx)- und [**GridView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx)-Vorlagen enthalten sind, sodass Sie diese Animationen nicht manuell hinzufügen müssen, wenn Sie diese Steuerelemente bereits verwenden.
 
-### Drag & Drop
+<span id="drag-drop"/>
+### <a name="dragdrop"></a>Drag & Drop
 
 Verwenden Sie die Ziehanimation ([**DragItemThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243173), [**DragOverThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243177)) und die Ablegeanimation ([**DropTargetItemThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243185)), um visuelles Feedback zu geben, wenn der Benutzer ein Element zieht oder ablegt.
 
 Wenn aktiv, zeigen die Animationen dem Benutzer an, dass die Liste um ein abgelegtes Element neu angeordnet werden kann. Für Benutzer ist es hilfreich, zu wissen, wo das Element in einer Liste platziert wird, wenn es am aktuellen Ort abgelegt wird. Die Animationen geben visuelles Feedback dazu, dass ein gezogenes Element zwischen zwei anderen Elementen in der Liste abgelegt werden kann und dass diese Elemente den Platz freigegeben.
 
-## Verwenden von Animationen mit benutzerdefinierten Steuerelementen
+## <a name="using-animations-with-custom-controls"></a>Verwenden von Animationen mit benutzerdefinierten Steuerelementen
 
 In der folgenden Tabelle werden die Animationen zusammengefasst, die zum Erstellen einer benutzerdefinierten Version dieser Windows-Runtime-Steuerelemente verwendet werden sollten:
 
@@ -124,7 +128,7 @@ In der folgenden Tabelle werden die Animationen zusammengefasst, die zum Erstell
 
  
 
-## Beispiele zu Übergangsanimationen
+## <a name="transition-animation-examples"></a>Beispiele zu Übergangsanimationen
 
 Im Optimalfall verwendet Ihre App Animationen, um die Benutzeroberfläche interessanter und ansprechender zu gestalten, ohne dabei die Benutzer zu irritieren. Das erreichen Sie unter anderem mit animierten UI-Übergängen: Beim Ein- und Ausblenden von Elementen und anderen Änderungen lenkt die Animation die Aufmerksamkeit des Benutzers auf den betreffenden Aspekt. Beispielsweise können Sie Schaltflächen mit einer schnellen Bewegung ein- oder ausblenden, statt diese einfach nur hinzuzufügen oder zu entfernen. Wir haben eine Reihe von APIs für empfohlene und typische Animationsübergänge entwickelt, die sich nahtlos einfügen. Dieses Beispiel zeigt, wie Sie eine Animation auf eine Schaltfläche anwenden, damit diese schnell in die Ansicht gezogen wird.
 
@@ -196,13 +200,11 @@ Die Beispiele oben wenden einen Designübergang auf ein einzelnes Steuerelement 
 </ItemsControl>
 ```
 
-Die untergeordneten Rechtecke des [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) werden visuell ansprechend nacheinander eingeblendet – und nicht alle auf einmal, wie bei der Anwendung der Animation auf jedes Rechteck einzeln.
+Die untergeordneten Rechtecke des [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) werden visuell ansprechend nacheinander eingeblendet – und nicht alle auf einmal, wie es bei der einzelnen Anwendung der Animation auf jedes Rechteck der Fall wäre.
 
-Im folgenden Video wird die Animation demonstriert:
+Im Folgenden finden Sie eine Demonstration dieser Animation:
 
 ![Animation, in der das untergeordnete Rechteck eingeblendet wird](./images/animation-child-rectangles.gif)
-
-<iframe src="https://videoplayercdn.osi.office.net/embed/bb48c68b-c15d-44e4-86e5-8a8065da7a2e?autoplay=true&mkt=en-us&csid=IA-en-us" width="640" height="360" allowFullScreen="true" frameBorder="0" scrolling="no" ></iframe>
 
 Untergeordnete Objekte in einem Container können außerdem mit einer fließenden Bewegung neu angeordnet werden, wenn sich die Position eines oder mehrerer untergeordneter Objekte ändert. In dem folgenden Beispiel wird eine [**RepositionThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210429)-Animation auf ein Rechteckraster angewendet. Wird eines der Rechtecke entfernt, bewegen sich die anderen Rechtecke an ihre neue Position.
 
@@ -266,9 +268,7 @@ void BlankPage::RemoveButton_Click(Platform::Object^ sender, Windows::UI::Xaml::
 }
 ```
 
-Das Video demonstriert die Animation, die für die Rechtecke ausgeführt werden, die entfernt werden:
-
-Sie können mehrere Übergangsanimationen auf ein einzelnes Objekt oder einen Objektcontainer anwenden. Wenn Sie beispielsweise die Rechteckliste mit einer Animation einblenden und außerdem Positionsänderungen animieren möchten, können Sie [**RepositionThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210429) und [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210288) wie folgt anwenden:
+Sie können auf ein einzelnes Objekt oder einen Objektcontainer mehrere Übergangsanimationen anwenden. Wenn Sie beispielsweise die Rechteckliste mit einer Animation einblenden und außerdem Positionsänderungen animieren möchten, können Sie [**RepositionThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210429) und [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210288) wie folgt anwenden:
 
 ```xml
 ...
@@ -297,7 +297,7 @@ Es stehen verschiedene Übergangseffekte zur Verfügung, um UI-Elemente beim Hin
 
  
 
-## Beispiele zu Designanimationen
+## <a name="theme-animation-examples"></a>Beispiele zu Designanimationen
 
 Die Anwendung von Übergangsanimationen ist denkbar einfach. Aber vielleicht möchten Sie Zeit und Abfolge der Animationseffekte genauer steuern. Auch Designanimationen verwenden ein einheitliches Design für das Animationsverhalten, umfassen jedoch mehr Steuerungsmöglichkeiten. Für Designanimationen ist weniger Markup erforderlich als für benutzerdefinierte Animationen. Hier blenden wir mit [**FadeOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210302) ein Rechteck aus.
 
@@ -366,7 +366,7 @@ Sie können noch eine Reihe weiterer Designanimationen auf UI-Elemente anwenden 
 
  
 
-## Erstellen eigener Animationen
+## <a name="create-your-own-animations"></a>Erstellen eigener Animationen
 
 Wenn Designanimationen für Ihre Zwecke nicht ausreichen, können Sie eigene Animationen erstellen. Sie animieren Objekte, indem Sie mindestens einen ihrer Eigenschaftenwerte animieren. Beispielsweise können Sie die Breite eines Rechtecks, den Winkel einer [**RotateTransform**](https://msdn.microsoft.com/library/windows/apps/BR242932) oder den Farbwert einer Schaltfläche animieren. Wir bezeichnen diese Art der benutzerdefinierten Animation als Storyboardanimation, um sie von den Bibliotheksanimationen zu unterscheiden, die von der Windows-Runtime bereits als vorkonfigurierter Animationstyp bereitgestellt werden. Für Storyboardanimationen verwenden Sie eine Animation, die Werte eines bestimmten Typs ändern kann (beispielsweise [**DoubleAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243136), zum Animieren eines **Double**-Elements), und platzieren die Animation in ein [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490), um sie zu steuern.
 
@@ -384,6 +384,6 @@ Der größte Bereich einer App-UI-Definition in XAML, in dem benutzerdefinierte 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

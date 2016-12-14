@@ -1,34 +1,36 @@
 ---
 author: mcleanbyron
 ms.assetid: E322DFFE-8EEC-499D-87BC-EDA5CFC27551
-description: "Jede WindowsStore-Transaktion, die zu einem erfolgreichen Produktkauf führt, kann optional einen Transaktionsbeleg zurückgeben."
+description: "Jede Windows Store-Transaktion, die zu einem erfolgreichen Produktkauf führt, kann optional einen Transaktionsbeleg zurückgeben."
 title: "Überprüfen von Produktkäufen anhand von Belegen"
 translationtype: Human Translation
-ms.sourcegitcommit: 18d5c2ecf7d438355c3103ad2aae32dc84fc89ed
-ms.openlocfilehash: ea79a33a52bc45a9c8609e12bfac953c3f92db09
+ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
+ms.openlocfilehash: 55631d364ca6f2d76d214eca6d00fbdd969c0e15
 
 ---
 
-# Überprüfen von Produktkäufen anhand von Belegen
+# <a name="use-receipts-to-verify-product-purchases"></a>Überprüfen von Produktkäufen anhand von Belegen
 
 
->**Hinweis**&nbsp;&nbsp;In den Beispielen in diesem Artikel werden Member des [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) Namespace verwendet. Wenn Ihre App für Windows10, Version 1607, oder höher entwickelt wurde, empfehlen wir Ihnen, Member des [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace und nicht des **Windows.ApplicationModel.Store**-Namespace zur Verwaltung von In-App-Einkäufen zu verwenden. Weitere Informationen finden Sie unter [In-App-Einkäufe und Testversionen](in-app-purchases-and-trials.md).
-
-**Wichtige APIs**
-
--   [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765)
--   [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766)
-
-Jede WindowsStore-Transaktion, die zu einem erfolgreichen Produktkauf führt, kann optional einen Transaktionsbeleg zurückgeben. Dieser Beleg enthalten Informationen zum gelisteten Produkt und zu den Kosten für den Kunden.
-
-Der Zugriff auf diese Informationen unterstützt Szenarien, in denen Ihre App überprüfen muss, ob ein Benutzer Ihre App erworben oder In-App-Produktkäufe im WindowsStore getätigt hat. Das kann zum Beispiel bei einem Spiel der Fall sein, in dem Inhalte heruntergeladen wurden. Wenn der Benutzer, der die Spielinhalte gekauft hat, das Spiel auf einem anderen Gerät spielen möchte, müssen Sie überprüfen, ob der Benutzer die Inhalte bereits besitzt. Gehen Sie dazu wie folgt vor:
-
-## Anfordern eines Belegs
+>**Hinweis**&nbsp;&nbsp;Dieser Artikel beschreibt, wie Sie Mitglieder des [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)-Namespace verwenden, um einen Beleg für einen In-App-Kauf abzurufen und zu überprüfen. Wenn Sie den alternativen [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace für In-App-Käufe verwenden (eingeführt in Windows 10, Version 1607), müssen Sie beachten, dass dieser Namespace keine API zum Abrufen von Kaufbelegen für In-App-Einkäufe enthält. Sie können jedoch eine REST-Methode in der Windows Store-Sammlungs-API verwenden, um Daten für eine Kauftransaktion abzurufen. Weitere Informationen finden Sie unter [Belege für In-App-Käufe](in-app-purchases-and-trials.md#receipts).
 
 
-Der **Windows.ApplicationModel.Store**-Namespace unterstützt zwei Methoden zum Anfordern eines Belegs: mithilfe der [**CurrentApp.RequestProductPurchaseAsync | requestProductPurchaseAsync**](https://msdn.microsoft.com/library/windows/apps/dn263381)- oder [**CurrentApp.RequestAppPurchaseAsync | requestAppPurchaseAsync**](https://msdn.microsoft.com/library/windows/apps/hh967813)-Methode und des *includeReceipt*-Parameters oder durch Aufrufen der [**CurrentApp.GetAppReceiptAsync | getAppReceiptAsync**](https://msdn.microsoft.com/library/windows/apps/hh967811)-Methode. Ein App-Beleg sieht ungefähr so aus:
+Jede Windows Store-Transaktion, die zu einem erfolgreichen Produktkauf führt, kann optional einen Transaktionsbeleg zurückgeben. Dieser Beleg enthalten Informationen zum gelisteten Produkt und zu den Kosten für den Kunden.
 
-```XML
+Der Zugriff auf diese Informationen unterstützt Szenarien, in denen Ihre App überprüfen muss, ob ein Benutzer Ihre App oder ein Add-On (auch als In-App-Produkt oder IAP bezeichnet) im Windows Store gekauft hat. Das kann zum Beispiel bei einem Spiel der Fall sein, für das Inhalte heruntergeladen werden können. Wenn der Benutzer, der die Spielinhalte gekauft hat, das Spiel auf einem anderen Gerät spielen möchte, müssen Sie überprüfen, ob der Benutzer die Inhalte bereits besitzt. Gehen Sie dazu wie folgt vor:
+
+## <a name="requesting-a-receipt"></a>Anfordern eines Belegs
+
+
+Der **Windows.ApplicationModel.Store**-Namespace unterstützt verschiedene Möglichkeiten für das Abrufen eines Belegs:
+
+* Wenn Sie mithilfe von [CurrentApp.RequestAppPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/hh967813) oder [CurrentApp.RequestProductPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/hh779780.aspx) (oder eine andere Überladung dieser Methode) einen Kauf durchführen, enthält der Rückgabewert den Beleg.
+* Sie können die Methode [CurrentApp.GetAppReceiptAsync](https://msdn.microsoft.com/library/windows/apps/hh967811) aufrufen, um die aktuellen Beleginformationen für Ihre App und alle Add-Ons in Ihrer App abzurufen.
+
+Ein App-Beleg sieht ungefähr wie folgt aus.
+
+> [!div class="tabbedCodeSnippets"]
+```xml
 <Receipt Version="1.0" ReceiptDate="2012-08-30T23:10:05Z" CertificateId="b809e47cd0110a4db043b3f73e83acd917fe1336" ReceiptDeviceId="4e362949-acc3-fe3a-e71b-89893eb4f528">
     <AppReceipt Id="8ffa256d-eca8-712a-7cf8-cbf5522df24b" AppId="55428GreenlakeApps.CurrentAppSimulatorEventTest_z7q3q7z11crfr" PurchaseDate="2012-06-04T23:07:24Z" LicenseType="Full" />
     <ProductReceipt Id="6bbf4366-6fb2-8be8-7947-92fd5f683530" ProductId="Product1" PurchaseDate="2012-08-30T23:08:52Z" ExpirationDate="2012-09-02T23:08:49Z" ProductType="Durable" AppId="55428GreenlakeApps.CurrentAppSimulatorEventTest_z7q3q7z11crfr" />
@@ -49,9 +51,10 @@ Der **Windows.ApplicationModel.Store**-Namespace unterstützt zwei Methoden zum 
 </Receipt>
 ```
 
-Ein Produktbeleg sieht so aus:
+Ein Produktbeleg sieht wie folgt aus.
 
-```XML
+> [!div class="tabbedCodeSnippets"]
+```xml
 <Receipt Version="1.0" ReceiptDate="2012-08-30T23:08:52Z" CertificateId="b809e47cd0110a4db043b3f73e83acd917fe1336" ReceiptDeviceId="4e362949-acc3-fe3a-e71b-89893eb4f528">
     <ProductReceipt Id="6bbf4366-6fb2-8be8-7947-92fd5f683530" ProductId="Product1" PurchaseDate="2012-08-30T23:08:52Z" ExpirationDate="2012-09-02T23:08:49Z" ProductType="Durable" AppId="55428GreenlakeApps.CurrentAppSimulatorEventTest_z7q3q7z11crfr" />
     <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
@@ -71,168 +74,69 @@ Ein Produktbeleg sieht so aus:
 </Receipt>
 ```
 
-Sie können beide Belegbeispiele verwenden, um den Überprüfungscode zu testen.
+Sie können beide Belegbeispiele verwenden, um den Überprüfungscode zu testen. Weitere Informationen zum Inhalt des Belegs finden Sie unter [Beschreibungen von Elementen und Attributen](#receipt-descriptions).
 
-## Überprüfen eines Belegs
+## <a name="validating-a-receipt"></a>Überprüfen eines Belegs
 
+Um die Authentizität eines Belegs zu überprüfen, muss das Back-End-System (ein Webdienst oder ähnlich) die Belegsignatur mithilfe des öffentlichen Zertifikats überprüfen. Um dieses Zertifikat abzurufen, verwenden Sie die URL ```https://go.microsoft.com/fwlink/p/?linkid=246509&cid=CertificateId```, wobei ```CertificateId``` der **CertificateId**-Wert im Beleg ist.
 
-Wenn Sie einen Beleg erhalten haben, muss dieser von Ihrem Back-End-System (einem Webdienst oder einer vergleichbaren Einrichtung) überprüft werden. Hier sehen Sie ein .NET Framework-Beispiel dieses Prüfprozesses.
+Im Folgenden sehen Sie ein Beispiel für diesen Überprüfungsvorgang. Dieser Code wird in einer .NET Framework-Konsolenanwendung ausgeführt, die einen Verweis auf die **System.Security**-Assembly enthält.
 
-```CSharp
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Security.Cryptography;
-using System.Security.Cryptography.X509Certificates;
-using System.Xml;
-using System.IO;
-using System.Security.Cryptography.Xml;
-using System.Net;
+> [!div class="tabbedCodeSnippets"]
+[!code-cs[ReceiptVerificationSample](./code/ReceiptVerificationSample/cs/Program.cs#ReceiptVerificationSample)]
 
-namespace ReceiptVerificationSample
-{
-        public sealed class RSAPKCS1SHA256SignatureDescription : SignatureDescription
-        {
-            public RSAPKCS1SHA256SignatureDescription()
-            {
-                base.KeyAlgorithm = typeof(RSACryptoServiceProvider).FullName;
-                base.DigestAlgorithm = typeof(SHA256Managed).FullName;
-                base.FormatterAlgorithm = typeof(RSAPKCS1SignatureFormatter).FullName;
-                base.DeformatterAlgorithm = typeof(RSAPKCS1SignatureDeformatter).FullName;
-            }
+<span id="receipt-descriptions" />
+## <a name="element-and-attribute-descriptions-for-a-receipt"></a>Beschreibungen von Elementen und Attributen eines Belegs
 
-            public override AsymmetricSignatureDeformatter CreateDeformatter(AsymmetricAlgorithm key)
-            {
-                if (key == null)
-                {
-                    throw new ArgumentNullException("key");
-                }
+In diesem Abschnitt werden die Elemente und Attribute in einen Beleg beschrieben.
 
-                RSAPKCS1SignatureDeformatter deformatter = new RSAPKCS1SignatureDeformatter(key);
-                deformatter.SetHashAlgorithm("SHA256");
-                return deformatter;
-            }
+### <a name="receipt-element"></a>Element „Receipt“
 
-            public override AsymmetricSignatureFormatter CreateFormatter(AsymmetricAlgorithm key)
-            {
-                if (key == null)
-                {
-                    throw new ArgumentNullException("key");
-                }
+Das Stammelement dieser Datei ist das Element **Receipt**, das Informationen zu App- und In-App-Käufen enthält. Dieses Element enthält die folgenden untergeordneten Elemente.
 
-                RSAPKCS1SignatureFormatter formatter = new RSAPKCS1SignatureFormatter(key);
-                formatter.SetHashAlgorithm("SHA256");
-                return formatter;
-            }
+|  Element  |  Erforderlich  |  Menge  |  Beschreibung   |
+|-------------|------------|--------|--------|
+|  [AppReceipt](#appreceipt)  |    Nein        |  0 oder 1  |  Enthält Kaufinformationen für die aktuelle App.            |
+|  [ProductReceipt](#productreceipt)  |     Nein       |  0 oder mehr    |   Enthält Informationen zu einem In-App-Kauf für die aktuelle App.     |
+|  Signature  |      Ja      |  1   |   Dieses Element ist ein standardmäßiges [XML-DSIG-Konstrukt](http://go.microsoft.com/fwlink/p/?linkid=251093). Es enthält ein **SignatureValue**-Element, das die Signatur enthält, die Sie für die Überprüfung des Belegs verwenden können, und ein **SignedInfo**-Element.      |
 
-        }
+**Receipt** hat die folgenden Attribute.
 
-        class Program
-        {
+|  Attribut  |  Beschreibung   |
+|-------------|-------------------|
+|  **Version**  |    Die Versionsnummer des Belegs.            |
+|  **CertificateId**  |     Der Fingerabdruck des Zertifikats, der für die Signierung des Belegs verwendet wurde.          |
+|  **ReceiptDate**  |    Das Datum, an dem der Beleg signiert und heruntergeladen wurde.           |  
+|  **ReceiptDeviceId**  |   Identifiziert das Gerät, das für die Anforderung dieses Belegs verwendet wurde.         |  |
 
-            // Utility function to read the bytes from an HTTP response
-            private static int ReadResponseBytes(byte[] responseBuffer, Stream resStream)
-            {
-                int count = 0;
+<span id="appreceipt" />
+### <a name="appreceipt-element"></a>Element „AppReceipt“
 
-                int numBytesRead = 0;
-                int numBytesToRead = responseBuffer.Length;
+Dieses Element enthält Kaufinformationen für die aktuelle App.
 
-                do
-                {
-                    count = resStream.Read(responseBuffer, numBytesRead, numBytesToRead);
+**AppReceipt** hat die folgenden Attribute.
 
-                    numBytesRead += count;
-                    numBytesToRead -= count;
+|  Attribut  |  Beschreibung   |
+|-------------|-------------------|
+|  **Id**  |    Identifiziert den Kauf.           |
+|  **AppId**  |     Der Paketfamilienname-Wert, den das Betriebssystem für die App verwendet.           |
+|  **LicenseType**  |    **Full**, wenn der Benutzer die Vollversion der App gekauft hat. **Trial**, wenn der Benutzer eine Testversion der App heruntergeladen hat.           |  
+|  **PurchaseDate**  |    Das Datum, an dem die App gekauft wurde.          |  |
 
-                } while (count > 0);
+<span id="productreceipt" />
+### <a name="productreceipt-element"></a>Element „ProductReceipt“
 
-                return numBytesRead;
-            }
+Dieses Element enthält Informationen zu einem In-App-Kauf für die aktuelle App.
 
-            public static X509Certificate2 RetrieveCertificate(string certificateId)
-            {
-                const int MaxCertificateSize = 10000;
+**ProductReceipt** hat die folgenden Attribute.
 
-                // We are attempting to retrieve the following url. The getAppReceiptAsync website at
-                // http://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentapp.getappreceiptasync.aspx
-                // lists the following format for the certificate url.
-                String certificateUrl = String.Format("https://go.microsoft.com/fwlink/?LinkId=246509&cid={0}", certificateId);
-
-                // Make an HTTP GET request for the certificate
-                HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(certificateUrl);
-                request.Method = "GET";
-
-                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-
-                // Retrieve the certificate out of the response stream
-                byte[] responseBuffer = new byte[MaxCertificateSize];
-                Stream resStream = response.GetResponseStream();
-                int bytesRead = ReadResponseBytes(responseBuffer, resStream);
-
-                if (bytesRead < 1)
-                {
-                    //TODO: Handle error here
-                }
-
-                return new X509Certificate2(responseBuffer);
-            }
-
-            static bool ValidateXml(XmlDocument receipt, X509Certificate2 certificate)
-            {
-                // Create the signed XML object.
-                SignedXml sxml = new SignedXml(receipt);
-
-                // Get the XML Signature node and load it into the signed XML object.
-                XmlNode dsig = receipt.GetElementsByTagName("Signature", SignedXml.XmlDsigNamespaceUrl)[0];
-                if (dsig == null)
-                {
-                    // If signature is not found return false
-                    System.Console.WriteLine("Signature not found.");
-                    return false;
-                }
-
-                sxml.LoadXml((XmlElement)dsig);
-
-                // Check the signature
-                bool isValid = sxml.CheckSignature(certificate, true);
-
-                return isValid;
-            }
-
-            static void Main(string[] args)
-            {
-                // .NET does not support SHA256-RSA2048 signature verification by default, so register this algorithm for verification
-                CryptoConfig.AddAlgorithm(typeof(RSAPKCS1SHA256SignatureDescription), "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256");
-
-                // Load the receipt that needs to be verified as an XML document
-                XmlDocument xmlDoc = new XmlDocument();
-                xmlDoc.Load("..\\..\\receipt.xml");
-
-                // The certificateId attribute is present in the document root, retrieve it
-                XmlNode node = xmlDoc.DocumentElement;
-                string certificateId = node.Attributes["CertificateId"].Value;
-
-                // Retrieve the certificate from the official site.
-                // NOTE: For sake of performance, you would want to cache this certificate locally.
-                //       Otherwise, every single call will incur the delay of certificate retrieval.
-                X509Certificate2 verificationCertificate = RetrieveCertificate(certificateId);
-
-                try
-                {
-                    // Validate the receipt with the certificate retrieved earlier
-                    bool isValid = ValidateXml(xmlDoc, verificationCertificate);
-                    System.Console.WriteLine("Certificate valid: " + isValid);
-                }
-                catch (Exception ex)
-                {
-                    System.Console.WriteLine(ex.ToString());
-                }
-            }
-        }
-}
-```
+|  Attribut  |  Beschreibung   |
+|-------------|-------------------|
+|  **Id**  |    Identifiziert den Kauf.           |
+|  **AppId**  |     Identifiziert die App, über die der Benutzer den Kauf durchgeführt hat.           |
+|  **ProductId**  |     Identifiziert das gekaufte Produkt.           |
+|  **ProductType**  |    Legt den Produkttyp fest. Zurzeit wird nur der Wert **Durable** unterstützt.          |  
+|  **PurchaseDate**  |    Das Datum, an dem der Kauf erfolgte.          |  |
 
  
 
@@ -240,6 +144,6 @@ namespace ReceiptVerificationSample
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

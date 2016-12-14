@@ -4,31 +4,31 @@ ms.assetid: 386faf59-8f22-2e7c-abc9-d04216e78894
 title: Kompositionsanimationen
 description: "Viele Eigenschaften von Kompositionsobjekten und Effekten können mit Keyframeanimationen und Ausdrucksanimationen animiert werden. Dadurch können sich Eigenschaften eines UI-Elements im Laufe der Zeit oder auf der Grundlage einer Berechnung verändern."
 translationtype: Human Translation
-ms.sourcegitcommit: 9146f0d3771f1f3687c94dc9f4978b5db5765c5d
-ms.openlocfilehash: 9f098ef590e51547f066289965a7ce9fd02dc8cd
+ms.sourcegitcommit: 9ea05f7ba76c7813b200a4c8cd021613f980355d
+ms.openlocfilehash: 72b70dd2ae4de385f2a4711477aebb6d7023158c
 
 ---
-# Kompositionsanimationen
+# <a name="composition-animations"></a>Kompositionsanimationen
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
 Mit der Windows.UI.Composition WinRT-API können Sie Kompositorobjekte in einer einheitlichen API-Ebene erstellen, animieren, umwandeln und bearbeiten. Kompositionsanimationen bieten eine leistungsstarke und effiziente Möglichkeit, Animationen auf der Benutzeroberfläche Ihrer Anwendung auszuführen. Sie wurden von Grund auf neu entwickelt, um sicherzustellen, dass Ihre Animationen mit 60 F/s unabhängig vom UI-Thread ausgeführt werden, und um Ihnen die Flexibilität zu bieten, tolle Funktionen zu erstellen, die zur Steuerung von Animationen nicht nur Zeit, sondern auch Eingaben und andere Eigenschaften verwenden.
 Dieses Thema bietet eine Übersicht über die verfügbaren Funktionen, mit denen Sie Eigenschaften des Kompositionsobjekts animieren können.
-In diesem Dokument wird davon ausgegangen, dass Sie mit den Grundlagen der Struktur visueller Ebenen vertraut sind. Weitere Informationen [finden Sie hier](./composition-visual-tree.md). Es gibt zwei Arten von Kompositionsanimationen : **Keyframeanimationen** und **Ausdrucksanimationen**  
+In diesem Dokument wird davon ausgegangen, dass Sie mit den Grundlagen der Struktur visueller Ebenen vertraut sind. Weitere Informationen [finden Sie hier](./composition-visual-tree.md). Es gibt zwei Arten von Kompositionsanimationen: **Keyframeanimationen** und **Ausdrucksanimationen**.  
 
-![](./images/composition-animation-types.png)  
+![Animationstypen](./images/composition-animation-types.png)  
    
  
-##Typen von Kompositionsanimationen
+## <a name="types-of-composition-animations"></a>Typen von Kompositionsanimationen
 **Keyframeanimationen** bieten die herkömmlichen zeitgesteuerten *Frame-für-Frame*-Animationsfunktionen. Entwickler können explizit *Kontrollpunkte* definieren, die Werte dafür definieren, wann eine Animationseigenschaft an bestimmten Punkten in der Animationszeitachse sein muss. Was noch wichtiger ist, Sie können Beschleunigungsfunktionen (andernfalls Interpolatoren genannt) verwenden, um den Übergang zwischen diesen Kontrollpunkten zu beschreiben.  
 
 **Implizite Animationen** sind eine Art von Animation, mit der Entwickler wiederverwendbare einzelne Animationen oder eine Reihe von Animationen separat von der zentralen App-Logik definieren können. Mithilfe impliziter Animationen können Entwickler *Vorlagen* für Animationen erstellen und mit Triggern verbinden. Diese Trigger sind Eigenschaftsänderungen, die aus expliziten Zuweisungen entstehen. Entwickler können eine Vorlage als einzelne Animation oder als Animationsgruppe definieren. Animationsgruppen sind eine Sammlung von Animationsvorlagen, die entweder explizit oder mit einem Trigger zusammen gestartet werden können. Mit impliziten Animationen müssen Sie nicht jedes Mal explizit Keyframeanimationen erstellen, wenn Sie den Wert einer Eigenschaft ändern und die entsprechende Animation anzeigen möchten.
 
 **Ausdrucksanimationen** sind eine neue Art von Animation, die in der visuellen Ebene mit dem Windows 10 November-Update (Build 10586) eingeführt wurde. Mit Ausdrucksanimationen soll ein Entwickler mathematischen Beziehungen zwischen [visuellen](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) Eigenschaften und einzelnen Werten erstellen können, die für jeden Frame ausgewertet und aktualisiert werden. Entwickler können auf Eigenschaften auf Kompositionsobjekten oder Eigenschaftensätzen verweisen, mathematische Funktionshilfsbefehle verwenden und sogar auf Eingaben verweisen, um diese mathematischen Beziehungen abzuleiten. Ausdrücke machen Funktionen wie Parallax und „Sticky Headers“ und deren reibungslose Einbindung in die Windows-Plattform möglich.  
 
-##Gründe, die für Kompositionsanimationen sprechen
+## <a name="why-composition-animations"></a>Gründe, die für Kompositionsanimationen sprechen
 **Leistung**  
- Bei der Erstellung von universellen Windows-Anwendungen wird der meiste Entwicklercode im UI-Thread ausgeführt. Damit die Animationen flüssig in den verschiedenen Gerätekategorien angezeigt werden, führt das System daher die Animationsberechnungen und -arbeiten auf einem unabhängigen Thread aus, um 60F/s aufrechtzuerhalten. Dies bedeutet, dass sich Entwickler darauf verlassen können, dass das System flüssige Animationen bereitstellt, während ihre Anwendungen andere komplexe Vorgänge für erweiterte Benutzeroberflächen durchführen.    
+ Bei der Erstellung von universellen Windows-Anwendungen wird der meiste Entwicklercode im UI-Thread ausgeführt. Damit die Animationen flüssig in den verschiedenen Gerätekategorien angezeigt werden, führt das System daher die Animationsberechnungen und -arbeiten auf einem unabhängigen Thread aus, um 60 F/s aufrechtzuerhalten. Dies bedeutet, dass sich Entwickler darauf verlassen können, dass das System flüssige Animationen bereitstellt, während ihre Anwendungen andere komplexe Vorgänge für erweiterte Benutzeroberflächen durchführen.    
  
 **Möglichkeiten**  
 Das Ziel für Kompositionsanimationen in der visuellen Ebene ist es, das Erstellen ansprechender Benutzeroberflächen zu vereinfachen. Wir möchten Entwicklern verschiedene Arten von Animationen bieten, damit sie ihre tollen Ideen umsetzen können.
@@ -42,10 +42,10 @@ In unseren //BUILD-Gesprächen für [Ausdrucksanimationen](https://channel9.msdn
 
 Im [Kompositions-GitHub](http://go.microsoft.com/fwlink/?LinkID=789439) finden Sie Beispiele für die Verwendung der APIs und genauere Beispiele der APIs in Aktion.
  
-##Was können Sie mit Kompositionsanimationen animieren?
+## <a name="what-can-you-animate-with-composition-animations"></a>Was können Sie mit Kompositionsanimationen animieren?
 Kompositionsanimationen können auf die meisten Eigenschaften von Kompositionsobjekten wie [visuellen](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) und **InsetClip**-Objekten angewendet werden. Sie können Kompositionsanimationen auch auf Kompositionseffekte und Eigenschaftensätze anwenden. **Berücksichtigen Sie bei der Auswahl des animierten Objekts den Typ – verwenden Sie diesen, um zu bestimmen, welche Art von Keyframeanimation Sie erstellen oder in welchen Typ Ihr Ausdruck aufgelöst werden muss.**  
  
-###Visuelles Element
+### <a name="visual"></a>Visuelles Element
 |Visuelle Eigenschaften, die animiert werden können|  Typ|
 |------|------|
 |AnchorPoint|   Vector2|
@@ -61,7 +61,7 @@ Kompositionsanimationen können auf die meisten Eigenschaften von Kompositionsob
 |TransformMatrix*|  Matrix4x4|
 *Wenn Sie die gesamte TransformMatrix-Eigenschaft als eine Matrix4x4 animieren möchten, müssen Sie dazu eine Ausdrucksanimation verwenden. Andernfalls können Sie einzelne Zellen der Matrix anvisieren und dort eine Keyframe- oder Ausdrucksanimation verwenden.  
 
-###InsetClip
+### <a name="insetclip"></a>InsetClip
 |InsetClip-Eigenschaften, die animiert werden können|   Typ|
 |-------------------------------|-------|
 |BottomInset|   Scalar|
@@ -69,7 +69,7 @@ Kompositionsanimationen können auf die meisten Eigenschaften von Kompositionsob
 |RightInset|    Scalar|
 |TopInset|  Scalar|
 
-##Subkanaleigenschaften visueller Elemente
+## <a name="visual-sub-channel-properties"></a>Subkanaleigenschaften visueller Elemente
 Sie können nicht nur Eigenschaften von [visuellen Elementen](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) animieren, sondern auch auf die *Subkanal*-Komponenten dieser Eigenschaften für Animationen abzielen. Angenommen, Sie möchten den X-Offset eines [visuellen Elements](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) und nicht den gesamten Offset animieren. Die Animation kann entweder auf die Vector3-Offset-Eigenschaft oder die skalare X-Komponente der Offset-Eigenschaft abzielen. Sie können nicht nur auf eine einzelne Subkanal-Komponente einer Eigenschaft abzielen, sondern auch auf mehrere Komponenten. So können Sie beispielsweise auf die X- und Y-Komponente von Scale abzielen.
 
 |Animierbare Subkanaleigenschaften visueller Elemente|  Typ|
@@ -94,12 +94,12 @@ Sie können nicht nur Eigenschaften von [visuellen Elementen](https://msdn.micro
 
 *Das Animieren des Subkanals „Color“ der Brush-Eigenschaft geht ein bisschen anders. Sie fügen StartAnimation() an die Visual.Brush an und deklarieren die zu animierende Eigenschaft im Parameter als „Color“. (Ausführlichere Informationen zum Animieren von Farbe finden Sie weiter unten)
 
-##Eigenschaftensätze und Effekte
+## <a name="property-sets-and-effects"></a>Eigenschaftensätze und Effekte
 Neben der Animation von Eigenschaften von [visuellen](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) und InsetClip-Objekten können Sie auch Eigenschaften in einem Eigenschaftensatz oder einem Effekt animieren. Bei Eigenschaftensätzen definieren Sie eine Eigenschaft und speichern Sie in einem Kompositionseigenschaftensatz – diese Eigenschaft kann später das Ziel einer Animation sein (und gleichzeitig kann in einer anderen Animation darauf verwiesen werden). Dies wird in den folgenden Abschnitten ausführlicher erläutert.  
 
 Bei Effekten können Sie mithilfe der Kompositionseffekte-APIs Grafikeffekte definieren (hier finden Sie den [Überblick über Effekte](./composition-effects.md). Zusätzlich zur Definition von Effekten können Sie auch die Eigenschaftenwerte des Effekts animieren. Dazu erfolgt eine Ausrichtung auf die Eigenschaftenkomponente der Brush-Eigenschaft auf visuellen Sprite-Elementen.
 
-##Schnelle Formel: Erste Schritte mit Kompositionsanimationen
+## <a name="quick-formula-getting-started-with-composition-animations"></a>Schnelle Formel: Erste Schritte mit Kompositionsanimationen
 Bevor wir tiefer in die Erstellung und Verwendung der unterschiedlichen Arten von Animationen einsteigen, finden Sie unten eine schnelle, allgemeine Formel dafür, wie Sie Kompositionsanimationen zusammenstellen.  
 1.  Entscheiden Sie, welche Eigenschaft, Subkanaleigenschaft oder welchen Effekt Sie animieren möchten – notieren Sie den Typ.  
 2.  Erstellen Sie ein neues Objekt für die Animation – dies ist entweder eine Keyframe- oder eine Ausdrucksanimation.  
@@ -132,10 +132,10 @@ _targetVisual.StartAnimation("Opacity", expression);
 
 ```
 
-##Verwenden von Keyframeanimationen
+## <a name="using-keyframe-animations"></a>Verwenden von Keyframeanimationen
 Keyframeanimationen sind zeitbasierte Animationen, die einen oder mehrere Keyframes verwenden, um anzugeben, wie der animierte Wert im Laufe der Zeit geändert werden muss. Die Frames stellen Markierungen oder Kontrollpunkte dar, mit denen Sie den animierten Wert zu einem bestimmten Zeitpunkt festlegen können.  
  
-###Erstellen von Animationen und Definieren von Keyframes
+### <a name="creating-your-animation-and-defining-keyframes"></a>Erstellen von Animationen und Definieren von Keyframes
 Verwenden Sie zum Erstellen einer Keyframeanimation die Konstruktormethode Ihres Kompositorobjekts, das dem Strukturtyp der zu animierenden Eigenschaft entspricht. Die verschiedenen Typen von Keyframeanimation sind:
 *   ColorKeyFrameAnimation
 *   QuaternionKeyFrameAnimation
@@ -167,7 +167,7 @@ animation.InsertKeyFrame(0.5f, new Vector3(50.0f, 80.0f, 0.0f));
     *   CompositionColorSpace.Hsl
 
 
-##Eigenschaften von Keyframeanimationen
+## <a name="keyframe-animation-properties"></a>Eigenschaften von Keyframeanimationen
 Nachdem Sie die Keyframeanimation und die einzelnen Keyframes definiert haben, können Sie mehrere Eigenschaften der Animation definieren:
 *   Verzögerungszeit – Zeit vor dem Starten einer Animation, nachdem „StartAnimation()“ aufgerufen wurde
 *   Dauer – Dauer der Animation
@@ -182,7 +182,7 @@ Ein Beispiel, das die Dauer der Animation auf 5 Sekunden festlegt:
 animation.Duration = TimeSpan.FromSeconds(5);
 ```
 
-##Beschleunigungsfunktionen
+## <a name="easing-functions"></a>Beschleunigungsfunktionen
 Beschleunigungsfunktionen (CompositionEasingFunction) geben an, wie Zwischenwerte vom vorherigen Keyframewert zum aktuellen Keyframewert voranschreiten. Wenn Sie keine Beschleunigungsfunktion für den Keyframe angeben, wird eine Standardkurve verwendet.  
 Es werden zwei Arten von Beschleunigungsfunktionen unterstützt:
 *   Linear
@@ -203,7 +203,7 @@ Ein Beispiel, das eine easeIn-Beschleunigungsfunktion mit dem Keyframe hinzufüg
 animation.InsertKeyFrame(0.5f, new Vector3(50.0f, 80.0f, 0.0f), easeIn);
 ```
 
-##Starten und Beenden von Keyframeanimationen
+## <a name="starting-and-stopping-keyframe-animations"></a>Starten und Beenden von Keyframeanimationen
 Nachdem Sie Ihre Animation und Keyframes definiert haben, können Sie Ihre Animation einbinden. Wenn Sie die Animation starten, geben Sie das [visuelle](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) Objekt an, das animiert werden soll, die Zieleigenschaft, die animiert werden soll, sowie einen Verweis auf die Animation. Dazu rufen Sie die StartAnimation()-Funktion auf. Bedenken Sie, dass durch das Aufrufen von StartAnimation() für eine Eigenschaft alle zuvor ausgeführten Animationen getrennt und entfernt werden.  
 **Hinweis:** Der Verweis auf die Eigenschaft, die Sie animieren möchten, weist die Form einer Zeichenfolge auf.  
 
@@ -230,7 +230,7 @@ Ein Beispiel, bei dem die StopBehavior-Eigenschaft für eine Keyframeanimation f
 animation.StopBehavior = AnimationStopBehavior.LeaveCurrentValue;
 ```
 
-##Abschlussereignisse für Animationen
+## <a name="animation-completion-events"></a>Abschlussereignisse für Animationen
 Bei Keyframeanimationen können Entwickler Animationsstapel verwenden, die aggregiert werden, wenn eine bestimmte Animation (oder Gruppe von Animationen) abgeschlossen wurde. Es können nur Abschlussereignisse für Keyframeanimationen zusammengefasst werden. Ausdrücke haben kein definitives Ende, sodass kein Abschlussereignis ausgelöst wird. Wenn eine Ausdrucksanimation in einem Stapel gestartet wird, wird die Animation wie erwartet ausgeführt und davon nicht betroffen, wenn der Stapel ausgelöst wird.    
 
 Ein Stapelabschlussereignis wird ausgelöst, wenn alle Animationen im Stapel abgeschlossen sind. Die Zeitspanne bis zum Auslösen eines Stapelereignisses richtet sich nach der längsten oder der am meisten verzögerten Animation im Stapel.
@@ -238,7 +238,7 @@ Das Aggregieren von Endzuständen ist hilfreich, wenn Sie wissen müssen, wann G
 
 Stapel werden gelöscht, sobald das Abschlussereignis ausgelöst wurde. Sie können Dispose() auch jederzeit aufrufen, um die Ressource frühzeitig freizugeben. Sie sollten das Batch-Objekt manuell freigeben, wenn eine Animation im Batch frühzeitig beendet wird und das Abschlussereignis nicht gestartet werden soll. Wenn eine Animation unterbrochen oder abgebrochen wird, wird das Abschlussereignis ausgelöst und beim Stapel mitgezählt, in dem es festgelegt wurde. Dies wird im Animation_Batch-SDK-Beispiel auf dem [Windows/Kompositions-GitHub](http://go.microsoft.com/fwlink/p/?LinkId=789439) veranschaulicht.  
  
-##Bewertete Stapel
+## <a name="scoped-batches"></a>Bewertete Stapel
 Um eine bestimmte Gruppe von Animationen zu aggregieren oder auf das Abschlussereignis einer einzelnen Animation abzuzielen, erstellen Sie einen bewerteten Stapel.    
 ```cs
 CompositionScopedBatch myScopedBatch = _compositor.CreateScopedBatch(CompositionBatchTypes.Animation);
@@ -272,17 +272,17 @@ myScopedBatch.Resume();
 […]
 myScopedBatch.End();
 ```  
-![](./images/composition-scopedbatch.png)
+![Der Bereichsstapel enthält Animation eins, Animation drei und Animation vier, während die Animation zwei aus dem Bereichsstapel ausgeschlossen ist.](./images/composition-scopedbatch.png)
  
-##Batchverarbeitung des Abschlussereignisses einer einzelnen Animation
-Wenn Sie möchten wissen, wann eine einzelne Animation endet, müssen Sie einen bewerteten Stapel erstellen, der nur die entsprechende Animation enthält. Beispiel:  
+## <a name="batching-a-single-animations-completion-event"></a>Batchverarbeitung des Abschlussereignisses einer einzelnen Animation
+Wenn Sie möchten wissen, wann eine einzelne Animation endet, müssen Sie einen Bereichsstapel erstellen, der nur die entsprechende Animation enthält. Beispiel:  
 ```cs
 CompositionScopedBatch myScopedBatch =  _compositor.CreateScopedBatch(CompositionBatchTypes.Animation);
 Visual.StartAnimation("Opacity", myAnimation);
 myScopedBatch.End();
 ```
 
-##Abrufen des Abschlussereignisses eines Stapel
+## <a name="retrieving-a-batchs-completion-event"></a>Abrufen des Abschlussereignisses eines Stapel
 
 Bei der Batchverarbeitung einer oder mehrerer Animationen rufen Sie das Abschlussereignis des Stapels genauso ab. Sie registrieren die Ereignisbehandlungsmethode für das „Completed“-Ereignis des entsprechenden Stapels.  
 
@@ -290,21 +290,21 @@ Bei der Batchverarbeitung einer oder mehrerer Animationen rufen Sie das Abschlus
 myScopedBatch.Completed += OnBatchCompleted;
 ``` 
 
-##Stapelzustände
+## <a name="batch-states"></a>Stapelzustände
 Es gibt zwei Eigenschaften, die Sie verwenden können, um den Zustand eines vorhandenen Stapels zu bestimmen. IsActive und IsEnded.  
 
 Die IsActive-Eigenschaft gibt „true“ zurück, wenn ein Stapel zum Aggregieren von Animationen geöffnet ist. IsActive gibt „false“ zurück, wenn ein Batch angehalten oder beendet wurde.   
 
 Die IsEnded-Eigenschaft gibt „true“ zurück, wenn Sie eine Animation diesem spezifischen Stapel nicht hinzufügen können. Ein Batch wird beendet, wenn Sie für einen bestimmten Batch explizit „End()“ aufrufen.  
  
-##Verwenden von Ausdrucksanimationen
+## <a name="using-expression-animations"></a>Verwenden von Ausdrucksanimationen
 Ausdrucksanimationen sind eine neue Art von Animation, die vom Kompositionsteam mit dem November-Update für Windows 10 (10586) eingeführt wurde. Allgemein gesagt, basieren Ausdrucksanimationen auf einer mathematischen Formel/Beziehung zwischen den einzelnen Werten und Verweisen auf andere Kompositionsobjekteigenschaften. Im Gegensatz zu Keyframeanimationen, die eine Interpolatorfunktion (kubische Bézierkurve, Quad, Quintic usw.) verwenden, um zu beschrieben, wie sich der Wert im Laufe der Zeit ändert, verwenden Ausdrucksanimationen eine mathematische Formel, um zu definieren, wie der animierte Wert für jeden Frame berechnet wird. Es muss darauf hingewiesen werden, dass Ausdrucksanimationen keine definierte Dauer haben – nach dem Start werden sie so lange ausgeführt und verwenden die mathematische Formel zur Ermittlung des Werts der Animationseigenschaft, bis sie explizit beendet werden.
 
 **Warum sind Ausdrucksanimationen hilfreich?** Der wahre Vorteil von Ausdrucksanimationen liegt in deren Fähigkeit, eine mathematische Beziehung zu erstellen, die Verweise auf Parameter oder Eigenschaften auf anderen Objekten enthält. Dies bedeutet, dass Sie eine Formel haben können, die auf Werte von Eigenschaften auf anderen Kompositionsobjekten, lokale Variablen oder auch gemeinsam genutzte Werte in Kompositionseigenschaftensätzen verweist. Aufgrund dieses Referenzmodells und der Tatsache, dass die Formel für jeden Frame ausgewertet wird, ändert sich die Ausgabe der Formel, wenn sich die Werte ändern, die eine Formel definieren. Dies eröffnet mehr Möglichkeiten, die über herkömmliche Keyframeanimationen hinausgehen, bei denen Werte separat und vordefiniert sein müssen. So können z. B. Funktionen wie Sticky Headers und Parallax problemlos mit Ausdrucksanimationen beschrieben werden.
 
 **Hinweis:** Wir verwenden die Begriffe „Ausdruck“ oder „Ausdruckszeichenfolge“ im Bezug auf Ihre mathematische Formel, die Ihr Ausdrucksanimationsobjekt definiert.
 
-##Erstellen und Anfügen Ihrer Ausdrucksanimation
+## <a name="creating-and-attaching-your-expression-animation"></a>Erstellen und Anfügen Ihrer Ausdrucksanimation
 Bevor wir näher auf die Syntax für das Erstellen von Ausdrucksanimationen eingeben, müssen einige wesentliche Prinzipien erwähnt werden:  
 *   Ausdrucksanimationen verwenden eine definierte mathematische Formel, um den Wert der animierten Eigenschaft für jeden Frame zu bestimmen.
 *   Die mathematische Formel wird in den Ausdruck als Zeichenfolge eingegeben.
@@ -322,12 +322,12 @@ var expression = _compositor.CreateExpressionAnimation("0.2 + 0.3");
 targetVisual.StartAnimation("Opacity", expression);
 ```
 
-##Komponenten Ihrer Ausdruckszeichenfolge
+## <a name="components-of-your-expression-string"></a>Komponenten Ihrer Ausdruckszeichenfolge
 Das Beispiel im vorherigen Abschnitt veranschaulichte zwei einfache skalare Werte, die addiert werden. Obwohl dies ein gültiges Beispiel für Ausdrücke ist, veranschaulicht es nicht das ganze Spektrum an Vorteilen, die Ihnen Ausdrücke bieten. Beim obigen Beispiel ist zu beachten, dass die Gleichung für jeden Frame in 0,5 aufgelöst wird und sich während der gesamten Lebensdauer der Animation niemals ändert, da es sich um separate Werte handelt. Das wirkliche Potenzial von Ausdrücken ergibt sich aus der Definition einer mathematischen Beziehung, in der sich die Werte in regelmäßigen Abständen oder ständig ändern können.  
  
 Betrachten wir nun die verschiedenen Teile, aus denen diese Art von Ausdrücken bestehen kann.  
 
-###Operatoren, Rangfolge und Orientierung
+### <a name="operators-precedence-and-associativity"></a>Operatoren, Rangfolge und Orientierung
 Die Ausdruckszeichenfolge unterstützt die Verwendung normaler Operatoren, von denen Sie erwarten würden, dass sie mathematische Beziehungen zwischen unterschiedlichen Komponenten der Gleichung beschreiben:  
 
 |Kategorie|  Operatoren|
@@ -344,7 +344,7 @@ Im folgenden Beispiel werden – basierend auf der Reihenfolge der Vorgänge –
 "(5.0 * (72.4 – 36.0) + 5.0" // (5.0 * 36.4 + 5) -> (182 + 5) -> 187
 ```
 
-###Eigenschaftenparameter
+### <a name="property-parameters"></a>Eigenschaftenparameter
 Eigenschaftenparameter zählen zu den nützlichsten Komponenten von Ausdrucksanimationen. In der Ausdruckszeichenfolge können Sie auf Werte von Eigenschaften von anderen Objekten wie [visuellen](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) Objekten, Kompositionseigenschaftssätzen oder anderen C#-Objekten verweisen.   
 
 Um diese in einer Ausdruckszeichenfolge zu verwenden, müssen Sie lediglich die Verweise als Parameter für die Ausdrucksanimation definieren. Dies erfolgt durch die Zuordnung der im Ausdruck verwendeten Zeichenfolge zum eigentlichen Objekt. Dadurch weiß das System beim Auswerten der Gleichung, was überprüft werden muss, um den Wert zu berechnen. Es gibt verschiedene Arten von Parametern, die dem Typ des Objekts entsprechen, das Sie in die Gleichung aufnehmen möchten:  
@@ -390,7 +390,7 @@ expression.SetScalarParameter("xOffset", childVisual.Offset.X);
 expression.SetVector3Parameter("ParentOffset", parentVisual.Offset);
 ```
 
-###Hilfsfunktionen und Konstruktoren für Ausdrücke
+### <a name="expression-helper-functions-and-constructors"></a>Hilfsfunktionen und Konstruktoren für Ausdrücke
 Zusätzlich zum Zugriff auf Operatoren und Eigenschaftenparameter können Sie eine Liste mathematischer Funktionen in den Ausdrücken verwenden. Diese Funktionen werden zur Durchführung von Berechnungen und Vorgängen für unterschiedliche Typen durchgeführt, die Sie auch mit System.Numerics-Objekten durchführen würden.  
 
 Im Beispiel unten wird ein Ausdruck für Skalare erstellt, bei dem die Hilfsfunktion „Clamp“ verwendet:  
@@ -414,7 +414,7 @@ Sie finden die vollständige umfassende Liste mit Hilfsfunktionen und Konstrukto
 *   [Quaternion](#quaternion)
 *   [Color](#color)  
 
-###Ausdrucksschlüsselwörter
+### <a name="expression-keywords"></a>Ausdrucksschlüsselwörter
 Sie können spezielle „Schlüsselwörter“ verwenden, die anders behandelt werden, wenn die Ausdruckszeichenfolge ausgewertet wird. Weil sie als „Schlüsselwörter“ angesehen werden, können sie nicht als Zeichenfolgeparameterabschnitt ihrer Eigenschaftsverweise verwendet werden.  
  
 |Schlüsselwort|   Beschreibung|
@@ -428,7 +428,7 @@ Ein Beispiel unten, das die Verwendung dieses StartingValue-Schlüsselworts vera
 var expression = _compositor.CreateExpressionAnimation("this.StartingValue + delta");
 ```
 
-###Ausdrücke mit Bedingungen
+### <a name="expressions-with-conditionals"></a>Ausdrücke mit Bedingungen
 Neben der Unterstützung mathematischer Beziehungen mit Operatoren, Verweisen auf Eigenschaften und Funktionen und Konstruktoren können Sie auch einen Ausdruck erstellen, der einen ternären Operator enthält:  
 ```
 (condition ? ifTrue_expression : ifFalse_expression)
@@ -454,7 +454,7 @@ Es folgt ein Beispiel für eine Ausdrucksanimation mit einer Bedingung.
 var expression = _compositor.CreateExpressionAnimation("target.Offset.x > 50 ? 0.0f + (target.Offset.x / parent.Offset.x) : 1.0f");
 ```
 
-##Ausdruckskeyframes
+## <a name="expression-keyframes"></a>Ausdruckskeyframes
 Weiter oben in diesem Dokument wurde beschrieben, wie Sie Keyframeanimationen erstellen, und es wurden Ausdrucksanimationen und all die verschiedenen Komponenten vorgestellt, die Sie zur Erstellung der Ausdruckszeichenfolge verwenden können. Was, wenn Sie die Vorteile von Ausdrucksanimationen mit der Zeitinterpolation von Keyframeanimationen kombinieren möchten? Die Antwort lautet: Ausdruckskeyframes.  
 
 Anstatt einen separaten Wert für jeden Kontrollpunkt in der Keyframeanimation zu definieren, kann der Wert eine Ausdruckszeichenfolge sein. In diesem Fall verwendet das System die Ausdruckszeichenfolge dafür, um den Wert zu berechnen, den die animierte Eigenschaft an einem bestimmten Punkt auf der Zeitachse haben sollte. Das System interpoliert dann einfach auf diesen Wert, wie bei einer normalen Keyframeanimation.    
@@ -466,7 +466,7 @@ animation.InsertExpressionKeyFrame(0.25, "VisualBOffset.X / VisualAOffset.Y");
 animation.InsertKeyFrame(1.00f, 0.8f);
 ```
 
-##Ausdrucksbeispiel
+## <a name="expression-sample"></a>Ausdrucksbeispiel
 Der folgende Code zeigt ein Beispiel für das Einrichten einer Ausdrucksanimation für eine einfache Parallax-Funktion, die Eingabewerte aus der Bildlaufanzeige abruft.
 ```cs
 // Get scrollviewer
@@ -482,7 +482,7 @@ _parallaxExpression.SetReferenceParameter("ScrollManipulation", _scrollPropertie
 _parallaxExpression.Expression = "(ScrollManipulation.Translation.Y + StartOffset - (0.5 *  ItemHeight)) * ParallaxValue - (ScrollManipulation.Translation.Y + StartOffset - (0.5   * ItemHeight))";
 ```
 
-##Animieren mit Eigenschaftensätzen
+## <a name="animating-with-property-sets"></a>Animieren mit Eigenschaftensätzen
 Kompositionseigenschaftensätze bieten Ihnen die Möglichkeit zum Speichern von Werten, die für mehrere Animationen freigegeben werden können und nicht an die Lebensdauer eines anderen Kompositionsobjekts gebunden sind. Eigenschaftensätze sind sehr nützlich, um allgemeine Werte zu speichern. Auf diese kann später in Animationen auf einfache Weise verwiesen werden. Sie können Eigenschaftensätze auch verwenden, um Daten auf Grundlage von Anwendungslogik zur Steuerung eines Ausdrucks zu speichern.  
 
 Um einen Eigenschaftensatz zu erstellen, verwenden Sie die Konstruktormethode aus Ihrem Kompositorobjekt:  
@@ -513,7 +513,7 @@ _sharedProperties.StartAnimation("NewOffset", keyFrameAnimation);
 
 Sie fragen sich vielleicht, was mit dem Wert der animierten Eigenschaft passiert, an welche die Ausdrucksanimation angehängt ist, wenn dieser Code in einer App ausgeführt wird. In diesem Fall würde der Ausdruck anfänglich einen Wert ausgeben. Sobald die Keyframeanimation allerdings beginnt, die Eigenschaft im Eigenschaftensatz zu animieren, wird auch der Ausdruckswert aktualisiert, da die Formel für jeden Frame berechnet wird. Dies ist der Vorteil von Eigenschaftensätzen mit Ausdrucks- und Keyframeanimationen.  
  
-##ManipulationPropertySet
+## <a name="manipulationpropertyset"></a>ManipulationPropertySet
 Zusätzlich zur Nutzung von Composition-Eigenschaftensätzen kann ein Entwickler auch auf ManipulationPropertySet und so auf die Eigenschaften eines XAML-ScrollViewer-Elements zugreifen. Diese Eigenschaften können dann verwendet und in einer Ausdrucksanimation referenziert werden. So sind Parallax- und „Sticky Header“-Umgebungen möglich. Hinweis: Sie können das ScrollViewer-Element jedes XAML-Steuerelements (ListView, GridView usw.) verwenden, das bildlauffähige Inhalte hat und das ScrollViewer-Elemente nutzt, um das ManipulationPropertySet-Element für diese bildlauffähigen Steuerelemente zu nutzen.  
 
 In Ihrem Ausdruck können Sie die folgenden Eigenschaften der Bildlaufanzeige nutzen:  
@@ -543,10 +543,10 @@ exp.Expression = “ScrollManipulation.Translation.Y / ScrollBounds”;
 _target.StartAnimation(“Opacity”, exp);
 ```
 
-##Verwenden von impliziten Animationen  
+## <a name="using-implicit-animations"></a>Verwenden von impliziten Animationen  
 Animationen bieten Ihnen eine hervorragende Möglichkeit, um ein Verhalten für Ihre Benutzer zu beschreiben. Es gibt mehrere Möglichkeiten zum Animieren Ihrer Inhalte, aber für alle bisher beschriebenen Methoden müssen Sie die Animation explizit *starten*. Obwohl Sie somit die vollständige Kontrolle darüber haben, festzulegen, wenn eine Animation beginnt, wird es schwierig zu verwalten, wann eine Animation bei jeder Änderung eines Eigenschaftswerts erforderlich ist. Dies tritt häufig auf, wenn in Anwendungen der „Charakter“ der App, der die Animationen definiert, von der App-„Logik“, die Kernkomponenten und die Infrastruktur der App definiert, getrennt ist. Implizite Animationen bieten eine einfachere und sauberere Methode zum Definieren der Animation getrennt von der zentralen App-Logik. Sie können diese Animationen mit bestimmten Eigenschaftsänderungs-Triggern verbinden.
 
-###Einrichten der ImplicitAnimationCollection  
+### <a name="setting-up-your-implicitanimationcollection"></a>Einrichten der ImplicitAnimationCollection  
 Implizite Animationen werden von anderen **CompositionAnimation**-Objekten (**KeyFrameAnimation** oder **ExpressionAnimation**) definiert. Die **ImplicitAnimationCollection** stellt den Satz von **CompositionAnimation**-Objekten dar, die gestartet werden, wenn der Eigenschaftsänderungs-*Trigger* erreicht wird. Legen Sie beim Definieren von Animationen die **Target**-Eigenschaft fest. Diese definiert die [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx)-Eigenschaft, auf die die Animation beim Starten ausgerichtet ist. Die Eigenschaft von **Target** kann nur eine [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx)-Eigenschaft sein, die animiert werden kann.
 Im folgenden Codeausschnitt wird eine einzelne **Vector3KeyFrameAnimation** erstellt und als Teil der **ImplicitAnimationCollection** definiert. Die **ImplicitAnimationCollection** wird dann an die **ImplicitAnimation**-Eigenschaft des [visuellen](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) Objekts angehängt, sodass die Animation beim Erreichen des Triggers gestartet wird.  
 ```csharp
@@ -560,19 +560,19 @@ visual.ImplicitAnimations = implicitAnimationCollection;
 ```
 
 
-###Auslösen beim Starten der impliziten Animation  
+### <a name="triggering-when-the-implicitanimation-starts"></a>Auslösen beim Starten der impliziten Animation  
 Mit dem Begriff „Trigger“ wird beschrieben, wann Animationen implizit gestartet werden. Derzeit sind Trigger als Änderungen der animierbaren Eigenschaften in [visuellen](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) Objekten definiert – diese Änderungen erfolgen durch explizite Sätze für die Eigenschaft. Beispielsweise werden durch das Platzieren eines **Offset**-Triggers in einer **ImplicitAnimationCollection** und das Zuordnen einer Animation Updates von **Offset** des gewünschten [visuellen](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) Objekts mit der Animation in der Auflistung für den neuen Wert animiert.  
 Aus dem obigen Beispiel fügen wir diese zusätzliche Zeile hinzu, um den Trigger auf die **Offset**-Eigenschaft des [visuellen](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) Zielobjekts festzulegen.  
 ```csharp
 implicitAnimationCollection["Offset"] = animation;
 ```  
 Beachten Sie, dass für eine **ImplicitAnimationCollection** mehrere Trigger vorhanden sein können. Dies bedeutet, dass die implizite Animation oder die Gruppe von Animationen bei Änderungen verschiedener Eigenschaften gestartet werden kann. Im obigen Beispiel kann der Entwickler einen Trigger für andere Eigenschaften wie „Opacity“ hinzufügen.  
-###this.FinalValue     
+###<a name="thisfinalvalue"></a>this.FinalValue     
 Im ersten impliziten Beispiel haben wir einen Ausdruckskeyframe für den Keyframe „1,0“ verwendet und diesem den Ausdruck **this.FinalValue** zugewiesen. **this.FinalValue** ist ein reserviertes Schlüsselwort in der Ausdruckssprache, das unterscheidendes Verhalten für implizite Animationen bietet. **this.FinalValue** bindet den für die API-Eigenschaft festgelegten Wert an die Animation. Dies erleichtert das Erstellen von echten Vorlagen. **this.FinalValue** ist in expliziten Animationen nicht hilfreich, da die API-Eigenschaft sofort festgelegt wird, während sie bei impliziten Animationen verzögert wird.  
  
-##Verwenden von Animationsgruppen  
+## <a name="using-animation-groups"></a>Verwenden von Animationsgruppen  
 **CompositionAnimationGroup** bietet Entwicklern eine einfache Möglichkeit zum Gruppieren einer Liste von Animationen, die mit impliziten oder expliziten Animationen verwendet werden können.   
-###Erstellen und Auffüllen von Animationsgruppen  
+### <a name="creating-and-populating-animation-groups"></a>Erstellen und Auffüllen von Animationsgruppen  
 Die **CreateAnimationGroup**-Methode des Kompositorobjekts ermöglicht Entwicklern das Erstellen einer Animationsgruppe:  
 ```sharp
 CompositionAnimationGroup animationGroup = _compositor.CreateAnimationGroup();
@@ -582,18 +582,18 @@ animationGroup.Add(animationB);
 Nachdem die Gruppe erstellt wurde, können der Animationsgruppe einzelne Animationen hinzugefügt werden. Denken Sie daran, dass Sie die einzelnen Animationen nicht explizit starten müssen – diese werden alle gestartet, wenn entweder **StartAnimationGroup** für das explizite Szenario aufgerufen wird oder der Trigger für das implizite Szenario erreicht wird.  
 Stellen Sie sicher, dass für die Animationen, die der Gruppe hinzugefügt werden, die **Target**-Eigenschaft definiert wurde. Diese legt fest, welche Eigenschaft des [visuellen](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) Zielobjekts animiert wird.
 
-###Verwenden von Animationsgruppen mit impliziten Animationen  
+### <a name="using-animation-groups-with-implicit-animations"></a>Verwenden von Animationsgruppen mit impliziten Animationen  
 Entwickler können implizite Animationen erstellen, sodass, wenn ein Trigger erreicht wird, ein Satz von Animationen in Form einer Animationsgruppe gestartet wird. Definieren Sie in diesem Fall die Animationsgruppe als Satz von Animationen, die gestartet werden, wenn der Trigger erreicht wird.  
 ```csharp
 implicitAnimationCollection["Offset"] = animationGroup;
 ```   
-###Verwenden von Animationsgruppen mit expliziten Animationen  
+### <a name="using-animation-groups-with-explicit-animations"></a>Verwenden von Animationsgruppen mit expliziten Animationen  
 Entwickler können explizite Animationen erstellen, sodass die einzelnen hinzugefügten Animationen gestartet werden, wenn **StartAnimationGroup** aufgerufen wird. Beachten Sie, dass in diesem **StartAnimation**-Aufruf keine Zieleigenschaft für die Gruppe vorhanden ist, da einzelne Animationen auf verschiedene Eigenschaften ausgerichtet sein können. Stellen Sie sicher, dass die Zieleigenschaft für jede Animation festgelegt ist.  
 ```csharp
 visual.StartAnimationGourp(AnimationGroup);
 ```  
 
-###E2E-Beispiel 
+### <a name="e2e-sample"></a>E2E-Beispiel 
 Dieses Beispiel zeigt das implizite Animieren der Offset-Eigenschaft, wenn ein neuer Wert festgelegt wird.  
 ```csharp 
 class PropertyAnimation
@@ -632,9 +632,9 @@ class PropertyAnimation
 
  
  
-##Anhang
-###Ausdrucksfunktionen nach Strukturtyp
-###Scalar  
+## <a name="appendix"></a>Anhang
+### <a name="expression-functions-by-structure-type"></a>Ausdrucksfunktionen nach Strukturtyp
+### <a name="scalar"></a>Scalar  
 
 |Funktion und Konstruktorvorgänge| Beschreibung|  
 |-----------------------------------|--------------|  
@@ -662,7 +662,7 @@ class PropertyAnimation
 |ToDegrees(Float-Bogenmaß)| Gibt den in Grad konvertierten Float-Parameter zurück|
 |ToRadians(Float-Grad)| Gibt den in Bogenmaß konvertierten Float-Parameter zurück|
 
-###Vector2  
+### <a name="vector2"></a>Vector2  
 
 |Funktion und Konstruktorvorgänge|   Beschreibung|
 |-----------------------------------|--------------|
@@ -680,7 +680,7 @@ class PropertyAnimation
 |Normalize(Vector2-Wert)|  Gibt einen Vector2-Wert zurück, der den Einheitsvektor des Parameters darstellt, wobei alle Komponenten normalisiert wurden|
 |Vector2(Float x, Float y)| Erstellt einen Vector2 mit zwei Float-Parametern|
 
-###Vector3  
+### <a name="vector3"></a>Vector3  
 
 |Funktion und Konstruktorvorgänge|   Beschreibung|
 |-----------------------------------|--------------|
@@ -697,7 +697,7 @@ class PropertyAnimation
 |Normalize(Vector3-Wert)|  Gibt einen Vector3-Wert zurück, der den Einheitsvektor des Parameters darstellt, wobei alle Komponenten normalisiert wurden|
 |Vector3(Float x, Float y, Float z)|    Erstellt einen Vector3 mit drei Float-Parametern|
 
-###Vector4  
+### <a name="vector4"></a>Vector4  
 
 |Funktion und Konstruktorvorgänge|   Beschreibung|
 |-----------------------------------|--------------|
@@ -715,14 +715,13 @@ class PropertyAnimation
 |Normalize(Vector4-Wert)|  Gibt einen Vector4-Wert zurück, der den Einheitsvektor des Parameters darstellt, wobei alle Komponenten normalisiert wurden|
 |Vector4(Float x, Float y, Float z, Float w)|   Erstellt eine Vector4 mit vier Float-Parametern|
 
-###Matrix3x2  
+### <a name="matrix3x2"></a>Matrix3x2  
 
 |Funktion und Konstruktorvorgänge|   Beschreibung|
 |-----------------------------------|--------------|
 |Scale(Matrix3x2-Wert, Float-Faktor)|  Gibt eine Matrix3x2 zurück, wobei jede Komponente der Matrix mit dem Skalierungsfaktor multipliziert wurde.|
-|Inverse(Matrix3x2-Wert)| Gibt ein Matrix3x2-Objekt zurück, das die reziproke Matrix darstellt|
-|Lerp(Matrix3x2-Wert1, Matrix3x2-Wert2, Float-Fortschritt)|  Gibt eine Matrix3x2 zurück, welche die berechnete lineare Interpolation zwischen den beiden Matrix3x2-Werten basierend auf dem Fortschritt darstellt (Hinweis: Fortschritt ist zwischen 0,0 und 1,0)|
-|Matrix3x2(Float M11, Float M12, Float M21, Float M22, Float M31, Float M32)|   Erstellt eine Matrix3x2 mit 6 Float-Parametern|
+|Inverse(Matrix3x2-Wert)| Gibt ein Matrix3x2-Objekt zurück, das die reziproke Matrix darstellt.|
+|Matrix3x2 (Float M11, Float M12, Float M21, Float M22, Float M31, Float M32)|   Erstellt eine Matrix3x2 mit 6 Float-Parametern|
 |Matrix3x2.CreateFromScale(Vector2-Skalierung)|  Erstellt eine Matrix3x2 aus einem Vector2, die Skalierung darstellt<br/>\[scale.X, 0.0<br/> 0.0, scale.Y<br/> 0.0, 0.0 \]|
 |Matrix3x2.CreateFromTranslation(Vector2-Übersetzung)|  Erstellt eine Matrix3x2 aus einem Vector2, die Übersetzung darstellt<br/>\[1.0, 0.0,<br/> 0.0, 1.0,<br/> translation.X, translation.Y\]|  
 |Matrix3x2.CreateSkew(Float x, Float y, Vector2 centerpoint)| Erstellt eine Matrix3x2 aus zwei Float-Werten und einem Vector2, die Neigung darstellt<br/>\[1.0, Tan(y),<br/>Tan(x), 1.0,<br/>-centerpoint.Y * Tan(x), -centerpoint.X * Tan(y)\]|  
@@ -731,14 +730,13 @@ class PropertyAnimation
 |Matrix3x2.CreateScale(Vector2-Skalierung)| Identisch mit CreateFromScale|    
 
     
-###Matrix4x4  
+### <a name="matrix4x4"></a>Matrix4x4  
 
 |Funktion und Konstruktorvorgänge|   Beschreibung|
 |-----------------------------------|--------------|
 |Scale(Matrix4x4-Wert, Float-Faktor)|  Gibt eine Matrix4x4 zurück, wobei jede Komponente der Matrix mit dem Skalierungsfaktor multipliziert wurde.|
-|Inverse(Matrix4x4)|    Gibt ein Matrix4x4-Objekt zurück, das die reziproke Matrix darstellt|
-|Lerp(Matrix4x4-Wert1, Matrix4x4-Wert2, Float-Fortschritt)|  Gibt eine Matrix4x4 zurück, welche die berechnete lineare Interpolation zwischen den beiden Matrix4x4-Werten basierend auf dem Fortschritt darstellt (Hinweis: Fortschritt ist zwischen 0,0 und 1,0)|
-|Matrix4x4(Float M11, Float M12, Float M13, Float M14,<br/>Float M21, Float M22, Float M23, Float M24,<br/>    Float M31, Float M32, Float M33, Float M34,<br/>    Float M41, Float M42, Float M43, Float M44)| Erstellt eine Matrix4x4 mit 16 Float-Parametern|
+|Inverse(Matrix4x4)|    Gibt ein Matrix4x4-Objekt zurück, das die reziproke Matrix darstellt.|
+|Matrix4x4 (Float M11, Float M12, Float M13, Float M14,<br/>Float M21, Float M22, Float M23, Float M24,<br/>    Float M31, Float M32, Float M33, Float M34,<br/>    Float M41, Float M42, Float M43, Float M44)| Erstellt eine Matrix4x4 mit 16 Float-Parametern|
 |Matrix4x4.CreateFromScale(Vector3-Skalierung)|  Erstellt eine Matrix4x4 aus einem Vektor3, die Skalierung darstellt<br/>\[scale.X, 0.0, 0.0, 0.0,<br/> 0.0, scale.Y, 0.0, 0.0,<br/> 0.0, 0.0, scale.Z, 0.0,<br/> 0.0, 0.0, 0.0, 1.0\]|
 |Matrix4x4.CreateFromTranslation(Vector3-Übersetzung)|  Erstellt eine Matrix4x4 aus einem Vector3, die Übersetzung darstellt<br/>\[1.0, 0.0, 0.0, 0.0,<br/> 0.0, 1.0, 0.0, 0.0,<br/> 0.0, 0.0, 1.0, 0.0,<br/> translation.X, translation.Y, translation.Z, 1.0\]|
 |Matrix4x4.CreateFromAxisAngle(Vector3-Achse, Float-Winkel)|  Erstellt eine Matrix4x4 aus einer Vektor3-Achse und einem Float, die einen Winkel darstellt|
@@ -747,7 +745,7 @@ class PropertyAnimation
 |Matrix4x4.CreateScale(Vector3-Skalierung)| Identisch mit CreateFromScale|  
 
 
-###Quaternion  
+### <a name="quaternion"></a>Quaternion  
 
 |Funktion und Konstruktorvorgänge|   Beschreibung|
 |-----------------------------------|--------------|
@@ -759,7 +757,7 @@ class PropertyAnimation
 |Quaternion.CreateFromAxisAngle(Vector3-Achse, skalarer Winkel)|    Erstellt eine Quaternion aus einer Vektor3-Achse und einem Skalar, die einen Winkel darstellt|
 |Quaternion(Float x, Float y, Float z, Float w)|    Erstellt eine Quaternion aus vier Float-Werten|
 
-###Color
+### <a name="color"></a>Color
 
 |Funktion und Konstruktorvorgänge|   Beschreibung|
 |-----------------------------------|--------------|
@@ -775,6 +773,6 @@ class PropertyAnimation
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

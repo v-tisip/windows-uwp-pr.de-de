@@ -4,12 +4,12 @@ Description: "Nachdem Sie Ihr Experiment im Dev Center-Dashboard definiert und i
 title: Verwalten des Experiments im Dev Center-Dashboard
 ms.assetid: D48EE0B4-47F2-455C-8FB9-630769AC5ACE
 translationtype: Human Translation
-ms.sourcegitcommit: ce0431243866125eff83569e3b9b1c75e0703358
-ms.openlocfilehash: 730a7a23b577d92c995da0970c33328cecc2db9b
+ms.sourcegitcommit: bedaa31018d24f23e3e63c6b552b0d3116d7f415
+ms.openlocfilehash: 18e7956e627589dca694b46472fea631c1ebe6b7
 
 ---
 
-# Verwalten des Experiments im Dev Center-Dashboard
+# <a name="manage-your-experiment-in-the-dev-center-dashboard"></a>Verwalten des Experiments im Dev Center-Dashboard
 
 Nachdem Sie [Ihr Experiment im Dev Center-Dashboard definiert](define-your-experiment-in-the-dev-center-dashboard.md) und [in Ihrer App programmiert haben](code-your-experiment-in-your-app.md), können Sie das Experiment aktivieren und das Dev Center-Dashboard zum Prüfen der Ergebnisse Ihres Experiments verwenden. Nach Abrufen aller benötigten Daten können Sie das Experiment beenden und festlegen, ob die Variablenwerte in der Steuerungsvariation für alle Apps weiter verwendet werden sollen oder die Variablenwerte einer anderen Variation verwendet werden sollen.
 
@@ -17,7 +17,7 @@ Nachdem Sie [Ihr Experiment im Dev Center-Dashboard definiert](define-your-exper
 
 Eine exemplarische Vorgehensweise, die den gesamten Erstellungs- und Ausführungsprozess für ein Experiment veranschaulicht, finden Sie unter [Erstellen und Durchführen eines ersten Experiments mit A/B-Tests](create-and-run-your-first-experiment-with-a-b-testing.md).
 
-## Aktivieren Ihres Experiments
+## <a name="activate-your-experiment"></a>Aktivieren Ihres Experiments
 
 Wenn Sie mit den Parametern für Ihr Experiment im Dashboard zufrieden sind und den App-Code aktualisiert haben, können Sie Ihr Experiment aktivieren, damit mit der Erfassung der Experimentdaten aus Ihrer App begonnen wird. Wenn das Experiment aktiv ist, kann Ihre App Variationswerte abrufen und Anzeige- und Umwandlungsereignisse im Dev Center melden.
 
@@ -31,18 +31,18 @@ Wenn Sie mit den Parametern für Ihr Experiment im Dashboard zufrieden sind und 
 > **Wichtig**&nbsp;&nbsp;Nach dem Aktivieren eines Experiments können Sie die Experimentparameter nicht mehr ändern, wenn Sie beim Erstellen des Experiments nicht auf das Kontrollkästchen für **bearbeitbare Experimente** geklickt haben. Es wird empfohlen, das Experiment vor der Aktivierung in der App zu codieren.
 
 
-## Prüfen der Experimentergebnisse
+## <a name="review-the-results-of-your-experiment"></a>Prüfen der Experimentergebnisse
 
 1. Kehren Sie in Dev Center zur Seite **Experimentation** für Ihre App zurück.
 2. Klicken Sie im Abschnitt **Aktive Experimente** auf den Namen des aktiven Experiments, um zur Experimentseite zu wechseln.
 3. Bei aktiven oder beendeten Experimenten enthalten die ersten zwei Abschnitte auf dieser Seite die Ergebnisse Ihres Experiments:
   * Der Abschnitt **Ergebniszusammenfassung** enthält die Experimentziele und die Umwandlungsquote für jede Variation.
-  * Der Abschnitt **Ergebnisdetails** enthält ausführlichere Informationen zu den Experimentzielen, u. a. Anzeige-, Umwandlungsereignisse, Umwandlungsquote, Delta in %, Konfidenz und Signifikanz. Die *Konfidenz* ist ein statistisches Maß zum Angeben der Zuverlässigkeit einer Schätzung, mit dem die Fehlerspanne ermittelt wird. Die *Signifikanz* ist ein statistisches Maß, mit dem basierend auf einer Stichprobe die Wahrscheinlichkeit dafür bestimmt wird, dass ein Ergebnis nicht zufällig ist, sondern auf eine bestimmte Ursache zurückzuführen ist.
+  * Der Abschnitt **Ergebnisdetails** enthält ausführlichere Informationen zu den einzelnen Varianten all der Ziele im Experiment, einschließlich Ansichten, Konvertierungen, eindeutiger Benutzer, Umwandlungsquote, Delta in %, Konfidenz und Signifikanz. Die *Konfidenz* ist ein statistisches Maß zum Angeben der Zuverlässigkeit einer Schätzung, mit dem die Fehlerspanne ermittelt wird. Die *Signifikanz* ist ein statistisches Maß, mit dem basierend auf einer Stichprobe die Wahrscheinlichkeit dafür bestimmt wird, dass ein Ergebnis nicht zufällig ist, sondern auf eine bestimmte Ursache zurückzuführen ist.
 
   >**Hinweis**&nbsp;&nbsp;Dev Center meldet nur das erste Umwandlungsereignis für jeden Benutzer innerhalb eines Zeitraums von 24 Stunden. Wenn ein Benutzer innerhalb von 24 Stunden mehrere Umwandlungsereignisse in Ihrer App auslöst, wird nur das erste Umwandlungsereignis gemeldet. So soll verhindert werden, dass die Experimentergebnisse für eine Stichprobengruppe von Benutzern durch einen einzelnen Benutzer mit mehreren Umwandlungsereignissen verfälscht wird.
 
 
-## Beenden Ihres Experiments
+## <a name="complete-your-experiment"></a>Beenden Ihres Experiments
 
 1. Kehren Sie Im Dashboard zur Experimentseite zurück. Einzelheiten dazu finden Sie im vorherigen Abschnitt.
 2. Führen Sie im Abschnitt **Ergebniszusammenfassung** eine der folgenden Aktionen durch:
@@ -51,7 +51,7 @@ Wenn Sie mit den Parametern für Ihr Experiment im Dashboard zufrieden sind und 
 3. Klicken Sie auf **OK**, um zu bestätigen, dass Sie das Experiment beenden möchten.
 
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Erstellen eines Projekts und Festlegen von Remotevariablen im Dev Center-Dashboard](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md)
 * [Programmieren Ihrer App für Experimente](code-your-experiment-in-your-app.md)
@@ -61,6 +61,6 @@ Wenn Sie mit den Parametern für Ihr Experiment im Dashboard zufrieden sind und 
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

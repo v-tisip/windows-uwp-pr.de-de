@@ -4,14 +4,14 @@ description: "Apps halten die Kommunikation mithilfe von Hintergrundaufgaben und
 title: Netzwerkkommunikation im Hintergrund
 ms.assetid: 537F8E16-9972-435D-85A5-56D5764D3AC2
 translationtype: Human Translation
-ms.sourcegitcommit: eea01135c60df0323b73bf3fda8b44e6d02cd04b
-ms.openlocfilehash: bea161a9eeac012aa7b09547212f021f1289afa6
+ms.sourcegitcommit: a6d297ca8510267d21656bd2e22bb3958a4a4b52
+ms.openlocfilehash: ea979eceb20c13d4025ec94ec8ed05b484a7eb27
 
 ---
 
-# Netzwerkkommunikation im Hintergrund
+# <a name="network-communications-in-the-background"></a>Netzwerkkommunikation im Hintergrund
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Wichtige APIs**
 
@@ -20,13 +20,13 @@ ms.openlocfilehash: bea161a9eeac012aa7b09547212f021f1289afa6
 
 Wenn Apps nicht im Vordergrund ausgeführt werden, halten sie die Kommunikation mithilfe von Hintergrundaufgaben und zwei wichtigen Mechanismen aufrecht: Socketbroker und Steuerkanaltrigger. Apps, die Sockets für dauerhafte Verbindungen verwenden, können den Besitz eines Sockets an einen System-Socketbroker delegieren, sobald sie in den Hintergrund wechseln. Der Broker aktiviert die App, wenn Datenverkehr auf dem Socket eintrifft, überträgt den Besitz zurück an die App, und die App verarbeitet den eingehenden Datenverkehr.
 
-## Kurzlebige Netzwerkvorgänge in Hintergrundaufgaben
+## <a name="performing-short-lived-network-operations-in-background-tasks"></a>Kurzlebige Netzwerkvorgänge in Hintergrundaufgaben
 
-SocketActivityTrigger und ControlChannelTrigger (später in diesem Thema behandelt) sind für Apps vorgesehen, die langlebige Netzwerkverbindungen mit langer Laufzeit aufrechterhalten, die auch beim Ausführen der App im Hintergrund beibehalten werden. Apps, deren Logik für die jeweilige Hintergrundaufgabe kurzlebige Netzwerkinteraktionen erfordert (z.B. zum Senden einer HTTP-Anforderung), können direkt in den wichtigsten Netzwerk-APIs ([**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319), [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) oder [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906)) aufgerufen werden. Solche Aufgaben müssen jedoch auf eine bestimmte Weise konfiguriert werden, damit sie in jedem Fall ordnungsgemäß funktionieren. Hintergrundaufgaben müssen entweder die Bedingung [InternetAvailable](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.systemconditiontype.aspx) verwenden oder das Flag [IsNetworkRequested](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundtaskbuilder.isnetworkrequested.aspx) für die Registrierung der Hintergrundaufgaben. Dies weist die Infrastruktur für Hintergrundaufgaben an, die Netzwerkverbindung für die Ausführung der Aufgabe auch dann beizubehalten, wenn sich das Gerät im verbundenen Standbymodus befindet.
+SocketActivityTrigger und ControlChannelTrigger (später in diesem Thema behandelt) sind für Apps vorgesehen, die langlebige Netzwerkverbindungen mit langer Laufzeit aufrechterhalten, die auch beim Ausführen der App im Hintergrund beibehalten werden. Apps, deren Logik für die jeweilige Hintergrundaufgabe kurzlebige Netzwerkinteraktionen erfordert (z. B. zum Senden einer HTTP-Anforderung), können direkt in den wichtigsten Netzwerk-APIs ([**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319), [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) oder [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906)) aufgerufen werden. Solche Aufgaben müssen jedoch auf eine bestimmte Weise konfiguriert werden, damit sie in jedem Fall ordnungsgemäß funktionieren. Hintergrundaufgaben müssen entweder die Bedingung [InternetAvailable](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.systemconditiontype.aspx) verwenden oder das Flag [IsNetworkRequested](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundtaskbuilder.isnetworkrequested.aspx) für die Registrierung der Hintergrundaufgaben. Dies weist die Infrastruktur für Hintergrundaufgaben an, die Netzwerkverbindung für die Ausführung der Aufgabe auch dann beizubehalten, wenn sich das Gerät im verbundenen Standbymodus befindet.
 
-Wenn die Hintergrundaufgabe [InternetAvailable](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.systemconditiontype.aspx) oder [IsNetworkRequested](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundtaskbuilder.isnetworkrequested.aspx) nicht wie hier beschrieben verwendet, hat sie keinen Zugriff auf das Netzwerk, wenn sich dieses im verbundenen Standbymodus befindet (z.B. wenn der Bildschirm eines Smartphones ausgeschaltet ist).
+Wenn die Hintergrundaufgabe [InternetAvailable](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.systemconditiontype.aspx) oder [IsNetworkRequested](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundtaskbuilder.isnetworkrequested.aspx) nicht wie hier beschrieben verwendet, hat sie keinen Zugriff auf das Netzwerk, wenn sich dieses im verbundenen Standbymodus befindet (z. B. wenn der Bildschirm eines Smartphones ausgeschaltet ist).
 
-## Socketbroker und SocketActivityTrigger
+## <a name="socket-broker-and-the-socketactivitytrigger"></a>Socketbroker und SocketActivityTrigger
 
 Wenn Ihre App eine [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319)-, [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)- oder [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906)-Verbindung verwendet, sollten Sie mithilfe von [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) und Socketbroker Benachrichtigungen einrichten, um über eingehenden Datenverkehr für ihre App informiert zu werden, wenn diese im Hintergrund ausgeführt wird.
 
@@ -50,7 +50,7 @@ Bei den Schritten für die einmalige Einrichtung handelt es sich um das Erstelle
            // so that tcpip keeps required state for the socket to enable connected 
            // standby action. Background task Id is taken as a parameter to tie wake pattern 
            // to a specific background task.  
-           _tcpListener. EnableTransferOwnership(_task,SocketActivityConnectedStandbyAction.Wake); 
+           _tcpListener. EnableTransferOwnership(_task.TaskId,SocketActivityConnectedStandbyAction.Wake); 
            _tcpListener.ConnectionReceived += OnConnectionReceived; 
            await _tcpListener.BindServiceNameAsync("my-service-name"); 
 ```
@@ -150,13 +150,13 @@ Ein vollständiges Beispiel zur Verwendung des [**SocketActivityTrigger**](https
 
 Wahrscheinlich wird Ihnen auffallen, dass im Beispiel beim Erstellen eines neuen Sockets oder beim Aufrufen eines vorhandenen Sockets **TransferOwnership** aufgerufen wird und dazu nicht der in diesem Thema beschriebene **OnSuspending**-Ereignishandler verwendet wird. Dies liegt daran, dass in diesem Beispiel schwerpunktmäßig der [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) veranschaulicht werden soll und der Socket während der Ausführung für keine weiteren Aktivitäten verwendet wird. In der Regel wird Ihre App komplexer sein, sodass Sie mit **OnSuspending** bestimmen sollten, wann **TransferOwnership** aufgerufen wird.
 
-## Steuerkanaltrigger
+## <a name="control-channel-triggers"></a>Steuerkanaltrigger
 
 Stellen Sie zunächst sicher, dass Steuerkanaltrigger korrekt verwendet werden. Wenn Sie [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319)-, [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)- oder [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906)-Verbindungen verwenden, sollten Sie [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) verwenden. Sie können Steuerkanaltrigger für **StreamSocket** verwenden, wobei diese jedoch mehr Ressourcen belegen und möglicherweise nicht im verbundenen Standbymodus funktionieren.
 
 Wenn Sie WebSockets, [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151), [**System.Net.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) oder **Windows.Web.Http.HttpClient** verwenden, müssen Sie [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) verwenden.
 
-## ControlChannelTrigger mit WebSockets
+## <a name="controlchanneltrigger-with-websockets"></a>ControlChannelTrigger mit WebSockets
 
 Bei Verwendung von [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) oder [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) mit [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) sind einige wichtige Punkte zu berücksichtigen. Bei Verwendung von **MessageWebSocket** oder **StreamWebSocket** mit **ControlChannelTrigger** sollten Sie transportspezifische Verwendungsmuster und bewährte Methoden nutzen. Diese Aspekte beeinflussen, wie Anforderungen für den Paketempfang über **StreamWebSocket** verarbeitet werden. Anforderungen für den Paketempfang über **MessageWebSocket** sind davon nicht betroffen.
 
@@ -425,7 +425,7 @@ async Task<bool> RegisterWithCCTHelper(string serverUri)
 
 Weitere Informationen zur Verwendung von [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) oder [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) mit [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) finden Sie im [Beispiel für einen ControlChannelTrigger-StreamSocket](http://go.microsoft.com/fwlink/p/?linkid=251232).
 
-## ControlChannelTrigger mit HttpClient
+## <a name="controlchanneltrigger-with-httpclient"></a>ControlChannelTrigger mit HttpClient
 
 Bei Verwendung von [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) mit [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) müssen einige besondere Punkte berücksichtigt werden. Bei Verwendung von [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) mit **ControlChannelTrigger** sollten Sie sich an einige transportspezifische Verwendungsmuster und bewährte Methoden halten. Diese Aspekte beeinflussen, wie Anforderungen für den Paketempfang in der [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637)-Klasse verarbeitet werden.
 
@@ -575,7 +575,7 @@ public string ReadResponse(Task<HttpResponseMessage> httpResponseTask)
 
 Weitere Informationen zur Verwendung von [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) mit [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) finden Sie im [Beispiel für einen ControlChannelTrigger-HttpClient](http://go.microsoft.com/fwlink/p/?linkid=258323).
 
-## ControlChannelTrigger mit IXMLHttpRequest2
+## <a name="controlchanneltrigger-with-ixmlhttprequest2"></a>ControlChannelTrigger mit IXMLHttpRequest2
 
 Bei Verwendung von [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151) mit [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) müssen einige besondere Punkte berücksichtigt werden. Bei Verwendung von **IXMLHTTPRequest2** mit **ControlChannelTrigger** sollten Sie sich an einige transportspezifische Verwendungsmuster und bewährte Methoden halten. Die Verwendung von **ControlChannelTrigger** wirkt sich nicht auf die Behandlung von Anforderungen zum Senden oder Empfangen von HTTP-Anforderungen über **IXMLHTTPRequest2** aus.
 
@@ -590,6 +590,6 @@ Weitere Informationen zur Verwendung von [**IXMLHTTPRequest2**](https://msdn.mic
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

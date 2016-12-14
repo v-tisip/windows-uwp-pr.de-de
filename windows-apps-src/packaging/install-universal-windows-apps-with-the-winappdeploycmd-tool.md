@@ -1,26 +1,26 @@
 ---
-author: msatranjr
+author: laurenhughes
 ms.assetid: 6AA037C0-35ED-4B9C-80A3-5E144D7EE94B
 title: "Installieren von Apps mit dem Tool „WinAppDeployCmd.exe“"
-description: "Die Windows-Anwendungsbereitstellung (WinAppDeployCmd.exe) ist ein Befehlszeilentool, mit dem Sie eine App für die Universelle Windows-Plattform (UWP) App von einem Windows10-Computer auf jedem Windows10-Gerät bereitstellen können."
+description: "Die Windows-Anwendungsbereitstellung (WinAppDeployCmd.exe) ist ein Befehlszeilentool, mit dem Sie eine App für die Universelle Windows-Plattform (UWP) App von einem Windows 10-Computer auf jedem Windows 10-Gerät bereitstellen können."
 translationtype: Human Translation
-ms.sourcegitcommit: 7b04e2e9980da4bbdd6d9d10fc493eb05e21afc4
-ms.openlocfilehash: 87af49dc04a94bac8896b33a1d7e8b4993b0f2c3
+ms.sourcegitcommit: f467bd83c2f700d94a232c99a06f86f1f1b1a0ac
+ms.openlocfilehash: 37028e1e119f27a8c82bc024e52f939a89243244
 
 ---
-# Installieren von Apps mit dem Tool „WinAppDeployCmd.exe“
+# <a name="install-apps-with-the-winappdeploycmdexe-tool"></a>Installieren von Apps mit dem Tool „WinAppDeployCmd.exe“
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Die Windows-Anwendungsbereitstellung (WinAppDeployCmd.exe) ist ein Befehlszeilentool, mit dem Sie eine App für die Universelle Windows-Plattform (UWP) App von einem Windows10-Computer auf jedem Windows10-Gerät bereitstellen können. Dieses Tool ermöglicht Ihnen die Bereitstellung eines APPX-Pakets, wenn das Windows10-Gerät über USB verbunden ist oder im gleichen Subnetz verfügbar ist, ohne dass Microsoft Visual Studio oder die Projektmappe für diese App erforderlich sind. Sie können die App auch bereitstellen, ohne sie zuerst zu einem Remote-PC oder zu Xbox One zu verpacken. Dieser Artikel beschreibt, wie UWP-Apps mit diesem Tool installiert werden.
+Die Windows-Anwendungsbereitstellung (WinAppDeployCmd.exe) ist ein Befehlszeilentool, mit dem Sie eine App für die Universelle Windows-Plattform (UWP) App von einem Windows 10-Computer auf jedem Windows 10-Gerät bereitstellen können. Dieses Tool ermöglicht Ihnen die Bereitstellung eines APPX-Pakets, wenn das Windows 10-Gerät über USB verbunden ist oder im gleichen Subnetz verfügbar ist, ohne dass Microsoft Visual Studio oder die Projektmappe für diese App erforderlich sind. Sie können die App auch bereitstellen, ohne sie zuerst zu einem Remote-PC oder zu Xbox One zu verpacken. Dieser Artikel beschreibt, wie UWP-Apps mit diesem Tool installiert werden.
 
-Um das Tool WinAppDeployCmd über eine Eingabeaufforderung oder Skriptdatei auszuführen, muss lediglich das Windows 10 SDK installiert sein. Wenn Sie eine App mit „WinAppDeployCmd.exe“ installieren, werden die APPX-Datei oder AppxManifest (für lose Dateien) verwendet, um Ihre App auf ein Windows10-Gerät querzuladen. Mit diesem Befehl wird nicht das für Ihre App erforderliche Zertifikat installiert. Zum Ausführen der App muss sich das Windows10-Gerät im Entwicklermodus befinden oder bereits über das Zertifikat verfügen.
+Um das Tool WinAppDeployCmd über eine Eingabeaufforderung oder Skriptdatei auszuführen, muss lediglich das Windows 10 SDK installiert sein. Wenn Sie eine App mit „WinAppDeployCmd.exe“ installieren, werden die APPX-Datei oder AppxManifest (für lose Dateien) verwendet, um Ihre App auf ein Windows 10-Gerät querzuladen. Mit diesem Befehl wird nicht das für Ihre App erforderliche Zertifikat installiert. Zum Ausführen der App muss sich das Windows 10-Gerät im Entwicklermodus befinden oder bereits über das Zertifikat verfügen.
 
 Um eine Bereitstellung auf mobilen Geräten auszuführen, müssen Sie zunächst ein Paket erstellen. Weitere Informationen finden Sie [hier](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps).
 
-Das Tool **WinAppDeployCmd.exe** befindet sich unter folgendem Pfad auf Ihrem Windows10-Computer: **C:\\Programme (x86)\\Windows Kits\\10\\bin\\x86\\WinAppDeployCmd.exe** (abhängig vom Installationspfad für das SDK). Verbinden Sie zunächst das Windows10-Gerät mit dem gleichen Subnetz oder direkt mit Ihrem Windows 10-Computer über eine USB-Verbindung. Verwenden Sie anschließend die folgende Syntax und die Beispiele zu diesem Befehl weiter unten in diesem Artikel, um die UWP-App bereitzustellen:
+Das Tool **WinAppDeployCmd.exe** befindet sich unter folgendem Pfad auf Ihrem Windows 10-Computer: **C:\\Programme (x86)\\Windows Kits\\10\\bin\\x86\\WinAppDeployCmd.exe** (abhängig vom Installationspfad für das SDK). Verbinden Sie zunächst das Windows 10-Gerät mit dem gleichen Subnetz oder direkt mit Ihrem Windows 10-Computer über eine USB-Verbindung. Verwenden Sie anschließend die folgende Syntax und die Beispiele zu diesem Befehl weiter unten in diesem Artikel, um die UWP-App bereitzustellen:
 
-## Syntax und Optionen für WinAppDeployCmd
+## <a name="winappdeploycmd-syntax-and-options"></a>Syntax und Optionen für WinAppDeployCmd
 
 Dies ist die mögliche Syntax, die Sie für **WinAppDeployCmd.exe** verwenden können:
 
@@ -99,7 +99,7 @@ Die folgende Tabelle enthält die Optionen für **WinAppDeployCmd.exe**.
 | &lt;remotedeploydir&gt;| Verzeichnis auf dem Gerät relativ zum Bereitstellungsspeicherort.                      |
 
  
-## Beispiele für „WinAppDeployCmd.exe“
+## <a name="winappdeploycmdexe-examples"></a>Beispiele für „WinAppDeployCmd.exe“
 
 Im Folgenden finden Sie einige Beispiele dazu, wie Sie mithilfe der Syntax für **WinAppDeployCmd.exe** eine Bereitstellung über die Befehlszeile ausführen.
 
@@ -109,19 +109,19 @@ Zeigt die für die Bereitstellung verfügbaren Geräte an. Der Befehl verursacht
 WinAppDeployCmd devices 3
 ```
 
-Installiert die App aus dem Paket „MyApp.appx“, das sich im Downloadverzeichnis Ihres PCs befindet, auf ein Windows10-Gerät mit der IP-Adresse 192.168.0.1 und der PIN A1B2C3, um eine Verbindung mit dem Gerät herzustellen.
+Installiert die App aus dem Paket „MyApp.appx“, das sich im Downloadverzeichnis Ihres PCs befindet, auf ein Windows 10-Gerät mit der IP-Adresse 192.168.0.1 und der PIN A1B2C3, um eine Verbindung mit dem Gerät herzustellen.
 
 ``` syntax
 WinAppDeployCmd install -file "Downloads\MyApp.appx" -ip 192.168.0.1 -pin A1B2C3
 ```
 
-Deinstalliert das angegebene Paket (unter Verwendung des vollständigen Namens) von einem Windows10-Gerät mit der IP-Adresse 192.168.0.1. Mit dem list-Befehl können Sie die vollständigen Namen aller Pakete anzeigen, die auf einem Gerät installiert sind.
+Deinstalliert das angegebene Paket (unter Verwendung des vollständigen Namens) von einem Windows 10-Gerät mit der IP-Adresse 192.168.0.1. Mit dem list-Befehl können Sie die vollständigen Namen aller Pakete anzeigen, die auf einem Gerät installiert sind.
 
 ``` syntax
 WinAppDeployCmd uninstall -package Company.MyApp_1.0.0.1_x64__qwertyuiop -ip 192.168.0.1
 ```
 
-Aktualisiert die bereits auf dem Windows10-Gerät mit der IP-Adresse 192.168.0.1 installierte App unter Verwendung des angegebenen APPX-Pakets.
+Aktualisiert die bereits auf dem Windows 10-Gerät mit der IP-Adresse 192.168.0.1 installierte App unter Verwendung des angegebenen APPX-Pakets.
 
 ``` syntax
 WinAppDeployCmd update -file "Downloads\MyApp.appx" -ip 192.168.0.1
@@ -139,7 +139,7 @@ Registriert die App im Verzeichnis app1_F5 am Bereitstellungspfad des PCs oder d
 WinAppDeployCmd registerfiles -file app1_F5 -ip 192.168.0.1
 ```
 
-## Verwenden von WinAppDeployCmd für die Einrichtung von über einen PC ausgeführten Bereitstellungen auf Xbox One
+## <a name="using-winappdeploycmd-to-set-up-run-from-pc-deployment-on-xbox-one"></a>Verwenden von WinAppDeployCmd für die Einrichtung von über einen PC ausgeführten Bereitstellungen auf Xbox One
 
 Das Ausführen über einen PC ermöglicht Ihnen die Bereitstellung einer UWP-Anwendung auf einer Xbox One, ohne die Binärdateien zu kopieren. Die Binärdateien werden stattdessen in einer Netzwerkfreigabe im selben Netzwerk wie die Xbox gehostet.  Dazu benötigen Sie eine für Entwickler entsperrte Xbox One und eine UWP-Anwendung mit loser Datei in einem Netzlaufwerk, das auf die Xbox zugreifen kann.
 
@@ -152,6 +152,6 @@ ex. WinAppDeployCmd register files -ip 192.168.0.1 -remotedeploydir \\driveA\myA
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

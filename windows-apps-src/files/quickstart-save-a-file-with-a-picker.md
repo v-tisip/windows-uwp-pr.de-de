@@ -1,15 +1,15 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: 8BDDE64A-77D2-4F9D-A1A0-E4C634BCD890
 title: Speichern einer Datei mit einer Auswahl
 description: "Mithilfe von FileSavePicker können Benutzer den Namen und Speicherort zum Speichern einer Datei durch die App angeben."
 translationtype: Human Translation
-ms.sourcegitcommit: de0b23cfd8f6323d3618c3424a27a7d0ce5e1374
-ms.openlocfilehash: 8e65131a913f5ea69438ff986151da11d3126314
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: ae6a9806e982a866834371a60788f7a788b04e47
 
 ---
 
-# Speichern einer Datei mit einer Auswahl
+# <a name="save-a-file-with-a-picker"></a>Speichern einer Datei mit einer Auswahl
 
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -26,7 +26,7 @@ Mithilfe von [**FileSavePicker**](https://msdn.microsoft.com/library/windows/app
 
  
 
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 
 -   **Verstehen der asynchronen Programmierung für UWP-Apps (Universelle Windows-Plattform)**
@@ -37,7 +37,7 @@ Mithilfe von [**FileSavePicker**](https://msdn.microsoft.com/library/windows/app
 
     Weitere Informationen finden Sie unter [Berechtigungen für den Dateizugriff](file-access-permissions.md).
 
-## FileSavePicker: Schritt für Schritt
+## <a name="filesavepicker-step-by-step"></a>FileSavePicker: Schritt für Schritt
 
 
 Verwenden Sie [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871), damit Benutzer den Namen, Typ und Speicherort von zu speichernden Dateien angeben können. Erstellen Sie ein Dateiauswahlobjekt, passen und zeigen Sie es an, und speichern Sie dann Daten über das zurückgegebene [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)-Objekt, das die ausgewählte Datei darstellt.
@@ -114,6 +114,6 @@ Im Beispiel wird überprüft, ob die Datei gültig ist. Danach wird der eigene D
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

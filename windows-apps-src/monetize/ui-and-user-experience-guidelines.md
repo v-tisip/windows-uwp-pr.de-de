@@ -4,28 +4,26 @@ ms.assetid: 7a38a352-6e54-4949-87b1-992395a959fd
 description: "Erfahren Sie mehr über UI- und Benutzererfahrungsrichtlinien in App-Anzeigen."
 title: UI- und Benutzererfahrungsrichtlinien in App-Anzeigen
 translationtype: Human Translation
-ms.sourcegitcommit: 8574695fe12042e44831227f81e1f6ea45e9c0da
-ms.openlocfilehash: 3019834a314e552654d74358f4b1eed8451d5119
+ms.sourcegitcommit: 148aca16104f599f3048f5965c4131a3f37799f8
+ms.openlocfilehash: 97feb4f79e0592a7b54a8263b15cd2b85dd3243d
 
 
 ---
 
-# UI- und Benutzererfahrungsrichtlinien in App-Anzeigen
+# <a name="ui-and-user-experience-guidelines-for-ads-in-apps"></a>UI- und Benutzererfahrungsrichtlinien in App-Anzeigen
 
 
-
-
-## Allgemeine UI-Ressourcen für Windows-Apps
+## <a name="general-ui-resources-for-windows-apps"></a>Allgemeine UI-Ressourcen für Windows-Apps
 
 Informationen zur Gestaltung des Erscheinungsbilds von Apps finden Sie unter [Design und UI](https://developer.microsoft.com/windows/design).
 
-## Bewährte Methoden für AdControl
+## <a name="adcontrol-best-practices"></a>Bewährte Methoden für AdControl
 
 * [Bewährte Methoden für AdControl: EFFEKTIV](#adcontrolbestpracticesdo10)
 * [Bewährte Methoden für AdControl: INEFFEKTIV](#adcontrolbestpracticesdont10)
 
 <span id="adcontrolbestpracticesdo10"/>
-### Bewährte Methoden für AdControl: EFFEKTIV
+### <a name="adcontrol-best-practices-do"></a>Bewährte Methoden für AdControl: EFFEKTIV
 
 * Binden Sie die Werbung in die Erfahrung ein. Geben Sie den Designern eine Beispielanzeige vor, an der sie erkennen können, wie Sie sich die Werbung vorstellen. Zwei Beispiele für gut durchdachte Anzeigen in Apps sind das Layout, bei der die Anzeige als Inhalt fungiert, und das Split-Layout.
 
@@ -34,27 +32,27 @@ Informationen zur Gestaltung des Erscheinungsbilds von Apps finden Sie unter [De
 * Planen Sie für Zeiten, wenn keine Anzeigen verfügbar sind. Zu gewissen Zeiten kann es passieren, dass keine Anzeigen an Ihre App gesendet werden. Gestalten Sie Ihre Seiten so, dass sie gut aussehen, unabhängig davon, ob sie eine Anzeige enthalten oder nicht. Weitere Informationen finden Sie unter [Fehlerbehandlung](error-handling-with-advertising-libraries.md).
 
 <span id="adcontrolbestpracticesdont10"/>
-### Bewährte Methoden für AdControl: INEFFEKTIV
+### <a name="adcontrol-best-practices-dont"></a>Bewährte Methoden für AdControl: INEFFEKTIV
 
-* Freie Flächen mit Anzeigen ausfüllen. Nutzen Sie nicht gleich die erste freie Fläche, die Sie finden können, als Werbefläche. Stattdessen sollten die Anzeigen in den Gesamtentwurf integriert werden.
+* Füllen Sie freie Flächen mit Anzeigen aus. Nutzen Sie nicht gleich die erste freie Fläche, die Sie finden können, als Werbefläche. Stattdessen sollten die Anzeigen in den Gesamtentwurf integriert werden.
 
 * Übermäßig viele Anzeigen in der App schalten. Zu viele Anzeigen beeinträchtigen das Erscheinungsbild der App sowie deren Benutzerfreundlichkeit. Sie möchten durch die Werbung zwar Geld verdienen, aber nicht auf Kosten der App selbst.
 
 * Nutzer von ihren Kernaufgaben ablenken. Der Schwerpunkt sollte immer auf der App liegen. Werbeflächen sollten so eingebettet werden, dass sie eine untergeordnete Rolle spielen.
 
 <span id="interstitialbestpractices10"/>
-## Richtlinien und bewährte Methoden für Interstitialanzeigen
+## <a name="interstitial-best-practices-and-policies"></a>Richtlinien und bewährte Methoden für Interstitialanzeigen
 
 * [Bewährte Methoden für Interstitialanzeigen: EFFEKTIV](#interstitialbestpracticesdo10)
 * [Bewährte Methoden für Interstitialanzeigen: INEFFEKTIV](#interstitialbestpracticesavoid10)
-* [Bewährte Methoden für Interstitialanzeigen: NIEMALS (Richtlinien werden durchgesetzt)](#interstitialbestpracticesnever10)
+* [Bewährte Methoden für Interstitialanzeigen: NIEMALS (durch Richtlinie durchgesetzt)](#interstitialbestpracticesnever10)
 
-Wenn Video-Interstitialanzeigen geschickt eingesetzt werden, können sie den Umsatz Ihrer App erheblich erhöhen, ohne sich negativ auf die Kundenzufriedenheit auszuwirken. Werden Sie jedoch unangemessen eingesetzt, dann können solche Anzeigen das genaue Gegenteil bewirken.
+Wenn Video-Interstitialanzeigen geschickt eingesetzt werden, können sie den Umsatz aus Ihrer App erheblich erhöhen, ohne dass sich dies negativ auf die Kundenzufriedenheit auswirkt. Werden Sie jedoch unangemessen eingesetzt, dann können solche Anzeigen das genaue Gegenteil bewirken.
 
 Wir bemühen uns, Ihnen bei der geschickten Umsetzung behilflich zu sein. Da Sie Ihre App, abgesehen von den Richtlinien, am besten kennen, überlassen wir Ihnen die endgültige Entscheidung. Beachten Sie dabei, dass die App-Bewertungen und Ihre Einnahmen eng miteinander verknüpft sind.
 
 <span id="interstitialbestpracticesdo10"/>
-### Bewährte Methoden für Interstitialanzeigen: EFFEKTIV
+### <a name="interstitial-best-practices-do"></a>Bewährte Methoden für Interstitialanzeigen: EFFEKTIV
 
 * Bauen Sie Interstitialanzeigen in den natürlichen Fluss der App ein, wie zum Beispiel zwischen den verschiedenen Schwierigkeitsebenen des Spiels.
 
@@ -84,13 +82,14 @@ Wir bemühen uns, Ihnen bei der geschickten Umsetzung behilflich zu sein. Da Sie
 
     * Das Herunterladen von Videoanzeigen dauert erheblich länger als das von Banner. Dies ist besonders für Märkte wichtig, die nicht über Hochgeschwindigkeitsverbindungen verfügen.
 
+<span/>
 
 * Berücksichtigen Sie daher den Datentarifplan der Nutzer. Verzichten Sie beispielsweise darauf, eine Videoanzeige auf einem mobilen Gerät anzuzeigen, das kurz davor ist, das Datenlimit zu überschreiten oder es bereits überschritten hat bzw. warnen Sie den Nutzer vorher. In der [ConnectionProfile](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectionprofile.aspx)-Klasse finden Sie APIs, die Ihnen hierbei helfen.
 
 * Optimieren Sie Ihre App nach der ersten Übermittlung fortlaufend. Sehen Sie sich die Anzeigenberichte an und nehmen Sie Designänderungen vor, um die Füll- und Videoabschlussraten zu verbessern.
 
 <span id="interstitialbestpracticesavoid10"/>
-### Bewährte Methoden für Interstitialanzeigen: INEFFEKTIV
+### <a name="interstitial-best-practices-avoid"></a>Bewährte Methoden für Interstitialanzeigen: INEFFEKTIV
 
 * Übertreibung. Erzwingen Sie Anzeigen nicht häufiger als alle 5 Minuten oder so, es sei denn der Nutzer verfolgt aktiv einen konkreten Vorteil, der über den eigentlichen Spielverlauf hinausgeht.
 
@@ -106,10 +105,11 @@ Wir bemühen uns, Ihnen bei der geschickten Umsetzung behilflich zu sein. Da Sie
 
 * Abrufen einer Videoanzeige mehr als 5 Minuten vor dem Aufruf einer [Show](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.show.aspx).
 
-    * Gutes Inventar wird die Konvertierung von vorab abgerufenen Anzeigen in berechenbare Anzeigenaufrufe maximieren.
+  * Gutes Inventar wird die Konvertierung von vorab abgerufenen Anzeigen in berechenbare Anzeigenaufrufe maximieren.
 
+<span/>
 
-* Bestrafen eines Nutzers für Probleme bei der Anzeigenbereitstellung, d.h., wenn beispielsweise keine Anzeigen verfügbar sind. Wenn Sie beispielsweise eine UI-Option anzeigen, die lautet „Sehen Sie sich eine Anzeige an und erhalten Sie *xxx*“, dann sollten Sie *xxx* auch tatsächlich bereitstellen, wenn der Nutzer seinen Teil erfüllt. Berücksichtigen Sie die folgenden beiden Optionen:
+* Bestrafen eines Nutzers für Probleme bei der Anzeigenbereitstellung, d. h., wenn beispielsweise keine Anzeigen verfügbar sind. Wenn Sie beispielsweise eine UI-Option anzeigen, die lautet „Sehen Sie sich eine Anzeige an und erhalten Sie *xxx*“, dann sollten Sie *xxx* auch tatsächlich bereitstellen, wenn der Nutzer seinen Teil erfüllt. Berücksichtigen Sie die folgenden beiden Optionen:
 
     * Bieten Sie die Option nur an, wenn das [AdReady](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.adready.aspx)-Ereignis bereits ausgelöst wurde.
 
@@ -119,28 +119,28 @@ Wir bemühen uns, Ihnen bei der geschickten Umsetzung behilflich zu sein. Da Sie
 
     * Eine bessere Waffe in einem First-Person-Shooterspiel würde eindeutig in diese Kategorie gehören.
 
-    * Ein speziell für den Avatar des Spielers angefertigtes Hemd ist ein Ordnung, solange es keine Tarnung bietet!
+    * Ein speziell für den Avatar des Spielers angefertigtes Hemd ist in Ordnung, solange es keine Tarnung bietet!
 
 <span id="interstitialbestpracticesnever10"/>
-### Bewährte Methoden für Interstitialanzeigen: NIEMALS (Richtlinien werden durchgesetzt)
+### <a name="interstitial-best-practices-never-policy-enforced"></a>Bewährte Methoden für Interstitialanzeigen: NIEMALS (durch Richtlinie durchgesetzt)
 
-* Platzieren Sie niemals UI-Elemente auf dem Anzeigen-Container.
+* Platzieren Sie niemals UI-Elemente auf dem Anzeigencontainer.
 
-    * Werbekunden, haben für den gesamten Bildschirm bezahlt.
+    * Werbekunden haben für den gesamten Bildschirm bezahlt.
 
 <span/>
 
-* Rufen Sie niemals **Show** auf, während der Benutzer mit der App beschäftigt ist.
+* Rufen Sie niemals [Show](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.show.aspx) auf, während der Benutzer mit der App beschäftigt ist.
 
-    * Da die **InterstitialAd** eine Vollbildüberlagerung erstellt, könnten Nutzer dies als störend empfinden.
+    * Der Benutzer wird dies als lästig empfinden, da [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) den gesamten Bildschirm überlagert.
 
-    * Es könnten auch zu übertriebenen „Durchklick“-Raten führen.
+    * Es könnte auch zu übertriebenen Klickraten führen.
 
 * Verwenden Sie niemals Anzeigen, um etwas zu erhalten, das als Währung eingesetzt oder mit anderen Nutzern getauscht werden könnte.
 
 * Fordern Sie niemals eine neue Anzeige im Kontext des Ereignishandlers für das Ereignis [ErrorOccurred](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.erroroccurred.aspx) an. Dies kann zu einer Endlosschleife und Problemen beim Werbedienst führen.
 
-* Fordern Sie niemals eine Interstitialanzeige an, um anschließend auf das Anzeigen der für Ihre App bereitgestellten Werbung zu verzichten. Wenn Sie eine Anzeige anfordern und anschließend als Reaktion das [AdReady](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.adready.aspx)-Ereignis erhalten, müssen Sie die Werbung anzeigen. Wenn Sie Ihre eigene Anzeigenvermittlungslösung über andere Werbenetzwerke implementieren, fordern Sie erst dann eine Anzeige für das Steuerelement **InterstitialAd** an, wenn Anfragen an andere Werbenetzwerke nicht erfolgreich waren.
+* Fordern Sie niemals eine interstitialanzeige an, um lediglich eine Sicherungsanzeige für eine Wasserfallfolge von Anzeigen zu erhalten. Wenn Sie eine Interstitialanzeige anfordern und anschließend das [AdReady](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.adready.aspx)-Ereignis erhalten, muss die nächste Interstitialanzeige in Ihrer App die Anzeige sein, die für die Anzeige über die Methode [Show](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.show.aspx) bereit ist.
 
  
 
@@ -148,6 +148,6 @@ Wir bemühen uns, Ihnen bei der geschickten Umsetzung behilflich zu sein. Da Sie
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

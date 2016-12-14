@@ -4,21 +4,21 @@ ms.assetid: 40B97E0C-EB1B-40C2-A022-1AB95DFB085E
 description: "In diesem Artikel wird beschrieben, wie Sie Medien von einer universellen Windows-App für Remotegeräte umwandeln."
 title: Medienumwandlung
 translationtype: Human Translation
-ms.sourcegitcommit: 599e7dd52145d695247b12427c1ebdddbfc4ffe1
-ms.openlocfilehash: e225d5f5b7957ab21136de7294f086af62c2a5ec
+ms.sourcegitcommit: ebcd2f2b28a7cd2a8a9dad16c30239b06e147ec3
+ms.openlocfilehash: fc69e3b5bb814752480fa0151c36ae0a8c783c4e
 
 ---
 
-# Medienumwandlung
+# <a name="media-casting"></a>Medienumwandlung
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-In diesem Artikel wird beschrieben, wie Sie Medien von einer universellen Windows-App für Remotegeräte umwandeln.
+In diesem Artikel wird beschrieben, wie Sie Medien aus einer universellen Windows-App zu Remotegeräten umwandeln.
 
-## Integrierte Medienumwandlung mit MediaElement
+## <a name="built-in-media-casting-with-mediaplayerelement"></a>Integrierte Medienumwandlung mit MediaPlayerElement
 
-Die einfachste Methode zum Umwandeln von Medien aus einer universellen Windows-App bietet die Verwendung der integrierten Umwandlungsfunktion des [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement)-Steuerelements.
+Die einfachste Methode zum Umwandeln von Medien aus einer universellen Windows-App ist die Verwendung der integrierten Umwandlungsfunktion des [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement)-Steuerelements.
 
 Um dem Benutzer das Öffnen einer wiederzugebenden Videodatei im **MediaPlayerElement**-Steuerelement zu ermöglichen, fügen Sie Ihrem Projekt die folgenden Namespaces hinzu.
 
@@ -43,9 +43,9 @@ Nachdem das Video in das **MediaPlayerElement** geladen wurde, kann der Benutzer
 ![MediaElement-Umwandlungsschaltfläche](images/media-element-casting-button.png)
 
 > [!NOTE] 
-> Ab Windows10, Version1607, wird die Verwendung der **MediaPlayer**-Klasse zum Wiedergeben von Medienelementen empfohlen. **MediaPlayerElement** ist ein einfaches XAML-Steuerelement, das zum Rendern des Inhalts eines **MediaPlayer**-Objekts auf einer XAML-Seite verwendet wird. Das **MediaElement**-Steuerelement wird aus Gründen der Abwärtskompatibilität weiterhin unterstützt. Weitere Informationen zur Verwendung von **MediaPlayer** und **MediaPlayerElement** zum Wiedergeben von Medieninhalten finden Sie unter [Wiedergeben von Audio- und Videoinhalten mit „MediaPlayer“](play-audio-and-video-with-mediaplayer.md). Informationen zur Verwendung von **MediaSource** und dazugehörigen APIs für die Arbeit mit Medieninhalten finden Sie unter [Medienelemente, Wiedergabelisten und Titel](media-playback-with-mediasource.md).
+> Ab Windows 10, Version 1607, wird die Verwendung der **MediaPlayer**-Klasse zum Wiedergeben von Medienelementen empfohlen. **MediaPlayerElement** ist ein einfaches XAML-Steuerelement, das zum Rendern des Inhalts eines **MediaPlayer**-Objekts auf einer XAML-Seite verwendet wird. Das **MediaElement**-Steuerelement wird aus Gründen der Abwärtskompatibilität weiterhin unterstützt. Weitere Informationen zur Verwendung von **MediaPlayer** und **MediaPlayerElement** zum Wiedergeben von Medieninhalten finden Sie unter [Wiedergeben von Audio- und Videoinhalten mit „MediaPlayer“](play-audio-and-video-with-mediaplayer.md). Informationen zur Verwendung von **MediaSource** und dazugehörigen APIs für die Arbeit mit Medieninhalten finden Sie unter [Medienelemente, Wiedergabelisten und Titel](media-playback-with-mediasource.md).
 
-## Medienumwandlung mit CastingDevicePicker
+## <a name="media-casting-with-the-castingdevicepicker"></a>Medienumwandlung mit CastingDevicePicker
 
 Eine zweite Methode zum Umwandeln von Medien für ein Gerät ist die Verwendung der [**CastingDevicePicker**](https://msdn.microsoft.com/library/windows/apps/dn972525)-Klasse. Zum Verwenden dieser Klasse schließen Sie den [**Windows.Media.Casting**](https://msdn.microsoft.com/library/windows/apps/dn972568)-Namespace in Ihr Projekt ein.
 
@@ -78,7 +78,7 @@ Aktualisieren Sie die Benutzeroberfläche in den Ereignishandlern **ErrorOccurre
 
 [!code-cs[EmptyStateHandlers](./code/MediaCasting_RS1/cs/MainPage.xaml.cs#SnippetEmptyStateHandlers)]
 
-## Medienumwandlung mit einer benutzerdefinierten Geräteauswahl
+## <a name="media-casting-with-a-custom-device-picker"></a>Medienumwandlung mit einer benutzerdefinierten Geräteauswahl
 
 Im folgenden Abschnitt wird beschrieben, wie Sie ein eigenes Benutzeroberflächenelement zur Umwandlungsgeräteauswahl erstellen, indem Sie die Umwandlungsgeräte aufzählen und die Verbindung im Code initiieren.
 
@@ -160,6 +160,6 @@ Implementieren Sie zum Schluss den Handler für die Schaltfläche zum Trennen. B
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -1,21 +1,21 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: 3A404CC0-A997-45C8-B2E8-44745539759D
 title: "Berechtigungen für den Dateizugriff"
 description: "Apps können standardmäßig auf bestimmte Dateisystemspeicherorte zugreifen. Apps können darüber hinaus mithilfe der Dateiauswahl oder über die Deklaration von Funktionen auf weitere Speicherorte zugreifen."
 translationtype: Human Translation
-ms.sourcegitcommit: ef8d0e7ad9063fa57a9db7c3cbdcb6846d3b1133
-ms.openlocfilehash: e58cdce7f803cd15b66371e3b03c4405cbdeb3ff
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: d6cb8bd32766157b1edf886621bdc605ca160db5
 
 ---
-# Berechtigungen für den Dateizugriff
+# <a name="file-access-permissions"></a>Berechtigungen für den Dateizugriff
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 Apps können standardmäßig auf bestimmte Dateisystemspeicherorte zugreifen. Apps können darüber hinaus mithilfe der Dateiauswahl oder über die Deklaration von Funktionen auf weitere Speicherorte zugreifen.
 
-## Für alle Apps zugängliche Speicherorte
+## <a name="the-locations-that-all-apps-can-access"></a>Für alle Apps zugängliche Speicherorte
 
 Bei Erstellung einer neuen App können Sie standardmäßig auf folgende Dateisystemspeicherorte zugreifen:
 
@@ -32,7 +32,7 @@ Bei Erstellung einer neuen App können Sie standardmäßig auf folgende Dateisys
         var installDirectory = Windows.ApplicationModel.Package.current.installedLocation;
         ```
 
-       Sie können anschließend mithilfe von [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)-Methoden auf Dateien und Ordner im Verzeichnis zugreifen. Im Beispiel wird dieser **StorageFolder** in der `installDirectory`-Variablen gespeichert. Sie können das [Informationsbeispiel des Anwendungspakets](http://go.microsoft.com/fwlink/p/?linkid=231526) für Windows8.1 herunterladen und dessen Quellcode in Ihrer Windows10-App wiederverwenden, um mehr über die Arbeit mit dem App-Paket und Installationsverzeichnis zu erfahren.
+       Sie können anschließend mithilfe von [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)-Methoden auf Dateien und Ordner im Verzeichnis zugreifen. Im Beispiel wird dieser **StorageFolder** in der `installDirectory`-Variablen gespeichert. Sie können das [Informationsbeispiel des Anwendungspakets](http://go.microsoft.com/fwlink/p/?linkid=231526) für Windows 8.1 herunterladen und dessen Quellcode in Ihrer Windows 10-App wiederverwenden, um mehr über die Arbeit mit dem App-Paket und Installationsverzeichnis zu erfahren.
 
     2.  Sie können eine Datei direkt aus dem Installationsverzeichnis Ihrer Anwendung mithilfe der Anwendungs-URI wie folgt aufrufen:
         > [!div class="tabbedCodeSnippets"]
@@ -74,7 +74,7 @@ Bei Erstellung einer neuen App können Sie standardmäßig auf folgende Dateisys
 
         Wenn Sie auf den servergespeicherten oder temporären Ordner Ihrer Anwendung zugreifen möchten, verwenden Sie stattdessen die [**RoamingFolder**](https://msdn.microsoft.com/library/windows/apps/br241623)- oder [**TemporaryFolder**](https://msdn.microsoft.com/library/windows/apps/br241629)-Eigenschaft.
 
-        Nach dem Aufrufen des [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230), der den Dateispeicherort der Anwendung darstellt, können Sie auf Dateien und Ordner im Verzeichnis mithilfe der **StorageFolder**-Methode zugreifen. Im Beispiel werden diese **StorageFolder**-Objekte in der `localFolder`-Variablen gespeichert. Weitere Informationen zum Verwenden der Speicherorte von App-Daten finden Sie unter [Verwalten von Anwendungsdaten](https://msdn.microsoft.com/library/windows/apps/hh465109). Sie können auch das [Beispiel für Anwendungsdaten](http://go.microsoft.com/fwlink/p/?linkid=231478) für Windows8.1 herunterladen und dessen Quellcode in Ihrer Windows10-App wiederverwenden.
+        Nach dem Aufrufen des [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230), der den Dateispeicherort der Anwendung darstellt, können Sie auf Dateien und Ordner im Verzeichnis mithilfe der **StorageFolder**-Methode zugreifen. Im Beispiel werden diese **StorageFolder**-Objekte in der `localFolder`-Variablen gespeichert. Weitere Informationen zum Verwenden der Speicherorte von App-Daten finden Sie unter [Verwalten von Anwendungsdaten](https://msdn.microsoft.com/library/windows/apps/hh465109). Sie können auch das [Beispiel für Anwendungsdaten](http://go.microsoft.com/fwlink/p/?linkid=231478) für Windows 8.1 herunterladen und dessen Quellcode in Ihrer Windows 10-App wiederverwenden.
 
     2.  Sie können eine Datei zum Beispiel mithilfe der Anwendungs-URI direkt aus dem lokalen Ordner Ihrer Anwendung wie folgt aufrufen:
         > [!div class="tabbedCodeSnippets"]
@@ -106,7 +106,7 @@ Bei Erstellung einer neuen App können Sie standardmäßig auf folgende Dateisys
 
      
 
-## Speicherorte, auf die Windows Store-Apps zugreifen können
+## <a name="locations-windows-store-apps-can-access"></a>Speicherorte, auf die Windows Store-Apps zugreifen können
 
 -   **Downloadordner des Benutzers.** Der Ordner, in dem heruntergeladene Dateien standardmäßig gespeichert werden.
 
@@ -146,7 +146,7 @@ Bei Erstellung einer neuen App können Sie standardmäßig auf folgende Dateisys
 
     Wenn Sie eine Datei oder einen Ordner im Downloadordner erstellen, empfehlen wir, die Datei oder den Ordner der [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) Ihrer App hinzuzufügen, sodass zukünftig leicht auf dieses Element zugegriffen werden kann.
 
-## Zugriff auf zusätzliche Speicherorte
+## <a name="accessing-additional-locations"></a>Zugriff auf zusätzliche Speicherorte
 
 Zusätzlich zu den Standardspeicherorten kann eine App durch das Deklarieren von Funktionen im App-Manifest (siehe [Deklaration der App-Funktionen](https://msdn.microsoft.com/library/windows/apps/mt270968)) oder durch Aufrufen der Dateiauswahl auf zusätzliche Dateien und Ordner zugreifen, um den Benutzer Dateien und Ordner auswählen zu lassen, auf welche die App Zugriff haben soll (siehe [Öffnen von Dateien und Ordnern mit einer Auswahl](quickstart-using-file-and-folder-pickers.md)).
 
@@ -165,6 +165,6 @@ In der folgenden Tabelle sind weitere Speicherorte aufgeführt, auf die Sie durc
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Dec16_HO1-->
 
 

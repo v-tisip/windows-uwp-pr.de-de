@@ -4,18 +4,18 @@ description: "Aktionen, die Sie für eine netzwerkfähige App ausführen müssen
 title: Netzwerkgrundlagen
 ms.assetid: 1F47D33B-6F00-4F74-A52D-538851FD38BE
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 221c3278f8561fa322257714f67bd2985fa04f22
+ms.sourcegitcommit: 28cf7084fd7ea6ad41c7c2817522891617928abb
+ms.openlocfilehash: 13457b7da3472f3530805198a74b3a6b2ff78f50
 
 ---
 
-# Netzwerkgrundlagen
+# <a name="networking-basics"></a>Netzwerkgrundlagen
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Aktionen, die Sie für eine netzwerkfähige App ausführen müssen.
 
-## Funktionen
+## <a name="capabilities"></a>Funktionen
 
 Um das Netzwerk verwenden zu können, müssen Sie die entsprechenden Funktionselemente zum App-Manifest hinzufügen. Wenn in Ihrem App-Manifest keine Netzwerkfunktion angegeben ist, besitzt Ihre App keine Netzwerkfunktion, und jeder Versuch, eine Verbindung mit dem Netzwerk herzustellen, führt zu einem Fehler.
 
@@ -27,28 +27,26 @@ Im Folgenden finden Sie die am häufigsten verwendeten Netzwerkfunktionen:
 | **internetClientServer** | Bietet der App ein- und ausgehenden Netzwerkzugriff aus dem Internet und aus Netzwerken an öffentlichen Orten wie Flughäfen und Cafés. |
 | **privateNetworkClientServer** | Bietet der App eingehenden und ausgehenden Netzwerkzugriff an vertrauenswürdigen Orten des Benutzers (z. B. zu Hause und am Arbeitsplatz). |
 
-In bestimmten Situationen sind möglicherweise noch andere Funktionen für Ihre App erforderlich.
+In bestimmten Situationen sind möglicherweise weitere Funktionen für Ihre App erforderlich.
 
 | Funktion | Beschreibung |
 |------------|-------------|
-| **pushNotifications** | Wenn Ihre App Socket-Aktivitätsauslöser verwendet, müssen Sie diese Funktion im App-Manifest angeben. |
 | **enterpriseAuthentication** | Ermöglicht einer App, eine Verbindung mit Netzwerkressourcen herzustellen, für die Domänenanmeldeinformationen nötig sind. Bei dieser Funktion muss ein Domänenadministrator die Funktionalität für alle Apps aktivieren. Beispielsweise kann es sich um eine App handeln, die Daten von SharePoint-Servern in einem privaten Intranet abruft. <br/> Mit dieser Funktion können Ihre Anmeldeinformationen für den Zugriff auf Netzwerkressourcen in einem Netzwerk verwendet werden, für das Anmeldeinformationen erforderlich sind. Eine App mit dieser Funktion kann Ihre Identität im Netzwerk annehmen. <br/> Für den Internetzugriff einer App mithilfe eines Authentifizierungsproxys ist diese Funktion nicht erforderlich. |
 | **proximity** | Sie ist für die Nahfeldnäherungskommunikation mit Geräten in geringem Abstand zum Computer erforderlich. Die Nahfeldnäherung kann zum Senden an eine Anwendung oder Verbinden mit einer Anwendung auf einem in der Nähe befindlichen Gerät verwendet werden. <br/> Mit dieser Funktion kann eine App auf das Netzwerk zugreifen, um eine Verbindung mit einem Gerät in geringem Abstand herzustellen und mit der Zustimmen des Benutzers eine Einladung zu senden oder anzunehmen. |
 | **sharedUserCertificates** | Ermöglicht einer App den Zugriff auf Software- und Hardwarezertifikate wie etwa Smartcardzertifikate. Wenn diese Funktion zur Laufzeit aufgerufen wird, muss der Benutzer eine Aktion ausführen (z. B. eine Karte einsetzen oder ein Zertifikat auswählen). <br/> Bei dieser Funktion werden Ihre Software- und Hardwarezertifikate oder eine Smartcard zur Identifikation in der Anwendung verwendet. Diese Funktion kann von Ihrem Arbeitgeber, Ihrer Bank oder Regierungsbehörden zur Identifikation verwendet werden. |
 
-## Kommunikation, wenn Ihre App nicht im Vordergrund ausgeführt wird
+## <a name="communicating-when-your-app-is-not-in-the-foreground"></a>Kommunikation, wenn Ihre App nicht im Vordergrund ausgeführt wird
 
 [Unterstützen Ihrer App mit Hintergrundaufgaben](https://msdn.microsoft.com/library/windows/apps/mt299103) enthält allgemeine Informationen zur Verwendung von Hintergrundaufgaben, um Aufgaben auszuführen, während sich Ihre App nicht im Vordergrund befindet. Genauer gesagt muss Ihr Code besondere Schritte vornehmen, damit eine Benachrichtigung erfolgt, wenn es sich dabei nicht um die aktuelle App im Vordergrund handelt und diese Daten über das Netzwerk empfängt. Sie haben in Windows 8 zu diesem Zweck Steuerkanalauslöser verwendet. Diese werden in Windows 10 weiterhin unterstützt. Vollständige Informationen zur Verwendung der Steuerkanalauslöser finden Sie [**hier**](https://msdn.microsoft.com/library/windows/apps/hh701032). Eine neue Technologie in Windows 10 bietet für einige Szenarien eine bessere Funktionalität mit weniger Aufwand wie etwa pushfähige Datenstromsockets: die Socketbroker und Socket-Aktivitätsauslöser.
 
 Wenn die App [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319), [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) oder [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906) verwendet, kann sie die Beteiligung eines offenen Sockets an einen vom System bereitgestellten Socketbroker übertragen und sie dann im Vordergrund belassen oder sogar beenden. Wenn eine Verbindung zum übertragenen Socket hergestellt oder Datenverkehr auf diesem Socket empfangen wird, wird Ihre App oder die festgelegten Hintergrundaufgabe aktiviert. Wenn Ihre App nicht ausgeführt wird, wird sie gestartet. Der Socketbroker benachrichtigt Ihre App mittels [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) darüber, dass neuer Datenverkehr eingegangen ist. Ihre App gibt den Socket aus dem Socketbroker frei und verarbeitet den Datenverkehr auf dem Socket. Das heißt, Ihre App beansprucht deutlich weniger Systemressourcen, wenn es aktiv keinen Netzwerkdatenverkehr verarbeitet.
 
-Der Socketbroker soll den Steuerkanal-Auslöser ersetzen, in dem er anwendbar ist, da er die gleiche Funktionalität bietet, jedoch weniger Einschränkungen besitzt und weniger Speicherbedarf benötigt. Der Socketbroker kann von Sperrbildschirm-Apps verwendet werden und wird auf Telefonen und anderen Geräten auf die gleiche Weise verwendet. Apps müssen nicht ausgeführt werden, wenn Datenverkehr eingeht, damit sie vom Socketbroker aktiviert werden. Und der Socketbroker unterstützt die Erkennung auf TCP-Sockets, das ist bei Steuerkanal-Auslösern nicht der Fall.
+Der Socketbroker soll den Steuerkanal-Auslöser ersetzen, in dem er anwendbar ist, da er die gleiche Funktionalität bietet, jedoch weniger Einschränkungen besitzt und weniger Speicherbedarf benötigt. Der Socketbroker kann von Sperrbildschirm-Apps verwendet werden und wird auf Telefonen und anderen Geräten auf die gleiche Weise verwendet. Apps müssen nicht ausgeführt werden, wenn Datenverkehr eingeht, damit sie vom Socketbroker aktiviert werden. Der Socketbroker unterstützt darüber hinaus die Erkennung auf TCP-Sockets. Dies ist bei Steuerkanalauslösern nicht der Fall.
 
-Wenn die App Socket-Aktivitätsauslöser verwendet, müssen Sie die **pushNotifications**-Funktion im App-Manifest angeben.
 
-### Auswahl eines Netzwerk-Auslösers
+### <a name="choosing-a-network-trigger"></a>Wählen eines Netzwerkauslösers
 
-Es gibt einige Szenarien, in denen beide Auslöserarten geeignet wären. Beachten Sie bei der Auswahl der Auslöserart der App Folgendes:
+Es gibt einige Szenarien, in denen beide Auslöserarten geeignet sind. Beachten Sie bei der Auswahl der Auslöserart der App Folgendes:
 
 -   Bei Verwendung von [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151), [**System.Net.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) oder [System.Net.Http.HttpClientHandler](http://go.microsoft.com/fwlink/p/?linkid=241638) müssen Sie [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) verwenden.
 -   Wenn Sie pushfähige **StreamSockets** verwenden, können Sie Kanaltrigger und vorzugsweise [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) verwenden. In letzterem Fall kann das System Arbeitsspeicher freigeben und den Stromverbrauch verringern, wenn die Verbindung nicht aktiv verwendet wird.
@@ -57,11 +55,11 @@ Es gibt einige Szenarien, in denen beide Auslöserarten geeignet wären. Beachte
 
 Ausführliche Informationen und Beispiele zur Verwendung des Socketbrokers finden Sie unter [Netzwerkkommunikation im Hintergrund](network-communications-in-the-background.md).
 
-## Sichere Verbindungen
+## <a name="secured-connections"></a>Sichere Verbindungen
 
 Secure Sockets Layer (SSL) und das aktuellere Transport Layer Security (TLS) sind Verschlüsselungsprotokolle für die Authentifizierung und Verschlüsselung der Kommunikation in Netzwerken. Diese Protokolle dienen dazu, das Mitverfolgen und Manipulieren von Daten zu verhindern, die im Netzwerk gesendet und empfangen werden. Für den Protokollaustausch wird dabei ein Client-Server-Modell verwendet. Diese Protokolle verwenden zudem digitale Zertifikate und Zertifizierungsstellen, um den jeweiligen Server zu identifizieren.
 
-### Erstellen von sicheren Socketverbindungen
+### <a name="creating-secure-socket-connections"></a>Erstellen von sicheren Socketverbindungen
 
 Ein [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)-Objekt kann für die Verwendung von SSL/TLS für die Kommunikation zwischen dem Client und dem Server konfiguriert werden. Diese Unterstützung für SSL/TLS beschränkt sich auf die Verwendung des **StreamSocket**-Objekts als Client in der SSL/TLS-Aushandlung. Sie können SSL/TLS nicht mit dem von einer [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906)-Klasse erstellten **StreamSocket**-Objekt verwenden, wenn eingehende Kommunikation empfangen wird, da SSL/TLS-Aushandlung als Server nicht von der **StreamSocket**-Klasse implementiert wird.
 
@@ -74,7 +72,7 @@ Durch den angegebenen SocketProtectionLevel-Wert wird die minimale Schutzebene f
 
 > **Hinweis**  Der Code sollte nie implizit von der Verwendung einer bestimmten Schutzebene oder der Annahme abhängig sein, dass standardmäßig eine bestimmte Sicherheitsstufe verwendet wird. Die Sicherheitslandschaft befindet sich in einem steten Wandel, und Protokolle und Standardschutzebenen werden sich mit der Zeit ändern, um die Verwendung von Protokollen mit bekannten Schwachstellen zu vermeiden. Die Standardwerte können je nach Konfiguration einzelner Computer oder abhängig von der installierten Software oder angewendeten Patches variieren. Wenn Ihre App von der Verwendung einer bestimmten Sicherheitsstufe abhängt, müssen Sie die Stufe explizit angeben und dann durch eine Überprüfung sicherstellen, dass sie tatsächlich für die hergestellte Verbindung verwendet wird.
 
-### Verwenden von ConnectAsync
+### <a name="use-connectasync"></a>Verwenden von ConnectAsync
 
 [**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504) kann verwendet werden, um die erste Verbindung mit einem Netzwerkdienst herzustellen und dann sofort die Verwendung von SSL/TLS für jede Kommunikation auszuhandeln. Es gibt zwei **ConnectAsync**-Methoden, die das Übergeben eines *protectionLevel*-Parameters unterstützen:
 
@@ -164,7 +162,7 @@ using Windows::Networking::Sockets;
     // Then close the clientSocket when done
 ```
 
-### Verwenden von UpgradeToSslAsync
+### <a name="use-upgradetosslasync"></a>Verwenden von UpgradeToSslAsync
 
 Wenn der Code [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922) verwendet, stellt er zuerst eine Verbindung mit einem Netzwerkdienst ohne Verschlüsselung her. Die App kann ein gewisse Datenmenge senden oder empfangen, bevor sie die Verbindung für jegliche weitere Kommunikation auf die Verwendung von SSL/TLS heraufgestuft.
 
@@ -353,9 +351,9 @@ using Windows::Storage::Streams;
     });
 ```
 
-### Erstellen von sicheren WebSocket-Verbindungen
+### <a name="creating-secure-websocket-connections"></a>Erstellen von sicheren WebSocket-Verbindungen
 
-WebSocket-Verbindungen können wie herkömmliche Socketverbindungen mit TLS (Transport Layer Security)/SSL (Secure Sockets Layer) verschlüsselt werden, wenn Sie die Features [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) und [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) für Windows Store-Apps in Windows8 verwenden. In den meisten Fällen empfiehlt sich die Verwendung einer sicheren WebSocket-Verbindung. Dadurch ist es wahrscheinlicher, dass die Verbindung funktioniert, da andernfalls viele Proxys unverschlüsselte WebSocket-Verbindungen ablehnen.
+WebSocket-Verbindungen können wie herkömmliche Socketverbindungen mit TLS (Transport Layer Security)/SSL (Secure Sockets Layer) verschlüsselt werden, wenn Sie die Features [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) und [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) für Windows Store-Apps in Windows 8 verwenden. In den meisten Fällen empfiehlt sich die Verwendung einer sicheren WebSocket-Verbindung. Dadurch ist es wahrscheinlicher, dass die Verbindung funktioniert, da andernfalls viele Proxys unverschlüsselte WebSocket-Verbindungen ablehnen.
 
 Beispiele für das Erstellen einer sicheren WebSocket-Verbindung mit einem Netzwerkdienst bzw. für das Schützen einer WebSocket-Verbindung mit einem Netzwerkdienst finden Sie unter [So wird’s gemacht: Schützen von WebSocket-Verbindungen mit TLS/SSL](https://msdn.microsoft.com/library/windows/apps/xaml/hh994399).
 
@@ -363,11 +361,11 @@ Ein Server benötigt möglicherweise zusätzlich zur TLS/SSL-Verschlüsselung ei
 
 Wenn die erste Anforderung vom Client nicht diesen Wert enthält oder einen Wert bereitstellt, der vom Server nicht erwartet wird, tritt ein WebSocket-Handshakefehler auf, und der Server sendet den erwarteten Wert an den Client.
 
-## Authentifizierung
+## <a name="authentication"></a>Authentifizierung
 
 So werden beim Herstellen einer Verbindung über das Netzwerk die Authentifizierungsanmeldeinformationen bereitgestellt.
 
-### Bereitstellen eines Clientzertifikats mit der StreamSocket-Klasse
+### <a name="providing-a-client-certificate-with-the-streamsocket-class"></a>Bereitstellen eines Clientzertifikats mit der StreamSocket-Klasse
 
 Die [**Windows.Networking.StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)-Klasse unterstützt die Verwendung von SSL/TLS zum Authentifizieren des Servers, mit dem die App kommuniziert. In bestimmten Fällen muss auch die App selbst mit einem TLS-Clientzertifikat am Server authentifiziert werden. In Windows 10 können Sie ein Clientzertifikat zu dem [**StreamSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226893)-Objekt bereitstellen (dies muss festgelegt werden, bevor der TLS-Handshake gestartet wird). Wenn der Server das Clientzertifikat anfordert, reagiert Windows mit dem bereitgestellten Zertifikat.
 
@@ -380,7 +378,7 @@ socket.Control.ClientCertificate = certificate;
 await socket.ConnectAsync(destination, SocketProtectionLevel.Tls12);
 ```
 
-### Bereitstellen von Anmeldeinformationen zum Authentifizieren für einen Webdienst
+### <a name="providing-authentication-credentials-to-a-web-service"></a>Bereitstellen von Anmeldeinformationen zum Authentifizieren für einen Webdienst
 
 Die Netzwerk-APIs, die Apps die Interaktion mit sicheren Webdiensten ermöglichen, stellen jeweils eigene Methoden zum Initialisieren eines Clients oder Festlegen eines Anforderungsheaders mit Anmeldeinformationen für die Server- und Proxyauthentifizierung bereit. Jede Methode wird mit einem [**PasswordCredential**](https://msdn.microsoft.com/library/windows/apps/br227061)-Objekt festgelegt, das einen Benutzernamen, ein Kennwort und die Ressource angibt, für die die Anmeldeinformationen verwendet werden. In der folgenden Tabelle werden diese APIs zugeordnet:
 
@@ -403,7 +401,7 @@ Die Netzwerk-APIs, die Apps die Interaktion mit sicheren Webdiensten ermögliche
 |  | [**AtomPubClient.ServerCredential**](https://msdn.microsoft.com/library/windows/apps/br243428) |
 |  | [**AtomPubClient.ProxyCredential**](https://msdn.microsoft.com/library/windows/apps/br243423) |
  
-## Behandeln von Netzwerkausnahmen
+## <a name="handling-network-exceptions"></a>Behandeln von Netzwerkausnahmen
 
 In den meisten Bereichen der Programmierung ist eine Ausnahme auf ein erhebliches Problem oder einen Fehler zurückzuführen, dass durch einige Fehler im Programm verursacht wurde. In der Netzwerkprogrammierung gibt es eine zusätzliche Quelle für Ausnahmen: das Netzwerk selbst und der Art der Netzwerkkommunikation. Die Netzwerkkommunikation sind grundsätzlich nicht zuverlässig und anfällig für unerwartete Fehler. Für jede der Möglichkeiten, mit der Ihre App das Netzwerke verwendet, müssen Sie einige Statusinformationen verwalten; und der App-Code muss Netzwerkausnahmen behandeln, indem er diese Statusinformationen aktualisiert und die entsprechende Logik für Ihre App erneut initialisiert, um Kommunikationsfehler wiederherzustellen oder zu wiederholen.
 
@@ -416,7 +414,7 @@ Die Netzwerk-APIs unterstützen verschiedene Methoden zum Abrufen der detaillier
 -   Einige APIs bieten eine Hilfsmethode, die den **HRESULT**-Wert der Ausnahme in einen Enumerationswert konvertiert.
 -   Andere APIs bieten eine Methode zum Abrufen des tatsächlichen **HRESULT**-Werts.
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Verbesserungen bei der Netzwerk-API unter Windows 10](http://blogs.windows.com/buildingapps/2015/07/02/networking-api-improvements-in-windows-10/)
  
@@ -424,6 +422,6 @@ Die Netzwerk-APIs unterstützen verschiedene Methoden zum Abrufen der detaillier
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

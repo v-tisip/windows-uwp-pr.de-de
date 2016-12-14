@@ -1,14 +1,14 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: 12ECEA89-59D2-4BCE-B24C-5A4DD525E0C7
 title: Zugriff auf Inhalte in der Heimnetzgruppe
 description: "Greifen Sie auf Inhalte zu, die sich im Heimnetzgruppenordner des Benutzers befinden, einschließlich Bildern, Musik und Videos."
 translationtype: Human Translation
-ms.sourcegitcommit: de0b23cfd8f6323d3618c3424a27a7d0ce5e1374
-ms.openlocfilehash: d8f755b64d9a8b0a87dc7d37fb24ffd6ea1b5044
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: d55908186e5e0687c7dbd22fee9d2f7b70ba1707
 
 ---
-# Zugreifen auf Inhalte in der Heimnetzgruppe
+# <a name="accessing-homegroup-content"></a>Zugreifen auf Inhalte in der Heimnetzgruppe
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -19,7 +19,7 @@ ms.openlocfilehash: d8f755b64d9a8b0a87dc7d37fb24ffd6ea1b5044
 
 Greifen Sie auf Inhalte zu, die sich im Heimnetzgruppenordner des Benutzers befinden, einschließlich Bildern, Musik und Videos.
 
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 -   **Verstehen der asynchronen Programmierung für UWP-Apps (Universelle Windows-Plattform)**
 
@@ -41,7 +41,7 @@ Greifen Sie auf Inhalte zu, die sich im Heimnetzgruppenordner des Benutzers befi
 
     Sie können Abfragen dazu verwenden, Dateien und Ordner in der Heimnetzgruppe aufzulisten. Weitere Informationen zu Datei- und Ordnerabfragen finden Sie unter [Aufzählen und Abfragen von Dateien und Ordnern](quickstart-listing-files-and-folders.md).
 
-## Öffnen der Dateiauswahl für die Heimnetzgruppe
+## <a name="open-the-file-picker-at-the-homegroup"></a>Öffnen der Dateiauswahl für die Heimnetzgruppe
 
 Führen Sie die folgenden Schritte durch, um eine Instanz der Dateiauswahl zu öffnen, mit der Benutzer Dateien und Ordner in der Heimnetzgruppe auswählen können:
 
@@ -76,7 +76,7 @@ Führen Sie die folgenden Schritte durch, um eine Instanz der Dateiauswahl zu ö
     }   
     ```
 
-## Durchsuchen der Heimnetzgruppe nach Dateien
+## <a name="search-the-homegroup-for-files"></a>Durchsuchen der Heimnetzgruppe nach Dateien
 
 In diesem Beispiel wird erläutert, wie Elemente in der Heimnetzgruppe gefunden werden können, die einem vom Benutzer angegebenen Abfrageausdruck entsprechen.
 
@@ -119,7 +119,7 @@ In diesem Beispiel wird erläutert, wie Elemente in der Heimnetzgruppe gefunden 
     ```
 
 
-## Durchsuchen der Heimnetzgruppe nach den freigegebenen Dateien eines bestimmten Benutzers
+## <a name="search-the-homegroup-for-a-particular-users-shared-files"></a>Durchsuchen der Heimnetzgruppe nach den freigegebenen Dateien eines bestimmten Benutzers
 
 In diesem Abschnitt erfahren Sie, wie Sie nach Heimnetzgruppendateien suchen, die von einem bestimmten Benutzer freigegeben wurden.
 
@@ -164,7 +164,7 @@ In diesem Abschnitt erfahren Sie, wie Sie nach Heimnetzgruppendateien suchen, di
     }    
     ```
 
-## Streamen von Videos aus der Heimnetzgruppe
+## <a name="stream-video-from-the-homegroup"></a>Streamen von Videos aus der Heimnetzgruppe
 
 Gehen Sie wie folgt vor, um Videoinhalte aus der Heimnetzgruppe zu streamen:
 
@@ -211,6 +211,6 @@ Gehen Sie wie folgt vor, um Videoinhalte aus der Heimnetzgruppe zu streamen:
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

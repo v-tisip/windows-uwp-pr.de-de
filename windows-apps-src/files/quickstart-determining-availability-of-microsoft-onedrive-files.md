@@ -1,14 +1,14 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: 3604524F-112A-474F-B0CA-0726DC8DB885
 title: "Ermitteln der Verfügbarkeit von Microsoft OneDrive-Dateien"
 description: "Ermitteln Sie mithilfe der StorageFile.IsAvailable-Eigenschaft, ob eine Microsoft OneDrive-Datei verfügbar ist."
 translationtype: Human Translation
-ms.sourcegitcommit: 82edf9c3ee7f7303788b7a1272ecb261d3748c5a
-ms.openlocfilehash: 2ed00b525fd2b7af51da00ad0464e37f1cabd889
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: 2289b85a8b26e1827446709e1db97c447b3b7964
 
 ---
-# Ermitteln der Verfügbarkeit von Microsoft OneDrive-Dateien
+# <a name="determining-availability-of-microsoft-onedrive-files"></a>Ermitteln der Verfügbarkeit von Microsoft OneDrive-Dateien
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -21,7 +21,7 @@ ms.openlocfilehash: 2ed00b525fd2b7af51da00ad0464e37f1cabd889
 
 Ermitteln Sie mithilfe der [**StorageFile.IsAvailable**](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.isavailable.aspx)-Eigenschaft, ob eine Microsoft OneDrive-Datei verfügbar ist.
 
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 -   **Verstehen der asynchronen Programmierung für UWP-Apps (Universelle Windows-Plattform)**
 
@@ -31,7 +31,7 @@ Ermitteln Sie mithilfe der [**StorageFile.IsAvailable**](https://msdn.microsoft.
 
     Weitere Informationen finden Sie unter [Berechtigungen für den Dateizugriff](file-access-permissions.md).
 
-## Verwenden der StorageFile.IsAvailable-Eigenschaft
+## <a name="using-the-storagefileisavailable-property"></a>Verwenden der StorageFile.IsAvailable-Eigenschaft
 
 Benutzer können OneDrive-Dateien als „Offline verfügbar“ (Standardeinstellung) oder „Nur online verfügbar“ kennzeichnen. Diese Funktion bietet Benutzern die Möglichkeit, große Dateien (z. B. Bilder und Videos) in ihren OneDrive-Speicher zu verschieben, als nur online verfügbar zu kennzeichnen und so Speicherplatz auf der Festplatte zu sparen (lokal wird nur eine Datei mit Metadaten gespeichert).
 
@@ -92,6 +92,6 @@ private async void CheckAvailabilityOfFilesInPicturesLibrary()
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

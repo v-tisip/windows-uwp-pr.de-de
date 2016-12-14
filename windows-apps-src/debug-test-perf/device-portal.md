@@ -4,11 +4,11 @@ ms.assetid: 60fc48dd-91a9-4dd6-a116-9292a7c1f3be
 title: "Übersicht über das Windows Device Portal"
 description: "Hier erfahren Sie, wie Sie mit dem Windows Device Portal Ihr Gerät per Remotezugriff über ein Netzwerk oder eine USB-Verbindung konfigurieren und verwalten."
 translationtype: Human Translation
-ms.sourcegitcommit: 7f6aba331ba27d2c0c2ca7925c452da58e155cb8
-ms.openlocfilehash: b316eab1f269dadbe65b7e93b5a33a8e4c4924d7
+ms.sourcegitcommit: 8dee2c7bf5ec44f913e34f1150223c1172ba6c02
+ms.openlocfilehash: 6c697782683bca6671c01aa0941a78bc66fb052a
 
 ---
-# Übersicht über das Windows Device Portal
+# <a name="windows-device-portal-overview"></a>Übersicht über das Windows Device Portal
 
 Mit dem Windows Device Portal können Sie Ihr Gerät per Remotezugriff über ein Netzwerk oder eine USB-Verbindung konfigurieren und verwalten. Es bietet zudem erweiterte Diagnosetools, mit denen Sie Probleme beim Windows-Gerät behandeln und dessen Leistung in Echtzeit anzeigen können.
 
@@ -18,7 +18,7 @@ Das Windows Device Portal ist für jede Gerätefamilie verfügbar, die Features 
 
 Alle Komponenten im Windows Device Portal basieren auf [REST-APIs](device-portal-api-core.md), die Sie für den Zugriff auf die Daten und die programmatische Steuerung Ihres Geräts verwenden können.
 
-## Setup
+## <a name="setup"></a>Setup
 
 Für jedes Gerät gelten spezielle Anweisungen zum Herstellen der Verbindung mit dem Device Portal, diese allgemeinen Schritte sind jedoch für jedes Gerät erforderlich:
 1. Aktivieren Sie den Entwicklermodus und das Device Portal auf Ihrem Gerät.
@@ -27,22 +27,24 @@ Für jedes Gerät gelten spezielle Anweisungen zum Herstellen der Verbindung mit
 
 Gerätefamilie | Standardmäßig aktiviert? | HTTP | HTTPS | USB
 --------------|----------------|------|-------|----
-HoloLens | Ja, im Entwicklermodus | 80 (Standard) | 443 (Standard) | localhost:10080
-IoT | Ja, im Entwicklermodus | 8080 | Über Registrierungsschlüssel aktivieren | N/V
-Xbox | Im Entwicklermodus aktivieren | Deaktiviert | 11443 | N/V
-Desktop| Im Entwicklermodus aktivieren | Zufallswert > 50.000 (xx080) | Zufallswert > 50.000 (xx443) | N/V
-Phone | Im Entwicklermodus aktivieren | 80| 443 | localhost:10080
+HoloLens | Ja, im Entwicklermodus | 80 (Standard) | 443 (Standard) | http://127.0.0.1:10080
+IoT | Ja, im Entwicklermodus | 8080 | Über Registrierungsschlüssel aktivieren | Nicht verfügbar
+Xbox | Im Entwicklermodus aktivieren | Deaktiviert | 11443 | Nicht verfügbar
+Desktop| Im Entwicklermodus aktivieren | 50080\* | 50043\* | Nicht verfügbar
+Telefon | Im Entwicklermodus aktivieren | 80| 443 | http://127.0.0.1:10080
+
+\ * Dies ist nicht stets der Fall, da Device Portal auf Desktops Ports in flüchtigen Bereich anfordert (> 50.000), um Konflikte mit vorhandenen Portanforderungen auf dem Gerät zu verhindern.  Weitere Informationen hierzu finden Sie im Abschnitt zu [Porteinstellungen](device-portal-desktop.md#setting-port-numbers) für den Desktop.  
 
 Gerätespezifische Anweisungen zum Einrichten finden Sie in folgenden Artikeln:
 - [Device Portal für HoloLens](https://dev.windows.com/holographic/using_the_windows_device_portal)
 - [Device Portal für IoT](https://go.microsoft.com/fwlink/?LinkID=616499)
-- [Device Portal für Mobilgeräte](device-portal-mobile.md#set-up-device-portal-on-window-phone)
+- [Device Portal für Mobilgeräte](device-portal-mobile.md)
 - [Device Portal für Xbox](device-portal-xbox.md)
 - [Device Portal für Desktop](device-portal-desktop.md#set-up-device-portal-on-windows-desktop)
 
-## Features
+## <a name="features"></a>Features
 
-### Symbolleiste und Navigation
+### <a name="toolbar-and-navigation"></a>Symbolleiste und Navigation
 
 Die Symbolleiste am oberen Rand der Seite ermöglicht den Zugriff auf häufig verwendete Status und Features.
 - **Herunterfahren**: Schaltet das Gerät aus.
@@ -53,11 +55,11 @@ Verwenden Sie die Links im Navigationsbereich am linken Rand der Seite, um zu de
 
 Hier werden Tools beschrieben, die für alle Geräte verwendet werden können. Je nach Gerät sind möglicherweise andere Optionen verfügbar. Weitere Informationen finden Sie auf der entsprechenden Seite für Ihr Gerät.
 
-### Startseite
+### <a name="home"></a>Startseite
 
 Die Geräteportalsitzung beginnt auf der Startseite. Die Startseite enthält in der Regel Informationen über das Gerät, z. B. Name und Betriebssystemversion, sowie Einstellungen, die Sie für das Gerät festlegen können.
 
-### Apps
+### <a name="apps"></a>Apps
 
 Bietet Installations-/Deinstallations- und Verwaltungsfunktionen für AppX-Pakete und-Bündel auf Ihrem Gerät.
 
@@ -87,7 +89,7 @@ Bietet Installations-/Deinstallations- und Verwaltungsfunktionen für AppX-Paket
 2.  Wenn sie ausgeführt wird, wechseln Sie zu „Running apps“, und schließen Sie sie. Wenn Sie versuchen, eine App zu deinstallieren, die gerade ausgeführt wird, verursacht dies Probleme beim erneuten Installieren der App. 
 3.  Sobald Sie bereit sind, klicken Sie auf **Deinstallieren**.
 
-### Prozesse
+### <a name="processes"></a>Prozesse
 
 Zeigt Details zu derzeit ausgeführten Prozessen an. Diese umfassen Apps und Systemprozesse.
 
@@ -95,7 +97,7 @@ Auf dieser Seite werden wie im Task-Manager auf dem PC die derzeit ausgeführten
 
 ![Geräteportal für mobile Geräte](images/device-portal/mob-device-portal-processes.png)
 
-### Leistung
+### <a name="performance"></a>Leistung
 
 Zeigt Echtzeitgraphen mit Informationen zur Systemdiagnose an, z. B. Stromverbrauch, Bildfrequenz und CPU-Last.
 
@@ -108,7 +110,7 @@ Die folgenden Metriken sind verfügbar:
 
 ![Geräteportal für mobile Geräte](images/device-portal/mob-device-portal-perf.png)
 
-### Ereignisablaufverfolgung für Windows (ETW)
+### <a name="event-tracing-for-windows-etw"></a>Ereignisablaufverfolgung für Windows (ETW)
 
 Verwaltet die Echtzeit-Ereignisablaufverfolgung für Windows (ETW) auf dem Gerät.
 
@@ -130,7 +132,7 @@ Klicken oder tippen Sie auf **Aktivieren**, um die Ablaufverfolgung zu starten. 
 
 Weitere Informationen zur Verwendung von ETW-Ablaufverfolgung finden Sie im [Blogbeitrag](https://blogs.windows.com/buildingapps/2016/06/10/using-device-portal-to-view-debug-logs-for-uwp/) zu deren Verwendung zum Sammeln von Echtzeitprotokollen in Ihrer App. 
 
-### Leistungsüberwachung
+### <a name="performance-tracing"></a>Leistungsüberwachung
 
 Zeichnen Sie [Windows Performance Recorder](https://msdn.microsoft.com/library/windows/hardware/hh448205.aspx) (WPR)-Leistungsüberwachungen von Ihrem Gerät auf.
 
@@ -143,13 +145,13 @@ Klicken Sie auf **Beenden**, um die Ablaufverfolgung zu beenden. Lassen Sie dies
 
 Aufgezeichnete ETL-Dateien können in [Windows Performance Analyzer](https://msdn.microsoft.com/library/windows/hardware/hh448170.aspx) für die Analyse geöffnet werden.
 
-### Geräte
+### <a name="devices"></a>Geräte
 
 Listet alle Peripheriegeräte auf, die an das Gerät angeschlossen sind.
 
 ![Geräteportal für mobile Geräte](images/device-portal/mob-device-portal-devices.png)
 
-### Netzwerke
+### <a name="networking"></a>Netzwerke
 
 Verwaltet die Netzwerkverbindungen auf dem Gerät.  Durch das Ändern dieser Einstellungen wird das Gerät wahrscheinlich vom Geräteportal getrennt, sofern es nicht per USB mit dem Geräteportal verbunden ist.
 - **Profile**: Wählen Sie ein anderes zu verwendendes WLAN-Profil aus.  
@@ -157,15 +159,15 @@ Verwaltet die Netzwerkverbindungen auf dem Gerät.  Durch das Ändern dieser Ein
 
 ![Geräteportal für mobile Geräte](images/device-portal/mob-device-portal-network.png)
 
-### App-Datei-Explorer
+### <a name="app-file-explorer"></a>App-Datei-Explorer
 
-Ermöglicht das Anzeigen von und Interagieren mit Dateien, die von Ihren quergeladenen Apps gespeichert wurden.  Dies ist eine neue, plattformübergreifende Version von [Isolated Storage Explorer](https://msdn.microsoft.com/library/windows/apps/hh286408(v=vs.105).aspx) aus Windows Phone8.1. Weitere Informationen zum App-Datei-Explorer und zu dessen Verwendung finden Sie in [diesem Blogbeitrag](https://blogs.windows.com/buildingapps/2016/06/08/using-the-app-file-explorer-to-see-your-app-data/). 
+Ermöglicht das Anzeigen von und Interagieren mit Dateien, die von Ihren quergeladenen Apps gespeichert wurden.  Dies ist eine neue, plattformübergreifende Version von [Isolated Storage Explorer](https://msdn.microsoft.com/library/windows/apps/hh286408(v=vs.105).aspx) aus Windows Phone 8.1. Weitere Informationen zum App-Datei-Explorer und zu dessen Verwendung finden Sie in [diesem Blogbeitrag](https://blogs.windows.com/buildingapps/2016/06/08/using-the-app-file-explorer-to-see-your-app-data/). 
 
 ![Geräteportal für mobile Geräte](images/device-portal/mob-device-portal-AppFileExplorer.png)
 
-## Service-Features und Hinweise
+## <a name="service-features-and-notes"></a>Service-Features und Hinweise
 
-### DNS-SD
+### <a name="dns-sd"></a>DNS-SD
 
 Das Geräteportal kündigt seine Präsenz im lokalen Netzwerk mithilfe von DNS-SD an.  Alle Geräteportalinstanzen, unabhängig von deren Gerätetyp, kündigen sich unter „WDP._wdp._tcp.local“ an. Die TXT-Datensätze für die Instanz des Dienstes liefern Folgendes:
 
@@ -178,11 +180,11 @@ T | Mit NULL-Zeichen getrennt Liste mit Zeichenfolgen | Vom Benutzer angewendete
 
 Es wird vorgeschlagen, die Verbindung über den HTTPS-Anschluss herzustellen, da nicht alle Geräte auf dem vom DNS-SD-Datensatz angekündigten HTTP-Port lauschen. 
 
-### CSRF-Schutz und -Skripting
+### <a name="csrf-protection-and-scripting"></a>CSRF-Schutz und -Skripting
 
 Zum Schutz vor [CSRF-Angriffen](https://wikipedia.org/wiki/Cross-site_request_forgery) ist bei allen Nicht-GET-Anfragen ein eindeutiges Token erforderlich. Dieses Token, der X-CSFR-Token-Anforderungsheader, wird von einem Sitzungscookie CSRF-Token, abgeleitet. In der Web-Benutzeroberfläche des Geräteportals wird das CSRF-Token-Cookie bei jeder Anforderung in den X-CSRF-Token-Header kopiert.
 
-**Wichtig:** Dieser Schutz verhindert die Verwendung der REST-APIs auf einem eigenständigen Client (z.B. Befehlszeilenprogramme). Dies kann auf drei Arten gelöst werden: 
+**Wichtig:** Dieser Schutz verhindert die Verwendung der REST-APIs auf einem eigenständigen Client (z. B. Befehlszeilenprogramme). Dies kann auf drei Arten gelöst werden: 
 
 1. Verwendung des „Auto-“-Benutzernamens. Clients, die ihrem Benutzernamen „Auto-“ voranstellen, umgehen CSRF-Schutz. Es ist wichtig, dass dieser Benutzername nicht zur Anmeldung beim Geräteportal über den Browser verwendet wird, da dies den Dienst für CSRF-Angriffe öffnet. Beispiel: Wenn der Benutzername des Geräteportals „Admin“ lautet, sollte ```curl -u auto-admin:password <args>``` zum Umgehen des CSRF Schutzes verwendet werden. 
 
@@ -192,12 +194,12 @@ Zum Schutz vor [CSRF-Angriffen](https://wikipedia.org/wiki/Cross-site_request_fo
 
 **Hinweis:** Ein Benutzer mit einem Benutzernamen, der mit „Auto-“ beginnt, kann sich nicht über den Browser am Geräteportal anmelden.  
 
-#### Schutz vor websiteübergreifendem WebSocket-Hijacking (Cross-Site WebSocket Hijacking, CSWSH)
+#### <a name="cross-site-websocket-hijacking-cswsh-protection"></a>Schutz vor websiteübergreifendem WebSocket-Hijacking (Cross-Site WebSocket Hijacking, CSWSH)
 
 Zum Schutz vor [CSWSH-Angriffen](https://www.christian-schneider.net/CrossSiteWebSocketHijacking.html) müssen alle Clients, die eine WebSocket-Verbindung mit einem Geräteportal herstellen, einen dem Hostheader entsprechenden Origin-Header angeben.  Dadurch wird gegenüber dem Geräteportal belegt, dass die Anforderung entweder von der Benutzeroberfläche des Geräteportals oder von einer gültigen Clientanwendung stammt.  Anforderungen ohne Origin-Header werden abgelehnt. 
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO1-->
 
 

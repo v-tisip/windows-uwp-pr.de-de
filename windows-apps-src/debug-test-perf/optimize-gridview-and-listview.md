@@ -4,11 +4,11 @@ ms.assetid: 26DF15E8-2C05-4174-A714-7DF2E8273D32
 title: "Optimieren der ListView- und GridView-Benutzeroberfläche"
 description: Verbessern Sie die Leistung und Startzeit von ListView und GridView durch UI-Virtualisierung, Elementreduzierung und die progressive Aktualisierung von Elementen.
 translationtype: Human Translation
-ms.sourcegitcommit: afb508fcbc2d4ab75188a2d4f705ea0bee385ed6
-ms.openlocfilehash: 1aba484afcb704b0b28ceee6027f5ae05d8e420d
+ms.sourcegitcommit: 8dee2c7bf5ec44f913e34f1150223c1172ba6c02
+ms.openlocfilehash: dca6c9c2cde4240da4b2eff4f4786ec5b81051c6
 
 ---
-# Optimieren der ListView- und GridView-Benutzeroberfläche
+# <a name="listview-and-gridview-ui-optimization"></a>Optimieren der ListView- und GridView-Benutzeroberfläche
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -17,7 +17,7 @@ Weitere Informationen finden Sie im Abschnitt zur „//build/“Sitzung [Erhebli
 
 Verbessern Sie die Leistung und Startzeit von [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) und [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) durch UI-Virtualisierung, Elementreduzierung und die progressive Aktualisierung von Elementen. Weitere Informationen zu Datenvirtualisierungstechniken finden Sie unter [Virtualisierung von ListView- und GridView-Daten](listview-and-gridview-data-optimization.md).
 
-## Zwei wichtige Faktoren für die Sammlungsleistung
+## <a name="two-key-factors-in-collection-performance"></a>Zwei wichtige Faktoren für die Sammlungsleistung
 
 Das Bearbeiten von Sammlungen ist ein gängiges Szenario. Eine Bildanzeige besitzt Sammlungen von Fotos, ein Leser besitzt Sammlungen von Artikeln/Büchern/Geschichten, und eine Shopping-App verfügt über Sammlungen von Produkten. In diesem Thema erfahren Sie, wie Sie vorgehen können, damit Ihre App Sammlungen effizient bearbeiten kann.
 
@@ -25,7 +25,7 @@ Es gibt zwei wichtige Leistungsfaktoren für Sammlungen: einerseits die vom UI-T
 
 Für reibungslose Verschiebungen/Bildläufe ist es wichtig, dass der UI-Thread eine effiziente und intelligente Instanziierung, Datenbindung und Anordnung von Elementen vornimmt.
 
-## UI-Virtualisierung
+## <a name="ui-virtualization"></a>UI-Virtualisierung
 
 Die Virtualisierung der Benutzeroberfläche ist die wichtigste Verbesserung, die Sie vornehmen können. Dies bedeutet, dass die Benutzeroberflächenelemente, die die Objekte darstellen, bei Bedarf erstellt werden. Für ein an eine Sammlung von 1000 Elementen gebundenes Elementsteuerelement wäre es eine Verschwendung von Ressourcen, die Benutzeroberfläche für alle Elemente gleichzeitig zu erstellen, da sie nicht alle auf einmal angezeigt werden können. [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) und [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) (und andere von [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/BR242803) abgeleitete Standardsteuerelemente) führen die Virtualisierung der Benutzeroberfläche für Sie durch. Wenn Elemente kurz davor sind, per Bildlauf in der Ansicht angezeigt zu werden (einige Seiten davon entfernt), generiert das Framework die Benutzeroberfläche für die Elemente und speichert sie zwischen. Wenn es unwahrscheinlich ist, dass die Elemente erneut angezeigt werden, gibt das Framework den Arbeitsspeicher wieder frei.
 
@@ -33,7 +33,7 @@ Wenn Sie eine benutzerdefinierte ItemsPanel-Vorlage bereitstellen (siehe [**Item
 
 Das Viewport-Konzept ist für die UI-Virtualisierung entscheidend, da das Framework die Elemente erstellen muss, die voraussichtlich angezeigt werden. Allgemein gilt: Der Viewport einer [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/BR242803)-Klasse entspricht dem Umfang des logischen Steuerelements. So entspricht beispielsweise der Viewport einer [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)-Klasse der Breite und Höhe des **ListView**-Elements. Einige Panels gewähren untergeordneten Elementen unbegrenzten Speicherplatz. Beispiele hierfür sind [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/BR209527) und ein [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704)-Objekt mit Zeilen oder Spalten mit automatischer Größenanpassung. Wird ein virtualisiertes **ItemsControl**-Objekt in einem dieser Panel platziert, nimmt es ausreichend Platz ein, um alle Elemente anzuzeigen, wodurch die Virtualisierung vereitelt wird. Stellen Sie die Virtualisierung wieder her, indem Sie die Breite und Höhe für das **ItemsControl**-Objekt festlegen.
 
-## Elementreduzierung pro Element
+## <a name="element-reduction-per-item"></a>Elementreduzierung pro Element
 
 Halten Sie die Anzahl von Benutzeroberflächenelementen, die zum Rendern Ihrer Elemente verwendet werden, vertretbar gering.
 
@@ -41,7 +41,7 @@ Wenn ein Elementsteuerelement erstmalig angezeigt wird, werden alle zum Rendern 
 
 Beispiele zur Elementreduzierung finden Sie unter [Optimieren des XAML-Markups](optimize-xaml-loading.md).
 
-Die standardmäßigen Steuerelementvorlagen für [**ListViewItem**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewitem.aspx) und [**GridViewItem**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridviewitem.aspx) enthalten ein [**ListViewItemPresenter**](https://msdn.microsoft.com/library/windows/apps/Dn298500)-Element. Dieser Presenter ist ein einzelnes optimiertes Element, das komplexe visuelle Elemente für Fokus, Auswahl und andere visuelle Zustände anzeigt. Wenn Sie bereits über benutzerdefinierte Elementsteuerelementvorlagen verfügen ([**ItemContainerStyle**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle)) oder zukünftig eine Kopie einer Elementsteuerelementvorlage bearbeiten, wird empfohlen, dass Sie ein **ListViewItemPresenter**-Element verwenden, da dieses Element in der Mehrzahl der Fälle ein optimales Gleichgewicht zwischen Leistung und Anpassbarkeit bietet. Sie können den Presenter anpassen, indem Sie dessen Eigenschaften festlegen. Im folgenden Markup-Beispiel wird z.B. das standardmäßig beim Auswählen eines Elements angezeigte Häkchen entfernt und die Hintergrundfarbe des ausgewählten Elements in Orange geändert.
+Die standardmäßigen Steuerelementvorlagen für [**ListViewItem**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewitem.aspx) und [**GridViewItem**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridviewitem.aspx) enthalten ein [**ListViewItemPresenter**](https://msdn.microsoft.com/library/windows/apps/Dn298500)-Element. Dieser Presenter ist ein einzelnes optimiertes Element, das komplexe visuelle Elemente für Fokus, Auswahl und andere visuelle Zustände anzeigt. Wenn Sie bereits über benutzerdefinierte Elementsteuerelementvorlagen verfügen ([**ItemContainerStyle**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle)) oder zukünftig eine Kopie einer Elementsteuerelementvorlage bearbeiten, wird empfohlen, dass Sie ein **ListViewItemPresenter**-Element verwenden, da dieses Element in der Mehrzahl der Fälle ein optimales Gleichgewicht zwischen Leistung und Anpassbarkeit bietet. Sie können den Presenter anpassen, indem Sie dessen Eigenschaften festlegen. Im folgenden Markup-Beispiel wird z. B. das standardmäßig beim Auswählen eines Elements angezeigte Häkchen entfernt und die Hintergrundfarbe des ausgewählten Elements in Orange geändert.
 
 ```xml
 ...
@@ -64,15 +64,16 @@ Die standardmäßigen Steuerelementvorlagen für [**ListViewItem**](https://msdn
 
 Es sind ca. 25 Eigenschaften mit selbstbeschreibenden Namen wie [**SelectionCheckMarkVisualEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.listviewitempresenter.selectioncheckmarkvisualenabled.aspx) und [**SelectedBackground**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.listviewitempresenter.selectedbackground.aspx) verfügbar. Sollten sich die Presentertypen für Ihren Zweck als nicht ausreichend anpassbar erweisen, können Sie stattdessen eine Kopie der `ListViewItemExpanded` - oder `GridViewItemExpanded` -Steuerelementvorlage bearbeiten. Diese befinden sich in `\Program Files (x86)\Windows Kits\10\DesignTime\CommonConfiguration\Neutral\UAP\<version>\Generic\generic.xaml`. Beachten Sie, dass die Verwendung dieser Vorlagen bedeutet, dass Sie für die gesteigerte Anpassbarkeit einen Teil der Leistung einbüßen.
 
-## Progressives Aktualisieren von ListView- und GridView-Elementen
+<span id="update-items-incrementally"/>
+## <a name="update-listview-and-gridview-items-progressively"></a>Progressives Aktualisieren von ListView- und GridView-Elementen
 
 Wenn Sie die Datenvirtualisierung verwenden, können Sie für [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) und [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) eine hohe Reaktionsfähigkeit erhalten. Konfigurieren Sie das Steuerelement zu diesem Zweck so, dass für die noch zu ladenden Elemente temporäre UI-Elemente gerendert werden. Die temporären Elemente werden dann beim Laden der Daten schrittweise durch die eigentlichen UI-Elemente ersetzt.
 
 Egal, von wo die Daten geladen werden (lokaler Datenträger, Netzwerk oder Cloud), kann ein Benutzer ein [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)- oder [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705)-Element so schnell schwenken/durchlaufen, dass es nicht möglich ist, alle Elemente originalgetreu zu rendern, während gleichzeitig eine flüssige Verschiebung bzw. ein gleichmäßiger Bildlauf gewährleistet wird. Um die Gleichmäßigkeit der Verschiebung bzw. des Bildlaufs zu erhalten, können Sie zusätzlich zur Verwendung von Platzhaltern das Element in mehreren Phasen rendern.
 
-Ein Beispiel für diese Verfahren findet sich häufig bei Fotoanzeige-Apps: Auch wenn nicht alle Bilder geladen und angezeigt wurden, kann der Benutzer dennoch Verschiebungen/Bildläufe vornehmen und mit der Sammlung interagieren. Für ein „Filmelement“ können Sie z.B. in der ersten Phase den Titel anzeigen, während die Altersfreigabe in der zweiten und ein Bild des Posters in der dritten Phase angezeigt werden. Der Benutzer sieht die wichtigsten Daten zu den einzelnen Elementen so früh wie möglich, d.h., es können sofort Maßnahmen ergriffen werden. Anschließend werden die weniger wichtigen Informationen ausgefüllt. Hier folgen die Plattformfeatures, mit denen Sie diese Verfahren implementieren können.
+Ein Beispiel für diese Verfahren findet sich häufig bei Fotoanzeige-Apps: Auch wenn nicht alle Bilder geladen und angezeigt wurden, kann der Benutzer dennoch Verschiebungen/Bildläufe vornehmen und mit der Sammlung interagieren. Für ein „Filmelement“ können Sie z. B. in der ersten Phase den Titel anzeigen, während die Altersfreigabe in der zweiten und ein Bild des Posters in der dritten Phase angezeigt werden. Der Benutzer sieht die wichtigsten Daten zu den einzelnen Elementen so früh wie möglich, d. h., es können sofort Maßnahmen ergriffen werden. Anschließend werden die weniger wichtigen Informationen ausgefüllt. Hier folgen die Plattformfeatures, mit denen Sie diese Verfahren implementieren können.
 
-### Platzhalter
+### <a name="placeholders"></a>Platzhalter
 
 Das Feature der temporären Platzhalter für visuelle Elemente ist standardmäßig aktiviert und wird über die [**ShowsScrollingPlaceholders**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders)-Eigenschaft gesteuert. Bei der schnellen Verschiebung bzw. einem schnellen Bildlauf bietet dieses Feature dem Benutzer einen visuellen Hinweis, dass es weitere anzuzeigende Elemente gibt, während gleichzeitig die Gleichmäßigkeit beibehalten wird. Bei Verwendung eines der folgenden Verfahren können Sie **ShowsScrollingPlaceholders** auf „false“ festlegen, wenn die Platzhalter vom System gerendert werden sollen.
 
@@ -239,7 +240,7 @@ Die allgemeine Strategie für das [**ContainerContentChanging**](https://msdn.mi
 
 4.  Wenn Sie die App jetzt ausführen und schnell schwenken oder einen schnellen Bildlauf in der Rasteransicht durchführen, sehen Sie dasselbe Verhalten wie für **x:Phase**.
 
-## Containerwiederverwendung mit heterogenen Sammlungen
+## <a name="container-recycling-with-heterogeneous-collections"></a>Containerwiederverwendung mit heterogenen Sammlungen
 
 In einigen Anwendungen benötigen Sie verschiedene Benutzeroberflächen für unterschiedliche Elementtypen innerhalb einer Sammlung. Dies kann zu Situationen führen, in denen die Virtualisierungspanels die visuellen Elemente, die zur Elementanzeige dienen, nicht wiederverwenden können. Wenn die visuellen Elemente eines Element beim Schwenken neu erstellt werden müssen, gehen viele Leistungsvorteile der Virtualisierung verloren. Mit etwas Planung können Virtualisierungspanels jedoch die Elemente wiederverwenden. Entwicklern stehen je nach Szenario zwei Optionen zur Verfügung: das [**ChoosingItemContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosingitemcontainer)-Ereignis oder ein Elementvorlagenselektor. Der Ansatz mit **ChoosingItemContainer** bietet eine bessere Leistung.
 
@@ -320,6 +321,6 @@ Bei einer ungleichmäßigen Verteilung von Elementen, die unterschiedliche Eleme
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

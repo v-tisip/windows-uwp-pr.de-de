@@ -1,15 +1,15 @@
 ---
 author: TylerMSFT
 title: "Unterstützung der Verknüpfung zwischen Web und App mit App-URI-Handlern"
-description: "Fördern Sie die Bindung der Nutzer zu Ihrer App mithilfe von App-URI-Handler"
-keywords: Deep Linking Windows
+description: "Fördern Sie die Bindung der Nutzer an Ihrer App mithilfe von App-URI-Handlern."
+keywords: Deep-Links in Windows
 translationtype: Human Translation
-ms.sourcegitcommit: cb3dbf7fd55c92339c77124bd22b3484fa389285
-ms.openlocfilehash: d7ce1dbfdf8ce0069b4d882323de8fd6f1b242f7
+ms.sourcegitcommit: 3e57ca2cf0e7c788f5a8be12ebaf3e6b05a4fe51
+ms.openlocfilehash: e5c815ef0c776954e5b0d7f1cb9bd5e32e10356c
 
 ---
 
-# Unterstützung der Verknüpfung zwischen Web und App mit App-URI-Handlern
+# <a name="support-web-to-app-linking-with-app-uri-handlers"></a>Unterstützung der Verknüpfung zwischen Web und App mit App-URI-Handlern
 
 Lernen Sie, wie sie die Bindung zwischen den Benutzern und Ihrer App durch die Unterstützung von Web-zu-App-Verlinkungen fördern. Web-zu-App-Verlinkungen erlauben es Ihnen, eine App mit einer Website zu verbinden Statt des Browsers wird Ihre app wird gestartet, wenn Benutzer einen HTTP- oder Https-Link zu Ihrer Website öffnen. Wenn Ihre App nicht installiert ist, wird ein Link zum Öffnen Ihrer Website bereitgestellt. Benutzer können dieser Erfahrung vertrauen, da nur Urheber verifizierten Contents registrieren können.
 
@@ -18,7 +18,7 @@ Um die Web-to-App Verlinkung zu aktivieren, benötigen Sie folgendes.
 - Eine JSON-Datei mit dem Paketfamiliennamen der App im selben Stammverzeichnis wie die App-Manifest Deklaration.
 - Behandeln Sie die Aktivierung in der App
 
-## Registrieren Sie sich, um HTTP- und Https-Links im App-Manifest zu behandeln.
+## <a name="register-to-handle-http-and-https-links-in-the-app-manifest"></a>Registrieren Sie sich, um HTTP- und Https-Links im App-Manifest zu behandeln.
 
 Ihre App muss die URIs für die Websites zu identifizieren, die sie behandeln soll. Fügen Sie hierzu die **Windows.appUriHandler** Erweiterung Registrierung zu Ihrer app-Manifestdatei hinzu **Package.appxmanifest**.
 
@@ -40,7 +40,7 @@ Wenn beispielsweise die Adresse Ihrer Website "msn.com" lautet, würden Sie den 
 
 Die obige Deklaration registriert Ihre App zur Behandlung von Links vom angegebenen Host. Wenn Ihre Website mehrere Adressen hat (z. B.: m.example.com, www.example.com und example.com), fügen Sie einen separaten `<uap3:Host Name=... />` Eintrag innerhalb des `<uap3:AppUriHandler>` für die einzelnen Adressen hinzu.
 
-## Verknüpfen Sie Ihre App und die Website mit einer JSON-Datei
+## <a name="associate-your-app-and-website-with-a-json-file"></a>Verknüpfen Sie Ihre App und die Website mit einer JSON-Datei
 
 Um sicherzustellen, dass nur Ihre App die Inhalte auf Ihrer Website öffnen kann, sollten Sie den Paketfamiliennamen Ihrer App in eine JSON-Datei einbinden, die auf dem Webserver-Stammverzeichnis oder in einem bekannten Verzeichnis der Domäne liegt. Dies bedeutet, dass Ihre Website die Zustimmung gibt, dass die aufgeführten Apps Inhalte auf Ihrer Website öffnen können. Sie können den Paketfamiliennamen im Packages-Abschnitt Pakete des App-Manifest-Designers finden.
 
@@ -59,7 +59,7 @@ Erstellen Sie eine JSON-Datei (ohne die Erweiterung .json) mit dem Namen **Windo
 
 Windows wird eine Https-Verbindung mit Ihrer Website herstellen und nach der entsprechenden JSON Datei auf dem Webserver suchen.
 
-### Platzhalter
+### <a name="wildcards"></a>Platzhalter
 
 Das obige für eine JSON-Datei veranschaulicht die Verwendung von Platzhaltern. Platzhalter erlauben es Ihnen eine Vielzahl von Links mit weniger Codezeilen zu unterstützen. Die Web-zu-App-Verknüpfung unterstützt zwei Arten von Platzhaltern in der JSON-Datei:
 
@@ -68,10 +68,10 @@ Das obige für eine JSON-Datei veranschaulicht die Verwendung von Platzhaltern. 
 | *****       | Repräsentiert eine beliebige Teilzeichenfolge      |
 | **?**        | Steht für ein einzelnes Zeichen |
 
-Zum Beispiel, wenn `"excludePaths" : [ "/news/*", "/blog/*" ]` in dem obigen Beispiel gegeben ist, wird Ihre App alle Pfade unterstützen, die mit Ihrer Website-Adresse (z.B. msn.com) beginnen, **mit Ausnahme** der Pfade unter `/news/` und `/blog/`. **msn.com/weather.html** wird unterstützt, aber nicht ****msn.com/news/topnews.html****.
+Zum Beispiel, wenn `"excludePaths" : [ "/news/*", "/blog/*" ]` in dem obigen Beispiel gegeben ist, wird Ihre App alle Pfade unterstützen, die mit Ihrer Website-Adresse (z. B. msn.com) beginnen, **mit Ausnahme** der Pfade unter `/news/` und `/blog/`. **msn.com/weather.html** wird unterstützt, aber nicht ****msn.com/news/topnews.html****.
 
 
-### Mehrere Apps
+### <a name="multiple-apps"></a>Mehrere Apps
 
 Wenn Sie zwei Apps haben, die Sie mit Ihrer Website verknüpfen möchten, listen Sie beide Paketfamiliennamen der Apps in der **Windows-App-Web-Link** JSON-Datei auf. Beide Apps können unterstützt werden. Dem Benutzer wird eine Auswahl für den Standardlink angezeigt, wenn beide Apps installiert sind. Falls sie den Standardlink später ändern möchten, können ändern sie ihn unter **Einstellungen > Apps für Websites** ändern. Entwickler können auch die JSON-Datei jederzeit ändern und die Änderung noch am selben Tag, aber bis spätestens acht Tage nach dem Update einsehen.
 
@@ -91,7 +91,7 @@ Um Ihren Benutzern die bestmögliche Erfahrung zu bieten, verwenden Sie Ausschlu
 
 Ausschlusspfade werden zuerst überprüft, und wenn eine Übereinstimmung vorliegt wird die entsprechende Seite mit dem Browser anstelle der angegebenen App geöffnet. Im obigen Beispiel enthält "/ News / \ *" alle Seiten unter diesem Pfad, während "/ News\ *" (keine vorwärts-Slash "news") Pfade unter "News\ *" wie "Newslocal /", "Newsinternational /" usw.. enthält.
 
-## Behandeln Sie Links auf Aktivierung, um Links mit Inhalt zu verbinden.
+## <a name="handle-links-on-activation-to-link-to-content"></a>Behandeln Sie Links auf Aktivierung, um Links mit Inhalt zu verbinden.
 
 Navigieren Sie zu **App.xaml.cs** in der Visual Studio Lösung für Ihrer App und fügen Sie in **OnActivated()** die Behandlung für verknüpfte Inhalte hinzu. Im folgenden Beispiel hängt die Seite, die in der App geöffnet wird, vom URI-Pfad ab:
 
@@ -143,7 +143,7 @@ protected override void OnActivated(IActivatedEventArgs e)
 
 **Wichtig** Stellen Sie sicher, dass das finale `if (rootFrame.Content == null)` logic durch `rootFrame.Navigate(deepLinkPageType, e);` ersetzt wird, wie im obigen Beispiel gezeigt wird.
 
-## Testen Sie: Lokales Überprüfungswerkzeug
+## <a name="test-it-out-local-validation-tool"></a>Testen Sie: Lokales Überprüfungswerkzeug
 
 Sie können die Konfiguration Ihrer App und Website durch Ausführen des App-Host Registration Verifier Werkzeugs prüfen, der hier verfügbar ist:
 
@@ -157,7 +157,7 @@ Testen Sie die Konfiguration Ihrer App und, indem Sie dieses Werkzeug mit folgen
 -   Paketfamiliennamen (PFN): Ihre App-PFN
 -   Dateipfad: die JSON-Datei für die lokale Überprüfung (z. B. C:\\SomeFolder\\windows-App-Web-link)
 
-## Testen Sie es: Web-Überprüfung
+## <a name="test-it-web-validation"></a>Testen Sie es: Web-Überprüfung
 
 Schließen Sie die Anwendung, um sicherzustellen, dass die App aktiviert wird, wenn Sie auf einen Link klicken. Kopieren Sie dann die Adresse eines unterstützten Pfades in Ihrer Website. Wenn Ihre Websiteadresse beispielsweise "msn.com" lautet, und einer der unterstützen Pfade "path1" ist, verwenden Sie `http://msn.com/path1`
 
@@ -169,7 +169,7 @@ Wenn Sie der protocol activation logic zu folgen möchten, legen Sie einen Halte
 
 **Hinweis:** Wenn Sie auf einen Link im Microsoft Edge Browser klicken, wird das nicht Ihre App starten, sondern Sie zu Ihrer Website führen.
 
-## AppUriHandlers Tipps:
+## <a name="appurihandlers-tips"></a>AppUriHandlers Tipps:
 
 - Stellen Sie sicher, dass Sie nur Links angeben, die mit Ihrer App kompatibel sind.
 
@@ -185,7 +185,7 @@ Wenn Sie der protocol activation logic zu folgen möchten, legen Sie einen Halte
 
 - Dieses Feature funktioniert, wann immer Ihre App eine UWP-App ist, die mit  [LaunchUriAsync](https://msdn.microsoft.com/en-us/library/windows/apps/hh701480.aspx) gestartet ist, oder eine Windows-Desktop-App, gestartet mit  [ShellExecuteEx](https://msdn.microsoft.com/en-us/library/windows/desktop/bb762154(v=vs.85).aspx). Wenn die URL einen registrierten URI App Handler entspricht, wird die App anstelle des Browsers gestartet werden.
 
-## Siehe auch
+## <a name="see-also"></a>Siehe auch
 
 [Windows.Protocol-Registrierung](https://msdn.microsoft.com/en-us/library/windows/apps/br211458.aspx)
 
@@ -195,6 +195,6 @@ Wenn Sie der protocol activation logic zu folgen möchten, legen Sie einen Halte
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

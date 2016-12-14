@@ -2,16 +2,16 @@
 author: GrantMeStrength
 ms.assetid: 03A74239-D4B6-4E41-B2FA-6C04F225B844
 title: "Erstellen der App „Hello, world“ (XAML)"
-description: "In diesem Lernprogramm erfahren Sie, wie Sie XAML (Extensible Application Markup Language) mit C# zum Erstellen einer einfachen „Hello, World“-App verwenden, die auf die universelle Windows Plattform (UWP) unter Windows10 abzielt."
+description: "In diesem Lernprogramm erfahren Sie, wie Sie XAML (Extensible Application Markup Language) mit C# zum Erstellen einer einfachen „Hello, World“-App verwenden, die auf die universelle Windows Plattform (UWP) unter Windows 10 abzielt."
 translationtype: Human Translation
-ms.sourcegitcommit: 344ffda398c789f82973b5f08a0e3b791fc5ad10
-ms.openlocfilehash: 6cf960781862649588f361b6bfcd87605f3e8d55
+ms.sourcegitcommit: 7e76c9abd4157c22b38d79b178f5f07827d336ca
+ms.openlocfilehash: e928b4bb116ad98ffe7c225ac1ef2306e56a13ea
 
 ---
 
-# Erstellen der App „Hello, world“ (XAML)
+# <a name="create-a-hello-world-app-xaml"></a>Erstellen der App „Hello, world“ (XAML)
 
-In diesem Lernprogramm erfahren Sie, wie Sie XAML und C# zum Erstellen einer einfachen „Hello, World“-App für die universelle Windows-Plattform (UWP) unter Windows10 verwenden. Mit nur einem Projekt in Microsoft Visual Studio können Sie eine App erstellen, die auf allen Geräten mit Windows10 ausgeführt werden kann.
+In diesem Lernprogramm erfahren Sie, wie Sie XAML und C# zum Erstellen einer einfachen „Hello, World“-App für die universelle Windows-Plattform (UWP) unter Windows 10 verwenden. Mit nur einem Projekt in Microsoft Visual Studio können Sie eine App erstellen, die auf allen Geräten mit Windows 10 ausgeführt werden kann.
 
 Hier erfahren Sie Folgendes:
 
@@ -20,21 +20,21 @@ Hier erfahren Sie Folgendes:
 -   Führen Sie das Projekt auf dem lokalen Desktop und auf dem Smartphone-Emulator in Visual Studio aus.
 -   Verwenden Sie einen SpeechSynthesizer, um die App sprechen zu lassen, wenn Sie auf eine Schaltfläche klicken.
 
-## Vorbereitung
+## <a name="before-you-start"></a>Vorbereitung
 
 -   [Was ist eine universelle Windows-App](whats-a-uwp.md)?
--   [Neuigkeiten in Windows10](https://dev.windows.com/whats-new-windows-10-dev-preview)
+-   [Neuigkeiten in Windows 10](https://dev.windows.com/whats-new-windows-10-dev-preview)
 -   Zum Durcharbeiten dieses Lernprogramms benötigen Sie Windows 10 und Visual Studio 2015. [Vorbereiten](get-set-up.md).
 -   Außerdem wird davon ausgegangen, dass Sie das Standardfensterlayout in Visual Studio verwenden. Wenn Sie das Standardlayout ändern, können Sie es im Menü **Fenster** mit dem Befehl **Fensterlayout zurücksetzen** wiederherstellen.
 
 
-## Wenn Sie sich lieber ein Video ansehen möchten...
+## <a name="if-you-would-rather-watch-a-video"></a>Wenn Sie sich lieber ein Video ansehen möchten...
 
 <iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Writing-Your-First-Windows-10-App/player" width="640" height="360" allowFullScreen frameBorder="0"></iframe>
 
 Falls Sie einen visuellen Ansatz statt eine Schritt-für-Schritt-Anleitung wünschen, wird in diesem Video dasselbe Material behandelt, jedoch mit einem schönen Soundtrack.
 
-## Schritt 1: Erstellen eines neuen Projekts in Visual Studio
+## <a name="step-1-create-a-new-project-in-visual-studio"></a>Schritt 1: Erstellen eines neuen Projekts in Visual Studio
 
 1.  Starten Sie Visual Studio 2015.
 
@@ -59,7 +59,7 @@ Falls Sie einen visuellen Ansatz statt eine Schritt-für-Schritt-Anleitung wüns
 **Leere App (universelle Windows-App)** ist zwar nur eine Minimalvorlage, umfasst aber trotzdem eine Reihe von Dateien. Diese Dateien werden für alle UWP-Apps mit C# benötigt. Sie sind Teil jedes Projekts, das Sie mit Visual Studio erstellen.
 
 
-### Inhalt der Dateien
+### <a name="whats-in-the-files"></a>Inhalt der Dateien
 
 Doppelklicken Sie zum Anzeigen und Bearbeiten einer Datei im Projekt im **Projektmappen-Explorer** auf die gewünschte Datei. Erweitern Sie eine XAML-Datei genau wie einen Ordner, um die zugeordnete Codedatei anzuzeigen. XAML-Dateien werden in einer geteilten Ansicht geöffnet, die sowohl die Entwurfsoberfläche als auch den XAML-Editor enthält.
 > [!NOTE]
@@ -87,9 +87,9 @@ Doppelklicken Sie zum Anzeigen und Bearbeiten einer Datei im Projekt im **Projek
 -   „Assets/StoreLogo.png“ stellt Ihre App im Windows Store dar.
 -   „Assets/SplashScreen.scale-200.png“ ist der Begrüßungsbildschirm, der beim Start der App angezeigt wird.
 
-## Schritt 2: Hinzufügen von Schaltflächen
+## <a name="step-2-adding-a-button"></a>Schritt 2: Hinzufügen von Schaltflächen
 
-### Mithilfe der Entwurfsansicht
+### <a name="using-the-designer-view"></a>Mithilfe der Entwurfsansicht
 
 Fügen wir nun der Seite eine Schaltfläche hinzu. In diesem Lernprogramm verwenden Sie lediglich einige der zuvor aufgeführten Dateien: „App.xaml“, „MainPage.xaml“ und „MainPage.xaml.cs“.
 
@@ -125,14 +125,14 @@ Beachten Sie, wie die in der Design-Canvas angezeigte Schaltfläche aktualisiert
 
 ![Das Fenster „Projektmappen-Explorer“](images/win10-cs-07.png)
 
-## Schritt3: Starten der App
+## <a name="step-3-start-the-app"></a>Schritt 3: Starten der App
 
 
 Sie haben nun eine sehr einfache App erstellt. Dies ist ein guter Zeitpunkt zum Erstellen, Bereitstellen und Starten Ihrer App, um sie in Aktion zu sehen. Sie können Ihre App auf dem lokalen Computer, in einem Simulator oder Emulator oder auf einem Remotegerät debuggen. Dies ist das Zielgerätmenü in Visual Studio.
 
 ![Dropdownliste mit Zielgeräten zum Debuggen Ihrer App](images/uap-debug.png)
 
-### Starten der App auf einem Desktop-Gerät
+### <a name="start-the-app-on-a-desktop-device"></a>Starten der App auf einem Desktop-Gerät
 
 Standardmäßig wird die App auf dem lokalen Computer ausgeführt. Das Menü mit den Zielgeräten enthält mehrere Optionen zum Debuggen Ihrer App auf Geräten der Desktopfamilie.
 
@@ -175,15 +175,15 @@ Viel zu bieten hat die App zwar noch nicht, aber trotzdem: Herzlichen Glückwuns
 
    Schließen Sie das App-Fenster.
 
-### Starten der App in einem Emulator für mobile Geräte
+### <a name="start-the-app-on-a-mobile-device-emulator"></a>Starten der App in einem Emulator für mobile Geräte
 
-Ihre App kann auf jedem Windows10-Gerät ausgeführt werden. Wir sehen uns nun an, wie sie auf einem Windows Phone dargestellt wird.
+Ihre App kann auf jedem Windows 10-Gerät ausgeführt werden. Wir sehen uns nun an, wie sie auf einem Windows Phone dargestellt wird.
 
 Zusätzlich zu den Optionen zum Debuggen auf einem Desktopgerät enthält Visual Studio Optionen zum Bereitstellen und Debuggen Ihrer App auf einem physischen mobilen Gerät, das an den Computer angeschlossen ist, oder in einem Emulator für mobile Geräte. Sie können zwischen Emulatoren für Geräte mit unterschiedlichen Arbeitsspeicher- und Bildschirmkonfigurationen wählen.
 
 -   **Gerät**
--   **Emulator <SDK version> WVGA 4Zoll 512MB**
--   **Emulator <SDK version> WVGA 4Zoll 1GB**
+-   **Emulator <SDK version> WVGA 4 Zoll 512 MB**
+-   **Emulator <SDK version> WVGA 4 Zoll 1 GB**
 -   usw. (verschiedene Emulatoren mit anderen Konfigurationen)
 
 (Werden die Emulatoren nicht angezeigt? Unter [Vorbereiten](get-set-up.md) finden Sie Informationen dazu, wie Sie sicherstellen, dass die Entwicklungstools für universelle Windows-Apps installiert sind.)
@@ -206,12 +206,12 @@ Visual Studio startet den ausgewählten Emulator, stellt dann die App bereit und
 
 ![Erster App-Bildschirm auf dem mobilen Gerät](images/win10-cs-09.png)
 
-Wenn Sie über ein Windows Phone mit Windows10 verfügen, können Sie es auch mit dem Computer verbinden, die App bereitstellen und direkt darauf ausführen (zuerst müssen Sie jedoch den [Entwicklermodus aktivieren](enable-your-device-for-development.md)).
+Wenn Sie über ein Windows Phone mit Windows 10 verfügen, können Sie es auch mit dem Computer verbinden, die App bereitstellen und direkt darauf ausführen (zuerst müssen Sie jedoch den [Entwicklermodus aktivieren](enable-your-device-for-development.md)).
 
 
-## Schritt3: Ereignishandler
+## <a name="step-3-event-handlers"></a>Schritt 3: Ereignishandler
 
-„Ereignishandler“ klingt kompliziert, dies ist jedoch nur ein anderer Namen für den Code, der aufgerufen wird, wenn ein Ereignis auftritt (z.B. wenn der Benutzer auf die Schaltfläche klickt).
+„Ereignishandler“ klingt kompliziert, dies ist jedoch nur ein anderer Namen für den Code, der aufgerufen wird, wenn ein Ereignis auftritt (z. B. wenn der Benutzer auf die Schaltfläche klickt).
 
 1.  Beenden Sie die Ausführung der App, sofern nicht bereits geschehen.
 
@@ -243,20 +243,22 @@ private async void button_Click(object sender, RoutedEventArgs e)
 
 Geben Sie unbedingt auch das **async**-Schlüsselwort an, oder Sie erhalten beim Versuch, die App auszuführen, einen Fehler.
 
-### Was haben wir gerade gemacht?
+### <a name="what-did-we-just-do"></a>Was haben wir gerade gemacht?
 
 Dieser Code verwendet Windows-APIs zum Erstellen eines Sprachsyntheseobjekts und gibt dann zu sprechenden Text an. (Weitere Informationen zur Verwendung von SpeechSynthesis finden Sie in den Dokumenten zum [SpeechSynthesis-Namespace](https://msdn.microsoft.com/library/windows/apps/windows.media.speechsynthesis.aspx).)
 
 Wenn Sie die App ausführen und auf die Schaltfläche klicken, sagt Ihr Computer (oder das Handy) wörtlich „Hello, World!“.
 
 
-## Zusammenfassung
+## <a name="summary"></a>Zusammenfassung
 
 
-Herzlichen Glückwunsch, Sie haben Ihre erste App für Windows10 und die UWP erstellt! Sind Sie bereit für den [nächsten Schritt](learn-more.md)?
+Herzlichen Glückwunsch, Sie haben Ihre erste App für Windows 10 und die UWP erstellt!
+
+Informationen dazu, wie Sie XAML für die Gestaltung der Steuerelemente in Ihrer App verwenden, finden Sie im [Rasterlernprogramm](../layout/grid-tutorial.md). Sie können auch direkt mit dem [nächsten Schritt](learn-more.md) fortfahren.
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

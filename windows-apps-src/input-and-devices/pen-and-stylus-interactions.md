@@ -1,46 +1,56 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: "Erstellen Sie UWP-Apps (Universelle Windows-Plattform), die benutzerdefinierte Interaktionen über Stifte und Tabletstifte unterstützen, einschließlich Freihandeingabe für das Schreiben und Zeichnen ganz wie auf Papier."
+Description: "Erstellen Sie Apps für die Universelle Windows-Plattform (UWP-Apps), die benutzerdefinierte Interaktionen über Stifte und Tabletstifte unterstützen, einschließlich Freihandeingabe für das Schreiben und Zeichnen wie auf Papier."
 title: Stiftinteraktionen und Windows Ink in UWP-Apps
 ms.assetid: 3DA4F2D2-5405-42A1-9ED9-3A87BCD84C43
 label: Pen interactions and Windows Ink in UWP apps
 template: detail.hbs
-keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas
+keywords: Windows Ink, Windows-Freihandeingabe, DirectInk, InkPresenter, InkCanvas
 translationtype: Human Translation
-ms.sourcegitcommit: f7bc2ccbdd34bec671864323df53ab7bdda25a87
-ms.openlocfilehash: 4c87dea0387b2da055d07df5bab14c4ad61638d7
+ms.sourcegitcommit: 0f7f54c5c5baccdedfe32bc7c71994e43a93f032
+ms.openlocfilehash: 49098df1bf7fb72264a633aae37f941951cee2cf
 
 ---
 
-# Stiftinteraktionen und Windows Ink in UWP-Apps
+# <a name="pen-interactions-and-windows-ink-in-uwp-apps"></a>Stiftinteraktionen und Windows Ink in UWP-Apps
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Optimieren Sie Ihre UWP-Apps (Universelle Windows-Plattform) für Stifteingaben, um sowohl Standardfunktionalität für [**Zeigergeräte**](https://msdn.microsoft.com/library/windows/apps/br225633) als auch optimale Windows Ink-Funktionalität für Benutzer bereitzustellen.
+<!--
+![touchpad](images/input-patterns/input-pen.jpg)
+-->
+
+<!--
+![Surface Pen](images/ink/hero2-small.png)  
+*Surface Studio with Surface Pen* (available for purchase at the [Microsoft Store](https://aka.ms/purchasesurfacepen)).
+-->
+
+![Surface-Stift](images/ink/hero-small.png)  
+*Surface-Stift* (zum Kauf im [Microsoft Store](https://aka.ms/purchasesurfacepen) verfügbar).
+
+## <a name="overview"></a>Übersicht
+
+Optimieren Sie Ihre App für die Universelle Windows-Plattform (UWP-App) für Stifteingaben, um sowohl Standardfunktionalität für [**Zeigergeräte**](https://msdn.microsoft.com/library/windows/apps/br225633) als auch optimale Windows Ink-Funktionalität für Benutzer bereitzustellen.
 
 > [!NOTE]
-> Der Schwerpunkt dieses Themas liegt auf der Windows Ink-Plattform. Informationen zur allgemeinen Behandlung von Zeigereingaben (ähnlich wie Maus-, Touch- und Touchpadeingaben) finden Sie unter [Behandeln von Zeigereingaben](handle-pointer-input.md).
+> Der Schwerpunkt dieses Themas liegt auf der Windows Ink-Plattform. Informationen zur allgemeinen Behandlung von Zeigereingaben (ähnlich Maus-, Touch- und Touchpadeingaben) finden Sie unter [Behandeln von Zeigereingaben](handle-pointer-input.md).
 
-![Touchpad](images/input-patterns/input-pen.jpg)
+| Videos |   |
+| --- | --- |
+| <iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-Ink-in-Your-UWP-App/player" width="300" height="200" allowFullScreen frameBorder="0"></iframe> | <iframe src="https://channel9.msdn.com/Events/Ignite/2016/BRK2060/player" width="300" height="200" allowFullScreen frameBorder="0"></iframe> |
+| *Verwenden von Ink in Ihrer UWP-App* | *Verwenden von Windows Pen und Ink zum Erstellen von stärker interaktiven Unternehmens-Apps* |
 
-**Wichtige APIs**
-
--   [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)
--   [**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
--   [**Windows.UI.Input.Inking.Core**](https://msdn.microsoft.com/library/windows/apps/dn958452)
-
-Zusammen mit einem Zeichenstift bietet die Windows Ink-Plattform eine Möglichkeit, digitale Notizen, Zeichnungen und Anmerkungen wie vom Papier her gewohnt zu erstellen. Sie können auf der Plattform Freihanddaten aus einem Eingabedigitalisierungsgerät erfassen, Freihanddaten generieren, verwalten und als letzte Striche auf dem Ausgabegerät rendern sowie über die Schrifterkennung in Text umwandeln.
+In Verbindung mit einem Zeichengerät bietet die Windows Ink-Plattform eine natürliche Möglichkeit, digitale handschriftliche Notizen, Zeichnungen und Anmerkungen zu erstellen. Sie können auf der Plattform Freihanddaten aus einem Eingabedigitalisierungsgerät erfassen, Freihanddaten generieren, verwalten und als letzte Striche auf dem Ausgabegerät rendern sowie über die Schrifterkennung in Text umwandeln.
 
 Ihre App kann nicht nur die grundlegende Position und Bewegung des Stifts aufzeichnen, während der Benutzer schreibt oder zeichnet, sondern auch den variierenden Druck während des gesamten Strichs nachverfolgen und erfassen. Mit diesen Informationen, zusammen mit Einstellungen für Form und Größe der Stiftspitze, Drehung, Freihandfarbe und Zweck (einfache Freihandeingabe, Löschen, Hervorheben und Auswählen), können Sie dem Benutzer ermöglichen, auf ähnliche Weise wie mit einem Stift, Bleistift oder Pinsel auf Papier zu arbeiten.
 
 > [!NOTE]
-> Ihre App kann auch Freihandeingaben von anderen zeigerbasierten Geräten, z.B. Touchdigitalisierungs- und Mausgeräte, unterstützen. 
+> Ihre App kann auch Freihandeingaben von anderen zeigerbasierten Geräten, z. B. Touchdigitalisierungs- und Mausgeräte, unterstützen. 
 
 Die Freihandplattform ist sehr flexibel. Je nach Ihren Anforderungen unterstützt sie verschiedene Funktionalitätsgrade.
 
+Richtlinien für die Benutzeroberfläche von Windows Ink finden Sie unter [Inking controls](../controls-and-patterns/inking-controls.md).
 
-
-Richtlinien für die Benutzeroberfläche von WindowsInk finden Sie unter [Inking controls](../controls-and-patterns/inking-controls.md).
-
-## Komponenten der WindowsInk-Plattform
+## <a name="components-of-the-windows-ink-platform"></a>Komponenten der Windows Ink-Plattform
 
 | Komponente | Beschreibung |
 | --- | --- |
@@ -49,11 +59,11 @@ Richtlinien für die Benutzeroberfläche von WindowsInk finden Sie unter [Inking
 | [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx) | Fügen Sie einer App für die Freihandeingabe in der universellen Windows-Plattform (UWP) eine Standard-InkToolbar hinzu. Fügen Sie der InkToolbar einen anpassbaren Stift hinzu, und binden Sie diesen an eine benutzerdefinierte Definition für den Stift. Ein XAML-UI-Plattformsteuerelement, das eine anpassbare und erweiterbare Sammlung von Schaltflächen enthält, die Freihanddaten in einem verknüpften InkCanvas-Element aktivieren.<br/>Weitere Informationen zur Verwendung von InkToolbar finden Sie unter [Add an InkToolbar to a Universal Windows Platform (UWP) inking app](ink-toolbar.md). |
 | [**IInkD2DRenderer**](https://msdn.microsoft.com/library/mt147263) | Ermöglicht das Rendern von Freihandstrichen im angegebenen Direct2D-Gerätekontext einer universellen Windows-App statt im standardmäßigen [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement. Dies ermöglicht die umfassende Anpassung der Freihandfunktionen.<br/>Weitere Informationen finden Sie in diesem [komplexen Freihandbeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620314). |
 
-## Einfaches Freihandzeichnen mit „InkCanvas“
+## <a name="basic-inking-with-inkcanvas"></a>Einfaches Freihandzeichnen mit „InkCanvas“
 
 Platzieren Sie für einfaches Freihandzeichen einfach an einer beliebigen Stelle auf einer Seite ein [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement.
 
-Das [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement unterstützt standardmäßig nur Freihandeingaben mit einem Stift. Die Eingabe wird entweder als Strich mit den Standardeinstellungen für Farbe und Stärke gerendert (ein schwarzer Kugelschreiber mit einer Stärke von 2Pixeln) oder als Strichradierer behandelt (wenn die Eingabe von einer mit einer Löschschaltfläche geänderten Radiergummi- oder Stiftspitze stammt).
+Das [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement unterstützt standardmäßig nur Freihandeingaben mit einem Stift. Die Eingabe wird entweder als Strich mit den Standardeinstellungen für Farbe und Stärke gerendert (ein schwarzer Kugelschreiber mit einer Stärke von 2 Pixeln) oder als Strichradierer behandelt (wenn die Eingabe von einer mit einer Löschschaltfläche geänderten Radiergummi- oder Stiftspitze stammt).
 
 > [!NOTE]
 > Falls keine Radiergummispitze bzw. -schaltfläche vorhanden ist, kann InkCanvas so konfiguriert werden, dass Eingaben mit der Stiftspitze wie Radierstriche behandelt werden.
@@ -89,7 +99,7 @@ Die vom [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535
 
 Für die einfache Freihandeingabe müssen Sie sich nicht mit dem [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)-Objekt befassen. Wenn Sie jedoch das Freihandverhalten des [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelements anpassen und konfigurieren möchten, müssen Sie auf das entsprechende **InkPresenter**-Objekt zugreifen.
 
-## Einfache Anpassung mit „InkPresenter“
+## <a name="basic-customization-with-inkpresenter"></a>Einfache Anpassung mit „InkPresenter“
 
 Für jedes [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement wird ein [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)-Objekt instanziiert.
 
@@ -193,7 +203,7 @@ Diese Bilder zeigen, wie die Stifteingabe vom [**InkPresenter**](https://msdn.mi
 
 Um zusätzlich zur Freihandeingabe und zum Löschen weitere Funktionen wie etwa die Strichauswahl bereitzustellen, muss die App bestimmte Eingaben identifizieren, die vom [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)-Objekt ohne Verarbeitung zur Behandlung an die App weitergegeben werden.
 
-## Weitergabe der Eingabe für die erweiterte Verarbeitung
+## <a name="pass-through-input-for-advanced-processing"></a>Weitergabe der Eingabe für die erweiterte Verarbeitung
 
 Standardmäßig verarbeitet [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) sämtliche Eingaben als letzten Strich oder ausradierten Strich. Hierzu zählen auch Eingaben, die durch ein sekundäres Hardwareangebot wie etwa eine Zeichenstift-Drucktaste, eine rechte Maustaste oder ein ähnliches Element geändert werden.
 
@@ -425,7 +435,7 @@ In diesem Beispiel verwenden wir die Dateien „MainPage.xaml“ und „MainPage
         }
       ```
 
-## Benutzerdefiniertes Rendern von Freihandeingaben
+## <a name="custom-ink-rendering"></a>Benutzerdefiniertes Rendern von Freihandeingaben
 
 Standardmäßig werden Freihandeingaben in einem Hintergrundthread mit geringer Wartezeit verarbeitet und während des Zeichnens „nass“ gerendert. Wenn der Strich abgeschlossen ist (der Stift oder Finger wurde angehoben oder die Maustaste losgelassen), wird er im UI-Thread verarbeitet und auf der [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Ebene „trocken“ gerendert (über dem Anwendungsinhalt, wo er die nasse Freihandeingabe ersetzt).
 
@@ -441,7 +451,7 @@ Ein vollständiges Beispiel für diese Funktion finden Sie unter [Komplexes Frei
 > Benutzerdefiniertes Trocknen und die [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx)  
 > Wenn Ihre App das Standard-Renderverhalten für Freihandeingaben von [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) mit einer benutzerdefinierten Trockenimplementierung außer Kraft setzt, sind die gerenderten Freihandstriche für die InkToolbar nicht mehr verfügbar und die integrierten Löschbefehle der InkToolbar funktionieren nicht wie erwartet. Damit Sie Löschfunktionen bereitstellen können, müssen Sie alle Zeigerereignisse verarbeiten, für jeden Strich einen Treffertest ausführen und den integrierten Befehl „Freihand vollständig löschen“ außer Kraft setzen.
 
-## Andere Artikel in diesem Abschnitt
+## <a name="other-articles-in-this-section"></a>Andere Artikel in diesem Abschnitt
 
 | Thema | Beschreibung |
 | --- | --- |
@@ -449,17 +459,25 @@ Ein vollständiges Beispiel für diese Funktion finden Sie unter [Komplexes Frei
 | [Speichern und Abrufen von letzten Strichen](save-and-load-ink.md) | Speichern Sie Freihandstrichdaten mithilfe eingebetteter serialisierter Freihandformat-Metadaten (Ink Serialized Format, ISF) in einer GIF-Datei (Graphics Interchange Format). |
 | [Hinzufügen eines InkToolbar-Elements zu einer UWP-App für die Freihandeingabe](ink-toolbar.md) | Fügen Sie einer App für die Freihandeingabe in der universellen Windows-Plattform (UWP) eine Standard-InkToolbar hinzu. Fügen Sie der InkToolbar eine anpassbare Stiftschaltfläche hinzu, und binden Sie diese an eine benutzerdefinierte Definition für den Stift. |
 
-## Verwandte Artikel
+## <a name="related-articles"></a>Verwandte Artikel
 
 * [Behandeln von Zeigereingaben](handle-pointer-input.md)
 * [Identifizieren von Eingabegeräten](identify-input-devices.md)
+
+**APIs**
+
+* [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)
+* [**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
+* [**Windows.UI.Input.Inking.Core**](https://msdn.microsoft.com/library/windows/apps/dn958452)
 
 **Beispiele**
 * [Freihandbeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620308)
 * [Einfaches Freihandbeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620312)
 * [Komplexes Freihandbeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620314)
-* [Beispiel für grundlegende Eingabe](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Beispiel für Eingabe mit niedriger Latenz](http://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Malbuchbeispiel](https://aka.ms/cpubsample-coloringbook)
+* [Familiennotizbeispiel](https://aka.ms/cpubsample-familynotessample)
+* [Einfaches Eingabebeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Eingabebeispiel mit geringer Latenz](http://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [Beispiel für den Benutzerinteraktionsmodus](http://go.microsoft.com/fwlink/p/?LinkID=619894)
 * [Beispiel für visuelle Fokuselemente](http://go.microsoft.com/fwlink/p/?LinkID=619895)
 
@@ -474,6 +492,6 @@ Ein vollständiges Beispiel für diese Funktion finden Sie unter [Komplexes Frei
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

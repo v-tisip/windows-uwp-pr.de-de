@@ -4,12 +4,12 @@ description: "Dies ist der erste Teil der umfassenden exemplarischen Vorgehenswe
 ms.assetid: A9E11694-A7F5-4E27-95EC-889307E0C0EF
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: af8ae79f67d77195d5ed4801d040b2f1aafe8a97
-ms.openlocfilehash: 1b0a510592002cf869dac06b55d377d790c06cac
+ms.sourcegitcommit: a70a59283fe664bef9ddab56df57a9fc46c91033
+ms.openlocfilehash: 04311e9c3242bdaf6588c8102a06ae658e6637e2
 
 ---
 
-# Erstellen einer Microsoft Passport-Anmelde-App
+# <a name="create-a-microsoft-passport-login-app"></a>Erstellen einer Microsoft Passport-Anmelde-App
 
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -19,34 +19,34 @@ ms.openlocfilehash: 1b0a510592002cf869dac06b55d377d790c06cac
 
 Dies ist der erste Teil der umfassenden exemplarischen Vorgehensweise zum Erstellen einer Windows 10-App für die Universelle Windows-Plattform (UWP), die Microsoft Passport als Alternative zu herkömmlichen Authentifizierungssystemen mit Benutzername und Kennwort verwendet. Die App verwendet einen Benutzernamen für die Anmeldung und erstellt einen Passport-Schlüssel für jedes Konto. Diese Konten werden durch die PIN geschützt, die in den Windows-Einstellungen beim Konfigurieren von Microsoft Passport eingerichtet wird.
 
-Diese exemplarischen Vorgehensweise ist in zwei Teile aufgeteilt: Erstellen der App und Herstellen der Verbindung mit dem Back-End-Dienst. Fahren Sie nach Abschluss dieses Artikels mit Teil2 fort: [Microsoft Passport-Anmeldedienst](microsoft-passport-login-auth-service.md).
+Diese exemplarischen Vorgehensweise ist in zwei Teile aufgeteilt: Erstellen der App und Herstellen der Verbindung mit dem Back-End-Dienst. Fahren Sie nach Abschluss dieses Artikels mit Teil 2 fort: [Microsoft Passport-Anmeldedienst](microsoft-passport-login-auth-service.md).
 
 Machen Sie sich in der Übersicht [Microsoft Passport und Windows Hello](microsoft-passport.md) zunächst mit grundlegenden Informationen zur Funktionsweise von Microsoft Passport vertraut.
 
-## Erste Schritte
+## <a name="get-started"></a>Erste Schritte
 
 
-Die Erstellung dieses Projekts setzt Erfahrung mit C# und XAML voraus. Außerdem muss Visual Studio2015 (mindestens Community Edition) auf einem Computer unter Windows10 verwendet werden.
+Die Erstellung dieses Projekts setzt Erfahrung mit C# und XAML voraus. Außerdem muss Visual Studio 2015 (mindestens Community Edition) auf einem Computer unter Windows 10 verwendet werden.
 
--   Öffnen Sie Visual Studio2015, und wählen Sie „Datei“ > „Neu“ > „Projekt“ aus.
+-   Öffnen Sie Visual Studio 2015, und wählen Sie „Datei“ > „Neu“ > „Projekt“ aus.
 -   Din Fenster für ein neues Projekt wird geöffnet. Navigieren Sie zu „Vorlagen“ > „Visual C#“.
 -   Wählen Sie „ Leere App (Universelle Windows-App)“ aus, und nennen Sie die Anwendung „PassportLogin“.
--   Erstellen Sie die neue Anwendung, und führen Sie sie aus (F5). Daraufhin erscheint ein leeres Fenster auf dem Bildschirm. Schließen Sie die Anwendung.
+-   Erstellen Sie die neue Anwendung, und führen Sie sie aus (F5). Anschließend sollte Ihnen auf dem Bildschirm ein leeres Fenster angezeigt werden. Schließen Sie die Anwendung.
 
-![](images/passport-login-1.png)
+![Passport – neue Projekte](images/passport-login-1.png)
 
-## Übung1: Anmelden mit Microsoft Passport
+## <a name="exercise-1-login-with-microsoft-passport"></a>Übung 1: Anmelden mit Microsoft Passport
 
 
-In dieser Übung lernen Sie, wie Sie ermitteln, ob Microsoft Passport auf dem Computer eingerichtet ist, und wie Sie sich mit Microsoft Passport bei einem Konto anmelden.
+In dieser Übung lernen Sie, wie Sie prüfen, ob Microsoft Passport auf dem Computer eingerichtet ist, und wie Sie sich mit Microsoft Passport bei einem Konto anmelden.
 
 -   Erstellen Sie in dem neuen Projekt einen neuen Projektmappenordner namens „Views“. Dieser Ordner enthält die Seiten, zu denen in diesem Beispiel navigiert wird. Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, wählen Sie „Hinzufügen“ > „Neuer Ordner“ aus, und benennen Sie den Ordner anschließend in „Views“ um.
 
-    ![](images/passport-login-2.png)
+    ![Passport – Hinzufügen von Ordnern](images/passport-login-2.png)
 
 -   Klicken Sie mit der rechten Maustaste auf den neuen Ordner „Views“. Wählen Sie „Hinzufügen“ > „Neues Element“ und anschließend die Option „Leere Seite“ aus. Nennen Sie die Seite „Login.xaml“.
 
-    ![](images/passport-login-3.png)
+    ![Passport – Hinzufügen leerer Seiten](images/passport-login-3.png)
 
 -   Fügen Sie den folgenden XAML-Code hinzu, um die Benutzeroberfläche für die neue Anmeldeseite zu definieren. Dieser XAML-Code definiert ein StackPanel-Element zur Ausrichtung folgender untergeordneter Elemente:
 
@@ -162,7 +162,7 @@ In dieser Übung lernen Sie, wie Sie ermitteln, ob Microsoft Passport auf dem Co
 
 -   Klicken Sie zum Erstellen der MicrosoftPassportHelper-Klasse mit der rechten Maustaste auf die Projektmappe „PassportLogin (Universelle Windows-App)“, und wählen Sie „Hinzufügen“ > „Neuer Ordner“ aus. Nennen Sie den Ordner „Utils“.
 
-    ![](images/passport-login-5.png)
+    ![Passport – Erstellen von Helferklassen](images/passport-login-5.png)
 
 -   Klicken Sie mit der rechten Maustaste auf den Ordner „Utils“, und wählen Sie „Hinzufügen“ > „Klasse“ aus. Nennen Sie die Klasse „MicrosoftPassportHelper.cs“.
 -   Definieren Sie „MicrosoftPassportHelper“ als öffentliche, statische Klasse, und fügen Sie anschließend die folgende Methode hinzu, um den Benutzer darüber zu informieren, ob Microsoft Passport verwendungsbereit ist. Sie müssen die erforderlichen Namespaces hinzufügen.
@@ -207,11 +207,11 @@ In dieser Übung lernen Sie, wie Sie ermitteln, ob Microsoft Passport auf dem Co
     using PassportLogin.Utils;
     ```
 
--   Erstellen Sie die Anwendung, und führen Sie sie aus (F5). Sie werden auf die Anmeldeseite weitergeleitet, und das MicrosoftPassport-Banner gibt Aufschluss darüber, ob Passport verwendungsbereit ist. Das Banner ist entweder grün oder blau und gibt so den Status von Microsoft Passport auf Ihrem Computer an.
+-   Erstellen Sie die Anwendung, und führen Sie sie aus (F5). Sie werden auf die Anmeldeseite weitergeleitet, und das Microsoft Passport-Banner gibt Aufschluss darüber, ob Passport verwendungsbereit ist. Das Banner ist entweder grün oder blau und gibt den Status von Microsoft Passport auf Ihrem Computer an.
 
-    ![](images/passport-login-6.png)
+    ![Passport – Anmeldebildschirm bereit](images/passport-login-6.png)
 
-    ![](images/passport-login-7.png)
+    ![Passport – Anmeldebildschirm nicht eingerichtet](images/passport-login-7.png)
 
 -   Als Nächstes muss die Anmeldelogik erstellt werden. Erstellen Sie einen neuen Ordner namens „Models“.
 -   Erstellen Sie im Ordner „Models“ eine neue Klasse namens „Account.cs“. Diese Klasse fungiert als Modell für Ihr Konto. Da es sich hierbei um ein Beispiel handelt, enthält es lediglich einen Benutzernamen. Definieren Sie die Klasse als öffentliche Klasse, und fügen Sie die Username-Eigenschaft hinzu.
@@ -486,9 +486,9 @@ In dieser Übung lernen Sie, wie Sie ermitteln, ob Microsoft Passport auf dem Co
 
 -   Erstellen Sie die Anwendung, und führen Sie sie aus. Sie werden auf die Anmeldeseite weitergeleitet. Geben Sie „sampleUsername“ ein, und klicken Sie auf „Anmelden“. Daraufhin werden Sie von Microsoft Passport zur Eingabe Ihrer PIN aufgefordert. Nach korrekter PIN-Eingabe kann von der CreatePassportKeyAsync-Methode ein Passport-Schlüssel erstellt werden. Überwachen Sie die Ausgabefenster auf Erfolgsmeldungen.
 
-    ![](images/passport-login-8.png)
+    ![Passport – Aufforderung für Anmelde-PIN](images/passport-login-8.png)
 
-## Übung2: Willkommens- und Benutzerauswahlseite
+## <a name="exercise-2-welcome-and-user-selection-pages"></a>Übung 2: Begrüßungs- und Benutzerauswahlseiten
 
 
 Diese Übung baut direkt auf der vorherigen Übung auf. Nach erfolgreicher Anmeldung soll der Benutzer auf eine Willkommensseite weitergeleitet werden, auf der er sich abmelden oder sein Konto löschen kann. Da von Passport ein computerspezifischer Schlüssel erstellt wird, kann ein Benutzerauswahlbildschirm erstellt werden, der alle Benutzer anzeigt, die auf diesem Computer angemeldet waren. Ein Benutzer kann dann eines dieser Konten auswählen, um direkt und ohne erneute Kennworteingabe zur Willkommensseite zu gelangen, da er bereits für den Zugriff auf den Computer authentifiziert wurde.
@@ -557,7 +557,7 @@ Diese Übung baut direkt auf der vorherigen Übung auf. Nach erfolgreicher Anmel
     }
     ```
 
--   Wahrscheinlich haben Sie bemerkt, dass im Klickereignis zum Löschen des Benutzers eine Zeile auskommentiert ist. Das Konto wird aus Ihrer lokalen Liste entfernt, kann derzeit aber nicht aus Passport entfernt werden. Sie müssen in „MicrosoftPassportHelper.cs“ eine neue Methode implementieren, die das Entfernen eines Passport-Benutzers behandelt. Diese Methode verwendet andere MicrosoftPassport-APIs, um das Konto zu öffnen und zu löschen. In der Praxis muss beim Löschen eines Kontos der Server oder die Datenbank benachrichtigt werden, damit die Benutzerdatenbank gültig bleibt. Sie benötigen einen Verweis auf den Ordner „Models“.
+-   Wahrscheinlich haben Sie bemerkt, dass im Klickereignis zum Löschen des Benutzers eine Zeile auskommentiert ist. Das Konto wird aus Ihrer lokalen Liste entfernt, kann derzeit aber nicht aus Passport entfernt werden. Sie müssen in „MicrosoftPassportHelper.cs“ eine neue Methode implementieren, die das Entfernen eines Passport-Benutzers behandelt. Diese Methode verwendet andere Microsoft Passport-APIs, um das Konto zu öffnen und zu löschen. In der Praxis muss beim Löschen eines Kontos der Server oder die Datenbank benachrichtigt werden, damit die Benutzerdatenbank gültig bleibt. Sie benötigen einen Verweis auf den Ordner „Models“.
 
     ```cs
     using PassportLogin.Models;
@@ -624,7 +624,7 @@ Diese Übung baut direkt auf der vorherigen Übung auf. Nach erfolgreicher Anmel
 
 -   Erstellen Sie die Anwendung, und führen Sie sie aus. Geben Sie „sampleUsername“ ein, und klicken Sie auf „Anmelden“. Geben Sie Ihre PIN ein. Bei erfolgreicher Eingabe werden Sie auf die Willkommensseite weitergeleitet. Klicken Sie auf die Schaltfläche zum Löschen des Benutzers, und prüfen Sie im Ausgabefenster, ob der Benutzer gelöscht wurde. Beachten Sie, dass nach dem Löschen des Benutzers weiterhin die Willkommensseite angezeigt wird. Sie müssen eine Benutzerauswahlseite erstellen, zu der die App navigieren kann.
 
-    ![](images/passport-login-9.png)
+    !passport welcome screen](images/passport-login-9.png)
 
 -   Erstellen Sie im Ordner „Views“ eine neue leere Seite namens „UserSelection.xaml“, und fügen Sie den folgenden XAML-Code hinzu, um die Benutzeroberfläche zu definieren. Diese Seite enthält ein [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878)-Element, das alle Benutzer in der lokalen Kontenliste anzeigt, sowie eine Schaltfläche, über die der Benutzer zur Anmeldeseite navigieren und ein weiteres Konto hinzufügen kann.
 
@@ -870,11 +870,11 @@ Diese Übung baut direkt auf der vorherigen Übung auf. Nach erfolgreicher Anmel
     }
     ```
 
--   Erstellen Sie die Anwendung, und führen Sie sie aus. Melden Sie sich mit „sampleUsername“ an. Geben Sie Ihre PIN ein. Bei erfolgreicher Eingabe werden Sie auf die Willkommensseite weitergeleitet. Klicken Sie auf die Schaltfläche für die Rückkehr zur Benutzerliste. Daraufhin wird ein einzelner Benutzer in der Liste angezeigt. Wenn Sie auf diesen Benutzer klicken, können Sie sich dank Passport direkt und ohne erneute Kennworteingabe wieder anmelden.
+-   Erstellen Sie die Anwendung, und führen Sie sie aus. Melden Sie sich mit „sampleUsername“ an. Geben Sie Ihre PIN ein. Bei erfolgreicher Eingabe werden Sie auf die Willkommensseite weitergeleitet. Klicken Sie auf die Schaltfläche für die Rückkehr zur Benutzerliste. Daraufhin wird ein einzelner Benutzer in der Liste angezeigt. Wenn Sie auf diesen Benutzer klicken, können Sie sich mithilfe von Passport direkt und ohne erneute Kennworteingabe erneut anmelden.
 
-    ![](images/passport-login-10.png)
+    ![Passport – Benutzerauswahlliste](images/passport-login-10.png)
 
-## Übung3: Registrieren eines neuen Passport-Benutzers
+## <a name="exercise-3-registering-a-new-passport-user"></a>Übung 3: Registrieren neuer Passport-Benutzer
 
 
 In dieser Übung erstellen Sie eine neue Seite für die Erstellung eines neuen Passport-Kontos. Das funktioniert ähnlich wie bei der Anmeldeseite. Die Anmeldeseite wird für einen vorhandenen Benutzer implementiert, der für die Verwendung von Passport migriert wird. Eine PassportRegister-Seite erstellt die Passport-Registrierung für einen neuen Benutzer.
@@ -961,18 +961,18 @@ In dieser Übung erstellen Sie eine neue Seite für die Erstellung eines neuen P
 
 -   Erstellen Sie die Anwendung, und führen Sie sie aus. Versuchen Sie, einen neuen Benutzer zu registrieren. Kehren Sie anschließend zur Benutzerliste zurück, und vergewissern Sie sich, dass Sie den Benutzer auswählen und sich anmelden können.
 
-    ![](images/passport-login-11.png)
+    ![Passport – Registrieren neuer Benutzer](images/passport-login-11.png)
 
-In dieser Übung wurden die Grundlagen für die Verwendung der neuen Microsoft Passport-API zur Authentifizierung vorhandener Benutzer sowie zur Erstellung von Konten für neue Benutzer vermittelt. Dank dieser neuen Kenntnisse müssen sich die Benutzer bald keine Kennwörter für Ihre Anwendung mehr merken, während gleichzeitig der Schutz durch die Benutzerauthentifizierung erhalten bleibt. Windows10 nutzt die Passport-Technologie zur Unterstützung der biometrischen Anmeldung von Windows Hello. Wenn Sie einen Computer verwendet haben, der Windows Hello unterstützt, haben Sie gesehen, dass diese Übungen bereits Windows Hello unterstützen.
+In dieser Übung wurden die Grundlagen für die Verwendung der neuen Microsoft Passport-API zum Authentifizieren vorhandener Benutzer und zum Erstellen von Konten für neue Benutzer vermittelt. Dank dieser neuen Kenntnisse müssen sich die Benutzer bald keine Kennwörter für Ihre Anwendung mehr merken, während gleichzeitig der Schutz durch die Benutzerauthentifizierung erhalten bleibt. Windows 10 nutzt die Passport-Technologie zur Unterstützung der biometrischen Anmeldung von Windows Hello. Wenn Sie einen Computer verwendet haben, der Windows Hello unterstützt, haben Sie gesehen, dass diese Übungen bereits Windows Hello unterstützen.
 
 Neben der Implementierung der Microsoft Passport-Unterstützung sind für Entwickler keine weiteren Schritte zur Unterstützung von Windows Hello erforderlich.
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Microsoft Passport und Windows Hello](microsoft-passport.md)
 * [Microsoft Passport-Anmeldedienst](microsoft-passport-login-auth-service.md)
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

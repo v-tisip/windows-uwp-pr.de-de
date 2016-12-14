@@ -4,11 +4,11 @@ ms.assetid: 64F7FC51-E8AC-4098-9C5F-0172E4724B5C
 title: Leistung
 description: "Benutzer erwarten, dass ihre Apps zuverlässig und reibungslos funktionieren und den Akku nicht übermäßig beanspruchen."
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: f4589b187d05ae122839fab74d8086779847b120
+ms.sourcegitcommit: 73b19e54b863693aece045e5b653bc0583a676bb
+ms.openlocfilehash: b9395e80bca7a46076e20e42fa7ceee5df7cc0d5
 
 ---
-# Leistung
+# <a name="performance"></a>Leistung
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -19,10 +19,11 @@ Durch die Portierung Ihrer App auf Windows 10 lassen sich erhebliche Leistungsst
 | Thema | Beschreibung |
 |-------|-------------|
 | [Planen der Leistung](planning-and-measuring-performance.md) | Benutzer erwarten, dass ihre Apps zuverlässig und reibungslos funktionieren und den Akku nicht übermäßig beanspruchen. Technisch gesehen ist die Leistung keine funktionale Anforderung. Wenn Sie die Leistung aber als Feature behandeln, hilft es Ihnen dabei, die Erwartungen der Benutzer zu erfüllen. Das Festlegen von Zielen und deren Messung sind wichtige Faktoren. Ermitteln Sie die für Sie leistungskritischen Szenarien, und legen Sie fest, was unter guter Leistung zu verstehen ist. Messen Sie die Ziele dann während des gesamten Lebenszyklus Ihres Projekts frühzeitig und häufig, um sicherzustellen, dass Sie Ihre Ziele erreichen. |
+| [Optimieren von Hintergrundaktivitäten](optimize-background-activity.md) | Erstellen Sie UWP-Apps, die mit dem System interagieren, um Hintergrundaufgaben auf eine den Akku effizient nutzende Weise auszuführen. |
 | [Optimieren der ListView- und GridView-Benutzeroberfläche](optimize-gridview-and-listview.md) | Verbessern Sie die Leistung und Startzeit von [<strong>GridView</strong>](https://msdn.microsoft.com/library/windows/apps/BR242705) durch UI-Virtualisierung, Elementreduzierung und progressive Aktualisierung von Elementen. |
 | [Virtualisierung von ListView- und GridView-Daten](listview-and-gridview-data-optimization.md) | Verbessern Sie die Leistung und Startzeit von [<strong>GridView</strong>](https://msdn.microsoft.com/library/windows/apps/BR242705) durch Datenvirtualisierung. |
 | [Verbessern der Leistung bei der Garbage Collection](improve-garbage-collection-performance.md) | In C# und Visual Basic geschriebene UWP-Apps profitieren von der automatischen Arbeitsspeicherverwaltung des .NET Garbage Collectors. Dieser Abschnitt bietet einen Überblick über das Verhalten des .NET Garbage Collectors sowie über die bewährten Methoden zur Leistungssteigerung für den Garbage Collector in UWP-Apps. |
-| [Aufrechterhalten der Reaktionsfähigkeit des UI-Threads](keep-the-ui-thread-responsive.md) | Benutzer erwarten, dass eine App beim Durchführen einer Berechnung reaktionsfähig bleibt, unabhängig vom jeweiligen Computertyp. Das bedeutet für jede App etwas anderes. Für einige Apps bedeutet dies z.B. Folgendes: realistischere physische Effekte bereitstellen, Daten vom Datenträger oder aus dem Internet schneller laden, komplexe Szenen schnell darstellen, schnell zwischen Seiten navigieren, Anweisungen im Nu finden oder schnelles Verarbeiten von Daten. Unabhängig von der Art der Berechnung möchten Benutzer, dass die App auf ihre Eingabe reagiert. Es stört sie, wenn die App scheinbar nicht reagiert, während sie &quot;denkt&quot;. |
+| [Aufrechterhalten der Reaktionsfähigkeit des UI-Threads](keep-the-ui-thread-responsive.md) | Benutzer erwarten, dass eine App beim Durchführen einer Berechnung reaktionsfähig bleibt, unabhängig vom jeweiligen Computertyp. Das bedeutet für jede App etwas anderes. Für einige Apps bedeutet dies z. B. Folgendes: realistischere physische Effekte bereitstellen, Daten vom Datenträger oder aus dem Internet schneller laden, komplexe Szenen schnell darstellen, schnell zwischen Seiten navigieren, Anweisungen im Nu finden oder schnelles Verarbeiten von Daten. Unabhängig von der Art der Berechnung möchten Benutzer, dass die App auf ihre Eingabe reagiert. Es stört sie, wenn die App scheinbar nicht reagiert, während sie &quot;denkt&quot;. |
 | [Optimieren Ihres XAML-Markups](optimize-xaml-loading.md) | Die Analyse von XAML-Markup zum Erstellen von Objekten im Arbeitsspeicher kann für eine komplexe Benutzeroberfläche viel Zeit in Anspruch nehmen. Hier finden Sie einige Punkte, die Sie zur Optimierung der XAML-Markupanalyse, Ladezeit und Effizienz des Arbeitsspeichers für Ihre App vornehmen können. | 
 | [Optimieren des XAML-Layouts](optimize-your-xaml-layout.md) | Das Layout kann sowohl bezüglich der CPU-Auslastung als auch des Aufwands ein ressourcenintensiver Teil einer XAML-App sein. Hier sind einige einfache Schritte, mit denen Sie die Layoutleistung Ihrer XAML-App verbessern können. | 
 | [Tipps zu MVVM und Sprachleistung](mvvm-performance-tips.md) | In diesem Thema werden einige Leistungsaspekte in Bezug auf die Wahl von Softwaredesignmustern und Programmiersprachen erläutert. |
@@ -36,6 +37,6 @@ Durch die Portierung Ihrer App auf Windows 10 lassen sich erhebliche Leistungsst
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

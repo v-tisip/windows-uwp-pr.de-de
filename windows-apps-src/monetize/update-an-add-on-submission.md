@@ -4,31 +4,29 @@ ms.assetid: 8C63D33B-557D-436E-9DDA-11F7A5BFA2D7
 description: "Verwenden Sie diese Methode aus der Windows Store-Übermittlungs-Api zur Aktualisierung einer vorhandenen Add-On-Übermittlung."
 title: "Aktualisieren einer Add-On-Übermittlung mit der Windows Store-Übermittlungs-API"
 translationtype: Human Translation
-ms.sourcegitcommit: 7307ca70467a751d5adb53f3718c7e9cf0b70dbb
-ms.openlocfilehash: f42f2dba155aa0a29e0769fd96cce6d3a0de870b
+ms.sourcegitcommit: f52059a37194b78db2f9bb29a5e8959b2df435b4
+ms.openlocfilehash: ac126d8e8cf8301399a3248a1d65e19805e70255
 
 ---
 
-# Aktualisieren einer Add-On-Übermittlung mit der Windows Store-Übermittlungs-API
+# <a name="update-an-add-on-submission-using-the-windows-store-submission-api"></a>Aktualisieren einer Add-On-Übermittlung mit der Windows Store-Übermittlungs-API
 
 
 Verwenden Sie diese Methode der Windows Store-Übermittlungs-API zur Aktualisierung einer vorhandenen Add-On-Übermittlung (Add-Ons werden auch als In-App-Produkt bzw. IAP bezeichnet). Nachdem Sie mit dieser Methode eine Übermittlung erfolgreich aktualisiert haben, müssen Sie ein [Commit für die Übermittlung](commit-an-add-on-submission.md) für Aufnahme und Veröffentlichung durchführen.
 
-Weitere Informationen dazu, wie diese Methode in den Prozess zum Erstellen einer Add-On-Übermittlung mithilfe der Windows Store-Übermittlungs-API passt, finden Sie unter [Verwalten von Add-On-Übermittlungen](manage-add-on-submissions.md).
+Weitere Informationen dazu, wie diese Methode zum Erstellen einer Add-On-Übermittlung mithilfe der Windows Store-Übermittlungs-API passt, finden Sie unter [Verwalten von Add-On-Übermittlungen](manage-add-on-submissions.md).
 
->**Wichtig**&nbsp;&nbsp;Demnächst ändert Microsoft das Preismodell für Add-On-Übermittlungen in Windows Dev Center. Nach dem Implementieren dieser Änderung wird die Ressource **Pricing** im Anforderungstext für diese Methode ignoriert. Zudem können Sie mit dieser Methode vorübergehend keine Preis- und Verkaufsdaten für eine Add-On-Übermittlung ändern. Wir werden die Windows Store-Übermittlungs-API aktualisieren, um eine neue Methode für den programmgesteuerten Zugriff auf Preisinformationen für Add-On-Übermittlungen einzuführen. Weitere Informationen finden Sie unter der [Ressource für Preise](manage-add-on-submissions.md#pricing-object).
-
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
 * Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](create-and-manage-submissions-using-windows-store-services.md#prerequisites) für die Windows Store-Übermittlungs-API.
-* [Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
+* [Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60 Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
 * Erstellen Sie eine Add-On-Übermittlung für eine App im Dev Center-Konto. Sie können dies im Dev Center-Dashboard oder durch Verwenden der Methode [Erstellen einer Add-On-Übermittlung](create-an-add-on-submission.md) erreichen.
 
 >**Hinweis**&nbsp;&nbsp;Diese Methode kann nur für Windows Dev Center-Konten verwendet werden, die eine Berechtigung zur Verwendung der Windows Store-Übermittlungs-API erhalten haben. Diese Berechtigung ist nicht für alle Konten aktiviert.
 
-## Anforderung
+## <a name="request"></a>Anforderung
 
 Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie Verwendungsbeispiele und Beschreibungen des Header und Anforderungstexts.
 
@@ -39,7 +37,7 @@ Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie V
 <span/>
  
 
-### Anforderungsheader
+### <a name="request-header"></a>Anforderungsheader
 
 | Header        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -47,7 +45,7 @@ Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie V
 
 <span/>
 
-### Anforderungsparameter
+### <a name="request-parameters"></a>Anforderungsparameter
 
 | Name        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -56,7 +54,7 @@ Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie V
 
 <span/>
 
-### Anforderungstext
+### <a name="request-body"></a>Anforderungstext
 
 Der Anforderungstext hat folgende Parameter.
 
@@ -74,7 +72,7 @@ Der Anforderungstext hat folgende Parameter.
 
 <span/>
 
-### Anforderungsbeispiel
+### <a name="request-example"></a>Anforderungsbeispiel
 
 Im folgenden Beispiel wird die Aktualisierung einer Add-On-Übermittlung veranschaulicht.
 
@@ -111,17 +109,7 @@ Content-Type: application/json
       "RU": "Tier3",
       "US": "Tier4",
     },
-    "sales": [
-      {
-         "name": "Sale1",
-         "basePriceId": "Free",
-         "startDate": "2016-05-21T18:40:11.7369008Z",
-         "endDate": "2016-05-22T18:40:11.7369008Z",
-         "marketSpecificPricings": {
-            "RU": "NotAvailable"
-         }
-      }
-    ],
+    "sales": [],
     "priceId": "Free"
   },
   "targetPublishDate": "2016-03-15T05:10:58.047Z",
@@ -131,7 +119,7 @@ Content-Type: application/json
 }
 ```
 
-## Antwort
+## <a name="response"></a>Antwort
 
 Das folgende Beispiel veranschaulicht den JSON-Antworttext für einen erfolgreichen Aufruf dieser Methode. Der Antworttext enthält Informationen zur aktualisierten Übermittlung. Weitere Informationen zu den Werten im Antworttext finden Sie unter [Add-On-Übermittlungsressource](manage-add-on-submissions.md#add-on-submission-object).
 
@@ -166,17 +154,7 @@ Das folgende Beispiel veranschaulicht den JSON-Antworttext für einen erfolgreic
       "RU": "Tier3",
       "US": "Tier4",
     },
-    "sales": [
-      {
-         "name": "Sale1",
-         "basePriceId": "Free",
-         "startDate": "2016-05-21T18:40:11.7369008Z",
-         "endDate": "2016-05-22T18:40:11.7369008Z",
-         "marketSpecificPricings": {
-            "RU": "NotAvailable"
-         }
-      }
-    ],
+    "sales": [],
     "priceId": "Free"
   },
   "targetPublishDate": "2016-03-15T05:10:58.047Z",
@@ -207,7 +185,7 @@ Das folgende Beispiel veranschaulicht den JSON-Antworttext für einen erfolgreic
 }
 ```
 
-## Fehlercodes
+## <a name="error-codes"></a>Fehlercodes
 
 Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die Antwort einen der folgenden HTTP-Fehlercodes.
 
@@ -219,9 +197,9 @@ Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die A
 <span/>
 
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
-* [Erstellen und Verwalten von Übermittlungen mit WindowsStore-Diensten](create-and-manage-submissions-using-windows-store-services.md)
+* [Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten](create-and-manage-submissions-using-windows-store-services.md)
 * [Verwalten von Add-On-Übermittlungen](manage-add-on-submissions.md)
 * [Abrufen einer Add-On-Übermittlung](get-an-add-on-submission.md)
 * [Erstellen einer Add-On-Übermittlung](create-an-add-on-submission.md)
@@ -231,6 +209,6 @@ Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die A
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

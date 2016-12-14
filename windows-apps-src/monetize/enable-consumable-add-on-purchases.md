@@ -5,18 +5,18 @@ description: Erfahren Sie, wie Sie den Windows.Services.Store-Namespace verwende
 title: "Unterstützen von Endverbraucher-Add-On-Käufen"
 keywords: In-App-Angebot, Codebeispiel
 translationtype: Human Translation
-ms.sourcegitcommit: 962bee0cae8c50407fe1509b8000dc9cf9e847f8
-ms.openlocfilehash: eb188ed8e69f90727c5b57af1c407fac07eaf87d
+ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
+ms.openlocfilehash: 12191a946ec080c8e386191363617a9c437671c5
 
 ---
 
-# Unterstützen von Endverbraucher-Add-On-Käufen
+# <a name="enable-consumable-add-on-purchases"></a>Unterstützen von Endverbraucher-Add-On-Käufen
 
 Apps für Windows 10, Version 1607 oder höher, können Methoden der [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Klasse im [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace verwenden, um die Erfüllung des Benutzers von Endverbraucher-Add-Ons in Ihren UWP-Apps zu verwalten (Add-Ons werden auch als In-App-Produkte oder IAPs bezeichnet). Verwenden Sie Endverbraucher-Add-ons für Artikel, die gekauft, verwendet und erneut gekauft werden können. Dies ist besonders nützlich für Dinge wie spielinterne Währungen (Gold, Münzen usw.), die gekauft und dann zum Erwerben bestimmter Power-Ups verwendet werden können.
 
 >**Hinweis**&nbsp;&nbsp;Dieser Artikel bezieht sich auf Apps für Windows 10, Version 1607 oder höher. Wenn Ihre App für eine frühere Version von Windows 10 geeignet ist, müssen Sie den [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)-Namespace anstelle des **Windows.Services.Store**-Namespace verwenden. Weitere Informationen finden Sie unter [In-App-Einkäufe und Testversionen mit dem Windows.ApplicationModel.Store-Namespace](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
 
-## Übersicht über Endverbraucher-Add-ons
+## <a name="overview-of-consumable-add-ons"></a>Übersicht über Endverbraucher-Add-ons
 
 Apps für Windows 10, Version 1607 oder höher, können zwei Arten von Endverbraucher-Add-Ons anbieten, die sich auf die Art und Weise unterscheiden, wie Erfüllungen verwaltet werden:
 
@@ -37,7 +37,7 @@ Um einem Benutzer ein Endverbraucher-Add-on anzubieten, befolgen Sie dieses allg
 
 Auch das [Abrufen des Restbetrags](enable-consumable-add-on-purchases.md#get_balance) für einen vom Store verwalteten Verbrauchsartikel ist jederzeit möglich.
 
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 Für diese Beispiele gelten die folgenden Voraussetzungen:
 * Ein Visual Studio-Projekt für eine UWP (Universelle Windows-Plattform)-App, die für Windows 10, Version 1607 oder höher, geeignet ist.
@@ -53,7 +53,7 @@ Eine vollständige Beispielanwendung finden Sie im [Store-Beispiel](https://gith
 >**Hinweis**&nbsp;&nbsp;Wenn Sie über eine Desktopanwendung verfügen, die die [Desktop-Brücke](https://developer.microsoft.com/windows/bridges/desktop) verwendet, müssen Sie möglicherweise zusätzlichen, in diesen Beispielen nicht aufgeführten Code hinzufügen, um das [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Objekt zu konfigurieren. Weitere Informationen finden Sie unter [Verwenden der StoreContext-Klasse in einer Desktopanwendung, die die Desktop-Brücke verwendet](in-app-purchases-and-trials.md#desktop).
 
 <span id="report_fulfilled" />
-## Melden eines Endverbraucher-Add-Ons als erfüllt
+## <a name="report-a-consumable-add-on-as-fulfilled"></a>Melden eines Endverbraucher-Add-Ons als erfüllt
 
 Nachdem der Benutzer den [Kauf des Add-Ons](enable-in-app-purchases-of-apps-and-add-ons.md) über Ihre App tätigt und das Add-On nutzt, muss Ihre App durch Aufrufen der [ReportConsumableFulfillmentAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.reportconsumablefulfillmentasync.aspx)-Methode der [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Klasse das Add-On als erfüllt melden. Sie müssen die folgenden Informationen an diese Methode übergeben:
 
@@ -65,121 +65,20 @@ Nachdem der Benutzer den [Kauf des Add-Ons](enable-in-app-purchases-of-apps-and-
 
 In diesem Beispiel wird gezeigt, wie ein vom Store verwalteter Verbrauchsartikel als erfüllt gemeldet wird.
 
-```csharp
-private StoreContext context = null;
-
-public async void ConsumeAddOn(string storeId)
-{
-    if (context == null)
-    {
-        context = StoreContext.GetDefault();
-        // If your app is a desktop app that uses the Desktop Bridge, you
-        // may need additional code to configure the StoreContext object.
-        // For more info, see https://aka.ms/storecontext-for-desktop.
-    }
-
-    // This is an example for a Store-managed consumable, where you specify the actual number
-    // of units that you want to report as consumed so the Store can update the remaining
-    // balance. For a developer-managed consumable where you maintain the balance, specify 1
-    // to just report the add-on as fulfilled to the Store.
-    uint quantity = 10;
-    string addOnStoreId = "9NBLGGH4TNNR";
-    Guid trackingId = Guid.NewGuid();
-
-    workingProgressRing.IsActive = true;
-    StoreConsumableResult result = await context.ReportConsumableFulfillmentAsync(
-        addOnStoreId, quantity, trackingId);
-    workingProgressRing.IsActive = false;
-
-    if (result.ExtendedError != null)
-    {
-        // The user may be offline or there might be some other server failure.
-        textBlock.Text = $"ExtendedError: {result.ExtendedError.Message}";
-        return;
-    }
-
-    switch (result.Status)
-    {
-        case StoreConsumableStatus.Succeeded:
-            textBlock.Text = "The fulfillment was successful. Remaining balance: " +
-                result.BalanceRemaining;
-            break;
-
-        case StoreConsumableStatus.InsufficentQuantity:
-            textBlock.Text = "The fulfillment was unsuccessful because the user " +
-            "doesn't have enough remaining balance." + result.BalanceRemaining;
-            break;
-
-        case StoreConsumableStatus.NetworkError:
-            textBlock.Text = "The fulfillment was unsuccessful due to a network error.";
-            break;
-
-        case StoreConsumableStatus.ServerError:
-            textBlock.Text = "The fulfillment was unsuccessful due to a server error.";
-            break;
-
-        default:
-            textBlock.Text = "The fulfillment was unsuccessful due to an unknown error.";
-            break;
-    }
-}
-```
+> [!div class="tabbedCodeSnippets"]
+[!code-cs[EnableConsumables](./code/InAppPurchasesAndLicenses_RS1/cs/ConsumeAddOnPage.xaml.cs#ConsumeAddOn)]
 
 <span id="get_balance" />
-## Abrufen des Restbetrags für einen vom Store verwalteten Verbrauchsartikel
+## <a name="get-the-remaining-balance-for-a-store-managed-consumable"></a>Abrufen des Restbetrags für einen vom Store verwalteten Verbrauchsartikel
 
-Dieses Beispiel zeigt, wie die [GetConsumableBalanceRemainingAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getconsumablebalanceremainingasync.aspx)-Methode der [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Klasse verwendet wird, um den Restbetrag für ein vom Store verwaltetes Endverbraucher-Add-on abzurufen.
+Dieses Beispiel zeigt, wie die [GetConsumableBalanceRemainingAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getconsumablebalanceremainingasync.aspx)-Methode der [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Klasse verwendet wird, um den Restbetrag für ein vom Store verwaltetes Endverbraucher-Add-On abzurufen.
 
-```csharp
-private StoreContext context = null;
+> [!div class="tabbedCodeSnippets"]
+[!code-cs[EnableConsumables](./code/InAppPurchasesAndLicenses_RS1/cs/GetRemainingAddOnBalancePage.xaml.cs#GetRemainingAddOnBalance)]
 
-public async void GetRemainingBalance(string storeId)
-{
-    if (context == null)
-    {
-        context = StoreContext.GetDefault();
-        // If your app is a desktop app that uses the Desktop Bridge, you
-        // may need additional code to configure the StoreContext object.
-        // For more info, see https://aka.ms/storecontext-for-desktop.
-    }
+## <a name="related-topics"></a>Verwandte Themen
 
-    string addOnStoreId = "9NBLGGH4TNNR";
-
-    workingProgressRing.IsActive = true;
-    StoreConsumableResult result = await context.GetConsumableBalanceRemainingAsync(addOnStoreId);
-    workingProgressRing.IsActive = false;
-
-    if (result.ExtendedError != null)
-    {
-        // The user may be offline or there might be some other server failure.
-        textBlock.Text = $"ExtendedError: {result.ExtendedError.Message}";
-        return;
-    }
-
-    switch (result.Status)
-    {
-        case StoreConsumableStatus.Succeeded:
-            textBlock.Text = "Remaining balance: " + result.BalanceRemaining;
-            break;
-
-        case StoreConsumableStatus.NetworkError:
-            textBlock.Text = "Could not retrieve balance due to a network error.";
-            break;
-
-        case StoreConsumableStatus.ServerError:
-            textBlock.Text = "Could not retrieve balance due to a server error.";
-            break;
-
-        default:
-            textBlock.Text = "Could not retrieve balance due to an unknown error.";
-            break;
-    }
-}
-```
-
-## Verwandte Themen
-
-* [In-App-Einkäufe und Testversionen](in-app-purchases-and-trials.md)
+* [In-App-Käufe und Testversionen](in-app-purchases-and-trials.md)
 * [Abrufen von Produktinformationen zu Apps und Add-Ons](get-product-info-for-apps-and-add-ons.md)
 * [Abrufen von Lizenzinformationen zu Apps und Add-Ons](get-license-info-for-apps-and-add-ons.md)
 * [Unterstützen von In-App-Einkäufen von Apps und Add-Ons](enable-in-app-purchases-of-apps-and-add-ons.md)
@@ -188,6 +87,6 @@ public async void GetRemainingBalance(string storeId)
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

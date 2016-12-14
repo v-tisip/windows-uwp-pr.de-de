@@ -4,12 +4,12 @@ title: Registrieren einer Hintergrundaufgabe
 description: Hier erfahren Sie, wie eine Funktion erstellt wird, die zum sicheren Registrieren der meisten Hintergrundaufgaben wiederverwendet werden kann.
 ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 translationtype: Human Translation
-ms.sourcegitcommit: 0f1bf88b1470cc5205f2e98ef15300da705203b1
-ms.openlocfilehash: 2d27b46caefcae12e3ff3aeb300129eec0c5b7d7
+ms.sourcegitcommit: 2f46f5cd26656b2d6b7d14c0d85aa7a0a6950fb8
+ms.openlocfilehash: 809cd0ea85d4dfc6ecf633d0ca9f16bbefee78ca
 
 ---
 
-# Registrieren einer Hintergrundaufgabe
+# <a name="register-a-background-task"></a>Registrieren einer Hintergrundaufgabe
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -31,7 +31,7 @@ Universelle Windows-Apps müssen jedoch [**RequestAccessAsync**](https://msdn.mi
 
 Rufen Sie [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) und anschließend [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) auf, wenn die App nach der Aktualisierung gestartet wird, um sicherzustellen, dass Ihre universelle Windows-App nach der Veröffentlichung eines Updates weiterhin ordnungsgemäß ausgeführt wird. Weitere Informationen finden Sie unter [Richtlinien für Hintergrundaufgaben](guidelines-for-background-tasks.md).
 
-## Definieren von Methodensignatur und Rückgabetyp
+## <a name="define-the-method-signature-and-return-type"></a>Definieren von Methodensignatur und Rückgabetyp
 
 Diese Methode übernimmt den Einstiegspunkt der Aufgabe, den Namen der Aufgabe, einen vorgefertigten Trigger für die Hintergrundaufgabe und (optional) eine [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834) für die Hintergrundaufgabe. Diese Methode gibt ein [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786)-Objekt zurück.
 
@@ -40,7 +40,7 @@ Diese Methode übernimmt den Einstiegspunkt der Aufgabe, den Namen der Aufgabe, 
 > Wenn Ihre Hintergrundaufgabe im gleichen Prozess wie Ihre App (d. h. als In-Prozess-Hintergrundaufgabe) ausgeführt wird, sollte `taskEntryPoint` nicht festgelegt werden.
 
 > [!div class="tabbedCodeSnippets"]
-> ```cs
+> ``` csharp
 > public static BackgroundTaskRegistration RegisterBackgroundTask(
 >                                                 string taskEntryPoint,
 >                                                 string name,
@@ -52,7 +52,7 @@ Diese Methode übernimmt den Einstiegspunkt der Aufgabe, den Namen der Aufgabe, 
 >
 > }
 > ```
-> ```cpp
+> ``` cpp
 > BackgroundTaskRegistration^ MainPage::RegisterBackgroundTask(
 >                                              Platform::String ^ taskEntryPoint,
 >                                              Platform::String ^ taskName,
@@ -65,7 +65,7 @@ Diese Methode übernimmt den Einstiegspunkt der Aufgabe, den Namen der Aufgabe, 
 > }
 > ```
 
-## Überprüfung von vorhandenen Registrierungen
+## <a name="check-for-existing-registrations"></a>Überprüfung von vorhandenen Registrierungen
 
 Überprüfen Sie, ob die Aufgabe bereits registriert ist. Diese Überprüfung ist wichtig, denn eine mehrfach registrierte Hintergrundaufgabe wird mehrfach aufgerufen, wenn sie ausgelöst wird. Dies kann die CPU überlasten und zu unerwartetem Verhalten führen.
 
@@ -76,7 +76,7 @@ Sie können die vorhandenen Registrierungen durch Abfrage der [**BackgroundTaskR
 Der folgende Code registriert eine Hintergrundaufgabe mit dem im vorigen Schritt erstellten [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838):
 
 > [!div class="tabbedCodeSnippets"]
-> ```cs
+> ``` csharp
 > public static BackgroundTaskRegistration RegisterBackgroundTask(
 >                                                 string taskEntryPoint,
 >                                                 string name,
@@ -103,7 +103,7 @@ Der folgende Code registriert eine Hintergrundaufgabe mit dem im vorigen Schritt
 >     // We'll register the task in the next step.
 > }
 > ```
-> ```cpp
+> ``` cpp
 > BackgroundTaskRegistration^ MainPage::RegisterBackgroundTask(
 >                                              Platform::String ^ taskEntryPoint,
 >                                              Platform::String ^ taskName,
@@ -137,7 +137,7 @@ Der folgende Code registriert eine Hintergrundaufgabe mit dem im vorigen Schritt
 > }
 > ```
 
-## Registrieren der Hintergrundaufgabe (oder Rückgabe der bereits vorhandenen Registrierung)
+## <a name="register-the-background-task-or-return-the-existing-registration"></a>Registrieren der Hintergrundaufgabe (oder Rückgabe der bereits vorhandenen Registrierung)
 
 
 Überprüfen Sie, ob sich die Aufgabe in der Liste der bereits registrierten Hintergrundaufgaben befindet. Geben Sie in diesem Fall diese Instanz der Aufgabe zurück.
@@ -150,7 +150,7 @@ Registrieren Sie die Aufgabe dann mithilfe eines neuen [**BackgroundTaskBuilder*
 Im folgenden Beispiel wird entweder die vorhandene Aufgabe zurückgegeben, oder es wird Code hinzugefügt, mit dem die Hintergrundaufgabe registriert wird (ggf. einschließlich der Systembedingung):
 
 > [!div class="tabbedCodeSnippets"]
-> ```cs
+> ``` csharp
 > public static BackgroundTaskRegistration RegisterBackgroundTask(
 >                                                 string taskEntryPoint,
 >                                                 string name,
@@ -199,7 +199,7 @@ Im folgenden Beispiel wird entweder die vorhandene Aufgabe zurückgegeben, oder 
 >     return task;
 > }
 > ```
-> ```cpp
+> ``` cpp
 > BackgroundTaskRegistration^ MainPage::RegisterBackgroundTask(
 >                                              Platform::String ^ taskEntryPoint,
 >                                              Platform::String ^ taskName,
@@ -251,13 +251,13 @@ Im folgenden Beispiel wird entweder die vorhandene Aufgabe zurückgegeben, oder 
 > }
 > ```
 
-## Hilfsfunktion zur Registrierung der abgeschlossenen Hintergrundaufgabe
+## <a name="complete-background-task-registration-utility-function"></a>Hilfsfunktion zur Registrierung der abgeschlossenen Hintergrundaufgabe
 
 
 Dieses Beispiel zeigt die Hilfsfunktion zur Registrierung der abgeschlossenen Hintergrundaufgabe. Diese Funktion kann zum Registrieren der meisten Hintergrundaufgaben mit Ausnahme von Hintergrundaufgaben im Netzwerk verwendet werden.
 
 > [!div class="tabbedCodeSnippets"]
-> ```cs
+> ``` csharp
 > //
 > // Register a background task with the specified taskEntryPoint, name, trigger,
 > // and condition (optional).
@@ -310,7 +310,7 @@ Dieses Beispiel zeigt die Hilfsfunktion zur Registrierung der abgeschlossenen Hi
 >     return task;
 > }
 > ```
-> ```cpp
+> ``` cpp
 > //
 > // Register a background task with the specified taskEntryPoint, name, trigger,
 > // and condition (optional).
@@ -371,14 +371,14 @@ Dieses Beispiel zeigt die Hilfsfunktion zur Registrierung der abgeschlossenen Hi
 > }
 > ```
 
-> **Hinweis**: Dieser Artikel ist für Windows10-Entwickler gedacht, die Apps für die Universelle Windows-Plattform (UWP) schreiben. Informationen zur Entwicklung für Windows8.x oder Windows Phone8.x finden Sie in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **Hinweis**: Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die Universelle Windows-Plattform (UWP) schreiben. Informationen zur Entwicklung unter Windows 8.x oder Windows Phone 8.x finden Sie in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 ****
 
-* [Erstellen und Registrieren einer Hintergrundaufgabe außerhalb des Prozesses](create-and-register-an-outofproc-background-task.md)
-* [Erstellen und Registrieren einer In-Process-Hintergrundaufgabe](create-and-register-an-inproc-background-task.md)
+* [Erstellen und Registrieren einer Hintergrundaufgabe außerhalb von Prozessen](create-and-register-an-outofproc-background-task.md)
+* [Erstellen und Registrieren einer Hintergrundaufgabe innerhalb von Prozessen](create-and-register-an-inproc-background-task.md)
 * [Deklarieren von Hintergrundaufgaben im Anwendungsmanifest](declare-background-tasks-in-the-application-manifest.md)
 * [Behandeln einer abgebrochenen Hintergrundaufgabe](handle-a-cancelled-background-task.md)
 * [Überwachen des Status und Abschlusses von Hintergrundaufgaben](monitor-background-task-progress-and-completion.md)
@@ -397,6 +397,6 @@ Dieses Beispiel zeigt die Hilfsfunktion zur Registrierung der abgeschlossenen Hi
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -1,18 +1,18 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: 1901c4c2-5161-435d-bc7b-f40c69cdb138
 title: Dateien, Ordner und Bibliotheken
-description: Hier erhalten Sie Informationen zum Lesen und Schreiben von App-Einstellungen, zur Datei- und Ordnerauswahl und zu speziellen Speicherorten im Sandkasten, wie z.B. Video-/Musikbibliothek.
+description: "Hier erhalten Sie Informationen zum Lesen und Schreiben von App-Einstellungen, zur Datei- und Ordnerauswahl und zu speziellen Speicherorten im Sandkasten, wie z. B. Video-/Musikbibliothek."
 translationtype: Human Translation
-ms.sourcegitcommit: 82edf9c3ee7f7303788b7a1272ecb261d3748c5a
-ms.openlocfilehash: 32c6e33f9506abc1876075f6ca11656241921005
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: e248a0898772f1fde38e312b1cbd24da5b2946a7
 
 ---
- # Dateien, Ordner und Bibliotheken
+ # <a name="files-folders-and-libraries"></a>Dateien, Ordner und Bibliotheken
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Verwenden Sie die APIs im [Windows.Storage](https://msdn.microsoft.com/library/windows/apps/br227346), [Windows.Storage.Streams](https://msdn.microsoft.com/library/windows/apps/br241791) und [Windows.Storage.Pickers](https://msdn.microsoft.com/library/windows/apps/br207928)-Namespace, um Text und andere Datenformate in Dateien zu lesen und zu schreiben sowie Dateien und Ordner zu verwalten. In diesem Abschnitt erhalten Sie Informationen zum Lesen und Schreiben von App-Einstellungen, zur Datei- und Ordnerauswahl und zu speziellen Speicherorten im Sandkasten, z.B. die Video-/Musikbibliothek.
+Verwenden Sie die APIs im [Windows.Storage](https://msdn.microsoft.com/library/windows/apps/br227346), [Windows.Storage.Streams](https://msdn.microsoft.com/library/windows/apps/br241791) und [Windows.Storage.Pickers](https://msdn.microsoft.com/library/windows/apps/br207928)-Namespace, um Text und andere Datenformate in Dateien zu lesen und zu schreiben sowie Dateien und Ordner zu verwalten. In diesem Abschnitt erhalten Sie Informationen zum Lesen und Schreiben von App-Einstellungen, zur Datei- und Ordnerauswahl und zu speziellen Speicherorten im Sandkasten, z. B. die Video-/Musikbibliothek.
 
 | Thema | Beschreibung  |
 |-------|--------------|
@@ -24,11 +24,11 @@ Verwenden Sie die APIs im [Windows.Storage](https://msdn.microsoft.com/library/w
 | [Zugriff auf Inhalte in der Heimnetzgruppe](quickstart-accessing-homegroup-content.md) | Greifen Sie auf Inhalte zu, die sich im Heimnetzgruppenordner des Benutzers befinden, einschließlich Bildern, Musik und Videos. |
 | [Ermitteln der Verfügbarkeit von Microsoft OneDrive-Dateien](quickstart-determining-availability-of-microsoft-onedrive-files.md) | Ermitteln Sie mithilfe der [StorageFile.IsAvailable](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.isavailable.aspx)-Eigenschaft, ob eine Microsoft OneDrive-Datei verfügbar ist. |
 | [Dateien und Ordner in den Musik-, Bild- und Videobibliotheken](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md) | Fügen Sie vorhandene Musik-, Bilder- oder Video-Ordner den entsprechenden Bibliotheken hinzu. Sie können auch Ordner aus Bibliotheken entfernen, die Liste der Ordner in einer Bibliothek abrufen und gespeicherte Fotos, Musik und Videos untersuchen. |
-| [Nachverfolgen kürzlich verwendeter Dateien und Ordner](how-to-track-recently-used-files-and-folders.md) | Sie können Dateien nachverfolgen, auf die häufig zugegriffen wird, indem Sie sie der Liste mit den zuletzt verwendeten Elementen (MRU) der App hinzufügen. Die Plattform verwaltet die MRU für Sie. Dabei werden Elemente nach der Zeit und dem Ort des letzten Zugriffs sortiert und die ältesten Elemente entfernt, wenn das Limit von 25Elementen erreicht ist. Alle Apps besitzen eine eigene MRU. |
+| [Nachverfolgen kürzlich verwendeter Dateien und Ordner](how-to-track-recently-used-files-and-folders.md) | Sie können Dateien nachverfolgen, auf die häufig zugegriffen wird, indem Sie sie der Liste mit den zuletzt verwendeten Elementen (MRU) der App hinzufügen. Die Plattform verwaltet die MRU für Sie. Dabei werden Elemente nach der Zeit und dem Ort des letzten Zugriffs sortiert und die ältesten Elemente entfernt, wenn das Limit von 25 Elementen erreicht ist. Alle Apps besitzen eine eigene MRU. |
 | [Zugreifen auf die SD-Karte](access-the-sd-card.md) | Sie können weniger wichtige Daten auf einer optionalen microSD-Karte speichern und auf diese zugreifen. Dies gilt besonders für kostengünstige Geräte, die nur über einen begrenzten internen Speicher verfügen. |
 | [Berechtigungen für den Dateizugriff](file-access-permissions.md) | Apps können standardmäßig auf bestimmte Dateisystemspeicherorte zugreifen. Apps können darüber hinaus mithilfe der Dateiauswahl oder über die Deklaration von Funktionen auf weitere Speicherorte zugreifen. |
 
-## Verwandte Beispiele
+## <a name="related-samples"></a>Verwandte Beispiele
 [Beispiel für Ordnerenumeration](http://go.microsoft.com/fwlink/p/?linkid=619993)
 
 [Beispiel zum Dateizugriff](http://go.microsoft.com/fwlink/p/?linkid=619995)
@@ -40,6 +40,6 @@ Verwenden Sie die APIs im [Windows.Storage](https://msdn.microsoft.com/library/w
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO1-->
 
 
