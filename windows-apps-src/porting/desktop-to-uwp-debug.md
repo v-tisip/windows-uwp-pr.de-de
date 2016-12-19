@@ -4,32 +4,34 @@ Description: "Bereitstellen und Debuggen einer UWP-App (Universelle Windows-Plat
 Search.Product: eADQiWindows 10XVcnh
 title: "Debuggen von Apps, die mit der Desktop-Brücke konvertiert wurden"
 translationtype: Human Translation
-ms.sourcegitcommit: 8429e6e21319a03fc2a0260c68223437b9aed02e
-ms.openlocfilehash: 9dcc39c51e61b24c25bcbfa216c6e51b49bbfd3a
+ms.sourcegitcommit: dba00371b29b3179a6dc3bdd96a092437331e61a
+ms.openlocfilehash: 537ac8e83d5f54bf83ec0e05b71be354651000f2
 
 ---
 
-# Debuggen von Apps, die mit der Desktop-Brücke konvertiert wurden
+# <a name="debug-apps-converted-with-the-desktop-bridge"></a>Debuggen von Apps, die mit der Desktop-Brücke konvertiert wurden
 
 Dieses Thema enthält Informationen, die Sie beim erfolgreichen Debuggen der App nach der Konvertierung mit der Desktop-zu-UWP-Brücke unterstützen. Sie haben mehrere Optionen zum Debuggen der konvertierten App.
 
-## Anhängen an den Prozess
+## <a name="attach-to-process"></a>Anhängen an den Prozess
 
-Wenn Sie Microsoft Visual Studio als Administrator ausführen, funktionieren die Befehle *Debuggen starten* und *Start Without* für das konvertierte App-Projekt, doch die gestartete App wird auf einer [Ebene mittlerer Integrität](https://msdn.microsoft.com/library/bb625963) ausgeführt (d.h. ohne erhöhte Rechte). Wenn Sie der gestarteten App Administratorrechte gewähren möchten, müssen Sie sie zunächst über eine Verknüpfung oder eine Kachel „als Administrator“ starten. Wenn die App ausgeführt wird, rufen Sie von einer Microsoft Visual Studio-Instanz, die als Administrator ausgeführt wird, __An Prozess anhängen__ auf, und wählen Sie im Dialogfeld den Prozess der App.
+Wenn Sie Microsoft Visual Studio als Administrator ausführen, funktionieren die Befehle *Debuggen starten* und *Start Without* für das konvertierte App-Projekt, doch die gestartete App wird auf einer [Ebene mittlerer Integrität](https://msdn.microsoft.com/library/bb625963) ausgeführt (d. h. ohne erhöhte Rechte). Wenn Sie der gestarteten App Administratorrechte gewähren möchten, müssen Sie sie zunächst über eine Verknüpfung oder eine Kachel „als Administrator“ starten. Wenn die App ausgeführt wird, rufen Sie von einer Microsoft Visual Studio-Instanz, die als Administrator ausgeführt wird, __An Prozess anhängen__ auf, und wählen Sie im Dialogfeld den Prozess der App.
 
-## Debugging mit F5
+## <a name="f5-debug"></a>Debugging mit F5
 
 Visual Studio unterstützt jetzt ein neues Paketprojekt. Das neue Projekt ermöglicht beim Erstellen der Anwendung das automatische Kopieren von Updates in das APPX-Paket, das vom Konverter für den Installer Ihrer Anwendung erstellt wurde. Nach der Konfiguration des Paketprojekts können Sie F5 verwenden, um das Debuggen direkt im APPX-Paket durchzuführen. 
 
-Erste Schritte 
+>Hinweis: Sie können auch die Option zum Debuggen eines vorhandenen APPX-Pakets verwenden, indem Sie Debuggen -> Andere Debugziele -> Installiertes App-Paket debuggen auswählen.
+
+Dies sind die ersten Schritte: 
 
 1. Stellen Sie zunächst sicher, dass Desktop App Converter verwendet werden kann. Eine Anleitung hierzu finden Sie unter [Desktop App Converter](desktop-to-uwp-run-desktop-app-converter.md).
 
-2. Führen Sie den Konverter und dann den Installer für die Win32-Anwendung aus. Der Konverter erfasst das Layout und alle an der Registrierung vorgenommenen Änderungen und gibt ein Appx-Paket mit einem Manifest und die Datei „Registry.dat“ aus, um die Registrierung zu virtualisieren:
+2. Führen Sie den Konverter und dann den Installer für die Win32-Anwendung aus. Der Konverter erfasst das Layout und alle an der Registrierung vorgenommenen Änderungen und gibt ein APPX-Paket mit einem Manifest und die Datei „Registry.dat“ aus, um die Registrierung zu virtualisieren:
 
 ![alt](images/desktop-to-uwp/debug-1.png)
 
-3. Installieren und starten Sie [Visual Studio "15" Preview 2](https://www.visualstudio.com/downloads/visual-studio-next-downloads-vs.aspx). 
+3. Installieren und starten Sie [Visual Studio 2017 RC](https://www.visualstudio.com/downloads/#visual-studio-community-2017-rc). 
 
 4. Installieren Sie das VSIX-Projekt „Desktop to UWP Packaging“ aus der [Visual Studio Gallery](http://go.microsoft.com/fwlink/?LinkId=797871). 
 
@@ -73,7 +75,7 @@ Erste Schritte
     <?xml version="1.0" encoding=utf-8"?>
     <Project ToolsVersion=14.0" xmlns="http://scehmas.microsoft.com/developer/msbuild/2003">
         <PropertyGroup>
-            <MyProjectOutputPath>C:\{path}</MyProjectOutputPath>
+            <MyProjectOutputPath>{relativepath}</MyProjectOutputPath>
         </PropertyGroup>
         <ItemGroup>
             <LayoutFile Include="$(MyProjectOutputPath)\ProjectTracker.exe">
@@ -94,7 +96,7 @@ Erste Schritte
     <?xml version="1.0" encoding="utf-8"?>
     <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
         <PropertyGroup>
-            <MyProjectOutputPath>C:\Users\peterfar\Desktop\ProjectTracker\ProjectTracker\bin\DesktopUWP</MyProjectOutputPath>
+            <MyProjectOutputPath>..\ProjectTracker\bin\DesktopUWP</MyProjectOutputPath>
         </PropertyGroup>
     ```
 
@@ -158,15 +160,15 @@ Sie können auch die bedingte Kompilierung zum Aktivieren bestimmter Codepfade v
 
 4.  Sie können jetzt das Buildziel zu DesktopUWP ändern, wenn Sie für die hinzugefügte UWP-API erstellen möchten.
 
-## PLMDebug 
+## <a name="plmdebug"></a>PLMDebug 
 
-In Visual Studio können Sie mit der Taste F5 sowie mithilfe der Option „An den Prozess anhängen“ Ihre App debuggen, während sie ausgeführt wird. In einigen Fällen empfiehlt sich jedoch eine differenziertere Steuerung des Debugging-Vorgangs, wenn z.B. das Debuggen erfolgen soll, bevor die App gestartet wird. Verwenden Sie in diesen komplexeren Szenarien [**PLMDebug**](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx). Mit diesem Tool können Sie die konvertierte App mit dem Windows-Debugger debuggen. Zudem verfügen Sie über die vollständige Steuerung des App-Lebenszyklus, einschließlich Anhalten, Fortsetzen und Beenden. 
+In Visual Studio können Sie mit der Taste F5 sowie mithilfe der Option „An den Prozess anhängen“ Ihre App debuggen, während sie ausgeführt wird. In einigen Fällen empfiehlt sich jedoch eine differenziertere Steuerung des Debugging-Vorgangs, wenn z. B. das Debuggen erfolgen soll, bevor die App gestartet wird. Verwenden Sie in diesen komplexeren Szenarien [**PLMDebug**](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx). Mit diesem Tool können Sie die konvertierte App mit dem Windows-Debugger debuggen. Zudem verfügen Sie über die vollständige Steuerung des App-Lebenszyklus, einschließlich Anhalten, Fortsetzen und Beenden. 
 
 PLMDebug ist im Windows SDK enthalten. Weitere Informationen finden Sie unter [**PLMDebug**](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx). 
 
-## Ausführen eines anderen Prozesses im vollständig vertrauenswürdigen Container 
+## <a name="run-another-process-inside-the-full-trust-container"></a>Ausführen eines anderen Prozesses im vollständig vertrauenswürdigen Container 
 
-Sie können benutzerdefinierte Prozesse im Container eines angegebenen App-Pakets aufrufen. Dies kann nützlich sein, um Szenarien zu testen (z.B. wenn Sie über eine benutzerdefinierte Testumgebung verfügen und die Ausgabe der App testen möchten). Verwenden Sie hierzu das PowerShell-Cmdlet ```Invoke-CommandInDesktopPackage```: 
+Sie können benutzerdefinierte Prozesse im Container eines angegebenen App-Pakets aufrufen. Dies kann nützlich sein, um Szenarien zu testen (z. B. wenn Sie über eine benutzerdefinierte Testumgebung verfügen und die Ausgabe der App testen möchten). Verwenden Sie hierzu das PowerShell-Cmdlet ```Invoke-CommandInDesktopPackage```: 
 
 ```CMD
 Invoke-CommandInDesktopPackage [-PackageFamilyName] <string> [-AppId] <string> [-Command] <string> [[-Args]
@@ -175,6 +177,6 @@ Invoke-CommandInDesktopPackage [-PackageFamilyName] <string> [-AppId] <string> [
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

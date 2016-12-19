@@ -1,15 +1,15 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: 1AE29512-7A7D-4179-ADAC-F02819AC2C39
 title: Dateien und Ordner in den Musik-, Bild- und Videobibliotheken
 description: "Fügen Sie vorhandene Musik-, Bilder- oder Video-Ordner den entsprechenden Bibliotheken hinzu. Sie können auch Ordner aus Bibliotheken entfernen, die Liste der Ordner in einer Bibliothek abrufen und gespeicherte Fotos, Musik und Videos untersuchen."
 translationtype: Human Translation
-ms.sourcegitcommit: affe6002e22bd10e714dc4782a60ef528c31a407
-ms.openlocfilehash: def1c5c8d9d062a81731744e1e1465472225494a
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: 4e2b7d10e1d24427aede21ccae176d7cd55f9de8
 
 ---
 
-# Dateien und Ordner in den Musik-, Bild- und Videobibliotheken
+# <a name="files-and-folders-in-the-music-pictures-and-videos-libraries"></a>Dateien und Ordner in den Musik-, Bild- und Videobibliotheken
 
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -17,9 +17,9 @@ ms.openlocfilehash: def1c5c8d9d062a81731744e1e1465472225494a
 
 Fügen Sie vorhandene Musik-, Bilder- oder Video-Ordner den entsprechenden Bibliotheken hinzu. Sie können auch Ordner aus Bibliotheken entfernen, die Liste der Ordner in einer Bibliothek abrufen und gespeicherte Fotos, Musik und Videos untersuchen.
 
-Eine Bibliothek ist eine virtuelle Sammlung von Ordnern, die standardmäßig einen bekannten Ordner sowie alle anderen Ordner enthält, die der Benutzer mithilfe Ihrer App oder einer der integrierten Apps zur Bibliothek hinzugefügt hat. Die Bildbibliothek enthält z.B. standardmäßig den bekannten Ordner „Bilder“. Der Benutzer kann mithilfe Ihrer App oder der integrierten Fotos-App Ordner zur Bildbibliothek hinzufügen oder aus ihr entfernen.
+Eine Bibliothek ist eine virtuelle Sammlung von Ordnern, die standardmäßig einen bekannten Ordner sowie alle anderen Ordner enthält, die der Benutzer mithilfe Ihrer App oder einer der integrierten Apps zur Bibliothek hinzugefügt hat. Die Bildbibliothek enthält z. B. standardmäßig den bekannten Ordner „Bilder“. Der Benutzer kann mithilfe Ihrer App oder der integrierten Fotos-App Ordner zur Bildbibliothek hinzufügen oder aus ihr entfernen.
 
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 
 -   **Verstehen der asynchronen Programmierung für UWP-Apps (Universelle Windows-Plattform)**
@@ -36,7 +36,7 @@ Eine Bibliothek ist eine virtuelle Sammlung von Ordnern, die standardmäßig ein
 
     Weitere Informationen finden Sie unter [Berechtigungen für den Dateizugriff](file-access-permissions.md).
 
-## Abrufen eines Verweises auf eine Bibliothek
+## <a name="get-a-reference-to-a-library"></a>Abrufen eines Verweises auf eine Bibliothek
 
 
 **Hinweis**  Denken Sie daran, die entsprechende Funktion zu deklarieren.
@@ -53,7 +53,7 @@ Rufen Sie die [**StorageLibrary.GetLibraryAsync**](https://msdn.microsoft.com/li
         (Windows.Storage.KnownLibraryId.Pictures);
 ```
 
-## Abrufen der Liste der Ordner in einer Bibliothek
+## <a name="get-the-list-of-folders-in-a-library"></a>Abrufen der Liste der Ordner in einer Bibliothek
 
 
 Um die Liste der Ordner in einer Bibliothek abzurufen, rufen den Wert der [**StorageLibrary.Folders**](https://msdn.microsoft.com/library/windows/apps/dn251724)-Eigenschaft ab.
@@ -66,7 +66,7 @@ Um die Liste der Ordner in einer Bibliothek abzurufen, rufen den Wert der [**Sto
     IObservableVector<Windows.Storage.StorageFolder> myPictureFolders = myPictures.Folders;
 ```
 
-## Abrufen des Ordners in einer Bibliothek, in den neue Dateien standardmäßig gespeichert werden
+## <a name="get-the-folder-in-a-library-where-new-files-are-saved-by-default"></a>Abrufen des Ordners in einer Bibliothek, in den neue Dateien standardmäßig gespeichert werden
 
 
 Um den Ordner in einer Bibliothek abzurufen, in den neue Dateien standardmäßig gespeichert werden, rufen Sie den Wert der [**StorageLibrary.SaveFolder**](https://msdn.microsoft.com/library/windows/apps/dn251728)-Eigenschaft ab.
@@ -75,7 +75,7 @@ Um den Ordner in einer Bibliothek abzurufen, in den neue Dateien standardmäßig
     Windows.Storage.StorageFolder savePicturesFolder = myPictures.SaveFolder;
 ```
 
-## Hinzufügen eines vorhandenen Ordners zu einer Bibliothek
+## <a name="add-an-existing-folder-to-a-library"></a>Hinzufügen eines vorhandenen Ordners zu einer Bibliothek
 
 
 Um einen Ordner zu einer Bibliothek hinzuzufügen, rufen Sie [**StorageLibrary.RequestAddFolderAsync**](https://msdn.microsoft.com/library/windows/apps/dn251726) auf. Das Aufrufen dieser Methode führt beispielsweise bei der Bildbibliothek zur Anzeige einer Ordnerauswahl für den Benutzer, die die Schaltfläche zum **Hinzufügen dieses Ordners zu Bildern** umfasst. Wenn der Benutzer einen Ordner auswählt, dann verbleibt er am ursprünglichen Speicherort auf dem Datenträger und wird zu einem Element in der [**StorageLibrary.Folders**](https://msdn.microsoft.com/library/windows/apps/dn251724)-Eigenschaft (und in der integrierten Fotos-App). Der Ordner wird aber nicht im Datei-Explorer als untergeordnetes Element des Ordners „Bilder“ angezeigt.
@@ -85,7 +85,7 @@ Um einen Ordner zu einer Bibliothek hinzuzufügen, rufen Sie [**StorageLibrary.R
     Windows.Storage.StorageFolder newFolder = await myPictures.RequestAddFolderAsync();
 ```
 
-## Entfernen eines Ordners aus einer Bibliothek
+## <a name="remove-a-folder-from-a-library"></a>Entfernen eines Ordners aus einer Bibliothek
 
 
 Rufen Sie zum Entfernen eines Ordners aus einer Bibliothek die [**StorageLibrary.RequestRemoveFolderAsync**](https://msdn.microsoft.com/library/windows/apps/dn251727)-Methode auf, und geben Sie den zu entfernenden Ordner an. Sie können [**StorageLibrary.Folders**](https://msdn.microsoft.com/library/windows/apps/dn251724) und ein [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878)-Steuerelement (oder ähnliches) verwenden, damit der Benutzer einen zu entfernenden Ordner auswählen kann.
@@ -99,7 +99,7 @@ Im folgenden Beispiel wird davon ausgegangen, dass der Benutzer den zu entfernen
     bool result = await myPictures.RequestRemoveFolderAsync(folder);
 ```
 
-## Empfangen von Benachrichtigungen über Änderungen an der Liste der Ordner in einer Bibliothek
+## <a name="get-notified-of-changes-to-the-list-of-folders-in-a-library"></a>Empfangen von Benachrichtigungen über Änderungen an der Liste der Ordner in einer Bibliothek
 
 
 Um über Änderungen an der Liste der Ordner in einer Bibliothek benachrichtigt zu werden, registrieren Sie einen Handler für das [**StorageLibrary.DefinitionChanged**](https://msdn.microsoft.com/library/windows/apps/dn251723)-Ereignis der Bibliothek.
@@ -115,7 +115,7 @@ void HandleDefinitionChanged(Windows.Storage.StorageLibrary sender, object args)
 }
 ```
 
-## Medienbibliothekordner
+## <a name="media-library-folders"></a>Medienbibliothekordner
 
 
 Ein Gerät bietet fünf vordefinierte Speicherorte, an denen Benutzer und Apps Mediendateien speichern können. Vorinstallierte Apps speichern an diesen Speicherorten sowohl von Benutzern erstellte Medien als auch heruntergeladene Medien.
@@ -134,7 +134,7 @@ Die Speicherorte lauten:
 
 Mediendateien können von Benutzern und Apps auch außerhalb der Medienbibliothekordner auf der SD-Karte gespeichert werden. Durchsuchen Sie den Inhalt der SD-Karte, um eine Mediendatei auf der SD-Karte auf zuverlässige Weise zu finden, oder bitten Sie den Benutzer, mithilfe einer Dateiauswahl auf die Datei zuzugreifen. Weitere Informationen finden Sie unter [Zugreifen auf die SD-Karte](access-the-sd-card.md).
 
-## Abfragen der Medienbibliotheken
+## <a name="querying-the-media-libraries"></a>Abfragen der Medienbibliotheken
 
 Um eine Sammlung von Dateien zu erhalten, geben Sie die Bibliothek und den Typ der gewünschten Dateien an.
 
@@ -164,7 +164,7 @@ private async void getSongs()
 }
 ```
 
-### Abfrageergebnisse umfassen sowohl internen Speicher als auch Wechselmedien
+### <a name="query-results-include-both-internal-and-removable-storage"></a>Abfrageergebnisse umfassen sowohl internen Speicher als auch Wechselmedien
 
 Benutzer können angeben, dass Dateien standardmäßig auf der optionalen SD-Karte gespeichert werden sollen. Für Apps kann festgelegt werden, dass Dateien nicht auf der SD-Karte gespeichert werden sollen. Daher können die Medienbibliotheken auf den internen Speicher und die SD-Karte des Geräts aufgeteilt werden.
 
@@ -177,7 +177,7 @@ Beachten Sie den Status des Gerätespeichers, der in der folgenden Abbildung dar
 Wenn Sie den Inhalt der Bildbibliothek abfragen, indem Sie `await KnownFolders.PicturesLibrary.GetFilesAsync()` aufrufen, ist sowohl „internalPic.jpg“ als auch „SDPic.jpg“ in den Ergebnissen enthalten.
 
 
-## Verwenden von Fotos
+## <a name="working-with-photos"></a>Verwenden von Fotos
 
 
 Auf Geräten, auf denen jedes Bild von der Kamera sowohl in niedriger als auch in hoher Auflösung gespeichert wird, wird bei tiefen Abfragen nur das Bild mit niedriger Auflösung zurückgegeben.
@@ -197,7 +197,7 @@ Wenn Sie es Benutzern ermöglichen möchten, ein Foto später erneut in der App 
   testPhoto.Properties.SavePropertiesAsync(propertiesToSave).AsyncWait();   
 ```
 
-## Verwenden von Datenstrommethoden zum Hinzufügen einer Datei zur Medienbibliothek
+## <a name="using-stream-methods-to-add-a-file-to-a-media-library"></a>Verwenden von Datenstrommethoden zum Hinzufügen einer Datei zur Medienbibliothek
 
 
 Wenn Sie auf eine Medienbibliothek zugreifen, indem Sie einen bekannten Ordner wie **KnownFolders.PictureLibrary** verwenden, und der Medienbibliothek mithilfe von Datenstrommethoden eine Datei hinzufügen, müssen Sie darauf achten, alle von Ihrem Code geöffneten Datenströme wieder zu schließen. Andernfalls wird die Datei der Medienbibliothek mit diesen Methoden nicht wie erwartet hinzugefügt, weil mindestens ein Stream weiterhin über einen Handle für die Datei verfügt.
@@ -246,6 +246,6 @@ using (var sourceStream = await sourceFile.OpenReadAsync())
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

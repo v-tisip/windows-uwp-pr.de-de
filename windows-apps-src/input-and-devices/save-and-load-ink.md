@@ -1,21 +1,21 @@
 ---
 author: Karl-Bridge-Microsoft
 Description: "UWP-Apps, die Windows Ink unterstützen, können Freihandstriche in eine ISF-Datei (Ink Serialized Format) serialisieren und daraus deserialisieren. Die ISF-Datei ist eine GIF-Bild mit zusätzlichen Metadaten für alle Eigenschaften und Verhaltensweisen von Freihandstrichen. Apps ohne Unterstützung der Freihandeingabe können das statische GIF-Bild, einschließlich Alphakanal-Hintergrundtransparenz, anzeigen."
-title: Speichern und Abrufen der Daten von Windows Ink-Strichen
+title: Speichern und Abrufen der Daten zu Windows Ink-Strichen
 ms.assetid: C96C9D2F-DB69-4883-9809-4A0DF7CEC506
 label: Store and retrieve Windows Ink stroke data
 template: detail.hbs
-keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas, ISF, Ink Serialized Format
+keywords: Windows Ink, Windows-Freihandeingabe, DirectInk, InkPresenter, InkCanvas, ISF, serialisiertes Freihandformat
 translationtype: Human Translation
-ms.sourcegitcommit: 75e93920422b5ad8ad0e9399bccc403ea69e7feb
-ms.openlocfilehash: 8ba48ed9aa7589ddee6009c5a8cb8ec1091d51ef
+ms.sourcegitcommit: 0f7f54c5c5baccdedfe32bc7c71994e43a93f032
+ms.openlocfilehash: d4458b66f4f1917e99495353a088680b19cb94c9
 
 ---
 
-# Speichern und Abrufen der Daten von Windows Ink-Strichen
+# <a name="store-and-retrieve-windows-ink-stroke-data"></a>Speichern und Abrufen der Daten zu Windows Ink-Strichen
 
 
-UWP-Apps, die Windows Ink unterstützen, können Freihandstriche in eine ISF-Datei (Ink Serialized Format) serialisieren und daraus deserialisieren. Die ISF-Datei ist eine GIF-Bild mit zusätzlichen Metadaten für alle Eigenschaften und Verhaltensweisen von Freihandstrichen. Apps ohne Unterstützung der Freihandeingabe können das statische GIF-Bild, einschließlich Alphakanal-Hintergrundtransparenz, anzeigen.
+UWP-Apps, die Windows Ink unterstützen, können Freihandstriche in eine serialisierte Freihandformatdatei (Ink Serialized Format-Datei, ISF-Datei) serialisieren und aus dieser deserialisieren. Die ISF-Datei ist eine GIF-Bild mit zusätzlichen Metadaten für alle Eigenschaften und Verhaltensweisen von Freihandstrichen. Apps ohne Unterstützung der Freihandeingabe können das statische GIF-Bild, einschließlich Alphakanal-Hintergrundtransparenz, anzeigen.
 
 
 **Wichtige APIs**
@@ -26,11 +26,11 @@ UWP-Apps, die Windows Ink unterstützen, können Freihandstriche in eine ISF-Dat
 
 
 > [!NOTE]
-> Bei ISF handelt es sich um die kompakteste permanente Freihanddarstellung. Sie kann in ein binäres Dokumentformat, z.B. in eine GIF-Datei, eingebettet oder direkt in der Zwischenablage platziert werden.
+> Bei ISF handelt es sich um die kompakteste permanente Freihanddarstellung. Sie kann in ein binäres Dokumentformat, z. B. in eine GIF-Datei, eingebettet oder direkt in der Zwischenablage platziert werden.
 
  
 
-## Speichern von Freihandstrichen in einer Datei
+## <a name="save-ink-strokes-to-a-file"></a>Speichern von Freihandstrichen in einer Datei
 
 
 Hier wird veranschaulicht, wie Sie in einem [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement gezeichnete Freihandstriche speichern.
@@ -160,7 +160,7 @@ public MainPage()
 > [!NOTE]  
 > Zum Speichern von Freihanddaten wird nur das Format GIF unterstützt. Aus Gründen der Abwärtskompatibilität werden allerdings von der [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607)-Methode (im nächsten Abschnitt veranschaulicht) weitere Formate unterstützt.
 
-## Laden von Freihanddaten aus einer Datei
+## <a name="load-ink-strokes-from-a-file"></a>Laden von Freihanddaten aus einer Datei
 
 Hier wird veranschaulicht, wie Freihandstriche aus einer Datei geladen und in einem [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement gerendert werden.
 
@@ -270,14 +270,14 @@ private async void btnLoad_Click(object sender, RoutedEventArgs e)
 | Gif                       | Dieses Format definiert Freihandeingaben, die mithilfe einer GIF-Datei beibehalten werden, die ISF in Form von Metadaten enthält, die in die Datei eingebettet sind. So ist es möglich, Freihandeingaben in Anwendungen anzuzeigen, die nicht über die Funktion zur Freihandeingabe verfügen, während die Eingaben beim Wechsel zu einer Anwendung mit Freihandeingabe in vollem Umfang erhalten bleiben. Das Format ermöglicht nicht nur die Verwendung in Anwendungen mit und ohne Freihandfunktion, sondern ist bestens geeignet für den Transport von Freihandinhalt innerhalb einer HTML-Datei. |
 | Base64Gif                 | Dieses Format definiert Freihandeingaben, die mithilfe einer Base64-codierten verstärkten GIF-Datei beibehalten werden. Dieses Format wird bereitgestellt, wenn Freihandeingaben direkt in einer XML- oder HTML-Datei codiert werden müssen, um sie später in ein Bild zu konvertieren. Dieses Format kann beispielsweise in einem XML-Format verwendet werden, das erstellt wurde, um alle Freihandinformationen zu speichern, und das verwendet wird, um HTML über XSLT (Extensible Stylesheet Language Transformations) zu erstellen. 
 
-## Kopieren und Einfügen von Freihandstrichen mit der Zwischenablage
+## <a name="copy-and-paste-ink-strokes-with-the-clipboard"></a>Kopieren und Einfügen von Freihandstrichen mit der Zwischenablage
 
 
 Hier wird veranschaulicht, wie Sie mit der Zwischenablage Freihandstriche zwischen Apps übertragen.
 
 Damit die Zwischenablagefunktion unterstützt wird, müssen für die integrierten Befehle zum Ausschneiden und Kopieren von [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492)-Inhalten ein oder mehrere Freihandstriche ausgewählt sein.
 
-In diesem Beispiel wird die Strichauswahl aktiviert, wenn die Eingabe mit einer Zeichenstift-Drucktaste (oder der rechten Maustaste) geändert wird. Ein umfassendes Beispiel für das Implementieren der Strichauswahl finden Sie in [Zeichen- und Eingabestiftinteraktionen](pen-and-stylus-interactions.md) unter [Durchlaufende Eingabe für die erweiterte Verarbeitung](pen-and-stylus-interactions.md#passthrough).
+In diesem Beispiel wird die Strichauswahl aktiviert, wenn die Eingabe mit einer Zeichenstift-Drucktaste (oder der rechten Maustaste) geändert wird. Ein vollständiges Beispiel für das Implementieren der Strichauswahl finden Sie unter „Weitergabe der Eingabe für die erweiterte Verarbeitung“ in [Zeichen- und Eingabestiftinteraktionen](pen-and-stylus-interactions.md).
 
 1.  Zuerst wird die Benutzeroberfläche eingerichtet.
 
@@ -319,7 +319,7 @@ In diesem Beispiel wird die Strichauswahl aktiviert, wenn die Eingabe mit einer 
 
     Die [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)-Eigenschaft wird für die Interpretation von Eingabedaten von Stift oder Maus als Freihandstriche ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)) konfiguriert. Hier werden außerdem Listener für die Click-Ereignisse der Schaltflächen sowie Zeiger- und Strichereignisse für die Auswahlfunktion deklariert.
 
-    Ein umfassendes Beispiel für das Implementieren der Strichauswahl finden Sie in [Zeichen- und Eingabestiftinteraktionen](pen-and-stylus-interactions.md) unter [Durchlaufende Eingabe für die erweiterte Verarbeitung](pen-and-stylus-interactions.md#passthrough).
+    Ein vollständiges Beispiel für das Implementieren der Strichauswahl finden Sie unter „Weitergabe der Eingabe für die erweiterte Verarbeitung“ in [Zeichen- und Eingabestiftinteraktionen](pen-and-stylus-interactions.md).
 ```    CSharp
 public MainPage()
     {
@@ -428,7 +428,7 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
     }
 ```
 
-## Verwandte Artikel
+## <a name="related-articles"></a>Verwandte Artikel
 
 * [Zeichen- und Eingabestiftinteraktionen](pen-and-stylus-interactions.md)
 
@@ -436,16 +436,18 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
 * [Freihandbeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620308)
 * [Einfaches Freihandbeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620312)
 * [Komplexes Freihandbeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [Malbuchbeispiel](https://aka.ms/cpubsample-coloringbook)
+* [Familiennotizbeispiel](https://aka.ms/cpubsample-familynotessample)
+
+
  
 
- 
 
 
 
 
 
 
-
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -5,14 +5,14 @@ description: Erfahren Sie, wie Sie den Windows.Services.Store-Namespace verwende
 title: "Unterstützen von In-App-Käufen von Apps und Add-Ons"
 keywords: In-App-Angebot, Codebeispiel
 translationtype: Human Translation
-ms.sourcegitcommit: 962bee0cae8c50407fe1509b8000dc9cf9e847f8
-ms.openlocfilehash: a28982e05e88b542a0b20bf481e3121d6ac8a247
+ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
+ms.openlocfilehash: 05a93f3124324d7308f5494ad14a15bfd6a4e698
 
 ---
 
-# Unterstützen von In-App-Käufen von Apps und Add-Ons
+# <a name="enable-in-app-purchases-of-apps-and-add-ons"></a>Unterstützen von In-App-Käufen von Apps und Add-Ons
 
-Apps für Windows10, Version1607 oder höher, können Mitglieder im [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace verwenden, um für den Benutzer den Kauf der aktuellen App oder eines ihrer Add-Ons (auch als In-App-Produkte oder IAPs bezeichnet) anzufordern. Wenn der Benutzer beispielsweise aktuell über eine Testversion der App verfügt, können Sie diesen Vorgang verwenden, um für den Benutzer eine Volllizenz zu erwerben. Alternativ können Sie diesen Prozess auch verwenden, um für den Benutzer ein Add-On wie z.B. ein neues Gamelevel zu erwerben.
+Apps für Windows 10, Version 1607 oder höher, können Mitglieder im [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace verwenden, um für den Benutzer den Kauf der aktuellen App oder eines ihrer Add-Ons (auch als In-App-Produkte oder IAPs bezeichnet) anzufordern. Wenn der Benutzer beispielsweise aktuell über eine Testversion der App verfügt, können Sie diesen Vorgang verwenden, um für den Benutzer eine Volllizenz zu erwerben. Alternativ können Sie diesen Prozess auch verwenden, um für den Benutzer ein Add-On wie z. B. ein neues Gamelevel zu erwerben.
 
 Um den Kauf einer App oder eines Add-Ons anzufordern, bietet der [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) verschiedene Methoden:
 * Wenn Sie die [Store-ID](in-app-purchases-and-trials.md#store_ids) der App bzw. des Add-Ons kennen, verwenden Sie die [RequestPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.requestpurchaseasync.aspx)-Methode der [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Klasse.
@@ -20,9 +20,9 @@ Um den Kauf einer App oder eines Add-Ons anzufordern, bietet der [Windows.Servic
 
 Jede Methode zeigt dem Benutzer eine Standardbenutzeroberfläche für den Einkauf an und führt den Vorgang nach Abschluss der Transaktion asynchron aus. Die Methode gibt ein Objekt zurück, das angibt, ob die Transaktion erfolgreich war.
 
->**Hinweis**&nbsp;&nbsp;Dieser Artikel bezieht sich auf Apps für Windows 10, Version 1607 oder höher. Wenn Ihre App für eine frühere Version von Windows 10 geeignet ist, müssen Sie den [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)-Namespace anstelle des **Windows.Services.Store**-Namespace verwenden. Weitere Informationen finden Sie unter [In-App-Einkäufe und Testversionen mit dem Windows.ApplicationModel.Store-Namespace](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
+>**Hinweis**&nbsp;&nbsp;Dieser Artikel bezieht sich auf Apps für Windows 10, Version 1607 oder höher. Wenn Ihre App für eine frühere Version von Windows 10 geeignet ist, müssen Sie den [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)-Namespace anstelle des **Windows.Services.Store**-Namespace verwenden. Weitere Informationen finden Sie unter [In-App-Käufe und Testversionen mit dem Windows.ApplicationModel.Store-Namespace](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
 
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 Für dieses Beispiel gelten die folgenden Voraussetzungen:
 * Ein Visual Studio-Projekt für eine UWP (Universelle Windows-Plattform)-App, die für Windows 10, Version 1607 oder höher, geeignet ist.
@@ -35,67 +35,16 @@ Der Code in diesem Beispiel geht von folgenden Voraussetzungen aus:
 
 >**Hinweis**&nbsp;&nbsp;Wenn Sie über eine Desktopanwendung verfügen, die die [Desktop-Brücke](https://developer.microsoft.com/windows/bridges/desktop) verwendet, müssen Sie möglicherweise zusätzlichen, in diesem Beispiel nicht aufgeführten Code hinzufügen, um das [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Objekt zu konfigurieren. Weitere Informationen finden Sie unter [Verwenden der StoreContext-Klasse in einer Desktopanwendung, die die Desktop-Brücke verwendet](in-app-purchases-and-trials.md#desktop).
 
-## Codebeispiel
+## <a name="code-example"></a>Codebeispiel
 
 In diesem Beispiel wird die Verwendung der [RequestPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.requestpurchaseasync.aspx)-Methode der [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Klasse veranschaulicht, um eine App oder ein Add-On mit bekannter [Store-ID](in-app-purchases-and-trials.md#store_ids) zu erwerben.
 
-```csharp
-private StoreContext context = null;
-
-public async void PurchaseAddOn(string storeId)
-{
-    if (context == null)
-    {
-        context = StoreContext.GetDefault();
-        // If your app is a desktop app that uses the Desktop Bridge, you
-        // may need additional code to configure the StoreContext object.
-        // For more info, see https://aka.ms/storecontext-for-desktop.
-    }
-
-    workingProgressRing.IsActive = true;
-    StorePurchaseResult result = await context.RequestPurchaseAsync(storeId);
-    workingProgressRing.IsActive = false;
-
-    if (result.ExtendedError != null)
-    {
-        // The user may be offline or there might be some other server failure.
-        textBlock.Text = $"ExtendedError: {result.ExtendedError.Message}";
-        return;
-    }
-
-    switch (result.Status)
-    {
-        case StorePurchaseStatus.AlreadyPurchased:
-            textBlock.Text = "The user has already purchased the product.";
-            break;
-
-        case StorePurchaseStatus.Succeeded:
-            textBlock.Text = "The purchase was successful.";
-            break;
-
-        case StorePurchaseStatus.NotPurchased:
-            textBlock.Text = "The purchase did not complete. " +
-                "The user may have cancelled the purchase.";
-            break;
-
-        case StorePurchaseStatus.NetworkError:
-            textBlock.Text = "The purchase was unsuccessful due to a network error.";
-            break;
-
-        case StorePurchaseStatus.ServerError:
-            textBlock.Text = "The purchase was unsuccessful due to a server error.";
-            break;
-
-        default:
-            textBlock.Text = "The purchase was unsuccessful due to an unknown error.";
-            break;
-    }
-}
-```
+> [!div class="tabbedCodeSnippets"]
+[!code-cs[EnablePurchases](./code/InAppPurchasesAndLicenses_RS1/cs/PurchaseAddOnPage.xaml.cs#PurchaseAddOn)]
 
 Eine vollständige Beispielanwendung finden Sie im [Store-Beispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [In-App-Käufe und Testversionen](in-app-purchases-and-trials.md)
 * [Abrufen von Produktinformationen zu Apps und Add-Ons](get-product-info-for-apps-and-add-ons.md)
@@ -106,6 +55,6 @@ Eine vollständige Beispielanwendung finden Sie im [Store-Beispiel](https://gith
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

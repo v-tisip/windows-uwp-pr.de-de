@@ -1,17 +1,17 @@
 ---
 author: Karl-Bridge-Microsoft
 Description: "Fügen Sie einer App für die Freihandeingabe in der universellen Windows-Plattform (UWP) eine Standard-InkToolbar hinzu. Fügen Sie der InkToolbar einen anpassbaren Stift hinzu und binden Sie diesen an eine benutzerdefinierte Definition für den Stift."
-title: "Hinzufügen einer InkToolbar zu einer App für die Freihandeingabe in der universellen Windows-Plattform (UWP)"
+title: "Hinzufügen einer InkToolbar zu einer Freihandeingabe-App für die Universelle Windows-Plattform (UWP)"
 label: Add an InkToolbar to a Universal Windows Platform (UWP) inking app
 template: detail.hbs
-keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas, InkToolbar, Universal Windows Platform, UWP
+keywords: Windows Ink, Windows-Freihandeingabe, DirectInk, InkPresenter, InkCanvas, InkToolbar, Universelle Windows-Platform, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 9e971104a7f7de9425787f32edcb7c376fb0c934
-ms.openlocfilehash: f5c8f7f8e60317a3ef30ff1900d99f9f6d63d391
+ms.sourcegitcommit: 2b6b1d7b1755aad4d75a29413d989c6e8112128a
+ms.openlocfilehash: 1b810a42166c48c1359dcf9adfba84184234b42c
 
 ---
 
-# Hinzufügen einer InkToolbar zu einer App für die Freihandeingabe in der universellen Windows-Plattform (UWP)
+# <a name="add-an-inktoolbar-to-a-universal-windows-platform-uwp-inking-app"></a>Hinzufügen einer InkToolbar zu einer Freihandeingabe-App für die Universelle Windows-Plattform (UWP)
 
 Es gibt zwei verschiedene Steuerelemente, die die Freihandeingabe in Apps in der universellen Windows-Plattform (UWP) vereinfachen: [**InkCanvas**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx) und [**InkToolbar**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx).
 
@@ -29,7 +29,7 @@ Als vollständig transparente Überlagerung bietet InkCanvas keine integrierte B
 
   InkToolbar wird in diesem Thema erläutert.
 
-## Wichtige APIs
+## <a name="important-apis"></a>Wichtige APIs
 
   -   [**InkCanvas-Klasse**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx)
   -   [**InkToolbar-Klasse**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx)
@@ -37,7 +37,7 @@ Als vollständig transparente Überlagerung bietet InkCanvas keine integrierte B
   -   [**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
 
 
-## Standard-InkToolbar
+## <a name="default-inktoolbar"></a>Standard-InkToolbar
 
 Das InkToolbar-Steuerelement enthält standardmäßig Schaltflächen zum Zeichnen, Löschen, Hervorheben sowie zum Anzeigen eines Lineals. Abhängig vom Feature werden in einem Flyout weitere Einstellungen und Befehle bereitgestellt, beispielsweise für Freihandfarbe, Strichstärke und das Löschen aller Freihandeingaben.
 
@@ -72,11 +72,11 @@ So fügen Sie eine einfache Standard-InkToolbar hinzu:
 </Grid>
 ```
 
-## Einfache Anpassung
+## <a name="basic-customization"></a>Einfache Anpassung
 
 In diesem Abschnitt behandeln wir einige grundlegende Anpassungsszenarien der Windows Ink-Symbolleiste.
 
-### Angeben der ausgewählten Schaltfläche  
+### <a name="specify-the-selected-button"></a>Angeben der ausgewählten Schaltfläche  
 ![Bei der Initialisierung ausgewählte Stiftschaltfläche](.\images\ink\ink-tools-default-toolbar.png)  
 *Windows Ink-Symbolleiste mit bei der Initialisierung ausgewählter Stiftschaltfläche*
 
@@ -126,7 +126,7 @@ private void inkToolbar_Loaded(object sender, RoutedEventArgs e)
 }
 ```
 
-### Angeben der integrierten Schaltflächen
+### <a name="specify-the-built-in-buttons"></a>Angeben der integrierten Schaltflächen
 
 ![Bei der Initialisierung vorhandene Schaltflächen](.\images\ink\ink-tools-specific.png)  
 *Bei der Initialisierung vorhandene Schaltflächen*
@@ -262,7 +262,7 @@ Verwenden Sie hierzu XAML oder CodeBehind.
 By default, the InkToolbar supports both pen and mouse input, you have to enable support for touch input.
 -->
 
-## Benutzerdefinierte Schaltflächen und Freihandeingabefeatures
+## <a name="custom-buttons-and-inking-features"></a>Benutzerdefinierte Schaltflächen und Freihandeingabefeatures
 
 Sie können die Sammlung von Schaltflächen (und zugehörige Freihandeingabefeatures) anpassen und erweitern, die über die InkToolbar bereitgestellt werden.
 
@@ -282,7 +282,7 @@ Je nach Anwendung und erforderlicher Freihandfunktion können Sie dem InkToolbar
 
 > **Hinweis**&nbsp;&nbsp;Die Anzeigereihenfolge der integrierten Schaltflächen kann nicht geändert werden. Die standardmäßige Anzeigereihenfolge lautet wie folgt: Kugelschreiber, Stift, Textmarker, Radierer und Lineal. Benutzerdefinierte Stifte werden an den letzten Standardstift angefügt, benutzerdefinierte Tool-Schaltflächen werden zwischen der letzten Stiftschaltfläche und der Radiererschaltfläche hinzugefügt, und benutzerdefinierte Umschaltflächen werden nach der Linealschaltfläche hinzugefügt. (Benutzerdefinierte Schaltflächen werden in der Reihenfolge hinzugefügt, in der sie angegeben werden.)
 
-### Benutzerdefinierter Stift
+### <a name="custom-pen"></a>Benutzerdefinierter Stift
 
 Sie können einen benutzerdefinierten Stift (zur Aktivierung über eine entsprechende Schaltfläche) erstellen, wobei Sie die Tintenfarbpalette und die Eigenschaften der Stiftspitze (Form, Rotation, Größe) definieren.
 
@@ -396,7 +396,7 @@ Als Nächstes fügen wir die erforderlichen Verweise auf den benutzerdefinierten
 </Grid>
 ```
 
-### Benutzerdefiniertes Umschalten
+### <a name="custom-toggle"></a>Benutzerdefiniertes Umschalten
 
 Sie können eine benutzerdefinierte Umschaltung (zur Aktivierung über eine entsprechende Schaltfläche) erstellen, um den Zustand eines von der App definierten Features als „aktiviert“ oder „nicht aktiviert“ einzurichten. Wenn die Schaltfläche aktiviert ist, funktioniert das Feature in Verbindung mit dem aktiven Tool.
 
@@ -520,7 +520,7 @@ namespace Ink_Basic_InkToolbar
 }
 ```
 
-### Benutzerdefiniertes Tool
+### <a name="custom-tool"></a>Benutzerdefiniertes Tool
 
 Sie können eine Schaltfläche für ein benutzerdefiniertes Tool erstellen, die ein von Ihrer App definiertes Nicht-Stift-Tool aufruft.
 
@@ -783,7 +783,7 @@ namespace Ink_Basic_InkToolbar
 
 
 
-### Benutzerdefiniertes Rendern von Freihandeingaben
+### <a name="custom-ink-rendering"></a>Benutzerdefiniertes Rendern von Freihandeingaben
 
 Standardmäßig werden Freihandeingaben in einem Hintergrundthread mit geringer Wartezeit verarbeitet und während des Zeichnens „nass“ gerendert. Wenn der Strich abgeschlossen ist (der Stift oder Finger wurde angehoben oder die Maustaste losgelassen), wird er im UI-Thread verarbeitet und auf der [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Ebene „trocken“ gerendert (über dem Anwendungsinhalt, wo er die nasse Freihandeingabe ersetzt).
 
@@ -795,7 +795,7 @@ Weitere Informationen zum benutzerdefinierten Trocknen finden Sie unter [Stiftin
 > Benutzerdefiniertes Trocknen und die [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx)  
 > Wenn Ihre App das Standard-Renderverhalten für Freihandeingabe des [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) mit einer benutzerdefinierten Trockenimplementierung überschreibt, sind die gerenderten Freihandstriche für die InkToolbar nicht mehr verfügbar, und die integrierten Löschbefehle der InkToolbar funktionieren nicht wie erwartet. Damit Sie Löschfunktionen bereitstellen können, müssen Sie alle Zeigerereignisse verarbeiten, für jeden Strich einen Treffertest ausführen und den integrierten Befehl „Freihand vollständig löschen“ überschreiben.
 
-## Verwandte Artikel
+## <a name="related-articles"></a>Verwandte Artikel
 
 * [Zeichen- und Eingabestiftinteraktionen](pen-and-stylus-interactions.md)
 
@@ -806,6 +806,6 @@ Weitere Informationen zum benutzerdefinierten Trocknen finden Sie unter [Stiftin
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -4,29 +4,29 @@ ms.assetid:
 description: "In diesem Artikel wird beschrieben, wie Sie mit „MediaFrameReader“ und „MediaCapture“ Medienframes aus einer oder mehreren verfügbaren Quellen abrufen. Hierzu zählen Farb-, Tiefen- und Infrarotkameras sowie Audiogeräte und sogar benutzerdefinierte Framequellen (etwa für Skeletal-Tracking-Frames)."
 title: "Verarbeiten von Medienframes mit „MediaFrameReader“"
 translationtype: Human Translation
-ms.sourcegitcommit: 21433f812915a2b4da6b4d68151bbc922a97a7a7
-ms.openlocfilehash: 5c4bb51ea3b1740cdbb5fa43746ce7b3edca6aa1
+ms.sourcegitcommit: 881f806a61d247c6c4f73aa770ba4c5dab91af00
+ms.openlocfilehash: 648874a50dbe333f1bb6291de646d9088eec1528
 
 ---
 
-# Verarbeiten von Medienframes mit „MediaFrameReader“
+# <a name="process-media-frames-with-mediaframereader"></a>Verarbeiten von Medienframes mit „MediaFrameReader“
 
 In diesem Artikel wird beschrieben, wie Sie mit [**MediaFrameReader**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReader) und [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCapture) Medienframes aus einer oder mehreren verfügbaren Quellen abrufen. Hierzu zählen Farb-, Tiefen- und Infrarotkameras sowie Audiogeräte und sogar benutzerdefinierte Framequellen (etwa für Skeletal-Tracking-Frames). Dieses Feature wurde für die Verwendung von Apps entworfen, die Medienframes in Echtzeit verarbeiten, wie beispielsweise Augmented-Reality- und Tiefenkamera-Apps.
 
 Wenn Sie normale Videos oder Fotos aufnehmen möchten, wie mit einer typischen Foto-App, sollten Sie möglicherweise eine der anderen Aufnahmemethoden verwenden, die von [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCapture) unterstützt werden. Eine Liste der verfügbaren Methoden zur Medienaufnahme und Artikel zu ihrer Verwendung finden Sie unter [**Kamera**](camera.md).
 
 > [!NOTE] 
-> Die in diesem Artikel besprochenen Features sind erst ab Windows10, Version1607, verfügbar.
+> Die in diesem Artikel besprochenen Features sind erst ab Windows 10, Version 1607, verfügbar.
 
 > [!NOTE] 
 > Es gibt ein Beispiel für universelle Windows-Apps, in dem die Verwendung von **MediaFrameReader** zum Anzeigen von Frames aus unterschiedlichen Framequellen demonstriert wird, unter anderem Farb-, Tiefen- und Infrarotkameras. Weitere Informationen finden Sie unter [Beispiel für Kameraframes](http://go.microsoft.com/fwlink/?LinkId=823230).
 
-## Einrichten Ihres Projekts
+## <a name="setting-up-your-project"></a>Einrichten Ihres Projekts
 Wie bei allen Apps, die **MediaCapture** verwenden, müssen Sie deklarieren, dass Ihre App die *Webcam*-Funktion verwendet. Erst dann können Sie auf Kamerageräte zugreifen. Wenn Ihre App von einem Audiogerät aufzeichnet, müssen Sie auch die *microphone*-Gerätefunktion deklarieren. 
 
 **Hinzufügen von Funktionen zum App-Manifest**
 
-1.  Öffnen Sie in MicrosoftVisual Studio im **Projektmappen-Explorer** den Designer für das Anwendungsmanifest, indem Sie auf das Element **package.appxmanifest** doppelklicken.
+1.  Öffnen Sie in Microsoft Visual Studio im **Projektmappen-Explorer** den Designer für das Anwendungsmanifest, indem Sie auf das Element **package.appxmanifest** doppelklicken.
 2.  Wählen Sie die Registerkarte **Funktionen** aus.
 3.  Aktivieren Sie die Kontrollkästchen für **Webcam** und **Mikrofon**.
 4.  Für den Zugriff auf die Bibliothek „Bilder und Videos“ aktivieren Sie die Kontrollkästchen für **Bildbibliothek** und **Videobibliothek**.
@@ -35,16 +35,16 @@ Im Beispielcode in diesem Artikel werden neben den in der Standard-Projektvorlag
 
 [!code-cs[FramesUsing](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFramesUsing)]
 
-## Auswählen von Framequellen und Framequellgruppen
-Viele Apps, die Medienframes verarbeiten, müssen Frames aus mehreren Quellen gleichzeitig abrufen, z.B. die Farb- und Tiefenkameras eines Geräts. Das [**MediaFrameSourceGroup**] (https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup)-Objekt stellt einen Satz von Medienframequellen dar, die gleichzeitig verwendet werden können. Rufen Sie die statische Methode [**MediaFrameSourceGroup.FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.FindAllAsync) auf, um eine Liste aller vom aktuellen Gerät unterstützten Gruppen von Framequellen abzurufen.
+## <a name="select-frame-sources-and-frame-source-groups"></a>Auswählen von Framequellen und Framequellgruppen
+Viele Apps, die Medienframes verarbeiten, müssen Frames aus mehreren Quellen gleichzeitig abrufen, z. B. die Farb- und Tiefenkameras eines Geräts. Das [**MediaFrameSourceGroup**] (https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup)-Objekt stellt einen Satz von Medienframequellen dar, die gleichzeitig verwendet werden können. Rufen Sie die statische Methode [**MediaFrameSourceGroup.FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.FindAllAsync) auf, um eine Liste aller vom aktuellen Gerät unterstützten Gruppen von Framequellen abzurufen.
 
 [!code-cs[FindAllAsync](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFindAllAsync)]
 
-Sie können auch einen [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceWatcher) erstellen, indem Sie mit [**DeviceInformation.CreateWatcher**](https://msdn.microsoft.com/library/windows/apps/br225427) und dem vom [**MediaFrameSourceGroup.GetDeviceSelector**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.GetDeviceSelector) zurückgegebenen Wert Benachrichtigungen empfangen, wenn sich die verfügbaren Framequellgruppen für das Gerät ändern, z.B. bei Anschließen einer externen Kamera. Weitere Informationen finden Sie unter [**Auflisten von Geräten**](https://msdn.microsoft.com/windows/uwp/devices-sensors/enumerate-devices).
+Sie können auch einen [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceWatcher) erstellen, indem Sie mit [**DeviceInformation.CreateWatcher**](https://msdn.microsoft.com/library/windows/apps/br225427) und dem vom [**MediaFrameSourceGroup.GetDeviceSelector**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.GetDeviceSelector) zurückgegebenen Wert Benachrichtigungen empfangen, wenn sich die verfügbaren Framequellgruppen für das Gerät ändern, z. B. bei Anschließen einer externen Kamera. Weitere Informationen finden Sie unter [**Auflisten von Geräten**](https://msdn.microsoft.com/windows/uwp/devices-sensors/enumerate-devices).
 
 Eine [**MediaFrameSourceGroup**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup) verfügt über eine Sammlung von [**MediaFrameSourceInfo**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceInfo)-Objekten, die in der Gruppe enthaltene Framequellen beschreiben. Nach dem Abrufen der auf dem Gerät verfügbaren Framequellgruppen können Sie die Gruppe auswählen, die die für Sie relevanten Framequellen verfügbar macht.
 
-Das folgende Beispiel zeigt die einfachste Möglichkeit zum Auswählen einer Framequellgruppe. Vom Code werden dann einfach Schleifen durch alle verfügbaren Gruppen und anschließend durch die einzelnen Elemente in der [**SourceInfos**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.SourceInfos)-Sammlung durchgeführt. Für jede **MediaFrameSourceInfo** wird geprüft, ob sie die gewünschten Funktionen unterstützt. In diesem Fall wird die [**MediaStreamType**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceInfo.MediaStreamType)-Eigenschaft auf den Wert [**VideoPreview**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaStreamType) überprüft. D.h. das Gerät stellt einen Videovorschau-Stream bereit, und die [**SourceKind**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceInfo.SourceKind)-Eigenschaft wird auf den Wert [**Farbe**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceKind) überprüft, um anzuzeigen, dass die Quelle Farbframes bereitstellt.
+Das folgende Beispiel zeigt die einfachste Möglichkeit zum Auswählen einer Framequellgruppe. Vom Code werden dann einfach Schleifen durch alle verfügbaren Gruppen und anschließend durch die einzelnen Elemente in der [**SourceInfos**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.SourceInfos)-Sammlung durchgeführt. Für jede **MediaFrameSourceInfo** wird geprüft, ob sie die gewünschten Funktionen unterstützt. In diesem Fall wird die [**MediaStreamType**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceInfo.MediaStreamType)-Eigenschaft auf den Wert [**VideoPreview**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaStreamType) überprüft. D. h. das Gerät stellt einen Videovorschau-Stream bereit, und die [**SourceKind**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceInfo.SourceKind)-Eigenschaft wird auf den Wert [**Farbe**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceKind) überprüft, um anzuzeigen, dass die Quelle Farbframes bereitstellt.
 
 [!code-cs[SimpleSelect](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetSimpleSelect)]
 
@@ -60,7 +60,7 @@ Im folgenden Beispiel wird mit einer ähnlichen Methode wie der oben beschrieben
 
 [!code-cs[ColorInfraredDepth](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetColorInfraredDepth)]
 
-## Initialisieren des MediaCapture-Objekts zum Verwenden der ausgewählten Framequellgruppe
+## <a name="initialize-the-mediacapture-object-to-use-the-selected-frame-source-group"></a>Initialisieren des MediaCapture-Objekts zum Verwenden der ausgewählten Framequellgruppe
 Im nächsten Schritt wird das **MediaCapture**-Objekt initialisiert, um die im vorherigen Schritt ausgewählte Framequellgruppe zu verwenden.
 
 Das **MediaCapture**-Objekt wird üblicherweise an mehreren Stellen in Ihrer App verwendet. Sie sollten daher eine Klassenmembervariable deklarieren, um es aufzunehmen.
@@ -70,7 +70,7 @@ Das **MediaCapture**-Objekt wird üblicherweise an mehreren Stellen in Ihrer App
 Erstellen Sie eine Instanz des **MediaCapture**-Objekts, indem Sie den Konstruktor aufrufen. Erstellen Sie als Nächstes ein [**MediaCaptureSettings**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureSettings)-Objekt, das zum Initialisieren des **MediaCapture**-Objekts verwendet wird. In diesem Beispiel werden die folgenden Einstellungen verwendet:
 
 * [**SourceGroup**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureInitializationSettings.SourceGroup) – Damit wird dem System mitgeteilt, welche Quellgruppe zum Abrufen von Frames verwendet wird. Bedenken Sie, dass die Quellgruppe einen Satz von Medienframequellen definiert, die gleichzeitig verwendet werden können.
-* [**SharingMode**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureInitializationSettings.SharingMode) – Damit wird dem System mitgeteilt, ob exklusive Steuerung der Aufnahmequellgeräte erforderlich ist. Bei Festlegung auf [**ExclusiveControl**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureSharingMode) können Sie die Einstellungen für das Aufnahmegerät, z.B. das Format der von ihm erzeugten Frames, ändern. Wenn jedoch eine andere App bereits über die exklusive Steuerung verfügt, wird der Versuch Ihrer App, das Medienaufnahmegerät zu initialisieren, fehlschlagen. Bei Festlegung auf [**SharedReadOnly**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureSharingMode) können Sie Frames von den Framequellen empfangen, auch wenn diese gerade von einer anderen App verwendet werden. Sie können jedoch nicht die Einstellungen der Geräte ändern.
+* [**SharingMode**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureInitializationSettings.SharingMode) – Damit wird dem System mitgeteilt, ob exklusive Steuerung der Aufnahmequellgeräte erforderlich ist. Bei Festlegung auf [**ExclusiveControl**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureSharingMode) können Sie die Einstellungen für das Aufnahmegerät, z. B. das Format der von ihm erzeugten Frames, ändern. Wenn jedoch eine andere App bereits über die exklusive Steuerung verfügt, wird der Versuch Ihrer App, das Medienaufnahmegerät zu initialisieren, fehlschlagen. Bei Festlegung auf [**SharedReadOnly**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureSharingMode) können Sie Frames von den Framequellen empfangen, auch wenn diese gerade von einer anderen App verwendet werden. Sie können jedoch nicht die Einstellungen der Geräte ändern.
 * [**MemoryPreference**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureInitializationSettings.MemoryPreference) – Wenn Sie [**CPU**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureMemoryPreference) angeben, verwendet das Gerät den CPU-Speicher. Damit wird garantiert, dass eintreffende Frames als [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/Windows.Graphics.Imaging.SoftwareBitmap)-Objekte verfügbar sind. Wenn Sie [**Auto**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureMemoryPreference) angeben, wählt das System dynamisch den optimalen Speicherort zum Speichern der Frames aus. Wenn das System die Verwendung des GPU-Speichers auswählt, werden die Medienframes als [**IDirect3DSurface**](https://msdn.microsoft.com/library/windows/apps/Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface)-Objekt und nicht als **SoftwareBitmap**-Objekt übermittelt.
 * [**StreamingCaptureMode**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureInitializationSettings.StreamingCaptureMode) – Legen Sie [**Video**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.StreamingCaptureMode) fest, um anzugeben, dass das Streamen von Audio nicht erforderlich ist.
 
@@ -78,14 +78,14 @@ Rufen Sie [**InitializeAsync**](https://msdn.microsoft.com/library/windows/apps/
 
 [!code-cs[InitMediaCapture](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetInitMediaCapture)]
 
-## Festlegen des bevorzugten Formats für die Framequelle
+## <a name="set-the-preferred-format-for-the-frame-source"></a>Festlegen des bevorzugten Formats für die Framequelle
 Zum Einstellen des bevorzugten Formats einer Framequelle benötigen Sie ein [**MediaFrameSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSource)-Objekt, das die Quelle darstellt. Sie erhalten dieses Objekt, indem Sie auf das [**Frames**](https://msdn.microsoft.com/library/windows/apps/Windows.Phone.Media.Capture.CameraCaptureSequence.Frames)-Verzeichnis des initialisierten **MediaCapture** -Objekts zugreifen und dabei den Bezeichner der gewünschten Framequelle angeben. Aus diesem Grund wurde das [**MediaFrameSourceInfo**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceInfo)-Objekt bei der Auswahl einer Framequellgruppe gespeichert.
 
-Die [**MediaFrameSource.SupportedFormats**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSource.SupportedFormats)-Eigenschaft enthält eine Liste von [**MediaFrameFormat**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameFormat)-Objekten, die die unterstützten Formate der Framequelle beschreiben. Verwenden Sie die Linq-Erweiterungsmethode **Where**, um basierend auf den gewünschten Eigenschaften ein Format auszuwählen. In diesem Beispiel wird ein Format mit einer Breite von 1.080Pixeln ausgewählt, welches Frames im 32-Bit-RGB-Format bereitstellen kann. Die **FirstOrDefault**-Erweiterungsmethode wählt den ersten Eintrag in der Liste aus. Ist das ausgewählte Format NULL, wird das angeforderte Format nicht von der Framequelle unterstützt. Wenn das Format unterstützt wird, können Sie [**SetFormatAsync**](https://msdn.microsoft.com/library/windows/apps/) aufrufen, um die Verwendung dieses Formats durch die Quelle anzufordern.
+Die [**MediaFrameSource.SupportedFormats**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSource.SupportedFormats)-Eigenschaft enthält eine Liste von [**MediaFrameFormat**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameFormat)-Objekten, die die unterstützten Formate der Framequelle beschreiben. Verwenden Sie die Linq-Erweiterungsmethode **Where**, um basierend auf den gewünschten Eigenschaften ein Format auszuwählen. In diesem Beispiel wird ein Format mit einer Breite von 1.080 Pixeln ausgewählt, welches Frames im 32-Bit-RGB-Format bereitstellen kann. Die **FirstOrDefault**-Erweiterungsmethode wählt den ersten Eintrag in der Liste aus. Ist das ausgewählte Format NULL, wird das angeforderte Format nicht von der Framequelle unterstützt. Wenn das Format unterstützt wird, können Sie [**SetFormatAsync**](https://msdn.microsoft.com/library/windows/apps/) aufrufen, um die Verwendung dieses Formats durch die Quelle anzufordern.
 
 [!code-cs[GetPreferredFormat](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetGetPreferredFormat)]
 
-## Erstellen eines Frame-Readers für die Framequelle
+## <a name="create-a-frame-reader-for-the-frame-source"></a>Erstellen eines Frame-Readers für die Framequelle
 Verwenden Sie zum Empfangen von Frames für die Medienframequelle einen [**MediaFrameReader**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReader).
 
 [!code-cs[DeclareMediaFrameReader](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetDeclareMediaFrameReader)]
@@ -98,7 +98,7 @@ Rufen Sie [**StartAsync**](https://msdn.microsoft.com/library/windows/apps/Windo
 
 [!code-cs[CreateFrameReader](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetCreateFrameReader)]
 
-## Behandeln des „FrameArrived“-Ereignisses
+## <a name="handle-the-frame-arrived-event"></a>Behandeln des „FrameArrived“-Ereignisses
 Das [**MediaFrameReader.FrameArrived**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReader.FrameArrived)-Ereignis wird ausgelöst, wenn ein neuer Frame verfügbar ist. Sie können entweder jeden empfangenen Frame verarbeiten oder Frames nur bei Bedarf verwenden. Der Frame-Reader löst das Ereignis in seinem eigenen Thread aus. Daher müssen Sie möglicherweise Synchronisierungslogik implementieren, damit Sie nicht aus mehreren Threads auf dieselben Daten zugreifen. In diesem Abschnitt wird das Synchronisieren von Zeichenfarbframes zu einem Image-Steuerelement in einer XAML-Seite veranschaulicht. Dieses Szenario behandelt die zusätzliche Synchronisierungseinschränkung, die erfordert, dass alle Updates für XAML-Steuerelemente im UI-Thread ausgeführt werden.
 
 Als erster Schritt beim Anzeigen von Frames in XAML wird ein Bild-Steuerelement erstellt. 
@@ -125,16 +125,20 @@ Innerhalb der Aufgabe wird die *_taskRunning*-Variable überprüft, um sicherzus
 
 Schließlich wird die *_taskRunning*-Variable wieder auf „false“ festgelegt, damit die Aufgabe beim nächsten Aufrufen des Handlers erneut ausgeführt werden kann.
 
+> [!NOTE] 
+> Wenn Sie auf das [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.VideoMediaFrame.SoftwareBitmap)- oder [**Direct3DSurface**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.VideoMediaFrame.Direct3DSurface)-Objekt zugreifen, das von der [**VideoMediaFrame**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReference.VideoMediaFrame)-Eigenschaft eines [**MediaFrameReference**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReference) bereitgestellt wird, erstellt das System einen starken Verweis auf dieses Objekt. Das bedeutet, dass sie nicht entfernt werden, wenn Sie [**Dispose**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReference.Close) auf dem **MediaFrameReference** aufrufen, der das Objekt enthält. Sie müssen die **Dispose**-Methode von **SoftwareBitmap** oder **Direct3DSurface** explizit direkt aufrufen, damit die Objekte sofort entfernt werden. Andernfalls wird der Garbage Collector den Speicher für diese Objekte schließlich freigeben. Sie wissen jedoch nicht, wann dies sein wird. Wenn die Anzahl der zugeteilten Bitmaps oder Oberflächen die maximale, vom System zugelassene Menge überschreitet, wird der Fluss neuer Frames beendet.
+
+
 [!code-cs[FrameArrived](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFrameArrived)]
 
-## Bereinigung von Ressourcen
+## <a name="cleanup-resources"></a>Bereinigen von Ressourcen
 Achten Sie darauf, nach dem Lesen der Frames den Medienframe-Reader zu beenden, indem Sie [**StopAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReader.StopAsync) aufrufen, die Registrierung des **FrameArrived**-Handlers aufheben und das **MediaCapture**-Objekt löschen.
 
 [!code-cs[Bereinigen](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetCleanup)]
 
 Weitere Informationen zum Bereinigen von Medienaufnahmeobjekten bei angehaltener Anwendung finden Sie unter [**Anzeigen der Kameravorschau**](simple-camera-preview-access.md).
 
-## Die FrameRenderer-Hilfsprogrammklasse
+## <a name="the-framerenderer-helper-class"></a>Die FrameRenderer-Hilfsprogrammklasse
 Das Universal Windows-[Beispiel für Kameraframes](http://go.microsoft.com/fwlink/?LinkId=823230) stellt eine Hilfsprogrammklasse zum einfachen Anzeigen der Frames aus Farb-, Infrarot- und Tiefenquellen in Ihrer App bereit. In der Regel sollen Tiefen- und Infrarotdaten nicht nur auf dem Bildschirm angezeigt werden. Dennoch ist diese Hilfsprogrammklasse ein hilfreiches Tool zum Veranschaulichen der Frame-Reader-Funktion und zum Debuggen Ihrer eigenen Frame-Reader-Implementierung.
 
 Die **FrameRenderer**-Hilfsprogrammklasse implementiert die folgenden Methoden.
@@ -148,7 +152,7 @@ Die **FrameRenderer**-Hilfsprogrammklasse implementiert die folgenden Methoden.
 
 [!code-cs[FrameArrived](./code/Frames_Win10/Frames_Win10/FrameRenderer.cs#SnippetFrameRenderer)]
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Kamera](camera.md)
 * [Allgemeine Foto-, Video- und Audioaufnahme mit „MediaCapture“](basic-photo-video-and-audio-capture-with-MediaCapture.md)
@@ -163,6 +167,6 @@ Die **FrameRenderer**-Hilfsprogrammklasse implementiert die folgenden Methoden.
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

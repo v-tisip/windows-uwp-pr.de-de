@@ -1,14 +1,14 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: 4C59D5AC-58F7-4863-A884-E9E54228A5AD
 title: "Aufzählen und Abfragen von Dateien und Ordnern"
 description: "Greifen Sie auf Dateien und Ordner zu, die sich in einem Ordner, in einer Bibliothek, auf einem Gerät oder an einer Netzwerkadresse befinden. Sie können auch durch Erstellen von Datei- und Ordnerabfragen Dateien und Ordner an bestimmten Speicherorten abrufen."
 translationtype: Human Translation
-ms.sourcegitcommit: de0b23cfd8f6323d3618c3424a27a7d0ce5e1374
-ms.openlocfilehash: a7a8ba7166cf8c6778003396b13b7098578097ca
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: 80c9a2f37b7744d983f3f742895e9ac2408850df
 
 ---
-# Aufzählen und Abfragen von Dateien und Ordnern
+# <a name="enumerate-and-query-files-and-folders"></a>Aufzählen und Abfragen von Dateien und Ordnern
 
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -16,10 +16,12 @@ ms.openlocfilehash: a7a8ba7166cf8c6778003396b13b7098578097ca
 
 Greifen Sie auf Dateien und Ordner zu, die sich in einem Ordner, in einer Bibliothek, auf einem Gerät oder an einer Netzwerkadresse befinden. Sie können auch durch Erstellen von Datei- und Ordnerabfragen Dateien und Ordner an bestimmten Speicherorten abrufen.
 
+Detaillierte Anleitungen zum Speichern der Daten Ihrer App für die Universelle Windows-Plattform finden Sie unter der [ApplicationData](https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.aspx) Klasse.
+
 **Hinweis**  Weitere Informationen finden Sie im [Beispiel für Ordnerenumeration](http://go.microsoft.com/fwlink/p/?linkid=619993).
 
  
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 -   **Verstehen der asynchronen Programmierung für UWP-Apps (Universelle Windows-Plattform)**
 
@@ -29,7 +31,7 @@ Greifen Sie auf Dateien und Ordner zu, die sich in einem Ordner, in einer Biblio
 
     Der Code in diesen Beispielen erfordert beispielsweise den Zugriff auf die **picturesLibrary**-Funktion, während Ihr Speicherort einen anderen Zugriffstyp oder keinen Zugriff voraussetzt. Weitere Informationen finden Sie unter [Berechtigungen für den Dateizugriff](file-access-permissions.md).
 
-## Auflisten der Dateien und Ordner an einem Speicherort
+## <a name="enumerate-files-and-folders-in-a-location"></a>Auflisten der Dateien und Ordner an einem Speicherort
 
 > **Hinweis**  Denken Sie daran, die **picturesLibrary**-Funktion anzugeben.
 
@@ -208,7 +210,7 @@ Alternativ können Sie die [**GetItemsAsync**](https://msdn.microsoft.com/librar
 > Next item
 > ```
 
-## Abfragen von Dateien an einem Speicherort und Auflisten der entsprechenden Dateien
+## <a name="query-files-in-a-location-and-enumerate-matching-files"></a>Abfragen von Dateien an einem Speicherort und Auflisten der entsprechenden Dateien
 
 In diesem Beispiel erfolgt eine Abfrage nach allen Dateien in der [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156), die nach Monat gruppiert werden, wobei das Beispiel dieses Mal auch die Unterordner rekursiv durchsucht. Zunächst wird [**StorageFolder.CreateFolderQuery**](https://msdn.microsoft.com/library/windows/apps/br227262) aufgerufen und der [**CommonFolderQuery.GroupByMonth**](https://msdn.microsoft.com/library/windows/apps/br207957)-Wert an die Methode übergeben. Dadurch erhalten wir ein [**StorageFolderQueryResult**](https://msdn.microsoft.com/library/windows/apps/br208066)-Objekt.
 
@@ -324,6 +326,6 @@ July ‎2015 (2)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

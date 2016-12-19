@@ -4,19 +4,19 @@ ms.assetid: bfabd3d5-dd56-4917-9572-f3ba0de4f8c0
 title: Referenz zu Kern-APIs des Device Portal
 description: "Hier erhalten Sie Informationen zu den Kern-REST-APIs für das Windows Device Portal, die Sie für den Zugriff auf die Daten und die programmatische Steuerung des Geräts verwenden können."
 translationtype: Human Translation
-ms.sourcegitcommit: fae2c6b31c9c6c07026abc4718959b02a36e6600
-ms.openlocfilehash: 226ecaecd93e4996e438f56f780926ca63c184fd
+ms.sourcegitcommit: b4222774dc4b0f9cdcac871311f5ead69c1e70a9
+ms.openlocfilehash: 3bacb9ac42e157afaed5e9e0e6438654db03ff28
 
 ---
 
-# Referenz zu Kern-APIs des Geräteportals
+# <a name="device-portal-core-api-reference"></a>Referenz zu Kern-APIs des Geräteportals
 
 Alle Komponenten im Windows Device Portal basieren auf REST-APIs, die Sie für den Zugriff auf die Daten und die programmatische Steuerung des Geräts verwenden können.
 
-## App-Bereitstellung
+## <a name="app-deployment"></a>App-Bereitstellung
 
 ---
-### Installieren einer App
+### <a name="install-an-app"></a>Installieren einer App
 
 **Anforderung**
 
@@ -64,7 +64,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Abrufen des App-Installationsstatus
+### <a name="get-app-installation-status"></a>Abrufen des App-Installationsstatus
 
 **Anforderung**
 
@@ -107,7 +107,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Deinstallieren einer App
+### <a name="uninstall-an-app"></a>Deinstallieren einer App
 
 **Anforderung**
 
@@ -153,7 +153,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Abrufen installierter Apps
+### <a name="get-installed-apps"></a>Abrufen installierter Apps
 
 **Anforderung**
 
@@ -222,9 +222,9 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-## Geräte-Manager
+## <a name="device-manager"></a>Geräte-Manager
 ---
-### Abrufen der auf dem Computer installierten Geräte
+### <a name="get-the-installed-devices-on-the-machine"></a>Abrufen der auf dem Computer installierten Geräte
 
 **Anforderung**
 
@@ -281,9 +281,9 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-## Absturzabbildsammlung
+## <a name="dump-collection"></a>Absturzabbildsammlung
 ---
-### Abrufen der Liste alle Absturzabbilder für Apps
+### <a name="get-the-list-of-all-crash-dumps-for-apps"></a>Abrufen der Liste alle Absturzabbilder für Apps
 
 **Anforderung**
 
@@ -322,12 +322,13 @@ HTTP-Statuscode      | Beschreibung
 <br />
 **Verfügbare Gerätefamilien**
 
+* Windows Mobile (im Windows-Insider-Programm)
 * Windows-Desktop
 * HoloLens
 * IoT
 
 ---
-### Abrufen der Absturzabbildsammlungs-Einstellungen für eine App
+### <a name="get-the-crash-dump-collection-settings-for-an-app"></a>Abrufen der Absturzabbildsammlungs-Einstellungen für eine App
 
 **Anforderung**
 
@@ -373,12 +374,13 @@ HTTP-Statuscode      | Beschreibung
 <br />
 **Verfügbare Gerätefamilien**
 
+* Windows Mobile (im Windows-Insider-Programm)
 * Windows-Desktop
 * HoloLens
 * IoT
 
 ---
-### Löschen eines Absturzabbilds für eine quergeladene App
+### <a name="delete-a-crash-dump-for-a-sideloaded-app"></a>Löschen eines Absturzabbilds für eine quergeladene App
 
 **Anforderung**
 
@@ -420,12 +422,13 @@ HTTP-Statuscode      | Beschreibung
 <br />
 **Verfügbare Gerätefamilien**
 
+* Windows Mobile (im Windows-Insider-Programm)
 * Windows-Desktop
 * HoloLens
 * IoT
 
 ---
-### Deaktivieren der Absturzabbilder für eine quergeladene App
+### <a name="disable-crash-dumps-for-a-sideloaded-app"></a>Deaktivieren der Absturzabbilder für eine quergeladene App
 
 **Anforderung**
 
@@ -466,12 +469,13 @@ HTTP-Statuscode      | Beschreibung
 <br />
 **Verfügbare Gerätefamilien**
 
+* Windows Mobile (im Windows-Insider-Programm)
 * Windows-Desktop
 * HoloLens
 * IoT
 
 ---
-### Herunterladen des Absturzabbilds für eine quergeladene App
+### <a name="download-the-crash-dump-for-a-sideloaded-app"></a>Herunterladen des Absturzabbilds für eine quergeladene App
 
 **Anforderung**
 
@@ -515,12 +519,13 @@ HTTP-Statuscode      | Beschreibung
 <br />
 **Verfügbare Gerätefamilien**
 
+* Windows Mobile (im Windows-Insider-Programm)
 * Windows-Desktop
 * HoloLens
 * IoT
 
 ---
-### Aktivieren der Absturzabbilder für eine quergeladene App
+### <a name="enable-crash-dumps-for-a-sideloaded-app"></a>Aktivieren der Absturzabbilder für eine quergeladene App
 
 **Anforderung**
 
@@ -559,12 +564,13 @@ HTTP-Statuscode      | Beschreibung
 <br />
 **Verfügbare Gerätefamilien**
 
+* Windows Mobile (im Windows-Insider-Programm)
 * Windows-Desktop
 * HoloLens
 * IoT
 
 ---
-### Abrufen der Liste der Fehlerüberprüfungsdateien
+### <a name="get-the-list-of-bugcheck-files"></a>Abrufen der Liste der Fehlerüberprüfungsdateien
 
 **Anforderung**
 
@@ -589,19 +595,19 @@ GET | /api/debug/dump/kernel/dumplist
 
 **Antwort**
 
-Die Antwort enthält eine Liste der Minidumpdateinamen und die Größen dieser Dateien. Diese Liste wird das folgende Format aufweisen. Der zweite *FileName*-Parameter ist die Größe der Datei. Dies ist ein bekanntes Problem.
+Die Antwort enthält eine Liste der Minidumpdateinamen und die Größen dieser Dateien. Diese Liste wird das folgende Format aufweisen. 
 ```
 {"DumpFiles": [
     {
         "FileName": string,
-        "FileName": string
+        "FileSize": int
     },...
 ]}
 ```
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -613,7 +619,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Herunterladen einer Fehlerüberprüfungs-Speicherabbilddatei
+### <a name="download-a-bugcheck-dump-file"></a>Herunterladen einer Fehlerüberprüfungs-Speicherabbilddatei
 
 **Anforderung**
 
@@ -660,7 +666,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Abrufen der CrashControl-Fehlerüberprüfungseinstellungen
+### <a name="get-the-bugcheck-crash-control-settings"></a>Abrufen der CrashControl-Fehlerüberprüfungseinstellungen
 
 **Anforderung**
 
@@ -688,16 +694,26 @@ GET | /api/debug/dump/kernel/crashcontrol
 Die Antwort enthält die CrashControl-Einstellungen. Weitere Informationen zu CrashControl finden Sie im Artikel [](https://technet.microsoft.com/library/cc951703.aspx). Die Vorlage für die Antwort lautet wie folgt.
 ```
 {
-    "autoreboot": int,
-    "dumptype": int,
+    "autoreboot": bool (0 or 1),
+    "dumptype": int (0 to 4),
     "maxdumpcount": int,
-    "overwrite": int
+    "overwrite": bool (0 or 1)
 }
 ```
 
+**Abbildtypen**
+
+0: Deaktiviert
+
+1: Vollständiges Speicherabbild (sammelt den gesamten verwendeten Arbeitsspeicher)
+
+2: Kernelspeicherabbild (ignoriert den Benutzermodusspeicher)
+
+3: Eingeschränktes Kernelminiabbild
+
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -711,7 +727,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Abrufen eines Live-Kernelspeicherabbilds
+### <a name="get-a-live-kernel-dump"></a>Abrufen eines Live-Kernelspeicherabbilds
 
 **Anforderung**
 
@@ -754,7 +770,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Abrufen eines Speicherabbilds von einem Livebenutzerprozess
+### <a name="get-a-dump-from-a-live-user-process"></a>Abrufen eines Speicherabbilds von einem Livebenutzerprozess
 
 **Anforderung**
 
@@ -801,7 +817,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Festlegen der CrashControl-Fehlerüberprüfungseinstellungen
+### <a name="set-the-bugcheck-crash-control-settings"></a>Festlegen der CrashControl-Fehlerüberprüfungseinstellungen
 
 **Anforderung**
 
@@ -849,9 +865,9 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-## ETW
+## <a name="etw"></a>ETW
 ---
-### Erstellen einer Echtzeit-ETW-Sitzung über ein Websocket
+### <a name="create-a-realtime-etw-session-over-a-websocket"></a>Erstellen einer Echtzeit-ETW-Sitzung über ein Websocket
 
 **Anforderung**
 
@@ -895,7 +911,7 @@ HTTP-Statuscode      | Beschreibung
 * HoloLens
 * IoT
 
-### ETW-WebSocket-Befehle
+### <a name="etw-websocket-commands"></a>ETW-WebSocket-Befehle
 Diese Befehle werden vom Client an den Server gesendet.
 
 Befehl | Beschreibung
@@ -945,7 +961,7 @@ Beispiel:
 ```
 
 ---
-### Auflisten der registrierten ETW-Anbieter
+### <a name="enumerate-the-registered-etw-providers"></a>Auflisten der registrierten ETW-Anbieter
 
 **Anforderung**
 
@@ -996,7 +1012,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Auflisten der benutzerdefinierten ETW-Anbieter, die von der Plattform verfügbar gemacht werden.
+### <a name="enumerate-the-custom-etw-providers-exposed-by-the-platform"></a>Auflisten der benutzerdefinierten ETW-Anbieter, die von der Plattform verfügbar gemacht werden.
 
 **Anforderung**
 
@@ -1044,9 +1060,9 @@ GET | /api/etw/customproviders
 * IoT
 
 ---
-## Betriebssysteminformationen
+## <a name="os-information"></a>Betriebssysteminformationen
 ---
-### Abrufen des Computernamens
+### <a name="get-the-machine-name"></a>Abrufen des Computernamens
 
 **Anforderung**
 
@@ -1096,7 +1112,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Abrufen der Betriebssysteminformationen
+### <a name="get-the-operating-system-information"></a>Abrufen der Betriebssysteminformationen
 
 **Anforderung**
 
@@ -1152,7 +1168,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Abrufen der Gerätefamilie 
+### <a name="get-the-device-family"></a>Abrufen der Gerätefamilie 
 
 **Anforderung**
 
@@ -1206,7 +1222,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Festlegen des Computernamens
+### <a name="set-the-machine-name"></a>Festlegen des Computernamens
 
 **Anforderung**
 
@@ -1252,9 +1268,9 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-## Leistungsdaten
+## <a name="performance-data"></a>Leistungsdaten
 ---
-### Abrufen der Liste der ausgeführten Prozesse
+### <a name="get-the-list-of-running-processes"></a>Abrufen der Liste der ausgeführten Prozesse
 
 **Anforderung**
 
@@ -1315,7 +1331,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Abrufen der Leistungsstatistik des Systems
+### <a name="get-the-system-performance-statistics"></a>Abrufen der Leistungsstatistik des Systems
 
 **Anforderung**
 
@@ -1394,9 +1410,9 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-## Stromversorgung
+## <a name="power"></a>Stromversorgung
 ---
-### Abrufen des aktuellen Akkustatus
+### <a name="get-the-current-battery-state"></a>Abrufen des aktuellen Akkustatus
 
 **Anforderung**
 
@@ -1447,13 +1463,13 @@ HTTP-Statuscode      | Beschreibung
 <br />
 **Verfügbare Gerätefamilien**
 
+* Windows Mobile
 * Windows-Desktop
 * HoloLens
 * IoT
-* Mobilgerät
 
 ---
-### Abrufen des aktiven Energieschemas
+### <a name="get-the-active-power-scheme"></a>Abrufen des aktiven Energieschemas
 
 **Anforderung**
 
@@ -1499,7 +1515,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Abrufen des Unterwerts für ein Energieschema
+### <a name="get-the-sub-value-for-a-power-scheme"></a>Abrufen des Unterwerts für ein Energieschema
 
 **Anforderung**
 
@@ -1542,7 +1558,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Abrufen des Energiestatus des Systems
+### <a name="get-the-power-state-of-the-system"></a>Abrufen des Energiestatus des Systems
 
 **Anforderung**
 
@@ -1589,7 +1605,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Festlegen des aktiven Energieschemas
+### <a name="set-the-active-power-scheme"></a>Festlegen des aktiven Energieschemas
 
 **Anforderung**
 
@@ -1634,7 +1650,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Festlegen des Unterwerts für ein Energieschema
+### <a name="set-the-sub-value-for-a-power-scheme"></a>Festlegen des Unterwerts für ein Energieschema
 
 **Anforderung**
 
@@ -1678,7 +1694,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Abrufen eines Berichts zur Ruhezustandsuntersuchung
+### <a name="get-a-sleep-study-report"></a>Abrufen eines Berichts zur Ruhezustandsuntersuchung
 
 **Anforderung**
 
@@ -1721,7 +1737,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Auflisten der verfügbaren Berichte zu Ruhezustandsuntersuchungen
+### <a name="enumerate-the-available-sleep-study-reports"></a>Auflisten der verfügbaren Berichte zu Ruhezustandsuntersuchungen
 
 **Anforderung**
 
@@ -1772,7 +1788,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Abrufen der Transformation der Ruhezustandsuntersuchung
+### <a name="get-the-sleep-study-transform"></a>Abrufen der Transformation der Ruhezustandsuntersuchung
 
 **Anforderung**
 
@@ -1815,9 +1831,9 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-## Fernbedienung
+## <a name="remote-control"></a>Fernbedienung
 ---
-### Neustarten des Zielcomputers
+### <a name="restart-the-target-computer"></a>Neustarten des Zielcomputers
 
 **Anforderung**
 
@@ -1859,7 +1875,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Herunterfahren des Zielcomputers
+### <a name="shut-down-the-target-computer"></a>Herunterfahren des Zielcomputers
 
 **Anforderung**
 
@@ -1903,9 +1919,9 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-## Task-Manager
+## <a name="task-manager"></a>Task-Manager
 ---
-### Starten einer Modern App
+### <a name="start-a-modern-app"></a>Starten einer Modern App
 
 **Anforderung**
 
@@ -1954,7 +1970,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Beenden einer Modern App
+### <a name="stop-a-modern-app"></a>Beenden einer Modern App
 
 **Anforderung**
 
@@ -2003,9 +2019,9 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-## Netzwerk
+## <a name="networking"></a>Netzwerk
 ---
-### Abrufen der aktuellen IP-Konfiguration
+### <a name="get-the-current-ip-configuration"></a>Abrufen der aktuellen IP-Konfiguration
 
 **Anforderung**
 
@@ -2091,7 +2107,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 --
-### Auflisten der Drahtlos-Netzwerkschnittstellen
+### <a name="enumerate-wireless-network-interfaces"></a>Auflisten der Drahtlos-Netzwerkschnittstellen
 
 **Anforderung**
 
@@ -2153,7 +2169,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Auflisten von Drahtlosnetzwerken
+### <a name="enumerate-wireless-networks"></a>Auflisten von Drahtlosnetzwerken
 
 **Anforderung**
 
@@ -2223,7 +2239,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Herstellen der Verbindung mit einem WLAN-Netzwerk und Trennen der Verbindung
+### <a name="connect-and-disconnect-to-a-wi-fi-network"></a>Herstellen der Verbindung mit einem WLAN-Netzwerk und Trennen der Verbindung
 
 **Anforderung**
 
@@ -2273,7 +2289,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Löschen eines WLAN-Profils
+### <a name="delete-a-wi-fi-profile"></a>Löschen eines WLAN-Profils
 
 **Anforderung**
 
@@ -2320,9 +2336,9 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-## Windows-Fehlerberichterstattung (WER)
+## <a name="windows-error-reporting-wer"></a>Windows-Fehlerberichterstattung (WER)
 ---
-### Herunterladen einer WER-Datei (Windows Error Reporting)
+### <a name="download-a-windows-error-reporting-wer-file"></a>Herunterladen einer WER-Datei (Windows Error Reporting)
 
 **Anforderung**
 
@@ -2373,7 +2389,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Auflisten von Dateien in einem Bericht zur Windows-Fehlerberichterstattung (WER)
+### <a name="enumerate-files-in-a-windows-error-reporting-wer-report"></a>Auflisten von Dateien in einem Bericht zur Windows-Fehlerberichterstattung (WER)
 
 **Anforderung**
 
@@ -2428,7 +2444,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Auflisten der Berichte zur Windows-Fehlerberichterstattung (WER)
+### <a name="list-the-windows-error-reporting-wer-reports"></a>Auflisten der Berichte zur Windows-Fehlerberichterstattung (WER)
 
 **Anforderung**
 
@@ -2486,9 +2502,9 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-## Windows Performance Recorder (WPR) 
+## <a name="windows-performance-recorder-wpr"></a>Windows Performance Recorder (WPR) 
 ---
-### Starten der Ablaufverfolgung mit einem benutzerdefinierten Profil
+### <a name="start-tracing-with-a-custom-profile"></a>Starten der Ablaufverfolgung mit einem benutzerdefinierten Profil
 
 **Anforderung**
 
@@ -2540,7 +2556,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Starten einer Startleistungs-Ablaufverfolgungssitzung
+### <a name="start-a-boot-performance-tracing-session"></a>Starten einer Startleistungs-Ablaufverfolgungssitzung
 
 **Anforderung**
 
@@ -2596,7 +2612,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Beenden einer Startleistungs-Ablaufverfolgungssitzung
+### <a name="stop-a-boot-performance-tracing-session"></a>Beenden einer Startleistungs-Ablaufverfolgungssitzung
 
 **Anforderung**
 
@@ -2621,11 +2637,11 @@ GET | /api/wpr/boottrace
 
 **Antwort**
 
-- Gibt die ETL-Ablaufverfolgungsdatei zurück.
+-  Keine.  **Hinweis** Hierbei handelt es sich um einen Vorgang mit langer Ausführungsdauer.  Er wird wieder verfügbar, wenn der ETL-Schreibvorgang auf der Festplatte abgeschlossen ist.
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -2641,7 +2657,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Starten einer Leistungs-Ablaufverfolgungssitzung
+### <a name="start-a-performance-tracing-session"></a>Starten einer Leistungs-Ablaufverfolgungssitzung
 
 **Anforderung**
 
@@ -2697,7 +2713,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Beenden einer Leistungs-Ablaufverfolgungssitzung
+### <a name="stop-a-performance-tracing-session"></a>Beenden einer Leistungs-Ablaufverfolgungssitzung
 
 **Anforderung**
 
@@ -2742,7 +2758,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Abrufen des Status einer Ablaufverfolgungssitzung
+### <a name="retrieve-the-status-of-a-tracing-session"></a>Abrufen des Status einer Ablaufverfolgungssitzung
 
 **Anforderung**
 
@@ -2794,7 +2810,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Aufführen abgeschlossener Ablaufverfolgungssitzungen (ETLs)
+### <a name="list-completed-tracing-sessions-etls"></a>Aufführen abgeschlossener Ablaufverfolgungssitzungen (ETLs)
 
 **Anforderung**
 
@@ -2851,7 +2867,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Herunterladen einer Ablaufverfolgungssitzung (ETL)
+### <a name="download-a-tracing-session-etl"></a>Herunterladen einer Ablaufverfolgungssitzung (ETL)
 
 **Anforderung**
 
@@ -2900,7 +2916,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Löschen einer Ablaufverfolgungssitzung (ETL)
+### <a name="delete-a-tracing-session-etl"></a>Löschen einer Ablaufverfolgungssitzung (ETL)
 
 **Anforderung**
 
@@ -2949,9 +2965,9 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-## DNS-SD-Tags 
+## <a name="dns-sd-tags"></a>DNS-SD-Tags 
 ---
-### Anzeigen von Tags
+### <a name="view-tags"></a>Anzeigen von Tags
 
 **Anforderung**
 
@@ -3004,7 +3020,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Löschen von Tags
+### <a name="delete-tags"></a>Löschen von Tags
 
 **Anforderung**
 
@@ -3049,7 +3065,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Löschen eines Tags
+### <a name="delete-tag"></a>Löschen eines Tags
 
 **Anforderung**
 
@@ -3095,7 +3111,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
  
 ---
-### Hinzufügen eines Tags
+### <a name="add-a-tag"></a>Hinzufügen eines Tags
 
 **Anforderung**
 
@@ -3141,10 +3157,10 @@ HTTP-Statuscode      | Beschreibung
 * HoloLens
 * IoT
 
-## App-Datei-Explorer
+## <a name="app-file-explorer"></a>App-Datei-Explorer
 
 ---
-### Abrufen bekannter Ordner
+### <a name="get-known-folders"></a>Abrufen bekannter Ordner
 
 **Anforderung**
 
@@ -3194,7 +3210,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Abrufen von Dateien
+### <a name="get-files"></a>Abrufen von Dateien
 
 **Anforderung**
 
@@ -3254,7 +3270,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Herunterladen einer Datei
+### <a name="download-a-file"></a>Herunterladen einer Datei
 
 **Anforderung**
 
@@ -3302,7 +3318,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Umbenennen einer Datei
+### <a name="rename-a-file"></a>Umbenennen einer Datei
 
 **Anforderung**
 
@@ -3354,7 +3370,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Löschen einer Datei
+### <a name="delete-a-file"></a>Löschen einer Datei
 
 **Anforderung**
 
@@ -3404,7 +3420,7 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Hochladen einer Datei
+### <a name="upload-a-file"></a>Hochladen einer Datei
 
 **Anforderung**
 
@@ -3451,7 +3467,6 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 
-
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

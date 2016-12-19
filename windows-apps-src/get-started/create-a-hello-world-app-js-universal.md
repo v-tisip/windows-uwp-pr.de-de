@@ -2,15 +2,15 @@
 author: GrantMeStrength
 ms.assetid: CFB3601D-3459-465F-80E2-520F57B88F62
 title: Create a "Hello, world" app (JS)
-description: "In diesem Lernprogramm erfahren Sie, wie Sie JavaScript und HTML zum Erstellen einer einfachen &\\#0034;Hello, World&\\#0034;-App für die universelle Windows-Plattform (UWP) unter Windows10 verwenden."
+description: "In diesem Lernprogramm erfahren Sie, wie Sie JavaScript und HTML zum Erstellen einer einfachen &\\#0034;Hello, World&\\#0034;-App für die universelle Windows-Plattform (UWP) unter Windows 10 verwenden."
 translationtype: Human Translation
-ms.sourcegitcommit: 7b4676e5c5a66450b321ab6f5f8670f9491b7a9d
-ms.openlocfilehash: 31bd2d40750e5acf09679d8ff5ea1a1540f60934
+ms.sourcegitcommit: 1a4aea3d31bad97fa0933e1274c037a4bb8d81bb
+ms.openlocfilehash: ad34b1bc62abf6c93f5124e774ad374f5b767f2c
 
 ---
-# Erstellen der App „Hello, world“ (JS)
+# <a name="create-a-hello-world-app-js"></a>Erstellen der App „Hello, world“ (JS)
 
-In diesem Lernprogramm erfahren Sie, wie Sie JavaScript und HTML zum Erstellen einer einfachen „Hello, World“-App für die universelle Windows-Plattform (UWP) unter Windows 10 verwenden. Mit nur einem Projekt in Microsoft Visual Studio können Sie eine App erstellen, die auf allen Geräten mit Windows10 ausgeführt werden kann.
+In diesem Lernprogramm erfahren Sie, wie Sie JavaScript und HTML zum Erstellen einer einfachen „Hello, World“-App für die universelle Windows-Plattform (UWP) unter Windows 10 verwenden. Mit nur einem Projekt in Microsoft Visual Studio können Sie eine App erstellen, die auf allen Geräten mit Windows 10 ausgeführt werden kann.
 
 Hier erfahren Sie Folgendes:
 
@@ -20,14 +20,13 @@ Hier erfahren Sie Folgendes:
 -   Ausführen des Projekts auf dem lokalen Desktop und dem Phone Emulator in Visual Studio
 -   Verwenden einer Windows-Bibliothek für JavaScript-Steuerelemente
 
-## Vorbereitung
+## <a name="before-you-start"></a>Vorbereitung
 
 -   [Was ist eine universelle Windows-App](whats-a-uwp.md)?
--   [Neuigkeiten in Windows10](https://dev.windows.com/whats-new-windows-10-dev-preview)?
--   Zum Durcharbeiten dieses Lernprogramms benötigen Sie Windows 10 und Visual Studio 2015. [Vorbereiten](get-set-up.md).
+-   Zum Durcharbeiten dieses Lernprogramms benötigen Sie Windows 10 und Visual Studio 2015. [Vorbereiten](get-set-up.md).
 -   Außerdem wird davon ausgegangen, dass Sie das Standardfensterlayout in Visual Studio verwenden. Wenn Sie das Standardlayout ändern, können Sie es im Menü **Fenster** mit dem Befehl **Fensterlayout zurücksetzen** wiederherstellen.
 
-## Schritt1: Erstellen eines neuen Projekts in Visual Studio
+## <a name="step-1-create-a-new-project-in-visual-studio"></a>Schritt 1: Erstellen eines neuen Projekts in Visual Studio
 
 Zunächst erstellen wir eine neue App namens `HelloWorld`. Gehen Sie dazu wie folgt vor:
 1.  Starten Sie Visual Studio 2015.
@@ -62,14 +61,14 @@ Doppelklicken Sie zum Anzeigen und Bearbeiten der Dateien auf die gewünschte Da
 
 Diese Dateien werden für alle UWP-Apps mit JavaScript benötigt. Sie sind Teil jedes Projekts, das Sie mit Visual Studio erstellen.
 
-## Schritt2: Starten der App
+## <a name="step-2-launch-the-app"></a>Schritt 2: Starten der App
 
 
 Sie haben nun eine sehr einfache App erstellt. Dies ist eine guter Zeitpunkt zum Erstellen, Bereitstellen und Starten Ihrer App, um sie in Aktion zu sehen. Sie können Ihre App auf dem lokalen Computer, in einem Simulator oder Emulator oder auf einem Remotegerät debuggen. Dies ist das Zielgerätmenü in Visual Studio.
 
 ![Dropdownliste mit Zielgeräten zum Debuggen Ihrer App](images/uap-debug.png)
 
-### Starten der App auf einem Desktop-Gerät
+### <a name="start-the-app-on-a-desktop-device"></a>Starten der App auf einem Desktop-Gerät
 
 Standardmäßig wird die App auf dem lokalen Computer ausgeführt. Das Menü mit den Zielgeräten enthält mehrere Optionen zum Debuggen Ihrer App auf Geräten der Desktopfamilie.
 
@@ -112,15 +111,15 @@ Viel zu bieten hat die App zwar noch nicht, aber trotzdem: Herzlichen Glückwuns
 
    Schließen Sie das App-Fenster.
 
-### Starten der App in einem Emulator für mobile Geräte
+### <a name="start-the-app-on-a-mobile-device-emulator"></a>Starten der App in einem Emulator für mobile Geräte
 
-Ihre App kann auf jedem Windows10-Gerät ausgeführt werden. Wir sehen uns nun an, wie sie auf einem Windows Phone dargestellt wird.
+Ihre App kann auf jedem Windows 10-Gerät ausgeführt werden. Wir sehen uns nun an, wie sie auf einem Windows Phone dargestellt wird.
 
 Zusätzlich zu den Optionen zum Debuggen auf einem Desktopgerät enthält Visual Studio Optionen zum Bereitstellen und Debuggen Ihrer App auf einem physischen mobilen Gerät, das an den Computer angeschlossen ist, oder in einem Emulator für mobile Geräte. Sie können zwischen Emulatoren für Geräte mit unterschiedlichen Arbeitsspeicher- und Bildschirmkonfigurationen wählen.
 
 -   **Gerät**
--   **Emulator <SDK version> WVGA 4Zoll 512MB**
--   **Emulator <SDK version> WVGA 4Zoll 1GB**
+-   **Emulator <SDK version> WVGA 4 Zoll 512 MB**
+-   **Emulator <SDK version> WVGA 4 Zoll 1 GB**
 -   usw. (verschiedene Emulatoren mit anderen Konfigurationen)
 
 (Sollten diese Emulatoren nicht angezeigt werden, vergewissern Sie sich, dass die Entwicklungstools für universelle Windows-Apps installiert sind. Weitere Informationen finden Sie unter [Vorbereiten](get-set-up.md).)
@@ -141,7 +140,7 @@ Visual Studio startet den ausgewählten Emulator, stellt dann die App bereit und
 
 ![Erster App-Bildschirm auf dem mobilen Gerät](images/helloworld-1-winjs-phone.png)
 
-## Schritt3: Anpassen der Startseite
+## <a name="step-3-modify-your-start-page"></a>Schritt 3: Anpassen der Startseite
 
 Eine der Dateien, die Visual Studio für Sie erstellt hat, ist **index.html** (die Startseite Ihrer App). Wenn die App ausgeführt wird, zeigt sie den Inhalt der Startseite an. Die Startseite enthält auch Verweise auf die Codedateien und Stylesheets der App. Hier sehen Sie die Startseite, die Visual Studio für Sie erstellt hat:
 
@@ -187,11 +186,11 @@ Fügen wir der Datei „default.html“ doch ein paar neue Inhalte hinzu. Gehen 
 
 ![Die App „HelloWorld“ mit neuem Inhalt](images/helloworld-2-winjs.png)
 
-   Sie können zwar in das **input**-Element schreiben, jedoch geschieht derzeit nichts, wenn Sie auf das **button**-Element klicken. Einige Elemente, z.B. **button**, können Meldungen senden, wenn bestimmte Ereignisse eintreten. Dank dieser Ereignismeldungen können Sie mit einer Aktion auf das Ereignis reagieren. Sie fügen den Code zum Reagieren auf das Ereignis in eine Ereignishandlermethode ein.
+   Sie können zwar in das **input**-Element schreiben, jedoch geschieht derzeit nichts, wenn Sie auf das **button**-Element klicken. Einige Elemente, z. B. **button**, können Meldungen senden, wenn bestimmte Ereignisse eintreten. Dank dieser Ereignismeldungen können Sie mit einer Aktion auf das Ereignis reagieren. Sie fügen den Code zum Reagieren auf das Ereignis in eine Ereignishandlermethode ein.
 
    In den nächsten Schritten erstellen wir einen Ereignishandler für das **button**-Element, der eine personalisierte Begrüßung anzeigt. Den Ereignishandlercode fügen wir der Datei „main.js“ hinzu.
 
-## Schritt4: Erstellen eines Ereignishandlers
+## <a name="step-4-create-an-event-handler"></a>Schritt 4: Erstellen eines Ereignishandlers
 
 Bei der Erstellung unseres neuen Projekts wurde von Visual Studio die Datei „/js/main.js“ erstellt. Die Datei enthält Code zum Behandeln des Lebenszyklus der App. In diese Datei schreiben Sie außerdem zusätzlichen Code, um für die Datei „index.html“ Interaktivität zu ermöglichen.
 
@@ -261,7 +260,7 @@ Sehen Sie sich den restlichen Code in „main.js“ an. Er behandelt die [activa
 
 Definieren wir nun einen Ereignishandler für Ihr [button](https://msdn.microsoft.com/library/windows/apps/Hh453017)-Element. Unser neuer Ereignishandler ruft den Namen des Benutzers aus dem `nameInput` [input](https://msdn.microsoft.com/library/windows/apps/Hh453271)-Steuerelement ab und verwendet die Informationen, um eine Begrüßung an das `greetingOutput` **div**-Element auszugeben, das Sie im letzten Abschnitt erstellt haben.
 
-### Verwenden von Ereignissen für Touch-, Maus- und Stifteingaben
+### <a name="using-events-that-work-for-touch-mouse-and-pen-input"></a>Verwenden von Ereignissen für Touch-, Maus- und Stifteingaben
 
 In einer UWP-App müssen Sie sich keine Gedanken über die Unterschiede zwischen Toucheingaben, Mauseingaben und anderen Zeigereingabearten machen. Sie können ganz einfach gewohnte Ereignisse wie [click](https://msdn.microsoft.com/library/windows/apps/Hh441312) verwenden, da diese für alle Eingabearten funktionieren.
 
@@ -289,7 +288,7 @@ Im nächsten Schritt erstellen wir den Ereignishandler.
 
 Sie haben den Ereignishandler zu main.js hinzugefügt. Nun müssen Sie ihn registrieren.
 
-## Schritt5: Registrieren des Ereignishandlers beim App-Start
+## <a name="step-5-register-the-event-handler-when-your-app-launches"></a>Schritt 5: Registrieren des Ereignishandlers beim App-Start
 
 
 Jetzt müssen wir nur noch den Ereignishandler bei der Schaltfläche registrieren. Die empfohlene Vorgehensweise für die Registrierung eines Ereignishandlers besteht darin, den [addEventListener](https://msdn.microsoft.com/library/windows/apps/Hh441145) in Ihrem Code aufzurufen. Ein guter Zeitpunkt für die Registrierung des Ereignishandlers ist die Aktivierung der App. Wie Sie sehen, hat Visual Studio praktischerweise bereits Code in der Datei main.js für die Behandlung der App-Aktivierung generiert.
@@ -327,7 +326,7 @@ Führen Sie die App aus. Wenn Sie Ihren Namen in das Textfeld eingeben und ansch
 
 **Hinweis** Eine ausführliche Erklärung dafür, warum wir unser Ereignis im Code mithilfe von [addEventListener](https://msdn.microsoft.com/library/windows/apps/Hh441145) registrieren, anstatt das [onclick](https://msdn.microsoft.com/library/windows/apps/Hh441312)-Ereignis im HTML festzulegen, finden Sie unter [Codieren einfacher Apps](https://msdn.microsoft.com/library/windows/apps/Hh780660).
 
-## Schritt 6: Hinzufügen eines Steuerelements aus der Windows-Bibliothek für JavaScript
+## <a name="step-6-add-a-windows-library-for-javascript-control"></a>Schritt 6: Hinzufügen eines Steuerelements aus der Windows-Bibliothek für JavaScript
 
 
 Neben Standard-HTML-Steuerelementen können Sie in Ihrer App alle Steuerelemente in der [Windows-Bibliothek für JavaScript](https://msdn.microsoft.com/library/windows/apps/BR229782) verwenden, wie z. B. die Steuerelemente [WinJS.UI.DatePicker](https://msdn.microsoft.com/library/windows/apps/BR211681), [WinJS.UI.FlipView](https://msdn.microsoft.com/library/windows/apps/BR211711), [WinjS.UI.ListView](https://msdn.microsoft.com/library/windows/apps/BR211837) und [WinJS.UI.Rating](https://msdn.microsoft.com/library/windows/apps/BR211895).
@@ -361,7 +360,7 @@ Im Gegensatz zu HTML-Steuerelementen besitzen WinJS-Steuerelemente keine dedizie
 
 Jetzt ändert sich beim Klicken auf das **Rating**-Steuerelement die Bewertung, aber sonst geschieht nichts weiter. Wir wollen nun einen Ereignishandler verwenden, der etwas tut, wenn der Benutzer die Bewertung ändert.
 
-## Schritt 7: Registrieren eines Ereignishandlers für ein Steuerelement der Windows-Bibliothek für JavaScript
+## <a name="step-7-register-an-event-handler-for-a-windows-library-for-javascript-control"></a>Schritt 7: Registrieren eines Ereignishandlers für ein Steuerelement der Windows-Bibliothek für JavaScript
 
 
 Das Registrieren eines Ereignishandlers für ein WinJS-Steuerelement unterscheidet sich etwas vom Registrieren eines Ereignishandlers für ein Standard-HTML-Steuerelement. Weiter oben wurde erwähnt, dass der **onactivated**-Ereignishandler die **WinJS.UI.processAll**-Methode aufruft, um WinJS in Ihrem Markup zu initialisieren. Der **WinJS.UI.processAll**-Aufruf ist in einen Aufruf der **setPromise**-Methode eingeschlossen, wie z. B.:
@@ -490,12 +489,14 @@ Durch Einfügen Ihres Codes in eine completed-Funktion und deren Übergabe an di
 
 ![Die fertig gestellte App „Hello World“ auf einem PC](images/helloworld-5-winjs.png)
 
-## Zusammenfassung
+## <a name="summary"></a>Zusammenfassung
 
-Herzlichen Glückwunsch, Sie haben Ihre erste App für Windows10 und die UWP mit JavaScript und HTML erstellt!
+Herzlichen Glückwunsch, Sie haben Ihre erste App für Windows 10 und die UWP mit JavaScript und HTML erstellt!
+
+Nächste Schritte Die [WinJS](https://developer.microsoft.com/en-us/windows/develop/winjs)-Dokumente unterstützen Sie bei den ersten Schritten mit der Windows-Bibliothek für JavaScript.
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

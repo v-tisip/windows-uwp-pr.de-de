@@ -5,31 +5,28 @@ title: "Nächste Schritte"
 description: "Nachdem Sie Ihre erste App erstellt haben, sollten Sie sich mit dem Rest des Dev Center vertraut machen. Hier finden Sie eine Einführung in die verschiedenen Bereiche."
 keywords: Dev Center, Erste Schritte
 translationtype: Human Translation
-ms.sourcegitcommit: 1c059edde92a48af610af1033c3b18ca729410aa
-ms.openlocfilehash: 6b7985137e02a348fafabf0aaf298c5d20095bd7
+ms.sourcegitcommit: 7e76c9abd4157c22b38d79b178f5f07827d336ca
+ms.openlocfilehash: 087c298f59798010628aefc428eedf9933bb2686
 
 ---
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-# Nächste Schritte
+# <a name="whats-next"></a>Nächste Schritte
 
-Sie möchten eine App schreiben – wo fangen Sie an? Dies sind einige DevCenter-Themen, die Ihnen bei den ersten Schritten helfen. Wenn die UWP-Plattform für Sie völlig neu, schauen Sie sich einige der <a href="https://channel9.msdn.com/">Channel 9</a>-Videos an, und führen Sie einige der <a href="https://www.microsoftvirtualacademy.com">Microsoft Virtual Academy</a>-Kurse durch. Wenn Sie mit XAML und C# bereits vertraut sind, können Sie die folgenden Themen lesen, um mit dem Schreiben von Apps zu beginnen.
+Wo fangen Sie an, wenn Sie eine App schreiben und im Windows Store veröffentlichen möchten? Wenn die UWP-Plattform für Sie völlig neu ist, schauen Sie sich einige der <a href="https://channel9.msdn.com/">Channel 9</a>-Videos an, und führen Sie einige der <a href="https://www.microsoftvirtualacademy.com">Microsoft Virtual Academy</a>-Kurse durch. Wenn Sie bereits mit XAML und C# vertraut sind, können Sie beginnen, indem Sie die folgenden Themen lesen oder direkt [einige Beispiele herunterladen](https://msdn.microsoft.com/windows/uwp/get-started/get-uwp-app-samples).
 
-Unsere Empfehlung besteht darin, dass Sie sich die UWP-Themen ansehen, um ein Gefühl für die Plattform zu erhalten, anschließend untersuchen, wie Sie Ihre Benutzeroberfläche erstellen können, indem Sie XAML-Steuerelemente verwenden und anpassen. Die Stärke von XAML beruht vor allem auf der Verwendung der *Datenbindung*, die die Steuerelemente mit den Informationen koppelt, die Ihre App anzeigen soll. Wenn die Windows-Plattform für Sie neu ist, ist es wichtig, dieses Konzept zu verstehen.
+Es sind zahlreiche Tools und Frameworks verfügbar, die Sie beim Schreiben von Apps unterstützen. Viele von diesen unterstützen die plattformübergreifende Entwicklung. Wenn Sie beispielsweise 2D-Spiele schreiben möchten, sollten Sie sich <a href="http://www.monogame.net">Monogame</a> anschauen. Für 3D-Spiele gibt es <a href="http://www.unity3d.com">Unity</a>. Wenn Ihr Schwerpunkt auf mobilen Geräten liegt, sollten Sie <a href="http://www.xamarin.com">Xamarin</a> in Betracht ziehen.
 
-Wenn Sie die neuesten Windows10-Programmiertechniken, z.B. das Hinzufügen von Animationen und Effekten zu Ihren Apps, kennen lernen möchten, sehen Sie sich den [Windows-Entwicklerblog](https://blogs.windows.com/buildingapps) an.
-
+Wenn Sie gerade die ersten Schritte unternehmen, empfehlen wir Ihnen, sich die UWP-Themen ansehen, um ein Gefühl für die Plattform zu erhalten. Anschließend können Sie untersuchen, wie Sie Ihre Benutzeroberfläche erstellen können, indem Sie XAML-Steuerelemente verwenden und anpassen. Für das Layout Ihrer App werden Sie XAML verwenden ([ein Lernprogramm, das Sie in XAML einführt, finden Sie hier](../layout/grid-tutorial.md). Die Hauptstärke von XAML besteht jedoch in der Verwendung der *Datenbindung*, durch die Steuerelemente mit den Informationen verbunden werden, die Ihre App anzeigen möchte. Wenn die Windows-Plattform für Sie neu ist, ist es wichtig, dass Sie dieses Konzept verstehen. 
 <table class="wdg-noborder">
 <tr>
  <td width=60><img src="images/icon3.png" width=64></td>
     <td><h2>UWP und der Lebenszyklus von UWP-Apps</h2><p>Wie wird eine App gestartet, und was passiert, wenn Sie eine weitere App starten? Hier finden Sie Informationen hierzu.</p> <ul>
     <li><a href="https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide">Anleitung für Apps für die Universelle Windows-Plattform (UWP)</a></li>
     <li><a href="https://msdn.microsoft.com/windows/uwp/launch-resume/app-lifecycle">Lebenszyklus von UWP-Apps</a></li>
-    <li><a href="https://developer.microsoft.com/windows/windows-10-for-developers">Die Highlights in Windows10</a></ul></td>  
+    <li><a href="https://developer.microsoft.com/windows/windows-10-for-developers">Die Highlights in Windows 10</a></ul></td>  
 </tr>
- 
- 
 <tr>
  <td width=60><img src="images/icon7.png" width=64></td>
     <td><h2>Benutzerumgebung (UX) und Benutzeroberfläche (UI)</h2><p>Welche Steuerelemente sind verfügbar, und wie können sie verwendet werden? In diesen Themen wird beschrieben, wie Steuerelemente und Code miteinander funktionieren und Sie diese an das Erscheinungsbild Ihrer App anpassen können.</p> <ul>
@@ -42,8 +39,6 @@ Wenn Sie die neuesten Windows10-Programmiertechniken, z.B. das Hinzufügen von A
       <li><a href="https://developer.microsoft.com/windows/projects/campaigns/welcome-toolbox">Verwenden Sie das UWP Community Toolkit für eine Auswahl vordefinierter Steuerelemente und Muster</a></li>
     </ul></td>  
 </tr>
- 
- 
 <tr>
  <td width=60><img src="images/icon6.png" width=64></td>
     <td><h2>Daten und Dienste</h2><p>Erfahren Sie mehr über die Datenbindung, mit der Ihr Code Listen und Raster automatisch ausfüllen kann. Erfahren Sie, wie Sie Verknüpfungen mit externen Ressourcen herstellen können, um Daten für Ihre Apps abrufen zu können.</p> <ul>
@@ -52,8 +47,6 @@ Wenn Sie die neuesten Windows10-Programmiertechniken, z.B. das Hinzufügen von A
      <li><a href="https://msdn.microsoft.com/windows/uwp/data-access/index">Datenzugriff</a></li>
     </ul></td>  
 </tr>
- 
-
 <tr>
  <td width=60><img src="images/icon4.png" width=64></td>
     <td><h2>Publishing</h2><p>Teilen Sie Ihre Arbeit mit der ganzen Welt, und verdienen Sie Geld. Wir erklären Ihnen, wie Sie Ihre App in den Store hochladen können.</p> <ul>
@@ -61,7 +54,6 @@ Wenn Sie die neuesten Windows10-Programmiertechniken, z.B. das Hinzufügen von A
     <li><a href="https://msdn.microsoft.com/windows/uwp/packaging/index">Verpacken von Apps</a></li>
     </ul></td>  
 </tr>
- 
 <tr>
  <td width=60><img src="images/icon2.png" width=64></td>
     <td><h2>Weitere Ressourcen</h2><p>Beispiele, Lernprogramme, Videos, weitere Tools und SDKs. Führen Sie Ihre Apps auf die nächste Ebene.</p>
@@ -72,23 +64,33 @@ Wenn Sie die neuesten Windows10-Programmiertechniken, z.B. das Hinzufügen von A
     <li><a href="https://msdn.microsoft.com/library/windows/apps/bg124285.aspx">API-Referenz</a></li>
      <li><a href="https://msdn.microsoft.com/windows/uwp/xbox-apps/index">Schreiben von Apps für Xbox One</a></li>
      <li><a href="https://www.microsoft.com/microsoft-hololens/developers">Entwickeln für HoloLens</a></li>
-     <li><a href="https://msdn.microsoft.com/windows/uwp/porting/index">Portieren von Apps auf Windows10</a></li>
+     <li><a href="https://msdn.microsoft.com/windows/uwp/porting/index">Portieren von Apps auf Windows 10</a></li>
       <li><a href="https://msdn.microsoft.com/windows/uwp/enterprise/index">Schreiben von Apps für Unternehmen</a></li>
-      <li><a href="https://blogs.windows.com/buildingapps/2016/08/17/introducing-the-uwp-community-toolkit/#D1IfVxCZMQGZqlc7.97">Der UWP Community Toolkit</a></li>
+      <li><a href="https://blogs.windows.com/buildingapps/2016/08/17/introducing-the-uwp-community-toolkit/#D1IfVxCZMQGZqlc7.97">UWP Community Toolkit</a></li>
     </ul>
     </td>  
 </tr>
- 
-
-
 </table>
 
 <hr>
 
-## Unterstützung im Dev Center
+## <a name="windows-developer-blog"></a>Windows-Entwicklerblog
+
+Im [Windows-Entwicklerblog](https://blogs.windows.com/buildingapps) werden regelmäßig Beiträge zu den neuesten Codierungstechniken, Projektideen und Tools veröffentlicht. Im Folgenden werden einige Beiträge aufgelistet, die Sie möglicherweise für Ihre Erkundung der Entwicklung auf Windows nützlich finden.
+
+* [Animationen mit der Visual-Ebene](https://blogs.windows.com/buildingapps/2016/09/16/animations-with-the-visual-layer/#JM2XkQcL7MRSXe3X.97)
+* [Interoperabilität zwischen XAML und der Visual-Ebene](https://blogs.windows.com/buildingapps/2016/08/26/interop-between-xaml-and-the-visual-layer/#ue6O7MWpqrVFE81K.97)
+* [Erstellen ansprechender Effekte für UWP](https://blogs.windows.com/buildingapps/2016/09/12/creating-beautiful-effects-for-uwp/#85jsfw6PFXX825rR.97)
+* [Einfaches Erstellen ansprechender Apps mit Windows.UI](https://blogs.windows.com/buildingapps/2016/08/23/beautiful-apps-made-possible-and-easy-with-windows-ui/#GBREkRSBwsRvi2uL.97)
+* [Optimieren Ihrer App durch Animationen und Audiohinweise](https://blogs.windows.com/buildingapps/2016/08/09/polishing-your-app-with-animations-and-audio-cues/#hziKxt2xPwUE1oqU.97) 
+* [Hinzufügen von Farben zum Design](https://blogs.windows.com/buildingapps/2016/07/28/adding-color-to-your-design/#HcPqMlfPsuKETOIo.97)
+
+<hr>
+
+## <a name="finding-help-in-the-dev-center"></a>Unterstützung im Dev Center
 
 Das [Microsoft Dev Center](http://devcenter.microsoft.com) enthält zahlreiche Dokumentationen für viele verschiedene Tools, Frameworks und Plattformen. Bei der Suche nach Themen und Beispielen sollten Sie darauf achten, UWP-spezifische Inhalte zu lesen. Wie können Sie sicher sein, dass Sie die richtigen Inhalte lesen?
-Die URLs von Themen mit konzeptionellen Inhalten, d.h. anderen als API-Referenzinhalte, enthalten „UWP“. Die Pfade von API-Inhalten enthalten Windows-Runtime APIs. 
+Die URLs von Themen mit konzeptionellen Inhalten, d. h. anderen als API-Referenzinhalte, enthalten „UWP“. Die Pfade von API-Inhalten enthalten Windows-Runtime APIs. 
 
 ![Ein Beispiel für ein UWP-Konzeptthema](images/devcenter-topic2.png)
 
@@ -100,7 +102,7 @@ Wenn Sie eine Suchmaschine verwenden, führt Sie das Anhängen von „Windows-Ap
 <hr>
 
 
-## Wichtig Dev Center-Themen
+## <a name="important-dev-center-topics"></a>Wichtig Dev Center-Themen
 
 Dies ist eine Liste der wichtigsten Abschnitte des Dev Center. 
 
@@ -162,6 +164,10 @@ Dies ist eine Liste der wichtigsten Abschnitte des Dev Center.
 
 
 
-<!--HONumber=Nov16_HO1-->
+
+
+
+
+<!--HONumber=Dec16_HO1-->
 
 

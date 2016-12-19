@@ -1,14 +1,14 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: CAC6A7C7-3348-4EC4-8327-D47EB6E0C238
 title: Zugreifen auf die SD-Karte
 description: "Sie können weniger wichtige Daten auf einer optionalen microSD-Karte speichern und auf diese zugreifen. Dies gilt besonders für kostengünstige Geräte, die nur über einen begrenzten internen Speicher verfügen."
 translationtype: Human Translation
-ms.sourcegitcommit: de0b23cfd8f6323d3618c3424a27a7d0ce5e1374
-ms.openlocfilehash: c3ce9103f78a78e95214239e41a302ccd0e59796
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: a13f351af3cba8d3d9e645a6f6040dff6e81e1ff
 
 ---
-# Zugreifen auf die SD-Karte
+# <a name="access-the-sd-card"></a>Zugreifen auf die SD-Karte
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -23,15 +23,15 @@ Sie können Dateien mithilfe der folgenden Methoden auf der optionalen SD-Karte 
 
 - Die [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/br227346)-APIs.
 
-## Zugriffsmöglichkeiten auf der SD-Karte
+## <a name="what-you-can-and-cant-access-on-the-sd-card"></a>Zugriffsmöglichkeiten auf der SD-Karte
 
-### Zugriffsmöglichkeiten
+### <a name="what-you-can-access"></a>Zugriffsmöglichkeiten
 
 - Die App kann nur Dateien mit den Dateitypen lesen und schreiben, die in der App-Manifestdatei für die Verarbeitung registriert sind.
 
 - Mit der App können auch Ordner erstellt und verwaltet werden.
 
-### Kein Zugriff
+### <a name="what-you-cant-access"></a>Kein Zugriff
 
 - Systemordner und die darin enthaltenen Dateien sind für die App nicht sichtbar, und sie kann nicht darauf zugreifen.
 
@@ -39,7 +39,7 @@ Sie können Dateien mithilfe der folgenden Methoden auf der optionalen SD-Karte 
 
 - Außerdem kann die App die Dokumentbibliothek nicht sehen und nicht über [**KnownFolders.DocumentsLibrary**](https://msdn.microsoft.com/library/windows/apps/br227152) darauf zugreifen. Sie können aber auf der SD-Karte auf die Dokumentbibliothek zugreifen, indem Sie das Dateisystem durchlaufen.
 
-## Sicherheits- und Datenschutzaspekte
+## <a name="security-and-privacy-considerations"></a>Sicherheits- und Datenschutzaspekte
 
 Wenn eine App Dateien an einem globalen Speicherort auf der SD-Karte speichert, werden diese Dateien nicht verschlüsselt und sind daher für andere Apps normalerweise zugänglich.
 
@@ -49,7 +49,7 @@ Wenn eine App Dateien an einem globalen Speicherort auf der SD-Karte speichert, 
 
 Wenn eine auf der SD-Karte installierte App Dateien in [**LocalFolder**](https://msdn.microsoft.com/library/windows/apps/br241621) speichert, werden diese Dateien jedoch verschlüsselt und sind für andere Apps nicht zugänglich.
 
-## Anforderungen für den Dateizugriff auf der SD-Karte
+## <a name="requirements-for-accessing-files-on-the-sd-card"></a>Anforderungen für den Dateizugriff auf der SD-Karte
 
 Zum Zugreifen auf Dateien auf der SD-Karte müssen Sie normalerweise die folgenden Dinge angeben.
 
@@ -60,9 +60,9 @@ Verwenden Sie die vorangehende Methode außerdem für den Zugriff auf Mediendate
 
 Um auf Mediendateien (Musik, Fotos oder Videos) zuzugreifen, die in den Medienbibliotheken in bekannten Ordnern gespeichert sind, müssen Sie nur die zugeordnete Funktion in der App-Manifestdatei angeben: **musicLibrary**, **picturesLibrary** oder **videoLibrary**. Es ist nicht erforderlich, die **removableStorage**-Funktion anzugeben. Weitere Informationen finden Sie unter [Dateien und Ordner in den Musik-, Bild- und Videobibliotheken](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md).
 
-## Zugreifen auf Dateien auf der SD-Karte
+## <a name="accessing-files-on-the-sd-card"></a>Zugreifen auf Dateien auf der SD-Karte
 
-### Abrufen eines Verweises auf die SD-Karte
+### <a name="getting-a-reference-to-the-sd-card"></a>Abrufen eines Verweises auf die SD-Karte
 
 Der Ordner [**KnownFolders.RemovableDevices**](https://msdn.microsoft.com/library/windows/apps/br227158) ist der Stamm-[**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) für die Wechselmedien, die derzeit an das Gerät angeschlossen sind. Wenn eine SD-Karte vorhanden ist, stellt der erste (und einzige) **StorageFolder** unter dem Ordner **KnownFolders.RemovableDevices** die SD-Karte dar.
 
@@ -89,7 +89,7 @@ using Windows.Storage;
             }
 ```
 
-### Abfragen des Inhalts der SD-Karte
+### <a name="querying-the-contents-of-the-sd-card"></a>Abfragen des Inhalts der SD-Karte
 
 Die SD-Karte kann viele Ordner und Dateien enthalten, die nicht als bekannte Ordner erkannt werden und nicht abgefragt werden können, indem ein Speicherort unter [**KnownFolders**](https://msdn.microsoft.com/library/windows/apps/br227151) verwendet wird. Zum Auffinden von Dateien muss die App den Inhalt der Karte aufzählen, indem sie das Dateisystem rekursiv durchläuft. Verwenden Sie [**GetFilesAsync (CommonFileQuery.DefaultQuery)**](https://msdn.microsoft.com/library/windows/apps/br227274) und [**GetFoldersAsync (CommonFolderQuery.DefaultQuery)**](https://msdn.microsoft.com/library/windows/apps/br227281), um die Inhalte der SD-Karte auf effiziente Weise abzurufen.
 
@@ -103,7 +103,7 @@ Beim Zugreifen auf das Dateisystem auf der SD-Karte mit einem Pfad, der von [**K
 
 -   Für die [**GetFileFromPathAsync**](https://msdn.microsoft.com/library/windows/apps/br227206)-Methode tritt ein Fehler auf, wenn Sie die Dateierweiterung der Datei, auf die Sie zugreifen möchten, nicht für die Verarbeitung registriert haben.
 
-## Identifizieren einer individuellen SD-Karte
+## <a name="identifying-the-individual-sd-card"></a>Identifizieren einer individuellen SD-Karte
 
 Nach der ersten Bereitstellung der SD-Karte generiert das Betriebssystem einen eindeutigen Bezeichner für die Karte. Diese ID wird in einer Datei im Stammordner der Karte im Ordner "WPSystem" gespeichert. Mithilfe dieser ID kann eine App bestimmen, ob die Karte erkannt wird. Wenn die Karte von einer App erkannt wird, kann die App bestimmte Vorgänge, die vorher durchgeführt wurden, unter Umständen verschieben. Der Inhalt der Karte kann sich seit dem letzten Zugriff auf die Karte durch die App aber geändert haben.
 
@@ -148,6 +148,6 @@ using Windows.Storage;
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

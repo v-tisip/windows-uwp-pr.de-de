@@ -6,18 +6,18 @@ ms.assetid: FDB43EDE-C5F2-493F-952C-55401EC5172B
 label: Choose a notification delivery method
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: a61c9ce609856ff3addba557558c6bffec504ed7
+ms.sourcegitcommit: d51aacb31f41cbd9c065b013ffb95b83a6edaaf4
+ms.openlocfilehash: 71b1255c25adcb4a99d082ba5e83af60b316abe1
 
 ---
-# Auswählen einer Methode für die Übermittlung von Benachrichtigungen
+# <a name="choose-a-notification-delivery-method"></a>Auswählen einer Methode für die Übermittlung von Benachrichtigungen
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
 In diesem Artikel werden die vier Benachrichtigungsoptionen – lokal, geplant, periodisch und Push – behandelt, die Kachel- und Signalaktualisierungen sowie Popupbenachrichtigungsinhalte bereitstellen. Eine Kachel oder eine Popupbenachrichtigung kann dem Benutzer Informationen anzeigen, auch wenn der Benutzer nicht direkt mit Ihrer App beschäftigt ist. Basierend auf der Art und dem Inhalt Ihrer App sowie den Informationen, die Sie bereitstellen möchten, können Sie die am besten geeignete Benachrichtigungsmethode bzw. -methoden für Ihr Szenario bestimmen.
 
-## Übersicht über Methoden für die Benachrichtigungsübermittlung
+## <a name="notification-delivery-methods-overview"></a>Übersicht über Methoden für die Benachrichtigungsübermittlung
 
 
 Es gibt vier Mechanismen, die von einer App zum Übermitteln einer Benachrichtigung verwendet werden können:
@@ -89,38 +89,40 @@ In dieser Tabelle sind die Benachrichtigungsübermittlungstypen zusammengefasst.
 
  
 
-## Lokale Benachrichtigungen
+## <a name="local-notifications"></a>Lokale Benachrichtigungen
 
 
-Das Aktualisieren der App-Kachel oder des Signals oder das Auslösen einer Popupbenachrichtigung, während die App ausgeführt wird, stellt den einfachsten der Mechanismen zur Benachrichtigungsübermittlung dar. Dafür werden nur lokale API-Aufrufe benötigt. Für jede App kann es hilfreiche oder interessante Informationen zum Anzeigen auf der Kachel geben – auch dann, wenn sich dieser Inhalt erst ändert, nachdem der Benutzer die App gestartet hat und mit ihr interagiert. Lokale Benachrichtigungen sind auch eine gute Möglichkeit, die App-Kachel aktuell zu halten, selbst wenn Sie auch einen der anderen Benachrichtigungsmechanismen verwenden. Auf der Kachel einer Foto-App könnten z.B. Fotos aus einem kürzlich hinzugefügten Album angezeigt werden.
+Das Aktualisieren der App-Kachel oder des Signals oder das Auslösen einer Popupbenachrichtigung, während die App ausgeführt wird, stellt den einfachsten der Mechanismen zur Benachrichtigungsübermittlung dar. Dafür werden nur lokale API-Aufrufe benötigt. Für jede App kann es hilfreiche oder interessante Informationen zum Anzeigen auf der Kachel geben – auch dann, wenn sich dieser Inhalt erst ändert, nachdem der Benutzer die App gestartet hat und mit ihr interagiert. Lokale Benachrichtigungen sind auch eine gute Möglichkeit, die App-Kachel aktuell zu halten, selbst wenn Sie auch einen der anderen Benachrichtigungsmechanismen verwenden. Auf der Kachel einer Foto-App könnten z. B. Fotos aus einem kürzlich hinzugefügten Album angezeigt werden.
 
 Es empfiehlt sich, die Kachel beim ersten Start der App lokal zu aktualisieren (oder spätestens dann, wenn der Benutzer eine Änderung vornimmt, die üblicherweise auf der Kachel zu sehen ist). Indem Sie diese Änderung schon während der Verwendung der App vornehmen, stellen Sie sicher, dass die Kachel bereits auf dem neuesten Stand ist, wenn der Benutzer die App beendet.
 
 Auch wenn die API-Aufrufe lokal erfolgen, können die Benachrichtigungen auf Webbilder verweisen. Wenn das Webbild nicht zum Download verfügbar oder beschädigt ist oder nicht den Bildspezifikationen entspricht, reagieren Kacheln und Popups unterschiedlich:
 
 -   Kacheln: Die Aktualisierung wird nicht angezeigt.
--   Popup: Die Benachrichtigung wird angezeigt, allerdings mit einem Platzhalterbild.
+-   Popup: Die Benachrichtigung wird angezeigt, das Bild wird jedoch gelöscht.
 
-Obwohl lokale Benachrichtigungen nicht ablaufen, sollten Sie trotzdem eine explizite Ablaufzeit festlegen.
+Standardmäßig laufen lokale Popupbenachrichtigungen in drei Tagen und lokale Kachelbenachrichtigungen niemals ab. Es wird empfohlen, diese Standardeinstellungen mit einer expliziten Ablaufzeit zu überschreiben, die für Ihre Benachrichtigungen sinnvoll ist. (Die Ablaufzeit von Benachrichtigungen beträgt maximal drei Tage.) 
 
-Weitere Informationen finden Sie unter folgenden Themen:
+Weitere Informationen finden Sie in folgenden Themen:
 
 -   [Senden einer lokalen Kachelbenachrichtigung](tiles-and-notifications-sending-a-local-tile-notification.md)
--   [Codebeispiele für UWP (universelle Windows-Plattform)-Benachrichtigungen](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
+-   [Senden einer lokalen Popupbenachrichtigung](https://blogs.msdn.microsoft.com/tiles_and_toasts/2015/07/08/quickstart-sending-a-local-toast-notification-and-handling-activations-from-it-windows-10/)
+-   [Codebeispiele für Benachrichtigungen für die Universelle Windows-Plattform (UWP-Benachrichtigungen)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
-## Geplante Benachrichtigungen
+## <a name="scheduled-notifications"></a>Geplante Benachrichtigungen
 
 
-Geplante Benachrichtigungen sind lokale Benachrichtigungen, die den genauen Zeitpunkt angeben können, zu dem eine Kachel aktualisiert oder eine Popupbenachrichtigung angezeigt werden soll. Geplante Benachrichtigungen eignen sich ideal für Situationen, in denen der zu aktualisierende Inhalt im Voraus bekannt ist (z.B. eine Besprechungseinladung). Wenn Sie den Benachrichtigungsinhalt vorher nicht kennen, müssen Sie eine Pushbenachrichtigung oder eine lokale Benachrichtigung verwenden.
+Geplante Benachrichtigungen sind lokale Benachrichtigungen, die den genauen Zeitpunkt angeben können, zu dem eine Kachel aktualisiert oder eine Popupbenachrichtigung angezeigt werden soll. Geplante Benachrichtigungen eignen sich ideal für Situationen, in denen der zu aktualisierende Inhalt im Voraus bekannt ist (z. B. eine Besprechungseinladung). Wenn Sie den Benachrichtigungsinhalt vorher nicht kennen, müssen Sie eine Pushbenachrichtigung oder eine lokale Benachrichtigung verwenden.
 
-Geplante Benachrichtigungen laufen standardmäßig drei Tage nach ihrer Zustellung ab. Diese Standardeinstellung kann bei Bedarf mit einer anderen Ablaufzeit explizit überschrieben werden.
+Beachten Sie, dass geplante Benachrichtigungen nicht für Signalbenachrichtigungen verwendet werden können. Signalbenachrichtigungen werden am besten mithilfe lokaler, regelmäßiger oder Pushbenachrichtigungen bereitgestellt.
 
-Weitere Informationen finden Sie unter folgenden Themen:
+Geplante Benachrichtigungen laufen standardmäßig drei Tage nach Zustellung ab. Sie können diese Standardeinstellung für die Ablaufzeit für geplante Kachelbenachrichtigungen überschreiben, jedoch nicht die Ablaufzeit für geplante Popups.
 
--   [Richtlinien für geplante Benachrichtigungen](https://msdn.microsoft.com/library/windows/apps/hh761464)
--   [Codebeispiele für UWP (universelle Windows-Plattform)-Benachrichtigungen](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
+Weitere Informationen finden Sie in folgenden Themen:
 
-## Periodische Benachrichtigungen
+-   [Codebeispiele für Benachrichtigungen für die Universelle Windows-Plattform (UWP-Benachrichtigungen)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
+
+## <a name="periodic-notifications"></a>Periodische Benachrichtigungen
 
 
 Periodische Benachrichtigungen bieten Ihnen Livekachelaktualisierungen mit minimaler Investition in Clouddienst und Client. Sie stellen auch eine exzellente Methode zum Verteilen desselben Inhalts an eine große Zielgruppe dar. Ihr Clientcode gibt die URL eines Cloudspeicherorts an, von dem Windows Kachel- und Signalaktualisierungen abruft, und die Häufigkeit, mit der der Speicherort abgerufen wird. In jedem Abrufintervall wird die URL von Windows aufgerufen, um den angegebene XML-Inhalt herunterzuladen und auf der Kachel anzuzeigen.
@@ -134,28 +136,28 @@ Weitere Informationen finden Sie unter folgenden Themen:
 -   [Übersicht über regelmäßige Benachrichtigungen](tiles-and-notifications-periodic-notification-overview.md)
 -   [Codebeispiele für UWP (universelle Windows-Plattform)-Benachrichtigungen](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
-## Pushbenachrichtigungen
+## <a name="push-notifications"></a>Pushbenachrichtigungen
 
 
-Pushbenachrichtigungen eignen sich ideal zum Kommunizieren von Echtzeitdaten oder für den Benutzer personalisierten Daten. Pushbenachrichtigungen werden auch für Inhalte verwendet, die zu unvorhersehbaren Zeiten generiert werden (z.B. Eilmeldungen oder Chatnachrichten). Pushbenachrichtigungen sind auch in Situationen hilfreich, in denen Daten so zeitempfindlich sind, dass periodische Benachrichtigungen nicht geeignet wären (z.B. Spielstände während eines Spiels).
+Pushbenachrichtigungen eignen sich ideal zum Kommunizieren von Echtzeitdaten oder für den Benutzer personalisierten Daten. Pushbenachrichtigungen werden auch für Inhalte verwendet, die zu unvorhersehbaren Zeiten generiert werden (z. B. Eilmeldungen oder Chatnachrichten). Pushbenachrichtigungen sind auch in Situationen hilfreich, in denen Daten so zeitempfindlich sind, dass periodische Benachrichtigungen nicht geeignet wären (z. B. Spielstände während eines Spiels).
 
 Für Pushbenachrichtigungen ist ein Cloud-Dienst erforderlich, der Pushbenachrichtigungskanäle verwaltet und festlegt, wann und an wen Benachrichtigungen gesendet werden.
 
-Pushbenachrichtigungen laufen standardmäßig drei Tage nach dem Empfang durch die Windows-Pushbenachrichtigungsdienste (Windows Push Notification Services, WNS) ab. Diese Standardeinstellung kann bei Bedarf mit einer anderen Ablaufzeit explizit überschrieben werden.
+Pushbenachrichtigungen laufen standardmäßig drei Tage nach Empfang durch das Gerät ab. Diese Standardeinstellung kann bei Bedarf mit einer expliziten Ablaufzeit überschrieben werden. (Für Popups gilt eine maximale Ablaufzeit von drei Tagen.)
 
 Weitere Informationen finden Sie unter:
 
--   [Übersicht über die Windows-Pushbenachrichtigungsdienste (Windows Push Notification Services, WNS)](tiles-and-notifications-windows-push-notification-services--wns--overview.md)
+-   [Übersicht über Windows-Pushbenachrichtigungsdienste (Windows Push Notification Services, WNS)](tiles-and-notifications-windows-push-notification-services--wns--overview.md)
 -   [Richtlinien für Pushbenachrichtigungen](https://msdn.microsoft.com/library/windows/apps/hh761462)
--   [Codebeispiele für UWP (Universelle Windows-Plattform)-Benachrichtigungen](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
+-   [Codebeispiele für Benachrichtigungen für die Universelle Windows-Plattform (UWP-Benachrichtigungen)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 
 * [Senden einer lokalen Kachelbenachrichtigung](tiles-and-notifications-sending-a-local-tile-notification.md)
+* [Senden einer lokalen Popupbenachrichtigung](https://blogs.msdn.microsoft.com/tiles_and_toasts/2015/07/08/quickstart-sending-a-local-toast-notification-and-handling-activations-from-it-windows-10/)
 * [Richtlinien für Pushbenachrichtigungen](https://msdn.microsoft.com/library/windows/apps/hh761462)
-* [Richtlinien für geplante Benachrichtigungen](https://msdn.microsoft.com/library/windows/apps/hh761464)
 * [Richtlinien für Popupbenachrichtigungen](https://msdn.microsoft.com/library/windows/apps/hh465391)
 * [Übersicht über regelmäßige Benachrichtigungen](tiles-and-notifications-periodic-notification-overview.md)
 * [Übersicht über die Windows-Pushbenachrichtigungsdienste (Windows Push Notification Services, WNS)](tiles-and-notifications-windows-push-notification-services--wns--overview.md)
@@ -170,6 +172,6 @@ Weitere Informationen finden Sie unter:
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

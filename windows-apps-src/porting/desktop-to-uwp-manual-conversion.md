@@ -4,22 +4,22 @@ Description: Zeigt, wie Sie eine Windows-Desktopanwendung (z. B. Win32, WPF und 
 Search.Product: eADQiWindows 10XVcnh
 title: Manuelles Konvertieren einer Windows-Desktopanwendung in eine UWP-App (Universelle Windows-Plattform)
 translationtype: Human Translation
-ms.sourcegitcommit: fe96945759739e9260d0cdfc501e3e59fb915b1e
-ms.openlocfilehash: 6ca48fd829b7437fe2db8aa1251f6ed8976919ab
+ms.sourcegitcommit: ee697323af75f13c0d36914f65ba70f544d046ff
+ms.openlocfilehash: f55f3bd6479cdf076c51cf574b07bfb5ce3a805c
 
 ---
 
-# Manuelles Konvertieren Ihrer App zu UWP mithilfe der Desktop-Brücke
+# <a name="manually-convert-your-app-to-uwp-using-the-desktop-bridge"></a>Manuelles Konvertieren Ihrer App zu UWP mithilfe der Desktop-Brücke
 
-Die Verwendung von Desktop App Converter (DAC) ist praktisch und automatisch, und es ist hilfreich, wenn Unsicherheiten darüber bestehen, was das Installationsprogramm tut. Wenn Ihre App aber mithilfe von Xcopy installiert wurde, oder wenn Sie mit den Änderungen vertraut sind, die das Installationsprogramm Ihrer App am System vornimmt, können Sie sich entscheiden, ein App-Paket und -Manifest manuell zu erstellen.
+Die Verwendung von [Desktop App Converter (DAC)](desktop-to-uwp-run-desktop-app-converter.md) ist praktisch und automatisch und darüber hinaus nützlich, wenn Unsicherheiten hinsichtlich der Aktivitäten des Installationsprogramms bestehen. Wenn Ihre App jedoch mithilfe von xcopy installiert wurde, oder wenn Sie mit den Änderungen vertraut sind, die das Installationsprogramm Ihrer App am System vornimmt, können Sie ein App-Paket und -Manifest manuell erstellen. Dieser Artikel beschreibt die ersten Schritte hierfür. Hier wird auch erklärt, wie Sie Ihrer App unbeschichtete Ressourcen hinzufügen, die vom DAC nicht erfasst werden. 
 
-Im Folgenden sind die Schritte zum manuellen Erstellen eines Pakets beschrieben:
+Dies sind die ersten Schritte:
 
-## Erstellen Sie manuell ein Manifest.
+## <a name="create-a-manifest-by-hand"></a>Erstellen Sie manuell ein Manifest.
 
-Ihre _appxmanifest.xml_-Datei muss (mindestens) den folgenden Inhalt aufweisen. Ändern Sie Platzhalter, die \*\*\*SO\*\*\* formatiert sind, in eigentliche Werte für Ihre Anwendung.
+Ihre _appxmanifest.xml_-Datei muss (mindestens) den folgenden Inhalt aufweisen. Ändern Sie Platzhalter, die \*\*\*SO\*\*\* formatiert sind, in tatsächliche Werte für Ihre Anwendung.
 
-    ```XML
+```XML
     <?xml version="1.0" encoding="utf-8"?>
     <Package
        xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
@@ -55,9 +55,25 @@ Ihre _appxmanifest.xml_-Datei muss (mindestens) den folgenden Inhalt aufweisen. 
         </Application>
       </Applications>
     </Package>
-    ```
+```
 
-## Ausführen des MakeAppX-Tools
+## <a name="add-unplated-assets"></a>Hinzufügen von unbeschichteten Ressourcen
+
+Hier erfahren Sie, wie Sie die 44x44-Ressourcen für Ihre App konfigurieren, die auf der Taskleiste angezeigt werden.
+
+1. Rufen Sie die richtigen 44x44-Bilder ab, und kopieren Sie sie in den Ordner, der Ihre Bilder (d. h. Ressourcen) enthält.
+
+2. Erstellen Sie für jedes 44x44-Bild eine Kopie im selben Ordner, und hängen Sie *.targetsize-44_altform-unplated* an den Dateinamen an. Sie sollten zwei Kopien von jedem Symbol haben, jeweils spezifisch benannt. Nach Abschluss des Vorgangs könnte Ihr Ressourcenordner beispielsweise *MYAPP_44x44.png* und *MYAPP_44x44.targetsize-44_altform-unplated.png* enthalten. (Hinweis: Das erste Symbol ist das Symbol, auf das in der appxmanifest-Datei unter dem VisualElements-Attribut *Square44x44Logo* verwiesen wird.) 
+
+3.  Legen Sie in der Appxmanifest-Datei die Hintergrundfarbe für jedes von Ihnen bearbeitete Symbol auf „Transparent“ fest. Sie finden dieses Attribut unter VisualElements für die einzelnen Anwendungen.
+
+4.  Öffnen Sie CMD, ändern Sie das Verzeichnis in den Stammordner des Pakets, und erstellen Sie mit dem Befehl ```makepri createconfig /cf priconfig.xml /dq en-US``` eine priconfig.xml-Datei.
+
+5.  Bleiben Sie im Stammordner des Pakets, und erstellen Sie mit CMD mittels des Befehls ```makepri new /pr <PHYSICAL_PATH_TO_FOLDER> /cf <PHYSICAL_PATH_TO_FOLDER>\priconfig.xml``` die resources.pri-Datei(en). Der Befehl für Ihre App könnte beispielsweise wie folgt aussehen: ```makepri new /pr c:\MYAPP /cf c:\MYAPP\priconfig.xml```. 
+
+6.  Verpacken Sie Ihre AppX-Datei mithilfe der Anweisungen im nächsten Schritt, um die Ergebnisse anzuzeigen.
+
+## <a name="run-the-makeappx-tool"></a>Ausführen des MakeAppX-Tools
 
 Verwenden Sie den [App-Packager (MakeAppx.exe)](https://msdn.microsoft.com/library/windows/desktop/hh446767(v=vs.85).aspx), um ein AppX-Paket für Ihr Projekt zu generieren. MakeAppx.exe ist in der Windows 10 SDK enthalten. 
 
@@ -79,7 +95,7 @@ Führen Sie abschließend den folgenden Befehl aus:
 MakeAppx.exe pack /f mapping_filepath /p filepath.appx
 ```
 
-## Signieren des Appx-Pakets
+## <a name="sign-your-appx-package"></a>Signieren des Appx-Pakets
 
 Das Add-AppxPackage-Cmdlet erfordert, dass das bereitgestellte Anwendungspaket (.appx) signiert ist. Verwenden Sie zum Signieren des Appx-Pakets [SignTool.exe](https://msdn.microsoft.com/library/windows/desktop/aa387764(v=vs.85).aspx), die im Lieferumfang des Microsoft Windows 10 SDK enthalten ist.
 
@@ -102,6 +118,6 @@ Wenn Sie beim Ausführen von MakeCert.exe zum Eingeben eines Kennworts aufgeford
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

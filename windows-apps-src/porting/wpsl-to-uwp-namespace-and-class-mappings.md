@@ -4,22 +4,22 @@ description: "Dieses Thema enthält eine umfassende Zuordnung der Windows Phone 
 title: "Windows Phone Silverlight zu UWP – Namespace- und Klassenzuordnungen"
 ms.assetid: 33f06706-4790-48f3-a2e4-ebef9ddb61a4
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 6b33127c6b76ef820a93b200a655426a0f516b68
+ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
+ms.openlocfilehash: dcdf17263dadd71572c942bff5e795928e855c03
 
 ---
 
-# Windows Phone Silverlight zu UWP – Namespace- und Klassenzuordnungen
+# <a name="windows-phone-silverlight-to-uwp-namespace-and-class-mappings"></a>Windows Phone Silverlight zu UWP – Namespace- und Klassenzuordnungen
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Dieses Thema enthält eine umfassende Zuordnung der Windows Phone Silverlight-APIs zu den UWP (Universelle Windows-Plattform)-Entsprechungen. Im Allgemeinen erfolgt keine 1: 1-Zuordnung von Funktionen, jedoch gilt: Jede Plattform kann ggf. mehr oder weniger Funktionalität bieten als ihr Gegenstück in einem Namespace oder einer Klasse.
 
-Die Zuordnungstabelle ist hilfreich, wenn Sie in einem UWP-Projekt arbeiten und Quellcode aus einem Windows Phone Silverlight-Projekt erneut verwenden. Zwischen den beiden Plattformen gibt es Unterschiede bei den Namen von Namespaces und Klassen (einschließlich UI-Steuerelemente). In vielen Fällen ist es einfach: Sie ändern z.B. einen Namespacenamen, und der Code wird kompiliert Manchmal wird neben dem Namespacenamen auch der Name einer Klasse oder API geändert In anderen Fällen ist die Zuordnung etwas schwieriger. In seltenen Fällen muss der Ansatz geändert werden.
+Die Zuordnungstabelle ist hilfreich, wenn Sie in einem UWP-Projekt arbeiten und Quellcode aus einem Windows Phone Silverlight-Projekt erneut verwenden. Zwischen den beiden Plattformen gibt es Unterschiede bei den Namen von Namespaces und Klassen (einschließlich UI-Steuerelemente). In vielen Fällen ist es einfach: Sie ändern z. B. einen Namespacenamen, und der Code wird kompiliert Manchmal wird neben dem Namespacenamen auch der Name einer Klasse oder API geändert In anderen Fällen ist die Zuordnung etwas schwieriger. In seltenen Fällen muss der Ansatz geändert werden.
 
 **So verwenden Sie die Tabelle:  ** Suchen Sie zunächst nach dem Namen der Klasse, die Sie verwenden. Klassen werden aufgelistet, wenn es sich um eine kompliziertere Zuordnung als eine Änderung des Namespacenamens handelt. Wenn Ihre Klasse nicht aufgeführt ist, handelt es sich bei der Zuordnung nur um eine Namespaceänderung. Wenn Sie den Namespacenamen Ihrer Klasse finden, finden Sie auch den entsprechenden Namen des UWP-Namespaces. Ihre Klasse ist in diesem Namespace enthalten. Wenn der Namespace nicht aufgeführt ist, hat sich dessen Name nicht geändert.
 
-**Hinweis**  Windows10 unterstützt einen deutlich größeren Teil von .NET Framework als Windows Phone Store-Apps. Windows10 verfügt beispielsweise über mehrere System.ServiceModel.\*-Namespaces sowie über System.Net, System.Net.NetworkInformation und System.Net.Sockets.
+**Hinweis**  Windows 10 unterstützt einen deutlich größeren Teil von .NET Framework als Windows Phone Store-Apps. Windows 10 verfügt beispielsweise über mehrere System.ServiceModel.\*-Namespaces sowie über System.Net, System.Net.NetworkInformation und System.Net.Sockets.
 Außerdem profitieren Sie in einer Windows 10-App von .NET Native. Dabei handelt es sich um eine fortschrittliche Kompilierungstechnologie, mit der MSIL-Code in Computercode für die systemeigene Ausführung konvertiert wird. .NET Native-Apps starten schneller, verbrauchen weniger Arbeitsspeicher und benötigen weniger Akkuenergie als ihre MSIL-Gegenstücke.
 
 | Windows Phone Silverlight | Windows-Runtime |
@@ -62,7 +62,7 @@ Außerdem profitieren Sie in einer Windows 10-App von .NET Native. Dabei handelt
 | (MPU = **Microsoft.Phone.UserData**) <br/> **MPU.Appointments** Klasse | [**AppointmentCalendar**](https://msdn.microsoft.com/library/windows/apps/dn596134) Klasse |
 | (MPU = **Microsoft.Phone.UserData**) <br/> **MPU.Contacts** Klasse | [**ContactStore**](https://msdn.microsoft.com/library/windows/apps/dn624859) Klasse |
 | Steuerelemente und UI-Infrastruktur | |
-| **ControlTiltEffect.TiltEffect** Klasse | Animationen aus der Windows-Runtime-Animationsbibliothek sind in die Standardstile der allgemeinen Steuerelemente integriert. Siehe [Animation](wpsl-to-uwp-porting-xaml-and-ui.md#animation). |
+| **ControlTiltEffect.TiltEffect** Klasse | Animationen aus der Windows-Runtime-Animationsbibliothek sind in die Standardstile der allgemeinen Steuerelemente integriert. Siehe [Animation](wpsl-to-uwp-porting-xaml-and-ui.md). |
 | **Microsoft.Phone.Controls** Namespace | [**Windows.UI.Xaml.Controls**](https://msdn.microsoft.com/library/windows/apps/br227716) Namespace |
 | (MPC = **Microsoft.Phone.Controls**) <br/> **MPC.ContextMenu** Klasse | [**PopupMenu**](https://msdn.microsoft.com/library/windows/apps/br208693) Klasse |
 | (MPC = **Microsoft.Phone.Controls**) <br/>**MPC.DatePickerPage** Klasse | [**DatePickerFlyout**](https://msdn.microsoft.com/library/windows/apps/dn625013) Klasse |
@@ -80,7 +80,7 @@ Außerdem profitieren Sie in einer Windows 10-App von .NET Native. Dabei handelt
 | (MPD = **Microsoft.Phone.Data**) <br/>**MPD.Linq** Namespace | Kein direktes Äquivalent | 
 | (MPD = **Microsoft.Phone.Data**) <br/>**MPD.Linq.Mapping** Namespace | Kein direktes Äquivalent |
 | **Microsoft.Phone.Globalization** Namespace | Kein direktes Äquivalent | 
-| (MPI = **Microsoft.Phone.Info**) <br/>**MPI.DeviceExtendedProperties**, **DeviceStatus** Klassen | [**EasClientDeviceInformation**](https://msdn.microsoft.com/library/windows/apps/hh701390), [**MemoryManager**](https://msdn.microsoft.com/library/windows/apps/dn633831) Klassen. Weitere Infos finden Sie unter [Gerätestatus](wpsl-to-uwp-input-and-sensors.md#device-status). | 
+| (MPI = **Microsoft.Phone.Info**) <br/>**MPI.DeviceExtendedProperties**, **DeviceStatus** Klassen | [**EasClientDeviceInformation**](https://msdn.microsoft.com/library/windows/apps/hh701390), [**MemoryManager**](https://msdn.microsoft.com/library/windows/apps/dn633831) Klassen. Weitere Infos finden Sie unter [Gerätestatus](wpsl-to-uwp-input-and-sensors.md). | 
 | (MPI = **Microsoft.Phone.Info**) <br/>**MPI.MediaCapabilities** Klasse | Kein direktes Äquivalent | 
 | (MPI = **Microsoft.Phone.Info**) <br/>**MPI.UserExtendedProperties** Klasse | [**AdvertisingManager**](https://msdn.microsoft.com/library/windows/apps/dn363391) Klasse | 
 | **System.Windows** Namespace | [**Windows.UI.Xaml**](https://msdn.microsoft.com/library/windows/apps/br209045) Namespace | 
@@ -129,7 +129,7 @@ Außerdem profitieren Sie in einer Windows 10-App von .NET Native. Dabei handelt
 | **Microsoft.Xna.Framework.Media.MediaQueue** Klasse | [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677) Klasse |
 | **Microsoft.Xna.Framework.Media.Playlist** Klasse | [**BackgroundMediaPlayer**](https://msdn.microsoft.com/library/windows/apps/dn652527) Klasse |
 | **System.Windows.Media** Namespace | [**Windows.UI.Xaml.Media**](https://msdn.microsoft.com/library/windows/apps/br243045) Namespace |
-| **System.Windows.Media.RadialGradientBrush** Klasse | Kein direktes Äquivalent Siehe [Medien und Grafiken](wpsl-to-uwp-porting-xaml-and-ui.md#media). |
+| **System.Windows.Media.RadialGradientBrush** Klasse | Kein direktes Äquivalent Siehe [Medien und Grafiken](wpsl-to-uwp-porting-xaml-and-ui.md). |
 | **System.Windows.Media.Animation** Namespace | [**Windows.UI.Xaml.Media.Animation**](https://msdn.microsoft.com/library/windows/apps/br243232) Namespace |
 | **System.Windows.Media.Effects** Namespace | Keine direkte Entsprechung | 
 | **System.Windows.Media.Imaging** Namespace | [**Windows.UI.Xaml.Media.Imaging**](https://msdn.microsoft.com/library/windows/apps/br243258) Namespace |
@@ -249,6 +249,6 @@ Nächstes Thema: [Portieren des Projekts](wpsl-to-uwp-porting-to-a-uwp-project.m
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -6,34 +6,40 @@ ms.assetid: 1246B58E-D6E3-48C7-AD7F-475D113600F9
 label: Create adaptive tiles
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 38ee8ae177898e20d45545c1cfd51a0dd24f7858
+ms.sourcegitcommit: d51aacb31f41cbd9c065b013ffb95b83a6edaaf4
+ms.openlocfilehash: a00796da398d6e0246caac43b18fb688a9e03fce
 
 ---
-# Erstellen adaptiver Kacheln
+# <a name="create-adaptive-tiles"></a>Erstellen adaptiver Kacheln
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
 Vorlagen für adaptive Kacheln sind ein neues Feature in Windows 10 und ermöglichen den Entwurf eigener Inhalte für Kachelbenachrichtigungen mithilfe einer einfachen, flexiblen Markupsprache, die sich an unterschiedliche Bildschirmdichten anpasst. Dieser Artikel beschreibt, wie Sie adaptive Live-Kacheln für Ihre UWP-App (Universelle Windows-Plattform) erstellen. Die vollständige Liste adaptiver Elemente und Attribute finden Sie unter [Adaptives Kachelschema](tiles-and-notifications-adaptive-tiles-schema.md).
 
-(Falls gewünscht, können Sie weiterhin die voreingestellten Vorlagen aus dem [Windows8-Kachelvorlagenkatalog](https://msdn.microsoft.com/library/windows/apps/hh761491) beim Entwerfen von Benachrichtigungen für Windows10 verwenden.)
-
-## Erste Schritte
+(Wenn gewünscht, können Sie weiterhin die voreingestellten Vorlagen aus dem [Windows 8-Kachelvorlagenkatalog](https://msdn.microsoft.com/library/windows/apps/hh761491) beim Entwerfen von Benachrichtigungen für Windows 10 verwenden.)
 
 
-**Installieren von NotificationsExtensions.** Wenn Sie lieber C# anstatt XML zum Generieren von Benachrichtigungen verwenden möchten, installieren Sie das NuGet-Paket [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki). Für die in diesem Artikel bereitgestellten C#-Beispiele werden NotificationsExtensions verwendet.
+## <a name="getting-started"></a>Erste Schritte
 
-**Installieren von Notifications Visualizer.** Diese kostenlose UWP-App erleichtert das Entwerfen adaptiver Live-Kacheln, indem Ihre Kachel während der Bearbeitung in einer sofortigen visuellen Vorschau dargestellt wird, die mit dem XAML-Editor bzw. der Entwurfsansicht in Visual Studio vergleichbar ist. Weitere Informationen finden Sie in [diesem Blogbeitrag](http://blogs.msdn.com/b/tiles_and_toasts/archive/2015/09/22/introducing-notifications-visualizer-for-windows-10.aspx). Der Download von Notifications Visualizer steht [hier](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) bereit.
+**Installieren Sie die Benachrichtigungsbibliothek.** Wenn Sie C# anstelle von XML verwenden möchten, um Benachrichtigungen zu generieren, installieren Sie das NuGet-Paket mit dem Namen [Microsoft.Toolkit.Uwp.Notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/). (Suchen Sie nach „Benachrichtigungen UWP“.) Die in diesem Artikel bereitgestellten C#-Beispiele verwenden Version 1.0.0 des NuGet-Pakets.
 
-## Informationen zur Verwendung
+**Installieren Sie den Notifications Visualizer.** Diese kostenlose UWP-App erleichtert das Entwerfen adaptiver Live-Kacheln, indem Ihre Kachel während der Bearbeitung in einer sofortigen visuellen Vorschau dargestellt wird, die mit dem XAML-Editor bzw. der Entwurfsansicht in Visual Studio vergleichbar ist. Weitere Informationen finden Sie in [diesem Blogbeitrag](http://blogs.msdn.com/b/tiles_and_toasts/archive/2015/09/22/introducing-notifications-visualizer-for-windows-10.aspx). Der Download von Notifications Visualizer steht [hier](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) bereit.
 
 
-Adaptive Vorlagen sind für die Unterstützung verschiedener Formfaktoren und Benachrichtigungstypen konzipiert. Elemente wie Gruppen und Untergruppen verknüpfen Inhalte miteinander und implizieren selbst kein bestimmtes visuelles Verhalten. Die endgültige Darstellung einer Benachrichtigung sollte auf dem spezifischen Gerät basieren, auf dem sie angezeigt wird, beispielsweise einem Smartphone, Tablet, Desktop oder anderen Gerät.
+## <a name="how-to-send-a-tile-notification"></a>Senden einer Kachelbenachrichtigung
+
+Lesen Sie den [Schnellstart zum Senden von lokalen Kachelbenachrichtigungen](tiles-and-notifications-create-adaptive-tiles.md). Die Dokumentation auf dieser Seite beschreibt alle visuellen UI-Möglichkeiten, die Ihnen mit anpassbaren Kacheln zur Verfügung stehen.
+
+
+## <a name="usage-guidance"></a>Informationen zur Verwendung
+
+
+Adaptive Vorlagen werden für die Unterstützung verschiedener Formfaktoren und Benachrichtigungstypen konzipiert. Elemente wie Gruppen und Untergruppen verknüpfen Inhalte miteinander und implizieren selbst kein bestimmtes visuelles Verhalten. Die endgültige Darstellung einer Benachrichtigung sollte auf dem spezifischen Gerät basieren, auf dem sie angezeigt wird, beispielsweise einem Smartphone, Tablet, Desktop oder anderen Gerät.
 
 Hinweise sind optionale Attribute, die Elementen hinzugefügt werden können, um ein bestimmtes visuelles Verhalten zu erzielen. Hinweise können spezifisch für Geräte oder Benachrichtigungen sein.
 
-## Ein einfaches Beispiel
+## <a name="a-basic-example"></a>Ein einfaches Beispiel
 
 
 Dieses Beispiel veranschaulicht, was Vorlagen für adaptive Kacheln leisten können.
@@ -73,22 +79,22 @@ TileContent content = new TileContent()
             {
                 Children =
                 {
-                    new TileText()
+                    new AdaptiveText()
                     {
                         Text = "Jennifer Parker",
-                        Style = TileTextStyle.Subtitle
+                        HintStyle = AdaptiveTextStyle.Subtitle
                     },
   
-                    new TileText()
+                    new AdaptiveText()
                     {
                         Text = "Photos from our trip",
-                        Style = TileTextStyle.CaptionSubtle
+                        HintStyle = AdaptiveTextStyle.CaptionSubtle
                     },
   
-                    new TileText()
+                    new AdaptiveText()
                     {
                         Text = "Check out these awesome photos I took while in New Zealand!",
-                        Style = TileTextStyle.CaptionSubtle
+                        HintStyle = AdaptiveTextStyle.CaptionSubtle
                     }
                 }
             }
@@ -103,7 +109,7 @@ TileContent content = new TileContent()
 
 ![Kurzes Beispiel für eine Kachel](images/adaptive-tiles-quicksample.png)
 
-## Kachelgrößen
+## <a name="tile-sizes"></a>Kachelgrößen
 
 
 Der Inhalt für jede Kachelgröße wird einzeln in getrennten [&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md)-Elementen innerhalb der XML-Nutzlast angegeben. Wählen Sie die Zielgröße aus, indem Sie das template-Attribut auf einen der folgenden Werte festlegen:
@@ -150,7 +156,7 @@ TileContent content = new TileContent()
             {
                 Children =
                 {
-                    new TileText() { Text = "Small" }
+                    new AdaptiveText() { Text = "Small" }
                 }
             }
         },
@@ -161,7 +167,7 @@ TileContent content = new TileContent()
             {
                 Children =
                 {
-                    new TileText() { Text = "Medium" }
+                    new AdaptiveText() { Text = "Medium" }
                 }
             }
         },
@@ -172,7 +178,7 @@ TileContent content = new TileContent()
             {
                 Children =
                 {
-                    new TileText() { Text = "Wide" }
+                    new AdaptiveText() { Text = "Wide" }
                 }
             }
         },
@@ -183,7 +189,7 @@ TileContent content = new TileContent()
             {
                 Children =
                 {
-                    new TileText() { Text = "Large" }
+                    new AdaptiveText() { Text = "Large" }
                 }
             }
         }
@@ -195,7 +201,7 @@ TileContent content = new TileContent()
 
 ![Größen für adaptive Kacheln: klein, mittel, breit und groß](images/adaptive-tiles-sizes.png)
 
-## Branding
+## <a name="branding"></a>Branding
 
 
 Sie können das Branding am unteren Rand einer Live-Kachel (den Anzeigenamen und das Cornerlogo) mit dem branding-Attribut in der Benachrichtigungsnutzlast steuern. Mit „none“ wird nichts angezeigt, mit „name“ nur der Name, mit „logo“ nur das Logo, und mit „nameAndLogo“ werden Name und Logo angezeigt.
@@ -211,12 +217,6 @@ Sie können das Branding am unteren Rand einer Live-Kachel (den Anzeigenamen und
 ```
 
 ```CSharp
-new TileVisual()
-{
-    Branding = TileBranding.Logo,
-    ...
-}
-
 new TileVisual()
 {
     Branding = TileBranding.Logo,
@@ -256,13 +256,13 @@ TileContent content = new TileContent()
     Visual = new TileVisual()
     {
         Branding = TileBranding.NameAndLogo,
- 
+
         TileMedium = new TileBinding()
         {
             Branding = TileBranding.Logo,
             ...
         },
- 
+
         // Inherits branding from Visual
         TileWide = new TileBinding()
         {
@@ -282,7 +282,7 @@ Wenn Sie in der Benachrichtigungsnutzlast kein Branding angeben, wird das Brandi
 
  
 
-## Anzeigename
+## <a name="display-name"></a>Anzeigename
 
 
 Sie können den Anzeigenamen einer Benachrichtigung überschreiben, indem Sie für das **displayName**-Attribut die gewünschte Textzeichenfolge eingeben. Wie beim Branding können Sie dies für das [&lt;visual&gt;](tiles-and-notifications-adaptive-tiles-schema.md)-Element angeben, was sich auf die gesamte Benachrichtigungsnutzlast auswirkt, oder für das [&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md)-Element, was nur einzelne Kacheln betrifft.
@@ -313,13 +313,13 @@ TileContent content = new TileContent()
     {
         Branding = TileBranding.NameAndLogo,
         DisplayName = "Wednesday 22",
- 
+
         TileMedium = new TileBinding()
         {
             DisplayName = "Wed. 22",
             ...
         },
- 
+
         // Inherits DisplayName from Visual
         TileWide = new TileBinding()
         {
@@ -333,31 +333,18 @@ TileContent content = new TileContent()
 
 ![Anzeigename adaptiver Kacheln](images/adaptive-tiles-displayname.png)
 
-## Text
+## <a name="text"></a>Text
 
 
 Das [&lt;text&gt;](tiles-and-notifications-adaptive-tiles-schema.md)-Element wird zum Anzeigen von Text verwendet. Mithilfe von Hinweisen können Sie die Darstellung von Text anpassen.
 
 ```XML
-<text>This is a line of text</text></code></pre></td>
-</tr>
-</tbody>
-</table>
+<text>This is a line of text</text>
 ```
 
 
 ```CSharp
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">C#</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-new TileText()
+new AdaptiveText()
 {
     Text = "This is a line of text"
 };
@@ -367,34 +354,21 @@ new TileText()
 
 ![Text adaptiver Kacheln](images/adaptive-tiles-text.png)
 
-## Textumbruch
+## <a name="text-wrapping"></a>Textumbruch
 
 
 Text wird standardmäßig nicht umbrochen und verläuft über den Kachelrand hinaus. Verwenden Sie das **hint-wrap**-Attribut, um den Textumbruch für ein text-Element festzulegen. Mit **hint-minLines** und **hint-maxLines**, die beide positive ganze Zahlen akzeptieren, können Sie auch die minimale und maximale Zeilenanzahl steuern.
 
 ```XML
-<text hint-wrap="true">This is a line of wrapping text</text></code></pre></td>
-</tr>
-</tbody>
-</table>
+<text hint-wrap="true">This is a line of wrapping text</text>
 ```
 
 
 ```CSharp
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">C#</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-new TileText()
+new AdaptiveText()
 {
     Text = "This is a line of wrapping text",
-    Wrap = true
+    HintWrap = true
 };
 ```
 
@@ -402,10 +376,10 @@ new TileText()
 
 ![Adaptive Kachel mit Textumbruch](images/adaptive-tiles-textwrapping.png)
 
-## Textstile
+## <a name="text-styles"></a>Textstile
 
 
-Stile steuern den Schriftgrad, die Schriftfarbe und Schriftbreite von text-Elementen. Es sind mehrere Stile verfügbar. Zusätzlich gibt es leichte („subtle“) Variationen jedes Stils, durch die die Deckkraft auf 60% festgelegt und die Textfarbe normalerweise in einem hellgrauen Farbton angezeigt wird.
+Stile steuern den Schriftgrad, die Schriftfarbe und Schriftbreite von text-Elementen. Es sind mehrere Stile verfügbar. Zusätzlich gibt es leichte („subtle“) Variationen jedes Stils, durch die die Deckkraft auf 60 % festgelegt und die Textfarbe normalerweise in einem hellgrauen Farbton angezeigt wird.
 
 ```XML
 <text hint-style="base">Header content</text>
@@ -413,16 +387,16 @@ Stile steuern den Schriftgrad, die Schriftfarbe und Schriftbreite von text-Eleme
 ```
 
 ```CSharp
-new TileText()
+new AdaptiveText()
 {
     Text = "Header content",
-    Style = TileTextStyle.Base
+    HintStyle = AdaptiveTextStyle.Base
 },
- 
-new TileText()
+
+new AdaptiveText()
 {
     Text = "Subheader content",
-    Style = TileTextStyle.CaptionSubtle
+    HintStyle = AdaptiveTextStyle.CaptionSubtle
 }
 ```
 
@@ -440,12 +414,12 @@ new TileText()
 |--------------------------------|---------------------------|-------------|
 | &lt;text hint-style="\*" /&gt; | Zeichenhöhe               | Schriftbreite |
 | caption                        | 12 effektive Pixel (epx) | Regular     |
-| body                           | 15Epx                    | Regular     |
-| base                           | 15Epx                    | Semibold    |
-| subtitle                       | 20Epx                    | Regular     |
-| title                          | 24Epx                    | Semilight   |
-| subheader                      | 34Epx                    | Light       |
-| header                         | 46Epx                    | Light       |
+| body                           | 15 Epx                    | Regular     |
+| base                           | 15 Epx                    | Semibold    |
+| subtitle                       | 20 Epx                    | Regular     |
+| title                          | 24 Epx                    | Semilight   |
+| subheader                      | 34 Epx                    | Light       |
+| header                         | 46 Epx                    | Light       |
 
  
 
@@ -463,7 +437,7 @@ Durch diese Variationen wird die Zeilenhöhe verringert, sodass der Abstand zu I
 
 **Leichte Variationen des Textstils**
 
-Jeder Stil weist eine leichte Variation auf, durch die der Text eine 60%-ige Deckkraft erhält und normalerweise in einem hellgrauen Farbton angezeigt wird.
+Jeder Stil weist eine leichte Variation auf, durch die der Text eine 60 %-ige Deckkraft erhält und normalerweise in einem hellgrauen Farbton angezeigt wird.
 
 |                        |
 |------------------------|
@@ -480,34 +454,21 @@ Jeder Stil weist eine leichte Variation auf, durch die der Text eine 60%-ige Dec
 
  
 
-## Textausrichtung
+## <a name="text-alignment"></a>Textausrichtung
 
 
 Text kann horizontal, linksbündig, zentriert oder rechtsbündig ausgerichtet sein. Bei einer von links nach rechts gelesenen Sprache, wie Deutsch, ist Text standardmäßig linksbündig ausgerichtet. Bei einer von rechts nach links gelesenen Sprache, wie Arabisch, ist Text standardmäßig rechtsbündig ausgerichtet. Mit dem **hint-align**-Attribut können Sie die Ausrichtung für Elemente manuell festlegen.
 
 ```XML
-<text hint-align="center">Hello</text></code></pre></td>
-</tr>
-</tbody>
-</table>
+<text hint-align="center">Hello</text>
 ```
 
 
 ```CSharp
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">C#</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-new TileText()
+new AdaptiveText()
 {
     Text = "Hello",
-    Align = TileTextAlign.Center
+    HintAlign = AdaptiveTextAlign.Center
 };
 ```
 
@@ -515,7 +476,7 @@ new TileText()
 
 ![Textausrichtung adaptiver Kacheln](images/adaptive-tiles-textalignment.png)
 
-## Gruppen und Untergruppen
+## <a name="groups-and-subgroups"></a>Gruppen und Untergruppen
 
 
 Mit Gruppen können Sie semantisch deklarieren, dass sich Inhalte in der Gruppe aufeinander beziehen und vollständig angezeigt werden müssen, damit sie Sinn ergeben. Beispielsweise können Sie über zwei text-Elemente in Form einer Überschrift und einer Unterüberschrift verfügen, und es würde keinen Sinn ergeben, wenn nur die Überschrift angezeigt würde. Durch die Gruppierung dieser Elemente innerhalb einer Untergruppe werden entweder alle Elemente angezeigt (sofern sie in den Anzeigebereich passen) oder keine Elemente angezeigt (wenn nicht genügend Platz vorhanden ist).
@@ -527,7 +488,6 @@ Um optimale Ergebnisse auf unterschiedlichen Geräten und Bildschirmen zu erziel
  
 
 ```XML
-...
 <binding template="TileWide" branding="nameAndLogo">
   <group>
     <subgroup>
@@ -547,12 +507,9 @@ Um optimale Ergebnisse auf unterschiedlichen Geräten und Bildschirmen zu erziel
     </subgroup>
   </group>
 </binding>
-...
 ```
 
 ```CSharp
-...
- 
 TileWide = new TileBinding()
 {
     Branding = TileBranding.NameAndLogo,
@@ -564,10 +521,10 @@ TileWide = new TileBinding()
                 from: "Jennifer Parker",
                 subject: "Photos from our trip",
                 body: "Check out these awesome photos I took while in New Zealand!"),
- 
+
             // For spacing
-            new TileText(),
- 
+            new AdaptiveText(),
+
             CreateGroup(
                 from: "Steve Bosniak",
                 subject: "Build 2015 Dinner",
@@ -575,36 +532,33 @@ TileWide = new TileBinding()
         }
     }
 }
- 
+
 ...
- 
- 
-private static TileGroup CreateGroup(string from, string subject, string body)
+
+private static AdaptiveGroup CreateGroup(string from, string subject, string body)
 {
-    return new TileGroup()
+    return new AdaptiveGroup()
     {
         Children =
         {
-            new TileSubgroup()
+            new AdaptiveSubgroup()
             {
                 Children =
                 {
-                    new TileText()
+                    new AdaptiveText()
                     {
                         Text = from,
-                        Style = TileTextStyle.Subtitle
+                        HintStyle = AdaptiveTextStyle.Subtitle
                     },
- 
-                    new TileText()
+                    new AdaptiveText()
                     {
                         Text = subject,
-                        Style = TileTextStyle.CaptionSubtle
+                        HintStyle = AdaptiveTextStyle.CaptionSubtle
                     },
- 
-                    new TileText()
+                    new AdaptiveText()
                     {
                         Text = body,
-                        Style = TileTextStyle.CaptionSubtle
+                        HintStyle = AdaptiveTextStyle.CaptionSubtle
                     }
                 }
             }
@@ -617,7 +571,7 @@ private static TileGroup CreateGroup(string from, string subject, string body)
 
 ![Gruppen und Untergruppen adaptiver Kacheln](images/adaptive-tiles-groups-subgroups.png)
 
-## Untergruppen (Spalten)
+## <a name="subgroups-columns"></a>Untergruppen (Spalten)
 
 
 Mithilfe von Untergruppen können Sie Daten außerdem in semantische Abschnitte innerhalb einer Gruppe unterteilen. Bei Live-Kacheln werden Untergruppen visuell als Spalten dargestellt.
@@ -692,7 +646,7 @@ Um eine Spalte doppelt so groß wie eine andere Spalte darzustellen, weisen Sie 
 
 ![Untergruppen, eine Spalte ist doppelt so groß wie die andere](images/adaptive-tiles-subgroups02.png)
 
-Wenn Ihre erste Spalte 20% und die zweite Spalte 80% der gesamten Breite einnehmen soll, weisen Sie der ersten Gewichtung 20 und der zweiten Gewichtung 80 zu. Wenn die Gewichtungen insgesamt 100 ergeben, werden sie prozentual ausgedrückt.
+Wenn Ihre erste Spalte 20 % und die zweite Spalte 80 % der gesamten Breite einnehmen soll, weisen Sie der ersten Gewichtung 20 und der zweiten Gewichtung 80 zu. Wenn die Gewichtungen insgesamt 100 ergeben, werden sie prozentual ausgedrückt.
 
 <table>
 <colgroup>
@@ -710,7 +664,7 @@ Wenn Ihre erste Spalte 20% und die zweite Spalte 80% der gesamten Breite einnehm
 </tr>
 <tr class="odd">
 <td align="left">80</td>
-<td align="left">80%</td>
+<td align="left">80 %</td>
 </tr>
 <tr class="even">
 <td align="left">Gesamtgewichtung: 100</td>
@@ -732,7 +686,6 @@ Wenn Sie über mehr als zwei Untergruppen verfügen, geben Sie **hint-weight** a
 Im Folgenden sehen Sie den Beispielcode für eine Wetter-Kachel, die zeigt, wie Sie eine Kachel mit fünf gleich breiten Spalten erhalten:
 
 ```XML
-...
 <binding template="TileWide" displayName="Seattle" branding="name">
   <group>
     <subgroup hint-weight="1">
@@ -767,11 +720,9 @@ Im Folgenden sehen Sie den Beispielcode für eine Wetter-Kachel, die zeigt, wie 
     </subgroup>
   </group>
 </binding>
-...
 ```
 
 ```CSharp
-...
 TileWide = new TileBinding()
 {
     DisplayName = "Seattle",
@@ -780,58 +731,50 @@ TileWide = new TileBinding()
     {
         Children =
         {
-            new TileGroup()
+            new AdaptiveGroup()
             {
                 Children =
                 {
                     CreateSubgroup("Mon", "Mostly Cloudy.png", "63°", "42°"),
- 
                     CreateSubgroup("Tue", "Cloudy.png", "57°", "38°"),
- 
                     CreateSubgroup("Wed", "Sunny.png", "59°", "43°"),
- 
                     CreateSubgroup("Thu", "Sunny.png", "62°", "42°"),
- 
                     CreateSubgroup("Fri", "Sunny.png", "71°", "66°")
                 }
             }
         }
     }
 }
+
 ...
- 
- 
-private static TileSubgroup CreateSubgroup(string day, string image, string highTemp, string lowTemp)
+
+private static AdaptiveSubgroup CreateSubgroup(string day, string image, string highTemp, string lowTemp)
 {
-    return new TileSubgroup()
+    return new AdaptiveSubgroup()
     {
-        Weight = 1,
- 
+        HintWeight = 1,
         Children =
         {
-            new TileText()
+            new AdaptiveText()
             {
                 Text = day,
-                Align = TileTextAlign.Center
+                HintAlign = AdaptiveTextAlign.Center
             },
- 
-            new TileImage()
+            new AdaptiveImage()
             {
-                Source = new TileImageSource("Assets/Weather/" + image),
-                RemoveMargin = true
+                Source = "Assets/Weather/" + image,
+                HintRemoveMargin = true
             },
- 
-            new TileText()
+            new AdaptiveText()
             {
                 Text = highTemp,
-                Align = TileTextAlign.Center
+                HintAlign = AdaptiveTextAlign.Center
             },
- 
-            new TileText()
+            new AdaptiveText()
             {
                 Text = lowTemp,
-                Align = TileTextAlign.Center,
-                Style = TileTextStyle.CaptionSubtle
+                HintAlign = AdaptiveTextAlign.Center,
+                HintStyle = AdaptiveTextStyle.CaptionSubtle
             }
         }
     };
@@ -842,7 +785,7 @@ private static TileSubgroup CreateSubgroup(string day, string image, string high
 
 ![Beispiel für eine Wetter-Kachel](images/adaptive-tiles-weathertile.png)
 
-## Bilder
+## <a name="images"></a>Bilder
 
 
 Mithilfe des &lt;image&gt;-Elements werden Bilder auf der Kachelbenachrichtigung angezeigt. Bilder können als Inlinebilder im Kachelinhalt (Standard), als Hintergrundbild hinter dem Inhalt oder als animiertes Vorschaubild, das von oben in die Benachrichtigung hineingleitet, konfiguriert werden.
@@ -854,7 +797,6 @@ Mithilfe des &lt;image&gt;-Elements werden Bilder auf der Kachelbenachrichtigung
 Wenn kein zusätzliches Verhalten angegeben wird, verkleinern bzw. vergrößern sich Bilder gleichmäßig in Anpassung an die verfügbare Breite. Das folgende Beispiel zeigt eine Kachel mit zwei Spalten und Inlinebildern. Die Inlinebilder werden gestreckt, um die Spaltenbreite auszufüllen.
 
 ```XML
-...
 <binding template="TileMedium" displayName="Seattle" branding="name">
   <group>
     <subgroup>
@@ -871,11 +813,9 @@ Wenn kein zusätzliches Verhalten angegeben wird, verkleinern bzw. vergrößern 
     </subgroup>
   </group>
 </binding>
-...
 ```
 
 ```CSharp
-...
 TileMedium = new TileBinding()
 {
     DisplayName = "Seattle",
@@ -884,12 +824,11 @@ TileMedium = new TileBinding()
     {
         Children =
         {
-            new TileGroup()
+            new AdaptiveGroup()
             {
                 Children =
                 {
                     CreateSubgroup("Mon", "Mostly Cloudy.png", "63°", "42°"),
- 
                     CreateSubgroup("Tue", "Cloudy.png", "57°", "38°")
                 }
             }
@@ -897,37 +836,32 @@ TileMedium = new TileBinding()
     }
 }
 ...
- 
- 
-private static TileSubgroup CreateSubgroup(string day, string image, string highTemp, string lowTemp)
+private static AdaptiveSubgroup CreateSubgroup(string day, string image, string highTemp, string lowTemp)
 {
-    return new TileSubgroup()
+    return new AdaptiveSubgroup()
     {
         Children =
         {
-            new TileText()
+            new AdaptiveText()
             {
                 Text = day,
-                Align = TileTextAlign.Center
+                HintAlign = AdaptiveTextAlign.Center
             },
- 
-            new TileImage()
+            new AdaptiveImage()
             {
-                Source = new TileImageSource("Assets/Weather/" + image),
-                RemoveMargin = true
+                Source = "Assets/Weather/" + image,
+                HintRemoveMargin = true
             },
- 
-            new TileText()
+            new AdaptiveText()
             {
                 Text = highTemp,
-                Align = TileTextAlign.Center
+                HintAlign = AdaptiveTextAlign.Center
             },
- 
-            new TileText()
+            new AdaptiveText()
             {
                 Text = lowTemp,
-                Align = TileTextAlign.Center,
-                Style = TileTextStyle.CaptionSubtle
+                HintAlign = AdaptiveTextAlign.Center,
+                HintStyle = AdaptiveTextStyle.CaptionSubtle
             }
         }
     };
@@ -940,47 +874,42 @@ private static TileSubgroup CreateSubgroup(string day, string image, string high
 
 Bilder, die im &lt;binding&gt;-Stammelement oder in der ersten Gruppe enthalten sind, werden ebenfalls gestreckt, um die verfügbare Höhe auszunutzen.
 
-### Bildausrichtung
+### <a name="image-alignment"></a>Bildausrichtung
 
 Bilder können mit dem **hint-align**-Attribut linksbündig, zentriert oder rechtsbündig ausgerichtet werden. Dies bewirkt auch, dass Bilder in ihrer systemeigenen Auflösung angezeigt und nicht gestreckt werden, um die gesamte Breite auszufüllen.
 
 ```XML
-...
 <binding template="TileLarge">
   <image src="Assets/fable.jpg" hint-align="center"/>
 </binding>
-...
 ```
 
 ```CSharp
-...
 TileLarge = new TileBinding()
 {
     Content = new TileBindingContentAdaptive()
     {
         Children =
         {
-            new TileImage()
+            new AdaptiveImage()
             {
-                Source = new TileImageSource("Assets/fable.jpg"),
-                Align = TileImageAlign.Center
+                Source = "Assets/fable.jpg",
+                HintAlign = AdaptiveImageAlign.Center
             }
         }
     }
 }
-...
 ```
 
 **Ergebnis:**
 
 ![Beispiel für die Bildausrichtung (linksbündig, zentriert, rechtsbündig)](images/adaptive-tiles-imagealignment.png)
 
-### Bildränder
+### <a name="image-margins"></a>Bildränder
 
 Zwischen Inlinebildern und darüber oder darunter angeordneten Inhalten befindet sich standardmäßig ein Rand von 8 Pixeln. Dieser Rand kann entfernt werden, indem Sie das **hint-removeMargin**-Attribut für das Bild verwenden. Für Bilder wird allerdings immer der 8-Pixel-Rand vom Rand der Kachel und für Untergruppen (Spalten) immer der 8-Pixel-Abstand zwischen Spalten beibehalten.
 
 ```XML
-...
 <binding template="TileMedium" branding="none">
   <group>
     <subgroup>
@@ -997,12 +926,9 @@ Zwischen Inlinebildern und darüber oder darunter angeordneten Inhalten befindet
     </subgroup>
   </group>
 </binding>
-...
 ```
 
 ```CSharp
-...
- 
 TileMedium = new TileBinding()
 {
     Branding = TileBranding.None,
@@ -1010,53 +936,47 @@ TileMedium = new TileBinding()
     {
         Children =
         {
-            new TileGroup()
+            new AdaptiveGroup()
             {
                 Children =
                 {
                     CreateSubgroup("Mon", "4.jpg", "63°", "42°"),
- 
                     CreateSubgroup("Tue", "3.jpg", "57°", "38°")
                 }
             }
         }
     }
 }
- 
+
 ...
- 
- 
-private static TileSubgroup CreateSubgroup(string day, string image, string highTemp, string lowTemp)
+
+private static AdaptiveSubgroup CreateSubgroup(string day, string image, string highTemp, string lowTemp)
 {
-    return new TileSubgroup()
+    return new AdaptiveSubgroup()
     {
-        Weight = 1,
- 
+        HintWeight = 1,
         Children =
         {
-            new TileText()
+            new AdaptiveText()
             {
                 Text = day,
-                Align = TileTextAlign.Center
+                HintAlign = AdaptiveTextAlign.Center
             },
- 
-            new TileImage()
+            new AdaptiveImage()
             {
-                Source = new TileImageSource("Assets/Numbers/" + image),
-                RemoveMargin = true
+                Source = "Assets/Numbers/" + image,
+                HintRemoveMargin = true
             },
- 
-            new TileText()
+            new AdaptiveText()
             {
                 Text = highTemp,
-                Align = TileTextAlign.Center
+                HintAlign = AdaptiveTextAlign.Center
             },
- 
-            new TileText()
+            new AdaptiveText()
             {
                 Text = lowTemp,
-                Align = TileTextAlign.Center,
-                Style = TileTextStyle.CaptionSubtle
+                HintAlign = AdaptiveTextAlign.Center,
+                HintStyle = AdaptiveTextStyle.CaptionSubtle
             }
         }
     };
@@ -1065,12 +985,11 @@ private static TileSubgroup CreateSubgroup(string day, string image, string high
 
 ![Beispiel für „hint-removeMargin“](images/adaptive-tiles-removemargin.png)
 
-### Zuschneiden von Bildern
+### <a name="image-cropping"></a>Zuschneiden von Bildern
 
 Bilder können mit dem **hint-crop**-Attribut, das derzeit nur die Werte „none“ (Standard) oder „circle“ unterstützt, kreisförmig zugeschnitten werden.
 
 ```XML
-...
 <binding template="TileLarge" hint-textStacking="center">
   <group>
     <subgroup hint-weight="1"/>
@@ -1083,72 +1002,62 @@ Bilder können mit dem **hint-crop**-Attribut, das derzeit nur die Werte „none
   <text hint-style="title" hint-align="center">Hi,</text>
   <text hint-style="subtitleSubtle" hint-align="center">MasterHip</text>
 </binding>
-...
 ```
 
 ```CSharp
-...
 TileLarge = new TileBinding()
 {
     Content = new TileBindingContentAdaptive()
     {
         TextStacking = TileTextStacking.Center,
- 
         Children =
         {
-            new TileGroup()
+            new AdaptiveGroup()
             {
                 Children =
                 {
-                    new TileSubgroup() { Weight = 1 },
- 
-                    new TileSubgroup()
+                    new AdaptiveSubgroup() { HintWeight = 1 },
+                    new AdaptiveSubgroup()
                     {
-                        Weight = 2,
+                        HintWeight = 2,
                         Children =
                         {
-                            new TileImage()
+                            new AdaptiveImage()
                             {
-                                Source = new TileImageSource("Assets/Apps/Hipstame/hipster.jpg"),
-                                Crop = TileImageCrop.Circle
+                                Source = "Assets/Apps/Hipstame/hipster.jpg",
+                                HintCrop = AdaptiveImageCrop.Circle
                             }
                         }
                     },
- 
-                    new TileSubgroup() { Weight = 1 }
+                    new AdaptiveSubgroup() { HintWeight = 1 }
                 }
             },
- 
- 
-            new TileText()
+            new AdaptiveText()
             {
                 Text = "Hi,",
-                Style = TileTextStyle.Title,
-                Align = TileTextAlign.Center
+                HintStyle = AdaptiveTextStyle.Title,
+                HintAlign = AdaptiveTextAlign.Center
             },
- 
-            new TileText()
+            new AdaptiveText()
             {
                 Text = "MasterHip",
-                Style = TileTextStyle.SubtitleSubtle,
-                Align = TileTextAlign.Center
+                HintStyle = AdaptiveTextStyle.SubtitleSubtle,
+                HintAlign = AdaptiveTextAlign.Center
             }
         }
     }
 }
-...
 ```
 
 **Ergebnis:**
 
 ![Beispiel für das Zuschneiden eines Bilds](images/adaptive-tiles-imagecropping.png)
 
-### Hintergrundbild
+### <a name="background-image"></a>Hintergrundbild
 
 Um ein Hintergrundbild festzulegen, platzieren Sie ein image-Element im Stamm von &lt;binding&gt; und legen das placement-Attribut auf „background“ fest.
 
 ```XML
-...
 <binding template="TileWide">
   <image src="Assets\Mostly Cloudy-Background.jpg" placement="background"/>
   <group>
@@ -1161,23 +1070,21 @@ Um ein Hintergrundbild festzulegen, platzieren Sie ein image-Element im Stamm vo
     ...
   </group>
 </binding>
-...
 ```
 
 ```CSharp
-...
 TileWide = new TileBinding()
 {
     Content = new TileBindingContentAdaptive()
     {
         BackgroundImage = new TileBackgroundImage()
         {
-            Source = new TileImageSource("Assets/Mostly Cloudy-Background.jpg")
+            Source = "Assets/Mostly Cloudy-Background.jpg"
         },
- 
+
         Children =
         {
-            new TileGroup()
+            new AdaptiveGroup()
             {
                 Children =
                 {
@@ -1188,40 +1095,36 @@ TileWide = new TileBinding()
         }
     }
 }
+
 ...
- 
- 
-private static TileSubgroup CreateSubgroup(string day, string image, string highTemp, string lowTemp)
+
+private static AdaptiveSubgroup CreateSubgroup(string day, string image, string highTemp, string lowTemp)
 {
-    return new TileSubgroup()
+    return new AdaptiveSubgroup()
     {
-        Weight = 1,
- 
+        HintWeight = 1,
         Children =
         {
-            new TileText()
+            new AdaptiveText()
             {
                 Text = day,
-                Align = TileTextAlign.Center
+                HintAlign = AdaptiveTextAlign.Center
             },
- 
-            new TileImage()
+            new AdaptiveImage()
             {
-                Source = new TileImageSource("Assets/Weather/" + image),
-                RemoveMargin = true
+                Source = "Assets/Weather/" + image,
+                HintRemoveMargin = true
             },
- 
-            new TileText()
+            new AdaptiveText()
             {
                 Text = highTemp,
-                Align = TileTextAlign.Center
+                HintAlign = AdaptiveTextAlign.Center
             },
- 
-            new TileText()
+            new AdaptiveText()
             {
                 Text = lowTemp,
-                Align = TileTextAlign.Center,
-                Style = TileTextStyle.CaptionSubtle
+                HintAlign = AdaptiveTextAlign.Center,
+                HintStyle = AdaptiveTextStyle.CaptionSubtle
             }
         }
     };
@@ -1232,96 +1135,62 @@ private static TileSubgroup CreateSubgroup(string day, string image, string high
 
 ![Beispiel für ein Hintergrundbild](images/adaptive-tiles-backgroundimage.png)
 
-Zusätzlich können Sie mit **hint-overlay** eine schwarze Überlagerung für das Hintergrundbild festlegen. Das Attribut akzeptiert ganze Zahlen von 0 bis 100, wobei 0 keine Überlagerung und 100 eine vollständige schwarze Überlagerung angibt. Der Standardwert ist 20.
-
-```XML
-...
-<binding template="TileWide" hint-overlay="60">
-  <image src="Assets\Mostly Cloudy-Background.jpg" placement="background"/>
-  ...
-</binding>
-...
-```
-
-```CSharp
-...
- 
-TileWide = new TileBinding()
-{
-    Content = new TileBindingContentAdaptive()
-    {
-        BackgroundImage = new TileBackgroundImage()
-        {
-            Source = new TileImageSource("Assets/Mostly Cloudy-Background.jpg"),
-            Overlay = 60
-        },
- 
-        ...
-    }
-}
- 
-...
-```
-
-**Ergebnis von „hint-overlay“:**
-
-![Beispiel für ein Bild mit angewendetem „hint-overlay“](images/adaptive-tiles-image-hintoverlay.png)
-
-### Vorschaubild
+### <a name="peek-image"></a>Vorschaubild
 
 Sie können ein Bild angeben, das von oben in die Kachel hineingleitet. Das Vorschaubild gleitet mithilfe einer Animation von oben in die Kachel hinein, ist kurz auf der Kachel zu sehen und gleitet danach wieder nach oben heraus, um den Blick auf den Hauptinhalt der Kachel freizugeben. Um ein Vorschaubild festzulegen, platzieren Sie ein image-Element im Stamm von &lt;binding&gt; und legen das placement-Attribut auf „peek“ fest.
 
 ```XML
-...
 <binding template="TileMedium" branding="name">
   <image placement="peek" src="Assets/Apps/Hipstame/hipster.jpg"/>
   <text>New Message</text>
   <text hint-style="captionsubtle" hint-wrap="true">Hey, have you tried Windows 10 yet?</text>
 </binding>
-...
 ```
 
 ```CSharp
-...
- 
 TileWide = new TileBinding()
 {
     Branding = TileBranding.Name,
- 
     Content = new TileBindingContentAdaptive()
     {
         PeekImage = new TilePeekImage()
         {
-            Source = new TileImageSource("Assets/Apps/Hipstame/hipster.jpg")
+            Source = "Assets/Apps/Hipstame/hipster.jpg"
         },
- 
         Children =
         {
-            new TileText()
+            new AdaptiveText()
             {
                 Text = "New Message"
             },
- 
-            new TileText()
+            new AdaptiveText()
             {
                 Text = "Hey, have you tried Windows 10 yet?",
-                Style = TileTextStyle.CaptionSubtle,
-                Wrap = true
+                HintStyle = AdaptiveTextStyle.CaptionSubtle,
+                HintWrap = true
             }
         }
     }
 }
- 
-...
 ```
 
 ![Beispiele für Vorschaubilder](images/adaptive-tiles-imagepeeking.png)
 
 **Kreisförmiges Zuschneiden für Vorschau- und Hintergrundbilder**
 
-Wenden Sie das folgende Attribut auf Vorschau- und Hintergrundbilder für einen kreisförmigen Zuschnitt an:
+Wenden Sie das hint-crop-Attribut auf Vorschau- und Hintergrundbilder an, um einen kreisförmigen Zuschnitt zu erhalten:
 
-hint-crop="circle"
+```XML
+<image placement="peek" hint-crop="circle" src="Assets/Apps/Hipstame/hipster.jpg"/>
+```
+
+```CSharp
+new TilePeekImage()
+{
+    HintCrop = TilePeekImageCrop.Circle,
+    Source = "Assets/Apps/Hipstame/hipster.jpg"
+}
+```
 
 Das Ergebnis sieht wie folgt aus:
 
@@ -1333,77 +1202,124 @@ Zur Verwendung eines Vorschau- und eines Hintergrundbilds auf einer Kachelbenach
 
 Das Ergebnis sieht wie folgt aus:
 
-![Gleichzeitige Verwendung von Vorschau- und Hintergrundbild](images/peekandbackground.png)
+![Gleichzeitiges Verwenden von Vorschau- und Hintergrundbild](images/peekandbackground.png)
 
-**Verwendung von „hint-overlay“ auf einem Vorschaubild**
 
-Sie können **hint-overlay** auf einem Vorschaubild für mehr Deckkraft und bessere Lesbarkeit des Anzeigenamens der Kachel verwenden. Wenn Sie **hint-overlay** für das &lt;binding&gt;-Element angeben, wird die Überlagerung sowohl auf das Hintergrundbild als auch das Vorschaubild angewendet.
+### <a name="peek-and-background-image-overlays"></a>Overlays von Vorschau- und Hintergrundbild
 
-Sie können **hint-overlay** auch auf ein &lt;image&gt;-Element mit dem placement-Wert „peek“ oder „background“ anwenden, um für jedes dieser Bilder eine unterschiedliche Deckkraftstufe zu verwenden. Wenn Sie keine Überlagerung angeben, ist der Standardwert 20% für das Hintergrundbild und 0% für das Vorschaubild.
+Sie können mit **hint-overlay** eine schwarze Überlagerung für Hintergrund- und Vorschaubild festlegen. Das Attribut akzeptiert ganze Zahlen von 0 bis 100, wobei 0 keine Überlagerung und 100 eine vollständige schwarze Überlagerung angibt. Sie können das Overlay verwenden, um sicherzustellen, dass der Text auf der Kachel lesbar ist.
 
-Dieses Beispiel zeigt ein Hintergrundbild mit 20% Deckkraft (links) und 0% Deckkraft (rechts):
+**Verwenden von „hint-overlay“ für ein Hintergrundbild**
 
-![„hint-overlay“ auf einem Vorschaubild](images/hintoverlay.png)
+Das Hintergrundbild wird standardmäßig auf eine Überlagerung von 20 % festgelegt, solange es in der Nutzlast Textelemente gibt. (Andernfalls wird standardmäßig eine Überlagerung von 0 % festgelegt.)
 
-## Vertikale Ausrichtung (hint-textStacking)
+```XML
+<binding template="TileWide">
+  <image placement="background" hint-overlay="60" src="Assets\Mostly Cloudy-Background.jpg"/>
+  ...
+</binding>
+```
+
+```CSharp
+TileWide = new TileBinding()
+{
+    Content = new TileBindingContentAdaptive()
+    {
+        BackgroundImage = new TileBackgroundImage()
+        {
+            Source = "Assets/Mostly Cloudy-Background.jpg",
+            HintOverlay = 60
+        },
+
+        ...
+    }
+}
+```
+
+**Ergebnis von „hint-overlay“:**
+
+![Beispiel für ein Bild mit angewendetem „hint-overlay“](images/adaptive-tiles-image-hintoverlay.png)
+
+**Verwenden von „hint-overlay“ für ein Vorschaubild**
+
+In Version 1511 von Windows 10 unterstützen wir Überlagerungen für Vorschaubilder, genau wie für Hintergrundbilder. Geben Sie „hint-overlay“ für das Vorschaubildelement als ganze Zahl von 0 bis 100 an. Die Standardüberlagerung für Vorschaubilder ist 0 (keine Überlagerung).
+
+```XML
+<binding template="TileMedium">
+  <image hint-overlay="20" src="Assets\Map.jpg" placement="peek"/>
+  ...
+</binding>
+```
+
+```CSharp
+TileMedium = new TileBinding()
+{
+    Content = new TileBindingContentAdaptive()
+    {
+        PeekImage = new TilePeekImage()
+        {
+            Source = "Assets/Map.jpg",
+            HintOverlay = 20
+        },
+        ...
+    }
+}
+```
+
+Dieses Beispiel zeigt ein Vorschaubild mit 20 % Deckkraft (links) und 0 % Deckkraft (rechts):
+
+![„hint-overlay“ für ein Vorschaubild](images/hintoverlay.png)
+
+## <a name="vertical-alignment-text-stacking"></a>Vertikale Ausrichtung (hint-textStacking)
 
 
 Sie können die vertikale Ausrichtung der Inhalte auf einer Kachel steuern, indem Sie das **hint-textStacking**-Attribut sowohl für das [&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md)-Element als auch das [&lt;subgroup&gt;](tiles-and-notifications-adaptive-tiles-schema.md)-Element verwenden. Der gesamte Inhalt wird standardmäßig vertikal am oberen Rand ausgerichtet, kann aber auch in der Mitte oder am unteren Rand ausgerichtet werden.
 
-### Gestapelter Text für binding-Element
+### <a name="text-stacking-on-binding-element"></a>Gestapelter Text für binding-Element
 
 Bei Anwendung auf die [&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md)-Ebene wird durch Textstapelung die vertikale Ausrichtung des Benachrichtigungsinhalts als Ganzes festgelegt und im verfügbaren vertikalen Bereich über dem Branding-/Signalbereich ausgerichtet.
 
 ```XML
-...
 <binding template="TileMedium" hint-textStacking="center" branding="logo">
   <text hint-style="base" hint-align="center">Hi,</text>
   <text hint-style="captionSubtle" hint-align="center">MasterHip</text>
 </binding>
-...
 ```
 
 ```CSharp
-...
- 
 TileMedium = new TileBinding()
 {
     Branding = TileBranding.Logo,
- 
     Content = new TileBindingContentAdaptive()
     {
         TextStacking = TileTextStacking.Center,
- 
         Children =
         {
-            new TileText()
+            new AdaptiveText()
             {
                 Text = "Hi,",
-                Style = TileTextStyle.Base,
-                Align = TileTextAlign.Center
+                HintStyle = AdaptiveTextStyle.Base,
+                HintAlign = AdaptiveTextAlign.Center
             },
- 
-            new TileText()
+
+            new AdaptiveText()
             {
                 Text = "MasterHip",
-                Style = TileTextStyle.CaptionSubtle,
-                Align = TileTextAlign.Center
+                HintStyle = AdaptiveTextStyle.CaptionSubtle,
+                HintAlign = AdaptiveTextAlign.Center
             }
         }
     }
 }
- 
-...
 ```
 
 ![Gestapelter Text für binding-Element](images/adaptive-tiles-textstack-bindingelement.png)
 
-### Gestapelter Text für subgroup-Element
+### <a name="text-stacking-on-subgroup-element"></a>Gestapelter Text für subgroup-Element
 
 Bei Anwendung auf die [&lt;subgroup&gt;](tiles-and-notifications-adaptive-tiles-schema.md)-Ebene wird die vertikale Ausrichtung des Inhalts der Untergruppe (Spalte) durch gestapelten Text festgelegt und im verfügbaren vertikalen Bereich innerhalb der gesamten Gruppe ausgerichtet.
 
 ```XML
-...
 <binding template="TileWide" branding="nameAndLogo">
   <group>
     <subgroup hint-weight="33">
@@ -1415,56 +1331,51 @@ Bei Anwendung auf die [&lt;subgroup&gt;](tiles-and-notifications-adaptive-tiles-
     </subgroup>
   </group>
 </binding>
-...
 ```
 
 ```CSharp
-...
- 
 TileWide = new TileBinding()
 {
     Branding = TileBranding.NameAndLogo,
- 
     Content = new TileBindingContentAdaptive()
     {
         Children =
         {
-            new TileGroup()
+            new AdaptiveGroup()
             {
                 Children =
                 {
                     // Image column
-                    new TileSubgroup()
+                    new AdaptiveSubgroup()
                     {
-                        Weight = 33,
+                        HintWeight = 33,
                         Children =
                         {
-                            new TileImage()
+                            new AdaptiveImage()
                             {
-                                Source = new TileImageSource("Assets/Apps/Hipstame/hipster.jpg"),
-                                Crop = TileImageCrop.Circle
+                                Source = "Assets/Apps/Hipstame/hipster.jpg",
+                                HintCrop = AdaptiveImageCrop.Circle
                             }
                         }
                     },
- 
+
                     // Text column
-                    new TileSubgroup()
+                    new AdaptiveSubgroup()
                     {
                         // Vertical align its contents
                         TextStacking = TileTextStacking.Center,
- 
                         Children =
                         {
-                            new TileText()
+                            new AdaptiveText()
                             {
                                 Text = "Hi,",
-                                Style = TileTextStyle.Subtitle
+                                HintStyle = AdaptiveTextStyle.Subtitle
                             },
- 
-                            new TileText()
+
+                            new AdaptiveText()
                             {
                                 Text = "MasterHip",
-                                Style = TileTextStyle.BodySubtle
+                                HintStyle = AdaptiveTextStyle.BodySubtle
                             }
                         }
                     }
@@ -1473,15 +1384,14 @@ TileWide = new TileBinding()
         }
     }
 }
- 
-...
 ```
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 
 * [Adaptives Kachelschema](tiles-and-notifications-adaptive-tiles-schema.md)
-* [NotificationsExtensions auf GitHub](https://github.com/WindowsNotifications/NotificationsExtensions/wiki)
+* [Schnellstart: Senden einer lokalen Kachelbenachrichtigung](tiles-and-notifications-create-adaptive-tiles.md)
+* [Benachrichtigungsbibliothek auf GitHub](https://github.com/Microsoft/UWPCommunityToolkit/tree/dev/Notifications)
 * [Katalog für spezielle Kachelvorlagen](tiles-and-notifications-special-tile-templates-catalog.md)
  
 
@@ -1493,6 +1403,6 @@ TileWide = new TileBinding()
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

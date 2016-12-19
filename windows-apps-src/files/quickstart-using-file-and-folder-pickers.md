@@ -1,15 +1,15 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: F87DBE2F-77DB-4573-8172-29E11ABEFD34
 title: "Öffnen von Dateien und Ordnern mit einer Auswahl"
 description: "Greifen Sie auf Dateien und Ordner zu, indem Sie Benutzern die Interaktion mit einer Auswahl ermöglichen. Mithilfe der FileOpenPicker- und der FileSavePicker-Klasse können Sie auf Dateien und mithilfe der FolderPicker-Klasse auf einen Ordner zugreifen."
 translationtype: Human Translation
-ms.sourcegitcommit: 232008b7f80aceab201d5bedd744eedfe995648e
-ms.openlocfilehash: a27f81be16b5f032d852b377b14f1aaf89b93a2f
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: e7884f140915d66b4a9f95a4197e717d63b0f25f
 
 ---
 
-# Öffnen von Dateien und Ordnern mit einer Auswahl
+# <a name="open-files-and-folders-with-a-picker"></a>Öffnen von Dateien und Ordnern mit einer Auswahl
 
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -27,7 +27,7 @@ Greifen Sie auf Dateien und Ordner zu, indem Sie Benutzern die Interaktion mit e
 
  
 
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 
 -   **Kenntnisse in der asynchronen Programmierung für Apps für die universelle Windows-Plattform (UWP)**
@@ -38,7 +38,7 @@ Greifen Sie auf Dateien und Ordner zu, indem Sie Benutzern die Interaktion mit e
 
     Weitere Informationen finden Sie unter [Berechtigungen für den Dateizugriff](file-access-permissions.md).
 
-## Dateiauswahl – Benutzeroberfläche
+## <a name="file-picker-ui"></a>Dateiauswahl – Benutzeroberfläche
 
 
 Eine Dateiauswahl zeigt Informationen für die Orientierung der Benutzer an und stellt eine einheitliche Benutzererfahrung beim Öffnen oder Speichern von Dateien bereit.
@@ -53,7 +53,7 @@ Eine E-Mail-App zeigt möglicherweise eine Dateiauswahl an, damit der Benutzer A
 
 ![Eine Dateiauswahl mit zwei zu öffnenden Dateien.](images/picker-multifile-600px.png)
 
-## Funktionsweise der Auswahl
+## <a name="how-pickers-work"></a>Funktionsweise der Auswahl
 
 
 Mithilfe einer Auswahl kann Ihre App Zugriff auf Dateien und Ordner auf dem System des Benutzers erlangen und diese durchsuchen und speichern. Ihre App erhält diese Auswahl als [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)- und [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)-Objekte, die Sie dann verarbeiten können.
@@ -64,7 +64,7 @@ Beispielsweise können Sie die Dateiauswahl in Ihrer App aufrufen und dem Benutz
 
 ![Ein Diagramm, das zeigt, wie eine App eine zu öffnende Datei aus einer anderen App erhält. Die Dateiauswahl fungiert hier als Schnittstelle zwischen den beiden Apps.](images/app-to-app-diagram-600px.png)
 
-## Auswählen einer einzelnen Datei: vollständige Codeauflistung
+## <a name="pick-a-single-file-complete-code-listing"></a>Auswählen einer einzelnen Datei: vollständige Codeauflistung
 
 
 ```CSharp
@@ -88,7 +88,7 @@ else
 }
 ```
 
-## Auswählen einer einzelnen Datei: Schritt für Schritt
+## <a name="pick-a-single-file-step-by-step"></a>Auswählen einer einzelnen Datei: Schritt für Schritt
 
 
 Das Verwenden der Dateiauswahl umfasst das Erstellen und Anpassen eines Dateiauswahlobjekts und Einblenden der Dateiauswahl, sodass der Benutzer ein oder mehrere Elemente auswählen kann.
@@ -153,7 +153,7 @@ var files = await picker.PickMultipleFilesAsync();
         }
 ```
 
-## Auswählen eines Ordners: vollständige Codeauflistung
+## <a name="pick-a-folder-complete-code-listing"></a>Auswählen eines Ordners: vollständige Codeauflistung
 
 
 ```CSharp
@@ -185,6 +185,6 @@ else
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

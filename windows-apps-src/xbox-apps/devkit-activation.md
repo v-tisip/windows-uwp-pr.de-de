@@ -3,34 +3,34 @@ author: Mtoepke
 title: Aktivierung des Xbox One-Entwicklermodus
 description: "Dieser Artikel beschreibt das Aktivieren des Entwicklermodus, sodass Sie zwischen Einzelhandelsmodus und Entwicklermodus wechseln können."
 translationtype: Human Translation
-ms.sourcegitcommit: 2e34e54465448c91f4e63ec53a062cdb730ad952
-ms.openlocfilehash: c50ec870e9548e4823b9116c25f47fed1537a4e6
+ms.sourcegitcommit: 1e9abda6e2b505860bfbdbdc1e19193f0ebc8a6b
+ms.openlocfilehash: 903b291ab114298ec556e812f90c3fe27db37215
 
 ---
 
-# Aktivierung des Xbox One-Entwicklermodus
+# <a name="xbox-one-developer-mode-activation"></a>Aktivierung des Xbox One-Entwicklermodus
 
 * [Funktionsweise des Entwicklermodus](#how-developer-mode-works)
 * [Aktivieren des Entwicklermodus auf der Xbox One-Konsole](#activate-developer-mode-on-your-retail-xbox-one-console)  
 * [Wechseln zwischen Einzelhandels- und Entwicklermodus](#switch-between-retail-and-developer-mode)
 
-## Funktionsweise des Entwicklermodus
+## <a name="how-developer-mode-works"></a>Funktionsweise des Entwicklermodus
 Die Xbox One verfügt über zwei Modi: *Einzelhandelsmodus* (1) und *Entwicklermodus* (2). Im Einzelhandelsmodus ist die Konsole in dem Zustand, in dem sie von jedem Kunden oder Benutzer einer Xbox One-Konsole verwendet wird: Sie können als Benutzer Spiele spielen und Apps ausführen. Im Entwicklermodus können Sie Software für die Konsole entwickeln, jedoch keine Spiele spielen und Apps ausführen.
 Der Entwicklermodus kann auf jeder Xbox One-Konsole aktiviert werden. Nach dem Aktivieren des Entwicklermodus können Sie zwischen dem Einzelhandelsmodus (2a) und dem Entwicklermodus (2b) wechseln.
 
 > [!NOTE]
-> Sie können den Entwicklermodus auf Xbox One nicht aktivieren, wenn Sie bereits an einem laufenden Vorschauprogramm, z.B. Xbox One Beta, teilnehmen. Sie können ein vorhandenes Vorschauprogramm mithilfe der Xbox Preview Dashboard-App verlassen. 
+> Sie können den Entwicklermodus auf Xbox One nicht aktivieren, wenn Sie bereits an einem laufenden Vorschauprogramm, z. B. Xbox One Beta, teilnehmen. Sie können ein vorhandenes Vorschauprogramm mithilfe der Xbox Preview Dashboard-App verlassen. 
 
 ![Xbox One-Modi](images/dev-mode-flow.png)
 
-## Aktivieren des Entwicklermodus auf der Xbox One-Konsole
+## <a name="activate-developer-mode-on-your-retail-xbox-one-console"></a>Aktivieren des Entwicklermodus auf der Xbox One-Konsole
 
 1.  Starten Sie die Xbox One-Konsole.
 
-2.  Suchen Sie im Xbox One-Store die DevMode-Aktivierungs-App, und installieren Sie sie.  
-    ![](images/activation-store-search.png)
+2.  Suchen Sie die DevMode-Aktivierungs-App im Xbox One-Store, und installieren Sie sie.  
+    ![Installieren der DevMode-Aktivierungs-App](images/activation-store-search.png)
 
-3.  Navigieren Sie zu **My games & apps** > **Apps**.
+3.  Navigieren Sie zu **Meine Spiele und Apps** > **Apps**.
 
     ![DevMode-Aktivierungs-App](images/activation-step-3.png)
 4. Öffnen Sie die DevMode-Aktivierungs-App.    
@@ -64,7 +64,7 @@ Der Entwicklermodus kann auf jeder Xbox One-Konsole aktiviert werden. Nach dem A
     
 
     
-## Wechseln zwischen Einzelhandels- und Entwicklermodus
+## <a name="switch-between-retail-and-developer-mode"></a>Wechseln zwischen Einzelhandels- und Entwicklermodus
 Nachdem der Entwicklermodus auf der Konsole aktiviert wurde, können Sie mithilfe von **Dev Home** zwischen Einzelhandelsmodus und Entwicklermodus wechseln. Weitere Informationen zum Starten und Verwenden von **Dev Home**, finden Sie unter [Einführung in Xbox One Tools](introduction-to-xbox-tools.md).
 
 * Um zum Einzelhandelsmodus wechseln, öffnen Sie **Dev Home**, und klicken Sie auf **Leave developer mode**. Dadurch wird die Konsole im Einzelhandelsmodus neu gestartet.    
@@ -75,12 +75,12 @@ Nachdem der Entwicklermodus auf der Konsole aktiviert wurde, können Sie mithilf
 
   ![Aktivierungsschritt 14](images/activation-step-12.png)  
 
-## Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen
 - [Deaktivierung des Xbox One-Entwicklermodus](devkit-deactivation.md)
 - [UWP auf Xbox One](index.md)
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Dec16_HO1-->
 
 

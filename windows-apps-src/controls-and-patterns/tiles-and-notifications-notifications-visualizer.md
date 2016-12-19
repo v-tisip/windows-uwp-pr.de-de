@@ -6,18 +6,18 @@ ms.assetid: FCBB7BB1-2C79-484B-8FFC-26FE1934EC1C
 label: TBD
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: a954404ccc2e986c1603402315c8497f802ad254
+ms.sourcegitcommit: d51aacb31f41cbd9c065b013ffb95b83a6edaaf4
+ms.openlocfilehash: 20e73c2de82bcc76c94fff38163dddac7ef9d8a9
 
 ---
-# Notifications Visualizer
+# <a name="notifications-visualizer"></a>Notifications Visualizer
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
 Notifications Visualizer ist eine neue App für die Universelle Windows-Plattform (UWP) im [Store](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1), die Entwickler dabei unterstützt, adaptive Livekacheln für Windows 10 zu entwerfen.
 
-## Übersicht
+## <a name="overview"></a>Übersicht
 
 
 Die App „Notifications Visualizer” bietet beim Bearbeiten eine sofortige visuelle Vorschau Ihrer Kachel, vergleichbar mit dem XAML-Editor/der Designansicht von Visual Studio. Die App prüft auch auf Fehler. So wird sichergestellt, dass Sie eine gültige Kachelnutzlast erstellen.
@@ -34,12 +34,12 @@ Mit Notifications Visualizer können Sie adaptive Kachelnutzlasten erstellen und
 
  
 
-## Features
+## <a name="features"></a>Features
 
 
 Notifications Visualizer enthält eine Reihe von Beispielnutzlasten, um zu zeigen, was mit adaptiven Live-Kacheln möglich ist und um Sie bei den ersten Schritten zu unterstützen. Sie können mit den verschiedenen Textoptionen, Gruppen/Untergruppen, Hintergrundbildern experimentieren und sehen, wie sich die Kachel an verschiedene Geräte und Bildschirme anpasst. Wenn Sie Änderungen vornehmen, können Sie Ihre aktualisierte Nutzlast in einer Datei zur späteren Verwendung speichern.
 
-Der Editor stellt Fehler und Warnungen in Echtzeit bereit. Wenn Ihre App-Nutzlast beispielsweise auf weniger als 5KB (eine Plattformbeschränkung) begrenzt ist, warnt Notifications Visualizer Sie, falls Ihre Nutzlast diese Grenze überschreitet. Sie erhalten Warnungen aufgrund falscher Attributnamen oder Werte, wodurch das Debuggen visueller Probleme erleichtert wird.
+Der Editor stellt Fehler und Warnungen in Echtzeit bereit. Wenn Ihre App-Nutzlast beispielsweise auf weniger als 5 KB (eine Plattformbeschränkung) begrenzt ist, warnt Notifications Visualizer Sie, falls Ihre Nutzlast diese Grenze überschreitet. Sie erhalten Warnungen aufgrund falscher Attributnamen oder Werte, wodurch das Debuggen visueller Probleme erleichtert wird.
 
 Sie können Kacheleigenschaften, wie Anzeigename, Farbe, Logos, ShowName, Signalwert, steuern. Anhand dieser Optionen verstehen Sie sofort, wie Ihre Kacheleigenschaften und Kachelbenachrichtigungsnutzlasten interagieren und welche Ergebnisse sie produzieren.
 
@@ -49,24 +49,15 @@ Dieser Screenshot der App zeigt den Kachel-Editor:
 
  
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 
 * [Notifications Visualizer aus dem Store herunterladen](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1)
 * [Erstellen adaptiver Kacheln](tiles-and-notifications-create-adaptive-tiles.md)
 * [Vorlagen für adaptive Kacheln: Schema und Dokumentation](tiles-and-notifications-adaptive-tiles-schema.md)
 * [Kacheln und Popups (MSDN-Blog)](http://blogs.msdn.com/b/tiles_and_toasts/)
-* [NotificationsExtensions-Bibliothek (MSDN-Blog)](http://blogs.msdn.com/b/tiles_and_toasts/archive/2015/08/20/introducing-notificationsextensions-for-windows-10.aspx)
- 
-
- 
 
 
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

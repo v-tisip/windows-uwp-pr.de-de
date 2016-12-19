@@ -4,37 +4,37 @@ description: "In diesem einführenden Artikel erhalten App-Architekten und -Entw
 ms.assetid: 6AFF9D09-77C2-4811-BB1A-BBF4A6FF511E
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
-ms.openlocfilehash: 434505a697e045198972ce529366be281774af86
+ms.sourcegitcommit: a70a59283fe664bef9ddab56df57a9fc46c91033
+ms.openlocfilehash: 2ac9edf074ceb91d5cfea17228f0a39fef200b74
 
 ---
 
-# Einführung in die Entwicklung sicherer Windows-Apps
+# <a name="intro-to-secure-windows-app-development"></a>Einführung in die Entwicklung sicherer Windows-Apps
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 In diesem einführenden Artikel erhalten App-Architekten und -Entwickler weitere Informationen zu den verschiedenen Windows 10-Plattformfunktionen, die die Entwicklung von UWP-Apps (Universelle Windows-Plattform) beschleunigen. Sie erfahren mehr über die Verwendung der verfügbaren Windows-Sicherheitsfeatures der Authentifizierungs-, In-Flight-Daten- und At-Rest-Daten-Stufe. In den in jedem Kapitel enthaltenen zusätzlichen Ressourcen finden Sie ausführlichere Informationen zu jedem Thema.
 
-## 1 Einführung
+## <a name="1-introduction"></a>1 Einführung
 
 
-Die Entwicklung einer sicheren App kann eine Herausforderung darstellen. In der heutigen schnelllebigen Welt von mobilen und sozialen Apps sowie von Cloud- und komplexen Unternehmens-Apps erwarten Kunden, dass Apps schneller als je zuvor verfügbar sind und aktualisiert werden. Zudem verwenden sie viele verschiedene Gerätetypen– eine weitere Herausforderung bei der Gestaltung der App-Oberflächen. Beim Entwickeln für die Universelle Windows-Plattform (UWP) von Windows10 müssen Sie also neben traditionellen Geräten wie Desktops, Laptops, Tablets und mobilen Geräten auch immer mehr neue Technologien berücksichtigen. Diese reichen vom Internet der Dinge über Xbox One und Microsoft Surface Hub bis zu HoloLens. Als Entwickler müssen Sie die Sicherheit Ihrer Apps beim Kommunizieren und Speichern von Daten auf allen Plattformen oder Geräten gewährleisten.
+Die Entwicklung einer sicheren App kann eine Herausforderung darstellen. In der heutigen schnelllebigen Welt von mobilen und sozialen Apps sowie von Cloud- und komplexen Unternehmens-Apps erwarten Kunden, dass Apps schneller als je zuvor verfügbar sind und aktualisiert werden. Zudem verwenden sie viele verschiedene Gerätetypen – eine weitere Herausforderung bei der Gestaltung der App-Oberflächen. Beim Entwickeln für die Universelle Windows-Plattform (UWP) von Windows 10 müssen Sie also neben traditionellen Geräten wie Desktops, Laptops, Tablets und mobilen Geräten auch immer mehr neue Technologien berücksichtigen. Diese reichen vom Internet der Dinge über Xbox One und Microsoft Surface Hub bis zu HoloLens. Als Entwickler müssen Sie die Sicherheit Ihrer Apps beim Kommunizieren und Speichern von Daten auf allen Plattformen oder Geräten gewährleisten.
 
-Nachfolgend erhalten Sie einen Überblick über die Vorteile der Sicherheitsfeatures in Windows10.
+Nachfolgend erhalten Sie einen Überblick über die Vorteile der Sicherheitsfeatures in Windows 10.
 
--   Sie profitieren von standardisierter Sicherheit auf allen Geräten, die Windows10 unterstützen, indem Sie einheitliche APIs für Sicherheitskomponenten und Technologien verwenden.
+-   Sie profitieren von standardisierter Sicherheit auf allen Geräten, die Windows 10 unterstützen, indem Sie einheitliche APIs für Sicherheitskomponenten und Technologien verwenden.
 -   Sie schreiben, testen und warten weniger Code als beim Implementieren von benutzerdefiniertem Code für diese Sicherheitsszenarien.
 -   Ihre Apps werden stabiler und sicherer, da Sie über das Betriebssystem festlegen, wie die App auf ihre Ressourcen sowie auf lokale oder Remote-Systemressourcen zugreift.
 
-Während der Authentifizierung wird die Identität des Benutzers überprüft, der den Zugriff auf einen bestimmten Dienst anfordert. Microsoft Passport und Windows Hello unterstützen Sie in Windows10 beim Erstellen eines sichereren Authentifizierungsmechanismus in Windows-Apps. Mit ihnen können Sie eine persönliche Identifikationsnummer (PIN) oder biometrische Daten wie Fingerabdrücke, Gesichts- oder Iriserkennung für die mehrstufige Authentifizierung bei Ihren Apps verwenden.
+Während der Authentifizierung wird die Identität des Benutzers überprüft, der den Zugriff auf einen bestimmten Dienst anfordert. Microsoft Passport und Windows Hello unterstützen Sie in Windows 10 beim Erstellen eines sichereren Authentifizierungsmechanismus in Windows-Apps. Mit ihnen können Sie eine persönliche Identifikationsnummer (PIN) oder biometrische Daten wie Fingerabdrücke, Gesichts- oder Iriserkennung für die mehrstufige Authentifizierung bei Ihren Apps verwenden.
 
 In-Flight-Daten beziehen sich auf die Verbindung und die darüber übertragenen Nachrichten. Ein Beispiel hierfür ist das Abrufen von Daten von einem Remoteserver über Webdienste. Die Verwendung von SSL (Secure Sockets Layer) und HTTPS (Secure Hypertext Transfer Protocol) gewährleistet eine sichere Verbindung. Um In-Flight-Daten zu schützen, muss Zwischenbenutzern der Zugriff auf diese Nachrichten und nicht autorisierten Apps die Kommunikation mit Webdiensten verweigert werden.
 
-Als At-Rest-Daten werden Daten bezeichnet, die sich im Speicher oder auf Speichermedien befinden. Windows10 verfügt über ein App-Modell, das unbefugten Datenzugriff zwischen Apps verhindert und bietet Verschlüsselungs-APIs zum weiteren Sichern von Daten auf dem Gerät. Mit dem Schließfach für Anmeldeinformationen können Benutzeranmeldeinformationen sicher auf dem Gerät gespeichert werden. Das Betriebssystem verhindert, dass andere Apps Zugriff auf diese erhalten.
+Als At-Rest-Daten werden Daten bezeichnet, die sich im Speicher oder auf Speichermedien befinden. Windows 10 verfügt über ein App-Modell, das unbefugten Datenzugriff zwischen Apps verhindert und bietet Verschlüsselungs-APIs zum weiteren Sichern von Daten auf dem Gerät. Mit dem Schließfach für Anmeldeinformationen können Benutzeranmeldeinformationen sicher auf dem Gerät gespeichert werden. Das Betriebssystem verhindert, dass andere Apps Zugriff auf diese erhalten.
 
-## 2 Authentifizierungsfaktoren
+## <a name="2-authentication-factors"></a>2 Authentifizierungsfaktoren
 
 
 Um die Daten zu schützen, muss die Person, die den Zugriff anfordert, sich identifizieren und zum Zugriff auf die gewünschten Datenressourcen autorisiert sein. Der Vorgang, bei dem ein Benutzer identifiziert wird, wird als Authentifizierung bezeichnet. Der Vorgang, bei dem bestimmt wird, ob ein Benutzer berechtigt ist, auf eine Ressource zuzugreifen, wird als Autorisierung bezeichnet. Beide Vorgänge sind eng verwandt und für den Benutzer möglicherweise kaum zu unterscheiden. Der Vorgang kann relativ einfach oder komplex sein. Dies hängt von zahlreichen Faktoren ab, beispielsweise davon, ob die Daten auf einem Server gespeichert oder auf viele Systeme verteilt sind. Der Server, der die Authentifizierungs- und Autorisierungsdienste bereitstellt, wird als Identitätsanbieter bezeichnet.
@@ -45,11 +45,11 @@ Um sich bei einem bestimmten Dienst und/oder einer App zu authentifizieren, verw
 -   **Benutzergerät** ist meistens ein Hardwarespeichergerät wie ein USB-Stick mit den eindeutigen Authentifizierungsdaten des Benutzers.
 -   **Benutzermerkmal** umfasst häufig Fingerabdrücke. Mittlerweile werden jedoch zunehmend auch Faktoren wie Sprach-, Gesichts- oder Augenmerkmale und Verhaltensmuster des Benutzers verwendet. Werden sie als Daten gespeichert, bezeichnet man diese als Biometrie.
 
-Ein vom Benutzer erstelltes Kennwort ist naturgemäß ein Authentifizierungsfaktor, reicht aber häufig nicht aus. Jeder, der das Kennwort kennt, kann die Identität des Benutzers annehmen, dem das Kennwort gehört. Eine Smartcard bietet u.U. höhere Sicherheit, kann aber gestohlen, verloren oder verlegt werden. Ein System, das einen Benutzer anhand seines Fingerabdrucks oder eines Augenscans authentifizieren kann, bietet u.U. die höchste und komfortabelste Sicherheit, erfordert jedoch teure und spezialisierte Hardware (z.B. eine Intel RealSense-Kamera für die Gesichtserkennung), die möglicherweise nicht allen Benutzern zur Verfügung steht.
+Ein vom Benutzer erstelltes Kennwort ist naturgemäß ein Authentifizierungsfaktor, reicht aber häufig nicht aus. Jeder, der das Kennwort kennt, kann die Identität des Benutzers annehmen, dem das Kennwort gehört. Eine Smartcard bietet u. U. höhere Sicherheit, kann aber gestohlen, verloren oder verlegt werden. Ein System, das einen Benutzer anhand seines Fingerabdrucks oder eines Augenscans authentifizieren kann, bietet u. U. die höchste und komfortabelste Sicherheit, erfordert jedoch teure und spezialisierte Hardware (z. B. eine Intel RealSense-Kamera für die Gesichtserkennung), die möglicherweise nicht allen Benutzern zur Verfügung steht.
 
 Das Entwerfen der von einem Computersystem verwendeten Authentifizierungsmethode ist ein komplexer und wichtiger Aspekt der Datensicherheit. Im Allgemeinen gilt: Je mehr Faktoren bei der Authentifizierung zum Einsatz kommen, umso sicherer ist das System. Zur gleichen Zeit muss die Authentifizierung praktikabel sein. Da sich ein Benutzer normalerweise mehrmals täglich anmeldet, muss das Verfahren schnell sein. Bei der Wahl des Authentifizierungstyps muss zwischen Sicherheit und einfacher Bedienung abgewogen werden. Die Single-Factor Authentication ist am unsichersten und einfachsten, während die Multi-Factor Authentication immer sicherer, auch komplexer wird, je mehr Faktoren hinzukommen.
 
-## 2.1 Single-Factor Authentication
+## <a name="21-single-factor-authentication"></a>2.1 Single-Factor Authentication
 
 
 Diese Art der Authentifizierung basiert auf einer einzelnen Benutzeranmeldeinformation. In der Regel ist dies ein Kennwort, es kann aber auch eine PIN verwendet werden.
@@ -69,7 +69,7 @@ Das Problem bei Kennwörtern ist, dass sie einfacher erraten werden können als 
 
 Die Single-Factor Authentication hat zwar einige Nachteile, überlässt dem Benutzer jedoch die Kontrolle über seine Anmeldedaten. Der Benutzer erstellt und ändert die Anmeldeinformationen, und zur Authentifizierung wird lediglich eine Tastatur benötigt. Dies ist der Hauptaspekt, der die Single-Factor Authentication von der Multi-Factor Authentication unterscheidet.
 
-## 2.1.1 Webauthentifizierungsbroker
+## <a name="211-web-authentication-broker"></a>2.1.1 Webauthentifizierungsbroker
 
 
 Wie bereits erwähnt liegt eine der Herausforderungen in der Kennwortauthentifizierung für IT-Abteilung in der Verwaltung der Benutzernamen/Kennwörter, Zurücksetzungsmechanismen usw. Eine weitere, immer beliebtere Option der Einsatz von dritten Identitätsanbietern. Diese bieten die Authentifizierung über OAuth an, einen offenen Authentifizierungsstandard.
@@ -128,10 +128,10 @@ catch (Exception ex)
 }
 ```
 
-## 2.2 Multi-Factor Authentication
+## <a name="22-multi-factor-authentication"></a>2.2 Multi-Factor Authentication
 
 
-Die Multi-Factor Authentication nutzt mehr als einen Authentifizierungsfaktor. In der Regel wird „etwas, das Sie kennen“, z.B. ein Kennwort, mit „etwas, das Sie haben“ kombiniert. Das kann z.B. ein Mobiltelefon oder eine Smartcard sein. Selbst wenn ein Angreifer das Kennwort des Benutzers ausspioniert, kann er ohne das Gerät oder den Code trotzdem nicht auf das Konto zugreifen. Wird nur das Gerät oder die Karte manipuliert, sind diese ohne das Kennwort für den Angreifer nutzlos. Daher ist die Multi-Factor Authentication sicherer, aber auch komplexer als die Single-Factor Authentication.
+Die Multi-Factor Authentication nutzt mehr als einen Authentifizierungsfaktor. In der Regel wird „etwas, das Sie kennen“, z. B. ein Kennwort, mit „etwas, das Sie haben“ kombiniert. Das kann z. B. ein Mobiltelefon oder eine Smartcard sein. Selbst wenn ein Angreifer das Kennwort des Benutzers ausspioniert, kann er ohne das Gerät oder den Code trotzdem nicht auf das Konto zugreifen. Wird nur das Gerät oder die Karte manipuliert, sind diese ohne das Kennwort für den Angreifer nutzlos. Daher ist die Multi-Factor Authentication sicherer, aber auch komplexer als die Single-Factor Authentication.
 
 Dienste, die die Multi-Factor Authentication nutzen, lassen dem Benutzer häufig die Wahl, wie die zweite Anmeldeinformation übermittelt werden soll. Ein Beispiel für diesen Authentifizierungstyp ist ein häufig verwendetes Verfahren, bei dem ein Überprüfungscode per SMS an das Mobiltelefon des Benutzers gesendet wird.
 
@@ -146,7 +146,7 @@ Dienste, die die Multi-Factor Authentication nutzen, lassen dem Benutzer häufig
 
 Wie Sie sehen, unterscheidet sich dieser Vorgang auch von der Single-Factor Authentication, da die zweite Benutzeranmeldeinformation an den Benutzer gesendet wird und nicht vom Benutzer erstellt bzw. angegeben wird. Daher hat der Benutzer nicht die vollständige Kontrolle über die erforderlichen Anmeldeinformationen. Dies gilt auch, wenn eine Smartcard für die zweite Anmeldeinformation verwendet wird: Die Organisation ist dafür zuständig, die Smartcard zu erstellen und an den Benutzer zu übergeben.
 
-## 2.2.1 Azure Active Directory
+## <a name="221-azure-active-directory"></a>2.2.1 Azure Active Directory
 
 
 Azure Active Directory (Azure AD) ist ein cloudbasierter Identitäts- und Zugriffsverwaltungsdienst, der als Identitätsanbieter in der Single-Factor Authentication oder Multi-Factor Authentication verwendet werden kann. Die Azure AD-Authentifizierung kann mit oder ohne Überprüfungscode verwendet werden.
@@ -155,14 +155,14 @@ In Azure AD kann auch die Single-Factor Authentication implementiert werden. Unt
 
 Darüber hinaus kann Azure AD als OAuth-Anbieter verwendet werden und Standardbenutzer erhalten einen Authentifizierungs- und Autorisierungsmechanismus für Apps auf verschiedenen Plattformen. Weitere Informationen hierzu finden Sie unter [Azure Active Directory](https://azure.microsoft.com/services/active-directory/) und [Multi-Factor Authentication von Azure](https://azure.microsoft.com/services/multi-factor-authentication/).
 
-## 2.4 Microsoft Passport und Windows Hello
+## <a name="24-microsoft-passport-and-windows-hello"></a>2.4 Microsoft Passport und Windows Hello
 
 
-In Windows10 ist ein praktischer mehrstufiger Authentifizierungsmechanismus in das Betriebssystem integriert. Die beiden beteiligten Komponenten heißen Microsoft Passport und Windows Hello. Windows Hello ist das neue biometrische Anmeldesystem in Windows10. Da es direkt im Betriebssystem integriert ist, ermöglicht Windows Hello die Gesichts- oder Fingerabdruckidentifikation zum Entsperren von Benutzergeräten. Der sichere Windows-Anmeldeinformationsspeicher schützt die biometrischen Daten auf dem Gerät.
+In Windows 10 ist ein praktischer mehrstufiger Authentifizierungsmechanismus in das Betriebssystem integriert. Die beiden beteiligten Komponenten heißen Microsoft Passport und Windows Hello. Windows Hello ist das neue biometrische Anmeldesystem in Windows 10. Da es direkt im Betriebssystem integriert ist, ermöglicht Windows Hello die Gesichts- oder Fingerabdruckidentifikation zum Entsperren von Benutzergeräten. Der sichere Windows-Anmeldeinformationsspeicher schützt die biometrischen Daten auf dem Gerät.
 
 Windows Hello bietet Geräten eine zuverlässige Möglichkeit, einzelne Benutzer zu erkennen. Dies betrifft den ersten Teil des Wegs zwischen einem Benutzer und einem angeforderten Dienst- oder Datenelement. Nachdem das Gerät den Benutzer erkannt hat, muss es den Benutzer jedoch erst noch authentifizieren, bevor es entscheidet, ob er auf die angeforderte Ressource zugreifen darf. Microsoft Passport bietet die sichere 2FA (Two-Factor Authentication), die vollständig in Windows integriert ist, und ersetzt wiederverwendbare Kennwörter durch eine Kombination aus einem bestimmten Gerät und einer biometrischen Geste oder einer PIN. Die PIN wird vom Benutzer im Rahmen seiner Microsoft Passport-Registrierung angegeben.
 
-Bei Microsoft Passport handelt es sich jedoch nicht um einen bloßen Ersatz der herkömmlichen 2FA-Systeme. Konzeptionell gesehen ähnelt es Smartcards. Die Authentifizierung wird mithilfe von kryptografischen Primitiven ausgeführt, anstelle Zeichenfolgen zu vergleichen. Zudem sind die Schlüssel des Benutzers in der vor Manipulationen geschützten Hardware sicher. Für Microsoft Passport sind keine zusätzlichen Infrastrukturkomponenten für die Smartcard-Bereitstellung erforderlich. Insbesondere benötigen Sie keine Public Key-Infrastruktur (PKI) zum Verwalten von Zertifikaten, wenn Sie derzeit keine haben. MicrosoftPassport kombiniert die wichtigsten Vorteile von Smartcards– Flexibilität bei der Bereitstellung virtueller Smartcards und zuverlässige Sicherheit für physische Smartcards– und birgt keinen ihrer Nachteile.
+Bei Microsoft Passport handelt es sich jedoch nicht um einen bloßen Ersatz der herkömmlichen 2FA-Systeme. Konzeptionell gesehen ähnelt es Smartcards. Die Authentifizierung wird mithilfe von kryptografischen Primitiven ausgeführt, anstelle Zeichenfolgen zu vergleichen. Zudem sind die Schlüssel des Benutzers in der vor Manipulationen geschützten Hardware sicher. Für Microsoft Passport sind keine zusätzlichen Infrastrukturkomponenten für die Smartcard-Bereitstellung erforderlich. Insbesondere benötigen Sie keine Public Key-Infrastruktur (PKI) zum Verwalten von Zertifikaten, wenn Sie derzeit keine haben. Microsoft Passport kombiniert die wichtigsten Vorteile von Smartcards – Flexibilität bei der Bereitstellung virtueller Smartcards und zuverlässige Sicherheit für physische Smartcards – und birgt keinen ihrer Nachteile.
 
 Ein Gerät muss bei Microsoft Passport registriert werden, bevor sich Benutzer damit authentifizieren können. Microsoft Passport verwendet eine asymmetrische Verschlüsselung (öffentliche/private Schlüssel). Hier verwendet eine Partei einen öffentlichen Schlüssel zum Verschlüsseln von Daten, die die andere Partei mithilfe eines privaten Schlüssels entschlüsseln kann. Im Fall von Microsoft Passport werden mehrere Paare aus öffentlichen und privaten Schlüsseln erstellt und die privaten Schlüssel in den TPM-Chip (Trusted Platform Module) des Geräts geschrieben. Nachdem ein Gerät registriert wurde, können UWP-Apps System-APIs aufrufen, um den öffentlichen Schlüssel des Benutzers abzurufen, der zum Registrieren des Benutzers auf dem Server verwendet werden kann.
 
@@ -170,16 +170,16 @@ Der Registrierungsworkflow einer App könnte wie folgt aussehen:
 
 ![Microsoft Passport-Registrierung](images/secure-passport.png)
 
-Die von Ihnen erfassten Registrierungsinformationen umfassen möglicherweise viel mehr Identifikationsinformationen als in diesem einfachen Szenario. Wenn Ihre App auf einen gesicherten Dienst – z.B. Onlinebanking– zugreift, müssen Sie beim Anmeldevorgang einen Identitätsnachweis und andere Dinge anfordern. Nachdem alle Bedingungen erfüllt wurden, wird der öffentliche Schlüssel dieses Benutzers im Back-End gespeichert und für Überprüfungszwecke verwendet, wenn der Benutzer den Dienst das nächste Mal verwendet.
+Die von Ihnen erfassten Registrierungsinformationen umfassen möglicherweise viel mehr Identifikationsinformationen als in diesem einfachen Szenario. Wenn Ihre App auf einen gesicherten Dienst – z. B. Onlinebanking – zugreift, müssen Sie beim Anmeldevorgang einen Identitätsnachweis und andere Dinge anfordern. Nachdem alle Bedingungen erfüllt wurden, wird der öffentliche Schlüssel dieses Benutzers im Back-End gespeichert und für Überprüfungszwecke verwendet, wenn der Benutzer den Dienst das nächste Mal verwendet.
 
 Weitere Informationen zu Microsoft Passport und Windows Hello finden Sie in der [Microsoft Passport-Anleitung](https://msdn.microsoft.com/library/mt589441) und im [Microsoft Passport-Entwicklerhandbuch](microsoft-passport.md).
 
-## 3 Sicherheitsmethoden für In-Flight-Daten
+## <a name="3-data-in-flight-security-methods"></a>3 Sicherheitsmethoden für In-Flight-Daten
 
 
-Sicherheitsmethoden für In-Flight-Daten beziehen sich auf Daten, die zwischen den mit einem Netzwerk verbundenen Geräten übertragen werden. Die Daten können zwischen Systemen in der hochsicheren Umgebung eines privaten Unternehmensintranets oder zwischen einem Client und Webdienst in der nicht sicheren Umgebung des Webs übertragen werden. Windows10-Apps unterstützen Standards wie SSL über ihre Netzwerk-APIs und arbeiten mit Technologien wie Azure API Management, mit der Entwickler die geeignete Sicherheitsstufe für ihre Apps gewährleisten können.
+Sicherheitsmethoden für In-Flight-Daten beziehen sich auf Daten, die zwischen den mit einem Netzwerk verbundenen Geräten übertragen werden. Die Daten können zwischen Systemen in der hochsicheren Umgebung eines privaten Unternehmensintranets oder zwischen einem Client und Webdienst in der nicht sicheren Umgebung des Webs übertragen werden. Windows 10-Apps unterstützen Standards wie SSL über ihre Netzwerk-APIs und arbeiten mit Technologien wie Azure API Management, mit der Entwickler die geeignete Sicherheitsstufe für ihre Apps gewährleisten können.
 
-## 3.1 Remotesystemauthentifizierung
+## <a name="31-remote-system-authentication"></a>3.1 Remotesystemauthentifizierung
 
 
 Es gibt zwei allgemeine Szenarien, in denen die Kommunikation über ein Remotecomputersystem erfolgt.
@@ -189,18 +189,18 @@ Es gibt zwei allgemeine Szenarien, in denen die Kommunikation über ein Remoteco
 
 Für die Kommunikation zwischen Webdiensten gelten höhere Sicherheitsanforderungen als in Szenarien mit direkten Verbindungen, da Daten nicht mehr nur ein Teil eines sicheren, vertrauenswürdigen Netzwerks sind. Zudem besteht ein höheres Risiko, dass Angreifer versuchen, Daten abzufangen. Da verschiedene Gerätetypen auf den Dienst zugreifen werden, werden sie vermutlich als RESTful-Dienste erstellt und nicht als WCF. Die Authentifizierung und Autorisierung für den Dienst stellen Sie daher ebenfalls vor neue Herausforderungen. Wir werden zwei Anforderungen an die sichere Kommunikation mit Remotesystemen untersuchen.
 
-Die erste Anforderung ist Nachrichtenvertraulichkeit: Die zwischen dem Client und den Webdiensten übertragenen Informationen (z.B. die Identität des Benutzers und andere persönliche Informationen) dürfen während der Übertragung nicht von Dritten gelesen werden. Dies wird normalerweise verhindert, indem die Verbindung, über die Nachrichten gesendet werden, und die Nachricht selbst verschlüsselt werden. Bei der Verschlüsselung mit privatem/öffentlichem Schlüssel ist der öffentliche Schlüssel für jeden verfügbar und dient zum Verschlüsseln von Nachrichten, die an einen bestimmten Empfänger gesendet werden sollen. Der private Schlüssel ist nur dem Empfänger bekannt und wird zum Entschlüsseln der Nachricht verwendet.
+Die erste Anforderung ist Nachrichtenvertraulichkeit: Die zwischen dem Client und den Webdiensten übertragenen Informationen (z. B. die Identität des Benutzers und andere persönliche Informationen) dürfen während der Übertragung nicht von Dritten gelesen werden. Dies wird normalerweise verhindert, indem die Verbindung, über die Nachrichten gesendet werden, und die Nachricht selbst verschlüsselt werden. Bei der Verschlüsselung mit privatem/öffentlichem Schlüssel ist der öffentliche Schlüssel für jeden verfügbar und dient zum Verschlüsseln von Nachrichten, die an einen bestimmten Empfänger gesendet werden sollen. Der private Schlüssel ist nur dem Empfänger bekannt und wird zum Entschlüsseln der Nachricht verwendet.
 
 Die zweite Anforderung ist die Nachrichtenintegrität: Der Client und der Webdienst müssen überprüfen können, ob die empfangenen Nachrichten diejenigen sind, die die Gegenseite senden wollte, und ob die Nachricht während der Übertragung nicht manipuliert wurde. Dazu werden Nachrichten mit digitalen Signaturen signiert und die Zertifikatauthentifizierung verwendet.
 
-## 3.2 SSL-Verbindungen
+## <a name="32-ssl-connections"></a>3.2 SSL-Verbindungen
 
 
 Webdienste können das von HTTPS (Secure Hypertext Transfer Protocol) unterstützte SSL (Secure Sockets Layer) verwenden, um sichere Verbindungen mit Clients herzustellen und zu verwalten. SSL gewährleistet Nachrichtenvertraulichkeit und -integrität durch die Unterstützung der Verschlüsselung mit öffentlichem Schlüssel sowie von Serverzertifikaten. SSL wird von Transport Layer Security (TLS) abgelöst, aber TLS wird häufig als SSL bezeichnet.
 
 Wenn ein Client Zugriff auf eine Ressource auf einem Server anfordert, startet SSL einen Aushandlungsprozess mit dem Server. Dies wird als SSL-Handshake bezeichnet. Als Grundlage für die gesamte Kommunikation für die Dauer der SSL-Verbindung werden eine Verschlüsselungsstufe, eine Reihe öffentlicher und privater Verschlüsselungsschlüssel und die Identitätsinformationen im Client- und Serverzertifikat vereinbart. Der Server kann zu diesem Zeitpunkt außerdem verlangen, dass der Client authentifiziert wird. Sobald die Verbindung hergestellt ist, werden alle Nachrichten mit dem ausgehandelten öffentlichen Schlüssel verschlüsselt, bis die Verbindung geschlossen wird.
 
-## 3.2.1 SSL-Pinning
+## <a name="321-ssl-pinning"></a>3.2.1 SSL-Pinning
 
 
 Während SSL mithilfe von Verschlüsselung und Zertifikaten für Nachrichtenvertraulichkeit sorgt, kann mit dieser Technologie nicht sichergestellt werden, dass der Server, mit dem kommuniziert wird, auch der richtige Server ist. Das Serververhalten kann durch einen nicht autorisierten Dritten nachgeahmt werden, um sensible, vom Client übertragene Daten abzufangen. Dies kann mit einer als „SSL-Pinning“ bezeichneten Technik verhindert werden, die sicherstellt, dass das Zertifikat auf dem Server dem Zertifikat entspricht, das der Client erwartet und als vertrauenswürdig anerkennt.
@@ -260,7 +260,7 @@ private bool ValidateCertificates(IReadOnlyList<Certificate> certs)
 }
 ```
 
-## 3.3 Veröffentlichen und Sichern des Zugriffs auf REST-APIs
+## <a name="33-publishing-and-securing-access-to-rest-apis"></a>3.3 Veröffentlichen und Sichern des Zugriffs auf REST-APIs
 
 
 Um autorisierten Zugriff auf Webdienste zu gewährleisten, müssen sie bei jedem API-Aufruf eine Authentifizierung anfordern. Die Steuerung der Leistung und Skalierung ist eine weitere Möglichkeit, wenn Webdienste über das Web verfügbar gemacht werden. Mit Azure API Management können Sie APIs über das Web verfügbar machen, wenn Sie Funktionen auf drei Ebenen bereitstellen.
@@ -273,19 +273,19 @@ Die von diesen Entwicklern erstellten **apps** können dann über den von Azure 
 
 Azure API Management kann auch die Anzahl der API-Aufrufe eines Diensts (durch die sogenannte Drosselung) reduzieren, um die Leistung des Webdiensts zu optimieren. Weitere Informationen finden Sie unter [Azure API Management](https://azure.microsoft.com/services/api-management/) und [Azure API Management at AzureCon 2015](https://channel9.msdn.com/events/Microsoft-Azure/AzureCon-2015/ACON313) (in englischer Sprache).
 
-## 4 Sicherheitsmethoden für At-Rest-Daten
+## <a name="4-data-at-rest-security-methods"></a>4 Sicherheitsmethoden für At-Rest-Daten
 
 
-Daten die von einem Gerät empfangen werden, bezeichnen wir als „At-Rest-Daten“. Diese Daten müssen auf sichere Weise auf dem Gerät gespeichert werden, um den Zugriff durch nicht autorisierte Benutzer oder Apps zu verhindern. Das App-Modell in Windows10 stellt auf vielfältige Weise sicher, dass die von einer App gespeicherten Daten auch nur für diese App verfügbar sind. Gleichzeitig bietet es APIs, über die die Daten bei Bedarf gemeinsam genutzt werden können. Darüber hinaus sind APIs verfügbar, mit denen sichergestellt wird, dass Daten verschlüsselt und Anmeldeinformationen sicher gespeichert werden können.
+Daten die von einem Gerät empfangen werden, bezeichnen wir als „At-Rest-Daten“. Diese Daten müssen auf sichere Weise auf dem Gerät gespeichert werden, um den Zugriff durch nicht autorisierte Benutzer oder Apps zu verhindern. Das App-Modell in Windows 10 stellt auf vielfältige Weise sicher, dass die von einer App gespeicherten Daten auch nur für diese App verfügbar sind. Gleichzeitig bietet es APIs, über die die Daten bei Bedarf gemeinsam genutzt werden können. Darüber hinaus sind APIs verfügbar, mit denen sichergestellt wird, dass Daten verschlüsselt und Anmeldeinformationen sicher gespeichert werden können.
 
-## 4.1 Windows-App-Modell
+## <a name="41-windows-app-model"></a>4.1 Windows-App-Modell
 
 
 Bisher war in Windows keine App-Definition vorgesehen. Meist wurde sie als ausführbare Datei (.exe) bezeichnet und umfasste niemals Faktoren wie Installation, Zustandsspeicherung, Ausführungslänge, Versionsverwaltung, Betriebssystemintegration oder App-zu-App-Kommunikation. Das UWP-Modell verfügt über eine App-Modelldefinition, in der Installation, Laufzeitumgebung, Ressourcenverwaltung, Updates, Datenmodell und Deinstallation berücksichtigt werden.
 
 Windows 10-Apps werden in einem Container ausgeführt. Das bedeutet, dass sie standardmäßig eingeschränkte Berechtigungen haben. (Zusätzliche Berechtigungen können angefordert und vom Benutzer genehmigt werden.) Möchte eine App beispielsweise auf Dateien auf dem System zugreifen, muss eine Dateiauswahl aus dem Namespace [**Windows.Storage.Pickers**](https://msdn.microsoft.com/library/windows/apps/br207928) verwendet werden, damit der Benutzer eine Datei auswählen kann. (Es ist kein direkter Zugriff auf Dateien möglich.) Ein weiteres Beispiel: Wenn eine App auf Positionsdaten des Benutzers zugreifen möchte, müssen die Standortdienste des Geräts aktiviert werden. Der Benutzer wird beim Download informiert, dass diese App Zugriff auf die Position des Benutzers benötigt. Wenn die App erstmals auf den Standort des Benutzers zugreifen möchte, wird abermals die Zustimmung des Benutzers zum Zugriff auf diese Daten angefordert.
 
-Beachten Sie, dass dieses App-Modell als „Gefängnis“ für Apps fungiert, diese also über keine Reichweite verfügen. Jedoch ist es keine „Burg“, die nicht von außen erreicht werden kann (Anwendungen mit Administratorrechten können die Apps noch erreichen). Mit Device Guard in Windows10 können Unternehmen/IT festlegen, welche (Win32-) Apps ausgeführt werden dürfen und diesen Zugriff weiter einschränken.
+Beachten Sie, dass dieses App-Modell als „Gefängnis“ für Apps fungiert, diese also über keine Reichweite verfügen. Jedoch ist es keine „Burg“, die nicht von außen erreicht werden kann (Anwendungen mit Administratorrechten können die Apps noch erreichen). Mit Device Guard in Windows 10 können Unternehmen/IT festlegen, welche (Win32-) Apps ausgeführt werden dürfen und diesen Zugriff weiter einschränken.
 
 Das App-Modell verwaltet auch den App-Lebenszyklus. Es beschränkt die Hintergrundausführung von Apps standardmäßig, Wird beispielsweise eine App in den Hintergrund verschoben, wird der Prozess angehalten (nachdem der App ein kurzer Zeitraum gewährt wird, um die App im Code anzuhalten), und der Speicher wird eingefroren. Das Betriebssystem bietet Mechanismen für Apps, um die Ausführung bestimmter Hintergrundaufgaben anzufordern (nach Zeitplan, durch verschiedene Ereignisse wie Internet-/Bluetooth-Verbindung ausgelöst, Änderung der Stromversorgung usw. und in bestimmten Szenarien wie der Wiedergabe von Musik oder GPS-Tracking).
 
@@ -293,10 +293,10 @@ Wenn Speicherressourcen auf dem Gerät knapp werden, gibt Windows Speicher durch
 
 Weitere Informationen finden Sie unter [It's Universal: Understanding the Lifecycle of a Windows 10 Application](https://visualstudiomagazine.com/articles/2015/09/01/its-universal.aspx) (in englischer Sprache).
 
-## 4.2 Schutz gespeicherter Anmeldeinformationen
+## <a name="42-stored-credential-protection"></a>4.2 Schutz gespeicherter Anmeldeinformationen
 
 
-Windows-Apps, die häufig auf authentifizierte Dienste zugreifen, bieten Benutzern die Möglichkeit, ihre Anmeldedaten auf dem lokalen Gerät zu speichern. Diese Option erhöht die Benutzerfreundlichkeit. Wenn der Benutzer Benutzernamen und Kennwort angibt, werden diese bei nachfolgenden Startvorgängen von der App automatisch verwendet. Da ein Sicherheitsproblem entsteht, wenn ein Angreifer Zugriff auf diese gespeicherten Daten erhält, können Windows-Apps unter Windows10 Benutzeranmeldeinformationen in einem sicheren Schließfach für Anmeldeinformationen speichern. Die App ruft die API des Schließfachs für Anmeldeinformationen auf und ruft die Anmeldeinformationen aus dem Schließfach ab, anstatt sie im Speichercontainer der App zu speichern. Das Schließfach für Anmeldeinformationen wird vom Betriebssystem verwaltet und stellt eine sicher verwaltete Lösung für die Speicherung von Anmeldeinformationen dar. Der Zugriff darauf ist jedoch der App vorbehalten, die die Daten speichert.
+Windows-Apps, die häufig auf authentifizierte Dienste zugreifen, bieten Benutzern die Möglichkeit, ihre Anmeldedaten auf dem lokalen Gerät zu speichern. Diese Option erhöht die Benutzerfreundlichkeit. Wenn der Benutzer Benutzernamen und Kennwort angibt, werden diese bei nachfolgenden Startvorgängen von der App automatisch verwendet. Da ein Sicherheitsproblem entsteht, wenn ein Angreifer Zugriff auf diese gespeicherten Daten erhält, können Windows-Apps unter Windows 10 Benutzeranmeldeinformationen in einem sicheren Schließfach für Anmeldeinformationen speichern. Die App ruft die API des Schließfachs für Anmeldeinformationen auf und ruft die Anmeldeinformationen aus dem Schließfach ab, anstatt sie im Speichercontainer der App zu speichern. Das Schließfach für Anmeldeinformationen wird vom Betriebssystem verwaltet und stellt eine sicher verwaltete Lösung für die Speicherung von Anmeldeinformationen dar. Der Zugriff darauf ist jedoch der App vorbehalten, die die Daten speichert.
 
 Wenn ein Benutzer die zu speichernden Anmeldeinformationen angibt, ruft die App mithilfe des Objekts [**PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227081) im Namespace [**Windows.Security.Credentials**](https://msdn.microsoft.com/library/windows/apps/br227089) einen Verweis auf das Schließfach für Anmeldeinformationen ab. Anschließend wird ein Objekt [**PasswordCredential**](https://msdn.microsoft.com/library/windows/apps/br227061) erstellt, das einen Bezeichner für die Windows-App sowie den Benutzernamen und das Kennwort enthält. Dieses wird an die Methode [**PasswordVault.Add**](https://msdn.microsoft.com/library/windows/apps/hh701231) übergeben, um die Anmeldeinformationen im Schließfach zu speichern. Dies wird im folgenden C#-Codebeispiel veranschaulicht.
 
@@ -359,12 +359,12 @@ private PasswordCredential GetCredentialFromLocker()
 
 Weitere Informationen finden Sie unter [Schließfach für Anmeldeinformationen](credential-locker.md).
 
-## 4.3 Schutz gespeicherter Daten
+## <a name="43-stored-data-protection"></a>4.3 Schutz gespeicherter Daten
 
 
 Wenn gespeicherte Daten – häufig auch At-Rest-Daten genannt – verschlüsselt werden, können nicht autorisierte Benutzer am Zugriff auf den Inhalt gespeicherter Daten gehindert werden. Die beiden gängigen Mechanismen zum Verschlüsseln von Daten verwenden symmetrische oder asymmetrische Schlüssel. Die Datenverschlüsselung kann jedoch nicht sicherstellen, dass die Daten zwischen dem Zeitpunkt des Absendens und Speicherns nicht manipuliert werden. Anders ausgedrückt bedeutet dies, dass keine Datenintegrität gewährleistet werden kann. Nachrichtenauthentifizierungscodes, Hashes und digitale Signaturen werden häufig eingesetzt, um dieses Problem zu lösen.
 
-## 4.3.1 Datenverschlüsselung
+## <a name="431-data-encryption"></a>4.3.1 Datenverschlüsselung
 
 
 Bei der symmetrischen Verschlüsselung weisen Absender und Empfänger denselben Schlüssel und verwenden diesen auch zum Verschlüsseln und Entschlüsseln der Daten. Die Herausforderung bei diesem Ansatz besteht normalerweise darin, den Schlüssel sicher weiterzugeben, damit er beiden Parteien bekannt ist.
@@ -373,7 +373,7 @@ Eine Antwort stellt die asymmetrische Verschlüsselung dar, bei der ein öffentl
 
 Entwickler von Windows-Apps können mithilfe der Klasse [**SymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241537) und der Klasse [**AsymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241478) die symmetrische und asymmetrische Verschlüsselung in ihre UWP-Apps implementieren. Darüber hinaus kann die Klasse [**CryptographicEngine**](https://msdn.microsoft.com/library/windows/apps/br241490) verwendet werden, um Daten zu verschlüsseln und entschlüsseln, Inhalte zu signieren und digitale Signaturen zu überprüfen. Apps können auch die Klasse [**DataProtectionProvider**](https://msdn.microsoft.com/library/windows/apps/br241559) im Namespace [**Windows.Security.Cryptography.DataProtection**](https://msdn.microsoft.com/library/windows/apps/br241585) zum Verschlüsseln und Entschlüsseln lokaler gespeicherter Daten verwenden.
 
-## 4.3 Erkennen von Nachrichtenmanipulationen (MACs, Hashes und Signaturen)
+## <a name="432-detecting-message-tampering-macs-hashes-and-signatures"></a>4.3.2 Erkennen von Nachrichtenmanipulationen (MACs, Hashes und Signaturen)
 
 
 Ein MAC ist ein Code (oder Tag). Er resultiert aus der Verwendung eines symmetrischen Schlüssels (dem so genannten geheimen Schlüssel) oder einer Nachricht als Eingabe für einen MAC-Verschlüsselungsalgorithmus. Der geheime Schlüssel und Algorithmus werden vom Absender und Empfänger vor der Übertragung der Nachricht vereinbart.
@@ -383,13 +383,13 @@ MACs überprüfen Nachrichten wie folgt.
 -   Der Absender leitet das MAC-Tag ab, indem er den geheimen Schlüssel als Eingabe für den MAC-Algorithmus verwendet.
 -   Der Absender sendet das MAC-Tag und die Nachricht an den Empfänger.
 -   Der Empfänger leitet das MAC-Tag ab, indem er den geheimen Schlüssel und die Nachricht als Eingaben für den MAC-Algorithmus verwendet.
--   Der Empfänger vergleicht das MAC-Tag mit dem MAC-Tag des Absenders. Wenn sie identisch sind, wissen wir, dass die Nachricht nicht manipuliert wurde.
+-   Der Empfänger vergleicht das MAC-Tag mit dem MAC-Tag des Absenders. Wenn sie identisch sind, wurde die Nachricht nicht manipuliert.
 
-![](images/secure-macs.png)
+![Mac-Überprüfung](images/secure-macs.png)
 
-Windows-Apps können die MAC-Nachrichtenüberprüfung implementieren, indem Sie die Klasse [**MacAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241530) aufrufen, um den Schlüssel zu generieren, und die Klasse [**CryptographicEngine**](https://msdn.microsoft.com/library/windows/apps/br241490), um den MAC-Verschlüsselungsalgorithmus auszuführen.
+Windows-Apps können die MAC-Nachrichtenüberprüfung implementieren, indem Sie die Klasse [**MacAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241530) aufrufen, um den Schlüssel zu generieren, und die Klasse [**CryptographicEngine**](https://msdn.microsoft.com/library/windows/apps/br241490) aufrufen, um den MAC-Verschlüsselungsalgorithmus auszuführen.
 
-## 4.3.1 Verwenden von Hashes
+## <a name="433-using-hashes"></a>4.3.3 Verwenden von Hashes
 
 
 Eine Hashfunktion ist ein kryptografischer Algorithmus, der für einen an ihn übergebenen Datenblock beliebiger Länge eine Bitzeichenfolge fester Größe zurückgibt, die als Hashwert bezeichnet wird. Für diese Aufgabe steht eine ganze Familie von Hashfunktionen zur Verfügung.
@@ -428,7 +428,7 @@ public void SampleReusableHash()
 }
 ```
 
-## 4.3.2 Digitale Signaturen
+## <a name="434-digital-signatures"></a>4.3.4 Digitale Signaturen
 
 
 Die Datenintegrität einer digital signierten gespeicherten Nachricht wird auf ähnliche Weise wie bei der MAC-Authentifizierung überprüft. Hier wird veranschaulicht, wie der Workflow für die digitale Signatur funktioniert.
@@ -444,19 +444,19 @@ Da Hashalgorithmen sehr schnell arbeiten, können Hashwerte selbst von umfangrei
 
 Weitere Informationen hierzu finden Sie in den Artikeln zu [digitalen Signaturen](https://msdn.microsoft.com/library/windows/desktop/aa381977), [MACs, Hashes und Signaturen](macs-hashes-and-signatures.md) sowie zu [Kryptografie.](cryptography.md)
 
-## 5 Zusammenfassung
+## <a name="5-summary"></a>5 Zusammenfassung
 
 
-Die Universelle Windows-Plattform in Windows10 bietet verschiedene Möglichkeiten, um mithilfe von Betriebssystemfunktionen sicherere Apps zu erstellen. In anderen Authentifizierungsszenarien, z.B. einfache, mehrstufige oder vermittelte Authentifizierung über einen OAuth-Identitätsanbieter, verringern APIs die häufigsten Herausforderungen bei der Authentifizierung. Windows Hello bietet ein neues biometrisches Anmeldesystem, das den Benutzer erkennt und alle Versuche, die Identifizierung zu umgehen, aktiv verhindert. Zusammen mit Windows Hello stellt Microsoft Passport mehrere Schlüssel- und Zertifikatebenen bereit, die außerhalb des TPMs (Trusted Platform Module) niemals aufgedeckt oder verwendet werden können. Eine weitere Sicherheitsebene wird außerdem durch die optionale Verwendung von Attestation Identity Keys (AIK) und Zertifikaten bereitgestellt.
+Die Universelle Windows-Plattform in Windows 10 bietet verschiedene Möglichkeiten, um mithilfe von Betriebssystemfunktionen sicherere Apps zu erstellen. In anderen Authentifizierungsszenarien, z. B. einfache, mehrstufige oder vermittelte Authentifizierung über einen OAuth-Identitätsanbieter, verringern APIs die häufigsten Herausforderungen bei der Authentifizierung. Windows Hello bietet ein neues biometrisches Anmeldesystem, das den Benutzer erkennt und alle Versuche, die Identifizierung zu umgehen, aktiv verhindert. Zusammen mit Windows Hello stellt Microsoft Passport mehrere Schlüssel- und Zertifikatebenen bereit, die außerhalb des TPMs (Trusted Platform Module) niemals aufgedeckt oder verwendet werden können. Eine weitere Sicherheitsebene wird außerdem durch die optionale Verwendung von Attestation Identity Keys (AIK) und Zertifikaten bereitgestellt.
 
 Um In-Flight-Daten zu schützen, kommunizieren APIs über SSL sicher mit Remotesystemen und ermöglichen dennoch die Überprüfung der Serverauthentizität mit SSL-Pinning. Bei der sicheren und kontrollierten Veröffentlichung von APIs unterstützt Sie Azure API -Management durch die Bereitstellung von leistungsstarken Konfigurationsoptionen für das Verfügbarmachen von APIs im Internet über einen Proxyserver, der zusätzliches Verbergen des API-Endpunkts bietet. Der Zugriff auf diese APIs wird mithilfe von API-Schlüsseln gesichert und API-Aufrufe können zum Steuern der Leistung gedrosselt werden.
 
 Wenn die Daten auf dem Gerät empfangen werden, bietet das Windows-App-Modell mehr Kontrolle darüber, wie die App installiert und aktualisiert wird und auf Daten zugreift. Zudem verhindert es, dass sie unbefugt auf Daten von anderen Apps zugreift. Das Schließfach für Anmeldeinformationen ermöglicht die sichere Speicherung von Anmeldeinformationen von Benutzern, die vom Betriebssystem verwaltet werden. Durch Verschlüsselungs- und Hashing-APIs der Universellen Windows-Plattform können auch andere Daten auf dem Gerät geschützt werden.
 
-## 6 Ressourcen
+## <a name="6-resources"></a>6 Ressourcen
 
 
-### 6.1 Anleitungen
+### <a name="61-how-to-articles"></a>6.1 Anleitungen
 
 -   [Authentifizierung und Benutzeridentität](authentication-and-user-identity.md)
 -   [Microsoft Passport](microsoft-passport.md)
@@ -473,7 +473,7 @@ Wenn die Daten auf dem Gerät empfangen werden, bietet das Windows-App-Modell me
 -   [Exportbeschränkungen hinsichtlich Kryptografie](export-restrictions-on-cryptography.md)
 -   [Allgemeine Kryptografieaufgaben](common-cryptography-tasks.md)
 
-### 6.2 Codebeispiele
+### <a name="62-code-samples"></a>6.2 Codebeispiele
 
 -   [Schließfach für Anmeldeinformationen](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/PasswordVault)
 -   [Auswahl von Anmeldeinformationen](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/CredentialPicker)
@@ -484,7 +484,7 @@ Wenn die Daten auf dem Gerät empfangen werden, bietet das Windows-App-Modell me
 -   [Webkontoverwaltung](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/WebAccountManagement)
 -   [WebAuthenticationBroker](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/WebAuthenticationBroker)
 
-### 6.3 API-Referenz
+### <a name="63-api-reference"></a>6.3 API-Referenz
 
 -   [**Windows.Security.Authentication.OnlineId**](https://msdn.microsoft.com/library/windows/apps/hh701371)
 -   [**Windows.Security.Authentication.Web**](https://msdn.microsoft.com/library/windows/apps/br227044)
@@ -501,6 +501,6 @@ Wenn die Daten auf dem Gerät empfangen werden, bietet das Windows-App-Modell me
 -   [**Windows.Security.EnterpriseData**](https://msdn.microsoft.com/library/windows/apps/dn279153)
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -4,22 +4,22 @@ ms.assetid: 284EBA1F-BFB4-4CDA-9F05-4927CDACDAA7
 title: "Eröffnen eines Entwicklerkontos"
 description: "Diese Übersicht zur Registrierung eines Entwicklerkontos für Windows Store und andere Microsoft-Programme erleichtert Ihnen das Einrichten Ihres Kontos."
 translationtype: Human Translation
-ms.sourcegitcommit: 10446e136d324cd8490f7547f853e75b534368b0
-ms.openlocfilehash: 1f847b9c3302b092dce6eb73dd01f761ec17c0a5
+ms.sourcegitcommit: 323577311d328da6ad1e7bf0a976d3cea099816a
+ms.openlocfilehash: 19096e3f1f94fb4eb98646163c6542a94f8612d4
 
 ---
-# Eröffnen eines Entwicklerkontos
+# <a name="opening-a-developer-account"></a>Eröffnen eines Entwicklerkontos
 
 Diese Übersicht zur Registrierung eines Entwicklerkontos für Windows Store und andere Microsoft-Programme erleichtert Ihnen das Einrichten Ihres Kontos.
 
-> **Hinweis**  Wenn Sie sich für ein Entwicklerkonto registrieren, verwenden wir die E-Mail-Adresse in Ihren Kontaktinformationen, um Ihnen E-Mail-Nachrichten im Zusammenhang mit Ihrem Konto zu senden. Manchmal enthalten diese E-Mails Informationen über unsere Programme. Wenn Sie sich dafür entscheiden, diese Informations-E-Mails nicht zu erhalten, indem Sie das [Abonnement kündigen](http://go.microsoft.com/fwlink/p/?LinkId=533280), beachten Sie, dass wir Ihnen weiterhin Transaktions-E-Mails senden (z.B. um Sie zu informieren, dass Ihre App die Zertifizierung bestanden hat oder dass eine Zahlung unterwegs ist.) Diese E-Mails sind für Ihre Konto erforderlich. Sie erhalten solange Transaktions-E-Mails, bis Sie Ihr Konto schließen.
+> **Hinweis**  Wenn Sie sich für ein Entwicklerkonto registrieren, verwenden wir die E-Mail-Adresse in Ihren Kontaktinformationen, um Ihnen E-Mail-Nachrichten im Zusammenhang mit Ihrem Konto zu senden. Manchmal enthalten diese E-Mails Informationen über unsere Programme. Wenn Sie sich dafür entscheiden, diese Informations-E-Mails nicht zu erhalten, indem Sie das [Abonnement kündigen](http://go.microsoft.com/fwlink/p/?LinkId=533280), beachten Sie, dass wir Ihnen weiterhin Transaktions-E-Mails senden (z. B. um Sie zu informieren, dass Ihre App die Zertifizierung bestanden hat oder dass eine Zahlung unterwegs ist.) Diese E-Mails sind für Ihre Konto erforderlich. Sie erhalten solange Transaktions-E-Mails, bis Sie Ihr Konto schließen.
 
-## Registrieren eines Kontos
+## <a name="the-account-signup-process"></a>Registrieren eines Kontos
 
 > **Hinweis**  In einigen Fällen können die Bildschirme und Felder, die bei der Registrierung für ein Entwicklerkonto angezeigt werden, geringfügig von der folgenden Beschreibung abweichen. Die grundlegenden Informationen und Vorgehensweise sind jedoch gleich.
 
 1.  Wechseln Sie zur [Registrierungsseite](http://go.microsoft.com/fwlink/p/?LinkId=615100), und klicken Sie auf **Registrieren**.
-2.  Wählen Sie [das Land/die Region](account-types-locations-and-fees.md#account-markets) aus, in dem bzw. in der Sie ansässig sind oder in dem bzw. in der sich Ihr Unternehmen befindet. Dies kann später nicht mehr geändert werden.
+2.  Wählen Sie [das Land/die Region](account-types-locations-and-fees.md#developer-account-and-app-submission-markets) aus, in dem bzw. in der Sie ansässig sind oder in dem bzw. in der sich Ihr Unternehmen befindet. Dies kann später nicht mehr geändert werden.
 3.  Wählen Sie den gewünschten [Entwicklerkontotyp](account-types-locations-and-fees.md) (Einzelkonto oder Unternehmenskonto) aus. Dies kann später nicht mehr geändert werden. Wählen Sie also unbedingt den richtigen Kontotyp aus. Machen Sie sich bei einem Unternehmenskonto mit den [Richtlinien](#additional-guidelines-for-company-accounts) vertraut.
 4.  Geben Sie die Kontaktinformationen ein, die Sie für Ihr Entwicklerkonto verwenden möchten.
 
@@ -27,7 +27,7 @@ Diese Übersicht zur Registrierung eines Entwicklerkontos für Windows Store und
 
    Wenn Sie sich als Unternehmen registrieren, müssen Sie auch den Namen, die E-Mail-Adresse und die Telefonnummer der Person eingeben, die das Konto Ihres Unternehmens genehmigt.
 
-5.  Geben Sie für individuelle Konten den **Anzeigenamen des Herausgebers** an, den Sie verwenden möchten (maximal 50Zeichen). Wählen Sie den Namen mit Bedacht, da Kunden diesen Namen sehen und Ihre Apps unter diesem Namen kennenlernen.
+5.  Geben Sie für individuelle Konten den **Anzeigenamen des Herausgebers** an, den Sie verwenden möchten (maximal 50 Zeichen). Wählen Sie den Namen mit Bedacht, da Kunden diesen Namen sehen und Ihre Apps unter diesem Namen kennenlernen.
 
     Geben Sie für Unternehmenskonten den **registrierten Namen** Ihres Unternehmens (den eingetragenen Unternehmens- oder Handelsnamen Ihrer Organisation) ein. Dieser wird als Anzeigename für den Herausgeber verwendet.
     
@@ -45,7 +45,7 @@ Diese Übersicht zur Registrierung eines Entwicklerkontos für Windows Store und
 
 Nach Abschluss der Registrierung durchläuft Ihr Konto den Überprüfungsprozess. Bei individuellen Konten wird sichergestellt, dass der Anzeigename für den Herausgeber nicht bereits von einem anderen Unternehmen verwendet wird. Bei Unternehmenskonten dauert der Vorgang etwas länger, da zusätzlich geprüft werden muss, dass Sie zur Einrichtung des Kontos für Ihr Unternehmen autorisiert sind. Diese Überprüfung kann zwischen wenigen Tagen und mehreren Wochen dauern und umfasst häufig einen Telefonanruf bei Ihrem Unternehmen. Sie können den Überprüfungsstatus auf der Seite **Kontoeinstellungen** überprüfen. 
 
-## Zusätzliche Richtlinien für Unternehmenskonten
+## <a name="additional-guidelines-for-company-accounts"></a>Zusätzliche Richtlinien für Unternehmenskonten
 
 Beachten Sie beim Erstellen eines Unternehmenskontos die folgenden Richtlinien, wenn mehrere Personen auf das Konto zugreifen müssen und sich dazu mit dem Microsoft-Konto anmelden, mit dem das Konto erstellt wurde. 
 
@@ -53,7 +53,7 @@ Beachten Sie beim Erstellen eines Unternehmenskontos die folgenden Richtlinien, 
 
 -   Erstellen Sie Ihr Microsoft-Konto mit einer E-Mail-Adresse, die zur Domäne Ihrer Firma gehört, nicht jedoch einem einzelnen Benutzer. Beispiel: windowsapps@fabrikam.com.
 -   Beschränken Sie den Zugriff auf dieses Microsoft-Konto auf so wenige Entwickler wie möglich.
--   Richten Sie eine firmeninterne E-Mail-Verteilerliste ein, die alle Personen enthält, die Zugriff auf das Entwicklerkonto benötigen, und fügen Sie diese E-Mail-Adresse Ihren Sicherheitsinformationen hinzu. So können alle Mitarbeiter auf der Liste bei Bedarf Sicherheitscodes erhalten, um die Sicherheitsinformationen Ihres Microsoft-Kontos zu verwalten. Wenn die Einrichtung einer Verteilerliste nicht realisierbar ist, muss der Besitzer des jeweiligen E-Mail-Kontos verfügbar sein, um auf den Sicherheitscode zugreifen und diesen bei entsprechender Aufforderung freigeben zu können (z.B. wenn dem Konto neue Sicherheitsinformationen hinzugefügt werden, oder wenn von einem neuen Gerät darauf zugegriffen werden muss).
+-   Richten Sie eine firmeninterne E-Mail-Verteilerliste ein, die alle Personen enthält, die Zugriff auf das Entwicklerkonto benötigen, und fügen Sie diese E-Mail-Adresse Ihren Sicherheitsinformationen hinzu. So können alle Mitarbeiter auf der Liste bei Bedarf Sicherheitscodes erhalten, um die Sicherheitsinformationen Ihres Microsoft-Kontos zu verwalten. Wenn die Einrichtung einer Verteilerliste nicht realisierbar ist, muss der Besitzer des jeweiligen E-Mail-Kontos verfügbar sein, um auf den Sicherheitscode zugreifen und diesen bei entsprechender Aufforderung freigeben zu können (z. B. wenn dem Konto neue Sicherheitsinformationen hinzugefügt werden, oder wenn von einem neuen Gerät darauf zugegriffen werden muss).
 -   Fügen Sie eine geschäftliche Telefonnummer hinzu, für die keine Durchwahl erforderlich ist, und auf die wichtige Teammitglieder zugreifen können.
 -   Entwickler sollten generell vertrauenswürdige Geräte verwenden, wenn sie sich mit dem Entwicklerkonto Ihres Unternehmens anmelden. Alle wichtigen Teammitglieder müssen auf diese vertrauenswürdigen Geräte zugreifen können. So müssen beim Zugriff auf das Konto weniger Sicherheitscodes gesendet werden.
 -   Falls Sie den Zugriff auf das Konto über einen nicht vertrauenswürdigen PC zulassen müssen, sollten Sie den Zugriff auf maximal fünf Entwickler beschränken. Im Idealfall sollten diese Entwickler für den Zugriff auf das Konto Computer verwenden, die denselben geografischen Standort und dieselbe Netzwerkadresse nutzen.
@@ -61,7 +61,7 @@ Beachten Sie beim Erstellen eines Unternehmenskontos die folgenden Richtlinien, 
 
 Auf Ihr Entwicklerkonto sollte hauptsächlich über vertrauenswürdige PCs zugegriffen werden. Dies ist wichtig, da die Anzahl von Codes begrenzt ist, die pro Konto und Woche generiert werden können. Zudem ermöglicht dies die bequemste Art der Anmeldung.
 
-## Entwicklerkontosicherheit
+## <a name="developer-account-security"></a>Entwicklerkontosicherheit
 
 Wir verwenden von Ihnen bereitgestellte Sicherheitsinformationen, um die Sicherheitsstufe Ihres Entwicklerkontos zu erhöhen, indem diesem mehrere Formen der Identifizierung zugeordnet werden. Dadurch wird der nicht autorisierte Zugriff auf Ihr Microsoft-Konto erheblich erschwert. Falls Sie Ihr Kennwort vergessen oder jemand versucht, auf Ihr Konto zuzugreifen, können wir Sie erreichen, damit Sie wieder die Kontrolle über Ihr Konto erlangen.
 
@@ -73,7 +73,7 @@ Wenn Sie sich beim Windows Dev Center-Dashboard anmelden, werden Sie vom System 
 
 Wir empfehlen, häufig verwendete PCs als vertrauenswürdige Geräte einzustufen. Wenn Sie sich über ein vertrauenswürdiges Gerät anmelden, werden Sie gewöhnlich nicht zur Eingabe eines Codes aufgefordert. Dies kann jedoch unter Umständen in bestimmten Situationen der Fall sein, oder wenn Sie sich über das Gerät längere Zeit nicht angemeldet haben. Weitere Informationen finden Sie unter [Vertrauenswürdige Geräte: Häufig gestellte Fragen](http://go.microsoft.com/fwlink/p/?LinkID=331123).
 
-## Schließen Ihres Kontos
+## <a name="closing-your-account"></a>Schließen Ihres Kontos
 
 Da Entwicklerkonten nicht ablaufen, müssen sie nicht erneuert werden, damit sie geöffnet bleiben. Wenn Sie sich entscheiden, Ihr Konto vollständig zu schließen, können Sie sich dazu an den Support wenden.
 
@@ -88,6 +88,6 @@ Wenn Sie Ihr Konto schließen, sollten Sie wissen, was mit Ihren im Windows Stor
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

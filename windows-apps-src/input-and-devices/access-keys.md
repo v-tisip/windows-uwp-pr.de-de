@@ -5,23 +5,23 @@ title: Zugriffstasten
 ms.assetid: C2F3F3CE-737F-4652-98B7-5278A462F9D3
 label: Access keys
 template: detail.hbs
-keyword: Access keys, keyboard, accessibility
+keywords: Zugriffstasten, Tastatur, Barrierefreiheit
 translationtype: Human Translation
-ms.sourcegitcommit: ac86012b63646e53dbde492eef504cb8230f2afd
-ms.openlocfilehash: d96d507c6ce8537888619ce174e2ff0e5284dcce
+ms.sourcegitcommit: 2b6b1d7b1755aad4d75a29413d989c6e8112128a
+ms.openlocfilehash: dfe89e4d4fd089dde6b7b307325b8fe43de82c10
 
 ---
 
-# Zugriffstasten
+# <a name="access-keys"></a>Zugriffstasten
 
-Benutzer, die beispielsweise aufgrund motorischer Einschränkungen Schwierigkeiten haben, eine Maus zu bedienen, greifen häufig auf die Tastatur zurück, um in einer App zu navigieren und damit zu interagieren.  Das XAML-Framework bietet Ihnen die Möglichkeit, den Zugriff auf UI-Elemente mithilfe der TAB-Navigation und Zugriffstasten über die Tastatur zu ermöglichen.
+Benutzer, die beispielsweise aufgrund motorischer Einschränkungen Schwierigkeiten haben, eine Maus zu verwenden, greifen häufig auf die Tastatur zurück, um in einer App zu navigieren und mit dieser zu interagieren.  Das XAML-Framework bietet Ihnen die Möglichkeit, den Zugriff auf UI-Elemente mithilfe der TAB-Navigation und Zugriffstasten über die Tastatur zu ermöglichen.
 
 - Die TAB-Navigation ist ein grundlegendes tastaturgestütztes Angebot für Barrierefreiheit (und standardmäßig aktiviert). Dabei können Benutzer den Fokus zwischen UI-Elementen mithilfe der TAB-TASTE und der Pfeiltasten auf der Tastatur verschieben.
 - Zugriffstasten stellen ein ergänzendes Angebot für Barrierefreiheit dar (das Sie in Ihrer App implementieren). Sie ermöglichen über eine Kombination aus Tastaturmodifizierer (ALT-TASTE) und mindestens einer alphanumerischen Taste (normalerweise einem Buchstaben, der dem Befehl zugeordnet ist) den schnellen Zugriff auf App-Befehle. Häufige Zugriffstasten sind _ALT+F_ zum Öffnen des Menüs „Datei“ und _ALT+AL_ zum linksbündigen ausrichten.  
 
 Weitere Informationen zur Tastaturnavigation und Barrierefreiheit finden Sie unter [Tastaturinteraktionen](https://msdn.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions) und [Barrierefreiheit der Tastaturnavigation](https://msdn.microsoft.com/windows/uwp/accessibility/keyboard-accessibility). In diesem Artikel wird davon ausgegangen, dass Sie mit den in diesen Artikeln erörterten Konzepten vertraut sind.
 
-## Übersicht über Zugriffstasten
+## <a name="access-key-overview"></a>Übersicht über Zugriffstasten
 
 Mithilfe von Zugriffstasten können Benutzer Schaltflächen direkt aufrufen oder den Fokus mithilfe der Tastatur festlegen, ohne wiederholt die Pfeiltasten und die TAB-TASTE zu drücken. Zugriffstasten sollten leicht erkennbar sein und daher direkt in der Benutzeroberfläche dokumentiert werden, beispielsweise durch ein unverankertes Badge über dem Steuerelement mit der Zugriffstaste.
 
@@ -49,7 +49,7 @@ Ein Benutzer kann mehrere Zugriffstasten in einer Zugriffstastenabfolge aufrufen
 
 Durch einige Elemente (wie die Schaltfläche „Format übertragen“) wird eine Zugriffstastenabfolge abgeschlossen, nachdem sie aufgerufen wurden, bei anderen (wie der Registerkarte „Start“) nicht. Das Aufrufen einer Zugriffstaste kann bewirken, dass ein Befehl ausgeführt, der Fokus verschoben, der Zugriffstastenbereich geändert oder eine andere zugeordnete Aktion ausgeführt wird.
 
-## Benutzerinteraktion mit Zugriffstasten
+## <a name="access-key-user-interaction"></a>Benutzerinteraktion mit Zugriffstasten
 
 Um die Zugriffstasten-APIs zu verstehen, müssen Sie sich zunächst das Benutzerinteraktionsmodell vergegenwärtigen. Im Folgenden finden Sie eine Übersicht über das Modell für die Benutzerinteraktion mit Zugriffstasten:
 
@@ -79,7 +79,7 @@ Um die Zugriffstasten-APIs zu verstehen, müssen Sie sich zunächst das Benutzer
  - Sondertasten zum Beenden der Zugriffstastenabfolge: ESC, ALT, EINGABE, TAB und die Pfeiltasten.
  - Die den Zugriffstasten zugewiesenen alphanumerischen Zeichen.
 
-## Zugriffstasten-APIs
+## <a name="access-key-apis"></a>Zugriffstasten-APIs
 
 Das XAML-Framework bietet die hier beschriebenen APIs, um die Benutzerinteraktion mit Zugriffstasten zu unterstützen.
 
@@ -125,7 +125,7 @@ Wenn eine Zugriffstaste aufgerufen wird und das Element kein Bereichsbesitzer is
 
 Zugriffstasten können in mehrere Sprachen lokalisiert und zur Laufzeit mit den [ResourceLoader](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.resources.resourceloader.aspx)-APIs geladen werden.
 
-## Beim Aufrufen einer Zugriffstaste verwendete Steuerungsmuster
+## <a name="control-patterns-used-when-an-access-key-is-invoked"></a>Beim Aufrufen einer Zugriffstaste verwendete Steuerungsmuster
 
 Steuerungsmuster sind Schnittstellenimplementierungen, die allgemeine Steuerungsfunktionen verfügbar machen. Schaltflächen implementieren z. B. das **Invoke**-Steuerungsmuster, das das **Click**-Ereignis auslöst. Wenn eine Zugriffstaste aufgerufen wird, überprüft das XAML-Framework, ob das aufgerufene Element ein Steuerungsmuster implementiert, und führt es ggf. aus. Wenn das Element mehrere Steuerungsmuster aufweist, wird nur eins aufgerufen, und die übrigen werden ignoriert. Steuerungsmuster werden in der folgenden Reihenfolge gesucht:
 
@@ -150,11 +150,11 @@ private void OnAccessKeyInvoked(UIElement sender, AccessKeyInvokedEventArgs args
 
 Weitere Informationen über Steuerungsmuster finden Sie unter [Übersicht über Steuerungsmuster der Benutzeroberflächenautomatisierung](https://msdn.microsoft.com/library/windows/desktop/ee671194.aspx).
 
-## Zugriffstasten und Sprachausgabe
+## <a name="access-keys-and-narrator"></a>Zugriffstasten und Sprachausgabe
 
 Windows-Runtime verfügt über Benutzeroberflächenautomatisierungs-Anbieter, die Eigenschaften in Microsoft-Benutzeroberflächenautomatisierungs-Elementen verfügbar machen. Mithilfe dieser Eigenschaften können Benutzeroberflächenautomatisierungs-Clientanwendungen Informationen zu Teilen der Benutzeroberfläche ermitteln. Mithilfe der [AutomationProperties.AccessKey](https://msdn.microsoft.com/library/windows/apps/hh759763)-Eigenschaft können Clients wie die Sprachausgabe die einem Element zugeordnete Zugriffstaste ermitteln. Die Sprachausgabe liest diese Eigenschaft jedes Mal, wenn ein Element den Fokus erhält. Wenn AutomationProperties.AccessKey keinen Wert aufweist, gibt das XAML-Framework den [AccessKey](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskey.aspx)-Eigenschaftswert von UIElement oder TextElement zurück. Sie müssen AutomationProperties.AccessKey nicht einrichten, wenn die AccessKey-Eigenschaft bereits über einen Wert verfügt.
 
-## Beispiel: Zugriffstaste für eine Schaltfläche
+## <a name="example-access-key-for-button"></a>Beispiel: Zugriffstaste für eine Schaltfläche
 
 Dieses Beispiel veranschaulicht, wie Sie eine Zugriffstaste für eine Schaltfläche erstellen. Dabei werden QuickInfos als visuelle Angebote verwendet, um ein unverankertes Badge zu implementieren, das die Zugriffstaste enthält.
 
@@ -229,7 +229,7 @@ Da der Handler für das Click-Ereignis automatisch vom XAML-Framework aufgerufen
     }
 ```
 
-## Beispiel: Bereichsbezogene Zugriffstasten
+## <a name="example-scoped-access-keys"></a>Beispiel: Bereichsbezogene Zugriffstasten
 
 Dieses Beispiel veranschaulicht das Erstellen bereichsbezogener Zugriffstasten. Die IsAccessKeyScope-Eigenschaft von PivotItem verhindert, dass die Zugriffstasten der untergeordneten Elemente von PivotItem angezeigt werden, wenn der Benutzer die ALT-TASTE drückt. Diese Zugriffstasten werden nur angezeigt, wenn der Benutzer PivotItem aufruft, da der Bereich automatisch vom XAML-Framework gewechselt wird. Das Framework blendet auch die Zugriffstasten der anderen Bereiche aus.
 
@@ -385,6 +385,6 @@ public sealed partial class ScopedAccessKeys : Page
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -4,15 +4,15 @@ title: Behandeln der Dateiaktivierung
 description: "Eine App kann als Standardhandler für einen bestimmten Dateityp registriert werden."
 ms.assetid: A0F914C5-62BC-4FF7-9236-E34C5277C363
 translationtype: Human Translation
-ms.sourcegitcommit: 0e0fa6cf082034110e11b9bde910564de8f5048c
-ms.openlocfilehash: dffbccad62f48667a0495ceb205c751ccce0a3e0
+ms.sourcegitcommit: ed7aee6add80d31b48006d9dec9e207c449a1912
+ms.openlocfilehash: ffcfa8991e9eb73b8d6a47bb7dd1cd23220097e0
 
 ---
 
-# Behandeln der Dateiaktivierung
+# <a name="handle-file-activation"></a>Behandeln der Dateiaktivierung
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 **Wichtige APIs**
@@ -28,7 +28,7 @@ Die folgenden Schritte zeigen, wie Sie den benutzerdefinierten Dateityp „.alsd
 
 > **Hinweis**  In UWP-Apps sind bestimmte URIs und Dateierweiterungen für die Verwendung durch vorinstallierte Apps und das Betriebssystem reserviert. Versuche, die App mit einem reservierten URI oder einer reservierten Dateierweiterung zu registrieren, werden ignoriert. Weitere Informationen finden Sie unter [Reservierte Datei- und URI-Schemanamen](reserved-uri-scheme-names.md).
 
-## Schritt 1: Angeben des Erweiterungspunkts im Paketmanifest
+## <a name="step-1-specify-the-extension-point-in-the-package-manifest"></a>Schritt 1: Angeben des Erweiterungspunkts im Paketmanifest
 
 
 Die App empfängt nur für die im Paketmanifest angegebenen Dateierweiterungen Aktivierungsereignisse. Im Folgenden wird beschrieben, wie Sie festlegen, dass die App Dateien mit der Erweiterung `.alsdk` behandelt.
@@ -43,8 +43,8 @@ Die App empfängt nur für die im Paketmanifest angegebenen Dateierweiterungen A
 | **Logo** | Geben Sie das Logo zur Identifikation des Dateityps auf dem Desktop in der **Systemsteuerung** unter [Standardprogramme festlegen](https://msdn.microsoft.com/library/windows/desktop/cc144154) an. Wenn kein Logo angegeben wird, wird das kleine Logo der Anwendung verwendet. |
 | **Infotipp** | Geben Sie den [Infotipp](https://msdn.microsoft.com/library/windows/desktop/cc144152) für eine Gruppe von Dateitypen an. Diese QuickInfo wird angezeigt, wenn Benutzer mit der Maus auf das Symbol für eine Datei dieses Typs zeigen. |
 | **Name** | Wählen Sie einen Namen für eine Gruppe von Dateitypen aus, die identische Anzeigenamen, Logos, Infotipps und Bearbeitungsflags verwenden. Wählen Sie einen Gruppennamen aus, der auch nach App-Updates unverändert bleiben kann. **Hinweis**  Der Name darf nur aus Kleinbuchstaben bestehen. |
-| **Inhaltstyp** | Geben Sie den MIME-Inhaltstyp, z.B. **image/jpeg**, für einen bestimmten Dateityp an. **Wichtiger Hinweis zu zulässigen Inhaltstypen:  **Dies ist eine alphabetische Liste der MIME-Inhaltstypen, die Sie nicht in das Paketmanifest eingeben können, da sie entweder reserviert oder unzulässig sind: **application/force-download**, **application/octet-stream**, **application/unknown**, **application/x-msdownload**. |
-| **Dateityp** | Geben Sie den Dateityp, für den die Registrierung durchgeführt werden soll, mit einem vorangestellten Punkt an, z.B. „.jpeg“. **Reservierte und unzulässige Dateitypen** Eine alphabetische Liste der Dateitypen für vorinstallierte Apps, die Sie nicht für Ihre UWP-Apps registrieren können, da diese entweder reserviert oder unzulässig sind, finden Sie unter [Reservierte URI-Schemanamen und Dateitypen](reserved-uri-scheme-names.md). |
+| **Inhaltstyp** | Geben Sie den MIME-Inhaltstyp, z. B. **image/jpeg**, für einen bestimmten Dateityp an. **Wichtiger Hinweis zu zulässigen Inhaltstypen:** Dies ist eine alphabetische Liste der MIME-Inhaltstypen, die Sie nicht in das Paketmanifest eingeben können, da sie entweder reserviert oder unzulässig sind: **application/force-download**, **application/octet-stream**, **application/unknown**, **application/x-msdownload**. |
+| **Dateityp** | Geben Sie den Dateityp, für den die Registrierung durchgeführt werden soll, mit vorangestelltem Punkt an, z. B. „.jpeg“. **Reservierte und unzulässige Dateitypen:** Eine alphabetische Liste der Dateitypen für vorinstallierte Apps, die Sie nicht für Ihre UWP-Apps registrieren können, da diese entweder reserviert oder unzulässig sind, finden Sie unter [Reservierte URI-Schemanamen und Dateitypen](reserved-uri-scheme-names.md). |
 
 2.  Geben Sie `alsdk` in das Feld **Name** ein.
 3.  Geben Sie `.alsdk` als **Dateityp** ein.
@@ -66,10 +66,10 @@ Die obigen Schritte fügen dem Paketmanifest ein [**Extension**](https://msdn.mi
       </Extensions>
 ```
 
-## Schritt 2: Hinzufügen der geeigneten Symbole
+## <a name="step-2-add-the-proper-icons"></a>Schritt 2: Hinzufügen der geeigneten Symbole
 
 
-Die Symbole von Apps, die für einen Dateityp zum Standard werden, werden an verschiedenen Stellen innerhalb des Systems angezeigt. Diese Symbole werden z.B. an folgenden Stellen angezeigt:
+Die Symbole von Apps, die für einen Dateityp zum Standard werden, werden an verschiedenen Stellen innerhalb des Systems angezeigt. Diese Symbole werden z. B. an folgenden Stellen angezeigt:
 
 -   ItemsView von Windows Explorer, Kontextmenüs, Menüband
 -   Standardprogramme in der Systemsteuerung
@@ -79,7 +79,7 @@ Die Symbole von Apps, die für einen Dateityp zum Standard werden, werden an ver
 Stimmen Sie das Erscheinungsbild des Logos der App-Kachel ab, und verwenden Sie die Hintergrundfarbe der App, anstatt das Symbol transparent darzustellen. Erweitern Sie das Logo bis zum Rand, ohne eine Auffüllung vorzunehmen. Testen Sie Ihre Symbole auf weißem Hintergrund. Beispielsymbole finden Sie unter [Beispiel für Assoziationsstart](http://go.microsoft.com/fwlink/p/?LinkID=620490).
 ![Der Projektmappen-Explorer mit einer Ansicht der Dateien im Bildordner. Es gibt Versionen mit 16, 32, 48 und 256 Pixeln für „icon.targetsize“ und „smalltile-sdk“](images/seviewofimages.png)
 
-## Schritt 3: Behandeln des activated-Ereignisses
+## <a name="step-3-handle-the-activated-event"></a>Schritt 3: Behandeln des activated-Ereignisses
 
 
 Der [**OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331)-Ereignishandler empfängt alle Dateiaktivierungsereignisse.
@@ -115,16 +115,16 @@ Apps sollten für jedes Aktivierungsereignis, durch das eine neue Seite geöffne
 
 Per Dateiaktivierung gestartete Apps sollten ggf. eine Benutzeroberfläche enthalten, über die der Benutzer zur ersten Seite der App zurückkehren kann.
 
-## Anmerkungen
+## <a name="remarks"></a>Anmerkungen
 
 
 Die empfangenen Dateien stammen unter Umständen aus einer nicht vertrauenswürdigen Quelle. Wir empfehlen, den Inhalt einer Datei zu überprüfen, bevor Sie sie weiter verarbeiten. Weitere Informationen zur Eingabeüberprüfung finden Sie unter [Schreiben von sicherem Code](http://go.microsoft.com/fwlink/p/?LinkID=142053).
 
-> **Hinweis**: Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die Universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows8.x oder Windows Phone8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **Hinweis**: Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die Universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 **Vollständiges Beispiel**
 
@@ -154,6 +154,6 @@ Die empfangenen Dateien stammen unter Umständen aus einer nicht vertrauenswürd
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

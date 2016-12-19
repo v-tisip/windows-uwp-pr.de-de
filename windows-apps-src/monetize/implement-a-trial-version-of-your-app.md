@@ -5,20 +5,20 @@ description: Erfahren Sie, wie Sie den Windows.Services.Store-Namespace verwende
 title: Implementieren einer Testversion der App
 keywords: "Codebeispiel für kostenlose Testversion"
 translationtype: Human Translation
-ms.sourcegitcommit: 18d5c2ecf7d438355c3103ad2aae32dc84fc89ed
-ms.openlocfilehash: 8858c9f7f9b40e2bca30054b99ab47c7388aef57
+ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
+ms.openlocfilehash: ea4c5637a970a63938da2b1bea9f11fd39de9cc8
 
 ---
 
-# Implementieren einer Testversion der App
+# <a name="implement-a-trial-version-of-your-app"></a>Implementieren einer Testversion der App
 
 Wenn Sie Ihre App als [kostenlose Testversion im Windows Dev Center-Dashboard](../publish/set-app-pricing-and-availability.md#free-trial) konfigurieren, damit Kunden über einen Testzeitraum Ihre App kostenlos verwenden können, können Sie einen Anreiz schaffen, auf die Vollversion Ihrer App zu aktualisieren, indem Sie einige Features für den Testzeitraum einschränken oder ausschließen. Bestimmen Sie die einzuschränkenden Features, bevor Sie mit dem Codieren beginnen, und stellen Sie dann sicher, dass diese nur beim Erwerb einer Lizenz für die Vollversion der App verfügbar sind. Außerdem können Sie Features wie Banner oder Wasserzeichen aktivieren, die nur in der Testversion angezeigt werden, bevor ein Kunde Ihre App kauft.
 
-Apps für Windows10, Version1607 oder höher, können Mitglieder der [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Klasse im [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace verwenden, um zu bestimmen, ob Benutzer eine Testversion Ihrer App ausführen, und benachrichtigt zu werden, wenn während der Ausführung der App der Status geändert wird.
+Apps für Windows 10, Version 1607 oder höher, können Mitglieder der [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Klasse im [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace verwenden, um zu bestimmen, ob Benutzer eine Testversion Ihrer App ausführen, und benachrichtigt zu werden, wenn während der Ausführung der App der Status geändert wird.
 
->**Hinweis**&nbsp;&nbsp;Dieser Artikel bezieht sich auf Apps für Windows10, Version 1607 oder höher. Wenn Ihre App für eine frühere Version von Windows 10 geeignet ist, müssen Sie den [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)-Namespace anstelle des **Windows.Services.Store**-Namespace verwenden. Weitere Informationen finden Sie unter [In-App-Käufe und Testversionen mit dem Windows.ApplicationModel.Store-Namespace](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
+>**Hinweis**&nbsp;&nbsp;Dieser Artikel bezieht sich auf Apps für Windows 10, Version 1607 oder höher. Wenn Ihre App für eine frühere Version von Windows 10 geeignet ist, müssen Sie den [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)-Namespace anstelle des **Windows.Services.Store**-Namespace verwenden. Weitere Informationen finden Sie unter [In-App-Käufe und Testversionen mit dem Windows.ApplicationModel.Store-Namespace](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
 
-## Richtlinien für die Implementierung einer Testversion
+## <a name="guidelines-for-implementing-a-trial-version"></a>Richtlinien für die Implementierung einer Testversion
 
 Der aktuelle Lizenzstatus Ihrer App wird als Eigenschaften der [StoreAppLicense](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeapplicense.aspx)-Klasse gespeichert. In der Regel nehmen Sie die vom Lizenzstatus abhängigen Funktionen in einen Bedingungsblock auf wie im nächsten Schritt beschrieben. Stellen Sie beim Auswählen dieser Features sicher, dass sie auf eine Weise implementiert werden können, dass sie in jedem Lizenzstatus funktionieren.
 
@@ -53,10 +53,10 @@ Bei den meisten Apps, die keine Spiele sind, ist das Festlegen eines Ablaufdatum
 
 Beschreiben Sie, wie sich Ihre App während und nach dem kostenlosen Testzeitraum verhält, sodass Ihre Kunden vom Verhalten Ihrer App nicht überrascht werden. Weitere Informationen zum Beschreiben Ihrer App finden Sie unter [Erstellen von App-Beschreibungen](https://msdn.microsoft.com/library/windows/apps/mt148529).
 
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 Für dieses Beispiel gelten die folgenden Voraussetzungen:
-* Ein Visual Studio-Projekt für eine App für die universelle Windows-Plattform (UWP), die für Windows10, Version1607 oder höher, geeignet ist.
+* Ein Visual Studio-Projekt für eine App für die universelle Windows-Plattform (UWP), die für Windows 10, Version 1607 oder höher, geeignet ist.
 * Sie haben eine App im Windows Dev Center-Dashboard erstellt, die als [kostenlose Testversion](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) ohne zeitliche Begrenzung konfiguriert ist, im Store veröffentlicht ist und dort verfügbar ist. Dies kann eine App sein, die Sie für Kunden freigeben möchten, oder eine einfache App sein, die den Mindestanforderungen gemäß dem [Zertifizierungskit für Windows-Apps](https://developer.microsoft.com/windows/develop/app-certification-kit) entspricht und nur zu Testzwecken verwendet wird. Weitere Informationen finden Sie unter [Hinweise für Tests](in-app-purchases-and-trials.md#testing).
 
 Der Code in diesem Beispiel geht von folgenden Voraussetzungen aus:
@@ -66,62 +66,18 @@ Der Code in diesem Beispiel geht von folgenden Voraussetzungen aus:
 
 >**Hinweis**&nbsp;&nbsp;Wenn Sie über eine Desktopanwendung verfügen, die die [Desktop-Brücke](https://developer.microsoft.com/windows/bridges/desktop) verwendet, müssen Sie möglicherweise zusätzlichen, in diesem Beispiel nicht aufgeführten Code hinzufügen, um das [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Objekt zu konfigurieren. Weitere Informationen finden Sie unter [Verwenden der StoreContext-Klasse in einer Desktopanwendung, die die Desktop-Brücke verwendet](in-app-purchases-and-trials.md#desktop).
 
-## Codebeispiel
+## <a name="code-example"></a>Codebeispiel
 
 Ruft während des Initialisierens der App das [StoreAppLicense](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeapplicense.aspx)-Objekt für Ihre App ab und behandelt das [OfflineLicensesChanged](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.offlinelicenseschanged.aspx)-Ereignis, um Benachrichtigungen zu empfangen, wenn die Lizenz während der Ausführung der App geändert wird. Die App-Lizenz kann zum Beispiel geändert werden, wenn der Testzeitraum abläuft oder der Kunde die App in einem Store kauft. Ruft die neue Lizenz ab, wenn die Lizenz geändert wird, und aktiviert oder deaktiviert dementsprechend ein Feature Ihrer App.
 
-Wenn ein Benutzer die App gekauft hat, wird empfohlen, den Benutzer zu diesem Zeitpunkt über den geänderten Lizenzstatus zu informieren. Gegebenenfalls müssen Sie den Benutzer zum Neustarten der App auffordern, falls Ihre Programmierung dies erfordert. Versuchen Sie jedoch, diesen Übergang so nahtlos und unmerklich wie möglich zu machen.
+Wenn ein Benutzer die App gekauft hat, wird empfohlen, den Benutzer zu diesem Zeitpunkt über den geänderten Lizenzstatus zu informieren. Gegebenenfalls müssen Sie den Benutzer zum Neustarten der App auffordern, falls Ihre Programmierung dies erfordert. Versuchen Sie jedoch, diesen Übergang so nahtlos und problemlos wie möglich zu gestalten.
 
-
-```csharp
-private StoreContext context = null;
-private StoreAppLicense appLicense = null;
-
-// Call this while your app is initializing.
-private async void InitializeLicense()
-{
-    if (context == null)
-    {
-        context = StoreContext.GetDefault();
-        // If your app is a desktop app that uses the Desktop Bridge, you
-        // may need additional code to configure the StoreContext object.
-        // For more info, see https://aka.ms/storecontext-for-desktop.
-    }
-
-    workingProgressRing.IsActive = true;
-    appLicense = await context.GetAppLicenseAsync();
-    workingProgressRing.IsActive = false;
-
-    // Register for the licenced changed event.
-    context.OfflineLicensesChanged += context_OfflineLicensesChanged;
-}
-
-private async void context_OfflineLicensesChanged(StoreContext sender, object args)
-{
-    // Reload the license.
-    workingProgressRing.IsActive = true;
-    appLicense = await context.GetAppLicenseAsync();
-    workingProgressRing.IsActive = false;
-
-    if (appLicense.IsActive)
-    {
-        if (appLicense.IsTrial)
-        {
-            textBlock.Text = $"This is the trial version. Expiration date: {appLicense.ExpirationDate}";
-
-            // Show the features that are available during trial only.
-        }
-        else
-        {
-            // Show the features that are available only with a full license.
-        }
-    }
-}
-```
+> [!div class="tabbedCodeSnippets"]
+[!code-cs[ImplementTrial](./code/InAppPurchasesAndLicenses_RS1/cs/ImplementTrialPage.xaml.cs#ImplementTrial)]
 
 Eine vollständige Beispielanwendung finden Sie im [Store-Beispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [In-App-Käufe und Testversionen](in-app-purchases-and-trials.md)
 * [Abrufen von Produktinformationen zu Apps und Add-Ons](get-product-info-for-apps-and-add-ons.md)
@@ -132,6 +88,6 @@ Eine vollständige Beispielanwendung finden Sie im [Store-Beispiel](https://gith
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

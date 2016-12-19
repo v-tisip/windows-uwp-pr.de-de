@@ -4,12 +4,12 @@ Description: "In diesem Artikel sind Punkte aufgeführt, die Sie vor dem Konvert
 Search.Product: eADQiWindows 10XVcnh
 title: "Vorbereiten von Apps für die Desktop-zu-UWP-Brücke"
 translationtype: Human Translation
-ms.sourcegitcommit: 8429e6e21319a03fc2a0260c68223437b9aed02e
-ms.openlocfilehash: 4cf9c509be52a8b2c03cdaa9ac68b98ba49b7094
+ms.sourcegitcommit: f7a8b8d586983f42fe108cd8935ef084eb108e35
+ms.openlocfilehash: 81a2485d5be22dd392c21aaff281c1c9263883a9
 
 ---
 
-# Vorbereiten einer App für die Konvertierung mit der Desktop-Brücke
+# <a name="prepare-an-app-for-conversion-with-the-desktop-bridge"></a>Vorbereiten einer App für die Konvertierung mit der Desktop-Brücke
 
 In diesem Artikel sind Punkte aufgeführt, die Sie vor dem Konvertieren von Apps mit der Desktop-zu-UWP-Brücke wissen sollten. Sie müssen möglicherweise nicht viel tun, um Ihre App für die Konvertierung vorzubereiten. Trifft jedoch einer der folgenden Punkte auf Ihre Anwendung zu, müssen Sie sich vor der Konvertierung darum kümmern. Denken Sie daran, dass Lizenzierung und automatische Updates im Rahmen des Windows Store erfolgen, sodass Sie diese Features aus Ihrer Codebasis entfernen können.
 
@@ -61,7 +61,14 @@ In diesem Artikel sind Punkte aufgeführt, die Sie vor dem Konvertieren von Apps
 
 + __Ihre App installiert und lädt Assemblys aus dem Windows-Seite-an-Seite-Ordner__. Beispielsweise verwendet Ihre App C-Laufzeitbibliotheken VC8 oder VC9 und verknüpft diese dynamisch aus dem Windows-Seite-an-Seite-Ordner, was bedeutet, dass Ihr Code die gemeinsamen DLL-Dateien aus einem freigegebenen Ordner verwendet. Dies wird nicht unterstützt. Sie müssen diese statisch verknüpfen, indem sie eine Verknüpfung mit den verteilbaren Bibliotheksdateien direkt in den Code erstellen.
 
++ __Ihre App verwendet eine Abhängigkeit im Ordner System32/SysWOW64__. Damit diese DLL-Dateien funktionieren, müssen Sie sie im virtuellen Dateisystem Ihres AppX-Pakets einschließen. Dadurch wird sichergestellt, dass sich die App verhält, als ob die DLL-Dateien im Ordner **System32**/**SysWOW64** installiert wären. Erstellen Sie im Stammordner des Pakets einen Ordner mit dem Namen **VFS**. Erstellen Sie innerhalb dieses Ordners die Ordner **SystemX64** und **SystemX86**. Platzieren Sie die 32-Bit-Version Ihrer DLL-Datei im Ordner **SystemX86** und die 64-Bit-Version im Ordner **SystemX64**.
 
-<!--HONumber=Nov16_HO1-->
++ __Ihre App verwendet das Frameworkpaket Dev11 VCLibs__. Die VCLibs 11-Bibliotheken können direkt aus dem Windows Store installiert werden, wenn sie im AppX-Paket als Abhängigkeit definiert sind. Zu diesem Zweck führen Sie die folgende Änderung in Ihrem App-Paketmanifest aus: Fügen Sie unter dem Knoten `<Dependencies>` Folgendes hinzu:  
+`<PackageDependency Name="Microsoft.VCLibs.110.00.UWPDesktop" MinVersion="11.0.24217.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />`  
+Während der Installation aus dem Windows Store wird die korrekte Version des VCLibs 11-Frameworks (x86 oder x64) vor der Installation der App installiert.  
+Die Abhängigkeiten werden nicht installiert, wenn die App durch Querladen installiert wird. Um die Abhängigkeiten manuell auf dem Computer zu installieren, müssen Sie die [VC 11.0-Frameworkpakete für die Desktop-Brücke](https://www.microsoft.com/download/details.aspx?id=53340&WT.mc_id=DX_MVP4025064) herunterladen und installieren. Weitere Informationen zu diesen Szenarien finden Sie unter [Verwenden von Visual C++-Laufzeitbibliotheken im Projekt „Centennial“](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project/).
+
+
+<!--HONumber=Dec16_HO1-->
 
 
