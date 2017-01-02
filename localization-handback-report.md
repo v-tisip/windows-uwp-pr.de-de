@@ -1,31 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [windows-apps-src\data-binding\data-binding-in-depth.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/fa3a3cf6194f04a05301ae4dfb75a7a21ff22e73?path=windows-apps-src%2Fdata-binding%2Fdata-binding-in-depth.md&_a=contents) | HandedOffSuccess | [Details](#fca2c9a795e38983f439d6df5c5a7394c29c12173234)
 
 ## Item Details
-##### <a name='fca2c9a795e38983f439d6df5c5a7394c29c12173234'></a> Source: [windows-apps-src\data-binding\data-binding-in-depth.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/fa3a3cf6194f04a05301ae4dfb75a7a21ff22e73?path=windows-apps-src%2Fdata-binding%2Fdata-binding-in-depth.md&_a=contents)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [data-binding-in-depth.3b92e12492dfc9e544aad2db2ce4b7efc65e4516.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/056e7e369cca8e68af05aff1676862b53e588e15?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fdata-binding-in-depth.3b92e12492dfc9e544aad2db2ce4b7efc65e4516.de-de.xlf&_a=contents)
-* Handoff Datetime: 2016-12-16 00:14:31
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\data-binding\data-binding-in-depth.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/25a6bc501ac91e99a8d43231ba59936c0c3d539a?path=windows-apps-src%2Fdata-binding%2Fdata-binding-in-depth.md&_a=contents)
-* Current Handback File: [data-binding-in-depth.3b92e12492dfc9e544aad2db2ce4b7efc65e4516.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/fc63818451bd4a9af50b1acd9193b19075aff20e?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fdata-binding-in-depth.3b92e12492dfc9e544aad2db2ce4b7efc65e4516.de-de.xlf&_a=contents)
-* Current Handback Datetime: 2017-01-02 17:59:58
-* Bilingual File: [data-binding-in-depth.3b92e12492dfc9e544aad2db2ce4b7efc65e4516.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/4d7bd1f585e163da181572669d9b7dc689a28bfe?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fdata-binding-in-depth.3b92e12492dfc9e544aad2db2ce4b7efc65e4516.de-de.xlf&_a=contents)
-* Bilingual Datetime: 2016-12-16 16:00:15
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
