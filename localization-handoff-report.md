@@ -6,14 +6,14 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\data-binding\data-binding-quickstart.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/7566100749c75399c63b9be7f8ba49c72dae7bfa?path=windows-apps-src%2Fdata-binding%2Fdata-binding-quickstart.md&_a=contents) | HandedOffSuccess | [Details](#755d183e1bd4e3d6241e8049c5cbf3f91f050ea03237)
+ [windows-apps-src\publish\tax-details-for-paid-apps.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/743753d700ebad44e8053408bdb22fcd1b27c320?path=windows-apps-src%2Fpublish%2Ftax-details-for-paid-apps.md&_a=contents) | HandedOffSuccess | [Details](#e815e36b32694870b303980b11d9d8d57a82777a5794)
 
 ## Item Details
-##### <a name='755d183e1bd4e3d6241e8049c5cbf3f91f050ea03237'></a> Source: [windows-apps-src\data-binding\data-binding-quickstart.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/7566100749c75399c63b9be7f8ba49c72dae7bfa?path=windows-apps-src%2Fdata-binding%2Fdata-binding-quickstart.md&_a=contents)
+##### <a name='e815e36b32694870b303980b11d9d8d57a82777a5794'></a> Source: [windows-apps-src\publish\tax-details-for-paid-apps.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/743753d700ebad44e8053408bdb22fcd1b27c320?path=windows-apps-src%2Fpublish%2Ftax-details-for-paid-apps.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [data-binding-quickstart.829283e17abd682c9422338479b78c816ed593aa.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/17bcb0fe7bf541f87c1c96b2fa4a31beeb144c4d?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fdata-binding-quickstart.829283e17abd682c9422338479b78c816ed593aa.de-de.xlf&_a=contents)
-* Handoff Datetime: 2017-01-13 22:09:54
+* Handoff File: [tax-details-for-paid-apps.dabd93b4ae33f057b5755bdbfd54af1f2c7ebbad.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/4490e94b405dd0fa282af49535414740e8228e0f?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Ftax-details-for-paid-apps.dabd93b4ae33f057b5755bdbfd54af1f2c7ebbad.de-de.xlf&_a=contents)
+* Handoff Datetime: 2017-01-14 00:12:11
 * Handoff Reason: Include
 * Handoff Name: 
 * Archive File: 
@@ -21,11 +21,11 @@
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Handback Name: 
-* Current Target File: [windows-apps-src\data-binding\data-binding-quickstart.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/c3cc6ddc6f3b2e0e594b3a771a3787b6567d88e5?path=windows-apps-src%2Fdata-binding%2Fdata-binding-quickstart.md&_a=contents)
-* Current Handback File: [data-binding-quickstart.829283e17abd682c9422338479b78c816ed593aa.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/af7251542093aa676fc710fa76cce8c29961cc27?path=ol-handback%2FMicrosoft%2Fwindows-apps.de-de%2Fmaster%2Fdata-binding-quickstart.829283e17abd682c9422338479b78c816ed593aa.de-de.xlf&_a=contents)
-* Current Handback Datetime: 2016-10-21 15:17:04
-* Bilingual File: [data-binding-quickstart.829283e17abd682c9422338479b78c816ed593aa.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/af7251542093aa676fc710fa76cce8c29961cc27?path=ol-handback%2FMicrosoft%2Fwindows-apps.de-de%2Fmaster%2Fdata-binding-quickstart.829283e17abd682c9422338479b78c816ed593aa.de-de.xlf&_a=contents)
-* Bilingual Datetime: 2016-10-24 15:46:17
+* Current Target File: [windows-apps-src\publish\tax-details-for-paid-apps.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/a67a4e3ca127e22fbdb3beae1c3ae56ebcbbaab6?path=windows-apps-src%2Fpublish%2Ftax-details-for-paid-apps.md&_a=contents)
+* Current Handback File: [tax-details-for-paid-apps.dabd93b4ae33f057b5755bdbfd54af1f2c7ebbad.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/af36407019824e4d536486ec56eebef02f0f65af?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Ftax-details-for-paid-apps.dabd93b4ae33f057b5755bdbfd54af1f2c7ebbad.de-de.xlf&_a=contents)
+* Current Handback Datetime: 2016-11-30 15:16:57
+* Bilingual File: [tax-details-for-paid-apps.dabd93b4ae33f057b5755bdbfd54af1f2c7ebbad.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/af36407019824e4d536486ec56eebef02f0f65af?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Ftax-details-for-paid-apps.dabd93b4ae33f057b5755bdbfd54af1f2c7ebbad.de-de.xlf&_a=contents)
+* Bilingual Datetime: 2016-11-30 15:23:55
 * [Back to Top](#report-top)
 
 
