@@ -6,8 +6,8 @@ ms.assetid: 1FCE66AF-34B4-436A-9FC9-D0CF4BDA5A01
 label: Adaptive and interactive toast notifications
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 2ac3a4a1efa85a3422d8964ad4ee62db28bc975f
-ms.openlocfilehash: cfbbf110ed6df1b7e81e0505dcf55a63ba8739aa
+ms.sourcegitcommit: 76a7a6dd3f0e0026e54483fa0ee5f82376ca0c99
+ms.openlocfilehash: 4420ecac17c41858aac7379b4dfaaa43b853318d
 
 ---
 # <a name="adaptive-and-interactive-toast-notifications"></a>Adaptive und interaktive Popupbenachrichtigungen
@@ -112,16 +112,30 @@ ToastContent content = new ToastContent()
 };
 ```
 
-Sie können diesen Code anschließend verwenden, um das Popupfenster zu erstellen und zu senden.
+<<<<<<< HEAD Als Nächstes müssen wir das Popup in ein [XmlDocument](https://msdn.microsoft.com/en-us/library/windows/apps/windows.data.xml.dom.xmldocument.aspx)-Objekt konvertieren. Falls Sie das Popup in einer XML-Datei (hier „content.xml“ genannt) definiert haben, verwenden Sie diesen Code:
 
 ```CSharp
-ToastNotification notification = new ToastNotification(content.GetXml());
+string xmlText = File.ReadAllText("content.xml");
+XmlDocument xmlContent = new XmlDocument();
+xmlContent.LoadXml(xmlText);
+```
+
+Falls Sie die Popupvorlage in C# definiert haben, verwenden Sie folgenden Code:
+
+```CSharp
+XmlDocument xmlContent = content.GetXml();
+```
+
+Unabhängig davon, wie Sie XMLDocument erstellen, können Sie dann diesen Code zum Erstellen und senden des Popups verwenden:
+
+```CSharp
+ToastNotification notification = new ToastNotification(xmlContent);
 ToastNotificationManager.CreateToastNotifier().Show(notification);
 ```
 
-Eine vollständige funktionierende App mit Popupbenachrichtigungen finden Sie unter [Schnellstart: Senden einer lokalen Popupbenachrichtigung](https://github.com/WindowsNotifications/quickstart-sending-local-toast-win10).
+Eine vollständige App mit Popupbenachrichtigungen finden Sie unter [Schnellstart: Senden einer lokalen Popupbenachrichtigung](https://github.com/WindowsNotifications/quickstart-sending-local-toast-win10).
 
-Und eine visuelle Darstellung der Struktur:
+Eine visuelle Darstellung der Struktur:
 
 ![Struktur der Popupbenachrichtigung](images/adaptivetoasts-structure.jpg)
 
@@ -249,9 +263,9 @@ ToastContent content = new ToastContent()
 
  
 
-**Benachrichtigung mit Aktionen, Beispiel 1**
+**Benachrichtigung mit Aktionen**
 
-Dieses Beispiel zeigt Folgendes:
+In diesem Beispiel wird eine Benachrichtigung mit zwei möglichen Gegenmaßnahmen erstellt.
 
 ```XML
 <toast launch="app-defined-string">
@@ -309,73 +323,11 @@ ToastContent content = new ToastContent()
 
 ![Benachrichtigung mit Aktionen, Beispiel 1](images/adaptivetoasts-xmlsample02.jpg)
 
- 
 
-**Benachrichtigung mit Aktionen, Beispiel 2**
-
-Dieses Beispiel zeigt Folgendes:
-
-```XML
-<toast launch="app-defined-string">
-  <visual>
-    <binding template="ToastGeneric">
-      <text>Restaurant suggestion...</text>
-      <text>We noticed that you are near Wasaki. Thomas left a 5 star rating after his last visit, do you want to try it?</text>
-    </binding>
-  </visual>
-  <actions>
-    <action activationType="foreground" content="Reviews" arguments="reviews" />
-    <action activationType="protocol" content="Show map" arguments="bingmaps:?q=sushi" />
-  </actions>
-</toast>
-```
-
-```CSharp
-ToastContent content = new ToastContent()
-{
-    Launch = "app-defined-string",
- 
-    Visual = new ToastVisual()
-    {
-        BindingGeneric = new ToastBindingGeneric()
-        {
-            Children =
-            {
-                new AdaptiveText()
-                {
-                    Text = "Restaurant suggestion..."
-                },
- 
-                new AdaptiveText()
-                {
-                    Text = "We noticed that you are near Wasaki. Thomas left a 5 star rating after his last visit, do you want to try it?"
-                }
-            }
-        }
-    },
- 
-    Actions = new ToastActionsCustom()
-    {
-        Buttons =
-        {
-            new ToastButton("Reviews", "reviews"),
- 
-            new ToastButton("Show map", "bingmaps:?q=sushi")
-            {
-                ActivationType = ToastActivationType.Protocol
-            }
-        }
-    }
-};
-```
-
-![Benachrichtigung mit Aktionen, Beispiel 2](images/adaptivetoasts-xmlsample03.jpg)
-
- 
 
 **Benachrichtigung mit Texteingabe und Aktionen, Beispiel 1**
 
-Dieses Beispiel zeigt Folgendes:
+In diesem Beispiel wird eine Benachrichtigung erstellt, die Texteingabe zusammen mit zwei Gegenmaßnahmen akzeptiert.
 
 ```XML
 <toast launch="developer-defined-string">
@@ -456,7 +408,7 @@ ToastContent content = new ToastContent()
 
 **Benachrichtigung mit Texteingabe und Aktionen, Beispiel 2**
 
-Dieses Beispiel zeigt Folgendes:
+Dieses Beispiel erstellt eine Benachrichtigung, die Texteingabe und eine einzelne Aktion akzeptiert.
 
 ```XML
 <toast launch="developer-defined-string">
@@ -533,7 +485,7 @@ ToastContent content = new ToastContent()
 
 **Benachrichtigung mit Auswahleingabe und Aktionen**
 
-Dieses Beispiel zeigt Folgendes:
+In diesem Beispiel wird eine Benachrichtigung mit einem Dropdownmenü und zwei möglichen Aktionen erstellt.
 
 ```XML
 <toast launch="developer-defined-string">
@@ -617,7 +569,7 @@ ToastContent content = new ToastContent()
 
 **Erinnerungsbenachrichtigung**
 
-Dieses Beispiel zeigt Folgendes:
+Mit einem Menü und zwei Aktionen wie im vorherigen Beispiel können wir eine Erinnerungsbenachrichtigung erstellen:
 
 ```XML
 <toast scenario="reminder" launch="action=viewEvent&amp;eventId=1983">
@@ -1162,6 +1114,6 @@ Gehen Sie wie folgt vor, um individuelle Aktionen zum erneuten Erinnern und Schl
 * [Benachrichtigungsbibliothek auf GitHub](https://github.com/Microsoft/UWPCommunityToolkit/tree/dev/Notifications)
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

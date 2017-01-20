@@ -5,31 +5,40 @@ title: "Übersicht über benutzerdefinierte Texteingabe"
 ms.assetid: 58F5F7AC-6A4B-45FC-8C2A-942730FD7B74
 label: Custom text input
 template: detail.hbs
+keywords: Tastatur, Text, Core-Text, benutzerdefinierter Text, Textdienstframework, Eingabe, Benutzerinteraktionen
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 62ac7e8f49f4413d9423c027047341f9adcca6f9
-ms.openlocfilehash: 136e9ce1cede3fc09ebd31841e9d1b0be251837a
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: afcc64e6b000df1a7380b4cc22101ebb1826d7cd
 
 ---
 
-# Benutzerdefinierte Texteingabe
+# <a name="custom-text-input"></a>Benutzerdefinierte Texteingabe
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Mit den Core-Text-APIs im [**Windows.UI.Text.Core**](https://msdn.microsoft.com/library/windows/apps/dn958238)-Namespace kann eine UWP-App (Universelle Windows-Plattform) Texteingaben von beliebigen Textdiensten empfangen, die auf Windows-Geräten unterstützt werden. Die APIs sind den [Textdienstframework](https://msdn.microsoft.com/library/windows/desktop/ms629032)-APIs dahingehend ähnlich, dass die App keine detaillierten Kenntnisse über die Textdienste benötigt. Auf diese Weise kann die App Text in einer beliebigen Sprache und von einem beliebigen Eingabegerät empfangen, wie Tastatur, Sprache oder Stift.
 
+<div class="important-apis" >
+<b>Wichtige APIs</b><br/>
+<ul>
+<li>[**Windows.UI.Text.Core**](https://msdn.microsoft.com/library/windows/apps/dn958238)</li>
+<li>[**CoreTextEditContext**](https://msdn.microsoft.com/library/windows/apps/dn958158)</li>
+</ul>
+</div>
 
-**Wichtige APIs**
-
--   [**Windows.UI.Text.Core**](https://msdn.microsoft.com/library/windows/apps/dn958238)
--   [**CoreTextEditContext**](https://msdn.microsoft.com/library/windows/apps/dn958158)
-
-
-## Gründe für die Verwendung von Core-Text-APIs
+## <a name="why-use-core-text-apis"></a>Gründe für die Verwendung von Core-Text-APIs
 
 
 Für zahlreiche Apps sind die XAML- oder HTML-Textfeld-Steuerelemente für Texteingabe und Textbearbeitung ausreichend. Wenn Ihre App jedoch komplexe Textszenarien behandelt, beispielsweise eine Textverarbeitungs-App ist, benötigen Sie vielleicht die Flexibilität eines benutzerdefinierten Textbearbeitungssteuerelements. Sie könnten die [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)-Tastatur APIs verwenden, um das Textbearbeitungssteuerelement zu erstellen. Diese ermöglichen jedoch keinen Empfang von kompositionsbasierten Texteingaben, die für die Unterstützung ostasiatischer Sprachen erforderlich sind.
 
 Verwenden Sie stattdessen die [**Windows.UI.Text.Core**](https://msdn.microsoft.com/library/windows/apps/dn958238)-APIs, wenn Sie ein benutzerdefiniertes Textbearbeitungssteuerelement erstellen müssen. Diese APIs sind so konzipiert, dass sie Ihnen ein hohes Maß an Flexibilität bei der Verarbeitung von Texteingaben in allen Sprachen bieten. Sie können daher Textverarbeitung so gestalten, wie dies für Ihre App am besten ist. Texteingabe- und Textbearbeitungssteuerelemente, die mit den Core-Text-APIs erstellt wurde, können Texteingaben von allen vorhandenen Texteingabemethoden auf Windows-Geräten empfangen, von [Textdienstframework](https://msdn.microsoft.com/library/windows/desktop/ms629032)-basierten Eingabemethoden-Editoren (IMEs) und Handschrift auf PCs bis hin zu der WordFlow-Tastatur (die AutoKorrektur, Vorhersage und Diktat bereitstellt) auf mobilen Geräten.
 
-## Architektur
+## <a name="architecture"></a>Architektur
 
 
 Im Folgenden finden Sie eine einfache Darstellung des Texteingabesystems.
@@ -39,17 +48,17 @@ Im Folgenden finden Sie eine einfache Darstellung des Texteingabesystems.
 
 ![Diagramm für die Kerntextarchitektur](images/coretext/architecture.png)
 
-## Textbereiche und Auswahl
+## <a name="text-ranges-and-selection"></a>Textbereiche und Auswahl
 
 
 Bearbeitungssteuerelemente bieten Platz für die Eingabe von Text, und Benutzer erwarten, dass Text an einer beliebigen Stelle in diesem Bereich bearbeitet werden kann. Hier wird das von den Core-Text-APIs verwendete Textpositionierungssystem erläutert und wie Bereiche und Auswahlen in diesem System dargestellt werden.
 
-### Textcursorposition der Anwendung
+### <a name="application-caret-position"></a>Textcursorposition der Anwendung
 
 Textbereiche, die mit den Core-Text-APIs verwendet werden, werden mittels Textcursorpositionen ausgedrückt. Eine „Textcursorposition der Anwendung“ (Application Caret Position, ACP) ist eine nullbasierte Zahl, die die Anzahl der Zeichen vom Anfang des Textstreams bis unmittelbar vor dem Textcursor angibt, wie hier gezeigt.
 
 ![Beispieldiagramm für einen Textstream](images/coretext/stream-1.png)
-### Textbereiche und Auswahl
+### <a name="text-ranges-and-selection"></a>Textbereiche und Auswahl
 
 Textbereiche und -auswahlen werden anhand der [**CoreTextRange**](https://msdn.microsoft.com/library/windows/apps/dn958201)-Struktur dargestellt, die zwei Felder enthält:
 
@@ -62,11 +71,11 @@ Textbereiche und -auswahlen werden anhand der [**CoreTextRange**](https://msdn.m
 
 In dem zuvor dargestellten Textbereich gibt der Bereich \[0, 5\] beispielsweise das Wort „Hello“ an. **StartCaretPosition** muss stets kleiner oder gleich der **EndCaretPosition** sein. Der Bereich \[5, 0\] ist ungültig.
 
-### Einfügemarke
+### <a name="insertion-point"></a>Einfügemarke
 
 Die aktuelle Textcursorposition, häufig als Einfügemarke bezeichnet, wird durch dargestellt, indem **StartCaretPosition** als gleich **EndCaretPosition** festgelegt wird.
 
-### Nicht zusammenhängende Auswahl
+### <a name="noncontiguous-selection"></a>Nicht zusammenhängende Auswahl
 
 Einige Bearbeitungssteuerelemente unterstützen nicht zusammenhängende Auswahlen. Microsoft Office-Apps unterstützen z. B. eine beliebige Mehrfachauswahl, und viele Quellcode-Editoren unterstützen die Spaltenauswahl. Von Core-Text-APIs wird jedoch eine nicht zusammenhängende Auswahl nicht unterstützt. Bearbeitungssteuerelemente müssen nur eine einzige zusammenhängende Auswahl melden; meistens ist dies der aktive Unterbereich der nicht zusammenhängenden Auswahlen.
 
@@ -74,7 +83,7 @@ Betrachten Sie beispielsweise den folgenden Textstream:
 
 ![Beispieldiagramm für einen Textstream](images/coretext/stream-2.png) Es gibt zwei Auswahlen: \[0, 1\] und \[6, 11\]. Das Bearbeitungssteuerelement muss nur eine von diesen melden: \[0, 1\] oder \[6, 11\].
 
-## Arbeiten mit Text
+## <a name="working-with-text"></a>Arbeiten mit Text
 
 
 Die [**CoreTextEditContext**](https://msdn.microsoft.com/library/windows/apps/dn958158)-Klasse ermöglicht einen Textfluss zwischen Windows und Bearbeitungssteuerelementen über das [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176)-Ereignis, das [**TextRequested**](https://msdn.microsoft.com/library/windows/apps/dn958175)-Ereignis und die [**NotifyTextChanged**](https://msdn.microsoft.com/library/windows/apps/dn958172)-Methode.
@@ -85,7 +94,7 @@ Wenn Sie Text im Bearbeitungssteuerelement ändern, beispielsweise durch Einfüg
 
 Wenn der Textdienst den neuen Text erfordert, wird ein [**TextRequested**](https://msdn.microsoft.com/library/windows/apps/dn958175)-Ereignis ausgelöst. Sie müssen den neuen Text in den **TextRequested**-Ereignishandler eingeben.
 
-### Akzeptieren von Textupdates
+### <a name="accepting-text-updates"></a>Akzeptieren von Textupdates
 
 Ihr Bearbeitungssteuerelement sollte in der Regel Textaktualisierungsanforderungen akzeptieren, da diese den Text darstellen, den der Benutzer eingeben möchte. Im [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176)-Ereignishandler werden die folgenden Aktionen vom Bearbeitungssteuerelement erwartet:
 
@@ -104,13 +113,13 @@ Dies ist beispielsweise der Zustand eines Bearbeitungssteuerelements, bevor der 
 Wenden Sie in Ihrem Bearbeitungssteuerelement die angegebenen Änderungen an, und legen Sie [**Result**](https://msdn.microsoft.com/library/windows/apps/dn958235) auf **Succeeded** fest. Hier sehen Sie den Zustand des Steuerelements, nachdem die Änderungen angewendet wurden.
 
 ![Beispieldiagramm für einen Textstream](images/coretext/stream-4.png)
-### Ablehnen von Textupdates
+### <a name="rejecting-text-updates"></a>Ablehnen von Textupdates
 
 Manchmal können Textaktualisierungen nicht angewendet werden, da sich der angeforderte Bereich in einem Bereich des Bearbeitungssteuerelements befindet, der nicht geändert werden darf. In diesem Fall sollten Sie keine Änderungen anwenden. Benachrichtigen Sie stattdessen das System, dass die Aktualisierung fehlgeschlagen ist, indem Sie [**CoreTextTextUpdatingEventArgs.Result**](https://msdn.microsoft.com/library/windows/apps/dn958235) auf [**CoreTextTextUpdatingResult.Failed**](https://msdn.microsoft.com/library/windows/apps/dn958237) festlegen.
 
 Angenommen, Sie haben ein Bearbeitungssteuerelement, das nur eine E-Mail-Adresse akzeptiert. Leerzeichen sollten zurückgewiesen werden, da E-Mail-Adressen keine Leerzeichen enthalten dürfen. Wenn daher [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176)-Ereignisse für die Leertaste ausgelöst werden, können Sie [**Result**](https://msdn.microsoft.com/library/windows/apps/dn958235) im Bearbeitungssteuerelement einfach auf **Failed** festlegen.
 
-### Benachrichtigen über Textänderungen
+### <a name="notifying-text-changes"></a>Benachrichtigen über Textänderungen
 
 Manchmal nimmt das Bearbeitungssteuerelement Änderungen am Text vor, wenn beispielsweise Text eingefügt oder automatische korrigiert wird. In diesen Fällen müssen Sie die Textdienste über diese Änderungen benachrichtigen, indem Sie die [**NotifyTextChanged**](https://msdn.microsoft.com/library/windows/apps/dn958172)-Methode aufrufen.
 
@@ -126,7 +135,7 @@ Dies ist beispielsweise der Zustand eines Bearbeitungssteuerelements, bevor der 
 
 Es folgt mindestens ein [**TextRequested**](https://msdn.microsoft.com/library/windows/apps/dn958175)-Ereignis, das Sie zum Aktualisieren des Texts behandeln, mit dem die Textdienste arbeiten.
 
-### Überschreiben von Textaktualisierungen
+### <a name="overriding-text-updates"></a>Überschreiben von Textaktualisierungen
 
 Vielleicht möchten Sie in Ihrem Bearbeitungssteuerelement eine Textaktualisierung überschreiben, um AutoKorrektur-Funktionen bereitzustellen.
 
@@ -144,13 +153,13 @@ Angenommen, Sie haben ein Bearbeitungssteuerelement, das eine Korrekturfunktion 
 
 Es folgt mindestens ein [**TextRequested**](https://msdn.microsoft.com/library/windows/apps/dn958175)-Ereignis, das Sie zum Aktualisieren des Texts behandeln, mit dem die Textdienste arbeiten.
 
-### Bereitstellen von angefordertem Text
+### <a name="providing-requested-text"></a>Bereitstellen von angefordertem Text
 
 Es ist wichtig, dass Textdienste über den richtigen Text verfügen, damit Funktionen wie AutoKorrektur oder Vorhersage bereitgestellt werden können, insbesondere bei Text, der im Bearbeitungssteuerelement bereits durch Laden eines Dokuments vorhanden war, oder bei Text, der vom Bearbeitungssteuerelement eingefügt wird, wie in den vorherigen Abschnitten erläutert. Wenn ein [**TextRequested**](https://msdn.microsoft.com/library/windows/apps/dn958175)-Ereignis ausgelöst wird, müssen Sie daher stets den Text bereitstellen, der sich zurzeit im Bearbeitungssteuerelement für den angegebenen Bereich befindet.
 
 Gelegentlich gibt [**Range**](https://msdn.microsoft.com/library/windows/apps/dn958227) in [**CoreTextTextRequest**](https://msdn.microsoft.com/library/windows/apps/dn958221) einen Bereich an, den das Bearbeitungssteuerelement nicht in der Form aufnehmen kann, in der dieser vorliegt. Beispielsweise ist **Range** zum Zeitpunkt des [**TextRequested**](https://msdn.microsoft.com/library/windows/apps/dn958175)-Ereignisses größer als das Bearbeitungssteuerelement, oder das Ende von **Range** liegt außerhalb des zulässigen Bereichs. In diesen Fällen sollten Sie zu einem Bereich zurückkehren, der sinnvoll ist. In der Regel ist dies eine Untergruppe des angeforderten Bereichs.
 
-## Verwandte Artikel
+## <a name="related-articles"></a>Verwandte Artikel
 
 **Beispiele**
 * [Beispiel für ein benutzerdefiniertes Bearbeitungssteuerelement](https://go.microsoft.com/fwlink/?linkid=831024)
@@ -162,6 +171,6 @@ Gelegentlich gibt [**Range**](https://msdn.microsoft.com/library/windows/apps/dn
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

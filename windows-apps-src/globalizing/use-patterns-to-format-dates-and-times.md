@@ -6,26 +6,28 @@ ms.assetid: 012028B3-9DA2-4E72-8C0E-3E06BEC3B3FE
 label: Use patterns to format dates and times
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
-ms.openlocfilehash: f49af17ada36ceb2e5898d80047c2d616b1d0c6e
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 564062173544ab368d8dd7fc8fe2c35e9d518444
 
 ---
 
-# Verwenden von Mustern zum Formatieren von Datums- und Uhrzeitwerten
+# <a name="use-patterns-to-format-dates-and-times"></a>Verwenden von Mustern zum Formatieren von Datums- und Uhrzeitwerten
 
-
-
-
-
-**Wichtige APIs**
-
--   [**Windows.Globalization.DateTimeFormatting**](https://msdn.microsoft.com/library/windows/apps/br206859)
--   [**DateTimeFormatter**](https://msdn.microsoft.com/library/windows/apps/br206828)
--   [**DateTime**](https://msdn.microsoft.com/library/windows/apps/br206576)
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Verwenden Sie die [**Windows.Globalization.DateTimeFormatting**](https://msdn.microsoft.com/library/windows/apps/br206859)-API mit benutzerdefinierten Mustern, um Datums- und Uhrzeitwerte im gewünschten Format anzuzeigen.
 
-## <span id="Introduction"></span><span id="introduction"></span><span id="INTRODUCTION"></span>Einführung
+<div class="important-apis" >
+<b>Wichtige APIs</b><br/>
+<ul>
+<li>[**Windows.Globalization.DateTimeFormatting**](https://msdn.microsoft.com/library/windows/apps/br206859)</li>
+<li>[**DateTimeFormatter**](https://msdn.microsoft.com/library/windows/apps/br206828)</li>
+<li>[**DateTime**](https://msdn.microsoft.com/library/windows/apps/br206576)</li>
+</ul>
+</div>
+
+
+## <a name="introduction"></a>Einführung
 
 
 [**Windows.Globalization.DateTimeFormatting**](https://msdn.microsoft.com/library/windows/apps/br206859) bietet vielfältige Wege um Daten und Uhrzeiten für Sprachen und Regionen rund um die Welt ordnungsgemäß zu formatieren. Sie können Standardformate für Jahr, Monat, Tag usw. oder auch Standard-Zeichenfolgenvorlagen wie „longdate“ oder „month day“ verwenden.
@@ -36,7 +38,7 @@ Wenn Sie allerdings mehr Kontrolle über Reihenfolge und Format der Bestandteile
 
  
 
-## <span id="What_you_need_to_know"></span><span id="what_you_need_to_know"></span><span id="WHAT_YOU_NEED_TO_KNOW"></span>Wissenswertes
+## <a name="what-you-need-to-know"></a>Wissenswertes
 
 
 Beachten Sie, dass Sie beim Verwenden von Mustern ein benutzerdefiniertes Format erstellen, das nicht unbedingt kulturübergreifend gültig ist. Betrachten wir als Beispiel die Vorlage „month day“:
@@ -50,7 +52,7 @@ var datefmt = new Windows.Globalization.DateTimeFormatting.DateTimeFormatter("mo
 var datefmt = new Windows.Globalization.DateTimeFormatting.DateTimeFormatter("month day");
 ```
 
-Hierdurch wird ein Formatierer erstellt, der auf dem Sprach- und Regionswert des aktuellen Kontexts basiert. Monat und Tag werden somit immer gemeinsam in einem geeigneten globalen Format dargestellt. Beispiel: „January1“ für Englisch(USA), „1janvier“ für Französisch (Frankreich) und „1月1日“ für Japanisch. Der Grund hierfür ist, dass die Vorlage auf einer kulturspezifischen Musterzeichenfolge basiert, auf die über die Mustereigenschaft zugegriffen werden kann:
+Hierdurch wird ein Formatierer erstellt, der auf dem Sprach- und Regionswert des aktuellen Kontexts basiert. Monat und Tag werden somit immer gemeinsam in einem geeigneten globalen Format dargestellt. Beispiel: „January 1“ für Englisch (USA), „1 janvier“ für Französisch (Frankreich) und „1月1日“ für Japanisch. Der Grund hierfür ist, dass die Vorlage auf einer kulturspezifischen Musterzeichenfolge basiert, auf die über die Mustereigenschaft zugegriffen werden kann:
 
 **C#**
 ```CSharp
@@ -69,7 +71,7 @@ Fr-FR: "{day.integer} {month.full}"
 Ja-JP: "{month.integer}月{day.integer}日"
 ```
 
-Mit Mustern können Sie ein benutzerdefiniertes [**DateTimeFormatter**](https://msdn.microsoft.com/library/windows/apps/br206828)-Element erstellen. Hier sehen Sie ein auf dem Muster für Englisch(USA) basierendes Beispiel:
+Mit Mustern können Sie ein benutzerdefiniertes [**DateTimeFormatter**](https://msdn.microsoft.com/library/windows/apps/br206828)-Element erstellen. Hier sehen Sie ein auf dem Muster für Englisch (USA) basierendes Beispiel:
 
 **C#**
 ```CSharp
@@ -97,24 +99,24 @@ Darüber hinaus können sich Muster im Lauf der Zeit ändern. Länder und Region
 
 Zusammenfassung der Unterschiede zwischen Standard-Zeichenfolgenvorlagen und nicht standardmäßigen Zeichenfolgenvorlagen:
 
-**Zeichenfolgenvorlagen, z.B. „month day“:**
+**Zeichenfolgenvorlagen, z. B. „month day“:**
 
 -   Eine abstrahierte Darstellung des [**DateTime**](https://msdn.microsoft.com/library/windows/apps/br206576)-Formats, die Werte für den Tag und den Monat in einer bestimmten Reihenfolge enthält.
 -   Gibt für alle von Windows unterstützten Sprach- und Regionswerte stets ein gültiges Standardformat zurück.
 -   Liefert stets eine entsprechend der Kultur formatierte Zeichenfolge für die angegebene Sprache und Region.
 -   Nicht alle Kombinationen der Bestandteile sind gültig. Beispielsweise gibt es keine Zeichenfolgenvorlage für „dayofweek day“.
 
-**Zeichenfolgenmuster, z.B. „{month.full} {day.integer}“:**
+**Zeichenfolgenmuster, z. B. „{month.full} {day.integer}“:**
 
 -   Eine Zeichenfolge mit explizit festgelegter Reihenfolge, die den vollständigen Monatsnamen, gefolgt von einem Leerzeichen, auf das der als ganze Zahl dargestellte Tag folgt, angibt (und zwar in dieser Reihenfolge).
 -   Entspricht möglicherweise nicht dem gültigen Standardformat für jedes Sprach-Region-Paar.
 -   Ist nicht in jedem Fall der Kultur angemessen.
 -   Es kann eine beliebige Kombination von Bestandteilen in einer beliebigen Reihenfolge angegeben werden.
 
-## <span id="Tasks"></span><span id="tasks"></span><span id="TASKS"></span>Aufgaben
+## <a name="tasks"></a>Aufgaben
 
 
-Angenommen, Sie möchten den aktuellen Monat und den aktuellen Tag zusammen mit der aktuellen Uhrzeit in einen bestimmten Format anzeigen. Sie möchten also z.B., dass für US-Benutzer Folgendes angezeigt wird:
+Angenommen, Sie möchten den aktuellen Monat und den aktuellen Tag zusammen mit der aktuellen Uhrzeit in einen bestimmten Format anzeigen. Sie möchten also z. B., dass für US-Benutzer Folgendes angezeigt wird:
 
 ``` syntax
 June 25 | 1:38 PM
@@ -146,7 +148,7 @@ var mydatepattern = mydate.patterns[0];
 var mytimepattern = mytime.patterns[0];
 ```
 
-Ihr benutzerdefiniertes Format muss als lokalisierbare Ressourcenzeichenfolge gespeichert werden. Die Zeichenfolge für Englisch(USA) lautet beispielsweise „{date} | {time}“. Lokalisierer können diese Zeichenfolge wie gewünscht anpassen. Sie können beispielsweise die Reihenfolge der Bestandteile ändern, falls in bestimmten Sprachen oder Regionen die Uhrzeit vor dem Datum stehen soll. Oder Sie können „|“ durch ein anderes Trennzeichen ersetzen. Zur Laufzeit werden die Bestandteile „{date}“ und „{time}“ der Zeichenfolge durch das entsprechende Muster ersetzt:
+Ihr benutzerdefiniertes Format muss als lokalisierbare Ressourcenzeichenfolge gespeichert werden. Die Zeichenfolge für Englisch (USA) lautet beispielsweise „{date} | {time}“. Lokalisierer können diese Zeichenfolge wie gewünscht anpassen. Sie können beispielsweise die Reihenfolge der Bestandteile ändern, falls in bestimmten Sprachen oder Regionen die Uhrzeit vor dem Datum stehen soll. Oder Sie können „|“ durch ein anderes Trennzeichen ersetzen. Zur Laufzeit werden die Bestandteile „{date}“ und „{time}“ der Zeichenfolge durch das entsprechende Muster ersetzt:
 
 **C#**
 ```CSharp
@@ -177,7 +179,7 @@ var mydateplustimefmt = new Windows.Globalization.DateTimeFormatting.DateTimeFor
 var mydateplustimefmt = new dtf.DateTimeFormatter(mydateplustime);
 ```
 
-## <span id="related_topics"></span>Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 
 * [Beispiel für Datums- und Uhrzeitformatierung](http://go.microsoft.com/fwlink/p/?LinkId=231618)
@@ -192,6 +194,6 @@ var mydateplustimefmt = new dtf.DateTimeFormatter(mydateplustime);
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

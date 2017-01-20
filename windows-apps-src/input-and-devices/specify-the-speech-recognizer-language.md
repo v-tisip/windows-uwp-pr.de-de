@@ -1,29 +1,38 @@
 ---
 author: Karl-Bridge-Microsoft
 Description: "Hier erfahren Sie, wie Sie eine installierte Sprache für die Spracherkennung auswählen."
-title: "Angeben der Sprache für die Spracherkennung"
+title: "Festlegen der Sprache für die Spracherkennung"
 ms.assetid: 4C463A1B-AF6A-46FD-A839-5D6724955B38
 label: Specify the speech recognizer language
 template: detail.hbs
+keywords: "Sprache, Stimme, Spracherkennung, natürliche Sprache, diktieren, Eingabe, Benutzerinteraktion"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 526493614666424089199063013b5fc72d9bc5d8
-ms.openlocfilehash: 9abde4aa5489780f3ee2e9b5e7ecbdfa4dd53b93
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: 42ddaea1de6dc4354e776b7d6db79486a6b3057e
 
 ---
 
-# Angeben der Sprache für die Spracherkennung
-
+# <a name="specify-the-speech-recognizer-language"></a>Festlegen der Sprache für die Spracherkennung
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Hier erfahren Sie, wie Sie eine installierte Sprache für die Spracherkennung auswählen.
 
-
-
-
-**Wichtige APIs**
-
--   [**SupportedTopicLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653251)
--   [**SupportedGrammarLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653250)
--   [**Sprache**](https://msdn.microsoft.com/library/windows/apps/br206804)
+<div class="important-apis" >
+<b>Wichtige APIs</b><br/>
+<ul>
+<li> [**SupportedTopicLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653251)</li>
+<li>[**SupportedGrammarLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653250)</li>
+<li>[**Sprache**](https://msdn.microsoft.com/library/windows/apps/br206804)</li>
+<li> </li>
+<li> </li>
+<li> </li>
+</ul>
+</div>
 
 
 Im Folgenden listen wir die auf einem System installierten Sprachen auf, ermitteln die Standardsprache und wählen eine andere Sprache für die Spracherkennung aus.
@@ -43,7 +52,7 @@ Wenn Sie noch keine Erfahrung mit der Entwicklung von UWP-Apps (Universelle Wind
 
 Nützliche Tipps zum Entwerfen einer hilfreichen und ansprechenden App mit Sprachfunktion finden Sie unter [Entwurfsrichtlinien für die Spracherkennung](https://msdn.microsoft.com/library/windows/apps/dn596121).
 
-## Ermitteln der Standardsprache
+## <a name="identify-the-default-language"></a>Ermitteln der Standardsprache
 
 
 Die Spracherkennung verwendet die Systemsprache als Standardsprache für die Erkennung. Diese Sprache wird vom Benutzer auf dem Gerät unter „Einstellungen &gt; System &gt; Spracherkennung &gt; Spracherkennungssprache” festgelegt.
@@ -57,7 +66,7 @@ var language = SpeechRecognizer.SystemSpeechLanguage; </code></pre></td>
 </table>
 ```
 
-## Bestätigen einer installierten Sprache
+## <a name="confirm-an-installed-language"></a>Bestätigen einer installierten Sprache
 
 
 Die installierten Sprachen können sich von Gerät zu Gerät unterscheiden. Überprüfen Sie, ob eine Sprache vorhanden ist, wenn diese für eine bestimmte Einschränkung erforderlich ist.
@@ -72,7 +81,7 @@ Zum Ermitteln der auf einem Gerät unterstützten Sprachen überprüfen Sie eine
 
 -   [**SupportedGrammarLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653250) – Die Sammlung von [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804)-Objekten, die mit einer Einschränkungsliste oder einer Speech Recognition Grammar Specification (SRGS)-Datei verwendet werden.
 
-## Angeben einer Sprache
+## <a name="specify-a-language"></a>Angeben einer Sprache
 
 
 Übergeben Sie zum Angeben einer Sprache ein [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804)-Objekt im [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226)-Konstruktor.
@@ -95,7 +104,7 @@ var language = new Windows.Globalization.Language(“en-US”);
 var recognizer = new SpeechRecognizer(language); 
 ```
 
-## Anmerkungen
+## <a name="remarks"></a>Anmerkungen
 
 
 Sie können eine Themeneinschränkung konfigurieren, indem Sie [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446) zur [**Constraints**](https://msdn.microsoft.com/library/windows/apps/dn653241)-Sammlung der [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226) hinzufügen und anschließend [**CompileConstraintsAsync**](https://msdn.microsoft.com/library/windows/apps/dn653240) aufrufen. Der [**SpeechRecognitionResultStatus**](https://msdn.microsoft.com/library/windows/apps/dn631433)-Wert **TopicLanguageNotSupported** wird zurückgegeben, wenn die Erkennung nicht mit einer unterstützten Themensprache initialisiert wird.
@@ -104,15 +113,15 @@ Sie können eine Einschränkungsliste konfigurieren, indem Sie [**SpeechRecognit
 
 Bei einer SRGS-Grammatik handelt es sich um ein offenes XML-Standardformat, das durch die [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412)-Klasse dargestellt wird. Anders als bei benutzerdefinierten Listen können Sie die Sprache der Grammatik im SRGS-Markup angeben. [**CompileConstraintsAsync**](https://msdn.microsoft.com/library/windows/apps/dn653240) verursacht einen [**SpeechRecognitionResultStatus**](https://msdn.microsoft.com/library/windows/apps/dn631433)-Fehler **TopicLanguageNotSupported**, wenn die Erkennung nicht mit der gleichen Sprache initialisiert wird wie das SRGS-Markup.
 
-## Verwandte Artikel
+## <a name="related-articles"></a>Verwandte Artikel
 
 **Entwickler**
 
-* [Interaktionen mit der Spracherkennung](speech-interactions.md)
+* [Spracherkennungsinteraktionen](speech-interactions.md)
 
 **Designer**
 
-* [Designrichtlinien für die Spracherkennung] (https://msdn.microsoft.com/library/windows/apps/dn59612)
+* [Entwurfsrichtlinien für die Spracherkennung](https://msdn.microsoft.com/library/windows/apps/dn596121)
 
 **Beispiele**
 
@@ -127,6 +136,6 @@ Bei einer SRGS-Grammatik handelt es sich um ein offenes XML-Standardformat, das 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

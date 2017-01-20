@@ -6,27 +6,27 @@ ms.assetid: 64740BF2-CAA1-419E-85D1-42EE7E15F1A5
 label: Intro to controls and patterns
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: c597b2e5a1da23247a2100aeae88beaf1bfdaa64
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 8a9a9009574b46ff3ae5b05569fb871a49e2f1ea
 
 ---
-# Einführung in Steuerelemente und Muster
+# <a name="intro-to-controls-and-patterns"></a>Einführung in Steuerelemente und Muster
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 In der UWP-App-Entwicklung ist ein *Steuerelement* ein UI-Element, das Inhalte anzeigt oder Interaktionen ermöglicht. Sie erstellen die Benutzeroberfläche für Ihre App mit Steuerelementen wie Schaltflächen, Textfeldern und Kombinationsfeldern, um Daten anzuzeigen und Benutzereingaben zu erhalten.
 
-Ein *Muster* ist eine Anleitung zum Ändern eines Steuerelements oder zum Kombinieren verschiedener Steuerelemente, um etwas Neues zu erstellen. Das [Navigationsbereichsmuster](nav-pane.md) ist z.B. eine Möglichkeit, mit der Sie ein [SplitView](split-view.md)-Steuerelement zur App-Navigation verwenden können. Ebenso können Sie die Vorlage eines [Pivot](tabs-pivot.md)-Steuerelements zum Implementieren des Registerkartenmusters anpassen.
+Ein *Muster* ist eine Anleitung zum Ändern eines Steuerelements oder zum Kombinieren verschiedener Steuerelemente, um etwas Neues zu erstellen. Das [Navigationsbereichsmuster](nav-pane.md) ist z. B. eine Möglichkeit, mit der Sie ein [SplitView](split-view.md)-Steuerelement zur App-Navigation verwenden können. Ebenso können Sie die Vorlage eines [Pivot](tabs-pivot.md)-Steuerelements zum Implementieren des Registerkartenmusters anpassen.
 
 In vielen Fällen können Sie ein Steuerelement unverändert verwenden. XAML-Steuerelemente trennen jedoch die Funktion von der Struktur und Darstellung, sodass Sie diese über verschiedene Änderungsebenen an Ihre Bedürfnisse anpassen können. Im Abschnitt [Stil](../style/index.md) erfahren Sie, wie Sie mithilfe von [XAML-Formatvorlagen](xaml-styles.md) und [Steuerelementvorlagen](control-templates.md) Steuerelemente ändern.
 
 In diesem Abschnitt erhalten Sie Anleitungen zu jedem XAML-Steuerelement, das Sie zum Erstellen Ihrer App-UI verwenden können. Zu Beginn wird in diesem Artikel beschrieben, wie Sie der App Steuerelemente hinzufügen. Es gibt drei wichtige Schritte zum Hinzufügen von Steuerelementen zur App: 
 
 - Fügen Sie Ihrer App-UI ein Steuerelement hinzu. 
-- Legen Sie Eigenschaften für das Steuerelement fest, z.B. Breite, Höhe und Vordergrundfarbe. 
+- Legen Sie Eigenschaften für das Steuerelement fest, z. B. Breite, Höhe und Vordergrundfarbe. 
 - Fügen Sie den Ereignishandlern des Steuerelements Code hinzu, damit sie eine Funktion haben. 
 
-## Hinzufügen eines Steuerelements
+## <a name="add-a-control"></a>Hinzufügen eines Steuerelements
 Es gibt mehrere Möglichkeiten, einer App ein Steuerelement hinzuzufügen:
  
 - Verwenden Sie ein Entwicklungstool wie Blend für Visual Studio oder Microsoft Visual Studio Extensible Application Markup Language (XAML)-Designer. 
@@ -43,7 +43,7 @@ In der Toolbox von Visual Studio werden viele Steuerelemente angezeigt, die Sie 
 
 Sie können das Steuerelement auch aus der Toolbox in den XAML-Designer ziehen.
 
-## Festlegen des Namens eines Steuerelements 
+## <a name="set-the-name-of-a-control"></a>Festlegen des Namens eines Steuerelements 
 
 Wenn Sie mit einem Steuerelement im Code arbeiten möchten, legen Sie das Attribut [x:Name](../xaml-platform/x-name-attribute.md) fest und verweisen im Code anhand des Namens darauf. Sie können den Namen im Eigenschaftenfenster von Visual Studio oder in XAML festlegen. Hier wird veranschaulicht, wie Sie den Namen des derzeit ausgewählten Steuerelements über das Textfeld Name am oberen Rand des Eigenschaftenfensters festlegen. 
 
@@ -60,7 +60,7 @@ Hier wird erläutert, wie Sie den Namen eines Steuerelements im XAML-Editor fest
 <Button x:Name="Button1" Content="Button"/>
 ```
 
-## Festlegen von Steuerelementeigenschaften 
+## <a name="set-the-control-properties"></a>Festlegen von Steuerelementeigenschaften 
 
 Mithilfe von Eigenschaften geben Sie das Erscheinungsbild, den Inhalt sowie weitere Attribute von Steuerelementen an. Wenn Sie ein Steuerelement mit einem Entwicklungstool hinzufügen, werden manche Eigenschaften, die Größe, Position und Inhalt steuern, möglicherweise von Visual Studio für Sie festgelegt. Sie können einige Eigenschaften wie etwa die Breite, die Höhe oder den Rand ändern, indem Sie das Steuerelement in der Entwurfsansicht auswählen und bearbeiten. In der Abbildung werden einige der in der Entwurfsansicht verfügbaren Größenanpassungstools veranschaulicht. 
 
@@ -80,9 +80,9 @@ Sie können Steuerelementeigenschaften im Eigenschaftenfenster, in XAML oder im 
 
 Hier wird beschrieben, wie Sie die „Foreground“-Eigenschaft im XAML-Editor festlegen. Beachten Sie das Visual Studio IntelliSense-Fenster, in dem hilfreiche Informationen zur Syntax angezeigt werden. 
 
-![IntelliSense in XAML Teil1](images/add-controls-foreground-xaml.png)
+![IntelliSense in XAML Teil 1](images/add-controls-foreground-xaml.png)
 
-![IntelliSense in XAML Teil2](images/add-controls-foreground-xaml-2.png)
+![IntelliSense in XAML Teil 2](images/add-controls-foreground-xaml-2.png)
 
 Im Folgenden finden Sie den XAML-Code, der nach dem Festlegen der „Foreground“-Eigenschaft vorliegt. 
 
@@ -98,7 +98,7 @@ An dieser Stelle wird beschrieben, wie die „Foreground“-Eigenschaft im Code 
 Button1.Foreground = new SolidColorBrush(Windows.UI.Colors.Beige);
 ```
 
-## Erstellen eines Ereignishandlers 
+## <a name="create-an-event-handler"></a>Erstellen eines Ereignishandlers 
 
 Jedes Steuerelement verfügt über Ereignisse, mit denen Sie auf Aktionen seitens des Benutzers oder sonstige Änderungen in der App reagieren können. Das „Button“-Steuerelement stellt beispielsweise ein Click-Ereignis bereit, das ausgelöst wird, wenn ein Benutzer auf die Schaltfläche klickt. Sie erstellen eine als Ereignishandler bezeichnete Methode, mit der das Ereignis behandelt wird. Sie können das Ereignis eines Steuerelements einer Ereignishandlermethode im Eigenschaftenfenster, in XAML oder im Code zuordnen. Weitere Informationen zu Ereignissen finden Sie unter [Übersicht über Ereignisse und Routingereignisse](../xaml-platform/events-and-routed-events-overview.md).
 
@@ -106,7 +106,7 @@ Wählen Sie zum Erstellen eines Ereignishandlers das Steuerelement aus, und klic
 
 ![Ereignisliste in Visual Studio](images/add-controls-add-event-designer.png)
 
-Wenn Sie einen Ereignishandler mit dem Standardnamen erstellen möchten, doppelklicken Sie im Eigenschaftenfenster auf das Textfeld neben dem Ereignisnamen. Wenn Sie einen Ereignishandler mit einem benutzerdefinierten Namen erstellen möchten, geben Sie im Textfeld den gewünschten Namen ein, und drücken Sie die EINGABETASTE. Der Ereignishandler wird erstellt, und die CodeBehind-Datei wird im Code-Editor geöffnet. Die Ereignishandlermethode enthält zweiParameter. Der erste Parameter ist `sender`. Dabei handelt es sich um einen Verweis auf das Objekt, dem der Handler angefügt ist. Der `sender`-Parameter ist ein **Object**-Typ. In der Regel wandeln Sie `sender` in einen genaueren Typ um, wenn Sie den Zustand direkt für das `sender`-Objekt überprüfen oder ändern möchten. Abhängig davon, wo der Handler angefügt wird, handelt es sich dabei basierend auf Ihrem eigenen App-Design voraussichtlich um einen Typ, in den `sender` sicher umgewandelt werden kann. Den zweiten Wert stellen Ereignisdaten dar. In der Regel sind diese in Signaturen als `e`- oder `args`-Parameter enthalten.
+Wenn Sie einen Ereignishandler mit dem Standardnamen erstellen möchten, doppelklicken Sie im Eigenschaftenfenster auf das Textfeld neben dem Ereignisnamen. Wenn Sie einen Ereignishandler mit einem benutzerdefinierten Namen erstellen möchten, geben Sie im Textfeld den gewünschten Namen ein, und drücken Sie die EINGABETASTE. Der Ereignishandler wird erstellt, und die CodeBehind-Datei wird im Code-Editor geöffnet. Die Ereignishandlermethode enthält zwei Parameter. Der erste Parameter ist `sender`. Dabei handelt es sich um einen Verweis auf das Objekt, dem der Handler angefügt ist. Der `sender`-Parameter ist ein **Object**-Typ. In der Regel wandeln Sie `sender` in einen genaueren Typ um, wenn Sie den Zustand direkt für das `sender`-Objekt überprüfen oder ändern möchten. Abhängig davon, wo der Handler angefügt wird, handelt es sich dabei basierend auf Ihrem eigenen App-Design voraussichtlich um einen Typ, in den `sender` sicher umgewandelt werden kann. Den zweiten Wert stellen Ereignisdaten dar. In der Regel sind diese in Signaturen als `e`- oder `args`-Parameter enthalten.
 
 Hier finden Sie den Code, der das Click-Ereignis einer Schaltfläche namens `Button1` behandelt. Wenn Sie auf die Schaltfläche klicken, wird die „Foreground“-Eigenschaft der Schaltfläche auf Blau gesetzt. 
 
@@ -136,9 +136,7 @@ Sie können ein Ereignis auch dem zugehörigen Ereignishandler im „CodeBehind�
 Button1.Click += new RoutedEventHandler(Button_Click);
 ```
 
-
-
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 -   [Index der Steuerelemente nach Funktion](controls-by-function.md)
 -   [Windows.UI.Xaml.Controls-Namespace](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.aspx)
@@ -148,6 +146,6 @@ Button1.Click += new RoutedEventHandler(Button_Click);
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

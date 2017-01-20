@@ -3,18 +3,25 @@ description: "Erfahren Sie, wie Sie eine UWP-App entwerfen und kodieren, die ein
 title: "Layoutdesign von UWP-Apps – Entwicklung von Windows-Apps"
 author: mijacobs
 keywords: Layout von UWP-Apps, universelle Windows-Plattform, App-Design, Schnittstelle
+label: Layout
+template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 2f9d2059399efd949fc8a1d90a5b6c8c106a478e
-ms.openlocfilehash: 72c4b957c98956965c773b4c2182796880f59a1d
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: e643b7029d5bc417437f7a1b8586424ac4345c3b
 
 ---
-# Layout für UWP-Apps
+# <a name="layout-for-uwp-apps"></a>Layout für UWP-Apps
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
 App-Struktur, Seitenlayout und Navigation bilden die Grundlage der Benutzerumgebung Ihrer App. Die Artikel in diesem Abschnitt helfen Ihnen, eine App zu erstellen, in der Benutzer leicht navigieren können und die auf einer Vielzahl von Geräten und Bildschirmgrößen hervorragend aussieht.
 
-## Einführung
+## <a name="intro"></a>Einführung
 
 <div class="side-by-side">
 <div class="side-by-side-content">
@@ -28,7 +35,7 @@ Der Entwurf einer UWP-App umfasst auch die Erstellung einer Benutzeroberfläche,
 </div>
 </div>
 
-## App-Layout und -Struktur
+## <a name="app-layout-and-structure"></a>App-Layout und -Struktur
 Sehen Sie sich diese Empfehlungen für das Strukturieren Ihrer App und das Verwenden der drei Arten von UI-Elementen an: Navigation, Befehle und Inhalte.
 
 <div class="side-by-side">
@@ -50,7 +57,7 @@ Befehlselementen sind die interaktiven UI-Elemente, mit denen der Benutzer Aktio
 </div>
 </div>
 
-## Seitenlayout 
+## <a name="page-layout"></a>Seitenlayout 
 Diese Artikel unterstützen Sie beim Erstellen einer flexiblen Benutzeroberfläche, die auch bei verschiedenen Bildschirmgrößen, Fenstergrößen, Auflösungen und Ausrichtungen hervorragend aussieht. 
 
 
@@ -58,7 +65,7 @@ Diese Artikel unterstützen Sie beim Erstellen einer flexiblen Benutzeroberfläc
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
    <p><b>[Bildschirmgrößen und Haltepunkte](screen-sizes-and-breakpoints-for-responsive-design.md)</b><br/>
-Die Anzahl der Geräteziele und Bildschirmgrößen bei Windows10 ist zu groß, um alle bei der Optimierung der Benutzeroberfläche zu berücksichtigen. Stattdessen wird empfohlen, für einige wichtige Bildschirmbreiten (auch als „Haltepunkte“ bezeichnet) zu entwickeln: 360, 640, 1024 und 1366 Epx.</p>
+Die Anzahl der Geräteziele und Bildschirmgrößen bei Windows 10 ist zu groß, um alle bei der Optimierung der Benutzeroberfläche zu berücksichtigen. Stattdessen wird empfohlen, für einige wichtige Bildschirmbreiten (auch als „Haltepunkte“ bezeichnet) zu entwickeln: 360, 640, 1024 und 1366 Epx.</p>
   </div>
   <div class="side-by-side-content-right">
  <p><b>[Definieren von Layouts mit XAML](layouts-with-xaml.md)</b> <br/>
@@ -83,6 +90,6 @@ Neben Abmessungseigenschaften (Breite, Höhe und Beschränkungen) können Elemen
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO2-->
 
 

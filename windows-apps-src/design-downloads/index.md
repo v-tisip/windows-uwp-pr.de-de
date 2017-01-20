@@ -3,21 +3,23 @@ description: "Erhalten Sie die neuesten Downloads und Tools für das Benutzerobe
 keywords: "Layout von UWP-Apps, Benutzeroberflächendesigns, Downloads, UWP-Tools"
 title: "Designdownloads für UWP-Apps – Entwicklung von Windows-Apps"
 author: mijacobs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: f1ea979f5179cce0bb059534b064c2ecf805ce89
-ms.openlocfilehash: da21817eea3a26ffd162bd19c8eb69345ac1d726
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: d18696de51451552aef14c55d2a1b62c6037fb59
 
 ---
-
+# <a name="design-downloads-for-uwp-apps"></a>Designdownloads für UWP-Apps
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
-
-# Designdownloads für UWP-Apps
-
 
 Dieser Abschnitt enthält Design- und UI-bezogene Downloads für UWP-Apps. Zusätzliche Tools wie beispielsweise Visual Studio finden Sie auf der [Hauptseite für Downloads](https://developer.microsoft.com/downloads). 
 
 
-## Entwurfsvorlagen
+## <a name="design-templates"></a>Entwurfsvorlagen
 
 <div class="side-by-side">
 <div class="side-by-side-content">
@@ -55,13 +57,13 @@ Steuerelemente und Layouts für das Design von UWP-Apps in Adobe Photoshop.<br/>
 </div>
 </div>
 
-## Tools
+## <a name="tools"></a>Tools
 
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
             <p><b>Kachel- und Symbolgenerator für Adobe Photoshop</b><br/>
-Mit diesen Aktionen für Adobe Photoshop werden die 68 empfohlenen Kacheln und Symbole aus nur 7 Dateien erstellt. <br/>[Kachel- und Symbolgenerator herunterladen](http://go.microsoft.com/fwlink/p/?LinkId=760394)</p>    
+Mit diesen Aktionen für Adobe Photoshop werden die 68 empfohlenen Kacheln und Symbole aus nur sieben Dateien erstellt. <br/>[Kachel- und Symbolgenerator herunterladen](http://go.microsoft.com/fwlink/p/?LinkId=760394)</p>    
   </div>
   <div class="side-by-side-content-right">
 <a href="http://go.microsoft.com/fwlink/p/?LinkId=760394"><img src="images/tile-icon-generator.png" alt="Download the tile and icon generator" /></a>
@@ -69,19 +71,8 @@ Mit diesen Aktionen für Adobe Photoshop werden die 68 empfohlenen Kacheln und S
 </div>
 </div>
 
-<div class="side-by-side">
-<div class="side-by-side-content">
-  <div class="side-by-side-content-left">
-            <p><b>Redliner-Tool für Adobe Illustrator</b><br/>
-Erstellen Sie mühelos aus Ihren Illustrator-Prototypen Redlines. (Erfordert Adobe Illustrator CC oder höher.)<br/>[Redliner-Tool für Adobe Illustrator herunterladen](https://go.microsoft.com/fwlink/p/?LinkId=534641)</p>  
-  </div>
-  <div class="side-by-side-content-right">
-<a href="https://go.microsoft.com/fwlink/p/?LinkId=534641"><img src="images/redliner-tool.png" alt="Download the Redliner tool for Adobe Illustrator" /></a>
-  </div>
-</div>
-</div>
 
-## Beispiele
+## <a name="samples"></a>Beispiele
 
 <div class="side-by-side">
 <div class="side-by-side-content">
@@ -109,6 +100,6 @@ In diesem Beispiel werden Windows-Features in eine intelligente Gebäudeautomati
 <b>Sie möchten mehr Code?</b> Auf der Windows-Beispielseite finden Sie eine vollständige Liste aller UWP-App-Beispiele. [Portal mit Beispielen aufrufen](https://developer.microsoft.com/samples)
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO2-->
 
 

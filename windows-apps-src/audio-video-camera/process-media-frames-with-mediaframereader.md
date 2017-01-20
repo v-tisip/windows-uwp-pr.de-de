@@ -4,8 +4,8 @@ ms.assetid:
 description: "In diesem Artikel wird beschrieben, wie Sie mit „MediaFrameReader“ und „MediaCapture“ Medienframes aus einer oder mehreren verfügbaren Quellen abrufen. Hierzu zählen Farb-, Tiefen- und Infrarotkameras sowie Audiogeräte und sogar benutzerdefinierte Framequellen (etwa für Skeletal-Tracking-Frames)."
 title: "Verarbeiten von Medienframes mit „MediaFrameReader“"
 translationtype: Human Translation
-ms.sourcegitcommit: 881f806a61d247c6c4f73aa770ba4c5dab91af00
-ms.openlocfilehash: 648874a50dbe333f1bb6291de646d9088eec1528
+ms.sourcegitcommit: e6ab1fc16f150de2fed3797d89375a52b3965182
+ms.openlocfilehash: 11e09d9b447e9daa0498377a67ef235bdab168dd
 
 ---
 
@@ -117,7 +117,7 @@ Nun wird der **FrameArrived**-Ereignishandler implementiert. Wenn der Handler au
 
 Das **Image**-Steuerelement kann nur Bilder in BRGA8 Format anzeigen, die entweder vormultipliziert sind oder kein Alpha aufweisen. Weist der eingehende Frame nicht dieses Format auf, wird mit der statischen Methode [**Convert**](https://msdn.microsoft.com/library/windows/apps/Windows.Graphics.Imaging.SoftwareBitmap.Covert) die Software-Bitmap in das richtige Format konvertiert.
 
-Als Nächstes wird mit der [**Interlocked.Exchange**](https://msdn.microsoft.com/en-us/library/bb337971)-Methode der Verweis auf die eingehende Bitmap mit der Hintergrundpuffer-Bitmap ausgetauscht. Bei dieser Methode werden die Verweise in einer threadsicheren atomischen Operation ausgetauscht. Nach dem Austausch wird das alte Hintergrundpufferbild – jetzt in der *softwareBitmap*-Variablen – gelöscht, um seine Ressourcen zu bereinigen.
+Als Nächstes wird mit der [**Interlocked.Exchange**](https://msdn.microsoft.com/library/bb337971)-Methode der Verweis auf die eingehende Bitmap mit der Hintergrundpuffer-Bitmap ausgetauscht. Bei dieser Methode werden die Verweise in einer threadsicheren atomischen Operation ausgetauscht. Nach dem Austausch wird das alte Hintergrundpufferbild – jetzt in der *softwareBitmap*-Variablen – gelöscht, um seine Ressourcen zu bereinigen.
 
 Als Nächstes wird mit dem mit dem **Image**-Element verknüpften [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Core.CoreDispatcher) eine Aufgabe erstellt, die durch Aufrufen von [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) im UI-Thread ausgeführt wird. Da die asynchronen Aufgaben in dieser Aufgabe ausgeführt werden, wird der an **RunAsync** weitergegebene Lambda-Ausdruck mit dem *async*- Schlagwort deklariert.
 
@@ -167,6 +167,6 @@ Die **FrameRenderer**-Hilfsprogrammklasse implementiert die folgenden Methoden.
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

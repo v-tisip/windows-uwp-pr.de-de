@@ -4,12 +4,12 @@ title: Planen der DirectX-Portierung
 description: "Planen Sie das Portieren des Spiels von DirectX 9 zu DirectX 11 und zur Universellen Windows-Plattform (UWP) - Führen Sie ein Upgrade des Grafikcodes durch, und fügen Sie das Spiel in die Windows-Runtime-Umgebung ein."
 ms.assetid: 3c0c33ca-5d15-ae12-33f8-9b5d8da08155
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: fbd582b2cc90ee763cb167c65dac88cee4e7a025
+ms.sourcegitcommit: 115377ed3e5a13668481d1122f354610b3077763
+ms.openlocfilehash: f5f66f5da79eb62e3a81f4fe0d7398fed689d378
 
 ---
 
-# Planen der DirectX-Portierung
+# <a name="plan-your-directx-port"></a>Planen der DirectX-Portierung
 
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -23,12 +23,12 @@ ms.openlocfilehash: fbd582b2cc90ee763cb167c65dac88cee4e7a025
 
 Planen Sie das Portieren des Spiels von DirectX 9 zu DirectX 11 und zur Universellen Windows-Plattform (UWP): Führen Sie ein Upgrade des Grafikcodes durch, und fügen Sie das Spiel in die Windows-Runtime-Umgebung ein.
 
-## Planen der Portierung des Grafikcodes
+## <a name="plan-to-port-graphics-code"></a>Planen der Portierung des Grafikcodes
 
 
 Bevor Sie mit der Portierung des Spiels für UWP beginnen, müssen Sie sicherstellen, dass das Spiel keine Überbleibsel aus Direct3D 8 mehr aufweist. Vergewissern Sie sich, dass im Spiel keine Reste der Pipeline mit festen Funktionen vorhanden sind. Eine vollständige Liste der veralteten Features, einschließlich der Pipeline mit festen Funktionen, finden Sie unter [Veraltete Features](https://msdn.microsoft.com/library/windows/desktop/cc308047).
 
-Das Upgrade von Direct3D9 auf Direct3D11 ist mehr als nur ein Suchen-und-Ersetzen-Vorgang. Sie müssen für Direct3D den Unterschied zwischen Gerät, Gerätekontext und Grafikinfrastruktur kennen und sich mit den anderen wichtigen Änderungen vertraut machen, die seit Direct3D9 vorgenommen wurden. Sie können damit beginnen, indem Sie sich die Informationen in den anderen Themen dieses Abschnitts durchlesen.
+Das Upgrade von Direct3D 9 auf Direct3D 11 ist mehr als nur ein Suchen-und-Ersetzen-Vorgang. Sie müssen für Direct3D den Unterschied zwischen Gerät, Gerätekontext und Grafikinfrastruktur kennen und sich mit den anderen wichtigen Änderungen vertraut machen, die seit Direct3D 9 vorgenommen wurden. Sie können damit beginnen, indem Sie sich die Informationen in den anderen Themen dieses Abschnitts durchlesen.
 
 Ersetzen Sie die Hilfsbibliotheken D3DX und DXUT durch Ihre eigenen Hilfsbibliotheken oder durch Communitytools. Weitere Informationen finden Sie im Abschnitt [Featurezuordnung](feature-mapping.md).
 
@@ -38,9 +38,9 @@ Ersetzen Sie die Hilfsbibliotheken D3DX und DXUT durch Ihre eigenen Hilfsbibliot
 
 In Assemblysprache geschriebene Shader sollten mit den Funktionen des Shadermodells 4 (Ebene 9_1 oder 9_3) auf HLSL aktualisiert werden. Für die Effektbibliothek geschriebene Shader müssen auf eine neuere Version der HLSL-Syntax aktualisiert werden. Weitere Informationen finden Sie im Abschnitt [Featurezuordnung](feature-mapping.md).
 
-Machen Sie sich mit den verschiedenen [Direct3D-Featureebenen](https://msdn.microsoft.com/library/windows/desktop/ff476876) vertraut. Mithilfe von Featureebenen wird ein großer Bereich von Videohardware klassifiziert, indem Gruppen bekannter Funktionen definiert werden. Jede Gruppe entspricht grob den Versionen von Direct3D, und zwar von9.1 bis11.2. Für alle Featureebenen wird die DirectX11-API verwendet.
+Machen Sie sich mit den verschiedenen [Direct3D-Featureebenen](https://msdn.microsoft.com/library/windows/desktop/ff476876) vertraut. Mithilfe von Featureebenen wird ein großer Bereich von Videohardware klassifiziert, indem Gruppen bekannter Funktionen definiert werden. Jede Gruppe entspricht grob den Versionen von Direct3D, und zwar von 9.1 bis 11.2. Für alle Featureebenen wird die DirectX 11-API verwendet.
 
-## Planen der Portierung des Win32-UI-Codes zu CoreWindow
+## <a name="plan-to-port-win32-ui-code-to-corewindow"></a>Planen der Portierung des Win32-UI-Codes zu CoreWindow
 
 
 UWP-Apps werden in einem Fenster ausgeführt, das für einen App-Container erstellt wurde. Dieses wird als [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) bezeichnet. Das Spiel steuert das Fenster, indem es von [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478) erbt. Dafür sind weniger Implementierungsdetails als für ein Desktopfenster erforderlich. Die Hauptschleife des Spiels befindet sich in der [**IFrameworkView::Run**](https://msdn.microsoft.com/library/windows/apps/hh700505)-Methode.
@@ -55,7 +55,7 @@ In den Vorlagen und Codebeispielen von Microsoft werden neue C++-Features verwen
 
 Zwei Konzepte werden Sie jedoch häufig anwenden:
 
--   Verwaltete Verweise ([**^**]https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx) und [**verwaltete Klassen**](https://msdn.microsoft.com/library/windows/apps/6w96b5h7.aspx) (Verweisklassen) sind ein wesentlicher Bestandteil der Windows-Runtime. Die Verwendung von verwalteten Verweisklassen ist erforderlich, um Schnittstellen zu Windows-Runtime-Komponenten wie [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478) einzurichten. Weitere Informationen finden Sie in der exemplarischen Vorgehensweise.
+-   Verwaltete Verweise ([**^ Operator**](https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx)) und [**verwaltete Klassen**](https://msdn.microsoft.com/library/windows/apps/6w96b5h7.aspx) (Verweisklassen) sind wesentliche Bestandteile der Windows-Runtime. Die Verwendung von verwalteten Verweisklassen ist erforderlich, um Schnittstellen zu Windows-Runtime-Komponenten wie [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478) einzurichten. Weitere Informationen finden Sie in der exemplarischen Vorgehensweise.
 -   Verwenden Sie beim Arbeiten mit Direct3D 11-COM-Schnittstellen den [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)-Vorlagetyp, um die Nutzung von COM-Zeigern zu vereinfachen.
 
  
@@ -68,6 +68,6 @@ Zwei Konzepte werden Sie jedoch häufig anwenden:
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

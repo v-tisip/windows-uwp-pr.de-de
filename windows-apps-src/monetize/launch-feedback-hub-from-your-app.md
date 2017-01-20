@@ -4,8 +4,8 @@ Description: "Sie können Ihre Kunden dazu ermutigen, Feedback zu geben, indem S
 title: "Starten des Feedback-Hubs über Ihre App"
 ms.assetid: 070B9CA4-6D70-4116-9B18-FBF246716EF0
 translationtype: Human Translation
-ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
-ms.openlocfilehash: 4296bd4007ae5109c9a3736c977ba68f312b208c
+ms.sourcegitcommit: a3c4ebc9bfda5ed41363de139d43a6a2c7934e0e
+ms.openlocfilehash: 54c6503add19ead5226da5a862b199bc3f305b7e
 
 ---
 
@@ -59,16 +59,16 @@ So starten Sie den Feedback-Hub über Ihre App
 
 Um den Feedback-Hub zu starten, empfehlen wir, in Ihrer App ein Benutzeroberflächenelement (z. B. eine Schaltfläche) hinzuzufügen, in dem das folgende standardmäßige Feedbacksymbol mit der Schriftart „Segoe MDL2 Assets“ und dem Zeichencode E939 angezeigt wird.
 
-![]Feedback icon](images/feedback_icon.PNG)
+![Feedbacksymbol](images/feedback_icon.PNG)
 
-Außerdem wird empfohlen, mindestens eine der folgenden Platzierungsoptionen für die Verknüpfung zum Feedback-Hub in Ihrer App zu verwenden.
+Außerdem wird empfohlen, mindestens eine der folgenden Platzierungsoptionen für die Verknüpfung mit dem Feedback-Hub in Ihrer App zu verwenden.
 * **Direkt in der App-Leiste**. Je nach Implementierung möchten Sie möglicherweise nur das Symbol verwenden oder Text hinzufügen (siehe unten).
 
-  ![]Feedbacksymbol](images/feedback_appbar_placement.png)
+  ![Feedbacksymbol](images/feedback_appbar_placement.png)
 
 * **In den Einstellungen Ihrer App**. Dies ist eine subtilere Art, um Benutzern Zugriff auf den Feedback-Hub zu gewähren. Im folgenden Beispiel wird der Feedbacklink als einer der Links unter der App angezeigt.
 
-  ![]Feedbacksymbol](images/feedback_settings_placement.png)
+  ![Feedbacksymbol](images/feedback_settings_placement.png)
 
 * **In einem ereignisgesteuerten Flyout**. Dies ist hilfreich, wenn Sie vor dem Start des Windows-Feedback-Hubs die Meinung Ihrer Kunden zu einer bestimmten Frage erfahren möchten. Beispiel: Nachdem Ihre App eine bestimmte Funktion verwendet, könnten Sie den Kunden mit einer gezielten Frage zu seiner Zufriedenheit mit diesem Feature dazu auffordern, Ihnen seine Meinung mitzuteilen. Wenn der Kunde auf die Frage reagieren möchte, wird über Ihre App der Feedback-Hub gestartet.
 
@@ -79,6 +79,6 @@ Außerdem wird empfohlen, mindestens eine der folgenden Platzierungsoptionen fü
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

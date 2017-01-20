@@ -339,6 +339,13 @@
 #### [Aktivieren einer App](gaming/how-to-activate-an-app-directx-and-cpp.md)
 #### [Anhalten einer App](gaming/how-to-suspend-an-app-directx-and-cpp.md)
 #### [Fortsetzen einer App](gaming/how-to-resume-an-app-directx-and-cpp.md)
+### [Eingaben für Spiele](gaming/input-for-games.md)
+#### [Gamepad und Vibration](gaming/gamepad-and-vibration.md)
+#### [Arcade-Joystick](gaming/arcade-stick.md)
+#### [Rennlenkräder und Kraftrückmeldung](gaming/racing-wheel-and-force-feedback.md)
+#### [Headset](gaming/headset.md)
+#### [Benutzeroberflächen-Navigationscontroller](gaming/ui-navigation-controller.md)
+#### [Eingabemethoden für Spiele](gaming/input-practices-for-games.md)
 ### [2D-Grafiken für DirectX-Spiele](gaming/working-with-2d-graphics-in-your-directx-game.md)
 ### [Grundlegendes zu 3D-Grafiken für DirectX-Spiele](gaming/an-introduction-to-3d-graphics-with-directx.md)
 #### [Einrichten von DirectX-Ressourcen und Darstellen eines Bilds](gaming/setting-up-directx-resources.md)
@@ -568,7 +575,8 @@
 #### [Behandeln der App-Aktivierung](launch-resume/activate-an-app.md)
 #### [Behandeln des Anhaltens von Apps](launch-resume/suspend-an-app.md)
 #### [Behandeln der App-Fortsetzung](launch-resume/resume-an-app.md)
-#### [Freigeben von Speicher, wenn Ihre App in den Hintergrund verschoben wird](launch-resume/reduce-memory-usage.md)
+#### [Geben Sie Speicher frei, wenn Ihre App in den Hintergrund verschoben wird](launch-resume/reduce-memory-usage.md)
+#### [Ausführen während der Minimierung mithilfe der erweiterten Ausführung](launch-resume/run-minimized-with-extended-execution.md)
 ### [Starten einer App mit einem URI](launch-resume/launch-app-with-uri.md)
 #### [Starten der Standard-App für einen URI](launch-resume/launch-default-app.md)
 #### [Behandeln der URI-Aktivierung](launch-resume/handle-uri-activation.md)
@@ -670,8 +678,8 @@
 ##### [„AdControl“ in Windows Phone Silverlight](monetize/adcontrol-in-windows-phone-silverlight.md)
 ##### [Hinzufügen von Werbung zu Videoinhalten in HTML 5 und JavaScript](monetize/add-advertisements-to-video-content.md)
 #### [Codebeispiele](monetize/code-samples.md)
-##### [Beispiel für HTML-Eigenschaften](monetize/html-properties-example.md)
-##### [Beispiel für XAML-Eigenschaften](monetize/xaml-properties-example.md)
+##### [Beispiel für AdControl-HTML-Eigenschaften](monetize/html-properties-example.md)
+##### [Beispiel für AdControl-XAML-Eigenschaften](monetize/xaml-properties-example.md)
 ##### [Erstellen eines AdControl-Elements in JavaScript](monetize/create-an-adcontrol-in-javascript.md)
 ##### [AdControl-Ereignisse in JavaScript](monetize/adcontrol-events-in-javascript.md)
 ##### [AdControl-Ereignisse in C#](monetize/adcontrol-events-in-c.md)
@@ -683,7 +691,7 @@
 #### [Handbücher zur Problembehandlung](monetize/troubleshooting-guides.md)
 ##### [Handbuch zur Problembehandlung für HTML und JavaScript](monetize/html-and-javascript-troubleshooting-guide.md)
 ##### [XAML- und C#-Handbuch zur Problembehandlung](monetize/xaml-and-c-troubleshooting-guide.md)
-### [Verwenden von Windows Store-Diensten](monetize/using-windows-store-services.md)
+### [Windows Store-Dienste](monetize/using-windows-store-services.md)
 #### [Zugriff auf Analysedaten](monetize/access-analytics-data-using-windows-store-services.md)
 ##### [Abrufen von App-Käufen](monetize/get-app-acquisitions.md)
 ##### [Abrufen von Add-On-Käufen](monetize/get-in-app-acquisitions.md)
@@ -748,7 +756,7 @@
 ##### [Gewähren kostenloser Produkte](monetize/grant-free-products.md)
 ##### [Verlängern eines Windows Store-ID-Schlüssels](monetize/renew-a-windows-store-id-key.md)
 #### [App-Metadaten-API für Anzeigennetzwerke](monetize/app-metadata-api-for-advertising-networks.md)
-### [Demo-App für den Einzelhandel](monetize/retail-demo-experience.md)
+### [Erstellen einer Demo-App für den Einzelhandel (RDX-App, Retail Demo Experience-App)](monetize/retail-demo-experience.md)
 ## [Netzwerk- und Webdienste](networking/index.md)
 ### [Netzwerkgrundlagen](networking/networking-basics.md)
 ### [Welche Netzwerktechnologie?](networking/which-networking-technology.md)
@@ -1018,6 +1026,7 @@
 ### [Auszahlungsschwellenwerte, Methoden und Zeiträume](publish/payment-thresholds-methods-and-timeframes.md)
 ### [Auszahlungsübersicht](publish/payout-summary.md)
 ### [Steuerinformationen zu kostenpflichtigen Apps](publish/tax-details-for-paid-apps.md)
+### [Kennenlernen der IRS-Steuerformulare](publish/understand-irs-tax-forms.md)
 ### [Abrechnung über den Mobilfunkanbieter](publish/mobile-operator-billing.md)
 ### [Umsatzsteuerinfo](publish/vat-info.md)
 ## [Richtlinien und Verhaltensregeln für den Store](https://msdn.microsoft.com/library/windows/apps/dn764939.aspx)
@@ -1027,6 +1036,6 @@
 ### [Verhaltensregeln für Entwickler](https://msdn.microsoft.com/library/windows/apps/dn764941.aspx)
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

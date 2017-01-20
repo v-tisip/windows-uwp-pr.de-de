@@ -5,23 +5,128 @@ title: "Einführung der Geräte für UWP-Apps (Universelle Windows-Plattform)"
 ms.assetid: 7665044E-F007-495D-8D56-CE7C2361CDC4
 label: Device primer
 template: detail.hbs
+keywords: "Gerät, Eingabe, Interaktion"
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 0501d59108c5f01b3cefd3d038f3c7d320c862eb
-ms.openlocfilehash: 8821af9bc160dc2636871c3a3b2a558987707766
+ms.sourcegitcommit: bc2601bcd04f410ae4c3609c078a8684e0fbdbeb
+ms.openlocfilehash: ea19592ea98eb7d9a1b47c1a8cf8f1990ca33797
 
 ---
 
-#  Einführung der Geräte für UWP-Apps (Universelle Windows-Plattform)
+#  <a name="device-primer-for-universal-windows-platform-uwp-apps"></a>Einführung der Geräte für UWP-Apps (Universelle Windows-Plattform)
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
+
+![Windows-Geräte](images/device-primer/device-primer-ramp.png)
+
+Wenn Sie sich mit den Geräten vertraut machen, die UWP-Apps (Universelle Windows-Plattform) unterstützen, können Sie für jeden Formfaktor die bestmögliche Benutzerfreundlichkeit bieten. Beim Entwickeln für ein bestimmtes Gerät sind die wichtigsten zu berücksichtigenden Punkte die Darstellung der App auf dem Gerät, wo, wann und wie die App auf dem Gerät genutzt wird und die Art der Interaktion der Benutzer mit dem Gerät.
+
+## <a name="pcs-and-laptops"></a>PCs und Laptops
 
 
+Mit PCs und Laptops von Windows wird eine breite Palette von Geräten und Bildschirmgrößen abgedeckt. Im Allgemeinen können auf PCs und Laptops mehr Informationen als auf Smartphones oder Tablets angezeigt werden.
+
+Bildschirmgrößen
+-   13 Zoll und größer
+
+![PC](images/device-primer/device-primer-desktop.png)
+
+Typische Verwendung
+-   Apps werden auf Desktops und Laptops häufig gleichzeitig genutzt, aber nur von jeweils einem Benutzer und meist über längere Zeiträume hinweg.
+
+Hinweise zur Benutzeroberfläche
+-   Apps können in einer Fensteransicht angezeigt werden, deren Größe vom Benutzer bestimmt wird. Je nach Größe des Fensters können darin zwischen einem und drei Frames enthalten sein. Auf größeren Bildschirmen kann die App mehr als drei Frames haben.
+
+-   Beim Nutzen einer App auf einem Desktop oder Laptop haben Benutzer die Kontrolle über App-Dateien. Achten Sie als App-Designer darauf, Verfahren einzubauen, die dem Verwalten der App-Inhalte dienen. Erwägen Sie, Befehle und Features der Art „Speichern unter“, „Zuletzt verwendet“ usw. bereitzustellen.
+
+-   Die Zurück-Schaltfläche des Systems ist optional. Wenn ein App-Entwickler diese anzeigen möchte, wird sie in der App-Titelleiste angezeigt.
+
+Eingabemöglichkeiten
+-   Maus
+-   Tastatur
+-   Toucheingabe auf Laptops und All-in-One-Desktops.
+-   Es werden auch Gamepads verwendet, z. B. der Xbox-Controller.
+
+Typische Gerätefunktionen
+-   Kamera
+-   Mikrofon
+
+## <a name="tablets-and-2-in-1s"></a>Tablets und 2-in-1-Geräte
 
 
+Extrem leichte Tablet PCs sind mit Touchscreens, Kameras, Mikrofonen und Beschleunigungsmessern ausgestattet. Die Größe der Bildschirme von Tablets reicht normalerweise von 7 bis 13,3 Zoll. 2-in-1-Geräte können abhängig von der Konfiguration als Tablet oder Laptop mit einer Tastatur und Maus verwendet werden (in der Regel wird hierzu der Bildschirm aufgestellt oder nach hinten geklappt).
 
-![Windows-Geräte](images/device-primer/1894834-hig-device-primer-01-500.png)
+Bildschirmgrößen
+- 7 bis 13,3 Zoll bei Tablets
+- 13,3 Zoll und größer bei 2-in-1-Geräten
 
-Wenn Sie sich mit den Geräten vertraut machen, die UWP-Apps (Universelle Windows-Plattform) unterstützen, können Sie für jeden Formfaktor die bestmögliche Benutzerfreundlichkeit bieten. Beim Entwickeln für ein bestimmtes Gerät sind die wichtigsten zu berücksichtigenden Punkte die Darstellung der App auf dem Gerät; wo, wann und wie die App auf dem Gerät genutzt wird; und die Art der Interaktion der Benutzer mit dem Gerät.
+![Tabletgerät](images/device-primer/device-primer-tablet.png)
 
-## Smartphones und Phablets
+Typische Verwendung
+-   Tablets werden zu ca. 80 Prozent vom Besitzer und zu ca. 20 Prozent von anderen Personen genutzt.
+-   Es wird meist zu Hause als Begleitgerät beim Fernsehen verwendet.
+-   Es wird über längere Zeiträume hinweg als bei Smartphones und Phablets verwendet.
+-   Text wird häufig und jeweils nur für kurze Zeit eingegeben.
+
+Hinweise zur Benutzeroberfläche
+-   Auf Tablets können sowohl im Querformat als auch im Hochformat jeweils zwei Frames angezeigt werden.
+-   Die Zurück-Schaltfläche des Systems befindet sich in der Navigationsleiste.
+
+Eingabemöglichkeiten
+-   Toucheingabe
+-   Eingabestift
+-   Externe Tastatur (gelegentlich)
+-   Maus (gelegentlich)
+-   Sprache (gelegentlich)
+
+Typische Gerätefunktionen
+-   Kamera
+-   Mikrofon
+-   Bewegungssensoren
+-   Positionssensoren
+
+> [!NOTE]
+> Die meisten Überlegungen zu PCs und Laptops gelten auch für 2-in-1-Geräte.
+
+## <a name="xbox-and-tv"></a>Xbox und Fernsehgeräte
+
+Die Erfahrung, die Sie machen, wenn Sie auf dem Sofa sitzen und mittels eines Gamepads oder einer Fernbedienung mit Ihrem Fernsehgerät interagieren, wird als **3-Meter-Erfahrung** (10-Fuß-Erfahrung) bezeichnet. Der Name kommt daher, dass sich der Benutzer im Allgemeinen ungefähr 3 Meter (10 Fuß) vom Bildschirm entfernt befindet. Dies stellt eine besondere Herausforderung dar, die beispielsweise bei einer *50-cm-Erfahrung* (2-Fuß-Erfahrung) oder bei der Interaktion mit einem PC nicht vorhanden ist. Wenn Sie eine App für Xbox One oder ein anderes Gerät entwickeln, das an einen Fernsehbildschirm angeschlossen ist und unter Umständen ein Gamepad oder Fernbedienung für die Eingabe verwendet, sollten Sie dies stets bedenken.
+
+Die Schritte beim Entwickeln einer UWP-App für die 3-Meter-Erfahrung unterscheiden sich stark von der Entwicklung für eine der hier aufgeführten Gerätekategorien. Weitere Informationen finden Sie unter [Entwerfen für Xbox und Fernsehgeräte](designing-for-tv.md).
+
+Bildschirmgrößen
+- 24 Zoll und größer
+
+![Xbox und Fernsehgeräte](images/device-primer/device-primer-tv-and-xbox.png)
+
+Typische Verwendung
+- Wird häufig von mehreren Personen, aber auch häufig nur von einer Person verwendet.
+- Wird in der Regel über längere Zeiträume hinweg verwendet.
+- Wird meist zu Hause, also an einem Ort, verwendet.
+- Texteingabe ist selten erforderlich, da diese mit einem Gamepad oder einer Fernbedienung zeitaufwendiger ist.
+- Die Ausrichtung des Bildschirms ist fest.
+- In der Regel wird jeweils nur eine App ausgeführt. Unter Umständen ist das Andocken von Apps an der Seite möglich (etwa bei Xbox).
+
+Hinweise zur Benutzeroberfläche
+- Apps behalten in der Regel die gleiche Größe, es sei denn, eine andere App ist an der Seite angedockt.
+- Die Zurück-Schaltfläche des Systems ist eine nützliche Funktion, die in den meisten Xbox-Apps zur Verfügung steht und auf die mit der B-Taste auf dem Gamepad zugegriffen wird.
+- Da der Kunde etwa 3 Meter (10 Fuß) vom Bildschirm entfernt sitzt, stellen Sie sicher, dass die Benutzeroberfläche groß genug und klar sichtbar ist.
+
+Eingaben
+- Gamepad (z. B. Xbox-Controller)
+- Fernbedienung
+- Sprache (gelegentlich, falls der Kunde Kinect oder ein Headset besitzt)
+
+Typische Gerätefunktionen
+- Kamera (gelegentlich, falls der Kunde Kinect besitzt)
+- Mikrofon (gelegentlich, falls der Kunde Kinect oder ein Headset besitzt)
+- Bewegungssensoren (gelegentlich, falls der Kunde Kinect besitzt)
+
+## <a name="phones-and-phablets"></a>Smartphones und Phablets
 
 
 Smartphones sind mittlerweile die am häufigsten genutzten Geräte und bieten auch bei begrenzter Bildschirmfläche und eingeschränkten Eingabeverfahren viele Möglichkeiten. Smartphones sind in zahlreichen verschiedenen Größen verfügbar. Größere Handys werden als Phablets bezeichnet. App-Benutzeroberflächen auf Phablets ähneln den Benutzeroberflächen auf Smartphones, aber die größere Bildschirmfläche von Phablets ermöglicht einige wichtige Änderungen bei der Nutzung von Inhalten.
@@ -32,7 +137,7 @@ Bildschirmgrößen
 -   4 bis 5 Zoll bei Smartphones
 -   5,5 bis 7 Zoll bei Phablets
 
-![Windows Phone](images/device-primer/1894834-hig-device-primer-03.png)
+![Windows Phone](images/device-primer/device-primer-phablet.png)
 
 Typische Verwendung
 -   Smartphones werden meist im Hochformat bedient, weil es am einfachsten ist, das Gerät in einer Hand zu halten und so alle Interaktionsmöglichkeiten zu nutzen. In manchen Fällen funktioniert jedoch das Querformat sehr gut, beispielsweise beim Anzeigen von Fotos und Videos, beim Lesen eines Buchs oder beim Verfassen von Text.
@@ -61,82 +166,15 @@ Typische Gerätefunktionen
 
  
 
-## Tablets
+## <a name="surface-hub-devices"></a>Surface Hub-Geräte
 
 
-Extrem leichte Tablet PCs sind mit Touchscreens, Kameras, Mikrofonen und Beschleunigungsmessern ausgestattet. Die Größe der Bildschirme von Tablets reicht normalerweise von 7 bis 13,3 Zoll.
-
-Bildschirmgrößen
--   7 bis 13,3 Zoll
-
-![Tabletgerät](images/device-primer/1894834-hig-device-primer-05.png)
-
-Typische Verwendung
--   Tablets werden zu ca. 80 Prozent vom Besitzer und zu ca. 20 Prozent von anderen Personen genutzt.
--   Es wird meist zu Hause als Begleitgerät beim Fernsehen verwendet.
--   Es wird über längere Zeiträume hinweg als bei Smartphones und Phablets verwendet.
--   Text wird häufig und jeweils nur für kurze Zeit eingegeben.
-
-Hinweise zur Benutzeroberfläche
--   Auf Tablets können sowohl im Querformat als auch im Hochformat jeweils zwei Frames angezeigt werden.
--   Die Zurück-Schaltfläche des Systems befindet sich in der Navigationsleiste.
-
-Eingabemöglichkeiten
--   Toucheingabe
--   Eingabestift
--   Externe Tastatur (gelegentlich)
--   Maus (gelegentlich)
--   Sprache (gelegentlich)
-
-Typische Gerätefunktionen
--   Kamera
--   Mikrofon
--   Bewegungssensoren
--   Positionssensoren
-
- 
-
-## PCs und Laptops
-
-
-Mit PCs und Laptops von Windows wird eine breite Palette von Geräten und Bildschirmgrößen abgedeckt. Im Allgemeinen können auf PCs und Laptops mehr Informationen als auf Smartphones oder Tablets angezeigt werden.
-
-Bildschirmgrößen
--   13 Zoll und größer
-
-![PC](images/device-primer/1894834-hig-device-primer-06-349.png)
-
-Typische Verwendung
--   Apps werden auf Desktops und Laptops häufig gleichzeitig genutzt, aber nur von jeweils einem Benutzer und meist über längere Zeiträume hinweg.
-
-Hinweise zur Benutzeroberfläche
--   Apps können in einer Fensteransicht angezeigt werden, deren Größe vom Benutzer bestimmt wird. Je nach Größe des Fensters können darin zwischen einem und drei Frames enthalten sein. Auf größeren Bildschirmen kann die App mehr als drei Frames haben.
-
--   Beim Nutzen einer App auf einem Desktop oder Laptop haben Benutzer die Kontrolle über App-Dateien. Achten Sie als App-Designer darauf, Verfahren einzubauen, die dem Verwalten der App-Inhalte dienen. Erwägen Sie, Befehle und Features der Art „Speichern unter“, „Zuletzt verwendet“ usw. bereitzustellen.
-
--   Die Zurück-Schaltfläche des Systems ist optional. Wenn ein App-Entwickler diese anzeigen möchte, wird sie in der App-Titelleiste angezeigt.
-
-Eingabemöglichkeiten
--   Maus
--   Tastatur
--   Toucheingabe auf Laptops und All-in-One-Desktops.
--   Es werden auch Gamepads verwendet, z.B. der Xbox-Controller.
-
-Typische Gerätefunktionen
--   Kamera
--   Mikrofon
-
- 
-
-## SurfaceHub-Geräte
-
-
-Der Microsoft Surface Hub ist ein Gerät für die Zusammenarbeit mit großem Bildschirm, der für die gleichzeitige Verwendung durch mehrere Benutzer konzipiert ist.
+Microsoft Surface Hub ist ein Gerät für die Zusammenarbeit mit großem Bildschirm, der für die gleichzeitige Verwendung durch mehrere Benutzer konzipiert ist.
 
 Bildschirmgrößen
 -   55 und 84 Zoll
 
-![Surface Hub](images/device-primer/1894834-hig-device-primer-07-349.png)
+![Surface Hub](images/device-primer/device-primer-surfacehub3.png)
 
 Typische Verwendung
 -   Apps auf dem Surface Hub dienen der gemeinsamen Nutzung für kurze Zeit, z. B. bei Besprechungen.
@@ -161,16 +199,16 @@ Typische Gerätefunktionen
 
  
 
-## WindowsIoT-Geräte
+## <a name="windows-iot-devices"></a>Windows IoT-Geräte
 
 
-Bei WindowsIoT-Geräten handelt es sich um eine neue Klasse von Geräten, bei denen das Einbetten von kleinen elektronischen Geräten, Sensoren und Verbindungen in physische Objekte im Mittelpunkt steht. Diese Geräte sind in der Regel über ein Netzwerk oder das Internet verbunden, um die erfassten realen Daten zu melden und in manchen Fällen auf diese Daten zu reagieren. Geräte können entweder keinen Bildschirm besitzen („monitorlose“ Geräte) oder an einen kleinen Bildschirm mit maximal 3,5 Zoll angeschlossen sein (Geräte mit Monitor).
+Bei Windows IoT-Geräten handelt es sich um eine neue Klasse von Geräten, bei denen das Einbetten von kleinen elektronischen Geräten, Sensoren und Verbindungen in physische Objekte im Mittelpunkt steht. Diese Geräte sind in der Regel über ein Netzwerk oder das Internet verbunden, um die erfassten realen Daten zu melden und in manchen Fällen auf diese Daten zu reagieren. Geräte können entweder keinen Bildschirm besitzen („monitorlose“ Geräte) oder an einen kleinen Bildschirm mit maximal 3,5 Zoll angeschlossen sein (Geräte mit Monitor).
 
 Bildschirmgrößen
 -   3,5 Zoll oder kleiner
 -   Manche Geräte verfügen über keinen Bildschirm.
 
-![IoT-Gerät](images/device-primer/1894834-hig-device-primer-02.png)
+![IoT-Gerät](images/device-primer/device-primer-iot-device.png)
 
 Typische Verwendung
 -   Diese Geräte sind in der Regel über ein Netzwerk oder das Internet verbunden, um die erfassten realen Daten zu melden und in manchen Fällen auf diese Daten zu reagieren.
@@ -189,16 +227,7 @@ Eingabemöglichkeiten
 Typische Gerätefunktionen
 -   Variabel, abhängig vom Gerät
 
- 
 
-
-
- 
-
- 
-
-
-
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO4-->
 
 

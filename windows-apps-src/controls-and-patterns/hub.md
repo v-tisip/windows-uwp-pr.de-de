@@ -6,11 +6,11 @@ ms.assetid: F1319960-63C6-4A8B-8DA1-451D59A01AC2
 label: Hub
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 6c27d9b968dfca6d0c1db37eb7779d9ff3744f41
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: ad5a8dfab77c78b1c53762f5de868819e0b37d6f
 
 ---
-# Hub-Steuerelement/-Muster
+# <a name="hub-controlpattern"></a>Hub-Steuerelement/-Muster
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -21,21 +21,17 @@ Mit einem Hub-Steuerelement können Sie App-Inhalte in unterschiedlichen, jedoch
 
 Inhalte in einem Hub können in einer Panoramaansicht dargestellt werden, die Benutzern einen schnellen Überblick über Neuigkeiten sowie verfügbare und wichtige Inhalte bietet. Hubs verfügen in der Regel über eine Seitenüberschrift. Die einzelnen Inhaltsabschnitte erhalten jeweils eine Abschnittsüberschrift.
 
+
 <div class="important-apis" >
 <b>Wichtige APIs</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/dn251843"><strong>Hub-Klasse</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/dn251845"><strong>HubSection-Klasse</strong></a></li>
+<li>[**Hub-Klasse**](https://msdn.microsoft.com/library/windows/apps/dn251843)</li>
+<li>[**HubSection-Klasse**](https://msdn.microsoft.com/library/windows/apps/dn251845)</li>
 </ul>
-
-</div>
 </div>
 
 
-
-
-
-## Ist dies das richtige Steuerelement?
+## <a name="is-this-the-right-control"></a>Ist dies das richtige Steuerelement?
 
 Das Hub-Steuerelement eignet sich gut zum Anzeigen großer Mengen von Inhalten, die in einer Hierarchie angeordnet sind. Hubs wenden beim Durchsuchen und Entdecken neuer Inhalte eine Priorität an und sind daher nützlich zum Anzeigen von Elementen in einem Store oder einer Mediensammlung.
 
@@ -63,13 +59,13 @@ Das Hub-Steuerelement verfügt über verschiedene Funktionen, durch die es gut f
 
 Ein Hub ist nur eines von mehreren Navigationselementen, die Ihnen zur Verfügung stehen. Weitere Informationen zu Navigationsmustern und anderen Navigationselementen finden Sie unter [Navigationsdesigngrundlagen für UWP-Apps (Universelle Windows-Plattform)](../layout/navigation-basics.md).
 
-## Hub-Architektur
+## <a name="hub-architecture"></a>Hub-Architektur
 
 Das Hub-Steuerelement verfügt über ein hierarchisches Navigationsmuster zur Unterstützung von Apps, die eine relationale Informationsarchitektur erfordern. Ein Hub besteht aus verschiedenen Inhaltskategorien, die den einzelnen Bereichsseiten der App zugeordnet sind. Bereichsseiten können in jeder beliebigen Form dargestellt werden, die dem jeweiligen Szenario und den Inhalten des Bereichs am besten entspricht.
 
 ![Drahtmodell der hierarchischen App "Essen mit Freunden"](images/navigation_diagram_food_with_friends_app_new.png)
 
-## Layouts und Schwenken/Bildlauf
+## <a name="layouts-and-panningscrolling"></a>Layouts und Schwenken/Bildlauf
 
 Es gibt eine Reihe von Möglichkeiten zum Erstellens eines Layouts und zum Navigieren von Inhalten in einem Hub, stellen Sie nur sicher, dass Inhaltslisten in einem Hub immer senkrecht zur Richtung schwenken, in die der Bildlauf des Hubs erfolgt.
 
@@ -86,7 +82,7 @@ Es gibt eine Reihe von Möglichkeiten zum Erstellens eines Layouts und zum Navig
 
 ![Beispiel für einen horizontal verschobenen Hub](images/controls_hub_vertical_horizontal_scroll.png)
 
-## Beispiele
+## <a name="examples"></a>Beispiele
 
 Der Hub bietet eine hohe Flexibilität beim Entwerfen. Dadurch können Sie Apps mit einer großen Auswahl an attraktiven und visuell komplexen UI-Elementen entwerfen. Sie können für die erste Gruppe ein Favoritenbild oder einen Inhaltsabschnitt verwenden. Ein großes Favoritenbild kann sowohl vertikal als auch horizontal zugeschnitten werden, ohne dass der Interessenschwerpunkt verloren geht. Hier sehen Sie ein Beispiel für ein einzelnes Favoritenbild und für seinen Zuschnitt in das Quer- und Hochformat und auf eine schmale Breite.
 
@@ -96,7 +92,7 @@ Auf mobilen Geräten ist jeweils ein Hub-Abschnitt sichtbar.
 
 ![Beispiel für ein Hubmuster auf einem kleinen Bildschirm](images/phone_hub_example.png)
 
-## Empfehlungen
+## <a name="recommendations"></a>Empfehlungen
 
 -   Wir empfehlen, den Inhalt zu beschneiden, sodass ein bestimmter Teil davon verkürzt eingeblendet wird, um Benutzern mitzuteilen, dass weitere Inhalte in einem Hub-Abschnitt vorhanden sind.
 -   Je nach den Anforderungen Ihrer App können Sie dem Hub-Steuerelement mehrere Hub-Abschnitte hinzufügen, wobei jedes Steuerelement eine bestimmte Funktion erfüllt. Ein Abschnitt kann beispielsweise eine Reihe von Links und Steuerelementen enthalten, während ein anderer Abschnitt als Repository für Miniaturansichten dient. Benutzer können zwischen diesen Abschnitten mit der Geste wechseln, die von dem Hub-Steuerelement unterstützt wird.
@@ -111,11 +107,14 @@ Auf mobilen Geräten ist jeweils ein Hub-Abschnitt sichtbar.
     -   Abstand zwischen Abschnitten
     -   Abstand zwischen einem Abschnitt und dem oberen oder unteren Rand des Hubs
     -   Textstil und -größe in Überschriften und Inhalt
-    -   Farbe des Hintergrunds, der Abschnitte, der Abschnittsüberschriften und der Abschnittsinhalte
+    -   Farbe des Hintergrunds, der Abschnitte, Abschnittsüberschriften und Abschnittsinhalte
 
 
+## <a name="get-the-sample-code"></a>Beispielcode herunterladen
+* [Beispiel für XAML-UI-Grundlagen](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
 
-## Verwandte Artikel
+
+## <a name="related-articles"></a>Verwandte Artikel
 
 - [Hub-Klasse](https://msdn.microsoft.com/library/windows/apps/dn251843)
 - [Navigationsgrundlagen](../layout/navigation-basics.md)
@@ -124,6 +123,6 @@ Auf mobilen Geräten ist jeweils ein Hub-Abschnitt sichtbar.
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

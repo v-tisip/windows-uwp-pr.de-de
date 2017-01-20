@@ -6,11 +6,11 @@ ms.assetid: 43DC68BF-FA86-43D2-8807-70A359453048
 label: Text controls
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 201244521f8110181e268af47d52c1ac1315e9d3
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 04f8e82f05c46d41657dae0b30e04f49341bb5db
 
 ---
-# Textsteuerelemente
+# <a name="text-controls"></a>Textsteuerelemente
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -19,43 +19,37 @@ Textsteuerelemente bestehen aus Texteingabefeldern, Kennwortfeldern, Feldern mit
 - Für die Anzeige von schreibgeschütztem Text stehen die Steuerelemente [TextBlock](text-block.md) und [RichTextBlock](rich-text-block.md) zur Verfügung.
 - Die Steuerelemente für Texteingabe und Textbearbeitung sind: [TextBox](text-box.md), [AutoSuggestBox](auto-suggest-box.md), [PasswordBox](password-box.md) und [RichEditBox](rich-edit-box.md).
 
-
 <div class="important-apis" >
 <b>Wichtige APIs</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx"><strong>AutoSuggestBox-Klasse</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx"><strong>PasswordBox-Klasse</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx"><strong>RichEditBox-Klasse</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx"><strong>RichTextBlock-Klasse</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx"><strong>TextBlock-Klasse</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx"><strong>TextBox-Klasse</strong></a></li>
+<li>[**AutoSuggestBox-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx)</li>
+<li>[**PasswordBox-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx)</li>
+<li>[**RichEditBox-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx)</li>
+<li>[**RichTextBlock-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx)</li>
+<li> [**TextBlock-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx)</li>
+<li>[**TextBox-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx)</li>
 </ul>
-
-</div>
 </div>
 
-
-
-
-## Ist dies das richtige Steuerelement?
+## <a name="is-this-the-right-control"></a>Ist dies das richtige Steuerelement?
 
 Das zu verwendende Textsteuerelement hängt vom jeweiligen Szenario ab. Anhand der Informationen in diesem Abschnitt können Sie das richtige Textsteuerelement für Ihre App auswählen.
 
-### Rendern von schreibgeschütztem Text
+### <a name="render-read-only-text"></a>Rendern von schreibgeschütztem Text
 
-Verwenden Sie **TextBlock** zur Anzeige der überwiegenden Menge an schreibgeschütztem Text in Ihrer App. Sie können es zum Anzeigen von einzeiligem oder mehrzeiligem Text, Inlinelinks und Text mit Formatierung, z.B. fett, kursiv oder unterstrichen, verwenden.
+Verwenden Sie **TextBlock** zur Anzeige der überwiegenden Menge an schreibgeschütztem Text in Ihrer App. Sie können es zum Anzeigen von einzeiligem oder mehrzeiligem Text, Inlinelinks und Text mit Formatierung, z. B. fett, kursiv oder unterstrichen, verwenden.
 
 TextBlock ist in der Regel einfacher zu verwenden und bietet eine bessere Leistung beim Rendern von Text als RichTextBlock. Daher wird er in der Regel für App-UI-Text bevorzugt. Sie können über TextBlock in Ihrer App ganz einfach auf den Text zugreifen und ihn verwenden, indem Sie den Wert der [Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.text.aspx)-Eigenschaft abrufen.
 
 Er enthält außerdem viele der gleichen Formatierungsoptionen zum Anpassen des Renderns von Text. Sie können zwar Zeilenumbrüche in den Text einfügen, jedoch ist TextBlock zum Anzeigen eines einzelnen Absatzes vorgesehen und unterstützt keinen Texteinzug.
 
-Verwenden Sie **RichTextBlock**, wenn Sie Unterstützung für mehrere Absätze, mehrspaltigen Text, andere komplexe Textlayouts oder Inline-UI-Elemente, z.B. Bilder, benötigen. RichTextBlock bietet mehrere Features für erweitertes Textlayout.
+Verwenden Sie **RichTextBlock**, wenn Sie Unterstützung für mehrere Absätze, mehrspaltigen Text, andere komplexe Textlayouts oder Inline-UI-Elemente, z. B. Bilder, benötigen. RichTextBlock bietet mehrere Features für erweitertes Textlayout.
 
 Die Inhaltseigenschaft von RichTextBlock ist die [Blocks](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.blocks.aspx)-Eigenschaft, die mit dem [Paragraph](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx)-Element absatzbasierten Text unterstützt. Es bietet keine **Text**-Eigenschaft, die Sie zum einfachen Zugriff auf den Textinhalt des Steuerelements in Ihrer App verwenden können.  
 
-### Texteingabe
+### <a name="text-input"></a>Texteingabe
 
-Ein **TextBox**-Steuerelement ermöglicht es Benutzern, unformatierten Text einzugeben und zu bearbeiten, z.B. in einem Formular. Mit der [Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.text.aspx)-Eigenschaft können Sie den Text in einem TextBox abrufen und festlegen.
+Ein **TextBox**-Steuerelement ermöglicht es Benutzern, unformatierten Text einzugeben und zu bearbeiten, z. B. in einem Formular. Mit der [Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.text.aspx)-Eigenschaft können Sie den Text in einem TextBox abrufen und festlegen.
 
 Sie können das TextBox-Element als schreibgeschützt festlegen, dies sollte aber nur ein temporärer, bedingter Zustand sein. Wenn der Text nie bearbeitbar sein soll, ziehen Sie stattdessen die Verwendung eines TextBlock-Elements in Erwägung.
 
@@ -80,7 +74,7 @@ Es bestehen zahlreiche Möglichkeiten, Benutzereingaben in Ihrer App zu erhalten
     -   **Wäre es für Benutzer hilfreich, sofort Feedback zur Auswirkung von Einstellungsänderungen zu erhalten?** Wenn dies der Fall ist, sollten Sie einen [Schieberegler](slider.md) verwenden, eventuell zusammen mit einem begleitenden Steuerelement.
     -   **Besteht die Möglichkeit, dass der eingegebene Wert angepasst wird, nachdem das Ergebnis geprüft wurde, z. B. die einzustellende Lautstärke oder Helligkeit?** Wenn dies der Fall ist, sollten Sie einen [Schieberegler](slider.md) verwenden.
 
-## Beispiele
+## <a name="examples"></a>Beispiele
 
 Textfeld
 
@@ -94,7 +88,7 @@ Kennwortfeld
 
 ![Kennwortfeld im Fokuszustand bei Texteingabe](images/passwordbox-focus-typing.png)
 
-## Erstellen eines Textsteuerelements
+## <a name="create-a-text-control"></a>Erstellen eines Textsteuerelements
 
 Informationen und Beispiele für jedes Textsteuerelement finden Sie in den folgenden Artikeln.
 
@@ -105,14 +99,14 @@ Informationen und Beispiele für jedes Textsteuerelement finden Sie in den folge
 -   [**TextBlock**](text-block.md)
 -   [**TextBox**](text-box.md)
 
-## Richtlinien für Schriftart und -schnitt
+## <a name="font-and-style-guidelines"></a>Richtlinien für Schriftart und -schnitt
 Richtlinien für Schriftarten finden Sie in den folgenden Artikeln:
 
 - [**Richtlinien für Schriftarten**](fonts.md)
 - [**Symbolliste und Richtlinien für Segoe MDL2-Symbole**](segoe-ui-symbol-font.md)
 
 
-## Auswählen der richtigen Tastatur für Ihr Textsteuerelement
+## <a name="choose-the-right-keyboard-for-your-text-control"></a>Auswählen der richtigen Tastatur für Ihr Textsteuerelement
 
 **Gilt für:** TextBox, PasswordBox, RichEditBox
 
@@ -129,11 +123,11 @@ Wird ein Textfeld beispielsweise nur verwendet, um eine vierstellige PIN einzuge
 
 Weitere Informationen finden Sie unter [Verwenden des Eingabeumfangs zum Ändern der Bildschirmtastatur](https://msdn.microsoft.com/library/windows/apps/mt280229).
 
-## Farbige Schriftarten
+## <a name="color-fonts"></a>Farbige Schriftarten
 
 **Gilt für:** TextBlock, RichTextBlock, TextBox, RichEditBox
 
-Windows bietet bei Schriftarten die Möglichkeit, für jede Glyphe mehrere farbige Schichten zu verwenden. Die Segoe UI Emoji-Schriftart definiert z.B. farbige Versionen der Emoticon- und anderer Emoji-Zeichen.
+Windows bietet bei Schriftarten die Möglichkeit, für jede Glyphe mehrere farbige Schichten zu verwenden. Die Segoe UI Emoji-Schriftart definiert z. B. farbige Versionen der Emoticon- und anderer Emoji-Zeichen.
 
 Die Standard- und Richt-Text-Steuerelemente unterstützen die Anzeige von farbigen Schriftarten. Standardmäßig ist die **IsColorFontEnabled**-Eigenschaft **true**, und Schriftarten mit diesen zusätzlichen Schichten werden in Farbe gerendert. Die standardmäßige farbige Schriftart im System ist Segoe UI Emoji, und die Steuerelemente kehren für die farbige Anzeige der Glyphen zu dieser Schriftart zurück.
 
@@ -147,7 +141,7 @@ Der gerenderte Text sieht wie folgt aus:
 
 Weitere Informationen finden Sie unter der [**IsColorFontEnabled**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.iscolorfontenabled.aspx)-Eigenschaft.
 
-## Richtlinien für Zeilen- und Absatztrennzeichen
+## <a name="guidelines-for-line-and-paragraph-separators"></a>Richtlinien für Zeilen- und Absatztrennzeichen
 
 **Gilt für:** TextBlock, RichTextBlock, mehrzeilige TextBox, RichEditBox
 
@@ -159,7 +153,7 @@ Sie können in Ihrer App das Zeilentrennzeichen verwenden, um ein unbedingtes Ze
 
 Ihre App kann zwischen Textabsätzen ein Absatztrennzeichen einfügen. Die Verwendung dieses Trennzeichens ermöglicht das Erstellen von Nur-Text-Dateien, die mit unterschiedlichen Zeilenhöhen auf verschiedenen Betriebssystemen formatiert werden können. Das Zielsystem kann Zeilentrennzeichen ignorieren und Absätze nur bei den Absatztrennzeichen umbrechen.
 
-## Richtlinien für die Rechtschreibprüfung
+## <a name="guidelines-for-spell-checking"></a>Richtlinien für die Rechtschreibprüfung
 
 **Gilt für:** TextBox, RichEditBox
 
@@ -185,7 +179,7 @@ Verwenden Sie die Rechtschreibprüfung für Texteingabe-Steuerelemente aus zwei 
 
 Für TextBox- und RichEditBox-Steuerelemente ist die Rechtschreibprüfung standardmäßig aktiviert. Sie können sie durch Festlegen der **IsSpellCheckEnabled**-Eigenschaft auf **false** deaktivieren.
 
-## Verwandte Artikel
+## <a name="related-articles"></a>Verwandte Artikel
 
 **Für Designer**
 - [**Richtlinien für Schriftarten**](fonts.md)
@@ -199,6 +193,6 @@ Für TextBox- und RichEditBox-Steuerelemente ist die Rechtschreibprüfung standa
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

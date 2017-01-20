@@ -5,13 +5,19 @@ title: Touchpad-Interaktionen
 ms.assetid: CEDEA30A-FE94-4553-A7FB-6C1FA44F06AB
 label: Touchpad interactions
 template: detail.hbs
+keywords: Touchpad, PTP, Touch, Zeiger, Eingabe, Benutzerinteraktion
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 30607a9db9f5a7d5ea1085fa1105e6a2bd8ebd1b
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: dd91c8a6c58c25799a0c43b8632fade5309850cc
 
 ---
 
-# Touchpad-Designrichtlinien
+# <a name="touchpad-design-guidelines"></a>Touchpad-Designrichtlinien
 
 
 Gestalten Sie Ihre App so, dass Benutzer über ein Touchpad mit ihr interagieren können. Ein Touchpad vereint die indirekte Multitoucheingabe mit der Präzisionseingabe eines Zeigergeräts (beispielsweise eine Maus). Dadurch ist das Touchpad sowohl für eine toucheingabeoptimierte Benutzeroberfläche als auch die kleineren Ziele von Produktivitäts-Apps geeignet.
@@ -32,17 +38,17 @@ Interaktionen per Touchpad erfordern drei Dinge:
 
 Mögliche Eingabedaten des Touchpadsensors:
 
--   Interpretation als physische Geste für die direkte Manipulation von einem oder mehreren UI-Elementen (z.B. Schwenken, Drehen, Vergrößern/Verkleinern oder Verschieben). Die Interaktion mit einem Element über das zugehörige Eigenschaftenfenster oder ein anderes Dialogfeld gilt dagegen als indirekte Manipulation.
--   Erkennung als alternative Eingabemethode, z.B. Maus oder Stift.
--   Wird zum Ergänzen oder Ändern von Aspekten anderer Eingabemethoden verwendet, z.B. zum Verwischen eines mit einem Stift gezeichneten Freihandstrichs.
+-   Interpretation als physische Geste für die direkte Manipulation von einem oder mehreren UI-Elementen (z. B. Schwenken, Drehen, Vergrößern/Verkleinern oder Verschieben). Die Interaktion mit einem Element über das zugehörige Eigenschaftenfenster oder ein anderes Dialogfeld gilt dagegen als indirekte Manipulation.
+-   Erkennung als alternative Eingabemethode, z. B. Maus oder Stift.
+-   Wird zum Ergänzen oder Ändern von Aspekten anderer Eingabemethoden verwendet, z. B. zum Verwischen eines mit einem Stift gezeichneten Freihandstrichs.
 
-Ein Touchpad vereint die indirekte Multitoucheingabe mit der Präzisionseingabe eines Zeigergeräts (etwa eine Maus). Dadurch ist das Touchpad sowohl für die berührungsoptimierte Benutzeroberfläche als auch die kleineren Ziele der Produktivitäts-Apps und der Desktopumgebung geeignet. Optimieren Sie das Design Ihrer WindowsStore-Apps für die Toucheingabe, und profitieren Sie von der standardmäßigen Touchpad-Unterstützung.
+Ein Touchpad vereint die indirekte Multitoucheingabe mit der Präzisionseingabe eines Zeigergeräts (etwa eine Maus). Dadurch ist das Touchpad sowohl für die berührungsoptimierte Benutzeroberfläche als auch die kleineren Ziele der Produktivitäts-Apps und der Desktopumgebung geeignet. Optimieren Sie das Design Ihrer Windows Store-Apps für die Toucheingabe, und profitieren Sie von der standardmäßigen Touchpad-Unterstützung.
 
 Aufgrund der Konvergenz der Interaktionsformen, die von Touchpads unterstützt werden, empfehlen wir die Verwendung des [**PointerEntered**](https://msdn.microsoft.com/library/windows/apps/br208968)-Ereignisses, um zusätzlich zur integrierten Unterstützung für die Toucheingabe Benutzeroberflächenbefehle für die Mauseingabe bereitzustellen. Verwenden Sie beispielsweise Zurück- und Weiter-Schaltflächen, mit denen Benutzer sowohl Inhaltsseiten durchblättern als auch Inhalte verschieben können.
 
 Die in diesem Thema beschriebenen Gesten und Richtlinien können dabei helfen, die Unterstützung der Touchpadeingabe nahtlos und mit minimalem Programmieraufwand in Ihre App zu integrieren.
 
-## Sprache für Eingabe per Touchpad
+## <a name="the-touchpad-language"></a>Sprache für Eingabe per Touchpad
 
 
 Ein kompakter Satz von Touchpadinteraktionen wird durchgängig im ganzen System verwendet. Indem Sie Ihre App für die Touch- und Mauseingabe optimieren, sorgen Sie dafür, dass sich Benutzer sofort in Ihrer App zurechtfinden. So erleichtern Sie Benutzern den Einstieg und die Verwendung Ihrer App.
@@ -81,7 +87,7 @@ Im Anschluss folgen einige Beispiele für touchpadoptimierte Gesten zum Ausführ
 </tr>
 <tr class="odd">
 <td align="left"><p>Tippen mit einem Finger: Aufrufen der primären Aktion</p></td>
-<td align="left"><p>Durch Tippen mit einem Finger auf ein Element wird dessen primäre Aktion aufgerufen (z.B. das Starten einer App oder das Ausführen eines Befehls).</p></td>
+<td align="left"><p>Durch Tippen mit einem Finger auf ein Element wird dessen primäre Aktion aufgerufen (z. B. das Starten einer App oder das Ausführen eines Befehls).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Tippen mit zwei Fingern: Ausführen eines Rechtsklicks</p></td>
@@ -112,30 +118,30 @@ Im Anschluss folgen einige Beispiele für touchpadoptimierte Gesten zum Ausführ
 
  
 
-## Hardware
+## <a name="hardware"></a>Hardware
 
 
 Fragen Sie die Funktionen des Mausgeräts ([**MouseCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225626)) ab, um zu ermitteln, auf welche Elemente der Benutzeroberfläche Ihrer App die Touchpad-Hardware direkt zugreifen kann. Wir empfehlen die Bereitstellung einer Benutzeroberfläche, die sowohl Touch- als auch Mauseingabe ermöglicht.
 
 Weitere Informationen zum Abfragen von Gerätefunktionen finden Sie unter [Identifizieren von Eingabegeräten](identify-input-devices.md).
 
-## Visuelles Feedback
+## <a name="visual-feedback"></a>Visuelles Feedback
 
 
 -   Blenden Sie die für Touchpadinteraktionen spezifische Benutzeroberfläche ein, sobald ein Touchpad-Cursor erkannt wird (durch Bewegungs- oder Zeigeereignisse), um die Funktionalität des Elements verfügbar zu machen. Wenn der Touchpad-Cursor für eine bestimmte Zeit nicht bewegt wird oder der Benutzer eine Toucheingabeinteraktion auslöst, blenden Sie die für Touchpad-Interaktionen spezifische Benutzeroberfläche schrittweise aus. Somit bleibt die Benutzeroberfläche sauber und aufgeräumt.
 -   Verwenden Sie nicht den Cursor für Zeigefeedback, das Feedback des Elements reicht aus (siehe [Cursor](#Cursors) unten).
--   Lassen Sie kein visuelles Feedback anzeigen, wenn ein Element keine Interaktionen unterstützt (z.B. statischer Text).
+-   Lassen Sie kein visuelles Feedback anzeigen, wenn ein Element keine Interaktionen unterstützt (z. B. statischer Text).
 -   Verwenden Sie keine Fokusrechtecke für Interaktionen per Touchpad. Diese sind ausschließlich für Tastaturinteraktionen vorgesehen.
 -   Zeigen Sie für alle Elemente, die das gleiche Eingabeziel darstellen, das gleiche visuelle Feedback an.
 
 Allgemeine Informationen zum visuellen Feedback finden Sie unter [Richtlinien für visuelles Feedback](https://msdn.microsoft.com/library/windows/apps/hh465342).
 
-## Cursor
+## <a name="cursors"></a>Cursor
 
 
 In Windows Store-Apps sind einige Standardcursor verfügbar, die als Touchpad-Zeiger verwendet werden können. Diese Cursor werden verwendet, um die primäre Aktion eines Elements anzugeben.
 
-Jedem Standardcursor ist ein entsprechendes Standardbild zugewiesen. Benutzer einer App können das einem Standardcursor zugewiesene Standardbild jederzeit ändern. In WindowsStore-Apps werden Cursorbilder durch die [**PointerCursor**](https://msdn.microsoft.com/library/windows/apps/br208273)-Funktion angegeben.
+Jedem Standardcursor ist ein entsprechendes Standardbild zugewiesen. Benutzer einer App können das einem Standardcursor zugewiesene Standardbild jederzeit ändern. In Windows Store-Apps werden Cursorbilder durch die [**PointerCursor**](https://msdn.microsoft.com/library/windows/apps/br208273)-Funktion angegeben.
 
 Beachten Sie beim Anpassen des Mauszeigers Folgendes:
 
@@ -145,7 +151,7 @@ Beachten Sie beim Anpassen des Mauszeigers Folgendes:
 -   Verwenden Sie die Cursor für horizontale, vertikale und diagonale Größenänderung (![Cursor für vertikale Größenänderung](images/cursor-vertical.png), ![Cursor für horizontale Größenänderung](images/cursor-horizontal.png), ![Cursor für diagonale Größenänderung (unten links, oben rechts)](images/cursor-diagonal2.png), ![Cursor für diagonale Größenänderung (oben links, unten rechts)](images/cursor-diagonal1.png)), wenn die Größe eines Objekts geändert werden kann.
 -   Verwenden Sie den Handcursor (![Handcursor (offen)](images/cursor-pan1.png), ![Handcursor (geschlossen)](images/cursor-pan2.png)) beim Verschieben von Inhalt innerhalb einer Canvas (etwa bei einer Karte).
 
-## Verwandte Artikel
+## <a name="related-articles"></a>Verwandte Artikel
 
 
 * [Behandeln von Zeigereingaben](handle-pointer-input.md)
@@ -167,6 +173,6 @@ Beachten Sie beim Anpassen des Mauszeigers Folgendes:
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

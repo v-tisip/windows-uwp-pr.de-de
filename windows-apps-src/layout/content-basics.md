@@ -5,19 +5,22 @@ title: "Grundlagen des Inhaltsdesigns für UWP-Apps (Universelle Windows-Plattfo
 ms.assetid: 3102530A-E0D1-4C55-AEFF-99443D39D567
 label: Content design basics
 template: detail.hbs
+op-migration-status: ready
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 4ac800f9d2dd51ac074ec50cd1046e5a78c80710
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 7433fcabe455c0a0198cd23f883ed72b0b4558fc
 
 ---
 
-#  Grundlagen des Inhaltsdesigns für UWP-Apps (Universelle Windows-Plattform)
+#  <a name="content-design-basics-for-uwp-apps"></a>Grundlagen des Inhaltsdesigns für UWP-Apps (Universelle Windows-Plattform)
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Der Hauptzweck jeder App ist das Bereitstellen von Zugriff auf Content: In einer Fotobearbeitungs-App sind Fotos der Content, in einer Reise-App Karten und Informationen über die Reiseziele usw. Navigationselemente bieten Zugriff auf Content; Befehlselemente ermöglichen dem Benutzer die Interaktion mit Content; Content-Elemente zeigen den tatsächlichen Content an.
 
 Dieser Artikel bietet Empfehlungen zum Content-Design für drei Content-Szenarien.
 
-## <span id="Design_for_the_right_content_scenario"></span><span id="design_for_the_right_content_scenario"></span><span id="DESIGN_FOR_THE_RIGHT_CONTENT_SCENARIO"></span>Design für das richtige Content-Szenario
+## <a name="design-for-the-right-content-scenario"></a>Design für das richtige Content-Szenario
 
 
 Dies sind die drei wichtigsten Contentszenarien:
@@ -26,7 +29,7 @@ Dies sind die drei wichtigsten Contentszenarien:
 -   **Erstellen**: Eine hauptsächlich einseitige Erfahrung, bei der der Schwerpunkt auf dem Erstellen von neuem Content liegt. Kann aufgeschlüsselt werden in das Erstellen von Dingen von Grund auf, wie etwa Aufnehmen eines Fotos oder Videos, das Erstellen eines neuen Bilds in einer Mal-App oder das Öffnen eines leeren Dokuments.
 -   **Interaktiv**: Eine bilaterale Content-Erfahrung, die den Konsum, die Erstellung und Überprüfung von Content umfasst.
 
-## <span id="Consumption-focused_apps"></span><span id="consumption-focused_apps"></span><span id="CONSUMPTION-FOCUSED_APPS"></span>Konsumorientierte Apps
+## <a name="consumption-focused-apps"></a>Konsumorientierte Apps
 
 
 Content-Elemente erhalten die höchste Priorität in einer konsumorientierten App, gefolgt von den [Navigationselementen](navigation-basics.md), die erforderlich sind, damit die Benutzer den gewünschten Content finden. Beispiele für konsumorientierte Apps sind Movie-Player, Lese-Apps, Musik-Apps und Foto-Viewer.
@@ -38,7 +41,7 @@ Allgemeine Empfehlungen für konsumorientierte Apps:
 -   Erstellen Sie dedizierte [Navigationsseiten](navigation-basics.md) und Content-Seiten, sodass die Benutzer den gewünschten Content finden und auf einer dedizierten Seite ohne Ablenkung ansehen können.
 -   Erstellen Sie eine Vollbild-Anzeigeoption, die den Content auf den gesamten Bildschirm erweitert und alle anderen UI-Elemente ausblendet.
 
-## <span id="Creation-focused_apps"></span><span id="creation-focused_apps"></span><span id="CREATION-FOCUSED_APPS"></span>Erstellungsorientierte Apps
+## <a name="creation-focused-apps"></a>Erstellungsorientierte Apps
 
 
 Content- und [Befehlselemente](commanding-basics.md) sind die wichtigsten UI-Elemente in einer erstellungsorientierten App. Befehlselemente ermöglichen dem Benutzer das Erstellen von neuem Content. Zu den Beispielen gehören Mal-Apps, Fotobearbeitungs-Apps, Videobearbeitungs-Apps und Textverarbeitungs-Apps.
@@ -52,7 +55,7 @@ Allgemeine Empfehlungen für erstellungsorientierte Apps:
 -   Minimieren Sie die Verwendung von [Navigationselementen](navigation-basics.md).
 -   [Befehlselemente](commanding-basics.md) sind insbesondere bei erstellungsorientierten Apps wichtig. Da Benutzer zahlreiche Befehle ausführen, empfehlen wir die Bereitstellung eines Befehlsverlaufs/einer Rückgängig-Funktion.
 
-## <span id="Apps_with_interactive_content"></span><span id="apps_with_interactive_content"></span><span id="APPS_WITH_INTERACTIVE_CONTENT"></span>Apps mit interaktivem Content
+## <a name="apps-with-interactive-content"></a>Apps mit interaktivem Content
 
 
 In einer App mit interaktivem Content erstellen die Benutzer Content, zeigen ihn an und bearbeiten ihn. Viele Apps passen in diese Kategorie. Zu den Beispielen dieser Typen von Apps gehören Branchen-Apps, Bestandsverwaltungs-Apps, Koch-Apps, die dem Benutzer des Erstellen oder Bearbeiten von Rezepten ermöglichen.
@@ -68,7 +71,7 @@ Allgemeine Empfehlungen für Apps mit interaktivem Content:
 
 -   Es kann schwierig sein, ein Gleichgewicht aus Navigations-, Content- und Befehlselementen zu finden, wenn alle drei wichtig sind. Stellen Sie möglichst separate Bildschirme zum Durchsuchen, Erstellen und Bearbeiten von Content oder zum Wechseln des Modus bereit.
 
-## <span id="Commonly_used_content_elements"></span><span id="commonly_used_content_elements"></span><span id="COMMONLY_USED_CONTENT_ELEMENTS"></span>Häufig verwendete Content-Elemente
+## <a name="commonly-used-content-elements"></a>Häufig verwendete Content-Elemente
 
 
 Häufig zum Anzeigen von Content verwendete UI-Elemente. (Eine vollständige Liste der UI-Elemente finden Sie unter [Steuerelemente und Muster](https://msdn.microsoft.com/library/windows/apps/dn611856).)
@@ -123,6 +126,6 @@ Häufig zum Anzeigen von Content verwendete UI-Elemente. (Eine vollständige Lis
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

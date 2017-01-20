@@ -4,8 +4,8 @@ Description: "Der Windows Store ermöglicht die „Abrechnung über den Mobilfun
 title: "Abrechnung über den Mobilfunkanbieter"
 ms.assetid: C8A5A4BA-6B39-42FC-B8C4-ED1B7F774CC1
 translationtype: Human Translation
-ms.sourcegitcommit: e829808a8e521f2308454e05e8911579b22be807
-ms.openlocfilehash: fe11b56430a07e1326f78b59579ffd9e733ed1b0
+ms.sourcegitcommit: 694c3223278c8666bfb47bf9898ac7c02ac981f4
+ms.openlocfilehash: 831e3fbd1524ce452a4346b6c52f3f1c76385d68
 
 ---
 
@@ -22,11 +22,12 @@ Wir arbeiten ständig mit Mobilfunkanbietern zusammen, um die Verfügbarkeit die
 
 Unter Windows 10 wird eine neue Implementierung der Abrechnung über den Mobilfunkanbieter eingeführt. Diese Implementierung ist für alle Geräte mit Windows 10, Smartphones mit Windows 10 Mobile und Xbox One-Konsolen verfügbar. Kunden können auf diesen Geräten die Abrechnung über den Mobilfunkanbieter als Zahlungsmethode hinzufügen und verwenden, um Einkäufe zu tätigen. 
 
-Die Windows 10-Implementierung der Abrechnung über den Mobilfunkanbieter wird derzeit von den folgenden Mobilfunkanbietern unterstützt:
+Die Windows 10-Implementierung der Mobilfunkanbieterabrechnung wird zurzeit von folgenden Mobilfunkanbietern unterstützt:
 
 | Land/Region  | Mobilfunkanbieter |
 |-----------------|------------------|
 | Finnland         | DNA, Elisa       |
+| Frankreich          | Orange           |
 | Deutschland         | O2               |
 | Ungarn         | Telenor          |
 | Italien           | Wind             |
@@ -77,7 +78,7 @@ Die Legacyimplementierung der Abrechnung über den Mobilfunkanbieter wird von de
 | Südafrika         | Vodacom                                                            |
 | Spanien                | Movistar, Vodafone, Orange                                         |
 | Vereinigtes Königreich       | Everything Everywhere (T-Mobile), Telefonica (O2), Three, Vodafone |
-| Vereinigte Staaten        | AT&T, Sprint, T-Mobile, Verizon                                    |
+| Vereinigte Staaten        | AT&T, T-Mobile, Verizon                                    |
 | Vietnam              | Viettel, Vietnamobile, Vinaphone, Mobifone                         |
 
  
@@ -94,6 +95,6 @@ Diese Liste wird regelmäßig aktualisiert, wenn wir die Unterstützung für die
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

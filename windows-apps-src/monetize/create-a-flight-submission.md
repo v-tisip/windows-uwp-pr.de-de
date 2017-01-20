@@ -4,15 +4,12 @@ ms.assetid: CD866083-EB7F-4389-A907-FC43DC2FCB5E
 description: "Verwenden Sie diese Methode in der Windows Store-Übermittlungs-API zum Erstellen einer neuen Flight-Paketübermittlung für eine App, die für Ihr Windows Dev Center-Konto registriert ist."
 title: "Erstellen einer Flight-Paketübermittlung mit der Windows Store-Übermittlungs-API"
 translationtype: Human Translation
-ms.sourcegitcommit: 27d8385c7250feba89c6970033ad7ec170f0646c
-ms.openlocfilehash: 8689fa9d314d2ba1d31a16c47aa4c7168e44c69f
+ms.sourcegitcommit: 020c8b3f4d9785842bbe127dd391d92af0962117
+ms.openlocfilehash: 2ca6824039077d5d3ceba2c643d52a62c77104e4
 
 ---
 
-# Erstellen einer Flight-Paketübermittlung mit der Windows Store-Übermittlungs-API
-
-
-
+# <a name="create-a-package-flight-submission-using-the-windows-store-submission-api"></a>Erstellen einer Flight-Paketübermittlung mit der Windows Store-Übermittlungs-API
 
 Verwenden Sie diese Methode in der Windows Store-Übermittlungs-API zum Erstellen einer neuen Übermittlung eines Flight-Pakets für eine App. Nachdem Sie erfolgreich eine neue Übermittlung mit dieser Methode erstellt haben, [aktualisieren Sie die Übermittlung](update-a-flight-submission.md), um erforderliche Änderungen an den Übermittlungsdaten vorzunehmen, und führen Sie ein [Commit für die Übermittlung](commit-a-flight-submission.md) zur Aufnahme und Veröffentlichung durch.
 
@@ -20,17 +17,17 @@ Weitere Informationen dazu, wie diese Methode in das Erstellen einer Flight-Pake
 
 >**Hinweis**&nbsp;&nbsp;Durch diese Methode wird eine Übermittlung für ein vorhandenes Flight-Paket erstellt. Verwenden Sie zum Erstellen eines Flight-Pakets die Methode zum [Erstellen eines Flight-Pakets](create-a-flight.md).
 
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
 * Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](create-and-manage-submissions-using-windows-store-services.md#prerequisites) für die Windows Store-Übermittlungs-API.
-* [Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
+* [Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60 Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
 * Erstellen Sie ein Flight-Paket für eine App im Dev Center-Konto. Verwenden Sie hierzu das Dev Center-Dashboard oder die Methode zum [Erstellen eines Flight-Pakets](create-a-flight.md).
 
 >**Hinweis**&nbsp;&nbsp;Diese Methode kann nur für Windows Dev Center-Konten verwendet werden, die eine Berechtigung zur Verwendung der Windows Store-Übermittlungs-API erhalten haben. Diese Berechtigung ist nicht für alle Konten aktiviert.
 
-## Anforderung
+## <a name="request"></a>Anforderung
 
 Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie Verwendungsbeispiele und Beschreibungen des Header und Anforderungstexts.
 
@@ -41,7 +38,7 @@ Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie V
 <span/>
  
 
-### Anforderungsheader
+### <a name="request-header"></a>Anforderungsheader
 
 | Header        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -49,7 +46,7 @@ Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie V
 
 <span/>
 
-### Anforderungsparameter
+### <a name="request-parameters"></a>Anforderungsparameter
 
 | Name        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -58,11 +55,11 @@ Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie V
 
 <span/>
 
-### Anforderungstext
+### <a name="request-body"></a>Anforderungstext
 
 Stellen Sie keinen Anforderungstext für diese Methode bereit.
 
-### Anforderungsbeispiel
+### <a name="request-example"></a>Anforderungsbeispiel
 
 Im folgenden Beispiel wird gezeigt, wie Sie eine neue Flight-Paketübermittlung für eine App mit der Store-ID 9WZDNCRD91MD erstellen.
 
@@ -71,7 +68,7 @@ POST https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/fl
 Authorization: Bearer <your access token>
 ```
 
-## Antwort
+## <a name="response"></a>Antwort
 
 Das folgende Beispiel veranschaulicht den JSON-Antworttext für einen erfolgreichen Aufruf dieser Methode. Der Antworttext enthält Informationen zur neuen Übermittlung. Weitere Informationen zu den Werten im Antworttext finden Sie unter [Flight-Paketressource](manage-flight-submissions.md#flight-submission-object).
 
@@ -114,7 +111,7 @@ Das folgende Beispiel veranschaulicht den JSON-Antworttext für einen erfolgreic
 }
 ```
 
-## Fehlercodes
+## <a name="error-codes"></a>Fehlercodes
 
 Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die Antwort einen der folgenden HTTP-Fehlercodes.
 
@@ -125,9 +122,9 @@ Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die A
 
 <span/>
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
-* [Erstellen und Verwalten von Übermittlungen mit WindowsStore-Diensten](create-and-manage-submissions-using-windows-store-services.md)
+* [Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten](create-and-manage-submissions-using-windows-store-services.md)
 * [Verwalten von Flight-Paketübermittlungen](manage-flight-submissions.md)
 * [Abrufen einer Flight-Paketübermittlung](get-a-flight-submission.md)
 * [Ausführen eines Commit für eine Flight-Paketübermittlung](commit-a-flight-submission.md)
@@ -137,6 +134,6 @@ Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die A
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,20 +1,23 @@
 ---
 author: mijacobs
-Description: Die Navigation in UWP-Apps (Universelle Windows-Plattform) basiert auf einem flexiblen Modell aus Navigationsstrukturen, Navigationselementen und Funktionen auf Systemebene.
-title: "Navigationsdesigngrundlagen für Universal Windows Platform (UWP)-Apps"
+Description: "Die Navigation in UWP-Apps (Apps für die universelle Windows-Plattform) basiert auf einem flexiblen Modell aus Navigationsstrukturen, Navigationselementen und Funktionen auf Systemebene."
+title: "Navigationsverlauf und Rückwärtsnavigation (Windows-Apps)"
 ms.assetid: e9876b4c-242d-402d-a8ef-3487398ed9b3
 isNew: true
 label: History and backwards navigation
 template: detail.hbs
+op-migration-status: ready
 translationtype: Human Translation
-ms.sourcegitcommit: 75e8c342775f7d6c564cb1014519f8e4707a0632
-ms.openlocfilehash: f18fc0806313cc1656860b0fd8b5ae692fa3d4c6
+ms.sourcegitcommit: 5f7f40d754ec9408fe5b4ba18d6d64bd49cb449f
+ms.openlocfilehash: bfff3a4787a37156ef3232372a125db60678ebac
 
 ---
 
-#  Navigationsverlauf und Rückwärtsnavigation
+#  <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>Navigationsverlauf und Rückwärtsnavigation für UWP-Apps
 
-Im Internet stellen einzelne Websites eigenen Navigationssysteme bereit, beispielsweise ein Inhaltsverzeichnis, Schaltflächen, Menüs, einfache Listen mit Links usw. Die Navigationsfunktionalität kann je nach Website stark variieren. Es gibt jedoch eine konsistente Navigationsfunktion: Zurück. Die meisten Browser bieten eine Zurück-Schaltfläche, die unabhängig von der Website das gleiche Verhalten aufweist.
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
+
+Im Internet stellen die einzelnen Websites eigene Navigationssysteme bereit, beispielsweise Inhaltsverzeichnis, Schaltflächen, Menüs, einfache Listen mit Links usw. Die Navigationsfunktionalität kann je nach Website stark variieren. Es gibt jedoch eine konsistente Navigationsfunktion: Zurück. Die meisten Browser bieten eine Zurück-Schaltfläche, die unabhängig von der Website das gleiche Verhalten aufweist.
 
 Ähnlichen Gründen enthält die universelle Windows-Plattform (UWP) ein einheitliches System zur Rückwärtsnavigation, mit dem der Navigationsverlauf des Benutzers innerhalb einer App und je nach Gerät von App zu App durchlaufen werden kann.
 
@@ -26,12 +29,12 @@ Im Folgenden sind die primären Formfaktoren für die Zurück-Schaltfläche der 
 <table>
     <tr>
         <td colspan="2">Geräte</td>
-        <td>Verhalten der Zurück-Schaltfläche</td>
+        <td style="vertical-align:top;">Verhalten der Zurück-Schaltfläche</td>
      </tr>
     <tr>
-        <td>Telefon</td>
-        <td>![Zurück-Funktion des Systems auf einem Smartphone](images/back-systemback-phone.png)</td>
-        <td>
+        <td style="vertical-align:top;">Telefon</td>
+        <td style="vertical-align:top;">![Zurück-Funktion des Systems auf einem Smartphone](images/back-systemback-phone.png)</td>
+        <td style="vertical-align:top;">
         <ul>
 <li>Immer vorhanden.</li>
 <li>Eine Software- oder Hardwareschaltfläche am unteren Rand des Geräts.</li>
@@ -40,41 +43,31 @@ Im Folgenden sind die primären Formfaktoren für die Zurück-Schaltfläche der 
 </td>
      </tr>
      <tr>
-        <td>Tablet</td>
-        <td>![Zurück-Funktion des Systems auf einem Tablet (im Tablet-Modus)](images/back-systemback-tablet.png)</td>
-        <td>
+        <td style="vertical-align:top;">Tablet</td>
+        <td style="vertical-align:top;">![Zurück-Funktion des Systems auf einem Tablet (im Tablet-Modus)](images/back-systemback-tablet.png)</td>
+        <td style="vertical-align:top;">
 <ul>
-<li>Im Tablet-Modus immer vorhanden.
-
-    Not available in Desktop mode. Title bar back button can be enabled, instead. See [PC, Laptop, Tablet](#PC).
-
-    Users can switch between running in Tablet mode and Desktop mode by going to **Settings &gt; System &gt; Tablet mode** and setting **Make Windows more touch-friendly when using your device as a tablet**.</li>
-
+<li>Im Tablet-Modus immer vorhanden. In Desktopmodus nicht verfügbar. Stattdessen kann die Zurück-Schaltfläche in der Titelleiste aktiviert werden. Weitere Infos finden Sie unter [PC, Laptop, Tablet](#PC).
+Benutzer können zwischen dem Tablet- und dem Desktopmodus wechseln, indem sie unter **Einstellungen &gt; System &gt; Tablet-Modus** die Option **Durch die Verwendung des Geräts als Tablet wird die Toucheingabe in Windows verbessert** aktivieren.</li>
 <li> Eine Softwareschaltfläche in der Navigationsleiste am unteren Rand des Geräts.</li>
 <li>Globale Rückwärtsnavigation innerhalb der App und zwischen Apps.</li></ul>        
         </td>
      </tr>
     <tr>
-        <td>PC, Laptop, Tablet</td>
-        <td>![Zurück-Funktion des Systems auf einem PC oder Laptop](images/back-systemback-pc.png)</td>
-        <td>
+        <td style="vertical-align:top;">PC, Laptop, Tablet</td>
+        <td style="vertical-align:top;">![Zurück-Funktion des Systems auf einem PC oder Laptop](images/back-systemback-pc.png)</td>
+        <td style="vertical-align:top;">
 <ul>
-<li>Im Desktopmodus optional.
-
-    Not available in Tablet mode. See [Tablet](#Tablet).
-
-    Disabled by default. Must opt in to enable it.
-
-    Users can switch between running in Tablet mode and Desktop mode by going to **Settings &gt; System &gt; Tablet mode** and setting **Make Windows more touch-friendly when using your device as a tablet**.</li>
-
+<li>Optional im Desktopmodus. Im Tablet-Modus nicht verfügbar. Weitere Infos finden Sie unter [Tablet](#Tablet). Standardmäßig deaktiviert. Muss zur Verwendung aktiviert werden.
+Benutzer können zwischen dem Tablet- und dem Desktopmodus wechseln, indem sie unter **Einstellungen &gt; System &gt; Tablet-Modus** die Option **Durch die Verwendung des Geräts als Tablet wird die Toucheingabe in Windows verbessert** aktivieren.</li>
 <li>Eine Softwareschaltfläche in der Titelleiste der App.</li>
 <li>Ermöglicht die Rückwärtsnavigation nur innerhalb der App. Unterstützt keine App-zu-App-Navigation.</li></ul>        
         </td>
      </tr>
     <tr>
-        <td>Surface Hub</td>
-        <td>![Zurück-Funktion des Systems auf einem Surface Hub](images/nav/nav-back-surfacehub.png)</td>
-        <td>
+        <td style="vertical-align:top;">Surface Hub</td>
+        <td style="vertical-align:top;">![Zurück-Funktion des Systems auf einem Surface Hub](images/nav/nav-back-surfacehub.png)</td>
+        <td style="vertical-align:top;">
 <ul>
 <li>Optional.</li>
 <li>Standardmäßig deaktiviert. Muss zur Verwendung aktiviert werden.</li>
@@ -90,15 +83,15 @@ Hier sind einige alternative Eingabetypen, die keine Zurück-Schaltfläche auf d
 
 <table>
 <tr><td colspan="3">Eingabegeräte</td></tr>
-<tr><td>Tastatur</td><td>![Tastatur](images/keyboard-wireframe.png)</td><td>Windows-Taste + RÜCKTASTE</td></tr>
-<tr><td>Cortana</td><td>![Spracherkennung](images/speech-wireframe.png)</td><td>Sagen Sie „Hey Cortana, zurück.“</td></tr>
+<tr><td style="vertical-align:top;">Tastatur</td><td style="vertical-align:top;">![Tastatur](images/keyboard-wireframe.png)</td><td style="vertical-align:top;">Windows-Taste + RÜCKTASTE</td></tr>
+<tr><td style="vertical-align:top;">Cortana</td><td style="vertical-align:top;">![Spracherkennung](images/speech-wireframe.png)</td><td style="vertical-align:top;">Sagen Sie „Hey Cortana, zurück.“</td></tr>
 </table>
  
 
 Wenn Ihre App auf einem Smartphone, Tablet, oder einem PC bzw. Laptop mit aktivierter Zurück-Funktion des Systems ausgeführt wird, informiert das System Ihre App darüber, wenn die Zurück-Schaltfläche gedrückt wird. Der Benutzer erwartet, dass durch Drücken der Zurück-Schaltfläche die vorherige Seite im Navigationsverlauf der App aufgerufen wird. Sie können entscheiden, welche Navigationsaktionen dem Navigationsverlauf hinzugefügt werden sollen und wie auf das Drücken der Zurück-Schaltfläche reagiert werden soll.
 
 
-## Aktivieren der Unterstützung für die System-Rückwärtsnavigation
+## <a name="how-to-enable-system-back-navigation-support"></a>Aktivieren der Unterstützung für die System-Rückwärtsnavigation
 
 
 Apps müssen die Rückwärtsnavigation für alle Hardware- und Software-Zurück-Systemschaltflächen aktivieren. Dazu registrieren Sie einen Listener für das [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596)-Ereignis und definieren einen entsprechenden Handler.
@@ -158,7 +151,7 @@ Dieser Handler wird für ein globales Zurück-Ereignis aufgerufen. Wenn der In-A
 >}
 ```
 
-## Aktivieren der Schaltfläche „Zurück“ auf der Titelleiste
+## <a name="how-to-enable-the-title-bar-back-button"></a>Aktivieren der Schaltfläche „Zurück“ auf der Titelleiste
 
 
 Geräte, die den Desktopmodus unterstützen (in der Regel PCs und Laptops, aber auch einige Tablets) und auf denen die Einstellung (**Einstellungen &gt; System &gt; Tablet-Modus**) aktiviert ist, bieten keine globale Navigationsleiste mit der Systemschaltfläche „Zurück“.
@@ -241,15 +234,11 @@ Für dieses Beispiel wird jede Seite im Zurück-Stapel aufgelistet und die Zurü
 >```
 
 
-### Richtlinien für das benutzerdefinierte Verhalten der Rückwärtsnavigation
+### <a name="guidelines-for-custom-back-navigation-behavior"></a>Richtlinien für das benutzerdefinierte Verhalten der Rückwärtsnavigation
 
 Wenn Sie Ihre eigene Zurück-Stapelnavigation bereitstellen möchten, sollte die Benutzeroberfläche mit anderen Apps konsistent sein. Wir empfehlen, die folgenden Muster für Navigationsaktionen zu verwenden:
 
 <table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Navigationsaktion</th>
@@ -258,38 +247,38 @@ Wenn Sie Ihre eigene Zurück-Stapelnavigation bereitstellen möchten, sollte die
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>Seite zu Seite, verschiedene Peer-Gruppen</strong></p></td>
-<td align="left"><strong>Ja</strong>
+<td style="vertical-align:top;"><strong>Seite zu Seite, verschiedene Peer-Gruppen</strong></td>
+<td style="vertical-align:top;"><strong>Ja</strong>
 <p>In der folgenden Abbildung navigiert der Benutzer von Ebene 1 der App zu Ebene 2. Dabei werden Peer-Gruppen durchlaufen, sodass die Navigation dem Navigationsverlauf hinzugefügt wird.</p>
 <p><img src="images/nav/nav-pagetopage-diffpeers-imageonly1.png" alt="Navigation across peer groups" /></p>
 <p>In der nächsten Abbildung navigiert der Benutzer zwischen zwei Peer-Gruppen derselben Ebene. Er durchläuft erneut Peer-Gruppen, sodass die Navigation dem Navigationsverlauf hinzugefügt wird.</p>
 <p><img src="images/nav/nav-pagetopage-diffpeers-imageonly2.png" alt="Navigation across peer groups" /></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>Seite zu Seite, gleiche Peer-Gruppe, kein Bildschirmnavigationselement</strong></p>
+<td style="vertical-align:top;"><strong>Seite zu Seite, gleiche Peer-Gruppe, kein Bildschirmnavigationselement</strong>
 <p>Der Benutzer navigiert von einer Seite zu einer anderen mit derselben Peer-Gruppe. Es gibt kein Navigationselement, das immer vorhanden ist (wie Registerkarten/Pivots oder ein angedockter Navigationsbereich) und das eine direkte Navigation zu beiden Seiten ermöglicht.</p></td>
-<td align="left"><strong>Ja</strong>
+<td style="vertical-align:top;"><strong>Ja</strong>
 <p>In der folgenden Abbildung navigiert der Benutzer zwischen zwei Seiten in derselben Peer-Gruppe. Die Seiten verwenden keine Registerkarten oder angedockten Navigationsbereich, sodass die Navigation dem Navigationsverlauf hinzugefügt wird.</p>
 <p><img src="images/nav/nav-pagetopage-samepeer-noosnavelement.png" alt="Navigation within a peer group" /></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>Seite zu Seite, gleiche Peer-Gruppe, mit einem Bildschirmnavigationselement</strong></p>
+<td style="vertical-align:top;"><strong>Seite zu Seite, gleiche Peer-Gruppe, mit einem Bildschirmnavigationselement</strong>
 <p>Der Benutzer navigiert von einer Seite zu einer anderen in derselben Peer-Gruppe. Beide Seiten werden im gleichen Navigationselement angezeigt. Beide Seiten verwenden beispielsweise das gleiche Registerkarten/Pivots-Element, oder beide Seiten werden in einem angedockten Navigationsbereich angezeigt.</p></td>
-<td align="left"><strong>Nein</strong>
+<td style="vertical-align:top;"><strong>Nein</strong>
 <p>Wenn der Benutzer die Zurück-Schaltfläche drückt, wird wieder die letzte Seite aufgerufen, die geöffnet war, bevor der Benutzer zur aktuellen Peer-Gruppe navigierte.</p>
 <p><img src="images/nav/nav-pagetopage-samepeer-yesosnavelement.png" alt="Navigation across peer groups when a navigation element is present" /></p></td>
 </tr>
 <tr class="even">
-<td align="left"><strong>Anzeigen einer vorübergehenden Benutzeroberfläche</strong>
+<td style="vertical-align:top;"><strong>Anzeigen einer vorübergehenden Benutzeroberfläche</strong>
 <p>Die App zeigt ein Popupfenster oder ein untergeordnetes Fenster an, z. B. ein Dialogfeld, einen Begrüßungsbildschirm oder eine Bildschirmtastatur. Anderenfalls wechselt die App in einen speziellen Modus, z. B. den Mehrfachauswahlmodus.</p></td>
-<td align="left"><strong>Nein</strong>
+<td style="vertical-align:top;"><strong>Nein</strong>
 <p>Wenn der Benutzer die Zurück-Schaltfläche drückt, sollte die vorübergehende Benutzeroberfläche geschlossen werden (durch Ausblenden der Bildschirmtastatur, Abbrechen des Dialogfelds usw.) und zur Seite zurückgekehrt werden, die die vorübergehende Benutzeroberfläche aufgerufen hat.</p>
 <p><img src="images/back-transui.png" alt="Showing a transient UI" /></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><strong>Aufzählen von Elementen</strong>
+<td style="vertical-align:top;"><strong>Aufzählen von Elementen</strong>
 <p>Die App zeigt die Inhalte für ein Bildschirmelement an, z. B. die Details für das ausgewählte Element in der Master/Details-Liste.</p></td>
-<td align="left"><strong>Nein</strong>
+<td style="vertical-align:top;"><strong>Nein</strong>
 <p>Das Aufzählen von Elementen ist mit der Navigation innerhalb einer Peer-Gruppe vergleichbar. Wenn der Benutzer die Zurück-Schaltfläche drückt, sollte zu der Seite navigiert werden, die vor der aktuellen Seite angezeigt wurde, die die Elementenaufzählung enthält.</p>
 <img src="images/nav/nav-enumerate.png" alt="Iterm enumeration" /></td>
 </tr>
@@ -297,16 +286,16 @@ Wenn Sie Ihre eigene Zurück-Stapelnavigation bereitstellen möchten, sollte die
 </table>
 
 
-### Fortsetzen
+### <a name="resuming"></a>Fortsetzen
 
 Wenn der Benutzer zu einer anderen App wechselt und zu Ihrer App zurückkehrt, wird empfohlen, zur letzten Seite im Navigationsverlauf zurückzukehren.
 
 
-## Beispiele herunterladen
+## <a name="get-the-samples"></a>Beispiele herunterladen
 *   [Beispiel für die Zurück-Schaltfläche](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/BackButton)<br/>
     Zeigt, wie Sie einen Ereignishandler für das Ereignis Zurück-Schaltfläche einrichten und die Titelleisten-Zurück-Schaltfläche aktivieren, wenn sich die App im Fensterdesktopmodus befindet.
 
-## Verwandte Artikel
+## <a name="related-articles"></a>Verwandte Artikel
 * [Navigationsgrundlagen](navigation-basics.md)
 
  
@@ -317,6 +306,6 @@ Wenn der Benutzer zu einer anderen App wechselt und zu Ihrer App zurückkehrt, w
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO4-->
 
 

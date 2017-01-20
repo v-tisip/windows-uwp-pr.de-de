@@ -5,32 +5,39 @@ title: Aktivieren des kontinuierlichen Diktierens
 ms.assetid: 383B3E23-1678-4FBB-B36E-6DE2DA9CA9DC
 label: Continuous dictation
 template: detail.hbs
+keywords: "Sprache, Stimme, Spracherkennung, natürliche Sprache, diktieren, Eingabe, Benutzerinteraktion"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 1f074b210d42b1c40817e88b5d73921652fa7d05
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: f4353807c83cbf91c385b31acfd481abb6ea5aed
 
 ---
 
-# Kontinuierliches Diktieren
+# <a name="continuous-dictation"></a>Kontinuierliches Diktieren
 
-
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Hier erfahren Sie, wie Sie die Erfassung und Erkennung langer Spracheingaben für kontinuierliches Diktieren ermöglichen.
 
-**Wichtige APIs**
-
--   [**SpeechContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913896)
--   [**ContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913913)
-
+<div class="important-apis" >
+<b>Wichtige APIs</b><br/>
+<ul>
+<li>[**SpeechContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913896)</li>
+<li>[**ContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913913)</li>
+</ul>
+</div>
 
 In [Spracherkennung](speech-recognition.md) haben Sie gelernt, wie Sie mithilfe der Methoden [**RecognizeAsync**](https://msdn.microsoft.com/library/windows/apps/dn653244) oder [**RecognizeWithUIAsync**](https://msdn.microsoft.com/library/windows/apps/dn653245) eines [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226)-Objekts verhältnismäßig kurze Spracheingaben erfassen und erkennen. Beispiele hierfür sind das Verfassen einer SMS oder das Stellen einer Frage.
 
-Bei längeren, kontinuierlichen Spracherkennungssitzungen (z.B. für Diktate oder E-Mails) wird hingegen die [**ContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913913)-Eigenschaft eines [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226)-Objekts verwendet, um ein [**SpeechContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913896)-Objekt zu erhalten.
+Bei längeren, kontinuierlichen Spracherkennungssitzungen (z. B. für Diktate oder E-Mails) wird hingegen die [**ContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913913)-Eigenschaft eines [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226)-Objekts verwendet, um ein [**SpeechContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913896)-Objekt zu erhalten.
 
 
 
-## Einrichtung
+## <a name="set-up"></a>Einrichtung
 
 
 Zum Verwalten einer kontinuierlichen Diktiersitzung benötigt Ihre App einige Objekte:
@@ -64,7 +71,7 @@ Hier wird ein [**StringBuilder**](https://msdn.microsoft.com/library/system.text
 private StringBuilder dictatedTextBuilder;
 ```
 
-## Initialisierung
+## <a name="initialization"></a>Initialisierung
 
 
 Während der Initialisierung der kontinuierlichen Spracherkennung müssen folgende Schritte ausgeführt werden:
@@ -99,7 +106,7 @@ SpeechRecognitionCompilationResult result =
       await speechRecognizer.CompileConstraintsAsync();
 ```
 
-## Behandeln von Erkennungsereignissen
+## <a name="handle-recognition-events"></a>Behandeln von Erkennungsereignissen
 
 
 Sie können durch Aufrufen von [**RecognizeAsync**](https://msdn.microsoft.com/library/windows/apps/dn653244) oder [**RecognizeWithUIAsync**](https://msdn.microsoft.com/library/windows/apps/dn653245) eine einzelne kurze Äußerung oder Phrase erfassen. 
@@ -204,7 +211,7 @@ private async void ContinuousRecognitionSession_Completed(
       }
 ```
 
-## Bereitstellen von Erkennungsfeedback
+## <a name="provide-ongoing-recognition-feedback"></a>Bereitstellen von Erkennungsfeedback
 
 
 Beim Sprechen wird häufig Kontext benötigt, um das Gesagte zu verstehen. Auch die Spracherkennung benötigt häufig Kontext, um Erkennungsergebnisse mit hoher Trefferwahrscheinlichkeit bereitstellen zu können. So sind beispielsweise die Wörter „seid“ und „seit“ ohne den Kontext anderer Wörter nicht voneinander zu unterscheiden. Das [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900)-Ereignis wird erst ausgelöst, wenn die Erkennung zu einem gewissen Grad davon überzeugt ist, ein Wort oder eine Formulierung korrekt erkannt zu haben.
@@ -232,7 +239,7 @@ private async void SpeechRecognizer_HypothesisGenerated(
   }
 ```
 
-## Starten und Beenden der Erkennung
+## <a name="start-and-stop-recognition"></a>Starten und Beenden der Erkennung
 
 
 Überprüfen Sie vor dem Starten einer Erkennungssitzung den Wert der [**State**](https://msdn.microsoft.com/library/windows/apps/dn913915)-Eigenschaft der Spracherkennung. Die Spracherkennung muss sich im Zustand [**Idle**](https://msdn.microsoft.com/library/windows/apps/dn653227) befinden.
@@ -267,7 +274,7 @@ Wenn Sie beim Abbrechen der Erkennungssitzung private Felder festlegen, müssen 
 
  
 
-## Verwandte Artikel
+## <a name="related-articles"></a>Verwandte Artikel
 
 
 * [Sprachinteraktionen](speech-interactions.md)
@@ -284,6 +291,6 @@ Wenn Sie beim Abbrechen der Erkennungssitzung private Felder festlegen, müssen 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

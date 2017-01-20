@@ -4,8 +4,8 @@ Description: "In diesem Artikel sind Punkte aufgeführt, die Sie vor dem Konvert
 Search.Product: eADQiWindows 10XVcnh
 title: "Vorbereiten von Apps für die Desktop-zu-UWP-Brücke"
 translationtype: Human Translation
-ms.sourcegitcommit: f7a8b8d586983f42fe108cd8935ef084eb108e35
-ms.openlocfilehash: 81a2485d5be22dd392c21aaff281c1c9263883a9
+ms.sourcegitcommit: d22d51d52c129534f8766ab76e043a12d140e8b7
+ms.openlocfilehash: a93d5ad1c1f429182c8df7d29df85dee70064e2f
 
 ---
 
@@ -67,6 +67,12 @@ In diesem Artikel sind Punkte aufgeführt, die Sie vor dem Konvertieren von Apps
 `<PackageDependency Name="Microsoft.VCLibs.110.00.UWPDesktop" MinVersion="11.0.24217.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />`  
 Während der Installation aus dem Windows Store wird die korrekte Version des VCLibs 11-Frameworks (x86 oder x64) vor der Installation der App installiert.  
 Die Abhängigkeiten werden nicht installiert, wenn die App durch Querladen installiert wird. Um die Abhängigkeiten manuell auf dem Computer zu installieren, müssen Sie die [VC 11.0-Frameworkpakete für die Desktop-Brücke](https://www.microsoft.com/download/details.aspx?id=53340&WT.mc_id=DX_MVP4025064) herunterladen und installieren. Weitere Informationen zu diesen Szenarien finden Sie unter [Verwenden von Visual C++-Laufzeitbibliotheken im Projekt „Centennial“](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project/).
+
++ __Ihre App erstellt Sprunglisteneinträge und ruft [ICustomDestinationList::SetAppID](https://msdn.microsoft.com/library/windows/desktop/dd378403(v=vs.85).aspx) oder [SetCurrentProcessExplicitAppUserModelID](https://msdn.microsoft.com/library/windows/desktop/dd378422(v=vs.85).aspx)__ auf. Legen Sie „AppID“ nicht programmgesteuert im Code fest. Andernfalls werden die Sprunglisteneinträge nicht angezeigt. Wenn Ihre App eine benutzerdefinierte ID benötigt, geben Sie sie mithilfe der Manifestdatei an. Anweisungen finden Sie unter [Manuelles Konvertieren Ihrer App zu UWP mithilfe der Desktop-Brücke](desktop-to-uwp-manual-conversion.md). Die App-ID für die Anwendung ist im Abschnitt *YOUR_PRAID_HERE* angegeben. 
+
++ __Ihre App fügt einen Sprunglistenshell-Link hinzu, der auf eine ausführbare Datei im Paket verweist__. Sie können ausführbare Dateien in Ihrem Paket nicht direkt aus einer Sprungliste starten (mit Ausnahme des absoluten Pfads einer eigenen EXE-Datei einer App). Registrieren Sie stattdessen einen App-Ausführungsalias (mit dem die konvertierte App über ein Schlüsselwort gestartet werden kann, als befände sie sich im PFAD), und legen Sie den Linkzielpfad stattdessen auf den Alias fest. Ausführliche Informationen zur Verwendung der appExecutionAlias-Erweiterung finden Sie unter [App-Erweiterungen für die Desktopbrücke](desktop-to-uwp-extensions.md). Hinweis: Wenn Ressourcen des Links in der Sprungliste der ursprünglichen EXE-Datei entsprechen müssen, müssen Sie Ressourcen wie etwa das Symbol mithilfe von [**SetIconLocation**](https://msdn.microsoft.com/library/windows/desktop/bb761047(v=vs.85).aspx) und den Anzeigenamen mit „PKEY_Title“ festlegen (wie bei anderen benutzerdefinierten Einträgen). 
+
++ __Ihre App fügt Sprunglisteneinträge hinzu, die auf Ressourcen im Paket Ihrer App nach absoluten Pfaden verweisen__. Der Installationspfad der App ändert sich möglicherweise, wenn Pakete aktualisiert werden. Dadurch ändert sich auch der Ort der Ressourcen (z. B. Symbole, Dokumente, ausführbare Dateien usw.). Falls Sprunglisteneinträge auf derartige Ressourcen nach absoluten Pfaden verweisen, muss die App ihre Sprungliste in regelmäßigen Abständen (z. B. beim App-Start) aktualisieren, um eine ordnungsgemäße Auflösung der Pfade sicherzustellen. Sie können stattdessen auch die UWP-[**Windows.UI.StartScreen.JumpList**](https://msdn.microsoft.com/library/windows/apps/windows.ui.startscreen.jumplist.aspx)-APIs verwenden. Diese APIs ermöglichen den Verweis auf Zeichenfolgen- und Bildressourcen mithilfe des relativen ms-resource-URI-Paketschemas (das zudem Sprache, DPI und hohen Kontrast berücksichtigt). 
 
 
 <!--HONumber=Dec16_HO1-->

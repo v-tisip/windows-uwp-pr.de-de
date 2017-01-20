@@ -4,8 +4,8 @@ ms.assetid: 41E1B4F1-6CAF-4128-A61A-4E400B149011
 title: Datenbindung im Detail
 description: "Die Datenbindung ist eine Methode, mit der die Benutzeroberfläche Ihrer App Daten anzeigen und diese Daten optional synchronisieren kann."
 translationtype: Human Translation
-ms.sourcegitcommit: 8dee2c7bf5ec44f913e34f1150223c1172ba6c02
-ms.openlocfilehash: 48db13fec4ce9c6a9a998c84ddaaba30f7a24d83
+ms.sourcegitcommit: fa3a3cf6194f04a05301ae4dfb75a7a21ff22e73
+ms.openlocfilehash: fca2c9a795e38983f439d6df5c5a7394c29c1217
 
 ---
 # <a name="data-binding-in-depth"></a>Datenbindung im Detail
@@ -371,7 +371,7 @@ Wenn Sie ein Textsteuerelement an einen Wert binden, bei dem es sich nicht um ei
 
 ## <a name="function-binding-in-xbind"></a>Funktionsbindung in {x:Bind}
 
-{x:Bind} ermöglicht den letzten Schritt beim Umwandeln eines Bindungspfads in eine Funktion. Hiermit können Konvertierungen und Bindungen durchgeführt werden, die von mehreren Eigenschaften abhängen. Siehe [**{x:Bind}-Markuperweiterung**](https://msdn.microsoft.com/en-us/windows/uwp/xaml-platform/x-bind-markup-extension)
+{x:Bind} ermöglicht den letzten Schritt beim Umwandeln eines Bindungspfads in eine Funktion. Hiermit können Konvertierungen und Bindungen durchgeführt werden, die von mehreren Eigenschaften abhängen. Siehe [**{x:Bind}-Markuperweiterung**](https://msdn.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)
 
 <span id="resource-dictionaries-with-x-bind"/>
 ## <a name="resource-dictionaries-with-xbind"></a>Ressourcenwörterbücher mit {x:Bind}
@@ -516,7 +516,7 @@ Das folgende Beispiel veranschaulicht das Muster „has-a-group“. Die Seitenkl
     </GridView>
 ```
 
-Beachten Sie, dass die [**ItemsSource**](https://msdn.microsoft.com/library/windows/apps/BR242828)&nbsp;[{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) verwenden muss (und nicht [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)), da sie die **Source**-Eigenschaft auf eine Ressource festlegen muss. Um das oben aufgeführte Beispiel im Kontext der vollständigen App zu sehen, laden Sie die Beispiel-App [Bookstore2](http://go.microsoft.com/fwlink/?linkid=532952) herunter. Im Gegensatz zum oben angezeigten Markup verwendet [Bookstore2](http://go.microsoft.com/fwlink/?linkid=532952) nur {Binding} allein.
+Beachten Sie, dass die [**ItemsSource**](https://msdn.microsoft.com/library/windows/apps/BR242828) [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) verwenden muss (und nicht [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)), da sie die **Source**-Eigenschaft auf eine Ressource festlegen muss. Um das oben aufgeführte Beispiel im Kontext der vollständigen App zu sehen, laden Sie die Beispiel-App [Bookstore2](http://go.microsoft.com/fwlink/?linkid=532952) herunter. Im Gegensatz zum oben angezeigten Markup verwendet [Bookstore2](http://go.microsoft.com/fwlink/?linkid=532952) nur {Binding} allein.
 
 Sie haben zwei Möglichkeiten zum Implementieren des Musters „is-a-group“. Eine Möglichkeit besteht darin, eine eigene Gruppenklasse zu erstellen. Leiten Sie die Klasse von **List&lt;T&gt;** ab (wobei *T* der Typ der Elemente ist). Beispiel: `public class Author : List<BookSku>`. Die zweite Möglichkeit besteht in der Verwendung eines [LINQ](http://msdn.microsoft.com/library/bb397926.aspx)-Ausdrucks zum dynamischen Erstellen von Gruppenobjekten (und einer Gruppenklasse) aus ähnlichen Eigenschaftswerten der **BookSku**-Elemente. Dieser Ansatz, bei dem nur eine flache Liste von Elementen beibehalten wird, die ad-hoc zusammen gruppiert werden, ist typisch für eine App, die über einen Clouddienst auf Daten zugreift. Sie können Bücher beispielsweise nach Autor oder Genre gruppieren, ohne dafür spezielle Gruppenklassen wie **Author** und **Genre** zu benötigen.
 
@@ -653,6 +653,6 @@ MyTextBox.SetBinding(TextBox.ForegroundProperty, binding)
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

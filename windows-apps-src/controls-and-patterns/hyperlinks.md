@@ -6,11 +6,11 @@ ms.assetid: 74302FF0-65FC-4820-B59A-718A765EF7F0
 label: Hyperlinks
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 71749f09eb11f779427bc450ae607f3fa99c2490
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 4d474af6930354482f9f8b6e7754ddaf6fe65dac
 
 ---
-# Hyperlinks
+# <a name="hyperlinks"></a>Hyperlinks
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -21,17 +21,13 @@ ms.openlocfilehash: 71749f09eb11f779427bc450ae607f3fa99c2490
 <div class="important-apis" >
 <b>Wichtige APIs</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/dn279356"><strong>Linktextelement</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/br242739"><strong>HyperlinkButton-Steuerelement</strong></a></li>
+<li>[**Linktextelement**](https://msdn.microsoft.com/library/windows/apps/dn279356)</li>
+<li>[**HyperlinkButton-Steuerelement**](https://msdn.microsoft.com/library/windows/apps/br242739)</li>
 </ul>
-
-</div>
 </div>
 
 
-
-
-## Ist dies das richtige Steuerelement?
+## <a name="is-this-the-right-control"></a>Ist dies das richtige Steuerelement?
 
 Verwenden Sie einen Link, wenn Text erforderlich ist, der bei Auswahl reagiert und der weitere Informationen zum ausgewählten Text aufruft.
 
@@ -41,13 +37,13 @@ Wählen Sie den richtigen Linktyp basierend auf Ihren Anforderungen:
 -   Verwenden Sie ein **HyperlinkButton**-Element für eigenständige Links. Ein HyperlinkButton-Element ist ein spezielles Schaltflächen-Steuerelement, das Sie überall dort verwenden können, wo Sie eine Schaltfläche verwenden würden.
 -   Verwenden Sie ein **HyperlinkButton**-Element mit einem [Bild](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.image.aspx)als Inhalt, um ein klickbares Bild zu erstellen.
 
-## Beispiele
+## <a name="examples"></a>Beispiele
 
 Links in der Rechner-App.
 
 ![Beispiel für einen Link in der Rechner-App](images/control-examples/hyperlinks-calculator.png)
 
-## Erstellen eines Linktextelements
+## <a name="create-a-hyperlink-text-element"></a>Erstellen eines Linktextelements
 
 In diesem Beispiel wird veranschaulicht, wie Sie ein Linktextelement in einem [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) verwenden.
 
@@ -66,7 +62,7 @@ Der Link wird inline angezeigt und mit dem umgebenden Text umbrochen:
 
 > **Tipp:**&nbsp;&nbsp;Wenn Sie einen Link in einem Textsteuerelement mit anderen Textelementen in XAML verwenden, platzieren Sie den Inhalt in einem [Span](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.aspx)-Container und wenden das Attribut `xml:space="preserve"` auf den Span-Container an, um die Leerstelle zwischen dem Link und anderen Elementen beizubehalten.
 
-## Erstellen eines HyperlinkButton-Elements
+## <a name="create-a-hyperlinkbutton"></a>Erstellen eines HyperlinkButton-Elements
 
 Hier sehen Sie, wie Sie ein HyperlinkButton-Element sowohl mit Text als auch mit Bild verwenden.
 
@@ -87,7 +83,7 @@ Die Linkschaltflächen mit Textinhalt werden als markierter Text angezeigt. Das 
 
 ![Beispiel für einen Link als Schaltflächensteuerelement](images/controls_hyperlink-button-image.png)
 
-## Handhaben der Navigation
+## <a name="handle-navigation"></a>Handhaben der Navigation
 
 Die Navigation wird bei beiden Linktypen gleich gehandhabt. Sie können die Eigenschaft **NavigateUri** festlegen oder das **Click**-Ereignis behandeln.
 
@@ -95,7 +91,8 @@ Die Navigation wird bei beiden Linktypen gleich gehandhabt. Sie können die Eige
 
 Wenn Sie mit dem Link zu einem URI navigieren möchten, legen Sie die NavigateUri-Eigenschaft fest. Wenn ein Benutzer auf den Link klickt oder tippt, wird der angegebene URI im Standardbrowser geöffnet. Der Standardbrowser wird in einem separaten Prozess von Ihrer App ausgeführt.
 
-> **Hinweis**&nbsp;&nbsp;Sie müssen nicht das Schema „http:“ oder „https:“ verwenden. Sie können Schemas wie „ms-appx:“, „ms-appdata:“ oder „ms-resources:“ verwenden, falls Ressourceninhalte vorhanden sind, die in einem Browser geladen werden können. Das Schema „file:“ ist ausdrücklich blockiert. Weitere Informationen finden Sie unter [URI-Schemas](https://msdn.microsoft.com/library/windows/apps/jj655406.aspx).
+> [!NOTE]
+> Sie müssen nicht das Schema „http:“ oder „https:“ verwenden. Sie können Schemas wie „ms-appx:“, „ms-appdata:“ oder „ms-resources:“ verwenden, falls dort Ressourceninhalte vorhanden sind, die in einem Browser geladen werden können. Das Schema „file:“ ist ausdrücklich blockiert. Weitere Informationen finden Sie unter [URI-Schemas](https://msdn.microsoft.com/library/windows/apps/jj655406.aspx).
 
 > Wenn ein Benutzer auf den Link klickt, wird der Wert der NavigateUri-Eigenschaft an einen Systemhandler für URI-Typen und -Schemas übergeben. Das System startet dann die App, die für das Schema des URIs registriert ist, der für „NavigateUri“ angegeben wird.
 
@@ -110,8 +107,8 @@ In der Regel behandeln Sie nicht das Click-Ereignis und legen gleichzeitig einen
 
 Sie können im Click-Ereignishandler nicht verhindern, dass der Standardbrowser ein für „NavigateUri“ angegebenes gültiges Ziel lädt. Die Aktion wird automatisch (asynchron) ausgeführt, wenn der Link aktiviert wird und kann nicht im Click-Ereignishandler abgebrochen werden. 
 
-## Unterstreichung von Links
-Links sind standardmäßig unterstrichen. Diese Unterstreichung ist wichtig, da dadurch Anforderungen für Barrierefreiheit erfüllt werden. Farbenblinde Benutzer können anhand der Unterstreichung zwischen Links und anderem Text unterscheiden. Wenn Sie die Unterstreichung deaktivieren, sollten Sie eine andere Art der Formatierung in Betracht ziehen (z.B. „FontWeight“ oder „FontStyle“), um Links von anderem Text abzuheben.
+## <a name="hyperlink-underlines"></a>Unterstreichung von Links
+Links sind standardmäßig unterstrichen. Diese Unterstreichung ist wichtig, da dadurch Anforderungen für Barrierefreiheit erfüllt werden. Farbenblinde Benutzer können anhand der Unterstreichung zwischen Links und anderem Text unterscheiden. Wenn Sie die Unterstreichung deaktivieren, sollten Sie eine andere Art der Formatierung in Betracht ziehen (z. B. „FontWeight“ oder „FontStyle“), um Links von anderem Text abzuheben.
 
 **Linktextelemente**
 
@@ -127,7 +124,7 @@ Der Text wird in den folgenden Fällen nicht unterstrichen angezeigt:
 
 Wenn Sie eine Schaltfläche benötigen, die als nicht unterstrichener Text angezeigt wird, können Sie ein Standard-Schaltflächen-Steuerelement verwenden und die integrierte Systemressource `TextBlockButtonStyle` auf die Style-Eigenschaft anwenden.
 
-## Hinweise zum Linktextelement
+## <a name="notes-for-hyperlink-text-element"></a>Hinweise zum Linktextelement
 
 Dieser Abschnitt gilt nur für das Linktextelement, nicht das HyperlinkButton-Steuerelement.
 
@@ -145,16 +142,14 @@ Links erben nicht von [Control](https://msdn.microsoft.com/library/windows/apps/
 
 Die Standardfarbe des Links ist die Akzentfarbe des Systems. Dieses Verhalten können Sie mit der [Foreground](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.textelement.foreground.aspx)-Eigenschaft außer Kraft setzen.
 
-## Empfehlungen
+## <a name="recommendations"></a>Empfehlungen
 
 -   Verwenden Sie Links nur für die Navigation. Verwenden Sie sie nicht für andere Aktionen.
 -   Verwenden Sie den Textstil aus dem Typenverlauf für textbasierte Links. Informieren Sie sich über [**Schriftarten und den Windows 10-Typenverlauf**](fonts.md).
 -   Separate Links sollten weit genug voneinander platziert werden, damit der Benutzer zwischen ihnen unterscheiden kann und sie mühelos einzeln auswählen kann.
 -   Fügen Sie Hyperlinks QuickInfos hinzu, die dem Benutzer anzeigen, wohin er umgeleitet wird. Wenn der Benutzer zu einer externen Website weitergeleitet werden soll, schließen Sie den Namen der Domäne der obersten Ebene in die QuickInfo ein und formatieren den Text mit einer zweiten Schriftfarbe.
 
-
-
-## Verwandte Artikel
+## <a name="related-articles"></a>Verwandte Artikel
 
 - [Textsteuerelemente](text-controls.md)
 - [Richtlinien für QuickInfos](tooltips.md)
@@ -165,6 +160,6 @@ Die Standardfarbe des Links ist die Akzentfarbe des Systems. Dieses Verhalten k�
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

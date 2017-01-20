@@ -6,20 +6,23 @@ ms.assetid: 70C6130E-23A2-4F9D-88E7-7060062DA988
 label: Respond to the presence of the touch keyboard
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 97a626aedff1b0915c845f151b16b3678e1cf977
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 7db7c360c1e6e3cadf6423d888240bb2f0f4651a
 
 ---
 
-# Reagieren auf das Vorhandensein der Bildschirmtastatur
+# <a name="respond-to-the-presence-of-the-touch-keyboard"></a>Reagieren auf das Vorhandensein der Bildschirmtastatur
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Hier erfahren Sie, wie Sie die UI Ihrer App beim Ein- oder Ausblenden der Touch-Bildschirmtastatur anpassen können.
 
-
-**Wichtige APIs**
-
--   [**AutomationPeer**](https://msdn.microsoft.com/library/windows/apps/br209185)
--   [**InputPane**](https://msdn.microsoft.com/library/windows/apps/br242255)
+<div class="important-apis" >
+<b>Wichtige APIs</b><br/>
+<ul>
+<li>[**AutomationPeer**](https://msdn.microsoft.com/library/windows/apps/br209185)</li>
+<li>[**InputPane**](https://msdn.microsoft.com/library/windows/apps/br242255)</li>
+</ul>
+</div> 
 
 
 
@@ -48,7 +51,7 @@ Wenn Sie noch keine Erfahrung mit der Entwicklung von UWP-Apps (Universelle Wind
 
 Nützliche Tipps zum Entwerfen einer zweckmäßigen und ansprechenden für die Tastatureingabe optimierten App finden Sie unter [Richtlinien für den Tastaturentwurf](https://msdn.microsoft.com/library/windows/apps/hh972345).
 
-## Bildschirmtastatur und benutzerdefinierte Benutzeroberfläche
+## <a name="touch-keyboard-and-a-custom-ui"></a>Bildschirmtastatur und benutzerdefinierte Benutzeroberfläche
 
 
 Im Folgenden finden Sie einige grundlegende Empfehlungen für benutzerdefinierte Steuerelemente für die Texteingabe.
@@ -71,7 +74,7 @@ Im Folgenden finden Sie einige grundlegende Empfehlungen für benutzerdefinierte
 
     ![Formular mit Bereichen, die immer sichtbar sein sollen](images/touch-keyboard-pan2.png)
 
-## Behandeln von Showing- und Hiding-Ereignissen
+## <a name="handling-the-showing-and-hiding-events"></a>Behandeln von Showing- und Hiding-Ereignissen
 
 
 Das folgende Beispiel veranschaulicht das Anfügen von Ereignishandlern für die [**showing**](https://msdn.microsoft.com/library/windows/apps/br242262)- und [**hiding**](https://msdn.microsoft.com/library/windows/apps/br242260)-Ereignisse der Bildschirmtastatur.
@@ -124,7 +127,7 @@ public class MyApplication
 }
 ```
 
-## Verwandte Artikel
+## <a name="related-articles"></a>Verwandte Artikel
 
 * [Tastaturinteraktionen](keyboard-interactions.md)
 * [Barrierefreiheit der Tastaturnavigation](https://msdn.microsoft.com/library/windows/apps/mt244347)
@@ -146,6 +149,6 @@ public class MyApplication
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

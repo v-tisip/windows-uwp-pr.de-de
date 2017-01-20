@@ -6,16 +6,18 @@ title: Sound
 template: detail.hbs
 ms.assetid: 9fa77494-2525-4491-8f26-dc733b6a18f6
 translationtype: Human Translation
-ms.sourcegitcommit: e240197b4cc233b9fc1ecaa4a1835c4a4dcd3bf8
-ms.openlocfilehash: 91021d76b180e2bc26c0d502098e0a0b21f0219f
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 5e4decdfdda0cad59d80395440f974d4ff3303a6
 
 ---
 
-# Sound
+# <a name="sound"></a>Sound
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Es gibt viele Möglichkeiten, Ihre App mit Sound zu verbessern. Sie können Sound zur Ergänzung von Benutzeroberflächenelementen einsetzen, um Benutzer akustisch auf Ereignisse aufmerksam zu machen. Sound ist beispielsweise für Menschen mit Sehbehinderungen ein hilfreiches Benutzeroberflächenelement. Mit Sound können Sie den Benutzer in das Geschehen einbeziehen, beispielsweise, wenn Sie ein Puzzlespiel mit einer beruhigenden Hintergrundmelodie und ein Horror-/Survivalspiel mit bedrohlichen Soundeffekten unterlegen.
 
-## Globale Sound-API
+## <a name="sound-global-api"></a>Globale Sound-API
 
 UWP bietet ein einfach zugängliches Soundsystem, bei dem Sie einfach „einen Schalter umlegen“ können und ein beeindruckendes Audioerlebnis für Ihre gesamte App erhalten.
 
@@ -27,12 +29,12 @@ Der **ElementSoundPlayer** verfügt über drei Zustände: **Ein**, **Aus** und *
 
 In der Einstellung **Aus** wird unabhängig davon, wo Ihre App ausgeführt wird, niemals Sound wiedergegeben. In der Einstellung **Ein** werden für Sounds für Ihre App auf jeder Plattform wiedergegeben.
 
-### Sound für TV und Xbox
+### <a name="sound-for-tv-and-xbox"></a>Sound für TV und Xbox
 
 Sound ist ein wesentlicher Bestandteil der 10-Fuß-Schnittstelle. Standardmäßig verwendet der **ElementSoundPlayer** den Zustand **Auto**, was bedeutet, dass Sound nur dann wiedergegeben wird, wenn Ihre App auf Xbox ausgeführt wird.
 Weitere Informationen zur Funktionsweise von Sound für TV und Xbox finden Sie im Artikel [Entwerfen für Xbox und Fernsehgeräte](http://go.microsoft.com/fwlink/?LinkId=760736).
 
-## Lautstärkeüberschreibung
+## <a name="sound-volume-override"></a>Lautstärkeüberschreibung
 
 Mit dem **Volume**-Steuerelement kann die Lautstärke aller Sounds innerhalb der App verringert werden. Allerdings können Sounds innerhalb der App nicht *lauter als die Systemlautstärke* werden.
 
@@ -42,7 +44,7 @@ ElementSoundPlayer.Volume = 0.5f;
 ```
 Wobei die maximale Lautstärke (relativ zur Systemlautstärke) 1,0 ist und die minimale 0,0 ist (im Wesentlichen stumm).
 
-## Zustand des Steuerungsgrads
+## <a name="control-level-state"></a>Zustand des Steuerungsgrads
 
 Wenn der Standardsound eines Steuerelements nicht erwünscht ist, kann er deaktiviert werden. Dies erfolgt über die **ElementSoundMode**-Option für das Steuerelement.
 
@@ -56,13 +58,13 @@ Die **ElementSoundMode**-Option verfügt über zwei Zustände: **Aus** und **Sta
 ButtonName.ElementSoundState = ElementSoundMode.Off;
 ```
 
-## Ist das der richtige Sound?
+## <a name="is-this-the-right-sound"></a>Ist das der richtige Sound?
 
 Beim Erstellen eines benutzerdefinierten Steuerelements oder Ändern des Sounds eines vorhandenen Steuerelements ist es wichtig zu verstehen, wie alle Sounds, die das System bietet, verwendet werden.
 
 Jeder Sound bezieht sich auf eine bestimmte grundlegende Benutzerinteraktion, und obwohl Sounds angepasst werden können, um bei einer Interaktion wiedergegeben zu werden, soll dieser Abschnitt die Szenarien erläutern, in denen Sounds verwendet werden sollten, um die Einheitlichkeit aller UWP-Apps zu gewährleisten.
 
-### Aufrufen eines Elements
+### <a name="invoking-an-element"></a>Aufrufen eines Elements
 
 Der in unserem System am häufigsten verwendete durch ein Steuerelement ausgelöste Sound ist der **Invoke**-Sound. Dieser Sound wird wiedergegeben, wenn ein Benutzer mittels Tippen/Klicken/Eingabe/Leertaste oder Drücken der Taste "A" auf einem Gamepad ein Steuerelement aufruft.
 
@@ -75,7 +77,7 @@ Um diesen Sound von einem Steuerelementereignis aus wiederzugeben, rufen Sie ein
 ElementSoundPlayer.Play(ElementSoundKind.Invoke);
 ```
 
-### Anzeigen und Ausblenden von Inhalten
+### <a name="showing--hiding-content"></a>Anzeigen und Ausblenden von Inhalten
 
 In XAML gibt es viele Flyouts, Dialogfelder und leicht ausblendbare Benutzeroberflächen, und jede Aktion, die eine dieser Überlagerungen auslöst, sollte einen **Show**- oder **Hide**-Sound aufrufen.
 
@@ -93,7 +95,7 @@ Wenn dagegen ein Überlagerungs-Inhaltsfenster geschlossen wird (oder einfach au
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.Hide);
 ```
-### Navigation innerhalb einer Seite
+### <a name="navigation-within-a-page"></a>Navigation innerhalb einer Seite
 
 Beim Navigieren zwischen Bereichen oder Ansichten innerhalb einer App-Seite (siehe [Hub](../controls-and-patterns/hub.md) oder [Registerkarten und Pivots](../controls-and-patterns/tabs-pivot.md)) gibt es in der Regel eine bidirektionale Bewegung. Das bedeutet, dass Sie zur nächsten Ansicht bzw. zum nächsten Bereich (oder zur/zum vorherigen) wechseln können, ohne die aktuelle App-Seite zu verlassen, auf der Sie sich befinden.
 
@@ -113,7 +115,7 @@ Und beim Wechsel zu einer vorherigen Ansicht bzw. zu einem vorherigen Bereich in
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.MovePrevious);
 ```
-### Rückwärtsnavigation
+### <a name="back-navigation"></a>Rückwärtsnavigation
 
 Beim Navigieren von der aktuellen Seite zur vorherigen Seite innerhalb einer App sollte der **GoBack**-Sound aufgerufen werden:
 
@@ -122,11 +124,11 @@ Beim Navigieren von der aktuellen Seite zur vorherigen Seite innerhalb einer App
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.GoBack);
 ```
-### Fokussieren auf ein Element
+### <a name="focusing-on-an-element"></a>Fokussieren auf ein Element
 
 Der **Focus**-Sound ist der einzige implizite Sound in unserem System. Das heißt, dass ein Benutzer nicht mit irgendetwas direkt interagiert, jedoch trotzdem einen Sound hört.
 
-Das Fokussieren geschieht, wenn ein Benutzer durch eine App navigiert– dies kann mit dem Gamepad, der Tastatur, der Fernbedienung oder mit Kinect geschehen. In der Regel wird der **Focus**-Sound *bei PointerEntered- oder Mauszeigeereignissen nicht wiedergegeben*.
+Das Fokussieren geschieht, wenn ein Benutzer durch eine App navigiert – dies kann mit dem Gamepad, der Tastatur, der Fernbedienung oder mit Kinect geschehen. In der Regel wird der **Focus**-Sound *bei PointerEntered- oder Mauszeigeereignissen nicht wiedergegeben*.
 
 Um ein Steuerelement zur Wiedergabe des **Focus**-Sounds einzurichten, wenn Ihr Steuerelement den Fokus erhält, rufen Sie auf:
 
@@ -135,18 +137,18 @@ Um ein Steuerelement zur Wiedergabe des **Focus**-Sounds einzurichten, wenn Ihr 
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.Focus);
 ```
-### Wechseln zwischen Focus-Sounds
+### <a name="cycling-focus-sounds"></a>Wechseln zwischen Focus-Sounds
 
 Als zusätzliche Funktion zum Aufrufen von **ElementSound.Focus** wechselt das Soundsystem standardmäßig bei jedem Navigationsaufruf zwischen 4 unterschiedlichen Sounds. Das bedeutet, dass keine zwei genau gleichen Focus-Sounds direkt nacheinander wiedergegeben werden.
 
 Diese Wechselfunktion soll verhindern, dass die Focus-Sounds monoton werden und durch den Benutzer nicht mehr wahrgenommen werden. Denn Focus-Sounds werden am häufigsten wiedergegeben und sollten daher möglichst unaufdringlich sein.
 
-## Verwandte Artikel
+## <a name="related-articles"></a>Verwandte Artikel
 
 * [Entwerfen für Xbox und Fernsehgeräte](http://go.microsoft.com/fwlink/?LinkId=760736)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

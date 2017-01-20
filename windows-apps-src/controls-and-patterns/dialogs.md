@@ -5,11 +5,11 @@ title: Dialogfelder und Flyouts
 label: Dialogs
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 86f28a0509ead0632c942c6746fea19acac54931
-ms.openlocfilehash: 6b0b680cd85d6f57c3ca06758ab7dcaef3f7ffe5
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: bc428b42324cd584dfaee1db3c9eb834d30cd69d
 
 ---
-# Dialogfelder und Flyouts
+# <a name="dialogs-and-flyouts"></a>Dialogfelder und Flyouts
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -18,31 +18,11 @@ Dialogfelder und Flyouts sind vorübergehende UI-Elemente, die angezeigt werden,
 <div class="important-apis" >
 <b>Wichtige APIs</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx">ContentDialog-Klasse</a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/dn279496">Flyout-Klasse</a></li>
+<li>[ContentDialog-Klasse](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx)</li>
+<li>[Flyout-Klasse](https://msdn.microsoft.com/library/windows/apps/dn279496)</li>
 </ul>
-
-</div>
 </div>
 
-
-
-<!--
-<table>
-<tr>
-<th>Dialogs</th><th>Flyouts</th>
-</tr>
-<tr>
-<td>![Example of a full-button dialog](images/controls_dialog_twobutton.png)</td>
-<td>![Example of a flyout](images/flyout-example.png)</td>
-</tr>
-<tr>
-<td>Dialogs are modal UI overlays that provide contextual app information. Dialogs block interactions with the app window until being explicitly dismissed. They often request some kind of action from the user.  </td>
-<td>A flyout is a lightweight contextual popup that displays UI related to what the user is doing. It includes placement and sizing logic, and can be used to reveal a hidden control, show more detail about an item, or ask the user to confirm an action. Flyouts can be quickly dismissed by tapping or clicking somewhere outside the flyout, pressing the Escape key or Back button, resizing the app window, or changing the device's orientation.
-</td>
-</tr>
-</table>
--->
 
 <div class="side-by-side">
 <div class="side-by-side-content">
@@ -64,7 +44,7 @@ Dialogfelder und Flyouts sind vorübergehende UI-Elemente, die angezeigt werden,
 </div>
 </div>
 
-## Ist dies das richtige Steuerelement?
+## <a name="is-this-the-right-control"></a>Ist dies das richtige Steuerelement?
 
 * Verwenden Sie Dialogfelder und Flyouts, um Benutzern wichtige Informationen zu melden oder deren Bestätigung oder zusätzliche Informationen anzufordern, bevor eine Aktion abgeschlossen werden kann. 
 * Verwenden Sie keine Flyouts anstelle von [QuickInfos](tooltips.md) oder [Kontextmenüs](menus.md). Verwenden Sie QuickInfos, um kurze Beschreibungen anzuzeigen, die nach einer festgelegten Zeit ausgeblendet werden. Verwenden Sie ein Kontextmenü für kontextbezogene Aktionen im Zusammenhang mit UI-Elementen (beispielsweise Kopieren und Einfügen).  
@@ -72,28 +52,15 @@ Dialogfelder und Flyouts sind vorübergehende UI-Elemente, die angezeigt werden,
 
 Dialogfelder und Flyouts stellen sicher, dass den Benutzern wichtige Informationen bekannt sind, sie stellen jedoch auch eine Unterbrechung dar. Da Dialogfelder modal (gesperrt) sind, unterbrechen sie die Benutzer und verhindern, dass diese bis zur Interaktion mit dem Dialogfeld andere Schritte durchführen können. Flyouts sind weniger störend, das Anzeigen zu vieler Flyouts kann jedoch eine ablenkende Wirkung haben. 
 
-Berücksichtigen Sie die Bedeutung der zu vermittelnden Informationen: Sind sie wichtig genug, um den Benutzer zu unterbrechen? Berücksichtigen Sie zudem, wie häufig die Informationen angezeigt werden müssen. Wenn ein Dialogfeld oder eine Benachrichtigung alle paar Minuten angezeigt wird, sollten Sie diese Informationen stattdessen in die primäre UI einbinden. So können Sie z.B. in einem Chat-Client anstatt eines Flyouts, der jedes Mal angezeigt wird, wenn sich ein Freund anmeldet, eine Liste der Freunde anzeigen, die derzeit online sind, und diejenigen Freunde hervorheben, die sich gerade anmelden. 
+Berücksichtigen Sie die Bedeutung der zu vermittelnden Informationen: Sind sie wichtig genug, um den Benutzer zu unterbrechen? Berücksichtigen Sie zudem, wie häufig die Informationen angezeigt werden müssen. Wenn ein Dialogfeld oder eine Benachrichtigung alle paar Minuten angezeigt wird, sollten Sie diese Informationen stattdessen in die primäre UI einbinden. So können Sie z. B. in einem Chat-Client anstatt eines Flyouts, der jedes Mal angezeigt wird, wenn sich ein Freund anmeldet, eine Liste der Freunde anzeigen, die derzeit online sind, und diejenigen Freunde hervorheben, die sich gerade anmelden. 
 
-Flyouts und Dialogfelder werden häufig zum Bestätigen einer Aktion vor deren Ausführung verwendet (z.B. vor dem Löschen einer Datei). Wenn Sie davon ausgehen, dass die Benutzer häufig eine bestimmte Aktion ausführen, sollten Sie eine Möglichkeit bereitstellen, versehentliche Aktionen rückgängig zu machen, anstatt jedes Mal die Bestätigung der Aktion zu erzwingen. 
+Flyouts und Dialogfelder werden häufig zum Bestätigen einer Aktion vor deren Ausführung verwendet (z. B. vor dem Löschen einer Datei). Wenn Sie davon ausgehen, dass die Benutzer häufig eine bestimmte Aktion ausführen, sollten Sie eine Möglichkeit bereitstellen, versehentliche Aktionen rückgängig zu machen, anstatt jedes Mal die Bestätigung der Aktion zu erzwingen. 
 
 
 
-## Dialogfelder im Vergleich zu Flyouts
+## <a name="dialogs-vs-flyouts"></a>Dialogfelder im Vergleich zu Flyouts
 
 Wenn ein Dialogfeld oder Flyout eingesetzt werden soll, müssen Sie sich für eine der beiden Optionen entscheiden. 
-
-<!--
-Dialogs are modal, which means they block all interaction with the app until the user selects a dialog button. To visually reinforce their modal behavior, dialogs draw an overlay layer which partially obscures the temporarily unreachable app UI.
-
-A flyout is a light dismiss control, meaning that users can choose from a variety of actions to quickly dismiss it. These interactions are intended to be lightweight and non-blocking. Light dismiss actions include
-
-* Clicking or tap outside the transient UI
-* Pressing the Escape key
-* Pressing the Back button
-* Resizing the app window
-* Changing device orientation
-
--->
 
 Angesichts der Tatsache, dass Dialogfelder im Gegensatz zu Flyouts Interaktionen blockieren, sollten Dialogfelder auf Situationen beschränkt bleiben, in denen der Benutzer unterbrochen werden soll, um sich auf eine bestimmte Information oder die Beantwortung einer Frage zu konzentrieren. Flyouts hingegen können verwendet werden, wenn Sie auf etwas aufmerksam machen möchten, das der Benutzer jedoch ignorieren kann. 
 
@@ -120,7 +87,7 @@ Angesichts der Tatsache, dass Dialogfelder im Gegensatz zu Flyouts Interaktionen
    <p><b>Fälle, in denen ein Flyout verwendet werden sollte:</b> <br/>
 <ul>
 <li>Erfassen zusätzlicher Informationen, die erforderlich sind, bevor eine Aktion abgeschlossen werden kann.</li>
-<li>Anzeigen von Informationen, die nur vorübergehend relevant sind. So können Sie z.B. in einer Fotogalerie-App ein Flyout einsetzen, damit eine große Version des Bilds angezeigt wird, wenn der Benutzer auf eine Miniaturansicht klickt.</li>
+<li>Anzeigen von Informationen, die nur vorübergehend relevant sind. So können Sie z. B. in einer Fotogalerie-App ein Flyout einsetzen, damit eine große Version des Bilds angezeigt wird, wenn der Benutzer auf eine Miniaturansicht klickt.</li>
 <li>Warnungen und Bestätigungen, z. B. im Zusammenhang mit möglicherweise schädlichen Aktionen.</li>
 <li>Anzeigen weiterer Informationen, z. B. von Details oder ausführlicheren Beschreibungen eines Elements auf der Seite.</li>
 </ul></p>
@@ -128,10 +95,16 @@ Angesichts der Tatsache, dass Dialogfelder im Gegensatz zu Flyouts Interaktionen
 </div>
 </div>
 
+<div class="microsoft-internal-note">
+Einfach ausgeblendete Steuerelemente erhalten den Tastatur- bzw. Gamepad-Fokus, bis sie nicht mehr angezeigt werden. Um dieses Verhalten optisch zu kennzeichnen, werden diese Steuerelemente auf der Xbox als Überlagerung gezeichnet, wobei Helligkeit bzw. Sichtbarkeit der umgebenden Benutzeroberfläche reduziert wird. Dieses Verhalten kann mit der neuen `LightDismissOverlayMode`-Eigenschaft geändert werden. Standardmäßig erhalten vorübergehend angezeigte Benutzeroberflächen auf der Xbox (jedoch nicht auf anderen Gerätefamilien) eine einfach ausgeblendete Überlagerung. Apps können jedoch durchsetzen, dass die Überlagerung stets aktiviert oder deaktiviert ist.********
 
+```xaml
+<MenuFlyout LightDismissOverlayMode=\"Off\">
+```
+</div>
 
-## Dialogfelder
-### Allgemeine Richtlinien
+## <a name="dialogs"></a>Dialogfelder
+### <a name="general-guidelines"></a>Allgemeine Richtlinien
 
 -   Sie sollten das Problem oder das Ziel des Benutzers in der ersten Zeile des Dialogfeldtexts deutlich benennen.
 -   Der Dialogfeldtitel ist die Hauptanweisung und optional.
@@ -144,10 +117,17 @@ Angesichts der Tatsache, dass Dialogfelder im Gegensatz zu Flyouts Interaktionen
 -   Mindestens eine Dialogfeldschaltfläche muss angezeigt werden.
     -   Schaltflächen sind die einzigen Mechanismen, mit denen Benutzer das Dialogfeld schließen können.
     -   Verwenden Sie Schaltflächen mit Text, die eine konkrete Reaktion auf die Hauptanweisung oder den Inhalt repräsentieren. Beispiel: "Möchten Sie AppName den Zugriff auf Ihren Standort erlauben?", gefolgt von den Schaltflächen "Zulassen" und "Blockieren". Klare Antworten erleichtern das Verständnis und damit die schnelle Entscheidungsfindung.
+    - Geben Sie die Schaltflächen für den Commit in der folgenden Reihenfolge an: 
+        -   OK/[Ausführen]/Ja
+        -   [Nicht ausführen]/Nein
+        -   Abbrechen
+        
+        (Dabei stellen [Ausführen] und [Nicht ausführen] bestimmte Antworten auf die Hauptanweisung dar.)
+   
 -   Bei Fehlerdialogfeldern wird die Fehlermeldung im Dialogfeld zusammen mit allen relevanten Informationen angezeigt. Die einzige in einem Fehlerdialogfeld verwendete Schaltfläche sollte „Schließen“ oder eine ähnliche Aktion sein.
 -   Verwenden Sie Dialogfelder nicht für kontextbezogene Fehler, die sich auf eine bestimmte Stelle auf der Seite beziehen, beispielsweise Validierungsfehler (wie in Kennwortfeldern). Verwenden Sie die Canvas der App selbst zum Anzeigen von Inlinefehlern.
 
-### Bestätigungsdialogfelder (OK/Abbrechen)
+### <a name="confirmation-dialogs-okcancel"></a>Bestätigungsdialogfelder (OK/Abbrechen)
 In einem Bestätigungsdialogfeld können Benutzer bestätigen, dass sie eine Aktion ausführen möchten. Sie können die Aktion bestätigen oder den Vorgang abbrechen.  
 Ein typisches Bestätigungsdialogfeld verfügt über zwei Schaltflächen: eine Schaltfläche zur Bestätigung („OK“) und eine Schaltfläche zum Abbrechen.  
 
@@ -163,7 +143,7 @@ Ein typisches Bestätigungsdialogfeld verfügt über zwei Schaltflächen: eine S
 
 > Auf einigen Plattformen befindet sich die Bestätigungsschaltfläche auf der rechten anstatt auf der linken Seite. Warum empfehlen wir die Platzierung auf der linken Seite?  Wenn Sie davon ausgehen, dass die meisten Benutzer Rechtshänder sind und ihr Telefon in dieser Hand halten, ist es bequemer, eine Bestätigungsschaltfläche zu drücken, die sich auf der linken Seite befindet, weil sie für den Benutzer wahrscheinlich einfacher mit dem Daumen erreichbar ist. Bei Schaltflächen auf der rechten Bildschirmseite muss der Benutzer seinen Daumen in eine weniger bequeme Position nach innen bewegen.
 
-### Erstellen eines Dialogfelds
+### <a name="create-a-dialog"></a>Erstellen eines Dialogfelds
 Um ein Dialogfeld zu erstellen, verwenden Sie die [ContentDialog-Klasse](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx). Sie können ein Dialogfeld im Code oder Markup erstellen. Obwohl es in der Regel leichter ist, UI-Elemente in XAML zu definieren, ist es bei einem einfachen Dialogfeld unkomplizierter, Code zu verwenden. In diesem Beispiel wird ein Dialogfeld erstellt, um dem Benutzer mitzuteilen, dass keine WLAN-Verbindung vorhanden ist. Für die Anzeige wird die Methode [ShowAsync](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.contentdialog.showasync.aspx) verwendet.
 
 ```csharp
@@ -206,12 +186,16 @@ private async void displayDeleteFileDialog()
 }
 ```
 
-## Flyouts
-###  Erstellen eines Flyouts
+## <a name="flyouts"></a>Flyouts
+###  <a name="create-a-flyout"></a>Erstellen eines Flyouts
 
-Ein Flyout ist ein offener Container, der beliebige UI als Inhalt anzeigen kann.  
+Ein Flyout ist ein offener Container, der beliebige UI als Inhalt anzeigen kann. 
 
-Flyouts sind an bestimmte Steuerelemente angefügt. Sie können mit der [Placement](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.placement.aspx)-Eigenschaft angeben, wo das Flyout angezeigt wird: oben, links, unten, rechts oder als Vollbild. Wenn Sie den [vollständigen Platzierungsmodus](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutplacementmode.aspx) auswählen, streckt die App das Flyout und zentriert es innerhalb des App-Fensters. Wenn sie sichtbar sind, sollten sie am aufrufenden Objekt verankert sein und ihre bevorzugte relative Position zum Objekt angeben: oben, links, unten oder rechts. Flyout verfügt außerdem über einen vollständigen Platzierungsmodus, der versucht, das Flyout zu strecken und innerhalb des App-Fensters zu zentrieren. Einige Steuerelemente wie z.B. [Schaltflächen](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx) verfügen über die Eigenschaft [Flyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.flyout.aspx), mit der Sie ein Flyout zuordnen können. 
+<div class="microsoft-internal-note">
+Dazu gehören Flyouts und Kontextmenüs, die in anderen Flyouts geschachtelt werden können.
+</div>
+
+Flyouts sind an bestimmte Steuerelemente angefügt. Sie können mit der [Placement](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.placement.aspx)-Eigenschaft angeben, wo das Flyout angezeigt wird: oben, links, unten, rechts oder als Vollbild. Wenn Sie den [vollständigen Platzierungsmodus](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutplacementmode.aspx) auswählen, streckt die App das Flyout und zentriert es innerhalb des App-Fensters. Wenn sie sichtbar sind, sollten sie am aufrufenden Objekt verankert sein und ihre bevorzugte relative Position zum Objekt angeben: oben, links, unten oder rechts. Flyout verfügt außerdem über einen vollständigen Platzierungsmodus, der versucht, das Flyout zu strecken und innerhalb des App-Fensters zu zentrieren. Einige Steuerelemente wie z. B. [Schaltflächen](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx) verfügen über die Eigenschaft [Flyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.flyout.aspx), mit der Sie ein Flyout zuordnen können. 
 
 In diesem Beispiel wird ein einfaches Flyout erstellt, das Text angezeigt, wenn die Schaltfläche gedrückt wird. 
 ````xaml
@@ -295,7 +279,7 @@ private void Image_Tapped(object sender, TappedRoutedEventArgs e)
 }
 ````
 
-### Gestalten eines Flyouts
+### <a name="style-a-flyout"></a>Gestalten eines Flyouts
 Um ein Flyout zu formatieren, ändern Sie den [FlyoutPresenterStyle](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flyout.flyoutpresenterstyle.aspx). In diesem Beispiel wird ein Absatz mit Textumbruch dargestellt. Zudem wird der Textblock für ein Bildschirmleseprogramm zugänglich gemacht.
 
 ````xaml
@@ -313,11 +297,11 @@ Um ein Flyout zu formatieren, ändern Sie den [FlyoutPresenterStyle](https://msd
 </Flyout>
 ````
 
-## Beispiele herunterladen
+## <a name="get-the-samples"></a>Beispiele herunterladen
 *   [XAML-UI-Grundlagen](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)<br/>
     Hier werden alle XAML-Steuerelemente in einem interaktiven Format dargestellt.
 
-## Verwandte Artikel
+## <a name="related-articles"></a>Verwandte Artikel
 - [QuickInfos](tooltips.md)
 - [Menüs und Kontextmenü](menus.md)
 - [**Flyout-Klasse**](https://msdn.microsoft.com/library/windows/apps/dn279496)
@@ -325,6 +309,6 @@ Um ein Flyout zu formatieren, ändern Sie den [FlyoutPresenterStyle](https://msd
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

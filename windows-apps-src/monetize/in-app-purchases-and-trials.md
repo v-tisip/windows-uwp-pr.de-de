@@ -4,8 +4,8 @@ ms.assetid: F45E6F35-BC18-45C8-A8A5-193D528E2A4E
 description: "Erfahren Sie, wie Sie In-App-Käufe und Testversionen in UWP-Apps aktivieren."
 title: "In-App-Käufe und Testversionen"
 translationtype: Human Translation
-ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
-ms.openlocfilehash: 7783b6017a314ddb24509c55db8134a4c214430f
+ms.sourcegitcommit: ebac7d8edf9787ad810b84f3855fe23ae3007dcf
+ms.openlocfilehash: 33004b5229167bedd4cbafe5279709f1225ed02c
 
 ---
 
@@ -24,7 +24,7 @@ Dieser Artikel enthält eine Übersicht darüber, wie In-App-Käufe und Testvers
 
 Je nachdem, für welche Version von Windows 10 Ihre App ausgelegt ist, können Sie mithilfe zweier verschiedener Namespaces Ihren UWP-Apps In-App-Käufe und Testversionen hinzufügen. Obwohl die APIs in diesen Namespaces den gleichen Ziele dienen, sind sie unterschiedlich gestaltet, und der Code ist zwischen den beiden APIs nicht kompatibel.
 
-* **[Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)**&nbsp;&nbsp;Ab Windows 10 Version 1607 können mithilfe der API in diesem Namespace In-App-Käufe und Testversionen in den Apps implementiert werden. Es wird empfohlen, die Member in diesem Namespace zu verwenden, wenn Ihre App auf Windows 10 ab Version 1607 ausgerichtet ist. Dieser Namespace unterstützt die neuesten Add-On-Typen wie vom Store verwaltete Endverbraucher-Add-Ons und ist so gestaltet, dass er mit von Windows Dev Center und dem Store unterstützten zukünftigen Arten von Produkten und Features kompatibel ist. Weitere Informationen zu diesem Namespace finden Sie in diesem Artikel im Abschnitt [Verwenden des Windows.Services.Store-Namespace](#api_intro).
+* **[Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)**&nbsp;&nbsp;Ab Windows 10 Version 1607 können mithilfe der API in diesem Namespace In-App-Käufe und Testversionen in den Apps implementiert werden. Es wird empfohlen, die Member in diesem Namespace zu verwenden, wenn Ihre App auf Windows 10 ab Version 1607 ausgerichtet ist. Dieser Namespace unterstützt die neuesten Add-On-Typen, wie vom Store verwaltete konsumierbare Add-Ons, und ist so gestaltet, dass er mit zukünftigen Arten von Produkten und Features kompatibel ist, die von Windows Dev Center und dem Store unterstützt werden. Weitere Informationen zu diesem Namespace finden Sie in diesem Artikel im Abschnitt [In-App-Käufe und Testversionen mit dem Windows.Services.Store-Namespace](#api_intro).
 
 * **[Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)**&nbsp;&nbsp;Alle Versionen von Windows 10 unterstützen in diesem Namespace zudem eine ältere API für In-App-Käufe und Testversionen. Obwohl alle UWP-Apps für Windows 10 diesen Namespace verwenden können, wird dieser zukünftig möglicherweise nicht für die Unterstützung neuer Produkttypen und Features in Dev Center sowie im Store aktualisiert. Weitere Informationen zu diesem Namespace finden Sie unter [In-App-Käufe und Testversionen mit dem Windows.ApplicationModel.Store-Namespace](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
 
@@ -35,7 +35,7 @@ In diesem Abschnitt werden die grundlegenden Konzepte für In-App-Käufe und Te
 
 Jedes im Store angebotene Element wird im Allgemeinen als *Produkt* bezeichnet. Die meisten Entwickler arbeiten mit den folgenden Arten von Produkten: *Apps* und *Add-Ons* (auch bekannt als In-App-Produkte oder IAPs).
 
-Ein Add-On bezieht sich auf ein Produkt oder Feature, das Sie Ihren Kunden im Kontext Ihrer App zur Verfügung stellen. Ein Add-On kann alle Funktionen darstellen, die Ihre App Kunden bietet: z. B. in einer App oder einem Spiel zu verwendende Währung, neue Karten oder Waffen für ein Spiel, die Möglichkeit zur Verwendung der App ohne Werbung oder digitale Inhalte wie Musik oder Videos für Apps, die diese Art von Inhalten anbieten können. Jede App und jedes Add-On verfügt über eine zugehörige Lizenz, die angibt, ob der Benutzer zur Verwendung dieser App oder des Add-Ons berechtigt ist. Wenn der Benutzer berechtigt ist, die App bzw. das Add-On als Testversion zu verwenden, enthält die Lizenz auch zusätzliche Informationen zur Testversion.
+Ein Add-On bezieht sich auf ein Produkt oder Feature, das Sie Ihren Kunden im Kontext Ihrer App zur Verfügung stellen: z. B. in einer App oder einem Spiel zu verwendende Währung, neue Karten oder Waffen für ein Spiel, die Möglichkeit zur Verwendung der App ohne Werbung oder digitale Inhalte wie Musik oder Videos für Apps, die diese Art von Inhalten anbieten können. Jede App und jedes Add-On verfügt über eine zugehörige Lizenz, die angibt, ob der Benutzer zur Verwendung dieser App oder des Add-Ons berechtigt ist. Wenn der Benutzer berechtigt ist, die App bzw. das Add-On als Testversion zu verwenden, enthält die Lizenz auch zusätzliche Informationen zur Testversion.
 
 Um den Kunden in der App ein Add-On anzubieten, müssen Sie [das Add-On für Ihre App im Dev Center-Dashboard definieren](../publish/iap-submissions.md), damit es im Store bekannt ist. Anschließend kann das Add-On mithilfe der APIs im **Windows.Services.Store**-Namespace oder im **Windows.ApplicationModel.Store**-Namespace den Kunden zum Erwerb als In-App-Kauf angeboten werden.
 
@@ -49,27 +49,27 @@ Für UWP-Apps können die folgenden Arten von Add-Ons angeboten werden.
 
 <span />
 
->**Hinweis**&nbsp;&nbsp;Andere Arten von Add-Ons wie Gebrauchsgut-Add-Ons mit Paketen (auch bekannt als Inhalte zum Herunterladen oder DLC) stehen nur einer eingeschränkten Gruppe von Entwicklern zur Verfügung und werden in dieser Dokumentation nicht behandelt.
+>**Hinweis**&nbsp;&nbsp;Andere Arten von Add-Ons wie dauerhafte Add-Ons mit Paketen (auch als herunterladbare Inhalte oder DLC bekannt) stehen nur einer eingeschränkten Gruppe von Entwicklern zur Verfügung und werden in dieser Dokumentation nicht behandelt.
 
 <span id="api_intro" />
-## <a name="using-the-windowsservicesstore-namespace"></a>Verwenden des Windows.Services.Store-Namespace
+## <a name="in-app-purchases-and-trials-using-the-windowsservicesstore-namespace"></a>In-App-Käufe und Testversionen mit dem Windows.Services.Store-Namespace
 
 Im Rest dieses Artikels wird beschrieben, wie In-App-Käufe und Testversionen mit dem [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace implementiert werden. Dieser Namespace ist nur für Apps verfügbar, die für Windows 10 ab Version 1607 ausgelegt sind. Es wird empfohlen, für die Apps sofern möglich diesen Namespace anstelle des [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)-Namespace zu verwenden.
 
-Informationen zum **Windows.ApplicationModel.Store**-Namespace finden Sie ggf. unter [In-App-Käufe und Testversionen mit dem Windows.ApplicationModel.Store-Namespace](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
+Weitere Informationen zum **Windows.ApplicationModel.Store**-Namespace, finden Sie in [diesem Artikel](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
 
 ### <a name="get-started-with-the-storecontext-class"></a>Erste Schritte mit der StoreContext-Klasse
 
 Der Haupteinstiegspunkt in den **Windows.Services.Store**-Namespace ist die [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Klasse. Diese Klasse stellt Methoden bereit, mit denen Sie Informationen für die aktuelle App und die verfügbaren Add-Ons abrufen, eine App oder ein Add-On für den aktuellen Benutzer kaufen, Lizenzinformationen für die aktuelle App oder die Add-Ons abrufen und weitere Aufgaben durchführen können. Gehen Sie zum Abrufen eines [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Objekts wie folgt vor:
 
-* Rufen Sie in einer Einzelbenutzer-App (einer App, die nur im Kontext des Benutzers ausgeführt wird, der die App gestartet hat) mit der [GetDefault](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getdefault.aspx)-Methode ein **StoreContext**-Objekt ab, mit dem Sie auf Windows Store-bezogene Daten für den Benutzer zugreifen und diese verwalten können. Die meisten Universal Windows Platform (UWP)-Apps sind Einzelbenutzer-Apps.
+* Rufen Sie in einer Einzelbenutzer-App (einer App, die nur im Kontext des Benutzers ausgeführt wird, der die App gestartet hat) mit der statischen [GetDefault](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getdefault.aspx)-Methode ein **StoreContext**-Objekt ab, mit dem Sie auf Windows Store-bezogene Daten für den Benutzer zugreifen können. Die meisten Apps für die universelle Windows-Plattform (UWP) sind Einzelbenutzer-Apps.
 
   > [!div class="tabbedCodeSnippets"]
   ```csharp
   Windows.Services.Store.StoreContext context = StoreContext.GetDefault();
   ```
 
-* Verwenden Sie in einer [Mehrbenutzer-App](../xbox-apps/multi-user-applications.md) die [GetForUser](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getforuser.aspx)-Methode, um ein **StoreContext**-Objekt abzurufen, mit dem Sie für einen bestimmten Benutzer, der beim Verwenden der App mit seinem Microsoft-Konto angemeldet ist, auf Windows Store-bezogene Daten zugreifen und diese verwalten können. Im folgenden Beispiel wird ein **StoreContext**-Objekt für den ersten verfügbaren Benutzer abgerufen.
+* Verwenden Sie in einer [Mehrbenutzer-App](../xbox-apps/multi-user-applications.md) die statische [GetForUser](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getforuser.aspx)-Methode, um ein **StoreContext**-Objekt abzurufen, mit dem Sie für einen bestimmten Benutzer, der beim Verwenden der App mit seinem Microsoft-Konto angemeldet ist, auf Windows Store-bezogene Daten zugreifen können. Im folgenden Beispiel wird ein **StoreContext**-Objekt für den ersten verfügbaren Benutzer abgerufen.
 
   > [!div class="tabbedCodeSnippets"]
   ```csharp
@@ -77,9 +77,9 @@ Der Haupteinstiegspunkt in den **Windows.Services.Store**-Namespace ist die [Sto
   Windows.Services.Store.StoreContext context = StoreContext.GetForUser(users[0]);
   ```
 
->**Hinweis**&nbsp;&nbsp;Bei Windows-Desktopanwendungen, die die [Desktop-Brücke](https://developer.microsoft.com/windows/bridges/desktop) verwenden, müssen zum Konfigurieren des [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Objekts zusätzliche Schritte ausgeführt werden, bevor dieses verwendet werden kann. Weitere Informationen finden Sie unter [Verwenden der StoreContext-Klasse in einer Desktopanwendung, die die Desktop-Brücke verwendet](#desktop).
+>**Hinweis**&nbsp;&nbsp;Bei Windows-Desktopanwendungen, die die [Desktop-Brücke](https://developer.microsoft.com/windows/bridges/desktop) verwenden, müssen zum Konfigurieren des [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Objekts zusätzliche Schritte ausgeführt werden, bevor dieses verwendet werden kann. Weitere Informationen finden Sie in [diesem Abschnitt](#desktop).
 
-Nachdem Sie über ein [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Objekt verfügen, können Sie mit dem Aufrufen von Methoden zum Abrufen von Store-Produktinformationen für die aktuelle App und deren Add-Ons beginnen. Zudem können Sie dann Lizenzinformationen für die aktuelle App und deren Add-Ons abrufen, für den aktuellen Benutzer eine App oder ein Add-On erwerben sowie weitere Aufgaben durchführen. Weitere Informationen zu den allgemeinen Aufgaben, die Sie mit diesem Namespace ausführen können, finden Sie in den folgenden Artikeln:
+Nachdem Sie über ein [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Objekt verfügen, können Sie beginnen, Methoden dieses Objekts aufzurufen, um Store-Produktinformationen und Lizenzinformationen für die aktuelle App und deren Add-Ons abzurufen, eine App oder ein Add-On für den aktuellen Benutzer zu erwerben und weitere Aufgaben auszuführen. Weitere Informationen zu den allgemeinen Aufgaben, die Sie mit diesem Objekt ausführen können, finden Sie in den folgenden Artikeln:
 
 * [Abrufen von Produktinformationen zu Apps und Add-Ons](get-product-info-for-apps-and-add-ons.md)
 * [Abrufen von Lizenzinformationen zu Apps und Add-Ons](get-license-info-for-apps-and-add-ons.md)
@@ -87,7 +87,7 @@ Nachdem Sie über ein [StoreContext](https://msdn.microsoft.com/library/windows/
 * [Unterstützen von Endverbraucher-Add-On-Käufen](enable-consumable-add-on-purchases.md)
 * [Implementieren einer Testversion der App](implement-a-trial-version-of-your-app.md)
 
-Eine Beispiel-App, die das Verwenden des **Windows.Services.Store**-Namespace aufzeigt, finden Sie unter [Store-Beispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
+Eine Beispiel-App, die die Verwendung von **StoreContext** und anderen Typen im **Windows.Services.Store**-Namespace aufzeigt, finden Sie im [Store-Beispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
 
 <span id="implement-iap" />
 ### <a name="implement-in-app-purchases"></a>Implementieren von In-App-Käufen
@@ -98,7 +98,11 @@ So bieten Sie den Kunden mit dem **Windows.Services.Store**-Namespace in Ihrer A
 
 2. Schreiben Sie Code für Ihre App, um [Produktinformationen über Ihre App oder ein von der App angebotenes Add-On abzurufen](get-product-info-for-apps-and-add-ons.md). [Ermitteln Sie anschließend, ob die Lizenz aktiv ist](get-license-info-for-apps-and-add-ons.md) (d. h., ob der Benutzer über eine Lizenz für die App bzw. das Add-On verfügt). Wenn die Lizenz nicht aktiv ist, zeigen Sie eine Benutzeroberfläche an, auf der die App bzw. das Add-On dem Benutzer als In-App-Kauf angeboten wird.
 
-3. Wenn sich der Benutzer für den Kauf Ihrer App oder des Add-Ons entscheidet, verwenden Sie für den Erwerb des Produkts die entsprechende Methode. Wenn der Benutzer Ihre App oder ein dauerhaftes Add-On erwirbt, führen Sie die Schritte in [Unterstützen von In-App-Käufen von Apps und Add-Ons](enable-in-app-purchases-of-apps-and-add-ons.md) durch. Wenn der Benutzer ein Endverbraucher-Add-On erwirbt, befolgen Sie die Anweisungen in [Unterstützen von Endverbraucher-Add-On-Käufen](enable-consumable-add-on-purchases.md).
+3. Wenn sich der Benutzer für den Kauf Ihrer App oder Ihres Add-Ons entscheidet, verwenden Sie für den Erwerb des Produkts die geeignete Methode:
+
+  * Wenn der Benutzer Ihre App oder ein dauerhaftes Add-On erwirbt, befolgen Sie die Anweisungen in [Unterstützen von In-App-Käufen von Apps und Add-Ons](enable-in-app-purchases-of-apps-and-add-ons.md).
+
+  * Wenn der Benutzer ein konsumierbares Add-On erwirbt, befolgen Sie die Anweisungen in [Unterstützen von Endverbraucher-Add-On-Käufen](enable-consumable-add-on-purchases.md).
 
 4. Testen der Implementierung anhand der [Hinweise für Tests](#testing) in diesem Artikel.
 
@@ -111,24 +115,24 @@ So schränken Sie mit dem **Windows.Services.Store**-Namespace Features in einer
 
 2. Schreiben Sie Code für Ihre App, um [Produktinformationen über Ihre App oder ein von der App angebotenes Add-On abzurufen](get-product-info-for-apps-and-add-ons.md), und [ermitteln Sie anschließend, ob es sich bei der der App zugeordneten Lizenz um eine Testlizenz handelt](get-license-info-for-apps-and-add-ons.md).
 
-3. Handelt es sich um eine Testversion der App, schließen Sie bestimmte Features aus oder schränken Sie sie ein, und aktivieren Sie diese, wenn der Benutzer eine Lizenz für die Vollversion erwirbt. Weitere Informationen finden Sie unter [Implementieren einer Testversion der App](implement-a-trial-version-of-your-app.md).
+3. Handelt es sich um eine Testversion der App, schließen Sie bestimmte Features aus oder schränken Sie sie ein, und aktivieren Sie diese, wenn der Benutzer eine Lizenz für die Vollversion erwirbt. Weitere Informationen und ein Codebeispiel finden Sie unter [Implementieren einer Testversion der App](implement-a-trial-version-of-your-app.md).
 
 4. Testen der Implementierung anhand der [Hinweise für Tests](#testing) in diesem Artikel.
 
 <span id="testing" />
-### <a name="test-your-implementation"></a>Testen der Implementierung
+### <a name="test-your-in-app-purchase-or-trial-implementation"></a>Testen der Implementierung für den In-App-Kauf oder die Testversion
 
 Der **Windows.Services.Store**-Namespace stellt keine Klasse bereit, mit der Sie während der Tests Lizenzinformationen simulieren können. Stattdessen müssen Sie eine App im Store veröffentlichen und diese App auf Ihr Gerät für die Entwicklung herunterladen, um die Lizenz zum Testen zu verwenden. Dies weicht von Apps ab, die den **Windows.ApplicationModel.Store**-Namespace verwenden, da diese Apps während der Tests mithilfe der [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/hh779766)-Klasse Lizenzinformationen simulieren können.
 
 Wenn Ihre App APIs im **Windows.Services.Store**-Namespace zum Zugriff auf Informationen für die App und ihre Add-Ons verwendet, gehen Sie zum Testen des Codes wie folgt vor:
 
-1. Wenn Ihre App noch nicht veröffentlicht und im Store verfügbar ist, stellen Sie sicher, dass diese die minimalen Anforderungen des [Zertifizierungskits für Windows-Apps](https://developer.microsoft.com/windows/develop/app-certification-kit) erfüllt, [übermitteln Sie die App](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) an das Windows Dev Center-Dashboard, und stellen Sie sicher, dass Ihre App den Zertifizierungsprozess bestanden hat, damit sie im Store aufgeführt wird. Optional können Sie [Ihre App im Store ausblenden](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability), damit Sie während der Tests nicht für Kunden verfügbar ist.
+1. Wenn Ihre App noch nicht veröffentlicht und im Store verfügbar ist, stellen Sie sicher, dass diese die minimalen Anforderungen des [Zertifizierungskits für Windows-Apps](https://developer.microsoft.com/windows/develop/app-certification-kit) erfüllt, [übermitteln Sie die App](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) an das Windows Dev Center-Dashboard, und stellen Sie sicher, dass Ihre App den Zertifizierungsprozess bestanden hat, damit sie im Store verfügbar ist. Sie können [Ihre App im Store ausblenden](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability), damit sie während der Tests nicht für Kunden verfügbar ist.
 
 2. Stellen Sie anschließend sicher, dass die folgenden Schritte durchgeführt wurden:
 
   * Schreiben Sie Code für Ihre App, die die [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Klasse sowie weitere verwandte Typen im **Windows.Services.Store**-Namespace verwendet, um [In-App-Käufe](#implement-iap) oder [Testfunktionen](#implement-trial) zu implementieren.
 
-  * Wenn Ihre App über Add-Ons verfügt, die die Kunden kaufen können, [erstellen Sie Add-On-Übermittlungen im Dev Center-Dashboard für Ihre App](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions).
+  * Wenn Ihre App über ein Add-On verfügt, das Kunden kaufen können, [erstellen Sie eine Add-On-Übermittlung für Ihre App im Dev Center-Dashboard](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions).
 
   * Wenn Sie einige Features in der Testversion Ihrer App einschränken oder ausschließen möchten, [konfigurieren Sie die App im Windows Dev Center-Dashboard als kostenlose Testversion](../publish/set-app-pricing-and-availability.md#free-trial).
 
@@ -140,6 +144,8 @@ Wenn Ihre App APIs im **Windows.Services.Store**-Namespace zum Zugriff auf Infor
 
 5. Starten Sie in Visual Studio die Ausführung oder das Debuggen des Projekts. Der Code sollte App- und Add-On-Daten aus der Store-App abrufen, die Sie mit dem lokalen Projekt verknüpft haben. Wenn Sie zur Neuinstallation der App aufgefordert werden, folgen Sie den Anweisungen, und führen Sie dann das Projekt aus oder debuggen Sie es.
 
+>**Hinweis:**&nbsp;&nbsp;Nachdem Sie die Schritte 1 bis 5 ausgeführt haben, können Sie mit dem Aktualisieren des App-Codes fortfahren und dann das aktualisierte Projekt auf dem Entwicklungscomputer debuggen, ohne neue App-Pakete an den Store zu übermitteln. Sie müssen die Store-Version Ihrer App nur einmal auf den Entwicklungscomputer herunterladen, um die lokale Lizenz zu erhalten, die zum Testen verwendet wird. Sie übermitteln neue App-Pakete erst an den Store, nachdem Sie die Tests abgeschlossen haben und Ihren Kunden App-Features zur Verfügung stellen möchten, die sich auf In-App-Käufe oder Testversionen beziehen.
+
 <span id="receipts" />
 ### <a name="receipts-for-in-app-purchases"></a>Belege für In-App-Käufe
 
@@ -148,7 +154,7 @@ Der **Windows.Services.Store**-Namespace verfügt über keine API, mit der Sie i
 Wenn Sie In-App-Käufe mit dem **Windows.Services.Store**-Namespace implementieren und überprüfen möchten, ob ein bestimmter Kunde eine App oder ein Add-On erworben hat, können Sie die [Produktmethodenabfrage](query-for-products.md) in der [REST-API der Windows Store-Sammlung](view-and-grant-products-from-a-service.md) verwenden. Die für diese Methode zurückgegebenen Daten bestätigen, ob der jeweilige Kunde über eine Berechtigung für ein bestimmtes Produkt verfügt. Zudem werden Daten für die Transaktion bereitgestellt, im Rahmen derer der Benutzer das Produkt erworben hat. Die Windows Store-Sammlungs-API verwendet zum Abrufen dieser Informationen die Azure AD-Authentifizierung.
 
 <span id="desktop" />
-### <a name="using-the-storecontext-class-in-an-app-that-uses-the-desktop-bridge"></a>Verwenden der StoreContext-Klasse in einer App, die die Desktop-Brücke verwendet
+### <a name="using-the-storecontext-class-with-the-desktop-bridge"></a>Verwenden der StoreContext-Klasse mit der Desktop-Brücke
 
 Für Desktopanwendungen, die die [Desktop-Brücke](https://developer.microsoft.com/windows/bridges/desktop) verwenden, kann zum Implementieren von In-App-Käufen und Testversionen die [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Klasse verwendet werden. Wenn Sie jedoch über eine Win32-Desktopanwendung oder eine Desktopanwendung mit Fenster-Handle (HWND) verfügen, die dem Renderingframework zugeordnet ist (z. B. eine WPF-Anwendung), muss für Ihre Anwendung das **StoreContext**-Objekt konfiguriert werden, um anzugeben, welches Anwendungsfenster das Besitzerfenster für die vom Objekt angezeigten modalen Dialogfelder ist.
 
@@ -156,22 +162,24 @@ Viele **StoreContext**-Member (und andere Member verwandter Typen, auf die über
 
 Führen Sie die folgenden Schritte durch, um ein **StoreContext**-Objekt in einer Desktopanwendung zu konfigurieren, die die Desktop-Brücke verwendet.
 
-  1. Wenn die Anwendung in einer verwalteten Sprache wie z. B. C# oder Visual Basic geschrieben wurde, deklarieren Sie die [IInitializeWithWindow](https://msdn.microsoft.com/library/windows/desktop/hh706981.aspx)Schnittstelle im App-Code wie im folgenden Beispiel mit dem [ComImport](https://msdn.microsoft.com/library/system.runtime.interopservices.comimportattribute.aspx)-Attribut. In diesem Beispiel wird davon ausgegangen, dass Ihre Codedatei über eine **using**-Anweisung für den **System.Runtime.InteropServices**-Namespace verfügt.
+  1. Führen Sie einen der folgenden Schritte aus, um Ihrer App den Zugriff auf die [IInitializeWithWindow](https://msdn.microsoft.com/library/windows/desktop/hh706981.aspx)-Schnittstelle zu ermöglichen:
 
-    > [!div class="tabbedCodeSnippets"]
-    ```csharp
-    [ComImport]
-    [Guid("3E68D4BD-7135-4D10-8018-9FB6D9F33FA1")]
-    [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-    public interface IInitializeWithWindow
-    {
-        void Initialize(IntPtr hwnd);
-    }
-    ```
+    * Wenn die Anwendung in einer verwalteten Sprache wie z. B. C# oder Visual Basic geschrieben wurde, deklarieren Sie die **IInitializeWithWindow**-Schnittstelle im App-Code wie im folgenden C#-Beispiel mit dem [ComImport](https://msdn.microsoft.com/library/system.runtime.interopservices.comimportattribute.aspx)-Attribut. In diesem Beispiel wird davon ausgegangen, dass Ihre Codedatei über eine **using**-Anweisung für den **System.Runtime.InteropServices**-Namespace verfügt.
 
-    Wenn die Anwendung in systemeigenem Code wie z. B. C++ geschrieben wurde, müssen Sie die **IInitializeWithWindow**-Schnittstelle nicht importieren. Fügen Sie dem Code einfach einen Verweis auf die Headerdatei „shobjidl.h“ hinzu.
+      > [!div class="tabbedCodeSnippets"]
+      ```csharp
+      [ComImport]
+      [Guid("3E68D4BD-7135-4D10-8018-9FB6D9F33FA1")]
+      [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
+      public interface IInitializeWithWindow
+      {
+          void Initialize(IntPtr hwnd);
+      }
+      ```
 
-  2. Verwenden Sie die [GetDefault](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getdefault.aspx)-Methode (oder [GetForUser](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getforuser.aspx)), um ein [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Objekt wie weiter oben in diesem Artikel beschrieben abzurufen und dieses in ein [IInitializeWithWindow](https://msdn.microsoft.com/library/windows/desktop/hh706981.aspx)-Objekt umzuwandeln. Rufen Sie dann die [Initialize](https://msdn.microsoft.com/library/windows/desktop/hh706982.aspx)-Methode auf, und übergeben Sie das Handle des Fensters, das der Besitzer für alle modalen Dialogfeldern sein soll, die von den **StoreContext**-Methoden angezeigt werden. Im folgenden Beispiel wird aufgezeigt, wie das Handle des Hauptfensters der App an die Methode übergeben wird.
+    * Wenn Ihre Anwendung in C++ geschrieben ist, fügen Sie im Code einen Verweis auf die Headerdatei „shobjidl.h“ hinzu. Diese Headerdatei enthält die Deklaration der **IInitializeWithWindow**-Schnittstelle.
+
+  2. Rufen Sie wie weiter oben in diesem Artikel beschrieben mit der [GetDefault](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getdefault.aspx)-Methode (oder [GetForUser](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getforuser.aspx), falls Ihre App eine [Mehrbenutzer-App](../xbox-apps/multi-user-applications.md) ist) ein [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Objekt ab, und wandeln Sie es in ein [IInitializeWithWindow](https://msdn.microsoft.com/library/windows/desktop/hh706981.aspx)-Objekt um. Rufen Sie dann die [IInitializeWithWindow.Initialize](https://msdn.microsoft.com/library/windows/desktop/hh706982.aspx)-Methode auf, und übergeben Sie das Handle des Fensters, das der Besitzer aller modalen Dialoge sein soll, die durch **StoreContext**-Methoden angezeigt werden. Im folgenden C#-Beispiel wird gezeigt, wie das Handle des Hauptfensters der App an die Methode übergeben wird.
 
     > [!div class="tabbedCodeSnippets"]
     ```csharp
@@ -213,6 +221,6 @@ Jede App und jedes Add-On im Store weist eine zugeordnete **Store-ID** auf. Viel
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO4-->
 
 

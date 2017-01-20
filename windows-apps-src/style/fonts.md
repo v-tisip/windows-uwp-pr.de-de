@@ -6,34 +6,28 @@ ms.assetid: 1B8B90AD-CDC4-4997-ACDE-871C1E94A929
 label: Fonts
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: d7236006f2c620a4ff0de4e0f413f32a2eaf5687
-ms.openlocfilehash: b79a6f3ee32494f04fa472c0531c06aa0a60098b
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 0b25dc91a5ec82a83ae24a41854e9eeab8990128
 
 ---
 
+
+# <a name="fonts-for-uwp-apps"></a>Schriftarten für UWP-Apps
+
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-# Schriftarten für UWP-Apps
-
-In diesem Artikel sind die empfohlenen Schriftarten für UWP-Apps aufgeführt. Diese Schriftarten sind garantiert in allen Editionen von Windows10 verfügbar, die UWP-Apps unterstützen.
+In diesem Artikel sind die empfohlenen Schriftarten für UWP-Apps aufgeführt. Diese Schriftarten sind garantiert in allen Editionen von Windows 10 verfügbar, die UWP-Apps unterstützen.
 
 <div class="important-apis" >
 <b>Wichtige APIs</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/br209655"><strong>FontFamily-Eigenschaft</strong></a></li>
+<li>[**FontFamily-Eigenschaft**](https://msdn.microsoft.com/library/windows/apps/br209655)</li>
 </ul>
-
-</div>
 </div>
 
-
-
-Der [UWP-Typografieleitfaden](typography.md) empfiehlt für Apps die Schriftart „SegoeUI“. Zwar eignet sich SegoeUI für zahlreiche Apps, muss jedoch nicht überall verwendet werden. Sie können andere Schriftarten für bestimmte Szenarien verwenden, z.B. zum Lesen oder wenn Sie Text in bestimmten Sprachen anzeigen. 
-
-
-
+Der [UWP-Typografieleitfaden](typography.md) empfiehlt für Apps die Schriftart „Segoe UI“. Zwar eignet sich Segoe UI für zahlreiche Apps, muss jedoch nicht überall verwendet werden. Sie können andere Schriftarten für bestimmte Szenarien verwenden, z. B. zum Lesen oder wenn Sie Text in bestimmten Sprachen anzeigen. 
  
-## Serifenlose Schriftarten
+## <a name="sans-serif-fonts"></a>Serifenlose Schriftarten
 
 Serifenlose Schriftarten eignen sich für Überschriften und UI-Elemente. 
 
@@ -81,7 +75,7 @@ Serifenlose Schriftarten eignen sich für Überschriften und UI-Elemente.
 <tr class="even">
 <td style="font-family: Selawik;">Selawik</td>
 <td align="left">Normal, Semilight, Light, fett, Semibold</td>
-<td align="left">Open-Source-Schriftart, die metrisch kompatibel mit SegoeUI ist. Vorgesehen für Apps auf anderen Plattformen, auf denen SegoeUI nicht verfügbar ist. [Laden Sie Selawik über GitHub herunter.](https://github.com/Microsoft/Selawik)</td>
+<td align="left">Open-Source-Schriftart, die metrisch kompatibel mit Segoe UI ist. Vorgesehen für Apps auf anderen Plattformen, auf denen Segoe UI nicht verfügbar ist. [Laden Sie Selawik über GitHub herunter.](https://github.com/Microsoft/Selawik)</td>
 </tr>
 
 <tr class="even">
@@ -94,7 +88,7 @@ Serifenlose Schriftarten eignen sich für Überschriften und UI-Elemente.
 </table>
 
 
-## Serifenschriftarten
+## <a name="serif-fonts"></a>Serifenschriftarten
 
 Mit Serifenschriftarten lassen sich größere Textmengen gut darstellen. 
 
@@ -133,7 +127,7 @@ Mit Serifenschriftarten lassen sich größere Textmengen gut darstellen.
 </tbody>
 </table>
 
-## Symbole
+## <a name="symbols-and-icons"></a>Symbole
 
 
 <table>
@@ -165,7 +159,7 @@ Mit Serifenschriftarten lassen sich größere Textmengen gut darstellen.
 
 
 
-## Schriftarten für nicht lateinische Sprachen
+## <a name="fonts-for-non-latin-languages"></a>Schriftarten für nicht lateinische Sprachen
 
 Obwohl viele dieser Schriftarten auch lateinische Zeichen anbieten.
 
@@ -195,7 +189,7 @@ Obwohl viele dieser Schriftarten auch lateinische Zeichen anbieten.
 <td align="left">Fallbackschriftart für javanische Schrift</td>
 </tr>
 <tr class="odd">
-<td align="left" style="font-family: Leelawadee UI;">LeelawadeeUI</td>
+<td align="left" style="font-family: Leelawadee UI;">Leelawadee UI</td>
 <td align="left">Normal, Semilight, fett</td>
 <td align="left">Benutzeroberflächen-Schriftart für südostasiatische Schriften (Buginesisch, Laotisch, Khmer, Thailändisch).</td>
 </tr>
@@ -294,21 +288,17 @@ Obwohl viele dieser Schriftarten auch lateinische Zeichen anbieten.
 </table>
 
 
-## Globalisierung/Lokalisierung von Schriftarten
+## <a name="globalizinglocalizing-fonts"></a>Globalisierung/Lokalisierung von Schriftarten
 Verwenden Sie die [LanguageFont-Schriftartenersetzungs-APIs](https://msdn.microsoft.com/library/windows/apps/br206864) für den programmgesteuerten Zugriff auf die Empfohlenen Einstellungen für Familie, Grad, Breite und Schnitt der Schriftart für eine spezielle Sprache. Das LanguageFont-Objekt ermöglicht den Zugriff auf die richtigen Schriftartinformationen für verschiedene Inhaltskategorien: UI-Kopfzeilen, Benachrichtigungen, Textkörper und Schriftarten für den Textkörper, die vom Benutzer bearbeitet werden können. Weitere Informationen finden Sie unter [Anpassen von Layout und Schriftarten zur Globalisierungsunterstützung](https://msdn.microsoft.com/windows/uwp/globalizing/adjust-layout-and-fonts--and-support-rtl).
 
-<!--
-## Triggering a font download
-If you use a font that's not listed in this article, your app might trigger an automatic download of the font data from a Microsoft service. This can have performance and other impacts that may be a concern, particularly for mobile devices. In particular, note that this might consume some of a user's mobile data plan or result in mobile data usage costs. UWP apps that will available on mobile devices should never use fonts for UI content other than fonts in this list.
--->
 
-## Beispiele herunterladen
+## <a name="get-the-samples"></a>Beispiele herunterladen
 
 * [Beispiel: Herunterladbare Schriftarten](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlCloudFontIntegration)
 * [Beispiel: UI-Grundlagen](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
 * [Zeilenabstand mit DirectWrite-Beispiel](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/DWriteLineSpacingModes) 
 
-## Verwandte Artikel
+## <a name="related-articles"></a>Verwandte Artikel
 
 * [Anpassen von Layout und Schriftarten zur Globalisierungsunterstützung](https://msdn.microsoft.com/windows/uwp/globalizing/adjust-layout-and-fonts--and-support-rtl)
 * [Segoe MDL2](segoe-ui-symbol-font.md)
@@ -325,6 +315,6 @@ If you use a font that's not listed in this article, your app might trigger an a
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

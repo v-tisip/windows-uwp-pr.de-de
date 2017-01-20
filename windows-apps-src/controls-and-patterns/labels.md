@@ -6,11 +6,11 @@ ms.assetid: CFACCCD4-749F-43FB-947E-2591AE673804
 label: Labels
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: aa605b3862c33633904822bb88de7e647a2b3d5b
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 6757e612d5a04db52222cfb73c855a0a4f615bf6
 
 ---
-# Labels
+# <a name="labels"></a>Labels
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -20,33 +20,31 @@ Ein Label ist der Name bzw. Titel eines Steuerelements oder einer Gruppe verwand
 <b>Wichtige APIs</b><br/>
 <ul>
 <li>Header-Eigenschaft</li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/br209652"><strong>TextBlock-Klasse</strong></a></li>
+<li>[**TextBlock-Klasse**](https://msdn.microsoft.com/library/windows/apps/br209652)</li>
 </ul>
-
 </div>
-</div>
-
-
-
-
 
 
 In XAML verfügen zahlreiche Steuerelemente über eine integrierte Header-Eigenschaft, die Sie zum Anzeigen der Beschriftung verwenden. Für Steuerelemente ohne Header-Eigenschaft oder zum Beschriften von Steuerelementgruppen können Sie stattdessen ein [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)-Element verwenden.
 
 
-## Beispiel
+## <a name="example"></a>Beispiel
 
 
 ![Screenshot mit einem standardmäßigen Beschriftungssteuerelement](images/label-standard.png)
 
-## Empfehlungen
+## <a name="recommendations"></a>Empfehlungen
 
 
 -   Verwenden Sie eine Beschriftung, um den Benutzer darauf hinzuweisen, was er in ein benachbartes Steuerelement eingeben soll. Sie können auch eine Gruppe verwandter Steuerelemente beschriften oder in der Nähe davon Anweisungstexte anzeigen.
 -   Wenn Sie Steuerelemente beschriften, formulieren Sie die Beschriftung als Substantiv oder als präzisen substantivierten Ausdruck und nicht als Satz oder Anweisungstext. Vermeiden Sie die Verwendung von Doppelpunkten oder anderen Satzzeichen.
--   Wenn Sie in einer Beschriftung Anweisungstext nutzen, können Sie bei der Länge von Textzeichenfolgen und bei den Satzzeichen großzügiger sein.
+-   Wenn Sie in einer Bezeichnung Anweisungstext nutzen, können Sie bei der Länge von Textzeichenfolgen großzügiger sein und auch Satzzeichen verwenden.
 
-## Verwandte Themen
+
+## <a name="get-the-sample-code"></a>Beispielcode herunterladen
+* [Beispiel für XAML-UI-Grundlagen](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
+
+## <a name="related-topics"></a>Verwandte Themen
 * [Textsteuerelemente](text-controls.md)
 
 **Für Entwickler**
@@ -70,6 +68,6 @@ In XAML verfügen zahlreiche Steuerelemente über eine integrierte Header-Eigens
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

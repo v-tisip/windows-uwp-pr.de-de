@@ -6,11 +6,11 @@ ms.assetid: A4E05D92-1A0E-4CDD-84B9-92199FF8A8A3
 label: Flip view
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 7e52f9d379b909c4dd35bc535cbca2d7b8cca6ac
+ms.sourcegitcommit: 92c523c100a021808e01dffe4cd9b5c47c21b58a
+ms.openlocfilehash: 3ad89682248462efa5022467ceb330da03843de4
 
 ---
-# Flip-Ansicht
+# <a name="flip-view"></a>Flip-Ansicht
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -19,25 +19,18 @@ Verwenden Sie eine Flip-Ansicht zum Durchsuchen von Bildern oder anderen Element
 <div class="important-apis" >
 <b>Wichtige APIs</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx"><strong>FlipView-Klasse</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemssource.aspx"><strong>ItemsSource-Eigenschaft</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx"><strong>ItemTemplate-Eigenschaft</strong></a></li>
+<li>[**FlipView-Klasse**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx)</li>
+<li> [**ItemsSource-Eigenschaft**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemssource.aspx)</li>
+<li>[**ItemTemplate-Eigenschaft**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx)</li>
+
 </ul>
-
-</div>
 </div>
 
-
-
-
-
-
-
-## Ist dies das richtige Steuerelement?
+## <a name="is-this-the-right-control"></a>Ist dies das richtige Steuerelement?
 
 Die Flip-Ansicht ist zum Durchblättern von Bildern in kleinen bis mittelgroßen Sammlungen (bis zu ungefähr 25 Elementen) am besten geeignet. Beispiele für solche Sammlungen sind Elemente auf einer Seite mit Produktdetails oder Fotos in einem Fotoalbum. Obwohl die Flip-Ansicht für die meisten großen Auflistungen nicht empfohlen wird, kann das Steuerelement für das Anzeigen einzelner Bilder in einem Fotoalbum verwendet werden.
 
-## Beispiele
+## <a name="examples"></a>Beispiele
 
 Horizontales Browsen, das bei dem Element ganz links beginnt und bei dem dann nach rechts geblättert wird, ist das typische Layout für eine Flip-Ansicht. Dieses Layout eignet sich im Hochformat oder im Querformat auf allen Geräten:
 
@@ -47,13 +40,13 @@ Eine Flip-Ansicht kann auch vertikal durchsucht werden:
 
 ![Beispiel für eine vertikale Flip-Ansicht](images/controls_flipview_vertical.jpg)
 
-## Erstellen einer Flip-Ansicht
+## <a name="create-a-flip-view"></a>Erstellen einer Flip-Ansicht
 
 FlipView ist ein [ItemsControl](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.aspx), so dass es eine Sammlung von Elementen jeden Typs enthalten kann. Um die Ansicht auszufüllen, fügen Sie der Sammlung [**Items**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.items.aspx) Elemente hinzu, oder legen die Eigenschaft [**ItemsSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemssource.aspx) auf eine Datenquelle fest.
 
 Datenelemente werden in der Flip-Ansicht standardmäßig als Zeichenfolgendarstellung des Datenobjekts angezeigt, an das sie gebunden sind. Um genau anzugeben, wie Elemente in der Flip-Ansicht angezeigt werden, erstellen Sie eine [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.datatemplate.aspx), um das Layout der Steuerelemente zu definieren, die für die Anzeige eines einzelnen Elements verwendet werden. Die Steuerelemente im Layout können an Eigenschaften eines Datenobjekts gebunden werden. Es ist auch möglich, den Inhalt intern zu definieren. Sie weisen die DataTemplate der Eigenschaft [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx) von FlipView zu.
 
-### Hinzufügen von Elementen zur Sammlung Items
+### <a name="add-items-to-the-items-collection"></a>Hinzufügen von Elementen zur Sammlung Items
 
 Sie können der Sammlung [**Items**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.items.aspx) Elemente per XAML oder Code hinzufügen. In der Regel fügen Sie Elemente auf diese Weise hinzu, wenn Sie nur über eine geringe Anzahl von Elementen verfügen, die sich nicht ändern und einfach in XAML definiert werden können, oder wenn die Elemente zur Laufzeit im Code generiert werden. Hier sehen Sie eine Flip-Ansicht mit inline definierten Elementen.
 
@@ -80,7 +73,7 @@ Wenn Sie einer Flip-Ansicht Elemente hinzufügen, werden diese automatisch in ei
 
 Wenn Sie die Elemente in XAML definieren, werden sie der Sammlung Items automatisch hinzugefügt.
 
-### Festlegen der Quelle von Elementen
+### <a name="set-the-items-source"></a>Festlegen der Quelle von Elementen
 
 In der Regel verwenden Sie eine Flip-Ansicht, um Daten aus Quellen wie einer Datenbank oder dem Internet anzuzeigen. Um eine Flip-Ansicht aus einer Datenquelle zu füllen, legen Sie deren Eigenschaft [**ItemsSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemssource.aspx) auf eine Sammlung mit Datenelementen fest.
 
@@ -120,7 +113,7 @@ Hier wird die ItemsSource an eine [**CollectionViewSource**](https://msdn.micros
 
 >**Hinweis**&nbsp;&nbsp;Sie können eine Flip-Ansicht auffüllen, indem Sie entweder der Items-Sammlung Elemente hinzufügen oder die ItemsSource-Eigenschaft festlegen. Die beiden Methoden können jedoch nicht gleichzeitig verwendet werden. Wenn Sie die ItemsSource-Eigenschaft festlegen und dann ein Element in XAML hinzufügen, wird das hinzugefügte Element ignoriert. Wenn Sie die ItemsSource-Eigenschaft festlegen und der Items-Sammlung ein Element in Code hinzufügen, wird eine Ausnahme ausgelöst.
 
-### Festlegen der Darstellung der Elemente
+### <a name="specify-the-look-of-the-items"></a>Festlegen der Darstellung der Elemente
 
 Datenelemente werden in der Flip-Ansicht standardmäßig als Zeichenfolgendarstellung des Datenobjekts angezeigt, an das sie gebunden sind. In der Regel möchten Sie eine ansprechendere Darstellung Ihrer Daten anzeigen. Um genau anzugeben, wie Elemente in der Flip-Ansicht angezeigt werden, erstellen Sie eine [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.datatemplate.aspx). Der XAML-Code in der DataTemplate definiert das Layout und die Darstellung von Steuerelementen, die zum Anzeigen eines einzelnen Elements verwendet werden. Die Steuerelemente im Layout können an Eigenschaften eines Datenobjekts gebunden werden. Es ist auch möglich, den Inhalt intern zu definieren. Die DataTemplate ist der Eigenschaft [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx) des FlipView-Steuerelements zugeordnet.
 
@@ -149,7 +142,7 @@ Hier sehen Sie das durch die Datenvorlage definierte Layout.
 
 Datenvorlage für die Flip-Ansicht.
 
-### Festlegen der Ausrichtung der Flip-Ansicht
+### <a name="set-the-orientation-of-the-flip-view"></a>Festlegen der Ausrichtung der Flip-Ansicht
 
 Standardmäßig blättert die Flip-Ansicht horizontal. Damit sie vertikal blättert, verwenden Sie ein StackPanel-Element mit vertikaler Ausrichtung als [**ItemsPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemspanel.aspx) der Flip-Ansicht.
 
@@ -186,7 +179,7 @@ So sieht die Flip-Ansicht mit vertikale Ausrichtung aus.
 
 ![Beispiel für eine vertikale Flip-Ansicht](images/controls_flipview_vertical.jpg)
 
-## Hinzufügen einer Kontextanzeige
+## <a name="adding-a-context-indicator"></a>Hinzufügen einer Kontextanzeige
 
 Eine Kontextanzeige in einer Flip-Ansicht stellt einen nützlichen Referenzpunkt dar. Die Punkte in einer standardmäßigen Kontextanzeige sind nicht interaktiv. Wie in diesem Beispiel gezeigt, ist die beste Position in der Regel zentriert und unterhalb des Katalogs:
 
@@ -196,7 +189,9 @@ Für größere Sammlungen (10-25 Elemente) kann eine Anzeige mit mehr Kontext, z
 
 ![Beispiel für die Kontextanzeige](images/controls_contextindicator.jpg)
 
-## Empfohlene und nicht empfohlene Vorgehensweisen
+Beispielcode, der veranschaulicht, wie Sie einem FlipView-Element eine Kontextanzeige hinzufügen, finden Sie unter [Beispiel für XAML FlipView](http://go.microsoft.com/fwlink/p/?LinkID=311760).
+
+## <a name="dos-and-donts"></a>Empfohlene und nicht empfohlene Vorgehensweisen
 
 -   Flip-Ansichten sind am besten für Sammlungen von bis zu 25 Elementen geeignet.
 -   Vermeiden Sie ein Flip-Ansicht-Steuerelement für größere Sammlungen, da das wiederholte Blättern durch die einzelnen Elemente mühsam sein kann. Eine Ausnahme stellen Fotoalben dar, die häufig Hunderte oder Tausende von Bildern enthalten. Fotoalben wechseln nach dem Auswählen eines Fotos in der Rasteransicht fast immer zur Flip-Ansicht. Erwägen Sie für andere große Sammlungen eine [Listen- oder Rasteransicht](lists.md).
@@ -206,7 +201,7 @@ Für größere Sammlungen (10-25 Elemente) kann eine Anzeige mit mehr Kontext, z
     -   Der hervorgehobene Punkt gibt das aktuelle Element an. In der Regel ist der hervorgehobene Punkt weiß, und die anderen Punkte werden grau dargestellt.
     -   Die Anzahl von Punkten kann variieren. Verwenden Sie jedoch nicht so viele Punkte, dass der Benutzer die Orientierung verliert – in der Regel sollten höchstens 10 Punkte angezeigt werden.
 
-## Prüfliste für Globalisierung und Lokalisierung
+## <a name="globalization-and-localization-checklist"></a>Prüfliste für Globalisierung und Lokalisierung
 
 <table>
 <tr>
@@ -215,14 +210,17 @@ Für größere Sammlungen (10-25 Elemente) kann eine Anzeige mit mehr Kontext, z
 
 </table>
 
+## <a name="get-the-sample-code"></a>Beispielcode herunterladen
+* [Beispiel für XAML-UI-Grundlagen](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
 
-## Verwandte Artikel
+
+## <a name="related-articles"></a>Verwandte Artikel
 
 - [Richtlinien für Listen](lists.md)
 - [**FlipView-Klasse**](https://msdn.microsoft.com/library/windows/apps/br242678)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

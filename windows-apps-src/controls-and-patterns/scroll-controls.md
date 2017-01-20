@@ -6,11 +6,11 @@ ms.assetid: 1BFF0E81-BF9C-43F7-95F6-EFC6BDD5EC31
 label: Scroll bars
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 3dd5912bdd210751257bb9e495c5a95ce0be20a5
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 8ead56e84e21aaf5005530ed0509efa9440bce59
 
 ---
-# Bildlaufleisten
+# <a name="scroll-bars"></a>Bildlaufleisten
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -20,31 +20,28 @@ Ein Bildlaufanzeigesteuerelement umfasst so viele Inhalte, wie in den Viewport p
 
 **Hinweis**: Windows verfügt über zwei Visualisierungen für den Bildlauf, die vom Eingabemodus des Benutzers abhängen: Bildlaufanzeigen bei Verwendung von Touch- oder Gamepad und interaktive Bildlaufleisten bei anderen Eingabegeräten, darunter Maus, Tastatur und Eingabestift.
 
-![Beispiel für standardmäßige Bildlaufleisten und Verschiebungsindikatoren-Steuerelemente](images/SCROLLBAR.png)
+![Beispiel für standardmäßige Bildlaufleisten- und Verschiebungsindikatoren-Steuerelemente](images/SCROLLBAR.png)
 
+<div class="microsoft-internal-note">
+Die vollständigen Redlines finden Sie unter [Designdepot](http://designdepot/DesignDepot.FrontEnd/#/ML/Dashboard/1805).
+</div>
 
 <div class="important-apis" >
 <b>Wichtige APIs</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/br209527"><strong>ScrollViewer-Klasse</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.scrollbar.aspx"><strong>ScrollBar-Klasse</strong></a></li>
+<li>[**ScrollViewer-Klasse**](https://msdn.microsoft.com/library/windows/apps/br209527)</li>
+<li>[**ScrollBar-Klasse**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.scrollbar.aspx)</li>
 </ul>
-
-</div>
 </div>
 
 
-
-
-
-
-## Beispiele
+## <a name="examples"></a>Beispiele
 
 Ein [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.aspx) ermöglicht es, Inhalte in einem kleineren Bereich als der tatsächlichen Größe anzuzeigen. Wenn der Inhalt der Bildlaufanzeige nicht vollständig sichtbar ist, zeigt die Bildlaufanzeige Bildlaufleisten an, mit denen der Benutzer den sichtbaren Inhaltsbereich verschieben kann. Der Bereich, der den gesamten Inhalt der Bildlaufanzeige enthält, ist der *Umfang*. Der sichtbare Bereich des Inhalts ist der *Viewport*.
 
 ![Screenshot mit einem standardmäßigen Bildlaufleistensteuerelement](images/ScrollBar_Standard.jpg)
 
-## Erstellen einer Bildlaufanzeige
+## <a name="create-a-scroll-viewer"></a>Erstellen einer Bildlaufanzeige
 Um Ihrer Seite einen vertikalen Bildlauf hinzuzufügen, umschließen Sie den Seiteninhalt in einer Bildlaufanzeige.
 
 ```xaml
@@ -72,7 +69,7 @@ Dieser XAML-Code veranschaulicht das Einfügen eines Bilds in einer Bildlaufanze
 </ScrollViewer>
 ```
 
-## ScrollViewer in einer Steuerelementvorlage
+## <a name="scrollviewer-in-a-control-template"></a>ScrollViewer in einer Steuerelementvorlage
 
 Normalerweise ist das ScrollViewer-Steuerelement Teil von anderen Steuerelementen. Eine ScrollViewer-Komponente zeigt zusammen mit der [**ScrollContentPresenter**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollcontentpresenter.aspx)-Klasse zur Unterstützung nur dann einen Viewport sowie Bildlaufleisten an, wenn der Layoutbereich des Hoststeuerelements einschränkt wird und kleiner als die Größe des erweiterten Inhalts ist. Dies ist häufig bei Listen der Fall, daher enthalten [**ListView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listview.aspx)- und [**GridView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridview.aspx)-Vorlagen immer ScrollViewer. [**TextBox**
             ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx) und [**RichEditBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx) umfassen ebenfalls ScrollViewer in ihren Vorlagen.
@@ -106,12 +103,12 @@ Im Folgenden wird z. B. erläutert, wie Sie die vertikalen Bildlaufleisten für 
 <ListView ScrollViewer.VerticalScrollBarVisibility="Visible"/>
 ```
 
-In Fällen, in denen ein ScrollViewer explizit in Ihrem XAML-Code vorhanden ist, wie im folgenden Beispielcode dargestellt, müssen Sie keine Syntax mit angefügten Eigenschaften verwenden. Verwenden Sie einfach eine Attributsyntax, z.B. `<ScrollViewer VerticalScrollBarVisibility="Visible"/>`.
+In Fällen, in denen im XAML-Code wie im Beispielcode gezeigt ein ScrollViewer explizit vorhanden ist, müssen Sie keine Syntax mit angefügten Eigenschaften verwenden. Verwenden Sie einfach eine Attributsyntax, z. B. `<ScrollViewer VerticalScrollBarVisibility="Visible"/>`.
 
 
-## Empfehlungen
+## <a name="dos-and-donts"></a>Empfohlene und nicht empfohlene Vorgehensweisen
 
--   Verwenden Sie möglichst ein Design für den vertikalen Bildlauf statt dem horizontalen Bildlauf.
+-   Verwenden Sie möglichst ein Design für einen vertikalen Bildlauf und nicht für einen horizontalen Bildlauf.
 -   Verwenden Sie die Verschiebung entlang einer Achse für Inhaltsbereiche, die über eine Viewportgrenze (vertikal oder horizontal) hinausgehen. Verwenden Sie die Verschiebung entlang zweier Achsen für Inhaltsbereiche, die über beide Viewportgrenzen (vertikal und horizontal) hinausgehen.
 -   Verwenden Sie in der Listen- und Rasteransicht sowie im Kombinationsfeld, Listenfeld, Texteingabefeld und für Hubsteuerelemente die integrierte Bildlauffunktionalität. Wenn die Anzahl von Elementen so groß ist, dass sie nicht alle gleichzeitig angezeigt werden können, hat der Benutzer mit diesen Steuerelementen die Möglichkeit, einen vertikalen oder horizontalen Bildlauf durch die Elementliste durchzuführen.
 -   Wenn der Benutzer die Verschiebung in beide Richtungen um einen größeren Bereich herum ausführen und möglicherweise auch zoomen soll (wenn Sie dem Benutzer beispielsweise das Verschieben und Zoomen über ein Bild in voller Größe ermöglichen möchten, anstatt ein Bild mit an den Bildschirm angepasster Größe zu verwenden), positionieren Sie das Bild in einer Bildlaufanzeige.
@@ -119,13 +116,13 @@ In Fällen, in denen ein ScrollViewer explizit in Ihrem XAML-Code vorhanden ist,
 -   Bei Verwendung einer Bildlaufanzeige darf diese nur ein Objekt umfassen. Beachten Sie, dass es sich bei dem einen Objekt um einen Layoutbereich handeln kann, der wiederum eine beliebige Anzahl eigener Objekte enthält.
 -   Platzieren Sie kein [Pivot](tabs-pivot.md)-Steuerelement in einer Bildlaufanzeige, um Konflikte mit der Pivot-Bildlauflogik zu vermeiden.
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 **Für Entwickler (XAML)**
 * [**ScrollViewer-Klasse**](https://msdn.microsoft.com/library/windows/apps/br209527)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

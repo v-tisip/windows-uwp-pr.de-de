@@ -3,9 +3,14 @@ author: TylerMSFT
 title: "Unterstützung der Verknüpfung zwischen Web und App mit App-URI-Handlern"
 description: "Fördern Sie die Bindung der Nutzer an Ihrer App mithilfe von App-URI-Handlern."
 keywords: Deep-Links in Windows
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 3e57ca2cf0e7c788f5a8be12ebaf3e6b05a4fe51
-ms.openlocfilehash: e5c815ef0c776954e5b0d7f1cb9bd5e32e10356c
+ms.sourcegitcommit: ffa6ad17ee865dda5349565094c38e09dc42e0e3
+ms.openlocfilehash: 524a0897b6b8a8d17bb7493dc4d9e4357d8c1456
 
 ---
 
@@ -65,7 +70,7 @@ Das obige für eine JSON-Datei veranschaulicht die Verwendung von Platzhaltern. 
 
 | **Platzhalter** | **Beschreibung**               |
 |--------------|-------------------------------|
-| *****       | Repräsentiert eine beliebige Teilzeichenfolge      |
+| **\***       | Repräsentiert eine beliebige Teilzeichenfolge      |
 | **?**        | Steht für ein einzelnes Zeichen |
 
 Zum Beispiel, wenn `"excludePaths" : [ "/news/*", "/blog/*" ]` in dem obigen Beispiel gegeben ist, wird Ihre App alle Pfade unterstützen, die mit Ihrer Website-Adresse (z. B. msn.com) beginnen, **mit Ausnahme** der Pfade unter `/news/` und `/blog/`. **msn.com/weather.html** wird unterstützt, aber nicht ****msn.com/news/topnews.html****.
@@ -163,7 +168,7 @@ Schließen Sie die Anwendung, um sicherzustellen, dass die App aktiviert wird, w
 
 Stellen Sie sicher, dass Ihre app geschlossen ist. Drücken Sie die **Windows-Taste + R** zum Öffnen des **ausführen**-Dialogfelds fügen Sie den Link im Fenster ein. Ihre app sollte anstelle des Webbrowsers gestartet werden.
 
-Darüber hinaus können Sie Ihre App testen, indem Sie sie über eine andere app mithilfe der [LaunchUriAsync](https://msdn.microsoft.com/en-us/library/windows/apps/hh701480.aspx) API starten. Diese API können auch Sie nutzen, um dies auf Telefonen zu testen.
+Darüber hinaus können Sie Ihre App testen, indem Sie sie über eine andere app mithilfe der [LaunchUriAsync](https://msdn.microsoft.com/library/windows/apps/hh701480.aspx) API starten. Diese API können auch Sie nutzen, um dies auf Telefonen zu testen.
 
 Wenn Sie der protocol activation logic zu folgen möchten, legen Sie einen Haltepunkt im **OnActivated** -Ereignishandler fest.
 
@@ -183,18 +188,18 @@ Wenn Sie der protocol activation logic zu folgen möchten, legen Sie einen Halte
 
 - Alle quergeladenen Apps mit AppUriHandlern werden validierte Links für den Host on Install haben Sie müssen kein JSON-Datei hochgeladen haben, um das Feature zu testen.
 
-- Dieses Feature funktioniert, wann immer Ihre App eine UWP-App ist, die mit  [LaunchUriAsync](https://msdn.microsoft.com/en-us/library/windows/apps/hh701480.aspx) gestartet ist, oder eine Windows-Desktop-App, gestartet mit  [ShellExecuteEx](https://msdn.microsoft.com/en-us/library/windows/desktop/bb762154(v=vs.85).aspx). Wenn die URL einen registrierten URI App Handler entspricht, wird die App anstelle des Browsers gestartet werden.
+- Dieses Feature funktioniert, wann immer Ihre App eine UWP-App ist, die mit  [LaunchUriAsync](https://msdn.microsoft.com/library/windows/apps/hh701480.aspx) gestartet ist, oder eine Windows-Desktop-App, gestartet mit  [ShellExecuteEx](https://msdn.microsoft.com/library/windows/desktop/bb762154(v=vs.85).aspx). Wenn die URL einen registrierten URI App Handler entspricht, wird die App anstelle des Browsers gestartet werden.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Windows.Protocol-Registrierung](https://msdn.microsoft.com/en-us/library/windows/apps/br211458.aspx)
+[Windows.Protocol-Registrierung](https://msdn.microsoft.com/library/windows/apps/br211458.aspx)
 
-[Behandeln der URI-Aktivierung](https://msdn.microsoft.com/en-us/windows/uwp/launch-resume/handle-uri-activation)
+[Behandeln der URI-Aktivierung](https://msdn.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
 
 [Das Association Launching Sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AssociationLaunching) veranschaulicht die Verwendung des LaunchUriAsync() API.
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

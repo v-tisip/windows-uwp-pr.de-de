@@ -4,47 +4,23 @@ ms.assetid: 2383296e-c3d7-4b49-bcd2-621391228fdb
 description: Hier erfahren Sie, wie Sie mit den Ereignissen der AdControl-Klasse umgehen.
 title: AdControl-Ereignisse in JavaScript
 translationtype: Human Translation
-ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
-ms.openlocfilehash: d24030dfae92451924000ba4f1ac19cf6c4d4abe
-
+ms.sourcegitcommit: f88a71491e185aec84a86248c44e1200a65ff179
+ms.openlocfilehash: e652fe6b5f295c0f4b4808e5a4605c13fdcfea68
 
 ---
 
-# AdControl-Ereignisse in JavaScript
+# <a name="adcontrol-events-in-javascript"></a>AdControl-Ereignisse in JavaScript
 
-
-
-
-Die folgenden Beispiele veranschaulichen, wie die Ereignisse der [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx)-Klasse behandelt werden. In diesen Beispielen wird davon ausgegangen, dass Sie die Ereignishandler zuvor den **AdControl**-Ereignissen zugewiesen haben. Weitere Informationen hierzu finden Sie unter [Beispiel für HTML-Eigenschaften](html-properties-example.md).
+Die folgenden Beispiele veranschaulichen die grundlegenden Ereignishandler für die folgenden [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx)-Ereignisse: [ErrorOccurred](https://msdn.microsoft.com/library/windows/apps/xaml/microsoft.advertising.winrt.ui.adcontrol.erroroccurred.aspx), [AdRefreshed](https://msdn.microsoft.com/library/windows/apps/xaml/microsoft.advertising.winrt.ui.adcontrol.adrefreshed.aspx) und [IsEngagedChanged](https://msdn.microsoft.com/library/windows/apps/xaml/microsoft.advertising.winrt.ui.adcontrol.isengagedchanged.aspx). In diesen Beispielen wird davon ausgegangen, dass Sie die Ereignishandler bereits Ereignissen in Ihrem HTML-Markup zugewiesen haben. Weitere Informationen hierzu finden Sie unter [Beispiel für HTML-Eigenschaften](html-properties-example.md).
 
 In JavaScript müssen die **AdControl**-Ereignisse von der [MarkSupportedForProcessing](http://msdn.microsoft.com/library/windows/apps/Hh967819.aspx)-Funktion eingeschlossen werden. Weitere Informationen zum Behandeln von Ereignissen in JavaScript finden Sie unter [Codieren einfacher Apps (HTML)](https://msdn.microsoft.com/library/windows/apps/hh780660.aspx#adding-event-handlers).
 
-## Beispiele
+## <a name="examples"></a>Beispiele
 
-``` syntax
-WinJS.Utilities.markSupportedForProcessing(
-window.myAdError = function (sender, msg) {
-  // place code here for when there is an error serving an ad.
-  // e.g. you may opt to show a default experience, or reclaim the div for other purposes.
-});
+> [!div class="tabbedCodeSnippets"]
+[!code-javascript[AdControl](./code/AdvertisingSamples/AdControlSamples/js/main.js#EventHandlers)]
 
-WinJS.Utilities.markSupportedForProcessing(
-window.myAdRefreshed = function (sender) {
-  // place code here that you wish to execute when the ad refreshes.
-});
-
-WinJS.Utilities.markSupportedForProcessing(
-window.myAdEngagedChanged = function (sender) {
-  if (true == sender.isEngaged) {
-    // code here for when user engaged with ad, e.g. if a game, pause it.
-  }
-  else {
-    // user no longer engaged with ad, include code to unpause.
-  }
-});
-```
-
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Anzeigenbeispiele bei GitHub](http://aka.ms/githubads)
 * [AdControl-Fehlerbehandlung](adcontrol-error-handling.md)
@@ -56,6 +32,6 @@ window.myAdEngagedChanged = function (sender) {
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

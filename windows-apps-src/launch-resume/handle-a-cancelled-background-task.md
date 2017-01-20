@@ -4,14 +4,14 @@ title: Behandeln einer abgebrochenen Hintergrundaufgabe
 description: "Hier erfahren Sie, wie Sie eine Hintergrundaufgabe erstellen, die Abbruchanforderungen erkennt, die Ausführung beendet und den Abbruch mithilfe des beständigen Speichers an die App meldet."
 ms.assetid: B7E23072-F7B0-4567-985B-737DD2A8728E
 translationtype: Human Translation
-ms.sourcegitcommit: 7d1c160f8b725cd848bf8357325c6ca284b632ae
-ms.openlocfilehash: a8fe98ab60012c2183e8394bfc8d7089f51552f0
+ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
+ms.openlocfilehash: ba40aefe83a02d29150dd25e1303ec15bb032b8c
 
 ---
 
-# Behandeln einer abgebrochenen Hintergrundaufgabe
+# <a name="handle-a-cancelled-background-task"></a>Behandeln einer abgebrochenen Hintergrundaufgabe
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 **Wichtige APIs**
 
@@ -21,11 +21,11 @@ ms.openlocfilehash: a8fe98ab60012c2183e8394bfc8d7089f51552f0
 
 Hier erfahren Sie, wie Sie eine Hintergrundaufgabe erstellen, die mithilfe des beständigen Speichers Abbruchanforderungen erkennt, die Ausführung beendet und den Abbruch an die App meldet.
 
-Dieses Thema setzt voraus, dass Sie bereits eine Hintergrundaufgabenklasse erstellt haben, einschließlich der Run-Methode, die für die Hintergrundaufgabe als Einstiegspunkt verwendet wird. Um schnell mit dem Erstellen einer Hintergrundaufgabe zu beginnen, lesen Sie [Erstellen und Registrieren einer Hintergrundaufgabe außerhalb von Prozessen](create-and-register-an-outofproc-background-task.md) oder [Erstellen und Registrieren einer Hintergrundaufgabe innerhalb von Prozessen](create-and-register-an-inproc-background-task.md). Ausführlichere Informationen zu Bedingungen und Triggern finden Sie unter [Unterstützen der App mit Hintergrundaufgaben](support-your-app-with-background-tasks.md).
+Dieses Thema setzt voraus, dass Sie bereits eine Hintergrundaufgabenklasse erstellt haben, einschließlich der Run-Methode, die für die Hintergrundaufgabe als Einstiegspunkt verwendet wird. Um schnell mit dem Erstellen einer Hintergrundaufgabe zu beginnen, lesen Sie [Erstellen und Registrieren einer Hintergrundaufgabe außerhalb von Prozessen](create-and-register-a-background-task.md) oder [Erstellen und Registrieren einer Hintergrundaufgabe innerhalb von Prozessen](create-and-register-an-inproc-background-task.md). Ausführlichere Informationen zu Bedingungen und Triggern finden Sie unter [Unterstützen der App mit Hintergrundaufgaben](support-your-app-with-background-tasks.md).
 
 Dieses Thema gilt auch für Hintergrundaufgaben innerhalb von Prozessen. Ersetzen Sie die Run()-Methode jedoch durch OnBackgroundActivated(). Hintergrundaufgaben innerhalb von Prozessen benötigen keinen beständigen Speicher, um den Abbruch zu signalisieren, da dieser mithilfe des App-Status übermittelt werden kann, wenn die Hintergrundaufgabe im selben Prozess ausgeführt wird, wie die Vordergrund-App.
 
-## Verwenden der Methode „OnCanceled“ zum Erkennen von Abbruchanforderungen
+## <a name="use-the-oncanceled-method-to-recognize-cancellation-requests"></a>Verwenden der Methode „OnCanceled“ zum Erkennen von Abbruchanforderungen
 
 Schreiben Sie eine Methode für die Behandlung des Abbruchereignisses.
 
@@ -58,7 +58,7 @@ Fügen Sie der Hintergrundaufgabenklasse eine Kennzeichenvariable mit dem Namen 
 >     volatile bool CancelRequested;
 > ```
 
-Legen Sie in der OnCanceled-Methode, die Sie in Schritt1 erstellt haben, die Kennzeichenvariable **\_CancelRequested** auf **true** fest.
+Legen Sie in der OnCanceled-Methode, die Sie in Schritt 1 erstellt haben, die Kennzeichenvariable **\_CancelRequested** auf **true** fest.
 
 Die vollständige OnCanceled-Methode des [Beispiels zur Hintergrundaufgabe]( http://go.microsoft.com/fwlink/p/?linkid=227509) legt **\_CancelRequested** auf **true** fest und gibt eine möglicherweise hilfreiche Debugmeldung aus:
 
@@ -86,7 +86,7 @@ Die vollständige OnCanceled-Methode des [Beispiels zur Hintergrundaufgabe]( htt
 >     }
 > ```
 
-Registrieren Sie in der Run-Methode der Hintergrundaufgabe die OnCanceled-Ereignishandlermethode, bevor Sie mit der Arbeit beginnen. Für eine Hintergrundaufgabe innerhalb von Prozessen empfiehlt sich diese Registrierung im Rahmen der Anwendungsinitialisierung. Verwenden Sie z.B. folgende Codezeile:
+Registrieren Sie in der Run-Methode der Hintergrundaufgabe die OnCanceled-Ereignishandlermethode, bevor Sie mit der Arbeit beginnen. Für eine Hintergrundaufgabe innerhalb von Prozessen empfiehlt sich diese Registrierung im Rahmen der Anwendungsinitialisierung. Verwenden Sie z. B. folgende Codezeile:
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -96,7 +96,7 @@ Registrieren Sie in der Run-Methode der Hintergrundaufgabe die OnCanceled-Ereign
 >     taskInstance->Canceled += ref new BackgroundTaskCanceledEventHandler(this, &SampleBackgroundTask::OnCanceled);
 > ```
 
-## Behandeln des Abbruchs durch Beenden der Hintergrundaufgabe
+## <a name="handle-cancellation-by-exiting-your-background-task"></a>Behandeln des Abbruchs durch Beenden der Hintergrundaufgabe
 
 Wenn eine Abbruchanforderung empfangen wird, muss die Methode für die Hintergrundverarbeitung angehalten und beendet werden, indem erkannt wird, dass **\_cancelRequested** auf **true** festgelegt wurde. Bei Hintergrundaufgaben innerhalb von Prozessen bedeutet dies ein Zurückwechseln aus der `OnBackgroundActivated()`-Methode. Bei Hintergrundaufgaben außerhalb von Prozessen bedeutet dies ein Zurückwechseln aus der `Run()`-Methode.
 
@@ -200,13 +200,13 @@ Das [Beispiel zur Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=6
 >     }
 > ```
 
-## Anmerkungen
+## <a name="remarks"></a>Anmerkungen
 
 Sie können das [Beispiel zur Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) herunterladen, um diese Codebeispiele im Kontext von Methoden anzuzeigen.
 
 Zu Demonstrationszwecken enthält der Beispielcode nur Teile der Run-Methode (und des Rückruftimers) aus dem [Beispiel zur Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666).
 
-## Beispiel der Run-Methode
+## <a name="run-method-example"></a>Beispiel der Run-Methode
 
 Im Folgenden sind die vollständige Run-Methode und den Timerrückruf-Code aus dem [Beispiel zur Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) aufgeführt:
 
@@ -327,12 +327,12 @@ Im Folgenden sind die vollständige Run-Methode und den Timerrückruf-Code aus d
 > }
 > ```
 
-> **Hinweis**: Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die Universelle Windows-Plattform (UWP) schreiben. Informationen zur Entwicklung unter Windows8.x oder Windows Phone8.x finden Sie in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **Hinweis**: Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die Universelle Windows-Plattform (UWP) schreiben. Informationen zur Entwicklung für Windows 8.x oder Windows Phone 8.x finden Sie in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
-* [Erstellen und Registrieren einer Hintergrundaufgabe innerhalb von Prozessen](create-and-register-an-inproc-background-task.md).
-* [Erstellen und Registrieren einer Hintergrundaufgabe außerhalb von Prozessen](create-and-register-an-outofproc-background-task.md)
+* [Erstellen und Registrieren einer Hintergrundaufgabe innerhalb des Prozesses](create-and-register-an-inproc-background-task.md)
+* [Erstellen und Registrieren einer Hintergrundaufgabe außerhalb von Prozessen](create-and-register-a-background-task.md)
 * [Deklarieren von Hintergrundaufgaben im Anwendungsmanifest](declare-background-tasks-in-the-application-manifest.md)
 * [Richtlinien für Hintergrundaufgaben](guidelines-for-background-tasks.md)
 * [Überwachen des Status und Abschlusses von Hintergrundaufgaben](monitor-background-task-progress-and-completion.md)
@@ -347,6 +347,6 @@ Im Folgenden sind die vollständige Run-Methode und den Timerrückruf-Code aus d
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -3,8 +3,8 @@ author: msatranjr
 title: Bluetooth-Werbung
 description: "Dieser Abschnitt enthält Artikel zur Integration von Bluetooth Low Energy (LE)-Ankündigungen in Apps für die Universelle Windows-Plattform (UWP) mithilfe der AdvertisementWatcher- and AdvertisementPublisher-APIs."
 translationtype: Human Translation
-ms.sourcegitcommit: b1493d3d0d61a5fc45ab563b56bffa43650bbed9
-ms.openlocfilehash: feda9b20b4cbc265832bdb51f90546d9e1f668e8
+ms.sourcegitcommit: b454e08015ea9bd6240c836563b1fec78e38dc2c
+ms.openlocfilehash: e21567bf2ffa5b05861cf96099290e1bb66dbf03
 
 ---
 
@@ -39,7 +39,7 @@ Um Bluetooth LE-Grundfunktionalität in einer App für die Universelle Windows-P
 
 Bluetooth LE-Ankündigungen ermöglichen Ihrem Gerät, konstant eine spezifische Nutzlast („Ankündigung“ genannt) zu signalisieren. Diese Ankündigung kann von jedem Bluetooth LE-kompatiblen Gerät in der Nähe erkannt werden, wenn es für den Empfang dieser spezifischen Ankündigung eingerichtet wurde.
 
-**Hinweis** Zum Schutz der Privatsphäre der Benutzer ist die Lebenszeit der Ankündigung an diejenige der App gebunden. Sie können einen BluetoothLEAdvertisementPublisher erstellen und in einer Hintergrundaufgabe „Start“ aufrufen, um die Ankündigung im Hintergrund auszuführen. Weitere Informationen zu Hintergrundaufgaben finden Sie unter [Starten, Fortsetzen und Hintergrundaufgaben](https://msdn.microsoft.com/en-us/windows/uwp/launch-resume/index).
+**Hinweis** Zum Schutz der Privatsphäre der Benutzer ist die Lebenszeit der Ankündigung an diejenige der App gebunden. Sie können einen BluetoothLEAdvertisementPublisher erstellen und in einer Hintergrundaufgabe „Start“ aufrufen, um die Ankündigung im Hintergrund auszuführen. Weitere Informationen zu Hintergrundaufgaben finden Sie unter [Starten, Fortsetzen und Hintergrundaufgaben](https://msdn.microsoft.com/windows/uwp/launch-resume/index).
 
 ### <a name="basic-publishing"></a>Grundlegende Veröffentlichung
 
@@ -155,6 +155,6 @@ Dieses kann zwar in eine ungefähre Entfernung übersetzt werden, sollte jedoch 
 Eine Alternative zur Beurteilung der reinen Entfernung besteht im Definieren von „Buckets“. Sender tendieren dazu, 0 – 50 dBm zu melden, wenn sie sehr nahe sind,-50 – -90 dBm, wenn sie sich in einem mittleren Abstand befinden, und weniger als -90 dBm, wenn sie weit entfernt sind. Tests sind die beste Möglichkeit, diese Buckets für Ihre App festzulegen.
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

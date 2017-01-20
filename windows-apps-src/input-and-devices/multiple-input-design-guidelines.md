@@ -6,12 +6,13 @@ ms.assetid: 03EB5388-080F-467C-B272-C92BE00F2C69
 label: Multiple inputs
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: d4238e0d1becee719148b38acf5a91d74230601d
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: a433660665eeaa0caad3f380a587de89b8c74441
 
 ---
 
-# Mehrfacheingaben
+# <a name="multiple-inputs"></a>Mehrfacheingaben
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Ebenso wie Menschen untereinander mit einer Mischung aus Sprache und Gesten kommunizieren, kann sich auch bei der Interaktion mit einer App die Verwendung mehrerer Eingabearten und -modi als hilfreich erweisen.
 
@@ -24,12 +25,12 @@ Um zu beginnen, sollten Sie die verschiedenen Szenarien berücksichtigen, in den
 -   Werden alle Eingabemethoden jederzeit unterstützt? Mit bestimmten Steuerelementen? Zu bestimmten Zeiten oder Umständen?
 -   Hat eine Eingabemethode Priorität?
 
-## Einzel- (oder Exklusiv)-Modusinteraktionen
+## <a name="single-or-exclusive-mode-interactions"></a>Einzel- (oder Exklusiv)-Modusinteraktionen
 
 
 Mit Einzelmodusinteraktionen werden mehrere Eingabetypen unterstützt, es kann jedoch nur einer pro Aktion verwendet werden. Z. B. Spracherkennung für Befehle und Gesten für die Navigation; oder die Texteingabe per Touch oder Gesten, je nach Näherung.
 
-## Kombinierte Interaktionen
+## <a name="multimodal-interactions"></a>Kombinierte Interaktionen
 
 
 Mit kombinierten Interaktionen werden nacheinander mehrere Eingabemethoden verwendet, um eine einzelne Aktion auszuführen.
@@ -45,6 +46,6 @@ Der Benutzer wählt ein Foto, indem er dieses gedrückt hält, und sagt dann „
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

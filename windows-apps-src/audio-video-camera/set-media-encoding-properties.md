@@ -1,17 +1,17 @@
 ---
 author: drewbatgit
 ms.assetid: 09BA9250-A476-4803-910E-52F0A51704B1
-description: "In diesem Artikel erfahren Sie, wie Sie die IMediaEncodingProperties-Schnittstelle verwenden, um die Auflösung und Framerate des Kameravorschau-Datenstroms sowie von aufgenommenen Fotos und Videos festzulegen."
-title: "Festlegen von Mediencodierungseigenschaften für MediaCapture"
+description: "In diesem Artikel erfahren Sie, wie Sie die IMediaEncodingProperties-Schnittstelle verwenden, um die Auflösung und Bildfrequenz des Kameravorschau-Datenstroms und aufgenommener Fotos und Videos festzulegen."
+title: "Festlegen von Format, Auflösung und Bildfrequenz für „MediaCapture“"
 translationtype: Human Translation
-ms.sourcegitcommit: 599e7dd52145d695247b12427c1ebdddbfc4ffe1
-ms.openlocfilehash: 1b20578fe52c004a55c5099ccb89e8c180571009
+ms.sourcegitcommit: 6c3ed4ab773fe821acaee7d5b8c70fdc8770de81
+ms.openlocfilehash: 828cbddd9568bd4e9d0a571880a867afff293e34
 
 ---
 
-# Festlegen von Mediencodierungseigenschaften für MediaCapture
+# <a name="set-format-resolution-and-frame-rate-for-mediacapture"></a>Festlegen von Format, Auflösung und Bildfrequenz für „MediaCapture“
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 In diesem Artikel erfahren Sie, wie Sie die [**IMediaEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701011)-Schnittstelle verwenden, um die Auflösung und Framerate des Kameravorschau-Datenstroms sowie von aufgenommenen Fotos und Videos festzulegen. In ihm wird auch gezeigt, wie Sie sicherstellen, dass das Seitenverhältnis des Vorschaudatenstroms mit dem Seitenverhältnis der aufgenommenen Medien übereinstimmt.
@@ -23,7 +23,7 @@ Der Code in diesem Artikel wurde aus dem [CameraResolution-Beispiel](http://go.m
 > [!NOTE] 
 > Dieser Artikel baut auf Konzepten und Codebeispielen auf, die unter [Allgemeine Foto-, Video- und Audioaufnahme mit „MediaCapture“](basic-photo-video-and-audio-capture-with-MediaCapture.md) erläutert werden. Dort werden die Schritte für die Implementierung einer grundlegenden Foto- und Videoaufnahme beschrieben. Es wird empfohlen, dass Sie sich mit dem grundlegenden Muster für die Medienerfassung in diesem Artikel vertraut machen, bevor Sie in fortgeschrittene Aufnahmeszenarien einsteigen. Bei dem Code in diesem Artikel wird davon ausgegangen, dass Ihre App bereits eine Instanz von MediaCapture aufweist, die ordnungsgemäß initialisiert wurde.
 
-## Eine Hilfsklasse mit Mediencodierungseigenschaften
+## <a name="a-media-encoding-properties-helper-class"></a>Eine Hilfsklasse mit Mediencodierungseigenschaften
 
 Durch das Erstellen einer einfachen Hilfsklasse zum Umschließen der Funktionalität der [**IMediaEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701011)-Schnittstelle ist es einfacher, eine Reihe von Codierungseigenschaften auszuwählen, die bestimmte Kriterien erfüllen. Aufgrund des folgenden Verhaltens des Codierungseigenschaftenfeatures ist diese Hilfsklasse besonders hilfreich:
 
@@ -38,13 +38,13 @@ Sie müssen den [**Windows.Media.MediaProperties**](https://msdn.microsoft.com/l
 
 [!code-cs[StreamPropertiesHelper](./code/BasicMediaCaptureWin10/cs/StreamPropertiesHelper.cs#SnippetStreamPropertiesHelper)]
 
-## Bestimmen, ob der Vorschau- und Aufnahmedatenstrom voneinander unabhängig sind
+## <a name="determine-if-the-preview-and-capture-streams-are-independent"></a>Bestimmen, ob der Vorschau- und Aufnahmedatenstrom voneinander unabhängig sind
 
 Auf einigen Geräten wird für den Vorschau- und Aufnahmedatenstrom der gleiche Hardwarekontakt verwendet. Bei diesen Geräten werden durch Festlegen der Codierungseigenschaften eines Datenstroms auch die Codierungseigenschaften des anderen Datenstroms festgelegt. Für Geräte, die unterschiedliche Hardwarekontakte für die Aufnahme und Vorschau verwenden, können die Eigenschaften für jeden Datenstrom unabhängig voneinander festgelegt werden. Mit dem folgenden Code können Sie bestimmen, ob der Vorschau- und Aufnahmedatenstrom unabhängig voneinander sind. Sie sollten die Benutzeroberfläche anpassen, um abhängig vom Ergebnis dieses Tests das eigenständige Festlegen der Datenströme zu aktivieren oder zu deaktivieren.
 
 [!code-cs[CheckIfStreamsAreIdentical](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCheckIfStreamsAreIdentical)]
 
-## Abrufen einer Liste der verfügbaren Datenstromeigenschaften
+## <a name="get-a-list-of-available-stream-properties"></a>Abrufen einer Liste der verfügbaren Datenstromeigenschaften
 
 Rufen Sie eine Liste der verfügbaren Datenstromeigenschaften für ein Aufnahmegerät ab. Hierzu rufen Sie den [**VideoDeviceController**](https://msdn.microsoft.com/library/windows/apps/br226825) für das [MediaCapture](capture-photos-and-video-with-mediacapture.md)-Objekt der App ab, rufen [**GetAvailableMediaStreamProperties**](https://msdn.microsoft.com/library/windows/apps/br211994) auf und übergeben einen der [**MediaStreamType**](https://msdn.microsoft.com/library/windows/apps/br226640)-Werte, d. h. **VideoPreview**, **VideoRecord** oder **Photo** In diesem Beispiel wird für jeden der von **GetAvailableMediaStreamProperties** zurückgegebenen [**IMediaEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701011)-Werte unter Verwendung von Linq-Syntax eine Liste von **StreamPropertiesHelper**-Objekten erstellt, die zuvor in diesem Artikel definiert wurden. In diesem Beispiel werden Linq-Erweiterungsmethoden verwendet, um die zurückgegebenen Eigenschaften zunächst nach Auflösung und dann nach Bildfrequenz zu sortieren.
 
@@ -52,7 +52,7 @@ Wenn für die App bestimmte Anforderungen an die Auflösung oder Bildfrequenz ge
 
 [!code-cs[PopulateStreamPropertiesUI](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetPopulateStreamPropertiesUI)]
 
-## Festlegen der gewünschten Datenstromeigenschaften
+## <a name="set-the-desired-stream-properties"></a>Festlegen der gewünschten Datenstromeigenschaften
 
 Weisen Sie den Videogerätecontroller an, die gewünschten Codierungseigenschaften zu verwenden, indem Sie [**SetMediaStreamPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/hh700895) aufrufen und den **MediaStreamType**-Wert übergeben, der angibt, ob Foto-, Video- oder Vorschaueigenschaften festgelegt werden sollen. In diesem Beispiel werden die angeforderten Codierungseigenschaften festgelegt, wenn der Benutzer ein Element in einem der **ComboBox**-Objekte auswählt, die mithilfe der **PopulateStreamPropertiesUI**-Hilfsmethode aufgefüllt wurden.
 
@@ -62,7 +62,7 @@ Weisen Sie den Videogerätecontroller an, die gewünschten Codierungseigenschaft
 
 [!code-cs[VideoSettingsChanged](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetVideoSettingsChanged)]
 
-## Abgleichen des Seitenverhältnisses von Vorschau- und Aufnahmedatenstrom
+## <a name="match-the-aspect-ratio-of-the-preview-and-capture-streams"></a>Abgleichen des Seitenverhältnisses von Vorschau- und Aufnahmedatenstrom
 
 Eine typische Kamera-App stellt zwar UI-Elemente bereit, mit denen der Benutzer die Auflösung für Video- oder Fotoaufnahmen festlegen kann, die Auflösung der Vorschau wird jedoch üblicherweise programmgesteuert festgelegt. Für die Wahl der optimalen Auflösung für den Vorschaudatenstrom Ihrer App gibt es unterschiedliche Strategien:
 
@@ -90,6 +90,6 @@ Um sicherzustellen, dass das Seitenverhältnis des Foto- oder Videoaufnahme-Date
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

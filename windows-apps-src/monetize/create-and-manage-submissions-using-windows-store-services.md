@@ -4,8 +4,8 @@ ms.assetid: 7CC11888-8DC6-4FEE-ACED-9FA476B2125E
 description: "Verwenden Sie die Windows Store-Übermittlungs-API, um Übermittlungen für Apps programmgesteuert zu erstellen und zu verwalten, die für Ihr Windows Dev Center-Konto registriert sind."
 title: "Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten"
 translationtype: Human Translation
-ms.sourcegitcommit: f52059a37194b78db2f9bb29a5e8959b2df435b4
-ms.openlocfilehash: 1172be1072f0c539828a08655236be467c6c9fba
+ms.sourcegitcommit: ccc7cfea885cc9c8803cfc70d2e043192a7fee84
+ms.openlocfilehash: 8467cddd5eec2348cd35f4f5dc1564b47813a6ca
 
 ---
 
@@ -73,7 +73,7 @@ Bevor Sie die Methoden in der Windows Store-Übermittlungs-API aufrufen, müssen
 Befolgen Sie zum Abrufen des Zugriffstokens die Anweisungen unter [Aufrufe zwischen Diensten mithilfe von Clientanmeldeinformationen](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-service-to-service/), um eine HTTP POST-Anforderung an den ```https://login.microsoftonline.com/<tenant_id>/oauth2/token```-Endpunkt zu senden. Hier ist ein Beispiel für eine Anforderung angegeben.
 
 ```
-POST https://login.microsoftonline.com/<your_tenant_id>/oauth2/token HTTP/1.1
+POST https://login.microsoftonline.com/<tenant_id>/oauth2/token HTTP/1.1
 Host: login.microsoftonline.com
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 
@@ -83,9 +83,11 @@ grant_type=client_credentials
 &resource=https://manage.devcenter.microsoft.com
 ```
 
-Geben Sie für die Parameter *tenant\_id*, *client\_id* und *client\_secret* die Mandanten-ID, die Client-ID und den Schlüssel für Ihre Anwendung an, die Sie im vorherigen Abschnitt aus Dev Center abgerufen haben. Für den Parameter *resource* müssen Sie den URI ```https://manage.devcenter.microsoft.com``` angeben.
+Geben Sie für den Wert *tenant\_id* im POST-URI und die Parameter *client\_id* und *client\_secret* die Mandanten-ID, die Client-ID und den Schlüssel für Ihre Anwendung an, die Sie im vorherigen Abschnitt aus Dev Center abgerufen haben. Für den Parameter *resource* müssen Sie ```https://manage.devcenter.microsoft.com``` angeben.
 
 Nachdem das Zugriffstoken abgelaufen ist, können Sie es aktualisieren, indem Sie [diese Anleitung](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-code/#refreshing-the-access-tokens) befolgen.
+
+Beispiele, die das Abrufen eines Zugriffstokens mit C#-, Java- oder Python-Code veranschaulichen, finden Sie in den [Codebeispielen](#code-examples) zur Windows Store-Übermittlungs-API.
 
 <span id="call-the-windows-store-submission-api">
 ## <a name="step-3-use-the-windows-store-submission-api"></a>Schritt 3: Verwenden der Windows Store-Übermittlungs-API
@@ -100,8 +102,7 @@ Nachdem Sie ein Azure AD-Zugriffstoken abgerufen haben, können Sie Methoden in
 | Add-Ons | Rufen Sie Add-Ons für Ihre Apps ab, erstellen oder löschen Sie diese, und rufen Sie dann Übermittlungen für die Add-Ons ab, erstellen oder löschen Sie diese. Weitere Informationen zu diesen Methoden finden Sie in den folgenden Artikeln: <ul><li>[Verwalten von Add-Ons](manage-add-ons.md)</li><li>[Verwalten von Add-On-Übermittlungen](manage-add-on-submissions.md)</li></ul> |
 | Flight-Pakete | Rufen Sie Flight-Pakete für Ihre Apps ab, erstellen oder löschen Sie diese, und rufen Sie dann Übermittlungen für die Flight-Pakete ab, erstellen oder löschen Sie diese. Weitere Informationen zu diesen Methoden finden Sie in den folgenden Artikeln: <ul><li>[Verwalten von Flight-Paketen](manage-flights.md)</li><li>[Verwalten von Flight-Paketübermittlungen](manage-flight-submissions.md)</li></ul> |
 
-<span />
-
+<span id="code-samples"/>
 ## <a name="code-examples"></a>Codebeispiele
 
 Die folgenden Artikel enthalten ausführliche Codebeispiele, die zeigen, wie Sie die Windows Store-Übermittlungs-API in verschiedenen Programmiersprachen verwenden können:
@@ -135,6 +136,6 @@ Wenn Sie Fragen zur Windows Store-Übermittlungs-API haben oder Hilfe beim Verwa
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

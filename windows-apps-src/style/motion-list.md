@@ -6,24 +6,26 @@ ms.assetid: A85006AE-4992-457a-B514-500B8BEF5DC8
 label: Motion--add and delete animations
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: b6c57d1ceadd0785a51c518bc51f93892aa472d5
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: e1fc86e5110da8926194e20947552337216d4a72
 
 ---
 
-# Hinzufügen und Löschen von Animationen
+# <a name="add-and-delete-animations"></a>Hinzufügen und Löschen von Animationen
 
-
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Mit Listenanimationen können Sie einzelne oder mehrere Elemente in einer Sammlung wie z. B. einem Fotoalbum oder einer Liste mit Suchergebnissen einfügen oder entfernen.
 
-**Wichtige APIs**
+<div class="important-apis" >
+<b>Wichtige APIs</b><br/>
+<ul>
+<li>[**AddDeleteThemeTransition-Klasse**](https://msdn.microsoft.com/library/windows/apps/br243048)</li>
+</ul>
+</div>
 
--   [**AddDeleteThemeTransition-Klasse**](https://msdn.microsoft.com/library/windows/apps/br243048)
 
-
-## Empfohlene und nicht empfohlene Vorgehensweisen
+## <a name="dos-and-donts"></a>Empfohlene und nicht empfohlene Vorgehensweisen
 
 
 -   Verwenden Sie Listenanimationen, um einer bestehenden Menge von Elementen ein einzelnes neues Element hinzuzufügen. Verwenden Sie diese Animationen beispielsweise, wenn eine neue E-Mail eingeht oder ein neues Foto in eine vorhandene Serie importiert wird.
@@ -35,13 +37,11 @@ Mit Listenanimationen können Sie einzelne oder mehrere Elemente in einer Sammlu
 
 
 
-## Verwandte Artikel
+## <a name="related-articles"></a>Verwandte Artikel
 
-
-**Für Entwickler (XAML)**
 * [Übersicht über Animationen](https://msdn.microsoft.com/library/windows/apps/mt187350)
 * [Animieren von Hinzufügungen und Löschungen in Listen](https://msdn.microsoft.com/library/windows/apps/xaml/jj649430)
-* [Schnellstart: Animieren der Benutzeroberfläche mithilfe von Bibliothekanimationen](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
+* [Schnellstart: Animieren der Benutzeroberfläche mithilfe von Bibliotheksanimationen](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
 * [**AddDeleteThemeTransition-Klasse**](https://msdn.microsoft.com/library/windows/apps/br243048)
 
  
@@ -54,6 +54,6 @@ Mit Listenanimationen können Sie einzelne oder mehrere Elemente in einer Sammlu
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

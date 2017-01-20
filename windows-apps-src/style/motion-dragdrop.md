@@ -6,24 +6,27 @@ ms.assetid: 6064755F-6E24-4901-A4FF-263F05F0DFD6
 label: Motion--Drag and drop
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 58934982554aa3caf0060c84df113d483e62e1d2
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: e71b936be1649f8ede394b019369176c7e3ca631
 
 ---
 
-# Animationen für Drag & Drop-Vorgang
+# <a name="drag-animations"></a>Animationen für Drag & Drop-Vorgang
 
 
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Verwenden Sie Drag & Drop-Animationen, wenn Benutzer Objekte verschieben, z. B. wenn sie ein Element innerhalb einer Liste verschieben oder ein Element auf einem anderen ablegen.
 
-**Wichtige APIs**
+<div class="important-apis" >
+<b>Wichtige APIs</b><br/>
+<ul>
+<li>[**DragItemThemeAnimation-Klasse**](https://msdn.microsoft.com/library/windows/apps/br243174)</li>
+</ul>
+</div>
 
--   [**DragItemThemeAnimation-Klasse**](https://msdn.microsoft.com/library/windows/apps/br243174)
 
-
-## Empfohlene und nicht empfohlene Vorgehensweisen
+## <a name="dos-and-donts"></a>Empfohlene und nicht empfohlene Vorgehensweisen
 
 
 **Animation für das Starten des Ziehens**
@@ -49,15 +52,15 @@ Verwenden Sie Drag & Drop-Animationen, wenn Benutzer Objekte verschieben, z. B. 
 **Animation für das Beenden des Zwischenziehens**
 
 -   Verwenden Sie die Animation für das Beenden des Zwischenziehens, wenn Benutzer ein Objekt von einem Bereich wegziehen, in dem es zwischen zwei anderen Objekten abgelegt werden könnte.
--   Verwenden Sie die Animation für das Beenden des Zwischenziehens nicht, wenn Sie vorher nicht die Animation für das Starten des Zwischenziehens verwendet haben.
+-   Verwenden Sie die Animation für das Beenden des Zwischenziehens nicht, wenn Sie zuvor nicht die Animation für das Starten des Zwischenziehens verwendet haben.
 
 
-## Verwandte Artikel
+## <a name="related-articles"></a>Verwandte Artikel
 
-**Für Entwickler (XAML)**
+**Für Entwickler**
 * [Übersicht über Animationen](https://msdn.microsoft.com/library/windows/apps/mt187350)
 * [Animieren von Drag & Drop-Sequenzen](https://msdn.microsoft.com/library/windows/apps/xaml/jj649427)
-* [Schnellstart: Animieren der Benutzeroberfläche mithilfe von Bibliothekanimationen](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
+* [Schnellstart: Animieren der Benutzeroberfläche mithilfe von Bibliotheksanimationen](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
 * [**DragItemThemeAnimation-Klasse**](https://msdn.microsoft.com/library/windows/apps/br243174)
 * [**DropTargetItemThemeAnimation-Klasse**](https://msdn.microsoft.com/library/windows/apps/br243186)
 * [**DragOverThemeAnimation-Klasse**](https://msdn.microsoft.com/library/windows/apps/br243180)
@@ -71,6 +74,6 @@ Verwenden Sie Drag & Drop-Animationen, wenn Benutzer Objekte verschieben, z. B. 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

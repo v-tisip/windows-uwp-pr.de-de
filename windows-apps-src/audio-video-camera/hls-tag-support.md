@@ -4,12 +4,12 @@ ms.assetid:
 description: "In diesem Artikel finden Sie eine Liste der für UWP-Apps unterstützten Tags für das HLS-Protokoll (HTTP Live Streaming)."
 title: "Unterstützung von HLS-Tags (HTTP Live Streaming)"
 translationtype: Human Translation
-ms.sourcegitcommit: 3d61f5272e4d11acfb7e0a85436ca60ba458dcae
-ms.openlocfilehash: a561f11a1638d5fea21d1d3b3f8bc47f71271f3f
+ms.sourcegitcommit: 61feba54418ad7ba8f089737ebf52d12c466b7a7
+ms.openlocfilehash: 5575a56838eae98c0d79dff61e1afaa8cf87ee86
 
 ---
 
-# Unterstützung von HLS-Tags (HTTP Live Streaming)
+# <a name="http-live-streaming-hls-tag-support"></a>Unterstützung von HLS-Tags (HTTP Live Streaming)
 In der folgenden Tabelle sind die HLS-Tags aufgeführt, die für UWP-Apps unterstützt werden.
 
 > [!NOTE] 
@@ -68,11 +68,15 @@ In der folgenden Tabelle sind die HLS-Tags aufgeführt, die für UWP-Apps unters
 | 4.3.4.3.  EXT-X-I-FRAME-STREAM-INF  |4|7|OPTIONAL|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|
 | 4.3.4.4.  EXT-X-SESSION-DATA  |7|14|OPTIONAL|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|
 | 4.3.4.5.  EXT-X-SESSION-KEY |7|17|OPTIONAL|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|
+|4.3.5.  Tags für Medien- oder Masterwiedergabelisten                  |             |                   |         |             |     |    |
+| 4.3.5.1.  EXT-X-INDEPENDENT-SEGMENTS |6|13|OPTIONAL|Nicht unterstützt|Unterstützt|Unterstützt|
+| 4.3.5.2.  EXT-X-START  |6|12|OPTIONAL|Nicht unterstützt|Teilweise unterstützt|Teilweise unterstützt|
+|&nbsp;&nbsp;&nbsp;  TIME-OFFSET|6|12|Attribut|Nicht unterstützt|Unterstützt|Unterstützt|
+|&nbsp;&nbsp;&nbsp;  PRECISE|6|12|Attribut|Nicht unterstützt|„NO“ standardmäßig unterstützt|„NO“ standardmäßig unterstützt|
 
 
 
-
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Medienwiedergabe](media-playback.md)
 * [Adaptives Streaming](adaptive-streaming.md)
@@ -86,6 +90,6 @@ In der folgenden Tabelle sind die HLS-Tags aufgeführt, die für UWP-Apps unters
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 
