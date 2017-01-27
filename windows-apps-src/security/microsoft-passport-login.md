@@ -4,8 +4,8 @@ description: "Dies ist der erste Teil der umfassenden exemplarischen Vorgehenswe
 ms.assetid: A9E11694-A7F5-4E27-95EC-889307E0C0EF
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: a70a59283fe664bef9ddab56df57a9fc46c91033
-ms.openlocfilehash: 04311e9c3242bdaf6588c8102a06ae658e6637e2
+ms.sourcegitcommit: 126811b615117c0204e3ac4326d810c986a51e55
+ms.openlocfilehash: 27f06fe3031d391a03bc5f5b08723983b34308f0
 
 ---
 
@@ -624,9 +624,9 @@ Diese Übung baut direkt auf der vorherigen Übung auf. Nach erfolgreicher Anmel
 
 -   Erstellen Sie die Anwendung, und führen Sie sie aus. Geben Sie „sampleUsername“ ein, und klicken Sie auf „Anmelden“. Geben Sie Ihre PIN ein. Bei erfolgreicher Eingabe werden Sie auf die Willkommensseite weitergeleitet. Klicken Sie auf die Schaltfläche zum Löschen des Benutzers, und prüfen Sie im Ausgabefenster, ob der Benutzer gelöscht wurde. Beachten Sie, dass nach dem Löschen des Benutzers weiterhin die Willkommensseite angezeigt wird. Sie müssen eine Benutzerauswahlseite erstellen, zu der die App navigieren kann.
 
-    !passport welcome screen](images/passport-login-9.png)
+    ![Passport-Willkommensseite](images/passport-login-9.png)
 
--   Erstellen Sie im Ordner „Views“ eine neue leere Seite namens „UserSelection.xaml“, und fügen Sie den folgenden XAML-Code hinzu, um die Benutzeroberfläche zu definieren. Diese Seite enthält ein [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878)-Element, das alle Benutzer in der lokalen Kontenliste anzeigt, sowie eine Schaltfläche, über die der Benutzer zur Anmeldeseite navigieren und ein weiteres Konto hinzufügen kann.
+-   Erstellen Sie im Ordner „Views“ eine neue leere Seite mit dem Namen „UserSelection.xaml“, und fügen Sie den folgenden XAML-Code hinzu, um die Benutzeroberfläche zu definieren. Diese Seite enthält ein [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878)-Element, das alle Benutzer in der lokalen Kontenliste anzeigt, sowie eine Schaltfläche, über die der Benutzer zur Anmeldeseite navigieren und ein weiteres Konto hinzufügen kann.
 
     ```xml
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -973,6 +973,6 @@ Neben der Implementierung der Microsoft Passport-Unterstützung sind für Entwic
 * [Microsoft Passport-Anmeldedienst](microsoft-passport-login-auth-service.md)
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

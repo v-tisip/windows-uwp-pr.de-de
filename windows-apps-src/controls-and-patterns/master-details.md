@@ -6,11 +6,11 @@ ms.assetid: 45C9FE8B-ECA6-44BF-8DDE-7D12ED34A7F7
 label: Master/details
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: f0083e3c50e7e899e6caf62595a7ecbf0af22b3d
+ms.sourcegitcommit: 98b3a9739b1906b7abb529cea1e7d433118cbcdd
+ms.openlocfilehash: ef57c6d1a00797e2a68291475b6a38778e5d73ad
 
 ---
-# Master/Details-Muster
+# <a name="masterdetails-pattern"></a>Master/Details-Muster
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -18,7 +18,7 @@ Das Master/Details-Muster verfügt über einen Masterbereich (in der Regel mit e
 
 ![Beispiel für das Master/Details-Muster](images/HIGSecOne_MasterDetail.png)
 
-## Ist dies das richtige Muster?
+## <a name="is-this-the-right-pattern"></a>Ist dies das richtige Muster?
 
 Master/Details-Muster eignet sich gut für Folgendes:
 
@@ -26,17 +26,17 @@ Master/Details-Muster eignet sich gut für Folgendes:
 -   Suchen und Priorisieren einer großen Sammlung von Inhalten
 -   Schnelles Hinzufügen und Entfernen von Elementen aus einer Liste und gleichzeitiges Wechseln zwischen Kontexten
 
-## Auswählen des richtigen Formats
+## <a name="choose-the-right-style"></a>Auswählen des richtigen Formats
 
 Beim Implementieren des Master/Details-Musters ist es ratsam, je nach Größe der verfügbaren Bildschirmfläche das gestapelte Format oder das Format mit paralleler Anordnung zu verwenden.
 
 | Verfügbare Fensterbreite | Empfohlenes Format |
 |------------------------|-------------------|
-| 320Epx - 719Epx        | Gestapelt           |
-| 720Epx oder breiter       | Nebeneinander      |
+| 320 Epx - 719 Epx        | Gestapelt           |
+| 720 Epx oder breiter       | Nebeneinander      |
 
  
-## Gestapeltes Format
+## <a name="stacked-style"></a>Gestapeltes Format
 
 Im gestapelten Format ist jeweils nur ein Bereich sichtbar: die Master- oder der Detailbereich.
 
@@ -44,7 +44,7 @@ Im gestapelten Format ist jeweils nur ein Bereich sichtbar: die Master- oder der
 
 Der Benutzer beginnt im Masterbereich und führt einen Drilldown zum Detailbereich durch, indem er ein Element in der Masterliste auswählt. Für den Benutzer sieht es so aus, als ob sich die Masteransicht und die Detailansicht auf zwei getrennten Seiten befinden.
 
-### Erstellen eines gestapelten Master/Details-Musters
+### <a name="create-a-stacked-masterdetails-pattern"></a>Erstellen eines gestapelten Master/Details-Musters
 
 Eine Möglichkeit zur Erstellung des gestapelten Master/Details-Musters ist die Verwendung separater Seiten für den Masterbereich und den Detailbereich. Ordnen Sie die Listenansicht, in der die Masterliste bereitgestellt wird, auf einer Seite und das Inhaltselement für den Detailbereich auf einer separaten Seite an.
 
@@ -54,7 +54,7 @@ Für den Masterbereich eignet sich ein [Listenansicht](lists.md)-Steuerelement g
 
 Verwenden Sie für den Detailbereich das am besten geeignete Inhaltselement. Wenn viele separate Felder vorhanden sind, erwägen Sie die Verwendung eines Rasterlayouts zum Anordnen der Elemente in einem Formular.
 
-## Format mit paralleler Anordnung
+## <a name="side-by-side-style"></a>Format mit paralleler Anordnung
 
 Im Format mit paralleler Anordnung sind Master- und Detailbereich gleichzeitig sichtbar.
 
@@ -62,13 +62,13 @@ Im Format mit paralleler Anordnung sind Master- und Detailbereich gleichzeitig s
 
 Für die Liste im Masterbereich wird eine visuelle Auswahlmethode genutzt, um das derzeit ausgewählte Element anzugeben. Wenn in der Masterliste ein neues Element ausgewählt wird, wird der Detailbereich aktualisiert.
 
-### Erstellen eines parallelen Master/Details-Musters
+### <a name="create-a-side-by-side-masterdetails-pattern"></a>Erstellen eines parallelen Master/Details-Musters
 
 Für den Masterbereich eignet sich ein [Listenansicht](lists.md)-Steuerelement gut für die Darstellung von Listen, die Bilder und Text enthalten können.
 
 Verwenden Sie für den Detailbereich das am besten geeignete Inhaltselement. Wenn viele separate Felder vorhanden sind, erwägen Sie die Verwendung eines Rasterlayouts zum Anordnen der Elemente in einem Formular.
 
-## Beispiele
+## <a name="examples"></a>Beispiele
 
 In diesem Entwurf einer App zur Verfolgung der Börse wird ein Master/Details-Muster verwendet. In diesem Beispiel für die Anzeige der App auf Smartphones befindet sich der Masterbereich/die Masterliste auf der linken Seite und der Detailbereich auf der rechten Seite.
 
@@ -78,9 +78,11 @@ In diesem Entwurf einer App zur Verfolgung der Börse wird ein Master/Details-Mu
 
 ![Beispiel für eine App mit dem Master/Details-Muster, auf dem Desktop](images/uap-finance-desktop700.png)
 
+Beispielcode, der Master/Details-Muster veranschaulicht, finden Sie unter
+- [ListView- und GridView-Beispiel](http://go.microsoft.com/fwlink/p/?LinkId=619900)
+- [RSS-Reader-Beispiel](https://github.com/Microsoft/Windows-appsample-rssreader)
 
-
-## Verwandte Artikel
+## <a name="related-articles"></a>Verwandte Artikel
 
 - [Listen](lists.md)
 - [Suche](search.md)
@@ -89,6 +91,6 @@ In diesem Entwurf einer App zur Verfolgung der Börse wird ein Master/Details-Mu
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

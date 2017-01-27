@@ -7,15 +7,13 @@ ms.assetid: c0791eec-5bb8-4a13-8977-61d7d98e35ce
 label: Intro
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
-ms.openlocfilehash: a34b682cc903555b9d6f64636c3d1cf7bee75b5d
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 3149eb8275cc74c61ff0e35963f3fd1dbdc4e833
 
 ---
 
-# Globalisierung und Lokalisierung
-
-
-
+# <a name="globalization-and-localization"></a>Globalisierung und Lokalisierung
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Windows wird auf der ganzen Welt in verschiedenen Märkten und von Anwendern unterschiedlicher Kulturen, Herkunft und Sprachen verwendet. Benutzer sprechen beliebige Sprache oder sogar mehrere Sprachen. Die Benutzer sind über die ganze Welt verteilt, und jede Sprache kann ortsabhängig überall gesprochen werden. Sie können die Marktchancen Ihrer App erweitern, indem Sie mithilfe der *Globalisierung* und *Lokalisierung* eine variable App entwickeln.
 
@@ -36,7 +34,7 @@ Beispiel:
 
 Das folgende Video enthält eine kurze Einführung dazu, wie Sie Ihre App für die weltweite Verbreitung vorbereiten: [Einführung in die Globalisierung und Lokalisierung](https://channel9.msdn.com/Blogs/One-Dev-Minute/Introduction-to-globalization-and-localization).
 
-## Artikel
+## <a name="articles"></a>Artikel
 <table>
 <colgroup>
 <col width="50%" />
@@ -82,7 +80,7 @@ Das folgende Video enthält eine kurze Einführung dazu, wie Sie Ihre App für d
 
  
 
-Weitere Informationen finden Sie in der ursprünglich für Windows8.x erstellten Dokumentation, die weiterhin für universelle Windows-Plattform-Apps (UWP) und Windows10 gilt.
+Weitere Informationen finden Sie in der ursprünglich für Windows 8.x erstellten Dokumentation, die weiterhin für universelle Windows-Plattform-Apps (UWP) und Windows 10 gilt.
 
 -   [Globalisierung Ihrer App](https://msdn.microsoft.com/library/windows/apps/xaml/hh965328)
 -   [Sprachabgleich](https://msdn.microsoft.com/library/windows/apps/xaml/jj673578.aspx)
@@ -99,6 +97,6 @@ Weitere Informationen finden Sie in der ursprünglich für Windows8.x erstellten
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

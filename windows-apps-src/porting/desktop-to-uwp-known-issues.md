@@ -4,15 +4,15 @@ Description: "Dieser Artikel enthält bekannte Probleme mit der Desktop-zu-UWP-B
 Search.Product: eADQiWindows 10XVcnh
 title: "Bekannte Probleme mit der Desktop-Brücke"
 translationtype: Human Translation
-ms.sourcegitcommit: 537c6a3d4559da4673b68c3ab5bdddb612760849
-ms.openlocfilehash: d02921247bd77d59bbb09037a4ced8d3967c33b2
+ms.sourcegitcommit: ec4c5f937e4fd133bfc4f7aa96d00cee03a13c26
+ms.openlocfilehash: d3ed0af32c9a44078d0f772d7fc130121f5d4970
 
 ---
-# Bekannte Probleme mit der Desktop-Brücke
+# <a name="known-issues-with-the-desktop-bridge"></a>Bekannte Probleme mit der Desktop-Brücke
 
 Dieser Artikel enthält bekannte Probleme mit der Desktop-zu-UWP-Brücke.
 
-## Blauer Bildschirm mit dem Fehlercode 0x139 (KERNEL_SECURITY_CHECK_FAILURE)
+## <a name="blue-screen-with-error-code-0x139-kernelsecuritycheckfailure"></a>Blauer Bildschirm mit dem Fehlercode 0x139 (KERNEL_SECURITY_CHECK_FAILURE)
 
 Nach dem Installieren oder Starten bestimmter Apps aus dem Windows Store wird Ihr Computer unter Umständen unerwartet mit folgendem Fehler neu gestartet: **0x139 (KERNEL\_SECURITY\_CHECK\_ FAILURE)**.
 
@@ -27,10 +27,10 @@ Wenn Sie Entwickler sind, möchten Sie die Installation der Desktop-Brücken-App
 ```<TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.14393.351" MaxVersionTested="10.0.14393.351"/>```
 
 Details zum Windows-Update finden Sie hier: 
-* https://support.microsoft.com/3197954
+* https://support.microsoft.com/kb/3197954
 * https://support.microsoft.com/help/12387/windows-10-update-history
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

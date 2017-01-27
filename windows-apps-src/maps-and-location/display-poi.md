@@ -4,15 +4,15 @@ title: Anzeigen von interessanten Orten (POI) auf einer Karte
 description: "Mit Ortsmarken, Bildern, Formen und XAML-UI-Elementen können Sie interessante Orte (Points of Interest, POI) auf einer Karte hinzufügen."
 ms.assetid: CA00D8EB-6C1B-4536-8921-5EAEB9B04FCA
 translationtype: Human Translation
-ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
-ms.openlocfilehash: aec420d6591546e63c6343d7151afe9e95d1afd8
+ms.sourcegitcommit: d00ba80ac7d0f033a69ad070dc8ee681cbd0ed18
+ms.openlocfilehash: 8afdb41d6790bb9647a6b89086c4b86872940c51
 
 ---
 
-# Anzeigen von interessanten Orten (POI) auf einer Karte
+# <a name="display-points-of-interest-poi-on-a-map"></a>Anzeigen von interessanten Orten (POI) auf einer Karte
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 Mit Ortsmarken, Bildern, Formen und XAML-UI-Elementen können Sie interessante Orte (Points of Interest, POI) auf einer Karte hinzufügen. Ein POI ist ein Punkt auf der Karte, der Orte angibt, die von Interesse sind. Beispiele sind die Position eines Geschäfts, eines Orts oder eines Freundes.
@@ -34,7 +34,7 @@ Zusammenfassung:
 
 Wenn Sie eine große Anzahl von Elementen auf der Karte platzieren möchten, sollten Sie [nebeneinander angeordnete Bilder auf der Karte überlagern](overlay-tiled-images.md). Informationen zum Anzeigen von Straßen auf der Karte finden Sie unter [Anzeigen von Routen und Wegbeschreibungen](routes-and-directions.md).
 
-## Hinzufügen eines MapIcon
+## <a name="add-a-mapicon"></a>Hinzufügen eines MapIcon
 
 
 Verwenden Sie die Klasse [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077), um Bilder wie eine Ortsmarke mit optionalem Text auf der Karte anzuzeigen. Sie können das Standardbild akzeptieren oder mit der [**Image**](https://msdn.microsoft.com/library/windows/apps/dn637078)-Eigenschaft ein benutzerdefiniertes Bild bereitstellen. Die folgende Abbildung zeigt das Standardbild für ein **MapIcon** ohne festgelegten Wert für die Eigenschaft [**Title**](https://msdn.microsoft.com/library/windows/apps/dn637088) mit einem kurzen Titel, einem langen Titel und einem sehr langen Titel.
@@ -81,12 +81,12 @@ Die folgende Codezeile zeigt [**MapIcon**](https://msdn.microsoft.com/library/wi
 
 Berücksichtigen Sie beim Arbeiten mit der [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077)-Klasse Folgendes:
 
--   Die [**Image**](https://msdn.microsoft.com/library/windows/apps/dn637078)-Eigenschaft unterstützt eine maximale Bildgröße von 2048x2048Pixeln.
+-   Die [**Image**](https://msdn.microsoft.com/library/windows/apps/dn637078)-Eigenschaft unterstützt eine maximale Bildgröße von 2048 x 2048 Pixeln.
 -   Standardmäßig wird die Anzeige des Bilds für das Kartensymbol nicht garantiert. Es wird möglicherweise ausgeblendet, wenn es andere Elemente oder Bezeichnungen auf der Karte verdeckt. Damit es sichtbar bleibt, legen Sie die [**CollisionBehaviorDesired**](https://msdn.microsoft.com/library/windows/apps/dn974327)-Eigenschaft des Kartensymbols auf [**MapElementCollisionBehavior.RemainVisible**](https://msdn.microsoft.com/library/windows/apps/dn974314) fest.
 -   Die Anzeige des optionalen [**Title**](https://msdn.microsoft.com/library/windows/apps/dn637088) für [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077) wird nicht garantiert. Wenn der Text nicht angezeigt wird, verkleinern Sie die Ansicht, indem Sie den Wert der [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637068)-Eigenschaft von [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) verringern.
--   Wenn Sie ein [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077)-Bild anzeigen, das auf eine bestimmte Position auf der Karte hinweist, z.B. eine Ortsmarkierung oder ein Pfeil, sollten Sie in Erwägung ziehen, den Wert der [**NormalizedAnchorPoint**](https://msdn.microsoft.com/library/windows/apps/dn637082)-Eigenschaft auf den ungefähren Standort des Zeigers auf dem Bild festzulegen. Wenn Sie den Wert von **NormalizedAnchorPoint** beim Standardwert (0, 0) belassen, der die obere linke Ecke des Bilds darstellt, führen Änderungen am [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637068) der Karte möglicherweise dazu, dass das Bild auf eine andere Position zeigt.
+-   Wenn Sie ein [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077)-Bild anzeigen, das auf eine bestimmte Position auf der Karte hinweist, z. B. eine Ortsmarkierung oder ein Pfeil, sollten Sie in Erwägung ziehen, den Wert der [**NormalizedAnchorPoint**](https://msdn.microsoft.com/library/windows/apps/dn637082)-Eigenschaft auf den ungefähren Standort des Zeigers auf dem Bild festzulegen. Wenn Sie den Wert von **NormalizedAnchorPoint** beim Standardwert (0, 0) belassen, der die obere linke Ecke des Bilds darstellt, führen Änderungen am [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637068) der Karte möglicherweise dazu, dass das Bild auf eine andere Position zeigt.
 
-## Hinzufügen eines MapPolygon
+## <a name="add-a-mappolygon"></a>Hinzufügen eines MapPolygon
 
 
 Mithilfe der Klasse [**MapPolygon**](https://msdn.microsoft.com/library/windows/apps/dn637103) können Sie eine Form mit mehreren Punkten auf der Karte anzeigen. Im folgenden Beispiel (aus dem [Beispiel zu UWP-Karten](http://go.microsoft.com/fwlink/p/?LinkId=619977)) wird ein rotes Feld mit blauem Rahmen auf der Karte angezeigt.
@@ -114,7 +114,7 @@ private void mapPolygonAddButton_Click(object sender, Windows.UI.Xaml.RoutedEven
 }
 ```
 
-## Hinzufügen einer MapPolyline
+## <a name="add-a-mappolyline"></a>Hinzufügen einer MapPolyline
 
 
 Mithilfe der Klasse [**MapPolyline**](https://msdn.microsoft.com/library/windows/apps/dn637114) können Sie eine Linie auf der Karte anzeigen. Im folgenden Beispiel (aus dem [Beispiel zu UWP-Karten](http://go.microsoft.com/fwlink/p/?LinkId=619977)) wird eine gestrichelte Linie auf der Karte angezeigt.
@@ -137,7 +137,7 @@ private void mapPolylineAddButton_Click(object sender, Windows.UI.Xaml.RoutedEve
 }
 ```
 
-## Hinzufügen von XAML
+## <a name="add-xaml"></a>Hinzufügen von XAML
 
 
 Zeigen Sie benutzerdefinierte UI-Elemente mit XAML auf der Karte an. Positionieren Sie XAML auf der Karte, indem Sie die Position und den normalisierten Ankerpunkt für den XAML-Code angeben.
@@ -176,9 +176,9 @@ private void displayXAMLButton_Click(object sender, RoutedEventArgs e)
 
 In diesem Beispiel wird ein blauer Rahmen auf der Karte angezeigt.
 
-![](images/displaypoixaml.png)
+![Screenshot eines XAML-Elements, das am interessanten Ort auf der Karte angezeigt wird](images/displaypoixaml.png)
 
-Die nächsten Beispiele zeigen, wie XAML-UI-Elemente mithilfe der Datenbindung direkt im XAML-Markup der Seite hinzugefügt werden. Wie bei anderen XAML-Elementen zur Anzeige von Inhalten auch, stellt [**Children**](https://msdn.microsoft.com/library/windows/apps/dn637008) die standardmäßige Inhaltseigenschaft von [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) dar und muss nicht explizit im XAML-Markup angegeben werden.
+Die nächsten Beispiele zeigen, wie XAML-UI-Elemente direkt im XAML-Markup der Seite mithilfe der Datenbindung hinzugefügt werden. Wie bei anderen XAML-Elementen zur Anzeige von Inhalten auch, stellt [**Children**](https://msdn.microsoft.com/library/windows/apps/dn637008) die standardmäßige Inhaltseigenschaft von [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) dar und muss nicht explizit im XAML-Markup angegeben werden.
 
 In diesem Beispiel wird gezeigt, wie zwei XAML-Steuerelemente als implizite untergeordnete Objekte von [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) angezeigt werden.
 
@@ -216,7 +216,7 @@ In diesem Beispiel wird eine Sammlung von XAML-Elementen angezeigt, die an [**Ma
 </maps:MapControl>
 ```
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Bing Maps Developer Center](https://www.bingmapsportal.com/)
 * [Beispiel für UWP-Karte](http://go.microsoft.com/fwlink/p/?LinkId=619977)
@@ -231,6 +231,6 @@ In diesem Beispiel wird eine Sammlung von XAML-Elementen angezeigt, die an [**Ma
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

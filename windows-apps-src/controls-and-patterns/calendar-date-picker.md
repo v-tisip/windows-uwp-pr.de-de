@@ -6,11 +6,11 @@ ms.assetid: 9e0213e0-046a-4906-ba86-0b49be51ca99
 label: Calendar date picker
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: d32c643db84eeb7c81304467a326566938e726c0
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 0c565c036b8bcb7c26ad860231ee649b73c636c3
 
 ---
-# Kalenderdatumsauswahl
+# <a name="calendar-date-picker"></a>Kalenderdatumsauswahl
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -19,33 +19,26 @@ Die Kalenderdatumsauswahl ist ein Dropdownsteuerelement, das für die Auswahl ei
 <div class="important-apis" >
 <b>Wichtige APIs</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.aspx"><strong>CalendarDatePicker-Klasse</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.date.aspx"><strong>Date-Eigenschaft</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.datechanged.aspx"><strong>DateChanged-Ereignis</strong></a></li>
+<li>[**CalendarDatePicker-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.aspx)</li>
+<li>[**Date-Eigenschaft**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.date.aspx)</li>
+<li>[**DateChanged-Ereignis**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.datechanged.aspx)</li>
 </ul>
-
-</div>
 </div>
 
-
-
-
-
-
-## Ist dies das richtige Steuerelement?
+## <a name="is-this-the-right-control"></a>Ist dies das richtige Steuerelement?
 Benutzer können in einer **Kalenderdatumsauswahl** in einer kontextbezogenen Kalenderansicht ein einzelnes Datum auswählen. Dies eignet sich beispielsweise, um Termine oder Abflugzeiten einzutragen.
 
 Damit Benutzer ein bekanntes Datum wie etwa einen Geburtstag eintragen können, bei dem der Kalenderkontext unwichtig ist, könnte eine [**Datumsauswahl**](date-picker.md) von Vorteil sein.
 
 Weitere Informationen zur Auswahl des passenden Steuerelements finden Sie im Artikel über [Datums- und Uhrzeitsteuerelemente](date-and-time.md).
 
-## Beispiele
+## <a name="examples"></a>Beispiele
 
 Der Einstiegspunkt zeigt Platzhaltertext an, falls kein Datum festgelegt wurde. Andernfalls wird das ausgewählte Datum angezeigt. Wenn Benutzer den Einstiegspunkt auswählen, wird eine Kalenderansicht eingeblendet, damit sie ein Datum auswählen können. Die Kalenderansicht überlagert andere Elemente der Benutzeroberfläche. Die anderen Elemente der Benutzeroberfläche werden dadurch jedoch nicht „verschoben“.
 
 ![Beispiel für Kalenderdatumsauswahl](images/calendar-date-picker-2-views.png)
 
-## Erstellen einer Datumsauswahl
+## <a name="create-a-date-picker"></a>Erstellen einer Datumsauswahl
 
 ```xaml
 <CalendarDatePicker x:Name="arrivalCalendarDatePicker" Header="Arrival date"/>
@@ -64,7 +57,7 @@ Die Kalenderdatumsauswahl verfügt über eine interne [**CalendarView**](https:/
 
 Die [**SelectionMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selectionmode.aspx)-Eigenschaft der internen CalendarView-Klasse können Sie jedoch nicht ändern und somit keine Mehrfachauswahl zulassen. Falls Benutzer mehrere Tage auswählen sollen oder permanent ein Kalender sichtbar sein muss, bietet sich möglicherweise anstelle der Kalenderdatumsauswahl eine Kalenderansicht an. Weitere Informationen zum Ändern der Kalenderanzeige finden Sie im Artikel zur [Kalenderansicht](calendar-view.md).
 
-### Auswählen von Tagen
+### <a name="selecting-dates"></a>Auswählen von Tagen
 
 Verwenden Sie die [**Date**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.date.aspx)-Eigenschaft, um das ausgewählte Datum abzurufen oder festzulegen. Der Standardwert der „Date“-Eigenschaft lautet **null**. Wenn Benutzer ein Datum in der Kalenderansicht auswählen, wird diese Eigenschaft aktualisiert. Benutzer können die Auswahl eines Datums aufheben, indem sie in der Kalenderansicht auf das Datum klicken. 
 
@@ -78,11 +71,12 @@ Wenn SIe das Datum in Code festlegen, wird der Wert durch die Eigenschaften [**M
 - Wenn **Date** vor **MinDate** liegt, wird der Wert auf **MinDate** gesetzt.
 - Wenn **Date** nach **MaxDate** liegt, wird der Wert auf **MaxDate** gesetzt.
 
-Mithilfe des [**DateChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.datechanged.aspx)-Ereignisses können Sie sich bei Änderungen am „Date“-Wert benachrichtigen lassen.
+Mithilfe des [**DateChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.datechanged.aspx)-Ereignisses können Sie sich bei Änderungen am Date-Wert benachrichtigen lassen.
 
-> **Hinweis**&nbsp;&nbsp;Wichtige Informationen zu Datumswerten finden Sie im Artikel zu Datums- und Uhrzeitsteuerelementen unter [DateTime- und Calendar-Werte](date-and-time.md#datetime-and-calendar-values).
+> [!NOTE]
+Wichtige Informationen zu Datumswerten finden Sie im Artikel zu Datums- und Uhrzeitsteuerelementen unter [DateTime- und Calendar-Werte](date-and-time.md#datetime-and-calendar-values).
 
-### Festlegen von Kopfzeilen- und Platzhaltertext
+### <a name="setting-a-header-and-placeholder-text"></a>Festlegen von Kopfzeilen- und Platzhaltertext
 
 Sie können der Kalenderdatumsauswahl eine [**Header**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.header.aspx)-Eigenschaft (oder eine Beschriftung) und eine [**PlaceholderText**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.placeholdertext.aspx)-Eigenschaft (oder ein Wasserzeichen) hinzufügen, um Benutzern einen Hinweis bezüglich des Verwendungszwecks zu geben. Um das Erscheinungsbild der Kopfzeile anzupassen, können Sie statt der „Header“ Eigenschaft die [**HeaderTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.headertemplate.aspx)-Eigenschaft festlegen.
 
@@ -93,8 +87,11 @@ Als Standardtext für den Platzhalter wird „Datum auswählen“ angezeigt. Sie
                     PlaceholderText="Choose your arrival date"/>
 ```
 
+## <a name="get-the-sample-code"></a>Beispielcode herunterladen
+* [Beispiel für XAML-UI-Grundlagen](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
 
-## Verwandte Artikel
+
+## <a name="related-articles"></a>Verwandte Artikel
 
 - [Datums- und Uhrzeitsteuerelemente](date-and-time.md)
 - [Kalenderansicht](calendar-view.md)
@@ -103,6 +100,6 @@ Als Standardtext für den Platzhalter wird „Datum auswählen“ angezeigt. Sie
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

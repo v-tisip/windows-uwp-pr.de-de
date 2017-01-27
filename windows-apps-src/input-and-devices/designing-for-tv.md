@@ -1,20 +1,26 @@
 ---
 author: eliotcowley
-Description: "Entwerfen Sie Ihre App so, dass sie gut aussieht und gut auf Fernsehgeräten funktioniert."
+Description: "Entwerfen Sie Ihre App so, dass sie auf Fernsehgeräten gut aussieht und ordnungsgemäß funktioniert."
 title: "Entwerfen für Xbox und Fernsehgeräte"
 ms.assetid: 780209cb-3e8a-4cf7-8f80-8b8f449580bf
 label: Designing for Xbox and TV
 template: detail.hbs
 isNew: true
+keywords: "Xbox, TV, 10-Fuß-Erfahrung, Gamepad, Fernbedienung, Eingabe, Interaktion"
+ms.author: elcowle
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ee0a2f5a34cbbef198a9012d0425bb84e65f3b33
-ms.openlocfilehash: de76a3c6d4949b9203df79855e1748a81d76ca64
+ms.sourcegitcommit: 8a040033f99d6e8cac04b44dcec58c6b306eda54
+ms.openlocfilehash: a138e0ba73da792a63f1c22ee4342a8157f2a136
 
 ---
 
 # <a name="designing-for-xbox-and-tv"></a>Entwerfen für Xbox und Fernsehgeräte
 
-Entwerfen Sie Ihre App für die Universelle Windows-Plattform (UWP) so, dass sie gut aussieht und auf Xbox One- und Fernsehbildschirmen optimal funktioniert.
+Entwerfen Sie Ihre App für die Universelle Windows-Plattform (UWP) so, dass sie auf Xbox One- und Fernsehbildschirmen gut aussieht und optimal funktioniert.
 
 ## <a name="overview"></a>Übersicht
 
@@ -499,7 +505,7 @@ Sie können sogar die systemeigenen Fokusanzeigen deaktivieren und eigene Fokusa
 
 ### <a name="light-dismiss-overlay"></a>Overlay für einfaches Ausblenden
 
-Um die Aufmerksamkeit der Benutzer auf die Benutzeroberflächenelemente zu lenken, die sie gerade mit dem Gamecontroller oder der Fernbedienung bearbeiten, fügt UWP automatisch eine „Ausblendschicht“ ein, die Bereiche außerhalb der Popup-Benutzeroberfläche abdeckt, wenn die App auf Xbox One ausgeführt wird. Dies erfordert keinen zusätzlichen Aufwand. Sie sollten diese Funktionalität jedoch während der Entwicklung Ihrer Benutzeroberfläche berücksichtigen. Über die `LightDismissOverlayMode`-Eigenschaft können Sie die Ausblendschicht für jedes `FlyoutBase`-Element aktivieren oder deaktivieren. Der Standardwert `Auto` bedeutet, dass sie auf Xbox aktiviert und auf allen anderen Plattformen deaktiviert ist. Weitere Informationen finden Sie unter [Modales Ausblenden im Vergleich zu einfachem Ausblenden](../controls-and-patterns/dialogs-popups-menus.md#modal-vs-light-dismiss).
+Um die Aufmerksamkeit der Benutzer auf die Benutzeroberflächenelemente zu lenken, die sie gerade mit dem Gamecontroller oder der Fernbedienung bearbeiten, fügt UWP automatisch eine „Ausblendschicht“ ein, die Bereiche außerhalb der Popup-Benutzeroberfläche abdeckt, wenn die App auf Xbox One ausgeführt wird. Dies erfordert keinen zusätzlichen Aufwand. Sie sollten diese Funktionalität jedoch während der Entwicklung Ihrer Benutzeroberfläche berücksichtigen. Über die `LightDismissOverlayMode`-Eigenschaft können Sie die Ausblendschicht für jedes `FlyoutBase`-Element aktivieren oder deaktivieren. Der Standardwert `Auto` bedeutet, dass sie auf Xbox aktiviert und auf allen anderen Plattformen deaktiviert ist. Weitere Informationen finden Sie unter [Modales Ausblenden im Vergleich zu einfachem Ausblenden](../controls-and-patterns/menus.md).
 
 ## <a name="focus-engagement"></a>Fokusaktivierung
 
@@ -1121,6 +1127,6 @@ Beim Entwerfen für die 10 Fuß-Erfahrung müssen einige besondere Punkte berüc
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

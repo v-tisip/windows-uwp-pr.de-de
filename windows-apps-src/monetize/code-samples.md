@@ -4,12 +4,12 @@ ms.assetid: 4a311d20-ba8c-4816-8091-35726428dc94
 description: Weitere Beispiele, die veranschaulichen, wie Sie Eigenschaften, Methoden und Ereignisse der Klassen AdControl und InterstitialAd verwenden, finden Sie in den Microsoft Advertising-Bibliotheken.
 title: Codebeispiele
 translationtype: Human Translation
-ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
-ms.openlocfilehash: 0a852a4bf8404d7ab0d8a2a169a16451c0388122
+ms.sourcegitcommit: f88a71491e185aec84a86248c44e1200a65ff179
+ms.openlocfilehash: a8f18048915927f9e93d4469e7288e5a06a69070
 
 ---
 
-# Codebeispiele
+# <a name="code-samples"></a>Codebeispiele
 
 
 
@@ -18,12 +18,12 @@ Dieser Abschnitt enthält Beispiele, die veranschaulichen, wie Sie die Eigenscha
 
 Vollständige Beispielprojekte, die veranschaulichen, wie Sie JavaScript-/HTML- und XAML-Apps unter Verwendung von C# und C++ Werbebanner und Video-Interstitialanzeigen hinzufügen, finden Sie in den [Anzeigenbeispielen auf GitHub](http://aka.ms/githubads).
 
-## Inhalt dieses Abschnitts
+## <a name="in-this-section"></a>Inhalt dieses Abschnitts
 
 |  Thema    | Beschreibung |               
 |----------|-------|
-| [Beispiel für HTML-Eigenschaften](html-properties-example.md)     | Zeigt eine vollständig attribuierte **AdControl** in HTML.        |
-| [Beispiel für XAML-Eigenschaften](xaml-properties-example.md)     | Zeigt eine vollständig attribuierte **AdControl** in XAML.        |
+| [Beispiel für AdControl-HTML-Eigenschaften](html-properties-example.md)     | Zeigt ein vollständig attribuiertes **AdControl**-Element in HTML.        |
+| [Beispiel für AdControl-XAML-Eigenschaften](xaml-properties-example.md)     | Zeigt ein vollständig attribuiertes **AdControl**-Element in XAML.        |
 | [Erstellen eines Anzeigensteuerelements in JavaScript](create-an-adcontrol-in-javascript.md)     | Veranschaulicht das Erstellen der **AdControl** mit JavaScript.        |
 | [AdControl-Ereignisse in JavaScript](adcontrol-events-in-javascript.md)     | Veranschaulicht das Behandeln von **AdControl**-Ereignissen in JavaScript.       |
 | [AdControl-Ereignisse in C#](adcontrol-events-in-c.md)     | Veranschaulicht das Behandeln von **AdControl**-Ereignissen in C#.       |
@@ -41,6 +41,6 @@ Vollständige Beispielprojekte, die veranschaulichen, wie Sie JavaScript-/HTML- 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

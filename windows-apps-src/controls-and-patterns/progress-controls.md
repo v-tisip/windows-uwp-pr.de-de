@@ -6,11 +6,11 @@ ms.assetid: FD53B716-C43D-408D-8B07-522BC1F3DF9D
 label: Progress controls
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: de18267de982ef50913ed605e7a9272f7f8c476b
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 5679c2bb8e8b3fff205f8071fcf52a52e0c939cd
 
 ---
-# Statussteuerelemente
+# <a name="progress-controls"></a>Statussteuerelemente
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -19,21 +19,14 @@ Ein Statussteuerelement gibt dem Benutzer eine Rückmeldung, dass ein Vorgang mi
 <div class="important-apis" >
 <b>Wichtige APIs</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressbar.aspx"><strong>ProgressBar-Klasse</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressbar.isindeterminate.aspx"><strong>IsIndeterminate-Eigenschaft</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressring.aspx"><strong>ProgressRing-Klasse</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressring.isactive.aspx"><strong>IsActive-Eigenschaft</strong></a></li>
+<li>[**ProgressBar-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressbar.aspx)</li>
+<li>[**IsIndeterminate-Eigenschaft**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressbar.isindeterminate.aspx)</li>
+<li>[**ProgressRing-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressring.aspx)</li>
+<li>[**IsActive-Eigenschaft**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressring.isactive.aspx)</li>
 </ul>
-
-</div>
 </div>
 
-
-
-
-
-
-## Typen von Statussteuerelementen
+## <a name="types-of-progress"></a>Typen von Statussteuerelementen
 
 Es gibt zwei Steuerelemente, die dem Benutzer anzeigen, dass ein Vorgang ausgeführt wird: ein ProgressBar-Element oder ein ProgressRing-Element.
 
@@ -51,11 +44,11 @@ Ein Statussteuerelement ist zudem schreibgeschützt und nicht interaktiv. Dies b
 
 *Ein unbestimmtes ProgressRing-Element*
 
-## Verwendung der einzelnen Steuerelemente
+## <a name="when-to-use-each-control"></a>Verwendung der einzelnen Steuerelemente
 
 Es ist nicht immer klar erkennbar, welches Steuerelement oder welcher Status (bestimmt oder unbestimmt) zu verwenden ist, um einen Vorgang anzuzeigen. Manchmal ist eine Aufgabe so deutlich zu erkennen, dass kein Statussteuerelement erforderlich ist. Manchmal ist jedoch auch bei Verwendung eines Statussteuerelements eine Textzeile erforderlich, die den Benutzer darüber informiert, welcher Vorgang gerade ausgeführt wird.
 
-### ProgressBar
+### <a name="progressbar"></a>ProgressBar
 -   **Verfügt das Steuerelement über eine festgelegte Dauer oder ein vorhersehbares Ende?**
 
     Verwenden Sie in diesem Fall eine bestimmte Statusanzeige, und aktualisieren Sie deren Prozentsatz oder Wert entsprechend.
@@ -72,7 +65,7 @@ Es ist nicht immer klar erkennbar, welches Steuerelement oder welcher Status (be
     - *Wird abgerufen...*
     - *In Bearbeitung...*
 
-### ProgressRing
+### <a name="progressring"></a>ProgressRing
 
 -   **Muss der Benutzer den Abschluss des Vorgangs abwarten, bevor er seine Aktivität fortsetzen kann?**
 
@@ -90,10 +83,10 @@ Es ist nicht immer klar erkennbar, welches Steuerelement oder welcher Status (be
     - *Anmelden...*
     - *Verbinden...*
 
-### Keine Fortschrittsanzeige erforderlich
+### <a name="no-progress-indication-necessary"></a>Keine Fortschrittsanzeige erforderlich
 -   **Müssen Benutzer wissen, dass Vorgänge ausgeführt werden?**
 
-    Wenn die App z.B. im Hintergrund einen Download ausführt, der nicht vom Benutzer eingeleitet wurde, ist es auch nicht unbedingt erforderlich, den Benutzer darüber zu informieren.
+    Wenn die App z. B. im Hintergrund einen Download ausführt, der nicht vom Benutzer eingeleitet wurde, ist es auch nicht unbedingt erforderlich, den Benutzer darüber zu informieren.
 
 -   **Wird der Vorgang im Hintergrund ausgeführt, ohne die Aktivitäten des Benutzers zu blockieren, und ist er für Benutzer von geringem Interesse, aber nicht völlig irrelevant?**
 
@@ -103,7 +96,7 @@ Es ist nicht immer klar erkennbar, welches Steuerelement oder welcher Status (be
 
     Manchmal ist es am besten, nur auf den Abschluss eines Vorgangs hinzuweisen oder den unmittelbaren Abschluss des Vorgangs durch ein visuelles Element anzukündigen, und den restlichen Vorgang im Hintergrund auszuführen.
 
-## Bewährte Methoden für Statussteuerelemente
+## <a name="progress-controls-best-practices"></a>Bewährte Methoden für Statussteuerelemente
 
 Manchmal ist eine visuelle Darstellung hilfreich, um zu ermitteln, zu welchem Zeitpunkt welches Statussteuerelement verwendet werden sollte:
 
@@ -129,13 +122,13 @@ Wenn die Dauer des Vorgangs nicht bekannt ist, verwenden Sie ein unbestimmtes Pr
 
 Unbestimmte ProgressRing-Elemente werden verwendet, wenn jegliche Benutzerinteraktion mit der App ausgesetzt ist oder die App auf eine Benutzereingabe wartet, um den Vorgang fortzusetzen. Das „Anmelden...“- Beispiel oben ist ein optimales Szenario für das ProgressRing-Steuerelement, da der Benutzer die App erst weiterverwenden kann, nachdem der Anmeldevorgang abgeschlossen ist.
 
-## Anpassen eines Statussteuerelements
+## <a name="customizing-a-progress-control"></a>Anpassen eines Statussteuerelements
 
 Die beiden Statussteuerelemente sind recht einfach gehalten. Bei verschiedenen visuellen Features der Steuerelemente sind jedoch deren Anpassungsoptionen nicht offensichtlich.
 
 **Ändern der Größe des ProgressRing-Elements**
 
-Sie können das ProgressRing-Element so groß gestalten, wie Sie möchten. Die Mindestgröße beträgt jedoch 20x20Epx. Um die Größe eines ProgressRing-Elements zu ändern, müssen Sie dessen Höhe und Breite festlegen. Wenn nur die Höhe oder nur die Breite festgelegt wird, erhält das Steuerelement die Mindestgröße (20x20Epx). Wenn die Höhe und die Breite auf zwei verschiedene Größen festgelegt sind, wird die kleinere Größen verwendet.
+Sie können das ProgressRing-Element so groß gestalten, wie Sie möchten. Die Mindestgröße beträgt jedoch 20 x 20 Epx. Um die Größe eines ProgressRing-Elements zu ändern, müssen Sie dessen Höhe und Breite festlegen. Wenn nur die Höhe oder nur die Breite festgelegt wird, erhält das Steuerelement die Mindestgröße (20 x 20 Epx). Wenn die Höhe und die Breite auf zwei verschiedene Größen festgelegt sind, wird die kleinere Größen verwendet.
 Um sicherzustellen, dass Ihr ProgressRing-Steuerelement seinen Zweck erfüllt, legen Sie für die Höhe und die Breite denselben Wert fest:
 
 ```XAML
@@ -171,7 +164,7 @@ Manchmal ist es am besten, nur kurz einen Wartecursor anzuzeigen, wenn eine App 
 Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Wait, 10);
 ```
 
-## Verwandte Artikel
+## <a name="related-articles"></a>Verwandte Artikel
 
 
 - [**ProgressBar-Klasse**](https://msdn.microsoft.com/library/windows/apps/br227529)
@@ -183,6 +176,6 @@ Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

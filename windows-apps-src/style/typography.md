@@ -5,12 +5,14 @@ title: Typografie
 ms.assetid: ca35f78a-e4da-423d-9f5b-75896e0b8f82
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 0356d9420d85fbf54718223df77ed501d4b6f5e5
-ms.openlocfilehash: 45b4bbc86c69cabae4a2ee83d2d43c7189a710ce
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: e13e9c8b559c16676628ab6e77ddad019a4c22e0
 
 ---
 
 # <a name="typography"></a>Typografie
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Typografie muss übersichtlich sein, da sie zur visuellen Darstellung von Sprache dient. Ihr Stil darf diesem Ziel nie im Wege stehen. Typografie spielt jedoch auch als Layoutkomponente eine wichtige Rolle und wirkt sich maßgeblich auf die Dichte und Komplexität des Designs und damit auf die Benutzerfreundlichkeit des Designs aus.
 
@@ -38,7 +40,7 @@ Wird sich größere Schrift über kleinerer Schrift befindet, muss der Abstand z
 
 Im XAML-Code wird dies durch Stapeln zweier [TextBlock](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.aspx)-Elemente sowie durch Festlegen des entsprechenden Rands erreicht.
 
-```xml
+```xaml
 <StackPanel Width="200">
     <!-- Setting a bottom margin of 3px on the header
          puts the baseline of the body text exactly 24px
@@ -59,47 +61,65 @@ Im XAML-Code wird dies durch Stapeln zweier [TextBlock](https://msdn.microsoft.c
 ```
 
 
-
-## <a name="kerning-and-tracking"></a>Kerning und Laufweite
+<div class="side-by-side">
+<div class="side-by-side-content">
+  <div class="side-by-side-content-left">
+<h2>Kerning und Laufweite</h2>
 
 Segoe ist eine humanistische Schriftart mit weicher, ansprechender Optik und organischen, offenen Formen, die von handschriftlichen Texten inspiriert sind. Um eine optimale Lesbarkeit zu gewährleisten und den humanistischen Charakter zu bewahren, müssen für Kerning und Laufweite bestimmte Werte verwendet werden.
 
 Kerning muss auf „Metrik“ und die Laufweite auf „0“ festgelegt werden.
-
-
-![Zeigt den Unterschied zwischen Kerning und Laufweite](images/kerning-tracking.png)
-
-
-
-## <a name="word-and-letter-spacing"></a>Wort- und Zeichenabstand
+  </div>
+  <div class="side-by-side-content-right">
+<h2>Wort- und Zeichenabstand</h2>
 
 Ähnlich wie bei Kerning und Laufweite werden auch beim Wort- und Zeichenabstand bestimmte Einstellungen verwendet, um eine optimale Lesbarkeit und die Wahrung des humanistischen Charakters zu gewährleisten.
 
 Der Wortabstand beträgt standardmäßig immer 100 Prozent. Der Zeichenabstand muss auf „0“ festgelegt werden.
+  </div>
+</div>
+</div>
+<div class="side-by-side">
+<div class="side-by-side-content">
+  <div class="side-by-side-content-left">
+![Der Unterschied zwischen Kerning und Laufweite](images/kerning-tracking.png)  
+  </div>
+  <div class="side-by-side-content-right">
+![Der Unterschied zwischen Wort- und Zeichenabstand.](images/word-letter.png) 
+  </div>
+</div>
+</div>
 
 
-![Zeigt den Unterschied zwischen Wort- und Zeichenabstand](images/word-letter.png)
+>[!NOTE]
+>Verwenden Sie in einem XAML-Textsteuerelement [Typogrphy.Kerning](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.documents.typography.kerning.aspx), um das Kerning zu steuern, und [FontStretch](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.control.fontstretch.aspx). um die Nachverfolgung zu steuern. Typography.Kerning ist standardmäßig auf „true“ und FontStretch ist standardmäßig auf „Normal“ festgelegt. Dies sind die empfohlenen Werte.
 
-**Hinweis**&nbsp;&nbsp;Verwenden Sie in einem XAML-Textsteuerelement [Typogrphy.Kerning](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.documents.typography.kerning.aspx) zur Steuerung des Kernings und [FontStretch](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.control.fontstretch.aspx) zur Steuerung der Laufweite. Typography.Kerning ist standardmäßig auf „true“ und FontStretch ist standardmäßig auf „Normal“ festgelegt. Dies sind die empfohlenen Werte.
+<div class="side-by-side">
+<div class="side-by-side-content">
+  <div class="side-by-side-content-left">
+<h2>Ausrichtung</h2>
 
-
-
-
-## <a name="alignment"></a>Ausrichtung
-
-Im Allgemeinen wird die linksbündige Ausrichtung visueller Elemente und Spalten mit Schrift empfohlen. In den meisten Fällen sorgt das Konzept „links bündig, rechts mit Flatterrand“ für eine konsistente Verankerung des Inhalts und für ein einheitliches Layout.
-
-
-![Zeigt linksbündigen Text](images/alignment.png)
-
-
-
-## <a name="line-endings"></a>Zeilenenden
+Im Allgemeinen wird die linksbündige Ausrichtung visueller Elemente und Spalten mit Schrift empfohlen. In den meisten Fällen sorgt das Konzept „links bündig, rechts mit Flatterrand“ für eine konsistente Verankerung des Inhalts und für ein einheitliches Layout. 
+  </div>
+  <div class="side-by-side-content-right">
+<h2>Zeilenenden</h2>
 
 Wenn Typografie nicht linksbündig mit rechtem Flatterrand positioniert wird, versuchen Sie, gleichmäßige Zeilenenden zu erreichen, und vermeiden Sie die Verwendung von Silbentrennung.
+  </div>
+</div>
+</div>
 
+<div class="side-by-side">
+<div class="side-by-side-content">
+  <div class="side-by-side-content-left">
+![Zeigt linksbündigen Text.](images/alignment.png)  
+  </div>
+  <div class="side-by-side-content-right">
+![Zeigt gleichmäßige Zeilenenden.](images/line-endings.png) 
+  </div>
+</div>
+</div>
 
-![Zeigt gleichmäßige Zeilenenden](images/line-endings.png)
 
 ## <a name="paragraphs"></a>Absätze
 
@@ -125,7 +145,8 @@ Sobald die Höhe des Texts die Höhe des Symbols übersteigt, muss die erste Tex
 
 ![Mehrere Kombinationen aus Symbol und Text](images/hanging-text-alignment.png)
 
-**Hinweis**&nbsp;&nbsp;Die XAML-Eigenschaft [TextBlock.TextLineBounds](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.textlinebounds.aspx) stellt den Zugriff auf die Höhe von Großbuchstaben und die Basisschriftartmetrik bereit. Sie kann verwendet werden, um visuell vertikal zu zentrieren oder oben ausgerichtet einzugeben.
+>[!NOTE]
+>Die XAML-Eigenschaft [TextBlock.TextLineBounds](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.textlinebounds.aspx) stellt den Zugriff auf die Höhe von Großbuchstaben und die Basisschriftartmetrik bereit. Sie kann verwendet werden, um visuell vertikal zu zentrieren oder oben ausgerichtet einzugeben.
 
 ## <a name="clipping-and-ellipses"></a>Beschnitt und Ellipsen
 
@@ -138,16 +159,31 @@ Ausnahme: Bei Containern, die nicht klar definiert sind (also sich etwa nicht du
 ## <a name="type-ramp"></a>Typhierarchie
 Die Typhierarchie stellt eine wichtige gestalterische Beziehung zwischen Überschrift und Textkörper her und schafft damit eine klare und verständliche Hierarchie zwischen den verschiedenen Ebenen. Diese Hierarchie bildet eine Struktur, die Benutzern die Navigation durch schriftliche Kommunikation erleichtert.
 
-![Zeigt die Typhierarchie](images/type-ramp.png) Die Größen sind in effektiven Pixeln angegeben. 
+<div class="uwpd-image-with-caption">
+    <img src="images/type-ramp.png" alt="Shows the type ramp" />
+    <div>Die Größe wird jeweils in effektiven Pixeln angegeben. Weitere Informationen finden Sie unter [Einführung in das UWP-App-Design](../layout/design-and-ui-intro.md).</div>
+</div>
+
+>[!NOTE]
+>Die meisten Ebenen der Typhierarchie sind in XAML als [statische Ressourcen](https://msdn.microsoft.com/en-us/library/windows/apps/Mt187274.aspx#the_xaml_type_ramp) verfügbar, die der `*TextBlockStyle`-Benennungskonvention folgen (z. B.: `HeaderTextBlockStyle`).
 
 
-**Hinweis**&nbsp;&nbsp;Die meisten Ebenen der Typhierarchie sind in XAML als [statische Ressourcen](https://msdn.microsoft.com/en-us/library/windows/apps/Mt187274.aspx#the_xaml_type_ramp) verfügbar, die der `*TextBlockStyle`-Namenskonvention folgen (z. B. `HeaderTextBlockStyle`).
+<div class="microsoft-internal-note">
+SubtitleAlt, BaseAlt und CaptionAlt sind derzeit nicht enthalten. Sie können die Formatvorlagen in Ihrer eigenen App nach den Codeausschnitten im oben genannten Link erstellen. Beachten Sie zudem, dass XAML derzeit die Zeilenhöhe nicht exakt angleichen kann.
+</div>
 
 
 ## <a name="primary-and-secondary-text"></a>Primärer und sekundärer Text
 
 Zur Erweiterung der Typhierarchie kann die Deckkraft des sekundären Texts auf 60 Prozent festgelegt werden. In der [Farbschemapalette](color.md#color-theming) wird dafür „BaseMedium“ verwendet. Der primäre Text muss immer eine Deckkraft von 100 Prozent (BaseHigh) besitzen.
 
+<!-- Need new images
+![Two phone apps using SubtitleAlt](images/type-ramp-example-2.png)
+Recommended use of SubtitleAlt. Also note the primary and secondary text usage in list items.
+
+![Two phone apps using CaptionAlt](images/type-ramp-example-1.png)
+Recommended use of CaptionAlt.
+-->
 
 ## <a name="all-caps-titles"></a>Titel in Großbuchstaben
 
@@ -156,32 +192,28 @@ Bestimmte Seitentitel sollten in GROSSBUCHSTABEN angegeben werden, um die Hierar
 In bestimmten Sprachen ändert sich durch eine Großschreibung jedoch die Bedeutung von Eigennamen. Daher dürfen auf Namen oder Benutzereingaben basierende Seitentitel *nicht* in Großbuchstaben umgewandelt werden.
 
 
-**Empfohlen**
+<!-- Need new images
+![Shows several apps where they should and should not use all caps](images/all-caps.png)
+Green shows where all caps should be used. Red shows where it should not.
+-->
 
-
-
+## <a name="dos-and-donts"></a>Empfohlene und nicht empfohlene Vorgehensweisen
 * Verwenden Sie „Body“ für die meisten Texte.
 * Verwenden Sie „Base“ für Titel mit begrenztem Platz.
 * Integrieren Sie „SubtitleAlt“, um durch Hervorhebung des übergeordneten Inhalts einen Kontrast und eine Hierarchie zu schaffen.
-
-
-
-**Nicht empfohlen**
-
-
-
 * Verwenden Sie „Caption“ nicht für lange Zeichenfolgen oder Hauptaktionen.
-* Verwenden Sie „Header“ oder „Subheader“ nicht, wenn der Text umbrochen werden muss.
+* Verwenden Sie „Header“ oder „Subheader“ nicht, wenn der Text umgebrochen werden muss.
 * Verwenden Sie „Subtitle“ und „SubtitleAlt“ nicht auf der gleichen Seite.
-
 
 
 ## <a name="related-articles"></a>Verwandte Artikel
 
 * [Textsteuerelemente](../controls-and-patterns/text-controls.md)
+* [Schriftarten](fonts.md)
+* [Segoe MDL2-Symbole](segoe-ui-symbol-font.md)
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

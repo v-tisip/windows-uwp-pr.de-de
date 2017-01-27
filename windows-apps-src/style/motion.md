@@ -6,16 +6,18 @@ ms.assetid: 21AA1335-765E-433A-85D8-560B340AE966
 label: Motion
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: d7236006f2c620a4ff0de4e0f413f32a2eaf5687
-ms.openlocfilehash: 1cdbb81c783d17af16743a4ff5f82dc1c92df6b4
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 53b6108a472e021caa0d11327c1457b3f6ca8aac
 
 ---
 
-# Bewegung für UWP-Apps
+# <a name="motion-for-uwp-apps"></a>Bewegung für UWP-Apps
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Gut gestaltete Animationen machen Apps lebhaft und lassen sie realistisch und perfekt erscheinen. Helfen Sie Benutzern dabei, Kontextänderungen zu verstehen, und verbinden Sie Interaktionen mit visuellen Übergängen.
 
-## Vorteile der Animation
+## <a name="benefits-of-animation"></a>Vorteile der Animation
 
 
 Animation bedeutet nicht nur, Dinge beweglich zu machen. Durch Animation lässt sich ein physisches Ökosystem für den Benutzer erstellen, in dem er leben und das er durch Berührungen verändern kann. Die Qualität der Erfahrung hängt davon ab, wie gut die App auf den Benutzer reagiert und welche Art von Persönlichkeit die Benutzeroberfläche vermittelt.
@@ -48,15 +50,13 @@ Wenn ein Benutzer mehr Zeit in Ihrer App verbringt oder Aufgaben in Ihrer App ko
 
     Durch Animationen kann dem Benutzer mitgeteilt werden, dass das Telefon noch mit der Verarbeitung beschäftigt und nicht eingefroren ist, und es können passiv neue Informationen angezeigt werden, die den Benutzer möglicherweise interessieren.
 
-## Inhalt dieses Abschnitts
+<h2>Inhalt dieses Abschnitts</h2>
+
 <table>
-<thead>
-<tr class="header">
+<tr>
 <th align="left">Animationstyp</th>
 <th align="left">Beschreibung</th>
 </tr>
-</thead>
-<tbody>
     <tr>
         <td>[Hinzufügen und Löschen](motion-list.md)
         </td>
@@ -99,8 +99,6 @@ Wenn ein Benutzer mehr Zeit in Ihrer App verbringt oder Aufgaben in Ihrer App ko
         <td>Verschiebt Elemente an eine neue Position.
         </td>
     </tr>
-
-</tbody>
 </table>
 
  
@@ -111,6 +109,6 @@ Wenn ein Benutzer mehr Zeit in Ihrer App verbringt oder Aufgaben in Ihrer App ko
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

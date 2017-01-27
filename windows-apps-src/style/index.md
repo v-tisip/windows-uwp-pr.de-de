@@ -3,12 +3,19 @@ description: "Erfahren Sie, wie Sie Farbe, Typografie und Bewegung verwenden, um
 keywords: UWP-Formatanleitungen, Designanleitungen, Typografie, Bewegung, Ton, Bewegung, App-Entwicklung
 title: "UWP-Formatanleitungen – Entwicklung von Windows-Apps"
 author: mijacobs
+label: Style
+template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 2f9d2059399efd949fc8a1d90a5b6c8c106a478e
-ms.openlocfilehash: 4a96db626f6f3682248e7e720c956fa343186b4a
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 488eac85e7ab724dd3dbc6d5972cd330d972134b
 
 ---
-# UWP-Formatanleitungen
+# <a name="uwp-style-guide"></a>UWP-Formatanleitungen
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -74,6 +81,6 @@ Das XAML-Framework bietet zahlreiche Anpassungsmöglichkeiten für die App-Darst
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO2-->
 
 

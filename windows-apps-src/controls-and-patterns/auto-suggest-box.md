@@ -7,11 +7,11 @@ dev.assetid: 54F8DB8A-120A-4D79-8B5A-9315A3764C2F
 label: Auto-suggest box
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 9406f9b826dfb7d2603a0812f209dfb38cf639ae
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 6b41c8b1888b61c82aa3d54244151b08d963658d
 
 ---
-# Feld mit automatischen Vorschlägen
+# <a name="auto-suggest-box"></a>Feld mit automatischen Vorschlägen
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Verwenden Sie ein AutoSuggestBox-Element, um eine Liste mit Vorschlägen bereitzustellen, aus der Benutzer bei der Eingabe auswählen können.
@@ -21,32 +21,27 @@ Verwenden Sie ein AutoSuggestBox-Element, um eine Liste mit Vorschlägen bereitz
 <div class="important-apis" >
 <b>Wichtige APIs</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx"><strong>AutoSuggestBox-Klasse</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.textchanged.aspx"><strong>TextChanged-Ereignis</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.suggestionchosen.aspx"><strong>SuggestionChose-Ereignis</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.querysubmitted.aspx"><strong>QuerySubmitted-Ereignis</strong></a></li>
+<li>[**AutoSuggestBox-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx)</li>
+<li>[**TextChanged-Ereignis**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.textchanged.aspx)</li>
+<li>[**SuggestionChose-Ereignis**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.suggestionchosen.aspx)</li>
+<li>[**QuerySubmitted-Ereignis**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.querysubmitted.aspx)</li>
 </ul>
-
-</div>
 </div>
 
 
-
-
-
-## Ist dies das richtige Steuerelement?
+## <a name="is-this-the-right-control"></a>Ist dies das richtige Steuerelement?
 
 Wenn Sie ein einfaches, anpassbares Steuerelement verwenden möchten, das die Textsuche mit einer Liste von Vorschlägen ermöglicht, verwenden Sie ein Feld mit automatischen Vorschlägen.
 
 Weitere Informationen zum Auswählen des passenden Textsteuerelements finden Sie im Artikel über [Textsteuerelemente](text-controls.md).
 
-## Beispiele
+## <a name="examples"></a>Beispiele
 
 Ein Feld mit automatischen Vorschlägen in der Groove-Musik-App.
 
 ![Ein Feld mit automatischen Vorschlägen in der Groove-Musik-App](images/control-examples/auto-suggest-box-groove.png)
 
-## Aufbau
+## <a name="anatomy"></a>Aufbau
 Der Einstiegspunkt für das Feld mit automatischen Vorschlägen besteht aus einem optionalen Header und einem Feld mit optionalem Hinweistext:
 
 ![Beispiel für den Einstiegspunkt für das Steuerelement für automatische Vorschläge](images/controls_autosuggest_entrypoint.png)
@@ -55,7 +50,7 @@ Die Ergebnisliste für automatische Vorschläge wird automatisch ausgefüllt, so
 
 ![Beispiel für das erweiterte Steuerelement für automatische Vorschläge](images/controls_autosuggest_expanded01.png)
 
-## Erstellen eines Felds mit automatischen Vorschlägen
+## <a name="create-an-auto-suggest-box"></a>Erstellen eines Felds mit automatischen Vorschlägen
 
 Zum Verwenden eines AutoSuggestBox-Elements müssen Sie auf drei Benutzeraktionen reagieren.
 
@@ -63,7 +58,7 @@ Zum Verwenden eines AutoSuggestBox-Elements müssen Sie auf drei Benutzeraktione
 - Vorschlag ausgewählt: Aktualisieren Sie das Textfeld, wenn der Benutzer in der Vorschlagsliste einen Vorschlag auswählt.
 - Abfrage gesendet: Zeigen Sie die Abfrageergebnisse an, wenn der Benutzer eine Abfrage sendet.
 
-### Text geändert
+### <a name="text-changed"></a>Text geändert
 
 Das [**TextChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.textchanged.aspx)-Ereignis tritt ein, wenn der Inhalt des Textfelds aktualisiert wird. Verwenden Sie die [Reason](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestboxtextchangedeventargs.reason.aspx)-Eigenschaft für die Ereignisargumente, um zu ermitteln, ob die Änderung aufgrund einer Benutzereingabe erfolgt ist. Wenn der Grund für die Änderung **UserInput** lautet, filtern Sie Ihre Daten basierend auf der Eingabe. Legen Sie die gefilterten Daten anschließend als [ItemsSource](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemssource.aspx) des AutoSuggestBox-Elements fest, um die Vorschlagsliste zu aktualisieren.
 
@@ -72,7 +67,7 @@ Um zu steuern, wie Elemente in der Vorschlagsliste angezeigt werden, können Sie
 - Wenn Sie den Text einer einzelnen Eigenschaft des Datenelements anzeigen möchten, legen Sie die DisplayMemberPath-Eigenschaft fest, um auszuwählen, welche Eigenschaft Ihres Objekts in der Vorschlagsliste angezeigt werden soll.
 - Verwenden Sie zum Definieren einer benutzerdefinierten Darstellung für jedes Element in der Liste die ItemTemplate-Eigenschaft.
 
-### Vorschlag ausgewählt
+### <a name="suggestion-chosen"></a>Vorschlag ausgewählt
 
 Wenn ein Benutzer mit der Tastatur durch die Vorschlagsliste navigiert, müssen Sie den Text im Textfeld entsprechend aktualisieren.
 
@@ -80,7 +75,7 @@ Sie können die [TextMemberPath](https://msdn.microsoft.com/library/windows/apps
 
 Wenn Sie mehr als eine einfache Eigenschaft anzeigen müssen, behandeln Sie das [SuggestionChosen](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.suggestionchosen.aspx)-Ereignis, um das Textfeld mit benutzerdefiniertem Text basierend auf dem ausgewählten Element zu füllen.
 
-### Abfrage gesendet
+### <a name="query-submitted"></a>Abfrage gesendet
 
 Behandeln Sie das [QuerySubmitted](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.querysubmitted.aspx) -Ereignis, um eine passende Abfrageaktion für die App durchzuführen und das Ergebnis dem Benutzer anzuzeigen.
 
@@ -90,7 +85,7 @@ Das QuerySubmitted-Ereignis tritt ein, wenn ein Benutzer eine Abfragezeichenfolg
 
 In allen Fällen enthält die [QueryText](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestboxquerysubmittedeventargs.querytext.aspx)-Eigenschaft für die Ereignisargumente den Text aus dem Textfeld.
 
-## Verwenden von AutoSuggestBox für die Suche
+## <a name="use-autosuggestbox-for-search"></a>Verwenden von AutoSuggestBox für die Suche
 
 Verwenden Sie ein AutoSuggestBox-Element, um eine Liste mit Vorschlägen bereitzustellen, aus der Benutzer während der Eingabe auswählen können.
 
@@ -104,9 +99,9 @@ Hier ist ein AutoSuggestBox-Element mit einem Suchsymbol dargestellt.
 
 ![Beispiel für den Einstiegspunkt für das Steuerelement für automatische Vorschläge](images/controls_autosuggest_entrypoint.png)
 
-## Beispiele
+## <a name="get-the-sample-code"></a>Beispielcode herunterladen 
 
-Ein vollständiges, funktionierendes Beispiel für AutoSuggestBox finden Sie unter [Beispiel für AutoSuggestBox-Migration](http://go.microsoft.com/fwlink/p/?LinkId=619996) und [Beispiel für XAML-UI-Grundlagen](http://go.microsoft.com/fwlink/p/?LinkId=619992).
+Ein vollständiges, funktionierendes Beispiel für „AutoSuggestBox“ finden Sie unter [AutoSuggestBox-Beispiel](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlAutoSuggestBox) und [Beispiel für XAML-UI-Grundlagen](http://go.microsoft.com/fwlink/p/?LinkId=619992).
 
 Dies ist ein einfaches AutoSuggestBox-Element mit den erforderlichen Ereignishandlern.
 
@@ -150,24 +145,37 @@ private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBox
 }
 ```
 
-## Empfohlene und nicht empfohlene Vorgehensweisen
+## <a name="dos-and-donts"></a>Empfohlene und nicht empfohlene Vorgehensweisen
 
--   Zeigen Sie, wenn Sie das Feld mit automatischen Vorschlägen zum Durchführen von Suchen verwenden und keine Suchergebnisse für den eingegebenen Text vorhanden sind, die einzeilige Meldung „Keine Ergebnisse” an, damit Benutzer wissen, dass ihre Suchanfrage ausgeführt wurde:
+-   Zeigen Sie die einzeilige Meldung „Keine Ergebnisse” an, wenn Sie das Feld mit automatischen Vorschlägen zum Durchführen von Suchen verwenden und keine Suchergebnisse für den eingegebenen Text vorhanden sind, damit Benutzer wissen, dass ihre Suchanfrage ausgeführt wurde:
 
     ![Beispiel für ein Feld mit automatischen Vorschlägen ohne Suchergebnisse](images/controls_autosuggest_noresults.png)
 
+<div class="microsoft-internal-note">
+**Prüfliste für Globalisierung und Lokalisierung**
 
-## Verwandte Artikel
+<table>
+<tr>
+<th>Vertikaler Abstand</th><td>Verwenden Sie nicht lateinische Zeichen für den vertikalen Abstand, um sicherzustellen, dass nicht lateinische Schriften richtig angezeigt werden, einschließlich Zahlen.</td>
+</tr>
+<tr>
+<th>Bildlauf</th><td>Wenn automatisch vorgeschlagener Text ausgewählt wird, sollten Benutzer einen Bildlauf bis zum Ende der Zeichenfolge ausführen können.</td>
+</tr>
+</table>
+</div>
+
+
+## <a name="related-articles"></a>Verwandte Artikel
 
 - [Textsteuerelemente](text-controls.md)
 - [Rechtschreibprüfung](spell-checking-and-prediction.md)
 - [Suche](search.md)
 - [**TextBox-Klasse**](https://msdn.microsoft.com/library/windows/apps/br209683)
 - [**Windows.UI.Xaml.Controls PasswordBox-Klasse**](https://msdn.microsoft.com/library/windows/apps/br227519)
-- [StringLength-Eigenschaft](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
+- [StringLength-Eigenschaft](https://msdn.microsoft.com/library/system.string.length.aspx)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

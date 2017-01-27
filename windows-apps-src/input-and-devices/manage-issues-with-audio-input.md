@@ -5,26 +5,35 @@ title: Verwalten von Problemen bei der Audioeingabe
 ms.assetid: 3E36C683-C96A-4FEE-AD52-FDB87E0CC299
 label: Manage audio input issues
 template: detail.hbs
+keywords: "Sprache, Stimme, Spracherkennung, natürliche Sprache, diktieren, Eingabe, Benutzerinteraktion"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 12f46dd0ec375977cc33efeb73757c5ec75077bd
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: a6f6e4c04f608898d2871113f38fe647b62bf8a5
 
 ---
 
-# Verwalten von Problemen bei der Audioeingabe
+# <a name="manage-issues-with-audio-input"></a>Verwalten von Problemen bei der Audioeingabe
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Erfahren Sie, wie Sie Probleme mit der Genauigkeit der Spracherkennung behandeln, die auf die Qualität der Audioeingabe zurückzuführen sind.
 
-**Wichtige APIs**
+<div class="important-apis" >
+<b>Wichtige APIs</b><br/>
+<ul>
+<li>[**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226)</li>
+<li>[**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243)</li>
+<li>[**SpeechRecognitionAudioProblem**](https://msdn.microsoft.com/library/windows/apps/dn631406)</li>
 
--   [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226)
--   [**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243)
--   [**SpeechRecognitionAudioProblem**](https://msdn.microsoft.com/library/windows/apps/dn631406)
+</ul>
+</div>
 
 
-
-
-## Bewerten der Qualität der Audioeingabe
+## <a name="assess-audio-input-quality"></a>Bewerten der Qualität der Audioeingabe
 
 
 Wenn die Spracherkennung aktiviert ist, verwenden Sie das [**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243)-Ereignis Ihrer Spracherkennung, um festzustellen, ob Audioprobleme die Spracheingabe stören. Das Ereignisargument ([**SpeechRecognitionQualityDegradingEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn631430)) enthält die [**Problem**](https://msdn.microsoft.com/library/windows/apps/dn631431)-Eigenschaft, die die Probleme mit der Audioeingabe aufzeigt.
@@ -63,7 +72,7 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## Verwalten der Spracherkennungsfunktion
+## <a name="manage-the-speech-recognition-experience"></a>Verwalten der Spracherkennungsfunktion
 
 
 Mit der bereitgestellten Beschreibung der [**Problem**](https://msdn.microsoft.com/library/windows/apps/dn631431)-Eigenschaft können die Benutzer die Bedingungen für die Spracherkennung verbessern.
@@ -103,7 +112,7 @@ private async void speechRecognizer_RecognitionQualityDegrading(
 }
 ```
 
-## Verwandte Artikel
+## <a name="related-articles"></a>Verwandte Artikel
 
 
 * [Sprachinteraktionen](speech-interactions.md)
@@ -120,6 +129,6 @@ private async void speechRecognizer_RecognitionQualityDegrading(
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

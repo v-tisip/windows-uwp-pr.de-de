@@ -4,12 +4,12 @@ title: "Ausführen einer Hintergrundaufgabe für einen Timer"
 description: "Hier erfahren Sie, wie Sie eine einmalige Hintergrundaufgabe planen oder eine regelmäßige Hintergrundaufgabe ausführen."
 ms.assetid: 0B7F0BFF-535A-471E-AC87-783C740A61E9
 translationtype: Human Translation
-ms.sourcegitcommit: 7d1c160f8b725cd848bf8357325c6ca284b632ae
-ms.openlocfilehash: 1ad44208b3442e80212656db943ff088514cc954
+ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
+ms.openlocfilehash: 488bbbf1dbe99d653dded0af78a8fd22c7429cde
 
 ---
 
-# Ausführen einer Hintergrundaufgabe für einen Timer
+# <a name="run-a-background-task-on-a-timer"></a>Ausführen einer Hintergrundaufgabe für einen Timer
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -22,19 +22,19 @@ ms.openlocfilehash: 1ad44208b3442e80212656db943ff088514cc954
 Hier erfahren Sie, wie Sie eine einmalige Hintergrundaufgabe planen oder eine regelmäßige Hintergrundaufgabe ausführen.
 
 -   In diesem Beispiel wird davon ausgegangen, dass eine Hintergrundaufgabe regelmäßig oder zu einer bestimmten Uhrzeit ausgeführt werden muss, um die App zu unterstützen. Eine Hintergrundaufgabe wird nur mithilfe eines [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843) ausgeführt, wenn Sie [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) aufgerufen haben.
--   Bei diesem Thema wird vorausgesetzt, dass Sie bereits eine Hintergrundaufgabenklasse erstellt haben. Um schnell mit dem Erstellen einer Hintergrundaufgabe zu beginnen, lesen Sie [Erstellen und Registrieren einer Hintergrundaufgabe innerhalb von Prozessen](create-and-register-an-inproc-background-task.md) oder [Erstellen und Registrieren einer Hintergrundaufgabe außerhalb von Prozessen](create-and-register-an-outofproc-background-task.md). Ausführlichere Informationen zu Bedingungen und Triggern finden Sie unter [Unterstützen der App mit Hintergrundaufgaben](support-your-app-with-background-tasks.md).
+-   Bei diesem Thema wird vorausgesetzt, dass Sie bereits eine Hintergrundaufgabenklasse erstellt haben. Um schnell mit dem Erstellen einer Hintergrundaufgabe zu beginnen, lesen Sie [Erstellen und Registrieren einer Hintergrundaufgabe innerhalb von Prozessen](create-and-register-an-inproc-background-task.md) oder [Erstellen und Registrieren einer Hintergrundaufgabe außerhalb von Prozessen](create-and-register-a-background-task.md). Ausführlichere Informationen zu Bedingungen und Triggern finden Sie unter [Unterstützen der App mit Hintergrundaufgaben](support-your-app-with-background-tasks.md).
 
-## Erstellen eines Zeitauslösers
+## <a name="create-a-time-trigger"></a>Erstellen eines Zeitauslösers
 
 -   Erstellen Sie einen neuen Zeitauslöser ([**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843)). Der zweite Parameter (*OneShot*) gibt an, ob die Hintergrundaufgabe einmalig oder regelmäßig ausgeführt wird. Wenn *OneShot* auf „true“ festgelegt ist, gibt der erste Parameter (*FreshnessTime*) an, wie lange mit der Planung der Hintergrundaufgabe gewartet werden soll (in Minuten). Wenn *OneShot* auf „false“ festgelegt ist, gibt *FreshnessTime* die Häufigkeit an, mit der die Hintergrundaufgabe ausgeführt wird.
 
     Der integrierte Timer für auf Desktop- oder Mobilgeräte ausgerichtete UWP-Apps führt Hintergrundaufgaben in einem 15-Minuten-Intervall aus.
 
-    -   Wenn *FreshnessTime* auf 15Minuten und *OneShot* auf „true“ festgelegt ist, wird die Aufgabe einmalig innerhalb der ersten 15 und 30Minuten nach dem Registrierungszeitpunkt zur Ausführung eingeplant. Wenn sie auf 25Minuten und *OneShot* auf „true“ festgelegt ist, wird die Aufgabe einmalig innerhalb der ersten 25 und 40Minuten nach dem Registrierungszeitpunkt zur Ausführung eingeplant.
+    -   Wenn *FreshnessTime* auf 15 Minuten und *OneShot* auf „true“ festgelegt ist, wird die Aufgabe einmalig innerhalb der ersten 15 und 30 Minuten nach dem Registrierungszeitpunkt zur Ausführung eingeplant. Wenn sie auf 25 Minuten und *OneShot* auf „true“ festgelegt ist, wird die Aufgabe einmalig innerhalb der ersten 25 und 40 Minuten nach dem Registrierungszeitpunkt zur Ausführung eingeplant.
 
-    -   Wenn *FreshnessTime* auf 15Minuten und *OneShot* auf „false“ festgelegt ist, wird die Aufgabe alle 15Minuten innerhalb der ersten 15 und 30Minuten nach dem Registrierungszeitpunkt zur Ausführung eingeplant. Wenn sie auf „n” Minuten und *OneShot* auf „false“ festgelegt ist, wird die Aufgabe alle „n” Minuten innerhalb der ersten „n” und „n+15” Minuten nach dem Registrierungszeitpunkt zur Ausführung eingeplant.
+    -   Wenn *FreshnessTime* auf 15 Minuten und *OneShot* auf „false“ festgelegt ist, wird die Aufgabe alle 15 Minuten innerhalb der ersten 15 und 30 Minuten nach dem Registrierungszeitpunkt zur Ausführung eingeplant. Wenn sie auf „n” Minuten und *OneShot* auf „false“ festgelegt ist, wird die Aufgabe alle „n” Minuten innerhalb der ersten „n” und „n+15” Minuten nach dem Registrierungszeitpunkt zur Ausführung eingeplant.
 
-    **Hinweis**: Wenn *FreshnessTime* auf weniger als 15Minuten festgelegt ist, wird bei dem Versuch, die Hintergrundaufgabe zu registrieren, eine Ausnahme ausgelöst.
+    **Hinweis**: Wenn *FreshnessTime* auf weniger als 15 Minuten festgelegt ist, wird bei dem Versuch, die Hintergrundaufgabe zu registrieren, eine Ausnahme ausgelöst.
  
 
     Dieser Auslöser veranlasst beispielsweise, dass eine Hintergrundaufgabe einmal pro Stunde ausgeführt wird:
@@ -47,7 +47,7 @@ Hier erfahren Sie, wie Sie eine einmalige Hintergrundaufgabe planen oder eine re
     > TimeTrigger ^ hourlyTrigger = ref new TimeTrigger(60, false);
     > ```
 
-## (Optional) Hinzufügen einer Bedingung
+## <a name="optional-add-a-condition"></a>(Optional) Hinzufügen einer Bedingung
 
 -   Erstellen Sie bei Bedarf eine Hintergrundaufgabenbedingung, um zu steuern, wann die Aufgabe ausgeführt wird. Eine Bedingung sorgt dafür, dass die Hintergrundaufgabe erst ausgeführt wird, wenn die Bedingung erfüllt ist. Weitere Informationen finden Sie unter [Festlegen von Bedingungen für die Ausführung einer Hintergrundaufgabe](set-conditions-for-running-a-background-task.md).
 
@@ -61,7 +61,7 @@ Hier erfahren Sie, wie Sie eine einmalige Hintergrundaufgabe planen oder eine re
     > SystemCondition ^ userCondition = ref new SystemCondition(SystemConditionType::UserPresent)
     > ```
 
-##  Aufrufen von RequestAccessAsync()
+##  <a name="call-requestaccessasync"></a>Aufrufen von RequestAccessAsync()
 
 -   Bevor Sie versuchen, die [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843)-Hintergrundaufgabe zu registrieren, rufen Sie [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700494) auf.
 
@@ -73,7 +73,7 @@ Hier erfahren Sie, wie Sie eine einmalige Hintergrundaufgabe planen oder eine re
     > BackgroundExecutionManager::RequestAccessAsync();
     > ```
 
-## Registrieren der Hintergrundaufgabe
+## <a name="register-the-background-task"></a>Registrieren der Hintergrundaufgabe
 
 -   Registrieren Sie die Hintergrundaufgabe, indem Sie die Funktion zum Registrieren der Hintergrundaufgabe aufrufen. Weitere Informationen zum Registrieren von Hintergrundaufgaben finden Sie unter [Registrieren einer Hintergrundaufgabe](register-a-background-task.md).
 
@@ -99,16 +99,16 @@ Hier erfahren Sie, wie Sie eine einmalige Hintergrundaufgabe planen oder eine re
     > **Note**  Background task registration parameters are validated at the time of registration. An error is returned if any of the registration parameters are invalid. Ensure that your app gracefully handles scenarios where background task registration fails - if instead your app depends on having a valid registration object after attempting to register a task, it may crash.
 
 
-## Anmerkungen
+## <a name="remarks"></a>Anmerkungen
 
-> **Hinweis**: Ab Windows10 muss der Benutzer Ihre App nicht mehr zum Sperrbildschirm hinzufügen, um Hintergrundaufgaben zu nutzen. Die verschiedenen Arten von Auslösern für Hintergrundaufgaben werden unter [Unterstützen der App mit Hintergrundaufgaben](support-your-app-with-background-tasks.md)erläutert.
+> **Hinweis**: Ab Windows 10 muss der Benutzer Ihre App nicht mehr zum Sperrbildschirm hinzufügen, um Hintergrundaufgaben zu nutzen. Die verschiedenen Arten von Auslösern für Hintergrundaufgaben werden unter [Unterstützen der App mit Hintergrundaufgaben](support-your-app-with-background-tasks.md)erläutert.
 
-> **Hinweis:** Dieser Artikel ist für Windows10-Entwickler gedacht, die Apps für die Universelle Windows-Plattform (UWP) schreiben. Informationen zur Entwicklung unter Windows8.x oder Windows Phone8.x finden Sie in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **Hinweis:** Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die Universelle Windows-Plattform (UWP) schreiben. Informationen zur Entwicklung für Windows 8.x oder Windows Phone 8.x finden Sie in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
-* [Erstellen und Registrieren einer Hintergrundaufgabe innerhalb von Prozessen](create-and-register-an-inproc-background-task.md).
-* [Erstellen und Registrieren einer Hintergrundaufgabe außerhalb von Prozessen](create-and-register-an-outofproc-background-task.md)
+* [Erstellen und Registrieren einer Hintergrundaufgabe innerhalb des Prozesses](create-and-register-an-inproc-background-task.md)
+* [Erstellen und Registrieren einer Hintergrundaufgabe außerhalb des Prozesses](create-and-register-a-background-task.md)
 * [Deklarieren von Hintergrundaufgaben im Anwendungsmanifest](declare-background-tasks-in-the-application-manifest.md)
 * [Behandeln einer abgebrochenen Hintergrundaufgabe](handle-a-cancelled-background-task.md)
 * [Überwachen des Status und Abschlusses von Hintergrundaufgaben](monitor-background-task-progress-and-completion.md)
@@ -123,6 +123,6 @@ Hier erfahren Sie, wie Sie eine einmalige Hintergrundaufgabe planen oder eine re
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

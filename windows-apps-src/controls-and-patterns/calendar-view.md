@@ -6,47 +6,42 @@ ms.assetid: d8ec5ba8-7a9d-405d-a1a5-5a1b502b9e64
 label: Calendar view
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 4d67cf41bf44904e094476d6350ad68cc46ab52f
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 86062f744efa487cc70adb9648ff3f3584226000
 
 ---
-# Kalenderansicht
+# <a name="calendar-view"></a>Kalenderansicht
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 In einer Kalenderansicht können Benutzer einen Kalender anzeigen und damit interagieren. Als Ansichten sind Monat, Jahr und zehn Jahre möglich. Benutzer können ein einzelnes Datum oder einen Datumsbereich auswählen. Es gibt keine Auswahloberfläche, und der Kalender ist stets sichtbar. 
 
+
 <div class="important-apis" >
 <b>Wichtige APIs</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.aspx"><strong>CalendarView-Klasse</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selecteddateschanged.aspx"><strong>SelectedDatesChanged-Ereignis</strong></a></li>
+<li>[**CalendarView-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.aspx)</li>
+<li>[**SelectedDatesChanged-Ereignis**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selecteddateschanged.aspx)</li>
 </ul>
-
-</div>
 </div>
 
 
-
-
-
-
-## Ist dies das richtige Steuerelement?
+## <a name="is-this-the-right-control"></a>Ist dies das richtige Steuerelement?
 Benutzer können in einer Kalenderansicht in einem stets sichtbaren Kalender ein einzelnes Datum oder einen Datumsbereich auswählen.
 
 Wenn es wichtig ist, das Benutzer gleichzeitig mehrere Tage auswählen können, verwenden Sie eine Kalenderansicht. Sollen Benutzer jeweils nur ein Datum auswählen, ohne dass permanent ein Kalender sichtbar ist, bietet sich möglicherweise ein Steuerelement für die [Kalenderdatumsauswahl](calendar-date-picker.md) bzw. die [Datumsauswahl](date-picker.md) an.
 
 Weitere Informationen zur Auswahl des passenden Steuerelements finden Sie im Artikel über [Datums- und Uhrzeitsteuerelemente](date-and-time.md).
 
-## Beispiele
+## <a name="examples"></a>Beispiele
 
-Die Kalenderansicht besteht aus drei Ansichten: Monat, Jahr und 10Jahre. Standardmäßig wird beim Aufrufen des Kalenders die Monatsansicht angezeigt. Sie können mit der [**DisplayMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.displaymode.aspx)-Eigenschaft eine Standardansicht festlegen.
+Die Kalenderansicht besteht aus drei Ansichten: Monat, Jahr und 10 Jahre. Standardmäßig wird beim Aufrufen des Kalenders die Monatsansicht angezeigt. Sie können mit der [**DisplayMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.displaymode.aspx)-Eigenschaft eine Standardansicht festlegen.
 
 ![Die drei Ansichten einer Kalenderansicht](images/calendar-view-3-views.png)
 
 Wenn Benutzer in der Kopfzeile der Monatsansicht klicken, wird die Jahresansicht angezeigt. Durch Klicken auf die Kopfzeile der Jahresansicht wird die 10-Jahres-Ansicht aufgerufen. Indem Benutzer ein Jahr in der 10-Jahres-Ansicht auswählen, kehren sie zur Jahresansicht zurück. Durch Auswahl eines Monats in der Jahresansicht kehren sie zur Monatsansicht zurück. Mit den beiden Pfeilen neben der Kopfzeile navigieren sie einen Monat, ein Jahr bzw. zehn Jahre vor oder zurück. 
 
-## Erstellen einer Kalenderansicht
+## <a name="create-a-calendar-view"></a>Erstellen einer Kalenderansicht
 
 Dieses Beispiel zeigt, wie Sie eine einfache Kalenderansicht erstellen.
 
@@ -58,7 +53,7 @@ Die fertige Kalenderansicht sieht wie folgt aus:
 
 ![Beispiel für die Kalenderansicht](images/controls_calendar_monthview.png)
 
-### Auswählen von Tagen
+### <a name="selecting-dates"></a>Auswählen von Tagen
 
 Standardmäßig ist die [**SelectionMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selectionmode.aspx)-Eigenschaft auf **Single** gesetzt. Hiermit können Benutzer ein einzelnes Datum im Kalender auswählen. Um die Datumsauswahl zu deaktivieren, setzen Sie die „SelectionMode“-Eigenschaft auf **None**. 
 
@@ -73,9 +68,10 @@ Benutzer können die Auswahl eines Datums aufheben, indem sie im Kalenderraster 
 
 Mithilfe des [**SelectedDatesChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selecteddateschanged.aspx)-Ereignisses können Sie sich bei Änderungen an der [**SelectedDates**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selecteddates.aspx)-Sammlung benachrichtigen lassen.
 
-> **Hinweis**&nbsp;&nbsp;Wichtige Informationen zu Datumswerten finden Sie im Artikel zu Datums- und Uhrzeitsteuerelementen unter [DateTime- und Calendar-Werte](date-and-time.md#datetime-and-calendar-values).
+> [!NOTE]
+> Wichtige Informationen zu Datumswerten finden Sie im Artikel zu Datums- und Uhrzeitsteuerelementen unter [DateTime- und Calendar-Werte](date-and-time.md#datetime-and-calendar-values).
 
-### Anpassen des Erscheinungsbilds der Kalenderansicht
+### <a name="customizing-the-calendar-views-appearance"></a>Anpassen des Erscheinungsbilds der Kalenderansicht
 
 Die Kalenderansicht besteht sowohl aus XAML-Elementen, die in der „ControlTemplate“-Vorlage definiert werden, als auch aus visuellen Elementen, die direkt durch das Steuerelement gerendert werden. 
 - Die in der Steuerelementevorlage definierten XAML-Elemente beinhalten den Rahmen des Steuerelements, die Kopfzeile, Vor- und Zurück-Schaltflächen sowie DayOfWeek-Elemente. Sie können die Elemente stilistisch wie XAML-Steuerelemente anpassen und als neue Vorlagen speichern. 
@@ -109,33 +105,33 @@ Hier wurde für die Jahres- und 10-Jahres-Ansicht ein 3x4-Raster festgelegt.
 calendarView1.SetYearDecadeDisplayDimensions(3, 4);
 ```
 
-Als frühestes Datum wird im Kalender standardmäßig das Datum vor 100Jahren angezeigt, als spätestes Datum das Datum in 100Jahren. Sie können das früheste und späteste Datum des Kalenders mit den Eigenschaften [**MinDate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.mindate.aspx) und [**MaxDate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.maxdate.aspx) ändern.
+Als frühestes Datum wird im Kalender standardmäßig das Datum vor 100 Jahren angezeigt, als spätestes Datum das Datum in 100 Jahren. Sie können das früheste und späteste Datum des Kalenders mit den Eigenschaften [**MinDate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.mindate.aspx) und [**MaxDate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.maxdate.aspx) ändern.
 
 ```csharp
 calendarView1.MinDate = new DateTime(2000, 1, 1);
 calendarView1.MaxDate = new DateTime(2099, 12, 31);
 ```
 
-### Aktualisieren von Kalendertagelementen
+### <a name="updating-calendar-day-items"></a>Aktualisieren von Kalendertagelementen
 
 Jeder Tag im Kalender wird durch ein [**CalendarViewDayItem**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarviewdayitem.aspx)-Objekt repräsentiert. Um auf ein individuelles Tagelement zuzugreifen und dessen Eigenschaften und Methoden zu verwenden, nutzen Sie das [**CalendarViewDayItemChanging**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.calendarviewdayitemchanging.aspx)-Ereignis und die „Item“-Eigenschaft der Ereignisargumente, um auf das „CalendarViewDayItem“-Element zuzugreifen.
 
 Wenn ein Tag in der Kalenderansicht nicht auswählbar sein soll, setzen Sie dessen [**CalendarViewDayItem.IsBlackout**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarviewdayitem.isblackout.aspx)-Eigenschaft auf **true**. 
 
-Durch Aufrufen der [**CalendarViewDayItem.SetDensityColors**](https://msdn.microsoft.com/library/windows/apps/xaml/dn890067.aspx)-Methode können Sie Kontextinformationen zur Dichte von Ereignissen anzeigen. Sie können pro Tag zwischen0 und 10Dichtebalken in individuellen Farben festlegen. 
+Durch Aufrufen der [**CalendarViewDayItem.SetDensityColors**](https://msdn.microsoft.com/library/windows/apps/xaml/dn890067.aspx)-Methode können Sie Kontextinformationen zur Dichte von Ereignissen anzeigen. Sie können pro Tag zwischen 0 und 10 Dichtebalken in individuellen Farben festlegen. 
 
-Ein Kalender enthält unter anderem folgende Tagelemente. Tag1 und2 sind schwarz angezeigt und damit nicht buchbar. Für Tag2,3 und4 wurden verschiedene Dichtebalken festgelegt.
+Ein Kalender enthält unter anderem folgende Tagelemente. Tag 1 und 2 sind schwarz angezeigt und damit nicht buchbar. Für Tag 2, 3 und 4 wurden verschiedene Dichtebalken festgelegt.
 
 ![Kalendertage mit Dichtebalken](images/calendar-view-density-bars.png)
 
-### Phasen-Rendering
+### <a name="phased-rendering"></a>Phasen-Rendering
 
 Eine Kalenderansicht kann zahlreiche „CalendarViewDayItem“-Objekte enthalten. Damit die Benutzeroberfläche reaktionsfähig bleibt und Benutzer fließend durch den Kalender navigieren können, unterstützt die Kalenderansicht das Phasen-Rendering. Sie können damit die Verarbeitung eines Tagelements in Phasen unterteilen. Wenn ein Tag aus der Ansicht verschoben wird, bevor alle Phasen abgeschlossen sind, wird keine Zeit mehr zum Verarbeiten oder Rendern dieses Elements aufgewendet.
 
 In diesem Beispiel sehen Sie das Phasen-Rendering einer Kalenderansicht zur Terminplanung. 
-- In Phase0 wird das Standardtagelement gerendert. 
-- In Phase1 geben Sie an, welche Tage nicht buchbar sind. Hierzu zählen vergangene Tage, Sonntage und Tage, die bereits vollständig ausgebucht sind. 
-- In Phase2 prüfen Sie jeden für den Tag gebuchten Termin. Bestätigte Termine werden durch einen grünen Dichtebalken und vorbehaltliche Termine durch einen blauen Dichtebalken gekennzeichnet. 
+- In Phase 0 wird das Standardtagelement gerendert. 
+- In Phase 1 geben Sie an, welche Tage nicht buchbar sind. Hierzu zählen vergangene Tage, Sonntage und Tage, die bereits vollständig ausgebucht sind. 
+- In Phase 2 prüfen Sie jeden für den Tag gebuchten Termin. Bestätigte Termine werden durch einen grünen Dichtebalken und vorbehaltliche Termine durch einen blauen Dichtebalken gekennzeichnet. 
 
 Die `Bookings`-Klasse in diesem Beispiel stammt aus einer fiktiven Terminierungs-App und wird nicht angezeigt.
 
@@ -198,7 +194,7 @@ private void CalendarView_CalendarViewDayItemChanging(CalendarView sender,
 }
 ```
 
-## Verwandte Artikel
+## <a name="related-articles"></a>Verwandte Artikel
 
 - [Datums- und Uhrzeitsteuerelemente](date-and-time.md)
 - [Kalenderdatumsauswahl](calendar-date-picker.md)
@@ -207,6 +203,6 @@ private void CalendarView_CalendarViewDayItemChanging(CalendarView sender,
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

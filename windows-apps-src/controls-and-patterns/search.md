@@ -6,11 +6,11 @@ ms.assetid: C328FAA3-F6AE-4970-8372-B413F1290C39
 label: Search
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: f245db6c37b7c8257e4fe937417d981e49101b8c
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: af8ee5679fe9bb152718b57bd198238bf9a3f6cd
 
 ---
-# Suche und „Auf Seite suchen“
+# <a name="search-and-find-in-page"></a>Suche und „Auf Seite suchen“
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -19,20 +19,11 @@ Die Suche ist eine der besten Möglichkeiten, um Inhalte in Ihrer App zu finden.
 <div class="important-apis" >
 <b>Wichtige APIs</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/dn633874"><strong>AutoSuggestBox-Klasse (XAML)</strong></a></li>
+<li>[**AutoSuggestBox-Klasse (XAML)**](https://msdn.microsoft.com/library/windows/apps/dn633874)</li>
 </ul>
-
-</div>
 </div>
 
-
-
-
-
-
-
-
-## Elemente der Suche
+## <a name="elements-of-the-search-experience"></a>Elemente der Suche
 
 
 **Eingabe.**  Die Texteingabe ist der am häufigsten verwendete Suchmodus und steht daher bei diesem Leitfaden im Mittelpunkt. Andere gängige Eingabemodi sind Spracheingabe und Kamera. Für diese sind jedoch in der Regel eine Verknüpfung mit der Gerätehardware sowie ggf. zusätzliche Steuerelemente oder benutzerdefinierte UI-Elemente in der App erforderlich.
@@ -55,7 +46,7 @@ Eine Möglichkeit für eine wirksame Bearbeitung der vorherigen Abfrage oder die
 
 Der Ergebnissatz kann zur bestmöglichen Vermittlung des Inhalts in einem beliebigen Format angezeigt werden: Eine [Listenansicht](lists.md) ist ziemlich flexibel und für die meisten Suchvorgänge geeignet. Eine Rasteransicht eignet sich gut für Bilder oder andere Medien, und eine Karte gibt Aufschluss über räumliche Verteilung.
 
-## Suchbereiche
+## <a name="search-scopes"></a>Suchbereiche
 
 
 Die Suche ist ein gängiges Feature, und die entsprechenden UI-Elemente begegnen dem Benutzer sowohl in der Shell als auch in vielen Apps. Sucheinstiegspunkte werden zwar in der Regel auf ähnliche Weise visualisiert, können aber Zugriff auf verschiedene Ergebnisse bieten – von breit gefächerten (Web- oder Gerätesuche) bis hin zu spezifischen Ergebnissen (Kontaktliste eines Benutzers). Der Sucheinstiegspunkt muss dem gesuchten Inhalt gegenübergestellt werden.
@@ -86,7 +77,7 @@ Verwenden Sie Hinweistext, um den Suchbereich zu kommunizieren. Beispiele:
 
 Durch eine effektive Vermittlung des Bereichs für den Sucheingabepunkt können Sie sicherstellen, dass die Suchfunktionen die Erwartungen erfüllen, die der Benutzer an sie stellt, und dass er sich nicht über die Suche ärgert.
 
-## Implementierung
+## <a name="implementation"></a>Implementierung
 
 
 Bei den meisten Apps empfiehlt sich die Verwendung eines Textfelds als Sucheinstiegspunkt, da es sich hierbei um ein markantes visuelles Element handelt. Darüber hinaus können Sie mit Hinweistext dazu beitragen, dass die Suchfunktion leichter zu finden und der Benutzer über den Suchbereich informiert ist. Wenn es sich bei der Suche eher um eine sekundäre Aktion handelt oder nur wenig Platz zur Verfügung steht, kann das Suchsymbol auch ohne das dazugehörige Eingabefeld als Einstiegspunkt verwendet werden. Achten Sie bei Verwendung eines Symbols darauf, dass genügend Platz für ein modales Suchfeld verfügbar ist, wie in den Beispielen weiter unten zu sehen.
@@ -103,7 +94,7 @@ Nach dem Klicken auf das Suchsymbol:
 
  
 
-Als Einstiegspunkt für die Suche wird immer ein nach rechts geneigtes Lupensymbol verwendet. Dabei ist das Symbol mit dem Hexadezimalzeichencode0xE0094 (Segoe UI Symbol; üblicherweise mit einem Schriftgrad von 15Epx) zu verwenden.
+Als Einstiegspunkt für die Suche wird immer ein nach rechts geneigtes Lupensymbol verwendet. Dabei ist das Symbol mit dem Hexadezimalzeichencode 0xE0094 (Segoe UI Symbol; üblicherweise mit einem Schriftgrad von 15 Epx) zu verwenden.
 
 Der Sucheinstiegspunkt kann in verschiedenen Bereichen platziert werden und so Aufschluss über Suchbereich und -kontext geben. Suchfunktionen, die übergreifende Ergebnisse für eine Umgebung oder Ergebnisse außerhalb der App sammeln, befinden sich üblicherweise auf der höchsten App-Chromebene. Hierzu zählen beispielsweise globale Befehlsleisten oder Navigationselemente.
 
@@ -113,7 +104,7 @@ Bei bildlauffähigen Listen empfiehlt es sich, darauf zu achten, dass die Suchei
 
 Die Funktion für Nulleingabe und Abfrageformulierung ist bei kontextbezogenen/eingegrenzten Suchvorgängen, bei denen die Liste in Echtzeit auf der Grundlage der Benutzereingabe gefiltert wird, optional. Hiervon ausgenommen sind Fälle, bei denen möglicherweise Abfrageformatierungsvorschläge verfügbar sind. Hierzu zählen beispielsweise Filteroptionen für den Posteingang (An:&lt;Eingabezeichenfolge&gt;, Von: &lt;Eingabezeichenfolge&gt;, Betreff: &lt;Eingabezeichenfolge&gt; usw.).
 
-## Beispiel
+## <a name="example"></a>Beispiel
 
 
 Die Beispiele in diesem Abschnitt zeigen die Suche im Kontext.
@@ -141,15 +132,15 @@ Inlinesuche eignet sich am besten für seltener verwendete oder stark kontextori
 ![Beispiel für eine Inlinesuche](images/patterns-search-results-desktop.png)
 
 
-## Richtlinien für die Funktion „Auf Seite suchen“
+## <a name="guidelines-for-find-in-page"></a>Richtlinien für die Funktion „Auf Seite suchen“
 
 
-Die Funktion „Auf Seite suchen“ bietet Benutzern die Möglichkeit, im aktuellen Text nach Übereinstimmungen zu suchen. Dokumentviewer, Leser und Browser sind die typischsten Apps, die die Funktion „Auf Seite suchen“ bereitstellen.
+Die Funktion „Auf Seite suchen“ bietet Benutzern die Möglichkeit, im aktuellen Text nach Übereinstimmungen zu suchen. Dokumentviewer, Leser und Browser sind die typischsten Apps, die die Funktionalität „Auf Seite suchen“ bereitstellen.
 
-## Empfehlungen
+## <a name="dos-and-donts"></a>Empfohlene und nicht empfohlene Vorgehensweisen
 
 
--   Platzieren Sie eine Befehlsleiste in Ihrer App mit der Funktion „Auf Seite suchen“, damit Benutzer Suchvorgänge für Text auf einer Seite ausführen können. Platzierungsdetails dazu finden Sie im Abschnitt „Beispiele“.
+-   Platzieren Sie eine Befehlsleiste in Ihrer App mit der Funktionalität „Auf Seite suchen“, damit Benutzer Suchvorgänge für Texte auf einer Seite ausführen können. Platzierungsdetails dazu finden Sie im Abschnitt „Beispiele“.
 
     -   In Apps, die die Funktion „Auf Seite suchen“ zur Verfügung stellen, sollten sich alle notwendigen Steuerelemente in einer Befehlsleiste befinden.
     -   Wenn Ihre App eine große Anzahl an Funktionen bereitstellt, die über "Auf Seite suchen" hinausgehen, können Sie eine **Suchschaltfläche** in der Befehlsleiste oberster Ebene als Einstiegspunkt zu einer weiteren Befehlsleiste Verfügung stellen, die alle Steuerelemente enthält, die zur Funktion "Auf Seite suchen" gehören.
@@ -172,7 +163,7 @@ Die Funktion „Auf Seite suchen“ bietet Benutzern die Möglichkeit, im aktuel
 -   Fügen Sie einen Übereinstimmungszähler ein, damit der Benutzer weiß, wie viele Textübereinstimmungen auf der Seite vorhanden sind.
 -   Aktivieren Sie die Tastenkombination (STRG+F).
 
-## Beispiele
+## <a name="examples"></a>Beispiele
 
 
 Stellen Sie eine einfache Möglichkeit zur Verfügung, um das Feature „Auf Seite suchen“ zuzugreifen. In diesem Beispiel auf einer mobilen Benutzeroberfläche wird „Auf Seite suchen“ hinter zwei „Hinzufügen zu…“-Befehlen in einem erweiterbarem Menü angezeigt:
@@ -206,16 +197,28 @@ Wenn eine Textübereinstimmung in der Suche vorliegt, sollte der erste Begriff i
 
 
 
-## **Implementieren von "Auf Seite suchen"**
+## **<a name="implementing-find-in-page"></a>Implementieren von "Auf Seite suchen"**
 
 -   Bei Dokumentviewern, Lesern und Browsern handelt es sich um die wahrscheinlichsten App-Typen für die Bereitstellung von „Auf Seite suchen“, was Benutzern eine vollständige Bildschirmanzeige-/-leseerfahrung ermöglicht.
 -   Die Funktion „Auf Seite suchen“ ist sekundär und sollte auf einer Befehlsleiste platziert werden.
 
-Weitere Informationen zum Hinzufügen von Befehlen zur Befehlsleiste finden Sie unter [Command bar](app-bars.md) (Befehlsleiste).
+Weitere Informationen zum Hinzufügen von Befehlen zur Befehlsleiste finden Sie unter [Befehlsleiste](app-bars.md).
+
+<div class="microsoft-internal-note">
+## Prüfliste für Globalisierung und Lokalisierung
+
+<table>
+<tr>
+<th>Vertikaler Abstand</th><td>Verwenden Sie für den vertikalen Abstand Zeichen aus anderen Schriften als der Lateinschrift, um sicherzustellen, dass andere Schriften als die Lateinschrift richtig angezeigt werden, einschließlich Zahlen.</td>
+</tr>
+<tr>
+<th>Überlegungen hinsichtlich der Bidirektionalität</th><td>Das Lupensymbol sollte in Bidi nicht gespiegelt angezeigt werden.</td>
+</tr>
+</table>
+</div>
 
 
-
-## Verwandte Artikel
+## <a name="related-articles"></a>Verwandte Artikel
 
 * [**Feld mit automatischen Vorschlägen**](auto-suggest-box.md)
 
@@ -226,6 +229,6 @@ Weitere Informationen zum Hinzufügen von Befehlen zur Befehlsleiste finden Sie 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

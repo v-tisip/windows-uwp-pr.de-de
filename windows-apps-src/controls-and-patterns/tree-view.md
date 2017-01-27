@@ -5,13 +5,16 @@ title: Strukturansicht
 label: Tree view
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: b81ef40954860cb026038447158ba1a9edb07002
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 88e3e79b7ebdf06c200f3525095d7685f7e3e6dc
 
 ---
-# Hierarchisches Layout mit Strukturansicht
+# <a name="hierarchical-layout-with-treeview"></a>Hierarchisches Layout mit Strukturansicht
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
+<div class="microsoft-internal-note">
+Redlines für die Strukturansicht finden Sie im Designdepot sind: http://designdepotweb1/DesignDepot.FrontEnd/#/Dashboard/856
+</div>
 
 Eine Strukturansicht ist eine Hierarchieauflistung mit Knoten, die das Aus- und Einblenden von geschachtelten Elementen erlauben. Geschachtelte Elemente können zusätzliche Knoten oder reguläre Listenelemente sein. Sie können eine [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx) zum Erstellen einer Strukturansicht benutzen, um eine Ordnerstruktur oder geschachtelte Beziehungen zwischen Elementen in der UI zu veranschaulichen.
 
@@ -27,45 +30,45 @@ Das Beispiel unterstützt:
 -- | --
 Referenzbeispiel für die Strukturansicht | Die Strukturansicht im Edge-Browser
 
-## Ist dies das richtige Muster?
+## <a name="is-this-the-right-pattern"></a>Ist dies das richtige Muster?
 
 - Verwenden Sie eine Strukturansicht, wenn Elemente geschachtelte Elemente haben, und dann, wenn es wichtig ist, die hierarchische Beziehung zwischen Elementen und ihren gleichgestellten Elementen und Knoten zu veranschaulichen.
 
 - Vermeiden Sie Strukturansicht, wenn die geschachtelte Beziehung eines Elements nicht im Vordergrund steht. Für die meisten Drilldown-Szenarios eignet sich eine normale ListView
 
-## Strukturansicht "UI-Struktur"
+## <a name="treeview-ui-structure"></a>Strukturansicht "UI-Struktur"
 
 Sie können Symbole benutzen, um Knoten in einer Strukturansicht zu veranschaulichen. Es kann eine Kombination aus Einzügen und Symbolen verwendet werden, um die geschachtelte Beziehung zwischen Ordnern und übergeordneten Knoten bzw. Nicht-Ordnern und untergeordneten Knoten darzustellen. Im Folgenden eine Anleitung zur Umsetzung.
 
-### Symbole
+### <a name="icons"></a>Symbole
 
 Benutzen Sie Symbole, um anzuzeigen, dass es sich bei einem Element um einen Knoten handelt, und außerdem, um anzuzeigen, in welchem Zustand sich der Knoten befindet (ein- oder ausgeblendet).
 
-#### Chevron
+#### <a name="chevron"></a>Chevron
 
 Aus Gründen der Konsistenz sollten ausgeblendete Knoten ein Chevron haben, welches nach rechts zeigt, während eingeblendete Knoten ein Chevron haben, das nach unten zeigt.
 
 ![Verwendung des Chevronsymbols in der Strukturansicht](images/treeview_chevron.png)
 
-#### Ordner
+#### <a name="folder"></a>Ordner
 
 Verwenden Sie ein Ordnersymbol ausschließlich als Darstellung für tatsächliche Ordner.
 
 ![Verwendung des Ordnersymbols in der Strukturansicht](images/treeview_folder.png)
 
-#### Chevron und Ordner
+#### <a name="chevron-and-folder"></a>Chevron und Ordner
 
 Eine Kombination aus einem Chevron und einem Ordner sollte nur dann verwendet werden, wenn die Listenelemente, die selbst keine Knoten sind, in der Strukturansicht auch Symbole haben.
 
 ![Verwendung der Chevron- und Ordnersymbole zusammen in einer Strukturansicht.](images/treeview_chevron_folder.png)
 
-#### Redlines für den Einzug von Ordnern und Knoten, die keine Ordner sind
+#### <a name="redlines-for-indentation-of-folders-and-non-folder-nodes"></a>Redlines für den Einzug von Ordnern und Knoten, die keine Ordner sind
 
 Verwenden Sie Redlines wie in dem Bildschirmfoto unten für den Einzug von Ordnern und Knoten, die keine Ordner sind.
 
 ![Redlines für den Einzug von Ordnern und Knoten, die keine Ordner sind](images/treeview_chevron_folder_indent_rl.png)
 
-## Erstellen einer Strukturansicht
+## <a name="building-a-treeview"></a>Erstellen einer Strukturansicht
 
 Die Strukturansicht hat die folgenden Hauptklassen. Jede dieser Klassen wird definiert und in die Referenzimplementierung eingebunden.
 
@@ -76,7 +79,7 @@ Die Strukturansicht hat die folgenden Hauptklassen. Jede dieser Klassen wird def
 - Die `TreeViewItem` Klasse implementiert die Ereignisse für den Drop-Vorgang.
 - Die `ViewModel`-Klasse fasst die Liste der Objekte in der Strukturansicht zusammen, damit Vorgänge wie Tastaturnavigation und Drag & Drop aus der ListView übernommen werden können.
 
-## Erstellen einer Datenvorlage für Ihre Objekte in der Strukturansicht
+## <a name="create-a-data-template-for-your-treeviewitem"></a>Erstellen einer Datenvorlage für Ihre Objekte in der Strukturansicht
 
 Hier sehen Sie einen Abschnitt der XAML, die die Datenvorlage für Ordner und Elemente, die keine Ordner sind, erstellt.
 - Um ein Element der ListView als Ordner zu spezifizieren, müssen Sie explizit die [AllowDrop](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.allowdrop.aspx)-Eigenschaft auf **true** für dieses Element setzen. Dieses XAML zeigt Ihnen eine Möglichkeit dafür.
@@ -133,7 +136,7 @@ Hier sehen Sie einen Abschnitt der XAML, die die Datenvorlage für Ordner und El
 </DataTemplate>
 ```
 
-## Richten Sie die Daten in der Strukturansicht ein
+## <a name="set-up-the-data-in-your-treeview"></a>Richten Sie die Daten in der Strukturansicht ein
 
 Im Folgenden ist der Code, der die Daten in der beispielhaften Strukturansicht liefert.
 
@@ -179,7 +182,7 @@ Sobald Sie mit den oben genannten Schritten fertig sind, erhalten Sie eine volls
 Um dem Benutzer die Möglichkeit zu geben, Elemente in der Strukturansicht hinzuzufügen oder zu entfernen, wird Ihnen empfohlen, ein Kontextmenü einzusetzen, welches dem Benutzer diese Optionen zugänglich macht.
 
 
-## Verwandte Artikel
+## <a name="related-articles"></a>Verwandte Artikel
 
 - [Beispiel für die Strukturansicht](http://go.microsoft.com/fwlink/?LinkId=785018)
 - [**ListView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx)
@@ -187,6 +190,6 @@ Um dem Benutzer die Möglichkeit zu geben, Elemente in der Strukturansicht hinzu
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -7,11 +7,11 @@ isNew: true
 label: Date picker
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 2253172ff20ae46b0ada556551adfeac62136398
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 76d5cd756f462ebaad5a200cf4bcf7f4076e4652
 
 ---
-# Datumsauswahl
+# <a name="date-picker"></a>Datumsauswahl
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -20,30 +20,25 @@ Mit der Datumsauswahl verfügen Sie über eine standardisierte Methode, Benutzer
 <div class="important-apis" >
 <b>Wichtige APIs</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.datepicker.aspx"><strong>DatePicker-Klasse</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.datepicker.date.aspx"><strong>Date-Eigenschaft</strong></a></li>
+<li>[**DatePicker-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.datepicker.aspx)</li>
+<li>[**Date-Eigenschaft**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.datepicker.date.aspx) </li>
+
 </ul>
-
-</div>
 </div>
 
 
-
-
-
-
-## Ist dies das richtige Steuerelement?
+## <a name="is-this-the-right-control"></a>Ist dies das richtige Steuerelement?
 Verwenden Sie eine Datumsauswahl, damit Benutzer ein bekanntes Datum wie etwa einen Geburtstag auswählen können, bei dem der Kalenderkontext unwichtig ist.
 
 Weitere Informationen zur Auswahl des richtigen Datumssteuerelements finden Sie im Artikel über [Datums- und Uhrzeitsteuerelemente](date-and-time.md).
 
-## Beispiele
+## <a name="examples"></a>Beispiele
 
 Der Einstiegspunkt zeigt das ausgewählte Datum an, und wenn der Benutzer den Einstiegspunkt auswählt, wird eine Auswahloberfläche von der Bildschirmmitte aus vertikal erweitert, damit eine Auswahl getroffen werden kann. Die Datumsauswahl überlagert andere Elemente der Benutzeroberfläche; die anderen Elemente der Benutzeroberfläche werden jedoch nicht „beiseitegeschoben“.
 
 ![Beispiel für die Erweiterung der Datumsauswahl](images/controls_datepicker_expand.png)
 
-## Erstellen einer Datumsauswahl
+## <a name="create-a-date-picker"></a>Erstellen einer Datumsauswahl
 
 Dieses Beispiel zeigt, wie Sie eine einfache Datumsauswahl mit einer Kopfzeile erstellen.
 
@@ -64,7 +59,7 @@ Die fertige Datumsauswahl sieht wie folgt aus:
 
 
 
-## Verwandte Artikel
+## <a name="related-articles"></a>Verwandte Artikel
 
 - [Datums- und Uhrzeitsteuerelemente](date-and-time.md)
 - [Kalenderdatumsauswahl](calendar-date-picker.md)
@@ -73,6 +68,6 @@ Die fertige Datumsauswahl sieht wie folgt aus:
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

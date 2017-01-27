@@ -4,39 +4,29 @@ ms.assetid: 7a61c328-77be-4614-b117-a32a592c9efe
 description: "Erfahren Sie mehr über Lösungen für allgemeine Entwicklungsprobleme mit den Microsoft Advertising-Bibliotheken in JavaScript/HTML-Apps."
 title: "Handbuch zur Problembehandlung für HTML und JavaScript"
 translationtype: Human Translation
-ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
-ms.openlocfilehash: 2b86d307dfbaf6d82e99a323762cfb5515f865da
-
+ms.sourcegitcommit: f88a71491e185aec84a86248c44e1200a65ff179
+ms.openlocfilehash: 4bb959174ec158e7852cd447d9cd164ec2cd5bff
 
 ---
 
-# Handbuch zur Problembehandlung für HTML und JavaScript
-
-
-
+# <a name="html-and-javascript-troubleshooting-guide"></a>Handbuch zur Problembehandlung für HTML und JavaScript
 
 Dieses Thema enthält Lösungen für allgemeine Entwicklungsprobleme mit den Microsoft Advertising-Bibliotheken in JavaScript/HTML-Apps.
 
--   [HTML](#html)
+* [HTML](#html)
+  * [AdControl wird nicht angezeigt](#html-notappearing)
+  * [Blackbox blinkt und wird ausgeblendet](#html-blackboxblinksdisappears)
+  * [Anzeigen werden nicht aktualisiert](#html-adsnotrefreshing)
 
-    -   [AdControl wird nicht angezeigt](#html-notappearing)
+* [JavaScript](#js)
+  * [AdControl wird nicht angezeigt](#js-adcontrolnotappearing)
+  * [Blackbox blinkt und wird ausgeblendet](#js-blackboxblinksdisappears)
+  * [Anzeigen werden nicht aktualisiert](#js-adsnotrefreshing)
 
-    -   [Blackbox blinkt und wird ausgeblendet](#html-blackboxblinksdisappears)
-
-    -   [Anzeigen werden nicht aktualisiert](#html-adsnotrefreshing)
-
--   [JavaScript](#js)
-
-    -   [AdControl wird nicht angezeigt](#js-adcontrolnotappearing)
-
-    -   [Blackbox blinkt und wird ausgeblendet](#js-blackboxblinksdisappears)
-
-    -   [Anzeigen werden nicht aktualisiert](#js-adsnotrefreshing)
-
-## HTML
+## <a name="html"></a>HTML
 
 <span id="html-notappearing"/>
-### AdControl wird nicht angezeigt
+### <a name="adcontrol-not-appearing"></a>AdControl wird nicht angezeigt
 
 1.  Stellen Sie sicher, dass die **Internet (Client)**-Funktion in „Package.appxmanifest“ ausgewählt ist.
 
@@ -44,27 +34,30 @@ Dieses Thema enthält Lösungen für allgemeine Entwicklungsprobleme mit den Mic
 
     Windows 10:
 
-    ``` syntax
+    > [!div class="tabbedCodeSnippets"]
+    ``` html
     <head>
-        …
+        ...
         <script src="//Microsoft.Advertising.JavaScript/ad.js"></script>
-        …
+        ...
     </head>
     ```
 
     Windows 8.x:
 
-    ``` syntax
+    > [!div class="tabbedCodeSnippets"]
+    ``` html
     <head>
-        …
+        ...
         <script src="//Microsoft.Advertising.JavaScript/ads/ad.js"></script>
-        …
+        ...
     </head>
     ```
 
-3.  Überprüfen Sie die ID der Anwendung und der Anzeigeneinheit. Diese IDs müssen mit der Anwendungs-ID und Anzeigeneinheits-ID übereinstimmen, die Sie im Windows Dev Center erhalten haben. Weitere Informationen finden Sie unter [Einrichten von Anzeigeneinheiten in Ihrer App](set-up-ad-units-in-your-app.md).
+3.  Überprüfen Sie die ID der Anwendung und der Anzeigeneinheit. Diese IDs müssen mit der Anwendungs-ID und Anzeigeneinheits-ID übereinstimmen, die Sie im Windows Dev Center erhalten haben. Weitere Informationen finden Sie unter [Einrichten von Anzeigeneinheiten in der App](set-up-ad-units-in-your-app.md).
 
-    ``` syntax
+    > [!div class="tabbedCodeSnippets"]
+    ``` html
     <div id="myAd" style="position: absolute; top: 50px; left: 0px;
                           width: 250px; height: 250px; z-index: 1"
          data-win-control="MicrosoftNSJS.Advertising.AdControl"
@@ -75,7 +68,8 @@ Dieses Thema enthält Lösungen für allgemeine Entwicklungsprobleme mit den Mic
 
 4.  Überprüfen Sie die Eigenschaften **height** und **width**. Diese müssen auf eine der [unterstützten Anzeigengrößen für Werbebanner](supported-ad-sizes-for-banner-ads.md) festgelegt werden.
 
-    ``` syntax
+    > [!div class="tabbedCodeSnippets"]
+    ``` html
     <div id="myAd" style="position: absolute; top: 50px; left: 0px;
                           width: 250px; height: 250px; z-index: 1"
          data-win-control="MicrosoftNSJS.Advertising.AdControl"
@@ -88,7 +82,8 @@ Dieses Thema enthält Lösungen für allgemeine Entwicklungsprobleme mit den Mic
 
 6.  Überprüfen Sie die Eigenschaft **visibility**. Diese Eigenschaft darf nicht auf reduziert oder ausgeblendet festgelegt sein. Diese Eigenschaft kann als Inlineeigenschaft (wie unten dargestellt) oder in einem externen Stylesheet festgelegt werden.
 
-    ``` syntax
+    > [!div class="tabbedCodeSnippets"]
+    ``` html
     <div id="myAd" style="visibility: visible; position: absolute; top: 1025px;
                           left: 500px; width: 250px; height: 250px; z-index: 1"
          data-win-control="MicrosoftNSJS.Advertising.AdControl"
@@ -99,7 +94,8 @@ Dieses Thema enthält Lösungen für allgemeine Entwicklungsprobleme mit den Mic
 
 7.  Überprüfen Sie die Eigenschaft **position**. Die Eigenschaft „position“ muss auf einen geeigneten Wert abhängig von den anderen Eigenschaften des Elements festgelegt werden (beispielsweise Rändern im übergeordneten Element und z-index). Diese Eigenschaft kann als Inlineeigenschaft (wie unten dargestellt) oder in einem externen Stylesheet festgelegt werden.
 
-    ``` syntax
+    > [!div class="tabbedCodeSnippets"]
+    ``` html
     <div id="myAd" style="visibility: visible; position: absolute; top: 1025px;
                           left: 500px; width: 250px; height: 250px; z-index: 1"
          data-win-control="MicrosoftNSJS.Advertising.AdControl"
@@ -110,7 +106,8 @@ Dieses Thema enthält Lösungen für allgemeine Entwicklungsprobleme mit den Mic
 
 8.  Überprüfen Sie die Eigenschaft **z-index**. Die Eigenschaft **z-index** muss hoch genug festgelegt werden, sodass **AdControl** stets oberhalb anderer Elemente angezeigt wird. Diese Eigenschaft kann als Inlineeigenschaft (wie unten dargestellt) oder in einem externen Stylesheet festgelegt werden.
 
-    ``` syntax
+    > [!div class="tabbedCodeSnippets"]
+    ``` html
     <div id="myAd" style="visibility: visible; position: absolute; top: 1025px;
                           left: 500px; width: 250px; height: 250px; z-index: 1"
          data-win-control="MicrosoftNSJS.Advertising.AdControl"
@@ -121,7 +118,8 @@ Dieses Thema enthält Lösungen für allgemeine Entwicklungsprobleme mit den Mic
 
 9.  Überprüfen Sie die externen Stylesheets. Wenn im Element **AdControl** Eigenschaften über ein externes Stylesheet festgelegt werden, müssen alle oben genannten Eigenschaften ordnungsgemäß festgelegt worden sein.
 
-    ``` syntax
+    > [!div class="tabbedCodeSnippets"]
+    ``` html
     <div id="myAd" style="visibility: visible; position: absolute; top: 1025px;
                           left: 500px; width: 250px; height: 250px; z-index: 1"
          data-win-control="MicrosoftNSJS.Advertising.AdControl"
@@ -132,7 +130,8 @@ Dieses Thema enthält Lösungen für allgemeine Entwicklungsprobleme mit den Mic
 
 10. Überprüfen Sie das übergeordnete Element von **AdControl**. Wenn sich **AdControl** in einem übergeordneten Element befindet, muss das übergeordnete Element aktiv und sichtbar sein.
 
-    ``` syntax
+    > [!div class="tabbedCodeSnippets"]
+    ``` html
     <div style="position: absolute; width: 500px; height: 500px;">
         <div id="myAd" style="position: relative; top: 0px; left: 100px;
                               width: 250px; height: 250px; z-index: 1"
@@ -148,13 +147,14 @@ Dieses Thema enthält Lösungen für allgemeine Entwicklungsprobleme mit den Mic
 12. Livewerte für [ApplicationId](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.applicationid.aspx) und [AdUnitId](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.adunitid.aspx) sollten nicht im Emulator getestet werden. Um sicherzustellen, dass **AdControl** erwartungsgemäß funktioniert, verwenden Sie sowohl für **ApplicationId** als auch für **AdUnitId** die Test-IDs in [Testmoduswerte](test-mode-values.md).
 
 <span id="html-blackboxblinksdisappears"/>
-### Blackbox blinkt und wird ausgeblendet
+### <a name="black-box-blinks-and-disappears"></a>Blackbox blinkt und wird ausgeblendet
 
 1.  Überprüfen Sie noch einmal alle Schritte im vorherigen Abschnitt [AdControl wird nicht angezeigt](#html-notappearing).
 
 2.  Behandeln Sie das Ereignis **onErrorOccurred**, und bestimmen Sie anhand der an den Ereignishandler übergebenen Meldung, ob ein Fehler aufgetreten ist und welche Art von Fehler ausgelöst wurde. Weitere Informationen finden Sie in [Exemplarische Vorgehensweise zur Fehlerbehandlung in JavaScript](error-handling-in-javascript-walkthrough.md).
 
-    ``` syntax
+    > [!div class="tabbedCodeSnippets"]
+    ``` html
     <div id="myAd" style="position: absolute; top: 0px; left: 0px;
                           width: 728px; height: 90px; z-index: 1"
          data-win-control="MicrosoftNSJS.Advertising.AdControl"
@@ -162,7 +162,6 @@ Dieses Thema enthält Lösungen für allgemeine Entwicklungsprobleme mit den Mic
                             adUnitId: 'AdUnitID',
                             onErrorOccurred: errorLogger}">
     </div>
-
     <div style="position:absolute; width:100%; height:130px; top:300px; left:0px">
         <b>Ad Events</b><br />
         <div id="adEvents" style="width:100%; height:110px; overflow:auto"></div>
@@ -174,11 +173,12 @@ Dieses Thema enthält Lösungen für allgemeine Entwicklungsprobleme mit den Mic
 3.  **AdControl** verhält sich normal. **AdControl** wird standardmäßig reduziert, wenn keine Anzeige dargestellt werden kann. Wenn andere Elemente demselben übergeordneten Element untergeordnet sind, können sie verschoben werden, um den freien Platz des reduzierten **AdControl**-Elements zu füllen, und bei der nächsten Anforderung erweitert werden.
 
 <span id="html-adsnotrefreshing"/>
-### Anzeigen werden nicht aktualisiert
+### <a name="ads-not-refreshing"></a>Anzeigen werden nicht aktualisiert
 
-1.  Überprüfen Sie die Eigenschaft **isAutoRefreshEnabled**. Diese optionale Eigenschaft ist standardmäßig auf true festgelegt. Wenn sie auf false festgelegt ist, muss die Methode **refresh** verwendet werden, um eine weitere Anzeige abzurufen.
+1.  Überprüfen Sie die Eigenschaft **isAutoRefreshEnabled**. Diese optionale Eigenschaft ist standardmäßig auf true festgelegt. Wenn sie auf false festgelegt ist, muss die **refresh**-Methode verwendet werden, um eine weitere Anzeige abzurufen.
 
-    ``` syntax
+    > [!div class="tabbedCodeSnippets"]
+    ``` html
     <div id="myAd" style="position: absolute; top: 0px; left: 0px;
                           width: 250px; height: 250px; z-index: 1"
          data-win-control="MicrosoftNSJS.Advertising.AdControl"
@@ -193,7 +193,8 @@ Dieses Thema enthält Lösungen für allgemeine Entwicklungsprobleme mit den Mic
 
     In diesem Beispiel wird die Verwendung der Methode **refresh** gezeigt. Der folgende HTML-Code zeigt ein Beispiel für die Instanziierung von **AdControl**, wenn **isAutoRefreshEnabled** auf false festgelegt ist.
 
-    ``` syntax
+    > [!div class="tabbedCodeSnippets"]
+    ``` html
     <div id="myAd" style="position: absolute; top: 0px; left: 0px;
                           width: 250px; height: 250px; z-index: 1"
          data-win-control="MicrosoftNSJS.Advertising.AdControl"
@@ -206,7 +207,8 @@ Dieses Thema enthält Lösungen für allgemeine Entwicklungsprobleme mit den Mic
 
     Dieses Beispiel zeigt die Verwendung der Funktion **refresh**.
 
-    ``` syntax
+    > [!div class="tabbedCodeSnippets"]
+    ``` javascript
     args.setPromise(WinJS.UI.processAll()
         .then(function (args) {
             window.setInterval(function()
@@ -220,10 +222,10 @@ Dieses Thema enthält Lösungen für allgemeine Entwicklungsprobleme mit den Mic
 3.  **AdControl** verhält sich normal. In einigen Fällen wird dieselbe Anzeige mehrmals in Folge angezeigt, wodurch der Eindruck entsteht, dass Anzeigen nicht aktualisiert werden.
 
 <span id="js"/>
-## JavaScript
+## <a name="javascript"></a>JavaScript
 
 <span id="js-adcontrolnotappearing"/>
-### AdControl wird nicht angezeigt
+### <a name="adcontrol-not-appearing"></a>AdControl wird nicht angezeigt
 
 1.  Stellen Sie sicher, dass die **Internet (Client)**-Funktion in „Package.appxmanifest“ ausgewählt ist.
 
@@ -231,7 +233,8 @@ Dieses Thema enthält Lösungen für allgemeine Entwicklungsprobleme mit den Mic
 
     Die folgenden Codeausschnitte zeigen ein Beispiel für die Instanziierung von **AdControl**. Dieser HTML-Code zeigt ein Beispiel für das Einrichten der Benutzeroberfläche für **AdControl**.
 
-    ``` syntax
+    > [!div class="tabbedCodeSnippets"]
+    ``` html
     <div id="myAd" style="position: absolute; top: 0px; left: 0px;
                           width: 250px; height: 250px; z-index: 1"
          data-win-control="MicrosoftNSJS.Advertising.AdControl">
@@ -240,7 +243,8 @@ Dieses Thema enthält Lösungen für allgemeine Entwicklungsprobleme mit den Mic
 
     Der folgende JavaScript-Code zeigt ein Beispiel für die Instanziierung von **AdControl**.
 
-    ``` syntax
+    > [!div class="tabbedCodeSnippets"]
+    ``` javascript
     app.onactivated = function (args) {
         if (args.detail.kind === activation.ActivationKind.launch) {
             if (args.detail.previousExecutionState !==
@@ -254,7 +258,7 @@ Dieses Thema enthält Lösungen für allgemeine Entwicklungsprobleme mit den Mic
                  });                
                  myAdControl.onErrorOccurred = myAdError;
             } else {
-                …
+                ...
             }
         }
     }
@@ -262,7 +266,8 @@ Dieses Thema enthält Lösungen für allgemeine Entwicklungsprobleme mit den Mic
 
 3.  Überprüfen Sie das übergeordnete Element. Das übergeordnete Element **&lt;div&gt;** muss richtig zugewiesen, aktiv und sichtbar sein.
 
-    ``` syntax
+    > [!div class="tabbedCodeSnippets"]
+    ``` javascript
     var adDiv = document.getElementById("myAd");
     var myAdControl = new MicrosoftNSJS.Advertising.AdControl(adDiv, {
         applicationId: "{ApplicationID}",
@@ -270,9 +275,10 @@ Dieses Thema enthält Lösungen für allgemeine Entwicklungsprobleme mit den Mic
     });  
     ```
 
-4.  Überprüfen Sie die ID der Anwendung und der Anzeigeneinheit. Diese IDs müssen mit der Anwendungs-ID und Anzeigeneinheits-ID übereinstimmen, die Sie im Windows Dev Center erhalten haben. Weitere Informationen finden Sie unter [Einrichten von Anzeigeneinheiten in Ihrer App](set-up-ad-units-in-your-app.md).
+4.  Überprüfen Sie die ID der Anwendung und der Anzeigeneinheit. Diese IDs müssen mit der Anwendungs-ID und Anzeigeneinheits-ID übereinstimmen, die Sie im Windows Dev Center erhalten haben. Weitere Informationen finden Sie unter [Einrichten von Anzeigeneinheiten in der App](set-up-ad-units-in-your-app.md).
 
-    ``` syntax
+    > [!div class="tabbedCodeSnippets"]
+    ``` javascript
     var myAdControl = new MicrosoftNSJS.Advertising.AdControl(adDiv, {
         applicationId: "{ApplicationID}",
         adUnitId: "{AdUnitID}"
@@ -284,7 +290,7 @@ Dieses Thema enthält Lösungen für allgemeine Entwicklungsprobleme mit den Mic
 6.  Echte Werte für **ApplicationId** und **AdUnitId** sollten nicht im Emulator getestet werden. Um sicherzustellen, dass **AdControl** erwartungsgemäß funktioniert, verwenden Sie sowohl für **ApplicationId** als auch für **AdUnitId** die Test-IDs in [Testmoduswerte](test-mode-values.md).
 
 <span id="js-blackboxblinksdisappears"/>
-### Blackbox blinkt und wird ausgeblendet
+### <a name="black-box-blinks-and-disappears"></a>Blackbox blinkt und wird ausgeblendet
 
 1.  Überprüfen Sie noch einmal alle Schritte im Abschnitt [AdControl wird nicht angezeigt](#js-adcontrolnotappearing).
 
@@ -292,7 +298,8 @@ Dieses Thema enthält Lösungen für allgemeine Entwicklungsprobleme mit den Mic
 
     In diesem Beispiel wird die Implementierung eines Fehlerhandlers gezeigt, der Fehlermeldungen meldet. Der folgende HTML-Codeausschnitt enthält ein Beispiel für das Einrichten der Benutzeroberfläche zum Anzeigen von Fehlermeldungen.
 
-    ``` syntax
+    > [!div class="tabbedCodeSnippets"]
+    ``` html
     <div style="position:absolute; width:100%; height:130px; top:300px">
         <b>Ad Events</b><br />
         <div id="adEvents" style="width:100%; height:110px; overflow:auto"></div>
@@ -301,7 +308,8 @@ Dieses Thema enthält Lösungen für allgemeine Entwicklungsprobleme mit den Mic
 
     In diesem Beispiel wird die Instanziierung von **AdControl** gezeigt. Diese Funktion würde in der Datei app.onactivated eingefügt werden.
 
-    ``` syntax
+    > [!div class="tabbedCodeSnippets"]
+    ``` javascript
     var myAdControl = new MicrosoftNSJS.Advertising.AdControl(adDiv,
     {
         applicationId: "{ApplicationID}",
@@ -312,7 +320,8 @@ Dieses Thema enthält Lösungen für allgemeine Entwicklungsprobleme mit den Mic
 
     In diesem Beispiel wird die Meldung von Fehlern gezeigt. Diese Funktion würde unterhalb der selbstausführenden Funktion in der Datei default.js eingefügt werden.
 
-    ``` syntax
+    > [!div class="tabbedCodeSnippets"]
+    ``` javascript
     WinJS.Utilities.markSupportedForProcessing
     (
         window.errorLogger = function (sender, evt)
@@ -329,42 +338,33 @@ Dieses Thema enthält Lösungen für allgemeine Entwicklungsprobleme mit den Mic
 3.  **AdControl** verhält sich normal. In einigen Fällen wird dieselbe Anzeige mehrmals in Folge angezeigt, wodurch der Eindruck entsteht, dass Anzeigen nicht aktualisiert werden.
 
 <span id="js-adsnotrefreshing"/>
-### Anzeigen werden nicht aktualisiert
+### <a name="ads-not-refreshing"></a>Anzeigen werden nicht aktualisiert
 
-1.  Überprüfen Sie die Eigenschaft **isAutoRefreshEnabled**. Diese optionale Eigenschaft ist standardmäßig auf **true** festgelegt. Wenn sie auf **false** festgelegt ist, muss die Methode **refresh** verwendet werden, um eine weitere Anzeige abzurufen.
+1.  Überprüfen Sie, ob die [IsAutoRefreshEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/microsoft.advertising.winrt.ui.adcontrol.isautorefreshenabled.aspx)-Eigenschaft von **AdControl** auf „false“ festgelegt ist. Diese optionale Eigenschaft ist standardmäßig auf **true** festgelegt. Wenn sie auf **false** festgelegt ist, muss die **Refresh**-Methode verwendet werden, um eine weitere Anzeige abzurufen.
 
-    Im folgenden Beispiel wird die Verwendung der Eigenschaft **isAutoRefreshEnabled** gezeigt.
-
-    ``` syntax
-    var myAdControl = new MicrosoftNSJS.Advertising.AdControl(adDiv,
-    {
-      applicationId: "{ApplicationID}",
-      adUnitId: "{AdUnitID}",
-      isAutoRefreshEnabled: true
-    });  
-    ```
-
-2.  Überprüfen Sie Aufrufe der Methode **refresh**. Bei Verwendung der automatischen Aktualisierung kann **refresh** nicht verwendet werden, um eine weitere Anzeige abzurufen. Bei Verwendung der manuellen Aktualisierung sollte **refresh** abhängig von der aktuellen Datenverbindung des Geräts erst nach mindestens 30 bis 60 Sekunden aufgerufen werden.
+2.  Überprüfen Sie Aufrufe der [Refresh](https://msdn.microsoft.com/library/windows/apps/xaml/microsoft.advertising.winrt.ui.adcontrol.refresh.aspx)-Methode. Bei Verwendung der automatischen Aktualisierung (**IsAutoRefreshEnabled** ist **true**) kann **Refresh** nicht verwendet werden, um eine weitere Anzeige abzurufen. Bei Verwendung der manuellen Aktualisierung (**IsAutoRefreshEnabled** ist **false**) sollte **Refresh** abhängig von der aktuellen Datenverbindung des Geräts erst nach mindestens 30 bis 60 Sekunden aufgerufen werden.
 
     Dieses Beispiel zeigt das Erstellen von **div** für **AdControl**.
 
-    ``` syntax
+    > [!div class="tabbedCodeSnippets"]
+    ``` html
     <div id="myAd" style="position: absolute; top: 0px; left: 0px;
                           width: 250px; height: 250px; z-index: 1"
          data-win-control="MicrosoftNSJS.Advertising.AdControl">
     </div>
     ```
 
-    In diesem Beispiel wird die Verwendung der Funktion **refresh** gezeigt.
+    In diesem Beispiel wird die Verwendung der **Refresh**-Funktion gezeigt.
 
-    ``` syntax
+    > [!div class="tabbedCodeSnippets"]
+    ``` javascript
     var myAdControl = new MicrosoftNSJS.Advertising.AdControl(adDiv,
     {
       applicationId: "{ApplicationID}",
       adUnitId: "{AdUnitID}",
       isAutoRefreshEnabled: false
     });
-    …
+    ...
     args.setPromise(WinJS.UI.processAll()
         .then(function (args) {
             window.setInterval(function()
@@ -383,6 +383,6 @@ Dieses Thema enthält Lösungen für allgemeine Entwicklungsprobleme mit den Mic
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

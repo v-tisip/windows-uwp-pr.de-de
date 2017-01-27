@@ -4,38 +4,68 @@ ms.assetid: 8D4AE532-22EF-4743-9555-A828B24B8F16
 description: "Verwenden Sie diese Methoden in der Windows Store-Übermittlungs-API, um Daten für Apps abzurufen, die in Ihrem Windows Dev Center-Konto registriert wurden."
 title: "Abrufen von App-Daten mit der Windows Store-Übermittlungs-API"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: 99d609decc8c38952961deac5bb8ec6926d91c88
+ms.sourcegitcommit: 020c8b3f4d9785842bbe127dd391d92af0962117
+ms.openlocfilehash: 23839faca120976a07e666b9d6861aa8750898ad
 
 ---
 
-# Abrufen von App-Daten mit der Windows Store-Übermittlungs-API
+# <a name="get-app-data-using-the-windows-store-submission-api"></a>Abrufen von App-Daten mit der Windows Store-Übermittlungs-API
 
-Verwenden Sie die folgenden Methoden in der Windows Store-Übermittlungs-API, um Daten für Apps abzurufen, die in Ihrem Windows Dev Center-Konto registriert wurden. Eine Einführung in die Windows Store-Übermittlungs-API finden Sie unter [Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten](create-and-manage-submissions-using-windows-store-services.md).
+Verwenden Sie die folgenden Methoden in der Windows Store-Übermittlungs-API, um Daten für Ihre Apps abzurufen. Eine Einführung in die Windows Store-Übermittlungs-API finden Sie unter [Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten](create-and-manage-submissions-using-windows-store-services.md).
 
->**Hinweis**&nbsp;&nbsp;Diese Methoden können nur für Windows Dev Center-Konten verwendet werden, die eine Berechtigung zur Verwendung der Windows Store-Übermittlungs-API erhalten haben. Diese Berechtigung ist nicht für alle Konten aktiviert. Diese Methoden können nur verwendet werden, um Daten für Apps abzurufen. Informationen zum Erstellen oder Verwalten von Übermittlungen für Apps finden Sie unter den Methoden in [Verwalten von App-Übermittlungen](manage-app-submissions.md).
+>**Hinweis**&nbsp;&nbsp;Diese Methoden können nur für Windows Dev Center-Konten verwendet werden, die zur Verwendung der Windows Store-Übermittlungs-API berechtigt sind. Diese Berechtigung ist nicht für alle Konten aktiviert. Diese Methoden können nur verwendet werden, um Daten für Apps abzurufen. Informationen zum Erstellen oder Verwalten von Übermittlungen für Apps finden Sie unter den Methoden in [Verwalten von App-Übermittlungen](manage-app-submissions.md).
 
-| Methode        | URI    | Beschreibung                                                                 |
-|---------------|--------|-----------------------------------------------------------------------------|
-| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications``` | Ruft Daten für alle Apps ab, die in Ihrem Windows Dev Center-Konto registriert sind. Weitere Informationen finden Sie unter [Abrufen aller Apps](get-all-apps.md). |
-| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}``` | Ruft Daten zu einer bestimmten App ab, die in Ihrem Windows Dev Center-Konto registriert ist. Weitere Informationen finden Sie unter [Abrufen einer App](get-an-app.md). |
-| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listinappproducts``` | Führt die Add-Ons (auch bekannt als In-App-Produkte oder IAPs) für eine App auf, die in Ihrem Windows Dev Center-Konto registriert ist. Weitere Informationen finden Sie unter [Abrufen von Add-Ons für eine App](get-add-ons-for-an-app.md). |
-| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listflights``` | Führt die Flight-Pakete für eine App auf, die in Ihrem Windows Dev Center-Konto registriert ist. Weitere Informationen finden Sie unter [Abrufen von Flight-Paketen für eine App](get-flights-for-an-app.md). |
+<table>
+<colgroup>
+<col width="10%" />
+<col width="30%" />
+<col width="60%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Methode</th>
+<th align="left">URI</th>
+<th align="left">Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">GET</td>
+<td align="left">```https://manage.devcenter.microsoft.com/v1.0/my/applications```</td>
+<td align="left">[Daten für Ihre gesamten Apps abrufen](get-all-apps.md)</td>
+</tr>
+<tr>
+<td align="left">GET</td>
+<td align="left">```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}```</td>
+<td align="left">[Daten für eine bestimmte App abrufen](get-an-app.md)</td>
+</tr>
+<tr>
+<td align="left">GET</td>
+<td align="left">```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listinappproducts```</td>
+<td align="left">[Add-Ons für eine App abrufen](get-add-ons-for-an-app.md)</td>
+</tr>
+<tr>
+<td align="left">GET</td>
+<td align="left">```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listflights```</td>
+<td align="left">[Flight-Pakete für eine App abrufen](get-flights-for-an-app.md)</td>
+</tr>
+</tbody>
+</table>
 
 <span/>
 
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 Falls noch nicht geschehen, erfüllen Sie vor der Verwendung dieser Methoden alle [Voraussetzungen](create-and-manage-submissions-using-windows-store-services.md#prerequisites) für die Windows Store-Übermittlungs-API.
 
-## Ressourcen
+## <a name="data-resources"></a>Datenressourcen
 
-Diese Methoden verwenden die folgenden Ressourcen zum Formatieren von Daten.
+Die Windows Store-Übermittlungs-API-Methoden für das Abrufen von App-Daten verwenden die folgenden JSON-Datenressourcen.
 
 <span id="application_object" />
-### Anwendung
+### <a name="application-resource"></a>Anwendungsressource
 
-Diese Ressource steht für eine App, die in Ihrem Konto registriert ist. Das folgende Beispiel veranschaulicht das Format der Ressource.
+Diese Ressource steht für eine App, die in Ihrem Konto registriert ist.
 
 ```json
 {
@@ -58,22 +88,22 @@ Diese Ressource steht für eine App, die in Ihrem Konto registriert ist. Das fol
 
 Diese Ressource hat die folgenden Werte.
 
-| Wert           | Typ    | Beschreibung                                                                                                                                                                                                                          |
-|-----------------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Value           | Type    | Description       |
+|-----------------|---------|---------------------|
 | ID            | string  | Die Store-ID der App. Weitere Informationen zur Store-ID finden Sie unter [Anzeigen von Details zur App-Identität](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).   |
-| primaryName   | string  | Der Primärname der App.                                                                                                                                                   |
-| packageFamilyName | string  | Der Paketfamilienname der App.                                                                                                                                                                                                         |
-| packageIdentityName          | string  | Die Paketidentität der App.                                                                                                                                                              |
-| publisherName       | string  | Die Windows-Herausgeber-ID, die mit der App verknüpft ist. Diese entspricht dem **Package/Identity/Publisher**-Wert, der auf der Seite [App-Identität](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details) für die App im WindowsDevCenter-Dashboard angezeigt wird.                                                                                             |
-| firstPublishedDate      | string  | Das Datum, an dem die App erstmals im Format ISO 8601 veröffentlicht wurde.                                                                                         |
-| lastPublishedApplicationSubmission       | Objekt | Ein Objekt mit Informationen über die letzte veröffentlichte Übermittlung für die App. Weitere Informationen finden Sie unten im Abschnitt [Übermittlung](#submission_object).                                                                                                                                                          |
-| pendingApplicationSubmission        | Objekt  |  Ein Objekt mit Informationen über die aktuell ausstehende Übermittlung für die App. Weitere Informationen finden Sie unten im Abschnitt [Übermittlung](#submission_object).  |   |
+| primaryName   | string  | Der Primärname der App.      |
+| packageFamilyName | string  | Der Paketfamilienname der App.      |
+| packageIdentityName          | string  | Die Paketidentität der App.                       |
+| publisherName       | string  | Die Windows-Herausgeber-ID, die mit der App verknüpft ist. Diese entspricht dem **Package/Identity/Publisher**-Wert, der auf der Seite [App-Identität](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details) für die App im Windows Dev Center-Dashboard angezeigt wird.       |
+| firstPublishedDate      | string  | Das Datum, an dem die App erstmals im Format ISO 8601 veröffentlicht wurde.   |
+| lastPublishedApplicationSubmission       | object | Eine [Übermittlungsressource](#submission_object) mit Informationen über die letzte veröffentlichte Übermittlung für die App.    |
+| pendingApplicationSubmission        | object  |  Eine [Übermittlungsressource](#submission_object) mit Informationen über die aktuelle ausstehende Übermittlung für die App.   |   |
 
 
 <span id="add-on-object" />
-### Add-On
+### <a name="add-on-resouce"></a>Add-On-Ressource
 
-Diese Ressource enthält Informationen zu einem Add-On. Das folgende Beispiel veranschaulicht das Format der Ressource.
+Diese Ressource enthält Informationen zu einem Add-On.
 
 ```json
 {
@@ -83,15 +113,15 @@ Diese Ressource enthält Informationen zu einem Add-On. Das folgende Beispiel ve
 
 Diese Ressource hat die folgenden Werte.
 
-| Wert           | Typ    | Beschreibung                                                                                                                                                                                                                          |
-|-----------------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| inAppProductId            | string  | Die Store-ID des Add-Ons. Dieser Wert wird im Store bereitgestellt. Beispiel für eine Store-ID: 9NBLGGH4TNMP.   |
+| Value           | Type    | Description         |
+|-----------------|---------|----------------------|
+| inAppProductId            | string  | Die Store-ID des Add-Ons. Dieser Wert wird vom Store bereitgestellt. Beispiel für eine Store-ID: 9NBLGGH4TNMP.   |
 
 
 <span id="flight-object" />
-### Test-Flight
+### <a name="flight-resource"></a>Flight-Ressource
 
-Diese Ressource enthält Informationen zu einem Flight-Paket für eine App. Das folgende Beispiel veranschaulicht das Format der Ressource.
+Diese Ressource enthält Informationen zu einem Flight-Paket für eine App.
 
 ```json
 {
@@ -114,18 +144,18 @@ Diese Ressource enthält Informationen zu einem Flight-Paket für eine App. Das 
 
 Diese Ressource hat die folgenden Werte.
 
-| Wert           | Typ    | Beschreibung                                                                                                                                                                                                                          |
-|-----------------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Value           | Type    | Description           |
+|-----------------|---------|------------------------|
 | flightId            | string  | Die ID für das Flight-Paket. Dieser Wert wird von Dev Center bereitgestellt.  |
 | friendlyName           | string  | Der Name des Flight-Pakets nach Vorgabe des Entwicklers.   |
-| lastPublishedFlightSubmission       | Objekt | Ein Objekt, das Informationen über die letzte veröffentlichte Übermittlung für das Flight-Paket enthält. Weitere Informationen finden Sie unten im Abschnitt [Übermittlung](#submission_object).  |
-| pendingFlightSubmission        | Objekt  |  Ein Objekt, das Informationen über die aktuell ausstehende Übermittlung für das Flight-Paket enthält. Weitere Informationen finden Sie unten im Abschnitt [Übermittlung](#submission_object).  |    
-| groupIds           | Array  | Ein Array von Zeichenfolgen, die die IDs der Test-Flight-Gruppen enthalten, die dem Flight-Paket zugeordnet sind. Weitere Informationen zu Test-Flight-Gruppen finden Sie unter [Flight-Pakete](https://msdn.microsoft.com/windows/uwp/publish/package-flights).   |
+| lastPublishedFlightSubmission       | object | Eine [Übermittlungsressource](#submission_object) mit Informationen über die letzte veröffentlichte Übermittlung für das Flight-Paket.   |
+| pendingFlightSubmission        | object  |  Eine [Übermittlungsressource](#submission_object) mit Informationen über die aktuelle ausstehende Übermittlung für das Flight-Paket.  |    
+| groupIds           | array  | Ein Array von Zeichenfolgen, die die IDs der Test-Flight-Gruppen enthalten, die dem Flight-Paket zugeordnet sind. Weitere Informationen zu Test-Flight-Gruppen finden Sie unter [Flight-Pakete](https://msdn.microsoft.com/windows/uwp/publish/package-flights).   |
 | rankHigherThan           | string  | Der Anzeigename des Flight-Pakets, das den unmittelbar niedrigeren Rang als das aktuelle Flight-Paket erhält. Weitere Informationen zur Bewertung von Test-Flight-Gruppen finden Sie unter [Flight-Pakete](https://msdn.microsoft.com/windows/uwp/publish/package-flights).  |
 
 
 <span id="submission_object" />
-### Übermittlung
+### <a name="submission-resource"></a>Übermittlungsressource
 
 Diese Ressource enthält Informationen zu einer Übermittlung. Das folgende Beispiel veranschaulicht das Format der Ressource.
 
@@ -140,16 +170,16 @@ Diese Ressource enthält Informationen zu einer Übermittlung. Das folgende Beis
 
 Diese Ressource hat die folgenden Werte.
 
-| Wert           | Typ    | Beschreibung                                                                                                                                                                                                                          |
-|-----------------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Wert           | Typ    | Beschreibung                 |
+|-----------------|---------|------------------------------|
 | id            | string  | Die ID der Übermittlung.    |
-| resourceLocation   | string  | Ein relativer Pfad, den Sie an den Basisanforderungs-URI ```https://manage.devcenter.microsoft.com/v1.0/my/``` anfügen können, um die vollständigen Daten für die Übermittlung abzurufen.                                                                                                                                               |
+| resourceLocation   | string  | Ein relativer Pfad, den Sie an den Basisanforderungs-URI ```https://manage.devcenter.microsoft.com/v1.0/my/``` anfügen können, um die vollständigen Daten für die Übermittlung abzurufen.            |
  
 <span/>
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
-* [Erstellen und Verwalten von Übermittlungen mit WindowsStore-Diensten](create-and-manage-submissions-using-windows-store-services.md)
+* [Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten](create-and-manage-submissions-using-windows-store-services.md)
 * [Verwalten von App-Übermittlungen mithilfe der Windows Store-Übermittlungs-API](manage-app-submissions.md)
 * [Abrufen aller Apps](get-all-apps.md)
 * [Abrufen einer App](get-an-app.md)
@@ -158,6 +188,6 @@ Diese Ressource hat die folgenden Werte.
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO3-->
 
 

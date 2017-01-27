@@ -1,20 +1,26 @@
 ---
 author: Karl-Bridge-Microsoft
 Description: Verwenden Sie Cortana-Sprachbefehle, Spracherkennung und Sprachsynthese zum Integrieren von Sprache in Ihre Apps.
-title: Interaktionen mit der Spracherkennung
+title: Spracherkennungsinteraktionen
 ms.assetid: 646DB3CE-FA81-4727-8C21-936C81079439
 label: Speech interactions
 template: detail.hbs
+keywords: "Sprache, Stimme, Spracherkennung, natürliche Sprache, diktieren, Eingabe, Benutzerinteraktion"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 5b52f6a8e944e4166c2f4c7e16e4a83ddff23dac
-ms.openlocfilehash: 5efb2d1fc6a63e372e91cfdc8ae5e8117ff047d5
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: 5080fe9496b7a13336b42a83fd569e44f43ba2db
 
 ---
 
-# <a name="speech-interactions"></a>Interaktionen mit der Spracherkennung
+# <a name="speech-interactions"></a>Spracherkennungsinteraktionen
 
 
-Integrieren Sie Spracherkennung und Text-zu-Sprache, auch als Text-to-Speech (TTS) oder Sprachsynthese bezeichnet, direkt in die Benutzeroberfläche Ihrer App.
+Integrieren Sie Spracherkennung und Text-zu-Sprache (auch als Text-to-Speech, TTS oder Sprachsynthese bezeichnet) direkt in die Benutzeroberfläche Ihrer App.
 
 
 **Weitere Sprachkomponenten**
@@ -214,7 +220,7 @@ Beide Probleme können durch Verwendung von SSML anstelle von Nur-Text als Synth
 | Thema | Beschreibung |
 | --- | --- |
 | [Spracherkennung](speech-recognition.md) | Nutzen Sie die Spracherkennung als Eingabemöglichkeit oder zum Ausführen einer Aktion, eines Befehls oder einer Aufgabe. |
-| [Angeben der Sprache für die Spracherkennung](specify-the-speech-recognizer-language.md) | Hier erfahren Sie, wie Sie eine installierte Sprache für die Spracherkennung auswählen. |
+| [Festlegen der Sprache für die Spracherkennung](specify-the-speech-recognizer-language.md) | Hier erfahren Sie, wie Sie eine installierte Sprache für die Spracherkennung auswählen. |
 | [Festlegen von benutzerdefinierten Erkennungseinschränkungen](define-custom-recognition-constraints.md) | Erfahren Sie, wie Sie benutzerdefinierte Einschränkungen für die Spracherkennung festlegen und verwenden können. |
 | [Aktivieren des kontinuierlichen Diktierens](enable-continuous-dictation.md) |Hier erfahren Sie, wie Sie die Erfassung und Erkennung langer Spracheingaben für kontinuierliches Diktieren ermöglichen. |
 | [Verwalten von Problemen bei der Audioeingabe](manage-issues-with-audio-input.md) | Hier erfahren Sie, wie Sie Probleme mit der Genauigkeit der Spracherkennung behandeln, die auf die Qualität der Audioeingabe zurückzuführen sind. |
@@ -222,7 +228,7 @@ Beide Probleme können durch Verwendung von SSML anstelle von Nur-Text als Synth
 
 ## <a name="related-articles"></a>Verwandte Artikel
 
-* [Sprachinteraktionen](https://msdn.microsoft.com/library/windows/apps/mt185614)
+* [Spracherkennungsinteraktionen](https://msdn.microsoft.com/library/windows/apps/mt185614)
 * [Cortana-Interaktionen](https://msdn.microsoft.com/library/windows/apps/mt185598)
 
  **Beispiele**
@@ -237,6 +243,6 @@ Beide Probleme können durch Verwendung von SSML anstelle von Nur-Text als Synth
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

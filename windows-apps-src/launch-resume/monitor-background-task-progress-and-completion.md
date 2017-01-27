@@ -4,15 +4,15 @@ title: "Überwachen des Status und Abschlusses von Hintergrundaufgaben"
 description: Hier erfahren Sie, wie Ihre App den von einer Hintergrundaufgabe gemeldeten Status und Abschluss erkennt.
 ms.assetid: 17544FD7-A336-4254-97DC-2BF8994FF9B2
 translationtype: Human Translation
-ms.sourcegitcommit: 7d1c160f8b725cd848bf8357325c6ca284b632ae
-ms.openlocfilehash: c12c3184cf6f4dce3d3ee2a4cf49843c8b9828d3
+ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
+ms.openlocfilehash: c7b6062a624b194b2806788c5f498d87aaa209a2
 
 ---
 
-# Überwachen des Status und Abschlusses von Hintergrundaufgaben
+# <a name="monitor-background-task-progress-and-completion"></a>Überwachen des Status und Abschlusses von Hintergrundaufgaben
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **Wichtige APIs**
@@ -25,9 +25,9 @@ Erfahren Sie, wie Ihre App einen von einer ausgeführten Out-of-Process-Hintergr
 
  Der Status und Abschluss von Hintergrundaufgaben kann durch App-Code überwacht werden. Hierzu abonniert die App Ereignisse der Hintergrundaufgabe(n), die sie im System registriert hat.
 
--   In diesem Thema wird vorausgesetzt, dass Sie über eine App verfügen, die Hintergrundaufgaben registriert. Um schnell mit dem Erstellen einer Hintergrundaufgabe zu beginnen, lesen Sie [Erstellen und Registrieren einer Hintergrundaufgabe innerhalb des Prozesses](create-and-register-an-inproc-background-task.md) oder [Erstellen und Registrieren einer Hintergrundaufgabe außerhalb des Prozesses](create-and-register-an-outofproc-background-task.md). Ausführlichere Informationen zu Bedingungen und Triggern finden Sie unter [Unterstützen der App mit Hintergrundaufgaben](support-your-app-with-background-tasks.md).
+-   In diesem Thema wird vorausgesetzt, dass Sie über eine App verfügen, die Hintergrundaufgaben registriert. Um schnell mit dem Erstellen einer Hintergrundaufgabe zu beginnen, lesen Sie [Erstellen und Registrieren einer Hintergrundaufgabe innerhalb des Prozesses](create-and-register-an-inproc-background-task.md) oder [Erstellen und Registrieren einer Hintergrundaufgabe außerhalb des Prozesses](create-and-register-a-background-task.md). Ausführlichere Informationen zu Bedingungen und Triggern finden Sie unter [Unterstützen der App mit Hintergrundaufgaben](support-your-app-with-background-tasks.md).
 
-## Erstellen Sie einen Ereignishandler zum Behandeln abgeschlossener Hintergrundaufgaben.
+## <a name="create-an-event-handler-to-handle-completed-background-tasks"></a>Erstellen Sie einen Ereignishandler zum Behandeln abgeschlossener Hintergrundaufgaben.
 
 1.  Erstellen Sie eine Ereignishandlerfunktion zum Behandeln abgeschlossener Hintergrundaufgaben. Dieser Code muss einem bestimmten Profil entsprechen und ein [**IBackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224803)-Objekt sowie ein [**BackgroundTaskCompletedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224778)-Objekt enthalten.
 
@@ -49,7 +49,7 @@ Erfahren Sie, wie Ihre App einen von einer ausgeführten Out-of-Process-Hintergr
 
 2.  Fügen Sie dem Ereignishandler Code zum Behandeln des Abschlusses der Hintergrundaufgabe hinzu.
 
-    Das [Beispiel für eine Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) aktualisiert z.B. die Benutzeroberfläche.
+    Das [Beispiel für eine Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) aktualisiert z. B. die Benutzeroberfläche.
 
     > [!div class="tabbedCodeSnippets"]
     > ```cs
@@ -65,7 +65,7 @@ Erfahren Sie, wie Ihre App einen von einer ausgeführten Out-of-Process-Hintergr
     >     };
     > ```
 
-## Erstellen einer Ereignishandlerfunktion zum Behandeln des Hintergrundaufgabenfortschritts
+## <a name="create-an-event-handler-function-to-handle-background-task-progress"></a>Erstellen einer Ereignishandlerfunktion zum Behandeln des Hintergrundaufgabenfortschritts
 
 1.  Erstellen Sie eine Ereignishandlerfunktion zum Behandeln abgeschlossener Hintergrundaufgaben. Dieser Code muss einem bestimmten Profil entsprechen und ein [**IBackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224803)-Objekt sowie ein [**BackgroundTaskProgressEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224782)-Objekt enthalten:
 
@@ -109,7 +109,7 @@ Erfahren Sie, wie Ihre App einen von einer ausgeführten Out-of-Process-Hintergr
     >     };
     > ```
 
-## Registrieren der Ereignishandlerfunktionen mit neuen und vorhandenen Hintergrundaufgaben
+## <a name="register-the-event-handler-functions-with-new-and-existing-background-tasks"></a>Registrieren der Ereignishandlerfunktionen mit neuen und vorhandenen Hintergrundaufgaben
 
 
 1.  Wenn die App erstmals eine Hintergrundaufgabe registriert, muss sie sich für den Empfang von Status- und Abschlussupdates registrieren, falls die Aufgabe ausgeführt wird, während die App im Vordergrund noch aktiv ist.
@@ -195,10 +195,10 @@ Erfahren Sie, wie Ihre App einen von einer ausgeführten Out-of-Process-Hintergr
     >     }
     > ```
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Erstellen und Registrieren einer Hintergrundaufgabe innerhalb des Prozesses](create-and-register-an-inproc-background-task.md)
-* [Erstellen und Registrieren einer Hintergrundaufgabe außerhalb des Prozesses](create-and-register-an-outofproc-background-task.md)
+* [Erstellen und Registrieren einer Hintergrundaufgabe außerhalb des Prozesses](create-and-register-a-background-task.md)
 * [Deklarieren von Hintergrundaufgaben im Anwendungsmanifest](declare-background-tasks-in-the-application-manifest.md)
 * [Behandeln einer abgebrochenen Hintergrundaufgabe](handle-a-cancelled-background-task.md)
 * [Registrieren einer Hintergrundaufgabe](register-a-background-task.md)
@@ -213,6 +213,6 @@ Erfahren Sie, wie Ihre App einen von einer ausgeführten Out-of-Process-Hintergr
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

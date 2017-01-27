@@ -6,37 +6,36 @@ ms.assetid: 25D1EE31-5C25-4F21-B34C-FBD8FB1C8FFF
 label: Motion--Reposition
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 38c3cb8a31708722bb207f2ad39b073262c6ce6f
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 912c96bb11f1ad5ba743c74ba6a4ca7f029bcbbb
 
 ---
 
-# Animationen für Positionsänderungen
+# <a name="reposition-animations"></a>Animationen für Positionsänderungen
 
-
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Verwenden Sie die Animation für das Ändern der Position, um eines oder mehrere Elemente an eine neue Position zu verschieben.
 
-**Wichtige APIs**
+<div class="important-apis" >
+<b>Wichtige APIs</b><br/>
+<ul>
+<li>[**RepositionThemeAnimation-Klasse**](https://msdn.microsoft.com/library/windows/apps/br210421)</li>
+<li>[**RepositionThemeTransition-Klasse**](https://msdn.microsoft.com/library/windows/apps/br210429)</li>
+</ul>
+</div>
 
--   [**RepositionThemeAnimation-Klasse**](https://msdn.microsoft.com/library/windows/apps/br210421)
--   [**RepositionThemeTransition-Klasse**](https://msdn.microsoft.com/library/windows/apps/br210429)
-
-
-## Empfohlene und nicht empfohlene Vorgehensweisen
-
-
--   Verwenden Sie beim Ein- und Ausblenden von randbasierten Benutzeroberflächen [randbasierte UI-Animationen](motion-edgebased.md). Eine randbasierte Benutzeroberfläche ist ein Element oder ein Container, das bzw. der an einem Rand des Bildschirms verankert ist.
-
-
-## Verwandte Artikel
+## <a name="dos-and-donts"></a>Empfohlene und nicht empfohlene Vorgehensweisen
 
 
-**Für Entwickler (XAML)**
+-   Verwenden Sie beim Ein- und Ausblenden von randbasierten Benutzeroberflächen [randbasierte UI-Animationen](motion-edgebased.md). Die Rand-UI ist ein Element oder ein Container, das bzw. der an einem Rand des Bildschirms verankert ist.
+
+
+## <a name="related-articles"></a>Verwandte Artikel
+
 * [Übersicht über Animationen](https://msdn.microsoft.com/library/windows/apps/mt187350)
 * [Animieren von Änderungen der Position](https://msdn.microsoft.com/library/windows/apps/xaml/jj649434)
-* [Schnellstart: Animieren der Benutzeroberfläche mithilfe von Bibliothekanimationen](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
+* [Schnellstart: Animieren der Benutzeroberfläche mithilfe von Bibliotheksanimationen](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
 * [**RepositionThemeAnimation-Klasse**](https://msdn.microsoft.com/library/windows/apps/br210421)
 * [**RepositionThemeTransition-Klasse**](https://msdn.microsoft.com/library/windows/apps/br210429)
 
@@ -49,6 +48,6 @@ Verwenden Sie die Animation für das Ändern der Position, um eines oder mehrere
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

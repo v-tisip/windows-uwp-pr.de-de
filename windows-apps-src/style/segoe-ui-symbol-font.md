@@ -7,46 +7,36 @@ ms.assetid: DFB215C2-8A61-4957-B662-3B1991AC9BE1
 label: Segoe MDL2 icons
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: d7236006f2c620a4ff0de4e0f413f32a2eaf5687
-ms.openlocfilehash: a779d4ff5d404c2eca658cee836c5d45c42f14d8
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 1e7914c0641d2897efbcbe5c9479a2ecc1a8dd2d
 
 ---
 
+# <a name="segoe-mdl2-icons"></a>Segoe MDL2-Symbole
+
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-# Segoe MDL2-Symbole
-
-In diesem Artikel werden die Symbole von der Schriftart „Segoe MDL2 Assets” aufgeführt. 
+In diesem Artikel werden die Symbole der Schriftart Segoe MDL2 Assets aufgeführt. 
 
 <div class="important-apis" >
 <b>Wichtige APIs</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/dn252842"><strong>Symbol-Enumeration (XAML)</strong></a></li>
+<li>[**Symbolenumeration (XAML)**](https://msdn.microsoft.com/library/windows/apps/dn252842)</li>
 </ul>
-
-</div>
 </div>
 
 
+## <a name="about-segoe-mdl2-assets"></a>Informationen zu MDL2 Assets
 
-## Wie erhalte ich diese Schriftart?
-Um „Segoe MDL2 Assets” zu erhalten, müssen Sie Windows 10 installieren. 
+Mit der Veröffentlichung von Windows 10 wurde die Schriftart Segoe UI Symbol von Windows 8/8.1 durch die Schriftart Segoe MDL2 Assets ersetzt. <!-- It can be used in much the same manner as the older font, but many glyphs have been redrawn in the Windows 10 icon style with the font’s metrics set so that icons are aligned within the font’s em-square instead of on a typographic baseline. --> (**Segoe UI Symbol** ist jedoch weiterhin als „veraltete“ Ressource verfügbar. Es wird jedoch empfohlen, Apps auf die neue Schriftart **Segoe MDL2 Assets** zu aktualisieren.)
 
-## Informationen zu Segoe MDL2 Assets
-
-Die Schriftart „Segoe MDL2 Assets” Die Symbolschriftart „Segoe UI Symbol” für Windows 8/8.1 wurde durch „Segoe MDL2 Assets” ersetzt, die ab der Veröffentlichung von Windows 10 gilt. <!-- It can be used in much the same manner as the older font, but many glyphs have been redrawn in the Windows 10 icon style with the font’s metrics set so that icons are aligned within the font’s em-square instead of on a typographic baseline. --> **Segoe UI Symbol** steht jedoch weiterhin als „veraltete“ Ressource zur Verfügung. Wir empfehlen jedoch, Ihre App zu aktualisieren, um die neue **Segoe MDL2 Assets** zu verwenden.
-
-> **Hinweis:**
->
-> Ein **Em** ist eine Maßeinheit in der Schriftart. 1 Em in der Schriftart entspricht 100 % des angegebenen Punktwerts bei 72 ppi. Beispielsweise entspricht 16pt 16px bei 72ppi (wird auch als 100%-Plateau bezeichnet). Die neuen MDL2-Schriftarten wurden entwickelt, damit der Platzbedarf des Symbolbereichs einem em-Quadrat entspricht. Wenn Sie also 16px für die Breite und Höhe im Code angeben, erhalten Sie ein 16pxx16px großes Symbol. Dies bedeutet jedoch nicht immer, dass das Symbol die vollständige Abmessung beansprucht.
-
-Die meisten in der **Segoe MDL2 Assets**-Schriftart enthaltenen Symbole und UI-Steuerelemente sind dem PUA (Private Use Area) von Unicode zugeordnet. Mithilfe des PUA können Entwickler Glyphen, die keinen vorhandenen Codepunkten zugeordnet sind, private Unicode-Werte zuweisen. Dies ist hilfreich bei der Erstellung einer Symbolschriftart, führt jedoch auch zu einem Interoperabilitätsproblem. Ist die Schriftart nicht verfügbar, werden die Glyphen nicht angezeigt. Verwenden Sie die Glyphen nur, wenn Sie die Schriftart **Segoe MDL2 Assets** explizit angeben können.
+Die Mehrzahl der in der Schriftart **Segoe MDL2 Assets** enthaltenen Symbole und Benutzeroberflächen-Steuerelemente sind dem Unicode-Bereich „Private Use Area“ (PUA) zugeordnet. Mithilfe des PUA können Entwickler Glyphen, die keinen vorhandenen Codepunkten zugeordnet sind, private Unicode-Werte zuweisen. Dies ist hilfreich bei der Erstellung einer Symbolschriftart, führt jedoch auch zu einem Interoperabilitätsproblem. Ist die Schriftart nicht verfügbar, werden die Glyphen nicht angezeigt. Verwenden Sie die Glyphen nur, wenn Sie die Schriftart **Segoe MDL2 Assets** explizit angeben können.
 
 Verwenden Sie diese Glyphen nur, wenn Sie die Schriftart **Segoe MDL2 Assets** explizit angeben können. Bei Verwendung von Kacheln können Sie diese Glyphen nicht nutzen, da Sie die Kachelschriftart nicht angeben können und PUA-Glyphen nicht per Schriftartfallback verfügbar sind.
 
 Anders als bei **Segoe UI Symbol** sind die Symbole in der Schriftart **Segoe MDL2 Assets** nicht für die Inlineverwendung mit Text vorgesehen. Demnach gelten einige ältere „Tricks“ wie die Pfeile für schrittweise Anzeige nicht mehr. Da alle neuen Symbole gleichermaßen größentechnisch angepasst und positioniert werden, müssen sie entsprechend nicht mit einer Nullbreite erstellt werden. Wir haben hingegen sichergestellt, dass sie einfach als ein Satz funktionieren. Im Idealfall können Sie zwei Symbole überlagern, die als ein Satz konzipiert wurden, und sie nehmen Gestalt an. Wir können dies vornehmen, um die Farbgebung im Code zu erlauben. Beispielsweise wurden U+EA3A und U+EA3B für den Badgestatus der Startkachel erstellt. Da diese bereits zentriert sind, kann die Kreisfüllung für unterschiedliche Status gefärbt werden.
 
-## Überlagern und Spiegeln
+## <a name="layering-and-mirroring"></a>Überlagern und Spiegeln
 
 Alle Glyphen in **Segoe MDL2 Assets** haben dieselbe feste Breite mit einer konsistenten Höhe und einem linken Ursprungspunkt. So können Überlagerungs- und Farbgebungseffekte erzielt werden, indem Glyphen direkt übereinander gezeichnet werden. Dieses Beispiel zeigt einen schwarzen Rand, der über das rote Herz mit einer Breite von Null gezeichnet wurde.
 
@@ -54,14 +44,17 @@ Alle Glyphen in **Segoe MDL2 Assets** haben dieselbe feste Breite mit einer kons
 
 Viele der Symbole verfügen zudem über gespiegelte Formen, die in Sprachen verwendet werden können, in denen die Rechts-nach-Links-Ausrichtung verwendet wird, beispielsweise Arabisch, Farsi und Hebräisch.
 
-## Symbol-Enumeration
-Wenn Sie eine App in C#/VB/C++ und XAML entwickeln, können Sie mithilfe der [**Symbol-Enumeration**](https://msdn.microsoft.com/library/windows/apps/dn252842) Symbole von der Schriftart „Segoe MDL2 Assets“ verwenden. 
+## <a name="symbol-enumeration"></a>Symbol-Enumeration
+Wenn Sie eine App in C#/VB/C++ und XAML entwickeln, können Sie mithilfe der [**Symbolenumeration**](https://msdn.microsoft.com/library/windows/apps/dn252842) Symbole der Schriftart Segoe MDL2 Assets verwenden. 
+
+## <a name="how-do-i-get-this-font"></a>Wie erhalte ich diese Schriftart?
+Um Segoe MDL2 Assets zu erhalten, müssen Sie Windows 10 installieren. 
 
 <!--
 Also, keep in mind that the **Segoe MDL2 Assets** font includes many more icons than we can show here. Many of these are intended for specialized purposed and are not typically used anywhere else.
 -->
 
-## Symbolliste
+## <a name="icon-list"></a>Liste der Symbole
 
 <table>
 
@@ -5143,10 +5136,7 @@ Also, keep in mind that the **Segoe MDL2 Assets** font includes many more icons 
 
 
 
-
-
-
-## Verwandte Artikel
+## <a name="related-articles"></a>Verwandte Artikel
 
 * [Richtlinien für Schriftarten](fonts.md)
 * [**Symbol-Enumeration**](https://msdn.microsoft.com/library/windows/apps/dn252842)
@@ -5160,6 +5150,6 @@ Also, keep in mind that the **Segoe MDL2 Assets** font includes many more icons 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

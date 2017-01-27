@@ -4,11 +4,11 @@ Description: "Eine Schaltfläche ermöglicht dem Benutzer das unmittelbare Ausl�
 label: Buttons
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 845aa9935908aa68b64c856ee5e263490a3340c4
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: bb670533769d8bae9cdea0f18e9cbb5717eb3877
 
 ---
-# Schaltflächen
+# <a name="buttons"></a>Schaltflächen
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Eine Schaltfläche ermöglicht dem Benutzer das unmittelbare Auslösen einer Aktion.
@@ -18,19 +18,16 @@ Eine Schaltfläche ermöglicht dem Benutzer das unmittelbare Auslösen einer Akt
 <div class="important-apis" >
 <b>Wichtige APIs</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx"><strong>Button-Klasse</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.aspx"><strong>RepeatButton-Klasse</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx"><strong>Click-Ereignis</strong></a></li>
+<li>[**Button-Klasse**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)</li>
+<li>[**RepeatButton-Klasse**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.aspx)</li>
+<li>[**Click-Ereignis**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx)</li>
+<li> </li>
+<li> </li>
+<li> </li>
 </ul>
-
-</div>
 </div>
 
-
-
-
-
-## Ist dies das richtige Steuerelement?
+## <a name="is-this-the-right-control"></a>Ist dies das richtige Steuerelement?
 
 Mit einer Schaltfläche kann ein Benutzer unmittelbar eine Aktion auslösen. Beispiel: Absenden eines Formulars.
 
@@ -38,13 +35,13 @@ Schaltflächen sollten nicht verwendet werden, um zu anderen Seiten zu navigiere
     
 > Ausnahme: Für die Navigation in einem Assistenten können die Schaltflächen „Zurück“ und „Weiter“ verwendet werden. Für andere Arten der Rückwärtsnavigation oder der Navigation zu einer übergeordneten Ebene sollte stattdessen eine Zurück-Schaltfläche verwendet werden.
 
-## Beispiel
+## <a name="example"></a>Beispiel
 
-In diesem Beispiel werden zwei Schaltflächen („Alle schließen“ und „Abbrechen“) in einem Dialogfeld des MicrosoftEdge-Browsers verwendet. 
+In diesem Beispiel werden zwei Schaltflächen („Alle schließen“ und „Abbrechen“) in einem Dialogfeld des Microsoft Edge-Browsers verwendet. 
 
 ![Beispiel für Schaltflächen in einem Dialogfeld](images/control-examples/buttons-edge.png)
 
-## Erstellen einer Schaltfläche
+## <a name="create-a-button"></a>Erstellen einer Schaltfläche
 
 Dieses Beispiel zeigt eine Schaltfläche, die auf einen Mausklick reagiert. 
 
@@ -78,7 +75,7 @@ private async void SubmitButton_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-### Interaktion mit Schaltflächen
+### <a name="button-interaction"></a>Interaktion mit Schaltflächen
 
 Wenn Sie mit einem Finger oder Stift auf eine Schaltfläche tippen oder mit der linken Maustaste darauf klicken, löst die Schaltfläche das [**Click**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx)-Ereignis aus. Bei einer Schaltfläche mit Tastaturfokus wird das Click-Ereignis auch durch Drücken der Eingabe- oder Leertaste ausgelöst.
 
@@ -87,7 +84,7 @@ Sie können für Schaltflächen generell keine [**PointerPressed**](https://msdn
 Sie können durch Ändern der [**ClickMode**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.clickmode.aspx)-Eigenschaft festlegen, wie eine Schaltfläche das Click-Ereignis auslöst. Der ClickMode-Standardwert lautet **Release**. Wenn als ClickMode-Wert **Hover** festgelegt ist, kann das Click-Event nicht über die Tastatur oder durch Berührung ausgelöst werden. 
 
 
-### Inhalt von Schaltflächen
+### <a name="button-content"></a>Inhalt von Schaltflächen
 
 „Button“ ist ein [**ContentControl**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.contentcontrol.aspx)-Steuerelement. Die XAML-Inhaltseigenschaft ist [**Content**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.contentcontrol.content.aspx). Damit ist für XAML folgende Syntax möglich: `<Button>A button's content</Button>`. Sie können jedes Objekt als Inhalt der Schaltfläche festlegen. Wenn der Inhalt ein [UIElement](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.aspx) ist, wird er in der Schaltfläche gerendert. Wenn es sich beim Inhalt um einen anderen Objekttyp handelt, wird die entsprechende Zeichenfolgendarstellung in der Schaltfläche angezeigt.
 
@@ -109,7 +106,7 @@ Die Schaltfläche sieht wie folgt aus.
 
 ![Eine Schaltfläche mit Bild- und Textinhalt](images/button-orange.png)
 
-## Erstellen einer Wiederholungsschaltfläche
+## <a name="create-a-repeat-button"></a>Erstellen einer Wiederholungsschaltfläche
 
 [**RepeatButton**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.aspx) ist eine Schaltfläche, die [**Click**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx)-Ereignisse auslöst, die andauern, solange die Schaltfläche betätigt wird. Legen Sie mit der [**Delay**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.delay.aspx)-Eigenschaft fest, wie lange „RepeatButton“ nach dem Betätigen der Schaltfläche wartet, bis die Klickaktion wiederholt wird. Legen Sie mit der [**Interval**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.interval.aspx)-Eigenschaft das Intervall zwischen Wiederholungen der Klickaktion fest. Die Zeiten beider Eigenschaften werden in Millisekunden angegeben.
 
@@ -141,11 +138,18 @@ private void Decrease_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## Empfehlungen
+## <a name="recommendations"></a>Empfehlungen
 
 -   Der Zweck und Status einer Schaltfläche müssen für den Benutzer eindeutig sein.
 -   Verwenden Sie kurze, spezifische und selbsterklärende Texte, aus denen die Funktion einer Schaltfläche eindeutig hervorgeht. In der Regel umfasst der Schaltflächen-Textinhalt ein einzelnes Wort: ein Verb.
--   Wenn der Textinhalt der Schaltfläche dynamisch ist, beispielsweise wenn er lokalisiert ist, ziehen Sie die Größenänderung der Schaltfläche und was mit den Steuerelementen herum passiert in Betracht.
+-   Wenn mehrere Schaltflächen für die gleiche Entscheidung vorhanden sind (wie etwa in einem Bestätigungsdialogfeld) geben Sie die Schaltflächen für den Commit in der folgenden Reihenfolge an: 
+    -   OK/[Ausführen]/Ja
+    -   [Nicht ausführen]/Nein
+    -   Abbrechen
+
+    (Dabei stellen [Ausführen] und [Nicht ausführen] bestimmte Antworten auf die Hauptanweisung dar.)
+
+-   Wenn der Textinhalt der Schaltfläche dynamisch ist, beispielsweise wenn er lokalisiert ist, ziehen Sie die Größenänderung der Schaltfläche und das in Betracht, was mit den Steuerelementen herum passiert.
 -   Verwenden Sie für Befehlsschaltflächen mit Textinhalt eine Schaltflächen-Mindestbreite.
 -   Vermeiden Sie es, für Textinhalt schmale, kurze oder hohe Befehlsschaltflächen zu verwenden.
 -   Verwenden Sie die standardmäßige Schriftart, es sei denn, Sie müssen entsprechend Ihren Markenrichtlinien eine andere verwenden.
@@ -156,19 +160,19 @@ private void Decrease_Click(object sender, RoutedEventArgs e)
 -   Stellen Sie sicher, dass sich, sobald der Benutzer eine Schaltfläche betätigt, der Status und das Erscheinungsbild der Schaltfläche ändern, um dem Benutzer ein Rückmeldung zu geben. „Normal“, „pressed“ und „disabled“ sind Beispiele von Schaltflächenstatus.
 -   Lösen Sie die Aktion der Schaltfläche aus, wenn der Benutzer auf die Schaltfläche tippt oder drückt. Die Aktion wird für gewöhnlich ausgelöst, wenn der Benutzer die Schaltfläche loslässt. Sie können aber auch festlegen, dass die Aktion einer Schaltfläche durch Berühren mit dem Finger ausgelöst wird.
 -   Verwenden Sie keine Befehlsschaltfläche zum Festlegen des Status.
--   Ändern Sie den Schaltflächentext nicht, während die App ausgeführt wird (z.B. den Text einer Schaltfläche „Weiter” in „Fortsetzen”).
+-   Ändern Sie den Schaltflächentext nicht, während die App ausgeführt wird (z. B. den Text einer Schaltfläche „Weiter” in „Fortsetzen”).
 -   Tauschen Sie nicht die standardmäßigen Stile „submit“, „reset“ und „button“.
 -   Überfrachten Sie eine Schaltfläche nicht mit Inhalt. Inhalte von Steuerelementen sollten kurz und prägnant sein (nicht mehr als ein Bild und ein kurzer Text).
 
-## Zurück-Schaltflächen
+## <a name="back-buttons"></a>Zurück-Schaltflächen
 Die Zurück-Schaltfläche ist ein durch das System bereitgestelltes UI-Element, das die Rückwärtsnavigation über den Back-Stapel oder den Navigationsverlauf des Benutzers ermöglicht. Sie müssen keine eigene Zurück-Schaltfläche erstellen, aber unter Umständen ist etwas Aufwand erforderlich, um eine gute Rückwärtsnavigation zu ermöglichen. Weitere Informationen finden Sie unter [Verlauf und Rückwärtsnavigation](../layout/navigation-history-and-backwards-navigation.md).
 
-## Beispiele herunterladen
+## <a name="get-the-sample-code"></a>Beispielcode herunterladen
 *   [Beispiel für XAML-UI-Grundlagen](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)<br/>
-    Hier sind alle XAML-Steuerelemente in einem interaktiven Format dargestellt.
+    Hier werden alle XAML-Steuerelemente in einem interaktiven Format dargestellt.
 
 
-## Verwandte Artikel
+## <a name="related-articles"></a>Verwandte Artikel
 
 - [Optionsfelder](radio-button.md)
 - [Umschalter](toggles.md)
@@ -179,6 +183,6 @@ Die Zurück-Schaltfläche ist ein durch das System bereitgestelltes UI-Element, 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

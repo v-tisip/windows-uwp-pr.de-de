@@ -6,19 +6,35 @@ MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: "Übersicht über benutzerdefinierte XAML-Panels"
 ms.assetid: 0CD395CD-E2AB-429D-BB49-56A71C5CC35D
-label: XAML custom panels overview
+label: XAML custom panels overview (Windows apps)
 template: detail.hbs
+op-migration-status: ready
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: aebe6b873fff2a4284f03ca519f998ded742f677
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: ff8d604be663b711bebf358f3256a5e6c55fb047
 
 ---
 
-# Übersicht über benutzerdefinierte XAML-Panels
+# <a name="xaml-custom-panels-overview"></a>Übersicht über benutzerdefinierte XAML-Panels
 
-Ein *Panel* ist ein Objekt, das ein Layoutverhalten für die in diesem enthaltenen untergeordneten Elemente bereitstellt, wenn das Extensible Application Markup Language (XAML=-Layoutsystem ausgeführt und die Benutzeroberfläche Ihrer App dargestellt wird. Sie können für ein XAML-Layout benutzerdefinierte Panels definieren, indem Sie eine benutzerdefinierte Klasse aus der [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511)-Klasse ableiten. Das Verhalten für das Panel stellen Sie bereit, indem Sie die Methoden [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) und [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) überschreiben und somit eine Logik liefern, die die untergeordneten Elemente misst und anordnet.
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-## Die **Panel**-Basisklasse
+Ein *Panel* ist ein Objekt, das ein Layoutverhalten für die in diesem enthaltenen untergeordneten Elemente bereitstellt, wenn das Extensible Application Markup Language (XAML)-Layoutsystem ausgeführt und die Benutzeroberfläche Ihrer App dargestellt wird. 
+
+
+<div class="important-apis" >
+<b>Wichtige APIs</b><br/>
+<ul>
+<li>[**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511)</li>
+<li>[**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711)</li>
+<li>[**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) </li>
+</ul>
+</div>
+</div>
+
+Sie können für ein XAML-Layout benutzerdefinierte Panels definieren, indem Sie eine benutzerdefinierte Klasse aus der [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511)-Klasse ableiten. Das Verhalten für das Panel stellen Sie bereit, indem Sie die Methoden [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) und [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) überschreiben und somit eine Logik liefern, die die untergeordneten Elemente misst und anordnet.
+
+## <a name="the-panel-base-class"></a>Die **Panel**-Basisklasse
 
 
 Um eine benutzerdefinierte Panelklasse zu definieren, können Sie entweder eine direkte Ableitung von der [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511)-Klasse durchführen oder eine Ableitung von einer der praktischen Panelklassen durchführen, die nicht versiegelt sind, beispielsweise [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) oder [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635). Es ist einfacher, eine Ableitung von **Panel** durchzuführen, da es schwierig sein kann, die vorhandene Layoutlogik eines Panels zu umgehen, für das bereits ein Layoutverhalten verfügbar ist. Außerdem verfügt ein Panel mit Verhalten möglicherweise über bereits vorhandene Eigenschaften, die nicht für Ihre Panel-Layoutfunktionen relevant sind.
@@ -26,13 +42,13 @@ Um eine benutzerdefinierte Panelklasse zu definieren, können Sie entweder eine 
 Ihr benutzerdefiniertes Panel erbt von [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511) die folgenden APIs:
 
 -   Die Eigenschaft [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514)
--   Die Eigenschaften [**Background**](https://msdn.microsoft.com/library/windows/apps/br227512), [**ChildrenTransitions**](https://msdn.microsoft.com/library/windows/apps/br227515) und [**IsItemsHost**](https://msdn.microsoft.com/library/windows/apps/br227517) sowie die Bezeichner von Abhängigkeitseigenschaften Keine dieser Eigenschaften ist virtuell, d.h., Sie müssen sie normalerweise nicht überschreiben oder ersetzen. In der Regel benötigen Sie diese Eigenschaften nicht für benutzerdefinierte Panelszenarien, noch nicht einmal zum Lesen von Werten.
+-   Die Eigenschaften [**Background**](https://msdn.microsoft.com/library/windows/apps/br227512), [**ChildrenTransitions**](https://msdn.microsoft.com/library/windows/apps/br227515) und [**IsItemsHost**](https://msdn.microsoft.com/library/windows/apps/br227517) sowie die Bezeichner von Abhängigkeitseigenschaften Keine dieser Eigenschaften ist virtuell, d. h., Sie müssen sie normalerweise nicht überschreiben oder ersetzen. In der Regel benötigen Sie diese Eigenschaften nicht für benutzerdefinierte Panelszenarien, noch nicht einmal zum Lesen von Werten.
 -   Das Layout überschreibt die Methoden [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) und [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711). Diese wurden ursprünglich durch [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) definiert. Die [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511)-Basisklasse überschreibt diese Methoden nicht. Praktische Panels wie [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) weisen jedoch Überschreibungsimplementierungen auf, die als systemeigener Code implementiert und vom System ausgeführt werden. Der Hauptaufwand bei der Definition eines benutzerdefinierten Panels besteht in der Bereitstellung von neuen (oder zusätzlichen) Implementierungen für **ArrangeOverride** und **MeasureOverride**.
 -   Alle anderen APIs von [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706), [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) und [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356), wie [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718), [**Visibility**](https://msdn.microsoft.com/library/windows/apps/br208992) usw. Sie verweisen in Ihren Layoutüberschreibungen manchmal auf Werte dieser Eigenschaften. Da diese jedoch nicht virtuell sind, überschreiben oder ersetzen Sie diese in der Regel nicht.
 
 Hier werden XAML-Layoutkonzepte beschrieben, sodass Sie alle Möglichkeiten berücksichtigen können, wie sich ein benutzerdefiniertes Panel im Layout verhalten kann und verhalten sollte. Wenn Sie direkt beginnen möchten und sich ein Beispiel für eine benutzerdefinierte Panelimplementierung ansehen möchten, finden Sie weitere Informationen unter [„BoxPanel“, ein Beispiel für eine benutzerdefinierte Panelimplementierung](boxpanel-example-custom-panel.md).
 
-## Die Eigenschaft **Children**
+## <a name="the-children-property"></a>Die Eigenschaft **Children**
 
 
 Die Eigenschaft [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514) ist für benutzerdefinierte Panel relevant, da alle Klassen, die von [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511) abgeleitet werden, die Eigenschaft **Children** verwenden, um die in ihnen enthaltenen untergeordneten Elemente in einer Sammlung zu speichern. **Children** ist als XAML-Inhaltseigenschaft für die Klasse **Panel** festgelegt, und alle von **Panel** abgeleiteten Klassen können das XAML-Inhaltseigenschaftsverhalten erben. Wenn eine Eigenschaft als XAML-Inhaltseigenschaft festgelegt ist, bedeutet das, dass das XAML-Markup ein Eigenschaftenelement auslassen kann, wenn diese Eigenschaft im Markup angegeben wird. Die Werte werden als unmittelbare untergeordnete Markupelemente (der „Inhalt“) festgelegt. Wenn Sie beispielsweise eine Klasse mit dem Namen **CustomPanel** von **Panel** ableiten, die kein neues Verhalten definiert, können Sie dennoch dieses Markup verwenden:
@@ -52,7 +68,7 @@ In der Regel akzeptiert ein benutzerdefiniertes Panel jedes untergeordnete [**UI
 
 Neben Schleifen durch die [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514)-Sammlung in den Überschreibungen könnte Ihre Panellogik auch durch `Children.Count` beeinflusst werden. Vielleicht verwenden Sie eine Logik, die Speicherplatz zumindest teilweise auf der Grundlage der Anzahl der Elemente zuordnet, statt auf Grundlage der gewünschten Größen und den anderen Eigenschaften der einzelnen Elemente.
 
-## Überschreiben der Layoutmethoden
+## <a name="overriding-the-layout-methods"></a>Überschreiben der Layoutmethoden
 
 
 Das Basismodell für die Methoden zur Layoutüberschreibung ([**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) und [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711)) besteht darin, dass sie alle untergeordneten Elemente durchlaufen und die spezifische Layout-Methode der einzelnen untergeordneten Elemente aufrufen. Der erste Layoutzyklus beginnt, wenn das XAML-Layoutsystem das Layout für das Stammfenster festlegt. Da jedes übergeordnete Element das Layout der jeweiligen untergeordneten Elemente aufruft, wird dadurch der Aufruf von Layout-Methoden für jedes mögliche UI-Element propagiert, das Teil des Layouts sein soll. Im XAML-Layout gibt es zwei Stufen: Messung und anschließend Anordnung.
@@ -65,7 +81,7 @@ Während der Übergabe der Messwerte fragt Ihre Layoutlogik alle untergeordneten
 
 Während der Anordnungsübergabe werden die Positionen und Größen der untergeordneten Elemente im x-y-Raum bestimmt, und die Zusammensetzung des Layouts wird für die Darstellung vorbereitet. Ihr Code muss [**Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914) für jedes untergeordnete Element in [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514) aufrufen, damit das Layoutsystem erkennt, dass das Element zum Layout gehört. Der Aufruf von **Arrange** ist eine Vorstufe für die Zusammensetzung und das Rendering. Hierdurch wird Layoutsystem darüber informiert, welche Position das Element erhält, wenn die Zusammensetzung für die Darstellung übermittelt wird.
 
-Viele Eigenschaften und Werte haben Einfluss darauf, wie die Layoutlogik zur Laufzeit ausgeführt wird. Sie können sich den Layoutprozess z.B. so vorstellen, dass die Elemente ohne untergeordnete Elemente (in der Regel das Element der tiefsten Schachtelungsebene in der Benutzeroberfläche) diejenigen sind, die die Messungen zuerst abschließen. Diese Elemente sind nicht von untergeordneten Elementen abhängig, die Einfluss auf die gewünschte Größe dieser Elemente haben können. Sie können ihre eigenen gewünschten Größen haben. Es handelt sich dabei um Größenvorschläge, bis das Layout tatsächlich erfolgt. Dann, bei der Übergabe der Messwerte, wird die visuelle Struktur durchlaufen, bis das Stammelement die erforderlichen Maße hat und die Messungen abgeschlossen werden können.
+Viele Eigenschaften und Werte haben Einfluss darauf, wie die Layoutlogik zur Laufzeit ausgeführt wird. Sie können sich den Layoutprozess z. B. so vorstellen, dass die Elemente ohne untergeordnete Elemente (in der Regel das Element der tiefsten Schachtelungsebene in der Benutzeroberfläche) diejenigen sind, die die Messungen zuerst abschließen. Diese Elemente sind nicht von untergeordneten Elementen abhängig, die Einfluss auf die gewünschte Größe dieser Elemente haben können. Sie können ihre eigenen gewünschten Größen haben. Es handelt sich dabei um Größenvorschläge, bis das Layout tatsächlich erfolgt. Dann, bei der Übergabe der Messwerte, wird die visuelle Struktur durchlaufen, bis das Stammelement die erforderlichen Maße hat und die Messungen abgeschlossen werden können.
 
 Das Kandidatenlayout muss in das aktuelle App-Fenster passen, ansonsten werden Teile der Benutzeroberfläche abgeschnitten. Die Beschneidungslogik wird häufig in Panels festgelegt. Die Panellogik kann bestimmen, welche Größe aufgrund der [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730)-Implementierung verfügbar ist, und muss möglicherweise die Größeneinschränkungen an die untergeordneten Elemente weitergeben und den verfügbaren Platz auf die untergeordneten Elemente aufteilen, damit alle Elemente so gut wie möglich passen. Das Ergebnis des Layouts fällt im Idealfall so aus, dass die verschiedene Eigenschaften aller Teile des Layouts verwendet werden und dennoch in das Anwendungsfenster passen. Dazu ist nicht nur eine gute Implementierung der Layoutlogik der Panels erforderlich, sondern auch ein vernünftiges Benutzeroberflächendesign seitens des App-Codes, mit dem eine Benutzeroberfläche mit diesem Panel erstellt wird. Das Paneldesign wird nicht gut aussehen, wenn im gesamten UI-Design mehr untergeordnete Elemente enthalten sind, als überhaupt in die App passen.
 
@@ -80,7 +96,7 @@ Das Layoutsystem funktioniert also hauptsächlich deshalb, weil jedes Element, d
 -   [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711)- und [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730)-Methoden
 -   [**Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914)- und [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952)-Methoden: Für diese Methoden sind auf der [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706)-Ebene systemeigene Implementierungen definiert, die Layoutaktionen auf Elementebene behandeln.
 
-## **MeasureOverride**
+## **<a name="measureoverride"></a>MeasureOverride**
 
 
 Die [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730)-Methode hat einen Rückgabewert, der vom Layoutsystem als Ausgangspunkt für[**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) für das Panel selbst verwendet wird, wenn die [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952)-Methode im Panel durch das übergeordnete Element im Layout aufgerufen wird. Die logischen Entscheidungen innerhalb der Methode sind genauso wichtig wie die zurückgegebenen Werte, und die Logik hat häufig Einfluss darauf, welche Werte zurückgegeben werden.
@@ -117,7 +133,7 @@ Auch wenn Ihre Implementierung nicht die gewünschten Größenmesswerte verwende
 
 Der Rückgabewert von [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) basiert auf der logischen Interpretation des Panels von [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) oder anderen Größenaspekten für die einzelnen untergeordneten Elemente in [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514), wenn [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) für diese aufgerufen wird. Es ist der Interpretation durch Ihre Logik überlassen, wie **DesiredSize**-Werte untergeordneter Elemente behandelt werden und wie der **MeasureOverride**-Rückgabewert diese verwenden soll. In der Regel werden die Werte nicht unverändert hinzugefügt, da der Eingabewert von **MeasureOverride** häufig eine feste verfügbare Größe ist, die vom übergeordneten Element des Panels vorgeschlagen wird. Wenn Sie diese Größe überschreiten, kann das Panel selbst abgeschnitten werden. Sie würden normalerweise die Gesamtgröße der untergeordneten Elemente mit der tatsächlich verfügbaren Größe des Panels vergleichen und ggf. Anpassungen vornehmen.
 
-### Tipps und Richtlinien
+### <a name="tips-and-guidance"></a>Tipps und Richtlinien
 
 -   Im Idealfall sollte ein benutzerdefiniertes Panel als erste echte visuelle Struktur in einer Benutzeroberflächenzusammenstellung geeignet sein, vielleicht auf der Ebene unmittelbar unter [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503), [**UserControl**](https://msdn.microsoft.com/library/windows/apps/br227647) oder einem anderen Element, das als Stamm der XAML-Seite fungiert. In [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730)-Implementierungen darf die Eingabe [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995) nicht routinemäßig zurückgegeben werden, ohne dass eine Überprüfung der Werte erfolgt. Wenn die zurückgegebene **Size** einen **Infinity**-Wert enthält, können in der Runtime-Layoutlogik Ausnahmen ausgelöst werden. Ein **Infinity**-Wert kann aus dem App-Hauptfenster stammen, da dieses bildlauffähig ist und deshalb keine maximale Höhe aufweist. Andere bildlauffähige Inhalte können ein ähnliches Verhalten aufweisen.
 -   Ein weiterer häufiger Fehler in [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730)-Implementierungen besteht darin, dass ein neuer Standardwert für [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995) zurückgegeben wird (Werte für Höhe und Breite sind 0). Sie beginnen möglicherweise mit diesem Wert, und es ist möglicherweise sogar der richtige Wert, wenn Ihr Panel ermittelt, dass keines der untergeordneten Elemente gerendert werden soll. Ein Standardwert für **Size** führt jedoch dazu, dass Ihr Panel auf dem Hostgerät nicht die richtige Größe hat. Da das Panel keinen Platz auf der Benutzeroberfläche anfordert, erhält es auch keinen Platz und wird nicht gerendert. Obwohl Ihr gesamter Panelcode in anderer Hinsicht optimal funktioniert, wird das Panel oder dessen Inhalt nicht angezeigt, wenn als Höhe und Breite ein Nullwert angegeben wird.
@@ -126,7 +142,7 @@ Der Rückgabewert von [**MeasureOverride**](https://msdn.microsoft.com/library/w
 -   Panels selbst können reservierten Platz als Abstand zwischen einzelnen Elementen verwenden. Wenn Sie diese Möglichkeit nutzen, müssen Sie die Messwerte als eine Eigenschaft bereitstellen, die sich von [**Margin**](https://msdn.microsoft.com/library/windows/apps/br208724) oder anderen **Padding**-Eigenschaften unterscheidet.
 -   Elemente können Werte für ihre Eigenschaften [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) und [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) auf der Basis eines früheren Layoutdurchlaufs aufweisen. Wenn sich Werte ändern, kann der Benutzeroberflächencode der App Handler für [**LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/br208722) auf Elemente anwenden, wenn eine bestimmte Logik ausgeführt werden soll ist. Die Panellogik muss jedoch in der Regel keine Prüfung auf Änderungen mittels Ereignisbehandlung durchführen. Das Layoutsystem legt bereits fest, wann das Layout erneut ausgeführt werden soll, weil sich der Wert einer layoutrelevanten Eigenschaft geändert hat, und die Panelmethoden [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) oder [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) werden jeweils automatisch aufgerufen.
 
-## **ArrangeOverride**
+## **<a name="arrangeoverride"></a>ArrangeOverride**
 
 
 Die [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711)-Methode hat einen Rückgabewert [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995), der vom Layoutsystem verwendet wird, wenn das Panel selbst gerendert wird, wenn die [**Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914)-Methode im Panel durch das übergeordnete Element im Layout aufgerufen wird. Es ist typisch, dass der Eingangswert *finalSize* und der von **ArrangeOverride** zurückgegebene Wert für **Size** identisch sind. Wenn sie es nicht sind, bedeutet dies, dass das Panel versucht, eine andere Größe zu verwenden als die, die für die anderen Teilnehmer bei der Layoutbeanspruchung verfügbar ist. Die endgültige Größe basierte auf der Voraussetzung, dass zuvor die Übergabe der Messwerte für das Layout durch Ihren Panelcode ausgeführt wurde. Aus diesem Grund lässt sich erklären, weshalb normalerweise keine andere Größe zurückgegeben wird: Sie würden bewusst die Messwertelogik ignorieren.
@@ -155,11 +171,11 @@ Die Anordnungsübergabe für das Layout kann erfolgen, ohne dass zuvor eine Übe
 
 Die Eingabe für [**Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914) verwendet einen [**Rect**](https://msdn.microsoft.com/library/windows/apps/br225994)-Wert. Die am häufigsten für die Konstruktion dieses **Rect** verwendete Methode besteht in der Verwendung des Konstruktors, der Eingabewerte für [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) und [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995) hat. Der **Point** ist der Punkt, an dem die obere linke Ecke des Begrenzungsrahmens für das Element platziert werden soll. Die **Size** sind die Dimensionen, die zum Rendern dieses spezifischen Elements verwendet werden. Häufig wird die [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) für dieses Element als dieser **Size**-Wert verwendet, da die Festlegung von **DesiredSize** für alle im Layout enthaltenen Elemente der Zweck des Messdurchlaufs für das Layout war. (Die Übergabe der Messwerte bestimmt die gesamte Dimensionierung der Elemente auf iterative Weise, sodass das Layoutsystem die Platzierung der Elemente optimieren kann, sobald die Anordnungsübergabe erreicht ist.)
 
-Bei den [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711)-Implementierungen unterscheidet sich typischerweise die Logik, mit der das Panel die [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870)-Komponente bestimmt, d.h., wie die einzelnen untergeordneten Elemente angeordnet werden. Ein Panel mit absoluter Positionierung, beispielsweise [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267), verwendet die ausdrücklichen Platzierungsinformationen, die es von den einzelnen Elementen über die [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/hh759771)- [**Canvas.Top**](https://msdn.microsoft.com/library/windows/apps/hh759772)-Werte erhält. Ein raumtrennendes Panel, beispielsweise [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704), verwendet mathematische Operationen, durch die der verfügbare Raum in Zellen unterteilt wird. Jede Zelle verfügt über einen x-y-Wert, um zu definieren, an welcher Position die Inhalte der Zelle platziert und angeordnet werden sollen. Ein adaptives Panel, beispielsweise [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635), kann sich möglicherweise selbst erweitern, um den Inhalt an die Ausrichtungsabmessungen des Panels anzupassen.
+Bei den [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711)-Implementierungen unterscheidet sich typischerweise die Logik, mit der das Panel die [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870)-Komponente bestimmt, d. h., wie die einzelnen untergeordneten Elemente angeordnet werden. Ein Panel mit absoluter Positionierung, beispielsweise [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267), verwendet die ausdrücklichen Platzierungsinformationen, die es von den einzelnen Elementen über die [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/hh759771)- [**Canvas.Top**](https://msdn.microsoft.com/library/windows/apps/hh759772)-Werte erhält. Ein raumtrennendes Panel, beispielsweise [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704), verwendet mathematische Operationen, durch die der verfügbare Raum in Zellen unterteilt wird. Jede Zelle verfügt über einen x-y-Wert, um zu definieren, an welcher Position die Inhalte der Zelle platziert und angeordnet werden sollen. Ein adaptives Panel, beispielsweise [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635), kann sich möglicherweise selbst erweitern, um den Inhalt an die Ausrichtungsabmessungen des Panels anzupassen.
 
-Neben der direkten Steuerung und Weitergabe an [**Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914) gibt es noch weitere Aspekte, von denen die Positionierung von Elementen im Layout beeinflusst wird. Diese resultieren aus der internen systemeigenen Implementierung von **Arrange**, die allen von [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) abgeleiteten Typen gemeinsam ist, und werden durch einige andere Typen wie Textelemente ergänzt. So können z.B. Elemente einen Rand und eine Ausrichtung haben, und einige können auch einen Abstand aufweisen. Diese Eigenschaften stehen oft in Interaktion. Weitere Informationen hierzu finden Sie unter [Ausrichtung, Rand und Abstand](alignment-margin-padding.md).
+Neben der direkten Steuerung und Weitergabe an [**Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914) gibt es noch weitere Aspekte, von denen die Positionierung von Elementen im Layout beeinflusst wird. Diese resultieren aus der internen systemeigenen Implementierung von **Arrange**, die allen von [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) abgeleiteten Typen gemeinsam ist, und werden durch einige andere Typen wie Textelemente ergänzt. So können z. B. Elemente einen Rand und eine Ausrichtung haben, und einige können auch einen Abstand aufweisen. Diese Eigenschaften stehen oft in Interaktion. Weitere Informationen hierzu finden Sie unter [Ausrichtung, Rand und Abstand](alignment-margin-padding.md).
 
-## Panels und Steuerelemente
+## <a name="panels-and-controls"></a>Panels und Steuerelemente
 
 
 Vermeiden Sie es, Funktionen in ein benutzerdefiniertes Panel zu implementieren, die stattdessen in einem benutzerdefiniertem Steuerelement erstellt werden sollten. Die Rolle eines Panels besteht darin, alle enthaltenden Inhalte untergeordneter Elemente darzustellen – und zwar als Layoutfunktion, die automatisch erfolgt. Das Panel fügt dem Inhalt möglicherweise Dekorationen hinzu (ähnlich wie ein [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250) den Rand um das Element ergänzt, das es darstellt) oder führt andere layoutbezogene Anpassungen aus, beispielsweise eine Auffüllung. So weit sollten Sie jedoch gehen, wenn Sie die Ausgabe der visuellen Struktur über die Berichterstattung und Verwendung der Informationen der untergeordneten Elemente hinaus erweitern möchten.
@@ -168,7 +184,7 @@ Wenn es eine Interaktion gibt, auf die der Benutzer Zugriff hat, sollten Sie ein
 
 Ein Grund dafür: Die Unterscheidung zwischen Steuerelement und Panel ist für die Microsoft-Benutzeroberflächenautomatisierung und Barrierefreiheit wichtig. Panels stellen ein visuelles Layoutverhalten bereit, kein logisches Verhalten. Die visuelle Darstellung eines UI-Elements ist in der Regel kein wichtiger UI-Aspekt in Barrierefreiheitsszenarien. Bei der Barrierefreiheit geht es darum, die Teile einer App verfügbar zu machen, die für das Verständnis der UI-Logik wichtig sind. Wenn Interaktion erforderlich ist, sollten Steuerelemente die Interaktionsmöglichkeiten in der Benutzeroberflächenautomatisierungs-Infrastruktur bereitstellen. Weitere Informationen finden Sie unter [Benutzerdefinierte Automatisierungspeers](https://msdn.microsoft.com/library/windows/apps/mt297667).
 
-## Andere Layout-APIs
+## <a name="other-layout-api"></a>Andere Layout-APIs
 
 
 Es gibt einige weitere APIs, die Teil des Layoutsystems sind, jedoch nicht durch [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511) deklariert werden. Einige von ihnen könnten in einer Panelimplementierung oder in einem benutzerdefinierten Steuerelement verwendet werden, das Panels nutzt.
@@ -178,22 +194,18 @@ Es gibt einige weitere APIs, die Teil des Layoutsystems sind, jedoch nicht durch
 -   [**SizeChanged**](https://msdn.microsoft.com/library/windows/apps/br208742) ist ein Ereignis, das nur ausgelöst wird, wenn die Layoutdurchläufe abgeschlossen sind. Es gibt an, dass sich [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) oder [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) geändert haben. Dies ist ein weiteres [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706)-Ereignis. Es gibt Fälle, in denen [**LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/br208722) ausgelöst wird, **SizeChanged** hingegen nicht. Beispielsweise könnten die internen Inhalte neu angeordnet werden, ohne dass sich die Größe des Elements ändert.
 
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 **Referenz**
-
-[**FrameworkElement.ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711)
-
-[**FrameworkElement.MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730)
-
-[**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511)
+* [**FrameworkElement.ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711)
+* [**FrameworkElement.MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730)
+* [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511)
 
 **Konzepte**
-
-[Ausrichtung, Rand und Abstand](alignment-margin-padding.md)
-
+* [Ausrichtung, Rand und Abstand](alignment-margin-padding.md)
 
 
-<!--HONumber=Aug16_HO3-->
+
+<!--HONumber=Dec16_HO2-->
 
 

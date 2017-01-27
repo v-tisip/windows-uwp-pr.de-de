@@ -4,8 +4,8 @@ title: Registrieren einer Hintergrundaufgabe
 description: Hier erfahren Sie, wie eine Funktion erstellt wird, die zum sicheren Registrieren der meisten Hintergrundaufgaben wiederverwendet werden kann.
 ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 translationtype: Human Translation
-ms.sourcegitcommit: 2f46f5cd26656b2d6b7d14c0d85aa7a0a6950fb8
-ms.openlocfilehash: 809cd0ea85d4dfc6ecf633d0ca9f16bbefee78ca
+ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
+ms.openlocfilehash: d65b8d3312e49469bd99d458b45bf5a46f345e6a
 
 ---
 
@@ -21,7 +21,7 @@ ms.openlocfilehash: 809cd0ea85d4dfc6ecf633d0ca9f16bbefee78ca
 
 Hier erfahren Sie, wie eine Funktion erstellt wird, die zum sicheren Registrieren der meisten Hintergrundaufgaben wiederverwendet werden kann.
 
-Dieses Thema gilt für In-Process-Hintergrundaufgaben sowie für Out-of-Process-Hintergrundaufgaben. In diesem Thema wird davon ausgegangen, dass Sie bereits über eine Hintergrundaufgabe verfügen, die registriert werden muss. (Informationen zum Erstellen einer Hintergrundaufgabe finden Sie unter [Erstellen und Registrieren einer außerhalb des Prozesses ausgeführten Hintergrundaufgabe](create-and-register-an-outofproc-background-task.md) oder [Erstellen und Registrieren einer In-Process-Hintergrundaufgabe](create-and-register-an-inproc-background-task.md)).
+Dieses Thema gilt für In-Process-Hintergrundaufgaben sowie für Out-of-Process-Hintergrundaufgaben. In diesem Thema wird davon ausgegangen, dass Sie bereits über eine Hintergrundaufgabe verfügen, die registriert werden muss. (Informationen zum Erstellen einer Hintergrundaufgabe finden Sie unter [Erstellen und Registrieren einer außerhalb des Prozesses ausgeführten Hintergrundaufgabe](create-and-register-a-background-task.md) oder [Erstellen und Registrieren einer In-Process-Hintergrundaufgabe](create-and-register-an-inproc-background-task.md)).
 
 Dieses Thema behandelt schrittweise eine Hilfsfunktion, die Hintergrundaufgaben registriert. Diese Hilfsfunktion sucht zuerst nach vorhandenen Registrierungen, um Probleme mit mehrfachen Registrierungen zu vermeiden. Sie kann außerdem eine Systembedingung auf die Hintergrundaufgabe anwenden. Die exemplarische Vorgehensweise enthält ein vollständiges lauffähiges Beispiel für diese Hilfsfunktion.
 
@@ -377,7 +377,7 @@ Dieses Beispiel zeigt die Hilfsfunktion zur Registrierung der abgeschlossenen Hi
 
 ****
 
-* [Erstellen und Registrieren einer Hintergrundaufgabe außerhalb von Prozessen](create-and-register-an-outofproc-background-task.md)
+* [Erstellen und Registrieren einer Hintergrundaufgabe außerhalb von Prozessen](create-and-register-a-background-task.md)
 * [Erstellen und Registrieren einer Hintergrundaufgabe innerhalb von Prozessen](create-and-register-an-inproc-background-task.md)
 * [Deklarieren von Hintergrundaufgaben im Anwendungsmanifest](declare-background-tasks-in-the-application-manifest.md)
 * [Behandeln einer abgebrochenen Hintergrundaufgabe](handle-a-cancelled-background-task.md)
@@ -397,6 +397,6 @@ Dieses Beispiel zeigt die Hilfsfunktion zur Registrierung der abgeschlossenen Hi
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

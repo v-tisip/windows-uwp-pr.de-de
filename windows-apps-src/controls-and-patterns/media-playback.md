@@ -7,11 +7,11 @@ dev.assetid: AF2F2008-9B53-430C-BBC3-8888F631B0B0
 label: Media player
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 6945708f0d81cd9f2edd363ed193c76601ec5652
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 155f1712beb70d2a1fc93809ddc254e8f6e6f4a2
 
 ---
-# Media Player
+# <a name="media-player"></a>Media Player
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
@@ -22,28 +22,25 @@ Der Media Player wird verwendet, um Videos und Audio anzuzeigen und zu hören. D
 <div class="important-apis" >
 <b>Wichtige APIs</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx"><strong>MediaPlayerElement-Klasse</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediatransportcontrols"><strong>MediaTransportControls-Klasse</strong></a></li>
+<li>[**MediaPlayerElement-Klasse**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx)</li>
+<li>[**MediaTransportControls-Klasse**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediatransportcontrols)</li>
 </ul>
-
-</div>
 </div>
 
 
+> **Hinweis**&nbsp;&nbsp; **MediaPlayerElement** steht erst ab Windows 10, Version 1607, zur Verfügung. Für das Entwickeln von Apps für niedrigere Windows 10-Versionen muss stattdessen [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) verwendet werden. Alle Empfehlungen auf dieser Seite gelten auch für MediaElement.
 
-> **Hinweis**&nbsp;&nbsp; **MediaPlayerElement** steht erst ab Windows10, Version1607, zur Verfügung. Für das Entwickeln von Apps für niedrigere Windows10-Versionen muss stattdessen [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) verwendet werden. Alle Empfehlungen auf dieser Seite gelten auch für MediaElement.
-
-## Ist dies das richtige Steuerelement?
+## <a name="is-this-the-right-control"></a>Ist dies das richtige Steuerelement?
 
 Verwenden Sie einen Mediaplayer, wenn Sie Audio- oder Videodateien in Ihrer App wiedergeben möchten. Verwenden Sie zum Anzeigen einer Sammlung von Bildern die [Flip-Ansicht](flipview.md).
 
-## Beispiele
+## <a name="examples"></a>Beispiele
 
-Ein Media Player in der Windows10-Erste Schritte-App.
+Ein Media Player in der Windows 10-Erste Schritte-App.
 
 ![Ein Medienelement in der Windows 10-Erste Schritte-App.](images/control-examples/mtc_getstarted_example.png)
 
-## Erstellen eines Media Players
+## <a name="create-a-media-player"></a>Erstellen eines Media Players
 Sie fügen Ihrer App Medien hinzu, indem Sie ein [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx)-Objekt in XAML erstellen und die [**Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx) auf eine [**MediaSource**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.core.mediasource.aspx) festlegen, die auf eine Audio- oder Videodatei verweist.
 
 Mit diesem XAML-Code wird ein [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) erstellt, dessen [**Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx)-Eigenschaft auf den URI einer Videodatei festgelegt wird, bei der es sich um eine lokale Datei der App handelt. Das **MediaPlayerElement** beginnt mit der Wiedergabe, wenn die Seite geladen wird. Um zu verhindern, dass die Medienwiedergabe sofort beginnt, können Sie die [**AutoPlay**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.autoplay.aspx)-Eigenschaft auf **false** festlegen.
@@ -65,7 +62,7 @@ Mit diesem XAML-Code wird ein [**MediaPlayerElement**](https://msdn.microsoft.co
                     AreTransportControlsEnabled="True"/>
 ```
 
-### Steuerelemente für den Medientransport
+### <a name="media-transport-controls"></a>Steuerelemente für den Medientransport
 [**MediaPlayerElement**]((https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) besitzt integrierte Transportsteuerelemente, die Wiedergabe, Beenden, Anhalten, Lautstärke, Stummschalten, Suche/Status, Untertitel und Audiospurauswahl behandeln. Um diese Steuerelemente zu aktivieren, legen Sie [**AreTransportControlsEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.AreTransportControlsEnabled.aspx) auf **true** fest. Um sie zu deaktivieren, legen Sie **AreTransportControlsEnabled** auf **false** fest. Die Transportsteuerelemente werden durch die [**MediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn831962)-Klasse dargestellt. Sie können die Transportsteuerelemente unverändert verwenden oder auf verschiedene Weise anpassen. Weitere Informationen finden Sie in der Referenz zur [**MediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn831962)-Klasse und unter [Erstellen von benutzerdefinierten Transportsteuerelementen](custom-transport-controls.md).
 
 Die Transportsteuerelemente unterstützen Layouts mit einer Zeile und mit Doppelzeile. Im ersten Beispiel sehen Sie ein einzeiliges-Layout mit der Wiedergabe/Pause-Schaltfläche links von der Medienzeitachse. Dieses Layout wird am besten für die Wiedergabe von Inlinemedien und kompakte Bildschirme reserviert.
@@ -79,12 +76,12 @@ Das Layout mit doppelzeiligen Steuerelementen (siehe unten) wird für die meiste
 **Steuerelemente für den Systemmedientransport**
 
 [
-              Das **MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) ist automatisch in die Medientransportsteuerelemente des Systems integriert. Die Medientransportsteuerelemente des Systems sind die Steuerelemente, die angezeigt werden, wenn Hardwaretasten für Medien betätigt werden, z.B. die Medientasten auf Tastaturen. Weitere Informationen finden Sie unter [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677).
+              Das **MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) ist automatisch in die Medientransportsteuerelemente des Systems integriert. Die Medientransportsteuerelemente des Systems sind die Steuerelemente, die angezeigt werden, wenn Hardwaretasten für Medien betätigt werden, z. B. die Medientasten auf Tastaturen. Weitere Informationen finden Sie unter [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677).
 
 > **Hinweis**&nbsp;&nbsp; [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) wird nicht automatisch in die Medientransportsteuerelemente des Systems integriert. Sie müssen die Verbindung daher selbst herstellen. Weitere Informationen finden Sie unter [Steuerelemente für den Systemmedientransport](https://msdn.microsoft.com/library/windows/apps/mt228338).
 
 
-### Festlegen der Medienquelle
+### <a name="set-the-media-source"></a>Festlegen der Medienquelle
 Um Dateien im Netzwerk oder in die App eingebettete Dateien wiederzugeben, legen Sie die [**Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx)-Eigenschaft auf eine [**MediaSource**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.core.mediasource.aspx) mit dem Pfad der Datei fest.
 
 **Tipp**  Zum Öffnen von Dateien aus dem Internet müssen Sie die **Internet (Client)**-Funktion im App-Manifest (Package.appxmanifest) deklarieren. Weitere Informationen zum Deklarieren von Funktionen finden Sie unter [Deklaration der App-Funktionen](https://msdn.microsoft.com/library/windows/apps/mt270968).
@@ -156,7 +153,7 @@ private void LoadEmbeddedAppFile()
 }
 ```
 
-### Öffnen von lokalen Mediendateien
+### <a name="open-local-media-files"></a>Öffnen von lokalen Mediendateien
 Zum Öffnen von Dateien im lokalen System oder aus OneDrive können Sie das [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847)-Element verwenden, um die Datei abzurufen, und [**Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx), um die Medienquelle festzulegen; alternativ können Sie programmgesteuert auf die Benutzermedienordner zugreifen.
 
 Falls für Ihre App jedoch der Zugriff auf die **Musik**- oder **Videoordner** ohne Benutzerinteraktion erforderlich ist (wenn Sie beispielsweise sämtliche Musik- oder Videodateien einer Sammlung des Benutzers aufzählen und in Ihrer App anzeigen), müssen Sie die Funktionen der **Musik-** und **Videobibliothek** deklarieren. Weitere Informationen finden Sie unter [Dateien und Ordner in den Musik-, Bild- und Videobibliotheken](https://msdn.microsoft.com/library/windows/apps/mt188703).
@@ -209,10 +206,10 @@ async private System.Threading.Tasks.Task SetLocalMedia()
 }
 ```
 
-### Festlegen der Posterquelle
-Mit der [**PosterSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.PosterSource.aspx)-Eigenschaft können Sie eine visuelle Darstellung für Ihr [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) bereitstellen, bevor die Medien geladen werden. Eine **PosterSource** ist ein Bild, z.B. ein Screenshot oder Filmplakat, das anstelle der Medien angezeigt wird. Die **PosterSource** wird in folgenden Fällen angezeigt:
+### <a name="set-the-poster-source"></a>Festlegen der Posterquelle
+Mit der [**PosterSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.PosterSource.aspx)-Eigenschaft können Sie eine visuelle Darstellung für Ihr [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) bereitstellen, bevor die Medien geladen werden. Eine **PosterSource** ist ein Bild, z. B. ein Screenshot oder Filmplakat, das anstelle der Medien angezeigt wird. Die **PosterSource** wird in folgenden Fällen angezeigt:
 
--   Wenn keine gültige Quelle festgelegt ist. Beispiel: [**Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx) ist nicht festgelegt, **Source** wurde auf **Null** festgelegt, oder die Quelle ist ungültig (z.B. wenn ein [**MediaFailed**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplayer.mediafailed.aspx)-Ereignis eintritt).
+-   Wenn keine gültige Quelle festgelegt ist. Beispiel: [**Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx) ist nicht festgelegt, **Source** wurde auf **Null** festgelegt, oder die Quelle ist ungültig (z. B. wenn ein [**MediaFailed**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplayer.mediafailed.aspx)-Ereignis eintritt).
 -   Während Medien geladen werden. Beispiel: Eine gültige Quelle ist festgelegt, aber das [**MediaOpened**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplayer.mediaopened.aspx)-Ereignis ist noch nicht eingetreten.
 -   Beim Streamen von Medien auf ein anderes Gerät.
 -   Wenn die Medien nur Audio enthalten.
@@ -223,8 +220,8 @@ Dies ist ein [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows
 <MediaPlayerElement Source="Media/Track1.mp4" PosterSource="Media/AlbumCover.png"/>
 ```
 
-### Abblenden/Ausschalten des Gerätebildschirms verhindern
-Normalerweise wird bei einem Gerät das Display abgeblendet (und schließlich ausgeschaltet), um bei Abwesenheit des Benutzers den Akku zu schonen. Bei Video-Apps muss der Bildschirm jedoch eingeschaltet bleiben, damit der Benutzer das Video sehen kann. Um ein Deaktivieren der Anzeige zu verhindern, wenn keine Benutzeraktion mehr festgestellt werden kann (z.B. bei der Wiedergabe eines Videos in einer App), können Sie [**DisplayRequest.RequestActive**](https://msdn.microsoft.com/library/windows/apps/br241818) aufrufen. Mithilfe der [**DisplayRequest**](https://msdn.microsoft.com/library/windows/apps/br241816)-Klasse können Sie Windows anweisen, das Display eingeschaltet zu lassen, damit der Benutzer das Video sehen kann.
+### <a name="keep-the-devices-screen-active"></a>Abblenden/Ausschalten des Gerätebildschirms verhindern
+Normalerweise wird bei einem Gerät das Display abgeblendet (und schließlich ausgeschaltet), um bei Abwesenheit des Benutzers den Akku zu schonen. Bei Video-Apps muss der Bildschirm jedoch eingeschaltet bleiben, damit der Benutzer das Video sehen kann. Um ein Deaktivieren der Anzeige zu verhindern, wenn keine Benutzeraktion mehr festgestellt werden kann (z. B. bei der Wiedergabe eines Videos in einer App), können Sie [**DisplayRequest.RequestActive**](https://msdn.microsoft.com/library/windows/apps/br241818) aufrufen. Mithilfe der [**DisplayRequest**](https://msdn.microsoft.com/library/windows/apps/br241816)-Klasse können Sie Windows anweisen, das Display eingeschaltet zu lassen, damit der Benutzer das Video sehen kann.
 
 Um Energie zu sparen und den Akku zu schonen, wird empfohlen, [**DisplayRequest.RequestRelease**](https://msdn.microsoft.com/library/windows/apps/br241819) aufzurufen und die Displayanforderung freizugeben, wenn diese nicht mehr benötigt wird. Windows deaktiviert automatisch die aktiven Displayanforderungen der App, wenn die App vom Bildschirm entfernt wird, und aktiviert die Displayanforderungen wieder, wenn Ihre App wieder in den Vordergrund gesetzt wird.
 
@@ -288,13 +285,13 @@ private DisplayRequest appDisplayRequest = null;
     }
     ```
 
-### Programmgesteuertes Steuern der Medienwiedergabe
+### <a name="control-the-media-player-programmatically"></a>Programmgesteuertes Steuern der Medienwiedergabe
 [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) stellt zahlreiche Eigenschaften, Methoden und Ereignisse zum Steuern der Audio- und Videowiedergabe über die [**MediaPlayerElement.MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.mediaplayer.aspx)-Eigenschaft bereit. Eine vollständige Liste der Eigenschaften, Methoden und Ereignisse finden Sie auf der Referenzseite zu [**MediaPlayer**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplayer.aspx).
 
-### Erweiterte Medienwiedergabeszenarien
-Für komplexere Medienwiedergabeszenarien, z.B. die Wiedergabe einer Playlist, Umschalten zwischen Audiosprachen oder Erstellen benutzerdefinierter Metadatentracks, legen Sie [**MediaPlayerElement.Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx) auf eine [**MediaPlaybackItem**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplaybackitem.aspx) oder eine [**MediaPlaybackList**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplaybacklist.aspx) fest. Weitere Informationen dazu, wie Sie verschiedene erweiterte Medienfunktionen aktivieren, finden Sie auf der Seite [**Medienwiedergabe**](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/media-playback-with-mediasource) im Dev Center.
+### <a name="advanced-media-playback-scenarios"></a>Erweiterte Medienwiedergabeszenarien
+Für komplexere Medienwiedergabeszenarien, z. B. die Wiedergabe einer Playlist, Umschalten zwischen Audiosprachen oder Erstellen benutzerdefinierter Metadatentracks, legen Sie [**MediaPlayerElement.Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx) auf eine [**MediaPlaybackItem**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplaybackitem.aspx) oder eine [**MediaPlaybackList**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplaybacklist.aspx) fest. Weitere Informationen dazu, wie Sie verschiedene erweiterte Medienfunktionen aktivieren, finden Sie auf der Seite [**Medienwiedergabe**](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/media-playback-with-mediasource) im Dev Center.
 
-### Aktivieren des Videorenderings im Vollfenstermodus
+### <a name="enable-full-window-video-rendering"></a>Aktivieren des Videorenderings im Vollfenstermodus
 
 Legen Sie die [**IsFullWindow**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.isfullwindow.aspx)-Eigenschaft fest, um das Rendering im Vollfenstermodus zu aktivieren und zu deaktivieren. Wenn Sie das Rendering im Vollfenstermodus in Ihrer App programmgesteuert festlegen, sollten Sie immer die **IsFullWindow**-Eigenschaft verwenden, anstatt diese Einstellung manuell vorzunehmen. **IsFullWindow** stellt sicher, dass Optimierungen auf Systemebene zum Verbessern der Leistung und Akkulaufzeit durchgeführt werden. Wenn das Rendering im Vollfenstermodus nicht korrekt eingerichtet wird, werden diese Optimierungen möglicherweise nicht angewendet.
 
@@ -313,7 +310,7 @@ private void FullWindow_Click(object sender, object e)
 }
 ```
 
-### Ändern der Größe und Strecken von Videos
+### <a name="resize-and-stretch-video"></a>Ändern der Größe und Strecken von Videos
 
 Verwenden Sie die [**Stretch**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.stretch.aspx)-Eigenschaft, um zu ändern, wie der Videoinhalt und/oder die [**PosterSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.postersource.aspx) den Container ausfüllt, in dem er sich befindet. Das Video wird dabei entsprechend dem [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br242968)-Wert vergrößert bzw. verkleinert oder gestreckt. Die **Stretch**-Zustände sind mit den Bildformateinstellungen bei vielen Fernsehern vergleichbar. Sie können dieses Verhalten mit einer Schaltfläche verknüpfen und dem Benutzer die Auswahl der gewünschten Einstellung ermöglichen.
 
@@ -355,7 +352,7 @@ private void PictureSize_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-### Aktivieren der Wiedergabe mit geringer Wartezeit
+### <a name="enable-low-latency-playback"></a>Aktivieren der Wiedergabe mit geringer Wartezeit
 
 Legen Sie die [**RealTimePlayback**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplayer.realtimeplayback.aspx)-Eigenschaft für ein [**MediaPlayerElement.MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.mediaplayer.aspx) auf **true** fest, damit das Media Player-Element die anfängliche Wartezeit für die Wiedergabe reduzieren kann. Dies ist von entscheidender Bedeutung für Apps mit bidirektionaler Kommunikation und kann für einige Spieleszenarien erforderlich sein. Beachten Sie, dass dieser Modus viele Ressourcen und eine höhere Leistung benötigt.
 
@@ -367,7 +364,7 @@ MediaPlayerElement mp = new MediaPlayerElement();
 mp.MediaPlayer.RealTimePlayback = true;
 ```
 
-## Empfehlungen
+## <a name="recommendations"></a>Empfehlungen
 
 MediaPlayer unterstützt helle und dunkle Designs. Dunkle Designs bieten für die Mehrzahl der Unterhaltungsszenarien jedoch eine bessere Umgebung. Der dunkle Hintergrund bietet einen besseren Kontrast, insbesondere bei schwierigen Lichtbedingungen, und verhindert Beeinträchtigungen der Steuerleiste auf der Benutzeroberfläche.
 
@@ -379,13 +376,13 @@ Wenn Sie die nötige Bildschirmfläche haben oder für 10 Fuß-Umgebungen entwer
 
 Die Standardsteuerelemente wurden für die Medienwiedergabe optimiert. Sie können jedoch benutzerdefinierte Optionen hinzufügen, die Sie für den Media Player benötigen, um für Ihre App eine optimale Umgebung bereitzustellen. Weitere Informationen zum Hinzufügen von benutzerdefinierten Steuerelementen finden Sie unter [Erstellen benutzerdefinierter Transportsteuerelemente](custom-transport-controls.md).
 
-## Verwandte Artikel
+## <a name="related-articles"></a>Verwandte Artikel
 
 - [Befehlsdesigngrundlagen für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/dn958433)
 - [Grundlagen des Inhaltsdesigns für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/dn958434)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

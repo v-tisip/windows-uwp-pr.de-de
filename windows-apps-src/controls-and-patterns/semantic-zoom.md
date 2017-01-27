@@ -6,11 +6,11 @@ ms.assetid: B5C21FE7-BA83-4940-9CC1-96F6A2DC28C7
 label: Semantic zoom
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 125cb6e45defe3213af3f5cd20f524a5311241af
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: b3ca48b678fb4e1ddb4b26ad7add723474527591
 
 ---
-# Semantischer Zoom
+# <a name="semantic-zoom"></a>Semantischer Zoom
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -24,18 +24,11 @@ Bei der Anzeige eines Adressbuchs kann der Benutzer beispielsweise schnell zum B
 <div class="important-apis" >
 <b>Wichtige APIs</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/hh702601"><strong>SemanticZoom-Klasse</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listview.aspx"><strong>ListView-Klasse</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridview.aspx"><strong>GridView-Klasse</strong></a></li>
+<li>[**SemanticZoom-Klasse**](https://msdn.microsoft.com/library/windows/apps/hh702601)</li>
+<li>[**ListView-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listview.aspx)</li>
+<li>[**GridView-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridview.aspx)</li>
 </ul>
-
 </div>
-</div>
-
-
-
-
-
 
 **Features**:
 
@@ -43,13 +36,13 @@ Bei der Anzeige eines Adressbuchs kann der Benutzer beispielsweise schnell zum B
 -   Durch Tippen auf einen Gruppenkopf wird zwischen Ansichten gewechselt. Auch Zusammendrücken kann als Möglichkeit zum Wechseln zwischen den Ansichten aktiviert werden.
 -   Aktive Kopfzeilen wechseln zwischen Ansichten.
 
-## Ist dies das richtige Steuerelement?
+## <a name="is-this-the-right-control"></a>Ist dies das richtige Steuerelement?
 
 Verwenden Sie das Steuerelement **SemanticZoom**, wenn Sie einen gruppierten Datensatz anzeigen müssen, der so groß ist, dass er auf einer oder zwei Seiten nicht ganz angezeigt werden kann.
 
-Der semantische Zoom ist nicht mit dem optischen Zoom zu verwechseln. Sie zeigen zwar das gleiche Interaktions- und Grundverhalten (d.h. sie zeigen je nach Zoomfaktor mehr oder weniger Details an), der optische Zoom betrifft jedoch die Größenanpassung für einen Inhaltsbereich oder ein Objekt wie etwa ein Foto. Informationen zu einem Steuerelement, das optisches Zooming durchführt, finden Sie im Artikel über das Steuerelement [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx).
+Der semantische Zoom ist nicht mit dem optischen Zoom zu verwechseln. Sie zeigen zwar das gleiche Interaktions- und Grundverhalten (d. h. sie zeigen je nach Zoomfaktor mehr oder weniger Details an), der optische Zoom betrifft jedoch die Größenanpassung für einen Inhaltsbereich oder ein Objekt wie etwa ein Foto. Informationen zu einem Steuerelement, das optisches Zooming durchführt, finden Sie im Artikel über das Steuerelement [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx).
 
-## Beispiele
+## <a name="examples"></a>Beispiele
 
 **Fotos-App**
 
@@ -63,7 +56,7 @@ Ein Adressbuch ist ein weiteres Beispiel für einen Datensatz, der sich mit eine
 
 ![Beispiel für semantischen Zoom in einer Kontaktliste](images/semanticzoom-win10.png)
 
-## Erstellen eines semantischen Zooms
+## <a name="create-a-semantic-zoom"></a>Erstellen eines semantischen Zooms
 
 Das Steuerelement **SemanticZoom** verfügt über keine visuelle Darstellung. Es handelt sich um ein Hoststeuerelement, das den Übergang zwischen zwei anderen Steuerelementen steuert, die die Ansichten für Ihre Inhalte bereitstellen, in der Regel die Steuerelemente **ListView** oder **GridView**.  Sie legen die Ansicht-Steuerelemente auf die [**ZoomedInView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.semanticzoom.zoomedinview.aspx)- und [**ZoomedOutView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.semanticzoom.zoomedoutview.aspx)-Eigenschaften von SemanticZoom fest.
 
@@ -182,26 +175,27 @@ private void SemanticZoom_ViewChangeStarted(object sender, SemanticZoomViewChang
 }
 ```
 
-## Empfehlungen
+## <a name="recommendations"></a>Empfehlungen
 
 -   Stellen Sie bei Verwendung des semantischen Zooms in Ihrer App sicher, dass sich das Elementlayout und die Verschieberichtung nicht basierend auf der Zoomstufe ändern. Layouts und Verschiebeinteraktionen sollten auf allen Zoomstufen konsistent und vorhersehbar sein.
 -   Der semantische Zoom ermöglicht Benutzern das schnelle Wechseln zu Inhalten; beschränken Sie daher die Anzahl der Seiten oder Bildschirme in der verkleinerten Ansicht auf drei. Zu viel Verschiebung beeinträchtigt die praktische Nutzung des semantischen Zooms.
 -   Vermeiden Sie das Verwenden des semantischen Zooms, um den Umfang der Inhalte zu ändern. So sollte beispielsweise ein Fotoalbum nicht zu einer Ordneransicht im Datei-Explorer wechseln.
 -   Verwenden Sie eine Struktur und Semantik, die für die Ansicht wichtig sind.
 -   Verwenden Sie Gruppennamen für Elemente in einer gruppierten Auflistung.
--   Verwenden Sie die Sortierreihenfolge für eine nicht gruppierte, aber sortierte Sammlung; sortieren Sie beispielsweise Datumsangaben chronologisch und Namenslisten alphabetisch.
+-   Verwenden Sie die Sortierreihenfolge für eine nicht gruppierte, jedoch sortierte Sammlung, beispielsweise chronologisch für Datumsangaben oder alphabetisch für Namenslisten.
 
-## Verwandte Artikel
+
+## <a name="get-the-sample-code"></a>Beispielcode herunterladen
+
+- [Einfaches Beispiel für eine XAML-Benutzeroberfläche](http://go.microsoft.com/fwlink/p/?LinkId=619992)
+
+
+## <a name="related-articles"></a>Verwandte Artikel
 
 - [Navigationsdesigngrundlagen](../layout/navigation-basics.md)
 - [Listenansicht und Rasteransicht](listview-and-gridview.md)
 - [Vorlagen für Listenansichtselemente](listview-item-templates.md)
 
-**Beispiele**
-
-- [Beispiel für XAML-UI-Grundlagen](http://go.microsoft.com/fwlink/p/?LinkId=619992)
-
- 
 
 
 
@@ -209,6 +203,6 @@ private void SemanticZoom_ViewChangeStarted(object sender, SemanticZoomViewChang
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -4,8 +4,8 @@ ms.assetid: 41E1B4F1-6CAF-4128-A61A-4E400B149011
 title: Datenbindung im Detail
 description: "Die Datenbindung ist eine Methode, mit der die Benutzeroberfläche Ihrer App Daten anzeigen und diese Daten optional synchronisieren kann."
 translationtype: Human Translation
-ms.sourcegitcommit: 8dee2c7bf5ec44f913e34f1150223c1172ba6c02
-ms.openlocfilehash: 48db13fec4ce9c6a9a998c84ddaaba30f7a24d83
+ms.sourcegitcommit: fa3a3cf6194f04a05301ae4dfb75a7a21ff22e73
+ms.openlocfilehash: fca2c9a795e38983f439d6df5c5a7394c29c1217
 
 ---
 # <a name="data-binding-in-depth"></a>Datenbindung im Detail
@@ -371,7 +371,7 @@ Wenn Sie ein Textsteuerelement an einen Wert binden, bei dem es sich nicht um ei
 
 ## <a name="function-binding-in-xbind"></a>Funktionsbindung in {x:Bind}
 
-{x:Bind} ermöglicht den letzten Schritt beim Umwandeln eines Bindungspfads in eine Funktion. Hiermit können Konvertierungen und Bindungen durchgeführt werden, die von mehreren Eigenschaften abhängen. Siehe [**{x:Bind}-Markuperweiterung**](https://msdn.microsoft.com/en-us/windows/uwp/xaml-platform/x-bind-markup-extension)
+{x:Bind} ermöglicht den letzten Schritt beim Umwandeln eines Bindungspfads in eine Funktion. Hiermit können Konvertierungen und Bindungen durchgeführt werden, die von mehreren Eigenschaften abhängen. Siehe [**{x:Bind}-Markuperweiterung**](https://msdn.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)
 
 <span id="resource-dictionaries-with-x-bind"/>
 ## <a name="resource-dictionaries-with-xbind"></a>Ressourcenwörterbücher mit {x:Bind}
@@ -653,6 +653,6 @@ MyTextBox.SetBinding(TextBox.ForegroundProperty, binding)
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,6 +1,16 @@
+---
+author: mukin
+Description: "In diesem Artikel im Stile eines Lernprogramms wird der Leser durch die Schritte zum Erstellen einer grundlegenden Anwendungsbenutzeroberfläche geführt. Es erläutert und veranschaulicht die Verwendung von Grid und StackPanel, zwei der häufigsten XAML-Elemente."
+title: Erstellen einer einfachen Wetter-App mit Grid und StackPanel
+translationtype: Human Translation
+ms.sourcegitcommit: c30aed9681d7c091e9831df3f53d8779dfacce38
+ms.openlocfilehash: 1990a3ad4e56fa039d024c53a04b021e60bed145
+
+---
+
 # <a name="create-a-simple-weather-app-by-using-grid-and-stackpanel"></a>Erstellen einer einfachen Wetter-App mit Grid und StackPanel
 
-Verwenden Sie zum Erstellen des Layouts für eine einfache Wetter-App mit XAML die Elemente **Grid** und **StackPanel**. Mit diesen Tools können Sie leicht Apps erstellen, die auf allen Geräten mit Windows 10 gut aussehen. Dieses Lernprogramm dauert 10 bis 20 Minuten.
+Verwenden Sie zum Erstellen des Layouts für eine einfache Wetter-App mit XAML die Elemente **Grid** und **StackPanel**. Mit diesen Tools können Sie hervorragend aussehende Apps erstellen, die auf jedem Gerät mit Windows 10 funktionieren. Dieses Lernprogramm dauert 10 bis 20 Minuten.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 - Windows 10 und Microsoft Visual Studio 2015 [Klicken Sie hier, um zu erfahren, wie Sie Visual Studio einrichten](../get-started/get-set-up.md).
@@ -14,7 +24,7 @@ Verwenden Sie zum Erstellen des Layouts für eine einfache Wetter-App mit XAML d
 5. Wählen Sie zum Ausführen des Programms im Menü **Debugging** > **Debugging starten** aus, oder drücken Sie F5.
 
 ## <a name="step-2-define-a-grid"></a>Schritt 2: Definieren eines Rasters
-In XAML besteht ein **Raster** aus einer Reihe von Zeilen und Spalten. Durch Angabe der Zeile und Spalte eines Elements innerhalb eines **Rasters** können Sie andere Elemente leicht in einer Benutzeroberfläche platzieren und anordnen. Zeilen und Spalten werden mit den Elementen **RowDefinition** und **ColumnDefinition** definiert.
+In XAML besteht ein **Raster** aus einer Reihe von Zeilen und Spalten. Durch Angabe der Zeile und Spalte eines Elements innerhalb eines **Rasters** können Sie andere Elemente in einer Benutzeroberfläche platzieren und anordnen. Zeilen und Spalten werden mit den Elementen **RowDefinition** und **ColumnDefinition** definiert.
 
 Um mit dem Erstellen eines Layouts zu beginnen, öffnen Sie **MainPage.xaml** mithilfe des **Projektmappen-Explorers** und ersetzen das automatisch generierte **Grid**-Element durch diesen Code.
 
@@ -33,7 +43,7 @@ Um mit dem Erstellen eines Layouts zu beginnen, öffnen Sie **MainPage.xaml** mi
 
 Das neue **Raster** erstellt eine Reihe von zwei Zeilen und Spalten, die das Layout der App-Oberfläche definieren. Die erste Spalte hat eine **Breite** von "3\*", während die zweite Spalte eine Breite von "5\*" hat. Der horizontale Abstand zwischen den beiden Spalten wird hierdurch im Verhältnis 3:5 geteilt. Auf die gleiche Weise haben die beiden Zeilen eine **Höhe** von "3\*" bzw. "\*", damit **Grid** der ersten Zeile drei Mal so viel Platz zuteilt wie der zweiten Zeile ("\*" bedeutet "1\*"). Diese Seitenverhältnisse werden bewahrt, auch wenn die Fenstergröße oder das Gerät geändert werden.
 
-Informationen zu weiteren Methoden für die Größeneinstellung von Zeilen und Spalten finden Sie unter [Definieren von Layouts mit XAML](https://msdn.microsoft.com/en-us/windows/uwp/layout/layouts-with-xaml#layout-properties).
+Informationen zu weiteren Methoden für die Größeneinstellung von Zeilen und Spalten finden Sie unter [Definieren von Layouts mit XAML](https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml#layout-properties).
 
 Wenn Sie die Anwendung jetzt ausführen, wird Ihnen lediglich eine leere Seite angezeigt, da keiner der **Raster**-Bereiche Inhalte enthält. Um das **Raster** anzuzeigen, fügen wir Farbe hinzu.
 
@@ -102,11 +112,12 @@ Das war’s! Sie haben das Layout für eine einfache Wetter-App erstellt. Wenn S
 Wenn Sie möchten, können Sie mit dem Layout oben experimentieren und verschiedene Möglichkeiten erkunden, wie Sie Wetterdaten darstellen können.
 
 ## <a name="related-articles"></a>Verwandte Artikel
-Eine Einführung in das Entwerfen von UWP-App-Layouts finden Sie unter [Einführung in das UWP-App-Design](https://msdn.microsoft.com/en-us/windows/uwp/layout/design-and-ui-intro).
+Eine Einführung in das Entwerfen von UWP-App-Layouts finden Sie unter [Einführung in das UWP-App-Design](https://msdn.microsoft.com/windows/uwp/layout/design-and-ui-intro).
 
-Informationen zum Erstellen von dynamischen Layouts, die an verschiedene Bildschirmgrößen angepasst werden können, finden Sie unter [Definieren von Seitenlayouts mit XAML](https://msdn.microsoft.com/en-us/windows/uwp/layout/layouts-with-xaml).
+Informationen zum Erstellen von dynamischen Layouts, die an verschiedene Bildschirmgrößen angepasst werden können, finden Sie unter [Definieren von Seitenlayouts mit XAML](https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml).
 
 
-<!--HONumber=Dec16_HO1-->
+
+<!--HONumber=Jan17_HO1-->
 
 

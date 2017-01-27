@@ -6,11 +6,11 @@ ms.assetid: 6231A806-287D-43EE-BD8D-39D2FF761914
 label: Check boxes
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: f565acbebbee8b8fb88a72970c9dbe3202ba24df
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 874d1a7200359ecc46b26b306b208946c7a6f273
 
 ---
-# Kontrollkästchen
+# <a name="check-boxes"></a>Kontrollkästchen
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -21,20 +21,14 @@ Ein Kontrollkästchen dient zum Aktivieren oder Deaktivieren von Aktionselemente
 <div class="important-apis" >
 <b>Wichtige APIs</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/br209316"><strong>CheckBox-Klasse</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx"><strong>Checked-Ereignis</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx"><strong>IsChecked-Eigenschaft</strong></a> </li>
+<li>[**CheckBox-Klasse**](https://msdn.microsoft.com/library/windows/apps/br209316)</li>
+<li>[**Checked-Ereignis**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx)</li>
+<li>[**IsChecked-Eigenschaft**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx) </li>
 </ul>
-
-</div>
 </div>
 
 
-
-
-
-
-## Ist dies das richtige Steuerelement?
+## <a name="is-this-the-right-control"></a>Ist dies das richtige Steuerelement?
 
 Verwenden Sie ein **einzelnes Kontrollkästchen** für eine binäre Ja/Nein-Auswahl – beispielsweise für ein Anmeldeszenario vom Typ „E-Mail-Adresse speichern?” oder für Vertragsbedingungen.
 
@@ -54,17 +48,17 @@ Bei gruppierbaren Optionen kann die gesamte Gruppe durch ein unbestimmtes Kontro
 
 Benutzer können sowohl über **Kontrollkästchen** als auch über **Optionsfelder** eine Auswahl in einer Liste von Optionen treffen. Mit Kontrollkästchen können Benutzer eine Kombination von Optionen auswählen. Bei Optionsfeldern kann der Benutzer dagegen nur eine der (sich gegenseitig ausschließenden) Optionen auswählen. Wenn mehrere Optionen verfügbar sind, aber nur eine ausgewählt werden kann, verwenden Sie ein Optionsfeld.
 
-## Beispiele
+## <a name="examples"></a>Beispiele
 
-Ein Kontrollkästchen in einem Dialogfeld im MicrosoftEdge-Browser:
+Ein Kontrollkästchen in einem Dialogfeld im Microsoft Edge-Browser:
 
-![Kontrollkästchen in einem Dialogfeld im MicrosoftEdge-Browser](images/control-examples/check-box-edge.png)
+![Kontrollkästchen in einem Dialogfeld im Microsoft Edge-Browser](images/control-examples/check-box-edge.png)
 
-Kontrollkästchen in der Alarm&Uhr-App in Windows:
+Kontrollkästchen in der Alarm & Uhr-App in Windows:
 
-![Kontrollkästchen in der Alarm&Uhr-App in Windows](images/control-examples/check-box-alarm.png)
+![Kontrollkästchen in der Alarm & Uhr-App in Windows](images/control-examples/check-box-alarm.png)
 
-## Erstellen eines Kontrollkästchens
+## <a name="create-a-checkbox"></a>Erstellen eines Kontrollkästchens
 
 Um dem Kontrollkästchen eine Beschriftung zuzuweisen, legen Sie die [**Content**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentcontrol.content.aspx)-Eigenschaft fest. Die Beschriftung wird neben dem Kontrollkästchen angezeigt.
 
@@ -82,7 +76,7 @@ CheckBox checkBox1 = new CheckBox();
 checkBox1.Content = "I agree to the terms of service.";
 ```
 
-### Binden an „IsChecked“
+### <a name="bind-to-ischecked"></a>Binden an „IsChecked“
 
 Mit der [**IsChecked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx)-Eigenschaft können Sie den Aktivierungszustand des Kontrollkästchens ermitteln. Der Wert der IsChecked-Eigenschaft kann an einen anderen binären Wert gebunden werden. Da es sich bei „IsChecked“ aber um einen booleschen Wert vom Typ [Nullable](https://msdn.microsoft.com/library/windows/apps/b3h38hb0.aspx) handelt, müssen Sie einen Wertkonverter verwenden, um sie an einen booleschen Wert zu binden.
 
@@ -127,7 +121,7 @@ public class NullableBooleanToBooleanConverter : IValueConverter
 }
 ```
 
-### Behandeln von Click- und Checked-Ereignissen
+### <a name="handle-click-and-checked-events"></a>Behandeln von Click- und Checked-Ereignissen
 
 Wenn bei einer Änderung des Kontrollkästchenzustands eine Aktion ausgeführt werden soll, behandeln Sie das [**Click**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx)-Ereignis oder die Ereignisse [**Checked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx) und [**deaktiviert**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.unchecked.aspx). 
 
@@ -180,7 +174,7 @@ private void toppingsCheckbox_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-### Verwenden des unbestimmten Zustands
+### <a name="use-the-indeterminate-state"></a>Verwenden des unbestimmten Zustands
 
 Das CheckBox-Steuerelement erbt von [ToggleButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.aspx) und kann über drei Zustände verfügen: 
 
@@ -276,7 +270,7 @@ private void SetCheckedState()
 }
 ```
 
-## Empfohlene und nicht empfohlene Vorgehensweisen
+## <a name="dos-and-donts"></a>Empfohlene und nicht empfohlene Vorgehensweisen
 
 -   Stellen Sie sicher, dass der Zweck und der aktuelle Zustand des Kontrollkästchens eindeutig sind.
 -   Geben Sie nicht mehr als zwei Zeilen für den Text von Kontrollkästchen an.
@@ -298,7 +292,7 @@ private void SetCheckedState()
     ![Optionsfeldgruppe mit drei Optionen: Nicht scharf, Scharf, Besonders scharf](images/spicyoptions.png)
 
 
-## Verwandte Artikel
+## <a name="related-articles"></a>Verwandte Artikel
 
 -   [**CheckBox-Klasse**](https://msdn.microsoft.com/library/windows/apps/br209316) 
 -   [Optionsfelder](radio-button.md)
@@ -308,6 +302,6 @@ private void SetCheckedState()
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

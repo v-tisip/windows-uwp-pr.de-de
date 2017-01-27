@@ -6,11 +6,11 @@ ms.assetid: 41E3F928-AA55-42A2-9281-EC3907C4F898
 label: Radio buttons
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: f26b042bb7efb6599993b8fd7cee6ee35e1765fd
-ms.openlocfilehash: 0e9cd8db21577bdbfe4c53fc9a17fbcbf5c81f76
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 95ddb1ddd1dfd318a5c491504c95f7833f98115e
 
 ---
-# Optionsfelder
+# <a name="radio-buttons"></a>Optionsfelder
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -23,20 +23,14 @@ Mit Optionsfeldern können Benutzer eine oder mehrere Optionen auswählen. Jede 
 <div class="important-apis" >
 <b>Wichtige APIs</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/br227544"><strong>RadioButton-Klasse</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx"><strong>Checked-Ereignis</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx"><strong>IsChecked-Eigenschaft</strong></a></li>
+<li>[**RadioButton-Klasse**](https://msdn.microsoft.com/library/windows/apps/br227544)</li>
+<li>[**Checked-Ereignis**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx)</li>
+<li>[**IsChecked-Eigenschaft**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx)</li>
 </ul>
-
-</div>
 </div>
 
 
-
-
-
-
-## Ist dies das richtige Steuerelement?
+## <a name="is-this-the-right-control"></a>Ist dies das richtige Steuerelement?
 
 Verwenden Sie Optionsfelder, um den Benutzern zwei oder mehr Optionen bereitzustellen, die sich gegenseitig ausschließen, wie hier gezeigt.
 
@@ -60,12 +54,12 @@ Wenn mehr als acht Optionen vorhanden sind, verwenden Sie stattdessen eine [Drop
 
 Wenn die verfügbaren Optionen auf dem aktuellen Kontext der App basieren oder andernfalls dynamisch variieren können, verwenden Sie stattdessen ein [Listenfeld](lists.md) für die Einfachauswahl.
 
-## Beispiel
+## <a name="example"></a>Beispiel
 Optionsfelder in den Microsoft Edge-Browsereinstellungen.
 
 ![Optionsfelder in den Microsoft Edge-Browsereinstellungen](images/control-examples/radio-buttons-edge.png)
 
-## Erstellen eines Optionsfelds
+## <a name="create-a-radio-button"></a>Erstellen eines Optionsfelds
 
 Optionsfelder funktionieren in Gruppen. Es gibt zwei Arten zur Gruppierung von Optionsfeld-Steuerelementen:
 - Platzieren Sie sie im gleichen übergeordneten Container.
@@ -156,13 +150,13 @@ private void BorderRadioButton_Checked(object sender, RoutedEventArgs e)
 }
 ```
 
-Wenn der Benutzer einen blauen Hintergrund und einen grünen Rahmen auswählt, sehen die Optionsfeldgruppen wie folgt aus.
+Die Optionsfeldgruppen sehen wie folgt aus.
 
 ![Optionsfelder in zwei Gruppen](images/radio-button-groups.png)
 
 Ein Optionsfeld hat zwei Zustände: *aktiviert* und *deaktiviert*. Wenn ein Optionsfeld aktiviert ist, lautet die [ **IsChecked** ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx)- Eigenschaft **true**. Wenn ein Optionsfeld deaktiviert ist, lautet die **IsChecked**-Eigenschaft **false**. Ein Optionsfeld kann durch Klicken auf ein anderes Optionsfeld in derselben Gruppe deaktiviert werden, jedoch nicht durch erneutes Klicken auf das Optionsfeld selbst. Sie können ein Optionsfeld jedoch programmgesteuert durch Festlegen der IsChecked-Eigenschaft auf **false** deaktivieren.
 
-## Empfehlungen
+## <a name="recommendations"></a>Empfehlungen
 
 -   Stellen Sie sicher, dass der Zweck und der aktuelle Status eines Satzes an Optionsfeldern nachvollziehbar ist.
 -   Sorgen Sie immer für ein visuelles Feedback, wenn der Benutzer auf ein Optionsfeld tippt.
@@ -173,16 +167,16 @@ Ein Optionsfeld hat zwei Zustände: *aktiviert* und *deaktiviert*. Wenn ein Opti
 -   Verwenden Sie die standardmäßige Schriftart, es sei denn, Sie müssen gemäß Ihren Markenrichtlinien eine andere verwenden.
 -   Schließen Sie das Optionsfeld in ein Bezeichnungselement ein, sodass das Optionsfeld durch Tippen auf die Bezeichnung ausgewählt wird.
 -   Platzieren Sie den Bezeichnungstext hinter dem Optionsfeldsteuerelement und nicht davor oder darüber.
--   Ziehen Sie in Erwägung, Ihre Schaltflächen anzupassen. Standardmäßig besteht ein Optionsfeld aus zwei konzentrischen Kreisen– der innere ist ausgefüllt (und wird gezeigt, wenn das Optionsfeld aktiviert wird), und der äußere ist gestrichelt– und einigem Textinhalt. Wir ermutigen Sie jedoch, kreativ zu sein. Benutzer mögen es, direkt mit dem Inhalt einer App zu interagieren. Daher können Sie auswählen, den tatsächlichen Inhalt als Angebot anzuzeigen, unabhängig davon, ob er mit Grafiken oder als unauffälliger Textumschalter präsentiert wird.
+-   Ziehen Sie in Erwägung, Ihre Schaltflächen anzupassen. Standardmäßig besteht ein Optionsfeld aus zwei konzentrischen Kreisen – der innere ist ausgefüllt (und wird gezeigt, wenn das Optionsfeld aktiviert wird), und der äußere ist gestrichelt – und einigem Textinhalt. Wir ermutigen Sie jedoch, kreativ zu sein. Benutzer mögen es, direkt mit dem Inhalt einer App zu interagieren. Daher können Sie auswählen, den tatsächlichen Inhalt als Angebot anzuzeigen, unabhängig davon, ob er mit Grafiken oder als unauffälliger Textumschalter präsentiert wird.
 -   Eine Optionsfeldgruppe sollte nicht mehr als acht Optionen beinhalten. Wenn Sie mehr Optionen verwenden müssen, verwenden Sie stattdessen eine [Dropdownliste](lists.md), ein [Listenfeld](lists.md)oder eine [Listenansicht](lists.md).
 -   Zwei Optionsfeldgruppen sollten nicht direkt nebeneinander platziert werden. Wenn sich zwei Optionsfeldgruppen direkt nebeneinander befinden, ist es schwierig, festzustellen, welche Schaltflächen zu welcher Gruppe gehören. Verwenden Sie Gruppenbeschriftungen, um sie zu trennen.
 
-## Weitere Hinweise zur Verwendung
+## <a name="additional-usage-guidance"></a>Weitere Hinweise zur Verwendung
 
 Diese Abbildung zeigt die richtige Vorgehensweise zum Platzieren und Anordnen von Optionsfeldern in geeignetem Abstand.
 
 ![Gruppe von Optionsfeldern](images/radiobutton_layout1.png)
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 **Für Designer**
 - [Richtlinien für Schaltflächen](buttons.md)
@@ -199,6 +193,6 @@ Diese Abbildung zeigt die richtige Vorgehensweise zum Platzieren und Anordnen vo
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

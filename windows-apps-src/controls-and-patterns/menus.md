@@ -5,11 +5,11 @@ title: "Menüs und Kontextmenüs"
 label: Menus and context menus
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: f6ce4bc08e3647cd26dc1537bba5499ddb646a49
+ms.sourcegitcommit: 5f50e490caa5d1d88c2f8315dc47e15b0ae22a05
+ms.openlocfilehash: badb03c97ae0f2350e5d7592f10168bb7d6e7d1a
 
 ---
-# Menüs und Kontextmenüs
+# <a name="menus-and-context-menus"></a>Menüs und Kontextmenüs
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -20,24 +20,20 @@ Menüs und Kontextmenüs zeigen auf Anforderung des Benutzers eine Liste von Bef
 <div class="important-apis" >
 <b>Wichtige APIs</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/dn299030">MenuFlyout-Klasse</a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.contextflyout.aspx">ContextFlyout-Eigenschaft</a></li>
-<li><a href="https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout.aspx">FlyoutBase.AttachedFlyout-Eigenschaft</a></li>
+<li>[MenuFlyout-Klasse](https://msdn.microsoft.com/library/windows/apps/dn299030)</li>
+<li>[ContextFlyout-Eigenschaft](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.contextflyout.aspx)</li>
+<li>[FlyoutBase.AttachedFlyout-Eigenschaft](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout.aspx)</li>
 </ul>
-
-</div>
 </div>
 
 
-
-
-## Ist dies das richtige Steuerelement?
+## <a name="is-this-the-right-control"></a>Ist dies das richtige Steuerelement?
 Menüs und Kontextmenüs sparen Platz, indem Befehle angeordnet und ausgeblendet werden, bis der Benutzer sie benötigt. Wenn ein bestimmter Befehl häufig verwendet wird und Sie genügend Platz haben, sollten Sie ihn direkt als eigenes Element und nicht in einem Menü platzieren, damit Benutzer das Menü nicht durchlaufen müssen, um ihn aufzurufen. 
 
 Menüs und Kontextmenüs dienen dazu, Befehle strukturiert anzuordnen. Um beliebige Inhalte anzuzeigen, z. B. eine Benachrichtigung oder die Bestätigung einer Anfrage, verwenden Sie ein [Dialogfeld oder Flyout](dialogs.md).  
 
 
-## Vergleich zwischen Menüs und Kontextmenüs
+## <a name="menus-vs-context-menus"></a>Vergleich zwischen Menüs und Kontextmenüs
 
 Menüs und Kontextmenüs sind identisch, was ihr Erscheinungsbild und ihren Inhalt angeht. Tatsächlich werden beide mit demselben Steuerelement erstellt, [MenuFlyout](https://msdn.microsoft.com/library/windows/apps/dn299030). Der einzige Unterschied ist, wie Sie den Benutzer darauf zugreifen lassen. 
 
@@ -76,7 +72,7 @@ Wenn Sie Befehle (z. B. Ausschneiden, Kopieren und Einfügen) hinzufügen möcht
 </div>
 </div>
 
-## Erstellen eines Menüs bzw. Kontextmenüs
+## <a name="create-a-menu-or-a-context-menu"></a>Erstellen eines Menüs bzw. Kontextmenüs
 
 Um ein Menü oder ein Kontextmenü zu erstellen, verwenden Sie die [MenuFlyout-Klasse](https://msdn.microsoft.com/library/windows/apps/dn299030). Sie definieren den Inhalt des Menüs, indem Sie dem MenuFlyout [MenuFlyoutItem](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutitem.aspx)-, [ToggleMenuFlyoutItem](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.ui.xaml.controls.togglemenuflyoutitem.aspx)- und [MenuFlyoutSeparator](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutseparator.aspx)-Objekte hinzufügen. Diese Objekte erfüllen folgende Zwecke:
 * [MenuFlyoutItem](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutitem.aspx): Ausführen einer sofortigen Aktion
@@ -153,22 +149,23 @@ private void ChangeColorItem_Click(object sender, RoutedEventArgs e)
 }
 ````
 
-> **Hinweis**&nbsp;&nbsp;Steuerelemente wie Menüs, Kontextmenüs und andere Flyouts, die mit abgeblendetem Hintergrund angezeigt werden, tragen den Tastatur- bzw. Gamepad-Fokus, bis sie nicht mehr angezeigt werden. Um dieses Verhalten optisch zu kennzeichnen, werden diese Steuerelemente auf der Xbox als Überlagerung gezeichnet, wobei Helligkeit bzw. die Sichtbarkeit umgebenden Benutzeroberfläche reduziert wird. Dieses Verhalten kann mit der neuen [LightDismissOverlayMode](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.lightdismissoverlaymode.aspx)-Eigenschaft geändert werden. Standardmäßig werden diese nur kurzzeitig angezeigten Benutzeroberflächen auf der Xbox (aber nicht auf anderen Gerätefamilien) vor abgeblendetem Hintergrund angezeigt, aber Sie können erzwingen, dass die Überlagerung immer **On** oder immer **Off** ist.
-> 
+
+> Einfach ausgeblendete Steuerelemente wie Menüs, Kontextmenüs und andere Flyouts erhalten in der vorübergehenden Benutzeroberfläche den Tastatur- bzw. Gamepad-Fokus, bis sie nicht mehr angezeigt werden. Um dieses Verhalten optisch zu kennzeichnen, werden diese Steuerelemente auf der Xbox als Überlagerung gezeichnet, wobei Helligkeit bzw. die Sichtbarkeit umgebenden Benutzeroberfläche reduziert wird. Dieses Verhalten kann mit der neuen [LightDismissOverlayMode](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.lightdismissoverlaymode.aspx)-Eigenschaft geändert werden. Standardmäßig erhalten kurzlebige Benutzeroberflächen auf der Xbox (jedoch nicht auf anderen Gerätefamilien) eine einfach ausgeblendete Überlagerung. Apps können jedoch durchsetzen, dass die Überlagerung stets **On** oder stets **Off** ist.
+
 > ```xaml
 > <MenuFlyout LightDismissOverlayMode="Off">
-```
+> ```
 
-## Get the samples
-*   [XAML UI basics](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)<br/>
-    See all of the XAML controls in an interactive format.
+## <a name="get-the-sample-code"></a>Beispielcode herunterladen
+*   [Einfaches Beispiel für eine XAML-Benutzeroberfläche](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)<br/>
+    Hier werden alle XAML-Steuerelemente in einem interaktiven Format dargestellt.
 
-## Related articles
+## <a name="related-articles"></a>Verwandte Artikel
 
-- [**MenuFlyout class**](https://msdn.microsoft.com/library/windows/apps/dn299030)
+- [**MenuFlyout-Klasse**](https://msdn.microsoft.com/library/windows/apps/dn299030)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -6,27 +6,29 @@ ms.assetid: f098bc05-35b3-46b2-9e9b-9ff292d067ca
 label: Rotation
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 2fe8814d98dd5ce4471530c7367b8ad266cc6b05
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 3217dd6bda6d9692ff450133af23002a7040347b
 
 ---
 
-# Drehung
+# <a name="rotation"></a>Drehung
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 In diesem Artikel wird die neue Windows-Benutzeroberfläche beschrieben, die Drehungen unterstützt. Außerdem enthält das Thema Richtlinien für die Benutzeroberfläche, die Sie berücksichtigen sollten, wenn Sie diesen neuen Interaktionsmechanismus in einer UWP-App verwenden.
 
-**Wichtige APIs**
+<div class="important-apis" >
+<b>Wichtige APIs</b><br/>
+<ul>
+<li>[**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)</li>
+<li>[**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)</li>
+</ul>
+</div>
 
--   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
--   [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
-
-
-## Empfohlene und nicht empfohlene Vorgehensweisen
-
+## <a name="dos-and-donts"></a>Empfohlene und nicht empfohlene Vorgehensweisen
 
 -   Verwenden Sie Drehung, damit Benutzer leichter UI-Elemente direkt drehen können.
 
-## Weitere Hinweise zur Verwendung
+## <a name="additional-usage-guidance"></a>Weitere Hinweise zur Verwendung
 
 
 **Übersicht über Drehung**
@@ -62,7 +64,7 @@ In dieser letzten Abbildung wurde der Mittelpunkt der Drehung durch die Anwendun
 
  
 
-Windows8 unterstützt drei Drehungsarten: frei, eingeschränkt und kombiniert.
+Windows 8 unterstützt drei Drehungsarten: frei, eingeschränkt und kombiniert.
 
 <table>
 <colgroup>
@@ -78,7 +80,7 @@ Windows8 unterstützt drei Drehungsarten: frei, eingeschränkt und kombiniert.
 <tbody>
 <tr class="odd">
 <td align="left">Freie Drehung</td>
-<td align="left"><p>Bei der freien Drehung können Benutzer Inhalte frei um bis zu 360Grad drehen. Wenn das Objekt losgelassen wird, bleibt es in der ausgewählten Position. Die freie Drehung ist hilfreich in Zeichen- und Layoutanwendungen wie beispielsweise MicrosoftPowerPoint, Word, Visio und Paint sowie Adobe Photoshop, Illustrator und Flash.</p></td>
+<td align="left"><p>Bei der freien Drehung können Benutzer Inhalte frei um bis zu 360 Grad drehen. Wenn das Objekt losgelassen wird, bleibt es in der ausgewählten Position. Die freie Drehung ist hilfreich in Zeichen- und Layoutanwendungen wie beispielsweise Microsoft PowerPoint, Word, Visio und Paint sowie Adobe Photoshop, Illustrator und Flash.</p></td>
 </tr>
 <tr class="even">
 <td align="left">Eingeschränkte Drehung</td>
@@ -100,7 +102,7 @@ Windows8 unterstützt drei Drehungsarten: frei, eingeschränkt und kombiniert.
 
  
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 
 **Beispiele**
@@ -128,6 +130,6 @@ Windows8 unterstützt drei Drehungsarten: frei, eingeschränkt und kombiniert.
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

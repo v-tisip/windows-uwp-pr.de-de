@@ -6,26 +6,32 @@ MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: Windows Information Protection (WIP)
 translationtype: Human Translation
-ms.sourcegitcommit: 724d9edf67d0f73ceb3eb2ac323e0a0f42f2dd0d
-ms.openlocfilehash: f9cfa8d1d7ea4e78208a4fb3fc853884a13a676c
+ms.sourcegitcommit: 8a0ce7282ffaf76bcea94eec5ec3e3ceb99aa5ac
+ms.openlocfilehash: 81bd77d0153c17c80ccdce77332ed57fb751c8ec
 
 ---
 
-# Windows Information Protection (WIP)
+# <a name="windows-information-protection-wip"></a>Windows Information Protection (WIP)
 
 __Hinweis__ Die Windows Information Protection (WIP)-Richtlinie kann auf Windows 10, Version 1607 angewendet werden.
 
 WIP schützt Daten, die zu einem Unternehmen gehören, indem Richtlinien durchgesetzt werden, die von dem Unternehmen definiert sind. Wenn Ihre App diese Richtlinien enthält, unterliegen alle Daten von der App den Richtlinien. Dieses Thema unterstützt Sie beim Erstellen von Apps, die diese Richtlinien besser durchsetzen, ohne Auswirkung auf persönliche Daten des Benutzers.
 
-## Als Erstes: Was ist WIP?
+## <a name="first-what-is-wip"></a>Als Erstes: Was ist WIP?
 
-WIP ist ein Satz von Features auf Desktops, Laptops, Tablets und Smartphones, welche das Mobile Device Management (MDM)-System des Unternehmens unterstützen. WIP kann dem Unternehmen mehr Kontrolle darüber geben, wie Daten des Unternehmens auf Geräten, die das Unternehmen verwaltet, behandelt werden. Administratoren können beispielsweise angeben, welche Apps auf Dateien zugreifen dürfen, die dem Unternehmen gehören, und ob Benutzer Daten aus diesen Dateien kopieren und dann in persönliche Dokumente einsetzen können.
+WIP ist ein Satz von Features auf Desktops, Laptops, Tablets und Smartphones, welche das Mobile Device Management (MDM)-System und das System zur mobilen Anwendungsverwaltung (Mobile Application Management; MAM) des Unternehmens unterstützen.
+
+WIP kann mit MDM dem Unternehmen mehr Kontrolle darüber geben, wie Daten des Unternehmens auf Geräten, die das Unternehmen verwaltet, behandelt werden. In einigen Fällen bringen Benutzer Geräte mit zur Arbeit und registrieren sie nicht im MDM der Organisation.  In diesen Fällen können Organisationen MAM verwenden, um eine bessere Kontrolle über die Behandlung ihrer Daten in bestimmten Branchen-Apps zu erhalten, die Benutzer auf dem Gerät installieren.
+
+Mit MDM oder MAM können Administratoren angeben, welche Apps auf Dateien zugreifen dürfen, die dem Unternehmen gehören, und ob Benutzer Daten aus diesen Dateien kopieren und dann in persönliche Dokumente einsetzen können.
 
 So funktioniert’s. Benutzer registrieren ihre Geräte im System für Verwaltung mobiler Geräte (Mobile Device Management, MDM). Ein Administrator im Verwaltungsunternehmen verwendet Microsoft Intune oder System Center Configuration Manager (SCCM) zur Definition einer Richtlinie und anschließender Bereitstellung auf den registrierten Geräten.
 
+Wenn Benutzer ihre Geräte nicht registrieren müssen, verwenden Administratoren ihr MAM-System, um eine Richtlinie zu definieren und bereitzustellen, die für spezifische Apps gilt. Wenn Benutzer diese Apps installieren, erhalten sie die zugehörige Richtlinie.
+
 Diese Richtlinie identifiziert die Apps, die Zugriff auf Unternehmensdaten haben dürfen (auch *Liste der zugelassenen Apps*der Richtlinie genannt). Diese Apps können auf geschützte Unternehmensdateien, virtuelle Private Netzwerke (VPN) und Unternehmensdaten in der Zwischenablage oder über einen Freigabe-Vertrag zugreifen. Die Richtlinie definiert auch die Regeln, die für die Daten gelten. Beispielsweise, ob Daten von unternehmenseigenen Dateien kopiert und dann in nicht unternehmenseigene Dateien eingesetzt werden können.
 
-Wenn der Benutzer das Gerät von dem MDM-System des Unternehmens aufhebt, können Administratoren ferngesteuert Unternehmensdaten vom Gerät löschen.
+Wenn Benutzer die Registrierung ihres Geräts im MDM-System der Organisation aufheben oder Apps deinstallieren, die vom MAM-System der Organisation erkannt werden, können Administratoren Unternehmensdaten remote vom Gerät entfernen.
 
 ![WIP-Lebenszyklus](images/wip-lifecycle.png)
 
@@ -37,7 +43,7 @@ Wenn Ihre App auf der Liste der zugelassenen Apps steht, unterliegen alle von de
 
 Dies ist in Ordnung, wenn Ihre App nur für Unternehmen entwickelt wurde. Wenn Ihre App Daten erstellt, die die Benutzer als persönlich erachten, sollten Sie Ihre App *optimieren*, intelligent zwischen Unternehmens- und persönlichen Daten zu unterscheiden. Wir bezeichnen diese Art App *unternehmensoptimiert*, da sie problemlos eine Unternehmensrichtlinie durchsetzen und gleichzeitig die Integrität der persönlichen Daten des Benutzers beibehalten kann.
 
-## Erstellen Sie eine unternehmensoptimierte App
+## <a name="create-an-enterprise-enlightened-app"></a>Erstellen Sie eine unternehmensoptimierte App
 
 Verwenden Sie WIP-APIs, um Ihre App zu optimieren und dann als unternehmensoptimiert zu deklarieren.
 
@@ -55,17 +61,29 @@ Wenn Sie bereit sind, die App zu optimieren, sehen Sie sich eines dieser Handbü
 
 **Für Desktop-Apps, die Sie mit C++ erstellen**
 
-[Erstellen Sie eine optimierte App, die Unternehmensdaten und persönlichen Daten verwendet (C++)](http://go.microsoft.com/fwlink/?LinkId=822192).
+[Erstellen Sie eine optimierte App, die Unternehmensdaten und persönliche Daten verwendet (C++)](http://go.microsoft.com/fwlink/?LinkId=822192).
 
-Unter anderem bieten unternehmensoptimierte Apps die folgenden Vorteile:
 
-* Sie schützen Unternehmensdaten, unabhängig davon, ob die Daten gespeichert, verwendet oder übertragen werden.
-* Sie erkennen persönliche Daten und verhindern, dass diese Daten den Richtlinien unterliegen.
-* Sie erkennen Unternehmensdaten und schützen diese Daten, sobald sie in der App eingehen.
-* Sie schützen Unternehmensdaten, die die App verlassen.
+## <a name="create-non-enlightened-enterprise-app"></a>Erstellen einer nicht für Unternehmen optimierten App
 
-  Beispielsweise verhindern sie, dass Daten an einen Endpunkt außerhalb des Unternehmens gesendet werden, umschließen Daten vor dem Zulassen des Roamings in einem portablen verschlüsselten Format und fordern den Benutzer ggf. (abhängig von Richtlinieneinstellungen) zur Zustimmung auf, bevor Unternehmensdaten in einer App eingefügt werden, die nicht in der Liste der zulässigen Apps enthalten ist.
+Wenn Sie eine Branchen-App erstellen, die nicht zur privaten Verwendung vorgesehen ist, müssen Sie diese nicht optimieren.
 
+### <a name="windows-desktop-apps"></a>Windows-Desktop-Apps
+Sie müssen eine Windows-Desktop-App nicht optimieren, sollten aber Ihre App testen, um sicherzustellen, dass sie ordnungsgemäß unter der Richtlinie funktioniert. Starten Sie beispielsweise Ihre App, verwenden Sie sie, und heben Sie dann die Registrierung des Geräts im MDM auf. Stellen Sie dann sicher, dass die App gestartet werden kann. Wenn für den Betrieb der App wichtige Dateien verschlüsselt werden, kann die App möglicherweise nicht gestartet werden. Überprüfen Sie außerdem die Dateien, mit denen Ihre App interagiert, um sicherzustellen, dass Ihre App nicht versehentlich private Dateien des Benutzers verschlüsselt. Dies kann Metadatendateien, Bilder und andere Dinge umfassen.
+
+Nach dem Test Ihrer App fügen Sie der Ressourcendatei oder Ihrem Projekt dieses Kennzeichen hinzu, und kompilieren Sie die App dann neu.
+
+```cpp
+MICROSOFTEDPAUTOPROTECTIONALLOWEDAPPINFO EDPAUTOPROTECTIONALLOWEDAPPINFOID
+BEGIN
+    0x0001
+END
+```
+Die MDM-Richtlinien erfordern zwar kein Kennzeichen, die MAM-Richtlinien allerdings schon.
+
+### <a name="uwp-apps"></a>UWP-Apps
+
+Wenn Ihre App in einer MAM-Richtlinie enthalten sein soll, müssen Sie sie optimieren. Für Richtlinien, die für Geräte unter MDM bereitgestellt wurden, ist dies nicht erforderlich. Aber wenn Sie Ihre App an Unternehmenskunden verteilen, wird es schwierig, wenn nicht unmöglich, den Typ des verwendeten Richtlinienverwaltungssystems zu ermitteln. Optimieren Sie Ihre App, um zu gewährleisten, dass Ihre App in beiden Richtlinienverwaltungssystemen (MDM und MAM) funktioniert.
 
 
 
@@ -76,6 +94,6 @@ Unter anderem bieten unternehmensoptimierte Apps die folgenden Vorteile:
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

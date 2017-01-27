@@ -6,20 +6,24 @@ ms.assetid: 51a0007c-8a5d-4c44-ac9f-bbbf092b8a00
 label: Optical zoom and resizing
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 54c0dc3ffa9fd8716a8f147f408c1c8de5775783
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 2776fe18d20286a3beaf8ba280976316e40119dd
 
 ---
 
-# Optischer Zoom und Größenänderung
+# <a name="optical-zoom-and-resizing"></a>Optischer Zoom und Größenänderung
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 In diesem Artikel werden die Windows-Elemente für das Zoomen und die Größenänderung beschrieben. Außerdem enthält das Thema Richtlinien für die Benutzeroberfläche, um diese Interaktionsmechanismen in Ihren Apps zu verwenden.
 
-**Wichtige APIs**
-
--   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
--   [**Input (XAML)**](https://msdn.microsoft.com/library/windows/apps/br227994)
-
+<div class="important-apis" >
+<b>Wichtige APIs</b><br/>
+<ul>
+<li>[**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)</li>
+<li>[**Input (XAML)**](https://msdn.microsoft.com/library/windows/apps/br227994)</li>
+</ul>
+</div>
 
 Mithilfe des optischen Zooms können Benutzer die Ansicht des Inhalts in einem Inhaltsbereich vergrößern (die Vergrößerung erfolgt für den gesamten Inhaltsbereich). Bei der Größenänderung hingegen können Benutzer die relative Größe eines oder mehrerer Objekte ändern, ohne die Ansicht des Inhaltsbereichs zu ändern (die Größenänderung erfolgt für die Objekte im Inhaltsbereich).
 
@@ -36,17 +40,17 @@ Die folgenden Diagramme verdeutlichen die Unterschiede zwischen Größenänderun
 ![Wenn die Finger aufeinander zu bewegt werden, wird das Objekt verkleinert, beim Spreizen der Finger wird es vergrößert.](images/objectresize.png)
 
 **Hinweis**  
-Der optische Zoom ist nicht mit dem [semantischen Zoom](../controls-and-patterns/semantic-zoom.md) zu verwechseln. Zwar werden bei beiden Interaktionen dieselben Gesten ausgeführt, jedoch bezieht sich der semantische Zoom auf die Darstellung von und die Navigation in Inhalten in einer einzelnen Ansicht (z.B. in der Ordnerstruktur eines Computers, einer Dokumentbibliothek oder einem Fotoalbum).
+Der optische Zoom ist nicht mit dem [semantischen Zoom](../controls-and-patterns/semantic-zoom.md) zu verwechseln. Zwar werden bei beiden Interaktionen dieselben Gesten ausgeführt, jedoch bezieht sich der semantische Zoom auf die Darstellung von und die Navigation in Inhalten in einer einzelnen Ansicht (z. B. in der Ordnerstruktur eines Computers, einer Dokumentbibliothek oder einem Fotoalbum).
 
  
 
-## Empfohlene und nicht empfohlene Vorgehensweisen
+## <a name="dos-and-donts"></a>Empfohlene und nicht empfohlene Vorgehensweisen
 
 
 Beachten Sie die folgenden Richtlinien für Apps, die entweder Größenänderung oder optischen Zoom unterstützen.
 
 -   Wenn Beschränkungen oder Grenzen der maximalen und minimalen Größe definiert sind, sollte ein visuelles Feedback erfolgen, wenn der Benutzer die Grenzen erreicht oder überschreitet.
--   Mit Andockpunkten kann das Zoom- und Größenänderungsverhalten beeinflusst werden, indem logische Punkte bereitgestellt werden, an denen die Manipulation angehalten und sichergestellt wird, dass eine bestimmte Teilmenge des Inhalts im Viewport angezeigt wird. Stellen Sie Andockpunkte für gängige Zoomfaktoren oder logische Ansichten bereit, um die Auswahl dieser Zoomfaktoren zu erleichtern. In Foto-Apps könnte z.B. ein Andockpunkt bei 100% für Größenänderungen bereitgestellt werden, und bei Karten-Apps könnten Andockpunkte in Ansichten von Städten, Staaten und Ländern/Regionen nützlich sein.
+-   Mit Andockpunkten kann das Zoom- und Größenänderungsverhalten beeinflusst werden, indem logische Punkte bereitgestellt werden, an denen die Manipulation angehalten und sichergestellt wird, dass eine bestimmte Teilmenge des Inhalts im Viewport angezeigt wird. Stellen Sie Andockpunkte für gängige Zoomfaktoren oder logische Ansichten bereit, um die Auswahl dieser Zoomfaktoren zu erleichtern. In Foto-Apps könnte z. B. ein Andockpunkt bei 100 % für Größenänderungen bereitgestellt werden, und bei Karten-Apps könnten Andockpunkte in Ansichten von Städten, Staaten und Ländern/Regionen nützlich sein.
 
     Andockpunkte ermöglichen den Benutzern ungenaue Gesten, mit denen sie dennoch das Gewünschte erreichen. Wenn Sie mit XAML arbeiten, finden Sie weitere Informationen unter den Eigenschaften der Andockpunkte von [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527). Verwenden Sie für JavaScript und HTML [**-ms-content-zoom-snap-points**](https://msdn.microsoft.com/library/hh771895).
 
@@ -62,14 +66,14 @@ Beachten Sie die folgenden Richtlinien für Apps, die entweder Größenänderung
 -   Verwenden Sie nicht den Zoom, um in der UI zu navigieren oder zusätzliche Steuerelemente in der App verfügbar zu machen, sondern verwenden Sie stattdessen Verschiebungen. Weitere Informationen zur Verschiebung finden Sie unter [Richtlinien für Verschiebung](guidelines-for-panning.md).
 -   Platzieren Sie keine in der Größe veränderbare Objekte in einem Inhaltsbereich, dessen Größe geändert werden kann. Ausnahmen bilden die folgenden Fälle:
     -   Zeichnungsprogramme, in denen in der Größe anpassbare Elemente in einem Zeichenbereich oder auf einer Zeichenfläche, dessen bzw. deren Größe geändert werden kann, angezeigt werden können
-    -   Webseiten mit einem eingebetteten Objekt, z.B. einer Karte
+    -   Webseiten mit einem eingebetteten Objekt, z. B. einer Karte
 
     **Hinweis**  
     In allen Fällen wird die Größe des Inhaltsbereichs geändert, es sei denn, alle Berührungspunkte befinden sich in dem in der Größe anpassbaren Objekt.
 
      
 
-## Verwandte Artikel
+## <a name="related-articles"></a>Verwandte Artikel
 
 
 **Beispiele**
@@ -84,7 +88,7 @@ Beachten Sie die folgenden Richtlinien für Apps, die entweder Größenänderung
 * [Eingabe: Beispiel für Fingereingabe-Treffertests](http://go.microsoft.com/fwlink/p/?linkid=231590)
 * [Beispiel für XAML-Bildlauf, -Verschiebung und -Zoomen](http://go.microsoft.com/fwlink/p/?linkid=251717)
 * [Eingabe: vereinfachtes Freihandbeispiel](http://go.microsoft.com/fwlink/p/?linkid=246570)
-* [Eingabe: Beispiel für Windows8-Bewegungen](http://go.microsoft.com/fwlink/p/?LinkId=264995)
+* [Eingabe: Beispiel für Windows 8-Bewegungen](http://go.microsoft.com/fwlink/p/?LinkId=264995)
 * [Eingabe: Beispiel für Manipulationen und Gesten (C++)](http://go.microsoft.com/fwlink/p/?linkid=231605)
 * [Beispiel für die DirectX-Fingereingabe](http://go.microsoft.com/fwlink/p/?LinkID=231627)
  
@@ -97,6 +101,6 @@ Beachten Sie die folgenden Richtlinien für Apps, die entweder Größenänderung
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

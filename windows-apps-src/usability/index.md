@@ -3,12 +3,19 @@ description: "Erfahren Sie, wie Sie Ihre App inklusiv entwickeln und für Person
 keywords: "Eingabehilfen für UWP-Apps, Globalisierung, Apps mit inklusivem Design, Anforderungen für App-Eingabehilfen"
 title: "Benutzerfreundlichkeit in UWP-Apps – Entwicklung von Windows-Apps"
 author: mijacobs
+label: Usability
+template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 589e3290a47a9245ddb5e43f64d13bae1244ac8b
-ms.openlocfilehash: d7246bc898e36155996941875b6c00da7891809d
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 011d4e7dcebc20e0568fd5bdc4a207a66597f073
 
 ---
-# Benutzerfreundlichkeit in UWP-Apps
+# <a name="usability-for-uwp-apps"></a>Benutzerfreundlichkeit in UWP-Apps
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
@@ -17,7 +24,7 @@ Es sind die Kleinigkeiten und Details, die eine gute Benutzerumgebung zu einer w
 Mit den Design- und Codierungsanweisungen in diesem Abschnitt können Sie Ihre UWP-App inklusiver gestalten, indem Sie Features für Barrierefreiheit hinzufügen, Globalisierung und Lokalisierung ermöglichen, das Anpassen der Benutzeroberfläche durch die Benutzer zulassen und im Bedarfsfall Hilfe für Benutzer bereitstellen.
 
 
-## Barrierefreiheit
+## <a name="accessiblity"></a>Barrierefreiheit
 
 Bei der Barrierefreiheit geht es darum, die App so zu gestalten, dass sie auch von Menschen verwendet werden kann, bei denen bestimmte Beeinträchtigungen die Nutzung herkömmlicher Benutzeroberflächen verhindern oder erschweren. Für bestimmte Situationen gelten gesetzlich vorgeschriebene Vorgaben im Hinblick auf Barrierefreiheit. Es wird jedoch empfohlen, die Barrierefreiheit unabhängig von gesetzlichen Anforderungen zu berücksichtigen, um sicherzustellen, dass Ihre Apps die größtmögliche Benutzergruppe erreichen.
 
@@ -46,7 +53,7 @@ Bei der Barrierefreiheit geht es darum, die App so zu gestalten, dass sie auch v
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-<p><b>[Barrierefreiheit im Store](../accessibility/accessibility-in-the-store.md)</b><br/>Hier werden die Anforderungen beschrieben, die Sie erfüllen müssen, wenn Sie Ihre UWP-App im WindowsStore als barrierefrei deklarieren möchten.</p>
+<p><b>[Barrierefreiheit im Store](../accessibility/accessibility-in-the-store.md)</b><br/>Hier werden die Anforderungen beschrieben, die Sie erfüllen müssen, wenn Sie Ihre UWP-App im Windows Store als barrierefrei deklarieren möchten.</p>
   </div>
   <div class="side-by-side-content-right">
 <p><b>[Prüfliste für die Barrierefreiheit](../accessibility/accessibility-checklist.md)</b><br/>Enthält eine Prüfliste, mit der Sie sicherstellen können, dass Ihre UWP-App barrierefrei ist.</p>
@@ -101,7 +108,7 @@ Bei der Barrierefreiheit geht es darum, die App so zu gestalten, dass sie auch v
 
 
 
-## Globalisierung und Lokalisierung
+## <a name="globalization-and-localization"></a>Globalisierung und Lokalisierung
 
 Windows wird auf der ganzen Welt von Benutzern mit unterschiedlicher Kultur, Herkunft und Sprache verwendet. Benutzer sprechen beliebige Sprache oder sogar mehrere Sprachen. Die Benutzer sind über die ganze Welt verteilt, und jede Sprache kann ortsabhängig überall gesprochen werden. Sie können das Marktpotenzial Ihrer App erweitern, indem Sie eine mithilfe von Globalisierung und Lokalisierung leicht anpassbare App entwickeln.
 
@@ -151,7 +158,7 @@ Windows wird auf der ganzen Welt von Benutzern mit unterschiedlicher Kultur, Her
 </div>
 
 
-## App-Einstellungen
+## <a name="app-settings"></a>App-Einstellungen
 
 Mithilfe von App-Einstellungen kann der Benutzer Ihre App anpassen und entsprechend den eigenen Anforderungen und Wünschen optimieren. Die Bereitstellung der richtigen Einstellungen und ihr ordnungsgemäßes Speichern können eine großartige Benutzerumgebung sogar noch weiter verbessern.
 
@@ -166,7 +173,7 @@ Mithilfe von App-Einstellungen kann der Benutzer Ihre App anpassen und entsprech
 </div>
 </div>
 
-## In-App-Hilfe
+## <a name="in-app-help"></a>In-App-Hilfe
 Unabhängig davon, wie optimal Sie Ihre App gestaltet haben, werden einige Benutzer etwas zusätzliche Hilfe benötigen.
 
 <div class="side-by-side">
@@ -176,7 +183,7 @@ Unabhängig davon, wie optimal Sie Ihre App gestaltet haben, werden einige Benut
 </p>
   </div>
   <div class="side-by-side-content-right">
-<p><b>[Benutzeroberfläche mit Anleitungen](../in-app-help/instructional-ui.md)</b><br/>Manchmal kann es hilfreich sein, Anleitungen bereitzustellen, um Benutzern Funktionen in Ihrer App zu zeigen, die möglicherweise nicht offensichtlich sind, z.B. bestimmte Touchinteraktionen. In diesen Fällen müssen Sie Anleitungen auf der Benutzeroberfläche für die Benutzer bereitstellen, damit sie diese Funktionen, die sie möglicherweise übersehen haben, finden und nutzen können.</p>
+<p><b>[Benutzeroberfläche mit Anleitungen](../in-app-help/instructional-ui.md)</b><br/>Manchmal kann es hilfreich sein, Anleitungen bereitzustellen, um Benutzern Funktionen in Ihrer App zu zeigen, die möglicherweise nicht offensichtlich sind, z. B. bestimmte Touchinteraktionen. In diesen Fällen müssen Sie Anleitungen auf der Benutzeroberfläche für die Benutzer bereitstellen, damit sie diese Funktionen, die sie möglicherweise übersehen haben, finden und nutzen können.</p>
   </div>
 </div>
 </div>
@@ -194,6 +201,6 @@ Unabhängig davon, wie optimal Sie Ihre App gestaltet haben, werden einige Benut
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO2-->
 
 

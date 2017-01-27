@@ -6,31 +6,26 @@ ms.assetid: 753CFEA4-80D3-474C-B4A9-555F872A3DEF
 label: Toggle switches
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: a4fe19dcd6f555273e74236192c5c61e8c6579ab
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 685ef17e17fb17fa620eea84335ce6688a5cfb3e
 
 ---
-# Umschalter
+# <a name="toggle-switches"></a>Umschalter
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
-Der Umschalter stellt einen physischen Schalter dar, mit dem Benutzer Dinge ein- oder ausschalten können. Mit **ToggleSwitch**-Steuerelementen können Sie Benutzern zwei Optionen anbieten, die sich gegenseitig ausschließen (z.B. Ein/Aus), wenn eine Option mit der Auswahl unmittelbar bestätigt wird.
+Der Umschalter stellt einen physischen Schalter dar, mit dem Benutzer Dinge ein- oder ausschalten können. Mit **ToggleSwitch**-Steuerelementen können Sie Benutzern zwei Optionen anbieten, die sich gegenseitig ausschließen (z. B. Ein/Aus), wenn eine Option mit der Auswahl unmittelbar bestätigt wird.
 
 <div class="important-apis" >
 <b>Wichtige APIs</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.aspx"><strong>ToggleSwitch-Klasse</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.ison.aspx"><strong>IsOn-Eigenschaft</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.toggled.aspx"><strong>Toggled-Ereignis</strong></a></li>
+<li>[**ToggleSwitch-Klasse**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.aspx)</li>
+<li>[**IsOn-Eigenschaft**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.ison.aspx)</li>
+<li>[**Toggled-Ereignis**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.toggled.aspx)</li>
 </ul>
-
-</div>
 </div>
 
-
-
-
-## Ist dies das richtige Steuerelement?
+## <a name="is-this-the-right-control"></a>Ist dies das richtige Steuerelement?
 
 Verwenden Sie einen Umschalter für binäre Vorgänge, die wirksam werden, sobald der Benutzer den Umschalter umstellt. Verwenden Sie beispielsweise einen Umschalter, um Dienste oder Hardwarekomponenten wie WLAN ein- bzw. auszuschalten.
 
@@ -40,7 +35,7 @@ Wenn ein physischer Schalter für die Aktion geeignet wäre, ist ein Umschalter 
 
 Nachdem der Benutzer den Schalter ein- oder ausgeschaltet hat, sollte die entsprechende Aktion sofort ausgeführt werden.
 
-### Wählen zwischen Umschalter und Kontrollkästchen
+### <a name="choosing-between-toggle-switch-and-check-box"></a>Wählen zwischen Umschalter und Kontrollkästchen
 
 Für einige Aktionen kann entweder ein Umschalter oder ein Kontrollkästchen verwendet werden. Berücksichtigen Sie bei der Entscheidung zwischen den beiden Steuerelementen folgende Überlegungen:
 
@@ -58,7 +53,7 @@ Für einige Aktionen kann entweder ein Umschalter oder ein Kontrollkästchen ver
 
     ![Kontrollkästchen mit mehreren ausgewählten Elementen](images/guidelines_and_checklist_for_toggle_switches_checkbox_multi_select.png)
 
-## Beispiele
+## <a name="examples"></a>Beispiele
 
 Umschalter in den allgemeinen Einstellungen der Nachrichten-App.
 
@@ -68,7 +63,7 @@ Umschalter in den Einstellungen für das Menü „Start” in Windows.
 
 ![Umschalter in den Einstellungen für das Menü „Start” in Windows](images/control-examples/toggle-switch-start-settings.png)
 
-## Erstellen von Umschaltern
+## <a name="create-a-toggle-switch"></a>Erstellen von Umschaltern
 
 Hier sehen Sie, wie Sie einen einfachen Umschalter erstellen. Mit diesem XAML-Code wird der oben gezeigte WLAN-Umschalter erstellt.
 
@@ -85,7 +80,7 @@ wiFiToggle.Header = "WiFi";
 stackPanel1.Children.Add(wiFiToggle);
 ```
 
-### IsOn
+### <a name="ison"></a>IsOn
 
 Der Schalter kann entweder ein- oder ausgeschaltet sein. Verwenden Sie die [**IsOn**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.ison.aspx)-Eigenschaft, um den Zustand des Schalters zu ermitteln. Wenn der Schalter zur Steuerung des Zustands einer anderen binären Eigenschaft verwendet wird, können Sie wie hier gezeigt eine Bindung verwenden.
 
@@ -96,7 +91,7 @@ Der Schalter kann entweder ein- oder ausgeschaltet sein. Verwenden Sie die [**Is
 </StackPanel>
 ```
 
-### Toggled
+### <a name="toggled"></a>Toggled
 
 In anderen Fällen können Sie das [**Toggled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.toggled.aspx)-Ereignis zur Reaktion auf Zustandsänderungen behandeln.
 
@@ -140,7 +135,7 @@ private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
 }
 ```
 
-### Beschriftungen „Ein”/„Aus”
+### <a name="onoff-labels"></a>Beschriftungen „Ein”/„Aus”
 
 Standardmäßig beinhaltet der Umschalter literalen Beschriftungen „Ein” und „Aus”, die automatisch lokalisiert werden. Sie können diese Beschriftungen durch Festlegen der Eigenschaften [**OnContent**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.oncontent.aspx) und [**OffContent**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.offcontent.aspx) ersetzen.
 
@@ -154,24 +149,20 @@ In diesem Beispiel werden die Beschriftungen „Ein”/„Aus” durch die Besch
 
 Sie können auch komplexeren Inhalt verwenden, indem Sie die Eigenschaften [**OnContentTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.oncontenttemplate.aspx) und [**OffContentTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.offcontenttemplate.aspx) verwenden.
 
-## Empfehlungen
+## <a name="recommendations"></a>Empfehlungen
 
--   Ersetzen Sie die Beschriftungen „Ein“ und „Aus“, wenn es spezifischere Beschriftungen für die Einstellung gibt. Wenn Sie mit kurzen Beschriftungen (3bis 4Zeichen) einen besser geeigneten binären Gegensatz für eine bestimmte Einstellung darstellen können, verwenden Sie diese Beschriftungen. Wenn die Einstellung „Bilder anzeigen” lautet, könnten Sie beispielsweise „Einblenden”/„Ausblenden” verwenden. Die Verwendung spezifischerer Beschriftungen kann bei der Lokalisierung hilfreich sein.
+-   Ersetzen Sie die Beschriftungen „Ein“ und „Aus“, wenn es spezifischere Beschriftungen für die Einstellung gibt. Wenn Sie mit kurzen Beschriftungen (3 bis 4 Zeichen) einen besser geeigneten binären Gegensatz für eine bestimmte Einstellung darstellen können, verwenden Sie diese Beschriftungen. Wenn die Einstellung „Bilder anzeigen” lautet, könnten Sie beispielsweise „Einblenden”/„Ausblenden” verwenden. Die Verwendung spezifischerer Beschriftungen kann bei der Lokalisierung hilfreich sein.
 -   Die Beschriftungen „Ein“ und „Aus“ sollten nur ersetzt werden, falls unbedingt nötig. Behalten Sie die Standardbeschriftungen bei, sofern keine benutzerdefinierten Beschriftungen erforderlich sind.
 -   Beschriftungen sollten maximal 4 Zeichen lang sein.
 
-## Verwandte Artikel
+## <a name="related-articles"></a>Verwandte Artikel
 
-[**ToggleSwitch**](https://msdn.microsoft.com/library/windows/apps/hh701411)
+- [**ToggleSwitch-Klasse**](https://msdn.microsoft.com/library/windows/apps/hh701411)
 - [Optionsfelder](radio-button.md)
 - [Umschalter](toggles.md)
 - [Kontrollkästchen](checkbox.md)
 
-**Für Entwickler (XAML)**
-- [**ToggleSwitch-Klasse**](https://msdn.microsoft.com/library/windows/apps/br209712)
 
-
-
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

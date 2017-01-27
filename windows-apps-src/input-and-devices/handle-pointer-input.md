@@ -5,30 +5,37 @@ title: Behandeln von Zeigereingaben
 ms.assetid: BDBC9E33-4037-4671-9596-471DCF855C82
 label: Handle pointer input
 template: detail.hbs
+keywords: Stift, Maus, Touchpad, Toucheingabe, Zeiger, Eingabe, Benutzerinteraktionen
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 2053062f6a5f850da8983bce2465cd10cdc01d56
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: ba4288d93924d3a32a0a659dea67af28fb607987
 
 ---
 
-# Behandeln von Zeigereingaben
+# <a name="handle-pointer-input"></a>Behandeln von Zeigereingaben
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Empfangen, verarbeiten und verwalten Sie Eingabedaten von Zeigegeräten wie Toucheingabe, Maus, Stift und Touchpad in Apps für die universelle Windows-Plattform (UWP).
 
-**Wichtige APIs**
-
--   [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)
--   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br208383)
--   [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
-
+<div class="important-apis" >
+<b>Wichtige APIs</b><br/>
+<ul>
+<li>[**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)</li>
+<li>[**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br208383)</li>
+<li>[**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)</li>
+</ul>
+</div>
 
 **Wichtig**  
 Wenn Sie eine eigene Interaktionsunterstützung implementieren, sollten Sie daran denken, dass die Benutzer eine intuitive Umgebung erwarten, die die direkte Interaktion mit den UI-Elementen der App beinhaltet. Es empfiehlt sich, die benutzerdefinierten Interaktionen auf der Basis der [Liste der Steuerelemente](https://msdn.microsoft.com/library/windows/apps/mt185406) zu modellieren, um auf diese Weise für eine konsistente und intuitive Benutzerumgebung zu sorgen. Die Plattformsteuerelemente bieten umfassende Funktionen für UWP-Benutzerinteraktionen (Universelle Windows-Plattform) wie Standardinteraktionen, animierte Physikeffekte, visuelles Feedback und Barrierefreiheit. Erstellen Sie benutzerdefinierte Interaktionen nur dann, wenn ein eindeutiger, klar umrissener Bedarf besteht und es keine Basisinteraktion gibt, die das gewünschte Szenario unterstützt.
 
 
-## Zeiger
-
-
+## <a name="pointers"></a>Zeiger
 Bei vielen Interaktionsfunktionen ist der Benutzer involviert, der das Objekt identifizieren muss, mit dem er interagieren möchte, indem er mithilfe von Eingabegeräten, z. B. Toucheingabe, Maus, Zeichen-/Eingabestift und Touchpad, darauf zeigt. Da die von diesen Eingabegeräten bereitgestellten HID-Rohdaten (Human Interface Device) viele allgemeine Eigenschaften enthalten, werden die Informationen an einen einheitlichen Eingabestapel weitergeleitet und als konsolidierte geräteunabhängige Zeigerdaten verfügbar gemacht. Ihre UWP-Apps können dann diese Daten ohne Rücksicht auf das verwendete Eingabegerät verwenden.
 
 **Hinweis**  Gerätespezifische Informationen werden auch von den HID-Rohdaten weitergeleitet, wenn diese von der App abgerufen werden.
@@ -37,7 +44,7 @@ Bei vielen Interaktionsfunktionen ist der Benutzer involviert, der das Objekt id
 
 Jeder Eingabepunkt (oder Kontakt) in dem Eingabestapel wird durch ein [**Pointer**](https://msdn.microsoft.com/library/windows/apps/br227968)-Objekt dargestellt, das über den [**PointerRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943076)-Parameter verfügbar gemacht wird, der von den verschiedenen Zeigerereignissen bereitgestellt wird. Bei Verwendung mehrerer Stifte oder der Mehrfingereingabe wird jeder Kontakt als separater Eingabezeiger behandelt.
 
-## Zeigerereignisse
+## <a name="pointer-events"></a>Zeigerereignisse
 
 
 Zeigerereignisse machen grundlegende Informationen wie Erkennungszustand (im Bereich oder bei Kontakt) und Gerätetyp sowie erweiterte Informationen wie Position, Druck und Kontaktgeometrie verfügbar. Darüber hinaus sind auch bestimmte gerätespezifische Eigenschaften verfügbar, z. B. welche Maustaste ein Benutzer gedrückt hat oder ob die Radiergummispitze des Zeichenstifts verwendet wird. Wenn die App zwischen Eingabegeräten und ihren Funktionen unterscheiden muss, finden Sie entsprechende Informationen unter [Erkennen von Eingabegeräten](identify-input-devices.md).
@@ -65,7 +72,7 @@ UWP-Apps können die folgenden Zeigerereignisse überwachen:
 <td align="left"><p>Tritt auf, wenn ein Zeiger von der Plattform abgebrochen wird.</p>
 <ul>
 <li>Touchzeiger werden abgebrochen, wenn ein Zeichenstift innerhalb des Bereichs der Eingabeoberfläche erkannt wird.</li>
-<li>Für mehr als 100ms wird kein aktiver Kontakt erkannt.</li>
+<li>Für mehr als 100 ms wird kein aktiver Kontakt erkannt.</li>
 <li>Monitor/Anzeige wird geändert (Auflösung, Einstellungen, Konfigurationen mit mehreren Bildschirmen).</li>
 <li>Der Desktop ist gesperrt, oder der Benutzer hat sich abgemeldet.</li>
 <li>Die Anzahl gleichzeitiger Kontakte hat die vom Gerät unterstützte Anzahl überschritten.</li>
@@ -127,12 +134,12 @@ UWP-Apps können die folgenden Zeigerereignisse überwachen:
 
  
 
-## Beispiel
+## <a name="example"></a>Beispiel
 
 
 Nachfolgend sehen Sie einige Codebeispiele aus einer einfachen Zeigerverfolgungs-App, in denen gezeigt wird, wie Zeigerereignisse überwacht und behandelt und verschiedene Eigenschaften für aktive Zeiger abgerufen werden.
 
-### Erstellen der Benutzeroberfläche
+### <a name="create-the-ui"></a>Erstellen der Benutzeroberfläche
 
 In diesem Beispiel wird ein Rechteck (`targetContainer`) als Zielobjekt für Zeigereingaben verwendet. Die Farbe des Ziels ändert sich, wenn sich der Zeigerstatus ändert.
 
@@ -195,7 +202,7 @@ Im Folgenden ist der XAML-Code (Extensible Application Markup Language) für die
 </Page>
 ```
 
-### Lauschen auf Zeigerereignisse
+### <a name="listen-for-pointer-events"></a>Lauschen auf Zeigerereignisse
 
 In den meisten Fällen wird empfohlen, Zeigerinformationen über die [**PointerRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943076) des Ereignishandlers abzurufen.
 
@@ -244,7 +251,7 @@ Der folgende Code richtet das Zielobjekt ein, deklariert globale Variablen und g
 
 ```
 
-### Behandeln von Zeigerereignissen
+### <a name="handle-pointer-events"></a>Behandeln von Zeigerereignissen
 
 Im nächsten Schritt wird UI-Feedback verwendet, um die Verwendung einfacher Zeigerereignishandler zu veranschaulichen.
 
@@ -556,7 +563,7 @@ private void Target_PointerExited(object sender, PointerRoutedEventArgs e)
     }
 ```
 
-### Abrufen von Zeigereigenschaften
+### <a name="get-pointer-properties"></a>Abrufen von Zeigereigenschaften
 
 Wie bereits erwähnt, müssen Sie die erweiterten Zeigerinformationen von einem [**Windows.UI.Input.PointerPoint**](https://msdn.microsoft.com/library/windows/apps/br242038)-Objekt abrufen, das über die Methoden [**GetCurrentPoint**](https://msdn.microsoft.com/library/windows/apps/hh943077) und [**GetIntermediatePoints**](https://msdn.microsoft.com/library/windows/apps/hh943078) von [**PointerRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943076) bereitgestellt wird.
 
@@ -652,7 +659,7 @@ Wie bereits erwähnt, müssen Sie die erweiterten Zeigerinformationen von einem 
              }
 ```
 
-### Vollständiges Beispiel
+### <a name="complete-example"></a>Vollständiges Beispiel
 
 Im Folgenden ist der C#-Code für dieses Beispiel aufgeführt. Links zu komplexeren Beispielen finden Sie weiter unten unter „Verwandte Artikel“.
 
@@ -1080,7 +1087,7 @@ namespace PointerInput
 }
 ```
 
-## Verwandte Artikel
+## <a name="related-articles"></a>Verwandte Artikel
 
 
 **Beispiele**
@@ -1106,6 +1113,6 @@ namespace PointerInput
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

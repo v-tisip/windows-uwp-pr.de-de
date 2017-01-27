@@ -6,23 +6,26 @@ ms.assetid: b419f538-c7fb-4e7c-9547-5fb2494c0b71
 label: Panning
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 5d82af288d389c6eeb5373d1b1f4230fc992a441
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: d043555d0b467c6b27bc4f0a3b86ccb1404e16a3
 
 ---
 
-# Anleitungen für das Verschieben
+# <a name="guidelines-for-panning"></a>Anleitungen für das Verschieben
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Mit einer Verschiebung oder einem Bildlauf können Benutzer innerhalb einer einzelnen Ansicht navigieren, um den Inhalt der Ansicht anzuzeigen, der nicht in den Anzeigebereich passt. Beispiele für Ansichten sind die Ordnerstruktur eines Computers, eine Dokumentbibliothek oder ein Fotoalbum.
 
-**Wichtige APIs**
+<div class="important-apis" >
+<b>Wichtige APIs</b><br/>
+<ul>
+<li>[**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)</li>
+<li>[**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)</li>
+</ul>
+</div>
 
--   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
--   [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
 
-
-
-## Empfohlene und nicht empfohlene Vorgehensweisen
+## <a name="dos-and-donts"></a>Empfohlene und nicht empfohlene Vorgehensweisen
 
 
 **Verschiebungsindikatoren und Bildlaufleisten**
@@ -52,7 +55,7 @@ Mit einer Verschiebung oder einem Bildlauf können Benutzer innerhalb einer einz
 
 **Seitenansicht**
 
--   Verwenden Sie erforderliche Andockpunkte, wenn sich der Inhalt aus separaten Elementen zusammensetzt oder Sie ein Element vollständig anzeigen möchten. Dies können z.B. Seiten eines Buchs oder einer Zeitschrift, eine Spalte mit Elementen oder einzelne Bilder sein.
+-   Verwenden Sie erforderliche Andockpunkte, wenn sich der Inhalt aus separaten Elementen zusammensetzt oder Sie ein Element vollständig anzeigen möchten. Dies können z. B. Seiten eines Buchs oder einer Zeitschrift, eine Spalte mit Elementen oder einzelne Bilder sein.
 
     -   An jeder logischen Grenze sollte ein Andockpunkt platziert werden.
     -   Jedes Element sollte in seiner Größe an die Ansicht angepasst oder skaliert werden.
@@ -73,7 +76,7 @@ Mit einer Verschiebung oder einem Bildlauf können Benutzer innerhalb einer einz
 
     ![Abbildung eines eingebetteten verschiebbaren Bereichs, in dem der Bildlauf in derselben Richtung erfolgt wie im Container](images/scrolling-embedded3.png)
 
-## Weitere Hinweise zur Verwendung
+## <a name="additional-usage-guidance"></a>Weitere Hinweise zur Verwendung
 
 
 Das Verschieben per Toucheingabe mittels Streif- oder Ziehbewegung mit einem oder mehreren Fingern funktioniert wie der Bildlauf mit der Maus. Die Verschiebungsinteraktion gleicht eher dem Drehen des Mausrads oder Verschieben des Bildlauffelds als dem Klicken auf die Bildlaufleiste. Sofern keine Unterscheidung in einer API gemacht wird oder für eine gerätespezifische Windows-UI erforderlich ist, bezeichnen wir beide Interaktionen einfach als Verschiebung.
@@ -86,14 +89,14 @@ Je nach Eingabegerät verwendet der Benutzer eine der folgenden Methoden, um die
 -   Die Pfeiltasten auf der Tastatur, um das Ziehen des Bildlauffelds zu emulieren, oder die BILD-AB- oder BILD-AUF-TASTE, um das Klicken in die Bildlaufleiste zu emulieren
 -   Toucheingabe, Touchpad oder ein passiver Zeichen-/Eingabestift zum Ziehen oder Streifen der Finger in die gewünschte Richtung
 
-Beim Ziehen werden die Finger nur in der Verschiebungsrichtung bewegt. Diese Bewegung führt zu einem 1:1-Verhältnis, d.h. der Inhalt wird genauso schnell und weit verschoben wie die Finger bewegt werden. Beim Streifen, dem schnellen Ziehen und Anheben der Finger, werden die folgenden physischen Aspekte auf die Verschiebungsanimation angewendet:
+Beim Ziehen werden die Finger nur in der Verschiebungsrichtung bewegt. Diese Bewegung führt zu einem 1:1-Verhältnis, d. h. der Inhalt wird genauso schnell und weit verschoben wie die Finger bewegt werden. Beim Streifen, dem schnellen Ziehen und Anheben der Finger, werden die folgenden physischen Aspekte auf die Verschiebungsanimation angewendet:
 
 -   Verlangsamung (Trägheit): Wenn die Finger angehoben werden, wird die Verschiebung langsamer. Dies ist mit allmählichem Anhalten auf glattem Untergrund vergleichbar.
 -   Absorption: Die Dynamik der Verschiebung bewirkt bei der Verlangsamung ein leichtes Zurückspringen, wenn entweder ein Andockpunkt oder eine Grenze des Inhaltsbereichs erreicht wird.
 
 **Arten der Verschiebung**
 
-Windows8 unterstützt drei Arten der Verschiebung:
+Windows 8 unterstützt drei Arten der Verschiebung:
 
 -   Eine Achse – die Verschiebung wird nur in eine Richtung unterstützt (horizontal oder vertikal).
 -   Führungsschienen – die Verschiebung wird in alle Richtungen unterstützt. Sobald jedoch der Benutzer in einer bestimmten Richtung eine Distanzschwelle überschreitet, wird die Verschiebung auf die betreffende Achse beschränkt.
@@ -103,7 +106,7 @@ Windows8 unterstützt drei Arten der Verschiebung:
 
 Die Interaktion für die Verschiebung ist von Eingabegerät zu Eingabegerät unterschiedlich, bietet aber trotzdem eine ähnliche Funktion.
 
-**Verschiebbare Bereiche** Das Verhalten verschiebbarer Bereiche wird für Entwickler von WindowsStore-Apps mit JavaScript zur Entwurfszeit über Cascading Stylesheets (CSS) verfügbar gemacht.
+**Verschiebbare Bereiche** Das Verhalten verschiebbarer Bereiche wird für Entwickler von Windows Store-Apps mit JavaScript zur Entwurfszeit über Cascading Stylesheets (CSS) verfügbar gemacht.
 
 Abhängig vom erkannten Eingabegerät sind zwei Anzeigemodi für die Verschiebung verfügbar:
 
@@ -163,7 +166,7 @@ Wenn wie im folgenden Diagramm nicht genügend Platz vorhanden ist, kann der ein
 
 Dieser Leitfaden ist auch für Apps wie Fotoalben oder Karten-Apps hilfreich, die uneingeschränkte Verschiebung in einzelnen Bildern oder Karten und gleichzeitig die Verschiebung entlang einer Achse im Album (zum vorherigen oder nächsten Bild) bzw. im Detailbereich unterstützen. In Apps, die über einen Detail- oder Optionsbereich für das formfreie Verschieben eines Bilds oder einer Karte verfügen, empfehlen wir, das Seitenlayout mit den Detail- und Optionsbereichen zu beginnen, da der Bereich zum ungehinderten Verschieben eines Bilds oder einer Karte das Verschieben in den Detailbereich stören kann.
 
-## Verwandte Artikel
+## <a name="related-articles"></a>Verwandte Artikel
 
 
 * [Benutzerdefinierte Benutzerinteraktionen](https://msdn.microsoft.com/library/windows/apps/mt185599)
@@ -182,7 +185,7 @@ Dieser Leitfaden ist auch für Apps wie Fotoalben oder Karten-Apps hilfreich, di
 * [Eingabe: Beispiel für Fingereingabe-Treffertests](http://go.microsoft.com/fwlink/p/?linkid=231590)
 * [Beispiel für XAML-Bildlauf, -Verschiebung und -Zoomen](http://go.microsoft.com/fwlink/p/?linkid=251717)
 * [Eingabe: vereinfachtes Freihandbeispiel](http://go.microsoft.com/fwlink/p/?linkid=246570)
-* [Eingabe: Beispiel für Windows8-Bewegungen](http://go.microsoft.com/fwlink/p/?LinkId=264995)
+* [Eingabe: Beispiel für Windows 8-Bewegungen](http://go.microsoft.com/fwlink/p/?LinkId=264995)
 * [Eingabe: Beispiel für Manipulationen und Gesten (C++)](http://go.microsoft.com/fwlink/p/?linkid=231605)
 * [Beispiel für die DirectX-Fingereingabe](http://go.microsoft.com/fwlink/p/?LinkID=231627)
  
@@ -195,6 +198,6 @@ Dieser Leitfaden ist auch für Apps wie Fotoalben oder Karten-Apps hilfreich, di
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

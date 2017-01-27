@@ -5,20 +5,22 @@ title: "Ausrichtung, Rand und Abstand für UWP-Apps (Universelle Windows-Plattfo
 ms.assetid: 9412ABD4-3674-4865-B07D-64C7C26E4842
 label: Alignment, margin, and padding
 template: detail.hbs
+op-migration-status: ready
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: ec16fa013e177529c517f91610b77ea22402a958
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: f6c8665c935380078efd2e8ea9d225967cf45eba
 
 ---
-# Ausrichtung, Rand und Abstand
+# <a name="alignment-margin-and-padding"></a>Ausrichtung, Rand und Abstand
 
-Neben Abmessungseigenschaften (Breite, Höhe und Beschränkungen) können Elemente auch Ausrichtungs-, Rand- und Abstandseigenschaften aufweisen, die das Layoutverhalten beeinflussen, wenn ein Element einen Layoutdurchlauf absolviert und auf einer Benutzeroberfläche dargestellt wird. Es bestehen Beziehungen zwischen Ausrichtungs-, Rand-, Abstands- und Abmessungseigenschaften, die beim Positionieren eines [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706)-Objekts eine typische Logikabfolge aufweisen. Demzufolge werden Objekte den Umständen entsprechend manchmal verwendet und manchmal ignoriert.
+Neben Abmessungseigenschaften (Breite, Höhe und Beschränkungen) können Elemente auch Ausrichtungs-, Rand- und Abstandseigenschaften aufweisen, die das Layoutverhalten beeinflussen, wenn ein Element einen Layoutdurchlauf ausführt und auf einer Benutzeroberfläche dargestellt wird. Es bestehen Beziehungen zwischen Ausrichtungs-, Rand-, Abstands- und Abmessungseigenschaften, die beim Positionieren eines [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706)-Objekts eine typische Logikabfolge aufweisen. Demzufolge werden Objekte den Umständen entsprechend manchmal verwendet und manchmal ignoriert.
 
-## Ausrichtungseigenschaften
+## <a name="alignment-properties"></a>Ausrichtungseigenschaften
 
 Die [**HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208720)-Eigenschaft und die [**VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208749)-Eigenschaft beschreiben, wie ein untergeordnetes Element innerhalb des zugeordneten Layoutbereichs eines übergeordneten Elements positioniert werden sollte. Durch die Kombination dieser Eigenschaften kann die Layoutlogik für einen Container untergeordnete Elemente innerhalb des Containers positionieren (entweder ein Bereich oder ein Steuerelement). Ausrichtungseigenschaften sollen das gewünschte Layout für einen adaptiven Layoutcontainer andeuten. Demzufolge werden sie für untergeordnete [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706)-Elemente festgelegt und von einem anderen übergeordneten **FrameworkElement**-Container interpretiert. Ausrichtungswerte können angeben, ob die Elemente an einem der beiden Ränder einer Ausrichtung oder an der Mitte ausgerichtet werden. Der Standardwert für beide Ausrichtungseigenschaften lautet jedoch **Stretch**. Bei der **Stretch**-Ausrichtung füllen die Elemente den Bereich, der im Layout bereitgestellt wird. **Stretch** ist die Standardeinstellung. Damit ist es einfacher, in den Fällen, in denen keine explizite Messung erfolgt oder kein [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921)-Wert aus dem Messungsdurchlauf des Layouts vorliegt, adaptive Layouttechniken zu verwenden. Mit dieser Standardeinstellung wird das Risiko vermieden, dass eine explizite Höhe/Breite nicht in den Container passt und vor der Größenfestlegung des Containers beschnitten wird.
 
-> **Hinweis**&nbsp;&nbsp;Als generelles Layoutprinzip ist es optimal, Messungen nur auf bestimmte Schlüsselelemente anzuwenden und das adaptive Layoutverhalten für die anderen Elemente zu verwenden. Dadurch wird ein flexibles Layoutverhalten für den Fall bereitgestellt, dass der Benutzer die Größe des oberen App-Fensters festlegt. Dies ist normalerweise jederzeit möglich.
+> [!NOTE]
+> Als generelles Layoutprinzip ist es optimal, nur auf bestimmte Schlüsselelemente Messungen anzuwenden und für die anderen Elemente das adaptive Layoutverhalten zu verwenden. Dadurch wird ein flexibles Layoutverhalten für den Fall bereitgestellt, dass der Benutzer die Größe des oberen App-Fensters festlegt. Dies ist normalerweise jederzeit möglich.
 
  
 Wenn in einem adaptiven Container [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718)- und [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751)-Werte vorhanden sind oder eine Beschneidung erfolgt, wird das Layout auch dann durch das Verhalten des zugehörigen Containers gesteuert, wenn **Stretch** als Ausrichtungswert festgelegt ist. In Bereichen agiert ein **Stretch**-Wert, der durch **Height** und **Width** ausgeschlossen wurde, als würde der Wert **Center** lauten.
@@ -33,13 +35,13 @@ Steuerelemente für Elemente zeigen mitunter Elemente an, deren Basistypen Daten
 
 Die Ausrichtungseigenschaften sind nur in den Fällen relevant, in denen in einer Dimension des übergeordneten Layoutcontainers Freiraum verfügbar ist. Wenn in einem Layoutcontainer Inhalte bereits beschnitten werden, kann sich die Ausrichtung auf den Bereich des Elements auswirken, auf den die Beschneidung angewendet wird. Wenn Sie beispielsweise `HorizontalAlignment="Left"` festlegen, wird die korrekte Größe des Elements beschnitten.
 
-## Rand
+## <a name="margin"></a>Rand
 
 Die [**Margin**](https://msdn.microsoft.com/library/windows/apps/br208724)-Eigenschaft beschreibt den Abstand zwischen einem Element und seinen Peers in einer Layoutsituation sowie den Abstand zwischen einem Element und dem Inhaltsbereich eines Containers, der das Element enthält. Betrachtet man Elemente als Begrenzungsrahmen oder Rechtecke, in denen [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) und [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) die Abmessungen darstellen, wird das **Margin**-Layout auf die Außenseite dieses Rechtecks angewendet, und **ActualHeight** und **ActualWidth** werden keine Pixel hinzugefügt. Der Rand wird auch nicht als Teil des Elements betrachtet, das für Treffertests und Eingabeereignisse der Quellenentnahme verwendet wird.
 
 In einem allgemeinen Layoutverhalten werden die Komponenten eines [**Margin**](https://msdn.microsoft.com/library/windows/apps/br208724)-Werts zuletzt beschränkt, und sie werden zudem erst beschränkt, nachdem [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) und [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) vollständig auf 0 beschränkt wurden. Gehen Sie daher mit Rändern vorsichtig vor, wenn der Container das Element bereits beschneidet oder beschränkt. Andernfalls kann ein Rand die Ursache dafür sein, dass ein Element scheinbar nicht dargestellt wird (weil eine seiner Abmessungen nach der Anwendung des Rands auf 0 beschränkt wurde).
 
-Mit einer Syntax wie `Margin="20"` können Sie einheitliche Randwerte festlegen. Mit dieser Syntax wird ein einheitlicher Rand von 20Pixeln auf das Element angewendet, und zwar ein 20-Pixel-Rand an der linken, oberen, rechten und unteren Seite. Randwerte können auch in Form unterschiedlicher Werte auftreten, wobei jeder Wert für einen unterschiedlichen Rand steht, der auf die linke, obere, rechte und untere Seite angewendet wird (in dieser Reihenfolge). Beispiel: `Margin="0,10,5,25"`. Der zugrunde liegende Typ für die [**Margin**](https://msdn.microsoft.com/library/windows/apps/br208724)-Eigenschaft ist eine [**Thickness**](https://msdn.microsoft.com/library/windows/apps/br208864)-Struktur mit Eigenschaften, die [**Left**](https://msdn.microsoft.com/library/windows/apps/hh673893)-, [**Top**](https://msdn.microsoft.com/library/windows/apps/hh673840)-, [**Right**](https://msdn.microsoft.com/library/windows/apps/hh673881)- und [**Bottom**](https://msdn.microsoft.com/library/windows/apps/hh673775)-Werte als separate **Double**-Werte enthalten.
+Mit einer Syntax wie `Margin="20"` können Sie einheitliche Randwerte festlegen. Mit dieser Syntax wird ein einheitlicher Rand von 20 Pixeln auf das Element angewendet, und zwar ein 20-Pixel-Rand an der linken, oberen, rechten und unteren Seite. Randwerte können auch in Form unterschiedlicher Werte auftreten, wobei jeder Wert für einen unterschiedlichen Rand steht, der auf die linke, obere, rechte und untere Seite angewendet wird (in dieser Reihenfolge). Beispiel: `Margin="0,10,5,25"`. Der zugrunde liegende Typ für die [**Margin**](https://msdn.microsoft.com/library/windows/apps/br208724)-Eigenschaft ist eine [**Thickness**](https://msdn.microsoft.com/library/windows/apps/br208864)-Struktur mit Eigenschaften, die [**Left**](https://msdn.microsoft.com/library/windows/apps/hh673893)-, [**Top**](https://msdn.microsoft.com/library/windows/apps/hh673840)-, [**Right**](https://msdn.microsoft.com/library/windows/apps/hh673881)- und [**Bottom**](https://msdn.microsoft.com/library/windows/apps/hh673775)-Werte als separate **Double**-Werte enthalten.
 
 Ränder sind additiv. Wenn beispielsweise zwei Elemente jeweils einen einheitlichen Rand von 10 Pixeln angeben und es sich dabei um benachbarte Peers mit beliebiger Ausrichtung handelt, beträgt der Abstand zwischen den Elementen 20 Pixel.
 
@@ -49,7 +51,7 @@ Die ordnungsgemäße Verwendung der [**Margin**](https://msdn.microsoft.com/libr
 
 Die [**Block**](https://msdn.microsoft.com/library/windows/apps/br244379)-Klasse, bei der es sich um eine Basisklasse für [**Paragraph**](https://msdn.microsoft.com/library/windows/apps/br244503) handelt, verfügt ebenfalls über eine [**Margin**](https://msdn.microsoft.com/library/windows/apps/jj191725)-Eigenschaft. Sie hat eine analoge Auswirkung darauf, wie dieser **Paragraph** in seinem übergeordneten Container positioniert wird (dabei handelt es sich normalerweise um ein [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/br227565)- oder [**RichEditBox**](https://msdn.microsoft.com/library/windows/apps/br227548)-Objekt) und auch darauf, wie mehrere Absätze im Verhältnis zu anderen **Block**-Peers der [**RichTextBlock.Blocks**](https://msdn.microsoft.com/library/windows/apps/br244347)-Sammlung positioniert werden.
 
-## Abstand
+## <a name="padding"></a>Abstand
 
 Eine **Padding**-Eigenschaft beschreibt den Abstand zwischen einem Element und beliebigen untergeordneten Elementen oder Inhalten, die es enthält. Inhalte werden als einzelner Begrenzungsrahmen behandelt, der alle Inhalte einschließt, sofern es sich um ein Element handelt, für das mehrere untergeordnete Elemente zulässig sind. Wenn es sich beispielsweise um ein [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/br242803)-Element handelt, das zwei Elemente enthält, wird die [**Padding**](https://msdn.microsoft.com/library/windows/apps/br209459)-Eigenschaft um den Begrenzungsrahmen herum angewendet, in dem die Elemente enthalten sind. Der **Padding**-Wert wird bei der Mess- und Anordnungsdurchlaufsberechnung für den Container von der verfügbaren Größe subtrahiert und ist Teil der gewünschten Größenwerte, wenn der Container selbst dem Layoutdurchlauf für die Inhalte unterzogen wird. Im Gegensatz zu [**Margin**](https://msdn.microsoft.com/library/windows/apps/br208724) ist **Padding** keine [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706)-Eigenschaft. Vielmehr sind verschiedene Klassen vorhanden, die jeweils ihre eigene **Padding**-Eigenschaft definieren:
 
@@ -60,28 +62,23 @@ Eine **Padding**-Eigenschaft beschreibt den Abstand zwischen einem Element und b
 
 In all diesen Fällen hat ein und dasselbe Element auch eine **Margin**-Eigenschaft. Wenn sowohl ein Rand als auch ein Abstand angewendet wird, sind sie dahingehend additiv, dass der offensichtliche Abstand zwischen einem äußeren Container und beliebigen inneren Containern dem Rand plus dem Abstand entspricht. Wenn auf Inhalte, Elemente oder Container unterschiedliche Hintergrundwerte angewendet werden, ist der Punkt, an dem der Rand endet und der Abstand beginnt, in der Darstellung potenziell sichtbar.
 
-## Dimensionen (Höhe, Breite)
+## <a name="dimensions-height-width"></a>Dimensionen (Höhe, Breite)
 
 Die [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718)-Eigenschaft und die [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751)-Eigenschaft für ein [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) haben oftmals Einfluss darauf, wie sich die Ausrichtungs-, Rand- und Abstandseigenschaften bei einem Layoutdurchlauf verhalten. Ein **Height**- und **Width**-Wert in Form einer reellen Zahl bricht insbesondere **Stretch**-Ausrichtungen ab und wird als mögliche Komponente des [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921)-Werts heraufgestuft, der während des Messdurchlaufs des Layouts bestimmt wird. **Height** und **Width** weisen Beschränkungseigenschaften auf: Der **Height**-Wert kann durch [**MinHeight**](https://msdn.microsoft.com/library/windows/apps/br208731) und [**MaxHeight**](https://msdn.microsoft.com/library/windows/apps/br208726) und der **Width**-Wert durch [**MinWidth**](https://msdn.microsoft.com/library/windows/apps/br208733) und [**MaxWidth**](https://msdn.microsoft.com/library/windows/apps/br208728) beschränkt werden. Zudem werden [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) und [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) berechnet. Dabei handelt es sich um schreibgeschützte Eigenschaften, die nur nach Abschluss eines Layoutdurchlaufs gültige Werte enthalten. Weitere Informationen dazu, wie die Abmessungen und Beschränkungen oder berechnete Eigenschaften miteinander in Verbindung stehen, finden Sie in den „Anmerkungen“ zu [**FrameworkElement.Height**](https://msdn.microsoft.com/library/windows/apps/br208718) und [**FrameworkElement.Width**](https://msdn.microsoft.com/library/windows/apps/br208751).
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 **Referenzen**
 
-[**FrameworkElement.Height**](https://msdn.microsoft.com/library/windows/apps/br208718)
-
-[**FrameworkElement.Width**](https://msdn.microsoft.com/library/windows/apps/br208751)
-
-[**FrameworkElement.HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208720)
-
-[**FrameworkElement.VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208749)
-
-[**FrameworkElement.Margin**](https://msdn.microsoft.com/library/windows/apps/br208724)
-
-[**Control.Padding**](https://msdn.microsoft.com/library/windows/apps/br209459)
+* [**FrameworkElement.Height**](https://msdn.microsoft.com/library/windows/apps/br208718)
+* [**FrameworkElement.Width**](https://msdn.microsoft.com/library/windows/apps/br208751)
+* [**FrameworkElement.HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208720)
+* [**FrameworkElement.VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208749)
+* [**FrameworkElement.Margin**](https://msdn.microsoft.com/library/windows/apps/br208724)
+* [**Control.Padding**](https://msdn.microsoft.com/library/windows/apps/br209459)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

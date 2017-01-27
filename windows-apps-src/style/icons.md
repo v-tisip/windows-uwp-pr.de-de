@@ -6,41 +6,43 @@ ms.assetid: b90ac02d-5467-4304-99bd-292d6272a014
 label: Icons
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: 9d19107a29c471a811e87fc548656ff2d970754d
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: f8cb9c36b42936b8dfd24bbd5f88e2cf500e930f
 
 ---
 
-# Symbole für UWP-Apps
+# <a name="icons-for-uwp-apps"></a>Symbole für UWP-Apps
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Gute Symbole harmonieren mit der Typografie und der übrigen Gestaltungssprache. Sie verwenden keine Metaphern und geben einfach und schnell nur die erforderlichen Informationen weiter. 
 
-## Größenabstufungen für lineare Skalierungen 
+## <a name="linear-scaling-size-ramps"></a>Größenabstufungen für lineare Skalierungen 
 
 <table>
     <tr> 
-        <td>16px x 16px</td>
-        <td>24px x 24px</td>
-        <td>32px x 32px</td>
-        <td>48px x 48px</td>
+        <td>16 px x 16 px</td>
+        <td>24 px x 24 px</td>
+        <td>32 px x 32 px</td>
+        <td>48 px x 48 px</td>
     </tr>
     <tr> 
-        <td>![Symbole mit 16x16 effektiven Pixeln](images/icons-16x16.png)</td>
-        <td>![Symbole mit 24x24 effektiven Pixeln](images/icons-24x24.png)</td>
-        <td>![Symbole mit 32x32 effektiven Pixeln](images/icons-32x32.png)</td>
-        <td>![Symbole mit 48x48 effektiven Pixeln](images/icons-48x48.png)</td>
+        <td>![Symbole mit 16 x 16 effektiven Pixeln](images/icons-16x16.png)</td>
+        <td>![Symbole mit 24 x 24 effektiven Pixeln](images/icons-24x24.png)</td>
+        <td>![Symbole mit 32 x 32 effektiven Pixeln](images/icons-32x32.png)</td>
+        <td>![Symbole mit 48 x 48 effektiven Pixeln](images/icons-48x48.png)</td>
     </tr>
 </table>
 
-## Häufige Formen
+## <a name="common-shapes"></a>Häufige Formen
 
 Grundsätzlich sollten Symbole den vorhandenen Platz mit geringem Abstand möglichst vollständig ausnutzen. Diese Formen sind Ausgangspunkte für die Bestimmung der Größe einfacher Formen. 
 
-![Raster der Größe 32x32px](images/icons-common-shapes.png)
+![Raster der Größe 32 x 32 px](images/icons-common-shapes.png)
 
 Verwenden Sie die Form, die der Ausrichtung des Symbols entspricht, und berücksichtigen Sie dabei diese grundlegenden Parameter. Symbole müssen die Form nicht unbedingt ausfüllen oder vollständig hinein passen. Sie können nach Bedarf angepasst werden, um ausgewogen zu wirken. 
 
-<table>
+<table class="uwpd-noborder">
     <tr>
         <td>Kreis<td>
         <td>Quadrat</td>
@@ -63,7 +65,7 @@ Verwenden Sie die Form, die der Ausrichtung des Symbols entspricht, und berücks
 
 </table>
 
-## Winkel
+## <a name="angles"></a>Winkel
 
 Neben der Verwendung des gleichen Rasters und der gleichen Linienbreite werden Symbole mit einheitlichen Elementen erstellt. 
 
@@ -98,7 +100,7 @@ Diese Linien können beim Erstellen von Symbolen kombiniert, verknüpft, gedreht
     </tr>
 </table>
 
-## Kurven
+## <a name="curves"></a>Kurven
 
 Kurvenlinien entstehen aus Abschnitten eines ganzen Kreises und sollten nur dann verzerrt werden, wenn dies für die Verankerung am Pixelraster erforderlich ist. 
 
@@ -117,19 +119,19 @@ Kurvenlinien entstehen aus Abschnitten eines ganzen Kreises und sollten nur dann
     </tr>    
 </table>
 
-## Geometrische Konstruktion
+## <a name="geometric-construction"></a>Geometrische Konstruktion
 
 Wir empfehlen, beim Erstellen von Symbolen ausschließlich rein geometrische Formen zu verwenden.
 
 ![Gitarrensymbol mit geometrischer Überlagerung ](images/icons-geometric-construction.png)
 
-## Gefüllte Formen 
+## <a name="filled-shapes"></a>Gefüllte Formen 
 
-Bei Bedarf können Symbole gefüllte Formen enthalten, aber sie sollten bei einer Rastergröße von 32×32px maximal 4px groß sein. Gefüllte Kreise dürfen maximal 6×6px groß sein. 
+Bei Bedarf können Symbole gefüllte Formen enthalten, aber sie sollten bei einer Rastergröße von 32 × 32 px maximal 4 px groß sein. Gefüllte Kreise dürfen maximal 6 × 6 px groß sein. 
 
-![Füllung mit 5pxx8px ](images/icons-filled-shapes.png)
+![Füllung mit 5 px x 8 px ](images/icons-filled-shapes.png)
 
-## Signale
+## <a name="badges"></a>Signale
 
 Ein „Signal“ ist ein allgemeiner Begriff zur Beschreibung eines Elements, das einem Symbol hinzugefügt wird, das nicht in das Ausgangselement des Symbols integriert werden soll. Diese enthalten in der Regel andere Informationen über das Symbol wie Status oder Aktion. Andere gängige Begriffe sind beispielsweise Überlagerung, Anmerkung oder Modifizierer. 
 
@@ -151,7 +153,7 @@ Statussignale nutzen ein ausgefülltes, farbiges Objekt, das sich auf dem Symbol
 </table>
 <p></p>
 
-### Signalfarbe 
+### <a name="badge-color"></a>Signalfarbe 
 
 Farbsignale sollten nur zur Angabe des Status eines Symbols verwendet werden. Die Farben für Statussignale übermitteln dem Benutzer bestimmte emotionale Botschaften. 
 
@@ -163,20 +165,20 @@ Farbsignale sollten nur zur Angabe des Status eines Symbols verwendet werden. Di
 </table>
 <p></p>
 
-### Signalposition
+### <a name="badge-position"></a>Signalposition
 
 Die Standardposition für jeden Status bzw. jede Aktion ist unten rechts. Verwenden Sie die anderen Positionen nur dann, wenn das Design die Standardposition nicht zulässt. 
 
-### Signalgröße
+### <a name="badge-sizing"></a>Signalgröße
 
-Signale sollten bei einem Raster der Größe 32×32px 10 bis 18px umfassen. 
+Signale sollten bei einem Raster der Größe 32 × 32 px 10 bis 18 px umfassen. 
 
-## Verwandte Artikel
+## <a name="related-articles"></a>Verwandte Artikel
 
 * [Richtlinien für die Ressourcen für Kacheln und Symbole](../controls-and-patterns/tiles-and-notifications-app-assets.md)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

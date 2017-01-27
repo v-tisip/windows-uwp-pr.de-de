@@ -6,13 +6,13 @@ ms.assetid: C8A158EF-70A9-4BA2-A270-7D08125700AC
 label: Mouse
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 5a26ff6380383965d51a6938db68ad8406941229
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: ed0c8e86d38865fad8bb784550b9b4fc61a8b40a
 
 ---
 
-# Mausinteraktionen
-
+# <a name="mouse-interactions"></a>Mausinteraktionen
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Optimieren Sie das Design Ihrer UWP-Apps für die Toucheingabe, und freuen Sie sich über die standardmäßige allgemeine Unterstützung von Mausgeräten.
 
@@ -24,11 +24,11 @@ Optimieren Sie das Design Ihrer UWP-Apps für die Toucheingabe, und freuen Sie s
 
 Die Mauseingabe eignet sich am besten für Benutzerinteraktionen, die Präzision beim Zeigen und Klicken erfordern. Naturgemäß unterstützt die Benutzeroberfläche von Windows diese Präzision, auch wenn sie für die ungenaue Toucheingabe optimiert wurde.
 
-Die Maus- und Toucheingabe unterscheiden sich dahingehend, dass bei der Toucheingabe die direkte Manipulation von UI-Elementen auf dem Bildschirm durch physische Gesten für diese Objekte (z.B. Streifen, Ziehen, Drehen usw.) emuliert werden kann. Manipulationen mit der Maus erfordern in der Regel einigen UI-Aufwand, wie z. B. die Verwendung von Handles für das Anpassen der Größe oder Drehen eines Objekts.
+Die Maus- und Toucheingabe unterscheiden sich dahingehend, dass bei der Toucheingabe die direkte Manipulation von UI-Elementen auf dem Bildschirm durch physische Gesten für diese Objekte (z. B. Streifen, Ziehen, Drehen usw.) emuliert werden kann. Manipulationen mit der Maus erfordern in der Regel einigen UI-Aufwand, wie z. B. die Verwendung von Handles für das Anpassen der Größe oder Drehen eines Objekts.
 
 In diesem Thema werden Designüberlegungen für Mausinteraktionen behandelt.
 
-## Die UWP-App-Sprache für Mauseingaben
+## <a name="the-uwp-app-mouse-language"></a>Die UWP-App-Sprache für Mauseingaben
 
 
 Ein kompakter Satz von Mausinteraktionen wird durchgängig im ganzen System verwendet.
@@ -51,7 +51,7 @@ Ein kompakter Satz von Mausinteraktionen wird durchgängig im ganzen System verw
 </tr>
 <tr class="even">
 <td align="left"><p>Linksklick, um primäre Aktion auszuführen</p></td>
-<td align="left"><p>Klicken Sie mit der linken Maustaste auf ein Element, um dessen primäre Aktion aufzurufen (z.B. das Starten einer App oder das Ausführen eines Befehls).</p></td>
+<td align="left"><p>Klicken Sie mit der linken Maustaste auf ein Element, um dessen primäre Aktion aufzurufen (z. B. das Starten einer App oder das Ausführen eines Befehls).</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>Bildlauf, um Ansicht zu ändern</p></td>
@@ -69,7 +69,7 @@ Ein kompakter Satz von Mausinteraktionen wird durchgängig im ganzen System verw
 </tr>
 <tr class="odd">
 <td align="left"><p>Benutzeroberflächenbefehle zum Zoomen</p></td>
-<td align="left"><p>Zeigen Sie Benutzeroberflächenbefehle auf der App-Leiste an (z.B. "+" und "-"), oder drücken Sie STRG und drehen Sie das Mausrad, um Zusammendrück- und Aufziehbewegungen zum Zoomen zu emulieren.</p></td>
+<td align="left"><p>Zeigen Sie Benutzeroberflächenbefehle auf der App-Leiste an (z. B. "+" und "-"), oder drücken Sie STRG und drehen Sie das Mausrad, um Zusammendrück- und Aufziehbewegungen zum Zoomen zu emulieren.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Benutzeroberflächenbefehle zum Drehen</p></td>
@@ -86,7 +86,7 @@ Ein kompakter Satz von Mausinteraktionen wird durchgängig im ganzen System verw
 </tbody>
 </table>
 
-## Mausereignisse
+## <a name="mouse-events"></a>Mausereignisse
 
 Reagieren Sie in Ihren Apps auf Mauseingaben, indem Sie die gleichen einfachen Zeigerereignisse behandeln, die Sie für Touch- und Stifteingaben verwenden.
 
@@ -101,12 +101,12 @@ Verwenden Sie [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br
 
 - [Eingabe: Gesten und Manipulationen mit GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkID=231605)
 
-## Richtlinien für visuelles Feedback
+## <a name="guidelines-for-visual-feedback"></a>Richtlinien für visuelles Feedback
 
 
 -   Wenn eine Maus erkannt wird (durch Bewegungs- oder Daraufzeigen-Ereignisse), zeigen Sie eine für Mausinteraktionen spezifische Benutzeroberfläche an, um auf vom Element verfügbar gemachte Funktionen hinzuweisen. Wenn die Maus für eine bestimmte Zeit nicht bewegt wird oder der Benutzer eine Fingereingabeinteraktion auslöst, blenden Sie die für Mausinteraktionen spezifische Benutzeroberfläche schrittweise aus. Somit bleibt die Benutzeroberfläche sauber und aufgeräumt.
 -   Verwenden Sie nicht den Cursor für Zeigefeedback, das Feedback des Elements reicht aus (siehe Cursor unten).
--   Zeigen Sie kein visuelles Feedback an, wenn ein Element keine Interaktionen unterstützt (z.B. statischer Text).
+-   Zeigen Sie kein visuelles Feedback an, wenn ein Element keine Interaktionen unterstützt (z. B. statischer Text).
 -   Verwenden Sie keine Fokusrechtecke für Mausinteraktionen. Diese sind ausschließlich für Tastaturinteraktionen vorgesehen.
 -   Zeigen Sie für alle Elemente, die das gleiche Eingabeziel darstellen, das gleiche visuelle Feedback an.
 -   Stellen Sie Schaltflächen (z. B. „+“ und „-“) zur Verfügung, um fingereingabebasierte Manipulationen wie etwa Schwenken, Drehen, Zoomen usw. zu emulieren.
@@ -114,7 +114,7 @@ Verwenden Sie [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br
 Allgemeine Informationen zum visuellen Feedback finden Sie unter [Richtlinien für visuelles Feedback](guidelines-for-visualfeedback.md).
 
 
-## Cursor
+## <a name="cursors"></a>Cursor
 
 
 Für einen Mauszeiger ist eine Reihe von Standardcursor verfügbar. Diese geben die primäre Aktion eines Elements an.
@@ -129,7 +129,7 @@ Beachten Sie beim Anpassen des Mauszeigers Folgendes:
 -   Verwenden Sie die Cursor für horizontale, vertikale und diagonale Größenänderung (![Cursor für vertikale Größenänderung](images/cursor-vertical.png), ![Cursor für horizontale Größenänderung](images/cursor-horizontal.png), ![Cursor für diagonale Größenänderung (unten links, oben rechts)](images/cursor-diagonal2.png), ![Cursor für diagonale Größenänderung (oben links, unten rechts)](images/cursor-diagonal1.png)), wenn die Größe eines Objekts geändert werden kann.
 -   Verwenden Sie den Handcursor (![Handcursor (offen)](images/cursor-pan1.png), ![Handcursor (geschlossen)](images/cursor-pan2.png)) beim Verschieben von Inhalt innerhalb einer Canvas (etwa bei einer Karte).
 
-## Verwandte Artikel
+## <a name="related-articles"></a>Verwandte Artikel
 
 * [Behandeln von Zeigereingaben](handle-pointer-input.md)
 * [Identifizieren von Eingabegeräten](identify-input-devices.md)
@@ -156,6 +156,6 @@ Beachten Sie beim Anpassen des Mauszeigers Folgendes:
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

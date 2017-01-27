@@ -4,8 +4,8 @@ title: Starten, Fortsetzen und Hintergrundaufgaben
 description: In diesem Abschnitt wird beschrieben, was passiert, wenn eine UWP-App (Universelle Windows-Plattform) gestartet, angehalten, fortgesetzt und beendet wird.
 ms.assetid: 75011D52-1511-4ECF-9DF6-52CBBDB15BD7
 translationtype: Human Translation
-ms.sourcegitcommit: a21b2e9bb41e951660916bbbdb09b0bd3e5ecf2d
-ms.openlocfilehash: 7667cfb9671a7517a394f6f691aef4c305c02087
+ms.sourcegitcommit: 32737991b31eaceb33fc2ecb5152def167c36fdd
+ms.openlocfilehash: 6b350ef65f381d18585c8b080c6259f7607c7bf9
 
 ---
 
@@ -33,7 +33,8 @@ In diesem Abschnitt wird der Lebenszyklus einer Windows 10-App für die Universe
 | [Behandeln der App-Aktivierung](activate-an-app.md)     | Hier erfahren Sie, wie die App-Aktivierung behandelt wird.                                                                             |
 | [Behandeln des Anhaltens von Apps](suspend-an-app.md)         | Hier erfahren Sie, wie Sie wichtige Anwendungsdaten speichern, wenn das System die App anhält.                                 |
 | [Behandeln der App-Fortsetzung](resume-an-app.md)           | Erfahren Sie, wie Sie den angezeigten Inhalt aktualisieren, wenn das System die App fortsetzt.                                        |
-| [Freigeben von Speicher, wenn Ihre App in den Hintergrund verschoben wird](reduce-memory-usage.md)           | Erfahren Sie, wie Sie die bei der Ausführung im Hintergrund von Ihrer App verwendete Arbeitsspeichermenge reduzieren, damit sie nicht beendet wird.                                        |
+| [Freigeben von Speicher, wenn Ihre App in den Hintergrund verschoben wird](reduce-memory-usage.md) | Erfahren Sie, wie Sie die bei der Ausführung im Hintergrund von Ihrer App verwendete Arbeitsspeichermenge reduzieren, damit sie nicht beendet wird.|
+| [Ausführen während der Minimierung mithilfe der erweiterten Ausführung](run-minimized-with-extended-execution.md) | Erfahren Sie, wie Sie die erweiterte Ausführung verwenden, damit Ihre App auch bei Minimierung weiter ausgeführt wird. |
 
 ## <a name="launch-apps"></a>Starten von Apps
 
@@ -118,6 +119,6 @@ Im Abschnitt [Begrüßungsbildschirme](splash-screens.md) wird beschrieben, wie 
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

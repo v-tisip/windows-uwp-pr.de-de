@@ -6,17 +6,17 @@ ms.assetid: 858FB05E-87A2-49CF-BE48-570980AD36C8
 label: Adaptive tile schema and templates
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 08bdb46dba6fc93ada20b3fc585d3e24e29023a0
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 70c06949ee9ac8f9a3f914fc4e020de0460124fa
 
 ---
-# Vorlagen für adaptive Kacheln: Schema und Richtlinien
+# <a name="adaptive-tile-templates-schema-and-guidance"></a>Vorlagen für adaptive Kacheln: Schema und Richtlinien
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Im Folgenden werden Elemente und Attribute aufgeführt, mit denen Sie adaptive Kacheln erstellen können. Anweisungen und Beispiele finden Sie unter [Erstellen adaptiver Kacheln](tiles-and-notifications-create-adaptive-tiles.md).
 
-## Kachel-Element
+## <a name="tile-element"></a>Kachel-Element
 
 
 ``` xml
@@ -28,7 +28,7 @@ Im Folgenden werden Elemente und Attribute aufgeführt, mit denen Sie adaptive K
 </tile>
 ```
 
-## Visuelles Element
+## <a name="visual-element"></a>Visuelles Element
 
 
 ``` xml
@@ -47,7 +47,7 @@ Im Folgenden werden Elemente und Attribute aufgeführt, mit denen Sie adaptive K
 </visual>
 ```
 
-## Bindungselement
+## <a name="binding-element"></a>Bindungselement
 
 
 ``` xml
@@ -72,7 +72,7 @@ Im Folgenden werden Elemente und Attribute aufgeführt, mit denen Sie adaptive K
 </binding>
 ```
 
-## Bildelement
+## <a name="image-element"></a>Bildelement
 
 
 ``` xml
@@ -86,7 +86,7 @@ Im Folgenden werden Elemente und Attribute aufgeführt, mit denen Sie adaptive K
   hint-align? = "stretch" | "left" | "center" | "right" />
 ```
 
-## Textelement
+## <a name="text-element"></a>Textelement
 
 
 ``` xml
@@ -103,9 +103,9 @@ Im Folgenden werden Elemente und Attribute aufgeführt, mit denen Sie adaptive K
 </text>
 ```
 
-textStyle values: caption captionSubtle body bodySubtle base baseSubtle subtitle subtitleSubtle title titleSubtle titleNumeral subheader subheaderSubtle subheaderNumeral header headerSubtle headerNumber
+textStyle values: caption captionSubtle body bodySubtle base baseSubtle subtitle subtitleSubtle title titleSubtle titleNumeral subheader subheaderSubtle subheaderNumeral header headerSubtle headerNumeral
 
-## Gruppenelement
+## <a name="group-element"></a>Gruppenelement
 
 
 ``` xml
@@ -117,7 +117,7 @@ textStyle values: caption captionSubtle body bodySubtle base baseSubtle subtitle
 </group>
 ```
 
-## Untergruppenelement
+## <a name="subgroup-element"></a>Untergruppenelement
 
 
 ``` xml
@@ -133,7 +133,7 @@ textStyle values: caption captionSubtle body bodySubtle base baseSubtle subtitle
 </subgroup>
 ```
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 
 * [Erstellen adaptiver Kacheln](tiles-and-notifications-create-adaptive-tiles.md)
@@ -147,6 +147,6 @@ textStyle values: caption captionSubtle body bodySubtle base baseSubtle subtitle
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

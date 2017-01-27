@@ -5,25 +5,33 @@ title: Toucheingabe-Interaktionen
 ms.assetid: DA6EBC88-EB18-4418-A98A-457EA1DEA88A
 label: Touch interactions
 template: detail.hbs
+keywords: Touch, Zeiger, Eingabe, Benutzerinteraktion
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 526493614666424089199063013b5fc72d9bc5d8
-ms.openlocfilehash: db38bfecadb7568e602646222358e0a111c638bc
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: 26f80e2619ea7b80a49d54278507c83461fe2336
 
 ---
 
-# Toucheingabe-Interaktionen
-
+# <a name="touch-interactions"></a>Toucheingabe-Interaktionen
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Gehen Sie beim Entwerfen Ihrer App davon aus, dass die Benutzer in erster Linie die Toucheingabe als Eingabemethode verwenden werden. Wenn Sie UWP-Steuerelemente verwenden, ist keine zusätzliche Programmierung für die Unterstützung von Touchpad, Maus und Zeichen-/Eingabestift erforderlich, da sie in UWP-Apps standardmäßig bereitgestellt wird.
 
 Bedenken Sie dabei jedoch, dass eine für Toucheingaben optimierte Benutzeroberfläche einer herkömmlichen Benutzeroberfläche nicht in jedem Fall überlegen ist. Beide haben Vor- und Nachteile, die je nach Technologie oder Anwendung unterschiedlich sein können. Sie müssen beim Übergang zu einer vorrangig auf Toucheingabe ausgelegten UI die wichtigsten Unterschiede zwischen Toucheingabe (einschließlich des Touchpads) und Eingabe über Maus, Zeichen- oder Eingabestift und Tastatur verstehen.
 
-**Wichtige APIs**
-
--   [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
--   [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383)
--   [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)
-
+<div class="important-apis" >
+<b>Wichtige APIs</b><br/>
+<ul>
+<li>[**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)</li>
+<li>[**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383)</li>
+<li>[**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)</li>
+</ul>
+</div>
 
 
 Viele Geräte verfügen über Multitouch-Bildschirme, die eine Eingabe mit einem oder mehreren Fingern (oder Berührungskontakten) unterstützen. Die Berührungskontakte und ihre Bewegung werden als Touchbewegungen und Manipulationen interpretiert, um verschiedene Benutzerinteraktionen zu unterstützen.
@@ -38,21 +46,21 @@ Interaktionen per Toucheingabe erfordern drei Dinge:
 
 Mögliche vom Berührungssensor bereitgestellte Eingabedaten:
 
--   Interpretation als physische Geste für die direkte Manipulation von einem oder mehreren UI-Elementen (z.B. Schwenken, Drehen, Vergrößern/Verkleinern oder Verschieben). Die Interaktion mit einem Element über das zugehörige Eigenschaftenfenster, Dialogfeld oder ein anderes UI-Angebot gilt dagegen als indirekte Manipulation.
--   Erkennung als alternative Eingabemethode, z.B. Maus oder Stift.
--   Wird zum Ergänzen oder Ändern von Aspekten anderer Eingabemethoden verwendet, z.B. zum Verwischen eines mit einem Stift gezeichneten Freihandstrichs.
+-   Interpretation als physische Geste für die direkte Manipulation von einem oder mehreren UI-Elementen (z. B. Schwenken, Drehen, Vergrößern/Verkleinern oder Verschieben). Die Interaktion mit einem Element über das zugehörige Eigenschaftenfenster, Dialogfeld oder ein anderes UI-Angebot gilt dagegen als indirekte Manipulation.
+-   Erkennung als alternative Eingabemethode, z. B. Maus oder Stift.
+-   Wird zum Ergänzen oder Ändern von Aspekten anderer Eingabemethoden verwendet, z. B. zum Verwischen eines mit einem Stift gezeichneten Freihandstrichs.
 
 In der Regel beinhaltet die Toucheingabe die direkte Manipulation eines Elements auf dem Bildschirm. Das Element reagiert sofort auf alle Berührungen in seinem Treffertestbereich und reagiert entsprechend auf alle nachfolgenden Bewegungen des Touchkontakts, einschließlich dessen Entfernung.
 
 Benutzerdefinierte Touchgesten und Interaktionen sollten sorgfältig entworfen werden. Sie sollten intuitiv, reaktionsfähig und leicht auffindbar sein und eine optimale Benutzererfahrung mit Ihrer App sicherstellen.
 
-Stellen Sie sicher, dass die App-Funktionen konsistent auf allen unterstützten Eingabegerätetypen verfügbar sind. Verwenden Sie bei Bedarf eine Form von indirektem Eingabemodus, z.B. die Texteingabe für Tastaturinteraktionen oder UI-Angebote für Maus und Stift.
+Stellen Sie sicher, dass die App-Funktionen konsistent auf allen unterstützten Eingabegerätetypen verfügbar sind. Verwenden Sie bei Bedarf eine Form von indirektem Eingabemodus, z. B. die Texteingabe für Tastaturinteraktionen oder UI-Angebote für Maus und Stift.
 
 Bedenken Sie, dass herkömmliche Eingabegeräte (wie Maus und Tastatur) für viele Benutzer vertraut sind und gerne verwendet werden. Sie bieten häufig Faktoren wie Geschwindigkeit, Genauigkeit und klares Feedback, die bei der Toucheingabe unter Umständen nicht gegeben sind.
 
 Mit den einzigartigen und speziellen Interaktionserfahrungen für alle Eingabegeräte unterstützen Sie eine breite Palette an Funktionen und Einstellungen und wenden sich an eine möglichst breite Zielgruppe. Auf diese Weise gewinnen Sie mehr Kunden für Ihre App.
 
-## Vergleich der Anforderungen für Toucheingabe-Interaktionen
+## <a name="compare-touch-interaction-requirements"></a>Vergleich der Anforderungen für Toucheingabe-Interaktionen
 
 In der folgenden Tabelle sind einige der Unterschiede zwischen den Eingabegeräten aufgeführt, die Sie berücksichtigen sollten, wenn Sie für die Toucheingabe optimierte UWP-Apps entwerfen.
 
@@ -76,18 +84,18 @@ In der folgenden Tabelle sind einige der Unterschiede zwischen den Eingabegerät
 
 
 **Hinweis**  
-Die indirekte Eingabe hat den Vorteil, dass sie über 25Jahre optimiert wurde. Features wie durch Zeigen ausgelöste QuickInfos wurden als Lösung für die Erforschung der UI speziell für die Eingabe über Touchpad, Maus, Zeichen- oder Eingabestift und Tastatur entworfen. Solche UI-Funktionen wurden neu entworfen, um der umfassenden Toucheingabefunktion gerecht zu werden, ohne die Benutzererfahrung auf den anderen Geräten zu beeinträchtigen.
+Die indirekte Eingabe hat den Vorteil, dass sie über 25 Jahre optimiert wurde. Features wie durch Zeigen ausgelöste QuickInfos wurden als Lösung für die Erforschung der UI speziell für die Eingabe über Touchpad, Maus, Zeichen- oder Eingabestift und Tastatur entworfen. Solche UI-Funktionen wurden neu entworfen, um der umfassenden Toucheingabefunktion gerecht zu werden, ohne die Benutzererfahrung auf den anderen Geräten zu beeinträchtigen.
 
  
 
-## Verwenden von Feedback für die Fingereingabe
+## <a name="use-touch-feedback"></a>Verwenden von Feedback für die Fingereingabe
 
-Durch entsprechendes visuelles Feedback bei Interaktionen mit der App helfen Sie den Benutzern, zu erkennen und zu lernen, wie ihre Interaktionen von der App und von Windows8 interpretiert werden, und sich daran anzupassen. Visuelles Feedback kann auf erfolgreiche Interaktionen hinweisen, über den Systemstatus informieren, das Gefühl der Kontrolle verstärken, Fehler verringern, Benutzern das Verständnis des Systems und des Eingabegeräts erleichtern und zu Interaktionen ermutigen.
+Durch entsprechendes visuelles Feedback bei Interaktionen mit der App helfen Sie den Benutzern, zu erkennen und zu lernen, wie ihre Interaktionen von der App und von Windows 8 interpretiert werden, und sich daran anzupassen. Visuelles Feedback kann auf erfolgreiche Interaktionen hinweisen, über den Systemstatus informieren, das Gefühl der Kontrolle verstärken, Fehler verringern, Benutzern das Verständnis des Systems und des Eingabegeräts erleichtern und zu Interaktionen ermutigen.
 
 Visuelles Feedback ist wichtig, wenn der Benutzer die Fingereingabe für Aktivitäten verwendet, bei denen Positionsgenauigkeit gefragt ist. Zeigen Sie immer Feedback an, wenn Toucheingabe erkannt wird, damit der Benutzer die von der App und den Steuerelementen definierten angepassten Zielbestimmungsregeln versteht.
 
 
-## Zielbestimmung
+## <a name="targeting"></a>Zielbestimmung
 
 Die Zielbestimmung wird durch Folgendes optimiert:
 
@@ -107,14 +115,14 @@ Die Zielbestimmung wird durch Folgendes optimiert:
 
     Eng angeordnete Elemente (beispielsweise Hyperlinks) können leicht erneut als Ziel bestimmt werden, indem Sie mit dem Finger auf das Element drücken und ohne Ziehen mit dem Finger leicht über den Elementen hin- und herwackeln. Aufgrund von Okklusion wird das aktuelle Element durch eine QuickInfo oder die Statusleiste identifiziert und aktiviert, wenn der Finger gehoben wird.
 
-## Genauigkeit
+## <a name="accuracy"></a>Genauigkeit
 
 Berücksichtigen Sie beim Design ungenaue Interaktionen, indem Sie Folgendes verwenden:
 
 -   Andockpunkte, die bei Interaktionen der Benutzer mit dem Inhalt das Anhalten an der gewünschten Position erleichtern.
 -   Führungsschienen für die Richtung, die beim vertikalen oder horizontalen Verschieben unterstützen, auch wenn die Hand in einem leichten Bogen bewegt wird. Weitere Informationen finden Sie unter [Richtlinien für Verschiebung](guidelines-for-panning.md).
 
-## Okklusion
+## <a name="occlusion"></a>Okklusion
 
 Okklusion durch Finger und Hand können Sie durch Folgendes vermeiden:
 
@@ -134,7 +142,7 @@ Okklusion durch Finger und Hand können Sie durch Folgendes vermeiden:
 
     Wenn Präzision erforderlich ist (beispielsweise bei der Textauswahl), stellen Sie versetzte Auswahlziehpunkte bereit, um die Genauigkeit zu verbessern. Weitere Informationen finden Sie unter [Richtlinien für die Text- und Bildauswahl (Windows-Runtime-Apps)](guidelines-for-textselection.md).
 
-## Zeitliche Steuerung
+## <a name="timing"></a>Zeitliche Steuerung
 
 Vermeiden Sie zeitlich festgelegte Modusänderungen und verwenden Sie stattdessen direkte Manipulation. Bei der direkten Manipulation wird die direkte physische Handhabung eines Objekts in Echtzeit simuliert. Das Objekt reagiert, wenn die Finger bewegt werden.
 
@@ -153,14 +161,14 @@ Darüber hinaus wird Folgendes dringend empfohlen:
 -   Die Interaktionen sollten zusammengesetzte Manipulationen unterstützen. Beispiel: Zoomen durch Zusammendrücken und gleichzeitiges Ziehen der Finger, um etwas zu verschieben.
 -   Die Interaktionen sollten nicht anhand der Zeit unterschieden werden. Eine Interaktion sollte unabhängig von der Ausführungsdauer immer zum gleichen Ergebnis führen. Zeitbasierte Aktivierungen führen zu obligatorischen Verzögerungen für Benutzer und beeinträchtigen die immersive Natur der direkten Manipulation und die Wahrnehmung der Reaktion des Systems.
 
-    **Hinweis**  Eine Ausnahme ist die Verwendung bestimmter zeitlich festgelegter Interaktionen zur Unterstützung beim Testen und Erkunden (z.B. Drücken und Halten).
+    **Hinweis**  Eine Ausnahme ist die Verwendung bestimmter zeitlich festgelegter Interaktionen zur Unterstützung beim Testen und Erkunden (z. B. Drücken und Halten).
 
      
 
 -   Entsprechende Beschreibungen und visuelle Hinweise haben einen großen Einfluss auf die Verwendung erweiterter Interaktionen.
 
 
-## App-Ansichten
+## <a name="app-views"></a>App-Ansichten
 
 
 Mithilfe der Einstellungen für Bewegungen/Bildläufe und Zoomstufen können Sie die Interaktionsmöglichkeiten für Benutzer Ihrer App-Ansichten optimieren. Die App-Ansicht bestimmt, wie ein Benutzer auf Ihre App und deren Inhalte zugreift und diese manipuliert. Ansichten stellen außerdem bestimmte Verhaltensweisen bereit, beispielsweise das Trägheitsverhalten, das „Springen“ an Inhaltsgrenzen und die Andockpunkte.
@@ -173,7 +181,7 @@ Verwenden Sie App-Ansichten und -Ereignisse zum Ändern des Verhaltens für Schw
 
 Weitere Informationen zu App-Ansichten finden Sie unter [Steuerelemente, Layouts und Text](https://msdn.microsoft.com/library/windows/apps/mt228348).
 
-## Benutzerdefinierte Touchinteraktionen
+## <a name="custom-touch-interactions"></a>Benutzerdefinierte Touchinteraktionen
 
 
 Wenn Sie eine eigene Interaktionsunterstützung implementieren, sollten Sie daran denken, dass die Benutzer eine intuitive Umgebung erwarten, die die direkte Interaktion mit den UI-Elementen der App beinhaltet. Es empfiehlt sich, die benutzerdefinierten Interaktionen auf der Basis der Plattformsteuerelementbibliotheken zu modellieren, um auf diese Weise für eine konsistente und intuitive Benutzerumgebung zu sorgen. Die Steuerelemente in diesen Bibliotheken bieten umfassende Funktionen für Benutzerinteraktionen wie Standardinteraktionen, animierte Bewegungseffekte, visuelles Feedback und Barrierefreiheit. Erstellen Sie benutzerdefinierte Interaktionen nur dann, wenn ein eindeutiger, klar umrissener Bedarf besteht und es keine Basisinteraktion gibt, die das gewünschte Szenario unterstützt.
@@ -190,7 +198,7 @@ Zum Bereitstellen von angepasster Toucheingabeunterstützung können Sie verschi
 
 -   Manipulationsgestikereignisse wie [**ManipulationStarted**](https://msdn.microsoft.com/library/windows/apps/br208950) weisen auf eine fortlaufende Interaktion hin. Sie werden ausgelöst, wenn der Benutzer ein Element berührt, und bleiben so lange aktiv, bis der Benutzer den bzw. die Finger vom Element hebt oder die Manipulation abgebrochen wird.
 
-    Manipulationsereignisse umfassen Multitouchinteraktionen wie Zoomen, Schwenken und Drehen sowie Interaktionen, die Trägheits- und Geschwindigkeitsdaten nutzen (z.B. Ziehen). Die von den Bearbeitungsereignissen bereitgestellten Informationen identifizieren nicht die Form der ausgeführten Interaktion. Stattdessen enthalten sie Daten, z.B. zu Position, Übersetzungsdelta und Geschwindigkeit. Mit diesen Touchdaten können Sie die Art der auszuführenden Interaktion ermitteln.
+    Manipulationsereignisse umfassen Multitouchinteraktionen wie Zoomen, Schwenken und Drehen sowie Interaktionen, die Trägheits- und Geschwindigkeitsdaten nutzen (z. B. Ziehen). Die von den Bearbeitungsereignissen bereitgestellten Informationen identifizieren nicht die Form der ausgeführten Interaktion. Stattdessen enthalten sie Daten, z. B. zu Position, Übersetzungsdelta und Geschwindigkeit. Mit diesen Touchdaten können Sie die Art der auszuführenden Interaktion ermitteln.
 
 Hier sehen Sie den grundlegenden Satz von Touchgesten, die von der UWP unterstützt werden.
 
@@ -210,12 +218,12 @@ Hier sehen Sie den grundlegenden Satz von Touchgesten, die von der UWP unterstü
 For more info about gestures, manipulations, and interactions, see [Custom user interactions](custom-user-input-portal.md).
 -->
 
-## Gestikereignisse
+## <a name="gesture-events"></a>Gestikereignisse
 
 
 In der [Steuerelementliste](https://msdn.microsoft.com/library/windows/apps/mt185406) finden Sie ausführliche Informationen zu einzelnen Steuerelementen.
 
-## Zeigerereignisse
+## <a name="pointer-events"></a>Zeigerereignisse
 
 
 Zeigerereignisse werden durch eine Vielzahl von aktiven Eingabequellen ausgelöst, darunter Toucheingabe, Touchpad, Stift und Maus (sie ersetzen herkömmliche Mausereignisse.)
@@ -424,7 +432,7 @@ Private Sub touchRectangle_PointerPressed(sender As Object, e As PointerRoutedEv
 End Sub
 ```
 
-## Manipulationsereignisse
+## <a name="manipulation-events"></a>Manipulationsereignisse
 
 
 Verwenden Sie Manipulationsereignisse, wenn Sie in Ihrer App Mehrfingereingabe-Interaktionen oder Interaktionen unterstützen müssen, die Geschwindigkeitsdaten erfordern.
@@ -449,7 +457,7 @@ Nachfolgend finden Sie eine Liste der Manipulationsereignisse und der jeweiligen
 
  
 
-Eine Bewegung setzt sich aus einer Reihe von Bearbeitungsereignissen zusammen. Jede Geste beginnt mit einem [**ManipulationStarted**](https://msdn.microsoft.com/library/windows/apps/br208950) (z.B., wenn ein Benutzer den Bildschirm berührt).
+Eine Bewegung setzt sich aus einer Reihe von Bearbeitungsereignissen zusammen. Jede Geste beginnt mit einem [**ManipulationStarted**](https://msdn.microsoft.com/library/windows/apps/br208950) (z. B., wenn ein Benutzer den Bildschirm berührt).
 
 Anschließend wird mindestens ein [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946)-Ereignis ausgelöst. Beispielsweise, wenn Sie den Bildschirm berühren und dann den Finger über den Bildschirm ziehen. Schließlich wird ein [**ManipulationCompleted**](https://msdn.microsoft.com/library/windows/apps/br208945)-Ereignis ausgelöst, wenn die Interaktion beendet ist.
 
@@ -600,12 +608,12 @@ Private Sub testRectangle_ManipulationDelta(
 End Sub
 ```
 
-## Routingereignisse
+## <a name="routed-events"></a>Routingereignisse
 
 
 Alle hier erwähnten Zeiger-, Gestik- und Manipulationsereignisse werden als *Routingereignisse* implementiert. Folglich kann das Ereignis potenziell auch von Objekten behandelt werden, bei denen es sich nicht um das Objekt handelt, von dem das Ereignis ursprünglich ausgelöst wurde. Von aufeinander folgenden übergeordneten Elementen in einer Objektstruktur (wie etwa den übergeordneten Containern eines [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)-Elements oder dem [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503)-Stammelement Ihrer App) können diese Ereignisse auch dann behandelt werden, wenn sie vom ursprünglichen Element nicht behandelt werden. Umgekehrt gilt: Ein Objekt, von dem das Ereignis nicht behandelt wird, kann das Ereignis als behandelt markieren, damit es keine übergeordneten Elemente mehr erreicht. Weitere Informationen zum Konzept der Routingereignisse sowie zu den Auswirkungen auf die Erstellung von Handlern für Routingereignisse finden Sie unter [Übersicht über Ereignisse und Routingereignisse](https://msdn.microsoft.com/library/windows/apps/hh758286).
 
-## Empfohlene und nicht empfohlene Vorgehensweisen
+## <a name="dos-and-donts"></a>Empfohlene und nicht empfohlene Vorgehensweisen
 
 
 -   Entwerfen Sie Apps mit Toucheingabe als primär erwartete Eingabemethode.
@@ -617,7 +625,7 @@ Alle hier erwähnten Zeiger-, Gestik- und Manipulationsereignisse werden als *Ro
 -   Verwenden Sie nach Möglichkeit nicht die Anzahl der zu verwendenden Finger, um zwischen den Manipulationen zu unterscheiden.
 
 
-## Verwandte Artikel
+## <a name="related-articles"></a>Verwandte Artikel
 
 * [Behandeln von Zeigereingaben](handle-pointer-input.md)
 * [Identifizieren von Eingabegeräten](identify-input-devices.md)
@@ -645,6 +653,6 @@ Alle hier erwähnten Zeiger-, Gestik- und Manipulationsereignisse werden als *Ro
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

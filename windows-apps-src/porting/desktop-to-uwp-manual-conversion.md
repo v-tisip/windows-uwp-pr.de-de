@@ -4,8 +4,8 @@ Description: Zeigt, wie Sie eine Windows-Desktopanwendung (z. B. Win32, WPF und 
 Search.Product: eADQiWindows 10XVcnh
 title: Manuelles Konvertieren einer Windows-Desktopanwendung in eine UWP-App (Universelle Windows-Plattform)
 translationtype: Human Translation
-ms.sourcegitcommit: ee697323af75f13c0d36914f65ba70f544d046ff
-ms.openlocfilehash: f55f3bd6479cdf076c51cf574b07bfb5ce3a805c
+ms.sourcegitcommit: b612b2c94de79f48a375ae3469c35dee6ce3939d
+ms.openlocfilehash: 73f30d564fcec1b748b4d59ff545e25b62b1c719
 
 ---
 
@@ -57,21 +57,7 @@ Ihre _appxmanifest.xml_-Datei muss (mindestens) den folgenden Inhalt aufweisen. 
     </Package>
 ```
 
-## <a name="add-unplated-assets"></a>Hinzufügen von unbeschichteten Ressourcen
-
-Hier erfahren Sie, wie Sie die 44x44-Ressourcen für Ihre App konfigurieren, die auf der Taskleiste angezeigt werden.
-
-1. Rufen Sie die richtigen 44x44-Bilder ab, und kopieren Sie sie in den Ordner, der Ihre Bilder (d. h. Ressourcen) enthält.
-
-2. Erstellen Sie für jedes 44x44-Bild eine Kopie im selben Ordner, und hängen Sie *.targetsize-44_altform-unplated* an den Dateinamen an. Sie sollten zwei Kopien von jedem Symbol haben, jeweils spezifisch benannt. Nach Abschluss des Vorgangs könnte Ihr Ressourcenordner beispielsweise *MYAPP_44x44.png* und *MYAPP_44x44.targetsize-44_altform-unplated.png* enthalten. (Hinweis: Das erste Symbol ist das Symbol, auf das in der appxmanifest-Datei unter dem VisualElements-Attribut *Square44x44Logo* verwiesen wird.) 
-
-3.  Legen Sie in der Appxmanifest-Datei die Hintergrundfarbe für jedes von Ihnen bearbeitete Symbol auf „Transparent“ fest. Sie finden dieses Attribut unter VisualElements für die einzelnen Anwendungen.
-
-4.  Öffnen Sie CMD, ändern Sie das Verzeichnis in den Stammordner des Pakets, und erstellen Sie mit dem Befehl ```makepri createconfig /cf priconfig.xml /dq en-US``` eine priconfig.xml-Datei.
-
-5.  Bleiben Sie im Stammordner des Pakets, und erstellen Sie mit CMD mittels des Befehls ```makepri new /pr <PHYSICAL_PATH_TO_FOLDER> /cf <PHYSICAL_PATH_TO_FOLDER>\priconfig.xml``` die resources.pri-Datei(en). Der Befehl für Ihre App könnte beispielsweise wie folgt aussehen: ```makepri new /pr c:\MYAPP /cf c:\MYAPP\priconfig.xml```. 
-
-6.  Verpacken Sie Ihre AppX-Datei mithilfe der Anweisungen im nächsten Schritt, um die Ergebnisse anzuzeigen.
+Sie haben unbeschichtete Ressourcen, die Sie hinzufügen möchten? Ausführliche Informationen zur Vorgehensweise finden Sie weiter unten in diesem Artikel im Abschnitt [Unbeschichtete Ressourcen](#unplated-assets).
 
 ## <a name="run-the-makeappx-tool"></a>Ausführen des MakeAppX-Tools
 
@@ -106,14 +92,28 @@ C:\> MakeCert.exe -r -h 0 -n "CN=<publisher_name>" -eku 1.3.6.1.5.5.7.3.3 -pe -s
 C:\> pvk2pfx.exe -pvk <my.pvk> -spc <my.cer> -pfx <my.pfx>
 C:\> signtool.exe sign -f <my.pfx> -fd SHA256 -v .\<outputAppX>.appx
 ```
-
 Wenn Sie beim Ausführen von MakeCert.exe zum Eingeben eines Kennworts aufgefordert werden, wählen Sie **Kein**. Weitere Informationen zu Zertifikaten und zum Signieren finden Sie unter: 
 
 - [Gewusst wie: Erstellen temporärer Zertifikate für die Verwendung während der Entwicklung](https://msdn.microsoft.com/library/ms733813.aspx)
-
 - [SignTool](https://msdn.microsoft.com/library/windows/desktop/aa387764.aspx)
-
 - [SignTool.exe (Signaturtool)](https://msdn.microsoft.com/library/8s9b9yaz.aspx)
+
+<span id="unplated-assets" />
+## <a name="add-unplated-assets"></a>Hinzufügen von unbeschichteten Ressourcen
+
+Hier erfahren Sie, wie Sie die 44x44-Ressourcen für Ihre App optional konfigurieren, die auf der Taskleiste angezeigt werden. 
+
+1. Rufen Sie die richtigen 44x44-Bilder ab, und kopieren Sie sie in den Ordner, der Ihre Bilder (d. h. Ressourcen) enthält.
+
+2. Erstellen Sie für jedes 44x44-Bild eine Kopie im selben Ordner, und hängen Sie *.targetsize-44_altform-unplated* an den Dateinamen an. Sie sollten zwei Kopien von jedem Symbol haben, jeweils spezifisch benannt. Nach Abschluss des Vorgangs könnte Ihr Ressourcenordner beispielsweise *MYAPP_44x44.png* und *MYAPP_44x44.targetsize-44_altform-unplated.png* enthalten. (Hinweis: Das erste Symbol ist das Symbol, auf das in der appxmanifest-Datei unter dem VisualElements-Attribut *Square44x44Logo* verwiesen wird.) 
+
+3.  Legen Sie in der Appxmanifest-Datei die Hintergrundfarbe für jedes von Ihnen bearbeitete Symbol auf „Transparent“ fest. Sie finden dieses Attribut unter VisualElements für die einzelnen Anwendungen.
+
+4.  Öffnen Sie CMD, ändern Sie das Verzeichnis in den Stammordner des Pakets, und erstellen Sie mit dem Befehl ```makepri createconfig /cf priconfig.xml /dq en-US``` eine priconfig.xml-Datei.
+
+5.  Bleiben Sie im Stammordner des Pakets, und erstellen Sie mit CMD mittels des Befehls ```makepri new /pr <PHYSICAL_PATH_TO_FOLDER> /cf <PHYSICAL_PATH_TO_FOLDER>\priconfig.xml``` die resources.pri-Datei(en). Der Befehl für Ihre App könnte beispielsweise wie folgt aussehen: ```makepri new /pr c:\MYAPP /cf c:\MYAPP\priconfig.xml```. 
+
+6.  Verpacken Sie Ihre AppX-Datei mithilfe der Anweisungen im nächsten Schritt, um die Ergebnisse anzuzeigen.
 
 
 
