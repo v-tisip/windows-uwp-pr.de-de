@@ -2728,7 +2728,7 @@
       "ArchivedDateTime": "0001-01-01T00:00:00",
       "SkeletonFile": "ol-xliffcache\\cpubwin\\windows-uwp.de-de\\master\\5306ef31bf20b25a5f2a24dee8bd8b55de2773da.8a0c5d4738fdb7214a1705ad2e37c8e6e61b40d0.xml",
       "LocXliff": "ol-handback\\cpubwin\\windows-uwp.de-de\\master\\headset.4a461e6c1e6f0d799e154ce271ac7d4bffa92cc1.de-de.xlf",
-      "LocXliffCommit": "02cb08b8b9c1c148df566a61d6db6f3712556587"
+      "LocXliffCommit": "2b990a4206bffafaac3e3b18a1fc44ea80b96b9b"
     },
     "windows-apps-src\\monetize\\create-and-manage-submissions-using-windows-store-services.md.09ae01926464f8f9e337e43a329d9ace28955450.HT": {
       "SourceFilename": "windows-apps-src\\monetize\\create-and-manage-submissions-using-windows-store-services.md",
@@ -2878,7 +2878,7 @@
       "ArchivedDateTime": "0001-01-01T00:00:00",
       "SkeletonFile": "ol-xliffcache\\cpubwin\\windows-uwp.de-de\\master\\ea2c1f359424f042b9563e2723c1eb34ee8ddff0.dc9b850658d7512f52ed52d5f716a79b96a05142.xml",
       "LocXliff": "ol-handback\\cpubwin\\windows-uwp.de-de\\master\\racing-wheel-and-force-feedback.ec7c3e4f0bea6d931780c3a45b896cc8a333a6f8.de-de.xlf",
-      "LocXliffCommit": "02cb08b8b9c1c148df566a61d6db6f3712556587"
+      "LocXliffCommit": "2b990a4206bffafaac3e3b18a1fc44ea80b96b9b"
     },
     "windows-apps-src\\gaming\\gamepad-and-vibration.md.ce86a09f75feda733e5a65e9aab78025f0cb0972.HT": {
       "SourceFilename": "windows-apps-src\\gaming\\gamepad-and-vibration.md",
