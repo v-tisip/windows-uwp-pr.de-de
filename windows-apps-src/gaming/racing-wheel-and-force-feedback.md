@@ -11,7 +11,7 @@ ms.openlocfilehash: ea2c1f359424f042b9563e2723c1eb34ee8ddff0
 
 # <a name="racing-wheel-and-force-feedback"></a>Rennlenkräder und Kraftrückmeldung
 
-Auf dieser Seite werden die Grundlagen der Programmierung für Xbox One-Renklenkräder mittels [Windows.Gaming.Input.RacingWheel][Racingwheel] und verwandter APIs für die Universelle Windows-Plattform (UWP) beschrieben.
+Auf dieser Seite werden die Grundlagen der Programmierung für Xbox One-Renklenkräder mittels [Windows.Gaming.Input.RacingWheel][racingwheel] und verwandter APIs für die Universelle Windows-Plattform (UWP) beschrieben.
 
 Auf dieser Seite erfahren Sie:
 * Wie Sie eine Liste der verbundenen Rennlenkräder und ihrer Benutzer erstellen

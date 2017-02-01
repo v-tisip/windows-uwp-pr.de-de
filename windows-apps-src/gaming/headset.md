@@ -11,7 +11,7 @@ ms.openlocfilehash: 5306ef31bf20b25a5f2a24dee8bd8b55de2773da
 
 # <a name="headset"></a>Headset
 
-In diesem Dokument wird die grundlegende Programmierung für Headsets unter Verwendung von [Windows.Gaming.Input.Headset][Headset] und zugehöriger APIs für die universelle Windows-Plattform (UWP) beschrieben.
+In diesem Dokument wird die grundlegende Programmierung für Headsets unter Verwendung von [Windows.Gaming.Input.Headset][headset] und zugehöriger APIs für die universelle Windows-Plattform (UWP) beschrieben.
 
 Auf dieser Seite erhalten Sie Informationen zu folgenden Vorgängen:
 * Zugreifen auf ein Headset, das mit einem Eingabe- oder Navigationsgerät verbunden ist
