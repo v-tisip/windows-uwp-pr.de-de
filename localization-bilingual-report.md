@@ -1,53 +1,11 @@
 # <a name='report-top'></a> Localization Bilingual Report
 
 ## Summary
- Total Files | 2
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [windows-apps-src\gaming\headset.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/12f1c02e89f8feb24f9fb8994bdf8633e85965b1?path=windows-apps-src%2Fgaming%2Fheadset.md&_a=contents) | HandedOffSuccess | [Details](#51e2e716c0bb3e26af76493b3f987f747ff8e33e2584)
- [windows-apps-src\gaming\racing-wheel-and-force-feedback.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/12f1c02e89f8feb24f9fb8994bdf8633e85965b1?path=windows-apps-src%2Fgaming%2Fracing-wheel-and-force-feedback.md&_a=contents) | HandedOffSuccess | [Details](#baf7f854625a364e32882c49e47d6425259d30ca2641)
 
 ## Item Details
-##### <a name='51e2e716c0bb3e26af76493b3f987f747ff8e33e2584'></a> Source: [windows-apps-src\gaming\headset.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/12f1c02e89f8feb24f9fb8994bdf8633e85965b1?path=windows-apps-src%2Fgaming%2Fheadset.md&_a=contents)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [headset.4a461e6c1e6f0d799e154ce271ac7d4bffa92cc1.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/6a0ca14ace1570a906b453e83951d553e64d1977?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fheadset.4a461e6c1e6f0d799e154ce271ac7d4bffa92cc1.de-de.xlf&_a=contents)
-* Handoff Datetime: 2017-01-27 22:38:05
-* Handoff Reason: Include
-* Handoff Name: 
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Handback Name: 
-* Current Target File: [windows-apps-src\gaming\headset.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/d213d2b9ee7abceca868a5985a703f0d19c5291e?path=windows-apps-src%2Fgaming%2Fheadset.md&_a=contents)
-* Current Handback File: [headset.4a461e6c1e6f0d799e154ce271ac7d4bffa92cc1.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2b990a4206bffafaac3e3b18a1fc44ea80b96b9b?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fheadset.4a461e6c1e6f0d799e154ce271ac7d4bffa92cc1.de-de.xlf&_a=contents)
-* Current Handback Datetime: 2017-02-01 18:36:59
-* Bilingual File: [headset.4a461e6c1e6f0d799e154ce271ac7d4bffa92cc1.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2b990a4206bffafaac3e3b18a1fc44ea80b96b9b?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fheadset.4a461e6c1e6f0d799e154ce271ac7d4bffa92cc1.de-de.xlf&_a=contents)
-* Bilingual Datetime: 2017-02-01 18:44:05
-* [Back to Top](#report-top)
-
-##### <a name='baf7f854625a364e32882c49e47d6425259d30ca2641'></a> Source: [windows-apps-src\gaming\racing-wheel-and-force-feedback.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/12f1c02e89f8feb24f9fb8994bdf8633e85965b1?path=windows-apps-src%2Fgaming%2Fracing-wheel-and-force-feedback.md&_a=contents)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [racing-wheel-and-force-feedback.ec7c3e4f0bea6d931780c3a45b896cc8a333a6f8.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/6a0ca14ace1570a906b453e83951d553e64d1977?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fracing-wheel-and-force-feedback.ec7c3e4f0bea6d931780c3a45b896cc8a333a6f8.de-de.xlf&_a=contents)
-* Handoff Datetime: 2017-01-27 22:38:05
-* Handoff Reason: Include
-* Handoff Name: 
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Handback Name: 
-* Current Target File: [windows-apps-src\gaming\racing-wheel-and-force-feedback.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/d213d2b9ee7abceca868a5985a703f0d19c5291e?path=windows-apps-src%2Fgaming%2Fracing-wheel-and-force-feedback.md&_a=contents)
-* Current Handback File: [racing-wheel-and-force-feedback.ec7c3e4f0bea6d931780c3a45b896cc8a333a6f8.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2b990a4206bffafaac3e3b18a1fc44ea80b96b9b?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fracing-wheel-and-force-feedback.ec7c3e4f0bea6d931780c3a45b896cc8a333a6f8.de-de.xlf&_a=contents)
-* Current Handback Datetime: 2017-02-01 18:36:59
-* Bilingual File: [racing-wheel-and-force-feedback.ec7c3e4f0bea6d931780c3a45b896cc8a333a6f8.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2b990a4206bffafaac3e3b18a1fc44ea80b96b9b?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fracing-wheel-and-force-feedback.ec7c3e4f0bea6d931780c3a45b896cc8a333a6f8.de-de.xlf&_a=contents)
-* Bilingual Datetime: 2017-02-01 18:44:05
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
