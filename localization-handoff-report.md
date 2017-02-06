@@ -1,22 +1,23 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 4
+ Total Files | 5
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\debug-test-perf\device-portal-desktop.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ebb6ae744bbfbab22d6d5073fb845406eb10345f?path=windows-apps-src%2Fdebug-test-perf%2Fdevice-portal-desktop.md&_a=contents) | HandedOffSuccess | [Details](#598bd4946cd34ea484ad20b3a19eb80f3d781a702311)
- [windows-apps-src\porting\w8x-to-uwp-porting-to-a-uwp-project.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/3277368e9431d8ea1692d004b3d6333eb1bf9156?path=windows-apps-src%2Fporting%2Fw8x-to-uwp-porting-to-a-uwp-project.md&_a=contents) | HandedOffSuccess | [Details](#5cedf918d53059b923b5a8697e2675e43e2666194761)
- [windows-apps-src\porting\w8x-to-uwp-porting-xaml-and-ui.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/e2766fbc1fe3dfa59638b5dc9cd2d2148188ec05?path=windows-apps-src%2Fporting%2Fw8x-to-uwp-porting-xaml-and-ui.md&_a=contents) | HandedOffSuccess | [Details](#d713f0f0e0bd5e3f439bef320b12f4922eac03aa4762)
- [windows-apps-src\porting\wpsl-to-uwp-porting-xaml-and-ui.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/1f4b94d0aede6b4b17b153c2bf2af9abecedf5d7?path=windows-apps-src%2Fporting%2Fwpsl-to-uwp-porting-xaml-and-ui.md&_a=contents) | HandedOffSuccess | [Details](#d1fab0e624e2fa12f885f3baa41b0f9a956b548e4772)
+ [windows-apps-src\audio-video-camera\custom-video-effects.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/1cc0cef6f68fcca5ce3f2a5c8f2f490a35119af6?path=windows-apps-src%2Faudio-video-camera%2Fcustom-video-effects.md&_a=contents) | HandedOffSuccess | [Details](#4ef44efbfc213d6aa3b09933014a4243b288a3a5690)
+ [windows-apps-src\porting\hwa-access-features.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/0eab547db10f6d8e523d364fc66d8e2de38a5251?path=windows-apps-src%2Fporting%2Fhwa-access-features.md&_a=contents) | HandedOffSuccess | [Details](#42912aa45e385f6e34078343822dc32510f2b9024656)
+ [windows-apps-src\porting\hwa-chrome-conversion.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/29d1f95730b73ab3792f2c7f514a9341989adfcf?path=windows-apps-src%2Fporting%2Fhwa-chrome-conversion.md&_a=contents) | HandedOffSuccess | [Details](#fa095bdeb42c98df8a80be8a1e4d26685c27b0494657)
+ [windows-apps-src\porting\hwa-create-mac.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/c2f0e7a38b42f9c52c98a1a6f6610c3559f66353?path=windows-apps-src%2Fporting%2Fhwa-create-mac.md&_a=contents) | HandedOffSuccess | [Details](#e5b0e88edd1b4ce6eb85bd4189cdfbbfec8527104658)
+ [windows-apps-src\porting\hwa-create-windows.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/367c233c16f5e2ce6251d92046b5f4b8531af10a?path=windows-apps-src%2Fporting%2Fhwa-create-windows.md&_a=contents) | HandedOffSuccess | [Details](#a643a52a5af9df4de0fa07f6cfda4b9af4dc72214659)
 
 ## Item Details
-##### <a name='598bd4946cd34ea484ad20b3a19eb80f3d781a702311'></a> Source: [windows-apps-src\debug-test-perf\device-portal-desktop.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ebb6ae744bbfbab22d6d5073fb845406eb10345f?path=windows-apps-src%2Fdebug-test-perf%2Fdevice-portal-desktop.md&_a=contents)
+##### <a name='4ef44efbfc213d6aa3b09933014a4243b288a3a5690'></a> Source: [windows-apps-src\audio-video-camera\custom-video-effects.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/1cc0cef6f68fcca5ce3f2a5c8f2f490a35119af6?path=windows-apps-src%2Faudio-video-camera%2Fcustom-video-effects.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [device-portal-desktop.fd7534db4bc282ba12485780a908bce2871720e5.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/28338f742600f6821681e4f8f33b20856e684d85?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fdevice-portal-desktop.fd7534db4bc282ba12485780a908bce2871720e5.de-de.xlf&_a=contents)
-* Handoff Datetime: 2017-02-06 00:37:20
+* Handoff File: [custom-video-effects.1bd057b1f63255f934b8823c25bdcbf98a602221.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/10792427805aa4470b40e8e9630dc22961b52217?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fcustom-video-effects.1bd057b1f63255f934b8823c25bdcbf98a602221.de-de.xlf&_a=contents)
+* Handoff Datetime: 2017-02-06 02:35:22
 * Handoff Reason: Include
 * Handoff Name: 
 * Archive File: 
@@ -24,18 +25,18 @@
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Handback Name: 
-* Current Target File: [windows-apps-src\debug-test-perf\device-portal-desktop.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/c3cc6ddc6f3b2e0e594b3a771a3787b6567d88e5?path=windows-apps-src%2Fdebug-test-perf%2Fdevice-portal-desktop.md&_a=contents)
-* Current Handback File: [device-portal-desktop.fd7534db4bc282ba12485780a908bce2871720e5.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/af7251542093aa676fc710fa76cce8c29961cc27?path=ol-handback%2FMicrosoft%2Fwindows-apps.de-de%2Fmaster%2Fdevice-portal-desktop.fd7534db4bc282ba12485780a908bce2871720e5.de-de.xlf&_a=contents)
-* Current Handback Datetime: 2016-10-21 15:17:04
-* Bilingual File: [device-portal-desktop.fd7534db4bc282ba12485780a908bce2871720e5.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/af7251542093aa676fc710fa76cce8c29961cc27?path=ol-handback%2FMicrosoft%2Fwindows-apps.de-de%2Fmaster%2Fdevice-portal-desktop.fd7534db4bc282ba12485780a908bce2871720e5.de-de.xlf&_a=contents)
-* Bilingual Datetime: 2016-10-24 15:46:17
+* Current Target File: [windows-apps-src\audio-video-camera\custom-video-effects.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/a67a4e3ca127e22fbdb3beae1c3ae56ebcbbaab6?path=windows-apps-src%2Faudio-video-camera%2Fcustom-video-effects.md&_a=contents)
+* Current Handback File: [custom-video-effects.1bd057b1f63255f934b8823c25bdcbf98a602221.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/af36407019824e4d536486ec56eebef02f0f65af?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fcustom-video-effects.1bd057b1f63255f934b8823c25bdcbf98a602221.de-de.xlf&_a=contents)
+* Current Handback Datetime: 2016-11-30 15:16:57
+* Bilingual File: [custom-video-effects.1bd057b1f63255f934b8823c25bdcbf98a602221.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/af36407019824e4d536486ec56eebef02f0f65af?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fcustom-video-effects.1bd057b1f63255f934b8823c25bdcbf98a602221.de-de.xlf&_a=contents)
+* Bilingual Datetime: 2016-11-30 15:23:55
 * [Back to Top](#report-top)
 
-##### <a name='5cedf918d53059b923b5a8697e2675e43e2666194761'></a> Source: [windows-apps-src\porting\w8x-to-uwp-porting-to-a-uwp-project.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/3277368e9431d8ea1692d004b3d6333eb1bf9156?path=windows-apps-src%2Fporting%2Fw8x-to-uwp-porting-to-a-uwp-project.md&_a=contents)
+##### <a name='42912aa45e385f6e34078343822dc32510f2b9024656'></a> Source: [windows-apps-src\porting\hwa-access-features.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/0eab547db10f6d8e523d364fc66d8e2de38a5251?path=windows-apps-src%2Fporting%2Fhwa-access-features.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [w8x-to-uwp-porting-to-a-uwp-project.351cdf4bfdce8333548b50244a13ce6c9a7cff2a.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/28338f742600f6821681e4f8f33b20856e684d85?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fw8x-to-uwp-porting-to-a-uwp-project.351cdf4bfdce8333548b50244a13ce6c9a7cff2a.de-de.xlf&_a=contents)
-* Handoff Datetime: 2017-02-06 00:37:20
+* Handoff File: [hwa-access-features.d65749f67f75525126fe277c559bf776d7a270ff.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/10792427805aa4470b40e8e9630dc22961b52217?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fhwa-access-features.d65749f67f75525126fe277c559bf776d7a270ff.de-de.xlf&_a=contents)
+* Handoff Datetime: 2017-02-06 02:35:22
 * Handoff Reason: Include
 * Handoff Name: 
 * Archive File: 
@@ -43,18 +44,37 @@
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Handback Name: 
-* Current Target File: [windows-apps-src\porting\w8x-to-uwp-porting-to-a-uwp-project.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/e65d1f0636cb3c708494910bb989cf8916de1830?path=windows-apps-src%2Fporting%2Fw8x-to-uwp-porting-to-a-uwp-project.md&_a=contents)
-* Current Handback File: [w8x-to-uwp-porting-to-a-uwp-project.351cdf4bfdce8333548b50244a13ce6c9a7cff2a.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/36a652af629a68522c02865a101a20c0f4395d10?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fw8x-to-uwp-porting-to-a-uwp-project.351cdf4bfdce8333548b50244a13ce6c9a7cff2a.de-de.xlf&_a=contents)
+* Current Target File: [windows-apps-src\porting\hwa-access-features.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/d744abe4a4f34304479d069e8077366b4a6eafc3?path=windows-apps-src%2Fporting%2Fhwa-access-features.md&_a=contents)
+* Current Handback File: [hwa-access-features.d65749f67f75525126fe277c559bf776d7a270ff.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/ea400634a9d23daa41ac26460f39a0c004fdff3d?path=ol-handback%2FMicrosoft%2Fwindows-apps.de-de%2Fmaster%2Fhwa-access-features.d65749f67f75525126fe277c559bf776d7a270ff.de-de.xlf&_a=contents)
+* Current Handback Datetime: 2016-10-26 15:42:17
+* Bilingual File: [hwa-access-features.d65749f67f75525126fe277c559bf776d7a270ff.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/ea400634a9d23daa41ac26460f39a0c004fdff3d?path=ol-handback%2FMicrosoft%2Fwindows-apps.de-de%2Fmaster%2Fhwa-access-features.d65749f67f75525126fe277c559bf776d7a270ff.de-de.xlf&_a=contents)
+* Bilingual Datetime: 2016-10-26 15:48:15
+* [Back to Top](#report-top)
+
+##### <a name='fa095bdeb42c98df8a80be8a1e4d26685c27b0494657'></a> Source: [windows-apps-src\porting\hwa-chrome-conversion.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/29d1f95730b73ab3792f2c7f514a9341989adfcf?path=windows-apps-src%2Fporting%2Fhwa-chrome-conversion.md&_a=contents)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [hwa-chrome-conversion.c959399677411c30b912220c9e4956e3f1167f27.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/10792427805aa4470b40e8e9630dc22961b52217?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fhwa-chrome-conversion.c959399677411c30b912220c9e4956e3f1167f27.de-de.xlf&_a=contents)
+* Handoff Datetime: 2017-02-06 02:35:22
+* Handoff Reason: Include
+* Handoff Name: 
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Handback Name: 
+* Current Target File: [windows-apps-src\porting\hwa-chrome-conversion.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/e65d1f0636cb3c708494910bb989cf8916de1830?path=windows-apps-src%2Fporting%2Fhwa-chrome-conversion.md&_a=contents)
+* Current Handback File: [hwa-chrome-conversion.c959399677411c30b912220c9e4956e3f1167f27.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/36a652af629a68522c02865a101a20c0f4395d10?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fhwa-chrome-conversion.c959399677411c30b912220c9e4956e3f1167f27.de-de.xlf&_a=contents)
 * Current Handback Datetime: 2016-12-14 14:15:08
-* Bilingual File: [w8x-to-uwp-porting-to-a-uwp-project.351cdf4bfdce8333548b50244a13ce6c9a7cff2a.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/36a652af629a68522c02865a101a20c0f4395d10?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fw8x-to-uwp-porting-to-a-uwp-project.351cdf4bfdce8333548b50244a13ce6c9a7cff2a.de-de.xlf&_a=contents)
+* Bilingual File: [hwa-chrome-conversion.c959399677411c30b912220c9e4956e3f1167f27.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/36a652af629a68522c02865a101a20c0f4395d10?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fhwa-chrome-conversion.c959399677411c30b912220c9e4956e3f1167f27.de-de.xlf&_a=contents)
 * Bilingual Datetime: 2016-12-14 14:22:03
 * [Back to Top](#report-top)
 
-##### <a name='d713f0f0e0bd5e3f439bef320b12f4922eac03aa4762'></a> Source: [windows-apps-src\porting\w8x-to-uwp-porting-xaml-and-ui.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/e2766fbc1fe3dfa59638b5dc9cd2d2148188ec05?path=windows-apps-src%2Fporting%2Fw8x-to-uwp-porting-xaml-and-ui.md&_a=contents)
+##### <a name='e5b0e88edd1b4ce6eb85bd4189cdfbbfec8527104658'></a> Source: [windows-apps-src\porting\hwa-create-mac.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/c2f0e7a38b42f9c52c98a1a6f6610c3559f66353?path=windows-apps-src%2Fporting%2Fhwa-create-mac.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [w8x-to-uwp-porting-xaml-and-ui.f1e8f521222339d8cb465e5fa21505c90027b1f8.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/28338f742600f6821681e4f8f33b20856e684d85?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fw8x-to-uwp-porting-xaml-and-ui.f1e8f521222339d8cb465e5fa21505c90027b1f8.de-de.xlf&_a=contents)
-* Handoff Datetime: 2017-02-06 00:37:20
+* Handoff File: [hwa-create-mac.0d06455e9de1b82e52db59c13c83c44a1a9a208a.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/10792427805aa4470b40e8e9630dc22961b52217?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fhwa-create-mac.0d06455e9de1b82e52db59c13c83c44a1a9a208a.de-de.xlf&_a=contents)
+* Handoff Datetime: 2017-02-06 02:35:22
 * Handoff Reason: Include
 * Handoff Name: 
 * Archive File: 
@@ -62,18 +82,18 @@
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Handback Name: 
-* Current Target File: [windows-apps-src\porting\w8x-to-uwp-porting-xaml-and-ui.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/e65d1f0636cb3c708494910bb989cf8916de1830?path=windows-apps-src%2Fporting%2Fw8x-to-uwp-porting-xaml-and-ui.md&_a=contents)
-* Current Handback File: [w8x-to-uwp-porting-xaml-and-ui.f1e8f521222339d8cb465e5fa21505c90027b1f8.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/36a652af629a68522c02865a101a20c0f4395d10?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fw8x-to-uwp-porting-xaml-and-ui.f1e8f521222339d8cb465e5fa21505c90027b1f8.de-de.xlf&_a=contents)
-* Current Handback Datetime: 2016-12-14 14:15:08
-* Bilingual File: [w8x-to-uwp-porting-xaml-and-ui.f1e8f521222339d8cb465e5fa21505c90027b1f8.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/36a652af629a68522c02865a101a20c0f4395d10?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fw8x-to-uwp-porting-xaml-and-ui.f1e8f521222339d8cb465e5fa21505c90027b1f8.de-de.xlf&_a=contents)
-* Bilingual Datetime: 2016-12-14 14:22:03
+* Current Target File: [windows-apps-src\porting\hwa-create-mac.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/d744abe4a4f34304479d069e8077366b4a6eafc3?path=windows-apps-src%2Fporting%2Fhwa-create-mac.md&_a=contents)
+* Current Handback File: [hwa-create-mac.0d06455e9de1b82e52db59c13c83c44a1a9a208a.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/ea400634a9d23daa41ac26460f39a0c004fdff3d?path=ol-handback%2FMicrosoft%2Fwindows-apps.de-de%2Fmaster%2Fhwa-create-mac.0d06455e9de1b82e52db59c13c83c44a1a9a208a.de-de.xlf&_a=contents)
+* Current Handback Datetime: 2016-10-26 15:42:17
+* Bilingual File: [hwa-create-mac.0d06455e9de1b82e52db59c13c83c44a1a9a208a.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/ea400634a9d23daa41ac26460f39a0c004fdff3d?path=ol-handback%2FMicrosoft%2Fwindows-apps.de-de%2Fmaster%2Fhwa-create-mac.0d06455e9de1b82e52db59c13c83c44a1a9a208a.de-de.xlf&_a=contents)
+* Bilingual Datetime: 2016-10-26 15:48:15
 * [Back to Top](#report-top)
 
-##### <a name='d1fab0e624e2fa12f885f3baa41b0f9a956b548e4772'></a> Source: [windows-apps-src\porting\wpsl-to-uwp-porting-xaml-and-ui.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/1f4b94d0aede6b4b17b153c2bf2af9abecedf5d7?path=windows-apps-src%2Fporting%2Fwpsl-to-uwp-porting-xaml-and-ui.md&_a=contents)
+##### <a name='a643a52a5af9df4de0fa07f6cfda4b9af4dc72214659'></a> Source: [windows-apps-src\porting\hwa-create-windows.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/367c233c16f5e2ce6251d92046b5f4b8531af10a?path=windows-apps-src%2Fporting%2Fhwa-create-windows.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [wpsl-to-uwp-porting-xaml-and-ui.dff77e3f1cc63bef95de5e916ed5e79ca10fd442.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/28338f742600f6821681e4f8f33b20856e684d85?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fwpsl-to-uwp-porting-xaml-and-ui.dff77e3f1cc63bef95de5e916ed5e79ca10fd442.de-de.xlf&_a=contents)
-* Handoff Datetime: 2017-02-06 00:37:20
+* Handoff File: [hwa-create-windows.681dd65bdcffe52b7e3512fdb828e18db356d05e.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/10792427805aa4470b40e8e9630dc22961b52217?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fhwa-create-windows.681dd65bdcffe52b7e3512fdb828e18db356d05e.de-de.xlf&_a=contents)
+* Handoff Datetime: 2017-02-06 02:35:22
 * Handoff Reason: Include
 * Handoff Name: 
 * Archive File: 
@@ -81,10 +101,10 @@
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Handback Name: 
-* Current Target File: [windows-apps-src\porting\wpsl-to-uwp-porting-xaml-and-ui.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/e65d1f0636cb3c708494910bb989cf8916de1830?path=windows-apps-src%2Fporting%2Fwpsl-to-uwp-porting-xaml-and-ui.md&_a=contents)
-* Current Handback File: [wpsl-to-uwp-porting-xaml-and-ui.dff77e3f1cc63bef95de5e916ed5e79ca10fd442.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/36a652af629a68522c02865a101a20c0f4395d10?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fwpsl-to-uwp-porting-xaml-and-ui.dff77e3f1cc63bef95de5e916ed5e79ca10fd442.de-de.xlf&_a=contents)
+* Current Target File: [windows-apps-src\porting\hwa-create-windows.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/e65d1f0636cb3c708494910bb989cf8916de1830?path=windows-apps-src%2Fporting%2Fhwa-create-windows.md&_a=contents)
+* Current Handback File: [hwa-create-windows.681dd65bdcffe52b7e3512fdb828e18db356d05e.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/36a652af629a68522c02865a101a20c0f4395d10?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fhwa-create-windows.681dd65bdcffe52b7e3512fdb828e18db356d05e.de-de.xlf&_a=contents)
 * Current Handback Datetime: 2016-12-14 14:15:08
-* Bilingual File: [wpsl-to-uwp-porting-xaml-and-ui.dff77e3f1cc63bef95de5e916ed5e79ca10fd442.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/36a652af629a68522c02865a101a20c0f4395d10?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fwpsl-to-uwp-porting-xaml-and-ui.dff77e3f1cc63bef95de5e916ed5e79ca10fd442.de-de.xlf&_a=contents)
+* Bilingual File: [hwa-create-windows.681dd65bdcffe52b7e3512fdb828e18db356d05e.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/36a652af629a68522c02865a101a20c0f4395d10?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fhwa-create-windows.681dd65bdcffe52b7e3512fdb828e18db356d05e.de-de.xlf&_a=contents)
 * Bilingual Datetime: 2016-12-14 14:22:03
 * [Back to Top](#report-top)
 
