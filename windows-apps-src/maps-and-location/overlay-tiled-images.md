@@ -3,16 +3,23 @@ author: msatranjr
 title: "Überlagern von nebeneinander angeordneten Bildern in einer Karte"
 description: "Überlagern Sie Bilder von Drittanbietern oder benutzerdefinierte nebeneinander angeordnete Bilder in einer Karte mithilfe von Kachelquellen. Verwenden Sie Kachelquellen, um spezielle Infos wie Wetterdaten, Einwohnerzahlen oder seismische Daten zu überlagern oder die Standardkarte vollständig zu ersetzen."
 ms.assetid: 066BD6E2-C22B-4F5B-AA94-5D6C86A09BDF
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Karte, Standort, Bilder, Überlagerung"
 translationtype: Human Translation
-ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
-ms.openlocfilehash: a00d3d27161310077a0690cef7e4d11a5209bee7
+ms.sourcegitcommit: 32b5230d62f23430393fc51c73f80fa46bd525fa
+ms.openlocfilehash: dd52df5f95b25e26ddb0fb8db50c9faf27df02ee
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Überlagern von nebeneinander angeordneten Bildern in einer Karte
+# <a name="overlay-tiled-images-on-a-map"></a>Überlagern von nebeneinander angeordneten Bildern in einer Karte
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Überlagern Sie Bilder von Drittanbietern oder benutzerdefinierte nebeneinander angeordnete Bilder in einer Karte mithilfe von Kachelquellen. Verwenden Sie Kachelquellen, um spezielle Infos wie Wetterdaten, Einwohnerzahlen oder seismische Daten zu überlagern oder die Standardkarte vollständig zu ersetzen.
@@ -21,7 +28,7 @@ ms.openlocfilehash: a00d3d27161310077a0690cef7e4d11a5209bee7
 
 -   [Kartenbeispiel für die Universelle Windows-Plattform (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 
-## Übersicht über nebeneinander angeordnete Bilder
+## <a name="tiled-image-overview"></a>Übersicht über nebeneinander angeordnete Bilder
 
 
 Kartendienste wie Nokia Karten und Bing Maps teilen Karten zum schnellen Abrufen und Anzeigen in quadratische Kacheln ein. Diese Kacheln messen 256 x 256 Pixel und werden vorab auf mehrere Detailebenen gerendert. Viele Dienste von Drittanbietern umfassen auch kartenbasierte Daten, die in Kacheln aufgeteilt sind. Verwenden Sie Kachelquellen, um Kacheln von Drittanbietern abzurufen oder benutzerdefinierte Kacheln zu erstellen. Überlagern Sie diese auf der angezeigten Karte im [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)-Objekt.
@@ -41,7 +48,7 @@ In diesem Beispiel sehen Sie eine [**UriFormatString**](https://msdn.microsoft.c
 
 Weitere Informationen über das Kachelsystem von Kartendiensten finden Sie unter [Kachelsystem von Bing Maps](http://go.microsoft.com/fwlink/p/?LinkId=626692).
 
-### Überlagern von Kacheln aus einer Kachelquelle
+### <a name="overlay-tiles-from-a-tile-source"></a>Überlagern von Kacheln aus einer Kachelquelle
 
 Überlagern Sie nebeneinander angeordnete Bilder aus einer Kachelquelle in einer Karte mithilfe der [**MapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn637141)-Klasse.
 
@@ -81,7 +88,7 @@ Weitere Informationen über das Kachelsystem von Kartendiensten finden Sie unter
          MapControl1.TileSources.Add(tileSource);
     ```
 
-## Überlagern von Kacheln aus einem Webdienst
+## <a name="overlay-tiles-from-a-web-service"></a>Überlagern von Kacheln aus einem Webdienst
 
 
 Überlagern Sie nebeneinander angeordnete Bilder aus einem Webdienst mithilfe der [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986)-Klasse.
@@ -93,9 +100,9 @@ Weitere Informationen über das Kachelsystem von Kartendiensten finden Sie unter
         http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}
     ```
 
-    Der Webdienst muss einen URI unterstützen, der die ersetzbaren Parameter {x}, {y} und {zoomlevel} enthält. Die meisten Webdienste (z.B. Nokia, Bing und Google) unterstützen URIs in diesem Format. Benötigt der Webdienst zusätzliche Argumente, die mit der [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992)-Eigenschaft nicht zur Verfügung stehen, müssen Sie einen benutzerdefinierten URI erstellen. Mithilfe des [**UriRequested**](https://msdn.microsoft.com/library/windows/apps/dn636993)-Ereignisses können Sie einen benutzerdefinierten URI erstellen und zurückgeben. Weitere Infos finden Sie im Abschnitt [Bereitstellen eines benutzerdefinierten URIs](#customuri) weiter unten in diesem Thema.
+    Der Webdienst muss einen URI unterstützen, der die ersetzbaren Parameter {x}, {y} und {zoomlevel} enthält. Die meisten Webdienste (z. B. Nokia, Bing und Google) unterstützen URIs in diesem Format. Benötigt der Webdienst zusätzliche Argumente, die mit der [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992)-Eigenschaft nicht zur Verfügung stehen, müssen Sie einen benutzerdefinierten URI erstellen. Mithilfe des [**UriRequested**](https://msdn.microsoft.com/library/windows/apps/dn636993)-Ereignisses können Sie einen benutzerdefinierten URI erstellen und zurückgeben. Weitere Infos finden Sie im Abschnitt [Bereitstellen eines benutzerdefinierten URIs](#provide-a-custom-uri) weiter unten in diesem Thema.
 
-3.  Befolgen Sie die verbleibenden Schritte in der [Übersicht über nebeneinander angeordnete Bilder](#tileintro).
+3.  Befolgen Sie die verbleibenden Schritte in der [Übersicht über nebeneinander angeordnete Bilder](#tiled-image-overview).
 
 Im folgenden Beispiel überlagern Kacheln aus einem fiktiven Webdienst eine Karte von Nordamerika. Der Wert der [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992)-Eigenschaft ist im Konstruktor der [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986)-Klasse angegeben. In diesem Beispiel werden durch Festlegen der optionalen [**Bounds**](https://msdn.microsoft.com/library/windows/apps/dn637147)-Eigenschaft nur Kacheln innerhalb der geografischen Bereiche angegeben.
 
@@ -144,7 +151,7 @@ void MainPage::AddHttpMapTileSource()
 }
 ```
 
-## Überlagern von Kacheln aus dem lokalen Speicher
+## <a name="overlay-tiles-from-local-storage"></a>Überlagern von Kacheln aus dem lokalen Speicher
 
 
 Überlagern Sie nebeneinander angeordnete Bilder, die als Dateien im lokalen Speicher gespeichert sind, mithilfe der [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994)-Klasse. In der Regel können Sie diese Dateien mit Ihrer App verpacken und verteilen.
@@ -156,9 +163,9 @@ void MainPage::AddHttpMapTileSource()
         Tile_{zoomlevel}_{x}_{y}.png
     ```
 
-    Wenn das Format der Dateinamen zusätzliche Argumente benötigt, die mit der [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998)-Eigenschaft nicht zur Verfügung stehen, müssen Sie einen benutzerdefinierten URI erstellen. Mithilfe des [**UriRequested**](https://msdn.microsoft.com/library/windows/apps/dn637001)-Ereignisses können Sie einen benutzerdefinierten URI erstellen und zurückgeben. Weitere Infos finden Sie im Abschnitt [Bereitstellen eines benutzerdefinierten URIs](#customuri) weiter unten in diesem Thema.
+    Wenn das Format der Dateinamen zusätzliche Argumente benötigt, die mit der [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998)-Eigenschaft nicht zur Verfügung stehen, müssen Sie einen benutzerdefinierten URI erstellen. Mithilfe des [**UriRequested**](https://msdn.microsoft.com/library/windows/apps/dn637001)-Ereignisses können Sie einen benutzerdefinierten URI erstellen und zurückgeben. Weitere Infos finden Sie im Abschnitt [Bereitstellen eines benutzerdefinierten URIs](#provide-a-custom-uri) weiter unten in diesem Thema.
 
-3.  Befolgen Sie die verbleibenden Schritte in der [Übersicht über nebeneinander angeordnete Bilder](#tileintro).
+3.  Befolgen Sie die verbleibenden Schritte in der [Übersicht über nebeneinander angeordnete Bilder](#tiled-image-overview).
 
 Zum Laden von Kacheln aus dem lokalen Speicher können Sie die folgenden Protokolle und Speicherorte verwenden:
 
@@ -195,7 +202,7 @@ Im folgenden Beispiel werden Kacheln, die als Dateien im Installationsverzeichni
         }
 ```
 
-## Bereitstellen eines benutzerdefinierten URIs
+## <a name="provide-a-custom-uri"></a>Bereitstellen eines benutzerdefinierten URIs
 
 
 Wenn die ersetzbaren Parameter, die mit der [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992)-Eigenschaft der [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986)-Klasse oder der [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998)-Eigenschaft der [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994)-Klasse zur Verfügung stehen, nicht zum Abrufen Ihrer Kacheln ausreichen, müssen Sie einen benutzerdefinierten URI erstellen. Indem Sie einen benutzerdefinierten Handler für das **UriRequested**-Ereignis bereitstellen, können Sie einen benutzerdefinierten URI erstellen und zurückgeben. Das **UriRequested**-Ereignis wird für jede einzelne Kachel ausgelöst.
@@ -241,7 +248,7 @@ using System.Threading.Tasks;
         }
 ```
 
-## Überlagern von Kacheln aus einer benutzerdefinierten Quelle
+## <a name="overlay-tiles-from-a-custom-source"></a>Überlagern von Kacheln aus einer benutzerdefinierten Quelle
 
 
 Überlagern Sie benutzerdefinierte Kacheln mithilfe der [**CustomMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636983)-Klasse. Erstellen Sie Kacheln programmgesteuert im Arbeitsspeicher, oder schreiben Sie eigenen Code, um vorhandene Kacheln aus einer anderen Quelle zu laden.
@@ -317,16 +324,16 @@ InMemoryRandomAccessStream^ TileSources::CustomRandomAccessSteram::get()
        int pixelHeight = 256;
        int pixelWidth = 256;
        int bpp = 4;
- 
+
        Array<byte>^ bytes = ref new Array<byte>(pixelHeight * pixelWidth * bpp);
-       
+
        for (int y = 0; y < pixelHeight; y++)
        {
               for (int x = 0; x < pixelWidth; x++)
               {
                      int pixelIndex = y * pixelWidth + x;
                      int byteIndex = pixelIndex * bpp;
- 
+
                      // Set the current pixel bytes.
                      bytes[byteIndex] = (byte)(std::rand() % 256);        // Red
                      bytes[byteIndex + 1] = (byte)(std::rand() % 256);    // Green
@@ -334,23 +341,23 @@ InMemoryRandomAccessStream^ TileSources::CustomRandomAccessSteram::get()
                      bytes[byteIndex + 3] = (byte)((std::rand() % 56) + 200);    // Alpha (0xff = fully opaque)
               }
        }
- 
+
        // Create RandomAccessStream from byte array.
        InMemoryRandomAccessStream^ randomAccessStream = ref new InMemoryRandomAccessStream();
        IOutputStream^ outputStream = randomAccessStream->GetOutputStreamAt(0);
        DataWriter^ writer = ref new DataWriter(outputStream);
        writer->WriteBytes(bytes);
- 
+
        create_task(writer->StoreAsync()).then([writer](unsigned int)
        {
               create_task(writer->FlushAsync());
        });
- 
+
        return randomAccessStream;
 }
 ```
 
-## Ersetzen der Standardkarte
+## <a name="replace-the-default-map"></a>Ersetzen der Standardkarte
 
 
 So ersetzen Sie die Standardkarte durch Drittanbieter- oder benutzerdefinierte Kacheln:
@@ -358,17 +365,11 @@ So ersetzen Sie die Standardkarte durch Drittanbieter- oder benutzerdefinierte K
 -   Legen Sie [**MapTileLayer**](https://msdn.microsoft.com/library/windows/apps/dn637143).**BackgroundReplacement** als Wert für die [**Layer**](https://msdn.microsoft.com/library/windows/apps/dn637157)-Eigenschaft der [**MapTileSource**](https://msdn.microsoft.com/library/windows/apps/dn637144)-Klasse fest.
 -   Legen Sie [**MapStyle**](https://msdn.microsoft.com/library/windows/apps/dn637127).**None** als Wert für die [**Style**](https://msdn.microsoft.com/library/windows/apps/dn637051)-Eigenschaft der [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)-Klasse fest.
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Bing Maps Developer Center](https://www.bingmapsportal.com/)
 * [Beispiel für UWP-Karte](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [Entwurfsrichtlinien für Karten](https://msdn.microsoft.com/library/windows/apps/dn596102)
 * [Build 2015-Video: Nutzen von Karten und Ortung über Telefon, Tablet und PC in Ihren Windows-Apps](https://channel9.msdn.com/Events/Build/2015/2-757)
 * [Beispiel für eine UWP-App mit Verkehrsinformationen](http://go.microsoft.com/fwlink/p/?LinkId=619982)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

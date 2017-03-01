@@ -1,11 +1,19 @@
 ---
 author: awkoren
-Description: "Bereitstellen und Debuggen einer UWP-App (Universelle Windows-Plattform), die mit der Desktop-zu-UWP-Brücke von einer Windows-Desktopanwendung (Win32, WPF und Windows Forms) konvertiert wurde"
+Description: "Bereitstellen und Debuggen einer UWP-App (Universelle Windows-Plattform), die mit der Desktop-zu-UWP-Brücke von einer Windows-Desktopanwendung (Win32, WPF und Windows-Forms) konvertiert wurde"
 Search.Product: eADQiWindows 10XVcnh
 title: "Debuggen von Apps, die mit der Desktop-Brücke konvertiert wurden"
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: f45d8b14-02d1-42e1-98df-6c03ce397fd3
 translationtype: Human Translation
-ms.sourcegitcommit: dba00371b29b3179a6dc3bdd96a092437331e61a
-ms.openlocfilehash: 537ac8e83d5f54bf83ec0e05b71be354651000f2
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 9660d14a1ca28929a213d4ed5a59cdcda73ccc39
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -53,7 +61,7 @@ Dies sind die ersten Schritte:
 
     Legen Sie PackageLayout auf das Stammverzeichnis des AppX-Projekts fest, das vom Konverter (siehe oben) erstellt wurde. Wählen Sie die Kachel, die Sie ausführen möchten.
 
-8.  Öffnen und bearbeiten Sie die Datei „AppXFileList.xml“. Diese Datei definiert, wie die Ausgabe des Win32-Debugbuilds in das vom Konverter erstellte AppX-Layout kopiert wird. Standardmäßig enthält die Datei einen Platzhalter mit einem Beispieltag und einem Kommentar:
+8.    Öffnen und bearbeiten Sie die Datei „AppXFileList.xml“. Diese Datei definiert, wie die Ausgabe des Win32-Debugbuilds in das vom Konverter erstellte AppX-Layout kopiert wird. Standardmäßig enthält die Datei einen Platzhalter mit einem Beispieltag und einem Kommentar:
 
     ```XML
     <?xml version="1.0" encoding="utf-8"?>
@@ -118,9 +126,9 @@ Dies sind die ersten Schritte:
 
     ![alt](images/desktop-to-uwp/debug-5.png)
 
-10. Schließlich können Sie einen Haltepunkt im Win32-Code festlegen und F5 drücken, um den Debugger zu starten. Alle an der Win32-Anwendung vorgenommenen Änderungen im AppX-Paket werden kopiert. Sie können das Debugging direkt in Visual Studio durchführen.
+10.    Schließlich können Sie einen Haltepunkt im Win32-Code festlegen und F5 drücken, um den Debugger zu starten. Alle an der Win32-Anwendung vorgenommenen Änderungen im AppX-Paket werden kopiert. Sie können das Debugging direkt in Visual Studio durchführen.
 
-11. Wenn Sie Ihre Anwendung aktualisieren, müssen Sie MakeAppX verwenden, um erneut ein App-Paket zu erstellen. Weitere Informationen finden Sie unter [App-Objekt-Manager (MakeAppx.exe)](https://msdn.microsoft.com/library/windows/desktop/hh446767(v=vs.85).aspx). 
+11.    Wenn Sie Ihre Anwendung aktualisieren, müssen Sie MakeAppX verwenden, um erneut ein App-Paket zu erstellen. Weitere Informationen finden Sie unter [App-Objekt-Manager (MakeAppx.exe)](https://msdn.microsoft.com/library/windows/desktop/hh446767(v=vs.85).aspx). 
 
 Wenn Sie über mehrere Buildkonfigurationen verfügen (z. B. für Version und fürs Debuggen), können Sie der Datei „AppXFileList.xml“ Folgendes hinzufügen, um den Win32-Build aus verschiedenen Speicherorten zu kopieren:
 
@@ -134,7 +142,7 @@ Wenn Sie über mehrere Buildkonfigurationen verfügen (z. B. für Version und f�
 
 Sie können auch die bedingte Kompilierung zum Aktivieren bestimmter Codepfade verwenden, wenn Sie Ihre Anwendung für UWP aktualisieren, diese jedoch weiterhin für Win32 erstellen möchten. 
 
-1.  Im folgenden Beispiel werden nur der Code für DesktopUWP kompiliert und eine Kachel mit der WinRT-API dargestellt. 
+1.    Im folgenden Beispiel werden nur der Code für DesktopUWP kompiliert und eine Kachel mit der WinRT-API dargestellt. 
 
     ```C#
     [Conditional("DesktopUWP")]
@@ -148,17 +156,17 @@ Sie können auch die bedingte Kompilierung zum Aktivieren bestimmter Codepfade v
     }
     ```
 
-2.  Sie können den Konfigurations-Manager zum Hinzufügen neuer Buildkonfiguration verwenden:
+2.    Sie können den Konfigurations-Manager zum Hinzufügen neuer Buildkonfiguration verwenden:
 
     ![alt](images/desktop-to-uwp/debug-6.png)
 
     ![alt](images/desktop-to-uwp/debug-7.png)
 
-3.  Fügen Sie dann in den Projekteigenschaften Unterstützung für Symbole für die bedingte Kompilierung hinzu:
+3.    Fügen Sie dann in den Projekteigenschaften Unterstützung für Symbole für die bedingte Kompilierung hinzu:
 
     ![alt](images/desktop-to-uwp/debug-8.png)
 
-4.  Sie können jetzt das Buildziel zu DesktopUWP ändern, wenn Sie für die hinzugefügte UWP-API erstellen möchten.
+4.    Sie können jetzt das Buildziel zu DesktopUWP ändern, wenn Sie für die hinzugefügte UWP-API erstellen möchten.
 
 ## <a name="plmdebug"></a>PLMDebug 
 
@@ -174,9 +182,4 @@ Sie können benutzerdefinierte Prozesse im Container eines angegebenen App-Paket
 Invoke-CommandInDesktopPackage [-PackageFamilyName] <string> [-AppId] <string> [-Command] <string> [[-Args]
     <string>]  [<CommonParameters>]
 ```
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

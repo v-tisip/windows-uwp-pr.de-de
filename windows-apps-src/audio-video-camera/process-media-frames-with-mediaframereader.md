@@ -1,11 +1,18 @@
 ---
 author: drewbatgit
-ms.assetid: 
+ms.assetid: a128edc8-8a80-4645-ac29-908ede2d1c72
 description: "In diesem Artikel wird beschrieben, wie Sie mit „MediaFrameReader“ und „MediaCapture“ Medienframes aus einer oder mehreren verfügbaren Quellen abrufen. Hierzu zählen Farb-, Tiefen- und Infrarotkameras sowie Audiogeräte und sogar benutzerdefinierte Framequellen (etwa für Skeletal-Tracking-Frames)."
 title: "Verarbeiten von Medienframes mit „MediaFrameReader“"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: e6ab1fc16f150de2fed3797d89375a52b3965182
-ms.openlocfilehash: 11e09d9b447e9daa0498377a67ef235bdab168dd
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 7646cce8c8aafcb881e825be1ad134ad682c362a
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -163,10 +170,5 @@ Die **FrameRenderer**-Hilfsprogrammklasse implementiert die folgenden Methoden.
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO3-->
 
 

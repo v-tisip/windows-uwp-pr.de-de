@@ -2,18 +2,25 @@
 author: laurenhughes
 ms.assetid: AC96F645-1BDE-4316-85E0-2FBDE0A0A62A
 title: Abrufen von Dateieigenschaften
-description: "Es werden Eigenschaften&\\#8212;oberste Ebene, grundlegend und erweitert&\\#8212;für eine Datei abgerufen, die durch ein StorageFile-Objekt dargestellt wird."
+description: "Es werden Eigenschaften&\\#8212;oberster Ebene, grundlegend und erweitert&\\#8212;für eine Datei abgerufen, die durch ein StorageFile-Objekt dargestellt wird."
+ms.author: lahugh
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
-ms.openlocfilehash: 464548664f8065e4dba45d23ccbb71a68d0b6b17
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 89dee43da35e9a31bb7a795324119cb429d3734e
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="get-file-properties"></a>Abrufen von Dateieigenschaften
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
-** Wichtige APIs **
+**Wichtige APIs**
 
 -   [**StorageFile.GetBasicPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/hh701737)
 -   [**StorageFile.Properties**](https://msdn.microsoft.com/library/windows/apps/br227225)
@@ -134,9 +141,4 @@ foreach (Windows.Storage.StorageFile file in files)
  
 
  
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

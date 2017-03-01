@@ -3,13 +3,20 @@ author: jnHs
 Description: "Sie können Ihre Apps oder Add-Ons im Windows Store auch bewerben, indem Sie sie für einen begrenzten Zeitraum als Sonderangebot bereitstellen."
 title: "Anbieten vergünstigter Apps und Add-Ons"
 ms.assetid: 71ABA960-0CDC-4E35-A1C8-1D34B6673817
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 0edf45e997f36a82a8bfcb92c1d8fd2c79242461
-ms.openlocfilehash: d5884fc4be04de69132662ade7e42f69d36d2346
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 5823fce5aa5b5d0e98bc43828dc7469a08fdb9d0
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Anbieten vergünstigter Apps und Add-Ons
+# <a name="put-apps-and-add-ons-on-sale"></a>Anbieten vergünstigter Apps und Add-Ons
 
 Sie können Ihre Apps oder Add-Ons im Windows Store auch bewerben, indem Sie sie für einen begrenzten Zeitraum als Sonderangebot bereitstellen.
 
@@ -17,7 +24,7 @@ Wenn Sie ein Angebot mit einer vorübergehenden Preisreduzierung für Ihre Apps 
 
 > **Hinweis**  Sonderpreise werden nur für Kunden mit Windows 10 angezeigt. Bei anderen Betriebssystemen wird den Kunden der reguläre Preis für Ihre App oder Ihr Add-On angezeigt. Sie können einen Preis jederzeit ändern, indem Sie ein anderes Preisniveau bei einer neuen Übermittlung auswählen, dieser wird jedoch nicht als Sonderangebot für einen begrenzten Zeitraum angezeigt.
 
-## Planen eines Sonderangebots
+## <a name="scheduling-a-sale"></a>Planen eines Sonderangebots
 
 Sonderangebote werden im Rahmen der Übermittlung für Apps oder Add-Ons geplant. Wenn Sie ein Sonderangebot für bereits veröffentlichte Apps oder Add-Ons planen möchten, müssen Sie diese erneut übermitteln, selbst wenn dies die einzige vorzunehmende Änderung ist.
 
@@ -39,7 +46,7 @@ Sonderangebote werden im Rahmen der Übermittlung für Apps oder Add-Ons geplant
 
 > **Hinweis**  Es ist möglich, ein Preisniveau auszuwählen, das über dem Grundpreis der App liegt. Allerdings werden Sonderpreise nur für Kunden angezeigt, wenn der Verkaufspreis niedriger als der reguläre Preis der App auf diesem Markt ist. Einen Preis auszuwählen, der höher ist als Grundpreis für Ihrer App ist, kann als Sonderpreis angemessen sein, wenn Sie bereits angepasste Preise in bestimmten Märkten eingerichtet haben, die höher als der Grundpreis Ihrer App sind, und Sie vorübergehend den Preis in diesen Märkten senken möchten (der Sonderpreis ist jedoch weiterhin höher als der Grundpreis der App). Wenn die Auswahl des App-Preises in bestimmten Märkten zu einer Preiserhöhung führen würde, wird dieser (höhere) Preis den Kunden in diesem Markt nicht angezeigt; sie werden weiterhin den vorherigen (niedrigeren) Preis für die App sehen. Den Kunden wird auch dann der niedrigste verfügbare Preis angezeigt, wenn Sie einen Zeitplan für separate überlappende Sonderangebote mit unterschiedlichen Preisen festlegen.
 
-## Ändern oder Abbrechen eines geplanten Sonderangebots
+## <a name="changing-or-canceling-a-scheduled-sale"></a>Ändern oder Abbrechen eines geplanten Sonderangebots
 
 
 Zum Bearbeiten oder Abbrechen eines bereits für Apps oder Add-Ons geplanten Sonderangebots müssen Sie sie erneut übermitteln und an den Store senden.
@@ -64,10 +71,5 @@ Nachdem Ihre Übermittlung den Zertifizierungsprozess erfolgreich durchlaufen ha
 Solange das Sonderangebot zum Zeitpunkt des erfolgreichen Abschluss des Zertifizierungsprozesses noch nicht begonnen hat, wird das gelöschte Sonderangebot überhaupt nicht ausgeführt. Wenn Sie ein Sonderangebot löschen, das bereits beendet ist, wird es einfach auf Ihrer Seite **Preise und Verfügbarkeit** gelöscht.
 
 > **Wichtig**   Da Kunden beim Anzeigen des Store-Eintrags der App das geplante Enddatum sehen können, wird das Löschen eines Sonderangebots nach seinem Start nicht empfohlen. Wenn Sie ein Sonderangebot löschen, das bereits begonnen hat, wird es beendet, nachdem die Übermittlung den Zertifizierungsprozess erfolgreich durchlaufen hat, was für potenzielle Kunden frustrierend sein kann.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -3,13 +3,20 @@ author: mcleanbyron
 ms.assetid: 4804e371-065e-4d5a-ab1a-9c5732f52a9e
 description: "Erfahren Sie mehr über die unterstützten Länder und Regionen für interstitielle und Banneranzeigen."
 title: "Unterstützte Märkte für Microsoft Advertising"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Anzeigen, Werbung, Märkte"
 translationtype: Human Translation
-ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
-ms.openlocfilehash: 297659aa33d37bd8da29b0cb4e0d43ce29e5e7c0
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 6150c885c4159911932bf8d7c3848b1e182b2f61
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Unterstützte Märkte für Microsoft Advertising
+# <a name="supported-markets-for-microsoft-advertising"></a>Unterstützte Märkte für Microsoft Advertising
 
 
 
@@ -17,7 +24,7 @@ ms.openlocfilehash: 297659aa33d37bd8da29b0cb4e0d43ce29e5e7c0
 Interstitielle Anzeigen und Banner werden in den folgenden Ländern und Regionen unterstützt.
 
 <span id="interstitialads"/>
-## Interstitielle Anzeigen
+## <a name="interstitial-ads"></a>Interstitielle Anzeigen
 
 -   Australien
 
@@ -40,7 +47,7 @@ Interstitielle Anzeigen und Banner werden in den folgenden Ländern und Regionen
 -   USA
 
 <span id="bannerads"/>
-## Banneranzeigen
+## <a name="banner-ads"></a>Banneranzeigen
 
 
 -   Afghanistan
@@ -312,9 +319,4 @@ Interstitielle Anzeigen und Banner werden in den folgenden Ländern und Regionen
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

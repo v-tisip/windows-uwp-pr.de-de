@@ -1,30 +1,37 @@
 ---
 author: jnHs
-Description: "Performance-Daten für die Anzeigeneinheiten in Ihren Apps können Sie mithilfe der Berichte zur Anzeigen-Performance auf App- und Kontoebene im WindowsDevCenter-Dashboard anzeigen."
-title: Bericht zur Anzeigen-Performance
+Description: "Zum Anzeigen von Leistungsdaten für die Anzeigeeinheiten in Ihren Apps verwenden Sie die Berichte zur Anzeigenleistung auf App- und Kontoebene im Windows Dev Center-Dashboard."
+title: Bericht zur Anzeigenleistung
 ms.assetid: 32E555C3-C34D-4503-82BB-4C3F5CAE4500
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 6b354b1b009bf9e4f2899f7ef97ef8791712f52b
-ms.openlocfilehash: b75d9310e577c77d1caed3e9f34762e925eb11ae
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d53fe17f2d2452e66a6b4f9c1609112c621ede64
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Bericht zur Anzeigen-Performance
+# <a name="advertising-performance-report"></a>Bericht zur Anzeigenleistung
 
 
-Zum Anzeigen von Performance-Daten für die Anzeigeneinheiten in Ihren Apps können Sie die folgenden Berichte im WindowsDevCenter-Dashboard verwenden:
+Zum Anzeigen von Leistungsdaten für die Anzeigeeinheiten in Ihren Apps verwenden Sie die Berichte zur Anzeigenleistung auf App- und Kontoebene im Windows Dev Center-Dashboard:
 
 -   [Bericht zur Anzeigen-Performance auf App-Ebene](advertising-performance-report.md#app-level-advertising-performance-report). Dieser Bericht enthält die Performance-Daten für die Microsoft-Anzeigeneinheiten in der aktuell im Dashboard ausgewählten App.
 -   [Bericht zur Anzeigen-Performance auf Kontoebene](advertising-performance-report.md#account-level-advertising-performance-report). Dieser Bericht enthält die detaillierten Performance-Daten für Microsoft-Anzeigeneinheiten und Community-Anzeigen für alle Apps, die in Ihrem Entwicklerkonto registriert sind.
 
-Standardmäßig werden die Berichte nach der Performance in den letzten 30Tagen auf allen Geräten gefiltert. Wählen Sie zum Ändern dieser Filter die Option **Filter anwenden** und anschließend einen anderen Zeitrahmen (entweder einen der vordefinierten Zeiträume oder einen benutzerdefinierten Datumsbereich) oder einen bestimmten Gerätetyp aus. 
+Standardmäßig werden die Berichte nach der Performance in den letzten 30 Tagen auf allen Geräten gefiltert. Wählen Sie zum Ändern dieser Filter die Option **Filter anwenden** und anschließend einen anderen Zeitrahmen (entweder einen der vordefinierten Zeiträume oder einen benutzerdefinierten Datumsbereich) oder einen bestimmten Gerätetyp aus. 
 
 > [!TIP]
 > Falls Sie Ihre Daten ausführlicher analysieren möchten, wählen Sie **Bericht herunterladen** aus, und öffnen Sie die CSV-Datei anschließend in Microsoft Excel oder in einem ähnlichen Programm.
 
 Die folgenden Abschnitte enthalten weitere Details zu diesen Berichten.
 
-## Bericht zur Anzeigen-Performance auf App-Ebene
+## <a name="app-level-advertising-performance-report"></a>Bericht zur Anzeigen-Performance auf App-Ebene
 
 Diese Seite enthält Performance-Daten in Diagramm-, Weltkarten- und Tabellenform für die Microsoft-Anzeigeneinheiten in der aktuell im Dashboard ausgewählten App. Wählen Sie zum Anzeigen dieses Berichts eine Ihrer Apps im Dashboard aus, und klicken Sie im Navigationsbereich auf **Analysen** &gt; **Anzeigen-Performance**.
 
@@ -46,15 +53,15 @@ In der Kartenansicht stellen dunklere Schattierungen höhere Werte und hellere S
 
 Falls Sie Ihre Daten ausführlicher analysieren möchten, wählen Sie **Bericht herunterladen** aus, und öffnen Sie die CSV-Datei anschließend in Microsoft Excel oder in einem ähnlichen Programm.
 
-## Bericht zur Anzeigen-Performance auf Kontoebene
+## <a name="account-level-advertising-performance-report"></a>Bericht zur Anzeigen-Performance auf Kontoebene
 
 Diese Seite enthält die Performance-Daten für Microsoft-Anzeigeneinheiten und Community-Anzeigen in Apps, die in Ihrem Entwicklerkonto registriert sind. Navigieren Sie zum Anzeigen dieses Berichts zur Dashboardübersicht, und klicken Sie im Navigationsbereich auf **Anzeigen-Performance**.
 
 Diese Seite umfasst folgende Abschnitte:
 
-### Microsoft Advertising
+### <a name="microsoft-advertising"></a>Microsoft Advertising
 
-Dieser Bericht enthält Performance-Daten für alle Microsoft-Anzeigeneinheiten, die in Ihren Apps verwendet werden. Darüber hinaus enthält er Performance-Daten für pubCenter-Anzeigeneinheiten ohne erfolgreiche Zuordnung zu Ihren DevCenter-Apps.
+Dieser Bericht enthält Performance-Daten für alle Microsoft-Anzeigeneinheiten, die in Ihren Apps verwendet werden. Darüber hinaus enthält er Performance-Daten für pubCenter-Anzeigeneinheiten ohne erfolgreiche Zuordnung zu Ihren Dev Center-Apps.
 
 Dieser Bericht enthält die gleichen sieben Leistungsmetriken und Ansichten (Diagramm, Weltkarte und Tabelle) wie der oben beschriebene Bericht zur Anzeigen-Performance auf App-Ebene. Sie können auf diesen Bericht die folgenden Filter anwenden:
 
@@ -70,7 +77,7 @@ Weitere Informationen zum Übertragen von pubCenter-Konten zu Dev Center finden 
 
 Falls Sie Ihre Daten ausführlicher analysieren möchten, wählen Sie **Bericht herunterladen** aus, und öffnen Sie die CSV-Datei anschließend in Microsoft Excel oder in einem ähnlichen Programm.
 
-### MicrosoftCommunity-Anzeigen
+### <a name="microsoft-community-ads"></a>Microsoft Community-Anzeigen
 
 Dieser Abschnitt enthält Performance-Daten in Diagramm- und Weltkartenform für Community-Anzeigen in der aktuell im Dashboard ausgewählten App. Weitere Informationen zu Community-Anzeigen finden Sie unter [Über Community-Anzeigen](about-community-ads.md).
 
@@ -85,20 +92,15 @@ Die Daten werden aus den folgenden Leistungsmetriken abgerufen, die für die Anz
 
 Klicken Sie auf **Diagramm** oder **Karte**, um die Daten für eine dieser Metriken in einer Diagramm- oder Weltkartenansicht zu analysieren. Klicken Sie auf die Kopfzeilen oberhalb des Diagramms oder der Karte, um zwischen den verschiedenen Metriken zu wechseln. In der Kartenansicht stellen dunklere Schattierungen höhere Werte und hellere Schattierungen niedrigere Werte dar. Sie können mit der Maus auf ein bestimmtes Land oder eine Region auf der Karte zeigen, um den Wert der ausgewählten Metrik zu analysieren. Sie können auch einen beliebigen Bereich der Karte vergrößern, um Daten für kleinere Länder anzuzeigen.
 
-## Hinweise zu den Berichten
+## <a name="notes-about-the-reports"></a>Hinweise zu den Berichten
 
 Beachten Sie bei der Verwendung der Berichte zur Anzeigen-Performance Folgendes:
 
 - Es gibt möglicherweise Abweichungen zwischen Berichten zur Anzeigen-Performance in Dev Center und pubCenter. Im Gegensatz zur Aggregation von pubCenter-Berichten erfolgt die Aggregation von Daten zur Anzeigen-Performance in Dev Center auf der Grundlage von UTC und nicht auf der Grundlage Ihrer jeweiligen Zeitzone.
 - Die Berichtsdaten für die letzten drei Tage ändern sich unter Umständen, wenn wir neue Daten aus verschiedenen Quellen erhalten und verarbeiten.
-- Datenanpassungen können rückwirkend für bis zu 90Tage vorgenommen werden.
+- Datenanpassungen können rückwirkend für bis zu 90 Tage vorgenommen werden.
 
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

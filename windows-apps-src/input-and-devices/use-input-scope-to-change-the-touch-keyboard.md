@@ -14,8 +14,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
-ms.openlocfilehash: caaa6228f2d5b2bb6566ccb285d90a396a1caf01
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 43cbc8999d21d0534c4b6e557822345a69f66007
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -262,9 +263,4 @@ Enthält die Taste **=**.
 |------------------------------------------------------------|------------------------------------------------------------------|
 | ![Standardmäßige Windows-Bildschirmtastatur](images/input-scopes/kbdpcdefault.png)<br>Gleiches Layout wie **Default**.| ![Windows Phone-Bildschirmtastatur für Namen oder Telefonnummern](images/input-scopes/kbdwpnameorphonenumber.png)<br>Enthält die Tasten **;** und **@**. Die **&amp;123**-Taste wird durch die **123**-Taste ersetzt, die die Wähltastatur des Telefons öffnet (siehe **TelephoneNumber**).|
 |Verfügbarkeit von Features:<ul><li>Rechtschreibprüfung: Standardmäßig aktiviert, kann deaktiviert werden</li><li>Autokorrektur: Immer deaktiviert</li><li>Automatische Großschreibung: Immer aktiviert</li><li>Textvorhersage: Immer deaktiviert</li></ul> | Verfügbarkeit von Features:<ul><li>Rechtschreibprüfung: Standardmäßig deaktiviert, kann aktiviert werden</li><li>Autokorrektur: Standardmäßig deaktiviert, kann aktiviert werden</li><li>Automatische Großschreibung: Standardmäßig deaktiviert, kann aktiviert werden. Erster Buchstabe eines Worts wird groß geschrieben.</li><li>Textvorhersage: Standardmäßig deaktiviert, kann aktiviert werden</li></ul> |
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -1,20 +1,27 @@
 ---
 author: Jwmsft
-Description: "Über Hyperlinks können Benutzer zu einem anderen Teil der App oder zu einer anderen App navigieren oder mit einer separaten Browser-App einen bestimmten URI (Uniform Resource Identifier) starten."
-title: Hyperlinks
+Description: "Über Links können Benutzer zu einem anderen Teil der App oder zu einer anderen App navigieren oder mit einer separaten Browser-App einen bestimmten URI (Uniform Resource Identifier) starten."
+title: Links
 ms.assetid: 74302FF0-65FC-4820-B59A-718A765EF7F0
 label: Hyperlinks
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 4d474af6930354482f9f8b6e7754ddaf6fe65dac
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 9af0a58478bbbb0dfc46bb18851ae78735e2c9b1
+ms.lasthandoff: 02/07/2017
 
 ---
-# <a name="hyperlinks"></a>Hyperlinks
+# <a name="hyperlinks"></a>Links
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-Über Hyperlinks können Benutzer zu einem anderen Teil der App oder zu einer anderen App navigieren oder mit einer separaten Browser-App einen bestimmten URI (Uniform Resource Identifier) starten. Sie haben zwei Möglichkeiten, einer XAML-App einen Link hinzuzufügen: über das **Link**textelement oder das **HyperlinkButton**-Steuerelement.
+Über Links können Benutzer zu einem anderen Teil der App oder zu einer anderen App navigieren oder mit einer separaten Browser-App einen bestimmten URI (Uniform Resource Identifier) starten. Sie haben zwei Möglichkeiten, einer XAML-App einen Link hinzuzufügen: über das **Link**textelement oder das **HyperlinkButton**-Steuerelement.
 
 ![Eine Linkschaltfläche](images/controls/hyperlink-button.png)
 
@@ -157,9 +164,4 @@ Die Standardfarbe des Links ist die Akzentfarbe des Systems. Dieses Verhalten k�
 **Für Entwickler (XAML)**
 - [**Windows.UI.Xaml.Documents.Hyperlink-Klasse**](https://msdn.microsoft.com/library/windows/apps/dn279356)
 - [**Windows.UI.Xaml.Controls.HyperlinkButton-Klasse**](https://msdn.microsoft.com/library/windows/apps/br242739)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

@@ -1,14 +1,22 @@
 ---
 author: jnHs
 Description: "Informationen zu den Steuerformularen, die von Microsoft ausgestellt werden, einschließlich ihres Empfängers und des Zeitpunkts der Verfügbarkeit."
-title: Kennenlernen der von Microsoft ausgestellten IRS-Steuerformulare
+title: "Erläuterung der von Microsoft ausgestellten IRS-Steuerformulare"
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
+ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
 translationtype: Human Translation
-ms.sourcegitcommit: 684a76a503a0adefb1754059ffa6aa8d4d8d940b
-ms.openlocfilehash: 2927588bc096ef1ed9e8451cea73ba78efa9d7c0
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 5f51e1c5a44767e49b5c3dc5f578c2532da11008
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Kennenlernen der von Microsoft ausgestellten IRS-Steuerformulare
+# <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Erläuterung der von Microsoft ausgestellten IRS-Steuerformulare
 
 Je nach Ihrem Standort und der Höhe des Umsatzes und/oder der Zahlungen, die Sie erhalten, erhalten Sie jedes Jahr mindestens ein Steuerformular von Microsoft. Microsoft muss diese Formulare ausstellen und bei der Bundessteuerbehörde der USA (IRS) einreichen.
 
@@ -54,10 +62,10 @@ EIN: \*\*\*\*\*4442<br>
     <td valign="top">Keine der Antworten oben trifft zu.</td>
     <td valign="top">Keine</td>
   </tr>
-</table>
-
-
-<table>
+  <tr>
+    <td valign="top">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+  </tr>
   <tr>
      <th>Wenn ich Entwickler in den USA bin, kostenpflichtige Apps verkaufe und... </th>
      <th> Ich sollte dieses Formular erhalten</th>
@@ -119,9 +127,4 @@ EIN: \*\*\*\*\*0505<br>
 
 
 > **Hinweis** Bei weiteren Fragen oder Anliegen im Zusammenhang mit **IRS-Steuerformularen** erstellen Sie ein [Supportticket](http://aka.ms/storesupport). Microsoft kann keine Fragen im Zusammenhang mit Ihren spezifischen Steuerumständen beantworten. Bei diesen Fragen wenden Sie sich an Ihre Steuerexperten.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

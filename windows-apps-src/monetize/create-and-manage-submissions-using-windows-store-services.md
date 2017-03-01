@@ -2,14 +2,21 @@
 author: mcleanbyron
 ms.assetid: 7CC11888-8DC6-4FEE-ACED-9FA476B2125E
 description: "Verwenden Sie die Windows Store-Übermittlungs-API, um Übermittlungen für Apps programmgesteuert zu erstellen und zu verwalten, die für Ihr Windows Dev Center-Konto registriert sind."
-title: "Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten"
+title: "Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Windows Store-Übermittlungs-API"
 translationtype: Human Translation
-ms.sourcegitcommit: ccc7cfea885cc9c8803cfc70d2e043192a7fee84
-ms.openlocfilehash: 8467cddd5eec2348cd35f4f5dc1564b47813a6ca
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f73470c456bf59544bc702b137da64f57c6a6943
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="create-and-manage-submissions-using-windows-store-services"></a>Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten
+# <a name="create-and-manage-submissions-using-windows-store-services"></a>Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten
 
 
 Verwenden Sie die *Windows Store-Übermittlungs-API*, um Übermittlungen für Apps, Add-Ons (auch als In-App-Produkte oder IAPs bezeichnet) und Flight-Pakete für Ihr Windows Dev Center-Konto oder das Ihrer Organisation abzufragen und zu erstellen. Diese API ist hilfreich, wenn über Ihr Konto viele Apps oder Add-Ons verwaltet werden und Sie den Übermittlungsprozess für diese Ressourcen automatisieren und optimieren möchten. Diese API verwendet Azure Active Directory (Azure AD), um die Aufrufe von Ihrer App oder Ihrem Dienst zu authentifizieren.
@@ -22,9 +29,11 @@ Die folgenden Schritte beschreiben den gesamten Prozess der Verwendung der Windo
 
 
 <span id="not_supported" />
->**Wichtig**
+>**Wichtige Hinweise**
 
 > * Diese API kann nur für Windows Dev Center-Konten verwendet werden, die eine Berechtigung zur Verwendung der API erhalten haben. Diese Berechtigung wird für Entwicklerkonten phasenweise aktiviert, und die Berechtigung ist zu diesem Zeitpunkt nicht für alle Konten aktiviert. Um früheren Zugriff anfordern, melden Sie sich beim Dev Center-Dashboard an, klicken Sie am unteren Rand des Dashboards auf **Feedback**, wählen Sie **Übermittlungs-API** für den Feedback-Bereich, und übermitteln Sie Ihre Anforderung. Sie erhalten eine E-Mail, wenn diese Berechtigung für Ihr Konto aktiviert ist.
+<br/><br/>
+>* Wenn Sie diese API zum Erstellen einer Übermittlung von Apps, Flight-Paketen oder Add-Ons verwenden, achten Sie darauf, weitere Änderungen an der Übermittlung nur mithilfe der API, anstatt des Dev Center-Dashboards vorzunehmen. Wenn Sie das Dashboard verwenden, um eine Übermittlung ändern, die Sie ursprünglich mit der API erstellt haben, können Sie diese nicht mehr ändern oder ein Commit für die Übermittlung mithilfe der APIs ausführen. In einigen Fällen wird die Übermittlung im Fehlerzustand belassen, in dem es nicht mehr zur Übermittlung fortgesetzt werden kann. In diesem Fall müssen Sie die Übermittlung löschen und eine neue Übermittlung erstellen.
 <br/><br/>
 > * Diese API kann nicht mit Apps oder Add-Ons mit bestimmten Features verwendet werden, die im Dev Center-Dashboard im August 2016 eingeführt wurden, einschließlich (aber nicht beschränkt auf) erforderliche App-Updates und vom Store verwaltete Endverbraucher-Add-Ons. Bei Verwendung der Windows Store-Übermittlungs-API mit einer App oder einem Add-On, das eines dieser Features verwendet, gibt die API den Fehlercode 409 zurück. In diesem Fall müssen Sie das Dashboard verwenden, um die Übermittlungen für die App bzw. das Add-On zu verwalten.
 
@@ -111,17 +120,19 @@ Die folgenden Artikel enthalten ausführliche Codebeispiele, die zeigen, wie Sie
 * [Java-Codebeispiele](java-code-examples-for-the-windows-store-submission-api.md)
 * [Python-Codebeispiele](python-code-examples-for-the-windows-store-submission-api.md)
 
+>**Hinweis:**&nbsp;&nbsp;Zusätzlich zu den oben aufgeführten Codebeispielen bieten wir ebenfalls ein Open-Source-PowerShell-Modul, das neben dem Windows Store-Übermittlungs-API ebenfalls eine Befehlszeilenschnittstelle anbietet. Dieses Modul heißt [StoreBroker](https://aka.ms/storebroker). Sie können dieses Modul zur direkten Verwaltung Ihrer App-, Flight- und Add-On-Übermittlungen von der Befehlszeile anstatt der Windows Store-Übermittlungs-API benutzen oder einfach die Quelle durchsuchen, um weitere Beispiele für das Aufrufen dieser API zu finden. Das StoreBroker-Modul wird innerhalb von Microsoft aktiv als primäre Methode verwendet, durch die viele Erstanbieter-Apps an den Store übermittelt werden. Weitere Informationen finden Sie in auf der [StoreBroker-Seite auf GitHub](https://aka.ms/storebroker).
+
 ## <a name="troubleshooting"></a>Problembehandlung
 
 | Problem      | Lösung                                          |
 |---------------|---------------------------------------------|
-| Nach dem Aufrufen der Windows Store-Übermittlungs-API über die PowerShell sind die Antwortdaten für die API beschädigt, wenn Sie diese aus dem JSON-Format in ein PowerShell-Objekt mit dem [ConvertFrom-Json](https://technet.microsoft.com/en-us/library/hh849898.aspx)-Cmdlet und zurück in das JSON-Format mit dem [ConvertTo-Json](https://technet.microsoft.com/en-us/library/hh849922.aspx)-Cmdlet konvertieren. |  Standardmäßig ist der Parameter *-Depth* für das [ConvertTo-Json](https://technet.microsoft.com/en-us/library/hh849922.aspx)-Cmdlet auf zwei Objektebenen festgelegt. Dies ist zu flach für die meisten JSON-Objekte, die von der Windows Store-Übermittlungs-API zurückgegeben werden. Legen Sie beim Aufrufen des [ConvertTo-Json](https://technet.microsoft.com/en-us/library/hh849922.aspx)-Cmdlets den Parameter *-Depth* auf eine größere Zahl fest, z. B. 20. |
+| Nach dem Aufrufen der Windows Store-Übermittlungs-API über die PowerShell sind die Antwortdaten für die API beschädigt, wenn Sie diese aus dem JSON-Format in ein PowerShell-Objekt mit dem [ConvertFrom-Json](https://technet.microsoft.com/library/hh849898.aspx)-Cmdlet und zurück in das JSON-Format mit dem [ConvertTo-Json](https://technet.microsoft.com/library/hh849922.aspx)-Cmdlet konvertieren. |  Standardmäßig ist der Parameter *-Depth* für das [ConvertTo-Json](https://technet.microsoft.com/library/hh849922.aspx)-Cmdlet auf zwei Objektebenen festgelegt. Dies ist zu flach für die meisten JSON-Objekte, die von der Windows Store-Übermittlungs-API zurückgegeben werden. Legen Sie beim Aufrufen des [ConvertTo-Json](https://technet.microsoft.com/library/hh849922.aspx)-Cmdlets den Parameter *-Depth* auf eine größere Zahl fest, z. B. 20. |
 
 ## <a name="additional-help"></a>Zusätzliche Hilfe
 
 Wenn Sie Fragen zur Windows Store-Übermittlungs-API haben oder Hilfe beim Verwalten der Übermittlungen mit dieser API benötigen, verwenden Sie die folgenden Ressourcen:
 
-* Stellen Sie Ihre Fragen in unseren [Foren](https://social.msdn.microsoft.com/Forums/windowsapps/en-us/home?forum=wpsubmit).
+* Stellen Sie Ihre Fragen in unseren [Foren](https://social.msdn.microsoft.com/Forums/windowsapps/home?forum=wpsubmit).
 * Besuchen Sie unsere [Supportseite](https://developer.microsoft.com/windows/support), und fordern Sie Supportunterstützung für das Dev Center-Dashboard an. Wenn Sie aufgefordert werden, einen Problemtyp und eine Kategorie auszuwählen, wählen Sie **App submission and certification** bzw. **Übermitteln einer App**.  
 
 ## <a name="related-topics"></a>Verwandte Themen
@@ -133,9 +144,4 @@ Wenn Sie Fragen zur Windows Store-Übermittlungs-API haben oder Hilfe beim Verwa
 * [Verwalten von Flight-Paketen](manage-flights.md)
 * [Verwalten von Flight-Paketübermittlungen](manage-flight-submissions.md)
  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

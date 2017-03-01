@@ -2,9 +2,17 @@
 author: TylerMSFT
 description: "Erfahren Sie, wie Sie die erweiterte Ausführung verwenden, damit Ihre App auch bei Minimierung weiter ausgeführt wird."
 title: "Ausführen während der Minimierung mithilfe der erweiterten Ausführung"
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
+ms.assetid: e6a6a433-5550-4a19-83be-bbc6168fe03a
 translationtype: Human Translation
-ms.sourcegitcommit: e9fcb1f0d1248de25d576029d50070792ad72182
-ms.openlocfilehash: 40b2a15379129142a84c4a5caf4317dc50041e06
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: b7bda3b25e2c268926223da429abf559524ad38c
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -241,9 +249,4 @@ Um zu ermitteln, ob der Benutzer die Hintergrundaktivität Ihrer App begrenzt ha
 [Hintergrundübertragungen](https://msdn.microsoft.com/en-us/windows/uwp/networking/background-transfers)  [Akkuinformationen und Hintergrundaktivität](https://blogs.windows.com/buildingapps/2016/08/01/battery-awareness-and-background-activity/#I2bkQ6861TRpbRjr.97)  
 [MemoryManager-Klasse](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.memorymanager.aspx)  
 [Wiedergeben von Medien im Hintergrund](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/background-audio)  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

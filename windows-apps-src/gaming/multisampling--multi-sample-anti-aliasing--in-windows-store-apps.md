@@ -1,27 +1,34 @@
 ---
 author: mtoepke
 title: "Multisampling in UWP-Apps (Apps für die universelle Windows-Plattform)"
-description: "Hier erfahren Sie, wie Sie Multisampling in UWP-Apps (Apps für die universelle Windows-Plattform) verwenden, die mit Direct3D erstellt wurden."
+description: "Hier erfahren Sie, wie Sie Multisampling in UWP-Apps (Apps für die Universelle Windows-Plattform) verwenden, die mit Direct3D erstellt wurden."
 ms.assetid: 1cd482b8-32ff-1eb0-4c91-83eb52f08484
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Spiele, Multisampling, Direct3D"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: cf82c34e23a1c66bfc2d59f9ea3b4ebce99ab52e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7748bf4c2d1654dad77d5971487330d3530d9e84
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <span id="dev_gaming.multisampling__multi-sample_anti_aliasing__in_windows_store_apps"></span> Multisampling in UWP-Apps (Apps für die universelle Windows-Plattform)
+# <a name="span-iddevgamingmultisamplingmulti-sampleantialiasinginwindowsstoreappsspan-multisampling-in-universal-windows-platform-uwp-apps"></a><span id="dev_gaming.multisampling__multi-sample_anti_aliasing__in_windows_store_apps"></span> Multisampling in UWP-Apps (Apps für die Universelle Windows-Plattform)
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Hier erfahren Sie, wie Sie Multisampling in Windows-Runtime-Apps verwenden, die mit Direct3D erstellt wurden. Das Multisampling, das auch als Multiple Sample Antialiasing bezeichnet wird, ist ein Grafikverfahren, das treppenförmige Kanten reduziert. Dazu werden mehr Pixel gezeichnet, als im endgültigen Renderziel tatsächlich enthalten sind, und anschließend wird der Mittelwert der Werte gebildet, um in bestimmten Pixeln die Darstellung einer "partiellen" Kante zu erreichen. Eine ausführliche Beschreibung der Funktionsweise des Multisamplings in Direct3D finden Sie unter [Regeln für die Rasterung beim Multiple Sample Antialiasing](https://msdn.microsoft.com/library/windows/desktop/cc627092#Multisample).
 
-## Multisampling und die Flipmodell-Swapchain
+## <a name="multisampling-and-the-flip-model-swap-chain"></a>Multisampling und die Flipmodell-Swapchain
 
 
 Für UWP-Apps, die DirectX nutzen, müssen Flipmodell-Swapchains verwendet werden. Flipmodell-Swapchains verfügen über keine direkte Multisampling-Unterstützung. Das Multisampling kann aber auf andere Art und Weise angewendet werden. Hierzu wird die Szene in einer Renderzielansicht mit Multisampling gerendert und dieses Renderziel mit Multisampling vor dem Darstellen dann für den Hintergrundpuffer aufgelöst. Dieser Artikel beschreibt die Schritte, die erforderlich sind, um UWP-Apps mit Multisampling zu versehen.
 
-### Verwenden von Multisampling
+### <a name="how-to-use-multisampling"></a>Verwenden von Multisampling
 
 Direct3D-Featureebenen stellen die Unterstützung für spezielle Mindestfunktionen für die Beispielanzahl sicher, und es sind bestimmte Pufferformate verfügbar, die das Multisampling unterstützen. Grafikgeräte unterstützen häufig einen weiteren Bereich von Formaten und Beispielanzahlen als das erforderliche Minimum. Sie können die Multisampling-Unterstützung zur Laufzeit bestimmen. Prüfen Sie zu diesem Zweck die Featureunterstützung für das Multisampling mit bestimmten DXGI-Formaten und anschließend die Beispielanzahlen, die Sie für die einzelnen unterstützten Formate verwenden können.
 
@@ -206,10 +213,5 @@ Direct3D-Featureebenen stellen die Unterstützung für spezielle Mindestfunktion
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

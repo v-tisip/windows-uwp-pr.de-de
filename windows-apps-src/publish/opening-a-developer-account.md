@@ -3,9 +3,16 @@ author: jnHs
 ms.assetid: 284EBA1F-BFB4-4CDA-9F05-4927CDACDAA7
 title: "Eröffnen eines Entwicklerkontos"
 description: "Diese Übersicht zur Registrierung eines Entwicklerkontos für Windows Store und andere Microsoft-Programme erleichtert Ihnen das Einrichten Ihres Kontos."
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 323577311d328da6ad1e7bf0a976d3cea099816a
-ms.openlocfilehash: 19096e3f1f94fb4eb98646163c6542a94f8612d4
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 26329304df64689ea7938d4fc838bd730696e4a2
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="opening-a-developer-account"></a>Eröffnen eines Entwicklerkontos
@@ -84,10 +91,5 @@ Wenn Sie Ihr Konto schließen, sollten Sie wissen, was mit Ihren im Windows Stor
 -   Der Name Ihrer App wird für eine etwaige Verwendung durch einen anderen Entwickler freigegeben.
 -   Falls Ihr Konto ein Guthaben aufgrund der vorherigen App-Käufe aufweist, können Sie die Auszahlung auch dann anfordern, wenn der fällige Betrag nicht den normalen Zahlungsschwellenwert erfüllt.
 
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

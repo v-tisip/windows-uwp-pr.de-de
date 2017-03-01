@@ -6,9 +6,16 @@ ms.assetid: 1DB48285-07B7-4952-80EF-02B57D4469F2
 label: Command design basics
 template: detail.hbs
 op-migration-status: ready
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: bc6ad505dff838204fcf1d0764ec075a382d56cd
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ec6e7879faf3c33edc97b26b2d0721808a02dfdc
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -68,7 +75,7 @@ Die folgende Liste enthält die unter Windows verfügbaren Befehlsoberflächen s
 <p><img src="images/content-area.png" alt="The content area of an app" /></p></td>
 
 <td align="left" style="vertical-align: top;">Wichtige oder häufig benötigte Befehle für die Hauptszenarien der App sollten auf der Canvas (dem Inhaltsbereich Ihrer App) platziert werden. Da Sie Befehle in der Nähe von (oder auf) Objekten platzieren können, die durch den Befehl beeinflusst werden, sind auf der Canvas platzierte Befehle besonders komfortabel und intuitiv.
-<p>Wählen Sie die Befehle für die Canvas aber mit Bedacht. Wenn Sie zu viele Befehle auf der App-Canvas positionieren, geht wertvoller Platz und die Übersichtlichkeit für den Benutzer verloren. Selten verwendete Befehle sind unter Umständen auf einer anderen Befehlsoberfläche besser aufgehoben – beispielsweise in einem Menü oder auf der Befehlsleiste im Bereich „Mehr“.</p></td>
+<p>Wählen Sie die Befehle für die Canvas aber mit Bedacht. Wenn Sie zu viele Befehle auf der App-Canvas positionieren, geht wertvoller Platz und die Übersichtlichkeit für den Benutzer verloren. Selten verwendete Befehle sind unter Umständen auf einer anderen Befehlsoberfläche besser aufgehoben – beispielsweise in einem Menü oder auf der Befehlsleiste im Bereich &quot;Mehr&quot;.</p></td>
 </tr>
 
 <tr class="even">
@@ -156,10 +163,5 @@ Ausführliche Informationen zum Optimieren der Benutzerfreundlichkeit bei einem 
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

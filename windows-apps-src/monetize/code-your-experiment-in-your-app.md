@@ -1,17 +1,24 @@
 ---
 author: mcleanbyron
 Description: "Zum Ausführen eines Experiments in Ihrer universellen Windows-Plattform (UWP)-App mit einem A/B-Test müssen Sie das Experiment in der App codieren."
-title: "Programmieren der App für Experimente"
+title: "Codieren Ihrer App für das Experiment"
 ms.assetid: 6A5063E1-28CD-4087-A4FA-FBB511E9CED5
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Microsoft Store Services SDK, A / B-Tests, Experimente"
 translationtype: Human Translation
-ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
-ms.openlocfilehash: cc32e2688bce636e1f4bda02aade4ed1d94f3e28
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d5c46c896aad3dfbc0f6f9bdb010652507654cb0
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="code-your-app-for-experimentation"></a>Programmieren der App für Experimente
+# <a name="code-your-app-for-experimentation"></a>Codieren Ihrer App für das Experiment
 
-Nach dem [Erstellen eines Projekts und Festlegen von Remotevariablen im Dev Center-Dashboard](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md) können Sie den Code in Ihrer App für die universelle Windows-Plattform (UWP) aktualisieren, um:
+Nach dem [Erstellen eines Projekts und Festlegen von Remotevariablen im Dev Center-Dashboard](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md) können Sie den Code in Ihrer App für die Universelle Windows-Plattform (UWP) aktualisieren, um:
 * Werte von Remotevariablen von Windows Dev Center zu erhalten
 * Remotevariablen zum Konfigurieren von App-Funktionen für die Benutzer zu verwenden
 * Ereignisse in Dev Center zu protokollieren, die angeben, wann Benutzer Ihr Experiment angezeigt und eine gewünschte Aktion ausgeführt haben (auch als *Umwandlung* bezeichnet).
@@ -110,9 +117,4 @@ Nachdem Sie das Experiment in Ihrer App programmiert haben, sind Sie bereit für
 * [Verwalten des Experiments im Dev Center-Dashboard](manage-your-experiment.md)
 * [Erstellen und Ausführen eines ersten Experiments mit A/B-Tests](create-and-run-your-first-experiment-with-a-b-testing.md)
 * [Ausführen von App-Experimenten mit A/B-Tests](run-app-experiments-with-a-b-testing.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

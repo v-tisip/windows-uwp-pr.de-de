@@ -3,23 +3,30 @@ author: TylerMSFT
 title: Starten der Windows-Karten-App
 description: "Erfahren Sie, wie Sie die Windows-Karten-App aus Ihrer App starten können."
 ms.assetid: E363490A-C886-4D92-9A64-52E3C24F1D98
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: a2f09aa510c9c3db6b8eca25f4c8cee98fa0eb46
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c9c359fd424b4c9526ebfc610adc7097bb83cbda
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Starten der Windows-Karten-App
+# <a name="launch-the-windows-maps-app"></a>Starten der Windows-Karten-App
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Erfahren Sie, wie Sie die Windows-Karten-App aus Ihrer App starten können. In diesem Thema werden die **bingmaps:**-, **ms-drive-to:**-, **ms-walk-to:**- und *ms-settings:*-Uniform Resource Identifier (URI)-Schemas erläutert. Verwenden Sie diese URI-Schemas zum Starten der Windows-Karten-App für bestimmte Karten, Wegbeschreibungen und Suchergebnisse oder um über die Einstellungs-App Offlinekarten für Windows-Karten herunterzuladen.
+Erfahren Sie, wie Sie die Windows-Karten-App aus Ihrer App starten können. In diesem Thema werden die **bingmaps:, ms-drive-to:, ms-walk-to:** und **ms-settings:** -Uniform Resource Identifier (URI)-Schemas erläutert. Verwenden Sie diese URI-Schemas zum Starten der Windows-Karten-App für bestimmte Karten, Wegbeschreibungen und Suchergebnisse oder um über die Einstellungs-App Offlinekarten für Windows-Karten herunterzuladen.
 
 **Tipp** Um mehr über das Starten der Windows-Karten-App aus Ihrer App zu erfahren, laden Sie das [Kartenbeispiel für die Universelle Windows-Plattform (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977) aus dem Repository [Beispiele für universelle Windows-Plattform](http://go.microsoft.com/fwlink/p/?LinkId=619979) auf GitHub herunter.
 
-## Einführung in URIs
+## <a name="introducing-uris"></a>Einführung in URIs
 
 Mit URI-Schemas können Sie Apps öffnen, indem Sie auf Hyperlinks klicken (oder programmgesteuert in Ihrer App). Ebenso wie Sie eine neue E-Mail mithilfe von **mailto:** starten oder einen Webbrowser mithilfe von **http:**verwenden können, haben Sie auch die Möglichkeit, die Windows-Karten-App mithilfe von **bingmaps:**, **ms-drive-to:** und **ms-walk-to:** zu öffnen.
 
@@ -43,9 +50,9 @@ In diesem URI-Schema steht *query* für eine Reihe von Parametername-/-wert-Paar
 
 **&param1=value1&param2=value2 …**
 
-Eine vollständige Liste der verfügbaren Parameter finden Sie unter dem [bingmaps:](#bingmaps)-, [ms-drive-to:](#msdriveto)- und [ms-walk-to:](#mswalkto)-Parameterverweis. Weiter unten in diesem Thema finden Sie dazu Beispiele.
+Eine vollständige Liste der verfügbaren Parameter finden Sie unter dem [bingmaps:](#bingmaps-param-reference)-, [ms-drive-to:](#ms-drive-to-param-reference)- und [ms-walk-to:](#ms-walk-to-param-reference)-Parameterverweis. Weiter unten in diesem Thema finden Sie dazu Beispiele.
 
-## Starten eines URIs aus Ihrer App
+## <a name="launch-a-uri-from-your-app"></a>Starten eines URIs aus Ihrer App
 
 
 Um die Windows-Karten-App aus Ihrer App zu starten, rufen Sie die [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476)-Methode mit einem **bingmaps:**-, **ms-drive-to:**- oder **ms-walk-to:**-URI auf. Im folgenden Beispiel wird derselbe URI wie im vorherigen Beispiel gestartet. Weitere Informationen zum Starten von Apps mithilfe des URIs finden Sie unter [Starten der Standard-App für einen URI](launch-default-app.md).
@@ -62,12 +69,11 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 
 In diesem Beispiel wird die [**LauncherOptions**](https://msdn.microsoft.com/library/windows/apps/hh701435)-Klasse verwendet, um sicherzustellen, dass die Windows-Karten-App gestartet wird.
 
-## Anzeigen bekannter Positionen
-
+## <a name="display-known-locations"></a>Anzeigen bekannter Positionen
 
 Es gibt mehrere Möglichkeiten, den Mittelpunkt und den Zoomfaktor der Karte zu steuern. Mithilfe der Parameter *cp* (Mittelpunkt) und *lvl* (Zoomfaktor) lassen sich vorhersagbare Ergebnisse am einfachsten erzielen. Der *bb*-Parameter (der einen durch Breiten- und Längengrad begrenzten Bereich angibt) ist weniger vorhersagbar, weil er die Bildschirmauflösung berücksichtigt und Mittelpunkt und Zoomfaktor der Karten basierend auf den bereitgestellten Koordinaten ermittelt. Der *bb*-Parameter wird ignoriert, wenn alle drei Parameter (*bb*, *cp* und *lvl*) vorhanden sind.
 
-Verwenden Sie zum Steuern der Art der Ansicht die *ss* (Streetside) und *sty* (Formatvorlage) und Parameter. Der *ss*-Parameter fügt die Karte in einer Streetside-Ansicht ein. Mit dem *sty*-Parameter können Sie zwischen Straßen-, Luft- und 3D-Ansicht wechseln. Bei der Verwendung des 3D-Formats können die *hdg*-, *pit*- und *rad*-Parameter verwendet werden, um die 3D-Ansicht anzugeben. *hdg* gibt die Richtung der Ansicht, *pit* den Nickwinkel der Ansicht und *rad* den Abstand vom Mittelpunkt in der Ansicht an. Weitere Informationen zu diesen und anderen Parametern finden Sie unter [bingmaps: Parameterverweis](#bingmaps).
+Verwenden Sie zum Steuern der Art der Ansicht die *ss* (Streetside) und *sty* (Formatvorlage) und Parameter. Der *ss*-Parameter fügt die Karte in einer Streetside-Ansicht ein. Mit dem *sty*-Parameter können Sie zwischen Straßen-, Luft- und 3D-Ansicht wechseln. Bei der Verwendung des 3D-Formats können die *hdg*-, *pit*- und *rad*-Parameter verwendet werden, um die 3D-Ansicht anzugeben. *hdg* gibt die Richtung der Ansicht, *pit* den Nickwinkel der Ansicht und *rad* den Abstand vom Mittelpunkt in der Ansicht an. Weitere Informationen zu diesen und anderen Parametern finden Sie unter [bingmaps: Parameterverweis](#bingmaps-param-reference).
 
 | Beispiel-URI                                                                 | Ergebnisse                                                                                                                                                                                                   |
 |----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -85,11 +91,9 @@ Verwenden Sie zum Steuern der Art der Ansicht die *ss* (Streetside) und *sty* (F
 | bingmaps:?cp=47.6204~-122.3491&ss=1                                        | Zeigt eine Streetside-Ansicht der Space Needle an.                                                                                                                                                           |
 
  
+## <a name="display-search-results"></a>Anzeigen von Suchergebnissen
 
-## Anzeigen von Suchergebnissen
-
-
-Bei einer Unternehmenssuche mithilfe des *q*-Parameters wird empfohlen, die Suchbegriffe so genau wie möglich und zusammen mit dem *cp*-Parameter oder dem *where*-Parameter festzulegen, um eine Position anzugeben. Wenn der Benutzer der Karten-App keine Berechtigung zur Nutzung seiner Positionsdaten erteilt hat und Sie keine Position für eine Unternehmenssuche angeben, wird die Suche möglicherweise auf Landesebene durchgeführt und gibt keine aussagekräftigen Ergebnisse zurück. Suchergebnisse werden in der am besten geeigneten Kartenansicht angezeigt. Sofern der *lvl*-Parameter (Zoomfaktor) nicht unbedingt festgelegt werden muss, wird empfohlen, die Auswahl der Karten-App zu überlassen. Weitere Informationen zu diesen und anderen Parametern finden Sie unter [bingmaps: Parameterverweis](#bingmaps).
+Bei einer Unternehmenssuche mithilfe des *q*-Parameters wird empfohlen, die Suchbegriffe so genau wie möglich und zusammen mit dem *cp*-Parameter oder dem *where*-Parameter festzulegen, um eine Position anzugeben. Wenn der Benutzer der Karten-App keine Berechtigung zur Nutzung seiner Positionsdaten erteilt hat und Sie keine Position für eine Unternehmenssuche angeben, wird die Suche möglicherweise auf Landesebene durchgeführt und gibt keine aussagekräftigen Ergebnisse zurück. Suchergebnisse werden in der am besten geeigneten Kartenansicht angezeigt. Sofern der *lvl*-Parameter (Zoomfaktor) nicht unbedingt festgelegt werden muss, wird empfohlen, die Auswahl der Karten-App zu überlassen. Weitere Informationen zu diesen und anderen Parametern finden Sie unter [bingmaps: Parameterverweis](#bingmaps-param-reference).
 
 | Beispiel-URI                                                    | Ergebnisse                                                                                                                                         |
 |---------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -100,13 +104,12 @@ Bei einer Unternehmenssuche mithilfe des *q*-Parameters wird empfohlen, die Such
 | bingmaps:?q=coffee&where=Seattle                              | Sucht nach „Kaffee“ in Seattle.                                                                                                                 |
 
  
+## <a name="display-multiple-points"></a>Anzeigen mehrerer Punkte
 
-## Anzeigen mehrerer Punkte
 
+Verwenden Sie den *collection*-Parameter zum Anzeigen eines benutzerdefinierten Satzes von Punkten auf der Karte. Wenn mehr als ein Punkt vorhanden ist, wird eine Punktliste angezeigt. Eine Sammlung kann bis zu 25 Punkte umfassen, die in der angegebenen Reihenfolge aufgeführt sind. Die Sammlung hat Vorrang vor den Such- und Routenanforderungen. Weitere Informationen zu diesen und anderen Parametern finden Sie unter [bingmaps: Parameterverweis](#bingmaps-param-reference).
 
-Verwenden Sie den *collection*-Parameter zum Anzeigen eines benutzerdefinierten Satzes von Punkten auf der Karte. Wenn mehr als ein Punkt vorhanden ist, wird eine Punktliste angezeigt. Eine Sammlung kann bis zu 25 Punkte umfassen, die in der angegebenen Reihenfolge aufgeführt sind. Die Sammlung hat Vorrang vor den Such- und Routenanforderungen. Weitere Informationen zu diesen und anderen Parametern finden Sie unter [bingmaps: Parameterverweis](#bingmaps).
-
-| Beispiel-URI                                                                                                                                                         | Ergebnisse                                                                                                                   |
+| Beispiel-URI | Ergebnisse                                                                                                                   |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
 | bingmaps:?collection=point.36.116584\_-115.176753\_Caesars%20Palace                                                                                                | Sucht nach „Caesar’s Palace“ in Las Vegas und zeigt die Ergebnisse in der am besten geeigneten Kartenansicht auf einer Karte an.                         |
 | bingmaps:?collection=point.36.116584\_-115.176753\_Caesars%20Palace&lvl=16                                                                                         | Zeigt die Ortsmarke „Caesars Palace“ in Las Vegas mit dem Zoomfaktor 16 an.                                               |
@@ -116,10 +119,10 @@ Verwenden Sie den *collection*-Parameter zum Anzeigen eines benutzerdefinierten 
 
  
 
-## Anzeigen von Wegbeschreibungen und Verkehr
+## <a name="display-directions-and-traffic"></a>Anzeigen von Wegbeschreibungen und Verkehr
 
 
-Sie können Wegbeschreibungen zwischen zwei Punkten mit dem *rtp*-Parameter anzeigen. Diese Punkte können eine Adresse oder Breiten- und Längengradkoordinaten sein. Verwenden Sie den *trfc*-Parameter zum Anzeigen von Verkehrsinformationen. Verwenden Sie den *mode*-Parameter, um die Art der Anweisungen anzugeben (fahren, laufen oder öffentliche Verkehrsmittel). Wenn *mode* nicht angegeben ist, werden Wegbeschreibungen mithilfe der Einstellung für die Transportmethode des Benutzers bereitgestellt. Weitere Informationen zu diesen und anderen Parametern finden Sie unter [bingmaps: Parameterverweis](#bingmaps).
+Sie können Wegbeschreibungen zwischen zwei Punkten mit dem *rtp*-Parameter anzeigen. Diese Punkte können eine Adresse oder Breiten- und Längengradkoordinaten sein. Verwenden Sie den *trfc*-Parameter zum Anzeigen von Verkehrsinformationen. Verwenden Sie den *mode*-Parameter, um die Art der Anweisungen anzugeben (fahren, laufen oder öffentliche Verkehrsmittel). Wenn *mode* nicht angegeben ist, werden Wegbeschreibungen mithilfe der Einstellung für die Transportmethode des Benutzers bereitgestellt. Weitere Informationen zu diesen und anderen Parametern finden Sie unter [bingmaps: Parameterverweis](#bingmaps-param-reference).
 
 ![Beispiel für eine Wegbeschreibung](images/windowsmapgcdirections.png)
 
@@ -136,12 +139,12 @@ Sie können Wegbeschreibungen zwischen zwei Punkten mit dem *rtp*-Parameter anze
 
  
 
-## Anzeigen detaillierter Wegbeschreibungen
+## <a name="display-turn-by-turn-directions"></a>Anzeigen detaillierter Wegbeschreibungen
 
 
-Mit den **ms-drive-to:**- und **ms-walk-to:**-URI-Schemas können Sie direkt eine detaillierte Ansicht einer Route starten. Diese URI-Schemas können nur Wegbeschreibungen von der aktuellen Position des Benutzers bereitstellen. Wenn Sie Wegbeschreibungen zwischen Punkten bereitstellen müssen, die nicht die aktuelle Position des Benutzers enthalten, verwenden Sie das **bingmaps:**-URI-Schema wie im vorherigen Abschnitt beschrieben. Weitere Informationen zu diesen URI-Schemas finden Sie unter dem [ms-drive-to:](#msdriveto)- und [ms-walk-to:](#mswalkto)-Parameterverweis.
+Mit den **ms-drive-to:**- und **ms-walk-to:**-URI-Schemas können Sie direkt eine detaillierte Ansicht einer Route starten. Diese URI-Schemas können nur Wegbeschreibungen von der aktuellen Position des Benutzers bereitstellen. Wenn Sie Wegbeschreibungen zwischen Punkten bereitstellen müssen, die nicht die aktuelle Position des Benutzers enthalten, verwenden Sie das **bingmaps:**-URI-Schema wie im vorherigen Abschnitt beschrieben. Weitere Informationen zu diesen URI-Schemas finden Sie unter dem [ms-drive-to:](#ms-drive-to-param-reference)- und [ms-walk-to:](#ms-walk-to-param-reference)-Parameterverweis.
 
-> **Wichtig**  Wenn die URI-Schemas **ms-drive-to:** oder **ms-walk-to:** gestartet werden, überprüft die Karten-App, ob für das Gerät bereits ein GPS-Positionsfixpunkt bestimmt wurde. Ist dies der Fall, geht die Karten-App zu detaillierten Wegbeschreibungen über. Falls nicht, zeigt die App die Routenübersicht an, wie unter [Anzeigen von Wegbeschreibungen und Verkehr](#directions) beschrieben.
+> **Wichtig**  Wenn die URI-Schemas **ms-drive-to:** oder **ms-walk-to:** gestartet werden, überprüft die Karten-App, ob für das Gerät bereits ein GPS-Positionsfixpunkt bestimmt wurde. Ist dies der Fall, geht die Karten-App zu detaillierten Wegbeschreibungen über. Falls nicht, zeigt die App die Routenübersicht an, wie unter [Anzeigen von Wegbeschreibungen und Verkehr](#display-directions-and-traffic) beschrieben.
 
  
 
@@ -153,7 +156,7 @@ Mit den **ms-drive-to:**- und **ms-walk-to:**-URI-Schemas können Sie direkt ein
 | ms-walk-to:?destination.latitude=47.680504&destination.longitude=-122.328262&destination.name=Green Lake  | Zeigt eine Karte mit detaillierten Fußwegbeschreibungen von Ihrem aktuellen Standort zu Green Lake. |
 
 
-## Herunterladen von Offlinekarten
+## <a name="download-offline-maps"></a>Herunterladen von Offlinekarten
 
 
 Mit dem **ms-settings:**-URI-Schema können Sie direkt eine bestimmte Seite in der Einstellungs-App öffnen. Die Karten-App wird zwar nicht durch das **ms-settings:**-URI-Schema gestartet, Sie haben jedoch die Möglichkeit, die Seite für die Offlinekarten direkt in der Einstellungs-App zu starten. Außerdem zeigt das URI-Schema ein Bestätigungsdialogfeld zum Herunterladen der von der Karten-App verwendeten Offlinekarten an. Das URI-Schema akzeptiert einen Punkt, der durch einen Breiten- und Längengrad angegeben wird, und bestimmt automatisch, ob für eine Region mit diesem Punkt Offlinekarten verfügbar sind.  Wenn der übergebene Breiten- und Längengrad in mehrere Download-Regionen fällt, kann der Benutzer im Bestätigungsdialogfeld auswählen, welche dieser Regionen heruntergeladen werden soll. Wenn Offlinekarten für eine Region mit diesem Punkt nicht verfügbar sind, wird die Seite mit den Offlinekarten in der Einstellungs-App mit einem Fehlerdialogfeld angezeigt.
@@ -163,7 +166,8 @@ Mit dem **ms-settings:**-URI-Schema können Sie direkt eine bestimmte Seite in d
 | ms-settings:maps-downloadmaps?latlong=47.6,-122.3 | Öffnet die Einstellungs-App auf der Offlinekarten-Seite mit einem Bestätigungsdialogfeld, das angezeigt wird, um Karten für die Region herunterzuladen, die den Punkt mit dem angegebenen Breiten- und Längengrad enthält. |
  
 
-## bingmaps: Parameterverweis
+<span id="bingmaps-param-reference"/>
+## <a name="bingmaps-parameter-reference"></a>bingmaps: Parameterverweis
 
 
 Die Syntax für jeden Parameter in dieser Tabelle wird mithilfe von ABNF (Augmented Backus-Naur Form) angezeigt.
@@ -382,13 +386,13 @@ Die Syntax für jeden Parameter in dieser Tabelle wird mithilfe von ABNF (Augmen
 </table>
 
  
-
+<span id="ms-drive-to-param-reference"/>
 ## ms-drive-to: Parameterverweis
 
 
 Der URI zum Starten einer Anforderung für detaillierte Wegbeschreibungen muss nicht codiert werden und hat das folgende Format.
 
-> **Hinweis**  In diesem URI-Schema wird der Startpunkt nicht angegeben. Beim Startpunkt wird immer davon ausgegangen, dass es sich um die aktuelle Position handelt. Wenn Sie einen anderen Startpunkt als die aktuelle Position angeben müssen, finden Sie weitere Informationen unter [Anzeigen von Wegbeschreibungen und Verkehr](#directions).
+> **Hinweis**  In diesem URI-Schema wird der Startpunkt nicht angegeben. Beim Startpunkt wird immer davon ausgegangen, dass es sich um die aktuelle Position handelt. Wenn Sie einen anderen Startpunkt als die aktuelle Position angeben müssen, finden Sie weitere Informationen unter [Anzeigen von Wegbeschreibungen und Verkehr](#display-directions-and-traffic).
 
  
 
@@ -399,13 +403,13 @@ Der URI zum Starten einer Anforderung für detaillierte Wegbeschreibungen muss n
 | **destination.name** | Name des Ziels | Beispiel: destination.name=Redmond, WA | Der Name des Ziels. Eine Codierung des URI oder des **destination.name**-Werts ist nicht erforderlich. |
 
  
-
-## ms-walk-to: Parameterverweis
+<span id="ms-walk-to-param-reference"/>
+## <a name="ms-walk-to-parameter-reference"></a>ms-walk-to: Parameterverweis
 
 
 Der URI zum Starten einer Anforderung für detaillierte Fußwegbeschreibungen muss nicht codiert werden und hat das folgende Format.
 
-> **Hinweis**  In diesem URI-Schema wird der Startpunkt nicht angegeben. Beim Startpunkt wird immer davon ausgegangen, dass es sich um die aktuelle Position handelt. Wenn Sie einen anderen Startpunkt als die aktuelle Position angeben müssen, finden Sie weitere Informationen unter [Anzeigen von Wegbeschreibungen und Verkehr](#directions).
+> **Hinweis**  In diesem URI-Schema wird der Startpunkt nicht angegeben. Beim Startpunkt wird immer davon ausgegangen, dass es sich um die aktuelle Position handelt. Wenn Sie einen anderen Startpunkt als die aktuelle Position angeben müssen, finden Sie weitere Informationen unter [Anzeigen von Wegbeschreibungen und Verkehr](#display-directions-and-traffic).
 
  
 
@@ -416,7 +420,7 @@ Der URI zum Starten einer Anforderung für detaillierte Fußwegbeschreibungen mu
 | **destination.name** | Name des Ziels | Beispiel: destination.name=Redmond, WA | Der Name des Ziels. Eine Codierung des URI oder des **destination.name**-Werts ist nicht erforderlich. |
 
  
-## ms-settings: Parameterverweis
+## <a name="ms-settings-parameter-reference"></a>ms-settings: Parameterverweis
 
 
 Die Syntax für Karten-App-spezifische Parameter für das **ms-settings:**-URI-Schema wird unten definiert. **maps-downloadmaps** wird zusammen mit dem **ms-settings:**-URI in Form von **ms-settings:maps-downloadmaps?** angegeben, um die Offlineseite für Karteneinstellungen anzugeben.
@@ -429,9 +433,4 @@ Die Syntax für Karten-App-spezifische Parameter für das **ms-settings:**-URI-S
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

@@ -3,15 +3,22 @@ author: mithom
 title: "Eingabemethoden für Spiele"
 description: "Erfahren Sie mehr über Muster und Verfahren zur effizienten Verwendung von Eingabegeräten."
 ms.assetid: CBAD3345-3333-4924-B6D8-705279F52676
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, Spiele, Eingabe
 translationtype: Human Translation
-ms.sourcegitcommit: 858bf6a0862d6459b2bac22d8ab9431b51332fef
-ms.openlocfilehash: 15e5096c00334bf200fa0076d227e42fc463e25d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 15d56a27ad914b258bb19b80b3498510d01105cd
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="input-practices-for-games"></a>Eingabemethoden für Spiele
 
-Auf dieser Seite werden Muster und Verfahren zur effizienten Verwendung von Eingabegeräten in Spielen für die universelle Windows-Plattform (UWP) beschrieben.
+Auf dieser Seite werden Muster und Verfahren zur effizienten Verwendung von Eingabegeräten in Spielen für die Universelle Windows-Plattform (UWP) beschrieben.
 
 Auf dieser Seite erhalten Sie Informationen zu folgenden Vorgängen:
 * Nachverfolgen von Spielern und den von ihnen aktuell verwendeten Eingabe- und Navigationsgeräten
@@ -146,9 +153,4 @@ Die Formel kann zum Testen einer beliebigen Anzahl von Tasten in einer beliebige
 [igamecontroller.user]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.igamecontroller.user.aspx
 [igamecontroller.userchanged]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.igamecontroller.userchanged.aspx
 [gamepadbuttons]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepadbuttons.aspx
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

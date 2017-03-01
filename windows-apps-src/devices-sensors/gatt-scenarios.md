@@ -1,16 +1,23 @@
 ---
 author: msatranjr
 ms.assetid: 28B30708-FE08-4BE9-AE11-5429F963C330
-title: BluetoothGATT
-description: "Dieser Artikel enthält eine Übersicht über Bluetooth Generic Attribute Profile (GATT) für Universelle Windows-Plattform (UWP)-Apps zusammen mit Beispielcode für drei häufige GATT-Szenarien."
+title: "Bluetooth GATT"
+description: "Dieser Artikel enthält eine Übersicht über Bluetooth Generic Attribute Profile (GATT) für UWP-Apps (Universelle Windows-Plattform) sowie Beispielcode für drei häufige GATT-Szenarien."
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 62e97bdb8feb78981244c54c76a00910a8442532
-ms.openlocfilehash: 508acd449c156fa0f5b14298e4a7700748fc65bb
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c6187f4bfe6f2940b8dbfea0e6441f2fa9ac2c66
+ms.lasthandoff: 02/07/2017
 
 ---
-# Bluetooth GATT
+# <a name="bluetooth-gatt"></a>Bluetooth GATT
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 ** Wichtige APIs **
 
@@ -19,7 +26,7 @@ ms.openlocfilehash: 508acd449c156fa0f5b14298e4a7700748fc65bb
 
 Dieser Artikel enthält eine Übersicht über Bluetooth Generic Attribute Profile (GATT) für Universelle Windows-Plattform (UWP)-Apps zusammen mit Beispielcode für drei häufige GATT-Szenarien: Abrufen von Bluetooth-Daten, Steuern eines Bluetooth LE-Thermometers und Steuern der Darstellung von Bluetooth LE-Gerätedaten.
 
-## Übersicht
+## <a name="overview"></a>Übersicht
 
 Entwickler können mit den APIs im [**Windows.Devices.Bluetooth.GenericAttributeProfile**](https://msdn.microsoft.com/library/windows/apps/Dn297685)-Namespace auf Bluetooth LE-Dienste, -Deskriptoren und -Merkmale zugreifen. Bluetooth LE-Geräte machen ihre Funktionen über eine Sammlung folgender Elemente verfügbar:
 
@@ -44,7 +51,7 @@ Um eine sinnvolle Implementierung erstellen zu können, muss ein Entwickler übe
 
 Aus Gründen der Benutzerfreundlichkeit pflegt Bluetooth SIG eine [Liste der öffentlichen Profile](http://go.microsoft.com/fwlink/p/?LinkID=317977), die zur Verfügung stehen.
 
-## Abrufen von Bluetooth-Daten
+## <a name="retrieve-bluetooth-data"></a>Abrufen von Bluetooth-Daten
 
 In diesem Beispiel nutzt die App Temperaturmessungen aus einem Bluetooth-Gerät, das den Bluetooth LE Health Thermometer Service implementiert. Die App gibt an, dass sie benachrichtigt werden soll, wenn eine neue Temperaturmessung verfügbar ist. Durch die Registrierung eines Ereignishandlers für das Ereignis zur Änderung eines Thermometermerkmals erhält die App Ereignisbenachrichtigungen über die Änderung eines Merkmalswerts, während sie im Vordergrund ausgeführt wird.
 
@@ -165,9 +172,9 @@ void MainPage::TemperatureMeasurementChanged(
 }
 ```
 
-## Steuern eines BluetoothLE-Thermometers
+## <a name="control-a-bluetooth-le-thermometer-device"></a>Steuern eines Bluetooth LE-Thermometers
 
-In diesem Beispiel dient eine UWP-App (Universelle Windows-Plattform) als Controller für ein fiktives BluetoothLE-Thermometer. Das Gerät deklariert außerdem ein Formatmerkmal, anhand dessen der Benutzer den Wert in Celsius oder Fahrenheit abrufen kann, zusätzlich zu den Standardmerkmalen des [**HealthThermometer**](https://msdn.microsoft.com/library/windows/apps/Dn297603)-Profils. Die App verwendet zuverlässige Schreibtransaktionen, um sicherzustellen, dass das Format und das Messintervall als einzelner Wert festgelegt werden.
+In diesem Beispiel dient eine UWP-App (Universelle Windows-Plattform) als Controller für ein fiktives Bluetooth LE-Thermometer. Das Gerät deklariert außerdem ein Formatmerkmal, anhand dessen der Benutzer den Wert in Celsius oder Fahrenheit abrufen kann, zusätzlich zu den Standardmerkmalen des [**HealthThermometer**](https://msdn.microsoft.com/library/windows/apps/Dn297603)-Profils. Die App verwendet zuverlässige Schreibtransaktionen, um sicherzustellen, dass das Format und das Messintervall als einzelner Wert festgelegt werden.
 
 ```csharp
 // Uuid of the "Format" Characteristic Value
@@ -285,9 +292,9 @@ void MainPage::Initialize()
 
 ```
 
-## Steuern der Darstellung von BluetoothLE-Gerätedaten
+## <a name="control-the-presentation-of-bluetooth-le-device-data"></a>Steuern der Darstellung von Bluetooth LE-Gerätedaten
 
-Ein BluetoothLE-Gerät kann einen Akkudienst verfügbar machen, der dem Benutzer den aktuellen Akkustand anzeigt. Der Akkudienst enthält einen optionalen [**PresentationFormats**](https://msdn.microsoft.com/library/windows/apps/Dn263742)-Deskriptor, der eine gewisse Flexibilität bei der Interpretation der Akkustanddaten ermöglicht. Dieses Szenario stellt ein Beispiel für eine App bereit, die mit einem solchen Gerät ausgeführt wird und die **PresentationFormats**-Eigenschaft verwendet, um einen Merkmalswert zu formatieren, bevor er dem Benutzer angezeigt wird.
+Ein Bluetooth LE-Gerät kann einen Akkudienst verfügbar machen, der dem Benutzer den aktuellen Akkustand anzeigt. Der Akkudienst enthält einen optionalen [**PresentationFormats**](https://msdn.microsoft.com/library/windows/apps/Dn263742)-Deskriptor, der eine gewisse Flexibilität bei der Interpretation der Akkustanddaten ermöglicht. Dieses Szenario stellt ein Beispiel für eine App bereit, die mit einem solchen Gerät ausgeführt wird und die **PresentationFormats**-Eigenschaft verwendet, um einen Merkmalswert zu formatieren, bevor er dem Benutzer angezeigt wird.
 
 ```csharp
 async void Initialize()
@@ -397,10 +404,5 @@ void MainPage::BatteryLevelChanged(
 ```
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

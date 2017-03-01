@@ -1,16 +1,23 @@
 ---
 author: mijacobs
 Description: "Erfahren Sie, wie Sie mithilfe von Kacheln, Signalen, Popups und Benachrichtigungen Einstiegspunkte in Ihre App bereitstellen und Benutzer auf dem neuesten Stand halten können."
-title: Kacheln, Signale und Benachrichtigungen
+title: Kacheln, Badges und Benachrichtigungen
 ms.assetid: 48ee4328-7999-40c2-9354-7ea7d488c538
 label: Tiles, badges, and notifications
 template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: dbc178f5df541e482f4a2e86c6662ead1992a1ce
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f8b063f45afadda50fa9ea091bf6cba71a25e8c1
+ms.lasthandoff: 02/07/2017
 
 ---
-# Kacheln, Signale und Benachrichtigungen für UWP-Apps
+# <a name="tiles-badges-and-notifications-for-uwp-apps"></a>Kacheln, Signale und Benachrichtigungen für UWP-Apps
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
@@ -19,7 +26,7 @@ Erfahren Sie, wie Sie mithilfe von Kacheln, Signalen, Popups und Benachrichtigun
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="images/tile-and-live-tile.png" />
 Eine Kachel ist die Darstellung einer App im Startmenü. Jede UWP-App verfügt über eine Kachel. Sie können verschiedene Kachelgrößen festlegen (klein, mittel, breit und groß).</p>
 
-<p>Sie können eine <em>Kachelbenachrichtigung</em> verwenden, um die Kachel zu aktualisieren und neue Informationen an den Benutzer zu übermitteln, z.B. neue Schlagzeilen oder den Betreff der letzten ungelesenen Nachricht.</p>
+<p>Sie können eine <em>Kachelbenachrichtigung</em> verwenden, um die Kachel zu aktualisieren und neue Informationen an den Benutzer zu übermitteln, z. B. neue Schlagzeilen oder den Betreff der letzten ungelesenen Nachricht.</p>
 
 <p>Sie können ein <em>Signal</em> verwenden, um Statusinfos oder zusammenfassende Informationen in Form einer vom System bereitgestellten Glyphe oder einer Zahl von 1 bis 99 bereitzustellen. Signale werden auch auf dem App-Symbol auf der Symbolleiste dargestellt. </p>
 
@@ -27,7 +34,7 @@ Eine Kachel ist die Darstellung einer App im Startmenü. Jede UWP-App verfügt �
 <p>Eine <em>Pushbenachrichtigung</em> oder <em>unformatierte Benachrichtigung</em> ist eine Benachrichtigung, die über den Windows-Pushbenachrichtigungsdienst (Windows Push Notification Services, WNS) oder eine Hintergrundaufgabe an Ihre App gesendet wird. Ihre App kann auf diese Benachrichtigungen entweder durch Benachrichtigen des Benutzers reagieren, das etwas von Interesse geschehen ist (über Signal-, Kachel- oder Popupaktualisierungen), oder sie können die gewünschte Reaktion selbst festlegen.</p>
 
  
-## Kacheln 
+## <a name="tiles"></a>Kacheln 
 <table>
 <colgroup>
 <col width="50%" />
@@ -63,7 +70,7 @@ Eine Kachel ist die Darstellung einer App im Startmenü. Jede UWP-App verfügt �
 </tbody>
 </table>
 
-## Benachrichtigungen
+## <a name="notifications"></a>Benachrichtigungen
 
 
 <table>
@@ -121,10 +128,5 @@ Eine Kachel ist die Darstellung einer App im Startmenü. Jede UWP-App verfügt �
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

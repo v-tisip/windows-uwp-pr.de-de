@@ -10,9 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
+ms.assetid: ce2e611c-c419-4a14-9095-b88ac711d1b8
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: e530c8fab64c160737ccc06faf676d1d113896c4
+ms.sourcegitcommit: 412a3f70861c6cd1bbf003fe0bd78c8547a5f3f8
+ms.openlocfilehash: 7b525267c8f4d24af95f6d41d46d33a3adf10f8f
+ms.lasthandoff: 02/08/2017
 
 ---
 # <a name="controls-and-patterns-for-uwp-apps"></a>Steuerelemente und Muster für UWP-Apps
@@ -174,8 +176,10 @@ Detaillierte Informationen zu bestimmten Steuerelementen und Mustern.
 </ul>
 </div>
 
+## <a name="additional-controls-options"></a>Zusätzliche Steueroptionen
 
+Zusätzliche Steuerelemente für die UWP-Entwicklung werden von Unternehmen wie [Telerik](http://www.telerik.com/), [SyncFusion](https://www.syncfusion.com/products/uwp), [DevExpress](https://www.devexpress.com/Products/NET/Controls/Win10Apps/), [Infragistics](http://www.infragistics.com/products/universal-windows-platform), [ComponentOne](https://www.componentone.com/Studio/Platform/UWP) und [ActiPro](http://www.actiprosoftware.com/products/controls/universal) bereitgestellt. Diese Steuerelemente bieten zusätzliche Unterstützung für Unternehmen und .NET-Entwickler, indem sie die Steuerelemente des Standardsystem mit benutzerdefinierten Steuerelementen und Diensten erweitern.  
 
-<!--HONumber=Dec16_HO2-->
+Wenn Sie mehr über diese Steuerelemente erfahren möchten, sehen Sie sich das Beispiel [Customer Orders Database](https://github.com/Microsoft/Windows-appsample-customers-orders-database) in GitHub an. In diesem Beispiel werden die Steuerelemente Datenrasten und Dateneingabe von Telerik verwendet, die Teil der UI für die UWP-Suite sind. Die UI für die UWP-Suite besteht aus einer Sammlung von über 20 Steuerelementen, die als Open Source-Projekt über die .NET-Foundation verfügbar sind.
 
-
+![Image der Customer Orders Database](images/customerOrdersDataGrid.png)

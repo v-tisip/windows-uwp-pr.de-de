@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: 2A454057-FF14-40D2-8ED2-CEB5F27E0226
 description: "Verwenden Sie diese Methoden in der Windows Store-Übermittlungs-API, um Übermittlungen von Flight-Paketen für Apps zu verwalten, die in Ihrem Windows Dev Center-Konto registriert wurden."
 title: "Verwalten von Flight-Paket-Übermittlungen mit der Windows Store-Übermittlungs-API"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Windows Store-Übermittlung-API, Flight-Übermittlungen"
 translationtype: Human Translation
-ms.sourcegitcommit: 41203bffb65de3d4d6cc0fec2c7436e0b9d5821b
-ms.openlocfilehash: 9fc42f3abf1d876f271d18c1747ed7462dd20bd6
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 71e759773beedef302a78a439b1a2a77a72dc85f
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -13,12 +20,14 @@ ms.openlocfilehash: 9fc42f3abf1d876f271d18c1747ed7462dd20bd6
 
 Mithilfe der Methoden der Windows Store-Übermittlungs-API können Sie Flight-Paket-Übermittlungen für Ihre Apps verwalten, einschließlich gradueller Paketrollouts. Eine Einführung in die Windows Store-Übermittlungs-API einschließlich der Voraussetzungen für die Verwendung der API finden Sie unter [Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten](create-and-manage-submissions-using-windows-store-services.md).
 
->**Hinweis**&nbsp;&nbsp;Diese Methoden können nur für Windows Dev Center-Konten verwendet werden, die zur Verwendung der Windows Store-Übermittlungs-API berechtigt sind. Diese Berechtigung ist nicht für alle Konten aktiviert. Um die folgenden Methoden für das Erstellen oder Verwalten von Flight-Paket-Übermittlungen verwenden zu können, muss das Flight-Paket bereits in Ihrem Dev Center-Konto vorhanden sein. Sie können Flight-Pakete [über das Dev Center-Dashboard](https://msdn.microsoft.com/windows/uwp/publish/package-flights) oder mithilfe der Methoden für die Windows Store-Übermittlungs-API erstellen, die in [Verwalten von Flight-Paketen](manage-flights.md) beschrieben werden.
+>**Hinweis**&nbsp;&nbsp;Diese Methoden können nur für Windows Dev Center-Konten verwendet werden, die zur Verwendung der Windows Store-Übermittlungs-API berechtigt sind. Diese Berechtigung wird für Entwicklerkonten phasenweise aktiviert, und die Berechtigung ist zu diesem Zeitpunkt nicht für alle Konten aktiviert. Um früheren Zugriff anfordern, melden Sie sich beim Dev Center-Dashboard an, klicken Sie am unteren Rand des Dashboards auf **Feedback**, wählen Sie **Übermittlungs-API** für den Feedback-Bereich, und übermitteln Sie Ihre Anforderung. Sie erhalten eine E-Mail, wenn diese Berechtigung für Ihr Konto aktiviert ist.
+
+>**Wichtige**&nbsp;&nbsp;Wenn Sie die Windows Store-Übermittlungs-API zum Erstellen einer Flight-Paket-Übermittlung verwenden, stellen Sie sicher, dass Sie weitere Änderungen an der Übermittlung ausschließlich mithilfe der API und nicht mit dem Dev Center-Dashboard durchführen. Wenn Sie das Dashboard zum Ändern einer Übermittlung verwenden, die ursprünglich mit der API erstellt wurde, können Sie die Übermittlung nicht länger mithilfe der API ändern oder übermitteln. In einigen Fällen kann der Fehlerstatus der Übermittlung belassen werden, mit dem die Übermittlung nicht fortgesetzt werden kann. In diesem Fall müssen Sie die Übermittlung löschen und eine neue Übermittlung erstellen.
 
 <span id="methods-for-package-flight-submissions" />
 ## <a name="methods-for-managing-package-flight-submissions"></a>Methoden zum Verwalten von Flight-Paket-Übermittlungen
 
-Verwenden Sie die folgenden Methoden zum Abrufen, Erstellen, Aktualisieren, Committen oder Löschen einer Flight-Paket-Übermittlung.
+Verwenden Sie die folgenden Methoden zum Abrufen, Erstellen, Aktualisieren, Übernehmen oder Löschen einer Flight-Paket-Übermittlung. Bevor Sie diese Methoden verwenden können, muss das Flight-Paket bereits in Ihrem Dev Center-Konto vorhanden sein. Sie können Flight-Pakete [über das Dev Center-Dashboard](https://msdn.microsoft.com/windows/uwp/publish/package-flights) oder mithilfe der Methoden für die Windows Store-Übermittlungs-API erstellen, die in [Verwalten von Flight-Paketen](manage-flights.md) beschrieben werden.
 
 <table>
 <colgroup>
@@ -143,6 +152,8 @@ Die folgenden Artikel enthalten ausführliche Codebeispiele, die zeigen, wie Sie
 * [C#-Codebeispiele](csharp-code-examples-for-the-windows-store-submission-api.md)
 * [Java-Codebeispiele](java-code-examples-for-the-windows-store-submission-api.md)
 * [Python-Codebeispiele](python-code-examples-for-the-windows-store-submission-api.md)
+
+>**Hinweis:**&nbsp;&nbsp;Zusätzlich zu den oben aufgeführten Codebeispielen bieten wir auch ein Open-Source-PowerShell-Modul, das neben der Windows Store-Übermittlungs-API eine Befehlszeilenschnittstelle integriert. Dieses Modul heißt [StoreBroker](https://aka.ms/storebroker). Sie können dieses Modul verwenden, um Ihre App-, Flight- und Add-On-Übermittlungen über die Befehlszeile anstatt über die Windows Store-Übermittlungs-API direkt zu verwalten. Sie können auch ganz einfach die Quelle durchsuchen, um weitere Beispiele für das Aufrufen dieser API zu erhalten. Das Modul StoreBroker wird in Microsoft aktiv als primäre Methode angewendet, mit der viele Erstanbieter-Apps an den Store übermittelt werden. Weitere Informationen finden Sie auf unserer [StoreBroker-Seite auf GitHub](https://aka.ms/storebroker).
 
 <span id="manage-gradual-package-rollout">
 ## <a name="manage-a-gradual-package-rollout-for-a-package-flight-submission"></a>Verwalten eines graduellen Paketrollouts für eine Flight-Paket-Übermittlung
@@ -411,9 +422,4 @@ Die folgenden Codes stellen den Status einer Übermittlung dar.
 * [Ausführen eines Commit für eine Flight-Paket-Übermittlung](commit-a-flight-submission.md)
 * [Löschen einer Flight-Paketübermittlung](delete-a-flight-submission.md)
 * [Abrufen des Status einer Flight-Paketübermittlung](get-status-for-a-flight-submission.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

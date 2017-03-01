@@ -3,21 +3,28 @@ title: MACs, Hashes und Signaturen
 description: "In diesem Thema wird erläutert, wie Nachrichtenauthentifizierungscodes (MACs), Hashes und Signaturen in UWP-Apps verwendet werden können, um die Manipulation von Nachrichten zu erkennen."
 ms.assetid: E674312F-6678-44C5-91D9-B489F49C4D3C
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
-ms.openlocfilehash: 2c43e8ea726827d263fd397ea28058c04d30a7aa
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f29b77317e0b03aff7e56087aa3a882720170b29
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# MACs, Hashes und Signaturen
+# <a name="macs-hashes-and-signatures"></a>MACs, Hashes und Signaturen
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 In diesem Thema wird erläutert, wie Nachrichtenauthentifizierungscodes (MACs), Hashes und Signaturen in UWP-Apps verwendet werden können, um die Manipulation von Nachrichten zu erkennen.
 
-## Nachrichtenauthentifizierungscodes (MACs)
+## <a name="message-authentication-codes-macs"></a>Nachrichtenauthentifizierungscodes (MACs)
 
 
 Die Verschlüsselung hilft dabei, nicht autorisierte Personen davon abzuhalten, eine Nachricht zu lesen, kann jedoch nichts dagegen ausrichten, wenn Personen die Nachricht manipulieren. Eine so veränderte Nachricht kann Kosten verursachen, selbst wenn die Veränderung keinen echten Inhalt vermittelt. Ein Nachrichtenauthentifizierungscode (Message Authentication Code, MAC) kann die Manipulation von Nachrichten verhindern. Nehmen wir folgendes Beispiel:
@@ -122,7 +129,7 @@ namespace SampleMacAlgorithmProvider
 }
 ```
 
-## Hashes
+## <a name="hashes"></a>Hashes
 
 
 Eine kryptografische Hashfunktion gibt für einen an sie übergebenen Datenblock beliebiger Länge eine Bitzeichenfolge fester Größe zurück. Hashfunktionen werden normalerweise zum Signieren von Daten verwendet. Da die meisten Signaturvorgänge für öffentliche Schlüssel rechtenintensiv sind, ist das Signieren eines Nachrichtenhashes in der Regel effizienter als das Signieren der ursprünglichen Nachricht. Im folgenden Verfahren wird ein gängiges Szenario vorgestellt, das für diese Zwecke aber vereinfacht wurde:
@@ -179,7 +186,7 @@ public void SampleReusableHash()
 
 ```
 
-## Digitale Signaturen
+## <a name="digital-signatures"></a>Digitale Signaturen
 
 
 Digitale Signaturen von öffentlichen Schlüsseln sind das Äquivalent der Nachrichtenauthentifizierungscodes (MACs) von privaten Schlüsseln. Während MACs private Schlüssel verwenden, um einem Nachrichtenempfänger das Überprüfen der Nachrichtenintegrität zu ermöglichen, verwenden Signaturen ein privates/öffentliches Schlüsselpaar.
@@ -189,8 +196,3 @@ Da die meisten Signaturvorgänge für öffentliche Schlüssel rechtenintensiv si
 Durch das Signieren wird nur sichergestellt, dass die ursprüngliche Nachricht nicht verändert wurde und – durch die Verwendung des öffentlichen Schlüssels des Absenders – dass der Nachrichtenhash von jemandem mit Zugriff auf den privaten Schlüssel signiert wurde.
 
 Sie können ein [**AsymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241478)-Objekt verwenden, um die verfügbaren Signaturalgorithmen aufzulisten und ein Schlüsselpaar zu generieren oder zu importieren. Sie können statische Methoden der [**CryptographicHash**](https://msdn.microsoft.com/library/windows/apps/br241498)-Klasse zum Signieren einer Nachricht oder Überprüfen einer Signatur verwenden.
-
-
-<!--HONumber=Aug16_HO3-->
-
-

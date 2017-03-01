@@ -3,16 +3,23 @@ author: DBirtolo
 ms.assetid: F90686F5-641A-42D9-BC44-EC6CA11B8A42
 title: Verwenden des Beschleunigungsmessers
 description: "Hier erfahren Sie, wie Sie mithilfe des Beschleunigungsmessers auf Benutzerbewegungen reagieren können."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 8ce3baf2b030096ae5cfc56f31b97ec58e138a44
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 8f8236a68fd7628f1f53eebc13731a72414e3217
+ms.lasthandoff: 02/07/2017
 
 ---
-# Verwenden des Beschleunigungsmessers
+# <a name="use-the-accelerometer"></a>Verwenden des Beschleunigungsmessers
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-** Wichtige APIs **
+**Wichtige APIs**
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**Beschleunigungsmesser**](https://msdn.microsoft.com/library/windows/apps/BR225687)
@@ -23,19 +30,19 @@ Hier erfahren Sie, wie Sie mithilfe des Beschleunigungsmessers auf Benutzerbeweg
 
 Eine einfache Spiele-App verwendet als Eingabegerät einen einzigen Sensor: den Beschleunigungsmesser. Diese Apps verwenden für die Eingabe in der Regel nur eine oder zwei Achsen. Als weitere Eingabequelle kann aber auch das Schüttelereignis verwendet werden.
 
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
-Sie sollten mit XAML (Extensible Application Markup Language), Microsoft VisualC# und Ereignissen vertraut sein.
+Sie sollten mit XAML (Extensible Application Markup Language), Microsoft Visual C# und Ereignissen vertraut sein.
 
 Das verwendete Gerät oder der Emulator muss einen Beschleunigungsmesser unterstützen.
 
-## Erstellen einer einfachen Beschleunigungsmesser-App
+## <a name="create-a-simple-accelerometer-app"></a>Erstellen einer einfachen Beschleunigungsmesser-App
 
 Dieser Abschnitt ist in zwei Unterabschnitte unterteilt: Der erste Unterabschnitt enthält die Schritte zum Erstellen einer einfachen Beschleunigungsmesseranwendung. Im zweiten Unterabschnitt wird die erstellte App dann näher erläutert.
 
-### Anweisungen
+### <a name="instructions"></a>Anweisungen
 
--   Erstellen Sie ein neues Projekt. Wählen Sie dabei unter den Projektvorlagen für **VisualC#** die Option **Leere App (Universelle Windows-App)** aus.
+-   Erstellen Sie ein neues Projekt. Wählen Sie dabei unter den Projektvorlagen für **Visual C#** die Option **Leere App (Universelle Windows-App)** aus.
 
 -   Öffnen Sie die Projektdatei „MainPage.xaml.cs“, und ersetzen Sie den vorhandenen Code durch den folgenden Code.
 
@@ -67,7 +74,7 @@ Dieser Abschnitt ist in zwei Unterabschnitte unterteilt: Der erste Unterabschnit
             // Sensor and dispatcher variables
             private Accelerometer _accelerometer;
 
-            // This event handler writes the current accelerometer reading to 
+            // This event handler writes the current accelerometer reading to
             // the three acceleration text blocks on the app' s main page.
 
             private async void ReadingChanged(object sender, AccelerometerReadingChangedEventArgs e)
@@ -102,7 +109,7 @@ Dieser Abschnitt ist in zwei Unterabschnitte unterteilt: Der erste Unterabschnit
     }
 ```
 
-Sie müssen den Namespace im vorhergehenden Codeausschnitt durch den Namen ersetzen, den Sie für Ihr Projekt angegeben haben. Wenn Sie z.B. ein Projekt mit dem Namen **AccelerometerCS** erstellt haben, ersetzen Sie `namespace App1` durch `namespace AccelerometerCS`.
+Sie müssen den Namespace im vorhergehenden Codeausschnitt durch den Namen ersetzen, den Sie für Ihr Projekt angegeben haben. Wenn Sie z. B. ein Projekt mit dem Namen **AccelerometerCS** erstellt haben, ersetzen Sie `namespace App1` durch `namespace AccelerometerCS`.
 
 -   Öffnen Sie die Datei „MainPage.xaml“, und ersetzen Sie den ursprünglichen Inhalt durch den folgenden XML-Code.
 
@@ -136,7 +143,7 @@ Wenn die App ausgeführt wird, können Sie die Beschleunigungsmesserwerte änder
 
 -   Beenden Sie die App, indem Sie zu Visual Studio zurückkehren und UMSCHALT+F5 drücken oder **Debuggen** &gt; **Debugging beenden** auswählen.
 
-### Erläuterung
+### <a name="explanation"></a>Erläuterung
 
 Das vorherige Beispiel zeigt, wie wenig Code Sie schreiben müssen, um Beschleunigungsmesserwerte in Ihre App zu integrieren.
 
@@ -146,7 +153,7 @@ Die App stellt eine Verbindung mit dem Standardbeschleunigungsmesser in der **Ma
 _accelerometer = Accelerometer.GetDefault();
 ```
 
-Die App legt das Berichtsintervall in der **MainPage**-Methode fest. Mit diesem Code wird das vom Gerät unterstützte Mindestintervall abgerufen und mit einem angeforderten Intervall von 16 Millisekunden verglichen (entspricht etwa einer Aktualisierungsrate von 60Hz). Wenn das unterstützte Mindestintervall größer als das angeforderte Intervall ist, legt der Code den Wert auf das Minimum fest. Andernfalls wird der Wert auf das angeforderte Intervall festgelegt.
+Die App legt das Berichtsintervall in der **MainPage**-Methode fest. Mit diesem Code wird das vom Gerät unterstützte Mindestintervall abgerufen und mit einem angeforderten Intervall von 16 Millisekunden verglichen (entspricht etwa einer Aktualisierungsrate von 60 Hz). Wenn das unterstützte Mindestintervall größer als das angeforderte Intervall ist, legt der Code den Wert auf das Minimum fest. Andernfalls wird der Wert auf das angeforderte Intervall festgelegt.
 
 ```csharp
 uint minReportInterval = _accelerometer.MinimumReportInterval;
@@ -157,7 +164,7 @@ _accelerometer.ReportInterval = reportInterval;
 Die neuen Beschleunigungsmesserdaten werden in der **ReadingChanged**-Methode erfasst. Wenn der Sensortreiber neue Daten vom Sensor empfängt, übergibt er die Werte mithilfe dieses Ereignishandlers an Ihre App. Die App registriert diesen Ereignishandler in der folgenden Zeile.
 
 ```csharp
-_accelerometer.ReadingChanged += new TypedEventHandler<Accelerometer, 
+_accelerometer.ReadingChanged += new TypedEventHandler<Accelerometer,
 AccelerometerReadingChangedEventArgs>(ReadingChanged);
 ```
 
@@ -168,13 +175,7 @@ Die neuen Werte werden in die TextBlock-Elemente des XAML-Projektcodes geschrieb
  <TextBlock x:Name="txtYAxis" HorizontalAlignment="Left" Height="15" Margin="70,49,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="53" Foreground="#FFF2EEEE"/>
  <TextBlock x:Name="txtZAxis" HorizontalAlignment="Left" Height="15" Margin="70,80,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="53" Foreground="#FFFFF8F8"/>
 ```
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Beschleunigungsmesserbeispiel](http://go.microsoft.com/fwlink/p/?linkid=241377)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

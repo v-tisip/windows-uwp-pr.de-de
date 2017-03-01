@@ -2,10 +2,17 @@
 author: laurenhughes
 ms.assetid: BF929A68-9C82-4866-BC13-A32B3A550005
 title: "Nachverfolgen kürzlich verwendeter Dateien und Ordner"
-description: "Sie können Dateien nachverfolgen, auf die häufig zugegriffen wird, indem Sie sie der Liste mit den zuletzt verwendeten Elementen (MRU) der App hinzufügen."
+description: "Sie können Dateien nachverfolgen, auf die häufig zugegriffen wird, indem Sie diese der Liste mit den zuletzt verwendeten Elementen (MRU) der App hinzufügen."
+ms.author: lahugh
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
-ms.openlocfilehash: fc873da2d0b48cdc614fa319a294e67642440cdf
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c8f8cd6681b4e00e8430d7ddfacdd8fad395365c
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="track-recently-used-files-and-folders"></a>Nachverfolgen kürzlich verwendeter Dateien und Ordner
@@ -13,12 +20,12 @@ ms.openlocfilehash: fc873da2d0b48cdc614fa319a294e67642440cdf
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-** Wichtige APIs **
+**Wichtige APIs**
 
 - [**MostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207458)
 - [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/hh738369)
 
-Sie können Dateien nachverfolgen, auf die häufig zugegriffen wird, indem Sie sie der Liste mit den zuletzt verwendeten Elementen (MRU) der App hinzufügen. Die Plattform verwaltet die MRU für Sie. Dabei werden Elemente nach der Zeit und dem Ort des letzten Zugriffs sortiert und die ältesten Elemente entfernt, wenn das Limit von 25 Elementen erreicht ist. Alle Apps besitzen eine eigene MRU.
+Sie können Dateien nachverfolgen, auf die häufig zugegriffen wird, indem Sie diese der Liste mit den zuletzt verwendeten Elementen (MRU) der App hinzufügen. Die Plattform verwaltet die MRU für Sie. Dabei werden Elemente nach der Zeit und dem Ort des letzten Zugriffs sortiert und die ältesten Elemente entfernt, wenn das Limit von 25 Elementen erreicht ist. Alle Apps besitzen eine eigene MRU.
 
 Ihre App-MRU-Liste wird durch die [**StorageItemMostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207475)-Klasse repräsentiert, die Sie aus der statischen [**StorageApplicationPermissions.MostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207458)-Eigenschaft abrufen können. MRU-Elemente werden als [**IStorageItem**](https://msdn.microsoft.com/library/windows/apps/br227129)-Objekte gespeichert. Das bedeutet, dass sowohl [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)-Objekte (die Dateien darstellen) als auch [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)-Objekte (die Ordner darstellen) der MRU-Liste hinzugefügt werden können.
 
@@ -103,9 +110,4 @@ Wenn ein Benutzer ein Element auswählt, sollten Sie es Ihrer Liste für zukünf
  
 
  
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

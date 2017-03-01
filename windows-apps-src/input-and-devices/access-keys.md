@@ -12,8 +12,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 76b012ab4cf737f00fc986c81c88fd48339867fc
-ms.openlocfilehash: 34cce6acc786fe34b3d94faaec57011474e029ff
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: e866c3afc551cf9604809cf7fec36efd7bfa439c
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -70,17 +71,17 @@ Um die Zugriffstasten-APIs zu verstehen, müssen Sie sich zunächst das Benutzer
     - Durch die ESC-TASTE wird die Zugriffstastenabfolge geschlossen, wenn sie dem Hauptbereich angehört und nicht gefiltert ist.
         > [!NOTE]
         > Der Anschlag der ESC-TASTE wird an die UI-Ebene übergeben und auch dort verarbeitet.
-- Mit der TAB-TASTE schließen Sie die Zugriffstastenabfolge und kehren zur TAB-Navigation zurück.
-- Durch die EINGABETASTE wird die Zugriffstastenabfolge geschlossen, und der Tastenanschlag wird an das Element gesendet, das den Fokus hat.
-- Durch die Pfeiltasten wird die Zugriffstastenabfolge geschlossen, und der Tastenanschlag wird an das Element gesendet, das den Fokus hat.
-- Durch ein Zeiger-nach-unten-Ereignis – z. B. ein Mausklick oder eine Toucheingabe – wird die Zugriffstastenabfolge geschlossen.
-- Wenn eine Zugriffstaste aufgerufen wird, wird die Zugriffstastenabfolge standardmäßig geschlossen.  Sie können dieses Verhalten jedoch überschreiben, indem Sie die [ExitDisplayModeOnAccessKeyInvoked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.exitdisplaymodeonaccesskeyinvoked.aspx)-Eigenschaft auf **false** festlegen.
+    - Mit der TAB-TASTE schließen Sie die Zugriffstastenabfolge und kehren zur TAB-Navigation zurück.
+    - Durch die EINGABETASTE wird die Zugriffstastenabfolge geschlossen, und der Tastenanschlag wird an das Element gesendet, das den Fokus hat.
+    - Durch die Pfeiltasten wird die Zugriffstastenabfolge geschlossen, und der Tastenanschlag wird an das Element gesendet, das den Fokus hat.
+    - Durch ein Zeiger-nach-unten-Ereignis – z. B. ein Mausklick oder eine Toucheingabe – wird die Zugriffstastenabfolge geschlossen.
+    - Wenn eine Zugriffstaste aufgerufen wird, wird die Zugriffstastenabfolge standardmäßig geschlossen.  Sie können dieses Verhalten jedoch überschreiben, indem Sie die [ExitDisplayModeOnAccessKeyInvoked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.exitdisplaymodeonaccesskeyinvoked.aspx)-Eigenschaft auf **false** festlegen.
 - Zugriffstastenkonflikte treten auf, wenn kein DEA (deterministischer endlicher Automat) möglich ist. Zugriffstastenkonflikte lassen sich nicht immer vermeiden und können bei einer großen Anzahl von Befehlen oder Lokalisierungsproblemen auftreten oder dann, wenn Zugriffstasten während der Laufzeit generiert werden.
 
  Es gibt zwei Fälle, in denen Konflikte auftreten:
  - Wenn zwei UI-Elemente über denselben Zugriffstastenwert verfügen und demselben Zugriffstastenbereich angehören. Beispiel: Zugriffstaste _A1_ für `button1` und Zugriffstaste _A1_ für `button2`, die dem Standardbereich angehört. In diesem Fall löst das System den Konflikt auf, indem die Zugriffstaste des ersten Elements verarbeitet wird, das der visuellen Struktur hinzugefügt wurde. Der Rest wird ignoriert.
  - Wenn derselbe Zugriffstastenbereich mehrere Berechnungsoptionen umfasst. Beispielsweise _A_ und _A1_. Wenn der Benutzer _A_ drückt, hat das System zwei Möglichkeiten: Zugriffstaste _A_ aufrufen oder das Zeichen A als ersten Teil der Zugriffstaste _A1_ interpretieren und warten. In diesem Fall verarbeitet das System nur den ersten vom Automaten erreichten Zugriffstastenaufruf. Im Beispiel mit _A_ und _A1_ ruft das System nur die Zugriffstaste _A_ auf.
--   Wenn der Benutzer in einer Zugriffstastenabfolge einen ungültigen Zugriffstastenwert drückt, passiert nichts. Zwei Kategorien von Zugriffstasten werden in einer Zugriffstastenabfolge als gültig angesehen:
+-     Wenn der Benutzer in einer Zugriffstastenabfolge einen ungültigen Zugriffstastenwert drückt, passiert nichts. Zwei Kategorien von Zugriffstasten werden in einer Zugriffstastenabfolge als gültig angesehen:
  - Sondertasten zum Beenden der Zugriffstastenabfolge: ESC, ALT, EINGABE, TAB und die Pfeiltasten.
  - Die den Zugriffstasten zugewiesenen alphanumerischen Zeichen.
 
@@ -134,10 +135,10 @@ Zugriffstasten können in mehrere Sprachen lokalisiert und zur Laufzeit mit den 
 
 Steuerungsmuster sind Schnittstellenimplementierungen, die allgemeine Steuerungsfunktionen verfügbar machen. Schaltflächen implementieren z. B. das **Invoke**-Steuerungsmuster, das das **Click**-Ereignis auslöst. Wenn eine Zugriffstaste aufgerufen wird, überprüft das XAML-Framework, ob das aufgerufene Element ein Steuerungsmuster implementiert, und führt es ggf. aus. Wenn das Element mehrere Steuerungsmuster aufweist, wird nur eins aufgerufen, und die übrigen werden ignoriert. Steuerungsmuster werden in der folgenden Reihenfolge gesucht:
 
-1.  „Invoke“. Beispielsweise eine Schaltfläche.
-2.  „Toggle“. Beispielsweise ein Kontrollkästchen.
-3.  „Selection“. Beispielsweise RadioButton.
-4.  „Expand/Collapse“. Beispielsweise ComboBox.
+1.    „Invoke“. Beispielsweise eine Schaltfläche.
+2.    „Toggle“. Beispielsweise ein Kontrollkästchen.
+3.    „Selection“. Beispielsweise RadioButton.
+4.    „Expand/Collapse“. Beispielsweise ComboBox.
 
 Falls ein Steuerungsmuster nicht gefunden wird, wird der Zugriffstastenaufruf als „No-Op“ angegeben. Außerdem wird eine mit der folgenden vergleichbare Debugmeldung aufgezeichnet, um Sie beim Debuggen des Problems zu unterstützen: „Es wurden keine Automatisierungsmuster für diese Komponente gefunden. Implementieren Sie das gewünschte Verhalten im Ereignishandler für AccessKeyInvoked. Wenn Sie „Handled“ im Ereignishandler auf „true“ festlegen, wird diese Meldung unterdrückt.“
 
@@ -387,9 +388,4 @@ public sealed partial class ScopedAccessKeys : Page
         }
     }
 ```
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

@@ -3,14 +3,21 @@ author: msatranjr
 ms.assetid: 25B18BA5-E584-4537-9F19-BB2C8C52DFE1
 title: Deklarationen der App-Funktionen
 description: "Funktionen müssen für den Zugriff auf bestimmte APIs oder Ressourcen (etwa Bilder, Musik oder Geräte wie die Kamera oder das Mikrofon) im Paketmanifest der UWP-App deklariert werden."
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: ece16df809e7f030c3cbb7a6ab5e727ae77614e3
-ms.openlocfilehash: 5b1052c8b20908cef431a4d1d144d5e8fe1a0eac
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 29aa2aefda5eebfade2da6b3e2b1e8b71361889f
+ms.lasthandoff: 02/07/2017
 
 ---
-# <a name="app-capability-declarations"></a>Deklarationen der App-Funktionen
+# <a name="app-capability-declarations"></a>Deklarationen von App-Funktionen
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Funktionen müssen im [Paketmanifest](https://msdn.microsoft.com/library/windows/apps/BR211474) der UWP-App für den Zugriff auf bestimmte APIs oder Ressourcen deklariert werden, z. B. Bilder, Musik oder Geräte wie die Kamera oder das Mikrofon.
 
@@ -175,9 +182,4 @@ Dieser Artikel ist für Windows 10-Entwickler gedacht, die UWP-Apps schreiben. 
 * [Angeben von Funktionen in einem Paketmanifest](https://msdn.microsoft.com/library/windows/apps/BR211477)
 * [Angeben von Gerätefunktionen in einem Paketmanifest](https://msdn.microsoft.com/library/windows/apps/Dn263092)
  
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

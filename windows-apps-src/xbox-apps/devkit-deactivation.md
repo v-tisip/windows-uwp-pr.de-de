@@ -2,15 +2,23 @@
 author: Mtoepke
 title: Deaktivierung des Xbox One-Entwicklermodus
 description: In diesem Artikel wird das Deaktivieren des Entwicklermodus beschrieben.
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 244124dd-d80a-4a72-91db-1c9c2fbc7c3c
 translationtype: Human Translation
-ms.sourcegitcommit: 0eee645f068614d2368623859dec4e16f3190169
-ms.openlocfilehash: cccc263dcd0ed9ae843cf845438b30605e9b9d9d
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 857b1529a933f416a1c61f3afd844f6cb820f3f3
+ms.lasthandoff: 02/08/2017
 
 ---
 
 # <a name="xbox-one-developer-mode-deactivation"></a>Deaktivierung des Xbox One-Entwicklermodus
 
-* [Wechseln zum Einzelhandelsmodus](#switch-to-retail-mode)
+* [Wechseln zum Retailmodus](#switch-to-retail-mode)
 * [Deaktivieren der Konsole mit der DevMode-Aktivierungsapp](#deactivate-your-console-using-the-dev-mode-activation-app)  
 * [Zurücksetzen der Konsole](#reset-your-console)
 * [Deaktivieren der Konsole mit Windows Dev Center](#deactivate-your-console-using-windows-dev-center)
@@ -85,9 +93,4 @@ Wenn Sie die Xbox One-Konsole noch nicht in den Einzelhandelsmodus zurückgesetz
 ## <a name="see-also"></a>Weitere Informationen
 - [Aktivierung des Xbox One-Entwicklermodus](devkit-activation.md)
 - [UWP auf Xbox One](index.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

@@ -3,16 +3,23 @@ author: msatranjr
 title: Anzeigen von interessanten Orten (POI) auf einer Karte
 description: "Mit Ortsmarken, Bildern, Formen und XAML-UI-Elementen können Sie interessante Orte (Points of Interest, POI) auf einer Karte hinzufügen."
 ms.assetid: CA00D8EB-6C1B-4536-8921-5EAEB9B04FCA
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, karten, standort, ortsmarken"
 translationtype: Human Translation
-ms.sourcegitcommit: d00ba80ac7d0f033a69ad070dc8ee681cbd0ed18
-ms.openlocfilehash: 8afdb41d6790bb9647a6b89086c4b86872940c51
+ms.sourcegitcommit: 32b5230d62f23430393fc51c73f80fa46bd525fa
+ms.openlocfilehash: c8fdc16b99a9d2d57f71e32e008fa668c3404835
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="display-points-of-interest-poi-on-a-map"></a>Anzeigen von interessanten Orten (POI) auf einer Karte
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 Mit Ortsmarken, Bildern, Formen und XAML-UI-Elementen können Sie interessante Orte (Points of Interest, POI) auf einer Karte hinzufügen. Ein POI ist ein Punkt auf der Karte, der Orte angibt, die von Interesse sind. Beispiele sind die Position eines Geschäfts, eines Orts oder eines Freundes.
@@ -27,10 +34,10 @@ Zeigen Sie XAML-UI-Elemente wie [**Button**](https://msdn.microsoft.com/library/
 
 Zusammenfassung:
 
--   [Fügen Sie der Karte ein MapIcon hinzu](#mapicon), um ein Bild anzuzeigen, z. B. eine Ortsmarke mit optionalem Text.
--   [Fügen Sie der Karte ein MapPolygon hinzu](#mappolygon), um eine Form mit mehreren Punkten anzuzeigen.
--   [Fügen Sie der Karte eine MapPolyline hinzu](#mappolyline), um Linien auf der Karte anzuzeigen.
--   [Fügen Sie der Karte XAML hinzu](#mapxaml), um benutzerdefinierte UI-Elemente anzuzeigen.
+-   [Fügen Sie der Karte ein MapIcon hinzu](#add-a-mapicon), um ein Bild anzuzeigen, z. B. eine Ortsmarke mit optionalem Text.
+-   [Fügen Sie der Karte ein MapPolygon hinzu](#add-a-mappolygon), um eine Form mit mehreren Punkten anzuzeigen.
+-   [Fügen Sie der Karte eine MapPolyline hinzu](#add-a-mappolyline), um Linien auf der Karte anzuzeigen.
+-   [Fügen Sie der Karte XAML hinzu](#add-xaml), um benutzerdefinierte UI-Elemente anzuzeigen.
 
 Wenn Sie eine große Anzahl von Elementen auf der Karte platzieren möchten, sollten Sie [nebeneinander angeordnete Bilder auf der Karte überlagern](overlay-tiled-images.md). Informationen zum Anzeigen von Straßen auf der Karte finden Sie unter [Anzeigen von Routen und Wegbeschreibungen](routes-and-directions.md).
 
@@ -104,7 +111,7 @@ private void mapPolygonAddButton_Click(object sender, Windows.UI.Xaml.RoutedEven
          new BasicGeoposition() {Latitude=centerLatitude+0.0005, Longitude=centerLongitude+0.001 },
 
    });
-           
+
    mapPolygon.ZIndex = 1;
    mapPolygon.FillColor = Colors.Red;
    mapPolygon.StrokeColor = Colors.Blue;
@@ -129,7 +136,7 @@ private void mapPolylineAddButton_Click(object sender, Windows.UI.Xaml.RoutedEve
          new BasicGeoposition() {Latitude=centerLatitude-0.0005, Longitude=centerLongitude-0.001 },                
          new BasicGeoposition() {Latitude=centerLatitude+0.0005, Longitude=centerLongitude+0.001 },
    });
-              
+
    mapPolyline.StrokeColor = Colors.Black;
    mapPolyline.StrokeThickness = 3;
    mapPolyline.StrokeDashed = true;
@@ -226,11 +233,4 @@ In diesem Beispiel wird eine Sammlung von XAML-Elementen angezeigt, die an [**Ma
 * [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077)
 * [**MapPolygon**](https://msdn.microsoft.com/library/windows/apps/dn637103)
 * [**MapPolyline**](https://msdn.microsoft.com/library/windows/apps/dn637114)
-
-
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

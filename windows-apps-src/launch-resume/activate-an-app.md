@@ -3,21 +3,28 @@ author: TylerMSFT
 title: Behandeln der App-Aktivierung
 description: "Erfahren Sie, wie Sie die App-Aktivierung durch Überschreiben der OnLaunched-Methode behandeln."
 ms.assetid: DA9A6A43-F09D-4512-A2AB-9B6132431007
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: a1bb0d5d24291fad1acab41c149dd9d763610907
-ms.openlocfilehash: e41a683026a4543545556e98f6b4e9194099b362
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: b6d41cc48ccf43e343aba9c844c2d74b49b1496e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Behandeln der App-Aktivierung
+# <a name="handle-app-activation"></a>Behandeln der App-Aktivierung
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
 
 Erfahren Sie, wie Sie die App-Aktivierung durch Überschreiben der [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)-Methode behandeln.
 
-## Überschreiben des Starthandlers
+## <a name="override-the-launch-handler"></a>Überschreiben des Starthandlers
 
 Beim Aktivieren einer App – gleich aus welchem Grund – wird vom System das [**Activated**](https://msdn.microsoft.com/library/windows/apps/br225018)-Ereignis gesendet. Eine Liste der Aktivierungstypen finden Sie in der [**ActivationKind**](https://msdn.microsoft.com/library/windows/apps/br224693)-Enumeration.
 
@@ -97,7 +104,7 @@ Definieren Sie die Klasse für Ihre Anwendung.
 > }
 > ```
 
-## Wiederherstellen von App-Daten, wenn die App angehalten und dann beendet wurde
+## <a name="restore-application-data-if-app-was-suspended-then-terminated"></a>Wiederherstellen von App-Daten, wenn die App angehalten und dann beendet wurde
 
 
 Wenn der Benutzer zur beendeten App wechselt, sendet das System das [**Activated**](https://msdn.microsoft.com/library/windows/apps/br225018)-Ereignis, wobei [**Kind**](https://msdn.microsoft.com/library/windows/apps/br224728) auf **Launch** und [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) auf **Terminated** oder **ClosedByUser** festgelegt ist. Von der App werden die gespeicherten Anwendungsdaten geladen, und der angezeigte Inhalt wird aktualisiert.
@@ -157,11 +164,11 @@ Wenn der Benutzer zur beendeten App wechselt, sendet das System das [**Activated
 
 Wenn der Wert von [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) gleich **NotRunning** ist, konnten die Anwendungsdaten von der App nicht erfolgreich gespeichert werden. Die App muss in diesem Fall neu gestartet werden, als ob sie erstmalig gestartet wird.
 
-## Anmerkungen
+## <a name="remarks"></a>Anmerkungen
 
 > **Hinweis**  Für Windows Phone Store-Apps folgt auf das [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339)-Ereignis immer [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335), auch wenn Ihre App derzeit angehalten ist und der Benutzer Ihre App über eine primäre Kachel oder die App-Liste neu startet. Apps können die Initialisierung überspringen, wenn für das aktuelle Fenster bereits Inhalte festgelegt wurden. Überprüfen Sie die [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736)-Eigenschaft, um zu ermitteln, ob die App über eine primäre oder sekundäre Kachel gestartet wurde. Entscheiden Sie basierend auf dieser Information, ob die App neu gestartet oder fortgesetzt werden soll.
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Behandeln des Anhaltens von Apps](suspend-an-app.md)
 * [Behandeln der App-Fortsetzung](resume-an-app.md)
@@ -176,9 +183,4 @@ Wenn der Wert von [**PreviousExecutionState**](https://msdn.microsoft.com/librar
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

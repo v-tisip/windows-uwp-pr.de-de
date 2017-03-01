@@ -3,16 +3,23 @@ author: TylerMSFT
 title: Deklarieren von Hintergrundaufgaben im Anwendungsmanifest
 description: "Sie können die Verwendung von Hintergrundaufgaben aktivieren, indem Sie diese im App-Manifest als Erweiterungen deklarieren."
 ms.assetid: 6B4DD3F8-3C24-4692-9084-40999A37A200
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 7d1c160f8b725cd848bf8357325c6ca284b632ae
-ms.openlocfilehash: b3518780600b9fe8f9be5af48eb5ee6022ec350f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 364edc93c52d3c7c8cbe5f1a85c8ca751eb44b35
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Deklarieren von Hintergrundaufgaben im Anwendungsmanifest
+# <a name="declare-background-tasks-in-the-application-manifest"></a>Deklarieren von Hintergrundaufgaben im Anwendungsmanifest
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **Wichtige APIs**
@@ -29,7 +36,7 @@ Out-of-Process-Hintergrundaufgaben müssen im App-Manifest deklariert sein, da s
 
 In diesem Thema wird davon ausgegangen, dass Sie eine oder mehrere Hintergrundaufgabenklassen erstellt haben und dass Ihre App die Hintergrundaufgabe so registriert, dass sie als Reaktion auf mindestens einen Auslöser ausgeführt wird.
 
-## Manuelles Hinzufügen von Erweiterungen
+## <a name="add-extensions-manually"></a>Manuelles Hinzufügen von Erweiterungen
 
 
 Öffnen Sie das Anwendungsmanifest (Package.appxmanifest), und wechseln Sie zum „Application“-Element. Erstellen Sie ein "Extensions"-Element (sofern nicht bereits eines vorhanden ist).
@@ -55,7 +62,7 @@ Der folgende Ausschnitt stammt aus dem [Hintergrundaufgabenbeispiel](http://go.m
  </Application>
 ```
 
-## Hinzufügen einer Erweiterung für eine Hintergrundaufgabe
+## <a name="add-a-background-task-extension"></a>Hinzufügen einer Erweiterung für eine Hintergrundaufgabe
 
 
 Deklarieren Sie Ihre erste Hintergrundaufgabe.
@@ -102,7 +109,7 @@ Kopieren Sie diesen Code in das "Extensions"-Element (Attribute werden in den fo
 ```
 
 
-## Hinzufügen von weiteren Hintergrundaufgabenerweiterungen
+## <a name="add-additional-background-task-extensions"></a>Hinzufügen von weiteren Hintergrundaufgabenerweiterungen
 
 Wiederholen Sie Schritt 2 für alle weiteren, von Ihrer App registrierten Hintergrundaufgabenklassen.
 
@@ -147,11 +154,11 @@ Das folgende Beispiel zeigt das vollständige "Application"-Element aus dem [Hin
 </Applications>
 ```
 
-## Deklarieren der Hintergrundaufgabe für die Ausführung in einem separaten Prozess
+## <a name="declare-your-background-task-to-run-in-a-different-process"></a>Deklarieren der Hintergrundaufgabe für die Ausführung in einem separaten Prozess
 
-Eine neue Funktion in Windows10 Version1507 ermöglicht das Ausführen von Hintergrundaufgaben in einem anderen Prozess als „BackgroundTaskHost.exe“ (der Prozess, in dem Hintergrundaufgaben standardmäßig ausgeführt werden).  Es gibt zwei Optionen: Ausführen im selben Prozess wie die Vordergrundanwendung; Ausführen in einer Instanz von „BackgroundTaskHost.exe“, die von den anderen Hintergrundaufgabeninstanzen derselben Anwendung getrennt ist.  
+Eine neue Funktion in Windows 10 Version 1507 ermöglicht das Ausführen von Hintergrundaufgaben in einem anderen Prozess als „BackgroundTaskHost.exe“ (der Prozess, in dem Hintergrundaufgaben standardmäßig ausgeführt werden).  Es gibt zwei Optionen: Ausführen im selben Prozess wie die Vordergrundanwendung; Ausführen in einer Instanz von „BackgroundTaskHost.exe“, die von den anderen Hintergrundaufgabeninstanzen derselben Anwendung getrennt ist.  
 
-### Ausführen in der Vordergrundanwendung
+### <a name="run-in-the-foreground-application"></a>Ausführen in der Vordergrundanwendung
 
 Hier finden Sie ein XML-Beispiel, mit dem eine Hintergrundaufgabe deklariert wird, die im gleichen Prozess wie die Anwendung im Vordergrund ausgeführt wird. Beachten Sie das Attribut `Executable`:
 
@@ -166,9 +173,9 @@ Hier finden Sie ein XML-Beispiel, mit dem eine Hintergrundaufgabe deklariert wir
 ```
 
 > [!Note]
-> Verwenden Sie das Executable-Element nur bei Hintergrundaufgaben, für die es unbedingt erforderlich ist, z.B. [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).  
+> Verwenden Sie das Executable-Element nur bei Hintergrundaufgaben, für die es unbedingt erforderlich ist, z. B. [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).  
 
-### Ausführen in einem anderen Hintergrund-Hostprozess
+### <a name="run-in-a-different-background-host-process"></a>Ausführen in einem anderen Hintergrund-Hostprozess
 
 Hier finden Sie ein XML-Beispiel, mit dem eine Hintergrundaufgabe deklariert wird, die zwar in einem „BackgroundTaskHost.exe“-Prozess ausgeführt wird, der jedoch von anderen Hintergrundaufgabeninstanzen derselben App getrennt ist. Beachten Sie das Attribut `ResourceGroup`, das festlegt, welche Hintergrundaufgaben gemeinsam ausgeführt werden.
 
@@ -203,15 +210,10 @@ Hier finden Sie ein XML-Beispiel, mit dem eine Hintergrundaufgabe deklariert wir
 ```
 
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 
 * [Debuggen einer Hintergrundaufgabe](debug-a-background-task.md)
 * [Registrieren einer Hintergrundaufgabe](register-a-background-task.md)
 * [Richtlinien für Hintergrundaufgaben](guidelines-for-background-tasks.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

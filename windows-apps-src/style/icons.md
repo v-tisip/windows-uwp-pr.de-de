@@ -1,13 +1,20 @@
 ---
 author: mijacobs
-Description: "Gute Symbole harmonieren mit der Typografie und der übrigen Gestaltungssprache. Sie verwenden keine Metaphern und geben einfach und schnell nur die erforderlichen Informationen weiter."
+Description: "Gute Symbole harmonieren mit der Typografie und der übrigen Gestaltungssprache. Sie verwenden keine Metaphern und verdeutlichen lediglich, was benötigt wird, und das so klar und einfach wie möglich."
 title: Symbole
 ms.assetid: b90ac02d-5467-4304-99bd-292d6272a014
 label: Icons
 template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: f8cb9c36b42936b8dfd24bbd5f88e2cf500e930f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 9ae92b196015fb958e90409f947c1e42184ec0d4
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -15,7 +22,7 @@ ms.openlocfilehash: f8cb9c36b42936b8dfd24bbd5f88e2cf500e930f
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Gute Symbole harmonieren mit der Typografie und der übrigen Gestaltungssprache. Sie verwenden keine Metaphern und geben einfach und schnell nur die erforderlichen Informationen weiter. 
+Gute Symbole harmonieren mit der Typografie und der übrigen Gestaltungssprache. Sie verwenden keine Metaphern und verdeutlichen lediglich, was benötigt wird, und das so klar und einfach wie möglich. 
 
 ## <a name="linear-scaling-size-ramps"></a>Größenabstufungen für lineare Skalierungen 
 
@@ -176,9 +183,4 @@ Signale sollten bei einem Raster der Größe 32 × 32 px 10 bis 18 px umfass
 ## <a name="related-articles"></a>Verwandte Artikel
 
 * [Richtlinien für die Ressourcen für Kacheln und Symbole](../controls-and-patterns/tiles-and-notifications-app-assets.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

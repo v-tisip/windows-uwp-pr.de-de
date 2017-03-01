@@ -3,38 +3,45 @@ author: mtoepke
 title: Einrichten des Spieleprojekts
 description: "Im ersten Schritt für die Erstellung Ihres Spiels richten Sie ein Projekt in Microsoft Visual Studio so ein, dass Sie möglichst wenig Aufwand mit der Bearbeitung der Codeinfrastruktur haben."
 ms.assetid: 9fde90b3-bf79-bcb3-03b6-d38ab85803f2
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Spiele, Einrichtung, directx"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: fd8e676e66c1df530aca41e05f2ea68d96d01a32
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 3bf9e6f70f71dc0b70a2f8af148c44acc1a329fb
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Einrichten des Spieleprojekts
+# <a name="set-up-the-game-project"></a>Einrichten des Spieleprojekts
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Im ersten Schritt für die Erstellung Ihres Spiels richten Sie ein Projekt in Microsoft Visual Studio so ein, dass Sie möglichst wenig Aufwand mit der Bearbeitung der Codeinfrastruktur haben. Sie können sich eine Menge Zeit und Arbeit ersparen, wenn Sie die richtige Vorlage verwenden und das Projekt speziell für die Spieleentwicklung konfigurieren. Im Anschluss finden Sie die erforderlichen Einrichtungs- und Konfigurationsschritte für ein einfaches Spieleprojekt.
 
-## Ziel
+## <a name="objective"></a>Ziel
 
 
 -   Hier lernen Sie, wie Sie ein Direct3D-Spieleprojekt in Visual Studio einrichten.
 
-## Einrichten des Spieleprojekts
+## <a name="setting-up-the-game-project"></a>Einrichten des Spieleprojekts
 
 
 Sie können ein Spiel natürlich von Grund auf neu entwickeln. Dafür brauchen Sie eigentlich nur einen praktischen Text-Editor, ein paar Beispiele und eine ganze Menge Kreativität. Das ist allerdings nicht unbedingt die effektivste Vorgehensweise. Viel besser wäre es doch, wenn Sie als Neueinsteiger ohne Erfahrung mit der Entwicklung für die universelle Windows-Plattform (UWP) einige dieser Aufgaben an Visual Studio abtreten könnten. Hier erfahren Sie, wie Sie Ihrem Projekt zu einem guten Start verhelfen.
 
-## 1. Auswählen der richtigen Vorlage
+## <a name="1-pick-the-right-template"></a>1. Auswählen der richtigen Vorlage
 
 
-Eine Visual Studio-Vorlage ist eine Sammlung von Einstellungen und Codedateien, die abhängig von der bevorzugten Sprache und Technologie auf eine bestimmte Art von App ausgerichtet sind. In Microsoft Visual Studio2015 stehen einige Vorlagen zur Verfügung, die die Entwicklung des Spiels und der Grafik deutlich vereinfachen können. Ohne Verwendung einer Vorlage müssen Sie einen Großteil des grundlegenden Rendering- und Anzeigeframeworks für die Grafik selbst entwickeln, was insbesondere für neue Spieleentwickler recht mühsam sein kann.
+Eine Visual Studio-Vorlage ist eine Sammlung von Einstellungen und Codedateien, die abhängig von der bevorzugten Sprache und Technologie auf eine bestimmte Art von App ausgerichtet sind. In Microsoft Visual Studio 2015 stehen einige Vorlagen zur Verfügung, die die Entwicklung des Spiels und der Grafik deutlich vereinfachen können. Ohne Verwendung einer Vorlage müssen Sie einen Großteil des grundlegenden Rendering- und Anzeigeframeworks für die Grafik selbst entwickeln, was insbesondere für neue Spieleentwickler recht mühsam sein kann.
 
 Die richtige Vorlage für dieses Tutorial ist die Vorlage „DirectX 11-App (Universelle Windows-App)“. Klicken Sie in Visual Studio 2015 auf **Datei...** &gt; **Neues Projekt**, und gehen Sie anschließend wie folgt vor:
 
-1.  Navigieren Sie unter **Vorlagen** zu **Visual C++**> **Windows**> **Universell**.
-2.  Wählen Sie im mittleren Bereich **DirectX11-App (universelle Windows-App)**aus.
+1.  Navigieren Sie unter **Vorlagen** zu **Visual C++** > **Windows** > **Universell**.
+2.  Wählen Sie im mittleren Bereich **DirectX 11-App (universelle Windows-App)**aus.
 3.  Geben Sie Ihrem Spieleprojekt einen Namen, und klicken Sie auf **OK**.
 
 ![Auswählen der Vorlage „Direct3D-Anwendung“](images/simple-dx-game-vs-new-proj.png)
@@ -120,7 +127,7 @@ void App::Run()
 
 Wenn das Fenster Ihres Spiels nicht geschlossen wird, werden hiermit alle Ereignisse gesendet, der Timer wird aktualisiert, und die Ergebnisse der Grafikpipeline werden gerendert und angezeigt. Auf diesen Punkt gehen wir später in [Definieren des UWP-Frameworks für das Spiel](tutorial--building-the-games-metro-style-app-framework.md) und in [Zusammensetzen der Renderingpipeline](tutorial--assembling-the-rendering-pipeline.md)näher ein. Damit dürften Sie ein gewisses Gespür für die grundlegende Codestruktur eines UWP-DirectX-Spiels entwickelt haben.
 
-## 2. Prüfen und Aktualisieren der Datei „package.appxmanifest“
+## <a name="2-review-and-update-the-packageappxmanifest-file"></a>2. Prüfen und Aktualisieren der Datei „package.appxmanifest“
 
 
 Die Vorlage hat aber noch mehr zu bieten als nur Codedateien. Die Datei **package.appxmanifest** enthält Metadaten für Ihr Projekt. Diese werden zum Packen und Starten des Spiels sowie zum Übermitteln des Spiels an den Windows Store verwendet. Darüber hinaus enthält sie wichtige Infos, mit deren Hilfe das System des Spielers den Zugriff auf die zum Ausführen des Spiels benötigten Systemressourcen ermöglicht.
@@ -137,7 +144,7 @@ Wenn Sie die von Ihrem Spiel genutzten Funktionen (etwa den Zugriff auf das Inte
 
 Kommen wir nun zu den restlichen Dateien der Vorlage **DirectX 11-App (Universelle Windows-App)**.
 
-## 3. Anzeigen der enthaltenen Bibliotheken und Header
+## <a name="3-review-the-included-libraries-and-headers"></a>3. Anzeigen der enthaltenen Bibliotheken und Header
 
 
 Ein paar Dateien haben wir uns für den Schluss aufgehoben. Diese Dateien bieten zusätzliche Tools und Unterstützung für die Entwicklung von Direct3D-Spielen.
@@ -147,13 +154,13 @@ Ein paar Dateien haben wir uns für den Schluss aufgehoben. Diese Dateien bieten
 | StepTimer.h                  | Definiert einen Timer mit hoher Auflösung, der sich besonders für Spiele oder Apps mit interaktivem Rendering eignet.                                                                                                                                       |
 | Sample3DSceneRenderer.h/.cpp | Definiert eine einfache Renderimplementierung, die eine Direct3D-Swapchain und einen Grafikadapter mit Ihrem UWP-DirectX-Spiel verbindet.                                                                                            |
 | DirectXHelper.h              | Implementiert eine einzelne Methode (**DX::ThrowIfFailed**). Mit dieser Methode werden die von DirectX-APIs zurückgegebenen HRESULT-Fehlerwerte in Ausnahmen der Windows-Runtime konvertiert. Verwenden Sie diese Methode, um einen Haltepunkt zum Debuggen von DirectX-Fehlern zu setzen. |
-| pch.h/.cpp                   | Enthält alles, was das Windows-System für die von einer Direct3D-App genutzten APIs (einschließlich DirectX11-APIs) enthält.                                                                                                           |
+| pch.h/.cpp                   | Enthält alles, was das Windows-System für die von einer Direct3D-App genutzten APIs (einschließlich DirectX 11-APIs) enthält.                                                                                                           |
 | SamplePixelShader.hlsl       | Enthält den Code der High-Level-Shader-Language (HLSL) für einen sehr einfachen Pixel-Shader.                                                                                                                                     |
 | SampleVertexShader.hlsl      | Enthält den Code der High-Level Shader Language (HLSL) für einen sehr einfachen Vertex-Shader.                                                                                                                                    |
 
  
 
-### Nächste Schritte
+### <a name="next-steps"></a>Nächste Schritte
 
 Sie können nun ein Spieleprojekt unter Verwendung von UWP mit DirectX erstellen und kennen die Komponenten und Dateien der Vorlage "DirectX 11-App (Universelle Windows-App)".
 
@@ -165,10 +172,5 @@ Im nächsten Lernprogramm, [Definieren des UWP-App-Frameworks für das Spiel](tu
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

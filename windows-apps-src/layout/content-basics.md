@@ -6,17 +6,24 @@ ms.assetid: 3102530A-E0D1-4C55-AEFF-99443D39D567
 label: Content design basics
 template: detail.hbs
 op-migration-status: ready
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 7433fcabe455c0a0198cd23f883ed72b0b4558fc
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 9bb39b117fe4c4e95616c06921b05199e153cddd
+ms.lasthandoff: 02/07/2017
 
 ---
 
-#  <a name="content-design-basics-for-uwp-apps"></a>Grundlagen des Inhaltsdesigns für UWP-Apps (Universelle Windows-Plattform)
+#  <a name="content-design-basics-for-uwp-apps"></a>Grundlagen des Inhaltsdesigns für UWP-Apps
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-Der Hauptzweck jeder App ist das Bereitstellen von Zugriff auf Content: In einer Fotobearbeitungs-App sind Fotos der Content, in einer Reise-App Karten und Informationen über die Reiseziele usw. Navigationselemente bieten Zugriff auf Content; Befehlselemente ermöglichen dem Benutzer die Interaktion mit Content; Content-Elemente zeigen den tatsächlichen Content an.
+Der Hauptzweck jeder App ist das Bereitstellen von Zugriff auf Inhalte: In einer Fotobearbeitungs-App stellen Fotos den Inhalt dar, in einer Reise-App stellen Karten und Informationen über die Reiseziele den Inhalt dar, usw. Navigationselemente bieten Zugriff auf Content; Befehlselemente ermöglichen dem Benutzer die Interaktion mit Content; Content-Elemente zeigen den tatsächlichen Content an.
 
 Dieser Artikel bietet Empfehlungen zum Content-Design für drei Content-Szenarien.
 
@@ -122,10 +129,5 @@ Häufig zum Anzeigen von Content verwendete UI-Elemente. (Eine vollständige Lis
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

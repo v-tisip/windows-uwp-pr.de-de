@@ -3,21 +3,28 @@ title: "Kryptografische Schlüssel"
 description: "In diesem Artikel wird erläutert, wie Sie mithilfe standardmäßiger Schlüsselableitungsfunktionen Schlüssel ableiten und wie Sie Inhalte mithilfe symmetrischer und asymmetrischer Schlüssel verschlüsseln können."
 ms.assetid: F35BEBDF-28C5-4F91-A94E-F7D862B6ED59
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: e7fba930c108744815f261e7d01d198626d7e7c9
-ms.openlocfilehash: 420c8daa47fb36e8b7cebbc7a18bc8eb666188d3
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1396382c90b370aa9d610749a92dd256c92dedab
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Kryptografische Schlüssel
+# <a name="cryptographic-keys"></a>Kryptografische Schlüssel
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 In diesem Artikel wird erläutert, wie Sie mithilfe standardmäßiger Schlüsselableitungsfunktionen Schlüssel ableiten und wie Sie Inhalte mithilfe symmetrischer und asymmetrischer Schlüssel verschlüsseln können. 
 
-## Symmetrische Schlüssel
+## <a name="symmetric-keys"></a>Symmetrische Schlüssel
 
 
 Für die symmetrische Verschlüsselung, auch Verschlüsselung mit geheimem Schlüssel genannt, muss der Schlüssel, der für die Verschlüsselung verwendet wird, auch für die Entschlüsselung verwendet werden. Mit einer [**SymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241537)-Klasse können Sie einen symmetrischen Algorithmus angeben und einen Schlüssel erstellen oder importieren. Sie können statische Methoden für die [**CryptographicEngine**](https://msdn.microsoft.com/library/windows/apps/br241490)-Klasse verwenden, um Daten mit dem Algorithmus und dem Schlüssel zu ver- und entschlüsseln.
@@ -42,7 +49,7 @@ Während Blockchiffren zum Verschlüsseln fester Datenblöcke dienen, sind Strom
 
 Das folgende Beispiel zeigt die Verwendung eines symmetrischen Schlüssels mithilfe der [**SymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241537)-Klasse, um Daten zu verschlüsseln und zu entschlüsseln.
 
-## Asymmetrische Schlüssel
+## <a name="asymmetric-keys"></a>Asymmetrische Schlüssel
 
 
 Bei der Kryptografie für asymmetrische Schlüssel, die auch als Kryptografie für öffentliche Schlüssel bezeichnet wird, werden für Ver- und Entschlüsselung ein öffentlicher und ein privater Schlüssel verwendet. Die Schlüssel unterscheiden sich voneinander, stehen jedoch in einer mathematischen Beziehung zueinander. Normalerweise wird der private Schlüssel geheim gehalten. Mit dem privaten Schlüssel werden Daten entschlüsselt, während der öffentliche Schlüssel den betroffenen Parteien mitgeteilt wird, die damit die Daten entschlüsseln. Die asymmetrische Kryptographie ist auch hilfreich beim Signieren von Daten.
@@ -61,21 +68,16 @@ Da die asymmetrische Kryptografie im Vergleich zur symmetrischen Kryptografie de
 
 Mit einem [**AsymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241478)-Objekt können Sie einen asymmetrischen Algorithmus oder einen Signaturalgorithmus angeben, um ein kurzlebiges Schlüsselpaar zu erstellen bzw. zu importieren oder den öffentlichen Schlüssel eines Schlüsselpaares zu importieren.
 
-## Ableiten von Schlüsseln
+## <a name="deriving-keys"></a>Ableiten von Schlüsseln
 
 
 Es ist häufig erforderlich, zusätzliche Schlüssel von einem gemeinsamen geheimen Schlüssel abzuleiten. Sie können die [**KeyDerivationAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241518)-Klasse und eine der folgenden speziellen Methoden in der Klasse [**KeyDerivationParameters**](https://msdn.microsoft.com/library/windows/apps/br241524) verwenden, um Schlüssel abzuleiten.
 
 | Objekt                                                                            | Beschreibung                                                                                                                                |
 |-----------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-| [**BuildForPbkdf2**](https://msdn.microsoft.com/library/windows/apps/br241525)    | Erstellt ein KeyDerivationParameters-Objekt zur Verwendung in der kennwortbasierten Funktion2 zum Ableiten von Schlüsseln (Password-Based Key Derivation Function 2, PBKDF2).                                 |
+| [**BuildForPbkdf2**](https://msdn.microsoft.com/library/windows/apps/br241525)    | Erstellt ein KeyDerivationParameters-Objekt zur Verwendung in der kennwortbasierten Funktion 2 zum Ableiten von Schlüsseln (Password-Based Key Derivation Function 2, PBKDF2).                                 |
 | [**BuildForSP800108**](https://msdn.microsoft.com/library/windows/apps/br241526)  | Erstellt ein KeyDerivationParameters-Objekt zur Verwendung in einer Funktion zum Ableiten von Schlüsseln im Zählermodus mit einem Hash-basierten Nachrichtenauthentifizierungscode (Hash-based Message Authentication Code, HMAC). |
 | [**BuildForSP80056a**](https://msdn.microsoft.com/library/windows/apps/br241527)  | Erstellt ein KeyDerivationParameters-Objekt zur Verwendung in der Funktion SP800-56A zum Ableiten von Schlüsseln.                                                 |
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

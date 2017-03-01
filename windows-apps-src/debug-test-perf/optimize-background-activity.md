@@ -3,9 +3,16 @@ author: PatrickFarley
 ms.assetid: 24351dad-2ee3-462a-ae78-2752bb3374c2
 title: Nutzen von Stromsparfeatures
 description: "Erstellen Sie UWP-Apps, die mit dem System interagieren, um Hintergrundaufgaben auf eine den Akku effizient nutzende Weise auszuführen."
+ms.author: pafarley
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 73b19e54b863693aece045e5b653bc0583a676bb
-ms.openlocfilehash: 854ec43d075f8adc1f875d3b9e5e2d818434edb9
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 045dfeb4696a4854b114d88da2a2cbb75d621a58
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -13,7 +20,7 @@ ms.openlocfilehash: 854ec43d075f8adc1f875d3b9e5e2d818434edb9
 
 Universelle Windows-Apps sollten auf allen Gerätefamilien mit konsistenter Qualität ausgeführt werden. Auf akkubetriebenen Geräten stellt der Energieverbrauch einen wichtigen Faktor in Bezug auf die allgemeine Erfahrung der Benutzer mit Ihrer App dar. Jeder Benutzer wünscht sich eine Akkulaufzeit für den ganzen Tag. Hierfür muss jedoch jede auf dem Gerät installierte Software, einschließlich Ihrer Software, effizient ausgeführt werden. 
 
-Das Verhalten von Hintergrundaufgaben stellt unbestritten den wichtigsten Faktor in Bezug auf den Energieverbrauch von Apps dar. Eine Hintergrundaufgabe ist eine Programmaktivität, die beim System zur Ausführung registriert wurde, ohne dass die App geöffnet ist. Weitere Informationen finden Sie unter [Erstellen und Registrieren einer Hintergrundaufgabe außerhalb von Prozessen](https://msdn.microsoft.com/windows/uwp/launch-resume/create-and-register-an-outofproc-background-task).
+Das Verhalten von Hintergrundaufgaben stellt unbestritten den wichtigsten Faktor in Bezug auf den Energieverbrauch von Apps dar. Eine Hintergrundaufgabe ist eine Programmaktivität, die beim System zur Ausführung registriert wurde, ohne dass die App geöffnet ist. Weitere Informationen finden Sie unter [Erstellen und Registrieren einer Hintergrundaufgabe außerhalb von Prozessen](https://msdn.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task).
 
 ## <a name="background-activity-allowance"></a>Einschränkungen für Hintergrundaktivitäten
 
@@ -47,12 +54,7 @@ Testen Sie Ihre App auf realen Geräten, wenn Sie Szenarien mit hohem Energiever
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [Erstellen und Registrieren einer Hintergrundaufgabe außerhalb von Prozessen](https://msdn.microsoft.com/windows/uwp/launch-resume/create-and-register-an-outofproc-background-task)  
+* [Erstellen und Registrieren einer Hintergrundaufgabe außerhalb von Prozessen](https://msdn.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)  
 * [Planen der Leistung](https://msdn.microsoft.com/windows/uwp/debug-test-perf/planning-and-measuring-performance)  
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

@@ -2,14 +2,21 @@
 author: mcleanbyron
 ms.assetid: 4e8cc0c0-b14c-472c-9e1c-4601d10289d2
 description: "Der Windows SDK, der Microsoft Store Services SDK und der Windows Store bieten zahlreiche Features, durch die Sie mit Ihren Apps mehr Geld verdienen und Kunden durch Förderung der Kundenbindung gewinnen können."
-title: Monetarisierung, Kundenbindung und Store-Dienste
+title: Monetisierung, Kundenbindung und Store-Dienste
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, Monetisierung, Kundenbindung, Werben, Store-Dienste
 translationtype: Human Translation
-ms.sourcegitcommit: ccc7cfea885cc9c8803cfc70d2e043192a7fee84
-ms.openlocfilehash: e8a4c40dbc715d82d6f41fef8a49df5bfdfa79ae
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 5a3497d5aa1c8a4415b7b4fb9f7888448ae74f9f
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="monetization-customer-engagement-and-store-services"></a>Monetarisierung, Kundenbindung und Store-Dienste
+# <a name="monetization-customer-engagement-and-store-services"></a>Monetisierung, Kundenbindung und Store-Dienste
 
 Der Windows SDK, der Microsoft Store Services SDK und der Windows Store bieten zahlreiche Features, durch die Sie mit Ihren Apps mehr Geld verdienen und Kunden durch Förderung der Kundenbindung gewinnen können. In den Themen dieses Abschnitts erfahren Sie, wie Sie diese Features in die App integrieren.
 
@@ -35,9 +42,4 @@ Ausführliche Informationen zu den vom Windows Store erhobenen Gebühren und zu
 * [Erstellen von Kundensegmenten](../publish/create-customer-segments.md)
 * [Feedbackbericht](../publish/feedback-report.md)
 * [Nutzungsbericht](../publish/usage-report.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

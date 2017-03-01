@@ -1,31 +1,38 @@
 ---
 author: mcleanbyron
 ms.assetid: 87708690-079A-443D-807E-D2BF9F614DDF
-description: "Verwenden Sie diese Methode in der Windows Store-Übermittlungs-API, um Daten für ein Flight-Paket für eine App abzurufen, die für Ihr Windows Dev Center-Konto registriert ist."
-title: "Abrufen eines Flight-Pakets mit der Windows Store-Übermittlungs-API"
+description: "Verwenden Sie diese Methode der Windows Store-Übermittlungs-API, um Daten für ein Flight-Paket für eine App abzurufen, die für Ihr Windows Dev Center-Konto registriert ist."
+title: "Abrufen eines Flight-Pakets mithilfe der Windows Store-Übermittlungs-API"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Windows Store-Übermittlungs-API, Flight, Flight-Paket"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: fb8328981a45e353987a62d7794158c2e1179087
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ae8014dadfb838cfd14202a673654be3a012c8bf
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Abrufen eines Flight-Pakets mit der Windows Store-Übermittlungs-API
+# <a name="get-a-package-flight-using-the-windows-store-submission-api"></a>Abrufen eines Flight-Pakets mithilfe der Windows Store-Übermittlungs-API
 
 
 
 
-Verwenden Sie diese Methode in der Windows Store-Übermittlungs-API, um Daten für ein Flight-Paket für eine App abzurufen, die für Ihr Windows Dev Center-Konto registriert ist.
+Verwenden Sie diese Methode der Windows Store-Übermittlungs-API, um Daten für ein Flight-Paket für eine App abzurufen, die für Ihr Windows Dev Center-Konto registriert ist.
 
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
 * Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](create-and-manage-submissions-using-windows-store-services.md#prerequisites) für die Windows Store-Übermittlungs-API.
-* [Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken erhalten haben, haben Sie 60Minuten Zeit, das Token zu verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
+* [Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken erhalten haben, haben Sie 60 Minuten Zeit, das Token zu verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
 
 >**Hinweis**&nbsp;&nbsp;Diese Methode kann nur für Windows Dev Center-Konten verwendet werden, die eine Berechtigung zur Verwendung der Windows Store-Übermittlungs-API erhalten haben. Diese Berechtigung ist nicht für alle Konten aktiviert.
 
-## Anforderung
+## <a name="request"></a>Anforderung
 
 Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie Verwendungsbeispiele und Beschreibungen des Header und Anforderungstexts.
 
@@ -36,7 +43,7 @@ Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie V
 <span/>
  
 
-### Anforderungsheader
+### <a name="request-header"></a>Anforderungsheader
 
 | Header        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -44,23 +51,23 @@ Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie V
 
 <span/>
 
-### Anforderungsparameter
+### <a name="request-parameters"></a>Anforderungsparameter
 
 
 | Name        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | string | Erforderlich. Die Store-ID der App, die die Flight-Paketübermittlung enthält, die Sie abrufen möchten. Die Store-ID für die App ist im Dev Center-Dashboard verfügbar.  |
+| applicationId | string | Erforderlich. Die Store-ID der App, die die Flight-Paket-Übermittlung enthält, die Sie abrufen möchten. Die Store-ID für die App ist im Dev Center-Dashboard verfügbar.  |
 | flightId | string | Erforderlich. Die ID des abzurufenden Flight-Pakets. Diese ID ist im Dev Center-Dashboard verfügbar und in den Antwortdaten für Anforderungen zum [Erstellen eines Flight-Pakets](create-a-flight.md) und zum [Abrufen von Flight-Paketen für eine App](get-flights-for-an-app.md) enthalten.  |
 
 <span/>
 
-### Anforderungstext
+### <a name="request-body"></a>Anforderungstext
 
 Stellen Sie keinen Anforderungstext für diese Methode bereit.
 
 <span/>
 
-### Anforderungsbeispiel
+### <a name="request-example"></a>Anforderungsbeispiel
 
 Im folgenden Beispiel wird veranschaulicht, wie Informationen über ein Flight-Paket mit der ID 43e448df-97c9-4a43-a0bc-2a445e736bcd für eine App mit dem Store-ID-Wert 9WZDNCRD91MD abgerufen werden.
 
@@ -69,7 +76,7 @@ GET https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/fli
 Authorization: Bearer <your access token>
 ```
 
-## Antwort
+## <a name="response"></a>Antwort
 
 Das folgende Beispiel veranschaulicht den JSON-Antworttext für einen erfolgreichen Aufruf dieser Methode. Weitere Informationen zu den Werten im Antworttext finden Sie in den folgenden Abschnitten.
 
@@ -92,7 +99,7 @@ Das folgende Beispiel veranschaulicht den JSON-Antworttext für einen erfolgreic
 }
 ```
 
-### Antworttext
+### <a name="response-body"></a>Antworttext
 
 | Wert      | Typ   | Beschreibung                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -104,7 +111,7 @@ Das folgende Beispiel veranschaulicht den JSON-Antworttext für einen erfolgreic
 | rankHigherThan           | string  | Der Anzeigename des Flight-Pakets, das den unmittelbar niedrigeren Rang als das aktuelle Flight-Paket erhält. Weitere Informationen zur Bewertung von Test-Flight-Gruppen finden Sie unter [Flight-Pakete](https://msdn.microsoft.com/windows/uwp/publish/package-flights).  |
 
 <span id="submission_object" />
-### Übermittlungsobjekt
+### <a name="submission-object"></a>Übermittlungsobjekt
 
 Die Werte *LastPublishedFlightSubmission* und *PendingFlightSubmission* im Antworttext enthalten Objekte mit Ressourceninformationen über eine Übermittlung für das Flight-Paket. Diese Objekte enthalten folgende Werte.
 
@@ -115,7 +122,7 @@ Die Werte *LastPublishedFlightSubmission* und *PendingFlightSubmission* im Antwo
  
 <span/>
 
-## Fehlercodes
+## <a name="error-codes"></a>Fehlercodes
 
 Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die Antwort einen der folgenden HTTP-Fehlercodes.
 
@@ -127,14 +134,9 @@ Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die A
 
 <span/>
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
-* [Erstellen und Verwalten von Übermittlungen mit WindowsStore-Diensten](create-and-manage-submissions-using-windows-store-services.md)
+* [Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten](create-and-manage-submissions-using-windows-store-services.md)
 * [Erstellen eines Flight-Pakets](create-a-flight.md)
 * [Löschen eines Flight-Pakets](delete-a-flight.md)
-
-
-
-<!--HONumber=Aug16_HO5-->
-
 

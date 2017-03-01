@@ -1,20 +1,27 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: "Reagieren Sie in Ihren Apps auf Mauseingaben, indem Sie die gleichen einfachen Zeigerereignisse behandeln, die Sie für Touch- und Stifteingaben verwenden."
+Description: "Reagieren Sie auf Mauseingaben in Ihren Apps, indem Sie die gleichen einfachen Zeigerereignisse behandeln, die Sie für Touch- und Stifteingaben verwenden."
 title: Mausinteraktionen
 ms.assetid: C8A158EF-70A9-4BA2-A270-7D08125700AC
 label: Mouse
 template: detail.hbs
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: ed0c8e86d38865fad8bb784550b9b4fc61a8b40a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 94a92c184f4c695caf29cb7a185842ccd72e4c53
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="mouse-interactions"></a>Mausinteraktionen
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Optimieren Sie das Design Ihrer UWP-Apps für die Toucheingabe, und freuen Sie sich über die standardmäßige allgemeine Unterstützung von Mausgeräten.
+Optimieren Sie das Design Ihrer UWP-Apps für die berührungsgesteuerte Eingabe und erhalten Sie standardmäßige allgemeine Unterstützung von Mausgeräten.
 
  
 
@@ -152,10 +159,5 @@ Beachten Sie beim Anpassen des Mauszeigers Folgendes:
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

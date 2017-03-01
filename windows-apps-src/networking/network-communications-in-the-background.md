@@ -3,9 +3,16 @@ author: DelfCo
 description: "Apps halten die Kommunikation mithilfe von Hintergrundaufgaben und zwei wichtigen Mechanismen aufrecht, während sie nicht im Vordergrund ausgeführt werden."
 title: Netzwerkkommunikation im Hintergrund
 ms.assetid: 537F8E16-9972-435D-85A5-56D5764D3AC2
+ms.author: bobdel
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: a6d297ca8510267d21656bd2e22bb3958a4a4b52
-ms.openlocfilehash: ea979eceb20c13d4025ec94ec8ed05b484a7eb27
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 3f0e52780788eafe9e53bba491b8d54208dcc761
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -586,10 +593,5 @@ Verwendungsmuster und bewährte Methoden für die Verwendung von [**IXMLHTTPRequ
 -   Die App muss zu Beginn gegebenenfalls eine [**Send**](https://msdn.microsoft.com/library/windows/desktop/hh831164)-Anforderung senden, um den Transport zu testen und richtig einzurichten, bevor der Transport zur Verwendung mit [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) erstellt wird. Nachdem die App festgestellt hat, dass der Transport richtig eingerichtet ist, kann das [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151)-Objekt als Transportobjekt zur Verwendung mit **ControlChannelTrigger** konfiguriert werden. Dieser Vorgang soll verhindern, dass die über den Transport hergestellte Verbindung in manchen Szenarien abgebrochen wird. Bei Verwendung von SSL mit einem Zertifikat kann für eine App die Anzeige eines Dialogfelds für die Eingabe einer PIN oder – bei mehreren Zertifikaten – für die Auswahl eines Zertifikats erforderlich sein. Proxyauthentifizierung und Serverauthentifizierung können ebenfalls erforderlich sein. Wenn die Proxy- oder Serverauthentifizierung abläuft, wird die Verbindung möglicherweise geschlossen. Eine Möglichkeit, wie eine App mit dem Problem des Authentifizierungsablaufs umgehen kann, besteht in der Verwendung eines Zeitgebers. Wenn eine HTTP-Umleitung erforderlich ist, ist nicht sichergestellt, dass die zweite Verbindung verlässlich hergestellt werden kann. Eine anfängliche Testanforderung stellt sicher, dass die App die neueste umgeleitete URL verwenden kann, bevor das **IXMLHTTPRequest2**-Objekt als Transport mit dem **ControlChannelTrigger**-Objekt verwendet wird.
 
 Weitere Informationen zur Verwendung von [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151) mit [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) finden Sie im [Beispiel für ControlChannelTrigger mit IXMLHTTPRequest2](http://go.microsoft.com/fwlink/p/?linkid=258538).
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

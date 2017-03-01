@@ -1,17 +1,24 @@
 ---
 author: mijacobs
 Description: "Mithilfe des Windows-Pushbenachrichtigungsdiensts (WNS) können Drittanbieterentwickler Popup-, Kachel-, Signalupdates und unformatierte Updates von ihren eigenen Clouddiensten aus senden. Dadurch steht ein Mechanismus zur Verfügung, mit dem Sie Ihren Benutzern auf energieeffiziente und verlässliche Weise neue Updates bereitstellen können."
-title: "Übersicht über die Windows-Pushbenachrichtigungsdienste (Windows Push Notification Services, WNS)"
+title: "Übersicht über Windows-Pushbenachrichtigungsdienste (Windows Push Notification Services, WNS)"
 ms.assetid: 2125B09F-DB90-4515-9AA6-516C7E9ACCCD
 label: TBD
 template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 43f708d8baa379049837074f62e61e9e243513df
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: adc09ec19572d190bc756dee63d3e735d512f4f1
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="windows-push-notification-services-wns-overview"></a>Übersicht über die Windows-Pushbenachrichtigungsdienste (Windows Push Notification Services, WNS)
+# <a name="windows-push-notification-services-wns-overview"></a>Übersicht über Windows-Pushbenachrichtigungsdienste (Windows Push Notification Services, WNS)
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Mithilfe des Windows-Pushbenachrichtigungsdiensts (WNS) können Drittanbieterentwickler Popup-, Kachel-, Signalupdates und unformatierte Updates von ihren eigenen Clouddiensten aus senden. Dadurch steht ein Mechanismus zur Verfügung, mit dem Sie Ihren Benutzern auf energieeffiziente und verlässliche Weise neue Updates bereitstellen können.
@@ -260,10 +267,5 @@ Dies ist der XAML-Code für das in diesem Beispiel vorgestellte [**ContentDialog
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

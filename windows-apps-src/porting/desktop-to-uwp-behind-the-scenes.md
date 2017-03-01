@@ -2,13 +2,21 @@
 author: awkoren
 Description: "Dieser Artikel beschäftigt sich eingehender damit, wie die Desktop-zu-UWP-Brücke funktioniert."
 title: "Hintergrundinformationen zur Desktop-Brücke"
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: a399fae9-122c-46c4-a1dc-a1a241e5547a
 translationtype: Human Translation
-ms.sourcegitcommit: fe96945759739e9260d0cdfc501e3e59fb915b1e
-ms.openlocfilehash: c261f40734ab40475ca3a8e0b7c3bea7b64afacd
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: e9a26e201d5059a0e5f7d41f6f11afbb41549596
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Hintergrundinformationen zur Desktop-Brücke
+# <a name="behind-the-scenes-of-the-desktop-bridge"></a>Hintergrundinformationen zur Desktop-Brücke
 
 Dieser Artikel beschäftigt sich eingehender damit, wie die Desktop-zu-UWP-Brücke funktioniert.
 
@@ -16,21 +24,21 @@ Ein wichtiges Ziel der Desktop-zu-UWP-Brücke besteht darin, den Anwendungszusta
 
 Bei konvertierten App-Paketen handelt es sich um vertrauenswürdige Anwendungen nur für den Desktop, die nicht virtualisiert sind und sich nicht in der Sandbox befinden. Dies ermöglicht es ihnen, auf die gleiche Weise mit anderen Apps zu interagieren wie klassische Desktop-Anwendungen.
 
-## Installation 
+## <a name="installation"></a>Installation 
 
 App-Pakete werden mit der ausführbaren Datei *app_name.exe* unter *C:\Programme\WindowsApps\package_name* installiert. Jeder Paketordner enthält ein Manifest (AppxManifest.xml), das einen speziellen XML-Namespace für konvertierte Apps enthält. In der Manifestdatei ist ein ```<EntryPoint>```-Element enthalten, das auf die vertrauenswürdige App verweist. Wenn die App gestartet wird, wird sie nicht im App-Container, sondern stattdessen wie gewohnt als Benutzer ausgeführt.
 
 Nach der Bereitstellung werden Paketdateien als schreibgeschützt markiert und vom Betriebssystem gesperrt. Windows verhindert, dass Apps gestartet werden, wenn diese Dateien manipuliert werden. 
 
-## Dateisystem
+## <a name="file-system"></a>Dateisystem
 
-Zur Aufnahme des App-Zustands versucht die Brücke, Änderungen zu erfassen, die die App an „AppData“ vornimmt. Alle Schreibvorgänge in den AppData-Ordner des Benutzers (z.B. *C:\Benutzer\Benutzername\AppData*), einschließlich Erstellungs-, Lösch- und Aktualisierungsvorgänge, werden direkt an einen privaten Speicherort pro Benutzer und App kopiert. Dadurch entsteht der Eindruck, dass die konvertierte App die tatsächlichen AppData-Elemente bearbeitet, obwohl eigentlich eine private Kopie geändert wird. Durch eine derartige Umleitung von Schreibvorgängen kann das System alle von der App vorgenommenen Dateiänderungen nachverfolgen. Dadurch kann das System diese Dateien bereinigen, wenn die App deinstalliert wird, und somit die Systemüberlastung verringern und bessere App-Deinstallationsmöglichkeiten für den Benutzer bereitstellen. 
+Zur Aufnahme des App-Zustands versucht die Brücke, Änderungen zu erfassen, die die App an „AppData“ vornimmt. Alle Schreibvorgänge in den AppData-Ordner des Benutzers (z. B. *C:\Benutzer\Benutzername\AppData*), einschließlich Erstellungs-, Lösch- und Aktualisierungsvorgänge, werden direkt an einen privaten Speicherort pro Benutzer und App kopiert. Dadurch entsteht der Eindruck, dass die konvertierte App die tatsächlichen AppData-Elemente bearbeitet, obwohl eigentlich eine private Kopie geändert wird. Durch eine derartige Umleitung von Schreibvorgängen kann das System alle von der App vorgenommenen Dateiänderungen nachverfolgen. Dadurch kann das System diese Dateien bereinigen, wenn die App deinstalliert wird, und somit die Systemüberlastung verringern und bessere App-Deinstallationsmöglichkeiten für den Benutzer bereitstellen. 
 
 Zusätzlich zur Umleitung von „AppData“ führt die Brücke bekannte Windows-Ordner („System32“, „Programme (x86)“ usw.) dynamisch mit den entsprechenden Verzeichnissen im App-Paket zusammen. Jedes konvertierte Paket enthält im Stammverzeichnis einen Ordner mit dem Namen „VFS“. Alle Lesevorgänge für Verzeichnisse oder Dateien im VFS-Verzeichnis werden zur Laufzeit mit den jeweiligen nativen Entsprechungen zusammengeführt. Beispiel: Eine App kann *C:\Programme\WindowsApps\Paketname\VFS\SystemX86\vc10.dll* als Teil des App-Pakets enthalten, die Datei wird aber scheinbar unter *C:\Windows\System32\vc10.dll* installiert.  Dies gewährleistet die Kompatibilität mit Desktopanwendungen, die davon ausgehen, dass sich Dateien an Speicherorten ohne Pakete befinden. 
 
 Schreibvorgänge in Dateien/Ordner im konvertierten App-Paket sind nicht zulässig. Schreibvorgänge in Dateien und Ordner, die nicht Teil des Pakets sind, werden von der Brücke ignoriert und sind nur zulässig, wenn der Benutzer über entsprechende Berechtigungen verfügt.
 
-### Allgemeine Vorgänge
+### <a name="common-operations"></a>Allgemeine Vorgänge
 
 Diese kurze Referenztabelle enthält allgemeine Dateisystemvorgänge und Informationen zur Verarbeitung durch die Brücke. 
 
@@ -41,7 +49,7 @@ Schreiben unter „AppData“ | Kopie bei Schreibvorgang an einem Speicherort pr
 Schreibvorgänge im Paket | Nicht zulässig Das Paket ist schreibgeschützt. | Schreibvorgänge unter *C:\Programme\WindowsApps\Paketname* sind nicht zulässig.
 Schreibvorgänge außerhalb des Pakets | Von der Brücke ignoriert. Zulässig, wenn der Benutzer über entsprechende Berechtigungen verfügt. | Ein Schreibvorgang in *C:\Windows\System32\foo.dll* ist zulässig, wenn das Paket nicht *C:\Programme\WindowsApps\Paketname\VFS\SystemX86\foo.dll* enthält und der Benutzer über entsprechende Berechtigungen verfügt.
 
-### Gepackte VFS-Speicherorte
+### <a name="packaged-vfs-locations"></a>Gepackte VFS-Speicherorte
 
 Der folgenden Tabelle können Sie entnehmen, wo Dateien, die zu Ihrem Paket gehören, für die App im System überlagert sind. Die App geht davon aus, dass sich diese Dateien an den aufgeführten Systemspeicherorten befinden, während sie sich tatsächlich an den umgeleiteten Speicherorten unter *C:\Programme\WindowsApps\Paketname\VFS* befinden. Die FOLDERID-Speicherorte stammen von der [**KNOWNFOLDERID**](https://msdn.microsoft.com/library/windows/desktop/dd378457.aspx)-Konstante.
 
@@ -62,7 +70,7 @@ FOLDERID_System\driverstore | AppVSystem32Driverstore | x86, amd64
 FOLDERID_System\logfiles | AppVSystem32Logfiles | x86, amd64 
 FOLDERID_System\spool | AppVSystem32Spool | x86, amd64 
 
-## Registrierung
+## <a name="registry"></a>Registrierung
 
 Die Brücke behandelt die Registrierung ähnlich wie das Dateisystem. Konvertierte App-Pakete enthalten eine Datei namens „registry.dat“, die als logische Entsprechung für *HKLM\Software* in der tatsächlichen Registrierung dient. Zur Laufzeit führt diese virtuelle Registrierung den Inhalt dieser Struktur in der nativen Systemstruktur zusammen, um beide Strukturen in einer Ansicht darzustellen. Wenn „registry.dat“ beispielsweise einen einzelnen Schlüssel namens „Foo“ enthält, enthält ein Lesevorgang für *HKLM\Software* zur Laufzeit scheinbar ebenfalls „Foo“ (zusätzlich zu allen nativen Systemschlüsseln). 
 
@@ -72,7 +80,7 @@ Alle Schreibvorgänge unter „HKCU“ entsprechen Kopie bei Schreibvorgang an e
 
 Alle Schreibvorgänge werden während der Paketaktualisierung beibehalten und nur gelöscht, wenn die App vollständig entfernt wird. 
 
-### Allgemeine Vorgänge
+### <a name="common-operations"></a>Allgemeine Vorgänge
 
 Diese kurze Referenztabelle enthält allgemeine Registrierungsvorgänge und Informationen zur Verarbeitung durch die Brücke. 
 
@@ -83,12 +91,7 @@ Schreibvorgänge unter „HKCU“ | Kopie bei Schreibvorgang an einem privaten S
 Schreibvorgänge im Paket | Nicht zulässig Das Paket ist schreibgeschützt. | Schreibvorgänge unter *HKLM\Software* sind nicht zulässig, wenn ein entsprechender Schlüssel/Wert in der Paketstruktur vorhanden ist.
 Schreibvorgänge außerhalb des Pakets | Von der Brücke ignoriert. Zulässig, wenn der Benutzer über entsprechende Berechtigungen verfügt. | Schreibvorgänge unter *HKLM\Software* sind zulässig, sofern kein entsprechender Schlüssel/Wert in der Paketstruktur vorhanden ist und der Benutzer über entsprechende Zugriffsberechtigungen verfügt.
 
-## Deinstallation 
+## <a name="uninstallation"></a>Deinstallation 
 
 Wenn ein Paket vom Benutzer deinstalliert wird, werden alle Dateien und Ordner unter *C:\Programme\WindowsApps\Paketname* sowie alle umgeleiteten Schreibvorgänge für „AppData“ oder die Registrierung entfernt, die von der Brücke erfasst wurden. 
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

@@ -2,15 +2,22 @@
 author: laurenhughes
 ms.assetid: 6AA037C0-35ED-4B9C-80A3-5E144D7EE94B
 title: "Installieren von Apps mit dem Tool „WinAppDeployCmd.exe“"
-description: "Die Windows-Anwendungsbereitstellung (WinAppDeployCmd.exe) ist ein Befehlszeilentool, mit dem Sie eine App für die Universelle Windows-Plattform (UWP) App von einem Windows 10-Computer auf jedem Windows 10-Gerät bereitstellen können."
+description: "Die Windows-Anwendungsbereitstellung (WinAppDeployCmd.exe) ist ein Befehlszeilentool, mit dem Sie eine UWP-App von einem Windows 10-Computer auf beliebigen Windows 10 Mobile-Geräten bereitstellen können."
+ms.author: lahugh
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: f467bd83c2f700d94a232c99a06f86f1f1b1a0ac
-ms.openlocfilehash: 37028e1e119f27a8c82bc024e52f939a89243244
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 9148a26b813d99ca04ae2e5a050bbc9b590d5f6e
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="install-apps-with-the-winappdeploycmdexe-tool"></a>Installieren von Apps mit dem Tool „WinAppDeployCmd.exe“
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Die Windows-Anwendungsbereitstellung (WinAppDeployCmd.exe) ist ein Befehlszeilentool, mit dem Sie eine App für die Universelle Windows-Plattform (UWP) App von einem Windows 10-Computer auf jedem Windows 10-Gerät bereitstellen können. Dieses Tool ermöglicht Ihnen die Bereitstellung eines APPX-Pakets, wenn das Windows 10-Gerät über USB verbunden ist oder im gleichen Subnetz verfügbar ist, ohne dass Microsoft Visual Studio oder die Projektmappe für diese App erforderlich sind. Sie können die App auch bereitstellen, ohne sie zuerst zu einem Remote-PC oder zu Xbox One zu verpacken. Dieser Artikel beschreibt, wie UWP-Apps mit diesem Tool installiert werden.
 
@@ -149,9 +156,4 @@ WinAppDeployCmd registerfiles -ip <Xbox One IP> -remotedeploydir <location of ap
 
 ex. WinAppDeployCmd register files -ip 192.168.0.1 -remotedeploydir \\driveA\myAppLocation -username admin -password A1B2C3
 ```
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

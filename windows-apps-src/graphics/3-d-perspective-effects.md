@@ -2,17 +2,24 @@
 author: Jwmsft
 ms.assetid: 90F07341-01F4-4205-8161-92DD2EB49860
 title: "3D-Perspektiveneffekte für XAML-UI"
-description: "Mithilfe der perspektivischen Transformation können Sie 3D-Effekte auf Inhalte in Ihren Windows-Runtime-Apps anwenden. Sie können z. B. wie hier gezeigt die Illusion schaffen, dass sich ein Objekt auf Sie zu oder von Ihnen wegbewegt."
+description: "Mithilfe der perspektivischen Transformation können Sie 3D-Effekte auf Inhalte in Ihren Windows-Runtime-Apps anwenden. Sie können z. B. die Illusion schaffen, dass sich ein Objekt auf Sie zu oder von Ihnen wegbewegt, wie hier gezeigt wird."
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 54bcd19419f31563f910b705fce8128bca33825b
-ms.openlocfilehash: 543dfb60b1fa70e2fceebbdd03da8a301eb9d08f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: b0855392c9e9e3f18d08a16cf39cdfa5c0910701
+ms.lasthandoff: 02/07/2017
 
 ---
-# 3D-Perspektiveneffekte für XAML-UI
+# <a name="3-d-perspective-effects-for-xaml-ui"></a>3D-Perspektiveneffekte für XAML-UI
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Mithilfe der perspektivischen Transformation können Sie 3D-Effekte auf Inhalte in Ihren Windows-Runtime-Apps anwenden. Sie können z.B. wie hier gezeigt die Illusion schaffen, dass sich ein Objekt auf Sie zu oder von Ihnen wegbewegt.
+Mithilfe der perspektivischen Transformation können Sie 3D-Effekte auf Inhalte in Ihren Windows-Runtime-Apps anwenden. Sie können z. B. wie hier gezeigt die Illusion schaffen, dass sich ein Objekt auf Sie zu oder von Ihnen wegbewegt.
 
 ![Bild mit perspektivischer Transformation](images/3dsimple.png)
 
@@ -43,7 +50,7 @@ Wenden Sie sich nun den Eigenschaften von [**PlaneProjection**](https://msdn.mic
 
 [Dieses Beispiel ausführen](http://go.microsoft.com/fwlink/p/?linkid=236112)
 
-## PlaneProjection-Klasse
+## <a name="planeprojection-class"></a>PlaneProjection-Klasse
 
 Sie können 3D-Effekte auf jedes [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911) anwenden. Dazu legen Sie die [**Projection**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.projection)-Eigenschaft für das UIElement mit einer [**PlaneProjection**](https://msdn.microsoft.com/library/windows/apps/BR210192) fest. Die **PlaneProjection** definiert, wie die Transformation im Raum gerendert wird. Im nächsten Beispiel wird ein einfacher Fall veranschaulicht.
 
@@ -81,7 +88,7 @@ Die [**RotationZ**](https://msdn.microsoft.com/library/windows/apps/windows.ui.x
 </Image>
 ```
 
-![RotateZ minus 45Grad](images/3drotatezminus35.png)
+![RotateZ minus 45 Grad](images/3drotatezminus35.png)
 
 Für die Drehungseigenschaften kann ein positiver oder negativer Wert für die Drehung in beiden Richtungen angegeben werden. Die absolute Zahl kann größer als 360 sein, wodurch das Objekt um mehr als eine volle Drehung gedreht wird. [Führen Sie dieses Beispiel aus](http://go.microsoft.com/fwlink/p/?linkid=236112), um mit verschiedenen Werten für die Eigenschaften [**RotationX**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.rotationx), [**RotationY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.rotationy) und [**RotationZ**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.rotationz) zu experimentieren und die entsprechenden Auswirkungen zu veranschaulichen.
 
@@ -141,7 +148,7 @@ Platzieren Sie den Drehmittelpunkt mithilfe von [**CenterOfRotationZ**](https://
 
 [Führen Sie dieses Beispiel mit Schiebereglern aus](http://go.microsoft.com/fwlink/p/?linkid=236112), um mit Drehungen des Objekts um verschiedene Drehmittelpunktpositionen zu experimentieren.
 
-## Positionieren eines Objekts
+## <a name="positioning-an-object"></a>Positionieren eines Objekts
 
 Sie haben nun erfahren, wie Sie ein Objekt im Raum drehen können. Mit den folgenden Eigenschaften können Sie diese gedrehten Objekte relativ zueinander im Raum positionieren:
 
@@ -180,12 +187,7 @@ Im nächsten Beispiel wird [**GlobalOffsetX**](https://msdn.microsoft.com/librar
 
 Sie stellen fest, dass in diesem Beispiel die Richtung des Objekts während seiner Drehung nicht geändert wird. Dies liegt daran, dass das Objekt ungeachtet seiner Drehung entlang der X-Achse des Bildschirms gedreht wird.
 
-## Positionieren eines Objekts
+## <a name="positioning-an-object"></a>Positionieren eines Objekts
 
 Sie können den [**Matrix3DProjection**](https://msdn.microsoft.com/library/windows/apps/BR210128)-Typ und den [**Matrix3D**](https://msdn.microsoft.com/library/windows/apps/BR243266)-Typ für Semi-3D-Szenarien nutzen, die komplexer als die von [**PlaneProjection**](https://msdn.microsoft.com/library/windows/apps/BR210192) unterstützten sind. **Matrix3DProjection** bietet Ihnen eine komplette 3D-Transformationsmatrix, die auf ein beliebiges [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911) angewendet werden kann. Somit können Sie Transformationsmatrizen und Perspektivmatrizen beliebiger Modelle auf Elemente anwenden. Beachten Sie, dass diese APIs nur im Minimalzustand vorliegen. Wenn Sie sie also nutzen möchten, müssen Sie den Code schreiben, mit dem die 3D-Transformationsmatrizen ordnungsgemäß erstellt werden. Daher ist es einfacher, für einfache 3D-Szenarien **PlaneProjection** zu verwenden.
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

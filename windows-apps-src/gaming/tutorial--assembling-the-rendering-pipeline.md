@@ -3,25 +3,32 @@ author: mtoepke
 title: Zusammensetzen des Renderingframeworks
 description: Jetzt ist es Zeit, einen Blick darauf zu werfen, wie diese Struktur und der Zustand im Beispielspiel zum Anzeigen der Grafiken verwendet werden.
 ms.assetid: 1da3670b-2067-576f-da50-5eba2f88b3e6
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Spiele, Rendern"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: c0c935af257fe52e22cadaffb6e008ddbf9629a8
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7b97a70094c953e9614a84979c9f98fc91a82451
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Zusammensetzen des Renderingframeworks
+# <a name="assemble-the-rendering-framework"></a>Zusammensetzen des Renderingframeworks
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Mittlerweile wissen Sie, wie ein Spiel für die universelle Windows-Plattform (UWP) aufgebaut sein muss, damit es mit der Windows-Runtime verwendet werden kann, und wie Sie einen Zustandsautomaten zum Behandeln des Spielablaufs definieren. Jetzt ist es Zeit, einen Blick darauf zu werfen, wie diese Struktur und der Zustand im Beispielspiel zum Anzeigen der Grafiken verwendet werden. Hier beschäftigen wir uns mit der Implementierung eines Renderingframeworks – von der Initialisierung des Grafikgeräts bis zur Darstellung der anzuzeigenden Grafikobjekte.
 
-## Ziel
+## <a name="objective"></a>Ziel
 
 
 -   Einrichten eines einfachen Renderingframeworks zum Anzeigen der Grafikausgabe für ein UWP-DirectX-Spiel
 
-> **Hinweis**   Die folgenden Codedateien werden hier nicht näher erläutert, enthalten aber Klassen und Methoden, die in diesem Thema verwendet werden. Den entsprechenden Code finden Sie [am Ende dieses Themas](#code_sample):
+> **Hinweis**   Die folgenden Codedateien werden hier nicht näher erläutert, enthalten aber Klassen und Methoden, die in diesem Thema verwendet werden. Den entsprechenden Code finden Sie [am Ende dieses Themas](#complete-sample-code-for-this-section):
 -   **Animate.h/.cpp**.
 -   **BasicLoader.h/.cpp**. Enthält Methoden zum synchronen und asynchronen Laden von Gittern, Shadern und Texturen. Sehr nützlich!
 -   **MeshObject.h/.cpp**, **SphereMesh.h/.cpp**, **CylinderMesh.h/.cpp**, **FaceMesh.h/.cpp** und **WorldMesh.h/.cpp**. Enthalten die Definitionen der im Spiel verwendeten Objektgrundtypen – etwa die Munition, die zylinder- und kegelförmigen Hindernisse sowie die Wände des Schießstands. (**GameObject.cpp**enthält die Methode zum Rendern dieser Grundtypen und wird in diesem Thema kurz erläutert.)
@@ -32,25 +39,25 @@ Der Code in diesen Dateien ist kein Code speziell für UWP-DirectX-Spiele. Sie k
 
  
 
-In diesem Abschnitt werden drei wichtige Dateien aus dem Beispielspiel beschrieben. ([Den Code finden Sie am Ende dieses Themas](#code_sample).)
+In diesem Abschnitt werden drei wichtige Dateien aus dem Beispielspiel beschrieben. ([Den Code finden Sie am Ende dieses Themas](#complete-sample-code-for-this-section).)
 
 -   **Camera.h/.cpp**
 -   **GameRenderer.h/.cpp**
 -   **PrimObject.h/.cpp**
 
-Auch hier wird vorausgesetzt, dass Sie mit grundlegenden 3D-Programmierkonzepten wie Gittern, Vertizes und Texturen vertraut sind. Weitere Informationen zur Direct3D11-Programmierung im Allgemeinen finden Sie unter [Programmieranleitung für Direct3D11](https://msdn.microsoft.com/library/windows/desktop/ff476345).
+Auch hier wird vorausgesetzt, dass Sie mit grundlegenden 3D-Programmierkonzepten wie Gittern, Vertizes und Texturen vertraut sind. Weitere Informationen zur Direct3D 11-Programmierung im Allgemeinen finden Sie unter [Programmieranleitung für Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476345).
 Vor diesem Hintergrund wollen wir uns nun damit befassen, wie das Spiel auf den Bildschirm ausgegeben wird.
 
-## Übersicht über die Windows-Runtime und DirectX
+## <a name="an-overview-of-the-windows-runtime-and-directx"></a>Übersicht über die Windows-Runtime und DirectX
 
 
-DirectX ist ein fundamentaler Bestandteil der Windows-Runtime und der Benutzerfreundlichkeit von Windows10. Alle visuellen Elemente von Windows10 basieren auf DirectX, und Sie können direkt auf die gleiche untergeordnete Grafikschnittstelle ([DXGI](https://msdn.microsoft.com/library/windows/desktop/hh404534)) zugreifen, die eine Abstraktionsebene für die Grafikhardware und ihre Treiber bereitstellt. Ihnen stehen sämtliche Direct3D11-APIs zur Verfügung, sodass Sie direkt mit DXGI kommunizieren können. Das Ergebnis sind schnelle Hochleistungsgrafiken, die Ihnen Zugriff auf die neuesten Grafikhardwarefeatures bieten.
+DirectX ist ein fundamentaler Bestandteil der Windows-Runtime und der Benutzerfreundlichkeit von Windows 10. Alle visuellen Elemente von Windows 10 basieren auf DirectX, und Sie können direkt auf die gleiche untergeordnete Grafikschnittstelle ([DXGI](https://msdn.microsoft.com/library/windows/desktop/hh404534)) zugreifen, die eine Abstraktionsebene für die Grafikhardware und ihre Treiber bereitstellt. Ihnen stehen sämtliche Direct3D 11-APIs zur Verfügung, sodass Sie direkt mit DXGI kommunizieren können. Das Ergebnis sind schnelle Hochleistungsgrafiken, die Ihnen Zugriff auf die neuesten Grafikhardwarefeatures bieten.
 
 Durch Implementieren der Schnittstellen [**IFrameworkViewSource**](https://msdn.microsoft.com/library/windows/apps/hh700482) und [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478) können Sie einen Ansichtsanbieter für DirectX erstellen, um einer UWP-App DirectX-Unterstützung hinzuzufügen. Diese stellen ein Factorymuster für den Ansichtsanbietertyp bzw. die Implementierung Ihres DirectX-Ansichtsanbieters bereit. Das durch das [**CoreApplication**](https://msdn.microsoft.com/library/windows/apps/br225016)-Objekt dargestellte UWP-Singleton führt diese Implementierung aus.
 
 In [Definieren des UWP-App-Frameworks für das Spiel](tutorial--building-the-games-metro-style-app-framework.md) haben wir untersucht, wie sich der Renderer in das App-Framework des Beispielspiels einfügt. Jetzt wollen wir uns ansehen, wie der Spielrenderer mit der Ansicht zusammenhängt und wie er die Grafiken erstellt, die die Optik des Spiels ausmachen.
 
-## Definieren des Renderers
+## <a name="defining-the-renderer"></a>Definieren des Renderers
 
 
 Der abstrakte **GameRenderer**-Typ erbt vom **DirectXBase**-Renderertyp, fügt Unterstützung für stereoskopisches 3D hinzu und deklariert Konstantenpuffer sowie Ressourcen für die Shader, die die Grafikgrundtypen erstellen und definieren.
@@ -124,7 +131,7 @@ protected private:
 };
 ```
 
-Da Direct3D11-APIs als COM-APIs definiert sind, müssen Sie [**ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983)-Verweise auf die von diesen APIs definierten Objekte bereitstellen. Diese Objekte werden automatisch freigegeben, wenn ihr letzter Verweis den gültigen Bereich verlässt und die App beendet wird.
+Da Direct3D 11-APIs als COM-APIs definiert sind, müssen Sie [**ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983)-Verweise auf die von diesen APIs definierten Objekte bereitstellen. Diese Objekte werden automatisch freigegeben, wenn ihr letzter Verweis den gültigen Bereich verlässt und die App beendet wird.
 
 Im Beispielspiel werden vier spezifische Konstantenpuffer deklariert:
 
@@ -143,7 +150,7 @@ Der Renderer definiert auch die Shaderressourcenobjekte, die die Texturen und Gr
 
 Im nächsten Schritt erfahren Sie, wie dieses Objekt erstellt wird.
 
-## Initialisieren des Renderers
+## <a name="initializing-the-renderer"></a>Initialisieren des Renderers
 
 
 Das Beispielspiel ruft die **Initialize**-Methode im Rahmen der CoreApplication-Initialisierungssequenz in **App::SetWindow** auf.
@@ -179,7 +186,7 @@ Danach führt der Rendererinitialisierungsprozess die Basisimplementierung der *
 
 Nach der DirectXBase-Initialisierung wird das **GameInfoOverlay**-Objekt initialisiert. Damit ist die Initialisierung abgeschlossen, und wir können uns mit den Methoden zum Erstellen und Laden der Grafikressourcen für das Spiel beschäftigen.
 
-## Erstellen und Laden von DirectX-Grafikressourcen
+## <a name="creating-and-loading-directx-graphics-resources"></a>Erstellen und Laden von DirectX-Grafikressourcen
 
 
 Bei jedem Spiel müssen zunächst folgende Aufgaben erledigt werden: Herstellen einer Verbindung mit der Grafikschnittstelle, Erstellen der benötigten Ressourcen zum Zeichnen der Grafiken und Einrichten eines Renderziels, in das wir die Grafiken zeichnen können. Im Beispielspiel (und in der Microsoft Visual Studio-Vorlage **DirectX 11-App (Universelle Windows-App)**) wird dieser Prozess mit drei Methoden implementiert:
@@ -194,7 +201,7 @@ Im Beispielspiel überschreiben wir nun zwei dieser Methoden (**CreateDeviceInde
 
 Weitere Informationen zu den **DirectXBase**-Basisimplementierungen dieser Methoden finden Sie unter [Einrichten Ihrer UWP-DirectX-App für das Anzeigen einer Ansicht](https://msdn.microsoft.com/library/windows/apps/hh465077).
 
-Die erste dieser Methoden, **CreateDeviceIndependentResources**, ruft die **GameHud::CreateDeviceIndependentResources**-Methode auf, um die [DirectWrite](https://msdn.microsoft.com/library/windows/desktop/dd368038)-Textressourcen in der Schriftart „SegoeUI“ zu erstellen. Diese Schriftart wird in den meisten UWP-Apps verwendet.
+Die erste dieser Methoden, **CreateDeviceIndependentResources**, ruft die **GameHud::CreateDeviceIndependentResources**-Methode auf, um die [DirectWrite](https://msdn.microsoft.com/library/windows/desktop/dd368038)-Textressourcen in der Schriftart „Segoe UI“ zu erstellen. Diese Schriftart wird in den meisten UWP-Apps verwendet.
 
 CreateDeviceIndependentResources
 
@@ -662,7 +669,7 @@ void GameRenderer::FinalizeCreateGameDeviceResources()
 }
 ```
 
-**CreateDeviceResourcesAsync** ist eine Methode, die als gesonderte Reihe asynchroner Aufgaben ausgeführt wird, um die Spielressourcen zu laden. Da sie in einem gesonderten Thread ausgeführt werden soll, kann sie nur auf die Direct3D11-Gerätemethoden (definiert in [**ID3D11Device**](https://msdn.microsoft.com/library/windows/desktop/ff476379)) und nicht auf die Gerätekontextmethoden (definiert in [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)) zugreifen und hat somit die Option, keinerlei Rendering durchzuführen. Die **FinalizeCreateGameDeviceResources**-Methode wird im Hauptthread ausgeführt und kann auf die Direct3D11-Gerätekontextmethoden zugreifen.
+**CreateDeviceResourcesAsync** ist eine Methode, die als gesonderte Reihe asynchroner Aufgaben ausgeführt wird, um die Spielressourcen zu laden. Da sie in einem gesonderten Thread ausgeführt werden soll, kann sie nur auf die Direct3D 11-Gerätemethoden (definiert in [**ID3D11Device**](https://msdn.microsoft.com/library/windows/desktop/ff476379)) und nicht auf die Gerätekontextmethoden (definiert in [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)) zugreifen und hat somit die Option, keinerlei Rendering durchzuführen. Die **FinalizeCreateGameDeviceResources**-Methode wird im Hauptthread ausgeführt und kann auf die Direct3D 11-Gerätekontextmethoden zugreifen.
 
 Die Abfolge der Ereignisse zum Laden von Spielgeräteressourcen sieht wie folgt aus:
 
@@ -689,7 +696,7 @@ Zuletzt legt **FinalizeCreateGameDeviceResources** die boolesche globale Variabl
 
 Das Spiel verfügt jetzt über die Ressourcen zum Anzeigen der Grafiken im aktuellen Fenster und kann diese Ressourcen bei Fensteränderungen neu erstellen. Als Nächstes beschäftigen wir uns mit der Kamera, die zum Definieren der Spieleransicht der Szene in diesem Fenster verwendet wird.
 
-## Implementieren des Kameraobjekts
+## <a name="implementing-the-camera-object"></a>Implementieren des Kameraobjekts
 
 
 Das Spiel enthält den erforderlichen Code, um die Spielwelt in seinem eigenen Koordinatensystem (auch als Spielweltbereich oder Szenenbereich bezeichnet) zu aktualisieren. Alle Objekte, einschließlich der Kamera, werden in diesem Bereich positioniert und ausgerichtet. Im Beispielspiel wird der Kamerabereich durch die Position der Kamera und die Blickvektoren definiert (der Vektor "anschauen", der von der Kamera in die Szene weist, und der Vektor "nach oben schauen" senkrecht zur Szene). Die Projektionsparameter bestimmen, welcher Anteil dieses Bereichs tatsächlich in der endgültigen Szene sichtbar ist. Das Sichtfeld, das Seitenverhältnis und die Clippingebenen definieren die Projektionstransformation. Ein Vertexshader übernimmt die schwere Aufgabe, die Modellkoordinaten mit dem folgenden Algorithmus in die Gerätekoordinaten zu konvertieren (wobei V ein Vektor und M eine Matrix ist):
@@ -752,7 +759,7 @@ protected private:
 };
 ```
 
-Zwei 4x4-Matrizen definieren die Transformationen in die Ansichts- und Projektionskoordinaten: **m\_viewMatrix** und **m\_projectionMatrix**. (Für die stereoskopische Projektion müssen zwei Projektionsmatrizen verwendet werden: jeweils eine pro Auge.) Sie werden mit den beiden folgenden Methoden berechnet:
+Zwei 4 x 4-Matrizen definieren die Transformationen in die Ansichts- und Projektionskoordinaten: **m\_viewMatrix** und **m\_projectionMatrix**. (Für die stereoskopische Projektion müssen zwei Projektionsmatrizen verwendet werden: jeweils eine pro Auge.) Sie werden mit den beiden folgenden Methoden berechnet:
 
 -   **SetViewParams**
 -   **SetProjParams**
@@ -851,7 +858,7 @@ Die resultierenden Ansichts- und Projektionsdaten erhalten wir durch Aufrufen de
 
 Jetzt wollen wir untersuchen, wie das Spiel das Framework zum Zeichnen der Grafiken unter Verwendung der Kamera erstellt. Dazu müssen unter anderem die Grundtypen definiert werden, aus denen die Spielwelt und ihre Elemente bestehen.
 
-## Definieren der Grundtypen
+## <a name="defining-the-primitives"></a>Definieren der Grundtypen
 
 
 Im Code des Beispielspiels definieren und implementieren wir die Grundtypen in zwei Basisklassen und die entsprechenden Spezialisierungen für die einzelnen Grundtypen.
@@ -963,7 +970,7 @@ Es empfiehlt sich, einen Basisobjekttyp zu erstellen, der die mindestens erforde
 
 Sehen wir uns das grundlegende Rendering eines Grundtyps im Beispielspiel an.
 
-## Rendering der Grundtypen
+## <a name="rendering-the-primitives"></a>Rendering der Grundtypen
 
 
 Die Grundtypen im Beispielspiel verwenden, wie hier zu sehen, die für die übergeordnete **GameObject**-Klasse implementierte **Render**-Basismethode:
@@ -1002,7 +1009,7 @@ void GameObject::Render(
 
 Die **GameObject::Render**-Methode aktualisiert den Grundtypkonstantenpuffer mit den spezifischen Daten eines Grundtyps. Im Spiel werden mehrere Konstantenpuffer verwendet; diese müssen aber nur einmal pro Grundtyp aktualisiert werden.
 
-Sie können sich die Konstantenpuffer als Eingabe für die für jeden Grundtyp ausgeführten Shader vorstellen. Einige Daten sind statisch (**m\_constantBufferNeverChanges**), einige Daten (etwa die Position der Kamera) sind innerhalb eines Frames konstant (**m\_constantBufferChangesEveryFrame**), und einige Daten wie Farbe und Texturen gelten speziell für den Grundtyp (**m\_constantBufferChangesEveryPrim**). Der Spielrenderer teilt diese Eingaben in verschiedene Konstantenpuffer auf, um die von CPU und GPU verwendete Speicherbandbreite zu optimieren. Durch diesen Ansatz lässt sich auch die Datenmenge minimieren, die von der GPU nachverfolgt werden muss. Bedenken Sie, dass die GPU über eine große Befehlswarteschlange verfügt und dieser Befehl bei jedem Aufruf von **Draw** zusammen mit den dazugehörigen Daten in die Warteschlange eingereiht wird. Wenn das Spiel den Grundtypkonstantenpuffer aktualisiert und den nächsten **Draw**-Befehl ausgibt, fügt der Grafiktreiber diesen Befehl und die dazugehörigen Daten der Warteschlange hinzu. Zeichnet das Spiel 100Grundtypen, kann die Warteschlange 100Kopien der Konstantenpufferdaten enthalten. Da wir die an die GPU gesendete Datenmenge minimieren möchten, wird im Spiel ein separater Grundtypkonstantenpuffer verwendet, der nur die Aktualisierungen für jeden Grundtyp enthält.
+Sie können sich die Konstantenpuffer als Eingabe für die für jeden Grundtyp ausgeführten Shader vorstellen. Einige Daten sind statisch (**m\_constantBufferNeverChanges**), einige Daten (etwa die Position der Kamera) sind innerhalb eines Frames konstant (**m\_constantBufferChangesEveryFrame**), und einige Daten wie Farbe und Texturen gelten speziell für den Grundtyp (**m\_constantBufferChangesEveryPrim**). Der Spielrenderer teilt diese Eingaben in verschiedene Konstantenpuffer auf, um die von CPU und GPU verwendete Speicherbandbreite zu optimieren. Durch diesen Ansatz lässt sich auch die Datenmenge minimieren, die von der GPU nachverfolgt werden muss. Bedenken Sie, dass die GPU über eine große Befehlswarteschlange verfügt und dieser Befehl bei jedem Aufruf von **Draw** zusammen mit den dazugehörigen Daten in die Warteschlange eingereiht wird. Wenn das Spiel den Grundtypkonstantenpuffer aktualisiert und den nächsten **Draw**-Befehl ausgibt, fügt der Grafiktreiber diesen Befehl und die dazugehörigen Daten der Warteschlange hinzu. Zeichnet das Spiel 100 Grundtypen, kann die Warteschlange 100 Kopien der Konstantenpufferdaten enthalten. Da wir die an die GPU gesendete Datenmenge minimieren möchten, wird im Spiel ein separater Grundtypkonstantenpuffer verwendet, der nur die Aktualisierungen für jeden Grundtyp enthält.
 
 Wird eine Kollision (Treffer) erkannt, überprüft **GameObject::Render** den aktuellen Kontext, der Aufschluss darüber gibt, ob das Ziel von einer Kugel getroffen wurde. Wurde das Ziel getroffen, wendet diese Methode ein Treffermaterial an, das die Farben der Zielringe umkehrt, um für den Spieler anzuzeigen, dass der Treffer erfolgreich war. Andernfalls wird über die gleiche Methode das Standardmaterial angewendet. In beiden Fällen wird das Material durch Aufrufen von **Material::RenderSetup**, festgelegt, wodurch die entsprechenden Konstanten im Konstantenpuffer festgelegt werden. Dann ruft die Methode [**ID3D11DeviceContext::PSSetShaderResources**](https://msdn.microsoft.com/library/windows/desktop/ff476473) auf, um die entsprechende Texturressource für den Pixelshader festzulegen, sowie [**ID3D11DeviceContext::VSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476493) und [**ID3D11DeviceContext::PSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476472), um die Vertexshader- bzw. Pixelshaderobjekte festzulegen.
 
@@ -1048,15 +1055,15 @@ Nun reiht die **MeshObject::Render**-Methode des Beispielspiels den Draw-Befehl 
 
 So sieht der eigentliche Renderingprozess aus!
 
-## Erstellen der Vertexshader und Pixelshader
+## <a name="creating-the-vertex-and-pixel-shaders"></a>Erstellen der Vertexshader und Pixelshader
 
 
-Für das Spielbeispiel sind jetzt die zu zeichnenden Grundtypen und die Konstantenpuffer, die das Rendering der Grundtypen bestimmen, definiert. Diese Konstantenpuffer dienen als Parametersätze für die auf dem Grafikgerät ausgeführten Shader. Es gibt zweiArten von Shaderprogrammen:
+Für das Spielbeispiel sind jetzt die zu zeichnenden Grundtypen und die Konstantenpuffer, die das Rendering der Grundtypen bestimmen, definiert. Diese Konstantenpuffer dienen als Parametersätze für die auf dem Grafikgerät ausgeführten Shader. Es gibt zwei Arten von Shaderprogrammen:
 
--   Vertexshader führen Vorgänge für einzelne Scheitelpunkte aus, z.B. Scheitelpunkttransformationen und Beleuchtung.
--   Pixelshader (oder Fragmentshader) führen Vorgänge für einzelne Pixel aus, z.B. das Anwenden von Texturen und die Beleuchtung pro Pixel. Sie können auch verwendet werden, um Nachbearbeitungseffekte für Bitmaps auszuführen, z.B. für das endgültige Renderziel.
+-   Vertexshader führen Vorgänge für einzelne Scheitelpunkte aus, z. B. Scheitelpunkttransformationen und Beleuchtung.
+-   Pixelshader (oder Fragmentshader) führen Vorgänge für einzelne Pixel aus, z. B. das Anwenden von Texturen und die Beleuchtung pro Pixel. Sie können auch verwendet werden, um Nachbearbeitungseffekte für Bitmaps auszuführen, z. B. für das endgültige Renderziel.
 
-Der Shadercode wird mit High-Level Shader Language (HLSL) definiert, einer Programmiersprache, die in Direct3D11 aus einem mit C-ähnlicher Syntax erstellten Programm kompiliert wird. ((Die vollständige Syntax finden Sie [hier](https://msdn.microsoft.com/library/windows/desktop/bb509635).) Die beiden Hauptshader für das Beispielspiel sind in **PixelShader.hlsl** und **VertexShader.hlsl** definiert. (Für weniger leistungsfähige Geräte stehen mit **PixelShaderFlat.hlsl** und **VertexShaderFlat.hlsl** auch zwei „abgespeckte“ Shader zur Verfügung. Diese beiden Shader verfügen über weniger Effekte und bieten etwa keine Glanzlichteffekte für Texturoberflächen.) Das Format der Konstantenpuffer befindet sich in der HLSLI-Datei **ConstantBuffers.hlsli**.
+Der Shadercode wird mit High-Level Shader Language (HLSL) definiert, einer Programmiersprache, die in Direct3D 11 aus einem mit C-ähnlicher Syntax erstellten Programm kompiliert wird. ((Die vollständige Syntax finden Sie [hier](https://msdn.microsoft.com/library/windows/desktop/bb509635).) Die beiden Hauptshader für das Beispielspiel sind in **PixelShader.hlsl** und **VertexShader.hlsl** definiert. (Für weniger leistungsfähige Geräte stehen mit **PixelShaderFlat.hlsl** und **VertexShaderFlat.hlsl** auch zwei „abgespeckte“ Shader zur Verfügung. Diese beiden Shader verfügen über weniger Effekte und bieten etwa keine Glanzlichteffekte für Texturoberflächen.) Das Format der Konstantenpuffer befindet sich in der HLSLI-Datei **ConstantBuffers.hlsli**.
 
 **ConstantBuffers.hlsli** ist wie folgt definiert:
 
@@ -1181,7 +1188,7 @@ Die **main**-Funktion in **PixelShader.hlsl** enthält die 2D-Projektionen der d
 
 Nun wollen wir all diese Konzepte (Grundtypen, Kamera und Shader) zusammensetzen und untersuchen, wie der vollständige Renderingprozess im Beispielspiel erstellt wird.
 
-## Rendern des Frames für die Ausgabe
+## <a name="rendering-the-frame-for-output"></a>Rendern des Frames für die Ausgabe
 
 
 Diese Methode wurde unter [Definieren des Hauptspielobjekts](tutorial--defining-the-main-game-loop.md) kurz erörtert. Jetzt wollen wir sie uns etwas genauer ansehen.
@@ -1338,7 +1345,7 @@ Das Spiel enthält alle Teile, die zum Erstellen einer Ansicht für die Ausgabe 
 
 Sehen wir uns an, wie all diese Teile zusammengefügt werden.
 
-1.  Wenn Stereo3D aktiviert ist, muss der folgende Renderingprozess zweimal ausgeführt werden – einmal für jedes Auge.
+1.  Wenn Stereo 3D aktiviert ist, muss der folgende Renderingprozess zweimal ausgeführt werden – einmal für jedes Auge.
 2.  Die ganze Szene ist in ein Begrenzungsvolumen (Welt) eingeschlossen. Zeichnen Sie also jedes Pixel (auch solche, die nicht benötigt werden), um die Farbflächen des Renderziels zu löschen. Legen Sie den Tiefenschablonenpuffer auf den Standardwert fest.
 3.  Der Konstantenpuffer für Frameaktualisierungsdaten wird mithilfe der Ansichtsmatrix und den Daten der Kamera aktualisiert.
 4.  Der Direct3D-Kontext wird so eingerichtet, dass er die vier zuvor definierten Konstantenpuffer verwendet.
@@ -1346,14 +1353,14 @@ Sehen wir uns an, wie all diese Teile zusammengefügt werden.
 6.  HUD und Overlay werden unter Verwendung des Direct2D-Kontexts gezeichnet.
 7.  Rufen Sie **DirectXBase::Present** auf.
 
-Und damit hat das Spiel die Anzeige aktualisiert. Alles in allem ist dies der grundlegende Vorgang für die Implementierung des Grafikframeworks eines Spiels. Je größer Ihr Spiel ist, desto mehr Abstraktionen sind natürlich notwendig, z.B. ganze Hierarchien von Objekttypen und Animationsverhalten sowie komplexere Methoden zum Laden und Verwalten von Objekten wie Gittern und Texturen.
+Und damit hat das Spiel die Anzeige aktualisiert. Alles in allem ist dies der grundlegende Vorgang für die Implementierung des Grafikframeworks eines Spiels. Je größer Ihr Spiel ist, desto mehr Abstraktionen sind natürlich notwendig, z. B. ganze Hierarchien von Objekttypen und Animationsverhalten sowie komplexere Methoden zum Laden und Verwalten von Objekten wie Gittern und Texturen.
 
-## Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte
 
 
 Als Nächstes werden wir uns mit wichtigen Teilen des Beispielspiels befassen, die bisher nur am Rande erwähnt wurden: [die Benutzeroberflächenüberlagerung](tutorial--adding-a-user-interface.md), [die Eingabesteuerungen](tutorial--adding-controls.md) und [der Sound](tutorial--adding-sound.md).
 
-## Vollständiger Beispielcode für diesen Abschnitt
+## <a name="complete-sample-code-for-this-section"></a>Vollständiger Beispielcode für diesen Abschnitt
 
 
 Camera.h
@@ -6307,11 +6314,11 @@ void Material::RenderSetup(
 ```
 
 > **Hinweis**  
-Dieser Artikel ist für Windows10-Entwickler gedacht, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows8.x oder Windows Phone8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 
 * [Erstellen eines einfachen UWP-Spiels mit DirectX](tutorial--create-your-first-metro-style-directx-game.md)
@@ -6322,10 +6329,5 @@ Dieser Artikel ist für Windows10-Entwickler gedacht, die Apps für die universe
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

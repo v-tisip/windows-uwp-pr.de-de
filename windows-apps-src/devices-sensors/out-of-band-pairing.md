@@ -3,16 +3,23 @@ author: IvorB
 ms.assetid: E9ADC88F-BD4F-4721-8893-0E19EA94C8BA
 title: Out-of-Band-Kopplung
 description: "Mithilfe der Out-of-Band-Kopplung können Apps ohne Geräteermittlung eine Verbindung mit einem POS-Peripheriegerät (Point-of-Service) herstellen."
+ms.author: ivorb
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 0bf96b70a915d659c754816f4c115f3b3f0a5660
-ms.openlocfilehash: 283f0a0cfc7b3827e70ea79490818bc259d98ad1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: dc0bad7d8625817cfffcc84f89afeed96a07a21f
+ms.lasthandoff: 02/07/2017
 
 ---
-# Out-of-Band-Kopplung
+# <a name="out-of-band-pairing"></a>Out-of-Band-Kopplung
 
 Mithilfe der Out-of-Band-Kopplung können Apps ohne Geräteermittlung eine Verbindung mit einem POS-Peripheriegerät (Point-of-Service) herstellen. Apps müssen den [**Windows.Devices.PointOfService**](https://msdn.microsoft.com/library/windows/apps/windows.devices.pointofservice.aspx)-Namespace verwenden und eine speziell formatierte Zeichenfolge (Out-of-Band-Blob) an die entsprechende **FromIdAsync**-Methode für das gewünschte Peripheriegerät übergeben. Bei Ausführung von **FromIdAsync** wird das Hostgerät mit dem Peripheriegerät gekoppelt und verbunden, bevor der Vorgang an den Aufrufer zurückgegeben wird.
 
-## Out-of-Band-Blob-Format
+## <a name="out-of-band-blob-format"></a>Out-of-Band-Blob-Format
 
 ```json
     "connectionKind":"Network",
@@ -25,7 +32,7 @@ Mithilfe der Out-of-Band-Kopplung können Apps ohne Geräteermittlung eine Verbi
 
 **connectionKind** – die Art der Verbindung. Gültige Werte sind „Network“ und „Bluetooth“.
 
-**physicalAddress** – die MAC-Adresse des Peripheriegeräts. Bei einem Netzwerkdrucker wäre dies z.B. die MAC-Adresse, die vom Testblatt des Druckers im Format AA:BB:CC:DD:EE:FF bereitgestellt wird.
+**physicalAddress** – die MAC-Adresse des Peripheriegeräts. Bei einem Netzwerkdrucker wäre dies z. B. die MAC-Adresse, die vom Testblatt des Druckers im Format AA:BB:CC:DD:EE:FF bereitgestellt wird.
 
 **connectionString** – die Verbindungszeichenfolge des Peripheriegeräts. Bei einem Netzwerkdrucker wäre dies z. B. die auf dem Testblatt im Format 192.168.1.1:9001 ausgegebene IP-Adresse. Dieses Feld wird bei allen Bluetooth-Peripheriegeräten weggelassen.
 
@@ -60,7 +67,7 @@ Mithilfe der Out-of-Band-Kopplung können Apps ohne Geräteermittlung eine Verbi
 | Kassenschublade | CashDrawerProtocolProvider.dll |
 | Scanner | BarcodeScannerProtocolProvider.dll |
 
-## Verwendungsbeispiel: Netzwerkdrucker
+## <a name="usage-example-network-printer"></a>Verwendungsbeispiel: Netzwerkdrucker
 
 ```csharp
 String oobBlobNetworkPrinter =
@@ -74,7 +81,7 @@ String oobBlobNetworkPrinter =
 printer = await PosPrinter.FromIdAsync(oobBlobNetworkPrinter);
 ```
 
-## Verwendungsbeispiel: Bluetooth-Drucker
+## <a name="usage-example-bluetooth-printer"></a>Verwendungsbeispiel: Bluetooth-Drucker
 
 ```csharp
 string oobBlobBTPrinter =
@@ -87,9 +94,4 @@ string oobBlobBTPrinter =
 printer = await PosPrinter.FromIdAsync(oobBlobBTPrinter);
 
 ```
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

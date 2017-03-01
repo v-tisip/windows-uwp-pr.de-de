@@ -1,20 +1,27 @@
 ---
 author: DelfCo
-Description: "Entwickeln Sie Ihre App so, dass die Layouts und Schriftarten mehrerer Sprachen unterstützt werden – also beispielsweise auch die Flussrichtung von rechts nach links (right-to-left, RTL)."
+Description: "Entwickeln Sie Ihre App so, dass die Layouts und Schriftarten mehrerer Sprachen unterstützt werden – d. h. Sprachen mit Leserichtung von rechts nach links."
 title: "Anpassen von Layout und Schriftarten und Unterstützen von „Von rechts nach links“"
 ms.assetid: F2522B07-017D-40F1-B3C8-C4D0DFD03AC3
 label: Adjust layout and fonts, and support RTL
 template: detail.hbs
+ms.author: bobdel
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 05208607b148a48e8a680691de90161feeea7700
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 4b7d34aaf891497af80ed8c94609e6a8fbbd3bec
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="adjust-layout-and-fonts-and-support-rtl"></a>Anpassen von Layout und Schriftarten und Unterstützen von „Von rechts nach links“
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Entwickeln Sie Ihre App so, dass die Layouts und Schriftarten mehrerer Sprachen unterstützt werden – also beispielsweise auch die Flussrichtung von rechts nach links (right-to-left, RTL).
+Entwickeln Sie Ihre App so, dass die Layouts und Schriftarten mehrerer Sprachen unterstützt werden – d. h. Sprachen mit Leserichtung von rechts nach links
 
 ## <a name="layout-guidelines"></a>Layoutrichtlinien
 
@@ -110,9 +117,4 @@ C++:
 
 ## <a name="related-topics"></a>Verwandte Themen
 [FlowDirection](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.flowdirection.aspx)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

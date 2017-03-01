@@ -1,8 +1,18 @@
 ---
 layout: HubPage
 hide_bc: true
-title: "Windows-Dokumentation"
+title: Windows-Dokumentation
 description: "Suchen Sie Entwickler-, Hardware- und IT Pro-Dokumente, die Ihnen beim Erstellen und Verwalten Ihrer Windows-Lösung helfen."
+ms.assetid: 56bbc230-b855-426e-b849-4f65a747b944
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: hub-page
+ms.prod: windows
+translationtype: Human Translation
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: cb15f417c4254776af4548a5b962392431c9a75b
+ms.lasthandoff: 02/08/2017
+
 ---
 <div id="main" class="v2">
   <div class="container">
@@ -70,7 +80,7 @@ description: "Suchen Sie Entwickler-, Hardware- und IT Pro-Dokumente, die Ihnen
             <a data-default="true" href="#developer">Entwickler</a>
             <ul id="developer">
                 <li>
-                    <a href="#developer-all">alle</a>
+                    <a href="#developer-all">Alle</a>
                     <ul id="developer-all" class="cardsF">
                         <li>
                             <div class="cardSize">
@@ -87,16 +97,16 @@ description: "Suchen Sie Entwickler-, Hardware- und IT Pro-Dokumente, die Ihnen
                                                 <a href="https://developer.microsoft.com/windows/apps/getstarted">Erste Schritte</a>
                                             </p>
                                             <p>
-                                                <a href="https://developer.microsoft.com/windows/apps/design">Entwurf</a>
+                                                <a href="https://developer.microsoft.com/windows/apps/design">Design</a>
                                             </p>
                                             <p>
-                                                <a href="https://developer.microsoft.com/windows/develop">Entwicklung</a>
+                                                <a href="https://developer.microsoft.com/windows/develop">Entwickeln</a>
                                             </p>
                                             <p>
-                                                <a href="https://msdn.microsoft.com/windows/uwp/publish/index">Veröffentlichung</a>
+                                                <a href="https://msdn.microsoft.com/windows/uwp/publish/index">Veröffentlichen</a>
                                             </p>
                                             <p>
-                                                <a href="https://msdn.microsoft.com/windows/uwp/monetize/index">Monetarisierung</a>
+                                                <a href="https://msdn.microsoft.com/windows/uwp/monetize/index">Gewinnbringende Nutzung</a>
                                             </p>
                                         </div>
                                     </div>
@@ -118,16 +128,16 @@ description: "Suchen Sie Entwickler-, Hardware- und IT Pro-Dokumente, die Ihnen
                                                 <a href="https://developer.microsoft.com/windows/desktop/getstarted">Erste Schritte</a>
                                             </p>
                                             <p>
-                                                <a href="https://developer.microsoft.com/windows/desktop/design">Entwurf</a>
+                                                <a href="https://developer.microsoft.com/windows/desktop/design">Design</a>
                                             </p>
                                             <p>
-                                                <a href="https://developer.microsoft.com/windows/desktop/develop">Entwicklung</a>
+                                                <a href="https://developer.microsoft.com/windows/desktop/develop">Entwickeln</a>
                                             </p>
                                             <p>
                                                 <a href="https://developer.microsoft.com/windows/desktop/app-compatibility">Kompatibilität</a>
                                             </p>
                                             <p>
-                                                <a href="https://developer.microsoft.com/windows/desktop/test-deploy">Test und Bereitstellung</a>
+                                                <a href="https://developer.microsoft.com/windows/desktop/test-deploy">Testen und Bereitstellen</a>
                                             </p>
                                         </div>
                                     </div>
@@ -149,13 +159,13 @@ description: "Suchen Sie Entwickler-, Hardware- und IT Pro-Dokumente, die Ihnen
                                                 <a href="https://developer.microsoft.com/windows/games/getstarted">Erste Schritte</a>
                                             </p>
                                             <p>
-                                                <a href="https://developer.microsoft.com/windows/games/design">UI-Design</a>
+                                                <a href="https://developer.microsoft.com/windows/games/design">Benutzeroberflächen-Design</a>
                                             </p>
                                             <p>
-                                                <a href="https://developer.microsoft.com/windows/games/develop">Entwicklung</a>
+                                                <a href="https://developer.microsoft.com/windows/games/develop">Entwickeln</a>
                                             </p>
                                             <p>
-                                                <a href="https://developer.microsoft.com/windows/games/publish">Veröffentlichung</a>
+                                                <a href="https://developer.microsoft.com/windows/games/publish">Veröffentlichen</a>
                                             </p>
                                         </div>
                                     </div>
@@ -529,7 +539,4 @@ description: "Suchen Sie Entwickler-, Hardware- und IT Pro-Dokumente, die Ihnen
         </li>
     </ul>
 </div>
-
-
-<!--HONumber=Jan17_HO5-->
 

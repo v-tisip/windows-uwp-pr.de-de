@@ -2,14 +2,21 @@
 author: jnHs
 Description: "Legen Sie benutzerdefinierte Berechtigungen für Kontenbenutzer fest."
 title: "Festlegen benutzerdefinierter Berechtigungen für Kontenbenutzer"
-ms.assetid: 
+ms.assetid: 99f3aa18-98b4-4919-bd7b-d78356b0bf78
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 7dab1bf03bfc0920230d8cc57f48ad4a4f83e4d2
-ms.openlocfilehash: 19874f940798e76a18b3377a295505f0aef201c7
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 23d8c14bfdbfc05a1397fa67cb831d38ec092233
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Festlegen benutzerdefinierter Berechtigungen für Kontenbenutzer
+# <a name="set-custom-permissions-for-account-users"></a>Festlegen benutzerdefinierter Berechtigungen für Kontenbenutzer
 
 Wenn Sie Ihrem Konto Benutzer hinzufügen, können Sie diesen eine [Standardrolle](manage-account-users.md#roles-and-permissions) zuweisen oder die Berechtigungen so anpassen, dass die Benutzer über die entsprechende Zugriffsebene verfügen. Einige dieser Berechtigungen gelten für das gesamte Konto, während andere für alle Produkte erteilt oder auf bestimmte Produkte beschränkt werden können. 
 
@@ -24,15 +31,15 @@ Um eine Berechtigung für den Benutzer zu aktivieren, aktivieren Sie das Kontrol
 - **Kein Zugriff**: Der Benutzer verfügt nicht über die angegebene Berechtigung.
 - **Schreibgeschützt**: Der Benutzer kann Features im Zusammenhang mit dem angegebenen Bereich anzeigen, sie jedoch nicht ändern.
 - **Lese-/Schreibzugriff**: Der Benutzer kann für den Bereich Änderungen vornehmen sowie diesen anzeigen.
-- **Gemischt**: Diese Option kann nicht direkt ausgewählt werden. **Gemischt** ist jedoch verfügbar, wenn Sie für die Berechtigung eine Zugriffskombination zugelassen haben. Wenn Sie z.B. **Schreibgeschützt** bei **Preise und Verfügbarkeit** für **Alle Produkte** festlegen, anschließend jedoch **Lese-/Schreibzugriff** auf **Preise und Verfügbarkeit** für ein bestimmtes Produkt gewähren, wird für **Preise und Verfügbarkeit** unter **Alle Produkte** „Gemischt“ angezeigt. Dasselbe gilt, wenn für einige Produkte als Berechtigung **Kein Zugriff** festgelegt ist, für andere jedoch **Lese-/Schreibzugriff** und/oder **Schreibgeschützt**.
+- **Gemischt**: Diese Option kann nicht direkt ausgewählt werden. **Gemischt** ist jedoch verfügbar, wenn Sie für die Berechtigung eine Zugriffskombination zugelassen haben. Wenn Sie z. B. **Schreibgeschützt** bei **Preise und Verfügbarkeit** für **Alle Produkte** festlegen, anschließend jedoch **Lese-/Schreibzugriff** auf **Preise und Verfügbarkeit** für ein bestimmtes Produkt gewähren, wird für **Preise und Verfügbarkeit** unter **Alle Produkte** „Gemischt“ angezeigt. Dasselbe gilt, wenn für einige Produkte als Berechtigung **Kein Zugriff** festgelegt ist, für andere jedoch **Lese-/Schreibzugriff** und/oder **Schreibgeschützt**.
 
-Für einige Berechtigungen (z.B. im Zusammenhang mit dem Anzeigen von Analysedaten) kann nur Lesezugriff (**Schreibgeschützt**) gewährt werden. Beachten Sie, dass in der aktuellen Implementierung bei einigen Berechtigungen keine Unterscheidung zwischen **Schreibgeschützt** und **Lese-/Schreibzugriff** besteht. Ein besseres Verständnis der jeweiligen Funktionen, die mit **Schreibgeschützt** und **Lese-/Schreibzugriff** gewährt werden, erhalten Sie anhand der Details zu den einzelnen Berechtigungen.
+Für einige Berechtigungen (z. B. im Zusammenhang mit dem Anzeigen von Analysedaten) kann nur Lesezugriff (**Schreibgeschützt**) gewährt werden. Beachten Sie, dass in der aktuellen Implementierung bei einigen Berechtigungen keine Unterscheidung zwischen **Schreibgeschützt** und **Lese-/Schreibzugriff** besteht. Ein besseres Verständnis der jeweiligen Funktionen, die mit **Schreibgeschützt** und **Lese-/Schreibzugriff** gewährt werden, erhalten Sie anhand der Details zu den einzelnen Berechtigungen.
 
 Die Details der einzelnen Berechtigungen werden in den folgenden Tabellen beschrieben.
 
-## Berechtigungen auf Kontoebene
+## <a name="account-level-permissions"></a>Berechtigungen auf Kontoebene
 
-Die Berechtigungen in diesem Abschnittkönnen nicht auf bestimmte Produkte beschränkt werden. Wird dem Benutzer Zugriff auf diese Berechtigungen gewährt, gilt dies für das gesamte Konto.
+Die Berechtigungen in diesem Abschnitt können nicht auf bestimmte Produkte beschränkt werden. Wird dem Benutzer Zugriff auf diese Berechtigungen gewährt, gilt dies für das gesamte Konto.
 
 <table>
     <colgroup>
@@ -61,7 +68,7 @@ Die Berechtigungen in diesem Abschnittkönnen nicht auf bestimmte Produkte besch
 <tr><td align="left">    **Berichte „Anzeigen für die App-Installation“**             </td><td align="left">  Kann den [Bericht „Anzeigen für die App-Installation“](app-install-ads-reports.md) für alle Produkte des Kontos anzeigen.           </td><td align="left">  Nicht verfügbar   </td></tr>
 <tr><td align="left">    **Community-Anzeigen**                       </td><td align="left">  Kann die Nutzung kostenloser [Community-Anzeigen](about-community-ads.md) für alle Produkte des Kontos anzeigen.          </td><td align="left">  Kann die Nutzung kostenloser [Community-Anzeigen](about-community-ads.md) für alle Produkte des Kontos erstellen, verwalten und anzeigen.               </td></tr>
 <tr><td align="left">    **Kontaktinformationen**                        </td><td align="left">  Kann [Kontaktinformationen](managing-your-profile.md) im Abschnitt mit den Kontoeinstellungen anzeigen.        </td><td align="left">  Kann [Kontaktinformationen](managing-your-profile.md) im Abschnitt mit den Kontoeinstellungen anzeigen und bearbeiten.            </td></tr>
-<tr><td align="left">    **COPPA-Compliance**                    </td><td align="left">  Kann für alle Produkte des Kontos die Einstellungen für die [COPPA-Compliance](monetize-with-ads.md#coppa-compliance) anzeigen (die angeben, ob sich Produkte an Kinder unter 13Jahren richten).                                            </td><td align="left">  Kann für alle Produkte des Kontos die Einstellungen für die [COPPA-Compliance](monetize-with-ads.md#coppa-compliance) anzeigen und bearbeiten (die angeben, ob sich Produkte an Kinder unter 13Jahren richten).         </td></tr>
+<tr><td align="left">    **COPPA-Compliance**                    </td><td align="left">  Kann für alle Produkte des Kontos die Einstellungen für die [COPPA-Compliance](monetize-with-ads.md#coppa-compliance) anzeigen (die angeben, ob sich Produkte an Kinder unter 13 Jahren richten).                                            </td><td align="left">  Kann für alle Produkte des Kontos die Einstellungen für die [COPPA-Compliance](monetize-with-ads.md#coppa-compliance) anzeigen und bearbeiten (die angeben, ob sich Produkte an Kinder unter 13 Jahren richten).         </td></tr>
 <tr><td align="left">    **Kundengruppen**                     </td><td align="left">  Kann [Kundengruppen](create-customer-groups.md) (Segmente und Flight-Gruppen) im Abschnitt **Kunden** anzeigen.      </td><td align="left">  Kann [Kundengruppen](create-customer-groups.md) (Segmente und Flight-Gruppen) im Abschnitt **Kunden** erstellen, bearbeiten und anzeigen.       </td></tr>
 <tr><td align="left">    **Neue Apps**                            </td><td align="left">  Kann die Seite zum Erstellen neuer Apps anzeigen, jedoch keine neuen Apps im Konto erstellen.    </td><td align="left">  Kann im Konto [neue Apps erstellen](create-your-app-by-reserving-a-name.md), indem neue App-Namen reserviert werden. Zudem können Übermittlungen erstellt und Apps an den Store übermittelt werden.     </td></tr>
 <tr><td align="left">    **Neue Bündel**&nbsp;*                       </td><td align="left">  Kann die Seite zum Erstellen neuer Bündel anzeigen, jedoch keine neuen Bündel im Konto erstellen.     </td><td align="left">  Kann neue Produktbündel erstellen.          </td></tr>
@@ -69,7 +76,7 @@ Die Berechtigungen in diesem Abschnittkönnen nicht auf bestimmte Produkte besch
 <tr><td align="left">    **Auszahlungskonto**                      </td><td align="left">  Kann [Auszahlungskontodaten](setting-up-your-payout-account-and-tax-forms.md#payout-account) unter **Kontoeinstellungen** anzeigen.     </td><td align="left">  Kann [Auszahlungskontodaten](setting-up-your-payout-account-and-tax-forms.md#payout-account) unter **Kontoeinstellungen** bearbeiten und anzeigen.       </td></tr>
 <tr><td align="left">    **Auszahlungsübersicht**                      </td><td align="left">  Kann die [Auszahlungsübersicht](payout-summary.md) anzeigen, um auf Auszahlungsberichtsdaten zuzugreifen und diese herunterzuladen.       </td><td align="left">  Kann die [Auszahlungsübersicht](payout-summary.md) anzeigen, um auf Auszahlungsberichtsdaten zuzugreifen und diese herunterzuladen.   </td></tr>
 <tr><td align="left">    **Vertrauende Seiten**&nbsp;*                   </td><td align="left">  Kann vertrauende Seiten anzeigen, um XTokens abzurufen.    </td><td align="left">  Kann vertrauende Seiten verwalten und anzeigen, um XTokens abzurufen.     </td></tr>
-<tr><td align="left">    **Sandboxes**&nbsp;*                         </td><td align="left">  Kann auf die Seite **Sandboxes** zugreifen und für das Konto die Sandboxes sowie alle gültigen Konfigurationen anzeigen. Kann nicht die Produkte und Übermittlungen für die jeweilige Sandbox anzeigen, sofern keine entsprechenden Berechtigungen auf Produktebene erteilt wurden. </td><td align="left">  Kann auf die Seite **Sandboxes** zugreifen und die Sandboxes im Konto anzeigen und verwalten, z.B. um Sandboxes zu erstellen und zu löschen oder deren Konfiguration zu verwalten. Kann nicht die Produkte und Übermittlungen für die jeweilige Sandbox anzeigen, sofern keine entsprechenden Berechtigungen auf Produktebene erteilt wurden.    </td></tr>
+<tr><td align="left">    **Sandboxes**&nbsp;*                         </td><td align="left">  Kann auf die Seite **Sandboxes** zugreifen und für das Konto die Sandboxes sowie alle gültigen Konfigurationen anzeigen. Kann nicht die Produkte und Übermittlungen für die jeweilige Sandbox anzeigen, sofern keine entsprechenden Berechtigungen auf Produktebene erteilt wurden. </td><td align="left">  Kann auf die Seite **Sandboxes** zugreifen und die Sandboxes im Konto anzeigen und verwalten, z. B. um Sandboxes zu erstellen und zu löschen oder deren Konfiguration zu verwalten. Kann nicht die Produkte und Übermittlungen für die jeweilige Sandbox anzeigen, sofern keine entsprechenden Berechtigungen auf Produktebene erteilt wurden.    </td></tr>
 <tr><td align="left">    **Steuerprofil**                         </td><td align="left">  Kann [Steuerprofildaten und -formulare](setting-up-your-payout-account-and-tax-forms.md#tax-forms) in den **Kontoeinstellungen** anzeigen.     </td><td align="left">  Kann Steuerformulare ausfüllen und [Steuerprofildaten](setting-up-your-payout-account-and-tax-forms.md#tax-forms) in den **Kontoeinstellungen** aktualisieren.     </td></tr>
 <tr><td align="left">    **Testkonten**&nbsp;*                     </td><td align="left">  Kann Konten zum Testen der Xbox Live-Konfiguration anzeigen.      </td><td align="left">  Kann Konten zum Testen der Xbox Live-Konfiguration erstellen, verwalten und anzeigen.      </td></tr>
 <tr><td align="left">    **Xbox-Geräte**                        </td><td align="left">  Kann im Abschnitt **Kontoeinstellungen** die für das Konto aktivierten Xbox-Entwicklungskonsolen anzeigen.       </td><td align="left">  Kann die für das Konto aktivierten Xbox-Entwicklungskonsolen im Abschnitt **Kontoeinstellungen** hinzufügen, entfernen und anzeigen.     </td></tr>
@@ -78,9 +85,9 @@ Die Berechtigungen in diesem Abschnittkönnen nicht auf bestimmte Produkte besch
 
 \ * Mit einem Sternchen (*) gekennzeichnete Berechtigungen gewähren Zugriff auf Features, die nicht für alle Konten verfügbar sind. Wenn Ihr Konto nicht für diese Features aktiviert wurde, ist Ihre Auswahl für diese Berechtigungen nicht wirksam.   
 
-## Berechtigungen auf Produktebene
+## <a name="product-level-permissions"></a>Berechtigungen auf Produktebene
 
-Die Berechtigungen in diesem Abschnittkönnen für alle Produkte im Konto erteilt werden. Zudem können sie so angepasst werden, dass sie nur für ein oder mehrere bestimmte Produkte erteilt werden. Diese Berechtigungen sind in vier Kategorien unterteilt: **Analysen**, **Monetarisierung**, **Veröffentlichung** und **Xbox Live**. Sie können die einzelnen Kategorien erweitern, um die jeweiligen Berechtigungen anzuzeigen. 
+Die Berechtigungen in diesem Abschnitt können für alle Produkte im Konto erteilt werden. Zudem können sie so angepasst werden, dass sie nur für ein oder mehrere bestimmte Produkte erteilt werden. Diese Berechtigungen sind in vier Kategorien unterteilt: **Analysen**, **Monetarisierung**, **Veröffentlichung** und **Xbox Live**. Sie können die einzelnen Kategorien erweitern, um die jeweiligen Berechtigungen anzuzeigen. 
 
 Um eine Berechtigung für alle Produkte des Kontos zu erteilen, treffen Sie in der Zeile **Alle Produkte** Ihre Auswahl für diese Berechtigung (indem Sie für das Feld **Schreibgeschützt**, **Lese-/Schreibzugriff** oder **Kein Zugriff** aktivieren). 
  
@@ -90,14 +97,14 @@ Unterhalb der Zeile **Alle Produkte** sind die einzelnen Produkte des Kontos in 
 
 Jedes Add-On wird in einer separaten Zeile unterhalb des übergeordneten Produkts aufgeführt. Zudem gibt es die Zeile **Alle Add-Ons**. Die unter **Alle Add-Ons** getroffene Auswahl gilt für alle aktuellen Add-Ons des Produkts sowie für alle zukünftig für das Produkte erstellten Add-Ons.
 
-Beachten Sie, dass einige Berechtigungen nicht für Add-Ons festgelegt werden können. Dies liegt entweder daran, dass sie nicht für Add-Ons gelten (z.B. die Berechtigung **Kundenfeedback**), oder dass die auf der Ebene des übergeordneten Produkts erteilte Berechtigung für alle Add-Ons des Produkts gilt (z.B. **Werbecodes**). Beachten Sie jedoch, dass alle für Add-Ons verfügbaren Berechtigungen separat festgelegt werden müssen. Add-Ons erben nicht die für das übergeordnete Produkt getroffene Auswahl. Wenn Sie z.B. einem Benutzer gestatten möchten, Preis- und Verfügbarkeitsoptionen für ein Add-On vorzunehmen, müssen Sie die Berechtigung **Preise und Verfügbarkeit** für das Add-On (oder für **Alle Add-Ons**) unabhängig davon aktivieren, ob Sie die Berechtigung **Preise und Verfügbarkeit** für das übergeordnete Produkt erteilt haben. 
+Beachten Sie, dass einige Berechtigungen nicht für Add-Ons festgelegt werden können. Dies liegt entweder daran, dass sie nicht für Add-Ons gelten (z. B. die Berechtigung **Kundenfeedback**), oder dass die auf der Ebene des übergeordneten Produkts erteilte Berechtigung für alle Add-Ons des Produkts gilt (z. B. **Werbecodes**). Beachten Sie jedoch, dass alle für Add-Ons verfügbaren Berechtigungen separat festgelegt werden müssen. Add-Ons erben nicht die für das übergeordnete Produkt getroffene Auswahl. Wenn Sie z. B. einem Benutzer gestatten möchten, Preis- und Verfügbarkeitsoptionen für ein Add-On vorzunehmen, müssen Sie die Berechtigung **Preise und Verfügbarkeit** für das Add-On (oder für **Alle Add-Ons**) unabhängig davon aktivieren, ob Sie die Berechtigung **Preise und Verfügbarkeit** für das übergeordnete Produkt erteilt haben. 
 
-### Analysen
+### <a name="analytics"></a>Analysen
 
 <table>
     <thead>
     <tr class="header">
-    <th align="left">Name der Berechtigung</th>
+    <th align="left">Name der&nbsp;Berechtigung</th>
     <th align="left">Schreibgeschützt</th>
     <th align="left">Lese-/Schreibzugriff</th>
     <th align="left">Schreibgeschützt&nbsp;(Add-On) </th>
@@ -114,12 +121,12 @@ Beachten Sie, dass einige Berechtigungen nicht für Add-Ons festgelegt werden k�
     </tbody>
     </table>
 
-### Monetisierung
+### <a name="monetization"></a>Monetisierung
 
 <table>
     <thead>
     <tr class="header">
-    <th align="left">Name der Berechtigung</th>
+    <th align="left">Name der&nbsp;Berechtigung</th>
     <th align="left">Schreibgeschützt</th>
     <th align="left">Lese-/Schreibzugriff</th>
     <th align="left">Schreibgeschützt&nbsp;(Add-On) </th>
@@ -133,12 +140,12 @@ Beachten Sie, dass einige Berechtigungen nicht für Add-Ons festgelegt werden k�
     </tbody>
     </table>
 
-### Veröffentlichung 
+### <a name="publishing"></a>Veröffentlichung 
 
 <table>
     <thead>
     <tr class="header">
-    <th align="left">Name der Berechtigung</th>
+    <th align="left">Name der&nbsp;Berechtigung</th>
     <th align="left">Schreibgeschützt</th>
     <th align="left">Lese-/Schreibzugriff</th>
     <th align="left">Schreibgeschützt&nbsp;(Add-On) </th>
@@ -158,12 +165,12 @@ Beachten Sie, dass einige Berechtigungen nicht für Add-Ons festgelegt werden k�
     </tbody>
     </table>
 
-### Xbox Live \*
+### <a name="xbox-live-"></a>Xbox Live \*
 
 <table>
     <thead>
     <tr class="header">
-    <th align="left">Name der Berechtigung</th>
+    <th align="left">Name der&nbsp;Berechtigung</th>
     <th align="left">Schreibgeschützt</th>
     <th align="left">Lese-/Schreibzugriff</th>
     <th align="left">Schreibgeschützt&nbsp;(Add-On) </th>
@@ -177,9 +184,4 @@ Beachten Sie, dass einige Berechtigungen nicht für Add-Ons festgelegt werden k�
 </table>
 
 \ * Mit einem Sternchen (*) gekennzeichnete Berechtigungen gewähren Zugriff auf Features, die nicht für alle Konten verfügbar sind. Wenn Ihr Konto nicht für diese Features aktiviert wurde, ist Ihre Auswahl für diese Berechtigungen nicht wirksam.  
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

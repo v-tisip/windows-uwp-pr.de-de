@@ -3,19 +3,26 @@ author: mtoepke
 title: "Hinzufügen von Audio zum Marble Maze-Beispiel"
 description: "In diesem Dokument werden die wichtigsten Methoden beschrieben, die Sie berücksichtigen sollten, wenn Sie mit Audio arbeiten. Außerdem erfahren Sie, wie diese Methoden in Marble Maze angewendet werden."
 ms.assetid: 77c23d0a-af6d-17b5-d69e-51d9885b0d44
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Audio, Spiele, Beispiel"
 translationtype: Human Translation
-ms.sourcegitcommit: c663692e31a62fdf40df9d706070d0d2ce0e1cdd
-ms.openlocfilehash: 9c35ca4d475783e52ba68d611c7bea49a927a4e5
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 3530880da3bc74b146c6f6fbb9bb9220caaca0d0
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Hinzufügen von Audio zum Marble Maze-Beispiel
+# <a name="adding-audio-to-the-marble-maze-sample"></a>Hinzufügen von Audio zum Marble Maze-Beispiel
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-In diesem Dokument werden die wichtigsten Methoden beschrieben, die Sie berücksichtigen sollten, wenn Sie mit Audio arbeiten. Außerdem erfahren Sie, wie diese Methoden in Marble Maze angewendet werden. Marble Maze verwendet MicrosoftMedia Foundation, um Audioressourcen aus einer Datei zu laden, und XAudio2, um Audio zu mischen und wiederzugeben und Effekte auf Audio anzuwenden.
+In diesem Dokument werden die wichtigsten Methoden beschrieben, die Sie berücksichtigen sollten, wenn Sie mit Audio arbeiten. Außerdem erfahren Sie, wie diese Methoden in Marble Maze angewendet werden. Marble Maze verwendet Microsoft Media Foundation, um Audioressourcen aus einer Datei zu laden, und XAudio2, um Audio zu mischen und wiederzugeben und Effekte auf Audio anzuwenden.
 
 Marble Maze gibt Musik im Hintergrund wieder und verwendet außerdem Spielsounds, die auf Spielereignisse hinweisen, beispielsweise wenn die Murmel an eine Wand prallt. Wichtig ist bei der Implementierung, dass Marble Maze einen Hall- oder Echoeffekt verwendet, um den Klang einer aufprallenden Murmel zu simulieren. Die Implementierung des Halleffekts bewirkt, dass Sie Echos in kleineren Räumen schneller und lauter hören. In größeren Räumen dagegen sind die Echos leiser und nicht so schnell zu hören.
 
@@ -31,7 +38,7 @@ Hier sind einige der wichtigsten in diesem Dokument erörterten Punkte für das 
 -   Behandeln Sie Geräteänderungen, einschließlich Kopfhörern, in dem Sie alle Audioressourcen und -schnittstellen freigeben und erneut erstellen.
 -   Komprimieren Sie gegebenenfalls Audiodateien, wenn Sie den Speicherplatz und die Streamingkosten minimieren müssen. Anderenfalls können Sie die Audiodateien unkomprimiert lassen, damit sie schneller geladen werden.
 
-## Einführung in XAudio2 und MicrosoftMedia Foundation
+## <a name="introducing-xaudio2-and-microsoft-media-foundation"></a>Einführung in XAudio2 und Microsoft Media Foundation
 
 
 XAudio2 ist eine Low-Level-Audiobibliothek für Windows, die speziell Audio in Spielen unterstützt. Sie enthält eine digitale Signalverarbeitung (Digital Signal Processing, DSP) und ein Audiodiagrammmodul für Spiele. Als Erweiterung der Vorgänger DirectSound und XAudio unterstützt XAudio2 Computertrends wie zum Beispiel SIMD-Gleitkommaarchitekturen und HD-Audio. Außerdem werden die komplexeren Soundverarbeitungsanforderungen aktueller Spiele unterstützt.
@@ -44,7 +51,7 @@ Im [Dokument zu den wichtigsten Konzepten von XAudio2](https://msdn.microsoft.co
 -   Eine Submixstimme verarbeitet Audiodaten. Bei dieser Verarbeitung kann zum Beispiel der Audiostream geändert werden oder mehrere Streams werden zu einem Stream kombiniert. Marble Maze verwendet Submixe, um den Halleffekt zu erstellen.
 -   Eine Masterstimme kombiniert Daten aus Quell- und Submixstimmen und sendet Daten an die Audiohardware.
 -   Ein Audiodiagramm enthält eine Quellstimme für jeden aktiven Sound, null oder mehrere Submixstimmen und nur eine Masterstimme .
--   Der Clientcode wird über einen Rückruf informiert, dass in einer Stimme oder in einem Modulobjekt ein Ereignis aufgetreten ist. Mithilfe von Rückrufen können Sie den Arbeitsspeicher wiederverwenden, wenn XAudio2 mit einem Puffer fertig ist, reagieren, wenn sich das Audiogerät ändert (z.B. wenn Sie Kopfhörer anschließen oder trennen) usw. Weiter unten in diesem Dokument erfahren Sie im Abschnitt [Behandeln von Kopfhörern und Geräteänderungen](#phones), wie Marble Maze diesen Mechanismus für die Behandlung von Geräteänderungen verwendet.
+-   Der Clientcode wird über einen Rückruf informiert, dass in einer Stimme oder in einem Modulobjekt ein Ereignis aufgetreten ist. Mithilfe von Rückrufen können Sie den Arbeitsspeicher wiederverwenden, wenn XAudio2 mit einem Puffer fertig ist, reagieren, wenn sich das Audiogerät ändert (z. B. wenn Sie Kopfhörer anschließen oder trennen) usw. Weiter unten in diesem Dokument erfahren Sie im Abschnitt [Behandeln von Kopfhörern und Geräteänderungen](#handling-headphones-and-device-changes), wie Marble Maze diesen Mechanismus für die Behandlung von Geräteänderungen verwendet.
 
 Marble Maze verwendet zwei Audiomodule (mit anderen Worten: zwei [**IXAudio2**](https://msdn.microsoft.com/library/windows/desktop/ee415908)-Objekte) zum Verarbeiten von Audio. Ein Modul verarbeitet die Hintergrundmusik und das andere verarbeitet Spielsounds.
 
@@ -52,16 +59,16 @@ Außerdem muss Marble Maze für jedes Modul eine Masterstimme erstellen. Denken 
 
 Media Foundation ist eine Multimediabibliothek, die viele Audio- und Videoformate unterstützt. XAudio2 und Media Foundation ergänzen sich gegenseitig. Marble Maze verwendet Media Foundation zum Laden von Audioressourcen aus einer Datei und XAudio2 zum Wiedergeben von Audio. Sie müssen Media Foundation nicht verwenden, um Audioressourcen zu laden. Wenn Sie bereits einen Mechanismus zum Laden von Audioressourcen haben, der in einer UWP-App funktioniert, verwenden Sie diesen Mechanismus.
 
-Weitere Informationen zu XAudio2 finden Sie im [Programmierhandbuch](https://msdn.microsoft.com/library/windows/desktop/ee415737). Weitere Informationen zu Media Foundation finden Sie unter [MicrosoftMedia Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197).
+Weitere Informationen zu XAudio2 finden Sie im [Programmierhandbuch](https://msdn.microsoft.com/library/windows/desktop/ee415737). Weitere Informationen zu Media Foundation finden Sie unter [Microsoft Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197).
 
-## Initialisieren von Audioressourcen
+## <a name="initializing-audio-resources"></a>Initialisieren von Audioressourcen
 
 
 Marble Maze verwendet eine WMA-Datei (Windows Media Audio) für die Hintergrundmusik und WAV-Dateien für Spielsounds. Diese Formate werden von Media Foundation unterstützt. Obwohl das WAV-Dateiformat nativ von XAudio2 unterstützt wird, muss das Dateiformat von einem Spiel manuell analysiert werden, um die entsprechenden XAudio2-Datenstrukturen auszufüllen. Marble Maze verwendet Media Foundation, um die Arbeit mit WAV-Dateien zu erleichtern. Die vollständige Liste der von Media Foundation unterstützten Medienformate finden Sie unter [Unterstützte Medienformate in Media Foundation](https://msdn.microsoft.com/library/windows/desktop/dd757927). Marble Maze verwendet keine getrennten Entwurfszeit- und Laufzeit-Audioformate und keine Unterstützung für XAudio2-ADPCM-Komprimierung. Weitere Informationen zur ADPCM-Komprimierung in XAudio2 finden Sie in der Übersicht über [ADPCM](https://msdn.microsoft.com/library/windows/desktop/ee415711).
 
 Die **Audio::CreateResources**-Methode, die von **MarbleMaze::CreateDeviceIndependentResources** aufgerufen wird, lädt die Audiostreams aus der Datei, initialisiert die XAudio2-Modulobjekte und erstellt die Quell-, Submix- und Masterstimmen.
 
-###  Erstellen der XAudio2-Module
+###  <a name="creating-the-xaudio2-engines"></a>Erstellen der XAudio2-Module
 
 Bedenken Sie, dass Marble Maze für jedes verwendete Audiomodul ein [**IXAudio2**](https://msdn.microsoft.com/library/windows/desktop/ee415908)-Objekt erstellt. Rufen Sie die [**XAudio2Create**](https://msdn.microsoft.com/library/windows/desktop/ee419212)-Funktion auf, um ein Audiomodul zu erstellen. Das folgende Beispiel zeigt, wie Marble Maze das Audiomodul für die Verarbeitung der Hintergrundmusik erstellt.
 
@@ -75,7 +82,7 @@ Einen ähnlichen Schritt führt Marble Maze aus, um das Audiomodul zu erstellen,
 
 Zwischen der Arbeit mit der [**IXAudio2**](https://msdn.microsoft.com/library/windows/desktop/ee415908)-Schnittstelle in einer UWP-App und der Arbeit mit einer Desktop-App gibt es zwei Unterschiede. Erstens ist es nicht erforderlich, **CoInitializeEx** vor dem Aufrufen von [**XAudio2Create**](https://msdn.microsoft.com/library/windows/desktop/ee419212) aufzurufen. Außerdem unterstützt **IXAudio2** die Geräteaufzählung nicht mehr. Weitere Informationen zum Aufzählen von Audiogeräten finden Sie unter [Enumerieren von Geräten](https://msdn.microsoft.com/library/windows/apps/hh464977).
 
-###  Erstellen der Masterstimmen
+###  <a name="creating-the-mastering-voices"></a>Erstellen der Masterstimmen
 
 Das folgende Beispiel zeigt, wie die **Audio::CreateResources**-Methode die Masterstimme für die Hintergrundmusik erstellt. Beim Aufruf von [**IXAudio2::CreateMasteringVoice**](https://msdn.microsoft.com/library/windows/desktop/hh405048) werden zwei Eingabekanäle angegeben. Damit wird die Logik für den Halleffekt vereinfacht. Mit der **XAUDIO2\_DEFAULT\_SAMPLERATE**-Spezifikation wird das Audiomodul angewiesen, die Abtastrate zu verwenden, die in der Systemsteuerungsoption für Sound angegeben ist. In diesem Beispiel ist **M\_musicMasteringVoice** ein [**IXAudio2MasteringVoice**](https://msdn.microsoft.com/library/windows/desktop/ee415912)-Objekt.
 
@@ -103,9 +110,9 @@ DX::ThrowIfFailed(
 
 Die **Audio::CreateResources**-Methode führt einen ähnlichen Schritt aus, um die Masterstimme für die Spielsounds zu erstellen. Allerdings wird dabei der Standardwert **AudioCategory\_GameEffects** für den *StreamCategory*-Parameter angegeben. Marble Maze gibt **AudioCategory\_GameMedia** für Hintergrundmusik an, damit Benutzer bei der Verwendung des Spiels Musik aus einer anderen Anwendung hören können. Bei der Wiedergabe aus einer Musik-App schaltet Windows alle mit der Option **AudioCategory\_GameMedia** erstellten Stimmen stumm. Der Benutzer hört dennoch die Sounds im Spiel, da diese mit der Option **AudioCategory\_GameEffects** erstellt werden. Weitere Informationen zu Audiokategorien finden Sie unter „[**AUDIO\_STREAM\_CATEGORY**](https://msdn.microsoft.com/library/windows/desktop/hh404178)-Enumeration“.
 
-###  Erstellen des Halleffekts
+###  <a name="creating-the-reverb-effect"></a>Erstellen des Halleffekts
 
-Sie können für jede Stimme mit XAudio2 Effektsequenzen erstellen, die Audio verarbeiten. Eine solche Sequenz wird als Effektkette bezeichnet. Verwenden Sie Effektketten, wenn Sie mindestens einen Effekt auf eine Stimme anwenden möchten. Effektketten können destruktiv sein, d.h., jeder Effekt in der Kette kann den Audiopuffer überschreiben. Diese Eigenschaft ist wichtig, da XAudio2 nicht garantiert, dass Ausgabepuffer lautlos initialisiert werden. Effektobjekte werden in XAudio2 durch plattformübergreifende Audioverarbeitungsobjekte (Audio Processing Object, XAPO) dargestellt. Weitere Informationen zu XAPO finden Sie in der [XAPO-Übersicht](https://msdn.microsoft.com/library/windows/desktop/ee415735).
+Sie können für jede Stimme mit XAudio2 Effektsequenzen erstellen, die Audio verarbeiten. Eine solche Sequenz wird als Effektkette bezeichnet. Verwenden Sie Effektketten, wenn Sie mindestens einen Effekt auf eine Stimme anwenden möchten. Effektketten können destruktiv sein, d. h., jeder Effekt in der Kette kann den Audiopuffer überschreiben. Diese Eigenschaft ist wichtig, da XAudio2 nicht garantiert, dass Ausgabepuffer lautlos initialisiert werden. Effektobjekte werden in XAudio2 durch plattformübergreifende Audioverarbeitungsobjekte (Audio Processing Object, XAPO) dargestellt. Weitere Informationen zu XAPO finden Sie in der [XAPO-Übersicht](https://msdn.microsoft.com/library/windows/desktop/ee415735).
 
 Führen Sie beim Erstellen einer Effektkette die folgenden Schritte aus:
 
@@ -230,7 +237,7 @@ CreateReverb(
 
 Eine Liste der möglichen Quellen für Effekte, die Sie mit XAudio2 verwenden können, finden Sie unter [XAudio2-Audioeffekte](https://msdn.microsoft.com/library/windows/desktop/ee415756).
 
-### Laden von Audiodaten aus einer Datei
+### <a name="loading-audio-data-from-file"></a>Laden von Audiodaten aus einer Datei
 
 Marble Maze definiert die **MediaStreamer**-Klasse, die Media Foundation zum Laden von Audioressourcen aus einer Datei verwendet. Marble Maze verwendet zum Laden jeder Audiodatei ein **MediaStreamer**-Objekt.
 
@@ -322,7 +329,7 @@ m_maxStreamLengthInBytes =
 m_maxStreamLengthInBytes = (m_maxStreamLengthInBytes + 3) / 4 * 4;
 ```
 
-### Erstellen der Quellstimmen
+### <a name="creating-the-source-voices"></a>Erstellen der Quellstimmen
 
 Marble Maze erstellt XAudio2-Quellstimmen für die Wiedergabe der einzelnen Spielsounds und der Musik in Quellstimmen. Die **Audio**-Klasse definiert ein [**IXAudio2SourceVoice**](https://msdn.microsoft.com/library/windows/desktop/ee415914)-Objekt für die Hintergrundmusik und ein Array mit **SoundEffectData**-Objekten für die Spielsounds. Die **SoundEffectData**-Struktur enthält das **IXAudio2SourceVoice**-Objekt für einen Effekt und definiert außerdem andere Daten im Zusammenhang mit Effekten, beispielsweise den Audiopuffer. „Audio.h“ definiert die **SoundEvent**-Enumeration. Mithilfe dieser Enumeration identifiziert Marble Maze die einzelnen Sounds im Spiel. Außerdem verwendet die "Audio"-Klasse diese Enumeration zum Indizieren des Arrays mit **SoundEffectData**-Objekten.
 
@@ -393,7 +400,7 @@ else
 }
 ```
 
-## Wiedergeben von Hintergrundmusik
+## <a name="playing-background-music"></a>Wiedergeben von Hintergrundmusik
 
 
 Eine Quellstimme wird im angehaltenen Zustand erstellt. Marble Maze startet die Hintergrundmusik in der Spielschleife. Beim ersten Aufruf von **MarbleMaze::Update** wird **Audio::Start** aufgerufen, um die Hintergrundmusik zu starten.
@@ -537,7 +544,7 @@ Für die Hintergrundmusik verwaltet Marble Maze aber die Puffer direkt, sodass e
 
  
 
-##  Reagieren auf Spielereignisse
+##  <a name="reacting-to-game-events"></a>Reagieren auf Spielereignisse
 
 
 Die **MarbleMaze**-Klasse stellt Methoden wie **PlaySoundEffect**, **IsSoundEffectStarted**, **StopSoundEffect**, **SetSoundEffectVolume**, **SetSoundEffectPitch** und **SetSoundEffectFilter** bereit, damit vom Spiel gesteuert werden kann, wann Sounds wiedergegeben und beendet werden. Außerdem werden damit Soundeigenschaften wie Lautstärke und Tonhöhe gesteuert. Falls die Murmel beispielsweise aus dem Labyrinth herausfällt, ruft die **MarbleMaze::Update**-Methode die **Audio::PlaySoundEffect**-Methode auf, um den **FallingEvent**-Sound wiederzugeben.
@@ -633,7 +640,7 @@ else
 }
 ```
 
-## Reagieren auf Anhalte- und Fortsetzungsereignisse
+## <a name="reacting-to-suspend-and-resume-events"></a>Reagieren auf Anhalte- und Fortsetzungsereignisse
 
 
 Im Dokument zur Marble Maze-Anwendungsstruktur wird beschrieben, wie Marble Maze Anhalten und Fortsetzen unterstützt. Wenn das Spiel angehalten wird, wird auch die Audiowiedergabe angehalten. Wenn das Spiel fortgesetzt wird, wird die Audiowiedergabe an der Stelle fortgesetzt, an der sie unterbrochen wurde. Damit orientieren wir uns an der bewährten Methode, keine Ressourcen zu verwenden, die nicht benötigt werden.
@@ -688,7 +695,7 @@ void Audio::ResumeAudio()
 }
 ```
 
-## Behandeln von Kopfhörern und Geräteänderungen
+## <a name="handling-headphones-and-device-changes"></a>Behandeln von Kopfhörern und Geräteänderungen
 
 
 Marble Maze behandelt Fehler des XAudio2-Moduls wie zum Beispiel eine Änderung des Audiogeräts mithilfe von Modulrückrufen. Zu einer Geräteänderung kommt es meist, wenn der Benutzer des Spiels die Kopfhörer anschließt oder trennt. Sie sollten den Modulrückruf implementieren, der Geräteänderungen behandelt. Ansonsten wird die Soundwiedergabe im Spiel bis zum Neustart angehalten, wenn der Benutzer Kopfhörer anschließt oder entfernt.
@@ -769,7 +776,7 @@ Marble Maze verwendet außerdem das **m\_engineExperiencedCriticalError**-Kennze
 
  
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 
 * [Hinzufügen von Eingaben und Interaktivität zum Marble Maze-Beispiel](adding-input-and-interactivity-to-the-marble-maze-sample.md)
@@ -781,10 +788,5 @@ Marble Maze verwendet außerdem das **m\_engineExperiencedCriticalError**-Kennze
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -3,9 +3,16 @@ author: mcleblanc
 ms.assetid: 333f67f5-f012-4981-917f-c6fd271267c6
 description: "Diese Fallstudie baut auf den Informationen aus Bookstore auf und beginnt mit einer Windows Phone Silverlight-App, die gruppierte Daten in einem LongListSelector-Element anzeigt."
 title: "Windows Phone Silverlight zu UWP – Fallstudie, Bookstore2"
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: c85473d8c3267e4f0ccd6018fe5ee349fdf39284
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7fbe63cba4a825641ea96b39c39d5845758051cb
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -299,9 +306,4 @@ Jetzt können wir `ItemsPath="BookSkus"` entfernen, ohne dass sich das Verhalten
 ## <a name="conclusion"></a>Fazit
 
 In dieser Fallstudie haben wir es mit einer aufwändigeren Benutzeroberfläche als im vorherigen Beispiel zu tun. Alle Funktionen und Konzepte des Windows Phone Silverlight-Steuerelements  **LongListSelector** – und vieles mehr – sind in einer UWP-App in Form von **SemanticZoom**, **ListView**, **GridView** und **CollectionViewSource** verfügbar. Sie haben erfahren, wie Sie sowohl imperativen Code als auch Markup in einer UWP-App wiederverwenden oder kopieren und bearbeiten, um Funktionen, Benutzeroberflächenelemente und Interaktionen speziell für die schmalsten und breitesten Formfaktoren von Windows-Geräten und alle Größen dazwischen umzusetzen.
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

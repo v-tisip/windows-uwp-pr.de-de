@@ -3,9 +3,16 @@ author: jnHs
 Description: Informationen zu steuerlichen Aspekten bei der Preisfestlegung, zu Auswirkungen auf Auszahlungen sowie zu Steuerpflichten finden Sie in der folgenden Tabelle unter dem Land bzw. der Region der Verteilung.
 title: Steuerinformationen zu kostenpflichtigen Apps
 ms.assetid: 97F77EBA-EBA1-4308-8F64-F40988BCBB2C
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 56421bc1ce426310189ddcb1c9893437469c075a
-ms.openlocfilehash: 69ae8d29df626f6a1e2ce1bb4a8a09e99353a0ac
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: beaf73f0bf4709bcda2edda4afb97869eaccc27b
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -161,10 +168,10 @@ Informationen zu steuerlichen Aspekten bei der Preisfestlegung, zu Auswirkungen 
 | Philippinen                      | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. [Informieren Sie sich ausführlicher über die steuerlichen Aspekte für dieses Land/diese Region.](#mixed-remittance-countriesregions)                                                                  | 70 % des festgelegten Preises                 | Entwickler          |
 | Polen                           | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. Steuern werden vor der Auszahlung vom Preis abgezogen.              | 70 % des festgelegten Preises abzgl. 23 % Steuer | Microsoft          |
 | Portugal                         | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. Steuern werden vor der Auszahlung vom Preis abgezogen.              | 70 % des festgelegten Preises abzgl. 23 % Steuer | Microsoft          |
-| Puerto Rico                      | Steuern werden auf den festgelegten Preis aufgeschlagen. [Informieren Sie sich ausführlicher über die steuerlichen Aspekte für dieses Land/diese Region.](#mixed-remittance-countries-regions)                                                                                                     | 70 % des festgelegten Preises                 | Microsoft          |
+| Puerto Rico                      | Steuern werden auf den festgelegten Preis aufgeschlagen. [Informieren Sie sich ausführlicher über die steuerlichen Aspekte für dieses Land/diese Region.](#mixed-remittance-countriesregions)                                                                                                     | 70 % des festgelegten Preises                 | Microsoft          |
 | Katar                            | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70 % des festgelegten Preises                 | Entwickler          |
-| Rumänien                          | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. Steuern werden vor der Auszahlung vom Preis abgezogen.              | 70 % des festgelegten Preises abzgl. 24 % Steuer | Microsoft          |
-| Russland                           | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. Steuern werden vor der Auszahlung vom Preis abgezogen.              | 70 % des festgelegten Preises abzgl. 18 % Steuer | Microsoft          |
+| Rumänien                          | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. Steuern werden vor der Auszahlung vom Preis abgezogen.              | 70 % des festgelegten Preises abzgl. 19 % Steuer | Microsoft          |
+| Russische Föderation                           | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. Steuern werden vor der Auszahlung vom Preis abgezogen.              | 70 % des festgelegten Preises abzgl. 18 % Steuer | Microsoft          |
 | Ruanda                           | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70 % des festgelegten Preises                 | Entwickler          |
 | St. Kitts und Nevis            | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70 % des festgelegten Preises                 | Entwickler          |
 | St. Lucia                      | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70 % des festgelegten Preises                 | Entwickler          |
@@ -220,7 +227,7 @@ Informationen zu steuerlichen Aspekten bei der Preisfestlegung, zu Auswirkungen 
 ## <a name="mixed-remittance-countriesregions"></a>Länder/Regionen mit gemischter Überweisung
 
 
-Bestimmte Abrechnungspartner von Microsoft können den Einzug und die Überweisung von Verkaufssteuer, Gebrauchssteuer, Waren- und Dienstleistungssteuer, Umsatzsteuer und vergleichbaren Steuern (falls zutreffend), die für den Erwerb Ihrer Apps und/oder In-App-Produkte durch Kunden über den Store gelten, in den unten aufgeführten Ländern/Regionen abwickeln: Die Berichte, die Ihnen von Microsoft zur Verfügung gestellt werden, geben Aufschluss über die Transaktionen, für die ein Abrechnungspartner Verkaufssteuer, Gebrauchssteuer, Waren- und Dienstleistungssteuer, Umsatzsteuer und vergleichbare Steuern eingezogen hat, die für den Erwerb Ihrer Apps oder In-App-Produkte durch Kunden über den Store angefallen sind. Mit Ausnahme der Transaktionen, die in solchen Berichten beschrieben sind, werden von Microsoft und seinen Abrechnungspartnern keinerlei Verkaufssteuern, Gebrauchssteuern, Waren- und Dienstleistungssteuern, Umsatzsteuern oder vergleichbare Steuern in Verbindung mit dem Erwerb Ihrer Apps oder In-App-Produkte durch Kunden in diesen Ländern überwiesen. Sie sind für die Prüfung der zur Verfügung gestellten Berichte sowie für die Ermittlung und die Einhaltung eventueller Pflichten hinsichtlich Registrierung, Einzug und Überweisung von Steuern in Verbindung mit Transaktionen, die Ihre Apps oder In-App-Produkte betreffen, verantwortlich.
+Bestimmte Abrechnungspartner von Microsoft können den Einzug und die Überweisung von Verkaufssteuer, Gebrauchssteuer, Waren- und Dienstleistungssteuer, Umsatzsteuer und vergleichbaren Steuern (falls zutreffend), die für den Erwerb Ihrer Apps und/oder In-App-Produkte durch Kunden über den Store gelten, in den unten aufgeführten Ländern/Regionen abwickeln: Die [Berichte](payout-summary.md#downloading-payment-transactions), die Ihnen von Microsoft zur Verfügung gestellt werden, geben Aufschluss über die Transaktionen, für die ein Abrechnungspartner Verkaufssteuer, Gebrauchssteuer, Waren- und Dienstleistungssteuer, Umsatzsteuer und vergleichbare Steuern eingezogen hat, die für den Erwerb Ihrer Apps oder In-App-Produkte durch Kunden über den Store angefallen sind. Mit Ausnahme der Transaktionen, die in solchen Berichten beschrieben sind, werden von Microsoft und seinen Abrechnungspartnern keinerlei Verkaufssteuern, Gebrauchssteuern, Waren- und Dienstleistungssteuern, Umsatzsteuern oder vergleichbare Steuern in Verbindung mit dem Erwerb Ihrer Apps oder In-App-Produkte durch Kunden in diesen Ländern überwiesen. Sie sind für die Prüfung der zur Verfügung gestellten Berichte sowie für die Ermittlung und die Einhaltung eventueller Pflichten hinsichtlich Registrierung, Einzug und Überweisung von Steuern in Verbindung mit Transaktionen, die Ihre Apps oder In-App-Produkte betreffen, verantwortlich.
 
 | Länder/Regionen mit gemischter Überweisung |
 |------------------------------------|
@@ -279,10 +286,5 @@ Die einzelnen Zeilen des Berichts enthalten das Datum und die Uhrzeit der Transa
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO5-->
 
 

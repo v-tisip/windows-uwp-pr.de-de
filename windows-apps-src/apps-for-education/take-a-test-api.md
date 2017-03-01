@@ -1,29 +1,37 @@
 ---
 author: TylerMSFT
-Description: "Mit der JavaScript-API für die App „Prüfung“ von Microsoft können Sie zuverlässige Bewertungen durchführen. „Prüfung“ stellt einen sicheren Browser bereit, der die Lernenden daran hindert, während eines Tests andere Computer- oder Internet-Ressourcen zu verwenden."
-title: "JavaScript-API für Prüfung."
+Description: "Mit der JavaScript-API für die App „Prüfung“ von Microsoft können Sie zuverlässige Bewertungen durchführen. „Prüfung“ stellt einen sicheren Browser bereit, der die Lernenden daran hindert, während eines Tests andere Computer- oder Internetressourcen zu verwenden."
+title: "JavaScript-API „Prüfung”."
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
+ms.assetid: 9bff6318-504c-4d0e-ba80-1a5ea45743da
 translationtype: Human Translation
-ms.sourcegitcommit: 7f578d73a9a625b0ac7d9c10f6dc8118c36b07d0
-ms.openlocfilehash: c2e1832489d36f4ccbeae4e2f67e18caf941a68f
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: ac1a9b38a9857ae536025e682f98d01135850a19
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# JavaScript-API für Prüfung
+# <a name="take-a-test-javascript-api"></a>JavaScript-API „Prüfung”
 
 Bei [Prüfung](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) handelt es sich um eine browserbasierte App, die gesperrte Onlinebewertungen für wichtige Prüfungen rendert. Es werden API-Standards des SBAC-Browsers für wichtige Tests nach dem Common-Core-Bildungsplan unterstützt. Sie können sich auf den Inhalt der Bewertung anstatt auf das Sperren von Windows konzentrieren.
 
 Prüfung wird vom Microsoft-Browser Edge unterstützt und bietet eine JavaScript-API, mit der Webanwendungen Geräte für Prüfungen sperren können.
 
-Die API (basierend auf der [Common Core SBAC API](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf)) stellt Text-zu-Sprache und die Möglichkeit von diversen Abfragen bereit (z.B. ob das Gerät gesperrt ist, wer der ausführende Benutzer ist oder welche Prozesse auf dem System ausgeführt werden).
+Die API (basierend auf der [Common Core SBAC API](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf)) stellt Text-zu-Sprache und die Möglichkeit von diversen Abfragen bereit (z. B. ob das Gerät gesperrt ist, wer der ausführende Benutzer ist oder welche Prozesse auf dem System ausgeführt werden).
 
-Weitere Informationen zur App selbst finden Sie unter [Technische Referenz zur App „Prüfung“](https://technet.microsoft.com/en-us/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396).
+Weitere Informationen zur App selbst finden Sie unter [Technische Referenz zur App „Prüfung“](https://technet.microsoft.com/edu/windows/take-a-test-app-technical).
 
 > [!Important]
 > Diese APIs funktionieren nicht in Remotesitzungen.  
 
 Hilfe zur Problembehandlung finden Sie unter [Problembehandlung bei Microsoft Prüfung mithilfe der Ereignisanzeige](troubleshooting.md).
 
-## Referenzdokumentation
+## <a name="reference-documentation"></a>Referenzdokumentation
 Die Prüfungs-API umfasst die folgenden Namespaces. 
 
 | Namespace | Beschreibung |
@@ -32,7 +40,7 @@ Die Prüfungs-API umfasst die folgenden Namespaces.
 |[TTS-Namespace](#tts-namespace)|Text-zu-Sprache-Funktion|
 
 
- ### Sicherheitsnamespace
+ ### <a name="security-namespace"></a>Sicherheitsnamespace
 
 Der Sicherheitsnamespace ermöglicht das Sperren des Geräts, das Überprüfen der Liste der Benutzer- und Systemprozesse, das Abrufen von MAC- und IP-Adressen und das Löschen von zwischengespeicherten Webressourcen.
 
@@ -48,7 +56,7 @@ Der Sicherheitsnamespace ermöglicht das Sperren des Geräts, das Überprüfen d
 
 ---
 <span id="clearCache"/>
-### void clearCache()
+### <a name="void-clearcache"></a>void clearCache()
 Löscht zwischengespeicherte Webressourcen.
 
 **Syntax**  
@@ -61,12 +69,12 @@ Löscht zwischengespeicherte Webressourcen.
 `None`
 
 **Anforderungen**  
-Windows10, Version1607
+Windows 10, Version 1607
 
 ---
 
 <span id="close"/>
-### close(boolean restart)
+### <a name="closeboolean-restart"></a>close(boolean restart)
 Schließt den Browser und entsperrt das Gerät.
 
 **Syntax**  
@@ -79,30 +87,30 @@ Schließt den Browser und entsperrt das Gerät.
 `None`
 
 **Anforderungen**  
-Windows10, Version1607
+Windows 10, Version 1607
 
 ---
 
 <span id="enableLockDown"/>
-### enableLockdown(boolean lockdown)
+### <a name="enablelockdownboolean-lockdown"></a>enableLockdown(boolean lockdown)
 Sperrt das Gerät. Wird auch zum Entsperren des Geräts verwendet.
 
 **Syntax**  
 `browser.security.enableLockDown(true|false);`
 
 **Parameter**  
-`lockdown` - `true` wenn die App „Prüfung“ auf dem Sperrbildschirm ausgeführt werden soll und die in dem folgenden[Dokument](https://technet.microsoft.com/en-us/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396) behandelten Richtlinien angewendet werden sollen. `False` hält die Ausführung von „Prüfung“ auf dem Sperrbildschirm an und beendet sie. Wirkungslos, wenn die App nicht gesperrt ist.
+`lockdown` - `true` wenn die App „Prüfung“ auf dem Sperrbildschirm ausgeführt werden soll und die in dem folgenden [Dokument](https://technet.microsoft.com/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396) behandelten Richtlinien angewendet werden sollen. `False` hält die Ausführung von „Prüfung“ auf dem Sperrbildschirm an und beendet sie. Wirkungslos, wenn die App nicht gesperrt ist.
 
 **Rückgabewert**  
 `None`
 
 **Anforderungen**  
-Windows10, Version1607
+Windows 10, Version 1607
 
 ---
 
 <span id="getIPAddressList"/>
-### string[] getIPAddressList()
+### <a name="string-getipaddresslist"></a>string[] getIPAddressList()
 Ruft die Liste der IP-Adressen für das Gerät ab.
 
 **Syntax**  
@@ -117,7 +125,7 @@ Ruft die Liste der IP-Adressen für das Gerät ab.
 ---
 
 <span id="getMACAddress" />
-### string[] getMACAddress()
+### <a name="string-getmacaddress"></a>string[] getMACAddress()
 Ruft die Liste der MAC-Adressen für das Gerät ab.
 
 **Syntax**  
@@ -130,12 +138,12 @@ Ruft die Liste der MAC-Adressen für das Gerät ab.
 `An array of MAC addresses.`
 
 **Anforderungen**  
-Windows10, Version1607
+Windows 10, Version 1607
 
 ---
 
 <span id="getProcessList" />
-### string[] getProcessList()
+### <a name="string-getprocesslist"></a>string[] getProcessList()
 Ruft die Liste der ausgeführten Benutzerprozesse ab.
 
 **Syntax**  
@@ -150,12 +158,12 @@ Ruft die Liste der ausgeführten Benutzerprozesse ab.
 **Anmerkung** Diese Liste enthält keine Systemprozesse.
 
 **Anforderungen**  
-Windows10, Version1607
+Windows 10, Version 1607
 
 ---
 
 <span id="isEnvironmentSecure" />
-### boolean isEnvironmentSecure()
+### <a name="boolean-isenvironmentsecure"></a>boolean isEnvironmentSecure()
 Stellt fest, ob auf das Gerät noch der Sperrmodus-Kontext angewendet wird.
 
 **Syntax**  
@@ -168,11 +176,11 @@ Stellt fest, ob auf das Gerät noch der Sperrmodus-Kontext angewendet wird.
 `True indicates that the lockdown context is applied to the device; otherwise false.`
 
 **Anforderungen**  
-Windows10, Version1607
+Windows 10, Version 1607
 
 ---
 
-### TTS-Namespace
+### <a name="tts-namespace"></a>TTS-Namespace
 
 Der TTS-Namespace behandelt die Text-zu-Sprache-Funktion der App.
 
@@ -191,7 +199,7 @@ Der TTS-Namespace behandelt die Text-zu-Sprache-Funktion der App.
 ---
 
 <span id="getStatus" />
-### string getStatus()
+### <a name="string-getstatus"></a>string getStatus()
 Ruft den Status der Sprachwiedergabe ab.
 
 **Syntax**  
@@ -204,12 +212,12 @@ Ruft den Status der Sprachwiedergabe ab.
 `The speech playback status. Possible values are: “available”, “idle”, “paused”, and “speaking”.`
 
 **Anforderungen**  
-Windows10, Version1607
+Windows 10, Version 1607
 
 ---
 
 <span id="getVoices" />
-### string[] getVoices()
+### <a name="string-getvoices"></a>string[] getVoices()
 Ruft eine Liste der verfügbaren Sprachbefehlpakete ab.
 
 **Syntax**  
@@ -222,12 +230,12 @@ Ruft eine Liste der verfügbaren Sprachbefehlpakete ab.
 `The available voice packs. For example: “Microsoft Zira Mobile”, “Microsoft Mark Mobile”`
 
 **Anforderungen**  
-Windows10, Version1607
+Windows 10, Version 1607
 
 ---
 
 <span id="pause" />
-### void pause()
+### <a name="void-pause"></a>void pause()
 
 Hält die Sprachsynthese an.
 
@@ -243,12 +251,12 @@ Hält die Sprachsynthese an.
 `None`
 
 **Anforderungen**  
-Windows10, Version1607
+Windows 10, Version 1607
 
 ---
 
 <span id="resume" />
-### void resume()
+### <a name="void-resume"></a>void resume()
 Setzt die angehaltene Sprachsynthese fort.
 
 **Syntax**  
@@ -261,12 +269,12 @@ Setzt die angehaltene Sprachsynthese fort.
 `None`
 
 **Anforderungen**  
-Windows10, Version1607
+Windows 10, Version 1607
 
 ---
 
 <span id="speak" />
-### void speak(string text, object options, function callback)
+### <a name="void-speakstring-text-object-options-function-callback"></a>void speak(string text, object options, function callback)
 Startet die clientseitige Text-zu-Sprache-Synthese.
 
 **Syntax**  
@@ -293,12 +301,12 @@ Das Markup für Lautstärke und Tonhöhe muss innerhalb der SSML-Datei (Speech S
 Beim options-Objekt müssen Reihenfolge, Bezeichnung und Groß-/Kleinschreibung dem obigen Beispiel entsprechen.
 
 **Anforderungen**  
-Windows10, Version1607
+Windows 10, Version 1607
 
 ---
 
 <span id="stop" />
-### void stop()
+### <a name="void-stop"></a>void stop()
 Beendet die Sprachsynthese.
 
 **Syntax**  
@@ -311,10 +319,5 @@ Beendet die Sprachsynthese.
 `None`
 
 **Anforderungen**  
-Windows10, Version1607
-
-
-
-<!--HONumber=Nov16_HO1-->
-
+Windows 10, Version 1607
 

@@ -1,15 +1,22 @@
 ---
 author: mcleanbyron
 ms.assetid: 9630AF6D-6887-4BE3-A3CB-D058F275B58F
-description: "Erfahren Sie, wie Sie den Windows.Services.Store-Namespace verwenden, um Lizenzinformationen für die aktuelle App und ihre Add-Ons abzurufen."
-title: "Abrufen von Lizenzinformationen für Ihre Apps und Add-Ons"
+description: "Erfahren Sie, wie Sie den Windows.Services.Store-Namespace verwenden, um Lizenzinformationen für die aktuelle App und deren Add-Ons abzurufen."
+title: "Abrufen von Lizenzinformationen für Ihre Apps und deren Add-Ons"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Lizenzen, Apps, Add-Ons, In-App-Einkäufe, IAPs, Windows.Services.Store"
 translationtype: Human Translation
-ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
-ms.openlocfilehash: 0482cc192eeff4d3633898b6fa677805c635c6e1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 56fd2d02dc17e5bf7c3903315c685da077c05abd
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="get-license-info-for-apps-and-add-ons"></a>Abrufen von Lizenzinformationen zu Apps und Add-Ons
+# <a name="get-license-info-for-apps-and-add-ons"></a>Abrufen von Lizenzinformationen zu Apps und deren Add-Ons
 
 Apps für Windows 10, Version 1607 oder höher, können Methoden der [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Klasse im [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace verwenden, um Lizenzinformationen für die aktuelle App und deren Add-Ons (auch als In-App-Produkte oder IAPs bezeichnet) abzurufen. Mit diesen Informationen können Sie ermitteln, ob die Lizenzen für die App oder deren Add-Ons aktiv sind, oder ob es sich um Testversionen handelt.
 
@@ -47,9 +54,4 @@ Eine vollständige Beispielanwendung finden Sie im [Store-Beispiel](https://gith
 * [Unterstützen von Endverbraucher-Add-On-Käufen](enable-consumable-add-on-purchases.md)
 * [Implementieren einer Testversion der App](implement-a-trial-version-of-your-app.md)
 * [Store-Beispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

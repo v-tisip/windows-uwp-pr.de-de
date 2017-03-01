@@ -2,47 +2,50 @@
 author: payzer
 title: "Begleitung für Xbox-Entwicklermodus"
 description: "Enthält Informationen über die App „Begleitung für Xbox-Entwicklermodus“."
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, UWP"
+ms.assetid: ed84f232-ddb5-4ba1-bf1c-578e8df47602
 translationtype: Human Translation
-ms.sourcegitcommit: 87ebc9ec01b349af033984b17d150e56d7a8cb2f
-ms.openlocfilehash: 036a581481888373249857ee21fe339819779dd0
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 1aea4f2da584124050665d159b1d83f34368b819
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Begleitung für Xbox-Entwicklermodus
+# <a name="xbox-dev-mode-companion"></a>Begleitung für den Xbox-Entwicklermodus
 
 Mit „Begleitung für Xbox-Entwicklermodus“ können Sie eine Remoteverbindung mit einer Xbox One-Konsole herstellen und diese steuern. Dieses Tool wurde für Entwickler erstellt, die den Xbox-Entwicklermodus verwenden.
 
-## So erhalten Sie die App  
+## <a name="how-to-get-the-app"></a>So erhalten Sie die App  
 Herunterladen von [Begleitung für Xbox-Entwicklermodus (Vorschau)](https://www.microsoft.com/store/p/xbox-dev-mode-companion/9nblggh519cp).
 
-## Herstellen einer Verbindung   
+## <a name="how-to-connect"></a>Herstellen einer Verbindung   
 So stellen Sie eine Verbindung mit der Konsole her:
 
 1. Starten Sie die App.   
 2. Wenn die Konsole nicht im Verbindungsdialogfeld aufgeführt wird, geben Sie die IP-Adresse der Konsole in das Textfeld am unteren Rand des Dialogfelds ein, und wählen Sie dann **Verbinden** aus.
 
-## Streaming-Steuerelemente
+## <a name="streaming-controls"></a>Streaming-Steuerelemente
 Nachdem die Verbindung hergestellt wurde, können Sie auf Streaming Steuerelemente durch Zeigen mit der Maus auf den Streaming Bereich zugreifen. Mit diesen Steuerelementen haben Sie folgende Möglichkeiten:
 * Zwischen Vollbildmodus und Fenstermodus umschalten.
 * Das Windows Device Portal aufrufen.
 * Die Konsole ein- und ausschalten.
 * Trennen.
 
-## Eingabe
+## <a name="input"></a>Eingabe
 Um Eingaben für die Konsole über die App zu senden, können Sie einen Xbox One-Controller an den PC anschließen.   
     
 Sie können auch mithilfe der Pfeiltasten, der Eingabetaste und der Escape-Taste Elemente und Apps, die Tastaturnavigation unterstützen, auf der Konsole bedienen. Auf der Hilfeseite finden Sie eine vollständige Tastaturzuordnung.   
    
 Sie können mit der Tastatur in Textfelder eingeben, um Text an die Konsole zu senden.   
 
-## Hilfe
+## <a name="help"></a>Hilfe
 Sie können die Hilfeseite anzeigen, indem Sie im Verbindungsdialogfeld oder auf der Befehlsleiste auf das ?- Symbol klicken.
 
-## Weitere Informationen finden Sie unter
-- [UWP auf XboxOne](index.md)
-
-
-
-<!--HONumber=Sep16_HO1-->
-
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
+- [UWP auf Xbox One](index.md)
 

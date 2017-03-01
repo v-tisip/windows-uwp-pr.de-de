@@ -3,20 +3,27 @@ description: "In diesem Artikel wird erläutert, wie Sie in Ihrer UWP-App (Unive
 title: Empfangen von Daten
 ms.assetid: 0AFF9E0D-DFF4-4018-B393-A26B11AFDB41
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: b8d627da82da463b87ace2a2ef6e739b1caafaa2
-ms.openlocfilehash: 0092fe2832eeafbc4e7cfa36a3444b9551a4f672
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1d15bfb6bfed16d1b71313fd5a5f29ceeef3bd3e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Empfangen von Daten
+# <a name="receive-data"></a>Empfangen von Daten
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 In diesem Artikel wird erläutert, wie Sie in Ihrer UWP-App (Universelle Windows-Plattform) Inhalte empfangen, die in einer anderen App mithilfe des Freigabe-Vertrags freigegeben wurden. Mit diesem Freigabe-Vertrag kann Ihre App als Option angezeigt werden, wenn der Benutzer „Freigeben“ aufruft.
 
-## Deklarieren der App als Freigabeziel
+## <a name="declare-your-app-as-a-share-target"></a>Deklarieren der App als Freigabeziel
 
 Das System zeigt eine Liste der möglichen Ziel-Apps, wenn ein Benutzer „Freigeben“ aufruft. Damit sie in der Liste angezeigt wird, muss Ihre App deklarieren, dass sie den Freigabe-Vertrag unterstützt. Dies informiert das System darüber, dass Ihre App für das Empfangen von Inhalten zur Verfügung steht.
 
@@ -24,7 +31,7 @@ Das System zeigt eine Liste der möglichen Ziel-Apps, wenn ein Benutzer „Freig
 2.  Öffnen Sie die Registerkarte **Deklarationen**.
 3.  Wählen Sie in der Liste **Verfügbare Deklarationen** die Option **Ziel freigeben** aus, und klicken Sie auf **Hinzufügen**.
 
-## Auswählen von Dateitypen und Formaten
+## <a name="choose-file-types-and-formats"></a>Auswählen von Dateitypen und Formaten
 
 Als Nächstes müssen Sie entscheiden, welche Dateitypen und Datenformate Sie unterstützen. Die Freigabe-APIs unterstützen verschiedene Standardformate wie Text, HTML und Bitmaps. Sie können auch benutzerdefinierte Dateitypen und Datenformate angeben. Denken Sie in solchen Fällen jedoch daran, dass die Quell-Apps wissen müssen, welcher Art diese Typen und Formate sind, da sie diese andernfalls nicht für das Freigeben von Daten verwenden können.
 
@@ -42,9 +49,9 @@ So richten Sie Datenformate ein
 2.  Öffnen Sie den Abschnitt **Datenformate** der Seite **Deklarationen**, und klicken Sie auf **Neue Hinzufügen**.
 3.  Geben Sie den Namen des Datenformats ein, das Sie unterstützen, zum Beispiel „Text“.
 
-## Handhabung der Freigabeaktivierung
+## <a name="handle-share-activation"></a>Handhabung der Freigabeaktivierung
 
-Wenn ein Benutzer Ihre App auswählt (i.d.R. durch die Auswahl aus einer Liste verfügbarer Ziel-Apps auf der Benutzeroberfläche für das Freigeben), wird ein [**OnShareTargetActivated**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Application.OnShareTargetActivated(Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs))-Ereignis ausgelöst. Ihre App muss dieses Ereignis behandeln, um die Daten, die der Benutzer freigeben möchte, verarbeiten zu können.
+Wenn ein Benutzer Ihre App auswählt (i. d. R. durch die Auswahl aus einer Liste verfügbarer Ziel-Apps auf der Benutzeroberfläche für das Freigeben), wird ein [**OnShareTargetActivated**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Application.OnShareTargetActivated(Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs))-Ereignis ausgelöst. Ihre App muss dieses Ereignis behandeln, um die Daten, die der Benutzer freigeben möchte, verarbeiten zu können.
 
 <!-- For some reason, the snippets in this file are all inline in the WDCML topic. Suggest moving to VS project with rest of snippets. -->
 ```cs
@@ -68,7 +75,7 @@ if (shareOperation.Data.Contains(StandardDataFormats.Text))
 } 
 ```
 
-## Bericht über den Freigabestatus
+## <a name="report-sharing-status"></a>Bericht über den Freigabestatus
 
 In einigen Fällen kann es eine Weile dauern, bis Ihre App die freizugebenden Daten verarbeitet hat. Beispiele umfassen die Freigabe von Datei- oder Bildsammlungen. Diese Elemente sind größer als einfache Textzeichenfolgen, sodass auch ihre Verarbeitung länger dauert.
 
@@ -98,7 +105,7 @@ shareOperation.ReportCompleted();
 
 Halten Sie bei Verwendung dieser Methoden unbedingt die angegebene Reihenfolge ein, und rufen Sie die Methoden nicht mehrmals auf. Unter bestimmten Umständen kann [**ReportDataRetrieved**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportDataRetrieved) von einer Ziel-App vor [**ReportStarted**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportStarted) aufgerufen werden. Beispielweise können die Daten von der App im Rahmen einer Aufgabe des Aktivierungshandlers aufgerufen werden. **ReportStarted** wird jedoch erst aufgerufen, wenn der Benutzer auf eine **Freigeben**-Schaltfläche klickt.
 
-## Zurückgeben eines QuickLink-Objekts nach erfolgreicher Freigabe
+## <a name="return-a-quicklink-if-sharing-was-successful"></a>Zurückgeben eines QuickLink-Objekts nach erfolgreicher Freigabe
 
 Wählt ein Benutzer Ihre App aus, um Inhalte zu empfangen, sollten Sie einen [**QuickLink**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink) erstellen. Ein **QuickLink** ähnelt einer Verknüpfung, über die Benutzer leichter Informationen mit Ihrer App austauschen können. Sie könnten beispielsweise einen **QuickLink** erstellen, der eine neue E-Mail erstellt, die bereits die E-Mail-Adresse eines Freundes enthält.
 
@@ -128,7 +135,7 @@ async void ReportCompleted(ShareOperation shareOperation, string quickLinkId, st
 }
 ```
 
-## Siehe auch 
+## <a name="see-also"></a>Siehe auch 
 
 * [App-zu-App-Kommunikation](index.md)
 * [Freigeben von Daten](share-data.md)
@@ -140,9 +147,4 @@ async void ReportCompleted(ShareOperation shareOperation, string quickLinkId, st
 * [ReportStarted](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reportstarted.aspx)
 * [QuickLink](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharetarget.quicklink.aspx)
 * [QuickLInkId](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharetarget.quicklink.id.aspx)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

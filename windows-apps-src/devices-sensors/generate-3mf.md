@@ -1,20 +1,28 @@
 ---
 author: PatrickFarley
-Description: Beschreibt die Struktur des 3D Manufacturing Format-Dateityps und wie dieser mit der Windows.Graphics.Printing3D-API erstellt und bearbeitet werden kann.
+Description: Beschreibt die Struktur des 3D Manufacturing Format-Dateityps und dessen Erstellung und Bearbeitung mit der Windows.Graphics.Printing3D-API.
 MS-HAID: dev\_devices\_sensors.generate\_3mf
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
-title: Erstellen eines 3MF-Pakets
+title: Generieren eines 3MF-Pakets
+ms.assetid: 968d918e-ec02-42b5-b50f-7c175cc7921b
+ms.author: pafarley
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: c790d57e72a75ec28e376722f8d87c2655b18c42
-ms.openlocfilehash: 1d291173cc68d4eedcbc2918f308be1489105a08
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 2b1f15534e1388bfd61ba09faeb590464e44d8fd
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Erstellen eines 3MF-Pakets
+# <a name="generate-a-3mf-package"></a>Generieren eines 3MF-Pakets
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **Wichtige APIs**
@@ -25,7 +33,7 @@ ms.openlocfilehash: 1d291173cc68d4eedcbc2918f308be1489105a08
 
 Dieses Handbuch beschreibt die Struktur des 3D Manufacturing Format-Dokuments und wie dieses mit der [**Windows.Graphics.Printing3D**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.aspx)-API erstellt und bearbeitet werden kann.
 
-## Was ist 3MF?
+## <a name="what-is-3mf"></a>Was ist 3MF?
 
 Das 3D Manufacturing Format ist ein Satz von Konventionen für die Verwendung von XML, um die Darstellung und Struktur von 3D-Modellen zu beschreiben, die für die Fertigung eingesetzt werden (3D-Druck). Es definiert einen Satz von Teilen (von denen einige erforderlich und andere optional sind) und ihre Beziehungen. Ziel dabei ist es, alle erforderlichen Informationen für ein 3D-Fertigungsgerät bereitzustellen. Ein Datensatz, der dem 3D Manufacturing Format entspricht, kann als Datei mit der Erweiterung „.3mf“ gespeichert werden.
 
@@ -34,7 +42,7 @@ In Windows 10 entspricht die [**Printing3D3MFPackage**](https://msdn.microsoft.c
 <!-- >**Note** This guide describes how to construct a 3MF document from scratch. If you wish to make changes to an already existing 3MF document provided in the form of a .3mf file, you simply need to convert it to a **Printing3D3MFPackage** and alter the contained classes/properties in the same way (see [link]) below). -->
 
 
-## Hauptklassen in der 3MF-Struktur
+## <a name="core-classes-in-the-3mf-structure"></a>Hauptklassen in der 3MF-Struktur
 
 Die **Printing3D3MFPackage**-Klasse stellt ein vollständiges 3MF-Dokument dar, und den Kern eines 3MF-Dokuments bildet der Modellbestandteil, der durch die [**Printing3DModel**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3dmodel.aspx)-Klasse dargestellt wird. Der Großteil der Informationen, die zu einem 3D-Modell angegeben werden, werden gespeichert, indem die Eigenschaften der **Printing3DModel**-Klasse und die Eigenschaften der zugrunde liegenden Klassen festgelegt werden.
 
@@ -42,13 +50,13 @@ Die **Printing3D3MFPackage**-Klasse stellt ein vollständiges 3MF-Dokument dar, 
 
 <!-- >**Note** We do not yet associate the **Printing3D3MFPackage** with its corresponding **Printing3DModel** object. Only after fleshing out the **Printing3DModel** with all of the information we wish to specify will we make that association (see [link]). -->
 
-## Metadaten
+## <a name="metadata"></a>Metadaten
 
 Der Modellteil eines 3MF-Dokuments kann Metadaten in Form von Schlüssel-Wert-Paaren von Zeichenfolgen enthalten, die in der **Metadata**-Eigenschaft gespeichert sind. Es gibt eine Reihe von vordefinierten Metadatennamen, aber es können weitere Paare als Teil einer Erweiterung hinzugefügt werden (dies wird in der [3MF-Spezifikation](http://3mf.io/what-is-3mf/3mf-specification/) ausführlicher beschrieben). Der Empfänger des Pakets (ein 3D-Fertigungsgerät) bestimmt, ob und wie Metadaten behandelt werden. Es empfiehlt sich jedoch, möglichst viele grundlegende Informationen im 3MF-Paket einzuschließen:
 
 [!code-cs[Metadaten](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetMetadata)]
 
-## Gitterdaten
+## <a name="mesh-data"></a>Gitterdaten
 
 Im Kontext dieses Handbuchs bezeichnet ein Gitter einen Körper mit dreidimensionaler Geometrie, der anhand eines einzelnen Satzes von Scheitelpunkten erstellt wird (obwohl das Gitter nicht zwangsläufig als Festkörper angezeigt werden muss). Ein Gitterteil wird durch die [**Printing3DMesh**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3dmesh.aspx)-Klasse dargestellt. Ein gültiges Gitterobjekt muss Informationen über die Lage aller Scheitelpunkte sowie alle Dreiecksoberflächen enthalten, die zwischen bestimmten Scheitelpunktsätzen vorhanden sind.
 
@@ -68,7 +76,7 @@ Wenn ein Printing3DMesh-Objekt gültige Sätze von Scheitelpunkten und Dreiecken
 [!code-cs[MeshAdd](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetMeshAdd)]
 
 
-## Erstellen von Materialen
+## <a name="create-materials"></a>Erstellen von Materialen
 
 
 Ein 3D-Modell kann Daten für mehrere Materialien enthalten. Diese Konvention ist für 3D-Fertigungsgeräte konzipiert, die mehrere Materialien für einen einzelnen Druckauftrag verwenden können. Es gibt auch mehrere *Typen* von Materialgruppen, die jeweils eine Reihe verschiedener einzelner Materialien unterstützen können. Jede Materialgruppe muss eine eindeutige Referenz-ID aufweisen, und jedes Material innerhalb einer Gruppe muss ebenfalls über eine eindeutige ID verfügen.
@@ -77,7 +85,7 @@ Die verschiedenen Gitterobjekte in einem Modell können dann auf diese Materiali
 
 In diesem Handbuch wird zunächst beschrieben, wie verschiedene Materialarten innerhalb ihrer jeweiligen Materialgruppen erstellt und als Ressourcen für das Modellobjekt gespeichert werden. Anschließend wird erläutert, wie verschiedene Materialien einzelnen Gittern und Dreiecken zugewiesen werden.
 
-### Basismaterialien
+### <a name="base-materials"></a>Basismaterialien
 
 Der Standardmaterialtyp ist **Base Material**, der sowohl einen **Color Material**-Wert (nachfolgend beschrieben) als auch ein Namensattribut aufweist, mit dem der *Typ* des zu verwendenden Materials angegeben werden soll.
 
@@ -86,19 +94,19 @@ Der Standardmaterialtyp ist **Base Material**, der sowohl einen **Color Material
 > [!NOTE]
 > Das 3D-Fertigungsgerät bestimmt, welche verfügbaren physischen Materialien den jeweiligen im 3MF gespeicherten virtuellen Materialelementen zugeordnet werden. Die Materialzuordnung muss nicht 1:1 erfolgen: Wenn ein 3D-Drucker nur ein Material verwendet, wird das gesamte Modell in diesem Material gedruckt, unabhängig davon, welchen Objekten oder Oberflächen verschiedene Materialien zugeordnet wurden.
 
-### Farbmaterialien
+### <a name="color-materials"></a>Farbmaterialien
 
 **Farbmaterialien** ähneln den **Basismaterialien**, enthalten jedoch keinen Namen. Somit enthalten sie keine Anweisungen, welche Materialart vom Gerät verwendet werden soll. Sie enthalten lediglich Farbdaten und überlassen dem Gerät die Auswahl des Materialtyps (das Gerät kann anschließend den Benutzer zur Auswahl auffordern). Im folgenden Code werden die `colrMat`-Objekte aus der vorherigen Methode alleine verwendet.
 
 [!code-cs[ColorMaterialGroup](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetColorMaterialGroup)]
 
-### Zusammengesetzte Materialien
+### <a name="composite-materials"></a>Zusammengesetzte Materialien
 
 **Zusammengesetzte Materialien** weisen das Fertigungsgerät an, eine einheitliche Mischung aus unterschiedlichen **Basismaterialien** zu verwenden. Jede **zusammengesetzte Materialgruppe** muss auf genau eine **Basismaterialgruppe** verweisen, aus der die Bestandteile entnommen werden sollen. Zusätzlich müssen die **Basismaterialien** in dieser Gruppe, die verfügbar gemacht werden sollen, in einer Liste mit den **Materialindizes** aufgeführt werden, auf die anschließend jedes **zusammengesetzte Material** verweist, wenn die Verhältnisse angeben werden (jedes **zusammengesetzte Material** ist lediglich ein Verhältnis der **Basismaterialien**).
 
 [!code-cs[CompositeMaterialGroup](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetCompositeMaterialGroup)]
 
-### Texturkoordinatenmaterialien
+### <a name="texture-coordinate-materials"></a>Texturkoordinatenmaterialien
 
 3MF unterstützt die Verwendung von 2D-Bildern, um die Oberflächen von 3D-Modellen einzufärben. Auf diese Weise kann das Modell deutlich mehr Farbdaten pro Dreiecksfläche übermitteln (als bei Verwendung eines einzelnen Farbwerts pro Dreiecksvertex). Ebenso wie **Farbmaterialien** können Texturkoordinatenmaterialien ausschließlich Farbdaten enthalten. Um eine 2D-Textur verwenden zu können, muss zunächst eine Texturressource deklariert werden:
 
@@ -111,13 +119,13 @@ Als Nächstes müssen die **Texture3Coord-Materialien** angegeben werden. Jedes 
 
 [!code-cs[Texture2CoordMaterialGroup](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetTexture2CoordMaterialGroup)]
 
-## Zuordnung von Materialien zu Oberflächen
+## <a name="map-materials-to-faces"></a>Zuordnung von Materialien zu Oberflächen
 
 Um festzulegen, welche Materialien welchen Scheitelpunkten der einzelnen Dreiecke zugeordnet werden sollen, wird noch einmal das Gitterobjekt für das Modell herangezogen (wenn ein Modell mehrere Gitter enthält, müssen die jeweiligen Materialien separat zugewiesen werden). Wie bereits erwähnt, werden die Materialien pro Vertex, pro Dreieck zugewiesen. Der nachfolgende Code veranschaulicht, wie diese Informationen eingegeben und interpretiert werden.
 
 [!code-cs[MaterialIndices](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetMaterialIndices)]
 
-## Komponenten und Erstellung
+## <a name="components-and-build"></a>Komponenten und Erstellung
 
 Die Komponentenstruktur ermöglicht es dem Benutzer, mehrere Gitterobjekte in einem druckbaren 3D-Modell zu platzieren. Ein [**Printing3DComponent**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3dcomponent.aspx)-Objekt enthält ein einzelnes Gitter und eine Liste der Verweise auf andere Komponenten. Hierbei handelt es sich eigentlich um eine Liste der [**Printing3DComponentWithMatrix**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3dcomponentwithmatrix.aspx)-Objekte. **Printing3DComponentWithMatrix**-Objekte enthalten jeweils eine **Printing3DComponent** und insbesondere eine Transformationsmatrix, die auf das Gitter und die enthaltenen Komponenten der **Printing3DComponent** angewendet wird.
 
@@ -127,7 +135,7 @@ Auf alle **Printing3DComponent**-Objekte muss direkt in der **Components**-Eigen
 
 [!code-cs[Komponenten](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetComponents)]
 
-## Speichern des Pakets
+## <a name="save-package"></a>Speichern des Pakets
 Das vorliegende Modell mit den definierten Materialien und Komponenten kann nun im Paket gespeichert werden.
 
 [!code-cs[SavePackage](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetSavePackage)]
@@ -138,18 +146,13 @@ Die folgende Methode akzeptiert ein fertiges **Printing3D3MFPackage** und speich
 
 [!code-cs[SaveTo3mf](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetSaveTo3mf)]
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 [3D-Druck über Ihre App](https://msdn.microsoft.com/windows/uwp/devices-sensors/3d-print-from-app)  
-[Beispiel für 3D-Druck– UWP](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/3DPrinting)
+[Beispiel für 3D-Druck – UWP](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/3DPrinting)
  
 
  
 
  
-
-
-
-<!--HONumber=Aug16_HO4-->
-
 

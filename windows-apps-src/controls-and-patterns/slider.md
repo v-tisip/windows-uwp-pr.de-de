@@ -5,16 +5,23 @@ title: Schieberegler
 ms.assetid: 7EC7EA33-BE7E-4FD5-B205-B8FA7B729ACC
 label: Sliders
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 8be3dfed1e6fda1777905a73db4b0eae1e3368dd
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 2f00c27ae2248ebe39ed1cf426af640ec9200e73
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="sliders"></a>Schieberegler
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-Ein Schieberegler ist ein Steuerelement, über das der Benutzer aus einer Reihe von Werten auswählen kann, indem er ein Schiebereglersteuerelement über einen Bereich verschiebt.
+Ein Schieberegler ist ein Steuerelement, über das der Benutzer aus einer Reihe von Werten auswählen kann, indem er ein Ziehpunkt-Steuerelement über eine Spur verschiebt.
 
 ![Schiebereglersteuerelement](images/controls/slider.png)
 
@@ -105,7 +112,7 @@ private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e
 -   Deaktivieren Sie alle zugeordneten Beschriftungen und das visuelle Feedback, wenn Sie den Schieberegler deaktivieren.
 -   Bedenken Sie beim Festlegen der Flussrichtung bzw. Ausrichtung Ihres Schiebereglers die Textrichtung. In einigen Sprachen fließt das Skript von links nach rechts, und in anderen von rechts nach links.
 -   Verwenden Sie einen Schieberegler nicht als Statusanzeige.
--   Legen Sie für die Miniaturansicht des Schiebereglers keine andere Größe als die Standardgröße fest.
+-   Legen Sie für den Ziehpunkt des Schiebereglers keine andere Größe als die Standardgröße fest.
 -   Erstellen Sie keinen fortlaufenden Schieberegler, wenn der Wertebereich groß ist und die Benutzer mit hoher Wahrscheinlichkeit einen von mehreren repräsentativen Werten aus dem Bereich auswählen. Verwenden Sie diese Werte stattdessen als einzige zulässige Schritte. Wenn der Höchstwert für einen Zeitwert beispielsweise 1 Monat ist, die Benutzer aber nur zwischen 1 Minute, 1 Stunde, 1 Tag oder 1 Monat auswählen sollen, erstellen Sie einen Schieberegler mit 4 Schrittpunkten.
 
 ## <a name="additional-usage-guidance"></a>Weitere Hinweise zur Verwendung
@@ -173,9 +180,4 @@ Ziehen Sie beim Entwerfen eines benutzerdefinierten Schiebereglers Möglichkeite
 ## <a name="related-topics"></a>Verwandte Themen
 - [Umschalter](toggles.md)
 - [**Slider-Klasse**](https://msdn.microsoft.com/library/windows/apps/br209614)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

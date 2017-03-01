@@ -1,22 +1,29 @@
 ---
 author: drewbatgit
-ms.assetid: 
+ms.assetid: 0309c7a1-8e4c-4326-813a-cbd9f8b8300d
 description: "In diesem Artikel wird beschrieben, wie Sie für Ihre App zur Medienwiedergabe Medienunterbrechungen erstellen, planen und verwalten."
 title: Erstellen, Planen und Verwalten von Medienunterbrechungen
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 2e969e53a29a98223f26353a5444ca9d9ebe2641
-ms.openlocfilehash: 0fe495f3eb2c15ccff4a672abd904dc43cfdf193
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 8d4e9a87009b50538adac2357badc0a7dfe8f88c
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Erstellen, Planen und Verwalten von Medienunterbrechungen
+# <a name="create-schedule-and-manage-media-breaks"></a>Erstellen, Planen und Verwalten von Medienunterbrechungen
 
 In diesem Artikel wird beschrieben, wie Sie für Ihre App zur Medienwiedergabe Medienunterbrechungen erstellen, planen und verwalten. Medienunterbrechungen werden normalerweise genutzt, um Audio- und Videoanzeigen in Medieninhalte einzufügen. Ab Windows 10, Version 1607, können Sie die [**MediaBreakManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager)-Klasse verwenden, um schnell und einfach Medienunterbrechungen zu jedem [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem)-Element hinzuzufügen, das Sie mit einem [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) abspielen.
 
 
 Nachdem Sie eine oder mehrere Medienunterbrechungen geplant haben, spielt das System automatisch die Medieninhalte zum angegebenen Zeitpunkt während der Wiedergabe ab. Der **MediaBreakManager** stellt Ereignisse bereit, damit Ihre App reagieren kann, wenn Medienunterbrechungen beginnen, enden oder vom Benutzer übersprungen werden. Sie können auch auf eine [**MediaPlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession) für Ihre Medienunterbrechnungen zugreifen, um Ereignisse, wie z. B. das Herunterladen und Puffern von Updates, zu überwachen.
 
-## Medienunterbrechungen planen
+## <a name="schedule-media-breaks"></a>Medienunterbrechungen planen
 Jedes **MediaPlaybackItem**-Objekt verfügt über einen eigenen [**MediaBreakSchedule**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakSchedule) zum Konfigurieren der Medienunterbrechungen, die wiedergegeben werden sollen, wenn das Element abgespielt wird. Der erste Schritt zur Verwendung von Medienunterbrechungen in Ihrer App ist die Erstellung eines [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem)-Elements für Ihre Hauptinhalte für die Wiedergabe. 
 
 [!code-cs[MoviePlaybackItem](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetMoviePlaybackItem)]
@@ -51,12 +58,12 @@ Bei diesem Beispiel wird auch eine Überladung des [**MediaPlaybackItem**](https
 
 [!code-cs[MidrollBreak2](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetMidrollBreak2)]
 
-## Medienunterbrechungen überspringen
+## <a name="skip-media-breaks"></a>Medienunterbrechungen überspringen
 Wie bereits in diesem Artikel erwähnt, kann die [**CanSkip**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem.CanSkip)-Eigenschaft eines **MediaPlaybackItem** so festgelegt werden, dass der Benutzer den Inhalt mit den integrierten Steuerelementen nicht überspringen kann. Sie können jedoch [**SkipCurrentBreak**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager.SkipCurrentBreak) im Code jederzeit aufrufen, um die aktuelle Unterbrechung zu überspringen.
 
 [!code-cs[SkipButtonClick](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetSkipButtonClick)]
 
-## Behandeln von MediaBreak-Ereignissen
+## <a name="handle-mediabreak-events"></a>Behandeln von MediaBreak-Ereignissen
 
 Es gibt verschiedene Ereignisse im Zusammenhang mit Medienunterbrechungen, für die Sie sich registrieren können, um basierend auf den Zustandsänderungen von Medienunterbrechungen Maßnahmen zu ergreifen.
 
@@ -80,12 +87,12 @@ Im folgenden Beispiel wird die [**Source**](https://msdn.microsoft.com/library/w
 
 [!code-cs[BreakSeekedOver](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetBreakSeekedOver)]
 
-## Abrufen von Informationen über die aktuelle Medienunterbrechung
+## <a name="get-information-about-the-current-media-break"></a>Abrufen von Informationen über die aktuelle Medienunterbrechung
 Wie in diesem Artikel bereits erwähnt, kann die [**CurrentItemIndex**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackList.CurrentItemIndex)-Eigenschaft verwendet werden, um zu ermitteln, welches Medienelement in einer Medienunterbrechung gerade wiedergegeben wird. Es empfiehlt sich, in regelmäßigen Abständen eine Überprüfung auf das gerade wiedergegebene Element durchzuführen, um die Benutzeroberfläche zu aktualisieren. Überprüfen Sie unbedingt zuerst die [**CurrentBreak**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager.CurrentBreak)-Eigenschaft auf null. Wenn die Eigenschaft null ist, wird gerade keine Medienunterbrechung wiedergegeben.
 
 [!code-cs[GetCurrentBreakItemIndex](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetGetCurrentBreakItemIndex)]
 
-## Zugreifen auf die aktuelle Wiedergabesitzung
+## <a name="access-the-current-playback-session"></a>Zugreifen auf die aktuelle Wiedergabesitzung
 Das [**MediaPlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession)-Objekt verwendet die **MediaPlayer**-Klasse, um Daten und Ereignisse in Zusammenhang mit den gerade wiedergegebenen Medieninhalten bereitzustellen. Der [**MediaBreakManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager) verfügt auch über eine **MediaPlaybackSession**, auf die Sie zugreifen können, um Daten und Ereignisse abzurufen, die sich speziell auf den Inhalt der Medienunterbrechung beziehen, der gerade wiedergegeben wird. Zu den Informationen, die Sie aus der Wiedergabesitzung erhalten können, gehören der aktuelle Wiedergabestatus, Wiedergabe oder Angehalten, und die aktuelle Wiedergabeposition innerhalb des Inhalts. Sie können die Eigenschaften [**NaturalVideoWidth**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.NaturalVideoWidth) und [**NaturalVideoHeight**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.NaturalVideoHeight) sowie [**NaturalVideoSizeChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.NaturalVideoSizeChanged) verwenden, um die Video-Benutzeroberfläche anzupassen, wenn der Inhalt der Medienunterbrechung ein anderes Seitenverhältnis besitzt als der Hauptinhalt. Sie können auch Ereignisse empfangen, wie z. B. [**BufferingStarted**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.BufferingStarted), [**BufferingEnded**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.BufferingEnded) und [**DownloadProgressChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.DownloadProgressChanged), die wertvolle Telemetriedaten zur Leistung Ihrer App liefern können.
 
 Im folgenden Beispiel wird ein Handler für das **BufferingProgressChanged-Ereignis** registriert. Im Ereignishandler aktualisiert es die Benutzeroberfläche, um den aktuellen Fortschritt der Pufferung anzuzeigen.
@@ -94,7 +101,7 @@ Im folgenden Beispiel wird ein Handler für das **BufferingProgressChanged-Ereig
 
 [!code-cs[BufferingProgressChanged](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetBufferingProgressChanged)]
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 * [Medienwiedergabe](media-playback.md)
 * [Wiedergeben von Audio- und Videoinhalten mit „MediaPlayer“](play-audio-and-video-with-mediaplayer.md)
 * [Manuelle Steuerung der Steuerelemente für den Systemmedientransport](system-media-transport-controls.md)
@@ -105,10 +112,5 @@ Im folgenden Beispiel wird ein Handler für das **BufferingProgressChanged-Ereig
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -1,14 +1,21 @@
 ---
 author: mijacobs
-Description: "Die Navigation in UWP-Apps (Apps für die universelle Windows-Plattform) basiert auf einem flexiblen Modell aus Navigationsstrukturen, Navigationselementen und Funktionen auf Systemebene."
+Description: "Die Navigation in UWP-Apps (Apps für die Universelle Windows-Plattform) basiert auf einem flexiblen Modell aus Navigationsstrukturen, Navigationselementen und Funktionen auf Systemebene."
 title: "Navigationsgrundlagen für UWP-Apps (Windows-Apps)"
 ms.assetid: B65D33BA-AAFE-434D-B6D5-1A0C49F59664
 label: Navigation design basics
 template: detail.hbs
 op-migration-status: ready
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: d0c1858727d4a19e699d2ec9cf5d869460873524
-ms.openlocfilehash: 25a84e7a72fb87faea47845d7d32a5c3071a78a7
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 72596a2d902dff72af76c84115bc1eb0be8fa743
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -16,7 +23,7 @@ ms.openlocfilehash: 25a84e7a72fb87faea47845d7d32a5c3071a78a7
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Die Navigation in UWP-Apps (Apps für die universelle Windows-Plattform) basiert auf einem flexiblen Modell aus Navigationsstrukturen, Navigationselementen und Funktionen auf Systemebene. Gemeinsam ermöglichen sie eine Reihe intuitiver Benutzererfahrungen für die Navigation zwischen Apps, Seiten und Inhalten.
+Die Navigation in UWP-Apps (Apps für die Universelle Windows-Plattform) basiert auf einem flexiblen Modell aus Navigationsstrukturen, Navigationselementen und Funktionen auf Systemebene. Gemeinsam ermöglichen sie eine Reihe intuitiver Benutzererfahrungen für die Navigation zwischen Apps, Seiten und Inhalten.
 
 In einigen Fällen kann es möglich sein, alle Inhalte und Funktionen der App auf einer einzelnen Seite anzuordnen, ohne dass der Benutzer mehr tun muss, als durch Verschieben in den Inhalten zu navigieren. Die meisten Apps verfügen jedoch in der Regel über mehrere Seiten mit Inhalten und Funktionen, die der Benutzer aufrufen und mit denen er interagieren kann. Wenn eine App mehrere Seiten hat, müssen Sie die geeignete Navigationsfunktionalität bereitstellen.
 
@@ -250,10 +257,5 @@ Sie können Navigationselemente kombinieren, um eine für Ihre App geeignete Nav
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO3-->
 
 

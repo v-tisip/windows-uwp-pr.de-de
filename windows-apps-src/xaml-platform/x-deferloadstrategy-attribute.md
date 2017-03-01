@@ -3,27 +3,34 @@ author: jwmsft
 title: xDeferLoadStrategy-Attribut
 description: "„xDeferLoadStrategy“ verzögert die Erstellung eines Elements und seiner untergeordneten Elemente, verkürzt die Startzeit, erhöht aber leicht die Arbeitsspeicherauslastung. Jedes betroffene Element erhöht die Arbeitsspeicherauslastung um ca. 600 Bytes."
 ms.assetid: E763898E-13FF-4412-B502-B54DBFE2D4E4
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 82edf9c3ee7f7303788b7a1272ecb261d3748c5a
-ms.openlocfilehash: c1a0515ea4298b6eb870bdf69e452f774962cdd8
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 4ccc18920a98b3c2258b4965e96fa063124d0546
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# x:DeferLoadStrategy-Attribut
+# <a name="xdeferloadstrategy-attribute"></a>x:DeferLoadStrategy-Attribut
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **x:DeferLoadStrategy="Lazy"** ist ein Feature, das zur Leistungsoptimierung des Starts oder von Strukturerstellungsszenarien einer XAML-App verwendet werden kann. Mit **X: DeferLoadStrategy = "Lazy"** wird die Erstellung eines Elements und seiner untergeordneten Elemente verzögert und damit Startzeit und Speicherverbrauch verringert, da die Elemente nicht erstellt werden müssen. Dies ist zur Reduzierung der Kosten für Elemente nützlich, die selten oder nur bedingt benötigt werden. Das Element wird verwirklicht, wenn Code oder VisualStateManager darauf verweist.
 
 Für die Verwaltung von Verzögerungen sind jedoch 600 Byte zusätzlicher Arbeitsspeicher für jedes betroffene Element erforderlich. Je größer die verzögerte Elementstruktur ist, desto mehr Startzeit sparen Sie – aber auf Kosten eines größeren Arbeitsspeicherbedarfs. Daher ist es möglich, dass durch eine übermäßige Verwendung dieses Attributs die Leistung beeinträchtigt wird.
 
-## XAML-Attributsyntax
+## <a name="xaml-attribute-usage"></a>XAML-Attributsyntax
 
 ``` syntax
 <object x:DeferLoadStrategy="Lazy" .../>
 ```
 
-## Anmerkungen
+## <a name="remarks"></a>Anmerkungen
 
 Die Einschränkungen für die Verwendung von **x:DeferLoadStrategy** sind:
 
@@ -59,7 +66,7 @@ Wenn das [x:Phase-Attribut](x-phase-attribute.md) zusammen mit **x:DeferLoadStra
 
 Eine allgemeine Richtlinie besteht darin, Ihre Anwendung vorher und nachher zu messen, um sicherzustellen, das Sie die gewünschte Leistung erhalten.
 
-## Beispiel
+## <a name="example"></a>Beispiel
 
 ```xml
 <Grid x:Name="DeferredGrid" x:DeferLoadStrategy="Lazy">
@@ -86,10 +93,5 @@ private void RealizeElements_Click(object sender, RoutedEventArgs e)
     this.FindName("DeferredGrid"); // This will realize the deferred grid
 }
 ```
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

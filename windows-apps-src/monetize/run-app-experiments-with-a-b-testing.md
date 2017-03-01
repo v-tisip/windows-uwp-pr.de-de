@@ -1,21 +1,28 @@
 ---
 author: mcleanbyron
 Description: "Sie können über das Windows Dev Center-Dashboard Experimente für Ihre UWP-Apps (Universelle Windows-Plattform) mit A/B-Tests durchführen."
-title: "Ausführen von Experimenten mit A/B-Tests"
+title: "Ausführen von App-Experimenten mit A/B-Tests"
 ms.assetid: 790B4B37-C72D-4CEA-97AF-D226B2216DCC
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, Microsoft Store Services SDK, A/B-Tests, Experimente
 translationtype: Human Translation
-ms.sourcegitcommit: 126fee708d82f64fd2a49b844306c53bb3d4cc86
-ms.openlocfilehash: f6c8e830a3ffcff8db9c280b6a9df5b515b1a356
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 02e6ebbe6d3c02d08ae21ea71e7daa38b7e77255
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Ausführen von Experimenten mit A/B-Tests
+# <a name="run-app-experiments-with-ab-testing"></a>Ausführen von App-Experimenten mit A/B-Tests
 
-Sie können im Windows Dev Center-Dashboard Remote-Variablen definieren, die Sie zur Laufzeit von Ihren UWP-Apps abrufen können. Darüber hinaus haben Sie die Möglichkeit, Varianten dieser Werte mit ihren Benutzer zu testen, um die effektivsten Werte zu identifizieren und so das gewünschte Benutzerverhalten zu erhalten. Ihre App kann Remotevariablen verwenden, um App-Funktionen zu konfigurieren, z. B. In-App-Käufe, Anmeldungsfluss, Überschriften und Platzierung von Werbung.
+Sie können im Windows Dev Center-Dashboard Remotevariablen definieren, die Sie zur Laufzeit von Ihren UWP-Apps (Universelle Windows-Plattform) abrufen können. Darüber hinaus haben Sie die Möglichkeit, Varianten dieser Werte mit Ihren Benutzern zu testen, um die effektivsten Werte für das gewünschte Benutzerverhalten zu ermitteln. Ihre App kann Remotevariablen verwenden, um App-Funktionen zu konfigurieren, z. B. In-App-Käufe, Anmeldungsfluss, Überschriften und Platzierung von Werbung.
 
-Ziel des A/B-Tests sollte sein, eine Variante Ihrer Remotevariablenwerte zu identifizieren, die Ihnen wahrscheinlich bessere Konversionsraten einbringt (z.B. mehr In-App-Käufe), da eine interessantere App-Erfahrung bereitgestellt wird. Wenn Sie eine erfolgreiche Variante identifiziert haben, können Sie das Experiment sofort beenden und diese Variante über das Dev Center-Dashboard für die gesamte Zielgruppe aktivieren, ohne die App erneut veröffentlichen zu müssen.
+Ziel des A/B-Tests sollte sein, eine Variante Ihrer Remotevariablenwerte zu identifizieren, die Ihnen wahrscheinlich bessere Konversionsraten einbringt (z. B. mehr In-App-Käufe), da eine interessantere App-Erfahrung bereitgestellt wird. Wenn Sie eine erfolgreiche Variante identifiziert haben, können Sie das Experiment sofort beenden und diese Variante über das Dev Center-Dashboard für die gesamte Zielgruppe aktivieren, ohne die App erneut veröffentlichen zu müssen.
 
-## Erstellen und Ausführen eines A/B-Tests
+## <a name="create-and-run-an-ab-test"></a>Erstellen und Ausführen eines A/B-Tests
 
 Führen Sie zum Erstellen und Ausführen eines A/B-Tests die folgenden Schritte aus:
 
@@ -26,24 +33,24 @@ Führen Sie zum Erstellen und Ausführen eines A/B-Tests die folgenden Schritte 
 
 Eine exemplarische Vorgehensweise, in der der Prozess vollständig dargestellt wird, finden Sie unter [Create and run your first experiment with A/B testing](create-and-run-your-first-experiment-with-a-b-testing.md) (Erstellen und Ausführen eines ersten Experiments mit A/B-Tests).
 
-## Anforderungen
+## <a name="requirements"></a>Anforderungen
 
 A/B-Tests im Windows Dev Center werden nur für UWP-Apps unterstützt.
 
 Damit Sie Experimente mit A/B-Tests ausführen können, müssen Sie den Entwicklungscomputer einrichten:
 
 * Führen Sie [diese Anweisungen](../get-started/get-set-up.md) aus, um den Entwicklungscomputer für die UWP-Entwicklung einzurichten.
-* [Installieren Sie das Microsoft Store Services SDK](microsoft-store-services-sdk.md#install-the-sdk). Zusätzlich zur API für Experimente bietet dieses SDK auch APIs für weitere Features wie z.B. das Anzeigen von Werbung und das Weiterleiten von Kunden zum Feedback-Hub, um Feedback zur App zu erfassen. 
+* [Installieren Sie das Microsoft Store Services SDK](microsoft-store-services-sdk.md#install-the-sdk). Zusätzlich zur API für Experimente bietet dieses SDK auch APIs für weitere Features wie z. B. das Anzeigen von Werbung und das Weiterleiten von Kunden zum Feedback-Hub, um Feedback zur App zu erfassen.
 
-## Bewährte Verfahren
+## <a name="best-practices"></a>Bewährte Verfahren
 
 Um möglichst aussagekräftige Ergebnisse zu erzielen, sollten Sie beim Durchführen von Experimenten mit A/B-Tests diese Empfehlungen berücksichtigen:
 
 * Führen Sie Experimente mit nur zwei Varianten mit einer zufälligen 50/50-Aufteilung für Variantenzuweisungen durch.
-* Führen Sie die Experimente mindestens 2 bis 4Wochen lang durch, um ausreichend Daten zu erfassen, die statistisch signifikant und aussagekräftig sind.
+* Führen Sie die Experimente mindestens 2 bis 4 Wochen lang durch, um ausreichend Daten zu erfassen, die statistisch signifikant und aussagekräftig sind.
 
 <span id="terms" />
-## Verwandte Begriffe
+## <a name="related-terms"></a>Verwandte Begriffe
 
 |  Begriff  |  Definition  |
 |--------|--------------|
@@ -55,16 +62,11 @@ Um möglichst aussagekräftige Ergebnisse zu erzielen, sollten Sie beim Durchfü
 | Anzeigeereignis    |  Eine beliebige Zeichenfolge, die eine Aktivität darstellt, wenn der Benutzer beginnt, eine Variante anzuzeigen, die Teil Ihres Experiments ist. In der Regel ist dies der Name eines Ereignisses in Ihrem Code. Der App-Code sendet die Zeichenfolge des Anzeigeereignisses an Dev Center, wenn der Benutzer beginnt, eine Variante anzuzeigen. Weitere Informationen finden Sie unter [Programmieren Ihrer App für Experimente](code-your-experiment-in-your-app.md).
 | Umwandlungsereignis    |  Eine beliebige Zeichenfolge, die eine Zielsetzung für das Ziel eines Experiments darstellt. In der Regel ist dies der Name eines Ereignisses in Ihrem Code. Ihr App-Code sendet diese Umwandlungsereignis-Zeichenfolge an Dev Center, wenn der Benutzer ein Ziel erreicht. Weitere Informationen finden Sie unter [Programmieren Ihrer App für Experimente](code-your-experiment-in-your-app.md).  
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Erstellen eines Projekts und Festlegen von Remotevariablen im Dev Center-Dashboard](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md)
 * [Programmieren Ihrer App für Experimente](code-your-experiment-in-your-app.md)
 * [Definieren Ihres Experiments im Dev Center-Dashboard](define-your-experiment-in-the-dev-center-dashboard.md)
 * [Verwalten Ihrer Experimente im Dev Center-Dashboard](manage-your-experiment.md)
 * [Erstellen und Ausführen Ihres ersten Experiments mit A/B-Tests](create-and-run-your-first-experiment-with-a-b-testing.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

@@ -5,12 +5,19 @@ ms.assetid: 024A9B70-9821-45BB-93F1-61C0B2ECF53E
 title: "Nicht empfehlenswerte Praktiken für die Barrierefreiheit"
 label: Accessibility practices to avoid
 template: detail.hbs
+ms.author: mhopkins
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 014fb096817a25651188821fa59b202d260781d5
-ms.openlocfilehash: 382899f038e2ac2ad6e34e98b3ba4849e9685d10
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 27e91fad32818a920f393cba703773ea7fddcf0d
+ms.lasthandoff: 02/07/2017
 
 ---
-# Nicht empfehlenswerte Praktiken für die Barrierefreiheit
+# <a name="accessibility-practices-to-avoid"></a>Nicht empfehlenswerte Praktiken für die Barrierefreiheit
 
 Listet die Praktiken auf, die Sie vermeiden sollten, wenn Sie eine barrierefreie UWP-App (Universelle Windows-Plattform) erstellen möchten. 
 
@@ -29,13 +36,8 @@ Listet die Praktiken auf, die Sie vermeiden sollten, wenn Sie eine barrierefreie
 * **Vermeiden Sie den automatischen Wechsel des Benutzerkontexts oder die automatische Aktivierung von Funktionalität.** Kontext- oder Aktivierungsänderungen sollten nur erfolgen, wenn der Benutzer eine direkte Aktion mit einem Benutzeroberflächenelement ausführt, das den Fokus hat. Zu Änderungen des Benutzerkontexts zählen die Verlagerung des Fokus, die Anzeige neuer Inhalte und die Navigation zu einer anderen Seite. Kontextwechsel ohne Beteiligung des Benutzers können für Benutzer mit Behinderungen verwirrend sein. Ausnahmen von dieser Vorgabe sind das Anzeigen von Untermenüs, die Überprüfung von Formularen, das Anzeigen von Hilfetext in einem anderen Steuerelement sowie Kontextwechsel als Reaktion auf ein asynchrones Ereignis.
 
 <span id="related_topics"/>
-## Verwandte Themen  
+## <a name="related-topics"></a>Verwandte Themen  
 * [Barrierefreiheit](accessibility.md)
 * [Barrierefreiheit im Store](accessibility-in-the-store.md)
 * [Prüfliste für die Barrierefreiheit](accessibility-checklist.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

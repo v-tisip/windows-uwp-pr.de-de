@@ -3,19 +3,26 @@ author: jwmsft
 description: Dient zum eindeutigen Identifizieren von Elementen, die als Ressourcen erstellt und referenziert werden und innerhalb eines ResourceDictionary-Elements vorhanden sind.
 title: xKey-Attribut
 ms.assetid: 141FC5AF-80EE-4401-8A1B-17CB22C2277A
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: ebda34ce4d9483ea72dec3bf620de41c98d7a9aa
-ms.openlocfilehash: 35d4e02ce477757e1a97a54fd9d200dd31675f4d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 67b2b3b60ab6faba5ca30bb585205aba007597ca
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# x:Key-Attribut
+# <a name="xkey-attribute"></a>x:Key-Attribut
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Dient zum eindeutigen Identifizieren von Elementen, die als Ressourcen erstellt und referenziert werden und innerhalb eines [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)-Elements vorhanden sind.
 
-## XAML-Attributsyntax
+## <a name="xaml-attribute-usage"></a>XAML-Attributsyntax
 
 ``` syntax
 <ResourceDictionary>
@@ -23,7 +30,7 @@ Dient zum eindeutigen Identifizieren von Elementen, die als Ressourcen erstellt 
 </ResourceDictionary>
 ```
 
-## XAML-Attributverwendung (implizites **ResourceDictionary**)
+## <a name="xaml-attribute-usage-implicit-resourcedictionary"></a>XAML-Attributverwendung (implizites **ResourceDictionary**)
 
 ``` syntax
 <object.Resources>
@@ -31,14 +38,14 @@ Dient zum eindeutigen Identifizieren von Elementen, die als Ressourcen erstellt 
 </object.Resources>
 ```
 
-## XAML-Werte
+## <a name="xaml-values"></a>XAML-Werte
 
 | Benennung | Beschreibung |
 |------|-------------|
 | object | Beliebige Objekte, die freigegeben werden können. Weitere Informationen finden Sie unter [ResourceDictionary- und XAML-Ressourcenverweise](https://msdn.microsoft.com/library/windows/apps/mt187273). |
 | stringKeyValue | Eine als Schlüssel verwendete echte Zeichenfolge, die der _XamlName_-Grammatik entsprechen muss. Weitere Informationen erhalten Sie in "XamlName-Grammatik" unten. | 
 
-##  XamlName-Grammatik
+##  <a name="xamlname-grammar"></a>XamlName-Grammatik
 
 Im Anschluss finden Sie die maßgebende Grammatik für eine Zeichenfolge, die in der UWP-XAML-Implementierung (Universelle Windows-Plattform) als Schlüssel verwendet wird:
 
@@ -55,7 +62,7 @@ CombiningCharacter::= none
 -   Der Unicode-Zeichenbereich wird nicht unterstützt.
 -   Ein Name darf nicht mit einer Ziffer beginnen.
 
-## Hinweise
+## <a name="remarks"></a>Hinweise
 
 Zu den untergeordneten Elementen eines [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)-Elements gehört im Allgemeinen ein **x:Key**-Attribut zum Angeben eines eindeutigen Schlüsselwerts innerhalb des Wörterbuchs. Die Eindeutigkeit von Schlüsseln wird beim Laden durch den XAML-Prozessor erzwungen. Nicht eindeutige **x:Key**-Werte haben XAML-Analyseausnahmen zur Folge. Auf Anforderung der [{StaticResource}-Markuperweiterung](staticresource-markup-extension.md) haben auch nicht aufgelöste Schlüssel XAML-Analyseausnahmen zur Folge.
 
@@ -66,10 +73,5 @@ Beachten Sie, dass das [**ResourceDictionary**](https://msdn.microsoft.com/libra
 Der Code zum Angeben von **x:Key** entspricht einem beliebigen Vorgang, in dem ein Schlüssel mit dem zugrunde liegenden [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) verwendet wird. So entspricht beispielsweise ein im Markup für eine Ressource angewendeter **x:Key** dem Wert des *key*-Parameters **Insert**, wenn Sie die Ressource einem **ResourceDictionary** hinzufügen.
 
 Ein Element in einem Ressourcenwörterbuch kann einen Wert für **x:Key** auslassen, wenn es sich um ein zielgerichtetes [**Style**](https://msdn.microsoft.com/library/windows/apps/br208849)- oder [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391)-Element handelt. In all diesen Fällen ist der implizite Schlüssel des Ressourcenelements der als Zeichenfolge interpretierte **TargetType**-Wert. Weitere Informationen finden Sie unter [Schnellstart: Formatieren von Steuerelementen](https://msdn.microsoft.com/library/windows/apps/hh465498) und [ResourceDictionary- und XAML-Ressourcenverweise](https://msdn.microsoft.com/library/windows/apps/mt187273).
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

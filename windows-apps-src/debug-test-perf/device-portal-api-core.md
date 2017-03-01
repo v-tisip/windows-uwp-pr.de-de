@@ -3,13 +3,20 @@ author: dbirtolo
 ms.assetid: bfabd3d5-dd56-4917-9572-f3ba0de4f8c0
 title: Referenz zu Kern-APIs des Device Portal
 description: "Hier erhalten Sie Informationen zu den Kern-REST-APIs für das Windows Device Portal, die Sie für den Zugriff auf die Daten und die programmatische Steuerung des Geräts verwenden können."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: b4222774dc4b0f9cdcac871311f5ead69c1e70a9
-ms.openlocfilehash: 3bacb9ac42e157afaed5e9e0e6438654db03ff28
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 10d8799b73a941a4a0eb89fd369d67b2fc6a68c2
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="device-portal-core-api-reference"></a>Referenz zu Kern-APIs des Geräteportals
+# <a name="device-portal-core-api-reference"></a>Referenz zu Kern-APIs des Device Portal
 
 Alle Komponenten im Windows Device Portal basieren auf REST-APIs, die Sie für den Zugriff auf die Daten und die programmatische Steuerung des Geräts verwenden können.
 
@@ -216,17 +223,17 @@ HTTP-Statuscode      | Beschreibung
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
-* Windows-Desktop
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
 
 ---
-## <a name="device-manager"></a>Geräte-Manager
+## Device manager
 ---
 ### <a name="get-the-installed-devices-on-the-machine"></a>Abrufen der auf dem Computer installierten Geräte
 
-**Anforderung**
+**Anfordern**
 
 Mit dem folgenden Anforderungsformat können Sie eine Liste der auf dem Computer installierten Geräte abrufen.
  
@@ -277,15 +284,15 @@ HTTP-Statuscode      | Beschreibung
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
-* Windows-Desktop
+* Windows Desktop
 * IoT
 
 ---
-## <a name="dump-collection"></a>Absturzabbildsammlung
+## Dump collection
 ---
-### <a name="get-the-list-of-all-crash-dumps-for-apps"></a>Abrufen der Liste alle Absturzabbilder für Apps
+### <a name="get-the-list-of-all-crash-dumps-for-apps"></a>Abrufen der Liste aller Absturzabbilder für Apps
 
-**Anforderung**
+**Anfordern**
 
 Mit dem folgenden Anforderungsformat können Sie die Liste aller verfügbaren Absturzabbilder für jede quergeladene App abrufen.
  
@@ -861,15 +868,15 @@ HTTP-Statuscode      | Beschreibung
 <br />
 **Verfügbare Gerätefamilien**
 
-* Windows-Desktop
+* Windows Desktop
 * IoT
 
 ---
-## <a name="etw"></a>ETW
+## ETW
 ---
 ### <a name="create-a-realtime-etw-session-over-a-websocket"></a>Erstellen einer Echtzeit-ETW-Sitzung über ein Websocket
 
-**Anforderung**
+**Anfordern**
 
 Mit dem folgenden Anforderungsformat können Sie eine Echtzeit-ETW-Sitzung erstellen. Dies erfolgt über ein Websocket.  ETW-Ereignisse werden auf dem Server zusammengefasst und einmal pro Sekunde an den Client gesendet. 
  
@@ -925,7 +932,7 @@ Diese Antworten werden vom Server an den Client gesendet. Diese werden als Text 
     "Events":[
         {
             "Timestamp": int,
-            "Provider": string,
+            "ProviderName": string,
             "ID": int, 
             "TaskName": string,
             "Keyword": int,
@@ -1055,16 +1062,16 @@ GET | /api/etw/customproviders
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
-* Windows-Desktop
+* Windows Desktop
 * HoloLens
 * IoT
 
 ---
-## <a name="os-information"></a>Betriebssysteminformationen
+## OS information
 ---
 ### <a name="get-the-machine-name"></a>Abrufen des Computernamens
 
-**Anforderung**
+**Anfordern**
 
 Sie können den Namen eines Computers durch Verwendung des folgenden Anforderungsformats abrufen.
  
@@ -1262,17 +1269,17 @@ HTTP-Statuscode      | Beschreibung
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
-* Windows-Desktop
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
 
 ---
-## <a name="performance-data"></a>Leistungsdaten
+## Performance data
 ---
 ### <a name="get-the-list-of-running-processes"></a>Abrufen der Liste der ausgeführten Prozesse
 
-**Anforderung**
+**Anfordern**
 
 Mit dem folgenden Anforderungsformat können Sie die Liste der derzeit ausgeführten Prozesse abrufen.  Dies kann auch zu einer WebSocket-Verbindung aktualisiert werden, wobei einmal pro Sekunde die gleichen JSON-Daten per Push an den Client gesendet werden. 
  
@@ -1404,17 +1411,17 @@ HTTP-Statuscode      | Beschreibung
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
-* Windows-Desktop
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
 
 ---
-## <a name="power"></a>Stromversorgung
+## Power
 ---
 ### <a name="get-the-current-battery-state"></a>Abrufen des aktuellen Akkustatus
 
-**Anforderung**
+**Anfordern**
 
 Mit dem folgenden Anforderungsformat können Sie den aktuellen Akkustatus abrufen.
  
@@ -1827,15 +1834,15 @@ HTTP-Statuscode      | Beschreibung
 <br />
 **Verfügbare Gerätefamilien**
 
-* Windows-Desktop
+* Windows Desktop
 * IoT
 
 ---
-## <a name="remote-control"></a>Fernbedienung
+## Remote control
 ---
 ### <a name="restart-the-target-computer"></a>Neustarten des Zielcomputers
 
-**Anforderung**
+**Anfordern**
 
 Mit dem folgenden Anforderungsformat können Sie den Zielcomputer neu starten.
  
@@ -1913,17 +1920,17 @@ HTTP-Statuscode      | Beschreibung
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
-* Windows-Desktop
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
 
 ---
-## <a name="task-manager"></a>Task-Manager
+## Task manager
 ---
 ### <a name="start-a-modern-app"></a>Starten einer Modern App
 
-**Anforderung**
+**Anfordern**
 
 Mit dem folgenden Anforderungsformat können Sie eine Modern App starten.
  
@@ -2013,17 +2020,17 @@ HTTP-Statuscode      | Beschreibung
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
-* Windows-Desktop
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
 
 ---
-## <a name="networking"></a>Netzwerk
+## Networking
 ---
 ### <a name="get-the-current-ip-configuration"></a>Abrufen der aktuellen IP-Konfiguration
 
-**Anforderung**
+**Anfordern**
 
 Mit dem folgenden Anforderungsformat können Sie die aktuelle IP-Konfiguration abrufen.
  
@@ -2330,17 +2337,17 @@ HTTP-Statuscode      | Beschreibung
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
-* Windows-Desktop
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
 
 ---
-## <a name="windows-error-reporting-wer"></a>Windows-Fehlerberichterstattung (WER)
+## Windows Error Reporting (WER)
 ---
 ### <a name="download-a-windows-error-reporting-wer-file"></a>Herunterladen einer WER-Datei (Windows Error Reporting)
 
-**Anforderung**
+**Anfordern**
 
 Mit dem folgenden Anforderungsformat können Sie eine WER-Datei herunterladen.
  
@@ -2497,16 +2504,16 @@ HTTP-Statuscode      | Beschreibung
 <br />
 **Verfügbare Gerätefamilien**
 
-* Windows-Desktop
+* Windows Desktop
 * HoloLens
 * IoT
 
 ---
-## <a name="windows-performance-recorder-wpr"></a>Windows Performance Recorder (WPR) 
+## Windows Performance Recorder (WPR) 
 ---
 ### <a name="start-tracing-with-a-custom-profile"></a>Starten der Ablaufverfolgung mit einem benutzerdefinierten Profil
 
-**Anforderung**
+**Anfordern**
 
 Mit dem folgenden Anforderungsformat können Sie ein WPR-Profil hochladen und die Ablaufverfolgung mit diesem Profil starten.  Es kann immer nur eine Spur ausgeführt werden. Das Profil bleibt nicht auf dem Gerät. 
  
@@ -2960,16 +2967,16 @@ HTTP-Statuscode      | Beschreibung
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
-* Windows-Desktop
+* Windows Desktop
 * HoloLens
 * IoT
 
 ---
-## <a name="dns-sd-tags"></a>DNS-SD-Tags 
+## DNS-SD Tags 
 ---
 ### <a name="view-tags"></a>Anzeigen von Tags
 
-**Anforderung**
+**Anfordern**
 
 Anzeigen der derzeit für das Gerät angewendeten Tags.  Diese werden über DNS-SD-TXT-Datensätze im T-Schlüssel angekündigt.  
  
@@ -3465,8 +3472,3 @@ HTTP-Statuscode      | Beschreibung
 * HoloLens
 * Xbox
 * IoT
-
-
-<!--HONumber=Dec16_HO1-->
-
-

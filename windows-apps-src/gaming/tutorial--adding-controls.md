@@ -1,36 +1,43 @@
 ---
 author: mtoepke
 title: "Hinzufügen von Steuerelementen"
-description: "In diesem Thema befassen wir uns damit, wie im beispielhaften Spiel Bewegungs-/Blicksteuerelemente in einem 3D-Spiel implementiert und einfache Steuerelemente für Toucheingabe, Maus und Gamecontroller entwickelt werden."
+description: "Jetzt sehen wir uns an, wie im Beispiel-Spiel Bewegungs-/Blicksteuerelemente in einem 3D-Spiel implementiert und einfache Steuerelemente für Toucheingabe, Maus und Gamecontroller entwickelt werden."
 ms.assetid: f9666abb-151a-74b4-ae0b-ef88f1f252f8
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Spiele, Steuerelemente, Eingabe"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 49214f3bc14b6a475a77c5dbb7c0f08bb0818df6
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d70e9ef8efffd2a78f6c49596e716770a9162b5c
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Hinzufügen von Steuerelementen
+# <a name="add-controls"></a>Hinzufügen von Steuerelementen
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 In diesem Thema befassen wir uns damit, wie das Beispielspiel die Bewegungs-/Blicksteuerung in einem 3D-Spiel implementiert und wie einfache Steuerungen für Toucheingabe, Maus und Gamecontroller entwickelt werden.
 
-## Ziel
+## <a name="objective"></a>Ziel
 
 
 -   Implementieren von Maus-/Tastatur-, Toucheingabe- und Xbox-Controller-Steuerungen in einem Spiel für die universelle Windows-Plattform (UWP) mit DirectX
 
-## UWP-Spiel-Apps und Steuerungen
+## <a name="uwp-game-apps-and-controls"></a>UWP-Spiel-Apps und Steuerungen
 
 
-Ein gutes UWP-Spiel unterstützt viele unterschiedliche Schnittstellen. Ein potenzieller Spieler kann Windows10 auf einem Tablet ohne physische Tasten, auf einem Medien-PC mit Xbox-Controller oder auf einem topmodernen Gaming-PC mit Hochleistungsmaus und Gaming-Tastatur verwenden. Ihr Spiel sollte all diese Geräte unterstützen, sofern sein Entwurf es zulässt.
+Ein gutes UWP-Spiel unterstützt viele unterschiedliche Schnittstellen. Ein potenzieller Spieler kann Windows 10 auf einem Tablet ohne physische Tasten, auf einem Medien-PC mit Xbox-Controller oder auf einem topmodernen Gaming-PC mit Hochleistungsmaus und Gaming-Tastatur verwenden. Ihr Spiel sollte all diese Geräte unterstützen, sofern sein Entwurf es zulässt.
 
 In diesem Beispiel werden alle drei Geräte unterstützt. Es ist ein einfaches First-Person-Shooterspiel, und die für dieses Genre üblichen Bewegungs-/Blicksteuerungen lassen sich für alle drei Eingabetypen mühelos implementieren.
 
 Weitere Informationen zu Steuerungen und speziell zu Bewegungs-/Blicksteuerungen finden Sie unter [Bewegungs-/Blicksteuerungen für Spiele](tutorial--adding-move-look-controls-to-your-directx-game.md) sowie unter [Toucheingabesteuerelemente für Spiele](tutorial--adding-touch-controls-to-your-directx-game.md).
 
-## Allgemeine Steuerungsverhalten
+## <a name="common-control-behaviors"></a>Allgemeine Steuerungsverhalten
 
 
 Die Implementierung von Fingereingabesteuerungen und Maus-/Tastatursteuerungen ist im Grunde sehr ähnlich. In einer UWP-App ist ein Zeiger einfach ein Punkt auf dem Bildschirm. Sie können ihn bewegen, indem Sie die Maus oder den Finger auf dem Touchscreen bewegen. Folglich können Sie einen einzelnen Satz von Ereignissen registrieren und müssen sich keine Gedanken darüber machen, ob der Spieler eine Maus oder einen Touchscreen zum Bewegen und Betätigen des Zeigers verwendet.
@@ -197,11 +204,11 @@ bool MoveLookController::IsFiring()
 
 Wenn der Spieler den Zeiger aus dem Hauptfenster des Spiels bewegt oder die Pause-Taste drückt (P-TASTE oder Start-Taste des Xbox-Controllers), muss das Spiel angehalten werden. Die **MoveLookController**-Instanz registriert die Tastenbetätigung und informiert die Spielschleife, wenn sie die **IsPauseRequested**-Methode aufruft. Wenn **IsPauseRequested** jetzt **true** zurückgibt, ruft die Spielschleife **WaitForPress** für die **MoveLookController**-Instanz auf, um den Controller in den Zustand **WaitForInput** zu versetzen. Anschließend wartet die **MoveLookController**-Instanz darauf, dass der Spieler eine der Menüoptionen zum Laden, Fortsetzen oder Beenden des Spiels auswählt, und hält die Verarbeitung der Eingabeereignisse des Spiels an, bis sich der Controller wieder im Zustand **Active** befindet.
 
-Weitere Informationen finden Sie im [vollständigen Codebeispiel für diesen Abschnitt](#code_sample).
+Weitere Informationen finden Sie im [vollständigen Codebeispiel für diesen Abschnitt](#complete-sample-code-for-this-section).
 
 Jetzt wollen wir uns etwas ausführlicher mit der Implementierung der drei Steuerungstypen beschäftigen.
 
-## Implementieren relativer Maussteuerungen
+## <a name="implementing-relative-mouse-controls"></a>Implementieren relativer Maussteuerungen
 
 
 Wenn Mausbewegungen erkannt werden, sollen diese Bewegungen zum Ermitteln des neuen Neigungs- und Schwenkwinkels der Kamera verwendet werden. Hierzu implementieren wir relative Maussteuerungen, bei denen nicht die absoluten x-y-Pixelkoordinaten der Bewegung aufgezeichnet werden, sondern die relative Distanz der Mausbewegung (also das Delta zwischen Start und Ende der Bewegung) erfasst wird.
@@ -250,7 +257,7 @@ void MoveLookController::OnMouseMoved(
 }
 ```
 
-## Implementieren von Toucheingabesteuerungen
+## <a name="implementing-touch-controls"></a>Implementieren von Toucheingabesteuerungen
 
 
 Toucheingabesteuerungen sind aufgrund ihrer Komplexität besonders knifflig und erfordern ein hohes Maß an Feinabstimmung. Im Beispielspiel wird ein Rechteck im unteren linken Quadranten des Bildschirms als Steuerkreuz verwendet. Wenn Sie den Daumen in diesem Bereich nach links und rechts bewegen, gleitet die Kamera nach links bzw. rechts, und wenn Sie den Daumen nach oben und unten bewegen, gleitet die Kamera vor bzw. zurück. Ein Rechteck im unteren rechten Quadrant des Bildschirms dient zum Schießen. Zum Zielen (Nick- und Gierwinkel) bewegen Sie den Finger auf den Teilen des Bildschirms, die nicht für das Bewegen und Schießen vorgesehen sind. Wenn Sie den Finger bewegen, bewegt sich die Kamera (mit festem Fadenkreuz) entsprechend.
@@ -350,7 +357,7 @@ void MoveLookController::OnPointerPressed(
 }
 ```
 
-Falls in einem der drei Steuerungsbereiche (Bewegungsrechteck, Schießrechteck und übriger Bildschirm) ein [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278)-Ereignis aufgetreten ist, weist die **MoveLookController**-Instanz die Zeiger-ID für den Zeiger, von dem das Ereignis ausgelöst wurde, einer spezifischen, dem jeweiligen Bildschirmbereich entsprechenden Variable zu. Bei einem Ereignis im Bewegungsrechteck wird z.B. die **m\_movePointerID**-Variable auf die Zeiger-ID festgelegt, von der das Ereignis ausgelöst wurde. Außerdem wird eine boolesche Verwendungsvariable (in diesem Beispiel: **m\_lookInUse**) festgelegt, um anzugeben, dass die Steuerung noch nicht freigegeben wurde.
+Falls in einem der drei Steuerungsbereiche (Bewegungsrechteck, Schießrechteck und übriger Bildschirm) ein [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278)-Ereignis aufgetreten ist, weist die **MoveLookController**-Instanz die Zeiger-ID für den Zeiger, von dem das Ereignis ausgelöst wurde, einer spezifischen, dem jeweiligen Bildschirmbereich entsprechenden Variable zu. Bei einem Ereignis im Bewegungsrechteck wird z. B. die **m\_movePointerID**-Variable auf die Zeiger-ID festgelegt, von der das Ereignis ausgelöst wurde. Außerdem wird eine boolesche Verwendungsvariable (in diesem Beispiel: **m\_lookInUse**) festgelegt, um anzugeben, dass die Steuerung noch nicht freigegeben wurde.
 
 Im nächsten Schritt erfahren Sie, wie das Beispielspiel das [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276)-Touchscreenereignis behandelt.
 
@@ -465,13 +472,13 @@ void MoveLookController::OnPointerReleased(
 }
 ```
 
-Wenn die ID des Zeigers, von dem das [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279)-Ereignis ausgelöst wurde, die ID des zuvor erfassten Mauszeigers ist, legt die **MoveLookController**-Instanz die Geschwindigkeit auf Null fest, da der Spieler das Bewegungsrechteck nicht mehr berührt. Würde die Geschwindigkeit nicht auf0 festgelegt, würde der Spieler den Zeiger weiter bewegen. Wenn Sie eine Art Trägheit implementieren möchten, fügen Sie hier die Methode hinzu, mit der die Geschwindigkeit im Laufe zukünftiger **Update**-Aufrufe der Spielschleife nach und nach auf Null reduziert wird.
+Wenn die ID des Zeigers, von dem das [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279)-Ereignis ausgelöst wurde, die ID des zuvor erfassten Mauszeigers ist, legt die **MoveLookController**-Instanz die Geschwindigkeit auf Null fest, da der Spieler das Bewegungsrechteck nicht mehr berührt. Würde die Geschwindigkeit nicht auf 0 festgelegt, würde der Spieler den Zeiger weiter bewegen. Wenn Sie eine Art Trägheit implementieren möchten, fügen Sie hier die Methode hinzu, mit der die Geschwindigkeit im Laufe zukünftiger **Update**-Aufrufe der Spielschleife nach und nach auf Null reduziert wird.
 
 Andernfalls setzt die **MoveLookController**-Instanz die jeweiligen Zeiger-IDs zurück, wenn das [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279)-Ereignis im Schießrechteck oder Blickbereich ausgelöst wurde.
 
 Dies sind die Grundlagen für die Implementierung der Touchscreensteuerungen im Beispielspiel. Fahren wir nun mit den Maus- und Tastatursteuerungen fort.
 
-## Implementieren von Maus- und Tastatursteuerungen
+## <a name="implementing-mouse-and-keyboard-controls"></a>Implementieren von Maus- und Tastatursteuerungen
 
 
 Im Beispielspiel werden die folgenden Maus- und Tastatursteuerungen implementiert:
@@ -664,7 +671,7 @@ Wenn der Spieler aufhört, eine der Maustasten zu drücken, ist die Eingabe abge
 
 Jetzt werden wir und mit dem letzten Steuerungstyp befassen – dem Xbox-Controller. Er wird getrennt von den Fingereingabe- und Maussteuerungen behandelt, da er kein Zeigerobjekt verwendet.
 
-## Implementieren von Xbox-Controller-Steuerungen
+## <a name="implementing-xbox-controller-controls"></a>Implementieren von Xbox-Controller-Steuerungen
 
 
 Im Beispielspiel wird die Unterstützung für den Xbox-Controller durch Aufrufe der [XInput](https://msdn.microsoft.com/library/windows/desktop/hh405053)-APIs hinzugefügt. Hierbei handelt es sich um einen Satz von APIs zum Vereinfachen der Programmierung für Gamecontroller. Im Beispielspiel wird der linke Analogstick des Xbox-Controllers für die Bewegung des Spielers, der rechte Analogstick für die Blicksteuerung und der rechte Auslöser zum Schießen verwendet. Zum Anhalten und Fortsetzen des Spiels wird die Start-Taste verwendet.
@@ -797,7 +804,7 @@ void MoveLookController::UpdateGameController()
 }
 ```
 
-Befindet sich der Gamecontroller im Zustand **Active**, überprüft die Methode, ob ein Benutzer den linken Analogstick in eine bestimmte Richtung bewegt hat. Die registrierte Bewegung des Sticks in eine Richtung muss aber größer sein als der Radius des inaktiven Bereichs. Andernfalls passiert nichts. Dieser Radius des inaktiven Bereichs ist erforderlich, um "Drifting" darzustellen, d.h. vom Controller erkannte winzige Bewegungen des Daumens, wenn dieser auf dem Stick liegt. Ohne den inaktiven Bereich kann der Spieler schnell die Geduld verlieren, da sich die Steuerung sehr unruhig anfühlt.
+Befindet sich der Gamecontroller im Zustand **Active**, überprüft die Methode, ob ein Benutzer den linken Analogstick in eine bestimmte Richtung bewegt hat. Die registrierte Bewegung des Sticks in eine Richtung muss aber größer sein als der Radius des inaktiven Bereichs. Andernfalls passiert nichts. Dieser Radius des inaktiven Bereichs ist erforderlich, um "Drifting" darzustellen, d. h. vom Controller erkannte winzige Bewegungen des Daumens, wenn dieser auf dem Stick liegt. Ohne den inaktiven Bereich kann der Spieler schnell die Geduld verlieren, da sich die Steuerung sehr unruhig anfühlt.
 
 Die Methode **Update** führt die gleiche Prüfung dann auf dem rechten Stick aus, um festzustellen, ob der Spieler die Richtung der Kamera geändert hat, solange die Bewegung auf dem Stick länger ist als irgendein anderer Totzonenradius.
 
@@ -805,12 +812,12 @@ Die Methode **Update** führt die gleiche Prüfung dann auf dem rechten Stick au
 
 Jetzt wissen Sie, wie in diesem Beispiel ein kompletter Satz von Steuerungsoptionen implementiert wird. Denken Sie daran, dass eine gute UWP-App immer unterschiedliche Steuerungsoptionen unterstützt, damit Spieler mit den von ihnen bevorzugten Formfaktoren und Geräten spielen können.
 
-## Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte
 
 
 Bis auf eine haben wir nun jede Hauptkomponente eines UWP-DirectX-Spiels kennengelernt. Was noch fehlt, ist Audio. Musik und Soundeffekte sind bei jedem Spiel wichtig. Befassen wir uns also mit dem [Hinzufügen von Sound](tutorial--adding-sound.md).
 
-## Vollständiger Beispielcode für diesen Abschnitt
+## <a name="complete-sample-code-for-this-section"></a>Vollständiger Beispielcode für diesen Abschnitt
 
 
 MoveLookController.h
@@ -1901,11 +1908,11 @@ void MoveLookController::UpdateGameController()
 ```
 
 > **Hinweis**  
-Dieser Artikel ist für Windows10-Entwickler gedacht, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows8.x oder Windows Phone8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 
 [Erstellen eines einfachen UWP-Spiels mit DirectX](tutorial--create-your-first-metro-style-directx-game.md)
@@ -1916,10 +1923,5 @@ Dieser Artikel ist für Windows10-Entwickler gedacht, die Apps für die universe
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

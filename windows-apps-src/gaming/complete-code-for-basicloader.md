@@ -3,16 +3,23 @@ author: mtoepke
 title: "Vollständiger Code für &quot;BasicLoader&quot;"
 description: "Vollständiger Code für eine Klasse und Methoden, die allgemeine Grafikressourcen wie Gitter, Texturen und verschiedene Shader-Objekte konvertieren und laden."
 ms.assetid: b37f5852-278c-57b8-0834-002fb837e158
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Spiele, BasicLoader"
 translationtype: Human Translation
-ms.sourcegitcommit: 8a7202f2b860a4b7aa52f44ebd630d73889544a2
-ms.openlocfilehash: ab16033c05273a0cd483fdc7a5302a3ff461e4b1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d6714030031a4986c8a5495fc02a5c68fb0aa4d8
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Vollständiger Code für "BasicLoader"
+# <a name="complete-code-for-basicloader"></a>Vollständiger Code für "BasicLoader"
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Vollständiger Code für eine Klasse und Methoden, die allgemeine Grafikressourcen wie Gitter, Texturen und verschiedene Shader-Objekte konvertieren und laden.
 
@@ -20,28 +27,28 @@ Dieses Thema enthält die folgenden Abschnitte:
 
 -   [Technologien](#technologies)
 -   [Anforderungen](#requirements)
--   [Anzeigen des Codes (C++)](#view-the-code-c-)
+-   [Anzeigen des Codes (C++)](#view-the-code-c)
 
 <span id="download_locations"></span>
-## Downloadort
+## <a name="download-location"></a>Downloadort
 
 
 Dieses Beispiel kann nicht heruntergeladen werden.
 
-## Technologien
+## <a name="technologies"></a>Technologien
 
 **Programmiersprachen** – C++  
 **Programmiermodelle** – Windows-Runtime
 
-## Anforderungen
+## <a name="requirements"></a>Anforderungen
 
 **Unterstützte Mindestversion (Client)** – Windows 10                              
 **Unterstützte Mindestversion (Server)** – Windows Server 2016 Technical Preview 
 
 
-## Anzeigen des Codes (C++)
+## <a name="view-the-code-c"></a>Anzeigen des Codes (C++)
 
-## BasicLoader.h
+## <a name="basicloaderh"></a>BasicLoader.h
 
 ```cpp
 //// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF
@@ -222,7 +229,7 @@ private:
 };
 ```
 
-## BasicLoader.cpp
+## <a name="basicloadercpp"></a>BasicLoader.cpp
 
 
 ```cpp
@@ -1107,10 +1114,5 @@ task<void> BasicLoader::LoadMeshAsync(
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

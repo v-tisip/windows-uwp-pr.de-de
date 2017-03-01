@@ -3,20 +3,27 @@ author: drewbatgit
 ms.assetid: 9146212C-8480-4C16-B74C-D7F08C7086AF
 description: "In diesem Artikel wird beschrieben, wie Sie MIDI-Geräte (Musical Instrument Digital Interface) aufzählen und MIDI-Nachrichten in einer universellen Windows-App senden und empfangen."
 title: MIDI
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 599e7dd52145d695247b12427c1ebdddbfc4ffe1
-ms.openlocfilehash: cc3553aff7c30a2e84b527dc9e108f7c45b7b21f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: bd494a814155d72642bb721a939fcc8c50668a2d
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# MIDI
+# <a name="midi"></a>MIDI
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 In diesem Artikel wird beschrieben, wie Sie MIDI-Geräte (Musical Instrument Digital Interface) aufzählen und MIDI-Nachrichten in einer universellen Windows-App senden und empfangen.
 
-## Aufzählen von MIDI-Geräten
+## <a name="enumerate-midi-devices"></a>Aufzählen von MIDI-Geräten
 
 Fügen Sie Ihrem Projekt vor dem Aufzählen und Verwenden von MIDI-Geräten die folgenden Namespaces hinzu.
 
@@ -34,7 +41,7 @@ Das Aufzählen von MIDI-Ausgabegeräten funktioniert genau wie das Aufzählen vo
 
 [!code-cs[EnumerateMidiOutputDevices](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetEnumerateMidiOutputDevices)]
 
-## Erstellen einer Geräteüberwachungselement-Hilfsklasse
+## <a name="create-a-device-watcher-helper-class"></a>Erstellen einer Geräteüberwachungselement-Hilfsklasse
 
 Der [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/br225459)-Namespace enthält die [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/br225446)-Klasse, die eine App benachrichtigen kann, wenn Geräte hinzugefügt oder aus dem System entfernt werden, oder wenn die Informationen für ein Gerät aktualisiert werden. Da MIDI-fähige Apps in der Regel sowohl an Eingabe- als auch an Ausgabegeräten interessiert sind, wird in diesem Beispiel eine Hilfsklasse erstellt, die das **DeviceWatcher**-Muster implementiert, sodass derselbe Code für MIDI-Eingabe- und -Ausgabegeräte verwendet werden kann, ohne dass eine Duplizierung erforderlich ist.
 
@@ -84,7 +91,7 @@ Geben Sie einen Destruktor an, um die Registrierung der Überwachungselement-Ere
 
 [!code-cs[WatcherDestructor](./code/MIDIWin10/cs/MyMidiDeviceWatcher.cs#SnippetWatcherDestructor)]
 
-## Erstellen von MIDI-Ports zum Senden und Empfangen von Nachrichten
+## <a name="create-midi-ports-to-send-and-receive-messages"></a>Erstellen von MIDI-Ports zum Senden und Empfangen von Nachrichten
 
 Deklarieren Sie in der CodeBehind-Datei für die Seite Membervariablen für zwei Instanzen der **MyMidiDeviceWatcher**-Hilfsklasse, eine für Eingabe- und eine für Ausgabegeräte.
 
@@ -122,7 +129,7 @@ Achten Sie beim Deaktivieren Ihrer App darauf, die App-Ressourcen zu bereinigen.
 
 [!code-cs[CleanUp](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetCleanUp)]
 
-## Verwenden des integrierten Windows General MIDI-Synthesizers
+## <a name="using-the-built-in-windows-general-midi-synth"></a>Verwenden des integrierten Windows General MIDI-Synthesizers
 
 Beim Aufzählen der MIDI-Ausgabegeräte mit dem oben beschriebenen Verfahren erkennt Ihre App ein MIDI-Gerät namens „Microsoft GS Wavetable Synth“. Hierbei handelt es sich um einen integrierten General MIDI-Synthesizer, der von Ihrer App aus wiedergeben werden kann. Bei dem Versuch, einen MIDI-Out-Port für dieses Gerät zu erstellen, tritt jedoch ein Fehler auf, wenn die SDK-Erweiterung für den integrierten Synthesizer nicht in Ihrem Projekt enthalten ist.
 
@@ -141,10 +148,5 @@ Beim Aufzählen der MIDI-Ausgabegeräte mit dem oben beschriebenen Verfahren erk
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

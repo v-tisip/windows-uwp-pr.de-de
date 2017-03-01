@@ -2,15 +2,23 @@
 author: WilliamsJason
 title: Device Portal - Referenz zu den APIs zum Registrieren loser Ordner
 description: Erfahren Sie, wie Sie programmgesteuert auf die APIs zum Registrieren loser Ordner zugreifen.
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
+ms.assetid: efdf4214-9738-4df6-bf1f-ed7141696ef6
 translationtype: Human Translation
-ms.sourcegitcommit: ef0f1339b77a8d1f60a677b2ff19a63b68f0d6cd
-ms.openlocfilehash: 42dc5e16065f1a2252f63743269970cf85fb0b95
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 5d1926655f44fb54b07e7222911c94ef0e526cd0
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Registrieren einer App in einem losen Ordner  
+# <a name="register-an-app-in-a-loose-folder"></a>Registrieren einer App in einem losen Ordner  
 
-**Anforderung**
+**Anfordern**
 
 Mithilfe des folgenden Anforderungsformats können Sie eine App in einem losen Ordner registrieren.
 
@@ -58,10 +66,5 @@ Es gibt mindestens drei verschiedene Möglichkeiten, die lose App in den gewüns
 Die zweite Möglichkeit besteht darin, einzelne Dateien mithilfe eines POST-Befehls für „/api/filesystem/apps/file“ in den richtigen Ordner zu kopieren. „knownfolderid“ entspricht dabei „DevelopmentFiles“, „packagefullname“ ist leer, und der Dateiname und Pfad sind ordnungsgemäß angegeben (der Pfad muss mit „LooseApps“ beginnen).
 
 Die dritte Möglichkeit besteht darin, einen vollständigen Ordner über [/api/app/packagemanager/upload](wdp-folder-upload.md) auf einmal zu kopieren. Dabei entspricht „destinationFolder“ dem Namen des Ordners, der unter „d:\developmentfiles\looseapps“ gespeichert werden soll, und die Nutzlast einem multipart-konformen HTTP-Text des Verzeichnisinhalts.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

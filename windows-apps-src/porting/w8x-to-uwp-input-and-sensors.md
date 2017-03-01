@@ -3,9 +3,16 @@ author: mcleblanc
 description: "Code, der in das Gerät selbst integriert und auf dessen Sensoren abgestimmt ist, umfasst auch Eingaben vom und Ausgaben an den Benutzer."
 title: "Portieren von Windows-Runtime 8.x zu UWP für E/A, Gerät und App-Modell"
 ms.assetid: bb13fb8f-bdec-46f5-8640-57fb0dd2d85b
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: c3fb6a76800198c15ef05da9ba198ac5e73b35a8
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 69fdeed812eb6add3eeacb0e776e7477e061979f
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -74,10 +81,5 @@ Wenn eine App, für die im App-Paketmanifest die Positionsfunktion deklariert wi
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

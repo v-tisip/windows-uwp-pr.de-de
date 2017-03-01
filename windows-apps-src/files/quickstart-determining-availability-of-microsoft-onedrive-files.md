@@ -3,17 +3,24 @@ author: laurenhughes
 ms.assetid: 3604524F-112A-474F-B0CA-0726DC8DB885
 title: "Ermitteln der Verfügbarkeit von Microsoft OneDrive-Dateien"
 description: "Ermitteln Sie mithilfe der StorageFile.IsAvailable-Eigenschaft, ob eine Microsoft OneDrive-Datei verfügbar ist."
+ms.author: lahugh
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
-ms.openlocfilehash: 2289b85a8b26e1827446709e1db97c447b3b7964
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: dcc1104fb50b926c76d2c9d28983f91dc76edef0
+ms.lasthandoff: 02/07/2017
 
 ---
-# <a name="determining-availability-of-microsoft-onedrive-files"></a>Ermitteln der Verfügbarkeit von Microsoft OneDrive-Dateien
+# <a name="determining-availability-of-microsoft-onedrive-files"></a>Ermitteln der Verfügbarkeit von Microsoft OneDrive-Dateien
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-** Wichtige APIs **
+**Wichtige APIs**
 
 -   [**FileIO-Klasse**](https://msdn.microsoft.com/library/windows/apps/Hh701440)
 -   [**StorageFile-Klasse**](https://msdn.microsoft.com/library/windows/apps/BR227171)
@@ -89,9 +96,4 @@ private async void CheckAvailabilityOfFilesInPicturesLibrary()
  
 
  
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

@@ -5,28 +5,35 @@ title: "Ressourcen für Kacheln und Symbole"
 ms.assetid: D6CE21E5-2CFA-404F-8679-36AA522206C7
 label: Tile and icon assets
 template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 4aa22b9eae8ff7f7da2c73f3fdf3a63ed12ff87b
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: fa195ab35b0d6b1825adb8ce18ae1666d0bf1581
+ms.lasthandoff: 02/07/2017
 
 ---
-# Richtlinien für die Ressourcen für Kacheln und Symbole
+# <a name="guidelines-for-tile-and-icon-assets"></a>Richtlinien für die Ressourcen für Kacheln und Symbole
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
 Ressourcen für App-Symbole, die in einer Vielzahl von Formen innerhalb des Windows 10-Betriebssystems vorkommen, sind die Aushängeschilder für Ihre App für die Universelle Windows-Plattform (UWP). In diesen Richtlinien wird beschrieben, wo Ressourcen für App-Symbole im System angezeigt werden, und Sie erhalten ausführliche Designtipps zum Erstellen ansprechender Symbole.
 
-![Starten von Windows10 und Kacheln](images/assetguidance01.jpg)
+![Starten von Windows 10 und Kacheln](images/assetguidance01.jpg)
 
-## Adaptive Skalierung
+## <a name="adaptive-scaling"></a>Adaptive Skalierung
 
 
-Zunächst erhalten Sie einen kurzen Überblick über die adaptive Skalierung, um die Funktion der Skalierung mit Ressourcen verstehen zu können. Mit Windows10 wird eine Weiterentwicklung des vorhandenen Skalierungsmodells eingeführt. Neben der Skalierung von Vektorinhalten gibt es einen einheitlichen Satz von Skalierungsfaktoren, der eine einheitliche Größe für UI-Elemente für eine Vielzahl von Bildschirmgrößen und -auflösungen bietet. Die Skalierungsfaktoren sind auch mit den Skalierungsfaktoren anderer Betriebssysteme wie iOS und Android kompatibel, sodass die Ressourcen einfacher für alle diese Plattformen verwendet werden können.
+Zunächst erhalten Sie einen kurzen Überblick über die adaptive Skalierung, um die Funktion der Skalierung mit Ressourcen verstehen zu können. Mit Windows 10 wird eine Weiterentwicklung des vorhandenen Skalierungsmodells eingeführt. Neben der Skalierung von Vektorinhalten gibt es einen einheitlichen Satz von Skalierungsfaktoren, der eine einheitliche Größe für UI-Elemente für eine Vielzahl von Bildschirmgrößen und -auflösungen bietet. Die Skalierungsfaktoren sind auch mit den Skalierungsfaktoren anderer Betriebssysteme wie iOS und Android kompatibel, sodass die Ressourcen einfacher für alle diese Plattformen verwendet werden können.
 
 Die Auswahl der aus dem Store herunterzuladenden Ressourcen erfolgt zum Teil auf Grundlage des DPI-Werts eines Geräts. Nur die Ressourcen, die dem Gerät am besten entsprechen, werden heruntergeladen.
 
-## Kachelelemente
+## <a name="tile-elements"></a>Kachelelemente
 
 
 Die grundlegenden Komponenten einer Startkachel sind eine Rückwand, ein Symbol, eine Brandingleiste, Ränder und ein App-title:
@@ -41,10 +48,10 @@ Die Höhe der Brandingleiste basiert auf dem Skalierungsfaktor des Geräts, auf 
 
 | Skalierungsfaktor | Pixel |
 |--------------|--------|
-| 100%         | 32     |
-| 125%         | 40     |
-| 150%         | 48     |
-| 200%         | 64     |
+| 100 %         | 32     |
+| 125 %         | 40     |
+| 150 %         | 48     |
+| 200 %         | 64     |
 | 400%         | 128    |
 
  
@@ -57,15 +64,15 @@ Die Randbreite basiert auf dem Skalierungsfaktor des Geräts, auf dem sie angeze
 
 | Skalierungsfaktor | Pixel |
 |--------------|--------|
-| 100%         | 8      |
-| 125%         | 10     |
-| 150%         | 12     |
-| 200%         | 16     |
+| 100 %         | 8      |
+| 125 %         | 10     |
+| 150 %         | 12     |
+| 200 %         | 16     |
 | 400%         | 32     |
 
  
 
-## Kachelressourcen
+## <a name="tile-assets"></a>Kachelressourcen
 
 
 Jede Kachelressource hat die gleiche Größe wie die Kachel, auf der sie sich befindet. Sie können die App-Kacheln mit zwei unterschiedlichen Darstellungsformen einer Ressource kennzeichnen:
@@ -106,19 +113,19 @@ In diesem Beispiel ist das Symbol für die Kachel zu klein:
 
 Die folgenden Abstandsverhältnisse sind optimal für horizontal oder vertikal ausgerichtete Symbole.
 
-Beschränken Sie bei kleinen Kacheln die Breite und Höhe auf 66% der Kachelgröße:
+Beschränken Sie bei kleinen Kacheln die Breite und Höhe auf 66 % der Kachelgröße:
 
 ![Verhältnisse bei kleinen Kachelgrößen](images/assetguidance09.png)
 
-Beschränken Sie bei mittelgroßen Kacheln die Symbolbreite auf 66% und die Höhe auf 50% der Kachelgröße. Dadurch wird verhindert, dass Elemente in der Brandingleiste überlappen:
+Beschränken Sie bei mittelgroßen Kacheln die Symbolbreite auf 66 % und die Höhe auf 50 % der Kachelgröße. Dadurch wird verhindert, dass Elemente in der Brandingleiste überlappen:
 
 ![Verhältnisse bei mittelgroßen Kacheln](images/assetguidance10.png)
 
-Beschränken Sie bei breiten Kacheln die Symbolbreite auf 66% und die Höhe auf 50% der Kachelgröße. Dadurch wird verhindert, dass Elemente in der Brandingleiste überlappen:
+Beschränken Sie bei breiten Kacheln die Symbolbreite auf 66 % und die Höhe auf 50 % der Kachelgröße. Dadurch wird verhindert, dass Elemente in der Brandingleiste überlappen:
 
 ![Verhältnisse bei breiten Kacheln](images/assetguidance11.png)
 
-Beschränken Sie bei großen Kacheln die Breite und Höhe auf 50% der Kachelgröße:
+Beschränken Sie bei großen Kacheln die Breite und Höhe auf 50 % der Kachelgröße:
 
 ![Verhältnisse bei großen Kacheln](images/assetguidance12.png)
 
@@ -134,22 +141,22 @@ In diesem Beispiel sind die Ränder zu eng:
 
 ![Randlose Kachel mit zu engen Rändern](images/assetguidance15.png)
 
-## Kachelressourcen in Listenansichten
+## <a name="tile-assets-in-list-views"></a>Kachelressourcen in Listenansichten
 
 
 Kacheln können auch in einer Listenansicht angezeigt werden. Größenrichtlinien für Kachelressourcen, die in Listenansichten angezeigt werden, unterscheiden sich leicht von den zuvor aufgeführten Kachelressourcen. In diesem Abschnitt werden diese Einzelheiten bei der Größe erläutert.
 
 ![Kachelressourcen in einer Listenansicht](images/assetguidance16.png)
 
-Beschränken Sie die Breite und Höhe von Symbolen auf 75% der Kachelgröße:
+Beschränken Sie die Breite und Höhe von Symbolen auf 75 % der Kachelgröße:
 
 ![Größe eines Symbols einer Listenansichtkachel](images/assetguidance17.png)
 
-Beschränken Sie bei vertikalen und horizontalen Symbolformaten die Breite und Höhe auf 75% der Kachelgröße:
+Beschränken Sie bei vertikalen und horizontalen Symbolformaten die Breite und Höhe auf 75 % der Kachelgröße:
 
 ![Größe eines Symbols einer Listenansichtkachel](images/assetguidance18.png)
 
-Behalten Sie bei randlosen Grafiken wichtiger Brandingelemente Ränder von 12,5% bei:
+Behalten Sie bei randlosen Grafiken wichtiger Brandingelemente Ränder von 12,5 % bei:
 
 ![Randlose Grafiken in Listenansichtkachel](images/assetguidance19.png)
 
@@ -161,10 +168,10 @@ In diesem Beispiel ist das Symbol in der Kachel zu klein:
 
 ![Symbol für die Kachel zu klein](images/assetguidance20b.png)
 
-## Zielbasierte Ressourcen
+## <a name="target-based-assets"></a>Zielbasierte Ressourcen
 
 
-Zielbasierte Ressourcen gelten für Symbole und Kacheln, die in der Windows-Taskleiste, in der Aufgabenansicht, über ALT+TAB, in der Andockhilfe und in der unteren rechten Ecke von Startkacheln angezeigt werden. Sie müssen für diese Ressourcen keine Abstände hinzufügen, diese werden bei Bedarf von Windows hinzugefügt. Bei diesen Ressourcen sollte eine minimale Fläche von 16Pixeln vorgesehen werden. Unten sehen Sie ein Beispiel dafür, wie diese Ressourcen als Symbole in der Windows-Taskleiste angezeigt werden:
+Zielbasierte Ressourcen gelten für Symbole und Kacheln, die in der Windows-Taskleiste, in der Aufgabenansicht, über ALT+TAB, in der Andockhilfe und in der unteren rechten Ecke von Startkacheln angezeigt werden. Sie müssen für diese Ressourcen keine Abstände hinzufügen, diese werden bei Bedarf von Windows hinzugefügt. Bei diesen Ressourcen sollte eine minimale Fläche von 16 Pixeln vorgesehen werden. Unten sehen Sie ein Beispiel dafür, wie diese Ressourcen als Symbole in der Windows-Taskleiste angezeigt werden:
 
 ![Ressourcen in Windows-Taskleiste](images/assetguidance21.png)
 
@@ -172,9 +179,9 @@ Diese Benutzeroberfläche verwendet zwar neben einer farbigen Rückwand standard
 
 ![Ressourcen mit und ohne Anpassung](images/assetguidance22.png)
 
-Nachfolgend finden Sie die Größenempfehlungen für zielbasierte Ressourcen mit einer Skalierung von 100%:
+Nachfolgend finden Sie die Größenempfehlungen für zielbasierte Ressourcen mit einer Skalierung von 100 %:
 
-![Zielbasierte Ressourcengröße bei einer Skalierung von 100%](images/assetguidance23.png)
+![Zielbasierte Ressourcengröße bei einer Skalierung von 100 %](images/assetguidance23.png)
 
 **App-Ressourcen für Iconic-Vorlage**
 
@@ -194,7 +201,7 @@ Bei nicht quadratischen Ressourcen erfolgt eine automatische horizontale/vertika
 
 ![Größe einer nicht quadratischen Ressource, mit und ohne Signal](images/assetguidance26b.png)
 
-## Ressourcen für den Begrüßungsbildschirm
+## <a name="splash-screen-assets"></a>Ressourcen für den Begrüßungsbildschirm
 
 
 Das Bild für den Begrüßungsbildschirm kann als direkter Pfad zu einer Bilddatei oder als Ressource angegeben werden. Mithilfe eines Ressourcenverweises können Sie Bilder mit verschiedenen Skalierungen bereitstellen, damit Windows die optimale Größe für das jeweilige Gerät und die Bildschirmauflösung auswählen kann. Sie können auch Bilder mit hohem Kontrast für die Barrierefreiheit sowie lokalisierte Bilder für verschiedene Benutzeroberflächensprachen bereitstellen.
@@ -212,7 +219,7 @@ Die Ressource für den Begrüßungsbildschirm wird von jedem Gerät zentriert, a
 
 ![Größe der Ressource für den Begrüßungsbildschirm](images/assetguidance27.png)
 
-## Ressourcen mit hohem Kontrast
+## <a name="high-contrast-assets"></a>Ressourcen mit hohem Kontrast
 
 
 Der Modus mit hohem Kontrast verwendet separate Sätze von Ressourcen für kontrastreiches Weiß (weißer Hintergrund mit schwarzem Text) und kontrastreiches Schwarz (schwarzer Hintergrund mit weißem Text). Wenn Sie keine Ressourcen mit hohem Kontrast für Ihre App angeben, werden die Standardressourcen verwendet.
@@ -223,7 +230,7 @@ Wenn die Standardressourcen für Ihre App eine akzeptable Anzeigeumgebung bei ei
 
 Wenn Sie Ressourcen mit hohem Kontrast bereitstellen möchten, müssen Sie beide Sätze – weiß auf schwarz und schwarz auf weiß – verwenden. Wenn Sie diese Ressourcen in Ihr Paket aufnehmen, können Sie einen Ordner "Kontrast Schwarz" für weiß auf schwarz, und einen Ordner "Kontrast Weiß" für schwarz auf weiß erstellen.
 
-## Größentabellen
+## <a name="asset-size-tables"></a>Größentabellen
 
 
 Es wird dringend empfohlen, dass Sie mindestens Ressourcen für die Skalierungsfaktoren 100, 200 und 400 Skalierungsfaktoren bereitstellen. Wenn Sie Ressourcen für alle Skalierungsfaktoren bereitstellen, liefert dies eine optimale Benutzererfahrung.
@@ -232,10 +239,10 @@ Es wird dringend empfohlen, dass Sie mindestens Ressourcen für die Skalierungsf
 
 | Kategorie             | Elementname      | Bei einer Skalierung von 100 % | Bei einer Skalierung von 125 % | Bei einer Skalierung von 150 % | Bei einer Skalierung von 200 % | Bei einer Skalierung von 400 % |
 |----------------------|-------------------|---------------|---------------|---------------|---------------|---------------|
-| Klein                | Square71x71Logo   | 71 x 71         | 89 x 89         | 107 x 107       | 142 x 142       | 284x284       |
-| Mittel               | Square150x150Logo | 150x150       | 188 x 188       | 225 x 225       | 300 x 300       | 600 x 600       |
-| Breit                 | Square310x150Logo | 310x150       | 388 x 188       | 465 x 225       | 620 x 300       | 1240 x 600      |
-| Groß (nur Desktop) | Square310x310Logo | 310x310       | 388 x 388       | 465 x 465       | 620 x 620       | 1240 x 1240     |
+| Klein                | Square71x71Logo   | 71 x 71         | 89 x 89         | 107 x 107       | 142 x 142       | 284 x 284       |
+| Mittel               | Square150x150Logo | 150 x 150       | 188 x 188       | 225 x 225       | 300 x 300       | 600 x 600       |
+| Breit                 | Square310x150Logo | 310 x 150       | 388 x 188       | 465 x 225       | 620 x 300       | 1240 x 600      |
+| Groß (nur Desktop) | Square310x310Logo | 310 x 310       | 388 x 388       | 465 x 465       | 620 x 620       | 1240 x 1240     |
 | App-Liste (Symbol)      | Square44x44Logo   | 44 x 44         | 55 x 55         | 66 x 66         | 88 x 88         | 176 x 176       |
 
  
@@ -278,7 +285,7 @@ Die folgende Tabelle enthält alle zielbasierten Ressourcengrößen und die ents
 | 48 x 48\*    | AppNameAppList.targetsize-48.png  |
 | 256 x 256\*  | AppNameAppList.targetsize-256.png |
 | 20 x 20      | AppNameAppList.targetsize-20.png  |
-| 30x30      | AppNameAppList.targetsize-30.png  |
+| 30 x 30      | AppNameAppList.targetsize-30.png  |
 | 36 x 36      | AppNameAppList.targetsize-36.png  |
 | 40 x 40      | AppNameAppList.targetsize-40.png  |
 | 60 x 60      | AppNameAppList.targetsize-60.png  |
@@ -291,7 +298,7 @@ Die folgende Tabelle enthält alle zielbasierten Ressourcengrößen und die ents
 
 \* Übermitteln Sie diese Ressourcengrößen als Basislinie
 
-## Ressourcentypen
+## <a name="asset-types"></a>Ressourcentypen
 
 
 Nachfolgend sind alle Ressourcentypen, ihre Anwendungsmöglichkeiten sowie die empfohlenen Dateinamen aufgeführt.
@@ -372,7 +379,7 @@ Nachfolgend sind alle Ressourcentypen, ihre Anwendungsmöglichkeiten sowie die e
 
 
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 
 
@@ -383,10 +390,5 @@ Nachfolgend sind alle Ressourcentypen, ihre Anwendungsmöglichkeiten sowie die e
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

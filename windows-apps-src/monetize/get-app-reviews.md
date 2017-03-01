@@ -1,22 +1,31 @@
 ---
 author: mcleanbyron
 ms.assetid: 2967C757-9D8A-4B37-8AA4-A325F7A060C5
-description: "Mittels dieser Methode in der Windows Store-Analyse-API können Sie Rezensionsdaten für einen bestimmten Zeitraum und andere optionale Filter abrufen."
+description: "Mittels dieser Methode der Windows Store-Analyse-API können Sie Rezensionsdaten für einen bestimmten Zeitraum und andere optionale Filter abrufen."
 title: Abrufen von App-Rezensionen
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Store-Dienste, Windows Store-Analyse-API, Rezensionen"
 translationtype: Human Translation
-ms.sourcegitcommit: 7d05c8953f1f50be0b388a044fe996f345d45006
-ms.openlocfilehash: 49d3f3cb608f3207306af443c67b684a0ae9f319
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 68ad995341d0d4bedbe566e8a491a80b9b0a8ed2
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="get-app-reviews"></a>Abrufen von App-Rezensionen
 
 
-Mit dieser Methode in der Windows Store-Analyse-API können Sie Rezensionsdaten im JSON-Format für einen bestimmten Zeitraum sowie weitere optionale Filter abrufen. Diese Informationen sind auch im [Bericht "Rezensionen"](../publish/reviews-report.md) im Windows Dev Center-Dashboard verfügbar.
+Mit dieser Methode in der Windows Store-Analyse-API können Sie Rezensionsdaten im JSON-Format für einen bestimmten Zeitraum sowie weitere optionale Filter abrufen. Diese Informationen sind auch im Bericht [Rezensionen](../publish/reviews-report.md) im Windows Dev Center-Dashboard verfügbar.
+
+Nachdem Sie Rezensionen abgerufen haben, können Sie mithilfe der Methoden [Antwortinformationen für App-Rezensionen abrufen](get-response-info-for-app-reviews.md) und [Antworten auf App-Rezensionen übermitteln](submit-responses-to-app-reviews.md) der Windows Store-API für Rezensionen programmgesteuert auf Rezensionen reagieren.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
+Zur Verwendung dieser Methode sind zunächst folgende Schritte erforderlich:
 
 * Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](access-analytics-data-using-windows-store-services.md#prerequisites) für die Windows Store-Analyse-API.
 * [Rufen Sie ein Azure AD-Zugriffstoken ab](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken erhalten haben, haben Sie 60 Minuten Zeit, das Token zu verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
@@ -82,13 +91,13 @@ Eine Liste der unterstützten Felder und Operatoren für die einzelnen Felder fi
 | notHelpfulCount  | eq, ne  | Die Häufigkeit, mit der die Rezension als nicht nützlich markiert wurde.  |
 | responseDate  | eq, ne  | Das Datum, an dem die Antwort übermittelt wurde.  |
 | responseText  | eq, ne, contains  | Der Textinhalt der Antwort.  |
-
+| ID  | eq, ne  | Die ID der Rezension (dies ist eine GUID).        |
 
 <span/> 
 
 ### <a name="request-example"></a>Anforderungsbeispiel
 
-Die folgenden Beispiele zeigen verschiedene Anforderungen für das Abrufen von Rezensionsdaten. Ersetzen Sie den Wert *ApplicationId* durch die Store-ID Ihrer App.
+Die folgenden Beispiele zeigen verschiedene Anforderungen zum Abrufen von Rezensionsdaten. Ersetzen Sie den Wert *ApplicationId* durch die Store-ID Ihrer App.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/reviews?applicationId=9NBLGGGZ5QDR&startDate=1/1/2015&endDate=2/1/2015&top=10&skip=0 HTTP/1.1
@@ -139,6 +148,7 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 | notHelpfulCount        | number  | Die Häufigkeit, mit der die Rezension als nicht nützlich markiert wurde.               |
 | responseDate           | string  | Das Datum, an dem eine Antwort übermittelt wurde.                 |
 | responseText           | string  | Der Textinhalt der Antwort.        |
+| ID                     | string  | Die ID der Rezension (dies ist eine GUID). Sie können diese ID in den Methoden [Antwortinformationen für App-Rezensionen abrufen](get-response-info-for-app-reviews.md) und [Antworten auf App-Rezensionen übermitteln](submit-responses-to-app-reviews.md) verwenden.       |
 
 <span/> 
 
@@ -171,7 +181,8 @@ Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese 
       "helpfulCount": 0,
       "notHelpfulCount": 0,
       "responseDate": "2015-08-07T01:50:22.9874488Z",
-      "responseText": "1"
+      "responseText": "1",
+      "id": "6be543ff-1c9c-4534-aced-af8b4fbe0316"
     }
   ],
   "@nextLink": null,
@@ -182,14 +193,11 @@ Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese 
 ## <a name="related-topics"></a>Verwandte Themen
 
 * [Bericht „Rezensionen“](../publish/reviews-report.md)
-* [Zugreifen auf Analysedaten mit Windows Store-Diensten](access-analytics-data-using-windows-store-services.md)
+* [Zugreifen auf Analysedaten mithilfe von Windows Store-Diensten](access-analytics-data-using-windows-store-services.md)
+* [Antwortinformationen für App-Rezensionen abrufen](get-response-info-for-app-reviews.md)
+* [Antworten auf App-Rezensionen übermitteln](submit-responses-to-app-reviews.md)
 * [Abrufen von App-Käufen](get-app-acquisitions.md)
 * [Abrufen von Add-On-Käufen](get-in-app-acquisitions.md)
 * [Abrufen von Fehlerberichtsdaten](get-error-reporting-data.md)
 * [Abrufen von App-Bewertungen](get-app-ratings.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

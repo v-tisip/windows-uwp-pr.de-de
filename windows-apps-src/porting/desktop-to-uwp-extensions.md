@@ -3,21 +3,45 @@ author: awkoren
 Description: "Neben den normalen, für alle UWP-Apps verfügbaren APIs gibt es auch einige Erweiterungen und APIs, die nur für konvertierte Desktop-Apps zur Verfügung stehen. In diesem Artikel werden diese Erweiterungen und deren Verwendung beschrieben."
 Search.Product: eADQiWindows 10XVcnh
 title: "Erweiterungen für konvertierte Desktop-Apps"
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 translationtype: Human Translation
-ms.sourcegitcommit: 8429e6e21319a03fc2a0260c68223437b9aed02e
-ms.openlocfilehash: 405b9b100be93f7098eb384d6b48b8690f5e6309
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 66b208909e48392046c92e9fd2e689e28af7e88f
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# App-Erweiterungen für die Desktop-Brücke
+# <a name="desktop-bridge-app-extensions"></a>Erweiterungen für Desktop-Brücke-Apps
 
-Konvertierte Desktopanwendungen können mit einer breiten Palette von UWP-APIs (APIs der universellen Windows-Plattform) erweitert werden. Neben den normalen, für alle UWP-Apps verfügbaren APIs gibt es aber auch einige Erweiterungen und APIs, die nur für konvertierte Desktop-Apps zur Verfügung stehen. Diese Features sind für Szenarien wie das Starten eines Prozesses, wenn sich der Benutzer anmeldet, oder die Integration des Explorers vorgesehen und sollen einen reibungslosen Übergang von der ursprünglichen Desktop-App zum konvertierten App-Paket ermöglichen.
+Sie können Ihre konvertierten Desktopanwendungen um eine große Palette von UWP-APIs erweitern (Universelle Windows-Plattform). Neben den normalen, für alle UWP-Apps verfügbaren APIs gibt es aber auch einige Erweiterungen und APIs, die nur für konvertierte Desktop-Apps zur Verfügung stehen. Diese Features sind für Szenarien wie das Starten eines Prozesses, wenn sich der Benutzer anmeldet, oder die Integration des Explorers vorgesehen und sollen einen reibungslosen Übergang von der ursprünglichen Desktop-App zum konvertierten App-Paket ermöglichen.
 
-In diesem Artikel werden diese Erweiterungen und deren Verwendung beschrieben. Die meisten erfordern die manuelle Änderung der Manifestdatei Ihrer konvertierten App. In dieser werden die von der App verwendeten Erweiterungen deklariert. Klicken Sie zum Bearbeiten des Manifests in der VisualStudio-Projektmappe mit der rechten Maustaste auf die Datei **Package.appxmanifest**, und wählen Sie *Code anzeigen* aus. 
+In diesem Artikel werden diese Erweiterungen und deren Verwendung beschrieben. Die meisten erfordern die manuelle Änderung der Manifestdatei Ihrer konvertierten App. In dieser werden die von der App verwendeten Erweiterungen deklariert. Klicken Sie zum Bearbeiten des Manifests in der Visual Studio-Lösung mit der rechten Maustaste auf die Datei **Package.appxmanifest**, und wählen Sie *Code anzeigen* aus. 
 
-## Startaufgaben
+## <a name="manifest-xml-namespaces"></a>Manifest-XML-Namespaces 
 
-Startaufgaben ermöglichen der App das automatische Ausführen einer ausführbaren Datei, wenn sich ein Benutzer anmeldet. 
+Erweiterungen für Desktop-Brücke-Apps benötigen verschiedenen XML-Namespaces. Diese Namespaces müssen wie folgt im `<Package>`-Element im Stammknoten Ihrer Manifest-Datei definiert werden: 
+
+```xml
+<Package
+  ...
+  xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2"
+  xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
+  xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10"
+  ...
+  IgnorableNamespaces="uap uap2 uap3 mp rescap desktop">
+```
+
+Wenn die Manifest-Datei zu Compilerfehlern führt, stellen Sie sicher, dass Sie alle erforderlichen Namespaces eingefügt haben. Stellen Sie außerdem sicher, dass alle untergeordnete XML-Elemente den richtigen Namespace als Präfix haben. Alternativ können Sie sich eine vollständige, funktionsfähiges Manifest-Datei im [Repository mit Beispielen für Desktop-Brücke auf GitHub](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) ansehen. 
+
+## <a name="startup-tasks"></a>Startaufgaben
+
+Startaufgaben ermöglichen der App das automatische Starten einer ausführbaren Datei bei der Anmeldung eines Benutzers. 
 
 Fügen Sie dem Manifest Ihrer App Folgendes hinzu, um eine Startaufgabe zu deklarieren: 
 
@@ -35,7 +59,7 @@ Fügen Sie dem Manifest Ihrer App Folgendes hinzu, um eine Startaufgabe zu dekla
 
 Apps können mehrere Startaufgaben deklarieren. Diese werden jeweils unabhängig ausgelöst und ausgeführt. Alle Startaufgaben werden im Task-Manager auf der Registerkarte **Autostart** mit dem Namen aus Ihrem App-Manifest und dem Symbol Ihrer App angezeigt. Der Task-Manager analysiert automatisch die Startauswirkungen Ihrer Aufgaben. Benutzer können die Startaufgaben Ihrer App über den Task-Manager manuell deaktivieren. Vom Benutzer deaktivierte Aufgaben können nicht programmgesteuert reaktiviert werden.
 
-## App-Ausführungsalias
+## <a name="app-execution-alias"></a>App-Ausführungsalias
 
 Mit einem App-Ausführungsalias können Sie einen Schlagwortnamen für Ihre App angeben. Anhand dieses Schlagworts kann die App von Benutzern oder anderen Prozessen ganz einfach und ohne Angabe des vollständigen Pfads (etwa über „Ausführen“ oder über eine Eingabeaufforderung) gestartet werden – ganz so als befände sie sich in der PATH-Variablen. Wenn Sie als Alias also beispielsweise „Foo“ deklarieren, kann ein Benutzer in „cmd.exe“ die Zeichenfolge „Foo Bar.txt“ eingeben, und Ihre App wird mit dem Pfad zu „Bar.txt“ als Teil der Ereignisargumente aktiviert.
 
@@ -56,7 +80,7 @@ Fügen Sie dem Manifest Ihrer App Folgendes hinzu, um einen App-Ausführungsalia
 
 Für die einzelnen Anwendungen im Paket kann immer nur einzelner App-Ausführungsalias angegeben werden. Wenn sich mehrere Apps mit dem gleichen Alias registrieren, ruft das System die zuletzt registrierte App auf. Wählen Sie daher einen eindeutigen Alias, um die Wahrscheinlichkeit einer Überschreibung durch andere Apps möglichst gering zu halten.
 
-## Protokollzuordnungen 
+## <a name="protocol-associations"></a>Protokollzuordnungen 
 
 Protokollzuordnungen ermöglichen Interoperabilitätsszenarien zwischen Ihrer konvertierten App und anderen Programmen oder Systemkomponenten. Wenn Ihre konvertierte App mithilfe eines Protokolls gestartet wird, können Sie bestimmte Parameter angeben, die an die Aktivierungsereignisargumente übergeben werden sollen, um ein entsprechendes Verhalten zu erreichen. Beachten Sie, dass Parameter nur für konvertierte, vertrauenswürdige Apps unterstützt werden. Für UWP-Apps können dagegen keine Parameter verwendet werden.  
 
@@ -72,7 +96,7 @@ Fügen Sie dem Manifest Ihrer App Folgendes hinzu, um eine Protokollzuordnung zu
 - *Protocol Name* ist der Name des Protokolls. 
 - *Protocol Parameter* ist die Liste der Parameter und Werte, die bei der Aktivierung als Ereignisargumente an Ihre App übergeben werden sollen. Hinweis: Wenn eine Variable einen Pfad enthalten kann, sollten Sie den Wert in Anführungszeichen einschließen, damit auch Pfade mit Leerzeichen ordnungsgemäß übergeben werden.
 
-## Dateien und Datei-Explorer-Integration
+## <a name="files-and-file-explorer-integration"></a>Dateien und Datei-Explorer-Integration
 
 Bei konvertierten Apps können die Behandlung bestimmter Dateitypen und die Datei-Explorer-Integration auf unterschiedliche Arten registriert werden. Dadurch können Benutzer im Rahmen ihres normalen Workflows komfortabel auf Ihre App zuzugreifen.
 
@@ -80,7 +104,7 @@ Fügen Sie dem Manifest Ihrer App zunächst Folgendes hinzu:
 
 ```XML
 <uap3:Extension Category="windows.fileTypeAssociation">
-    <uap3:FileTypeAssociation Name="MyApp">
+    <uap3:FileTypeAssociation Name="myapp">
         ... additional elements here ...
     </uap3:FileTypeAssociation>
 </uap3:Extension>
@@ -91,7 +115,7 @@ Fügen Sie dem Manifest Ihrer App zunächst Folgendes hinzu:
 
 Fügen Sie dem Eintrag als Nächstes zusätzliche untergeordnete Elemente für die spezifischen Features hinzu, die Sie benötigen. Die verfügbaren Optionen werden im Anschluss beschrieben.
 
-### Unterstützte Dateitypen
+### <a name="supported-file-types"></a>Unterstützte Dateitypen
 
 Ihre App kann angeben, dass sie das Öffnen bestimmter Dateitypen unterstützt. Wenn ein Benutzer mit der rechten Maustaste auf eine Datei klickt und „Öffnen mit“ auswählt, wird Ihre App in der Vorschlagsliste angezeigt.
 
@@ -106,7 +130,7 @@ Beispiel:
 
 - *FileType* ist die von Ihrer App unterstützte Erweiterung.
 
-### Dateikontextmenüverben 
+### <a name="file-context-menu-verbs"></a>Dateikontextmenüverben 
 
 Benutzer öffnen Dateien in der Regel per Doppelklick. Klickt ein Benutzer dagegen mit der rechten Maustaste auf eine Datei, erscheint ein Kontextmenü mit verschiedenen Optionen (üblicherweise Verben wie „Öffnen“, „Bearbeiten“ und „Drucken“, aber auch Optionen wie „Vorschau“), die eine differenziertere Interaktion mit der Datei ermöglichen. 
 
@@ -116,8 +140,8 @@ Beispiel:
 
 ```XML
 <uap2:SupportedVerbs>
-    <uap3:Verb Id="Edit" Parameters="/e &quot;%1&quot">Edit</uap:Verb>
-    <uap3:Verb Id="Print" Extended="true" Parameters="/p &quot;%1&quot">Print</uap:Verb>
+    <uap3:Verb Id="Edit" Parameters="/e &quot;%1&quot;">Edit</uap3:Verb>
+    <uap3:Verb Id="Print" Extended="true" Parameters="/p &quot;%1&quot;">Print</uap3:Verb>
 </uap2:SupportedVerbs>
 ```
 
@@ -126,11 +150,11 @@ Beispiel:
 - *Verb Extended* gibt an, dass das Verb nur angezeigt werden soll, wenn der Benutzer **UMSCHALT** gedrückt hält, wenn er zum Anzeigen des Kontextmenüs mit der rechten Maustaste auf die Datei klickt. Dieses Attribut ist optional und standardmäßig auf *False* (Verb soll immer angezeigt werden) festgelegt. Dieses Verhalten muss für jedes Verb einzeln angegeben werden – mit Ausnahme von „Öffnen“: Bei diesem Verb ist der Wert immer *False*. 
 - *Verb* ist der Name, der im Kontextmenü des Datei-Explorers angezeigt wird. Diese Zeichenfolge kann mithilfe von ```ms-resource``` lokalisiert werden.
 
-### Shellkontextmenüverben
+### <a name="shell-context-menu-verbs"></a>Shellkontextmenüverben
 
 Das Hinzufügen von Elementen zum Ordnerkontextmenü der Shell wird derzeit nicht unterstützt. 
 
-### Mehrfachauswahlmodell
+### <a name="multiple-selection-model"></a>Mehrfachauswahlmodell
 
 Mit der Mehrfachauswahl können Sie angeben, wie sich die App verhalten soll, wenn ein Benutzer mehrere Dateien gleichzeitig öffnet, indem er beispielsweise im Datei-Explorer zehn Dateien markiert und anschließend auf „Öffnen“ tippt.
 
@@ -146,43 +170,41 @@ Fügen Sie in Ihrem Manifest den Elementen, die mit Dateitypen und dem Starten v
 Festlegen eines Modells für einen unterstützten Dateityp: 
 
 ```XML
-<uap:FileType MultiSelectModel="Document">.txt</uap:FileType>
+<uap3:FileTypeAssociation Name="myapp" MultiSelectModel="Document">
+    <uap:SupportedFileTypes>
+        <uap:FileType>.txt</uap:FileType>
+</uap:SupportedFileTypes>
 ```
 
 Festlegen eines Modells für Verben:
 
 ```XML
-<uap3:Verb Id="Edit" MultiSelectModel="Player">Edit</uap:Verb>
-<uap3:Verb Id="Preview" MultiSelectModel="Document">Preview</uap:Verb>
+<uap3:Verb Id="Edit" MultiSelectModel="Player">Edit</uap3:Verb>
+<uap3:Verb Id="Preview" MultiSelectModel="Document">Preview</uap3:Verb>
 ```
 
-Falls Ihre App keine Option für die Mehrfachauswahl angibt, wird standardmäßig *Player* verwendet, wenn der Benutzer bis zu 15Dateien öffnet. Andernfalls wird bei konvertierten Apps standardmäßig *Document* verwendet. UWP-Apps werden immer als *Player* gestartet. 
+Falls Ihre App keine Option für die Mehrfachauswahl angibt, wird standardmäßig *Player* verwendet, wenn der Benutzer bis zu 15 Dateien öffnet. Andernfalls wird bei konvertierten Apps standardmäßig *Document* verwendet. UWP-Apps werden immer als *Player* gestartet. 
 
-### Vollständiges Beispiel
+### <a name="complete-example"></a>Vollständiges Beispiel
 
 Im Anschluss finden Sie ein vollständiges Beispiel mit vielen der oben beschriebenen Elemente für Dateien und den Datei-Explorer: 
 
 ```XML
 <uap3:Extension Category="windows.fileTypeAssociation">
-    <uap3:FileTypeAssociation Name="MyApp">
+    <uap3:FileTypeAssociation Name="myapp" MultiSelectModel="Document">
         <uap:SupportedFileTypes>
-            <uap:FileType MultiSelectModel="Document">.txt</uap:FileType>
+            <uap:FileType>.txt</uap:FileType>
             <uap:FileType>.foo</uap:FileType>
     </uap:SupportedFileTypes>
     <uap2:SupportedVerbs>
-            <uap3:Verb Id="Edit" Parameters="/e &quot;%1&quot">Edit</uap:Verb>
-            <uap3:Verb Id="Print" Parameters="/p &quot;%1&quot">Print</uap:Verb>
+            <uap3:Verb Id="Edit" Parameters="/e &quot;%1&quot;">Edit</uap3:Verb>
+            <uap3:Verb Id="Print" Parameters="/p &quot;%1&quot;">Print</uap3:Verb>
     </uap2:SupportedVerbs>
     <uap:Logo>Assets\MyExtensionLogo.png</uap:Logo>
     </uap3:FileTypeAssociation>
 </uap3:Extension>
 ```
 
-## Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen
 
 - [App-Paketmanifest](https://msdn.microsoft.com/library/windows/apps/br211474.aspx)
-
-
-<!--HONumber=Nov16_HO1-->
-
-

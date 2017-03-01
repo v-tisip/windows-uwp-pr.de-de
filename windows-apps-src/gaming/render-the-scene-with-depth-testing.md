@@ -1,23 +1,30 @@
 ---
 author: mtoepke
 title: Rendern der Szene mit Tiefentest
-description: "Erstellen Sie einen Schatteneffekt, indem Sie dem Vertex-Shader (bzw. Geometry-Shader) und dem Pixel-Shader einen Tiefentest hinzufügen."
+description: "Erstellen Sie einen Schatteneffekt, indem Sie Ihrem Vertexshader (bzw. Geometrieshader) und dem Pixelshader einen Tiefentest hinzufügen."
 ms.assetid: bf496dfb-d7f5-af6b-d588-501164608560
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Spiele, Rendern, Szene, Tiefentest, Direct3D, Schatten"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 6351cc9f6efe0d4bffb54961624a35b4a9f4136a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 538ebe9a604daaa5a444b0f7f1764770eec8ce7c
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Rendern der Szene mit Tiefentest
+# <a name="render-the-scene-with-depth-testing"></a>Rendern der Szene mit Tiefentest
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Erstellen Sie einen Schatteneffekt, indem Sie dem Vertex-Shader (bzw. Geometry-Shader) und dem Pixel-Shader einen Tiefentest hinzufügen. Teil3 von [Exemplarische Vorgehensweise: Implementieren von Schattenvolumes mithilfe von Tiefenpuffern in Direct3D11](implementing-depth-buffers-for-shadow-mapping.md).
+Erstellen Sie einen Schatteneffekt, indem Sie dem Vertex-Shader (bzw. Geometry-Shader) und dem Pixel-Shader einen Tiefentest hinzufügen. Teil 3 von [Exemplarische Vorgehensweise: Implementieren von Schattenvolumes mithilfe von Tiefenpuffern in Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
 
-## Einfügen der Transformation für Licht-Frustum
+## <a name="include-transformation-for-light-frustum"></a>Einfügen der Transformation für Licht-Frustum
 
 
 Ihr Vertex-Shader muss für jeden Scheitelpunkt (Vertex) die transformierte Position im Lichtraum berechnen. Geben Sie die Modell-, Ansichts- und Projektionsmatrizen für den Lichtraum mithilfe eines Konstantenpuffers an. Sie können diesen Konstantenpuffer auch verwenden, um die Lichtposition und Normale für Lichtberechnungen bereitzustellen. Die transformierte Position im Lichtraum wird während des Tiefentests verwendet.
@@ -61,7 +68,7 @@ PixelShaderInput main(VertexShaderInput input)
 
 Als Nächstes wird vom Pixelshader die vom Vertex-Shader bereitgestellte interpolierte Lichtraumposition verwendet, um zu testen, ob das Pixel im Schatten liegt.
 
-## Testen, ob sich die Position im Licht-Frustum befindet
+## <a name="test-whether-the-position-is-in-the-light-frustum"></a>Testen, ob sich die Position im Licht-Frustum befindet
 
 
 Prüfen Sie zuerst, ob sich das Pixel im Ansichts-Frustum des Lichts befindet, indem Sie die X- und Y-Koordinaten normalisieren. Wenn diese beide innerhalb des Bereichs \[0, 1\] liegen, ist es möglich, dass das Pixel im Schatten liegt. Andernfalls können Sie den Tiefentest überspringen. Mit einem Shader kann dies ohne viel Zeitaufwand getestet werden, indem [Saturate](https://msdn.microsoft.com/library/windows/desktop/hh447231) aufgerufen und das Ergebnis mit dem Originalwert verglichen wird.
@@ -83,7 +90,7 @@ if ((saturate(shadowTexCoords.x) == shadowTexCoords.x) &&
 {
 ```
 
-## Tiefentest unter Verwendung der Schattenmap
+## <a name="depth-test-against-the-shadow-map"></a>Tiefentest unter Verwendung der Schattenmap
 
 
 Verwenden Sie eine Samplevergleichsfunktion (entweder [SampleCmp](https://msdn.microsoft.com/library/windows/desktop/bb509696) oder [SampleCmpLevelZero](https://msdn.microsoft.com/library/windows/desktop/bb509697)), um die Tiefe des Pixels im Lichtraum unter Verwendung der Tiefenmap zu testen. Berechnen Sie den normalisierten Lichtraum-Tiefenwert, für den `z / w` gilt, und übergeben Sie den Wert an die Vergleichsfunktion. Da wir für den Sampler einen LessOrEqual-Vergleichstest verwenden, wird von der systeminternen Funktion null zurückgegeben, wenn der Vergleichstest bestanden wurde; dies gibt an, dass das Pixel im Schatten liegt.
@@ -115,7 +122,7 @@ lighting = float(shadowMap.SampleCmpLevelZero(
     );
 ```
 
-## Berechnen der Beleuchtung innerhalb und außerhalb des Schattens
+## <a name="compute-lighting-in-or-out-of-shadow"></a>Berechnen der Beleuchtung innerhalb und außerhalb des Schattens
 
 
 Wenn das Pixel nicht im Schatten liegt, kann der Pixelshader die direkte Beleuchtung berechnen und dem Pixelwert hinzufügen.
@@ -161,10 +168,5 @@ Der nächste Teil dieser exemplarischen Vorgehensweise beschäftigt sich mit dem
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

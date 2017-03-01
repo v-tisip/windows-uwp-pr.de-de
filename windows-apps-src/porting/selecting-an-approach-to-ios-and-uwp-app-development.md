@@ -3,25 +3,32 @@ author: mcleblanc
 description: "Welche Optionen gibt es beim Entwickeln von plattformübergreifenden Apps?"
 title: "Auswählen eines Ansatzes für die Entwicklung von iOS- und UWP-Apps"
 ms.assetid: 5CDAB313-07B7-4A32-A49B-026361DCC853
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 53e6c50b7a1b4262f738cd798aa2bd02291512fe
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 9317ea8690d5696d4a9e55b3a88f1a2ff83d8bfd
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Auswählen eines Ansatzes für die Entwicklung von iOS- und UWP-Apps
+# <a name="selecting-an-approach-to-ios-and-uwp-app-development"></a>Auswählen eines Ansatzes für die Entwicklung von iOS- und UWP-Apps
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Welche Optionen gibt es beim Entwickeln von plattformübergreifenden Apps?
 
-## Wie werden iOS und Windows am besten unterstützt?
+## <a name="whats-the-best-way-to-support-both-ios-and-windows"></a>Wie werden iOS und Windows am besten unterstützt?
 
 Windows und iOS sind anscheinend sehr unterschiedlich, es stehen jedoch immer mehr Tools und Methoden zur Verfügung, mit denen Sie Apps entwickeln können, die beide Plattformen (sowie Android) unterstützen. Die beste Lösung hängt vom Typ der App ab, die Sie entwickeln. Ausschlaggebend ist zudem auch, ob Sie die App von Grund auf neu erstellen oder ein vorhandenes Projekt portieren.
 
-## Schreiben einer neuen App
+## <a name="writing-a-new-app"></a>Schreiben einer neuen App
 
-Wenn Sie eine neue App erstellen, stehen zahlreiche Optionen zur Verfügung, u.a.:
+Wenn Sie eine neue App erstellen, stehen zahlreiche Optionen zur Verfügung, u. a.:
 
 -   [Xamarin](http://go.microsoft.com/fwlink/p/?LinkID=320484)
 
@@ -37,9 +44,9 @@ Wenn Sie eine neue App erstellen, stehen zahlreiche Optionen zur Verfügung, u.a
 
 -   [MonoGame](http://go.microsoft.com/fwlink/p/?LinkID=320483)
 
-    Der geistige Nachfolger von XNA. Nun handelt es sich dabei um ein plattformübergreifendes OpenSource-Framework. Das bedeutet, Sie können Apps in C# für zahlreiche Plattformen mit Unterstützung für Physik-Engines sowie 2D- und 3D-Grafiken schreiben.
+    Der geistige Nachfolger von XNA. Nun handelt es sich dabei um ein plattformübergreifendes Open Source-Framework. Das bedeutet, Sie können Apps in C# für zahlreiche Plattformen mit Unterstützung für Physik-Engines sowie 2D- und 3D-Grafiken schreiben.
 
-## Anpassen einer vorhandenen App
+## <a name="adapting-an-existing-app"></a>Anpassen einer vorhandenen App
 
 Bei einer vorhandenen iOS-App stehen weniger Optionen zur Verfügung. Es ist jedoch nicht alles verloren.
 
@@ -53,9 +60,9 @@ Bei einer vorhandenen iOS-App stehen weniger Optionen zur Verfügung. Es ist jed
 
 -   [Verwenden von ANGLE zum Ausführen von OpenGL ES unter Windows](http://go.microsoft.com/fwlink/p/?linkid=618387)
 
-    Ein Zwischenschritt zum Portieren Ihres OpenGL ES2.0-Projekts ist die Verwendung von ANGLE. Mit ANGLE können Sie OpenGL ES-Inhalte unter Windows ausführen, indem Sie OpenGL ES-API-Aufrufe in DirectX11-API-Aufrufe übersetzen.
+    Ein Zwischenschritt zum Portieren Ihres OpenGL ES 2.0-Projekts ist die Verwendung von ANGLE. Mit ANGLE können Sie OpenGL ES-Inhalte unter Windows ausführen, indem Sie OpenGL ES-API-Aufrufe in DirectX 11-API-Aufrufe übersetzen.
 
-## Andere plattformübergreifende Erstellungstools
+## <a name="other-cross-platform-authoring-tools"></a>Andere plattformübergreifende Erstellungstools
 
 -   [GameSalad](http://go.microsoft.com/fwlink/p/?LinkID=320480)
 
@@ -92,10 +99,5 @@ Bei einer vorhandenen iOS-App stehen weniger Optionen zur Verfügung. Es ist jed
 -   [PlayCanvas](http://go.microsoft.com/fwlink/p/?LinkID=394061)
 
     Ein HTML-basiertes Tool für die Spielentwicklung
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

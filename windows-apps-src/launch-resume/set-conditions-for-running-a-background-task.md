@@ -3,15 +3,22 @@ author: TylerMSFT
 title: "Festlegen von Bedingungen zum Ausführen einer Hintergrundaufgabe"
 description: "Erfahren Sie, wie Bedingungen festgelegt werden, die steuern, wann die Hintergrundaufgabe ausgeführt wird."
 ms.assetid: 10ABAC9F-AA8C-41AC-A29D-871CD9AD9471
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
-ms.openlocfilehash: c83f861f43209c42dff661e3277e1d8a1b67d37c
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 486e0cd3938a09c663e8e805092377709672359f
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="set-conditions-for-running-a-background-task"></a>Festlegen von Bedingungen zum Ausführen einer Hintergrundaufgabe
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Wichtige APIs**
 
@@ -178,9 +185,4 @@ Der folgende Ausschnitt zeigt mehrere Bedingungen im Kontext der Erstellung und 
  
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

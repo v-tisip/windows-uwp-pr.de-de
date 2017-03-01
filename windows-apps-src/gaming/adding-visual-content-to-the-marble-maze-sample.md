@@ -1,11 +1,18 @@
 ---
 author: mtoepke
 title: "Hinzufügen von visuellem Inhalt zum Marble Maze-Beispiel"
-description: "In diesem Dokument wird beschrieben, wie das Spiel Marble Maze Direct3D und Direct2D in der App-Umgebung der universellen Windows Plattform verwendet wird, sodass Sie die Muster erlernen und anpassen können, wenn Sie mit Ihrem eigenen Spielinhalt arbeiten."
+description: "In diesem Dokument wird beschrieben, wie das Spiel „Marble Maze” Direct3D und Direct2D in der App-Umgebung der universellen Windows Plattform verwendet wird, sodass Sie die Muster erlernen und anpassen können, wenn Sie mit Ihrem eigenen Spielinhalt arbeiten."
 ms.assetid: 6e43422e-e1a1-b79e-2c4b-7d5b4fa88647
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Spiele, Beispiel, DirectX, Grafiken"
 translationtype: Human Translation
-ms.sourcegitcommit: eb0115bf83627a9ba8209cce6bdd9edecc165ddf
-ms.openlocfilehash: 6b7880703d40d6ef5ed5f42f3e09bc5573170e1f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: b8ee07dc45e53f2ea73f87111fa9eb155854f10a
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -446,7 +453,7 @@ Im Dokument [Semantik](https://msdn.microsoft.com/library/windows/desktop/bb5096
 
 Weitere Informationen zum Status der Eingabeassembly-Phase finden Sie unter [Eingabeassembler-Phase](https://msdn.microsoft.com/library/windows/desktop/bb205116) und [Erste Schritte mit der Eingabeassembler-Phase](https://msdn.microsoft.com/library/windows/desktop/bb205117).
 
-Der Prozess der Verwendung von Vertex- und Pixel-Shadern zum Rendern der Szene wird später in diesem Dokument im Abschnitt [Rendern der Szene](#rendering_the_scene) beschrieben.
+Der Prozess der Verwendung von Vertex- und Pixel-Shadern zum Rendern der Szene wird später in diesem Dokument im Abschnitt [Rendern der Szene](#rendering-the-scene) beschrieben.
 
 ### <a name="creating-the-constant-buffer"></a>Erstellen des Konstantenpuffers
 
@@ -735,7 +742,7 @@ Führen Sie vor dem Rendern der Szenenobjekte die folgenden Schritte aus, um die
 
  
 
-Im Abschnitt [Laden von Shadern](#loading_shaders) in diesem Dokument wird beschrieben, wie das Eingabelayout beim Erstellen des Vertex-Shaders erstellt wird. Im folgenden Beispiel wird gezeigt, wie die **MarbleMaze::Render**-Methode die [**ID3D11DeviceContext::IASetInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476454)-Methode verwendet, um dieses Layout als aktuelles Layout festzulegen.
+Im Abschnitt [Laden von Shadern](#loading-shaders) in diesem Dokument wird beschrieben, wie das Eingabelayout beim Erstellen des Vertex-Shaders erstellt wird. Im folgenden Beispiel wird gezeigt, wie die **MarbleMaze::Render**-Methode die [**ID3D11DeviceContext::IASetInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476454)-Methode verwendet, um dieses Layout als aktuelles Layout festzulegen.
 
 ```cpp
 m_d3dContext->IASetInputLayout(m_inputLayout.Get());
@@ -864,7 +871,7 @@ parameters.pScrollOffset = nullptr;
 HRESULT hr = m_swapChain->Present1(1, 0, &parameters);
 ```
 
-In diesem Beispiel ist **M\_swapChain** ein [**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631)-Objekt. Die Initialisierung dieses Objekts wird im Abschnitt [Initialisieren von Direct3D und Direct2D](#initializing) in diesem Dokument beschrieben.
+In diesem Beispiel ist **M\_swapChain** ein [**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631)-Objekt. Die Initialisierung dieses Objekts wird im Abschnitt [Initialisieren von Direct3D und Direct2D](#initializing-direct3d-and-direct2d) in diesem Dokument beschrieben.
 
 Der erste Parameter für [**IDXGISwapChain1::Present**](https://msdn.microsoft.com/library/windows/desktop/hh446797), *SyncInterval*, gibt die Anzahl vertikaler Austastungen an, die vor dem Darstellen des Frames abgewartet werden müssen. Marble Maze gibt den Wert 1 an, sodass bis zur nächsten vertikalen Austastung gewartet wird. Eine vertikale Austastung ist die Zeit zwischen der Fertigstellung der Zeichnung eines Frames auf dem Monitor und dem Start für den nächsten Frame.
 
@@ -901,10 +908,5 @@ Lesen Sie den Abschnitt [Hinzufügen von Eingaben und Interaktivität zum Marble
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

@@ -2,14 +2,21 @@
 author: mcleanbyron
 ms.assetid: 7a61c328-77be-4614-b117-a32a592c9efe
 description: "Erfahren Sie mehr über Lösungen für allgemeine Entwicklungsprobleme mit den Microsoft Advertising-Bibliotheken in JavaScript/HTML-Apps."
-title: "Handbuch zur Problembehandlung für HTML und JavaScript"
+title: "Anleitung zur Problembehandlung für HTML und JavaScript"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Anzeigen, Werbung, AdControl, Problembehandlung, HTML, Javascript"
 translationtype: Human Translation
-ms.sourcegitcommit: f88a71491e185aec84a86248c44e1200a65ff179
-ms.openlocfilehash: 4bb959174ec158e7852cd447d9cd164ec2cd5bff
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: fe06749583dc42ec84dc4acd876ea96c70c916db
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="html-and-javascript-troubleshooting-guide"></a>Handbuch zur Problembehandlung für HTML und JavaScript
+# <a name="html-and-javascript-troubleshooting-guide"></a>Anleitung zur Problembehandlung für HTML und JavaScript
 
 Dieses Thema enthält Lösungen für allgemeine Entwicklungsprobleme mit den Microsoft Advertising-Bibliotheken in JavaScript/HTML-Apps.
 
@@ -340,9 +347,9 @@ Dieses Thema enthält Lösungen für allgemeine Entwicklungsprobleme mit den Mic
 <span id="js-adsnotrefreshing"/>
 ### <a name="ads-not-refreshing"></a>Anzeigen werden nicht aktualisiert
 
-1.  Überprüfen Sie, ob die [IsAutoRefreshEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/microsoft.advertising.winrt.ui.adcontrol.isautorefreshenabled.aspx)-Eigenschaft von **AdControl** auf „false“ festgelegt ist. Diese optionale Eigenschaft ist standardmäßig auf **true** festgelegt. Wenn sie auf **false** festgelegt ist, muss die **Refresh**-Methode verwendet werden, um eine weitere Anzeige abzurufen.
+1.  Überprüfen Sie, ob in der [IsAutoRefreshEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/microsoft.advertising.winrt.ui.adcontrol.isautorefreshenabled.aspx)-Eigenschaft **AdControl** auf „false“ festgelegt ist. Diese optionale Eigenschaft ist standardmäßig auf **true** festgelegt. Wenn sie auf **false** festgelegt ist, muss die Methode **Refresh** verwendet werden, um eine weitere Anzeige abzurufen.
 
-2.  Überprüfen Sie Aufrufe der [Refresh](https://msdn.microsoft.com/library/windows/apps/xaml/microsoft.advertising.winrt.ui.adcontrol.refresh.aspx)-Methode. Bei Verwendung der automatischen Aktualisierung (**IsAutoRefreshEnabled** ist **true**) kann **Refresh** nicht verwendet werden, um eine weitere Anzeige abzurufen. Bei Verwendung der manuellen Aktualisierung (**IsAutoRefreshEnabled** ist **false**) sollte **Refresh** abhängig von der aktuellen Datenverbindung des Geräts erst nach mindestens 30 bis 60 Sekunden aufgerufen werden.
+2.  Überprüfen Sie Aufrufe der [Refresh](https://msdn.microsoft.com/library/windows/apps/xaml/microsoft.advertising.winrt.ui.adcontrol.refresh.aspx)-Methode. Bei Verwendung der automatischen Aktualisierung ((**IsAutoRefreshEnabled** ist **true**)) kann **Refresh** nicht verwendet werden, um eine weitere Anzeige abzurufen. Bei Verwendung der manuellen Aktualisierung (**IsAutoRefreshEnabled** ist **false**) sollte **Refresh** abhängig von der aktuellen Datenverbindung des Geräts erst nach mindestens 30 bis 60 Sekunden aufgerufen werden.
 
     Dieses Beispiel zeigt das Erstellen von **div** für **AdControl**.
 
@@ -380,9 +387,4 @@ Dieses Thema enthält Lösungen für allgemeine Entwicklungsprobleme mit den Mic
  
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

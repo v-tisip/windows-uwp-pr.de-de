@@ -1,19 +1,27 @@
 ---
 author: Jwmsft
-Description: "Benutze eine geschachtelte UI, um mehrere Aktionen über Listenelementen zu ermöglichen"
+Description: "Benutzen Sie eine geschachtelte UI, um mehrere Aktionen auf einem Listenelement zu ermöglichen"
 title: Geschachtelte UI bei Listenelementen
 label: Nested UI in list items
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
+ms.assetid: 60a29717-56f2-4388-a9ff-0098e34d5896
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 37f47db0d7085bf61836ed3fc9ccdc03470f58da
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: cfda479d2a05dfac4125688d3666abfb23bc45a2
+ms.lasthandoff: 02/08/2017
 
 ---
-# Geschachtelte UI bei Listenelementen
+# <a name="nested-ui-in-list-items"></a>Geschachtelte UI bei Listenelementen
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-Eine geschachtelte UI ist eine Benutzeroberfläche (User Interface, UI) mit geschachtelten Steuerelementen, die in einem Container eingeschlossen sind und auch unabhängig den Fokus erhalten kann.
+Eine geschachtelte UI ist eine Benutzeroberfläche (User Interface, UI) mit geschachtelten Steuerelementen, die in einem Container eingeschlossen sind, der ebenfalls unabhängig den Fokus erhalten kann.
 
 Sie können dem Benutzer mit geschachtelten UIs weitere Optionen zur Verfügung stellen, mit denen sie wichtige Aktionen schneller ausführen können. Bedenken Sie jedoch, dass die Benutzeroberfläche komplizierter wird, je mehr Aktionen Sie anbieten. Wenn Sie diese Art von Benutzeroberfläche verwenden, sollten Sie besonders vorsichtig vorgehen. Dieser Artikel enthält Richtlinien, um die beste Vorgehensweise für Ihre UI zu ermitteln.
 
@@ -28,7 +36,7 @@ In diesem Artikel verwenden wir die Begriffe *Liste*, *Listenelement* und *gesch
 
 > Hinweis:&nbsp;&nbsp; ListView und GridView sind beide von der Klasse [ListViewBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.aspx) abgeleitet, sodass sie dieselbe Funktionalität haben, sie zeigen die Daten jedoch unterschiedlich an. In diesem Artikel beziehen sich Aussagen zu Listen sowohl auf die ListView- als auch die GridView-Steuerelemente, wenn nicht anders angegeben.
 
-## Primäre und sekundäre Aktionen
+## <a name="primary-and-secondary-actions"></a>Primäre und sekundäre Aktionen
 
 Beim Erstellen einer UI mit einer Liste sollten Sie berücksichtigen, welche Aktionen Benutzer über den Elementen dieser Liste ausführen könnten.  
 
@@ -43,7 +51,7 @@ Die *primäre Aktion* ist das, was der Benutzer beim Klicken auf ein Element der
 
 *Sekundäre Aktionen* sind in der Regel Abkürzungen für Aktionen über Listenelementen. Diese Abkürzungen können zur Verwaltung der Liste dienen oder Aktionen in Zusammenhang mit dem Listenelement aufrufen.
 
-## Optionen für sekundäre Aktionen
+## <a name="options-for-secondary-actions"></a>Optionen für sekundäre Aktionen
 
 Wenn Sie eine Listen-UI erstellen, müssen Sie zunächst sicherstellen, dass Sie alle Eingabemethoden berücksichtigen, die UWP unterstützt. Weitere Informationen zu verschiedenen Arten von Eingaben finden Sie unter [Einführung in Eingaben](../input-and-devices/input-primer.md).
 
@@ -53,13 +61,13 @@ Wenn Sie weitere Aktionen in die Hauptlisten-UI aufnehmen möchten, sollten dies
 
 Wenn Sie entscheiden, dass es nicht erforderlich ist, in der Hauptlisten-UI sekundäre Aktionen aufzunehmen, gibt es verschiedene andere Methoden, über die Sie diese für den Benutzer verfügbar machen können. Nachfolgend finden Sie einige Möglichkeiten, sekundäre Aktionen an anderen Stellen zu platzieren.
 
-### Platzieren der sekundären Aktionen auf der Detailseite
+### <a name="put-secondary-actions-on-the-detail-page"></a>Platzieren der sekundären Aktionen auf der Detailseite
 
 Platzieren Sie die sekundären Aktionen auf der Seite, zu der das Listenelement navigiert, wenn es ausgewählt wird. Wenn Sie das Master/Details-Muster verwenden, ist die Detailseite häufig eine gute Stelle für sekundäre Aktionen.
 
 Weitere Informationen finden Sie unter [Master/Details-Muster](master-details.md).
 
-### Platzieren der sekundären Aktionen in einem Kontextmenü
+### <a name="put-secondary-actions-in-a-context-menu"></a>Platzieren der sekundären Aktionen in einem Kontextmenü
 
 Platzieren Sie die sekundären Aktionen in einem Kontextmenü, auf das der Benutzer mit der rechten Maustaste oder durch Drücken und Halten zugreifen kann. Dies bietet den Vorteil, dass der Benutzer eine Aktion ausführen kann, ohne die Detailseite laden zu müssen, z. B. eine E-Mail löschen. Es ist eine empfohlene Vorgehensweise, diese Optionen außerdem auch auf der Detailseite zur Verfügung zu stellen, da Kontextmenüs als Abkürzung gedacht sind, für die die primäre UI tatsächlich an anderer Stelle vorhanden ist.
 
@@ -67,7 +75,7 @@ Um sekundäre Aktionen verfügbar zu machen, wenn die Eingabe über ein Gamepad 
 
 Weitere Informationen finden Sie in den [Kontextmenüs und Flyouts](menus.md).
 
-### Optimiertes Platzieren der sekundären Aktionen für die Zeigereingabe in Hover-UIs
+### <a name="put-secondary-actions-in-hover-ui-to-optimize-for-pointer-input"></a>Optimiertes Platzieren der sekundären Aktionen für die Zeigereingabe in Hover-UIs
 
 Wenn Ihre App benutzerfreundlich für Zeigereingaben wie Maus und Stift sein soll, und Sie sekundäre Aktionen nur für diese Eingabemethoden verfügbar machen möchten, können Sie die sekundären Aktionen durch Zeigeeffekte anzeigen. Diese Abkürzung wird nur angezeigt, wenn eine Zeigereingabe verwendet wird. Sie müssen daher sicherstellen, dass für andere Eingabetypen ebenfalls eine Möglichkeit verfügbar ist.
 
@@ -76,7 +84,7 @@ Wenn Ihre App benutzerfreundlich für Zeigereingaben wie Maus und Stift sein sol
 
 Weitere Informationen finden Sie unter [Mausinteraktionen](../input-and-devices/mouse-interactions.md).
 
-## Platzierung der UI für primäre und sekundäre Aktionen
+## <a name="ui-placement-for-primary-and-secondary-actions"></a>Platzierung der UI für primäre und sekundäre Aktionen
 
 Wenn Sie entscheiden, dass sekundäre Aktionen über die Hauptlisten-UI verfügbar gemacht werden sollen, empfehlen wir die folgenden Richtlinien.
 
@@ -84,15 +92,15 @@ Beim Erstellen eines Listenelements mit primären und sekundären Aktionen platz
 
 In der Listen-UI in diesen Beispielen ist der Fluss der Elemente tendenziell horizontal (die UI ist eher breit als hoch). Es besteht dennoch die Möglichkeit, dass einzelne Listenelemente in ihrer Form eher quadratisch sind (höher als breit). Solche Elemente werden in der Regel in einem Raster verwendet. Wenn die Liste bei diesen Elementen keinen vertikalen Bildlauf bietet, können Sie sekundäre Aktionen statt rechts neben dem Element darunter platzieren.
 
-## Berücksichtigen aller Eingaben
+## <a name="consider-all-inputs"></a>Berücksichtigen aller Eingaben
 
 Bei der Entscheidung, eine geschachtelte UI zu verwenden, sollten Sie auch die Benutzerfreundlichkeit bei allen Eingabetypen evaluieren. Wie bereits erwähnt eignen sich geschachtelte UIs gut für bestimmte Eingabetypen. Leider gibt es andere Eingabetypen, für die sie nicht so gut geeignet sind. Insbesondere problematisch ist der Zugriff auf geschachtelte UI-Elemente über Tastatur, Controller und bei Eingabe über eine Fernbedienung. Folge unbedingt den Richtlinien unten, um sicherzustellen, dass Ihre UWP-App mit allen Eingabetypen verwendet werden kann.
 
-## Behandeln von geschachtelten UIs
+## <a name="nested-ui-handling"></a>Behandeln von geschachtelten UIs
 
 Wenn mehr als eine Aktion im Listenelement geschachtelt ist, empfehlen wir diese Richtlinien, um die Navigation über Tastatur, Gamepad, Fernbedienung und andere nicht zeigerorientierte Eingabetypen zu behandeln.
 
-### Geschachtelte UI, deren Elemente eine Aktion ausführen
+### <a name="nested-ui-where-list-items-perform-an-action"></a>Geschachtelte UI, deren Elemente eine Aktion ausführen
 
 Wenn Ihre Listen-UI mit geschachtelten Elementen Aktionen unterstützt wie Aufrufen, Auswählen (Einzel- oder Mehrfachauswahl) oder Ziehen und Ablegen, empfehlen wir die folgenden pfeilorientierten Verfahren zum Navigieren in geschachtelten UI-Elementen.
 
@@ -130,7 +138,7 @@ Um diese UI so zur Verfügung zu stellen, legen Sie [IsItemClickEnabled](https:/
 
 Der Code zur Implementierung dieses Verhaltens finden Sie im Abschnitt [Beispiel](#example) dieses Artikels.
 
-### Geschachtelte UI, deren Listenelemente keine Aktion ausführen
+### <a name="nested-ui-where-list-items-do-not-perform-an-action"></a>Geschachtelte UI, deren Listenelemente keine Aktion ausführen
 
 Sie können eine Listenansicht auch verwenden, weil sie die Inhalte visuell optimiert darstellt und ein bestimmtes Bildlaufverhalten bietet, ohne dass den Listenelementen eine Aktion zugeordnet ist. Diese Benutzeroberflächen verwenden die Listendarstellung, um Elemente zu gruppieren und sicherzustellen, dass alle Listenelemente beim Bildlauf gemeinsam bewegt werden.
 
@@ -175,7 +183,7 @@ Bei Eingabe über eine Tastatur sollte der Benutzer wie folgt geleitet werden:
 - Von einem der geschachtelten UI-Elemente aus durchläuft der Fokus beim Drücken der Tabulatortaste die geschachtelte UI in der Aktivierreihenfolge.  Nachdem alle Elemente der geschachtelten UI durchlaufen wurden, erhält den Fokus das nächste Steuerelement, das in der Aktivierreihenfolge auf ListView folgt.
 - Bei der Tastenkombination Umschalt+Tabulatortaste wird das Aktivierungsverhalten umgekehrt.
 
-## Beispiel
+## <a name="example"></a>Beispiel
 
 Dieses Beispiel zeigt, wie Sie eine [geschachtelte UI implementieren, in denen Listenelemente eine Aktion ausführen](#nested-ui-where-list-items-perform-an-action).
 
@@ -302,9 +310,4 @@ public static class DependencyObjectExtensions
     }
 }
 ```
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

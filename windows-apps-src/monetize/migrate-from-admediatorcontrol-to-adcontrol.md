@@ -2,14 +2,21 @@
 author: mcleanbyron
 ms.assetid: 9621641A-7462-425D-84CC-101877A738DA
 description: Lesen Sie, wie Sie Ihre UWP-Apps von AdMediatorControl auf AdControl umstellen.
-title: Migrieren Ihrer UWP-Apps von AdMediatorControl zu AdControl
+title: "Migrieren Ihrer UWP-Apps von „AdMediatorControl“ zu „AdControl“"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Migrieren von Windows 10, UWP, Anzeigen, Werbung, AdMediatorControl, AdControl,"
 translationtype: Human Translation
-ms.sourcegitcommit: 2b5dbf872dd7aad48373f6a6df3dffbcbaee8090
-ms.openlocfilehash: 6e7e833327dce4b49e44b7485908c8a507b217ef
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 83235595a6a7f9e9b0b5d8de154d6e5d8a8db8ef
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="migrate-from-admediatorcontrol-to-adcontrol-for-uwp-apps"></a>Migrieren Ihrer UWP-Apps von AdMediatorControl zu AdControl
+# <a name="migrate-from-admediatorcontrol-to-adcontrol-for-uwp-apps"></a>Migrieren Ihrer UWP-Apps von „AdMediatorControl“ zu „AdControl“
 
 In den Vorversionen des Advertising SDK von Microsoft konnten UWP- (Universelle Windows-Plattform-)Apps mit der Klasse **AdMediatorControl** Werbebanner anzeigen. Damit konnten Entwickler ihren Anzeigenumsatz optimieren, indem Sie Anzeigen von Werbebannern aus unseren Partnernetzwerken (AOL und AppNexus) sowie von AdDuplex anzeigen. Das [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) unterstützt die Klasse **AdMediatorControl** nicht mehr. Wenn Sie eine App haben, die die Klasse **AdMediatorControl** aus einem früheren SDK verwendet, und Sie diese App in eine UWP-Anwendung umwandeln möchten, die das [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) verwendet, folgen Sie den Anweisungen in diesem Artikel, um Ihren Quellcode so zu ändern, dass die Klasse **AdControl** anstelle von **AdMediatorControl** verwendet. Optional können Sie Ihre App so konfigurieren, das Werbung von AdDuplex eingeblendet wird, wobei ein gewichteter oder Rangfolgeansatz verwendet wird.
 
@@ -158,9 +165,4 @@ Erweitern Sie im **Verweis-Manager** den Knoten **Universal Windows**, klicken S
 
   > [!div class="tabbedCodeSnippets"]
   [!code-cs[AdControl](./code/AdvertisingSamples/MigrateToAdControl/cs/ExamplePage1.xaml.cs#Snippet5)]
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

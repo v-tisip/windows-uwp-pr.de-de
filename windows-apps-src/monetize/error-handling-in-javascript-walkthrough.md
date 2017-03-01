@@ -3,10 +3,16 @@ author: mcleanbyron
 ms.assetid: 08b4ae43-69e8-4424-b3c0-a07c93d275c3
 description: Hier erfahren Sie, wie AdControl-Fehler in Ihrer App aufgefangen werden.
 title: Exemplarische Vorgehensweise zur Fehlerbehandlung in JavaScript
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Anzeige, Werbung, Fehlerbehandlung, JavaScript"
 translationtype: Human Translation
-ms.sourcegitcommit: f88a71491e185aec84a86248c44e1200a65ff179
-ms.openlocfilehash: ad177c964f2a01640d33fc09f1789fc857801792
-
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 935ce9ca17d2b9d4a63496ab0b254960bd68e23d
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -15,7 +21,7 @@ ms.openlocfilehash: ad177c964f2a01640d33fc09f1789fc857801792
 
 
 
-In diesem Thema wird veranschaulicht, wie [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx)-Fehler in Ihrer App erfasst werden können.
+In diesem Thema wird veranschaulicht, wie [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx)-Fehler in Ihrer App abgefangen werden können.
 
 In diesen Beispielen wird davon ausgegangen, dass Sie eine JavaScript/HTML-App haben, die ein **AdControl** enthält. Schritt-für-Schritt-Anleitungen, die zeigen, wie ein **AdControl** zu Ihrer App hinzugefügt wird, finden Sie unter [AdControl in HTML 5 und Javascript](adcontrol-in-html-5-and-javascript.md). Ein vollständiges Beispiel-Projekt, das veranschaulicht, wie Sie mithilfe von C# und C++ Werbebanner zu einer JavaScript/HTML-App hinzufügen, finden Sie unter den [Anzeigenbeispielen auf GitHub](http://aka.ms/githubads).
 
@@ -80,9 +86,4 @@ In diesen Beispielen wird davon ausgegangen, dass Sie eine JavaScript/HTML-App h
 * [Anzeigenbeispiele bei GitHub](http://aka.ms/githubads)
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

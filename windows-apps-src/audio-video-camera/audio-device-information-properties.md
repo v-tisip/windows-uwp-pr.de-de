@@ -1,28 +1,35 @@
 ---
 author: drewbatgit
 ms.assetid: 3b75d881-bdcf-402b-a330-23cd29d68e53
-description: "Dieser Artikel enthält eine Liste mit den DeviceInformation-Eigenschaften für Audiogeräte."
-title: "Eigenschaften für Audiogeräteinformationen"
+description: "Dieser Artikel enthält eine Liste mit den Geräteinformationseigenschaften für Audiogeräte."
+title: "Audiogeräte-Informationseigenschaften"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 0745e96715ba49582ab762d4b25f1b8e681116f5
-ms.openlocfilehash: 08ebb37679d1dd93458a3ffe846d8bd33574635d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 647a0228299e90026307fdd516ac71da2473ff0d
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Eigenschaften für Audiogeräteinformationen
+# <a name="audio-device-information-properties"></a>Audiogeräte-Informationseigenschaften
 
 Dieser Artikel enthält eine Liste mit den Geräteinformationseigenschaften für Audiogeräte. Unter Windows sind jedem Hardwaregerät [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393)-Eigenschaften mit ausführlichen Geräteinformationen zugeordnet, auf die Sie zurückgreifen können, wenn Sie bestimmte Geräteinformationen benötigen oder eine Geräteauswahl erstellen möchten. Allgemeine Informationen zum Aufzählen von Geräten unter Windows finden Sie unter [Auflisten von Geräten](../devices-sensors/enumerate-devices.md) und [Geräteinformationseigenschaften](../devices-sensors/device-information-properties.md).
 
 
 |Name|Typ|Beschreibung|
 |------------------------------------------------------------|------------|------------------------------------------------------|
-|**System.Devices.AudioDevice.Microphone.SensitivityInDbfs**|Double|Gibt die Empfindlichkeit des Mikrofons in Dezibel relativ zu Full-Scale-Einheiten (dBFS) an.|
+|**System.Devices.AudioDevice.Microphone.SensitivityInDbfs**|Double|Gibt die Empfindlichkeit des Mikrofons in Dezibel relativ zu Full-Scale-Einheiten (dB FS) an.|
 |**System.Devices.AudioDevice.Microphone.SignalToNoiseRationInDb**|Double|Gibt für das Mikrofon das Signal-Rausch-Verhältnis (SNR) in Dezibeleinheiten (dB) an.|
 |**System.Devices.AudioDevice.SpeechProcessingSupported**|Boolean|Gibt an, ob das Audiogerät die Verarbeitung von Sprache unterstützt.|
 |**System.Devices.AudioDevice.RawProcessingSupported**|Boolean|Gibt an, ob das Audiogerät die Verarbeitung von Rohdaten unterstützt.|
 |**System.Devices.MicrophoneArray.Geometry**|unsigned char[]|Geometriedaten für ein Mikrofonarray.|
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Auflisten von Geräten](../devices-sensors/enumerate-devices.md)
 * [Geräteinformationseigenschaften](../devices-sensors/device-information-properties.md)
@@ -31,10 +38,5 @@ Dieser Artikel enthält eine Liste mit den Geräteinformationseigenschaften für
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -1,15 +1,22 @@
 ---
 author: mcleblanc
 description: "Windows-Apps weisen auf PCs, Mobilgeräten und vielen anderen Arten von Geräten ein einheitliches Erscheinungsbild auf. Die Benutzeroberfläche, Eingabe und Interaktionsmuster sind fast identisch, und Benutzer profitieren von einer einheitlichen Umgebung auf allen Geräten."
-title: "Portieren von Windows Phone Silverlight zu UWP für Formfaktor und Benutzerfreundlichkeit"
+title: "Portieren von Windows Phone Silverlight zu UWP – Formfaktor und Benutzerfreundlichkeit"
 ms.assetid: 96244516-dd2c-494d-ab5a-14b7dcd2edbd
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: 71e762410b1c7dbf416e3bb81310d74115938102
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 301f1b55644842225f1b8d040d5b02a035d1940b
+ms.lasthandoff: 02/07/2017
 
 ---
 
-#  <a name="porting-windows-phone-silverlight-to-uwp-for-form-factor-and-ux"></a>Portieren von Windows Phone Silverlight zu UWP für Formfaktor und Benutzerfreundlichkeit
+#  <a name="porting-windows-phone-silverlight-to-uwp-for-form-factor-and-ux"></a>Portieren von Windows Phone Silverlight zu UWP – Formfaktor und Benutzerfreundlichkeit
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
@@ -68,10 +75,5 @@ In der Liste [Maximieren der Wiederverwendung von Markup und Code](wpsl-to-uwp-p
 ## <a name="related-topics"></a>Verwandte Themen
 
 * [Namespace- und Klassenzuordnungen](wpsl-to-uwp-namespace-and-class-mappings.md)
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

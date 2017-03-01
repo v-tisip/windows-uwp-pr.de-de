@@ -3,14 +3,21 @@ author: mcleblanc
 ms.assetid: 40122343-1FE3-4160-BABE-6A2DD9AF1E8E
 title: Optimieren des Dateizugriffs
 description: "Erstellen Sie UWP-Apps (Universelle Windows-Plattform), die effizient auf das Dateisystem zugreifen und dadurch Leistungsprobleme aufgrund von Datenträgerlatenz und Arbeitsspeicher-/CPU-Zyklen vermeiden."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 165105c141405cd752f876c822f76a5002d38678
-ms.openlocfilehash: 53fd6f4c28eaa7d3976658a84dd0aefb4255ff91
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 31869b116096052bed9e1c462de3f93e4d1335c2
+ms.lasthandoff: 02/07/2017
 
 ---
-# Optimieren des Dateizugriffs
+# <a name="optimize-file-access"></a>Optimieren des Dateizugriffs
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Erstellen Sie UWP-Apps (Universelle Windows-Plattform), die effizient auf das Dateisystem zugreifen und dadurch Leistungsprobleme aufgrund von Datenträgerlatenz und Arbeitsspeicher-/CPU-Zyklen vermeiden.
 
@@ -125,9 +132,9 @@ Im dritten Beispiel werden mit [**QueryOptions**](https://msdn.microsoft.com/lib
 > ```
 Wenn Sie mehrere Vorgänge an Windows.Storage-Objekten wie `Windows.Storage.ApplicationData.Current.LocalFolder` ausführen, erstellen Sie eine lokale Variable, die auf die Speicherquelle verweist, sodass nicht bei jedem Zugriff erneut Zwischenobjekte erstellt werden müssen.
 
-## Streamleistung in C# und Visual Basic
+## <a name="stream-performance-in-c-and-visual-basic"></a>Streamleistung in C# und Visual Basic
 
-### Puffern zwischen UWP- und .NET-Streams
+### <a name="buffering-between-uwp-and-net-streams"></a>Puffern zwischen UWP- und .NET-Streams
 
 Ein UWP-Stream (wie [**Windows.Storage.Streams.IInputStream**](https://msdn.microsoft.com/library/windows/apps/BR241718) oder [**IOutputStream**](https://msdn.microsoft.com/library/windows/apps/BR241728)) kann in zahlreichen Szenarien in .NET-Streams ([**System.IO.Stream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.stream.aspx)) konvertiert werden. Dies ist beispielsweise hilfreich, wenn Sie eine UWP-App (Universelle Windows-Plattform) erstellen und vorhandenen .NET-Code für Streams im UWP-Dateisystem verwenden möchten. .NET-APIs für Windows Store-Apps stellen zu diesem Zweck Erweiterungsmethoden für die Konvertierung zwischen .NET- und UWP-Streams bereit. Weitere Informationen finden Sie unter [**WindowsRuntimeStreamExtensions**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.aspx).
 
@@ -188,11 +195,11 @@ Damit entsprechende Geschwindigkeitseinbußen nach Möglichkeit vermieden werden
 
 Das Verhalten des Standardpuffers eignet sich für die meisten Szenarien, in denen ein UWP-Stream in einen .NET-Stream konvertiert werden soll. In einigen Szenarien kann es jedoch wünschenswert sein, das Pufferverhalten zu optimieren, um die Leistung zu erhöhen.
 
-### Arbeiten mit umfangreichen Datensätzen
+### <a name="working-with-large-data-sets"></a>Arbeiten mit umfangreichen Datensätzen
 
 Beim Lesen oder Schreiben umfangreicher Datensätze können Sie den Durchsatz möglicherweise erhöhen, indem Sie den Puffer für die Erweiterungsmethoden [**AsStreamForRead**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstream.aspx), [**AsStreamForWrite**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforwrite.aspx) und [**AsStream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstream.aspx) vergrößern. Dadurch enthält der Streamadapter einen größeren internen Puffer. So kann der Parser beim Übergeben eines Streams von einer großen Datei an einen XML-Parser eine Vielzahl von kleinen Lesevorgängen für den Stream ausführen. Große Puffer können dafür sorgen, dass der zugrunde liegende UWP-Stream weniger oft aufgerufen und somit die Leistung gesteigert wird.
 
-> **Hinweis**   Beachten Sie jedoch, dass es ab einer Puffergröße von etwa 80KB zu Fragmentierungen im Garbage Collector-Heap (siehe [Verbessern der Leistung der Garbage Collection](improve-garbage-collection-performance.md)) kommen kann. Im folgenden Codebeispiel wird ein verwalteter Datenstromadapter mit einem Puffer mit 81.920Bytes erstellt.
+> **Hinweis**   Beachten Sie jedoch, dass es ab einer Puffergröße von etwa 80 KB zu Fragmentierungen im Garbage Collector-Heap (siehe [Verbessern der Leistung der Garbage Collection](improve-garbage-collection-performance.md)) kommen kann. Im folgenden Codebeispiel wird ein verwalteter Datenstromadapter mit einem Puffer mit 81.920 Bytes erstellt.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -224,20 +231,15 @@ Die [**Stream.CopyTo**](https://msdn.microsoft.com/library/windows/apps/xaml/sys
 > Await managedStream.CopyToAsync(destination, bufferSize:=1024 * 1024)
 > ```
 
-Die Puffergröße im Beispiel beträgt 1MB. Die empfohlene Puffergröße von 80KB wird somit deutlich übertroffen. Durch die Verwendung eines entsprechend großen Puffers kann der Durchsatz des Kopiervorgangs bei umfangreichen Datensätzen (von mehreren Hundert Megabyte) verbessert werden. Da dieser Puffer jedoch für den Heap für große Objekte zugewiesen wird, kann die Leistung der Garbage Collection dadurch beeinträchtigt werden. Große Puffergrößen sollten daher nur verwendet werden, wenn die Leistung der App dadurch spürbar verbessert werden kann.
+Die Puffergröße im Beispiel beträgt 1 MB. Die empfohlene Puffergröße von 80 KB wird somit deutlich übertroffen. Durch die Verwendung eines entsprechend großen Puffers kann der Durchsatz des Kopiervorgangs bei umfangreichen Datensätzen (von mehreren Hundert Megabyte) verbessert werden. Da dieser Puffer jedoch für den Heap für große Objekte zugewiesen wird, kann die Leistung der Garbage Collection dadurch beeinträchtigt werden. Große Puffergrößen sollten daher nur verwendet werden, wenn die Leistung der App dadurch spürbar verbessert werden kann.
 
 Wenn Sie eine große Anzahl von Streams gleichzeitig verwenden, können Sie den Speichermehraufwand des Puffers verringern oder vermeiden. Sie können einen kleineren Puffer angeben oder den *bufferSize*-Parameter auf 0 festlegen, um den Puffer für den betreffenden Streamadapter vollständig zu deaktivieren. Auch ohne Puffer können Sie bei Lese- und Schreibvorgängen für den verwalteten Stream jedoch eine gute Durchsatzleistung erreichen.
 
-### Durchführen von Vorgängen, bei denen Latenz eine Rolle spielt
+### <a name="performing-latency-sensitive-operations"></a>Durchführen von Vorgängen, bei denen Latenz eine Rolle spielt
 
 Das Vermeiden von Pufferungen kann ebenfalls wünschenswert sein, wenn Lese- und Schreibvorgänge mit geringer Latenz ausgeführt werden sollen, ohne große Blöcke aus dem zugrunde liegenden UWP-Stream zu lesen. Beispielsweise eignen sich Lese- und Schreibvorgänge mit geringer Latenz sehr gut für Netzwerkkommunikationsstreams.
 
 In einer Chat-App können Sie Nachrichten mit einem Stream über eine Netzwerkschnittstelle senden und empfangen. Die Nachrichten sollen dabei unmittelbar nach dem Verfassen und nicht erst dann gesendet werden, wenn der Puffer voll ist. Wenn Sie die Puffergröße beim Aufrufen der Methoden [**AsStreamForRead**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforread.aspx), [**AsStreamForWrite**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforwrite.aspx) und [**AsStream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstream.aspx) auf 0 festlegen, wird vom resultierenden Adapter kein Puffer zugewiesen. Außerdem wird der zugrunde liegende UWP-Datenstrom von allen Aufrufen direkt bearbeitet.
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

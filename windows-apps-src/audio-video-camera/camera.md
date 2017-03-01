@@ -1,30 +1,37 @@
 ---
 author: drewbatgit
-ms.assetid: 
-description: "In diesem Artikel werden die für UWP-Apps verfügbaren Kamera-Features aufgeführt, sowie die Links zu den Anleitungen für ihre Verwendung."
+ms.assetid: 370f2c14-4f1e-47b3-9197-24205ab255a3
+description: "In diesem Artikel werden die für UWP-Apps verfügbaren Kamera-Features aufgeführt sowie die Links zu den Anleitungen für ihre Verwendung."
 title: Kamera
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: f9f85359bd24e0a642bf9cbe3c76f6bfac7866f8
-ms.openlocfilehash: 8759a7cdb1d516f9c88f866887861c2f28085b5b
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 0b2b421c2619c1649b3a6c9afb6b0ccafafc473b
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Kamera
+# <a name="camera"></a>Kamera
 
 Dieser Abschnitt enthält Richtlinien für das Erstellen von UWP (Universelle Windows-Plattform)-Apps, die die Kamera oder das Mikrofon verwenden, um Fotos, Videos oder Audiodateien zu erfassen.
 
-##Verwenden der in Windows integrierten Kamera-UI
+##<a name="use-the-windows-built-in-camera-ui"></a>Verwenden der in Windows integrierten Kamera-UI
 | Thema                                                                                             | Beschreibung                                                                                                                                                                                                                                                                                    |
 |---------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Aufnehmen von Fotos und Videos mit der in Windows integrierten Kamera-UI](capture-photos-and-video-with-cameracaptureui.md) | Zeigt, wie Sie die [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.CameraCaptureUI)-Klasse zum Aufnehmen von Fotos oder Videos mit der in Windows integrierten Kamera-UI verwenden. Wenn Sie einfach den Benutzer dazu befähigen möchten, ein Foto oder Video aufzuzeichnen und das Ergebnis an Ihre App zurückzugeben, ist dies die schnellste und einfachste Möglichkeit dafür.  |
-##Grundlegende MediaCapture-Funktionen
+##<a name="basic-mediacapture-tasks"></a>Grundlegende MediaCapture-Funktionen
 | Thema                                                                                             | Beschreibung                                                                                                                                                                                                                                                                                    |
 |---------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Anzeigen der Kameravorschau](simple-camera-preview-access.md) | Beschreibt, wie Sie in einer UWP-App innerhalb einer XAML-Seite den Kameravorschau-Stream schnell anzeigen können. |
 | [Allgemeine Foto-, Video- und Audioaufnahme mit „MediaCapture“](basic-photo-video-and-audio-capture-with-MediaCapture.md) | Zeigt die einfachste Möglichkeit zum Aufnehmen von Fotos und Videos mit der [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCapture)-Klasse. Die **MediaCapture**-Klasse stellt einen robusten Satz von APIs bereit, der eine Steuerung der Aufnahme-Pipeline auf unterster Ebene sowie fortgeschrittene Aufnahme-Szenarien ermöglicht. Dieser Artikel soll Ihnen jedoch helfen, Ihrer App die grundlegende Medienaufnahme schnell und problemlos hinzuzufügen. |
 | [Kamera-UI-Features für mobile Geräte](camera-ui-features-for-mobile-devices.md) | Beschreibt, wie Sie spezielle Kamera-UI-Features nutzen, die nur auf mobilen Geräten vorhanden sind.  |
                                                                                                                
-##Erweiterte MediaCapture-Funktionen   
+##<a name="advanced-mediacapture-tasks"></a>Erweiterte MediaCapture-Funktionen   
                                                                                                                
 | Thema                                                                                             | Beschreibung                                                                                                                                                                                                                                                                                    |
 |---------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -41,7 +48,7 @@ Dieser Abschnitt enthält Richtlinien für das Erstellen von UWP (Universelle Wi
 | [Abrufen eines Vorschauframes](get-a-preview-frame.md) | Beschreibt, wie Sie einen einzelnen Vorschauframe aus dem Vorschaustream der Medienaufnahme abrufen.  |                                                                                                   
 
 
-## UWP-App-Beispiele für Kamera
+## <a name="uwp-app-samples-for-camera"></a>UWP-App-Beispiele für Kamera
 
 * [Beispiel für Gesichtserkennung durch Kamera](http://go.microsoft.com/fwlink/p/?LinkID=619486&clcid=0x409)
 * [Beispiel für Kamera-Vorschauframe](http://go.microsoft.com/fwlink/p/?LinkID=620516&clcid=0x409)
@@ -52,7 +59,7 @@ Dieser Abschnitt enthält Richtlinien für das Erstellen von UWP (Universelle Wi
 * [Kamera-Starterkit](http://go.microsoft.com/fwlink/p/?LinkID=619479&clcid=0x409)
 * [Beispiel für Videostabilisierung für Kamera](http://go.microsoft.com/fwlink/p/?LinkID=620519&clcid=0x409)
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Audio, Video und Kamera](index.md)
  
@@ -61,10 +68,5 @@ Dieser Abschnitt enthält Richtlinien für das Erstellen von UWP (Universelle Wi
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

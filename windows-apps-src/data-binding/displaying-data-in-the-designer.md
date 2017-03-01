@@ -3,22 +3,29 @@ author: mcleblanc
 ms.assetid: 089660A2-7CAE-4911-9994-F619C5D22287
 title: "Beispieldaten für die Entwurfsoberfläche und Prototyperstellung"
 description: "Möglicherweise ist es nicht möglich oder nicht erwünscht (z. B. aus Gründen des Datenschutzes oder der Leistung), dass Ihre App Livedaten auf der Entwurfsoberfläche von Microsoft Visual Studio oder Blend für Visual Studio anzeigt."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 53e807c0d9de8faf2d0b5dc0e1c8e9c380e42d86
-ms.openlocfilehash: 6f157688cba014ffc1f8d09c2a291d62c564c8c9
+ms.sourcegitcommit: 3c073879ab847a3e1af454e0c1550d8af0f78b3e
+ms.openlocfilehash: 35df3de9b56b9539a559e161e80658c23a9d0480
+ms.lasthandoff: 01/19/2017
 
 ---
-Beispieldaten für die Entwurfsoberfläche und Prototyperstellung
+<a name="sample-data-on-the-design-surface-and-for-prototyping"></a>Beispieldaten für die Entwurfsoberfläche und Prototyperstellung
 =============================================================================================
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 **Hinweis**  Der Bedarf an Beispieldaten und deren Nutzen für Sie hängen davon ab, ob für die Bindungen die [{Binding}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204782) oder die [{x:Bind}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204783) verwendet wird. Die in diesem Thema beschriebenen Verfahren basieren auf der Verwendung eines [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) und eignen sich deshalb nur für **{Binding}**. Wenn Sie jedoch **{x:Bind}** verwenden, zeigen die Bindungen zumindest Platzhalterwerte auf der Entwurfsoberfläche an (selbst für Elementsteuerelemente). Deshalb besteht ein geringerer Bedarf an Beispieldaten.
 
-Möglicherweise ist es nicht möglich oder nicht erwünscht (z.B. aus Gründen des Datenschutzes oder der Leistung), dass Ihre App Livedaten auf der Entwurfsoberfläche von Microsoft Visual Studio oder Blend für Visual Studio anzeigt. Es gibt mehrere Möglichkeiten, Entwurfszeit-Beispieldaten zu verwenden, damit die Steuerelemente mit Daten aufgefüllt werden (sodass Sie das Layout, die Vorlagen und andere visuelle Eigenschaften der App bearbeiten können). Beispieldaten können auch hilfreich sein und Zeit sparen, wenn Sie eine App als Skizze (oder Prototyp) erstellen. Sie können zur Laufzeit Beispieldaten in der Skizze oder im Prototyp verwenden, um Ihre Ideen zu veranschaulichen, ohne echte Livedaten nutzen zu müssen.
+Möglicherweise ist es nicht möglich oder nicht erwünscht (z. B. aus Gründen des Datenschutzes oder der Leistung), dass Ihre App Livedaten auf der Entwurfsoberfläche von Microsoft Visual Studio oder Blend für Visual Studio anzeigt. Es gibt mehrere Möglichkeiten, Entwurfszeit-Beispieldaten zu verwenden, damit die Steuerelemente mit Daten aufgefüllt werden (sodass Sie das Layout, die Vorlagen und andere visuelle Eigenschaften der App bearbeiten können). Beispieldaten können auch hilfreich sein und Zeit sparen, wenn Sie eine App als Skizze (oder Prototyp) erstellen. Sie können zur Laufzeit Beispieldaten in der Skizze oder im Prototyp verwenden, um Ihre Ideen zu veranschaulichen, ohne echte Livedaten nutzen zu müssen.
 
-Festlegen des DataContext im Markup
+<a name="setting-datacontext-in-markup"></a>Festlegen des DataContext im Markup
 -----------------------------
 
 Entwickler verwenden häufig imperativen Code (in CodeBehind), um den [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) einer Seite oder eines Benutzersteuerelements auf eine Ansichtsmodellinstanz festzulegen.
@@ -52,7 +59,7 @@ Und so sieht die Benutzeroberfläche aus, wenn die Bindungen aufgelöst werden k
 
 ![Designfähige Benutzeroberfläche](images/displaying-data-in-the-designer-03.png)
 
-Im Dialogfeld **Datenbindung erstellen** ist nur ein Typ als Grundlage erforderlich, die Bindungen erfordern jedoch, dass die Eigenschaften mit Werten initialisiert werden. Wenn Sie zur Entwurfszeit nicht den Clouddienst in Anspruch nehmen möchten (aus Gründen der Leistung, der Kosten der Datenübertragung, des Datenschutzes usw.), kann der Initialisierungscode überprüfen, ob die App in einem Entwicklungstool (z.B. Visual Studio oder Blend für Visual Studio) ausgeführt wird. Wenn dies der Fall ist, laden Sie Beispieldaten, die nur zur Entwurfszeit verwendet werden.
+Im Dialogfeld **Datenbindung erstellen** ist nur ein Typ als Grundlage erforderlich, die Bindungen erfordern jedoch, dass die Eigenschaften mit Werten initialisiert werden. Wenn Sie zur Entwurfszeit nicht den Clouddienst in Anspruch nehmen möchten (aus Gründen der Leistung, der Kosten der Datenübertragung, des Datenschutzes usw.), kann der Initialisierungscode überprüfen, ob die App in einem Entwicklungstool (z. B. Visual Studio oder Blend für Visual Studio) ausgeführt wird. Wenn dies der Fall ist, laden Sie Beispieldaten, die nur zur Entwurfszeit verwendet werden.
 
 ``` csharp
 if (Windows.ApplicationModel.DesignMode.DesignModeEnabled)
@@ -67,7 +74,7 @@ else
 
 Sie können einen Ansichtsmodelllocator verwenden, wenn Sie Parameter an den Initialisierungscode übergeben müssen. Ein Ansichtsmodelllocator ist eine Klasse, die Sie in App-Ressourcen einfügen können. Er verfügt über eine Eigenschaft, die das Ansichtsmodell verfügbar macht, und der **DataContext** der Seite wird an diese Eigenschaft gebunden. Ein weiteres Muster, das der Locator oder das Ansichtsmodell verwenden können, ist das Einfügen von Abhängigkeiten. Damit kann ein Entwurfszeit- bzw. Laufzeitdatenanbieter (der jeweils eine gemeinsame Schnittstelle implementiert) erstellt werden.
 
-„Beispieldaten aus Klasse erstellen“ und Entwurfszeitattribute
+<a name="sample-data-from-class-and-design-time-attributes"></a>„Beispieldaten aus Klasse erstellen“ und Entwurfszeitattribute
 ---------------------------------------------------------------------------------------
 
 Wenn aus irgendeinem Grund keine der Optionen im vorherigen Abschnitt für Sie geeignet ist, stehen Ihnen immer noch über die Features der XAML-Tools und die Entwurfszeitattribute viele Optionen für Entwurfszeitdaten zur Verfügung. Eine gute Möglichkeit ist das Feature **Beispieldaten aus Klasse erstellen** in Blend für Visual Studio. Sie finden diesen Befehl auf einer der Schaltflächen am oberen Rand des Bereichs **Daten**.
@@ -132,7 +139,7 @@ Bisher haben wir zum Laden von Entwurfszeit-Beispieldaten aus einer XAML- oder J
 
 Die **IsDesignTimeCreatable**-Eigenschaft gibt an, dass das Entwicklungstool eigentlich eine Instanz der Klasse erstellen soll. Dies bedeutet, dass die Klasse über einen öffentlichen Standardkonstruktor verfügt und sich selbst mit Daten (echte oder Beispieldaten) auffüllt. Wenn Sie **IsDesignTimeCreatable** nicht festlegen (oder wenn Sie es auf **False** festlegen), werden auf der Entwurfsoberfläche keine Beispieldaten angezeigt. In diesem Fall analysiert das Entwicklungstool lediglich die Klasse im Hinblick auf ihre bindbaren Eigenschaften und zeigt diese im Bereich **Daten** sowie im Dialogfeld **Datenbindung erstellen** an.
 
-Beispieldaten für die Prototyperstellung
+<a name="sample-data-for-prototyping"></a>Beispieldaten für die Prototyperstellung
 --------------------------------------------------------
 
 Für die Prototyperstellung benötigen Sie Beispieldaten zur Entwurfszeit und zur Laufzeit. Für diesen Anwendungsfall verfügt Blend für Visual Studio über das Feature **Neue Beispieldaten**. Sie finden diesen Befehl auf einer der Schaltflächen am oberen Rand des Bereichs **Daten**.
@@ -142,9 +149,4 @@ Statt eine Klasse anzugeben, können Sie direkt im Bereich **Daten** das Schema 
 Das Feature **Neue Beispieldaten** verwendet [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) und nicht **d:DataContext**. Daher sind die Beispieldaten sowohl beim Ausführen als auch beim Entwerfen der Skizze oder des Prototyps verfügbar. Und der Bereich **Daten** beschleunigt Ihre Entwurfs- und Bindungsaufgaben. Beispielsweise werden durch Ziehen einer Sammlungseigenschaft aus dem Bereich **Daten** auf die Entwurfsoberfläche ein datengebundenes Elementsteuerelement und die erforderlichen Vorlagen generiert, die sofort erstellt und ausgeführt werden können.
 
 ![Beispieldaten für die Prototyperstellung](images/displaying-data-in-the-designer-04.png)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

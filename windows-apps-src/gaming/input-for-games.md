@@ -1,17 +1,24 @@
 ---
 author: mithom
 title: "Eingaben für Spiele"
-description: "In diesem Abschnitt wird die Arbeit mit Gamepads und anderen Eingabegeräten für Spiele für die universelle Windows-Plattform (UWP) veranschaulicht."
+description: "In diesem Abschnitt wird die Arbeit mit Gamepads und anderen Eingabegeräten für Spiele für die Universelle Windows-Plattform (UWP) veranschaulicht."
 ms.assetid: 2DD0B384-8776-4599-9E52-4FC0AA682735
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, Spiele, Eingabe
 translationtype: Human Translation
-ms.sourcegitcommit: 858bf6a0862d6459b2bac22d8ab9431b51332fef
-ms.openlocfilehash: 8d1cfa840e359ad1f6a890ed7e7425d387393e15
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ee6017648974d5283f59708550092f26d88388ce
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="input-for-games"></a>Eingaben für Spiele
 
-In diesem Abschnitt werden die verschiedenen Arten von Eingabegeräten beschrieben, die in Spielen für die universelle Windows-Plattform (UWP) unter Windows 10 und auf Xbox One verwendet werden können. Darüber hinaus wird ihre grundlegende Nutzung veranschaulicht, und es werden Muster und Verfahren für die effektive Eingabeprogrammierung in Spielen empfohlen.
+In diesem Abschnitt werden die verschiedenen Arten von Eingabegeräten beschrieben, die in Spielen für die Universelle Windows-Plattform (UWP) unter Windows 10 und auf Xbox One verwendet werden können. Darüber hinaus wird ihre grundlegende Nutzung veranschaulicht, und es werden Muster und Verfahren für die effektive Eingabeprogrammierung in Spielen empfohlen.
 
 > **Hinweis**    Es gibt weitere Arten von Eingabegeräten für den Einsatz in UWP-Spielen, z. B. benutzerdefinierte Eingabegeräte, die genre- oder spielspezifisch sein können. Diese Geräte und deren Programmierung werden in diesem Abschnitt nicht behandelt. Informationen zu den Schnittstellen, die die Bereitstellung benutzerdefinierter Eingabegeräte ermöglichen, finden Sie unter dem [Windows.Gaming.Input.Custom][]-Namespace.
 
@@ -61,9 +68,4 @@ Weitere Informationen zur Verwaltung von Benutzern und ihren Eingabegeräten fin
 
 [Windows.Gaming.Input]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.aspx
 [Windows.Gaming.Input.Custom]: https://msdn.microsoft.com/en-us/library/windows/apps/windows.gaming.input.custom.aspx
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -2,16 +2,24 @@
 author: payzer
 title: "Device Portal - Referenz zur API für den Xbox Live-Sandkasten"
 description: Erfahren Sie, wie Sie programmgesteuert auf den Xbox Live-Sandkasten zugreifen.
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
+ms.assetid: 72c7459c-420a-4da9-8afa-191a846185a5
 translationtype: Human Translation
-ms.sourcegitcommit: a857ba338a971e651653193ff2149f08b1665a36
-ms.openlocfilehash: 2a0bfa2eecffb2b0f5ed0bc691cb90bcd7191321
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 629e8c3d35c9b9730c07e9f810909298558ae700
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Referenz zur API für den Xbox Live-Sandkasten   
+# <a name="xbox-live-sandbox-api-reference"></a>Referenz zur API für den Xbox Live-Sandkasten   
 Mit dieser REST-API können Sie den Xbox Live-Sandkasten abrufen und festlegen.
 
-## Abrufen des Xbox Live-Sandkastens
+## <a name="get-the-xbox-live-sandbox"></a>Abrufen des Xbox Live-Sandkastens
 
 **Anforderung**
 
@@ -46,7 +54,7 @@ HTTP-Statuscode      | Beschreibung
 4XX | Fehlercodes
 5XX | Fehlercodes
 
-## Festlegen des Xbox Live-Sandkastens
+## <a name="set-the-xbox-live-sandbox"></a>Festlegen des Xbox Live-Sandkastens
 Mit der folgenden Anforderung können Sie den Xbox Live-Sandkasten des Geräts ändern. Bei der Xbox One muss das Gerät neu gestartet werden, damit die Einstellung wirksam wird.
 
 **Anforderung**
@@ -86,10 +94,5 @@ HTTP-Statuscode      | Beschreibung
 **Verfügbare Gerätefamilien**
 
 * Windows Xbox
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

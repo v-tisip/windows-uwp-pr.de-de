@@ -3,20 +3,27 @@ author: msatranjr
 title: "Benutzerdefinierte Ereignisse und Ereignisaccessoren in Komponenten für Windows-Runtime"
 description: "Die .NET Framework-Unterstützung für Komponenten für Windows-Runtime erleichtert die Deklaration von Ereigniskomponenten, indem die Unterschiede zwischen dem Ereignismuster der universellen Windows-Plattform (UWP) und dem Ereignismuster von .NET Framework verborgen werden."
 ms.assetid: 6A66D80A-5481-47F8-9499-42AC8FDA0EB4
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
-ms.openlocfilehash: c1beff6cbfefdfd3c11c9b16e18519c02c201930
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 6bac2575b3855357076d4272a423c9c689118b2b
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Benutzerdefinierte Ereignisse und Ereignisaccessoren in Komponenten für Windows-Runtime
+# <a name="custom-events-and-event-accessors-in-windows-runtime-components"></a>Benutzerdefinierte Ereignisse und Ereignisaccessoren in Komponenten für Windows-Runtime
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
 Die .NET Framework-Unterstützung für Komponenten für Windows-Runtime erleichtert die Deklaration von Ereigniskomponenten, indem die Unterschiede zwischen dem Ereignismuster der universellen Windows-Plattform (UWP) und dem Ereignismuster von .NET Framework verborgen werden. Wenn Sie jedoch benutzerdefinierte Ereignisaccessoren in einer Komponente für Windows-Runtime deklarieren, müssen Sie dem Muster folgen das in der UWP verwendet wird.
 
-## Registrieren von Ereignissen
+## <a name="registering-events"></a>Registrieren von Ereignissen
 
 
 Wenn Sie die Registrierung für die Behandlung eines Ereignisses in der UWP durchführen, gibt der Add-Accessor ein Token zurück. Um die Registrierung aufzuheben, übergeben Sie dieses Token an den Remove-Accessor. Dies bedeutet, dass sich die Signaturen der Add- und Remove-Accessoren für UWP-Ereignisse von den üblichen Accessoren unterscheiden.
@@ -117,16 +124,11 @@ C#-Benutzer: Wenn Sie benutzerdefinierte Ereignisaccessoren im UWP-Ereignismuste
 
 Visual Basic-Benutzer: Im .NET Framework ist ein Ereignis einfach ein Multicastdelegat, der alle registrierten Ereignishandler darstellt. Das Auslösen des Ereignisses bedeutet nur, dass der Delegat aufgerufen wird. Visual Basic-Syntax blendet im Allgemeinen die Interaktionen mit dem Delegaten aus, und der Compiler kopiert den Delegaten, bevor er aufgerufen wird, wie im Hinweis zu Threadsicherheit beschrieben. Wenn Sie ein benutzerdefiniertes Ereignis in einer Komponente für Windows-Runtime erstellen, müssen Sie sich direkt mit dem Delegaten befassen. Dies bedeutet auch, dass Sie beispielsweise mit der [MulticastDelegate.GetInvocationList](https://msdn.microsoft.com/library/system.multicastdelegate.getinvocationlist.aspx)-Methode ein Array mit einem separaten Delegaten für jeden Ereignishandler abrufen können, wenn Sie die Handler einzeln aufrufen möchten.
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Ereignisse (Visual Basic)](https://msdn.microsoft.com/library/ms172877.aspx)
 * [Ereignisse (C#-Programmierhandbuch)](https://msdn.microsoft.com/library/awbftdfh.aspx)
-* [Übersicht über .NET für WindowsStore-Apps](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
+* [Übersicht über .NET für Windows Store-Apps](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
 * [.NET für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)
 * [Exemplarische Vorgehensweise: Erstellen einer einfachen Komponente für Windows-Runtime und Aufrufen der Komponente über JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

@@ -1,17 +1,24 @@
 ---
 author: eliotcowley
 ms.assetid: DD8FFA8C-DFF0-41E3-8F7A-345C5A248FC2
-description: "In diesem Abschnitt wird beschrieben, wie Sie Ihrer UWP-App (Universelle Windows-Plattform) PlayReady-geschützte Medieninhalte hinzufügen."
+description: "In diesem Thema wird beschrieben, wie Sie Ihrer UWP-App (Universelle Windows-Plattform) PlayReady-geschützte Medieninhalte hinzufügen."
 title: PlayReady DRM
+ms.author: elcowle
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 3c0b72b674ce02a1802a50c512e98b9aeba3bfe1
-ms.openlocfilehash: 97a3002c1e61d8f7d31b81a3a80d7473a5dc6077
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 161a048a4bfa9479821aec542db17ded8243d231
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="playready-drm"></a>PlayReady DRM
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 In diesem Abschnitt wird beschrieben, wie Sie Ihrer UWP-App (Universelle Windows-Plattform) PlayReady-geschützte Medieninhalte hinzufügen.
@@ -35,7 +42,7 @@ In der folgenden Liste werden die neuen Features und Änderungen von PlayReady D
 -   Die folgenden Header zur Definition der PlayReady-Fehlercodes sind jetzt Teil des Windows Software Development Kit (SDK): „Windows.Media.Protection.PlayReadyErrors.h” und „Windows.Media.Protection.PlayReadyResults.h”.
 -   Unterstützt das proaktive Abrufen nicht persistenter Lizenzen.
 
-    Das proaktive Abrufen nicht persistenter Lizenzen wurde von Vorgängerversionen von PlayReady DRM nicht unterstützt. Diese Funktion wurde in dieser Version hinzugefügt. Mit ihrer Hilfe kann die Zeit bis zum ersten Frame verkürzt werden. Weitere Informationen finden Sie unter [Proaktives Abrufen einer nicht persistenten Lizenz vor der Wiedergabe](#proactively_acquire_a_non_persistent_license_before_playback).
+    Das proaktive Abrufen nicht persistenter Lizenzen wurde von Vorgängerversionen von PlayReady DRM nicht unterstützt. Diese Funktion wurde in dieser Version hinzugefügt. Mit ihrer Hilfe kann die Zeit bis zum ersten Frame verkürzt werden. Weitere Informationen finden Sie unter [Proaktives Abrufen einer nicht persistenten Lizenz vor der Wiedergabe](#proactively-acquire-a-non-persistent-license-before-playback).
 
 -   Unterstützt das Abrufen mehrerer Lizenzen in einer Nachricht.
 
@@ -49,7 +56,7 @@ In der folgenden Liste werden die neuen Features und Änderungen von PlayReady D
 -   Unterstützung für zeitbasierte Einschränkungen (einschließlich Ablauf, Ablauf nach der ersten Wiedergabe und Echtzeitablauf) für nicht persistente Lizenzen wurde hinzugefügt.
 -   Richtlinienunterstützung für HDCP Typ 1 (Version 2.2 unter Windows 10) wurde hinzugefügt.
 
-    Weitere Informationen finden Sie unter [Zu berücksichtigende Informationen](#things_to_consider).
+    Weitere Informationen finden Sie unter [Zu berücksichtigende Informationen](#things-to-consider).
 
 -   Miracast ist jetzt als Ausgabe implizit.
 -   Sicheres Beenden wurde hinzugefügt.
@@ -404,7 +411,8 @@ Bevor Sie mit der Erstellung Ihrer PlayReady-geschützten UWP-App beginnen, müs
 -   Windows 10.
 -   Wenn Sie Beispiele für PlayReady DRM für UWP-Apps kompilieren, müssen Sie Microsoft Visual Studio 2015 oder höher zum Kompilieren der Beispiele verwenden. Microsoft Visual Studio 2013 kann weiterhin zum Kompilieren der Beispiele aus PlayReady DRM für Windows 8.1-Store-Apps verwendet werden.
 
-Wenn Sie planen, MPEG-2/H.262-Inhalte in Ihrer App wiederzugeben, müssen Sie auch [Windows 8.1 Media Center Pack](http://go.microsoft.com/fwlink/p/?LinkId=626876) herunterladen und installieren.
+<!--This is no longer available-->
+<!--If you are planning to play back MPEG-2/H.262 content on your app, you must also download and install [Windows 8.1 Media Center Pack](http://go.microsoft.com/fwlink/p/?LinkId=626876).-->
 
 ## <a name="playready-windows-store-app-migration-guide"></a>Migrationshandbuch für Windows Store-Apps mit PlayReady
 
@@ -516,10 +524,5 @@ Gehen Sie so vor, wie es für Ihr Unternehmen und Ihr Produkt am praktischsten i
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

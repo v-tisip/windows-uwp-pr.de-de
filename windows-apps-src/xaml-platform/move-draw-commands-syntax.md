@@ -3,19 +3,26 @@ author: jwmsft
 description: "Informieren Sie sich über die Verschieben- und Zeichnen-Befehle (eine Minisprache), mit denen Sie Pfadgeometrien als XAML-Attributwert angeben können."
 title: "Syntax für die Verschieben- und Zeichnen-Befehle"
 ms.assetid: 7772BC3E-A631-46FF-9940-3DD5B9D0E0D9
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 8a28765f5451e4303d6204070c38596773cb65b9
-ms.openlocfilehash: 832e757c5bbdc10c2f0f10db127d3f21932313b3
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ea01f8191190db0a9b13b8081bc6fef687369c13
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Syntax für die Verschieben- und Zeichnen-Befehle
+# <a name="move-and-draw-commands-syntax"></a>Syntax für die Verschieben- und Zeichnen-Befehle
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Informieren Sie sich über die Verschieben- und Zeichnen-Befehle (eine Minisprache), mit denen Sie Pfadgeometrien als XAML-Attributwert angeben können. Verschieben- und Zeichnen-Befehle werden von vielen Design- und Grafiktools, die eine Vektorgrafik oder Form ausgeben können, als Serialisierungs- und Austauschformat verwendet.
 
-## Eigenschaften, die Verschieben- und Zeichnen-Befehlszeichenfolgen verwenden
+## <a name="properties-that-use-move-and-draw-command-strings"></a>Eigenschaften, die Verschieben- und Zeichnen-Befehlszeichenfolgen verwenden
 
 Die Syntax für die Verschieben- und Zeichnen-Befehle wird von einem internen Typkonverter für XAML verwendet, der die Befehle analysiert und eine Laufzeit-Grafikdarstellung erzeugt. Diese Darstellung ist im Grunde ein fertiger Satz von Vektoren, die zur Anzeige bereit sind. Mit den Vektoren selbst sind die Darstellungsdetails noch nicht vollständig. Sie müssen weitere Werte für die Elemente festlegen. Für ein [**Path**](https://msdn.microsoft.com/library/windows/apps/br243355)-Objekt benötigen Sie auch Werte für [**Fill**](https://msdn.microsoft.com/library/windows/apps/br243378), [**Stroke**](https://msdn.microsoft.com/library/windows/apps/br243383) und andere Eigenschaften. Anschließend muss der **Path** mit der visuellen Struktur verbunden werden. Für ein [**PathIcon**](https://msdn.microsoft.com/library/windows/apps/dn252722)-Objekt legen Sie die [**Foreground**](https://msdn.microsoft.com/library/windows/apps/dn251974)-Eigenschaft fest.
 
@@ -28,11 +35,11 @@ Die Windows-Runtime enthält zwei Eigenschaften, die eine Zeichenfolge verwenden
 
 [**PathGeometry.Figures**](https://msdn.microsoft.com/library/windows/apps/br210169) kann ebenfalls Verschieben- und Zeichnen-Befehle verwenden. Sie können ein [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/br210168)-Objekt, das Verschieben- und Zeichnen-Befehle verwendet, mit anderen [**Geometry**](https://msdn.microsoft.com/library/windows/apps/br210041)-Typen in einem [**GeometryGroup**](https://msdn.microsoft.com/library/windows/apps/br210057)-Objekt kombinieren, das Sie dann als Wert für [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/br243356) nutzen. Weitaus gängiger ist aber die Verwendung von Verschieben- und Zeichnen-Befehlen für durch Attribute definierte Daten.
 
-## Verwenden von Verschieben- und Zeichnen-Befehlen oder einer **PathGeometry**-Klasse
+## <a name="using-move-and-draw-commands-versus-using-a-pathgeometry"></a>Verwenden von Verschieben- und Zeichnen-Befehlen oder einer **PathGeometry**-Klasse
 
 Für Windows-Runtime-XAML erzeugen die Verschieben- und Zeichnen-Befehle eine [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/br210168)-Klasse mit einem einzigen [**PathFigure**](https://msdn.microsoft.com/library/windows/apps/br210143)-Objekt, das über einen [**Figures**](https://msdn.microsoft.com/library/windows/apps/br210169)-Eigenschaftswert verfügt. Jeder Zeichnen-Befehl erzeugt eine von der [**PathSegment**](https://msdn.microsoft.com/library/windows/apps/br210174)-Klasse abgeleitete Klasse in der [**Segments**](https://msdn.microsoft.com/library/windows/apps/br210164)-Collection dieses einen **PathFigure**-Objekts. Der Verschieben-Befehl ändert die [**StartPoint**](https://msdn.microsoft.com/library/windows/apps/br210166)-Eigenschaft. Zudem wird durch das Vorhandensein eines Schließen-Befehls [**IsClosed**](https://msdn.microsoft.com/library/windows/apps/br210159) auf **true** festgelegt. In dieser Struktur können Sie dann wie in einem Objektmodell navigieren, wenn Sie zur Laufzeit die **Data**-Werte untersuchen.
 
-## Grundlegende Syntax
+## <a name="the-basic-syntax"></a>Grundlegende Syntax
 
 Hier ein Überblick der Syntax für Verschieben- und Zeichnen-Befehle:
 
@@ -56,7 +63,7 @@ Leerzeichen können bei eindeutigen Ergebnissen häufig weggelassen werden. Tats
 
 Verwenden Sie als Dezimalzeichen für Dezimalzahlen kein Komma. Die Befehlszeichenfolge wird von XAML interpretiert und berücksichtigt keine länderspezifischen Konventionen für die Zahlenformatierung, die von den Konventionen im Gebietsschema **en-us** abweichen.
 
-## Einzelheiten zur Syntax
+## <a name="syntax-specifics"></a>Einzelheiten zur Syntax
 
 **Füllregel**
 
@@ -222,7 +229,7 @@ Anstelle eines standardmäßigen numerischen Werts können Sie auch die folgende
 
 Anstelle von Dezimalzahlen oder Ganzzahlen können Sie die wissenschaftliche Notation verwenden. `+1.e17` ist zum Beispiel ein gültiger Wert.
 
-## Designtools zum Erzeugen von Verschieben- und Zeichnen-Befehlen
+## <a name="design-tools-that-produce-move-and-draw-commands"></a>Designtools zum Erzeugen von Verschieben- und Zeichnen-Befehlen
 
 Mit dem **Pen**-Tool und anderen Zeichentools in Blend for Microsoft Visual Studio 2015 erzeugen Sie normalerweise ein [**Path**](https://msdn.microsoft.com/library/windows/apps/br243355)-Objekt mit Verschieben- und Zeichnen-Befehlen.
 
@@ -230,16 +237,11 @@ Möglicherweise sehen Sie vorhandene Daten für Verschieben- und Zeichnen-Befehl
 
 Für andere häufig verwendete Vektorgrafik-Designtools, die den Vektor in XAML-Form ausgeben können, sind Exporter oder Plug-Ins verfügbar. Diese erstellen gewöhnlich [**Path**](https://msdn.microsoft.com/library/windows/apps/br243355)-Objekte in einem Layoutcontainer mit Verschieben- und Zeichnen-Befehlen für die [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/br243356)-Eigenschaft. XAML kann mehrere **Path**-Elemente enthalten, sodass verschiedene Pinsel angewendet werden können. Viele dieser Exporter oder Plug-Ins wurden ursprünglich für Windows Presentation Foundation (WPF), XAML oder Silverlight geschrieben, aber die XAML-Pfadsyntax ist mit Windows-Runtime-XAML identisch. In der Regel können Sie XAML-Abschnitte aus einem Exporter verwenden und direkt in eine Windows-Runtime-XAML-Seite einfügen. (Es ist aber nicht möglich, einen **RadialGradientBrush**-Pinsel zu verwenden, wenn dieser Bestandteil der konvertierten XAML war, da Windows-Runtime-XAML diesen Pinsel nicht unterstützt.)
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Zeichnen von Formen](https://msdn.microsoft.com/library/windows/apps/mt280380)
 * [Verwenden von Pinseln](https://msdn.microsoft.com/library/windows/apps/mt280383)
 * [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/br243356)
 * [**PathIcon**](https://msdn.microsoft.com/library/windows/apps/dn252722)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -4,16 +4,24 @@ Description: Beschreibung der Freihandtools
 title: "Steuerelemente für Freihandeingaben"
 label: Inking Controls
 template: detail.hbs
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
+ms.assetid: 97eae5f3-c16b-4aa5-b4a1-dd892cf32ead
 translationtype: Human Translation
-ms.sourcegitcommit: 8a040033f99d6e8cac04b44dcec58c6b306eda54
-ms.openlocfilehash: e2ffb7bfb7bb602fdc3462da84f60f4ae12d9da8
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 541f7e8c45190cfd597869ad1040801d368b77e8
+ms.lasthandoff: 02/08/2017
 
 ---
 # <a name="inking-controls"></a>Steuerelemente für Freihandeingaben
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Es gibt zwei verschiedene Steuerelemente, die die Freihandeingabe in Apps in der universellen Windows-Plattform (UWP) ermöglichen: [**InkCanvas**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx) und [**InkToolbar**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx).
+Es gibt zwei verschiedene Steuerelemente, die die Freihandeingabe in Apps in der Universellen Windows-Plattform (UWP) vereinfachen: [**InkCanvas**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx) und [**InkToolbar**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx).
 
 Das InkCanvas-Steuerelement rendert Stifteingaben entweder als Freihandstrich (mit Standardeinstellungen für Farbe und Breite) oder als Radierstrich. Dieses Steuerelement ist eine transparente Überlagerung, die keine integrierte Benutzeroberfläche zum Ändern der Standardeigenschaften von Freihandstrichen enthält.
 
@@ -162,9 +170,4 @@ Erweiterte Szenarien finden Sie im [komplexen Freihandbeispiel](https://github.c
 - [Zeichen- und Eingabestiftinteraktionen in UWP-Apps](http://windowsstyleguide/input-and-devices/pen-and-stylus-interactions/)
 - [Erkennen von Freihandstrichen](http://windowsstyleguide/input-and-devices/convert-ink-to-text/)
 - [Speichern und Abrufen von Freihandstrichen](http://windowsstyleguide/input-and-devices/save-and-load-ink/)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -1,14 +1,22 @@
 ---
 author: WilliamsJason
 title: "Verwendung von Fiddler mit Xbox One bei der Entwicklung für UWP"
-description: "Beschreibt die Verwendung des Freeware-Tools Fiddler, um den Netzwerkverkehr für einen Xbox One Dev Kit für UWP anzuzeigen."
+description: "Beschreibt die Verwendung des Freeware-Tools Fiddler, um den Netzwerkverkehr für ein Xbox One Dev Kit für UWP anzuzeigen."
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
+ms.assetid: 9c133c77-fe9d-4b81-b4b3-462936333aa3
 translationtype: Human Translation
-ms.sourcegitcommit: 11c6cffab7934937b6d89c30e4d03ae752f6b3b7
-ms.openlocfilehash: 241fa495c7277fe2bf4feafeb4062842f97e59b1
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: c7ebd56205db2674df5da6d64ecc9332aa96230e
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Verwendung von Fiddler mit Xbox One bei der Entwicklung für UWP
+# <a name="how-to-use-fiddler-with-xbox-one-when-developing-for-uwp"></a>Verwenden von Fiddler mit Xbox One bei der Entwicklung für UWP
 
 Fiddler ist ein Webdebuggingproxy, der den gesamten HTTP- und HTTPS-Datenverkehr zwischen Ihrem Xbox One Dev Kit und dem Internet protokolliert. Sie werden ihn, um sich anzumelden und den Datenverkehr zu und von den Xbox-Diensten und Diensten vertrauender Seiten zu prüfen und Webdienstaufrufe zu verstehen und zu debuggen. 
 
@@ -18,7 +26,7 @@ Fiddler ist Freeware und kann von der [Fiddler-Website](http://www.fiddler2.com/
 
 Fiddler kann Auswirkungen auf den Netzwerkstatus haben, der von der Konsole gemeldet wird. Wenn eine Upstreamverbindung auf dem Computer deaktiviert wird, auf dem Fiddler ausgeführt wird, erkennt die Konsole diese Trennung möglicherweise erst nach Ablauf der Authentifizierung der Konsole. Wenn Sie Fiddler verwenden, müssen Sie die Verbindung zwischen der Konsole und dem Computer trennen, auf dem Fiddler ausgeführt wird, anstelle Fiddler zu verwenden, um eine Trennung zu simulieren
 
-### So installieren und aktivieren Sie Fiddler auf Ihrem Entwicklungscomputer
+### <a name="to-install-and-enable-fiddler-on-your-development-pc"></a>So installieren und aktivieren Sie Fiddler auf Ihrem Entwicklungscomputer
 Führen Sie diese Schritte zum Installieren und Aktivieren von Fiddler aus, um den Datenverkehr von Ihrem Dev Kit zu überwachen:
 
 1. Installieren Sie Fiddler auf Ihrem Entwicklungscomputer, indem Sie die Anweisungen auf der [Fiddler-Website](http://www.fiddler2.com/fiddler2/) befolgen. 
@@ -52,7 +60,7 @@ Führen Sie diese Schritte zum Installieren und Aktivieren von Fiddler aus, um d
   4. Klicken Sie auf **Stammzertifikat zu Desktop exportieren**.
 7. Beenden Sie Fiddler, und starten Sie das Tool neu.
 
-### So konfigurieren Sie ein Dev Kit für die Verwendung von Fiddler als dessen Proxy für das Internet
+### <a name="to-configure-a-dev-kit-to-use-fiddler-as-its-proxy-to-the-internet"></a>So konfigurieren Sie ein Dev Kit für die Verwendung von Fiddler als dessen Proxy für das Internet
 
 1. Navigieren Sie in der Benutzeroberfläche des Xbox-Geräteportals zum **Netzwerk**-Tool.
 2. Suchen Sie nach dem Fiddler-Stammzertifikat, das Sie zum Desktop exportiert haben. 
@@ -60,7 +68,7 @@ Führen Sie diese Schritte zum Installieren und Aktivieren von Fiddler aus, um d
 4. Geben Sie die Portnummer ein, an der Fiddler zuhört (standardmäßig verwendet Fiddler den Port 8888). 
 5. Klicken Sie auf **Aktivieren**. Damit wird Ihr Dev Kit neu gestartet.
 
-### So beenden Sie die Verwendung von Fiddler
+### <a name="to-stop-using-fiddler"></a>So beenden Sie die Verwendung von Fiddler
 Um die Verwendung von Fiddler als Proxy für das Internet zu beenden (und zu verhindern, dass Fiddler den gesamten Netzwerkdatenverkehr des Dev Kit protokolliert), führen Sie folgende Schritte aus:
 
 1. Navigieren Sie in der Benutzeroberfläche des Xbox-Geräteportals zum **Netzwerk**-Tool.
@@ -69,16 +77,11 @@ Um die Verwendung von Fiddler als Proxy für das Internet zu beenden (und zu ver
 > [!NOTE]
 > Jeder PC, auf dem Fiddler installiert ist, verwendet ein anderes Fiddler-Stammzertifikat. Wenn Sie mehrere PCs besitzen, die verwendet werden könnten, um Ihrem Dev Kit einen Fiddler-Proxy bereitzustellen, müssen Sie das neue Stammzertifikat auswählen, wenn Sie zwischen diesen wechseln. Wenn Sie nur einen PC verwenden, müssen Sie das Stammzertifikat nur bei der ersten Aktivierung von Fiddler auswählen. Sie müssen dennoch die IP-Adresse und den Port angeben.
 
-## Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen
 - [Fiddler-Einstellungen – API-Referenz](wdp-fiddler-api.md)
 - [Häufig gestellte Fragen](frequently-asked-questions.md)
-- [UWP auf XboxOne](index.md)
+- [UWP auf Xbox One](index.md)
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

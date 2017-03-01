@@ -2,14 +2,21 @@
 author: mcleanbyron
 ms.assetid: 8C63D33B-557D-436E-9DDA-11F7A5BFA2D7
 description: "Verwenden Sie diese Methode aus der Windows Store-Übermittlungs-Api zur Aktualisierung einer vorhandenen Add-On-Übermittlung."
-title: "Aktualisieren einer Add-On-Übermittlung mit der Windows Store-Übermittlungs-API"
+title: "Aktualisieren einer Add-on-Übermittlung mit der Windows Store-Übermittlungs-API"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Windows Store-Übermittlung API, Übermittlung von Add-ons, Aktualisieren, In-App-Produkt, IAP"
 translationtype: Human Translation
-ms.sourcegitcommit: f52059a37194b78db2f9bb29a5e8959b2df435b4
-ms.openlocfilehash: ac126d8e8cf8301399a3248a1d65e19805e70255
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 8b06973c7c6949851bf786b1fb37026eee4b5fad
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="update-an-add-on-submission-using-the-windows-store-submission-api"></a>Aktualisieren einer Add-On-Übermittlung mit der Windows Store-Übermittlungs-API
+# <a name="update-an-add-on-submission-using-the-windows-store-submission-api"></a>Aktualisieren einer Add-on-Übermittlung mit der Windows Store-Übermittlungs-API
 
 
 Verwenden Sie diese Methode der Windows Store-Übermittlungs-API zur Aktualisierung einer vorhandenen Add-On-Übermittlung (Add-Ons werden auch als In-App-Produkt bzw. IAP bezeichnet). Nachdem Sie mit dieser Methode eine Übermittlung erfolgreich aktualisiert haben, müssen Sie ein [Commit für die Übermittlung](commit-an-add-on-submission.md) für Aufnahme und Veröffentlichung durchführen.
@@ -206,9 +213,4 @@ Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die A
 * [Ausführen eines Commit für eine Add-On-Übermittlung](commit-an-add-on-submission.md)
 * [Löschen einer Add-On-Übermittlung](delete-an-add-on-submission.md)
 * [Abrufen des Status einer Add-On-Übermittlung](get-status-for-an-add-on-submission.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

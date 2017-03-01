@@ -1,19 +1,27 @@
 ---
 author: Jwmsft
-Description: "Verwenden Sie die Listenansicht- oder Rasteransicht-Steuerelemente, um Sätze von Daten anzuzeigen und zu bearbeiten, z. B. eine Bildergalerie oder eine Reihe von E-Mail-Nachrichten."
+Description: "Verwenden Sie die Steuerelemente der Listenansicht oder der Rasteransicht, um Datensätze anzuzeigen und zu bearbeiten, z. B. eine Bildergalerie oder eine Reihe von E-Mail-Nachrichten."
 title: Listenansicht und Rasteransicht
 label: List view and grid view
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
+ms.assetid: f8532ba0-5510-4686-9fcf-87fd7c643e7b
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 2887e2aed2c3b638343f2bd211c32f99b3c7da1a
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: fd8d538e6431bbff011c99ce8d17736d70f0c0ea
+ms.lasthandoff: 02/08/2017
 
 ---
-# <a name="listview-and-gridview"></a>ListView und GridView
+# <a name="listview-and-gridview"></a>Listenansicht und Rasteransicht
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-Mit den meisten Anwendungen können Sätze von Daten, beispielsweise eine Bildergalerie oder ein Satz von E-Mails, bearbeitet und angezeigt werden. Das XAML-Benutzeroberflächenframework bietet ListView und GridView-Steuerelemente, die das Anzeigen und Bearbeiten von Daten in Ihrer App vereinfachen.  
+Mit den meisten Anwendungen können Datensätze, z. B. eine Bildergalerie oder eine Reihe von E-Mail-Nachrichten bearbeitet und angezeigt werden. Das XAML-Benutzeroberflächenframework bietet ListView und GridView-Steuerelemente, die das Anzeigen und Bearbeiten von Daten in Ihrer App vereinfachen.  
 
 ListView und GridView werden beide von der ListViewBase-Klasse abgeleitet, sodass sie die gleiche Funktionalität haben, Daten jedoch unterschiedlich anzeigen. In diesem Artikel beziehen sich Aussagen zu ListView sowohl auf die ListView- als auch die GridView-Steuerelemente, wenn nicht anders angegeben. Möglicherweise werden Klassen wie ListView oder ListViewItem genannt. Das Präfix „List“ kann jedoch durch „Grid“ für das entsprechende Rastersteuerelement ersetzt werden (GridView oder GridViewItem). 
 
@@ -514,9 +522,4 @@ ListView- und GridView-Steuerelemente unterstützen Drag & Drop für Elemente in
 - [Listen](lists.md)
 - [Vorlagen für Listenansichtselemente](listview-item-templates.md)
 - [Drag & Drop](https://msdn.microsoft.com/windows/uwp/app-to-app/drag-and-drop)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

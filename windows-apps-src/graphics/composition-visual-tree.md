@@ -3,18 +3,25 @@ author: scottmill
 ms.assetid: f1297b7d-1a10-52ae-dd84-6d1ad2ae2fe6
 title: Komposition visueller Strukturen
 description: "Visuelle Kompositionselemente bilden die visuelle Struktur, die die Grundlage für alle anderen Features der Composition-API bildet und von diesen verwendet wird. Die API ermöglicht es Entwicklern, visuelle Objekte zu definieren und zu erstellen, die jeweils für einen einzelnen Knoten in einer visuellen Struktur stehen."
+ms.author: scotmi
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 8a28765f5451e4303d6204070c38596773cb65b9
-ms.openlocfilehash: 0603939bb62b107a781cb3804bcf92aeac7a6155
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: e6e40d60708189235c02a21df7e232d52ecfbfe4
+ms.lasthandoff: 02/07/2017
 
 ---
-# Visuelle Kompositionsstruktur
+# <a name="composition-visual-tree"></a>Komposition visueller Strukturen
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Visuelle Kompositionselemente bilden die visuelle Struktur, die als Grundlage für alle anderen Features der Composition-API verwendet wird. Die API ermöglicht es Entwicklern, visuelle Objekte zu definieren und zu erstellen, die jeweils für einen einzelnen Knoten in einer visuellen Struktur stehen.
 
-## Visuelle Elemente
+## <a name="visuals"></a>Visuelle Elemente
 
 Es gibt drei Arten visueller Elemente, aus denen sich die visuelle Struktur zusammensetzt, sowie eine grundlegende Pinselklasse mit mehreren Unterklassen, die Einfluss auf den Inhalt eines visuellen Elements hat:
 
@@ -23,9 +30,9 @@ Es gibt drei Arten visueller Elemente, aus denen sich die visuelle Struktur zusa
 -   [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) – Abgeleitet von [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810). Bietet zudem die Möglichkeit, einen Pinsel zuzuordnen, sodass das Visual-Element Pixel, einschließlich Bilder, Effekte oder Volltonfarbe, rendern kann.
 -   [**CompositionBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589398) – Ermöglicht die Anwendung eines Effekts auf den Inhalt eines Visual-Elements. Es gibt eine Reihe von Unterklassen von „CompositionBrush“.
 
-## Das CompositionVisual-Beispiel
+## <a name="the-compositionvisual-sample"></a>Das CompositionVisual-Beispiel
 
-Im Beispiel sehen Sie eine Reihe farbiger Quadrate, die Sie anklicken und über den Bildschirm ziehen können. Durch Klicken auf ein Quadrat gelangt dieses in den Vordergrund, dreht sich um 45Grad und wird während der Bewegung undurchsichtig.
+Im Beispiel sehen Sie eine Reihe farbiger Quadrate, die Sie anklicken und über den Bildschirm ziehen können. Durch Klicken auf ein Quadrat gelangt dieses in den Vordergrund, dreht sich um 45 Grad und wird während der Bewegung undurchsichtig.
 
 Es zeigt einige grundlegenden Konzepte für die Arbeit mit der API, einschließlich:
 
@@ -44,7 +51,7 @@ Das Beispiel veranschaulicht die Nutzung dreier unterschiedlicher visueller Elem
 
 Dieses Beispiel veranschaulicht keine Konzepte wie Animationen oder komplexere Effekte. Es enthält die Bausteine, die alle diese Systeme verwenden.
 
-## Erstellen eines Kompositors
+## <a name="creating-a-compositor"></a>Erstellen eines Kompositors
 
 Es ist einfach, ein neues [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789)-Objekt zu erstellen und diese für die Verwendung als Factory in einer Variable zu speichern. Der folgende Codeausschnitt veranschaulicht das Erstellen eines neuen **Compositor**-Objekts:
 
@@ -52,7 +59,7 @@ Es ist einfach, ein neues [**Compositor**](https://msdn.microsoft.com/library/wi
 _compositor = new Compositor();
 ```
 
-## Erstellen eines „SpriteVisual“- und eines „ColorBrush“-Elements
+## <a name="creating-a-spritevisual-and-colorbrush"></a>Erstellen eines „SpriteVisual“- und eines „ColorBrush“-Elements
 
 Mit dem [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789)-Objekt können Sie auf einfache Weise Objekte erstellen, wenn Sie sie benötigen, wie etwa ein [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433)- und ein [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399)-Element:
 
@@ -63,7 +70,7 @@ visual.Brush = _compositor.CreateColorBrush(Color.FromArgb(0xFF, 0xFF, 0xFF, 0xF
 
 Diese wenigen Zeilen Code veranschaulichen ein leistungsfähiges Konzept. [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433)-Objekte sind das Herzstück des Effektesystems. Das **SpriteVisual**-Element ermöglicht hohe Flexibilität und Interaktion bei der Farb-, Bild- und Effektgestaltung. **SpriteVisual** ist das einzige visuelle Element, das ein 2D-Rechteck mit einem Pinsel füllen kann, in diesem Fall mit einer Volltonfarbe.
 
-## Beschneiden eines visuellen Elements
+## <a name="clipping-a-visual"></a>Beschneiden eines visuellen Elements
 
 [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789) kann auch zum Beschneiden eines [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858)-Objekts verwendet werden. Im folgenden Beispiel werden mit [**InsetClip**](https://msdn.microsoft.com/library/windows/apps/Dn706825) die Seiten des visuellen Elements gekürzt:
 
@@ -78,7 +85,7 @@ _currentVisual.Clip = clip;
 
 Hinweis: Auf die Eigenschaften von [**InsetClip**](https://msdn.microsoft.com/library/windows/apps/Dn706825) können wie auch auf andere Objekte in der API Animationen angewendet werden.
 
-## <span id="Rotating_a_Clip"></span><span id="rotating_a_clip"></span><span id="ROTATING_A_CLIP"></span>Drehen von Clips
+## <a name="span-idrotatingaclipspanspan-idrotatingaclipspanspan-idrotatingaclipspanrotating-a-clip"></a><span id="Rotating_a_Clip"></span><span id="rotating_a_clip"></span><span id="ROTATING_A_CLIP"></span>Drehen von Clips
 
 Ein [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858)-Objekt kann mit einer Drehung transformiert werden. Beachten Sie, dass [**RotationAngle**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visual.rotationangle) Radianten und Grad unterstützt. Der Standardwert ist „Radianten“. Wie im folgenden Codeausschnitt dargestellt, ist es jedoch ganz einfach, einen Wert in Grad anzugeben:
 
@@ -88,9 +95,9 @@ child.RotationAngleInDegrees = 45.0f;
 
 Drehung ist nur ein Beispiel für eine Reihe von Transformationskomponenten, die von der API bereitgestellt werden, um diese Aufgaben zu vereinfachen. Dazu gehören auch Offset, Skalieren, Ausrichtung, Drehachse und eine 4x4-Transformationsmatrix.
 
-## Festlegen der Deckkraft
+## <a name="setting-opacity"></a>Festlegen der Deckkraft
 
-Das Festlegen der Deckkraft eines visuellen Elements ist mit einem Float-Wert unproblematisch. In diesem Beispiel haben alle Quadrate anfangs eine Deckkraft von0,8:
+Das Festlegen der Deckkraft eines visuellen Elements ist mit einem Float-Wert unproblematisch. In diesem Beispiel haben alle Quadrate anfangs eine Deckkraft von 0,8:
 
 ```cs
 visual.Opacity = 0.8f;
@@ -98,7 +105,7 @@ visual.Opacity = 0.8f;
 
 Wie die Drehung kann auch die [**Opacity**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visual.opacity)-Eigenschaft animiert werden.
 
-## Ändern der Position des visuellen Elements in der Auflistung
+## <a name="changing-the-visuals-position-in-the-collection"></a>Ändern der Position des visuellen Elements in der Auflistung
 
 Die Composition-API ermöglicht es, dass die Position eines visuellen Elements in [**VisualCollection**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visualcollection) auf vielfältige Weise geändert werden kann. Es kann mit [**InsertAbove**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visualcollection.insertabove) über einem anderen visuellen Element und mit [**InsertBelow**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visualcollection.insertbelow) darunter platziert werden. An die oberste Position wird es mit [**InsertAtTop**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visualcollection.insertattop) und an die unterste mit [**InsertAtBottom**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visualcollection.insertatbottom) verschoben.
 
@@ -108,7 +115,7 @@ In dem Beispiel wird ein [**Visual**](https://msdn.microsoft.com/library/windows
 parent.Children.InsertAtTop(_currentVisual);
 ```
 
-## Vollständiges Beispiel
+## <a name="full-example"></a>Vollständiges Beispiel
 
 Im vollständigen Beispiel werden alle oben beschriebenen Konzepte zusammen verwendet, um eine einfache Struktur von [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858)-Objekten zu erstellen und vorzuführen. Die Deckkraft wird ohne Verwendung von XAML, WWA oder DirectX geändert. Dieses Beispiel zeigt, wie untergeordnete **Visual**-Objekte erstellt und hinzugefügt und Eigenschaften geändert werden.
 
@@ -504,10 +511,5 @@ namespace compositionvisual
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -3,22 +3,29 @@ author: mcleblanc
 ms.assetid: 00ECF6C7-0970-4D5F-8055-47EA49F92C12
 title: "Bewährte Methoden für die Leistung Ihrer App beim Starten"
 description: Erstellen Sie UWP-Apps (Universelle Windows-Plattform) mit optimalen Startzeiten, indem Sie die Vorgehensweise bei Start und Aktivierung optimieren.
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 5411faa3af685e1a285119ba456a440725845711
-ms.openlocfilehash: 2224c6c2ca0a606492d381af85e665170601f054
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: b59a4eb056e36156b847c769778b2609863ec1fc
+ms.lasthandoff: 02/07/2017
 
 ---
-# Bewährte Methoden für die Leistung Ihrer App beim Starten
+# <a name="best-practices-for-your-apps-startup-performance"></a>Bewährte Methoden für die Leistung Ihrer App beim Starten
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Erstellen Sie UWP-Apps (Universelle Windows-Plattform) mit optimalen Startzeiten, indem Sie die Vorgehensweise bei Start und Aktivierung optimieren.
 
-## Bewährte Methoden für die Leistung Ihrer App beim Starten
+## <a name="best-practices-for-your-apps-startup-performance"></a>Bewährte Methoden für die Leistung Ihrer App beim Starten
 
 Benutzer nehmen die Schnelligkeit (oder die Langsamkeit) einer App teilweise auch anhand des Umstands wahr, wie lange der Start der App dauert. Für die Zwecke dieses Themas legen wir Folgendes fest: Die Startzeit einer App beginnt, wenn der Benutzer die Anwendung startet, und sie endet, wenn der Benutzer auf sinnvolle Weise mit der App interagieren kann. Dieser Abschnitt enthält Vorschläge, wie Sie beim Starten Ihrer App eine bessere Leistung erzielen können.
 
-### Messen der Startzeit Ihrer App
+### <a name="measuring-your-apps-startup-time"></a>Messen der Startzeit Ihrer App
 
 Starten Sie die App einige Male, bevor Sie ihre Startzeit tatsächlich messen. Sie erhalten so einen Richtwert für Ihre Messung und können sicherstellen, dass der gemessene Startzeitraum möglichst kurz ist.
 
@@ -48,11 +55,11 @@ Von „Ngen.exe“ werden alle Apps auf dem Computer vorkompiliert, die verwende
 
 Wenn Sie Ihre App erneut kompilieren, wird das systemeigene Bild nicht mehr verwendet. Stattdessen wird die App rechtzeitig kompiliert, was bedeutet, dass sie während ihrer Ausführung kompiliert wird. Sie müssen „Ngen.exe“ erneut ausführen, um eine neues systemeigenes Bild abzurufen.
 
-### Verzögern Sie die Arbeit möglichst lange
+### <a name="defer-work-as-long-as-possible"></a>Verzögern Sie die Arbeit möglichst lange
 
 Wenn Sie die Startzeit Ihrer App beschleunigen möchten, führen Sie nur die Arbeit aus, die unbedingt erforderlich ist, damit der Benutzer mit dem Interagieren mit der App beginnen kann. Dies kann besonders hilfreich sein, wenn Sie das Laden zusätzlicher Assemblys verzögern können. Die Common Language Runtime (CLR) lädt eine Assembly, wenn sie das erste Mal verwendet wird. Wenn Sie die Anzahl der geladenen Assemblys minimieren können, können Sie möglicherweise die Startzeit Ihrer App beschleunigen und ihren Speicherverbrauch optimieren.
 
-### Separates Erledigen langer Abläufe
+### <a name="do-long-running-work-independently"></a>Separates Erledigen langer Abläufe
 
 Ihre App kann interaktiv sein, selbst wenn Teile der App noch nicht voll funktionsfähig sind. Wenn von Ihrer App beispielsweise Daten angezeigt werden, deren Abruf einige Zeit in Anspruch nimmt, können Sie diesen Code separat vom Startcode der App ausführen, indem Sie die Daten asynchron abrufen. Wenn die Daten verfügbar sind, füllen Sie die Benutzeroberfläche der App mit den Daten auf.
 
@@ -60,13 +67,13 @@ Viele APIs für die Universelle Windows-Plattform (UWP), die Daten abrufen, sind
 
 Wenn es sehr lange dauert, bis ein Teil der Benutzeroberfläche Ihrer App geladen wird, sollten Sie in diesem Bereich eine Zeichenfolge wie „Aktuelle Daten werden abgerufen“ hinzufügen, damit der Benutzer weiß, dass die App noch arbeitet.
 
-## Minimieren der Startzeit
+## <a name="minimize-startup-time"></a>Minimieren der Startzeit
 
 Mit Ausnahme wirklich sehr einfacher Apps benötigt jede App eine gewisse Zeit, um Ressourcen zu laden, XAML zu analysieren, Datenstrukturen einzurichten und bei Aktivierung Logik auszuführen. Diese Verzögerung ist für die Benutzer wahrnehmbar. In diesem Thema analysieren wir den Aktivierungsprozess, indem wir ihn in drei Phasen aufschlüsseln. Außerdem finden Sie hier Tipps zum Verringern der benötigten Zeit für die einzelnen Phasen sowie Techniken, mit denen Sie die Phasen beim Start Ihrer App für den Benutzer angenehmer gestalten können.
 
 Die Aktivierungsperiode ist die Zeit zwischen dem Starten einer App durch einen Benutzer und dem Zeitpunkt, zu dem die App einsatzbereit ist. Da es sich bei dieser Zeit um den ersten Eindruck handelt, den der Benutzer von Ihrer App erhält, ist dieser Wert überaus wichtig. Der Benutzer erwartet sowohl vom System als auch von den Apps ein verzögerungs- und unterbrechungsfreies Feedback. Dauert der Start von Apps zu lange, kommen schnell Zweifel an der Qualität des Systems und der App auf. Schlimmer noch: Vergeht bis zur Aktivierung einer App zu viel Zeit, wird die App ggf. vom Process Lifetime Manager (PLM) beendet oder vom Benutzer deinstalliert.
 
-### Einführung in die Phasen des Startvorgangs
+### <a name="introduction-to-the-stages-of-startup"></a>Einführung in die Phasen des Startvorgangs
 
 Der Startvorgang umfasst mehrere „bewegliche Teile“, die alle richtig koordiniert werden müssen, um die höchste Benutzerfreundlichkeit zu erzielen. Zwischen dem Klicken auf die App-Kachel durch den Benutzer und dem Anzeigen des Anwendungsinhalts werden die unten angegebenen Schritte ausgeführt.
 
@@ -82,7 +89,7 @@ Der Startvorgang umfasst mehrere „bewegliche Teile“, die alle richtig koordi
 -   „Render“ wird aufgerufen, um visuelle Elemente für alle Fensterinhalte zu erstellen.
 -   Der Frame wird dem Desktopfenster-Manager präsentiert.
 
-### Verringern der Schritte im Startvorgangspfad
+### <a name="do-less-in-your-startup-path"></a>Verringern der Schritte im Startvorgangspfad
 
 Halten Sie Ihren Startcodepfad frei von allen Elementen, die für den ersten Frame nicht benötigt werden.
 
@@ -91,9 +98,9 @@ Halten Sie Ihren Startcodepfad frei von allen Elementen, die für den ersten Fra
 -   Blenden Sie eine Statusanzeige ein, wenn die Benutzeroberfläche auf Daten wartet.
 -   Verwenden Sie App-Designs mit Bedacht, bei denen viele Analysen von Konfigurationsdateien durchgeführt werden oder bei denen die Benutzeroberfläche dynamisch per Code generiert wird.
 
-### Verringern der Elementanzahl
+### <a name="reduce-element-count"></a>Verringern der Elementanzahl
 
-Die Startleistung in einer XAML-App korreliert direkt mit der Anzahl von Elementen, die Sie während des Startvorgangs erstellen. Je weniger Elemente Sie erstellen, desto weniger Zeit benötigt Ihre App zum Starten. Als grobe Daumenregel gilt, dass die Erstellung jedes Elements 1ms dauert.
+Die Startleistung in einer XAML-App korreliert direkt mit der Anzahl von Elementen, die Sie während des Startvorgangs erstellen. Je weniger Elemente Sie erstellen, desto weniger Zeit benötigt Ihre App zum Starten. Als grobe Daumenregel gilt, dass die Erstellung jedes Elements 1 ms dauert.
 
 -   In Steuerelementen von Elementen verwendete Vorlagen können die größte Auswirkung haben, da sie mehrere Male wiederholt werden. Weitere Informationen finden Sie unter [Optimieren der ListView- und GridView-Benutzeroberfläche](optimize-gridview-and-listview.md).
 -   Da UserControls und Steuerelementvorlagen erweitert werden, sollten diese Elemente ebenfalls berücksichtigt werden.
@@ -103,7 +110,7 @@ Im Fenster mit der [Visuellen Live-Struktur von Visual Studio](http://blogs.msdn
 
 ![Visuelle Live-Struktur:](images/live-visual-tree.png)
 
-**Verwenden Sie x:DeferLoadStrategy**. Das Reduzieren eines Elements oder das Festlegen der Deckkraft auf0 verhindert nicht, dass das Element erstellt wird. Mit „x:DeferLoadStrategy“ können Sie das Laden eines UI-Bestandteils verschieben und ihn später laden, wenn er benötigt wird. Dies ist eine gute Möglichkeit, um die Verarbeitung von UI-Elementen aufzuschieben, die auf dem Startbildschirm nicht sichtbar sind. Sie können sie dann bei Bedarf oder im Rahmen einer Verzögerungslogik laden. Um das Laden auszulösen, müssen Sie für das Element nur FindName aufrufen. Ein Beispiel und weitere Informationen finden Sie unter [x:DeferLoadStrategy-Attribut](https://msdn.microsoft.com/library/windows/apps/Mt204785).
+**Verwenden Sie x:DeferLoadStrategy**. Das Reduzieren eines Elements oder das Festlegen der Deckkraft auf 0 verhindert nicht, dass das Element erstellt wird. Mit „x:DeferLoadStrategy“ können Sie das Laden eines UI-Bestandteils verschieben und ihn später laden, wenn er benötigt wird. Dies ist eine gute Möglichkeit, um die Verarbeitung von UI-Elementen aufzuschieben, die auf dem Startbildschirm nicht sichtbar sind. Sie können sie dann bei Bedarf oder im Rahmen einer Verzögerungslogik laden. Um das Laden auszulösen, müssen Sie für das Element nur FindName aufrufen. Ein Beispiel und weitere Informationen finden Sie unter [x:DeferLoadStrategy-Attribut](https://msdn.microsoft.com/library/windows/apps/Mt204785).
 
 **Virtualisierung**. Falls Ihre Benutzeroberfläche Listen- oder Wiederholungsinhalte enthält, empfehlen wir Ihnen dringend, die UI-Virtualisierung zu nutzen. Wenn die Listen-UI nicht virtualisiert ist, werden alle Elemente vorher erstellt, und dies kann den Startvorgang verlängern. Weitere Informationen finden Sie unter [Optimieren der ListView- und GridView-Benutzeroberfläche](optimize-gridview-and-listview.md).
 
@@ -111,7 +118,7 @@ Bei der Anwendungsleistung geht es nicht nur um die reine Leistung, sondern auch
 
 In diesem Thema geht es um das „erste Bild“. Dieser Begriff stammt aus dem Animations- und Fernsehbereich und ist ein Maß dafür, wie lange es dauert, bis der Endbenutzer Inhalte sieht.
 
-### Verbessern des Eindrucks beim Start
+### <a name="improve-startup-perception"></a>Verbessern des Eindrucks beim Start
 
 Zur Veranschaulichung der einzelnen Startphasen und der unterschiedlichen Techniken, mit deren Hilfe der Benutzer während des gesamten Prozesses Feedback erhält, verwenden wir ein Beispiel mit einem einfachen Onlinespiel. In diesem Beispiel ist die erste Aktivierungsphase des Spiels die Zeit zwischen dem Moment, in dem der Benutzer auf die Kachel des Spiels tippt, und dem Moment, in dem das Spiel mit der Ausführung des Codes beginnt. Das System verfügt über keinerlei Inhalte, die es dem Benutzer während dieser Zeitspanne anzeigen könnte, um ihn darüber zu informieren, dass das richtige Spiel gestartet wurde. Einen solchen Inhalt können Sie dem System in Form eines Begrüßungsbildschirms zur Verfügung stellen. Das Spiel informiert dann den Benutzer über den Abschluss der ersten Aktivierungsphase, indem es den statischen Begrüßungsbildschirm durch die eigene Benutzeroberfläche ersetzt, sobald es mit der Ausführung des Codes beginnt.
 
@@ -123,7 +130,7 @@ Die dritte Phase beginnt, nachdem das Spiel über ein Mindestmaß an Information
 
 Nach dieser Vorstellung der drei Aktivierungsphasen des Onlinespiels widmen wir uns nun dem eigentlichen Code.
 
-### Phase1
+### <a name="phase-1"></a>Phase 1
 
 Vor dem Start der App muss diese dem System mitteilen, was als Begrüßungsbildschirm angezeigt werden soll. Hierzu werden für das SplashScreen-Element im App-Manifest ein Bild und eine Hintergrundfarbe angegeben (siehe Beispiel). Diese werden von Windows nach dem Aktivierungsbeginn der App angezeigt.
 
@@ -146,7 +153,7 @@ Weitere Informationen finden Sie unter [Hinzufügen eines Begrüßungsbildschirm
 
 Initialisieren Sie mit dem Konstruktor der App lediglich Datenstrukturen, die für die App unbedingt erforderlich sind. Der Konstruktor wird nur beim ersten Ausführen der App aufgerufen, aber nicht unbedingt bei jeder Aktivierung der App. So wird der Konstruktor beispielsweise nicht für eine ausgeführte App aufgerufen, die in den Hintergrund versetzt wurde und anschließend mittels Vertrag für „Suche“ aktiviert wird.
 
-### Phase2
+### <a name="phase-2"></a>Phase 2
 
 Eine App kann aus unterschiedlichen Gründen aktiviert werden, und diese müssen unter Umständen alle individuell behandelt werden. Durch Überschreiben der Methoden [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/BR242330), [**OnCachedFileUpdaterActivated**](https://msdn.microsoft.com/library/windows/apps/Hh701797), [**OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/BR242331), [**OnFileOpenPickerActivated**](https://msdn.microsoft.com/library/windows/apps/Hh701799), [**OnFileSavePickerActivated**](https://msdn.microsoft.com/library/windows/apps/Hh701801), [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/BR242335), [**OnSearchActivated**](https://msdn.microsoft.com/library/windows/apps/BR242336) und [**OnShareTargetActivated**](https://msdn.microsoft.com/library/windows/apps/Hh701806) können Sie jede Aktivierungsursache behandeln. In diesen Methoden muss die App unter anderem eine UI erstellen, sie [**Window.Content**](https://msdn.microsoft.com/library/windows/apps/BR209051) zuweisen und anschließend [**Window.Activate**](https://msdn.microsoft.com/library/windows/apps/BR209046) aufrufen. An diesem Punkt wird der Begrüßungsbildschirm durch die von der App erstellte UI ersetzt. Hierbei kann es sich entweder um einen Ladebildschirm oder bereits um die eigentliche UI der App handeln, sofern bei der Aktivierung genügend Informationen für deren Erstellung vorliegen.
 
@@ -265,7 +272,7 @@ Eine App kann aus unterschiedlichen Gründen aktiviert werden, und diese müssen
 
 Apps, die im Aktivierungshandler eine Ladeseite anzeigen, beginnen mit der UI-Erstellung im Hintergrund. Nach Erstellung dieses Elements tritt dessen [**FrameworkElement.Loaded**](https://msdn.microsoft.com/library/windows/apps/BR208723)-Ereignis auf. Im Ereignishandler ersetzen Sie den Fensterinhalt (also den derzeit angezeigten Ladebildschirm) durch die neu erstellte Startseite.
 
-Bei Apps mit längerer Initialisierungsperiode ist das Anzeigen einer Ladeseite unverzichtbar. Abgesehen davon, dass der Benutzer Feedback zum Aktivierungsprozess erhält, wird der Prozess beendet, wenn [**Window.Activate**](https://msdn.microsoft.com/library/windows/apps/BR209046) nicht innerhalb von 15Sekunden nach dem Start des Aktivierungsprozesses aufgerufen wird.
+Bei Apps mit längerer Initialisierungsperiode ist das Anzeigen einer Ladeseite unverzichtbar. Abgesehen davon, dass der Benutzer Feedback zum Aktivierungsprozess erhält, wird der Prozess beendet, wenn [**Window.Activate**](https://msdn.microsoft.com/library/windows/apps/BR209046) nicht innerhalb von 15 Sekunden nach dem Start des Aktivierungsprozesses aufgerufen wird.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -321,27 +328,27 @@ Bei Apps mit längerer Initialisierungsperiode ist das Anzeigen einer Ladeseite 
 
 Ein Beispiel für die Verwendung erweiterter Begrüßungsbildschirme finden Sie im [Beispiel für einen Begrüßungsbildschirm](http://go.microsoft.com/fwlink/p/?linkid=234889).
 
-### Phase3
+### <a name="phase-3"></a>Phase 3
 
 Nur weil die App die UI anzeigt, heißt das noch nicht, dass sie auch vollständig verwendungsbereit ist. Im Falle unseres Spiels werden für Features, die Daten aus dem Internet benötigen, Platzhalter angezeigt. An diesem Punkt lädt das Spiel die zusätzlichen Daten herunter, die benötigt werden, um die App in vollem Umfang nutzen zu können, und aktiviert nach und nach die Features, für die bereits die erforderlichen Daten abgerufen wurden.
 
 Manchmal können die für die Aktivierung erforderlichen Inhalte auch direkt in die App gepackt werden. Dies ist beispielsweise bei einem einfachen Spiel der Fall. Dadurch gestaltet sich der Aktivierungsprozess ziemlich einfach. Viele Programme (wie Newsreader-Apps, Fotoanzeige-Apps usw.) müssen allerdings Infos aus dem Web beziehen, damit sie verwendet werden können. Diese Daten können zum Teil recht umfangreich ausfallen, was das Herunterladen zu einer zeitaufwendigen Angelegenheit machen kann. Die Art und Weise, wie die App während des Aktivierungsprozesses an diese Daten gelangt, beeinflusst unter Umständen sehr stark den Eindruck, den der Benutzer von der Leistung der App bekommt.
 
-Natürlich könnten Sie minutenlang eine Ladeseite (oder schlimmer noch: einen Begrüßungsbildschirm) anzeigen, während die App versucht, in der ersten oder zweiten Aktivierungsphase sämtliche für die Verwendung benötigte Daten herunterzuladen. Dies vermittelt jedoch den Eindruck, die App habe sich aufgehängt, oder führt dazu, dass sie vom System beendet wird. Wir empfehlen, eine App die Mindestmenge an Daten herunterladen zu lassen, die sie benötigt, um in Phase2 eine interaktive UI mit Platzhalterelementen anzuzeigen. In Phase3 können dann nach und nach weitere Daten geladen und die Platzhalter damit ersetzt werden. Weitere Informationen zur Verwendung von Daten finden Sie unter [Optimieren von ListView und GridView](optimize-gridview-and-listview.md).
+Natürlich könnten Sie minutenlang eine Ladeseite (oder schlimmer noch: einen Begrüßungsbildschirm) anzeigen, während die App versucht, in der ersten oder zweiten Aktivierungsphase sämtliche für die Verwendung benötigte Daten herunterzuladen. Dies vermittelt jedoch den Eindruck, die App habe sich aufgehängt, oder führt dazu, dass sie vom System beendet wird. Wir empfehlen, eine App die Mindestmenge an Daten herunterladen zu lassen, die sie benötigt, um in Phase 2 eine interaktive UI mit Platzhalterelementen anzuzeigen. In Phase 3 können dann nach und nach weitere Daten geladen und die Platzhalter damit ersetzt werden. Weitere Informationen zur Verwendung von Daten finden Sie unter [Optimieren von ListView und GridView](optimize-gridview-and-listview.md).
 
 Wie genau eine App auf die einzelnen Startphasen reagiert, liegt ganz bei Ihnen. Bedenken Sie allerdings, dass dem Benutzer durch möglichst viel Feedback (Begrüßungsbildschirm, Ladebildschirm und Verfügbarkeit der UI, während noch Daten geladen werden) der Eindruck einer schnellen App sowie eines insgesamt schnellen Systems vermittelt wird.
 
-### Minimieren der verwalteten Assemblys im Startpfad
+### <a name="minimize-managed-assemblies-in-the-startup-path"></a>Minimieren der verwalteten Assemblys im Startpfad
 
 Wiederverwendbarer Code liegt oft in Gestalt von in das Projekt einbezogenen Modulen (DLL-Dateien) vor. Zum Laden dieser Module muss auf den Datenträger zugegriffen werden, was – wie Sie sich vorstellen können – schnell einen größeren Mehraufwand bedeuten kann. Dieser Aspekt wirkt sich am stärksten bei einem Kaltstart aus, kann aber auch Auswirkungen auf den Warmstart haben. Im Falle von C# und Visual Basic versucht die CLR, die Auswirkungen bestmöglich zu verzögern, indem sie die Assemblys nur bei Bedarf lädt. Mit anderen Worten: Die CLR lädt ein Modul erst, wenn in einer ausgeführten Methode darauf verwiesen wird. Verweisen Sie im Startcode also nur auf Assemblys, die für den Start Ihrer App erforderlich sind, damit die CLR keine überflüssigen Module lädt. Falls Ihr Startpfad nicht verwendete Codepfade mit unnötigen Verweisen enthält, können Sie diese Codepfade in andere Methoden auslagern, um unnötige Ladevorgänge zu vermeiden.
 
 Eine weitere Möglichkeit zum Optimieren von Modulladevorgängen ist das Kombinieren von App-Modulen. Eine einzelne große Assembly wird in der Regel schneller geladen als zwei kleinere Assemblys. Dies ist allerdings nicht immer möglich. Außerdem sollten Sie Module nur dann kombinieren, wenn dieser Schritt keine großen Nachteile für die Entwicklerproduktivität oder die Wiederverwendbarkeit des Codes bedeutet. Welche Module beim Start geladen werden, können Sie mit Tools wie [PerfView](http://go.microsoft.com/fwlink/p/?linkid=251609) oder mit der [Windows-Leistungsanalyse](https://msdn.microsoft.com/library/windows/apps/xaml/ff191077.aspx) ermitteln.
 
-### Verwenden intelligenter Webanforderungen
+### <a name="make-smart-web-requests"></a>Verwenden intelligenter Webanforderungen
 
 Sie können die Ladezeit der App erheblich verbessern, wenn Sie ihren Inhalt (wie XAML, Bilder und andere wichtige App-Dateien) lokal packen. Datenträgervorgänge sind schneller als Netzwerkvorgänge. Falls eine App eine bestimmte Datei für die Initialisierung benötigt, können Sie die Startzeit insgesamt verringern, indem Sie die Datei vom Datenträger und nicht von einem Remoteserver laden.
 
-## Effizienz beim Journaling und der Zwischenspeicherung von Seiten
+## <a name="journal-and-cache-pages-efficiently"></a>Effizienz beim Journaling und der Zwischenspeicherung von Seiten
 
 Über das Frame-Steuerelement werden Navigationsfunktionen bereitgestellt. Dies umfasst das Navigieren auf eine Seite (Navigate-Methode), Navigationsjournaling (BackStack/ForwardStack-Eigenschaften, GoForward/GoBack-Methode), Zwischenspeichern von Seiten (Page.NavigationCacheMode) und Serialisierungsunterstützung (GetNavigationState-Methode).
 
@@ -349,7 +356,7 @@ Die Leistung, die für „Frame“ beachtet werden sollte, dreht sich vor allem 
 
 **Framejournaling**. Wenn Sie mit Frame.Navigate() zu einer Seite navigieren, wird der Frame.BackStack-Sammlung für die aktuelle Seite ein PageStackEntry-Element hinzugefügt. PageStackEntry ist relativ klein, aber es gibt keinen integrierten Grenzwert für die Größe der BackStack-Sammlung. Für Benutzer ist es potenziell möglich, eine Navigation in einer Schleife durchzuführen und diese Sammlung unendlich groß werden zu lassen.
 
-Das PageStackEntry-Element enthält auch den Parameter, der an die Frame.Navigate()-Methode übergeben wurde. Es wird empfohlen, dass dieser Parameter einen primitiven, serialisierbaren Typ aufweist (z.B. „int“ oder „string“), damit die Frame.GetNavigationState()-Methode funktioniert. Mit diesem Parameter kann aber auch auf ein Objekt verwiesen werden, das mit einem erheblich umfangreicheren Arbeitssatz oder weiteren Ressourcen verbunden ist, sodass auch der Aufwand für jeden Eintrag im BackStack-Element deutlich ansteigt. Beispielsweise können Sie ein StorageFile-Element als Parameter verwenden, und dies bedeutet, dass das BackStack-Element eine unendliche Anzahl von Dateien geöffnet lässt.
+Das PageStackEntry-Element enthält auch den Parameter, der an die Frame.Navigate()-Methode übergeben wurde. Es wird empfohlen, dass dieser Parameter einen primitiven, serialisierbaren Typ aufweist (z. B. „int“ oder „string“), damit die Frame.GetNavigationState()-Methode funktioniert. Mit diesem Parameter kann aber auch auf ein Objekt verwiesen werden, das mit einem erheblich umfangreicheren Arbeitssatz oder weiteren Ressourcen verbunden ist, sodass auch der Aufwand für jeden Eintrag im BackStack-Element deutlich ansteigt. Beispielsweise können Sie ein StorageFile-Element als Parameter verwenden, und dies bedeutet, dass das BackStack-Element eine unendliche Anzahl von Dateien geöffnet lässt.
 
 Daher ist es ratsam, die Navigationsparameter klein zu halten und die Größe des BackStack-Elements zu beschränken. Das BackStack-Element ist ein standardmäßiger Vektor (IList in C#, Platform::Vector in C++/CX) und kann daher gekürzt werden, indem einfach Einträge entfernt werden.
 
@@ -360,10 +367,5 @@ Daher ist es ratsam, die Navigationsparameter klein zu halten und die Größe de
 Das Zwischenspeichern kann zu einer Verbesserung der Leistung beitragen, indem Instanziierungen vermieden werden. So wird die gesamte Navigationsleistung verbessert. Das Zwischenspeichern kann sich auch negativ auf die Leistung auswirken, indem zu viel zwischengespeichert und dadurch der Arbeitssatz beeinträchtigt wird.
 
 Aus diesem Grund ist es zu empfehlen, das Zwischenspeichern von Seiten so einzusetzen, wie es für Ihre Anwendung am besten geeignet ist. Stellen Sie sich beispielsweise vor, dass Sie über eine App verfügen, bei der eine Liste mit Elementen in einem Frame angezeigt wird. Wenn Sie auf ein Element tippen, wird für den Frame die Navigation auf eine Detailseite des Elements durchgeführt. Für die Seite mit der Liste empfiehlt sich normalerweise eine Zwischenspeicherung. Falls die Detailseite für alle Elemente gleich ist, kann sie auch zwischengespeichert werden. Wenn die Detailseite eher abwechslungsreich gestaltet ist, kann es besser sein, sie nicht zwischenzuspeichern.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

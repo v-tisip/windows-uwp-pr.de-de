@@ -2,14 +2,21 @@
 author: mcleanbyron
 ms.assetid: 5fa16a27-fdc0-43b2-84cd-8547fd4915de
 description: Erfahren Sie, wie **AdControl**-Eigenschaften in HTML zugewiesen werden.
-title: "Beispiel für AdControl-HTML-Eigenschaften"
+title: "Beispiel für AdControl-Eigenschaften in HTML"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Anzeigen, Werbung, AdControl, HTML, Eigenschaften"
 translationtype: Human Translation
-ms.sourcegitcommit: f88a71491e185aec84a86248c44e1200a65ff179
-ms.openlocfilehash: 741cf19ee0310c84d1a85f4a1e82b353d88d1b9e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: a879944dc14ca161c3e52a49ffe4a8cebfa7d69f
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="adcontrol-html-properties-example"></a>Beispiel für AdControl-HTML-Eigenschaften
+# <a name="adcontrol-html-properties-example"></a>Beispiel für AdControl-Eigenschaften in HTML
 
 Das folgende Beispiel zeigt, wie Sie [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx)-Eigenschaften in HTML zuweisen. **ApplicationId** und **AdUnitId** sind erforderliche Eigenschaften. Die anderen Eigenschaften und Ereignisse sind optional. Wenn Sie keine Werte für optionale Eigenschaften angeben, verwendet das Steuerelement Standardwerte, die eine Anzeige erstellen, die mit der Benutzeroberfläche der App konsistent ist.
 
@@ -37,9 +44,4 @@ Diese Werte dienen als Beispiele. In Ihrem Code legen Sie die Werte dieser Funkt
 * [Anzeigenbeispiele auf GitHub](http://aka.ms/githubads)
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

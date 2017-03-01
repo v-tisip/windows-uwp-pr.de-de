@@ -3,9 +3,17 @@ author: awkoren
 Description: "Machen Sie Ihre ersten Schritte mit der Desktop-zu-UWP-Brücke, und konvertieren Sie Ihre Windows-Desktopanwendung (wie Win32, WPF und Windows Forms) in eine App für die universelle Windows-Plattform (UWP)."
 Search.Product: eADQiWindows 10XVcnh
 title: "Portieren Ihrer Desktop-App zur universellen Windows-Plattform (UWP) mit der Desktop-Brücke"
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 74373c24-f948-43bb-aa85-01e2e8e87162
 translationtype: Human Translation
-ms.sourcegitcommit: 462d2b13cefc6abb4d7c6f814ec4ee659e4afde8
-ms.openlocfilehash: 1ef54c3c45113e434333058d0f039e213ea8eed2
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: dd9f45b0ddcc201053ed8e35908da66443e47d72
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -87,14 +95,10 @@ Wenn Sie Feedback oder Vorschläge für Features übermitteln möchten, können 
 | [Manuelles Konvertieren Ihrer App zu UWP mithilfe der Desktop-Brücke](desktop-to-uwp-manual-conversion.md) | Enthält Informationen zum manuellen Erstellen eines App-Pakets und -Manifests. |
 | [App-Erweiterungen für die Desktop-Brücke](desktop-to-uwp-extensions.md) | Optimieren Sie die konvertierte App mit Erweiterungen, um Features wie z. B. Startaufgaben und Datei-Explorer-Integration zu ermöglichen. |
 | [Unterstützte UWP-APIs für mit der Desktop-Brücke konvertierte Apps](desktop-to-uwp-supported-api.md) | Erfahren Sie, welche UWP-APIs für Ihre konvertierte Desktop-App verfügbar sind. |
+| [Handbuch zur Desktop-Brücke-Verpackung von .NET Desktop-Apps mit Visual Studio](desktop-to-uwp-packaging-dot-net.md) | Konfigurieren Sie die Visual Studio-Lösung so, dass Sie Ihre .NET-App bearbeiten, debuggen und verpacken können. | 
 | [Debuggen von Apps, die mit der Desktop-Brücke konvertiert wurden](desktop-to-uwp-debug.md) | Erläutert die Optionen für das Debuggen der konvertierten App. | 
 | [Signieren einer App, die mit der Desktop-Brücke konvertiert wurde](desktop-to-uwp-signing.md) | Erfahren Sie, wie Sie Ihr konvertiertes App-Paket mit einem Zertifikat signieren können. |
 | [Verteilen von Apps, die mit der Desktop-Brücke konvertiert wurden](desktop-to-uwp-distribute.md) | Erfahren Sie, wie Sie die konvertierte App an Benutzer verteilen können.  |
 | [Hintergrundinformationen zur Desktop-Brücke](desktop-to-uwp-behind-the-scenes.md) | Beschäftigen Sie sich eingehender damit, wie die Desktop-zu-UWP-Brücke funktioniert. | 
 | [Bekannte Probleme mit der Desktop-Brücke](desktop-to-uwp-known-issues.md) | Listet bekannte Probleme bei der Desktop-zu-UWP-Brücke auf. | 
 | [Desktop-App-Brücke zu UWP: Codebeispiele](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) | Codebeispiele auf GitHub veranschaulichen Funktionen konvertierter Apps. |
-
-
-<!--HONumber=Dec16_HO3-->
-
-

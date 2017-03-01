@@ -1,27 +1,34 @@
 ---
 author: drewbatgit
 ms.assetid: 42A06423-670F-4CCC-88B7-3DCEEDDEBA57
-description: "Dieser Artikel beschreibt, wie Sie Kameraprofile verwenden, um die Funktionen verschiedener Videoaufzeichnungsgeräte zu ermitteln und zu verwalten. Dazu gehören Aufgaben, z.B. das Auswählen von Profilen, die bestimmte Auflösungen oder Bildfrequenzen unterstützen, von Profilen, die gleichzeitigen Zugriff auf mehrere Kameras unterstützen, sowie von Profilen, die HDR unterstützen."
+description: "Dieser Artikel beschreibt, wie Sie Kameraprofile verwenden, um die Funktionen verschiedener Videoaufzeichnungsgeräte zu ermitteln und zu verwalten. Dazu gehören Aufgaben, z. B. das Auswählen von Profilen, die bestimmte Auflösungen oder Bildfrequenzen unterstützen, von Profilen, die gleichzeitigen Zugriff auf mehrere Kameras unterstützen, sowie von Profilen, die HDR unterstützen."
 title: "Entdecken und Auswählen von Kamerafunktionen mit Kameraprofilen"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 625cf715a88837cb920433fa34e47a1e1828a4c8
-ms.openlocfilehash: 09cb41f834de52d541addee4e44715c52f5e99dc
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 4e37c2e3bd2ed8738ebba88c55ceaf795e6ca084
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Entdecken und Auswählen von Kamerafunktionen mit Kameraprofilen
+# <a name="discover-and-select-camera-capabilities-with-camera-profiles"></a>Entdecken und Auswählen von Kamerafunktionen mit Kameraprofilen
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
 
-Dieser Artikel beschreibt, wie Sie Kameraprofile verwenden, um die Funktionen verschiedener Videoaufzeichnungsgeräte zu ermitteln und zu verwalten. Dazu gehören Aufgaben, z.B. das Auswählen von Profilen, die bestimmte Auflösungen oder Bildfrequenzen unterstützen, von Profilen, die gleichzeitigen Zugriff auf mehrere Kameras unterstützen, sowie von Profilen, die HDR unterstützen.
+Dieser Artikel beschreibt, wie Sie Kameraprofile verwenden, um die Funktionen verschiedener Videoaufzeichnungsgeräte zu ermitteln und zu verwalten. Dazu gehören Aufgaben, z. B. das Auswählen von Profilen, die bestimmte Auflösungen oder Bildfrequenzen unterstützen, von Profilen, die gleichzeitigen Zugriff auf mehrere Kameras unterstützen, sowie von Profilen, die HDR unterstützen.
 
 > [!NOTE] 
 > Dieser Artikel baut auf Konzepten und Codebeispielen auf, die unter [Allgemeine Foto-, Video- und Audioaufnahme mit „MediaCapture“](basic-photo-video-and-audio-capture-with-MediaCapture.md) erläutert werden. Dort werden die Schritte für die Implementierung einer grundlegenden Foto- und Videoaufnahme beschrieben. Es wird empfohlen, dass Sie sich mit dem grundlegenden Muster für die Medienerfassung in diesem Artikel vertraut machen, bevor Sie in fortgeschrittene Aufnahmeszenarien einsteigen. Bei dem Code in diesem Artikel wird davon ausgegangen, dass Ihre App bereits eine Instanz von MediaCapture aufweist, die ordnungsgemäß initialisiert wurde.
 
  
 
-## Informationen zu Kameraprofilen
+## <a name="about-camera-profiles"></a>Informationen zu Kameraprofilen
 
 Kameras auf verschiedenen Geräten unterstützen unterschiedliche Funktionen; dazu gehören beispielsweise die unterschiedlichen unterstützten Auflösungen, die Bildfrequenz für Videoaufnahmen, und ob HDR oder Aufnahmen mit variabler Bildfrequenz unterstützt werden. Dieser Satz von Funktionen wird vom UWP-Medienaufnahmeframework (Universelle Windows-Plattform) in einer [**MediaCaptureVideoProfileMediaDescription**](https://msdn.microsoft.com/library/windows/apps/dn926695)-Klasse gespeichert. Eine Kameraprofil, dargestellt durch ein [**MediaCaptureVideoProfile**](https://msdn.microsoft.com/library/windows/apps/dn926694)-Objekt, verfügt über drei Gruppen von Medienbeschreibungen: eine für die Fotoaufnahme, eine für die Videoaufnahme und eine weitere für die Videovorschau.
 
@@ -31,7 +38,7 @@ Vor dem Initialisieren des [MediaCapture](capture-photos-and-video-with-mediacap
 
 In den Codebeispielen in diesem Artikel wird diese minimale Initialisierung durch die Ermittlung der Kameraprofile ersetzt. Diese unterstützen unterschiedliche Funktionen, mit denen das Medienaufnahmegerät initialisiert wird.
 
-## Suchen eines Videogeräts, das Kameraprofile unterstützt
+## <a name="find-a-video-device-that-supports-camera-profiles"></a>Suchen eines Videogeräts, das Kameraprofile unterstützt
 
 Bevor Sie unterstützte Kameraprofile suchen, sollten Sie ein Aufnahmegerät suchen, das die Verwendung von Kameraprofilen unterstützt. Die im folgenden Beispiel definierte **GetVideoProfileSupportedDeviceIdAsync**-Hilfsmethode verwendet die [**DeviceInformaion.FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/br225432)-Methode zum Abrufen einer Liste aller verfügbaren Videoaufnahmegeräte. Sie durchläuft alle Geräte in der Liste und ruft die statische Methode [**IsVideoProfileSupported**](https://msdn.microsoft.com/library/windows/apps/dn926714) für jedes Gerät auf, um festzustellen, ob es Videoprofile unterstützt. Sie durchläuft auch die [**EnclosureLocation.Panel**](https://msdn.microsoft.com/library/windows/apps/br229906)-Eigenschaft für jedes Gerät, sodass Sie angeben können, ob Sie eine Kamera auf der Vorderseite oder auf der Rückseite des Geräts bevorzugen.
 
@@ -43,7 +50,7 @@ Wenn die von der **GetVideoProfileSupportedDeviceIdAsync**-Hilfsmethode zurückg
 
 [!code-cs[GetDeviceWithProfileSupport](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetGetDeviceWithProfileSupport)]
 
-## Auswählen eines Profils basierend auf der unterstützten Auflösung und Bildfrequenz
+## <a name="select-a-profile-based-on-supported-resolution-and-frame-rate"></a>Auswählen eines Profils basierend auf der unterstützten Auflösung und Bildfrequenz
 
 Um ein Profil mit bestimmten Funktionen auszuwählen, zum Beispiel mit der Fähigkeit, eine bestimmte Auflösung oder Bildfrequenz zu erzielen, sollten Sie zuerst die oben definierte Hilfsmethode aufrufen, um die ID eines Aufnahmegeräts abzurufen, das die Verwendung von Kameraprofilen unterstützt.
 
@@ -57,7 +64,7 @@ Nachdem Sie das **MediaCaptureInitializationSettings**-Objekt mit dem gewünscht
 
 [!code-cs[InitCaptureWithProfile](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetInitCaptureWithProfile)]
 
-## Auswählen eines Profils, das mehrere Kameras gleichzeitig unterstützt
+## <a name="select-a-profile-that-supports-concurrence"></a>Auswählen eines Profils, das mehrere Kameras gleichzeitig unterstützt
 
 Sie können Kameraprofile verwenden, um zu ermitteln, ob ein Gerät Videoaufnahmen von mehreren Kameras gleichzeitig unterstützt. Für dieses Szenario benötigen Sie zwei Sätze von Aufnahmeobjekten, eines für die Kamera auf der Vorderseite und eines für die Kamera auf der Rückseite. Erstellen Sie für jede Kamera ein **MediaCapture**-Objekt, ein **MediaCaptureInitializationSettings**-Objekt und eine Zeichenfolge für die Aufnahmegeräte-ID. Fügen Sie außerdem eine boolesche Variable hinzu, die aufzeichnet, ob eine gleichzeitige Verwendung mehrerer Kameras unterstützt wird.
 
@@ -71,7 +78,7 @@ Rufen Sie **MediaCapture.InitializeAsync** für die primäre Kamera für Ihr App
 
 [!code-cs[InitConcurrentMediaCaptures](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetInitConcurrentMediaCaptures)]
 
-## Verwenden bekannter Profile zum Suchen eines Profils, das HDR-Video unterstützt
+## <a name="use-known-profiles-to-find-a-profile-that-supports-hdr-video"></a>Verwenden bekannter Profile zum Suchen eines Profils, das HDR-Video unterstützt
 
 Das Auswählen eines Profils, das HDR unterstützt, beginnt wie die anderen Szenarien. Erstellen Sie ein **MediaCaptureInitializationSettings**-Objekt und eine Zeichenfolge für die Aufnahmegerät-ID. Fügen Sie eine boolesche Variable hinzu, die aufzeichnet, ob HDR-Video unterstützt wird.
 
@@ -87,7 +94,7 @@ Durchlaufen Sie die zurückgegebene Liste der Kameraprofile. Durchlaufen Sie fü
 
 [!code-cs[FindHDRProfile](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetFindHDRProfile)]
 
-## Ermitteln, ob ein Gerät die gleichzeitige Aufnahme von Fotos und Videos unterstützt
+## <a name="determine-if-a-device-supports-simultaneous-photo-and-video-capture"></a>Ermitteln, ob ein Gerät die gleichzeitige Aufnahme von Fotos und Videos unterstützt
 
 Viele Geräte unterstützen die gleichzeitige Aufnahme von Fotos und Videos. Um festzustellen, ob ein Aufnahmegerät dies unterstützt, rufen Sie [**MediaCapture.FindAllVideoProfiles**](https://msdn.microsoft.com/library/windows/apps/dn926708) auf, um alle vom Gerät unterstützten Kameraprofile abzurufen. Verwenden Sie eine Linkabfrage, um ein Profil zu suchen, das mindestens einen Eintrag für [**SupportedPhotoMediaDescription**](https://msdn.microsoft.com/library/windows/apps/dn926703) und [**SupportedRecordMediaDescription**](https://msdn.microsoft.com/library/windows/apps/dn926705) aufweist, was bedeutet, dass das Profil die gleichzeitige Aufnahme unterstützt.
 
@@ -95,7 +102,7 @@ Viele Geräte unterstützen die gleichzeitige Aufnahme von Fotos und Videos. Um 
 
 Sie können diese Abfrage einschränken und nur nach Profilen suchen, die zusätzlich zur gleichzeitigen Videoaufnahme bestimmte Auflösungen oder andere Funktionen unterstützen. Sie können auch die [**MediaCapture.FindKnownVideoProfiles**](https://msdn.microsoft.com/library/windows/apps/dn926710)-Methode verwenden und den [**BalancedVideoAndPhoto**](https://msdn.microsoft.com/library/windows/apps/dn948843)-Wert angeben, um Profile abzurufen, die die gleichzeitige Aufnahme unterstützen. Das Abfragen aller Profile liefert aber genauere Ergebnisse.
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Kamera](camera.md)
 * [Allgemeine Foto-, Video- und Audioaufnahme mit „MediaCapture“](basic-photo-video-and-audio-capture-with-MediaCapture.md)
@@ -105,10 +112,5 @@ Sie können diese Abfrage einschränken und nur nach Profilen suchen, die zusät
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

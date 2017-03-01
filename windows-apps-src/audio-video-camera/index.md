@@ -1,17 +1,24 @@
 ---
 author: drewbatgit
 ms.assetid: 0fc12d26-f1cf-4da7-b5a7-735a5074b74a
-description: "Dieser Abschnitt stellt Informationen zum Erstellen von Apps für die universelle Windows-Plattform (UWP) bereit, mit denen Fotos, Videos oder Audioaufnahmen aufgenommen, wiedergegeben oder bearbeitet werden können."
+description: "Dieser Abschnitt stellt Informationen zum Erstellen von Apps für die Universelle Windows-Plattform (UWP) bereit, mit denen Fotos, Videos oder Audioaufnahmen aufgenommen, wiedergegeben oder bearbeitet werden können."
 title: Audio, Video und Kamera
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 77f47bce2a4be3f7c5ee3d320ff6c68e8c7ce6b0
-ms.openlocfilehash: d1aad0800bfe4982a316aa5da719db005b687fa1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 2d3b61b35307536bc54f19b5857acfe946a010ce
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="audio-video-and-camera"></a>Audio, Video und Kamera
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
 Dieser Abschnitt stellt Informationen zum Erstellen von Apps für die universelle Windows-Plattform (UWP) bereit, mit denen Fotos, Videos oder Audioaufnahmen aufgenommen, wiedergegeben oder bearbeitet werden können.
  
@@ -35,7 +42,7 @@ Dieser Abschnitt stellt Informationen zum Erstellen von Apps für die universell
 
 
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter
-- [Entwickeln von UWP-Apps](https://developer.microsoft.com/en-us/windows/develop)
+- [Entwickeln von UWP-Apps](https://developer.microsoft.com/windows/develop)
 
  
 
@@ -45,10 +52,5 @@ Dieser Abschnitt stellt Informationen zum Erstellen von Apps für die universell
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

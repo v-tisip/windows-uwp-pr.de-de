@@ -2,18 +2,26 @@
 author: mcleanbyron
 description: "Verwenden Sie diese Methode in der Windows Store-Übermittlungs-API, um den Paketrollout-Prozentsatz für eine Flight-Paket-Übermittlung zu aktualisieren."
 title: "Aktualisieren des Paketrollout-Prozentsatzes für eine Flight-Paket-Übermittlung mit der Windows Store-Übermittlungs-API"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Windows Store-Übermittlung API, Paket-Rollout, Test-Flight-Übermittlung, Aktualisieren, Prozentsatz"
+ms.assetid: ee9aa223-e945-4c11-b430-1f4b1e559743
 translationtype: Human Translation
-ms.sourcegitcommit: 9b76a11adfab838b21713cb384cdf31eada3286e
-ms.openlocfilehash: 2822390c60818baeb8d98789fdcf04bd7cd2daba
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: bb09e5ff3c60a56a69c5a52d47e3c791b206a84c
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Aktualisieren des Paketrollout-Prozentsatzes für eine Flight-Paket-Übermittlung mit der Windows Store-Übermittlungs-API
+# <a name="update-the-package-rollout-percentage-for-a-package-flight-submission-using-the-windows-store-submission-api"></a>Aktualisieren des Paketrollout-Prozentsatzes für eine Flight-Paket-Übermittlung mit der Windows Store-Übermittlungs-API
 
 
 Verwenden Sie diese Methode in der Windows Store-Übermittlungs-API, zum [Aktualisieren des Rollout-Prozentsatzes](../publish/gradual-package-rollout.md#setting-the-rollout-percentage) für eine Flight-Paket-Übermittlung. Weitere Informationen zum Erstellungsprozess einer Flight-Paket-Übermittlung mithilfe der Windows Store-Übermittlungs-API finden Sie unter [Verwalten von Flight-Paket-Übermittlungen](manage-flight-submissions.md).
 
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
@@ -24,7 +32,7 @@ Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
 >**Hinweis**&nbsp;&nbsp;Diese Methode kann nur für Windows Dev Center-Konten verwendet werden, die eine Berechtigung zur Verwendung der Windows Store-Übermittlungs-API erhalten haben. Diese Berechtigung ist nicht für alle Konten aktiviert.
 
-## Anforderung
+## <a name="request"></a>Anforderung
 
 Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie Verwendungsbeispiele und Beschreibungen des Headers und der Anforderungsparameter.
 
@@ -35,7 +43,7 @@ Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie V
 <span/>
  
 
-### Anforderungsheader
+### <a name="request-header"></a>Anforderungsheader
 
 | Header        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -43,7 +51,7 @@ Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie V
 
 <span/>
 
-### Anforderungsparameter
+### <a name="request-parameters"></a>Anforderungsparameter
 
 | Name        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -54,11 +62,11 @@ Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie V
 
 <span/>
 
-### Anforderungstext
+### <a name="request-body"></a>Anforderungstext
 
 Stellen Sie keinen Anforderungstext für diese Methode bereit.
 
-### Anforderungsbeispiel
+### <a name="request-example"></a>Anforderungsbeispiel
 
 Im folgenden Beispiel wird das Aktualisieren des Paketrollout-Prozentsatzes einer Flight-Paket-Übermittlung veranschaulicht.
 
@@ -67,7 +75,7 @@ POST https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/fl
 Authorization: Bearer <your access token>
 ```
 
-## Antwort
+## <a name="response"></a>Antwort
 
 Das folgende Beispiel veranschaulicht den JSON-Antworttext für einen erfolgreichen Aufruf dieser Methode. Weitere Informationen zu den Werten im Antworttext finden Sie unter der [Ressource zum Paketrollout](manage-flight-submissions.md#package-rollout-object).
 
@@ -80,7 +88,7 @@ Das folgende Beispiel veranschaulicht den JSON-Antworttext für einen erfolgreic
 }
 ```
 
-## Fehlercodes
+## <a name="error-codes"></a>Fehlercodes
 
 Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die Antwort einen der folgenden HTTP-Fehlercodes.
 
@@ -92,14 +100,9 @@ Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die A
 <span/>
 
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Schrittweiser Paketrollout](../publish/gradual-package-rollout.md)
 * [Verwalten von Flight-Paket-Übermittlungen mit der Windows Store-Übermittlungs-API](manage-flight-submissions.md)
 * [Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten](create-and-manage-submissions-using-windows-store-services.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

@@ -1,36 +1,43 @@
 ---
 author: mtoepke
 title: Verwenden von Tiefen und Effekten in Primitiven
-description: Hier zeigen wir Ihnen die Verwendung von Tiefen, Perspektiven, Farben und anderen Effekten in Primitiven.
+description: Hier zeigen wir Ihnen die Verwendung von Tiefen, Perspektiven, Farben und anderen Effekten in Grundtypen.
 ms.assetid: 71ef34c5-b4a3-adae-5266-f86ba257482a
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Spiele, Tiefe, Effekte, Grundtypen; directx"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 6c58e23a0831a0850a4e28887b4717abedbc7086
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 923bce3dd5f340b97fd6d4e7b31c4ed2e949ca94
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Verwenden von Tiefen und Effekten in Primitiven
+# <a name="use-depth-and-effects-on-primitives"></a>Verwenden von Tiefen und Effekten in Grundtypen
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Hier zeigen wir Ihnen die Verwendung von Tiefen, Perspektiven, Farben und anderen Effekten in Primitiven.
 
 **Ziel:** Ein 3D-Objekt zu erstellen und einfache Vertexbeleuchtung und -färbung darauf anzuwenden.
 
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 
 Es wird davon ausgegangen, dass Sie mit C+ vertraut sind. Sie müssen außerdem mit den grundlegenden Konzepten der Grafikprogrammierung vertraut sein.
 
 Des Weiteren gehen wir davon aus, dass Sie die Themen [Schnellstart: Einrichten von DirectX-Ressourcen und Anzeigen von Bildern](setting-up-directx-resources.md) sowie [Erstellen von Shadern und Zeichnen von Primitiven](creating-shaders-and-drawing-primitives.md) bearbeitet haben.
 
-**Zeitaufwand:** 20Minuten.
+**Zeitaufwand:** 20 Minuten.
 
-Anweisungen
+<a name="instructions"></a>Anweisungen
 ------------
 
-### 1. Definieren von Würfelvariablen
+### <a name="1-defining-cube-variables"></a>1. Definieren von Würfelvariablen
 
 Zunächst müssen wir die **SimpleCubeVertex**-Struktur und die **ConstantBuffer**-Struktur für den Würfel definieren. In diesen Strukturen werden die Vertexpositionen und -farben für den Würfel sowie die Darstellung des Würfels angegeben. Wir deklarieren [**ID3D11DepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476377) und [**ID3D11Buffer**](https://msdn.microsoft.com/library/windows/desktop/ff476351) mit [**ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx) und eine Instanz von **ConstantBuffer**.
 
@@ -62,7 +69,7 @@ private:
     ConstantBuffer m_constantBufferData;
 ```
 
-### 2. Erstellen einer Tiefenschablonenansicht
+### <a name="2-creating-a-depth-stencil-view"></a>2. Erstellen einer Tiefenschablonenansicht
 
 Zusätzlich zu der Renderzielansicht erstellen wir eine Tiefenschablonenansicht. Die Tiefenschablonenansicht ermöglicht Direct3D das effiziente Rendern von sich näher an der Kamera befindlichen Objekten vor Objekten, die sich weiter weg von der Kamera befinden. Bevor wir eine Ansicht für einen Tiefenschablonenpuffer erstellen können, müssen wir den Tiefenschablonenpuffer erstellen. Dazu füllen wir eine [**D3D11\_TEXTURE2D\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476253) zur Beschreibung des Tiefenschablonenpuffers auf und rufen anschließend [**ID3D11Device::CreateTexture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476521) zum Erstellen des Tiefenschablonenpuffers auf. Zum Erstellen der Tiefenschablonenansicht füllen wir eine [**D3D11\_DEPTH\_STENCIL\_VIEW\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476112) zur Beschreibung der Tiefenschablonenansicht auf und übergeben diese Beschreibung zusammen mit dem Tiefenschablonenpuffer an [**ID3D11Device::CreateDepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476507).
 
@@ -109,7 +116,7 @@ Zusätzlich zu der Renderzielansicht erstellen wir eine Tiefenschablonenansicht.
             );
 ```
 
-### 3. Aktualisieren der Perspektive mit dem Fenster
+### <a name="3-updating-perspective-with-the-window"></a>3. Aktualisieren der Perspektive mit dem Fenster
 
 Wir aktualisieren die Perspektivenprojektionsparameter für den Konstantenpuffer gemäß Fensterabmessungen. Wir fixieren die Parameter auf ein 70-Grad-Sichtfeld mit einem Tiefenbereich von 0,01 bis 100.
 
@@ -142,7 +149,7 @@ Wir aktualisieren die Perspektivenprojektionsparameter für den Konstantenpuffer
             );
 ```
 
-### 4. Erstellen von Vertex- und Pixelshadern mit Farbelementen
+### <a name="4-creating-vertex-and-pixel-shaders-with-color-elements"></a>4. Erstellen von Vertex- und Pixelshadern mit Farbelementen
 
 In dieser App erstellen wir Vertex- und Pixelshader, die im Vergleich zu der Beschreibung im vorherigen Lernprogramm [Erstellen von Shadern und Zeichnen von Primitiven](creating-shaders-and-drawing-primitives.md) einen höheren Komplexitätsgrad aufweisen. Der Vertexshader der App transformiert die Position der einzelnen Vertizes in den Projektionsbereich und übergibt die Vertexfarbe an den Pixelshader.
 
@@ -332,7 +339,7 @@ Wir erstellen Vertex-, Index- und Konstantenpuffer, um einen kreisenden Würfel 
         
 ```
 
-### 5. Drehen und Zeichnen des Würfels und Darstellen des gerenderten Bilds
+### <a name="5-rotating-and-drawing-the-cube-and-presenting-the-rendered-image"></a>5. Drehen und Zeichnen des Würfels und Darstellen des gerenderten Bilds
 
 Wir rufen eine Endlosschleife auf, um die Szene fortlaufend zu rendern und anzuzeigen. Wir rufen die **rotationY**-Inlinefunktion (BasicMath.h) mit einer Rotationsmenge auf, um die Werte festzulegen, mit deren Hilfe sich die Modellmatrix des Würfels um die Y-Achse dreht. Anschließend rufen wir [**ID3D11DeviceContext::UpdateSubresource**](https://msdn.microsoft.com/library/windows/desktop/ff476486) auf, um den Konstantenpuffer zu aktualisieren und das Würfelmodell zu drehen. Wir rufen [**ID3D11DeviceContext::OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464) auf, um das Renderziel aus Ausgabeziel anzugeben. In diesem **OMSetRenderTargets**-Aufruf übergeben wir die Tiefenschablonenansicht. Wir rufen [**ID3D11DeviceContext::ClearRenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476388) auf, um das Renderziel in eine blaue Volltonfarbe zu bereinigen. Anschließend rufen wir [**ID3D11DeviceContext::ClearDepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476387) auf, um den Tiefenpuffer zu leeren.
 
@@ -439,7 +446,7 @@ Wir rufen [**IDXGISwapChain::Present**](https://msdn.microsoft.com/library/windo
                 );
 ```
 
-## Zusammenfassung und nächste Schritte
+## <a name="summary-and-next-steps"></a>Zusammenfassung und nächste Schritte
 
 
 Wir haben Tiefen, Perspektiven, Farben und andere Effekte in Primitiven verwendet.
@@ -454,10 +461,5 @@ Als Nächstes wenden wir Texturen auf Primitive an.
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -2,14 +2,21 @@
 author: mcleanbyron
 ms.assetid: 89178FD9-850B-462F-9016-1AD86D1F6F7F
 description: "Erfahren Sie, wie Sie den Windows.Services.Store-Namespace verwenden, um Store-bezogene Produktinformationen für die aktuelle App oder eines ihrer Add-Ons abzurufen."
-title: Abrufen von Produktinformationen zu Apps und Add-Ons
+title: Abrufen von Produktinformationen zu Apps und deren Add-Ons
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, In-App-Einkäufe, IAPs, Add-Ons, Windows.Services.Store"
 translationtype: Human Translation
-ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
-ms.openlocfilehash: dd58103d22314081985cd5ce0f98f2f25e1e7287
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7e486c451174cd24429dc35cda07d22fe2b28745
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="get-product-info-for-apps-and-add-ons"></a>Abrufen von Produktinformationen zu Apps und Add-Ons
+# <a name="get-product-info-for-apps-and-add-ons"></a>Abrufen von Produktinformationen zu Apps und deren Add-Ons
 
 Apps für Windows 10, Version 1607 oder höher, können Methoden der [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Klasse im [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace verwenden, um auf Store-bezogene Informationen für die aktuelle App oder eines ihrer Add-Ons (auch als In-App-Produkte oder IAPs bezeichnet) zuzugreifen. Die folgenden Beispiele in diesem Artikel zeigen, wie dies für verschiedene Szenarien durchgeführt wird. Eine vollständige Beispielanwendung finden Sie im [Store-Beispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
 
@@ -77,9 +84,4 @@ Im folgenden Beispiel werden Informationen für dauerhafte Add-Ons mit den angeg
 * [Unterstützen von Endverbraucher-Add-On-Käufen](enable-consumable-add-on-purchases.md)
 * [Implementieren einer Testversion der App](implement-a-trial-version-of-your-app.md)
 * [Store-Beispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

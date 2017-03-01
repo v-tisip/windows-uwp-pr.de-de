@@ -3,16 +3,23 @@ author: DBirtolo
 ms.assetid: 5B30E32F-27E0-4656-A834-391A559AC8BC
 title: Verwenden des Kompasses
 description: Hier erfahren Sie, wie Sie mithilfe des Kompasses die aktuelle Richtung ermitteln.
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 05c13ff71e1c6dcfb84d46e37445c1699211951a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 07c6447a2f28c087c18e37e0036b43e7d7b312e5
+ms.lasthandoff: 02/07/2017
 
 ---
-# Verwenden des Kompasses
+# <a name="use-the-compass"></a>Verwenden des Kompasses
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
-** Wichtige APIs **
+**Wichtige APIs**
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**Kompass**](https://msdn.microsoft.com/library/windows/apps/BR225705)
@@ -23,19 +30,19 @@ Hier erfahren Sie, wie Sie mithilfe des Kompasses die aktuelle Richtung ermittel
 
 Apps können die aktuelle Richtung anhand des magnetischen oder geografischen Nordpols bestimmen. Navigations-Apps bestimmen mit dem Kompass die Richtung, in die das Gerät weist, und passen damit die Karte an.
 
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
-Sie sollten mit XAML (Extensible Application Markup Language), Microsoft VisualC# und Ereignissen vertraut sein.
+Sie sollten mit XAML (Extensible Application Markup Language), Microsoft Visual C# und Ereignissen vertraut sein.
 
 Das verwendete Gerät oder der Emulator muss einen Kompass unterstützen.
 
-## Erstellen einer einfachen Kompass-App
+## <a name="create-a-simple-compass-app"></a>Erstellen einer einfachen Kompass-App
 
 Dieser Abschnitt ist in zwei Unterabschnitte unterteilt: Der erste Unterabschnitt enthält die Schritte zum Erstellen einer einfachen Kompassanwendung. Im zweiten Unterabschnitt wird die erstellte App dann näher erläutert.
 
-### Anweisungen
+### <a name="instructions"></a>Anweisungen
 
--   Erstellen Sie ein neues Projekt. Wählen Sie dabei unter den Projektvorlagen für **VisualC#** die Option **Leere App (Universelle Windows-App)** aus.
+-   Erstellen Sie ein neues Projekt. Wählen Sie dabei unter den Projektvorlagen für **Visual C#** die Option **Leere App (Universelle Windows-App)** aus.
 
 -   Öffnen Sie die Projektdatei „MainPage.xaml.cs“, und ersetzen Sie den vorhandenen Code durch den folgenden Code:
 
@@ -66,8 +73,8 @@ Dieser Abschnitt ist in zwei Unterabschnitte unterteilt: Der erste Unterabschnit
         public sealed partial class MainPage : Page
         {
             private Compass _compass; // Our app' s compass object
-     
-            // This event handler writes the current compass reading to 
+
+            // This event handler writes the current compass reading to
             // the textblocks on the app' s main page.
 
             private async void ReadingChanged(object sender, CompassReadingChangedEventArgs e)
@@ -126,7 +133,7 @@ You'll need to rename the namespace in the previous snippet with the name you ga
     </Page>
 ```
 
-Ersetzen Sie im obigen Codeausschnitt den ersten Teil des Klassennamens durch den Namespace Ihrer App. Wenn Sie z.B. ein Projekt mit dem Namen **CompassCS** erstellt haben, ersetzen Sie `x:Class="App1.MainPage"` durch `x:Class="CompassCS.MainPage"`. Ersetzen Sie außerdem `xmlns:local="using:App1"` durch `xmlns:local="using:CompassCS"`.
+Ersetzen Sie im obigen Codeausschnitt den ersten Teil des Klassennamens durch den Namespace Ihrer App. Wenn Sie z. B. ein Projekt mit dem Namen **CompassCS** erstellt haben, ersetzen Sie `x:Class="App1.MainPage"` durch `x:Class="CompassCS.MainPage"`. Ersetzen Sie außerdem `xmlns:local="using:App1"` durch `xmlns:local="using:CompassCS"`.
 
 -   Drücken Sie F5 oder wählen Sie **Debuggen** > **Debugging starten** aus, um die App zu erstellen, bereitzustellen und auszuführen.
 
@@ -134,7 +141,7 @@ Wenn die App ausgeführt wird, können Sie die Kompasswerte ändern, indem Sie d
 
 -   Beenden Sie die App, indem Sie zu Visual Studio zurückkehren und UMSCHALT+F5 drücken oder **Debuggen** > **Debugging beenden** auswählen.
 
-### Erläuterung
+### <a name="explanation"></a>Erläuterung
 
 Das vorherige Beispiel zeigt, wie wenig Code Sie schreiben müssen, um Kompasswerte in Ihre App zu integrieren.
 
@@ -144,7 +151,7 @@ Die App stellt eine Verbindung mit dem Standardkompass in der **MainPage**-Metho
 _compass = Compass.GetDefault(); // Get the default compass object
 ```
 
-Die App legt das Berichtsintervall in der **MainPage**-Methode fest. Mit diesem Code wird das vom Gerät unterstützte Mindestintervall abgerufen und mit einem angeforderten Intervall von 16 Millisekunden verglichen (entspricht etwa einer Aktualisierungsrate von 60Hz). Wenn das unterstützte Mindestintervall größer als das angeforderte Intervall ist, legt der Code den Wert auf das Minimum fest. Andernfalls wird der Wert auf das angeforderte Intervall festgelegt.
+Die App legt das Berichtsintervall in der **MainPage**-Methode fest. Mit diesem Code wird das vom Gerät unterstützte Mindestintervall abgerufen und mit einem angeforderten Intervall von 16 Millisekunden verglichen (entspricht etwa einer Aktualisierungsrate von 60 Hz). Wenn das unterstützte Mindestintervall größer als das angeforderte Intervall ist, legt der Code den Wert auf das Minimum fest. Andernfalls wird der Wert auf das angeforderte Intervall festgelegt.
 
 ```csharp
 uint minReportInterval = _compass.MinimumReportInterval;
@@ -155,7 +162,7 @@ _compass.ReportInterval = reportInterval;
 Die neuen Kompassdaten werden in der **ReadingChanged**-Methode erfasst. Wenn der Sensortreiber neue Daten vom Sensor empfängt, übergibt er die Werte mithilfe dieses Ereignishandlers an Ihre App. Die App registriert diesen Ereignishandler in der folgenden Zeile.
 
 ```csharp
-_compass.ReadingChanged += new TypedEventHandler<Compass, 
+_compass.ReadingChanged += new TypedEventHandler<Compass,
 CompassReadingChangedEventArgs>(ReadingChanged);
 ```
 
@@ -164,23 +171,14 @@ Die neuen Werte werden in die TextBlock-Elemente des XAML-Projektcodes geschrieb
 ```xml
  <TextBlock HorizontalAlignment="Left" Height="22" Margin="8,18,0,0" TextWrapping="Wrap" Text="Magnetic Heading:" VerticalAlignment="Top" Width="104" Foreground="#FFFBF9F9"/>
  <TextBlock HorizontalAlignment="Left" Height="18" Margin="8,58,0,0" TextWrapping="Wrap" Text="True North Heading:" VerticalAlignment="Top" Width="104" Foreground="#FFF3F3F3"/>
- <TextBlock x:Name="txtMagnetic" HorizontalAlignment="Left" Height="22" Margin="130,18,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="116" Foreground="#FFFBF6F6"/> 
+ <TextBlock x:Name="txtMagnetic" HorizontalAlignment="Left" Height="22" Margin="130,18,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="116" Foreground="#FFFBF6F6"/>
  <TextBlock x:Name="txtNorth" HorizontalAlignment="Left" Height="18" Margin="130,58,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="116" Foreground="#FFF5F1F1"/>
 ```
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Kompassbeispiel](http://go.microsoft.com/fwlink/p/?linkid=241378)
  
 
  
-
-
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

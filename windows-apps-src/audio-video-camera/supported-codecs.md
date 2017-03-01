@@ -1,24 +1,31 @@
 ---
 author: drewbatgit
 ms.assetid: 9347AD7C-3A90-4073-BFF4-9E8237398343
-description: "In diesem Artikel wird aufgeführt, welche Audio- und Videocodecs und welche Formate für UWP-Apps unterstützt werden."
+description: "In diesem Artikel sind die Audio- und Videocodecs sowie die Formate aufgeführt, die für UWP-Apps unterstützt werden."
 title: "Unterstützte Codecs"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 7bd0002d62519757cf582d6070a22890a0e1837e
-ms.openlocfilehash: ec8ef39e3b1e014fb701e9d4bfa161faa8acbba8
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 2c477e9dc0cc86534a179edb8e3a9415f4872d93
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Unterstützte Codecs
+# <a name="supported-codecs"></a>Unterstützte Codecs
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 In diesem Artikel wird aufgeführt, welche Audio-, Video- und Bildcodecs und -formate für UWP-Apps unterstützt werden.
 
 In den folgenden Tabellen steht „D“ für Decoderunterstützung und „E“ für Encoderunterstützung.
 
-## Unterstützung von Audiocodecs und Formaten
+## <a name="audio-codec--format-support"></a>Unterstützung von Audiocodecs und Formaten
 
 In den folgenden Tabellen wird die Unterstützung von Audiocodecs und Formaten für jede Gerätefamilie aufgeführt.
 
@@ -27,7 +34,7 @@ In den folgenden Tabellen wird die Unterstützung von Audiocodecs und Formaten f
 
  
 
-### Desktop
+### <a name="desktop"></a>Desktop
 
 <table>
 <colgroup>
@@ -338,7 +345,7 @@ In den folgenden Tabellen wird die Unterstützung von Audiocodecs und Formaten f
 
  
 
-### Mobilgerät
+### <a name="mobile"></a>Mobilgerät
 
 <table>
 <colgroup>
@@ -649,7 +656,7 @@ In den folgenden Tabellen wird die Unterstützung von Audiocodecs und Formaten f
 
  
 
-### IoT Core (x86)
+### <a name="iot-core-x86"></a>IoT Core (x86)
 
 <table>
 <colgroup>
@@ -960,7 +967,7 @@ In den folgenden Tabellen wird die Unterstützung von Audiocodecs und Formaten f
 
  
 
-### IoT Core (ARM)
+### <a name="iot-core-arm"></a>IoT Core (ARM)
 
 <table>
 <colgroup>
@@ -1271,7 +1278,7 @@ In den folgenden Tabellen wird die Unterstützung von Audiocodecs und Formaten f
 
  
 
-### XBox
+### <a name="xbox"></a>XBox
 
 <table>
 <colgroup>
@@ -1582,7 +1589,7 @@ In den folgenden Tabellen wird die Unterstützung von Audiocodecs und Formaten f
 
  
 
-## Unterstützung von Videocodecs und Formaten
+## <a name="video-codec--format-support"></a>Unterstützung von Videocodecs und Formaten
 
 In den folgenden Tabellen wird die Unterstützung von Videocodecs und Formaten für jede Gerätefamilie aufgeführt.
 
@@ -1592,7 +1599,7 @@ In den folgenden Tabellen wird die Unterstützung von Videocodecs und Formaten f
 
  
 
-### Desktop
+### <a name="desktop"></a>Desktop
 
 <table>
 <colgroup>
@@ -1811,7 +1818,7 @@ In den folgenden Tabellen wird die Unterstützung von Videocodecs und Formaten f
 
  
 
-### Mobilgerät
+### <a name="mobile"></a>Mobilgerät
 
 <table>
 <colgroup>
@@ -2030,7 +2037,7 @@ In den folgenden Tabellen wird die Unterstützung von Videocodecs und Formaten f
 
  
 
-### IoT Core (x86)
+### <a name="iot-core-x86"></a>IoT Core (x86)
 
 <table>
 <colgroup>
@@ -2249,7 +2256,7 @@ In den folgenden Tabellen wird die Unterstützung von Videocodecs und Formaten f
 
  
 
-### IoT (ARM)
+### <a name="iot-arm"></a>IoT (ARM)
 
 <table>
 <colgroup>
@@ -2468,7 +2475,7 @@ In den folgenden Tabellen wird die Unterstützung von Videocodecs und Formaten f
 
  
 
-### XBox
+### <a name="xbox"></a>XBox
 
 <table>
 <colgroup>
@@ -2685,7 +2692,7 @@ In den folgenden Tabellen wird die Unterstützung von Videocodecs und Formaten f
 </tbody>
 </table>
 
-## Unterstützung von Bildcodecs und -formaten 
+## <a name="image-codec--format-support"></a>Unterstützung von Bildcodecs und -formaten 
 
 <table>
 <colgroup>
@@ -2757,8 +2764,3 @@ In den folgenden Tabellen wird die Unterstützung von Videocodecs und Formaten f
 <sup>3</sup> Nur bestimmte Kamera-RAW-Formate werden unterstützt.  
 
 Weitere Informationen zu Bildcodecs finden Sie unter [Systemeigene WIC-Codecs](https://msdn.microsoft.com/library/windows/desktop/gg430027.aspx).
-
-
-<!--HONumber=Nov16_HO1-->
-
-

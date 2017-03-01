@@ -3,15 +3,22 @@ author: DelfCo
 description: "WebSockets stellt einen Mechanismus für die schnelle und sichere bidirektionale Webkommunikation zwischen einem Client und einem Server mithilfe von HTTP(S) bereit."
 title: WebSockets
 ms.assetid: EAA9CB3E-6A3A-4C13-9636-CCD3DE46E7E2
+ms.author: bobdel
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: ff2429e1e9ea56c414978c126497551b1e1864b8
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 203face64ddb925601d23274c4e9cf9ab6d7c6f8
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# WebSockets
+# <a name="websockets"></a>WebSockets
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 **Wichtige APIs**
 
@@ -24,7 +31,7 @@ Mit dem [WebSocket-Protokoll](http://tools.ietf.org/html/rfc6455) werden Daten u
 
 | MessageWebSocket                                                         | StreamWebSocket                                                                               |
 |--------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
-| Geeignet für die meisten Szenarien, in denen die Nachrichten nicht besonders groß sind.   | Geeignet für Szenarien, in denen große Dateien (z.B. Fotos oder Videos) übertragen werden. |
+| Geeignet für die meisten Szenarien, in denen die Nachrichten nicht besonders groß sind.   | Geeignet für Szenarien, in denen große Dateien (z. B. Fotos oder Videos) übertragen werden. |
 | Ermöglicht die Benachrichtigung, dass eine gesamte WebSocket-Nachricht erhalten wurde. | Ermöglicht, dass bei jedem Lesevorgang Abschnitte einer Nachricht gelesen werden.                             |
 | Unterstützt UTF-8-Nachrichten und binäre Nachrichten.                                 | Unterstützt nur binäre Nachrichten.                                                                |
 | Ähnlich wie ein UDP- oder Datagrammsocket.                                     | Ähnlich wie ein TCP- oder Streamsocket.                                                            |
@@ -36,7 +43,7 @@ In den meisten Fällen sollten Sie eine sichere WebSocket-Verbindung verwenden, 
 
 Verwenden Sie zum Verschlüsseln einer WebSocket-Verbindung das wss:-URI-Schema, z. B. `wss://www.contoso.com/mywebservice`.
 
-## Verwenden von MessageWebSocket
+## <a name="using-messagewebsocket"></a>Verwenden von MessageWebSocket
 
 Mit dem [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) können bei jedem Lesevorgang Abschnitte einer Nachricht gelesen werden. Ein **MessageWebSocket** wird normalerweise in Szenarien verwendet, in denen Nachrichten nicht besonders groß sind. Es werden sowohl UTF-8- als auch Binärdateien unterstützt.
 
@@ -114,7 +121,7 @@ Dieses Beispiel verwendet den WebSocket.org-Echoserver, einen Dienst, der Zeiche
 
 Nachdem Sie die WebSocket-Verbindung initialisiert haben, muss Ihr Code folgende Schritte ausführen, um ordnungsgemäß Daten zu senden und zu empfangen.
 
-### Implementieren eines Rückrufs für das MessageWebSocket.MessageReceived-Ereignis
+### <a name="implement-a-callback-for-the-messagewebsocketmessagereceived-event"></a>Implementieren eines Rückrufs für das MessageWebSocket.MessageReceived-Ereignis
 
 Vor dem Herstellen einer Verbindung und dem Senden von Daten mit einem WebSocket muss Ihre App einen Ereignisrückruf registrieren, um die Benachrichtigung beim Empfang von Daten zu empfangen. Wenn das [**MessageWebSocket.MessageReceived**](https://msdn.microsoft.com/library/windows/apps/br241358)-Ereignis eintritt, wird der registrierte Rückruf aufgerufen, und es werden Daten von [**MessageWebSocketMessageReceivedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br226852) empfangen. Bei diesem Beispiel wird davon ausgegangen, dass die gesendeten Nachrichten im UTF-8-Format vorliegen.
 
@@ -145,7 +152,7 @@ Die folgende Beispielfunktion empfängt eine Zeichenfolge von einem verbundenen 
 >}
 >```
 
-###  Implementieren eines Rückrufs für das MessageWebSocket.Closed-Ereignis
+###  <a name="implement-a-callback-for-the-messagewebsocketclosed-event"></a>Implementieren eines Rückrufs für das MessageWebSocket.Closed-Ereignis
 
 Vor dem Herstellen einer Verbindung und Senden von Daten mit einem WebSocket muss Ihre App ein Rückrufereignis registrieren, um eine Benachrichtigung zu empfangen, wenn der WebSocket vom WebSocket-Server geschlossen wird. Wenn das [**MessageWebSocket.Closed**](https://msdn.microsoft.com/library/windows/apps/hh701364)-Ereignis eintritt, wird der registrierte Rückruf aufgerufen, um anzugeben, dass die Verbindung vom WebSocket-Server geschlossen wurde.
 
@@ -172,7 +179,7 @@ Vor dem Herstellen einer Verbindung und Senden von Daten mit einem WebSocket mus
 >}
 >```
 
-###  Senden einer Nachricht auf einem WebSocket
+###  <a name="send-a-message-on-a-websocket"></a>Senden einer Nachricht auf einem WebSocket
 
 Sobald eine Verbindung hergestellt ist, kann der WebSocket-Client Daten an den Server senden. Die [**DataWriter.StoreAsync**](https://msdn.microsoft.com/library/windows/apps/br208171)-Methode gibt einen Parameter zurück, der einer ganzen Zahl ohne Vorzeichen zugeordnet ist. Dadurch ändern sich die Definitionen der Aufgaben, die zum Senden der Nachricht und Herstellen der Verbindung ausgeführt werden.
 
@@ -224,7 +231,7 @@ Die folgende Funktion sendet die angegebene Zeichenfolge an einen verbundenen We
 >}
 >```
 
-## Verwenden erweiterter Steuerelemente mit WebSockets
+## <a name="using-advanced-controls-with-websockets"></a>Verwenden erweiterter Steuerelemente mit WebSockets
 
 [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) und [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) folgen dem gleichen Modell für die Verwendung erweiterter Steuerelemente. Den zuvor genannten Hauptklassen entsprechen verwandte Klassen für den Zugriff auf erweiterte Steuerelemente.
 
@@ -241,7 +248,7 @@ Das Grundmodell für die Verwendung erweiterter Steuerelemente ist für beide We
 -   Für alle erweiterten Steuerelemente von [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) muss die App vor dem Ausgeben eines Verbindungsvorgangs immer die Eigenschaft festlegen. Aufgrund dieser Anforderung empfiehlt es sich, alle Eigenschaften des Steuerelements unmittelbar nach dem Erstellen des **StreamWebSocket**-Objekts festzulegen. Versuchen Sie nicht, eine Steuerelementeigenschaft festzulegen, nachdem die [**StreamWebSocket.ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/br226933)-Methode aufgerufen wurde.
 -   Für alle erweiterte Steuerelemente auf dem [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) mit Ausnahme des Nachrichtentyps müssen Sie die Eigenschaft vor dem Ausgeben eines Verbindungsvorgangs festlegen. Es empfiehlt sich, alle Eigenschaften des Steuerelements unmittelbar nach dem Erstellen des **MessageWebSocket**-Objekts festzulegen. Versuchen Sie mit Ausnahme der Nachrichtentyps nicht, eine Steuerelementeigenschaft zu ändern, nachdem [**MessageWebSocket.ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/br226859) aufgerufen wurde.
 
-## WebSocket-Informationsklassen
+## <a name="websocket-information-classes"></a>WebSocket-Informationsklassen
 
 [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) und [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) besitzen jeweils eine entsprechende Klasse, die zusätzliche Informationen über eine WebSocket-Instanz bereitstellt.
 
@@ -251,15 +258,15 @@ Das Grundmodell für die Verwendung erweiterter Steuerelemente ist für beide We
 
 Beachten Sie, dass alle Eigenschaften für beide Informationsklassen schreibgeschützt sind und Sie aktuelle Informationen zu einem beliebigen Zeitpunkt während der Lebensdauer eines Websocket-Objekts abrufen können.
 
-## Behandeln von Netzwerkausnahmen
+## <a name="handling-network-exceptions"></a>Behandeln von Netzwerkausnahmen
 
 Ein Fehler in einem [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842)-Vorgang oder [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)-Vorgang wird als **HRESULT**-Wert zurückgegeben. Mit der [**WebSocketError.GetStatus**](https://msdn.microsoft.com/library/windows/apps/hh701529)-Methode wird ein Netzwerkfehler aus einem WebSocket-Vorgang in einen [**WebErrorStatus**](https://msdn.microsoft.com/library/windows/apps/hh747818)-Enumerationswert konvertiert. Die meisten **WebErrorStatus**-Enumerationswerte entsprechen einem vom systemeigenen HTTP-Clientvorgang zurückgegebenen Fehler. Ihre App kann nach bestimmten **WebErrorStatus**-Enumerationswerten filtern, um das App-Verhalten je nach Ausnahmeursache zu ändern.
 
 Bei Parameterprüfungsfehlern kann eine App den **HRESULT**-Wert aus der Ausnahme auch verwenden, um ausführlichere Informationen zum zugehörigen Fehler zu erhalten. Mögliche **HRESULT**-Werte sind in der Headerdatei *Winerror.h* aufgeführt. Für die meisten Parameterüberprüfungsfehler wird der **HRESULT**-Wert **E\_INVALIDARG** zurückgegeben.
 
-## Festlegen von Timeouts für WebSocket-Vorgänge
+## <a name="setting-timeouts-on-websocket-operations"></a>Festlegen von Timeouts für WebSocket-Vorgänge
 
-Die MessageWebSocket-Klasse und die StreamWebSocket-Klasse verwenden einen internen Systemdienst, um WebSocket-Clientanforderungen zu senden und Antworten von einem Server zu empfangen. Der standardmäßige Timeoutwert, der für einen WebSocket-Verbindungsvorgang verwendet wird, beträgt 60Sekunden. Wenn der HTTP-Server, der WebSockets unterstützt, vorübergehend nicht verfügbar oder durch einen Netzwerkausfall blockiert ist und der Server nicht auf die WebSocket-Verbindungsanforderung antwortet oder antworten kann, wartet der interne Systemdienst die standardmäßig festgelegten 60Sekunden ab, bevor ein Fehler zurückgegeben wird, der in der WebSocket ConnectAsync-Methode zur Auslösung einer Ausnahme führt. Falls die Namensabfrage für einen HTTP-Servernamen im URI mehrere IP-Adressen für den Namen zurückgibt, testet der interne Systemdienst bis zu fünf IP-Adressen für die Website. Dabei wird jeweils das Standardtimeout von 60Sekunden eingehalten, bevor ein Fehler auftritt. Eine App, die eine WebSocket-Verbindungsanforderung ausführt, kann mehrere Minuten lang erneute Versuche für mehrere IP-Adressen durchführen, bevor ein Fehler zurückgegeben und eine Ausnahme ausgelöst wird. Dieses Verhalten kann für Benutzer den Anschein erwecken, als ob die App nicht mehr reagiert. Das Standardtimeout, das für Sende- und Empfangsvorgänge nach dem Herstellen einer WebSocket-Verbindung verwendet wird, beträgt 30Sekunden.
+Die MessageWebSocket-Klasse und die StreamWebSocket-Klasse verwenden einen internen Systemdienst, um WebSocket-Clientanforderungen zu senden und Antworten von einem Server zu empfangen. Der standardmäßige Timeoutwert, der für einen WebSocket-Verbindungsvorgang verwendet wird, beträgt 60 Sekunden. Wenn der HTTP-Server, der WebSockets unterstützt, vorübergehend nicht verfügbar oder durch einen Netzwerkausfall blockiert ist und der Server nicht auf die WebSocket-Verbindungsanforderung antwortet oder antworten kann, wartet der interne Systemdienst die standardmäßig festgelegten 60 Sekunden ab, bevor ein Fehler zurückgegeben wird, der in der WebSocket ConnectAsync-Methode zur Auslösung einer Ausnahme führt. Falls die Namensabfrage für einen HTTP-Servernamen im URI mehrere IP-Adressen für den Namen zurückgibt, testet der interne Systemdienst bis zu fünf IP-Adressen für die Website. Dabei wird jeweils das Standardtimeout von 60 Sekunden eingehalten, bevor ein Fehler auftritt. Eine App, die eine WebSocket-Verbindungsanforderung ausführt, kann mehrere Minuten lang erneute Versuche für mehrere IP-Adressen durchführen, bevor ein Fehler zurückgegeben und eine Ausnahme ausgelöst wird. Dieses Verhalten kann für Benutzer den Anschein erwecken, als ob die App nicht mehr reagiert. Das Standardtimeout, das für Sende- und Empfangsvorgänge nach dem Herstellen einer WebSocket-Verbindung verwendet wird, beträgt 30 Sekunden.
 
 Wenn Apps schneller reagieren und diese Probleme verringert werden sollen, können Sie ein kürzeres Timeout für Verbindungsanforderungen festlegen. Somit tritt der Timeoutfehler früher auf als durch die Standardeinstellungen vorgegeben.
 
@@ -341,10 +348,5 @@ Das folgende Beispiel erstellt eine Aufgabe, die nach der angegebenen Verzögeru
         });
     }
 ```
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

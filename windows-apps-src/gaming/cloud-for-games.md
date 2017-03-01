@@ -3,21 +3,28 @@ author: joannaleecy
 title: "Nutzen von Clouddiensten für UWP-Spiele"
 description: "Erfahren Sie mehr über die Implementierung der Cloud als Back-End für Ihre UWP-Spiele."
 ms.assetid: 1a7088e0-0d7b-11e6-8e05-0002a5d5c51b
+ms.author: joanlee
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Spiele, Cloud-Dienste"
 translationtype: Human Translation
-ms.sourcegitcommit: 2584a08e0a869ab3c5f11c192f0a5a6eeb223d61
-ms.openlocfilehash: 598384993e0e2931773cdb30e0909af6b771590e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 72f357cbf8e370512f9230978de546aa3d54c660
+ms.lasthandoff: 02/07/2017
 
 ---
-#  Nutzen von Clouddiensten für UWP-Spiele
+#  <a name="using-cloud-services-for-uwp-games"></a>Nutzen von Clouddiensten für UWP-Spiele
 
 Die Universelle Windows-Plattform (UWP) in Windows 10 bietet eine Reihe von APIs, die zur Entwicklung von Spielen für Microsoft-Geräte verwendet werden können. Bei der Entwicklung von Spielen für alle Plattformen und Geräte können Sie ein Cloud-Back-End nutzen, um das Spiel je nach Bedarf zu skalieren.
 
-##  Was ist Cloud Computing?
+##  <a name="what-is-cloud-computing"></a>Was ist Cloud Computing?
 
 Beim Cloud Computing werden über das Internet IT-Ressourcen und Anwendungen zum Speichern und Verarbeiten von Daten eingesetzt. Der Begriff _Cloud_ beschreibt die große Menge an nicht-lokalen Ressourcen, auf die Sie von überall aus zugreifen können.
 Das Cloud Computing ermöglicht eine neue Art der Ressourcen- und Softwarenutzung. Sie müssen nicht mehr vorab für das komplette Produkt oder die Ressourcen zahlen, sondern können Plattformen, Software und Ressourcen stattdessen als Dienst nutzen. Cloudanbieter rechnen häufig nutzungsbasiert oder über Abonnements für Dienste ab.
 
-##  Vorteile von Clouddiensten
+##  <a name="why-use-cloud-services"></a>Vorteile von Clouddiensten
 
 Ein Vorteil beim Einsatz von Clouddiensten für Spiele ist, dass Sie nicht vorab in eigene physische Server investieren müssen. Sie zahlen stattdessen erst später für die Nutzung oder die abonnierten Dienste. So senken Sie Ihre finanziellen Risiken bei der Entwicklung eines neuen Spieles. 
 
@@ -29,7 +36,7 @@ Sie können dedizierte Cloudserver nutzen und so große und persistente Spielwel
 
 Auch Spiele, die umfangreiche Funktionalitäten zur Datenverwaltung benötigen (beispielsweise mit Funktionen für Spiele in sozialen Netzwerken, die mit asynchronen Multiplayer-Mechanismen arbeiten), können über Clouddienste implementiert werden.
 
-##  Nutzung der Cloudtechnologie durch Entwickler
+##  <a name="how-game-companies-use-the-cloud-technology"></a>Nutzung der Cloudtechnologie durch Entwickler
 
 Hier erfahren Sie, wie andere Entwickler Cloudlösungen in ihre Spiele implementiert haben.
 
@@ -103,23 +110,23 @@ Hier erfahren Sie, wie andere Entwickler Cloudlösungen in ihre Spiele implement
 </table>
 
     
-### Weitere Links
+### <a name="other-links"></a>Weitere Links
 
 * [Azure als Geheimwaffe für Hitcents, Game Troopers und InnoSpark](http://news.microsoft.com/features/game-developers-use-microsoft-azure-as-secret-sauce-for-scale-and-growth-2/)
 * [Spiele-Startups im Bizspark-Programm nutzen Azure](https://blogs.technet.microsoft.com/bizspark_featured_startups/2015/09/25/azure-open-for-gaming-startups/)
 
 
-## Design des Cloud-Back-Ends
+## <a name="how-to-design-your-cloud-backend"></a>Design des Cloud-Back-Ends
 
 Schon während die Spieldesigner und Produzenten über die erforderlichen Features und Funktionalitäten eines neuen Spieles sprechen, sollten Sie das Design der Spieleinfrastruktur berücksichtigen. Wenn Sie Spiele für unterschiedliche Geräte und die wichtigsten Plattformen entwickeln möchten, können Sie Azure als Back-End für das Spiel nutzen.
 
-### Schritt-für-Schritt-Lernanleitungen
+### <a name="step-by-step-learning-guides"></a>Schritt-für-Schritt-Lernanleitungen
 
 * [Build 2016-Codelabs: Einsatz von Microsoft Azure App Service und Microsoft SQL Azure als Back-End zur Speicherung von Spielständen](https://github.com/Microsoft-Build-2016/CodeLabs-GameDev-6-Azure)
 * [Entwerfen der Mobilstrategie für Ihr Spiel](https://azure.microsoft.com/documentation/articles/mobile-engagement-gaming-scenario/)
 * [Nutzung von Azure Mobile Engagement für die iOS-Bereitstellung mit Unity](https://azure.microsoft.com/documentation/articles/mobile-engagement-unity-ios-get-started/)
 
-### Grundlegendes zu IaaS, PaaS und SaaS
+### <a name="understanding-iaas-paas-or-saas"></a>Grundlegendes zu IaaS, PaaS und SaaS
 
 Zunächst müssen Sie entscheiden, welche Dienstform für Spiel am besten geeignet ist. Um einen Ansatz zur Erstellung Ihres Back-Ends auswählen zu können, sollten Sie die Unterschiede der drei Dienstformen kennen.
 
@@ -136,7 +143,7 @@ Zunächst müssen Sie entscheiden, welche Dienstform für Spiel am besten geeign
     Software-as-a-Service ist gewöhnlich eine Anwendung, die Ihnen über eine vorhandene Cloudplattform bereitgestellt wird. Diese Dienste vereinfachen Ihre Bereitstellung des Spiels über die entsprechenden Dienste.
 
 
-### Entwerfen der Spieleinfrastruktur mit Azure
+### <a name="design-your-game-infrastructure-using-azure"></a>Entwerfen der Spieleinfrastruktur mit Azure
 
 In diesem Abschnitt lernen Sie Möglichkeiten zur Nutzung der Azure Cloudangebote für ein Spiel kennen. Azure arbeitet mit Windows, Linux und bekannten Open-Source-Technologien wie Ruby, Python, Java und PHP. Weitere Informationen finden Sie unter [Azure für Gaming](https://azure.microsoft.com/solutions/gaming/).
 
@@ -162,7 +169,7 @@ In diesem Abschnitt lernen Sie Möglichkeiten zur Nutzung der Azure Cloudangebot
 | Erstellen von Marketingkampagnen zur Steigerung und Erhaltung der Nutzungszahlen  | Senden von Push-Benachrichtigungen an Zielgruppen zur Generierung von Interesse und Förderung bestimmter Spielaktionen gemäß Datenanalysen | [Mobile-Engagement](https://azure.microsoft.com/services/mobile-engagement/) |  Steigerung der Spielzeit und der Benutzerzahlen auf allen wichtigen Plattformen (iOS, Android, Windows, Windows Phone) |
 
 
-##  Ressourcen für Startups und Entwickler
+##  <a name="startup-and-developer-resources"></a>Ressourcen für Startups und Entwickler
 
 * [Microsoft BizSpark](https://www.microsoft.com/bizspark/)
 
@@ -170,9 +177,9 @@ In diesem Abschnitt lernen Sie Möglichkeiten zur Nutzung der Azure Cloudangebot
     
 * [ID@Xbox](http://www.xbox.com/Developers/id)
 
-    Wenn Sie Xbox Live-Features wie Multiplayer-Gameplay, die plattformübergreifende Spielersuche, den Gamerscore, Erfolge und Bestenlisten für Ihr Spiel unter Windows10 nutzen möchten, melden Sie sich bei ID@Xbox an. Dort erhalten Sie die Tools und die Unterstützung, die Sie für eine erfolgreiche Implementierung benötigen. Registrieren Sie vor der Bewerbung bei ID@Xbox zunächst ein Entwicklerkonto im [Windows Dev Center](https://developer.microsoft.com/windows/programs/join).
+    Wenn Sie Xbox Live-Features wie Multiplayer-Gameplay, die plattformübergreifende Spielersuche, den Gamerscore, Erfolge und Bestenlisten für Ihr Spiel unter Windows 10 nutzen möchten, melden Sie sich bei ID@Xbox an. Dort erhalten Sie die Tools und die Unterstützung, die Sie für eine erfolgreiche Implementierung benötigen. Registrieren Sie vor der Bewerbung bei ID@Xbox zunächst ein Entwicklerkonto im [Windows Dev Center](https://developer.microsoft.com/windows/programs/join).
 
-## Software-as-a Service für Game-Back-Ends
+## <a name="software-as-a-service-for-game-backend"></a>Software-as-a Service für Game-Back-Ends
 
 Dieser Abschnitt stellt einige Unternehmen vor, die Cloud-Back-Ends über wichtige Cloud-Dienstanbieter für Spiele anbieten, mit denen Sie sich auf die Entwicklung Ihres Spiels konzentrieren können.
 
@@ -188,9 +195,9 @@ Dieser Abschnitt stellt einige Unternehmen vor, die Cloud-Back-Ends über wichti
 
     Mit Playfab erhalten Sie schnell und einfach eine erstklassige Live-Game-Management- und Back-End-Technologie für Mobilgeräte-, PC- und Konsolenspiele.
 
-## Verwandte Links
+## <a name="related-links"></a>Verwandte Links
 
-* [Handbuch zur Entwicklung von Spielen unter Windows10](https://msdn.microsoft.com/windows/uwp/gaming/e2e)
+* [Handbuch zur Entwicklung von Spielen unter Windows 10](https://msdn.microsoft.com/windows/uwp/gaming/e2e)
 * [Azure für Gaming](https://azure.microsoft.com/solutions/gaming/)
 * [Microsoft BizSpark](https://www.microsoft.com/bizspark/)
 * [ID@Xbox](http://www.xbox.com/Developers/id)
@@ -199,9 +206,4 @@ Dieser Abschnitt stellt einige Unternehmen vor, die Cloud-Back-Ends über wichti
  
 
  
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

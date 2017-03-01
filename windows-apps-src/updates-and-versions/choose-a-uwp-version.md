@@ -2,9 +2,17 @@
 author: QuinnRadich
 title: "Auswählen einer UWP-Version"
 description: "Beim Schreiben einer UWP-App in Microsoft Visual Studio können Sie wählen, für welche Version die App bestimmt ist. Sie erhalten Informationen zum Unterschied zwischen unterschiedlichen UWP-Versionen und zur Konfiguration Ihrer Auswahl in neuen und vorhandenen Projekten."
+ms.author: quradic
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
+ms.assetid: a8b7830f-4929-44c6-90be-91f38be5f364
 translationtype: Human Translation
-ms.sourcegitcommit: 7e59551f528e23e497122f822fbfc09ec3086cdc
-ms.openlocfilehash: 58e58c212cb6efd76f4afb8d3b6c7a3c5ddf215e
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: e2bc7b4a12aed40093985000486b9f3f78967524
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -38,9 +46,4 @@ Seien Sie sich hierbei bewusst, dass Sie Folgendes deklarieren: Ihre App funktio
 * Im Code können Sie frei (also ohne Bedingungsprüfungen) alle APIs aufrufen, die in der unter **Mindestens erforderliche Version** angegebenen API vorhanden sind.
 * Testen Sie Ihren Code auf einem Gerät, auf dem die **Mindestens erforderliche Version** ausgeführt wird, um sicherzustellen, dass er ohne die APIs funktioniert, die nur in der **Zielversion** vorhanden sind.
 * Der Wert von **Zielversion** wird zum Identifizieren aller Verweise (Vertrags-WinMds) genutzt, die zum Kompilieren des Projekts verwendet werden. Mit diesen Verweisen können Sie Ihren Code aber mit Aufrufen von APIs kompilieren, die nicht unbedingt auf Geräten vorhanden sind, für die Sie die Unterstützung deklariert haben (mit **Mindestens erforderliche Version**). Daher müssen alle APIs, die nach **Mindestens erforderliche Version** eingeführt wurden, mit adaptivem Code aufgerufen werden. Weitere Informationen zu adaptivem Code finden Sie unter [Anleitung für Apps für die Universelle Windows-Plattform (UWP)](../get-started/universal-application-platform-guide.md).
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

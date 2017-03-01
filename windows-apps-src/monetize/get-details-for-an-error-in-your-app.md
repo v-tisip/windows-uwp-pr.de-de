@@ -1,17 +1,24 @@
 ---
 author: mcleanbyron
-ms.assetid: 
-description: "Verwenden Sie diese Methode in der Windows Store-Analyse-API, um detaillierte Daten zu einem spezifischen Fehler für Ihre App zu erhalten."
+ms.assetid: f0c0325e-ad61-4238-a096-c37802db3d3b
+description: Verwenden Sie diese Methode in der Windows Store-Analyse-API, um detaillierte Daten zu einem spezifischen Fehler in Ihrer App zu erhalten.
 title: Abrufen von Details zu einem Fehler in Ihrer App
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Store-Dienste, Windows Store-Analyse-API, Fehler, Details"
 translationtype: Human Translation
-ms.sourcegitcommit: 767097f068630e5ec171415c05d6dc395c8b26b3
-ms.openlocfilehash: cd72e58ec252c556cf0f2e5ce071744e8fac6c9e
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 1aaf5b6864c678d26289270be6a9ad96f5b5e004
+ms.lasthandoff: 02/08/2017
 
 ---
 
 # <a name="get-details-for-an-error-in-your-app"></a>Abrufen von Details zu einem Fehler in Ihrer App
 
-Verwenden Sie diese Methode in der Windows Store-Analyse-API, um detaillierte Daten zu einem spezifischen Fehler für Ihre App im JSON-Format zu erhalten. Diese Methode kann nur Details zu Fehlern abrufen, die in den letzten 30 Tagen aufgetreten sind. Detaillierte Fehlerdaten sind auch im Abschnitt **Fehler** des [Integritätsberichts](../publish/health-report.md) im Windows Dev Center-Dashboard verfügbar.
+Verwenden Sie diese Methode in der Windows Store-Analyse-API, um detaillierte Daten zu einem spezifischen Fehler in Ihrer App im JSON-Format zu erhalten. Diese Methode kann nur Details zu Fehlern abrufen, die in den letzten 30 Tagen aufgetreten sind. Detaillierte Fehlerdaten sind auch im Abschnitt **Fehler** des [Integritätsberichts](../publish/health-report.md) im Windows Dev Center-Dashboard verfügbar.
 
 Bevor Sie diese Methode verwenden können, müssen Sie zuerst die Methode [Abrufen von Fehlerberichtsdaten](get-error-reporting-data.md) verwenden, um die ID des Fehlers abzurufen, zu dem Sie detaillierte Informationen erhalten möchten.
 
@@ -160,9 +167,4 @@ Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese 
 * [Zugreifen auf Analysedaten mit Windows Store-Diensten](access-analytics-data-using-windows-store-services.md)
 * [Abrufen von Fehlerberichtsdaten](get-error-reporting-data.md)
 * [Abrufen der Stapelüberwachung für einen Fehler in Ihrer App](get-the-stack-trace-for-an-error-in-your-app.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

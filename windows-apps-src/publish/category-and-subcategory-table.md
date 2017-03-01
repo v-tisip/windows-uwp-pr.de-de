@@ -3,13 +3,20 @@ author: jnHs
 Description: "Das Zuweisen der richtigen Kategorie und Unterkategorie trägt dazu bei, dass Kunden Ihre App leichter finden und mehr Informationen dazu erhalten."
 title: Kategorie- und Unterkategorietabelle
 ms.assetid: D451C468-DCCD-4966-AB87-8E766615A72F
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: b31e399d950a99f0cb6f1e912e391429b5463136
-ms.openlocfilehash: 40891ade1c3383f89eed99176b4e9cf979e1fb64
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: a69521d9ff9adb682a370b421458269507e9befe
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Kategorie- und Unterkategorietabelle
+# <a name="category-and-subcategory-table"></a>Kategorie- und Unterkategorietabelle
 
 
 Das Zuweisen der richtigen Kategorie und Unterkategorie trägt dazu bei, dass Kunden Ihre App leichter finden und mehr Informationen dazu erhalten.
@@ -59,11 +66,6 @@ Unterkategorien sind nur für einige Kategorien vorhanden. Denken Sie daran, das
 | Dienstprogramme + Tools           | Sichern + Verwalten <br> Datei-Manager                |
  
 
-> **Hinweis**  Informationen zu den Kategorien, die in Windows Store für Windows8.1 und früheren Versionen verwendet wurden, sowie die Kategorien im Windows Phone Store und wie diese mit der vorangehenden Kategorieliste zusammenhängen, finden Sie unter [Kategorieänderungen für Windows Phone-Apps](how-your-app-appears-in-the-store-for-windows-10-customers.md#category-changes).
-
-
-
-
-<!--HONumber=Aug16_HO5-->
+> **Hinweis**  Informationen zu den Kategorien, die in Windows Store für Windows 8.1 und früheren Versionen verwendet wurden, sowie die Kategorien im Windows Phone Store und wie diese mit der vorangehenden Kategorieliste zusammenhängen, finden Sie unter [Kategorieänderungen für Windows Phone-Apps](how-your-app-appears-in-the-store-for-windows-10-customers.md#category-changes).
 
 

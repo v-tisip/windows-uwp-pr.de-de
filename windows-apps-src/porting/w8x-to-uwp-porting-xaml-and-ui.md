@@ -3,9 +3,16 @@ author: mcleblanc
 description: "Die Vorgehensweise zum Definieren einer Benutzeroberfläche in Form von deklarativem XAML-Markup lässt sich sehr gut von universellen 8.1-Apps auf Apps für die universelle Windows-Plattform (UWP) übertragen."
 title: Portieren von Windows-Runtime 8.x-XAML und -UI zu UWP
 ms.assetid: 78b86762-7359-474f-b1e3-c2d7cf9aa907
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: ea8844925cc227d9f082595b039dd68164ad1228
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 19a6ef29265c22d1bb02464a76ab20e487c67ce4
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -81,9 +88,9 @@ Es gibt auch einen einheitlichen Ansatz zum programmgesteuerten Beenden der App 
 
 Der Code für die Charm-Integration muss zwar nicht geändert werden, Sie müssen Ihrer App aber einige UI-Elemente hinzufügen, die den Platz der Charm-Leiste einnehmen, da diese in Windows 10 nicht enthalten ist. Für eine universelle 8.1-App unter Windows 10 sind vom systemeigenen Chrom bereitgestellte UI-Elemente auf der Titelleiste der App verfügbar.
 
-## <a name="controls-and-control-stylestemplates"></a>Steuerelemente und Steuerelementstile/-vorlagen
+## <a name="controls-and-control-styles-and-templates"></a>Steuerelemente und Steuerelementstile/-vorlagen
 
-Eine universelle 8.1-App behält unter Windows 10 das Aussehen und Verhalten von 8.1 in Bezug auf die Steuerelemente bei. Wenn Sie diese App zu einer Windows 10-App portieren, sind aber einige Unterschiede beim Aussehen und Verhalten zu beachten. Die Architektur und das Design von Steuerelementen bleiben für Windows 10-Apps im Wesentlichen unverändert. Bei den meisten Änderungen geht es daher um die [Entwurfssprache](#design-language), Vereinfachung und Verbesserung der Benutzerfreundlichkeit.
+Eine universelle 8.1-App behält unter Windows 10 das Aussehen und Verhalten von 8.1 in Bezug auf die Steuerelemente bei. Wenn Sie diese App zu einer Windows 10-App portieren, sind aber einige Unterschiede beim Aussehen und Verhalten zu beachten. Die Architektur und das Design von Steuerelementen bleiben für Windows 10-Apps im Wesentlichen unverändert. Bei den meisten Änderungen geht es daher um die [Entwurfssprache](#design-language-in-windows-10), Vereinfachung und Verbesserung der Benutzerfreundlichkeit.
 
 **Hinweis**   Der PointerOver-Ansichtszustand ist in benutzerdefinierten Stilen/Vorlagen in Windows 10-Apps und Windows Store-Apps relevant, nicht jedoch in Windows Phone Apps. Aus diesem Grund (und aufgrund der für Windows 10-Apps unterstützten Systemressourcenschlüssel) empfehlen wir Ihnen, die benutzerdefinierten Stile/Vorlagen aus Ihren Windows Store-Apps wiederzuverwenden, wenn Sie Ihre App zu Windows 10 portieren.
 Wenn Sie sichergehen möchten, dass für Ihre benutzerdefinierten Stile/Vorlagen die aktuelle Gruppe der Ansichtszustände verwendet wird und dass Sie von Leistungsverbesserungen profitieren, die an den standardmäßigen Stilen/Vorlagen vorgenommen wurden, sollten Sie eine Kopie der neuen Windows 10-Standardvorlage bearbeiten und Ihre Anpassungen darauf anwenden. Ein Beispiel für eine Leistungsverbesserung besteht darin, dass alle **Border**-Elemente, die ein **ContentPresenter**- Element oder Panel-Element bisher eingeschlossen haben, entfernt wurden. Der Rahmen wird jetzt von einem untergeordneten Element gerendert.
@@ -99,7 +106,7 @@ Unten sind einige speziellere Beispiele für Änderungen an Steuerelementen ange
 | [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) | In einer Windows 10-App wird vom [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/hh701927)-Element weder das [**EdgeGesture.Completed**](https://msdn.microsoft.com/library/windows/apps/hh701622)-Ereignis noch das [**UIElement.RightTapped**](https://msdn.microsoft.com/library/windows/apps/br208984)-Ereignis behandelt. Außerdem wird nicht auf ein Tippen oder das Wischen nach oben reagiert. Sie haben dennoch die Möglichkeit, diese Ereignisse zu behandeln und [**IsOpen**](https://msdn.microsoft.com/library/windows/apps/hh701939) festzulegen. |
 | [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/dn298584), [**TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280) | Überprüfen Sie, wie Ihre App mit den visuellen Änderungen an [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/dn298584) und [**TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280) aussieht. Bei einer auf einem mobilen Gerät ausgeführten Windows 10-App rufen diese Steuerelemente keine Auswahlseite mehr auf, sondern ein Popup, das einfach ausgeblendet werden kann. |
 | [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/dn298584), [**TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280) | In einer Windows 10-App können Sie [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/dn298584) oder [**TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280) nicht innerhalb eines Flyouts anordnen. Wenn Sie diese Steuerelemente in einem Steuerelement im Popupstil anzeigen möchten, können Sie [**DatePickerFlyout**](https://msdn.microsoft.com/library/windows/apps/dn625013) und [**TimePickerFlyout**](https://msdn.microsoft.com/library/windows/apps/dn608313) verwenden. |
-| **GridView**, **ListView** | Informationen zu **GridView**/**ListView** finden Sie unter [GridView-/ListView-Änderungen](#gridview). |
+| **GridView**, **ListView** | Informationen zu **GridView**/**ListView** finden Sie unter [GridView-/ListView-Änderungen](#gridview-and-listview-changes). |
 | [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843) | In einer Windows Phone Store-App wird ein [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843)-Steuerelement vom letzten Abschnitt in den ersten Abschnitt umgebrochen. In einer Windows Store-App und einer Windows 10-App werden Hubabschnitte nicht umbrochen. |
 | [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843) | In einer Windows Phone Store-App wird das Hintergrundbild eines [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843)-Steuerelements im Parallaxmodus relativ zu den Hubabschnitten verschoben. In einer Windows Store-App und einer Windows 10-App wird der Parallaxmodus nicht verwendet. |
 | [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843)  | In einer universellen 8.1-App bewirkt die [**HubSection.IsHeaderInteractive**](https://msdn.microsoft.com/library/windows/apps/dn251917)-Eigenschaft, dass die Abschnittsüberschrift – und eine daneben gerenderte Chevronglyphe – interaktiv werden. In einer Windows 10-App wird neben der Überschrift das interaktive Angebot vom Typ „Mehr anzeigen“ verwendet, aber die eigentliche Überschrift ist nicht interaktiv. Mit **IsHeaderInteractive** wird weiterhin bestimmt, ob eine Interaktion das [**Hub.SectionHeaderClick**](https://msdn.microsoft.com/library/windows/apps/dn251953)-Ereignis auslöst. |
@@ -107,8 +114,8 @@ Unten sind einige speziellere Beispiele für Änderungen an Steuerelementen ange
 | **ListPickerFlyout**, **PickerFlyout**  | **ListPickerFlyout** und **PickerFlyout** sind für Windows 10-App veraltet. Verwenden Sie für ein einzelnes Auswahlflyout das [**MenuFlyout**](https://msdn.microsoft.com/library/windows/apps/dn299030)-Element und bei komplexeren Oberflächen das [**Flyout**](https://msdn.microsoft.com/library/windows/apps/dn279496)-Element. |
 | [**PasswordBox**](https://msdn.microsoft.com/library/windows/apps/br227519) | Die [**PasswordBox.IsPasswordRevealButtonEnabled**](https://msdn.microsoft.com/library/windows/apps/hh702579)-Eigenschaft ist in einer Windows 10-App veraltet, und das Festlegen hat keinerlei Auswirkung. Verwenden Sie stattdessen [**PasswordBox.PasswordRevealMode**](https://msdn.microsoft.com/library/windows/apps/dn890867). Hierbei wird standardmäßig **Peek** genutzt (mit Anzeige einer Augenglyphe wie in einer Windows Store-App). Weitere Informationen finden Sie unter [Richtlinien für Kennwortfelder](https://msdn.microsoft.com/library/windows/apps/dn596103). |
 | [**Pivot**](https://msdn.microsoft.com/library/windows/apps/dn608241) | Das [**Pivot**](https://msdn.microsoft.com/library/windows/apps/dn608241)-Steuerelement ist jetzt universell. Das heißt, seine Verwendung ist nicht mehr nur auf mobile Geräte beschränkt. |
-| [**SearchBox**](https://msdn.microsoft.com/library/windows/apps/dn252771) | Obwohl [**SearchBox**](https://msdn.microsoft.com/library/windows/apps/dn252803) in der universellen Gerätefamilie implementiert ist, ist es auf mobilen Geräten nicht voll funktionsfähig. Weitere Informationen finden Sie unter [SearchBox eingestellt zugunsten von AutoSuggestBox](#searchbox). |
-| **SemanticZoom** | Informationen zu **SemanticZoom** finden Sie unter [Änderungen an „SemanticZoom“](#semantic-zoom). |
+| [**SearchBox**](https://msdn.microsoft.com/library/windows/apps/dn252771) | Obwohl [**SearchBox**](https://msdn.microsoft.com/library/windows/apps/dn252803) in der universellen Gerätefamilie implementiert ist, ist es auf mobilen Geräten nicht voll funktionsfähig. Weitere Informationen finden Sie unter [SearchBox eingestellt zugunsten von AutoSuggestBox](#searchbox-deprecated-in-favor-of-autosuggestbox). |
+| **SemanticZoom** | Informationen zu **SemanticZoom** finden Sie unter [Änderungen an „SemanticZoom“](#semanticzoom-changes). |
 | [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527)  | Einige Standardeigenschaften von [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527) haben sich geändert. [**HorizontalScrollMode**](https://msdn.microsoft.com/library/windows/apps/br209549) ist **automatisch**, [**VerticalScrollMode**](https://msdn.microsoft.com/library/windows/apps/br209589) ist **automatisch** und [**ZoomMode**](https://msdn.microsoft.com/library/windows/apps/br209601) ist **deaktiviert**. Wenn die neuen Standardwerte für Ihre App nicht geeignet sind, können Sie sie entweder in einem Stil oder als lokale Werte für das Steuerelement selbst ändern.  |
 | [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) | In einer Windows Store-App ist die Rechtschreibprüfung für ein [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)-Element standardmäßig deaktiviert. In einer Windows Phone Store-App und einer Windows 10-App ist sie standardmäßig aktiviert. |
 | [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) | Die Standardschriftgröße für ein [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)-Element hat sich von 11 in 15 geändert. |
@@ -137,9 +144,9 @@ Falls Sie komplexe Grafiken verwenden, sollten Sie mehr Skalierungen bereitstell
 
 Obwohl wir davon abraten, alle Skalierungsfaktoren zu unterstützen, möchten wir Ihnen die vollständige Liste der Skalierungsfaktoren für Windows 10-Apps nicht vorenthalten: 100 %, 125 %, 150 %, 200 %, 250 %, 300 % und 400 %. Wenn Sie sie bereitstellen, wählt der Store für jedes Gerät die Ressourcen mit der passenden Größe aus, und es werden nur diese Ressourcen heruntergeladen. Die Auswahl der herunterzuladenden Ressourcen erfolgt auf Grundlage des DPI-Werts eines Geräts. Ressourcen aus Ihrer Windows Store-App mit Skalierungsfaktoren wie 140 % oder 220 % können zwar wiederverwendet werden, Ihre App wird jedoch mit einem der neuen Skalierungsfaktoren ausgeführt, sodass sich eine gewisse Bitmapskalierung nicht vermeiden lässt. Testen Sie Ihre App auf verschiedenen Geräten, um jeweils zu überprüfen, ob ein zufriedenstellendes Ergebnis erzielt wird.
 
-Sie können XAML-Markup aus einer Windows Store-App mit literalen Dimensionswerten im Markup erneut verwenden – beispielsweise, um die Größe von Formen oder anderen Elementen (z. B. Typografie) anzupassen. In einigen Fällen wird für eine Windows 10-App ein größerer Skalierungsfaktor als für eine universelle 8.1-App verwendet (z. B. werden 150 % anstatt der vorherigen Skalierung von 140 % und 200 % anstatt 180 % verwendet). Wenn Sie feststellen, dass diese Literalwerte unter Windows 10 jetzt zu groß sind, können Sie sie mit dem Wert 0,8 multiplizieren. Weitere Informationen finden Sie unter [Reaktionsfähiges Design – Grundlagen für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/dn958435).
+Sie können XAML-Markup aus einer Windows Store-App mit literalen Dimensionswerten im Markup erneut verwenden – beispielsweise, um die Größe von Formen oder anderen Elementen (z. B. Typografie) anzupassen. In einigen Fällen wird für eine Windows 10-App ein größerer Skalierungsfaktor als für eine universelle 8.1-App verwendet (z. B. werden 150 % anstatt der vorherigen Skalierung von 140 % und 200 % anstatt 180 % verwendet). Wenn Sie feststellen, dass diese Literalwerte unter Windows 10 jetzt zu groß sind, können Sie sie mit dem Wert 0,8 multiplizieren. Weitere Informationen finden Sie unter [Reaktionsfähiges Design 101 – Grundlagen für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/dn958435).
 
-## <a name="gridviewlistview-changes"></a>Änderungen an „GridView/ListView”
+## <a name="gridview-and-listview-changes"></a>GridView-/ListView-Änderungen
 
 An den Standardstilsettern für [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) wurden verschiedene Änderungen vorgenommen, damit der Bildlauf des Steuerelements vertikal verläuft (anstatt wie bisher standardmäßig horizontal). Wenn Sie in Ihrem Projekt eine Kopie des Standardstils bearbeitet haben, enthält Ihre Kopie diese Änderungen nicht. Sie müssen sie daher manuell vornehmen. Nachfolgend finden Sie eine Liste der Änderungen:
 
@@ -457,7 +464,7 @@ In Windows Store-Apps und Windows Phone Store-Apps wird standardmäßig die Schr
 
 In Windows Store-Apps und Windows Phone Store-Apps ist die Standardsprache für Text auf die Buildsprache bzw. „en-us“ festgelegt. In einer Windows 10-App ist die Standardsprache auf die oberste App-Sprache (Fallback für Schriftarten) festgelegt. Sie können [**FrameworkElement.Language**](https://msdn.microsoft.com/library/windows/apps/hh702066) explizit festlegen, aber Sie erhalten ein besseres Fallbackverhalten für Schriftarten, wenn Sie für diese Eigenschaft keinen Wert festlegen.
 
-Weitere Informationen finden Sie unter [Richtlinien für Schriftarten](https://msdn.microsoft.com/library/windows/apps/hh700394.aspx) und [Entwerfen von UWP-Apps](http://go.microsoft.com/fwlink/p/?LinkID=533896). Informationen zu Änderungen von Textsteuerelementen finden Sie oben im Abschnitt [Steuerelemente](#controls).
+Weitere Informationen finden Sie unter [Richtlinien für Schriftarten](https://msdn.microsoft.com/library/windows/apps/hh700394.aspx) und [Entwerfen von UWP-Apps](http://go.microsoft.com/fwlink/p/?LinkID=533896). Informationen zu Änderungen von Textsteuerelementen finden Sie oben im Abschnitt [Steuerelemente](#controls-and-control-styles-and-templates).
 
 ## <a name="theme-changes"></a>Designänderungen
 
@@ -481,10 +488,5 @@ Bei einer universellen 8.1-App wird das App-Manifestelement [**ApplicationView**
 ```
 
 Das nächste Thema ist [Portieren: E/A, Gerät und App-Modell](w8x-to-uwp-input-and-sensors.md).
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

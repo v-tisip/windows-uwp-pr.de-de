@@ -3,13 +3,20 @@ author: mcleanbyron
 ms.assetid: F94AF8F6-0742-4A3F-938E-177472F96C00
 description: "Verwenden Sie diese Methode in der Windows Store-Übermittlungs-API, um eine neue oder aktualisierte Flight-Paketübermittlung in Windows Dev Center zu übernehmen."
 title: "Übernehmen einer Flight-Paketübermittlung mit der Windows Store-Übermittlungs-API"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Windows Store-Übermittlungs-API, Übernehmen einer Flight-Übermittlung"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: a9ea8de7b92b254c7bb8d63a5a3ea41afdd2d966
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 305c9280b00fbbd669bee31732e831238054f177
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Übernehmen einer Flight-Paketübermittlung mit der Windows Store-Übermittlungs-API
+# <a name="commit-a-package-flight-submission-using-the-windows-store-submission-api"></a>Übernehmen einer Flight-Paketübermittlung mit der Windows Store-Übermittlungs-API
 
 
 
@@ -18,17 +25,17 @@ Verwenden Sie diese Methode in der Windows Store-Übermittlungs-API, um eine neu
 
 Weitere Informationen dazu, wie der Übernahmevorgang in den Prozess zum Erstellen einer Flight-Paketübermittlung mit der Windows Store-Übermittlungs-API passt, finden Sie unter [Verwalten von Flight-Paketübermittlungen](manage-flight-submissions.md).
 
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
 * Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](create-and-manage-submissions-using-windows-store-services.md#prerequisites) für die Windows Store-Übermittlungs-API.
-* [Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
+* [Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60 Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
 * [Erstellen Sie eine Flight-Paketübermittlung](create-a-flight-submission.md), und [aktualisieren Sie die Übermittlung](update-a-flight-submission.md) mit allen erforderlichen Änderungen der Übermittlungsdaten.
 
 >**Hinweis**&nbsp;&nbsp;Diese Methode kann nur für Windows Dev Center-Konten verwendet werden, die eine Berechtigung zur Verwendung der Windows Store-Übermittlungs-API erhalten haben. Diese Berechtigung ist nicht für alle Konten aktiviert.
 
-## Anforderung
+## <a name="request"></a>Anforderung
 
 Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie Verwendungsbeispiele und Beschreibungen des Header und Anforderungstexts.
 
@@ -39,7 +46,7 @@ Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie V
 <span/>
  
 
-### Anforderungsheader
+### <a name="request-header"></a>Anforderungsheader
 
 | Header        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -47,7 +54,7 @@ Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie V
 
 <span/>
 
-### Anforderungsparameter
+### <a name="request-parameters"></a>Anforderungsparameter
 
 | Name        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -57,11 +64,11 @@ Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie V
 
 <span/>
 
-### Anforderungstext
+### <a name="request-body"></a>Anforderungstext
 
 Stellen Sie keinen Anforderungstext für diese Methode bereit.
 
-### Anforderungsbeispiel
+### <a name="request-example"></a>Anforderungsbeispiel
 
 Im folgenden Beispiel wird veranschaulicht, wie eine Flight-Paketübermittlung übernommen wird.
 
@@ -70,7 +77,7 @@ POST https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/fl
 Authorization: Bearer <your access token>
 ```
 
-## Antwort
+## <a name="response"></a>Antwort
 
 Das folgende Beispiel veranschaulicht den JSON-Antworttext für einen erfolgreichen Aufruf dieser Methode. Weitere Informationen zu den Werten im Antworttext finden Sie in den folgenden Abschnitten.
 
@@ -80,7 +87,7 @@ Das folgende Beispiel veranschaulicht den JSON-Antworttext für einen erfolgreic
 }
 ```
 
-### Antworttext
+### <a name="response-body"></a>Antworttext
 
 | Wert      | Typ   | Beschreibung                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -88,7 +95,7 @@ Das folgende Beispiel veranschaulicht den JSON-Antworttext für einen erfolgreic
 
 <span/>
 
-## Fehlercodes
+## <a name="error-codes"></a>Fehlercodes
 
 Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die Antwort einen der folgenden HTTP-Fehlercodes.
 
@@ -101,18 +108,13 @@ Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die A
 <span/>
 
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
-* [Erstellen und Verwalten von Übermittlungen mit WindowsStore-Diensten](create-and-manage-submissions-using-windows-store-services.md)
+* [Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten](create-and-manage-submissions-using-windows-store-services.md)
 * [Verwalten von Flight-Paketübermittlungen](manage-flight-submissions.md)
 * [Abrufen einer Flight-Paketübermittlung](get-a-flight-submission.md)
 * [Erstellen einer Flight-Paketübermittlung](create-a-flight-submission.md)
 * [Aktualisieren einer Flight-Paketübermittlung](update-a-flight-submission.md)
 * [Löschen einer Flight-Paketübermittlung](delete-a-flight-submission.md)
 * [Abrufen des Status einer Flight-Paketübermittlung](get-status-for-a-flight-submission.md)
-
-
-
-<!--HONumber=Aug16_HO5-->
-
 

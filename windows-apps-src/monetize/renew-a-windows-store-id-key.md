@@ -3,30 +3,37 @@ author: mcleanbyron
 ms.assetid: 3569C505-8D8C-4D85-B383-4839F13B2466
 description: "Verwenden Sie diese Methode zum Verlängern eines Windows Store-Schlüssels."
 title: "Verlängern eines Windows Store-ID-Schlüssels"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Windows Store-Sammlungs-API, Windows Store-Einkaufs-API, Windows Store-ID-Schlüssel, verlängern"
 translationtype: Human Translation
-ms.sourcegitcommit: ac9c921c7f39a1bdc6dc9fc9283bc667f67cd820
-ms.openlocfilehash: 4e0ca6fe88218faef1f7c9192a5e19569e9c00b4
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: b740cf431607f1748a8513a02746a70560d09da2
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Verlängern eines Windows Store-ID-Schlüssels
+# <a name="renew-a-windows-store-id-key"></a>Verlängern eines Windows Store-ID-Schlüssels
 
 
-Verwenden Sie diese Methode zum Verlängern eines Windows Store-Schlüssels. Wenn Sie einen [Windows Store-ID-Schlüssel generieren](view-and-grant-products-from-a-service.md#step-4), ist dieser 90Tage lang gültig. Nach Ablauf des Schlüssels können Sie anhand des abgelaufenen Schlüssels einen neuen Schlüssel aushandeln, indem Sie diese Methode anwenden.
+Verwenden Sie diese Methode zum Verlängern eines Windows Store-Schlüssels. Wenn Sie einen [Windows Store-ID-Schlüssel generieren](view-and-grant-products-from-a-service.md#step-4), ist dieser 90 Tage lang gültig. Nach Ablauf des Schlüssels können Sie anhand des abgelaufenen Schlüssels einen neuen Schlüssel aushandeln, indem Sie diese Methode anwenden.
 
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 
 Zur Verwendung dieser Methode benötigen Sie:
 
-* Ein AzureAD-Zugriffstoken, das mit dem Zielgruppen-URI `https://onestore.microsoft.com` erstellt wurde.
-* Ein abgelaufener WindowsStore-ID-Schlüssel, der [aus clientseitigem Code in Ihrer App generiert wurde](view-and-grant-products-from-a-service.md#step-4).
+* Ein Azure AD-Zugriffstoken, das mit dem Zielgruppen-URI `https://onestore.microsoft.com` erstellt wurde.
+* Ein abgelaufener Windows Store-ID-Schlüssel, der [aus clientseitigem Code in Ihrer App generiert wurde](view-and-grant-products-from-a-service.md#step-4).
 
-Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von Produktansprüchen aus einem Dienst](view-and-grant-products-from-a-service.md).
+Weitere Informationen finden Sie unter [Verwalten von Produktansprüchen aus einem Dienst](view-and-grant-products-from-a-service.md).
 
-## Anforderung
+## <a name="request"></a>Anfordern
 
-### Anforderungssyntax
+### <a name="request-syntax"></a>Anforderungssyntax
 
 | Schlüsseltyp    | Methode | Anforderungs-URI                                              |
 |-------------|--------|----------------------------------------------------------|
@@ -35,7 +42,7 @@ Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von
 
 <span/>
 
-### Anforderungsheader
+### <a name="request-header"></a>Anforderungsheader
 
 | Header         | Typ   | Beschreibung                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
@@ -45,7 +52,7 @@ Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von
 
 <span/>
 
-### Anforderungstext
+### <a name="request-body"></a>Anforderungstext
 
 | Parameter     | Typ   | Beschreibung                       | Erforderlich |
 |---------------|--------|-----------------------------------|----------|
@@ -54,7 +61,7 @@ Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von
 
 <span/> 
 
-### Anforderungsbeispiel
+### <a name="request-example"></a>Anforderungsbeispiel
 
 ```syntax
 POST https://collections.mp.microsoft.com/v6.0/b2b/keys/renew HTTP/1.1
@@ -68,10 +75,10 @@ Host: collections.mp.microsoft.com
 }
 ```
 
-## Antwort
+## <a name="response"></a>Antwort
 
 
-### Antworttext
+### <a name="response-body"></a>Antworttext
 
 | Parameter | Typ   | Beschreibung                                                                                                            | Erforderlich |
 |-----------|--------|------------------------------------------------------------------------------------------------------------------------|----------|
@@ -79,7 +86,7 @@ Host: collections.mp.microsoft.com
 
 <span/>
 
-### Antwortbeispiel
+### <a name="response-example"></a>Antwortbeispiel
 
 ```syntax
 HTTP/1.1 200 OK
@@ -96,7 +103,7 @@ Date: Tue, 13 Sep 2015 07:31:12 GMT
 }
 ```
 
-## Fehlercodes
+## <a name="error-codes"></a>Fehlercodes
 
 
 | Code | Fehler        | Interner Fehlercode           | Beschreibung                                                                                                                                                                           |
@@ -106,16 +113,11 @@ Date: Tue, 13 Sep 2015 07:31:12 GMT
 
 <span/>
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 
-* [Anzeigen von Produkten und Gewähren von Produktansprüchen aus einem Dienst](view-and-grant-products-from-a-service.md)
+* [Verwalten von Produktansprüchen aus einem Dienst](view-and-grant-products-from-a-service.md)
 * [Produktabfrage](query-for-products.md)
 * [Melden von Verbrauchsprodukten als erfüllt](report-consumable-products-as-fulfilled.md)
 * [Gewähren kostenloser Produkte](grant-free-products.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

@@ -2,21 +2,29 @@
 author: jwmsft
 title: Versionsadaptiver Code
 description: "Erfahren Sie, wie Sie neue APIs nutzen und gleichzeitig die Kompatibilität mit früheren Versionen gewährleisten."
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
+ms.assetid: 3293e91e-6888-4cc3-bad3-61e5a7a7ab4e
 translationtype: Human Translation
-ms.sourcegitcommit: 24a62c9331d4f651937f3f795fb1e7c9704af2ca
-ms.openlocfilehash: 7656018c61688bddbf23f889a82af4fd6d58c3ea
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: f8d6c28daea2a3d5be67ad2b5da5a05a46f736cc
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Versionsadaptiver Code: Verwenden neuer APIs bei gleichzeitiger Gewährleistung der Kompatibilität mit früheren Versionen
+# <a name="version-adaptive-code-use-new-apis-while-maintaining-compatibility-with-previous-versions"></a>Versionsadaptiver Code: Verwenden neuer APIs bei gleichzeitiger Gewährleistung der Kompatibilität mit früheren Versionen
 
-Mit jeder Version des Windows10SDKs kommen spannende neue Funktionen hinzu, die Sie nicht ungenutzt lassen sollten. Da allerdings nicht alle Kunden ihre Geräte gleichzeitig auf die neueste Version von Windows10 aktualisieren, müssen Sie sicherstellen, dass Ihre App auf einem möglichst breiten Gerätespektrum verwendet werden kann. Hier zeigen wir Ihnen, wie Sie Ihre App so gestalten, dass sie unter früheren Versionen von Windows10 ausgeführt werden kann, aber auch neue Features nutzt, wenn sie auf einem Gerät ausgeführt wird, auf dem das neueste Update installiert ist.
+Mit jeder Version des Windows 10 SDKs kommen spannende neue Funktionen hinzu, die Sie nicht ungenutzt lassen sollten. Da allerdings nicht alle Kunden ihre Geräte gleichzeitig auf die neueste Version von Windows 10 aktualisieren, müssen Sie sicherstellen, dass Ihre App auf einem möglichst breiten Gerätespektrum verwendet werden kann. Hier zeigen wir Ihnen, wie Sie Ihre App so gestalten, dass sie unter früheren Versionen von Windows 10 ausgeführt werden kann, aber auch neue Features nutzt, wenn sie auf einem Gerät ausgeführt wird, auf dem das neueste Update installiert ist.
 
-Mit den beiden folgenden Schritten können Sie sicherstellen, dass Ihre App auf einem möglichst breiten Spektrum von Windows10-Geräten verwendet werden kann: Erstens: Konfigurieren Sie Ihr VisualStudio-Projekt mit den neuesten APIs. Dies beeinflusst die Kompilierung der App. Zweitens: Führen Sie Laufzeitprüfungen durch, um sicherzustellen, dass nur APIs aufgerufen werden, die auf dem Gerät vorhanden sind, auf dem die App ausgeführt wird.
+Mit den beiden folgenden Schritten können Sie sicherstellen, dass Ihre App auf einem möglichst breiten Spektrum von Windows 10-Geräten verwendet werden kann: Erstens: Konfigurieren Sie Ihr Visual Studio-Projekt mit den neuesten APIs. Dies beeinflusst die Kompilierung der App. Zweitens: Führen Sie Laufzeitprüfungen durch, um sicherzustellen, dass nur APIs aufgerufen werden, die auf dem Gerät vorhanden sind, auf dem die App ausgeführt wird.
 
-## Konfigurieren des VisualStudio-Projekts
+## <a name="configure-your-visual-studio-project"></a>Konfigurieren des Visual Studio-Projekts
 
-Im ersten Schritt zur Unterstützung mehrerer Versionen von Windows10 müssen im VisualStudio-Projekt die unterstützten *Ziel*- und *Mindestversionen* des Betriebssystems/SDKs angegeben werden.
+Im ersten Schritt zur Unterstützung mehrerer Versionen von Windows 10 müssen im Visual Studio-Projekt die unterstützten *Ziel*- und *Mindestversionen* des Betriebssystems/SDKs angegeben werden.
 - *Ziel*: Die SDK-Version, für die Visual Studio den App-Code kompiliert und alle Tools ausführt. Alle APIs und Ressourcen in dieser SDK-Version stehen zur Kompilierzeit im App-Code zur Verfügung.
 - *Minimum*: Die SDK-Version, die die niedrigste Betriebssystemversion unterstützt, unter der Ihre App ausgeführt werden kann (und vom Store bereitgestellt wird), und die Version, für die Visual Studio den Markupcode der App kompiliert. 
 
@@ -27,28 +35,28 @@ Die Einstellungen für Ziel- und Mindestversion geben jeweils das Ende eines Ber
 > [!TIP]
 > Visual Studio gibt im Zusammenhang mit der API-Kompatibilität keine Warnungen aus. Daher müssen Sie selbst testen und sicherstellen, dass Ihre App unter allen Betriebssystemversionen zwischen Mindest- und Zielversion (jeweils einschließlich) erwartungsgemäß funktioniert.
 
-Wenn Sie ein neues Projekt in Visual Studio2015 (Update2 oder höher) erstellen, werden Sie aufgefordert, die von Ihrer App unterstützte Ziel- und Mindestversion festzulegen. Die Zielversion ist standardmäßig die höchste installierte SDK-Version, die Mindestversion die niedrigste installierte SDK-Version. Als Ziel- und Mindestversion stehen nur SDK-Versionen zur Auswahl, die auf Ihrem Computer installiert sind. 
+Wenn Sie ein neues Projekt in Visual Studio 2015 (Update 2 oder höher) erstellen, werden Sie aufgefordert, die von Ihrer App unterstützte Ziel- und Mindestversion festzulegen. Die Zielversion ist standardmäßig die höchste installierte SDK-Version, die Mindestversion die niedrigste installierte SDK-Version. Als Ziel- und Mindestversion stehen nur SDK-Versionen zur Auswahl, die auf Ihrem Computer installiert sind. 
 
 ![Festlegen des Ziel-SDKs in Visual Studio](images/vs-target-sdk-1.png)
 
 In der Regel empfiehlt es sich, die Standardeinstellungen beizubehalten. Falls Sie jedoch eine Vorschauversion des SDKs installiert haben und Produktionscode schreiben, empfiehlt es sich, die Zielversion zu ändern und auf die neueste offizielle SDK-Version festzulegen. 
 
-Navigieren Sie zum Ändern der Mindest- und Zielversion für ein bereits in Visual Studio erstelltes Projekt zu „Projekt“> „Eigenschaften“> Registerkarte „Anwendung“> „Ziel“.
+Navigieren Sie zum Ändern der Mindest- und Zielversion für ein bereits in Visual Studio erstelltes Projekt zu „Projekt“ > „Eigenschaften“ > Registerkarte „Anwendung“ > „Ziel“.
 
 ![Ändern des Ziel-SDKs in Visual Studio](images/vs-target-sdk-2.png) 
 
 Im Anschluss finden Sie die Buildnummern für die einzelnen SDKs:
-- Windows10-Version1506: SDK-Version10240
-- Windows10-Version1511 (November-Updates): SDK-Version10586
+- Windows 10-Version 1506: SDK-Version 10240
+- Windows 10-Version 1511 (November-Updates): SDK-Version 10586
 - Windows 10, Version 1607 (Anniversary Update): SDK Version 14393.
 
-Sie können jede beliebige veröffentlichte Version des SDKs aus dem [WindowsSDK- und Emulator-Archiv](https://developer.microsoft.com/downloads/sdk-archive) herunterladen. Das neueste Windows Insider Preview SDK können Sie im Entwicklerabschnitt der [Windows Insider-Website](https://insider.windows.com/) herunterladen.
+Sie können jede beliebige veröffentlichte Version des SDKs aus dem [Windows SDK- und Emulator-Archiv](https://developer.microsoft.com/downloads/sdk-archive) herunterladen. Das neueste Windows Insider Preview SDK können Sie im Entwicklerabschnitt der [Windows Insider-Website](https://insider.windows.com/) herunterladen.
 
-## Schreiben von adaptivem Code
+## <a name="write-adaptive-code"></a>Schreiben von adaptivem Code
 
 Das Schreiben von adaptivem Code ist vergleichbar mit dem [Erstellen einer adaptiven UI](https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml). Dabei können Sie etwa Ihre grundlegende Benutzeroberfläche für den kleinsten Bildschirm entwerfen und anschließend Elemente verschieben oder hinzufügen, wenn erkannt wird, dass die App auf einem größeren Bildschirm ausgeführt wird. Bei adaptivem Code schreiben Sie Ihren Basiscode für die niedrigste Betriebssystemversion und können anschließend ausgewählte Features hinzufügen, wenn erkannt wird, dass Ihre App unter einer höheren Version ausgeführt wird, die über das neue Feature verfügt.
 
-### API-Laufzeitprüfungen
+### <a name="runtime-api-checks"></a>API-Laufzeitprüfungen
 
 Verwenden Sie die [Windows.Foundation.Metadata.ApiInformation](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.aspx)-Klasse in einer Bedingung in Ihrem Code, um zu testen, ob die aufzurufende API vorhanden ist. Diese Bedingung wird immer ausgewertet – ganz gleich, wo Ihre App ausgeführt wird. Das Ergebnis ist aber nur dann **True**, wenn sie auf einem Gerät ausgeführt wird, auf dem die API vorhanden ist und somit aufgerufen werden kann. So können Sie Apps mit versionsadaptivem Code erstellen, die APIs verwenden, welche nur unter bestimmten Betriebssystemversionen verfügbar sind.
 
@@ -57,15 +65,15 @@ Hier gehen wir anhand von spezifischen Beispielen auf die Nutzung neuer Features
 > [!TIP]
 > Eine hohe Anzahl von API-Laufzeitprüfungen kann die Leistung Ihrer App beeinträchtigen. Die Prüfungen werden in diesen Beispielen inline veranschaulicht. In Produktionscode empfiehlt es sich, die Prüfung nur einmal durchzuführen, das Ergebnis zwischenzuspeichern und es anschließend in der gesamten App zu verwenden. 
 
-### Nicht unterstützte Szenarien
+### <a name="unsupported-scenarios"></a>Nicht unterstützte Szenarien
 
-In den meisten Fällen können Sie die auf die SDK-Version10240 festgelegte Mindestversion Ihrer App beibehalten und neue APIs auf der Grundlage von Laufzeitprüfungen aktivieren, wenn die App unter einer höheren Version ausgeführt wird. In bestimmten Fällen müssen Sie allerdings die Mindestversion Ihrer App erhöhen, um neue Features verwenden zu können.
+In den meisten Fällen können Sie die auf die SDK-Version 10240 festgelegte Mindestversion Ihrer App beibehalten und neue APIs auf der Grundlage von Laufzeitprüfungen aktivieren, wenn die App unter einer höheren Version ausgeführt wird. In bestimmten Fällen müssen Sie allerdings die Mindestversion Ihrer App erhöhen, um neue Features verwenden zu können.
 
 Die Mindestversion der App muss erhöht werden, wenn Sie Folgendes verwenden:
 - Eine neue API, die eine Funktion erfordert, die in einer früheren Version nicht verfügbar ist. Die unterstützte Mindestversion muss auf eine höhere Version festgelegt werden, die über diese Funktion verfügt. Weitere Informationen finden Sie unter [Deklaration der App-Funktionen](../packaging/app-capability-declarations.md).
 - Einen neuen Ressourcenschlüssel, der zu „generic.xaml“ hinzugefügt wurde und in einer früheren Version nicht verfügbar war. Die zur Laufzeit verwendete Version von „generic.xaml“ wird durch die auf dem Gerät ausgeführte Betriebssystemversion bestimmt. Mit API-Laufzeitprüfungen lässt sich nicht ermitteln, ob XAML-Ressourcen vorhanden sind. Daher dürfen nur Ressourcenschlüssel verwendet werden, die in der von der App unterstützten Mindestversion zur Verfügung stehen. Andernfalls bringt eine [XAMLParseException](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.markup.xamlparseexception.aspx) Ihre App zur Laufzeit zum Absturz.
 
-### Optionen für adaptiven Code
+### <a name="adaptive-code-options"></a>Optionen für adaptiven Code
 
 Adaptiver Code kann auf zwei Arten erstellt werden. In den meisten Fällen schreiben Sie den Markupcode Ihrer App für die Mindestversion und verwenden dann Ihren App-Code, um ggf. die Nutzung neuerer Betriebssystemfeatures zu ermöglichen. Wenn Sie allerdings eine Eigenschaft in einem visuellen Zustand aktualisieren müssen und sich zwischen Betriebssystemversionen lediglich ein Eigenschafts- oder Enumerationswert ändert, können Sie einen erweiterbaren Zustandsauslöser erstellen, dessen Aktivierung davon abhängt, ob eine API vorhanden ist.
 
@@ -96,13 +104,13 @@ Nachteile:
 - Wertänderungen müssen mithilfe von Settern angegeben werden, sodass nur einfache Änderungen möglich sind.
 - Die Einrichtung und Verwendung benutzerdefinierter Zustandsauslöser ist relativ aufwendig.
 
-## Beispiele für adaptiven Code
+## <a name="adaptive-code-examples"></a>Beispiele für adaptiven Code
 
-In diesem Abschnitt zeigen wir verschiedene Beispiele für adaptiven Code, in denen neue APIs aus der Windows10-Version1607 (Windows Insider Preview) verwendet werden.
+In diesem Abschnitt zeigen wir verschiedene Beispiele für adaptiven Code, in denen neue APIs aus der Windows 10-Version 1607 (Windows Insider Preview) verwendet werden.
 
-### Beispiel1: Neuer Enumerationswert
+### <a name="example-1-new-enum-value"></a>Beispiel 1: Neuer Enumerationswert
 
-In der Windows10-Version1607 wird die [InputScopeNameValue](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.inputscopenamevalue.aspx)-Enumeration um einen neuen Wert erweitert: **ChatWithoutEmoji**. Dieser neue Eingabeumfang besitzt das gleiche Eingabeverhalten wie der Eingabeumfang **Chat** (Rechtschreibprüfung, AutoVervollständigen, automatische Großschreibung), wird aber einer Bildschirmtastatur ohne Emoji-Schaltfläche zugeordnet. Dies ist hilfreich, wenn Sie Ihre eigene Emoji-Auswahl erstellen und die integrierte Emoji-Schaltfläche auf der Bildschirmtastatur deaktivieren möchten. 
+In der Windows 10-Version 1607 wird die [InputScopeNameValue](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.inputscopenamevalue.aspx)-Enumeration um einen neuen Wert erweitert: **ChatWithoutEmoji**. Dieser neue Eingabeumfang besitzt das gleiche Eingabeverhalten wie der Eingabeumfang **Chat** (Rechtschreibprüfung, AutoVervollständigen, automatische Großschreibung), wird aber einer Bildschirmtastatur ohne Emoji-Schaltfläche zugeordnet. Dies ist hilfreich, wenn Sie Ihre eigene Emoji-Auswahl erstellen und die integrierte Emoji-Schaltfläche auf der Bildschirmtastatur deaktivieren möchten. 
 
 Dieses Beispiel zeigt, wie Sie überprüfen, ob der **ChatWithoutEmoji**-Enumerationswert vorhanden ist, und die [InputScope](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.inputscope.aspx)-Eigenschaft eines **TextBox**-Elements festlegen, falls dies der Fall ist. Ist der Wert in dem System, auf dem die App ausgeführt wird, nicht vorhanden, wird **InputScope** stattdessen auf **Chat** festgelegt. Der hier gezeigte Code kann in einem Page-Konstruktor oder in einem Page.Loaded-Ereignishandler platziert werden.
 
@@ -183,13 +191,13 @@ In diesen Beispielen können Sie den Chat-Enumerationswert in XAML oder in Code 
 
 Wenn Sie den ChatWithoutEmoji-Wert in XAML oder in Code ohne Überprüfung verwenden, wird er ohne Fehler kompiliert, da der Wert in der Zielversion des Betriebssystems vorhanden ist. Auch die Ausführung auf einem System mit der Zielversion des Betriebssystems ist ohne Fehler möglich. Wenn die App allerdings auf einem System mit der Mindestversion des Betriebssystems ausgeführt wird, stürzt sie zur Laufzeit ab, da der ChatWithoutEmoji-Enumerationswert nicht vorhanden ist. Daher dürfen Sie diesen Wert nur in Code verwenden und müssen ihn mit einer API-Laufzeitprüfung umschließen, sodass er nur aufgerufen wird, wenn dies auf dem aktuellen System unterstützt wird.
 
-### Beispiel2: Neues Steuerelement
+### <a name="example-2-new-control"></a>Beispiel 2: Neues Steuerelement
 
 Eine neue Version von Windows verfügt üblicherweise über neue Steuerelemente für die UWP-API-Oberfläche, die den Funktionsumfang der Plattform erweitern. Das Vorhandensein eines neuen Steuerelements kann mithilfe der [ApiInformation.IsTypePresent](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.istypepresent.aspx)-Methode ermittelt werden.
 
-In der Windows10-Version1607 wird ein neues Mediensteuerelement namens [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) eingeführt. Dieses Steuerelement basiert auf der [MediaPlayer](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.aspx)-Klasse, stellt beispielweise Features wie die problemlose Einbindung von Hintergrundaudio bereit und profitiert von Verbesserungen bei der Architektur des Medienstapels.
+In der Windows 10-Version 1607 wird ein neues Mediensteuerelement namens [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) eingeführt. Dieses Steuerelement basiert auf der [MediaPlayer](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.aspx)-Klasse, stellt beispielweise Features wie die problemlose Einbindung von Hintergrundaudio bereit und profitiert von Verbesserungen bei der Architektur des Medienstapels.
 
-Wenn die App allerdings auf einem Gerät mit einer älteren Windows10-Version als1607 ausgeführt wird, muss anstelle des neuen **MediaPlayerElement**-Steuerelements das [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaelement.aspx)-Steuerelement verwendet werden. Sie können mithilfe der [**ApiInformation.IsTypePresent**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.istypepresent.aspx)-Methode zur Laufzeit überprüfen, ob das MediaPlayerElement-Steuerelement vorhanden ist, und dann das geeignete Steuerelement für das System laden, auf dem die App ausgeführt wird.
+Wenn die App allerdings auf einem Gerät mit einer älteren Windows 10-Version als 1607 ausgeführt wird, muss anstelle des neuen **MediaPlayerElement**-Steuerelements das [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaelement.aspx)-Steuerelement verwendet werden. Sie können mithilfe der [**ApiInformation.IsTypePresent**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.istypepresent.aspx)-Methode zur Laufzeit überprüfen, ob das MediaPlayerElement-Steuerelement vorhanden ist, und dann das geeignete Steuerelement für das System laden, auf dem die App ausgeführt wird.
 
 Dieses Beispiel zeigt, wie Sie eine App erstellen, die abhängig davon, ob der MediaPlayerElement-Typ vorhanden ist, entweder das neue MediaPlayerElement-Steuerelement oder das alte MediaElement-Steuerelement verwendet. In diesem Code werden die Steuerelemente samt dazugehöriger Benutzeroberfläche und entsprechendem Code mithilfe der [UserControl](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.usercontrol.aspx)-Klasse in Komponenten zerlegt, sodass sie abhängig von der Betriebssystemversion einbezogen werden können. Alternativ können Sie ein benutzerdefiniertes Steuerelement verwendet. Dieses bietet mehr Funktionen und benutzerdefiniertes Verhalten als in diesem einfachen Beispiel erforderlich.
  
@@ -326,13 +334,13 @@ public MainPage()
 > [!IMPORTANT]
 > Zur Erinnerung: Diese Überprüfung legt nur das `mediaControl`-Objekt auf `MediaPlayerUserControl` oder `MediaElementUserControl` fest. Diese bedingten Überprüfungen müssen überall im Code durchgeführt werden, wo Sie ermitteln müssen, ob die MediaPlayerElement- oder die MediaElement-API verwendet werden soll. Es empfiehlt sich, die Prüfung nur einmal durchzuführen, das Ergebnis zwischenzuspeichern und es anschließend in der gesamten App zu verwenden.
 
-## Beispiele für Zustandsauslöser
+## <a name="state-trigger-examples"></a>Beispiele für Zustandsauslöser
 
 Mithilfe erweiterbarer Zustandsauslöser können Sie Markup und Code zusammen verwenden, um Änderungen des visuellen Zustands auf der Grundlage einer im Code überprüften Bedingung auszulösen (in diesem Fall: das Vorhandensein einer bestimmten API). In allgemeinen Szenarien mit adaptivem Code wird die Verwendung von Zustandsauslösern aufgrund des zusätzlichen Aufwands und der Beschränkung auf visuelle Zustände nicht empfohlen. 
 
 Verwenden Sie Zustandsauslöser nur dann für adaptiven Code, wenn lediglich geringfügige Benutzeroberflächenänderungen zwischen Betriebssystemversionen vorliegen, die sich nicht auf die restliche Benutzeroberfläche auswirken (etwa die Änderung einer Eigenschaft oder eines Enumerationswerts für ein Steuerelement).
 
-### Beispiel1: Neue Eigenschaft
+### <a name="example-1-new-property"></a>Beispiel 1: Neue Eigenschaft
 
 Der erste Schritt bei der Einrichtung eines erweiterbaren Zustandsauslösers besteht in der Verwendung von Unterklassen für die [StateTriggerBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.statetriggerbase.aspx)-Klasse zur Erstellung eines benutzerdefinierten Auslösers, dessen Aktivierung davon abhängt, ob eine API vorhanden ist. Dieses Beispiel zeigt einen Auslöser, der aktiviert wird, wenn das Vorhandensein der Eigenschaft der in XAML festgelegten `_isPresent`-Variablen entspricht.
 
@@ -368,7 +376,7 @@ class IsPropertyPresentTrigger : StateTriggerBase
 
 Im nächsten Schritt wird der visuelle Zustandsauslöser in XAML eingerichtet, um abhängig vom Vorhandensein der API zwei unterschiedliche visuelle Zustände zu erhalten. 
 
-In der Windows10-Version1607 wird für die [FrameworkElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.aspx)-Klasse eine neue Eigenschaft namens [AllowFocusOnInteraction](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.allowfocusoninteraction.aspx) eingeführt, die bestimmt, ob ein Steuerelement den Fokus erhält, wenn ein Benutzer damit interagiert. Dies ist hilfreich, falls ein Textfeld für die Dateneingabe den Fokus behalten (und die Bildschirmtastatur weiter angezeigt werden) soll, wenn der Benutzer auf eine Schaltfläche klickt.
+In der Windows 10-Version 1607 wird für die [FrameworkElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.aspx)-Klasse eine neue Eigenschaft namens [AllowFocusOnInteraction](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.allowfocusoninteraction.aspx) eingeführt, die bestimmt, ob ein Steuerelement den Fokus erhält, wenn ein Benutzer damit interagiert. Dies ist hilfreich, falls ein Textfeld für die Dateneingabe den Fokus behalten (und die Bildschirmtastatur weiter angezeigt werden) soll, wenn der Benutzer auf eine Schaltfläche klickt.
 
 Der Auslöser in diesem Beispiel überprüft, ob die Eigenschaft vorhanden ist. Ist die Eigenschaft vorhanden, wird die **AllowFocusOnInteraction**-Eigenschaft für eine Schaltfläche auf **False** festgelegt. Ist die Eigenschaft nicht vorhanden, wird der ursprüngliche Zustand der Schaltfläche beibehalten. Das TextBox-Element dient zur Veranschaulichung der Auswirkung dieser Eigenschaft, wenn Sie den Code ausführen.
 
@@ -400,9 +408,9 @@ Der Auslöser in diesem Beispiel überprüft, ob die Eigenschaft vorhanden ist. 
 </Grid>
 ```
 
-### Beispiel2: Neuer Enumerationswert
+### <a name="example-2-new-enum-value"></a>Beispiel 2: Neuer Enumerationswert
 
-Dieses Beispiel zeigt, wie Sie abhängig davon, ob ein Wert vorhanden ist, unterschiedliche Enumerationswerte festlegen. Hierbei kommt ein benutzerdefinierter Zustandsauslöser zum Einsatz, um das gleiche Ergebnis zu erhalten wie im vorherigen Chatbeispiel. In diesem Beispiel wird der neue ChatWithoutEmoji-Eingabeumfang verwendet, wenn auf dem Gerät die Windows10-Version1607 ausgeführt wird. Andernfalls wird der Eingabeumfang **Chat** verwendet. Die visuellen Zustände, die diesen Auslöser verwenden, werden im *if-else*-Stil eingerichtet, wobei die Wahl des Eingabeumfangs davon abhängt, ob der neue Enumerationswert vorhanden ist.
+Dieses Beispiel zeigt, wie Sie abhängig davon, ob ein Wert vorhanden ist, unterschiedliche Enumerationswerte festlegen. Hierbei kommt ein benutzerdefinierter Zustandsauslöser zum Einsatz, um das gleiche Ergebnis zu erhalten wie im vorherigen Chatbeispiel. In diesem Beispiel wird der neue ChatWithoutEmoji-Eingabeumfang verwendet, wenn auf dem Gerät die Windows 10-Version 1607 ausgeführt wird. Andernfalls wird der Eingabeumfang **Chat** verwendet. Die visuellen Zustände, die diesen Auslöser verwenden, werden im *if-else*-Stil eingerichtet, wobei die Wahl des Eingabeumfangs davon abhängt, ob der neue Enumerationswert vorhanden ist.
 
 **C#**
 ```csharp
@@ -471,13 +479,8 @@ class IsEnumPresentTrigger : StateTriggerBase
     </VisualStateManager.VisualStateGroups>
 </Grid>
 ```
-## Verwandte Artikel
+## <a name="related-articles"></a>Verwandte Artikel
 
 - [Anleitung für UWP-Apps](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)
 - [Dynamically detecting features with API contracts (Dynamisches Erkennen von Features mithilfe von API-Verträgen)](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

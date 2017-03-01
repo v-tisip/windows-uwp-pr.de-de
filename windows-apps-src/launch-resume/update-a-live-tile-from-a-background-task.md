@@ -4,17 +4,24 @@ title: "Aktualisieren einer Live-Kachel über eine Hintergrundaufgabe"
 description: Verwenden Sie eine Hintergrundaufgabe, um die Live-Kachel Ihrer App mit neuen Inhalten zu aktualisieren.
 Search.SourceType: Video
 ms.assetid: 9237A5BD-F9DE-4B8C-B689-601201BA8B9A
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: d651a5dbf8478de238944cac36ea13429b0f1849
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 76521772e4f93ee143ad698ad798f4b88ebcf3a7
+ms.lasthandoff: 02/07/2017
 
 ---
 
 
-# Aktualisieren einer Live-Kachel über eine Hintergrundaufgabe
+# <a name="update-a-live-tile-from-a-background-task"></a>Aktualisieren einer Live-Kachel über eine Hintergrundaufgabe
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 **Wichtige APIs**
@@ -28,7 +35,7 @@ Das folgende Video zeigt, wie Sie Ihren Apps Live-Kacheln hinzufügen:
 
 <iframe src="https://hubs-video.ssl.catalog.video.msn.com/embed/afb47cc5-edd3-4262-ae45-8f0e3ae664ac/IA?csid=ux-en-us&MsnPlayerLeadsWith=html&PlaybackMode=Inline&MsnPlayerDisplayShareBar=false&MsnPlayerDisplayInfoButton=false&iframe=true&QualityOverride=HD" width="720" height="405" allowFullScreen="true" frameBorder="0" scrolling="no">One Dev Minute – Aktualisieren einer Live-Kachel über eine Hintergrundaufgabe</iframe>
 
-## Erstellen des Hintergrundaufgabenprojekts
+## <a name="create-the-background-task-project"></a>Erstellen des Hintergrundaufgabenprojekts
 
 
 Fügen Sie der Projektmappe zum Aktivieren einer Live-Kachel für Ihre App ein neues Projekt mit Komponenten für Windows-Runtime hinzu. Dies ist eine separate Assembly, die vom BS im Hintergrund geladen und ausgeführt wird, wenn Benutzer die App installieren.
@@ -38,7 +45,7 @@ Fügen Sie der Projektmappe zum Aktivieren einer Live-Kachel für Ihre App ein n
 3.  Geben Sie dem Projekt den Namen „BackgroundTasks“, und klicken oder tippen Sie auf **OK**. In Microsoft Visual Studio wird das neue Projekt der Projektmappe hinzugefügt.
 4.  Fügen Sie im Hauptprojekt einen Verweis auf das Projekt „BackgroundTasks“ hinzu.
 
-## Implementieren der Hintergrundaufgabe
+## <a name="implement-the-background-task"></a>Implementieren der Hintergrundaufgabe
 
 
 Implementieren Sie die [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794)-Schnittstelle, um eine Klasse zu erstellen, mit der die Live-Kachel Ihrer App aktualisiert wird. Ihre Hintergrundarbeit bezieht sich auf die Run-Methode. In diesem Fall erhält die Aufgabe einen Veröffentlichungsfeed für die MSDN-Blogs. Richten Sie eine Verzögerung ein, um das zu frühe Schließen der Aufgabe zu verhindern, während noch asynchroner Code ausgeführt wird.
@@ -141,7 +148,7 @@ namespace BackgroundTasks
 }
 ```
 
-## Einrichten des Paketmanifests
+## <a name="set-up-the-package-manifest"></a>Einrichten des Paketmanifests
 
 
 Öffnen Sie das Paketmanifest, um es einzurichten, und fügen Sie eine Deklaration einer neuen Hintergrundaufgabe hinzu. Legen Sie den Einstiegspunkt für die Aufgabe auf den Klassennamen fest, und fügen Sie auch den Namespace ein.
@@ -153,17 +160,17 @@ namespace BackgroundTasks
 5.  Legen Sie unter **App-Einstellungen** den Einstiegspunkt auf **BackgroundTasks.BlogFeedBackgroundTask** fest.
 6.  Klicken oder tippen Sie auf die Registerkarte **Anwendungsbenutzeroberfläche**.
 7.  Legen Sie die Option **Benachrichtigungen bei gesperrtem Bildschirm** auf **Text für Infoanzeiger und Kachel**fest.
-8.  Legen Sie im Feld **Infoanzeigerlogo** einen Pfad zu einem Symbol mit einer Größe von 24x24Pixel fest.
+8.  Legen Sie im Feld **Infoanzeigerlogo** einen Pfad zu einem Symbol mit einer Größe von 24 x 24 Pixel fest.
     **Wichtig**  Für dieses Symbol dürfen nur einfarbige und transparente Pixel verwendet werden.
-9.  Legen Sie im Feld **Kleines Logo** einen Pfad zu einem Symbol der Größe 30x30 Pixel fest.
-10. Legen Sie im Feld **Breites Logo** einen Pfad zu einem Symbol mit einer Größe von 310x150Pixel fest.
+9.  Legen Sie im Feld **Kleines Logo** einen Pfad zu einem Symbol der Größe 30 x 30 Pixel fest.
+10. Legen Sie im Feld **Breites Logo** einen Pfad zu einem Symbol mit einer Größe von 310 x 150 Pixel fest.
 
-## Registrieren der Hintergrundaufgabe
+## <a name="register-the-background-task"></a>Registrieren der Hintergrundaufgabe
 
 
 Erstellen Sie zum Registrieren Ihrer Aufgabe ein [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)-Objekt.
 
-> **Hinweis**  Ab Windows8.1 werden Parameter für die Registrierung von Hintergrundaufgaben zum Zeitpunkt der Registrierung überprüft. Bei ungültigen Registrierungsparametern wird ein Fehler zurückgegeben. Ihre App muss Szenarien mit nicht erfolgreicher Registrierung von Hintergrundaufgaben problemlos verarbeiten können. Verwenden Sie beispielsweise eine Bedingungsanweisung, um die App auf Registrierungsfehler zu prüfen, und wiederholen Sie die nicht erfolgreiche Registrierung mit anderen Parameterwerten.
+> **Hinweis**  Ab Windows 8.1 werden Parameter für die Registrierung von Hintergrundaufgaben zum Zeitpunkt der Registrierung überprüft. Bei ungültigen Registrierungsparametern wird ein Fehler zurückgegeben. Ihre App muss Szenarien mit nicht erfolgreicher Registrierung von Hintergrundaufgaben problemlos verarbeiten können. Verwenden Sie beispielsweise eine Bedingungsanweisung, um die App auf Registrierungsfehler zu prüfen, und wiederholen Sie die nicht erfolgreiche Registrierung mit anderen Parameterwerten.
  
 
 Fügen Sie auf der Hauptseite der App die **RegisterBackgroundTask**-Methode hinzu, und rufen Sie sie im **OnNavigatedTo**-Ereignishandler auf.
@@ -240,7 +247,7 @@ namespace ContosoApp
 }
 ```
 
-## Debuggen der Hintergrundaufgabe
+## <a name="debug-the-background-task"></a>Debuggen der Hintergrundaufgabe
 
 
 Legen Sie zum Debuggen der Hintergrundaufgabe in der Run-Methode der Aufgabe einen Haltepunkt fest. Wählen Sie die Hintergrundaufgabe auf der Symbolleiste **Debugspeicherort** aus. Das System ruft dann sofort die Run-Methode auf.
@@ -255,7 +262,7 @@ Legen Sie zum Debuggen der Hintergrundaufgabe in der Run-Methode der Aufgabe ein
 8.  Drücken Sie UMSCHALT+F5 oder tippen Sie auf **Debuggen &gt; Debugging** beenden, um das Debuggen zu beenden.
 9.  Kehren Sie zur Kachel der App auf dem Startbildschirm zurück. Nach einigen Sekunden werden in der Kachel der App Kachelbenachrichtigungen angezeigt.
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 
 * [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)
@@ -267,9 +274,4 @@ Legen Sie zum Debuggen der Hintergrundaufgabe in der Run-Methode der Aufgabe ein
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

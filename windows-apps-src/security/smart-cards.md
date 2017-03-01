@@ -1,28 +1,35 @@
 ---
 title: Smartcards
-description: "In diesem Thema wird erläutert, wie UWP-Apps Smartcards verwenden können, um Benutzer mit sicheren Netzwerkdiensten zu verbinden, einschließlich Informationen für den Zugriff auf physische Smartcardleser, zum Erstellen virtueller Smartcards, zum Kommunizieren mit Smartcards, zum Authentifizieren von Benutzern, zum Zurücksetzen von Benutzer-PINs und zum Entfernen oder Trennen von Smartcards."
+description: "In diesem Thema wird erläutert, wie UWP-Apps (Universelle Windows-Plattform) Smartcards verwenden können, um Benutzer mit sicheren Netzwerkdiensten zu verbinden, einschließlich Informationen für den Zugriff auf physische Smartcardleser, zum Erstellen virtueller Smartcards, zum Kommunizieren mit Smartcards, zum Authentifizieren von Benutzern, zum Zurücksetzen von Benutzer-PINs und zum Entfernen oder Trennen von Smartcards."
 ms.assetid: 86524267-50A0-4567-AE17-35C4B6D24745
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 2ea21aeee5dd93bb44de3a1793b352d2046b3839
-ms.openlocfilehash: d0646aca9863f3f326df9b3a86adb2481fdcda70
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 42062dc9dcc11e3db6ddbb761e158d75e1259950
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Smartcards
+# <a name="smart-cards"></a>Smartcards
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 In diesem Thema wird erläutert, wie UWP-Apps Smartcards verwenden können, um Benutzer mit sicheren Netzwerkdiensten zu verbinden, einschließlich Informationen für den Zugriff auf physische Smartcardleser, zum Erstellen virtueller Smartcards, zum Kommunizieren mit Smartcards, Authentifizieren von Benutzern, zum Zurücksetzen von Benutzer-PINs und zum Entfernen oder Trennen von Smartcards. 
 
-## Konfigurieren des App-Manifests
+## <a name="configure-the-app-manifest"></a>Konfigurieren des App-Manifests
 
 
 Bevor Ihre App Benutzer mithilfe von Smartcards oder virtuellen Smartcards authentifizieren kann, müssen Sie die Funktion **Freigegebene Benutzerzertifikate** in der Datei „Package.appxmanifest“ festlegen.
 
-## Zugriff auf verbundene Kartenleser und Smartcards
+## <a name="access-connected-card-readers-and-smart-cards"></a>Zugriff auf verbundene Kartenleser und Smartcards
 
 
 Sie können Lesegeräte und verbundene Smartcards abrufen, indem Sie die Geräte-ID (in [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/br225393) angegeben) an die [**SmartCardReader.FromIdAsync**](https://msdn.microsoft.com/library/windows/apps/dn263890)-Methode übergeben. Zum Zugriff auf die derzeit mit dem zurückgegebenen Lesegerät verbundenen Smartcards rufen Sie [**SmartCardReader.FindAllCardsAsync**](https://msdn.microsoft.com/library/windows/apps/dn263887) auf.
@@ -56,7 +63,7 @@ private void reader_CardAdded(SmartCardReader sender, CardAddedEventArgs args)
 
 Anschließend können Sie jedes zurückgegebene [**SmartCard**](https://msdn.microsoft.com/library/windows/apps/dn297565)-Objekt an [**SmartCardProvisioning**](https://msdn.microsoft.com/library/windows/apps/dn263801) übergeben, um auf die Methoden zuzugreifen, die Ihrer App den Zugriff auf und die Anpassung ihrer Konfiguration ermöglichen.
 
-## Erstellen einer virtuellen Smartcard
+## <a name="create-a-virtual-smart-card"></a>Erstellen einer virtuellen Smartcard
 
 
 Zum Erstellen einer virtuellen Smartcard mithilfe von [**SmartCardProvisioning**](https://msdn.microsoft.com/library/windows/apps/dn263801) muss Ihre App zunächst einen Anzeigenamen, einen Administratorschlüssel und eine [**SmartCardPinPolicy**](https://msdn.microsoft.com/library/windows/apps/dn297642) bereitstellen. Der Anzeigename wird der App in der Regel bereitgestellt, die App muss jedoch trotzdem einen Administratorschlüssel bereitstellen und eine Instanz der aktuellen **SmartCardPinPolicy** generieren, bevor alle drei Werte an [**RequestVirtualSmartCardCreationAsync**](https://msdn.microsoft.com/library/windows/apps/dn263830) übergeben werden.
@@ -80,7 +87,7 @@ SmartCardProvisioning provisioning = await
 
 Sobald [**RequestVirtualSmartCardCreationAsync**](https://msdn.microsoft.com/library/windows/apps/dn263830) das zugehörige [**SmartCardProvisioning**](https://msdn.microsoft.com/library/windows/apps/dn263801)-Objekt zurückgegeben hat, wird die virtuelle Smartcard bereitgestellt und kann verwendet werden.
 
-## Behandeln von Authentifizierungsaufforderungen
+## <a name="handle-authentication-challenges"></a>Behandeln von Authentifizierungsaufforderungen
 
 
 Für die Authentifizierung mit Smartcards oder virtuellen Smartcards muss Ihre App das Verhalten bereitstellen, um Aufforderungen zwischen den auf der Karte gespeicherten Administratorschlüsseldaten und den vom Authentifizierungsserver oder Verwaltungstool verwalteten Administratorschlüsseldaten abzuschließen.
@@ -107,7 +114,7 @@ static class ChallengeResponseAlgorithm
 
 Auf diesen Code wird im gesamten verbleibenden Teil dieses Themas verwiesen, wenn erläutert wird, wie eine Authentifizierungsaktion abgeschlossen und Änderungen an Informationen zu Smartcards und virtuellen Smartcards übernommen werden.
 
-## Überprüfen der Authentifizierungsantwort von Smartcards oder virtuellen Smartcards
+## <a name="verify-smart-card-or-virtual-smart-card-authentication-response"></a>Überprüfen der Authentifizierungsantwort von Smartcards oder virtuellen Smartcards
 
 
 Nachdem wir die Logik für Authentifizierungsaufforderungen definiert haben, können wir jetzt mit dem Leser kommunizieren, um auf die Smartcard oder alternativ auf eine virtuelle Smartcard zuzugreifen, um die Authentifizierung durchzuführen.
@@ -135,7 +142,7 @@ using (SmartCardChallengeContext context =
 }
 ```
 
-## Ändern oder Zurücksetzen einer Benutzer-PIN
+## <a name="change-or-reset-a-user-pin"></a>Ändern oder Zurücksetzen einer Benutzer-PIN
 
 
 So ändern Sie die einer Smartcard zugeordnete PIN:
@@ -184,12 +191,12 @@ bool result = await provisioning.RequestPinResetAsync(
 }
 ```
 
-## Entfernen einer Smartcard oder virtuellen Smartcard
+## <a name="remove-a-smart-card-or-virtual-smart-card"></a>Entfernen einer Smartcard oder virtuellen Smartcard
 
 
 Wenn eine physische Smartcard entfernt wird, wird beim Löschen der Karte ein [**CardRemoved**](https://msdn.microsoft.com/library/windows/apps/dn263875)-Ereignis ausgelöst.
 
-Ordnen Sie das Auslösen dieses Ereignisses mithilfe der Methode, die das Verhalten Ihrer App beim Entfernen einer Karte oder eines Lesers definiert, dem Kartenleser als Ereignishandler zu. Bei diesem Verhalten kann es sich z.B. einfach um eine Benachrichtigung des Benutzers handeln, dass die Karte entfernt wurde.
+Ordnen Sie das Auslösen dieses Ereignisses mithilfe der Methode, die das Verhalten Ihrer App beim Entfernen einer Karte oder eines Lesers definiert, dem Kartenleser als Ereignishandler zu. Bei diesem Verhalten kann es sich z. B. einfach um eine Benachrichtigung des Benutzers handeln, dass die Karte entfernt wurde.
 
 ```cs
 reader = card.Reader;
@@ -202,8 +209,3 @@ Das Entfernen einer virtuellen Smartcard wird programmgesteuert behandelt, indem
 bool result = await SmartCardProvisioning
     .RequestVirtualSmartCardDeletionAsync(card);
 ```
-
-
-<!--HONumber=Aug16_HO3-->
-
-

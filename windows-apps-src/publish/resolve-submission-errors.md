@@ -1,25 +1,32 @@
 ---
 author: jnHs
 Description: "Wenn nach der Übermittlung Ihrer App an den Store Fehler auftreten, müssen Sie diese beheben, bevor Sie den Zertifizierungsprozess fortsetzen können."
-title: "Übermittlungsfehler beheben"
+title: "Beheben von Übermittlungsfehlern"
 ms.assetid: 68199E09-0C66-4EB4-BFE8-D2EEB139C4F3
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: e295011db20d151f54e2581f8c67014b30261eb6
-ms.openlocfilehash: 71f8ee9e2b8d1f892711ada30c58eefde250cca3
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 4b97cb009078039582bfcff6cdaa678f1dd9b979
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Übermittlungsfehler beheben
+# <a name="resolve-submission-errors"></a>Beheben von Übermittlungsfehlern
 
 Wenn nach der Übermittlung Ihrer App an den Store Fehler auftreten, müssen Sie diese beheben, bevor Sie den [Zertifizierungsprozess](the-app-certification-process.md) fortsetzen können. Die Fehlermeldung weist darauf hin, worin das Problem besteht und was eventuell erforderlich ist, um das Problem zu beheben. Nachfolgend sind einige zusätzliche Informationen aufgeführt, die Ihnen beim Beheben dieser Fehler helfen können.
 
-## UWP-Apps
+## <a name="uwp-apps"></a>UWP-Apps
 
 Wenn Sie eine UWP-App einreichen, wird während der Vorverarbeitung möglicherweise ein Fehler angezeigt, wenn die Paketdatei keine von Visual Studio für den Store generierte „.appxupload“-Datei ist. Achten Sie darauf, dass Sie die Schritte in [Verpacken universeller Windows-Apps für Windows 10](../packaging/packaging-uwp-apps.md) beim Erstellen der Paketdatei der App befolgen und nur die „.appxupload“-Datei auf der Seite [Pakete](upload-app-packages.md) der Übermittlung hochladen, keine „appx“- oder „.appxbundle“-Datei.
 
 Wenn ein Kompilierungsfehler angezeigt wird, stellen Sie sicher, dass Sie die Anwendung erfolgreich im Releasemodus erstellen können. Weitere Informationen finden Sie unter [Systemeigene .NET-Compilerfehler](http://go.microsoft.com/fwlink/p/?LinkID=613098).
 
-## Windows Phone-Apps
+## <a name="windows-phone-apps"></a>Windows Phone-Apps
 
 Wenn während der Vorverarbeitung Probleme mit Windows Phone-Paketen auftreten, wird möglicherweise **Fehler 2001** angezeigt. In den meisten Fällen müssen Sie das Paket Ihrer App neu erstellen, um den Fehler zu beheben. Sobald Sie damit fertig sind, ersetzen Sie auf der Seite [Pakete](upload-app-packages.md) der Einreichung das alte durch das neue Paket, bevor Sie erneut auf **An Store einreichen** klicken.
 
@@ -33,7 +40,7 @@ Es gibt eine Reihe von Problemen, die diesen Fehler verursachen können. Überpr
 
 Ein weiterer Fehler, der möglicherweise nach dem Einreichen Ihrer App angezeigt wird, ist **Fehler 1300**. Dieser Fehler tritt auf, wenn mindestens eine Assembly (oder das gesamte Paket) bereits vorkompiliert ist. Um dieses Problem zu beheben, erstellen Sie das App-Paket in Microsoft Visual Studio neu und reichen dann das neu generierte Paket ein.
 
-## Fehler für Name/Identität
+## <a name="nameidentity-errors"></a>Fehler für Name/Identität
 
 Möglicherweise wird Ihnen der folgende Fehler angezeigt: **Der Name des Pakets stimmt mit keinem der von Ihnen reservierten App-Namen überein. Reservieren Sie den App-Namen, und/oder aktualisieren Sie das Paket mit dem korrekten App-Namen für diese Sprache.**. Dies bedeutet, dass Sie einen falschen Namen für das Paket eingegeben haben. Dieser Fehler kann auch auftreten, wenn Sie einen App-Namen verwenden, den Sie im Dev Center nicht reserviert haben. In der Regel können Sie diesen Fehler beheben, indem Sie folgende Schritte ausführen:
 
@@ -48,10 +55,5 @@ Möglicherweise wird Ihnen der folgende Fehler angezeigt: **Der Name des Pakets 
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

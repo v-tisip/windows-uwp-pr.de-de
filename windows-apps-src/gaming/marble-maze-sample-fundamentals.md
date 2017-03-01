@@ -1,18 +1,25 @@
 ---
 author: mtoepke
 title: Grundlagen am Beispiel von Marble Maze
-description: In diesem Dokument werden die fundamentalen Eigenschaften des Marble Maze-Projekts beschrieben, beispielsweise wie Visual C++ in der Windows Runtime-Umgebung verwendet wird, wie es erstellt und strukturiert wird und wie es aufgebaut ist.
+description: In diesem Dokument werden die grundlegenden Eigenschaften des Marble Maze-Projekts beschrieben, beispielsweise wie Visual C++ in der Windows-Runtime-Umgebung verwendet wird, wie es erstellt und strukturiert wird und wie es aufgebaut ist.
 ms.assetid: 73329b29-62e3-1b36-01db-b7744ee5b4c3
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, Uwp, Spiele, Beispiel, Directx, Grundlagen"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: c9aafbf7d8061893180a1a823c2c1cafd9ef7a7f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: cc155d7a454cabe5c0d820f5d74313dfeaf01830
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Grundlagen am Beispiel von Marble Maze
+# <a name="marble-maze-sample-fundamentals"></a>Grundlagen am Beispiel von Marble Maze
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 In diesem Dokument werden die fundamentalen Eigenschaften des Marble Maze-Projekts beschrieben, beispielsweise wie Visual C++ in der Windows Runtime-Umgebung verwendet wird, wie es erstellt und strukturiert wird und wie es aufgebaut ist. Das Dokument enthält auch eine Beschreibung verschiedener Konventionen, die im Code verwendet werden.
@@ -29,7 +36,7 @@ Es folgen einige wichtige Punkte, die in diesem Dokument erläutert werden und d
 -   In den meisten Fällen verwenden Sie für die Behandlung unerwarteter Fehler die Ausnahmebehandlung anstelle von Ergebniscodes.
 -   Verwenden Sie SAL-Anmerkungen in Kombination mit Codeanalysetools, um Fehler in der App zu finden.
 
-## Erstellen des Visual Studio-Projekts
+## <a name="creating-the-visual-studio-project"></a>Erstellen des Visual Studio-Projekts
 
 
 Wenn Sie das Beispiel heruntergeladen und extrahiert haben, können Sie die Projektmappendatei "MarbleMaze.sln" in Visual Studio öffnen, und der gesamte Code liegt offen vor Ihnen. Sie können die Quelle auch auf der MSDN Sample Gallery-Seite mit dem [DirectX-Beispielspiel Marble Maze](http://go.microsoft.com/fwlink/?LinkId=624011) anzeigen, indem Sie die Registerkarte **Code durchsuchen** auswählen.
@@ -42,9 +49,9 @@ Eine wichtige Projekteinstellung in der Voralge **DirectX 11-App (Universelle Wi
 
  
 
-Jede UWP-App, die Sie aus dem Windows Store erwerben, wird in Form eines App-Pakets bereitgestellt. Ein App-Paket enthält ein App-Manifest, das wiederum Informationen zur App beinhaltet. Sie können beispielsweise die Funktionen (d.h. den erforderlichen Zugriff auf geschützte Systemressourcen oder Benutzerdaten) Ihrer App angeben. Wenn Sie festlegen, dass für Ihre App bestimmte Funktionen erforderlich sind, verwenden Sie das Paketmanifest, um die erforderlichen Funktionen zu deklarieren. Das Manifest ermöglicht Ihnen auch die Angabe von Projekteigenschaften wie der Rotation unterstützter Geräte, Kachelbildern und Begrüßungsbildschirm. Weitere Informationen zu App-Paketen finden Sie unter [Verpacken von Apps](https://msdn.microsoft.com/library/windows/apps/mt270969).
+Jede UWP-App, die Sie aus dem Windows Store erwerben, wird in Form eines App-Pakets bereitgestellt. Ein App-Paket enthält ein App-Manifest, das wiederum Informationen zur App beinhaltet. Sie können beispielsweise die Funktionen (d. h. den erforderlichen Zugriff auf geschützte Systemressourcen oder Benutzerdaten) Ihrer App angeben. Wenn Sie festlegen, dass für Ihre App bestimmte Funktionen erforderlich sind, verwenden Sie das Paketmanifest, um die erforderlichen Funktionen zu deklarieren. Das Manifest ermöglicht Ihnen auch die Angabe von Projekteigenschaften wie der Rotation unterstützter Geräte, Kachelbildern und Begrüßungsbildschirm. Weitere Informationen zu App-Paketen finden Sie unter [Verpacken von Apps](https://msdn.microsoft.com/library/windows/apps/mt270969).
 
-##  Erstellen, Bereitstellen und Ausführen des Spiels
+##  <a name="building-deploying-and-running-the-game"></a>Erstellen, Bereitstellen und Ausführen des Spiels
 
 
 Erstellen Sie ein UWP-App-Projekt analog zu einem Standardprojekt. (Klicken Sie auf der Menüleiste auf **Erstellen, Projektmappe erstellen**.) In diesem Buildschritt wird der Code kompiliert und zur Nutzung als UWP-App gepackt.
@@ -53,7 +60,7 @@ Nachdem Sie das Projekt erstellt haben, müssen Sie es bereitstellen. (Klicken S
 
 Wählen Sie im Anschluss an die Bereitstellung des Projekts die Marble Maze-Kachel aus, um das Spiel auszuführen. Alternativ können Sie auf der Menüleiste von Visual Studio auf **Debuggen, Debugging starten** klicken.
 
-###  Steuern des Spiels
+###  <a name="controlling-the-game"></a>Steuern des Spiels
 
 Für die Steuerung von Marble Maze können Sie die Fingereingabe, den Beschleunigungsmesser, den Xbox 360-Controller oder die Maus verwenden.
 
@@ -65,7 +72,7 @@ Für die Steuerung von Marble Maze können Sie die Fingereingabe, den Beschleuni
 -   Zum Neustarten des Spiels können Sie die Zurück-Taste am Controller oder die Pos1-Taste auf der Tastatur verwenden.
 -   Wenn die Highscore-Tabelle angezeigt wird, können Sie mit der Zurück- oder der Pos1-Taste alle Punktergebnisse löschen.
 
-##  Codekonventionen
+##  <a name="code-conventions"></a>Codekonventionen
 
 
 Die Windows-Runtime ist eine Programmierschnittstelle, die Sie zum Erstellen von UWP-Apps verwenden können, die nur in einer speziellen Anwendungsumgebung ausgeführt werden. Solche Apps verwenden autorisierte Funktionen, Datentypen und Geräte, und sie werden über den Windows Store verteilt. Die Windows-Runtime besteht auf der untersten Ebene aus einer binären Anwendungsschnittstelle (Application Binary Interface, ABI). Die ABI ist ein binärer Vertrag auf unterer Ebene, der Windows-Runtime-APIs für mehrere Programmiersprachen zur Verfügung stellt, beispielsweise für JavaScript, die .NET-Sprachen und Visual C++.
@@ -75,15 +82,15 @@ Diese Sprachen erfordern für den Aufruf von Windows-Runtime-APIs aus JavaScript
 > **Wichtig**  
 Wenn Sie Windows-Runtime-Objekte oder Komponenten für die Windows-Runtime erstellen, müssen Sie nur **^** und **ref new** verwenden. Sie können die C++-Standardsyntax verwenden, wenn Sie Kernanwendungscode schreiben, in dem die Windows-Runtime nicht genutzt wird.
 
-In Marble Maze werden mit **^** und [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx) vom Heap zugewiesene Objekte verwaltet und Arbeitsspeicherverluste minimiert. Es wird empfohlen, mit ^ die Lebensdauer von Windows-Runtime-Variablen zu verwalten, mit **ComPtr** die Lebensdauer von COM-Variables zu verwalten (z.B. bei Verwendung von DirectX) und mit std::[**std::shared\_ptr**](https://msdn.microsoft.com/library/windows/apps/bb982026) oder [**std::unique\_ptr**](https://msdn.microsoft.com/library/windows/apps/ee410601) die Lebensdauer sämtlicher vom Heap zugewiesenen C++-Objekte zu verwalten.
+In Marble Maze werden mit **^** und [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx) vom Heap zugewiesene Objekte verwaltet und Arbeitsspeicherverluste minimiert. Es wird empfohlen, mit ^ die Lebensdauer von Windows-Runtime-Variablen zu verwalten, mit **ComPtr** die Lebensdauer von COM-Variables zu verwalten (z. B. bei Verwendung von DirectX) und mit std::[**std::shared\_ptr**](https://msdn.microsoft.com/library/windows/apps/bb982026) oder [**std::unique\_ptr**](https://msdn.microsoft.com/library/windows/apps/ee410601) die Lebensdauer sämtlicher vom Heap zugewiesenen C++-Objekte zu verwalten.
 
  
 
 Weitere Informationen zu den Spracherweiterungen, die für eine C++-UWP-App verfügbar sind, finden Sie unter [Sprachreferenz zu Visual C++ (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh699871).
 
-###  Fehlerbehandlung
+###  <a name="error-handling"></a>Fehlerbehandlung
 
-In Marble Maze werden unerwartete Fehler in erster Linie mithilfe der Ausnahmebehandlung verarbeitet. Obwohl für Spielecode zur Angabe von Fehlern traditionell die Protokollierung oder Fehlercodes verwendet werden, beispielsweise **HRESULT**-Werte, bietet die Ausnahmebehandlung zwei wesentliche Vorteile. Zunächst kann sie das Lesen und Verwalten von Code erleichtern. Aus Codeperspektive stellt die Ausnahmebehandlung ein effizienteres Verfahren dar, um einen Fehler an eine Routine weiterzugeben, die den Fehler behandeln kann. Bei der Verwendung von Fehlercodes muss i.d.R. jede Funktion explizit Fehler weitergeben. Ein zweiter Vorteil besteht darin, dass Sie den Visual Studio-Debugger so konfigurieren können, dass er beim Auftreten einer Ausnahme unterbrochen wird, damit die Ausführung unmittelbar an der Position und im Kontext des Fehlers angehalten wird. Die Windows-Runtime macht ebenfalls extensiven Gebrauch von der Ausnahmebehandlung. Deshalb können Sie durch die Verwendung von Ausnahmebehandlung im Code die gesamte Fehlerbehandlung in einem einzigen Modell zusammenfassen.
+In Marble Maze werden unerwartete Fehler in erster Linie mithilfe der Ausnahmebehandlung verarbeitet. Obwohl für Spielecode zur Angabe von Fehlern traditionell die Protokollierung oder Fehlercodes verwendet werden, beispielsweise **HRESULT**-Werte, bietet die Ausnahmebehandlung zwei wesentliche Vorteile. Zunächst kann sie das Lesen und Verwalten von Code erleichtern. Aus Codeperspektive stellt die Ausnahmebehandlung ein effizienteres Verfahren dar, um einen Fehler an eine Routine weiterzugeben, die den Fehler behandeln kann. Bei der Verwendung von Fehlercodes muss i. d. R. jede Funktion explizit Fehler weitergeben. Ein zweiter Vorteil besteht darin, dass Sie den Visual Studio-Debugger so konfigurieren können, dass er beim Auftreten einer Ausnahme unterbrochen wird, damit die Ausführung unmittelbar an der Position und im Kontext des Fehlers angehalten wird. Die Windows-Runtime macht ebenfalls extensiven Gebrauch von der Ausnahmebehandlung. Deshalb können Sie durch die Verwendung von Ausnahmebehandlung im Code die gesamte Fehlerbehandlung in einem einzigen Modell zusammenfassen.
 
 Es wird empfohlen, in Ihrem Fehlerbehandlungsmodell die folgenden Konventionen zu verwenden:
 
@@ -104,7 +111,7 @@ Es wird empfohlen, in Ihrem Fehlerbehandlungsmodell die folgenden Konventionen z
 
 -   Obwohl empfohlen wird, die Verwendung von **HRESULT** für unerwartete Fehler zu vermeiden, ist es wichtiger, auf die Nutzung der Ausnahmebehandlung zur Steuerung des Codeflusses zu verzichten. Demzufolge wird bevorzugt, bei Bedarf einen **HRESULT**-Rückgabewert zu verwenden, um den Codefluss zu steuern.
 
-###  SAL-Anmerkungen
+###  <a name="sal-annotations"></a>SAL-Anmerkungen
 
 Verwenden Sie SAL-Anmerkungen in Kombination mit Codeanalysetools, um Fehler in der App zu finden.
 
@@ -126,12 +133,12 @@ Wenn Sie eine Codeanalyse für Ihre App ausführen möchten, wählen Sie auf der
 
 Die vollständige Liste der verfügbaren Anmerkungen wird in sal.h definiert. Weitere Informationen finden Sie unter [SAL-Anmerkungen](https://msdn.microsoft.com/library/windows/apps/ms235402.aspx).
 
-## Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte
 
 
 Lesen Sie die Informationen unter [Marble Maze-Anwendungsstruktur](marble-maze-application-structure.md), um zu erfahren, wie der Marble Maze-Anwendungscode strukturiert ist und wodurch sich die Struktur einer DirectX-UWP-App von der einer herkömmlichen Desktopanwendung unterscheidet.
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 
 * [Marble Maze-Anwendungsstruktur](marble-maze-application-structure.md)
@@ -143,10 +150,5 @@ Lesen Sie die Informationen unter [Marble Maze-Anwendungsstruktur](marble-maze-a
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

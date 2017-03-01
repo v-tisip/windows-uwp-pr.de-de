@@ -3,23 +3,30 @@ author: msatranjr
 title: "Diagnostizieren von Fehlerbedingungen für Komponenten für Windows-Runtime"
 description: "Dieser Artikel enthält zusätzliche Informationen zu Einschränkungen bei Komponenten für Windows-Runtime, die mit verwaltetem Code geschrieben wurden."
 ms.assetid: CD0D0E11-E68A-411D-B92E-E9DECFDC9599
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
-ms.openlocfilehash: 02cb16d88add782321ca86a27fcb8b5c6d1bab34
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: da02ed10336ea2381213fd5fada153db4cc06ab1
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Diagnostizieren von Fehlerbedingungen für Komponenten für Windows-Runtime
+# <a name="diagnosing-windows-runtime-component-error-conditions"></a>Diagnostizieren von Fehlerbedingungen für Komponenten für Windows-Runtime
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
 
 Dieser Artikel enthält zusätzliche Informationen zu Einschränkungen bei Komponenten für Windows-Runtime, die mit verwaltetem Code geschrieben wurden. Der Artikel beinhaltet Details zu den Fehlermeldungen von [Winmdexp.exe (Windows Runtime Metadata Export Tool)](https://msdn.microsoft.com/library/hh925576.aspx) und ergänzt die unter [Erstellen von Komponenten für Windows-Runtime in C# und Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md) aufgeführten Informationen zu Einschränkungen.
 
 In diesem Artikel werden aber nicht alle Fehler abgedeckt. Die hier beschriebenen Fehler sind in allgemeine Kategorien eingeteilt, und jede Kategorie enthält eine Tabelle mit den zugehörigen Fehlermeldungen. Suchen Sie nach dem Meldungstext (ohne bestimmte Werte für Platzhalter) oder der Meldungsnummer. Falls Sie die benötigten Informationen hier nicht finden, können Sie mithilfe der Feedback-Schaltfläche am Ende dieses Artikels zur Verbesserung der Dokumentation beitragen. Geben Sie dabei die Fehlermeldung an. Alternativ können Sie einen Fehler auf der Microsoft Connect-Website melden.
 
-## Fehlermeldung beim Implementieren einer asynchronen Schnittstelle stellt den falschen Typ bereit
+## <a name="error-message-for-implementing-async-interface-provides-incorrect-type"></a>Fehlermeldung beim Implementieren einer asynchronen Schnittstelle stellt den falschen Typ bereit
 
 
 Verwaltete Komponenten für Windows-Runtime können die UWP-Schnittstellen (Universelle Windows-Plattform) nicht implementieren, die asynchrone Aktionen oder Vorgänge darstellen ([IAsyncAction](https://msdn.microsoft.com/library/br205781.aspx), [IAsyncActionWithProgress&lt;TProgress&gt;](https://msdn.microsoft.com/library/br205784.aspx), [IAsyncOperation&lt;TResult&gt;](https://msdn.microsoft.com/library/windows/apps/br206598.aspx) oder [IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](https://msdn.microsoft.com/library/windows/apps/br206594.aspx)). Stattdessen stellt das .NET Framework die [AsyncInfo](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.asyncinfo.aspx) -Klasse zum Generieren von asynchronen Vorgängen in Komponenten für Windows-Runtime bereit. Die Fehlermeldung, die Winmdexp.exe bei dem Versuch anzeigt, eine asynchrone Schnittstelle zu implementieren, verweist auf diese Klasse mit ihrem früheren Namen, AsyncInfoFactory. Das .NET Framework enthält die AsyncInfoFactory-Klasse nicht mehr.
@@ -34,7 +41,7 @@ Verwaltete Komponenten für Windows-Runtime können die UWP-Schnittstellen (Univ
 
  
 
-## Fehlende Verweise auf mscorlib.dll oder System.Runtime.dll
+## <a name="missing-references-to-mscorlibdll-or-systemruntimedll"></a>Fehlende Verweise auf mscorlib.dll oder System.Runtime.dll
 
 
 Dieses Problem tritt nur auf, wenn Sie Winmdexp.exe aus der Befehlszeile ausführen. Wir empfehlen die Verwendung der Option „/reference”, um Verweise auf mscorlib.dll und System.Runtime.dll von den .NET Framework-Kernverweisassemblys einzuschließen, die sich in „%ProgramFiles(x86)%\\Reference Assemblies\\Microsoft\\Framework\\.NETCore\\v4.5" ("%ProgramFiles%\\...” auf einem 32-Bit-Computer) befinden.
@@ -46,7 +53,7 @@ Dieses Problem tritt nur auf, wenn Sie Winmdexp.exe aus der Befehlszeile ausfüh
 
  
 
-## Operatorüberladung ist nicht zulässig
+## <a name="operator-overloading-is-not-allowed"></a>Operatorüberladung ist nicht zulässig
 
 
 In einer Komponente für Windows-Runtime, die in verwaltetem Code geschrieben wurde, können Sie keine überladenen Operatoren für öffentliche Typen verfügbar machen.
@@ -61,7 +68,7 @@ In einer Komponente für Windows-Runtime, die in verwaltetem Code geschrieben wu
 
  
 
-## Konstruktoren einer Klasse haben die gleiche Anzahl von Parametern
+## <a name="constructors-on-a-class-have-the-same-number-of-parameters"></a>Konstruktoren einer Klasse haben die gleiche Anzahl von Parametern
 
 
 In der UWP kann eine Klasse nur einen Konstruktor mit einer bestimmten Anzahl von Parametern haben. Sie können z. B. keinen Konstruktor verwenden, der einen einzelnen Parameter vom Typ **String** und einen anderen einzelnen Parameter vom Typ **int** (**Integer** in Visual Basic) aufweist. Das Problem kann nur umgangen werden, indem Sie für jeden Konstruktor eine andere Anzahl von Parametern verwenden.
@@ -72,10 +79,10 @@ In der UWP kann eine Klasse nur einen Konstruktor mit einer bestimmten Anzahl vo
 
  
 
-## Ein Standard für Überladungen mit derselben Anzahl von Parametern muss festgelegt werden
+## <a name="must-specify-a-default-for-overloads-that-have-the-same-number-of-parameters"></a>Ein Standard für Überladungen mit derselben Anzahl von Parametern muss festgelegt werden
 
 
-In der UWP können überladene Methoden nur dann über dieselbe Anzahl von Parametern verfügen, wenn eine Überladung als Standardüberladung angegeben wird. Weitere Informationen finden Sie unter [Erstellen von Komponenten für Windows-Runtime in C# und VisualBasic](creating-windows-runtime-components-in-csharp-and-visual-basic.md).
+In der UWP können überladene Methoden nur dann über dieselbe Anzahl von Parametern verfügen, wenn eine Überladung als Standardüberladung angegeben wird. Weitere Informationen finden Sie unter [Erstellen von Komponenten für Windows-Runtime in C# und Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md).
 
 | Fehlernummer | Meldungstext                                                                                                                                                                      |
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -84,7 +91,7 @@ In der UWP können überladene Methoden nur dann über dieselbe Anzahl von Param
 
  
 
-## Namespacefehler und ungültige Namen für die Ausgabedatei
+## <a name="namespace-errors-and-invalid-names-for-the-output-file"></a>Namespacefehler und ungültige Namen für die Ausgabedatei
 
 
 In der universellen Windows-Plattform müssen sich alle öffentlichen Typen in einer Windows-Metadatendatei (WINMD) in einem Namespace mit demselben Namen wie die WINMD-Datei oder in Subnamespaces des Dateinamens befinden. Wenn Ihr Visual Studio-Projekt beispielsweise A.B heißt (d. h. die Komponente für Windows-Runtime ist A.B.WINMD), kann es die öffentlichen Klassen A.B.Class1 und A.B.C.Class2 enthalten, aber nicht A.Class3 (WME0006) oder D.Class4 (WME1044).
@@ -118,7 +125,7 @@ Ein Typ in einer Komponente für Windows-Runtime darf nicht wie ein Namespace be
 
  
 
-## Exportieren von Typen, die keine gültigen universellen Windows-Plattform-Typen sind
+## <a name="exporting-types-that-arent-valid-universal-windows-platform-types"></a>Exportieren von Typen, die keine gültigen universellen Windows-Plattform-Typen sind
 
 
 Die öffentliche Schnittstelle der Komponente darf nur UWP-Typen verfügbar machen. Das .NET Framework stellt aber auch Zuordnungen für einige häufig verwendete Typen bereit, die im .NET Framework und in der UWP Unterschiede aufweisen. Somit können .NET Framework-Entwickler mit bekannten Typen arbeiten, anstatt sich erst mit neuen Typen vertraut machen zu müssen. Sie können diese zugeordneten .NET Framework-Typen in der öffentliche Schnittstelle der Komponente verwenden. Weitere Informationen hierzu finden Sie in „Deklarieren von Typen in Komponenten für Windows-Runtime” und „Übergeben von universellen Windows-Plattform-Typen an verwalteten Code” unter [Erstellen von Komponenten für Windows-Runtime in C# und Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md)sowie unter [.NET Framework-Zuordnungen von Windows-Runtime-Typen](net-framework-mappings-of-windows-runtime-types.md).
@@ -156,7 +163,7 @@ Im Allgemeinen sollte die Schnittstelle ausgewählt werden, die dem Typ am näch
 <tr class="odd">
 <td align="left">WME1039</td>
 <td align="left"><p>Die Methode '{0}' weist in der Signatur einen Parameter vom Typ '{1}' auf. Obwohl es sich bei diesem generischen Typ nicht um einen gültigen Windows-Runtime-Typ handelt, werden von diesem Typ oder von dessen generischen Parametern Schnittstellen implementiert, die gültige Windows-Runtime-Typen sind. {2}</p>
-> **Hinweis**  Für {2} fügt „Winmdexp.exe“ eine Liste von Alternativen an, wie z.B. „Ändern Sie eventuell den Typ 'System.Collections.Generic.List&lt;T&gt;' in der Methodensignatur in einen der folgenden Typen: 'System.Collections.Generic.IList&lt;T&gt;, System.Collections.Generic.IReadOnlyList&lt;T&gt;, System.Collections.Generic.IEnumerable&lt;T&gt;'“.
+> **Hinweis**  Für {2} fügt „Winmdexp.exe“ eine Liste von Alternativen an, wie z. B. „Ändern Sie eventuell den Typ 'System.Collections.Generic.List&lt;T&gt;' in der Methodensignatur in einen der folgenden Typen: 'System.Collections.Generic.IList&lt;T&gt;, System.Collections.Generic.IReadOnlyList&lt;T&gt;, System.Collections.Generic.IEnumerable&lt;T&gt;'“.
 </td>
 </tr>
 <tr class="even">
@@ -168,7 +175,7 @@ Im Allgemeinen sollte die Schnittstelle ausgewählt werden, die dem Typ am näch
 
  
 
-## Strukturen, die Felder mit unzulässigen Typen enthalten
+## <a name="structures-that-contain-fields-of-disallowed-types"></a>Strukturen, die Felder mit unzulässigen Typen enthalten
 
 
 In der UWP kann eine Struktur nur Felder enthalten, und nur Strukturen können Felder enthalten. Diese Felder müssen öffentlich sein. Zu den gültigen Feldtypen zählen Strukturen, Enumerationen und primitive Typen.
@@ -179,7 +186,7 @@ In der UWP kann eine Struktur nur Felder enthalten, und nur Strukturen können F
 
  
 
-## Einschränkungen für Arrays in Membersignaturen
+## <a name="restrictions-on-arrays-in-member-signatures"></a>Einschränkungen für Arrays in Membersignaturen
 
 
 In der UWP müssen Arrays in Membersignaturen eindimensional sein und eine Untergrenze von 0 (null) aufweisen. Geschachtelte Arraytypen wie `myArray[][]` (`myArray()()` in Visual Basic) sind nicht zulässig.
@@ -196,7 +203,7 @@ In der UWP müssen Arrays in Membersignaturen eindimensional sein und eine Unter
 
  
 
-## Arrayparameter müssen angeben, ob Arrayinhalt lesbar oder schreibbar sind
+## <a name="array-parameters-must-specify-whether-array-contents-are-readable-or-writable"></a>Arrayparameter müssen angeben, ob Arrayinhalt lesbar oder schreibbar sind
 
 
 In der UWP müssen Parameter schreibgeschützt oder lesegeschützt sein. Parameter können nicht mit **ref** (**ByRef** ohne das [OutAttribute](https://msdn.microsoft.com/library/system.runtime.interopservices.outattribute.aspx)-Attribut in Visual Basic) gekennzeichnet werden. Dies gilt für den Inhalt von Arrays. Daher müssen Arrayparameter angeben, ob der Arrayinhalt schreibgeschützt oder lesegeschützt ist. Die Richtung ist für **out**-Parameter klar (**ByRef**-Parameter mit dem OutAttribute-Attribut in Visual Basic), aber Arrayparameter, die per Wert übergeben werden (ByVal in Visual Basic), müssen gekennzeichnet werden. Weitere Informationen hierzu finden Sie unter [Übergeben von Arrays an eine Komponente für Windows-Runtime](passing-arrays-to-a-windows-runtime-component.md).
@@ -211,7 +218,7 @@ In der UWP müssen Parameter schreibgeschützt oder lesegeschützt sein. Paramet
 | WME1106      | Die Methode '{0}' weist den Parameter '{1}' auf, bei dem es sich um ein Array handelt. Die Inhalte von Array-Parametern müssen in der Windows-Runtime entweder lesbar oder schreibbar sein. Wenden Sie entweder {2} oder {3} auf '{1}' an.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 
 
-## Member mit einem Parameter mit dem Namen „Value"
+## <a name="member-with-a-parameter-named-value"></a>Member mit einem Parameter mit dem Namen „Value"
 
 
 In der UWP werden Rückgabewerte als Ausgabeparameter betrachtet, und die Namen der Parameter müssen eindeutig sein. Standardmäßig gibt Winmdexp.exe dem Rückgabewert den Namen „Value". Wenn die Methode einen Parameter mit dem Namen „Value" hat, erhalten Sie die Fehlermeldung WME1092. Es gibt zwei Korrekturmöglichkeiten:
@@ -245,13 +252,8 @@ JavaScript-Code kann auf die Ausgabeparameter einer Methode, einschließlich des
 | WME1092 | Die Methode '\{0}' weist einen Parameter mit dem Namen '\{1}' auf, der mit dem Standardnamen des Rückgabewerts identisch ist. Verwenden Sie ggf. einen anderen Namen für den Parameter, oder verwenden Sie das System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute, um den Namen des Rückgabewerts explizit anzugeben.<br/>**Hinweis**  Der Standardname lautet „returnValue" für Eigenschaftenaccessoren und „Value" für alle anderen Methoden. |
  
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Erstellen von Komponenten für Windows-Runtime in C# und Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
 * [Winmdexp.exe (Windows Runtime Metadata Export Tool)](https://msdn.microsoft.com/library/hh925576.aspx)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

@@ -1,18 +1,25 @@
 ---
 author: msatranjr
 title: Anzeigen von Routen und Wegbeschreibungen auf einer Karte
-description: Fordern Sie Routen und Wegbeschreibungen an, und zeigen Sie sie in Ihrer App an.
+description: Fordern Sie Routen und Wegbeschreibungen an, und zeigen Sie diese in Ihrer App an.
 ms.assetid: BBB4C23A-8F10-41D1-81EA-271BE01AED81
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, Route, Karte, Standort, Wegbeschreibungen
 translationtype: Human Translation
-ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
-ms.openlocfilehash: eb3596236e7de29473635b26f48f0c7e4fa1d49f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 11519df0c6655d663b31759e9064337a706bbc53
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Anzeigen von Routen und Wegbeschreibungen auf einer Karte
+# <a name="display-routes-and-directions-on-a-map"></a>Anzeigen von Routen und Wegbeschreibungen auf einer Karte
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Fordern Sie Routen und Wegbeschreibungen an, und zeigen Sie sie in Ihrer App an.
@@ -25,7 +32,7 @@ Fordern Sie Routen und Wegbeschreibungen an, und zeigen Sie sie in Ihrer App an.
 
  
 
-## Eine Einführung in die MapRouteFinder-Ergebnisse
+## <a name="an-intro-to-maproutefinder-results"></a>Eine Einführung in die MapRouteFinder-Ergebnisse
 
 
 Hier erfahren Sie, wie Klassen für Routen und Wegbeschreibungen zusammenhängen.
@@ -36,7 +43,7 @@ Hier erfahren Sie, wie Klassen für Routen und Wegbeschreibungen zusammenhängen
 -   Die [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937) enthält eine Sammlung von [**MapRouteLeg**](https://msdn.microsoft.com/library/windows/apps/dn636955)-Objekten. Auf diese Sammlung greifen Sie über die [**Legs**](https://msdn.microsoft.com/library/windows/apps/dn636973)-Eigenschaft der **MapRoute** zu.
 -   Jeder [**MapRouteLeg**](https://msdn.microsoft.com/library/windows/apps/dn636955) enthält eine Sammlung von [**MapRouteManeuver**](https://msdn.microsoft.com/library/windows/apps/dn636961)-Objekten. Auf diese Sammlung greifen Sie über die [**Maneuvers**](https://msdn.microsoft.com/library/windows/apps/dn636959)-Eigenschaft des **MapRouteLeg** zu.
 
-## Anzeigen von Wegbeschreibungen
+## <a name="display-directions"></a>Anzeigen von Wegbeschreibungen
 
 
 Rufen Sie Routen und Wegbeschreibungen für Auto und Fußgänger ab, indem Sie die Methoden der [**MapRouteFinder**](https://msdn.microsoft.com/library/windows/apps/dn636938)-Klasse aufrufen, z. B. [**GetDrivingRouteAsync**](https://msdn.microsoft.com/library/windows/apps/dn636943) oder [**GetWalkingRouteAsync**](https://msdn.microsoft.com/library/windows/apps/dn636953). Das [**MapRouteFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn636939)-Objekt enthält ein [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937)-Objekt, auf das Sie über seine [**Route**](https://msdn.microsoft.com/library/windows/apps/dn636940)-Eigenschaft zugreifen können.
@@ -44,7 +51,7 @@ Rufen Sie Routen und Wegbeschreibungen für Auto und Fußgänger ab, indem Sie d
 Wenn Sie eine Route anfordern, können Sie Folgendes angeben:
 
 -   Sie können nur einen Startpunkt und einen Endpunkt oder eine Reihe von Wegpunkten zur Berechnung angeben.
--   Sie können Optimierungen angeben, z.B. die Minimierung der Distanz.
+-   Sie können Optimierungen angeben, z. B. die Minimierung der Distanz.
 -   Sie können Einschränkungen festlegen, z. B. das Vermeiden von Autobahnen.
 
 Die berechnete [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937) hat Eigenschaften, die die Zeit zum Zurücklegen der Route, die Länge der Route und die Auflistung von [**MapRouteLeg**](https://msdn.microsoft.com/library/windows/apps/dn636955)-Objekten bereitstellen, die die Teilstrecken der Route enthalten. Jedes **MapRouteLeg**-Objekt enthält eine Auflistung von [**MapRouteManeuver**](https://msdn.microsoft.com/library/windows/apps/dn636961)-Objekten. Das **MapRouteManeuver**-Objekt enthält eine Wegbeschreibung, auf die Sie über seine [**InstructionText**](https://msdn.microsoft.com/library/windows/apps/dn636964)-Eigenschaft zugreifen können.
@@ -126,7 +133,7 @@ Turn right onto James St.
 You have reached your destination.
 ```
 
-## Anzeigen von Routen
+## <a name="display-routes"></a>Anzeigen von Routen
 
 
 Blenden Sie eine [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937) auf einem [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) ein, indem Sie eine [**MapRouteView**](https://msdn.microsoft.com/library/windows/apps/dn637122) mit der ****MapRoute erstellen. Fügen Sie die **MapRouteView** anschließend zur [**Routes**](https://msdn.microsoft.com/library/windows/apps/dn637047)-Auflistung von **MapControl** hinzu.
@@ -184,17 +191,11 @@ Dieses Beispiel zeigt Folgendes in einem [**MapControl**](https://msdn.microsoft
 
 ![Kartensteuerelement mit angezeigter Route](images/routeonmap.png)
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Bing Maps Developer Center](https://www.bingmapsportal.com/)
 * [Beispiel für UWP-Karte](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [Entwurfsrichtlinien für Karten](https://msdn.microsoft.com/library/windows/apps/dn596102)
 * [Build 2015-Video: Nutzen von Karten und Ortung über Telefon, Tablet und PC in Ihren Windows-Apps](https://channel9.msdn.com/Events/Build/2015/2-757)
 * [Beispiel für eine UWP-App mit Verkehrsinformationen](http://go.microsoft.com/fwlink/p/?LinkId=619982)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

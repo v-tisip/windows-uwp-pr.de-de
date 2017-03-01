@@ -3,17 +3,24 @@ author: DBirtolo
 ms.assetid: 9A0F1852-A76B-4F43-ACFC-2CC56AAD1C03
 title: Drucken in Apps
 description: Hier erfahren Sie, wie Sie Dokumente in einer Universellen Windows-App drucken. In diesem Thema wird zudem gezeigt, wie bestimmte Seiten gedruckt werden.
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 82edf9c3ee7f7303788b7a1272ecb261d3748c5a
-ms.openlocfilehash: 334b6d5faad641bbce67f7267be43700cd540569
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 041a591cc3e53ee6f5e4b5d51e41a0e1032c6cac
+ms.lasthandoff: 02/07/2017
 
 ---
-# Drucken in Apps
+# <a name="print-from-your-app"></a>Drucken in Apps
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
-** Wichtige APIs **
+**Wichtige APIs**
 
 -   [**Windows.Graphics.Printing**](https://msdn.microsoft.com/library/windows/apps/BR226489)
 -   [**Windows.UI.Xaml.Printing**](https://msdn.microsoft.com/library/windows/apps/BR243325)
@@ -23,7 +30,7 @@ Hier erfahren Sie, wie Sie Dokumente in einer universellen Windows-App drucken. 
 
 **Tipp**  Die Mehrzahl der Beispiele in diesem Thema basiert auf dem Druckbeispiel. Laden Sie das [Druckbeispiel für die universelle Windows-Plattform (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619984) aus dem Repository [Beispiele für Universelle Windows-Plattform](http://go.microsoft.com/fwlink/p/?LinkId=619979) auf GitHub herunter, um den vollständigen Code anzuzeigen.
 
-## Registrieren für Druckfunktionen
+## <a name="register-for-printing"></a>Registrieren für Druckfunktionen
 
 Um Ihrer App Druckfunktionen hinzuzufügen, müssen Sie sie als Erstes für den Vertrag für "Drucken" registrieren. Die Registrierung ist für jeden Bildschirm erforderlich, auf dem der Benutzer drucken können soll. Es kann jeweils nur der Bildschirm, der gerade angezeigt wird, für das Drucken registriert werden. Wenn ein Bildschirm Ihrer App für das Drucken registriert wurde, muss die Registrierung beim Schließen des Bildschirms aufgehoben werden. Wird an seiner Stelle ein anderer Bildschirm angezeigt, muss dieser nächste Bildschirm beim Öffnen für einen neuen Vertrag für „Drucken“ registriert werden.
 
@@ -82,7 +89,7 @@ protected override void OnNavigatedFrom(NavigationEventArgs e)
    }
 }
 ```
-## Erstellen einer Druckschaltfläche
+## <a name="create-a-print-button"></a>Erstellen einer Druckschaltfläche
 
 Fügen Sie eine Druckschaltfläche an der gewünschten Stelle auf dem App-Bildschirm hinzu. Stellen Sie sicher, dass sie den zu druckenden Inhalt nicht verdeckt oder anderweitig stört.
 
@@ -129,7 +136,7 @@ async private void OnPrintButtonClick(object sender, RoutedEventArgs e)
 
 In diesem Beispiel wird ein Druckfenster im Ereignishandler für das Klicken auf eine Schaltfläche angezeigt. Wenn die Methode eine Ausnahme auslöst (da das Drucken zu diesem Zeitpunkt nicht möglich ist), informiert ein [**ContentDialog**](https://msdn.microsoft.com/library/windows/apps/Dn633972)-Steuerelement den Benutzer über die Situation.
 
-## Formatieren der App-Inhalte
+## <a name="format-your-apps-content"></a>Formatieren der App-Inhalte
 
 Wenn **ShowPrintUIAsync** aufgerufen wird, wird das [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597)-Ereignis ausgelöst. Der in diesem Schritt gezeigte **PrintTaskRequested**-Ereignishandler erstellt eine [**PrintTask**](https://msdn.microsoft.com/library/windows/apps/BR226436)-Klasse, indem er die [**PrintTaskRequest.CreatePrintTask**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing.printtaskrequest.createprinttask.aspx)-Methode aufruft und den Titel für die zu druckende Seite sowie den Namen eines [**PrintTaskSourceRequestedHandler**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing.printtask.source) -Delegaten übergibt. Beachten Sie, dass **PrintTaskSourceRequestedHandler** in diesem Beispiel inline definiert wird. **PrintTaskSourceRequestedHandler** stellt den formatierten Inhalt für das Drucken bereit und wird an späterer Stelle beschrieben.
 
@@ -239,16 +246,16 @@ protected virtual void AddPrintPages(object sender, AddPagesEventArgs e)
 }
 ```
 
-## Vorbereiten von Druckoptionen
+## <a name="prepare-print-options"></a>Vorbereiten von Druckoptionen
 
 Als Nächstes bereiten Sie Druckoptionen vor. Dieser Abschnitt beschreibt als Beispiel, wie die Seitenbereichsoption festgelegt wird, um das Drucken bestimmter Seiten zu gestatten. Weitere Optionen finden Sie unter [Anpassen der Benutzeroberfläche für die Druckvorschau](customize-the-print-preview-ui.md).
 
 In diesem Schritt wird eine neue Druckoption erstellt und eine Liste von Werten definiert, die die Option unterstützt. Dann wird die Option der Druckvorschau-UI hinzugefügt. Die Seitenbereichsoption hat folgende Einstellungen:
 
-| Optionsname          | Aktion | 
+| Optionsname          | Aktion |
 |----------------------|--------|
 | **Print all**        | Druckt alle Seiten im Dokument. |
-| **Print Selection**  | Druckt nur den vom Benutzer ausgewählten Inhalt. | 
+| **Print Selection**  | Druckt nur den vom Benutzer ausgewählten Inhalt. |
 | **Print Range**      | Zeigt ein Bearbeitungssteuerelement an, in das der Benutzer die zu druckenden Seiten eingeben kann. |
  
 Ändern Sie zunächst den [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597)-Ereignishandler, um den Code zum Abrufen eines [**PrintTaskOptionDetails**](https://msdn.microsoft.com/library/windows/apps/Hh701256)-Objekts hinzuzufügen.
@@ -295,7 +302,7 @@ printDetailedOptions.OptionChanged += printDetailedOptions_OptionChanged;
 
 Die [**CreateTextOption**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing.optiondetails.printtaskoptiondetails.createtextoption)-Methode erstellt das Textfeld **Bereich**. Hier gibt der Benutzer die zu druckenden Seiten ein, wenn die Option **Druckbereich** ausgewählt wurde.
 
-## Behandeln von Druckoptionsänderungen
+## <a name="handle-print-option-changes"></a>Behandeln von Druckoptionsänderungen
 
 Der **OptionChanged**-Ereignishandler ist im Wesentlichen für zwei Dinge zuständig. Erstens blendet er das Texteingabefeld für den Seitenbereich je nach der vom Benutzer ausgewählten Seitenbereichsoption ein und aus. Zweitens testet er den Text, den der Benutzer in das Seitenbereich-Textfeld eingibt, um sicherzustellen, dass es sich um einen gültigen Seitenbereich für das Dokument handelt.
 
@@ -377,7 +384,7 @@ async void printDetailedOptions_OptionChanged(PrintTaskOptionDetails sender, Pri
 
 **Tipp**  Weitere Informationen zum Analysieren des vom Benutzer in das Textfeld für den Bereich eingegebenen Werts finden Sie in der `GetPagesInRange`-Methode im [UWP-Druckbeispiel](http://go.microsoft.com/fwlink/p/?LinkId=619984).
 
-## Vorschau auf ausgewählte Seiten
+## <a name="preview-selected-pages"></a>Vorschau auf ausgewählte Seiten
 
 Die Formatierung des Inhalts Ihrer App zum Drucken hängt von der Art der App und deren Inhalt ab. Das [UWP-Druckbeispiel](http://go.microsoft.com/fwlink/p/?LinkId=619984) verwendet eine Druckhilfsprogrammklasse, um seinen Inhalt für den Druckvorgang zu formatieren.
 
@@ -387,15 +394,9 @@ Wenn nur ein Teil der Seiten gedruckt wird, gibt es mehrere Möglichkeiten, den 
 -   Nur den vom Benutzer ausgewählten Seitenbereich in der Druckvorschau anzeigen und die Anzeige aktualisieren, wenn der Benutzer den Seitenbereich ändert.
 -   Alle Seiten in der Druckvorschau anzeigen, dabei aber alle Seiten ausgrauen, die nicht in dem vom Benutzer ausgewählten Seitenbereich liegen.
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Gestaltungsrichtlinien für Druckvorgänge](https://msdn.microsoft.com/library/windows/apps/Hh868178)
 * [//Build 2015-Video: Entwickeln von druckfähigen Apps in Windows 10](https://channel9.msdn.com/Events/Build/2015/2-94)
 * [UWP-Druckbeispiel](http://go.microsoft.com/fwlink/p/?LinkId=619984)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

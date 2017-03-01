@@ -2,23 +2,29 @@
 author: mcleanbyron
 ms.assetid: 278114aa-2a44-4d63-a1d2-d512d8aababc
 description: "Allgemeine Entwicklerinformationen über die Microsoft Advertising-Bibliotheken im Microsoft Store Services SDK"
-title: "Entwicklerinformationen über die Microsoft Advertising-Bibliotheken"
+title: Entwicklerinformationen zu den Microsoft Advertising-Bibliotheken
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, anzeigen, werbung"
 translationtype: Human Translation
-ms.sourcegitcommit: 2f0835638f330de0ac2d17dae28347686cc7ed97
-ms.openlocfilehash: 70692d09c037d9e5802734bc5de6a6c79799bffb
-
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 44b5266a104b2f706537cea2167b395487f275d2
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Entwicklerinformationen über die Microsoft Advertising-Bibliotheken
+# <a name="developer-information-about-the-microsoft-advertising-libraries"></a>Entwicklerinformationen zu den Microsoft Advertising-Bibliotheken
 
 
 
 
-Die Themen in diesem Abschnittbieten Entwicklern nützliche Informationen über die Microsoft Advertising-Bibliotheken im Microsoft Store Services SDK (für UWP-Apps) und im Microsoft Advertising SDK für Windows und Windows Phone8.x (für Windows8.1- und Windows Phone8.x-Apps).
+Die Themen in diesem Abschnitt bieten Entwicklern nützliche Informationen über die Microsoft Advertising-Bibliotheken im Microsoft Store Services SDK (für UWP-Apps) und im Microsoft Advertising SDK für Windows und Windows Phone 8.x (für Windows 8.1- und Windows Phone 8.x-Apps).
 
 
-## Inhalt dieses Abschnitts
+## <a name="in-this-section"></a>Inhalt dieses Abschnitts
 
 | Thema                                                                                                       | Beschreibung                 |
 |-------------------------------------------------------------------------------------------------------------|-----------------------------|
@@ -35,9 +41,4 @@ Die Themen in diesem Abschnittbieten Entwicklern nützliche Informationen über 
  
 
  
-
-
-
-<!--HONumber=Sep16_HO2-->
-
 

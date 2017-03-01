@@ -3,13 +3,21 @@ author: normesta
 description: "Veranschaulicht das Hinzufügen Ihrer App neben Aktionen in einer Visitenkarte"
 MSHAttr: PreferredLib:/library/windows/apps
 title: Verbinden der App mit Aktionen auf einer Visitenkarte
+ms.author: normesta
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, Kontakte, Visitenkarte, Anmerkung
+ms.assetid: 0edabd9c-ecfb-4525-bc38-53f219d744ff
 translationtype: Human Translation
-ms.sourcegitcommit: 5c0f6ef1f1a346a66ca554a415d9f24c8a314ae1
-ms.openlocfilehash: 034dc2b7be69763416192014abe24b9bf924c443
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: da64e23714035b6763104d48430371469272a939
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Verbinden der App mit Aktionen auf einer Visitenkarte
+# <a name="connect-your-app-to-actions-on-a-contact-card"></a>Verbinden der App mit Aktionen auf einer Visitenkarte
 
 Ihre App kann neben Aktionen auf einer Visitenkarte oder kleinen Kontaktkarte angezeigt werden. Benutzer können Ihre App auswählen, um eine Aktion auszuführen, z. B. eine Profilseite zu öffnen, einen Anruf zu tätigen oder eine Nachricht zu senden.
 
@@ -19,11 +27,11 @@ Suchen Sie zunächst vorhandene Kontakte oder erstellen Sie neue. Erstellen Sie 
 
 Ein ausführlicheres Beispiel finden Sie unter [Beispiel für die Visitenkarte-Integration](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCardIntegration).
 
-## Suchen oder Erstellen eines Kontakts
+## <a name="find-or-create-a-contact"></a>Suchen oder Erstellen eines Kontakts
 
 Wenn Ihre App den Kontakt mit anderen Personen unterstützt, durchsuchen Sie Windows nach Kontakten, und versehen Sie sie mit Anmerkungen. Wenn Ihre App Kontakte verwaltet, können Sie sie einer Windows-Kontaktliste hinzufügen und mit Anmerkungen versehen.
 
-### Suchen nach einem Kontakt
+### <a name="find-a-contact"></a>Suchen nach einem Kontakt
 
 Suchen Sie Kontakte über Namen, E-Mail-Adresse oder Telefonnummer.
 
@@ -37,7 +45,7 @@ contacts = await contactStore.FindContactsAsync(emailAddress);
 Contact contact = contacts[0];
 ```
 
-### Erstellen eines Kontakts
+### <a name="create-a-contact"></a>Erstellen eines Kontakts
 
 Wenn Ihre App eher wie ein Adressbuch konzipiert ist, erstellen Sie Kontakte und fügen Sie sie dann einer Kontaktliste zu.
 
@@ -71,7 +79,7 @@ await contactList.SaveContactAsync(contact);
 
 ```
 
-## Kennzeichnen von Kontakten mit einer Anmerkung
+## <a name="tag-each-contact-with-an-annotation"></a>Kennzeichnen von Kontakten mit einer Anmerkung
 
 Kennzeichnen Sie alle Kontakte mit einer Liste von Aktionen (Vorgänge), die Ihre App ausführen kann (Beispiel: Videoanrufe und Messaging).
 
@@ -101,7 +109,7 @@ annotation.SupportedOperations = ContactAnnotationOperations.Message |
 await annotationList.TrySaveAnnotationAsync(annotation);
 ```
 
-## Registrieren der Vorgänge
+## <a name="register-for-each-operation"></a>Registrieren der Vorgänge
 
 Registrieren Sie in Ihrem Paketmanifest alle Vorgänge, die Sie in der Anmerkung aufgeführt haben.
 
@@ -135,7 +143,7 @@ Sie können diese auch in der Registerkarte **Deklarationen** im Manifest-Design
 
 ![Registerkarte „Deklarationen“ im Manifest-Designer](images/manifest-designer-protocols.png)
 
-## Anzeigen Ihrer App neben Aktionen in einer Visitenkarte
+## <a name="find-your-app-next-to-actions-in-a-contact-card"></a>Anzeigen Ihrer App neben Aktionen in einer Visitenkarte
 
 Öffnen Sie die Kontakte-App. Ihre App wird neben den Aktionen (Operationen) angezeigt, die Sie in Ihrer Anmerkung und dem Paketmanifest angegeben haben.
 
@@ -143,7 +151,7 @@ Sie können diese auch in der Registerkarte **Deklarationen** im Manifest-Design
 
 Wenn Benutzer Ihre App für eine Aktion auswählen, wird diese App, wenn ein Benutzer das nächste Mal eine Visitenkarte öffnet, als Standard-App für diese Aktion angezeigt.
 
-## Anzeigen Ihrer App neben Aktionen in einer kleinen Kontaktkarte
+## <a name="find-your-app-next-to-actions-in-a-mini-contact-card"></a>Anzeigen Ihrer App neben Aktionen in einer kleinen Kontaktkarte
 
 In kleinen Kontaktkarten wird Ihre App in Registerkarten angezeigt, die Aktionen darstellen.
 
@@ -174,7 +182,7 @@ Weitere Beispiele mit kleinen Kontaktkarten finden Sie unter [Visitenkartenbeisp
 
 Genau wie die Visitenkarte wird für jede Registerkarte die App vermerkt, die der Benutzer zuletzt verwendet hat, damit sie problemlos zu Ihrer App zurückkehren können.
 
-## Ausführen von Vorgängen, wenn Benutzer Ihre App in einer Visitenkarte auswählen
+## <a name="perform-operations-when-users-select-your-app-in-a-contact-card"></a>Ausführen von Vorgängen, wenn Benutzer Ihre App in einer Visitenkarte auswählen
 
 Überschreiben Sie die [Application.OnActivated](https://msdn.microsoft.com/library/windows/apps/br242330)-Methode in Ihrer **App.cs**-Datei, und leiten Sie Benutzer zu einer Seite in Ihrer App. Das [Beispiel für die Integration von Visitenkarten](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCardIntegration) zeigt eine Möglichkeit, das zu tun.
 
@@ -209,9 +217,4 @@ protected override async void OnNavigatedTo(NavigationEventArgs e)
 ```
 
 Die ```args.uri.scheme```-Eigenschaft enthält den Namen des Vorgangs, und die ```args.uri.Query```-Eigenschaft enthält die ID des Benutzers.
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

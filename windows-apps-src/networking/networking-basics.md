@@ -1,17 +1,24 @@
 ---
 author: DelfCo
 description: "Aktionen, die Sie für eine netzwerkfähige App ausführen müssen."
-title: Netzwerkgrundlagen
+title: Vernetzungsgrundlagen
 ms.assetid: 1F47D33B-6F00-4F74-A52D-538851FD38BE
+ms.author: bobdel
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 28cf7084fd7ea6ad41c7c2817522891617928abb
-ms.openlocfilehash: 13457b7da3472f3530805198a74b3a6b2ff78f50
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d24d1ff9408585246aae4c4849d3af5e8f4846be
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="networking-basics"></a>Netzwerkgrundlagen
+# <a name="networking-basics"></a>Vernetzungsgrundlagen
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Aktionen, die Sie für eine netzwerkfähige App ausführen müssen.
 
@@ -418,10 +425,5 @@ Die Netzwerk-APIs unterstützen verschiedene Methoden zum Abrufen der detaillier
 
 * [Verbesserungen bei der Netzwerk-API unter Windows 10](http://blogs.windows.com/buildingapps/2015/07/02/networking-api-improvements-in-windows-10/)
  
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

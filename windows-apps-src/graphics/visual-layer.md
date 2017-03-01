@@ -3,14 +3,21 @@ author: scottmill
 ms.assetid: a2751e22-6842-073a-daec-425fb981bafe
 title: Visuelle Ebene
 description: "Die Windows.UI.Composition-API ermöglicht den Zugriff auf die Kompositionsebene zwischen der Frameworkebene (XAML) und der Grafikebene (DirectX)."
+ms.author: scotmi
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 9ea05f7ba76c7813b200a4c8cd021613f980355d
-ms.openlocfilehash: de6fe0688bec196fc90433ab9274f2e4c4fd9b90
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d1c676808b8b63f42b89a22862eaab63ddc94141
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="visual-layer"></a>Visuelle Ebene
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 In Windows 10 wurde viel Arbeit in die Entwicklung eines neuen einheitlichen Kompositors und eines Renderingmoduls für alle Windows-Anwendungen (Desktopanwendungen und mobile Anwendungen) investiert. Daraus resultierte die einheitliche WinRT-Composition-API „Windows.UI.Composition“, die Zugriff auf neue einfache Composition-Objekte und neue kompositorgesteuerte Animationen und Effekte bietet.
 
@@ -30,7 +37,7 @@ Visuelle Elemente können Container für andere visuelle Elemente sein oder Inha
 -   [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) – das Basisobjekt. Die meisten Eigenschaften befinden sich hier und werden von den anderen visuellen Objekten geerbt.
 -   [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) – wird von [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) abgeleitet und bietet die Möglichkeit, untergeordnete visuelle Elemente einzusetzen.
 -   [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) – wird von [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) abgeleitet und enthält Inhalte in Form von Bildern, Effekten und Swapchains.
--   [**LayerVisual**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.layervisual.aspx) – ein ContainerVisual-Element, dessen untergeordnete Elemente in einer einzelnen Ebene vereinfacht werden.  
+-   [**LayerVisual**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.layervisual.aspx) – ein ContainerVisual-Element, dessen untergeordnete Elemente in einer einzelnen Ebene vereinfacht werden.  
 -   [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789) – die Objektfactory, die die Beziehung zwischen einer Anwendung und dem Kompositorprozess des Systems verwaltet.
 
 Der Kompositor ist auch eine Factory für zahlreiche andere Kompositionsobjekte, die dazu verwendet werden, um visuelle Elemente in der Struktur sowie eine Reihe von Animationen und Effekten zu beschneiden und umzuwandeln.
@@ -66,7 +73,7 @@ Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die Unive
 -   Lesen Sie den MSDN-Artikel von Kenny Kerr zu dieser API: [Grafiken und Animationen – Windows Composition wird 10](https://msdn.microsoft.com/magazine/mt590968)
 -   Erweiterte Beispiele für Benutzeroberfläche und Komposition finden Sie im [WindowsUIDevLabs-GitHub](https://github.com/microsoft/windowsuidevlabs).
 -   [**Vollständige Referenzdokumentation für die API**](https://msdn.microsoft.com/library/windows/apps/Dn706878).
--   [Bekannte Probleme](http://go.microsoft.com/fwlink/?LinkId=823237).
+
 
  
 
@@ -74,10 +81,5 @@ Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die Unive
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

@@ -3,15 +3,22 @@ author: DelfCo
 description: "Sie können als UWP-App-Entwickler (Universelle Windows-Plattform) Windows.Networking.Sockets und Winsock zur Kommunikation mit anderen Geräten verwenden."
 title: Sockets
 ms.assetid: 23B10A3C-E33F-4CD6-92CB-0FFB491472D6
+ms.author: bobdel
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 4557fa59d377edc2ae5bf5a9be63516d152949bb
-ms.openlocfilehash: 49a9ae4d7d3994ad7fbb78fc9dc60cdd9dca07c3
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 0e9121dfc590a1a7f67be69b7dbce475e438dd08
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Sockets
+# <a name="sockets"></a>Sockets
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 **Wichtige APIs**
 
@@ -22,7 +29,7 @@ Sie können als UWP-App-Entwickler (Universelle Windows-Plattform) [**Windows.Ne
 
 >**Hinweis**: Zur Sicherstellung der [Netzwerkisolation](https://msdn.microsoft.com/library/windows/apps/hh770532.aspx) verbietet das System die Einrichtung von Socketverbindungen (Sockets oder WinSock) zwischen zwei UWP-Apps, die auf demselben Computer ausgeführt werden, über die lokale Loopbackadresse (127.0.0.0) oder durch explizite Angabe der lokalen IP-Adresse. Dies bedeutet, dass Sie Sockets nicht für die Kommunikation zwischen zwei UWP-Apps verwenden können. UWP stellt andere Mechanismen für die Kommunikation zwischen Apps zur Verfügung. Einzelheiten finden Sie unter [App-zu-App-Kommunikation](https://msdn.microsoft.com/windows/uwp/app-to-app/index).
 
-## Grundlegende TCP-Socketvorgänge
+## <a name="basic-tcp-socket-operations"></a>Grundlegende TCP-Socketvorgänge
 
 Ein TCP-Socket ermöglicht Low-Level-Übertragungen von Netzwerkdaten in beide Richtungen für langlebige Verbindungen. TCP-Sockets sind das zugrunde liegende Feature, das von den meisten im Internet genutzten Netzwerkprotokollen verwendet wird. In diesem Abschnitt erfahren Sie, wie Sie in einer UWP-App das Senden und Empfangen von Daten mit einem TCP-Datenstromsocket mithilfe der [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)-Klasse und der [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906)-Klasse als Teil des [**Windows.Networking.Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960)-Namespace aktivieren. In diesem Abschnitt wird eine einfache App erstellt, die als Echoserver und -client fungiert, um grundlegende TCP-Vorgänge zu veranschaulichen.
 
@@ -104,7 +111,7 @@ catch (Exception e)
 }
 ```
 
-## Grundlegende UDP-Socketvorgänge
+## <a name="basic-udp-socket-operations"></a>Grundlegende UDP-Socketvorgänge
 
 Ein UDP-Socket bietet die Low-Level-Übertragungen von Netzwerkdaten in beide Richtungen für Netzwerkkommunikation, bei der keine bestehende Verbindung erforderlich ist. Da UDP-Sockets die Verbindung auf beiden Endpunkten nicht aufrechterhalten, stellen Sie eine schnelle und einfache Lösung für Netzwerkverbindungen zwischen Remotecomputern dar. Allerdings stellen UDP-Sockets die Integrität von Netzwerkpaketen oder überhaupt ein Erreichen des Remoteziels nicht sicher. Beispiele für Anwendungen, die UDP-Sockets verwenden, sind Clients für die Erkennung im lokalen Netzwerk und für lokalen Chat. In diesem Abschnitt wird die Verwendung der [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319)-Klasse zum Senden und Empfangen von UDP-Nachrichten am Beispiel eines einfachen Echoservers und -clients veranschaulicht.
 
@@ -190,11 +197,11 @@ private async void Socket_MessageReceived(Windows.Networking.Sockets.DatagramSoc
 }
 ```
 
-## Hintergrundvorgänge und der Socketbroker
+## <a name="background-operations-and-the-socket-broker"></a>Hintergrundvorgänge und der Socketbroker
 
 Wenn Ihre App Verbindungen oder Daten für Sockets empfängt, müssen Sie darauf vorbereitet sein, diese Vorgänge ordnungsgemäß auszuführen, während die App nicht im Vordergrund ist. Hierzu verwenden Sie den Socketbroker. Weitere Informationen zur Verwendung des Socketbrokers finden Sie unter [Netzwerkkommunikation im Hintergrund](network-communications-in-the-background.md).
 
-## Sendevorgänge im Batch
+## <a name="batched-sends"></a>Sendevorgänge im Batch
 
 Ab Windows 10 unterstützt Windows.Networking.Sockets Sendevorgänge im Batch. Dadurch können Sie mehrere Datenpuffer zusammen mit viel niedrigerem Kontextwechselaufwand senden, als wenn Sie die einzelnen Puffer separat senden würden. Dies ist besonders hilfreich, wenn Ihre App VoIP, VPN oder andere Aufgaben ausführt, die mit dem effizienten Verschieben großer Datenmengen verbunden sind.
 
@@ -264,11 +271,11 @@ Es gibt einige wichtige Einschränkungen, die für Schreibvorgänge im Batch in 
 -   Das **FlushAsync**-Muster funktioniert nur ab Windows 10.
 -   Verwenden Sie in anderen Fällen **Task.WaitAll** statt des **FlushAsync**-Musters.
 
-## Portfreigabe für DatagramSocket
+## <a name="port-sharing-for-datagramsocket"></a>Portfreigabe für DatagramSocket
 
 Windows 10 führt eine neue [**DatagramSocketControl**](https://msdn.microsoft.com/library/windows/apps/hh701190)-Eigenschaft ein, [**MulticastOnly**](https://msdn.microsoft.com/library/windows/apps/dn895368). Damit können Sie angeben, dass der betreffende **DatagramSocket** parallel zu anderen Win32- oder WinRT-Multicastsockets vorhanden sein kann, die an die gleiche Adresse/den gleichen Port gebunden sind.
 
-## Bereitstellen eines Clientzertifikats mit der StreamSocket-Klasse
+## <a name="providing-a-client-certificate-with-the-streamsocket-class"></a>Bereitstellen eines Clientzertifikats mit der StreamSocket-Klasse
 
 Die [**Windows.Networking.StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)-Klasse unterstützt die Verwendung von SSL/TLS zum Authentifizieren des Servers, mit dem die App kommuniziert. In bestimmten Fällen muss auch die App selbst mit einem TLS-Clientzertifikat am Server authentifiziert werden. In Windows 10 können Sie ein Clientzertifikat zu dem [**StreamSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226893)-Objekt bereitstellen (dies muss festgelegt werden, bevor der TLS-Handshake gestartet wird). Wenn der Server das Clientzertifikat anfordert, reagiert Windows mit dem bereitgestellten Zertifikat.
 
@@ -281,26 +288,21 @@ socket.Control.ClientCertificate = certificate;
 await socket.ConnectAsync(destination, SocketProtectionLevel.Tls12);
 ```
 
-## Ausnahmen in "Windows.Networking.Sockets"
+## <a name="exceptions-in-windowsnetworkingsockets"></a>Ausnahmen in "Windows.Networking.Sockets"
 
 Der Konstruktor für die [**HostName**](https://msdn.microsoft.com/library/windows/apps/br207113)-Klasse in Verbindung mit Sockets kann eine Ausnahme auslösen, wenn die übergebene Zeichenfolge kein gültiger Hostname ist (enthält Zeichen, die in einem Hostnamen nicht zulässig sind). Wenn eine App vom Benutzer eine Eingabe für das **HostName**-Element erhält, sollte sich der Konstruktor innerhalb eines try/catch-Blocks befinden. Wenn eine Ausnahme ausgelöst wird, kann die App den Benutzer benachrichtigen und einen neuen Hostnamen anfordern.
 
 Der [**Windows.Networking.Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960)-Namespace enthält praktische Hilfsmethoden und Enumerationen für die Behandlung von Fehlern bei der Verwendung von Sockets und WebSockets. Mit ihnen lassen sich spezifische Netzwerkausnahmen in der App unterschiedlich behandeln.
 
-Ein Fehler in einem [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319)-, [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)- oder [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906)-Vorgang wird als **HRESULT**-Wert zurückgegeben. Mit der [**SocketError.GetStatus**](https://msdn.microsoft.com/library/windows/apps/hh701462)-Methode wird ein Netzwerkfehler aus einem Socketvorgang in einen [**SocketErrorStatus**](https://msdn.microsoft.com/library/windows/apps/hh701457)-Enumerationswert konvertiert. Die meisten **SocketErrorStatus**-Enumerationswerte entsprechen einem vom systemeigenen WindowsSockets-Vorgang zurückgegebenen Fehler. Eine App kann nach bestimmten **SocketErrorStatus**-Enumerationswerten filtern, um das App-Verhalten je nach Ausnahmeursache zu ändern.
+Ein Fehler in einem [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319)-, [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)- oder [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906)-Vorgang wird als **HRESULT**-Wert zurückgegeben. Mit der [**SocketError.GetStatus**](https://msdn.microsoft.com/library/windows/apps/hh701462)-Methode wird ein Netzwerkfehler aus einem Socketvorgang in einen [**SocketErrorStatus**](https://msdn.microsoft.com/library/windows/apps/hh701457)-Enumerationswert konvertiert. Die meisten **SocketErrorStatus**-Enumerationswerte entsprechen einem vom systemeigenen Windows Sockets-Vorgang zurückgegebenen Fehler. Eine App kann nach bestimmten **SocketErrorStatus**-Enumerationswerten filtern, um das App-Verhalten je nach Ausnahmeursache zu ändern.
 
 Ein Fehler in einem [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842)- oder [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)-Vorgang wird als **HRESULT**-Wert zurückgegeben. Mit der [**WebSocketError.GetStatus**](https://msdn.microsoft.com/library/windows/apps/hh701529)-Methode wird ein Netzwerkfehler aus einem WebSocket-Vorgang in einen [**WebErrorStatus**](https://msdn.microsoft.com/library/windows/apps/hh747818)-Enumerationswert konvertiert. Die meisten **WebErrorStatus**-Enumerationswerte entsprechen einem vom systemeigenen HTTP-Clientvorgang zurückgegebenen Fehler. Eine App kann nach bestimmten **WebErrorStatus**-Enumerationswerten filtern, um das App-Verhalten je nach Ausnahmeursache zu ändern.
 
 Bei Parameterprüfungsfehlern kann eine App den **HRESULT**-Wert aus der Ausnahme auch verwenden, um ausführlichere Informationen zum zugehörigen Fehler zu erhalten. Mögliche **HRESULT**-Werte sind in der Headerdatei *Winerror.h* aufgeführt. Für die meisten Parameterüberprüfungsfehler wird der **HRESULT**-Wert **E\_INVALIDARG** zurückgegeben.
 
-## Die Winsock-API
+## <a name="the-winsock-api"></a>Die Winsock-API
 
 Sie können [Winsock](https://msdn.microsoft.com/library/windows/desktop/ms740673) auch in Ihrer UWP-App verwenden. Die unterstützte Winsock-API basiert auf der von Windows Phone 8.1 Microsoft Silverlight und unterstützt weiterhin die meisten Typen, Eigenschaften und Methoden (einige APIs, die als veraltet eingestuft wurden, wurden entfernt). Weitere Informationen zur Winsock-Programmierung finden Sie [hier](https://msdn.microsoft.com/library/windows/desktop/ms740673).
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

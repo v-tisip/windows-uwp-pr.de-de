@@ -3,9 +3,16 @@ author: jwmsft
 description: "Im Folgenden werden die XML/XAML-Namespacezuordnungen (xmlns) erläutert, wie sie im Stammelement der meisten XAML-Dateien zu finden sind. Darüber hinaus wird erläutert, wie ähnliche Zuordnungen für benutzerdefinierte Typen und Assemblys erstellt werden."
 title: XAML-Namespaces und Namespacezuordnung
 ms.assetid: A19DFF78-E692-47AE-8221-AB5EA9470E8B
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 8dee2c7bf5ec44f913e34f1150223c1172ba6c02
-ms.openlocfilehash: 626af2ba6e1b8616f8d23419d94e621f3ce7d043
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 11a99a1a68a37b8c60974193c8cab51247a25711
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -111,10 +118,5 @@ Wenn Sie auf angefügte Eigenschaften verweisen, muss der Besitzer-Typ-Teil der 
 * [C#-, VB- und C++-Projektvorlagen für Windows-Runtime-Apps](https://msdn.microsoft.com/library/windows/apps/hh768232)
 * [Migrieren von Silverlight- oder WPF XAML-Code in Windows-Runtime-Apps](https://msdn.microsoft.com/library/windows/apps/br229571)
  
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

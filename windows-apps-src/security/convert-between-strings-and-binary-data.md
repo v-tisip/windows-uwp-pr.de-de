@@ -1,18 +1,25 @@
 ---
 title: "Umwandlung zwischen Zeichenfolgen und binären Daten"
-description: "Dieser Beispielcode zeigt, wie Sie in einer App für die universelle Windows-Plattform (UWP) eine Konvertierung zwischen Zeichenfolgen und binären Daten durchführen."
+description: "Dieser Beispielcode zeigt, wie Sie in einer App für die Universelle Windows-Plattform (UWP) eine Konvertierung zwischen Zeichenfolgen und binären Daten durchführen."
 ms.assetid: AED4C74F-E63B-4980-BB4D-28ACCC1AB58B
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
-ms.openlocfilehash: 06c035e336039fd08cc5f3b9bcbb7d2783cff089
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: e1a1768734bb220fdfa292ff28ff6ef19f22ad41
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Umwandlung zwischen Zeichenfolgen und binären Daten
+# <a name="convert-between-strings-and-binary-data"></a>Umwandlung zwischen Zeichenfolgen und binären Daten
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Dieser Beispielcode zeigt, wie Sie in einer UWP-App (Universelle Windows-Plattform) zwischen Zeichenfolgen und binären Daten konvertieren können.
 
@@ -32,8 +39,3 @@ public void ConvertData()
     IBuffer buffUTF8 = CryptographicBuffer.ConvertStringToBinary(strIn, BinaryStringEncoding.Utf8);
 }
 ```
-
-
-<!--HONumber=Aug16_HO3-->
-
-

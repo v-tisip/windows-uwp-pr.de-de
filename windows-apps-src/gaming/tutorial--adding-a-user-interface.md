@@ -1,27 +1,34 @@
 ---
 author: mtoepke
 title: "Hinzufügen einer Benutzeroberfläche"
-description: Sie haben gesehen, wie das Beispiel das Hauptspielobjekt implementiert, und das grundlegende Renderingframework kennengelernt.
+description: Sie haben gesehen, wie das Beispiel-Spiel das Hauptspielobjekt und das grundlegende Renderingframework implementiert.
 ms.assetid: fa40173e-6cde-b71b-e307-db90f0388485
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Spiele, Benutzeroberfläche, directx"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 4f4ca9626e38ce7449b6476345205d136b3d9a2d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: cb8cb8eae3328a9010553b7f3e041b8f2dbd8c02
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Hinzufügen einer Benutzeroberfläche
+# <a name="add-a-user-interface"></a>Hinzufügen einer Benutzeroberfläche
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Sie haben gesehen, wie das Beispiel das Hauptspielobjekt implementiert, und das grundlegende Renderingframework kennengelernt. Jetzt wollen wir uns ansehen, wie das Spiel dem Spieler Feedback zum Spielzustand gibt. Hier erfahren Sie, wie Sie einfache Menüoptionen und Heads-Up-Anzeigekomponenten zur 3D-Grafikpipelineausgabe hinzufügen.
 
-## Ziel
+## <a name="objective"></a>Ziel
 
 
 -   Hinzufügen einfacher Benutzeroberflächengrafiken und -verhalten zu einem DirectX-Spiel für die universelle Windows-Plattform (UWP)
 
-## Benutzeroberflächenoverlay
+## <a name="the-user-interface-overlay"></a>Benutzeroberflächenoverlay
 
 
 Obwohl in einem DirectX-Spiel viele Möglichkeiten zum Anzeigen von Text und UI-Elementen zur Auswahl stehen, werden wir uns hier auf eine Methode beschränken: [Direct2D](https://msdn.microsoft.com/library/windows/apps/dd370990.aspx) (mit [DirectWrite](https://msdn.microsoft.com/library/windows/desktop/dd368038) für Textelemente).
@@ -34,7 +41,7 @@ Direct2D ist ein Satz von 2D-Zeichnungs-APIs zum Zeichnen von pixelbasierten Gru
 
 In diesem Beispielspiel sind zwei Hauptoberflächenkomponenten enthalten: die Head-Up-Anzeige für den Spielstand und spielinterne Steuerelemente sowie ein Overlay zum Anzeigen von Text und Optionen zum Spielzustand (wie etwa Pauseninformationen und Levelstartoptionen).
 
-### Verwenden von Direct2D für die Heads-Up-Anzeige
+### <a name="using-direct2d-for-a-heads-up-display"></a>Verwenden von Direct2D für die Heads-Up-Anzeige
 
 Dies ist die spielinterne Heads-Up-Anzeige für das Beispielspiel ohne die visuellen Spielelemente. Sie ist einfach und übersichtlich, sodass sich der Spieler auf die Navigation in der 3D-Welt und das Abschießen der Ziele konzentrieren kann. Eine gute Benutzeroberfläche oder Head-Up-Anzeige darf den Spieler niemals daran hindern, Ereignisse im Spiel wahrzunehmen und auf sie zu reagieren.
 
@@ -173,11 +180,11 @@ void GameHud::Render(
 
 In diesem Code wird das für das Overlay eingerichtete Direct2D-Renderziel aktualisiert, um die Änderungen der Trefferzahl, die verbleibende Zeit und die Levelnummer zu aktualisieren. Die Rechtecke werden mit [**DrawRect**](https://msdn.microsoft.com/library/windows/desktop/dd371902)-Aufrufen und die Fadenkreuze mit zwei [**DrawLine**](https://msdn.microsoft.com/library/windows/desktop/dd371895)-Aufrufen gezeichnet.
 
-> **Hinweis**   Ihnen ist vermutlich aufgefallen, dass der Aufruf von **GameHud::Render** einen [**Windows::Foundation::Rect**](https://msdn.microsoft.com/library/windows/apps/br225994)-Parameter verwendet, der die Größe des Hauptfenster-Rechtecks enthält. Dieser Aufruf veranschaulicht einen wichtigen Teil der Oberflächenprogrammierung: Das Abrufen der Fenstergröße in einer als DIPs (geräteunabhängige Pixel) bezeichneten Einheit, wobei ein DIP als 1/96Zoll definiert ist. Beim Zeichnen skaliert Direct2D die Zeichnungseinheiten mithilfe der Dots per Inch (DPI)-Einstellung von Windows in tatsächliche Pixel. Ebenso geben Sie beim Zeichnen von Text mit DirectWrite DIPs anstelle von Punkten für die Schriftgröße an. DIPs werden als Gleitkommazahlen angegeben.
+> **Hinweis**   Ihnen ist vermutlich aufgefallen, dass der Aufruf von **GameHud::Render** einen [**Windows::Foundation::Rect**](https://msdn.microsoft.com/library/windows/apps/br225994)-Parameter verwendet, der die Größe des Hauptfenster-Rechtecks enthält. Dieser Aufruf veranschaulicht einen wichtigen Teil der Oberflächenprogrammierung: Das Abrufen der Fenstergröße in einer als DIPs (geräteunabhängige Pixel) bezeichneten Einheit, wobei ein DIP als 1/96 Zoll definiert ist. Beim Zeichnen skaliert Direct2D die Zeichnungseinheiten mithilfe der Dots per Inch (DPI)-Einstellung von Windows in tatsächliche Pixel. Ebenso geben Sie beim Zeichnen von Text mit DirectWrite DIPs anstelle von Punkten für die Schriftgröße an. DIPs werden als Gleitkommazahlen angegeben.
 
  
 
-### Anzeigen der Spielzustandsinformationen mit einem Overlay
+### <a name="displaying-game-state-information-with-an-overlay"></a>Anzeigen der Spielzustandsinformationen mit einem Overlay
 
 Neben der Heads-Up-Anzeige enthält das Beispielspiel ein Overlay mit fünf Spielzuständen, die alle aus dem Grundtyp eines großen schwarzen Rechtecks bestehen, in dem Text für den Spieler angezeigt wird. (Beachten Sie, dass die Rechtecke für den Bewegungs-/Blickcontroller nicht gezeichnet werden, weil sie in diesen Zuständen nicht aktiv sind.) Diese Overlayzustände sind:
 
@@ -203,9 +210,9 @@ Neben der Heads-Up-Anzeige enthält das Beispielspiel ein Overlay mit fünf Spie
 
 Im Folgenden beschäftigen wir uns damit, wie das Overlay für diese fünf Zustände initialisiert und gezeichnet wird.
 
-### Initialisieren und Zeichnen des Overlays
+### <a name="initializing-and-drawing-the-overlay"></a>Initialisieren und Zeichnen des Overlays
 
-Die fünf expliziten Zustände habe drei Dinge gemeinsam: Sie enthalten alle ein schwarzes Rechteck in der Mitte des Bildschirms als Hintergrund, der angezeigte Text ist entweder Titeltext oder Textkörper, und der Text wird oben im Rechteck in der Schriftart „SegoeUI“ gezeichnet. Die erforderlichen Ressourcen und die Methoden zum Implementieren der Zustände sind daher sehr ähnlich.
+Die fünf expliziten Zustände habe drei Dinge gemeinsam: Sie enthalten alle ein schwarzes Rechteck in der Mitte des Bildschirms als Hintergrund, der angezeigte Text ist entweder Titeltext oder Textkörper, und der Text wird oben im Rechteck in der Schriftart „Segoe UI“ gezeichnet. Die erforderlichen Ressourcen und die Methoden zum Implementieren der Zustände sind daher sehr ähnlich.
 
 Das Beispielsspiel verfügt über vier Methoden (**GameInfoOverlay::Initialize**, **GameInfoOverlay::SetDpi**, **GameInfoOverlay::RecreateDirectXResources** und **GameInfoOverlay::RecreateDpiDependentResources**), die zum Initialisieren, Festlegen der Punkte pro Zoll, erneuten Erstellen der DirectWrite-Ressourcen (Textelemente) bzw. zum Konstruieren des Overlays für die Anzeige verwendet werden. Im Folgenden sehen Sie den Code für diese vier Methoden:
 
@@ -370,7 +377,7 @@ Die **Initialize**-Methode ruft eine Factory von dem an sie übergebenen [**ID2D
 
 Jetzt ist nur noch der Text erforderlich, der im Overlay angezeigt wird.
 
-### Darstellen des Spielzustands im Overlay
+### <a name="representing-game-state-in-the-overlay"></a>Darstellen des Spielzustands im Overlay
 
 Jeder der fünf Overlayzustände im Beispielspiel verfügt über eine entsprechende Methode des **GameInfoOverlay**-Objekts. Diese Methoden zeichnen eine Variante des Overlays, um dem Spieler explizite Informationen zum Spiel selbst mitzuteilen. Diese Kommunikation wird natürlich durch zwei Zeichenfolgen dargestellt: eine Titelzeichenfolge und eine Textkörperzeichenfolge. Da im Beispiel die Ressourcen und das Layout für diese Informationen bereits in der **RecreateDeviceResources**-Methode konfiguriert wurden, müssen nur die spezifischen Zeichenfolgen für den jeweiligen Overlayzustand bereitgestellt werden.
 
@@ -442,7 +449,7 @@ void GameInfoOverlay::SetGameStats(int maxLevel, int hitCount, int shotCount)
 
 Das **GameInfoOverlay**-Objekt wurde mit dem Direct2D-Gerätekontext mithilfe von **Initialize** und **RecreateDirectXResources** initialisiert und konfiguriert. Diese Methode füllt die Titel- und Textkörperrechtecke mithilfe des Hintergrundpinsels mit der Farbe Schwarz. Sie zeichnet mit dem weißen Textpinsel den Text für die Zeichenfolge „High Score“ im Titelrechteck und eine Zeichenfolge mit den aktualisierten Spielzuständen im Textkörperrechteck.
 
-Das Aktionsrechteck wird durch einen anschließenden **GameInfoOverlay::SetAction**-Aufruf von einer Methode des **DirectXApp**-Objekts aktualisiert, das die für **SetAction** erforderlichen Informationen zum Spielzustand bereitstellt, um die passende Meldung für den Spieler anzuzeigen (z.B. „Tap to continue“).
+Das Aktionsrechteck wird durch einen anschließenden **GameInfoOverlay::SetAction**-Aufruf von einer Methode des **DirectXApp**-Objekts aktualisiert, das die für **SetAction** erforderlichen Informationen zum Spielzustand bereitstellt, um die passende Meldung für den Spieler anzuzeigen (z. B. „Tap to continue“).
 
 Das Overlay für einen Zustand wird wie folgt in der **SetGameInfoOverlay**-Methode für **DirectXApp** aufgerufen:
 
@@ -502,11 +509,11 @@ void DirectXApp::SetGameInfoOverlay(GameInfoOverlayState state)
 
 Jetzt kann das Beispielspiel basierend auf dem Spielzustand Textinformationen für den Spieler anzeigen.
 
-### Nächste Schritte
+### <a name="next-steps"></a>Nächste Schritte
 
 Im nächsten Thema zum [Hinzufügen von Steuerungen](tutorial--adding-controls.md) untersuchen wir, wie der Spieler mit dem Beispielspiel interagiert und wie sich der Spielzustand durch Eingaben ändert.
 
-### Vollständiger Beispielcode für diesen Abschnitt
+### <a name="complete-sample-code-for-this-section"></a>Vollständiger Beispielcode für diesen Abschnitt
 
 GameHud.h
 
@@ -1478,7 +1485,7 @@ void GameInfoOverlay::SetAction(GameInfoOverlayCommand action)
 }
 ```
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 
 [Erstellen eines einfachen UWP-Spiels mit DirectX](tutorial--create-your-first-metro-style-directx-game.md)
@@ -1489,10 +1496,5 @@ void GameInfoOverlay::SetAction(GameInfoOverlayCommand action)
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

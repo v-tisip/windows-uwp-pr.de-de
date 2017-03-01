@@ -1,22 +1,29 @@
 ---
 author: mtoepke
-title: So wird&quot;s gemacht - Reaktivieren einer App (DirectX und C++)
+title: So wird&quot;s gemacht - Fortsetzen einer App (DirectX und C++)
 description: "In diesem Thema erfahren Sie, wie wichtige Anwendungsdaten wiederhergestellt werden, wenn das System Ihre DirectX-App für die Universelle Windows-Plattform (UWP) fortsetzt."
 ms.assetid: 5e6bb673-6874-ace5-05eb-f88c045f2178
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, fortsetzen, DirectX"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 978f779eaeb732b549657751c11cd2192728999b
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 0ef4617417526cd2e39ce968e4d682b4015e22d3
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# So wird's gemacht - Reaktivieren einer App (DirectX und C++)
+# <a name="how-to-resume-an-app-directx-and-c"></a>So wird's gemacht - Fortsetzen einer App (DirectX und C++)
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 In diesem Thema erfahren Sie, wie wichtige Anwendungsdaten wiederhergestellt werden, wenn das System Ihre DirectX-App für die Universelle Windows-Plattform (UWP) fortsetzt.
 
-## Registrieren des resuming-Ereignishandlers
+## <a name="register-the-resuming-event-handler"></a>Registrieren des resuming-Ereignishandlers
 
 
 Registrieren Sie die Behandlung des [**CoreApplication::Resuming**](https://msdn.microsoft.com/library/windows/apps/br205859)-Ereignisses, mit dem angegeben wird, dass der Benutzer aus der App und wieder zurück gewechselt hat.
@@ -37,7 +44,7 @@ void App::Initialize(CoreApplicationView^ applicationView)
 }
 ```
 
-## Aktualisieren der angezeigten Inhalte nach einer Unterbrechung
+## <a name="refresh-displayed-content-after-suspension"></a>Aktualisieren der angezeigten Inhalte nach einer Unterbrechung
 
 
 Wenn die App das Resuming-Ereignis behandelt, kann der angezeigte Inhalt aktualisiert werden. Stellen Sie alle mit dem Handler für [**CoreApplication::Suspending**](https://msdn.microsoft.com/library/windows/apps/br205860) gespeicherten Apps wieder her, und setzen Sie die Verarbeitung fort. Für Spieleentwickler: Wenn Sie das Audiomodul angehalten haben, muss es jetzt neu gestartet werden.
@@ -80,12 +87,12 @@ void App::Run()
 }
 ```
 
-## Anmerkungen
+## <a name="remarks"></a>Anmerkungen
 
 
 Das System hält Ihre App an, wenn der Benutzer zu einer anderen App oder zum Desktop wechselt. Wenn der Benutzer wieder zu Ihrer App wechselt, wird die App fortgesetzt. Beim Fortsetzen der App haben die Variablen und Datenstrukturen den gleichen Inhalt wie vor der Unterbrechung. Das System stellt die App exakt so wieder her, wie sie unterbrochen wurde. Dadurch entsteht für den Benutzer der Eindruck, die App wäre im Hintergrund weiter ausgeführt worden. Da die App jedoch unter Umständen längere Zeit angehalten war, müssen sämtliche angezeigten Inhalte, die sich möglicherweise in der Zwischenzeit geändert haben, aktualisiert werden, und alle Rendering- und Audioverarbeitungs-Threads müssen neu gestartet werden. Wenn Sie während eines vorherigen Anhalteereignisses Spielstände gespeichert haben, müssen Sie diese nun wiederherstellen.
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [So wird's gemacht: Anhalten einer App (DirectX und C++)](how-to-suspend-an-app-directx-and-cpp.md)
 * [So wird's gemacht: Aktivieren einer App (DirectX und C++)](how-to-activate-an-app-directx-and-cpp.md)
@@ -96,10 +103,5 @@ Das System hält Ihre App an, wenn der Benutzer zu einer anderen App oder zum De
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

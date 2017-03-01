@@ -1,19 +1,25 @@
 ---
 author: mcleanbyron
-Description: "Durch einen kostenlose, zeitlich begrenzte Testversion Ihrer App mit eingeschränkten Features können Sie Ihre Kunden motivieren, auf die Vollversion Ihrer App zu aktualisieren."
+Description: "Wenn Sie Kunden ermöglichen, Ihre App während eines Testzeitraums kostenlos zu verwenden, können Sie durch die Deaktivierung oder Einschränkung einiger Features während des Testzeitraums Ihre Kunden dazu bringen, ein Upgrade auf die Vollversion Ihrer App auszuführen."
 title: "Ausschließen oder Einschränken von Features in einer Testversion"
 ms.assetid: 1B62318F-9EF5-432A-8593-F3E095CA7056
-keywords: kostenlose Testversion, Beispielcode
+keywords: "Windows 10, UWP, Testversion, In-App-Einkauf, IAP, Windows.ApplicationModel.Store"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
-ms.openlocfilehash: 0d377677237264e2dad290c7d49c47800c255138
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 8b55c837e63792e6da4e684602e79d99ad7cff1e
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="exclude-or-limit-features-in-a-trial-version"></a>Ausschließen oder Einschränken von Features in einer Testversion
 
 
->**Hinweis**&nbsp;&nbsp;In diesem Artikel wird die Verwendung von Mitgliedern des [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)-Namespace erläutert. Wenn Ihre App auf Windows 10, Version 1607 oder höher ausgerichtet ist, wird empfohlen, den [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace zu verwenden, statt des **Windows.ApplicationModel.Store**-Namespace, um eine Testversion zu installieren. Weitere Informationen finden Sie unter [Implementieren einer Testversion der App](implement-a-trial-version-of-your-app.md).
+>**Hinweis**&nbsp;&nbsp;In diesem Artikel wird die Verwendung von Mitgliedern des [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) Namespace erläutert. Wenn Ihre App auf Windows 10, Version 1607 oder höher ausgerichtet ist, wird empfohlen, den [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace zu verwenden, statt des **Windows.ApplicationModel.Store**-Namespace, um eine Testversion zu installieren. Weitere Informationen finden Sie unter [Implementieren einer Testversion der App](implement-a-trial-version-of-your-app.md).
 
 Durch einen kostenlose, zeitlich begrenzte Testversion Ihrer App mit eingeschränkten Features können Sie Ihre Kunden motivieren, auf die Vollversion Ihrer App zu aktualisieren. Bestimmen Sie die einzuschränkenden Features, bevor Sie mit dem Codieren beginnen, und stellen Sie dann sicher, dass diese nur beim Erwerb einer Lizenz für die Vollversion der App verfügbar sind. Außerdem können Sie Features wie Banner oder Wasserzeichen aktivieren, die nur in der Testversion angezeigt werden, bevor ein Kunde Ihre App kauft.
 
@@ -120,9 +126,4 @@ Weitere Informationen zum Beschreiben Ihrer App finden Sie unter [Erstellen von 
  
 
  
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

@@ -3,16 +3,23 @@ author: mtoepke
 title: "Handbücher zum Portieren von Spielen"
 description: Hier finden Sie Anleitungen zum Portieren von vorhandenen Spielen zu Direct3D 11, UWP (Universelle Windows-Plattform) und Windows 10.
 ms.assetid: 1dff815b-d3bd-557e-52c1-58e40f4dd6b1
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Spiele, Portieren, Direct3D 11"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 3cfc483052d12b89cf2707e7b9ebd666e5c49e3d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 5d5dd570dca35bc06c69ba18a986d240ee2a54a5
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Handbücher zum Portieren von Spielen
+# <a name="game-porting-guides"></a>Handbücher zum Portieren von Spielen
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Hier finden Sie Anleitungen zum Portieren von vorhandenen Spielen zu Direct3D 11, UWP (Universelle Windows-Plattform) und Windows 10.
 
@@ -29,7 +36,7 @@ Hier finden Sie Anleitungen zum Portieren von vorhandenen Spielen zu Direct3D 11
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Portieren von DirectX9 zur universellen Windows-Plattform](porting-your-directx-9-game-to-windows-store.md)</p></td>
+<td align="left"><p>[Portieren von DirectX 9 zur universellen Windows-Plattform](porting-your-directx-9-game-to-windows-store.md)</p></td>
 <td align="left"><p>Dieser Abschnitt enthält Artikel, Übersichten und exemplarische Vorgehensweisen zum Portieren von DirectX 9-Spielen zu UWP.</p></td>
 </tr>
 <tr class="even">
@@ -41,7 +48,7 @@ Hier finden Sie Anleitungen zum Portieren von vorhandenen Spielen zu Direct3D 11
 
  
 
-> **Hinweis**: Dieser Artikel ist für Windows10-Entwickler gedacht, die Apps für die Universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows8.x oder Windows Phone8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **Hinweis**: Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die Universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -51,10 +58,5 @@ Hier finden Sie Anleitungen zum Portieren von vorhandenen Spielen zu Direct3D 11
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

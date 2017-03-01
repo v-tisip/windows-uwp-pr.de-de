@@ -3,13 +3,20 @@ author: mcleanbyron
 ms.assetid: 527660fb-8e32-41b4-89cb-d422ed48c69b
 description: "Verwenden Sie die exemplarischen Vorgehensweisen in diesem Abschnitt, um zu erfahren, wie Sie Apps Werbebanner und Video-Interstitialanzeigen mithilfe der Microsoft Advertising-Bibliotheken hinzufügen."
 title: "Exemplarische Vorgehensweisen für Entwickler für die Microsoft Advertising-Bibliotheken"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, anzeigen, werbung, exemplarische vorgehensweisen"
 translationtype: Human Translation
-ms.sourcegitcommit: 20baef9a06b6cdb4ca4f48f71a8e9e2a34192b0f
-ms.openlocfilehash: 40759b1ca7c9e62c985e1ae5844bc3032a2940a2
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: fb1d2e8ea3a5747523f77106b98d033b70df5a95
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Exemplarische Vorgehensweisen für Entwickler für die Microsoft Advertising-Bibliotheken
+# <a name="developer-walkthroughs-for-the-microsoft-advertising-libraries"></a>Exemplarische Vorgehensweisen für Entwickler für die Microsoft Advertising-Bibliotheken
 
 
 
@@ -18,7 +25,7 @@ Die exemplarischen Vorgehensweisen in diesem Abschnitt erläutern, wie Sie Apps 
 
 Vollständige Beispielprojekte, die veranschaulichen, wie Sie JavaScript-/HTML- und XAML-Apps unter Verwendung von C# und C++ Werbebanner und Video-Interstitialanzeigen hinzufügen, finden Sie in den [Anzeigenbeispielen auf GitHub](http://aka.ms/githubads).
 
-## Inhalt dieses Abschnitts
+## <a name="in-this-section"></a>Inhalt dieses Abschnitts
 
 |  Thema    | Beschreibung |               
 |----------|-------|
@@ -33,9 +40,4 @@ Vollständige Beispielprojekte, die veranschaulichen, wie Sie JavaScript-/HTML- 
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

@@ -3,21 +3,29 @@ author: awkoren
 Description: "In diesem Artikel wird erläutert, wie Sie eine Desktop-App signieren, die Sie für die universelle Windows-Plattform (UWP) konvertiert haben."
 Search.Product: eADQiWindows 10XVcnh
 title: "Signieren Sie eine App, die mit der Desktop-zu-UWP-Brücke konvertiert wurde."
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 232c3012-71ff-4f76-a81e-b1758febb596
 translationtype: Human Translation
-ms.sourcegitcommit: fe96945759739e9260d0cdfc501e3e59fb915b1e
-ms.openlocfilehash: 2db978089a6334214c3b4c85dbde8d4a4e846092
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: b5936030f09e52933053f2465659157083b9eec2
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Signieren einer App, die mit der Desktop-Brücke konvertiert wurde
+# <a name="sign-an-app-converted-with-the-desktop-bridge"></a>Signieren einer App, die mit der Desktop-Brücke konvertiert wurde
 
 In diesem Artikel wird erläutert, wie Sie eine Desktop-App signieren, die Sie für die universelle Windows-Plattform (UWP) konvertiert haben. Sie müssen Ihr .appx-Paket mit einem Zertifikat signieren, bevor Sie es bereitstellen können.
 
-## Automatisches Signieren mit Desktop App Converter (DAC)
+## <a name="automatically-sign-using-the-desktop-app-converter-dac"></a>Automatisches Signieren mit Desktop App Converter (DAC)
 
 Verwenden Sie beim Ausführen von DAC das Flag ```-Sign```, um Ihr AppX-Paket automatisch zu signieren. Weitere Informationen finden Sie unter [Vorschau für Desktop App Converter](desktop-to-uwp-run-desktop-app-converter.md).
 
-## Manuelles Signieren mit „SignTool.exe“
+## <a name="manually-sign-using-signtoolexe"></a>Manuelles Signieren mit „SignTool.exe“
 
 Erstellen Sie zunächst ein Zertifikat mit MakeCert.exe. Wenn Sie zur Eingabe eines Kennworts aufgefordert werden, wählen Sie „None“ aus. 
 
@@ -40,13 +48,13 @@ Weitere Informationen finden Sie unter [Signieren eines App-Pakets mit SignTool]
 
 Alle drei oben aufgeführten Tools sind in der Microsoft Windows 10 SDK enthalten. Um diese direkt aufrufen, rufen Sie das Skript ```C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\VsDevCmd.bat``` über eine Befehlszeile auf.
 
-## Häufige Fehler
+## <a name="common-errors"></a>Häufige Fehler
 
-### Nichtübereinstimmung von Herausgeber und Zertifikat führt zum Signtool-Fehler „Fehler: SignerSign() fehlgeschlagen“ (-2147024885/0x8007000b)
+### <a name="publisher-and-cert-mismatch-causes-signtool-error-error-signersign-failed--21470248850x8007000b"></a>Nichtübereinstimmung von Herausgeber und Zertifikat führt zum Signtool-Fehler „Fehler: SignerSign() fehlgeschlagen“ (-2147024885/0x8007000b)
 
 Der Herausgeber-Eintrag im Appx-Manifest muss dem Betreff des Zertifikats entsprechen, mit dem signiert wird.  Mit eine der folgenden Methoden können Sie den Betreff des Zertifikats anzeigen. 
 
-**Option1: PowerShell**
+**Option 1: PowerShell**
 
 Führen Sie folgenden PowerShell-Befehl aus. Als Zertifikatdateien können CER- oder PFX-Dateien verwendet werden, da sie über identische Herausgeberinformationen verfügen.
 
@@ -54,11 +62,11 @@ Führen Sie folgenden PowerShell-Befehl aus. Als Zertifikatdateien können CER- 
 (Get-PfxCertificate <cert_file>).Subject
 ```
 
-**Option2: Datei-Explorer**
+**Option 2: Datei-Explorer**
 
 Doppelklicken Sie im Datei-Explorer auf das Zertifikat, wählen Sie die Registerkarte *Details* aus, und klicken Sie dann in der Liste auf das Feld *Betreff*. Anschließend können Sie die Inhalte kopieren. 
 
-**Option3: CertUtil**
+**Option 3: CertUtil**
 
 Führen Sie **CertUtil** über die Befehlszeile für die PFX-Datei aus, und kopieren Sie das Feld *Betreff* der Ausgabe. 
 
@@ -66,7 +74,7 @@ Führen Sie **CertUtil** über die Befehlszeile für die PFX-Datei aus, und kopi
 certutil -dump <cert_file.pfx>
 ```
 
-### Beschädigte oder falsch formatierte Authenticode-Signaturen
+### <a name="corrupted-or-malformed-authenticode-signatures"></a>Beschädigte oder falsch formatierte Authenticode-Signaturen
 
 Dieser Abschnitt enthält ausführliche Informationen zum Identifizieren von Problemen mit übertragbaren ausführbaren Dateien in Ihrem AppX-Paket, die möglicherweise beschädigte oder falsch formatierte Authenticode-Signaturen enthalten. Ungültige Authenticode-Signaturen auf Ihren übertragbaren ausführbaren Dateien, die ein beliebiges binäres Format (z. B. .exe, .dll, chm usw.) aufweisen können, verhindern, dass Ihr Paket ordnungsgemäß signiert wird und aus einem AppX-Paket bereitgestellt werden kann. 
 
@@ -85,13 +93,8 @@ Beachten Sie, dass SignTool.exe eine Liste der beschädigten oder falsch formati
 
 Um diese falsch formatierten Binärdateien zu korrigieren, stellen Sie sicher, dass sie den oben angegebenen Anforderungen entsprechen.
 
-## Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen
 
 - [SignTool](https://msdn.microsoft.com/library/windows/desktop/aa387764.aspx)
 - [SignTool.exe (Signaturtool)](https://msdn.microsoft.com/library/8s9b9yaz.aspx)
 - [Signieren eines App-Pakets mithilfe von SignTool](https://msdn.microsoft.com/library/windows/desktop/jj835835.aspx)
-
-
-<!--HONumber=Nov16_HO1-->
-
-

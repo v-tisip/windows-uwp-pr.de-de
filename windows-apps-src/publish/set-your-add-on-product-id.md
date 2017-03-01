@@ -1,21 +1,28 @@
 ---
 author: jnHs
-Description: "Beim Erstellen eines neuen Add-Ons im WindowsDevCenter-Dashboard müssen Sie einen Produkttyp angeben und eine Produkt-ID zuweisen."
+Description: "Beim Erstellen eines neuen Add-Ons im Windows Dev Center-Dashboard müssen Sie einen Produkttyp angeben und eine Produkt-ID zuweisen."
 title: "Festlegen von Produkt-ID und Produkttyp für das Add-On"
 ms.assetid: 59497B0F-82F0-4CEE-B628-040EF9ED8D3D
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: e59324aca65cf8baacb085da22a20d952fdb8c9a
-ms.openlocfilehash: 2a469506c8b440e1aa8555ac57b88f2026ae4d8e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: abd6c27367476e5f1da11cde14b7d7f08105ad3e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Festlegen von Produkt-ID und Produkttyp für das Add-On
+# <a name="set-your-add-on-product-type-and-product-id"></a>Festlegen von Produkt-ID und Produkttyp für das Add-On
 
 Ein Add-On muss einer App zugeordnet sein, die bereits im Dashboard erstellt (aber noch nicht unbedingt übermittelt) wurde. Die Schaltfläche zum **Erstellen eines neuen Add-Ons** finden Sie auf der App-Seite **Übersicht** oder **Add-Ons**.
 
 Nachdem Sie auf die Schaltfläche geklickt haben, wird die Seite **Neues Add-On erstellen** angezeigt. Hier müssen Sie einen Produkttyp angeben und eine Produkt-ID zuweisen.
 
-## Produkttyp
+## <a name="product-type"></a>Produkttyp
 
 Zunächst müssen Sie angeben, welche Art von Add-On Sie anbieten. Diese Auswahloption bezieht sich darauf, wie das Add-On vom Kunden genutzt werden kann.
 
@@ -26,11 +33,11 @@ Wenn das Produkt erworben werden kann, verwendet (verbraucht) und dann erneut ge
 Es gibt zwei Arten von konsumierbaren Add-Ons, die Sie auswählen können:
 
 - **Von Entwicklern verwaltetes Endverbraucher-Add-On**: Unterstützt unter allen Betriebssystemversionen. Saldo und Erfüllung müssen in der App verwaltet werden. 
-- **Vom Store verwaltetes Endverbraucher-Add-On:** Der Saldo wird von Microsoft für alle Geräte des Kunden verfolgt, auf denen Windows10 (Version 1607 oder höher) ausgeführt wird; nicht unterstützt unter früheren Betriebssystemversionen. Um diese Option zu verwenden, muss das übergeordnete Produkt mit Windows10 SDK Version14393 oder höher kompiliert werden. Beachten Sie außerdem, dass Sie erst dann vom Store verwaltete Endverbraucher-Add-Ons zum Store übermitteln können, wenn das übergeordnete Produkt veröffentlicht wurde (es ist jedoch möglich, jederzeit die Übermittlung in Ihrem Dashboard zu erstellen und damit bereits zu arbeiten). Sie müssen die Menge für Ihr vom Store verwaltetes Endverbraucher-Add-on auf der **Eigenschaften**-Seite eingeben.
+- **Vom Store verwaltetes Endverbraucher-Add-On:** Der Saldo wird von Microsoft für alle Geräte des Kunden verfolgt, auf denen Windows 10 (Version 1607 oder höher) ausgeführt wird; nicht unterstützt unter früheren Betriebssystemversionen. Um diese Option zu verwenden, muss das übergeordnete Produkt mit Windows 10 SDK Version 14393 oder höher kompiliert werden. Beachten Sie außerdem, dass Sie erst dann vom Store verwaltete Endverbraucher-Add-Ons zum Store übermitteln können, wenn das übergeordnete Produkt veröffentlicht wurde (es ist jedoch möglich, jederzeit die Übermittlung in Ihrem Dashboard zu erstellen und damit bereits zu arbeiten). Sie müssen die Menge für Ihr vom Store verwaltetes Endverbraucher-Add-on auf der **Eigenschaften**-Seite eingeben.
 
-Sie müssen **Dauerhaft** auswählen, wenn das Produkt nur einmal erworben werden kann. Dauerhafte Add-Ons werden häufig verwendet, um zusätzliche Funktionen in einer App freizuschalten. Dauerhafte Add-Ons werden nicht aufgebraucht, Sie können jedoch eine **Produktlebenszeit** festlegen, sodass sie nach einer festgelegten Zeitspanne (von 1 bis 365Tagen) ablaufen. Die standardmäßige **Produktlebenszeit** dauerhafter Add-Ons ist **Unbegrenzt**. Das Add-On läuft also niemals ab. Diese Einstellung kann im Schritt [Add-On-Eigenschaften](enter-add-on-properties.md) der Add-On-Übermittlung geändert werden.
+Sie müssen **Dauerhaft** auswählen, wenn das Produkt nur einmal erworben werden kann. Dauerhafte Add-Ons werden häufig verwendet, um zusätzliche Funktionen in einer App freizuschalten. Dauerhafte Add-Ons werden nicht aufgebraucht, Sie können jedoch eine **Produktlebenszeit** festlegen, sodass sie nach einer festgelegten Zeitspanne (von 1 bis 365 Tagen) ablaufen. Die standardmäßige **Produktlebenszeit** dauerhafter Add-Ons ist **Unbegrenzt**. Das Add-On läuft also niemals ab. Diese Einstellung kann im Schritt [Add-On-Eigenschaften](enter-add-on-properties.md) der Add-On-Übermittlung geändert werden.
 
-## Produkt-ID
+## <a name="product-id"></a>Produkt-ID
 
 Geben Sie eine eindeutige Produkt-ID für das Add-On ein. Dies ist der gleiche Bezeichner, den Sie für den Verweis im [App-Code zum Aufrufen des Add-Ons](https://msdn.microsoft.com/library/windows/apps/mt219684) benötigen.
 
@@ -40,16 +47,11 @@ Folgende Dinge sollten bei der Wahl einer Produkt-ID beachtet werden:
 -   Sie können die Produkt-ID eines Add-Ons nach der Veröffentlichung nicht ändern oder löschen.
 -   Eine Produkt-ID darf maximal 100 Zeichen umfassen.
 -   Folgende Zeichen dürfen nicht in der Produkt-ID enthalten sein: **&lt; &gt; \* % & : \\ ? + ,**
--   Um das Add-On auf allen Geräten anzubieten, dürfen nur alphanumerische Zeichen, Punkte und/oder Unterstriche verwendet werden. Bei Verwendung anderer Zeichen kann das Add-On von Kunden mit Windows Phone8.1 oder früheren Versionen nicht erworben werden.
+-   Um das Add-On auf allen Geräten anzubieten, dürfen nur alphanumerische Zeichen, Punkte und/oder Unterstriche verwendet werden. Bei Verwendung anderer Zeichen kann das Add-On von Kunden mit Windows Phone 8.1 oder früheren Versionen nicht erworben werden.
 -   Eine Produkt-ID muss zwar nicht im Windows Store, aber für Ihr Entwicklerkonto eindeutig sein.
  
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO5-->
 
 

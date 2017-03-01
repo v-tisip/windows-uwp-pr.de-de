@@ -1,35 +1,42 @@
 ---
 title: "Einführung in Zertifikate"
-description: "In diesem Artikel wird die Verwendung von Zertifikaten in Apps für die universelle Windows-Plattform (UWP) beschrieben."
+description: "In diesem Artikel wird die Verwendung von Zertifikaten in Apps für die Universelle Windows-Plattform (UWP) beschrieben."
 ms.assetid: 4EA2A9DF-BA6B-45FC-AC46-2C8FC085F90D
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
-ms.openlocfilehash: e46d31e2f90b9336ea19632099741c1957521578
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 84187230ee8e10c5e9a1a75f67065e202c4bff00
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Einführung in Zertifikate
+# <a name="intro-to-certificates"></a>Einführung in Zertifikate
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 In diesem Artikel wird die Verwendung von Zertifikaten in UWP-Apps (Universelle Windows-Plattform) beschrieben. Mit digitalen Zertifikaten wird ein öffentlicher Schlüssel in der Kryptografie für öffentliche Schlüssel an eine Person, an einen Computer oder an eine Organisation gebunden. Die gebundenen Identitäten werden meist dazu verwendet, eine Entität für die andere zu authentifizieren. Zertifikate werden z. B. häufig dazu verwendet, einen Webserver für einen Benutzer und einen Benutzer für einen Webserver zu authentifizieren. Sie können Zertifikatanforderungen erstellen und ausgestellte Zertifikate installieren oder importieren. Außerdem können Sie ein Zertifikat in einer Zertifikathierarchie registrieren.
 
-### Freigegebene Zertifikatspeicher
+### <a name="shared-certificate-stores"></a>Freigegebene Zertifikatspeicher
 
-UWP-Apps verwenden das neue Isolationsanwendungsmodell, das in Windows8 eingeführt wurde. In diesem Modell werden Apps in einem Low-Level-Betriebssystemkonstrukt ausgeführt, das App-Container genannt wird. In diesem Konstrukt wird verhindert, dass die App auf Ressourcen oder Dateien zugreift, die außerhalb des eigenen Umfangs liegen, wobei der Zugriff auch ausdrücklich erlaubt und dadurch ermöglicht werden kann. In den folgenden Abschnitten werden die Auswirkungen auf die Public Key-Infrastruktur (PKI) erläutert.
+UWP-Apps verwenden das neue Isolationsanwendungsmodell, das in Windows 8 eingeführt wurde. In diesem Modell werden Apps in einem Low-Level-Betriebssystemkonstrukt ausgeführt, das App-Container genannt wird. In diesem Konstrukt wird verhindert, dass die App auf Ressourcen oder Dateien zugreift, die außerhalb des eigenen Umfangs liegen, wobei der Zugriff auch ausdrücklich erlaubt und dadurch ermöglicht werden kann. In den folgenden Abschnitten werden die Auswirkungen auf die Public Key-Infrastruktur (PKI) erläutert.
 
-### Zertifikatspeicher pro App-Container
+### <a name="certificate-storage-per-app-container"></a>Zertifikatspeicher pro App-Container
 
 Zertifikate, die zur Verwendung in einem bestimmten App-Container vorgesehen sind, werden an Containerspeicherorten für einzelne Benutzer und Apps gespeichert. Eine App, die in einem App-Container ausgeführt wird, hat lediglich auf ihren eigenen Zertifikatspeicher Schreibzugriff. Wenn die App einem ihrer Speicher Zertifikate hinzufügt, können diese Zertifikate von anderen Apps nicht gelesen werden. Beim Deinstallieren einer App werden auch alle zugehörigen Zertifikate entfernt. Darüber hinaus hat eine App Lesezugriff auf Zertifikatspeicher des lokalen Computers, bei denen es sich nicht um die MY- und REQUEST-Speicher handelt.
 
-### Cache
+### <a name="cache"></a>Cache
 
 Jeder App-Container verfügt über einen isolierten Cache, in dem er Ausstellerzertifikate für Validierungs-, CRL (Certificate Revocation Lists, Zertifikatsperrliste)- und OCSP (Online Certificate Status-Protokoll)-Antworten speichern kann.
 
-### Freigegebene Zertifikate und Schlüssel
+### <a name="shared-certificates-and-keys"></a>Freigegebene Zertifikate und Schlüssel
 
 Wenn eine Smartcard in ein Lesegerät eingeführt wird, werden die auf der Karte enthaltenen Zertifikate und Schlüssel in den MY-Speicher des Benutzers kopiert. Von dort aus können sie von allen vertrauenswürdigen Anwendungen, die der Benutzer ausführt, freigegeben werden. Standardmäßig haben App-Cntainer jedoch keinen Zugriff auf den MY-Speicher einzelner Benutzer.
 
@@ -43,7 +50,7 @@ Sie können die sharedUserCertificates-Funktion wie im folgenden Beispiel gezeig
 </Capabilities>
 ```
 
-## Zertifikatfelder
+## <a name="certificate-fields"></a>Zertifikatfelder
 
 
 Der Standard für X.509-Zertifikate für öffentliche Schlüssel wurde mit der Zeit überarbeitet. In jeder nachfolgenden Version der Datenstruktur wurden die in den Vorversionen vorhandenen Felder beibehalten. Gleichzeitig wurden weitere hinzugefügt, wie in der folgenden Abbildung veranschaulicht.
@@ -52,7 +59,7 @@ Der Standard für X.509-Zertifikate für öffentliche Schlüssel wurde mit der Z
 
 Manche dieser Felder und Erweiterungen können direkt angegeben werden, wenn Sie mit der [**CertificateRequestProperties**](https://msdn.microsoft.com/library/windows/apps/br212079)-Klasse eine Zertifikatanforderung erstellen. Die meisten sind dazu nicht in der Lage. Diese Felder können von der ausstellenden Behörde aufgefüllt oder leer gelassen werden. Weitere Informationen zu den Feldern finden Sie in den folgenden Abschnitten:
 
-### Felder von Version 1
+### <a name="version-1-fields"></a>Felder von Version 1
 
 | Feld               | Beschreibung                                                                                                                                                                                                                                                                 |
 |---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -66,7 +73,7 @@ Manche dieser Felder und Erweiterungen können direkt angegeben werden, wenn Sie
 
  
 
-### Felder von Version 2
+### <a name="version-2-fields"></a>Felder von Version 2
 
 Ein X.509-Zertifikat der Version 2 enthält die grundlegenden Felder, die in Version 1 definiert sind, sowie zusätzlich die folgenden Felder.
 
@@ -76,7 +83,7 @@ Ein X.509-Zertifikat der Version 2 enthält die grundlegenden Felder, die in Ver
 | Issuer Unique Identifier | Enthält einen eindeutigen Wert, mit dem der X.500-Name des Zertifikatantragstellers eindeutig festgelegt werden kann, wenn dieser im Lauf der Zeit von verschiedenen Entitäten wiederverwendet wird. |
  
 
-### Erweiterungen für Version3
+### <a name="version-3-extensions"></a>Erweiterungen für Version 3
 
 Ein X.509-Zertifikat der Version 3 enthält die Felder, die in Version 1 und Version 2 definiert sind, und es werden Zertifikaterweiterungen hinzugefügt.
 
@@ -96,10 +103,5 @@ Ein X.509-Zertifikat der Version 3 enthält die Felder, die in Version 1 und Ver
 | Subject Alternative Name     | Gibt einen oder mehrere alternative Namen für den Antragsteller der Zertifikatanforderung an. Beispiele für alternative Namen sind E-Mail-Adressen, DNS-Namen, IP-Adressen und URIs.                           |
 | Subject Directory Attributes | Vermittelt identifizierende Attribute, beispielsweise die Nationalität des Zertifikatantragstellers. Der Erweiterungswert ist eine Folge von OID-Wertepaaren.                                                              |
 | Subject Key Identifier       | Unterscheidet zwischen mehreren öffentlichen Schlüsseln im Besitz des Zertifikatantragstellers. Der Erweiterungswert ist normalerweise ein SHA-1-Hash des Schlüssels.                                                                   |
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

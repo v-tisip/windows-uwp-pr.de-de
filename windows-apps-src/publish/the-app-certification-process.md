@@ -1,24 +1,31 @@
 ---
 author: jnHs
-Description: "Nachdem Sie die App-Einreichung fertig gestellt haben und auf „An Store übermitteln” klicken, tritt die App in die Zertifizierungsphase ein."
+Description: "Nachdem Sie die App-Einreichung fertig gestellt und auf „An Store übermitteln” geklickt haben, tritt die App in die Zertifizierungsphase ein."
 title: Der App-Zertifizierungsprozess
 ms.assetid: 0DCB4344-224D-4E5A-899F-FF7A89F23DBC
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 865d71374cf7d678804ce16548edd819faafed33
-ms.openlocfilehash: 07b3631ccc875222b8d2ea30a2b69e2995a09e23
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c63668b9699e641bb89fa79f5febc3397aac78a1
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Der App-Zertifizierungsprozess
+# <a name="the-app-certification-process"></a>Der App-Zertifizierungsprozess
 
 
-Nachdem Sie die App-Einreichung fertig gestellt haben und auf **An Store übermitteln** klicken, tritt die App in die Zertifizierungsphase ein. Dieser Vorgang ist in der Regel innerhalb weniger Stunden abgeschlossen, kann in Einzelfällen aber bis zu drei Arbeitstage dauern. Nach der Zertifizierung der Übermittlung kann es bis zu 16Stunden dauern, bis der App-Eintrag (oder ein Update für eine bereits veröffentlichte App) für Kunden im Store sichtbar wird. Eine Benachrichtigung wird angezeigt, wenn Ihre Übermittlung veröffentlicht wurde und für Kunden verfügbar ist, und der App-Status im Dashboard lautet **Im Store**.
+Nachdem Sie die App-Einreichung fertig gestellt haben und auf **An Store übermitteln** klicken, tritt die App in die Zertifizierungsphase ein. Dieser Vorgang ist in der Regel innerhalb weniger Stunden abgeschlossen, kann in Einzelfällen aber bis zu drei Arbeitstage dauern. Nach der Zertifizierung der Übermittlung kann es bis zu 16 Stunden dauern, bis der App-Eintrag (oder ein Update für eine bereits veröffentlichte App) für Kunden im Store sichtbar wird. Eine Benachrichtigung wird angezeigt, wenn Ihre Übermittlung veröffentlicht wurde und für Kunden verfügbar ist, und der App-Status im Dashboard lautet **Im Store**.
 
-## Vorverarbeitung
+## <a name="preprocessing"></a>Vorverarbeitung
 
 Nach dem erfolgreichen Hochladen der App-Pakete und dem Übermitteln der App zur Zertifizierung werden die Pakete zum Testen in die Warteschlange eingereiht. Es wird eine Meldung angezeigt, wenn während der Vorverarbeitung Fehler erkannt werden. Weitere Informationen zu möglichen Fehlern finden Sie unter [Fehler bei der Einreichung](resolve-submission-errors.md).
 
-## Zertifizierung
+## <a name="certification"></a>Zertifizierung
 
 Während dieser Phase werden mehrere Tests durchgeführt:
 
@@ -28,17 +35,17 @@ Während dieser Phase werden mehrere Tests durchgeführt:
 
 Nach Abschluss des Zertifizierungsprozesses erhalten Sie einen Zertifizierungsbericht, der Aufschluss darüber gibt, ob Ihre App die Zertifizierung bestanden hat. War die Zertifizierung nicht erfolgreich, ist im Bericht angegeben, welcher Test nicht bestanden bzw. welche [Richtlinie](https://msdn.microsoft.com/library/windows/apps/dn764944) nicht erfüllt wurde. Nachdem Sie das Problem behoben haben, können Sie eine neue Einreichung für Ihre App erstellen, um den Zertifizierungsprozess erneut einzuleiten.
 
-## Version
+## <a name="release"></a>Version
 
 Nachdem Ihre App zertifiziert wurde, kann sie in den **Veröffentlichungsprozess** eintreten. Wenn Sie angegeben haben, dass Ihre Übermittlung so schnell wie möglich veröffentlicht werden soll, geschieht dies sofort. Wenn Sie angegeben haben, dass sie erst zu einem bestimmten Datum veröffentlicht werden soll, warten wir bis zu diesem Datum, es sei denn, Sie klicken auf den Link **Veröffentlichungsdatum ändern**. Wenn Sie angegeben haben, dass Sie die Übermittlung manuell veröffentlichen möchten, wird sie erst veröffentlicht, wenn Sie dies ausdrücklich angeben, indem Sie auf die Schaltfläche **Jetzt veröffentlichen** klicken, oder wenn Sie auf den Link **Veröffentlichungsdatum ändern** klicken und ein bestimmtes Datum auswählen.
 
-## Veröffentlichung
+## <a name="publishing"></a>Veröffentlichung
 
 Die Pakete Ihrer App werden digital signiert, damit sie nach ihrer Veröffentlichung nicht manipuliert werden können. Nach Beginn dieser Phase ist ein Abbruch der Einreichung oder eine Änderung des Veröffentlichungsdatums nicht mehr möglich.
 
-Während sich Ihre App in der Veröffentlichungsphase befindet, erfahren Sie über den Link **Details anzeigen** in der Statusspalte für die App-Übermittlung, wann Ihre neuen Pakete und die Details des Store-Eintrags auf jedem der unterstützten Betriebssystemversionen für Kunden zur Verfügung stehen. Ihre App bleibt in der Veröffentlichungsphase, bis die neuen Pakete und Details des Eintrags für alle potenziellen Kunden der App verfügbar sind. Dies kann bis zu 16Stunden dauern. 
+Während sich Ihre App in der Veröffentlichungsphase befindet, erfahren Sie über den Link **Details anzeigen** in der Statusspalte für die App-Übermittlung, wann Ihre neuen Pakete und die Details des Store-Eintrags auf jedem der unterstützten Betriebssystemversionen für Kunden zur Verfügung stehen. Ihre App bleibt in der Veröffentlichungsphase, bis die neuen Pakete und Details des Eintrags für alle potenziellen Kunden der App verfügbar sind. Dies kann bis zu 16 Stunden dauern. 
 
-## Im Store 
+## <a name="in-the-store"></a>Im Store 
 
 Nach erfolgreicher Absolvierung der obigen Schritte ändert sich der Status der Übermittlung von **Veröffentlichung** in **Im Store**. Ihre Übermittlung steht den Kunden nun im Windows Store zum Download zur Verfügung (sofern Sie unter [Verteilung und Sichtbarkeit](set-app-pricing-and-availability.md#distribution-and-visibility) keine andere Option ausgewählt haben). 
 
@@ -52,10 +59,5 @@ Nach erfolgreicher Absolvierung der obigen Schritte ändert sich der Status der 
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

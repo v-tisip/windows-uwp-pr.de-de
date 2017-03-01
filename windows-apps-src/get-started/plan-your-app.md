@@ -3,17 +3,24 @@ author: GrantMeStrength
 title: "Planen einer App für die Universelle Windows-Plattform (UWP)"
 description: "Die Microsoft-Designteams unterteilen den Prozess der App-Erstellung in fünf einzelne Phasen - Konzept, Struktur, Dynamik, Darstellung und Prototyp. Wir möchten Sie dazu ermutigen, einen ähnlichen Prozess anzuwenden, um der Welt neue und ansprechende Erfahrungen zu vermitteln."
 ms.assetid: 9A5189CD-3B97-4967-8E7D-36D25F04F244
+ms.author: jken
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 43214b9e2c786a007b8d9cdef7700e275101aba5
-ms.openlocfilehash: 4d17f7da6969910d2738377174cec9f1c1517dde
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 21e08e22e6c6ebada4445a05f32d2bd37244758f
+ms.lasthandoff: 02/07/2017
 
 ---
 
-#  Planen einer App für die Universelle Windows-Plattform (UWP)
+#  <a name="plan-your-universal-windows-platform-uwp-app"></a>Planen einer App für die Universelle Windows-Plattform (UWP)
 
 Die Microsoft-Designteams unterteilen den Prozess der App-Erstellung in fünf einzelne Phasen - Konzept, Struktur, Dynamik, Darstellung und Prototyp. Wir möchten Sie dazu ermutigen, einen ähnlichen Prozess anzuwenden, um der Welt neue und ansprechende Erfahrungen zu vermitteln.
 
-## Konzept
+## <a name="concept"></a>Konzept
 
 **Eingrenzen der App**
 
@@ -52,7 +59,7 @@ Wenn Ihnen eine Idee gefällt, ist es sehr verlockend, sofort mit der Entwicklun
 
 Der Ausdruck "Trichter" beruht auf der Form. Am breiten Ende des Trichters werden viele Ideen hineingefüllt, und jede Idee wird nur als grobes Designartefakt festgehalten (ggf. in Form einer Skizze oder als Textabsatz). Wenn sich diese Ideensammlung dann in Richtung des schmalen Endes des Trichters bewegt, wird die Anzahl von Ideen reduziert, während Qualität und Umfang der Artefakte zu den Ideen sich erhöhen. Für jedes Artefakt sollten nur die Informationen erfasst werden, die zum Vergleichen der Ideen oder zum Beantworten einer bestimmten Frage wie „Ist dies benutzerfreundlich oder intuitiv?“ erforderlich sind. *Investieren Sie dafür weder weitere Zeit noch Arbeit*. Einige Ideen fallen beim Testen heraus, was kein Problem ist, weil Sie lediglich den Aufwand investiert haben, der zum Einschätzen der Idee nötig war. Ideen, die sich für den weiteren Weg durch den Trichter qualifizieren, werden nach und nach eingehender behandelt. Am Ende steht ein einzelnes Designartefakt, das die Idee repräsentiert, die als Gewinner aus dem Prozess hervorgegangen ist. Die Idee hat gewonnen, weil sie mit den meisten Vorteilen verbunden ist, und nicht nur, weil sie Ihnen zuerst eingefallen ist. So entwerfen Sie die bestmögliche App.
 
-## Struktur
+## <a name="structure"></a>Struktur
 
 
 **Vereinfachung durch Organisation**
@@ -65,7 +72,7 @@ Eine gute Informationsarchitektur erleichtert nicht nur die Umsetzung von Benutz
 
 Verwandte Richtlinien finden Sie unter [Navigationsdesigngrundlagen](../layout/navigation-basics.md).
 
-## Dynamik
+## <a name="dynamics"></a>Dynamik
 
 **Ausführen des Konzepts**
 
@@ -89,7 +96,7 @@ Häufig verwendete Methoden für diesen Schritt:
 -   Bearbeiten und Kommentieren von Reisezielen und Aktivitäten, die von Freunden hinzugefügt wurden
 -   Teilen von Reiserouten mit Freunden und Familie
 
-## Visuelle Elemente
+## <a name="visual"></a>Visuelle Elemente
 
 **Übermitteln von Botschaften ohne Worte**
 
@@ -99,7 +106,7 @@ Nachdem Sie die Dynamik der App festgelegt haben, können Sie Ihre App mit den r
 
 Alle Apps haben eine eigene Identität, und Sie haben freie Hand dabei, welche visuelle Richtung Sie für Ihre App einschlagen möchten. Richten Sie das Erscheinungsbild an den Inhalten aus, und vermeiden Sie, dass das Aussehen die Inhalte diktiert.
 
-## Prototyp
+## <a name="prototype"></a>Prototyp
 
 **Optimieren Sie Ihr Meisterwerk**
 
@@ -107,9 +114,9 @@ Die Prototyperstellung ist eine Phase des *Designtrichters* (der weiter oben ber
 
 Ein wichtiger Rat für neue Entwickler ist: Die Erstellung guter Apps ist ein iterativer Prozess. Es ist ratsam, Prototypen zu einem frühen Zeitpunkt und häufig zu erstellen. Wie bei jedem kreativen Vorgang sind die besten Apps das Produkt intensiver Tests.
 
-## Überlegen, welche Features Sie bereitstellen möchten
+## <a name="decide-what-features-to-include"></a>Überlegen, welche Features Sie bereitstellen möchten
 
-Wenn Sie die Bedürfnisse der Benutzer kennen und wissen, wie Sie sie bei deren Erfüllung unterstützen können, sollten Sie sich mit den speziellen Tools der Toolbox beschäftigen. Erkunden Sie die Universal Windows Platform (UWP), und ermitteln Sie, welche Features die Anforderungen Ihrer App erfüllen. Beachten Sie bei jeder Funktion die [Richtlinien für die Benutzererfahrung](https://msdn.microsoft.com/library/windows/apps/hh465424.aspx).
+Wenn Sie die Bedürfnisse der Benutzer kennen und wissen, wie Sie sie bei deren Erfüllung unterstützen können, sollten Sie sich mit den speziellen Tools der Toolbox beschäftigen. Erkunden Sie die Universal Windows Platform (UWP), und ermitteln Sie, welche Features die Anforderungen Ihrer App erfüllen. Beachten Sie bei jeder Funktion die [Richtlinien für die Benutzererfahrung](https://developer.microsoft.com/windows/apps/design).
 <!--need URL for landing page -->
 
 Allgemeine Methoden:
@@ -159,21 +166,21 @@ Betrachten Sie noch einmal das Beispiel der Reise-App. Damit sich die App besond
 -   Teilen: Benutzer teilen anstehende Reisen und ihre Reiserouten – und damit ihre Vorfreude auf die Reise – mit Freunden und Familie in zahlreichen sozialen Netzwerken.
 -   Suchen: Benutzer suchen und finden Aktivitäten oder Reiseziele in geteilten oder öffentlichen Reiserouten anderer Benutzer, die sie in ihre eigenen Reisen einbeziehen können.
 -   Benachrichtigungen: Benutzer werden benachrichtigt, wenn andere Reisende ihre Reiserouten aktualisieren.
--   Einstellungen: Benutzer konfigurieren die App wunschgemäß, z.B. für welche Reise Benachrichtigungen angezeigt werden sollen oder welche sozialen Gruppen die Reiserouten der Benutzer durchsuchen dürfen.
+-   Einstellungen: Benutzer konfigurieren die App wunschgemäß, z. B. für welche Reise Benachrichtigungen angezeigt werden sollen oder welche sozialen Gruppen die Reiserouten der Benutzer durchsuchen dürfen.
 -   Semantischer Zoom: Benutzer navigieren im Zeitplan ihrer Reise und vergrößern Bereiche, um ausführlichere Details der langen Liste mit geplanten Aktivitäten anzuzeigen.
 -   Benutzerkacheln: Benutzer wählen das Bild aus, das angezeigt werden soll, wenn sie ihre Reise mit Freunden teilen.
 
-## Ermitteln der gewinnbringenden Nutzung von Apps
+## <a name="decide-how-to-monetize-your-app"></a>Ermitteln der gewinnbringenden Nutzung von Apps
 
 Ihnen stehen zahlreiche Möglichkeiten zur Verfügung, Gewinn mit Ihrer App zu erzielen. Wenn Sie Anzeigen oder Angebote in Apps verwenden, sollte die UI das auch unterstützen. Weitere Informationen finden Sie unter [Planen der Monetisierung](../monetize/index.md).
 
-## Entwerfen der UX für Ihre App
+## <a name="design-the-ux-for-your-app"></a>Entwerfen der UX für Ihre App
 
 Hier geht es darum, die Grundlagen richtig festzulegen. Sie wissen nun, wodurch sich Ihre App besonders auszeichnet, und haben herausgefunden, welche Flüsse Sie unterstützen möchten. Jetzt können Sie über die Grundlagen der Benutzeroberfläche (UX) nachdenken.
 
 **Wie sollten UI-Inhalte organisiert werden?**   Die meisten App-Inhalte können in Gruppen oder Hierarchien gegliedert werden. Das Element, das Sie als Gruppierung auf oberster Ebene des Inhalts auswählen, sollte mit den besonderen Stärken übereinstimmen.
 
-Im Beispiel der Reise-App stehen mehrere Methoden zum Gruppieren von Reiserouten zur Verfügung. Liegt der Fokus der App auf dem Entdecken interessanter Reiseziele, können Sie diese beispielsweise basierend auf dem jeweiligen Interessengebiet gruppieren, z. B. Abenteuer, Spaß in der Sonne oder romantische Ausflüge. Da der Fokus der App jedoch auf dem Planen von Reisen mit Freunden liegt, ist es sinnvoller, Reiserouten basierend auf sozialen Kreisen (z.B. Familie, Freunde oder Arbeit) zu gliedern.
+Im Beispiel der Reise-App stehen mehrere Methoden zum Gruppieren von Reiserouten zur Verfügung. Liegt der Fokus der App auf dem Entdecken interessanter Reiseziele, können Sie diese beispielsweise basierend auf dem jeweiligen Interessengebiet gruppieren, z. B. Abenteuer, Spaß in der Sonne oder romantische Ausflüge. Da der Fokus der App jedoch auf dem Planen von Reisen mit Freunden liegt, ist es sinnvoller, Reiserouten basierend auf sozialen Kreisen (z. B. Familie, Freunde oder Arbeit) zu gliedern.
 
 Die Auswahl der Gliederung für Inhalte hilft Ihnen bei der Entscheidung, welche Seiten oder Anzeigen Ihre App benötigt. Weitere Informationen finden Sie in den UI-Grundlagen.
 
@@ -210,7 +217,7 @@ Ausführlichere Informationen zur Verwendung der unterschiedlichen Oberflächen 
 
     -   Auf der [Befehlsleiste](https://msdn.microsoft.com/library/windows/apps/hh465302): Platzieren Sie die Mehrzahl der Befehle auf der Befehlsleiste. Diese bleibt in der Regel ausgeblendet, bis der Benutzer sie durch eine Tippbewegung einblendet.
     -   Auf der App-Canvas: Befindet sich der Benutzer auf einer Seite oder in einer Ansicht mit nur einem Zweck, können Sie Befehle für diesen Zweck direkt auf der Canvas bereitstellen. Es sollte nur sehr wenige dieser Befehle geben.
-    -   In einem [Kontextmenü](https://msdn.microsoft.com/library/windows/apps/hh465308): Sie können Kontextmenüs für Zwischenablageaktionen (z.B. Ausschneiden, Kopieren und Einfügen) oder für Befehle verwenden, die auf Inhalte angewendet werden, die nicht ausgewählt werden können (z.B. Hinzufügen einer Stecknadel zu einem Standort auf einer Karte).
+    -   In einem [Kontextmenü](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/menus): Sie können Kontextmenüs für Zwischenablageaktionen (z. B. Ausschneiden, Kopieren und Einfügen) oder für Befehle verwenden, die auf Inhalte angewendet werden, die nicht ausgewählt werden können (z. B. Hinzufügen einer Stecknadel zu einem Standort auf einer Karte).
 
 **Entscheiden Sie, welches Layout Ihre App in den einzelnen Ansichten erhält.**  Entscheiden Sie, welches Layout Ihre App in den einzelnen Ansichten erhält. Windows unterstützt Hoch- und Querformatansichten sowie das Ändern der App-Größe auf eine beliebige Breite zwischen Vollbild und Mindestbreite. Ihre App soll in jeder Größe, auf jedem Bildschirm und in jeder Ausrichtung richtig angezeigt werden und funktionieren. Dazu müssen Sie das Layout der UI-Elements für unterschiedliche Größen und Ansichten planen. In diesem Fall passt sich die App-UI einfach an die Anforderungen und Einstellungen der Benutzer an.
 
@@ -218,7 +225,7 @@ Ausführlichere Informationen zur Verwendung der unterschiedlichen Oberflächen 
 
 Weitere Informationen zur Berücksichtigung unterschiedlicher Bildschirmgrößen beim Design finden Sie unter <!--[Responsive design 101](designing-in-effective-pixels.md)-->.
 
-## Erzielen eines positiven ersten Eindrucks
+## <a name="make-a-good-first-impression"></a>Erzielen eines positiven ersten Eindrucks
 
 Überlegen Sie, was Benutzer denken, fühlen oder tun sollen, wenn sie Ihre App zum ersten Mal starten. Berücksichtigen Sie dabei ihre besonderen Stärken. Auch wenn Sie keine Gelegenheit dazu haben, den Benutzern persönlich mitzuteilen, wodurch sich Ihre App besonders auszeichnet, können Sie ihnen diese Botschaft vermitteln, wenn Sie einen ersten Eindruck hinterlassen. Nutzen Sie dazu Folgendes:
 
@@ -230,14 +237,9 @@ Weitere Informationen zur Berücksichtigung unterschiedlicher Bildschirmgrößen
 
 **Startseite**  Die Startseite ist die Seite, die nach dem Start der App angezeigt wird. Der Inhalt auf dieser Seite sollte klar definiert sein und sofort deutlich machen, wozu Ihre App dient. Heben Sie einen Bereich der App auf dieser Seite hervor, um dafür zu sorgen, dass Benutzer die restlichen Funktionen dann selbst entdecken möchten. Gestalten Sie die Startseite übersichtlich und ohne überflüssige Elemente, damit Benutzer nicht abgelenkt werden.
 
-## Überprüfen des Entwurfs
+## <a name="validate-your-design"></a>Überprüfen des Entwurfs
 
-Bevor Sie sich der Entwicklung der App widmen, sollten Sie das Design oder den Prototyp anhand von Richtlinien, Benutzereindrücken und Anforderungen überprüfen. Sie vermeiden dadurch möglicherweise eine spätere Überarbeitung. Für jedes Feature ist eine Reihe von Richtlinien für die Benutzerfreundlichkeit verfügbar, die Sie bei der optimalen Gestaltung Ihrer App unterstützen. Außerdem gilt es, eine Reihe von Store-Anforderungen zu erfüllen, um Apps im Windows Store veröffentlichen zu können. Sie können die App mithilfe des [Zertifizierungskits für Windows-Apps](https://dev.windows.com/develop/app-certification-kit) auf die Einhaltung technischer Store-Anforderungen überprüfen. Außerdem können Sie mit den Leistungstools in Microsoft Visual Studio sicherstellen, dass die Benutzer in allen Szenarien von hoher Benutzerfreundlichkeit profitieren.
+Bevor Sie sich der Entwicklung der App widmen, sollten Sie das Design oder den Prototyp anhand von Richtlinien, Benutzereindrücken und Anforderungen überprüfen. Sie vermeiden dadurch möglicherweise eine spätere Überarbeitung. Für jedes Feature ist eine Reihe von Richtlinien für die Benutzerfreundlichkeit verfügbar, die Sie bei der optimalen Gestaltung Ihrer App unterstützen. Außerdem gilt es, eine Reihe von Store-Anforderungen zu erfüllen, um Apps im Windows Store veröffentlichen zu können. Sie können die App mithilfe des [Zertifizierungskits für Windows-Apps](https://developer.microsoft.com/windows/develop/app-certification-kit) auf die Einhaltung technischer Store-Anforderungen überprüfen. Außerdem können Sie mit den Leistungstools in Microsoft Visual Studio sicherstellen, dass die Benutzer in allen Szenarien von hoher Benutzerfreundlichkeit profitieren.
 
 Mithilfe der [detaillierten UX-Richtlinien für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/hh465424) behalten Sie die wichtigen Features der App im Blick. Analysieren Sie die Leistung der einzelnen Szenarien der App mit [Visual Studio-Leistungstools](https://msdn.microsoft.com/library/windows/apps/hh696636.aspx).
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

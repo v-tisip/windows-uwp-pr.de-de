@@ -2,15 +2,21 @@
 author: mcleanbyron
 ms.assetid: FD381669-F962-465E-940B-AED9C8D19C90
 description: Erfahren Sie, wie Sie den Windows.Services.Store-Namespace verwenden, um mit Endverbraucher-Add-Ons zu arbeiten.
-title: "Unterstützen von Endverbraucher-Add-On-Käufen"
-keywords: In-App-Angebot, Codebeispiel
+title: "Unterstützen von Käufen konsumierbarer Add-Ons"
+keywords: "windows 10, uwp, verbrauchbar, add-ons, in-app-käufe, IAPs, Windows.Services.Store"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
-ms.openlocfilehash: 12191a946ec080c8e386191363617a9c437671c5
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d4cc4d526dfbfb2a120bc0a214b5b9287ec1acb3
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="enable-consumable-add-on-purchases"></a>Unterstützen von Endverbraucher-Add-On-Käufen
+# <a name="enable-consumable-add-on-purchases"></a>Unterstützen von Käufen konsumierbarer Add-Ons
 
 Apps für Windows 10, Version 1607 oder höher, können Methoden der [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Klasse im [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace verwenden, um die Erfüllung des Benutzers von Endverbraucher-Add-Ons in Ihren UWP-Apps zu verwalten (Add-Ons werden auch als In-App-Produkte oder IAPs bezeichnet). Verwenden Sie Endverbraucher-Add-ons für Artikel, die gekauft, verwendet und erneut gekauft werden können. Dies ist besonders nützlich für Dinge wie spielinterne Währungen (Gold, Münzen usw.), die gekauft und dann zum Erwerben bestimmter Power-Ups verwendet werden können.
 
@@ -84,9 +90,4 @@ Dieses Beispiel zeigt, wie die [GetConsumableBalanceRemainingAsync](https://msdn
 * [Unterstützen von In-App-Einkäufen von Apps und Add-Ons](enable-in-app-purchases-of-apps-and-add-ons.md)
 * [Implementieren einer Testversion der App](implement-a-trial-version-of-your-app.md)
 * [Store-Beispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

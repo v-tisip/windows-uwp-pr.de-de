@@ -5,9 +5,17 @@ MS-HAID: dev\_enterprise.edp\_hub
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: Windows Information Protection (WIP)
+ms.author: normesta
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, Uwp, Windows Information Protection, Unternehmensdaten, Schutz von Unternehmensdaten, edp, optimierte Apps"
+ms.assetid: 08f0cfad-f15d-46f7-ae7c-824a8b1c44ea
 translationtype: Human Translation
-ms.sourcegitcommit: 8a0ce7282ffaf76bcea94eec5ec3e3ceb99aa5ac
-ms.openlocfilehash: 81bd77d0153c17c80ccdce77332ed57fb751c8ec
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: b9bde047a70d31105680361d34cf71b33f708f93
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -16,6 +24,7 @@ ms.openlocfilehash: 81bd77d0153c17c80ccdce77332ed57fb751c8ec
 __Hinweis__ Die Windows Information Protection (WIP)-Richtlinie kann auf Windows 10, Version 1607 angewendet werden.
 
 WIP schützt Daten, die zu einem Unternehmen gehören, indem Richtlinien durchgesetzt werden, die von dem Unternehmen definiert sind. Wenn Ihre App diese Richtlinien enthält, unterliegen alle Daten von der App den Richtlinien. Dieses Thema unterstützt Sie beim Erstellen von Apps, die diese Richtlinien besser durchsetzen, ohne Auswirkung auf persönliche Daten des Benutzers.
+<iframe src="https://channel9.msdn.com/Blogs/Windows-Development-for-the-Enterprise/Securing-Enterprise-Data-with-Windows-Information-Protection/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
 
 ## <a name="first-what-is-wip"></a>Als Erstes: Was ist WIP?
 
@@ -91,9 +100,4 @@ Wenn Ihre App in einer MAM-Richtlinie enthalten sein soll, müssen Sie sie optim
 
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

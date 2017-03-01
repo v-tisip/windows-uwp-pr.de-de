@@ -3,14 +3,21 @@ author: Jwmsft
 ms.assetid: 0C8DEE75-FB7B-4E59-81E3-55F8D65CD982
 title: "Übersicht über Animationen"
 description: Verwenden Sie die Animationen aus der Windows-Runtime-Animationsbibliothek, um das Windows-Erscheinungsbild in Ihre App zu integrieren.
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 2a08d1def7c4d2fde0ae08eb26076526058e8aae
-ms.openlocfilehash: e3e21c55ea8ddeab0969e304080394b940da010d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 8f7e56f1bca5ecea6078dd70840d083eab6e30dd
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="animations-overview"></a>Übersicht über Animationen
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Mit Animationen in der Windows-Runtime kann Ihre App durch Hinzufügen von Bewegung und Interaktivität optimiert werden. Durch Verwendung der Animationen aus der Windows-Runtime-Animationsbibliothek können Sie das Windows-Erscheinungsbild in Ihre App integrieren. Dieses Thema enthält eine Zusammenfassung der Animationen und Beispiele für typische Szenarien, in denen diese Animationen verwendet werden.
@@ -380,10 +387,5 @@ Der größte Bereich einer App-UI-Definition in XAML, in dem benutzerdefinierte 
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

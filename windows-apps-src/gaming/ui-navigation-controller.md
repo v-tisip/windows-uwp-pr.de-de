@@ -3,9 +3,16 @@ author: mithom
 title: "Benutzeroberflächen-Navigationscontroller"
 description: "Verwenden Sie die Windows.Gaming.Input-Benutzeroberflächen-Navigationscontroller-APIs zum Erkennen und Lesen verschiedener Arten von Eingabegeräten für die Navigation auf der Benutzeroberfläche."
 ms.assetid: 5A14926D-8C2E-4DE8-AAFB-BEEB9BFE91A5
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Spiele, UI, Navigation"
 translationtype: Human Translation
-ms.sourcegitcommit: d0cfc41e5ae79844f3948ed2c326bf9913c066a4
-ms.openlocfilehash: ad10f5758f4a66552f9c4e4750667e8d13f4c09f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 5b5789b90cefb6ba22c2a3d8b5ebbb45be5b0dad
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -229,9 +236,4 @@ Das [InputInterfacingUWP-Beispiel _(github)_](https://github.com/Microsoft/Xbox-
 [uinavigationreading]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.uinavigationreading.aspx
 [requireduinavigationbuttons]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.requireduinavigationbuttons.aspx
 [optionaluinavigationbuttons]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.optionaluinavigationbuttons.aspx
-
-
-
-<!--HONumber=Dec16_HO4-->
-
 

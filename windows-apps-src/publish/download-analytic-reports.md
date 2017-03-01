@@ -3,18 +3,25 @@ author: jnHs
 Description: "Sie können TSV-Dateien mit Analysedaten herunterladen, um Statistikdaten und Informationen offline anzuzeigen."
 title: Herunterladen von Analyseberichten
 ms.assetid: BCA61ABF-16ED-42C3-9014-68629CB5A24F
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 0cd83d5e93952689386bf2ae08fa3bf4e924dbdb
-ms.openlocfilehash: 7ec649d0847e60a6bedadc4164809324a17bf377
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 0480c3a35db6aaab1d8f7682dbb2ca5483bc8f5f
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Herunterladen von Analyseberichten
+# <a name="download-analytics-reports"></a>Herunterladen von Analyseberichten
 
 
 Sie können Dateien mit Analysedaten herunterladen, um Statistikdaten und Informationen offline anzuzeigen.
 
-## So laden Sie einen bestimmten Bericht herunter
+## <a name="to-download-a-specific-report"></a>So laden Sie einen bestimmten Bericht herunter
 
 1.  Wählen Sie im Windows Dev Center-Dashboard im oberen Navigationsbereich **Apps** aus.
 2.  Wählen Sie auf der Seite **Apps** eine Ihrer Apps aus.
@@ -25,11 +32,6 @@ Sie können Dateien mit Analysedaten herunterladen, um Statistikdaten und Inform
 7.  Wählen Sie in den Dropdownlisten **Aggregationsebene** und **Datumsbereich** die für den Bericht gewünschten Optionen aus. Beachten Sie, dass je nach ausgewähltem Berichtstyp unterschiedliche Optionen angezeigt werden können.
 8.  Wählen Sie die Schaltfläche **Berichte herunterladen** aus, speichern Sie die TSV-Datei, und öffnen Sie die Datei in Microsoft Excel oder einem anderen Programm, das das TSV-Dateiformat (durch Tabstopp getrennte Datei) unterstützt.
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 - [Analysen](analytics.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

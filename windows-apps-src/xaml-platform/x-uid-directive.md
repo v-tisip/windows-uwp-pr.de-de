@@ -1,33 +1,40 @@
 ---
 author: jwmsft
-description: "Stellt einen eindeutigen Bezeichner für Markupelemente bereit. Bei UWP-XAML (Universelle Windows-Plattform) wird dieser eindeutige Bezeichner für XAML-Lokalisierungsprozesse und -tools verwendet, z.B. beim Verwenden von Ressourcen aus einer RESW-Ressourcendatei."
+description: "Stellt einen eindeutigen Bezeichner für Markupelemente bereit. Bei UWP-XAML (Universelle Windows-Plattform-XAML) wird dieser eindeutige Bezeichner für XAML-Lokalisierungsprozesse und -tools verwendet, z. B. beim Verwenden von Ressourcen aus einer RESW-Ressourcendatei."
 title: xUid-Direktive
 ms.assetid: 9FD6B62E-D345-44C6-B739-17ED1A187D69
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: c94db1dc1095f53dc836f78768ecc826470343d5
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 3fa6cf80bf569703a7fbbc532c9114bee89c7403
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# x:Uid-Direktive
+# <a name="xuid-directive"></a>x:Uid-Direktive
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
-Stellt einen eindeutigen Bezeichner für Markupelemente bereit. Bei UWP-XAML (Universelle Windows-Plattform) wird dieser eindeutige Bezeichner für XAML-Lokalisierungsprozesse und -tools verwendet, z.B. beim Verwenden von Ressourcen aus einer .resw-Ressourcendatei.
+Stellt einen eindeutigen Bezeichner für Markupelemente bereit. Bei UWP-XAML (Universelle Windows-Plattform) wird dieser eindeutige Bezeichner für XAML-Lokalisierungsprozesse und -tools verwendet, z. B. beim Verwenden von Ressourcen aus einer .resw-Ressourcendatei.
 
-## XAML-Attributsyntax
+## <a name="xaml-attribute-usage"></a>XAML-Attributsyntax
 
 ``` syntax
 <object x:Uid="stringID".../>
 ```
 
-## XAML-Werte
+## <a name="xaml-values"></a>XAML-Werte
 
 | Benennung | Beschreibung |
 |------|-------------|
 | stringID | Eine Zeichenfolge, mit der ein XAML-Element in einer App eindeutig identifiziert wird und die Teil des Ressourcenpfads in einer Ressourcendatei wird. Siehe Anmerkungen.| 
 
-## Hinweise
+## <a name="remarks"></a>Hinweise
 
 Verwenden Sie **x:Uid** zum Identifizieren eines Objektelements im XAML-Code. Normalerweise ist dieses Objektelement eine Instanz einer Steuerelementklasse oder eines anderen Elements, das auf einer Benutzeroberfläche angezeigt wird. Die Beziehung zwischen der in **x:Uid** verwendeten Zeichenfolge und den in einer Ressourcendatei verwendeten Zeichenfolgen wird so angegeben, dass die Zeichenfolgen der Ressourcendatei als **x:Uid** gefolgt von einem Punkt (.) und dann vom Namen einer spezifischen Eigenschaft des Elements, das lokalisiert wird, dargestellt werden. Betrachten Sie das folgende Beispiel:
 
@@ -35,7 +42,7 @@ Verwenden Sie **x:Uid** zum Identifizieren eines Objektelements im XAML-Code. No
 <Button x:Uid="GoButton" Content="Go"/>
 ```
 
-Um Inhalte als Ersatz für den Anzeigetext **Go** festzulegen, müssen Sie eine neue Ressource aus einer Ressourcendatei angeben. Die Ressourcendatei sollte einen Eintrag für die Ressource mit dem Namen „GoButton.Content“ enthalten. [**Content**](https://msdn.microsoft.com/library/windows/apps/br209366) ist in diesem Fall eine bestimmte Eigenschaft, die von der [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265)-Klasse geerbt wird. Sie können auch lokalisierte Werte für die anderen Eigenschaften dieser Schaltfläche bereitstellen, z.B. einen auf einer Ressource basierenden Wert für „GoButton.FlowDirection“. Weitere Informationen zur gemeinsamen Verwendung von **x:Uid** und Ressourcendateien finden Sie unter [Schnellstart: Übersetzen von UI-Ressourcen](https://msdn.microsoft.com/library/windows/apps/xaml/hh965329).
+Um Inhalte als Ersatz für den Anzeigetext **Go** festzulegen, müssen Sie eine neue Ressource aus einer Ressourcendatei angeben. Die Ressourcendatei sollte einen Eintrag für die Ressource mit dem Namen „GoButton.Content“ enthalten. [**Content**](https://msdn.microsoft.com/library/windows/apps/br209366) ist in diesem Fall eine bestimmte Eigenschaft, die von der [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265)-Klasse geerbt wird. Sie können auch lokalisierte Werte für die anderen Eigenschaften dieser Schaltfläche bereitstellen, z. B. einen auf einer Ressource basierenden Wert für „GoButton.FlowDirection“. Weitere Informationen zur gemeinsamen Verwendung von **x:Uid** und Ressourcendateien finden Sie unter [Schnellstart: Übersetzen von UI-Ressourcen](https://msdn.microsoft.com/library/windows/apps/xaml/hh965329).
 
 Die Gültigkeit der Zeichenfolgen für einen **x:Uid**-Wert ist in der Praxis davon abhängig, welche Zeichenfolgen als Bezeichner in einer Ressourcendatei und in einem Ressourcenpfad zulässig sind.
 
@@ -46,10 +53,5 @@ Die von UWP-XAML verwendeten Regeln für die Eindeutigkeit von **x:Uid** untersc
 In einigen Fällen verwenden Sie anstelle der integrierten Funktionen des Paketressourcenindex-Systems (PRI) einen Ressourcenpfad. Jede als **x:Uid**-Wert verwendete Zeichenfolge definiert einen Ressourcenpfad, der mit „ms-resource:///Resources/“ beginnt und die Zeichenfolge **x:Uid** enthält. Am Ende des Pfads stehen die Namen der Eigenschaften, die Sie in einer Ressourcendatei oder anderweitig angeben.
 
 Fügen Sie **x:Uid** nicht in Eigenschaftselemente ein, da dies in Windows-Runtime-XAML nicht zulässig ist.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

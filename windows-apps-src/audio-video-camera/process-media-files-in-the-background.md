@@ -3,15 +3,22 @@ author: drewbatgit
 ms.assetid: B5E3A66D-0453-4D95-A3DB-8E650540A300
 description: In diesem Artikel wird beschrieben, wie Sie den MediaProcessingTrigger und eine Hintergrundaufgabe verwenden, um Mediendateien im Hintergrund zu verarbeiten.
 title: Verarbeiten von Mediendateien im Hintergrund
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: fb0e8a535ff4e27530fa45aca80b21f17a523c7b
-ms.openlocfilehash: 8a65ce9ed9de050bbcee2612bf53c5bfd44ffc72
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c7f3262c30797c8ce447b3e97a5cb7dd6d2ea025
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Verarbeiten von Mediendateien im Hintergrund
+# <a name="process-media-files-in-the-background"></a>Verarbeiten von Mediendateien im Hintergrund
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 In diesem Artikel wird beschrieben, wie Sie [**MediaProcessingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806005) und eine Hintergrundaufgabe verwenden, um Mediendateien im Hintergrund zu verarbeiten.
@@ -24,7 +31,7 @@ Ausführlichere Informationen zu den verschiedenen universellen Windows-App-Feat
 -   [Starten, Fortsetzen und Hintergrundaufgaben](https://msdn.microsoft.com/library/windows/apps/mt227652)
 -   [Kacheln, Signale und Benachrichtigungen](https://msdn.microsoft.com/library/windows/apps/mt185606)
 
-## Erstellen einer Hintergrundaufgabe für die Medienverarbeitung
+## <a name="create-a-media-processing-background-task"></a>Erstellen einer Hintergrundaufgabe für die Medienverarbeitung
 
 Um Ihrer vorhandenen Microsoft Visual Studio-Projektmappe eine Hintergrundaufgabe hinzuzufügen, geben Sie einen Namen für die Komposition ein.
 
@@ -82,7 +89,7 @@ Im Handler für das [**Canceled**](https://msdn.microsoft.com/library/windows/ap
 
 [!code-cs[OnCanceled](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetOnCanceled)]
 
-## Registrieren und Starten der Hintergrundaufgabe
+## <a name="register-and-launch-the-background-task"></a>Registrieren und Starten der Hintergrundaufgabe
 
 Bevor die Hintergrundaufgabe aus der Vordergrund-App gestartet werden kann, müssen Sie die Datei „Package.appmanifest“ der Vordergrund-App aktualisieren, um dem System mitzuteilen, dass Ihre App eine Hintergrundaufgabe verwendet.
 
@@ -140,10 +147,5 @@ Der **OnCompleted**-Ereignishandler wird aufgerufen, wenn die Ausführung der Hi
 
 
 
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

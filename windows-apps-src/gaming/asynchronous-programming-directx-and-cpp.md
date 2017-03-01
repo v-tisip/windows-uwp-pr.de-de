@@ -3,20 +3,27 @@ author: mtoepke
 title: Asynchrone Programmierung (DirectX und C++)
 description: "In diesem Thema werden verschiedene Aspekte behandelt, die Sie beim Verwenden der asynchronen Programmierung und des Threadings mit DirectX berücksichtigen sollten."
 ms.assetid: 17613cd3-1d9d-8d2f-1b8d-9f8d31faaa6b
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Spiele, asynchrone Programmierung, DirectX"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 1faf25f7c7ad7cc96c8490149acf1c430478616c
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: fe3798e475654d4d0ae7773ac26889906d40b3df
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Asynchrone Programmierung (DirectX und C++)
+# <a name="asynchronous-programming-directx-and-c"></a>Asynchrone Programmierung (DirectX und C++)
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Dieses Thema behandelt verschiedene Aspekte, die Sie beim Verwenden der asynchronen Programmierung und des Threadings mit DirectX berücksichtigen sollten.
 
-## Asynchrone Programmierung und DirectX
+## <a name="async-programming-and-directx"></a>Asynchrone Programmierung und DirectX
 
 
 Wenn Sie gerade erste Erfahrungen mit DirectX sammeln oder wenn Sie sogar bereits mit DirectX vertraut sind, sollten Sie Ihre gesamte Grafikverarbeitungspipeline in einen Thread einfügen. In jeder beliebigen Szene eines Spiels gibt es allgemeine Ressourcen wie Bitmaps, Shader und andere Objekte, die einen exklusiven Zugriff erfordern. Genau für diese Ressourcen müssen Sie den Zugriff über parallele Threads hinweg synchronisieren. Es ist schwierig, das Rendering über mehrere Threads zu parallelisieren.
@@ -37,7 +44,7 @@ Ihre App kann diese Komponenten in mehreren gleichzeitigen Threads verwalten. Da
 
  
 
-## Multithreading mit Direct3D-Geräten
+## <a name="multithreading-with-direct3d-devices"></a>Multithreading mit Direct3D-Geräten
 
 
 Multithreading für Gerätekontexte ist nur für Grafikgeräte verfügbar, die eine Direct3D-Featureebene von 11\_0 oder höher unterstützen. Sie können jedoch die Nutzung des leistungsfähigen Grafikprozessors (GPU) auf vielen Plattformen maximieren, z. B. auf speziellen Gaming-Plattformen. Im einfachsten Fall möchten Sie vielleicht das Rendering einer HUD-Überlagerung (Heads-up-Display) vom Rendern der 3D-Szene trennen, sodass beide Komponenten separate parallele Pipelines verwenden. Beide Threads müssen jedoch dasselbe Singlethread-[**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)-Element verwenden, um Ressourcenobjekte (Texturen, Gitter, Shader und andere Objekte) zu erstellen und zu verwalten. Dies erfordert, dass Sie für einen sicheren Zugriff eine Art von Synchronisierungsmechanismus implementieren (z. B. wichtige Abschnitte). Sie können zwar separate Befehlslisten für den Gerätekontext in verschiedenen Threads (für verzögertes Rendering) erstellen, diese Befehlslisten aber nicht gleichzeitig in derselben **ID3D11DeviceContext**-Instanz wiedergeben.
@@ -46,14 +53,14 @@ Jetzt kann Ihre App zum Erstellen von Ressourcenobjekten auch das [**ID3D11Devic
 
 Wenn Ihre App separate Threads für die Verarbeitung von Befehlslisten und zum Anzeigen von Frames unterstützt, möchten Sie wahrscheinlich, dass der Grafikprozessor (GPU) aktiv bleibt. Er soll die Befehlslisten verarbeiten und gleichzeitig Frames zeitnah ohne Störungen oder Verzögerungen anzeigen. In diesem Fall können Sie ein separates [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)-Element für jeden Thread verwenden und Ressourcen (wie Texturen) freigeben, indem Sie diese mit dem D3D11\_RESOURCE\_MISC\_SHARED-Kennzeichen erstellen. In diesem Szenario muss [**ID3D11DeviceContext::Flush**](https://msdn.microsoft.com/library/windows/desktop/ff476425) für den Verarbeitungsthread aufgerufen werden, um die Ausführung der Befehlsliste abzuschließen, bevor die Ergebnisse der Ressourcenobjektverarbeitung im Anzeigethread angezeigt werden.
 
-## Verzögertes Rendering
+## <a name="deferred-rendering"></a>Verzögertes Rendering
 
 
 Beim verzögerten Rendering werden Grafikbefehle in einer Befehlsliste aufgezeichnet, damit sie zu einem anderen Zeitpunkt ausgeführt werden können. Hierbei wird das Rendering in einem Thread ausgeführt, während die Aufzeichnung der Befehle zum Rendern in zusätzlichen Threads erfolgt. Nachdem diese Befehle abgeschlossen wurden, können sie in dem Thread ausgeführt werden, der das endgültige Anzeigeobjekt (Framepuffer, Textur oder andere Grafikausgabe) generiert.
 
 Erstellen Sie mit [**ID3D11Device::CreateDeferredContext**](https://msdn.microsoft.com/library/windows/desktop/ff476505) einen Kontext für verzögertes Rendering (anstatt mit [**D3D11CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082) oder [**D3D11CreateDeviceAndSwapChain**](https://msdn.microsoft.com/library/windows/desktop/ff476083), die einen Kontext für das sofortige Rendering erstellen). Weitere Informationen finden Sie im Thema zum [Sofortigen und verzögerten Rendering](https://msdn.microsoft.com/library/windows/desktop/ff476892).
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 
 * [Einführung in das Multithreading in Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476891)
@@ -64,10 +71,5 @@ Erstellen Sie mit [**ID3D11Device::CreateDeferredContext**](https://msdn.microso
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

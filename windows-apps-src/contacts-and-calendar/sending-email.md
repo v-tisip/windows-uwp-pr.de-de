@@ -4,15 +4,21 @@ description: "Hier erfahren Sie, wie Sie das Dialogfeld zum Verfassen einer E-Ma
 title: E-Mail senden
 ms.assetid: 74511E90-9438-430E-B2DE-24E196A111E5
 keywords: Kontakte, E-Mail, Senden
+ms.author: mhopkins
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 252e144b2436f047f7b0849bb6e5aee87b2e3464
-ms.openlocfilehash: ff09393af072eb8aee8c3001e7323cc20201da70
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: b14f1a0fc77a8b7df241afbb92f4db223545d81f
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# E-Mail senden
+# <a name="send-email"></a>E-Mail senden
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Hier erfahren Sie, wie Sie das Dialogfeld zum Verfassen einer E-Mail starten, damit Benutzer eine E-Mail senden können. Sie können die Felder der E-Mail vor dem Anzeigen des Dialogfelds mit Daten füllen. Die Nachricht wird erst gesendet, wenn Benutzer auf die Schaltfläche „Senden“ tippen.
@@ -23,7 +29,7 @@ Hier erfahren Sie, wie Sie das Dialogfeld zum Verfassen einer E-Mail starten, da
 -   [Zusammenfassung und nächste Schritte](#summary-and-next-steps)
 -   [Verwandte Themen](#related-topics)
 
-## Starten des Dialogfelds zum Verfassen einer E-Mail
+## <a name="launch-the-compose-email-dialog"></a>Starten des Dialogfelds zum Verfassen einer E-Mail
 
 Erstellen Sie ein neues [**EmailMessage**](https://msdn.microsoft.com/library/windows/apps/Dn631270)-Objekt, und legen Sie die Daten fest, die im Dialogfeld zum Verfassen einer E-Mail bereits vorhanden sein sollen. Rufen Sie [**ShowComposeNewEmailAsync**](https://msdn.microsoft.com/library/windows/apps/Dn631269) auf, um das Dialogfeld anzuzeigen.
 
@@ -58,11 +64,11 @@ private async Task ComposeEmail(Windows.ApplicationModel.Contacts.Contact recipi
 }
 ```
 
-## Zusammenfassung und nächste Schritte
+## <a name="summary-and-next-steps"></a>Zusammenfassung und nächste Schritte
 
 In diesem Thema haben Sie erfahren, wie Sie das Dialogfeld zum Verfassen einer E-Mail starten. Informationen zum Auswählen von Kontakten als E-Mail-Empfänger finden Sie unter [Auswählen von Kontakten](selecting-contacts.md). Informationen zum Auswählen einer Datei als E-Mail-Anlage finden Sie unter [**PickSingleFileAsync**](https://msdn.microsoft.com/library/windows/apps/JJ635275).
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Auswählen von Kontakten](selecting-contacts.md)
 * [Fortsetzen von Windows Phone-Apps nach dem Aufrufen einer Dateiauswahl](https://msdn.microsoft.com/library/windows/apps/xaml/Dn614994)
@@ -72,10 +78,5 @@ In diesem Thema haben Sie erfahren, wie Sie das Dialogfeld zum Verfassen einer E
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

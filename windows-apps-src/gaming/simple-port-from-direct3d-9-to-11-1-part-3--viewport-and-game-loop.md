@@ -1,18 +1,25 @@
 ---
 author: mtoepke
 title: Portieren der Spielschleife
-description: "In diesem Thema wird veranschaulicht, wie Sie ein Fenster für ein UWP-Spiel (Universelle Windows-Plattform) implementieren und die Spielschleife portieren. Außerdem wird die Erstellung eines IFrameworkView-Elements zum Steuern eines CoreWindow-Vollbilds erläutert."
+description: "In diesem Thema wird gezeigt, wie Sie ein Fenster für ein UWP-Spiel (Universelle Windows-Plattform) implementieren und die Spielschleife portieren. Außerdem wird die Erstellung eines IFrameworkView-Elements zum Steuern eines CoreWindow-Vollbilds erläutert."
 ms.assetid: 070dd802-cb27-4672-12ba-a7f036ff495c
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Spiele, portieren, Spielschleife, Direct3D 9, DirectX 11"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 8d843d8b22623dfbba3a76eb7ef19a82cc07f04f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 23631bf464095e1d2f2aab97740d89c6a82f4a70
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Portieren der Spielschleife
+# <a name="port-the-game-loop"></a>Portieren der Spielschleife
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 **Zusammenfassung**
 
@@ -23,14 +30,14 @@ ms.openlocfilehash: 8d843d8b22623dfbba3a76eb7ef19a82cc07f04f
 
 In diesem Thema wird veranschaulicht, wie Sie ein Fenster für ein UWP-Spiel (Universelle Windows-Plattform) implementieren und die Spielschleife übertragen. Außerdem wird die Erstellung eines [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)-Elements zum Steuern eines [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)-Vollbilds erläutert. Teil 3 der exemplarischen Vorgehensweise [Portieren einer einfachen Direct3D 9-App zu DirectX 11 und UWP](walkthrough--simple-port-from-direct3d-9-to-11-1.md) .
 
-## Erstellen eines Fensters
+## <a name="create-a-window"></a>Erstellen eines Fensters
 
 
 Zum Einrichten eines Desktopfensters mit einem Direct3D 9-Viewport musste das herkömmliche Fensterframework für Desktop-Apps implementiert werden. Es musste ein HWND-Element erstellt, die Fenstergröße festgelegt, ein Rückruf zur Fensterverarbeitung eingerichtet, die Sichtbarkeit hergestellt werden usw.
 
 Dagegen verfügt die UWP-Umgebung über ein deutlich einfacheres System. Anstatt ein herkömmliches Fenster einzurichten, wird von einem Windows Store-Spiel, für das DirectX verwendet wird, das [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)-Element implementiert. Diese Schnittstelle ist für DirectX-Apps und -Spiele vorhanden, um die direkte Ausführung in einem [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) innerhalb des App-Containers zu ermöglichen.
 
-> **Hinweis**: Von Windows werden verwaltete Zeiger auf Ressourcen bereitgestellt, z.B. auf das Quellanwendungsobjekt und [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225). Informationen finden Sie unter [**Handle to Object Operator (^)**]https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx.
+> **Hinweis**: Von Windows werden verwaltete Zeiger auf Ressourcen bereitgestellt, z. B. auf das Quellanwendungsobjekt und [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225). Informationen finden Sie unter [**Handle to Object Operator (^)**]https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx.
 
  
 
@@ -69,12 +76,12 @@ public:
 };
 ```
 
-## Portieren der Spielschleife
+## <a name="port-the-game-loop"></a>Portieren der Spielschleife
 
 
-Sehen wir uns die Spielschleife unserer Direct3D9-Implementierung an. Dieser Code ist in der main-Funktion der App vorhanden. Mit jeder Iteration dieser Schleife wird eine Fenstermeldung verarbeitet oder ein Frame gerendert.
+Sehen wir uns die Spielschleife unserer Direct3D 9-Implementierung an. Dieser Code ist in der main-Funktion der App vorhanden. Mit jeder Iteration dieser Schleife wird eine Fenstermeldung verarbeitet oder ein Frame gerendert.
 
-Spielschleife im Direct3D9-Desktopspiel
+Spielschleife im Direct3D 9-Desktopspiel
 
 ```cpp
 while(WM_QUIT != msg.message)
@@ -121,10 +128,10 @@ while (true)
 
 Nun verfügen wir über eine UWP-App, von der die gleiche grundlegende Grafikinfrastruktur eingerichtet und der gleiche farbige Würfel wie im DirectX 9-Beispiel gerendert wird.
 
-## Wie geht es weiter?
+## <a name="where-do-i-go-from-here"></a>Wie geht es weiter?
 
 
-Richten Sie ein Lesezeichen für [DirectX11-Portierung – Häufig gestellte Fragen](directx-porting-faq.md) ein.
+Richten Sie ein Lesezeichen für [DirectX 11-Portierung – Häufig gestellte Fragen](directx-porting-faq.md) ein.
 
 Die DirectX-UWP-Vorlagen enthalten eine stabile Direct3D-Geräteinfrastruktur, die bereit für die Nutzung mit Ihrem UWP-Spiel ist. Eine Anleitung zum Auswählen der richtigen Vorlage finden Sie unter [Erstellen eines DirectX-Spieleprojekts aus einer Vorlage](user-interface.md).
 
@@ -140,10 +147,5 @@ Lesen Sie sich die folgenden ausführlichen Artikel zur Entwicklung von Windows 
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

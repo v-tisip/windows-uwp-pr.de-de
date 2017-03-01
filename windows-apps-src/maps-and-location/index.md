@@ -3,16 +3,23 @@ author: msatranjr
 title: "Übersicht über Karten und Position"
 description: "In diesem Abschnitt wird erläutert, wie Sie in Ihrer App Karten anzeigen, Kartendienste verwenden, die Position suchen und einen Geofence einrichten. Außerdem erfahren Sie in diesem Abschnitt, wie die Windows-Karten-App mit einer bestimmten Karte, Route oder detaillierten Wegbeschreibung gestartet wird."
 ms.assetid: F4C1F094-CF46-4B15-9D80-C1A26A314521
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, Karte, Position, Kartendienste
 translationtype: Human Translation
-ms.sourcegitcommit: a3240047ec77ada0c5f6b5586eee2404353889f6
-ms.openlocfilehash: 327185d655d8495901cfa9fa0a99c0af3a8cdae0
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 6ab167cb032cffba11e7e90e3aefe91bd1c21d74
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Übersicht über Karten und Position
+# <a name="maps-and-location-overview"></a>Übersicht über Karten und Position
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 In diesem Abschnitt wird erläutert, wie Sie in Ihrer App Karten anzeigen, Kartendienste verwenden, die Position suchen und einen Geofence einrichten. Außerdem erfahren Sie in diesem Abschnitt, wie die Windows-Karten-App mit einer bestimmten Karte, Route oder detaillierten Wegbeschreibung gestartet wird.
@@ -23,7 +30,7 @@ In diesem Abschnitt wird erläutert, wie Sie in Ihrer App Karten anzeigen, Karte
 
  
 
-## Anzeigen von Karten
+## <a name="display-maps"></a>Anzeigen von Karten
 
 
 Mit APIs aus dem [**Windows.UI.Xaml.Controls.Maps**](https://msdn.microsoft.com/library/windows/apps/dn610751)-Namespace kann Ihre App Karten mit 2D-, 3D- oder Streetside-Ansichten anzeigen. Sie können interessante Orte (POI) auf der Karte mit Ortsmarken, Bildern, Formen oder XAML-UI-Elementen markieren. Außerdem können Sie nebeneinander angeordnete Bilder überlagern oder die Kartenbilder komplett ersetzen.
@@ -38,7 +45,7 @@ Mit APIs aus dem [**Windows.UI.Xaml.Controls.Maps**](https://msdn.microsoft.com/
 
 
 
-## Zugreifen auf Kartendienste
+## <a name="access-map-services"></a>Zugreifen auf Kartendienste
 
 Fügen Sie Ihrer App mithilfe der APIs aus dem [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979)-Namespace Routen, Wegbeschreibungen und Geocodierungsfunktionen hinzu. Sie können außerdem die Offlineverwaltung von Karten für die Benutzer erleichtern, indem die Einstellungs-App direkt auf der entsprechenden Seite gestartet wird.
 
@@ -50,7 +57,7 @@ Fügen Sie Ihrer App mithilfe der APIs aus dem [**Windows.Services.Maps**](https
 | [Durchführen der Geocodierung und umgekehrten Geocodierung](geocoding.md) | Sie konvertieren Adressen in geografische Standorte (Geocodierung) und geografische Standorte in Adressen (umgekehrte Geocodierung), indem Sie die Methoden der [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550)-Klasse im [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979)-Namespace aufrufen. |
 
 
-## Abrufen des Benutzerstandorts
+## <a name="get-the-users-location"></a>Abrufen des Benutzerstandorts
 
 Mit APIs aus dem [**Windows.Devices.Geolocation**](https://msdn.microsoft.com/library/windows/apps/br225603)-Namespace kann Ihre App die aktuelle Position des Benutzers abrufen und Sie über Positionsänderungen benachrichtigen. Diese API-Member werden auch häufig in Parametern der Karten-APIs verwendet. Mit APIs aus dem [**Windows.Devices.Geolocation.Geofencing**](https://msdn.microsoft.com/library/windows/apps/dn263744)-Namespace wird Ihre App benachrichtigt, wenn der Benutzer einen Geofence (einen vordefinierten geografischen Bereich) betritt oder verlässt.
 
@@ -62,13 +69,13 @@ Mit APIs aus dem [**Windows.Devices.Geolocation**](https://msdn.microsoft.com/li
 | [Entwurfsanleitung für Geofencing](guidelines-for-geofencing.md) | Leistungsrichtlinien für Apps, die das Geofencing-Feature verwenden. |
 | [Einrichten eines Geofence](set-up-a-geofence.md) | Richten Sie einen Geofence-Bereich in Ihrer App ein, und erfahren Sie, wie Sie Benachrichtigungen im Vordergrund und Hintergrund behandeln. |
 
-## Starten der Windows-Karten-App
+## <a name="launch-the-windows-maps-app"></a>Starten der Windows-Karten-App
 
 Ihre App kann die Windows-Karten-App starten, wie hier veranschaulicht, um bestimmte Karten und detaillierte Wegbeschreibungen anzuzeigen. Anstatt die Kartenfunktionen direkt in Ihrer eigenen App bereitzustellen, können Sie sie auch über die Windows-Karten-App verfügbar machen. Weitere Informationen finden Sie unter [Starten der Windows-Karten-App](https://msdn.microsoft.com/library/windows/apps/mt228341).
 
 ![Ein Beispiel der Windows-Karten-App.](images/mapnyc.png)
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Beispiel für UWP-Karte](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [UWP-Geolocation-Beispiel](http://go.microsoft.com/fwlink/p/?linkid=533278)
@@ -79,12 +86,4 @@ Ihre App kann die Windows-Karten-App starten, wie hier veranschaulicht, um besti
 * [Entwurfsrichtlinien für Apps mit Berücksichtigung von Datenschutz](https://msdn.microsoft.com/library/windows/apps/hh768223)
 * [Build 2015-Video: Nutzen von Karten und Ortung über Telefon, Tablet und PC in Ihren Windows-Apps](https://channel9.msdn.com/Events/Build/2015/2-757)
 * [Beispiel für eine UWP-App mit Verkehrsinformationen](http://go.microsoft.com/fwlink/p/?LinkId=619982)
-
-
-
-
-
-
-<!--HONumber=Aug16_HO5-->
-
 
