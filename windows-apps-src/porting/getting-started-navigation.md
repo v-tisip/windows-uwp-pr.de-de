@@ -3,17 +3,24 @@ author: mcleblanc
 title: Erste Schritte mit der Navigation
 description: Erste Schritte mit der Navigation
 ms.assetid: F4DF5C5F-C886-4483-BBDA-498C4E2C1BAF
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: daf56299b3a5e81bb756bc9fcb8112da044b00f3
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: febafd9a36f021bdbf06692a34c8691d1008018f
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Erste Schritte: Navigation
+# <a name="getting-started-navigation"></a>Erste Schritte: Navigation
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-## Hinzufügen von Navigation
+## <a name="adding-navigation"></a>Hinzufügen von Navigation
 
 iOS bietet die **UINavigationController**-Klasse als In-App-Navigationshilfe: Sie erstellen eine Hierarchie von **UIViewControllers**, die Ihre App definieren, durch das Drücken und Aufklappen von Ansichten.
 
@@ -78,15 +85,10 @@ Sie können auch die [**CacheSize**](https://msdn.microsoft.com/library/windows/
 
 Weitere Informationen zur Navigation finden Sie unter [Navigation](https://msdn.microsoft.com/library/windows/apps/mt187344) und unter [XAML-Beispiel für Charakteranimationen](http://go.microsoft.com/fwlink/p/?LinkID=242401).
 
-**Hinweis**  Informationen zur Navigation für WindowsStore-Apps mit JavaScript und HTML finden Sie unter [Schnellstart: Verwenden der Einzelseitennavigation](https://msdn.microsoft.com/library/windows/apps/hh452768).
+**Hinweis**  Informationen zur Navigation für Windows Store-Apps mit JavaScript und HTML finden Sie unter [Schnellstart: Verwenden der Einzelseitennavigation](https://msdn.microsoft.com/library/windows/apps/hh452768).
  
-### Nächster Schritt
+### <a name="next-step"></a>Nächster Schritt
 
 [Erste Schritte: Animation](getting-started-animation.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

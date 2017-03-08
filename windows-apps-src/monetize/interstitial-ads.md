@@ -3,15 +3,22 @@ author: mcleanbyron
 ms.assetid: 1f970d38-2338-470e-b5ba-811402752fc4
 description: "Erfahren Sie mehr über die Verwendung von Interstitialwerbung in Windows 10-, Windows 8.1- oder Windows Phone 8.1-Apps mithilfe der Microsoft Advertising-Bibliotheken im Microsoft Store Services SDK."
 title: Interstitialwerbung
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, Anzeigen, Werbung, Interstitial
 translationtype: Human Translation
-ms.sourcegitcommit: 2b5dbf872dd7aad48373f6a6df3dffbcbaee8090
-ms.openlocfilehash: fae0fc57eca3477bf46a6f3ac43ec35781241a6e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: fb1cdd018ed496b59290825ee84d10ac70a0e46d
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="interstitial-ads"></a>Interstitialwerbung
 
-In dieser Schritt-für-Schritt-Einführung wird die Verwendung von Interstitialwerbung in Windows 10-, Windows 8.1- oder Windows Phone 8.1-Apps mithilfe der Micrsosoft Advertising-Bibliotheken im Microsoft Store Services SDK gezeigt.
+In dieser Schritt-für-Schritt-Einführung wird die Verwendung von Interstitialwerbung in Windows 10-, Windows 8.1- oder Windows Phone 8.1-Apps mithilfe der Microsoft Advertising-Bibliotheken im Microsoft Store Services SDK gezeigt.
 
 Vollständige Beispielprojekte, die das Hinzufügen von Interstitialwerbung zu JavaScript-/HTML- und XAML-Apps unter Verwendung von C# und C++ zeigen, finden Sie in den [Anzeigenbeispielen auf GitHub](http://aka.ms/githubads).
 
@@ -230,9 +237,4 @@ Wenn Sie die Microsoft Advertising-Bibliotheken verwenden, können Sie in Ihrem 
  
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

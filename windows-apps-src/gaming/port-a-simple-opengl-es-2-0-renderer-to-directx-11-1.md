@@ -1,20 +1,27 @@
 ---
 author: mtoepke
 title: Portieren eines einfachen OpenGL ES 2.0-Renderers zu Direct3D 11
-description: "Bei der ersten Portierungsübung beginnen wir mit den Grundlagen - Umstellen eines einfachen Renderers für einen sich drehenden Würfel mit Vertexschattierungen von OpenGLES2.0 auf Direct3D, damit er der Vorlage DirectX 11-App (Universelle Windows-App) aus Visual Studio2015 entspricht."
+description: "Bei der ersten Portierungsübung beginnen wir mit den Grundlagen - Umstellen eines einfachen Renderers für einen sich drehenden Würfel mit Vertexschattierungen von OpenGL ES 2.0 auf Direct3D, damit er der Vorlage DirectX 11-App (Universelle Windows-App) aus Visual Studio 2015 entspricht."
 ms.assetid: e7f6fa41-ab05-8a1e-a154-704834e72e6d
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Spiele, Opengl, Direct3D 11, Portieren"
 translationtype: Human Translation
-ms.sourcegitcommit: 814f056eaff5419b9c28ba63cf32012bd82cc554
-ms.openlocfilehash: 307b611eece3de6288d67e1e340368763f26fa2e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 71b4b42d2665cbeb43cbdbe2dbab9119a8f68ce9
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Portieren eines einfachen OpenGL ES 2.0-Renderers zu Direct3D 11
+# <a name="how-to-port-a-simple-opengl-es-20-renderer-to-direct3d-11"></a>So wird's gemacht: Portieren eines einfachen OpenGL ES 2.0-Renderers zu Direct3D 11
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
-In dieser Portierungsübung beginnen wir mit den Grundlagen: Umstellen eines einfachen Renderers für einen sich drehenden Würfel mit Vertexschattierungen von OpenGLES2.0 auf Direct3D, damit er der Vorlage „DirectX11-App (Universelle Windows-App)“ aus Visual Studio2015 entspricht. Beim Durcharbeiten dieses Portierungsprozesses lernen Sie Folgendes:
+In dieser Portierungsübung beginnen wir mit den Grundlagen: Umstellen eines einfachen Renderers für einen sich drehenden Würfel mit Vertexschattierungen von OpenGL ES 2.0 auf Direct3D, damit er der Vorlage „DirectX 11-App (Universelle Windows-App)“ aus Visual Studio 2015 entspricht. Beim Durcharbeiten dieses Portierungsprozesses lernen Sie Folgendes:
 
 -   Portieren einer einfachen Gruppe von Vertexpuffern zu Direct3D-Eingabepuffern
 -   Portieren von uniform-Elementen und Attributen zu Konstantenpuffern
@@ -22,7 +29,7 @@ In dieser Portierungsübung beginnen wir mit den Grundlagen: Umstellen eines ein
 -   Verwenden von HLSL-Semantik bei der Entwicklung von Direct3D-Shadern
 -   Portieren einfacher GLSL zu HLSL
 
-Dieses Thema beginnt nach der Erstellung eines neuen DirectX11-Projekts. Informationen zum Erstellen eines neuen DirectX 11-Projekts finden Sie unter [Erstellen eines neuen DirectX 11-Projekts für die Universelle Windows-Plattform (UWP)](user-interface.md).
+Dieses Thema beginnt nach der Erstellung eines neuen DirectX 11-Projekts. Informationen zum Erstellen eines neuen DirectX 11-Projekts finden Sie unter [Erstellen eines neuen DirectX 11-Projekts für die Universelle Windows-Plattform (UWP)](user-interface.md).
 
 Das über einen dieser Links erstellte Projekt verfügt über den gesamten vorbereiteten Code für die [Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff476345)-Infrastruktur. Sie können sofort damit beginnen, den Renderer von OpenGL ES 2.0 zu Direct3D 11 zu portieren.
 
@@ -81,19 +88,19 @@ Diese Struktur verfügt über eine Instanz und enthält alle erforderlichen Komp
 
  
 
-## Wissenswertes
+## <a name="what-you-need-to-know"></a>Wissenswertes
 
 
-### Technologien
+### <a name="technologies"></a>Technologien
 
 -   [Microsoft Visual C++](http://msdn.microsoft.com/library/vstudio/60k1461a.aspx)
 -   OpenGL ES 2.0
 
-### Voraussetzungen
+### <a name="prerequisites"></a>Voraussetzungen
 
 -   Optional. Sehen Sie sich das Thema [Portieren von EGL-Code zu DXGI und Direct3D](moving-from-egl-to-dxgi.md) an. Lesen Sie sich die Informationen dieses Themas durch, um ein besseres Verständnis der von DirectX bereitgestellten Grafikschnittstelle zu entwickeln.
 
-## <span id="keylinks_steps_heading"></span>Schritte
+## <a name="span-idkeylinksstepsheadingspansteps"></a><span id="keylinks_steps_heading"></span>Schritte
 
 
 <table>
@@ -129,12 +136,12 @@ Diese Struktur verfügt über eine Instanz und enthält alle erforderlichen Komp
 
  
 
-## <span id="additional_resources"></span>Weitere Ressourcen
+## <a name="span-idadditionalresourcesspanadditional-resources"></a><span id="additional_resources"></span>Weitere Ressourcen
 
 
 -   [Vorbereiten der Entwicklungsumgebung für die Entwicklung von UWP-DirectX-Spielen](prepare-your-dev-environment-for-windows-store-directx-game-development.md)
--   [Erstellen eines neuen DirectX11-Projekts für UWP](user-interface.md)
--   [Zuordnen von OpenGLES2.0-Konzepten und -Infrastruktur zu Direct3D11](map-concepts-and-infrastructure.md)
+-   [Erstellen eines neuen DirectX 11-Projekts für UWP](user-interface.md)
+-   [Zuordnen von OpenGL ES 2.0-Konzepten und -Infrastruktur zu Direct3D 11](map-concepts-and-infrastructure.md)
 
  
 
@@ -142,10 +149,5 @@ Diese Struktur verfügt über eine Instanz und enthält alle erforderlichen Komp
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -2,14 +2,21 @@
 author: mcleanbyron
 ms.assetid: E3DF5D11-8791-4CFC-8131-4F59B928A228
 description: "Verwenden Sie diese Methode aus der Windows Store-Übermittlungs-API zum Abrufen von Daten für eine vorhandene Add-On-Übermittlung."
-title: "Abrufen einer Add-On-Übermittlung mit der Windows Store-Übermittlungs-API"
+title: "Abrufen einer Add-On-Übermittlung mithilfe der Windows Store-Übermittlungs-API"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Windows Store-Übermittlungs-API, Add-On-Übermittlung, In-App-Produkt, IAP"
 translationtype: Human Translation
-ms.sourcegitcommit: f52059a37194b78db2f9bb29a5e8959b2df435b4
-ms.openlocfilehash: 887615bfc07549d82a295bae99dd31f722546341
+ms.sourcegitcommit: e5d9d3e08aaae7e349f7aaf23f6683e2ce9a4f88
+ms.openlocfilehash: 2f6211c1ec399c5b6234ee4181dd319130c606b4
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# <a name="get-an-add-on-submission-using-the-windows-store-submission-api"></a>Abrufen einer Add-On-Übermittlung mit der Windows Store-Übermittlungs-API
+# <a name="get-an-add-on-submission-using-the-windows-store-submission-api"></a>Abrufen einer Add-On-Übermittlung mithilfe der Windows Store-Übermittlungs-API
 
 Verwenden Sie diese Methode der Windows Store-Übermittlungs-API zum Abrufen der Daten für eine vorhandene Add-On-Übermittlung (auch als In-App-Produkt oder IAP bezeichnet). Weitere Informationen über den Erstellungsprozess einer Add-On-Übermittlung mithilfe der Windows Store-Übermittlungs-API finden Sie unter [Verwalten von Add-On-Übermittlungen](manage-add-on-submissions.md).
 
@@ -100,7 +107,8 @@ Das folgende Beispiel veranschaulicht den JSON-Antworttext für einen erfolgreic
       "US": "Tier4",
     },
     "sales": [],
-    "priceId": "Free"
+    "priceId": "Free",
+    "isAdvancedPricingModel": "true"
   },
   "targetPublishDate": "2016-03-15T05:10:58.047Z",
   "targetPublishMode": "Immediate",
@@ -151,9 +159,4 @@ Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die A
 * [Aktualisieren einer Add-On-Übermittlung](update-an-add-on-submission.md)
 * [Löschen einer Add-On-Übermittlung](delete-an-add-on-submission.md)
 * [Abrufen des Status einer Add-On-Übermittlung](get-status-for-an-add-on-submission.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

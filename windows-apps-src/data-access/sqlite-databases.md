@@ -3,27 +3,34 @@ author: mcleblanc
 ms.assetid: 5A47301A-2291-4FC8-8BA7-55DB2A5C653F
 title: SQLite-Datenbanken
 description: "SQLite ist ein eingebettetes Datenbankmodul ohne Server. In diesem Artikel wird erläutert, wie die im SDK enthaltene SQLite-Bibliothek verwendet wird und wie Sie Ihre eigene SQLite-Bibliothek in einer Universellen Windows-App verpacken oder aus der Quelle erstellen können."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, SQLite, Datenbank
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 33148e8cfe301c6016d3f8a16bbcc904ca403d0e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 70f0ae8d4f67e0b24199d7dd56ddebe5a643fae5
+ms.lasthandoff: 02/07/2017
 
 ---
-# SQLite-Datenbanken
+# <a name="sqlite-databases"></a>SQLite-Datenbanken
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 SQLite ist ein eingebettetes Datenbankmodul ohne Server. In diesem Artikel wird erläutert, wie die im SDK enthaltene SQLite-Bibliothek verwendet wird und wie Ihre eigene SQLite-Bibliothek in einer universellen Windows-App verpackt oder aus der Quelle erstellt wird.
 
-## Was ist SQLite und wann wird es verwendet?
+## <a name="what-sqlite-is-and-when-to-use-it"></a>Was ist SQLite und wann wird es verwendet?
 
 SQLite ist eine eingebettete Open-Source-Datenbank ohne Server. In den letzten Jahren hat es sich zur dominanten geräteseitigen Technologie für die Speicherung von Daten auf vielen Plattformen und Geräten entwickelt. Universelle Windows-Plattform (UWP) unterstützt und empfiehlt SQLite für den lokalen Speicher in allen Windows 10-Gerätefamilien.
 
-SQLite eignet sich am besten für Telefon-Apps, eingebettete Apps für Windows 10 IoT Core (IoT Core) und als Cache für RDBS-Daten (Relations Database Server) von Unternehmen. Es erfüllt die meisten Anforderungen an den lokalen Datenzugriff, sofern keine umfangreichen gleichzeitigen Schreibvorgänge oder BigData-Szenarios vorliegen, was für die meisten Apps aber unwahrscheinlich ist.
+SQLite eignet sich am besten für Telefon-Apps, eingebettete Apps für Windows 10 IoT Core (IoT Core) und als Cache für RDBS-Daten (Relations Database Server) von Unternehmen. Es erfüllt die meisten Anforderungen an den lokalen Datenzugriff, sofern keine umfangreichen gleichzeitigen Schreibvorgänge oder Big Data-Szenarios vorliegen, was für die meisten Apps aber unwahrscheinlich ist.
 
 In Anwendungen für Medienwiedergabe und Spiele kann SQLite auch als Dateiformat zum Speichern von Katalogen oder anderen Ressourcen verwendet werden, zum Beispiel für die Level eines Spiels, die unverändert von einem Webserver heruntergeladen werden können.
 
-## Hinzufügen von SQLite zu einem UWP-App-Projekt
+## <a name="adding-sqlite-to-a-uwp-app-project"></a>Hinzufügen von SQLite zu einem UWP-App-Projekt
 
 Es gibt drei Möglichkeiten zum Hinzufügen von SQLite zu einem UWP-Projekt.
 
@@ -31,7 +38,7 @@ Es gibt drei Möglichkeiten zum Hinzufügen von SQLite zu einem UWP-Projekt.
 2.  [Einschließen von SQLite in das App-Paket](#including-sqlite-in-the-app-package)
 3.  [Erstellen von SQLite aus der Quelle in Visual Studio](#building-sqlite-from-source-in-visual-studio)
 
-### Verwenden des SDK SQLite
+### <a name="using-the-sdk-sqlite"></a>Verwenden des SDK SQLite
 
 Sie können die im UWP-SDK enthaltene SQLite-Bibliothek verwenden, um die Größe des Anwendungspakets zu reduzieren, und sich für die regelmäßige Aktualisierung der Bibliothek auf die Plattform verlassen. Mit dem SDK SQLite können Sie auch Leistungsvorteile erzielen, z. B. kürzere Startzeiten, sofern die SQLite-Bibliothek mit großer Wahrscheinlichkeit bereits in den Arbeitsspeicher für die Verwendung durch Systemkomponenten geladen wurde.
 
@@ -41,9 +48,9 @@ Um auf das SDK SQLite zu verweisen, schließen Sie den folgenden Header in Ihrem
 
 Konfigurieren Sie das Projekt zur Verknüpfung mit winsqlite3.lib. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und wählen Sie **Eigenschaften** &gt; **Linker** &gt; **Eingabe** aus. Fügen Sie dann winsqlite3.lib zu **Zusätzliche Abhängigkeiten** hinzu.
 
-### 2. Einschließen von SQLite im App-Paket
+### <a name="including-sqlite-in-the-app-package"></a>Einschließen von SQLite in das App-Paket
 
-Manchmal möchten Sie Ihre eigene Bibliothek möglicherweise packen, anstatt die SDK-Version zu verwenden, wenn Sie z. B. eine bestimmte Version für die plattformübergreifenden Clients verwenden möchten, die sich von der im SDK enthaltenen Version von SQLite unterscheidet.
+Manchmal möchten Sie eventuell Ihre eigene Bibliothek packen, anstatt die SDK-Version zu verwenden, wenn Sie z. B. eine bestimmte Version für die plattformübergreifenden Clients verwenden möchten, die sich von der im SDK enthaltenen Version von SQLite unterscheidet.
 
 Installieren Sie die SQLite-Bibliothek auf der Visual Studio-Erweiterung der universellen Windows-Plattform über SQLite.org oder über das Tool für Erweiterungen und Updates.
 
@@ -53,9 +60,9 @@ Sobald die Erweiterung installiert ist, verweisen Sie in Ihrem Code auf die folg
 
 `#include <sqlite3.h>`
 
-### 3. Erstellen von SQLite aus der Quelle in Visual Studio
+### <a name="building-sqlite-from-source-in-visual-studio"></a>Erstellen von SQLite aus der Quelle in Visual Studio
 
-Manchmal möchten Sie Ihre eigene SQLite-Binärdatei möglicherweise für die Verwendung [verschiedener Compileroptionen](http://www.sqlite.org/compile.html) kompilieren, um die Dateigröße zu reduzieren, die Leistung der Bibliothek zu optimieren, oder die Funktionen auf Ihre Anwendung anzupassen. SQLite stellt Optionen für die Plattformkonfiguration, für das Festlegen von Standardparameterwerten, für das Festlegen von Größeneinschränkungen, für das Steuern von Betriebsmerkmalen, für das Aktivieren von Funktionen, die normalerweise deaktiviert sind, für das Deaktivieren von Features, die normalerweise aktiviert sind, für das Auslassen von Features, für das Aktivieren der Analyse und des Debuggens und für das Verwalten des Arbeitsspeicher-Zuweisungsverhaltens unter Windows bereit.
+Manchmal möchten Sie eventuell Ihre eigene SQLite-Binärdatei für die Verwendung [verschiedener Compileroptionen](http://www.sqlite.org/compile.html) kompilieren, um die Dateigröße zu reduzieren, die Leistung der Bibliothek zu optimieren oder die Funktionen für Ihre Anwendung anzupassen. SQLite stellt Optionen für die Plattformkonfiguration, für das Festlegen von Standardparameterwerten, für das Festlegen von Größeneinschränkungen, für das Steuern von Betriebsmerkmalen, für das Aktivieren von Funktionen, die normalerweise deaktiviert sind, für das Deaktivieren von Features, die normalerweise aktiviert sind, für das Auslassen von Features, für das Aktivieren der Analyse und des Debuggens und für das Verwalten des Arbeitsspeicher-Zuweisungsverhaltens unter Windows bereit.
 
 *Hinzufügen einer Quelle zu einem Visual Studio-Projekt*
 
@@ -67,7 +74,7 @@ Verwenden Sie immer SQLITE\_OS\_WINRT und SQLITE\_API=\_\_declspec(dllexport) zu
 
 ![Bildschirm mit den SQLite-Eigenschaftsseiten](./images/property-pages.png)
 
-## Verwalten einer SQLite-Datenbank
+## <a name="managing-a-sqlite-database"></a>Verwalten einer SQLite-Datenbank
 
 SQLite-Datenbanken können mit den SQLite-C-APIs erstellt, aktualisiert und gelöscht werden. Weitere Informationen zur SQLite-C-API finden Sie auf der SQLite.org-Seite unter [Einführung in die SQLite-C/C++-Schnittstelle](http://www.sqlite.org/cintro.html).
 
@@ -88,13 +95,4 @@ Es gibt sechs Schnittstellen zum Ausführen von Datenbankvorgängen für diese O
  
 
  
-
-
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

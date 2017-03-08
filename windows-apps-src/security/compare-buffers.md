@@ -1,18 +1,25 @@
 ---
 title: Vergleichen von Puffern
-description: "Dieser Beispielcode zeigt, wie Sie Puffer in einer App für die universelle Windows-Plattform (UWP) vergleichen."
+description: "Dieser Beispielcode zeigt, wie Sie Puffer in einer App für die Universelle Windows-Plattform (UWP) vergleichen."
 ms.assetid: CB086E51-544A-470D-B7C8-C055271CD615
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
-ms.openlocfilehash: 6c55e0dec2198110e0ddcbad743b04439cb3435e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 95996b4d25e6808b636b69998891c72975ac9ae2
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Vergleichen von Puffern
+# <a name="compare-buffers"></a>Vergleichen von Puffern
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Dieser Beispielcode zeigt, wie Sie Puffer in einer Universellen Windows-Plattform (UWP)-App vergleichen können.
 
@@ -48,8 +55,3 @@ public void CompareBuffers()
     Boolean bVal_2 = CryptographicBuffer.Compare(buff1, buff3);
 }
 ```
-
-
-<!--HONumber=Aug16_HO3-->
-
-

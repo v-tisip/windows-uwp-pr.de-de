@@ -1,10 +1,18 @@
 ---
 author: TylerMSFT
 title: "Starten einer App auf einem Remotegerät"
-description: Learn how to launch an app on a remote device using Project "Rome".
+description: "Erfahren Sie, wie Sie mithilfe von Projekt „Rome“ eine App auf einem Remotegerät starten können."
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
+ms.assetid: 54f6a33d-a3b5-4169-8664-653dbab09175
 translationtype: Human Translation
-ms.sourcegitcommit: 4e94ee5b3c56f3ec20e3592b97348c291297a670
-ms.openlocfilehash: d429ea4a6f8d52445c99cb170bb41c3fc1515dde
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: e3ef31ed9a90122ae0634274ac5794e67017bc2f
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -59,13 +67,8 @@ Das [**RemoteLaunchUriStatus**](https://msdn.microsoft.com/library/windows/apps/
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-[API-Referenz für Remotesysteme](https://msdn.microsoft.com/en-us/library/windows/apps/Windows.System.RemoteSystems)  
+[API-Referenz für Remotesysteme](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)  
 [Übersicht über verbundene Apps und Geräte (Projekt „Rome“)](connected-apps-and-devices.md)  
 [Entdecken von Remotegeräten](discover-remote-devices.md)  
 Das [Beispiel für Remotesysteme](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/RemoteSystems) zeigt die Vorgehensweise zum Erkennen eines Remotesystems, Starten einer App auf einem Remotesystem und Verwenden von App-Diensten zum Senden von Nachrichten zwischen Apps, die auf zwei Systemen ausgeführt werden.
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

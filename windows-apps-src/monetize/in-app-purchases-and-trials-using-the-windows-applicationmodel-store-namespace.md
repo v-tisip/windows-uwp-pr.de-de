@@ -2,10 +2,17 @@
 author: mcleanbyron
 ms.assetid: 32572890-26E3-4FBB-985B-47D61FF7F387
 description: "Erfahren Sie, wie Sie In-App-Käufe und Testversionen in UWP-Apps aktivieren, die für Versionen vor Windows 10, Version 1607 bestimmt sind."
-title: "In-App-Käufe und Testversionen, die den Windows.ApplicationModel.Store-Namespace verwenden"
+title: "In-App-Käufe und Testversionen mit dem Windows.ApplicationModel.Store-Namespace"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "uwp, in-app-käufe, IAPs, add-ons, testversionen, Windows.ApplicationModel.Store"
 translationtype: Human Translation
-ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
-ms.openlocfilehash: ee2a52a54be8510b962f1ef5c40570f3836d28c3
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 787007b870675749d96afa59a6e9cb5f3be68991
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -537,9 +544,4 @@ Dieses Element beschreibt ein konsumierbares Add-On. **Product** ist ein optiona
 |  **TransactionId**  |     Ja       |   Enthält eine GUID (als Zeichenfolge), die von der App verwendet wird, um die Kauftransaktion für ein konsumierbares Add-On während der Ausführung nachzuverfolgen. Weitere Informationen finden Sie unter [Käufe von konsumierbaren In-App-Produkten aktivieren](enable-consumable-in-app-product-purchases.md).            |
 |  **Status**  |      Ja      |  Enthält die Zeichenfolge, die von der App verwendet wird, um den Ausführungsstatus eines konsumierbaren Add-Ons anzugeben. Werte können **Active**, **PurchaseReverted**, **PurchasePending** oder **ServerError** sein.             |
 |  **OfferId**  |     Nein       |    Enthält die Zeichenfolge, die von der App zur Identifizierung der Kategorie verwendet wird, zu der das konsumierbare Add-On gehört. Dies stellt Unterstützung für große Artikelkataloge bereit, wie unter [Verwalten eines großen Katalogs mit In-App-Produkten](manage-a-large-catalog-of-in-app-products.md) beschrieben.           |
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

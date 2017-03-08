@@ -1,21 +1,28 @@
 ---
 author: Jwmsft
-Description: Media Player wird zum Anzeigen und Wiedergeben von Videos, Audiodateien und Bildern verwendet.
+Description: Der Media Player wird zum Anzeigen und Wiedergeben von Videos, Audiodateien und Bildern verwendet.
 title: Media Player
 ms.assetid: 9AABB5DE-1D81-4791-AB47-7F058F64C491
 dev.assetid: AF2F2008-9B53-430C-BBC3-8888F631B0B0
 label: Media player
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 155f1712beb70d2a1fc93809ddc254e8f6e6f4a2
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 2131b6db9d9d72b574a0d0bed7c07aef7fcc4f37
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="media-player"></a>Media Player
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Der Media Player wird verwendet, um Videos und Audio anzuzeigen und zu hören. Die Medienwiedergabe kann inline (eingebettet auf einer Seite oder mit einer Gruppe von anderen Steuerelementen) oder in einer dedizierten Vollbildansicht erfolgen. Sie können die Schaltflächen des Players ändern, den Hintergrund der Steuerelementleiste ändern und Layouts wie gewünscht anordnen. Beachten Sie jedoch, dass Benutzer eine Reihe grundlegender Steuerelemente (Wiedergabe/Pause, Zurückspringen, Vorwärts springen) erwarten.
+Der Media Player wird verwendet, um Videos und Audiodateien anzuzeigen und zu hören. Die Medienwiedergabe kann inline (eingebettet auf einer Seite oder mit einer Gruppe von anderen Steuerelementen) oder in einer dedizierten Vollbildansicht erfolgen. Sie können die Schaltflächen des Players ändern, den Hintergrund der Steuerelementleiste ändern und Layouts wie gewünscht anordnen. Beachten Sie jedoch, dass Benutzer eine Reihe grundlegender Steuerelemente (Wiedergabe/Pause, Zurückspringen, Vorwärts springen) erwarten.
 
 ![Media Player-Element mit Transportsteuerelementen](images/controls/mtc_double_video_inprod.png)
 
@@ -380,9 +387,4 @@ Die Standardsteuerelemente wurden für die Medienwiedergabe optimiert. Sie könn
 
 - [Befehlsdesigngrundlagen für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/dn958433)
 - [Grundlagen des Inhaltsdesigns für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/dn958434)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

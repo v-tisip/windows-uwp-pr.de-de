@@ -1,16 +1,23 @@
 ---
 author: Xansky
-description: "Beschreibt die Schritte, mit denen Sie die Verwendbarkeit Ihrer UWP-App (Universelle Windows-Plattform) sicherstellen können, wenn ein Design mit hohem Kontrast aktiviert ist."
+description: "Beschreibt die Schritte, mit denen Sie die Verwendbarkeit Ihrer UWP-App (App für die Universelle Windows-Plattform) sicherstellen können, wenn ein Design mit hohem Kontrast aktiviert ist."
 ms.assetid: FD7CA6F6-A8F1-47D8-AA6C-3F2EC3168C45
 title: Designs mit hohem Kontrast
 template: detail.hbs
+ms.author: mhopkins
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: f3da82cab8813653a6ee999976983937649b42b2
-ms.openlocfilehash: 30785998d11f09ef94f33789e3e74b0933d9c83e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: b75d36d6a537f465545729cf90b36fdde1f552e0
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Designs mit hohem Kontrast  
+# <a name="high-contrast-themes"></a>Designs mit hohem Kontrast  
 
 Windows unterstützt Designs mit hohem Kontrast für das Betriebssystem und Apps, die von Benutzern aktiviert werden können. Designs mit hohem Kontrast verwenden eine kleine Palette von Farbkombinationen mit hohem Farbkontrast, durch die die Benutzeroberfläche leichter zu erkennen ist.
 
@@ -38,7 +45,7 @@ Wird die Farbe `#E6E6E6` im ersten Beispiel inline festgelegt, behält das Raste
 
 Im zweiten Beispiel wird die [**{ThemeResource}-Markuperweiterung**](../xaml-platform/themeresource-markup-extension.md) verwendet, um auf eine Farbe in der [**ThemeDictionaries**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.resourcedictionary.themedictionaries.aspx)-Sammlung zu verweisen, bei der es sich um eine dedizierte Eigenschaft eines [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/BR208794)-Elements handelt. Die ThemeDictionaries-Sammlung ermöglicht es XAML, Farben automatisch basierend auf dem aktuellen Design des Benutzers auszutauschen.
 
-## Designverzeichnisse
+## <a name="theme-dictionaries"></a>Designverzeichnisse
 
 Wenn Sie die Systemstandardfarbe ändern müssen, erstellen Sie eine ThemeDictionaries-Sammlung für Ihre App.
 
@@ -77,7 +84,7 @@ Im letzten Schritt bestimmen Sie, welche Farbe für hohen Kontrast verwendet wer
 > [!NOTE]
 > „HighContrast” ist nicht der einzige verfügbare Schlüsselname. Außerdem gibt es „HighContrastBlack”, „HighContrastWhite” und „HighContrastCustom”. In den meisten Fällen ist „HighContrast” ausreichend.
 
-## Farben mit hohem Kontrast
+## <a name="high-contrast-colors"></a>Farben mit hohem Kontrast
 
 Auf der Seite *Einstellungen > Erleichterte Bedienung > Hoher Kontrast* sind standardmäßig vier Designs mit hohem Kontrast verfügbar. 
 
@@ -152,7 +159,7 @@ Später können Sie dann in Ihrer App den Hintergrund festlegen.
 
 Beachten Sie, dass `{ThemeResource}` zweimal verwendet wird – einmal um auf `SystemColorWindowColor` zu verweisen und ein weiteres Mal, um auf `BrandedPageBackgroundBrush` zu verweisen. Beide Verweise sind erforderlich, damit zur Laufzeit das korrekte Design in Ihrer App verwendet wird. Dies ist ein guter Zeitpunkt, um die Funktionalität in Ihrer App zu testen. Der Hintergrund des Rasters wird automatisch aktualisiert, wenn Sie zu einem Design mit hohem Kontrast wechseln. Beim Wechseln zwischen verschiedenen Designs mit hohem Kontrast wird er ebenfalls aktualisiert.
 
-## Wann sollten Rahmen verwenden werden?
+## <a name="when-to-use-borders"></a>Wann sollten Rahmen verwenden werden?
 
 Für den Hintergrund von Seiten, Bereichen, Popups und Leisten sollte im Design mit hohem Kontrast `SystemColorWindowColor` verwendet werden. Fügen Sie bei Bedarf einen Rahmen nur für hohen Kontrast hinzu, um wichtige Grenzen in Ihrer Benutzeroberfläche beizubehalten.
 
@@ -160,7 +167,7 @@ Für den Hintergrund von Seiten, Bereichen, Popups und Leisten sollte im Design 
 
 ![Ein vom Rest der Seite abgegrenzter Navigationsbereich](images/high-contrast-actions-content.png)
 
-## Listenelemente
+## <a name="list-items"></a>Listenelemente
 
 Im Design mit hohem Kontrast wird der Hintergrund von Elementen in einer [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx) auf `SystemColorHighlightColor` festgelegt, wenn der Benutzer auf sie zeigt, sie drückt oder auswählt. Ein häufiger Fehler bei komplexen Listenelementen ist, dass die Farbe des Inhalts des Listenelements beim Zeigen, Drücken oder Auswählen nicht umgekehrt wird. Dies führt dazu, dass das Element nicht gelesen werden kann.
 
@@ -170,7 +177,7 @@ Im Design mit hohem Kontrast wird der Hintergrund von Elementen in einer [ListVi
 
 
 
-### Listenelemente mit farbigem Text
+### <a name="list-items-with-colored-text"></a>Listenelemente mit farbigem Text
 
 Das Festlegen von „TextBlock.Foreground” in der [DataTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx) des ListView-Steuerelements kann Probleme verursachen. Diese Einstellung wird meist vorgenommen, um eine visuelle Hierarchie zu erzeugen. Die Foreground-Eigenschaft ist für das [ListViewItem](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewitem.aspx) festgelegt, und TextBlock-Elemente in der „DataTemplate” erben die richtige Vordergrundfarbe, wenn auf das Element gezeigt, es gedrückt oder ausgewählt wird. Durch das Festlegen der Foreground-Eigenschaft funktioniert die Vererbung jedoch nicht.
 
@@ -221,7 +228,7 @@ Sie können dieses Problem umgehen, indem Sie die Foreground-Eigenschaft bedingt
 </DataTemplate>
 ```
 
-### Listenelemente mit Schaltflächen und Links
+### <a name="list-items-with-buttons-and-links"></a>Listenelemente mit Schaltflächen und Links
 
 Mitunter verfügen Listenelemente über komplexere Steuerelemente, beispielsweise [HyperlinkButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.hyperlinkbutton.aspx) oder [Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx). Diese Steuerelemente besitzen eigene Zustände für Zeigen, Drücken und manchmal auch Auswählen, die im Vordergrund eines Listenelements nicht funktionieren. Links werden auch im Design „Hoher Kontrast (Schwarz)” gelb angezeigt, wodurch sie schwer lesbar sind, wenn auf ein Listenelement gezeigt, es gedrückt oder ausgewählt wird.
 
@@ -284,22 +291,17 @@ Eine Lösung besteht darin, den Hintergrund der „DataTemplate” im Design mit
 
 
 
-## Erkennen von hohem Kontrast
+## <a name="detecting-high-contrast"></a>Erkennen von hohem Kontrast
 
 Sie können mithilfe von Membern der [**AccessibilitySettings**](https://msdn.microsoft.com/library/windows/apps/BR242237)-Klasse programmgesteuert überprüfen, ob das aktuelle Design ein Design mit hohem Kontrast ist.
 
 > [!NOTE]
 > Achten Sie darauf, dass Sie den **AccessibilitySettings**-Konstruktor in einem Bereich aufrufen, in dem die App initialisiert ist und bereits Inhalt anzeigt.
 
-## Verwandte Themen  
+## <a name="related-topics"></a>Verwandte Themen  
 * [Barrierefreiheit](accessibility.md)
 * [Beispiel für UI-Kontrast und -Einstellungen](http://go.microsoft.com/fwlink/p/?linkid=231539)
 * [XAML-Beispiel für Barrierefreiheit](http://go.microsoft.com/fwlink/p/?linkid=238570)
 * [XAML-Beispiel für hohen Kontrast](http://go.microsoft.com/fwlink/p/?linkid=254993)
 * [**AccessibilitySettings**](https://msdn.microsoft.com/library/windows/apps/BR242237)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

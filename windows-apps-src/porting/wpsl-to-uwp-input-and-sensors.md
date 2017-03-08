@@ -1,15 +1,22 @@
 ---
 author: mcleblanc
 description: "Code, der in das Gerät selbst integriert und auf dessen Sensoren abgestimmt ist, umfasst auch Eingaben vom und Ausgaben an den Benutzer."
-title: "Portieren von Windows Phone Silverlight zu UWP - E/A, Gerät und App-Modell"
+title: "Portieren von Windows Phone Silverlight zu UWP – E/A-, Geräte- und App-Modell"
 ms.assetid: bf9f2c03-12c1-49e4-934b-e3fa98919c53
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: fedba87189e6ee5b6f8f81dfa06703b2011adf6a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 975f364fec4edfcf90ee65912f509741bd1f80dd
+ms.lasthandoff: 02/07/2017
 
 ---
 
-#  <a name="porting-windows-phone-silverlight-to-uwp-for-io-device-and-app-model"></a>Portieren von Windows Phone Silverlight zu UWP - E/A, Gerät und App-Modell
+#  <a name="porting-windows-phone-silverlight-to-uwp-for-io-device-and-app-model"></a>Portieren von Windows Phone Silverlight zu UWP – E/A-, Geräte- und App-Modell
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
@@ -92,10 +99,5 @@ Die Entsprechung der UWP-App für die Eigenschaften **PhoneApplicationPage.Suppo
 Sie können die Benutzeroberfläche Ihrer UWP-App aber beliebig ausrichten, damit sie unabhängig von Geräteausrichtung und Bildschirmgröße gut aussieht. Mehr dazu finden Sie im folgenden Thema [Portieren für Formfaktor und Benutzerfreundlichkeit](wpsl-to-uwp-form-factors-and-ux.md).
 
 Das nächste Thema lautet [Portieren von Unternehmen und Datenebenen](wpsl-to-uwp-business-and-data.md).
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

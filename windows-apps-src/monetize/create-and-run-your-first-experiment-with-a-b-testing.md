@@ -1,15 +1,22 @@
 ---
 author: mcleanbyron
 Description: "In dieser exemplarischen Vorgehensweise wird Ihr erstes Experiment mit A/B-Tests erstellt, ausgeführt und verwaltet."
-title: "Erstellen und Ausführen eines ersten Experiments mit A/B-Tests"
+title: "Erstellen und Ausführen Ihres ersten Experiments mit A/B-Tests"
 ms.assetid: 16A2B129-14E1-4C68-86E8-52F1BE58F256
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Microsoft Store Services SDK, A / B-Tests, Experimente"
 translationtype: Human Translation
-ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
-ms.openlocfilehash: 65785e53b2e5ba788dbda533373737e193e1c792
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: fb9e93747fa77031fe906d9ab7463fc41b73cdeb
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="create-and-run-your-first-experiment-with-ab-testing"></a>Erstellen und Ausführen eines ersten Experiments mit A/B-Tests
+# <a name="create-and-run-your-first-experiment-with-ab-testing"></a>Erstellen und Ausführen Ihres ersten Experiments mit A/B-Tests
 
 In dieser exemplarischen Vorgehensweise führen Sie folgende Aktionen aus:
 * Erstellen eines [Projekts](run-app-experiments-with-a-b-testing.md#terms) für das Experiment im Dev Center-Dashboard, das verschiedene Remotevariablen festlegt, die den Text und die Farbe einer App-Schaltfläche darstellen
@@ -103,9 +110,4 @@ Warten Sie nach Abschluss des vorherigen Abschnitts mindestens ein paar Stunden,
 * [Definieren des Experiments im Dev Center-Dashboard](define-your-experiment-in-the-dev-center-dashboard.md)
 * [Verwalten des Experiments im Dev Center-Dashboard](manage-your-experiment.md)
 * [Ausführen von App-Experimenten mit A/B-Tests](run-app-experiments-with-a-b-testing.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

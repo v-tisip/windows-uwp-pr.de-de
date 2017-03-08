@@ -3,16 +3,23 @@ author: laurenhughes
 ms.assetid: 8BDDE64A-77D2-4F9D-A1A0-E4C634BCD890
 title: Speichern einer Datei mit einer Auswahl
 description: "Mithilfe von FileSavePicker können Benutzer den Namen und Speicherort zum Speichern einer Datei durch die App angeben."
+ms.author: lahugh
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
-ms.openlocfilehash: ae6a9806e982a866834371a60788f7a788b04e47
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 46f79b34762eeb3424b887662418105e2e8a3ec2
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="save-a-file-with-a-picker"></a>Speichern einer Datei mit einer Auswahl
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **Wichtige APIs**
@@ -111,9 +118,4 @@ Im Beispiel wird überprüft, ob die Datei gültig ist. Danach wird der eigene D
  
 
  
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

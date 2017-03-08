@@ -3,16 +3,23 @@ author: mtoepke
 title: "Visual Studio-Tools für die Spieleprogrammierung"
 description: "Sie erhalten eine Übersicht über spezielle DirectX-Tools, die unter Visual Studio verfügbar sind."
 ms.assetid: 43137bfc-7876-70e0-515c-4722f68bd064
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, Spiele, Visual Studio, Tools, DirectX
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 59fe007601d16f6586ec52c0026e161ad6350a1e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 5f5c1ef45dd476565d302ef10f8d47ab2b819993
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Visual Studio-Tools für die Spieleprogrammierung
+# <a name="visual-studio-tools-for-game-programming"></a>Visual Studio-Tools für die Spieleprogrammierung
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Zusammenfassung**
 
@@ -24,7 +31,7 @@ Wenn Sie Visual Studio Ultimate zum Entwickeln von DirectX-Apps verwenden, könn
 
 Dieses Thema enthält eine Übersicht über diese Grafiktools.
 
-## Grafik-Editor
+## <a name="image-editor"></a>Grafik-Editor
 
 
 Nutzen Sie den Grafik-Editor zum Arbeiten mit den Arten von umfassenden Textur- und Bildformaten, die von DirectX verwendet werden. Der Grafik-Editor unterstützt die folgenden Formate:
@@ -38,7 +45,7 @@ Nutzen Sie den Grafik-Editor zum Arbeiten mit den Arten von umfassenden Textur- 
 -   TIF, TIFF
 -   TGA
 
-Erstellen Sie [Buildanpassungsdateien](#custom), um diese Formate zur Buildzeit in DDS-Dateien zu konvertieren.
+Erstellen Sie [Buildanpassungsdateien](#build-customizations-for-3d-assets), um diese Formate zur Buildzeit in DDS-Dateien zu konvertieren.
 
 Weitere Informationen finden Sie unter [Arbeiten mit Texturen und Bildern](https://msdn.microsoft.com/library/windows/apps/hh873119.aspx).
 
@@ -46,10 +53,10 @@ Weitere Informationen finden Sie unter [Arbeiten mit Texturen und Bildern](https
 
  
 
-## Modell-Editor
+## <a name="model-editor"></a>Modell-Editor
 
 
-Sie können den Modell-Editor verwenden, um grundlegende 3D-Modelle ganz neu zu erstellen oder um komplexere 3D-Modelle aus umfassenden 3D-Modelliertools anzuzeigen oder zu ändern. Der Modell-Editor unterstützt mehrere 3D-Modellformate, die bei der Entwicklung von DirectX-Apps verwendet werden. Sie können [Buildanpassungsdateien](#custom) erstellen, um diese Formate zur Buildzeit in CMO-Dateien zu konvertieren.
+Sie können den Modell-Editor verwenden, um grundlegende 3D-Modelle ganz neu zu erstellen oder um komplexere 3D-Modelle aus umfassenden 3D-Modelliertools anzuzeigen oder zu ändern. Der Modell-Editor unterstützt mehrere 3D-Modellformate, die bei der Entwicklung von DirectX-Apps verwendet werden. Sie können [Buildanpassungsdateien](#build-customizations-for-3d-assets) erstellen, um diese Formate zur Buildzeit in CMO-Dateien zu konvertieren.
 
 -   FBX
 -   DAE
@@ -65,7 +72,7 @@ Weitere Informationen finden Sie unter [Arbeiten mit 3D-Modellen](https://msdn.m
 
  
 
-## Shader-Designer
+## <a name="shader-designer"></a>Shader-Designer
 
 
 Verwenden Sie den Shader-Designer zum Erstellen benutzerdefinierter visueller Effekte für das Spiel oder die App, auch wenn Sie nicht mit der HLSL-Programmierung vertraut sind.
@@ -80,7 +87,7 @@ Verwenden Sie den Shader-Editor, um Shader im DGSL-Format zu entwerfen, zu bearb
 -   CSO (Bytecode)
 -   H (HLSL-Bytecode-Array)
 
-Erstellen Sie [Buildanpassungsdateien](#custom), um diese Formate zur Buildzeit in CSO-Dateien zu konvertieren.
+Erstellen Sie [Buildanpassungsdateien](#build-customizations-for-3d-assets), um diese Formate zur Buildzeit in CSO-Dateien zu konvertieren.
 
 Unten ist ein Abschnitt eines HLSL-Codes angegeben, der vom Shader-Editor exportiert wurde. Dies ist nur der Code für den Lambert-Beleuchtungsknoten.
 
@@ -108,7 +115,7 @@ float3 LambertLighting(
 
 Weitere Informationen finden Sie unter [Arbeiten mit Shadern](https://msdn.microsoft.com/library/windows/apps/hh873117.aspx).
 
-## Buildanpassungen für 3D-Objekte
+## <a name="build-customizations-for-3d-assets"></a>Buildanpassungen für 3D-Objekte
 
 
 Sie können dem Projekt Buildanpassungen hinzufügen, sodass Ressourcen von Visual Studio in nutzbare Formate konvertiert werden. Danach können Sie die Objekte in die App laden und verwenden, indem Sie DirectX-Ressourcen wie in jeder anderen DirectX-App auch erstellen und füllen.
@@ -116,12 +123,12 @@ Sie können dem Projekt Buildanpassungen hinzufügen, sodass Ressourcen von Visu
 Zum Hinzufügen von Buildanpassungen klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt und wählen die Option **Buildanpassungen...**. Sie können dem Projekt die folgenden Arten von Buildanpassungen hinzufügen:
 
 -   Von der Bildinhaltpipeline werden Bilddateien als Eingaben verwendet und DirectDraw Surface-Dateien (.dds) ausgegeben.
--   Von der Gitterinhaltpipeline werden Gitterdateien (z.B. FBX) als Eingabe verwendet und CMO-Gitterdateien ausgegeben.
+-   Von der Gitterinhaltpipeline werden Gitterdateien (z. B. FBX) als Eingabe verwendet und CMO-Gitterdateien ausgegeben.
 -   Von der Shaderinhaltpipeline werden visuelle Shaderdiagramme (.dgsl) aus dem Shader-Editor von Visual Studio verwendet und kompilierte Shaderausgabedateien (.cso) ausgegeben.
 
 Weitere Informationen finden Sie unter [Verwenden von 3D-Objekten im Spiel oder in der App](https://msdn.microsoft.com/library/windows/apps/hh972446.aspx).
 
-## Debuggen von DirectX-Grafiken
+## <a name="debugging-directx-graphics"></a>Debuggen von DirectX-Grafiken
 
 
 Visual Studio enthält grafikspezifische Debugtools. Verwenden Sie diese Tools zum Debuggen der folgenden Komponenten:
@@ -138,7 +145,7 @@ Visual Studio enthält grafikspezifische Debugtools. Verwenden Sie diese Tools z
 
 Weitere Informationen finden Sie unter [Debuggen von DirectX-Grafiken](https://msdn.microsoft.com/library/windows/apps/hh315751.aspx).
 
-> **Hinweis**: Dieser Artikel ist für Windows10-Entwickler gedacht, die Apps für die Universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows8.x oder Windows Phone8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **Hinweis**: Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die Universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -148,10 +155,5 @@ Weitere Informationen finden Sie unter [Debuggen von DirectX-Grafiken](https://m
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

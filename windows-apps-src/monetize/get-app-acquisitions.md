@@ -1,18 +1,25 @@
 ---
 author: mcleanbyron
 ms.assetid: C1E42E8B-B97D-4B09-9326-25E968680A0F
-description: "Verwenden Sie diese Methode in der Windows Store-Analyse-API, um die aggregierten Kaufdaten für eine Anwendung während eines bestimmten Zeitraums und andere optionale Filter abzurufen."
+description: "Verwenden Sie diese Methode der Windows Store-Analyse-API, um die aggregierten Kaufdaten für eine Anwendung während eines bestimmten Zeitraums und andere optionale Filter abzurufen."
 title: "Abrufen von App-Käufen"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Store-Dienste, Windows Store-Analyse-API, App-Käufe"
 translationtype: Human Translation
-ms.sourcegitcommit: ce6535508136f8f7bfc8e0da599eea10a936908d
-ms.openlocfilehash: 2e35da3b3033ecbad8c48184d831ca9465142322
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 9a716acb00b7a86429c444555c491b48cbc2c4b0
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="get-app-acquisitions"></a>Abrufen von App-Käufen
 
 
-Verwenden Sie diese Methode in der Windows Store-Analyse-API, um die aggregierten Kaufdaten (im JSON-Format) für eine Anwendung während eines bestimmten Zeitraums und andere optionale Filter abzurufen. Diese Informationen sind auch im [Bericht „Käufe“](../publish/acquisitions-report.md) im Windows Dev Center-Dashboard verfügbar.
+Verwenden Sie diese Methode der Windows Store-Analyse-API, um die aggregierten Kaufdaten (im JSON-Format) für eine Anwendung während eines bestimmten Zeitraums und andere optionale Filter abzurufen. Diese Informationen sind auch im [Bericht „Käufe“](../publish/acquisitions-report.md) im Windows Dev Center-Dashboard verfügbar.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -160,9 +167,4 @@ Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese 
 * [Abrufen von Fehlerberichtsdaten](get-error-reporting-data.md)
 * [Abrufen von App-Bewertungen](get-app-ratings.md)
 * [Abrufen von App-Rezensionen](get-app-reviews.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

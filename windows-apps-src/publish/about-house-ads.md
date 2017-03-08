@@ -3,13 +3,20 @@ author: jnHs
 Description: "Sie haben die Möglichkeit, eine Anzeige zu erstellen, um eine Ihrer Apps in Ihren anderen Apps zu bewerben – und das kostenlos. Wir bezeichnen dies als Eigenwerbung."
 title: "Über Eigenwerbung"
 ms.assetid: C6507C8B-351B-49E7-A194-35AB05BC3358
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 6d0c9aa276a624966b6294db2be8e08a716d42c2
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 8c4f6597ecb262bf93efa02b695221606521a754
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Über Eigenwerbung
+# <a name="about-house-ads"></a>Über Eigenwerbung
 
 
 Sie haben die Möglichkeit, eine Anzeige zu erstellen, um eine Ihrer Apps in Ihren anderen Apps zu bewerben – und das kostenlos. Wir bezeichnen dies als *Eigenwerbung*.
@@ -25,7 +32,7 @@ Wenn Eigenwerbung für App A in App B erscheint, wird der Aufruf weder in Rechnu
 
  
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 
 * [Erstellen einer Anzeigenkampagne für Ihre App](create-an-ad-campaign-for-your-app.md)
@@ -33,10 +40,5 @@ Wenn Eigenwerbung für App A in App B erscheint, wird der Aufruf weder in Rechnu
 * [Bericht „Anzeigen für die App-Installation“](app-install-ads-reports.md)
 * [Allgemeine Fragen](common-questions.md)
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

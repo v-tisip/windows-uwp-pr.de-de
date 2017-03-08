@@ -2,16 +2,24 @@
 author: WilliamsJason
 title: "Geräteportal – API-Referenz für Fiddler"
 description: Erfahren Sie, wie Sie die Fiddler-Ablaufverfolgung programmgesteuert aktivieren/deaktivieren.
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
+ms.assetid: e7d4225e-ac2c-41dc-aca7-9b1a95ec590b
 translationtype: Human Translation
-ms.sourcegitcommit: 3cc2a4bd1859e46a73f3e806489eac7381fa6c17
-ms.openlocfilehash: bd215058c71118d8b3e5ce81e2302ce8b151c3f6
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 24e966f953928d238f9197359e0b539b8a3e5c3c
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Fiddler-Einstellungen – API-Referenz   
+# <a name="fiddler-settings-api-reference"></a>Fiddler-Einstellungen – API-Referenz   
 Sie können die Fiddler-Netzwerkablaufverfolgung für Ihr Dev Kit mittels dieser REST-API aktivieren und deaktivieren.
 
-## Aktivieren der Fiddler-Ablaufverfolgung
+## <a name="enable-fiddler-tracing"></a>Aktivieren der Fiddler-Ablaufverfolgung
 
 **Anforderung**
 
@@ -54,7 +62,7 @@ HTTP-Statuscode      | Beschreibung
 4XX | Fehlercodes
 5XX | Fehlercodes
 
-## Deaktivieren Sie die Fiddler-Ablaufverfolgung für das Dev Kit.
+## <a name="disable-fiddler-tracing-on-the-devkit"></a>Deaktivieren Sie die Fiddler-Ablaufverfolgung für das Dev Kit.
 
 **Anforderung**
 
@@ -95,12 +103,7 @@ HTTP-Statuscode      | Beschreibung
 
 * Windows Xbox
 
-## Siehe auch
+## <a name="see-also"></a>Siehe auch
 - [Konfigurieren von Fiddler für UWP auf Xbox](uwp-fiddler.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

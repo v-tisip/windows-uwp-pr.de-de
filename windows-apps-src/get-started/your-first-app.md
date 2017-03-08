@@ -3,12 +3,19 @@ author: GrantMeStrength
 ms.assetid: A77DA371-C0FE-4FAE-9E77-ADC3C9314EDF
 title: Erstellen Ihrer ersten App
 description: "Das Erstellen einer UWP (Universelle Windows-Plattform)-App für Windows 10 ist einfacher, als Sie denken."
+ms.author: jken
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: b57a461cf9859be26ed69d12b08259d15201403a
-ms.openlocfilehash: 16adf9c9c8de2ca4596f0fcbe503f570971e74a1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1dc003c4683445718de1f14ed3c659fb579482a0
+ms.lasthandoff: 02/07/2017
 
 ---
-# Erstellen Ihrer ersten App
+# <a name="create-your-first-app"></a>Erstellen Ihrer ersten App
 
 Willkommen: Diese Lernprogramme unterstützen Sie beim Erstellen Ihrer ersten UWP-App in der von Ihnen bevorzugten Programmiersprache. Hier erfahren Sie Folgendes:
 
@@ -46,7 +53,7 @@ Wählen Sie zunächst die gewünschte Sprache aus.
 -->
 
 
-### Lernprogramm für C# und XAML
+### <a name="c-and-xaml-tutorial"></a>Lernprogramm für C# und XAML
 
 Verwenden Sie Ihre .NET-, WPF- oder Silverlight-Kenntnisse, um Apps mit XAML mit C# zu erstellen.
 
@@ -56,9 +63,9 @@ Wir gehen davon aus, dass Sie bereits mit XAML und C# vertraut sind. Wenn Sie In
 
 * [C#-Grundlagen für Neueinsteiger](https://mva.microsoft.com/en-US/training-courses/c-fundamentals-for-absolute-beginners-16169)
 * [VB-Grundlagen für Neueinsteiger](http://www.microsoftvirtualacademy.com/training-courses/vb-fundamentals-for-absolute-beginners)
-* [Entwicklerhandbuch für Windows10](https://mva.microsoft.com/en-US/training-courses/a-developers-guide-to-windows-10-12618)
+* [Entwicklerhandbuch für Windows 10](https://mva.microsoft.com/en-US/training-courses/a-developers-guide-to-windows-10-12618)
 
-### Lernprogram für Visual C++-Komponentenerweiterungen (C++/CX) und XAML
+### <a name="visual-c-component-extensions-ccx-and-xaml-tutorial"></a>Lernprogram für Visual C++-Komponentenerweiterungen (C++/CX) und XAML
 
 Greifen Sie auf Ihre C++-Programmierkenntnisse zurück, um Apps mit Visual C++-Komponentenerweiterungen (C++/CX) mit XAML zu erstellen.
 
@@ -68,7 +75,7 @@ Es wird davon ausgegangen, dass Sie bereits mit XAML und C++ vertraut sind. Wenn
 
 * [C++: Schnelleinstieg: eine allgemeine Sprache und Bibliothek](http://www.microsoftvirtualacademy.com/training-courses/c-a-general-purpose-language-and-library-jump-start)
 
-### Lernprogramm für JavaScript und HTML
+### <a name="javascript-and-html-tutorial"></a>Lernprogramm für JavaScript und HTML
 
 Nutzen Sie Ihre Webkenntnisse zum Erstellen von Apps mit HTML5, Cascading Style Sheets, Level 3 (CSS3) und JavaScript.
 
@@ -79,25 +86,24 @@ Es wird davon ausgegangen, dass Sie bereits mit HTML5, CSS3 und JavaScript vertr
 * [JavaScript-Grundlagen für Neueinsteiger](http://www.microsoftvirtualacademy.com/training-courses/javascript-fundamentals-for-absolute-beginners)
 * [HTML5- und CSS3-Grundlagen für Neueinsteiger](http://www.microsoftvirtualacademy.com/training-courses/html5-css3-fundamentals-development-for-absolute-beginners)
 
-### Objective-C
+### <a name="objective-c"></a>Objective-C
 
 Sind Sie eher ein iOS-Entwickler? 
 
 * Verwenden Sie die [Windows-Brücke für iOS](https://developer.microsoft.com/windows/bridges/ios), um Ihren vorhandenen Code in eine UWP-App zu konvertieren und weiter in Objective-C zu entwickeln,
 
 
-## Verwandte Themen
+### <a name="cross-platform-and-mobile-development"></a>Plattformübergreifende Entwicklung und Entwicklung für mobile Geräte
 
-* [Anleitungen zur Entwicklung von UWP App](https://developer.microsoft.com/windows/develop)
+* Benötigen Sie für Unterstützung für die Zielplattformen Android oder iOS? Sehen Sie sich [Xamarin](https://www.xamarin.com) an.
+
+## <a name="related-topics"></a>Verwandte Themen
+
+* [Anleitungen zur Entwicklung von UWP-Apps](https://developer.microsoft.com/windows/apps/develop)
 * [Codebeispiele für UWP-Entwickler](https://developer.microsoft.com/windows/samples)
 * [Was ist eine universelle Windows-App?](whats-a-uwp.md)
 * [Einrichten](get-set-up.md)
 * [Anmelden](sign-up.md)
 
-
-
-
-
-<!--HONumber=Sep16_HO2-->
 
 

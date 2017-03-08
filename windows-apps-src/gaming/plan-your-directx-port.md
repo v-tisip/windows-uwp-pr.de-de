@@ -3,16 +3,23 @@ author: mtoepke
 title: Planen der DirectX-Portierung
 description: "Planen Sie das Portieren des Spiels von DirectX 9 zu DirectX 11 und zur Universellen Windows-Plattform (UWP) - Führen Sie ein Upgrade des Grafikcodes durch, und fügen Sie das Spiel in die Windows-Runtime-Umgebung ein."
 ms.assetid: 3c0c33ca-5d15-ae12-33f8-9b5d8da08155
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Portieren von Windows 10, UWP, Directx"
 translationtype: Human Translation
-ms.sourcegitcommit: 115377ed3e5a13668481d1122f354610b3077763
-ms.openlocfilehash: f5f66f5da79eb62e3a81f4fe0d7398fed689d378
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: e255bceae44ace0722a2df0c53d60ec0f8fa35fe
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="plan-your-directx-port"></a>Planen der DirectX-Portierung
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Zusammenfassung**
 
@@ -64,10 +71,5 @@ Zwei Konzepte werden Sie jedoch häufig anwenden:
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

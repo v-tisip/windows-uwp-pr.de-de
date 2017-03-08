@@ -1,18 +1,25 @@
 ---
 title: Sicherheit
-description: "Dieser Abschnitt enthält Artikel zum Erstellen sicherer Apps für die universelle Windows-Plattform (UWP) für Windows 10."
+description: "Dieser Abschnitt enthält Artikel zum Erstellen sicherer Apps für die Universelle Windows-Plattform (UWP) für Windows 10."
 ms.assetid: 41E2EEFB-E8A9-4592-814C-72B703CD952C
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 82f6e2decde2d332bd08b0b9798350b973860f21
-ms.openlocfilehash: b30492c3c74b19d5ce306829302be17ff303723f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: e769a9aa7d381a527c1e1504efc52c2ead031c70
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="security"></a>Sicherheit
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie unter [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Dieser Abschnitt enthält Artikel zum Erstellen sicherer Apps für die universelle Windows-Plattform (UWP) für Windows 10.
 
@@ -51,9 +58,4 @@ Der Kryptografieabschnitt enthält Informationen zu komplexeren verwandten Theme
 | [MACs, Hashes und Signaturen](macs-hashes-and-signatures.md)               | In diesem Artikel wird erläutert, wie Nachrichtenmanipulationen mithilfe von Nachrichtenauthentifizierungscodes (Message Authentication Codes, MACs), Hashes und Signaturen in Apps erkannt werden können:                                                                                                                                                                                                                                                                                                                                                                                |
 | [Exportbeschränkungen hinsichtlich Kryptografie](export-restrictions-on-cryptography.md) | Anhand der Infos in diesem Abschnitt können Sie ermitteln, ob Ihre App Kryptografiefunktionen in einer Weise verwendet, die u. U. dazu führt, dass sie nicht angezeigt wird.                                                                                                                                                                                                                                                                                                                                                                                                     |
 | [Allgemeine Kryptografieaufgaben](common-cryptography-tasks.md)                     | Die folgenden Artikel enthalten Beispielcode für allgemeine Kryptografieaufgaben, z. B. Erstellen zufälliger Zahlen, Vergleichen von Puffern, Konvertieren zwischen Zeichenfolgen und binären Daten, Kopieren in und aus Bytearrays sowie Codieren und Decodieren von Daten.                                                                                                                                                                                                                                                                                    |
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

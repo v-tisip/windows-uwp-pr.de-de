@@ -3,9 +3,16 @@ author: jnHs
 Description: "Der Windows Store ermöglicht die „Abrechnung über den Mobilfunkanbieter“ als Zahlungsmethode für Mobilfunkanbieter, die diese Funktion unterstützen."
 title: "Abrechnung über den Mobilfunkanbieter"
 ms.assetid: C8A5A4BA-6B39-42FC-B8C4-ED1B7F774CC1
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 694c3223278c8666bfb47bf9898ac7c02ac981f4
-ms.openlocfilehash: 831e3fbd1524ce452a4346b6c52f3f1c76385d68
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: cbf519d5755adb13f6a41845b4771ac459d880cc
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -26,6 +33,7 @@ Die Windows 10-Implementierung der Mobilfunkanbieterabrechnung wird zurzeit von
 
 | Land/Region  | Mobilfunkanbieter |
 |-----------------|------------------|
+| Österreich         | Hutchison 3G Österreich |
 | Finnland         | DNA, Elisa       |
 | Frankreich          | Orange           |
 | Deutschland         | O2               |
@@ -36,8 +44,8 @@ Die Windows 10-Implementierung der Mobilfunkanbieterabrechnung wird zurzeit von
 | Russland          | Beeline          |
 | Schweden          | Telenor          |
 | Schweiz     | Swisscom         |
-| Vereinigte Staaten   | Sprint           |
-| Vereinigtes Königreich  | O2               |
+| USA   | Sprint           |
+| Großbritannien  | O2, 3 UK         |
 
  
 
@@ -55,11 +63,8 @@ Die Legacyimplementierung der Abrechnung über den Mobilfunkanbieter wird von de
 | Belgien              | BASE, Mobistar, Proximus                                           |
 | Brasilien               | Claro                                                              |
 | Kanada               | Fido, Rogers                                                       |
-| China                | China Mobile                                                       |
-| Kolumbien             | Movistar                                                           |
 | Tschechische Republik       | T-Mobile, Vodafone, O2                                             |
-| Ecuador              | Claro                                                              |
-| Finnland              | Elisa, TeliaSonera, DNA                                            |
+| Finnland              | TeliaSonera, DNS                                            |
 | Frankreich               | Orange, SFR, Bouygues                                              |
 | Deutschland              | Telefonica, Telekom Deutschland, Vodafone                          |
 | Griechenland               | Vodafone                                                           |
@@ -68,7 +73,6 @@ Die Legacyimplementierung der Abrechnung über den Mobilfunkanbieter wird von de
 | Indonesien            | Indosat, Telkomsel, Hutchinson CP Telecommunications (HCPT)        |
 | Irland              | O2, Vodafone, Three                                                |
 | Italien                | Telecom Italia, Vodafone, Wind, 3 Italia                           |
-| Jordanien               | Umniah                                                             |
 | Mexiko               | Iusacell, Telcel, Movistar                                         |
 | Niederlande          | T-Mobile, Vodafone                                                 |
 | Polen               | T-Mobile, Orange, Polkomtel (Plus), Play                           |
@@ -91,10 +95,5 @@ Diese Liste wird regelmäßig aktualisiert, wenn wir die Unterstützung für die
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

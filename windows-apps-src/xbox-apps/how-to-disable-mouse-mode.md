@@ -1,17 +1,25 @@
 ---
 author: payzer
 title: Deaktivieren des Mausmodus
-description: Anleitungen zum Deaktivieren des Standardmausmodus.
+description: Anleitungen zum Deaktivieren des Standardmausmodus
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
+ms.assetid: e57ee4e6-7807-4943-a933-c2b4dc80fc01
 translationtype: Human Translation
-ms.sourcegitcommit: b4df1f944d909640791e4ed7e3bcf8d8bdf7a0d1
-ms.openlocfilehash: 91e530a3313d53c4e693b88a64b849f3188a72de
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 6848d1783df4489571fcf493a55447f67e5d6fd9
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Deaktivieren des Mausmodus
-Der Mausmodus ist standardmäßig für alle Anwendungen aktiviert. Das bedeutet, dass alle Anwendungen, für die die Option nicht deaktiviert wurde, einen Mauszeiger erhalten (ähnlich dem Zeiger im Edge-Browser auf der Konsole). Es wird nachdrücklich empfohlen, diese Option zu deaktivieren und die direktionale Navigation über den Controller zu optimieren.   
+# <a name="how-to-disable-mouse-mode"></a>Deaktivieren des Mausmodus
+Der Mausmodus ist standardmäßig für alle Anwendungen aktiviert. Das bedeutet, dass alle Anwendungen, für die diese Option nicht deaktiviert wurde, einen Mauszeiger erhalten (ähnlich dem Zeiger im Edge-Browser auf der Konsole). Es wird nachdrücklich empfohlen, diese Option zu deaktivieren und die direktionale Navigation über den Controller zu optimieren.   
    
-## HTML   
+## <a name="html"></a>HTML   
 Um die direktionale Navigation über den Controller in einer JavaScript-UWP-App (Universelle Windows-Plattform) zu aktivieren, verwenden Sie die JavaScript-Bibliothek [TVHelpers für die direktionale Navigation](https://github.com/Microsoft/TVHelpers/wiki/Using-DirectionalNavigation). Fügen Sie die JavaScript-Datei für die direktionale Navigation in Ihr App-Paket ein, und fügen Sie einen Verweis auf diese in allen HTML-Seiten ein, die eine direktionale Navigation über den Controller erfordern:
 
 ```code
@@ -27,7 +35,7 @@ navigator.gamepadInputEmulation = "gamepad";
 
    Diese Eigenschaft ist standardmäßig auf `mouse` festgelegt, wodurch der Mausmodus aktiviert wird. Wenn Sie diese auf `keyboard` festlegen, wird der Mausmodus deaktiviert, und Gamepad-Eingaben generieren DOM-Tastaturereignisse. Wenn Sie diese auf `gamepad` festlegen, wird der Mausmodus deaktiviert, und es werden keine DOM-Tastaturereignisse generiert. Auf diese Weise können Sie nur die DOM- oder WinRT-Gamepad-APIs verwenden.
 
-## XAML    
+## <a name="xaml"></a>XAML    
 Um den Mausmodus zu deaktivieren, fügen Sie dem Konstruktor für Ihre App Folgendes hinzu:   
    
 ```code
@@ -38,16 +46,11 @@ public App() {
 }
 ```
 
-## C++/DirectX   
+## <a name="cdirectx"></a>C++/DirectX   
 Wenn Sie eine C++-/DirectX-App schreiben, müssen Sie keine Schritte ausführen. Der Mausmodus gilt nur für HTML- und XAML-Anwendungen.
 
-## Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen
 - [Bewährte Methoden für Xbox](tailoring-for-xbox.md)
-- [UWP auf XboxOne](index.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
+- [UWP auf Xbox One](index.md)
 
 

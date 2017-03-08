@@ -1,24 +1,31 @@
 ---
 author: drewbatgit
 ms.assetid: E0189423-1DF3-4052-AB2E-846EA18254C4
-description: "In diesem Thema erfahren Sie, wie Sie Effekte auf die Kameravorschau und auf Videoaufnahmedatenströme anwenden und wie Sie den Videostabilisierungseffekt verwenden."
+description: In diesem Thema erfahren Sie, wie Sie Effekte auf die Kameravorschau und auf Videoaufnahmedatenstreams anwenden und wie Sie den Videostabilisierungseffekt verwenden.
 title: "Effekte für die Videoaufnahme"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 25212fede7640c12ea4f1484a9f3c540bf4a0c12
-ms.openlocfilehash: ec7c285df48f37842fe757ef619da3a0d76cd690
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 60b3d3874ea90b7d626ff1a78c104348ff80dc09
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Effekte für die Videoaufnahme
+# <a name="effects-for-video-capture"></a>Effekte für die Videoaufnahme
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 In diesem Thema erfahren Sie, wie Sie Effekte auf die Kameravorschau und auf Videoaufnahmedatenströme anwenden und wie Sie den Videostabilisierungseffekt verwenden.
 
 > [!NOTE] 
 > Dieser Artikel baut auf Konzepten und Code auf, die unter [Allgemeine Foto-, Video- und Audioaufnahme mit „MediaCapture“](basic-photo-video-and-audio-capture-with-MediaCapture.md) erläutert werden. Dort werden die Schritte für die Implementierung einer grundlegenden Foto- und Videoaufnahme beschrieben. Wir empfehlen Ihnen, sich mit dem grundlegenden Medienaufnahmemuster in diesem Artikel vertraut zu machen, bevor Sie sich komplexeren Aufnahmeszenarien zuwenden. Der Code in diesem Artikel setzt voraus, dass Ihre App bereits über eine korrekt initialisierte MediaCapture-Instanz verfügt.
 
-## Hinzufügen und Entfernen von Effekten im Kameravideodatenstrom
+## <a name="adding-and-removing-effects-from-the-camera-video-stream"></a>Hinzufügen und Entfernen von Effekten im Kameravideodatenstrom
 Um Videos mithilfe der Gerätekamera aufzunehmen oder in der Vorschau anzuzeigen, verwenden Sie das [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCapture)-Objekt, wie unter [Allgemeine Foto-, Video- und Audioaufnahme mit „MediaCapture“](basic-photo-video-and-audio-capture-with-MediaCapture.md) beschrieben. Nachdem Sie das **MediaCapture**-Objekt initialisiert haben, können Sie dem Vorschau- oder Aufnahmedatenstrom einen oder mehrere Videoeffekte hinzufügen, indem Sie [**AddVideoEffectAsync**](https://msdn.microsoft.com/library/windows/apps/dn878035) aufrufen, ein [**IVideoEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.IVideoEffectDefinition)-Objekt übergeben, das den hinzuzufügenden Effekt darstellt, und einen Member der [**MediaStreamType**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaStreamType)-Enumeration übergeben, der angibt, ob der Effekt dem Vorschaudatenstrom oder Aufnahmedatenstrom der Kamera hinzugefügt werden soll.
 
 > [!NOTE]
@@ -30,7 +37,7 @@ Im folgenden Beispiel wird sowohl dem Vorschaudatenstrom als auch dem Aufnahmeda
 
 Beachten Sie, dass **AddVideoEffectAsync** ein Objekt zurückgibt, das die [**IMediaExtension**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.IMediaExtension)-Schnittstelle implementiert, die den hinzugefügten Videoeffekt darstellt. Bei einigen Effekten können die Effekteinstellungen geändert werden, indem Sie [**PropertySet**](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.Collections.PropertySet) an die [**SetProperties**](https://msdn.microsoft.com/library/windows/apps/br240986)-Methode übergeben.
 
-Ab Windows10, Version 1607, können Sie auch das von **AddVideoEffectAsync** zurückgegebene Objekt verwenden, um den Effekt aus der Videopipeline zu entfernen, indem Sie es an [**RemoveEffectAsync**](https://msdn.microsoft.com/library/windows/apps/mt667957) übergeben. **RemoveEffectAsync** ermittelt automatisch, ob der Effektobjektparameter dem Vorschau- oder Aufnahmedatenstrom hinzugefügt wurde. Auf diese Weise müssen Sie beim Aufrufen keinen Datenstromtyp angeben.
+Ab Windows 10, Version 1607, können Sie auch das von **AddVideoEffectAsync** zurückgegebene Objekt verwenden, um den Effekt aus der Videopipeline zu entfernen, indem Sie es an [**RemoveEffectAsync**](https://msdn.microsoft.com/library/windows/apps/mt667957) übergeben. **RemoveEffectAsync** ermittelt automatisch, ob der Effektobjektparameter dem Vorschau- oder Aufnahmedatenstrom hinzugefügt wurde. Auf diese Weise müssen Sie beim Aufrufen keinen Datenstromtyp angeben.
 
 [!code-cs[RemoveOneEffect](./code/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs#SnippetRemoveOneEffect)]
 
@@ -38,13 +45,13 @@ Sie können auch alle Effekte aus dem Vorschau- oder Aufnahmedatenstrom entferne
 
 [!code-cs[ClearAllEffects](./code/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs#SnippetClearAllEffects)]
 
-## Videostabilisierungseffekt
+## <a name="video-stabilization-effect"></a>Videostabilisierungseffekt
 
 Der Videostabilisierungseffekt ändert die Frames eines Videodatenstroms, um das Wackeln durch das Halten des Aufnahmegeräts mit der Hand zu minimieren. Da durch diese Technik Pixel nach rechts, links, oben und unten verschoben werden und der Effekt den Inhalt außerhalb des Videoframes nicht kennen kann, wird das stabilisierte Video im Vergleich zum Originalvideo leicht zugeschnitten. Eine Hilfsfunktion wird bereitgestellt, damit Sie Ihre Videocodierungseinstellungen zum optimalen Verwalten der durch den Effekt vorgenommenen Zuschneidung anpassen können.
 
 Auf Geräten, die dies unterstützen, stabilisiert OIS (Optical Image Stabilization) das Video durch mechanisches Manipulieren das Aufnahmegeräts, sodass die Kanten der Videoframes nicht zugeschnitten werden müssen. Weitere Informationen finden Sie unter [Steuerelemente des Aufnahmegeräts für Videoaufnahmen](capture-device-controls-for-video-capture.md).
 
-### Einrichten der App für die Verwendung der Videostabilisierung
+### <a name="set-up-your-app-to-use-video-stabilization"></a>Einrichten der App für die Verwendung der Videostabilisierung
 
 Neben den Namespaces, die für die grundlegende Medienaufnahme erforderlich sind, erfordert die Verwendung des Videostabilisierungseffekts den folgenden Namespace.
 
@@ -58,7 +65,7 @@ Für dieses Szenario sollten Sie einer Membervariablen das Profilobjekt für die
 
 [!code-cs[EncodingProfileMember](./code/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs#SnippetEncodingProfileMember)]
 
-### Initialisieren des Videostabilisierungseffekts
+### <a name="initialize-the-video-stabilization-effect"></a>Initialisieren des Videostabilisierungseffekts
 
 Erstellen Sie nach dem Initialisieren des **MediaCapture**-Objekts eine neue Instanz des [**VideoStabilizationEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn926762)-Objekts. Rufen Sie [**MediaCapture.AddVideoEffectAsync**](https://msdn.microsoft.com/library/windows/apps/dn878035) auf, um den Effekt der Videopipeline hinzuzufügen und eine Instanz der [**VideoStabilizationEffect**](https://msdn.microsoft.com/library/windows/apps/dn926760)-Klasse abzurufen. Geben Sie [**MediaStreamType.VideoRecord**](https://msdn.microsoft.com/library/windows/apps/br226640) an, um anzuzeigen, dass der Effekt auf den Videoaufnahmedatenstrom angewendet werden soll.
 
@@ -66,7 +73,7 @@ Registrieren Sie einen Ereignishandler für das Ereignis [**EnabledChanged**](ht
 
 [!code-cs[CreateVideoStabilizationEffect](./code/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs#SnippetCreateVideoStabilizationEffect)]
 
-### Verwenden empfohlener Codierungseigenschaften
+### <a name="use-recommended-encoding-properties"></a>Verwenden empfohlener Codierungseigenschaften
 
 Wie weiter oben in diesem Artikel beschrieben wurde, verursacht die Technik, die der Videostabilisierungseffekt verwendet, eine geringe Zuschneidung des stabilisierten Videos im Vergleich zum Quellvideo. Definieren Sie die folgende Hilfsfunktion in Ihrem Code, um die Videocodierungseigenschaften anzupassen und diese Beschränkung des Effekts optimal zu verarbeiten. Dieser Schritt ist nicht erforderlich, um den Videostabilisierungseffekt zu verwenden. Wenn Sie diesen Schritt jedoch nicht ausführen, wird das resultierende Video leicht hochskaliert und hat dadurch eine etwas niedrigere Bildqualität.
 
@@ -82,7 +89,7 @@ Legen Sie die [**Video**](https://msdn.microsoft.com/library/windows/apps/hh7011
 
 [!code-cs[SetUpVideoStabilizationRecommendationAsync](./code/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs#SnippetSetUpVideoStabilizationRecommendationAsync)]
 
-### Behandeln des Deaktivierens des Videostabilisierungseffekts
+### <a name="handle-the-video-stabilization-effect-being-disabled"></a>Behandeln des Deaktivierens des Videostabilisierungseffekts
 
 Das System kann den Videostabilisierungseffekt automatisch deaktivieren, wenn Sie der Pixeldurchsatz zu groß für die Verarbeitung durch den Effekt ist oder wenn erkannt wird, dass der Effekt langsam ausgeführt wird. In diesem Fall wird das „EnabledChanged“-Ereignis ausgelöst. Die **VideoStabilizationEffect**-Instanz im Parameter *sender* gibt den neuen Zustand des Effekts (aktiviert oder deaktiviert) an. [**VideoStabilizationEffectEnabledChangedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn948979) hat einen [**VideoStabilizationEffectEnabledChangedReason**](https://msdn.microsoft.com/library/windows/apps/dn948981)-Wert, der angibt, warum der Effekt aktiviert oder deaktiviert wurde. Beachten Sie, dass dieses Ereignis auch ausgelöst wird, wenn Sie den Effekt programmgesteuert aktivieren oder deaktivieren. In diesem Fall ist der Grund **Programmatic**.
 
@@ -90,13 +97,13 @@ In der Regel verwenden Sie dieses Ereignis zum Anpassen der Benutzeroberfläche 
 
 [!code-cs[VideoStabilizationEnabledChanged](./code/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs#SnippetVideoStabilizationEnabledChanged)]
 
-### Bereinigen des Videostabilisierungseffekts
+### <a name="clean-up-the-video-stabilization-effect"></a>Bereinigen des Videostabilisierungseffekts
 
 Rufen Sie zum Bereinigen des Videostabilisierungseffekts [**RemoveEffectAsync**](https://msdn.microsoft.com/library/windows/apps/mt667957) auf, um den Effekt aus der Videopipeline zu entfernen. Wenn die Membervariablen mit den ursprünglichen Codierungseigenschaften nicht NULL sind, verwenden Sie diese zum Wiederherstellen der Codierungseigenschaften. Entfernen Sie schließlich den Ereignishandler **EnabledChanged**, und legen Sie den Effekt auf Null fest.
 
 [!code-cs[CleanUpVisualStabilizationEffect](./code/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs#SnippetCleanUpVisualStabilizationEffect)]
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Kamera](camera.md)
 * [Allgemeine Foto-, Video- und Audioaufnahme mit „MediaCapture“](basic-photo-video-and-audio-capture-with-MediaCapture.md)
@@ -106,10 +113,5 @@ Rufen Sie zum Bereinigen des Videostabilisierungseffekts [**RemoveEffectAsync**]
 
 
 
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

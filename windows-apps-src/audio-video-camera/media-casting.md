@@ -1,17 +1,24 @@
 ---
 author: drewbatgit
 ms.assetid: 40B97E0C-EB1B-40C2-A022-1AB95DFB085E
-description: "In diesem Artikel wird beschrieben, wie Sie Medien von einer universellen Windows-App für Remotegeräte umwandeln."
+description: "In diesem Artikel wird beschrieben, wie Sie Medien aus einer universellen Windows-App zu Remotegeräten umwandeln."
 title: Medienumwandlung
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: ebcd2f2b28a7cd2a8a9dad16c30239b06e147ec3
-ms.openlocfilehash: fc69e3b5bb814752480fa0151c36ae0a8c783c4e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f399007426f5a973a06d473ef98a9eb7e24184dd
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="media-casting"></a>Medienumwandlung
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 In diesem Artikel wird beschrieben, wie Sie Medien aus einer universellen Windows-App zu Remotegeräten umwandeln.
@@ -156,10 +163,5 @@ Implementieren Sie zum Schluss den Handler für die Schaltfläche zum Trennen. B
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

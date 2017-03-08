@@ -3,19 +3,27 @@ author: GrantMeStrength
 Description: Vergleichen Sie Plattformfunktionen zwischen iOS, Android und Windows 10.
 Search.Product: eADQiWindows 10XVcnh
 title: "Windows-Apps-Konzeptzuordnung für Android- und iOS-Entwickler"
+ms.author: jken
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
+ms.assetid: 082736c8-2ac3-41b3-b246-e705edc23f34
 translationtype: Human Translation
-ms.sourcegitcommit: a55e7d0945902ce44ebad481475e8324c9859054
-ms.openlocfilehash: 8acd22c44cf6423aba01083d1e32d282c87f44cb
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: e5cf0a75515458a558e94a9f8bb54913e7df4a14
+ms.lasthandoff: 02/08/2017
 
 ---
 
-#Windows-Apps-Konzeptzuordnung für Android- und iOS-Entwickler
+#<a name="windows-apps-concept-mapping-for-android-and-ios-developers"></a>Windows-Apps-Konzeptzuordnung für Android- und iOS-Entwickler
 
-Wenn Sie Entwickler mit Android- oder iOS-Kenntnissen sind und/oder über den entsprechenden Code verfügen und zu Windows 10 und zur universellen Windows-Plattform (UWP) wechseln möchten, bietet Ihnen dieser Artikel alle Informationen, die Sie für die Zuordnung der Plattformfeatures –und Ihrer Kenntnisse –zwischen den drei Plattformen benötigen.
+Wenn Sie Entwickler mit Android- oder iOS-Kenntnissen sind und/oder über den entsprechenden Code verfügen und zu Windows 10 und zur universellen Windows-Plattform (UWP) wechseln möchten, bietet Ihnen dieser Artikel alle Informationen, die Sie für die Zuordnung der Plattformfeatures – und Ihrer Kenntnisse – zwischen den drei Plattformen benötigen.
 
 Siehe auch die Portierungsinformationen in [Wechsel von iOS zu UWP](ios-to-uwp-root.md). Dieses Dokument kann [heruntergeladen](https://www.microsoft.com/download/details.aspx?id=52041) werden.
 
-## Benutzeroberfläche
+## <a name="user-interface-ui"></a>Benutzeroberfläche
 
 
 <table style="width:100%">
@@ -92,7 +100,7 @@ Siehe auch die Portierungsinformationen in [Wechsel von iOS zu UWP](ios-to-uwp-r
 <td align="left"><strong>Integrierte Touchgesten.</strong> <br><br>Bereitstellen von angepasster Touchunterstützung durch die Behandlung allgemeiner Gestenereignisse, z. B. Tippen und Doppeltippen in Ansichten und Steuerelementen.</td>
 <td align="left"><strong>GestureDetectors</strong> erkennen allgemeine Touchgesten, einschließlich Bildlauf, langes Drücken, Tippen, Doppeltippen und schnelles Wischen.</td>
 <td align="left">Das UIKit-Framework bietet integrierte <strong>Gestenerkennungen</strong>, die Touchgesten, einschließlich Tippen, Zusammendrücken, Schwenken, Wischen, Drehen und langes Drücken, erkennen.</td>
-<td align="left"><strong>UI-Elemente</strong> ermöglichen Ihnen, <strong>statische Gestenereignisse</strong> wie Tippen, Doppeltippen, Rechtstippen und Halten sowie <strong>Manipulationsgestenereignisse</strong> wie Ziehen, Wischen, Drehen, Zusammendrücken und Aufziehen zu behandeln. Gestenereignisse sind <strong>Routingereignisse</strong> und können von übergeordneten Objekten, die das untergeordnete UIElement enthalten, behandelt werden.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt185617.aspx">Toucheingabe-Interaktionen</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt185599.aspx#gestures__manipulations__and_interactions">Benutzerdefinierte Benutzerinteraktionen –Gesten, Manipulationen und Interaktionen</a></td>
+<td align="left"><strong>UI-Elemente</strong> ermöglichen Ihnen, <strong>statische Gestenereignisse</strong> wie Tippen, Doppeltippen, Rechtstippen und Halten sowie <strong>Manipulationsgestenereignisse</strong> wie Ziehen, Wischen, Drehen, Zusammendrücken und Aufziehen zu behandeln. Gestenereignisse sind <strong>Routingereignisse</strong> und können von übergeordneten Objekten, die das untergeordnete UIElement enthalten, behandelt werden.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt185617.aspx">Toucheingabe-Interaktionen</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt185599.aspx#gestures__manipulations__and_interactions">Benutzerdefinierte Benutzerinteraktionen – Gesten, Manipulationen und Interaktionen</a></td>
 </tr>
 </tbody>
 </table>
@@ -166,7 +174,7 @@ Siehe auch die Portierungsinformationen in [Wechsel von iOS zu UWP](ios-to-uwp-r
 <td align="left"><strong>Spracheingabe.</strong> <br><br>Spracherkennung für die Spracheingabe und zusätzliche Sprachfunktionen.</td>
 <td align="left">Die Spracheingabe kann durch jede App bereitgestellt werden, die einen <strong>RecognizerIntent</strong> implementiert, z. B. die <strong>Google-Sprachsuche</strong>. Die <strong>SpeechRecognizer</strong>-Klasse ermöglicht Apps die Verwendung der Spracherkennungs-API von Google.</td>
 <td align="left">Es ist keine integrierte Spracherkennungs- oder Spracheingabe-API vorhanden.</td>
-<td align="left">Sie können für die Interaktion mit der App im Vordergrund die <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt185615.aspx">Spracherkennungs</a></strong>-API verwenden. Mithilfe von sprachbasierten <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt185598.aspx">Cortana-Interaktionen</a></strong> können Sie Apps im Vordergrund oder Hintergrund starten und mit Hintergrund-Apps interagieren.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt185614.aspx">Sprachinteraktionen</a></td>
+<td align="left">Sie können für die Interaktion mit der App im Vordergrund die <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt185615.aspx">Spracherkennungs</a></strong>-API verwenden. Mithilfe von sprachbasierten <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt185598.aspx">Cortana-Interaktionen</a></strong> können Sie Apps im Vordergrund oder Hintergrund starten und mit Hintergrund-Apps interagieren.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt185614.aspx">Spracherkennungsinteraktionen</a></td>
 </tr>
 <tr class="even">
 <td align="left"><strong>Benutzerdefinierte Benutzereingaben.</strong> <br><br>Behandeln von Eingaben per Tastatur, Maus, Stift und anderen Eingaben.</td>
@@ -209,7 +217,7 @@ Siehe auch die Portierungsinformationen in [Wechsel von iOS zu UWP](ios-to-uwp-r
 <td align="left"><strong>HTTP-Bibliotheken für den Zugriff auf REST-APIs.</strong> <br><br>Integrierte Bibliotheken, die Ihnen die Kommunikation mit Webdiensten und Webservern per HTTP(S) ermöglichen.<br/></td>
 <td align="left">HTTP-Bibliotheken <strong>HttpURLConnection</strong> und <strong>Volley</strong>.</td>
 <td align="left"><strong>NSURLSession</strong>, <strong>NSURLConnection</strong> und <strong>NSURLDownload</strong>.</td>
-<td align="left">Die integrierte <strong><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.web.http.httpclient">HttpClient</a></strong>-API bietet Ihnen Zugriff auf allgemeine HTTP-Funktionen, z.B. GET, DELETE, PUT, POST, allgemeine Authentifizierungsmuster, SSL, Cookies und Statusinformationen.</td>
+<td align="left">Die integrierte <strong><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.web.http.httpclient">HttpClient</a></strong>-API bietet Ihnen Zugriff auf allgemeine HTTP-Funktionen, z. B. GET, DELETE, PUT, POST, allgemeine Authentifizierungsmuster, SSL, Cookies und Statusinformationen.</td>
 </tr>
 <tr class="even">
 <td align="left"><strong>Cloudsicherungsdienste.</strong> <br><br>Von der Plattform bereitgestellte Sicherungsdienste für App-Daten.</td>
@@ -418,19 +426,19 @@ Siehe auch die Portierungsinformationen in [Wechsel von iOS zu UWP](ios-to-uwp-r
 <td align="left"><strong>Adaptive UI: flexible Layouts.</strong> <br><br>Unterstützen unterschiedlicher Bildschirmgrößen mit flexibler Höhe und Breite.</td>
 <td align="left">Flexible Layouts lassen sich mit den Werten <strong>wrap_content</strong> und <strong>match_parent</strong> in LinearLayout-Objekten oder durch Verwendung von RelativeLayout-Objekten für die Ausrichtung erstellen.</td>
 <td align="left">Flexible Layouts können unter Verwendung des <strong>adaptiven Modells</strong> mit universellen Storyboards erstellt werden, wobei <strong>Autolayout</strong> mit <strong>Constraints</strong> und <strong>Traits</strong>, z. B. horizontalSizeClass und displayScale, die auf Ansichtscontroller angewendet werden, genutzt wird.</td>
-<td align="left">Mit <strong>Layouteigenschaften</strong> und <strong>Panels</strong> sowie einer Kombination von festen und dynamischen Größen erstellen Sie ein dynamisches Layout.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt228350.aspx#layout_overview">Definieren von Layouts mit XAML –Layouteigenschaften und -panels</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/dn958435.aspx">Reaktionsfähiges Design –Grundlagen</a></td>
+<td align="left">Mit <strong>Layouteigenschaften</strong> und <strong>Panels</strong> sowie einer Kombination von festen und dynamischen Größen erstellen Sie ein dynamisches Layout.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt228350.aspx#layout_overview">Definieren von Layouts mit XAML – Layouteigenschaften und -panels</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/dn958435.aspx">Reaktionsfähiges Design – Grundlagen</a></td>
 </tr>
 <tr class="even">
 <td align="left"><strong>Adaptive UI: maßgeschneiderte Layouts.</strong> <br><br>Unterstützung unterschiedlicher Bildschirmgrößen mit eigenen Ziellayouts.</td>
 <td align="left">Durch die Bereitstellung alternativer Layoutdateien für unterschiedliche Bildschirmkonfigurationen im Verzeichnis „resources“ mit <strong>Konfigurationsqualifizierern</strong>, z. B. <strong>small</strong>, <strong>large</strong>, <strong>ldpi</strong> und <strong>hdpi</strong>, können Sie benutzerdefinierte Layouts auf Bildschirme unterschiedlicher Größe und Pixeldichte anwenden.</td>
 <td align="left">Definieren Sie ein <strong>jeweils eigenes iPhone- und iPad-Storyboard</strong>, um Layouts in einer universellen App an unterschiedliche Gerätefamilien anzupassen.</td>
-<td align="left">Sie können ein maßgeschneidertes Layout erstellen, indem Sie <strong>unterschiedliche XAML-Markupdateien</strong> pro Gerätefamilie definieren.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt228350.aspx#tailored_layouts">Definieren von Layouts mit XAML –Maßgeschneiderte Layouts</a></td>
+<td align="left">Sie können ein maßgeschneidertes Layout erstellen, indem Sie <strong>unterschiedliche XAML-Markupdateien</strong> pro Gerätefamilie definieren.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt228350.aspx#tailored_layouts">Definieren von Layouts mit XAML – Maßgeschneiderte Layouts</a></td>
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>Adaptive UI: dynamische Layouts.</strong> <br><br>Reaktion auf Änderungen der Bildschirmgröße, z. B. Drehung, oder eine Änderung der Fenstergröße.</td>
 <td align="left">Dynamische Layouts werden durch die Verwendung flexibler Layouts mit <strong>LinearLayout</strong> und <strong>RelativeLayout</strong> oder das Bereitstellen alternativer Layoutdateien für unterschiedliche Ausrichtungen ermöglicht.</td>
 <td align="left">Wenn sich die <strong>Größe</strong> oder <strong>Traits</strong> einer Ansicht ändern, werden die in Storyboards angegebenen <strong>Constraints</strong> angewendet.</td>
-<td align="left">Mit <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visualstate.aspx">VisualState</a></strong>, <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visualstatemanager.aspx">VisualStateManager</a></strong> und <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.adaptivetrigger.aspx">AdaptiveTrigger</a></strong> können Sie ganz einfach als Reaktion auf Änderungen der Fenstergröße zur Laufzeit Abschnitte der Benutzeroberfläche dynamisch umbrechen, neu positionieren, anzeigen, ersetzen oder ihre Größe ändern.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt228350.aspx#visual_states_and_state_triggers">Definieren von Layouts mit XAML –Visuelle Zustände und Zustandsauslöser</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/dn958435.aspx">Reaktionsfähiges Design –Grundlagen</a></td>
+<td align="left">Mit <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visualstate.aspx">VisualState</a></strong>, <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visualstatemanager.aspx">VisualStateManager</a></strong> und <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.adaptivetrigger.aspx">AdaptiveTrigger</a></strong> können Sie ganz einfach als Reaktion auf Änderungen der Fenstergröße zur Laufzeit Abschnitte der Benutzeroberfläche dynamisch umbrechen, neu positionieren, anzeigen, ersetzen oder ihre Größe ändern.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt228350.aspx#visual_states_and_state_triggers">Definieren von Layouts mit XAML – Visuelle Zustände und Zustandsauslöser</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/dn958435.aspx">Reaktionsfähiges Design – Grundlagen</a></td>
 </tr>
 <tr class="even">
 <td align="left"><strong>Unterstützen unterschiedlicher Gerätefunktionen.</strong> <br><br>Nutzen Sie erweiterte Hardwarefeatures, während Geräte, die diese nicht aufweisen, trotzdem unterstützt werden.</td>
@@ -502,7 +510,7 @@ Siehe auch die Portierungsinformationen in [Wechsel von iOS zu UWP](ios-to-uwp-r
 <tbody>
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>Aufzeichnen von Medien.</strong> <br><br>Aufzeichnen von Audio- und visuellen Inhalten.</td>
-<td align="left">Mithilfe eines <strong>Intents</strong>, z.B. MediaStore.ACTION_VIDEO_CAPTURE, können Medien mit einer vorhandenen Kamera-App aufgezeichnet werden. Die Bibliothek <strong>android.hardware.camera2</strong> oder <strong>camera</strong> ermöglicht die Implementierung einer benutzerdefinierten Kameraschnittstelle. <strong>MediaRecorder</strong>-APIs können für die Audioaufzeichnung verwendet werden.</td>
+<td align="left">Mithilfe eines <strong>Intents</strong>, z. B. MediaStore.ACTION_VIDEO_CAPTURE, können Medien mit einer vorhandenen Kamera-App aufgezeichnet werden. Die Bibliothek <strong>android.hardware.camera2</strong> oder <strong>camera</strong> ermöglicht die Implementierung einer benutzerdefinierten Kameraschnittstelle. <strong>MediaRecorder</strong>-APIs können für die Audioaufzeichnung verwendet werden.</td>
 <td align="left">Der <strong>UIImagePickerController</strong> ermöglicht das Aufzeichnen von Videos und Fotos mit der Benutzeroberfläche des Systems. Die <strong>AVFoundation</strong>-Klassen, z. B. <strong>AVCaptureSession</strong>, aktivieren den direkten Zugriff auf die Kamera. <br/>Die <strong>AVAudioRecorder</strong>-Klasse ermöglicht die Audioaufzeichnung.</td>
 <td align="left">Mit der <strong><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.media.capture.cameracaptureui.aspx">CameraCaptureUI</a></strong>-Klasse können Sie Fotos und Videos mit der integrierten Kamera-UI aufzeichnen. Sie können auf einer niedrigen Ebene mit der Kamera interagieren und Klassen in <strong><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.media.capture.aspx">Windows.Media.Capture</a></strong>, beispielsweise die <strong><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.media.capture.mediacapture.aspx">MediaCapture-API</a></strong> für die Audioaufzeichnung verwenden. <br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt282142.aspx">Aufnehmen von Fotos und Videos mit „CameraCaptureUI“</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt243896.aspx">Aufnehmen von Fotos und Videos mit „MediaCapture“</a></td>
 </tr>
@@ -510,13 +518,13 @@ Siehe auch die Portierungsinformationen in [Wechsel von iOS zu UWP](ios-to-uwp-r
 <td align="left"><strong>Medienwiedergabe.</strong> <br><br>Wiedergeben von Audio- und Videodateien.</td>
 <td align="left">Zum Wiedergeben von Audio- und Videodateien werden die <strong>MediaPlayer</strong>-Klasse und die <strong>AudioManager</strong>-Klasse verwendet.</td>
 <td align="left">Zum Wiedergeben von Audio- und Videodateien werden das <strong>AVKit-Framework</strong>, <strong>AVAudioPlayer</strong> und das <strong>Media Player-Framework</strong> verwendet.</td>
-<td align="left">Sie können mit den Klassen <strong><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.media.core.mediasource.aspx">MediaSource</a></strong>, <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaelement.aspx">MediaElement</a></strong> und <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.aspx">MediaPlayer</a></strong> Audio- und Videodateien aus Quellen, z.B. lokalen und Remotedateien, wiedergeben.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt592657.aspx">Medienwiedergabe mit „MediaSource“</a></td>
+<td align="left">Sie können mit den Klassen <strong><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.media.core.mediasource.aspx">MediaSource</a></strong>, <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaelement.aspx">MediaElement</a></strong> und <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.aspx">MediaPlayer</a></strong> Audio- und Videodateien aus Quellen, z. B. lokalen und Remotedateien, wiedergeben.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt592657.aspx">Medienwiedergabe mit „MediaSource“</a></td>
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>Bearbeiten von Medien.</strong> <br><br>Erstellen neuer Mediendateien aus vorhandenen Aufzeichnungen und Anwenden von Spezialeffekten.</td>
 <td align="left">Zum Bearbeiten von Inhalten können Klassen niedriger Ebene, z. B. <strong>MediaCodec</strong>, <strong>MediaMuxer</strong> und <strong>android.media.effect</strong>, verwendet werden.</td>
 <td align="left">Zum Bearbeiten von Inhalten können Klassen im <strong>AV Foundation</strong>-Framework, z. B. <strong>AVMutableComposition</strong>, <strong>AVMutableVideoComposition</strong> und <strong>AVMutableAudioMix</strong>, verwendet werden.</td>
-<td align="left">Sie können mit den <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.media.editing.aspx">Windows.Media.Editing</a></strong>-APIs, z.B. <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.media.editing.mediacomposition.aspx">MediaComposition</a></strong> und <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.media.editing.mediaclip.aspx">MediaClip</a></strong>, Medienkompositionen aus Audio- und Videodateien erstellen. Sie können Video- und Bildüberlagerungen hinzufügen, Videoclips kombinieren, Hintergrundaudio hinzufügen und Audio- und Videoeffekte anwenden.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt204792.aspx">Medienkompositionen und -bearbeitung</a></td>
+<td align="left">Sie können mit den <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.media.editing.aspx">Windows.Media.Editing</a></strong>-APIs, z. B. <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.media.editing.mediacomposition.aspx">MediaComposition</a></strong> und <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.media.editing.mediaclip.aspx">MediaClip</a></strong>, Medienkompositionen aus Audio- und Videodateien erstellen. Sie können Video- und Bildüberlagerungen hinzufügen, Videoclips kombinieren, Hintergrundaudio hinzufügen und Audio- und Videoeffekte anwenden.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt204792.aspx">Medienkompositionen und -bearbeitung</a></td>
 </tr>
 </tbody>
 </table>
@@ -571,14 +579,14 @@ Siehe auch die Portierungsinformationen in [Wechsel von iOS zu UWP](ios-to-uwp-r
 <tr class="even">
 <td align="left"><strong>Anzeigen von Karten.</strong> <br><br>Anzeigen einer <strong>interaktiven integrierten Karte</strong> und Hinzufügen von <strong>interessanten Orten</strong>.</td>
 <td align="left">Die Klassen <strong>GoogleMap</strong>, <strong>MapFragment</strong> und <strong>MapView</strong> in der <strong>Google Maps Android API</strong> ermöglichen das Einbetten von Karten in Apps. Interessante Orte können mit <strong>Markern</strong> und der anpassbaren <strong>Marker</strong>-Klasse angezeigt werden.</td>
-<td align="left">Karten werden mit der <strong>MKMapView</strong>-Klasse im <strong>MapKit-Framework</strong> in iOS-Apps eingebettet. <strong>Es können Anmerkungen</strong> mit Objektklassen, z.B. <strong>MKPointAnnotation</strong> und <strong>MKPinAnnotationView</strong>, zu den Apps hinzugefügt werden, um interessante Orte anzuzeigen.</td>
+<td align="left">Karten werden mit der <strong>MKMapView</strong>-Klasse im <strong>MapKit-Framework</strong> in iOS-Apps eingebettet. <strong>Es können Anmerkungen</strong> mit Objektklassen, z. B. <strong>MKPointAnnotation</strong> und <strong>MKPinAnnotationView</strong>, zu den Apps hinzugefügt werden, um interessante Orte anzuzeigen.</td>
 <td align="left">Sie können mit dem integrierten <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.maps.mapcontrol.aspx">MapControl</a></strong>-XAML-Steuerelement, das 2D-, 3D- und Streetside-Ansichten bereitstellt, Karten in die Apps einbetten. Mit Klassen wie <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.maps.mapicon.aspx">MapIcon</a></strong>, <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.maps.mappolygon.aspx">MapPolygon</a></strong> und <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.maps.mappolyline.aspx">MapPolyline</a></strong> können Sie interessante Orte mit einer Ortsmarke, einem Bild oder einer Form hinzufügen.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt219695.aspx">Anzeigen von Karten mit 2D-, 3D- und Streetside-Ansichten</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt219696.aspx">Anzeigen von interessanten Orten (POI) auf einer Karte</a></td>
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>Geofencing.</strong> <br><br>Überwachen des Betretens und Verlassens einer bestimmten geografischen Region.</td>
 <td align="left">Geofences werden mit den <strong>Location Services</strong> im Google Play Services SDK überwacht.</td>
 <td align="left">Regionen werden mit der <strong>CLCircularRegion</strong>-Klasse überwacht und mit der <strong>CLLocationManager.startMonitoringForRegion:</strong>-Methode registriert.</td>
-<td align="left">Sie können einen Geofence-Bereich mit der <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.devices.geolocation.geofencing.geofence.aspx">Geofence</a></strong>-Klasse erstellen und <strong>überwachte Zustände</strong>, z.B. das Betreten oder Verlassen einer Region, definieren. Mit der <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.devices.geolocation.geofencing.geofencemonitor.aspx">GeofenceMonitor-Klasse</a></strong> behandeln Sie Geofence-Ereignisse im Vordergrund und mit der <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.locationtrigger.aspx">LocationTrigger-Hintergrundklasse</a></strong> im Hintergrund.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt219702.aspx">Einrichten von Geofence-Bereichen</a></td>
+<td align="left">Sie können einen Geofence-Bereich mit der <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.devices.geolocation.geofencing.geofence.aspx">Geofence</a></strong>-Klasse erstellen und <strong>überwachte Zustände</strong>, z. B. das Betreten oder Verlassen einer Region, definieren. Mit der <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.devices.geolocation.geofencing.geofencemonitor.aspx">GeofenceMonitor-Klasse</a></strong> behandeln Sie Geofence-Ereignisse im Vordergrund und mit der <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.locationtrigger.aspx">LocationTrigger-Hintergrundklasse</a></strong> im Hintergrund.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt219702.aspx">Einrichten von Geofence-Bereichen</a></td>
 </tr>
 <tr class="even">
 <td align="left"><strong>Geocodierung und umgekehrte Geocodierung.</strong> <br><br>Das Umwandeln von Adressen in geografische Standorte (Geocodierung) und das Umwandeln geografischer Standorte in Adressen (umgekehrte Geocodierung).<br/></td>
@@ -612,7 +620,7 @@ Siehe auch die Portierungsinformationen in [Wechsel von iOS zu UWP](ios-to-uwp-r
 </thead>
 <tbody>
 <tr class="odd" style="background-color: #f2f2f2">
-<td align="left"><strong>Aufrufen einer anderen App.</strong> <br><br>Starten einer anderen App und optionales Freigeben von Daten, z.B. Links, Text, Fotos, Videos und Dateien.</td>
+<td align="left"><strong>Aufrufen einer anderen App.</strong> <br><br>Starten einer anderen App und optionales Freigeben von Daten, z. B. Links, Text, Fotos, Videos und Dateien.</td>
 <td align="left">Zum Starten einer anderen App wird ein <strong>impliziter Intent</strong> verwendet. Dabei werden eine <strong>Action</strong> und optionale Daten in einem <strong>Intent</strong> definiert und mit <strong>startActivityForResult</strong> aufgerufen.<br/></td>
 <td align="left"><strong>App-Erweiterungen</strong> können verwendet werden, um Zugriff auf App-Daten für eine andere App bereitzustellen. <strong>URL-Schemas</strong> ermöglichen das Übergeben einer URL an eine andere App.</td>
 <td align="left">Sie können mit <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.system.launcher.launchuriasync.aspx">Launcher.LaunchUriAsync</a></strong> eine andere App aufrufen, die sich für einen URI registriert hat, oder <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.system.launcher.launchuriforresultsasync.aspx">Launcher.LaunchUriForResultsAsync</a></strong> verwenden, um eine andere App aufzurufen und Ergebnisse von dieser abzurufen. Sie können mit <strong><a href="https://msdn.microsoft.com/library/windows/apps/hh701471.aspx">Launcher.LaunchFileAsync</a></strong> eine Datei an eine andere App übergeben, damit sie von dieser behandelt wird.<br/><br/>Zum Freigeben von Daten zwischen Apps können Sie einfach einen <strong>Freigabe-Vertrag</strong> verwenden.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt228340.aspx">Starten der Standard-App für einen URI</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt269386.aspx">Starten einer App für Ergebnisse</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt299102.aspx">Starten der Standard-App für eine Datei</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt243293.aspx">Freigeben von Daten</a></td>
@@ -662,9 +670,4 @@ Siehe auch die Portierungsinformationen in [Wechsel von iOS zu UWP](ios-to-uwp-r
 </tr>
 </tbody>
 </table>
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

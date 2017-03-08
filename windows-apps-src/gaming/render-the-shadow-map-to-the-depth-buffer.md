@@ -3,21 +3,28 @@ author: mtoepke
 title: Rendern der Schattenmap zum Tiefenpuffer
 description: "Führen Sie das Rendern aus dem Blickwinkel durch, aus dem das Licht kommt, um eine zweidimensionale Tiefenkarte zu erstellen, mit der das Schattenvolumen dargestellt wird."
 ms.assetid: 7f3d0208-c379-8871-cc48-027047c6c2d0
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Spiele, Rendern, Schattenkarte, Tiefenpuffer, Direct3D"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 337aa63ee30b05da51d5b224cb0013519e11504d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 27b7c9a5fb69a19eed5941bf06068d5237ec101e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Rendern der Schattenmap für den Tiefenpuffer
+# <a name="render-the-shadow-map-to-the-depth-buffer"></a>Rendern der Schattenkarte für den Tiefenpuffer
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Führen Sie das Rendern aus dem Blickwinkel durch, aus dem das Licht kommt, um eine zweidimensionale Tiefenkarte zu erstellen, mit der das Schattenvolumen dargestellt wird. Mithilfe der Tiefenmap wird eine Maske für den Raum erstellt, der im Schatten gerendert wird. Teil2 von [Exemplarische Vorgehensweise: Implementieren von Schattenvolumes mithilfe von Tiefenpuffern in Direct3D11](implementing-depth-buffers-for-shadow-mapping.md).
+Führen Sie das Rendern aus dem Blickwinkel durch, aus dem das Licht kommt, um eine zweidimensionale Tiefenkarte zu erstellen, mit der das Schattenvolumen dargestellt wird. Mithilfe der Tiefenmap wird eine Maske für den Raum erstellt, der im Schatten gerendert wird. Teil 2 von [Exemplarische Vorgehensweise: Implementieren von Schattenvolumes mithilfe von Tiefenpuffern in Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
 
-## Löschen des Tiefenpuffers
+## <a name="clear-the-depth-buffer"></a>Löschen des Tiefenpuffers
 
 
 Löschen Sie den Tiefenpuffer stets, bevor Sie in den Puffer rendern.
@@ -27,7 +34,7 @@ context->ClearRenderTargetView(m_deviceResources->GetBackBufferRenderTargetView(
 context->ClearDepthStencilView(m_shadowDepthView.Get(), D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0);
 ```
 
-## Rendern der Schattenmap zum Tiefenpuffer
+## <a name="render-the-shadow-map-to-the-depth-buffer"></a>Rendern der Schattenmap zum Tiefenpuffer
 
 
 Geben Sie für den Schattenrenderdurchlauf einen Tiefenpuffer an, aber geben Sie kein Renderziel an.
@@ -124,7 +131,7 @@ void ShadowSceneRenderer::RenderShadowMap()
 
 **Optimieren des Ansichts-Frustums:**  Stellen Sie sicher, dass in Ihrer Implementierung ein exaktes Ansichts-Frustum berechnet wird, damit Sie mit dem Tiefenpuffer die größtmögliche Präzision erzielen. Weitere Tipps zu Schattenmethoden finden Sie unter [Häufig verwendete Methoden zur Verbesserung von Tiefenmaps für Schatten](https://msdn.microsoft.com/library/windows/desktop/ee416324).
 
-## Vertex-Shader für Schattendurchlauf
+## <a name="vertex-shader-for-shadow-pass"></a>Vertex-Shader für Schattendurchlauf
 
 
 Verwenden Sie eine vereinfachte Version Ihres Vertex-Shaders, um nur die Vertexposition im Lichtraum zu rendern. Beziehen Sie keine Beleuchtungsnormalen, sekundären Transformationen usw. ein.
@@ -153,10 +160,5 @@ Im nächsten Teil dieser exemplarischen Vorgehensweise erfahren Sie, wie Sie Sch
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

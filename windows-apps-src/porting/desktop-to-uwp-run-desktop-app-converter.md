@@ -1,11 +1,19 @@
 ---
 author: awkoren
-Description: "Führen Sie Desktop App Converter zum Konvertieren einer Windows-Desktopanwendung (z. B. Win32, WPF und Windows Forms) in eine UWP-App (Universelle Windows-Plattform) aus."
+Description: "Führen Sie den Desktop App Converter zum Konvertieren einer Windows-Desktopanwendung (z. B. Win32, WPF und Windows-Forms) in eine UWP-App (Universelle Windows-Plattform) aus."
 Search.Product: eADQiWindows 10XVcnh
 title: Desktop App Converter
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 74c84eb6-4714-4e12-a658-09cb92b576e3
 translationtype: Human Translation
-ms.sourcegitcommit: bf6da2f4d780774819fe7a4abf6367345304767c
-ms.openlocfilehash: 3ffd664892fe5ee589d3bf5704e2eeed178bf5f3
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 046a3b474aa281b1b09002a922dc2acdb7833599
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -13,80 +21,19 @@ ms.openlocfilehash: 3ffd664892fe5ee589d3bf5704e2eeed178bf5f3
 
 [Laden Sie Desktop App Converter herunter](https://aka.ms/converter)
 
-Desktop App Converter (DAC) ist ein Tool, mit dem Sie vorhandene, für .NET 4.6.1 oder Win32 geschriebene Desktop-Apps für die universelle Windows-Plattform (UWP) konvertieren können. Sie können Ihre Desktop-Installer über den Konverter im unbeaufsichtigten Modus (automatisch) ausführen und ein APPX-Paket abrufen, das Sie mithilfe des Add-AppxPackage-PowerShell-Cmdlets auf Ihrem Entwicklungscomputer installieren können.
+Der Desktop App Converter (DAC) ist ein Tool, mit dem Sie vorhandene, für .NET 4.6.1 oder Win32 geschriebene Desktop-Apps für die universelle Windows-Plattform (UWP) konvertieren können. Sie können Ihre Desktop-Installer über den Konverter im unbeaufsichtigten Modus (automatisch) ausführen und ein APPX-Paket abrufen, das Sie mithilfe des Add-AppxPackage-PowerShell-Cmdlets auf Ihrem Entwicklungscomputer installieren können.
 
 Desktop App Converter ist jetzt im [Windows Store](https://aka.ms/converter) erhältlich.
 
-Der Konverter führt den Desktop-Installer in einer isolierten Windows-Umgebung mit einem sauberen Basisimage als Teil des Konverterdownloads aus. Es werden alle Registrierungs- und Dateisystem-E/A des Desktop-Installers erfasst und als Teil der Ausgabe gepackt. Der Konverter gibt ein AppX-Paket mit Paketidentität und der Möglichkeit aus, eine breite Palette von WinRT-APIs aufzurufen.
+Der Konverter führt den Desktop-Installer in einer isolierten Windows-Umgebung mit einem sauberen Basisimage als Teil des Konverterdownloads aus. Es werden alle Registrierungs- und Dateisystem-E/A des Desktop-Installers erfasst und als Teil der Ausgabe gepackt. Der Konverter gibt ein AppX-Paket mit Paketidentität aus. Er bietet die Möglichkeit, viele WinRT-APIs aufzurufen.
 
-## <a name="whats-new"></a>Das ist neu:
+## <a name="whats-new"></a>Neuigkeiten
 
-In diesem Abschnitt werden die Änderungen zwischen den verschiedenen Desktop App Converter-Versionen beschrieben. 
+Die neueste DAC-Version ist v1.0.6.0. Änderungen in diesem Update:
 
-### <a name="12142016-v104"></a>14.12.2016 (v1.0.4)
-
-* Verbesserte Basisimageüberprüfung zur Suche nach ungültigen WIM-Dateien. 
-* Programmfehlerbehebung für Sonderzeichen im```-Publisher```-Parameter. 
-* Aktualisierte Ressourcen.
-
-### <a name="1122016-v101"></a>02.11.2016 (v1.0.1)
-
-* Verbesserung der Überprüfung des Manifestschemas. 
-* Verbesserung der Fehlernachrichten. 
-* Hinzufügung der Überprüfung der unterstützten Windows-Versionen. 
-* Fehlerkorrekturen für Registrierungsfiltertests.
-
-### <a name="9142016-v10"></a>14.09.2016 (v1.0)
-
-* Desktop App Converter kann jetzt aus dem [Windows Store](https://aka.ms/converter) heruntergeladen werden. 
-* Laden Sie die neuesten Windows 10-Basisimages (.wim) für DAC im [Download Center](https://aka.ms/converterimages) herunter.
-* Dank der Store-App können Sie jetzt den neuen Einstiegspunkt *DesktopAppConverter.exe <arguments>* zum Ausführen des Konverters von einer beliebigen Stelle einer Eingabeaufforderung mit erhöhten Rechten oder im PowerShell-Fenster verwenden.  
-
-
-### <a name="922016-v0125"></a>02.09.2016 (v0.1.25)
-
-* Integration des neuesten DotNet-Computervirtualisierungs-NuGet-Pakets.
-* Neu eingeführte Abhängigkeiten für common.dll hinzugefügt.
-* Mehrere Fehlerbehebungen.
-
-### <a name="842016-v0124"></a>04.08.2016 (v0.1.24)
-
-* Unterstützung für das automatische Signieren der mit DAC konvertierten Apps zu Testzwecken. Versuchen Sie es einmal mit dem Flag ```–Sign```. 
-* Warnungen für den Fall, dass eine der COM-Registrierungen in der virtuellen Registrierungsstruktur vom APPX-Paket nicht unterstützt werden.  
-* Unterstützung für das automatische Erkennen der App-Abhängigkeiten in VC++-Bibliotheken sowie das anschließende Konvertieren in APPX-Manifestabhängigkeiten. Beachten Sie, dass Sie zum Querladen und Testen von Apps mit der VC++-Laufzeit die VCLib-Frameworkpakete herunterladen müssen. Weitere Informationen hierzu finden Sie im Blogbeitrag [Using Visual C++ Runtime in a Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) (in englischer Sprache). Navigieren Sie auf Ihrem Computer zu den Paketen im Ordner ```Program Files (x86)\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop``` und anschließend zur erforderlichen Version (z. B. 11.0, 12.0, 14.0), und doppelklicken Sie auf das entsprechende Architekturpaket (X64, X86), um es zu installieren.
-* Manifestschema wurde für das Windows 10 Anniversary Update (10.0.14393.0) aktualisiert. 
-* Mehrere Fehlerbehebungen und verbessertes Ausgabelayout. 
-
-### <a name="772016-v0122"></a>07.07.2016 (v0.1.22)
-
-* Unterstützung für die automatische Erkennung von Shellerweiterungen in Ihrer Desktopanwendung und für die Deklaration der Erweiterungen in der APPXMANIFEST-Datei Ihres UWP-Pakets wurde hinzugefügt. Weitere Informationen zu den Desktoperweiterungen finden Sie unter [**Erweiterungen für konvertierte Desktop-Apps**](desktop-to-uwp-extensions.md). 
-* Die AppExecutable-Erkennung bei einer großen Menge von Apps wurde verbessert. 
-
-### <a name="6162016-v0120"></a>16.06.2016 (v0.1.20)
-
-* Probleme beim Konvertieren für die neuesten Windows 10 Insider Preview-Builds wurden behoben. 
-* ```–CreateX86Package``` wurde durch ```–PackageArch``` ersetzt. Dies ermöglicht das Angeben der Architektur für das generierte Paket. 
-
-### <a name="682016"></a>08.06.2016
-
-* Unterstützung für die Generierung von x86-appx-Paketen auf AMD64-Hostrechnern hinzugefügt, auf denen der Konverter ausgeführt wird.
-* Speicherplatzverwendung durch Entfernen aller zuvor erweiterter Basisimages reduziert.
-* Unterstützung für das Bereinigen temporärer Dateien und aller unnötigen Basisimages hinzugefügt.
-* Unterstützung für das Erkennen von Dateityp- und Protokollzuordnungen verbessert.
-* Logik zum Ermitteln der AppExecutable-Eigenschaft für eine große Anzahl von Apps verbessert.
-* Unterstützung für die Bereitstellung zusätzlicher –InstallerArguments für MSI-basierte Installationsprogramme hinzugefügt.
-* Fehlerkorrekturen für alle PathTooLongException-Fehler während der Konvertierung.
-
-### <a name="5122016"></a>12.05.2016
-
-- Unterstützung für Pro-Edition von Windows wiederhergestellt. 
-- Konverter-```-Setup```-Markierung aktiviert nun Windows-Container-Feature und verarbeitet Basisimage-Erweiterung. Führen Sie Folgendes an einer PowerShell-Eingabeaufforderung mit erhöhten Rechten für die einmalige Einrichtung aus: ```PS C:\> .\DesktopAppConverter.ps1 -Setup -BaseImage BaseImage-12345.wim -Verbose```
-- Automatische Erkennung des App-Installationspfads hinzugefügt und Anwendungsstamm außerhalb von VFS verschoben, um alle nicht benötigten Dateisystemumleitungen zur Laufzeit zu verringern.
-- Automatische Erkennung des erweiterten Basisimage als Teil des Konvertierungsprozesses hinzugefügt.
-- Automatische Erkennung für Dateitypzuordnungen und Protokolle hinzugefügt.
-- Logik zum Erkennen der Startmenüverknüpfung verbessert.
-- Dateisystemfilter zum Beibehalten der von der App installierten MUI-Dateien verbessert.
-- Die unterstützte Desktop-Mindestversion (10.0.14342.0) wurde im Manifest aktualisiert.
+* Extrahieren von Symbolen: Der DAC verwendet Symbole in Ihrer Desktop-App, um visuelle Ressourcen für das konvertierte App-Paket zu generieren.
+* Verbesserte Bereinigung des erweiterten Basisimages, temporäre Dateien und das Container-Netzwerk und Features.
+* Verschiedene Fehlerbehebungen. 
 
 ## <a name="system-requirements"></a>Systemanforderungen
 
@@ -108,11 +55,11 @@ In diesem Abschnitt werden die Änderungen zwischen den verschiedenen Desktop Ap
 
 Desktop App Converter basiert auf den neuesten Windows 10-Features. Stellen Sie sicher, dass Sie Windows 10 Anniversary Update (14393.0) oder spätere Builds verwenden.
 
-1.  Laden Sie [DesktopAppConverter aus dem Windows Store](https://aka.ms/converter) herunter sowie die [WIM-Basisimage-Datei, die dem Build entspricht](https://aka.ms/converterimages).  
-2.  Führen Sie DesktopAppConverter als Administrator aus. Klicken Sie dazu im Startmenü mit der rechten Maustaste auf die Kachel, und wählen Sie unter *More* die Option *Als Administrator ausführen* aus, oder klicken Sie in der Taskleiste mit der rechten Maustaste auf die Kachel, klicken Sie ein zweites Mal mit der rechten Maustaste auf den angezeigten App-Namen, und wählen Sie anschließend *Als Administrator ausführen*.
-3.  Führen Sie im Konsolenfenster der App ```Set-ExecutionPolicy bypass``` aus.
-4.  Richten Sie den Konverter ein, indem Sie im Konsolenfenster der App ```DesktopAppConverter.exe -Setup -BaseImage .\BaseImage-1XXXX.wim -Verbose``` ausführen.
-5.  Wenn Sie beim Ausführen des vorherigen Befehls zum Neustart aufgefordert werden, starten Sie den Computer neu.
+1.    Laden Sie [DesktopAppConverter aus dem Windows Store](https://aka.ms/converter) herunter sowie die [WIM-Basisimage-Datei, die dem Build entspricht](https://aka.ms/converterimages).  
+2.    Führen Sie DesktopAppConverter als Administrator aus. Klicken Sie dazu im Startmenü mit der rechten Maustaste auf die Kachel, und wählen Sie unter *More* die Option *Als Administrator ausführen* aus, oder klicken Sie in der Taskleiste mit der rechten Maustaste auf die Kachel, klicken Sie ein zweites Mal mit der rechten Maustaste auf den angezeigten App-Namen, und wählen Sie anschließend *Als Administrator ausführen*.
+3.    Führen Sie im Konsolenfenster der App ```Set-ExecutionPolicy bypass``` aus.
+4.    Richten Sie den Konverter ein, indem Sie im Konsolenfenster der App ```DesktopAppConverter.exe -Setup -BaseImage .\BaseImage-1XXXX.wim -Verbose``` ausführen.
+5.    Wenn Sie beim Ausführen des vorherigen Befehls zum Neustart aufgefordert werden, starten Sie den Computer neu.
 
 ## <a name="run-the-desktop-app-converter"></a>Ausführen von Desktop App Converter
 
@@ -308,8 +255,3 @@ Desktop App Converter unterstützt Unicode nicht. Daher können keine chinesisch
 
 + [Migrieren von Desktop-Apps zur universellen Windows-Plattform mit Desktop App Converter](https://channel9.msdn.com/events/Build/2016/P504)
 + [Project Centennial: Migrieren vorhandener Desktopanwendungen zur universellen Windows-Plattform](https://channel9.msdn.com/events/Build/2016/B829)  
-
-
-<!--HONumber=Dec16_HO3-->
-
-

@@ -4,9 +4,17 @@ Description: "Ein Flyout ist ein kleines Popupmenü, das vorübergehend UI zu ak
 title: "Menüs und Kontextmenüs"
 label: Menus and context menus
 template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
+ms.assetid: 0327d8c1-8329-4be2-84e3-66e1e9a0aa60
 translationtype: Human Translation
-ms.sourcegitcommit: 5f50e490caa5d1d88c2f8315dc47e15b0ae22a05
-ms.openlocfilehash: badb03c97ae0f2350e5d7592f10168bb7d6e7d1a
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 515c63d5612358cf90684427f8f747e19384c6ff
+ms.lasthandoff: 02/08/2017
 
 ---
 # <a name="menus-and-context-menus"></a>Menüs und Kontextmenüs
@@ -153,7 +161,7 @@ private void ChangeColorItem_Click(object sender, RoutedEventArgs e)
 > Einfach ausgeblendete Steuerelemente wie Menüs, Kontextmenüs und andere Flyouts erhalten in der vorübergehenden Benutzeroberfläche den Tastatur- bzw. Gamepad-Fokus, bis sie nicht mehr angezeigt werden. Um dieses Verhalten optisch zu kennzeichnen, werden diese Steuerelemente auf der Xbox als Überlagerung gezeichnet, wobei Helligkeit bzw. die Sichtbarkeit umgebenden Benutzeroberfläche reduziert wird. Dieses Verhalten kann mit der neuen [LightDismissOverlayMode](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.lightdismissoverlaymode.aspx)-Eigenschaft geändert werden. Standardmäßig erhalten kurzlebige Benutzeroberflächen auf der Xbox (jedoch nicht auf anderen Gerätefamilien) eine einfach ausgeblendete Überlagerung. Apps können jedoch durchsetzen, dass die Überlagerung stets **On** oder stets **Off** ist.
 
 > ```xaml
-> <MenuFlyout LightDismissOverlayMode="Off">
+> <MenuFlyout LightDismissOverlayMode=\"Off\">
 > ```
 
 ## <a name="get-the-sample-code"></a>Beispielcode herunterladen
@@ -163,9 +171,4 @@ private void ChangeColorItem_Click(object sender, RoutedEventArgs e)
 ## <a name="related-articles"></a>Verwandte Artikel
 
 - [**MenuFlyout-Klasse**](https://msdn.microsoft.com/library/windows/apps/dn299030)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

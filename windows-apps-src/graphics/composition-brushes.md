@@ -3,14 +3,21 @@ author: scottmill
 ms.assetid: 03dd256f-78c0-e1b1-3d9f-7b3afab29b2f
 title: Kompositionspinsel
 description: "Ein Pinsel zeichnet den Bereich eines Visual-Objekts mit der zugehörigen Ausgabe. Verschiedene Pinsel haben unterschiedliche Ausgabetypen."
+ms.author: scotmi
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 11989aafb86d280b93eed7c2e3f016b5914b15ab
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 9affb4fab1931c7584d86bfb07797345788c28f9
+ms.lasthandoff: 02/07/2017
 
 ---
-# Kompositionspinsel
+# <a name="composition-brushes"></a>Kompositionspinsel
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Ein Pinsel zeichnet den Bereich eines [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858)-Objekts mit der zugehörigen Ausgabe. Verschiedene Pinsel haben unterschiedliche Ausgabetypen. Die Composition-API bietet drei Pinseltypen:
 
@@ -27,19 +34,19 @@ Alle Pinsel erben von [**CompositionBrush**](https://msdn.microsoft.com/library/
 -   [Verwenden von Oberflächenpinseln](./composition-brushes.md#using-surface-brush)
 -   [Konfigurieren von Streckung und Ausrichtung](./composition-brushes.md#configuring-stretch-and-alignment)
 
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 In dieser Übersicht wird davon ausgegangen, dass Sie mit der Struktur einer einfachen Kompositionsanwendung, wie unter [Visuelle Ebene](visual-layer.md) beschrieben, vertraut sind.
 
-## Farbgrundlagen
+## <a name="color-basics"></a>Farbgrundlagen
 
-Vor dem Zeichnen mit [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399) müssen Sie Farben auswählen. Die Composition-API verwendet die Windows-Runtime-Struktur „Color“, um eine Farbe darzustellen. Die Color-Struktur verwendet die sRGB-Codierung. Die sRGB-Codierung unterteilt Farben in vier Kanäle: Alpha, Rot, Grün und Blau. Jede Komponente wird durch einen Gleitkommawert mit einem normalen Bereich von 0,0 bis 1,0 dargestellt. Ein Wert von 0,0 gibt das vollständige Fehlen von Farbe an, während der Wert 1,0 angibt, dass die Farbe vollständig vorhanden ist. In der Alpha-Komponente steht0,0 für vollständig transparente Farbe und1,0 für vollständig deckende Farbe.
+Vor dem Zeichnen mit [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399) müssen Sie Farben auswählen. Die Composition-API verwendet die Windows-Runtime-Struktur „Color“, um eine Farbe darzustellen. Die Color-Struktur verwendet die sRGB-Codierung. Die sRGB-Codierung unterteilt Farben in vier Kanäle: Alpha, Rot, Grün und Blau. Jede Komponente wird durch einen Gleitkommawert mit einem normalen Bereich von 0,0 bis 1,0 dargestellt. Ein Wert von 0,0 gibt das vollständige Fehlen von Farbe an, während der Wert 1,0 angibt, dass die Farbe vollständig vorhanden ist. In der Alpha-Komponente steht 0,0 für vollständig transparente Farbe und 1,0 für vollständig deckende Farbe.
 
-### Alpha-Modi
+### <a name="alpha-modes"></a>Alpha-Modi
 
 Farbwerte werden in [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399) immer als nur als Alpha interpretiert.
 
-## Verwenden von Farbpinseln
+## <a name="using-color-brush"></a>Verwenden von Farbpinseln
 
 Um einen Pinsel zu erstellen, rufen Sie die Compositor.[**CreateColorBrush**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositor.createcolorbrush.aspx)-Methode auf, die [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399) zurückgibt. Die Standardfarbe für **CompositionColorBrush** ist „\#00000000“. Die Abbildung und der Code zeigen im Folgenden eine kleine visuelle Struktur. Es wird ein Rechteck erstellt, dessen Konturen mit einem schwarzen Pinsel gezeichnet sind und das mit einem Pinsel in Volltonfarbe ausgefüllt ist, die den Farbwert „0x9ACD32“ hat.
 
@@ -68,7 +75,7 @@ Visual2.Offset = new Vector3(3, 3, 0);
 
 Im Gegensatz zu anderen Pinseln ist das Erstellen von [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399) relativ kostengünstig. Sie können **CompositionColorBrush**-Objekte bei jedem Rendern erstellen, ohne Leistungseinbußen in Kauf nehmen zu müssen.
 
-## Verwenden von Oberflächenpinseln
+## <a name="using-surface-brush"></a>Verwenden von Oberflächenpinseln
 
 [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415) zeichnet ein visuelles Element mit einer Kompositionsoberfläche (dargestellt durch ein [**ICompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Dn706819)-Objekt). Die folgende Abbildung zeigt ein quadratisches visuelles Element, das mit einer Lakritz-Bitmap gezeichnet und mithilfe von D2D auf einer **ICompositionSurface**-Schnittstelle gerendert wird.
 
@@ -92,14 +99,14 @@ LoadImage(_surfaceBrush, "ms-appx:///Assets/liqorice.png");
 visual.Brush = _surfaceBrush;
 ```
 
-## Konfigurieren von Strecken und Ausrichtung
+## <a name="configuring-stretch-and-alignment"></a>Konfigurieren von Strecken und Ausrichtung
 
 Manchmal füllt der Inhalt der [**ICompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Dn706819) für [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415) die Bereiche des zu zeichnenden visuellen Elements nicht vollständig. In diesem Fall verwendet die Composition-API die Moduseinstellungen [**HorizontalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx), [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio) und [**Stretch**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.stretch) des Pinsels, um den restlichen Bereich auszufüllen.
 
 -   [**HorizontalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx) und [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio) sind vom Typ „float“ und können verwendet werden, um die Position des Pinsels innerhalb der visuellen Grenzen zu steuern.
     -   Der Wert 0,0 richtet die linke obere Ecke des Pinsels an der linken oberen Ecke des visuellen Elements aus.
     -   Der Wert 0,5 richtet die Mitte des Pinsels an der Mitte des visuellen Elements aus.
-    -   Der Wert1,0 richtet die rechte untere Ecke des Pinselelements an der rechten unteren Ecke des visuellen Elements aus.
+    -   Der Wert 1,0 richtet die rechte untere Ecke des Pinselelements an der rechten unteren Ecke des visuellen Elements aus.
 -   Die [**Stretch**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.stretch)-Eigenschaft akzeptiert die folgenden Werte, die durch die [**CompositionStretch**](https://msdn.microsoft.com/library/windows/apps/Dn706786)-Aufzählung definiert werden:
     -   Keine: Das Pinsel-Element wird nicht gestreckt, um die Grenzen des visuellen Elements auszufüllen. Beachten Sie bei Verwendung der Einstellung für Strecken Folgendes: Wenn der Pinsel größer als die Grenzen des visuellen Elements ist, wird der Inhalt des Pinsels abgeschnitten. Der Teil des Pinsels, der zum Zeichnen der visuellen Grenzen verwendet wird, kann mit den Eigenschaften [**HorizontalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx) und [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio) gesteuert werden.
     -   Uniform: Der Pinsel wird skaliert und an die Grenzen des visuellen Elements angepasst. Das Seitenverhältnis des Pinsels wird beibehalten. Dies ist der Standardwert.
@@ -108,14 +115,10 @@ Manchmal füllt der Inhalt der [**ICompositionSurface**](https://msdn.microsoft.
 
  
 
- 
+## <a name="related-topics"></a>Verwandte Themen
+[Systemeigene DirectX- und Direct2D-Interoperabilität mit „BeginDraw“ und „EndDraw“](composition-native-interop.md)
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

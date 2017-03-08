@@ -3,14 +3,21 @@ author: DBirtolo
 ms.assetid: B4A550E7-1639-4C9A-A229-31E22B1415E7
 title: Sensorausrichtung
 description: "Sensordaten der Klassen Accelerometer, Gyrometer, Compass, Inclinometer und OrientationSensor sind durch ihre Referenzachsen definiert. Diese Achsen werden durch das Querformat des Geräts bestimmt und drehen sich mit dem Gerät, wenn es vom Benutzer gedreht wird."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 62b4042cf1c6296c908a12feb5b2fcbd2b9b8734
-ms.openlocfilehash: 9deb0327f67350af49ba19224a75e766ff9805d7
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d9e54efb077bf46faf30e2ce3052fb0c860d0409
+ms.lasthandoff: 02/07/2017
 
 ---
-# Sensorausrichtung
+# <a name="sensor-orientation"></a>Sensorausrichtung
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 ** Wichtige APIs **
 
@@ -19,7 +26,7 @@ ms.openlocfilehash: 9deb0327f67350af49ba19224a75e766ff9805d7
 
 Sensordaten der Klassen [**Accelerometer**](https://msdn.microsoft.com/library/windows/apps/BR225687), [**Gyrometer**](https://msdn.microsoft.com/library/windows/apps/BR225718), [**Compass**](https://msdn.microsoft.com/library/windows/apps/BR225705), [**Inclinometer**](https://msdn.microsoft.com/library/windows/apps/BR225766) und [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371) sind durch ihre Referenzachsen definiert. Diese Achsen werden durch das Querformat des Geräts bestimmt und drehen sich mit dem Gerät, wenn es vom Benutzer gedreht wird. Falls Ihre App die automatische Drehung unterstützt und sie sich selbst entsprechend der Drehung des Geräts neu ausrichtet, müssen Sie die Sensordaten für die Drehung anpassen, bevor Sie sie verwenden.
 
-## Bildschirmausrichtung und Geräteausrichtung
+## <a name="display-orientation-vs-device-orientation"></a>Bildschirmausrichtung und Geräteausrichtung
 
 Um die Referenzachse für Sensoren begreifen zu können, muss zwischen Bildschirmausrichtung und Geräteausrichtung unterschieden werden. Bei der Bildschirmausrichtung handelt es sich um die Richtung, in der Text und Bilder auf dem Bildschirm angezeigt werden, wohingegen es sich bei der Geräteausrichtung um die physische Position des Geräts handelt. Im folgenden Bild sind sowohl das Gerät als auch die Anzeige im **Querformat** ausgerichtet. (Beachten Sie, dass die abgebildeten Sensorachsen nur für Geräte gelten, die für das Querformat ausgelegt sind).
 
@@ -35,9 +42,9 @@ Das nächste Bild zeigt die Anzeigeausrichtung im Querformat und die Geräteausr
 
 Sie können die Ausrichtungswerte mithilfe der [**DisplayInformation**](https://msdn.microsoft.com/library/windows/apps/Dn264258)-Klasse abfragen, indem Sie die [**GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.display.displayinformation.getforcurrentview.aspx)-Methode mit der [**CurrentOrientation**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.display.displayinformation.currentorientation.aspx)-Eigenschaft verwenden. Anschließend können Sie durch einen Vergleich mit der [**DisplayOrientations**](https://msdn.microsoft.com/library/windows/apps/BR226142)-Enumeration eine Logik erstellen. Bedenken Sie, dass Sie für jede unterstützte Ausrichtung eine Konvertierung der Referenzachsen in die jeweilige Ausrichtung unterstützen müssen.
 
-## Für Querformat und für Hochformat ausgelegte Geräte
+## <a name="landscape-first-vs-portrait-first-devices"></a>Für Querformat und für Hochformat ausgelegte Geräte
 
-Hersteller bieten Geräte an, die sowohl für das Quer- als auch das Hochformat ausgelegt sind. Der Referenzrahmen weicht zwischen Geräten ab, die für das Querformat (z.B. Desktops und Laptops) und das Hochformat (z.B. Smartphones und einige Tablets) ausgelegt sind. Die folgende Tabelle enthält die Gerätesensorachsen für Geräte, die jeweils für Hoch- oder Querformat ausgelegt sind.
+Hersteller bieten Geräte an, die sowohl für das Quer- als auch das Hochformat ausgelegt sind. Der Referenzrahmen weicht zwischen Geräten ab, die für das Querformat (z. B. Desktops und Laptops) und das Hochformat (z. B. Smartphones und einige Tablets) ausgelegt sind. Die folgende Tabelle enthält die Gerätesensorachsen für Geräte, die jeweils für Hoch- oder Querformat ausgelegt sind.
 
 | Ausrichtung | Für Querformat ausgelegt | Für Hochformat ausgelegt |
 |-------------|-----------------|----------------|
@@ -46,13 +53,13 @@ Hersteller bieten Geräte an, die sowohl für das Quer- als auch das Hochformat 
 | **LandscapeFlipped ** | ![Querformatgerät in LandscapeFlipped-Ausrichtung](images/sensor-orientation-4.PNG) | ![Hochformatgerät in LandscapeFlipped-Ausrichtung](images/sensor-orientation-5.PNG) | 
 | **PortraitFlipped** | ![Querformatgerät in PortraitFlipped-Ausrichtung](images/sensor-orientation-6.PNG)| ![Hochformatgerät in PortraitFlipped-Ausrichtung](images/sensor-orientation-7.PNG) |
 
-## Geräte, die die Anzeige übertragen, und monitorlose Geräte
+## <a name="devices-broadcasting-display-and-headless-devices"></a>Geräte, die die Anzeige übertragen, und monitorlose Geräte
 
-Manche Geräte können die Anzeige auf ein anderes Gerät übertragen. Sie können z.B. ein Tablet verwenden und die Anzeige auf einen Projektor im Querformat übertragen. In diesem Szenario müssen Sie bedenken, dass die Geräteausrichtung auf dem ursprünglichen Gerät basiert, und nicht auf dem Gerät, das die Anzeige darstellt. Ein Beschleunigungsmesser würde daher Daten für das Tablet melden.
+Manche Geräte können die Anzeige auf ein anderes Gerät übertragen. Sie können z. B. ein Tablet verwenden und die Anzeige auf einen Projektor im Querformat übertragen. In diesem Szenario müssen Sie bedenken, dass die Geräteausrichtung auf dem ursprünglichen Gerät basiert, und nicht auf dem Gerät, das die Anzeige darstellt. Ein Beschleunigungsmesser würde daher Daten für das Tablet melden.
 
 Außerdem verfügen einige Geräte nicht über eine Anzeige. Die Standardausrichtung für diese Geräte ist das Hochformat.
 
-## Bildschirmausrichtung und Kompassrichtung
+## <a name="display-orientation-and-compass-heading"></a>Bildschirmausrichtung und Kompassrichtung
 
 
 Die Kompassrichtung hängt von den Referenzachsen ab und ändert sich daher mit der Geräteausrichtung. Sie kompensieren dies entsprechend den Angaben in der folgenden Tabelle (unter der Annahme, dass der Benutzer nach Norden ausgerichtet ist).
@@ -99,7 +106,7 @@ private void ReadingChanged(object sender, CompassReadingChangedEventArgs e)
 }
 ```
 
-## Bildschirmausrichtung mit Beschleunigungsmesser und Gyrometer
+## <a name="display-orientation-with-the-accelerometer-and-gyrometer"></a>Bildschirmausrichtung mit Beschleunigungsmesser und Gyrometer
 
 Die folgende Tabelle zeigt, wie Beschleunigungsmesser- und Gyrometerdaten für die Bildschirmausrichtung konvertiert werden.
 
@@ -153,7 +160,7 @@ private void ReadingChanged(object sender, GyrometerReadingChangedEventArgs e)
 }
 ```
 
-## Bildschirmausrichtung und Geräteausrichtung
+## <a name="display-orientation-and-device-orientation"></a>Bildschirmausrichtung und Geräteausrichtung
 
 Die [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371)-Daten müssen auf andere Weise geändert werden. Stellen Sie sich diese unterschiedlichen Ausrichtungen als Drehungen um die Z-Achse entgegen dem Uhrzeigersinn vor. Folglich müssen wir die Drehung umkehren, um wieder die Ausrichtung des Benutzers zu erhalten. Für Quaterniondaten können wir anhand der eulerschen Formel eine Drehung mit einer Referenzquaternion definieren, und außerdem können wir eine Referenzdrehungsmatrix verwenden.
 
@@ -167,10 +174,5 @@ Die [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR20
 | **Hochformat**         | 90                                 | cos(-45⁰) + (i + j + k)*sin(-45⁰)       | \[0 1 0<br/>-1 0 0<br/>0 0 1]              |
 | **LandscapeFlipped** | 180                                | 0 - i - j - k                           | \[1 0 0<br/> 0 1 0<br/> 0 0 1]               |
 | **PortraitFlipped**  | 270                                | cos(-135⁰) + (i + j + k)*sin(-135⁰)     | \[0 -1 0<br/> 1 0 0<br/> 0 0 1]             |
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

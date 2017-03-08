@@ -3,16 +3,23 @@ author: mtoepke
 title: "Bewegungs-/Blicksteuerungen für Spiele"
 description: "Hier erfahren Sie, wie Sie Ihrem DirectX-Spiel herkömmliche Bewegungs-/Blicksteuerungen für Maus und Tastatur (auch als Maussteuerungen bezeichnet) hinzufügen."
 ms.assetid: 4b4d967c-3de9-8a97-ae68-0327f00cc933
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Spiele, Bewegungs-/Blicksteuerungen, Steuerelemente"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: d5bd0a43c1f261e6a12ed947e497d3e45d0ab6a7
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 40af05538aa6a6fff6e159fe8aa8812090e8b44b
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <span id="dev_gaming.tutorial__adding_move-look_controls_to_your_directx_game"></span>Bewegungs-/Blicksteuerungen für Spiele
+# <a name="span-iddevgamingtutorialaddingmove-lookcontrolstoyourdirectxgamespanmove-look-controls-for-games"></a><span id="dev_gaming.tutorial__adding_move-look_controls_to_your_directx_game"></span>Bewegungs-/Blicksteuerungen für Spiele
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Hier erfahren Sie, wie Sie Ihrem DirectX-Spiel herkömmliche Bewegungs-/Blicksteuerungen für Maus und Tastatur (auch als Maussteuerungen bezeichnet) hinzufügen.
 
@@ -22,13 +29,13 @@ Falls Ihnen dieses Steuerungskonzept nicht vertraut ist, können Sie sich das wi
 
 Diese Steuerungen werden bei Spielen im Allgemeinen als WASD-Steuerungen bezeichnet: Die Tasten W, A, S und D werden für die feste Kamerabewegung in der Z-Ebene verwendet, und die Maus wird zum Steuern der Kameradrehung um die X- und Y-Achsen verwendet.
 
-## Ziele
+## <a name="objectives"></a>Ziele
 
 
 -   Hinzufügen einfacher Bewegungs-/Blicksteuerungen zum DirectX-Spiel für Maus und Tastatur sowie Touchscreens
 -   Implementieren einer First-Person-Kamera zum Navigieren in einer 3D-Umgebung
 
-## Hinweis zur Implementierung der Fingereingabesteuerung
+## <a name="a-note-on-touch-control-implementations"></a>Hinweis zur Implementierung der Fingereingabesteuerung
 
 
 Für die Toucheingabesteuerungen werden zwei Controller implementiert: der Bewegungscontroller, der die Bewegung in der Z-Ebene relativ zum Blickpunkt der Kamera behandelt, und der Blickcontroller, der den Blickpunkt der Kamera ausrichtet. Der Bewegungscontroller ist den WASD-Tasten auf der Tastatur zugeordnet und der Blickcontroller der Maus. Für die Fingereingabesteuerungen müssen wir aber einen Bereich des Bildschirms festlegen, der als Richtungseingabe bzw. als virtuelle WASD-Tasten dient, während der restliche Bildschirm den Eingabebereich für die Blicksteuerungen darstellt.
@@ -39,7 +46,7 @@ Der Bildschirm sieht wie folgt aus:
 
 Wenn Sie in der linken unteren Bildschirmecke den Toucheingabezeiger (nicht die Maus!) nach oben bewegen, bewegt sich die Kamera vorwärts. Bei allen Abwärtsbewegungen bewegt sich die Kamera rückwärts. Das Gleiche gilt für Bewegungen nach links und rechts im Zeigerbereich des Bewegungscontrollers. Außerhalb dieses Bereichs wird der Zeiger zum Blickcontroller – Sie ziehen die Kamera einfach durch Berühren des Bildschirms in die gewünschte Blickrichtung.
 
-## Einrichten der grundlegenden Eingabeereignisinfrastruktur
+## <a name="set-up-the-basic-input-event-infrastructure"></a>Einrichten der grundlegenden Eingabeereignisinfrastruktur
 
 
 Zunächst müssen wir die Steuerungsklasse erstellen, mit der wir Eingabeereignisse von Maus und Tastatur behandeln, und die Kameraperspektive auf der Grundlage dieser Eingabe aktualisieren. Da wir Bewegungs-/Blicksteuerungen implementieren, nennen wir diese Klasse **MoveLookController**.
@@ -184,10 +191,10 @@ Die folgenden Methoden und Eigenschaften verwenden wir, um die Zustandsinformati
 
 Jetzt haben Sie alle Komponenten, die Sie zum Implementieren der Bewegungs-/Blicksteuerungen benötigen. Als Nächstes setzen wir diese Teile zusammen.
 
-## Erstellen der grundlegenden Eingabeereignisse
+## <a name="create-the-basic-input-events"></a>Erstellen der grundlegenden Eingabeereignisse
 
 
-Der Ereignisverteiler der Windows-Runtime stellt fünfEreignisse bereit, die von Instanzen der **MoveLookController**-Klasse behandelt werden sollen:
+Der Ereignisverteiler der Windows-Runtime stellt fünf Ereignisse bereit, die von Instanzen der **MoveLookController**-Klasse behandelt werden sollen:
 
 -   [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278)
 -   [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276)
@@ -248,7 +255,7 @@ _In_ PointerEventArgs^ args)
 }
 ```
 
-Dieser Ereignishandler überprüft, ob es sich beim Zeiger um die Maus handelt (da in diesem Beispiel sowohl Maus als auch Toucheingabe unterstützt werden) und ob sich der Zeiger im Bereich des Bewegungscontrollers befindet. Treffen beide Kriterien zu, überprüft er, ob der Zeiger gerade erst gedrückt wurde (d.h. ob dieses Click-Ereignis nicht mit einer vorherigen Bewegungs- oder Blickeingabe zusammenhängt), indem er testet, ob **m\_moveInUse** auf „false“ festgelegt ist. Ist dies der Fall, erfasst der Handler den entsprechenden Punkt im Bereich des Bewegungscontrollers und legt **m\_moveInUse** auf „true“ fest, damit er die Startposition der Eingabeinteraktion für den Bewegungscontroller bei einem erneuten Aufruf nicht überschreibt. Außerdem aktualisiert er die Zeiger-ID des Bewegungscontrollers mit der ID des aktuellen Zeigers.
+Dieser Ereignishandler überprüft, ob es sich beim Zeiger um die Maus handelt (da in diesem Beispiel sowohl Maus als auch Toucheingabe unterstützt werden) und ob sich der Zeiger im Bereich des Bewegungscontrollers befindet. Treffen beide Kriterien zu, überprüft er, ob der Zeiger gerade erst gedrückt wurde (d. h. ob dieses Click-Ereignis nicht mit einer vorherigen Bewegungs- oder Blickeingabe zusammenhängt), indem er testet, ob **m\_moveInUse** auf „false“ festgelegt ist. Ist dies der Fall, erfasst der Handler den entsprechenden Punkt im Bereich des Bewegungscontrollers und legt **m\_moveInUse** auf „true“ fest, damit er die Startposition der Eingabeinteraktion für den Bewegungscontroller bei einem erneuten Aufruf nicht überschreibt. Außerdem aktualisiert er die Zeiger-ID des Bewegungscontrollers mit der ID des aktuellen Zeigers.
 
 Wenn es sich beim Zeiger um die Maus handelt oder der Toucheingabezeiger sich nicht im Bereich des Bewegungscontrollers befindet, muss er sich im Bereich des Blickcontrollers befinden. Der Handler legt **m\_lookLastPoint** auf die aktuelle Position fest, an der der Benutzer die Maustaste gedrückt oder den Bildschirm berührt und gedrückt hat, setzt die Differenz (Delta) zurück und aktualisiert die Zeiger-ID des Blickcontrollers mit der aktuellen Zeiger-ID. Außerdem legt er den Zustand des Blickcontrollers auf „Aktiv“ fest.
 
@@ -376,7 +383,7 @@ void MoveLookController::OnKeyUp(
 
 Wenn die Taste losgelassen wird, legt der Ereignishandler den Zustand wieder auf „false“ fest. Wenn **Update** aufgerufen wird, überprüft der Ereignishandler diese Bewegungszustände und bewegt die Kamera entsprechend. Dies ist etwas einfacher als die Implementierung für Fingereingabe.
 
-## Initialisieren der Fingereingabesteuerungen und des Controllerzustands
+## <a name="initialize-the-touch-controls-and-the-controller-state"></a>Initialisieren der Fingereingabesteuerungen und des Controllerzustands
 
 
 Jetzt verbinden wir die Ereignisse und initialisieren alle Controllerzustandsfelder.
@@ -423,7 +430,7 @@ void MoveLookController::Initialize( _In_ CoreWindow^ window )
 
 Die **Initialize**-Methode akzeptiert als Parameter einen Verweis auf die [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)-Instanz der App und registriert die von uns entwickelten Ereignishandler für die entsprechenden Ereignisse in dieser **CoreWindow**-Instanz. Sie initialisiert die Bewegungs- und Blickzeiger-IDs, legt den Befehlsvektor für die Touchscreen-Bewegungscontrollerimplementierung auf Null fest und richtet die Kameraansicht gerade nach vorn aus, wenn die App gestartet wird.
 
-## Abrufen und Festlegen der Position und Ausrichtung der Kamera
+## <a name="getting-and-setting-the-position-and-orientation-of-the-camera"></a>Abrufen und Festlegen der Position und Ausrichtung der Kamera
 
 
 Als Nächstes definieren wir einige Methoden zum Abrufen und Festlegen der Kameraposition in Bezug zum Viewport.
@@ -464,7 +471,7 @@ DirectX::XMFLOAT3 MoveLookController::get_LookPoint()
 }
 ```
 
-## Aktualisieren der Zustandsinformationen der Controller
+## <a name="updating-the-controller-state-info"></a>Aktualisieren der Zustandsinformationen der Controller
 
 
 Jetzt führen wir die Berechnungen aus, mit denen die in **m\_movePointerPosition** erfassten Zeigerkoordinaten in neue Koordinaten für das Spielwelt-Koordinatensystem konvertiert werden. Die App ruft diese Methode bei jeder Aktualisierung der Hauptschleife auf. Daher berechnen wir an dieser Stelle die neuen Informationen zur Blickpunktposition, die an die App übergeben werden sollen, um die Ansichtsmatrix vor der Projektion in den Viewport zu aktualisieren.
@@ -550,16 +557,16 @@ void MoveLookController::Update(CoreWindow ^window)
 }
 ```
 
-Damit die Bewegung nicht "zittert", wenn der Spieler den fingereingabebasierten Bewegungscontroller verwendet, legen wir einen virtuellen inaktiven Bereich mit einem Durchmesser von 32Pixel um den Zeiger fest. Außerdem fügen wir die Geschwindigkeit hinzu, die sich aus dem Befehlswert plus einer Bewegungsrate berechnet. (Sie können dieses Verhalten wie gewünscht anpassen, um die Bewegungsrate basierend auf der Distanz, um die der Zeiger im Bereich des Bewegungscontrollers bewegt wird, zu erhöhen oder zu verringern.)
+Damit die Bewegung nicht "zittert", wenn der Spieler den fingereingabebasierten Bewegungscontroller verwendet, legen wir einen virtuellen inaktiven Bereich mit einem Durchmesser von 32 Pixel um den Zeiger fest. Außerdem fügen wir die Geschwindigkeit hinzu, die sich aus dem Befehlswert plus einer Bewegungsrate berechnet. (Sie können dieses Verhalten wie gewünscht anpassen, um die Bewegungsrate basierend auf der Distanz, um die der Zeiger im Bereich des Bewegungscontrollers bewegt wird, zu erhöhen oder zu verringern.)
 
 Beim Berechnen der Geschwindigkeit setzen wir außerdem die von den Bewegungs- und Blickcontrollern empfangenen Koordinaten in die Bewegung des tatsächlichen Blickpunkts um, die wir an die Methode zum Berechnen der Ansichtsmatrix für die Szene senden. Als Erstes invertieren wir die X-Koordinate, da sich der Blickpunkt in der Szene in entgegengesetzter Richtung dreht (was die Drehung einer Kamera um ihre Mittelachse simuliert), wenn wir den Blickcontroller per Mausklick oder Toucheingabe nach links oder rechts bewegen. Anschließend vertauschen wir die Y- und Z-Achse, da eine Aufwärts-/Abwärtsbewegung mittels Taste oder Toucheingabe (interpretiert als Y-Achsenverhalten) mit dem Bewegungscontroller in eine Kameraaktion umgesetzt werden soll, durch die der Blickpunkt in den oder aus dem Bildschirm (Z-Achse) bewegt wird.
 
 Die endgültige Position des Blickpunkts für den Spieler ist die letzte Position plus die berechnete Geschwindigkeit. Dies ist die Position, die der Renderer liest, wenn er die **get\_Position**-Methode aufruft (wahrscheinlich während der Einrichtung für die einzelnen Frames). Danach setzen wir den Bewegungsbefehl auf Null zurück.
 
-## Aktualisieren der Ansichtsmatrix mit der neuen Kameraposition
+## <a name="updating-the-view-matrix-with-the-new-camera-position"></a>Aktualisieren der Ansichtsmatrix mit der neuen Kameraposition
 
 
-Wir können eine Koordinate des Szenenbereichs abrufen, auf die die Kamera ausgerichtet ist und die jedes Mal aktualisiert wird, wenn die App dazu angewiesen wird (z.B. alle 60Sekunden in der Hauptschleife der App). Dieser Pseudocode zeigt das Aufrufverhalten, das Sie implementieren können:
+Wir können eine Koordinate des Szenenbereichs abrufen, auf die die Kamera ausgerichtet ist und die jedes Mal aktualisiert wird, wenn die App dazu angewiesen wird (z. B. alle 60 Sekunden in der Hauptschleife der App). Dieser Pseudocode zeigt das Aufrufverhalten, das Sie implementieren können:
 
 ```cpp
 myMoveLookController->Update( m_window );   
@@ -575,7 +582,7 @@ myFirstPersonCamera->SetViewParameters(
 Herzlichen Glückwunsch! Sie haben einfache Bewegungs-/Blicksteuerungen für Touchscreens und Tastatur-/Mauseingabe in Ihrem Spiel implementiert.
 
 > **Hinweis**  
-Dieser Artikel ist für Windows10-Entwickler gedacht, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows8.x oder Windows Phone8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -585,10 +592,5 @@ Dieser Artikel ist für Windows10-Entwickler gedacht, die Apps für die universe
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

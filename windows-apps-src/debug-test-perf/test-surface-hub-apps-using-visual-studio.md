@@ -3,21 +3,28 @@ author: mcleblanc
 ms.assetid: A5320094-DF53-42FC-A6BA-A958F8E9210B
 title: Testen von Surface Hub-Apps mit Visual Studio
 description: "Der Visual Studio-Simulator bietet eine Umgebung für das Entwerfen, Entwickeln, Debuggen und Testen von UWP-Apps, einschließlich Apps für Surface Hub."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 0bf96b70a915d659c754816f4c115f3b3f0a5660
-ms.openlocfilehash: 1939508e8ace2fe3ed9210d6969d1c68843c32a9
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 426670f9b8d24a770f74aa0bdfaa5abb043c39ef
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Testen von Surface Hub-Apps mit Visual Studio
-Der Visual Studio-Simulator bietet eine Umgebung, in der Sie Apps für die universale Windows-Plattform (UWP) entwerfen, entwickeln, debuggen und testen können, einschließlich Apps, die Sie für Microsoft Surface Hub entwickelt haben. Der Simulator verwendet nicht dieselbe Benutzeroberfläche wie ein Surface Hub, ist jedoch hilfreich, um das Erscheinungsbild und Verhalten Ihrer App bei der Bildschirmgröße und -auflösung von Surface Hubs zu testen.
+# <a name="test-surface-hub-apps-using-visual-studio"></a>Testen von Surface Hub-Apps mit Visual Studio
+Der Visual Studio-Simulator bietet eine Umgebung, in der Sie Apps für die universelle Windows-Plattform (UWP) entwerfen, entwickeln, debuggen und testen können, einschließlich Apps, die Sie für Microsoft Surface Hub entwickelt haben. Der Simulator verwendet nicht dieselbe Benutzeroberfläche wie ein Surface Hub, ist jedoch hilfreich, um das Erscheinungsbild und Verhalten Ihrer App bei der Bildschirmgröße und -auflösung von Surface Hubs zu testen.
 
-Weitere Informationen finden Sie unter [Ausführen von WindowsStore-Apps im Simulator](https://msdn.microsoft.com/library/hh441475.aspx).
+Weitere Informationen finden Sie unter [Ausführen von Windows Store-Apps im Simulator](https://msdn.microsoft.com/library/hh441475.aspx).
 
-## Hinzufügen von Surface Hub-Auflösungen zum Simulator
+## <a name="add-surface-hub-resolutions-to-the-simulator"></a>Hinzufügen von Surface Hub-Auflösungen zum Simulator
 So fügen Sie Surface Hub-Auflösungen zum Simulator hinzu:
 
-1. Erstellen Sie eine Konfiguration für denSurface Hub mit 55Zoll, indem Sie den folgenden XML-Code in einer Datei namens **HardwareConfigurations-SurfaceHub55.xml** speichern.  
+1. Erstellen Sie eine Konfiguration für denSurface Hub mit 55 Zoll, indem Sie den folgenden XML-Code in einer Datei namens **HardwareConfigurations-SurfaceHub55.xml** speichern.  
 
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -36,7 +43,7 @@ So fügen Sie Surface Hub-Auflösungen zum Simulator hinzu:
     </ArrayOfHardwareConfiguration>
     ```
 
-2. Erstellen Sie eine Konfiguration für denSurface Hub mit 84Zoll, indem Sie den folgenden XML-Code in einer Datei namens **HardwareConfigurations-SurfaceHub84.xml** speichern.
+2. Erstellen Sie eine Konfiguration für denSurface Hub mit 84 Zoll, indem Sie den folgenden XML-Code in einer Datei namens **HardwareConfigurations-SurfaceHub84.xml** speichern.
 
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -65,10 +72,10 @@ So fügen Sie Surface Hub-Auflösungen zum Simulator hinzu:
 
    > **Tipp**&nbsp;&nbsp;[Schalten Sie den Tablet-Modus ein](http://windows.microsoft.com/windows-10/getstarted-like-a-tablet), um das Verhalten auf einem Surface Hub besser zu simulieren.
 
-## Bereitstellen von Apps aus Visual Studio auf einem Surface Hub
+## <a name="deploy-apps-to-a-surface-hub-from-visual-studio"></a>Bereitstellen von Apps aus Visual Studio auf einem Surface Hub
 Das manuelle Bereitstellen einer App ist ein einfacher Vorgang.
 
-### Aktivieren des Entwicklermodus
+### <a name="enable-developer-mode"></a>Aktivieren des Entwicklermodus
 Standardmäßig installiert Surface Hub nur Apps aus dem Windows Store. Um Apps, die von einer anderen Quelle signiert wurden, zu installieren, müssen Sie den Entwicklermodus aktivieren.
 
 > **Hinweis**&nbsp;&nbsp;Nachdem der Entwicklermodus aktiviert wurde, müssen Sie den Surface Hub zurücksetzen, um den Entwicklermodus wieder zu deaktivieren. Durch das Zurücksetzen des Geräts werden alle lokalen Benutzerdateien und die Konfiguration gelöscht, und anschließend wird Windows neu installiert.
@@ -81,7 +88,7 @@ Standardmäßig installiert Surface Hub nur Apps aus dem Windows Store. Um Apps,
 
 3. Wählen Sie **Entwicklermodus** aus, und akzeptieren Sie die Warnung.
 
-### Bereitstellen Ihrer App aus Visual Studio
+### <a name="deploy-your-app-from-visual-studio"></a>Bereitstellen Ihrer App aus Visual Studio
 Weitere Informationen finden Sie unter [Bereitstellen und Debuggen von Apps für die Universelle Windows-Plattform (UWP)](https://msdn.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps).
 
    > **Hinweis**&nbsp;&nbsp;Dieses Feature erfordert mindestens **Visual Studio 2015 Update 1**.
@@ -99,9 +106,4 @@ Weitere Informationen finden Sie unter [Bereitstellen und Debuggen von Apps für
 3. Wählen Sie entweder **Debugging starten (F5)** aus, um die Bereitstellung und das Debugging Ihrer App auf dem Surface Hub auszuführen, oder drücken Sie STRG+F5, um nur die Bereitstellung Ihrer App auszuführen.
 
    > **Tipp**&nbsp;&nbsp;Sollte auf dem Surface Hub der Willkommensbildschirm angezeigt werden, können Sie diesen durch Drücken einer beliebigen Schaltfläche schließen.
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

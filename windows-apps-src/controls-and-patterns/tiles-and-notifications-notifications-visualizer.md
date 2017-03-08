@@ -1,13 +1,20 @@
 ---
 author: mijacobs
-Description: "Notifications Visualizer ist eine neue App für die Universelle Windows-Plattform (UWP) im Store, die Entwickler dabei unterstützt, adaptive Livekacheln für Windows 10 zu entwerfen."
+Description: "Notifications Visualizer ist eine neue App für die Universelle Windows-Plattform (UWP) im Store, die Entwickler dabei unterstützt, adaptive Live-Kacheln für Windows 10 zu entwerfen."
 title: Notifications Visualizer
 ms.assetid: FCBB7BB1-2C79-484B-8FFC-26FE1934EC1C
 label: TBD
 template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: d51aacb31f41cbd9c065b013ffb95b83a6edaaf4
-ms.openlocfilehash: 20e73c2de82bcc76c94fff38163dddac7ef9d8a9
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f7269e3fde1f5dbca278b2b9047b392049ee452c
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="notifications-visualizer"></a>Notifications Visualizer
@@ -15,7 +22,7 @@ ms.openlocfilehash: 20e73c2de82bcc76c94fff38163dddac7ef9d8a9
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
-Notifications Visualizer ist eine neue App für die Universelle Windows-Plattform (UWP) im [Store](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1), die Entwickler dabei unterstützt, adaptive Livekacheln für Windows 10 zu entwerfen.
+Notifications Visualizer ist eine neue App für die Universelle Windows-Plattform (UWP) im [Store](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1), die Entwickler dabei unterstützt, adaptive Live-Kacheln für Windows 10 zu entwerfen.
 
 ## <a name="overview"></a>Übersicht
 
@@ -56,8 +63,3 @@ Dieser Screenshot der App zeigt den Kachel-Editor:
 * [Erstellen adaptiver Kacheln](tiles-and-notifications-create-adaptive-tiles.md)
 * [Vorlagen für adaptive Kacheln: Schema und Dokumentation](tiles-and-notifications-adaptive-tiles-schema.md)
 * [Kacheln und Popups (MSDN-Blog)](http://blogs.msdn.com/b/tiles_and_toasts/)
-
-
-<!--HONumber=Dec16_HO1-->
-
-

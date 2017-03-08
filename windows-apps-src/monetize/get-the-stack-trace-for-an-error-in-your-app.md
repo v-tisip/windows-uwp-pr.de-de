@@ -1,17 +1,24 @@
 ---
 author: mcleanbyron
-ms.assetid: 
-description: "Verwenden Sie diese Methode in der Windows Store-Analyse-API, um die Stapelüberwachung für einen Fehler in Ihrer App abzurufen."
+ms.assetid: b556a245-6359-4ddc-a4bd-76f9873ab694
+description: "Verwenden Sie diese Methode der Windows Store-Analyse-API, um die Stapelüberwachung für einen Fehler in Ihrer App abzurufen."
 title: "Abrufen der Stapelüberwachung für einen Fehler in Ihrer App"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Store-Dienste, Windows Store-Analyse-API, Stapelüberwachung, Fehler"
 translationtype: Human Translation
-ms.sourcegitcommit: 767097f068630e5ec171415c05d6dc395c8b26b3
-ms.openlocfilehash: 90481b5f85d010a142e86ca67ac94c3ec25d89c6
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 8b10c7f9e2de962aca719055a26d8c3954ea052f
+ms.lasthandoff: 02/08/2017
 
 ---
 
 # <a name="get-the-stack-trace-for-an-error-in-your-app"></a>Abrufen der Stapelüberwachung für einen Fehler in Ihrer App
 
-Verwenden Sie diese Methode in der Windows Store-Analyse-API, um die Stapelüberwachung für einen Fehler in Ihrer App abzurufen. Diese Methode kann nur die Stapelüberwachung für einen App-Fehler herunterladen, die in den letzten 30 Tagen aufgetreten ist. Stapelüberwachungen sind auch im Abschnitt **Fehler** des [Integritätsberichts](../publish/health-report.md) im Windows Dev Center-Dashboard verfügbar.
+Verwenden Sie diese Methode der Windows Store-Analyse-API, um die Stapelüberwachung für einen Fehler in Ihrer App abzurufen. Diese Methode kann nur die Stapelüberwachung für einen App-Fehler herunterladen, die in den letzten 30 Tagen aufgetreten ist. Stapelüberwachungen sind auch im Abschnitt **Fehler** des [Integritätsberichts](../publish/health-report.md) im Windows Dev Center-Dashboard verfügbar.
 
 Bevor Sie diese Methode verwenden können, müssen Sie zuerst die Methode für das [Abrufen von Details zu einem Fehler in Ihrer App](get-details-for-an-error-in-your-app.md) aufrufen, um die ID der CAB-Datei abzurufen, die mit dem Fehler verknüpft ist, für den Sie die Stapelüberwachung abrufen möchten.
 
@@ -125,9 +132,4 @@ Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese 
 * [Zugreifen auf Analysedaten mit Windows Store-Diensten](access-analytics-data-using-windows-store-services.md)
 * [Abrufen von Fehlerberichtsdaten](get-error-reporting-data.md)
 * [Abrufen von Details zu einem Fehler in Ihrer App](get-details-for-an-error-in-your-app.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

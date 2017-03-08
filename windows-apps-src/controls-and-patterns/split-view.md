@@ -2,19 +2,26 @@
 author: Jwmsft
 title: Geteilte Darstellung
 ms.assetid: E9E4537F-1160-4183-9A83-26602FCFDC9A
-description: "Ein Steuerelement für die geteilte Darstellung verfügt über einen erweiterbaren/reduzierbaren Bereich und einen Inhaltsbereich."
+description: "Ein Steuerelement für die geteilte Ansicht verfügt über einen erweiterbaren/reduzierbaren Bereich und einen Inhaltsbereich."
 label: Split view
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 61ada7839f76df92041b606066f5cbd54448cd93
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: b4f0c84c4fdf273e7ddf2c16e3323ad0c4e52359
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="split-view-control"></a>Steuerelement für geteilte Ansicht
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-Ein Steuerelement für die geteilte Darstellung verfügt über einen erweiterbaren/reduzierbaren Bereich und einen Inhaltsbereich.
+Ein Steuerelement für die geteilte Ansicht verfügt über einen erweiterbaren/reduzierbaren Bereich und einen Inhaltsbereich.
 
 <div class="important-apis" >
 <b>Wichtige APIs</b><br/>
@@ -83,9 +90,4 @@ Dies ist ein SplitView-Steuerelement mit einem offenen Bereich, der inline neben
  
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

@@ -3,30 +3,37 @@ author: mtoepke
 title: "Definieren des UWP-App-Frameworks (Universelle Windows-Plattform) für das Spiel"
 description: "Wenn Sie Code für ein UWP-Spiel mit DirectX erstellen, müssen Sie zunächst das Framework erstellen, das die Interaktion der Spielobjekte mit Windows ermöglicht."
 ms.assetid: 7beac1eb-ba3d-e15c-44a1-da2f5a79bb3b
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, Spiele, DirectX
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 9dea19c87c4049c73a938b1cd5576644f7b0f8b9
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 82a44a3499297b3988815ad10091cd351a194cbd
+ms.lasthandoff: 02/07/2017
 
 ---
 
-#  Definieren des UWP-App-Frameworks (Universelle Windows-Plattform) für das Spiel
+#  <a name="define-the-games-universal-windows-platform-uwp-app-framework"></a>Definieren des UWP-App-Frameworks (Universelle Windows-Plattform) für das Spiel
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Wenn Sie Code für ein UWP-Spiel mit DirectX erstellen, müssen Sie zunächst das Framework erstellen, das die Interaktion der Spielobjekte mit Windows ermöglicht. Hierzu gehören Windows-Runtime-Eigenschaften wie die Behandlung von Anhalte-/Fortsetzungsereignissen, Fensterfokus und Andocken sowie die Ereignisse, Interaktionen und Übergänge für die Benutzeroberfläche. Wir erläutern, wie das Beispielspiel strukturiert ist und wie der übergeordnete Zustandsautomat für die Interaktion zwischen Spieler und System definiert wird.
 
-## Ziel
+## <a name="objective"></a>Ziel
 
 
 -   Hier lernen Sie, wie Sie das Framework für ein UWP-DirectX-Spiel einrichten und den Zustandsautomaten implementieren, der den allgemeinen Spielablauf definiert.
 
-## Initialisieren und Starten des Ansichtsanbieters
+## <a name="initializing-and-starting-the-view-provider"></a>Initialisieren und Starten des Ansichtsanbieters
 
 
 In jedem UWP-DirectX-Spiel müssen Sie einen Ansichtsanbieter abrufen, mit dem das App-Singleton (also das Windows-Runtime-Objekt, das eine Instanz Ihrer ausgeführten App definiert) auf die benötigten Grafikressourcen zugreifen kann. Über die Windows-Runtime ist Ihre App zwar direkt mit der Grafikschnittstelle verbunden, Sie müssen aber angeben, welche Ressourcen Sie benötigen und wie diese behandelt werden sollen.
 
-Wie bereits unter [Einrichten des Spieleprojekts](tutorial--setting-up-the-games-infrastructure.md) beschrieben, stellt Microsoft Visual Studio2015 in der Datei **Sample3DSceneRenderer.cpp** die Implementierung eines einfachen Renderers für DirectX bereit. Die Datei steht bei Auswahl der Vorlage **DirectX11-App (Universelle Windows-App)** zur Verfügung.
+Wie bereits unter [Einrichten des Spieleprojekts](tutorial--setting-up-the-games-infrastructure.md) beschrieben, stellt Microsoft Visual Studio 2015 in der Datei **Sample3DSceneRenderer.cpp** die Implementierung eines einfachen Renderers für DirectX bereit. Die Datei steht bei Auswahl der Vorlage **DirectX 11-App (Universelle Windows-App)** zur Verfügung.
 
 Weitere Informationen zum Verständnis sowie zur Erstellung eines Ansichtsanbieters und eines Renderers finden Sie unter [So wird's gemacht: Einrichten Ihrer UWP-App mit C++ und DirectX für das Anzeigen einer DirectX-Ansicht](https://msdn.microsoft.com/library/windows/apps/hh465077).
 
@@ -38,7 +45,7 @@ Die Implementierung muss für fünf Methoden bereitgestellt werden, die vom App-
 -   [**Run**](https://msdn.microsoft.com/library/windows/apps/hh700505)
 -   [**Uninitialize**](https://msdn.microsoft.com/library/windows/apps/hh700523)
 
-In der Vorlage „DirectX11-App (Universelle Windows-App)“ werden diese fünf Methoden im **App**-Objekt in [App.h](#code_sample) definiert. Im nächsten Abschnitt erfahren Sie, wie sie in das Spiel implementiert werden.
+In der Vorlage „DirectX 11-App (Universelle Windows-App)“ werden diese fünf Methoden im **App**-Objekt in [App.h](#complete-sample-code-for-this-section) definiert. Im nächsten Abschnitt erfahren Sie, wie sie in das Spiel implementiert werden.
 
 Die Initialize-Methode des Ansichtsanbieters
 
@@ -108,7 +115,7 @@ void App::SetWindow(
 
 Mit dem Aufruf einer Implementierung von [**SetWindow**](https://msdn.microsoft.com/library/windows/apps/hh700509) stellt das App-Singleton ein [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)-Objekt bereit, das das Hauptfenster des Spiels darstellt, und macht seine Ressourcen und Ereignisse für das Spiel verfügbar. Da nun ein Fenster zur Verfügung steht, kann mit dem Hinzufügen der grundlegenden Benutzeroberflächenkomponenten und -ereignisse begonnen werden. Hierbei handelt es sich um einen Zeiger (wird sowohl von der Maus- als auch von der Fingereingabesteuerung genutzt) sowie um die grundlegenden Ereignisse für die Anpassung der Fenstergröße, für das Schließen des Fensters sowie für DPI-Änderungen (für den Fall, dass sich das Anzeigegerät ändert).
 
-Die Spiele-App initialisiert auch den Controller, da nun die Interaktion mit einem Fenster möglich ist, sowie das Spielobjekt selbst. Sie kann Eingaben des Controllers (Fingereingabe, Maus oder Xbox360-Controller) lesen.
+Die Spiele-App initialisiert auch den Controller, da nun die Interaktion mit einem Fenster möglich ist, sowie das Spielobjekt selbst. Sie kann Eingaben des Controllers (Fingereingabe, Maus oder Xbox 360-Controller) lesen.
 
 Nach dem Initialisieren des Controllers definiert die App zwei rechteckige Bereiche in den Ecken unten links und unten rechts auf dem Bildschirm für die Bewegungs- bzw. Kamerasteuerungen. Der Spieler verwendet das durch den Aufruf von **SetMoveRect** definierte Rechteck links unten als virtuelles Bedienfeld, um die Kamera vor und zurück sowie seitlich zu bewegen. Das durch die **SetFireRect**-Methode definierte Rechteck rechts unten wird als virtuelle Taste zum Abfeuern der Munition verwendet.
 
@@ -160,7 +167,7 @@ void App::Load(
 
 Nachdem das Hauptfenster festgelegt ist, ruft das App-Singleton die **Load**-Methode auf. Im Beispiel verwendet diese Methode eine Reihe asynchroner Aufgaben (deren Syntax in der [Parallel Patterns Library](https://msdn.microsoft.com/library/windows/apps/dd492418.aspx) definiert ist), um die Spielobjekte zu erstellen, Grafikressourcen zu laden und den Zustandsautomaten des Spiels zu initialisieren. Mithilfe des asynchronen Aufgabenmusters wird die Load-Methode rasch beendet und ermöglicht der App, mit der Verarbeitung von Eingaben zu beginnen. In dieser Methode zeigt die App eine Fortschrittsleiste an, während die Ressourcendateien geladen werden.
 
-Der Ressourcenladevorgang wird in zwei getrennte Phasen unterteilt, da der Zugriff auf den Direct3D11-Gerätekontext auf den Thread beschränkt ist, für den der Gerätekontext erstellt wurde, während der Zugriff auf das Direct3D11-Gerät für die Objekterstellung keiner Threadbeschränkung unterliegt. Die Aufgabe **CreateGameDeviceResourcesAsync** wird in einem anderen Thread ausgeführt als die im Originalthread ausgeführte Aufgabe zur Vervollständigung (*FinalizeCreateGameDeviceResources*). Wir verwenden ein ähnliches Muster zum Laden von Levelressourcen mit **LoadLevelAsync** und **FinalizeLoadLevel**.
+Der Ressourcenladevorgang wird in zwei getrennte Phasen unterteilt, da der Zugriff auf den Direct3D 11-Gerätekontext auf den Thread beschränkt ist, für den der Gerätekontext erstellt wurde, während der Zugriff auf das Direct3D 11-Gerät für die Objekterstellung keiner Threadbeschränkung unterliegt. Die Aufgabe **CreateGameDeviceResourcesAsync** wird in einem anderen Thread ausgeführt als die im Originalthread ausgeführte Aufgabe zur Vervollständigung (*FinalizeCreateGameDeviceResources*). Wir verwenden ein ähnliches Muster zum Laden von Levelressourcen mit **LoadLevelAsync** und **FinalizeLoadLevel**.
 
 Nach dem Laden der Objekte des Spiels und der Grafikressourcen initialisieren wir den Zustandsautomaten des Spiels mit den Startbedingungen (Festlegen der Munitionsmenge, der Levelnummer und der Objektpositionen am Spielanfang und Ähnliches). Wenn der Spielzustand angibt, dass der Spieler ein Spiel fortsetzt, wird das aktuelle Level (in dem sich der Spieler bei der Unterbrechung des Spiels befand) geladen.
 
@@ -212,7 +219,7 @@ void App::Run()
 
 Kommen wir nun zum spielerischen Teil der Spiele-App. Nachdem die Vorbereitungen mithilfe der drei Methoden abgeschlossen wurden, führt die Spiele-App die **Run**-Methode aus, und der Spaß kann beginnen.
 
-In unserem Spielbeispiel starten wir eine While-Schleife, die beendet wird, wenn der Spieler das Spielfenster schließt. Der Beispielcode geht im Zustandsautomaten der Spielengine in einen von zweiZuständen über:
+In unserem Spielbeispiel starten wir eine While-Schleife, die beendet wird, wenn der Spieler das Spielfenster schließt. Der Beispielcode geht im Zustandsautomaten der Spielengine in einen von zwei Zuständen über:
 
 -   Das Spielfenster wird deaktiviert (verliert also den Fokus) oder angedockt. In diesem Fall hält das Spiel die Ereignisverarbeitung an und wartet auf den Fensterfokus bzw. darauf, dass das Fenster wieder abgedockt wird.
 -   Andernfalls aktualisiert das Spiel den eigenen Zustand und rendert die Grafik für die Anzeige.
@@ -233,20 +240,20 @@ void App::Uninitialize()
 }
 ```
 
-In unserem Spielbeispiel lassen wir das App-Singleton für das Spiel nach Spielende alles wieder aufräumen. Unter Windows10 wird beim Schließen des App-Fensters nicht die Beendigung des App-Prozesses erzwungen. Stattdessen wird der Zustand des App-Singletons in den Speicher geschrieben. Sollte eine besondere Aktion wie eine spezielle Bereinigung von Ressourcen erforderlich sein, wenn das System diesen Speicher freigeben muss, platzieren Sie den Code für diese Bereinigung in dieser Methode.
+In unserem Spielbeispiel lassen wir das App-Singleton für das Spiel nach Spielende alles wieder aufräumen. Unter Windows 10 wird beim Schließen des App-Fensters nicht die Beendigung des App-Prozesses erzwungen. Stattdessen wird der Zustand des App-Singletons in den Speicher geschrieben. Sollte eine besondere Aktion wie eine spezielle Bereinigung von Ressourcen erforderlich sein, wenn das System diesen Speicher freigeben muss, platzieren Sie den Code für diese Bereinigung in dieser Methode.
 
 Wir kommen an anderer Stelle in diesem Tutorial nochmal auf diese fünf Methoden zurück, behalten Sie sie also im Hinterkopf. Nun widmen wir uns aber erst einmal der Gesamtstruktur der Spielengine und den Zustandsautomaten, die sie definieren.
 
-## Initialisieren des Zustands der Spielengine
+## <a name="initializing-the-game-engine-state"></a>Initialisieren des Zustands der Spielengine
 
 
 Da ein Benutzer eine angehaltene UWP-Spiele-App jederzeit fortsetzen kann, kann die App eine ganze Reihe von möglichen Zuständen haben.
 
-Beim Start kann sich das Spielbeispiel in einem von dreiZuständen befinden:
+Beim Start kann sich das Spielbeispiel in einem von drei Zuständen befinden:
 
 -   Die Spielschleife wurde ausgeführt und war gerade mitten in einem Level.
 -   Die Spielschleife wurde nicht ausgeführt, da gerade ein Spiel abgeschlossen wurde. (Der Highscore wird festgelegt.)
--   Es wurde kein Spiel gestartet, oder das Spiel befand sich zwischen zweiLeveln. (Der Highscore ist 0.)
+-   Es wurde kein Spiel gestartet, oder das Spiel befand sich zwischen zwei Leveln. (Der Highscore ist 0.)
 
 Ihr eigenes Spiel kann selbstverständlich mehr oder auch weniger Zustände besitzen. Berücksichtigen Sie dabei aber wie gesagt, dass Ihr UWP-Spiel jederzeit beendet werden kann. Beim Fortsetzen des Spiels erwartet der Spieler, dass sich das Spiel so verhält, als sei es nie unterbrochen worden.
 
@@ -289,12 +296,12 @@ Je nach Zustand hat der Spieler unterschiedliche Möglichkeiten. Wird das Spiel 
 
 Das Spielbeispiel unterscheidet nicht zwischen einem Kaltstart des Spiels (also einem Spiel, das zum ersten Mal und ohne Anhalteereignis gestartet wird) und der Fortsetzung eines angehaltenen Spiels. Dieses Design wird bei jeder UWP-App erwartet.
 
-## Behandeln von Ereignissen
+## <a name="handling-events"></a>Behandeln von Ereignissen
 
 
 Unser Beispielcode hat eine Reihe von Handlern für bestimmte Ereignisse in **Initialize**, **SetWindow** und **Load** registriert. Wahrscheinlich haben Sie sich bereits gedacht, dass diese Ereignisse von Bedeutung sein müssen, da sie registriert wurden, bevor der Code auch nur in die Nähe von Spielmechanik oder Grafikentwicklung kam. Gut erkannt! Diese Ereignisse sind für die einwandfreie Verwendung einer UWP-App von entscheidender Bedeutung. Da eine UWP-App nämlich jederzeit aktiviert, deaktiviert, vergrößert, verkleinert, angedockt, abgedockt oder fortgesetzt werden kann, müssen genau diese Ereignisse so früh wie möglich registriert und so behandelt werden, dass der Spieler keine Unterbrechungen oder Überraschungen erlebt.
 
-Hier sehen Sie die Ereignishandler im Beispiel sowie die jeweils behandelten Ereignisse. Den vollständigen Code für diese Ereignishandler finden Sie unter [Vollständiger Code für diesen Abschnitt](#code_sample).
+Hier sehen Sie die Ereignishandler im Beispiel sowie die jeweils behandelten Ereignisse. Den vollständigen Code für diese Ereignishandler finden Sie unter [Vollständiger Code für diesen Abschnitt](#complete-sample-code-for-this-section).
 
 <table>
 <colgroup>
@@ -353,7 +360,7 @@ Hier sehen Sie die Ereignishandler im Beispiel sowie die jeweils behandelten Ere
 
 Ihr eigenes Spiel muss diese Ereignisse behandeln, da sie Teil des Designs von UWP-Apps sind.
 
-## Aktualisieren der Spielengine
+## <a name="updating-the-game-engine"></a>Aktualisieren der Spielengine
 
 
 In **Run** wird innerhalb der Spielschleife des Beispiels ein einfacher Zustandsautomat zur Behandlung aller wichtigen Aktionen implementiert, die der Spieler ausführen kann. Die höchste Ebene dieses Zustandsautomats behandelt das Laden eines Spiels, das Spielen eines bestimmten Levels oder das Fortsetzen eines Levels, nachdem das Spiel (vom System oder vom Spieler) angehalten wurde.
@@ -362,9 +369,9 @@ Im Spielbeispiel kann sich das Spiel in drei Hauptzuständen (UpdateEngineState)
 
 -   **Waiting for resources**. Die Spielschleife wird durchlaufen, und ein Übergang ist erst möglich, wenn Ressourcen (insbesondere Grafikressourcen) verfügbar sind. Nach Abschluss der asynchronen Aufgaben zum Laden der Ressourcen wird der Zustand zu **ResourcesLoaded** aktualisiert. Dieser Fall tritt üblicherweise zwischen Leveln ein, wenn für ein Level neue Ressourcen von einem Datenträger geladen werden müssen. Im Spielbeispiel simulieren wir dieses Verhalten, da an dieser Stelle keine zusätzlichen levelspezifischen Ressourcen für das Spiel geladen werden müssen.
 -   **Waiting for press**. Die Spielschleife wird durchlaufen, bis eine bestimmte Benutzereingabe erfolgt. Bei der Eingabe handelt es sich um eine Spieleraktion zum Laden eines Spiels, zum Starten eines Levels oder zum Fortsetzen eines Levels. Diese untergeordneten Zustände sind im Beispielcode als PressResultState-Aufzählungswerte enthalten.
--   **Dynamics**. Die Spielschleife wird ausgeführt, und der Spieler spielt. Während dieser Zeit prüft das Spiel dreiBedingungen, bei deren Erfüllung ein Übergang erfolgen kann: Ablauf des Zeitlimits für ein Level, Abschluss eines Levels durch den Spieler oder Abschluss aller Level durch den Spieler.
+-   **Dynamics**. Die Spielschleife wird ausgeführt, und der Spieler spielt. Während dieser Zeit prüft das Spiel drei Bedingungen, bei deren Erfüllung ein Übergang erfolgen kann: Ablauf des Zeitlimits für ein Level, Abschluss eines Levels durch den Spieler oder Abschluss aller Level durch den Spieler.
 
-Hier sehen Sie die Codestruktur. Den vollständigen Code finden Sie unter [Vollständiger Code für diesen Abschnitt](#code_sample).
+Hier sehen Sie die Codestruktur. Den vollständigen Code finden Sie unter [Vollständiger Code für diesen Abschnitt](#complete-sample-code-for-this-section).
 
 Die Struktur des Zustandsautomaten zur Aktualisierung der Spielengine
 
@@ -473,7 +480,7 @@ Mit der Spiellogik selbst beschäftigen wir uns ausführlicher in [Definieren de
 
 Wie Sie sehen, gibt es innerhalb von Zustandsautomaten weitere Zustandsautomaten. Es gibt einen für den Controller, der alle zulässigen Eingaben des Spielers behandelt. Im Diagramm ist ein Tastendruck (press) eine Art von Benutzereingabe. Für diesen Zustandsautomaten ist es unerheblich, worum es sich dabei handelt, da er auf einer höheren Ebene arbeitet. Daher wird vorausgesetzt, dass der Zustandsautomat für den Controller sämtliche Übergänge in Verbindung mit Bewegungs- und Schießverhalten sowie die zugehörigen Rendering-Updates behandelt. Auf die Verwaltung von Eingabezuständen gehen wir in [Hinzufügen von Steuerelementen](tutorial--adding-controls.md) näher ein.
 
-## Aktualisieren der Benutzeroberfläche
+## <a name="updating-the-user-interface"></a>Aktualisieren der Benutzeroberfläche
 
 
 Wir müssen dafür sorgen, dass der Spieler stets über den Zustand des Systems im Bilde ist, und es ihm ermöglichen, den übergeordneten Zustand in einer Weise zu ändern, die mit den Regeln des Spiels in Einklang steht. Bei den meisten Spielen (und auch bei diesem Spielbeispiel) kommt hierzu ein Head-up-Display mit einer Darstellung des Spielzustands und anderen spielspezifischen Infos wie Punktestand, Munitionsmenge oder Anzahl der verbleibenden Versuche zum Einsatz. Wir bezeichnen dies als Overlay, da es getrennt von der Haupt-Grafikpipeline gerendert und im Vordergrund der 3D-Projektion angezeigt wird. Im Beispielspiel erstellen wir dieses Overlay mithilfe der Direct2D-APIs. Wir können das Overlay allerdings auch per XAML erstellen. Informationen hierzu finden Sie unter [Erweitern des Spielbeispiels](tutorial-resources.md).
@@ -525,14 +532,14 @@ Je nach Zustand des Spiels zeigt das Overlay einen von sechs Zustandsbildschirme
 
 Dank der getrennten Behandlung von Benutzeroberfläche und Spielgrafikpipeline können Sie Arbeiten an der Benutzeroberfläche unabhängig von der Grafikengine des Spiels vornehmen. Außerdem wird der Code Ihres Spiels dadurch deutlich übersichtlicher.
 
-## Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte
 
 
 So viel also zur Grundstruktur des Spielbeispiels. Sie verfügen nun über ein gutes Modell für die Entwicklung von UWP-Apps mit DirectX. Das war natürlich noch längst nicht alles. Wir haben uns hier lediglich mit dem Grundgerüst des Spiels befasst. Im Anschluss setzen wir uns ausführlicher mit dem Spiel und der Spielmechanik sowie mit der Implementierung dieser Spielmechanik als Kernobjekt des Spiels auseinander. Die entsprechenden Informationen finden Sie unter [Definieren des Hauptobjekts für das Spiel](tutorial--defining-the-main-game-loop.md).
 
 Außerdem ist es Zeit für eine ausführlichere Betrachtung der Grafikengine des Beispielspiels. Diesen Teil behandeln wir in [Zusammensetzen der Renderingpipeline](tutorial--assembling-the-rendering-pipeline.md).
 
-## Vollständiger Beispielcode für diesen Abschnitt
+## <a name="complete-sample-code-for-this-section"></a>Vollständiger Beispielcode für diesen Abschnitt
 
 
 App.h
@@ -1423,10 +1430,5 @@ int main(Platform::Array<Platform::String^>^)
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

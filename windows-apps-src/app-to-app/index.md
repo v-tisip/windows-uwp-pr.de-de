@@ -1,17 +1,24 @@
 ---
 ms.assetid: E0728EB0-DFC3-4203-A367-8997B16E2328
 description: "In diesem Abschnitt wird erläutert, wie Sie Daten für UWP-Apps (Universelle Windows-Plattform) freigeben. Dabei geht es unter anderem um den Freigabe-Vertrag, das Kopieren und Einfügen und Drag & Drop."
-title: App-zu-App-Kommunikation
+title: App zu App-Kommunikation
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: ea67ae5b568d1c51af3bb951fe3a68a8def8a556
-ms.openlocfilehash: 951e2ea29a47e362d9fdee0f597d2e7c808212b6
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 4e8c90996324e7481a7a4dab5a1ff3f30b139276
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="app-to-app-communication"></a>App-zu-App-Kommunikation
+# <a name="app-to-app-communication"></a>App zu App-Kommunikation
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 In diesem Abschnitt wird erläutert, wie Sie Daten für UWP-Apps (Universelle Windows-Plattform) freigeben. Dabei geht es unter anderem um den Freigabe-Vertrag, das Kopieren und Einfügen und Drag & Drop.
 
@@ -20,6 +27,8 @@ Der Freigabe-Vertrag ermöglicht Benutzern das schnelle Austauschen von Daten zw
 Eine App kann das Feature „Freigeben“ auf zwei unterschiedliche Arten unterstützen. Zunächst kann sie eine Quell-App sein, die vom Benutzer freizugebende Inhalte bereitstellt. Außerdem kann es eine Ziel-App geben, die vom Benutzer als Ziel für die freigegebenen Inhalte ausgewählt wird. Eine App kann sowohl Quell- als auch Ziel-App sein. Wenn Ihre App als Quell-App zum Teilen von Inhalten fungieren soll, müssen Sie festlegen, welche Datenformate die App bereitstellen kann.
 
 Zusätzlich zum Freigabe-Vertrag können in Apps auch herkömmliche Verfahren zum Übertragen von Daten integriert sein, z. B. Drag & Drop und Kopieren und Einfügen. Neben der Kommunikation zwischen UWP-Apps unterstützen diese Methoden auch die Freigabe für Desktopanwendungen.
+
+
 
 ## <a name="in-this-section"></a>Inhalt dieses Abschnitts
 
@@ -32,9 +41,4 @@ Zusätzlich zum Freigabe-Vertrag können in Apps auch herkömmliche Verfahren zu
 
 ## <a name="see-also"></a>Siehe auch
 - [Entwickeln von UWP-Apps](https://developer.microsoft.com/windows/develop)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

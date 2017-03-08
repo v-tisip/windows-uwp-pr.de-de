@@ -3,16 +3,23 @@ author: DBirtolo
 ms.assetid: 374D1983-60E0-4E18-ABBB-04775BAA0F0D
 title: Scannen aus Ihrer App
 description: "Erfahren Sie, wie Sie Inhalte über Ihre App mithilfe eines Flachbett-, Einzugs- oder automatisch konfigurierten Scanners scannen können."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 9f06f774fd1ed3a13386a4403f98336babeb1506
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 2dc8ef975c58ba5eb1d8b59bee773c7b6219a03c
+ms.lasthandoff: 02/07/2017
 
 ---
-# Scannen aus Ihrer App
+# <a name="scan-from-your-app"></a>Scannen aus Ihrer App
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
-** Wichtige APIs **
+**Wichtige APIs**
 
 -   [**Windows.Devices.Scanners**](https://msdn.microsoft.com/library/windows/apps/Dn264250)
 -   [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393)
@@ -26,7 +33,7 @@ Damit Sie über Ihre App scannen können, müssen Sie zunächst die verfügbaren
 
 Nachdem Ihre App verfügbare Scanner aufgelistet hat, kann sie die auf dem Scannertyp basierenden automatisch konfigurierten Scaneinstellungen verwenden oder einfach unter Verwendung der verfügbaren Flachbett- oder Einzugsscanquelle scannen. Damit die automatisch konfigurierten Einstellungen verwendet werden können, muss der Scanner mit der automatischen Konfiguration kompatibel sein und darf nicht sowohl über einen Flachbett- als auch über einen Einzugsscanner verfügen. Weitere Informationen finden Sie unter [Automatisch konfigurierter Scan](https://msdn.microsoft.com/library/windows/hardware/Ff539393).
 
-## Aufzählen verfügbarer Scanner
+## <a name="enumerate-available-scanners"></a>Aufzählen verfügbarer Scanner
 
 Windows erkennt Scanner nicht automatisch. Sie müssen diesen Schritt ausführen, damit Ihre App mit dem Scanner kommunizieren kann. In diesem Beispiel erfolgt die Scannergeräteaufzählung mit dem [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459)-Namespace.
 
@@ -80,7 +87,7 @@ Windows erkennt Scanner nicht automatisch. Sie müssen diesen Schritt ausführen
     }
 ```
 
-## Überprüfen
+## <a name="scan"></a>Überprüfen
 
 1.  **Abrufen eines ImageScanner-Objekts**
 
@@ -97,7 +104,7 @@ Zum Scan mit den Standardeinstellungen ist Ihre App bei der Auswahl eines Scanne
 **Hinweis**: Wenn der Benutzer das Dokument zum Scannen in den Einzug legt, erfolgt der Scanvorgang stattdessen über das Flachbett. Wenn der Benutzer versucht, aus einem leeren Einzug zu scannen, generiert der Scanauftrag keine gescannten Dateien.
  
 ```csharp
-    var result = await myScanner.ScanFilesToFolderAsync(ImageScannerScanSource.Default, 
+    var result = await myScanner.ScanFilesToFolderAsync(ImageScannerScanSource.Default,
         folder).AsTask(cancellationToken.Token, progress);
 ```
 
@@ -113,14 +120,14 @@ In diesem Beispiel prüft die App zunächst, ob der Scanner die automatische Kon
     if (myScanner.IsScanSourceSupported(ImageScannerScanSource.AutoConfigured))
     {
         ...
-        // Scan API call to start scanning with Auto-Configured settings. 
+        // Scan API call to start scanning with Auto-Configured settings.
         var result = await myScanner.ScanFilesToFolderAsync(
             ImageScannerScanSource.AutoConfigured, folder).AsTask(cancellationToken.Token, progress);
         ...
     }
 ```
 
-## Scanvorschau
+## <a name="preview-the-scan"></a>Scanvorschau
 
 Sie können Code hinzufügen, um eine Scanvorschau vor dem Scan in einen Ordner anzuzeigen. Im folgenden Beispiel prüft die App, ob der **Flatbed**-Scanner die Vorschau unterstützt, und zeigt dann die Scanvorschau an.
 
@@ -133,7 +140,7 @@ if (myScanner.IsPreviewSupported(ImageScannerScanSource.Flatbed))
                     ImageScannerScanSource.Flatbed, stream);
 ```
 
-## Abbrechen des Scans
+## <a name="cancel-the-scan"></a>Abbrechen des Scans
 
 Sie können wie folgt zulassen, dass Benutzer den Scanauftrag während der Ausführung abbrechen.
 
@@ -153,7 +160,7 @@ void CancelScanning()
 }
 ```
 
-## Scannen mit Fortschritt
+## <a name="scan-with-progress"></a>Scannen mit Fortschritt
 
 1.  Erstellen eines **System.Threading.CancellationTokenSource**-Objekts.
 
@@ -168,13 +175,7 @@ cancellationToken = new CancellationTokenSource();
     var progress = new Progress<UInt32>(ScanProgress);
 ```
 
-## Scannen in die Bildbibliothek
+## <a name="scanning-to-the-pictures-library"></a>Scannen in die Bildbibliothek
 
 Benutzer können dynamisch mit der [**FolderPicker**](https://msdn.microsoft.com/library/windows/apps/BR207881)-Klasse in beliebige Ordner scannen. Sie müssen aber die Funktion *Bildbibliothek* im Manifest deklarieren, damit Benutzer in diesen Ordner scannen können. Weitere Informationen zu App-Funktionen finden Sie unter [Deklarationen der App-Funktionen](https://msdn.microsoft.com/library/windows/apps/Mt270968).
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

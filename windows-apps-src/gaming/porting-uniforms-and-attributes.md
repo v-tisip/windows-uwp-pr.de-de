@@ -1,15 +1,22 @@
 ---
 author: mtoepke
-title: Vergleichen von OpenGLES2.0-Puffern, -uniform-Elementen und -Vertexattributen mit Direct3D
+title: "Vergleichen von OpenGL ES 2.0-Puffern, -uniform-Elementen und -Vertexattributen mit Direct3D"
 description: "Während des Portierens zu Direct3D 11 aus OpenGL ES 2.0 müssen Sie die Syntax und das API-Verhalten zum Übergeben von Daten zwischen der App und den Shaderprogrammen ändern."
 ms.assetid: 9b215874-6549-80c5-cc70-c97b571c74fe
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Spiele, OpenGL, Direct3D, Puffer, uniform-Variablen, Vertexattribute"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: d3a1c0d3a37f24bdf4dfec1118aa206dfd6b9ac1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 43b568b046246931e24ded5f40f56d3f24d1b05a
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Vergleichen von OpenGL ES 2.0-Puffern, -uniform-Variablen und -Vertexattributen mit Direct3D
+# <a name="compare-opengl-es-20-buffers-uniforms-and-vertex-attributes-to-direct3d"></a>Vergleichen von OpenGL ES 2.0-Puffern, uniform-Variablen und Vertexattributen mit Direct3D
 
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -23,7 +30,7 @@ ms.openlocfilehash: d3a1c0d3a37f24bdf4dfec1118aa206dfd6b9ac1
 
 Während des Portierens zu Direct3D 11 aus OpenGL ES 2.0 müssen Sie die Syntax und das API-Verhalten zum Übergeben von Daten zwischen der App und den Shaderprogrammen ändern.
 
-In OpenGLES2.0 werden Daten an und von Shaderprogrammen auf die folgenden Arten übergeben: als uniform-Elemente für Konstantendaten, als Attribute für Vertexdaten und als Pufferobjekte für andere Ressourcendaten (z.B. Texturen). In Direct3D11 entsprechen diese Elemente grob Konstantenpuffern, Vertexpuffern und Unterressourcen. Obwohl auf den ersten Blick Ähnlichkeiten bestehen, unterscheiden sich diese Elemente in der Nutzung jedoch relativ stark.
+In OpenGL ES 2.0 werden Daten an und von Shaderprogrammen auf die folgenden Arten übergeben: als uniform-Elemente für Konstantendaten, als Attribute für Vertexdaten und als Pufferobjekte für andere Ressourcendaten (z. B. Texturen). In Direct3D 11 entsprechen diese Elemente grob Konstantenpuffern, Vertexpuffern und Unterressourcen. Obwohl auf den ersten Blick Ähnlichkeiten bestehen, unterscheiden sich diese Elemente in der Nutzung jedoch relativ stark.
 
 Unten ist die grundlegende Zuordnung angegeben.
 
@@ -37,7 +44,7 @@ Unten ist die grundlegende Zuordnung angegeben.
 
  
 
-## Portieren von Puffern
+## <a name="port-buffers"></a>Portieren von Puffern
 
 
 In OpenGL ES 2.0 wird zum Erstellen und Binden jeglicher Arten von Puffern in der Regel das folgende Muster verwendet:
@@ -46,11 +53,11 @@ In OpenGL ES 2.0 wird zum Erstellen und Binden jeglicher Arten von Puffern in de
 -   Aufrufen von „glBindBuffer“, um das Layout eines Puffers zu definieren, z. B. GL\_ELEMENT\_ARRAY\_BUFFER
 -   Aufrufen von „glBufferData“, um den Puffer mit speziellen Daten (z. B. Vertexstrukturen, Indexdaten oder Farbdaten) in einem speziellen Layout aufzufüllen
 
-Der am häufigsten verwendete Puffer ist der Vertexpuffer, der jeweils mindestens die Positionen der Scheitelpunkte (Vertices) in einem Koordinatensystem enthält. Normalerweise wird ein Vertex mithilfe einer Struktur dargestellt, in der die Positionskoordinaten, ein Normalenvektor zur Vertexposition, ein Tangentenvektor zur Vertexposition und Koordinaten für die Textursuche (uv) enthalten sind. Der Puffer enthält eine zusammenhängende Liste dieser Scheitelpunkte in einer bestimmten Reihenfolge (z.B. Dreiecksliste, kettenförmig oder fächerförmig), von denen zusammen die sichtbaren Polygone der Szene dargestellt werden. (In Direct3D11 und in OpenGLES2.0 ist es ineffizient, mehrere Vertexpuffer pro Draw-Aufruf zu verwenden.)
+Der am häufigsten verwendete Puffer ist der Vertexpuffer, der jeweils mindestens die Positionen der Scheitelpunkte (Vertices) in einem Koordinatensystem enthält. Normalerweise wird ein Vertex mithilfe einer Struktur dargestellt, in der die Positionskoordinaten, ein Normalenvektor zur Vertexposition, ein Tangentenvektor zur Vertexposition und Koordinaten für die Textursuche (uv) enthalten sind. Der Puffer enthält eine zusammenhängende Liste dieser Scheitelpunkte in einer bestimmten Reihenfolge (z. B. Dreiecksliste, kettenförmig oder fächerförmig), von denen zusammen die sichtbaren Polygone der Szene dargestellt werden. (In Direct3D 11 und in OpenGL ES 2.0 ist es ineffizient, mehrere Vertexpuffer pro Draw-Aufruf zu verwenden.)
 
-Dies ist ein Beispiel für einen Vertexpuffer und einen Indexpuffer, die mit OpenGLES2.0 erstellt wurden:
+Dies ist ein Beispiel für einen Vertexpuffer und einen Indexpuffer, die mit OpenGL ES 2.0 erstellt wurden:
 
-OpenGLES2.0: Erstellen und Auffüllen eines Vertexpuffers und eines Indexpuffers
+OpenGL ES 2.0: Erstellen und Auffüllen eines Vertexpuffers und eines Indexpuffers
 
 ``` syntax
 glGenBuffers(1, &renderer->vertexBuffer);
@@ -62,7 +69,7 @@ glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, renderer->indexBuffer);
 glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(int) * CUBE_INDICES, renderer->vertexIndices, GL_STATIC_DRAW);
 ```
 
-Weitere Puffer sind Pixelpuffer und Zuordnungen, z.B. Texturen Für die Shaderpipeline ist das Rendern in Texturpuffer (pixmaps) oder das Rendern von Pufferobjekten zur Verwendung in nachfolgenden Shaderdurchläufen möglich. Im einfachsten Fall lautet der Fluss für den Aufruf wie folgt:
+Weitere Puffer sind Pixelpuffer und Zuordnungen, z. B. Texturen Für die Shaderpipeline ist das Rendern in Texturpuffer (pixmaps) oder das Rendern von Pufferobjekten zur Verwendung in nachfolgenden Shaderdurchläufen möglich. Im einfachsten Fall lautet der Fluss für den Aufruf wie folgt:
 
 -   Aufrufen von glGenFramebuffers zum Erzeugen eines Framepufferobjekts
 -   Aufrufen von glBindFramebuffer zum Binden des Framepufferobjekts für Schreibvorgänge
@@ -105,7 +112,7 @@ m_d3dDevice->CreateBuffer(
 
 Beschreibbare Pixelpuffer oder Maps, z. B. ein Framepuffer, können als [**ID3D11Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476635)-Objekte erstellt werden. Diese können als Ressourcen an eine [**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582)- oder [**ID3D11ShaderResourceView**](https://msdn.microsoft.com/library/windows/desktop/ff476628)-Schnittstelle gebunden werden und nach dem Zeichnen mit der zugeordneten Swapchain angezeigt oder an einen Shader übergeben werden.
 
-Direct3D11: Erstellen eines Framepufferobjekts
+Direct3D 11: Erstellen eines Framepufferobjekts
 
 ``` syntax
 ComPtr<ID3D11RenderTargetView> m_d3dRenderTargetViewWin;
@@ -119,14 +126,14 @@ m_d3dDevice->CreateRenderTargetView(
   &m_d3dRenderTargetViewWin);
 ```
 
-## Ändern von uniform-Elementen und uniform-Pufferobjekten in Direct3D-Konstantenpuffer
+## <a name="change-uniforms-and-uniform-buffer-objects-to-direct3d-constant-buffers"></a>Ändern von uniform-Elementen und uniform-Pufferobjekten in Direct3D-Konstantenpuffer
 
 
-In OpenGLES2.0 sind uniform-Elemente der Mechanismus zum Bereitstellen von Konstantendaten für einzelne Shaderprogramme. Diese Daten können von den Shadern nicht geändert werden.
+In OpenGL ES 2.0 sind uniform-Elemente der Mechanismus zum Bereitstellen von Konstantendaten für einzelne Shaderprogramme. Diese Daten können von den Shadern nicht geändert werden.
 
 Zum Festlegen eines „uniform“-Elements werden normalerweise eine der „glUniform\*“-Methoden mit dem GPU-Speicherbereich für den Upload sowie ein Zeiger auf die Daten im App-Speicher angegeben. Nach dem Ausführen der „glUniform\*“-Methode befinden sich die „uniform“-Daten im GPU-Speicher. Von den Shadern, die dieses „uniform“-Element deklariert haben, kann darauf zugegriffen werden. Sie müssen sicherstellen, dass die Daten so verpackt sind, dass sie vom Shader basierend auf der uniform-Deklaration im Shader (mithilfe kompatibler Typen) interpretiert werden können.
 
-OpenGLES2.0: Erstellen eines uniform-Elements und Durchführen von Uploads in das Element
+OpenGL ES 2.0: Erstellen eines uniform-Elements und Durchführen von Uploads in das Element
 
 ``` syntax
 renderer->mvpLoc = glGetUniformLocation(renderer->programObject, "u_mvpMatrix");
@@ -138,7 +145,7 @@ glUniformMatrix4fv(renderer->mvpLoc, 1, GL_FALSE, (GLfloat*) &renderer->mvpMatri
 
 Im GLSL-Code eines Shaders sieht die entsprechende uniform-Deklaration wie folgt aus:
 
-OpenGLES2.0: uniform-Deklaration für GLSL
+OpenGL ES 2.0: uniform-Deklaration für GLSL
 
 ``` syntax
 uniform mat4 u_mvpMatrix;
@@ -148,7 +155,7 @@ Unter Direct3D werden uniform-Daten als "Konstantenpuffer" bezeichnet, die – w
 
 Konstantenpuffer müssen über ein zugeordnetes GPU-Register verfügen, mit dem für die GPU auf diese Daten verwiesen wird. Die Daten werden im Registerbereich so verpackt, wie dies vom Layout des Puffers vorgegeben wird.
 
-Direct3D11: Erstellen eines Konstantenpuffers und Durchführen des Datenuploads in den Puffer
+Direct3D 11: Erstellen eines Konstantenpuffers und Durchführen des Datenuploads in den Puffer
 
 ``` syntax
 struct ModelViewProjectionConstantBuffer
@@ -173,7 +180,7 @@ m_d3dDevice->CreateBuffer(
 
 Im HLSL-Code eines Shaders sieht die entsprechende Konstantenpufferdeklaration wie folgt aus:
 
-Direct3D11: Deklaration des Konstantenpuffers für HLSL
+Direct3D 11: Deklaration des Konstantenpuffers für HLSL
 
 ``` syntax
 cbuffer ModelViewProjectionConstantBuffer : register(b0)
@@ -184,10 +191,10 @@ cbuffer ModelViewProjectionConstantBuffer : register(b0)
 
 Beachten Sie, dass für jeden Konstantenpuffer ein Register deklariert werden muss. Unterschiedliche Direct3D-Featureebenen verfügen über unterschiedliche Höchstgrenzen für maximal verfügbare Register. Achten Sie daher darauf, dass Sie die Höchstzahl für die niedrigste von Ihnen genutzte Featureebene einhalten.
 
-## Portieren von Vertexattributen zu einem Direct3D-Eingabelayout und zur HLSL-Semantik
+## <a name="port-vertex-attributes-to-a-direct3d-input-layouts-and-hlsl-semantics"></a>Portieren von Vertexattributen zu einem Direct3D-Eingabelayout und zur HLSL-Semantik
 
 
-Da Vertexdaten von der Shaderpipeline geändert werden können, müssen sie unter OpenGLES2.0 als "Attribute" angegeben werden, anstatt als "uniform-Elemente". (Dies wurde in neueren Versionen von OpenGL und GLSL geändert.) Vertexspezifische Daten wie die Vertexposition, Normalen, Tangenten und Farbwerte werden für Shader als Attributwerte bereitgestellt. Diese Attributwerte entsprechen speziellen Versatzwerten für die einzelnen Elemente in den Vertexdaten. Beispielsweise kann das erste Attribut auf die Positionskomponente eines einzelnen Vertex zeigen, das zweite Attribut auf die Normale usw.
+Da Vertexdaten von der Shaderpipeline geändert werden können, müssen sie unter OpenGL ES 2.0 als "Attribute" angegeben werden, anstatt als "uniform-Elemente". (Dies wurde in neueren Versionen von OpenGL und GLSL geändert.) Vertexspezifische Daten wie die Vertexposition, Normalen, Tangenten und Farbwerte werden für Shader als Attributwerte bereitgestellt. Diese Attributwerte entsprechen speziellen Versatzwerten für die einzelnen Elemente in den Vertexdaten. Beispielsweise kann das erste Attribut auf die Positionskomponente eines einzelnen Vertex zeigen, das zweite Attribut auf die Normale usw.
 
 Der grundlegende Prozess zum Verschieben der Vertexpufferdaten aus dem Hauptspeicher in die GPU lautet wie folgt:
 
@@ -196,7 +203,7 @@ Der grundlegende Prozess zum Verschieben der Vertexpufferdaten aus dem Hauptspei
 -   Aufrufen von glVertexAttribPointer zum Festlegen der richtigen Attributgröße und des Versatzes innerhalb eines einzelnen Vertexdatenelements; Durchführen dieses Schritts für jedes Attribut
 -   Aktivieren der Informationen zum Vertexdatenlayout mit glEnableVertexAttribArray
 
-OpenGLES2.0: Hochladen von Vertexpufferdaten in das Shaderattribut
+OpenGL ES 2.0: Hochladen von Vertexpufferdaten in das Shaderattribut
 
 ``` syntax
 glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, renderer->vertexBuffer);
@@ -214,7 +221,7 @@ glEnableVertexAttribArray(loc);
 
 Im Vertex-Shader deklarieren Sie Attribute unter den gleichen Namen, die Sie im Aufruf von glGetAttribLocation deklariert haben.
 
-OpenGLES2.0: Deklarieren eines Attributs in GLSL
+OpenGL ES 2.0: Deklarieren eines Attributs in GLSL
 
 ``` syntax
 attribute vec4 a_position;
@@ -225,7 +232,7 @@ Teilweise gilt für Direct3D der gleiche Prozess. Anstelle von Attributen werden
 
 Der Prozess zum Festlegen der Vertex- und Indexpuffer und das Festlegen des Eingabelayouts wird zusammenfassend als "Eingabeassembly"-Phase (Input Assembly, IA) der Direct3D-Grafikpipeline bezeichnet.
 
-Direct3D11: Konfigurieren der Eingabeassembly-Phase
+Direct3D 11: Konfigurieren der Eingabeassembly-Phase
 
 ``` syntax
 // Set up the IA stage corresponding to the current draw operation.
@@ -254,7 +261,7 @@ Ein Eingabelayout wird deklariert, und es wird ein Vertex-Shader zugeordnet, ind
 
 Sie weisen jeweils eine Semantik und einen Formattyp zu. Anschließend übergeben Sie die Beschreibung an [**ID3D11Device1::CreateInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476512). Das Eingabelayout wird beim Aufrufen von [**ID3D11DeviceContext1::IASetInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476454) verwendet, wenn Sie während der Rendermethode die Eingabeassembly einrichten.
 
-Direct3D11: Beschreiben eines Eingabelayouts mit spezieller Semantik
+Direct3D 11: Beschreiben eines Eingabelayouts mit spezieller Semantik
 
 ``` syntax
 ComPtr<ID3D11InputLayout> m_inputLayout;
@@ -282,7 +289,7 @@ m_d3dContext->IASetInputLayout(m_inputLayout.Get());
 
 Stellen Sie im letzten Schritt sicher, dass die Eingabedaten vom Shader verstanden werden, indem Sie die Eingabe deklarieren. Die im Layout zugewiesene Semantik wird verwendet, um im GPU-Speicher die richtigen Bereiche auszuwählen.
 
-Direct3D11: Deklarieren von Daten für die Shadereingabe mit HLSL-Semantik
+Direct3D 11: Deklarieren von Daten für die Shadereingabe mit HLSL-Semantik
 
 ``` syntax
 struct VertexShaderInput
@@ -298,10 +305,5 @@ struct VertexShaderInput
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

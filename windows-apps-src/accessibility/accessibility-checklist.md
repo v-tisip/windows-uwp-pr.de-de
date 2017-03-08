@@ -5,13 +5,20 @@ ms.assetid: BB8399E2-7013-4F77-AF2C-C1A0E5412856
 title: "Prüfliste für die Barrierefreiheit"
 label: Accessibility checklist
 template: detail.hbs
+ms.author: mhopkins
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 1c569df0684506f703d3ca5707314a96b035fcf6
-ms.openlocfilehash: 5220255a29da9a42bb82df5f450961b5c1b34942
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c5db2b89c52f77cb92da06c246e07a215fd2d02d
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Prüfliste für die Barrierefreiheit
+# <a name="accessibility-checklist"></a>Prüfliste für die Barrierefreiheit
 
 
 
@@ -61,13 +68,8 @@ Hier finden Sie eine Prüfliste, die Sie verwenden können, um den Zugriff auf I
     Weitere Informationen finden Sie unter [Barrierefreiheit im Store](accessibility-in-the-store.md).
 
 <span id="related_topics"/>
-## Verwandte Themen  
+## <a name="related-topics"></a>Verwandte Themen  
 * [Barrierefreiheit](accessibility.md)
 * [Entwerfen für Barrierefreiheit](https://msdn.microsoft.com/library/windows/apps/Hh700407)
 * [Nicht empfehlenswerte Methoden](practices-to-avoid.md) 
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

@@ -1,11 +1,18 @@
 ---
 author: mcleanbyron
 ms.assetid: 1599605B-4243-4081-8D14-40F6F7734E25
-description: "Verwenden Sie diese Methode in der Windows Store-Analyse-API, um die aggregierten Kaufdaten für ein Add-On während eines bestimmten Zeitraums und andere optionale Filter abzurufen."
+description: "Verwenden Sie diese Methode der Windows Store-Analyse-API, um die aggregierten Kaufdaten für ein Add-On während eines bestimmten Zeitraums und andere optionale Filter abzurufen."
 title: "Abrufen von Add-On-Käufen"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Store-Dienste, Windows Store-Analyse-API, Add-On-Käufe"
 translationtype: Human Translation
-ms.sourcegitcommit: 7d05c8953f1f50be0b388a044fe996f345d45006
-ms.openlocfilehash: a79cd324d57151318445df0dedd35a98d9c9f915
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: be69a45586f4b7d66740d141dcc350eafd16bb53
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -14,7 +21,7 @@ ms.openlocfilehash: a79cd324d57151318445df0dedd35a98d9c9f915
 
 
 
-Verwenden Sie diese Methode in der Windows Store-Analyse-API, um die aggregierten Kaufdaten für Add-Ons (auch als In-App-Produkte oder IAPs bezeichnet) für Ihre App im JSON-Format während eines bestimmten Zeitraums und andere optionale Filter abrufen. Diese Informationen sind auch im [Bericht "Add-On-Käufe"](../publish/add-on-acquisitions-report.md) im Windows Dev Center-Dashboard verfügbar.
+Verwenden Sie diese Methode der Windows Store-Analyse-API, um die aggregierten Kaufdaten für Add-Ons (auch als In-App-Produkte oder IAPs bezeichnet) für Ihre App im JSON-Format während eines bestimmten Zeitraums und andere optionale Filter abrufen. Diese Informationen sind auch im [Bericht "Add-On-Käufe"](../publish/add-on-acquisitions-report.md) im Windows Dev Center-Dashboard verfügbar.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -177,9 +184,4 @@ Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese 
  
 
  
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

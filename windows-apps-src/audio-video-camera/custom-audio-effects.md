@@ -2,17 +2,25 @@
 author: drewbatgit
 Description: "In diesem Artikel wird beschrieben, wie Sie eine Windows-Runtime-Komponente erstellen, die die IBasicAudioEffect-Schnittstelle implementiert, mit der Sie benutzerdefinierte Effekte für Audiostreams erstellen können."
 title: Benutzerdefinierte Audioeffekte
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
+ms.assetid: 360faf3f-7e73-4db4-8324-3391f801d827
 translationtype: Human Translation
-ms.sourcegitcommit: ba9b78c5eafc949c6942acbcbf55620f60cc0d29
-ms.openlocfilehash: 9cdaa63563dc08f2a17d1624b0a795fb84f8d39e
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 1d8ced4a3dfcf0994d969ad045550ea0cc44a2af
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Benutzerdefinierte Audioeffekte
+# <a name="custom-audio-effects"></a>Benutzerdefinierte Audioeffekte
 
 In diesem Artikel wird beschrieben, wie Sie eine Windows-Runtime-Komponente erstellen, die die [**IBasicAudioEffect**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.IBasicAudioEffect)-Schnittstelle implementiert, mit der Sie benutzerdefinierte Effekte für Audiostreams erstellen können. Benutzerdefinierte Effekte können mit mehreren unterschiedlichen Windows-Runtime-APIs erstellt werden, darunter [MediaCapture](https://msdn.microsoft.com/library/windows/apps/br241124), die den Zugriff auf die Kamera eines Geräts ermöglicht, [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646), die die Erstellung komplexer Kompositionen aus Medienclips erlaubt, oder [**AudioGraph**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioGraph), mit deren Hilfe Sie schnell ein Diagramm aus verschiedenen Audioeingabe/-ausgabe- sowie Submix-Knoten erstellen können.
 
-## Hinzufügen eines benutzerdefinierten Effekts zu Ihrer App
+## <a name="add-a-custom-effect-to-your-app"></a>Hinzufügen eines benutzerdefinierten Effekts zu Ihrer App
 
 
 Sie definieren einen benutzerdefinierte Audioeffekt in einer Klasse, die die [**IBasicAudioEffect**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.IBasicAudioEffect)-Schnittstelle implementiert. Diese Klasse kann nicht direkt in Ihr App-Projekt integriert werden. Stattdessen müssen Sie eine Windows-Runtime-Komponente verwenden, um Ihre Audioeffektklasse zu hosten.
@@ -34,17 +42,17 @@ Sie müssen die folgenden Namespaces in Ihre Effektklassendatei aufnehmen, um au
 
 [!code-cs[EffectUsing](./code/AudioGraph/AudioEffectComponent/ExampleAudioEffect.cs#SnippetEffectUsing)]
 
-## Implementieren Sie die IBasicAudioEffect-Schnittstelle
+## <a name="implement-the-ibasicaudioeffect-interface"></a>Implementieren Sie die IBasicAudioEffect-Schnittstelle
 
 Der Audioeffekt muss alle Methoden und Eigenschaften der [**IBasicAudioEffect**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.IBasicAudioEffect)-Schnittstelle implementieren. Dieser Abschnitt führt Sie durch eine einfache Implementierung dieser Schnittstelle zum Erstellen eines einfachen Echoeffekts.
 
-### SupportedEncodingProperties-Eigenschaft
+### <a name="supportedencodingproperties-property"></a>SupportedEncodingProperties-Eigenschaft
 
-Das System überprüft die [**SupportedEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.IBasicAudioEffect.SupportedEncodingProperties)-Eigenschaft, um festzustellen, welche Codierungseigenschaften von dem Effekt unterstützt werden. Beachten Sie Folgendes: Wenn der Nutzer Ihres Effekts das Audio mit den von Ihnen angegebenen Eigenschaften nicht codieren kann, ruft das System [**Schließen**](https://msdn.microsoft.com/library/windows/apps/dn764782) für den Effekt auf, worauf dieser aus der Audiopipeline entfernt wird. In diesem Beispiel werden [**AudioEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.MediaProperties.AudioEncodingProperties)-Objekte erstellt und der Ausgabeliste hinzugefügt, um die 32-Bit-Float-Mono-Codierung mit 44,1kHz und 48kHz zu unterstützen.
+Das System überprüft die [**SupportedEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.IBasicAudioEffect.SupportedEncodingProperties)-Eigenschaft, um festzustellen, welche Codierungseigenschaften von dem Effekt unterstützt werden. Beachten Sie Folgendes: Wenn der Nutzer Ihres Effekts das Audio mit den von Ihnen angegebenen Eigenschaften nicht codieren kann, ruft das System [**Schließen**](https://msdn.microsoft.com/library/windows/apps/dn764782) für den Effekt auf, worauf dieser aus der Audiopipeline entfernt wird. In diesem Beispiel werden [**AudioEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.MediaProperties.AudioEncodingProperties)-Objekte erstellt und der Ausgabeliste hinzugefügt, um die 32-Bit-Float-Mono-Codierung mit 44,1 kHz und 48 kHz zu unterstützen.
 
 [!code-cs[SupportedEncodingProperties](./code/AudioGraph/AudioEffectComponent/ExampleAudioEffect.cs#SnippetSupportedEncodingProperties)]
 
-### SetEncodingProperties-Methode
+### <a name="setencodingproperties-method"></a>SetEncodingProperties-Methode
 
 Das System ruft [**SetEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/dn919884) für den Effekt auf, um Ihnen die Codierungseigenschaften für den Audiostream mitzuteilen, für den der Effekt gilt. In diesem Beispiel wird für die Implementierung eines Echoeffekts ein Puffer zur Speicherung von Audiodaten mit einer Sekunde Dauer verwendet. Diese Methode bietet die Möglichkeit, die Größe des Puffers für die Anzahl der Samples in einer Sekunde Audiodaten zu initialisieren, basierend auf der Samplingrate der Aufzeichnung. Der Verzögerungseffekt verwendet auch einen Ganzzahlzähler, um die aktuelle Position im Verzögerungspuffer nachzuverfolgen. Da **SetEncodingProperties** immer dann aufgerufen wird, wenn der Effekt der Audio-Pipeline hinzugefügt wird, ist dies ein guter Zeitpunkt für die Initialisierung dieses Werts auf 0. Sie können auch das an diese Methode übergebene **AudioEncodingProperties**-Objekt zur Verwendung an anderen Stellen Ihres Effekts erfassen.
 
@@ -52,7 +60,7 @@ Das System ruft [**SetEncodingProperties**](https://msdn.microsoft.com/library/w
 [!code-cs[SetEncodingProperties](./code/AudioGraph/AudioEffectComponent/ExampleAudioEffect.cs#SnippetSetEncodingProperties)]
 
 
-### SetProperties-Methode
+### <a name="setproperties-method"></a>SetProperties-Methode
 
 Die [**SetProperties**](https://msdn.microsoft.com/library/windows/apps/br240986)-Methode ermöglicht es der App, die Ihren Effekt verwendet, die Effektparameter anzupassen. Die Eigenschaften werden als [**IPropertySet**](https://msdn.microsoft.com/library/windows/apps/br226054)-Zuordnung von Eigenschaftsnamen und -werten übergeben.
 
@@ -62,7 +70,7 @@ In diesem einfachen Beispiel wird das aktuelle Audiosample mit einem Wert aus de
 
 [!code-cs[MixProperty](./code/AudioGraph/AudioEffectComponent/ExampleAudioEffect.cs#SnippetMixProperty)]
 
-### ProcessFrame-Methode
+### <a name="processframe-method"></a>ProcessFrame-Methode
 
 Die [**ProcessFrame**](https://msdn.microsoft.com/library/windows/apps/dn764784)-Methode ist die Stelle, an der Ihr Effekt die Audiodaten des Streams ändert. Die Methode wird einmal pro Frame aufgerufen, und es wird ihr ein [**ProcessAudioFrameContext**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.ProcessAudioFrameContext)-Objekt übergeben. Dieses Objekt enthält ein [**AudioFrame**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.AudioFrame)-Eingabeobjekt, das den eingehenden Frame umfasst, der verarbeitet werden soll, und ein **AudioFrame**-Ausgabeobjekt, in das Sie Audiodaten schreiben, die dem Rest der Audiopipeline übergeben werden. Ein Audioframe ist ein Puffer von Audiosamples, die einen kurzen Slice von Audiodaten repräsentieren.
 
@@ -86,32 +94,32 @@ Nun, da die Datenpuffer abgerufen wurden, können Sie aus dem Eingabepuffer lese
 
 
 
-### Close-Methode
+### <a name="close-method"></a>Close-Methode
 
 Das System ruft die [**Schließen**](https://msdn.microsoft.com/library/windows/apps/dn764782) [**Schließen**](https://msdn.microsoft.com/library/windows/apps/dn764782)-Methode für die Klasse auf, wenn der Effekt ausgeschaltet werden soll. Sie sollten diese Methode verwenden, um alle Ressourcen, die Sie erstellt haben, zu löschen. Das Argument der Methode ist ein [**MediaEffectClosedReason**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.MediaEffectClosedReason), der Ihnen mitteilt, ob der Effekt normal geschlossen wurde, ob ein Fehler aufgetreten ist oder ob der Effekt das erforderliche Codierungsformat nicht unterstützt.
 
 [!code-cs[Close](./code/AudioGraph/AudioEffectComponent/ExampleAudioEffect.cs#SnippetClose)]
 
-### DiscardQueuedFrames-Methode
+### <a name="discardqueuedframes-method"></a>DiscardQueuedFrames-Methode
 
 Die [**DiscardQueuedFrames**](https://msdn.microsoft.com/library/windows/apps/dn764790)-Methode wird aufgerufen, wenn der Effekt zurückgesetzt werden soll. Ein typisches Szenario hierfür ist, wenn der Effekt zuvor verarbeitete Frames zum Verarbeiten des aktuellen Frames speichert. Wenn diese Methode aufgerufen wird, sollten Sie die zuvor gespeicherten Frames löschen. Diese Methode kann verwendet werden, um alle Zustände im Zusammenhang mit den vorherigen Frames zurückzusetzen, nicht nur Audioframes, die sich angesammelt haben.
 
 [!code-cs[DiscardQueuedFrames](./code/AudioGraph/AudioEffectComponent/ExampleAudioEffect.cs#SnippetDiscardQueuedFrames)]
 
-### TimeIndependent-Eigenschaft
+### <a name="timeindependent-property"></a>TimeIndependent-Eigenschaft
 
 Die [**TimeIndependent**](https://msdn.microsoft.com/library/windows/apps/dn764803)-Eigenschaft teilt dem System mit, dass der Effekt kein einheitliches Timing erfordert. Bei Festlegung auf „true“ kann das System Optimierungen verwenden, die die Leistung des Effekts verbessern.
 
 [!code-cs[TimeIndependent](./code/AudioGraph/AudioEffectComponent/ExampleAudioEffect.cs#SnippetTimeIndependent)]
 
-### UseInputFrameForOutput-Eigenschaft
+### <a name="useinputframeforoutput-property"></a>UseInputFrameForOutput-Eigenschaft
 
 Legen Sie die [**UseInputFrameForOutput**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.IBasicAudioEffect.UseInputFrameForOutput)-Eigenschaft auf **true** fest, um dem System mitzuteilen, dass Ihr Effekt seine Ausgabe in den Audiopuffer des [**InputFrame**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.ProcessAudioFrameContext.InputFrame) des [**ProcessAudioFrameContext**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.ProcessAudioFrameContext) schreibt, der an [**ProcessFrame**](https://msdn.microsoft.com/library/windows/apps/dn764784) übergeben wurde, anstatt in den [**OutputFrame**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.ProcessAudioFrameContext.OutputFrame). 
 
 [!code-cs[UseInputFrameForOutput](./code/AudioGraph/AudioEffectComponent/ExampleAudioEffect.cs#SnippetUseInputFrameForOutput)]
 
 
-## Hinzufügen des benutzerdefinierten Effekts zu Ihrer App
+## <a name="adding-your-custom-effect-to-your-app"></a>Hinzufügen des benutzerdefinierten Effekts zu Ihrer App
 
 
 Um den Audioeffekt aus Ihrer App zu verwenden, müssen Sie Ihrer App einen Verweis auf den Effektprojekt hinzufügen.
@@ -124,14 +132,14 @@ Wenn Ihre Audioeffektklasse in einem anderen Namespace deklariert ist, nehmen Si
 
 [!code-cs[UsingAudioEffectComponent](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetUsingAudioEffectComponent)]
 
-### Fügen Sie Ihren benutzerdefinierten Effekt einem AudioGraph-Knoten hinzu
+### <a name="add-your-custom-effect-to-an-audiograph-node"></a>Fügen Sie Ihren benutzerdefinierten Effekt einem AudioGraph-Knoten hinzu
 Allgemeine Informationen zur Verwendung von Audiodiagrammen finden Sie unter [Audio Graphs](audio-graphs.md). Der folgende Codeausschnitt veranschaulicht, wie der in diesem Artikel vorgestellte Beispielechoeffekt einem Audiodiagrammknoten hinzugefügt wird. Zuerst wird ein [**PropertySet**](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.Collections.PropertySet) erstellt und ein von dem Effekt definierter Wert für die **Mix**-Eigenschaft festgelegt. Anschließend wird der [**AudioEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.AudioEffectDefinition)-Konstruktor aufgerufen, der den vollständigen Klassennamen des benutzerdefinierten Effekttyps und den Eigenschaftensatz übergibt. Schließlich wird die Effektdefinition der [**EffectDefinitions**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioFileInputNode.EffectDefinitions)-Eigenschaft eines [**FileInputNode**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.CreateAudioFileInputNodeResult.FileInputNode) hinzugefügt, wodurch der ausgegebene Audioinhalt vom benutzerdefinierten Effekt verarbeitet wird. 
 
 [!code-cs[AddCustomEffect](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetAddCustomEffect)]
 
 Nachdem er einem Knoten hinzugefügt wurde, kann der benutzerdefinierte Effekt durch den Aufruf von [**DisableEffectsByDefinition**](https://msdn.microsoft.com/library/windows/apps/dn958480) und die Übergabe des **AudioEffectDefinition**-Objekts deaktiviert werden. Weitere Informationen zur Verwendung von Audiodiagrammen in Ihrer App finden Sie unter [AudioGraph](audio-graphs.md).
 
-### Hinzufügen Ihres benutzerdefinierten Effekts zu einem Clip in einer MediaComposition
+### <a name="add-your-custom-effect-to-a-clip-in-a-mediacomposition"></a>Hinzufügen Ihres benutzerdefinierten Effekts zu einem Clip in einer MediaComposition
 
 Der folgende Codeausschnitt veranschaulicht das Hinzufügen des benutzerdefinierten Audioeffekts zu einem Videoclip und einer Hintergrund-Audiospur in einer Medienkomposition. Allgemeine Informationen zum Erstellen von Medienkompositionen aus Videoclips und zum Hinzufügen von Hintergrund-Audiospuren finden Sie unter [Medienkompositionen und -bearbeitung](media-compositions-and-editing.md).
 
@@ -139,7 +147,7 @@ Der folgende Codeausschnitt veranschaulicht das Hinzufügen des benutzerdefinier
 
 
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 * [Einfacher Zugriff auf die Kameravorschau](simple-camera-preview-access.md)
 * [Medienkompositionen und -bearbeitung](media-compositions-and-editing.md)
 * [Win2D-Dokumentation](http://go.microsoft.com/fwlink/p/?LinkId=519078)
@@ -148,10 +156,5 @@ Der folgende Codeausschnitt veranschaulicht das Hinzufügen des benutzerdefinier
  
 
 
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

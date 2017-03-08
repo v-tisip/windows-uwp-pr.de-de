@@ -3,16 +3,23 @@ author: mtoepke
 title: Erstellen von Shadern und Zeichnen von Grundtypen
 description: Im Folgenden wird das Kompilieren und Erstellen von Shadern mit HLSL-Quelldateien veranschaulicht, die zum Zeichnen von Grundtypen auf dem Bildschirm verwendet werden.
 ms.assetid: 91113bbe-96c9-4ef9-6482-39f1ff1a70f4
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Spiele, Shader, Grundtypen, DirectX"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 36ce1c3c0df0dd9dd4f5cf3d31282d5b15050f5c
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 62f4b9b641a3c365659e44893a8a7801f2c1f6c0
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Erstellen von Shadern und Zeichnen von Grundtypen
+# <a name="create-shaders-and-drawing-primitives"></a>Erstellen von Shadern und Zeichnen von Grundtypen
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Im Folgenden wird das Kompilieren und Erstellen von Shadern mit HLSL-Quelldateien veranschaulicht, die zum Zeichnen von Grundtypen auf dem Bildschirm verwendet werden.
 
@@ -20,18 +27,18 @@ Ein gelbes Dreieck wird mit Vertex- und Pixelshadern erstellt. Nach dem Erstelle
 
 **Ziel:** Shader erstellen und Grundtypen zeichnen.
 
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 
 Es wird davon ausgegangen, dass Sie mit C+ vertraut sind. Sie müssen außerdem mit den grundlegenden Konzepten der Grafikprogrammierung vertraut sein.
 
 Ferner wird davon ausgegangen, dass Sie sich mit dem Dokument [Schnellstart: Einrichten von DirectX-Ressourcen und Anzeigen eines Bilds](setting-up-directx-resources.md) vertraut gemacht haben.
 
-**Zeitaufwand:** 20Minuten.
+**Zeitaufwand:** 20 Minuten.
 
-## Anweisungen
+## <a name="instructions"></a>Anweisungen
 
-### 1. Kompilieren von HLSL-Quelldateien
+### <a name="1-compiling-hlsl-source-files"></a>1. Kompilieren von HLSL-Quelldateien
 
 Microsoft Visual Studio verwendet den HLSL-Codecompiler [fxc.exe](https://msdn.microsoft.com/library/windows/desktop/bb232919), um die HLSL-Quelldateien („SimpleVertexShader.hlsl“ und „SimplePixelShader.hlsl“) in CSO-Binärshaderobjektdateien („SimpleVertexShader.cso“ und „SimplePixelShader.cso“) zu kompilieren. Weitere Infos über den HLSL-Codecompiler finden Sie im Effektcompiler-Tool. Weitere Infos über das Kompilieren von Shadercode finden unter [Kompilieren von Shadern](https://msdn.microsoft.com/library/windows/desktop/bb509633).
 
@@ -74,11 +81,11 @@ float4 SimplePixelShader(PixelShaderInput input) : SV_TARGET
 }
 ```
 
-### 2. Lesen von Daten von einem Datenträger
+### <a name="2-reading-data-from-disk"></a>2. Lesen von Daten von einem Datenträger
 
-Hier wird die DX::ReadDataAsync-Funktion aus „DirectXHelper.h“ in der DirectX11-App-Vorlage (Universal Windows) verwendet, um asynchron Daten aus einer Datei auf dem Datenträger zu lesen.
+Hier wird die DX::ReadDataAsync-Funktion aus „DirectXHelper.h“ in der DirectX 11-App-Vorlage (Universal Windows) verwendet, um asynchron Daten aus einer Datei auf dem Datenträger zu lesen.
 
-### 3. Erstellen von Vertex- und Pixelshadern
+### <a name="3-creating-vertex-and-pixel-shaders"></a>3. Erstellen von Vertex- und Pixelshadern
 
 Zunächst werden Daten aus der Datei „SimpleVertexShader.cso“ gelesen. Anschließend werden die Daten dem Bytearray *vertexShaderBytecode* zugewiesen. [**ID3D11Device::CreateVertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476524) wird mit dem Bytearray aufgerufen, um den Vertexshader ([**ID3D11VertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476641)) zu erstellen. Die Vertextiefe wird in der Quelldatei „SimpleVertexShader.hlsl“ auf den Wert 0,5 festgelegt, um zu garantieren, dass das Dreieck gezeichnet wird. Ein Array von [**D3D11\_INPUT\_ELEMENT\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476180)-Strukturen wird gefüllt, um das Layout des Vertexshadercodes zu beschreiben. Im Anschluss wird [**ID3D11Device::CreateInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476512) aufgerufen, um das Layout zu erstellen. Das Array verfügt über ein Layoutelement, das die Vertexposition definiert. Zunächst werden Daten aus der Datei „SimplePixelShader.cso“ gelesen. Anschließend werden die Daten dem Bytearray *pixelShaderBytecode* zugewiesen. [**ID3D11Device::CreatePixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476513) wird mit dem Bytearray aufgerufen, um den Pixelshader ([**ID3D11PixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476576)) zu erstellen. Der Pixelwert wird in der Quelldatei „SimplePixelShader.hlsl“ auf (1,1,1,1) festgelegt, damit das Dreieck gelb wird. Wenn Sie die Farbe ändern möchten, können Sie diesen Wert ändern.
 
@@ -197,7 +204,7 @@ Vertex- und Indexpuffer werden erstellt, um ein einfaches Dreieck zu definieren.
 
 Mithilfe der Vertex- und Pixelshader, des Vertexshaderlayouts sowie der Vertex- und Indexpuffer wird dann ein gelbes Dreieck gezeichnet.
 
-### 4. Zeichnen des Dreiecks und Darstellen des gerenderten Bilds
+### <a name="4-drawing-the-triangle-and-presenting-the-rendered-image"></a>4. Zeichnen des Dreiecks und Darstellen des gerenderten Bilds
 
 Wir geben eine endlose Schleife zum fortlaufenden Rendern und Anzeigen der Szene ein. Wir rufen [**ID3D11DeviceContext::OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464) auf, um das Renderziel als Ausgabeziel anzugeben. [**ID3D11DeviceContext::ClearRenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476388) wird mit dem Wert „{ 0.071f, 0.04f, 0.561f, 1.0f }“ aufgerufen, um das Renderingziel durchgehend blau anzuzeigen.
 
@@ -277,7 +284,7 @@ Wir rufen [**IDXGISwapChain::Present**](https://msdn.microsoft.com/library/windo
                 );
 ```
 
-## Zusammenfassung und nächste Schritte
+## <a name="summary-and-next-steps"></a>Zusammenfassung und nächste Schritte
 
 
 In diesem Thema wurde ein gelbes Dreieck mit Vertex- und Pixelshadern erstellt und gezeichnet.
@@ -292,10 +299,5 @@ Als Nächstes wird ein kreisender 3D-Würfel erstellt, und Lichteffekte werden a
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

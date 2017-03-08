@@ -2,16 +2,24 @@
 author: payzer
 title: So deaktivieren Sie die Skalierung
 description: Anleitung zum Deaktivieren des Standard-Skalierungsfaktors.
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 6e68c1fc-a407-4c0b-b0f4-e445ccb72ff3
 translationtype: Human Translation
-ms.sourcegitcommit: 582f5677c15f7cd62c398103b48743ba4bea6c5b
-ms.openlocfilehash: 8079be9685558277565766fa8d0ebbfd4a555904
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 908620cd9f8bb3b1155b3e5d1fd777a91d254ef1
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# So deaktivieren Sie die Skalierung   
-Standardmäßig werden Anwendungen für XAML-Apps auf 200Prozent und für HTML-Apps auf 150Prozent skaliert. Der Standardskalierungsfaktor kann deaktiviert werden. Infolgedessen verwendet die Anwendung die tatsächlichen Pixelabmessungen des Geräts (1910 x 1080Pixel).   
+# <a name="how-to-turn-off-scaling"></a>So deaktivieren Sie die Skalierung   
+Standardmäßig werden Anwendungen für XAML-Apps auf 200 Prozent und für HTML-Apps auf 150 Prozent skaliert. Der Standardskalierungsfaktor kann deaktiviert werden. Infolgedessen verwendet die Anwendung die tatsächlichen Pixelabmessungen des Geräts (1910 x 1080 Pixel).   
    
-## HTML   
+## <a name="html"></a>HTML   
 Sie können den Skalierungsfaktor deaktivieren, indem Sie den folgenden Codeausschnitt verwenden: 
    
 ```
@@ -28,22 +36,17 @@ Oder Sie können eine für das Web geeignete Methode verwenden:
 }   
 ```
 
-## XAML
+## <a name="xaml"></a>XAML
 Sie können den Skalierungsfaktor deaktivieren, indem Sie den folgenden Codeausschnitt verwenden:   
    
 ```
 bool result = Windows.UI.ViewManagement.ApplicationViewScaling.TrySetDisableLayoutScaling(true);
 ```
    
-## DirectX/C++   
+## <a name="directxc"></a>DirectX/C++   
 DirectX-/C++-Anwendungen werden nicht skaliert. Die automatische Skalierung gilt nur für HTML- und XAML-Anwendungen.  
 
-## Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen
 - [Bewährte Methoden für Xbox](tailoring-for-xbox.md)
-- [UWP auf XboxOne](index.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
+- [UWP auf Xbox One](index.md)
 

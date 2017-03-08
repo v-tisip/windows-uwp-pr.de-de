@@ -5,22 +5,29 @@ title: "Richtlinien für App-Einstellungen"
 ms.assetid: 2D765E90-3FA0-42F5-A5CB-BEDC14C3F60A
 label: Guidelines
 template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: dc2fb58250ed1cc032271adc4bae98872e6f612a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: e995023cd8a4216c60d5691f9f87be3aff9d8498
+ms.lasthandoff: 02/07/2017
 
 ---
 
 
 # <a name="guidelines-for-app-settings"></a>Richtlinien für App-Einstellungen
 
-App-Einstellungen sind die vom Benutzer anpassbaren Teile Ihrer App und live innerhalb der Einstellungsseite einer App. Beispielsweise kann ein Benutzer in einer Newsreader-App angeben, welche neuen Quellen oder wie viele Spalten auf dem Bildschirm angezeigt werden sollen. Und die Einstellungen einer Wetter-App können es dem Benutzer ermöglichen, zwischen Celsius und Fahrenheit als Standardmaßeinheit zu wählen. In diesem Artikel werden bewährte Methoden für das Erstellen und Anzeigen von App-Einstellungen beschrieben.
+App-Einstellungen sind die vom Benutzer anpassbaren Teile Ihrer App und sind auf der Einstellungsseite einer App verfügbar. Beispielsweise kann ein Benutzer in einer Newsreader-App angeben, welche neuen Quellen oder wie viele Spalten auf dem Bildschirm angezeigt werden sollen. Und die Einstellungen einer Wetter-App können es dem Benutzer ermöglichen, zwischen Celsius und Fahrenheit als Standardmaßeinheit zu wählen. In diesem Artikel werden bewährte Methoden für das Erstellen und Anzeigen von App-Einstellungen beschrieben.
 
 ![Beispiel für einen Einstellungsbereich](images/app-settings.png)
 
 ## <a name="should-i-include-a-settings-page-in-my-app"></a>Sollte die App eine Seite für App-Einstellungen beinhalten?
 
-Hier sind Beispiele für App-Optionen, die zu einer Seite für App-Einstellungen gehören: 
+Hier sind Beispiele für App-Optionen, die zu einer Seite für App-Einstellungen gehören:
 
 -   Konfigurationsoptionen, die sich auf das Verhalten der App auswirken und keine häufige erneute Anpassung erfordern (z. B. die Auswahl der Standardtemperatureinheit Celsius oder Fahrenheit in einer Wetter-App, das Ändern der Kontoeinstellungen für eine E-Mail-App, Einstellungen für Benachrichtigungen oder Barrierefreiheitsoptionen).
 -   Optionen, die von den bevorzugten Benutzereinstellungen abhängen, wie Musik, Soundeffekte oder Farbdesigns.
@@ -47,38 +54,54 @@ Die Methode, mit der Benutzer auf die Einstellungsseite Ihrer App zugreifen, sol
 
 Bei einem Navigationsbereichs-Layout sollten App-Einstellungen das letzte Element in der Navigationsliste und am Ende der Liste angeheftet sein:
 
-![App-Einstellungen-Einstiegspunkt für Navigationsbereich](images/appsettings-entrypoint-navpane.png)
+![App-Einstellungen – Einstiegspunkt für Navigationsbereich](images/appsettings-entrypoint-navpane.png)
 
 **App-Leiste**
 
-Platzieren Sie bei Verwendung einer App-Leiste oder Symbolleiste, die in der Regel Teil des Navigationslayouts eines Hubs oder von Registerkarten/Pivots ist, das letzte Element des Einstiegspunkts im Flyoutmenü „Mehr“. Wenn eine größere Auffindbarkeit für den Einstellungen-Einstiegspunkt für Ihre App wichtig ist, platzieren Sie den Einstiegspunkt direkt auf der App-Leiste und nicht im Flyoutmenü „Mehr“.
+Bei Verwendung einer [App-Leiste](../controls-and-patterns/app-bars.md) oder Toolleiste sollte der Einstiegspunkt für die Einstellungen das letzte Element im Überlaufmenü „Mehr“ sein. Wenn Sie den Einstiegspunkt für die Einstellungen in Ihrer App intuitiver positionieren möchten, platzieren Sie ihn direkt auf die App-Leiste und nicht ins Überlaufmenü.
 
-![App-Einstellungen-Einstiegspunkt für die App-Leiste](images/appsettings-entrypoint-tabs.png)
+![App-Einstellungen – Einstiegspunkt für die App-Leiste](images/appsettings-entrypoint-tabs.png)
 
 **Hub**
 
-Wenn Sie ein Hub-Layout verwenden, sollte der Einstiegspunkt für App-Einstellungen im Flyoutmenü „Mehr“ einer App-Leiste platziert werden.
+Wenn Sie ein Hublayout verwenden, sollte sich der Einstiegspunkt für App-Einstellungen im Überlaufmenü „Mehr“ einer App-Leiste befinden.
 
 **Registerkarten/Pivots**
 
-Bei einem Registerkarten- oder Pivots-Layout raten wir davon ab, den Einstiegspunkt für App-Einstellungen als eines der Elemente der obersten Ebene in der Navigation zu platzieren. Stattdessen sollte der Einstiegspunkt für App-Einstellungen im Flyoutmenü „Mehr“ einer App-Leiste platziert werden.
+Bei einem Registerkarten- oder Pivots-Layout raten wir davon ab, den Einstiegspunkt für App-Einstellungen als eines der oberen Elemente im Navigationsbereich einzufügen. Stattdessen sollte der Einstiegspunkt für App-Einstellungen im Überlaufmenü „Mehr“ einer App-Leiste platziert werden.
 
-**Master/Details**
+**Master/Details-Ansicht**
 
-Anstatt den Einstiegspunkt für App-Einstellungen innerhalb eines Master/Details-Bereichs zu u verstecken, machen Sie ihn als letztes angeheftete Element auf der obersten Ebene des Masterbereichs verfügbar.
+Verstecken Sie den Einstiegspunkt für App-Einstellungen nicht tief in einem Master/Details-Bereich, sondern machen Sie ihn als letztes angeheftete Element auf der obersten Ebene des Masterbereichs verfügbar.
 
 ## <a name="layout"></a>Layout
 
 
-Auf Desktops und Mobilgeräten sollte sich das Fenster der App-Einstellungen im Vollbildmodus öffnen und das gesamte Fenster ausfüllen. Wenn das App-Einstellungsmenü bis zu vier Gruppen auf oberster Ebene verfügt, sollten sich diese Gruppen nach unten um eine Spalte überlappen.
+Auf Desktops und Mobilgeräten sollte sich das Fenster der App-Einstellungen im Vollbildmodus öffnen und das gesamte Fenster ausfüllen. Wenn das App-Einstellungsmenü über bis zu vier Gruppen auf oberster Ebene verfügt, sollten diese Gruppen eine Spalte nach unten kaskadieren.
 
 Desktop:
 
 ![Layout der Seite für App-Einstellungen auf Desktops](images/appsettings-layout-navpane-desktop.png)
 
-Mobilgeräte:
+Smartphones:
 
 ![Layout der Seite für App-Einstellungen auf Smartphones](images/appsettings-layout-navpane-mobile.png)
+
+## <a name="color-mode-settings"></a>Einstellungen für den Farbmodus
+
+
+Wenn Ihre App Benutzern die Auswahl des Farbmodus ermöglicht, machen Sie diese Optionen mit [Optionsfeldern](../controls-and-patterns/radio-button.md) oder einem [Kombinationsfeld](../controls-and-patterns/lists.md#drop-down-lists) mit dem Header „Wählen Sie einen Modus“ verfügbar. Die Optionen sollten lauten:
+- Hell
+- Dunkel
+- Windows-Standard
+
+Wir empfehlen außerdem, einen Link zur Seite „Farben“ der Windows-App „Einstellungen“ hinzuzufügen, in der Benutzer das Windows-Standarddesign überprüfen können. Verwenden Sie die Zeichenfolge „Windows-Farbeinstellungen“ als Text für den Link.
+
+![Abschnitt für die Modusauswahl](images/appsettings_mode.png)
+
+<div class=”microsoft-internal-note”>
+Detaillierte Beispiele mit bevorzugten Zeichenfolgen für den Abschnitt zur Modusauswahl finden Sie unter [UNI](http://uni/DesignDepot.FrontEnd/#/ProductNav/2543/0/dv/?t=Windows%7CControls%7CColorMode&f=RS2).
+</div>
 
 ## <a name="about-section-and-give-feedback-button"></a>Abschnitt „Info“ und Schaltfläche „Feedback“
 
@@ -89,10 +112,8 @@ Wenn Sie einen Abschnitt „Info zu dieser App“ in Ihrer App benötigen, erste
 
 ![Abschnitt „Info“ mit Schaltfläche „Feedback“](images/appsettings-about.png)
 
-## <a name="recommendations"></a>Empfehlungen
 
-
-## <a name="app-settings-page-content"></a>Inhalt der Seite für App-Einstellungen
+## <a name="recommended-page-content"></a>Empfohlene Seiteninhalte
 
 
 Wenn Sie eine Liste der gewünschten Elemente auf der Seite für App-Einstellungen erstellt haben, berücksichtigen Sie die folgenden Richtlinien:
@@ -105,9 +126,7 @@ Wenn Sie eine Liste der gewünschten Elemente auf der Seite für App-Einstellung
 -   Fassen Sie selten verwendete Einstellungen zu einem einzelnen Eintrag zusammen, damit für gängigere Einstellungen jeweils ein eigener Eintrag zur Verfügung steht. Fassen Sie Inhalte oder Links, die nur Informationen enthalten, unter der Einstellung „Info“ zusammen.
 -   Wiederholen Sie die Funktionen nicht im Berechtigungsbereich. Windows stellt diesen Bereich standardmäßig bereit, und er kann nicht geändert werden.
 
-##  <a name="add-settings-content-to-settings-flyouts"></a>Hinzufügen von Einstellungsinhalten zum Einstellungen-Flyout
-
-
+-   Hinzufügen von Einstellungsinhalten zum Einstellungen-Flyout
 -   Stellen Sie Inhalte von oben nach unten in einer einzelnen, ggf. bildlauffähigen Spalte dar. Beschränken Sie den Bildlauf auf die doppelte Bildschirmhöhe.
 -   Verwenden Sie die folgenden Steuerelemente für App-Einstellungen:
 
@@ -131,10 +150,4 @@ Wenn Sie eine Liste der gewünschten Elemente auf der Seite für App-Einstellung
 * [Richtlinien für Statussteuerelemente](https://msdn.microsoft.com/library/windows/apps/hh465469)
 * [Speichern und Abrufen von App-Daten](https://msdn.microsoft.com/library/windows/apps/mt299098)
 * [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br210288)
-
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

@@ -3,17 +3,24 @@ author: mcleblanc
 description: Aufbau von Visual Studio
 title: Aufbau von Visual Studio
 ms.assetid: 7FBB50A2-6D22-4082-B333-5153DADDDE9A
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 3f23745d161965d08a35abbef31b8e4342cf1ff6
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 57341e52ad51e446e6828e5b4ba6228094152d7f
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Erste Schritte: Aufbau von Visual Studio
+# <a name="getting-started-getting-around-in-visual-studio"></a>Erste Schritte: Aufbau von Visual Studio
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-## Aufbau von Microsoft Visual Studio
+## <a name="getting-around-in-microsoft-visual-studio"></a>Aufbau von Microsoft Visual Studio
 
 Kehren wir nun zum Projekt zurück, das wir zuvor erstellt haben. Dabei soll der Aufbau der integrierten Entwicklungsumgebung (Integrated Development Environment, IDE) von Microsoft Visual Studio veranschaulicht werden.
 
@@ -27,7 +34,7 @@ Microsoft Visual Studio ist ähnlich aufgebaut, obwohl sich die Steuerelemente i
 
 Wenn dies etwas ungewohnt für Sie ist, können Sie die Bereiche in Visual Studio neu anordnen und die Quelldateien im linken Bereich des Bildschirms und die Toolbox auf der rechten Seite platzieren. Sie können auf die Titelleiste eines beliebigen Bereichs klicken und diese ziehen, um sie neu anzuordnen. In Visual Studio wird anhand eines schattierten Felds angezeigt, an welcher Stelle sie nach Veröffentlichung angedockt wird. Viele Bereiche können auch ein kleines Reißzweckensymbol in der Titelleiste aufweisen. Damit können Sie den Bereich anheften und an dieser Stelle sperren. Beim lösen des Bereichs kann dieser ausgeblendet werden, um Platz zu sparen. Dies ist nützlich, wenn sich der Bildschirm auf der schmalen Seite befindet. Wählen Sie, wenn Sie sich vertan haben, **Fensterlayout zurücksetzen** im Menü **Fenster** aus, um die Reihenfolge wiederherzustellen.
 
-## Hinzufügen von Steuerelementen, Festlegen der zugehörigen Eigenschaften und Reagieren auf Ereignisse
+## <a name="adding-controls-setting-their-properties-and-responding-to-events"></a>Hinzufügen von Steuerelementen, Festlegen der zugehörigen Eigenschaften und Reagieren auf Ereignisse
 
 Lassen Sie uns dem Projekt nun einige Steuerelemente hinzufügen. Anschließend ändern wir einige der Steuerelementeigenschaften und schreiben Code, um auf eines der Steuerelementereignisse zu reagieren.
 
@@ -119,13 +126,8 @@ Wählen Sie schließlich zum Ausführen der App das Menü **Debuggen** aus, und 
 
 Wenn Sie die App beenden möchten, tippen Sie in Visual Studio auf das Menü **Debuggen**, und tippen Sie dann auf **Debuggen beenden** (oder drücken Sie einfach UMSCHALT+F5). Beachten Sie, dass Sie in Visual Studio die App auf vielen unterschiedlichen Geräten testen können.
 
-## Nächster Schritt
+## <a name="next-step"></a>Nächster Schritt
 
 [Erste Schritte: Allgemeine Steuerelemente](getting-started-common-controls.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

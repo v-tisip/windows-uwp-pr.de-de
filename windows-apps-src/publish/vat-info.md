@@ -3,23 +3,30 @@ author: jnHs
 Description: "Wenn Sie während des Dev Center-Registrierungsprozesses eine Umsatzsteuer-Identifikationsnummer angeben müssen, finden Sie im Folgenden grundlegende Informationen."
 title: Umsatzsteuerinfo
 ms.assetid: 93834A6B-86D6-4647-AC01-CBCA3CB7A578
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 9ff913999f0697b379df868277fb45597150aa6e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: a26cb43d230cd7dbb050254cceb70d3158c3af5d
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Umsatzsteuerinfo
+# <a name="vat-info"></a>Umsatzsteuerinfo
 
 
 Wenn Sie während des Dev Center-Registrierungsprozesses eine Umsatzsteuer-Identifikationsnummer angeben müssen, finden Sie im Folgenden grundlegende Informationen.
 
-## Grundlagen der Steuernummern
+## <a name="understanding-vat-numbers"></a>Grundlagen der Steuernummern
 
 
 Eine Umsatzsteuernummer ist eine ID, die für Länder oder Regionen in der EU verwendet wird Weitere Informationen erhalten Sie auf der offiziellen [VIES-Website](http://go.microsoft.com/fwlink/p/?LinkId=258372) der EU.
 
-## Gültige Formate für Umsatzsteuernummern
+## <a name="accepted-formats-for-vat-numbers"></a>Gültige Formate für Umsatzsteuernummern
 
 
 Beachten Sie, dass Microsoft keine Steuertipps gibt und die folgende Tabelle nur als Leitfaden bereitgestellt wird. Informationen zu aktuellen Änderungen erhalten Sie bei Ihrem örtlichen Finanzamt, falls dieser Leitfaden nicht ausreicht, um Microsoft eine Umsatzsteuer-Identifikationsnummer zur Verfügung zu stellen.
@@ -247,10 +254,5 @@ Beachten Sie, dass Microsoft keine Steuertipps gibt und die folgende Tabelle nur
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

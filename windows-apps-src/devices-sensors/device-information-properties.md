@@ -3,19 +3,26 @@ author: DBirtolo
 ms.assetid: 4A4C2802-E674-4C04-8A6D-D7C1BBF1BD20
 title: "Geräteinformationseigenschaften"
 description: "Jedem Gerät sind DeviceInformation-Eigenschaften zugeordnet, die Sie verwenden können, wenn Sie bestimmte Informationen benötigen oder eine Geräteauswahl erstellen."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 8f95a0898d0b65f4ed402b5f05e843ace2a18767
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: dbe72dd476903083518dcf4b9d299b04e87f6e85
+ms.lasthandoff: 02/07/2017
 
 ---
-# Geräteinformationseigenschaften
+# <a name="device-information-properties"></a>Geräteinformationseigenschaften
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-** Wichtige APIs **
+**Wichtige APIs**
 
--   [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459)
+- [**Windows.Devices.Enumeration**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration)
 
 Jedem Gerät sind [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393)-Eigenschaften zugeordnet, die Sie verwenden können, wenn Sie bestimmte Informationen benötigen oder eine Geräteauswahl erstellen. Für diese Eigenschaften kann ein AQS-Filter angegeben werden, um die aufzulistenden Geräte zu begrenzen und nur Geräte mit bestimmten Merkmalen zu finden. Mithilfe dieser Eigenschaften können Sie auch angeben, welche Informationen für jedes Gerät zurückgegeben werden sollen. Auf diese Weise können Sie die Geräteinformationen angeben, die an die Anwendung zurückgegeben werden.
 
@@ -23,17 +30,17 @@ Weitere Informationen zur Verwendung von [**DeviceInformation**](https://msdn.mi
 
 Ein [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393)-Objekt besteht aus einer Identität ([**DeviceInformation.Id**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.id)), einer Art ([**DeviceInformation.Kind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.kind.aspx)) und einer Eigenschaftensammlung ([**DeviceInformation.Properties**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.properties.aspx)). Alle anderen Eigenschaften eines **DeviceInformation**-Objekts werden von der **Properties**-Eigenschaftensammlung abgeleitet. [**Name**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.name) wird beispielsweise von **System.ItemNameDisplay** abgeleitet. Die Eigenschaftensammlung enthält also immer die nötigen Informationen zum Ermitteln der anderen Eigenschaften.
 
-## Anfordern von Eigenschaften
+## <a name="requesting-properties"></a>Anfordern von Eigenschaften
 
 Ein [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393)-Objekt verfügt über einige grundlegende Eigenschaften, z. B. [**Id**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.id) und [**Kind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.kind.aspx), aber die meisten Eigenschaften werden in einer Eigenschaftensammlung unter [**Properties**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.properties.aspx) gespeichert. Aus diesem Grund enthält die Eigenschaftensammlung die Eigenschaften, mit denen die Eigenschaften aus der Eigenschaftensammlung bezogen werden. Verwenden Sie z. B. [System.ItemNameDisplay](https://msdn.microsoft.com/library/windows/desktop/Bb760770), um die [**Name**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.name)-Eigenschaft zu beziehen. Dabei handelt es sich um eine gängige und bekannte Eigenschaft mit einem benutzerfreundlichen Namen. Windows stellt mehrere dieser benutzerfreundlichen Namen bereit, um die Abfrage von Eigenschaften zu erleichtern.
 
 Beim Anfordern von Eigenschaften sind Sie nicht auf allgemeine Eigenschaften mit benutzerfreundlichen Namen beschränkt. Sie können die zugrunde liegende GUID und Eigenschafts-ID (Property ID, PID) angeben, um eine beliebige verfügbare Eigenschaft anzufordern – auch benutzerdefinierte Eigenschaften, die von einem bestimmten Gerät oder Treiber bereitgestellt werden. Das Format für die Angabe einer benutzerdefinierten Eigenschaft lautet „`{GUID} PID`“. Beispiel: „`{744e3bed-3684-4e16-9f8a-07953a8bf2ab} 7`“
 
-Einige Eigenschaften gelten für alle [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/BR225393kind)-Objekte, aber die meisten sind für eine bestimmte Art vorgesehen. Die folgenden Abschnitte enthalten einige allgemeine Eigenschaften, die nach den einzelnen **DeviceInformationKind**-Elementen sortiert sind. Weitere Informationen zu den Beziehungen zwischen den verschiedenen Arten finden Sie unter **DeviceInformationKind**.
+Einige Eigenschaften gelten für alle [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationkind)-Objekte, aber die meisten sind für eine bestimmte Art vorgesehen. Die folgenden Abschnitte enthalten einige allgemeine Eigenschaften, die nach den einzelnen **DeviceInformationKind**-Elementen sortiert sind. Weitere Informationen zu den Beziehungen zwischen den verschiedenen Arten finden Sie unter **DeviceInformationKind**.
 
-## DeviceInterface-Eigenschaften
+## <a name="deviceinterface-properties"></a>DeviceInterface-Eigenschaften
 
-**DeviceInterface** ist das standardmäßige und in App-Szenarien am häufigsten verwendete [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/BR225393kind)-Objekt. Diese Objektart sollte verwendet werden, solange die Geräte-API keine andere spezifische **DeviceInformationKind** vorgibt.
+**DeviceInterface** ist das standardmäßige und in App-Szenarien am häufigsten verwendete [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationkind)-Objekt. Diese Objektart sollte verwendet werden, solange die Geräte-API keine andere spezifische **DeviceInformationKind** vorgibt.
 
 | Name                                  | Typ    | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                               |
 |---------------------------------------|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -48,7 +55,7 @@ Einige Eigenschaften gelten für alle [**DeviceInformationKind**](https://msdn.m
 
  
 
-## Geräteeigenschaften
+## <a name="device-properties"></a>Geräteeigenschaften
 
 | Name                                  | Typ       | Beschreibung                                                                                                                                                                                                                                                                              |
 |---------------------------------------|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -66,7 +73,7 @@ Einige Eigenschaften gelten für alle [**DeviceInformationKind**](https://msdn.m
 
  
 
-## DeviceContainer-Eigenschaften
+## <a name="devicecontainer-properties"></a>DeviceContainer-Eigenschaften
 
 | Name                              | Typ       | Beschreibung                                                                                                                                                        |
 |-----------------------------------|------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -86,7 +93,7 @@ Einige Eigenschaften gelten für alle [**DeviceInformationKind**](https://msdn.m
 
  
 
-## DeviceInterfaceClass-Eigenschaften
+## <a name="deviceinterfaceclass-properties"></a>DeviceInterfaceClass-Eigenschaften
 
 | Name                       | Typ   | Beschreibung                            |
 |----------------------------|--------|----------------------------------------|
@@ -94,7 +101,7 @@ Einige Eigenschaften gelten für alle [**DeviceInformationKind**](https://msdn.m
 
  
 
-## AssociationEndpoint-Eigenschaften
+## <a name="associationendpoint-properties"></a>AssociationEndpoint-Eigenschaften
 
 | Name                                  | Typ       | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 |---------------------------------------|------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -115,7 +122,7 @@ Einige Eigenschaften gelten für alle [**DeviceInformationKind**](https://msdn.m
 
  
 
-## AssociationEndpointContainer-Eigenschaften
+## <a name="associationendpointcontainer-properties"></a>AssociationEndpointContainer-Eigenschaften
 
 | Name                                                | Typ       | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 |-----------------------------------------------------|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -137,7 +144,7 @@ Einige Eigenschaften gelten für alle [**DeviceInformationKind**](https://msdn.m
 
  
 
-## AssociationEndpointService-Eigenschaften
+## <a name="associationendpointservice-properties"></a>AssociationEndpointService-Eigenschaften
 
 | Name                                            | Typ    | Beschreibung                                                                                                      |
 |-------------------------------------------------|---------|------------------------------------------------------------------------------------------------------------------|
@@ -154,13 +161,4 @@ Einige Eigenschaften gelten für alle [**DeviceInformationKind**](https://msdn.m
  
 
  
-
-
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

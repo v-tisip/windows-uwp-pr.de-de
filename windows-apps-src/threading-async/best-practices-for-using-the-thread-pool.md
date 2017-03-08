@@ -3,19 +3,26 @@ author: TylerMSFT
 ms.assetid: 95CF7F3D-9E3A-40AC-A083-D8A375272181
 title: "Bewährte Methoden zum Verwenden des Threadpools"
 description: "In diesem Thema werden bewährte Methoden für die Verwendung des Threadpools beschrieben."
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Thread, Threadpool"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 796625fe5c1892ac99195a4920dbc7e539aebf76
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d3b45da6a11bab926812682c209207bbbb436bf1
+ms.lasthandoff: 02/07/2017
 
 ---
-# Bewährte Methoden zum Verwenden des Threadpools
+# <a name="best-practices-for-using-the-thread-pool"></a>Bewährte Methoden zum Verwenden des Threadpools
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 In diesem Thema werden bewährte Methoden für die Verwendung des Threadpools beschrieben.
 
-## Empfohlene Vorgehensweisen
+## <a name="dos"></a>Empfohlene Vorgehensweisen
 
 
 -   Verwenden Sie den Threadpool, um parallele Vorgänge in Ihrer App auszuführen.
@@ -34,29 +41,23 @@ In diesem Thema werden bewährte Methoden für die Verwendung des Threadpools be
 
 -   Verwenden Sie vorab zugeordnete Arbeitsaufgaben, wenn Sie einen Fehler bei der Ressourcenzuweisung zum Zeitpunkt der Verwendung nicht tolerieren können.
 
-## Nicht empfohlene Aktionen
+## <a name="donts"></a>Nicht empfohlene Aktionen
 
 
--   Erstellen Sie keine regelmäßigen Timer mit einem *period*-Wert von &lt;1 Millisekunde (einschließlich0). Andernfalls verhält sich die Arbeitsaufgabe wie ein einmaliger Timer.
+-   Erstellen Sie keine regelmäßigen Timer mit einem *period*-Wert von &lt;1 Millisekunde (einschließlich 0). Andernfalls verhält sich die Arbeitsaufgabe wie ein einmaliger Timer.
 
 -   Senden Sie keine regelmäßigen Arbeitsaufgaben, deren Ausführung länger dauert als die im *period*-Parameter festgelegte Dauer.
 
--   Senden Sie keine Benutzeroberflächenaktualisierungen (mit Ausnahme von Popups und Benachrichtigungen) von einer Arbeitsaufgabe, die von einer Hintergrundaufgabe übermittelt wird. Verwenden Sie stattdessen Status- und Abschlusshandler für Hintergrundaufgaben, z.B. [**IBackgroundTaskInstance.Progress**](https://msdn.microsoft.com/library/windows/apps/BR224800).
+-   Senden Sie keine Benutzeroberflächenaktualisierungen (mit Ausnahme von Popups und Benachrichtigungen) von einer Arbeitsaufgabe, die von einer Hintergrundaufgabe übermittelt wird. Verwenden Sie stattdessen Status- und Abschlusshandler für Hintergrundaufgaben, z. B. [**IBackgroundTaskInstance.Progress**](https://msdn.microsoft.com/library/windows/apps/BR224800).
 
 -   Beachten Sie bei der Verwendung von Arbeitsaufgabenhandlern mit dem **async**-Schlüsselwort, dass die Threadpool-Arbeitsaufgabe möglicherweise vor der Ausführung des gesamten Codes im Ereignishandler auf den Status „Abgeschlossen“ gesetzt wird. Code, der innerhalb des Handlers auf ein **await**-Schlüsselwort folgt, kann ausgeführt werden, nachdem die Arbeitsaufgabe auf den Status „Abgeschlossen“ gesetzt wurde.
 
 -   Führen Sie eine vorab zugeordnete Arbeitsaufgabe nicht mehrmals aus, ohne sie erneut zu initialisieren. [Erstellen einer regelmäßigen Arbeitsaufgabe](create-a-periodic-work-item.md)
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 
 * [Erstellen einer regelmäßigen Arbeitsaufgabe](create-a-periodic-work-item.md)
 * [Senden einer Arbeitsaufgabe an den Threadpool](submit-a-work-item-to-the-thread-pool.md)
 * [Senden einer Arbeitsaufgabe mithilfe eines Timers](use-a-timer-to-submit-a-work-item.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

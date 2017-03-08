@@ -4,13 +4,19 @@ Description: "Nachdem Sie Ihre App durch die Reservierung eines Namens erstellt 
 title: "App-Übermittlungen"
 ms.assetid: 363BB9E4-4437-4238-A80F-ABDFC70D96E4
 keywords: "Prüfliste"
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: ce9858da15cac0e34a2bb2c68c25ba63ec79af4c
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: df66981ae8355ea62128a881f02fd6fb891ffb30
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# App-Übermittlungen
+# <a name="app-submissions"></a>App-Übermittlungen
 
 
 Nachdem Sie Ihre [App durch die Reservierung eines Namens erstellt haben](create-your-app-by-reserving-a-name.md), können Sie mit der Veröffentlichung beginnen. Der erste Schritt besteht darin, eine ***Übermittlung** zu erstellen.
@@ -21,14 +27,14 @@ Nach der Veröffentlichung Ihrer App können Sie eine aktualisierte Version ver�
 
 > **Hinweis**&nbsp;&nbsp;In diesem Abschnitt der Dokumentation wird das Erstellen einer App-Übermittlung über das Dev Center-Dashboard beschrieben. Alternativ dazu können Sie auch die [Windows Store-Übermittlungs-API](../monetize/create-and-manage-submissions-using-windows-store-services.md) verwenden, um App-Übermittlungen zu automatisieren.
 
-## Prüfliste für die App-Übermittlung
+## <a name="app-submission-checklist"></a>Prüfliste für die App-Übermittlung
 
 
 Hier finden Sie eine Liste mit den Informationen, die Sie beim Erstellen Ihrer App-Übermittlung angeben können, sowie Links zu weiteren Informationen.
 
 Die erforderlichen Elemente sind im Folgenden aufgeführt. Einige Bereiche sind optional oder verfügen über Standardwerte, die Sie nach Bedarf ändern können.
 
-### Seite „Preise und Verfügbarkeit“
+### <a name="pricing-and-availability-page"></a>Seite „Preise und Verfügbarkeit“
 | Feldname                    | Hinweise                                       | Weitere Informationen                                                             |
 |-------------------------------|---------------------------------------------|---------------------------------------------------------------------------|
 | **Grundpreis**                | Erforderlich                                    | [Grundpreis](set-app-pricing-and-availability.md#base-price)              |
@@ -41,7 +47,7 @@ Die erforderlichen Elemente sind im Folgenden aufgeführt. Einige Bereiche sind 
 
 <span/>
 
-### Seite „App-Eigenschaften“
+### <a name="app-properties-page"></a>Seite „App-Eigenschaften“
 
 | Feldname                    | Hinweise                                       | Weitere Informationen                                                             |
 |-------------------------------|---------------------------------------------|---------------------------------------------------------------------------|
@@ -51,7 +57,7 @@ Die erforderlichen Elemente sind im Folgenden aufgeführt. Einige Bereiche sind 
 
 <span/>
 
-### Seite „Altersfreigaben“
+### <a name="age-ratings-page"></a>Seite „Altersfreigaben“
 
 | Feldname                    | Hinweise                                       | Weitere Informationen                          |
 |-------------------------------|---------------------------------------------|----------------------------------------|
@@ -59,7 +65,7 @@ Die erforderlichen Elemente sind im Folgenden aufgeführt. Einige Bereiche sind 
 
 <span/>
 
-### Seite „Pakete“
+### <a name="packages-page"></a>Seite „Pakete“
 
 | Feldname                    | Hinweise                                  | Weitere Informationen                          |
 |-------------------------------|----------------------------------------|----------------------------------------|
@@ -70,7 +76,7 @@ Die erforderlichen Elemente sind im Folgenden aufgeführt. Einige Bereiche sind 
 
 <span/>
 
-### Store-Einträge
+### <a name="store-listings"></a>Store-Einträge
 
 Sie benötigen alle erforderlichen Informationen für mindestens eine der von Ihrer App unterstützten Sprachen. Wir empfehlen Ihnen, [Store-Einträge](create-app-store-listings.md) in allen Sprachen anzugeben, die von der App unterstützt werden. Außerdem können Sie [Store-Einträge in weiteren Sprachen angeben](create-app-store-listings.md#store-listing-languages).
 
@@ -79,7 +85,7 @@ Sie benötigen alle erforderlichen Informationen für mindestens eine der von Ih
 | **Beschreibung**               | Erforderlich                                    | [Erstellen einer interessanten App-Beschreibung](write-a-great-app-description.md) |
 | **Versionshinweise**             | Optional                                    | [Versionshinweise](create-app-store-listings.md#release-notes)         |
 | **Screenshots**               | Erforderlich (mindestens ein Screenshot)          | [App-Screenshots und -Bilder](app-screenshots-and-images.md)       |
-| **Symbol für App-Kachel**             | Optional, jedoch dringend empfohlen für Windows Phone8.1 und frühere Versionen | [Symbol für App-Kachel](create-app-store-listings.md#app-tile-icon) |
+| **Symbol für App-Kachel**             | Optional, jedoch dringend empfohlen für Windows Phone 8.1 und frühere Versionen | [Symbol für App-Kachel](create-app-store-listings.md#app-tile-icon) |
 | **Werbebilder**       | Optional                                    | [App-Screenshots und -Bilder](app-screenshots-and-images.md)       |
 | **App-Features**              | Optional                                    | [Features](create-app-store-listings.md#app-features)               |
 | **Weitere Systemanforderungen**      | Optional                                    | [Weitere Systemanforderungen](create-app-store-listings.md#additional-system-requirements) |
@@ -88,12 +94,12 @@ Sie benötigen alle erforderlichen Informationen für mindestens eine der von Ih
 | **Zusätzliche Lizenzbedingungen**  | Optional                                    | [Additional license terms (Zusätzliche Lizenzbedingungen)](create-app-store-listings.md#additional-license-terms) |
 | **Website**                   | Optional                                    | [Website](create-app-store-listings.md#website)                     |
 | **Support – Kontaktinfos**      | Optional                                    | [Support – Kontaktinfos](create-app-store-listings.md)                |
-| **Privacy policy (Datenschutzrichtlinie)**            | Für einige Apps erforderlich. Weitere Informationen finden Sie in der [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058) und den [WindowsStore-Richtlinien](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_5_1). | [Datenschutzrichtlinie](create-app-store-listings.md#privacy-policy) |
+| **Privacy policy (Datenschutzrichtlinie)**            | Für einige Apps erforderlich. Weitere Informationen finden Sie in der [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058) und den [Windows Store-Richtlinien](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_5_1). | [Datenschutzrichtlinie](create-app-store-listings.md#privacy-policy) |
 | **Plattformspezifische Store-Einträge** | Optional                               | [Erstellen plattformspezifischer Store-Einträge](create-platform-specific-store-listings.md) |
 
 <span/>
 
-### Seite „Hinweise für Zertifizierung“
+### <a name="notes-for-certification-page"></a>Seite „Hinweise für Zertifizierung“
 
 | Feldname                    | Hinweise                                       | Weitere Informationen                                                     |
 |-------------------------------|---------------------------------------------|-------------------------------------------------------------------|
@@ -102,9 +108,4 @@ Sie benötigen alle erforderlichen Informationen für mindestens eine der von Ih
 <span/>
 
 **Hinweis**&nbsp;&nbsp;Informationen zum Veröffentlichen von branchenspezifischen Apps direkt für Unternehmen finden Sie unter [Verteilen von branchenspezifischen Apps an Unternehmen](distribute-lob-apps-to-enterprises.md).
-
-
-
-<!--HONumber=Aug16_HO5-->
-
 

@@ -3,17 +3,24 @@ author: DBirtolo
 ms.assetid: 88132B6F-FB50-4B03-BC21-233988746230
 title: "Anpassen der Benutzeroberfläche für die Druckvorschau"
 description: "In diesem Abschnitt wird beschrieben, wie die Druckoptionen und -einstellungen in der Benutzeroberfläche für die Druckvorschau angepasst werden."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: dd64266c2015e1bb640cf159b0836b9819cf7845
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: fa1a8c487d3fef2b0caa322d81c0ebdbdfe3865f
+ms.lasthandoff: 02/07/2017
 
 ---
-# Anpassen der Benutzeroberfläche für die Druckvorschau
+# <a name="customize-the-print-preview-ui"></a>Anpassen der Benutzeroberfläche für die Druckvorschau
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-** Wichtige APIs **
+**Wichtige APIs**
 
 -   [**Windows.Graphics.Printing**](https://msdn.microsoft.com/library/windows/apps/BR226489)
 -   [**Windows.UI.Xaml.Printing**](https://msdn.microsoft.com/library/windows/apps/BR243325)
@@ -25,7 +32,7 @@ In diesem Abschnitt wird beschrieben, wie die Druckoptionen und -einstellungen i
 
  
 
-## Anpassen der Druckoptionen
+## <a name="customize-print-options"></a>Anpassen der Druckoptionen
 
 Standardmäßig werden in der Benutzeroberfläche für die Druckvorschau die Druckoptionen [**ColorMode**](https://msdn.microsoft.com/library/windows/apps/BR226478), [**Copies**](https://msdn.microsoft.com/library/windows/apps/BR226479) und [**Orientation**](https://msdn.microsoft.com/library/windows/apps/BR226486) angezeigt. Neben diesen Optionen sind weitere allgemeine Druckeroptionen verfügbar, die Sie der Benutzeroberfläche für die Druckvorschau hinzufügen können:
 
@@ -48,7 +55,7 @@ Die Änderungen, die Sie auf diese Weise vornehmen, betreffen allerdings nur die
 
  
 
-### Definieren der anzuzeigenden Optionen
+### <a name="define-the-options-to-display"></a>Definieren der anzuzeigenden Optionen
 
 Wenn der Bildschirm der App geladen wird, wird die App für den Vertrag für „Drucken“ registriert. Im Rahmen dieser Registrierung wird der [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597)-Ereignishandler definiert. Der Code zum Anpassen der in der Druckvorschau-Benutzeroberfläche angezeigten Optionen wird dem **PrintTaskRequested**-Ereignishandler hinzugefügt.
 
@@ -94,7 +101,7 @@ protected override void PrintTaskRequested(PrintManager sender, PrintTaskRequest
 
 **Wichtig** Durch das Aufrufen von [**displayedOptions.clear**](https://msdn.microsoft.com/library/windows/apps/BR226453)() werden alle Druckoptionen aus der Druckvorschau-Benutzeroberfläche entfernt, einschließlich des Links **Weitere Einstellungen**. Fügen Sie alle Optionen an, die in der Druckvorschau-Benutzeroberfläche angezeigt werden sollen.
 
-### Festlegen der Standardoptionen
+### <a name="specify-default-options"></a>Festlegen der Standardoptionen
 
 Sie können auch die Standardwerte der Optionen in der Druckvorschau-Benutzeroberfläche festlegen. Die folgende Codezeile aus dem letzten Beispiel legt den Standardwert der Option [**MediaSize**](https://msdn.microsoft.com/library/windows/apps/BR226483) fest.
 
@@ -103,7 +110,7 @@ Sie können auch die Standardwerte der Optionen in der Druckvorschau-Benutzerobe
          printTask.Options.MediaSize = PrintMediaSize.NorthAmericaLegal;
 ```         
 
-## Hinzufügen neuer Druckoptionen
+## <a name="add-new-print-options"></a>Hinzufügen neuer Druckoptionen
 
 In diesem Abschnitt werden die Erstellung einer neuen Druckoption, die Definition einer Liste von Werten, die von dieser Option unterstützt werden, und das Hinzufügen der Option zur Druckvorschau gezeigt. Fügen Sie die Druckoption wie im vorherigen Abschnitt gezeigt im [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597)-Ereignishandler hinzu.
 
@@ -179,15 +186,9 @@ async void printDetailedOptions_OptionChanged(PrintTaskOptionDetails sender, Pri
 }
 ```
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Gestaltungsrichtlinien für Druckvorgänge](https://msdn.microsoft.com/library/windows/apps/Hh868178)
-* [//Build2015-Video: Entwickeln von druckfähigen Apps in Windows10](https://channel9.msdn.com/Events/Build/2015/2-94)
+* [//Build 2015-Video: Entwickeln von druckfähigen Apps in Windows 10](https://channel9.msdn.com/Events/Build/2015/2-94)
 * [UWP-Druckbeispiel](http://go.microsoft.com/fwlink/p/?LinkId=619984)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

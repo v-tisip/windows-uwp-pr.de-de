@@ -1,34 +1,41 @@
 ---
 author: TylerMSFT
-ms.assetid: 
+ms.assetid: 3a3ea86e-fa47-46ee-9e2e-f59644c0d1db
 description: Dieser Artikel beschreibt, wie Sie Arbeitsspeicher reduzieren, wenn Ihre App in den Hintergrund verschoben wird.
-title: Reduzieren Sie die Speicherverwendung, wenn Ihre App in den Hintergrundzustand verschoben wird
+title: Reduzieren der Speicherverwendung bei Verschieben der App in den Hintergrundzustand
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: bf0cb8f072a2a6974ab582329d8b482add37f1d9
-ms.openlocfilehash: 80e89e24236903ab90f7c4fe326782a0a7e5272f
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: ef4527f72898c8c5a6ad9c56d975966402894b2c
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Geben Sie Speicher frei, wenn Ihre App in den Hintergrund verschoben wird
+# <a name="free-memory-when-your-app-moves-to-the-background"></a>Geben Sie Speicher frei, wenn Ihre App in den Hintergrund verschoben wird
 
-Dieser Artikel beschreibt, wie Sie die Größe des Speichers reduzieren, den Ihre App verwendet, wenn sie in den Hintergrundzustand verschoben wird, so dass sie nicht angehalten und möglicherweise sogar beendet wird.
+Dieser Artikel beschreibt, wie Sie die Größe des von Ihrer App verwendeten Speichers reduzieren, wenn diese in den Hintergrundzustand verschoben wird, sodass sie nicht angehalten und sogar beendet wird.
 
-## Neue Hintergrund-Ereignisse
+## <a name="new-background-events"></a>Neue Hintergrund-Ereignisse
 
 Windows 10, Version 1607, führt zwei neue App-Lebenszyklusereignisse, [ **EnteredBackground** ](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground) und [ **LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground), ein. Diese Ereignisse ermöglichen Ihrer App zu wissen, wann sie in den Hintergrund verschoben wird bzw. diesen verlässt.
 
 Wenn Ihre App in den Hintergrund verschoben wird, können sich die vom System erzwungen Speicherbeschränkungen ändern. Verwenden Sie diese Ereignisse, um den aktuellen Speicherverbrauch zu prüfen und Ressourcen freizugeben, um unterhalb des Grenzwerts zu bleiben, so dass Ihre App nicht angehalten und möglicherweise beendet wird, während sie sich im Hintergrund befindet.
 
-### Ereignisse zur Steuerung der Speichernutzung Ihrer App
+### <a name="events-for-controlling-your-apps-memory-usage"></a>Ereignisse zur Steuerung der Speichernutzung Ihrer App
 
-[MemoryManager.AppMemoryUsageLimitChanging](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.memorymanager.appmemoryusagelimitchanging.aspx) wird ausgeführt, kurz bevor die Obergrenze des Speichers, den die App nutzen kann, erreicht ist. Zum Beispiel: Wenn die App in den Hintergrund verschoben wird und sich die Speichergrenze von 1024 MB zu 128 MB auf der Xbox ändert.  
+[MemoryManager.AppMemoryUsageLimitChanging](https://msdn.microsoft.com/library/windows/apps/windows.system.memorymanager.appmemoryusagelimitchanging.aspx) wird ausgeführt, kurz bevor die Obergrenze des Speichers, den die App nutzen kann, erreicht ist. Zum Beispiel: Wenn die App in den Hintergrund verschoben wird und sich die Speichergrenze von 1024 MB zu 128 MB auf der Xbox ändert.  
 Dies ist das wichtigste Ereignis, um zu verhindern, dass die Plattform die App anhält oder beendet.
 
-[MemoryManager.AppMemoryUsageIncreased](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.memorymanager.appmemoryusageincreased.aspx) wird ausgeführt, wenn der Speicherverbrauch der App auf einen höheren Wert in der [AppMemoryUsageLevel](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.appmemoryusagelevel.aspx)-Enumeration gestiegen ist. Z. B. von **Low** auf **Medium**. Die Verwendung dieses Ereignisses ist optional, wird jedoch empfohlen, da die Anwendung immer noch dafür verantwortlich ist, unter dem Grenzwert zu bleiben.
+[MemoryManager.AppMemoryUsageIncreased](https://msdn.microsoft.com/library/windows/apps/windows.system.memorymanager.appmemoryusageincreased.aspx) wird ausgeführt, wenn der Speicherverbrauch der App auf einen höheren Wert in der [AppMemoryUsageLevel](https://msdn.microsoft.com/library/windows/apps/windows.system.appmemoryusagelevel.aspx)-Enumeration gestiegen ist. Z. B. von **Low** auf **Medium**. Die Verwendung dieses Ereignisses ist optional, wird jedoch empfohlen, da die Anwendung immer noch dafür verantwortlich ist, unter dem Grenzwert zu bleiben.
 
-[MemoryManager.AppMemoryUsageDecreased](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.memorymanager.appmemoryusagedecreased.aspx) wird ausgeführt, wenn der Speicherverbrauch der App auf einen niedrigeren Wert in der **AppMemoryUsageLevel**-Enumeration gesunken ist. Z. B. von **High** auf **Low**. Die Verwendung dieses Ereignisses ist optional, es zeigt jedoch an, dass die Anwendung bei Bedarf weiteren Speicher zuweisen könnte.
+[MemoryManager.AppMemoryUsageDecreased](https://msdn.microsoft.com/library/windows/apps/windows.system.memorymanager.appmemoryusagedecreased.aspx) wird ausgeführt, wenn der Speicherverbrauch der App auf einen niedrigeren Wert in der **AppMemoryUsageLevel**-Enumeration gesunken ist. Z. B. von **High** auf **Low**. Die Verwendung dieses Ereignisses ist optional, es zeigt jedoch an, dass die Anwendung bei Bedarf weiteren Speicher zuweisen könnte.
 
-## Verarbeiten des Übergangs zwischen Vordergrund und Hintergrund
+## <a name="handle-the-transition-between-foreground-and-background"></a>Verarbeiten des Übergangs zwischen Vordergrund und Hintergrund
 
 Wenn Ihre App vom Vordergrund in den Hintergrund wechselt, wird das [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground)-Ereignis ausgelöst. Wechselt die App dann wieder in den Vordergrund, wird das [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground)-Ereignis ausgelöst. Sie können Handler für diese Ereignisse registrieren, wenn Ihre App erstellt wird. In der Standardprojektvorlage geschieht dies im **App**-Klassenkonstruktor in „App.xaml.cs“.
 
@@ -76,9 +83,9 @@ Durch die **CreateRootFrame**-Hilfsmethode wird der Ansichtsinhalt Ihrer App neu
 
 [!code-cs[CreateRootFrame](./code/ReduceMemory/cs/App.xaml.cs#SnippetCreateRootFrame)]
 
-## Anleitungen
+## <a name="guidelines"></a>Anleitungen
 
-### Verschieben vom Vordergrund in den Hintergrund
+### <a name="moving-from-the-foreground-to-the-background"></a>Verschieben vom Vordergrund in den Hintergrund
 
 Wenn eine App vom Vordergrund in den Hintergrund verschoben wird, sorgt das System für die App dafür, dass Ressourcen, die im Hintergrund nicht benötigt werden, freigegeben werden. Beispielsweise leert das UI-Framework zwischengespeicherte Texturen, und das Video-Subsystem gibt für die App Speicher frei. Eine App muss jedoch weiterhin sorgfältig ihre Speichernutzung überwachen, um zu vermeiden, dass sie vom System angehalten oder beendet wird.
 
@@ -91,19 +98,14 @@ Wenn eine App vom Vordergrund in den Hintergrund wechselt, erhält sie zuerst ei
 - **Geben Sie eventuell** UI-Ressourcen im **AppMemoryUsageLimitChanging**-Ereignishandler anstelle des **EnteredBackground**-Handlers frei, um die Leistung zu erhöhen. Verwenden Sie einen booleschen Wert in den Ereignishandlern **EnteredBackground/LeavingBackground**, um zu verfolgen, ob sich die App im Vordergrund oder im Hintergrund befindet. Wenn dann im Eventhandler **AppMemoryUsageLimitChanging** **AppMemoryUsage** den Grenzwert überschreitet und sich die App im Hintergrund befindet (nach dem booleschen Wert), können Sie UI-Ressourcen freigeben.
 - **Führen Sie keine** Langzeitaufgaben im **EnteredBackground**-Ereignis durch, da dies dazu führen kann, dass der Übergang zwischen Anwendungen für die Benutzer langsam vor sich geht.
 
-### Verschieben vom Hintergrund in den Vordergrund
+### <a name="moving-from-the-background-to-the-foreground"></a>Verschieben vom Hintergrund in den Vordergrund
 
 Wenn eine App vom Hintergrund in den Vordergrund wechselt, erhält sie zuerst ein **AppMemoryUsageLimitChanging**-Ereignis und dann ein **LeavingBackground**-Ereignis.
 
 - **Verwenden** Sie das **LeavingBackground**-Ereignis, um UI-Ressourcen wiederherzustellen, die Ihre App verworfen hat, als Sie in den Hintergrund wechselte.
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Abspielbeispiel für Hintergrundmedien](http://go.microsoft.com/fwlink/p/?LinkId=800141) - zeigt, wie Sie Speicher freigeben, wenn ihre App in den Hintergrund wechselt.
 * [Diagnosetools](https://blogs.msdn.microsoft.com/visualstudioalm/2015/01/16/diagnostic-tools-debugger-window-in-visual-studio-2015/) - beobachten Sie mit den Diagnosetools die Garbage Collection-Ereignisse, und prüfen Sie, ob Ihre App Speicher in der erwarteten Weise freigibt.
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

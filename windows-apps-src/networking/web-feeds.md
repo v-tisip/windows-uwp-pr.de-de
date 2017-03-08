@@ -1,17 +1,24 @@
 ---
 author: DelfCo
 description: "Mithilfe von Fremdanbieterfeeds, die entsprechend den RSS- und Atom-Standards mit Features im Windows.Web.Syndication-Namespace generiert werden, können Sie die neuesten und beliebtesten Webinhalte abrufen oder erstellen."
-title: RSS/Atom-Feeds
+title: RSS-/Atom-Feeds
 ms.assetid: B196E19B-4610-4EFA-8FDF-AF9B10D78843
+ms.author: bobdel
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: a30b58737befaae10a1dbb30416f338d8eb1cbb1
-ms.openlocfilehash: 623c11eba097a072b456738b84750eb4b2d888bb
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: da28caa7703a04b1d11254d9c894cf02b044ab64
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="rssatom-feeds"></a>RSS/Atom-Feeds
+# <a name="rssatom-feeds"></a>RSS-/Atom-Feeds
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 **Wichtige APIs**
 
@@ -230,9 +237,4 @@ Wie bereits angesprochen, unterscheidet sich der Inhaltstyp, der durch ein [**Sy
     });
 }
 ```
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

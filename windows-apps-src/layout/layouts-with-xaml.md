@@ -6,12 +6,19 @@ ms.assetid: 8D4E4162-1C9C-48F4-8A94-34976FB17079
 label: Page layouts with XAML
 template: detail.hbs
 op-migration-status: ready
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: b8bb8a9468f8ac8eee9b94c5551246753016e3c1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c4c03e48c9957d78cfa8c4287c4e99b73b5609b0
+ms.lasthandoff: 02/07/2017
 
 ---
-# <a name="define-page-layouts-with-xaml"></a>Definieren von Seitenlayouts mit XAML
+# <a name="define-page-layouts-with-xaml"></a>Definieren von Layouts mit XAML
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
@@ -444,8 +451,3 @@ Sie können auch unterschiedliche Kriterien verwenden, um zu bestimmen, zur welc
 ## <a name="sample-code"></a>Beispielcode
 *   [Beispiel für XAML-UI-Grundlagen](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)<br/>
     Hier werden alle XAML-Steuerelemente in einem interaktiven Format dargestellt.
-
-
-<!--HONumber=Dec16_HO2-->
-
-

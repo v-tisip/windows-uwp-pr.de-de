@@ -3,14 +3,21 @@ author: laurenhughes
 ms.assetid: 96361CAF-C347-4671-9721-8208CE118CA4
 title: Verpacken von UWP-Apps
 description: "Um Ihre UWP-App (Universelle Windows-Plattform) zu verkaufen oder an andere Benutzer zu verteilen, müssen Sie ein APPXUPLOAD-Paket erstellen."
+ms.author: lahugh
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 6decb122b56bb8835b4d0fc5178af61b59455876
-ms.openlocfilehash: 312c8fb0bbbb6231da91e7d477b800a797160e96
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ca57f50f4827ba5de7a140f1353ba864c5e2fb6c
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="packaging-uwp-apps"></a>Verpacken von UWP-Apps
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Um Ihre UWP-App (Universelle Windows-Plattform) zu verkaufen oder an andere Benutzer zu verteilen, müssen Sie ein APPXUPLOAD-Paket erstellen. Beim Erstellen des APPXUPLOAD-Pakets wird ein weiteres APPX-Paket für Testzwecke und das Querladen generiert. Sie können Ihre App direkt verteilen, indem Sie das APPX-Paket durch Querladen auf einem Gerät installieren. In diesem Artikel wird das Konfigurieren, Erstellen und Testen von UWP-App-Paketen beschrieben. Weitere Informationen über das Querladen finden Sie unter [Querladen von Apps in Windows 10](https://technet.microsoft.com/library/mt269549.aspx).
 
@@ -130,8 +137,3 @@ Die folgende Liste enthält die Anforderungen für das Querladen von Apps.
 
     **Hinweis**  Wenn Sie das Kontextmenü auf einem Tablet öffnen möchten, berühren Sie den Bildschirm an der Stelle, an der Sie mit der rechten Maustaste klicken möchten. Drücken Sie so lange, bis ein vollständiger Kreis angezeigt wird, und lassen Sie dann wieder los. Das Kontextmenü wird angezeigt, sobald Sie loslassen.
 4.  Klicken Sie auf die Schaltfläche „Start“, und geben Sie den Namen der App ein, um sie zu starten.
-
-
-<!--HONumber=Dec16_HO1-->
-
-

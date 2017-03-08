@@ -3,20 +3,27 @@ author: mtoepke
 title: Das App-Objekt und DirectX
 description: "Für die Universelle Windows-Plattform (UWP) mit DirectX-Spielen werden nur wenige der UI-Elemente und -objekte der Windows-Benutzeroberfläche genutzt."
 ms.assetid: 46f92156-29f8-d65e-2587-7ba1de5b48a6
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, DirectX, App-Objekt"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 78e2bbcc4c9182b09138da457c839466b49ac31a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7d3290633ead698a6c42c3accdbd2012ccfd7065
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Das App-Objekt und DirectX
+# <a name="the-app-object-and-directx"></a>Das App-Objekt und DirectX
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Für die Universelle Windows-Plattform (UWP) mit DirectX-Spielen werden nur wenige der UI-Elemente und -objekte der Windows-Benutzeroberfläche genutzt. Da sie auf einer niedrigeren Ebene des Windows-Runtime-Stapels ausgeführt werden, müssen sie stattdessen auf eine grundlegendere Weise mit dem Benutzeroberflächenframework interagieren, und zwar indem sie direkt auf das App-Objekt zugreifen und mit diesem interagieren. Im Folgenden erfahren Sie, zu welchem Zeitpunkt und auf welche Weise eine solche Interaktion erfolgt und wie Sie dieses Modell als DirectX-Entwickler beim Entwickeln von UWP-Apps effizient nutzen können.
 
-## Die wichtigen Benutzeroberflächen-Hauptnamespaces
+## <a name="the-important-core-user-interface-namespaces"></a>Die wichtigen Benutzeroberflächen-Hauptnamespaces
 
 
 Zunächst sind die Windows-Runtime-Namespaces zu erwähnen, die Sie (mit **using**) in Ihre UWP-App einschließen müssen. Darauf gehen wir unten noch ausführlicher ein.
@@ -31,7 +38,7 @@ Zunächst sind die Windows-Runtime-Namespaces zu erwähnen, die Sie (mit **using
 
  
 
-## Das Windows-Runtime-App-Objekt
+## <a name="the-windows-runtime-app-object"></a>Das Windows-Runtime-App-Objekt
 
 
 Sie möchten in Ihrer UWP-App ein Fenster und einen Ansichtsanbieter abrufen, von dem Sie wiederum eine Ansicht abrufen und mit dem Sie Ihre Swapchain (Ihre Anzeigepuffer) verbinden können. Sie können diese Ansicht auch in die fensterspezifischen Ereignisse für die ausgeführte App einbinden. Zum Abrufen des übergeordneten Fensters für das App-Objekt, das durch den [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)-Typ definiert ist, erstellen Sie einen Typ, der [**IFrameworkViewSource**](https://msdn.microsoft.com/library/windows/apps/hh700482) implementiert, wie im vorherigen Codeausschnitt veranschaulicht.
@@ -58,7 +65,7 @@ Im Folgenden werden die grundlegenden Schritte zum Abrufen eines Fensters mit de
 
 Da Sie sich nun mit den Grundlagen vertraut gemacht haben, betrachten Sie nun weitere verfügbare Optionen, mit denen Sie diesen Ansatz ausweiten können.
 
-## Zentrale Benutzeroberflächentypen
+## <a name="core-user-interface-types"></a>Zentrale Benutzeroberflächentypen
 
 
 Im Folgenden werden weitere zentrale Benutzeroberflächentypen in der Windows-Runtime vorgestellt, die möglicherweise hilfreich sein können:
@@ -79,12 +86,12 @@ Die Ansicht Ihrer App wird durch den Ansichtsanbieter für das App-Fenster gener
 
 Dies lässt sich wie folgt zusammenfassen: Das App-Objekt stellt eine Ansichtsanbieterfactory bereit. Es erstellt einen Ansichtsanbieter und instanziiert ein übergeordnetes Fenster für die App. Der Ansichtsanbieter definiert die Ansicht der App für das übergeordnete Fenster der App. Im Folgenden wird genauer auf die Ansicht und das übergeordnete Fenster eingegangen.
 
-## CoreApplicationView – Verhalten und Eigenschaften
+## <a name="coreapplicationview-behaviors-and-properties"></a>CoreApplicationView – Verhalten und Eigenschaften
 
 
 [**CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017) stellt die aktuelle App-Ansicht dar. Das App-Singleton erstellt die App-Ansicht während der Initialisierung; die Ansicht bleibt jedoch so lange ruhend, bis sie aktiviert wird. Sie können das [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) abrufen, in dem die Ansicht angezeigt wird, indem Sie auf die zugehörige [**CoreApplicationView.CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br225019)-Eigenschaft zugreifen: Sie können Aktivierungs- und Deaktivierungsereignisse für die Ansicht behandeln, indem Sie Delegaten beim [**CoreApplicationView.Activated**](https://msdn.microsoft.com/library/windows/apps/br225018)-Ereignis registrieren.
 
-## CoreWindow – Verhalten und Eigenschaften
+## <a name="corewindow-behaviors-and-properties"></a>CoreWindow – Verhalten und Eigenschaften
 
 
 Das übergeordnete Fenster, das eine [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)-Instanz darstellt, wird erstellt und an den Ansichtsanbieter übergeben, wenn das App-Objekt initialisiert wird. Wenn die App über ein anzuzeigendes Fenster verfügt, wird dieses angezeigt. Andernfalls wird lediglich die Ansicht initialisiert.
@@ -93,7 +100,7 @@ Das übergeordnete Fenster, das eine [**CoreWindow**](https://msdn.microsoft.com
 
 Sie können auch den Fensterereignisverteiler für das Fenster abrufen, indem Sie auf die [**CoreWindow.Dispatcher**](https://msdn.microsoft.com/library/windows/apps/br208264)-Eigenschaft zugreifen, die eine Instanz von [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) bereitstellt.
 
-## CoreDispatcher – Verhalten und Eigenschaften
+## <a name="coredispatcher-behaviors-and-properties"></a>CoreDispatcher – Verhalten und Eigenschaften
 
 
 Sie können das Threadingverhalten der Ereignisverteilung für ein Fenster mit dem [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211)-Typ bestimmen. Bei diesem Typ gibt es eine besonders wichtige Methode: die [**CoreDispatcher.ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215)-Methode, die die Fensterereignisverarbeitung startet. Wenn Sie diese Methode mit der falschen Option für Ihre App aufrufen, kann dies zu allen möglichen unerwarteten Verhaltensweisen bei der Ereignisverarbeitung führen.
@@ -109,7 +116,7 @@ Sie können das Threadingverhalten der Ereignisverteilung für ein Fenster mit d
 
 UWP mit DirectX muss die [**CoreProcessEventsOption.ProcessAllIfPresent**](https://msdn.microsoft.com/library/windows/apps/br208217)-Option verwenden, um blockierendes Verhalten zu verhindern, das Grafikaktualisierungen beeinträchtigen könnte.
 
-## Überlegungen zu ASTA für DirectX-Entwickler
+## <a name="asta-considerations-for-directx-devs"></a>Überlegungen zu ASTA für DirectX-Entwickler
 
 
 Das App-Objekt, das die Laufzeitdarstellung Ihrer UWP- und DirectX-App definiert, verwendet das ASTA-Threadingmodell (Anwendungs-Single-Threaded-Apartment), um die UI-Ansichten der App zu hosten. Wenn Sie eine UWP- und DirectX-App entwickeln, sind Sie mit den Eigenschaften eines ASTAs vertraut, da alle Threads, die von Ihrer UWP- und DirectX-App gesendet werden, die [**Windows::System::Threading**](https://msdn.microsoft.com/library/windows/apps/br229642)-APIs oder [**CoreWindow::CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) verwenden müssen. (Sie können das [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)-Objekt für das ASTA abrufen, indem Sie [**CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589) in Ihrer App aufrufen.)
@@ -152,10 +159,5 @@ Im Allgemeinen sollten Sie bei der Entwicklung Ihrer UWP-App den [**CoreDispatch
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

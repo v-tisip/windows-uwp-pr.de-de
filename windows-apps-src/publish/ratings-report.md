@@ -3,20 +3,27 @@ author: jnHs
 Description: "Dem Bericht „Bewertungen“ im Windows Dev Center-Dashboard können Sie entnehmen, wie Kunden Ihre App im Windows Store bewerten."
 title: "Bericht „Bewertungen“"
 ms.assetid: CAFEC20B-04FB-48C8-B663-1238C0B85ECD
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 7b73682ea36574f8b675193a174d6e4b4ef85841
-ms.openlocfilehash: 45d22b46a750655cc723658b476ba40d18b4f745
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 19364d7d3e8e29364f527c09f931ef637cbf03d9
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Bericht „Bewertungen“
+# <a name="ratings-report"></a>Bericht „Bewertungen“
 
 
 Dem Bericht **Bewertungen** im Windows Dev Center-Dashboard können Sie entnehmen, wie Kunden Ihre App im Windows Store bewerten. Sie können diese Informationen in Ihrem Dashboard anzeigen oder den [Bericht herunterladen](download-analytic-reports.md), um Ihre Daten offline anzuzeigen. Sie können diese Daten auch programmgesteuert mit der Methode [Abrufen von App-Bewertungen](../monetize/get-app-ratings.md) der [Windows Store-REST-API für Analysen](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
 
 Eine Bewertung wird in diesem Bericht anhand der Anzahl von Sternen (von 1 bis 5) ausgedrückt, die ein Kunde Ihrer App bei der Bewertung im Store gegeben hat. Der Bericht **Bewertungen** enthält keine individuellen Kommentare, die als Rezensionen abgegeben wurden. Diese sind im [Bericht „Rezensionen“](reviews-report.md) enthalten.
 
-## Anwenden von Filtern
+## <a name="apply-filters"></a>Anwenden von Filtern
 
 
 Im oberen Seitenbereich können Sie **Filter anwenden** erweitern, um alle Daten auf dieser Seite nach Datumsbereich und/oder Markt zu filtern.
@@ -27,17 +34,17 @@ Im oberen Seitenbereich können Sie **Filter anwenden** erweitern, um alle Daten
 
 Die Informationen in allen unten aufgeführten Diagrammen beziehen sich auf den im Bereich **Filter anwenden** ausgewählten Zeitraum und entsprechen den von Ihnen hier ausgewählten Filtern.
 
-## Durchschnittliche Bewertung
+## <a name="average-rating"></a>Durchschnittliche Bewertung
 
 
 Das Diagramm **Durchschnittliche Bewertung** gibt Aufschluss über die durchschnittliche Bewertung Ihrer App im ausgewählten Zeitraum.
 
-## Anzahl der Bewertungen
+## <a name="number-of-ratings"></a>Anzahl der Bewertungen
 
 
 Das Diagramm **Anzahl der Bewertungen** zeigt die Gesamtanzahl der App-Bewertungen im ausgewählten Zeitraum.
 
-## Neue und überarbeitete Bewertungen
+## <a name="new-and-revised-ratings"></a>Neue und überarbeitete Bewertungen
 
 
 Das Diagramm **Neue und überarbeitete Bewertungen** enthält die Anzahl der Bewertungen für jeden Bewertungstyp (neu oder überarbeitet) im ausgewählten Zeitraum.
@@ -47,7 +54,7 @@ Das Diagramm **Neue und überarbeitete Bewertungen** enthält die Anzahl der Bew
 
 >**Hinweis**  Eine Bewertung wird hier selbst dann als überarbeitet angezeigt, wenn der Kunde nur den Text oder Titel seiner Rezension geändert oder hinzugefügt hat, die tatsächliche Bewertung aber unverändert ist.
 
-## Durchschnittliche Bewertung im Laufe der Zeit
+## <a name="average-rating-over-time"></a>Durchschnittliche Bewertung im Laufe der Zeit
 
 
 Das Diagramm **Durchschnittliche Bewertung im Laufe der Zeit** zeigt, wie sich die durchschnittliche App-Bewertung im ausgewählten Zeitraum geändert hat.
@@ -56,7 +63,7 @@ Anstatt den Durchschnitt aller Bewertungen zu berechnen, die im ausgewählten Ze
 
 Wenn Sie die Informationen nach **Letzte 30 Tage** oder **Letzte 3 Monate** gefiltert haben, zeigt das Diagramm die durchschnittliche Bewertung nach Tagen an. Wenn Sie nach **Letzte 6 Monate** oder **Letzte 12 Monate** gefiltert haben, zeigt das Diagramm die durchschnittliche Bewertung nach Wochen an (dabei wird davon ausgegangen, dass eine neue Woche am Montag beginnt; die angezeigte durchschnittliche Bewertung bezieht sich auf die vorherige Woche).
 
-## Märkte
+## <a name="markets"></a>Märkte
 
 
 Das Diagramm **Märkte** zeigt die durchschnittliche Bewertung und die Anzahl der Bewertungen im ausgewählten Zeitraum nach Markt.
@@ -70,9 +77,4 @@ Standardmäßig wird der Markt mit den meisten Rezensionen zuerst angezeigt, gef
  
 
  
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

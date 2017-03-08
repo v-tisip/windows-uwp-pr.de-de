@@ -3,18 +3,25 @@ author: jnHs
 Description: "Bei der Übermittlung eines Add-Ons werden die im Schritt „Store-Einträge“ angegebenen Informationen den Kunden angezeigt."
 title: "Erstellen von Store-Einträgen für Add-Ons"
 ms.assetid: 07178278-A18A-4F73-A660-0047DAAE49B5
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: fc7b0d7dd85e661e1688f4df3f67280c16eb6742
-ms.openlocfilehash: 607dab75b8e446109cbb60c6c149732501f5b43c
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ecf24a0a51734d159a412824d6b43d76d92b3002
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Erstellen von Store-Einträgen für Add-Ons
+# <a name="create-add-on-store-listings"></a>Erstellen von Store-Einträgen für Add-Ons
 
 
 Bei der Übermittlung eines Add-Ons werden die im Schritt **Store-Einträge** angegebenen Informationen den Kunden angezeigt, wenn sie die Option zum Erwerben Ihres Add-Ons sehen. Verfassen Sie die Informationen zu den Store-Einträgen mit besonderer Sorgfalt, um den Kunden das Add-On in ansprechender Weise zu präsentieren. Sie können angepasste Store-Einträge für verschiedene Sprachen bereitstellen.
 
-## Sprachen
+## <a name="languages"></a>Sprachen
 
 
 Bevor Sie Informationen zu den Store-Einträgen eingeben können, müssen Sie mindestens eine [Sprache](supported-languages.md) angeben. Es wird empfohlen, für jede von der App unterstützte Sprache Store-Einträge anzugeben.
@@ -25,15 +32,15 @@ Klicken Sie im Abschnitt **Store-Eintrag** der Add-On-Übermittlung auf **Manage
 
 Klicken Sie zum Bearbeiten eines Store-Eintrags auf den Namen der Sprache in der Add-On-Übermittlungsübersicht. Die Informationen, die Sie für jede Sprache eingeben können, werden im Folgenden beschrieben.
 
-## Titel
+## <a name="title"></a>Titel
 
-Sie müssen hier einen Titel angeben, der Ihren Kunden für dieses Add-On als Name angezeigt wird. Der Titel kann bis zu 100Zeichen lang sein.
+Sie müssen hier einen Titel angeben, der Ihren Kunden für dieses Add-On als Name angezeigt wird. Der Titel kann bis zu 100 Zeichen lang sein.
 
-## Beschreibung
+## <a name="description"></a>Beschreibung
 
-Wenn Sie mehr Informationen als nur einen Titel anzeigen möchten, können Sie hier bis zu 200Zeichen eingeben. Dieses Feld ist optional.
+Wenn Sie mehr Informationen als nur einen Titel anzeigen möchten, können Sie hier bis zu 200 Zeichen eingeben. Dieses Feld ist optional.
 
-## Symbol
+## <a name="icon"></a>Symbol
 
 Sie können auch ein Bild bereitstellen, das dem Kunden angezeigt wird. Dabei muss es sich um eine PNG-Datei mit exakt 300 x 300 Pixeln handeln.
 
@@ -43,10 +50,5 @@ Sie können auch ein Bild bereitstellen, das dem Kunden angezeigt wird. Dabei mu
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO5-->
 
 

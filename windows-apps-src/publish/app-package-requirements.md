@@ -3,21 +3,28 @@ author: jnHs
 Description: "Halten Sie die folgenden Richtlinien ein, wenn Sie die App-Pakete für die Übermittlung an den Windows Store vorbereiten."
 title: App-Paketanforderungen
 ms.assetid: 651B82BA-9D0C-45AC-8997-88CD93DC903C
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: c15d4153f6ae83cc7bf1ae02d834bd07189e38ab
-ms.openlocfilehash: 250e94c2766227cabad791db6d994bcfb1a2ac33
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 59660de0adb6ff1247ea90f0ace3bcca35f19d1a
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# App-Paketanforderungen
+# <a name="app-package-requirements"></a>App-Paketanforderungen
 
 Halten Sie die folgenden Richtlinien ein, wenn Sie die App-Pakete für die Übermittlung an den Windows Store vorbereiten.
 
-## Vor dem Erstellen des App-Pakets für den Windows Store
+## <a name="before-you-build-your-apps-package-for-the-windows-store"></a>Vor dem Erstellen des App-Pakets für den Windows Store
 
 Denken Sie daran, [Ihre App mit dem Zertifizierungskit für Windows-Apps zu testen](https://msdn.microsoft.com/library/windows/apps/mt186449). Außerdem wird empfohlen, Ihre App mit verschiedenen Hardwaretypen zu testen. Beachten Sie, dass Ihre App nur auf Computern mit Entwicklerlizenzen installiert und ausgeführt werden kann, bis wir die App zertifiziert und im Windows Store verfügbar gemacht haben.
 
-## Erstellen des App-Pakets mit Microsoft Visual Studio
+## <a name="building-the-app-package-using-microsoft-visual-studio"></a>Erstellen des App-Pakets mit Microsoft Visual Studio
 
 Wenn Sie Microsoft Visual Studio als Entwicklungsumgebung verwenden, verfügen Sie bereits über integrierte Tools zum schnellen und einfachen Erstellen eines App-Pakets. Weitere Informationen finden Sie unter [Verpacken von Apps](https://msdn.microsoft.com/library/windows/apps/mt270969).
 
@@ -30,7 +37,7 @@ Beim Erstellen der App-Pakete kann Visual Studio eine APPX-Datei oder eine APPXU
 
 App-Pakete müssen nicht mit einem Stammzertifikat einer vertrauenswürdigen Zertifizierungsstelle signiert werden.
 
-### App-Bündel
+### <a name="app-bundles"></a>App-Bündel
 
 Für Apps, die für Windows 8.1, Windows Phone 8.1 und höhere Versionen entwickelt werden, kann Visual Studio ein App-Bündel (.appxbundle) erzeugen, um die Downloadgröße der App für den Benutzer zu reduzieren. Dieser Schritt ist in der Regel sinnvoll, wenn Sie sprachspezifische Ressourcen, mehrere Ressourcen für die Bildgröße oder Ressourcen für bestimmte Versionen von Microsoft DirectX definiert haben.
 
@@ -39,7 +46,7 @@ Für Apps, die für Windows 8.1, Windows Phone 8.1 und höhere Versionen entwick
 
 Bei einem App-Bündel lädt der Benutzer nicht alle vorhandenen Ressourcen, sondern nur relevante Dateien herunter. Weitere Informationen zu App-Bündeln finden Sie unter [Verpacken von Apps](https://msdn.microsoft.com/library/windows/apps/mt270969) und [Verpacken universeller Windows-Apps für Windows 10](http://go.microsoft.com/fwlink/p/?LinkId=620193 ).
 
-## Manuelles Erstellen des App-Pakets
+## <a name="building-the-app-package-manually"></a>Manuelles Erstellen des App-Pakets
 
 Wenn Sie Ihr Paket nicht mit Visual Studio erstellen, müssen Sie Ihr [Paketmanifest manuell erstellen](https://msdn.microsoft.com/library/windows/apps/br211476).
 
@@ -61,17 +68,17 @@ Wenn Ihre App mehrere Pakete enthält, müssen die folgenden App-Manifestelement
 -   [**Paket/Abhängigkeiten**](https://msdn.microsoft.com/library/windows/apps/br211428)
 -   [**Paket/Ressourcen**](https://msdn.microsoft.com/library/windows/apps/br211462)
 
-## Paketformatanforderungen
+## <a name="package-format-requirements"></a>Paketformatanforderungen
 
 Ihre App-Pakete müssen die folgenden Anforderungen erfüllen:
 
 | App-Paketeigenschaft | Anforderung                                                          |
 |----------------------|----------------------------------------------------------------------|
-| Paketgröße         | APPX-Bündel: maximal 25GB pro Bündel <br>APPX-Pakete für Windows 8.1: maximal 8 GB pro Paket <br> APPX-Pakete für Windows 8: maximal 2 GB pro Paket <br> APPX-Pakete für WindowsPhone 8.1: maximal 4GB pro Paket <br> XAP-Pakete: maximal 1 GB pro Paket                                                                           |
+| Paketgröße         | APPX-Bündel: maximal 25 GB pro Bündel <br>APPX-Pakete für Windows 10: maximal 25 GB pro Paket<br>APPX-Pakete für Windows 8.1: maximal 8 GB pro Paket <br> APPX-Pakete für Windows 8: maximal 2 GB pro Paket <br> APPX-Pakete für Windows Phone 8.1: maximal 4 GB pro Paket <br> XAP-Pakete: maximal 1 GB pro Paket                                                                           |
 | Hashes für Blockzuordnung     | SHA2-256-Algorithmus                                                   |
  
 
-## Datei „StoreManifest.xml“
+## <a name="storemanifest-xml-file"></a>Datei „StoreManifest.xml“
 
 „StoreManifest.xml“ ist eine optionale Konfigurationsdatei, die in App-Pakete aufgenommen werden kann. Sie dient zum Aktivieren von Features, die vom Paketmanifest nicht abgedeckt werden – beispielsweise Features zum Deklarieren Ihrer App als Windows Store-Geräte-App oder zum Deklarieren von Anforderungen, die für ein Paket erfüllt werden müssen, damit es auf ein Gerät angewendet werden kann. „StoreManifest.xml“ wird mit dem App-Paket eingereicht und muss sich im Stammordner des App-Hauptprojekts befinden. Weitere Informationen finden Sie unter [StoreManifest-Schema](https://msdn.microsoft.com/library/windows/apps/mt617325).
 
@@ -81,10 +88,5 @@ Ihre App-Pakete müssen die folgenden Anforderungen erfüllen:
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

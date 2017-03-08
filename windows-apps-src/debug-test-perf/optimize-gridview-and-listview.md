@@ -3,14 +3,21 @@ author: mcleblanc
 ms.assetid: 26DF15E8-2C05-4174-A714-7DF2E8273D32
 title: "Optimieren der ListView- und GridView-Benutzeroberfläche"
 description: Verbessern Sie die Leistung und Startzeit von ListView und GridView durch UI-Virtualisierung, Elementreduzierung und die progressive Aktualisierung von Elementen.
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 8dee2c7bf5ec44f913e34f1150223c1172ba6c02
-ms.openlocfilehash: dca6c9c2cde4240da4b2eff4f4786ec5b81051c6
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 96902d7532aed1510d959b45528cc71e0e6dca70
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="listview-and-gridview-ui-optimization"></a>Optimieren der ListView- und GridView-Benutzeroberfläche
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Hinweis**  
 Weitere Informationen finden Sie im Abschnitt zur „//build/“Sitzung [Erhebliches Erhöhen der Leistung bei der Interaktion von Benutzern mit großen Mengen von Daten in GridView und ListView](https://channel9.msdn.com/events/build/2013/3-158).
@@ -317,10 +324,5 @@ Wenn ein Element (**ListViewItem**/**GridViewItem**) wiederverwendet wird, muss 
 Bei einer ungleichmäßigen Verteilung von Elementen, die unterschiedliche Elementvorlagen verwenden, müssen während des Schwenkens wahrscheinlich neue Elementvorlagen erstellt werden, was viele der Vorteile der Virtualisierung zunichtemacht. Zudem berücksichtigt ein Elementvorlagenselektor nur fünf mögliche Kandidaten beim Auswerten, ob ein bestimmter Container für das aktuelle Datenelement wiederverwendet werden kann. Daher sollten Sie sorgfältig überlegen, ob Ihre Daten für die Verwendung eines Elementvorlagenselektors geeignet sind, bevor Sie ihn in Ihrer App verwenden. Wenn Ihre Sammlung überwiegend homogen ist, gibt der Selektor in den meisten Fällen (möglicherweise immer) denselben Typ zurück. Seien Sie sich jedoch bewusst, welche Folgen diese seltenen Homogenitätsausnahmen für Sie haben, und überlegen Sie, ob die Verwendung von [**ChoosingItemContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosingitemcontainer) (oder zwei Elementsteuerelementen) nicht vorzuziehen wäre.
 
  
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

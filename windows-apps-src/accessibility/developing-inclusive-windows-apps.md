@@ -5,13 +5,20 @@ ms.assetid: 9311D23A-B340-42F0-BEFE-9261442AF108
 title: Entwickeln von barrierefreien Windows 10-Apps
 label: Developing inclusive Windows 10 apps
 template: detail.hbs
+ms.author: mhopkins
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 91f6a9d50b66064da7023599adbb058656fb1007
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 47c28e0629150ccbdf532afc645fe973c3dc8804
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="developing-inclusive-windows-apps"></a>Entwickeln von barrierefreien Windows-Apps  
+# <a name="developing-inclusive-windows-apps"></a>Entwickeln von inklusiven Windows-Apps  
 
 In diesem Artikel wird beschrieben, wie barrierefreie UWP-Apps (Universelle Windows-Plattform) entwickelt werden können. Insbesondere wird vorausgesetzt, dass Sie wissen, wie Sie die logische Hierarchie für Ihre App entwerfen können. Hier erfahren Sie, wie Sie barrierefreie UWP-Apps für Windows 10 entwickeln, die Tastaturnavigation, Farb- und Kontrasteinstellungen und Unterstützung für Hilfstechnologien enthalten.
 
@@ -37,7 +44,7 @@ Untersuchen Sie beim Entwerfen der Tastaturnavigation Ihre Benutzeroberfläche u
 * Wie sind die Steuerelemente angeordnet oder in der Benutzeroberfläche gruppiert?
 * Gibt es ein paar erhebliche Steuerelementgruppen?
     * Falls ja, enthalten diese Gruppen eine andere Ebene von Gruppen?
-*   Sollte die Navigation zwischen Peer-Steuerelementen durch die TAB-Taste oder über spezielle Navigation (z. B. Pfeiltasten) erfolgen, oder beides?
+*     Sollte die Navigation zwischen Peer-Steuerelementen durch die TAB-Taste oder über spezielle Navigation (z. B. Pfeiltasten) erfolgen, oder beides?
 
 Dem Benutzer soll dadurch ein Verständnis darüber vermittelt werden, wie die Benutzeroberfläche angeordnet ist und wie die behandelten Steuerelemente ermittelt werden. Wenn Sie erkennen, dass zu viele Tabstopps vorhanden sind, bevor der Benutzer die Navigationsschleife abgeschlossen hat, können Sie in Betracht ziehen, verwandte Steuerelemente gemeinsam zu gruppieren. Einige verknüpfte Steuerelemente, z. B. ein Hybrid-Steuerelement, müssen eventuell in diesem frühen Stadium behandelt werden. Nach begonnener Produktentwicklung ist es schwierig, die Tastaturnavigation zu überarbeiten. Planen Sie daher sorgfältig und frühzeitig!  
 
@@ -83,9 +90,4 @@ Weitere Details finden Sie im vollständigen Thema [Prüfliste für die Barriere
 * [Entwickeln von barrierefreier Software](https://www.microsoft.com/download/details.aspx?id=19262)
 * [Microsoft-Hub für die barrierefreie Entwicklung](https://msdn.microsoft.com/enable)
 * [Barrierefreiheit](accessibility.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

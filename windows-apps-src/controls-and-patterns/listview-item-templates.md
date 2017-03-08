@@ -1,19 +1,27 @@
 ---
 author: Jwmsft
-Description: "Verwenden Sie Vorlagen, um das Erscheinungsbild der Elemente in Listen- und Rasteransicht-Steuerelementen zu ändern."
+Description: "Verwenden Sie Vorlagen, um das Erscheinungsbild einzelner Steuerelemente in der Listen- und Rasteransicht zu ändern."
 title: "Vorlagen für Listenansichtselemente"
 label: List view item templates
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
+ms.assetid: d8eb818d-b62e-4314-a612-f29142dbd93f
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: e64264dfa52706dd912dadb27d5109b35b5ba6b3
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 91827b88d7b8ce2a216f8c10b56905b925b6c1ce
+ms.lasthandoff: 02/08/2017
 
 ---
 # <a name="item-containers-and-templates"></a>Elementcontainer und Vorlagen
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-Die **ListView**- und **GridView**-Steuerelemente verwalten, wie ihre Elemente angeordnet werden (horizontal, vertikal, an welcher Stelle der Umbruch in die nächste Zeile erfolgt, usw.), und wie die Benutzer mit den Elementen interagieren, nicht jedoch, wie die einzelnen Elemente auf dem Bildschirm angezeigt werden. Die Visualisierung der Elemente wird von Elementcontainern verwaltet. Wenn Sie einer Listenansicht Elemente hinzufügen, werden diese automatisch in einem Container platziert. Der Standardelementcontainer für ListView ist [**ListViewItem**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listviewitem.aspx); für GridView ist es [**GridViewItem**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridviewitem.aspx).
+Die **ListView**- und **GridView**-Steuerelemente verwalten, wie ihre Elemente angeordnet werden (horizontal, vertikal, Zeilenumbruch usw.), und wie die Benutzer mit den Elementen interagieren, nicht jedoch, wie die einzelnen Elemente auf dem Bildschirm angezeigt werden. Die Visualisierung der Elemente wird von Elementcontainern verwaltet. Wenn Sie einer Listenansicht Elemente hinzufügen, werden diese automatisch in einem Container platziert. Der Standardelementcontainer für ListView ist [**ListViewItem**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listviewitem.aspx); für GridView ist es [**GridViewItem**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridviewitem.aspx).
 
 <div class="important-apis" >
 <b>Wichtige APIs</b><br/>
@@ -466,10 +474,5 @@ Eine Kopie der erweiterten Vorlage von generic.xaml wird in Ihrer App erstellt, 
 
 - [Listen](lists.md)
 - [ListView und GridView](listview-and-gridview.md)
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

@@ -2,16 +2,24 @@
 author: payzer
 title: "Device Portal - Referenz zur API für Xbox-Entwicklereinstellungen"
 description: Erfahren Sie, wie Sie auf Xbox-Entwicklereinstellungen zugreifen.
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
+ms.assetid: 6ab12b99-2944-49c9-92d9-f995efc4f6ce
 translationtype: Human Translation
-ms.sourcegitcommit: c51eff41e63d815f6298b4fc46a9b11314bc8bc9
-ms.openlocfilehash: 5a983714cda9b5a5f45e555e2cb6f980f082a003
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: a17a489944fdc2d78831549c1afdc2bd87deabdf
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Referenz zur API für Entwicklereinstellungen   
+# <a name="developer-settings-api-reference"></a>Referenz zur API für Entwicklereinstellungen   
 Mit dieser API können Sie auf Xbox One-Einstellungen zugreifen, die für die Entwicklung nützlich sind.
 
-## Gleichzeitiges Abrufen aller Entwicklereinstellungen
+## <a name="get-all-developer-settings-at-once"></a>Gleichzeitiges Abrufen aller Entwicklereinstellungen
 
 **Anforderung**
 
@@ -51,7 +59,7 @@ HTTP-Statuscode      | Beschreibung
 4XX | Fehlercodes
 5XX | Fehlercodes
 
-## Abrufen einzelner Einstellungen
+## <a name="get-settings-one-at-a-time"></a>Abrufen einzelner Einstellungen
 Einstellungen können auch einzeln abgerufen werden.
 
 **Anforderung**
@@ -92,7 +100,7 @@ HTTP-Statuscode      | Beschreibung
 4XX | Fehlercodes
 5XX | Fehlercodes
 
-## Festlegen des Werts einer Einstellung
+## <a name="set-the-value-of-a-setting"></a>Festlegen des Werts einer Einstellung
 Sie können den Wert einer Einstellung festlegen.
 
 **Anforderung**
@@ -133,10 +141,5 @@ HTTP-Statuscode      | Beschreibung
 **Verfügbare Gerätefamilien**
 
 * Windows Xbox
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

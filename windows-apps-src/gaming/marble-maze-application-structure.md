@@ -3,13 +3,20 @@ author: mtoepke
 title: Marble Maze-Anwendungsstruktur
 description: "Die Struktur einer DirectX-UWP-App unterscheidet sich von der einer herkömmlichen Desktopanwendung."
 ms.assetid: 6080f0d3-478a-8bbe-d064-73fd3d432074
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, Uwp, Spiele, Beispiel, Directx, Struktur"
 translationtype: Human Translation
-ms.sourcegitcommit: 931d790ea54ff9ff27202f6c92d415b17e2215ed
-ms.openlocfilehash: 696d4227bcd3ff4238d81e6f951a61e098fbc2f6
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1045bed8d7e4e8f9ead1c144dda02f900d0eb996
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="marble-maze-application-structure"></a>Marble Maze-Anwendungsstruktur
+# <a name="marble-maze-application-structure"></a>Anwendungsstruktur von Marble Maze
 
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -374,10 +381,5 @@ Informationen zu einigen der wichtigsten Vorgehensweisen, die Sie beim Verwenden
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

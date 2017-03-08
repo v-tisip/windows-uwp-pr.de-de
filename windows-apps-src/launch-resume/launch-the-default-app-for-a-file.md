@@ -1,18 +1,25 @@
 ---
 author: TylerMSFT
 title: "Starten der Standard-App für eine Datei"
-description: "Hier erfahren Sie, wie Sie die Standard-App für eine Datei starten."
+description: "Erfahren Sie, wie Sie die Standard-App für eine Datei starten."
 ms.assetid: BB45FCAF-DF93-4C99-A8B5-59B799C7BD98
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: c87f66a39e6ae7733ecc75006510b6aede699d4f
-ms.openlocfilehash: 20cbd0ef20cc81c81f686100579059321e3c56fa
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1ab65f210c5fd01460cbe9f63f8b94f6935a630e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Starten der Standard-App für eine Datei
+# <a name="launch-the-default-app-for-a-file"></a>Starten der Standard-App für eine Datei
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **Wichtige APIs**
@@ -21,7 +28,7 @@ ms.openlocfilehash: 20cbd0ef20cc81c81f686100579059321e3c56fa
 
 Hier erfahren Sie, wie Sie die Standard-App für eine Datei starten. Viele Apps müssen mit Dateien arbeiten, die sie nicht selbst behandeln können. E-Mail-Apps erhalten beispielsweise eine Vielzahl von Dateitypen und müssen über eine Möglichkeit verfügen, diese Dateien mit ihren Standardhandlern zu starten. In den folgenden Schritten erfahren Sie, wie Sie den Standardhandler für eine Datei, die Ihre App nicht selbst behandeln kann, mithilfe der [**Windows.System.Launcher**](https://msdn.microsoft.com/library/windows/apps/br241801)-API starten.
 
-## Abrufen des Dateiobjekts
+## <a name="get-the-file-object"></a>Abrufen des Dateiobjekts
 
 
 Rufen Sie zunächst ein [**Windows.Storage.StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)-Objekt für die Datei ab.
@@ -30,7 +37,7 @@ Wenn die Datei im Paket für die App enthalten ist, können Sie die [**Package.I
 
 Falls sich die Datei in einem bekannten Ordner befindet, können Sie die Eigenschaften der [**Windows.Storage.KnownFolders**](https://msdn.microsoft.com/library/windows/apps/br227151)-Klasse verwenden, um ein [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)-Objekt abzurufen, und die [**GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272)-Methode, um das [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)-Objekt abzurufen.
 
-## Starten der Datei
+## <a name="launch-the-file"></a>Starten der Datei
 
 
 Windows stellt mehrere verschiedene Optionen zum Starten des Standardhandlers für eine Datei bereit. Diese Optionen werden in diesem Diagramm und den anschließenden Abschnitten ausführlich beschrieben.
@@ -42,7 +49,7 @@ Windows stellt mehrere verschiedene Optionen zum Starten des Standardhandlers f�
 | Start mit einem empfohlenen App-Fallback | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) | Starten Sie die angegebene Datei mit dem Standardhandler. Wenn kein Handler im System installiert ist, empfehlen Sie dem Benutzer eine App im Store. |
 | Starten mit einer gewünschten verbleibenden Ansicht | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) (nur Windows) | Starten Sie die angegebene Datei mit dem Standardhandler. Geben Sie an, wie lange die App nach dem Start auf dem Bildschirm verbleiben soll. Fordern Sie zudem eine bestimmte Fenstergröße an. [**LauncherOptions.DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) wird für die Mobilgerätefamilie nicht unterstützt.   |
  
-### Standardstart
+### <a name="default-launch"></a>Standardstart
 
 Rufen Sie die [**Windows.System.Launcher.LaunchFileAsync(IStorageFile)**](https://msdn.microsoft.com/library/windows/apps/hh701471)-Methode auf, um die Standard-App zu starten. In diesem Beispiel wird die [**Windows.Storage.StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272)-Methode verwendet, um eine im App-Paket enthaltene Bilddatei zu starten.
 
@@ -128,7 +135,7 @@ Rufen Sie die [**Windows.System.Launcher.LaunchFileAsync(IStorageFile)**](https:
 > }
 > ```
 
-### Starten über „Öffnen mit“
+### <a name="open-with-launch"></a>Starten über „Öffnen mit“
 
 Rufen Sie die [**Windows.System.Launcher.LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465)-Methode mit dem [**LauncherOptions.DisplayApplicationPicker**](https://msdn.microsoft.com/library/windows/apps/hh701438)-Wert **true** auf, um die App zu starten, die der Benutzer im Dialogfeld **Öffnen mit** auswählt.
 
@@ -342,11 +349,11 @@ Es kann jedoch sein, dass der Benutzer nicht über die erforderliche App zum Bea
 > }
 > ```
 
-### Starten mit einer gewünschten verbleibenden Ansicht (nur Windows)
+### <a name="launch-with-a-desired-remaining-view-windows-only"></a>Starten mit einer gewünschten verbleibenden Ansicht (nur Windows)
 
 Quell-Apps, die [**LaunchFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh701461) aufrufen, können anfordern, nach dem Start einer Datei auf dem Bildschirm zu verbleiben. Standardmäßig wird von Windows versucht, den gesamten verfügbaren Speicher gleichmäßig zwischen der Quell- und der Ziel-App aufzuteilen, die die Datei verarbeitet. Quell-Apps können die Eigenschaft [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) verwenden. Hiermit geben sie dem Betriebssystem an, mehr oder weniger des verfügbaren Speicherplatzes für ihr App-Fenster zu verwenden. **DesiredRemainingView** kann auch verwendet werden, um anzugeben, dass die Quell-App nach dem Start der Datei nicht auf dem Bildschirm verbleiben muss und vollständig durch die Ziel-App ersetzt werden kann. Mit dieser Eigenschaft wird nur die bevorzugte Fenstergröße der aufrufenden App angegeben. Es wird nicht das Verhalten anderer Apps angegeben, die ggf. zur gleichen Zeit auf dem Bildschirm angezeigt werden.
 
-> **Hinweis**  Windows bestimmt die endgültige Fenstergröße einer Quell-App anhand zahlreicher Faktoren (z.B. Einstellung der Quell-App, Anzahl der Apps auf dem Bildschirm, Bildschirmausrichtung). Das Festlegen von [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) garantiert kein bestimmtes Fensterverhalten für die Quell-App.
+> **Hinweis**  Windows bestimmt die endgültige Fenstergröße einer Quell-App anhand zahlreicher Faktoren (z. B. Einstellung der Quell-App, Anzahl der Apps auf dem Bildschirm, Bildschirmausrichtung). Das Festlegen von [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) garantiert kein bestimmtes Fensterverhalten für die Quell-App.
 
 **Mobilgerätfamilie:**[**LauncherOptions.DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) wird für die Mobilgerätefamilie nicht unterstützt.
 
@@ -418,20 +425,20 @@ Quell-Apps, die [**LaunchFileAsync**](https://msdn.microsoft.com/library/windows
 > }
 > ```
 
-## Hinweise
+## <a name="remarks"></a>Hinweise
 
 Die gestartete App kann nicht von Ihrer App ausgewählt werden. Der Benutzer entscheidet, welche App gestartet wird. Der Benutzer kann eine App für die UWP (Universelle Windows-Plattform) oder eine Windows-Desktop-App auswählen.
 
-Beim Starten einer Datei muss Ihre App im Vordergrund ausgeführt werden, d.h. sie muss für den Benutzer sichtbar sein. Durch diese Anforderung wird sichergestellt, dass der Benutzer zu jedem Zeitpunkt die Kontrolle behält. Verknüpfen Sie alle Dateistartvorgänge direkt mit der Benutzeroberfläche Ihrer App, um sicherzustellen, dass diese Anforderung erfüllt wird. Benutzer müssen wahrscheinlich immer eine Aktion ausführen, bevor eine Datei gestartet werden kann.
+Beim Starten einer Datei muss Ihre App im Vordergrund ausgeführt werden, d. h. sie muss für den Benutzer sichtbar sein. Durch diese Anforderung wird sichergestellt, dass der Benutzer zu jedem Zeitpunkt die Kontrolle behält. Verknüpfen Sie alle Dateistartvorgänge direkt mit der Benutzeroberfläche Ihrer App, um sicherzustellen, dass diese Anforderung erfüllt wird. Benutzer müssen wahrscheinlich immer eine Aktion ausführen, bevor eine Datei gestartet werden kann.
 
-Dateitypen mit Code oder Skripts, die automatisch vom Betriebssystem ausgeführt werden (z.B. EXE-, MSI- oder JS-Dateien), können nicht gestartet werden. Diese Einschränkung schützt Benutzer vor der Ausführung von schädlichen Dateien, durch die das Betriebssystem verändert werden könnte. Mit dieser Methode können Sie Dateitypen mit Skripts starten, wenn das Skript dabei von der ausgeführten App isoliert wird, z.B. DOCX-Dateien. Apps wie Microsoft Word verhindern, dass das Betriebssystem durch DOCX-Dateien modifiziert wird.
+Dateitypen mit Code oder Skripts, die automatisch vom Betriebssystem ausgeführt werden (z. B. EXE-, MSI- oder JS-Dateien), können nicht gestartet werden. Diese Einschränkung schützt Benutzer vor der Ausführung von schädlichen Dateien, durch die das Betriebssystem verändert werden könnte. Mit dieser Methode können Sie Dateitypen mit Skripts starten, wenn das Skript dabei von der ausgeführten App isoliert wird, z. B. DOCX-Dateien. Apps wie Microsoft Word verhindern, dass das Betriebssystem durch DOCX-Dateien modifiziert wird.
 
-Wenn Sie versuchen, einen eingeschränkten Dateityp zu starten, schlägt der Start fehl, und Ihr Fehlerrückruf wird aufgerufen. Wenn Ihre App viele verschiedene Dateitypen behandelt und Sie erwarten, dass dieser Fehler auftritt, sollten Sie Benutzern eine Fallbackoption zur Verfügung stellen. Bieten Sie Benutzern z.B. die Möglichkeit, die Datei auf dem Desktop zu speichern und zu öffnen.
+Wenn Sie versuchen, einen eingeschränkten Dateityp zu starten, schlägt der Start fehl, und Ihr Fehlerrückruf wird aufgerufen. Wenn Ihre App viele verschiedene Dateitypen behandelt und Sie erwarten, dass dieser Fehler auftritt, sollten Sie Benutzern eine Fallbackoption zur Verfügung stellen. Bieten Sie Benutzern z. B. die Möglichkeit, die Datei auf dem Desktop zu speichern und zu öffnen.
 
-> **Hinweis**: Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die Universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows8.x oder Windows Phone8.x entwickeln, hilft Ihnen die [archivierte Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132) weiter.
+> **Hinweis**: Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die Universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, hilft Ihnen die [archivierte Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132) weiter.
 
  
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 
 **Aufgaben**
@@ -451,9 +458,4 @@ Wenn Sie versuchen, einen eingeschränkten Dateityp zu starten, schlägt der Sta
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

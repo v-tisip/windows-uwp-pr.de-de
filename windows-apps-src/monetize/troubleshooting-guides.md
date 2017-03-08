@@ -1,21 +1,27 @@
 ---
 author: mcleanbyron
 ms.assetid: 05b10814-4548-4dd4-bf71-72157a50986c
-description: "Informieren Sie sich über Lösungen für gängige Entwicklungsprobleme in den Microsoft Advertising-Bibliotheken."
-title: "Handbücher zur Problembehandlung"
+description: "Erfahren Sie mehr über Lösungen für häufige Entwicklungsprobleme in den Microsoft Advertising-Bibliotheken."
+title: Anleitungen zur Problembehandlung
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Anzeigen, Werbung, Problembehandlung"
 translationtype: Human Translation
-ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
-ms.openlocfilehash: 4a8b43ac0b6752b78e998ac16776b84e9ddda09f
-
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f81fba28ccbaa504d5c5674d3d04b2ab5b05f8f0
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Handbücher zur Problembehandlung
+# <a name="troubleshooting-guides"></a>Anleitungen zur Problembehandlung
 
 
 
 
-In diesem Abschnitt werden Lösungen für gängige Entwicklungsprobleme in den Microsoft Advertising-Bibliotheken beschrieben.
+In diesem Abschnitt werden Lösungen für häufige Entwicklungsprobleme in den Microsoft Advertising-Bibliotheken beschrieben.
 
 | Thema                                                                                                       | Beschreibung                 |
 |-------------------------------------------------------------------------------------------------------------|-----------------------------|
@@ -26,9 +32,4 @@ In diesem Abschnitt werden Lösungen für gängige Entwicklungsprobleme in den M
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

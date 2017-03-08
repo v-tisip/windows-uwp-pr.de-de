@@ -1,15 +1,22 @@
 ---
-author: jnHs
-Description: Allgemeine Fragen zu Anzeigenkampagnen
-title: Allgemeine Fragen zu Anzeigenkampagnen
+author: shawjohn
+Description: "Häufige Fragen zu Anzeigenkampagnen"
+title: "Häufige Fragen zu Anzeigenkampagnen"
 ms.assetid: EAF7CC74-7DE4-4D11-B9A6-29C6EA6E734B
+ms.author: johnshaw
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 584407ea0e0fee4ec74dac0b656db59b7f694391
-ms.openlocfilehash: ac18d3b036c1ec9290212097a0f9a0feb962d915
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 20a05337052392446d733af7da180f9466fef05f
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="common-questions-about-ad-campaigns"></a>Allgemeine Fragen zu Anzeigenkampagnen
+# <a name="common-questions-about-ad-campaigns"></a>Häufige Fragen zu Anzeigenkampagnen
 
 ## <a name="how-much-does-it-cost-to-run-an-ad-for-my-app"></a>Wie viel kostet eine Anzeige für meine App?
 
@@ -33,7 +40,7 @@ Wenn Sie eine der Standardanzeigenvorlagen verwenden, können Sie die Größe, d
 
 ## <a name="where-will-my-ad-appear"></a>Wo erscheint meine Anzeige?
 
-Ihre Anzeige erscheint in Apps, die der Altersfreigabe und der Betriebssystemversion Ihrer App entsprechen. Sie legen diese Eigenschaften fest, wenn Sie Ihre App im Windows Store veröffentlichen.
+Ihre Anzeige erscheint in Apps, die der Altersfreigabe und der Betriebssystemversion Ihrer App entsprechen. Sie legen diese Eigenschaften fest, wenn Sie Ihre App im Windows Store veröffentlichen. Für „universelle” Kampagnen werden Ihre Anzeigen auch in MSN.com, Outlook.com, Skype und anderen Microsoft-Premium-Eigenschaften angezeigt.
 
 Anzeigenkampagnen werden derzeit in folgenden Ländern und Regionen unterstützt:
 
@@ -64,9 +71,4 @@ Wechseln Sie zu <http://commerce.microsoft.com>, melden Sie sich mit den Anmelde
 * [Über Eigenwerbung](about-house-ads.md)
 * [Informationen zu Community-Anzeigen](about-community-ads.md)
 * [Bericht „Anzeigen für die App-Installation“](app-install-ads-reports.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

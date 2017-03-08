@@ -2,17 +2,24 @@
 author: msatranjr
 ms.assetid: 404783BA-8859-4BFB-86E3-3DD2042E66F5
 title: Bluetooth
-description: "Dieser Abschnitt enthält Artikel zur Bluetooth-Integration in UWP-Apps (Universelle Windows-Plattform). Dies umfasst u.a. die Verwendung von RFCOMM-, GATT- und LE (Low Energy)-Ankündigungen."
+description: "Dieser Abschnitt enthält Artikel zur Bluetooth-Integration in UWP-Apps (Universelle Windows-Plattform). Dies umfasst u. a. die Verwendung von RFCOMM-, GATT- und LE (Low Energy)-Ankündigungen."
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: e4c95448262c6c62956fcb50581c98d8c34d6dc0
-ms.openlocfilehash: cd6b62350cc38f82c458f7649d12685895b5b9a3
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: a0ecd1e2802edef68053b291040d8a3d682eabfb
+ms.lasthandoff: 02/07/2017
 
 ---
-# Bluetooth
+# <a name="bluetooth"></a>Bluetooth
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Dieser Abschnitt enthält Artikel zur Bluetooth-Integration in UWP-Apps (Universelle Windows-Plattform). Dies umfasst u.a. die Verwendung von RFCOMM-, GATT- und LE (Low Energy)-Ankündigungen.
+Dieser Abschnitt enthält Artikel zur Bluetooth-Integration in UWP-Apps (Universelle Windows-Plattform). Dies umfasst u. a. die Verwendung von RFCOMM-, GATT- und LE (Low Energy)-Ankündigungen.
 
 |Thema|Beschreibung|
 |--------|------------------|
@@ -20,9 +27,4 @@ Dieser Abschnitt enthält Artikel zur Bluetooth-Integration in UWP-Apps (Univers
 | [GATT](gatt-scenarios.md) | Dieser Artikel enthält eine Übersicht über die Bluetooth GATT-APIs (Generic Attribute Profile) im [**Windows.Devices.Bluetooth.GenericAttributeProfile**](https://msdn.microsoft.com/library/windows/apps/Dn297685)-Namespace zusammen mit Beispielcode zu drei häufigen GATT-Szenarien: Abrufen von Bluetooth-Daten, Steuern eines Bluetooth LE-Thermometers und Steuern der Darstellung von Bluetooth LE-Gerätedaten. |
 | [LE-Ankündigungen (Low Energy)](ble-beacon.md) | In diesem Artikel wird das Senden und Empfangen von Bluetooth Low Energy-Ankündigungen mithilfe der APIs im [**Windows.Devices.Bluetooth.Advertisement**](https://msdn.microsoft.com/library/windows/apps/Dn894325)-Namespace veranschaulicht.  | 
 | [Bluetooth-Entwickler – Häufig gestellte Fragen](bluetooth-dev-faq.md) | Dieser Artikel enthält Antworten auf häufig gestellte Fragen von Bluetooth-Entwicklern. 
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

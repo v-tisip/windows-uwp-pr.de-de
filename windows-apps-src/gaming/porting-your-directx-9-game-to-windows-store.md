@@ -1,29 +1,36 @@
 ---
 author: mtoepke
-title: Portieren von DirectX9 zur Universellen Windows-Plattform (UWP)
+title: "Portieren von DirectX 9 zur Universellen Windows-Plattform (UWP)"
 description: "Dieser Abschnitt enthält Artikel, Übersichten und exemplarische Vorgehensweisen zum Portieren von DirectX 9-Spielen zur Universellen Windows-Plattform (UWP)."
 ms.assetid: 536c0b99-cdf3-1527-1ee2-4187f50a2cf0
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Spiele, Directx 9, Directx 11, Portieren"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 3988d0cbfb3b7e585622af45c0d7ff3589ee020d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 9ea27288fd239b2af4b63985a3c8e0ad4055b0b9
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Portieren von DirectX 9 zur Universellen Windows-Plattform (UWP)
+# <a name="port-from-directx-9-to-universal-windows-platform-uwp"></a>Portieren von DirectX 9 zur Universellen Windows-Plattform (UWP)
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Dieser Abschnitt enthält Artikel, Übersichten und exemplarische Vorgehensweisen zum Portieren von DirectX 9-Spielen zur Universellen Windows-Plattform (UWP).
 
-##  Portieren von DirectX 9-Spielen zu UWP
+##  <a name="port-your-directx-9-game-to-uwp"></a>Portieren von DirectX 9-Spielen zu UWP
 
 
 -   Erreichen der UWP-Zielgruppe, um mit dem Spiel Geld zu verdienen
--   Erreichen einer großen Zahl von Geräten, auf denen jeweils mindestens die Direct3D9.1-Grafikfeatures unterstützt werden
--   Erlernen wertvoller neuer Fähigkeiten zur Entwicklung von Windows-Spielen, z.B. Direct3D11, vereinheitlichte Shadermodelle, Windows-APIs, XAudio2, Toucheingabe, C++/CX usw.
+-   Erreichen einer großen Zahl von Geräten, auf denen jeweils mindestens die Direct3D 9.1-Grafikfeatures unterstützt werden
+-   Erlernen wertvoller neuer Fähigkeiten zur Entwicklung von Windows-Spielen, z. B. Direct3D 11, vereinheitlichte Shadermodelle, Windows-APIs, XAudio2, Toucheingabe, C++/CX usw.
 
-## Wo soll ich beginnen?
+## <a name="where-do-i-start"></a>Wo soll ich beginnen?
 
 
 -   Unter [Wechseln von DirectX 9 zu DirectX 11 und zu UWP](porting-considerations.md) wird beschrieben, was Sie beim Planen Ihres Projekts zum Portieren von Spielen beachten sollten. Außerdem erfahren Sie mehr zu den Direct3D 11-Konzepten und dazu, wie die vertrauten Features für DirectX 11-UWP-Apps gelten.
@@ -36,10 +43,5 @@ Dieser Abschnitt enthält Artikel, Übersichten und exemplarische Vorgehensweise
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

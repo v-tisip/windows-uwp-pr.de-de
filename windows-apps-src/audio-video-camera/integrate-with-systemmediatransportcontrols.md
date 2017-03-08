@@ -1,37 +1,44 @@
 ---
 author: drewbatgit
-ms.assetid: 
+ms.assetid: eb690f2b-3bf8-4a65-99a4-2a3a8c7760b7
 description: "In diesem Artikel wird erläutert, wie Sie mit den Steuerelementen für den Systemmedientransport arbeiten."
 title: "Integration in die Steuerelemente für den Systemmedientransport"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 34cb2fec3071add8617fe2bee2eaf50356611ac6
-ms.openlocfilehash: 702d5911f6e76d6c047fcc97c1117456ae04c3e5
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 166e63659d138db2c4a6c49f11a2277eae790529
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Integration in die Steuerelemente für den Systemmedientransport
+# <a name="integrate-with-the-system-media-transport-controls"></a>Integration in die Steuerelemente für den Systemmedientransport
 
 In diesem Artikel wird erläutert, wie Sie mit den Steuerelementen für den Systemmedientransport (System Media Transport Controls, SMTC) arbeiten. SMTC ist eine Reihe von Steuerelementen, die auf allen Windows 10-Geräten verfügbar ist. Sie bieten den Benutzern eine einheitliche Methode zum Steuern der Wiedergabe von Medien für alle ausgeführten Apps, die Sound über [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) ausgeben.
 
 Ein vollständiges Beispiel, das die Integration in SMTC veranschaulicht, finden Sie in dem [Beispiel für die Steuerelemente für den Systemmedientransport auf GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls).
                     
-##Automatische Integration in SMTC
+##<a name="automatic-integration-with-smtc"></a>Automatische Integration in SMTC
 Ab Windows 10, Version 1607, sind UWP-Apps, die die [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer)-Klasse für die Medienwiedergabe verwenden, automatisch in SMTC integriert. Erstellen Sie einfach eine neue Instanz von **MediaPlayer** , und weisen Sie der [**Source**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.Source)-Eigenschaft ein [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource)-, [ **MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem)- oder [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackList)-Objekt zu. Dem Benutzer wird der Name Ihrer App in SMTC angezeigt, und er kann mit den Steuerelementen für den Systemmedientransport durch seine Wiedergabelisten navigieren und Titel wiedergeben und anhalten. 
 
 Ihre App kann mehrere **MediaPlayer** Objekte auf einmal erstellen und verwenden. Für jede aktive **MediaPlayer**-Instanz in Ihrer App wird in SMTC eine separaten Registerkarte erstellt, sodass der Benutzer zwischen dem aktiven MediaPlayer und den Instanzen in anderen ausgeführten Apps wechseln kann. Die Steuerelemente bedienen den jeweils ausgewählten MediaPlayer.
 
-Weitere Informationen zur Verwendung von **MediaPlayer** in Ihrer App, u.a. zum Einbinden an ein [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement)-Objekt in der XAML-Seite finden Sie unter [Audio-und Videowiedergabe mit MediaPlayer](play-audio-and-video-with-mediaplayer.md). 
+Weitere Informationen zur Verwendung von **MediaPlayer** in Ihrer App, u. a. zum Einbinden an ein [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement)-Objekt in der XAML-Seite finden Sie unter [Audio-und Videowiedergabe mit MediaPlayer](play-audio-and-video-with-mediaplayer.md). 
 
 Weitere Informationen zum Arbeiten mit **MediaSource**-, **MediaPlaybackItem**- und **MediaPlaybackList**-Objekten finden Sie unter [Medienelemente, Wiedergabelisten und Titel](media-playback-with-mediasource.md).
 
-##Hinzufügen von Metadaten, die von SMTC angezeigt werden sollen
+##<a name="add-metadata-to-be-displayed-by-the-smtc"></a>Hinzufügen von Metadaten, die von SMTC angezeigt werden sollen
 Wenn Sie Metadaten, die für die Medienobjekte in SMTC angezeigt werden, hinzufügen oder ändern möchten z. B. dass ein Video oder Songtitel angezeigt wird, müssen Sie die Anzeigeeigenschaften für das **MediaPlaybackItem**, das Ihr Medienelement darstellt, aktualisieren. Rufen Sie zunächst einen Verweis auf das [**MediaItemDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties)-Objekt ab, indem Sie [**GetDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem.GetDisplayProperties) aufrufen. Legen Sie dann den Medientyp für das Objekt mit der [**Type**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.Type)-Eigenschaft als Musik oder Video fest. Anschließend können Sie Werte in die Felder für die [**MusicProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.MusicProperties)- bzw. [**VideoProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.VideoProperties)-Eigenschaften einfügen, je nachdem, welchen Medientyp Sie angegeben haben. Zum Schluss aktualisieren Sie die Metadaten für das Medienobjekt, indem Sie [**ApplyDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/mt489923) aufrufen.
 
 [!code-cs[SetVideoProperties](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetSetVideoProperties)]
 
 [!code-cs[SetMusicProperties](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetSetMusicProperties)]
 
-##Verwenden Sie CommandManager, um die Standard-SMTC-Befehle zu ändern oder zu überschreiben.
+##<a name="use-commandmanager-to-modify-or-override-the-default-smtc-commands"></a>Verwenden Sie CommandManager, um die Standard-SMTC-Befehle zu ändern oder zu überschreiben.
 Ihre App kann das Verhalten der SMTC-Steuerelemente in der [**MediaPlaybackCommandManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager)-Klasse ändern oder vollständig überschreiben. Sie können für jede Instanz der **MediaPlayer**-Klasse eine Befehlsmanagerinstanz abrufen, indem Sie auf die [**CommandManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.CommandManager)-Eigenschaft zugreifen.
 
 Für jeden Befehl, beispielsweise den Befehl *Next*, der standardmäßig zum nächsten Element in einer **MediaPlaybackList**-Liste springt, veröffentlicht der Befehlsmanager empfangene Ereignisse (z. B. [**NextReceived**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager.NextReceived)) und ein Objekt, das Verhalten des Befehls verwaltet (z. B. [**NextBehavior**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager.NextBehavior)). 
@@ -65,13 +72,13 @@ Als Nächstes wird die [**Handled**](https://msdn.microsoft.com/library/windows/
 Schließlich wird für das Deferral-Objekt die Funktion [**Complete**](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.Deferral.Complete) aufgerufen, um dem System mitzuteilen, dass die Verarbeitung des Befehls abgeschlossen wurde.
 
 [!code-cs[PreviousReceived](./code/SMTC_RS1/cs/MainPage.xaml.cs#SnippetPreviousReceived)]
-                
-##Manuelle Steuerung von SMTC
+                 
+##<a name="manual-control-of-the-smtc"></a>Manuelle Steuerung von SMTC
 Wie weiter oben in diesem Artikel bereits erwähnt, erkennt der SMTC automatisch die Informationen für jede einzelne Instanz von **MediaPlayer**, die Ihre App erstellt, und zeigt diese an. Wenn Sie mehrere Instanzen von **MediaPlayer** verwenden möchten, SMTC jedoch noch einen einzelnen Eintrag für Ihre App bereitstellt, müssen Sie das Verhalten von SMTC manuell steuern anstatt sich auf die automatische Integration zu verlassen. Auch wenn Sie [**MediaTimelineController**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.MediaTimelineController) verwenden, um mindestens ein MediaPlayer zu steuern, müssen Sie die SMTC-Integration manuell durchführen. Dies gilt außerdem, wenn Ihre App ein anderes API als **MediaPlayer** verwendet, um Medien wiederzugeben, z. B. die [**AudioGraph**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioGraph)-Klasse. Auch in diesem Fall müssen Sie die SMTC-Integration manuell durchführen, damit der Benutzer Ihre App mit den Steuerelementen für den Systemmedientransport bedienen kann. Informationen zur manuellen Bedienung der Steuerelemente für den Systemmedientransport finden Sie unter [Manuelle Steuerung der Steuerelemente für den Systemmedientransport](system-media-transport-controls.md).
 
 
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 * [Medienwiedergabe](media-playback.md)
 * [Wiedergeben von Audio- und Videoinhalten mit „MediaPlayer“](play-audio-and-video-with-mediaplayer.md)
 * [Manuelle Steuerung der Steuerelemente für den Systemmedientransport](system-media-transport-controls.md)
@@ -82,10 +89,5 @@ Wie weiter oben in diesem Artikel bereits erwähnt, erkennt der SMTC automatisch
 
 
 
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

@@ -1,16 +1,23 @@
 ---
 author: GrantMeStrength
 ms.assetid: CFB3601D-3459-465F-80E2-520F57B88F62
-title: Create a "Hello, world" app (JS)
-description: "In diesem Lernprogramm erfahren Sie, wie Sie JavaScript und HTML zum Erstellen einer einfachen &\\#0034;Hello, World&\\#0034;-App für die universelle Windows-Plattform (UWP) unter Windows 10 verwenden."
+title: Erstellen der App Hello, world (JS)
+description: "In diesem Lernprogramm erfahren Sie, wie Sie JavaScript und HTML zum Erstellen einer einfachen &\\#0034;Hello, World&\\#0034;-App für die Universelle Windows-Plattform (UWP) unter Windows 10 verwenden."
+ms.author: jken
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 1a4aea3d31bad97fa0933e1274c037a4bb8d81bb
-ms.openlocfilehash: ad34b1bc62abf6c93f5124e774ad374f5b767f2c
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 915f77e308d6384aa539f78cc307842dd51cd9f4
+ms.lasthandoff: 02/07/2017
 
 ---
-# <a name="create-a-hello-world-app-js"></a>Erstellen der App „Hello, world“ (JS)
+# <a name="create-a-hello-world-app-js"></a>Erstellen der App Hello, world (JS)
 
-In diesem Lernprogramm erfahren Sie, wie Sie JavaScript und HTML zum Erstellen einer einfachen „Hello, World“-App für die universelle Windows-Plattform (UWP) unter Windows 10 verwenden. Mit nur einem Projekt in Microsoft Visual Studio können Sie eine App erstellen, die auf allen Geräten mit Windows 10 ausgeführt werden kann.
+In diesem Lernprogramm erfahren Sie, wie Sie JavaScript und HTML zum Erstellen einer einfachen „Hello, World“-App für die Universelle Windows-Plattform (UWP) unter Windows 10 verwenden. Mit nur einem Projekt in Microsoft Visual Studio können Sie eine App erstellen, die auf allen Geräten mit Windows 10 ausgeführt werden kann.
 
 Hier erfahren Sie Folgendes:
 
@@ -493,10 +500,5 @@ Durch Einfügen Ihres Codes in eine completed-Funktion und deren Übergabe an di
 
 Herzlichen Glückwunsch, Sie haben Ihre erste App für Windows 10 und die UWP mit JavaScript und HTML erstellt!
 
-Nächste Schritte Die [WinJS](https://developer.microsoft.com/en-us/windows/develop/winjs)-Dokumente unterstützen Sie bei den ersten Schritten mit der Windows-Bibliothek für JavaScript.
-
-
-
-<!--HONumber=Dec16_HO1-->
-
+Nächste Schritte Die [WinJS](https://developer.microsoft.com/windows/develop/winjs) Dokumente erhalten Sie den Einstieg in die Windows-Bibliothek für JavaScript werden, oder einfach [nächsten Schritte](learn-more.md).
 

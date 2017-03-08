@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: 2fba38c4-11be-4058-bfa3-5f979390791c
 description: Hier erfahren Sie, wie Sie mit den Ereignissen der AdControl-Klasse umgehen.
 title: AdControl-Ereignisse in C#
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Anzeigen, Werbung, AdControl, Ereignisse"
 translationtype: Human Translation
-ms.sourcegitcommit: f88a71491e185aec84a86248c44e1200a65ff179
-ms.openlocfilehash: e25e0f915c0b9b6ec2423d2a95386b45b4502253
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: cf285ebb4207b9a9a215bfb4a739b0bc6a2d934b
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -30,9 +37,4 @@ Weitere Informationen zum Behandeln von Ereignissen in C# finden Sie unter [Übe
  
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

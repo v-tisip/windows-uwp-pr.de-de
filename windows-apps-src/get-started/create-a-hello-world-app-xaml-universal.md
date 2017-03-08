@@ -3,15 +3,22 @@ author: GrantMeStrength
 ms.assetid: 03A74239-D4B6-4E41-B2FA-6C04F225B844
 title: "Erstellen der App „Hello, world“ (XAML)"
 description: "In diesem Lernprogramm erfahren Sie, wie Sie XAML (Extensible Application Markup Language) mit C# zum Erstellen einer einfachen „Hello, World“-App verwenden, die auf die universelle Windows Plattform (UWP) unter Windows 10 abzielt."
+ms.author: jken
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 7e76c9abd4157c22b38d79b178f5f07827d336ca
-ms.openlocfilehash: e928b4bb116ad98ffe7c225ac1ef2306e56a13ea
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 16622dbd9914907f75c8392f8e4de6e1c10b049c
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="create-a-hello-world-app-xaml"></a>Erstellen der App „Hello, world“ (XAML)
 
-In diesem Lernprogramm erfahren Sie, wie Sie XAML und C# zum Erstellen einer einfachen „Hello, World“-App für die universelle Windows-Plattform (UWP) unter Windows 10 verwenden. Mit nur einem Projekt in Microsoft Visual Studio können Sie eine App erstellen, die auf allen Geräten mit Windows 10 ausgeführt werden kann.
+In diesem Lernprogramm erfahren Sie, wie Sie XAML und C# zum Erstellen einer einfachen „Hello, World“-App für die Universelle Windows-Plattform (UWP) unter Windows 10 verwenden. Mit nur einem Projekt in Microsoft Visual Studio können Sie eine App erstellen, die auf allen Geräten mit Windows 10 ausgeführt werden kann.
 
 Hier erfahren Sie Folgendes:
 
@@ -23,8 +30,7 @@ Hier erfahren Sie Folgendes:
 ## <a name="before-you-start"></a>Vorbereitung
 
 -   [Was ist eine universelle Windows-App](whats-a-uwp.md)?
--   [Neuigkeiten in Windows 10](https://dev.windows.com/whats-new-windows-10-dev-preview)
--   Zum Durcharbeiten dieses Lernprogramms benötigen Sie Windows 10 und Visual Studio 2015. [Vorbereiten](get-set-up.md).
+-   Zum Durcharbeiten dieses Lernprogramms benötigen Sie Windows 10 und Visual Studio 2015. [Vorbereiten](get-set-up.md).
 -   Außerdem wird davon ausgegangen, dass Sie das Standardfensterlayout in Visual Studio verwenden. Wenn Sie das Standardlayout ändern, können Sie es im Menü **Fenster** mit dem Befehl **Fensterlayout zurücksetzen** wiederherstellen.
 
 
@@ -255,10 +261,5 @@ Wenn Sie die App ausführen und auf die Schaltfläche klicken, sagt Ihr Computer
 
 Herzlichen Glückwunsch, Sie haben Ihre erste App für Windows 10 und die UWP erstellt!
 
-Informationen dazu, wie Sie XAML für die Gestaltung der Steuerelemente in Ihrer App verwenden, finden Sie im [Rasterlernprogramm](../layout/grid-tutorial.md). Sie können auch direkt mit dem [nächsten Schritt](learn-more.md) fortfahren.
-
-
-
-<!--HONumber=Dec16_HO1-->
-
+Informationen dazu, wie Sie XAML für die Gestaltung der Steuerelemente in Ihrer App verwenden, finden Sie im [Rasterlernprogramm](../layout/grid-tutorial.md). Sie können auch direkt mit dem [nächste Schritte](learn-more.md) fortfahren.
 

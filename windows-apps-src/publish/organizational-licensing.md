@@ -3,22 +3,29 @@ author: jnHs
 Description: "Sie können angeben, ob und wie Ihre App für Volume-Käufe über den Windows Store für Unternehmen angeboten wird, indem Sie die Einstellungen auf der Seite für Verfügbarkeit und Preise einer App-Übermittlung im Abschnitt Unternehmenslizenzierung festlegen."
 title: "Lizenzierungsoptionen für Unternehmen"
 ms.assetid: 1EB139B0-67E7-4F66-AAEF-491B1E52E96F
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 4a297b7a2a2383a825a848ed6939f9743733253f
-ms.openlocfilehash: f3c1ee23e53e3c31a577eb3be03e3fc3055f1ec2
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 0fb906dc84085d3006be7f5f25d895e1150f9265
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Lizenzierungsoptionen für Unternehmen
+# <a name="organizational-licensing-options"></a>Lizenzierungsoptionen für Unternehmen
 
 
 Sie können angeben, ob und wie Ihre App für Volume-Käufe über den Windows Store für Unternehmen angeboten wird, indem Sie die Einstellungen auf der Seite [Verfügbarkeit und Preise](set-app-pricing-and-availability.md#organizational-licensing) einer App-Übermittlung im Abschnitt **Unternehmenslizenzierung** festlegen.
 
-Über diese Einstellung können Sie Ihre App wahlweise für Organisationen verfügbar zu machen, die mehrere Lizenzen für ihre Benutzer erwerben und bereitstellen. Ihnen wird so die Möglichkeit gegeben, Ihre Reichweite auf Windows10-Geschäftskunden für verschiedene Gerätetypen einschließlich PCs, Tablets und Smartphones zu erweitern. Sie müssen zudem Organisationslizenzierung für [Branchen-Apps](distribute-lob-apps-to-enterprises.md) zulassen, die Sie direkt für Unternehmen veröffentlichen.
+Über diese Einstellung können Sie Ihre App wahlweise für Organisationen verfügbar zu machen, die mehrere Lizenzen für ihre Benutzer erwerben und bereitstellen. Ihnen wird so die Möglichkeit gegeben, Ihre Reichweite auf Windows 10-Geschäftskunden für verschiedene Gerätetypen einschließlich PCs, Tablets und Smartphones zu erweitern. Sie müssen zudem Organisationslizenzierung für [Branchen-Apps](distribute-lob-apps-to-enterprises.md) zulassen, die Sie direkt für Unternehmen veröffentlichen.
 
 > **Hinweis**  Die Auswahlmöglichkeiten für Ihre Apps werden unabhängig voneinander konfiguriert. Sie können Ihre Einstellungen für eine App jederzeit ändern, indem Sie eine neue Übermittlung erstellen, und die Änderungen werden wirksam, nachdem die Übermittlung den [Zertifizierungsprozess](the-app-certification-process.md) abgeschlossen hat.
 
-## Anbieten Ihrer App an Organisationen
+## <a name="allowing-your-app-to-be-offered-to-organizations"></a>Anbieten Ihrer App an Organisationen
 
 Standardmäßig ist das Kontrollkästchen **Meine App für Organisationen mit Store-verwalteter (online) Volumenlizenzierung und Verteilung verfügbar machen** aktiviert. Das bedeutet, Sie möchten Ihre App für die Aufnahme in App-Katalogen verfügbar machen, die Organisationen für den Erwerb von Volumenlizenzen zur Verfügung gestellt werden. Die Lizenzen sollen dabei über das Onlinelizenzierungssystem des Store verwaltet werden.
 
@@ -28,7 +35,7 @@ Wenn Sie Ihre App Organisationen nicht für den Erwerb von Volumenlizenzen anbie
 
 > **Tipp**  Wenn Sie Branchen-Apps exklusiv für ein konkretes Unternehmen veröffentlichen möchten, können Sie eine Unternehmenszuordnung einrichten und dem Unternehmen das direkte Hinzufügen der Apps zum privaten Store gestatten. Weitere Informationen finden Sie unter [Verteilen von Branchen-Apps an Unternehmen](distribute-lob-apps-to-enterprises.md).
 
-## Zulassen der getrennten (Offline-) Lizenzierung
+## <a name="allowing-disconnected-offline-licensing"></a>Zulassen der getrennten (Offline-) Lizenzierung
 
 
 Viele Unternehmen benötigen Apps, die offline lizenziert werden können. Einige Unternehmen müssen beispielsweise Apps auf Geräten bereitstellen, die nur selten oder nie mit dem Internet verbunden sind. Wenn Sie Ihre App für diese Kunden verfügbar machen möchten, aktivieren Sie das Kontrollkästchen **Organisationsverwaltete (offline) Lizenzierung und Verteilung von Organisationen zulassen**.
@@ -40,7 +47,7 @@ Viele Unternehmen benötigen Apps, die offline lizenziert werden können. Einige
 > **Wichtig** Die Offlinelizenzierung wird für XAP-Pakete nicht unterstützt.  
 
  
-## Unterstützung für kostenpflichtige Apps
+## <a name="paid-app-support"></a>Unterstützung für kostenpflichtige Apps
 
 Zurzeit können Entwicklerkonten in bestimmten Märkten Volumenkäufe kostenpflichtiger Apps im Windows Store für Unternehmen anbieten. 
 
@@ -85,9 +92,4 @@ Zu diesem Zeitpunkt können Entwickler in den folgenden Ländern und Regionen ü
 - Schweiz
 - Vereinigtes Königreich
 - USA
-
-
-
-<!--HONumber=Sep16_HO3-->
-
 

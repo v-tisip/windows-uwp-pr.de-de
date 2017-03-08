@@ -3,14 +3,21 @@ author: mcleblanc
 ms.assetid: 0C69521B-47E0-421F-857B-851B0E9605F2
 title: Binden von hierarchischen Daten und Erstellen einer Master/Details-Ansicht
 description: "Sie können eine Master/Detailansicht mit mehreren Ebenen (auch bekannt als Listendetailansicht) hierarchischer Daten erstellen, indem Sie Elementsteuerelemente an CollectionViewSource-Instanzen binden, die in einer Kette verbunden sind."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: afb508fcbc2d4ab75188a2d4f705ea0bee385ed6
-ms.openlocfilehash: 91786a785eece1448a36ebf48b8c8ef5c131e609
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 107d4a9778b377370632b6e8d37ad3216858d251
+ms.lasthandoff: 02/07/2017
 
 ---
-# Binden von hierarchischen Daten und Erstellen einer Master/Details-Ansicht
+# <a name="bind-hierarchical-data-and-create-a-masterdetails-view"></a>Binden von hierarchischen Daten und Erstellen einer Master/Details-Ansicht
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 > **Hinweis**  Weitere Informationen finden Sie im [Master/Detail-Beispiel](http://go.microsoft.com/fwlink/p/?linkid=619991).
@@ -23,15 +30,15 @@ Wir erstellen eine Ansicht einer Sportmannschaftshierarchie, die in Listen für 
 
 ![Master/Details-Ansicht einer Sporthierarchie](images/xaml-masterdetails.png)
 
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 In diesem Thema wird vorausgesetzt, dass Sie eine UWP-App erstellen können. Anweisungen zum Erstellen Ihrer ersten UWP-App finden Sie unter [Erstellen Ihrer ersten UWP-App mit C# oder Visual Basic](https://msdn.microsoft.com/library/windows/apps/Hh974581).
 
-## Erstellen des Projekts
+## <a name="create-the-project"></a>Erstellen des Projekts
 
 Erstellen Sie ein neues Projekt vom Typ **Leere Anwendung (Windows Universal)**. Weisen Sie ihm den Namen „MasterDetailsBinding“ zu.
 
-## Erstellen des Datenmodells
+## <a name="create-the-data-model"></a>Erstellen des Datenmodells
 
 Fügen Sie Ihrem Projekt eine neue Klasse hinzu, nennen Sie sie „ViewModel.cs“, und fügen Sie ihr diesen Code hinzu. Dies ist die Bindungsquellklasse.
 
@@ -104,7 +111,7 @@ namespace MasterDetailsBinding
 }
 ```
 
-## Erstellen der Ansicht
+## <a name="create-the-view"></a>Erstellen der Ansicht
 
 Machen Sie als Nächstes die Bindungsquellklasse aus der Klasse verfügbar, die die Markupseite darstellt. Zu diesem Zweck fügen Sie eine Eigenschaft vom Typ **LeagueList** zu **MainPage** hinzu.
 
@@ -221,10 +228,5 @@ Beachten Sie, dass Sie durch die direkte Bindung an die [**CollectionViewSource*
  
 
  
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

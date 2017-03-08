@@ -2,9 +2,17 @@
 author: laurenhughes
 title: "Erstellen eines App-Pakets mit dem Tool „MakeAppx.exe“"
 description: "MakeAppx.exe erstellt, verschlüsselt, entschlüsselt und extrahiert Dateien aus App-Paketen und -Bündeln."
+ms.author: lahugh
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
+ms.assetid: 7c1c3355-8bf7-4c9f-b13b-2b9874b7c63c
 translationtype: Human Translation
-ms.sourcegitcommit: 28cd2b2a922a20e0b9ffc4d1ca65f6a55e92aa8f
-ms.openlocfilehash: c99c76fac9303e174b5d804c2f1b99856be25006
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 616340bcc5159dce12d3b888697ac4f60d30f175
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -269,8 +277,3 @@ Diese Überprüfung stellt Folgendes sicher:
 - Die Anwendung registriert sich nicht für ein untersagtes Protokoll aus der folgenden Liste: SMB, FILE, MS-WWA-WEB, MS-WWA. 
 
 Dies ist keine vollständige semantische Überprüfung, da sie lediglich häufige Fehler erfassen soll. Es wird nicht garantiert, dass von **MakeAppx.exe** erstellte Pakete installiert werden können.
-
-
-<!--HONumber=Dec16_HO1-->
-
-

@@ -1,22 +1,29 @@
 ---
 author: drewbatgit
 ms.assetid: C4DB495D-1F91-40EF-A55C-5CABBF3269A2
-description: "Mithilfe der APIs im Windows.Media.Editing-Namespace können Sie schnell Apps entwickeln, die Benutzern das Erstellen von Medienkompositionen aus Audio- und Videoquelldateien ermöglichen."
+description: "Mithilfe der API im Windows.Media.Editing-Namensraum können Sie schnell Apps entwickeln, die Benutzern das Erstellen von Medienkompositionen aus Audio- und Videoquelldateien ermöglichen."
 title: Medienkompositionen und -bearbeitung
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 018d7c85aae007a1fd887de0daf6625ccce37a64
-ms.openlocfilehash: a317c0e1714cc782c951733cf65a4c02c4a0ad9c
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d31cb88d1cea00bd291478b612b1759b1d6fd0b4
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Medienkompositionen und -bearbeitung
+# <a name="media-compositions-and-editing"></a>Medienkompositionen und -bearbeitung
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 In diesem Artikel wird beschrieben, wie Sie mithilfe der APIs im [**Windows.Media.Editing**](https://msdn.microsoft.com/library/windows/apps/dn640565)-Namespace schnell Apps entwickeln, die Benutzern das Erstellen von Medienkompositionen aus Audio- und Videoquelldateien ermöglichen. Zu den Features des Frameworks zählen die Möglichkeit, programmgesteuert mehrere Videoclips zusammen anzufügen, Video- und Bildüberlagerungen sowie Hintergrundaudio hinzuzufügen und Audio- und Videoeffekte anzuwenden. Nach der Erstellung können Medienkompositionen zur Wiedergabe oder Freigabe in eine Medienflatfile gerendert werden; alternativ können sie auch auf einen Datenträger serialisiert und von diesem deserialisiert werden, sodass die Benutzer Kompositionen laden und ändern können, die sie zuvor erstellt haben. Alle diese Funktionen werden in einer benutzerfreundlichen Windows-Runtime-Schnittstelle bereitgestellt, die den Umfang und die Komplexität des zum Ausführen dieser Aufgaben erforderlichen Codes im Vergleich zur [Microsoft Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197) -Low-Level-API erheblich verringert.
 
-## Erstellen einer neuen Medienkomposition
+## <a name="create-a-new-media-composition"></a>Erstellen einer neuen Medienkomposition
 
 Die [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646)-Klasse ist der Container für alle Medienclips, aus denen die Komposition besteht, und dient zum Rendern der endgültigen Komposition, zum Laden und Speichern von Kompositionen auf Datenträger und zum Bereitstellen eines Vorschaudatenstroms der Komposition zur Anzeige in der Benutzeroberfläche. Um **MediaComposition** in einer App zu verwenden, schließen Sie den [**Windows.Media.Editing**](https://msdn.microsoft.com/library/windows/apps/dn640565)-Namespace und den [**Windows.Media.Core**](https://msdn.microsoft.com/library/windows/apps/dn278962)-Namespace ein, der zugehörige benötigte APIs bereitstellt.
 
@@ -31,7 +38,7 @@ Der Konstruktor für **MediaComposition** akzeptiert keine Argumente.
 
 [!code-cs[MediaCompositionConstructor](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetMediaCompositionConstructor)]
 
-## Hinzufügen von Medienclips zu einer Komposition
+## <a name="add-media-clips-to-a-composition"></a>Hinzufügen von Medienclips zu einer Komposition
 
 Medienkompositionen enthalten in der Regel einen oder mehrere Videoclips. Sie können ein [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/hh738369)-Element verwenden, um Benutzern die Auswahl einer Videodatei zu ermöglichen. Nachdem die Datei ausgewählt wurde, erstellen Sie ein neues [**MediaClip**](https://msdn.microsoft.com/library/windows/apps/dn652596)-Objekt als Container für den Videoclip, indem Sie [**MediaClip.CreateFromFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn652607) aufrufen. Anschließend fügen Sie den Clip der [**Clips**](https://msdn.microsoft.com/library/windows/apps/dn652648)-Liste des **MediaComposition**-Objekts hinzu.
 
@@ -53,7 +60,7 @@ Medienkompositionen enthalten in der Regel einen oder mehrere Videoclips. Sie k�
 
 -   Um einen **MediaClip** aus einer [**IDirect3DSurface**](https://msdn.microsoft.com/library/windows/apps/dn965505) zu erstellen, rufen Sie [**CreateFromSurface**](https://msdn.microsoft.com/library/dn764774) auf, und geben Sie eine Oberfläche und eine Dauer für den Clip an.
 
-## Anzeigen einer Vorschau der Komposition in einem MediaElement
+## <a name="preview-the-composition-in-a-mediaelement"></a>Anzeigen einer Vorschau der Komposition in einem MediaElement
 
 Damit der Benutzer die Medienkomposition anzeigen kann, fügen Sie der XAML-Datei, die die Benutzeroberfläche definiert, ein [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement) hinzu.
 
@@ -77,7 +84,7 @@ Es wird empfohlen, das **MediaStreamSource**-Objekt und die [**Source**](https:/
 
 [!code-cs[OnNavigatedFrom](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetOnNavigatedFrom)]
 
-## Rendern der Komposition in eine Videodatei
+## <a name="render-the-composition-to-a-video-file"></a>Rendern der Komposition in eine Videodatei
 
 Um eine Medienkomposition in eine Videoflatfile zu rendern, sodass sie freigegeben und auf anderen Geräten angezeigt werden kann, müssen Sie APIs aus dem [**Windows.Media.Transcoding**](https://msdn.microsoft.com/library/windows/apps/br207105)-Namespace verwenden. Um die Benutzeroberfläche mit dem Fortschritt des asynchronen Vorgangs zu aktualisieren, benötigen Sie außerdem APIs aus dem [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383)-Namespace.
 
@@ -89,7 +96,7 @@ Nachdem Sie dem Benutzer die Auswahl einer Ausgabedatei mit einem [**FileSavePic
 
 -   [**MediaTrimmingPreference**](https://msdn.microsoft.com/library/windows/apps/dn640561) ermöglicht es Ihnen, der Geschwindigkeit des Transcodierungvorgangs Vorrang vor der Genauigkeit der Kürzung benachbarter Medienclips zu geben. **Fast** bewirkt eine schnellere Transcodierung mit weniger genauer Kürzung, **Precise** bewirkt eine langsamere Transcodierung mit genauerer Kürzung.
 
-## Kürzen eines Videoclips
+## <a name="trim-a-video-clip"></a>Kürzen eines Videoclips
 
 Um die Dauer eines Videoclips in einer Komposition zu kürzen, legen Sie die [**TrimTimeFromStart**](https://msdn.microsoft.com/library/windows/apps/dn652637)-Eigenschaft, die [**TrimTimeFromEnd**](https://msdn.microsoft.com/library/windows/apps/dn652634)-Eigenschaft (oder beide) des [**MediaClip**](https://msdn.microsoft.com/library/windows/apps/dn652596)-Objekts fest.
 
@@ -100,7 +107,7 @@ Um die Dauer eines Videoclips in einer Komposition zu kürzen, legen Sie die [**
 -   Die [**TrimmedDuration**](https://msdn.microsoft.com/library/windows/apps/dn652631)-Eigenschaft informiert Sie über die Dauer des Medienclips nach der Kürzung.
 -   Wenn Sie einen Kürzungswert angeben, der größer als die ursprüngliche Dauer des Clips ist, wird kein Fehler ausgelöst. Wenn jedoch eine Komposition nur einen einzigen Clip enthält und dieser durch Angabe eines hohen Kürzungswerts auf die Länge null gekürzt wird, wird bei einem nachfolgenden Aufruf von [**GeneratePreviewMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn652674) NULL zurückgegeben, so als enthielte die Komposition keine Clips.
 
-## Hinzufügen eines Hintergrundaudiotitels zu einer Komposition
+## <a name="add-a-background-audio-track-to-a-composition"></a>Hinzufügen eines Hintergrundaudiotitels zu einer Komposition
 
 Um einer Komposition einen Hintergrundtitel hinzuzufügen, laden Sie eine Audiodatei, und erstellen Sie dann durch Aufrufen der [**BackgroundAudioTrack.CreateFromFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn652561)-Factorymethode ein [**BackgroundAudioTrack**](https://msdn.microsoft.com/library/windows/apps/dn652544)-Objekt. Fügen Sie **BackgroundAudioTrack** anschließend zur [**BackgroundAudioTracks**](https://msdn.microsoft.com/library/windows/apps/dn652647)-Eigenschaft der Komposition hinzu.
 
@@ -116,7 +123,7 @@ Um einer Komposition einen Hintergrundtitel hinzuzufügen, laden Sie eine Audiod
 
 -   Standardmäßig beginnt die Wiedergabe von Hintergrundaudiotiteln am Anfang der Komposition. Wenn mehrere Hintergrundtitel vorhanden sind, wird die Wiedergabe aller Titel am Anfang der Komposition gestartet. Damit die Wiedergabe eines Hintergrundaudiotitels zu einem anderen Zeitpunkt beginnt, legen Sie die [**Delay**](https://msdn.microsoft.com/library/windows/apps/dn652563)-Eigenschaft auf die gewünschte Zeitverschiebung fest.
 
-## Hinzufügen einer Überlagerung zu einer Komposition
+## <a name="add-an-overlay-to-a-composition"></a>Hinzufügen einer Überlagerung zu einer Komposition
 
 Mithilfe von Überlagerungen können Sie mehrere Videoebenen in einer Komposition übereinander stapeln. Eine Komposition kann mehrere Überlagerungsebenen enthalten, die wiederum jeweils mehrere Überlagerungen enthalten können. Erstellen Sie ein [**MediaOverlay**](https://msdn.microsoft.com/library/windows/apps/dn764793)-Objekt, indem Sie einen **MediaClip** im Konstruktor übergeben. Legen Sie die Position und die Deckkraft der Überlagerung fest, erstellen Sie anschließend eine neue [**MediaOverlayLayer**](https://msdn.microsoft.com/library/windows/apps/dn764795), und fügen Sie das **MediaOverlay**-Objekt der [**Overlays**](https://msdn.microsoft.com/library/windows/desktop/dn280411)-Liste hinzu. Fügen Sie zum Schluss die **MediaOverlayLayer** zur [**OverlayLayers**](https://msdn.microsoft.com/library/windows/apps/dn764791)-Liste der Komposition hinzu.
 
@@ -126,19 +133,19 @@ Mithilfe von Überlagerungen können Sie mehrere Videoebenen in einer Kompositio
 
 -   Da Überlagerungen übereinander gestapelt statt nacheinander wiedergegeben werden, beginnt die Wiedergabe alle Überlagerungen standardmäßig am Anfang der Komposition. Damit die Wiedergabe einer Überlagerung zu einem anderen Zeitpunkt beginnt, legen Sie die [**Delay**](https://msdn.microsoft.com/library/windows/apps/dn764810)-Eigenschaft auf die gewünschte Zeitverschiebung fest.
 
-## Hinzufügen von Effekten zu einem Medienclip
+## <a name="add-effects-to-a-media-clip"></a>Hinzufügen von Effekten zu einem Medienclip
 
 Jeder **MediaClip** in einer Komposition enthält eine Liste von Audio- und Videoeffekten, der mehrere Effekte hinzugefügt werden können. Die Effekte müssen [**IAudioEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn608044) bzw. [**IVideoEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn608047) implementieren. Im folgenden Beispiel wird anhand der aktuellen **MediaPlayerElement**-Position der aktuell angezeigte **MediaClip** gewählt und dann eine neue Instanz der [**VideoStabilizationEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn926762) erstellt und an die [**VideoEffectDefinitions**](https://msdn.microsoft.com/library/windows/apps/dn652643)-Liste des Medienclips angefügt.
 
 [!code-cs[AddVideoEffect](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetAddVideoEffect)]
 
-## Speichern einer Komposition in einer Datei
+## <a name="save-a-composition-to-a-file"></a>Speichern einer Komposition in einer Datei
 
 Medienkompositionen können in eine Datei serialisiert werden, um sie zu einem späteren Zeitpunkt zu ändern. Wählen Sie eine Ausgabedatei aus, und rufen Sie dann die [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646)-Methode [**SaveAsync**](https://msdn.microsoft.com/library/windows/apps/dn640554) auf, um die Komposition zu speichern.
 
 [!code-cs[SaveComposition](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetSaveComposition)]
 
-## Laden einer Komposition aus einer Datei
+## <a name="load-a-composition-from-a-file"></a>Laden einer Komposition aus einer Datei
 
 Medienkompositionen können aus einer Datei deserialisiert werden, sodass der Benutzer die Komposition anzeigen und ändern kann. Wählen Sie eine Kompositionsdatei aus, und rufen Sie dann die [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646)-Methode [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/dn652684) auf, um die Komposition zu laden.
 
@@ -152,10 +159,5 @@ Medienkompositionen können aus einer Datei deserialisiert werden, sodass der Be
 
 
 
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

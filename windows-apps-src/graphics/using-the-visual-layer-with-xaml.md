@@ -1,17 +1,24 @@
 ---
 author: jaster
-ms.assetid: 
+ms.assetid: b7a4ac8a-d91e-461b-a060-cc6fcea8e778
 title: Benutzung des Visual Layer mit XAML
 description: "Lernen Sie Methoden für die Verwendung der Visual Layer APIs in Kombination mit existierendem XAML-Inhalten kennen, um Animationen und fortgeschrittene Effekte zu erzeugen."
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: dfda33c70224f32d9c3e8877eabdfcd965521757
-ms.openlocfilehash: 00d663b130202f4513cd1a9d82baed4068d909d3
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 5873af515ec1ae9f10c1b5d9e5fe9de5b8dd80a8
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Benutzung des Visual Layer mit XAML
+# <a name="using-the-visual-layer-with-xaml"></a>Benutzung des Visual Layer mit XAML
 
-## Einführung
+## <a name="introduction"></a>Einführung
 
 Die meisten Apps, die die Visual-Layer-Funktionen nutzen, verwenden XAML, um den Hauptinhalt der Benutzeroberfläche zu definieren. Im Rahmen des Windows 10 Anniversary Update sind neue Features im XAML-Framework und dem Visual Layer erschienen, die es einfacher machen, diese beiden Technologien zum Erstellen beeindruckender Erlebnisse für den Benutzer kombinieren.
 Funktionen von XAML und Visual Layer "Interop" kann zum Erstellen von erweiterten Animationen und Effekte nicht allein mithilfe von XAML-API verwendet werden. Dazu zählen:
@@ -24,16 +31,16 @@ Funktionen von XAML und Visual Layer "Interop" kann zum Erstellen von erweiterte
 Diese Effekte und Animationen können auf vorhandenen XAML-Inhalt angewendet werden, damit Sie Ihre XAML-App nicht erheblich umstrukturieren müssen, um neue Funktionen nutzen.
 Layoutanimationen, Schatten und Effekte für Unschärfe werden im folgenden Rezepteabschnitt behandelt. Ein Codebeispiel, das Parallax implementiert, finden Sie unter [ParallaxingListItems sample](https://github.com/Microsoft/WindowsUIDevLabs/tree/master/SampleGallery/Samples/SDK%2010586/ParallaxingListItems). Die [WindowsUIDevLabs Repository](https://github.com/Microsoft/WindowsUIDevLabs) verfügt außerdem über weitere Beispiele für die Implementierung von Animationen, Schatten und Effekte.
 
-## Die **ElementCompositionPreview** Klasse
+## <a name="the-elementcompositionpreview-class"></a>Die **ElementCompositionPreview** Klasse
 
 [**ElementCompositionPreview**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.hosting.elementcompositionpreview.aspx) ist eine statische Klasse, die Kompatibilität mit XAML- und Visual Layer-Funktionalitäten bietet. Eine Übersicht über die visuelle Ebene und die zugehörige Funktionalität finden Sie unter [Visual Layer](https://msdn.microsoft.com/en-us/windows/uwp/graphics/visual-layer). Die **ElementCompositionPreview** Klasse bietet die folgenden Methoden:
 
 -   [**GetElementVisual**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual.aspx): Erhalten Sie eine „Handout“-Grafik, die verwendet wurde, um dieses Element zu rendern
 -   [**SetElementChildVisual**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.hosting.elementcompositionpreview.setelementchildvisual.aspx): Legt ein "handin" Visual als untersten Ordner in der Struktur dieses Elements fest. Dieses Visual wird über den Rest des Elements gezeichnet. 
 -   [**GetElementChildVisual**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual.aspx): Rufen Sie das Visual Set ab, indem Sie **SetElementChildVisual** benutzen
--   [**GetScrollViewerManipulationPropertySet**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual.aspx): Erhalten Sie ein Objekt, das zur Erstellung von Animationen mit 60fps basierend auf der Scrollposition in einem **ScrollViewer** verwendet werden kann
+-   [**GetScrollViewerManipulationPropertySet**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual.aspx): Erhalten Sie ein Objekt, das zur Erstellung von Animationen mit 60 fps basierend auf der Scrollposition in einem **ScrollViewer** verwendet werden kann
 
-## Hinweise auf **ElementCompositionPreview.GetElementVisual**
+## <a name="remarks-on-elementcompositionpreviewgetelementvisual"></a>Hinweise auf **ElementCompositionPreview.GetElementVisual**
 
 **ElementCompositionPreview.GetElementVisual** gibt ein "handout" Visual aus, das benutzt wird, um das gegebene **UIElement** zu rendern. Eigenschaften wie z. B. **Visual.Opacity**, **Visual.Offset** und **Visual.Size** werden durch das XAML-Framework, das auf den Zustand des UIElements basiert, festgelegt. Dies kann Techniken wie implizite Repositionierungsanimationen (siehe *Rezepte*) aktivieren.
 
@@ -41,9 +48,9 @@ Hinweis: Weil der **Offset** und die **Größe** als Ergebnis des Layouts des XA
 
 Als weitere Sicherheit werden aktualisierte Eigenschaften des Handout Visuals nicht im entsprechenden UIElement widergespiegelt. Also wird beispielsweise das Einstellen der **UIElement.Opacity** auf 0,5 die Deckkraft des entsprechende Handout Visuals auf 0,5 festlegen. Das Festlegen der Deckkraft das Handout Visuals **Opacity** auf 0,5 bewirkt, dass der Inhalt mit 50 % Deckkraft angezeigt wird, aber es wird sich nicht auf die entsprechende UIElement Opacity-Eigenschaft auswirken.
 
-### Beispiel für **Offset** Animation
+### <a name="example-of-offset-animation"></a>Beispiel für **Offset** Animation
 
-#### Falsch
+#### <a name="incorrect"></a>Falsch
 
 ```xml
 <Border>
@@ -56,7 +63,7 @@ Als weitere Sicherheit werden aktualisierte Eigenschaften des Handout Visuals ni
 ElementCompositionPreview.GetElementVisual(MyImage).StartAnimation("Offset", parallaxAnimation);
 ```
 
-#### Richtig
+#### <a name="correct"></a>Richtig
 
 ```xml
 <Border>
@@ -71,33 +78,33 @@ ElementCompositionPreview.GetElementVisual(MyImage).StartAnimation("Offset", par
 ElementCompositionPreview.GetElementVisual(MyImage).StartAnimation("Offset", parallaxAnimation);
 ```
 
-## Die **ElementCompositionPreview.SetElementChildVisual** Methode
+## <a name="the-elementcompositionpreviewsetelementchildvisual-method"></a>Die **ElementCompositionPreview.SetElementChildVisual** Methode
 
 **ElementCompositionPreview.SetElementChildVisual** erlaubt es den Entwicklern, ein "Handin"-Visual zu einzubinden, welches als Teil des Visual Trees des Elements erscheinen wird. Dies ermöglicht Entwicklern das Erstellen einer "Kompositions-Insel", in denen Visual-basierter Inhalt innerhalb einer XAML-UI angezeigt werden kann. Entwickler sollten diese Technik jedoch vorsichtig einsetzen, da Visual-basierter Inhalt nicht dieselben Zugriffsmöglichkeiten und Garantien durch Benutzererfahrungen wie XAML-Inhalte haben. Daher ist es im Allgemeinen empfehlenswert, dieses Verfahren nur bei Bedarf zur Implementierung benutzerdefinierter Effekte genutzt wird, wie die nachfolgend im Rezeptabschnitt enthaltenen.
 
-## **GetAlphaMask** Methoden
+## <a name="getalphamask-methods"></a>**GetAlphaMask** Methoden
 
 [**Image**](https://msdn.microsoft.com/library/windows/apps/br242752), [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652), und [**Shape**](https://msdn.microsoft.com/library/windows/apps/br243377) implementieren jede eine Methode, die **GetAlphaMask** genannt wird, welche eine **CompositionBrush** ausgibt, die ein Graustufenbild in der Form des Elements darstellt. Dieser **CompositionBrush** kann als Eingabe für eine Komposition **DropShadow** dienen, also kann der Schatten die Form des Elements anstelle eines Rechtecks haben. Das ermöglicht auf Pixel abgestimmte, Konturbasierte Schatten für Text, Bilder mit Alpha und Formen. Sie können unter *Schlagschatten* im Folgenden ein Beispiel für diese API finden.
 
-## Rezepte
+## <a name="recipes"></a>Rezepte
 
-### Repositionierungsanimation
+### <a name="reposition-animation"></a>Repositionierungsanimation
 
 Indem er die Komposition impliziter Animationen nutzt, kann Entwickler automatisch Änderungen im Layout eines Elements relativ zum übergeordneten Element animieren. Wenn Sie z.B. den **Rand** von der Taste unten ändern, wird es automatisch an die neue Layoutposition animieren.
 
-#### Übersicht über die Implementierung
+#### <a name="implementation-overview"></a>Übersicht über die Implementierung
 
 1.            Rufen das Handout **Visual** für das Zielelement ab
 2.            Erstellen einer **ImplicitAnimationCollection** , die automatisch Änderungen der **Offset** Eigenschaft animiert
 3.            Ordnen Sie die **ImplicitAnimationCollection** dem zugrunde liegenden Visual zu.
 
-#### XAML
+#### <a name="xaml"></a>XAML
 
 ```xml
 <Button x:Name="RepositionTarget" Content="Click Me" />
 ```
 
-#### C&#35;
+#### <a name="c35"></a>C&#35;
 
 ```csharp
 public MainPage()
@@ -125,11 +132,11 @@ private void InitializeRepositionAnimation(UIElement repositionTarget)
 }
 ```
 
-### Schlagschatten
+### <a name="drop-shadow"></a>Schlagschatten
 
 Wenden Sie Pixelgenaue Schlagschatten auf ein **UIElement**, z. B. einer **Ellipse** an, die ein Bild enthält. Da der Schatten ein **SpriteVisual**, der durch die App erstellt wird, erfordert, müssen wir ein "Hostelement" erstellen, das die **SpriteVisual** enthält. Benutzt wird dazu **ElementCompositionPreview.SetElementChildVisual**.
 
-#### Übersicht über die Implementierung
+#### <a name="implementation-overview"></a>Übersicht über die Implementierung
 
 1.            Rufen Sie das Handout **Visual** für das Hostelement ab
 2.            Erstellen einer Windows.UI.Composition **DropShadow**
@@ -138,7 +145,7 @@ Wenden Sie Pixelgenaue Schlagschatten auf ein **UIElement**, z. B. einer **Ellip
 4.            Fügen Sie einen Schatten an einen neuen **SpriteVisual** an, und legen Sie das **SpriteVisual** als untergeordnetes Element des Hostelements fest
 5.            Legen Sie die Größe des **SpriteVisual** auf die Größe des Hosts fest, mit einer **ExpressionAnimation**
 
-#### XAML
+#### <a name="xaml"></a>XAML
 
 ```xml
 <Grid Width="200" Height="200">
@@ -151,7 +158,7 @@ Wenden Sie Pixelgenaue Schlagschatten auf ein **UIElement**, z. B. einer **Ellip
 </Grid>
 ```
 
-#### C&#35;
+#### <a name="c35"></a>C&#35;
 
 ```csharp
 public MainPage()
@@ -188,11 +195,11 @@ private void InitializeDropShadow(UIElement shadowHost, Shape shadowTarget)
 }
 ```
 
-### Milchglas
+### <a name="frosted-glass"></a>Milchglas
 
 Erstellen Sie einen Effekt, der den Inhalt verwischt und den Hintergrund färbt. Beachten Sie, dass Entwickler das Win2D NuGet-Paket installieren müssen, um Effekte verwenden. Sie finden unter der [Win2D Homepage](http://microsoft.github.io/Win2D/html/Introduction.htm) Installationsanweisungen.
 
-#### Übersicht über die Implementierung
+#### <a name="implementation-overview"></a>Übersicht über die Implementierung
 
 1.            Rufen Sie das Handout **Visual** für das Hostelement ab
 2.            Erstellen Sie einen Unschärfeeffektstruktur, indem Sie die Win2D und **CompositionEffectSourceParameter** nutzen
@@ -201,7 +208,7 @@ Erstellen Sie einen Effekt, der den Inhalt verwischt und den Hintergrund färbt.
 5.            Legen Sie die **CompositionEffectBrush** als Inhalt eines neuen **SpriteVisual** fest, und legen Sie das **SpriteVisual** als untergeordnetes Element des Hostelements fest.
 6.            Legen Sie die Größe des **SpriteVisual** auf die Größe des Hosts fest, mit einer **ExpressionAnimation**
 
-#### XAML
+#### <a name="xaml"></a>XAML
 
 ```xml
 <Grid Width="300" Height="300" Grid.Column="1">
@@ -217,7 +224,7 @@ Erstellen Sie einen Effekt, der den Inhalt verwischt und den Hintergrund färbt.
 </Grid>
 ```
 
-#### C&#35;
+#### <a name="c35"></a>C&#35;
 
 ```csharp
 public MainPage()
@@ -226,7 +233,7 @@ public MainPage()
     InitializeFrostedGlass(GlassHost);
 }
 
-private void InitializedFrostedGlass(UIElement glassHost)
+private void InitializeFrostedGlass(UIElement glassHost)
 {
     Visual hostVisual = ElementCompositionPreview.GetElementVisual(glassHost);
     Compositor compositor = hostVisual.Compositor;
@@ -271,16 +278,11 @@ private void InitializedFrostedGlass(UIElement glassHost)
 }
 ```
 
-## Weitere Ressourcen:
+## <a name="additional-resources"></a>Weitere Ressourcen:
 
 -   [Übersicht über die visuelle Ebene](https://msdn.microsoft.com/en-us/windows/uwp/graphics/visual-layer)
 -   [**ElementCompositionPreview** Klasse](https://msdn.microsoft.com/library/windows/apps/mt608976)
 -   Erweiterte UI und Kompositionsbeispiele in dem [WindowsUIDevLabs-GitHub](https://github.com/microsoft/windowsuidevlabs).
 -   [BasicXamlInterop-Beispiel](https://github.com/Microsoft/WindowsUIDevLabs/tree/master/SampleGallery/Samples/SDK%2010586/BasicXamlInterop)
 -   [ParallaxingListItems-Beispiel](https://github.com/Microsoft/WindowsUIDevLabs/tree/master/SampleGallery/Samples/SDK%2010586/ParallaxingListItems)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

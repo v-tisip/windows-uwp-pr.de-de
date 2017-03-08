@@ -1,11 +1,18 @@
 ---
 author: mcleanbyron
 ms.assetid: d074e9d5-b3e0-4f16-b1e4-02b32ac99b2c
-description: Erfahren Sie, wie Werten **AdControl **-Eigenschaften zugewiesen werden.
+description: Erfahren Sie, wie Werten **AdControl**-Eigenschaften zugewiesen werden.
 title: "Beispiel für AdControl-XAML-Eigenschaften"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, Uwp, Werbung, Advertising, AdControl, XAML, Eigenschaften"
 translationtype: Human Translation
-ms.sourcegitcommit: f88a71491e185aec84a86248c44e1200a65ff179
-ms.openlocfilehash: f33e4048a1a9aa68ecc627d81ca15858027720c1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: dbcc08b1373c7f73d5b9ebf541ec82bb01fd9df3
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -33,9 +40,4 @@ Die Werte dienen als Beispiele. In Ihrem Code legen Sie die Werte dieser Funktio
 * [Anzeigenbeispiele bei GitHub](http://aka.ms/githubads)
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

@@ -3,39 +3,46 @@ author: jwmsft
 title: xPhase-Attribut
 description: Verwenden Sie xPhase mit der xBind-Markuperweiterung zum inkrementellen Rendern von ListView- und GridView-Elementen und zur Verbesserung des Verschiebens.
 ms.assetid: BD17780E-6A34-4A38-8D11-9703107E247E
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: c6100f59bb91bc3c6451fc2167d914b0a4a36ded
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 873da2adeea277e0f8f869703aac782c21b0419e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# x:Phase-Attribut
+# <a name="xphase-attribute"></a>x:Phase-Attribut
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Verwenden Sie **x:Phase** mit der [{x:Bind}-Markuperweiterung](x-bind-markup-extension.md) zum inkrementellen Rendern von [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) und [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)-Elementen und zur Verbesserung des Verschiebungserlebnisses. **x:Phase** bietet eine deklarative Möglichkeit, die gleiche Wirkung zu erzielen wie bei Verwendung des [**ContainerContentChanging**](https://msdn.microsoft.com/library/windows/apps/dn298914)-Ereignisses zum manuellen Steuern des Renderns von Listenelementen. Weitere Informationen finden Sie auch unter [Inkrementelles Aktualisieren von ListView- und GridView-Elementen](../debug-test-perf/optimize-gridview-and-listview.md#update-items-incrementally).
 
-## XAML-Attributsyntax
+## <a name="xaml-attribute-usage"></a>XAML-Attributsyntax
 
 
 ``` syntax
 <object x:Phase="PhaseValue".../>
 ```
 
-## XAML-Werte
+## <a name="xaml-values"></a>XAML-Werte
 
 
 | Benennung | Beschreibung |
 |------|-------------|
 | PhaseValue | Eine Zahl, die die Phase gibt an, in der das Element verarbeitet wird. Der Standardwert ist 0. | 
 
-## Anmerkungen
+## <a name="remarks"></a>Anmerkungen
 
 Wenn eine Liste mit Toucheingabe oder mit dem Mausrad schnell verschoben wird, ist die Liste je nach Komplexität der Datenvorlage möglicherweise nicht in der Lage, Elemente schnell genug zu rendern, um mit der Geschwindigkeit des Bildlaufs Schritt zu halten. Das gilt besonders für ein tragbares Gerät mit einer energieeffizienten CPU, z. B. ein Telefon oder ein Tablet.
 
 Phasing ermöglicht das inkrementelle Rendern der Datenvorlage, sodass der Inhalt priorisiert werden kann und die wichtigsten Elemente zuerst gerendert werden. Dadurch kann die Liste beim schnellen Verschieben für jedes Element einige Inhalte anzeigen und mehr Elemente für jede Vorlage rendern, falls die Zeit dies zulässt.
 
-## Beispiel
+## <a name="example"></a>Beispiel
 
 ```xml
 <DataTemplate x:Key="PhasedFileTemplate" x:DataType="model:FileItem">
@@ -77,10 +84,5 @@ Phasennummern müssen nicht fortlaufend sein und sind mit den Wert der [**Contai
 Phasing wirkt sich nur auf [{x:Bind}](x-bind-markup-extension.md) -Bindungen aus, nicht auf [{Binding}](binding-markup-extension.md)-Bindungen.
 
 Phasing gilt nur, wenn die Elementvorlage mithilfe eines Steuerelements gerendert wird, das Phasing erkennt. Für Windows 10 bedeutet das [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) und [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705). Phasing gilt nicht für Datenvorlagen, die in anderen Elementsteuerelementen verwendet werden, oder für andere Szenarien, wie zum Beispiel die Abschnitte [**ContentTemplate**](https://msdn.microsoft.com/library/windows/apps/br209369) oder [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843) – in diesen Fällen werden alle UI-Elemente auf einmal an Daten gebunden.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

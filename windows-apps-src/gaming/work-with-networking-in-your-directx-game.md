@@ -1,22 +1,29 @@
 ---
 author: mtoepke
 title: "Netzwerkfunktionen für Spiele"
-description: Hier erfahren Sie, wie Sie Netzwerkfeatures entwickeln und in ein DirectX-Spiel integrieren.
+description: Erfahren Sie, wie Sie Netzwerkfeatures entwickeln und in ein DirectX-Spiel integrieren.
 ms.assetid: 212eee15-045c-8ba1-e274-4532b2120c55
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Spiele, Netzwerke, directx"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 2a9b42ab2cab6a1f4330759c0ff114e985eb3c20
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ce94dda0eaf156f1e09fefbd76f50bc764050970
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Netzwerkfunktionen für Spiele
+# <a name="networking-for-games"></a>Netzwerk für Spiele
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Hier erfahren Sie, wie Sie Netzwerkfeatures entwickeln und in ein DirectX-Spiel integrieren.
 
-## Konzepte auf einen Blick
+## <a name="concepts-at-a-glance"></a>Konzepte auf einen Blick
 
 
 Unabhängig davon, ob es sich um ein einfaches eigenständiges Spiel oder ein umfangreiches Multiplayer-Spiel handelt, können für DirectX-Spiele verschiedene Netzwerkfeatures verwendet werden. Das einfachste Netzwerkfeature dient zum Speichern von Benutzernamen und Spielständen auf einem zentralen Netzwerkserver.
@@ -35,7 +42,7 @@ Bei mobilen Geräten ist es wichtig, verfügbare Netzwerkressourcen zu überwach
 
 Die Netzwerkisolation ist Teil des von Windows verwendeten App-Sicherheitsmodells. Unter Windows werden Netzwerkgrenzen aktiv erkannt und Netzwerkzugriffsbeschränkungen für die Netzwerkisolation erzwungen. Apps müssen Netzwerkisolationsfunktionen deklarieren, um den Umfang des Netzwerkzugriffs festzulegen. Ohne Deklaration dieser Funktionen hat Ihre App keinen Zugriff auf Netzwerkressourcen. Unter [Konfigurieren von Netzwerkisolationsfunktionen](https://msdn.microsoft.com/library/windows/apps/hh770532) finden Sie weitere Informationen zur Erzwingung der Netzwerkisolation für Apps durch Windows.
 
-## Überlegungen bei der Entwicklung
+## <a name="design-considerations"></a>Überlegungen bei der Entwicklung
 
 
 In DirectX-Spielen können verschiedene Netzwerk-APIs verwendet werden. Daher ist es wichtig, die richtige API auszuwählen. Windows unterstützt verschiedene Netzwerk-APIs, die Ihre App für die Kommunikation mit anderen Computern und Geräten entweder über das Internet oder private Netzwerke nutzen kann. Sie müssen zunächst ermitteln, welche Netzwerkfeatures Ihre App erfordert.
@@ -47,7 +54,7 @@ Zu den beliebtesten Netzwerk-APIs für Spiele gehören:
 -   UDP und Sockets – bieten unzuverlässige Netzwerkübertragungen mit wenig Mehraufwand. UDP wird für Spielvorgänge verwendet, die niedrige Latenz erfordern und Paketverluste tolerieren können. Dies wird häufig für Kampfspiele, Schießen mit Leuchtspur, Netzwerkaudio und Sprachchat verwendet. Die [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319)-Klasse stellt einen UDP-Socket bereit, der in Windows Store-Spielen verwendet werden kann. Die **DatagramSocket**-Klasse wird zusammen mit verwandten Klassen im [**Windows::Networking::Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960)-Namespace verwendet.
 -   HTTP-Client – stellt eine zuverlässige Verbindung mit HTTP-Servern bereit. Das gängigste Netzwerkszenario ist der Zugriff auf eine Website, um Informationen abzurufen oder zu speichern. Ein einfaches Beispiel dafür ist ein Spiel, das eine Website zum Speichern von Benutzerinformationen und Spielständen verwendet. Wenn ein HTTP-Client zusammen mit SSL für die Sicherheit verwendet wird, kann er für Anmelde-, Kauf- und Handelsressourcen sowie die Erstellung und Verwaltung von Spielfiguren verwendet werden. Die [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639)-Klasse bietet eine moderne HTTP-Client-API zur Verwendung in Windows Store-Spielen. Die **HttpClient**-Klasse wird zusammen mit verwandten Klassen im [**Windows::Web::Http**](https://msdn.microsoft.com/library/windows/apps/dn279692)-Namespace verwendet.
 
-## Behandeln von Netzwerkausnahmen in einem DirectX-Spiel
+## <a name="handling-network-exceptions-in-your-directx-game"></a>Behandeln von Netzwerkausnahmen in einem DirectX-Spiel
 
 
 Wenn in Ihrem DirectX-Spiel eine Netzwerkausnahme auftritt, weist dies auf ein erhebliches Problem oder einen Fehler hin. Ausnahmen können bei der Nutzung von Netzwerk-APIs viele Gründe haben. Häufig ergeben sich Ausnahmen aus Änderungen bei der Netzwerkverbindung oder anderen Netzwerkproblemen mit dem Remotehost oder Server.
@@ -61,7 +68,7 @@ Bei der Verwendung von Netzwerk-APIs können beispielsweise aus folgenden Gründ
 -   Netzwerkserver- oder Remoteendpunktfehler
 -   Andere Netzwerkfehler
 
-Ausnahmen aufgrund von Netzwerkfehlern (z.B. Unterbrechung oder Änderung der Netzwerkverbindung, Verbindungsfehler und Serverfehler) können jederzeit auftreten. Diese Fehler haben zur Folge, dass Ausnahmen ausgelöst werden. Wenn eine Ausnahme nicht von Ihrer App behandelt wird, kann sie dazu führen, dass die gesamte App von der Runtime beendet wird.
+Ausnahmen aufgrund von Netzwerkfehlern (z. B. Unterbrechung oder Änderung der Netzwerkverbindung, Verbindungsfehler und Serverfehler) können jederzeit auftreten. Diese Fehler haben zur Folge, dass Ausnahmen ausgelöst werden. Wenn eine Ausnahme nicht von Ihrer App behandelt wird, kann sie dazu führen, dass die gesamte App von der Runtime beendet wird.
 
 Beim Aufrufen der meisten asynchronen Netzwerkmethoden müssen Sie Code zum Behandeln von Ausnahmen schreiben. In manchen Fällen kann versucht werden, eine Netzwerkmethode beim Auftreten einer Ausnahme zu wiederholen, um das Problem zu beheben. In anderen Fällen muss die App ohne Netzwerkverbindung mit zuvor zwischengespeicherten Daten weiter ausgeführt werden.
 
@@ -74,7 +81,7 @@ Die Netzwerk-APIs unterstützen verschiedene Methoden zum Abrufen der detaillier
 -   Eine Methode zum Abrufen des **HRESULT**-Werts des Fehlers, der die Ausnahme verursacht hat. Die mögliche Liste potenzieller **HRESULT**-Werte ist lang und nicht spezifiziert. Der **HRESULT**-Wert kann abgerufen werden, wenn eine der Netzwerk-APIs verwendet wird.
 -   Eine Hilfsmethode, die den **HRESULT**-Wert in einen Enumerationswert konvertiert. Die Liste der möglichen Enumerationswerte ist spezifiziert und relativ kurz. Eine Hilfsmethode für die Socketklassen ist in [**Windows::Networking::Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960) verfügbar.
 
-### Ausnahmen in „Windows.Networking.Sockets“
+### <a name="exceptions-in-windowsnetworkingsockets"></a>Ausnahmen in „Windows.Networking.Sockets“
 
 Der Konstruktor für die [**HostName**](https://msdn.microsoft.com/library/windows/apps/br207113)-Klasse in Verbindung mit Sockets kann eine Ausnahme auslösen, wenn die übergebene Zeichenfolge kein gültiger Hostname ist (enthält Zeichen, die in einem Hostnamen nicht zulässig sind). Wenn eine App vom Benutzer eine Eingabe für das **HostName**-Element einer Peerverbindung zum Spielen erhält, sollte sich der Konstruktor innerhalb eines try/catch-Blocks befinden. Wenn eine Ausnahme ausgelöst wird, kann die App den Benutzer benachrichtigen und einen neuen Hostnamen anfordern.
 
@@ -116,7 +123,7 @@ Hinzufügen von Code zum Überprüfen einer Zeichenfolge für einen Hostnamen vo
 
 Der [**Windows.Networking.Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960)-Namespace enthält praktische Hilfsmethoden und Enumerationen für die Behandlung von Fehlern bei der Verwendung von Sockets. Mit ihnen lassen sich spezifische Netzwerkausnahmen in der App unterschiedlich behandeln.
 
-Ein Fehler, der für einen [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319)-, [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)- oder [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906)-Vorgang auftritt, führt zur Auslösung einer Ausnahme. Die Ursache der Ausnahme ist ein Fehlerwert, der als **HRESULT**-Wert dargestellt wird. Mit der [**SocketError.GetStatus**](https://msdn.microsoft.com/library/windows/apps/hh701462)-Methode wird ein Netzwerkfehler aus einem Socketvorgang in einen [**SocketErrorStatus**](https://msdn.microsoft.com/library/windows/apps/hh701457)-Enumerationswert konvertiert. Die meisten **SocketErrorStatus**-Enumerationswerte entsprechen einem vom systemeigenen WindowsSockets-Vorgang zurückgegebenen Fehler. Eine App kann nach bestimmten **SocketErrorStatus**-Enumerationswerten filtern, um das App-Verhalten je nach Ausnahmeursache zu ändern.
+Ein Fehler, der für einen [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319)-, [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)- oder [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906)-Vorgang auftritt, führt zur Auslösung einer Ausnahme. Die Ursache der Ausnahme ist ein Fehlerwert, der als **HRESULT**-Wert dargestellt wird. Mit der [**SocketError.GetStatus**](https://msdn.microsoft.com/library/windows/apps/hh701462)-Methode wird ein Netzwerkfehler aus einem Socketvorgang in einen [**SocketErrorStatus**](https://msdn.microsoft.com/library/windows/apps/hh701457)-Enumerationswert konvertiert. Die meisten **SocketErrorStatus**-Enumerationswerte entsprechen einem vom systemeigenen Windows Sockets-Vorgang zurückgegebenen Fehler. Eine App kann nach bestimmten **SocketErrorStatus**-Enumerationswerten filtern, um das App-Verhalten je nach Ausnahmeursache zu ändern.
 
 Bei Parameterprüfungsfehlern kann eine App den **HRESULT**-Wert aus der Ausnahme auch verwenden, um ausführlichere Informationen zum zugehörigen Fehler zu erhalten. Mögliche **HRESULT**-Werte sind in der Headerdatei *Winerror.h* aufgeführt. Für die meisten Parameterüberprüfungsfehler wird der **HRESULT**-Wert **E\_INVALIDARG** zurückgegeben.
 
@@ -217,7 +224,7 @@ using namespace Windows::Networking::Sockets;
 
 ```
 
-### Ausnahmen in „Windows.Web.Http“
+### <a name="exceptions-in-windowswebhttp"></a>Ausnahmen in „Windows.Web.Http“
 
 Der Konstruktor für die [**Windows::Foundation::Uri**](https://msdn.microsoft.com/library/windows/apps/br225998)-Klasse in Verbindung mit [**Windows::Web::Http::HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) kann eine Ausnahme auslösen, wenn die übergebene Zeichenfolge kein gültiger URI ist (enthält Zeichen, die in einem URI nicht zulässig sind). In C++ gibt es keine Methode zum Analysieren einer Zeichenfolge für einen URI. Wenn eine App vom Benutzer eine Eingabe für das **Windows::Foundation::Uri**-Element erhält, sollte sich der Konstruktor innerhalb eines try/catch-Blocks befinden. Wenn eine Ausnahme ausgelöst wird, kann die App den Benutzer benachrichtigen und einen neuen URI anfordern.
 
@@ -362,7 +369,7 @@ using namespace Windows::Web::Http;
 
 ```
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 
 **Weitere Ressourcen**
@@ -389,9 +396,4 @@ using namespace Windows::Web::Http;
 * [HttpClient-Beispiel]( http://go.microsoft.com/fwlink/p/?linkid=242550)
 * [Näherungsbeispiel](http://go.microsoft.com/fwlink/p/?linkid=245082)
 * [Beispiel für StreamSocket](http://go.microsoft.com/fwlink/p/?linkid=243037)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

@@ -3,31 +3,38 @@ author: mtoepke
 title: Einrichten von DirectX-Ressourcen und Darstellen eines Bilds
 description: "Hier zeigen wir Ihnen das Erstellen eines Direct3D-Geräts, einer Swapchain und einer Renderzielansicht sowie die Darstellung des gerenderten Bilds auf dem Bildschirm."
 ms.assetid: d54d96fe-3522-4acb-35f4-bb11c3a5b064
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP, Spiele, DirectX, Ressourcen, Bilder
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: af52969011a90f0c665dc8a5508c213d3a73b5b7
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1aeb4ef581254ae914efae4bc38853611dbde488
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Einrichten von DirectX-Ressourcen und Darstellen eines Bilds
+# <a name="set-up-directx-resources-and-display-an-image"></a>Einrichten von DirectX-Ressourcen und Darstellen eines Bilds
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Hier zeigen wir Ihnen das Erstellen eines Direct3D-Geräts, einer Swapchain und einer Renderziel-Ansicht sowie die Darstellung des gerenderten Bilds auf dem Bildschirm.
 
 **Ziel:** Sie richten DirectX-Ressourcen in einer UWP-App (Universelle Windows-Plattform) mit C++ ein und zeigen eine Volltonfarbe an.
 
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 
 Es wird davon ausgegangen, dass Sie mit C+ vertraut sind. Sie müssen außerdem mit den grundlegenden Konzepten der Grafikprogrammierung vertraut sein.
 
-**Zeitaufwand:** 20Minuten.
+**Zeitaufwand:** 20 Minuten.
 
-## Anweisungen
+## <a name="instructions"></a>Anweisungen
 
-### 1. Deklarieren von Direct3D-Schnittstellenvariablen mit ComPtr
+### <a name="1-declaring-direct3d-interface-variables-with-comptr"></a>1. Deklarieren von Direct3D-Schnittstellenvariablen mit ComPtr
 
 Wir deklarieren Direct3D-Schnittstellenvariablen mit der [intelligenten Zeigervorlage](https://msdn.microsoft.com/library/windows/apps/hh279674.aspx) ComPtr aus der C++-Vorlagenbibliothek für Windows-Runtime (Windows Runtime C++ Template Library, WRL), damit wir die Lebensdauer dieser Variablen ausnahmesicher verwalten können. Mithilfe dieser Variablen können wir auf die [**ComPtr class**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx) und ihre Member zugreifen. Beispiel:
 
@@ -44,7 +51,7 @@ Wenn Sie [**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows
 
 Nachdem die Beispiel-App gestartet wurde, wird sie initialisiert und geladen. Danach kann sie ausgeführt werden.
 
-### 2. Erstellen des Direct3D-Geräts
+### <a name="2-creating-the-direct3d-device"></a>2. Erstellen des Direct3D-Geräts
 
 Für die Verwendung der Direct3D-API zum Rendern einer Szene müssen wir zunächst ein Direct3D-Gerät erstellen, das die Grafikkarte darstellt. Zum Erstellen des Direct3D-Geräts rufen wir die [**D3D11CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082)-Funktion auf. Im Array der [**D3D\_FEATURE\_LEVEL**](https://msdn.microsoft.com/library/windows/desktop/ff476329)-Werte geben wir die Ebenen 9.1 bis 11.1 an. Direct3D durchläuft das Array der Reihe nach und gibt die höchste Ebene des unterstützten Features zurück. Zum Abrufen der höchsten verfügbaren Featureebene listen wir also die **D3D\_FEATURE\_LEVEL**-Arrayeinträge vom höchsten zum niedrigsten Eintrag auf. Wir übergeben das [**D3D11\_CREATE\_DEVICE\_BGRA\_SUPPORT**](https://msdn.microsoft.com/library/windows/desktop/ff476107#D3D11_CREATE_DEVICE_BGRA_SUPPORT)-Flag an den *Flags*-Parameter, damit Direct3D-Ressourcen mit Direct2D ausgeführt werden können. Bei Verwendung der Debugversion übergeben wir zudem das [**D3D11\_CREATE\_DEVICE\_DEBUG**](https://msdn.microsoft.com/library/windows/desktop/ff476107#D3D11_CREATE_DEVICE_DEBUG)-Flag. Weitere Informationen zum Debuggen von Apps finden Sie unter [Verwenden der Debugschicht zum Debuggen von Apps](https://msdn.microsoft.com/library/windows/desktop/jj200584).
 
@@ -99,7 +106,7 @@ Wir rufen das Direct3D 11.1-Gerät ([**ID3D11Device1**](https://msdn.microsoft.c
             );
 ```
 
-### 3. Erstellen der Swapchain
+### <a name="3-creating-the-swap-chain"></a>3. Erstellen der Swapchain
 
 Im nächsten Schritt erstellen wir eine Swapchain, die von dem Gerät zum Rendern und für die Anzeige verwendet wird. Wir deklarieren und initialisieren eine [**DXGI\_SWAP\_CHAIN\_DESC1**](https://msdn.microsoft.com/library/windows/desktop/hh404528)-Struktur, um die Swapchain zu beschreiben. Anschließend richten wir die Swapchain als Flip-Modell ein (d. h. eine Swapchain, für die der [**DXGI\_SWAP\_EFFECT\_FLIP\_SEQUENTIAL**](https://msdn.microsoft.com/library/windows/desktop/bb173077#DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL)-Wert im **SwapEffect**-Member festgelegt ist), und wir legen das **Format**-Member auf [**DXGI\_FORMAT\_B8G8R8A8\_UNORM**](https://msdn.microsoft.com/library/windows/desktop/bb173059#DXGI_FORMAT_B8G8R8A8_UNORM) fest. Wir legen den **Count**-Member der [**DXGI\_SAMPLE\_DESC**](https://msdn.microsoft.com/library/windows/desktop/bb173072)-Struktur, die vom **SampleDesc**-Member angegeben wird, auf 1 fest. Außerdem legen wir den **Quality**-Member von **DXGI\_SAMPLE\_DESC** auf null fest, da MSAA (Multiple Sample Antialiasing) vom Flip-Modell nicht unterstützt wird. Wir legen den **BufferCount**-Member auf 2 fest, sodass die Swapchain für die Darstellung auf dem Anzeigegerät einen Frontpuffer sowie einen Hintergrundpuffer verwenden kann, der als Renderziel dient.
 
@@ -174,7 +181,7 @@ Für die endgültige Erstellung der Swapchain müssen wir die übergeordnete Fac
                 );
 ```
 
-### 4. Erstellen der Renderziel-Ansicht
+### <a name="4-creating-the-render-target-view"></a>4. Erstellen der Renderziel-Ansicht
 
 Zum Rendern von Grafik in dem Fenster müssen wir eine Renderziel-Ansicht erstellen. Wir rufen [**IDXGISwapChain::GetBuffer**](https://msdn.microsoft.com/library/windows/desktop/bb174570) zum Abrufen des Swapchain-Hintergrundpuffers auf, der beim Erstellen der Renderziel-Ansicht verwendet werden soll. Wir geben den Hintergrundpuffer als 2D-Textur an ([**ID3D11Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476635)). Zum Erstellen der Renderziel-Ansicht rufen wir [**ID3D11Device::CreateRenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476517) mit dem Hintergrundpuffer der Swapchain auf. Wir müssen das Zeichnen im gesamten Kernfenster festlegen, indem wir den Viewport ([**D3D11\_VIEWPORT**](https://msdn.microsoft.com/library/windows/desktop/ff476260)) als vollständige Größe des Swapchain-Hintergrundpuffers angeben. Wir verwenden den Viewport in einem Aufruf von [**ID3D11DeviceContext::RSSetViewports**](https://msdn.microsoft.com/library/windows/desktop/ff476480), um den Viewport an die [Rasterprogrammstufe](https://msdn.microsoft.com/library/windows/desktop/bb205125) der Pipeline zu binden. In der Rasterprogrammstufe werden Vektorinformationen in ein Rasterbild konvertiert. In diesem Fall ist keine Konvertierung erforderlich, da wir nur eine Volltonfarbe anzeigen.
 
@@ -214,7 +221,7 @@ Zum Rendern von Grafik in dem Fenster müssen wir eine Renderziel-Ansicht erstel
         m_d3dDeviceContext->RSSetViewports(1, &viewport);
 ```
 
-### 5. Darstellen des gerenderten Bilds
+### <a name="5-presenting-the-rendered-image"></a>5. Darstellen des gerenderten Bilds
 
 Wir geben eine endlose Schleife zum fortlaufenden Rendern und Anzeigen der Szene ein.
 
@@ -256,7 +263,7 @@ Da wir zuvor die maximale Framelatenz auf 1 festgelegt haben, reduziert Windows 
         }
 ```
 
-### 6. Ändern der Größe des App-Fensters und des Swapchainpuffers
+### <a name="6-resizing-the-app-window-and-the-swap-chains-buffer"></a>6. Ändern der Größe des App-Fensters und des Swapchainpuffers
 
 Wenn sich die Größe des App-Fensters ändert, muss die App die Größe der Swapchainpuffer ändern, die Renderziel-Ansicht neu erstellen und anschließend das gerenderte Bild in der geänderten Größe darstellen. Zum Ändern der Größe der Swapchainpuffer rufen wir [**IDXGISwapChain::ResizeBuffers**](https://msdn.microsoft.com/library/windows/desktop/bb174577) auf. Bei diesem Aufruf lassen wir die Anzahl und das Format der Puffer unverändert (der *BufferCount*-Parameter ist auf den Wert zwei und der *NewFormat*-Parameter ist auf [**DXGI\_FORMAT\_B8G8R8A8\_UNORM**](https://msdn.microsoft.com/library/windows/desktop/bb173059#DXGI_FORMAT_B8G8R8A8_UNORM) festgelegt). Wir legen für die Größe des Swapchain-Hintergrundpuffers denselben Wert wie für das Fenster mit geänderter Größe fest. Nachdem wir die Größe des Swapchainpuffers geändert haben, erstellen wir das neue Renderziel, und wir stellen das neue gerenderte Bild genauso wie beim Initialisieren der App dar.
 
@@ -273,7 +280,7 @@ Wenn sich die Größe des App-Fensters ändert, muss die App die Größe der Swa
                 );
 ```
 
-## Zusammenfassung und nächste Schritte
+## <a name="summary-and-next-steps"></a>Zusammenfassung und nächste Schritte
 
 
 Wir haben ein Direct3D-Gerät, eine Swapchain und eine Renderziel-Ansicht erstellt und das gerenderte Bild auf dem Bildschirm dargestellt.
@@ -288,10 +295,5 @@ Als Nächstes zeichnen wir ein Dreieck auf dem Bildschirm.
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -1,20 +1,28 @@
 ---
 author: mukin
-Description: "In diesem Artikel im Stile eines Lernprogramms wird der Leser durch die Schritte zum Erstellen einer grundlegenden Anwendungsbenutzeroberfläche geführt. Es erläutert und veranschaulicht die Verwendung von Grid und StackPanel, zwei der häufigsten XAML-Elemente."
-title: Erstellen einer einfachen Wetter-App mit Grid und StackPanel
+Description: "In diesem Artikel im Stile eines Lernprogramms wird der Leser durch die Schritte zum Erstellen einer grundlegenden Anwendungsbenutzeroberfläche geführt. Es wird die Verwendung von Grid und StackPanel erläutert, zwei der häufigsten XAML-Elemente."
+title: Erstellen einer einfachen Wetter-App mithilfe von Grid und StackPanel
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
+ms.assetid: 9794a04d-e67f-472c-8ba8-8ebe442f6ef2
 translationtype: Human Translation
-ms.sourcegitcommit: c30aed9681d7c091e9831df3f53d8779dfacce38
-ms.openlocfilehash: 1990a3ad4e56fa039d024c53a04b021e60bed145
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 87947b5bd1c1db008a21828c3940475c2b53fd6d
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# <a name="create-a-simple-weather-app-by-using-grid-and-stackpanel"></a>Erstellen einer einfachen Wetter-App mit Grid und StackPanel
+# <a name="create-a-simple-weather-app-by-using-grid-and-stackpanel"></a>Erstellen einer einfachen Wetter-App mithilfe von Grid und StackPanel
 
-Verwenden Sie zum Erstellen des Layouts für eine einfache Wetter-App mit XAML die Elemente **Grid** und **StackPanel**. Mit diesen Tools können Sie hervorragend aussehende Apps erstellen, die auf jedem Gerät mit Windows 10 funktionieren. Dieses Lernprogramm dauert 10 bis 20 Minuten.
+Verwenden Sie XAML zum Erstellen des Layouts für eine einfache Wetter-App mit den Elemente **Grid** und **StackPanel**. Mit diesen Tools können Sie hervorragend aussehende Apps erstellen, die auf jedem Gerät mit Windows 10 funktionieren. Dieses Lernprogramm dauert 10 bis 20 Minuten.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 - Windows 10 und Microsoft Visual Studio 2015 [Klicken Sie hier, um zu erfahren, wie Sie Visual Studio einrichten](../get-started/get-set-up.md).
-- Kenntnisse im Erstellen einer einfachen „Hello, World“-App mit XAML und C#. Wenn Sie diese noch nicht besitzen [klicken Sie hier, um zu erfahren, wie Sie eine „Hello World“ erstellen](https://msdn.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
+- Kenntnisse im Erstellen einer einfachen „Hello, World“-App mit XAML und C#. Wenn Sie diese noch nicht besitzen [klicken Sie hier, um zu erfahren, wie Sie eine „Hello World“-App erstellen](https://msdn.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 
 ## <a name="step-1-create-a-blank-app"></a>Schritt 1: Erstellen Sie eine leere App.
 1. Wählen Sie in Visual Studio **Datei** > **Neues Projekt** aus.
@@ -115,9 +123,4 @@ Wenn Sie möchten, können Sie mit dem Layout oben experimentieren und verschied
 Eine Einführung in das Entwerfen von UWP-App-Layouts finden Sie unter [Einführung in das UWP-App-Design](https://msdn.microsoft.com/windows/uwp/layout/design-and-ui-intro).
 
 Informationen zum Erstellen von dynamischen Layouts, die an verschiedene Bildschirmgrößen angepasst werden können, finden Sie unter [Definieren von Seitenlayouts mit XAML](https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml).
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

@@ -5,18 +5,25 @@ title: Kacheln
 ms.assetid: 09C7E1B1-F78D-4659-8086-2E428E797653
 label: Tiles
 template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 37de1a413ac9b5e74c905c140899ec7577a6fae5
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 11640527ffdb6883885345646310e5e4b786ad2b
+ms.lasthandoff: 02/07/2017
 
 ---
-# Kacheln für UWP-Apps
+# <a name="tiles-for-uwp-apps"></a>Kacheln für UWP-Apps
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Eine *Kachel* ist die Darstellung einer App im Startmenü. Jede App verfügt über eine Kachel. Wenn Sie ein neues UWP-App-Projekt in Microsoft Visual Studio erstellen, enthält es eine Standardkachel, die den Namen und das Logo Ihrer App anzeigt. Windows zeigt diese Kachel bei der erstmaligen Installation Ihrer App an. Nachdem Ihre App installiert wurde, können Sie den Inhalt der Kachel mithilfe von Benachrichtigungen ändern. Sie können die Kachel zum Beispiel so ändern, dass dem Benutzer neue Informationen angezeigt werden, wie etwa neue Schlagzeilen oder der Betreff der letzten ungelesenen Nachricht.
 
-## Konfigurieren der Standardkachel
+## <a name="configure-the-default-tile"></a>Konfigurieren der Standardkachel
 
 
 Wenn Sie ein neues Projekt in Visual Studio erstellen, wird eine einfache Standardkachel erstellt, die den Namen und das Logo Ihrer App anzeigt.
@@ -76,14 +83,14 @@ Aktualisieren Sie die folgenden Elemente:
       </Applications>
 ```
 
-## Verwenden von Benachrichtigungen zum Anpassen der Kachel
+## <a name="use-notifications-to-customize-your-tile"></a>Verwenden von Benachrichtigungen zum Anpassen der Kachel
 
 
 Nachdem Ihre App installiert wurde, können Sie die Kachel mit Benachrichtigungen anpassen. Dies kann entweder beim ersten Start der App oder als Reaktion auf ein bestimmtes Ereignis wie eine Pushbenachrichtigung geschehen.
 
 1.  Erstellen Sie eine XML-Nutzlast (in Form von [**Windows.Data.Xml.Dom.XmlDocument**](https://msdn.microsoft.com/library/windows/apps/br206173)), die die Kachel beschreibt.
 
-    -   In Windows10 wird ein neues adaptives Kachelschema eingeführt, das Sie verwenden können. Eine Anleitung hierzu finden Sie unter [Adaptive Kacheln](tiles-and-notifications-create-adaptive-tiles.md). Informationen zum Schema finden Sie unter [Adaptives Kachelschema](tiles-and-notifications-adaptive-tiles-schema.md). 
+    -   In Windows 10 wird ein neues adaptives Kachelschema eingeführt, das Sie verwenden können. Eine Anleitung hierzu finden Sie unter [Adaptive Kacheln](tiles-and-notifications-create-adaptive-tiles.md). Informationen zum Schema finden Sie unter [Adaptives Kachelschema](tiles-and-notifications-adaptive-tiles-schema.md). 
 
     -   Mit den Windows 8.1-Kachelvorlagen können Sie Ihre Kachel definieren. Weitere Informationen finden Sie unter [Erstellen von Kacheln und Signalen (Windows 8.1)](https://msdn.microsoft.com/library/windows/apps/xaml/hh868260).
 
@@ -92,7 +99,7 @@ Nachdem Ihre App installiert wurde, können Sie die Kachel mit Benachrichtigunge
     -   Ein [**Windows.UI.Notifications.ScheduledTileNotification**](https://msdn.microsoft.com/library/windows/apps/hh701637)-Objekt zum Aktualisieren der Kachel zu einem bestimmten Zeitpunkt
 
 3.  Verwenden Sie [**Windows.UI.Notifications.TileUpdateManager.CreateTileUpdaterForApplication**](https://msdn.microsoft.com/library/windows/apps/br208623), um ein [**TileUpdater**](https://msdn.microsoft.com/library/windows/apps/br208628)-Objekt zu erstellen.
-4.  Rufen Sie die [**TileUpdater.Update**](https://msdn.microsoft.com/library/windows/apps/br208632)-Methode auf, und übergeben Sie sie an das in Schritt2 erstellte Kachelbenachrichtigungsobjekt.
+4.  Rufen Sie die [**TileUpdater.Update**](https://msdn.microsoft.com/library/windows/apps/br208632)-Methode auf, und übergeben Sie sie an das in Schritt 2 erstellte Kachelbenachrichtigungsobjekt.
 
  
 
@@ -100,10 +107,5 @@ Nachdem Ihre App installiert wurde, können Sie die Kachel mit Benachrichtigunge
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

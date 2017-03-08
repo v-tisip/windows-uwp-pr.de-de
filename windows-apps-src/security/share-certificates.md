@@ -1,35 +1,42 @@
 ---
 title: Freigabe von Zertifikaten zwischen Apps
-description: "UWP-Apps, die über eine Kombination aus Benutzer-ID und Kennwort hinaus eine sichere Authentifizierung benötigen, können Zertifikate für die Authentifizierung verwenden."
+description: "UWP-Apps (Universelle Windows-Plattform), die über eine Kombination aus Benutzer-ID und Kennwort hinaus eine sichere Authentifizierung benötigen, können Zertifikate für die Authentifizierung verwenden."
 ms.assetid: 159BA284-9FD4-441A-BB45-A00E36A386F9
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 189e95695be3621754414708f1a394fe4cea4ecf
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ca4c7b82fdb7f950d3f68323dec37c2f31e02c87
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Freigabe von Zertifikaten zwischen Apps
+# <a name="share-certificates-between-apps"></a>Freigabe von Zertifikaten zwischen Apps
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 UWP-Apps, die über eine Kombination aus Benutzer-ID und Kennwort hinaus eine sichere Authentifizierung benötigen, können Zertifikate für die Authentifizierung verwenden. Die Zertifikatauthentifizierung bietet eine hohe Vertrauenswürdigkeit bei der Benutzerauthentifizierung. Es kann vorkommen, dass eine Gruppe von Diensten einen Benutzer für mehrere Apps authentifizieren möchte. In diesem Artikel wird veranschaulicht, wie Sie mehrere Apps mit demselben Zertifikat authentifizieren und für einen Benutzer geeigneten Code zum Importieren eines Zertifikats bereitstellen können, das für den Zugriff auf sichere Webdienste bestimmt ist.
 
 Apps können für die Authentifizierung bei einem Webdienst ein Zertifikat verwenden, und mehrere Apps können ein einzelnes Zertifikat aus dem Zertifikatspeicher verwenden, um denselben Benutzer zu authentifizieren. Falls im Speicher kein Zertifikat vorhanden ist, können Sie der App Code für den Import eines Zertifikats aus einer PFX-Datei hinzufügen.
 
-## Aktivieren von Microsoft Internet Information Services (IIS) und Clientzertifikatszuordnungen
+## <a name="enable-microsoft-internet-information-services-iis-and-client-certificate-mapping"></a>Aktivieren von Microsoft Internet Information Services (IIS) und Clientzertifikatszuordnungen
 
 
 In diesem Artikel werden die Microsoft-Internetinformationsdienste (Microsoft Internet Information Services, IIS) als Beispiel verwendet. IIS ist standardmäßig nicht aktiviert. Sie können IIS über die Systemsteuerung aktivieren.
 
 1.  Öffnen Sie die Systemsteuerung, und wählen Sie **Programme** aus.
 2.  Wählen Sie die Option **Windows-Features aktivieren oder deaktivieren** aus.
-3.  Erweitern Sie **Internetinformationsdienste** und dann **WWW-Dienste**. Erweitern Sie **Anwendungsentwicklungsfeatures**, und wählen Sie **ASP.NET3.5** und **ASP.NET4.5**. Das Auswählen führt dazu, dass **Internetinformationsdienste** automatisch aktiviert wird.
+3.  Erweitern Sie **Internetinformationsdienste** und dann **WWW-Dienste**. Erweitern Sie **Anwendungsentwicklungsfeatures**, und wählen Sie **ASP.NET 3.5** und **ASP.NET 4.5**. Das Auswählen führt dazu, dass **Internetinformationsdienste** automatisch aktiviert wird.
 4.  Klicken Sie auf **OK**, um die Änderungen zu übernehmen.
 
-## Erstellen und Veröffentlichen eines sicheren Webdiensts
+## <a name="create-and-publish-a-secured-web-service"></a>Erstellen und Veröffentlichen eines sicheren Webdiensts
 
 
 1.  Führen Sie Microsoft Visual Studio als Administrator aus, und wählen Sie auf der Startseite die Option **Neues Projekt** aus. Für die Veröffentlichung eines Webdiensts auf einem IIS-Server ist Administratorzugriff erforderlich. Ändern Sie im Dialogfeld „Neues Projekt“ das Framework in **.NET Framework 3.5**. Wählen Sie **Visual C#** -&gt; **Web** -&gt; **Visual Studio** -&gt; **ASP.NET-Webdienstanwendung** aus. Geben Sie der Anwendung den Namen „FirstContosoBank“. Klicken Sie auf **OK**, um das Projekt zu erstellen.
@@ -51,7 +58,7 @@ In diesem Artikel werden die Microsoft-Internetinformationsdienste (Microsoft In
 5.  Erstellen Sie im Dialogfeld **Web veröffentlichen** ein neues Profil, und geben Sie ihm den Namen "ContosoProfile". Klicken Sie auf **Weiter**.
 6.  Geben Sie auf der nächsten Seite den Servernamen für Ihren IIS-Server ein, und geben Sie dann den Websitenamen "Standardwebsite/FirstContosoBank" an. Klicken Sie auf **Veröffentlichen**, um den Webdienst zu veröffentlichen.
 
-## Konfigurieren des Webdiensts für die Verwendung der Clientzertifikatauthentifizierung
+## <a name="configure-your-web-service-to-use-client-certificate-authentication"></a>Konfigurieren des Webdiensts für die Verwendung der Clientzertifikatauthentifizierung
 
 
 1.  Führen Sie den **Internetinformationsdienste (IIS)-Manager** aus.
@@ -64,7 +71,7 @@ In diesem Artikel werden die Microsoft-Internetinformationsdienste (Microsoft In
 
 Sie können diese Schritte wiederholen, um mehrere Webdienste zu erstellen, auf die mit demselben Clientzertifikat zugegriffen werden kann.
 
-## Erstellen einer Windows Store-App mit Verwendung der Authentifizierung per Zertifikat
+## <a name="create-a-windows-store-app-that-uses-certificate-authentication"></a>Erstellen einer Windows Store-App mit Verwendung der Authentifizierung per Zertifikat
 
 
 Nachdem Sie nun über mindestens einen sicheren Webdienst verfügen, können Ihre Apps Zertifikate für die Authentifizierung bei diesen Webdiensten verwenden. Wenn Sie mithilfe des [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639)-Objekts eine Anforderung an einen authentifizierten Webdienst senden, enthält die erste Anforderung kein Clientzertifikat. Der authentifizierte Webdienst antwortet mit einer Anforderung der Clientauthentifizierung. Daraufhin fragt der Windows-Client den Zertifikatspeicher automatisch nach verfügbaren Clientzertifikaten ab. Der Benutzer kann für die Authentifizierung beim Webdienst eine Auswahl aus diesen Zertifikaten treffen. Da einige Zertifikate kennwortgeschützt sind, müssen Sie es Benutzern ermöglichen, das Kennwort für ein Zertifikat einzugeben.
@@ -203,8 +210,3 @@ Falls keine Clientzertifikate verfügbar sind, muss der Benutzer dem Zertifikats
 8.  Führen Sie Ihre App aus, und melden Sie sich beim sicheren Webdienst an. Importieren Sie eine PFX-Datei in den lokalen Zertifikatspeicher.
 
 Mithilfe dieser Schritte können Sie mehrere Apps erstellen, für die dasselbe Benutzerzertifikat verwendet wird, um auf dieselben oder unterschiedliche sichere Webdienste zuzugreifen.
-
-
-<!--HONumber=Aug16_HO3-->
-
-

@@ -3,15 +3,22 @@ author: mcleanbyron
 ms.assetid: cf0d2709-21a1-4d56-9341-d4897e405f5d
 description: Hier erfahren Sie, wie AdControl-Fehler in Ihrer App aufgefangen werden.
 title: Exemplarische Vorgehensweise zur Fehlerbehandlung in XAML/C#
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Anzeige, Werbung, Fehlerbehandlung, XAML, C#"
 translationtype: Human Translation
-ms.sourcegitcommit: f88a71491e185aec84a86248c44e1200a65ff179
-ms.openlocfilehash: c9f2ad67413380a8393c8e00871e69af4bb2905a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7bfb809f1b5511ba27faf1bdd664c24da109e2f3
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="error-handling-in-xamlc-walkthrough"></a>Exemplarische Vorgehensweise zur Fehlerbehandlung in XAML/C#
 
-In diesem Thema wird veranschaulicht, wie [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx)-Fehler in Ihrer App erfasst werden können.
+In diesem Thema wird veranschaulicht, wie [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx)-Fehler in Ihrer App abgefangen werden können.
 
 In diesen Beispielen wird davon ausgegangen, dass Sie eine XAML/C#-App haben, die ein **AdControl** enthält. Schritt-für-Schritt-Anleitungen, die zeigen, wie ein **AdControl** zu Ihrer App hinzugefügt wird, finden Sie unter [AdControl in XAML und .NET](adcontrol-in-xaml-and--net.md). Ein vollständiges Beispiel-Projekt, das veranschaulicht, wie Sie mithilfe von C# und C++ Werbebanner zu einer XAML-App hinzufügen, finden Sie unter den [Anzeigenbeispielen auf GitHub](http://aka.ms/githubads).
 
@@ -84,9 +91,4 @@ In diesen Beispielen wird davon ausgegangen, dass Sie eine XAML/C#-App haben, di
 * [Anzeigenbeispiele bei GitHub](http://aka.ms/githubads)
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

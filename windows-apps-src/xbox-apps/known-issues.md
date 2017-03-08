@@ -2,13 +2,21 @@
 author: Mtoepke
 title: Bekannte Probleme mit UWP im Zusammenhang mit dem Xbox One-Entwicklerprogramm
 description: 
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
+ms.assetid: a7b82570-1f99-4bc3-ac78-412f6360e936
 translationtype: Human Translation
-ms.sourcegitcommit: 3f0647bb76340ccbd538e9e4fefe173924d6baf4
-ms.openlocfilehash: 18c8d1fcd696f336601dc6c531424fe8bfb78304
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 4b13b9bbbc75de47ed69112680894d5e3f34d8a1
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# <a name="known-issues-with-uwp-on-xbox-developer-program"></a>Bekannte Probleme mit UWP im Zusammenhang mit dem Xbox-Entwicklerprogramm
+# <a name="known-issues-with-uwp-on-xbox-developer-program"></a>Bekannte Probleme mit UWP im Zusammenhang mit dem Xbox One-Entwicklerprogramm
 
 Dieses Thema beschreibt bekannte Probleme im Zusammenhang mit dem Xbox One-Entwicklerprogramm. Weitere Informationen zu diesem Programm finden Sie unter [UWP auf Xbox](index.md). 
 
@@ -177,12 +185,52 @@ Sie erhalten eine Warnung zum Zertifikat, das bereitgestellt wurde, ähnlich wie
 Occasionally, selecting the “Manage Windows Device Portal” option in Dev Home will cause Dev Home to silently exit to the Home screen. 
 This is caused by a failure in the WDP infrastructure on the console and can be resolved by restarting the console.-->
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="knownfoldersmediaserverdevices-caveat-on-xbox"></a>KnownFolders.MediaServerDevices Einschränkung auf Xbox
+
+Auf dem Desktop sind Medienserver mit dem PC „gekoppelt“, und der Gerätezuordnungsdienst (Device Association Service) verfolgt ständig, welcher der Server aktuell online ist. Mit einer Erstabfrage des Dateisystems kann sofort eine Liste der verbundenen Server zurückgegeben werden, die derzeit online sind.
+
+Auf der Xbox gibt es keine UI, um Server hinzuzufügen oder zu löschen. Deshalb wird die Erstabfrage auf das Dateisystem immer leer sein. Sie müssen eine Abfrage erstellen, das ContentsChanged-Ereignis abonnieren, und die Abfrage bei jeder Benachrichtigung aktualisieren. Die Server werden durchgelassen, und die meisten innerhalb von drei Sekunden erkannt.
+
+Einfacher Beispielcode:
+
+```
+namespace TestDNLA {
+
+    public sealed partial class MainPage : Page {
+        public MainPage() {
+            this.InitializeComponent();
+        }
+
+        private async void FindFiles_Click(object sender, RoutedEventArgs e) {
+            try {
+                StorageFolder library = KnownFolders.MediaServerDevices;
+                var folderQuery = library.CreateFolderQuery();
+                folderQuery.ContentsChanged += FolderQuery_ContentsChanged;
+                IReadOnlyList<StorageFolder> rootFolders = await folderQuery.GetFoldersAsync();
+                if (rootFolders.Count == 0) {
+                    Debug.WriteLine("No Folders found");
+                } else {
+                    Debug.WriteLine("Folders found");
+                }
+            } catch (Exception ex) {
+                Debug.WriteLine("Error: " + ex.Message);
+            } finally {
+                Debug.WriteLine("Done");
+            }
+        }
+
+        private async void FolderQuery_ContentsChanged(Windows.Storage.Search.IStorageQueryResultBase sender, object args) {
+            Debug.WriteLine("Folder added " + sender.Folder.Name);
+            IReadOnlyList<StorageFolder> topLevelFolders = await sender.Folder.GetFoldersAsync();
+            foreach (StorageFolder topLevelFolder in topLevelFolders) {
+                Debug.WriteLine(topLevelFolder.Name);
+            }
+        }
+    }
+}
+```
+
+## <a name="see-also"></a>Siehe auch
 - [Häufig gestellte Fragen](frequently-asked-questions.md)
-- [UWP auf Xbox One](index.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
+- [UWP auf Xbox One](index.md)
 

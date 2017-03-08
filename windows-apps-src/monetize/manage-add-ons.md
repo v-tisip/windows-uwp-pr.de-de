@@ -3,17 +3,26 @@ author: mcleanbyron
 ms.assetid: 4F9657E5-1AF8-45E0-9617-45AF64E144FC
 description: "Verwenden Sie diese Methoden in der Windows Store-Übermittlungs-API, um Add-Ons für Apps zu verwalten, die in Ihrem Windows Dev Center-Konto registriert wurden."
 title: "Verwalten von Add-Ons mithilfe der Windows Store-Übermittlungs-API"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Windows Store-Übermittlung API, Add-Ons, In-App-Produkt, IAP"
 translationtype: Human Translation
-ms.sourcegitcommit: 020c8b3f4d9785842bbe127dd391d92af0962117
-ms.openlocfilehash: 058d11938dd6efc961da58a9d937be76beac5978
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 55a6b548246e801c9fcc0392265263123f24de00
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="manage-add-ons-using-the-windows-store-submission-api"></a>Verwalten von Add-Ons mithilfe der Windows Store-Übermittlungs-API
 
-Verwenden Sie die folgenden Methoden in der Windows Store-Übermittlungs-API, um Add-Ons zu verwalten (die auch als In-App-Produkt bzw. IAP bezeichnet werden). Eine Einführung in die Windows Store-Übermittlungs-API finden Sie unter [Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten](create-and-manage-submissions-using-windows-store-services.md).
+Verwenden Sie die folgenden Methoden in der Windows Store-Übermittlungs-API, um Add-Ons zu verwalten (die auch als In-App-Produkt bzw. IAP bezeichnet werden). Eine Einführung in die Windows Store-Übermittlungs-API einschließlich der Voraussetzungen für die Verwendung der API finden Sie unter [Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten](create-and-manage-submissions-using-windows-store-services.md).
 
->**Hinweis**&nbsp;&nbsp;Diese Methoden können nur für Windows Dev Center-Konten verwendet werden, die zur Verwendung der Windows Store-Übermittlungs-API berechtigt sind. Diese Berechtigung ist nicht für alle Konten aktiviert. Diese Methoden können nur verwendet werden, um Add-Ons abzurufen, zu erstellen oder zu löschen. Um Übermittlungen für Add-Ons zu erstellen, verwenden Sie die Methoden in [Verwalten von Add-On-Übermittlungen](manage-add-on-submissions.md).
+>**Hinweis**&nbsp;&nbsp;Diese Methoden können nur für Windows Dev Center-Konten verwendet werden, die zur Verwendung der Windows Store-Übermittlungs-API berechtigt sind. Diese Berechtigung wird für Entwicklerkonten phasenweise aktiviert, und die Berechtigung ist zu diesem Zeitpunkt nicht für alle Konten aktiviert. Um früheren Zugriff anfordern, melden Sie sich beim Dev Center-Dashboard an, klicken Sie am unteren Rand des Dashboards auf **Feedback**, wählen Sie **Übermittlungs-API** für den Feedback-Bereich, und übermitteln Sie Ihre Anforderung. Sie erhalten eine E-Mail, wenn diese Berechtigung für Ihr Konto aktiviert ist.
+
+Diese Methoden können nur verwendet werden, um Add-Ons abzurufen, zu erstellen oder zu löschen. Um Übermittlungen für Add-Ons zu erstellen, verwenden Sie die Methoden in [Verwalten von Add-On-Übermittlungen](manage-add-on-submissions.md).
 
 <table>
 <colgroup>
@@ -157,9 +166,4 @@ Die Ressource hat die folgenden Werte.
 * [Abrufen eines Add-Ons](get-an-add-on.md)
 * [Erstellen eines Add-Ons](create-an-add-on.md)
 * [Löschen eines Add-Ons](delete-an-add-on.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

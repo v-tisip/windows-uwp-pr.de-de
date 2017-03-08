@@ -1,16 +1,22 @@
 ---
 author: mcleanbyron
 Description: "Sie können unabhängig davon, ob Ihre App kostenlos oder kostenpflichtig ist, Inhalte, andere Apps oder neue App-Funktionen (wie das Freischalten des nächsten Levels eines Spiels) direkt in der App verkaufen. Hier zeigen wir Ihnen, wie Sie diese Produkte in Ihrer App aktivieren können."
-title: "Unterstützen von Käufen von In-App-Produkten"
+title: "Unterstützen des Kaufs von In-App-Produkten"
 ms.assetid: D158E9EB-1907-4173-9889-66507957BD6B
-keywords: In-App-Angebot, Codebeispiel
+keywords: "uwp, add-ons, in-app-käufe, IAPs Windows.ApplicationModel.Store"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
-ms.openlocfilehash: 1cd748cd1b6ca7e85cfb86daba367540af25db88
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: b7cd3f5d2c566958aaf83b8f633418ce444a2eaa
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="enable-in-app-product-purchases"></a>Unterstützen von Käufen von In-App-Produkten
+# <a name="enable-in-app-product-purchases"></a>Unterstützen des Kaufs von In-App-Produkten
 
 >**Hinweis**&nbsp;&nbsp;In diesem Artikel wird die Verwendung von Mitgliedern des [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)-Namespace erläutert. Wenn Ihre App für Windows 10, Version 1607 oder höher, vorgesehen ist, empfehlen wir die Verwendung von Mitgliedern des [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace zum Verwalten von Add-Ons (auch als In-App-Produkte oder IAPs bezeichnet), anstelle des **Windows.ApplicationModel.Store**-Namespace. Weitere Informationen finden Sie unter [In-App-Käufe und Testversionen](in-app-purchases-and-trials.md).
 
@@ -86,9 +92,4 @@ Wenn Sie anhand von Belegen überprüfen möchten, ob ein Kunde einen In-App-Ein
 * [Verwalten eines großen Katalogs mit In-App-Produkten](manage-a-large-catalog-of-in-app-products.md)
 * [Überprüfen von Produktkäufen anhand von Belegen](use-receipts-to-verify-product-purchases.md)
 * [Store-Beispiel (zeigt Testversionen und In-App-Einkäufe)](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

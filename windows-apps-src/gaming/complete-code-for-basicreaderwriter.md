@@ -3,16 +3,23 @@ author: mtoepke
 title: "Vollständiger Code für &quot;BasicReaderWriter&quot;"
 description: "Vollständiger Code für eine Klasse und Methoden zum allgemeinen Lesen und Schreiben von Binärdatendateien."
 ms.assetid: af968edd-df5c-b8e6-479e-bfa9689380fc
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Spiele, BasicReaderWriter"
 translationtype: Human Translation
-ms.sourcegitcommit: 8a7202f2b860a4b7aa52f44ebd630d73889544a2
-ms.openlocfilehash: de6ab2687cfbe7b485e51bc90811b1988e29fb7e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1dc7ba0b25ceeb5b27bc718bed1db0e2db39b6c0
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Vollständiger Code für "BasicReaderWriter"
+# <a name="complete-code-for-basicreaderwriter"></a>Vollständiger Code für "BasicReaderWriter"
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Vollständiger Code für eine Klasse und Methoden zum allgemeinen Lesen und Schreiben von Binärdatendateien. Wird von der [BasicLoader](complete-code-for-basicloader.md)-Klasse verwendet.
 
@@ -20,29 +27,29 @@ Dieses Thema enthält die folgenden Abschnitte:
 
 -   [Technologien](#technologies)
 -   [Anforderungen](#requirements)
--   [Anzeigen des Codes (C++)](#view-the-code-c-)
+-   [Anzeigen des Codes (C++)](#view-the-code-c)
 
 
-## Downloadort
+## <a name="download-location"></a>Downloadort
 
 Dieses Beispiel kann nicht heruntergeladen werden.
 
 
-## Technologien
+## <a name="technologies"></a>Technologien
 
 **Programmiersprachen** – C++  
 **Programmiermodelle** – Windows-Runtime
 
 
-## Anforderungen
+## <a name="requirements"></a>Anforderungen
 
  **Unterstützte Mindestversion (Client)** – Windows 10       
  **Unterstützte Mindestversion (Server)** – Windows Server 2016 Technical Preview 
 
-## Anzeigen des Codes (C++)
+## <a name="view-the-code-c"></a>Anzeigen des Codes (C++)
 
 
-## BasicReaderWriter.h
+## <a name="basicreaderwriterh"></a>BasicReaderWriter.h
 
 
 ```cpp
@@ -91,7 +98,7 @@ internal:
 };
 ```
 
-## BasicReaderWriter.cpp
+## <a name="basicreaderwritercpp"></a>BasicReaderWriter.cpp
 
 
 ```cpp
@@ -262,10 +269,5 @@ task<void> BasicReaderWriter::WriteDataAsync(
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

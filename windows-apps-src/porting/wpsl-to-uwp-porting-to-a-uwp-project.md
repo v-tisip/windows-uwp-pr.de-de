@@ -3,9 +3,16 @@ author: mcleblanc
 description: "Sie beginnen den Portierungsprozess, indem Sie zunächst in Visual Studio ein neues Windows 10-Projekt erstellen und Ihre Dateien in das Projekt kopieren."
 title: Portieren eines Windows Phone Silverlight-Projekts zu einem UWP-Projekt
 ms.assetid: d86c99c5-eb13-4e37-b000-6a657543d8f4
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: 273017f4607c25ee56d7400debe59e94acb36d4f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 95cd7958979dd5c2a7955bb098c8b34fbf024b0f
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -49,7 +56,7 @@ Name und Versionsnummer entsprechen den Ordnern am Installationsort Ihres SDKs. 
 
 Falls Ihre App nicht auf die Gerätefamilie ausgerichtet ist, die die API implementiert, müssen Sie vor dem Aufrufen der API mithilfe der [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001)-Klasse ermitteln, ob die API vorhanden ist. (Dies wird als adaptiver Code bezeichnet.) Diese Bedingung wird unabhängig davon ausgewertet, wo Ihre App ausgeführt wird. Das Ergebnis ist aber nur dann „True“, wenn sie auf Geräten ausgeführt wird, bei denen die API vorhanden ist und aufgerufen werden kann. Verwenden Sie Erweiterungs-SDKs und adaptiven Code erst, nachdem Sie geprüft haben, ob eine universelle API vorhanden ist. Beispiele finden Sie im nächsten Abschnitt.
 
-Weitere Informationen finden Sie auch unter [App-Paketmanifest](#appxpackage).
+Weitere Informationen finden Sie auch unter [App-Paketmanifest](#the-app-package-manifest).
 
 ## <a name="maximizing-markup-and-code-reuse"></a>Maximieren der Wiederverwendung von Markup und Code
 
@@ -58,7 +65,7 @@ Sie werden feststellen, dass Sie durch kleinere Umgestaltungsmaßnahmen und/oder
 -   Dateien, die für alle Gerätefamilien verwendet werden, bedürfen keiner besonderen Beachtung. Diese Dateien werden von der App für alle Gerätefamilien verwendet, mit denen sie ausgeführt wird. Dazu zählen XAML-Markupdateien, imperative Quellcodedateien und Ressourcendateien.
 -   Ihre App kann die Gerätefamilie erkennen, mit der sie ausgeführt wird, und eine Ansicht verwenden, die speziell für diese Gerätefamilie gestaltet wurde. Weitere Informationen finden Sie unter [Erkennen der Plattform, auf der Ihre App ausgeführt wird](wpsl-to-uwp-input-and-sensors.md).
 -   Steht keine Alternative zur Verfügung, ist unter Umständen folgende ähnliche Methode hilfreich: Versehen Sie eine Markupdatei oder eine **ResourceDictionary**-Datei (oder den Ordner, der die Datei enthält) mit einem speziellen Namen, sodass sie automatisch zur Laufzeit nur geladen wird, wenn Ihre App mit einer bestimmten Gerätefamilie ausgeführt wird. Diese Methode wird in der Fallstudie [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md) veranschaulicht.
--   Für Features, die nicht bei allen Gerätefamilien zur Verfügung stehen (wie etwa Drucker, Scanner oder die Kamerataste), können Sie adaptiven Code schreiben. Weitere Informationen finden Sie im dritten Beispiel dieses Themas unter [Bedingte Kompilierung und adaptiver Code](#conditional-compilation).
+-   Für Features, die nicht bei allen Gerätefamilien zur Verfügung stehen (wie etwa Drucker, Scanner oder die Kamerataste), können Sie adaptiven Code schreiben. Weitere Informationen finden Sie im dritten Beispiel dieses Themas unter [Bedingte Kompilierung und adaptiver Code](#conditional-compilation-and-adaptive-code).
 -   Wenn Sie sowohl Windows Phone Silverlight als auch Windows 10 unterstützen möchten, können Sie Quellcodedateien u. U. für mehrere Projekte nutzen. Klicken Sie dazu in Visual Studio im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, wählen Sie **Vorhandenes Element hinzufügen** und dann die freizugebenden Dateien aus, und klicken Sie auf **Als Link hinzufügen**. Speichern Sie die Quellcodedateien in einem gemeinsamen Ordner im Dateisystem, in dem sie für verknüpfte Projekte sichtbar sind, und vergessen Sie nicht, sie der Quellcodeverwaltung hinzuzufügen. Wenn Sie Ihren imperativen Quellcode so unterteilen können, dass der Großteil einer Datei oder die ganze Datei auf beiden Plattformen funktioniert, benötigen Sie nicht zwei Kopien. Sie können plattformspezifische Logik in der Datei bei Bedarf mit bedingten Kompilierungsdirektiven oder Laufzeitbedingungen umschließen. Weitere Informationen finden Sie im nächsten Abschnitt [C#-Präprozessordirektiven](http://msdn.microsoft.com/library/ed8yd1ha.aspx).
 -   Für die Wiederverwendung auf der binären Ebene, anstatt auf der Quellcodeebene, gibt es portierbare Klassenbibliotheken. Diese unterstützen die Teilmenge der .NET-APIs, die in Windows Phone Silverlight verfügbar sind, und die Teilmenge für Windows 10-Apps (.NET-Kern). Portable Klassenbibliothekassemblys sind mit allen diesen .NET-Plattformen sowie weiteren Plattformen binärkompatibel. Erstellen Sie mit Visual Studio ein Projekt für eine portable Klassenbibliothek. Weitere Informationen finden Sie unter [Plattformübergreifende Entwicklung mit der portablen Klassenbibliothek](http://msdn.microsoft.com/library/gg597391.aspx).
 
@@ -145,10 +152,5 @@ Kenntnisse in der Bearbeitung des App-Paketmanifests sind von Vorteil, da es in 
 Weitere Informationen finden Sie unter [Schemareferenz zu Paketmanifesten für Windows 10](https://msdn.microsoft.com/library/windows/apps/dn934820).
 
 Das nächste Thema ist [Problembehandlung](wpsl-to-uwp-troubleshooting.md).
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

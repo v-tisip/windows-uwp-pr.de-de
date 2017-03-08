@@ -3,26 +3,33 @@ author: msatranjr
 title: "Windows-Runtime-Komponenten in C++ erstellen und Aufruf über JavaScript oder C#"
 description: "In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie eine einfache Komponenten-DLL-Datei für Windows-Runtime erstellen, die von JavaScript, C# oder Visual Basic aufgerufen werden kann."
 ms.assetid: 764CD9C6-3565-4DFF-88D7-D92185C7E452
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
-ms.openlocfilehash: 0085d3edb2ec1fbe14ce268c54532cd246a73dde
+ms.sourcegitcommit: 3c073879ab847a3e1af454e0c1550d8af0f78b3e
+ms.openlocfilehash: e02d7fabf6337fa23ab97858046c3b089c39a087
+ms.lasthandoff: 01/19/2017
 
 ---
 
 <h1>Exemplarische Vorgehensweise: Erstellen einer Komponente für Windows-Runtime in C++ und Aufrufen der Komponente über JavaScript oder C#</h1>
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie eine einfache Komponenten-DLL-Datei für Windows-Runtime erstellen, die von JavaScript, C# oder Visual Basic aufgerufen werden kann. Bevor Sie mit dieser exemplarischen Vorgehensweise beginnen, stellen Sie sicher, dass Sie Konzepte wie die abstrakte binäre Schnittstelle (ABI), Verweisklassen und Visual C++-Komponentenerweiterungen kennen, die das Verwenden von Verweisklassen vereinfachen. Weitere Informationen finden Sie unter [Erstellen von Komponenten für Windows-Runtime in C++](creating-windows-runtime-components-in-cpp.md) und [Visual C++-Programmiersprachenreferenz (C++/CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx).
 
-## Erstellen der C++-Komponenten-DLL-Datei
+## <a name="creating-the-c-component-dll"></a>Erstellen der C++-Komponenten-DLL-Datei
 
 In diesem Beispiel erstellen wir zunächst das Komponentenprojekt. Sie können aber auch das JavaScript-Projekt zuerst erstellen. Die Reihenfolge spielt keine Rolle.
 
 Beachten Sie, dass die Hauptklasse der Komponente Beispiele für Eigenschafts- und Methodendefinitionen sowie eine Ereignisdeklaration enthält. Diese werden nur aus Gründen der Anschaulichkeit bereitgestellt. Sie sind nicht erforderlich, und in diesem Beispiel ersetzen wir den gesamten generierten Code durch unseren eigenen Code.
 
-## **So erstellen Sie das C++-Komponentenprojekt**
+## **<a name="to-create-the-c-component-project"></a>So erstellen Sie das C++-Komponentenprojekt**
 
 Klicken Sie in der Visual Studio-Menüleiste auf **Datei, Neu, Projekt**.
 
@@ -32,7 +39,7 @@ Wählen Sie im mittleren Bereich **Komponente für Windows-Runtime** aus, und ge
 
 Klicken Sie auf die Schaltfläche **OK**.
 
-## **So fügen Sie der Komponente eine aktivierbare Klasse hinzu**
+## **<a name="to-add-an-activatable-class-to-the-component"></a>So fügen Sie der Komponente eine aktivierbare Klasse hinzu**
 
 Eine aktivierbare Klasse kann vom Clientcode mithilfe eines **new**-Ausdrucks (**New** in Visual Basic oder **ref new** in C++) erstellt werden. In der Komponente können Sie sie als **public ref class sealed** deklarieren. Die Class1.h- und CPP-Dateien verfügen bereits über eine Verweisklasse. Sie können den Namen ändern, aber in diesem Beispiel verwenden wir den Standardnamen – Class1. Sie können zusätzliche Verweisklassen oder Standardklassen in der Komponente definieren, falls sie benötigt werden. Weitere Informationen zu Verweisklassen finden Sie unter [Typsystem (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755822.aspx).
 
@@ -47,7 +54,7 @@ Fügen Sie diese \#include-Direktiven zu „Class1.h“ hinzu:
 
 „collection.h“ ist die Headerdatei für konkrete C++-Klassen wie die Platform::Collections::Vector-Klasse und die Platform::Collections::Map-Klasse, die sprachunabhängige, durch die Windows-Runtime definierte Schnittstellen implementieren. Die AMP-Header werden verwendet, um Berechnungen auf der GPU auszuführen. Sie haben keine Windows-Runtime-Entsprechungen. Das ist in Ordnung, da sie privat sind. Im Allgemeinen sollten Sie aus Leistungsgründen ISO-C++-Code und Standardbibliotheken intern innerhalb der Komponente verwenden. Nur die Windows-Runtime-Schnittstelle muss in Windows-Runtime-Typen ausgedrückt werden.
 
-## So fügen Sie einen Delegaten im Gültigkeitsbereich des Namespaces hinzu
+## <a name="to-add-a-delegate-at-namespace-scope"></a>So fügen Sie einen Delegaten im Gültigkeitsbereich des Namespaces hinzu
 
 Ein Delegat ist ein Konstrukt, das die Parameter und den Rückgabetyp für Methoden definiert. Ein Ereignis ist eine Instanz eines bestimmten Delegattyps, und eine Ereignishandlermethode, die das Ereignis abonniert, muss über die Signatur verfügen, die im Delegat angegeben wird. Der folgende Code definiert einen Delegattyp, der „int“ erhält und „void“ zurückgibt. Der Code deklariert danach ein öffentliches Ereignis dieses Typs. Dadurch kann der Clientcode Methoden bereitstellen, die beim Auslösen des Ereignisses aufgerufen werden.
 
@@ -59,7 +66,7 @@ public delegate void PrimeFoundHandler(int result);
 
 Wenn der Code beim Einfügen in Visual Studio nicht korrekt ausgerichtet wird, drücken Sie STRG+K+D, um den Einzug für die gesamte Datei zu korrigieren.
 
-## So fügen Sie öffentliche Member hinzu.
+## <a name="to-add-the-public-members"></a>So fügen Sie öffentliche Member hinzu.
 
 Die Klasse stellt drei öffentliche Methoden und ein öffentliches Ereignis bereit. Die erste Methode ist synchron, da sie immer sehr schnell ausgeführt wird. Da die anderen beiden Methoden einige Zeit in Anspruch nehmen können, sind sie asynchron, damit sie den UI-Thread nicht blockieren. Diese Methoden geben IAsyncOperationWithProgress und IAsyncActionWithProgress zurück. „IAsyncOperationWithProgress“ definiert eine asynchrone Methode, die ein Ergebnis zurückgibt, und „IAsyncActionWithProgress“ definiert eine asynchrone Methode, die „void“ zurückgibt. Diese Schnittstellen ermöglichen auch, dass der Clientcode Updates zum Status des Vorgangs erhält.
 
@@ -78,7 +85,7 @@ public:
         event PrimeFoundHandler^ primeFoundEvent;
 
 ```
-## So fügen Sie private Member hinzu
+## <a name="to-add-the-private-members"></a>So fügen Sie private Member hinzu
 
 Die Klasse enthält drei private Member: zwei Hilfsmethoden für die numerischen Berechnungen und ein CoreDispatcher-Objekt, das verwendet wird, um die Ereignisaufrufe von Workerthreads zurück an den UI-Thread zu marshallen.
 
@@ -88,7 +95,7 @@ private:
         Windows::UI::Core::CoreDispatcher^ m_dispatcher;
 ```
 
-## So fügen Sie die Header- und Namespacedirektiven hinzu
+## <a name="to-add-the-header-and-namespace-directives"></a>So fügen Sie die Header- und Namespacedirektiven hinzu
 
 Fügen Sie in „Class1.cpp“ die folgenden #include-Direktiven hinzu:
 
@@ -107,7 +114,7 @@ using namespace Windows::Foundation;
 using namespace Windows::UI::Core;
 ```
 
-## So fügen Sie die Implementierung für ComputeResult hinzu
+## <a name="to-add-the-implementation-for-computeresult"></a>So fügen Sie die Implementierung für ComputeResult hinzu
 
 Fügen Sie in „Class1.cpp“ die folgende Methodenimplementierung hinzu. Diese Methode wird synchron auf dem aufrufenden Thread ausgeführt, ist aber sehr schnell, da sie C++ AMP verwendet, um die Berechnung auf der GPU zu parallelisieren. Weitere Informationen finden Sie in der C++ AMP-Übersicht. Die Ergebnisse werden an einen konkreten Platform::Collections::Vector<T>-Typ angefügt, der bei der Rückgabe implizit in einen Windows::Foundation::Collections::IVector<T>-Typ konvertiert wird.
 
@@ -141,7 +148,7 @@ IVector<double>^ Class1::ComputeResult(double input)
     return res;
 }
 ```
-## So fügen Sie die Implementierung für „GetPrimesOrdered“ und die Hilfsmethode hinzu
+## <a name="to-add-the-implementation-for-getprimesordered-and-its-helper-method"></a>So fügen Sie die Implementierung für „GetPrimesOrdered“ und die Hilfsmethode hinzu
 
 Fügen Sie die Implementierungen für „GetPrimesOrdered“ und die Hilfsmethode „is_prime“ in „Class1.cpp“ hinzu. „GetPrimesOrdered“ verwendet eine cConcurrent_vector-Klasse und eine parallel_for-Funktionsschleife zur Aufteilung der Arbeit und um die maximalen Ressourcen des Computers zu verwenden, auf dem das Programm ausgeführt wird, um Ergebnisse zu erzielen. Nachdem die Ergebnisse berechnet, gespeichert und sortiert wurden, werden sie einem Platform::Collections::Vector<T>-Typ hinzugefügt und als „Windows::Foundation::Collections::IVector<T>“ an den Clientcode zurückgegeben.
 
@@ -211,7 +218,7 @@ IAsyncOperationWithProgress<IVector<int>^, double>^ Class1::GetPrimesOrdered(int
 }
 ```
 
-## So fügen Sie die Implementierung für „GetPrimesUnordered“ hinzu
+## <a name="to-add-the-implementation-for-getprimesunordered"></a>So fügen Sie die Implementierung für „GetPrimesUnordered“ hinzu
 
 Der letzte Schritt zum Erstellen der C++-Komponente ist das Hinzufügen der Implementierung für „GetPrimesUnordered“ in „Class1.cpp“. Diese Methode gibt jedes einzelne Ergebnis sofort beim Auffinden zurück – ohne zu warten, bis alle Ergebnisse gefunden wurden. Jedes Ergebnis wird im Ereignishandler zurückgegeben und auf der Benutzeroberfläche in Echtzeit angezeigt. Beachten Sie auch hier, dass ein Statusbericht verwendet wird. Diese Methode verwendet auch die Hilfsmethode „is_prime“.
 
@@ -273,11 +280,11 @@ IAsyncActionWithProgress<double>^ Class1::GetPrimesUnordered(int first, int last
 }
 ```
 
-## Erstellen einer JavaScript-Client-App
+## <a name="creating-a-javascript-client-app"></a>Erstellen einer JavaScript-Client-App
 
 Wenn Sie nur einen C#-Client erstellen möchten, können Sie diesen Abschnitt überspringen.
 
-## So erstellen Sie ein JavaScript-Projekt
+## <a name="to-create-a-javascript-project"></a>So erstellen Sie ein JavaScript-Projekt
 
 Öffnen Sie im Projektmappen-Explorer das Kontextmenü des Lösungsknotens, und wählen Sie **Hinzufügen, Neues Projekt** aus.
 
@@ -295,7 +302,7 @@ Wählen Sie im linken Bereich des Dialogfelds „Verweis-Manager“ die Option *
 
 Wählen Sie im mittleren Bereich „WinRT_CPP“ und dann die Schaltfläche **OK** aus.
 
-## So fügen Sie den HTML-Code hinzu, der die JavaScript-Ereignishandler aufruft
+## <a name="to-add-the-html-that-invokes-the-javascript-event-handlers"></a>So fügen Sie den HTML-Code hinzu, der die JavaScript-Ereignishandler aufruft
 
 Fügen Sie diesen HTML-Code in den <body>-Knoten der Seite „default.HTML“ ein:
 
@@ -333,7 +340,7 @@ Fügen Sie diesen HTML-Code in den <body>-Knoten der Seite „default.HTML“ ei
  </div>
 ```
 
-## So fügen Sie Formate hinzu
+## <a name="to-add-styles"></a>So fügen Sie Formate hinzu
 
 Entfernen Sie in „default.css“ das body-Format, und fügen Sie dann diese Formate hinzu:
 
@@ -368,7 +375,7 @@ font-size:smaller;
 }
 ```
 
-## So fügen Sie die JavaScript-Ereignishandler hinzu, die die Komponenten-DLL aufrufen
+## <a name="to-add-the-javascript-event-handlers-that-call-into-the-component-dll"></a>So fügen Sie die JavaScript-Ereignishandler hinzu, die die Komponenten-DLL aufrufen
 
 Fügen Sie am Ende der Datei „default.js“ die folgenden Funktionen hinzu. Diese Funktionen werden aufgerufen, wenn die Schaltflächen auf der Hauptseite ausgewählt werden. Beachten Sie, wie JavaScript die C++-Klasse aktiviert und dann ihre Methoden aufruft und die Rückgabewerte zum Auffüllen der HTML-Beschriftungen verwendet.
 
@@ -450,9 +457,9 @@ args.setPromise(WinJS.UI.processAll().then( function completed() {
 
 Drücken Sie F5, um die App auszuführen.
 
-## Erstellen einer C#-Client-App
+## <a name="creating-a-c-client-app"></a>Erstellen einer C#-Client-App
 
-## So erstellen Sie ein C#-Projekt
+## <a name="to-create-a-c-project"></a>So erstellen Sie ein C#-Projekt
 
 Öffnen Sie im Projektmappen-Explorer das Kontextmenü für den Lösungsknoten, und wählen Sie dann **Hinzufügen, Neues Projekt** aus.
 
@@ -470,7 +477,7 @@ Wählen Sie im linken Bereich des Dialogfelds **Verweis-Manager** die Option **P
 
 Wählen Sie im mittleren Bereich „WinRT_CPP“ und dann die Schaltfläche **OK** aus.
 
-## So fügen Sie den XAML-Code hinzu, der die Benutzeroberfläche definiert
+## <a name="to-add-the-xaml-that-defines-the-user-interface"></a>So fügen Sie den XAML-Code hinzu, der die Benutzeroberfläche definiert
 
 Kopieren Sie den folgenden Code in das Grid-Element in „MainPage.xaml“.
 
@@ -492,7 +499,7 @@ Kopieren Sie den folgenden Code in das Grid-Element in „MainPage.xaml“.
 </ScrollViewer>
 ```
 
-## So fügen Sie die Ereignishandler für die Schaltflächen hinzu
+## <a name="to-add-the-event-handlers-for-the-buttons"></a>So fügen Sie die Ereignishandler für die Schaltflächen hinzu
 
 Öffnen Sie die Datei „MainPage.xaml.cs“ im Projektmappen-Explorer. (Die Datei befindet sich möglicherweise unter „MainPage.xaml“.) Fügen Sie eine using-Direktive für „System.Text“ und dann den Ereignishandler für die Logarithmusberechnung in der „MainPage“-Klasse hinzu.
 
@@ -593,25 +600,25 @@ private void Clear_Button_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## Ausführen der App
+## <a name="running-the-app"></a>Ausführen der App
 
 Wählen Sie das C#-Projekt oder das JavaScript-Projekt als Startprojekt aus, indem Sie das Kontextmenü für den Projektknoten im Projektmappen-Explorer öffnen und **Als Startprojekt festlegen** auswählen. Drücken Sie dann F5 zum Ausführen mit Debugging oder STRG+F5 zum Ausführen ohne Debugging.
 
-## Untersuchen der Komponente im Objektkatalog (optional)
+## <a name="inspecting-your-component-in-object-browser-optional"></a>Untersuchen der Komponente im Objektkatalog (optional)
 
 Im Objektkatalog können Sie alle Windows-Runtime-Typen untersuchen, die in WINMD-Dateien definiert werden. Dazu zählen die Typen im Plattformnamespace und Standardnamespace. Da die Typen im „Platform::Collections“-Namespace aber in der Headerdatei „collections.h“ und nicht in einer WINMD-Datei definiert werden, werden sie nicht im Objektkatalog angezeigt.
 
-## **So untersuchen Sie eine Komponente**
+## **<a name="to-inspect-a-component"></a>So untersuchen Sie eine Komponente**
 
 Wählen Sie auf der Menüleiste **Ansicht, Objektkatalog** (STRG+ALT+J) aus.
 
 Erweitern Sie im linken Bereich des Objektkatalogs den Knoten „WinRT\_CPP“ zum Anzeigen von Typen und Methoden, die in der Komponente definiert werden.
 
-## Tipps zum Debuggen
+## <a name="debugging-tips"></a>Tipps zum Debuggen
 
 Laden Sie für einen besseren Debugvorgang die Debuggingsymbole von den öffentlichen Microsoft-Symbolservern herunter:
 
-## **So laden Sie Debuggingsymbole herunter**
+## **<a name="to-download-debugging-symbols"></a>So laden Sie Debuggingsymbole herunter**
 
 Wählen Sie auf der Menüleiste **Extras, Optionen** aus.
 
@@ -629,12 +636,7 @@ Wenn der JavaScript-Code die öffentlichen Eigenschaften oder Methoden in der Ko
 
 Wenn Sie ein C++-Komponentenprojekt für Windows-Runtime aus einer Projektmappe entfernen, müssen Sie den Projektverweis auch aus dem JavaScript-Projekt manuell entfernen. Andernfalls werden nachfolgende Debug- oder Buildvorgänge verhindert. Bei Bedarf können Sie dann einen Assemblyverweis zur DLL-Datei hinzufügen.
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Erstellen von Komponenten für Windows-Runtime in C++](creating-windows-runtime-components-in-cpp.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

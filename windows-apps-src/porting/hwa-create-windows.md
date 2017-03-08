@@ -3,9 +3,17 @@ author: seksenov
 title: "Gehostete Web Apps – Konvertieren Ihrer Webanwendung in eine Windows-App mithilfe von Visual Studio"
 description: "Verwenden Sie Visual Studio, um Ihre Website in eine App für die Universelle Windows-Plattform (UWP) für Windows 10 zu konvertieren."
 kw: Hosted Web Apps tutorial, Porting to Windows 10 with Visual Studio, How to convert website to Windows, How to add website to Windows Store, Packaging web application for Microsoft Store, Test Windows 10 native features and runtime APIs with CodePen, How to use Windows Cortana Live Tiles Built-in Camera on my Website with remote JavaScript
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Gehostete Web-Apps, Web-Apps auf Windows 10 portieren, Website in Windows konvertieren, Web-Apps für Windows Store verpacken"
+ms.assetid: a58d2c67-77f8-4d01-bea3-a6ebce2d73b9
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: 1cb4757896c9fecf05224a26949cd6e2ddffdb45
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: b6781883a3e48d35a558798f369e91c4a7ea3bec
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -14,7 +22,7 @@ ms.openlocfilehash: 1cb4757896c9fecf05224a26949cd6e2ddffdb45
 Erfahren Sie, wie Sie schnell eine App für die Universelle Windows-Plattform für Windows 10 mithilfe einer Website-URL erstellen. 
 
 > [!NOTE]
-> Die folgenden Anweisungen gelten für die Verwendung mit einer Windows-Entwicklungsplattform. Mac-Benutzer sollten sich in den [Anweisungen zur Verwendung einer Mac-Entwicklungsplattform](/hwa-create-mac.md) informieren.
+> Die folgenden Anweisungen gelten für die Verwendung mit einer Windows-Entwicklungsplattform. Mac-Benutzer sollten sich in den [Anweisungen zur Verwendung einer Mac-Entwicklungsplattform](./hwa-create-mac.md) informieren.
 
 ## <a name="what-you-need-to-develop-on-windows"></a>Voraussetzungen für die Entwicklung auf einem Windows-Computer
 
@@ -96,9 +104,4 @@ function cameraCapture() {
 - [Optimieren Ihrer Web-App durch den Zugriff auf Features für die Universelle Windows-Plattform (UWP)](hwa-access-features.md)
 - [Anleitung für Apps für die Universelle Windows-Plattform (UWP)](http://go.microsoft.com/fwlink/p/?LinkID=397871)
 - [Herunterladen von Designressourcen für Windows Store-Apps](https://msdn.microsoft.com/library/windows/apps/xaml/bg125377.aspx)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

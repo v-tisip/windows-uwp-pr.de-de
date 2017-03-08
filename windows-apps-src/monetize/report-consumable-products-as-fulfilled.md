@@ -1,40 +1,44 @@
 ---
 author: mcleanbyron
 ms.assetid: E9BEB2D2-155F-45F6-95F8-6B36C3E81649
-description: "Verwenden Sie diese Methode aus der Windows Store Collection-API, um den Kauf eines Verbrauchsprodukt für einen bestimmten Kunden als abgewickelt zu melden. Damit ein Benutzer ein Verbrauchsprodukt erneut erwerben kann, muss Ihre App oder Ihr Dienst das Verbrauchsprodukt für den betreffenden Benutzer als abgewickelt melden."
-title: "Melden von Verbrauchsprodukten als erfüllt"
+description: "Verwenden Sie diese Methode aus der Windows Store Collection-API, um den Kauf eines Verbrauchsprodukt für einen bestimmten Kunden als abgewickelt zu melden. Damit ein Benutzer ein Verbrauchsprodukt erneut erwerben kann, muss Ihre App oder Ihr Dienst das Verbrauchsprodukt für den betreffenden Benutzer als erfüllt melden."
+title: "Verbrauchsprodukte als erfüllt melden"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Windows Store-Sammlungs-API, erfüllen, Verbrauchsprodukt"
 translationtype: Human Translation
-ms.sourcegitcommit: ac9c921c7f39a1bdc6dc9fc9283bc667f67cd820
-ms.openlocfilehash: 54095c7fd3c29fe7596be4c4b5a7148d078a7091
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 201e4fedc5f36202cba4c495ae9344d5a7975d62
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Melden von Verbrauchsprodukten als erfüllt
+# <a name="report-consumable-products-as-fulfilled"></a>Verbrauchsprodukte als erfüllt melden
 
-
-
-
-Verwenden Sie diese Methode aus der Windows Store Collection-API, um den Kauf eines Verbrauchsprodukt für einen bestimmten Kunden als abgewickelt zu melden. Damit ein Benutzer ein Verbrauchsprodukt erneut erwerben kann, muss Ihre App oder Ihr Dienst das Verbrauchsprodukt für den betreffenden Benutzer als erfüllt melden.
+Verwenden Sie diese Methode in der Windows Store Collection-API, um den Kauf eines Verbrauchsprodukts für einen bestimmten Kunden als erfüllt zu melden. Damit ein Benutzer ein Verbrauchsprodukt erneut erwerben kann, muss Ihre App oder Ihr Dienst das Verbrauchsprodukt für den betreffenden Benutzer als erfüllt melden.
 
 Sie können diese Methode auf zwei Weisen verwenden, um ein Verbrauchsprodukt als erfüllt zu melden:
 
 * Geben Sie die (im **itemId**-Parameter einer [Produktabfrage](query-for-products.md)) zurückgegebene) Artikelkennung des Verbrauchsprodukts und eine von Ihnen bereitgestellte eindeutige Tracking-ID an. Wenn die gleiche Tracking-ID für mehrere Versuche verwendet wird, wird auch dann das gleiche Ergebnis zurückgegeben, wenn der Artikel bereits in Anspruch genommen wurde. Wenn Sie nicht sicher sind, ob eine Verbrauchsanforderung erfolgreich war, sollte Ihr Dienst Verbrauchsanforderungen mit derselben Tracking-ID erneut übermitteln. Die Tracking-ID ist immer mit der jeweiligen Verbrauchsanforderung verknüpft und kann beliebig oft erneut übermittelt werden.
 * Geben Sie die (im **productId**-Parameter einer [Produktabfrage](query-for-products.md) zurückgegebene) Produkt-ID und eine Transaktions-ID an, die aus einer der Quellen abgerufen wird, die in der Beschreibung für den **transactionId**-Parameter im Abschnitt „Anforderungstext“ unten aufgeführt sind.
 
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 
 Zur Verwendung dieser Methode benötigen Sie:
 
-* Ein AzureAD-Zugriffstoken, das mit dem Zielgruppen-URI `https://onestore.microsoft.com` erstellt wurde.
-* Ein WindowsStore-ID-Schlüssel, der [aus clientseitigem Code in Ihrer App generiert wurde](view-and-grant-products-from-a-service.md#step-4).
+* Ein Azure AD-Zugriffstoken, das mit dem Zielgruppen-URI `https://onestore.microsoft.com` erstellt wurde.
+* Ein Windows Store-ID-Schlüssel, der die Identität des Benutzers darstellt, für den Sie ein Verbrauchsprodukt als erfüllt melden möchten.
 
-Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von Produktansprüchen aus einem Dienst](view-and-grant-products-from-a-service.md).
+Weitere Informationen finden Sie unter [Verwalten von Produktansprüchen aus einem Dienst](view-and-grant-products-from-a-service.md).
 
-## Anforderung
+## <a name="request"></a>Anfordern
 
 
-### Anforderungssyntax
+### <a name="request-syntax"></a>Anforderungssyntax
 
 | Methode | Anforderungs-URI                                                   |
 |--------|---------------------------------------------------------------|
@@ -42,7 +46,7 @@ Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von
 
 <span/> 
 
-### Anforderungsheader
+### <a name="request-header"></a>Anforderungsheader
 
 | Header         | Typ   | Beschreibung                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
@@ -53,30 +57,30 @@ Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von
 
 <span/>
 
-### Anforderungstext
+### <a name="request-body"></a>Anforderungstext
 
 | Parameter     | Typ         | Beschreibung         | Erforderlich |
 |---------------|--------------|---------------------|----------|
-| beneficiary   | UserIdentity | Der Benutzer, für den dieser Artikel genutzt wird.                                                                                                                                                                                                                                                                 | Ja      |
-| itemId        | String       | Der von einer [Produktabfrage](query-for-products.md) zurückgegebene „itemId“-Wert. Verwenden Sie diesen Parameter mit „trackingId“.                                                                                                                                                                                                  | Nein       |
-| trackingId    | GUID         | Eine eindeutige, vom Entwickler angegebene Tracking-ID. Verwenden Sie diesen Parameter mit „itemId“.                                                                                                                                                                                                                                     | Nein       |
-| Produkt-ID     | String       | Der von einer [Produktabfrage](query-for-products.md) zurückgegebene „productId“-Wert. Verwenden Sie diesen Parameter mit „transactionId“.                                                                                                                                                                                            | Nein       |
-| transactionId | GUID         | Ein Transaktions-ID-Wert, der aus einer der folgenden Quellen abgerufen wird. Verwenden Sie diesen Parameter mit „productId“.  <br/><br/><ul><li>Die [TransactionID](https://msdn.microsoft.com/library/windows/apps/dn263396)-Eigenschaft der [PurchaseResults](https://msdn.microsoft.com/library/windows/apps/dn263392)-Klasse.</li><li>Der von [RequestProductPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/dn263381), [RequestAppPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/hh967813) oder [GetAppReceiptAsync](https://msdn.microsoft.com/library/windows/apps/hh967811) zurückgegebene App- oder Produktbeleg.</li><li>Der von einer [Produktabfrage](query-for-products.md)zurückgegebene transactionId-Parameter.</li></ul>                                                                                                                                                                                                                                   | Nein       |
+| beneficiary   | UserIdentity | Der Benutzer, für den dieser Artikel genutzt wird. Weitere Informationen finden Sie in der folgenden Tabelle.        | Ja      |
+| itemId        | Zeichenfolge       | Der Wert *itemId*, der von einer [Produktanfrage](query-for-products.md) zurückgegeben wird. Verwenden Sie diesen Parameter mit *trackingId*.      | Nein       |
+| trackingId    | guid         | Eine eindeutige, vom Entwickler angegebene Tracking-ID. Verwenden Sie diesen Parameter mit *itemId*.         | Nein       |
+| Produkt-ID     | Zeichenfolge       | Der Wert *productId*, den eine [Produktabfrage](query-for-products.md) zurückgibt. Verwenden Sie diesen Parameter mit *transactionId*.   | Nein.       |
+| transactionId | guid         | Ein Transaktions-ID-Wert, der aus einer der folgenden Quellen abgerufen wird. Verwenden Sie diesen Parameter mit *productId*.  <br/><br/><ul><li>Die [TransactionID](https://msdn.microsoft.com/library/windows/apps/dn263396)-Eigenschaft der [PurchaseResults](https://msdn.microsoft.com/library/windows/apps/dn263392)-Klasse.</li><li>Der von [RequestProductPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/dn263381), [RequestAppPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/hh967813) oder [GetAppReceiptAsync](https://msdn.microsoft.com/library/windows/apps/hh967811) zurückgegebene App- oder Produktbeleg.</li><li>Der Parameter *transactionId*, der von einer [Produktabfrage](query-for-products.md) zurückgegeben wird.</li></ul>   | Nein       |
 
  
 <span/>
 
 Das UserIdentity-Objekt enthält die folgenden Parameter.
 
-| Parameter            | Typ   | Beschreibung                                                                                                                                 | Erforderlich |
-|----------------------|--------|---------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| identityType         | string | Gibt den Zeichenfolgenwert **b2b** an.                                                                                                           | Ja      |
-| identityValue        | string | Der WindowsStore-ID-Schlüssel, der [aus clientseitigem Code in Ihrer App generiert wurde](view-and-grant-products-from-a-service.md#step-4).                                                                                                   | Ja      |
-| localTicketReference | string | Der angeforderte Bezeichner für die zurückgegebene Antwort. Es wird empfohlen, denselben Wert als *userId*-Anspruch im Windows Store-ID-Schlüssel zu verwenden. | Ja      |
+| Parameter            | Typ   | Beschreibung       | Erforderlich |
+|----------------------|--------|-------------------|----------|
+| identityType         | string | Geben Sie den Zeichenfolgenwert **b2b** an.    | Ja.      |
+| identityValue        | Zeichenfolge | Der [Windows Store-ID-Schlüssel](view-and-grant-products-from-a-service.md#step-4), der die Identität des Benutzers darstellt, für den Sie ein Verbrauchsprodukt als erfüllt melden möchten.      | Ja      |
+| localTicketReference | Zeichenfolge | Der angeforderte Bezeichner für die zurückgegebene Antwort. Es wird empfohlen, denselben Wert wie die *userId*  [claim](view-and-grant-products-from-a-service.md#claims-in-a-windows-store-id-key) im Windows Store-ID-Schlüssel zu verwenden. | Ja      |
 
 <span/> 
 
-### Anforderungsbeispiele
+### <a name="request-examples"></a>Anforderungsbeispiele
 
 Im folgenden Beispiel werden *itemId* und *trackingId* verwendet.
 
@@ -118,12 +122,12 @@ Host: collections.md.mp.microsoft.com
 }
 ```
 
-## Antwort
+## <a name="response"></a>Antwort
 
 
 Bei erfolgreicher Nutzung wird kein Inhalt zurückgegeben.
 
-### Antwortbeispiel
+### <a name="response-example"></a>Antwortbeispiel
 
 ```syntax
 HTTP/1.1 204 No Content
@@ -135,29 +139,21 @@ MS-ServerId: 030011326
 Date: Tue, 22 Sep 2015 20:40:55 GMT
 ```
 
-## Fehlercodes
+## <a name="error-codes"></a>Fehlercodes
 
 
-| Code | Fehler        | Interner Fehlercode           | Beschreibung                                                                                                                                                                           |
-|------|--------------|----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Code | Fehler        | Interner Fehlercode           | Beschreibung           |
+|------|--------------|----------------------------|-----------------------|
 | 401  | Nicht autorisiert | AuthenticationTokenInvalid | Das Azure AD-Zugriffstoken ist ungültig. In einigen Fällen enthalten die Details zu ServiceError weitere Informationen, z. B. wenn das Token abgelaufen ist oder der *appid*-Anspruch fehlt. |
 | 401  | Nicht autorisiert | PartnerAadTicketRequired   | An den Dienst wurde im Autorisierungsheader kein Azure AD-Zugriffstoken übergeben.                                                                                                   |
 | 401  | Nicht autorisiert | InconsistentClientId       | Der *clientId*-Anspruch im Windows Store-ID-Schlüssel im Anforderungstext und der *appid*-Anspruch im Azure AD-Zugriffstoken im Autorisierungsheader stimmen nicht überein.                     |
 
 <span/> 
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
-* [Anzeigen von Produkten und Gewähren von Produktansprüchen aus einem Dienst](view-and-grant-products-from-a-service.md)
+* [Verwalten von Produktansprüchen aus einem Dienst](view-and-grant-products-from-a-service.md)
 * [Produktabfrage](query-for-products.md)
 * [Gewähren kostenloser Produkte](grant-free-products.md)
 * [Verlängern eines Windows Store-ID-Schlüssels](renew-a-windows-store-id-key.md)
- 
-
- 
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

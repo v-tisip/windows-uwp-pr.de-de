@@ -3,21 +3,28 @@ author: TylerMSFT
 title: Starten der Kontakte-App
 description: "In diesem Thema wird das ms-people-URI-Schema beschrieben. Ihre App kann dieses URI-Schema verwenden, um die Kontakte-App für bestimmte Aktionen zu starten."
 ms.assetid: 1E604599-26EF-421C-932F-E9935CDB248E
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: 3125ec2a73410f3d3f5b13e154ea30b1319a9a1e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 25abea87eaf374a1a8b5432c522d51bd7bbc1c1e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Starten der Kontakte-App
+# <a name="launch-the-people-app"></a>Starten der Kontakte-App
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 In diesem Thema wird das **ms-people:**-URI-Schema beschrieben. Ihre App kann dieses URI-Schema verwenden, um die Kontakte-App für bestimmte Aktionen zu starten.
 
-## ms-people: URI-Schemaverweis
+## <a name="ms-people-uri-scheme-reference"></a>ms-people: URI-Schemaverweis
 
 
 <table>
@@ -82,7 +89,7 @@ In diesem Thema wird das **ms-people:**-URI-Schema beschrieben. Ihre App kann di
 
  
 
-## ms-people:search: Parameterverweis
+## <a name="ms-peoplesearch-parameter-reference"></a>ms-people:search: Parameterverweis
 
 
 <table>
@@ -111,7 +118,7 @@ In diesem Thema wird das **ms-people:**-URI-Schema beschrieben. Ihre App kann di
 
  
 
-## ms-people:viewcontact: Parameterverweis
+## <a name="ms-peopleviewcontact-parameter-reference"></a>ms-people:viewcontact: Parameterverweis
 
 
 <table>
@@ -163,7 +170,7 @@ In diesem Thema wird das **ms-people:**-URI-Schema beschrieben. Ihre App kann di
 
  
 
-## ms-people:savetocontact: Parameterverweis
+## <a name="ms-peoplesavetocontact-parameter-reference"></a>ms-people:savetocontact: Parameterverweis
 
 
 <table>
@@ -206,9 +213,4 @@ In diesem Thema wird das **ms-people:**-URI-Schema beschrieben. Ihre App kann di
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

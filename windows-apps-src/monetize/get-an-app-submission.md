@@ -2,14 +2,21 @@
 author: mcleanbyron
 ms.assetid: BF296C25-A2E6-48E4-9D08-0CCDB5FAE0C8
 description: "Verwenden Sie diese Methode aus der Windows Store-Übermittlungs-API zum Abrufen von Daten für eine vorhandene App-Übermittlung."
-title: "Abrufen einer App-Übermittlung mit der Windows Store-Übermittlungs-API"
+title: "Abrufen einer App-Übermittlung mithilfe der Windows Store-Übermittlungs-API"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Windows Store-Übermittlungs-API, App-Übermittlung"
 translationtype: Human Translation
-ms.sourcegitcommit: f52059a37194b78db2f9bb29a5e8959b2df435b4
-ms.openlocfilehash: b092658a22b76f044000fb6accc90382dc3bd360
+ms.sourcegitcommit: e5d9d3e08aaae7e349f7aaf23f6683e2ce9a4f88
+ms.openlocfilehash: 1763ba9ebf95c37afbbb219244010f0d6e7cfee4
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# <a name="get-an-app-submission-using-the-windows-store-submission-api"></a>Abrufen einer App-Übermittlung mit der Windows Store-Übermittlungs-API
+# <a name="get-an-app-submission-using-the-windows-store-submission-api"></a>Abrufen einer App-Übermittlung mithilfe der Windows Store-Übermittlungs-API
 
 
 Verwenden Sie diese Methode aus der Windows Store-Übermittlungs-API zum Abrufen von Daten für eine vorhandene App-Übermittlung. Weitere Informationen über den Erstellungsprozess einer App-Übermittlung mithilfe der Windows Store-Übermittlungs-API finden Sie unter [Verwalten von App-Übermittlungen](manage-app-submissions.md).
@@ -77,7 +84,8 @@ Das folgende Beispiel veranschaulicht den JSON-Antworttext für einen erfolgreic
     "trialPeriod": "FifteenDays",
     "marketSpecificPricings": {},
     "sales": [],
-    "priceId": "Tier2"
+    "priceId": "Tier2",
+    "isAdvancedPricingModel": "true"
   },
   "visibility": "Public",
   "targetPublishMode": "Manual",
@@ -189,9 +197,4 @@ Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die A
 * [Aktualisieren einer App-Übermittlung](update-an-app-submission.md)
 * [Löschen einer App-Übermittlung](delete-an-app-submission.md)
 * [Abrufen des Status einer App-Übermittlung](get-status-for-an-app-submission.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

@@ -3,9 +3,16 @@ author: mcleblanc
 description: "Dieses Thema enthält eine umfassende Zuordnung der Windows Phone Silverlight-APIs zu ihren Entsprechungen in der universellen Windows-Plattform (UWP)."
 title: "Windows Phone Silverlight zu UWP – Namespace- und Klassenzuordnungen"
 ms.assetid: 33f06706-4790-48f3-a2e4-ebef9ddb61a4
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: dcdf17263dadd71572c942bff5e795928e855c03
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 751c0c0355e8f6c02248c6f6d61f8c62c709cd95
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -245,10 +252,5 @@ Außerdem profitieren Sie in einer Windows 10-App von .NET Native. Dabei handelt
  
 
 Nächstes Thema: [Portieren des Projekts](wpsl-to-uwp-porting-to-a-uwp-project.md).
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

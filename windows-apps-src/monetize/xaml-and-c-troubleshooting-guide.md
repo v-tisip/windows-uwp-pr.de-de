@@ -2,14 +2,21 @@
 author: mcleanbyron
 ms.assetid: 141900dd-f1d3-4432-ac8b-b98eaa0b0da2
 description: "Hier finden Sie Lösungen für allgemeine Entwicklungsprobleme mit den Microsoft Advertising-Bibliotheken in XAML-Apps."
-title: "Handbuch zur Problembehandlung für XAML und C#"
+title: XAML- und C#-Handbuch zur Problembehandlung
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Werbung, Advertising, AdControl, Problembehandlung, XAML, c#"
 translationtype: Human Translation
-ms.sourcegitcommit: f88a71491e185aec84a86248c44e1200a65ff179
-ms.openlocfilehash: 63db8e9899c3337f558fc0e60b1b81cbcf9b0d8d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 0d5ba07f3a77f360dcb45c7139a7301cdb623dbb
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="xaml-and-c-troubleshooting-guide"></a>Handbuch zur Problembehandlung für XAML und C#
+# <a name="xaml-and-c-troubleshooting-guide"></a>XAML- und C#-Handbuch zur Problembehandlung
 
 Dieses Thema enthält Lösungen für allgemeine Entwicklungsprobleme mit den Microsoft Advertising-Bibliotheken in XAML-Apps.
 
@@ -270,9 +277,4 @@ Dieses Thema enthält Lösungen für allgemeine Entwicklungsprobleme mit den Mic
  
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

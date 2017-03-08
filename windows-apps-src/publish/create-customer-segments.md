@@ -2,9 +2,17 @@
 author: shawjohn
 Description: "Erfahren Sie, wie Sie Kundensegmente erstellen können, um sich für Werbungs- oder Interaktionszwecke an einen Teil Ihrer Kunden zu wenden."
 title: Erstellen von Kundensegmenten
+ms.author: johnshaw
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
+ms.assetid: 58185f6c-d61f-478b-ab24-753d8986cd5a
 translationtype: Human Translation
-ms.sourcegitcommit: eed71b2fc06db71fd105df37a73bd0cd0832931f
-ms.openlocfilehash: 28906c98d2826f5312e01713e2621159c6b24923
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 1c1aa77ee989344f5e09ddaeb864d5ddceb03660
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -18,13 +26,13 @@ So könnten Sie beispielsweise ein Segment erstellen, das nur Kunden ab einem Al
 
 ## <a name="to-create-a-customer-segment"></a>So erstellen Sie ein Kundensegment
 
-1.  Wählen Sie im [Windows Dev Center-Dashboard](https://developer.microsoft.com/dashboard/overview) im oberen Menü **Kunden** aus.
-2.  Führen Sie auf der Seite **Kundengruppen** eine der folgenden Aktionen aus:
+1.    Wählen Sie im [Windows Dev Center-Dashboard](https://developer.microsoft.com/dashboard/overview) im oberen Menü **Kunden** aus.
+2.    Führen Sie auf der Seite **Kundengruppen** eine der folgenden Aktionen aus:
  - Wählen Sie im Abschnitt **Meine Kundengruppen** die Option **Neue Gruppe erstellen**, um ein neues Segment zu definieren. Achten Sie darauf, dass **Segment** in der Dropdownliste **Gruppentyp** ausgewählt ist.
  - Wählen Sie im Abschnitt **Segmentvorlagen** die Option **Kopieren** aus, um ein vordefiniertes Segment unverändert zu verwenden oder an Ihre Anforderungen anzupassen.
-3.  Wählen Sie in der Liste **Kunden von dieser App einschließen** eine Ihrer Apps als Ziel aus.
-4.  Wählen Sie im Feld **Segmentname** einen Namen für Ihr Segment.
-5.  Wählen Sie im Abschnitt **Einschlusskriterien festlegen** die Filterkriterien für das Segment.
+3.    Wählen Sie in der Liste **Kunden von dieser App einschließen** eine Ihrer Apps als Ziel aus.
+4.    Wählen Sie im Feld **Segmentname** einen Namen für Ihr Segment.
+5.    Wählen Sie im Abschnitt **Einschlusskriterien festlegen** die Filterkriterien für das Segment.
 
     Sie können aus einer Vielzahl von Filterkriterien wählen, einschließlich **Kaufquelle**, **Käufe**, **Demografie**, **Bewertung**, **Store-Erwerb**, **Store-Käufe**, und **Store-Ausgaben**.
 
@@ -57,9 +65,4 @@ Wenn Sie die Ergebnisse anzeigen und der Bereich **Kunden in diesem Segment** di
 
 - Passen Sie in **Einschlusskriterien festlegen** die Filterkriterien so an, dass das Segment mehr Kunden enthält.
 - Wählen sie auf der Seite **Kundengruppen** im Abschnitt **Inaktive Segmente** **Aktualisieren**, um zu sehen, ob das Segment derzeit genug Kunden enthält. Diese Vorgehensweise funktioniert möglicherweise dann, wenn mehr Kunden, die Ihren Segmentkriterien entsprechen, Ihre App heruntergeladen haben, seit das Segment von Ihnen erstellt wurde.
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

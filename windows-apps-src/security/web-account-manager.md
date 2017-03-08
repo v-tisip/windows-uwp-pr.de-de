@@ -1,15 +1,23 @@
 ---
-title: "Verbinden mit Identitätsanbietern über Web Account Manager"
-description: "In diesem Artikel wird beschrieben, wie Sie AccountsSettingsPane verwenden, um Ihre App für die universelle Windows-Plattform (UWP) mit externen Identitätsanbietern wie Microsoft oder Facebook zu verbinden. Dazu verwenden Sie die neuen Web Account Manager-APIs in Windows 10."
+title: Web Account Manager
+description: "In diesem Artikel wird beschrieben, wie Sie AccountsSettingsPane verwenden, um Ihre universelle Windows-Plattform (UWP)-App mit externen Identitätsanbietern wie Microsoft oder Facebook zu verbinden. Dazu verwenden Sie die neuen Web Account Manager-APIs in Windows 10."
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, UWP"
+ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 translationtype: Human Translation
-ms.sourcegitcommit: 0aef3cc9a3312a647197d8b2a7b815ed42d54fa3
-ms.openlocfilehash: 10851432b6e28934ab60041d23a5cf319671f704
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: c3d1cdab94fc8b4f693ef9294cbb12580a9e199b
+ms.lasthandoff: 02/08/2017
 
 ---
-# <a name="connect-to-identity-providers-with-web-account-manager"></a>Verbinden mit Identitätsanbietern über Web Account Manager
+# <a name="web-account-manager"></a>Web Account Manager
 
-In diesem Artikel wird beschrieben, wie Sie AccountsSettingsPane anzeigen und Ihre App für die universelle Windows-Plattform (UWP) mit externen Identitätsanbietern wie Microsoft oder Facebook verbinden. Dazu verwenden Sie die neuen Web Account Manager-APIs in Windows 10. Sie erfahren, wie Sie die Berechtigung eines Benutzers für die Verwendung seines Microsoft-Kontos anfordern können, ein Zugriffstoken erhalten und damit grundlegende Vorgänge (wie das Abrufen von Profildaten oder das Hochladen von Dateien in das OneDrive-Verzeichnis des Benutzers) durchführen können. Die Schritte ähneln denen, die zum Abrufen einer Benutzerberechtigung und für den Zugriff über einen beliebigen Identitätsanbieter ausgeführt werden, der Web Account Manager unterstützt.
+In diesem Artikel wird beschrieben, wie Sie AccountsSettingsPane anzeigen und Ihre universelle Windows-Plattform (UWP)-App mit externen Identitätsanbietern wie Microsoft oder Facebook verbinden. Dazu verwenden Sie die neuen Web Account Manager-APIs in Windows 10. Sie erfahren, wie Sie die Berechtigung eines Benutzers für die Verwendung seines Microsoft-Kontos anfordern können, ein Zugriffstoken erhalten und damit grundlegende Vorgänge (wie das Abrufen von Profildaten oder das Hochladen von Dateien in das OneDrive-Verzeichnis des Benutzers) durchführen können. Die Schritte ähneln denen, die zum Abrufen einer Benutzerberechtigung und für den Zugriff über einen beliebigen Identitätsanbieter ausgeführt werden, der Web Account Manager unterstützt.
 
 > Hinweis: Ein vollständiges Codebeispiel finden Sie im [WebAccountManagement-Beispiel auf GitHub](http://go.microsoft.com/fwlink/p/?LinkId=620621).
 
@@ -33,7 +41,7 @@ Im CodeBehind ist ein Ereignishandler an die Schaltfläche angefügt:
 
 ```C#
 private void LoginButton_Click(object sender, RoutedEventArgs e)
-{   
+{    
 }
 ```
 
@@ -328,7 +336,7 @@ private async void BuildPaneAsync(AccountsSettingsPane s, AccountsSettingsPaneCo
 
     var twitterProvider = new WebAccountProvider("twitter", "Twitter", new Uri(@"ms-appx:///Assets/twitter-auth-icon.png")); 
     var twitterCmd = new WebAccountProviderCommand(twitterProvider, GetTwitterTokenAsync);
-    e.WebAccountProviderCommands.Add(twitterCmd);   
+    e.WebAccountProviderCommands.Add(twitterCmd);    
     
     // other code here
 }
@@ -351,7 +359,7 @@ private async void BuildPaneAsync(AccountsSettingsPane s, AccountsSettingsPaneCo
 {
     // other code here 
     
-    args.HeaderText = "MyAwesomeApp works best if you're signed in.";   
+    args.HeaderText = "MyAwesomeApp works best if you're signed in.";     
     
     // other code here
 }
@@ -398,9 +406,4 @@ Einstellungsbefehle lassen sich grundsätzlich überall verwenden. Es wird jedoc
 [Webauthentifizierungsbroker](web-authentication-broker.md)
 
 [WebAccountManagement-Beispiel](http://go.microsoft.com/fwlink/p/?LinkId=620621)
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

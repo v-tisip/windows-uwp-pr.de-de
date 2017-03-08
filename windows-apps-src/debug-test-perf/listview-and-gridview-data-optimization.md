@@ -3,14 +3,21 @@ author: mcleblanc
 ms.assetid: 3A477380-EAC5-44E7-8E0F-18346CC0C92F
 title: Virtualisierung von ListView- und GridView-Daten
 description: Verbessern Sie die Leistung und Startzeit von ListView und GridView durch Datenvirtualisierung.
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: e44dd5c2c3c9fb252062af3a6a9f409e1777a878
-ms.openlocfilehash: 0a16dc27db6fb1e04e1ab0c575077ca10b97f12d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 0b1dfaeb098ac4b73c89f4d1a51ec658312aee4e
+ms.lasthandoff: 02/07/2017
 
 ---
-# Virtualisierung von „ListView“- und „GridView“-Daten
+# <a name="listview-and-gridview-data-virtualization"></a>ListView- und GridView-Datenvirtualisierung
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Hinweis**  Weitere Informationen finden Sie unter der „//build/“-Sitzung [Erhebliches Erhöhen der Leistung bei der Interaktion von Benutzern mit großen Mengen von Daten in GridView und ListView](https://channel9.msdn.com/Events/Build/2013/3-158).
 
@@ -27,7 +34,7 @@ Eine Methode zur Datenvirtualisierung ist für einen Datensatz erforderlich, der
 
 Hier erhalten Sie weitere Informationen über die Verfahren der inkrementellen Datenvirtualisierung und der Datenvirtualisierung mit wahlfreiem Zugriff.
 
-## Inkrementelle Datenvirtualisierung
+## <a name="incremental-data-virtualization"></a>Inkrementelle Datenvirtualisierung
 
 Bei der inkrementellen Datenvirtualisierung werden Daten sequenziell geladen. Ein [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878), das die inkrementelle Datenvirtualisierung verwendet, kann zum Anzeigen einer Sammlung von einer Million Elementen verwendet werden, wobei aber anfänglich nur 50 Elemente geladen werden. Beim Schwenken/Bildlauf werden die nächsten 50 Elemente geladen. Der Ziehpunkt der Bildlaufleiste wird beim Laden der Elemente kleiner. Für diese Art der Datenvirtualisierung schreiben Sie eine Datenquellenklasse, die diese Schnittstellen implementiert.
 
@@ -37,9 +44,9 @@ Bei der inkrementellen Datenvirtualisierung werden Daten sequenziell geladen. Ei
 
 Eine derartige Datenquelle ist eine speicherinterne Liste, die ständig erweitert werden kann. Das Elementsteuerelement fordert die Elemente mithilfe der standardmäßigen „Indexer“- und „Count“-Eigenschaften von [**IList**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.ilist.aspx) an. Die Anzahl sollte die Anzahl der lokalen Elemente darstellen, nicht die tatsächliche Größe des Datasets.
 
-Wenn sich das Elementsteuerelement dem Ende der vorhandenen Daten nähert, ruft es [**ISupportIncrementalLoading.HasMoreItems**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.isupportincrementalloading.hasmoreitems) auf. Wenn **true** zurückgegeben wird, ruft es [**ISupportIncrementalLoading.LoadMoreItemsAsync**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.isupportincrementalloading.loadmoreitemsasync) auf und übergibt eine empfohlene Anzahl von zu ladenden Elementen. Je nachdem, von wo die Daten (lokaler Datenträger, Netzwerk oder Cloud) geladen werden, können Sie eine andere als die empfohlene Anzahl von Elementen laden. Wenn Ihr Dienst z.B. Stapel von 50 Elementen unterstützt, aber das Elementsteuerelement nur 10 anfordert, dann können Sie 50 Elemente laden. Laden Sie die Daten vom Back-End, fügen Sie sie zur Liste hinzu, und lösen Sie über [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) oder [**IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/BR226052) eine Änderungsbenachrichtigung aus, damit das Elementsteuerelement über die neuen Elemente informiert wird. Geben Sie außerdem die Anzahl der tatsächlich geladenen Elemente zurück. Wenn Sie weniger Artikel als empfohlen laden oder das Elementsteuerelement in der Zwischenzeit noch weiter verschoben/durchlaufen wurde, dann wird die Datenquelle erneut aufgerufen, um weitere Elemente zu laden, und der Zyklus wird anschließend fortgesetzt. Weitere Informationen finden Sie durch Herunterladen des [XAML-Datenbindungsbeispiel](https://code.msdn.microsoft.com/windowsapps/Data-Binding-7b1d67b5) für Windows 8.1 und der Wiederverwendung des Quellcodes in Ihrer App für Windows 10.
+Wenn sich das Elementsteuerelement dem Ende der vorhandenen Daten nähert, ruft es [**ISupportIncrementalLoading.HasMoreItems**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.isupportincrementalloading.hasmoreitems) auf. Wenn **true** zurückgegeben wird, ruft es [**ISupportIncrementalLoading.LoadMoreItemsAsync**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.isupportincrementalloading.loadmoreitemsasync) auf und übergibt eine empfohlene Anzahl von zu ladenden Elementen. Je nachdem, von wo die Daten (lokaler Datenträger, Netzwerk oder Cloud) geladen werden, können Sie eine andere als die empfohlene Anzahl von Elementen laden. Wenn Ihr Dienst z. B. Stapel von 50 Elementen unterstützt, aber das Elementsteuerelement nur 10 anfordert, dann können Sie 50 Elemente laden. Laden Sie die Daten vom Back-End, fügen Sie sie zur Liste hinzu, und lösen Sie über [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) oder [**IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/BR226052) eine Änderungsbenachrichtigung aus, damit das Elementsteuerelement über die neuen Elemente informiert wird. Geben Sie außerdem die Anzahl der tatsächlich geladenen Elemente zurück. Wenn Sie weniger Artikel als empfohlen laden oder das Elementsteuerelement in der Zwischenzeit noch weiter verschoben/durchlaufen wurde, dann wird die Datenquelle erneut aufgerufen, um weitere Elemente zu laden, und der Zyklus wird anschließend fortgesetzt. Weitere Informationen finden Sie durch Herunterladen des [XAML-Datenbindungsbeispiel](https://code.msdn.microsoft.com/windowsapps/Data-Binding-7b1d67b5) für Windows 8.1 und der Wiederverwendung des Quellcodes in Ihrer App für Windows 10.
 
-## Datenvirtualisierung mit wahlfreiem Zugriff
+## <a name="random-access-data-virtualization"></a>Datenvirtualisierung mit wahlfreiem Zugriff
 
 Die Datenvirtualisierung mit wahlfreiem Zugriff ermöglicht das Laden von Daten, die sich an einem beliebigen Punkt des Datasets befinden. Ein [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878), das die Datenvirtualisierung mit wahlfreiem Zugriff verwendet und zum Anzeigen einer Sammlung von einer Million Elementen verwendet wird, kann die Elemente 100.000 bis 100.050 laden. Wechselt der Benutzer anschließend zum Listenanfang, lädt das Steuerelement die Elemente von 1 bis 50. Der Ziehpunkt der Bildlaufleiste gibt jederzeit an, dass **ListView** eine Million Elemente enthält. Die Position des Ziehpunkts der Bildlaufleiste gibt Aufschluss über die relative Position der sichtbaren Elemente innerhalb des gesamten Datasets der Sammlung. Diese Art der Datenvirtualisierung kann den Speicherbedarf und die Ladezeiten für die Sammlung erheblich reduzieren. Zur Aktivierung müssen Sie eine Datenquellenklasse erstellen, die Daten bei Bedarf abruft, einen lokalen Cache verwaltet und diese Schnittstellen implementiert.
 
@@ -79,10 +86,5 @@ Die Strategie, wann die Datenelemente geladen werden, wie viele Datenelemente ge
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO4-->
 
 

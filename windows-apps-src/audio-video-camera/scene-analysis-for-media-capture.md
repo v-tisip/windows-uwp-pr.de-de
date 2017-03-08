@@ -3,20 +3,27 @@ author: drewbatgit
 ms.assetid: B5D915E4-4280-422C-BA0E-D574C534410B
 description: Dieser Artikel beschreibt, wie Sie mit SceneAnalysisEffect und FaceDetectionEffect den Inhalt des Vorschaudatenstroms der Medienaufnahme analysieren.
 title: "Effekte für die Analyse von Kamera-Frames"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 599e7dd52145d695247b12427c1ebdddbfc4ffe1
-ms.openlocfilehash: a5af97156ade8574537e38e50c45b9b15f506980
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c7f46130feac43211bccf57191d940acb8198965
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Effekte für die Analyse von Kamera-Frames
+# <a name="effects-for-analyzing-camera-frames"></a>Effekte für die Analyse von Kamera-Frames
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
 
 Dieser Artikel beschreibt, wie Sie mit [**SceneAnalysisEffect**](https://msdn.microsoft.com/library/windows/apps/dn948902) und [**FaceDetectionEffect**](https://msdn.microsoft.com/library/windows/apps/dn948776) den Inhalt des Vorschaudatenstroms der Medienaufnahme analysieren.
 
-## Effekt der Szenenanalyse
+## <a name="scene-analysis-effect"></a>Effekt der Szenenanalyse
 
 Die [**SceneAnalysisEffect**](https://msdn.microsoft.com/library/windows/apps/dn948902)-Klasse analysiert die Videoframes im Vorschaudatenstrom der Medienaufnahme und empfiehlt Verarbeitungsoptionen zur Verbesserung des Aufnahmeergebnisses. Der Effekt ermittelt derzeit, ob die Verwendung der HDR-Verarbeitung (High Dynamic Range) die Aufnahme verbessern würde.
 
@@ -28,13 +35,13 @@ Wenn der Effekt die Verwendung von HDR empfiehlt, können Sie dies auf folgende 
 
 -   Verwenden Sie die [**VariablePhotoSequenceControl**](https://msdn.microsoft.com/library/windows/apps/dn640573)-Klasse für die Aufnahme einer Framesequenz, die Sie anschließend mithilfe einer benutzerdefinierten HDR-Implementierung zusammensetzen können. Weitere Informationen finden Sie unter [Variable Fotosequenz](variable-photo-sequence.md).
 
-### Namespaces der Szenenanalyse
+### <a name="scene-analysis-namespaces"></a>Namespaces der Szenenanalyse
 
 Um die Szenenanalyse verwenden zu können, muss Ihre App zusätzlich zu den für die grundlegende Medienaufnahme erforderlichen Namespaces die folgenden Namespaces enthalten.
 
 [!code-cs[SceneAnalysisUsing](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetSceneAnalysisUsing)]
 
-### Initialisieren und Hinzufügen des Szenenanalyseneffekts zum Vorschaudatenstrom
+### <a name="initialize-the-scene-analysis-effect-and-add-it-to-the-preview-stream"></a>Initialisieren und Hinzufügen des Szenenanalyseneffekts zum Vorschaudatenstrom
 
 Videoeffekte werden mit zwei APIs, einer Effektdefinition, die die für das Aufnahmegerät benötigten Einstellungen zum Initialisieren des Effekts bereitstellt, und einer Effektinstanz implementiert, die zum Steuern des Effekts verwendet werden kann. Da Sie ggf. von mehreren Stellen innerhalb des Codes aus auf die Effektinstanz zugreifen müssen, sollten Sie in der Regel eine Membervariable als Container für das Objekt deklarieren.
 
@@ -50,7 +57,7 @@ Derzeit umfasst der Szenenanalyseeffekt nur die HDR-Analyzer. Aktivieren Sie die
 
 [!code-cs[CreateSceneAnalysisEffectAsync](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCreateSceneAnalysisEffectAsync)]
 
-### Implementieren des SceneAnalyzed-Ereignishandlers
+### <a name="implement-the-sceneanalyzed-event-handler"></a>Implementieren des SceneAnalyzed-Ereignishandlers
 
 Die Ergebnisse der Szenenanalyse werden im **SceneAnalyzed**-Ereignishandler zurückgegeben. Das an den Handler übergebene [**SceneAnalyzedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn948922)-Objekt verfügt über ein [**SceneAnalysisEffectFrame**](https://msdn.microsoft.com/library/windows/apps/dn948907)-Objekt mit einem [**HighDynamicRangeOutput**](https://msdn.microsoft.com/library/windows/apps/dn948830)-Objekt. Die [**Certainty**](https://msdn.microsoft.com/library/windows/apps/dn948833)-Eigenschaft der HDR-Ausgabe liefert einen Wert zwischen 0 und 1,0, wobei 0 angibt, dass die HDR-Verarbeitung das Aufnahmeergebnis nicht verbessern und 1,0, dass die HDR-Verarbeitung dieses verbessern würde. Sie können den Schwellenwert festlegen, an dem Sie HDR verwenden möchten, oder die Ergebnisse für den Benutzer anzeigen und diesen darüber entscheiden lassen.
 
@@ -58,23 +65,23 @@ Die Ergebnisse der Szenenanalyse werden im **SceneAnalyzed**-Ereignishandler zur
 
 Das an den Handler übergebene [**HighDynamicRangeOutput**](https://msdn.microsoft.com/library/windows/apps/dn948830)-Objekt verfügt auch über eine [**FrameControllers**](https://msdn.microsoft.com/library/windows/apps/dn948834)-Eigenschaft, die die vorgeschlagenen Framecontroller für die Aufnahme einer variablen Fotosequenz für HDR-Verarbeitung enthält. Weitere Informationen finden Sie unter [Variable Fotosequenz](variable-photo-sequence.md).
 
-### Bereinigen des Szenenanalyseeffekts
+### <a name="clean-up-the-scene-analysis-effect"></a>Bereinigen des Szenenanalyseeffekts
 
 Wenn Ihre App die Aufnahme abgeschlossen hat, deaktivieren Sie vor dem Löschen des **MediaCapture**-Objekts den Szenenanalyseeffekt, indem Sie die [**HighDynamicRangeAnalyzer.Enabled**](https://msdn.microsoft.com/library/windows/apps/dn948827)-Eigenschaft des Effekts auf „false“ festlegen und die Registrierung Ihres [**SceneAnalyzed**](https://msdn.microsoft.com/library/windows/apps/dn948920)-Ereignishandlers aufheben. Rufen Sie die [**MediaCapture.ClearEffectsAsync**](https://msdn.microsoft.com/library/windows/apps/br226592)-Methode auf, und geben Sie den Videovorschaudatenstrom an, da der Effekt diesem Datenstrom hinzugefügt wurde. Legen Sie schließlich die Membervariable auf NULL fest.
 
 [!code-cs[CleanUpSceneAnalysisEffectAsync](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCleanUpSceneAnalysisEffectAsync)]
 
-## Gesichtserkennungseffekt
+## <a name="face-detection-effect"></a>Gesichtserkennungseffekt
 
 [**FaceDetectionEffect**](https://msdn.microsoft.com/library/windows/apps/dn948776) identifiziert die Position von Gesichtern innerhalb des Vorschaudatenstroms der Medienaufnahme. Mit dem Effekt erhalten Sie eine Benachrichtigung, wenn ein Gesicht im Vorschaudatenstrom erkannt wird, und es wird der Begrenzungsrahmen für jedes erkannte Gesicht im Vorschauframe bereitgestellt. Auf unterstützten Geräten stellt die Gesichtserkennung auch erweiterte Belichtung und Fokus auf das wichtigste Gesicht in der Szene bereit.
 
-### Namespaces der Gesichtserkennung
+### <a name="face-detection-namespaces"></a>Namespaces der Gesichtserkennung
 
 Um die Gesichtserkennung verwenden zu können, muss Ihre App die folgenden Namespaces zusätzlich zu den für die grundlegende Medienaufnahme erforderlichen Namespaces enthalten.
 
 [!code-cs[FaceDetectionUsing](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetFaceDetectionUsing)]
 
-### Initialisieren und Hinzufügen des Gesichterkennungseffekts zum Vorschaudatenstrom
+### <a name="initialize-the-face-detection-effect-and-add-it-to-the-preview-stream"></a>Initialisieren und Hinzufügen des Gesichterkennungseffekts zum Vorschaudatenstrom
 
 Videoeffekte werden mit zwei APIs, einer Effektdefinition, die die für das Aufnahmegerät benötigten Einstellungen zum Initialisieren des Effekts bereitstellt, und einer Effektinstanz implementiert, die zum Steuern des Effekts verwendet werden kann. Da Sie ggf. von mehreren Stellen innerhalb des Codes aus auf die Effektinstanz zugreifen müssen, sollten Sie in der Regel eine Membervariable als Container für das Objekt deklarieren.
 
@@ -88,7 +95,7 @@ Aktivieren bzw. deaktivieren Sie den Effekt, indem Sie die [**FaceDetectionEffec
 
 [!code-cs[CreateFaceDetectionEffectAsync](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCreateFaceDetectionEffectAsync)]
 
-### Empfangen von Benachrichtigungen, wenn Gesichter erkannt werden
+### <a name="receive-notifications-when-faces-are-detected"></a>Empfangen von Benachrichtigungen, wenn Gesichter erkannt werden
 
 Wenn Sie während der Gesichtserkennung Aktionen ausführen möchten, z. B. Zeichnen eines Rahmens um die erkannten Gesichter in der Videovorschau, können Sie eine Registrierung für das [**FaceDetected**](https://msdn.microsoft.com/library/windows/apps/dn948820)-Ereignis durchführen.
 
@@ -98,19 +105,19 @@ Im Handler für das Ereignis erhalten Sie eine Liste mit allen in einem Frame er
 
 [!code-cs[FaceDetected](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetFaceDetected)]
 
-### Bereinigen des Gesichtserkennungseffekts
+### <a name="clean-up-the-face-detection-effect"></a>Bereinigen des Gesichtserkennungseffekts
 
 Wenn Ihre App die Aufnahme abgeschlossen hat, deaktivieren Sie vor dem Löschen des **MediaCapture**-Objekts den Gesichtserkennungseffekt mit [**FaceDetectionEffect.Enabled**](https://msdn.microsoft.com/library/windows/apps/dn948818), und heben Sie die Registrierung Ihres [**FaceDetected**](https://msdn.microsoft.com/library/windows/apps/dn948820)-Ereignishandlers auf, wenn Sie einen registriert haben. Rufen Sie [**MediaCapture.ClearEffectsAsync**](https://msdn.microsoft.com/library/windows/apps/br226592) auf, und geben Sie den Videovorschaudatenstrom an, da der Effekt diesem Datenstrom hinzugefügt wurde. Legen Sie schließlich die Membervariable auf NULL fest.
 
 [!code-cs[CleanUpFaceDetectionEffectAsync](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCleanUpFaceDetectionEffectAsync)]
 
-### Überprüfen der Fokus- und Belichtungsunterstützung für erkannte Gesichter
+### <a name="check-for-focus-and-exposure-support-for-detected-faces"></a>Überprüfen der Fokus- und Belichtungsunterstützung für erkannte Gesichter
 
 Nicht alle Geräte verfügen über ein Aufnahmegerät, das den Fokus und die Belichtung auf Grundlage der erkannten Gesichter anpassen kann. Da Gesichtserkennung Geräteressourcen in Anspruch nimmt, sollten Sie die Gesichtserkennung nur auf Geräten aktivieren, die das Feature zur Verbesserung der Aufnahme verwenden können. Rufen Sie zum Festzustellen, ob die gesichtsbasierte Aufnahmeoptimierung verfügbar ist, die [**VideoDeviceController**](https://msdn.microsoft.com/library/windows/apps/br226825)-Klasse für Ihre initialisierte [MediaCapture](capture-photos-and-video-with-mediacapture.md) ab, und rufen Sie dann die [**RegionsOfInterestControl**](https://msdn.microsoft.com/library/windows/apps/dn279064)-Klasse des Videogerätecontrollers ab. Überprüfen Sie, ob die [**MaxRegions**](https://msdn.microsoft.com/library/windows/apps/dn279069)-Eigenschaft mindestens eine Region unterstützt. Überprüfen Sie dann, ob die [**AutoExposureSupported**](https://msdn.microsoft.com/library/windows/apps/dn279065)-Eigenschaft oder die [**AutoFocusSupported**](https://msdn.microsoft.com/library/windows/apps/dn279066)-Eigenschaft den Wert „true“ aufweist. Wenn diese Bedingungen erfüllt sind, kann das Gerät die Vorteile der Gesichtserkennung für eine verbesserte Aufnahme nutzen.
 
 [!code-cs[AreFaceFocusAndExposureSupported](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetAreFaceFocusAndExposureSupported)]
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Kamera](camera.md)
 * [Allgemeine Foto-, Video- und Audioaufnahme mit „MediaCapture“](basic-photo-video-and-audio-capture-with-MediaCapture.md)
@@ -120,10 +127,5 @@ Nicht alle Geräte verfügen über ein Aufnahmegerät, das den Fokus und die Bel
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

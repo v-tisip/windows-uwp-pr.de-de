@@ -3,19 +3,27 @@ author: awkoren
 Description: Zeigt, wie Sie eine Windows-Desktopanwendung (z. B. Win32, WPF und Windows Forms) manuell in eine UWP-App (Universelle Windows-Plattform) konvertieren.
 Search.Product: eADQiWindows 10XVcnh
 title: Manuelles Konvertieren einer Windows-Desktopanwendung in eine UWP-App (Universelle Windows-Plattform)
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 translationtype: Human Translation
-ms.sourcegitcommit: b612b2c94de79f48a375ae3469c35dee6ce3939d
-ms.openlocfilehash: 73f30d564fcec1b748b4d59ff545e25b62b1c719
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 345296a3fa9faeb8daa8e03fbb633863380d2424
+ms.lasthandoff: 02/08/2017
 
 ---
 
 # <a name="manually-convert-your-app-to-uwp-using-the-desktop-bridge"></a>Manuelles Konvertieren Ihrer App zu UWP mithilfe der Desktop-Brücke
 
-Die Verwendung von [Desktop App Converter (DAC)](desktop-to-uwp-run-desktop-app-converter.md) ist praktisch und automatisch und darüber hinaus nützlich, wenn Unsicherheiten hinsichtlich der Aktivitäten des Installationsprogramms bestehen. Wenn Ihre App jedoch mithilfe von xcopy installiert wurde, oder wenn Sie mit den Änderungen vertraut sind, die das Installationsprogramm Ihrer App am System vornimmt, können Sie ein App-Paket und -Manifest manuell erstellen. Dieser Artikel beschreibt die ersten Schritte hierfür. Hier wird auch erklärt, wie Sie Ihrer App unbeschichtete Ressourcen hinzufügen, die vom DAC nicht erfasst werden. 
+Die Verwendung des [Desktop App Converter (DAC)](desktop-to-uwp-run-desktop-app-converter.md) ist praktisch und automatisiert den Vorgang. Die Anwendung ist außerdem dann nützlich, wenn nicht klar ist, was Ihr Installer macht. Wenn Ihre App jedoch mithilfe von xcopy installiert wurde, oder wenn Sie mit den Änderungen vertraut sind, die das Installationsprogramm Ihrer App am System vornimmt, können Sie ein App-Paket und -Manifest manuell erstellen. Dieser Artikel beschreibt die ersten Schritte hierfür. Es wird außerdem beschrieben, wie Sie nicht angepasste Ressourcen zu Ihrer App hinzufügen (dies wird nicht vom DAC abgedeckt). 
 
-Dies sind die ersten Schritte:
+So beginnen Sie mit der manuellen Konvertierung. Alternativ können Sie bei einer .NET-App auch Visual Studio nutzen (siehe [Handbuch zur Desktop-Brücke-Verpackung von .NET Desktop-Apps mit Visual Studio](desktop-to-uwp-packaging-dot-net.md)).  
 
-## <a name="create-a-manifest-by-hand"></a>Erstellen Sie manuell ein Manifest.
+## <a name="create-a-manifest-by-hand"></a>Manuelles Erstellen eines Manifests
 
 Ihre _appxmanifest.xml_-Datei muss (mindestens) den folgenden Inhalt aufweisen. Ändern Sie Platzhalter, die \*\*\*SO\*\*\* formatiert sind, in tatsächliche Werte für Ihre Anwendung.
 
@@ -107,17 +115,10 @@ Hier erfahren Sie, wie Sie die 44x44-Ressourcen für Ihre App optional konfiguri
 
 2. Erstellen Sie für jedes 44x44-Bild eine Kopie im selben Ordner, und hängen Sie *.targetsize-44_altform-unplated* an den Dateinamen an. Sie sollten zwei Kopien von jedem Symbol haben, jeweils spezifisch benannt. Nach Abschluss des Vorgangs könnte Ihr Ressourcenordner beispielsweise *MYAPP_44x44.png* und *MYAPP_44x44.targetsize-44_altform-unplated.png* enthalten. (Hinweis: Das erste Symbol ist das Symbol, auf das in der appxmanifest-Datei unter dem VisualElements-Attribut *Square44x44Logo* verwiesen wird.) 
 
-3.  Legen Sie in der Appxmanifest-Datei die Hintergrundfarbe für jedes von Ihnen bearbeitete Symbol auf „Transparent“ fest. Sie finden dieses Attribut unter VisualElements für die einzelnen Anwendungen.
+3.    Legen Sie in der Appxmanifest-Datei die Hintergrundfarbe für jedes von Ihnen bearbeitete Symbol auf „Transparent“ fest. Sie finden dieses Attribut unter VisualElements für die einzelnen Anwendungen.
 
-4.  Öffnen Sie CMD, ändern Sie das Verzeichnis in den Stammordner des Pakets, und erstellen Sie mit dem Befehl ```makepri createconfig /cf priconfig.xml /dq en-US``` eine priconfig.xml-Datei.
+4.    Öffnen Sie CMD, ändern Sie das Verzeichnis in den Stammordner des Pakets, und erstellen Sie mit dem Befehl ```makepri createconfig /cf priconfig.xml /dq en-US``` eine priconfig.xml-Datei.
 
-5.  Bleiben Sie im Stammordner des Pakets, und erstellen Sie mit CMD mittels des Befehls ```makepri new /pr <PHYSICAL_PATH_TO_FOLDER> /cf <PHYSICAL_PATH_TO_FOLDER>\priconfig.xml``` die resources.pri-Datei(en). Der Befehl für Ihre App könnte beispielsweise wie folgt aussehen: ```makepri new /pr c:\MYAPP /cf c:\MYAPP\priconfig.xml```. 
+5.    Bleiben Sie im Stammordner des Pakets, und erstellen Sie mit CMD mittels des Befehls ```makepri new /pr <PHYSICAL_PATH_TO_FOLDER> /cf <PHYSICAL_PATH_TO_FOLDER>\priconfig.xml``` die resources.pri-Datei(en). Der Befehl für Ihre App könnte beispielsweise wie folgt aussehen: ```makepri new /pr c:\MYAPP /cf c:\MYAPP\priconfig.xml```. 
 
-6.  Verpacken Sie Ihre AppX-Datei mithilfe der Anweisungen im nächsten Schritt, um die Ergebnisse anzuzeigen.
-
-
-
-
-<!--HONumber=Dec16_HO1-->
-
-
+6.    Verpacken Sie Ihre AppX-Datei mithilfe der Anweisungen im nächsten Schritt, um die Ergebnisse anzuzeigen.

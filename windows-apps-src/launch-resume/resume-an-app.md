@@ -1,17 +1,24 @@
 ---
 author: TylerMSFT
 title: Behandeln der App-Fortsetzung
-description: Hier erfahren Sie, wie Sie den angezeigten Inhalt aktualisieren, wenn das System die App fortsetzt.
+description: Erfahren Sie, wie Sie den angezeigten Inhalt aktualisieren, wenn das System die App fortsetzt.
 ms.assetid: DACCC556-B814-4600-A10A-90B82664EA15
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 231161ba576a140859952a7e9a4e8d3bd0ba4596
-ms.openlocfilehash: 2813a112f9d60c5b133284903c98a152bd027bee
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 113f0ce8e59bab716443c0a74ca39649a1bb83ac
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Behandeln der App-Fortsetzung
+# <a name="handle-app-resume"></a>Behandeln der App-Fortsetzung
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 **Wichtige APIs**
 
@@ -19,7 +26,7 @@ ms.openlocfilehash: 2813a112f9d60c5b133284903c98a152bd027bee
 
 Erfahren Sie, wo Sie Ihre Benutzeroberfläche aktualisieren, wenn das System die App fortsetzt. Im Beispiel in diesem Thema wird ein Ereignishandler für das [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339)-Ereignis registriert.
 
-## Registrieren des „resuming“-Ereignishandlers
+## <a name="register-the-resuming-event-handler"></a>Registrieren des „resuming“-Ereignishandlers
 
 Registrieren Sie die Behandlung des [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339)-Ereignisses, mit dem angegeben wird, dass der Benutzer aus der App und wieder zurück gewechselt hat.
 
@@ -53,13 +60,13 @@ Registrieren Sie die Behandlung des [**Resuming**](https://msdn.microsoft.com/li
 > }
 > ```
 
-## Aktualisieren des angezeigten Inhalts und erneutes Abrufen von Ressourcen
+## <a name="refresh-displayed-content-and-reacquire-resources"></a>Aktualisieren des angezeigten Inhalts und erneutes Abrufen von Ressourcen
 
 Das System hält Ihre App ein paar Sekunden an, nachdem der Benutzer zu einer anderen App oder zum Desktop wechselt. Wenn der Benutzer wieder zu Ihrer App wechselt, wird diese vom System fortgesetzt. Beim Fortsetzen der App haben die Variablen und Datenstrukturen den gleichen Inhalt wie vor der Unterbrechung. Das System stellt die App an der Stelle wieder her. Für den Benutzer sieht es so aus, als ob die App im Hintergrund ausgeführt wurde.
 
-Wenn Ihre App das [**Resuming** ](https://msdn.microsoft.com/library/windows/apps/br242339)-Ereignis handhabt, wird sie möglicherweise für Stunden oder Tage angehalten. Sie sollte alle Inhalte aktualisieren, die während des Anhaltens der App ggf. veraltet sind, z.B. Newsfeeds oder der Standort des Benutzers.
+Wenn Ihre App das [**Resuming** ](https://msdn.microsoft.com/library/windows/apps/br242339)-Ereignis handhabt, wird sie möglicherweise für Stunden oder Tage angehalten. Sie sollte alle Inhalte aktualisieren, die während des Anhaltens der App ggf. veraltet sind, z. B. Newsfeeds oder der Standort des Benutzers.
 
-Dies ist auch ein guter Zeitpunkt, um alle exklusiven Ressourcen wiederzuherstellen, die Sie freigegeben haben, als Ihre App angehalten wurde, z.B. Dateihandles, Kameras, E/A-Geräte, externe Geräte und Netzwerkressourcen.
+Dies ist auch ein guter Zeitpunkt, um alle exklusiven Ressourcen wiederzuherstellen, die Sie freigegeben haben, als Ihre App angehalten wurde, z. B. Dateihandles, Kameras, E/A-Geräte, externe Geräte und Netzwerkressourcen.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -91,20 +98,15 @@ Dies ist auch ein guter Zeitpunkt, um alle exklusiven Ressourcen wiederzuherstel
 
 > **Hinweis:** Da das [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339)-Ereignis nicht vom UI-Thread ausgelöst wird, muss in Ihrem Handler ein Dispatcher verwendet werden, um Aufrufe für Ihre UI zu entsenden.
 
-## Anmerkungen
+## <a name="remarks"></a>Anmerkungen
 
 Wenn Ihre App an den Visual Studio-Debugger gebunden ist, wird sie nicht angehalten. Sie können sie aber vom Debugger anhalten und dann ein **Resume**-Ereignis senden, damit Sie den Code debuggen können. Sorgen Sie dafür, dass die Symbolleiste **Debugspeicherort** angezeigt wird, und klicken Sie auf das Dropdownelement neben dem Symbol **Anhalten**. Wählen Sie dann **Fortsetzen** aus.
 
 Für Windows Phone Store-Apps folgt auf das [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339)-Ereignis immer [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335), auch wenn Ihre App derzeit angehalten ist und der Benutzer Ihre App über eine primäre Kachel oder die App-Liste neu startet. Apps können die Initialisierung überspringen, wenn für das aktuelle Fenster bereits Inhalte festgelegt wurden. Überprüfen Sie die [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736)-Eigenschaft, um zu ermitteln, ob die App über eine primäre oder sekundäre Kachel gestartet wurde. Entscheiden Sie basierend auf dieser Information, ob die App neu gestartet oder fortgesetzt werden soll.
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [App-Lebenszyklus](app-lifecycle.md)
 * [Behandeln der App-Aktivierung](activate-an-app.md)
 * [Behandeln des Anhaltens von Apps](suspend-an-app.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

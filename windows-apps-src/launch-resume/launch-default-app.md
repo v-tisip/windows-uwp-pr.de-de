@@ -1,17 +1,24 @@
 ---
 author: TylerMSFT
 title: "Starten der Standard-App für einen URI"
-description: "Hier erfahren Sie, wie Sie die Standard-App für einen Uniform Resource Identifier (URI) starten. URIs ermöglichen den Start einer anderen App zum Ausführen einer bestimmten Aufgabe. Dieses Thema enthält auch eine Übersicht über die vielen in Windows integrierten URI-Schemas."
+description: "Hier erfahren Sie, wie Sie die Standard-App für einen Uniform Resource Identifier (URI) starten. URIs ermöglichen den Start einer anderen App zum Ausführen einer bestimmten Aufgabe. Dieses Thema enthält auch eine Übersicht über die zahlreichen in Windows integrierten URI-Schemas."
 ms.assetid: 7B0D0AF5-D89E-4DB0-9B79-90201D79974F
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 881056cf24755d880a142bd5317fc6e524d1cd81
-ms.openlocfilehash: 119b24573163224456d4f847cf3a444fb8420c5e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: fcc1d056fc3a4cb8d57ae5082e62cf0b802bb4e7
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Starten der Standard-App für einen URI
+# <a name="launch-the-default-app-for-a-uri"></a>Starten der Standard-App für einen URI
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Wichtige APIs**
 
@@ -36,20 +43,20 @@ In diesem Thema werden einige der folgenden URI-Schemas beschrieben, die in Wind
 |[ms-people:](#people-app-uri-scheme) | Kontakte-App |
 |[ms-settings:](#settings-app-uri-scheme) | Einstellungs-App |
 |[ms-store:](#store-app-uri-scheme)  | Store-App |
-|[ms-tonepicker:](#tone-uri-scheme) | Tonauswahl |
+|[ms-tonepicker:](#tone-picker-uri-scheme) | Tonauswahl |
 |[ms-yellowpage:](#nearby-numbers-app-uri-scheme) | Nearby Numbers-App |
 
 <br> Der folgende URI öffnet beispielsweise den Standardbrowser und zeigt die Bing-Website an.
 
 `http://bing.com`
 
-Sie können außerdem benutzerdefinierte URI-Schemas starten. Wenn zum Behandeln dieses URI keine App installiert ist, können Sie dem Benutzer die Installation einer App empfehlen. Weitere Informationen finden Sie unter [Empfehlen einer App](#recommend).
+Sie können außerdem benutzerdefinierte URI-Schemas starten. Wenn zum Behandeln dieses URI keine App installiert ist, können Sie dem Benutzer die Installation einer App empfehlen. Weitere Informationen erhalten Sie unter [Empfehlen einer App, wenn keine App zur Behandlung des URI verfügbar ist](#recommend-an-app-if-one-is-not-available-to-handle-the-uri).
 
-Im Allgemeinen kann die App nicht die App auswählen, die gestartet wird. Der Benutzer entscheidet, welche App gestartet wird. Zum Behandeln desselben URI-Schemas kann mehr als eine App registriert werden. Die einzige Ausnahme sind reservierte URI-Schemas. Registrierungen der reservierten URI-Schemas werden ignoriert. Die vollständige Liste der reservierten URI-Schemas finden Sie unter [Behandeln der URI-Aktivierung](handle-uri-activation.md). In Fällen, in denen mehrere Apps das gleiche URI-Schema registriert haben, kann Ihre App das Starten einer bestimmten App empfehlen. Weitere Informationen finden Sie unter [Empfehlen einer App](#recommend).
+Im Allgemeinen kann die App nicht die App auswählen, die gestartet wird. Der Benutzer entscheidet, welche App gestartet wird. Zum Behandeln desselben URI-Schemas kann mehr als eine App registriert werden. Die einzige Ausnahme sind reservierte URI-Schemas. Registrierungen der reservierten URI-Schemas werden ignoriert. Die vollständige Liste der reservierten URI-Schemas finden Sie unter [Behandeln der URI-Aktivierung](handle-uri-activation.md). In Fällen, in denen mehrere Apps das gleiche URI-Schema registriert haben, kann Ihre App das Starten einer bestimmten App empfehlen. Weitere Informationen finden Sie unter [Empfehlen einer App, wenn keine App zur Behandlung des URI verfügbar ist](#recommend-an-app-if-one-is-not-available-to-handle-the-uri).
 
-### Aufruf von „LaunchUriAsync“ zum Starten eines URI
+### <a name="call-launchuriasync-to-launch-a-uri"></a>Aufruf von „LaunchUriAsync“ zum Starten eines URI
 
-Verwenden Sie die Methode [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476), um einen URI zu starten. Beim Aufrufen dieser Methode muss Ihre App im Vordergrund ausgeführt werden, d.h., sie muss für den Benutzer sichtbar sein. Mithilfe dieser Anforderung wird sichergestellt, dass der Benutzer zu jedem Zeitpunkt die Kontrolle behält. Verknüpfen Sie alle URI-Startvorgänge direkt mit der Benutzeroberfläche Ihrer App, um sicherzustellen, dass diese Anforderung erfüllt wird. Der Benutzer muss immer eine Aktion ausführen, um einen URI zu starten. Wenn Sie versuchen, einen URI zu starten, und Ihre App befindet sich nicht im Vordergrund, schlägt der Start fehl und Ihr Fehlerrückruf wird aufgerufen.
+Verwenden Sie die Methode [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476), um eine URI zu starten. Beim Aufrufen dieser Methode muss Ihre App im Vordergrund ausgeführt werden, d. h., sie muss für den Benutzer sichtbar sein. Mithilfe dieser Anforderung wird sichergestellt, dass der Benutzer zu jedem Zeitpunkt die Kontrolle behält. Verknüpfen Sie alle URI-Startvorgänge direkt mit der Benutzeroberfläche Ihrer App, um sicherzustellen, dass diese Anforderung erfüllt wird. Der Benutzer muss immer eine Aktion ausführen, um einen URI zu starten. Wenn Sie versuchen, einen URI zu starten, und Ihre App befindet sich nicht im Vordergrund, schlägt der Start fehl und Ihr Fehlerrückruf wird aufgerufen.
 
 Erstellen Sie zunächst ein [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/system.uri.aspx)-Objekt, das den URI darstellt, und übergeben Sie es anschließend an die Methode [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476). Verwenden Sie das Ergebnis, um zu überprüfen, ob der Aufruf erfolgreich war, wie im folgenden Beispiel gezeigt.
 
@@ -91,7 +98,7 @@ promptOptions.TreatAsUntrusted = true;
 var success = await Windows.System.Launcher.LaunchUriAsync(uriBing, promptOptions);
 ```
 
-### Empfehlen einer App, wenn keine App zur Behandlung des URI verfügbar ist
+### <a name="recommend-an-app-if-one-is-not-available-to-handle-the-uri"></a>Empfehlen einer App, wenn keine App zur Behandlung des URI verfügbar ist
 
 Es kann jedoch sein, dass der Benutzer nicht über die erforderliche App zum Bearbeiten des aufgerufenen URI verfügt. In diesen Fällen bietet das Betriebssystem standardmäßig einen Link an, über den Benutzer im Store nach einer geeigneten App suchen können. Wenn Sie dem Benutzer eine bestimmte App für dieses spezifische Szenario empfehlen möchten, können Sie die Empfehlung zusammen mit dem gestarteten URI übergeben.
 
@@ -110,11 +117,11 @@ options.PreferredApplicationDisplayName = "Contoso URI Ap";
 var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 ```
 
-### Festlegen der verbleibenden Ansichtseinstellung
+### <a name="set-remaining-view-preference"></a>Festlegen der verbleibenden Ansichtseinstellung
 
 Quell-Apps, die [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) aufrufen, können anfordern, nach dem Start eines URIs auf dem Bildschirm zu verbleiben. Standardmäßig wird von Windows versucht, den gesamten verfügbaren Speicherplatz gleichmäßig zwischen der Quell- und der Ziel-App aufzuteilen, die den URI verarbeitet. Quell-Apps können die Eigenschaft [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) verwenden. Hiermit geben sie dem Betriebssystem an, mehr oder weniger des verfügbaren Speicherplatzes für ihr App-Fenster zu verwenden. **DesiredRemainingView** kann auch verwendet werden, um anzugeben, dass die Quell-App nach dem Start des URI nicht weiter auf dem Bildschirm angezeigt werden muss und vollständig durch die Ziel-App ersetzt werden kann. Mit dieser Eigenschaft wird nur die bevorzugte Fenstergröße der aufrufenden App angegeben. Es wird nicht das Verhalten anderer Apps angegeben, die ggf. zur gleichen Zeit auf dem Bildschirm angezeigt werden.
 
-**Hinweis**  Windows bestimmt die endgültige Fenstergröße einer Quell-App anhand zahlreicher Faktoren (z.B. Einstellung der Quell-App, Anzahl der Apps auf dem Bildschirm, Bildschirmausrichtung). Das Festlegen von [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) garantiert kein bestimmtes Fensterverhalten für die Quell-App.
+**Hinweis**  Windows bestimmt die endgültige Fenstergröße einer Quell-App anhand zahlreicher Faktoren (z. B. Einstellung der Quell-App, Anzahl der Apps auf dem Bildschirm, Bildschirmausrichtung). Das Festlegen von [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) garantiert kein bestimmtes Fensterverhalten für die Quell-App.
 
 ```cs
 // Set the desired remaining view.
@@ -125,12 +132,12 @@ options.DesiredRemainingView = Windows.UI.ViewManagement.ViewSizePreference.UseL
 var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 ```
 
-## URI-Schemas ##
+## <a name="uri-schemes"></a>URI-Schemas ##
 
 Die verschiedenen URI-Schemas werden im Folgenden beschrieben.
 <br>
 
-### URI-Schema für das Aufrufen einer App
+### <a name="call-app-uri-scheme"></a>URI-Schema für das Aufrufen einer App
 
 Ihre App kann das URI-Schema **ms-call:** zum Starten der Anruf-App verwenden.
 
@@ -138,7 +145,7 @@ Ihre App kann das URI-Schema **ms-call:** zum Starten der Anruf-App verwenden.
 |------------------|--------------------------|
 | ms-call:settings | Einstellungsseite der Anruf-App. | 
 <br>
-### URI-Schema für E-Mail
+### <a name="email-uri-scheme"></a>URI-Schema für E-Mail
 
 Ihre App kann das URI-Schema **mailto:** verwenden, um die Standard-E-Mail-App zu starten.
 
@@ -147,7 +154,7 @@ Ihre App kann das URI-Schema **mailto:** verwenden, um die Standard-E-Mail-App z
 | mailto:                  | Startet die Standard-E-Mail-App.                                                                                                                             |
 | mailto:\[email address\] | Startet die E-Mail-App und erstellt eine neue Nachricht mit der angegebenen E-Mail-Adresse in der Zeile „An“. Beachten Sie, dass die E-Mail nicht gesendet wird, bis der Benutzer auf „Senden“ tippt. |
 <br>
-### HTTP-URI-Schema
+### <a name="http-uri-scheme"></a>HTTP-URI-Schema
 
 Ihre App kann das URI-Schema **http:** verwenden, um den Standard-Webbrowser zu starten.
 
@@ -155,7 +162,7 @@ Ihre App kann das URI-Schema **http:** verwenden, um den Standard-Webbrowser zu 
 |------------|-----------------------------------|
 | http:      | Startet den Standardwebbrowser. |
 <br>
-### URI-Schemas für die Karten-App
+### <a name="maps-app-uri-schemes"></a>URI-Schemas für die Karten-App
 
 Ihre App kann die URI-Schemas **bingmaps:**, **ms-drive-to:** und **ms-walk-to:** zum [Starten der Windows-Karten-App](launch-maps-app.md) für bestimmte Karten, Wegbeschreibungen und Suchergebnisse verwenden. Der folgende URI startet beispielsweise die Windows-Karten-App und zeigt eine über New York City zentrierte Karte an.
 
@@ -165,13 +172,13 @@ Ihre App kann die URI-Schemas **bingmaps:**, **ms-drive-to:** und **ms-walk-to:*
 
 Weitere Informationen finden Sie unter [Starten der Windows-Karten-App](launch-maps-app.md). Informationen zum Verwenden des Kartensteuerelements in Ihrer eigenen App finden Sie unter [Anzeigen von Karten mit 2D-, 3D- und Streetside-Ansichten](https://msdn.microsoft.com/library/windows/apps/mt219695).
 <br>
-### URI-Schema für die Messaging-App
+### <a name="messaging-app-uri-scheme"></a>URI-Schema für die Messaging-App
 
 Ihre App kann das URI-Schema **ms-chat:** zum Starten der Windows Messaging-App verwenden.
 
 | URISchema |Ergebnisse | |-- ---------|--------| | ms-chat:   | Startet die Messaging-App. | | ms-chat:?ContactID={contacted}  |  Ermöglicht das Starten der Messaging-Anwendung mit den Informationen eines bestimmten Kontakts.   | | ms-chat:?Body={body} | Ermöglicht das Starten der Messaging-Anwendung mit einer Zeichenfolge, die als Inhalt der Nachricht verwendet werden soll.| | ms-chat:?Addresses={address}&Body={body} | Ermöglicht das Starten der Messaging-Anwendung mit den Informationen eines bestimmten Empfängers und mit einer Zeichenfolge, die als Inhalt der Nachricht verwendet werden soll. Hinweis: Die Adressen können verkettet werden. | | ms-chat:?TransportId={transportId}  | Ermöglicht das Starten der Messaging-Anwendung mit einer bestimmten Transport-ID. |
 <br>
-### URI-Schema für die Tonauswahl
+### <a name="tone-picker-uri-scheme"></a>URI-Schema für die Tonauswahl
 
 Ihre App kann das URI-Schema **ms-tonepicker:** verwenden, um Klingeltöne, Alarmtöne und Systemtöne zu wählen. Außerdem können Sie neue Klingeltöne speichern und den Anzeigenamen eines Tons abrufen.
 
@@ -181,7 +188,7 @@ Ihre App kann das URI-Schema **ms-tonepicker:** verwenden, um Klingeltöne, Alar
 
 Die Parameter werden über einen [ValueSet](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.valueset.aspx) an die LaunchURI-API übergeben. Weitere Informationen finden Sie unter [Auswählen und Speichern von Tönen mit dem URI-Schema „ms-tonepicker“](launch-ringtone-picker.md).
 
-### URI-Schema für die Nearby Numbers-App
+### <a name="nearby-numbers-app-uri-scheme"></a>URI-Schema für die Nearby Numbers-App
 <br>
 Die App kann das URI-Schema **ms-yellowpage:** zum Starten der Nearby Numbers-App verwenden.
 
@@ -190,13 +197,13 @@ Die App kann das URI-Schema **ms-yellowpage:** zum Starten der Nearby Numbers-Ap
 | ms-yellowpage:?input=\[keyword\]&method=\[String oder T9\] | Startet die Nearby Numbers-App. `input` bezieht sich auf das Schlüsselwort, nach dem Sie suchen möchten. `method` bezieht sich auf den Typ der Suche (Zeichenfolge- oder T9-Suche). <br> Wenn `method` `T9` ist (eine Art der Tastatur), dann sollte `keyword` eine numerische Zeichenfolge sein, die der T9-Tastatur Buchstaben zuordnet, nach denen gesucht werden soll.<br>Wenn `method` `String` ist, dann ist `keyword` das Schlüsselwort, nach dem gesucht werden soll. |
  
 <br>
-### URI-Schema für die Kontakte-App
+### <a name="people-app-uri-scheme"></a>URI-Schema für die Kontakte-App
 
 Ihre App kann das URI-Schema **ms-people:** zum Starten der Kontakte-App verwenden.
 Weitere Informationen finden Sie unter [Starten der Kontakte-App](launch-people-apps.md).
 
 <br>
-### URI-Schema für die Einstellungs-App
+### <a name="settings-app-uri-scheme"></a>URI-Schema für die Einstellungs-App
 
 Ihre App kann das URI-Schema **ms-settings:** zum [Starten der Windows-Einstellungs-App](launch-settings-app.md) verwenden. Das Starten der Einstellungs-App ist ein wichtiger Bestandteil beim Schreiben einer App mit Berücksichtigung von Datenschutz. Wenn Ihre App nicht auf eine sensible Ressource zugreifen kann, wird empfohlen, dem Benutzer einen praktischen Link zu den Datenschutzeinstellungen für diese Ressource bereitzustellen. Folgender URI öffnet beispielsweise die Einstellungs-App und zeigt die Datenschutzeinstellungen für die Kamera an.
 
@@ -207,16 +214,11 @@ Ihre App kann das URI-Schema **ms-settings:** zum [Starten der Windows-Einstellu
 Weitere Informationen finden Sie unter [Starten der Einstellungs-App von Windows](launch-settings-app.md) und [Richtlinien für Apps mit Berücksichtigung von Datenschutz](https://msdn.microsoft.com/library/windows/apps/hh768223).
 
 <br>
-### URI-Schema für die Store-App
+### <a name="store-app-uri-scheme"></a>URI-Schema für die Store-App
 
-Ihre App kann das URI-Schema **ms-windows-store:** zum [Starten der Windows Store-App](launch-store-app.md) verwenden. Öffnen Sie Seiten mit Produktdetails, Produktbewertungen sowie Suchseiten. Der folgende URI öffnet z.B. die Windows Store-App und startet die Store-Startseite.
+Ihre App kann das URI-Schema **ms-windows-store:** zum [Starten der Windows Store-App](launch-store-app.md) verwenden. Öffnen Sie Seiten mit Produktdetails, Produktbewertungen sowie Suchseiten. Der folgende URI öffnet z. B. die Windows Store-App und startet die Store-Startseite.
 
 `ms-windows-store://home/`
 
 Weitere Informationen finden Sie unter [Starten der Windows Store-App](launch-store-app.md).
-
-
-
-<!--HONumber=Aug16_HO4-->
-
 

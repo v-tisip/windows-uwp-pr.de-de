@@ -1,15 +1,22 @@
 ---
 author: mcleblanc
 description: "Entwickler, die über eine Windows Phone Silverlight-App verfügen, können beim Wechsel zu Windows 10 auf Ihre Kenntnisse und Fähigkeiten zurückgreifen und Ihren vorhandenen Quellcode umfassend nutzen."
-title: Wechsel von Windows Phone Silverlight zu UWP
+title: Wechsel von Windows Phone Silverlight zur UWP
 ms.assetid: 9E0C0315-6097-488B-A3AF-7120CCED651A
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: 05831f3e357086b338d32e83146d380ca9c78a74
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 06409936f37368351f6c8ad47e50a7d980d522f4
+ms.lasthandoff: 02/07/2017
 
 ---
 
-#  <a name="move-from-windows-phone-silverlight-to-uwp"></a>Wechsel von Windows Phone Silverlight zu UWP
+#  <a name="move-from-windows-phone-silverlight-to-uwp"></a>Wechsel von Windows Phone Silverlight zur UWP
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -80,15 +87,12 @@ Die gute Nachricht ist, dass auf der Featureebene nur sehr wenig nicht in der UW
 * [Anleitung für Universelle Windows-Plattform-Apps (UWP)](https://msdn.microsoft.com/library/windows/apps/dn894631)
 * [Roadmap für Universal Windows Platform (UWP)-Apps mit C# oder Visual Basic](https://msdn.microsoft.com/library/windows/apps/br229583)
 * [Nächste Schritte für Windows Phone 8-Entwickler](https://msdn.microsoft.com/library/windows/apps/xaml/dn655121.aspx)
-**Nächste Schritte für Windows Phone 8-Entwickler**
+
+**Artikel in Magazinen**
 * [Visual Studio Magazine: Windows Phone 8.1: Ein Riesenschritt für die Konvergenz](http://go.microsoft.com/fwlink/p/?LinkID=398541)
+
 **Präsentationen**
 * [The Story of Bringing Nokia Music from Windows Phone to Windows 8 (Beschreibung der Bereitstellung von Nokia Music von Windows Phone unter Windows 8)](http://go.microsoft.com/fwlink/p/?LinkId=321521)
  
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

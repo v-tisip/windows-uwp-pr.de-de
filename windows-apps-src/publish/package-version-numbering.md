@@ -3,20 +3,27 @@ author: jnHs
 Description: Der Windows Store-erzwingt bestimmte Regeln, die im Zusammenhang mit Versionsnummern auftreten, die in verschiedenen Betriebssystemversionen unterschiedlich funktionieren.
 title: Paketversionsnummern
 ms.assetid: DD7BAE5F-C2EE-44EE-8796-055D4BCB3152
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: ca273ab6d881b350c2f5a48eafee38c74ac0f36a
-ms.openlocfilehash: 2668152ba471986e00831bdcf46e5a2feba54dcd
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: dfa8191be375998021f233711ae433f8a5d4e44b
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Paketversionsnummern
+# <a name="package-version-numbering"></a>Paketversionsnummern
 
 
 Jedes von Ihnen bereitgestellte Paket muss eine Versionsnummer aufweisen (als Wert im **Version** -Attribut des **Package/Identity**-Elements im App-Manifest). Der Windows Store-erzwingt bestimmte Regeln, die im Zusammenhang mit Versionsnummern auftreten, die in verschiedenen Betriebssystemversionen unterschiedlich funktionieren.
 
 > **Hinweis**  Dieses Thema bezieht sich auf „Pakete“. Wenn jedoch nicht anders angegeben, gelten die gleichen Regeln für Versionsnummern von .appx- und .appxbundle-Dateien.
 
-## Versionsnummern für Windows 10-Pakete
+## <a name="version-numbering-for-windows-10-packages"></a>Versionsnummern für Windows 10-Pakete
 
 
 Die Versionsnummer der Windows 10-Pakete muss in jedem Fall höher sein als die der Pakete für Windows 8, Windows 8.1 und/oder Windows Phone 8.1, die sie für dieselbe App veröffentlichen oder bereits veröffentlicht haben. (Weitere Informationen finden Sie unter [Hinzufügen von Paketen für Windows 10 zu einer zuvor veröffentlichten App](guidance-for-app-package-management.md#adding-packages-for-windows-10-to-a-previously-published-app).)
@@ -33,7 +40,7 @@ Dies bietet Ihnen ein hohes Maß an Flexibilität, um Ihre App im Laufe der Zeit
 
 Das folgende Beispiel veranschaulicht, wie Versionsnummern verwaltet werden können, um Ihren Kunden über mehrere Übermittlungen die beabsichtigten Pakete bereitzustellen.
 
-### Beispiel: Wechsel zu einem einzelnen Paket über mehrere Übermittlungen
+### <a name="example-moving-to-a-single-package-over-multiple-submissions"></a>Beispiel: Wechsel zu einem einzelnen Paket über mehrere Übermittlungen
 
 Mit Windows 10 können Sie eine einzelne Codebasis schreiben, die überall ausgeführt werden kann. Dadurch wird das Starten eines neuen plattformübergreifenden Projekts sehr viel einfacher. Wegen einer Reihe von Gründen möchten Sie jedoch vielleicht die vorhandene Codebasis nicht zusammenführen, um direkt ein einzelnes Projekt zu erstellen.
 
@@ -48,7 +55,7 @@ Sie können die Paket-Versionsnummernregeln verwenden, um den Wechsel Ihrer Kund
 
 > **Note**  Kundengeräte erhalten in allen Fällen das Paket mit der höchsten Versionsnummer, für die sie qualifiziert sind. In der dritten Übermittlung oben erhalten beispielsweise alle Desktopgeräte v1.1.10.0, auch wenn sie die Betriebssystemversion 10.0.10250.0 oder höher haben und somit auch mit v1.1.5.0 kompatibel wären. Da 1.1.10.0 für sie die höchsten Versionsnummer ist, erhalten sie dieses Paket.
 
-### Verwenden der Versionsnummern zum Durchführen eines Rollbacks auf ein vorheriges Paket für Neuanschaffungen
+### <a name="using-version-numbering-to-roll-back-to-a-previously-shipped-package-for-new-acquisitions"></a>Verwenden der Versionsnummern zum Durchführen eines Rollbacks auf ein vorheriges Paket für Neuanschaffungen
 
 Wenn Sie Kopien Ihrer früheren Windows 10-Paketdateien beibehalten, können Sie im Store ein Rollback Ihres App-Pakets auf ein früheres Windows 10-Paket durchführen, wenn Sie Probleme mit einer Version haben. Dies ist eine temporäre Möglichkeit, die Unterbrechung für Ihre Kunden zu begrenzen, während Sie das Problem beheben.
 
@@ -56,7 +63,7 @@ Erstellen Sie zu diesem Zweck eine neue Übermittlung. Entfernen Sie das problem
 
 Um die Probleme für die Kunden zu beheben, die das problematische Paket bereits erhalten haben, können Sie ein neues Paket für Windows 10 mit einer höheren Versionsnummer übermitteln. Danach durchläuft die Übermittlung den Zertifizierungsprozess, und alle Kunden werden auf das neue Paket aktualisiert, da es eine höhere Versionsnummer aufweist.
 
-## Versionsnummern für Windows 8.1 (und früher) und Windows Phone 8.1-Pakete
+## <a name="version-numbering-for-windows-81-and-earlier-and-windows-phone-81-packages"></a>Versionsnummern für Windows 8.1 (und früher) und Windows Phone 8.1-Pakete
 
 Bei APPX-Paketen für Windows Phone 8.1-Pakete muss die Versionsnummer des Pakets in einer neuen Übermittlung immer höher sein als die des in der letzten Übermittlung (oder vorherigen Übermittlung) enthaltenen Pakets.
 
@@ -64,7 +71,7 @@ Bei APPX-Paketen für Windows 8 und Windows 8.1 gilt die gleiche Regel pro Archi
 
 Außerdem muss die Versionsnummer von Windows 8.1-Paketen stets höher sein als die Versionsnummern aller Windows 8-Pakete für dieselbe App. Mit anderen Worten: Die Versionsnummer eines von Ihnen übermittelten Windows 8-Pakets muss niedriger sein als die Versionsnummer eines Windows 8.1-Paket, das Sie für dieselbe App übermittelt haben.
 
-> **Hinweis**  Wenn Sie außerdem Windows10-Pakete besitzen, muss die Versionsnummer der Windows10-Pakete höher sein als die der Pakete für Windows8, Windows8.1 und/oder Windows Phone8.1, die Sie veröffentlichen oder veröffentlicht haben. Weitere Informationen finden Sie unter [Hinzufügen von Paketen für Windows 10 zu einer zuvor veröffentlichten App](guidance-for-app-package-management.md#adding-packages-for-windows-10-to-a-previously-published-app).
+> **Hinweis**  Wenn Sie außerdem Windows 10-Pakete besitzen, muss die Versionsnummer der Windows 10-Pakete höher sein als die der Pakete für Windows 8, Windows 8.1 und/oder Windows Phone 8.1, die Sie veröffentlichen oder veröffentlicht haben. Weitere Informationen finden Sie unter [Hinzufügen von Paketen für Windows 10 zu einer zuvor veröffentlichten App](guidance-for-app-package-management.md#adding-packages-for-windows-10-to-a-previously-published-app).
 
 Hier finden Sie einige Beispiele für verschiedene Versionsnummern-Aktualisierungsszenarios für Windows 8 und Windows 8.1.
 
@@ -79,9 +86,4 @@ Hier finden Sie einige Beispiele für verschiedene Versionsnummern-Aktualisierun
 | x86, v1.0.0.1 <br> x64, v1.0.0.1 <br> ARM, v1.0.0.1 | x86, v1.0.0.2 <br> x64, v1.0.0.2 <br> ARM, v1.0.0.2 | v1.0.0.2 für die Architektur des PC des Kunden.  | v1.0.0.1 wird für Kunden, die die Version v1.0.0.1 der App für die spezifische Architektur ihres PC verwenden, auf v1.0.0.2 aktualisiert. |
  
 > **Hinweis**  Im Gegensatz zu APPX-Paketen werden die Versionsnummern in allen XAP-Paketen beim Ermitteln der für einen gegebenen Kunden bereitzustellenden Pakete ignoriert. Um ein Kunde von einem XAP-Paket auf ein neueres zu aktualisieren, stellen Sie sicher, dass die ältere XAP-Datei in der neuen Übermittlung entfernt wird.
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

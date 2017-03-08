@@ -1,29 +1,37 @@
 ---
 author: Jwmsft
 Description: "Verwenden Sie das Muster „Aktualisierung durch Ziehen“ mit einer Listenansicht."
-title: Aktualisierung durch Ziehen
+title: Aktualisieren durch Ziehen
 label: Pull-to-refresh
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
+ms.assetid: aaeb1e74-b795-4015-bf41-02cb1d6f467e
 translationtype: Human Translation
-ms.sourcegitcommit: 508a09e0c12006c00dbdf7675516b41119eab8a6
-ms.openlocfilehash: ef5773f9885a5286ac7ca7c256e6a83167316389
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: e062ed2910e20ba187b8a0726a0061f0dd4b07f8
+ms.lasthandoff: 02/08/2017
 
 ---
-# Aktualisierung durch Ziehen
+# <a name="pull-to-refresh"></a>Aktualisierung durch Ziehen
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-Dank des Musters „Aktualisierung durch Ziehen“ können Benutzer aktuelle Daten in einer Liste durch das Ausführen einer Ziehbewegung von oben nach unten auf der Liste abrufen. Die Aktualisierung durch Ziehen wird häufig in mobilen Apps verwendet, eignet sich jedoch für alle Geräte mit Touchscreen. Durch die Behandlung von [Manipulationsereignissen](../input-and-devices/touch-interactions.md#manipulation-events) können Sie die Aktualisierung durch Ziehen in eine App implementieren.
+Dank des Musters „Aktualisieren durch Ziehen“ können Benutzer aktuelle Daten in einer Liste durch das Ausführen einer Ziehbewegung von oben nach unten auf der Liste abrufen. Die Aktualisierung durch Ziehen wird häufig in mobilen Apps verwendet, eignet sich jedoch für alle Geräte mit Touchscreen. Durch die Behandlung von [Manipulationsereignissen](../input-and-devices/touch-interactions.md#manipulation-events) können Sie die Aktualisierung durch Ziehen in eine App implementieren.
 
 Im [Beispiel für die Aktualisierung durch Ziehen](http://go.microsoft.com/fwlink/p/?LinkId=620635) wird die Erweiterung eines [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx)-Steuerelements zur Unterstützung dieses Musters dargestellt. In diesem Artikel werden mithilfe dieses Beispiels die wichtigsten Aspekte der Implementierung des „Aktualisierung durch Ziehen“-Musters erläutert.
 
 ![Beispiel für die Aktualisierung durch Ziehen](images/ptr-phone-1.png)
 
-## Für welche Szenarien eignet sich dieses Muster?
+## <a name="is-this-the-right-pattern"></a>Für welche Szenarien eignet sich dieses Muster?
 
 Das „Aktualisierung durch Ziehen“-Muster eignet sich für Datenlisten oder -raster, die vom Benutzer regelmäßig aktualisiert werden, vor allem, wenn die App hauptsächlich auf mobilen Geräten mit Touchscreen ausgeführt werden soll.
 
-## Implementieren von Aktualisierung durch Ziehen
+## <a name="implement-pull-to-refresh"></a>Implementieren von Aktualisierung durch Ziehen
 
 Für die Implementierung der Aktualisierung durch Ziehen ist die Behandlung von Manipulationsereignissen erforderlich, um zu ermitteln, wann der Benutzer die Liste nach unten zieht, visuelles Feedback bereitzustellen und die Daten zu aktualisieren. Wie dies funktioniert, wird in diesem [Beispiel für die Aktualisierung durch Ziehen](http://go.microsoft.com/fwlink/p/?LinkId=620635) gezeigt. Für eine vollständige Darstellung des Codes laden Sie das Beispiel herunter, oder zeigen Sie den Code auf GitHub an.
 
@@ -35,7 +43,7 @@ RefreshableListView verfügt über einen automatischen Aktualisierungsmodus, mit
 
 > **Hinweis**&nbsp;&nbsp;Der im Beispiel dargestellte Code lässt sich auch auf [**GridView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx) anwenden. Zum Ändern von GridView leiten Sie die benutzerdefinierte Klasse von GridView anstelle von ListView ab und nehmen Änderungen an der GridView-Standardvorlage vor.
 
-## Hinzufügen einer Aktualisierungsanzeige
+## <a name="add-a-refresh-indicator"></a>Hinzufügen einer Aktualisierungsanzeige
 
 Es ist wichtig, den Benutzern durch visuelles Feedback mitzuteilen, dass Ihre App die Aktualisierung durch Ziehen unterstützt. RefreshableListView verfügt über eine `RefreshIndicatorContent` -Eigenschaft, mit der Sie die Ansicht der Anzeige in Ihrer XAML festlegen können. RefreshableListView beinhaltet auch eine Standardtextanzeige für den Fall, dass Sie die `RefreshIndicatorContent`-Eigenschaft nicht festlegen.
 
@@ -134,7 +142,7 @@ Wird die Liste nach unten gezogen, wird das `PullProgressChanged` -Ereignis von 
 </Storyboard>
 ```
 
-## Behandeln von Manipulationsereignissen der Bildlaufanzeige
+## <a name="handle-scroll-viewer-manipulation-events"></a>Behandeln von Manipulationsereignissen der Bildlaufanzeige
 
 Die Steuerelementvorlage der Listenansicht enthält einen integrierten [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx), mit dem der Benutzer durch die Listenelemente scrollen kann. Zum Implementieren der Aktualisierung durch Ziehen müssen sowohl die Manipulationsereignisse in der integrierten Bildlaufanzeige als auch mehrere verwandte Ereignisse behandelt werden. Weitere Informationen zu Manipulationsereignissen finden Sie unter [Toucheingabe-Interaktionen](../input-and-devices/touch-interactions.md).
 
@@ -192,7 +200,7 @@ Zweitens werden, sobald sich der Inhalt am Ende einer automatischen Aktualisieru
 
 Die Aktualisierung durch Ziehen wird nur dann ausgelöst, wenn die Liste durch eine Touchmanipulation nach unten gezogen wird. Mit dem Code des „PointerPressed“-Ereignishandlers wird überprüft, welche Art von Zeiger das Ereignis ausgelöst hat und eine Variable (`m_pointerPressed`) zur Indikation eines Touchzeigers festgelegt. Diese Variable wird im „DirectManipulationStarted“-Handler verwendet. Wenn der Zeiger kein Touchzeiger ist, wird der „DirectManipulationStarted“-Handler ohne Ausführung einer Aktion zurückgegeben.
 
-## Hinzufügen von „Aktualisierung durch Ziehen“-Ereignissen
+## <a name="add-pull-and-refresh-events"></a>Hinzufügen von „Aktualisierung durch Ziehen“-Ereignissen
 
 „RefreshableListView“ fügt zwei Ereignisse hinzu, die Sie in Ihrer App behandeln können. Mit diesen lassen sich die Daten aktualisieren und die Aktualisierungsanzeige verwalten.
 
@@ -224,21 +232,16 @@ private async void listView_RefreshRequested(object sender, RefreshableListView.
 
 In diesem Beispiel werden Inhalte für die Aktualisierungsanzeige bereitgestellt und durch die App gesteuert. Das „PullProgressChanged“-Ereignis benachrichtigt Ihre App, wenn der Benutzer die Liste herunterzieht. So kann die Aktualisierungsanzeige gestartet, beendet und zurückgesetzt werden. 
 
-## Kompositionsanimationen
+## <a name="composition-animations"></a>Kompositionsanimationen
 
 Standardmäßig wird die Scrollbewegung des Inhalts in einer Bildlaufanzeige beim Erreichen des oberen Endes der Scrollleiste beendet. Um dem Benutzer das Herunterziehen der Liste zu ermöglichen, muss auf die visuelle Ebene zugegriffen und der Listeninhalt animiert werden. Im Beispiel werden hierfür [Kompositionsanimationen](https://msdn.microsoft.com/windows/uwp/graphics/composition-animation), genauer [Ausdrucksanimationen](https://msdn.microsoft.com/windows/uwp/graphics/composition-animation#expression-animations), verwendet.
 
 Diese Vorgänge werden im Beispiel hauptsächlich mit dem `CompositionTarget_Rendering` -Ereignishandler und der `UpdateCompositionAnimations` -Methode ausgeführt.
 
-## Verwandte Artikel
+## <a name="related-articles"></a>Verwandte Artikel
 
 - [Formatieren von Steuerelementen](styling-controls.md)
 - [Toucheingabe-Interaktionen](../input-and-devices/touch-interactions.md)
 - [Listenansicht und Rasteransicht](listview-and-gridview.md)
 - [Vorlagen für Listenansichtselemente](listview-item-templates.md)
 - [Ausdrucksanimationen](https://msdn.microsoft.com/windows/uwp/graphics/composition-animation#expression-animations)
-
-
-<!--HONumber=Aug16_HO3-->
-
-

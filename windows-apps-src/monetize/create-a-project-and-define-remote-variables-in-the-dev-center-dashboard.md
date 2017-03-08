@@ -3,19 +3,26 @@ author: mcleanbyron
 Description: "Bevor Sie in Ihrer App für die universelle Windows-Plattform (UWP) ein Experiment mit A/B-Tests ausführen können, müssen Sie ein Projekt erstellen und Ihre Remotevariablen im Dev Center-Dashboard definieren."
 title: Erstellen eines Projekts und Festlegen von Remotevariablen im Dev Center-Dashboard
 ms.assetid: C3809FF1-0A6A-4715-B989-BE9D0E8C9013
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Microsoft Store Services SDK, A / B-Tests, Experimente"
 translationtype: Human Translation
-ms.sourcegitcommit: 32c1b379ee3913e267664e6d125fbc3daf480bb3
-ms.openlocfilehash: 88a55c9ed64d5f52f959a1c68618dc5296dc24d6
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ad24e9a52458b826f3ce1bc7aba3dbdcf302f87d
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Erstellen eines Projekts und Festlegen von Remotevariablen im Dev Center-Dashboard
+# <a name="create-a-project-and-define-remote-variables-in-the-dev-center-dashboard"></a>Erstellen eines Projekts und Festlegen von Remotevariablen im Dev Center-Dashboard
 
 Erstellen Sie zunächst für das Experiment ein [Projekt](run-app-experiments-with-a-b-testing.md#terms) für Ihre App im Dev Center-Dashboard, und definieren Sie die Remotevariablen, auf die Ihre App zugreifen kann.
 
 Die folgenden Anweisungen beschreiben die wichtigsten Schritte für die Erstellung eines Projekts. Eine ausführliche Erläuterung, die den gesamten Erstellungs- und Ausführungsprozess für ein Projekt und die Durchführung eines Experiments veranschaulicht, finden Sie unter [Erstellen und Durchführen eines ersten Experiments mit A/B-Tests](create-and-run-your-first-experiment-with-a-b-testing.md).
 
-## Anweisungen
+## <a name="instructions"></a>Anweisungen
 
 1. Melden Sie sich beim [Dev Center-Dashboard](https://dev.windows.com/overview) an.
 2. Wählen Sie unter **Ihre Apps** die App aus, für die Sie ein Experiment erstellen möchten.
@@ -31,20 +38,15 @@ Die folgenden Anweisungen beschreiben die wichtigsten Schritte für die Erstellu
 >**Hinweis**&nbsp;&nbsp;Sie können keine Remotevariablen bearbeiten, hinzufügen oder entfernen, während ein Experiment im Projekt aktiv ist. Diese Einschränkung hilft, die Integrität der Daten der Steuerelementgruppe für das aktive Experiment zu schützen.
 
 
-## Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte
 
 Nachdem Sie ein Projekt erstellt haben, können Sie mit dem [Codieren der App für das Experiment](code-your-experiment-in-your-app.md) beginnen, indem Sie Werte von Remotevariablen in Ihrer App abrufen, und Sie können [ein Experiment im Projekt erstellen](define-your-experiment-in-the-dev-center-dashboard.md).
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Codieren der App für das Experiment](code-your-experiment-in-your-app.md)
 * [Definieren des Experiments im Dev Center-Dashboard](define-your-experiment-in-the-dev-center-dashboard.md)
 * [Verwalten des Experiments im Dev Center-Dashboard](manage-your-experiment.md)
 * [Erstellen und Ausführen eines ersten Experiments mit A/B-Tests](create-and-run-your-first-experiment-with-a-b-testing.md)
 * [Ausführen von App-Experimenten mit A/B-Tests](run-app-experiments-with-a-b-testing.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

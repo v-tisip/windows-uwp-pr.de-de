@@ -2,15 +2,21 @@
 author: mcleanbyron
 ms.assetid: B356C442-998F-4B2C-B550-70070C5E4487
 description: Erfahren Sie, wie Sie den Windows.Services.Store-Namespace verwenden, um eine App oder ein Add-on zu erwerben.
-title: "Unterstützen von In-App-Käufen von Apps und Add-Ons"
-keywords: In-App-Angebot, Codebeispiel
+title: "Aktivieren von In-App-Käufen von Apps und Add-Ons"
+keywords: "windows 10, uwp, add-ons, in-app-käufe, IAPs, Windows.Services.Store"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
-ms.openlocfilehash: 05a93f3124324d7308f5494ad14a15bfd6a4e698
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 4b45d8b34bed361471c1fc95594ad6fd28e41fa6
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="enable-in-app-purchases-of-apps-and-add-ons"></a>Unterstützen von In-App-Käufen von Apps und Add-Ons
+# <a name="enable-in-app-purchases-of-apps-and-add-ons"></a>Aktivieren von In-App-Käufen von Apps und Add-Ons
 
 Apps für Windows 10, Version 1607 oder höher, können Mitglieder im [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace verwenden, um für den Benutzer den Kauf der aktuellen App oder eines ihrer Add-Ons (auch als In-App-Produkte oder IAPs bezeichnet) anzufordern. Wenn der Benutzer beispielsweise aktuell über eine Testversion der App verfügt, können Sie diesen Vorgang verwenden, um für den Benutzer eine Volllizenz zu erwerben. Alternativ können Sie diesen Prozess auch verwenden, um für den Benutzer ein Add-On wie z. B. ein neues Gamelevel zu erwerben.
 
@@ -52,9 +58,4 @@ Eine vollständige Beispielanwendung finden Sie im [Store-Beispiel](https://gith
 * [Unterstützen von Käufen konsumierbarer Add-Ons](enable-consumable-add-on-purchases.md)
 * [Implementieren einer Testversion der App](implement-a-trial-version-of-your-app.md)
 * [Store-Beispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

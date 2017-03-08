@@ -3,20 +3,27 @@ author: TylerMSFT
 title: Starten der Windows Store-App
 description: In diesem Thema wird das ms-windows-store-URI-Schema beschrieben. Ihre App kann mit diesem URI-Schema die Windows Store-App mit bestimmten Seiten des Store starten.
 ms.assetid: 9A9C6576-1637-47D1-AC3B-D1A20D49E0FF
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: b66ae37adec1b68653c0fe7d552a84f61d57acd9
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d80055e8c8ca1e8586cb8f2a54612206301282a1
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Starten der Windows Store-App
+# <a name="launch-the-windows-store-app"></a>Starten der Windows Store-App
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 In diesem Thema wird das **ms-windows-store:**-URI-Schema beschrieben. Ihre App kann mit diesem URI-Schema die Windows Store-App mit bestimmten Seiten des Store starten.
 
-## ms-windows-store: URI-Schemaverweis
+## <a name="ms-windows-store-uri-scheme-reference"></a>ms-windows-store: URI-Schemaverweis
 
 <table>
 <tr><th>Beschreibung</th><th></th><th>URI-Schema</th></tr>
@@ -129,9 +136,4 @@ Startet eine Suche für die angegebene Abfrage. Leerzeichen in der Abfrage sind 
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

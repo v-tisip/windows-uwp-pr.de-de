@@ -2,23 +2,31 @@
 author: DelfCo
 description: "Tools und Verfahren zum Debuggen und Testen der Kompatibilität Ihrer App mit der Prozesslebensdauer-Verwaltung."
 title: "Test- und Debugtools für die Prozesslebensdauer-Verwaltung (PLM)"
+ms.author: bobdel
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
+ms.assetid: 8ac6d127-3475-4512-896d-80d1e1d66ccd
 translationtype: Human Translation
-ms.sourcegitcommit: cbf3d2bb1466ca06e397561ad90d95db28e7136d
-ms.openlocfilehash: 1ea7b969ce0b8992306bb8a2d2b569905cc0cc67
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: a5315534fc305c85dcf410b4808d2f8ebd844b3e
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Test- und Debugtools für die Prozesslebensdauer-Verwaltung (PLM)
+# <a name="testing-and-debugging-tools-for-process-lifetime-management-plm"></a>Test- und Debugtools für die Prozesslebensdauer-Verwaltung (PLM)
 
 Einer der Hauptunterschiede zwischen UWP-Apps und traditionellen Desktopanwendungen besteht darin, dass UWP-Titel in einem App-Container enthalten sind, der der Prozesslebensdauer-Verwaltung (Process Lifecycle Management, PLM) unterliegt. UWP-Apps können plattformübergreifend durch den Runtime Broker-Dienst angehalten, fortgesetzt oder beendet werden. Um diese Übergänge beim Testen oder Debuggen des Codes, durch den sie behandelt werden, zu erzwingen, stehen Ihnen spezielle Tools zur Verfügung.
 
-## Features in Visual Studio 2015
+## <a name="features-in-visual-studio-2015"></a>Features in Visual Studio 2015
 
 Der integrierte Debugger in Visual Studio 2015 kann Sie bei der Untersuchung potenzieller Probleme unterstützen, die bei Verwendung reiner UWP-Features auftreten können. Mithilfe der Symbolleiste **Ereignisse des Lebenszyklus**, die beim Ausführen und Debuggen Ihres Titels sichtbar wird, können Sie für die Anwendung unterschiedliche PLM-Zustände erzwingen.
 
 ![Symbolleiste „Ereignisse des Lebenszyklus“](images/gs-debug-uwp-apps-001.png)
 
-## Tool PLMDebug
+## <a name="the-plmdebug-tool"></a>Tool PLMDebug
 
 Das Befehlszeilentool „PLMDebug.exe“ ist Bestandteil des Windows SDKs und ermöglicht es Ihnen, den PLM-Zustand eines Anwendungspakets zu steuern. Nach der Installation finden Sie das Tool standardmäßig unter *C:\Programme (x86)\Windows Kits\10\Debuggers\x64*. 
 
@@ -78,12 +86,7 @@ plmdebug /enableDebug 279f7062-ce35-40e8-a69f-cc22c08e0bb8_1.0.0.0_x86__c6sq6kwg
 
 Beachten Sie, dass jeder **/enableDebug**-Aufruf später mit der Option **/disableDebug** an einen weiteren PLMDebug-Aufruf gekoppelt werden muss. Darüber hinaus muss der Pfad zu einem Debugger absolut sein (relative Pfade werden nicht unterstützt).
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 - [Bereitstellen und Debuggen von UWP-Apps](deploying-and-debugging-uwp-apps.md)
 - [Debugging, Tests und Leistung](index.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

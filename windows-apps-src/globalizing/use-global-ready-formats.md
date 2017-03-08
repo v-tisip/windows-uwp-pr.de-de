@@ -5,9 +5,16 @@ title: Verwenden weltweit einsetzbarer Formate
 ms.assetid: 6ECE8BA4-9A7D-49A6-81EE-AB2BE7F0254F
 label: Use global-ready formats
 template: detail.hbs
+ms.author: bobdel
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: eb524ae7369874e8a2f81cd4a8cbb112829387c8
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: a733f3d87f2e6598e49d8926a7b10797e335c79c
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -166,9 +173,4 @@ Für Szenarien, in denen Sie basierend auf den Sprach-, Regions- und Kultureinst
 * [Beispiel für Datums- und Uhrzeitformatierung](http://go.microsoft.com/fwlink/p/?linkid=231618)
 * [Beispiel für Globalisierungseinstellungen](http://go.microsoft.com/fwlink/p/?linkid=231608)
 * [Beispiel für Zahlenformatierung und Analyse](http://go.microsoft.com/fwlink/p/?linkid=231620)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

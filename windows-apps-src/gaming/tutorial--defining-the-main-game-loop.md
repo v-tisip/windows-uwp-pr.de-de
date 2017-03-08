@@ -3,25 +3,32 @@ author: mtoepke
 title: "Definieren des Hauptobjekts für das Spiel"
 description: "In diesem Abschnitt widmen wir uns den Details des Hauptobjekts des Beispielspiels. Außerdem erfahren Sie, wie die implementierten Regeln in Interaktionen mit der Spielwelt übersetzt werden."
 ms.assetid: 6afeef84-39d0-cb78-aa2e-2e42aef936c9
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Spiele, Hauptobjekt"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 8af939fee50540e5213e624703400d99cbb6785f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f81b3eaa9b896295386232f99b789dc3857b3bad
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Definieren des Hauptobjekts für das Spiel
+# <a name="define-the-main-game-object"></a>Definieren des Hauptobjekts für das Spiel
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Wir haben bislang das grundlegende Framework des Beispielspiels eingerichtet und einen Zustandsautomaten für die übergeordneten Benutzer- und Systemverhalten implementiert. Was wir allerdings noch nicht behandelt haben, ist der Teil, der das Beispielspiel zu einem richtigen Spiel macht: die Regeln und die Spielmechanik sowie deren Implementierung. In diesem Abschnitt widmen wir uns den Details des Hauptobjekts des Beispielspiels. Außerdem erfahren Sie, wie die implementierten Regeln in Interaktionen mit der Spielwelt übersetzt werden.
 
-## Ziel
+## <a name="objective"></a>Ziel
 
 
 -   Anwendung grundlegender Entwicklungstechniken beim Implementieren der Regeln und Spielmechaniken eines einfachen UWP-Spiels (Universelle Windows-Plattform) unter Verwendung von DirectX.
 
-## Berücksichtigen des Spielflusses
+## <a name="considering-the-games-flow"></a>Berücksichtigen des Spielflusses
 
 
 Der Großteil der Grundstruktur des Spiels wird in den folgenden Dateien definiert:
@@ -33,11 +40,11 @@ In [Definieren des UWP-App-Frameworks für das Spiel](tutorial--building-the-gam
 
 **Simple3DGame.cpp** stellt den Code für eine Klasse **Simple3DGame** bereit, die die Implementierung des eigentlichen Gameplays angibt. Zuvor haben wir die Behandlung des Beispielspiels als UWP-App beleuchtet. Nun widmen wir uns dem Code, der es zu einem Spiel macht.
 
-Den vollständigen Code für **Simple3DGame.h/.cpp** finden Sie unter [Vollständiger Beispielcode für diesen Abschnitt](#code_sample).
+Den vollständigen Code für **Simple3DGame.h/.cpp** finden Sie unter [Vollständiger Beispielcode für diesen Abschnitt](#complete-code-sample-for-this-section).
 
 Sehen wir uns einmal die Definition der **Simple3DGame**-Klasse an.
 
-## Definieren des Kernobjekts für das Spiel
+## <a name="defining-the-core-game-object"></a>Definieren des Kernobjekts für das Spiel
 
 
 Beim Start des App-Singletons erstellt die **Initialize**-Methode des Ansichtsanbieters eine Instanz der Hauptklasse des Spiels: das **Simple3DGame**-Objekt. Dieses Objekt enthält die Methoden, die Änderungen am Spielzustand an den im App-Framework definierten Zustandsautomaten (oder von der App an das Spielobjekt selbst) weitergeben. Es enthält auch Methoden, die Infos zum Aktualisieren der Overlaybitmap und des Head-up-Display des Spiels sowie zum Aktualisieren der Animationen und der Physik (Dynamik) im Spiel zurückgeben. Der Code für die vom Spiel verwendeten Grafikgerätressourcen befindet sich in „GameRenderer.cpp“. Darauf gehen wir in [Zusammensetzen des Renderingframeworks](tutorial--assembling-the-rendering-pipeline.md) noch näher ein.
@@ -89,7 +96,7 @@ Werfen wir zunächst einen Blick auf die internen Methoden, die für **Simple3DG
 -   **Initialize**. Legt die Anfangswerte der globalen Variablen fest und initialisiert die Spielobjekte.
 -   **LoadGame**. Initialisiert ein neues Level und startet den entsprechenden Ladevorgang.
 -   **LoadLevelAsync**. Startet eine asynchrone Aufgabe (weitere Details finden Sie unter [Parallel Patterns Library](https://msdn.microsoft.com/library/windows/apps/dd492418.aspx)) zum Initialisieren des Levels und ruft dann eine asynchrone Aufgabe für den Renderer auf, um die gerätespezifischen Ressourcen für das Level zu laden. Diese Methode wird in einem gesonderten Thread ausgeführt. Daher können in diesem Thread nur [**ID3D11Device**](https://msdn.microsoft.com/library/windows/desktop/ff476379)-Methoden (und keine [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)-Methoden) aufgerufen werden. Alle Gerätekontextmethoden werden in der **FinalizeLoadLevel**-Methode aufgerufen.
--   **FinalizeLoadLevel**. Führt alle Aktionen zum Laden des Levels aus, die im Hauptthread durchgeführt werden müssen. Dies schließt alle Aufrufe von Direct3D11-Gerätekontextmethoden ([**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)) ein.
+-   **FinalizeLoadLevel**. Führt alle Aktionen zum Laden des Levels aus, die im Hauptthread durchgeführt werden müssen. Dies schließt alle Aufrufe von Direct3D 11-Gerätekontextmethoden ([**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)) ein.
 -   **StartLevel**. Startet das Gameplay für ein neues Level.
 -   **PauseGame**. Hält das Spiel an.
 -   **RunGame**. Führt eine Iteration der Spielschleife aus. Wird jeweils einmal pro Iteration der Spielschleife von **App::Update** aufgerufen, sofern sich das Spiel im Zustand **Active** befindet.
@@ -100,14 +107,14 @@ Und die privaten Methoden:
 -   **LoadSavedState** und **SaveState**. Lädt bzw. speichert den aktuellen Zustand des Spiels.
 -   **SaveHighScore** und **LoadHighScore**. Speichert bzw. lädt den spielübergreifenden Highscore.
 -   **InitializeAmmo**. Setzt den Zustand der als Munition verwendeten Kugelobjekte in den Originalzustand für den Beginn einer neuen Runde zurück.
--   **UpdateDynamics**. Diese Methode ist sehr wichtig, da sie alle Spielobjekte auf der Grundlage vordefinierter Animationsroutinen, Physikeffekte und Steuerungseingaben aktualisiert. Hierbei handelt es sich gewissermaßen um das Herzstück der Interaktivität, die das Spiel ausmacht. Hiermit beschäftigen wir uns im Abschnitt [Aktualisieren des Spiels](#update_game) noch ausführlicher.
+-   **UpdateDynamics**. Diese Methode ist sehr wichtig, da sie alle Spielobjekte auf der Grundlage vordefinierter Animationsroutinen, Physikeffekte und Steuerungseingaben aktualisiert. Hierbei handelt es sich gewissermaßen um das Herzstück der Interaktivität, die das Spiel ausmacht. Hiermit beschäftigen wir uns im Abschnitt [Aktualisieren des Spiels](#updating-the-game-world) noch ausführlicher.
 
 Die anderen öffentlichen Methoden dienen zum Abrufen von Eigenschaften und geben Gameplay- und Overlay-spezifische Informationen an das App-Framework zurück, um diese anzuzeigen.
 
-## Definieren der Spielzustandsvariablen
+## <a name="defining-the-game-state-variables"></a>Definieren der Spielzustandsvariablen
 
 
-Das Spielobjekt fungiert u.a. als Container für die Daten, die eine Spielsitzung, ein Level oder eine Lebensdauer ausmachen – je nachdem, wie Sie Ihr Spiel auf einer übergeordneten Ebene definieren. Im aktuellen Fall beziehen sich die Spielzustandsdaten auf die Lebensdauer des Spiels und werden ein Mal initialisiert, wenn der Benutzer das Spiel startet.
+Das Spielobjekt fungiert u. a. als Container für die Daten, die eine Spielsitzung, ein Level oder eine Lebensdauer ausmachen – je nachdem, wie Sie Ihr Spiel auf einer übergeordneten Ebene definieren. Im aktuellen Fall beziehen sich die Spielzustandsdaten auf die Lebensdauer des Spiels und werden ein Mal initialisiert, wenn der Benutzer das Spiel startet.
 
 Im Anschluss finden Sie alle Definitionen für die Zustandsvariablen des Spielobjekts.
 
@@ -149,13 +156,13 @@ private:
 Am Anfang des Codebeispiels befinden sich vier Objekte, deren Instanzen während der Ausführung der Spielschleife aktualisiert werden.
 
 -   Das **MoveLookController**-Objekt. Dieses Objekt stellt die Eingaben des Spielers dar. (Ausführlichere Informationen zum **MoveLookController**-Objekt finden Sie unter [Hinzufügen von Steuerelementen](tutorial--adding-controls.md).)
--   Das **GameRenderer**-Objekt. Dieses Objekt stellt den von der **DirectXBase**-Klasse abgeleiteten Direct3D11-Renderer dar, der alle gerätespezifischen Objekte und deren Rendering verarbeitet. (Weitere Informationen finden Sie unter [Zusammensetzen der Renderingpipeline](tutorial--assembling-the-rendering-pipeline.md).)
+-   Das **GameRenderer**-Objekt. Dieses Objekt stellt den von der **DirectXBase**-Klasse abgeleiteten Direct3D 11-Renderer dar, der alle gerätespezifischen Objekte und deren Rendering verarbeitet. (Weitere Informationen finden Sie unter [Zusammensetzen der Renderingpipeline](tutorial--assembling-the-rendering-pipeline.md).)
 -   Das **Camera**-Objekt. Dieses Objekt stellt die Sicht des Spielers auf die Spielwelt aus der Ich-Perspektive dar. (Ausführlichere Informationen zum **Camera**-Objekt finden Sie unter [Zusammensetzen der Renderingpipeline](tutorial--assembling-the-rendering-pipeline.md).)
 -   Das **Audio**-Objekt. Dieses Objekt steuert die Audiowiedergabe für das Spiel. (Ausführlichere Informationen zum **Audio**-Objekt finden Sie unter [Hinzufügen von Sound](tutorial--adding-sound.md).)
 
 Die restlichen Spielvariablen enthalten die Listen mit den Grundtypen und die entsprechenden spielinternen Werte sowie Gameplay-spezifische Daten und Beschränkungen. Im Anschluss sehen Sie, wie das Beispiel diese Variablen beim Initialisieren des Spiels konfiguriert.
 
-## Initialisieren und Starten des Spiels
+## <a name="initializing-and-starting-the-game"></a>Initialisieren und Starten des Spiels
 
 
 Wenn ein Spieler das Spiel startet, muss das Spielobjekt den eigenen Zustand initialisieren, das Overlay erstellen und hinzufügen, die Variablen zur Nachverfolgung der Erfolge des Spielers festlegen und die Objekte instanziieren, die zum Erstellen der Level benötigt werden.
@@ -378,14 +385,14 @@ Das Beispielspiel richtet die Komponenten des Spieleobjekts in dieser Reihenfolg
 
 Das Spiel besitzt nun Instanzen aller wichtigen Komponenten: Spielwelt, Spieler, Hindernisse, Ziele und Munitionskugeln. Außerdem besitzt es Instanzen der Level. Diese stehen für Konfigurationen aller oben genannten Komponenten und ihrer Verhalten für die einzelnen spezifischen Level. Im nächsten Abschnitt widmen wir uns der Levelerstellung des Spiels.
 
-## Erstellen und Laden der Level des Spiels
+## <a name="building-and-loading-the-games-levels"></a>Erstellen und Laden der Level des Spiels
 
 
 Der Hauptteil der Levelkonstruktion wird in der Datei **Level.h/.cpp** erledigt. Darauf gehen wir an dieser Stelle aber nicht näher ein, da es sich hierbei um eine sehr spezifische Implementierung handelt. Entscheidend ist in diesem Zusammenhang, dass der Code für die einzelnen Levels jeweils als separates **LevelN**-Objekt ausgeführt wird. Falls Sie das Spiel erweitern möchten, können Sie ein **Level**-Objekt erstellen, das eine zugewiesene Nummer als Parameter annimmt und die Hindernisse und Ziele nach dem Zufallsprinzip verteilt. Alternativ können Sie festlegen, dass Levelkonfigurationsdaten aus einer Ressourcendatei oder sogar aus dem Internet geladen werden.
 
-Den vollständigen Code für **Level.h/.cpp** finden Sie unter [Vollständiger Beispielcode für diesen Abschnitt](#code_sample).
+Den vollständigen Code für **Level.h/.cpp** finden Sie unter [Vollständiger Beispielcode für diesen Abschnitt](#complete-code-sample-for-this-section).
 
-## Definieren des Gameplays
+## <a name="defining-the-game-play"></a>Definieren des Gameplays
 
 
 Wir verfügen nun über alle Komponenten, die wir benötigen, um das Spiel zusammenzufügen. Die Level wurden auf der Grundlage der Grundtypen im Speicher konstruiert und sind bereit für die Interaktion des Spielers.
@@ -649,7 +656,7 @@ GameState Simple3DGame::RunGame()
 
 Dabei ist besonders der folgende Aufruf interessant: `UpdateDynamics()`. Er sorgt dafür, dass die Spielwelt lebendig wird. Ausführlichere Infos gibt's im nächsten Abschnitt.
 
-## Aktualisieren der Spielwelt
+## <a name="updating-the-game-world"></a>Aktualisieren der Spielwelt
 
 
 Bei einem schnellen und flüssigen Spielablauf entsteht das Gefühl einer *lebendigen* Spielwelt, die auch ohne Interaktion des Spielers in Bewegung ist. Bäume wiegen sich im Wind, Wellen brechen sich an einer Küste, Maschinen qualmen und glänzen, und außerirdische Monster geifern. Stellen Sie sich im Gegensatz dazu eine Spielwelt vor, in der alles wie erstarrt ist und sich die Grafik nur als Reaktion auf eine Spielereingabe bewegt. Das wäre nicht nur merkwürdig, sondern auch so ziemlich das Gegenteil von immersiv. Der Effekt der Immersion entsteht für den Spieler durch das Gefühl, Bestandteil einer lebenden, atmenden Welt zu sein.
@@ -831,7 +838,7 @@ void Simple3DGame::UpdateDynamics()
 
 (Dieses Codebeispiel wurde zur einfacheren Lesbarkeit gekürzt. Der vollständige Code ist im vollständigen Codebeispiel am Ende dieses Themas enthalten.)
 
-Diese Methode behandelt vierBerechnungssätze:
+Diese Methode behandelt vier Berechnungssätze:
 
 -   Die Positionen der Kugeln für die abgefeuerte Munition in der Spielwelt.
 -   Die Animation der Säulenhindernisse.
@@ -844,7 +851,7 @@ Nachdem wir nun alle Objekte in der Szene aktualisiert und sämtliche Kollisione
 
 Werfen wir doch gleich einmal einen Blick auf die Rendermethode.
 
-## Rendern der Spielweltgrafik
+## <a name="rendering-the-game-worlds-graphics"></a>Rendern der Spielweltgrafik
 
 
 Wir empfehlen, die Grafik in einem Spiel so oft wie möglich (im Höchstfall also bei jeder Iteration der Hauptschleife des Spiels) zu aktualisieren. Im Zuge der Schleifeniteration wird das Spiel unabhängig von einer Spielereingabe aktualisiert. Dies ermöglicht eine flüssige Darstellung der berechneten Animationen und Verhalten. Stellen Sie sich nur einmal eine einfache Szene mit Wasser vor, das sich nur bewegt, wenn der Spieler eine Taste drückt. Das Ergebnis wäre eine schrecklich langweilige Grafik. Ein gutes Spiel wird ruckelfrei und flüssig dargestellt.
@@ -1041,12 +1048,12 @@ Diese Methode zeichnet die Projektion der dreidimensionalen Welt und legt anschl
 
 Beachten Sie, dass für das Direct2D-Overlay zwei Zustände möglich sind: In einem Zustand zeigt das Spiel das Overlay mit den Spielinfos an, das die Bitmap für das Pausenmenü enthält. Im anderen Zustand zeigt das Spiel das Fadenkreuz sowie die Rechtecke für den Bewegungs- und Blickrichtungscontroller auf dem Touchscreen an. Der Text mit dem Spielstand wird in beiden Zuständen gezeichnet.
 
-## Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte
 
 
 Inzwischen sind Sie sicher schon gespannt auf die eigentliche Rendering-Engine und möchten wissen, wie die Aufrufe der **Render**-Methoden für die aktualisierten Grundtypen in Bildschirmpixel verwandelt werden. Darauf gehen wir in [Zusammensetzen des Renderingframeworks](tutorial--assembling-the-rendering-pipeline.md) genauer ein. Sollten Sie sich dagegen mehr für die Aktualisierung des Spielzustands durch die Spielersteuerung interessieren, finden Sie entsprechende Informationen unter [Hinzufügen von Steuerelementen](tutorial--adding-controls.md).
 
-## Vollständiges Codebeispiel für diesen Abschnitt
+## <a name="complete-code-sample-for-this-section"></a>Vollständiges Codebeispiel für diesen Abschnitt
 
 
 Simple3DGame.h
@@ -3606,11 +3613,11 @@ XMFLOAT3 AnimateCirclePosition::Evaluate(_In_ float t)
 ```
 
 > **Hinweis**  
-Dieser Artikel ist für Windows10-Entwickler gedacht, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows8.x oder Windows Phone8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 
 [Erstellen eines einfachen UWP-Spiels mit DirectX](tutorial--create-your-first-metro-style-directx-game.md)
@@ -3621,10 +3628,5 @@ Dieser Artikel ist für Windows10-Entwickler gedacht, die Apps für die universe
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

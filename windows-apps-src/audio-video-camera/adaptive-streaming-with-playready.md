@@ -3,15 +3,22 @@ author: eliotcowley
 ms.assetid: BF877F23-1238-4586-9C16-246F3F25AE35
 description: "In diesem Artikel wird beschrieben, wie Sie einer UWP-App (Universelle Windows-Plattform) adaptives Streaming von Multimediainhalten mit Microsoft PlayReady-Inhaltsschutz hinzufügen."
 title: Adaptives Streaming mit PlayReady
+ms.author: elcowle
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 8534598b1f3cf49b15a73d03f6f19e67877b25d0
-ms.openlocfilehash: 22e430fd6dafe49fb3bf599fec91a9ab3dbd6b95
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 861ec2823080192a5b2d9b557af14ca5e3ab43fb
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Adaptives Streaming mit PlayReady
+# <a name="adaptive-streaming-with-playready"></a>Adaptives Streaming mit PlayReady
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 In diesem Artikel wird beschrieben, wie Sie einer UWP-App (Universelle Windows-Plattform) adaptives Streaming von Multimediainhalten mit Microsoft PlayReady-Inhaltsschutz hinzufügen. 
 
@@ -58,7 +65,7 @@ Sie sollten auch die folgende Konstante deklarieren:
 private const uint MSPR_E_CONTENT_ENABLING_ACTION_REQUIRED = 0x8004B895;
 ```
 
-## Einrichten von „MediaProtectionManager“
+## <a name="setting-up-the-mediaprotectionmanager"></a>Einrichten von „MediaProtectionManager“
 
 Um Ihrer UWP-App PlayReady-Inhaltsschutz hinzuzufügen, müssen Sie ein [MediaProtectionManager](https://msdn.microsoft.com/library/windows/apps/br207040)-Objekt einrichten. Diese Einrichtung erfolgt beim Initialisieren Ihres [**AdaptiveMediaSource**](https://msdn.microsoft.com/library/windows/apps/dn946912)-Objekts.
 
@@ -136,7 +143,7 @@ private async void ProtectionManager_ServiceRequested(
 }
 ```
 
-## Individualisierungsdienstanforderung
+## <a name="individualization-service-requests"></a>Individualisierungsdienstanforderung
 
 Der folgende Code sendet reaktiv eine PlayReady-Individualisierungsdienstanforderung. Wir übergeben die Anforderung als Parameter an die Funktion. Wir platzieren den Aufruf in einem try/catch-Block. Wenn keine Ausnahmen auftreten, wurde die Anforderung in unseren Augen erfolgreich abgeschlossen:
 
@@ -187,7 +194,7 @@ async void ProActiveIndivRequest()
 }
 ```
 
-## Lizenzerwerb-Dienstanforderungen
+## <a name="license-acquisition-service-requests"></a>Lizenzerwerb-Dienstanforderungen
 
 Falls es sich bei der Anforderung stattdessen um [PlayReadyLicenseAcquisitionServiceRequest](https://msdn.microsoft.com/library/windows/apps/dn986285) handelt, rufen wir die folgende Funktion auf, um die PlayReady-Lizenz anzufordern und zu erwerben. Wir teilen dem übergebenen **MediaProtectionServiceCompletion**-Objekt mit, ob die Anforderung erfolgreich war, und schließen die Anforderung ab:
 
@@ -269,7 +276,7 @@ async void LicenseAcquisitionRequest(
 }
 ```
 
-## Initialisieren von „AdaptiveMediaSource“
+## <a name="initializing-the-adaptivemediasource"></a>Initialisieren von „AdaptiveMediaSource“
 
 Schließlich benötigen Sie eine Funktion zum Initialisieren des [AdaptiveMediaSource](https://msdn.microsoft.com/library/windows/apps/dn946912)-Objekts, das aus einem bestimmten [Uri](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx)- und [MediaElement](https://msdn.microsoft.com/library/windows/apps/br242926)-Objekt erstellt wurde. Bei **Uri** sollte es sich um den Link zur Mediendatei (HLS oder DASH) handeln. **MediaElement** muss in Ihrem XAML-Code definiert werden.
 
@@ -290,17 +297,12 @@ async private void InitializeAdaptiveMediaSource(System.Uri uri, MediaElement m)
 }
 ```
 
-Sie können diese Funktion in jedem Ereignis aufrufen, das den Start des adaptiven Streamings behandelt, z.B. in einem Click-Ereignis für eine Schaltfläche.
+Sie können diese Funktion in jedem Ereignis aufrufen, das den Start des adaptiven Streamings behandelt, z. B. in einem Click-Ereignis für eine Schaltfläche.
 
-## Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen
 - [PlayReady DRM](playready-client-sdk.md)
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

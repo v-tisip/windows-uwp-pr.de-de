@@ -2,14 +2,22 @@
 author: JordanEllis6809
 title: HTML-Spieleentwicklung auf Xbox
 description: UWP-Spieleentwicklung auf Xbox in HTML.
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: edd40cc4-2604-4bc6-bd81-f671389a70fa
 translationtype: Human Translation
-ms.sourcegitcommit: c20aaad74acde12cdf2b7db342dac2c8c376560b
-ms.openlocfilehash: 992182f69fe65967771b8bf75b1cb9883da3633a
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 9f7a70bb726fc6eb6f7465068cf33acb7aa33a39
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Portieren von HTML-Spielen auf die UWP auf Xbox
-Xbox One ist eine hervorragende Plattform für HTML 5-Spiele. HTML 5-Spiele werden auf der [Edge](https://developer.microsoft.com/microsoft-edge/)-Browser-Engine ausgeführt. Edge ist schnell und unterstützt HTML5- und CSS3-Features wie WebGL und Canvas uneingeschränkt.
+# <a name="bringing-html-games-to-uwp-on-xbox"></a>Portieren von HTML-Spielen auf die UWP auf Xbox
+Xbox One ist eine hervorragende Plattform für HTML5-Spiele. HTML 5-Spiele werden auf der [Edge](https://developer.microsoft.com/microsoft-edge/)-Browser-Engine ausgeführt. Edge ist schnell und unterstützt HTML5- und CSS3-Features wie WebGL und Canvas uneingeschränkt.
 
 Beliebte Spielengines wie [Construct 2](https://www.scirra.com/blog/176/announcing-xbox-one-export-beta) bieten Unterstützung für Xbox One. Wir haben noch nicht alle HTML-Frameworks und -Engines getestet, aber wir gehen davon aus, dass die meisten auf Xbox One verwendet werden können.
 
@@ -19,12 +27,7 @@ Xbox One wird auf der universellen Windows-Plattform ausgeführt. Dies bedeutet,
 
 Laden Sie zunächst die Engine Ihrer Wahl herunter, und suchen Sie nach Anweisungen für Windows 10-Apps. Lesen Sie außerdem den [Erste Schritte-Leitfaden](getting-started.md) mit Informationen dazu, wie Sie die Konsole als Development-Kit nutzen und Bereitstellungen von Visual Studio aus durchführen.
 
-## Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen
 - [Portieren vorhandener Spiele zu Xbox](development-lanes-landing.md)
-- [UWP auf XboxOne](index.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
+- [UWP auf Xbox One](index.md)
 

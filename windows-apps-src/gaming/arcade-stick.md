@@ -3,15 +3,22 @@ author: mithom
 title: Arcade-Joystick
 description: Verwenden Sie die Windows.Gaming.Input-Arcade-Joystick-APIs zum Erkennen und Lesen von Arcade-Joysticks.
 ms.assetid: 2E52232F-3014-4C8C-B39D-FAC478BA3E01
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Spiele, Arcade-Joysticks, Eingabe"
 translationtype: Human Translation
-ms.sourcegitcommit: 31dc2428175fc0afc84f30537898748300c7b242
-ms.openlocfilehash: 9fd90cbb8be3a0b2d234eff8a13a98b7f406aadf
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: b0411dcf1fd75ec7dc31d29a39e95f5c26073953
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="arcade-stick"></a>Arcade-Joystick
 
-Auf dieser Seite werden die Grundlagen der Programmierung für Xbox One-Arcade-Joysticks mittels [Windows.Gaming.Input.ArcadeStick][arcadestick] und verwandter APIs für die universelle Windows-Plattform (UWP) beschrieben.
+Auf dieser Seite werden die Grundlagen der Programmierung für Xbox One-Arcade-Joysticks mittels [Windows.Gaming.Input.ArcadeStick][arcadestick] und verwandter APIs für die Universelle Windows-Plattform (UWP) beschrieben.
 
 Auf dieser Seite erhalten Sie Informationen zu folgenden Vorgängen:
 * Erstellen einer Liste der verbundenen Arcade-Joysticks und ihrer Benutzer
@@ -160,9 +167,4 @@ Das [InputInterfacingUWP-Beispiel _(github)_](https://github.com/Microsoft/Xbox-
 [getcurrentreading]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.arcadestick.getcurrentreading.aspx
 [arcadestickreading]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.arcadestickreading.aspx
 [arcadestickbuttons]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.arcadestickbuttons.aspx
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

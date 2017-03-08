@@ -3,20 +3,27 @@ author: laurenhughes
 ms.assetid: D5D98044-7221-4C2A-9724-56E59F341AB0
 description: "In diesem Artikel werden das Lesen und Schreiben von Eigenschaften von Bildmetadaten und das Hinzufügen von Geomarkierungen zu Dateien mithilfe der GeotagHelper-Hilfsklasse erläutert."
 title: Bildmetadaten
+ms.author: lahugh
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: fd5b52a1d431b9396a4b162077d4f8d6246cd597
-ms.openlocfilehash: 958033bc054da292c85f8df0a57cf964696c82bd
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: af9a4c243c939ddc04e5d0763b58df00e70d7017
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Bildmetadaten
+# <a name="image-metadata"></a>Bildmetadaten
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 In diesem Artikel werden das Lesen und Schreiben von Eigenschaften von Bildmetadaten und das Hinzufügen von Geomarkierungen zu Dateien mithilfe der [**GeotagHelper**](https://msdn.microsoft.com/library/windows/apps/dn903683)-Hilfsklasse erläutert.
 
-## Bildeigenschaften
+## <a name="image-properties"></a>Bildeigenschaften
 
 Die [**StorageFile.Properties**](https://msdn.microsoft.com/library/windows/apps/br227225)-Eigenschaft gibt ein [**StorageItemContentProperties**](https://msdn.microsoft.com/library/windows/apps/hh770642)-Objekt zurück, das Zugriff auf inhaltsbezogene Informationen zur Datei bietet. Rufen Sie die bildspezifischen Eigenschaften durch Aufruf von [**GetImagePropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/hh770646) ab. Das zurückgegebene [**ImageProperties**](https://msdn.microsoft.com/library/windows/apps/br207718)-Objekt macht Member verfügbar, die Felder mit grundlegenden Bildmetadaten enthalten, z. B. den Titel des Bilds und das Aufnahmedatum.
 
@@ -32,7 +39,7 @@ Verwenden Sie für den Zugriff auf eine größere Menge von Dateimetadaten das W
 
 -   Da nicht unterstützte Eigenschaften beim Abrufen möglicherweise einen NULL-Wert zurückgeben, prüfen Sie immer auf NULL, bevor Sie einen zurückgegebenen Metadatenwert verwenden.
 
-## GeotagHelper
+## <a name="geotag-helper"></a>GeotagHelper
 
 „GeotagHelper“ ist eine Hilfsklasse, die das problemlose und direkte Markieren von Bildern mit geografischen Daten unter Verwendung der [**Windows.Devices.Geolocation**](https://msdn.microsoft.com/library/windows/apps/br225603)-APIs ermöglicht, ohne dass das Metadatenformat manuell analysiert oder konstruiert werden muss.
 
@@ -54,7 +61,7 @@ Um einen GeoPoint abzurufen, der die geomarkierte Position einer Bilddatei darst
 
 [!code-cs[GetGeoData](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetGetGeoData)]
 
-## Decodieren und Codieren von Bildmetadaten
+## <a name="decode-and-encode-image-metadata"></a>Decodieren und Codieren von Bildmetadaten
 
 Die fortschrittlichste Methode zum Arbeiten mit Bilddaten ist das Lesen und Schreiben der Eigenschaften auf Datenstromebene mithilfe von [**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/br226176) oder [BitmapEncoder](bitmapencoder-options-reference.md). Für diese Vorgänge können Sie Windows-Eigenschaften verwenden, um die gelesenen oder geschriebenen Daten anzugeben. Sie können aber auch die von der Windows-Bilderstellungskomponente (WIC) bereitgestellte Metadatenabfragesprache verwenden, um den Pfad zu einer angeforderten Eigenschaft anzugeben.
 
@@ -79,7 +86,7 @@ Erstellen Sie ein [**BitmapPropertySet**](https://msdn.microsoft.com/library/win
 
 -   [Für **SetPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br226252) tritt ein Fehler mit dem Fehlercode 0x88982F41 auf, wenn das dem Encoder zugeordnete Bild eine der angeforderten Eigenschaften nicht unterstützt.
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Bildverarbeitung](imaging.md)
  
@@ -88,10 +95,5 @@ Erstellen Sie ein [**BitmapPropertySet**](https://msdn.microsoft.com/library/win
 
 
 
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

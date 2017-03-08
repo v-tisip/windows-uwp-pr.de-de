@@ -1,27 +1,34 @@
 ---
 title: "Schließfach für Anmeldeinformationen"
-description: "In diesem Artikel wird beschrieben, wie Apps für die universelle Windows-Plattform (UWP) mit dem Schließfach für Anmeldeinformationen Benutzeranmeldeinformationen sicher speichern und abrufen können und sie zwischen den Geräten mit dem Microsoft-Konto des Benutzers per Roaming übertragen können."
+description: "In diesem Artikel wird beschrieben, wie Apps für die Universelle Windows-Plattform (UWP) mit dem Schließfach für Anmeldeinformationen Benutzeranmeldeinformationen sicher speichern und abrufen können und sie zwischen den Geräten mit dem Microsoft-Konto des Benutzers per Roaming übertragen können."
 ms.assetid: 7BCC443D-9E8A-417C-B275-3105F5DED863
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
-ms.openlocfilehash: 2d5e1fada82e0c39ad0dce31c779ac80005aff17
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d72432aa5f9ccc40d4f822f5d76c1e09b606e33a
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Schließfach für Anmeldeinformationen
+# <a name="credential-locker"></a>Schließfach für Anmeldeinformationen
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 In diesem Artikel wird beschrieben, wie Apps für die universelle Windows-Plattform (UWP) mit dem Schließfach für Anmeldeinformationen Benutzeranmeldeinformationen sicher speichern und abrufen können und sie zwischen den Geräten mit dem Microsoft-Konto des Benutzers per Roaming übertragen können.
 
-Angenommen, Sie haben eine App, die eine Verbindung mit einem Dienst herstellt, um auf geschützte Dateien wie z.B. Mediendateien, soziale Netzwerke usw. zuzugreifen. Ihr Dienst erfordert Anmeldeinformationen für jeden Benutzer. Sie haben die Benutzeroberfläche in Ihre App integriert, die den Benutzernamen und das Kennwort für den Benutzer abruft; diese Informationen werden dann für die Anmeldung des Benutzers am Dienst verwendet. Mit der API des Schließfachs für Anmeldeinformationen können Sie den Benutzernamen und das Kennwort für den Benutzer speichern und diese Informationen leicht abrufen und den Benutzer automatisch anmelden, wenn er Ihre App das nächste Mal startet, und zwar unabhängig vom verwendeten Gerät.
+Angenommen, Sie haben eine App, die eine Verbindung mit einem Dienst herstellt, um auf geschützte Dateien wie z. B. Mediendateien, soziale Netzwerke usw. zuzugreifen. Ihr Dienst erfordert Anmeldeinformationen für jeden Benutzer. Sie haben die Benutzeroberfläche in Ihre App integriert, die den Benutzernamen und das Kennwort für den Benutzer abruft; diese Informationen werden dann für die Anmeldung des Benutzers am Dienst verwendet. Mit der API des Schließfachs für Anmeldeinformationen können Sie den Benutzernamen und das Kennwort für den Benutzer speichern und diese Informationen leicht abrufen und den Benutzer automatisch anmelden, wenn er Ihre App das nächste Mal startet, und zwar unabhängig vom verwendeten Gerät.
 
-Die Funktionsweise des Schließfachs für Anmeldeinformationen sieht für Domänenkonten etwas anders aus. Wenn für Ihr Microsoft-Konto Anmeldeinformationen gespeichert sind und Sie dieses Konto mit einem Domänenkonto (z.B. das Konto, das Sie bei der Arbeit nutzen) verknüpfen, wandern Ihre Anmeldeinformationen zu diesem Domänenkonto. Neue Anmeldeinformationen, die während einer Anmeldung mit dem Domänenkonto hinzugefügt werden, werden jedoch nicht servergespeichert. So wird sichergestellt, dass private Anmeldeinformationen für die Domäne nicht außerhalb der Domäne verfügbar gemacht werden.
+Die Funktionsweise des Schließfachs für Anmeldeinformationen sieht für Domänenkonten etwas anders aus. Wenn für Ihr Microsoft-Konto Anmeldeinformationen gespeichert sind und Sie dieses Konto mit einem Domänenkonto (z. B. das Konto, das Sie bei der Arbeit nutzen) verknüpfen, wandern Ihre Anmeldeinformationen zu diesem Domänenkonto. Neue Anmeldeinformationen, die während einer Anmeldung mit dem Domänenkonto hinzugefügt werden, werden jedoch nicht servergespeichert. So wird sichergestellt, dass private Anmeldeinformationen für die Domäne nicht außerhalb der Domäne verfügbar gemacht werden.
 
-## Speichern von Benutzeranmeldeinformationen
+## <a name="storing-user-credentials"></a>Speichern von Benutzeranmeldeinformationen
 
 
 1.  Rufen Sie mithilfe des [**PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227081)-Objekts aus dem [**Windows.Security.Credentials**](https://msdn.microsoft.com/library/windows/apps/br227089)-Namespace einen Verweis auf das Schließfach für Anmeldeinformationen ab.
@@ -33,7 +40,7 @@ vault.Add(new Windows.Security.Credentials.PasswordCredential(
     "My App", username, password));
 ```
 
-## Abrufen von Benutzeranmeldeinformationen
+## <a name="retrieving-user-credentials"></a>Abrufen von Benutzeranmeldeinformationen
 
 
 Zum Abrufen von Benutzeranmeldeinformationen aus dem Schließfach für Anmeldeinformationen mithilfe eines Verweises auf das [**PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227081)-Objekt stehen verschiedene Optionen zur Verfügung.
@@ -104,7 +111,7 @@ private Windows.Security.Credentials.PasswordCredential GetCredentialFromLocker(
 }
 ```
 
-## Löschen von Benutzeranmeldeinformationen
+## <a name="deleting-user-credentials"></a>Löschen von Benutzeranmeldeinformationen
 
 
 Das Löschen von Benutzeranmeldeinformationen im Schließfach für Anmeldeinformationen ist ebenfalls ein schneller Prozess mit zwei Schritten.
@@ -119,7 +126,7 @@ vault.Remove(new Windows.Security.Credentials.PasswordCredential(
     "My App", username, password));
 ```
 
-## Bewährte Methoden
+## <a name="best-practices"></a>Bewährte Methoden
 
 
 Verwenden Sie das Schließfach für Anmeldeinformationen nur für Kennwörter und nicht für größere Daten-BLOBs.
@@ -130,8 +137,3 @@ Speichern Sie Kennwörter nur unter den folgenden Bedingungen im Schließfach f�
 -   Der Benutzer hat dem Speichern von Kennwörtern zugestimmt.
 
 Speichern Sie Anmeldeinformationen niemals als Nur-Text mit App-Daten oder Roamingeinstellungen.
-
-
-<!--HONumber=Aug16_HO3-->
-
-

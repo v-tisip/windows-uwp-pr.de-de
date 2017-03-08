@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: 4BF9EF21-E9F0-49DB-81E4-062D6E68C8B1
 description: "Verwenden Sie zum programmgesteuerten Abrufen von Analysedaten für Apps, die für Ihr Windows Dev Center-Konto oder für das Konto Ihrer Organisation registriert sind, die Windows Store-Analyse-API."
 title: "Zugreifen auf Analysedaten mit Windows Store-Diensten"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Store-Dienste Windows Store-Analyse-API"
 translationtype: Human Translation
-ms.sourcegitcommit: 1a2e856cddf9998eeb8b0132c2fb79f5188c218b
-ms.openlocfilehash: 596cc5054367acf0d3609a34b764bc7fcf33ea0b
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1538f06b09bd4143750c10a2774137f87359ebce
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -67,15 +74,12 @@ Nachdem das Zugriffstoken abgelaufen ist, können Sie es aktualisieren, indem Si
 
 Nachdem Sie ein Azure AD-Zugriffstoken abgerufen haben, können Sie die Windows Store-Analyse-API aufrufen. Informationen zur Syntax der einzelnen Methoden finden Sie in den folgenden Artikeln: Sie müssen das Zugriffstoken an den **Authorization**-Header der einzelnen Methoden übergeben.
 
-* [Abrufen von App-Käufen](get-app-acquisitions.md)
-* [Abrufen von Add-On-Käufen](get-in-app-acquisitions.md)
-* [Abrufen von Fehlerberichtsdaten](get-error-reporting-data.md)
-* [Abrufen von Details zu einem Fehler in Ihrer App](get-details-for-an-error-in-your-app.md)
-* [Abrufen der Stapelüberwachung für einen Fehler in Ihrer App](get-the-stack-trace-for-an-error-in-your-app.md)
-* [Abrufen von App-Bewertungen](get-app-ratings.md)
-* [Abrufen von App-Rezensionen](get-app-reviews.md)
-* [Abrufen von Anzeigenleistungsdaten](get-ad-performance-data.md)
-* [Abrufen der Leistungsdaten einer Anzeigenkampagne](get-ad-campaign-performance-data.md)
+| Szenario       | Beschreibung      |
+|---------------|--------------------|
+| Käufe |  Abrufen von Kaufdaten für Ihre Apps und Add-Ons. Weitere Informationen zu diesen Methoden finden Sie in den folgenden Artikeln: <ul><li>[Abrufen von App-Käufen](get-app-acquisitions.md)</li><li>[Abrufen von Add-On-Käufen](get-in-app-acquisitions.md)</li></ul> |
+| Fehler | Abrufen von Daten zu Fehlern in Ihren Apps. Weitere Informationen zu diesen Methoden finden Sie in den folgenden Artikeln: <ul><li>[Abrufen von Fehlerberichtsdaten](get-error-reporting-data.md)</li><li>[Abrufen von Details zu einem Fehler in Ihrer App](get-details-for-an-error-in-your-app.md)</li><li>[Abrufen der Stapelüberwachung für einen Fehler in Ihrer App](get-the-stack-trace-for-an-error-in-your-app.md)</li></ul> |
+| Bewertungen und Rezensionen | Abrufen von Infos zu Bewertungen und Rezensionen für Ihre Apps. Weitere Informationen zu diesen Methoden finden Sie in den folgenden Artikeln: <ul><li>[Abrufen von App-Bewertungen](get-app-ratings.md)</li><li>[Abrufen von App-Rezensionen](get-app-reviews.md)</li></ul> |
+| In-App-Werbung und Anzeigenkampagnen | Abrufen von Anzeigenleistungsdaten in Ihren Apps und Werbeanzeigenkampagnen. Weitere Informationen zu diesen Methoden finden Sie in den folgenden Artikeln: <ul><li>[Abrufen von Anzeigenleistungsdaten](get-ad-performance-data.md)</li><li>[Abrufen der Leistungsdaten einer Anzeigenkampagne](get-ad-campaign-performance-data.md)</li></ul> |
 
 ## <a name="code-example"></a>Codebeispiel
 
@@ -117,11 +121,5 @@ Die Windows Store-Analyse-API gibt Fehlerantworten in einem JSON-Objekt zurück,
 * [Abrufen von App-Bewertungen](get-app-ratings.md)
 * [Abrufen von App-Rezensionen](get-app-reviews.md)
 * [Abrufen von Anzeigenleistungsdaten](get-ad-performance-data.md)
-* [Abrufen der Leistungsdaten einer Anzeigenkampagne](get-ad-campaign-performance-data.md)
- 
-
-
-
-<!--HONumber=Dec16_HO4-->
-
+* [Abrufen der Leistungsdaten einer Werbekampagne](get-ad-campaign-performance-data.md)
 

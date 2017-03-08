@@ -3,9 +3,16 @@ author: mcleblanc
 description: "Wir empfehlen dringend, dieses Handbuch für das Portieren vollständig zu lesen. Wir wissen aber auch, dass Sie möglichst schnell die Phase erreichen möchten, in der Ihr Projekt erstellt und ausgeführt wird."
 title: Behandeln von Problemen beim Portieren von Windows-Runtime 8.x zu UWP
 ms.assetid: 1882b477-bb5d-4f29-ba99-b61096f45e50
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: 6bb6035757c2629c5cbcc3e773703b4f659c5237
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 6c10376854656abe276c53a9b6778665c1d47a4b
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -50,10 +57,5 @@ Die Lösungsinformationen in der Tabelle sollten ausreichen, um Ihr Problem selb
 | Der C#-Compiler gibt folgenden Fehler aus: „*Der Typ- oder Namespacename '<name>' konnte nicht gefunden werden \[...\]*“ oder „*Der Typ- oder Namespacename '<name>' ist im Namespace \[...\]* nicht vorhanden“ oder „*Der Typ- oder Namespacename '<name>' ist im aktuellen Kontext nicht vorhanden*“. | Dies bedeutet wahrscheinlich, dass der Typ in ein Erweiterungs-SDK implementiert ist (es gibt jedoch auch Fälle, in denen die Lösung nicht so einfach ist). Verwenden Sie den Referenzinhalt für [Windows APIs](https://msdn.microsoft.com/library/windows/apps/bg124285), um zu ermitteln, welches Erweiterungs-SDK die API implementiert und verwenden Sie dann den Visual Studio-Befehl **Hinzufügen** > **Verweis**, um diesem SDK einen Verweis auf Ihr Projekt hinzuzufügen. Wenn Ihre App auf die API-Gruppe für die universelle Gerätefamilie ausgerichtet ist, ist Folgendes wichtig: Sie müssen die [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001)-Klasse verwenden, um zur Laufzeit das Vorhandensein des Erweiterungs-SDKs zu prüfen, bevor Sie es aufrufen (dies wird als adaptiver Code bezeichnet). Wenn eine universelle API vorhanden ist, ist diese einer API in einem Erweiterungs-SDK immer vorzuziehen. Weitere Informationen finden Sie unter [Erweiterungs-SDKs](w8x-to-uwp-porting-to-a-uwp-project.md). |
 
 Das nächste Thema ist [Portieren von XAML und UI](w8x-to-uwp-porting-xaml-and-ui.md).
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

@@ -3,20 +3,27 @@ author: laurenhughes
 ms.assetid: 3FD2AA71-EF67-47B2-9332-3FFA5D3703EA
 description: "In diesem Artikel wird das Laden und Speichern von Bilddateien mit BitmapDecoder und BitmapEncoder sowie das Verwenden des SoftwareBitmap-Objekts zum Darstellen von Bitmapbildern erläutert."
 title: Erstellen, Bearbeiten und Speichern von Bitmapbildern
+ms.author: lahugh
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: fd5b52a1d431b9396a4b162077d4f8d6246cd597
-ms.openlocfilehash: ed153b4ebd2f1b6b26f922786b3c005a57d8255d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 8aa20d434b4ea89d972712e48131e9a965476d1d
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Erstellen, Bearbeiten und Speichern von Bitmapbildern
+# <a name="create-edit-and-save-bitmap-images"></a>Erstellen, Bearbeiten und Speichern von Bitmapbildern
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
 
 In diesem Artikel wird das Laden und Speichern von Bilddateien mit [**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/br226176) und [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206) sowie das Verwenden des [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358)-Objekts zum Darstellen von Bitmapbildern erläutert.
 
-Die **SoftwareBitmap**-Klasse ist eine vielseitige API, die aus mehreren Quellen, z.B. Bilddateien, [**WriteableBitmap**](https://msdn.microsoft.com/library/windows/apps/br243259)-Objekten, Direct3D-Oberflächen und Code erstellt werden kann. **SoftwareBitmap** ermöglicht Ihnen die einfache Konvertierung zwischen verschiedenen Pixelformaten und Alphamodi und einen Zugriff auf niedriger Ebene auf Pixeldaten. **SoftwareBitmap** stellt des Weiteren eine gemeinsame Schnittstelle dar, die von mehreren Features von Windows verwendet wird, darunter:
+Die **SoftwareBitmap**-Klasse ist eine vielseitige API, die aus mehreren Quellen, z. B. Bilddateien, [**WriteableBitmap**](https://msdn.microsoft.com/library/windows/apps/br243259)-Objekten, Direct3D-Oberflächen und Code erstellt werden kann. **SoftwareBitmap** ermöglicht Ihnen die einfache Konvertierung zwischen verschiedenen Pixelformaten und Alphamodi und einen Zugriff auf niedriger Ebene auf Pixeldaten. **SoftwareBitmap** stellt des Weiteren eine gemeinsame Schnittstelle dar, die von mehreren Features von Windows verwendet wird, darunter:
 
 -   [**CapturedFrame**](https://msdn.microsoft.com/library/windows/apps/dn278725) ermöglicht Ihnen das Abrufen von durch die Kamera erfassten Frames als **SoftwareBitmap**.
 
@@ -28,7 +35,7 @@ Der Beispielcode in diesem Artikel verwendet APIs aus den folgenden Namespaces.
 
 [!code-cs[Namespaces](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetNamespaces)]
 
-## Erstellen eines SoftwareBitmap-Objekts aus einer Bilddatei mit „BitmapDecoder“
+## <a name="create-a-softwarebitmap-from-an-image-file-with-bitmapdecoder"></a>Erstellen eines SoftwareBitmap-Objekts aus einer Bilddatei mit „BitmapDecoder“
 
 Rufen Sie zum Erstellen eines [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358)-Objekts aus einer Datei eine Instanz von [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) ab, die die Bilddaten enthält. In diesem Beispiel wird [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) verwendet, damit Benutzer eine Bilddatei auswählen können.
 
@@ -38,13 +45,13 @@ Rufen Sie die [**OpenAsync**](https://msdn.microsoft.com/library/windows/apps/br
 
 [!code-cs[CreateSoftwareBitmapFromFile](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetCreateSoftwareBitmapFromFile)]
 
-## Speichern eines SoftwareBitmap-Objekts in einer Datei mit „BitmapEncoder“
+## <a name="save-a-softwarebitmap-to-a-file-with-bitmapencoder"></a>Speichern eines SoftwareBitmap-Objekts in einer Datei mit „BitmapEncoder“
 
 Rufen Sie zum Speichern eines **SoftwareBitmap**-Objekts in einer Datei eine Instanz von **StorageFile** auf, in der das Bild gespeichert wird. In diesem Beispiel wird [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) verwendet, damit Benutzer eine Ausgabedatei auswählen können.
 
 [!code-cs[PickOuputFile](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetPickOuputFile)]
 
-Rufen Sie die [**OpenAsync**](https://msdn.microsoft.com/library/windows/apps/br227116)-Methode des **StorageFile**-Objekts auf, um einen Datenstrom mit wahlfreiem Zugriff abzurufen, in den das Bild geschrieben wird. Rufen Sie die statische [**BitmapEncoder.CreateAsync**](https://msdn.microsoft.com/library/windows/apps/br226211)-Methode auf, um eine Instanz der [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206)-Klasse für den angegebenen Datenstrom abzurufen. Der erste Parameter für **CreateAsync** ist eine GUID, die den zum Codieren des Bilds zu verwendenden Codec darstellt. Die **BitmapEncoder**-Klasse stellt eine Eigenschaft bereit, die die ID für jeden vom Encoder unterstützten Codec enthält, z.B. [**JpegEncoderId**](https://msdn.microsoft.com/library/windows/apps/br226226).
+Rufen Sie die [**OpenAsync**](https://msdn.microsoft.com/library/windows/apps/br227116)-Methode des **StorageFile**-Objekts auf, um einen Datenstrom mit wahlfreiem Zugriff abzurufen, in den das Bild geschrieben wird. Rufen Sie die statische [**BitmapEncoder.CreateAsync**](https://msdn.microsoft.com/library/windows/apps/br226211)-Methode auf, um eine Instanz der [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206)-Klasse für den angegebenen Datenstrom abzurufen. Der erste Parameter für **CreateAsync** ist eine GUID, die den zum Codieren des Bilds zu verwendenden Codec darstellt. Die **BitmapEncoder**-Klasse stellt eine Eigenschaft bereit, die die ID für jeden vom Encoder unterstützten Codec enthält, z. B. [**JpegEncoderId**](https://msdn.microsoft.com/library/windows/apps/br226226).
 
 Verwenden Sie die [**SetSoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887337)-Methode zum Festlegen des Bilds, das codiert werden soll. Sie können auch Werte der [**BitmapTransform**](https://msdn.microsoft.com/library/windows/apps/br226254)-Eigenschaft festlegen, um grundlegende Transformationen auf das Bild anzuwenden, während es codiert wird. Die [**IsThumbnailGenerated**](https://msdn.microsoft.com/library/windows/apps/br226225)-Eigenschaft bestimmt, ob eine Miniaturansicht vom Encoder generiert wird. Beachten Sie, dass nicht alle Dateiformate die Miniaturansicht unterstützen. Deshalb sollten Sie bei Verwendung dieses Features die Fehler zu nicht unterstützten Vorgängen auffangen, die ausgelöst werden, wenn die Miniaturansicht nicht unterstützt wird.
 
@@ -56,7 +63,7 @@ Sie können beim Erstellen von **BitmapEncoder** zusätzliche Codierungsoptionen
 
 [!code-cs[UseEncodingOptions](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetUseEncodingOptions)]
 
-## Verwenden von „SoftwareBitmap“ mit einem XAML-Image-Steuerelement
+## <a name="use-softwarebitmap-with-a-xaml-image-control"></a>Verwenden von „SoftwareBitmap“ mit einem XAML-Image-Steuerelement
 
 Um ein Bild unter Verwendung des [**Image**](https://msdn.microsoft.com/library/windows/apps/br242752)-Steuerelements auf einer XAML-Seite anzuzeigen, definieren Sie zunächst ein **Image**-Steuerelement in der XAML-Seite.
 
@@ -70,13 +77,13 @@ Erstellen Sie ein neues [**SoftwareBitmapSource**](https://msdn.microsoft.com/li
 
 Sie können auch **SoftwareBitmapSource** verwenden, um für [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/br210101) ein **SoftwareBitmap**-Objekt als [**ImageSource**](https://msdn.microsoft.com/library/windows/apps/br210105) festzulegen.
 
-## Erstellen eines SoftwareBitmap-Objekts aus „WriteableBitmap“
+## <a name="create-a-softwarebitmap-from-a-writeablebitmap"></a>Erstellen eines SoftwareBitmap-Objekts aus „WriteableBitmap“
 
 Sie können ein **SoftwareBitmap**-Objekt aus einem vorhandenen **WriteableBitmap**-Objekt erstellen, indem Sie die [**SoftwareBitmap.CreateCopyFromBuffer**](https://msdn.microsoft.com/library/windows/apps/dn887370)-Methode aufrufen und die **PixelBuffer**-Eigenschaft des **WriteableBitmap**-Objekts zum Festlegen der Pixeldaten bereitstellen. Mit dem zweiten Argument können Sie ein Pixelformat für das neu erstellte **WriteableBitmap**-Objekt anfordern. Sie können die [**PixelWidth**](https://msdn.microsoft.com/library/windows/apps/br243253)- und [**PixelHeight**](https://msdn.microsoft.com/library/windows/apps/br243251)-Eigenschaften des **WriteableBitmap**-Objekts zum Festlegen der Abmessungen des neuen Bilds verwenden.
 
 [!code-cs[WriteableBitmapToSoftwareBitmap](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetWriteableBitmapToSoftwareBitmap)]
 
-## Programmgesteuertes Erstellen oder Bearbeiten eines SoftwareBitmap-Objekts
+## <a name="create-or-edit-a-softwarebitmap-programmatically"></a>Programmgesteuertes Erstellen oder Bearbeiten eines SoftwareBitmap-Objekts
 
 Bisher wurde in diesem Thema das Arbeiten mit Bilddateien behandelt. Sie können ein neues **SoftwareBitmap**-Objekt auch programmgesteuert im Code erstellen und das gleiche Verfahren zum Zugreifen auf und Bearbeiten der Pixeldaten von **SoftwareBitmap** verwenden.
 
@@ -96,7 +103,7 @@ Erstellen Sie ein neues **SoftwareBitmap**-Objekt mit dem gewünschten Pixelform
 
 Da diese Methode auf den Rohdatenpuffer zugreift, der Windows-Runtime-Typen zugrunde liegt, muss diese mithilfe des Schlüsselworts **unsafe** deklariert werden. Außerdem müssen Sie das Projekt in Microsoft Visual Studio so konfigurieren, dass die Kompilierung von unsicherem Code zugelassen wird, indem Sie die Seite **Eigenschaften** des Projekts öffnen, auf die Eigenschaftenseite **Build** klicken und das Kontrollkästchen **Unsicheren Code zulassen** aktivieren.
 
-## Erstellen eines SoftwareBitmap-Objekts aus einer Direct3D-Oberfläche
+## <a name="create-a-softwarebitmap-from-a-direct3d-surface"></a>Erstellen eines SoftwareBitmap-Objekts aus einer Direct3D-Oberfläche
 
 Zum Erstellen eines **SoftwareBitmap**-Objekts aus einer Direct3D-Oberfläche müssen Sie den [**Windows.Graphics.DirectX.Direct3D11**](https://msdn.microsoft.com/library/windows/apps/dn895104)-Namespace in Ihr Projekt einbeziehen.
 
@@ -106,19 +113,19 @@ Rufen Sie die [**CreateCopyFromSurfaceAsync**](https://msdn.microsoft.com/librar
 
 [!code-cs[CreateSoftwareBitmapFromSurface](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetCreateSoftwareBitmapFromSurface)]
 
-## Konvertieren eines SoftwareBitmap-Objekts in ein anderes Pixelformat
+## <a name="convert-a-softwarebitmap-to-a-different-pixel-format"></a>Konvertieren eines SoftwareBitmap-Objekts in ein anderes Pixelformat
 
 Die **SoftwareBitmap**-Klasse stellt die statische [**Convert**](https://msdn.microsoft.com/library/windows/apps/dn887362)-Methode dar, mit der Sie auf einfache Weise ein neues **SoftwareBitmap**-Objekt erstellen können, das Pixelformat und Alphamodus aus einem vorhandenen **SoftwareBitmap**-Objekt verwendet. Beachten Sie, dass die neu erstellte Bitmap eine separate Kopie der Bilddaten darstellt. Änderungen an der neuen Bitmap haben keine Auswirkungen auf die Quellbitmap.
 
 [!code-cs[Konvertieren](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetConvert)]
 
-## Transcodieren einer Bilddatei
+## <a name="transcode-an-image-file"></a>Transcodieren einer Bilddatei
 
 Sie können eine Bilddatei direkt von einem [**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/br226176) in ein [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206) transcodieren. Erstellen Sie eine [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241731)-Schnittstelle aus der Datei, die transcodiert werden soll. Erstellen Sie anhand des Eingabedatenstroms ein neues **BitmapDecoder**-Objekt. Erstellen Sie eine neue [**InMemoryRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241720)-Klasse für den Encoder zum Schreiben in und Aufrufen von [**BitmapEncoder.CreateForTranscodingAsync**](https://msdn.microsoft.com/library/windows/apps/br226214), indem Sie den In-Memory-Datenstrom und das Decoderobjekt übergeben. Legen Sie die gewünschten Codierungseigenschaften fest. Alle Eigenschaften in der Eingabebilddatei, die Sie nicht speziell für den Encoder festlegen, werden unverändert in die Ausgabedatei geschrieben. Rufen Sie die [**FlushAsync**](https://msdn.microsoft.com/library/windows/apps/br226216)-Methode auf, damit der Encoder den In-Memory-Datenstrom codiert. Navigieren Sie schließlich zum Anfang des Dateidatenstroms und des In-Memory-Datenstroms, und rufen Sie die [**CopyAsync**](https://msdn.microsoft.com/library/windows/apps/hh701827)-Methode auf, um den In-Memory-Datenstrom in den Dateidatenstrom zu schreiben.
 
 [!code-cs[TranscodeImageFile](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetTranscodeImageFile)]
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Referenz zu BitmapEncoder-Optionen](bitmapencoder-options-reference.md)
 * [Bildmetadaten](image-metadata.md)
@@ -128,10 +135,5 @@ Sie können eine Bilddatei direkt von einem [**BitmapDecoder**](https://msdn.mic
 
 
 
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

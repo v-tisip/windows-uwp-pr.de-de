@@ -5,9 +5,16 @@ title: "Richtlinien für Optionsfelder"
 ms.assetid: 41E3F928-AA55-42A2-9281-EC3907C4F898
 label: Radio buttons
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 95ddb1ddd1dfd318a5c491504c95f7833f98115e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: aa53060a281a452d47461602866d1b67edc161aa
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="radio-buttons"></a>Optionsfelder
@@ -190,9 +197,4 @@ Diese Abbildung zeigt die richtige Vorgehensweise zum Platzieren und Anordnen vo
 
 **Für Entwickler (XAML)**
 - [**Windows.UI.Xaml.Controls RadioButton-Klasse**](https://msdn.microsoft.com/library/windows/apps/br227544)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

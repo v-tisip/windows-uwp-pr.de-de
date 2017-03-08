@@ -10,13 +10,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 7a6f0be15105bc70e580eaaf581152338c56bed7
-ms.openlocfilehash: 3641fdd1f7eb74a11233115d9dfb809ea959926e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: dc1bf476c93ef9843c20244f24a199c7888eb4a5
+ms.lasthandoff: 02/07/2017
 
 ---
+
 # <a name="enable-your-device-for-development"></a>Aktivieren Ihres Geräts für die Entwicklung
 
-Bevor Sie Apps schreiben können, müssen Sie auf Ihrem Entwicklungs-PC sowie auf allen anderen Geräten, auf denen Sie Ihren Code testen werden, den Entwicklermodus aktivieren.
+Bevor Sie Apps schreiben können, müssen Sie auf Ihrem Entwicklungs-PC sowie auf allen anderen Geräten, auf denen Sie Ihren Code testen werden, den Entwicklermodus aktivieren. 
+
+![Aktivieren Ihrer Geräte für die Entwicklung](images/developer-poster.png)
 
 ## <a name="use-developer-features"></a>Verwenden von Entwicklerfeatures
 
@@ -77,7 +81,7 @@ Weitere Informationen zur Gerätesuche und zum Device Portal finden Sie in der [
 
 Gerätespezifische Anweisungen zum Einrichten finden Sie in folgenden Artikeln:
 - [Geräteportal für Desktop](https://msdn.microsoft.com/windows/uwp/debug-test-perf/device-portal-desktop)
-- [Geräteportal für HoloLens](https://dev.windows.com/holographic/using_the_windows_device_portal)
+- [Geräteportal für HoloLens](https://developer.microsoft.com/windows/holographic/using_the_windows_device_portal)
 - [Geräteportal für IoT](https://developer.microsoft.com/windows/iot/docs/DevicePortal)
 - [Geräteportal für Mobilgeräte](../debug-test-perf/device-portal-mobile.md)
 - [Geräteportal für Xbox](../debug-test-perf/device-portal-xbox.md)
@@ -215,9 +219,4 @@ Wenn Sie Apps auf Ihrem Windows 8.1-Gerät erstellen oder querladen, müssen Si
 Danach müssen Sie Ihr Gerät wie in diesem Thema beschrieben für die Entwicklung aktivieren, damit Sie weiterhin auf diesem Gerät entwickeln können. Andernfalls erhalten Sie möglicherweise eine Fehlermeldung, wenn Sie Ihre App debuggen oder versuchen, ein Paket dafür zu erstellen. Hier ist ein Beispiel für diesen Fehler:
 
 Fehler : DEP0700 : Registrierung der App fehlgeschlagen.
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

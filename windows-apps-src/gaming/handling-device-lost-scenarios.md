@@ -3,16 +3,23 @@ author: mtoepke
 title: "Behandeln von Szenarien mit entfernten Geräten in Direct3D 11"
 description: "In diesem Thema wird erläutert, wie Sie die Geräteschnittstellenkette für Direct3D und DXGI neu erstellen, wenn die Grafikkarte entfernt oder neu initialisiert wird."
 ms.assetid: 8f905acd-08f3-ff6f-85a5-aaa99acb389a
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Spiele, DirectX 11, Gerät verloren gegangen"
 translationtype: Human Translation
-ms.sourcegitcommit: 5ed3815397b076ab3ee14fd3c22b235b46da5f09
-ms.openlocfilehash: b88d85c78ba5d08718b7e2c844f94beb71e5134a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 2202d8ea4584f7755464fd3035829d348cfbff8d
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="span-iddevgaminghandlingdevice-lostscenariosspanhandle-device-removed-scenarios-in-direct3d-11"></a><span id="dev_gaming.handling_device-lost_scenarios"></span>Behandeln von Szenarien mit entfernten Geräten in Direct3D 11
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 In diesem Thema wird erläutert, wie Sie die Geräteschnittstellenkette für Direct3D und DXGI neu erstellen, wenn die Grafikkarte entfernt oder neu initialisiert wird.
 
@@ -173,10 +180,5 @@ Die Developer-Eingabeaufforderung für Visual Studio unterstützt das Befehlszei
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

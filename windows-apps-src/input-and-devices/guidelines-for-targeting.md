@@ -5,16 +5,23 @@ title: Zielbestimmung
 ms.assetid: 93ad2232-97f3-42f5-9e45-3fc2143ac4d2
 label: Targeting
 template: detail.hbs
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 9710e3060410428e1a4b7cfe89442c7df8602ed2
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: fd4ba842a1d6f9eec6012a930a5dda5d7ff7c249
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="guidelines-for-targeting"></a>Richtlinien für die Zielbestimmung
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Die Touchzielbestimmung in Windows verwendet den vollständigen Kontaktbereich jedes Fingers, der durch ein Touchdigitalisierungsgerät erkannt wird. Die größere und komplexere Menge an Eingabedaten, die vom Digitalisierungsgerät gemeldet wird, wird verwendet, um die Präzision bei der Ermittlung des durch den Benutzer (höchstwahrscheinlich) beabsichtigten Ziels zu erhöhen.
+Die Touchzielbestimmung in Windows verwendet den vollständigen Kontaktbereich jedes Fingers, der von einem Touchdigitalisierungsgerät erkannt wird. Die größere und komplexere Menge an Eingabedaten, die vom Digitalisierungsgerät gemeldet wird, wird verwendet, um die Präzision bei der Ermittlung des durch den Benutzer (höchstwahrscheinlich) beabsichtigten Ziels zu erhöhen.
 
 <div class="important-apis" >
 <b>Wichtige APIs</b><br/>
@@ -173,10 +180,5 @@ Halten Sie sich an die folgenden Richtlinien, wenn Sie Scrubbinginteraktionen en
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

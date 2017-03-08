@@ -3,34 +3,39 @@ author: mcleanbyron
 ms.assetid: D1F233EC-24B5-4F84-A92F-2030753E608E
 description: "Verwenden Sie diese Methode in der Windows Store-Sammlungs-API, um alle Produkte, die sich im Besitz eines Kunden befinden, für Apps abzurufen, die Ihrer Azure AD-Client-ID zugeordnet sind. Sie können die Abfrage auf ein bestimmtes Produkt beschränken oder weitere Filter verwenden."
 title: Produktabfrage
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Windows Store-Sammlungs-API, Produkte anzeigen"
 translationtype: Human Translation
-ms.sourcegitcommit: ac9c921c7f39a1bdc6dc9fc9283bc667f67cd820
-ms.openlocfilehash: d614919debd979a475e93909199851390d242deb
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 29db10862533e7b15c7a676fc3aecd4ba58f9514
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Produktabfrage
-
-
+# <a name="query-for-products"></a>Produktabfrage
 
 
 Verwenden Sie diese Methode in der Windows Store-Sammlungs-API, um alle Produkte, die sich im Besitz eines Kunden befinden, für Apps abzurufen, die Ihrer Azure AD-Client-ID zugeordnet sind. Sie können die Abfrage auf ein bestimmtes Produkt beschränken oder weitere Filter verwenden.
 
 Diese Methode ist so konzipiert, dass sie von Ihrem Dienst als Reaktion auf eine Nachricht von Ihrer App aufgerufen wird. Der Dienst sollte nicht nach einem regelmäßigen Zeitplan alle Benutzer abfragen.
 
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 
 Zur Verwendung dieser Methode benötigen Sie:
 
-* Ein AzureAD-Zugriffstoken, das mit dem Zielgruppen-URI `https://onestore.microsoft.com` erstellt wurde.
-* Ein WindowsStore-ID-Schlüssel, der [aus clientseitigem Code in Ihrer App generiert wurde](view-and-grant-products-from-a-service.md#step-4).
+* Ein Azure AD-Zugriffstoken, das mit dem Zielgruppen-URI `https://onestore.microsoft.com` erstellt wurde.
+* Ein Windows Store-ID-Schlüssel, der die Identität des Benutzers darstellt, dessen Produkte Sie abrufen möchten.
 
-Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von Produktansprüchen aus einem Dienst](view-and-grant-products-from-a-service.md).
+Weitere Informationen finden Sie unter [Verwalten von Produktansprüchen aus einem Dienst](view-and-grant-products-from-a-service.md).
 
-## Anforderung
+## <a name="request"></a>Anfordern
 
-### Anforderungssyntax
+### <a name="request-syntax"></a>Anforderungssyntax
 
 | Methode | Anforderungs-URI                                                 |
 |--------|-------------------------------------------------------------|
@@ -38,7 +43,7 @@ Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von
 
 <span/>
  
-### Anforderungsheader
+### <a name="request-header"></a>Anforderungsheader
 
 | Header         | Typ   | Beschreibung                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
@@ -49,41 +54,41 @@ Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von
 
 <span/>
 
-### Anforderungstext
+### <a name="request-body"></a>Anforderungstext
 
-| Parameter         | Typ         | Beschreibung                                                                                                                                                                                                                                                          | Erforderlich |
-|-------------------|--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| beneficiaries     | UserIdentity | Ein UserIdentity-Objekt, das den Benutzer darstellt, von dem Produkte abgefragt werden.                                                                                                                                                                                           | Ja      |
-| continuationToken | string       | Bei mehreren Produktgruppen gibt der Antworttext ein Fortsetzungstoken zurück, sobald das Seitenlimit erreicht ist. Geben Sie das Fortsetzungstoken hier bei nachfolgenden Aufrufen an, um die verbleibenden Produkte abzurufen.                                                      | Nein       |
-| maxPageSize       | number       | Die maximale Anzahl von Produkten, die in einer Antwort zurückgegeben werden sollen. Der standardmäßige Höchstwert ist 100.                                                                                                                                                                      | Nein       |
-| modifiedAfter     | datetime     | Falls angegeben, gibt der Dienst nur Produkte zurück, die nach diesem Datum geändert wurden.                                                                                                                                                                             | Nein       |
-| parentProductId   | string       | Falls angegeben, gibt der Dienst nur Add-Ons zurück, die der angegebenen App entsprechen.                                                                                                                                                                                    | Nein       |
-| productSkuIds     | ProductSkuId | Falls angegeben, gibt der Dienst nur Produkte für die angegebenen Produkt-SKU-Paare zurück.                                                                                                                                                                        | Nein       |
-| productTypes      | string       | Falls angegeben, gibt der Dienst nur Produkte zurück, die den angegebenen Produkttypen entsprechen. Unterstützte Produkttypen sind **Application**, **Durable** und **UnmanagedConsumable**.                                                                                       | Nein       |
+| Parameter         | Typ         | Beschreibung         | Erforderlich |
+|-------------------|--------------|---------------------|----------|
+| beneficiaries     | UserIdentity | Ein UserIdentity-Objekt, das den Benutzer darstellt, von dem Produkte abgefragt werden. Weitere Informationen finden Sie in der folgenden Tabelle.    | Ja      |
+| continuationToken | string       | Bei mehreren Produktgruppen gibt der Antworttext ein Fortsetzungstoken zurück, sobald das Seitenlimit erreicht ist. Geben Sie das Fortsetzungstoken hier bei nachfolgenden Aufrufen an, um die verbleibenden Produkte abzurufen.       | Nein       |
+| maxPageSize       | number       | Die maximale Anzahl von Produkten, die in einer Antwort zurückgegeben werden sollen. Der standardmäßige Höchstwert ist 100.                 | Nein       |
+| modifiedAfter     | datetime     | Falls angegeben, gibt der Dienst nur Produkte zurück, die nach diesem Datum geändert wurden.        | Nein       |
+| parentProductId   | string       | Falls angegeben, gibt der Dienst nur Add-Ons zurück, die der angegebenen App entsprechen.      | Nein       |
+| productSkuIds     | Liste&lt;ProductSkuId&gt; | Falls angegeben, gibt der Dienst nur Produkte für die angegebenen Produkt-SKU-Paare zurück. Weitere Informationen finden Sie in der folgenden Tabelle.      | Nein       |
+| productTypes      | string       | Falls angegeben, gibt der Dienst nur Produkte zurück, die den angegebenen Produkttypen entsprechen. Unterstützte Produkttypen sind **Application**, **Durable** und **UnmanagedConsumable**.     | Nein       |
 | validityType      | string       | Bei Festlegung auf **Alle** werden alle Produkte für einen Benutzer, einschließlich abgelaufener Elemente, zurückgegeben. Bei Festlegung auf **Valid** werden nur Produkte zurückgegeben, die zum aktuellen Zeitpunkt gültig sind (aktiver Status, Startdatum &lt; Istdatum und Enddatum &gt; Istdatum). | Nein       |
 
 <span/>
 
 Das UserIdentity-Objekt enthält die folgenden Parameter.
 
-| Parameter            | Typ   | Beschreibung                                                                                                                                                                                                                  | Erforderlich |
-|----------------------|--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| identityType         | string | Gibt den Zeichenfolgenwert **b2b** an.                                                                                                                                                                                            | Ja      |
-| identityValue        | string | Der WindowsStore-ID-Schlüssel, der [aus clientseitigem Code in Ihrer App generiert wurde](view-and-grant-products-from-a-service.md#step-4).                                                                                                                                                                                     | Ja      |
+| Parameter            | Typ   |  Beschreibung      | Erforderlich |
+|----------------------|--------|----------------|----------|
+| identityType         | string | Geben Sie den Zeichenfolgenwert **b2b** an.    | Ja.      |
+| identityValue        | Zeichenfolge | Der [Windows Store-ID-Schlüssel](view-and-grant-products-from-a-service.md#step-4), der die Identität des Benutzers darstellt, für den Sie Produkte abfragen möchten.  | Ja      |
 | localTicketReference | string | Der angeforderte Bezeichner für die zurückgegebenen Produkte. Die zurückgegebenen Elemente im Antworttext verfügen über ein übereinstimmendes *localTicketReference*-Element. Es wird empfohlen, denselben Wert als *userId*-Anspruch im Windows Store-ID-Schlüssel zu verwenden. | Ja      |
 
 <span/> 
 
 Das ProductSkuId-Objekt enthält die folgenden Parameter.
 
-| Parameter | Typ   | Beschreibung                                                                                                                                                                                                                                                                                                            | Erforderlich |
-|-----------|--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| Produkt-ID | string | Die Store-ID aus dem WindowsStore-Katalog. Die Store-ID ist auf der [Seite mit der App-Identität](../publish/view-app-identity-details.md) des DevCenter-Dashboards verfügbar. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8. | Ja      |
-| skuID     | string | Die SKU-ID aus dem WindowsStore-Katalog. Beispiel für eine SKU-ID: 0010.                                                                                                                                                                                                                                                | Ja      |
+| Parameter | Typ   | Beschreibung          | Erforderlich |
+|-----------|--------|----------------------|----------|
+| productId | string | Die [Store-ID](in-app-purchases-and-trials.md#store-ids) für ein [Produkt](in-app-purchases-and-trials.md#products-skus-and-availabilities) im Windows Store-Katalog. Ein Beispiel für eine Store-ID für ein Produkt ist 9NBLGGH42CFD. | Ja      |
+| skuID     | string | Die [Store-ID](in-app-purchases-and-trials.md#store-ids) für die [SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities) eines Produkts im Windows Store-Katalog. Ein Beispiel für eine Store-ID für eine SKU ist 0010.       | Ja      |
 
 <span/>
 
-### Anforderungsbeispiel
+### <a name="request-example"></a>Anforderungsbeispiel
 
 ```syntax
 POST https://collections.mp.microsoft.com/v6.0/collections/query HTTP/1.1
@@ -115,45 +120,45 @@ Content-Type: application/json
 }
 ```
 
-## Antwort
+## <a name="response"></a>Antwort
 
 
-### Antworttext
+### <a name="response-body"></a>Antworttext
 
-| Parameter         | Typ                     | Beschreibung                                                                                                                                                                                | Erforderlich |
-|-------------------|--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
+| Parameter         | Typ                     | Beschreibung          | Erforderlich |
+|-------------------|--------------------------|-----------------------|----------|
 | continuationToken | string                   | Bei mehreren Produktgruppen wird dieses Token zurückgegeben, sobald das Seitenlimit erreicht ist. Sie können dieses Fortsetzungstoken in nachfolgenden Aufrufen angeben, um verbleibende Produkte abzurufen. | Nein       |
-| Items             | CollectionItemContractV6 | Ein Array von Produkten für den angegebenen Benutzer.                                                                                                                                               | Nein       |
+| items             | CollectionItemContractV6 | Ein Array von Produkten für den angegebenen Benutzer. Weitere Informationen finden Sie in der folgenden Tabelle.        | Nein       |
 
 <span/> 
 
 Das CollectionItemContractV6-Objekt enthält die folgenden Parameter.
 
-| Parameter            | Typ               | Beschreibung                                                                                                                                        | Erforderlich |
-|----------------------|--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| acquiredDate         | datetime           | Das Datum, an dem der Benutzer den Artikel erworben hat.                                                                                                      | Ja      |
-| campaignId           | string             | Die Kampagnen-ID, die beim Kauf dieses Artikels angegeben wurde.                                                                                  | Nein       |
-| devOfferId           | string             | Die Angebots-ID aus einem In-App-Kauf.                                                                                                              | Nein       |
-| endDate              | datetime           | Das Enddatum des Artikels.                                                                                                                          | Ja      |
-| fulfillmentData      | string             | Nicht verfügbar                                                                                                                                                | Nein       |
-| inAppOfferToken      | string             | Die vom Entwickler angegebene Produkt-ID-Zeichenfolge, die dem Element im Windows Dev Center-Dashboard zugewiesen wurde. Beispiel für eine Produkt-ID: product123. | Nein       |
-| itemId               | string             | Eine ID zur Unterscheidung dieses Sammlungselements von anderen Artikeln des Benutzers. Diese ID ist pro Produkt eindeutig.                                          | Ja      |
-| localTicketReference | string             | Die ID des zuvor bereitgestellten `localTicketReference`-Elements im Anforderungstext.                                                                      | Ja      |
-| modifiedDate         | datetime           | Das Datum, an dem dieser Artikel zuletzt geändert wurde.                                                                                                              | Ja      |
-| orderId              | string             | Die Auftrags-ID, mit der dieser Artikel erworben wurde (sofern angegeben).                                                                                          | Nein       |
-| orderLineItemId      | string             | Die Position des Auftrags, für den dieser Artikel erworben wurde (sofern vorhanden).                                                                | Nein       |
-| ownershipType        | string             | Die Zeichenfolge „OwnedByBeneficiary“.                                                                                                                   | Ja      |
-| Produkt-ID            | string             | Die Store-ID für die App aus dem WindowsStore-Katalog. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8.                                                            | Ja      |
-| Produkttyp          | string             | Einer der folgenden Produkttypen: **Application**, **Durable** oder **UnmanagedConsumable**.                                                     | Ja      |
-| purchasedCountry     | string             | N/V                                                                                                                                               | Nein       |
-| purchaser            | IdentityContractV6 | Die Identität des Artikelkäufers (sofern vorhanden). Details zu diesem Objekt finden Sie weiter unten.                                      | Nein       |
-| quantity             | number             | Die Artikelmenge. Derzeit beträgt die Menge immer 1.                                                                                        | Nein       |
-| skuId                | string             | Die SKU-ID aus dem Windows Store-Katalog. Beispiel für eine SKU-ID: 0010.                                                                            | Ja      |
-| skuType              | string             | Der SKU-Typ. Mögliche Werte sind **Trial**, **Full** und **Rental**.                                                                      | Ja      |
-| startDate            | datetime           | Das Datum, ab dem der Artikel gültig ist.                                                                                                         | Ja      |
-| status               | string             | Der Status des Elements. Mögliche Werte sind **Active**, **Expired**, **Revoked** und **Banned**.                                              | Ja      |
-| Tags                 | string             | Nicht verfügbar                                                                                                                                                | Ja      |
-| transactionId        | guid               | Die aus dem Artikelkauf resultierende Transaktions-ID. Kann verwendet werden, um zu melden, dass der Artikelkauf abgewickelt wurde.                                       | Ja      |
+| Parameter            | Typ               | Beschreibung            | Erforderlich |
+|----------------------|--------------------|-------------------------|----------|
+| acquiredDate         | datetime           | Das Datum, an dem der Benutzer den Artikel erworben hat.                  | Ja      |
+| campaignId           | string             | Die Kampagnen-ID, die beim Kauf dieses Artikels angegeben wurde.                  | Nein       |
+| devOfferId           | string             | Die Angebots-ID aus einem In-App-Kauf.              | Nein       |
+| endDate              | datetime           | Das Enddatum des Artikels.              | Ja      |
+| fulfillmentData      | string             | Nicht verfügbar         | Nein       |
+| inAppOfferToken      | string             | Die vom Entwickler angegebene Produkt-ID-Zeichenfolge, die dem Element im Windows Dev Center-Dashboard zugewiesen wurde. Beispiel für eine Produkt-ID ist *product123*. | Nein       |
+| itemId               | string             | Eine ID zur Unterscheidung dieses Sammlungselements von anderen Artikeln des Benutzers. Diese ID ist pro Produkt eindeutig.   | Ja      |
+| localTicketReference | string             | Die ID der zuvor bereitgestellten *localTicketReference* im Anforderungstext.                  | Ja      |
+| modifiedDate         | datetime           | Das Datum, an dem dieser Artikel zuletzt geändert wurde.              | Ja      |
+| orderId              | string             | Die Auftrags-ID, mit der dieser Artikel erworben wurde (sofern angegeben).              | Nein       |
+| orderLineItemId      | string             | Die Position des Auftrags, für den dieser Artikel erworben wurde (sofern vorhanden).              | Nein       |
+| ownershipType        | string             | Die Zeichenfolge *OwnedByBeneficiary*.   | Ja      |
+| productId            | string             | Die [Store-ID](in-app-purchases-and-trials.md#store-ids) für das [Produkt](in-app-purchases-and-trials.md#products-skus-and-availabilities) im Windows Store-Katalog. Ein Beispiel für eine Store-ID für ein Produkt ist 9NBLGGH42CFD.          | Ja      |
+| productType          | string             | Einer der folgenden Produkttypen: **Application**, **Durable** oder **UnmanagedConsumable**.        | Ja      |
+| purchasedCountry     | string             | N/V   | Nein       |
+| purchaser            | IdentityContractV6 | Die Identität des Artikelkäufers (sofern vorhanden). Details zu diesem Objekt finden Sie weiter unten.        | Nein       |
+| quantity             | number             | Die Artikelmenge. Derzeit beträgt die Menge immer 1.      | Nein       |
+| skuId                | string             | Die [Store-ID](in-app-purchases-and-trials.md#store-ids) für die [SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities) des Produkts im Windows Store-Katalog. Ein Beispiel für eine Store-ID für eine SKU ist 0010.     | Ja      |
+| skuType              | string             | Der SKU-Typ. Mögliche Werte sind **Trial**, **Full** und **Rental**.        | Ja      |
+| startDate            | datetime           | Das Datum, ab dem der Artikel gültig ist.       | Ja      |
+| status               | string             | Der Status des Elements. Mögliche Werte sind **Active**, **Expired**, **Revoked** und **Banned**.    | Ja      |
+| Tags                 | string             | Nicht verfügbar    | Ja      |
+| transactionId        | guid               | Die aus dem Artikelkauf resultierende Transaktions-ID. Kann verwendet werden, um zu melden, dass der Artikelkauf abgewickelt wurde.      | Ja      |
 
 <span/> 
 
@@ -161,12 +166,12 @@ Das IdentityContractV6-Objekt enthält die folgenden Parameter.
 
 | Parameter     | Typ   | Beschreibung                                                                        | Erforderlich |
 |---------------|--------|------------------------------------------------------------------------------------|----------|
-| identityType  | string | Enthält den Wert **"pub"**.                                                      | Ja      |
+| identityType  | string | Enthält den Wert *pub*.                                                      | Ja      |
 | identityValue | string | Der Zeichenfolgenwert von *publisherUserId* aus dem angegebenen Windows Store-ID-Schlüssel. | Ja      |
 
 <span/> 
 
-### Antwortbeispiel
+### <a name="response-example"></a>Antwortbeispiel
 
 ```syntax
 HTTP/1.1 200 OK
@@ -208,15 +213,10 @@ Date: Tue, 22 Sep 2015 20:28:18 GMT
 }
 ```
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
-* [Anzeigen von Produkten und Gewähren von Produktansprüchen aus einem Dienst](view-and-grant-products-from-a-service.md)
-* [Melden von Verbrauchsprodukten als erfüllt](report-consumable-products-as-fulfilled.md)
+* [Verwalten von Produktansprüchen aus einem Dienst](view-and-grant-products-from-a-service.md)
+* [Melden von verbrauchbaren Produkten als erfüllt](report-consumable-products-as-fulfilled.md)
 * [Gewähren kostenloser Produkte](grant-free-products.md)
 * [Verlängern eines Windows Store-ID-Schlüssels](renew-a-windows-store-id-key.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

@@ -1,15 +1,22 @@
 ---
 author: jnHs
 Description: "Verwenden Sie im Windows Dev Center-Dashboard die Berichte zur Partnerleistung auf App- und Kontoebene, um Leistungsdaten für die Partneranzeigen in Ihren Apps anzuzeigen."
-title: Bericht zur Partnerleistung
+title: Bericht zur Partneranzeigen-Performance
 ms.assetid: 38AD494C-0F85-4FED-8732-9064D1FC503D
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 9646b9614bb2935db5880cad9bf1a58648330671
-ms.openlocfilehash: 76bb607fb0abf11c863be24489a4eea0747a4e40
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 3b85abb11049a1e52e9d6a9cc61aebab407207a4
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="affiliates-performance-report"></a>Bericht zur Partnerleistung
+# <a name="affiliates-performance-report"></a>Bericht zur Partneranzeigen-Performance
 
 Wenn Sie sich für die [Teilnahme am Microsoft-Partneranzeigenprogramm](about-affiliate-ads.md) entschieden haben, können Sie sich in den folgenden Berichten des Windows Dev Center-Dashboards Leistungsdaten für die in Ihrer App angezeigten Partneranzeigen ansehen:
 
@@ -47,9 +54,4 @@ Der Abschnitt **Affiliates performance** auf der Seite **Dashboardübersicht** e
  
 
  
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

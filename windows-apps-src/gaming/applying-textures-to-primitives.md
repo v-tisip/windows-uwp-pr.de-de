@@ -3,34 +3,41 @@ author: mtoepke
 title: Anwenden von Texturen auf Grundtypen
 description: "Wir laden an dieser Stelle unformatierte Texturdaten und wenden diese auf einen 3D-Grundtyp an. Dazu verwenden wir den Würfel, den wir in „Verwenden von Tiefe und Effekten für Grundtypen“ erstellt haben."
 ms.assetid: aeed09e3-c47a-4dd9-d0e8-d1b8bdd7e9b4
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Spiele, Texturen, DirectX"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 5533b086557be44b27e4e371c0d71bc8bc6310b0
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: cc25d7bcc5809dd10b43418ccd42f78c10d1336e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Anwenden von Texturen auf Grundtypen
+# <a name="apply-textures-to-primitives"></a>Anwenden von Texturen auf Grundtypen
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Wir laden an dieser Stelle unformatierte Texturdaten und wenden diese auf einen 3D-Grundtyp an. Dazu verwenden wir den Würfel, den wir unter [Verwenden von Tiefe und Effekten auf Grundtypen](using-depth-and-effects-on-primitives.md) erstellt haben. Außerdem stellen wir ein einfaches Skalarprodukt-Lichtmodell vor. Die Oberflächen des Würfels im Modell sind, je nach Entfernung von der und Winkel zur Lichtquelle, heller oder dunkler.
 
 **Lernziel**: Texturen auf Grundtypen anwenden.
 
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 
 Es wird davon ausgegangen, dass Sie mit C+ vertraut sind. Sie müssen außerdem mit den grundlegenden Konzepten der Grafikprogrammierung vertraut sein.
 
 Außerdem wird davon ausgegangen, dass Sie mit folgenden Themen vertraut sind: [Schnellstart: Einrichten von DirectX-Ressourcen und Anzeigen eines Bilds](setting-up-directx-resources.md), [Erstellen von Shadern und Zeichnen von Grundtypen](creating-shaders-and-drawing-primitives.md) und [Verwenden von Tiefe und Effekten für Grundtypen](using-depth-and-effects-on-primitives.md).
 
-**Zeitaufwand:** 20Minuten.
+**Zeitaufwand:** 20 Minuten.
 
-Anweisungen
+<a name="instructions"></a>Anweisungen
 ------------
 
-### 1. Definieren von Variablen für einen Würfel mit Texturen
+### <a name="1-defining-variables-for-a-textured-cube"></a>1. Definieren von Variablen für einen Würfel mit Texturen
 
 Zunächst müssen wir die **BasicVertex**-Struktur und die **ConstantBuffer**-Struktur für den Würfel mit Texturen definieren. Diese Strukturen bestimmen die Vertexpositionen, die Ausrichtungen und die Texturen für den Würfel. Außerdem haben sie Einfluss darauf, wie der Würfel angezeigt wird. Weiterhin deklarieren wir Variablen analog zum vorangehenden Lernprogramm [Verwenden von Tiefe und Effekten für Grundtypen](using-depth-and-effects-on-primitives.md).
 
@@ -63,7 +70,7 @@ private:
     ConstantBuffer m_constantBufferData;
 ```
 
-### 2. Erstellen von Vertex- und Pixelshadern mit Oberflächen- und Texturelementen
+### <a name="2-creating-vertex-and-pixel-shaders-with-surface-and-texture-elements"></a>2. Erstellen von Vertex- und Pixelshadern mit Oberflächen- und Texturelementen
 
 Die an dieser Stelle erstellten Vertex- und Pixelshader sind komplexer als die im vorangehenden Lernprogramm [Verwenden von Tiefe und Effekten für Grundtypen](using-depth-and-effects-on-primitives.md). Der Vertexshader dieser App wandelt jede Vertexposition in eine Projektionsfläche um und übergibt die Koordinaten der Vertexttextur über den Pixelshader.
 
@@ -267,7 +274,7 @@ Wir erstellen einen Vertex, einen Index sowie konstante Puffer, die einen kreise
        });
 ```
 
-### 3. Erstellen von Texturen und Mustern
+### <a name="3-creating-textures-and-samplers"></a>3. Erstellen von Texturen und Mustern
 
 Während im vorangehenden Beispiel ([Verwenden von Tiefe und Effekten für Grundtypen](using-depth-and-effects-on-primitives.md)) Farben angewendet wurden, werden hier Texturdaten auf einen Würfel angewendet.
 
@@ -391,7 +398,7 @@ Wir verwenden unformatierte Texturdaten, um die Texturen zu erstellen.
         float degree = 0.0f;
 ```
 
-### 4. Drehen und Zeichnen des Würfels mit Texturen und Darstellen des gerenderten Bilds
+### <a name="4-rotating-and-drawing-the-textured-cube-and-presenting-the-rendered-image"></a>4. Drehen und Zeichnen des Würfels mit Texturen und Darstellen des gerenderten Bilds
 
 Um die Szene ohne Unterbrechung zu rendern und anzuzeigen, wird analog zu früheren Beispielen eine Endlosschleife aufgerufen. Wir rufen die **rotationY**-Inlinefunktion (BasicMath.h) mit einer Rotationsmenge auf, um die Werte festzulegen, mit deren Hilfe sich die Modellmatrix des Würfels um die Y-Achse dreht. Anschließend rufen wir [**ID3D11DeviceContext::UpdateSubresource**](https://msdn.microsoft.com/library/windows/desktop/ff476486) auf, um den Konstantenpuffer zu aktualisieren und das Würfelmodell zu drehen. Nun rufen wir [**ID3D11DeviceContext::OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464) auf, um das Renderingziel und die Ansicht für die Tiefe/Schablone anzugeben. Wir rufen [**ID3D11DeviceContext::ClearRenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476388) auf, um das Renderziel in eine blaue Volltonfarbe zu bereinigen. Anschließend rufen wir [**ID3D11DeviceContext::ClearDepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476387) auf, um den Tiefenpuffer zu leeren.
 
@@ -512,7 +519,7 @@ Analog zu früheren Lernprogrammen wird mit einem Aufruf von [**IDXGISwapChain::
                 );
 ```
 
-## Zusammenfassung
+## <a name="summary"></a>Zusammenfassung
 
 
 Wir haben unformatierte Textdaten geladen und diese Daten auf einen 3D-Grundtyp angewendet.
@@ -523,10 +530,5 @@ Wir haben unformatierte Textdaten geladen und diese Daten auf einen 3D-Grundtyp 
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

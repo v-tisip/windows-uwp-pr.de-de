@@ -3,16 +3,23 @@ author: mtoepke
 title: "2D-Grafiken für DirectX-Spiele"
 description: Hier finden Sie Informationen zum Einsatz von 2D-Bitmapgrafiken und -effekten im Allgemeinen und in Ihrem Spiel.
 ms.assetid: ad69e680-d709-83d7-4a4c-7bbfe0766bc7
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Spiele, Directx, 2D, Grafiken"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 7a4c41b24bc4f703f035bb0daf0f1bc280af1e68
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 702b47d4002e9a2d0d62cc67e71432bb630e21d4
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 2D-Grafiken für DirectX-Spiele
+# <a name="2d-graphics-for-directx-games"></a>2D-Grafiken für DirectX-Spiele
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Hier finden Sie Informationen zum Einsatz von 2D-Bitmapgrafiken und -effekten im Allgemeinen und in Ihrem Spiel.
 
@@ -20,7 +27,7 @@ Hier finden Sie Informationen zum Einsatz von 2D-Bitmapgrafiken und -effekten im
 
 2D-Spielgrafiken können in DirectX mit Direct2D, Direct3D oder einer Kombination aus beidem entwickelt werden. Viele der hilfreichen Klassen für die Entwicklung von 2D-Spielen befinden sich in Direct3D (so zum Beispiel die [**Sprite**](https://msdn.microsoft.com/library/windows/desktop/bb205601)-Klasse). Bei Direct2D handelt es sich um eine Gruppe von APIs, die in erster Linie für Benutzeroberflächen und Apps gedacht sind, die das Zeichnen von Grundtypen (wie Kreise, Linien und flache Polygonformen) unterstützen müssen. Darüber hinaus steht Ihnen aber auch eine leistungsfähige Sammlung von Klassen und Methoden für die Entwicklung von Spielgrafiken (insbesondere für Overlays, Oberflächen und Head-up-Displays (HUDs) für das Spiel) oder für die Entwicklung verschiedenster 2D-Spiele zur Verfügung – von sehr einfachen Spielen bis hin zu Spielen mit recht hohem Detailgrad. Da sich 2D-Grafiken allerdings am effektivsten mit Elementen aus beiden Bibliotheken entwickeln lassen, werden wir diesen Ansatz auch in diesem Thema verfolgen.
 
-## Konzepte auf einen Blick
+## <a name="concepts-at-a-glance"></a>Konzepte auf einen Blick
 
 
 Vor dem Siegeszug moderner 3D-Grafiken und der entsprechenden Hardware waren Spiele in erster Linie zweidimensional, und bei der Grafiktechnologie ging es häufig um die Verschiebung von Speicherblöcken. Hierbei handelte es sich üblicherweise um Arrays mit Farbdaten, die 1:1 in Pixel auf dem Monitor übersetzt bzw. umgewandelt wurden.
@@ -39,18 +46,18 @@ Im Anschluss finden Sie einige der grundlegenden Konzepte, mit denen Sie vertrau
 -   Beim Clipping werden Teile der Bitmaps oder Geometrie entfernt, die sich nicht im sichtbaren Bereich der Anzeige befinden oder von Objekten mit höherer Anzeigepriorität verdeckt werden.
 -   Der Framepuffer ist ein Speicherbereich, der sich häufig in der Grafikhardware befindet und die finale Rasterstruktur enthält, die auf den Bildschirm gezeichnet wird. Die Swapchain ist eine Sammlung von Puffern. Hier erfolgt der Zeichnungsvorgang in einem Hintergrundpuffer, und das Bild wird nach Fertigstellung des Vorgangs in den Vordergrund gebracht, um es anzuzeigen.
 
-## Überlegungen bei der Entwicklung
+## <a name="design-considerations"></a>Überlegungen bei der Entwicklung
 
 
 Mit der Entwicklung von 2D-Grafiken können Sie sich sehr gut in die Direct3D-Entwicklung einarbeiten und haben mehr Zeit für andere wichtige Aspekte der Spieleentwicklung wie Audio, Steuerung und Spielmechanik.
 
 Verwenden Sie für den Zeichnungsvorgang immer einen Hintergrundpuffer. Wenn der Zeichnungsvorgang direkt im Framepuffer erfolgt, wird das Bild angezeigt, sobald das Signal zum Anzeigen empfangen wird (üblicherweise jede sechzigstel Sekunde), auch wenn der Zeichnungsvorgang noch gar nicht abgeschlossen sein sollte.
 
-Achten Sie bei Ihrer Grafikengine darauf, dass diese eine Reihe von Auflösungen unterstützt – von 1024x600 bis mindestens 1920x1080. Ihre Zielgruppe wird es zu schätzen wissen, wenn Ihr Spiel die native Auflösung ihres LCD-Monitors unterstützt (besonders bei 2D-Grafiken).
+Achten Sie bei Ihrer Grafikengine darauf, dass diese eine Reihe von Auflösungen unterstützt – von 1024 x 600 bis mindestens 1920 x 1080. Ihre Zielgruppe wird es zu schätzen wissen, wenn Ihr Spiel die native Auflösung ihres LCD-Monitors unterstützt (besonders bei 2D-Grafiken).
 
 In Sachen Optik sind großartige Grafiken Ihre wichtigste Ressource. Ihre Bitmapgrafiken sind zwar vielleicht nicht ganz so beeindruckend wie fotorealistische 3D-Grafik mit den neuesten Shadermodell-Features, mit einer großartigen Grafik in hoher Auflösung können Sie aber mindestens genauso viel Stil und Persönlichkeit erzeugen – und das bei deutlich geringerem Leistungsbedarf.
 
-## Referenz
+## <a name="reference"></a>Referenz
 
 
 -   [Übersicht über Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370987)
@@ -58,7 +65,7 @@ In Sachen Optik sind großartige Grafiken Ihre wichtigste Ressource. Ihre Bitmap
 -   [Übersicht über die Interoperabilität von Direct2D und Direct3D](https://msdn.microsoft.com/library/windows/desktop/dd370966)
 
 > **Hinweis**  
-Dieser Artikel ist für Windows10-Entwickler bestimmt, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows8.x oder Windows Phone8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -68,10 +75,5 @@ Dieser Artikel ist für Windows10-Entwickler bestimmt, die Apps für die univers
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

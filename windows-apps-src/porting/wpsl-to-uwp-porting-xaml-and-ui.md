@@ -3,9 +3,16 @@ author: mcleblanc
 description: "Die Vorgehensweise zum Definieren einer Benutzeroberfläche in Form von deklarativem XAML-Markup lässt sich sehr gut von Windows Phone Silverlight auf Apps für die Universelle Windows-Plattform (UWP) übertragen."
 title: Portieren von Windows Phone Silverlight-XAML und -UI zu UWP
 ms.assetid: 49aade74-5dc6-46a5-89ef-316dbeabbebe
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: 3aa68943724c008e18df63d8b0ae20f448146303
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1ec72aec1e94ff92ef30fcc206456c7614107c98
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -238,7 +245,7 @@ Die einfachste Methode, um dies zu einer UWP-App zu portieren, besteht darin, wi
     <BitmapIcon UriSource="Assets/winrt_check.png" Width="21" Height="21"/>
 ```
 
-„winrt\_check.png“ ist hier eine Alphamaske in Form einer Bitmap wie „wpsl\_check.png“, die sich in derselben Datei befinden könnte. Sie können allerdings verschiedene Größen von „winrt\_check.png“ für unterschiedliche Skalierungsfaktoren bereitstellen. Weitere Informationen hierzu und eine Erläuterung der Änderungen an den Werten **Width** und **Height** finden Sie unter [Anzeigepixel/Effektive Pixel, Abstand zum Bildschirm und Skalierungsfaktoren](#view-effective-pixels-viewing-distance-and-scale-factors) in diesem Thema.
+„winrt\_check.png“ ist hier eine Alphamaske in Form einer Bitmap wie „wpsl\_check.png“, die sich in derselben Datei befinden könnte. Sie können allerdings verschiedene Größen von „winrt\_check.png“ für unterschiedliche Skalierungsfaktoren bereitstellen. Weitere Informationen hierzu und eine Erläuterung der Änderungen an den Werten **Width** und **Height** finden Sie unter [Anzeigepixel oder effektive Pixel, Abstand zum Bildschirm und Skalierungsfaktoren](#view-or-effective-pixels-viewing-distance-and-scale-factors) in diesem Thema.
 
 Eine allgemeinere Vorgehensweise, die sich eignet, wenn sich das helle und dunkle Design einer Bitmap unterscheiden, ist die Verwendung von zwei Bildressourcen – einer mit einem dunklen Vordergrund (für das helle Design) und einer mit einem hellen Vordergrund (für das dunkle Design). Ausführliche Informationen zum Benennen dieser Bitmapressourcen finden Sie unter [So wird's gemacht: Benennen von Ressourcen mithilfe von Qualifizierern](https://msdn.microsoft.com/library/windows/apps/xaml/hh965324). Sobald ein Satz von Bilddateien korrekt benannt wurde, können Sie wie folgt anhand des Stammnamens abstrakt auf sie verweisen:
 
@@ -355,7 +362,7 @@ Code, der ein Popup mit der **Microsoft.Phone.Shell.ShellToast**-Klasse anzeigt,
 
 Weitere Informationen finden Sie unter [Verwenden von Kacheln, Signalen und Popupbenachrichtigungen](https://msdn.microsoft.com/library/windows/apps/xaml/hh868259).
 
-## <a name="vieweffective-pixels-viewing-distance-and-scale-factors"></a>Anzeigepixel/Effektive Pixel, Abstand zum Bildschirm und Skalierungsfaktoren
+## <a name="view-or-effective-pixels-viewing-distance-and-scale-factors"></a>Anzeigepixel oder effektive Pixel, Abstand zum Bildschirm und Skalierungsfaktoren
 
 Windows Phone Silverlight-Apps und Windows 10-Apps unterscheiden sich darin, wie sie die Größe und das Layout von UI-Elementen gegenüber der tatsächlichen physischen Größe und Auflösung der Geräte abstrahieren. Bei einer Windows Phone Silverlight-App werden hierfür Pixel verwendet. Unter Windows 10 wurde das Konzept der Anzeigepixel verfeinert, sodass jetzt so genannte „effektive Pixel“ verwendet werden. Unten wird dieser Begriff erklärt und beschrieben, was er bedeutet und welcher zusätzliche Nutzen damit verbunden ist.
 
@@ -391,10 +398,5 @@ Das nächste Thema ist [Portieren: E/A, Gerät und App-Modell](wpsl-to-uwp-input
 ## <a name="related-topics"></a>Verwandte Themen
 
 * [Namespace- und Klassenzuordnungen](wpsl-to-uwp-namespace-and-class-mappings.md)
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

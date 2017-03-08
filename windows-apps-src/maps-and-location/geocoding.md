@@ -3,16 +3,23 @@ author: PatrickFarley
 title: "Durchführen der Geocodierung und umgekehrten Geocodierung"
 description: Sie konvertieren Adressen in geografische Standorte (Geocodierung) und geografische Standorte in Adressen (umgekehrte Geocodierung), indem Sie die Methoden der MapLocationFinder-Klasse im Windows.Services.Maps-Namespace aufrufen.
 ms.assetid: B912BE80-3E1D-43BB-918F-7A43327597D2
+ms.author: pafarley
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Geocodierung, Karte, Ort, Standort"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: d42708a82f99e345183b6cbcb87cfdd136b10e52
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 16be7bcafaf286a71e79fb4bca01511ddc7a1ae0
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Durchführen der Geocodierung und umgekehrten Geocodierung
+# <a name="perform-geocoding-and-reverse-geocoding"></a>Durchführen von Geocodierung und umgekehrter Geocodierung
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Sie konvertieren Adressen in geografische Standorte (Geocodierung) und geografische Standorte in Adressen (umgekehrte Geocodierung), indem Sie die Methoden der [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550)-Klasse im [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979)-Namespace aufrufen.
@@ -32,7 +39,7 @@ Hier erfahren Sie, welchen Zusammenhang es zwischen den Klassen für Geocodierun
 
  
 
-## Abrufen eines Standorts (Geocode)
+## <a name="get-a-location-geocode"></a>Abrufen eines Standorts (Geocode)
 
 
 Sie konvertieren eine Adresse oder einen Ortsnamen in einen geografischen Standort (Geocodierung), indem Sie die folgenden Schritte ausführen.
@@ -81,7 +88,7 @@ Dieser Code zeigt die folgenden Ergebnisse im `tbOutputText`-Textfeld an:
 result = (47.6406099647284,-122.129339994863)
 ```
 
-## Abrufen einer Adresse (umgekehrte Geocodierung)
+## <a name="get-an-address-reverse-geocode"></a>Abrufen einer Adresse (umgekehrte Geocodierung)
 
 
 Sie konvertieren einen geografischen Standort in eine Adresse (umgekehrte Geocodierung), indem Sie die folgenden Schritte ausführen.
@@ -123,7 +130,7 @@ Dieser Code zeigt die folgenden Ergebnisse im `tbOutputText`-Textfeld an:
 town = Redmond
 ```
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Bing Maps Developer Center](https://www.bingmapsportal.com/)
 * [Beispiel für UWP-Karte](http://go.microsoft.com/fwlink/p/?LinkId=619977)
@@ -133,11 +140,4 @@ town = Redmond
 * [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550)
 * [**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925)
 * [**FindLocationsAtAsync**](https://msdn.microsoft.com/library/windows/apps/dn636928)
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

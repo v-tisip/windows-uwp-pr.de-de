@@ -1,19 +1,28 @@
 ---
 author: mcleanbyron
 ms.assetid: 8D4AE532-22EF-4743-9555-A828B24B8F16
-description: "Verwenden Sie diese Methoden in der Windows Store-Übermittlungs-API, um Daten für Apps abzurufen, die in Ihrem Windows Dev Center-Konto registriert wurden."
-title: "Abrufen von App-Daten mit der Windows Store-Übermittlungs-API"
+description: "Verwenden Sie diese Methoden der Windows Store-Übermittlungs-API, um Daten für Apps abzurufen, die in Ihrem Windows Dev Center-Konto registriert wurden."
+title: "Abrufen von App-Daten mithilfe der Windows Store-Übermittlungs-API"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Windows Store-Übermittlungs-API, App-Daten"
 translationtype: Human Translation
-ms.sourcegitcommit: 020c8b3f4d9785842bbe127dd391d92af0962117
-ms.openlocfilehash: 23839faca120976a07e666b9d6861aa8750898ad
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 756f11cdc440a891658c2311cc61199dec3d6d1f
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="get-app-data-using-the-windows-store-submission-api"></a>Abrufen von App-Daten mit der Windows Store-Übermittlungs-API
+# <a name="get-app-data-using-the-windows-store-submission-api"></a>Abrufen von App-Daten mithilfe der Windows Store-Übermittlungs-API
 
-Verwenden Sie die folgenden Methoden in der Windows Store-Übermittlungs-API, um Daten für Ihre Apps abzurufen. Eine Einführung in die Windows Store-Übermittlungs-API finden Sie unter [Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten](create-and-manage-submissions-using-windows-store-services.md).
+Verwenden Sie die folgenden Methoden in der Windows Store-Übermittlungs-API, um Daten für vorhandene Apps abzurufen, die in Ihrem Windows Dev Center-Konto registriert wurden. Eine Einführung in die Windows Store-Übermittlungs-API einschließlich der Voraussetzungen für die Verwendung der API finden Sie unter [Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten](create-and-manage-submissions-using-windows-store-services.md).
 
->**Hinweis**&nbsp;&nbsp;Diese Methoden können nur für Windows Dev Center-Konten verwendet werden, die zur Verwendung der Windows Store-Übermittlungs-API berechtigt sind. Diese Berechtigung ist nicht für alle Konten aktiviert. Diese Methoden können nur verwendet werden, um Daten für Apps abzurufen. Informationen zum Erstellen oder Verwalten von Übermittlungen für Apps finden Sie unter den Methoden in [Verwalten von App-Übermittlungen](manage-app-submissions.md).
+>**Hinweis**&nbsp;&nbsp;Diese Methoden können nur für Windows Dev Center-Konten verwendet werden, die zur Verwendung der Windows Store-Übermittlungs-API berechtigt sind. Diese Berechtigung wird für Entwicklerkonten stufenweise aktiviert, und die Berechtigung ist zu diesem Zeitpunkt nicht für alle Konten aktiviert. Um früheren Zugriff anfordern, melden Sie sich beim Dev Center-Dashboard an, klicken Sie am unteren Rand des Dashboards auf **Feedback**, wählen Sie **Übermittlungs-API** für den Feedback-Bereich, und übermitteln Sie Ihre Anforderung. Sie erhalten eine E-Mail, wenn diese Berechtigung für Ihr Konto aktiviert ist.
+
+Bevor Sie diese Methoden verwenden können, muss die App in Ihrem Dev Center-Konto bereits vorhanden sein. Informationen zum Erstellen oder Verwalten von Übermittlungen für Apps finden Sie unter den Methoden in [Verwalten von App-Übermittlungen](manage-app-submissions.md).
 
 <table>
 <colgroup>
@@ -168,7 +177,7 @@ Diese Ressource enthält Informationen zu einer Übermittlung. Das folgende Beis
 }
 ```
 
-Diese Ressource hat die folgenden Werte.
+Die Ressource hat die folgenden Werte.
 
 | Wert           | Typ    | Beschreibung                 |
 |-----------------|---------|------------------------------|
@@ -185,9 +194,4 @@ Diese Ressource hat die folgenden Werte.
 * [Abrufen einer App](get-an-app.md)
 * [Abrufen von Add-Ons für eine App](get-add-ons-for-an-app.md)
 * [Abrufen von Flight-Paketen für eine App](get-flights-for-an-app.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

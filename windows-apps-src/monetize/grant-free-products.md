@@ -3,33 +3,38 @@ author: mcleanbyron
 ms.assetid: FA55C65C-584A-4B9B-8451-E9C659882EDE
 description: "Verwenden Sie diese Methode in der Windows Store-Einkaufs-API, um einem bestimmten Benutzer eine kostenlose App oder ein kostenloses Add-On zu gewähren."
 title: "Gewähren kostenloser Produkte"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Windows Store-Einkaufs-API, Produkte gewähren"
 translationtype: Human Translation
-ms.sourcegitcommit: ac9c921c7f39a1bdc6dc9fc9283bc667f67cd820
-ms.openlocfilehash: 2eca8712075ce1f9d876f3ae441381734bd52370
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f7509be016f32282478d6ebf0e373b2540537d3d
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Gewähren kostenloser Produkte
-
-
+# <a name="grant-free-products"></a>Gewähren kostenloser Produkte
 
 Verwenden Sie diese Methode in der Windows Store-Einkaufs-API, um einem Benutzer eine kostenlose App oder ein kostenloses Add-On (auch In-App-Produkt oder IAP genannt) zu gewähren.
 
 Derzeit können Sie nur kostenlose Produkte gewähren. Wenn Ihr Dienst versucht, diese Methode zum Gewähren eines nicht kostenlosen Produkts zu verwenden, gibt diese Methode einen Fehler zurück.
 
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 Zur Verwendung dieser Methode benötigen Sie:
 
-* Ein AzureAD-Zugriffstoken, das mit dem Zielgruppen-URI `https://onestore.microsoft.com` erstellt wurde.
-* Ein WindowsStore-ID-Schlüssel, der [aus clientseitigem Code in Ihrer App generiert wurde](view-and-grant-products-from-a-service.md#step-4).
+* Ein Azure AD-Zugriffstoken, das mit dem Zielgruppen-URI `https://onestore.microsoft.com` erstellt wurde.
+* Ein Windows Store-ID-Schlüssel, der die Identität des Benutzers darstellt, dem Sie ein kostenloses Produkt gewähren möchten.
 
-Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von Produktansprüchen aus einem Dienst](view-and-grant-products-from-a-service.md).
+Weitere Informationen finden Sie unter [Verwalten von Produktansprüchen aus einem Dienst](view-and-grant-products-from-a-service.md).
 
-## Anforderung
+## <a name="request"></a>Anforderung
 
 
-### Anforderungssyntax
+### <a name="request-syntax"></a>Anforderungssyntax
 
 | Methode | Anforderungs-URI                                            |
 |--------|--------------------------------------------------------|
@@ -37,34 +42,34 @@ Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von
 
 <span/> 
 
-### Anforderungsheader
+### <a name="request-header"></a>Anforderungsheader
 
 | Header         | Typ   | Beschreibung                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
 | Autorisierung  | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;.                           |
-| Host           | string | Muss auf den Wert **collections.mp.microsoft.com** festgelegt werden.                                            |
-| Content-Length | number | Die Länge des Anforderungstexts.                                                                       |
+| Host           | string | Muss auf den Wert **purchase.mp.microsoft.com** festgelegt werden.                                            |
+| Inhaltslänge | number | Die Länge des Anforderungstexts                                                                       |
 | Inhaltstyp   | string | Gibt den Anforderungs- und Antworttyp an. Derzeit wird als einziger Wert **application/json** unterstützt. |
 
 <span/>
 
-### Anforderungstext
+### <a name="request-body"></a>Anforderungstext
 
-| Parameter      | Typ   | Beschreibung                                                                                                                                                                                                                                                                                                            | Erforderlich |
-|----------------|--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| availabilityId | string | Die Verfügbarkeits-ID des Produkts, das aus dem Windows Store-Katalog erworben werden soll.                                                                                                                                                                                                                                     | Ja      |
-| b2bKey         | string | Der WindowsStore-ID-Schlüssel, der [aus clientseitigem Code in Ihrer App generiert wurde](view-and-grant-products-from-a-service.md#step-4).                                                                                                                                                                                                                                                        | Ja      |
-| devOfferId     | string | Eine vom Entwickler angegebene Angebotskennung, die nach dem Kauf im Auflistungselement angezeigt wird.                                                                                                                                                                                                                                 | Nein       |
-| language       | string | Die Sprache des Benutzers.                                                                                                                                                                                                                                                                                              | Ja      |
-| market         | string | Der Markt des Benutzers.                                                                                                                                                                                                                                                                                                | Ja      |
-| orderId        | guid   | Eine für den Auftrag generierte GUID. Dieser Wert muss für den Benutzer eindeutig sein, aber nicht auftragsübergreifend.                                                                                                                                                                                              | Ja      |
-| productId      | string | Die Store-ID aus dem WindowsStore-Katalog. Die Store-ID einer App ist auf der [Seite mit der App-Identität](../publish/view-app-identity-details.md) des DevCenter-Dashboards verfügbar. Die Store-ID eines Add-Ons ist in der URL der Übersicht für das Add-On im Windows Dev Center-Dashboard verfügbar. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8. | Ja      |
-| quantity       | int    | Die Kaufmenge. Derzeit wird als einziger Wert 1 unterstützt. Ohne Angabe wird standardmäßig der Wert1 verwendet.                                                                                                                                                                                                                | Nein       |
-| skuId          | string | Die SKU-ID aus dem Windows Store-Katalog. Beispiel für eine SKU-ID: 0010.                                                                                                                                                                                                                                                | Ja      |
+| Parameter      | Typ   | Beschreibung        | Erforderlich |
+|----------------|--------|---------------------|----------|
+| availabilityId | string | Die Verfügbarkeits-ID des Produkts, das aus dem Windows Store-Katalog gewährt werden soll.         | Ja      |
+| b2bKey         | string | Der [Windows Store-ID-Schlüssel](view-and-grant-products-from-a-service.md#step-4), der die Identität des Benutzers darstellt, dem Sie ein kostenloses Produkt gewähren möchten.    | Ja      |
+| devOfferId     | string | Eine vom Entwickler angegebene Angebotskennung, die nach dem Kauf im Auflistungselement angezeigt wird.        |
+| language       | string | Die Sprache des Benutzers  | Ja      |
+| market         | string | Der Markt des Benutzers.       | Ja      |
+| orderId        | guid   | Eine für den Auftrag generierte GUID. Dieser Wert muss für den Benutzer eindeutig sein, aber nicht auftragsübergreifend.    | Ja      |
+| productId      | string | Die [Store-ID](in-app-purchases-and-trials.md#store-ids) für das [Produkt](in-app-purchases-and-trials.md#products-skus-and-availabilities) aus dem Windows Store-Katalog. Ein Beispiel für die Store-ID eines Produkts ist 9NBLGGH42CFD. | Ja      |
+| quantity       | int    | Die Kaufmenge Derzeit wird als einziger Wert 1 unterstützt. Ohne Angabe wird standardmäßig der Wert 1 verwendet.   | Nein       |
+| skuId          | string | Die [Store-ID](in-app-purchases-and-trials.md#store-ids) für die [Produkt-SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities) aus dem Windows Store-Katalog. Ein Beispiel für die Store-ID einer SKU ist 0010.     | Ja      |
 
 <span/>
 
-### Anforderungsbeispiel
+### <a name="request-example"></a>Anforderungsbeispiel
 
 ```syntax
 POST https://purchase.mp.microsoft.com/v6.0/purchases/grant HTTP/1.1
@@ -83,30 +88,30 @@ Content-Type: application/json
 }
 ```
 
-## Antwort
+## <a name="response"></a>Antwort
 
 
-### Antworttext
+### <a name="response-body"></a>Antworttext
 
-| Parameter                 | Typ                        | Beschreibung                                                                                                                                              | Erforderlich |
-|---------------------------|-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| clientContext             | ClientContextV6             | Informationen zum Clientkontext für diesen Auftrag. Sie werden dem *clientID*-Wert aus dem Azure AD-Token zugewiesen.                                     | Ja      |
-| createdtime               | datetimeoffset              | Der Zeitpunkt der Auftragserstellung.                                                                                                                          | Ja      |
-| currencyCode              | string                      | Der Währungscode für *totalAmount* und *totalTaxAmount*. Für kostenlose Artikel nicht relevant.                                                                                | Ja      |
-| friendlyName              | string                      | Der Anzeigename für den Auftrag. Für Aufträge über die Windows Store-Einkaufs-API nicht relevant.                                                               | Ja      |
-| isPIRequired              | boolean                     | Gibt an, ob für die Bestellung ein Zahlungsmittel (Payment Instrument, PI) erforderlich ist.                                                                   | Ja      |
-| language                  | string                      | Die Sprach-ID für den Auftrag (z. B. „de“).                                                                                                       | Ja      |
-| market                    | string                      | Die Markt-ID für den Auftrag (z. B. „DEU“).                                                                                                         | Ja      |
-| orderId                   | string                      | Eine ID, die den Auftrag für einen bestimmten Benutzer identifiziert.                                                                                                   | Ja      |
-| orderLineItems            | list&lt;OrderLineItemV6&gt; | Die Liste mit den Auftragspositionen. In der Regel gibt es 1 Position pro Auftrag.                                                                          | Ja      |
+| Parameter                 | Typ                        | Beschreibung             | Erforderlich |
+|---------------------------|-----------------------------|-----------------------|----------|
+| clientContext             | ClientContextV6             | Informationen zum Clientkontext für diesen Auftrag. Sie werden dem *clientID*-Wert aus dem Azure AD-Token zugewiesen.    | Ja      |
+| createdtime               | datetimeoffset              | Der Zeitpunkt der Auftragserstellung.         | Ja      |
+| currencyCode              | string                      | Der Währungscode für *totalAmount* und *totalTaxAmount*. Für kostenlose Artikel nicht relevant.     | Ja      |
+| friendlyName              | string                      | Der Anzeigename für den Auftrag. Für Aufträge über die Windows Store-Einkaufs-API nicht relevant. | Ja      |
+| isPIRequired              | boolean                     | Gibt an, ob für die Bestellung ein Zahlungsmittel (Payment Instrument, PI) erforderlich ist.  | Ja      |
+| language                  | string                      | Die Sprach-ID für den Auftrag (z. B. „de“).       | Ja      |
+| market                    | string                      | Die Markt-ID für den Auftrag (z. B. „DEU“).  | Ja      |
+| orderId                   | string                      | Eine ID, die den Auftrag für einen bestimmten Benutzer identifiziert.                | Ja      |
+| orderLineItems            | list&lt;OrderLineItemV6&gt; | Die Liste mit den Auftragspositionen. In der Regel gibt es 1 Position pro Auftrag.       | Ja      |
 | orderState                | string                      | Der Zustand des Auftrags. Gültige Zustände sind **Editing**, **CheckingOut**, **Pending**, **Purchased**, **Refunded**, **ChargedBack** und **Cancelled**. | Ja      |
-| orderValidityEndTime      | string                      | Der Zeitpunkt, bis zu dem der Preis des Auftrags vor der Übermittlung gültig ist. Für kostenlose Apps nicht relevant.                                                                      | Ja      |
-| orderValidityStartTime    | string                      | Der Zeitpunkt, ab dem der Preis des Auftrags vor der Übermittlung gültig ist. Für kostenlose Apps nicht relevant.                                                                     | Ja      |
-| purchaser                 | IdentityV6                  | Ein Objekt, das die Identität des Käufers beschreibt.                                                                                                  | Ja      |
-| totalAmount               | decimal                     | Der Gesamtkaufbetrag aller im Auftrag enthaltenen Artikel (inklusive Steuern).                                                                                       | Ja      |
-| totalAmountBeforeTax      | decimal                     | Der Gesamtkaufbetrag aller im Auftrag enthaltenen Artikel (vor Steuern).                                                                                              | Ja      |
-| totalChargedToCsvTopOffPI | decimal                     | Bei Verwendung eines separaten Zahlungsmittels und eines gespeicherten Werts (CSV) der für CSV in Rechnung gestellte Betrag.                                                                | Ja      |
-| totalTaxAmount            | decimal                     | Die Gesamtsteuerbetrag für alle Positionen.                                                                                                              | Ja      |
+| orderValidityEndTime      | string                      | Der Zeitpunkt, bis zu dem der Preis des Auftrags vor der Übermittlung gültig ist. Für kostenlose Apps nicht relevant.      | Ja      |
+| orderValidityStartTime    | string                      | Der Zeitpunkt, ab dem der Preis des Auftrags vor der Übermittlung gültig ist. Für kostenlose Apps nicht relevant.          | Ja      |
+| purchaser                 | IdentityV6                  | Ein Objekt, das die Identität des Käufers beschreibt.       | Ja      |
+| totalAmount               | decimal                     | Der Gesamtkaufbetrag aller im Auftrag enthaltenen Artikel (inklusive Steuern).       | Ja      |
+| totalAmountBeforeTax      | decimal                     | Der Gesamtkaufbetrag aller im Auftrag enthaltenen Artikel (vor Steuern).      | Ja      |
+| totalChargedToCsvTopOffPI | decimal                     | Bei Verwendung eines separaten Zahlungsmittels und eines gespeicherten Werts (CSV) der für CSV in Rechnung gestellte Betrag.            | Ja      |
+| totalTaxAmount            | decimal                     | Die Gesamtsteuerbetrag für alle Positionen.    | Ja      |
 
 <span/>
 
@@ -137,12 +142,12 @@ Das OrderLineItemV6-Objekt enthält die folgenden Parameter.
 | legacyBillingOrderId    | string         | Die alte Abrechnungs-ID.                                                                                       | Nein       |
 | lineItemId              | string         | Die Positions-ID für den Artikel in diesem Auftrag.                                                                 | Ja      |
 | listPrice               | decimal        | Der Listenpreis des Artikels in diesem Auftrag.                                                                    | Ja      |
-| productId               | string         | Die Store-ID der Position.                                                               | Ja      |
+| productId               | string         | Die [Store-ID](in-app-purchases-and-trials.md#store-ids) für das [Produkt](in-app-purchases-and-trials.md#products-skus-and-availabilities), das die Position im Windows Store-Katalog darstellt. Ein Beispiel für die Store-ID eines Produkts ist 9NBLGGH42CFD.   | Ja      |
 | productType             | string         | Die Art des Produkts. Die unterstützten Werte sind **Durable**, **Application** und **UnmanagedConsumable**. | Ja      |
 | quantity                | int            | Die Menge des bestellten Artikels.                                                                            | Ja      |
 | retailPrice             | decimal        | Der Einzelhandelspreis des bestellten Artikels.                                                                        | Ja      |
 | revenueRecognitionState | string         | Der Zustand der Umsatzrealisierung.                                                                               | Ja      |
-| skuId                   | string         | Die Windows Store-SKU-ID der Position.                                                                   | Ja      |
+| skuId                   | string         | Die [Store-ID](in-app-purchases-and-trials.md#store-ids) für die [SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities) der Position im Windows Store-Katalog. Ein Beispiel für die Store-ID einer SKU ist 0010.                                                                   | Ja      |
 | taxAmount               | decimal        | Der Steuerbetrag für die Position.                                                                            | Ja      |
 | taxType                 | string         | Der Steuertyp für die anfallenden Steuern.                                                                       | Ja      |
 | Title                   | string         | Der lokalisierte Titel der Position.                                                                        | Ja      |
@@ -159,7 +164,7 @@ Das IdentityV6-Objekt enthält die folgenden Parameter.
 
 <span/> 
 
-### Antwortbeispiel
+### <a name="response-example"></a>Antwortbeispiel
 
 ```syntax
 Content-Length: 1203
@@ -220,31 +225,23 @@ Date: Tue, 13 Oct 2015 21:21:51 GMT
 }
 ```
 
-## Fehlercodes
+## <a name="error-codes"></a>Fehlercodes
 
 
-| Code | Fehler        | Interner Fehlercode           | Beschreibung                                                                                                                                                                           |
-|------|--------------|----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Code | Fehler        | Interner Fehlercode           | Beschreibung   |
+|------|--------------|----------------------------|----------------|
 | 401  | Nicht autorisiert | AuthenticationTokenInvalid | Das Azure AD-Zugriffstoken ist ungültig. In einigen Fällen enthalten die Details zu ServiceError weitere Informationen, z. B. wenn das Token abgelaufen ist oder der *appid*-Anspruch fehlt. |
-| 401  | Nicht autorisiert | PartnerAadTicketRequired   | An den Dienst wurde im Autorisierungsheader kein Azure AD-Zugriffstoken übergeben.                                                                                                   |
-| 401  | Nicht autorisiert | InconsistentClientId       | Der *clientId*-Anspruch im Windows Store-ID-Schlüssel im Anforderungstext und der *appid*-Anspruch im Azure AD-Zugriffstoken im Autorisierungsheader stimmen nicht überein.                     |
-| 400  | BadRequest   | InvalidParameter           | Die Details enthalten Informationen zum Anforderungstext und zu Feldern mit ungültigem Wert.                                                                                    |
+| 401  | Nicht autorisiert | PartnerAadTicketRequired   | An den Dienst wurde im Autorisierungsheader kein Azure AD-Zugriffstoken übergeben.   |
+| 401  | Nicht autorisiert | InconsistentClientId       | Der *clientId*-Anspruch im Windows Store-ID-Schlüssel im Anforderungstext und der *appid*-Anspruch im Azure AD-Zugriffstoken im Autorisierungsheader stimmen nicht überein.       |
+| 400  | BadRequest   | InvalidParameter           | Die Details enthalten Informationen zum Anforderungstext und zu Feldern mit ungültigem Wert.           |
 
 <span/> 
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 
-* [Anzeigen von Produkten und Gewähren von Produktansprüchen aus einem Dienst](view-and-grant-products-from-a-service.md)
+* [Verwalten von Produktansprüchen aus einem Dienst](view-and-grant-products-from-a-service.md)
 * [Produktabfrage](query-for-products.md)
-* [Melden von Verbrauchsprodukten als erfüllt](report-consumable-products-as-fulfilled.md)
+* [Melden von konsumierbaren Produkten als erfüllt](report-consumable-products-as-fulfilled.md)
 * [Verlängern eines Windows Store-ID-Schlüssels](renew-a-windows-store-id-key.md)
- 
-
- 
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

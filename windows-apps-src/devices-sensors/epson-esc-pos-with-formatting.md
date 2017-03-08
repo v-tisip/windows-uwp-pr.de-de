@@ -2,41 +2,48 @@
 author: DBirtolo
 ms.assetid: 70667353-152B-4B18-92C1-0178298052D4
 title: Epson ESC/POS mit Formatierung
-description: "Erfahren Sie, wie Sie die ESC/POS-Befehlssprache zum Formatieren von Text, z. B. in Fett und mit doppelter Größe, für Ihren Point of Service-Drucker verwenden."
+description: "Erfahren Sie, wie Sie die ESC/POS-Befehlssprache zum Formatieren von Text, z. B. in Fett und mit doppelter Größe, für Ihren Point of Service-Drucker verwenden."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
-ms.openlocfilehash: b645e41d7456f1dff664e3f61721a3564d554202
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 70b737625f5301d3147f4570b4e6f7216c2212c7
+ms.lasthandoff: 02/07/2017
 
 ---
-# Epson ESC/POS mit Formatierung
+# <a name="epson-escpos-with-formatting"></a>Epson ESC/POS mit Formatierung
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-** Wichtige APIs **
+**Wichtige APIs**
 
--   [PointofService-Drucker](https://msdn.microsoft.com/library/windows/apps/Mt426652)
+-   [**PointofService-Drucker**](https://msdn.microsoft.com/library/windows/apps/Mt426652)
 -   [**Windows.Devices.PointOfService**](https://msdn.microsoft.com/library/windows/apps/Dn298071)
 
-Erfahren Sie, wie Sie die ESC/POS-Befehlssprache zum Formatieren von Text, z.B. in Fett und mit doppelter Größe, für Ihren Point of Service-Drucker verwenden.
+Erfahren Sie, wie Sie die ESC/POS-Befehlssprache zum Formatieren von Text, z. B. in Fett und mit doppelter Größe, für Ihren Point of Service-Drucker verwenden.
 
-## ESC/POS-Verwendung
+## <a name="escpos-usage"></a>ESC/POS-Verwendung
 
-Windows Point of Service ermöglicht die Verwendung einer Vielzahl von Druckern, z.B. mehrerer Drucker der EpsonTM-Reihe. (Eine vollständige Liste der unterstützten Drucker finden Sie auf der Seite [PointofService-Drucker](https://msdn.microsoft.com/library/windows/apps/Mt426652).) Windows unterstützt das Drucken über die ESC/POS-Druckersteuerungssprache, die über effiziente und funktionale Befehle für die Kommunikation mit dem Drucker verfügt.
+Windows Point of Service ermöglicht die Verwendung einer Vielzahl von Druckern, z. B. mehrerer Drucker der Epson TM-Reihe. (Eine vollständige Liste der unterstützten Drucker finden Sie auf der Seite [PointofService-Drucker](https://msdn.microsoft.com/library/windows/apps/Mt426652).) Windows unterstützt das Drucken über die ESC/POS-Druckersteuerungssprache, die über effiziente und funktionale Befehle für die Kommunikation mit dem Drucker verfügt.
 
 ESC/POS ist ein von Epson erstelltes Befehlssystem, das für viele POS-Druckersysteme verwendet wird und mit dem inkompatible Befehlssätze vermieden werden sollen, indem für eine universelle Anwendbarkeit gesorgt wird. Die meisten modernen Drucker unterstützen ESC/POS.
 
-Alle Befehle beginnen mit dem ESC-Zeichen (ASCII27, HEX1B) oder GS (ASCII29, HEX1D), gefolgt von einem weiteren Zeichen, das für den Befehl steht. Normaler Text wird – getrennt durch Zeilenumbrüche – einfach an den Drucker gesendet.
+Alle Befehle beginnen mit dem ESC-Zeichen (ASCII 27, HEX 1B) oder GS (ASCII 29, HEX 1D), gefolgt von einem weiteren Zeichen, das für den Befehl steht. Normaler Text wird – getrennt durch Zeilenumbrüche – einfach an den Drucker gesendet.
 
 Die [**Windows PointOfService API**](https://msdn.microsoft.com/library/windows/apps/Dn298071) stellt einen Großteil der Funktionalität für Sie über die Methoden **Print()** oder **PrintLine()** bereit. Um bestimmte Formatierungen zu erzielen oder spezielle Befehle zu senden, müssen Sie jedoch ESC/POS-Befehle senden, die wie eine Zeichenfolge aufgebaut sind und an den Drucker gesendet werden.
 
-## Beispiel für die Verwendung von fetten Zeichen und Zeichen mit doppelter Größe
+## <a name="example-using-bold-and-double-size-characters"></a>Beispiel für die Verwendung von fetten Zeichen und Zeichen mit doppelter Größe
 
 Im folgenden Beispiel wird die Verwendung von ESC/POS-Befehlen zum Drucken von fetten Zeichen und Zeichen mit doppelter Größe veranschaulicht. Beachten Sie, dass jeder Befehl wie eine Zeichenfolge aufgebaut ist und dann in die printJob-Aufrufe eingefügt wird.
 
 ```csharp
 // … prior plumbing code removed for brevity
 // this code assumed you've already created a receipt print job (printJob)
-// and also that you've already checked the PosPrinter Capabilities to 
+// and also that you've already checked the PosPrinter Capabilities to
 // verify that the printer supports Bold and DoubleHighDoubleWide print modes
 
 const string ESC = "\u001B";
@@ -56,11 +63,4 @@ printJob.ExecuteAsync();
 ```
 
 Weitere Informationen zu ESC/POS, darunter zu den verfügbaren Befehlen, finden Sie unter [Epson ESC/POS – FAQ](http://content.epson.de/fileadmin/content/files/RSD/downloads/escpos.pdf). Ausführliche Informationen zu [**Windows.Devices.PointOfService**](https://msdn.microsoft.com/library/windows/apps/Dn298071) sowie zu allen verfügbaren Funktionen finden Sie auf der MSDN-Website unter [PointofService Printer](https://msdn.microsoft.com/library/windows/apps/Mt426652).
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

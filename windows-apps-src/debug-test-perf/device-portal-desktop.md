@@ -2,15 +2,22 @@
 author: mcleblanc
 ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
 title: "Device Portal für Desktop"
-description: "Hier erfahren Sie, wie das Windows Device Portal Diagnose und Automatisierung auf dem Windows-Desktop öffnet."
+description: "Hier erfahren Sie, wie das Windows Device Portal die Diagnose und Automatisierung auf dem Windows-Desktop öffnet."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: b5d259172a7e3975d48a5ba669cfbe345869aebf
-ms.openlocfilehash: 3436a95124071045c8ec89ed8ddf644ccc80c29f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7b8b396078d59cc2ab3180e9af8b6017fd5edbda
+ms.lasthandoff: 02/07/2017
 
 ---
-# Device Portal für Desktop
+# <a name="device-portal-for-desktop"></a>Device Portal für Desktop
 
-Ab Windows 10, Version 1607, sind weitere Entwicklerfeatures für Desktop verfügbar. Diese Features sind nur verfügbar, wenn der Entwicklermodus aktiviert ist.
+Ab Windows 10, Version 1607, sind weitere Entwicklerfeatures für Desktops verfügbar. Diese Features sind nur verfügbar, wenn der Entwicklermodus aktiviert ist.
 
 Informationen zum Aktivieren des Entwicklermodus finden Sie unter [Aktivieren Ihres Geräts für die Entwicklung](../get-started/enable-your-device-for-development.md).
 
@@ -23,9 +30,9 @@ Im Device Portal können Sie Diagnoseinformationen anzeigen und über HTTP aus d
 - Sammeln von ETW-Ablaufverfolgungen 
 - Bearbeiten des isolierten Speichers quergeladener Apps
 
-## Einrichten von Device Portal unter Windows-Desktop
+## <a name="set-up-device-portal-on-windows-desktop"></a>Einrichten von Device Portal unter Windows-Desktop
 
-### Aktivieren von Device Portal
+### <a name="turn-on-device-portal"></a>Aktivieren von Device Portal
 
 Sie können Device Portal im Menü **Entwicklereinstellungen** mit aktiviertem Entwicklermodus aktivieren.  
 
@@ -49,9 +56,9 @@ Sie haben zwei Möglichkeiten zum Herstellen einer Verbindung mit Device Portal:
 
 Für die Authentifizierung und sichere Kommunikation ist HTTPS erforderlich.
 
-Sie können die Authentifizierung deaktivieren, wenn Sie Device Portal in einer geschützten Umgebung verwenden, z.B. in einem Testlabor, in dem Sie allen im lokalen Netzwerk vertrauen, keine persönlichen Informationen auf dem Gerät gespeichert haben und in dem spezielle Anforderungen bestehen. Dies ermöglicht eine unverschlüsselte Kommunikation, und jeder, der die IP-Adresse Ihres Computers kennt, kann es steuern.
+Sie können die Authentifizierung deaktivieren, wenn Sie Device Portal in einer geschützten Umgebung verwenden, z. B. in einem Testlabor, in dem Sie allen im lokalen Netzwerk vertrauen, keine persönlichen Informationen auf dem Gerät gespeichert haben und in dem spezielle Anforderungen bestehen. Dies ermöglicht eine unverschlüsselte Kommunikation, und jeder, der die IP-Adresse Ihres Computers kennt, kann es steuern.
 
-## Seiten von Device Portal
+## <a name="device-portal-pages"></a>Seiten von Device Portal
 
 Device Portal für Desktop enthält den Standardsatz der Seiten. Ausführliche Beschreibungen finden Sie unter [Übersicht über das Windows Device Portal](device-portal.md).
 
@@ -65,7 +72,7 @@ Device Portal für Desktop enthält den Standardsatz der Seiten. Ausführliche B
 - Netzwerk
 - App-Datei-Explorer 
 
-## Festlegen von Portnummern
+## <a name="setting-port-numbers"></a>Festlegen von Portnummern
 
 Wenn Sie Portnummern für Device Portal auswählen möchten (z. B. 80 und 443), können Sie die folgenden Registrierungsschlüssel festlegen:
 
@@ -74,12 +81,12 @@ Wenn Sie Portnummern für Device Portal auswählen möchten (z. B. 80 und 443), 
     - HttpPort: Ein erforderlicher DWORD-Wert. Enthält die Portnummer, an der Device Portal nach HTTP-Verbindungen lauscht.  
     - HttpsPort: Ein erforderlicher DWORD-Wert. Enthält die Portnummer, an der Device Portal nach HTTPS-Verbindungen lauscht.
 
-## Fehler beim Installieren des Entwicklermoduspakets oder beim Starten von Device Portal
+## <a name="failure-to-install-developer-mode-package-or-launch-device-portal"></a>Fehler beim Installieren des Entwicklermoduspakets oder beim Starten von Device Portal
 In manchen Fällen wird der Entwicklermodus aufgrund von Problemen mit dem Netzwerk oder der Kompatibilität nicht ordnungsgemäß installiert. Das Entwicklermoduspaket ist für die **Remote**-Bereitstellung (Device Portal und SSH), nicht jedoch für die lokale Entwicklung erforderlich.  Selbst wenn diese Probleme auftreten, können Sie Ihre App weiterhin mithilfe von Visual Studio bereitstellen. 
 
 Im Forum zu den [bekannten Problemen](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) finden Sie entsprechende Problemumgehungen und vieles mehr. 
 
-### Das Paket konnte nicht gefunden werden
+### <a name="failed-to-locate-the-package"></a>Das Paket konnte nicht gefunden werden
 
 "Developer Mode package couldn’t be located in Windows Update. Error Code 0x001234 Learn more"   
 
@@ -89,13 +96,13 @@ So beheben Sie dieses Problem:
 
 1. Stellen Sie sicher, dass Ihr Computer mit dem Internet verbunden ist. 
 2. Wenn Sie einen in eine Domäne eingebundenen Computer verwenden, sprechen Sie mit dem Netzwerkadministrator. 
-3. Suchen nach Windows-Updates in den Einstellungen > Updates und Sicherheit > [Windows-Updates](ms-settings:windowsupdate).
-4. Stellen Sie sicher, dass das Windows-Entwicklermoduspaket in den Einstellungen > System > Apps und Features > [Optionale Features verwalten](ms-settings:optionalfeatures) > Feature hinzufügen vorhanden ist. Wenn es nicht vorhanden ist, kann Windows das richtige Paket für Ihren Computer nicht finden. 
+3. Suchen nach Windows-Updates in den Einstellungen > Updates und Sicherheit > Windows-Updates.
+4. Stellen Sie sicher, dass das Windows-Entwicklermoduspaket in den Einstellungen > System > Apps und Features > Optionale Features verwalten > Feature hinzufügen vorhanden ist. Wenn es nicht vorhanden ist, kann Windows das richtige Paket für Ihren Computer nicht finden. 
 
 Nachdem Sie einen der oben genannten Schritte durchgeführt haben, deaktivieren Sie den Entwicklermodus, und aktivieren Sie ihn dann erneut, um die Korrektur zu überprüfen. 
 
 
-### Fehler beim Installieren des Pakets
+### <a name="failed-to-install-the-package"></a>Fehler beim Installieren des Pakets
 
 "Developer Mode package failed to install. Error code 0x001234  Learn more"
 
@@ -103,11 +110,6 @@ Dieser Fehler kann aufgrund von Inkompatibilitäten zwischen dem Build von Windo
 
 So beheben Sie dieses Problem:
 
-1. Suchen nach Windows-Updates in den Einstellungen > Updates und Sicherheit > [Windows-Updates](ms-settings:windowsupdate).
+1. Suchen nach Windows-Updates in den Einstellungen > Updates und Sicherheit > Windows-Updates.
 2. Starten Sie Ihren Computer neu, um sicherzustellen, dass alle Updates angewendet wurden.
-
-
-
-<!--HONumber=Aug16_HO5-->
-
 

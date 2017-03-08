@@ -1,11 +1,18 @@
 ---
-author: jnHs
+author: shawjohn
 Description: "Auf dem Dev Center-Dashboard können Sie eine Anzeigenkampagne erstellen, um Ihre App zu bewerben und ihre Benutzerbasis zu erweitern."
-title: "Erstellen einer Anzeigenkampagne für Ihre App"
+title: "Erstellen einer Anzeigenkampagne für Ihre App – Entwicklung von UWP-Apps"
 ms.assetid: 10D94929-92C4-4379-AA5F-6FEF879F2463
+ms.author: johnshaw
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Anzeige, Kampagne, bewerben"
 translationtype: Human Translation
-ms.sourcegitcommit: 65b82f422e602515e9531664e35f1e1c1e9f5932
-ms.openlocfilehash: 3ea67f9e4f0d834bd77ef116c5e0b16008f4ae5f
+ms.sourcegitcommit: b01924366a0bc2afabe2f381e72e45862f0dd682
+ms.openlocfilehash: a4cee4bd81088fc47ee4d11525297a06381e21b8
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -30,7 +37,7 @@ So erstellen Sie eine Anzeigenkampagne zum Bewerben Ihrer App:
 4.  Definieren Sie im Abschnitt **Kampagnendetails** die allgemeinen Einstellungen für Ihre Kampagne.
     -   Geben Sie Ihrer Anzeigenkampagne im Feld **Kampagnenname** einen Namen.
     -   Wählen Sie unter **Kampagnentyp** eine der folgenden Optionen aus:
-        -   **Kostenpflichtig**: Diese Anzeigen werden in jeder App angezeigt, die dem Zielgerät und der Zielkategorie der App entspricht.
+        -   **Kostenpflichtig**: Diese Anzeigen werden in jeder App angezeigt, die dem Zielgerät und der Zielkategorie der App entspricht. Neue, nach dem 9. Januar 2017 erstellte Kampagnen, zeigen Ihre Anzeigen auch in MSN.com, Outlook.com, Skype und anderen Microsoft-Premium-Eigenschaften an. Werbekampagnen für Apps, deren Ziel Apps und Microsoft-Premium-Eigenschaften sind, werden als *universelle* Kampagnen bezeichnet.
         -   **Community (kostenlos)**: Diese Anzeigen werden in Apps ausgeführt, die von anderen Entwicklern veröffentlicht wurden, die ebenfalls Community-Anzeigenkampagnen erstellen. Bevor Sie diese Option auswählen können, müssen Sie auf dem Dashboard auf der Seite **Gewinnbringende Nutzung mit Anzeigen** das Kontrollkästchen **Show community ads in my app** aktivieren. Weitere Informationen finden Sie unter [Über Community-Anzeigen](about-community-ads.md).
         -   **Eigenwerbung (kostenlos)**: Diese Anzeigen werden nur in Ihren Apps angezeigt (die dem Zielgerät der beworbenen App entsprechen). Eigenwerbung ist kostenlos. Weitere Informationen finden Sie unter [Über Eigenwerbung](about-house-ads.md).
     -   Wählen Sie unter **Kampagnendauer** eine der folgenden Optionen aus:
@@ -45,6 +52,7 @@ So erstellen Sie eine Anzeigenkampagne zum Bewerben Ihrer App:
 
     -   Wählen Sie die Länder oder Regionen aus, in denen diese Anzeigen erscheinen sollen. Sie können bis zu 5 auswählen. Eine Liste der unterstützten Länder oder Regionen finden Sie unter [Häufig gestellte Fragen zu Anzeigenkampagnen](common-questions.md#where-will-my-ad-appear).
     -   Wählen Sie die Gerätetypen aus, auf denen diese Anzeigen erscheinen sollen. Es werden nur die von der App unterstützten Gerätetypen angezeigt.
+    -   Wählen Sie die Oberflächen aus, auf denen diese Anzeigen erscheinen sollen. Wenn Sie **Universell** wählen, wird Ihre Anzeige auch in MSN.com, Outlook.com, Skype und anderen Microsoft-Premium-Eigenschaften angezeigt.
     -   Wählen Sie das Betriebssystem aus. Es werden nur die von der App unterstützten Betriebssysteme angezeigt.
     -   Wählen Sie Geschlecht und Altersbereich der gewünschten Zielgruppe aus.
 
@@ -88,7 +96,7 @@ So erstellen Sie eine Anzeigenkampagne zum Bewerben Ihrer App:
 
     -   Legen Sie ein Zahlungsmittel für Ihre Anzeigenkampagne fest, indem Sie auf **Neues Zahlungsinstrument hinzufügen** klicken und Ihre Kontodaten eingeben.
         > **Wichtig**  Das Land/die Region der Rechnungsadresse Ihres Zahlungsmittels muss mit dem Land/der Region übereinstimmen, das bzw. die Ihrem Dev Center-Konto zugeordnet ist.
-– Wenn Sie von Microsoft einen Gutschein für eine Anzeigenkampagne erhalten haben, klicken Sie auf **Use a coupon**, geben Sie den Gutscheincode ein, und klicken Sie auf **Übernehmen**, um den Gutschein für die Kampagne zu übernehmen.
+    -   Wenn Sie von Microsoft einen Gutschein für eine Anzeigenkampagne erhalten haben, klicken Sie auf **Use a coupon**, geben Sie den Gutscheincode ein, und klicken Sie auf **Übernehmen**, um den Gutschein für die Kampagne zu übernehmen.
 
 10.  Klicken Sie abschließend auf **Überprüfen**, um die Einstellungen der Anzeigenkampagne – und falls es sich um eine kostenpflichtige Kampagne handelt – das Budget und die Zahlungsinformationen zu bestätigen. Klicken Sie auf **Bestätigen**. Ihre Anzeigen werden in der Regel nach wenigen Stunden angezeigt.
    > **Tipp** Wählen Sie im Navigationsmenü auf der höchsten Ebene im Dashboard **Werbeaktionen** aus, um die Leistung Ihrer Kampagnen anzuzeigen. Wählen Sie **Abschnittfilter** aus, um festzulegen, was im Bericht nach **Datum**, **Kampagnenziel**, **App-Name**, **Kampagnentyp** oder **Status** enthalten sein soll. Zusätzlich zum Anzeigen von Informationen zu den **Aufrufen**, **Klicks**, **Konvertierungen** und **Ausgaben** für Ihre Kampagne können Sie den Bericht zum **Anhalten** oder **Fortsetzen** einer Kampagne verwenden. Um eine Kampagne zu bearbeiten, wählen Sie ihren Namen in der Liste aus.
@@ -97,14 +105,6 @@ So erstellen Sie eine Anzeigenkampagne zum Bewerben Ihrer App:
 
 * [Verwalten Ihrer Anzeigenkampagne](managing-your-ad-campaign.md)
 * [Über Eigenwerbung](about-house-ads.md)
-* [Bericht „Anzeigen für die App-Installation“](app-install-ads-reports.md)
-* [Allgemeine Fragen zu Anzeigenkampagnen](common-questions.md)
- 
-
- 
-
-
-
-<!--HONumber=Dec16_HO1-->
-
+* [Bewerben Ihres App-Berichts](promote-your-app-report.md)
+* [Häufige Fragen zu Anzeigenkampagnen](common-questions.md)
 

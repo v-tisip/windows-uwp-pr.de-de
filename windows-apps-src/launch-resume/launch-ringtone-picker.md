@@ -1,14 +1,22 @@
 ---
 author: TylerMSFT
 title: "Schema „ms-tonepicker“"
-description: "In diesem Thema wird URI-Schema „ms-tonepicker“ beschrieben und wie Sie dieses verwenden können, um eine Tonauswahl anzuzeigen und Töne auszuwählen, zu speichern und den Anzeigenamen für Töne abzurufen."
+description: "In diesem Thema wird das URI-Schema „ms-tonepicker“ beschrieben, und wie Sie dieses verwenden können, um eine Tonauswahl anzuzeigen, Töne auszuwählen und zu speichern sowie den Anzeigenamen für Töne abzurufen."
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
+ms.assetid: 0c17e4fb-7241-4da9-b457-d6d3a7aefccb
 translationtype: Human Translation
-ms.sourcegitcommit: 4c7037cc91603af97a64285fd6610445de0523d6
-ms.openlocfilehash: ef605f9d749148240ecee5e0ecfd473f8440ca25
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: bc3a34d16f8245ef2e932c46e76ce965ce8755b7
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Auswählen und Speichern von Tönen mithilfe des URI-Schemas „ms-tonepicker“
+# <a name="choose-and-save-tones-using-the-ms-tonepicker-uri-scheme"></a>Wählen und Speichern von Tönen mithilfe des URI-Schemas „ms-tonepicker“
 
 In diesem Thema wird die Verwendung des URI-Schemas **ms-tonepicker:** beschrieben. Dieses URI-Schema kann verwendet werden, um:
 - Zu ermitteln, ob die Tonauswahl auf dem Gerät verfügbar ist;
@@ -16,13 +24,13 @@ In diesem Thema wird die Verwendung des URI-Schemas **ms-tonepicker:** beschrieb
 - Das Tool zum von Tönen anzuzeigen, das ein Sounddateitoken als Eingabe erhält und es auf dem Gerät speichert. Gespeicherte Töne stehen anschließend über die Tonauswahl zur Verfügung. Benutzer können dem Ton einen Anzeigenamen zuweisen.
 - Konvertieren Sie ein Tontoken in dessen Anzeigenamen.
 
-## ms-tonepicker: URI-Schemareferenz
+## <a name="ms-tonepicker-uri-scheme-reference"></a>ms-tonepicker: URI-Schemareferenz
 
 Dieses URI-Schema übergibt keine Argumente über die URI-Schema-Zeichenfolge, sondern über einen [ValueSet](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.valueset.aspx). Alle Zeichenfolgen beachten die Groß- und Kleinschreibung.
 
 In den folgenden Abschnitten wird angegeben, welche Argumente übergeben werden müssen, um die angegebene Aufgabe auszuführen.
 
-## Aufgabe: Ermitteln, ob die Tonauswahl auf dem Gerät verfügbar ist
+## <a name="task-determine-if-the-tone-picker-is-available-on-the-device"></a>Aufgabe: Ermitteln, ob die Tonauswahl auf dem Gerät verfügbar ist
 ```cs
 var status = await Launcher.QueryUriSupportAsync(new Uri("ms-tonepicker:"),     
                                      LaunchQuerySupportType.UriForResults,
@@ -34,7 +42,7 @@ if (status != LaunchQuerySupportStatus.Available)
 }
 ```
 
-## Aufgabe: Anzeige der Tonauswahl
+## <a name="task-display-the-tone-picker"></a>Aufgabe: Anzeige der Tonauswahl
 
 Die Argumente, die Sie zum Anzeigen der Tonauswahl übergeben können, sind:
 
@@ -44,7 +52,7 @@ Die Argumente, die Sie zum Anzeigen der Tonauswahl übergeben können, sind:
 | CurrentToneFilePath | string | Nein | Ein vorhandenes Tontoken. | Der Ton, der in der Tonauswahl als aktueller Ton angezeigt werden soll. Wenn dieser Wert nicht festgelegt ist, ist der erste Ton in der Liste standardmäßig aktiviert.<br>Streng genommen, ist dies kein Dateipfad. Sie können einen geeigneten Wert für `CurrenttoneFilePath` aus dem Wert `ToneToken` erhalten, der von der Tonauswahl zurückgegeben wird.  |
 | TypeFilter | string | Nein | "Ringtones", "Notifications", "Alarms", "None" | Wählt die Töne aus, die der Auswahl hinzugefügt werden sollen. Wenn kein Filter angegeben ist, werden alle Töne angezeigt. |
 
-<br>Die Werte, die in [LaunchUriResults.Result](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.launchuriresult.result.aspx) zurückgegeben werden:
+<br>Die Werte, die in [LaunchUriResults.Result](https://msdn.microsoft.com/library/windows/apps/windows.system.launchuriresult.result.aspx) zurückgegeben werden:
 
 | Rückgabewerte | Typ | Mögliche Werte | Beschreibung |
 |--------------|------|-------|-------------|
@@ -80,7 +88,7 @@ if (result.Status == LaunchUriStatus.Success)
 }
 ```
 
-## Aufgabe: Anzeige des Tools für das Speichern von Tönen
+## <a name="task-display-the-tone-saver"></a>Aufgabe: Anzeige des Tools für das Speichern von Tönen
 
 Die Argumente, die Sie zum Anzeigen des Tools für das Speichern von Tönen übergeben können, sind:
 
@@ -90,11 +98,11 @@ Die Argumente, die Sie zum Anzeigen des Tools für das Speichern von Tönen übe
 | ToneFileSharingToken | string | Ja | [SharedStorageAccessManager](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharedstorageaccessmanager.aspx)-Dateifreigabetoken für die Klingeltondatei, die gespeichert werden soll. | Speichert eine bestimmte Audiodatei als Klingelton. Die unterstützten Inhaltstypen für die Datei sind „mpeg audio“ und „x-ms-wma audio“. |
 | DisplayName | string | Nein | Der Anzeigename des angegebenen Tons. | Legt den Anzeigenamen fest, der beim Speichern des angegebenen Klingeltons verwendet werden soll. |
 
-<br>Die Werte, die in [LaunchUriResults.Result](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.launchuriresult.result.aspx) zurückgegeben werden:
+<br>Die Werte, die in [LaunchUriResults.Result](https://msdn.microsoft.com/library/windows/apps/windows.system.launchuriresult.result.aspx) zurückgegeben werden:
 
 | Rückgabewerte | Typ | Mögliche Werte | Beschreibung |
 |--------------|------|-------|-------------|
-| Ergebnis | Int32 | 0 – Erfolg.<br>1 – Vom Benutzer abgebrochen.<br>2 – Ungültige Datei.<br>3 – Ungültiger Inhaltstyp.<br>4 – Datei überschreitet die maximal zulässige Größe für Klingeltöne (1MB in Windows10).<br>5 – Datei überschreitet die Begrenzung auf 40Sekunden.<br>6 – Datei wird durch Digital Rights Management geschützt.<br>7 – Ungültige Parameter. | Das Ergebnis des Auswahlvorgangs. |
+| Ergebnis | Int32 | 0 – Erfolg.<br>1 – Vom Benutzer abgebrochen.<br>2 – Ungültige Datei.<br>3 – Ungültiger Inhaltstyp.<br>4 – Datei überschreitet die maximal zulässige Größe für Klingeltöne (1 MB in Windows 10).<br>5 – Datei überschreitet die Begrenzung auf 40 Sekunden.<br>6 – Datei wird durch Digital Rights Management geschützt.<br>7 – Ungültige Parameter. | Das Ergebnis des Auswahlvorgangs. |
 <br>
 **Beispiel: Speichern einer lokalen Musikdatei als Klingelton**
 
@@ -144,7 +152,7 @@ if (result.Status == LaunchUriStatus.Success)
  }
 ```
 
-## Aufgabe: Konvertieren eines Tontokens in dessen Anzeigenamen
+## <a name="task-convert-a-tone-token-to-its-friendly-name"></a>Aufgabe: Konvertieren eines Tontokens in dessen Anzeigenamen
 
 Die Argumente, die Sie zum Abrufen des Anzeigenamens eines Tons übergeben können, sind:
 
@@ -153,7 +161,7 @@ Die Argumente, die Sie zum Abrufen des Anzeigenamens eines Tons übergeben könn
 | Action | string | Ja | "GetToneName" | Gibt an, dass Sie den Anzeigenamen eines Tons abrufen möchten. |
 | ToneToken | string | Ja | Das Tontoken. | Das Tontoken, aus dem ein Anzeigename abgerufen werden soll. |
 
-<br>Die Werte, die in [LaunchUriResults.Result](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.launchuriresult.result.aspx) zurückgegeben werden:
+<br>Die Werte, die in [LaunchUriResults.Result](https://msdn.microsoft.com/library/windows/apps/windows.system.launchuriresult.result.aspx) zurückgegeben werden:
 
 | Rückgabewert | Typ | Mögliche Werte | Beschreibung |
 |--------------|------|-------|-------------|
@@ -194,9 +202,4 @@ using (var connection = new AppServiceConnection())
     }
 }
 ```
-
-
-
-<!--HONumber=Aug16_HO4-->
-
 

@@ -2,9 +2,17 @@
 author: msatranjr
 title: Bluetooth-Werbung
 description: "Dieser Abschnitt enthält Artikel zur Integration von Bluetooth Low Energy (LE)-Ankündigungen in Apps für die Universelle Windows-Plattform (UWP) mithilfe der AdvertisementWatcher- and AdvertisementPublisher-APIs."
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
+ms.assetid: ff10bbc0-03a7-492c-b5fe-c5b9ce8ca32e
 translationtype: Human Translation
-ms.sourcegitcommit: b454e08015ea9bd6240c836563b1fec78e38dc2c
-ms.openlocfilehash: e21567bf2ffa5b05861cf96099290e1bb66dbf03
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: bfdb1b218676503699674c97fc962ad8161769dd
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -85,7 +93,7 @@ Der folgende Code zeigt, wie Sie eine Bluetooth LE-Ankündigungsüberwachung ers
 BluetoothLEAdvertisementWatcher watcher = new BluetoothLEAdvertisementWatcher();
 watcher.Received += OnAdvertisementReceived;
 watcher.Start();
-``` 
+```    
 
 ```csharp
 private async void OnAdvertisementReceived(BluetoothLEAdvertisementWatcher watcher, BluetoothLEAdvertisementReceivedEventArgs eventArgs)
@@ -153,8 +161,3 @@ private async void OnAdvertisementReceived(BluetoothLEAdvertisementWatcher watch
 Dieses kann zwar in eine ungefähre Entfernung übersetzt werden, sollte jedoch nicht zum Messen der echten Entfernung verwendet werden, da jeder Sender unterschiedlich ist. Unterschiedliche Umweltbedingungen können das Messen der Entfernung erschweren (wie Wände, Sendergehäuse oder sogar die Luftfeuchtigkeit).
 
 Eine Alternative zur Beurteilung der reinen Entfernung besteht im Definieren von „Buckets“. Sender tendieren dazu, 0 – 50 dBm zu melden, wenn sie sehr nahe sind,-50 – -90 dBm, wenn sie sich in einem mittleren Abstand befinden, und weniger als -90 dBm, wenn sie weit entfernt sind. Tests sind die beste Möglichkeit, diese Buckets für Ihre App festzulegen.
-
-
-<!--HONumber=Dec16_HO3-->
-
-

@@ -1,19 +1,26 @@
 ---
 author: mcleblanc
 ms.assetid: bf0a8b01-79f1-4944-9d78-9741e235dbe9
-title: "Geräteportal für Xbox"
-description: "Hier erfahren Sie, wie Sie das Geräteportal für Xbox One aktivieren."
+title: "Device Portal für Xbox"
+description: "Hier erfahren Sie, wie Sie das Device Portal für Xbox One aktivieren."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 77f542b2fed80271082e97437790b33ea7b54172
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 4321e799e8633dc31cc0d73889a0b0b6056f6d3b
+ms.lasthandoff: 02/07/2017
 
 ---
-# Geräteportal für Xbox
+# <a name="device-portal-for-xbox"></a>Device Portal für Xbox
 
 
-## Einrichten des Geräteportals für Xbox
+## <a name="set-up-device-portal-on-xbox"></a>Device Portal für Xbox einrichten
 
-### Aktivieren des Geräteportals
+### <a name="enable-device-portal"></a>Device Portal aktivieren
 
 **So aktivieren Sie das Geräteportal**
 
@@ -28,16 +35,11 @@ ms.openlocfilehash: 77f542b2fed80271082e97437790b33ea7b54172
 8. Sie erhalten eine Warnung zum Zertifikat, das bereitgestellt wurde, ähnlich der Warnung in der folgenden Abbildung. Klicken Sie auf **Laden dieser Website fortsetzen**, um das Windows Device Portal in der Vorschau zu öffnen.
 ![Fehler beim Zertifikat für das Device Portal](images/device-portal/xbox-certificate-error.png)
 
-## Seiten von Device Portal
+## <a name="device-portal-pages"></a>Seiten von Device Portal
 
 Device Portal für Xbox enthält einen Standardsatz der Seiten. Ausführliche Beschreibungen finden Sie unter [Übersicht über das Windows Device Portal](device-portal.md).
 
 - Apps
 - Leistung
 - Netzwerk
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

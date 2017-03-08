@@ -2,16 +2,24 @@
 author: msatranjr
 title: "Bluetooth-Entwickler – Häufig gestellte Fragen"
 description: "Dieser Artikel bietet Antworten auf häufig gestellte Fragen zu den UWP-Bluetooth-APIs."
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP"
+ms.assetid: e7dee32d-3756-430d-a026-32c1ee288a85
 translationtype: Human Translation
-ms.sourcegitcommit: e4c95448262c6c62956fcb50581c98d8c34d6dc0
-ms.openlocfilehash: 2afc1250aa9d7a6cf6c9c8cb45dd2379b9d36984
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 7394d211b580ad82689a79e7cbe4eb4dbf545f46
+ms.lasthandoff: 02/08/2017
 
 ---
-# Bluetooth-Entwickler – Häufig gestellte Fragen
+# <a name="bluetooth-developer-faq"></a>Bluetooth-Entwickler – Häufig gestellte Fragen
 
 Dieser Artikel bietet Antworten auf häufig gestellte Fragen zu UWP-Bluetooth-APIs.
 
-## Warum reagiert mein Bluetooth LE-Gerät nach einem Trennvorgang nicht mehr?
+## <a name="why-does-my-bluetooth-le-device-stop-responding-after-a-disconnect"></a>Warum reagiert mein Bluetooth LE-Gerät nach einem Trennvorgang nicht mehr?
 
 Der häufigste Grund besteht darin, dass die Kopplungsinformationen auf dem Remotegerät verloren gegangen sind. Viele ältere Bluetooth-Geräte erfordern keine Authentifizierung. Zum Schutz des Benutzers erfordern alle über die Einstellungs-App ausgeführten Kopplungsversuche eine Authentifizierung. Einige Geräte sind dafür nicht ausgelegt. 
 
@@ -34,15 +42,10 @@ In diesem Beispiel wird die Kopplung mit einem Gerät ohne Verschlüsselung init
     DevicePairingResult result = await customPairing.PairAsync(ceremonySelected, protectionLevel);
 ```
 
-## Muss ich Bluetooth-Geräte vor der Verwendung koppeln?
+## <a name="do-i-have-to-pair-bluetooth-devices-before-using-them"></a>Muss ich Bluetooth-Geräte vor der Verwendung koppeln?
 
 Bei Bluetooth RFCOMM (Classic)-Geräten ist dies nicht erforderlich. Ab Windows 10, Version 1607, können Sie einfach Geräte in der Nähe suchen und eine Verbindung herstellen. Das aktualisierte [RFCOMM Chat-Beispiel](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/BluetoothRfcommChat) veranschaulicht diese Funktionalität. 
 
 Da dieses Feature für Bluetooth Low Energy (GATT-Client) nicht verfügbar ist, müssen diese Geräte immer noch über die Einstellungsseite oder mithilfe der [Windows.Devices.Enumeration](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.enumeration.aspx)-APIs gekoppelt werden, damit Sie darauf zugreifen können.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

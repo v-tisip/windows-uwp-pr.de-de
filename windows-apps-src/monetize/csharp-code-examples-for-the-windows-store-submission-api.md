@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: FABA802F-9CB2-4894-9848-9BB040F9851F
 description: "Verwenden Sie die C#-Codebeispiele in diesem Abschnitt, um mehr über die Verwendung der Windows Store-Übermittlungs-API zu erfahren."
 title: "C#-Codebeispiele für die Windows Store-Übermittlungs-API"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Codebeispiele für Windows 10, UWP, Windows Store-Übermittlungs-API"
 translationtype: Human Translation
-ms.sourcegitcommit: ccc7cfea885cc9c8803cfc70d2e043192a7fee84
-ms.openlocfilehash: d2fc29f8f2fc6cc78c1cb04c68844215a3e3eafe
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c71555eb854e5dcf6cbccf89e9b0b8ffe35ab0e4
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -53,9 +60,9 @@ Die Beispiel-App verwendet die ```ClientConfiguration```-Hilfsklasse zum Überge
 Das folgende Beispiel implementiert eine Klasse, die mehrere Methoden in der Windows Store-Übermittlungs-API verwendet, um eine App-Übermittlung zu aktualisieren. Die ```RunAppSubmissionUpdateSample```-Methode in der Klasse erstellt eine neue Übermittlung als Klon der letzten veröffentlichten Übermittlung, aktualisiert sie und sendet die geklonte Übermittlung an Windows Dev Center. Genauer gesagt führt die ```RunAppSubmissionUpdateSample```-Methode diese Aufgaben aus:
 
 1. Zunächst [ruft die Methode Daten für die angegebene App ab](get-an-app.md).
-2. Als Nächstes [löscht sie eine ausstehende Übermittlung für die App](delete-an-app-submission.md), wenn vorhanden.
-3. Anschließend [erstellt sie eine neue Übermittlung für die App](create-an-app-submission.md) (die neue Übermittlung ist eine Kopie der letzten veröffentlichten Übermittlung).
-4. Es werden einige Details für die neue Übermittlung geändert und ein neues Paket für die Übermittlung in Azure Blob Storage hochgeladen.
+2. Als Nächstes [löscht sie die ausstehende Übermittlung für die App](delete-an-app-submission.md), wenn vorhanden.
+3. Anschließend [wird eine neue Übermittlung für die App erstellt](create-an-app-submission.md). (Die neue Übermittlung ist eine Kopie der letzten veröffentlichten Übermittlung.)
+4. Es werden einige Details für die neue Übermittlung geändert und ein neues Paket für die Übermittlung zu Azure Blob Storage hochgeladen.
 5. Als Nächstes wird die neue Übermittlung [aktualisiert](update-an-app-submission.md) und anschließend an Windows Dev Center [gesendet](commit-an-app-submission.md).
 6. Schließlich [wird der Status der neuen Übermittlung regelmäßig geprüft](get-status-for-an-app-submission.md), bis die Übermittlung erfolgreich gesendet wurde.
 
@@ -82,7 +89,7 @@ Das folgende Beispiel implementiert eine Klasse, die mehrere Methoden in der Win
 Das folgende Beispiel implementiert eine Klasse, die mehrere Methoden in der Windows Store-Übermittlungs-API verwendet, um eine vorhandene Add-On-Übermittlung zu aktualisieren. Die ```RunInAppProductSubmissionUpdateSample```-Methode in der Klasse erstellt eine neue Übermittlung als Klon der letzten veröffentlichten Übermittlung, aktualisiert sie und sendet die geklonte Übermittlung an Windows Dev Center. Genauer gesagt führt die ```RunInAppProductSubmissionUpdateSample```-Methode diese Aufgaben aus:
 
 1. Zunächst [ruft die Methode Daten für das angegebene Add-On ab](get-an-add-on.md).
-2. Als Nächstes [wird eine ausstehende Übermittlung für das Add-On gelöscht](delete-an-add-on-submission.md), wenn vorhanden.
+2. Als Nächstes [wird die ausstehende Übermittlung für das Add-On gelöscht](delete-an-add-on-submission.md), wenn vorhanden.
 3. Anschließend [wird eine neue Übermittlung für das Add-On erstellt](create-an-add-on-submission.md). (Die neue Übermittlung ist eine Kopie der letzten veröffentlichten Übermittlung.)
 5. Als Nächstes wird die neue Übermittlung [aktualisiert](update-an-add-on-submission.md) und anschließend an Windows Dev Center [gesendet](commit-an-add-on-submission.md).
 6. Schließlich [wird der Status der neuen Übermittlung regelmäßig überprüft](get-status-for-an-add-on-submission.md), bis die Übermittlung erfolgreich gesendet wurde.
@@ -96,10 +103,10 @@ Das folgende Beispiel implementiert eine Klasse, die mehrere Methoden in der Win
 Das folgende Beispiel implementiert eine Klasse, die mehrere Methoden in der Windows Store-Übermittlungs-API verwendet, um eine Flight-Paketübermittlung zu aktualisieren. Die ```RunFlightSubmissionUpdateSample```-Methode in der Klasse erstellt eine neue Übermittlung als Klon der letzten veröffentlichten Übermittlung, aktualisiert sie und sendet die geklonte Übermittlung an Windows Dev Center. Genauer gesagt führt die ```RunFlightSubmissionUpdateSample```-Methode diese Aufgaben aus:
 
 1. Zunächst [ruft die Methode Daten für das angegebene Flight-Paket ab](get-a-flight.md).
-2. Als Nächstes [wird eine ausstehende Übermittlung für das Flight-Paket gelöscht](delete-a-flight-submission.md), wenn vorhanden.
+2. Als Nächstes [wird die ausstehende Übermittlung für das Flight-Paket gelöscht](delete-a-flight-submission.md), wenn vorhanden.
 3. Anschließend [wird eine neue Übermittlung für das Flight-Paket erstellt](create-a-flight-submission.md). (Die neue Übermittlung ist eine Kopie der letzten veröffentlichten Übermittlung.)
-4. Es wird ein neues Paket für die Übermittlung in Azure Blob Storage hochgeladen.
-5. Als Nächstes wird die neue Übermittlung [aktualisiert](update-a-flight-submission.md) und anschließend an Windows Dev Center [gesendet](commit-a-flight-submission.md).
+4. Es wird ein neues Paket für die Übermittlung auf Azure Blob Storage hochgeladen.
+5. Als Nächstes wird die neue Übermittlung [aktualisiert](update-a-flight-submission.md) und anschließend für Windows Dev Center [committet](commit-a-flight-submission.md).
 6. Schließlich [wird der Status der neuen Übermittlung regelmäßig überprüft](get-status-for-a-flight-submission.md), bis die Übermittlung erfolgreich gesendet wurde.
 
 > [!div class="tabbedCodeSnippets"]
@@ -120,9 +127,4 @@ Die ```IngestionClient```-Klasse stellt Hilfsmethoden bereit, die von anderen Me
 ## <a name="related-topics"></a>Verwandte Themen
 
 * [Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten](create-and-manage-submissions-using-windows-store-services.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

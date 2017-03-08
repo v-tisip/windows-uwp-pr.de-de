@@ -3,14 +3,20 @@ author: mcleanbyron
 ms.assetid: fcebd659-438b-4d03-bc73-6b662ed6f1f3
 description: "Hier wird die Entwicklung und Veröffentlichung einer App mit Anzeigen vollständig erläutert."
 title: "Workflows für das Erstellen von Apps mit Anzeigen"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, UWP, Anzeigen, Werbung, AdControl, InterstitialAd"
 translationtype: Human Translation
-ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
-ms.openlocfilehash: 0f832674f0e635f609f09fa15acead109b1d67ff
-
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f01b69502d41a7128ac5f59589f6d014d92f52a3
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Workflows für das Erstellen von Apps mit Anzeigen
+# <a name="workflows-for-creating-apps-with-ads"></a>Workflows für das Erstellen von Apps mit Anzeigen
 
 
 
@@ -31,13 +37,13 @@ Im Folgenden werden die wesentlichen Schritte zum Entwickeln und Veröffentliche
 
 Weitere Informationen zu den einzelnen Schritten finden Sie in den entsprechenden Abschnitten unten.
 
-## Einrichten des Windows Dev Center-Kontos
+## <a name="set-up-your-windows-dev-center-account"></a>Einrichten des Windows Dev Center-Kontos
 
-Sie benötigen ein Windows Dev Center-Konto, um Ihre App zu veröffentlichen und Anzeigen zu empfangen. Dies gilt unabhängig davon, ob Sie die Anzeigenvermittlung verwenden. Die Verwaltung von Apps im Zusammenhang mit Werbung erfolgt ebenfalls im Windows Dev Center. Wenn Sie Werbung in Ihren Apps mithilfe von Microsoft pubCenter verwaltet haben, wurde diese Funktionalität durch Features im Windows Dev Center ersetzt.
+Sie benötigen ein Windows Dev Center-Konto, um Ihre App zu veröffentlichen und Anzeigen zu empfangen. Die Verwaltung von Apps im Zusammenhang mit Werbung erfolgt ebenfalls im Windows Dev Center. Wenn Sie Werbung in Ihren Apps mithilfe von Microsoft pubCenter verwaltet haben, wurde diese Funktionalität durch Features im Windows Dev Center ersetzt.
 
-Informationen zum Einrichten des Kontos bei Windows Dev Center finden Sie auf der [Startseite](https://dev.windows.com/windows-apps). Weitere Informationen finden Sie auf den [Hilfeseiten](https://dev.windows.com/develop) zu Windows Dev Center.
+Informationen zum Einrichten des Kontos bei Windows Dev Center finden Sie auf [dieser Seite](http://go.microsoft.com/fwlink/p/?LinkId=615100).
 
-## Entwickeln der App unter Verwendung von Werten des Testmodus
+## <a name="develop-your-app-using-test-mode-values"></a>Entwickeln der App unter Verwendung von Werten des Testmodus
 
 Verwenden Sie die Anweisungen in den folgenden exemplarischen Vorgehensweisen, um [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) oder [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) hinzuzufügen und Anzeigen in Ihrer App darzustellen:
 
@@ -50,11 +56,11 @@ Wenn Sie **AdControl** oder **InterstitialAd** zum Anzeigen von Werbung in Ihrer
 
 Vollständige Beispielprojekte, die veranschaulichen, wie Sie JavaScript-/HTML- und XAML-Apps unter Verwendung von C# und C++ Werbebanner und Video-Interstitialanzeigen hinzufügen, finden Sie in den [Anzeigenbeispielen auf GitHub](http://aka.ms/githubads).
 
-## Konfigurieren der App für den Empfang von Liveanzeigen
+## <a name="configure-your-app-to-receive-live-ads"></a>Konfigurieren der App für den Empfang von Liveanzeigen
 
 Nachdem Sie Ihre App getestet haben und bereit sind, sie an das Windows Dev Center zu übermitteln, müssen Sie Ihren App-Code so ändern, dass er die Anwendungs-ID und die Anzeigeneinheits-ID aus dem [Windows Dev Center-Dashboard](https://msdn.microsoft.com/library/windows/apps/mt170658.aspx) verwendet. Wenn Sie Testwerte in Ihrer Live App verwenden, empfängt die App keine Liveanzeigen. Weitere Informationen finden Sie unter [Einrichten von Anzeigeneinheiten in Ihrer App](set-up-ad-units-in-your-app.md).
 
-## Übermitteln der App
+## <a name="submit-your-app"></a>Übermitteln der App
 
 Nachdem die Entwicklung abgeschlossen ist, können Sie die App mithilfe des Windows Dev Center-Dashboards im Windows Store veröffentlichen. Neben den Anforderungen, die alle Apps im Windows Store erfüllen müssen, gelten für Apps mit Anzeigen zusätzliche Anforderungen. Weitere Informationen finden Sie unter [Übermitteln einer App mit Werbung an den Windows Store](submit-an-app-with-ads-to-the-windows-store.md).
 
@@ -63,9 +69,4 @@ Nachdem die App veröffentlicht wurde und im Windows Store verfügbar ist, könn
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

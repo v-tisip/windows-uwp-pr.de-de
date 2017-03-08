@@ -3,14 +3,21 @@ author: mcleblanc
 ms.assetid: 569E8C27-FA01-41D8-80B9-1E3E637D5B99
 title: Optimieren Ihres XAML-Markups
 description: "Die Analyse von XAML-Markup zum Erstellen von Objekten im Arbeitsspeicher kann für eine komplexe Benutzeroberfläche viel Zeit in Anspruch nehmen. Hier finden Sie einige Punkte, die Sie zur Optimierung der XAML-Markupanalyse, Ladezeit und Effizienz des Arbeitsspeichers für Ihre App vornehmen können."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 655603e7fa8687480b5376806bc199afecd425fd
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 24a5696a6e835a40b9b4e800677596514b56d53b
+ms.lasthandoff: 02/07/2017
 
 ---
-# Optimieren Ihres XAML-Markups
+# <a name="optimize-your-xaml-markup"></a>Optimieren Ihres XAML-Markups
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Die Analyse von XAML-Markup zum Erstellen von Objekten im Arbeitsspeicher kann für eine komplexe Benutzeroberfläche viel Zeit in Anspruch nehmen. Hier finden Sie einige Punkte, die Sie zur Optimierung der XAML-Markupanalyse, Ladezeit und Effizienz des Arbeitsspeichers für Ihre App vornehmen können.
 
@@ -84,7 +91,7 @@ Wenn Sie eine Ressource in der gesamten App auf vielen Seiten verwenden, ist es 
 
 Die Möglichkeit, das obige Gegenbeispiel effizienter zu gestalten, besteht darin, `SecondPageTextBrush` in „SecondPage.xaml“ und `ThirdPageTextBrush` in „ThirdPage.xaml“ zu verschieben. `InitialPageTextBrush`  kann in „App.xaml“ verbleiben, da Anwendungsressourcen in jedem Fall beim Start der App analysiert werden müssen.
 
-## Minimieren der Elementanzahl
+## <a name="minimize-element-count"></a>Minimieren der Elementanzahl
 
 Obwohl die XAML-Plattform eine große Anzahl von Elementen anzeigen kann, können Sie das Layout und die Darstellung Ihrer App beschleunigen, indem Sie die geringste Anzahl von Elementen verwenden, um das gewünschte Erscheinungsbild zu erreichen.
 
@@ -106,7 +113,7 @@ Obwohl die XAML-Plattform eine große Anzahl von Elementen anzeigen kann, könne
 
 -   Wenn Sie das gleiche vektorbasierte Element häufig genug wiederverwenden, ist es effizienter, stattdessen ein [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752)-Element zu verwenden. Vektorbasierte Elemente können aufwendiger sein, da die CPU jedes einzelne Element separat erstellen muss. Die Bilddatei muss hingegen nur einmal decodiert werden.
 
-## Zusammenfassen mehrerer gleichartiger Pinsel in einer Ressource
+## <a name="consolidate-multiple-brushes-that-look-the-same-into-one-resource"></a>Zusammenfassen mehrerer gleichartiger Pinsel in einer Ressource
 
 Die XAML-Plattform speichert allgemein verwendete Objekte zwischen, um eine möglichst häufige Wiederverwendung zu ermöglichen. XAML kann jedoch nicht ohne Weiteres feststellen, ob es sich bei einem Pinsel, der in zwei unterschiedlichen Markupkomponenten deklariert ist, um denselben Pinsel handelt. Dieses Beispiel verwendet [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) zur Veranschaulichung, aber die Wahrscheinlichkeit und Bedeutung von [**GradientBrush**](https://msdn.microsoft.com/library/windows/apps/BR210068) ist höher.
 
@@ -146,7 +153,7 @@ Prüfen Sie auch auf Pinsel, die vordefinierte Farben verwenden: `"Orange"` und 
 </Page>
 ```
 
-## Minimieren der Überzeichnung
+## <a name="minimize-overdrawing"></a>Minimieren der Überzeichnung
 
 Eine Überzeichnung tritt dort auf, wo mehrere Objekte dieselben Bildschirmpixel beanspruchen. Beachten Sie, dass Sie manchmal einen Kompromiss zwischen dieser Richtlinie und dem Wunsch zur Minimierung der Elementanzahl eingehen müssen.
 
@@ -240,7 +247,7 @@ Wenn für das [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR24270
 
 Verwenden Sie [**DebugSettings.IsOverdrawHeatMapEnabled**](https://msdn.microsoft.com/library/windows/apps/Hh701823) als visuelle Diagnose. Möglicherweise erkennen Sie, dass Objekte dargestellt werden, von denen Sie sich nicht bewusst waren, dass sie in der Szene auftreten.
 
-## Zwischenspeichern statischer Inhalte
+## <a name="cache-static-content"></a>Zwischenspeichern statischer Inhalte
 
 Eine andere Quelle für die Überzeichnung ist eine Form, die aus vielen überlappenden Elementen besteht. Wenn Sie [**CacheMode**](https://msdn.microsoft.com/library/windows/apps/BR228084) für die [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911)-Klasse mit der Verbundform auf **BitmapCache** festlegen, rendert die Plattform das Element für eine Bitmap einmalig und verwendet dann diese Bitmap für jeden Frame (anstelle der Überzeichnung).
 
@@ -272,7 +279,7 @@ Das obige Bild ist das Ergebnis, aber hier folgt eine Karte der überzeichneten 
 
 Beachten Sie die Verwendung von [**CacheMode**](https://msdn.microsoft.com/library/windows/apps/BR228084). Verwenden Sie dieses Verfahren nicht, wenn eine der Teilformen animiert ist, da der Bitmapcache wahrscheinlich bei jedem Frame neu generiert werden muss, was dem Zweck widerspricht.
 
-## Ressourcenwörterbücher
+## <a name="resourcedictionaries"></a>Ressourcenwörterbücher
 
 Ressourcenwörterbücher dienen im Allgemeinen zum Speichern von Ressourcen auf einer Art globalen Ebene. Ressourcen, auf die von Ihrer App an mehreren Orten verwiesen werden soll. Beispielsweise Stile, Pinsel, Vorlagen usw. Ressourcenwörterbücher wurden grundsätzlich dahingehend optimiert, dass nur angeforderte Ressourcen instanziiert werden. Es gibt jedoch einige wenige Gelegenheiten, bei denen Vorsicht geboten ist.
 
@@ -280,17 +287,12 @@ Ressourcenwörterbücher dienen im Allgemeinen zum Speichern von Ressourcen auf 
 
 **ResourceDictionaries in einem UserControl**-Element. Innerhalb eines Benutzersteuerelements definierte Ressourcenwörterbücher führen zu Leistungseinbußen. Die Plattform erstellt für jede Instanz von UserControl eine Kopie von ResourceDictionary. Bei einem häufig verwendeten Benutzersteuerelement empfiehlt es sich daher, ResourceDictionary aus UserControl zu entfernen und auf der Seitenebene zu platzieren.
 
-## Verwendung von XBF2
+## <a name="use-xbf2"></a>Verwendung von XBF2
 
-Bei XBF2 handelt es sich um eine binäre Darstellung des XAML-Markups, die sämtliche Nachteile der Textanalyse zur Laufzeit vermeidet. Darüber hinaus optimiert sie den Binärcode für das Laden und die Strukturerstellung und ermöglicht die Verwendung von Fast-Path für XAML-Typen, um die Effizienz bei der Heap- und Objekterstellung (VSM, ResourceDictionary, Stile usw.) zu verbessern. Dank vollständiger Abbildung im Speicher entsteht beim Laden und Lesen einer XAML-Seite keinerlei Heap-Bedarf. Des Weiteren verringert sich der Datenträgerbedarf gespeicherter XAML-Seiten in einem APPX-Element. XBF2 zeichnet sich durch eine kompaktere Darstellung aus und kann den Datenträgerbedarf im Vergleich zu XAML/XBF1-Dateien um bis zu 50Prozent reduzieren. So wurde bei der integrierten Foto-App etwa eine Reduzierung um rund 60Prozent erreicht – von ehemals rund 1MB (XBF1-Ressourcen) auf ca. 400KB (XBF2-Ressourcen). Darüber hinaus wurden für Apps auch Verbesserungen bei CPU (15 bis 20Prozent) und Win32-Heap (10 bis 15Prozent) verzeichnet.
+Bei XBF2 handelt es sich um eine binäre Darstellung des XAML-Markups, die sämtliche Nachteile der Textanalyse zur Laufzeit vermeidet. Darüber hinaus optimiert sie den Binärcode für das Laden und die Strukturerstellung und ermöglicht die Verwendung von Fast-Path für XAML-Typen, um die Effizienz bei der Heap- und Objekterstellung (VSM, ResourceDictionary, Stile usw.) zu verbessern. Dank vollständiger Abbildung im Speicher entsteht beim Laden und Lesen einer XAML-Seite keinerlei Heap-Bedarf. Des Weiteren verringert sich der Datenträgerbedarf gespeicherter XAML-Seiten in einem APPX-Element. XBF2 zeichnet sich durch eine kompaktere Darstellung aus und kann den Datenträgerbedarf im Vergleich zu XAML/XBF1-Dateien um bis zu 50 Prozent reduzieren. So wurde bei der integrierten Foto-App etwa eine Reduzierung um rund 60 Prozent erreicht – von ehemals rund 1 MB (XBF1-Ressourcen) auf ca. 400 KB (XBF2-Ressourcen). Darüber hinaus wurden für Apps auch Verbesserungen bei CPU (15 bis 20 Prozent) und Win32-Heap (10 bis 15 Prozent) verzeichnet.
 
-Integrierte XAML-Steuerelemente und vom Framework bereitgestellte Wörterbücher sind bereits vollständig XBF2-fähig. Achten Sie bei Ihrer eigenen App darauf, dass Ihre Projektdatei mindestens „TargetPlatformVersion8.2“ deklariert.
+Integrierte XAML-Steuerelemente und vom Framework bereitgestellte Wörterbücher sind bereits vollständig XBF2-fähig. Achten Sie bei Ihrer eigenen App darauf, dass Ihre Projektdatei mindestens „TargetPlatformVersion 8.2“ deklariert.
 
-Wenn Sie wissen möchten, ob Sie über XBF2 verfügen, öffnen Sie Ihre App in einem Binär-Editor. Falls das 12. und 13.Byte „00 02“ ist, haben Sie XBF2.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
+Wenn Sie wissen möchten, ob Sie über XBF2 verfügen, öffnen Sie Ihre App in einem Binär-Editor. Falls das 12. und 13. Byte „00 02“ ist, haben Sie XBF2.
 
 

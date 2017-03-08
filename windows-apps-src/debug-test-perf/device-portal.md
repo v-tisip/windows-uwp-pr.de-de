@@ -3,14 +3,21 @@ author: mcleblanc
 ms.assetid: 60fc48dd-91a9-4dd6-a116-9292a7c1f3be
 title: "Übersicht über das Windows Device Portal"
 description: "Hier erfahren Sie, wie Sie mit dem Windows Device Portal Ihr Gerät per Remotezugriff über ein Netzwerk oder eine USB-Verbindung konfigurieren und verwalten."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 8dee2c7bf5ec44f913e34f1150223c1172ba6c02
-ms.openlocfilehash: 6c697782683bca6671c01aa0941a78bc66fb052a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 8dfbdad7604e3aa7fad60ed777d16b4acd56b5ab
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="windows-device-portal-overview"></a>Übersicht über das Windows Device Portal
 
-Mit dem Windows Device Portal können Sie Ihr Gerät per Remotezugriff über ein Netzwerk oder eine USB-Verbindung konfigurieren und verwalten. Es bietet zudem erweiterte Diagnosetools, mit denen Sie Probleme beim Windows-Gerät behandeln und dessen Leistung in Echtzeit anzeigen können.
+Mit dem Windows Device Portal können Sie Ihr Gerät remote über ein Netzwerk oder eine USB-Verbindung konfigurieren und verwalten. Es bietet zudem erweiterte Diagnosetools, mit denen Sie Probleme beim Windows-Gerät behandeln und dessen Leistung in Echtzeit anzeigen können.
 
 Das Geräteportal ist ein Webserver auf Ihrem Gerät, mit dem Sie über einen Webbrowser auf dem PC eine Verbindung herstellen können. Wenn Ihr Gerät über einen Webbrowser verfügt, können Sie auch mit dem Browser auf dem Gerät eine lokale Verbindung herstellen.
 
@@ -73,21 +80,21 @@ Bietet Installations-/Deinstallations- und Verwaltungsfunktionen für AppX-Paket
 
 **So installieren Sie eine App**
 
-1.  Wenn Sie [ein App-Paket erstellt haben](https://msdn.microsoft.com/library/windows/apps/xaml/hh454036(v=vs.140).aspx), können Sie es per Remotezugriff auf Ihrem Gerät installieren. Nachdem Sie es in Visual Studio erstellt haben, wird ein Ausgabeordner generiert.
+1.    Wenn Sie [ein App-Paket erstellt haben](https://msdn.microsoft.com/library/windows/apps/xaml/hh454036(v=vs.140).aspx), können Sie es per Remotezugriff auf Ihrem Gerät installieren. Nachdem Sie es in Visual Studio erstellt haben, wird ein Ausgabeordner generiert.
 
     ![App-Installation](images/device-portal/iot-installapp0.png)
-2.  Klicken Sie auf „Durchsuchen“, und suchen Sie das App-Paket („.appx“).
-3.  Klicken Sie auf „Durchsuchen“, und suchen Sie die Zertifikatdatei („.cer“). (Nicht auf allen Geräten erforderlich.)
-4.  Fügen Sie Abhängigkeiten hinzu. Wenn mehrere vorhanden sind, fügen Sie jede einzeln hinzu.     
-5.  Klicken Sie unter **Bereitstellen** auf **Los**. 
-6.  Wenn Sie eine weitere App installieren möchten, klicken Sie auf die Schaltfläche **Zurücksetzen**, um die Felder löschen.
+2.    Klicken Sie auf „Durchsuchen“, und suchen Sie das App-Paket („.appx“).
+3.    Klicken Sie auf „Durchsuchen“, und suchen Sie die Zertifikatdatei („.cer“). (Nicht auf allen Geräten erforderlich.)
+4.    Fügen Sie Abhängigkeiten hinzu. Wenn mehrere vorhanden sind, fügen Sie jede einzeln hinzu.     
+5.    Klicken Sie unter **Bereitstellen** auf **Los**. 
+6.    Wenn Sie eine weitere App installieren möchten, klicken Sie auf die Schaltfläche **Zurücksetzen**, um die Felder löschen.
 
 
 **So deinstallieren Sie eine App**
 
-1.  Stellen Sie sicher, dass die App nicht ausgeführt wird. 
-2.  Wenn sie ausgeführt wird, wechseln Sie zu „Running apps“, und schließen Sie sie. Wenn Sie versuchen, eine App zu deinstallieren, die gerade ausgeführt wird, verursacht dies Probleme beim erneuten Installieren der App. 
-3.  Sobald Sie bereit sind, klicken Sie auf **Deinstallieren**.
+1.    Stellen Sie sicher, dass die App nicht ausgeführt wird. 
+2.    Wenn sie ausgeführt wird, wechseln Sie zu „Running apps“, und schließen Sie sie. Wenn Sie versuchen, eine App zu deinstallieren, die gerade ausgeführt wird, verursacht dies Probleme beim erneuten Installieren der App. 
+3.    Sobald Sie bereit sind, klicken Sie auf **Deinstallieren**.
 
 ### <a name="processes"></a>Prozesse
 
@@ -197,9 +204,4 @@ Zum Schutz vor [CSRF-Angriffen](https://wikipedia.org/wiki/Cross-site_request_fo
 #### <a name="cross-site-websocket-hijacking-cswsh-protection"></a>Schutz vor websiteübergreifendem WebSocket-Hijacking (Cross-Site WebSocket Hijacking, CSWSH)
 
 Zum Schutz vor [CSWSH-Angriffen](https://www.christian-schneider.net/CrossSiteWebSocketHijacking.html) müssen alle Clients, die eine WebSocket-Verbindung mit einem Geräteportal herstellen, einen dem Hostheader entsprechenden Origin-Header angeben.  Dadurch wird gegenüber dem Geräteportal belegt, dass die Anforderung entweder von der Benutzeroberfläche des Geräteportals oder von einer gültigen Clientanwendung stammt.  Anforderungen ohne Origin-Header werden abgelehnt. 
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 
