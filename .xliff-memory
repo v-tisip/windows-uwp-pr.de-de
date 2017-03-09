@@ -30588,7 +30588,7 @@
       "ArchivedDateTime": "0001-01-01T00:00:00",
       "SkeletonFile": "ol-xliffcache\\cpubwin\\windows-uwp.de-de\\master\\f77bdb61fdb596720a857960094c959b344db9af.f66b20db312024a185237bf41dd5b0f45aee7668.xml",
       "LocXliff": "ol-handback\\cpubwin\\windows-uwp.de-de\\master\\tiles-and-notifications-periodic-notification-overview.e8bbdadd9a0b3f3db4e274f204d4d877763138ab.de-de.xlf",
-      "LocXliffCommit": "2386795deab063908b859e86feddcc7b91c2f943"
+      "LocXliffCommit": "ed73c7d1cc9b3acfa8578e3ac420e249d8d99127"
     },
     "windows-apps-src\\monetize\\get-all-add-ons.md.5e56d192725dda7ed9cc760d4c069f69b17517d8.HT": {
       "SourceFilename": "windows-apps-src\\monetize\\get-all-add-ons.md",
