@@ -37,7 +37,7 @@ Regelmäßige Benachrichtigungen bieten Ihnen Live-Kachelaktualisierungen mit mi
 
 Regelmäßige Benachrichtigungen erfordern einen von Ihrer App gehosteten Clouddienst. Der Dienst wird regelmäßig von allen Benutzern abgefragt, die die App installiert haben. Bei jedem Abfrageintervall, wie z. B. nach einer Stunde, sendet Windows eine HTTP GET-Anforderung an den URI, lädt die angeforderten Inhalte, die als Reaktion auf die Anforderung zurückgegeben werden, für die Kachel oder das Signal herunter (als XML) und zeigt die Inhalte auf der App-Kachel an.
 
-Beachten Sie, dass regelmäßige Benachrichtigungen nicht mit Popupbenachrichtigungen verwendet werden können. Popups werden am besten per [geplanter](https://msdn.microsoft.com/library/windows/apps/hh465417) oder per [Push](https://msdn.microsoft.com/library/windows/apps/xaml/hh868252)benachrichtigung übermittelt.
+Beachten Sie, dass regelmäßige Benachrichtigungen nicht mit Popupbenachrichtigungen verwendet werden können. Popups werden am besten per [geplanter](https://msdn.microsoft.com/library/windows/apps/hh465417) oder per [Push](https://msdn.microsoft.com/library/windows/apps/xaml/hh868252) benachrichtigung übermittelt.
 
 ## <a name="uri-location-and-xml-content"></a>URI-Speicherort und XML-Inhalt
 
