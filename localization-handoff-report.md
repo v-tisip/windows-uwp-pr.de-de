@@ -6,14 +6,14 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\gaming\e2e.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/6476254170fc1e87eca19d49f4a181c65f58deaf?path=windows-apps-src%2Fgaming%2Fe2e.md&_a=contents) | HandedOffSuccess | [Details](#9398efedb5d4818e247be42132bdb752067b54262584)
+ [windows-apps-src\packaging\self-install-package-updates.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/e3ab5f165073cbb38a6b5ace80c6656046a14678?path=windows-apps-src%2Fpackaging%2Fself-install-package-updates.md&_a=contents) | HandedOffSuccess | [Details](#07b8b769cbcaf86bfa70a562de568cab65c91a774677)
 
 ## Item Details
-##### <a name='9398efedb5d4818e247be42132bdb752067b54262584'></a> Source: [windows-apps-src\gaming\e2e.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/6476254170fc1e87eca19d49f4a181c65f58deaf?path=windows-apps-src%2Fgaming%2Fe2e.md&_a=contents)
+##### <a name='07b8b769cbcaf86bfa70a562de568cab65c91a774677'></a> Source: [windows-apps-src\packaging\self-install-package-updates.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/e3ab5f165073cbb38a6b5ace80c6656046a14678?path=windows-apps-src%2Fpackaging%2Fself-install-package-updates.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [e2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/98552b4768be811713590735047c7c732e3988bd?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fe2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.de-de.xlf&_a=contents)
-* Handoff Datetime: 2017-03-14 19:33:49
+* Handoff File: [self-install-package-updates.660548fc7cf10428b4ce9987eb40ec1d8b237590.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/ddaaac94d7946df315666de93278709dfa7e2086?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fself-install-package-updates.660548fc7cf10428b4ce9987eb40ec1d8b237590.de-de.xlf&_a=contents)
+* Handoff Datetime: 2017-03-14 21:34:14
 * Handoff Reason: Include
 * Handoff Name: 
 * Archive File: 
@@ -21,11 +21,11 @@
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Handback Name: 
-* Current Target File: [windows-apps-src\gaming\e2e.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/f115520bb9810fdf6c8881cf29401fc35169c29a?path=windows-apps-src%2Fgaming%2Fe2e.md&_a=contents)
-* Current Handback File: [e2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2386795deab063908b859e86feddcc7b91c2f943?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fe2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.de-de.xlf&_a=contents)
-* Current Handback Datetime: 2017-03-01 15:55:30
-* Bilingual File: [e2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2386795deab063908b859e86feddcc7b91c2f943?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fe2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.de-de.xlf&_a=contents)
-* Bilingual Datetime: 2017-03-02 16:22:08
+* Current Target File: [windows-apps-src\packaging\self-install-package-updates.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/f115520bb9810fdf6c8881cf29401fc35169c29a?path=windows-apps-src%2Fpackaging%2Fself-install-package-updates.md&_a=contents)
+* Current Handback File: [self-install-package-updates.660548fc7cf10428b4ce9987eb40ec1d8b237590.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2386795deab063908b859e86feddcc7b91c2f943?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fself-install-package-updates.660548fc7cf10428b4ce9987eb40ec1d8b237590.de-de.xlf&_a=contents)
+* Current Handback Datetime: 2017-03-01 15:55:29
+* Bilingual File: [self-install-package-updates.660548fc7cf10428b4ce9987eb40ec1d8b237590.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2386795deab063908b859e86feddcc7b91c2f943?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fself-install-package-updates.660548fc7cf10428b4ce9987eb40ec1d8b237590.de-de.xlf&_a=contents)
+* Bilingual Datetime: 2017-03-01 16:20:55
 * [Back to Top](#report-top)
 
 
