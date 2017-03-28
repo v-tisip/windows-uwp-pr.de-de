@@ -6,14 +6,14 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\TOC.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/772b4dde3af410d6400acd8daa8eac205bcd9af0?path=windows-apps-src%2FTOC.md&_a=contents) | HandedOffSuccess | [Details](#2e7c59b7b19a3d916e9f6eb5df4521b7cd31f1027857)
+ [windows-apps-src\publish\opening-a-developer-account.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/979f60b7383d719d80b691482e7a1bbb814355ea?path=windows-apps-src%2Fpublish%2Fopening-a-developer-account.md&_a=contents) | HandedOffSuccess | [Details](#159f4e58db22083b14b0c90d44f61b85e59789e44904)
 
 ## Item Details
-##### <a name='2e7c59b7b19a3d916e9f6eb5df4521b7cd31f1027857'></a> Source: [windows-apps-src\TOC.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/772b4dde3af410d6400acd8daa8eac205bcd9af0?path=windows-apps-src%2FTOC.md&_a=contents)
+##### <a name='159f4e58db22083b14b0c90d44f61b85e59789e44904'></a> Source: [windows-apps-src\publish\opening-a-developer-account.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/979f60b7383d719d80b691482e7a1bbb814355ea?path=windows-apps-src%2Fpublish%2Fopening-a-developer-account.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/68d6c203142124168c9d6895ed3329a3965c98b3?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2FTOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf&_a=contents)
-* Handoff Datetime: 2017-03-28 01:11:40
+* Handoff File: [opening-a-developer-account.e6ad57f5ecc4903fa66445564d8d99a243bd1db7.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/2b5c317c8c346021798690698ba69b207a7a5d75?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fopening-a-developer-account.e6ad57f5ecc4903fa66445564d8d99a243bd1db7.de-de.xlf&_a=contents)
+* Handoff Datetime: 2017-03-28 15:51:39
 * Handoff Reason: Include
 * Handoff Name: 
 * Archive File: 
@@ -21,10 +21,10 @@
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Handback Name: 
-* Current Target File: [windows-apps-src\TOC.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/f115520bb9810fdf6c8881cf29401fc35169c29a?path=windows-apps-src%2FTOC.md&_a=contents)
-* Current Handback File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2386795deab063908b859e86feddcc7b91c2f943?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2FTOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf&_a=contents)
+* Current Target File: [windows-apps-src\publish\opening-a-developer-account.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/f115520bb9810fdf6c8881cf29401fc35169c29a?path=windows-apps-src%2Fpublish%2Fopening-a-developer-account.md&_a=contents)
+* Current Handback File: [opening-a-developer-account.e6ad57f5ecc4903fa66445564d8d99a243bd1db7.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2386795deab063908b859e86feddcc7b91c2f943?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fopening-a-developer-account.e6ad57f5ecc4903fa66445564d8d99a243bd1db7.de-de.xlf&_a=contents)
 * Current Handback Datetime: 2017-03-01 15:55:30
-* Bilingual File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2386795deab063908b859e86feddcc7b91c2f943?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2FTOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf&_a=contents)
+* Bilingual File: [opening-a-developer-account.e6ad57f5ecc4903fa66445564d8d99a243bd1db7.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2386795deab063908b859e86feddcc7b91c2f943?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fopening-a-developer-account.e6ad57f5ecc4903fa66445564d8d99a243bd1db7.de-de.xlf&_a=contents)
 * Bilingual Datetime: 2017-03-01 16:20:55
 * [Back to Top](#report-top)
 
