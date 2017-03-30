@@ -1,20 +1,19 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\gaming\game-development-videos.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/0f65f40d5a5f5faa3ccbaa0c8edfd763ba4f6645?path=windows-apps-src%2Fgaming%2Fgame-development-videos.md&_a=contents) | HandedOffSuccess | [Details](#c71b0f31cb505b4324dd02f84af0df168b49461d2587)
- [windows-apps-src\layout\design-and-ui-intro.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/0f65f40d5a5f5faa3ccbaa0c8edfd763ba4f6645?path=windows-apps-src%2Flayout%2Fdesign-and-ui-intro.md&_a=contents) | HandedOffSuccess | [Details](#5147d584854c78e32b4c4d4d6f6860124ea9a4213937)
+ [windows-apps-src\publish\tax-details-for-paid-apps.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/9f511be99860a3b3e08860d697469760890ff4e7?path=windows-apps-src%2Fpublish%2Ftax-details-for-paid-apps.md&_a=contents) | HandedOffSuccess | [Details](#8cc3297fc225fa38483cd379826bb5d28ae8f36e4932)
 
 ## Item Details
-##### <a name='c71b0f31cb505b4324dd02f84af0df168b49461d2587'></a> Source: [windows-apps-src\gaming\game-development-videos.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/0f65f40d5a5f5faa3ccbaa0c8edfd763ba4f6645?path=windows-apps-src%2Fgaming%2Fgame-development-videos.md&_a=contents)
+##### <a name='8cc3297fc225fa38483cd379826bb5d28ae8f36e4932'></a> Source: [windows-apps-src\publish\tax-details-for-paid-apps.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/9f511be99860a3b3e08860d697469760890ff4e7?path=windows-apps-src%2Fpublish%2Ftax-details-for-paid-apps.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [game-development-videos.b2a4875a77aedb4b3a07d660d8d0af8b364d5eb3.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/fefbb031ab2983dd567debeeebcfafa14aba2a83?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fgame-development-videos.b2a4875a77aedb4b3a07d660d8d0af8b364d5eb3.de-de.xlf&_a=contents)
-* Handoff Datetime: 2017-03-30 21:19:29
+* Handoff File: [tax-details-for-paid-apps.dabd93b4ae33f057b5755bdbfd54af1f2c7ebbad.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/5bc4208470acd62804d4ff63c49ea92c65623895?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Ftax-details-for-paid-apps.dabd93b4ae33f057b5755bdbfd54af1f2c7ebbad.de-de.xlf&_a=contents)
+* Handoff Datetime: 2017-03-30 23:21:52
 * Handoff Reason: Include
 * Handoff Name: 
 * Archive File: 
@@ -22,24 +21,10 @@
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Handback Name: 
-* [Back to Top](#report-top)
-
-##### <a name='5147d584854c78e32b4c4d4d6f6860124ea9a4213937'></a> Source: [windows-apps-src\layout\design-and-ui-intro.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/0f65f40d5a5f5faa3ccbaa0c8edfd763ba4f6645?path=windows-apps-src%2Flayout%2Fdesign-and-ui-intro.md&_a=contents)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [design-and-ui-intro.69590183aeb47276461357ed3cb5d56a7dd874a1.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/fefbb031ab2983dd567debeeebcfafa14aba2a83?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fdesign-and-ui-intro.69590183aeb47276461357ed3cb5d56a7dd874a1.de-de.xlf&_a=contents)
-* Handoff Datetime: 2017-03-30 21:19:29
-* Handoff Reason: Include
-* Handoff Name: 
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Handback Name: 
-* Current Target File: [windows-apps-src\layout\design-and-ui-intro.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/f115520bb9810fdf6c8881cf29401fc35169c29a?path=windows-apps-src%2Flayout%2Fdesign-and-ui-intro.md&_a=contents)
-* Current Handback File: [design-and-ui-intro.69590183aeb47276461357ed3cb5d56a7dd874a1.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2386795deab063908b859e86feddcc7b91c2f943?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fdesign-and-ui-intro.69590183aeb47276461357ed3cb5d56a7dd874a1.de-de.xlf&_a=contents)
-* Current Handback Datetime: 2017-03-01 15:55:30
-* Bilingual File: [design-and-ui-intro.69590183aeb47276461357ed3cb5d56a7dd874a1.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2386795deab063908b859e86feddcc7b91c2f943?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fdesign-and-ui-intro.69590183aeb47276461357ed3cb5d56a7dd874a1.de-de.xlf&_a=contents)
+* Current Target File: [windows-apps-src\publish\tax-details-for-paid-apps.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/f115520bb9810fdf6c8881cf29401fc35169c29a?path=windows-apps-src%2Fpublish%2Ftax-details-for-paid-apps.md&_a=contents)
+* Current Handback File: [tax-details-for-paid-apps.dabd93b4ae33f057b5755bdbfd54af1f2c7ebbad.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2386795deab063908b859e86feddcc7b91c2f943?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Ftax-details-for-paid-apps.dabd93b4ae33f057b5755bdbfd54af1f2c7ebbad.de-de.xlf&_a=contents)
+* Current Handback Datetime: 2017-03-01 15:55:29
+* Bilingual File: [tax-details-for-paid-apps.dabd93b4ae33f057b5755bdbfd54af1f2c7ebbad.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2386795deab063908b859e86feddcc7b91c2f943?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Ftax-details-for-paid-apps.dabd93b4ae33f057b5755bdbfd54af1f2c7ebbad.de-de.xlf&_a=contents)
 * Bilingual Datetime: 2017-03-01 16:20:55
 * [Back to Top](#report-top)
 
