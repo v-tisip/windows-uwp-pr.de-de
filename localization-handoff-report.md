@@ -6,14 +6,14 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\TOC.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/af93045e1f8e5a358b50e4498667a3b5559b10b0?path=windows-apps-src%2FTOC.md&_a=contents) | HandedOffSuccess | [Details](#bdd2cb5ee9ea8acc48333d27ed6baa81c7e7929a7904)
+ [windows-apps-src\controls-and-patterns\tree-view.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ceb3b76cddffac54cf6da5a1795ac97c25bc8383?path=windows-apps-src%2Fcontrols-and-patterns%2Ftree-view.md&_a=contents) | HandedOffSuccess | [Details](#88e3e79b7ebdf06c200f3525095d7685f7e3e6dc2309)
 
 ## Item Details
-##### <a name='bdd2cb5ee9ea8acc48333d27ed6baa81c7e7929a7904'></a> Source: [windows-apps-src\TOC.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/af93045e1f8e5a358b50e4498667a3b5559b10b0?path=windows-apps-src%2FTOC.md&_a=contents)
+##### <a name='88e3e79b7ebdf06c200f3525095d7685f7e3e6dc2309'></a> Source: [windows-apps-src\controls-and-patterns\tree-view.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ceb3b76cddffac54cf6da5a1795ac97c25bc8383?path=windows-apps-src%2Fcontrols-and-patterns%2Ftree-view.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/9374ff1ca040fa42ad90a99071c1b3e1a7a1cd8e?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2FTOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf&_a=contents)
-* Handoff Datetime: 2017-03-29 23:49:10
+* Handoff File: [tree-view.2ba8ce71cac45e71daf41038138a2e1d56f8c71c.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/7efc96ab6ec23fdcb0a1b443803696467a9be383?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Ftree-view.2ba8ce71cac45e71daf41038138a2e1d56f8c71c.de-de.xlf&_a=contents)
+* Handoff Datetime: 2017-03-30 17:24:57
 * Handoff Reason: Include
 * Handoff Name: 
 * Archive File: 
@@ -21,11 +21,11 @@
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Handback Name: 
-* Current Target File: [windows-apps-src\TOC.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/f115520bb9810fdf6c8881cf29401fc35169c29a?path=windows-apps-src%2FTOC.md&_a=contents)
-* Current Handback File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2386795deab063908b859e86feddcc7b91c2f943?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2FTOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf&_a=contents)
-* Current Handback Datetime: 2017-03-01 15:55:30
-* Bilingual File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2386795deab063908b859e86feddcc7b91c2f943?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2FTOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf&_a=contents)
-* Bilingual Datetime: 2017-03-01 16:20:55
+* Current Target File: [windows-apps-src\controls-and-patterns\tree-view.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/bd18ae6d5d38832091e0ddecaff4b7000623d830?path=windows-apps-src%2Fcontrols-and-patterns%2Ftree-view.md&_a=contents)
+* Current Handback File: [tree-view.2ba8ce71cac45e71daf41038138a2e1d56f8c71c.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/628ba96e56c142c61ba716ca85d7a08ad45914fb?path=ol-handback%2FMicrosoft%2Fwindows-apps.de-de%2Fmaster%2Ftree-view.2ba8ce71cac45e71daf41038138a2e1d56f8c71c.de-de.xlf&_a=contents)
+* Current Handback Datetime: 2016-09-26 12:44:19
+* Bilingual File: [tree-view.2ba8ce71cac45e71daf41038138a2e1d56f8c71c.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/628ba96e56c142c61ba716ca85d7a08ad45914fb?path=ol-handback%2FMicrosoft%2Fwindows-apps.de-de%2Fmaster%2Ftree-view.2ba8ce71cac45e71daf41038138a2e1d56f8c71c.de-de.xlf&_a=contents)
+* Bilingual Datetime: 2016-10-18 13:24:42
 * [Back to Top](#report-top)
 
 
