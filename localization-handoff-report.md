@@ -6,14 +6,14 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [hub\index.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/034fa1f52d14303d83b440374000f895363f5c4b?path=hub%2Findex.md&_a=contents) | HandedOffSuccess | [Details](#6ec6ccdebd8d0b9667d84d377cfcb547811523957)
+ [windows-apps-src\style\color.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/812f6347e6da2533871a826ba70a228719830a92?path=windows-apps-src%2Fstyle%2Fcolor.md&_a=contents) | HandedOffSuccess | [Details](#d19dd2b2733bf918f55fd29311e3b4c47a9a7f6e5122)
 
 ## Item Details
-##### <a name='6ec6ccdebd8d0b9667d84d377cfcb547811523957'></a> Source: [hub\index.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/034fa1f52d14303d83b440374000f895363f5c4b?path=hub%2Findex.md&_a=contents)
+##### <a name='d19dd2b2733bf918f55fd29311e3b4c47a9a7f6e5122'></a> Source: [windows-apps-src\style\color.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/812f6347e6da2533871a826ba70a228719830a92?path=windows-apps-src%2Fstyle%2Fcolor.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [index.4766fa26638f9b0551308e465fe8b8cfeda3c32c.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/22284b9997f3625b04cad819a55dd60eb79fd8ee?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Findex.4766fa26638f9b0551308e465fe8b8cfeda3c32c.de-de.xlf&_a=contents)
-* Handoff Datetime: 2017-04-03 21:23:36
+* Handoff File: [color.0395eb0e5ede1939b9b46492efe596c9853dcace.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/e100c4eaf39df7a8b2f07b4935f739c9c5038320?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fcolor.0395eb0e5ede1939b9b46492efe596c9853dcace.de-de.xlf&_a=contents)
+* Handoff Datetime: 2017-04-04 17:21:20
 * Handoff Reason: Include
 * Handoff Name: 
 * Archive File: 
@@ -21,10 +21,10 @@
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Handback Name: 
-* Current Target File: [hub\index.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/f115520bb9810fdf6c8881cf29401fc35169c29a?path=hub%2Findex.md&_a=contents)
-* Current Handback File: [index.4766fa26638f9b0551308e465fe8b8cfeda3c32c.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2386795deab063908b859e86feddcc7b91c2f943?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Findex.4766fa26638f9b0551308e465fe8b8cfeda3c32c.de-de.xlf&_a=contents)
+* Current Target File: [windows-apps-src\style\color.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/f115520bb9810fdf6c8881cf29401fc35169c29a?path=windows-apps-src%2Fstyle%2Fcolor.md&_a=contents)
+* Current Handback File: [color.0395eb0e5ede1939b9b46492efe596c9853dcace.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2386795deab063908b859e86feddcc7b91c2f943?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fcolor.0395eb0e5ede1939b9b46492efe596c9853dcace.de-de.xlf&_a=contents)
 * Current Handback Datetime: 2017-03-01 15:55:30
-* Bilingual File: [index.4766fa26638f9b0551308e465fe8b8cfeda3c32c.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2386795deab063908b859e86feddcc7b91c2f943?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Findex.4766fa26638f9b0551308e465fe8b8cfeda3c32c.de-de.xlf&_a=contents)
+* Bilingual File: [color.0395eb0e5ede1939b9b46492efe596c9853dcace.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2386795deab063908b859e86feddcc7b91c2f943?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fcolor.0395eb0e5ede1939b9b46492efe596c9853dcace.de-de.xlf&_a=contents)
 * Bilingual Datetime: 2017-03-01 16:20:55
 * [Back to Top](#report-top)
 
