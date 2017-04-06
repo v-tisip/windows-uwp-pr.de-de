@@ -1,11 +1,33 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [windows-apps-src\launch-resume\app-lifecycle.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/c61a417f0400ec33679ae89d03363b363ae62782?path=windows-apps-src%2Flaunch-resume%2Fapp-lifecycle.md&_a=contents) | HandedOffSuccess | [Details](#28c00198f1c865b192b27047945199942e9611323856)
 
 ## Item Details
+##### <a name='28c00198f1c865b192b27047945199942e9611323856'></a> Source: [windows-apps-src\launch-resume\app-lifecycle.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/c61a417f0400ec33679ae89d03363b363ae62782?path=windows-apps-src%2Flaunch-resume%2Fapp-lifecycle.md&_a=contents)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [app-lifecycle.ccef52258bdc75288e41f9726d49569048ea6c50.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/26565bffafbac147b4fa652ae5f9e9dfd8269869?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fapp-lifecycle.ccef52258bdc75288e41f9726d49569048ea6c50.de-de.xlf&_a=contents)
+* Handoff Datetime: 2017-04-06 16:15:25
+* Handoff Reason: Include
+* Handoff Name: 
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Handback Name: 
+* Current Target File: [windows-apps-src\launch-resume\app-lifecycle.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/f115520bb9810fdf6c8881cf29401fc35169c29a?path=windows-apps-src%2Flaunch-resume%2Fapp-lifecycle.md&_a=contents)
+* Current Handback File: [app-lifecycle.ccef52258bdc75288e41f9726d49569048ea6c50.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2386795deab063908b859e86feddcc7b91c2f943?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fapp-lifecycle.ccef52258bdc75288e41f9726d49569048ea6c50.de-de.xlf&_a=contents)
+* Current Handback Datetime: 2017-03-01 15:55:30
+* Bilingual File: [app-lifecycle.ccef52258bdc75288e41f9726d49569048ea6c50.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2386795deab063908b859e86feddcc7b91c2f943?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fapp-lifecycle.ccef52258bdc75288e41f9726d49569048ea6c50.de-de.xlf&_a=contents)
+* Bilingual Datetime: 2017-03-01 16:20:55
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
