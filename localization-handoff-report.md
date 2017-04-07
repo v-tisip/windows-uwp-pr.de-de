@@ -6,14 +6,14 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\porting\desktop-to-uwp-extensions.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/7e68ceb66bd8f06991f35df9e2efce04bc92d7b2?path=windows-apps-src%2Fporting%2Fdesktop-to-uwp-extensions.md&_a=contents) | HandedOffSuccess | [Details](#4ba1471c6517e2853998b5f9d32060416fbec1bc4756)
+ [windows-apps-src\globalizing\using-mrt-for-converted-desktop-apps-and-games.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/e8577923c696d1282988bb06089f4a93c42a2d84?path=windows-apps-src%2Fglobalizing%2Fusing-mrt-for-converted-desktop-apps-and-games.md&_a=contents) | HandedOffSuccess | [Details](#a4daa6f9cf6162c7e63a3e2ad566dbd5977fff223183)
 
 ## Item Details
-##### <a name='4ba1471c6517e2853998b5f9d32060416fbec1bc4756'></a> Source: [windows-apps-src\porting\desktop-to-uwp-extensions.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/7e68ceb66bd8f06991f35df9e2efce04bc92d7b2?path=windows-apps-src%2Fporting%2Fdesktop-to-uwp-extensions.md&_a=contents)
+##### <a name='a4daa6f9cf6162c7e63a3e2ad566dbd5977fff223183'></a> Source: [windows-apps-src\globalizing\using-mrt-for-converted-desktop-apps-and-games.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/e8577923c696d1282988bb06089f4a93c42a2d84?path=windows-apps-src%2Fglobalizing%2Fusing-mrt-for-converted-desktop-apps-and-games.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [desktop-to-uwp-extensions.b85d42a8c8cdbc820d413ec030cc4afe93550f53.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/cd036a89bd770d2aec939ad02d5708edeb4dd875?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fdesktop-to-uwp-extensions.b85d42a8c8cdbc820d413ec030cc4afe93550f53.de-de.xlf&_a=contents)
-* Handoff Datetime: 2017-04-06 20:19:10
+* Handoff File: [using-mrt-for-converted-desktop-apps-and-games.1ee1e8d14bb6a99f704c93b189415a59598389d2.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/05eeae96d997f435eccc3aa3320fc899a8284765?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fusing-mrt-for-converted-desktop-apps-and-games.1ee1e8d14bb6a99f704c93b189415a59598389d2.de-de.xlf&_a=contents)
+* Handoff Datetime: 2017-04-07 00:17:46
 * Handoff Reason: Include
 * Handoff Name: 
 * Archive File: 
@@ -21,11 +21,6 @@
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Handback Name: 
-* Current Target File: [windows-apps-src\porting\desktop-to-uwp-extensions.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/f115520bb9810fdf6c8881cf29401fc35169c29a?path=windows-apps-src%2Fporting%2Fdesktop-to-uwp-extensions.md&_a=contents)
-* Current Handback File: [desktop-to-uwp-extensions.b85d42a8c8cdbc820d413ec030cc4afe93550f53.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2386795deab063908b859e86feddcc7b91c2f943?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fdesktop-to-uwp-extensions.b85d42a8c8cdbc820d413ec030cc4afe93550f53.de-de.xlf&_a=contents)
-* Current Handback Datetime: 2017-03-01 15:55:30
-* Bilingual File: [desktop-to-uwp-extensions.b85d42a8c8cdbc820d413ec030cc4afe93550f53.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2386795deab063908b859e86feddcc7b91c2f943?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fdesktop-to-uwp-extensions.b85d42a8c8cdbc820d413ec030cc4afe93550f53.de-de.xlf&_a=contents)
-* Bilingual Datetime: 2017-03-01 16:20:55
 * [Back to Top](#report-top)
 
 
