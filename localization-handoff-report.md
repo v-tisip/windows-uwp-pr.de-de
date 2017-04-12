@@ -6,14 +6,14 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\porting\desktop-to-uwp-root.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/906fb4168f726d0102959605786aac00b54d90f4?path=windows-apps-src%2Fporting%2Fdesktop-to-uwp-root.md&_a=contents) | HandedOffSuccess | [Details](#5e25b38110885c6f71d6002a0bb54da25b59156e4780)
+ [windows-apps-src\controls-and-patterns\toggles.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/2c456f6d826709028d63e574ea0c31aa13d6ad3c?path=windows-apps-src%2Fcontrols-and-patterns%2Ftoggles.md&_a=contents) | HandedOffSuccess | [Details](#15522fa25ad863577abc93c7b8080db77104f10f2325)
 
 ## Item Details
-##### <a name='5e25b38110885c6f71d6002a0bb54da25b59156e4780'></a> Source: [windows-apps-src\porting\desktop-to-uwp-root.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/906fb4168f726d0102959605786aac00b54d90f4?path=windows-apps-src%2Fporting%2Fdesktop-to-uwp-root.md&_a=contents)
+##### <a name='15522fa25ad863577abc93c7b8080db77104f10f2325'></a> Source: [windows-apps-src\controls-and-patterns\toggles.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/2c456f6d826709028d63e574ea0c31aa13d6ad3c?path=windows-apps-src%2Fcontrols-and-patterns%2Ftoggles.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [desktop-to-uwp-root.7513f52e089e9b95deeb36130fca887605ce1b3a.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/16a3cbf384607d7f13e0cf242b125f8666038a87?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fdesktop-to-uwp-root.7513f52e089e9b95deeb36130fca887605ce1b3a.de-de.xlf&_a=contents)
-* Handoff Datetime: 2017-04-12 19:06:08
+* Handoff File: [toggles.b18f65a6d80dea8ca39438aceceb710c40a6bbe6.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/3af1efaa3c46512fffaafca8d0d3e7484c99cfba?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Ftoggles.b18f65a6d80dea8ca39438aceceb710c40a6bbe6.de-de.xlf&_a=contents)
+* Handoff Datetime: 2017-04-12 23:06:34
 * Handoff Reason: Include
 * Handoff Name: 
 * Archive File: 
@@ -21,10 +21,10 @@
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Handback Name: 
-* Current Target File: [windows-apps-src\porting\desktop-to-uwp-root.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/f115520bb9810fdf6c8881cf29401fc35169c29a?path=windows-apps-src%2Fporting%2Fdesktop-to-uwp-root.md&_a=contents)
-* Current Handback File: [desktop-to-uwp-root.7513f52e089e9b95deeb36130fca887605ce1b3a.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2386795deab063908b859e86feddcc7b91c2f943?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fdesktop-to-uwp-root.7513f52e089e9b95deeb36130fca887605ce1b3a.de-de.xlf&_a=contents)
-* Current Handback Datetime: 2017-03-01 15:55:30
-* Bilingual File: [desktop-to-uwp-root.7513f52e089e9b95deeb36130fca887605ce1b3a.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2386795deab063908b859e86feddcc7b91c2f943?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fdesktop-to-uwp-root.7513f52e089e9b95deeb36130fca887605ce1b3a.de-de.xlf&_a=contents)
+* Current Target File: [windows-apps-src\controls-and-patterns\toggles.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/f115520bb9810fdf6c8881cf29401fc35169c29a?path=windows-apps-src%2Fcontrols-and-patterns%2Ftoggles.md&_a=contents)
+* Current Handback File: [toggles.b18f65a6d80dea8ca39438aceceb710c40a6bbe6.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2386795deab063908b859e86feddcc7b91c2f943?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Ftoggles.b18f65a6d80dea8ca39438aceceb710c40a6bbe6.de-de.xlf&_a=contents)
+* Current Handback Datetime: 2017-03-01 15:55:29
+* Bilingual File: [toggles.b18f65a6d80dea8ca39438aceceb710c40a6bbe6.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2386795deab063908b859e86feddcc7b91c2f943?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Ftoggles.b18f65a6d80dea8ca39438aceceb710c40a6bbe6.de-de.xlf&_a=contents)
 * Bilingual Datetime: 2017-03-01 16:20:55
 * [Back to Top](#report-top)
 
