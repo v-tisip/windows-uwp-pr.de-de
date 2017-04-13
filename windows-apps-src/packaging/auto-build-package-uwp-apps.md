@@ -3,25 +3,23 @@ author: rmpablos
 title: "Einrichten automatisierter Builds für UWP-Apps"
 description: "Erfahren Sie, wie Sie automatisierte Builds konfigurieren, um Pakete zum Querladen oder zum Übermitteln an den Store zu erzeugen."
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
+keywords: Windows10, UWP
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 54dcebb0dc4b1a41acdae655b9caf14f72161f36
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: f4c68af97e5d5b11a0c5320c9fa6040b9ab94e5a
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Einrichten automatisierter Builds für UWP-Apps
 
-Mithilfe von Visual Studio Team Services (VSTS) können Sie automatisierte Builds für UWP-Projekte erstellen. In diesem Artikel werden verschiedene Erstellungsmöglichkeiten erläutert.  Außerdem wird erläutert, wie Sie diese Aufgaben über die Befehlszeile ausführen, um die Integration in andere Buildsysteme, z. B. AppVeyor, zu ermöglichen. 
+Mithilfe von Visual Studio Team Services (VSTS) können Sie automatisierte Builds für UWP-Projekte erstellen. In diesem Artikel werden verschiedene Erstellungsmöglichkeiten erläutert.  Außerdem wird erläutert, wie Sie diese Aufgaben über die Befehlszeile ausführen, um die Integration in andere Buildsysteme, z.B. AppVeyor, zu ermöglichen. 
 
 ## <a name="select-the-right-type-of-build-agent"></a>Die Wahl des richtigen Build-Agents
 
-Wählen Sie aus, welche Art von Build-Agent VSTS beim Ausführen des Buildprozesses verwenden soll. Ein gehosteter Build-Agent wird mit den gängigsten Tools und SDKs bereitgestellt und bietet Unterstützung für die meisten Szenarien. Weitere Informationen finden Sie im Artikel zu [Software auf dem gehosteten Buildserver](https://www.visualstudio.com/en-us/docs/build/admin/agents/hosted-pool#software). Wenn Sie jedoch mehr Kontrolle über die Buildschritte benötigen, können Sie auch einen benutzerdefinierten Build-Agent erstellen. Die folgende Tabelle soll Sie bei der richtigen Entscheidung unterstützen.
+Wählen Sie aus, welche Art von Build-Agent VSTS beim Ausführen des Buildprozesses verwenden soll. Ein gehosteter Build-Agent wird mit den gängigsten Tools und SDKs bereitgestellt und bietet Unterstützung für die meisten Szenarien. Weitere Informationen finden Sie im Artikel zu [Software auf dem gehosteten Buildserver](https://www.visualstudio.com/docs/build/admin/agents/hosted-pool#software). Wenn Sie jedoch mehr Kontrolle über die Buildschritte benötigen, können Sie auch einen benutzerdefinierten Build-Agent erstellen. Die folgende Tabelle soll Sie bei der richtigen Entscheidung unterstützen.
 
 |**Szenario**|**Benutzerdefinierter Agent**|**Gehosteter Build-Agent**|
 -------------|----------------|----------------------|
@@ -33,13 +31,13 @@ Wählen Sie aus, welche Art von Build-Agent VSTS beim Ausführen des Buildprozes
 |Ausführen von Komponententests|:white_check_mark:||
 |Verwenden inkrementeller Builds|:white_check_mark:||
 
->Hinweis: Wenn Sie beabsichtigen, das Windows Anniversary Update SDK (Build 14393) für den Build zu verwenden, müssen Sie Ihren benutzerdefinierten Build-Agent einrichten, da der gehostete Buildpool nur die SDKs 10586 und 10240 unterstützt. Weitere Informationen zum [Auswählen einer UWP-Version](https://msdn.microsoft.com/en-us/windows/uwp/updates-and-versions/choose-a-uwp-version).
+>Hinweis: Wenn Sie beabsichtigen, das Windows Anniversary Update SDK (Build 14393) für den Build zu verwenden, müssen Sie Ihren benutzerdefinierten Build-Agent einrichten, da der gehostete Buildpool nur die SDKs 10586 und 10240 unterstützt. Weitere Informationen zum [Auswählen einer UWP-Version](https://msdn.microsoft.com/windows/uwp/updates-and-versions/choose-a-uwp-version).
 
 #### <a name="create-a-custom-build-agent-optional"></a>Erstellen eines benutzerdefinierten Build-Agents (optional)
 
 Wenn Sie einen benutzerdefinierten Build-Agent erstellen möchten, benötigen Sie die Tools für die universelle Windows-Plattform. Diese Tools sind Bestandteil von Visual Studio. Sie können Visual Studio Community Edition verwenden.
 
-Weitere Informationen finden Sie unter [Bereitstellen eines Agents unter Windows](https://www.visualstudio.com/en-us/docs/build/admin/agents/v2-windows). 
+Weitere Informationen finden Sie unter [Bereitstellen eines Agents unter Windows](https://www.visualstudio.com/docs/build/admin/agents/v2-windows). 
 
 Zum Ausführen von UWP-Komponententests müssen Sie folgende Schritte ausführen: •    Bereitstellen und Starten der App. •    Ausführen des VSTS-Agents im interaktiven Modus. •    Konfigurieren des Agents für die automatische Anmeldung nach einem Neustart.
 
@@ -113,7 +111,7 @@ Mit dieser Aufgabe werden die generierten Artefakte in VSTS gespeichert. Sie wer
 Da wir die `UapAppxPackageBuildMode`-Eigenschaft auf `StoreUpload` festgelegt haben, enthält der Artefaktordner das Paket, das Sie in den Store hochladen („appxupload“), und die Pakete, die das Querladen ermöglichen („appxbundle“).
 
 
->Hinweis: Der VSTS-Agent behält standardmäßig die letzten generierten APPX-Pakete bei. Wenn Sie nur die Artefakte des aktuellen Builds speichern möchten, konfigurieren Sie den Build so, dass das Verzeichnis mit Binärdateien bereinigt wird. Fügen Sie dazu eine Variable namens `Build.Clean` hinzu, und legen Sie sie auf den Wert `all` fest. Weitere Informationen finden Sie unter [Angeben des Repositorys](https://www.visualstudio.com/en-us/docs/build/define/repository#how-can-i-clean-the-repository-in-a-different-way).
+>Hinweis: Der VSTS-Agent behält standardmäßig die letzten generierten APPX-Pakete bei. Wenn Sie nur die Artefakte des aktuellen Builds speichern möchten, konfigurieren Sie den Build so, dass das Verzeichnis mit Binärdateien bereinigt wird. Fügen Sie dazu eine Variable namens `Build.Clean` hinzu, und legen Sie sie auf den Wert `all` fest. Weitere Informationen finden Sie unter [Angeben des Repositorys](https://www.visualstudio.com/docs/build/define/repository#how-can-i-clean-the-repository-in-a-different-way).
 
 #### <a name="the-types-of-automated-builds"></a>Typen automatisierter Builds
 Als Nächstes verwenden Sie die Builddefinition zum Erstellen eines automatisierten Builds. In der folgenden Tabelle werden die einzelnen Typen automatisierter Builds beschrieben, die Sie erstellen können. 
@@ -121,7 +119,7 @@ Als Nächstes verwenden Sie die Builddefinition zum Erstellen eines automatisier
 |**Buildtyp**|**Artefakt**|**Empfohlene Häufigkeit**|**Beschreibung**|
 |-----------------|------------|-------------------------|---------------|
 |Continuous Integration|Buildprotokoll, Testergebnisse|Jeder Commit|Dieser Buildtyp ist schnell und wird mehrmals täglich ausgeführt.|
-|Continuous Deployment-Build zum Querladen|Bereitstellungspakete|Täglich |Dieser Buildtyp kann Komponententests enthalten, dauert jedoch etwas länger. Er unterstützt manuelle Tests und kann in andere Tools, wie z. B. HockeyApp, integriert werden.|
+|Continuous Deployment-Build zum Querladen|Bereitstellungspakete|Täglich |Dieser Buildtyp kann Komponententests enthalten, dauert jedoch etwas länger. Er unterstützt manuelle Tests und kann in andere Tools, wie z.B. HockeyApp, integriert werden.|
 |Continuous Deployment-Build, durch den ein Paket an den Store übermittelt wird|Veröffentlichungspakete|Bedarfsgesteuert|Durch diesen Buildtyp wird ein Paket erstellt, das Sie im Store veröffentlichen können.|
 
 Im Folgenden wird die Konfiguration der einzelnen Typen beschrieben.
@@ -296,7 +294,7 @@ $(Build.ArtifactStagingDirectory)\
 AppxPackages\MyUWPApp__$(AppxVersion)_x86_x64_ARM_bundle.appxupload
 ```
 
->Hinweis: Sie müssen diesen Build manuell aktivieren. Sie können ihn zum Aktualisieren vorhandener Apps verwenden, aber nicht für die erste Übermittlung an den Store. Weitere Informationen finden Sie unter [Erstellen und Verwalten von Store-Übermittlungen mit Windows Store-Diensten](https://msdn.microsoft.com/windows/uwp/monetize/create-and-manage-submissions-using-windows-store-services).
+>Hinweis: Sie müssen diesen Build manuell aktivieren. Sie können ihn zum Aktualisieren vorhandener Apps verwenden, aber nicht für die erste Übermittlung an den Store. Weitere Informationen finden Sie unter [Erstellen und Verwalten von Store-Übermittlungen mit WindowsStore-Diensten](https://msdn.microsoft.com/windows/uwp/monetize/create-and-manage-submissions-using-windows-store-services).
 
 ## <a name="best-practices"></a>Bewährte Methoden
 
@@ -307,8 +305,8 @@ Wenn Sie Ihre App verteilen möchten, ohne sie im Store zu veröffentlichen, kö
 
 Verwenden Sie zum Installieren von Apps das PowerShell-Skript `Add-AppDevPackage.ps1`. Das Skript fügt das Zertifikat dem Abschnitt für vertrauenswürdige Stammzertifizierungsstellen des lokalen Computers hinzu und installiert oder aktualisiert dann die APPX-Datei.
 
-#### <a name="sideloading-your-app-with-the-windows-10-anniversary-update"></a>Querladen einer App mit dem Windows 10 Anniversary Update
-Im Windows 10 Anniversary Update können Sie auf die APPXBUNDLE-Datei doppelklicken und die App mithilfe der Schaltfläche „Installieren“ in einem Dialogfeld installieren. 
+#### <a name="sideloading-your-app-with-the-windows-10-anniversary-update"></a>Querladen einer App mit dem Windows10 Anniversary Update
+Im Windows10 Anniversary Update können Sie auf die APPXBUNDLE-Datei doppelklicken und die App mithilfe der Schaltfläche „Installieren“ in einem Dialogfeld installieren. 
 
 
 ![Querladen in rs1](images/building-screen18.png) 
@@ -319,11 +317,11 @@ Wenn Sie Ihre APPX-Pakete von einer Website wie VSTS oder HockeyApp verteilen m�
 
 <span id="certificates-best-practices"/>
 ### <a name="best-practices-for-signing-certificates"></a>Bewährte Methoden für das Signieren von Zertifikaten 
-Visual Studio generiert ein Zertifikat für jedes Projekt. Dadurch wird es schwierig, eine geordnete Liste gültiger Zertifikate zu führen. Wenn Sie mehrere Apps erstellen möchten, können Sie ein einzelnes Zertifikat zum Signieren aller Apps erstellen. Danach kann jedes Gerät, für das das Zertifikat als vertrauenswürdig gilt, alle Ihre Apps querladen, ohne dass ein weiteres Zertifikat installiert werden muss. Weitere Informationen finden Sie unter [Erstellen eines Signaturzertifikats für ein App-Paket](https://msdn.microsoft.com/en-us/library/windows/desktop/jj835832(v=vs.85).aspx).
+Visual Studio generiert ein Zertifikat für jedes Projekt. Dadurch wird es schwierig, eine geordnete Liste gültiger Zertifikate zu führen. Wenn Sie mehrere Apps erstellen möchten, können Sie ein einzelnes Zertifikat zum Signieren aller Apps erstellen. Danach kann jedes Gerät, für das das Zertifikat als vertrauenswürdig gilt, alle Ihre Apps querladen, ohne dass ein weiteres Zertifikat installiert werden muss. Weitere Informationen finden Sie unter [Erstellen eines Signaturzertifikats für ein App-Paket](https://msdn.microsoft.com/library/windows/desktop/jj835832(v=vs.85).aspx).
 
 
 #### <a name="create-a-signing-certificate"></a>Erstellen eines Signaturzertifikats
-Verwenden Sie das Tool [MakeCert.exe](https://msdn.microsoft.com/en-us/library/windows/desktop/ff548309(%09v=vs.85).aspx), um ein Zertifikat zu erstellen. Im folgenden Beispiel wird ein Zertifikat mit dem Tool „MakeCert.exe“ erstellt.
+Verwenden Sie das Tool [MakeCert.exe](https://msdn.microsoft.com/library/windows/desktop/ff548309.aspx), um ein Zertifikat zu erstellen. Im folgenden Beispiel wird ein Zertifikat mit dem Tool „MakeCert.exe“ erstellt.
 
 ```
 MakeCert /n publisherName /r /h 0 /eku "1.3.6.1.5.5.7.3.3,1.3.6.1.4.1.311.10.3.13" /e expirationDate /sv MyKey.pvk MyKey.cer
@@ -359,8 +357,7 @@ Registrieren Sie den öffentlichen Schlüssel des Zertifikats im Zertifikatspeic
 Die einfachste Möglichkeit zum Registrieren des Zertifikats besteht darin, in der CER-Datei zu doppelklicken und dann die Schritte im Assistenten auszuführen, um das Zertifikat im Speicher des lokalen Computers und im Speicher für vertrauenswürdige Personen zu speichern.
 
 ## <a name="related-topics"></a>Verwandte Themen
-* [Erstellen einer .NET-App für Windows](https://www.visualstudio.com/en-us/docs/build/get-started/dot-net) 
+* [Erstellen einer .NET-App für Windows](https://www.visualstudio.com/docs/build/get-started/dot-net) 
 * [Verpacken von UWP-Apps](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps)
-* [Querladen von branchenspezifischen Apps in Windows 10](https://technet.microsoft.com/itpro/windows/deploy/sideload-apps-in-windows-10)
-* [Erstellen eines Signaturzertifikats für ein App-Paket](https://msdn.microsoft.com/en-us/library/windows/desktop/jj835832(v=vs.85).aspx)
-
+* [Querladen von branchenspezifischen Apps in Windows10](https://technet.microsoft.com/itpro/windows/deploy/sideload-apps-in-windows-10)
+* [Erstellen eines Signaturzertifikats für ein App-Paket](https://msdn.microsoft.com/library/windows/desktop/jj835832(v=vs.85).aspx)

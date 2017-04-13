@@ -8,41 +8,38 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 2ffec3d72ab0b3ca87a5cc0ec9325fe805ae9b6f
-ms.lasthandoff: 02/07/2017
-
+keywords: windows10, UWP
+ms.openlocfilehash: 336bb3b58e9f6cfeb3c173a8bb1c9e72bc7929b7
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-a-windows-hello-login-app"></a>Erstellen einer Windows Hello-Anmelde-App
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 \[Einige Informationen beziehen sich auf die Vorabversion, die vor der kommerziellen Freigabe möglicherweise wesentlichen Änderungen unterliegt. Microsoft übernimmt keine Garantie, weder ausdrücklicher noch impliziter Art, für die hier bereitgestellten Informationen.\]
 
 Dies ist der erste Teil einer umfassenden Schritt-für-Schritt-Lösung zum Erstellen einer Windows 10-App für die Universelle Windows-Plattform (UWP), die Windows Hello als Alternative zu herkömmlichen Authentifizierungssystemen mit Benutzername und Kennwort verwendet. Die App verwendet einen Benutzernamen für die Anmeldung und erstellt einen Hello-Schlüssel für jedes Konto. Diese Konten werden durch die PIN geschützt, die in den Windows-Einstellungen beim Konfigurieren von Windows Hello eingerichtet wird.
 
-Diese Schritt-für-Schritt-Lösung ist in zwei Teile aufgeteilt: Erstellen der App und Herstellen der Verbindung mit dem Back-End-Dienst. Fahren Sie nach Abschluss dieses Artikels mit Teil 2 fort: [Windows-Hello-Anmeldedienst](microsoft-passport-login-auth-service.md).
+Diese Schritt-für-Schritt-Lösung ist in zwei Teile aufgeteilt: Erstellen der App und Herstellen der Verbindung mit dem Back-End-Dienst. Fahren Sie nach Abschluss dieses Artikels mit Teil2 fort: [Windows-Hello-Anmeldedienst](microsoft-passport-login-auth-service.md).
 
 Machen Sie sich in der Übersicht [Windows Hello](microsoft-passport.md) zunächst mit grundlegenden Informationen zur Funktionsweise von Windows Hello vertraut.
 
 ## <a name="get-started"></a>Erste Schritte
 
 
-Die Erstellung dieses Projekts setzt Erfahrung mit C# und XAML voraus. Außerdem muss Visual Studio 2015 (mindestens Community Edition) auf einem Computer unter Windows 10 verwendet werden.
+Die Erstellung dieses Projekts setzt Erfahrung mit C# und XAML voraus. Außerdem muss Visual Studio2015 (mindestens Community Edition) auf einem Computer unter Windows10 verwendet werden.
 
--   Öffnen Sie Visual Studio 2015, und wählen Sie „Datei“ > „Neu“ > „Projekt“ aus.
+-   Öffnen Sie Visual Studio2015, und wählen Sie „Datei“ > „Neu“ > „Projekt“ aus.
 -   Din Fenster für ein neues Projekt wird geöffnet. Navigieren Sie zu „Vorlagen“ > „Visual C#“.
 -   Wählen Sie „ Leere App (Universelle Windows-App)“ aus, und nennen Sie die Anwendung „PassportLogin“.
--   Erstellen Sie die neue Anwendung und führen Sie sie aus (F5). Anschließend sollte Ihnen auf dem Bildschirm ein leeres Fenster angezeigt werden. Schließen Sie die Anwendung.
+-   Erstellen Sie die neue Anwendung, und führen Sie sie aus (F5). Anschließend sollte Ihnen auf dem Bildschirm ein leeres Fenster angezeigt werden. Schließen Sie die Anwendung.
 
 ![Neue Windows-Hello-Projekt](images/passport-login-1.png)
 
-## <a name="exercise-1-login-with-microsoft-passport"></a>Übung 1: Anmelden mit Microsoft Passport
+## <a name="exercise-1-login-with-microsoft-passport"></a>Übung1: Anmelden mit Microsoft Passport
 
 
 In dieser Übung lernen Sie, wie Sie prüfen, ob Windows Hello auf dem Computer eingerichtet ist, und wie Sie sich mit Windows Hello bei einem Konto anmelden.
@@ -495,7 +492,7 @@ In dieser Übung lernen Sie, wie Sie prüfen, ob Windows Hello auf dem Computer 
 
     ![Windows-Hello-Anmelde-Pin-Aufforderung](images/passport-login-8.png)
 
-## <a name="exercise-2-welcome-and-user-selection-pages"></a>Übung 2: Begrüßungs- und Benutzerauswahlseiten
+## <a name="exercise-2-welcome-and-user-selection-pages"></a>Übung2: Begrüßungs- und Benutzerauswahlseiten
 
 
 Diese Übung baut direkt auf der vorherigen Übung auf. Nach erfolgreicher Anmeldung soll der Benutzer auf eine Begrüßungsseite weitergeleitet werden, auf der er sich abmelden oder sein Konto löschen kann. Da von Windows Hello ein computerspezifischer Schlüssel erstellt wird, kann ein Benutzerauswahlbildschirm erstellt werden, der alle Benutzer anzeigt, die auf diesem Computer angemeldet waren. Ein Benutzer kann dann eines dieser Konten auswählen, um direkt und ohne erneute Kennworteingabe zur Willkommensseite zu gelangen, da er bereits für den Zugriff auf den Computer authentifiziert wurde.
@@ -970,7 +967,7 @@ In dieser Übung erstellen Sie eine neue Seite für die Erstellung eines neuen W
 
     ![Windows Hello - Registrieren neuer Benutzer](images/passport-login-11.png)
 
-In dieser Übung wurden die Grundlagen für die Verwendung der neuen Windows-Hello-API zum Authentifizieren vorhandener Benutzer und zum Erstellen von Konten für neue Benutzer vermittelt. Dank dieser neuen Kenntnisse müssen sich die Benutzer bald keine Kennwörter für Ihre Anwendung mehr merken, während gleichzeitig der Schutz durch die Benutzerauthentifizierung erhalten bleibt. Windows 10 verwendet die neue Authentifizierung-Technologie von Windows Hello zur Unterstützung der biometrischen Anmeldungsoptionen.
+In dieser Übung wurden die Grundlagen für die Verwendung der neuen Windows-Hello-API zum Authentifizieren vorhandener Benutzer und zum Erstellen von Konten für neue Benutzer vermittelt. Dank dieser neuen Kenntnisse müssen sich die Benutzer bald keine Kennwörter für Ihre Anwendung mehr merken, während gleichzeitig der Schutz durch die Benutzerauthentifizierung erhalten bleibt. Windows10 verwendet die neue Authentifizierung-Technologie von Windows Hello zur Unterstützung der biometrischen Anmeldungsoptionen.
 
 ## <a name="related-topics"></a>Verwandte Themen
 

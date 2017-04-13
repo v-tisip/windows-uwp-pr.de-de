@@ -9,16 +9,13 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: 3f92c8fd-4096-4972-97da-01ae5db6423c
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 9819e632ab6de58eee4358866d3186c0fa31f69f
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 9236b0cd9ac658a34283e54ba70b7e70d19c6bb3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="media-capture-api-reference"></a>Referenz zur Medienerfassungs-API #
 
-**Anfordern**
+**Anforderung**
 
 Mithilfe des folgenden Anforderungsformats können Sie eine PNG-Darstellung des aktuellen Bildschirms erfassen.
 
@@ -43,7 +40,7 @@ Sie können im Anforderungs-URI die folgenden zusätzlichen Parameter angeben:
 
 **Anforderungstext**
 
-* Keiner
+* Keine
 
 ###<a name="response"></a>Antwort###
 
@@ -60,5 +57,4 @@ Diese API hat die folgenden erwarteten Statuscodes:
 **Verfügbare Gerätefamilien**
 
 * Windows Xbox
-
 

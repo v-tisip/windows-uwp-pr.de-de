@@ -9,13 +9,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: df66981ae8355ea62128a881f02fd6fb891ffb30
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8d6764051a6f3d9d5c6d851f0ba15353da5f9d5e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="app-submissions"></a>App-Übermittlungen
 
 
@@ -85,7 +82,7 @@ Sie benötigen alle erforderlichen Informationen für mindestens eine der von Ih
 | **Beschreibung**               | Erforderlich                                    | [Erstellen einer interessanten App-Beschreibung](write-a-great-app-description.md) |
 | **Versionshinweise**             | Optional                                    | [Versionshinweise](create-app-store-listings.md#release-notes)         |
 | **Screenshots**               | Erforderlich (mindestens ein Screenshot)          | [App-Screenshots und -Bilder](app-screenshots-and-images.md)       |
-| **Symbol für App-Kachel**             | Optional, jedoch dringend empfohlen für Windows Phone 8.1 und frühere Versionen | [Symbol für App-Kachel](create-app-store-listings.md#app-tile-icon) |
+| **Symbol für App-Kachel**             | Optional, jedoch dringend empfohlen für Windows Phone8.1 und frühere Versionen | [Symbol für App-Kachel](create-app-store-listings.md#app-tile-icon) |
 | **Werbebilder**       | Optional                                    | [App-Screenshots und -Bilder](app-screenshots-and-images.md)       |
 | **App-Features**              | Optional                                    | [Features](create-app-store-listings.md#app-features)               |
 | **Weitere Systemanforderungen**      | Optional                                    | [Weitere Systemanforderungen](create-app-store-listings.md#additional-system-requirements) |
@@ -94,7 +91,7 @@ Sie benötigen alle erforderlichen Informationen für mindestens eine der von Ih
 | **Zusätzliche Lizenzbedingungen**  | Optional                                    | [Additional license terms (Zusätzliche Lizenzbedingungen)](create-app-store-listings.md#additional-license-terms) |
 | **Website**                   | Optional                                    | [Website](create-app-store-listings.md#website)                     |
 | **Support – Kontaktinfos**      | Optional                                    | [Support – Kontaktinfos](create-app-store-listings.md)                |
-| **Privacy policy (Datenschutzrichtlinie)**            | Für einige Apps erforderlich. Weitere Informationen finden Sie in der [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058) und den [Windows Store-Richtlinien](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_5_1). | [Datenschutzrichtlinie](create-app-store-listings.md#privacy-policy) |
+| **Privacy policy (Datenschutzrichtlinie)**            | Für einige Apps erforderlich. Weitere Informationen finden Sie in der [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058) und den [WindowsStore-Richtlinien](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_5_1). | [Datenschutzrichtlinie](create-app-store-listings.md#privacy-policy) |
 | **Plattformspezifische Store-Einträge** | Optional                               | [Erstellen plattformspezifischer Store-Einträge](create-platform-specific-store-listings.md) |
 
 <span/>
@@ -108,4 +105,3 @@ Sie benötigen alle erforderlichen Informationen für mindestens eine der von Ih
 <span/>
 
 **Hinweis**&nbsp;&nbsp;Informationen zum Veröffentlichen von branchenspezifischen Apps direkt für Unternehmen finden Sie unter [Verteilen von branchenspezifischen Apps an Unternehmen](distribute-lob-apps-to-enterprises.md).
-

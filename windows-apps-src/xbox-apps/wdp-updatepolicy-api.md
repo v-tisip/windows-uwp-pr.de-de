@@ -2,22 +2,20 @@
 author: payzer
 title: "Geräteportal – Xbox-Entwickler-DevKit – Update Richtlinien-API-Referenz"
 description: "Erfahren Sie, wie Sie die Update-Richtlinie für die Konsole programmgesteuert festlegen können."
-translationtype: Human Translation
-ms.sourcegitcommit: 8f02e0c2f6fa30a3ac56945347c5bec253189bd8
 ms.openlocfilehash: f9313d3c8b93ba13074c547f1f63c9f3204f0f58
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 HINWEIS: Diese API ist in der nächsten Entwicklervorschau erhältlich.
 
-# Systemupdate-Richtlinien-API-Referenz   
+# <a name="system-update-policy-api-reference"></a>Systemupdate-Richtlinien-API-Referenz   
 Sie können mit dieser API ermitteln, welche Update-Richtlinie auf Ihre Konsole angewendet wird, und eine neue Richtlinie festlegen.
 
 WICHTIG: Die meisten Konsolen erhalten beim Versuch, diese API aufzurufen, die Antwort „Zugriff verweigert“. Dies liegt daran, dass nicht alle Entwicklungskonsolen in der Lage sind, ihre Update-Richtlinie zu ändern.
 
 Diese API wirkt sich nur auf die Update-Richtlinie für Konsolen im Entwicklermodus und nicht auf handelsübliche Konsolen aus.
 
-## Die Update-Richtlinie für die Konsole abrufen
+## <a name="get-the-console-update-policy"></a>Die Update-Richtlinie für die Konsole abrufen
 
 **Anforderung**
 
@@ -29,15 +27,15 @@ GET | /ext/Update/Policy
 <br />
 **URI-Parameter**
 
-- Keiner
+- Keine
 
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**   
 Die Antwort ist ein JSON-Array, das die Systemupdate-Gruppenmitgliedschaften der Konsole enthält. Jedes Objekt hat folgende Felder:   
@@ -50,7 +48,7 @@ ResourceSetID - (Zeichenfolge) Ignorieren - wird von der Systemupdate-Infrastruk
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -58,7 +56,7 @@ HTTP-Statuscode      | Beschreibung
 4XX | Fehlercodes
 5XX | Fehlercodes
 
-## Festlegen der Systemupdate-Richtlinien für eine Konsole
+## <a name="set-a-consoles-system-update-policy"></a>Festlegen der Systemupdate-Richtlinien für eine Konsole
 Sie können mit dieser API die Systemupdate-Gruppenmitgliedschaft für die Konsole ändern.
 
 Hinweis: Konsolen können nur jeweils einer Systemupdate-Gruppe angehören.
@@ -73,11 +71,11 @@ POST | /ext/Update/Policy
 <br />
 **URI-Parameter**
 
-- Kein
+- Keine
 
 **Anforderungsheader**
 
-- Kein
+- Keine
 
 **Anforderungstext**   
 Der Anforderungstext ist ein JSON-Objekt mit den folgenden Feldern:   
@@ -97,7 +95,7 @@ Die möglichen Werte für „GroupIDs“ sind folgende:
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -109,10 +107,4 @@ HTTP-Statuscode      | Beschreibung
 **Verfügbare Gerätefamilien**
 
 * Windows Xbox
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

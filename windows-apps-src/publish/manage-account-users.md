@@ -8,18 +8,15 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 83c7f52f0d55773c3bb0d5802eb1166aa6cf40a7
-ms.lasthandoff: 02/07/2017
-
+keywords: windows10, UWP
+ms.openlocfilehash: 7eaddcfc2d02805e60043132328ef482872a9000
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="manage-account-users"></a>Verwalten von Kontobenutzern
 
 
-Sie können Ihrem Dev Center-Konto mithilfe von Azure Active Directory Benutzer hinzufügen. Jedem Benutzer wird eine Rolle zugewiesen, mit der er bestimmte Berechtigungen für das Konto erhält. Sie können eine Rolle auch einer Gruppe von Benutzern oder einer Azure AD-App zuweisen.
+Sie können mit Azure Active Directory Ihrem Dev Center-Konto Benutzer hinzufügen. Jedem Benutzer wird eine Rolle zugewiesen, mit der er bestimmte Berechtigungen für das Konto erhält. Sie können eine Rolle auch einer Gruppe von Benutzern oder einer Azure AD-App zuweisen.
 
 > **Wichtig**  Zum Hinzufügen und Verwalten von Kontobenutzern müssen Sie zunächst Ihr Dev Center-Konto dem Azure Active Directory Ihres Unternehmens zuordnen. Dazu müssen Sie sich bei Azure AD mit einem [globalen Administratorkonto](http://go.microsoft.com/fwlink/?LinkId=746654) anmelden. Nachdem Sie diese Zuordnung festgelegt haben, können Sie sie erst nach Rücksprache mit dem Support wieder entfernen.
 
@@ -37,7 +34,7 @@ Wenn Ihre Organisation Azure AD bereits verwendet, gehen Sie folgendermaßen vor
 
 1.  Wechseln Sie zu den **Kontoeinstellungen**, und klicken Sie auf **Benutzer verwalten**.
 2.  Klicken Sie auf die **Schaltfläche zum Zuordnen Ihres Dev Center-Kontos zu Azure AD**.
-3.  Melden Sie sich bei Ihrem Azure AD-Konto an. Dieses Konto muss über Berechtigungen des [globalen Administrators](http://go.microsoft.com/fwlink/?LinkId=746654) verfügen, damit die Zuordnung eingerichtet werden kann.
+3.  Melden Sie sich bei Ihrem AzureAD-Konto an. Dieses Konto muss über Berechtigungen des [globalen Administrators](http://go.microsoft.com/fwlink/?LinkId=746654) verfügen, damit die Zuordnung eingerichtet werden kann.
 4.  Überprüfen Sie den Organisations- und den Domänennamen für das Azure AD-Konto. Klicken Sie zum Abschließen der Zuordnung auf **Bestätigen**.
 5.  Wenn die Zuordnung erfolgreich abgeschlossen wurde, können Sie nun auf der Seite **Benutzer verwalten** Ihres Kontos Kontobenutzer hinzufügen und verwalten wie in den folgenden Abschnitten beschrieben.
 
@@ -61,7 +58,7 @@ Wenn Sie ein neues Azure AD einrichten müssen, um diesem Ihr Dev Center-Konto z
 
 Nachdem Sie die Zuordnung hergestellt haben, können Sie Ihrem Konto Benutzer, Gruppen und Azure AD-Apps hinzufügen. Sie können auch Rollen ändern, Kontodetails bearbeiten und Benutzer entfernen.
 
-> **Hinweis**  Wenn Ihre Organisation die [Verzeichnisintegration](http://go.microsoft.com/fwlink/p/?LinkID=724033) zum Synchronisieren des lokalen Verzeichnisdiensts mit Azure AD verwendet, können Sie in Dev Center keine neuen Benutzer, Gruppen oder Azure AD-Anwendungen erstellen. Sie (oder ein anderer Administrator in Ihrem lokalen Verzeichnis) müssen sie direkt im lokalen Verzeichnis erstellen, bevor sie in Dev Center angezeigt und hinzugefügt werden können.
+> **Hinweis**  Wenn Ihre Organisation die [Verzeichnisintegration](http://go.microsoft.com/fwlink/p/?LinkID=724033) zum Synchronisieren des lokalen Verzeichnisdiensts mit AzureAD verwendet, können Sie in DevCenter keine neuen Benutzer, Gruppen oder AzureAD-Anwendungen erstellen. Sie (oder ein anderer Administrator in Ihrem lokalen Verzeichnis) müssen sie direkt im lokalen Verzeichnis erstellen, bevor sie in DevCenter angezeigt und hinzugefügt werden können.
 
 Beachten Sie beim Verwalten von Benutzern Folgendes:
 
@@ -134,7 +131,7 @@ Wenn der neue Benutzer ein [Konto als globaler Administrator](http://go.microsof
 6.  Wählen Sie im Abschnitt **Rollen** eine oder mehrere Rollen aus, die dem neuen Benutzer zugewiesen werden sollen, oder weisen Sie angepasste Berechtigungen zu.
 7.  Wählen Sie im Abschnitt **Gruppenmitgliedschaft** alle Gruppen aus, denen der neue Benutzer angehören soll.
 8.  Klicken Sie auf **Speichern**.
-9.  Auf der Bestätigungsseite werden die Anmeldedaten für den neuen Benutzer angezeigt, z. B. ein temporäres Kennwort. Notieren Sie sich diese Informationen, und teilen Sie sie dem neuen Benutzer mit, da Sie nach dem Verlassen dieser Seite nicht mehr auf das temporäre Kennwort zugreifen können.
+9.  Auf der Bestätigungsseite werden die Anmeldedaten für den neuen Benutzer angezeigt, z.B. ein temporäres Kennwort. Notieren Sie sich diese Informationen, und teilen Sie sie dem neuen Benutzer mit, da Sie nach dem Verlassen dieser Seite nicht mehr auf das temporäre Kennwort zugreifen können.
 
 **Erstellen eines neuen Benutzerkontos in Dev Center, ohne den Benutzer zum Verzeichnis Ihrer Organisation zuzuweisen**
 
@@ -173,7 +170,7 @@ Wenn Sie bei der Erstellung des Benutzerkontos eine **E-Mail-Adresse zur Kennwor
 
 ## <a name="add-and-manage-groups"></a>Hinzufügen und Verwalten von Gruppen
 
-Wenn Sie dem Dev Center-Konto eine Gruppe aus dem Verzeichnis der Organisation hinzufügen, kann jeder Benutzer, der Mitglied dieser Gruppe ist, mit den Berechtigungen für die der Gruppe zugewiesenen Rolle darauf zugreifen. Beachten Sie, dass alle an Gruppen vorgenommenen Änderungen (u. a. Änderungen von Name oder Mitgliedschaft) im Verzeichnis der Organisation widergespiegelt werden.
+Wenn Sie dem Dev Center-Konto eine Gruppe aus dem Verzeichnis der Organisation hinzufügen, kann jeder Benutzer, der Mitglied dieser Gruppe ist, mit den Berechtigungen für die der Gruppe zugewiesenen Rolle darauf zugreifen. Beachten Sie, dass alle an Gruppen vorgenommenen Änderungen (u.a. Änderungen von Name oder Mitgliedschaft) im Verzeichnis der Organisation widergespiegelt werden.
 
 Wenn Sie mehrere Gruppen gleichzeitig hinzufügen, müssen Sie ihnen die gleiche Rolle zuweisen. Wenn Sie Gruppen hinzufügen, ihnen jedoch unterschiedliche Rollen zuweisen möchten, wiederholen Sie die folgenden Schritte für jede Rolle.
 
@@ -258,7 +255,7 @@ Wenn die Azure AD-Anwendung Daten in Microsoft Azure AD liest und schreibt, ben�
 
 3.  Es wird ein Bildschirm mit den Werten für **Client-ID** und **Schlüssel** angezeigt.
 
-    > **Wichtig**  Drucken oder kopieren Sie diese Informationen, da Sie nach dem Verlassen dieser Seite nicht erneut auf sie zugreifen können.
+    > **Wichtig**  Drucken oder kopieren Sie diese Informationen, da Sie nach dem Verlassen dieser Seite nicht mehr auf diese zugreifen können.
 
 4.  Klicken Sie auf **Weiteren Schlüssel hinzufügen**, wenn Sie weitere Schlüssel erstellen möchten.
 
@@ -266,7 +263,7 @@ Wenn die Azure AD-Anwendung Daten in Microsoft Azure AD liest und schreibt, ben�
 
 Als Kontobesitzer können Sie den detaillierten Browserverlauf für alle weiteren Benutzer, die Sie dem Konto hinzugefügt haben, anzeigen.
 
-Klicken Sie auf der Seite **Benutzer verwalten** bei dem Benutzer, dessen Browserverlauf Sie überprüfen möchten, auf den Link unter **Letzte Aktivität**. Sie können die URLs aller Seiten anzeigen, die der Benutzer in den letzten 30 Tagen besucht habt.
+Klicken Sie auf der Seite **Benutzer verwalten** bei dem Benutzer, dessen Browserverlauf Sie überprüfen möchten, auf den Link unter **Letzte Aktivität**. Sie können die URLs aller Seiten anzeigen, die der Benutzer in den letzten 30Tagen besucht habt.
 
 ## <a name="removing-users-groups-and-azure-ad-applications"></a>Entfernen von Benutzern, Gruppen und Azure AD-Anwendungen
 
@@ -279,4 +276,3 @@ Um einen Benutzer, eine Gruppe oder eine Azure AD-Anwendung aus Ihrem Dev Center
  
 
  
-

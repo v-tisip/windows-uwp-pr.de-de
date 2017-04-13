@@ -1,7 +1,7 @@
 ---
 author: DelfCo
 ms.assetid: 7bb9fd81-8ab5-4f8d-a854-ce285b0669a4
-description: "Technologien für den Zugriff auf Netzwerke und Webdienste."
+description: "Technologien für den Zugriff auf das Netzwerk und Webdienste."
 title: Netzwerk und Webdienste
 ms.author: bobdel
 ms.date: 02/08/2017
@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1bb0e25e9368a6e2f7568ac51620c7a064a01ce3
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 597f78a4048a681dc75b610048a70f7161d0369c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="networking-and-web-services"></a>Netzwerk und Webdienste
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Die folgenden Netzwerk- und Webdiensttechnologien sind für Entwickler von UWP (Universelle Windows-Plattform)-Apps verfügbar.
 
@@ -32,4 +29,3 @@ Die folgenden Netzwerk- und Webdiensttechnologien sind für Entwickler von UWP (
 | [HttpClient](httpclient.md)                                                             | Verwenden Sie die [Windows.Web.Http](https://msdn.microsoft.com/library/windows/apps/dn279692)-Namespace-API zum Senden und Empfangen von Informationen über das HTTP-Protokoll 1.1 und 2.0.             |
 | [RSS/Atom-Feeds](web-feeds.md)                                                          | Mithilfe von Fremdanbieterfeeds, die entsprechend den RSS- und Atom-Standards mit Features im [Windows.Web.Syndication](https://msdn.microsoft.com/library/windows/apps/br243632)-Namespace generiert werden, können Sie die aktuellsten und beliebtesten Webinhalte abrufen oder erstellen.                   |
 | [Hintergrundübertragungen](background-transfers.md)                                         | Verwenden Sie die Hintergrundübertragungs-API zum zuverlässigen Kopieren von Dateien im Netzwerk.           |
-

@@ -9,20 +9,18 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, Feedback-Hub, Starten
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 65a54d96b556b58a83af58b3d52d666372f337bb
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 70607e99ba646cab1805c13e8779871c1e3ec611
+ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
+translationtype: HT
 ---
-
 # <a name="launch-feedback-hub-from-your-app"></a>Starten des Feedback-Hubs über Ihre App
 
 Sie können Ihre Kunden dazu ermutigen, Feedback zu geben, indem Sie ein Steuerelement (wie beispielsweise eine Schaltfläche) zu Ihrer UWP-App (Universelle Windows-Plattform) hinzufügen, durch das der Feedback-Hub gestartet wird. Beim Feedback-Hub handelt es sich um eine vorinstallierte App, in der an einem zentralen Ort Feedback zu Windows und den installierten Apps gesammelt werden kann. Das gesamte über den Feedback-Hub eingereichte Kundenfeedback für Ihre App wird gesammelt und Ihnen im [Feedbackbericht](../publish/feedback-report.md) im Windows Dev Center-Dashboard angezeigt, sodass Sie sich die Probleme, Vorschläge und Upvotes ansehen können, die Ihre Kunden in einem Bericht übermittelt haben.
 
 Um den Feedback-Hub über Ihre App zu starten, verwenden Sie eine API, die vom [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) bereitgestellt wird. Es wird die Verwendung dieser API zum Starten des Feedback-Hubs über ein Benutzeroberflächenelement in Ihrer App empfohlen, das unseren Designrichtlinien entspricht.
 
->**Hinweis:**&nbsp;&nbsp;Der Feedback-Hub ist nur auf Geräten verfügbar, auf denen Version 10.0.14271 oder höher von Windows 10 für die Desktop- und Mobil-[Gerätefamilien](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide#device-families) ausgeführt wird. Es wird empfohlen, ein Feedback-Steuerelement in Ihrer App nur dann einzublenden, wenn der Feedback-Hub auf dem Gerät des Benutzers verfügbar ist. Mithilfe des Codes in diesem Thema wird die Vorgehensweise veranschaulicht.
+> [!NOTE]
+> Der Feedback-Hub ist nur auf Geräten verfügbar, auf denen Version10.0.14271 oder höher von Windows10 für die Desktop- und Mobil-[Gerätefamilien](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide#device-families) ausgeführt wird. Es wird empfohlen, ein Feedback-Steuerelement in Ihrer App nur dann einzublenden, wenn der Feedback-Hub auf dem Gerät des Benutzers verfügbar ist. Mithilfe des Codes in diesem Thema wird die Vorgehensweise veranschaulicht.
 
 ## <a name="how-to-launch-feedback-hub-from-your-app"></a>So starten Sie den Feedback-Hub über Ihre App
 
@@ -33,38 +31,35 @@ So starten Sie den Feedback-Hub über Ihre App
 3. Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf den Knoten **Verweise** für Ihr Projekt, und wählen Sie anschließend **Verweis hinzufügen** aus.
 4. Erweitern Sie im **Verweis-Manager** die Option **Universelle Windows-App**, und klicken Sie auf **Erweiterungen**.
 5. Klicken Sie in der Liste der SDKs auf das Kontrollkästchen neben **Microsoft Engagement Framework** und anschließend auf **OK**.
-6. Fügen Sie in Ihrem Projekt das Steuerelement hinzu, das Sie für Benutzer anzeigen lassen möchten, um den Feedback-Hub zu starten, z. B. eine Schaltfläche. Wir empfehlen Ihnen folgende Konfiguration für das Steuerelement:
+6. Fügen Sie in Ihrem Projekt das Steuerelement hinzu, das Sie für Benutzer anzeigen lassen möchten, um den Feedback-Hub zu starten, z.B. eine Schaltfläche. Wir empfehlen Ihnen folgende Konfiguration für das Steuerelement:
   * Legen Sie die Schriftart der Inhalte im Steuerelement auf **Segoe MDL2 Assets** fest.
   * Legen Sie den Text im Steuerelement auf das hexadezimale Unicode-Zeichen E939 fest. Dabei handelt es sich um den Zeichencode für das empfohlene Feedbacksymbol in der Schriftart **Segoe MDL2 Assets**.
   * Legen Sie bezüglich der Sichtbarkeit des Steuerelements fest, dass es ausgeblendet wird.
-
-    > **Hinweis**&nbsp;&nbsp;Es wird empfohlen, das Feedback-Steuerelement standardmäßig auszublenden und es in Ihrem Initialisierungscode nur dann anzuzeigen, wenn der Feedback-Hub auf dem Gerät des Benutzers verfügbar ist. Im nächsten Schritt wird die Vorgehensweise erläutert.
+    > [!NOTE]
+    > Wir empfehlen Ihnen, das Feedback-Steuerelement standardmäßig auszublenden und es in Ihrem Initialisierungscode nur dann anzuzeigen, wenn der Feedback-Hub auf dem Gerät des Benutzers verfügbar ist. Im nächsten Schritt wird die Vorgehensweise erläutert.
 
   Der folgende Code veranschaulicht die XAML-Definition einer [Schaltfläche](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx), die wie oben beschrieben konfiguriert ist.
 
-  > [!div class="tabbedCodeSnippets"]
-  ```xml
+  ```XML
   <Button x:Name="feedbackButton" FontFamily="Segoe MDL2 Assets" Content="&#xE939;" HorizontalAlignment="Left" Margin="138,352,0,0" VerticalAlignment="Top" Visibility="Collapsed"  Click="feedbackButton_Click"/>
   ```
 
-7. Verwenden Sie im Initialisierungscode der App-Seite, auf der Ihr Feedback-Steuerelement gehostet wird, die statische [IsSupported](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.issupported.aspx)-Methode der [StoreServicesFeedbackLauncher](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.aspx)-Klasse, um zu ermitteln, ob der Feedback-Hub auf dem Gerät des Benutzers verfügbar ist. Der Feedback-Hub ist nur auf Geräten verfügbar, auf denen Version 10.0.14271 oder höher von Windows 10 für die Desktop- und Mobil-[Gerätefamilien](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide#device-families) ausgeführt wird.
+7. Verwenden Sie im Initialisierungscode der App-Seite, auf der Ihr Feedback-Steuerelement gehostet wird, die statische [IsSupported](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.issupported.aspx)-Methode der [StoreServicesFeedbackLauncher](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.aspx)-Klasse, um zu ermitteln, ob der Feedback-Hub auf dem Gerät des Benutzers verfügbar ist. Der Feedback-Hub ist nur auf Geräten verfügbar, auf denen Version10.0.14271 oder höher von Windows10 für die Desktop- und Mobil-[Gerätefamilien](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide#device-families) ausgeführt wird.
 
   Wenn diese Eigenschaft **true** zurückgibt, legen Sie fest, dass das Steuerelement sichtbar wird. Der folgende Code veranschaulicht die Vorgehensweise für eine [Schaltfläche](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx).
 
-  > [!div class="tabbedCodeSnippets"]
   [!code-cs[LaunchFeedback](./code/StoreSDKSamples/cs/FeedbackPage.xaml.cs#ToggleFeedbackVisibility)]
 
-  <span/>
-  >**Hinweis:**&nbsp;&nbsp;Obwohl der Feedback-Hub zurzeit auf Xbox-Geräten nicht unterstützt wird, gibt die Eigenschaft **IsSupported** zurzeit **true** auf Xbox-Geräten aus, auf denen Windows 10, Version 10.0.14271 oder höher ausgeführt wird. Dies ist ein bekanntes Problem, das in einer zukünftigen Version des Microsoft Store Services SDK behoben sein wird.  
+    > [!NOTE]
+    > Obwohl der Feedback-Hub zurzeit auf Xbox-Geräten nicht unterstützt wird, gibt die Eigenschaft **IsSupported** zurzeit **true** auf Xbox-Geräten aus, auf denen Windows10, Version10.0.14271 oder höher ausgeführt wird. Dies ist ein bekanntes Problem, das in einer zukünftigen Version des Microsoft Store Services SDK behoben sein wird.  
 
 8. Rufen Sie im Ereignishandler, der ausgeführt wird, wenn der Benutzer auf das Steuerelement klickt, ein [StoreServicesFeedbackLauncher](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.aspx)-Objekt ab, und rufen Sie die [LaunchAsync](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.launchasync.aspx)-Methode auf, um die Feedback-Hub-App zu starten. Es gibt zwei Überladungen für diese Methode: eine ohne Parameter und eine weitere, die ein Wörterbuch mit Schlüssel-Wert-Paaren akzeptiert, die wiederum Metadaten enthalten, die Sie mit dem Feedback verknüpfen möchten. Im folgenden Beispiel wird gezeigt, wie Sie den Feedback-Hub im [Click](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx)-Ereignishandler für eine [Schaltfläche](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx) starten.
 
-  > [!div class="tabbedCodeSnippets"]
   [!code-cs[LaunchFeedback](./code/StoreSDKSamples/cs/FeedbackPage.xaml.cs#FeedbackButtonClick)]
 
 ## <a name="design-recommendations-for-your-feedback-ui"></a>Designempfehlungen für Ihre Feedback-Benutzeroberfläche
 
-Um den Feedback-Hub zu starten, empfehlen wir, in Ihrer App ein Benutzeroberflächenelement (z. B. eine Schaltfläche) hinzuzufügen, in dem das folgende standardmäßige Feedbacksymbol mit der Schriftart „Segoe MDL2 Assets“ und dem Zeichencode E939 angezeigt wird.
+Um den Feedback-Hub zu starten, empfehlen wir, in Ihrer App ein Benutzeroberflächenelement (z.B. eine Schaltfläche) hinzuzufügen, in dem das folgende standardmäßige Feedbacksymbol mit der Schriftart „Segoe MDL2 Assets“ und dem Zeichencode E939 angezeigt wird.
 
 ![Feedbacksymbol](images/feedback_icon.PNG)
 
@@ -83,4 +78,3 @@ Außerdem wird empfohlen, mindestens eine der folgenden Platzierungsoptionen fü
 ## <a name="related-topics"></a>Verwandte Themen
 
 * [Feedbackbericht](../publish/feedback-report.md)
-

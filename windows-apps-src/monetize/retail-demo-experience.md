@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, UWP, Demo-App für den Einzelhandel"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 843f98782410559d47bdb8dc0b23b50fa96552d6
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2fa839c3a559ff0065c98712f73b9bb3ed81b276
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 #  <a name="create-a-retail-demo-experience-rdx-app"></a>Erstellen einer Demo-App für den Einzelhandel (RDX-App, Retail Demo Experience-App)
 
@@ -48,7 +46,7 @@ Geben Sie den Benutzern die Zeit, um Ihre Inhalte zu verdauen.  Es ist zwar wich
 ## <a name="technical-requirements"></a>Technische Anforderungen
 
 Da Demo-Apps den Kunden im Einzelhandel Ihre App optimal präsentieren sollen, ist es wichtig, dass die technischen Anforderungen und Datenschutzrichtlinien des Stores in Bezug auf Demo-Apps für den Einzelhandel eingehalten werden.
-Dies kann auch als Checkliste in Vorbereitung auf den Prüfprozess verwendet werden und für Klarheit beim Testen sorgen. Beachten Sie, dass diese Anforderungen nicht nur für den Prüfprozess, sondern für die gesamte Lebensdauer der Demo-App für den Einzelhandel (d. h. solange Ihre App auf den Vorführgeräten ausgeführt wird) eingehalten werden müssen.
+Dies kann auch als Checkliste in Vorbereitung auf den Prüfprozess verwendet werden und für Klarheit beim Testen sorgen. Beachten Sie, dass diese Anforderungen nicht nur für den Prüfprozess, sondern für die gesamte Lebensdauer der Demo-App für den Einzelhandel (d.h. solange Ihre App auf den Vorführgeräten ausgeführt wird) eingehalten werden müssen.
 
 ### <a name="critical-level-requirements"></a>Kritische Anforderungen
 
@@ -73,7 +71,7 @@ Bei RDX-Apps, die diese Anforderungen mit hoher Priorität nicht erfüllen, muss
 
 * Einprägsame Offline-Erfahrung
 
-    Ihre Demo-App für den Einzelhandel muss eine tolle Offline-Erfahrung bieten, da etwa 50 % der Geräte an Einzelhandelsstandorten offline sind. Dadurch wird sichergestellt, dass das Erlebnis für die Kunden auch dann positiv ist, wenn sie offline mit Ihrer App interagieren.
+    Ihre Demo-App für den Einzelhandel muss eine tolle Offline-Erfahrung bieten, da etwa 50% der Geräte an Einzelhandelsstandorten offline sind. Dadurch wird sichergestellt, dass das Erlebnis für die Kunden auch dann positiv ist, wenn sie offline mit Ihrer App interagieren.
 
 * Aktualisierte Content-Erfahrung
 
@@ -85,7 +83,7 @@ Bei RDX-Apps, die diese Anforderungen mit hoher Priorität nicht erfüllen, muss
 
 * Bereitstellen einer einheitlichen Benutzererfahrung mithilfe des Bereinigungsprozesses
 
-    Die Verwendung eines Vorführgeräts sollte für alle Kunden gleich sein. Verwenden Sie daher den [Bereinigungsprozess](#clean-up-process) für Ihre App, damit diese nach jeder Verwendung zum gleichen Standardzustand zurückkehrt. So wird Kunden nicht angezeigt, was die vorherigen Kunden ausgeführt haben.  Dies umfasst z. B. Punktestände, Erfolge und aufgehobene Sperren.
+    Die Verwendung eines Vorführgeräts sollte für alle Kunden gleich sein. Verwenden Sie daher den [Bereinigungsprozess](#clean-up-process) für Ihre App, damit diese nach jeder Verwendung zum gleichen Standardzustand zurückkehrt. So wird Kunden nicht angezeigt, was die vorherigen Kunden ausgeführt haben.  Dies umfasst z.B. Punktestände, Erfolge und aufgehobene Sperren.
 
 * Altersgerechte Inhalte
 
@@ -101,7 +99,7 @@ Das Windows-Team für den Einzelhandel setzt sich unter Umständen direkt mit En
 
 * Erfüllen der Größenanforderungen für Vorführgeräte
 
-    Die App darf eine Größe von 800 MB nicht übersteigen. Wenden Sie sich direkt an das Windows-Team für den Einzelhandel, wenn Ihre Demo-App für den Einzelhandel den Größenanforderungen nicht entspricht.
+    Die App darf eine Größe von 800MB nicht übersteigen. Wenden Sie sich direkt an das Windows-Team für den Einzelhandel, wenn Ihre Demo-App für den Einzelhandel den Größenanforderungen nicht entspricht.
 
 ## <a name="preparing-codebase-for-retail-demo-mode-development"></a>Vorbereiten der Codebasis für den Demomodus für den Einzelhandel
 
@@ -120,21 +118,21 @@ Die Bereinigung startet nach einer bestimmten Leerlaufzeit. Die Leerlaufzeit beg
 
 #### <a name="desktoppc"></a>Desktop/PC
 
-Nach 120 Sekunden Leerlaufzeit wird auf dem Gerät das Leerlaufvideo wiedergegeben. 5 Sekunden später startet der Bereinigungsprozess.
+Nach 120 Sekunden Leerlaufzeit wird auf dem Gerät das Leerlaufvideo wiedergegeben. 5Sekunden später startet der Bereinigungsprozess.
 
 #### <a name="phone"></a>Telefon
 
-Nach 60 Sekunden Leerlaufzeit wird auf dem Gerät das Leerlaufvideo wiedergegeben, und der Bereinigungsprozess startet sofort.
+Nach 60Sekunden Leerlaufzeit wird auf dem Gerät das Leerlaufvideo wiedergegeben, und der Bereinigungsprozess startet sofort.
 
 ### <a name="what-happens-during-a-default-clean-up-process"></a>Was geschieht bei einem Standardbereinigungsprozess?
 
-#### <a name="step-1-clean-up"></a>Schritt 1: Bereinigen
+#### <a name="step-1-clean-up"></a>Schritt1: Bereinigen
 * Alle Win32- und Store-Apps werden geschlossen.
 * Alle Dateien in bekannten Ordnern wie __Bilder__, __Videos__, __Musik__, __Dokumente__, __SavedPictures__, __CameraRoll__, __Desktop__ und __Downloads__ Ordner werden gelöscht.
 * Unstrukturierte und strukturierte Roamingzustände werden gelöscht.
 * Strukturierte lokale Zustände werden gelöscht.
 
-#### <a name="step-2-set-up"></a>Schritt 2: Einrichten
+#### <a name="step-2-set-up"></a>Schritt2: Einrichten
 * Offlinegeräte: Ordner bleiben leer
 * Onlinegeräte: Demoressourcen für den Einzelhandel können vom Windows Store per Push an das Gerät übertragen werden.
 
@@ -148,7 +146,7 @@ Wenn Sie den Bereinigungsprozess anpassen möchten, müssen Sie den `Microsoft-R
 
 Szenarien, bei denen eine benutzerdefinierte Bereinigungslogik erforderlich ist, umfassen das Ausführen einer umfassenden Einrichtung, das Herunterladen und Zwischenspeichern von Daten oder das Beibehalten der *LocalState*-Daten.
 
-Schritt 1: Deklarieren des _Microsoft-RetailDemo-Cleanup_-Diensts in Ihrem Anwendungsmanifest
+Schritt1: Deklarieren des _Microsoft-RetailDemo-Cleanup_-Diensts in Ihrem Anwendungsmanifest
 ``` CSharp
   <Applications>
       <Extensions>
@@ -161,7 +159,7 @@ Schritt 1: Deklarieren des _Microsoft-RetailDemo-Cleanup_-Diensts in Ihrem Anwe
 
 ```
 
-Schritt 2: Implementieren der benutzerdefinierten Bereinigungslogik unter der _AppdataCleanup_-Funktion mithilfe der folgenden Beispielvorlage.
+Schritt2: Implementieren der benutzerdefinierten Bereinigungslogik unter der _AppdataCleanup_-Funktion mithilfe der folgenden Beispielvorlage.
 ``` CSharp
 using System;
 using System.IO;
@@ -264,4 +262,3 @@ namespace MyCompany.MyApp
  
 
  
-

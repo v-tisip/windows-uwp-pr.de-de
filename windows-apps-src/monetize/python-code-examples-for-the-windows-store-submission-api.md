@@ -2,23 +2,20 @@
 author: mcleanbyron
 ms.assetid: 8AC56AAF-8D8C-4193-A6B3-BB5D0669D994
 description: "Verwenden Sie die Python-Codebeispiele in diesem Abschnitt, um mehr über die Verwendung der Windows Store-Übermittlungs-API zu erfahren."
-title: "Python-Codebeispiele für die Windows Store-Übermittlungs-API"
+title: "Python-Codebeispiele für die Übermittlungs-API"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Windows Store-Übermittlungs-API, Beispielcode"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: f787fd042982e4e5a965c9bb77ef72a8dabb6ae9
-ms.lasthandoff: 02/07/2017
-
+keywords: "Windows10, UWP, Windows Store-Übermittlungs-API, Codebeispiele"
+ms.openlocfilehash: a46907ecfea1de60b8a32cdaea7076f056a41ff5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
+# <a name="python-code-examples-for-the-submission-api"></a>Python-Codebeispiele für die Übermittlungs-API
 
-# <a name="python-code-examples-for-the-windows-store-submission-api"></a>Python-Codebeispiele für die Windows Store-Übermittlungs-API
-
-Dieser Artikel enthält Python-Codebeispiele für das Verwenden der *Windows Store-Übermittlungs-API*. Weitere Informationen über diese API finden Sie unter [Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten](create-and-manage-submissions-using-windows-store-services.md).
+Dieser Artikel enthält Python-Codebeispiele für das Verwenden der *Windows Store-Übermittlungs-API*. Weitere Informationen über diese API finden Sie unter [Erstellen und Verwalten von Übermittlungen mit WindowsStore-Diensten](create-and-manage-submissions-using-windows-store-services.md).
 
 In diesen Codebeispielen werden die folgenden Aufgaben gezeigt:
 
@@ -32,7 +29,7 @@ In diesen Codebeispielen werden die folgenden Aufgaben gezeigt:
 <span id="token" />
 ## <a name="obtain-an-azure-ad-access-token"></a>Abrufen eines Azure AD-Zugriffstokens
 
-Im folgenden Beispiel wird gezeigt, wie Sie ein [Azure AD-Zugriffstoken abrufen](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), mit dem Sie Methoden in der Windows Store-Übermittlungs-API aufrufen können. Nach dem Abruf eines Zugriffstokens können Sie es für einen Zeitraum von 60 Minuten in Aufrufen von Windows Store-Übermittlungs-APIs verwenden, bevor es abläuft. Nach Ablauf des Tokens können Sie ein neues Token generieren.
+Im folgenden Beispiel wird gezeigt, wie Sie ein [Azure AD-Zugriffstoken abrufen](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), mit dem Sie Methoden in der Windows Store-Übermittlungs-API aufrufen können. Nach dem Abruf eines Zugriffstokens können Sie es für einen Zeitraum von 60Minuten in Aufrufen von Windows Store-Übermittlungs-APIs verwenden, bevor es abläuft. Nach Ablauf des Tokens können Sie ein neues Token generieren.
 
 [!code[SubmissionApi](./code/StoreServicesExamples_Submission/python/Examples.py#L1-L20)]
 
@@ -94,5 +91,4 @@ Das folgende Beispiel zeigt, wie Sie verschiedene Methoden in der Windows Store-
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten](create-and-manage-submissions-using-windows-store-services.md)
-
+* [Erstellen und Verwalten von Übermittlungen mit WindowsStore-Diensten](create-and-manage-submissions-using-windows-store-services.md)

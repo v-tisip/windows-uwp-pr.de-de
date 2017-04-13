@@ -8,20 +8,17 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: aaeedd655e5ae84dc4ee71683a9831412c8ef5ac
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 4a4aac5c5990807f2988be1ba818992b1bccbea3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-platform-specific-store-listings"></a>Erstellen plattformspezifischer Store-Einträge
 
 
 Wenn die von Ihnen bereitgestellten Pakete auf unterschiedliche Betriebssysteme ausgerichtet sind, können Sie Teile Ihres Store-Eintrags für verschiedene Zielbetriebssysteme anpassen. Diese Option wird nur dann angezeigt, wenn Sie bereits Pakete hochgeladen haben und Pakete für frühere Betriebssystemversionen bereitstellen (Windows 8.x oder früher und/oder Windows Phone 8.x oder früher).
 
-> **Wichtig**  Kunden unter Windows 10 wird immer der standardmäßige Store-Eintrag angezeigt.
+> **Wichtig**  Kunden unter Windows10 wird immer der standardmäßige Store-Eintrag angezeigt.
 
 Mit plattformspezifischen Store-Einträgen können Sie Features betonen, die nur in einer Betriebssystemversion vorkommen, oder Screenshots speziell für ein bestimmtes Betriebssystem (unabhängig vom Gerätetyp) bereitstellen, anstatt allen Kunden denselben Store-Eintrag anzuzeigen.
 
@@ -33,7 +30,7 @@ Am oberen Rand der Seite **Store-Eintrag** sehen Sie einen Link zum **Erstellen 
 
 > **Tipp** Plattformspezifische Store-Einträge können erst nach dem Hochladen von Paketen erstellt werden.
 
-Wenn Sie auf den Link zum **Erstellen eines plattformspezifischen Store-Eintrags für Apps** klicken, wird ein Popup geöffnet, in dem Sie zur Auswahl der unterstützten Zielbetriebssysteme aufgefordert werden. Windows 10 ist nicht in der Liste der Optionen enthalten, da Kunden unter Windows 10 immer der standardmäßige Store-Eintrag der App angezeigt wird.
+Wenn Sie auf den Link zum **Erstellen eines plattformspezifischen Store-Eintrags für Apps** klicken, wird ein Popup geöffnet, in dem Sie zur Auswahl der unterstützten Zielbetriebssysteme aufgefordert werden. Windows10 ist nicht in der Liste der Optionen enthalten, da Kunden unter Windows10 immer der standardmäßige Store-Eintrag der App angezeigt wird.
 
 > **Hinweis**  Wenn Sie bereits plattformspezifische Store-Einträge für alle Betriebssystemversionen erstellt haben, auf die die App ausgerichtet ist, können Sie keine Auswahl vornehmen.
 
@@ -50,7 +47,6 @@ Wenn Sie einen plattformspezifischen Store-Eintrag erstellen und später festste
  
 
  
-
 
 
 

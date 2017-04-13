@@ -1,6 +1,6 @@
 ---
 author: jnHs
-Description: "Über den Bericht „Integrität“ im Windows Dev Center-Dashboard können Sie Daten zur Leistung und Qualität Ihrer App, zu Abstürzen und Fehlreaktionen abrufen."
+Description: "Über den Bericht „Integrität“ im Windows Dev Center-Dashboard können Sie Daten zur Leistung und Qualität Ihrer App einschließlich App-Abstürzen abrufen."
 title: "Integritätsbericht"
 ms.assetid: 4F671543-1E91-4E59-88A3-638E3E64539A
 ms.author: wdg-dev-content
@@ -8,18 +8,15 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 838b70d5925627710875a498d0cc91efb3e0adf7
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: dd1d0f01968a71dc2120316eb2c33baf0c9d0841
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="health-report"></a>Integritätsbericht
 
 
-Über den Bericht **Integrität** im Windows Dev Center-Dashboard können Sie Daten zur Leistung und Qualität Ihrer App, zu Abstürzen und Fehlreaktionen abrufen. Sie können diese Daten in Ihrem Dashboard (**Analyse** > **Integrität**) anzeigen oder den [Bericht herunterladen](download-analytic-reports.md), um ihn offline anzuzeigen. Bei Bedarf können Sie Stapelüberwachungen für weitere Debugzwecke anzeigen. Sie können diese Daten jedoch auch programmgesteuert mit der [Windows Store-REST-API für Analysen](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
+Über den Bericht **Integrität** im Windows Dev Center-Dashboard können Sie Daten zur Leistung und Qualität Ihrer App, einschließlich App-Abstürzen, abrufen. Sie können diese Daten in Ihrem Dashboard (**Analyse** > **Integrität**) anzeigen oder den [Bericht herunterladen](download-analytic-reports.md), um ihn offline anzuzeigen. Bei Bedarf können Sie Stapelüberwachungen für weitere Debugzwecke anzeigen. Sie können diese Daten jedoch auch programmgesteuert mit der [Windows Store-REST-API für Analysen](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
 
 
 > **Hinweis**  Wenn Sie bereits Apps veröffentlicht und Leistungsdaten angezeigt haben, werden Sie möglicherweise feststellen, dass hier eine höhere Anzahl von Abstürzen und Ereignissen gemeldet wird. Das liegt daran, dass wir in diesem Bericht mehr Daten angeben können, sodass Sie ein vollständiges Bild erhalten.
@@ -29,7 +26,7 @@ ms.lasthandoff: 02/07/2017
 
 Im oberen Seitenbereich können Sie **Filter anwenden** erweitern, um alle Daten auf dieser Seite nach Datumsbereich, Paketversion, Gerätetyp und/oder Betriebssystemversion zu filtern.
 
--   **Datum**: Der Standardfilter lautet **Letzte 72 Stunden**, er kann jedoch bis auf **Letzte 30 Tage** erweitert werden.
+-   **Datum**: Der Standardfilter lautet **Letzte 72Stunden**, er kann jedoch bis auf **Letzte 30Tage** erweitert werden.
 -   **Paketversion**: Die Standardeinstellung ist **Alle Versionen**. Wenn Ihre App mehr als eine Paketversion enthält, können Sie eine spezifische Version auswählen.
 -   **Gerätetyp**: Der Standardwert lautet **Alle Geräte**, Sie können jedoch ein bestimmtes Gerät auswählen (**PC**, **Telefon**, **Konsole**, **IoT**, **Hologramm** oder **Unbekannt**).
 -   **Betriebssystemversion**: Die Standardeinstellung lautet **Alle BS-Versionen**, Sie können jedoch eine bestimmte Version des Betriebssystems auswählen.
@@ -63,4 +60,3 @@ Wählen Sie zum Anzeigen der **Fehlerdetails** für einen bestimmten Fehler den 
  
 
  
-

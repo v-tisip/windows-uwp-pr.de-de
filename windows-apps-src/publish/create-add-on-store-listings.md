@@ -8,14 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ecf24a0a51734d159a412824d6b43d76d92b3002
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: d27afd09d5805604a09aba91f57b20625df4d95b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-add-on-store-listings"></a>Erstellen von Store-Einträgen für Add-Ons
 
 
@@ -34,11 +31,11 @@ Klicken Sie zum Bearbeiten eines Store-Eintrags auf den Namen der Sprache in der
 
 ## <a name="title"></a>Titel
 
-Sie müssen hier einen Titel angeben, der Ihren Kunden für dieses Add-On als Name angezeigt wird. Der Titel kann bis zu 100 Zeichen lang sein.
+Sie müssen hier einen Titel angeben, der Ihren Kunden für dieses Add-On als Name angezeigt wird. Der Titel kann bis zu 100Zeichen lang sein.
 
 ## <a name="description"></a>Beschreibung
 
-Wenn Sie mehr Informationen als nur einen Titel anzeigen möchten, können Sie hier bis zu 200 Zeichen eingeben. Dieses Feld ist optional.
+Wenn Sie mehr Informationen als nur einen Titel anzeigen möchten, können Sie hier bis zu 200Zeichen eingeben. Dieses Feld ist optional.
 
 ## <a name="icon"></a>Symbol
 
@@ -47,7 +44,6 @@ Sie können auch ein Bild bereitstellen, das dem Kunden angezeigt wird. Dabei mu
  
 
  
-
 
 
 

@@ -9,16 +9,13 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: efdf4214-9738-4df6-bf1f-ed7141696ef6
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 5d1926655f44fb54b07e7222911c94ef0e526cd0
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 59ecdb1994ffe1fe80da9301cea5d91c7e4e3a8d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="register-an-app-in-a-loose-folder"></a>Registrieren einer App in einem losen Ordner  
 
-**Anfordern**
+**Anforderung**
 
 Mithilfe des folgenden Anforderungsformats können Sie eine App in einem losen Ordner registrieren.
 
@@ -41,13 +38,13 @@ folder (erforderlich) | Der Name des Zielordners für das Paket, das registriert
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -66,5 +63,4 @@ Es gibt mindestens drei verschiedene Möglichkeiten, die lose App in den gewüns
 Die zweite Möglichkeit besteht darin, einzelne Dateien mithilfe eines POST-Befehls für „/api/filesystem/apps/file“ in den richtigen Ordner zu kopieren. „knownfolderid“ entspricht dabei „DevelopmentFiles“, „packagefullname“ ist leer, und der Dateiname und Pfad sind ordnungsgemäß angegeben (der Pfad muss mit „LooseApps“ beginnen).
 
 Die dritte Möglichkeit besteht darin, einen vollständigen Ordner über [/api/app/packagemanager/upload](wdp-folder-upload.md) auf einmal zu kopieren. Dabei entspricht „destinationFolder“ dem Namen des Ordners, der unter „d:\developmentfiles\looseapps“ gespeichert werden soll, und die Nutzlast einem multipart-konformen HTTP-Text des Verzeichnisinhalts.
-
 

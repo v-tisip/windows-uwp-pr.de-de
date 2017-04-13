@@ -2,25 +2,22 @@
 author: mcleanbyron
 ms.assetid: 8D4AE532-22EF-4743-9555-A828B24B8F16
 description: "Verwenden Sie diese Methoden der Windows Store-Übermittlungs-API, um Daten für Apps abzurufen, die in Ihrem Windows Dev Center-Konto registriert wurden."
-title: "Abrufen von App-Daten mithilfe der Windows Store-Übermittlungs-API"
+title: Abrufen von App-Daten
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Windows Store-Übermittlungs-API, App-Daten"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 756f11cdc440a891658c2311cc61199dec3d6d1f
-ms.lasthandoff: 02/07/2017
-
+keywords: "Windows10, UWP, Windows Store-Übermittlungs-API, App-Daten"
+ms.openlocfilehash: dc0aa91aa417689866aa6bd666f0446c0eb2e242
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
+# <a name="get-app-data"></a>Abrufen von App-Daten
 
-# <a name="get-app-data-using-the-windows-store-submission-api"></a>Abrufen von App-Daten mithilfe der Windows Store-Übermittlungs-API
+Verwenden Sie die folgenden Methoden in der Windows Store-Übermittlungs-API, um Daten für vorhandene Apps abzurufen, die in Ihrem Windows Dev Center-Konto registriert wurden. Eine Einführung in die Windows Store-Übermittlungs-API einschließlich der Voraussetzungen für die Verwendung der API finden Sie unter [Erstellen und Verwalten von Übermittlungen mit WindowsStore-Diensten](create-and-manage-submissions-using-windows-store-services.md).
 
-Verwenden Sie die folgenden Methoden in der Windows Store-Übermittlungs-API, um Daten für vorhandene Apps abzurufen, die in Ihrem Windows Dev Center-Konto registriert wurden. Eine Einführung in die Windows Store-Übermittlungs-API einschließlich der Voraussetzungen für die Verwendung der API finden Sie unter [Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten](create-and-manage-submissions-using-windows-store-services.md).
-
->**Hinweis**&nbsp;&nbsp;Diese Methoden können nur für Windows Dev Center-Konten verwendet werden, die zur Verwendung der Windows Store-Übermittlungs-API berechtigt sind. Diese Berechtigung wird für Entwicklerkonten stufenweise aktiviert, und die Berechtigung ist zu diesem Zeitpunkt nicht für alle Konten aktiviert. Um früheren Zugriff anfordern, melden Sie sich beim Dev Center-Dashboard an, klicken Sie am unteren Rand des Dashboards auf **Feedback**, wählen Sie **Übermittlungs-API** für den Feedback-Bereich, und übermitteln Sie Ihre Anforderung. Sie erhalten eine E-Mail, wenn diese Berechtigung für Ihr Konto aktiviert ist.
+>**Hinweis**&nbsp;&nbsp;Diese Methoden können nur für Windows Dev Center-Konten verwendet werden, die zur Verwendung der Windows Store-Übermittlungs-API berechtigt sind. Diese Berechtigung wird für Entwicklerkonten phasenweise aktiviert, und die Berechtigung ist zu diesem Zeitpunkt nicht für alle Konten aktiviert. Um früheren Zugriff anfordern, melden Sie sich beim Dev Center-Dashboard an, klicken Sie am unteren Rand des Dashboards auf **Feedback**, wählen Sie **Übermittlungs-API** für den Feedback-Bereich, und übermitteln Sie Ihre Anforderung. Sie erhalten eine E-Mail, wenn diese Berechtigung für Ihr Konto aktiviert ist.
 
 Bevor Sie diese Methoden verwenden können, muss die App in Ihrem Dev Center-Konto bereits vorhanden sein. Informationen zum Erstellen oder Verwalten von Übermittlungen für Apps finden Sie unter den Methoden in [Verwalten von App-Übermittlungen](manage-app-submissions.md).
 
@@ -65,7 +62,7 @@ Bevor Sie diese Methoden verwenden können, muss die App in Ihrem Dev Center-Kon
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Falls noch nicht geschehen, erfüllen Sie vor der Verwendung dieser Methoden alle [Voraussetzungen](create-and-manage-submissions-using-windows-store-services.md#prerequisites) für die Windows Store-Übermittlungs-API.
+Falls noch nicht geschehen, sorgen Sie vor der Verwendung dieser Methoden dafür, dass alle [Voraussetzungen](create-and-manage-submissions-using-windows-store-services.md#prerequisites) für die Windows Store-Übermittlungs-API erfüllt sind.
 
 ## <a name="data-resources"></a>Datenressourcen
 
@@ -97,13 +94,13 @@ Diese Ressource steht für eine App, die in Ihrem Konto registriert ist.
 
 Diese Ressource hat die folgenden Werte.
 
-| Value           | Type    | Description       |
+| Wert           | Typ    | Beschreibung       |
 |-----------------|---------|---------------------|
-| ID            | string  | Die Store-ID der App. Weitere Informationen zur Store-ID finden Sie unter [Anzeigen von Details zur App-Identität](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).   |
+| id            | String  | Die Store-ID der App. Weitere Informationen zur Store-ID finden Sie unter [Anzeigen von Details zur App-Identität](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).   |
 | primaryName   | string  | Der Primärname der App.      |
 | packageFamilyName | string  | Der Paketfamilienname der App.      |
 | packageIdentityName          | string  | Die Paketidentität der App.                       |
-| publisherName       | string  | Die Windows-Herausgeber-ID, die mit der App verknüpft ist. Diese entspricht dem **Package/Identity/Publisher**-Wert, der auf der Seite [App-Identität](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details) für die App im Windows Dev Center-Dashboard angezeigt wird.       |
+| publisherName       | string  | Die Windows-Herausgeber-ID, die mit der App verknüpft ist. Diese entspricht dem **Package/Identity/Publisher**-Wert, der auf der Seite [App-Identität](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details) für die App im WindowsDevCenter-Dashboard angezeigt wird.       |
 | firstPublishedDate      | string  | Das Datum, an dem die App erstmals im Format ISO 8601 veröffentlicht wurde.   |
 | lastPublishedApplicationSubmission       | object | Eine [Übermittlungsressource](#submission_object) mit Informationen über die letzte veröffentlichte Übermittlung für die App.    |
 | pendingApplicationSubmission        | object  |  Eine [Übermittlungsressource](#submission_object) mit Informationen über die aktuelle ausstehende Übermittlung für die App.   |   |
@@ -122,7 +119,7 @@ Diese Ressource enthält Informationen zu einem Add-On.
 
 Diese Ressource hat die folgenden Werte.
 
-| Value           | Type    | Description         |
+| Wert           | Typ    | Beschreibung         |
 |-----------------|---------|----------------------|
 | inAppProductId            | string  | Die Store-ID des Add-Ons. Dieser Wert wird vom Store bereitgestellt. Beispiel für eine Store-ID: 9NBLGGH4TNMP.   |
 
@@ -153,7 +150,7 @@ Diese Ressource enthält Informationen zu einem Flight-Paket für eine App.
 
 Diese Ressource hat die folgenden Werte.
 
-| Value           | Type    | Description           |
+| Wert           | Typ    | Beschreibung           |
 |-----------------|---------|------------------------|
 | flightId            | string  | Die ID für das Flight-Paket. Dieser Wert wird von Dev Center bereitgestellt.  |
 | friendlyName           | string  | Der Name des Flight-Pakets nach Vorgabe des Entwicklers.   |
@@ -188,10 +185,9 @@ Die Ressource hat die folgenden Werte.
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten](create-and-manage-submissions-using-windows-store-services.md)
+* [Erstellen und Verwalten von Übermittlungen mit WindowsStore-Diensten](create-and-manage-submissions-using-windows-store-services.md)
 * [Verwalten von App-Übermittlungen mithilfe der Windows Store-Übermittlungs-API](manage-app-submissions.md)
 * [Abrufen aller Apps](get-all-apps.md)
 * [Abrufen einer App](get-an-app.md)
 * [Abrufen von Add-Ons für eine App](get-add-ons-for-an-app.md)
 * [Abrufen von Flight-Paketen für eine App](get-flights-for-an-app.md)
-

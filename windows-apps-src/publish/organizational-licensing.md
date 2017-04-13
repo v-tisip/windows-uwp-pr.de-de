@@ -9,19 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 0fb906dc84085d3006be7f5f25d895e1150f9265
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 3e942e649ce2c2e486f0326f10378124dd159c4c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="organizational-licensing-options"></a>Lizenzierungsoptionen für Unternehmen
 
 
 Sie können angeben, ob und wie Ihre App für Volume-Käufe über den Windows Store für Unternehmen angeboten wird, indem Sie die Einstellungen auf der Seite [Verfügbarkeit und Preise](set-app-pricing-and-availability.md#organizational-licensing) einer App-Übermittlung im Abschnitt **Unternehmenslizenzierung** festlegen.
 
-Über diese Einstellung können Sie Ihre App wahlweise für Organisationen verfügbar zu machen, die mehrere Lizenzen für ihre Benutzer erwerben und bereitstellen. Ihnen wird so die Möglichkeit gegeben, Ihre Reichweite auf Windows 10-Geschäftskunden für verschiedene Gerätetypen einschließlich PCs, Tablets und Smartphones zu erweitern. Sie müssen zudem Organisationslizenzierung für [Branchen-Apps](distribute-lob-apps-to-enterprises.md) zulassen, die Sie direkt für Unternehmen veröffentlichen.
+Über diese Einstellung können Sie Ihre App wahlweise für Organisationen verfügbar zu machen, die mehrere Lizenzen für ihre Benutzer erwerben und bereitstellen. Ihnen wird so die Möglichkeit gegeben, Ihre Reichweite auf Windows10-Geschäftskunden für verschiedene Gerätetypen einschließlich PCs, Tablets und Smartphones zu erweitern. Sie müssen zudem Organisationslizenzierung für [Branchen-Apps](distribute-lob-apps-to-enterprises.md) zulassen, die Sie direkt für Unternehmen veröffentlichen.
 
 > **Hinweis**  Die Auswahlmöglichkeiten für Ihre Apps werden unabhängig voneinander konfiguriert. Sie können Ihre Einstellungen für eine App jederzeit ändern, indem Sie eine neue Übermittlung erstellen, und die Änderungen werden wirksam, nachdem die Übermittlung den [Zertifizierungsprozess](the-app-certification-process.md) abgeschlossen hat.
 
@@ -92,4 +89,3 @@ Zu diesem Zeitpunkt können Entwickler in den folgenden Ländern und Regionen ü
 - Schweiz
 - Vereinigtes Königreich
 - USA
-

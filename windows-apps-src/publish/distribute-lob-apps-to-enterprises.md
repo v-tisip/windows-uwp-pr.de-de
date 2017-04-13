@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 94d12656a122f623240463886297c2378753924b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e29809f34facafc442b9b26580b91e17ed0a364e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="distribute-lob-apps-to-enterprises"></a>Verteilen von branchenspezifischen Apps an Unternehmen
 
 
@@ -70,7 +67,7 @@ Weitere Informationen finden Sie unter [Arbeiten mit Branchen-Apps](http://go.mi
 
 ### <a name="updating-lob-apps"></a>Aktualisieren von branchenspezifischen Apps
 
-Wenn Sie Updates für eine App veröffentlichen möchten, die bereits als branchenspezifische App veröffentlicht wurde, erstellen Sie einfach eine neue Übermittlung. Sie können neue Pakete hochladen oder andere Änderungen vornehmen. Klicken Sie dann auf **An Store übermitteln**, um die aktualisierte Version verfügbar zu machen. Achten Sie darauf, die Auswahl der Unternehmen unter **Verteilung und Sichtbarkeit** nicht zu ändern (es sei denn, Sie möchten sie bewusst ändern und z. B. ein zusätzliches Unternehmen auswählen, das die App erwerben kann, oder eines der zuvor eingerichteten Unternehmen löschen).
+Wenn Sie Updates für eine App veröffentlichen möchten, die bereits als branchenspezifische App veröffentlicht wurde, erstellen Sie einfach eine neue Übermittlung. Sie können neue Pakete hochladen oder andere Änderungen vornehmen. Klicken Sie dann auf **An Store übermitteln**, um die aktualisierte Version verfügbar zu machen. Achten Sie darauf, die Auswahl der Unternehmen unter **Verteilung und Sichtbarkeit** nicht zu ändern (es sei denn, Sie möchten sie bewusst ändern und z.B. ein zusätzliches Unternehmen auswählen, das die App erwerben kann, oder eines der zuvor eingerichteten Unternehmen löschen).
 
 Wenn Sie eine App, die Sie zuvor als branchenspezifische App veröffentlicht haben, nicht mehr anbieten möchten und keine neuen Käufe möglich sein sollen, müssen Sie eine neue Übermittlung erstellen. Zunächst müssen Sie die Auswahl unter **Verteilung und Sichtbarkeit** von **Branche – Distribution** in **Einzelhandel – Distribution** ändern. Wählen Sie dann unter **Verteilung und Sichtbarkeit** die Option **Diese App ausblenden und den Verkauf stoppen** aus. Nachdem die Übermittlung den Zertifizierungsprozess durchlaufen hat, kann die App nicht mehr neu erworben werden. Benutzer, die sie bereits erworben haben, können sie jedoch weiter verwenden.
 
@@ -80,14 +77,13 @@ Wenn Sie eine App, die Sie zuvor als branchenspezifische App veröffentlicht hab
 
 Wenn Apps über den Store für Unternehmen verfügbar gemacht werden, wird sichergestellt, dass die App vom Store signiert wurde und den Standardrichtlinien des Stores entspricht.
 
-In einigen Fällen möchten Unternehmen möglicherweise aus verschiedenen Gründen nicht, dass ihre branchenspezifischen Apps über das Windows Dev Center übermittelt werden (z. B. aus Compliance-Gründen oder bei Apps, für die weitere Funktionen benötigt werden). In diesem Fall können die Unternehmen Apps durch Querladen direkt auf Computern bereitstellen und müssen nicht den Windows Store für Unternehmen verwenden.
+In einigen Fällen möchten Unternehmen möglicherweise aus verschiedenen Gründen nicht, dass ihre branchenspezifischen Apps über das Windows Dev Center übermittelt werden (z.B. aus Compliance-Gründen oder bei Apps, für die weitere Funktionen benötigt werden). In diesem Fall können die Unternehmen Apps durch Querladen direkt auf Computern bereitstellen und müssen nicht den Windows Store für Unternehmen verwenden.
 
-Weitere Informationen finden Sie unter [Querladen von Branchen-Apps in Windows 10](http://go.microsoft.com/fwlink/p/?LinkId=623433).
-
- 
+Weitere Informationen finden Sie unter [Querladen von Branchen-Apps in Windows10](http://go.microsoft.com/fwlink/p/?LinkId=623433).
 
  
 
+ 
 
 
 

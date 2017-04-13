@@ -1,7 +1,7 @@
 ---
 author: mijacobs
 Description: "In diesem Artikel finden Sie eine Liste der in der Schriftart „Segoe MDL2 Assets“ enthaltenen Glyphen und Hinweise zu deren Verwendung."
-Search.Refinement.TopicID: 184
+Search.Refinement.TopicID: "184"
 title: "Richtlinien für Segoe MDL2-Symbole"
 ms.assetid: DFB215C2-8A61-4957-B662-3B1991AC9BE1
 label: Segoe MDL2 icons
@@ -12,18 +12,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 0869bd8f26a6baf0a6b174812526fe7d80487dec
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 669a59227e06a976ee567eeea7717787727a51ff
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="segoe-mdl2-icons"></a>Segoe MDL2-Symbole
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-In diesem Artikel sind die Symbole der Schriftart „Segoe MDL2 Assets” aufgeführt. 
+In diesem Artikel werden die Symbole der Schriftart Segoe MDL2 Assets aufgeführt. 
 
 <div class="important-apis" >
 <b>Wichtige APIs</b><br/>
@@ -35,7 +32,7 @@ In diesem Artikel sind die Symbole der Schriftart „Segoe MDL2 Assets” aufgef
 
 ## <a name="about-segoe-mdl2-assets"></a>Informationen zu MDL2 Assets
 
-Mit der Veröffentlichung von Windows 10 wurde die Schriftart Segoe UI Symbol von Windows 8/8.1 durch die Schriftart Segoe MDL2 Assets ersetzt. <!-- It can be used in much the same manner as the older font, but many glyphs have been redrawn in the Windows 10 icon style with the font’s metrics set so that icons are aligned within the font’s em-square instead of on a typographic baseline. --> (**Segoe UI Symbol** ist jedoch weiterhin als „veraltete“ Ressource verfügbar. Es wird jedoch empfohlen, Apps auf die neue Schriftart **Segoe MDL2 Assets** zu aktualisieren.)
+Mit der Veröffentlichung von Windows10 wurde die Schriftart Segoe UI Symbol von Windows8/8.1 durch die Schriftart Segoe MDL2 Assets ersetzt. <!-- It can be used in much the same manner as the older font, but many glyphs have been redrawn in the Windows 10 icon style with the font’s metrics set so that icons are aligned within the font’s em-square instead of on a typographic baseline. --> (**Segoe UI Symbol** ist jedoch weiterhin als „veraltete“ Ressource verfügbar. Es wird jedoch empfohlen, Apps auf die neue Schriftart **Segoe MDL2 Assets** zu aktualisieren.)
 
 Die Mehrzahl der in der Schriftart **Segoe MDL2 Assets** enthaltenen Symbole und Benutzeroberflächen-Steuerelemente sind dem Unicode-Bereich „Private Use Area“ (PUA) zugeordnet. Mithilfe des PUA können Entwickler Glyphen, die keinen vorhandenen Codepunkten zugeordnet sind, private Unicode-Werte zuweisen. Dies ist hilfreich bei der Erstellung einer Symbolschriftart, führt jedoch auch zu einem Interoperabilitätsproblem. Ist die Schriftart nicht verfügbar, werden die Glyphen nicht angezeigt. Verwenden Sie die Glyphen nur, wenn Sie die Schriftart **Segoe MDL2 Assets** explizit angeben können.
 
@@ -55,7 +52,7 @@ Viele der Symbole verfügen zudem über gespiegelte Formen, die in Sprachen verw
 Wenn Sie eine App in C#/VB/C++ und XAML entwickeln, können Sie mithilfe der [**Symbolenumeration**](https://msdn.microsoft.com/library/windows/apps/dn252842) Symbole der Schriftart Segoe MDL2 Assets verwenden. 
 
 ## <a name="how-do-i-get-this-font"></a>Wie erhalte ich diese Schriftart?
-Um Segoe MDL2 Assets zu erhalten, müssen Sie Windows 10 installieren. 
+Um Segoe MDL2 Assets zu erhalten, müssen Sie Windows10 installieren. 
 
 <!--
 Also, keep in mind that the **Segoe MDL2 Assets** font includes many more icons than we can show here. Many of these are intended for specialized purposed and are not typically used anywhere else.
@@ -63,7 +60,7 @@ Also, keep in mind that the **Segoe MDL2 Assets** font includes many more icons 
 
 ## <a name="icon-list"></a>Liste der Symbole
 
-<table>
+<table style="background-color: white; color: black">
 
  <tr>
   <td>Symbol</td>
@@ -5150,7 +5147,6 @@ Also, keep in mind that the **Segoe MDL2 Assets** font includes many more icons 
 
 
  
-
 
 
 

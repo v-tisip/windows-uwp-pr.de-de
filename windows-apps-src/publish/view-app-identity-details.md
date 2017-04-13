@@ -8,14 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b9cbe976eb5aece26cac54f7ae8693aef5009ca3
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: b48f99d4146bfa5e4d9b2af3184e1ce3c1aea491
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="view-app-identity-details"></a>Anzeigen von Details zur App-Identität
 
 
@@ -35,7 +32,7 @@ Die folgenden Werte müssen im appx-Manifest enthalten sein. Wenn Sie Ihre Paket
 
 Weitere Informationen finden Sie unter [**Identity**](https://msdn.microsoft.com/library/windows/apps/br211441) in der [Paketmanifestschema-Referenz](https://msdn.microsoft.com/library/windows/apps/br211473).
 
-Zusammen werden durch diese Elemente die Identität Ihrer App deklariert und die „Paketfamilie“ gebildet, der alle zugehörigen Pakete angehören. Einzelne Pakete verfügen über zusätzliche Details, z. B. die Architektur und Version.
+Zusammen werden durch diese Elemente die Identität Ihrer App deklariert und die „Paketfamilie“ gebildet, der alle zugehörigen Pakete angehören. Einzelne Pakete verfügen über zusätzliche Details, z.B. die Architektur und Version.
 
 ## <a name="additional-values-for-package-family"></a>Zusätzliche Werte für die Paketfamilie
 
@@ -49,7 +46,7 @@ Die folgenden zusätzlichen Werte beziehen sich auf die Paketfamilie der App, we
 
 Der Link zu Ihrer App-Seite kann geteilt werden, um Kunden das Auffinden der App im Store zu erleichtern. Dieser Link hat das Format **`https://www.microsoft.com/store/apps/<your app's Store ID>`**.
 
-> **Hinweis:**  Diese URL funktioniert auf jeder Version des Betriebssystems, auf dem die App verfügbar ist. Es werden möglicherweise auch zusätzliche Links für Windows 8.1 und frühere Versionen bzw. Windows Phone 8.1 und frühere Versionen angezeigt, die nur auf den angegebenen Betriebssystemversionen funktionieren.
+> **Hinweis:**  Diese URL funktioniert auf jeder Version des Betriebssystems, auf dem die App verfügbar ist. Es werden möglicherweise auch zusätzliche Links für Windows8.1 und frühere Versionen bzw. Windows Phone8.1 und frühere Versionen angezeigt, die nur auf den angegebenen Betriebssystemversionen funktionieren.
 
 Wenn ein Kunde auf diesen Link klickt, wird die webbasierte Eintragsseite für Ihre App geöffnet. Wenn Ihre App für das Windows-Gerät des Kunden verfügbar ist, wird die Store-App gestartet und der App-Eintrag angezeigt.
 
@@ -58,7 +55,6 @@ Die **Store-ID** Ihrer App wird in diesem Abschnitt auch angezeigt. Diese Store-
  
 
  
-
 
 
 

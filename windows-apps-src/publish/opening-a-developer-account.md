@@ -8,18 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 26329304df64689ea7938d4fc838bd730696e4a2
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 6b7f11330c5849d0df4e54c10a71c2a70fc77a08
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="opening-a-developer-account"></a>Eröffnen eines Entwicklerkontos
 
 Diese Übersicht zur Registrierung eines Entwicklerkontos für Windows Store und andere Microsoft-Programme erleichtert Ihnen das Einrichten Ihres Kontos.
 
-> **Hinweis**  Wenn Sie sich für ein Entwicklerkonto registrieren, verwenden wir die E-Mail-Adresse in Ihren Kontaktinformationen, um Ihnen E-Mail-Nachrichten im Zusammenhang mit Ihrem Konto zu senden. Manchmal enthalten diese E-Mails Informationen über unsere Programme. Wenn Sie sich dafür entscheiden, diese Informations-E-Mails nicht zu erhalten, indem Sie das [Abonnement kündigen](http://go.microsoft.com/fwlink/p/?LinkId=533280), beachten Sie, dass wir Ihnen weiterhin Transaktions-E-Mails senden (z. B. um Sie zu informieren, dass Ihre App die Zertifizierung bestanden hat oder dass eine Zahlung unterwegs ist.) Diese E-Mails sind für Ihre Konto erforderlich. Sie erhalten solange Transaktions-E-Mails, bis Sie Ihr Konto schließen.
+> **Hinweis**  Wenn Sie sich für ein Entwicklerkonto registrieren, verwenden wir die E-Mail-Adresse in Ihren Kontaktinformationen, um Ihnen E-Mail-Nachrichten im Zusammenhang mit Ihrem Konto zu senden. Manchmal enthalten diese E-Mails Informationen über unsere Programme. Wenn Sie sich dafür entscheiden, diese Informations-E-Mails nicht zu erhalten, indem Sie das [Abonnement kündigen](http://go.microsoft.com/fwlink/p/?LinkId=533280), beachten Sie, dass wir Ihnen weiterhin Transaktions-E-Mails senden (z.B. um Sie zu informieren, dass Ihre App die Zertifizierung bestanden hat oder dass eine Zahlung unterwegs ist.) Diese E-Mails sind für Ihre Konto erforderlich. Sie erhalten solange Transaktions-E-Mails, bis Sie Ihr Konto schließen.
 
 ## <a name="the-account-signup-process"></a>Registrieren eines Kontos
 
@@ -34,7 +32,7 @@ Diese Übersicht zur Registrierung eines Entwicklerkontos für Windows Store und
 
    Wenn Sie sich als Unternehmen registrieren, müssen Sie auch den Namen, die E-Mail-Adresse und die Telefonnummer der Person eingeben, die das Konto Ihres Unternehmens genehmigt.
 
-5.  Geben Sie für individuelle Konten den **Anzeigenamen des Herausgebers** an, den Sie verwenden möchten (maximal 50 Zeichen). Wählen Sie den Namen mit Bedacht, da Kunden diesen Namen sehen und Ihre Apps unter diesem Namen kennenlernen.
+5.  Geben Sie für individuelle Konten den **Anzeigenamen des Herausgebers** an, den Sie verwenden möchten (maximal 50Zeichen). Wählen Sie den Namen mit Bedacht, da Kunden diesen Namen sehen und Ihre Apps unter diesem Namen kennenlernen.
 
     Geben Sie für Unternehmenskonten den **registrierten Namen** Ihres Unternehmens (den eingetragenen Unternehmens- oder Handelsnamen Ihrer Organisation) ein. Dieser wird als Anzeigename für den Herausgeber verwendet.
     
@@ -60,7 +58,7 @@ Beachten Sie beim Erstellen eines Unternehmenskontos die folgenden Richtlinien, 
 
 -   Erstellen Sie Ihr Microsoft-Konto mit einer E-Mail-Adresse, die zur Domäne Ihrer Firma gehört, nicht jedoch einem einzelnen Benutzer. Beispiel: windowsapps@fabrikam.com.
 -   Beschränken Sie den Zugriff auf dieses Microsoft-Konto auf so wenige Entwickler wie möglich.
--   Richten Sie eine firmeninterne E-Mail-Verteilerliste ein, die alle Personen enthält, die Zugriff auf das Entwicklerkonto benötigen, und fügen Sie diese E-Mail-Adresse Ihren Sicherheitsinformationen hinzu. So können alle Mitarbeiter auf der Liste bei Bedarf Sicherheitscodes erhalten, um die Sicherheitsinformationen Ihres Microsoft-Kontos zu verwalten. Wenn die Einrichtung einer Verteilerliste nicht realisierbar ist, muss der Besitzer des jeweiligen E-Mail-Kontos verfügbar sein, um auf den Sicherheitscode zugreifen und diesen bei entsprechender Aufforderung freigeben zu können (z. B. wenn dem Konto neue Sicherheitsinformationen hinzugefügt werden, oder wenn von einem neuen Gerät darauf zugegriffen werden muss).
+-   Richten Sie eine firmeninterne E-Mail-Verteilerliste ein, die alle Personen enthält, die Zugriff auf das Entwicklerkonto benötigen, und fügen Sie diese E-Mail-Adresse Ihren Sicherheitsinformationen hinzu. So können alle Mitarbeiter auf der Liste bei Bedarf Sicherheitscodes erhalten, um die Sicherheitsinformationen Ihres Microsoft-Kontos zu verwalten. Wenn die Einrichtung einer Verteilerliste nicht realisierbar ist, muss der Besitzer des jeweiligen E-Mail-Kontos verfügbar sein, um auf den Sicherheitscode zugreifen und diesen bei entsprechender Aufforderung freigeben zu können (z.B. wenn dem Konto neue Sicherheitsinformationen hinzugefügt werden, oder wenn von einem neuen Gerät darauf zugegriffen werden muss).
 -   Fügen Sie eine geschäftliche Telefonnummer hinzu, für die keine Durchwahl erforderlich ist, und auf die wichtige Teammitglieder zugreifen können.
 -   Entwickler sollten generell vertrauenswürdige Geräte verwenden, wenn sie sich mit dem Entwicklerkonto Ihres Unternehmens anmelden. Alle wichtigen Teammitglieder müssen auf diese vertrauenswürdigen Geräte zugreifen können. So müssen beim Zugriff auf das Konto weniger Sicherheitscodes gesendet werden.
 -   Falls Sie den Zugriff auf das Konto über einen nicht vertrauenswürdigen PC zulassen müssen, sollten Sie den Zugriff auf maximal fünf Entwickler beschränken. Im Idealfall sollten diese Entwickler für den Zugriff auf das Konto Computer verwenden, die denselben geografischen Standort und dieselbe Netzwerkadresse nutzen.
@@ -90,6 +88,5 @@ Wenn Sie Ihr Konto schließen, sollten Sie wissen, was mit Ihren im Windows Stor
 -   Auch wenn die App weiterhin für Kunden verfügbar ist, die sie erworben haben, ist diese App im Store nicht mehr gelistet. Die App kann also nicht mehr von neuen Kunden erworben werden.
 -   Der Name Ihrer App wird für eine etwaige Verwendung durch einen anderen Entwickler freigegeben.
 -   Falls Ihr Konto ein Guthaben aufgrund der vorherigen App-Käufe aufweist, können Sie die Auszahlung auch dann anfordern, wenn der fällige Betrag nicht den normalen Zahlungsschwellenwert erfüllt.
-
 
 

@@ -8,17 +8,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 440fb76aac128490366677278254a5f5b2e095ed
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: b20066ffbd32984d20fdbdcc0915ef10332c6f12
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="getting-started-choosing-a-programming-language"></a>Erste Schritte: Auswählen einer Programmiersprache
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ## <a name="choosing-a-programming-language"></a>Auswählen einer Programmiersprache
 
@@ -31,12 +28,12 @@ Obwohl wir uns in diesem Artikel auf C# konzentrieren, bieten die restlichen Spr
 -   [Erstellen Ihrer ersten Windows Store-App mit C++](https://msdn.microsoft.com/library/windows/apps/hh974580)
 -   [Erstellen Ihrer ersten Windows Store-App mit C# oder Visual Basic](https://msdn.microsoft.com/library/windows/apps/hh974581)
 -   [Erstellen Ihrer ersten Windows Store-App mit JavaScript](https://msdn.microsoft.com/library/windows/apps/br211385)
--   [Erstellen Ihrer ersten Windows Phone Store-App mit C# oder Visual Basic](http://go.microsoft.com/fwlink/p/?LinkID=397877)
--   [WinJS unter Windows Phone 8.1](http://go.microsoft.com/fwlink/p/?LinkID=397879)
+-   [Erstellen Ihrer ersten WindowsPhoneStore-App mit C# oder Visual Basic](http://go.microsoft.com/fwlink/p/?LinkID=397877)
+-   [WinJS unter WindowsPhone8.1](http://go.microsoft.com/fwlink/p/?LinkID=397879)
 
 **Hinweis**  Bei Apps mit 3D-Grafiken sind die Standards OpenGL und OpenGL ES für UWP-Apps nicht nativ verfügbar. Wenn Sie Ihren OpenGL ES-Code in Microsoft DirectX nicht neu schreiben möchten, könnte **Angle** von Interesse für Sie sein. Angle ist ein laufendes Projekt, das zum Konvertieren von OpenGL in DirectX entwickelt wurde, indem OpenGL-API-Aufrufe in DirectX-API-Aufrufe übersetzt werden. Weitere Informationen hierzu finden Sie unter den folgenden Themen:
 -   [Angle](https://code.google.com/p/angleproject/)
--   [Erstellen Ihrer ersten Windows Store-App mit DirectX](https://msdn.microsoft.com/library/windows/apps/br229580)
+-   [Erstellen Ihrer ersten WindowsStore-App mit DirectX](https://msdn.microsoft.com/library/windows/apps/br229580)
 -   [Beispiele für Windows Store-Apps mit DirectX](http://go.microsoft.com/fwlink/p/?LinkId=263603)
 -   [Wo finde ich das DirectX SDK?](https://msdn.microsoft.com/library/windows/desktop/ee663275)
 
@@ -44,7 +41,7 @@ Obwohl wir uns in diesem Artikel auf C# konzentrieren, bieten die restlichen Spr
 
 Als iOS-Entwickler sind Sie die Arbeit mit Objective-C und Swift gewohnt. C# ist die Microsoft-Programmiersprache, die beiden am ähnlichsten ist. Unserer Meinung nach ist C# für die meisten Entwickler und die meisten Apps die Sprache, die am einfachsten und schnellsten erlernbar ist. Daher liegt der Schwerpunkt der Informationen und exemplarischen Vorgehensweisen in diesem Artikel auf dieser Sprache. Weitere Informationen zu C# finden Sie unter den folgenden Themen:
 
--   [Erstellen Ihrer ersten Windows Store-App mit C# oder Visual Basic](https://msdn.microsoft.com/library/windows/apps/hh974581)
+-   [Erstellen Ihrer ersten WindowsStore-App mit C# oder Visual Basic](https://msdn.microsoft.com/library/windows/apps/hh974581)
 -   [Beispiele für Windows Store-Apps mit C#](http://go.microsoft.com/fwlink/p/?LinkId=263453)
 -   [Visual C#](http://go.microsoft.com/fwlink/p/?LinkId=263450)
 
@@ -149,4 +146,3 @@ C# ist eine einfach erlernbare Sprache und verfügt über viele Unterstützungsk
 ## <a name="next-step"></a>Nächster Schritt
 
 [Erste Schritte: Aufbau von Visual Studio](getting-started-getting-around-in-visual-studio.md)
-

@@ -8,14 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c114b7fa5c0e6a613a2c5485903d856592f0863e
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: de99f73022987410ee95973542d9a80e9e130e39
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="about-affiliate-ads"></a>Informationen zu Partneranzeigen
 
 Wenn Ihre App ein **AdMediatorControl**- oder **AdControl**-Element zum Anzeigen von Werbebannern verwendet, können Sie Ihre Anzeigenfüllrate und Ihren Umsatz steigern, indem Sie in Ihrer App Microsoft-Partneranzeigen für Store-Produkte anzeigen. Wenn Benutzer auf die Partneranzeigen klicken und innerhalb eines bestimmten Attributionsfensters Produkte kaufen, generieren Sie dadurch Umsätze für genehmigte Käufe.
@@ -33,7 +30,7 @@ Das funktioniert wie folgt:
 
     > **Hinweis**  Sie können für *jedes* Produkt bezahlt werden, das der Benutzer innerhalb des Attributionsfensters kauft (nicht nur für das in Ihrer App beworbene Produkt). Bei kostenlosen Apps, die in Ihrer App beworben werden, können Sie am Umsatz der In-App-Einkäufe beteiligt werden, die der Benutzer innerhalb des Attributionsfensters tätigt.
 
-* Alle Einnahmen, die Sie in Verbindung mit dem Microsoft-Partneranzeigenprogramm erzielen, werden zusammen mit Ihren Microsoft Advertising-Einnahmen dem [im Dev Center eingerichteten Auszahlungskonto](setting-up-your-payout-account-and-tax-forms.md) gutgeschrieben.
+* Alle Einnahmen, die Sie in Verbindung mit dem Microsoft-Partneranzeigenprogramm erzielen, werden zusammen mit Ihren MicrosoftAdvertising-Einnahmen dem [im Dev Center eingerichteten Auszahlungskonto](setting-up-your-payout-account-and-tax-forms.md) gutgeschrieben.
 * Die Performance der Partneranzeigen in Ihrer App können Sie im [Bericht zur Partnerleistung](affiliates-performance-report.md) ermitteln. Sie können die Einkäufe eines Tages, die über Partneranzeigen in Ihrer App getätigt wurden, sowie die erhaltene Umsatzbeteiligung nachverfolgen.  
 
   > **Hinweis**  Nachdem ein Benutzer ein Produkt im Store gekauft hat, gibt es eine Wartezeit von 45 Tagen, ehe der Kauf für das Partneranzeigenprogramm genehmigt werden kann. Aufgrund dieser Frist können die Daten für **Geschätzten Umsatz**, **Käufe (genehmigt)** und **Käufe (Genehmigung ausstehend)** im [Bericht zur Partnerleistung](affiliates-performance-report.md) für einen bestimmten Tag sich ändern, nachdem Einkäufe genehmigt oder abgelehnt werden.
@@ -43,7 +40,7 @@ Das funktioniert wie folgt:
 
 So melden Sie sich für das Microsoft-Partneranzeigenprogramm an:
 
-1. Navigieren Sie im Windows Dev Center-Dashboard zu **Monetarisierung** &gt; **Gewinnbringende Nutzung mit Anzeigen**.
+1. Navigieren Sie im WindowsDevCenter-Dashboard zu **Monetarisierung** &gt; **Gewinnbringende Nutzung mit Anzeigen**.
 2. Aktivieren Sie im Abschnitt **Microsoft affiliate ads** das Kontrollkästchen **Show Microsoft affiliate ads in my app**.
 
 Nach dem Aktivieren oder Deaktivieren dieses Kontrollkästchens müssen Sie Ihre App nicht neu veröffentlichen, damit die Änderungen wirksam werden.
@@ -54,4 +51,3 @@ Nach dem Aktivieren oder Deaktivieren dieses Kontrollkästchens müssen Sie Ihre
 
 * [Monetisierung durch Werbeanzeigen](monetize-with-ads.md)
 * [Bericht zur Partnerleistung](affiliates-performance-report.md)
-

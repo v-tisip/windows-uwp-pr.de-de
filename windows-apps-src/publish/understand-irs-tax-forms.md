@@ -7,15 +7,12 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
+keywords: Windows10, UWP
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 5f51e1c5a44767e49b5c3dc5f578c2532da11008
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 068a940a54048b10e8f66bd3267b3a22c42beb50
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Erläuterung der von Microsoft ausgestellten IRS-Steuerformulare
 
 Je nach Ihrem Standort und der Höhe des Umsatzes und/oder der Zahlungen, die Sie erhalten, erhalten Sie jedes Jahr mindestens ein Steuerformular von Microsoft. Microsoft muss diese Formulare ausstellen und bei der Bundessteuerbehörde der USA (IRS) einreichen.
@@ -26,8 +23,8 @@ Nachfolgend erläutern wir diese Formulare eingehender, etwa, wer sie erhält un
 
 | IRS-Steuerformular | Beschreibung | Verfügbarkeit |
 |--------------|-------------|--------------|
-|1099-MISC, 1099-K | Im Zusammenhang mit Verkaufsaktivitäten und/oder Zahlungen an Sie für die Teilnahme am Microsoft Marketplace | Gedruckte Formulare werden mit elektronischen Siegeln mit spätestens dem **31. Januar** versehen, und die PDF-Kopien werden zur gleichen Zeit im Dev Center zur Verfügung stehen (**Dashboard > Kontoeinstellungen > Steuerprofil**) |
-|1042-S | Im Zusammenhang mit den Zahlungen an Sie, die der Quellensteuer der USA unterliegen. | Gedruckte Formulare werden mit elektronischen Siegeln mit spätestens dem **15. März** versehen, und die PDF-Kopien werden zur gleichen Zeit im Dev Center zur Verfügung stehen (**Dashboard > Kontoeinstellungen > Steuerprofil**) |
+|1099-MISC, 1099-K | Im Zusammenhang mit Verkaufsaktivitäten und/oder Zahlungen an Sie für die Teilnahme am Microsoft Marketplace | Gedruckte Formulare werden mit elektronischen Siegeln mit spätestens dem **31.Januar** versehen, und die PDF-Kopien werden zur gleichen Zeit im Dev Center zur Verfügung stehen (**Dashboard > Kontoeinstellungen > Steuerprofil**) |
+|1042-S | Im Zusammenhang mit den Zahlungen an Sie, die der Quellensteuer der USA unterliegen. | Gedruckte Formulare werden mit elektronischen Siegeln mit spätestens dem **15.März** versehen, und die PDF-Kopien werden zur gleichen Zeit im Dev Center zur Verfügung stehen (**Dashboard > Kontoeinstellungen > Steuerprofil**) |
 
 > **Hinweis** Die Adresse auf den IRS.Steuerformularen entspricht der Adresse in Ihrem [Steuerprofil](setting-up-your-payout-account-and-tax-forms.md#tax-forms). Wenn sich Ihre Adresse geändert hat, aktualisieren Sie die Adresse auch in Ihrem **Steuerprofil**.
 
@@ -39,7 +36,7 @@ Nachfolgend erläutern wir diese Formulare eingehender, etwa, wer sie erhält un
      <th> Ich sollte dieses Formular erhalten</th>
   </tr>
   <tr> 
-     <td valign="top">Ich habe **mehr als 200 App-Verkäufe** mit einem Gesamtumsatz von **mehr als 20.000 US-Dollar** im entsprechenden Geschäftsjahr (Verkäufe über den Windows 10-Store Brasilien und China werden **nicht** gezählt.) getätigt</td>
+     <td valign="top">Ich habe **mehr als 200 App-Verkäufe** mit einem Gesamtumsatz von **mehr als 20.000 US-Dollar** im entsprechenden Geschäftsjahr (Verkäufe über den Windows10-Store Brasilien und China werden **nicht** gezählt.) getätigt</td>
     <td valign="top">**1099-K**:<br>
 Einreichende Instanz: Microsoft Corporation<br>
 EIN: \*\*\*\*\*4442<br>
@@ -47,11 +44,11 @@ EIN: \*\*\*\*\*4442<br>
 **Wichtig:** Formular 1099-K enthält **Bruttoeinkaufsbeträge**, keine an Sie erfolgten Zahlungen.</td>
   </tr>
   <tr> 
-     <td valign="top">Ich habe **mindestens 10 Dollar an Zahlungen** für App-Verkäufe in Brasilien und China über den Windows 10-Store erhalten.<br>
+     <td valign="top">Ich habe **mindestens 10 Dollar an Zahlungen** für App-Verkäufe in Brasilien und China über den Windows10-Store erhalten.<br>
 <br>
 **ODER**<br>
 <br>
-Ich habe mindestens 600 US-Dollar an Zahlungen erhalten, die nicht im Zusammenhang mit App-Verkäufen von Microsoft im entsprechenden Geschäftsjahr stehen (z. B. Anreizzahlungen oder Zahlungen für einen Wettbewerb oder eine Werbeaktion)</td>
+Ich habe mindestens 600 US-Dollar an Zahlungen erhalten, die nicht im Zusammenhang mit App-Verkäufen von Microsoft im entsprechenden Geschäftsjahr stehen (z.B. Anreizzahlungen oder Zahlungen für einen Wettbewerb oder eine Werbeaktion)</td>
     <td valign="top">**1099-MISC**:<br>
 Zahlende Instanz: Microsoft Corporation<br>
 EIN: \*\*\*\*\*4442<br>
@@ -99,7 +96,7 @@ EIN: \*\*\*\*\*0505<br>
   <tr>
     <td valign="top">**Warum wurde Steuer auf meine Zahlungen einbehalten, als ich ein Formular W8 ausgefüllt habe?**</td>
     <td valign="top">Steuern werden in einem der folgenden Fälle einbehalten:<br>
-     1. Sie haben den Abschnitt zum Steuerabkommen des W8 nicht ordnungsgemäß ausgefüllt oder<br>
+     1. Sie haben den Abschnittzum Steuerabkommen des W8 nicht ordnungsgemäß ausgefüllt oder<br>
      2. Sie wohnen in einem Land, das über kein Steuerabkommen mit den USA verfügt.
 
      You can visit Dev Center at any time to submit an updated W8 form.<br>
@@ -127,4 +124,3 @@ EIN: \*\*\*\*\*0505<br>
 
 
 > **Hinweis** Bei weiteren Fragen oder Anliegen im Zusammenhang mit **IRS-Steuerformularen** erstellen Sie ein [Supportticket](http://aka.ms/storesupport). Microsoft kann keine Fragen im Zusammenhang mit Ihren spezifischen Steuerumständen beantworten. Bei diesen Fragen wenden Sie sich an Ihre Steuerexperten.
-

@@ -8,14 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 92a46c556303b88f8d506f5315e23d4e2b2edf5f
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: bba3cd7bc2f1ffde7c77c7e2de35a49963a8158c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="resolve-package-upload-errors"></a>Beheben von Paketuploadfehlern
 
 
@@ -41,7 +38,6 @@ Beachten Sie außerdem, falls Ihre Übermittlung mehr als eine Windows Phone 8.1
  
 
  
-
 
 
 

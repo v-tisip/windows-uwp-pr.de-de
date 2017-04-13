@@ -8,14 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 92a110879f6ff92b3e1e41964ff6acea6b7cb5ec
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 6b2973e2f7303ac39571fd69a0e14fa0dfacef32
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="notes-for-certification"></a>Hinweise für Zertifizierung
 
 
@@ -33,7 +30,7 @@ Achten Sie darauf, folgende Informationen anzugeben (falls sie für Ihre App rel
 
 -   **Schritte zur Überprüfung der Nutzung von Audiodateien im Hintergrund**
 
-    Wenn die App das Ausführen von Audiodateien im Hintergrund zulässt, benötigen Tester u. U. eine Anleitung für den Zugriff auf dieses Feature, damit sie die ordnungsgemäße Funktionsweise sicherstellen können.
+    Wenn die App das Ausführen von Audiodateien im Hintergrund zulässt, benötigen Tester u.U. eine Anleitung für den Zugriff auf dieses Feature, damit sie die ordnungsgemäße Funktionsweise sicherstellen können.
 
 -   **Informationen zu Änderungen in einem App-Update**
 
@@ -48,7 +45,6 @@ Berücksichtigen Sie beim Zusammenstellen der Informationen Folgendes:
  
 
  
-
 
 
 

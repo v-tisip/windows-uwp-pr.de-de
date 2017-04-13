@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: aefe0836257b04d7b9c1ca6841bc9945c17a70d0
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: bed8846bf2df3bfce12a4a93a87146ae1adc29f6
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="package-flights"></a>Flight-Pakete
 
 Mithilfe von Flight-Paketen können Sie Pakete an eine begrenzte Testgruppe verteilen. 
@@ -38,7 +35,7 @@ Nachdem Sie eine Übermittlung für Ihre App veröffentlicht haben, ist auf der 
 
 ## <a name="create-a-new-flight-group"></a>Erstellen einer neuen Test-Flight-Gruppe
 
-In Test-Flight-Gruppen können Sie die Personen festlegen, die Sie in die Gruppe aufnehmen möchten. Um Ihre Pakete mit Test-Flight zu erhalten, muss jede Person über ein Microsoft-Konto im Store authentifiziert werden, das der von Ihnen angegebenen E-Mail-Adresse zugeordnet ist, und ein Windows 10-Gerät (wie oben angegeben) zum Herunterladen der App verwenden.
+In Test-Flight-Gruppen können Sie die Personen festlegen, die Sie in die Gruppe aufnehmen möchten. Um Ihre Pakete mit Test-Flight zu erhalten, muss jede Person über ein Microsoft-Konto im Store authentifiziert werden, das der von Ihnen angegebenen E-Mail-Adresse zugeordnet ist, und ein Windows10-Gerät (wie oben angegeben) zum Herunterladen der App verwenden.
 
 Wenn Sie eine Test-Flight-Gruppe erstellen, müssen Sie ihr einen Namen geben. Jede Test-Flight-Gruppe muss mindestens eine E-Mail-Adresse und kann höchstens 10.000 E-Mail-Adressen enthalten. Geben Sie E-Mail-Adressen direkt in das Feld ein (getrennt durch Leerzeichen, Kommas oder Semikolons), oder klicken Sie auf den Link **CSV importieren**, um die Test-Flight-Gruppe aus einer Liste von E-Mail-Adressen in einer CSV-Datei zu erstellen.
 
@@ -48,7 +45,7 @@ Klicken Sie auf **Gruppe erstellen**, um die Gruppe zu speichern und mit der Ein
 
 > Sie sollten sich auch überlegen, wie die Personen in Ihrem Flight-Paket Ihnen Feedback zur App geben können. Wir empfehlen das [Hinzufügen eines Steuerelements zu Ihrer App, um den Feedback-Hub zu starten](../monetize/launch-feedback-hub-from-your-app.md). Kunden können auf diese Weise ihre Eingabe direkt bereitstellen. Prüfen Sie das Feedback anschließend im [Feedbackbericht](feedback-report.md)) der App.
 
-Damit Sie später eine Test-Flight-Gruppe bearbeiten können, klicken Sie beim Erstellen eines neuen Test-Flight auf **View and manage existing groups**, und wählen Sie die Test-Flight-Gruppe aus, die geändert werden soll, oder klicken Sie in der Übersicht eines Flight-Pakets auf den Namen der Test-Flight-Gruppe. Sie können E-Mail-Adressen direkt im Feld hinzufügen oder entfernen. Klicken Sie für umfangreichere Änderungen auf **CSV exportieren**, um Ihre Mitgliedschaftsinformationen zu einer Test-Flight-Gruppe in einer CSV-Datei zu speichern. Nehmen Sie in dieser Datei Ihre Änderungen vor, und klicken Sie dann auf **CSV importieren**, um die Gruppenmitgliedschaft mit der neuen Version zu aktualisieren. Beachten Sie, dass es bis zu 30 Minuten dauern kann, bis Änderungen an der Mitgliedschaft der Test-Flight-Gruppe implementiert werden. Wenn Sie nach der Veröffentlichung des zugehörigen Flight-Pakets Personen zu einer Test-Flight-Gruppe hinzufügen, werden die Pakete für die neuen Personen automatisch bereitgestellt. Sie müssen keine neue Übermittlung für das Flight-Paket erstellen und veröffentlichen. 
+Damit Sie später eine Test-Flight-Gruppe bearbeiten können, klicken Sie beim Erstellen eines neuen Test-Flight auf **View and manage existing groups**, und wählen Sie die Test-Flight-Gruppe aus, die geändert werden soll, oder klicken Sie in der Übersicht eines Flight-Pakets auf den Namen der Test-Flight-Gruppe. Sie können E-Mail-Adressen direkt im Feld hinzufügen oder entfernen. Klicken Sie für umfangreichere Änderungen auf **CSV exportieren**, um Ihre Mitgliedschaftsinformationen zu einer Test-Flight-Gruppe in einer CSV-Datei zu speichern. Nehmen Sie in dieser Datei Ihre Änderungen vor, und klicken Sie dann auf **CSV importieren**, um die Gruppenmitgliedschaft mit der neuen Version zu aktualisieren. Beachten Sie, dass es bis zu 30Minuten dauern kann, bis Änderungen an der Mitgliedschaft der Test-Flight-Gruppe implementiert werden. Wenn Sie nach der Veröffentlichung des zugehörigen Flight-Pakets Personen zu einer Test-Flight-Gruppe hinzufügen, werden die Pakete für die neuen Personen automatisch bereitgestellt. Sie müssen keine neue Übermittlung für das Flight-Paket erstellen und veröffentlichen. 
 
 ## <a name="create-a-new-package-flight"></a>Erstellen eines neuen Flight-Pakets
 
@@ -60,7 +57,7 @@ Klicken Sie auf **Create flight**, nachdem Sie den Namen eingegeben und die Test
 
 ## <a name="specify-packages-to-include-in-your-package-flight"></a>Festlegen von Paketen zum Einfügen in Ihr Flight-Paket
 
-Nachdem Sie die Details des Flight-Pakets gespeichert haben, wird die Übersicht dazu angezeigt. Klicken Sie auf **Pakete**, um festzulegen, welche Pakete das Test-Flight enthalten soll. Sie können Pakete einbeziehen, die für jede Betriebssystemversion (einschließlich Windows 10, Windows 8.x und Windows Phone 8.x oder früher) erstellt wurden.
+Nachdem Sie die Details des Flight-Pakets gespeichert haben, wird die Übersicht dazu angezeigt. Klicken Sie auf **Pakete**, um festzulegen, welche Pakete das Test-Flight enthalten soll. Sie können Pakete einbeziehen, die für jede Betriebssystemversion (einschließlich Windows10, Windows8.x und Windows Phone 8.x oder früher) erstellt wurden.
 
 Sie haben die Option, Pakete auszuwählen, die einer vorherigen Übermittlung zugeordnet waren (entweder einer Übermittlung ohne Test-Flight oder einem Ihrer anderen Flight-Pakete, falls Sie mehrere haben). Wenn Sie für dieses Flight-Paket neue Pakete verwenden möchten, können Sie diese hier hochladen (mit dem gleichen Verfahren wie beim [Hochladen von App-Paketen](upload-app-packages.md) bei einer regulären Übermittlung ohne Test-Flight). Wenn Sie alle Pakete für dieses Flight-Paket angegeben haben, klicken Sie auf **Speichern**.
 
@@ -70,7 +67,7 @@ Denken Sie auch daran, dass die Informationen zu Ihren Store-Einträgen aus Ihre
 
 ## <a name="gradual-package-rollout"></a>Schrittweises Paketrollout
 
-Standardmäßig werden die Pakete in Ihrer Übermittlung für alle Personen in Ihrer Test-Flight-Gruppe gleichzeitig zur Verfügung gestellt. Um dies zu ändern, können Sie das Kontrollkästchen **Update-Rollout schrittweise nach Veröffentlichung dieser Übermittlung (nur für Windows 10-Kunden)** aktivieren. Sie können einen Prozentsatz von Personen in Ihrer Test-Flight-Gruppe wählen, die die Pakete aus der neuen Übermittlung erhalten, sodass Sie das Feedback und die Analysedaten überwachen können, um sicherzustellen, dass Sie das Update zuverlässig veröffentlichen können, bevor Sie es umfassender für den Rest der Test-Flight-Gruppe bereitstellen. Sie können den Prozentsatz jederzeit erhöhen (oder das Update stoppen), ohne eine neue Übermittlung für Ihr Flight-Paket erstellen zu müssen. 
+Standardmäßig werden die Pakete in Ihrer Übermittlung für alle Personen in Ihrer Test-Flight-Gruppe gleichzeitig zur Verfügung gestellt. Um dies zu ändern, können Sie das Kontrollkästchen **Update-Rollout schrittweise nach Veröffentlichung dieser Übermittlung (nur für Windows10-Kunden)** aktivieren. Sie können einen Prozentsatz von Personen in Ihrer Test-Flight-Gruppe wählen, die die Pakete aus der neuen Übermittlung erhalten, sodass Sie das Feedback und die Analysedaten überwachen können, um sicherzustellen, dass Sie das Update zuverlässig veröffentlichen können, bevor Sie es umfassender für den Rest der Test-Flight-Gruppe bereitstellen. Sie können den Prozentsatz jederzeit erhöhen (oder das Update stoppen), ohne eine neue Übermittlung für Ihr Flight-Paket erstellen zu müssen. 
 
 > **Wichtig** Beim schrittweisen Einführen von Paketen in einem Flight-Paket erhalten die Personen, die nicht in dem Prozentsatz enthalten sind, der Ihre neuen Pakete enthält, die Pakete der vorherigen Flight-Paket-Übermittlung (wenn kein Test-Flight mit höherem Rang für sie verfügbar ist).
 
@@ -96,7 +93,7 @@ In den meisten Fällen sollten Sie Pakete bereitstellen, die den gleichen Satz v
 
 **Wenn Ihr Flight-Paket eine Gerätefamilie unterstützt, die Ihre Übermittlung ohne Test-Flight nicht unterstützt**, kann niemand die App auf diese Gerätefamilie herunterladen, unabhängig davon, ob der betreffende Kunde Mitglied Ihrer Test-Flight-Gruppe ist oder nicht. Wenn Ihre Übermittlung ohne Test-Flight beispielsweise nur ein Mobilgerätpaket enthält und Sie anschließend ein Flight-Paket erstellen, das ein Mobilgerät- und ein Desktoppaket enthält, können die Mitglieder Ihrer Test-Flight-Gruppe die App nach wie vor nur auf Mobilgeräte herunterladen. Das Desktoppaket wird niemandem angeboten, auch keinem Mitglied Ihrer Test-Flight-Gruppe. Wenn Sie Mitgliedern Ihrer Test-Flight-Gruppe ein Desktoppaket zur Verfügung stellen möchten, müssen Sie zunächst Ihre Übermittlung ohne Test-Flight aktualisieren, sodass diese ein Desktoppaket enthält. Um allen Kunden Ihrer App eine optimale Erfahrung zu bieten, sollte Ihre Übermittlung ohne Test-Flight die gleichen Gerätefamilien wie Ihr Flight-Paket unterstützen. 
 
-**Hinweis**  Pakete, die Ihren Flight-Paketen hinzugefügt werden, können jede Betriebssystemversion (oder jeden Build von Windows 10) unterstützen. Wie jedoch bereits gesagt, müssen die Mitglieder von Test-Flight-Gruppen ein Gerät verwenden, auf dem eine Version von Windows 10 ausgeführt wird, die Flight-Pakete unterstützt (Windows.Desktop-Build 10586 oder höher; Windows.Mobile-Build 10586.63 oder höher), um Pakete aus dem Flight-Paket zu erhalten.
+**Hinweis**  Pakete, die Ihren Flight-Paketen hinzugefügt werden, können jede Betriebssystemversion (oder jeden Build von Windows10) unterstützen. Wie jedoch bereits gesagt, müssen die Mitglieder von Test-Flight-Gruppen ein Gerät verwenden, auf dem eine Version von Windows10 ausgeführt wird, die Flight-Pakete unterstützt (Windows.Desktop-Build 10586 oder höher; Windows.Mobile-Build 10586.63 oder höher), um Pakete aus dem Flight-Paket zu erhalten.
 
 ## <a name="update-or-modify-your-package-flight"></a>Aktualisieren oder Ändern Ihres Flight-Pakets
 
@@ -112,7 +109,7 @@ Sobald Sie Ihr erstes Flight-Paket erstellt haben, können Sie mit dem oben besc
 
 Ihr neues Flight-Paket erhält standardmäßig den höchsten Rang. Wenn Sie den Rang ändern möchten, verschieben Sie das Paket nach unten (oder wieder nach oben), um es zwischen Ihren anderen Flight-Paketen richtig zu positionieren.
 
-Beachten Sie, dass eine Übermittlung ohne Test-Flight immer den niedrigsten Rang erhält. Das heißt, dass Personen, die keiner Ihrer Test-Flight-Gruppen angehören, nur Pakete aus Ihrer Übermittlung ohne Test-Flight aus dem Store abrufen können. Personen in einer Test-Flight-Gruppe erhalten immer Pakete aus dem Flight-Paket mit dem höchsten Rang, das für sie verfügbar ist (jedoch nie aus der Übermittlung ohne Test-Flight). Dadurch sind Sie flexibel beim Bestimmen, wie Ihre Pakete an Benutzer verteilt werden, die u. U. in mehreren Ihrer Test-Flight-Gruppen Mitglied sind.
+Beachten Sie, dass eine Übermittlung ohne Test-Flight immer den niedrigsten Rang erhält. Das heißt, dass Personen, die keiner Ihrer Test-Flight-Gruppen angehören, nur Pakete aus Ihrer Übermittlung ohne Test-Flight aus dem Store abrufen können. Personen in einer Test-Flight-Gruppe erhalten immer Pakete aus dem Flight-Paket mit dem höchsten Rang, das für sie verfügbar ist (jedoch nie aus der Übermittlung ohne Test-Flight). Dadurch sind Sie flexibel beim Bestimmen, wie Ihre Pakete an Benutzer verteilt werden, die u.U. in mehreren Ihrer Test-Flight-Gruppen Mitglied sind.
 
 Nehmen wir beispielsweise an, dass Sie neben Ihrer regulären Übermittlung ohne Test-Flight zwei Flight-Pakete erstellen möchten: eines, das relativ stabil und für den Test mit einer breiten Zielgruppe bereit ist, und eines, bei dem Sie sich nicht so sicher sind und es auf wenige Tester beschränken möchten. Sie erstellen eine Test-Flight-Gruppe mit dem Namen „Tester“ und fügen sie einem Flight-Paket mit dem Namen „Test-Flight für Tester“ hinzu. Anschließend erstellen Sie eine Test-Flight-Gruppe mit dem Namen „Interessierte Benutzer“ und fügen sie einem anderen Flight-Paket mit dem Namen „Test-Flight für Interessierte Benutzer“ hinzu. Wenn Sie „Test-Flight für Tester“ einen höheren Rang als „Test-Flight für Interessierte Benutzer“ zuweisen, können Sie Pakete, bei denen Sie sich relativ sicher sind, in „Test-Flight für Interessierte Benutzer“ verwenden, und Pakete mit höherem Risiko, die nur für Tester vorgesehen sind, in „Test-Flight für Tester“. Mitglieder der Tester-Gruppe erhalten immer die Pakete, die Sie in „Test-Flight für Tester“ bereitstellen, auch wenn sie ebenfalls der Gruppe „Interessierte Benutzer“ angehören. (Wenn sich später dann herausstellt, dass die Pakete in „Test-Flight für Tester“ problemlos ausgeführt werden, können Sie „Test-Flight für Interessierte Benutzer“ so aktualisieren, dass die ursprünglich an „Test-Flight für Tester“ verteilten Pakete verwendet werden. Möglicherweise können Sie diese Pakete irgendwann auch in Ihrer Übermittlung ohne Test-Flight verwenden.
 
@@ -129,4 +126,3 @@ Beachten Sie, dass dieselben Regeln für Paketvalidierung gelten, auch wenn Pake
 Zum Löschen eines Flight-Pakets, das Sie nicht mehr unterstützen möchten, klicken Sie in der App-Übersicht auf dessen Namen. Klicken Sie auf der Übersichtsseite für Test-Flights **Ändern** und anschließend auf den Link **Löschen**, um das Flight-Paket zu löschen. (Wenn Sie eine unveröffentlichte Übermittlung des Flight-Pakets ausführen, müssen Sie zunächst diese Übermittlung löschen.) Dies kann bis zu 30 Minuten dauern.
 
 Wenn Sie ein Flight-Paket löschen, erhalten alle Kunden mit Paketen, die Sie in diesem Flight-Paket verteilt haben, ein App-Update, wenn es ein Paket mit einer höheren Versionsnummer gibt (oder sobald ein solches Paket verfügbar ist). Wenn Benutzer die App deinstallieren und später erneut installieren, wird dies als neuer Kauf behandelt, und die Benutzer erhalten die höchste aktuell verfügbare Version. 
-

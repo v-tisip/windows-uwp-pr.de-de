@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.assetid: e6bb3464-dd8e-402c-9c56-dd9e51002a49
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: f76bdf6052228e5588ea7e34d95360f698525eb2
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: d05db2899fe2ad26eaf5e200ae2673b8efafddd0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="usability-for-uwp-apps"></a>Benutzerfreundlichkeit in UWP-Apps
 
@@ -55,7 +53,7 @@ Bei der Barrierefreiheit geht es darum, die App so zu gestalten, dass sie auch v
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-<p><b>[Barrierefreiheit im Store](../accessibility/accessibility-in-the-store.md)</b><br/>Hier werden die Anforderungen beschrieben, die Sie erfüllen müssen, wenn Sie Ihre UWP-App im Windows Store als barrierefrei deklarieren möchten.</p>
+<p><b>[Barrierefreiheit im Store](../accessibility/accessibility-in-the-store.md)</b><br/>Hier werden die Anforderungen beschrieben, die Sie erfüllen müssen, wenn Sie Ihre UWP-App im WindowsStore als barrierefrei deklarieren möchten.</p>
   </div>
   <div class="side-by-side-content-right">
 <p><b>[Prüfliste für die Barrierefreiheit](../accessibility/accessibility-checklist.md)</b><br/>Enthält eine Prüfliste, mit der Sie sicherstellen können, dass Ihre UWP-App barrierefrei ist.</p>
@@ -112,7 +110,7 @@ Bei der Barrierefreiheit geht es darum, die App so zu gestalten, dass sie auch v
 
 ## <a name="globalization-and-localization"></a>Globalisierung und Lokalisierung
 
-Windows wird auf der ganzen Welt von Benutzern mit unterschiedlicher Kultur, Herkunft und Sprache verwendet. Benutzer sprechen beliebige Sprache oder sogar mehrere Sprachen. Die Benutzer sind über die ganze Welt verteilt, und jede Sprache kann ortsabhängig überall gesprochen werden. Sie können das Marktpotenzial Ihrer App erweitern, indem Sie eine mithilfe von Globalisierung und Lokalisierung leicht anpassbare App entwickeln.
+Windows wird auf der ganzen Welt in verschiedenen Märkten und von Anwendern unterschiedlicher Kulturen, Herkunft und Sprachen verwendet. Benutzer sprechen beliebige Sprache oder sogar mehrere Sprachen. Die Benutzer sind über die ganze Welt verteilt, und jede Sprache kann ortsabhängig überall gesprochen werden. Sie können das Marktpotenzial Ihrer App erweitern, indem Sie eine mithilfe von Globalisierung und Lokalisierung leicht anpassbare App entwickeln.
 
 <div class="side-by-side">
 <div class="side-by-side-content">
@@ -128,7 +126,7 @@ Windows wird auf der ganzen Welt von Benutzern mit unterschiedlicher Kultur, Her
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-<p><b>[Verwalten von Sprache und Region](../globalizing/manage-language-and-region.md)</b><br/>Mithilfe der verschiedenen Sprach- und Regionseinstellungen von Windows können Sie die Auswahl von UI-Ressourcen und die Formatierung der UI-Elemente der App durch Windows steuern.</p>
+<p><b>[Verwalten von Sprache und Region](../globalizing/manage-language-and-region.md)</b><br/>Mithilfe der verschiedenen Sprach- und Regionseinstellungen von Windows können Sie die Auswahl von UI-Ressourcen und die Formatierung der UI-Elemente der App steuern.</p>
   </div>
   <div class="side-by-side-content-right">
 <p><b>[Verwenden von Mustern zum Formatieren von Datums- und Uhrzeitwerten](../globalizing/use-patterns-to-format-dates-and-times.md)</b><br/>Verwenden Sie die [<strong>DateTimeFormatting</strong>](https://msdn.microsoft.com/library/windows/apps/br206859)-API mit benutzerdefinierten Mustern, um Datums- und Uhrzeitwerte im gewünschten Format anzuzeigen.</p>
@@ -185,7 +183,7 @@ Unabhängig davon, wie optimal Sie Ihre App gestaltet haben, werden einige Benut
 </p>
   </div>
   <div class="side-by-side-content-right">
-<p><b>[Benutzeroberfläche mit Anleitungen](../in-app-help/instructional-ui.md)</b><br/>Manchmal kann es hilfreich sein, Anleitungen bereitzustellen, um Benutzern Funktionen in Ihrer App zu zeigen, die möglicherweise nicht offensichtlich sind, z. B. bestimmte Touchinteraktionen. In diesen Fällen müssen Sie Anleitungen auf der Benutzeroberfläche für die Benutzer bereitstellen, damit sie diese Funktionen, die sie möglicherweise übersehen haben, finden und nutzen können.</p>
+<p><b>[Benutzeroberfläche mit Anleitungen](../in-app-help/instructional-ui.md)</b><br/>Manchmal kann es hilfreich sein, Anleitungen bereitzustellen, um Benutzern Funktionen in Ihrer App zu zeigen, die möglicherweise nicht offensichtlich sind, z.B. bestimmte Touchinteraktionen. In diesen Fällen müssen Sie Anleitungen auf der Benutzeroberfläche für die Benutzer bereitstellen, damit sie diese Funktionen, die sie möglicherweise übersehen haben, finden und nutzen können.</p>
   </div>
 </div>
 </div>
@@ -200,4 +198,3 @@ Unabhängig davon, wie optimal Sie Ihre App gestaltet haben, werden einige Benut
   </div>
 </div>
 </div>
-

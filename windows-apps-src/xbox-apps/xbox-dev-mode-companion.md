@@ -7,15 +7,12 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, UWP"
+keywords: windows10, UWP
 ms.assetid: ed84f232-ddb5-4ba1-bf1c-578e8df47602
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 1aea4f2da584124050665d159b1d83f34368b819
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 38bafd7c63b101e495748c169a1b566115c2a1e6
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xbox-dev-mode-companion"></a>Begleitung für den Xbox-Entwicklermodus
 
 Mit „Begleitung für Xbox-Entwicklermodus“ können Sie eine Remoteverbindung mit einer Xbox One-Konsole herstellen und diese steuern. Dieses Tool wurde für Entwickler erstellt, die den Xbox-Entwicklermodus verwenden.
@@ -47,5 +44,4 @@ Sie können mit der Tastatur in Textfelder eingeben, um Text an die Konsole zu s
 Sie können die Hilfeseite anzeigen, indem Sie im Verbindungsdialogfeld oder auf der Befehlsleiste auf das ?- Symbol klicken.
 
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter
-- [UWP auf Xbox One](index.md)
-
+- [UWP auf XboxOne](index.md)

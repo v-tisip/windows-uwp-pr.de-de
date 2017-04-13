@@ -9,16 +9,13 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, App, Installationen, Installation, Bericht, Analysen
 ms.assetid: 46c08fd2-00bd-4be5-b29f-01a3b5fea4c2
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 9e4dec61e275443db42b50ef9a231b5b3c46ffe4
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 7912775e17a70c1d6fe9810c780017dcfa2db60e
+ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
+translationtype: HT
 ---
-
 # <a name="installs-report"></a>Bericht „Installationen“
 
-Im Bericht **Installationen** im Windows Dev Center-Dashboard sehen Sie, wie oft Ihre App erfolgreich auf Windows 10-Geräten installiert wurde. Sie können diese Daten in Ihrem Dashboard anzeigen lassen, oder den [Bericht herunterladen](download-analytic-reports.md) und offline anzeigen.
+Im Bericht **Installationen** im Windows Dev Center-Dashboard sehen Sie, wie oft Ihre App erfolgreich auf Windows 10-Geräten installiert wurde. Sie können diese Daten in Ihrem Dashboard anzeigen oder den [Bericht herunterladen](download-analytic-reports.md) und offline anzeigen. Sie können diese Daten auch programmgesteuert mit der [Abrufen von App-Installationen](../monetize/get-app-installs.md)-Methode der [Windows Store-REST-API für Analysen](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
 
 
 ## <a name="apply-filters"></a>Anwenden von Filtern
@@ -65,4 +62,3 @@ Im Diagramm **Paketversion** sehen Sie die Gesamtanzahl der Installationen über
  
 
  
-

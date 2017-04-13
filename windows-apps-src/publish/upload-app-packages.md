@@ -8,18 +8,15 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 10523df0297013573dad62d32901c597ba850175
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 1bc2ce82688db20315113efc9b080b449a850f05
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="upload-app-packages"></a>Hochladen von App-Paketen
 
 
-Auf der Seite **Pakete** werden alle Paketdateien (.appx, .appxupload, .appxbundle und/oder .xap) für die App hochgeladen, die Sie übermitteln. Sie können in diesem Schritt Pakete für jedes Betriebssystem hochladen, auf das die App ausgerichtet ist. Wenn ein Kunde Ihre App herunterlädt, stellt der Store automatisch für jeden Kunden das Paket bereit, das am besten für sein Gerät geeignet ist. Nachdem Sie Ihre Pakete hochgeladen haben, sehen Sie eine Tabelle, in der angegeben wird, [welche Pakete für bestimmte Windows 10-Gerätefamilien angeboten werden](#device-family-availability) (und ggf. für frühere Betriebssystemversionen).
+Auf der Seite **Pakete** werden alle Paketdateien (APPX, APPXUPLOAD, APPXBUNDLE und XAP) für die App hochgeladen, die Sie übermitteln. Sie können in diesem Schritt Pakete für jedes Betriebssystem hochladen, auf das die App ausgerichtet ist. Wenn ein Kunde Ihre App herunterlädt, stellt der Store automatisch für jeden Kunden das Paket bereit, das am besten für sein Gerät geeignet ist. Nachdem Sie Ihre Pakete hochgeladen haben, sehen Sie eine Tabelle, in der angegeben wird, [welche Pakete für bestimmte Windows10-Gerätefamilien angeboten werden](#device-family-availability) (und ggf. für frühere Betriebssystemversionen).
 
 Ausführliche Informationen zu Inhalt und Struktur der Pakete finden Sie unter [App-Paketanforderungen](app-package-requirements.md). Sie erfahren außerdem, [wie sich Versionsnummern von Paketen darauf auswirken, welche Pakete bestimmten Kunden bereitgestellt werden](package-version-numbering.md) und [wie Pakete für verschiedene Betriebssysteme verteilt werden](guidance-for-app-package-management.md).
 
@@ -29,7 +26,7 @@ Um Pakete hochzuladen, ziehen Sie sie in das Uploadfeld oder klicken Sie, um Ihr
 
 Falls Sie [Flight-Pakete](package-flights.md) für Ihre App erstellt haben, wird eine Dropdownliste mit der Option zum Kopieren von Paketen aus einem Ihrer Flight-Pakete angezeigt. Wählen Sie das Flight-Paket mit den Paketen aus, die Sie übertragen möchten. Anschließend können Sie einige oder alle der Pakete auswählen, um sie in diese Übermittlung aufzunehmen.
 
-> **Wichtig**  Für Windows 10 muss immer die APPXUPLOAD-Datei (nicht die APPX- oder die APPXBUNDLE-Datei) hochgeladen werden. Weitere Informationen zum Verpacken von UWP-Apps für den Store finden Sie unter [Verpacken universeller Windows-Apps für Windows 10](../packaging/packaging-uwp-apps.md).
+> **Wichtig**  Für Windows10 muss immer die APPXUPLOAD-Datei (nicht die APPX- oder die APPXBUNDLE-Datei) hochgeladen werden. Weitere Informationen zum Verpacken von UWP-Apps für den Store finden Sie unter [Verpacken universeller Windows-Apps für Windows10](../packaging/packaging-uwp-apps.md).
 
 Wenn beim Überprüfen Ihrer Pakete Probleme erkannt werden, müssen Sie das Paket entfernen, das Problem beheben, und dann erneut versuchen, es hochzuladen. Weitere Informationen finden Sie unter [Beheben von Paketuploadfehlern](resolve-package-upload-errors.md).
 
@@ -37,7 +34,7 @@ In anderen Fällen werden Warnungen zu Fehlern angezeigt, die Probleme verursach
 
 ## <a name="device-family-availability"></a>Verfügbarkeit von Gerätefamilien
 
-Nachdem die Pakete erfolgreich hochgeladen wurden, wird im Abschnitt **Gerätefamilienverfügbarkeit** eine Tabelle angezeigt, die angibt, welche Pakete für bestimmte Windows 10-Gerätefamilien (und ggf. für frühere Betriebssystemversionen) angeboten werden. In diesem Abschnitt können Sie auswählen, ob die Übermittlung Kunden mit bestimmten Windows 10-Gerätefamilien angeboten werden soll.
+Nachdem die Pakete erfolgreich hochgeladen wurden, wird im Abschnitt **Gerätefamilienverfügbarkeit** eine Tabelle angezeigt, die angibt, welche Pakete für bestimmte Windows10-Gerätefamilien (und ggf. für frühere Betriebssystemversionen) angeboten werden. In diesem Abschnittkönnen Sie auswählen, ob die Übermittlung Kunden mit bestimmten Windows10-Gerätefamilien angeboten werden soll.
 
 > **Hinweis** Nachdem die Pakete erfolgreich hochgeladen wurden, wird im Abschnitt **Gerätefamilienverfügbarkeit** eine Tabelle mit Kontrollkästchen angezeigt, die angibt, ob die Übermittlung Kunden auf diesen Gerätefamilien angeboten werden soll. In der Tabelle wird angezeigt, sobald Sie Ihre Pakete hochgeladen haben.
 
@@ -45,20 +42,20 @@ Es wird auch ein Kontrollkästchen angezeigt, in dem Sie angeben können, ob Mic
 
 ### <a name="choosing-which-device-families-to-support"></a>Auswählen der unterstützten Gerätefamilien
 
-Sie können das Kontrollkästchen für eine Windows 10-Gerätefamilie deaktivieren, wenn Sie Kunden auf diesem Gerät keine Übermittlung anbieten möchten. Wenn das Kontrollkästchen für eine Gerätefamilie deaktiviert ist, können neue Kunden die App auf diesem Gerätetyp nicht erwerben (Kunden, die bereits über die App verfügen, können diese allerdings weiterhin nutzen und erhalten alle von Ihnen übermittelten Aktualisierungen). 
+Sie können das Kontrollkästchen für eine Windows10-Gerätefamilie deaktivieren, wenn Sie Kunden auf diesem Gerät keine Übermittlung anbieten möchten. Wenn das Kontrollkästchen für eine Gerätefamilie deaktiviert ist, können neue Kunden die App auf diesem Gerätetyp nicht erwerben (Kunden, die bereits über die App verfügen, können diese allerdings weiterhin nutzen und erhalten alle von Ihnen übermittelten Aktualisierungen). 
 
 > **Hinweis** Für **Windows 8/8.1** und **Windows Phone 8.x und älter** sind keine Kontrollkästchen vorhanden. Wenn Ihre Übermittlung Pakete umfasst, die unter diesen Betriebssystemversionen ausgeführt werden können, werden diese für Kunden verfügbar gemacht. Wenn Sie das Angebot der App für Kunden mit früheren Betriebssystemversionen beenden möchten, müssen Sie die entsprechenden Pakete aus Ihrer Übermittlung entfernen.
 
-Wenn Ihre App Mobilgeräte- und Desktopgerätefamilien unterstützt, ist zu empfehlen, die Kontrollkästchen für **Windows 10 Mobile** und **Windows 10 Desktop** zu aktivieren, es sei denn, Sie haben einen bestimmten Grund, die Windows 10-Gerätetypen, die Ihre App beziehen können, einzuschränken. Angenommen Sie haben z. B. universelle Windows-Pakete erstellt, müssen jedoch noch einigen Probleme mit der App auf Mobilgeräten testen. Um zu verhindern, dass neue Kunden die App auf Mobilgeräten mit Windows 10 herunterladen, können Sie hier das Kontrollkästchen **Windows 10 Mobile** deaktivieren. Wenn Sie die App dann später für Mobilgeräte mit Windows 10 anbieten möchten, können Sie eine neue Übermittlung Erstellen, bei der das Kontrollkästchen **Windows 10 Mobile** aktiviert ist.
+Wenn Ihre App Mobilgeräte- und Desktopgerätefamilien unterstützt, ist zu empfehlen, die Kontrollkästchen für **Windows10 Mobile** und **Windows10 Desktop** zu aktivieren, es sei denn, Sie haben einen bestimmten Grund, die Windows10-Gerätetypen, die Ihre App beziehen können, einzuschränken. Angenommen Sie haben z.B. universelle Windows-Pakete erstellt, müssen jedoch noch einigen Probleme mit der App auf Mobilgeräten testen. Um zu verhindern, dass neue Kunden die App auf Mobilgeräten mit Windows 10 herunterladen, können Sie hier das Kontrollkästchen **Windows 10 Mobile** deaktivieren. Wenn Sie die App dann später für Mobilgeräte mit Windows 10 anbieten möchten, können Sie eine neue Übermittlung Erstellen, bei der das Kontrollkästchen **Windows 10 Mobile** aktiviert ist.
 
-Wenn Ihre App kein Spiel ist (oder wenn sie ein Spiel ist und Sie die [Konzeptgenehmigung](../gaming/concept-approval.md) durchlaufen haben), und Ihre Übermittlung neutrale und/oder x64-UWP-Pakete enthält, die mit Windows 10 SDK Version 14393 kompiliert wurden, können Sie das Kontrollkästchen **Windows 10 Xbox** aktivieren, wenn Sie die App Kunden auf Xbox anbieten möchten. 
+Wenn Ihre App kein Spiel ist (oder wenn sie ein Spiel ist und Sie die [Konzeptgenehmigung](../gaming/concept-approval.md) durchlaufen haben), und Ihre Übermittlung neutrale und/oder x64-UWP-Pakete enthält, die mit Windows10 SDK Version 14393 kompiliert wurden, können Sie das Kontrollkästchen **Windows10 Xbox** aktivieren, wenn Sie die App Kunden auf Xbox anbieten möchten. 
 
-> **Wichtig** Ihr App kann nur dann auf Xbox-Geräten gestartet werden, wenn sie ein mit Windows SDK Version 14393 oder höher kompiliertes neutrales oder x64-Paket enthält. Wenn Sie „Windows 10 Xbox“ aktivieren, wird ein für Xbox geeignete Paket mit der Versionsnummer (d. h., ein neutrales oder x64-Paket, das für die Gerätefamilien „Xbox“ oder „Universell“ bestimmt ist) Kunden auf Xbox jedoch immer angeboten – auch dann, wenn es mit einer früheren Version des SDK kompiliert wurde. Daher müssen Sie unbedingt sicherstellen, dass das für Xbox geeignete Paket mit der höchsten Versionsnummer mit Windows SDK-Version 14393 oder höher kompiliert wurde. Andernfalls wird eine Fehlermeldung angezeigt, in der darauf hingewiesen wird, dass Xbox-Kunden die App nicht starten können. 
+> **Wichtig** Ihr App kann nur dann auf Xbox-Geräten gestartet werden, wenn sie ein mit Windows SDK Version 14393 oder höher kompiliertes neutrales oder x64-Paket enthält. Wenn Sie „Windows10 Xbox“ aktivieren, wird ein für Xbox geeignete Paket mit der Versionsnummer (d.h., ein neutrales oder x64-Paket, das für die Gerätefamilien „Xbox“ oder „Universell“ bestimmt ist) Kunden auf Xbox jedoch immer angeboten – auch dann, wenn es mit einer früheren Version des SDK kompiliert wurde. Daher müssen Sie unbedingt sicherstellen, dass das für Xbox geeignete Paket mit der höchsten Versionsnummer mit Windows SDK-Version 14393 oder höher kompiliert wurde. Andernfalls wird eine Fehlermeldung angezeigt, in der darauf hingewiesen wird, dass Xbox-Kunden die App nicht starten können. 
 > 
-> Um diesen Fehler zu beheben, können Sie einen der folgenden Schritte ausführen:
+> Um diesen Fehler zu beheben, können Sie einen der folgenden Schritteausführen:
 > -    Ersetzen Sie die entsprechenden Pakete durch neue, die mit Windows SDK-Version 14393 oder höher kompiliert wurden.
 > -    Wenn Sie bereits über ein Paket verfügen, das Xbox unterstützt und mit Windows SDK-Version 14393 oder höher kompiliert wurde, erhöhen Sie die Versionsnummer, sodass dieses Paket die höchste Versionsnummer innerhalb der Übermittlung trägt.
-> -    Deaktivieren Sie das Kontrollkästchen für **Windows 10 Xbox**.
+> -    Deaktivieren Sie das Kontrollkästchen für **Windows10 Xbox**.
 >     
 > Wenn Sie das Problem immer noch nicht beheben können, wenden Sie sich an den Support.
 
@@ -72,9 +69,9 @@ Weitere Informationen über Gerätefamilien finden Sie unter [Anleitung für UWP
 
 ### <a name="understanding-ranking"></a>Grundlegendes zur Bewertung
 
-In diesem Abschnitt erfahren Sie nicht nur, wie Sie angeben, welche Windows 10-Gerätefamilien Ihre Übermittlung herunterladen können, sondern auch, genau welche Pakete für bestimmte Gerätefamilien zur Verfügung gestellt werden. Wenn mehrere Ihrer Pakete auf einer bestimmten Gerätefamilie ausgeführt werden können, wird in der Tabelle die Reihenfolge angegeben, in der Pakete basierend auf der Versionsnummer angeboten werden. Weitere Informationen dazu, wie der Store Pakete auf Grundlage der Versionsnummern bewertet, finden Sie unter [Paketversionsnummern](package-version-numbering.md). 
+In diesem Abschnitt erfahren Sie nicht nur, wie Sie angeben, welche Windows10-Gerätefamilien Ihre Übermittlung herunterladen können, sondern auch, genau welche Pakete für bestimmte Gerätefamilien zur Verfügung gestellt werden. Wenn mehrere Ihrer Pakete auf einer bestimmten Gerätefamilie ausgeführt werden können, wird in der Tabelle die Reihenfolge angegeben, in der Pakete basierend auf der Versionsnummer angeboten werden. Weitere Informationen dazu, wie der Store Pakete auf Grundlage der Versionsnummern bewertet, finden Sie unter [Paketversionsnummern](package-version-numbering.md). 
 
-Angenommen, Sie haben die beiden Pakete Package_A.appxupload und Package_B.appxupload. Wenn für eine bestimmte Gerätefamilie, Package_A.appxupload den Rang 1 und Package_B.appxupload den Rang 2 hat, bedeutet dies, das der Store an einen Kunden mit diesem Gerätetyp, der Ihre App erwirbt, zunächst Package_A.appxupload ausliefert. Wenn Package_A.appxupload auf den Gerät des Kunden nicht ausgeführt werden kann, bietet der Store Package_B.appxupload an. Wenn auf dem Gerät des Kunden eines der Pakete für diese Gerätefamilie nicht ausgeführt werden kann – wenn z. B. die von Ihrer App unterstützte **MinVersion** höher als die Version auf dem Gerät des Kunden ist – kann der Kunden die App nicht auf dem Gerät herunterladen.
+Angenommen, Sie haben die beiden Pakete Package_A.appxupload und Package_B.appxupload. Wenn für eine bestimmte Gerätefamilie, Package_A.appxupload den Rang 1 und Package_B.appxupload den Rang 2 hat, bedeutet dies, das der Store an einen Kunden mit diesem Gerätetyp, der Ihre App erwirbt, zunächst Package_A.appxupload ausliefert. Wenn Package_A.appxupload auf den Gerät des Kunden nicht ausgeführt werden kann, bietet der Store Package_B.appxupload an. Wenn auf dem Gerät des Kunden eines der Pakete für diese Gerätefamilie nicht ausgeführt werden kann – wenn z.B. die von Ihrer App unterstützte **MinVersion** höher als die Version auf dem Gerät des Kunden ist – kann der Kunden die App nicht auf dem Gerät herunterladen.
 
 > **Hinweis** Die Versionsnummern in XAP-Paketen werden beim Ermitteln der für einen gegebenen Kunden bereitzustellenden Pakete ignoriert. Daher wird bei mehreren gleichrangigen XAP-Paketen keine Nummer, sondern ein Sternchen angezeigt, und die Kunden können jedes der Pakete erhalten. Wenn ein XAP-Paket für einen Kunden auf ein neueres aktualisiert werden soll, stellen Sie sicher, dass die älteren XAP-Dateien aus der neuen Übermittlung entfernt werden.
 
@@ -96,18 +93,17 @@ Wenn wir feststellen, dass redundante Pakete vorhanden sind, wird eine Option be
 
 ## <a name="gradual-package-rollout"></a>Schrittweises Paketrollout
 
-Wenn Ihre Übermittlung ein Update einer bereits veröffentlichte App ist, wird ein Kontrollkästchen mit der Bezeichnung **Update-Rollout schrittweise nach Veröffentlichung dieser Übermittlung (nur für Windows 10-Kunden)** angezeigt. Dadurch können Sie den Prozentsatz von Kunden auswählen, die die Pakete aus der Übermittlung erhalten. So können Sie Feedback und Analysedaten beobachten und vor einem umfassenden Rollout sicherstellen, dass das Update verlässlich ist. Sie können den Prozentsatz jederzeit erhöhen (oder das Update stoppen), ohne eine neue Übermittlung zu erstellen. 
+Wenn Ihre Übermittlung ein Update einer bereits veröffentlichte App ist, wird ein Kontrollkästchen mit der Bezeichnung **Update-Rollout schrittweise nach Veröffentlichung dieser Übermittlung (nur für Windows10-Kunden)** angezeigt. Dadurch können Sie den Prozentsatz von Kunden auswählen, die die Pakete aus der Übermittlung erhalten. So können Sie Feedback und Analysedaten beobachten und vor einem umfassenden Rollout sicherstellen, dass das Update verlässlich ist. Sie können den Prozentsatz jederzeit erhöhen (oder das Update stoppen), ohne eine neue Übermittlung zu erstellen. 
 
 Weitere Informationen finden Sie unter [Schrittweises Paketrollout](gradual-package-rollout.md).
 
 ## <a name="mandatory-update"></a>Erforderliches Update
 
-Wenn die Übermittlung ein Update für eine bereits veröffentlichte App ist, wird ein Kontrollkästchen mit der Bezeichnung **Dieses Update obligatorisch machen** angezeigt. Damit können Sie Datum und Uhrzeit für ein obligatorisches Update festlegen, vorausgesetzt, Sie haben Ihrer App mithilfe der Windows.Services.Store-APIs erlaubt, programmgesteuert nach Paketupdates zu suchen und die aktualisierten Pakete herunterzuladen und zu installieren. Ihre App kann diese Option nur dann verwenden, wenn sie für Windows 10, Version 1607 oder höher, bestimmt ist.
+Wenn die Übermittlung ein Update für eine bereits veröffentlichte App ist, wird ein Kontrollkästchen mit der Bezeichnung **Dieses Update obligatorisch machen** angezeigt. Damit können Sie Datum und Uhrzeit für ein obligatorisches Update festlegen, vorausgesetzt, Sie haben Ihrer App mithilfe der Windows.Services.Store-APIs erlaubt, programmgesteuert nach Paketupdates zu suchen und die aktualisierten Pakete herunterzuladen und zu installieren. Ihre App kann diese Option nur dann verwenden, wenn sie für Windows10, Version 1607 oder höher, bestimmt ist.
 
 Weitere Informationen finden Sie unter [Herunterladen und Installieren von Paketupdates für Ihre App](../packaging/self-install-package-updates.md).
 
  
-
 
 
 

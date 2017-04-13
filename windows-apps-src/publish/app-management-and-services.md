@@ -1,6 +1,6 @@
 ---
 author: jnHs
-Description: "Im Windows Dev Center-Dashboard können Sie Details zu einzelnen Apps verwalten und anzeigen sowie Dienste wie Pushbenachrichtigungen, A/B-Tests und Karten konfigurieren."
+Description: "Im WindowsDevCenter-Dashboard können Sie Details zu einzelnen Apps verwalten und anzeigen sowie Dienste wie Pushbenachrichtigungen, A/B-Tests und Karten konfigurieren."
 title: App-Verwaltung und -Dienste
 ms.assetid: 99DA2BC1-9B5D-4746-8BC0-EC723D516EEF
 ms.author: wdg-dev-content
@@ -8,14 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1aaab8d122968265ff17b352a53b69081e84f01e
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 48e48d1a350b01777c1d7e5ed4ab1f82b1d66d26
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="app-management-and-services"></a>App-Verwaltung und -Dienste
 
 Im Windows Dev Center-Dashboard können Sie Details zu einzelnen Apps verwalten und anzeigen sowie Dienste wie Pushbenachrichtigungen, A/B-Tests und Karten konfigurieren.
@@ -28,13 +25,13 @@ Im Abschnitt **Dienste** können Sie verschiedene Dienste für Ihre Apps verwalt
 
 ### <a name="push-notifications"></a>Pushbenachrichtigungen
 
-Im Abschnitt **Pushbenachrichtigungen** können Sie benutzerorientierte Pushbenachrichtigungen für die Kunden Ihrer App erstellen und senden. Sie können die Benachrichtigungen an alle Kunden Ihrer App oder an eine Teilmenge Ihrer Windows 10-Kunden senden, die die in einem [Kundensegment](create-customer-segments.md) definierten Kriterien erfüllen. Weitere Informationen finden Sie unter [Senden von benutzerorientierten Pushbenachrichtigung an die Kunden Ihrer App](send-push-notifications-to-your-apps-customers.md).
+Im Abschnitt **Pushbenachrichtigungen** können Sie benutzerorientierte Pushbenachrichtigungen für die Kunden Ihrer App erstellen und senden. Sie können die Benachrichtigungen an alle Kunden Ihrer App oder an eine Teilmenge Ihrer Windows10-Kunden senden, die die in einem [Kundensegment](create-customer-segments.md) definierten Kriterien erfüllen. Weitere Informationen finden Sie unter [Senden von benutzerorientierten Pushbenachrichtigung an die Kunden Ihrer App](send-push-notifications-to-your-apps-customers.md).
 
 Je nach Pakettyp Ihrer App und den jeweiligen Anforderungen können Sie auch eine der folgenden Optionen für Pushbenachrichtigungen verwenden, indem Sie im linken Navigationsmenü auf die Seite **WNS/MPNS** klicken: 
 
 -   **Windows-Pushbenachrichtigungsdienste (Windows Push Notification Services, WNS)** ermöglichen es, Popup-, Kachel- und Badgeupdates sowie unformatierte Updates von Ihren eigenen Clouddiensten aus zu senden. Weitere Informationen finden Sie unter [Übersicht über den Windows-Pushbenachrichtigungsdienst (Windows Push Notification Service, WNS)](https://msdn.microsoft.com/library/windows/apps/mt187203).
 
--   **Microsoft Azure Mobile Apps** ermöglichen das Senden von Pushbenachrichtigungen, die Authentifizierung und Verwaltung von App-Benutzern und das Speichern von App-Daten in der Cloud. Weitere Informationen finden Sie in der [Mobile Apps-Dokumentation](http://go.microsoft.com/fwlink/p/?LinkId=221116).
+-   **Microsoft Azure Mobile Apps** ermöglichen das Senden von Pushbenachrichtigungen, die Authentifizierung und Verwaltung von App-Benutzern und das Speichern von App-Daten in der Cloud. Weitere Informationen finden Sie in der [MobileApps-Dokumentation](http://go.microsoft.com/fwlink/p/?LinkId=221116).
 
 -   Der **Microsoft-Pushbenachrichtigungsdienst (Microsoft Push Notification Service, MPNS)** kann mit Ihren XAP-Paketen für Windows Phone verwendet werden. Sie können eine begrenzte Anzahl nicht authentifizierter Benachrichtigungen senden, ohne hier eine Konfiguration vorzunehmen. Zur Vermeidung von Drosselungslimits wird jedoch empfohlen, authentifizierte Benachrichtigungen zu verwenden. Wenn Sie diesen Dienst verwenden, müssen Sie ein Zertifikat in das auf der Seite **Pushbenachrichtigungen** bereitgestellte Feld hochladen. Weitere Informationen finden Sie unter [Einrichten eines authentifizierten Webdiensts zum Senden von Pushbenachrichtigungen für Windows Phone 8](http://go.microsoft.com/fwlink/p/?LinkId=528736).
 
@@ -46,7 +43,7 @@ Weitere Informationen finden Sie unter [Ausführen von App-Experimenten mit A/B-
 
 ### <a name="maps"></a>Karten
 
-Wenn Sie Kartendienste in Apps unter Windows Phone 8.1 und früheren Versionen verwenden möchten, müssen Sie eine Kartendienst-Anwendungs-ID und ein Token in Ihren App-Code einfügen. Sie finden das Token auf der Seite **Karten** im Abschnitt **Dienste**.
+Wenn Sie Kartendienste in Apps unter Windows Phone8.1 und früheren Versionen verwenden möchten, müssen Sie eine Kartendienst-Anwendungs-ID und ein Token in Ihren App-Code einfügen. Sie finden das Token auf der Seite **Karten** im Abschnitt **Dienste**.
 
 > **Hinweis:**  Um Kartendienste in Apps zu verwenden, die auf Windows 10 or Windows 8.x ausgerichtet sind, besuchen Sie das [Bing Karten Dev Center](http://go.microsoft.com/fwlink/p/?LinkId=614880). Weitere Informationen finden Sie unter [Anfordern eines Kartenauthentifizierungsschlüssels](https://msdn.microsoft.com/library/windows/apps/mt219694).
 
@@ -87,4 +84,3 @@ Entwickler mit OEM-Berechtigungen können auf der Seite **Aktuelle Pakete** auß
  
 
  
-

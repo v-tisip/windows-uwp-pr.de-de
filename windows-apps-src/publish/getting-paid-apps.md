@@ -1,6 +1,6 @@
 ---
 author: jnHs
-Description: "Im Folgenden finden Sie wichtige Informationen, mit deren Hilfe Sie sicherstellen können, dass Sie für Ihre Apps, Add-Ons und Microsoft Advertising-Ergebnisse bezahlt werden."
+Description: "Im Folgenden finden Sie wichtige Informationen, mit deren Hilfe Sie sicherstellen können, dass Sie für Ihre Apps, Ihre In-App-Produkte (IAPs) und Ihren Microsoft Advertising-Verdienst bezahlt werden"
 title: Bezahlung
 ms.assetid: 37D1EF45-C4A8-4849-8819-3D4A4898215C
 ms.author: wdg-dev-content
@@ -8,34 +8,31 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: af5c30aae3927f901bb93fd2c79bfee202754a1e
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: c27e06491b66fea4f451b70309a9a8c3802aff18
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="getting-paid"></a>Bezahlung
-Im Folgenden finden Sie wichtige Informationen, mit deren Hilfe Sie sicherstellen können, dass Sie für Ihre Apps, Add-Ons und Microsoft Advertising-Ergebnisse bezahlt werden.
+Im Folgenden finden Sie wichtige Informationen, mit deren Hilfe Sie sicherstellen können, dass Sie für Ihre Apps, Add-Ons und Ihren Microsoft Advertising-Verdienst bezahlt werden.
 
-> **Wichtig**  Bevor Sie Geld aus App-Verkäufen im Windows Store erhalten können, müssen Sie [Ihr Auszahlungskonto einrichten und die erforderlichen Steuerformulare ausfüllen](setting-up-your-payout-account-and-tax-forms.md).
+> **Wichtig**  Bevor Sie Geld aus App-Verkäufen im WindowsStore erhalten können, müssen Sie [Ihr Auszahlungskonto einrichten und die erforderlichen Steuerformulare ausfüllen](setting-up-your-payout-account-and-tax-forms.md).
 
 ## <a name="store-fee"></a>Store-Gebühr
 
-Wenn Sie sich [für ein Entwicklerkonto registrieren](http://go.microsoft.com/fwlink/p/?LinkID=615100), akzeptieren Sie die [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058). In dieser Vereinbarung ist die Geschäftsbeziehung zwischen Ihnen und Microsoft in Bezug auf den Verkauf von Apps im Windows Store erläutert, einschließlich der Store-Gebühr, die Microsoft für jeden Verkauf erhebt.
+Wenn Sie sich [für ein Entwicklerkonto registrieren](http://go.microsoft.com/fwlink/p/?LinkID=615100), akzeptieren Sie die [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058). In dieser Vereinbarung ist die Geschäftsbeziehung zwischen Ihnen und Microsoft in Bezug auf den Verkauf von Apps im WindowsStore erläutert, einschließlich der Store-Gebühr, die Microsoft für jeden Verkauf erhebt.
 
-In den meisten Fällen beträgt die Store-Gebühr 30 %. Die Gebühren sind in der [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058) offiziell definiert. Lesen Sie bei Fragen immer in diesem Dokument nach.
+In den meisten Fällen beträgt die Store-Gebühr 30%. Die Gebühren sind in der [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058) offiziell definiert. Lesen Sie bei Fragen immer in diesem Dokument nach.
 
-Die Windows Store-Gebühr gilt für alle vom Windows Store erfassten App-Verkäufe einschließlich Add-Ons.
+Die WindowsStore-Gebühr gilt für alle vom WindowsStore erfassten App-Verkäufe einschließlich Add-Ons.
 
 ## <a name="price-tiers"></a>Preisniveaus
 
-Das Preisniveau bestimmt den Verkaufspreis in allen Ländern, in denen Sie Ihre App vertreiben möchten. Sie können die App kostenlos anbieten oder einen Preis auswählen, den Kunden zahlen müssen, um die App zu erwerben. Das Preisniveau beginnt bei 0,99 USD und steigen schrittweise (1,29 USD, 1,49 USD, 1,99 USD usw.). Die Schritte zwischen den Preisniveaus werden mit der Höhe des Preises größer.
+Das Preisniveau bestimmt den Verkaufspreis in allen Ländern, in denen Sie Ihre App vertreiben möchten. Sie können die App kostenlos anbieten oder einen Preis auswählen, den Kunden zahlen müssen, um die App zu erwerben. Das Preisniveau beginnt bei 0,99USD und steigen schrittweise (1,29USD, 1,49USD, 1,99USD usw.). Die Schritte zwischen den Preisniveaus werden mit der Höhe des Preises größer.
 
 > **Hinweis**  Diese Preisniveaus gelten auch für alle Add-Ons, die Sie in der App anbieten.
 
-Jedes Preisniveau hat einen entsprechenden Wert in jeder der über 60 vom Store angebotenen Währungen. Diese Werte sollten Ihnen helfen, Ihre Apps weltweit zu vergleichbaren Preisen zu verkaufen. Aufgrund von Wechselkursschwankungen kann der genaue Verkaufsbetrag von Währung zu Währung jedoch geringfügig abweichen.
+Jedes Preisniveau hat einen entsprechenden Wert in jeder der über 60vom Store angebotenen Währungen. Diese Werte sollten Ihnen helfen, Ihre Apps weltweit zu vergleichbaren Preisen zu verkaufen. Aufgrund von Wechselkursschwankungen kann der genaue Verkaufsbetrag von Währung zu Währung jedoch geringfügig abweichen.
 
 Beachten Sie, dass das von Ihnen ausgewählte Preisniveau u. U. eine Verkaufs- oder Mehrwertsteuer enthält, die Kunden bezahlen müssen. Weitere Informationen finden Sie unter [Steuerinformationen zu kostenpflichtigen Apps](tax-details-for-paid-apps.md).
 
@@ -61,7 +58,6 @@ Nachdem Sie die Auszahlungssperre auf **Ein** festgelegt haben, werden alle Ausz
  
 
  
-
 
 
 

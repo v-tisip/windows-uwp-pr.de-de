@@ -9,16 +9,13 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 244124dd-d80a-4a72-91db-1c9c2fbc7c3c
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 857b1529a933f416a1c61f3afd844f6cb820f3f3
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 46e9e013336f19aedafdb21e0417c878c7c7e8a1
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xbox-one-developer-mode-deactivation"></a>Deaktivierung des Xbox One-Entwicklermodus
 
-* [Wechseln zum Retailmodus](#switch-to-retail-mode)
+* [Wechseln zum Einzelhandelsmodus](#switch-to-retail-mode)
 * [Deaktivieren der Konsole mit der DevMode-Aktivierungsapp](#deactivate-your-console-using-the-dev-mode-activation-app)  
 * [Zurücksetzen der Konsole](#reset-your-console)
 * [Deaktivieren der Konsole mit Windows Dev Center](#deactivate-your-console-using-windows-dev-center)
@@ -93,4 +90,3 @@ Wenn Sie die Xbox One-Konsole noch nicht in den Einzelhandelsmodus zurückgesetz
 ## <a name="see-also"></a>Weitere Informationen
 - [Aktivierung des Xbox One-Entwicklermodus](devkit-activation.md)
 - [UWP auf Xbox One](index.md)
-

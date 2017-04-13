@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 186088f249c2e6fe116c970bd1969fcb59863ba6
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="enter-add-on-properties"></a>Eingeben von Add-On-Eigenschaften
 
 
@@ -30,14 +27,14 @@ Beim ersten [Erstellen des Add-Ons](set-your-add-on-product-id.md) wird der Prod
 Je nach ausgewähltem Produkttyp wird eins der folgenden Felder angezeigt:
 
 ### <a name="product-lifetime"></a>Produktlebensdauer
-Wenn Sie als Produkttyp **Gebrauchsgut** ausgewählt haben, wird hier die **Produktlebenszeit** angezeigt. Die standardmäßige **Produktlebenszeit** eines solchen Add-Ons ist **Unbegrenzt**, d. h. das Add-On läuft niemals ab. Sie können die **Produktlebenszeit** auch festlegen, sodass das Add-On nach einem festgelegten Zeitraum abläuft (mögliche Optionen: 1 bis 365 Tage). 
+Wenn Sie als Produkttyp **Gebrauchsgut** ausgewählt haben, wird hier die **Produktlebenszeit** angezeigt. Die standardmäßige **Produktlebenszeit** eines solchen Add-Ons ist **Unbegrenzt**, d.h. das Add-On läuft niemals ab. Sie können die **Produktlebenszeit** auch festlegen, sodass das Add-On nach einem festgelegten Zeitraum abläuft (mögliche Optionen: 1 bis 365Tage). 
 
 ### <a name="quantity"></a>Menge
 Wenn Sie den Produkttyp **Vom Store verwalteter Verbrauchsartikel** ausgewählt haben, wird hier die **Menge** angezeigt. Sie müssen eine Zahl zwischen 1 und 1000000 eingeben. Diese Menge wird Kunden gewährt, wenn sie Ihr Add-On erwerben, und vom Store wird der Betrag nachverfolgt, wenn die App die Nutzung des Add-Ons durch Kunden meldet.
 
 ## <a name="content-type"></a>Inhaltstyp
 
-Unabhängig vom Produkttyp Ihres Add-Ons müssen Sie auch die Art der Inhalte angeben, die Sie anbieten. Für die meisten Add-Ons sollte der Inhaltstyp **Download elektronischer Software** lauten. Wenn eine andere Option aus der Liste Ihr Add-On besser beschreibt (wenn Sie z. B. einen Musikdownload oder ein E-Book anbieten), wählen Sie stattdessen diese Option. 
+Unabhängig vom Produkttyp Ihres Add-Ons müssen Sie auch die Art der Inhalte angeben, die Sie anbieten. Für die meisten Add-Ons sollte der Inhaltstyp **Download elektronischer Software** lauten. Wenn eine andere Option aus der Liste Ihr Add-On besser beschreibt (wenn Sie z.B. einen Musikdownload oder ein E-Book anbieten), wählen Sie stattdessen diese Option. 
 
 Mögliche Optionen für den Inhaltstyp eines Add-Ons:
 
@@ -56,7 +53,7 @@ Mögliche Optionen für den Inhaltstyp eines Add-Ons:
 
 Sie können für jedes eingereichte Add-On bis zu zehn Schlüsselwörter von jeweils bis zu 30 Zeichen bereitstellen. Danach kann Ihre App nach Add-Ons suchen, die diesen Schlüsselwörtern entsprechen. Durch dieses Feature können Sie Bildschirme in Ihrer App erstellen, die Add-Ons laden können, ohne dass Sie die Produkt-ID im App-Code direkt angeben müssen. Sie können die Schlüsselwörter des Add-Ons später jederzeit ändern, ohne Codeänderungen an der App vorzunehmen oder die App erneut einzureichen.
 
-> **Hinweis**  Schlüsselwörter stehen für Pakete, die für Windows 8 und Windows 8.1 entwickelt wurden, nicht zur Verfügung.
+> **Hinweis**  Schlüsselwörter stehen für Pakete, die für Windows8 und Windows8.1 entwickelt wurden, nicht zur Verfügung.
 
 ## <a name="custom-developer-data"></a>Benutzerdefinierte Entwicklerdaten
 
@@ -66,14 +63,13 @@ Verwenden Sie zur Abfrage des Felds die Eigenschaft [StoreSku.CustomDeveloperDat
 
 Nehmen wir beispielsweise an, dass Sie ein Spiel anbieten und einen Beutel Goldmünzen als Add-On verkaufen. Über das Feld **Benutzerdefinierte Entwicklerdaten** kann die App nach diesem Beutel Gold fragen. Sie können den Wert (in diesem Fall die Anzahl der Münzen im Beutel) jederzeit anpassen, indem Sie die Informationen im Feld **Benutzerdefinierte Entwicklerdaten** des Add-Ons aktualisieren. Dazu müssen Sie keine Codeänderungen in der App vornehmen und die App nicht erneut übermitteln.
 
-> **Hinweis**  Das Feld **Benutzerdefinierte Entwicklerdaten** ist nicht in Paketen verfügbar, die für Windows 8 und Windows 8.1 entwickelt wurden.
+> **Hinweis**  Das Feld **Benutzerdefinierte Entwicklerdaten** ist nicht in Paketen verfügbar, die für Windows8 und Windows8.1 entwickelt wurden.
 
  
 
  
 
  
-
 
 
 

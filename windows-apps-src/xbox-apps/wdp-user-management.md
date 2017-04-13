@@ -1,14 +1,19 @@
----  
+---
 author: WilliamsJason
 title: Xbox Live-Test - Referenz zu den Benutzerverwaltungs-APIs
 description: Erfahren Sie, wie Sie programmgesteuert auf die Benutzerverwaltungs-APIs zugreifen.
-translationtype: Human Translation
-ms.sourcegitcommit: 67f158b1d3d5ece14c36483a2513a2db2f478660
-ms.openlocfilehash: 66fe038fdb54ac5cb9086bf9225d0a5d573b39c8
-
----  
-
-#Xbox Live-Benutzerverwaltung#
+ms.author: jaswill
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows10, UWP
+ms.assetid: 70876ab6-8222-4940-b4fb-65b581a77d6a
+ms.openlocfilehash: c1a2517aa8716cff9201351a12a3c391110aafab
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
+---
+#<a name="xbox-live-user-management"></a>Xbox Live-Benutzerverwaltung#
 
 **Anforderung**
 
@@ -41,7 +46,7 @@ PUT-Aufrufe müssen ein JSON-Array mit folgender Struktur enthalten:
   * SponsoredUser (optional): Ein boolescher Wert, der angibt, ob ein gesponserter Benutzer hinzugefügt werden soll.
   * Delete (optional): Ein boolescher Wert, der angibt, ob dieser Benutzer von der Konsole gelöscht werden soll.
 
-###Antwort###
+###<a name="response"></a>Antwort###
 
 **Antworttext**
 
@@ -67,11 +72,5 @@ Diese API hat die folgenden erwarteten Statuscodes:
 | 4XX                | Verschiedene Fehler für ungültige Anforderungsdaten oder ein ungültiges Anforderungsformat |
 | 5XX                | Fehlercodes für unerwartete Fehler |
 <br>
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

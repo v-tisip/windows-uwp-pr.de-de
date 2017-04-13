@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: e7d4225e-ac2c-41dc-aca7-9b1a95ec590b
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 24e966f953928d238f9197359e0b539b8a3e5c3c
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 02b1a056cd7e711b1fc4533c353570209153f9e8
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="fiddler-settings-api-reference"></a>Fiddler-Einstellungen – API-Referenz   
 Sie können die Fiddler-Netzwerkablaufverfolgung für Ihr Dev Kit mittels dieser REST-API aktivieren und deaktivieren.
 
@@ -42,7 +39,7 @@ Sie können im Anforderungs-URI die folgenden zusätzlichen Parameter angeben:
 
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
@@ -54,7 +51,7 @@ Sie können im Anforderungs-URI die folgenden zusätzlichen Parameter angeben:
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -74,15 +71,15 @@ DELETE | /ext/fiddler
 <br />
 **URI-Parameter**
 
-- Keiner
+- Keine
 
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**   
 
-- Keiner
+- Keine
 
 **Antwort**   
 
@@ -90,7 +87,7 @@ DELETE | /ext/fiddler
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -105,5 +102,4 @@ HTTP-Statuscode      | Beschreibung
 
 ## <a name="see-also"></a>Siehe auch
 - [Konfigurieren von Fiddler für UWP auf Xbox](uwp-fiddler.md)
-
 

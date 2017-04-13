@@ -9,15 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: edd40cc4-2604-4bc6-bd81-f671389a70fa
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 9f7a70bb726fc6eb6f7465068cf33acb7aa33a39
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: cb558b67647dfe065a01cfac1bd1c37f766881d0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="bringing-html-games-to-uwp-on-xbox"></a>Portieren von HTML-Spielen auf die UWP auf Xbox
-Xbox One ist eine hervorragende Plattform für HTML5-Spiele. HTML 5-Spiele werden auf der [Edge](https://developer.microsoft.com/microsoft-edge/)-Browser-Engine ausgeführt. Edge ist schnell und unterstützt HTML5- und CSS3-Features wie WebGL und Canvas uneingeschränkt.
+Xbox One ist eine hervorragende Plattform für HTML 5-Spiele. HTML 5-Spiele werden auf der [Edge](https://developer.microsoft.com/microsoft-edge/)-Browser-Engine ausgeführt. Edge ist schnell und unterstützt HTML5- und CSS3-Features wie WebGL und Canvas uneingeschränkt.
 
 Beliebte Spielengines wie [Construct 2](https://www.scirra.com/blog/176/announcing-xbox-one-export-beta) bieten Unterstützung für Xbox One. Wir haben noch nicht alle HTML-Frameworks und -Engines getestet, aber wir gehen davon aus, dass die meisten auf Xbox One verwendet werden können.
 
@@ -29,5 +26,4 @@ Laden Sie zunächst die Engine Ihrer Wahl herunter, und suchen Sie nach Anweisun
 
 ## <a name="see-also"></a>Weitere Informationen
 - [Portieren vorhandener Spiele zu Xbox](development-lanes-landing.md)
-- [UWP auf Xbox One](index.md)
-
+- [UWP auf XboxOne](index.md)

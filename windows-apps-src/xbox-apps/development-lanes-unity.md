@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: fca3267a-0c0f-4872-8017-90384fb34215
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 6c01cc5afa3b3c1266464c9f04c79cea533c9741
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: ec26b5533e378cd10517ef8cf766171bc8ef717f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="bringing-unity-games-to-uwp-on-xbox"></a>Portieren von Unity-Spielen für Xbox auf die UWP
 
 
@@ -25,7 +22,7 @@ Beachten Sie auch die [Videoversion des Lernprogramms](https://www.youtube.com/w
 
 Möchten Sie eine Versionsverwaltung für Ihr Unity-UWP-Projekt verwenden? Siehe [Versionskontrolle für Ihr UWP-Projekt](development-lanes-unity-versioning.md).
 
-## <a name="step-0-ensure-unity-is-installed-correctly"></a>Schritt 0: Sicherstellen, dass Unity richtig installiert wurde
+## <a name="step-0-ensure-unity-is-installed-correctly"></a>Schritt0: Sicherstellen, dass Unity richtig installiert wurde
 
 Beim Installieren von Unity müssen folgende Komponenten ausgewählt sein:
 
@@ -37,7 +34,7 @@ Beim Installieren von Unity müssen folgende Komponenten ausgewählt sein:
 
 ![Fenster mit Build-Einstellungen](images/build-settings.png)
 
-Stellen Sie sicher, dass die **SDK**-Einstellung auf **Universal 10** gesetzt ist, und klicken Sie dann auf die Schaltfläche **Build**. Ein Datei-Explorer-Fenster wird geöffnet, in dem Sie nach einem Zielordner gefragt werden. Erstellen Sie neben dem Verzeichnis **Assets** Ihres Projekts den Ordner **UWP**, und wählen Sie diesen Ordner als Zielordner des Builds aus.
+Stellen Sie sicher, dass die **SDK**-Einstellung auf **Universal10** gesetzt ist, und klicken Sie dann auf die Schaltfläche **Build**. Ein Datei-Explorer-Fenster wird geöffnet, in dem Sie nach einem Zielordner gefragt werden. Erstellen Sie neben dem Verzeichnis **Assets** Ihres Projekts den Ordner **UWP**, und wählen Sie diesen Ordner als Zielordner des Builds aus.
 
 ![Build-Zielordner](images/build-destination.png)
 
@@ -53,15 +50,14 @@ Unity hat eine neue Visual Studio-Lösung erstellt, die wir zum Bereitstellen Ih
 
 Nachdem Sie nun über eine Visual Studio-UWP-Lösung für Ihr Spiel verfügen, [befolgen Sie diese Schritte](getting-started.md), um Ihr Spiel erfolgreich auf Ihrer Xbox One-Konsole für den Einzelhandel bereitzustellen!
 
-## <a name="step-3-modify-and-rebuild"></a>Schritt 3: Ändern und Neuerstellen
+## <a name="step-3-modify-and-rebuild"></a>Schritt3: Ändern und Neuerstellen
 
-Wenn etwas anderes als ein Skript geändert wird, muss das Projekt im Editor neu erstellt werden (siehe __Schritt 1__), damit die Änderungen in den UWP-Build Ihres Spiel übernommen werden.
+Wenn etwas anderes als ein Skript geändert wird, muss das Projekt im Editor neu erstellt werden (siehe __Schritt1__), damit die Änderungen in den UWP-Build Ihres Spiel übernommen werden.
 
 ## <a name="versioning-your-uwp-project"></a>Versionsverwaltung für Ihr UWP-Projekt
 
-In bestimmten Situationen müssen Teile dieses neu generierten UWP-Verzeichnisses der Versionskontrolle hinzugefügt werden. Dies ist beispielsweise der Fall, wenn Sie dem UWP-Projekt eine neue Abhängigkeit (z. B. das Xbox Live SDK) hinzufügen.  Wir betrachten dieses Beispiel unter [Versionskontrolle für Ihr UWP-Projekt](development-lanes-unity-versioning.md) ausführlich.
+In bestimmten Situationen müssen Teile dieses neu generierten UWP-Verzeichnisses der Versionskontrolle hinzugefügt werden. Dies ist beispielsweise der Fall, wenn Sie dem UWP-Projekt eine neue Abhängigkeit (z.B. das Xbox Live SDK) hinzufügen.  Wir betrachten dieses Beispiel unter [Versionskontrolle für Ihr UWP-Projekt](development-lanes-unity-versioning.md) ausführlich.
 
 ## <a name="see-also"></a>Weitere Informationen
 - [Portieren vorhandener Spiele zu Xbox](development-lanes-landing.md)
-- [UWP auf Xbox One](index.md)
-
+- [UWP auf XboxOne](index.md)

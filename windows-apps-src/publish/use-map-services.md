@@ -1,6 +1,6 @@
 ---
 author: jnHs
-Description: "Wenn Sie Kartendienste in Apps unter Windows Phone 8.1 und früheren Versionen verwenden möchten, müssen Sie eine Kartendienst-Anwendungs-ID und ein Token in Ihren App-Code einfügen. Sie erhalten dieses Token im Dev Center-Dashboard auf der Seite „Karten“ im Abschnitt „Dienste“."
+Description: "Wenn Sie Kartendienste in Apps unter Windows Phone8.1 und früheren Versionen verwenden möchten, müssen Sie eine Kartendienst-Anwendungs-ID und ein Token in Ihren App-Code einfügen. Sie erhalten dieses Token im DevCenter-Dashboard auf der Seite „Karten“ im Abschnitt „Dienste“."
 title: Verwenden von Kartendiensten
 ms.assetid: E5EE6B56-B86F-4D62-B16A-F023FE98EFAB
 ms.author: wdg-dev-content
@@ -8,18 +8,15 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1657c092d09761b7e1db82252295356384faf68a
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 853816bcb994628a8864a066309c5abd0e31fd2b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="use-map-services"></a>Verwenden von Kartendiensten
 
 
-Wenn Sie Kartendienste in Apps unter Windows Phone 8.1 und früheren Versionen verwenden möchten, müssen Sie eine Kartendienst-Anwendungs-ID und ein Token in Ihren App-Code einfügen. Sie erhalten dieses Token im Dev Center-Dashboard auf der Seite **Karten** im Abschnitt **Dienste**.
+Wenn Sie Kartendienste in Apps unter Windows Phone8.1 und früheren Versionen verwenden möchten, müssen Sie eine Kartendienst-Anwendungs-ID und ein Token in Ihren App-Code einfügen. Sie erhalten dieses Token im DevCenter-Dashboard auf der Seite **Karten** im Abschnitt **Dienste**.
 
 > **Hinweis:**  Um Kartendienste in Apps zu verwenden, die auf andere Betriebssysteme ausgerichtet sind, besuchen Sie das [Bing Karten Dev Center](http://go.microsoft.com/fwlink/p/?LinkId=614880). Weitere Informationen finden Sie unter [Anfordern eines Kartenauthentifizierungsschlüssels](https://msdn.microsoft.com/library/windows/apps/mt219694).
 
@@ -32,7 +29,6 @@ Sie müssen auch sicherstellen, dass **ApplicationID** und **AuthenticationToken
  
 
  
-
 
 
 

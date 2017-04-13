@@ -1,6 +1,6 @@
 ---
 author: jnHs
-Description: "Der Windows Store erreicht Kunden in über 200 Ländern und Regionen in aller Welt."
+Description: "Der Windows Store erreicht Kunden in über 200Ländern und Regionen in aller Welt."
 title: "Festlegen des Preises und Auswählen der Märkte"
 ms.assetid: FBE7507B-DBF3-4FCB-8377-DB01660E75F8
 ms.author: wdg-dev-content
@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: acf14f886f36d74941769954041325514a386e86
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b994d4c46a319f7f5714685666295f079c31d8df
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="define-pricing-and-market-selection"></a>Festlegen des Preises und Auswählen der Märkte
 
 
-Der Windows Store erreicht Kunden in über 200 Ländern und Regionen in aller Welt. Sie können bestimmen, in welchen Märkten und zu welchem Preis Ihre App angeboten werden soll, und außerdem Preise marktabhängig anpassen.
+Der Windows Store erreicht Kunden in über 200Ländern und Regionen in aller Welt. Sie können bestimmen, in welchen Märkten und zu welchem Preis Ihre App angeboten werden soll, und außerdem Preise marktabhängig anpassen.
 
 **Hinweis** Beachten Sie unsere [Richtlinien zum Globalisieren von Apps](https://msdn.microsoft.com/library/windows/apps/hh969150).
 
@@ -34,7 +31,7 @@ Sie können den **Grundpreis** auf **Kostenlos** festlegen oder ein verfügbares
 
 > **Hinweis** Diese Preisstufen gelten auch für [Add-Ons](add-on-submissions.md).
 
-Jedes Preisniveau hat einen entsprechenden Wert in jeder der über 60 vom Store angebotenen Währungen. Diese Werte sollten Ihnen helfen, Ihre Apps weltweit zu vergleichbaren Preisen zu verkaufen. Aufgrund von Wechselkursschwankungen kann der genaue Verkaufsbetrag von Währung zu Währung jedoch geringfügig abweichen.
+Jedes Preisniveau hat einen entsprechenden Wert in jeder der über 60vom Store angebotenen Währungen. Diese Werte sollten Ihnen helfen, Ihre Apps weltweit zu vergleichbaren Preisen zu verkaufen. Aufgrund von Wechselkursschwankungen kann der genaue Verkaufsbetrag von Währung zu Währung jedoch geringfügig abweichen.
 
 Beachten Sie, dass das von Ihnen ausgewählte Preisniveau u. U. eine Verkaufs- oder Mehrwertsteuer enthält, die Kunden bezahlen müssen. Weitere Informationen über Ihre steuerlichen Verpflichtungen in ausgewählten Märkten finden Sie in den [Steuerinformationen zu kostenpflichtigen Apps](tax-details-for-paid-apps.md). Lesen Sie auch die folgenden [Überlegungen zu Preisen für die einzelnen Märkte](#price-considerations-for-specific-markets).
 
@@ -51,9 +48,9 @@ Hier können Sie für Ihre App auch angepasste Preise in bestimmten Märkten fes
 
 > **Hinweis** Sie können auch angepasste Preise für bestimmte Märkte für [Add-On-Übermittlungen](add-on-submissions.md) festlegen.
 
-Bestimmte Apps werden u. U. aufgrund von örtlich geltenden Gesetzen und Beschränkungen oder anderen Faktoren in bestimmten Märkten nicht angeboten, obwohl Sie alle Märkte ausgewählt haben. Außerdem haben einige Märkte möglicherweise spezifische Anforderungen für Altersfreigaben. Wenn Ihre App diese Anforderungen nicht erfüllt, können wir sie auf diesem Markt nicht anbieten. Weitere Informationen finden Sie unter [Altersfreigaben](age-ratings.md).
+Bestimmte Apps werden u.U. aufgrund von örtlich geltenden Gesetzen und Beschränkungen oder anderen Faktoren in bestimmten Märkten nicht angeboten, obwohl Sie alle Märkte ausgewählt haben. Außerdem haben einige Märkte möglicherweise spezifische Anforderungen für Altersfreigaben. Wenn Ihre App diese Anforderungen nicht erfüllt, können wir sie auf diesem Markt nicht anbieten. Weitere Informationen finden Sie unter [Altersfreigaben](age-ratings.md).
 
-> **Hinweis** Für Windows 8- oder Windows 8.1-Apps werden einige Einzelmärkte als „Restliche Welt“ zusammengefasst. Weitere Informationen finden Sie unter [Märkte "Restliche Welt" für Windows 8.x](#rest-of-world-markets-for-windows-8-x). Bedenken Sie außerdem, dass Kunden mit Windows 8 oder Windows 8.1 die App nur zum Grundpreis angezeigt wird, auch wenn Sie den Preis in ihrem Markt ändern.
+> **Hinweis** Für Windows8- oder Windows8.1-Apps werden einige Einzelmärkte als „Restliche Welt“ zusammengefasst. Weitere Informationen finden Sie unter [Märkte "Restliche Welt" für Windows 8.x](#rest-of-world-markets-for-windows-8x). Bedenken Sie außerdem, dass Kunden mit Windows8 oder Windows8.1 die App nur zum Grundpreis angezeigt wird, auch wenn Sie den Preis in ihrem Markt ändern.
 
  
 
@@ -310,75 +307,75 @@ Sie können Ihre App (oder Ihr Add-On) für mindestens einen der folgenden Märk
 
 Zahlungsmethoden wie Geschenkkarten und die Abrechnung mit dem Mobilfunkanbieter können den Absatz kostenpflichtiger Apps und In-App-Einkaufsartikel fördern. Da für die Bereitstellung dieser Zahlungsmethoden höhere Kosten anfallen, wird der anhand der Nettoeinnahmen ermittelten Store-Gebühr ein Aufschlag zur Regulierung der Markterweiterung (Commerce Expansion Adjustment) hinzugerechnet, um die für kostenpflichtige Apps und In-App-Transaktionen zu zahlenden Anwendungserlöse in den Ländern/Regionen, in denen die in den Tabellen unten aufgeführten Zahlungsmethoden verwendet werden, zu berechnen. Unter Umständen empfiehlt es sich, bei der Festlegung Ihrer App-Preise für die einzelnen Märkte zu berücksichtigen, ob bzw. wo der Aufschlag zur Regulierung der Markterweiterung anfällt. Nähere Informationen zu der Regulierung zur Markterweiterung finden Sie in der [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058).
 
-Die Regulierung zur Markterweiterung wird ab dem Datum des Inkrafttretens auf alle für das jeweilige Land/die jeweilige Region verarbeiteten Transaktionen und Zahlungsmethoden erhoben. Diese Informationen werden monatlich aktualisiert. Neu hinzugekommene Länder/Regionen und Zahlungsmethoden werden innerhalb von dreißig (30) Tagen nach Inkrafttreten der Regulierung zur Markterweiterung für das jeweilige Land/die jeweilige Region und Zahlungsmethode in die Liste aufgenommen.
+Die Regulierung zur Markterweiterung wird ab dem Datum des Inkrafttretens auf alle für das jeweilige Land/die jeweilige Region verarbeiteten Transaktionen und Zahlungsmethoden erhoben. Diese Informationen werden monatlich aktualisiert. Neu hinzugekommene Länder/Regionen und Zahlungsmethoden werden innerhalb von dreißig (30)Tagen nach Inkrafttreten der Regulierung zur Markterweiterung für das jeweilige Land/die jeweilige Region und Zahlungsmethode in die Liste aufgenommen.
 
 | Land/Region | Zahlungsmethoden         | Regulierung zur Markterweiterung | Datum des Inkrafttretens |
 |----------------|-------------------------|-------------------------------|----------------|
-| Brasilien         | Abrechnung über den Mobilfunkanbieter | 13,9 %                         | Dezember 2014  |
-| Chile          | Abrechnung über den Mobilfunkanbieter | 13,9 %                         | März 2014     |
-| China          | Abrechnung über den Mobilfunkanbieter | 13,9 %                         | Dezember 2014  |
-| Kolumbien       | Abrechnung über den Mobilfunkanbieter | 13,9 %                         | März 2014     |
-| Costa Rica     | Abrechnung über den Mobilfunkanbieter | 13,9 %                         | März 2014     |
-| Ecuador        | Abrechnung über den Mobilfunkanbieter | 13,9 %                         | November 2014  |
-| Ägypten          | Abrechnung über den Mobilfunkanbieter | 13,9 %                         | Juni 2014      |
-| Guatemala      | Abrechnung über den Mobilfunkanbieter | 13,9 %                         | Oktober 2014   |
-| Indien          | Abrechnung über den Mobilfunkanbieter | 13,9 %                         | Dezember 2014  |
-| Jordanien         | Abrechnung über den Mobilfunkanbieter | 13,9 %                         | März 2015     |
-| Kenia          | Abrechnung über den Mobilfunkanbieter | 13,9 %                         | Juli 2014      |
-| Malaysia       | Abrechnung über den Mobilfunkanbieter | 13,9 %                         | März 2014     |
-| Mexiko         | Abrechnung über den Mobilfunkanbieter | 13,9 %                         | März 2014     |
-| Pakistan       | Abrechnung über den Mobilfunkanbieter | 13,9 %                         | Oktober 2015   |
-| Peru           | Abrechnung über den Mobilfunkanbieter | 13,9 %                         | März 2014     |
-| Philippinen    | Abrechnung über den Mobilfunkanbieter | 13,9 %                         | Juni 2015      |
-| Puerto Rico    | Abrechnung über den Mobilfunkanbieter | 13,9 %                         | Juni 2015      |
-| Südafrika   | Abrechnung über den Mobilfunkanbieter | 13,9 %                         | März 2014     |
-| Vietnam        | Abrechnung über den Mobilfunkanbieter | 13,9 %                         | Oktober 2014   |
+| Brasilien         | Abrechnung über den Mobilfunkanbieter | 13,9%                         | Dezember 2014  |
+| Chile          | Abrechnung über den Mobilfunkanbieter | 13,9%                         | März 2014     |
+| China          | Abrechnung über den Mobilfunkanbieter | 13,9%                         | Dezember 2014  |
+| Kolumbien       | Abrechnung über den Mobilfunkanbieter | 13,9%                         | März 2014     |
+| Costa Rica     | Abrechnung über den Mobilfunkanbieter | 13,9%                         | März 2014     |
+| Ecuador        | Abrechnung über den Mobilfunkanbieter | 13,9%                         | November 2014  |
+| Ägypten          | Abrechnung über den Mobilfunkanbieter | 13,9%                         | Juni 2014      |
+| Guatemala      | Abrechnung über den Mobilfunkanbieter | 13,9%                         | Oktober2014   |
+| Indien          | Abrechnung über den Mobilfunkanbieter | 13,9%                         | Dezember 2014  |
+| Jordanien         | Abrechnung über den Mobilfunkanbieter | 13,9%                         | März 2015     |
+| Kenia          | Abrechnung über den Mobilfunkanbieter | 13,9%                         | Juli 2014      |
+| Malaysia       | Abrechnung über den Mobilfunkanbieter | 13,9%                         | März 2014     |
+| Mexiko         | Abrechnung über den Mobilfunkanbieter | 13,9%                         | März 2014     |
+| Pakistan       | Abrechnung über den Mobilfunkanbieter | 13,9%                         | Oktober2015   |
+| Peru           | Abrechnung über den Mobilfunkanbieter | 13,9%                         | März 2014     |
+| Philippinen    | Abrechnung über den Mobilfunkanbieter | 13,9%                         | Juni 2015      |
+| Puerto Rico    | Abrechnung über den Mobilfunkanbieter | 13,9%                         | Juni 2015      |
+| Südafrika   | Abrechnung über den Mobilfunkanbieter | 13,9%                         | März 2014     |
+| Vietnam        | Abrechnung über den Mobilfunkanbieter | 13,9%                         | Oktober2014   |
 
   
 
 | Land/Region       | Zahlungsmethoden | Regulierung zur Markterweiterung | Datum des Inkrafttretens |
 |----------------------|-----------------|-------------------------------|----------------|
-| Argentinien            | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Australien            | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Österreich              | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Belgien              | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Brasilien               | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Kanada               | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Chile                | Geschenkkarte       | 2,24 %                         | März 2016     |
-| China                | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Kolumbien             | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Tschechische Republik       | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Dänemark              | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Finnland              | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Frankreich               | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Deutschland              | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Griechenland               | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Hongkong            | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Ungarn              | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Indien                | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Irland              | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Israel               | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Italien                | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Japan                | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Mexiko               | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Niederlande          | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Neuseeland          | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Polen               | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Portugal             | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Russische Föderation               | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Saudi-Arabien         | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Singapur            | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Slowakei             | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Südafrika         | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Südkorea          | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Spanien                | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Schweden               | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Schweiz          | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Taiwan               | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Türkei               | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Vereinigte Arabische Emirate | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Vereinigtes Königreich       | Geschenkkarte       | 2,24 %                         | März 2016     |
-| Vereinigte Staaten        | Geschenkkarte       | 2,24 %                         | März 2016     |
+| Argentinien            | Geschenkkarte       | 2,24%                         | März 2016     |
+| Australien            | Geschenkkarte       | 2,24%                         | März 2016     |
+| Österreich              | Geschenkkarte       | 2,24%                         | März 2016     |
+| Belgien              | Geschenkkarte       | 2,24%                         | März 2016     |
+| Brasilien               | Geschenkkarte       | 2,24%                         | März 2016     |
+| Kanada               | Geschenkkarte       | 2,24%                         | März 2016     |
+| Chile                | Geschenkkarte       | 2,24%                         | März 2016     |
+| China                | Geschenkkarte       | 2,24%                         | März 2016     |
+| Kolumbien             | Geschenkkarte       | 2,24%                         | März 2016     |
+| Tschechische Republik       | Geschenkkarte       | 2,24%                         | März 2016     |
+| Dänemark              | Geschenkkarte       | 2,24%                         | März 2016     |
+| Finnland              | Geschenkkarte       | 2,24%                         | März 2016     |
+| Frankreich               | Geschenkkarte       | 2,24%                         | März 2016     |
+| Deutschland              | Geschenkkarte       | 2,24%                         | März 2016     |
+| Griechenland               | Geschenkkarte       | 2,24%                         | März 2016     |
+| Hongkong            | Geschenkkarte       | 2,24%                         | März 2016     |
+| Ungarn              | Geschenkkarte       | 2,24%                         | März 2016     |
+| Indien                | Geschenkkarte       | 2,24%                         | März 2016     |
+| Irland              | Geschenkkarte       | 2,24%                         | März 2016     |
+| Israel               | Geschenkkarte       | 2,24%                         | März 2016     |
+| Italien                | Geschenkkarte       | 2,24%                         | März 2016     |
+| Japan                | Geschenkkarte       | 2,24%                         | März 2016     |
+| Mexiko               | Geschenkkarte       | 2,24%                         | März 2016     |
+| Niederlande          | Geschenkkarte       | 2,24%                         | März 2016     |
+| Neuseeland          | Geschenkkarte       | 2,24%                         | März 2016     |
+| Polen               | Geschenkkarte       | 2,24%                         | März 2016     |
+| Portugal             | Geschenkkarte       | 2,24%                         | März 2016     |
+| Russische Föderation               | Geschenkkarte       | 2,24%                         | März 2016     |
+| Saudi-Arabien         | Geschenkkarte       | 2,24%                         | März 2016     |
+| Singapur            | Geschenkkarte       | 2,24%                         | März 2016     |
+| Slowakei             | Geschenkkarte       | 2,24%                         | März 2016     |
+| Südafrika         | Geschenkkarte       | 2,24%                         | März 2016     |
+| Südkorea          | Geschenkkarte       | 2,24%                         | März 2016     |
+| Spanien                | Geschenkkarte       | 2,24%                         | März 2016     |
+| Schweden               | Geschenkkarte       | 2,24%                         | März 2016     |
+| Schweiz          | Geschenkkarte       | 2,24%                         | März 2016     |
+| Taiwan               | Geschenkkarte       | 2,24%                         | März 2016     |
+| Türkei               | Geschenkkarte       | 2,24%                         | März 2016     |
+| Vereinigte Arabische Emirate | Geschenkkarte       | 2,24%                         | März 2016     |
+| Vereinigtes Königreich       | Geschenkkarte       | 2,24%                         | März 2016     |
+| Vereinigte Staaten        | Geschenkkarte       | 2,24%                         | März 2016     |
 
  
 
@@ -387,7 +384,7 @@ Die Regulierung zur Markterweiterung wird ab dem Datum des Inkrafttretens auf al
 
 Wenn Ihre App Pakete für Windows 8.x enthält, müssen Sie beachten, dass bestimmte Märkte für Kunden, die den Store mit Windows 8.x verwenden, zusammen als "Restliche Welt" angezeigt werden, obwohl diese jetzt im Windows Dev Center-Dashboard als einzelne Märkte angezeigt werden (im Gegensatz zum früheren Windows Store-Dashboard, indem eine Marktoption "Restliche Welt" ausgewählt werden konnte.
 
-Wenn Sie die Standardeinstellung beim Übermitteln der App beibehalten, brauchen Sie sich darüber keine Gedanken zu machen, und Ihre App wird für alle möglichen Märkte verfügbar sein. Wenn Sie jedoch bestimmte Märkte ausschließen möchten, müssen Sie bedenken, dass bei Ausschluss eines einzigen dieser Märkte der „Restlichen Welt“ Ihre App in keinem der Märkte der „Restlichen Welt“ für Kunden mit Windows 8 oder Windows 8.1 mehr zur Verfügung steht.
+Wenn Sie die Standardeinstellung beim Übermitteln der App beibehalten, brauchen Sie sich darüber keine Gedanken zu machen, und Ihre App wird für alle möglichen Märkte verfügbar sein. Wenn Sie jedoch bestimmte Märkte ausschließen möchten, müssen Sie bedenken, dass bei Ausschluss eines einzigen dieser Märkte der „Restlichen Welt“ Ihre App in keinem der Märkte der „Restlichen Welt“ für Kunden mit Windows8 oder Windows8.1 mehr zur Verfügung steht.
 
 Folgende Märkte sind in "Restliche Welt" für Windows 8.x enthalten:
 
@@ -559,4 +556,3 @@ Folgende Märkte sind in "Restliche Welt" für Windows 8.x enthalten:
 -   Simbabwe
 
 > **Hinweis** Eine Liste der Länder und Regionen, in denen Sie sich für ein Entwicklerkonto registrieren können, finden Sie unter [Kontotypen, Standorte und Gebühren](https://msdn.microsoft.com/library/windows/apps/jj863494).
-

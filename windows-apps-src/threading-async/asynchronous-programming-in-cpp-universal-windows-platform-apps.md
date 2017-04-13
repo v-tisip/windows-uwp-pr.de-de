@@ -1,26 +1,23 @@
 ---
 author: TylerMSFT
 ms.assetid: 34C00F9F-2196-46A3-A32F-0067AB48291B
-description: "In diesem Artikel wird die empfohlene Vorgehensweise zur Verwendung asynchroner Methoden in Visual C++-Komponentenerweiterungen (C++/CX) mithilfe der Task-Klasse beschrieben, die im Concurrency-Namespace in „ppltasks.h“ definiert wird."
+description: "In diesem Artikel wird die empfohlene Vorgehensweise zur Verwendung asynchroner Methoden in VisualC++-Komponentenerweiterungen (C++/CX) mithilfe der Task-Klasse beschrieben, die im Concurrency-Namespace in „ppltasks.h“ definiert wird."
 title: Asynchrone Programmierung in C++
 ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Threads, asynchron, C++"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 112b5d58064ae6cd006d791a2c4534848baee259
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP, Threads, asynchron, C++
+ms.openlocfilehash: c74a2d18a0852d28cf33715a540356a61438ff48
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="asynchronous-programming-in-c"></a>Asynchrone Programmierung in C++
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
-In diesem Artikel wird die empfohlene Vorgehensweise zur Verwendung asynchroner Methoden in Visual C++-Komponentenerweiterungen (C++/CX) mithilfe der `task`-Klasse beschrieben, die im `concurrency`-Namespace in „ppltasks.h“ definiert wird.
+In diesem Artikel wird die empfohlene Vorgehensweise zur Verwendung asynchroner Methoden in VisualC++-Komponentenerweiterungen (C++/CX) mithilfe der `task`-Klasse beschrieben, die im `concurrency`-Namespace in „ppltasks.h“ definiert wird.
 
 ## <a name="universal-windows-platform-uwp-asynchronous-types"></a>Asynchrone UWP-Typen (Universelle Windows-Plattform)
 
@@ -83,7 +80,7 @@ Die Aufgabe, die von der [**task::then**][taskThen]-Funktion erstellt und zurüc
 
 Der Aufruf der [**task::then**][taskThen]-Methode wird sofort beendet. Der Delegat wird erst ausgeführt, nachdem die asynchronen Vorgänge erfolgreich beendet wurden. In diesem Beispiel wird die Fortsetzung nicht ausgeführt, wenn der asynchrone Vorgang eine Ausnahme auslöst oder aufgrund einer Abbruchanforderung mit einem Abbruch beendet wird. Weiter unten erfahren Sie, wie Sie Fortsetzungen schreiben, die auch bei einem Abbruch oder Fehler der vorhergehenden Aufgabe ausgeführt werden.
 
-Sie deklarieren die Aufgabenvariable zwar im lokalen Stapel, aber die Lebensdauer wird so verwaltet, dass die Variable erst gelöscht wird, wenn alle zugehörigen Vorgänge abgeschlossen sind und alle Verweise auf die Variable außerhalb des Bereichs liegen – auch dann, wenn der Aufruf der Methode vor Abschluss des Vorgangs beendet wird.
+Sie deklarieren die Aufgabenvariable zwar im lokalen Stapel, aber die Lebensdauer wird so verwaltet, dass die Variable erst gelöscht wird, wenn alle zugehörigen Vorgänge abgeschlossen sind und alle Verweise auf die Variable außerhalb des Bereichs liegen– auch dann, wenn der Aufruf der Methode vor Abschluss des Vorgangs beendet wird.
 
 ## <a name="creating-a-chain-of-tasks"></a>Erstellen von Aufgabenabfolgen
 
@@ -232,7 +229,7 @@ Gibt die Aufgabe nicht [**IAsyncAction**][IAsyncAction] oder [**IAsyncOperation*
 
 Sie können den Standardthreadkontext für beide Aufgabenarten außer Kraft setzen, indem Sie die Überladung der [**task::then**][taskThen]-Methode verwenden, die einen [**task\_continuation\_context**](https://msdn.microsoft.com/library/windows/apps/xaml/hh749968.aspx)-Kontext verwendet. In manchen Fällen ist es zum Beispiel vorteilhaft, die Fortsetzung einer apartmentfähigen Aufgabe für einen Hintergrundthread zu planen. Dabei können Sie [**task\_continuation\_context::use\_arbitrary**][useArbitrary] übergeben, um die Vorgänge der Aufgabe für den nächsten verfügbaren Thread in einem Thread mit mehreren Apartments (Multithread-Apartment, MTA) zu planen. Dadurch wird die Leistung der Fortsetzung verbessert, da die entsprechenden Vorgänge nicht mit anderen Vorgängen im UI-Thread synchronisiert sein müssen.
 
-Das folgende Beispiel zeigt einen Fall, in dem es günstig ist, die [**task\_continuation\_context::use\_arbitrary**][useArbitrary]-Option anzugeben, und illustriert außerdem, in welcher Form der Standardfortsetzungskontext für die Synchronisierung gleichzeitig ablaufender Vorgänge in nicht threadsicheren Auflistungen nützlich ist. In diesem Codebeispiel wird eine Schleife für eine Liste mit URLs für RSS-Feeds ausgeführt, und für jede URL wird zum Abrufen der Feeddaten ein asynchroner Vorgang gestartet. Die Reihenfolge, in der die Feeds abgerufen werden, können Sie nicht steuern, was jedoch auch nicht wichtig ist. Mit dem Ende jedes [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/BR210642)-Vorgangs akzeptiert die erste Fortsetzung das [**SyndicationFeed^**](https://msdn.microsoft.com/library/windows/apps/BR243485)-Objekt und initialisiert damit ein App-spezifisches `FeedData^`-Objekt. Da alle diese Vorgänge voneinander unabhängig sind, können wir durch Angabe des **task\_continuation\_context::use\_arbitrary**-Fortsetzungskontexts den Zeitaufwand verringern. Nach dem Initialisieren jedes `FeedData`-Objekts müssen wir dieses jedoch einem [**Vector**](https://msdn.microsoft.com/library/windows/apps/xaml/hh441570.aspx) hinzufügen – und das ist keine threadsichere Auflistung. Aus diesem Grund erstellen wir eine Fortsetzung und geben [**task\_continuation\_context::use\_current**](https://msdn.microsoft.com/library/windows/apps/xaml/hh750085.aspx) an, damit alle Aufrufe von [**Append**](https://msdn.microsoft.com/library/windows/apps/BR206632) in demselben ASTA (Anwendungs-Single-Threaded-Apartment)-Kontext erfolgen. [**task\_continuation\_context::use\_default**](https://msdn.microsoft.com/library/windows/apps/xaml/hh750085.aspx) müssen wir nicht direkt angeben, da es sich um den Standardkontext handelt. Wir tun es hier nur der Klarheit wegen.
+Das folgende Beispiel zeigt einen Fall, in dem es günstig ist, die [**task\_continuation\_context::use\_arbitrary**][useArbitrary]-Option anzugeben, und illustriert außerdem, in welcher Form der Standardfortsetzungskontext für die Synchronisierung gleichzeitig ablaufender Vorgänge in nicht threadsicheren Auflistungen nützlich ist. In diesem Codebeispiel wird eine Schleife für eine Liste mit URLs für RSS-Feeds ausgeführt, und für jede URL wird zum Abrufen der Feeddaten ein asynchroner Vorgang gestartet. Die Reihenfolge, in der die Feeds abgerufen werden, können Sie nicht steuern, was jedoch auch nicht wichtig ist. Mit dem Ende jedes [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/BR210642)-Vorgangs akzeptiert die erste Fortsetzung das [**SyndicationFeed^**](https://msdn.microsoft.com/library/windows/apps/BR243485)-Objekt und initialisiert damit ein App-spezifisches `FeedData^`-Objekt. Da alle diese Vorgänge voneinander unabhängig sind, können wir durch Angabe des **task\_continuation\_context::use\_arbitrary**-Fortsetzungskontexts den Zeitaufwand verringern. Nach dem Initialisieren jedes `FeedData`-Objekts müssen wir dieses jedoch einem [**Vector**](https://msdn.microsoft.com/library/windows/apps/xaml/hh441570.aspx) hinzufügen– und das ist keine threadsichere Auflistung. Aus diesem Grund erstellen wir eine Fortsetzung und geben [**task\_continuation\_context::use\_current**](https://msdn.microsoft.com/library/windows/apps/xaml/hh750085.aspx) an, damit alle Aufrufe von [**Append**](https://msdn.microsoft.com/library/windows/apps/BR206632) in demselben ASTA (Anwendungs-Single-Threaded-Apartment)-Kontext erfolgen. [**task\_continuation\_context::use\_default**](https://msdn.microsoft.com/library/windows/apps/xaml/hh750085.aspx) müssen wir nicht direkt angeben, da es sich um den Standardkontext handelt. Wir tun es hier nur der Klarheit wegen.
 
 ``` cpp
 #include <ppltasks.h>
@@ -323,4 +320,3 @@ Methoden mit Unterstützung von [**IAsyncOperationWithProgress**](https://msdn.m
 [taskParallelism]: <https://msdn.microsoft.com/library/windows/apps/xaml/dd492427.aspx> "Aufgabenparallelität"
 [taskThen]: <https://msdn.microsoft.com/library/windows/apps/xaml/hh750044.aspx> "TaskThen"
 [useArbitrary]: <https://msdn.microsoft.com/library/windows/apps/xaml/hh750036.aspx> "UseArbitrary"
-

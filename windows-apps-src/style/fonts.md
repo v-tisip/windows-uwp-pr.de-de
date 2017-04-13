@@ -10,20 +10,16 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 9e09569eaad194c6b945444579dc37dec0fdc76c
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 7d72d5251000e16349efa8d4f7716e12d22764d6
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-
 # <a name="fonts-for-uwp-apps"></a>Schriftarten für UWP-Apps
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-In diesem Artikel sind die empfohlenen Schriftarten für UWP-Apps aufgeführt. Diese Schriftarten sind garantiert in allen Editionen von Windows 10 verfügbar, die UWP-Apps unterstützen.
+In diesem Artikel sind die empfohlenen Schriftarten für UWP-Apps aufgeführt. Diese Schriftarten sind garantiert in allen Editionen von Windows10 verfügbar, die UWP-Apps unterstützen.
 
 <div class="important-apis" >
 <b>Wichtige APIs</b><br/>
@@ -32,7 +28,7 @@ In diesem Artikel sind die empfohlenen Schriftarten für UWP-Apps aufgeführt. D
 </ul>
 </div>
 
-Der [UWP-Typografieleitfaden](typography.md) empfiehlt für Apps die Schriftart „Segoe UI“. Zwar eignet sich Segoe UI für zahlreiche Apps, muss jedoch nicht überall verwendet werden. Sie können andere Schriftarten für bestimmte Szenarien verwenden, z. B. zum Lesen oder wenn Sie Text in bestimmten Sprachen anzeigen. 
+Der [UWP-Typografieleitfaden](typography.md) empfiehlt für Apps die Schriftart „SegoeUI“. Zwar eignet sich SegoeUI für zahlreiche Apps, muss jedoch nicht überall verwendet werden. Sie können andere Schriftarten für bestimmte Szenarien verwenden, z.B. zum Lesen oder wenn Sie Text in bestimmten Sprachen anzeigen. 
  
 ## <a name="sans-serif-fonts"></a>Serifenlose Schriftarten
 
@@ -82,7 +78,7 @@ Serifenlose Schriftarten eignen sich für Überschriften und UI-Elemente.
 <tr class="even">
 <td style="font-family: Selawik;">Selawik</td>
 <td align="left">Normal, Semilight, Light, fett, Semibold</td>
-<td align="left">Open-Source-Schriftart, die metrisch kompatibel mit Segoe UI ist. Vorgesehen für Apps auf anderen Plattformen, auf denen Segoe UI nicht verfügbar ist. [Laden Sie Selawik über GitHub herunter.](https://github.com/Microsoft/Selawik)</td>
+<td align="left">Open-Source-Schriftart, die metrisch kompatibel mit SegoeUI ist. Vorgesehen für Apps auf anderen Plattformen, auf denen SegoeUI nicht verfügbar ist. [Laden Sie Selawik über GitHub herunter.](https://github.com/Microsoft/Selawik)</td>
 </tr>
 
 <tr class="even">
@@ -196,7 +192,7 @@ Obwohl viele dieser Schriftarten auch lateinische Zeichen anbieten.
 <td align="left">Fallbackschriftart für javanische Schrift</td>
 </tr>
 <tr class="odd">
-<td align="left" style="font-family: Leelawadee UI;">Leelawadee UI</td>
+<td align="left" style="font-family: Leelawadee UI;">LeelawadeeUI</td>
 <td align="left">Normal, Semilight, fett</td>
 <td align="left">Benutzeroberflächen-Schriftart für südostasiatische Schriften (Buginesisch, Laotisch, Khmer, Thailändisch).</td>
 </tr>
@@ -315,7 +311,6 @@ Verwenden Sie die [LanguageFont-Schriftartenersetzungs-APIs](https://msdn.micros
  
 
  
-
 
 
 

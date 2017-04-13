@@ -8,17 +8,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 14003238ead3af2d796bab4f96dadfb050f7d595
-ms.lasthandoff: 02/07/2017
-
+keywords: windows10, UWP
+ms.openlocfilehash: 0cd284b2cb0ed4170d587cb3b412bc1954496c93
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="windows-phone-silverlight-to-uwp-case-study-bookstore1"></a>Windows Phone Silverlight zu UWP – Fallstudie, Bookstore1
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 In diesem Thema wird eine Fallstudie für das Portieren einer sehr einfachen Windows Phone Silverlight-App zu einer UWP (Universelle Windows-Plattform)-App für Windows 10 vorgestellt. Mit Windows 10 können Sie ein einzelnes App-Paket erstellen, das Ihre Kunden auf einer Vielzahl von Geräten installieren können – und genau das werden wir in dieser Fallstudie tun. Weitere Informationen finden Sie unter [Anleitung für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/dn894631).
 
@@ -80,9 +77,9 @@ Die Ansicht und das Ansichtsmodell arbeiten ordnungsgemäß zusammen, und das **
 
 ## <a name="paying-off-the-debt-items-and-some-initial-styling"></a>Zurückzahlen der Schulden und erste Formatierungen
 
-Standardmäßig werden alle Ausrichtungen unterstützt. Die Windows Phone Silverlight-App ist jedoch explizit auf die Ausrichtung im Hochformat beschränkt, sodass die Schuldenelemente \#1 und \#2 bezahlt werden, indem sie in das App-Paketmanifest des neuen Projekts aufgenommen werden und die Option **Hochformat** unter **Unterstützte Ausrichtungen** aktiviert wird.
+Standardmäßig werden alle Ausrichtungen unterstützt. Die Windows Phone Silverlight-App ist jedoch explizit auf die Ausrichtung im Hochformat beschränkt, sodass die Schuldenelemente\#1 und\#2 bezahlt werden, indem sie in das App-Paketmanifest des neuen Projekts aufgenommen werden und die Option **Hochformat** unter **Unterstützte Ausrichtungen** aktiviert wird.
 
-Für diese App zählt Element \#3 nicht zu den Schulden, da die Statusleiste (ehemals die Taskleiste) standardmäßig angezeigt wird. Für die Elemente \#4 und \#5 müssen wir vier UWP (Universelle Windows-Plattform)- **TextBlock**-Stile finden, die den von uns verwendeten Windows Phone Silverlight-Stilen entsprechen. Sie können die Windows Phone Silverlight-App im Emulator ausführen und nebeneinander mit der Abbildung im Abschnitt [Text](wpsl-to-uwp-porting-xaml-and-ui.md) vergleichen. Aufgrund dieser Vorgehensweise und anhand der Eigenschaften der Windows Phone Silverlight-Systemstile können wir folgende Tabelle erstellen:
+Für diese App zählt Element\#3 nicht zu den Schulden, da die Statusleiste (ehemals die Taskleiste) standardmäßig angezeigt wird. Für die Elemente\#4 und\#5 müssen wir vier UWP (Universelle Windows-Plattform)- **TextBlock**-Stile finden, die den von uns verwendeten Windows Phone Silverlight-Stilen entsprechen. Sie können die WindowsPhone Silverlight-App im Emulator ausführen und nebeneinander mit der Abbildung im Abschnitt [Text](wpsl-to-uwp-porting-xaml-and-ui.md) vergleichen. Aufgrund dieser Vorgehensweise und anhand der Eigenschaften der Windows Phone Silverlight-Systemstile können wir folgende Tabelle erstellen:
 
 | Windows Phone Silverlight-Stilschlüssel | UWP-Stilschlüssel          |
 |-------------------------------------|------------------------|
@@ -93,9 +90,9 @@ Für diese App zählt Element \#3 nicht zu den Schulden, da die Statusleiste (e
  
 Zum Festlegen dieser Stile können Sie sie einfach in den Markup-Editor eingeben oder die Visual Studio-XAML-Tools verwenden und sie festlegen, ohne etwas einzugeben. Klicken Sie dazu mit der rechten Maustaste auf **TextBlock** und dann auf **Stil bearbeiten** &gt; **Ressource anwenden**. Um dies für die **TextBlock**-Elemente in der Elementvorlage auszuführen, klicken Sie mit der rechten Maustaste auf das **ListBox**-Element und klicken dann auf **Weitere Vorlagen bearbeiten** &gt; **Erstellte Elemente bearbeiten (ItemTemplate)**.
 
-Die Elemente sind mit einem weißen Hintergrund mit 80 % Deckkraft unterlegt, da der Standardstil des **ListBox**-Steuerelements den Hintergrund auf die `ListBoxBackgroundThemeBrush`-Systemressource festlegt. Legen Sie `Background="Transparent"` für das **ListBox**-Element fest, um den Hintergrund zu löschen. Zur Linksausrichtung der **TextBlock**-Elemente in der Elementvorlage bearbeiten Sie sie erneut wie oben beschrieben und legen unter **Margin** für beide **TextBlock**-Elemente den Wert `"9.6,0"` fest.
+Die Elemente sind mit einem weißen Hintergrund mit 80% Deckkraft unterlegt, da der Standardstil des **ListBox**-Steuerelements den Hintergrund auf die `ListBoxBackgroundThemeBrush`-Systemressource festlegt. Legen Sie `Background="Transparent"` für das **ListBox**-Element fest, um den Hintergrund zu löschen. Zur Linksausrichtung der **TextBlock**-Elemente in der Elementvorlage bearbeiten Sie sie erneut wie oben beschrieben und legen unter **Margin** für beide **TextBlock**-Elemente den Wert `"9.6,0"` fest.
 
-Anschließend müssen wir aufgrund der [Änderungen im Zusammenhang mit Anzeigepixeln](wpsl-to-uwp-porting-xaml-and-ui.md) alle Dimensionen fester Größe, die wir noch nicht geändert haben (Ränder, Breite, Höhe, usw.), überprüfen und mit 0,8 multiplizieren. Die Bilder sollten z. B. von 70x70px in 56x56px geändert werden.
+Anschließend müssen wir aufgrund der [Änderungen im Zusammenhang mit Anzeigepixeln](wpsl-to-uwp-porting-xaml-and-ui.md) alle Dimensionen fester Größe, die wir noch nicht geändert haben (Ränder, Breite, Höhe, usw.), überprüfen und mit 0,8 multiplizieren. Die Bilder sollten z.B. von 70x70px in 56x56px geändert werden.
 
 Lassen Sie uns jedoch die Bilder rendern, bevor wir die Ergebnisse Ihrer Formatierung anzeigen.
 
@@ -127,7 +124,7 @@ Bei einer komplexeren App müssten wir an diesem Punkt den Leitfaden unter [Port
 
 Informationen dazu, wie Sie das Design Ihrer App steuern, finden Sie unter [Designänderungen](wpsl-to-uwp-porting-xaml-and-ui.md).
 
-![Die portierte Windows 10-App](images/w8x-to-uwp-case-studies/c01-07-mob10-ported.png)
+![Die portierte Windows10-App](images/w8x-to-uwp-case-studies/c01-07-mob10-ported.png)
 
 Die portierte Windows 10-App auf einem mobilen Gerät
 
@@ -137,7 +134,6 @@ Wenn die App auf einem Mobilgerät ausgeführt wird, ist der Hintergrund eines L
 
 ## <a name="conclusion"></a>Fazit
 
-In dieser Fallstudie wurde der Prozess zum Portieren einer einfachen App gezeigt – einer zugegebenermaßen unrealistisch einfachen App. Beispielsweise können Listensteuerelemente für die Auswahl oder für die Herstellung eines Kontexts für die Navigation verwendet werden. Die App navigiert zu einer Seite mit weiteren Details zum ausgewählten Element. Diese bestimmte App führt keine Aktionen mit der Auswahl des Benutzers aus und verfügt nicht über Navigation. Dennoch diente die Fallstudie dazu, den Portierungsprozess vorzustellen und wichtige Techniken zu veranschaulichen, die Sie in echten UWP-Apps verwenden können.
+In dieser Fallstudie wurde der Prozess zum Portieren einer einfachen App gezeigt– einer zugegebenermaßen unrealistisch einfachen App. Beispielsweise können Listensteuerelemente für die Auswahl oder für die Herstellung eines Kontexts für die Navigation verwendet werden. Die App navigiert zu einer Seite mit weiteren Details zum ausgewählten Element. Diese bestimmte App führt keine Aktionen mit der Auswahl des Benutzers aus und verfügt nicht über Navigation. Dennoch diente die Fallstudie dazu, den Portierungsprozess vorzustellen und wichtige Techniken zu veranschaulichen, die Sie in echten UWP-Apps verwenden können.
 
 Die nächste Fallstudie ist [Bookstore2](wpsl-to-uwp-case-study-bookstore2.md), in der wir den Zugriff auf und die Anzeige von gruppierten Daten behandeln.
-

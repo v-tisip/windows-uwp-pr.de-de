@@ -9,18 +9,18 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: 171f332d-2a54-4c68-8aa0-52975d975fb1
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 6fbcf24984fde4b86e94481d6ad1104a827a8c31
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 5cbff0011a4a96c61d7f7bad7e57bd130e09c39b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="sign-an-app-package-using-signtool"></a>Signieren eines App-Pakets mit SignTool
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 **SignTool** ist ein Befehlszeilentool, mit dem ein App-Paket oder -Bündel mit einem Zertifikat digital signiert wird. Das Zertifikat kann vom Benutzer (zu Testzwecken) erstellt oder von einem Unternehmen (für die Verteilung) ausgestellt sein. Die Signierung eines App-Pakets bietet dem Benutzer den Nachweis, dass die App-Daten nach der Signierung nicht geändert wurden, sowie die Bestätigung der Identität des Benutzers oder Unternehmens, die es signiert haben. **SignTool** kann verschlüsselte oder unverschlüsselte App-Pakete und -Bündel signieren.
+
+> [!IMPORTANT] 
+> Wenn Sie Visual Studio zum Entwickeln der App verwendet haben, wird empfohlen, dass Sie den Visual Studio-Assistenten zum Erstellen und Signieren des App-Pakets verwenden. Weitere Informationen finden Sie unter [Verpacken einer UWP-App mit Visual Studio](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps).
 
 Weitere Informationen zur Codesignatur und zu Zertifikaten im Allgemeinen finden Sie unter [Einführung in die Codesignatur](https://msdn.microsoft.com/library/windows/desktop/aa380259.aspx#introduction_to_code_signing).
 
@@ -32,7 +32,7 @@ Weitere Informationen zur Codesignatur und zu Zertifikaten im Allgemeinen finden
     Weitere Informationen zum Erstellen oder Importieren ein gültiges Signaturzertifikats finden Sie unter [Erstellen oder Importieren eines Zertifikats für die Paketsignierung](https://msdn.microsoft.com/windows/uwp/packaging/create-certificate-package-signing).
 
 - **SignTool.exe**  
-    Abhängig vom Installationspfad des SDK befindet sich **SignTool** an folgenden Speicherorten auf Ihrem Windows 10-PC:
+    Abhängig vom Installationspfad des SDK befindet sich **SignTool** an folgenden Speicherorten auf Ihrem Windows10-PC:
     - x86: C:\Programme (x86)\Windows Kits\10\bin\x86\SignTool.exe
     - x64: C:\Programme (x86)\Windows Kits\10\bin\x64\SignTool.exe
 
@@ -41,7 +41,7 @@ Weitere Informationen zur Codesignatur und zu Zertifikaten im Allgemeinen finden
 **SignTool** kann zum Signieren von Dateien, Überprüfen von Signaturen oder Zeitstempeln, Entfernen von Signaturen und mehr verwendet werden. Um ein App-Paket zu signieren, benötigen Sie den Befehl **sign**. Vollständige Informationen zu **SignTool** finden Sie auf der [SignTool](https://msdn.microsoft.com/library/windows/desktop/aa387764.aspx)-Referenzseite. 
 
 ### <a name="determine-the-hash-algorithm"></a>Ermitteln des Hashalgorithmus
-Wenn Sie mit **SignTool** Ihr App-Paket oder -Bündel signieren, muss der in **SignTool** verwendete Hashalgorithmus derselbe Algorithmus sein, den Sie beim Packen Ihre App verwendet haben. Wenn Sie z. B. **MakeAppx.exe** verwendet haben, um Ihr App-Paket mit den Standardeinstellungen zu erstellen, müssen Sie SHA256 in **SignTool** angeben, da das der von **MakeAppx.exe** verwendete Standardalgorithmus ist.
+Wenn Sie mit **SignTool** Ihr App-Paket oder -Bündel signieren, muss der in **SignTool** verwendete Hashalgorithmus derselbe Algorithmus sein, den Sie beim Packen Ihre App verwendet haben. Wenn Sie z.B. **MakeAppx.exe** verwendet haben, um Ihr App-Paket mit den Standardeinstellungen zu erstellen, müssen Sie SHA256 in **SignTool** angeben, da das der von **MakeAppx.exe** verwendete Standardalgorithmus ist.
 
 Um herauszufinden, welcher Hashalgorithmus beim Packen einer App verwendet wurde, extrahieren Sie den Inhalt des App-Pakets und überprüfen die Datei AppxBlockMap.xml. Weitere Informationen zum Entpacken/Extrahieren eines App-Pakets finden Sie unter [Extrahieren von Dateien aus einem Paket oder Bündel](https://msdn.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool#extract-files-from-a-package-or-bundle). Die Hashmethode befindet sich im BlockMap-Element und besitzt dieses Format:
 ```
@@ -97,7 +97,7 @@ SignTool Error: An unexpected internal error has occurred.
 Error information: "Error: SignerSign() failed." (-2147024885 / 0x8007000B) 
 ```
 
-Wenn der Fehlercode mit 0x8008 beginnt, z. B. 0x80080206 (APPX_E_CORRUPT_CONTENT), ist das Paket, das gerade signiert wird, nicht gültig. Wenn Sie diesen Fehlertyp erhalten, müssen Sie das Paket neu erstellen und **SignTool** erneut ausführen.
+Wenn der Fehlercode mit 0x8008 beginnt, z.B. 0x80080206 (APPX_E_CORRUPT_CONTENT), ist das Paket, das gerade signiert wird, nicht gültig. Wenn Sie diesen Fehlertyp erhalten, müssen Sie das Paket neu erstellen und **SignTool** erneut ausführen.
 
 **SignTool** verfügt über eine Debugoption, um Zertifikatfehler anzuzeigen und zu filtern. Um die Debugfunktion zu verwenden, geben Sie die Option `/debug` direkt hinter `sign` und dann den vollständigen **SignTool**-Befehl an.
 ```

@@ -7,15 +7,12 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
+keywords: Windows10, UWP
 ms.assetid: 9c133c77-fe9d-4b81-b4b3-462936333aa3
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: c7ebd56205db2674df5da6d64ecc9332aa96230e
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: bbf916145107b465ddd2fe7e4805e6139f4597d3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="how-to-use-fiddler-with-xbox-one-when-developing-for-uwp"></a>Verwenden von Fiddler mit Xbox One bei der Entwicklung für UWP
 
 Fiddler ist ein Webdebuggingproxy, der den gesamten HTTP- und HTTPS-Datenverkehr zwischen Ihrem Xbox One Dev Kit und dem Internet protokolliert. Sie werden ihn, um sich anzumelden und den Datenverkehr zu und von den Xbox-Diensten und Diensten vertrauender Seiten zu prüfen und Webdienstaufrufe zu verstehen und zu debuggen. 
@@ -80,8 +77,7 @@ Um die Verwendung von Fiddler als Proxy für das Internet zu beenden (und zu ver
 ## <a name="see-also"></a>Weitere Informationen
 - [Fiddler-Einstellungen – API-Referenz](wdp-fiddler-api.md)
 - [Häufig gestellte Fragen](frequently-asked-questions.md)
-- [UWP auf Xbox One](index.md)
-
+- [UWP auf XboxOne](index.md)
 
 
 

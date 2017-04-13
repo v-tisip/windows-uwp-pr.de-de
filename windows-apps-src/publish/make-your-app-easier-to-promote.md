@@ -8,37 +8,34 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 07cca18b97a50fe8ced8b76094d358b948d18535
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 9dee8e05dbf2384fc87c1974a732ff36459fa229
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="make-your-app-easier-to-promote"></a>Einfacheres Bewerben Ihrer App
 
 
 Machen Sie auf Ihre App aufmerksam! Neben einer möglichst ansprechenden Gestaltung Ihrer App bieten sich einige weitere Methoden an, die das Bewerben Ihrer App im Windows Store und auf anderen Websites erleichtern und dazu beitragen, dass die App mehr Aufmerksamkeit erhält.
 
-## <a name="windows-store-requirements-for-featured-apps"></a>Windows Store-Anforderungen für Apps
+## <a name="windows-store-requirements-for-featured-apps"></a>WindowsStore-Anforderungen für Apps
 
 
-Im Windows Store werden verschiedene Apps nach Kategorie oder Thema angezeigt. Es gibt viel zu viele Apps, um alle anzubieten, und es besteht keine Garantie, dass Ihre App ausgewählt wird. Sie haben jedoch einige Möglichkeiten, dafür zu sorgen, dass Ihre App im Store beworben wird.
+Im WindowsStore werden verschiedene Apps nach Kategorie oder Thema angezeigt. Es gibt viel zu viele Apps, um alle anzubieten, und es besteht keine Garantie, dass Ihre App ausgewählt wird. Sie haben jedoch einige Möglichkeiten, dafür zu sorgen, dass Ihre App im Store beworben wird.
 
 -   **Verwenden Sie ansprechende Screenshots und Werbebilder**
 
     Bei der Präsentation von Apps können [App-Screenshots und -Bilder](app-screenshots-and-images.md) im Windows Store in verschiedenen Layouts angezeigt werden. Erstellen Sie ansprechende Screenshots, die Ihre App optimal darstellen, und stellen Sie sicher, dass der erste Screenshot besonders aussagekräftig und attraktiv ist.
 
-    Um die Wahrscheinlichkeit zu erhöhen, dass Ihre App im Store präsentiert wird, müssen Sie mit Ihrer App mindestens ein Werbebild einreichen. Die Anforderung von 2.400 x 1.200 Pixeln ist dringend einzuhalten, da wir das Bild so auf verschiedene Weisen im Store für Windows 10-Kunden verwenden können. Denken Sie daran, dass wir dieses Bild in einigen Layouts u. U. zuschneiden, d. h. die wichtigen visuellen Elemente und das Branding/Logo Ihrer App sollten sich in der Mitte des Bilds befinden. Außerdem sollten Sie zusätzliche Bildgrößen bereitstellen, wenn Ihre App in früheren Betriebssystemversionen ausgeführt wird. Weitere Informationen und Richtlinien finden Sie unter [Werbebilder](app-screenshots-and-images.md#promotional-artwork).
+    Um die Wahrscheinlichkeit zu erhöhen, dass Ihre App im Store präsentiert wird, müssen Sie mit Ihrer App mindestens ein Werbebild einreichen. Die Anforderung von 2.400 x 1.200 Pixeln ist dringend einzuhalten, da wir das Bild so auf verschiedene Weisen im Store für Windows10-Kunden verwenden können. Denken Sie daran, dass wir dieses Bild in einigen Layouts u.U. zuschneiden, d.h. die wichtigen visuellen Elemente und das Branding/Logo Ihrer App sollten sich in der Mitte des Bilds befinden. Außerdem sollten Sie zusätzliche Bildgrößen bereitstellen, wenn Ihre App in früheren Betriebssystemversionen ausgeführt wird. Weitere Informationen und Richtlinien finden Sie unter [Werbebilder](app-screenshots-and-images.md#promotional-artwork).
 
 -   **Erstellen Sie nur eine Version Ihrer App, nicht eine kostenlose Version und eine separate kostenpflichtige Version**
 
     Anstatt separate kostenlose und kostenpflichtige Versionen derselben App zu veröffentlichen, bieten Sie eine kostenlose Testversion Ihrer kostenpflichtigen Version an. Alternativ können Sie anstatt einer kostenpflichtigen Version eine kostenlose Version mit In-App-Einkaufsmöglichkeiten zum Hinzufügen zusätzlicher Funktionen anbieten. Auf diese Weise kann ein einziger Eintrag zu Ihrer App für alle Benutzer zur Verfügung gestellt werden, unabhängig davon, ob diese sich nur für kostenlose Downloads interessieren oder zum Kauf einer App bereit sind.
 
--   **Aktivieren Sie Filter für Apps, deren Inhalt nur für eine Zielgruppe über 16 bzw. 18 Jahren geeignet ist.**
+-   **Aktivieren Sie Filter für Apps, deren Inhalt nur für eine Zielgruppe über 16 bzw. 18Jahren geeignet ist.**
 
-    In den meisten Fällen werden Apps, deren Inhalt nur für eine Zielgruppe über 16 Jahren geeignet ist, im Windows Store nicht beworben, es sei denn, die App enthält einen Inhaltsfilter, damit alle für eine Zielgruppe über 16 Jahren geeigneten Inhalte ausgeblendet sind, bis Benutzer sie ausdrücklich anzeigen. Der Inhaltsfilter sollte standardmäßig aktiviert, kennwortgeschützt und in der App (nicht auf einer separaten Website) verfügbar sein.
+    In den meisten Fällen werden Apps, deren Inhalt nur für eine Zielgruppe über 16Jahren geeignet ist, im WindowsStore nicht beworben, es sei denn, die App enthält einen Inhaltsfilter, damit alle für eine Zielgruppe über 16Jahren geeigneten Inhalte ausgeblendet sind, bis Benutzer sie ausdrücklich anzeigen. Der Inhaltsfilter sollte standardmäßig aktiviert, kennwortgeschützt und in der App (nicht auf einer separaten Website) verfügbar sein.
 
 -   **Anbieten Ihrer App in allen relevanten Märkten und Sprachen**
 
@@ -49,7 +46,6 @@ Wenn diese Richtlinien beachten, wird das Bewerben Ihrer App in Rezensionen, soz
  
 
  
-
 
 
 

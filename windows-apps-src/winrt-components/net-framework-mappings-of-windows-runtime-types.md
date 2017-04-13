@@ -8,29 +8,24 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ab2c2307376f3fad8cd404f7ddf8056f1ef2e8d3
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: a69ad9bdff70dc04f9bdf9eb4f5117a22a005969
+ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
+translationtype: HT
 ---
-
 # <a name="net-framework-mappings-of-windows-runtime-types"></a>.NET Framework-Zuordnungen von Windows-Runtime-Typen
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
 Die folgende Tabelle enthält die Zuordnungen, die das .NET Framework zwischen UWP-Typen (Universelle Windows-Plattform) und .NET Framework-Typen vornimmt. In einer universellen Windows-App, die in verwaltetem Code geschrieben wurde, zeigt IntelliSense den .NET Framework-Typ anstelle des UWP-Typs an. Wenn beispielsweise eine Windows-Runtime Methode einen Parameter vom Typ IVector&lt;string&gt; übernimmt, zeigt IntelliSense einen Parameter vom Typ IList&lt;string&gt; an. Entsprechend verwenden Sie in einer Komponente für Windows-Runtime, die in verwaltetem Code geschrieben wurde, den .NET Framework-Typ in Membersignaturen. Wenn das [Windows-Runtime-Metadatenexport-Tool (Winmdexp.exe)](https://msdn.microsoft.com/library/hh925576.aspx) die Komponente für Windows-Runtime generiert, wird der .NET Framework-Typ zum entsprechenden UWP-Typ.
 
 ## <a name="mapping-tables"></a>Zuordnungstabellen
 
 
-Die meisten Typen mit demselben Namespace- und Typnamen in der UWP und dem .NET Framework sind Strukturen (oder Typen, die Strukturen zugeordnet sind, z. B. Aufzählungen bzw. Enumerationen). Strukturen verfügen in der UWP nur über Felder und benötigen Hilfstypen, die das .NET Framework ausblendet. Die .NET Framework-Versionen dieser Strukturen haben Eigenschaften und Methoden, die die Funktionalität der ausgeblendeten Hilfstypen bereitstellen.
+Die meisten Typen mit demselben Namespace- und Typnamen in der UWP und dem .NET Framework sind Strukturen (oder Typen, die Strukturen zugeordnet sind, z.B. Aufzählungen bzw. Enumerationen). Strukturen verfügen in der UWP nur über Felder und benötigen Hilfstypen, die das .NET Framework ausblendet. Die .NET Framework-Versionen dieser Strukturen haben Eigenschaften und Methoden, die die Funktionalität der ausgeblendeten Hilfstypen bereitstellen.
 
-Weitere Informationen darüber, wie das .NET Framework Windows-Metadaten zur Vereinfachung der Programmierung mit der Windows-Runtime verwendet, erhalten Sie, indem Sie das Whitepaper [CLR und die Windows-Runtime](http://download.microsoft.com/download/2/3/E/23E1E9BE-41AA-4716-A7B3-82040271394C/CLR%20and%20the%20Windows%20Runtime.docx) vom Windows Dev Center herunterladen.
-
-Tabelle 1: UWP-Typen, die .NET Framework-Typen mit einem anderen Namen und/oder Namespace zugeordnet sind.
+Tabelle1: UWP-Typen, die .NET Framework-Typen mit einem anderen Namen und/oder Namespace zugeordnet sind.
 
 | UWP-Typ/Namespace                                            | .NET Framework-Typ/Namespace                                          | .NET Framework-Assembly                           |
 |---------------------------------------------------------------|------------------------------------------------------------------------|---------------------------------------------------|
@@ -63,7 +58,7 @@ Tabelle 1: UWP-Typen, die .NET Framework-Typen mit einem anderen Namen und/oder
 
  
 
-Tabelle 2: UWP-Typen, die .NET Framework-Typen mit demselben Namen und Namespace zugeordnet sind.
+Tabelle2: UWP-Typen, die .NET Framework-Typen mit demselben Namen und Namespace zugeordnet sind.
 
 | Namespace                           | Typ               | .NET Framework-Assembly                   |
 |-------------------------------------|--------------------|-------------------------------------------|
@@ -90,4 +85,3 @@ Tabelle 2: UWP-Typen, die .NET Framework-Typen mit demselben Namen und Namespac
 ## <a name="related-topics"></a>Verwandte Themen
 
 * [Erstellen von Komponenten für Windows-Runtime in C# und Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
-

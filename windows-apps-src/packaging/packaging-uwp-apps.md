@@ -8,18 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ca57f50f4827ba5de7a140f1353ba864c5e2fb6c
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 6c699b357a2c1271f6765514331eb2ca0a6ff0b3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-# <a name="packaging-uwp-apps"></a>Verpacken von UWP-Apps
+# <a name="package-a-uwp-app-with-visual-studio"></a>Verpacken einer UWP-App mit Visual Studio
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Um Ihre UWP-App (Universelle Windows-Plattform) zu verkaufen oder an andere Benutzer zu verteilen, müssen Sie ein APPXUPLOAD-Paket erstellen. Beim Erstellen des APPXUPLOAD-Pakets wird ein weiteres APPX-Paket für Testzwecke und das Querladen generiert. Sie können Ihre App direkt verteilen, indem Sie das APPX-Paket durch Querladen auf einem Gerät installieren. In diesem Artikel wird das Konfigurieren, Erstellen und Testen von UWP-App-Paketen beschrieben. Weitere Informationen über das Querladen finden Sie unter [Querladen von Apps in Windows 10](https://technet.microsoft.com/library/mt269549.aspx).
+Um Ihre UWP-App (Universelle Windows-Plattform) zu verkaufen oder an andere Benutzer zu verteilen, müssen Sie ein APPXUPLOAD-Paket erstellen. Beim Erstellen des APPXUPLOAD-Pakets wird ein weiteres APPX-Paket für Testzwecke und das Querladen generiert. Sie können Ihre App direkt verteilen, indem Sie das APPX-Paket durch Querladen auf einem Gerät installieren. In diesem Artikel wird das Konfigurieren, Erstellen und Testen von UWP-App-Paketen beschrieben. Weitere Informationen über das Querladen finden Sie unter [Querladen von Apps in Windows10](https://technet.microsoft.com/library/mt269549.aspx).
 
 Für Windows 10 generieren Sie ein Paket („.appxupload“), das in den Windows Store hochgeladen werden kann. Ihre App kann dann auf beliebigen Windows 10-Geräten installiert und ausgeführt werden. Im Folgenden finden Sie die Schritte zum Erstellen eines App-Pakets.
 
@@ -38,7 +36,7 @@ Nachdem Sie die vorangehenden Schritte abgeschlossen haben, können Sie Ihre App
 
 ## <a name="configure-an-app-package"></a>Konfigurieren eines App-Pakets
 
-Die App-Manifestdatei („package.appxmanifest.xml“) verfügt über die Eigenschaften und Einstellungen, die für die Erstellung des App-Pakets erforderlich sind. Die Eigenschaften in der Manifestdatei beschreiben z. B. das Bild, das als App-Kachel verwendet wird, und die Ausrichtungen, die von der App beim Drehen des Geräts unterstützt werden.
+Die App-Manifestdatei („package.appxmanifest“) enthält die Eigenschaften und Einstellungen, die für die Erstellung des App-Pakets erforderlich sind. Die Eigenschaften in der Manifestdatei beschreiben z. B. das Bild, das als App-Kachel verwendet wird, und die Ausrichtungen, die von der App beim Drehen des Geräts unterstützt werden.
 
 Visual Studio verfügt über einen Manifest-Designer, mit dem Sie die Manifestdatei ohne Bearbeitung der XML-Rohdaten der Datei aktualisieren können.
 
@@ -98,7 +96,7 @@ Wenn Sie eine App über den Store verteilen möchten, müssen Sie ein APPXUPLOAD
 **Überprüfen des App-Pakets auf einem Windows 10-Remotegerät**
 
 1.  Aktivieren Sie das Windows 10-Gerät für die Entwicklung, indem Sie die Anweisungen unter [Aktivieren Ihres Geräts für die Entwicklung](https://msdn.microsoft.com/library/windows/apps/Dn706236) befolgen.
-    **Wichtig**  Sie können das App-Paket nicht auf einem ARM-Remotegerät für Windows 10 überprüfen.
+    **Wichtig**  Sie können das App-Paket nicht auf einem ARM-Remotegerät für Windows10 überprüfen.
 2.  Laden Sie die Remotetools für Visual Studio herunter, und installieren Sie sie. Diese Tools werden verwendet, um das Zertifizierungskit für Windows-Apps remote auszuführen. Weitere Informationen zu diesen Tools einschließlich der Downloadseite finden Sie unter [Ausführen von Windows Store-Apps auf einem Remotecomputer](https://msdn.microsoft.com/library/hh441469.aspx#BKMK_Starting_the_Remote_Debugger_Monitor).
 3.  Laden Sie das erforderliche [Zertifizierungskit für Windows-Apps](http://go.microsoft.com/fwlink/p/?LinkID=309666) herunter, und installieren Sie es auf Ihrem Windows 10-Remotegerät.
 4.  Aktivieren Sie auf der Seite **Paketerstellung abgeschlossen** des Assistenten das Optionsfeld **Remotecomputer**. Klicken Sie anschließend neben der Schaltfläche **Testverbindung** auf die Schaltfläche mit den Auslassungszeichen.

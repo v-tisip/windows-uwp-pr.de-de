@@ -2,19 +2,17 @@
 title: "CPUSets für die Entwicklung von Spielen"
 description: "Dieser Artikel enthält eine Übersicht über die CPUSets-API,die in der universellen Windows-Plattform (UWP) neu ist, und liefert grundlegende Informationen zur Entwicklung von Spielen und Anwendungen."
 author: hammondsp
-translationtype: Human Translation
-ms.sourcegitcommit: 9f15d551715d9ccf23e4eb397637f4fafacec350
 ms.openlocfilehash: 6065435dc3add0d9bde15dc6bdd355935b8f53cd
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
+# <a name="cpusets-for-game-development"></a>CPUSets für die Entwicklung von Spielen
 
-# CPUSets für die Entwicklung von Spielen
-
-## Einführung
+## <a name="introduction"></a>Einführung
 
 Die universelle Windows-Plattform (UWP) ist das Herzstück einer Vielzahl von elektronischen Geräten für Verbraucher. Als solches benötigt sie eine allgemeine API, um die Bedürfnisse aller Anwendungsarten zu erfüllen: von Spielen über eingebettete Apps bis hin zu Enterprise-Software, die auf Servern ausgeführt wird. Durch die Nutzung der richtigen Informationen, die von der API bereitgestellt werden, können Sie sicherstellen, dass Ihr Spiel auf jeder Hardware optimal ausgeführt wird.
 
-## CPUSets-API
+## <a name="cpusets-api"></a>CPUSets-API
 
 Die CPUSets-API bietet Kontrolle darüber, welche CPU-Sätze zur Verfügung stehen, um die Ausführung von Threads darauf zu planen. Zwei Funktionen sind verfügbar, um zu steuern, wo Threads geplant werden:
 - **SetProcessDefaultCpuSets**: Diese Funktion kann zum Angeben der CPU-Sätze verwendet werden, auf denen neue Threads ausgeführt werden können, wenn sie nicht bestimmten CPU-Sätze zugeordnet sind.
@@ -22,7 +20,7 @@ Die CPUSets-API bietet Kontrolle darüber, welche CPU-Sätze zur Verfügung steh
 
 Wenn die Funktion **SetProcessDefaultCpuSets** niemals verwendet wird, können neu erstellte Threads auf jeder CPU geplant werden, die für Ihren Prozess verfügbar ist. Dieser Abschnitt behandelt die Grundlagen der CPUSets-API.
 
-### GetSystemCpuSetInformation
+### <a name="getsystemcpusetinformation"></a>GetSystemCpuSetInformation
 
 Die erste API, die zum Sammeln von Informationen verwendet wird, ist die **GetSystemCpuSetInformation**-Funktion. Diese Funktion füllt Informationen in einem Bereich von **SYSTEM_CPU_SET_INFORMATION**-Objekten auf, die vom Titel-Code bereitgestellt werden. Der Speicher für das Ziel muss vom Spielcode zugeordnet werden, dessen Größe durch Aufrufen von **GetSystemCpuSetInformation** selbst bestimmt wird. Dies erfordert zwei Aufrufe von **GetSystemCpuSetInformation**, wie im folgenden Beispiel gezeigt.
 
@@ -40,7 +38,7 @@ GetSystemCpuSetInformation(cpuSets, size, &size, curProc, 0);
 
 Jede Instanz von zurückgegebenen **SYSTEM_CPU_SET_INFORMATION** enthält Informationen zu einer eindeutigen Verarbeitungseinheit, die auch als CPU-Satz bezeichnet wird. Dies bedeutet nicht notwendigerweise, dass er ein eindeutiges physisches Hardwaregerät darstellt. CPUs, die Hyperthreading nutzen, verfügen über mehrere logische Kerne, die auf einem einzigen physischen Verarbeitungskern ausgeführt werden. Das Planen von mehreren Threads auf verschiedenen logischen Kernen, die sich auf dem gleichen physischen Kern befinden, ermöglicht eine Optimierung von Ressourcen auf Hardware-Ebene, für die andernfalls zusätzliche Arbeit auf der Kernel-Ebene durchgeführt werden müsste. Zwei Threads, die auf separaten logischen Kernen auf dem gleichen physischen Kern geplant sind, müssen die CPU-Zeit teilen, würden aber effizienter ausgeführt werden, als wenn sie auf dem gleichen logischen Kern geplant worden wären.
 
-### SYSTEM_CPU_SET_INFORMATION
+### <a name="systemcpusetinformation"></a>SYSTEM_CPU_SET_INFORMATION
 
 Die Informationen in jeder Instanz dieser Datenstruktur, die von **GetSystemCpuSetInformation** zurückgegeben wird, enthalten Informationen zu einer eindeutigen Verarbeitungseinheit, auf der Threads geplant werden können. Angesichts der möglichen Bandbreite von Zielgeräten gelten möglicherweise viele der Informationen in der **SYSTEM_CPU_SET_INFORMATION**-Datenstruktur nicht für die Entwicklung von Spielen. Tabelle 1 enthält eine Erläuterung der Datenmember, die für die Entwicklung von Spielen hilfreich sind.
 
@@ -73,7 +71,7 @@ Im Folgenden sind einige Beispiele für die Art der Informationen aufgeführt, d
 
   ![Tabelle4](images/cpusets-table4.png)
 
-### SetThreadSelectedCpuSets
+### <a name="setthreadselectedcpusets"></a>SetThreadSelectedCpuSets
 
 Nachdem nun Informationen zu den CPU-Sätzen verfügbar sind, können sie zum Organisieren von Threads verwendet werden. Das Handle eines mit **CreateThread** erstellten Threads wird an diese Funktion übergeben, zusammen mit einem Bereich von IDs der CPU-Sätze, auf denen der Thread geplant werden kann. Ein Beispiel für die Nutzung wird im folgenden Code veranschaulicht.
 
@@ -84,15 +82,15 @@ SetThreadSelectedCpuSets(audioHandle, cores, 2);
 ```
 In diesem Beispiel wird ein Thread basierend auf einer Funktion erstellt, die als **AudioThread** deklariert wird. Dieser Thread kann dann auf einem von zwei CPU-Sätzen geplant werden. Threadbesitz des CPU-Satzes ist nicht ausschließend. Threads, die erstellt werden, ohne an einen bestimmten CPU-Satz gebunden zu sein, verwenden möglicherweise Zeit vom **AudioThread**. Ebenso können andere erstellte Threads zu einem späteren Zeitpunkt auch an einen oder beide dieser CPU-Sätze gebunden sein.
 
-### SetProcessDefaultCpuSets
+### <a name="setprocessdefaultcpusets"></a>SetProcessDefaultCpuSets
 
 Die Umkehrung zu **SetThreadSelectedCpuSets** ist **SetProcessDefaultCpuSets**. Bei der Erstellung von Threads müssen diese nicht an bestimmte CPU-Sätze gebunden werden. Wenn Sie nicht möchten, dass diese Threads auf bestimmten CPU-Sätzen ausgeführt werden (z. B. auf von Ihrem Render-Thread oder Audio-Thread verwendeten CPU-Sätzen), können Sie diese Funktion verwenden, um anzugeben, auf welchen Kernen diese Threads geplant werden dürfen.
 
-## Überlegungen für die Spieleentwicklung
+## <a name="considerations-for-game-development"></a>Überlegungen für die Spieleentwicklung
 
 Wie wir bereits gesehen haben, bietet die CPUSets-API viele Informationen und Flexibilität rund um die Planung von Threads. Anstatt nach dem Bottom-up-Konzept zu versuchen, Anwendungsfälle für diese Daten zu finden, ist es effektiver, den Top-Down-Ansatz zu verwenden, bei dem ermittelt wird, wie die Daten für gängige Szenarien verwendet werden können.
 
-### Arbeiten mit zeitkritischen Threads und Hyperthreading
+### <a name="working-with-time-critical-threads-and-hyperthreading"></a>Arbeiten mit zeitkritischen Threads und Hyperthreading
 
 Diese Methode ist effektiv, wenn Ihr Spiel einige Threads aufweist, die in Echtzeit zusammen mit anderen Arbeitsthreads ausgeführt werden müssen, die relativ wenig CPU-Zeit in Anspruch nehmen. Manche Aufgaben, z. B. fortlaufende Hintergrundmusik, müssen für ein optimales Spielerlebnis ohne Unterbrechung ausgeführt werden. Bereits ein einzelner Frame mit Audio-Threadzurückstellung kann eine Störung verursachen, sodass es wichtig ist, dass für jeden Frame die erforderliche Menge an CPU-Zeit zur Verfügung steht.
 
@@ -131,7 +129,7 @@ Wenn das System Hyperthreading verwendet, ist es wichtig, dass der Satz von Stan
 
 Ein Beispiel für das Organisieren von Threads basierend auf physischen Kernen finden Sie im CPUSets-Beispiel, das im GitHub-Repository verfügbar ist, das im Abschnitt [Zusätzliche Ressourcen](#additional-resources) verlinkt ist.
 
-### Senken der Kosten der Cache-Kohärenz mit Cache der letzten Ebene
+### <a name="reducing-the-cost-of-cache-coherence-with-last-level-cache"></a>Senken der Kosten der Cache-Kohärenz mit Cache der letzten Ebene
 
 Cache-Kohärenz bedeutet, dass gecachter Arbeitsspeicher der gleiche für mehrere Hardwareressourcen ist, die auf dieselben Daten zugreifen. Wenn Threads auf verschiedenen Kernen geplant sind, aber auf dieselben Daten zugreifen, arbeiten sie möglicherweise mit separaten Kopien dieser Daten in verschiedenen Caches. Um richtige Ergebnisse zu erhalten, muss die Kohärenz dieser Caches gewährleistet sein. Die Aufrechterhaltung der Kohärenz zwischen mehreren Caches ist relativ teuer, ist aber erforderlich, damit ein System mit mehreren Kernen ausgeführt werden kann. Darüber hinaus liegt es völlig außerhalb der Kontrolle des Client-Codes; das zugrunde liegende System arbeitet unabhängig daran, Caches auf dem neuesten Stand zu halten, indem es auf zwischen Kernen freigegebene Speicherressourcen zugreift.
 
@@ -183,18 +181,12 @@ Das in Abbildung 1 dargestellte Cache-Layout ist ein Beispiel für die Art von L
 
 ![Lumia 950-Cache](images/cpusets-lumia950cache.png)
 
-## Zusammenfassung
+## <a name="summary"></a>Zusammenfassung
 
 Die für UWP-Entwicklung verfügbare CPUSets-API bietet eine beträchtliche Menge an Informationen und Kontrolle über Ihre Multithreading-Optionen. Der zusätzliche Komplexität im Vergleich zu früheren Multithread-APIs für die Windows-Entwicklung ist mit einer Lernkurve verbunden. Die gestiegene Flexibilität ermöglicht aber letztendlich eine bessere Leistung auf unterschiedlichen Verbraucher-PCs und anderen Hardwarezielen.
 
-## Weitere Ressourcen
+## <a name="additional-resources"></a>Weitere Ressourcen
 - [CPU-Sätze (MSDN)](https://msdn.microsoft.com/library/windows/desktop/mt186420(v=vs.85).aspx)
 - [Von ATG bereitgestelltes CPUSets-Beispiel](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/Samples/System/CPUSets)
 - [UWP auf XboxOne](index.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

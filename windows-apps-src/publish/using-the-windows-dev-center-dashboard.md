@@ -1,6 +1,6 @@
 ---
 author: jnHs
-Description: "Im Windows Dev Center-Dashboard können Sie alle Ihre Apps für Windows-Geräte zentral verwalten und übermitteln."
+Description: "Im WindowsDevCenter-Dashboard können Sie all Ihre Apps für Windows-Geräte zentral verwalten und übermitteln."
 title: Verwenden des Windows Dev Center-Dashboards
 ms.assetid: FB63F773-71AC-464E-BDE1-21C429FB2B0B
 ms.author: wdg-dev-content
@@ -8,18 +8,15 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a4dfc6003c681bb0379f25d94bb144940467d15e
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: b0fedbbc881d3c9febac2a1486ec441e5d4719d1
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="using-the-windows-dev-center-dashboard"></a>Verwenden des Windows Dev Center-Dashboards
 
 
-Im Windows Dev Center-Dashboard können Sie alle Ihre Apps für Windows-Geräte zentral verwalten und übermitteln.
+Im WindowsDevCenter-Dashboard können Sie all Ihre Apps für Windows-Geräte zentral verwalten und übermitteln.
 
 > **Hinweis:**   Sie müssen über ein [Entwicklerkonto](http://go.microsoft.com/fwlink/p/?LinkId=615100) verfügen, um auf das Windows Dev Center-Dashboard zuzugreifen.
 
@@ -31,14 +28,13 @@ Das Dev Center-Dashboard bietet auch Funktionen für [App-Verwaltung und das Kon
 
 ## <a name="tips-for-using-the-unified-dashboard"></a>Tipps zur Verwendung des einheitlichen Dashboards
 
-Wenn Sie bereits Apps für Windows 8.1, Windows Phone 8.1 oder frühere Betriebssystemversionen veröffentlicht haben, lesen Sie den Artikel [Darstellung Ihrer App im Store für Windows 10-Kunden](how-your-app-appears-in-the-store-for-windows-10-customers.md), um mehr über einige Änderungen in Ihrem App-Eintrag für Windows 10-Kunden und über die Kategorisierung Ihrer App-Informationen im neuen Dashboard zu erfahren.
+Wenn Sie bereits Apps für Windows8.1, Windows Phone8.1 oder frühere Betriebssystemversionen veröffentlicht haben, lesen Sie den Artikel [Darstellung Ihrer App im Store für Windows10-Kunden](how-your-app-appears-in-the-store-for-windows-10-customers.md), um mehr über einige Änderungen in Ihrem App-Eintrag für Windows10-Kunden und über die Kategorisierung Ihrer App-Informationen im neuen Dashboard zu erfahren.
 
 Apps, die im vorherigen Windows Phone Dev Center und Windows Store-Dashboard mit einer gemeinsamen Identität verknüpft waren, werden jetzt im Dev Center-Dashboard als dieselbe App angezeigt. Ihre App kann unabhängig davon, welche Betriebssystemversionen sie unterstützt, als eine App verwaltet werden. Die App weist unabhängig vom Gerätetyp dieselben Details auf, beispielsweise den Preis und die Kategorie.
 
  
 
  
-
 
 
 

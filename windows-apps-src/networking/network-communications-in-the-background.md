@@ -8,17 +8,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 3f0e52780788eafe9e53bba491b8d54208dcc761
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 5cdb441ef2649322111a3f08e4396abef396f851
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="network-communications-in-the-background"></a>Netzwerkkommunikation im Hintergrund
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Wichtige APIs**
 
@@ -29,9 +26,9 @@ Wenn Apps nicht im Vordergrund ausgeführt werden, halten sie die Kommunikation 
 
 ## <a name="performing-short-lived-network-operations-in-background-tasks"></a>Kurzlebige Netzwerkvorgänge in Hintergrundaufgaben
 
-SocketActivityTrigger und ControlChannelTrigger (später in diesem Thema behandelt) sind für Apps vorgesehen, die langlebige Netzwerkverbindungen mit langer Laufzeit aufrechterhalten, die auch beim Ausführen der App im Hintergrund beibehalten werden. Apps, deren Logik für die jeweilige Hintergrundaufgabe kurzlebige Netzwerkinteraktionen erfordert (z. B. zum Senden einer HTTP-Anforderung), können direkt in den wichtigsten Netzwerk-APIs ([**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319), [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) oder [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906)) aufgerufen werden. Solche Aufgaben müssen jedoch auf eine bestimmte Weise konfiguriert werden, damit sie in jedem Fall ordnungsgemäß funktionieren. Hintergrundaufgaben müssen entweder die Bedingung [InternetAvailable](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.systemconditiontype.aspx) verwenden oder das Flag [IsNetworkRequested](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundtaskbuilder.isnetworkrequested.aspx) für die Registrierung der Hintergrundaufgaben. Dies weist die Infrastruktur für Hintergrundaufgaben an, die Netzwerkverbindung für die Ausführung der Aufgabe auch dann beizubehalten, wenn sich das Gerät im verbundenen Standbymodus befindet.
+SocketActivityTrigger und ControlChannelTrigger (später in diesem Thema behandelt) sind für Apps vorgesehen, die langlebige Netzwerkverbindungen mit langer Laufzeit aufrechterhalten, die auch beim Ausführen der App im Hintergrund beibehalten werden. Apps, deren Logik für die jeweilige Hintergrundaufgabe kurzlebige Netzwerkinteraktionen erfordert (z.B. zum Senden einer HTTP-Anforderung), können direkt in den wichtigsten Netzwerk-APIs ([**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319), [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) oder [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906)) aufgerufen werden. Solche Aufgaben müssen jedoch auf eine bestimmte Weise konfiguriert werden, damit sie in jedem Fall ordnungsgemäß funktionieren. Hintergrundaufgaben müssen entweder die Bedingung [InternetAvailable](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.systemconditiontype.aspx) verwenden oder das Flag [IsNetworkRequested](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundtaskbuilder.isnetworkrequested.aspx) für die Registrierung der Hintergrundaufgaben. Dies weist die Infrastruktur für Hintergrundaufgaben an, die Netzwerkverbindung für die Ausführung der Aufgabe auch dann beizubehalten, wenn sich das Gerät im verbundenen Standbymodus befindet.
 
-Wenn die Hintergrundaufgabe [InternetAvailable](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.systemconditiontype.aspx) oder [IsNetworkRequested](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundtaskbuilder.isnetworkrequested.aspx) nicht wie hier beschrieben verwendet, hat sie keinen Zugriff auf das Netzwerk, wenn sich dieses im verbundenen Standbymodus befindet (z. B. wenn der Bildschirm eines Smartphones ausgeschaltet ist).
+Wenn die Hintergrundaufgabe [InternetAvailable](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.systemconditiontype.aspx) oder [IsNetworkRequested](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundtaskbuilder.isnetworkrequested.aspx) nicht wie hier beschrieben verwendet, hat sie keinen Zugriff auf das Netzwerk, wenn sich dieses im verbundenen Standbymodus befindet (z.B. wenn der Bildschirm eines Smartphones ausgeschaltet ist).
 
 ## <a name="socket-broker-and-the-socketactivitytrigger"></a>Socketbroker und SocketActivityTrigger
 
@@ -593,5 +590,4 @@ Verwendungsmuster und bewährte Methoden für die Verwendung von [**IXMLHTTPRequ
 -   Die App muss zu Beginn gegebenenfalls eine [**Send**](https://msdn.microsoft.com/library/windows/desktop/hh831164)-Anforderung senden, um den Transport zu testen und richtig einzurichten, bevor der Transport zur Verwendung mit [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) erstellt wird. Nachdem die App festgestellt hat, dass der Transport richtig eingerichtet ist, kann das [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151)-Objekt als Transportobjekt zur Verwendung mit **ControlChannelTrigger** konfiguriert werden. Dieser Vorgang soll verhindern, dass die über den Transport hergestellte Verbindung in manchen Szenarien abgebrochen wird. Bei Verwendung von SSL mit einem Zertifikat kann für eine App die Anzeige eines Dialogfelds für die Eingabe einer PIN oder – bei mehreren Zertifikaten – für die Auswahl eines Zertifikats erforderlich sein. Proxyauthentifizierung und Serverauthentifizierung können ebenfalls erforderlich sein. Wenn die Proxy- oder Serverauthentifizierung abläuft, wird die Verbindung möglicherweise geschlossen. Eine Möglichkeit, wie eine App mit dem Problem des Authentifizierungsablaufs umgehen kann, besteht in der Verwendung eines Zeitgebers. Wenn eine HTTP-Umleitung erforderlich ist, ist nicht sichergestellt, dass die zweite Verbindung verlässlich hergestellt werden kann. Eine anfängliche Testanforderung stellt sicher, dass die App die neueste umgeleitete URL verwenden kann, bevor das **IXMLHTTPRequest2**-Objekt als Transport mit dem **ControlChannelTrigger**-Objekt verwendet wird.
 
 Weitere Informationen zur Verwendung von [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151) mit [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) finden Sie im [Beispiel für ControlChannelTrigger mit IXMLHTTPRequest2](http://go.microsoft.com/fwlink/p/?linkid=258538).
-
 

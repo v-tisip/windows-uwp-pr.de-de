@@ -8,17 +8,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 12cb0c8b911c0ddb3a45e49568c5846d4359eeba
-ms.lasthandoff: 02/07/2017
-
+keywords: windows10, UWP
+ms.openlocfilehash: 60b47a2c2c072efbf3ccedfcc48b9cba1611a370
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xaml-overview"></a>Übersicht über XAML
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Sie lernen die XAML-Sprache und XAML-Konzepte für die Entwicklergruppe von Windows-Runtime-Apps kennen. Darüber hinaus werden die verschiedenen Methoden zum Deklarieren von Objekten und Festlegen von Attributen in XAML beim Erstellen einer Windows-Runtime-App erläutert.
 
@@ -26,13 +23,13 @@ Sie lernen die XAML-Sprache und XAML-Konzepte für die Entwicklergruppe von Wind
 
 XAML (Extensible Application Markup Language) ist eine deklarative Programmiersprache. Insbesondere können mit XAML Objekte initialisiert und Eigenschaften von Objekten festgelegt werden. Dazu wird eine Sprachstruktur verwendet, die hierarchische Beziehungen zwischen mehreren Objekten anzeigt, und eine Unterstützungstypkonvention, die die Erweiterung von Typen unterstützt. Sie können sichtbare UI-Elemente im deklarativen XAML-Markup erstellen. Anschließend können Sie eine separate CodeBehind-Datei für jede XAML-Datei zuordnen, die auf Ereignisse reagieren und die ursprünglich in XAML deklarierten Objekte verändern kann.
 
-Die XAML-Sprache unterstützt den Austausch von Quellen zwischen unterschiedlichen Tools und Rollen für den Entwicklungsprozess, z. B. das Austauschen von XAML-Quellen zwischen Designtools und einer IDE oder zwischen Primärentwicklern und Lokalisierungsentwicklern. Durch die Verwendung von XAML als Austauschformat können Designerrollen und Entwicklerrollen separat gehalten oder zusammengeführt und von Designern und Entwicklern während der Produktion einer App durchlaufen werden.
+Die XAML-Sprache unterstützt den Austausch von Quellen zwischen unterschiedlichen Tools und Rollen für den Entwicklungsprozess, z.B. das Austauschen von XAML-Quellen zwischen Designtools und einer IDE oder zwischen Primärentwicklern und Lokalisierungsentwicklern. Durch die Verwendung von XAML als Austauschformat können Designerrollen und Entwicklerrollen separat gehalten oder zusammengeführt und von Designern und Entwicklern während der Produktion einer App durchlaufen werden.
 
 Im Rahmen Ihrer Windows-Runtime-App-Projekte handelt es sich bei den XAML-Dateien um XML-Dateien mit der Dateinamenerweiterung XAML.
 
 ## <a name="basic-xaml-syntax"></a>Grundlegende XAML-Syntax
 
-XAML verfügt über eine grundlegende Syntax, die auf dem XML-Format basiert. Der Definition nach muss es sich bei gültigen XAML-Daten auch um gültige XML-Daten handeln. XAML verfügt jedoch auch über Syntaxkonzepte, denen eine unterschiedliche und ausführlichere Bedeutung zugewiesen wurde, bei denen es sich gleichzeitig jedoch um gültige XML-Daten gemäß XML 1.0-Spezifikation handelt. Beispielsweise unterstützt XAML die *Syntax von Eigenschaftselementen*, in der Eigenschaftswerte innerhalb von Elementen festgelegt werden können, anstatt über Zeichenfolgenwerte in Attributen oder Inhalten. Für das normale XML-Format ist ein XAML-Eigenschaftselement ein Element mit einem Punkt im Namen, damit es für einfaches XML gültig ist, jedoch nicht die gleiche Bedeutung hat.
+XAML verfügt über eine grundlegende Syntax, die auf dem XML-Format basiert. Der Definition nach muss es sich bei gültigen XAML-Daten auch um gültige XML-Daten handeln. XAML verfügt jedoch auch über Syntaxkonzepte, denen eine unterschiedliche und ausführlichere Bedeutung zugewiesen wurde, bei denen es sich gleichzeitig jedoch um gültige XML-Daten gemäß XML1.0-Spezifikation handelt. Beispielsweise unterstützt XAML die *Syntax von Eigenschaftselementen*, in der Eigenschaftswerte innerhalb von Elementen festgelegt werden können, anstatt über Zeichenfolgenwerte in Attributen oder Inhalten. Für das normale XML-Format ist ein XAML-Eigenschaftselement ein Element mit einem Punkt im Namen, damit es für einfaches XML gültig ist, jedoch nicht die gleiche Bedeutung hat.
 
 ## <a name="xaml-and-microsoft-visual-studio"></a>XAML und Microsoft Visual Studio
 
@@ -86,7 +83,7 @@ Zum Erstellen Ihrer eigenen Namespacedefinition, mit der auf benutzerdefinierte 
 
 Das Präfix definiert das Markuptoken, das zur Referenzierung dieses XAML-Namespaces im Rest des Markups der XAML-Datei verwendet wird. Ein Doppelpunkt (":") wird zwischen das Präfix und die im XAML-Namespace zu referenzierende Entität gesetzt.
 
-Die Attributsyntax zum Zuordnen des Präfix `myTypes` zum Namespace `myCompany.myTypes` lautet z. B. wie folgt: `    xmlns:myTypes="using:myCompany.myTypes"`. Ein Beispiel für eine Elementdarstellung lautet: `<myTypes:CustomButton/>`
+Die Attributsyntax zum Zuordnen des Präfix `myTypes` zum Namespace `myCompany.myTypes` lautet z.B. wie folgt: `    xmlns:myTypes="using:myCompany.myTypes"`. Ein Beispiel für eine Elementdarstellung lautet: `<myTypes:CustomButton/>`
 
 Weitere Informationen zur Zuordnung von XAML-Namespaces für benutzerdefinierte Typen einschließlich einiger besonderer Punkte zu Visual C++-Komponentenerweiterungen (C++/CX) finden Sie unter [XAML-Namespaces und -Namespacezuordnung](xaml-namespaces-and-namespace-mapping.md).
 
@@ -114,7 +111,7 @@ Die Windows-Runtime unterstützt außerdem die [{x:Null}-Markuperweiterung](x-nu
 
 Eine Markuperweiterung gibt im Allgemeinen eine vorhandene Instanz aus einem anderen Teil des Objektdiagramms für die App zurück oder stellt einen Wert zur Laufzeit zurück. Da Sie eine Markuperweiterung als Attributwert verwenden können und dies auch die übliche Art der Nutzung ist, ist häufig zu beobachten, dass Markuperweiterungen Werte für Eigenschaften vom Typ "Verweis" bereitstellen, für die andernfalls eine Eigenschaftselementsyntax erforderlich gewesen wäre.
 
-Die Syntax zum Verweisen auf ein wiederverwendbares [**Style**](https://msdn.microsoft.com/library/windows/apps/br208849)-Element aus einem [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) lautet z. B. wie folgt: `<Button Style="{StaticResource SearchButtonStyle}"/>`. Ein [**Style**](https://msdn.microsoft.com/library/windows/apps/br208849)-Element ist ein Verweistyp, kein einfacher Wert. Ohne `{StaticResource}` würden Sie darin also ein `<Button.Style>`-Eigenschaftselement und eine `<Style>`-Definition benötigen, um die [**FrameworkElement.Style**](https://msdn.microsoft.com/library/windows/apps/br208743)-Eigenschaft festzulegen.
+Die Syntax zum Verweisen auf ein wiederverwendbares [**Style**](https://msdn.microsoft.com/library/windows/apps/br208849)-Element aus einem [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) lautet z.B. wie folgt: `<Button Style="{StaticResource SearchButtonStyle}"/>`. Ein [**Style**](https://msdn.microsoft.com/library/windows/apps/br208849)-Element ist ein Verweistyp, kein einfacher Wert. Ohne `{StaticResource}` würden Sie darin also ein `<Button.Style>`-Eigenschaftselement und eine `<Style>`-Definition benötigen, um die [**FrameworkElement.Style**](https://msdn.microsoft.com/library/windows/apps/br208743)-Eigenschaft festzulegen.
 
 Bei Einsatz von Markuperweiterungen kann jede Eigenschaft, die unter XAML festgelegt werden kann, praktisch auch in Attributsyntax festgelegt werden. Mithilfe der Attributsyntax können Sie auch dann Verweiswerte für eine Eigenschaft bereitstellen, wenn diese ansonsten keine Attributsyntax für die direkte Objektinstanziierung unterstützt. Oder Sie können ein spezifisches Verhalten aktivieren, das die allgemeine Anforderung zurückstellt, dass XAML-Eigenschaften durch Wertetypen oder neu erstellte Verweistypen gefüllt werden.
 
@@ -234,14 +231,13 @@ Im Folgenden sind einige Tipps zum Definieren von UI-Elementen in XAML-Code mith
 
 Da es sich bei XAML um eine Markupsprache handelt, sind einige der typischen Strategien für das Debuggen innerhalb von Microsoft Visual Studio nicht verfügbar. Beispielsweise besteht keine Möglichkeit zum Festlegen eines Haltepunkts innerhalb einer XAML-Datei. Jedoch bestehen andere Techniken, mit denen Sie Probleme mit UI-Definitionen oder XAML-Markups während der Appentwicklung beheben können.
 
-Treten Probleme mit einer XAML-Datei auf, wird sehr wahrscheinlich von einem System oder Ihrer App eine XAML-Analyseausnahme ausgelöst. Tritt eine XAML-Analyseausnahme auf, konnte von der vom XAML-Parser geladenen XAML keine gültige Objektstruktur erstellt werden. In einigen Fällen, z. B. wenn die XAML die erste Seite der Anwendung darstellt, die als die visuelle Stammstruktur geladen wird, ist die XAML-Analyseausnahme nicht behebbar.
+Treten Probleme mit einer XAML-Datei auf, wird sehr wahrscheinlich von einem System oder Ihrer App eine XAML-Analyseausnahme ausgelöst. Tritt eine XAML-Analyseausnahme auf, konnte von der vom XAML-Parser geladenen XAML keine gültige Objektstruktur erstellt werden. In einigen Fällen, z.B. wenn die XAML die erste Seite der Anwendung darstellt, die als die visuelle Stammstruktur geladen wird, ist die XAML-Analyseausnahme nicht behebbar.
 
-XAML wird häufig innerhalb einer IDE, z. B. Visual Studio, und einer der XAML-Designoberflächen bearbeitet. Visual Studio kann in vielen Fällen Überprüfung zu Entwurfszeit und Fehlerüberprüfung einer XAML-Quelle während der Bearbeitung bereitstellen. Beispielsweise werden ungültige Attributwerte im XAML-Texteditor bei der Eingabe unter Umständen durch Wellenlinien gekennzeichnet, und Sie sehen noch vor der XAML-Kompilierung, dass die Benutzeroberflächendefinition fehlerhaft ist.
+XAML wird häufig innerhalb einer IDE, z.B. Visual Studio, und einer der XAML-Designoberflächen bearbeitet. Visual Studio kann in vielen Fällen Überprüfung zu Entwurfszeit und Fehlerüberprüfung einer XAML-Quelle während der Bearbeitung bereitstellen. Beispielsweise werden ungültige Attributwerte im XAML-Texteditor bei der Eingabe unter Umständen durch Wellenlinien gekennzeichnet, und Sie sehen noch vor der XAML-Kompilierung, dass die Benutzeroberflächendefinition fehlerhaft ist.
 
 Wird die App ausgeführt und wurden XAML-Analysefehler zur Entwurfszeit nicht erfasst, werden werden sie von der Common Language Runtime (CLR) als [**XamlParseException**](https://msdn.microsoft.com/library/windows/apps/hh673774) gemeldet. Weitere Infos dazu, was im Falle einer Laufzeit-**XamlParseException** unternommen werden kann, finden Sie unter [Ausnahmebehandlung für Windows-Runtime-Apps in C# oder Visual Basic](https://msdn.microsoft.com/library/windows/apps/dn532194).
 
-**Hinweis:**  Apps mit C++/CX-Code erhalten nicht das bestimmte [**XamlParseException**](https://msdn.microsoft.com/library/windows/apps/hh673774)-Element. Die Meldung in der Ausnahme stellt die Fehlerursache als XAML-bezogen dar und enthält Kontextinfos, z. B. Zeilennummern in einer XAML-Datei, so wie **XamlParseException**.
+**Hinweis:**  Apps mit C++/CX-Code erhalten nicht das bestimmte [**XamlParseException**](https://msdn.microsoft.com/library/windows/apps/hh673774)-Element. Die Meldung in der Ausnahme stellt die Fehlerursache als XAML-bezogen dar und enthält Kontextinfos, z.B. Zeilennummern in einer XAML-Datei, so wie **XamlParseException**.
 
 Weitere Informationen zum Debuggen einer Windows-Runtime-App finden Sie unter [Starten einer Debuggingsitzung](https://msdn.microsoft.com/library/windows/apps/xaml/hh781607.aspx).
-
 

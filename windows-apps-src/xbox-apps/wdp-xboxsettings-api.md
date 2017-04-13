@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: 6ab12b99-2944-49c9-92d9-f995efc4f6ce
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: a17a489944fdc2d78831549c1afdc2bd87deabdf
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 43e4bb289d12439bbc0f6de347d187b067288d51
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="developer-settings-api-reference"></a>Referenz zur API für Entwicklereinstellungen   
 Mit dieser API können Sie auf Xbox One-Einstellungen zugreifen, die für die Entwicklung nützlich sind.
 
@@ -39,7 +36,7 @@ GET | /ext/settings
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**   
 Die Antwort ist ein JSON-Einstellungsarray mit allen Einstellungen. Jedes Einstellungsobjekt enthält die folgenden Felder:   
@@ -51,7 +48,7 @@ Kategorie (Zeichenfolge): Die Kategorie der Einstellung.
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -72,15 +69,15 @@ GET | /ext/settings/\<setting name\>
 <br />
 **URI-Parameter**
 
-- Keiner
+- Keine
 
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**   
 Die Antwort ist ein JSON-Objekt mit folgenden Feldern:   
@@ -92,7 +89,7 @@ Kategorie (Zeichenfolge): Die Kategorie der Einstellung.
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -113,11 +110,11 @@ PUT | /ext/settings/\<setting name\>
 <br />
 **URI-Parameter**
 
-- Keiner
+- Keine
 
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**   
 Der Anforderungstext ist ein JSON-Objekt mit dem folgenden Feld:   
@@ -129,7 +126,7 @@ Value (Zeichenfolge): Der neue Wert für die Einstellung.
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -141,5 +138,4 @@ HTTP-Statuscode      | Beschreibung
 **Verfügbare Gerätefamilien**
 
 * Windows Xbox
-
 

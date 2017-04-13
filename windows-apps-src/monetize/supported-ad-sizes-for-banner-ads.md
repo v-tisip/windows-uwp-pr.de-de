@@ -9,14 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, UWP, Anzeigen, Werbung, Größen, Banner"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 0c0ae3dbb197b166993a71bad80a05b11c5d815f
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 6f8e679a31da140911306110027e1fdc041df399
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="supported-ad-sizes-for-banner-ads"></a>Unterstützte Größen für Banneranzeigen
+# <a name="supported-banner-ad-sizes"></a>Unterstützte Größen für Banneranzeigen
 
 
 
@@ -95,4 +92,3 @@ Microsoft Advertising unterstützt die folgenden Größen für Banneranzeigen.
  
 
  
-

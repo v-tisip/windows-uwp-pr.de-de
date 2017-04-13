@@ -1,24 +1,21 @@
 ---
 author: DelfCo
 ms.assetid: 2CC2E526-DACB-4008-9539-DA3D0C190290
-description: "Eine kurze Übersicht über die Netzwerktechnologien, die UWP-Entwicklern zur Verfügung stehen, mit Vorschlägen zum Auswählen der Technologien, die für Ihre App geeignet sind."
+description: "Eine kurze Übersicht über die Netzwerktechnologien, die für UWP-Entwickler zur Verfügung stehen, mit Vorschlägen zum Auswählen der Technologien, die für Ihre App geeignet sind."
 title: Welche Netzwerktechnologie?
 ms.author: bobdel
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 3ee88a22fe50fc3d782febafdc82c2a68c386dab
-ms.lasthandoff: 02/07/2017
-
+keywords: windows10, UWP
+ms.openlocfilehash: 4cbb423d8fdddfc6cc158c1cbca2398b21dc205c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="which-networking-technology"></a>Welche Netzwerktechnologie?
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Eine kurze Übersicht über die Netzwerktechnologien, die für UWP-Entwickler zur Verfügung stehen, mit Vorschlägen zum Auswählen der Technologien, die für Ihre App geeignet sind.
 
@@ -80,7 +77,7 @@ Ein neues Feature für die Hintergrundübertragung in Windows 10 ist die Möglic
 -   Verwenden Sie Hintergrundübertragungen zum zuverlässigen Übertragen großer Dateien oder einer großen Anzahl von Dateien.
 -   Verwenden Sie Hintergrundübertragungen mit Abschlussgruppen für Hintergrundübertragungen, wenn Sie Dateiübertragungen im Nachhinein mit einer Hintergrundaufgabe verarbeiten möchten.
 -   Verwenden Sie Hintergrundübertragungen, wenn Sie eine laufende Übertragung nach einer Netzwerkunterbrechung wiederaufnehmen möchten.
--   Verwenden Sie Hintergrundübertragungen, wenn Sie das Übertragungsverhalten auf Grundlage von Netzwerkbedingungen ändern möchten, z. B. beim Wechsel zu einem Volumentarif.
+-   Verwenden Sie Hintergrundübertragungen, wenn Sie das Übertragungsverhalten auf Grundlage von Netzwerkbedingungen ändern möchten, z.B. beim Wechsel zu einem Volumentarif.
 
 ### <a name="when-not-to-use-background-transfers"></a>Wann sollten Hintergrundübertragungen nicht verwendet werden?
 
@@ -139,6 +136,5 @@ Die [**Windows.Networking.NetworkOperators**](https://msdn.microsoft.com/library
 
 ### <a name="sms"></a>SMS
 
-Der [**Windows.Devices.Sms**](https://msdn.microsoft.com/library/windows/apps/br206567)-Namespace verarbeitet SMS- und verwandte Nachrichten als untergeordnete Elemente. Er wird für die Verwendung durch Mobilfunkanbieter für die App-gerichtete SMS-Verwendung bereitgestellt und wird durch eine Funktion gesteuert, die nicht zur Verwendung durch die meisten App-Entwickler genehmigt wird. Wenn Sie eine App für die Verarbeitung von Nachrichten schreiben, verwenden Sie stattdessen die [**Windows.ApplicationModel.Chat**](https://msdn.microsoft.com/library/windows/apps/dn642321)-API, da sie nicht nur SMS-Nachrichten verarbeiten kann, sondern auch Nachrichten aus anderen Quellen, z. B. Echtzeit-Chat-Apps, sodass eine viel umfangreichere Chat-/Nachrichtenerfahrung möglich wird.
-
+Der [**Windows.Devices.Sms**](https://msdn.microsoft.com/library/windows/apps/br206567)-Namespace verarbeitet SMS- und verwandte Nachrichten als untergeordnete Elemente. Er wird für die Verwendung durch Mobilfunkanbieter für die App-gerichtete SMS-Verwendung bereitgestellt und wird durch eine Funktion gesteuert, die nicht zur Verwendung durch die meisten App-Entwickler genehmigt wird. Wenn Sie eine App für die Verarbeitung von Nachrichten schreiben, verwenden Sie stattdessen die [**Windows.ApplicationModel.Chat**](https://msdn.microsoft.com/library/windows/apps/dn642321)-API, da sie nicht nur SMS-Nachrichten verarbeiten kann, sondern auch Nachrichten aus anderen Quellen, z.B. Echtzeit-Chat-Apps, sodass eine viel umfangreichere Chat-/Nachrichtenerfahrung möglich wird.
 

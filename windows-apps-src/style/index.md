@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.assetid: 4df395d2-f10e-4e0e-9bf2-660f82b8a9fa
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: dcd97e72520b4e814c665dc72b36c895cd8fe2b2
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: cce852d20dfce74740163009d72c02cfb58cc523
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="uwp-style-guide"></a>UWP-Formatanleitungen
 
@@ -63,7 +61,7 @@ Sound vervollständigt die Benutzerumgebung einer Anwendung und trägt zur Vermi
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
    <p><b>[Typografie](typography.md)</b><br/>
-Die Typografie muss übersichtlich sein, da sie der visuellen Darstellung von Sprache dient. Ihr Stil darf diesem Ziel nie im Wege stehen. Typografie spielt jedoch auch als Layoutkomponente eine wichtige Rolle und wirkt sich maßgeblich auf die Dichte und Komplexität des Designs und damit auf die Benutzerfreundlichkeit dieses Designs aus.</p>
+Typografie muss übersichtlich sein, da sie zur visuellen Darstellung von Sprache dient. Ihr Stil darf diesem Ziel nie im Wege stehen. Typografie spielt jedoch auch als Layoutkomponente eine wichtige Rolle und wirkt sich maßgeblich auf die Dichte und Komplexität des Designs und damit auf die Benutzerfreundlichkeit dieses Designs aus.</p>
    <div class="uwpd-no-bullet-list">
    <ul>
     <li>[Schriftarten](fonts.md)</li>
@@ -79,5 +77,4 @@ Das XAML-Framework bietet zahlreiche Anpassungsmöglichkeiten für die App-Darst
   </div>
 </div>
 </div>
-
 

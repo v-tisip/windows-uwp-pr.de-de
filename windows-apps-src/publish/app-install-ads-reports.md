@@ -8,17 +8,13 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Werbung, App, Kampagnen, Bericht, Installationen"
+keywords: Windows10, UWP, Werbung, App, Kampagnen, Bericht, Installationen
 redirect_url: https://msdn.microsoft.com/windows/uwp/publish/promote-your-app-report
-translationtype: Human Translation
-ms.sourcegitcommit: b01924366a0bc2afabe2f381e72e45862f0dd682
-ms.openlocfilehash: df9bc656a909aeaca7207263c8dc46fd903e45d2
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: f40b6a6e7bfb2748d53c5c4472cf05b63e617703
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="app-install-ads-report"></a>Bericht „Anzeigen für die App-Installation“
  
 Diese Seite wurde umgeleitet zu „Bewerben Ihres App-Berichts”.
  
-

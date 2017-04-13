@@ -8,14 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 2fbbaac1b6b0f3133b9d541d6887ceb6c379f520
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 9e9eb88e2208e33e74c273347d66169459330c27
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="app-screenshots-and-images"></a>App-Screenshots und -Bilder
 
 
@@ -37,12 +34,12 @@ In der folgenden Tabelle sind die verschiedenen Bilder aufgeführt, die Sie hoch
 | Bild                                                       | Größe in Pixel                           | Verwendung                                                                                                                                                                           | Erforderlichkeit                                                                                                                                            |
 |-------------------------------------------------------------|--------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Desktop-Screenshots](#screenshots)                         | 1366 x 768 oder größer                 | Wird im Store-Eintrag Ihrer App auf einem Desktopgerät angezeigt.                                                                                                          | Empfohlen für alle Apps, insbesondere wenn Ihre App für die Verwendung auf Desktopgeräten vorgesehen ist. Es ist mindestens ein Screenshot (für jede Gerätefamilie) erforderlich. |
-| [Mobilgerät-Screenshots](#screenshots)                          | 768 x 1280, 720 x 1280 oder 480 x 800 | Wird im Store-Eintrag Ihrer App auf einem Mobilgerät angezeigt.                                                                                                           | Empfohlen für alle Apps, insbesondere wenn Ihre App für die Verwendung auf Mobilgeräten vorgesehen ist. Es ist mindestens ein Screenshot (für jede Gerätefamilie) erforderlich. |
-| [Hologramm-Screenshots](#screenshots)                          | 1268 x 720 oder größer                 | Wird im Store-Eintrag Ihrer App auf einem Gerät für Hologramme angezeigt.                                                                                                           | Wird empfohlen, wenn Ihre App für eine Microsoft HoloLens-Verwendung vorgesehen ist. Es ist mindestens ein Screenshot (für jede Gerätefamilie) erforderlich. |
-| [Symbol für App-Kachel](#app-tile-icon)                             | 300 x 300                            | Wird als Symbol Ihrer App im Store für Windows Phone 8.1 und ältere Versionen angezeigt (wenn Sie nur Pakete für Windows Phone 8.1 oder frühere Versionen haben, auch im Store unter Windows 10). | Erforderlich für die ordnungsgemäße Anzeige im Store, wenn Ihre App für Windows Phone 8.1 oder frühere Versionen vorgesehen ist.                                                                 |
-| [Werbebild: Windows 10-Spotlight](#promotional-artwork) | 2400 x 1200                          | Für Werbelayouts im Store unter Windows 10 verwendet.                                                                                                                        | Empfohlen für alle Apps, insbesondere Apps mit UWP-Paketen, die für Windows 10-Kunden vorgesehen sind.                                                               |
-| [Werbebilder: Windows Phone 8.1 und frühere Versionen](#promotional-artwork) | 1000 x 800, 358 x 358                | Für Werbelayouts im Store unter Windows Phone 8.1 und früheren Versionen verwendet.                                                                                                     | Empfohlen für alle Apps, die für Windows Phone 8.1 oder früher vorgesehen sind.                                                                                           |
-| [Werbebild: Windows 8.1 und frühere Versionen](#promotional-artwork)        | 414 x 180                            | Für Werbelayouts im Store unter Windows 8.1 verwendet.                                                                                                                       | Empfohlen für alle Apps, die für Windows 8.1 oder früher vorgesehen sind.                                                                                                 |
+| [Mobilgerät-Screenshots](#screenshots)                          | 768x1280, 720x1280 oder 480x800 | Wird im Store-Eintrag Ihrer App auf einem Mobilgerät angezeigt.                                                                                                           | Empfohlen für alle Apps, insbesondere wenn Ihre App für die Verwendung auf Mobilgeräten vorgesehen ist. Es ist mindestens ein Screenshot (für jede Gerätefamilie) erforderlich. |
+| [Hologramm-Screenshots](#screenshots)                          | 1268x720 oder größer                 | Wird im Store-Eintrag Ihrer App auf einem Gerät für Hologramme angezeigt.                                                                                                           | Wird empfohlen, wenn Ihre App für eine Microsoft HoloLens-Verwendung vorgesehen ist. Es ist mindestens ein Screenshot (für jede Gerätefamilie) erforderlich. |
+| [Symbol für App-Kachel](#app-tile-icon)                             | 300x300                            | Wird als Symbol Ihrer App im Store für Windows Phone 8.1 und ältere Versionen angezeigt (wenn Sie nur Pakete für Windows Phone 8.1 oder frühere Versionen haben, auch im Store unter Windows 10). | Erforderlich für die ordnungsgemäße Anzeige im Store, wenn Ihre App für WindowsPhone8.1 oder frühere Versionen vorgesehen ist.                                                                 |
+| [Werbebild: Windows 10-Spotlight](#promotional-artwork) | 2400x1200                          | Für Werbelayouts im Store unter Windows 10 verwendet.                                                                                                                        | Empfohlen für alle Apps, insbesondere Apps mit UWP-Paketen, die für Windows 10-Kunden vorgesehen sind.                                                               |
+| [Werbebilder: WindowsPhone8.1 und frühere Versionen](#promotional-artwork) | 1000x800, 358x358                | Für Werbelayouts im Store unter WindowsPhone 8.1 und früheren Versionen verwendet.                                                                                                     | Empfohlen für alle Apps, die für WindowsPhone8.1 oder früher vorgesehen sind.                                                                                           |
+| [Werbebild: Windows 8.1 und frühere Versionen](#promotional-artwork)        | 414x180                            | Für Werbelayouts im Store unter Windows 8.1 verwendet.                                                                                                                       | Empfohlen für alle Apps, die für Windows 8.1 oder früher vorgesehen sind.                                                                                                 |
  
 
 ## <a name="screenshots"></a>Screenshots
@@ -58,22 +55,22 @@ Für die Übermittlung ist nur ein Screenshot erforderlich. Sie können jedoch b
 Jeder Screenshot muss einer PNG-Datei im Quer- oder Hochformat entsprechen, und die Datei darf nicht größer als 2 MB sein.
 
 Die Größenanforderungen hängen von der Gerätefamilie ab:
-- Mobile Geräte: 768 x 1280, 720 x 1280 oder 480 x 800 Pixel
-- Desktopgerät: 1366 x 768 Pixel oder größer
-- Geräte für Hologramme: 1268 x 720 Pixel oder größer
+- Mobile Geräte: 768x1280, 720x1280 oder 480x800 Pixel
+- Desktopgerät: 1366x768 Pixel oder größer
+- Geräte für Hologramme: 1268x720 Pixel oder größer
 
-Sie können eine Kurzbeschreibung von maximal 200 Zeichen für die einzelnen Screenshots angeben.
+Sie können eine Kurzbeschreibung von maximal 200Zeichen für die einzelnen Screenshots angeben.
 
 > **Hinweis**  Wenn Sie Store-Einträge für [mehrere Sprachen](supported-languages.md) erstellen, erhalten Sie für jede Sprache eine Seite vom Typ **Store-Eintrag**. Sie müssen Bilder für jede Sprache separat hochladen (auch wenn Sie dieselben Bilder verwenden), einschließlich Beschriftungen, die für die einzelnen Sprachen verwendet werden.
 
 
 ## <a name="app-tile-icon"></a>Symbol für App-Kachel
 
-Dies ist nicht für alle Übermittlungen erforderlich, wird jedoch dringend empfohlen, wenn Ihre App unter Windows Phone 8.1 oder früheren Versionen ausgeführt wird. Das Symbol für die App-Kachel wird verwendet, wenn der Store-Eintrag der App für Kunden unter Windows Phone 8.1 und früheren Versionen angezeigt wird. Wenn Sie dieses Bild nicht bereitstellen, sehen Kunden unter Windows Phone 8.1 und früheren Versionen im Eintrag für Ihre App ein leeres Symbol. (Dies gilt auch für Kunden unter Windows 10, wenn Ihre App nur über Pakete für Windows Phone 8.1 oder frühere Versionen verfügt.)
+Dies ist nicht für alle Übermittlungen erforderlich, wird jedoch dringend empfohlen, wenn Ihre App unter WindowsPhone8.1 oder früheren Versionen ausgeführt wird. Das Symbol für die App-Kachel wird verwendet, wenn der Store-Eintrag der App für Kunden unter WindowsPhone8.1 und früheren Versionen angezeigt wird. Wenn Sie dieses Bild nicht bereitstellen, sehen Kunden unter Windows Phone8.1 und früheren Versionen im Eintrag für Ihre App ein leeres Symbol. (Dies gilt auch für Kunden unter Windows10, wenn Ihre App nur über Pakete für Windows Phone8.1 oder frühere Versionen verfügt.)
 
-Falls Ihre Übermittlung **nur** UWP-Pakete enthält, müssen Sie dieses Bild nicht bereitstellen. Beachten Sie Folgendes: Wenn Ihre Übermittlung UWP-Pakete enthält und Sie ein Symbol für die App-Kachel bereitstellen, kann es in einigen Store-Layouts zusammen mit dem Eintrag der App unter Windows 10 angezeigt werden. Um vollständig zu verhindern, dass das Symbol für die App-Kachel für Kunden unter Windows 10 angezeigt wird, können Sie einen [plattformspezifischen Eintrag](create-platform-specific-descriptions.md) für die früheren Betriebssystemversionen erstellen und das Symbol für die App-Kachel nur dort einbinden.
+Falls Ihre Übermittlung **nur** UWP-Pakete enthält, müssen Sie dieses Bild nicht bereitstellen. Beachten Sie Folgendes: Wenn Ihre Übermittlung UWP-Pakete enthält und Sie ein Symbol für die App-Kachel bereitstellen, kann es in einigen Store-Layouts zusammen mit dem Eintrag der App unter Windows10 angezeigt werden. Um vollständig zu verhindern, dass das Symbol für die App-Kachel für Kunden unter Windows10 angezeigt wird, können Sie einen [plattformspezifischen Eintrag](create-platform-specific-descriptions.md) für die früheren Betriebssystemversionen erstellen und das Symbol für die App-Kachel nur dort einbinden.
 
-Das Symbol für die App-Kachel muss eine PNG-Datei mit 300 x 300 Pixel sein.
+Das Symbol für die App-Kachel muss eine PNG-Datei mit 300x300 Pixel sein.
 
 ## <a name="promotional-artwork"></a>Werbebilder
 
@@ -95,9 +92,9 @@ Im Folgenden finden Sie einige Tipps, die Sie beim Entwerfen Ihrer Werbebilder b
 
 ### <a name="for-windows-10-2400-x-1200"></a>Für Windows 10: 2400 x 1200
 
-Im Store unter Windows 10 befindet sich oben auf den Kategorieseiten von „Apps und Spiele“ ein sich drehendes Spotlight-Bild, um Inhalte zu bewerben. Achten Sie darauf, ein Bild der Größe 2400 x 1200 zu übermitteln, damit Ihre App für diese Spotlight-Platzierung ausgewählt werden kann.
+Im Store unter Windows 10 befindet sich oben auf den Kategorieseiten von „Apps und Spiele“ ein sich drehendes Spotlight-Bild, um Inhalte zu bewerben. Achten Sie darauf, ein Bild der Größe 2400x1200 zu übermitteln, damit Ihre App für diese Spotlight-Platzierung ausgewählt werden kann.
 
-Bedenken Sie beim Entwerfen Ihres Bilds, dass im Fall einer Verwendung für Spotlight im unteren Bilddrittel ein Farbverlauf angewendet wird, damit wir Marketingtext lesbar über dem Bild anzeigen können. Stellen Sie daher sicher, dass Sie im unteren Drittel keinen Text oder wichtige visuelle Elemente verwenden. Außerdem schneiden wir Ihr Bild u. U. zu; platzieren Sie das Branding und die wichtigsten Informationen zu Ihrer App daher in der Bildmitte.
+Bedenken Sie beim Entwerfen Ihres Bilds, dass im Fall einer Verwendung für Spotlight im unteren Bilddrittel ein Farbverlauf angewendet wird, damit wir Marketingtext lesbar über dem Bild anzeigen können. Stellen Sie daher sicher, dass Sie im unteren Drittel keinen Text oder wichtige visuelle Elemente verwenden. Außerdem schneiden wir Ihr Bild u.U. zu; platzieren Sie das Branding und die wichtigsten Informationen zu Ihrer App daher in der Bildmitte.
 
 Die folgende Abbildung zeigt, welche wichtigen Proportionen zu berücksichtigen sind. Die „sichere Zone“ in der Mitte ist auch dann hervorgehoben, wenn wir das Bild zuschneiden. Im „dynamischen Textbereich“ können Text und ein Farbverlauf angezeigt werden.
 
@@ -106,11 +103,10 @@ Die folgende Abbildung zeigt, welche wichtigen Proportionen zu berücksichtigen 
 ![Gut gestaltetes Spotlight-Bild](images/spotlight2.jpg)
 ### <a name="for-windows-phone-81-and-earlier-1000-x-800-358-x-358"></a>Für Windows Phone 8.1 und frühere Versionen: 1000 x 800, 358 x 358
 
-Im Store unter Windows Phone 8.1 und früheren Versionen können zwei Bildgrößen in Werbelayouts verwendet werden: 1000 x 800 Pixel und 358 x 358 Pixel. Wenn Ihre App unter Windows Phone 8.1 oder einer früheren Version ausgeführt wird, wird die Bereitstellung von Bildern in diesen beiden Größen empfohlen, damit sie für Werbung in Frage kommen.
+Im Store unter WindowsPhone8.1 und früheren Versionen können zwei Bildgrößen in Werbelayouts verwendet werden: 1000x800 Pixel und 358x358 Pixel. Wenn Ihre App unter Windows Phone 8.1 oder einer früheren Version ausgeführt wird, wird die Bereitstellung von Bildern in diesen beiden Größen empfohlen, damit sie für Werbung in Frage kommen.
 
-> **Tipp**  Achten Sie auch darauf, ein [App-Kachel-Symbolbild](#app-tile-icon) mit 300 x 300 Pixel bereitzustellen, damit Ihre App im Store nicht mit einem leeren Symbol angezeigt wird.
+> **Tipp**  Achten Sie auch darauf, ein [App-Kachel-Symbolbild](#app-tile-icon) mit 300x300 Pixel bereitzustellen, damit Ihre App im Store nicht mit einem leeren Symbol angezeigt wird.
 
 ### <a name="for-windows-81-and-earlier-414-x-180"></a>Für Windows 8.1 und frühere Versionen: 414 x 180
 
 Im Store unter Windows 8.1 und früheren Versionen wird für Werbelayouts möglicherweise ein Bild in der Pixelgröße 414 x 180 verwendet. Wenn Ihre App unter Windows 8.1 oder früheren Versionen ausgeführt wird, wird das Bereitstellen eines Bilds in dieser Größe empfohlen, damit sie für Werbung in Frage kommt.
-

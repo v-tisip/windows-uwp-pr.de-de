@@ -1,22 +1,19 @@
 ---
 author: mcleanbyron
 ms.assetid: 7a38a352-6e54-4949-87b1-992395a959fd
-description: "Erfahren Sie mehr über UI- und Benutzerumgebungsrichtlinien für Anzeigen in Apps."
-title: "UI- und Benutzerumgebungsrichtlinien für Anzeigen in Apps"
+description: "Erfahren Sie mehr über Richtlinien für die Benutzeroberfläche und Benutzerumgebung für Anzeigen in Apps."
+title: "Richtlinien für die Benutzeroberfläche und Benutzerumgebung für Anzeigen"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Anzeigen, Werbung, Richtlinien, bewährte Methoden"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e1c3fef6e8cc7cc483b72b6ba142d323055c960c
-ms.lasthandoff: 02/07/2017
-
+keywords: "Windows10, UWP, Anzeigen, Werbung, Richtlinien, bewährte Methoden"
+ms.openlocfilehash: 75a68977e5edb996a5e2fc1ae9265d11b7492ad9
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="ui-and-user-experience-guidelines-for-ads-in-apps"></a>UI- und Benutzerumgebungsrichtlinien für Anzeigen in Apps
+# <a name="ui-and-user-experience-guidelines-for-ads"></a>Richtlinien für die Benutzeroberfläche und Benutzerumgebung für Anzeigen
 
 Dieser Artikel enthält Richtlinien für die Bereitstellung hervorragender Umgebungen mit Banneranzeigen und Interstitialanzeigen in Ihren Apps. Allgemeine Informationen zur Gestaltung des Erscheinungsbilds für Apps finden Sie unter [Design und UI](https://developer.microsoft.com/windows/apps/design).
 
@@ -64,18 +61,18 @@ Dieser Abschnitt enthält Beispiele für Szenarien mit Banneranzeigen, die einen
 
 * Beliebig geartetes Umgehen des integrierten minimalen Zeitgebers für die Aktualisierung der Banneranzeigen, einschließlich (aber nicht beschränkt auf) Austauschen von [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx)-Objekten oder Erzwingen einer Seitenaktualisierung ohne Eingreifen des Benutzers.
 
-* Verwenden von Live-Anzeigeneinheiten (d. h. Anzeigeneinheiten, die Sie aus dem Windows Dev Center-Dashboard erhalten) während der Entwicklungs- und Testphase oder in einem Emulator.
+* Verwenden von Live-Anzeigeneinheiten (d.h. Anzeigeneinheiten, die Sie aus dem Windows Dev Center-Dashboard erhalten) während der Entwicklungs- und Testphase oder in einem Emulator.
 
 * Schreiben oder Verteilen von Code, der Anzeigendienste auf andere Weise aufruft als die Microsoft Advertising-Bibliotheken, die im Zusammenhang mit Ihrer App ausgeführt werden.
 
-* Interagieren mit nicht dokumentierten Schnittstellen oder untergeordneten Objekten, die von den Microsoft Advertising-Bibliotheken erstellt wurden, z. B. **WebView** oder **MediaElement**.
+* Interagieren mit nicht dokumentierten Schnittstellen oder untergeordneten Objekten, die von den Microsoft Advertising-Bibliotheken erstellt wurden, z.B. **WebView** oder **MediaElement**.
 
 <span id="interstitialbestpractices10">
 ## <a name="guidelines-for-interstitial-ads"></a>Richtlinien für Interstitialanzeigen
 
 Wenn Interstitialanzeigen geschickt eingesetzt werden, können sie den Umsatz Ihrer App erheblich erhöhen, ohne dass sich dies negativ auf die Kundenzufriedenheit auswirkt. Werden Sie jedoch unangemessen eingesetzt, dann können solche Anzeigen das genaue Gegenteil bewirken.
 
-Die folgenden Abschnitte enthalten Empfehlungen für das Implementieren von Interstitialanzeigen in Ihrer App mithilfe von [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) und Beispiele für Implementierungen, die einen Verstoß gegen [Richtlinie 10.10.1](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_10) der Windows Store-Richtlinien darstellen. Da Sie Ihre App, abgesehen von den Richtlinien, am besten kennen, überlassen wir Ihnen die endgültige Entscheidung. Beachten Sie dabei, dass die App-Bewertungen und Ihre Einnahmen eng miteinander verknüpft sind.
+Die folgenden Abschnitte enthalten Empfehlungen für das Implementieren von Videointerstitialanzeigen und Interstitial-Banneranzeigen in Ihrer App mithilfe von [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) und Beispiele für Implementierungen, die einen Verstoß gegen [Richtlinie 10.10.1](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_10) der Windows Store-Richtlinien darstellen. Da Sie Ihre App, abgesehen von den Richtlinien, am besten kennen, überlassen wir Ihnen die endgültige Entscheidung. Beachten Sie dabei, dass die App-Bewertungen und Ihre Einnahmen eng miteinander verknüpft sind.
 
 ### <a name="best-practices"></a>Empfohlene Methoden
 
@@ -89,9 +86,9 @@ Wir empfehlen diese Methoden beim Implementieren von Interstitialanzeigen in Ihr
 
     * Zusätzliche Zeit, um eine Ebene auszuführen.
 
-    * Benutzerdefinierte Avatar-Features, wie ein Tattoo oder einen Hut.
+    * Benutzerdefinierte Avatar-Features, wie ein Tattoo oder ein Hut.
 
-* Sollte es bei Ihrer App erforderlich sein, eine Videoanzeige bis zum Schluss anzusehen, dann erwähnen Sie diese Regel im Vorfeld, damit die Benutzer beim Schließen nicht von einer Fehlermeldung überrascht werden.
+* Sollte es bei Ihrer App erforderlich sein, eine Videointerstitialanzeige bis zum Schluss anzusehen, dann erwähnen Sie diese Regel im Vorfeld, damit die Benutzer beim Schließen nicht von einer Fehlermeldung überrascht werden.
 
 * Vorabrufen der Anzeige (durch Aufrufen von [InterstitialAd.RequestAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.requestad.aspx)) im Idealfall 30 - 60 Sekunden, bevor Sie die Anzeige schalten möchten.
 
@@ -105,13 +102,13 @@ Wir empfehlen diese Methoden beim Implementieren von Interstitialanzeigen in Ihr
 
     * Wenn Sie sich dafür entscheiden, basierend auf dem [ConnectionProfile](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectionprofile.aspx) an der Benutzerbandbreite einzusparen, stehen Ihnen in der **ConnectionProfile**-Klasse APIs zur Verfügung, die Ihnen dabei behilflich sein können.
 
-* Verwenden Sie das Standardtimeout (30 Sekunden). Liegt jedoch ein berechtigter Grund vor, der dagegen spricht, dann gehen Sie in diesem Fall nicht unter 10 Sekunden. Das Herunterladen von Videoanzeigen dauert erheblich länger als das von Banneranzeigen. Dies ist besonders für Märkte wichtig, die nicht über Hochgeschwindigkeitsverbindungen verfügen.
+* Verwenden Sie das Standardtimeout (30 Sekunden). Liegt jedoch ein berechtigter Grund vor, der dagegen spricht, dann gehen Sie in diesem Fall nicht unter 10 Sekunden. Das Herunterladen von Interstitialwerbung dauert erheblich länger als das von Standardbanneranzeigen. Dies ist besonders für Märkte wichtig, die nicht über Hochgeschwindigkeitsverbindungen verfügen.
 
 <span/>
 
-* Berücksichtigen Sie daher den Datentarifplan der Nutzer. Verzichten Sie beispielsweise darauf, eine Videoanzeige auf einem mobilen Gerät anzuzeigen, das kurz davor ist, das Datenlimit zu überschreiten oder es bereits überschritten hat bzw. warnen Sie den Nutzer vorher. In der [ConnectionProfile](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectionprofile.aspx)-Klasse finden Sie APIs, die Ihnen hierbei helfen.
+* Berücksichtigen Sie daher den Datentarifplan der Nutzer. Verzichten Sie beispielsweise darauf, eine Videointerstitialanzeige auf einem mobilen Gerät anzuzeigen, das kurz davor ist, das Datenlimit zu überschreiten oder es bereits überschritten hat bzw. warnen Sie den Nutzer vorher. In der [ConnectionProfile](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectionprofile.aspx)-Klasse finden Sie APIs, die Ihnen hierbei helfen.
 
-* Optimieren Sie Ihre App nach der ersten Übermittlung fortlaufend. Sehen Sie sich die [Anzeigenberichte](../publish/advertising-performance-report.md) an, und nehmen Sie Designänderungen vor, um die Füll- und Videoabschlussraten zu verbessern.
+* Optimieren Sie Ihre App nach der ersten Übermittlung fortlaufend. Sehen Sie sich die [Anzeigenberichte](../publish/advertising-performance-report.md) an, und nehmen Sie Designänderungen vor, um die Füll- und Abschlussraten von Interstitialvideos zu verbessern.
 
 <span />
 ### <a name="practices-to-avoid"></a>Nicht empfehlenswerte Methoden
@@ -120,15 +117,15 @@ Wir empfehlen folgende Methoden beim Implementieren von Interstitialanzeigen in 
 
 * Übertreiben Sie es nicht. Erzwingen Sie Anzeigen nicht häufiger als etwa alle 5 Minuten, es sei denn der Benutzer verfolgt aktiv einen konkreten Vorteil, der über den eigentlichen Spielverlauf hinausgeht.
 
-* Schalten Sie keine Video-Interstitialanzeigen beim Starten der App – Benutzer könnten annehmen, dass sie die falsche Kachel angeklickt haben.
+* Schalten Sie keine Interstitialanzeigen beim Starten der App – Benutzer könnten annehmen, dass sie die falsche Kachel angeklickt haben.
 
-* Schalten Sie keine Video-Interstitialanzeigen beim Beenden. Dies wäre eine schlechte Inventarentscheidung, da die Abschlussraten wahrscheinlich nahe Null liegen würden.
+* Schalten Sie keine Interstitialanzeigen beim Beenden. Dies wäre eine schlechte Inventarentscheidung, da die Abschlussraten wahrscheinlich nahe Null liegen würden.
 
 * Schalten Sie nicht zwei oder mehr Interstitialanzeigen nacheinander. Es würde die Benutzer frustrieren, wenn sie feststellen, dass die Statusanzeige für Anzeigen wieder an den Ausgangspunkt zurückgesetzt wurde. Viele Benutzer werden annehmen, dass es sich dabei schlichtweg um einen Fehler bei der Programmierung oder der Anzeigenbereitstellung handelt.
 
-* Rufen Sie Videoanzeigen nicht mehr als 5 Minuten vor dem Aufrufen von [InterstitialAd.Show](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.show.aspx) ab. Gutes Inventar wird die Konvertierung von vorab abgerufenen Anzeigen in berechenbare Anzeigenaufrufe maximieren.
+* Rufen Sie Interstitialvideos nicht mehr als 5 Minuten vor dem Aufrufen von [InterstitialAd.Show](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.show.aspx) ab. Gutes Inventar wird die Konvertierung von vorab abgerufenen Anzeigen in berechenbare Anzeigenaufrufe maximieren.
 
-* Bestrafen Sie Benutzer nicht für Probleme bei der Anzeigenbereitstellung, d. h., wenn beispielsweise keine Anzeigen verfügbar sind. Wenn Sie beispielsweise eine UI-Option anzeigen, die lautet „Sehen Sie sich eine Anzeige an und erhalten Sie *xxx*“, dann sollten Sie *xxx* auch tatsächlich bereitstellen, wenn der Benutzer seinen Teil erfüllt. Berücksichtigen Sie die folgenden beiden Optionen:
+* Bestrafen Sie Benutzer nicht für Probleme bei der Anzeigenbereitstellung, d.h., wenn beispielsweise keine Anzeigen verfügbar sind. Wenn Sie beispielsweise eine UI-Option anzeigen, die lautet „Sehen Sie sich eine Anzeige an und erhalten Sie *xxx*“, dann sollten Sie *xxx* auch tatsächlich bereitstellen, wenn der Benutzer seinen Teil erfüllt. Berücksichtigen Sie die folgenden beiden Optionen:
 
     * Bieten Sie die Option nur an, wenn das [InterstitialAd.AdReady](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.adready.aspx)-Ereignis bereits ausgelöst wurde.
 
@@ -151,13 +148,12 @@ Dieser Abschnitt enthält Beispiele für Szenarien mit Interstitialanzeigen, die
 
 * Das Anfordern von Interstitialanzeigen, nur um eine Sicherungsanzeige für eine Wasserfallfolge von Anzeigen zu erhalten. Wenn Sie eine Interstitialanzeige anfordern und anschließend das [InterstitialAd.AdReady](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.adready.aspx)-Ereignis erhalten, muss die nächste Interstitialanzeige in Ihrer App die Anzeige sein, die für die Anzeige über die Methode [InterstitialAd.Show](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.show.aspx) bereit ist.
 
-* Verwenden von Live-Anzeigeneinheiten (d. h. Anzeigeneinheiten, die Sie aus dem Windows Dev Center-Dashboard erhalten) während der Entwicklungs- und Testphase oder in einem Emulator.
+* Verwenden von Live-Anzeigeneinheiten (d.h. Anzeigeneinheiten, die Sie aus dem Windows Dev Center-Dashboard erhalten) während der Entwicklungs- und Testphase oder in einem Emulator.
 
 * Schreiben oder Verteilen von Code, der Anzeigendienste auf andere Weise aufruft als die Microsoft Advertising-Bibliotheken, die im Zusammenhang mit Ihrer App ausgeführt werden.
 
-* Interagieren mit nicht dokumentierten Schnittstellen oder untergeordneten Objekten, die von den Microsoft Advertising-Bibliotheken erstellt wurden, z. B. **WebView** oder **MediaElement**.
+* Interagieren mit nicht dokumentierten Schnittstellen oder untergeordneten Objekten, die von den Microsoft Advertising-Bibliotheken erstellt wurden, z.B. **WebView** oder **MediaElement**.
 
  
 
  
-

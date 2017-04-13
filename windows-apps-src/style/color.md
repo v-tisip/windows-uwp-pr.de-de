@@ -10,14 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 98158e8dc1531c1d4059b5462a6839d775fb6336
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 0d4266d1335198cffb74900b0d1eb2bb48cd1879
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="color"></a>Farben
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
@@ -150,10 +147,30 @@ Nachdem eine Akzentfarbe ausgewählt wurde, werden auf der Grundlage der HSB-Wer
 Standardmäßig werden Hyperlinks in der Akzentfarbe des Benutzers dargestellt. Zeichnet sich der Hintergrund der Seite durch eine ähnliche Farbe aus, können Sie den Hyperlinks für einen besseren Kontrast einen helleren (oder dunkleren) Akzent-Farbton zuweisen.
 
 
-<div class="uwpd-image-with-caption">
-    <img src="images/shades.png" alt="A single accent color with its 6 shades" />
-    <div>Die unterschiedlichen Hell/Dunkel-Töne der Standard-Akzentfarbe.</div>
-</div>
+<table class="uwpd-color-table" style="border: solid 4px white; width: 30pc">
+   <caption>Die unterschiedlichen Hell/Dunkel-Töne der Standard-Akzentfarbe.</caption>
+    <tr>
+        <td class="uwpd-color-table" style="background-color: #A6D8FF; color: black">3 Schattierungen heller</td>
+    </tr>
+    <tr>
+        <td class="uwpd-color-table" style="background-color: #76B9ED; color: black">2 Schattierungen heller</td>
+    </tr>
+    <tr>
+        <td class="uwpd-color-table" style="background-color: #429CE3; color: black">1 Schattierung heller</td>
+    </tr>
+    <tr>
+        <td class="uwpd-color-table" style="background-color: #0078D7; color: white">Beispiel für die Akzentfarbe</td>
+    </tr>
+    <tr>
+        <td class="uwpd-color-table" style="background-color: #005A9E; color: white">1 Schattierung dunkler</td>
+    </tr>
+    <tr>
+        <td class="uwpd-color-table" style="background-color: #004275; color: white">2 Schattierungen dunkler</td>
+    </tr>
+    <tr>
+        <td class="uwpd-color-table" style="background-color: #002642; color: white">3 Schattierungen dunkler</td>
+    </tr>
+</table>
 
 <div class="uwpd-image-with-caption">
     <img src="images/action_center_redline_zoom.png" alt="Redlines for Colored Action Center" />
@@ -217,10 +234,9 @@ Berücksichtigen Sie beim Erstellen Ihrer App unbedingt das Design, da dieses ei
 
 ## <a name="accessibility"></a>Barrierefreiheit
 
-Unsere Palette ist für die Verwendung auf Bildschirmen optimiert. Zur optimalen Lesbarkeit von Text wird ein Mindestkontrastverhältnis gegenüber dem Hintergrund von 4,5:1 empfohlen. Es gibt viele kostenlose Tools, mit denen Sie testen können, ob Ihre Farben geeignet sind, z. B. [Contrast Ratio](http://leaverou.github.io/contrast-ratio/).
+Unsere Palette ist für die Verwendung auf Bildschirmen optimiert. Zur optimalen Lesbarkeit von Text wird ein Mindestkontrastverhältnis gegenüber dem Hintergrund von 4,5:1 empfohlen. Es gibt viele kostenlose Tools, mit denen Sie testen können, ob Ihre Farben geeignet sind, z.B. [Contrast Ratio](http://leaverou.github.io/contrast-ratio/).
 
 ## <a name="related-articles"></a>Verwandte Artikel
 
 * [XAML-Formatvorlagen](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/xaml-theme-resources)
 * [XAML-Designressourcen](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/xaml-theme-resources)
-

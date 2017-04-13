@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: 631d1e2d-e4da-4740-ace0-4c0ad78653fe
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 43cd6db99001974283175cb611d2e06c5da2221c
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 3ed4fff6cb7d85fe36a732cc10224ddfe3565d4f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="publish-windows-apps"></a>Veröffentlichen von Windows-Apps
 
 Sie können Ihre Apps über das Windows Dev Center-Dashboard im Windows Store veröffentlichen. 
@@ -37,4 +34,3 @@ Dieser Abschnitt enthält Informationen zum Veröffentlichen und Verwalten Ihrer
 | [Bezahlung](getting-paid-apps.md) | Erhalten Sie Details dazu, wie Sie mit Ihren Apps, mit Add-Ons und mit Microsoft Advertising Einnahmen erzielen. |
 | [Richtlinien und Verhaltensregeln für den Store](https://msdn.microsoft.com/library/windows/apps/dn764939.aspx) | Dieser Abschnitt enthält die [Store-Richtlinien](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx) und die Kriterien für die [App-Qualität](https://msdn.microsoft.com/library/windows/apps/mt652261.aspx), die für Windows-Apps und -Inhalte gelten, sowie die [Verhaltensregeln](https://msdn.microsoft.com/library/windows/apps/dn764941.aspx), die von Entwicklern beachtet werden sollten. |
  
-

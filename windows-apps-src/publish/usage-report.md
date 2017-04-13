@@ -1,6 +1,6 @@
 ---
 author: jnHs
-Description: "Der Nutzungsbericht im Windows Dev Center-Dashboard gibt Aufschluss darüber, wie Kunden Ihre App verwenden."
+Description: "Der Bericht „Nutzung“ im Windows Dev Center-Dashboard gibt Aufschluss darüber, wie Kunden Ihre App verwenden."
 title: Nutzungsbericht
 ms.assetid: 5F0E7F94-D121-4AD3-A6E5-9C0DEC437BD3
 ms.author: wdg-dev-content
@@ -8,18 +8,15 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b3c225316b028baa9a499e81841cdb939be9588e
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: f15b72a814c713a389a1f6126e2261959a16ee6c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="usage-report"></a>Nutzungsbericht
 
 
-Im Bericht **Nutzung** im Windows Dev Center-Dashboard erfahren Sie, wie Kunden mit Windows 10 Ihre App verwenden, und erhalten Informationen zu den von Ihnen definierten benutzerdefinierten Ereignissen. Sie können diese Daten in Ihrem Dashboard anzeigen oder den [Bericht herunterladen](download-analytic-reports.md), um ihn offline anzuzeigen.
+Im Bericht **Nutzung** im Windows Dev Center-Dashboard erfahren Sie, wie Kunden mit Windows10 Ihre App verwenden, und erhalten Informationen zu den von Ihnen definierten benutzerdefinierten Ereignissen. Sie können diese Daten in Ihrem Dashboard anzeigen oder den [Bericht herunterladen](download-analytic-reports.md), um ihn offline anzuzeigen.
 
 > **Hinweis** Zuvor wurden vom Bericht **Nutzung** nur Daten bereitgestellt, wenn Sie das Visual Studio Application Insights SDK in Ihrer App aktiviert hatten. Beim aktualisierten Bericht **Nutzung** ist dies nicht mehr erforderlich.
 
@@ -34,7 +31,7 @@ Im oberen Seitenbereich können Sie **Filter anwenden** erweitern, um alle Daten
 
 Die Informationen in allen unten angezeigten Diagrammen beziehen sich auf den unter **Filter anwenden** ausgewählten Zeitraum. Standardmäßig gehören dazu Daten für alle Paketversionen und unterstützten Gerätetypen, wenn Sie nicht im Abschnitt **Filter anwenden** nach einer einzelnen Gruppe gefiltert haben.
 
-> **Hinweis** In diesem Bericht sind nur Nutzungsdaten von Kunden mit Windows 10 enthalten.
+> **Hinweis** In diesem Bericht sind nur Nutzungsdaten von Kunden mit Windows10 enthalten.
 
 ## <a name="total-user-sessions"></a>Gesamtzahl der Benutzersitzungen
 
@@ -46,7 +43,7 @@ Jede Benutzersitzung stellt einen bestimmten Zeitraum dar, in dem ein Kunde mit 
 
 Das Diagramm **Aktive Benutzer** zeigt die Anzahl der Kunden, die Ihre App im ausgewählten Zeitraum an einem bestimmten Tag verwendet haben.
 
-Jeder aktive Benutzer steht für einen Kunden, der Ihre App an diesem Tag verwendet hat. In diesem Diagramm werden Benutzersitzungen nicht einzeln nachverfolgt (d. h., ein Kunde wird in diesem Diagramm unabhängig davon dargestellt, ob er Ihre App an diesem Tag nur einmal oder mehrmals verwendet hat).
+Jeder aktive Benutzer steht für einen Kunden, der Ihre App an diesem Tag verwendet hat. In diesem Diagramm werden Benutzersitzungen nicht einzeln nachverfolgt (d.h., ein Kunde wird in diesem Diagramm unabhängig davon dargestellt, ob er Ihre App an diesem Tag nur einmal oder mehrmals verwendet hat).
 
 ## <a name="custom-events"></a>Benutzerdefinierte Ereignisse
 
@@ -57,4 +54,3 @@ Benutzerdefinierte Ereignisse werden unter Verwendung der [StoreServicesCustomEv
 
 
  
-

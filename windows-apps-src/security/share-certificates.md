@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ca4c7b82fdb7f950d3f68323dec37c2f31e02c87
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8231d8a531098783a6b62383f4a64d61d0a61902
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="share-certificates-between-apps"></a>Freigabe von Zertifikaten zwischen Apps
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 UWP-Apps, die über eine Kombination aus Benutzer-ID und Kennwort hinaus eine sichere Authentifizierung benötigen, können Zertifikate für die Authentifizierung verwenden. Die Zertifikatauthentifizierung bietet eine hohe Vertrauenswürdigkeit bei der Benutzerauthentifizierung. Es kann vorkommen, dass eine Gruppe von Diensten einen Benutzer für mehrere Apps authentifizieren möchte. In diesem Artikel wird veranschaulicht, wie Sie mehrere Apps mit demselben Zertifikat authentifizieren und für einen Benutzer geeigneten Code zum Importieren eines Zertifikats bereitstellen können, das für den Zugriff auf sichere Webdienste bestimmt ist.
@@ -33,7 +30,7 @@ In diesem Artikel werden die Microsoft-Internetinformationsdienste (Microsoft In
 
 1.  Öffnen Sie die Systemsteuerung, und wählen Sie **Programme** aus.
 2.  Wählen Sie die Option **Windows-Features aktivieren oder deaktivieren** aus.
-3.  Erweitern Sie **Internetinformationsdienste** und dann **WWW-Dienste**. Erweitern Sie **Anwendungsentwicklungsfeatures**, und wählen Sie **ASP.NET 3.5** und **ASP.NET 4.5**. Das Auswählen führt dazu, dass **Internetinformationsdienste** automatisch aktiviert wird.
+3.  Erweitern Sie **Internetinformationsdienste** und dann **WWW-Dienste**. Erweitern Sie **Anwendungsentwicklungsfeatures**, und wählen Sie **ASP.NET3.5** und **ASP.NET4.5**. Das Auswählen führt dazu, dass **Internetinformationsdienste** automatisch aktiviert wird.
 4.  Klicken Sie auf **OK**, um die Änderungen zu übernehmen.
 
 ## <a name="create-and-publish-a-secured-web-service"></a>Erstellen und Veröffentlichen eines sicheren Webdiensts

@@ -1,26 +1,24 @@
 ---
-author: awkoren
+author: normesta
 Description: "In diesem Artikel wird erläutert, wie Sie eine Desktop-App signieren, die Sie für die universelle Windows-Plattform (UWP) konvertiert haben."
 Search.Product: eADQiWindows 10XVcnh
-title: "Unterstützte UWP-APIs für konvertierte Desktop-Apps"
-ms.author: alkoren
-ms.date: 02/08/2017
+title: "Von Desktop-zu-UWP-Brücke unterstützte UWP-APIs"
+ms.author: normesta
+ms.date: 03/09/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: windows10, UWP
 ms.assetid: 142b9c9b-3f7d-41b6-80da-1505de2810f9
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: f5ee6f103fa9a7e5f13dc68eb9c6060e6b66e227
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 34b29f8e68c77acdb19a1b0005f039097c8d2cbb
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-# <a name="supported-uwp-apis-for-apps-converted-with-the-desktop-bridge"></a>Unterstützte UWP-APIs für Apps, die mit der Desktop-Brücke konvertiert wurden
+# <a name="desktop-to-uwp-bridge-supported-uwp-apis"></a>Von Desktop-zu-UWP-Brücke unterstützte UWP-APIs
 
-Konvertierte Desktop-Apps können eine Vielzahl von UWP-APIs (Universelle Windows Plattform) verwenden, selbst wenn ihre Umwandlung in eine UWP-App nicht vollständig ist. Dieser Artikel führt die verfügbaren Klassen auf, die Ihre konvertierte App verwenden kann. 
+Konvertierte Desktop-Apps können eine Vielzahl von UWP-APIs (Universelle Windows Plattform) verwenden, selbst wenn ihre Umwandlung in eine UWP-App nicht vollständig ist. Dieser Artikel führt die verfügbaren Klassen auf, die Ihre konvertierte App verwenden kann.
 
-Die meisten UWP-APIs funktionieren problemlos für konvertierte Desktop-Apps. Allerdings sind einige Featurebereiche noch nicht vollständig getestet oder funktionieren derzeit noch nicht wie vorgesehen. 
+Die meisten UWP-APIs funktionieren problemlos für konvertierte Desktop-Apps. Allerdings sind einige Featurebereiche noch nicht vollständig getestet oder funktionieren derzeit noch nicht wie vorgesehen.
 
 <table><tr><th>Featurebereich</th><th>Details</th><tr>
 <tr><td>Termine, Kontakte und E-Mails</td><td>Nicht alle APIs werden derzeit für konvertierte Apps unterstützt.</td></tr>
@@ -33,7 +31,7 @@ Die meisten UWP-APIs funktionieren problemlos für konvertierte Desktop-Apps. Al
 <tr><td>Geolocation</td><td>Nicht alle APIs werden derzeit für konvertierte Apps unterstützt.</td></tr>
 <tr><td>Datei- und Ordnerauswahl</td><td>Konvertierte Apps verfügen über vollen Dateisystemzugriff und benötigen keine UWP-Auswahl.</td></tr>
 <tr><td>Medien</td><td>Nicht alle APIs werden derzeit für konvertierte Apps unterstützt.</td></tr>
-<tr><td>Point of Service (POS)</td><td>Nicht alle APIs werden derzeit für konvertierte Apps unterstützt.</td></tr>
+<tr><td>PointofService (POS)</td><td>Nicht alle APIs werden derzeit für konvertierte Apps unterstützt.</td></tr>
 <tr><td>Smartcards</td><td>Nicht alle APIs werden derzeit für konvertierte Apps unterstützt.</td></tr>
 <tr><td>PlayReady</td><td>Nicht alle APIs werden derzeit für konvertierte Apps unterstützt.</td></tr>
 <tr><td>VPN</td><td>Nicht alle APIs werden derzeit für konvertierte Apps unterstützt.</td></tr>
@@ -42,15 +40,15 @@ Die meisten UWP-APIs funktionieren problemlos für konvertierte Desktop-Apps. Al
 </table>
 
 
-Gelegentlich können APIs in diesen Bereichen scheinbar ordnungsgemäß funktionieren. Wenn jedoch eine API nicht explizit als unterstützt aufgeführt wird, sollten Sie sie nicht verwenden, da sie ungewollte Nebenwirkungen oder ungewolltes Verhalten aufweisen kann. Unterstützung für diese APIs wird möglicherweise in zukünftigen Versionen verfügbar sein. In der Zwischenzeit sollte Ihre App entsprechende Win32- oder .NET-APIs verwenden. 
+Gelegentlich können APIs in diesen Bereichen scheinbar ordnungsgemäß funktionieren. Wenn jedoch eine API nicht explizit als unterstützt aufgeführt wird, sollten Sie sie nicht verwenden, da sie ungewollte Nebenwirkungen oder ungewolltes Verhalten aufweisen kann. Unterstützung für diese APIs wird möglicherweise in zukünftigen Versionen verfügbar sein. In der Zwischenzeit sollte Ihre App entsprechende Win32- oder .NET-APIs verwenden.
 
 Einige UWP-APIs, die für vollständige Desktop-Anwendungen verfügbar sind, werden für konvertierte Apps nicht unterstützt. Wenn Ihre Desktop-Anwendung vor der Konvertierung UWP-APIs verwendet hat, sollten Sie sicherstellen, dass diese APIs weiterhin unterstützt werden. Weitere Informationen finden Sie unter [Windows Runtime-APIs für Desktop-Apps](https://msdn.microsoft.com/library/windows/desktop/dn554295(v=vs.85).aspx).
 
 ## <a name="list-of-apis"></a>Liste der APIs
 
-Im folgenden finden Sie eine vollständige Liste der UWP-APIs, die in konvertierten Apps unterstützt werden. Sie können [In konvertierten Apps neu unterstützte APIs](#new) oder [In konvertierten Apps und Desktopanwendungen unterstützte APIs](#both) anzeigen. 
+Im folgenden finden Sie eine vollständige Liste der UWP-APIs, die in konvertierten Apps unterstützt werden. Sie können [In konvertierten Apps neu unterstützte APIs](#new) oder [In konvertierten Apps und Desktopanwendungen unterstützte APIs](#both) anzeigen.
 
-Beispiele zur Verwendung von WinRT-APIs finden Sie auf GitHub unter [Desktop-App-Brücke zu UWP: Beispiele](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) und [Apps für die universelle Windows-Plattform (UWP): Beispiele](https://github.com/Microsoft/Windows-universal-samples). Sie können außerdem den Blog-Artikel zum Erstellen einer App für Windows nutzen: [Aufrufen von Windows 10-APIs aus einer Desktop-Anwendung](https://blogs.windows.com/buildingapps/2017/01/25/calling-windows-10-apis-desktop-application). 
+Beispiele zur Verwendung von WinRT-APIs finden Sie auf GitHub unter [Desktop-App-Brücke zu UWP: Beispiele](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) und [Apps für die universelle Windows-Plattform (UWP): Beispiele](https://github.com/Microsoft/Windows-universal-samples). Sie können außerdem den Blog-Artikel zum Erstellen einer App für Windows nutzen: [Aufrufen von Windows10-APIs aus einer Desktop-Anwendung](https://blogs.windows.com/buildingapps/2017/01/25/calling-windows-10-apis-desktop-application).
 
 <span id="new" />
 ### <a name="apis-supported-in-newly-converted-apps"></a>In konvertierten Apps neu unterstützte APIs
@@ -1045,4 +1043,3 @@ Beispiele zur Verwendung von WinRT-APIs finden Sie auf GitHub unter [Desktop-App
 * [Windows.Web.Syndication.SyndicationPerson](https://msdn.microsoft.com/library/windows/apps/Windows.Web.Syndication.SyndicationPerson)
 * [Windows.Web.Syndication.SyndicationText](https://msdn.microsoft.com/library/windows/apps/Windows.Web.Syndication.SyndicationText)
 * [Windows.Web.WebError](https://msdn.microsoft.com/library/windows/apps/Windows.Web.WebError)
-

@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: 6eaf376f-0d7c-49de-ad78-38e689b43658
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 6f2744a571e7a601eca058957cbe181a14143b68
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 536502316db43ccc04a42b935064294dc5173151
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="introduction-to-xbox-one-tools"></a>Einführung in Xbox One-Tools
 
 In diesem Abschnitt wird das Xbox One-spezifische Tool _Dev Home_ unter Verwendung des Windows Device Portal behandelt.
@@ -132,8 +129,7 @@ Die Begleitung für den Xbox-Entwicklermodus ist ein Tool, mit dessen Hilfe Sie 
 ## <a name="see-also"></a>Siehe auch
 - [Verwenden von Fiddler mit Xbox One bei der Entwicklung für UWP](uwp-fiddler.md)
 - [Übersicht über das Windows Device Portal](../debug-test-perf/device-portal.md)
-- [UWP auf Xbox One](index.md)
+- [UWP auf XboxOne](index.md)
 
 
 ----
-

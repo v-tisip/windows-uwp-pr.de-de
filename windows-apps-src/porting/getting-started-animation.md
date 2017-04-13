@@ -8,23 +8,20 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 9dcf81c0c0aee42d6278a3e1eeccc6dd4da61010
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: a45de584c4374afefe0fdca198eb7234351ac42d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="getting-started-animation"></a>Erste Schritte: Animationen
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ## <a name="adding-animations"></a>Hinzufügen von Animationen
 
-In iOS werden Animationseffekte meist programmgesteuert erstellt. Sie könnten beispielsweise Animationen verwenden, die von den blockbasierten **animateWithDuration**-Methoden der **UIView**-Klasse oder den älteren, nicht blockbasierten Methoden bereitgestellt werden. Sie können auch explizit die **CALayer**-Klasse verwenden, um Ebenen zu animieren. Animationen in Windows-Apps können programmgesteuert erstellt werden. Sie können jedoch auch deklarativ mittels der Extensible Application Markup Language (XAML) definiert werden. Sie können Microsoft Visual Studio zum direkten Bearbeiten von XAML-Code verwenden oder auch das Visual Studio-Tool **Blend**, das XAML-Code beim Arbeiten mit Animationen in einem Designer erstellt. Mit Blend können Sie komplette Visual Studio-Projekte öffnen, entwerfen, erstellen und ausführen. In der folgenden exemplarischen Vorgehensweise können Sie diese Methode testen.
+In iOS werden Animationseffekte meist programmgesteuert erstellt. Sie könnten beispielsweise Animationen verwenden, die von den blockbasierten **animateWithDuration**-Methoden der **UIView**-Klasse oder den älteren, nicht blockbasierten Methoden bereitgestellt werden. Sie können auch explizit die **CALayer**-Klasse verwenden, um Ebenen zu animieren. Animationen in Windows-Apps können programmgesteuert erstellt werden. Sie können jedoch auch deklarativ mittels der Extensible Application Markup Language (XAML) definiert werden. Sie können Microsoft Visual Studio zum direkten Bearbeiten von XAML-Code verwenden oder auch das Visual Studio-Tool **Blend**, das XAML-Code beim Arbeiten mit Animationen in einem Designer erstellt. Mit Blend können Sie komplette VisualStudio-Projekte öffnen, entwerfen, erstellen und ausführen. In der folgenden exemplarischen Vorgehensweise können Sie diese Methode testen.
 
-Erstellen Sie eine neue Universal Windows Platform (UWP)-App, und nennen Sie sie z. B. „SimpleAnimation“. In diesem Projekt verschieben wir ein Rechteck, wenden einen Ausblendeeffekt an und blenden es wieder ein In XAML basieren Animationen auf dem Konzept von *Storyboards* (nicht mit iOS-Storyboards zu verwechseln). Bei Storyboards werden Änderungen von Eigenschaften mithilfe von *Keyframes* animiert.
+Erstellen Sie eine neue Universal Windows Platform (UWP)-App, und nennen Sie sie z.B. „SimpleAnimation“. In diesem Projekt verschieben wir ein Rechteck, wenden einen Ausblendeeffekt an und blenden es wieder ein In XAML basieren Animationen auf dem Konzept von *Storyboards* (nicht mit iOS-Storyboards zu verwechseln). Bei Storyboards werden Änderungen von Eigenschaften mithilfe von *Keyframes* animiert.
 
 Klicken Sie mit der rechten Maustaste im **Projektmappen-Explorer** auf den Namen des Projekts, während das Projekt geöffnet ist, und wählen Sie **In Blend öffnen** oder **In Blend entwerfen** aus wie in der folgenden Abbildung gezeigt. Die Ausführung von Visual Studio wird im Hintergrund fortgesetzt.
 
@@ -130,9 +127,8 @@ Wenn Sie die Datei MainPage.xaml in der **XAML**-Ansicht öffnen, können Sie de
 
 Sie können diesen XAML-Code manuell bearbeiten oder zu Blend zurückkehren, um dort weiter an diesem zu arbeiten. Mit Blend können Sie spielerisch interessante Benutzeroberflächen erstellen und sie mit einem Grafiktool animieren, was die Entwicklung erheblich beschleunigt. Weitere Informationen zu Animationen finden Sie unter [Übersicht über Animationen](https://msdn.microsoft.com/library/windows/apps/mt187350).
 
-**Hinweis**  Informationen zu Animationen für Windows Store-Apps, die JavaScript und HTML verwenden, finden Sie unter [Animieren der Benutzeroberfläche (HTML)](https://msdn.microsoft.com/library/windows/apps/hh465165).
+**Hinweis**  Informationen zu Animationen für WindowsStore-Apps, die JavaScript und HTML verwenden, finden Sie unter [Animieren der Benutzeroberfläche (HTML)](https://msdn.microsoft.com/library/windows/apps/hh465165).
 
 ### <a name="next-step"></a>Nächster Schritt
 
 [Erste Schritte: Was kommt als Nächstes?](getting-started-what-next.md)
-

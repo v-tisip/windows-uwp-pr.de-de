@@ -8,14 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, bewerben, App, Kampagnen, Bericht, Installationen"
-translationtype: Human Translation
-ms.sourcegitcommit: b01924366a0bc2afabe2f381e72e45862f0dd682
-ms.openlocfilehash: af719bbb4cc9def4e9b202c8815320698c6148d0
-ms.lasthandoff: 02/08/2017
-
+keywords: Windows10, UWP, bewerben, App, Kampagnen, Bericht, Installationen
+ms.openlocfilehash: 25127b8f7214a712b10a1beda1e9b277370e6df2
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="promote-your-app-report"></a>Bericht „Bewerben Ihrer App“
 
 Im Bericht **Bewerben Ihrer App** im Windows Dev Center-Dashboard können Sie sehen, wie Ihre App-Werbekampagnen laufen.
@@ -70,4 +67,3 @@ Sie können den Verlauf der Rechnungsstellung für Ihr Konto auch als Microsoft 
  
 
  
-

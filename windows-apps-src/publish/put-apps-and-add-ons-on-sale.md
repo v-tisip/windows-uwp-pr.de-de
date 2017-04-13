@@ -8,14 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 5823fce5aa5b5d0e98bc43828dc7469a08fdb9d0
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 7c88e927a88dbef928deedd6f92b2aa7b60da1cf
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="put-apps-and-add-ons-on-sale"></a>Anbieten vergünstigter Apps und Add-Ons
 
 Sie können Ihre Apps oder Add-Ons im Windows Store auch bewerben, indem Sie sie für einen begrenzten Zeitraum als Sonderangebot bereitstellen.
@@ -71,5 +68,4 @@ Nachdem Ihre Übermittlung den Zertifizierungsprozess erfolgreich durchlaufen ha
 Solange das Sonderangebot zum Zeitpunkt des erfolgreichen Abschluss des Zertifizierungsprozesses noch nicht begonnen hat, wird das gelöschte Sonderangebot überhaupt nicht ausgeführt. Wenn Sie ein Sonderangebot löschen, das bereits beendet ist, wird es einfach auf Ihrer Seite **Preise und Verfügbarkeit** gelöscht.
 
 > **Wichtig**   Da Kunden beim Anzeigen des Store-Eintrags der App das geplante Enddatum sehen können, wird das Löschen eines Sonderangebots nach seinem Start nicht empfohlen. Wenn Sie ein Sonderangebot löschen, das bereits begonnen hat, wird es beendet, nachdem die Übermittlung den Zertifizierungsprozess erfolgreich durchlaufen hat, was für potenzielle Kunden frustrierend sein kann.
-
 

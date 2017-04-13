@@ -2,23 +2,20 @@
 author: mcleanbyron
 ms.assetid: 4920D262-B810-409E-BA3A-F68AADF1B1BC
 description: "Verwenden Sie die Java-Codebeispiele in diesem Abschnitt, um mehr über die Verwendung der Windows Store-Übermittlungs-API zu erfahren."
-title: "Java-Codebeispiele für die Windows Store-Übermittlungs-API"
+title: "Java-Codebeispiele für die Übermittlungs-API"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Windows Store-Übermittlungs-API, Beispielcode"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 9bf6885129176a75265d073c3f92b9f899bc265d
-ms.lasthandoff: 02/07/2017
-
+keywords: "Windows10, UWP, Windows Store-Übermittlungs-API, Codebeispiele"
+ms.openlocfilehash: ff5e857e0f5ce110ab7afc64bd2faa28f7bea517
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
+# <a name="java-code-examples-for-the-submission-api"></a>Java-Codebeispiele für die Übermittlungs-API
 
-# <a name="java-code-examples-for-the-windows-store-submission-api"></a>Java-Codebeispiele für die Windows Store-Übermittlungs-API
-
-Dieser Artikel enthält Java-Codebeispiele für das Verwenden der *Windows Store-Übermittlungs-API*. Weitere Informationen über diese API finden Sie unter [Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten](create-and-manage-submissions-using-windows-store-services.md).
+Dieser Artikel enthält Java-Codebeispiele für das Verwenden der *Windows Store-Übermittlungs-API*. Weitere Informationen über diese API finden Sie unter [Erstellen und Verwalten von Übermittlungen mit WindowsStore-Diensten](create-and-manage-submissions-using-windows-store-services.md).
 
 In diesen Codebeispielen werden die folgenden Aufgaben gezeigt:
 
@@ -48,7 +45,7 @@ Das folgende Beispiel zeigt die Importanweisungen, die von allen Codebeispielen 
 <span id="token" />
 ## <a name="obtain-an-azure-ad-access-token"></a>Abrufen eines Azure AD-Zugriffstokens
 
-Im folgenden Beispiel wird gezeigt, wie Sie ein [Azure AD-Zugriffstoken abrufen](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), mit dem Sie Methoden in der Windows Store-Übermittlungs-API aufrufen können. Nach dem Abruf eines Tokens können Sie es für einen Zeitraum von 60 Minuten in Aufrufen der Windows Store-Übermittlungs-API verwenden, bevor es abläuft. Nach dem Ablauf des Tokens können Sie ein neues Token generieren.
+Im folgenden Beispiel wird gezeigt, wie Sie ein [Azure AD-Zugriffstoken abrufen](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), mit dem Sie Methoden in der Windows Store-Übermittlungs-API aufrufen können. Nach dem Abruf eines Tokens können Sie es für einen Zeitraum von 60Minuten in Aufrufen der Windows Store-Übermittlungs-API verwenden, bevor es abläuft. Nach dem Ablauf des Tokens können Sie ein neues Token generieren.
 
 [!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L65-L95)]
 
@@ -86,7 +83,7 @@ Das folgende Beispiel zeigt, wie Sie verschiedene Methoden in der Windows Store-
 Das folgende Beispiel zeigt, wie Sie verschiedene Methoden in der Windows Store-Übermittlungs-API verwenden, um eine Add-On-Übermittlung zu erstellen. Hierzu wird von der ```SubmitNewInAppProductSubmission```-Methode eine neue Übermittlung als Klon der letzten veröffentlichten Übermittlung erstellt. Anschließend wird die geklonte Übermittlung aktualisiert und für Windows Dev Center committet. Genauer gesagt führt die ```SubmitNewInAppProductSubmission```-Methode diese Aufgaben aus:
 
 1. Zunächst [ruft die Methode Daten für das angegebene Add-On ab](get-an-add-on.md).
-2. Als Nächstes [wird die ausstehende Übermittlung für das Add-On gelöscht](delete-an-add-on-submission.md), wenn vorhanden.
+2. Als Nächstes [wird eine ausstehende Übermittlung für das Add-On gelöscht](delete-an-add-on-submission.md), wenn vorhanden.
 3. Anschließend [wird eine neue Übermittlung für das Add-On erstellt](create-an-add-on-submission.md). (Die neue Übermittlung ist eine Kopie der letzten veröffentlichten Übermittlung.)
 4. Es wird ein ZIP-Archiv hochgeladen, das Symbole für die Übermittlung an Azure Blob Storage enthält.
 5. Als Nächstes wird die neue Übermittlung [aktualisiert](update-an-add-on-submission.md) und anschließend für Windows Dev Center [committet](commit-an-add-on-submission.md).
@@ -100,10 +97,10 @@ Das folgende Beispiel zeigt, wie Sie verschiedene Methoden in der Windows Store-
 Das folgende Beispiel zeigt, wie Sie verschiedene Methoden in der Windows Store-Übermittlungs-API verwenden, um eine Flight-Paket-Übermittlung zu erstellen. Hierzu wird von der ```SubmitNewFlightSubmission```-Methode eine neue Übermittlung als Klon der letzten veröffentlichten Übermittlung erstellt. Anschließend wird die geklonte Übermittlung aktualisiert und für Windows Dev Center committet. Genauer gesagt führt die ```SubmitNewFlightSubmission```-Methode diese Aufgaben aus:
 
 1. Zunächst [ruft die Methode Daten für das angegebene Flight-Paket ab](get-a-flight.md).
-2. Als Nächstes [wird die ausstehende Übermittlung für das Flight-Paket gelöscht](delete-a-flight-submission.md), wenn vorhanden.
+2. Als Nächstes [wird eine ausstehende Übermittlung für das Flight-Paket gelöscht](delete-a-flight-submission.md), wenn vorhanden.
 3. Anschließend [wird eine neue Übermittlung für das Flight-Paket erstellt](create-a-flight-submission.md). (Die neue Übermittlung ist eine Kopie der letzten veröffentlichten Übermittlung.)
 4. Es wird ein neues Paket für die Übermittlung auf Azure Blob Storage hochgeladen.
-5. Als Nächstes wird die neue Übermittlung [aktualisiert](update-a-flight-submission.md) und anschließend für Windows Dev Center [committet](commit-a-flight-submission.md).
+5. Als Nächstes wird die neue Übermittlung [aktualisiert](update-a-flight-submission.md) und anschließend an Windows Dev Center [gesendet](commit-a-flight-submission.md).
 6. Schließlich [wird der Status der neuen Übermittlung regelmäßig überprüft](get-status-for-a-flight-submission.md), bis die Übermittlung erfolgreich committet wurde.
 
 [!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L223-L308)]
@@ -127,5 +124,4 @@ Die folgende Codeauflistung enthält alle vorherigen Beispiele in einer einzigen
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten](create-and-manage-submissions-using-windows-store-services.md)
-
+* [Erstellen und Verwalten von Übermittlungen mit WindowsStore-Diensten](create-and-manage-submissions-using-windows-store-services.md)

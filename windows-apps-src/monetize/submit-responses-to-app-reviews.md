@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: 038903d6-efab-4da6-96b5-046c7431e6e7
 description: Verwenden Sie diese Methode in der Windows Store-Rezensions-API zum Senden von Antworten auf Rezensionen Ihrer App.
-title: Senden von Antworten auf App-Rezensionen
+title: "Antworten auf Rezensionen übermitteln"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, UWP, Store-Dienste, Windows Store-Rezensions-API, Add-On-Käufe"
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 1531059831b4c20d11661eb87fceda7b8dcb7f02
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: d418e64bf1608591e877da8339d1dda308611285
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="submit-responses-to-app-reviews"></a>Senden von Antworten auf App-Rezensionen
+# <a name="submit-responses-to-reviews"></a>Antworten auf Rezensionen übermitteln
 
 
 Verwenden Sie diese Methode in der Windows Store-Rezensions-API, um Antworten auf Rezensionen Ihrer App zu senden. Wenn Sie diese Methode aufrufen, müssen Sie die IDs der Rezensionen angeben, auf die Sie antworten möchten. Rezensions-IDs sind in den Antwortdaten der Methode [Abrufen von App-Rezensionen](get-app-reviews.md) in der Windows Store-Analyse-API und im [Offline-Download](../publish/download-analytic-reports.md) des [Berichts „Rezensionen“](../publish/reviews-report.md) verfügbar.
@@ -30,7 +27,7 @@ Beim Übermitteln von Rezensionen können Kunden festlegen, dass sie keine Antwo
 Um diese Methode zu verwenden, sind die folgenden Schritte erforderlich:
 
 * Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](respond-to-reviews-using-windows-store-services.md#prerequisites) für die Windows Store-Rezensions-API.
-* [Rufen Sie ein Azure AD-Zugriffstoken ab](respond-to-reviews-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nach Erhalt eines Zugriffstokens können Sie es 60 Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
+* [Rufen Sie ein AzureAD-Zugriffstoken ab](respond-to-reviews-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60 Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
 * Rufen Sie die IDs der Rezensionen ab, auf die Sie antworten möchten. Rezensions-IDs sind in den Antwortdaten der Methode [Abrufen von App-Rezensionen](get-app-reviews.md) in der Windows Store-Analyse-API und im [Offline-Download](../publish/download-analytic-reports.md) des [Berichts „Rezensionen“](../publish/reviews-report.md) verfügbar.
 
 ## <a name="request"></a>Anforderung
@@ -47,7 +44,7 @@ Um diese Methode zu verwenden, sind die folgenden Schritte erforderlich:
 
 | Header        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorisierung | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Inhaber** &lt;*Token*&gt;. |
+| Autorisierung | String | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;. |
 
 <span/> 
 
@@ -69,7 +66,7 @@ Jedes Objekt im *Responses*-Array enthält die folgenden Werte:
 
 | Wert        | Typ   | Beschreibung           |  Erforderlich  |
 |---------------|--------|-----------------------------|-----|
-| ApplicationId | String |  Die Store-ID der App, auf deren Rezension Sie antworten möchten. Die Store-ID ist auf der [Seite mit der App-Identität](../publish/view-app-identity-details.md) des Dev Center-Dashboards verfügbar. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8.   |  Ja  |
+| ApplicationId | String |  Die Store-ID der App, auf deren Rezension Sie antworten möchten. Die Store-ID ist auf der [Seite mit der App-Identität](../publish/view-app-identity-details.md) des DevCenter-Dashboards verfügbar. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8.   |  Ja  |
 | ReviewId | String |  Die ID der Rezension, auf die Sie antworten möchten (dies ist eine GUID). Rezensions-IDs sind in den Antwortdaten der Methode [Abrufen von App-Rezensionen](get-app-reviews.md) in der Windows Store-Analyse-API und im [Offline-Download](../publish/download-analytic-reports.md) des [Berichts „Rezensionen“](../publish/reviews-report.md) verfügbar.   |  Ja  |
 | ResponseText | String | Die Antwort, die Sie senden möchten. Ihre Antwort muss [diesen Richtlinien](../publish/respond-to-customer-reviews.md#guidelines-for-responses) entsprechen.   |  Ja  |
 | SupportEmail | String | Die Support-E-Mail-Adresse Ihrer App, über die der Kunde Sie direkt kontaktieren kann. Dies muss eine gültige E-Mail-Adresse sein.     |  Ja  |
@@ -122,7 +119,7 @@ Jedes Objekt im *Result*-Array enthält die folgenden Werte:
 
 ### <a name="response-example"></a>Antwortbeispiel
 
-Das folgende Beispiel enthält einen JSON-Antworttext für diese Anforderung.
+Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese Anforderung.
 
 ```json
 {
@@ -149,4 +146,3 @@ Das folgende Beispiel enthält einen JSON-Antworttext für diese Anforderung.
 * [Antworten auf Rezensionen mit Windows Store-Diensten](respond-to-reviews-using-windows-store-services.md)
 * [Abrufen von Antwortinformationen für App-Rezensionen](get-response-info-for-app-reviews.md)
 * [Abrufen von App-Rezensionen](get-app-reviews.md)
-

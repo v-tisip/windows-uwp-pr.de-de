@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e2cdcf5d06fdbe6f510a416bd1da28e7cf6a51d5
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 10333de456b913adf1c35a0df08f9b99ad4d4fa0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="setting-up-your-payout-account-and-tax-forms"></a>Einrichten von Auszahlungskonten und Steuerformularen
 
 
@@ -30,8 +27,8 @@ Falls Sie ausschließlich kostenlose Apps anbieten möchten (und keine In-App-Ei
 
 Nach dem [Einrichten des Entwicklerkontos](opening-a-developer-account.md) müssen Sie zwei Dinge tun, bevor Sie Apps (oder Add-Ons) im Windows Store verkaufen können:
 
--   [Einrichten eines Auszahlungskontos](#setting_up_your_payout_account)
--   [Ausfüllen der Steuerformulare](#paying_taxes)
+-   [Einrichten eines Auszahlungskontos](#payout-account)
+-   [Ausfüllen der Steuerformulare](#tax-forms)
 
 > **Hinweis**: Ausführliche Informationen dazu, wie und wann Sie das mit den Apps verdiente Geld erhalten, finden Sie unter [Regelung der Bezahlung](getting-paid-apps.md).
 
@@ -42,7 +39,7 @@ Nach dem [Einrichten des Entwicklerkontos](opening-a-developer-account.md) müss
 
 Bei einem Auszahlungskonto handelt es sich um das Bankkonto, auf das wir Ihren Verkaufserlös überweisen. Dieses Bankkonto muss sich im selben Land befinden, in dem Sie Ihr Entwicklerkonto registriert haben.
 
-> **Hinweis**: In einigen Märkten kann PayPal als Auszahlungskonto verwendet werden. Unter [Kontotypen, Standorte und Gebühren](account-types-locations-and-fees.md#developer-account-and-app-submission-markets) können Sie feststellen, ob PayPal für einen bestimmten Markt unterstützt wird. Weitere Einzelheiten finden Sie in den [PayPal-Informationen](#paypal) unten.
+> **Hinweis**: In einigen Märkten kann PayPal als Auszahlungskonto verwendet werden. Unter [Kontotypen, Standorte und Gebühren](account-types-locations-and-fees.md#developer-account-and-app-submission-markets) können Sie feststellen, ob PayPal für einen bestimmten Markt unterstützt wird. Weitere Einzelheiten finden Sie in den [PayPal-Informationen](#paypal-info) unten.
 
  
 **So richten Sie ein Auszahlungskonto ein**
@@ -107,7 +104,7 @@ Berücksichtigen Sie auch folgende Punkte, um sicherzustellen, dass Ihre Auszahl
 
 ### <a name="ukraine"></a>Ukraine
 
-Wenn Sie Entwickler und in der Ukraine ansässig sind, müssen Sie Ihre Empfangsberechtigung gegenüber der Bank u. U. mit entsprechenden Belegen nachweisen. Wenn Sie für eine Zahlung berechtigt sind, erhalten Sie von uns folgende Belege in einer E-Mail-Nachricht:
+Wenn Sie Entwickler und in der Ukraine ansässig sind, müssen Sie Ihre Empfangsberechtigung gegenüber der Bank u.U. mit entsprechenden Belegen nachweisen. Wenn Sie für eine Zahlung berechtigt sind, erhalten Sie von uns folgende Belege in einer E-Mail-Nachricht:
 
 1.  Acceptance Certificate (AC): Enthält den Zahlungsbetrag, der auf Ihr Konto überwiesen wird.
 2.  App Developer Agreement (ADA): Eine unterschriebene Kopie der Entwicklervereinbarung, die gegengezeichnet werden muss.
@@ -124,19 +121,19 @@ Berücksichtigen Sie auch folgende Punkte, um sicherzustellen, dass Ihre Auszahl
 ## <a name="tax-forms"></a>Steuerformulare
 
 
-Nach dem [Registrieren eines Entwicklerkontos](opening-a-developer-account.md) und dem Einrichten Ihres [Auszahlungskontos](#receiving_payments) können Sie Ihr *Steuerprofil* für den Windows Store erstellen. Führen Sie dazu die folgenden Schritte aus:
+Nach dem [Registrieren eines Entwicklerkontos](opening-a-developer-account.md) und dem Einrichten Ihres [Auszahlungskontos](#payout-account) können Sie Ihr *Steuerprofil* für den Windows Store erstellen. Führen Sie dazu die folgenden Schritte aus:
 
 -   Angeben des Wohnsitzlandes und der Staatsangehörigkeit
 -   Ausfüllen der entsprechenden Steuerformulare
 
 Sie können die Steuerformulare im Dashboard elektronisch ausfüllen und übermitteln. In den meisten Fällen müssen keine Formulare ausgedruckt und per Post gesendet werden.
 
-> **Wichtig** In den verschiedenen Ländern und Regionen gelten unterschiedliche Steuergesetze. Die genaue Höhe der zu zahlenden Steuern hängt von den Ländern und Regionen ab, in denen Sie Ihre Apps verkaufen. In der [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058) sehen Sie, in welchen Ländern Microsoft für Sie Verkaufs- und Nutzungssteuern überweist. In anderen Ländern müssen Sie u. U. je nachdem, wo Sie registriert sind, Verkaufs- und Nutzungssteuern direkt an die örtliche Steuerbehörde überweisen. Des Weiteren müssen die Erlöse aus Ihren App-Verkäufen unter Umständen als Einkommen versteuert werden. Wir empfehlen Ihnen nachdrücklich, sich an die zuständige Behörde in Ihrem Land oder Ihrer Region zu wenden, die Ihnen am besten dabei helfen kann, die richtigen Steuerinformationen für Ihre Windows Store-Entwickleraktivitäten zu ermitteln.
+> **Wichtig** In den verschiedenen Ländern und Regionen gelten unterschiedliche Steuergesetze. Die genaue Höhe der zu zahlenden Steuern hängt von den Ländern und Regionen ab, in denen Sie Ihre Apps verkaufen. In der [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058) sehen Sie, in welchen Ländern Microsoft für Sie Verkaufs- und Nutzungssteuern überweist. In anderen Ländern müssen Sie u.U. je nachdem, wo Sie registriert sind, Verkaufs- und Nutzungssteuern direkt an die örtliche Steuerbehörde überweisen. Des Weiteren müssen die Erlöse aus Ihren App-Verkäufen unter Umständen als Einkommen versteuert werden. Wir empfehlen Ihnen nachdrücklich, sich an die zuständige Behörde in Ihrem Land oder Ihrer Region zu wenden, die Ihnen am besten dabei helfen kann, die richtigen Steuerinformationen für Ihre Windows Store-Entwickleraktivitäten zu ermitteln.
 
  
 **So füllen Sie Ihr Steuerprofil aus**
 
-1.  Klicken Sie im Windows Dev Center-Dashboard im linken Navigationsmenü auf **Kontoeinstellungen**.
+1.  Klicken Sie im WindowsDevCenter-Dashboard im linken Navigationsmenü auf **Kontoeinstellungen**.
 2.  Klicken Sie im linken Navigationsmenü der Seite **Kontoeinstellungen** auf **Steuerprofil**.
 
    > **Hinweis**: Da es sich um vertrauliche Informationen handelt, können Sie aufgefordert werden, sich erneut anzumelden.
@@ -145,22 +142,21 @@ Sie können die Steuerformulare im Dashboard elektronisch ausfüllen und übermi
 4.  Beantworten Sie die Frage bezüglich der amerikanischen Staatsbürgerschaft und des Wohnsitzes in den USA, und klicken Sie dann auf **Weiter**.
 5.  Bestätigen Sie Ihren Namen und Ihre Adressinformationen zu Steuerzwecken, wenn diese angezeigt werden.
 
-Daraufhin werden elektronische Versionen der Steuerformulare angezeigt, die Sie ausfüllen müssen. Um über den Windows Store Apps oder In-App-Produkte verkaufen zu können, müssen Sie – unabhängig von Ihrem Wohnsitzland oder Ihrer Staatsangehörigkeit – Steuerformulare für die USA ausfüllen. Entwickler, die bestimmte Kriterien für den Wohnsitz USA erfüllen, müssen ein IRS W-9-Formular ausfüllen. Entwickler außerhalb der USA müssen ein IRS W-8-Formular ausfüllen. Sie können diese Formulare online ausfüllen, wenn Sie Ihr Steuerprofil angeben.
+Daraufhin werden elektronische Versionen der Steuerformulare angezeigt, die Sie ausfüllen müssen. Um über den WindowsStore Apps oder In-App-Produkte verkaufen zu können, müssen Sie – unabhängig von Ihrem Wohnsitzland oder Ihrer Staatsangehörigkeit – Steuerformulare für die USA ausfüllen. Entwickler, die bestimmte Kriterien für den Wohnsitz USA erfüllen, müssen ein IRS W-9-Formular ausfüllen. Entwickler außerhalb der USA müssen ein IRS W-8-Formular ausfüllen. Sie können diese Formulare online ausfüllen, wenn Sie Ihr Steuerprofil angeben.
 
 Eine US-amerikanische Steueridentifikationsnummer (Individual Taxpayer Identification Number, ITIN) ist nicht erforderlich, um Zahlungen von Microsoft zu erhalten oder die Vorteile eines Steuerabkommens in Anspruch zu nehmen.
 
 ### <a name="withholding-rates"></a>Quellensteuersätze
 
-Die von Ihnen in den Steuerformularen übermittelten Informationen sind ausschlaggebend für die anwendbaren Quellensteuersätze. Der Quellensteuersatz bezieht sich nur auf Verkäufe in die USA. Verkäufe in Länder außer die USA unterliegen nicht der Quellensteuer. Die Quellensteuersätze können variieren, aber für die meisten außerhalb der USA registrierten Entwickler beträgt der Satz standardmäßig 30 %. Sie können diesen Satz senken, wenn Ihr Land Einkommenssteuervereinbarungen mit den USA abgeschlossen hat.
+Die von Ihnen in den Steuerformularen übermittelten Informationen sind ausschlaggebend für die anwendbaren Quellensteuersätze. Der Quellensteuersatz bezieht sich nur auf Verkäufe in die USA. Verkäufe in Länder außer die USA unterliegen nicht der Quellensteuer. Die Quellensteuersätze können variieren, aber für die meisten außerhalb der USA registrierten Entwickler beträgt der Satz standardmäßig 30%. Sie können diesen Satz senken, wenn Ihr Land Einkommenssteuervereinbarungen mit den USA abgeschlossen hat.
 
 ### <a name="tax-treaty-benefits"></a>Vorteile des Steuerabkommens
 
-Wenn Sie nicht in den USA ansässig sind, können Sie unter Umständen von den Vorteilen des Steuerabkommens profitieren. Diese Vorteile variieren von Land zu Land, sodass Sie vielleicht die Höhe der von Windows Store einbehaltenen Steuern reduzieren können. Sie müssen Teil II des W-8BEN-Formulars ausfüllen, um die Vorteile eines Steuerabkommens in Anspruch nehmen zu können. Wir empfehlen Ihnen, sich bei den zuständigen Stellen in Ihrem Land oder Ihrer Region zu erkundigen, ob diese Vorteile auf Sie zutreffen.
+Wenn Sie nicht in den USA ansässig sind, können Sie unter Umständen von den Vorteilen des Steuerabkommens profitieren. Diese Vorteile variieren von Land zu Land, sodass Sie vielleicht die Höhe der von Windows Store einbehaltenen Steuern reduzieren können. Sie müssen TeilII des W-8BEN-Formulars ausfüllen, um die Vorteile eines Steuerabkommens in Anspruch nehmen zu können. Wir empfehlen Ihnen, sich bei den zuständigen Stellen in Ihrem Land oder Ihrer Region zu erkundigen, ob diese Vorteile auf Sie zutreffen.
 
  
 
  
-
 
 
 

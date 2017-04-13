@@ -8,17 +8,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 13963ddf9f745c6de2e6d7ef7d948f649b2f6f5e
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 708f46dc0be53961d8fd26f41a933e5756720a98
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="about-community-ads"></a>Informationen zu Community-Anzeigen
 
-Wenn Ihre App ein **AdMediatorControl**- oder ein **AdControl**-Element zum Anzeigen von Werbebannern verwendet, können Sie Ihre App mit anderen Entwicklern mit Apps im Windows Store kostenlos bewerben. Dieses Feature wird *Community-Anzeigen* genannt.  
+Wenn Ihre App ein **AdMediatorControl**- oder ein **AdControl**-Element zum Anzeigen von Werbebannern verwendet, können Sie Ihre App mit anderen Entwicklern mit Apps im WindowsStore kostenlos bewerben. Dieses Feature wird *Community-Anzeigen* genannt.  
 
 Das funktioniert wie folgt:
 
@@ -33,7 +30,7 @@ Das funktioniert wie folgt:
 
 So melden Sie sich für Community-Anzeigen an:
 
-1. Navigieren Sie im Windows Dev Center-Dashboard zu **Monetarisierung** &gt; **Gewinnbringende Nutzung mit Anzeigen**.
+1. Navigieren Sie im WindowsDevCenter-Dashboard zu **Monetarisierung** &gt; **Gewinnbringende Nutzung mit Anzeigen**.
 2. Aktivieren Sie im Abschnitt **Community ads** das Kontrollkästchen **Show community ads in my app**.
    > **Hinweis**  Nach dem Aktivieren oder Deaktivieren dieses Kontrollkästchens müssen Sie Ihre App nicht neu veröffentlichen, damit die Änderungen wirksam werden.
 
@@ -44,4 +41,3 @@ So melden Sie sich für Community-Anzeigen an:
 
 * [Monetisierung durch Werbeanzeigen](monetize-with-ads.md)
 * [Erstellen einer Anzeigenkampagne für Ihre App](create-an-ad-campaign-for-your-app.md)
-

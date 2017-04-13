@@ -4,18 +4,15 @@ Description: "Zeigen Sie die Namen an, die Sie für Ihre App reserviert haben, r
 title: Verwalten von App-Namen
 ms.assetid: D95A6227-746E-4729-AE55-648A7102401C
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 5b34723eb6d336eeacb7437a926cae7f1d3ca871
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 0dc9582a0a041f6e30a2bebaa22843983d633cee
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="manage-app-names"></a>Verwalten von App-Namen
 
 
@@ -37,18 +34,17 @@ Wenn Sie einen zuvor reservierten Namen nicht mehr verwenden möchten, können S
 
 Um einen reservierten Namen Ihrer App zu löschen, suchen Sie den nicht mehr verwendeten Namen, und klicken Sie auf **Löschen**. Klicken Sie im Bestätigungsdialogfeld erneut auf **Löschen**, um den Vorgang zu bestätigen.
 
-Beachten Sie, dass Ihre App mindestens einen reservierten Namen aufweisen muss. Um eine App vollständig aus Ihrem Dashboard zu entfernen (wodurch auch alle für diese App reservierten Namen freigegeben werden), klicken Sie auf der Seite **Übersicht** auf **Diese App löschen**.
+Beachten Sie, dass Ihre App mindestens einen reservierten Namen aufweisen muss. Um eine App vollständig aus Ihrem Dashboard zu entfernen (und alle für diese App reservierten Namen freizugeben), klicken Sie auf der Seite **Übersicht** auf **Diese App löschen**. Wenn derzeit eine Übermittlung für die App ausgeführt wird, müssen Sie zunächst diese Übermittlung löschen (und wenn Sie die App bereits im Store veröffentlicht haben, können Sie sie nicht aus Ihrem Dashboard löschen).
 
 ## <a name="rename-an-app-that-has-already-been-published"></a>Umbenennen einer bereits veröffentlichten App
 
-Wenn Ihre App bereits im Windows Store veröffentlicht wurde und Sie sie umbenennen möchten, können Sie dazu (mithilfe der oben beschriebenen Schritte) einen neuen Namen für die App reservieren und eine neue App-Übermittlung vornehmen. Beachten Sie, dass Sie das Paket aktualisieren müssen, um den neuen Namen einzuschließen. Nur so wird die App unter dem neuen Namen im Store angezeigt. Verwenden Sie den neuen Namen im [**Package/Properties/DisplayName**](https://msdn.microsoft.com/library/windows/apps/dn423240)-Element im App-Manifest, und aktualisieren Sie Grafiken oder Texte, die den App-Namen enthalten. Sie können auch die Beschreibung Ihrer App überprüfen und den Namen, falls er an anderer Stelle erwähnt wird, ändern.
+Wenn Ihre App bereits im Windows Store veröffentlicht wurde und Sie sie umbenennen möchten, können Sie dazu (mithilfe der oben beschriebenen Schritte) einen neuen Namen für die App reservieren und eine neue App-Übermittlung vornehmen. Beachten Sie, dass Sie das Paket aktualisieren müssen, um den neuen Namen einzuschließen. Nur so wird die App unter dem neuen Namen im Store angezeigt. Verwenden Sie den neuen Namen im [**Package/Properties/DisplayName**](https://msdn.microsoft.com/en-us/library/windows/apps/dn934748.aspx)-Element im App-Manifest, und aktualisieren Sie Grafiken oder Texte, die den App-Namen enthalten. Sie können auch die Beschreibung Ihrer App überprüfen und den Namen, falls er an anderer Stelle erwähnt wird, ändern.
 
 Nachdem Ihre App unter dem neuen Namen veröffentlicht wurde, können Sie den alten, nicht mehr verwendeten Namen löschen.
 
  
 
  
-
 
 
 

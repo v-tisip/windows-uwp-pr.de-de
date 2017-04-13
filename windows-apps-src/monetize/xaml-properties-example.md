@@ -8,14 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, Uwp, Werbung, Advertising, AdControl, XAML, Eigenschaften"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: dbcc08b1373c7f73d5b9ebf541ec82bb01fd9df3
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, Uwp, Werbung, Advertising, AdControl, XAML, Eigenschaften
+ms.openlocfilehash: 3c5dae93ab6ee58fac7d4593257d357f268c241a
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="adcontrol-xaml-properties-example"></a>Beispiel für AdControl-XAML-Eigenschaften
 
 Im folgenden XAML-Beispiel wird veranschaulicht, wie Werten [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx)-Eigenschaften zugewiesen werden. Wenn eine Eigenschaft nicht festgelegt ist, verwendet **AdControl** Standardwerte, um eine Anzeige zu erstellen, die mit der Benutzeroberfläche der App konsistent ist.
@@ -40,4 +37,3 @@ Die Werte dienen als Beispiele. In Ihrem Code legen Sie die Werte dieser Funktio
 * [Anzeigenbeispiele bei GitHub](http://aka.ms/githubads)
 
  
-

@@ -7,29 +7,26 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
+keywords: Windows10, UWP
 ms.assetid: 6e033ffa-502e-4daa-b5b2-6f853f68b66c
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 59090536600e3e45345832c6ca61baa3fe1f5b15
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 5b70e6376dbea0e3858a2a12542ff26dfe61ed20
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 #<a name="getting-started-with-uwp-app-development-on-xbox-one"></a>Erste Schritte bei der Entwicklung von UWP-Apps auf Xbox One
 
-Führen Sie die folgenden Schritte **sorgfältig** aus, um PC und Xbox One erfolgreich zum Entwickeln für die Universelle Windows-Plattform (UWP) einzurichten. Lesen Sie nach der Einrichtung die Seite [UWP für Xbox One](index.md), um mehr über den Entwicklermodus auf Xbox One und das Erstellen von UWP-Apps zu erfahren. 
+Führen Sie die folgenden Schritte **sorgfältig** aus, um Ihren PC und Xbox One erfolgreich für die Entwicklung für die Universelle Windows-Plattform einzurichten. Lesen Sie nach der Einrichtung die Seite [UWP für Xbox One](index.md), um mehr über den Entwicklermodus auf Xbox One und das Erstellen von UWP-Apps zu erfahren. 
 
 ## <a name="before-you-start"></a>Vorbereitung
 Bevor Sie beginnen, müssen Sie die folgenden Schritte ausführen:
--    Richten Sie einen PC mit Windows 10 ein.
+-    Richten Sie einen PC mit Windows10 ein.
 -    Installieren Sie Microsoft Visual Studio 2015 Update 3.
-- Sorgen Sie für mindestens 5 GB freien Speicherplatz auf Ihrer Xbox One.
+- Sorgen Sie für mindestens 5GB freien Speicherplatz auf Ihrer Xbox One.
 
 ## <a name="setting-up-your-development-pc"></a>Einrichten des Entwicklungs-PCs
 1.    Installieren Sie Visual Studio 2015 Update. Wählen Sie die **benutzerdefinierte** Installation aus, und aktivieren Sie das Kontrollkästchen **Entwicklungstools für universelle Windows-Apps** (dieses gehört nicht zur standardmäßigen Installation). Achten Sie als C++-Entwickler darauf, **Benutzerdefinierte Installation** auszuwählen. Wählen Sie **C++** aus. Weitere Informationen finden Sie unter [Einrichtung der Entwicklungsumgebung](development-environment-setup.md). 
 
-2.    Installieren Sie das aktuelle Windows 10 SDK. Dieses können Sie unter [https://developer.microsoft.com/windows/downloads/windows-10-sdk](https://developer.microsoft.com/windows/downloads/windows-10-sdk) abrufen.
+2.    Installieren Sie das aktuelle Windows10 SDK. Dieses können Sie unter [https://developer.microsoft.com/windows/downloads/windows-10-sdk](https://developer.microsoft.com/windows/downloads/windows-10-sdk) abrufen.
 
 3.  Aktivieren Sie den Entwicklermodus für Ihren Entwicklungs-PC (Einstellungen > Update und Sicherheit > Für Entwickler > Entwicklermodus).
 
@@ -69,5 +66,4 @@ Ausführliche Informationen finden Sie unter [Einrichtung der Entwicklungsumgebu
 ## <a name="see-also"></a>Weitere Informationen  
 - [FAQ](frequently-asked-questions.md)  
 - [Bekannte Probleme](known-issues.md)
-- [UWP auf Xbox One](index.md) 
-
+- [UWP auf XboxOne](index.md) 

@@ -9,15 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 6e68c1fc-a407-4c0b-b0f4-e445ccb72ff3
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 908620cd9f8bb3b1155b3e5d1fd777a91d254ef1
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 4361437c8b6d67431bf879f9eb1cfbf3c03e592e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="how-to-turn-off-scaling"></a>So deaktivieren Sie die Skalierung   
-Standardmäßig werden Anwendungen für XAML-Apps auf 200 Prozent und für HTML-Apps auf 150 Prozent skaliert. Der Standardskalierungsfaktor kann deaktiviert werden. Infolgedessen verwendet die Anwendung die tatsächlichen Pixelabmessungen des Geräts (1910 x 1080 Pixel).   
+Standardmäßig werden Anwendungen für XAML-Apps auf 200Prozent und für HTML-Apps auf 150Prozent skaliert. Der Standardskalierungsfaktor kann deaktiviert werden. Infolgedessen verwendet die Anwendung die tatsächlichen Pixelabmessungen des Geräts (1910 x 1080Pixel).   
    
 ## <a name="html"></a>HTML   
 Sie können den Skalierungsfaktor deaktivieren, indem Sie den folgenden Codeausschnitt verwenden: 
@@ -48,5 +45,4 @@ DirectX-/C++-Anwendungen werden nicht skaliert. Die automatische Skalierung gilt
 
 ## <a name="see-also"></a>Weitere Informationen
 - [Bewährte Methoden für Xbox](tailoring-for-xbox.md)
-- [UWP auf Xbox One](index.md)
-
+- [UWP auf XboxOne](index.md)

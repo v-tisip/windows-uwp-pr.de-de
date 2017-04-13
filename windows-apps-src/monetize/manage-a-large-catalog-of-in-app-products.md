@@ -8,20 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, In-App-Käufe, IAPs, Add-Ons, Katalog, Windows.ApplicationModel.Store"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e8e4e55ab08900457e4f847ccea705838169c39c
-ms.lasthandoff: 02/07/2017
-
+keywords: "Windows10, UWP, In-App-Käufe, IAPs, Add-Ons, Katalog, Windows.ApplicationModel.Store"
+ms.openlocfilehash: 69747b5700db9785d5e782cd71245ce60ee4150b
+ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
+translationtype: HT
 ---
-
 # <a name="manage-a-large-catalog-of-in-app-products"></a>Verwalten eines großen Katalogs von In-App-Produkten
 
 
->**Hinweis**&nbsp;&nbsp;In diesem Artikel wird veranschaulicht, wie Mitglieder des [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)-Namespace verwendet werden. Wenn Ihre App für Windows 10, Version 1607 oder höher, vorgesehen ist, empfehlen wir die Verwendung von Mitgliedern des [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace zum Verwalten von Add-Ons (auch als In-App-Produkte oder IAPs bezeichnet) anstelle des **Windows.ApplicationModel.Store**-Namespace. Weitere Informationen finden Sie unter [In-App-Käufe und Testversionen](in-app-purchases-and-trials.md).
+> [!NOTE]
+> In diesem Artikel wird veranschaulicht, wie Mitglieder des [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)-Namespace verwendet werden. Wenn Ihre App für Windows10, Version 1607 oder höher, vorgesehen ist, empfehlen wir die Verwendung von Mitgliedern des [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace zum Verwalten von Add-Ons (auch als In-App-Produkte oder IAPs bezeichnet) anstelle des **Windows.ApplicationModel.Store**-Namespace. Weitere Informationen finden Sie unter [In-App-Käufe und Testversionen](in-app-purchases-and-trials.md).
 
-Wenn Ihre App einen großen In-App-Produktkatalog enthält, können Sie optional das in diesem Thema beschriebene Verfahren zum Verwalten des Katalogs ausführen. In Versionen vor Windows 10 galt eine Store-Einschränkung von 200 Produkteinträgen pro Entwicklerkonto. Das in diesem Thema beschriebene Verfahren kann zur Umgehung dieser Einschränkung verwendet werden. Ab Windows 10 gibt es keine Einschränkung der Anzahl von Produkteinträgen pro Entwicklerkonto im Store. Das in diesem Artikel beschriebene Verfahren ist nicht mehr erforderlich.
+Wenn Ihre App einen großen In-App-Produktkatalog enthält, können Sie optional das in diesem Thema beschriebene Verfahren zum Verwalten des Katalogs ausführen. In Versionen vor Windows10 galt eine Store-Einschränkung von 200Produkteinträgen pro Entwicklerkonto. Das in diesem Thema beschriebene Verfahren kann zur Umgehung dieser Einschränkung verwendet werden. Ab Windows10 gibt es keine Einschränkung der Anzahl von Produkteinträgen pro Entwicklerkonto im Store. Das in diesem Artikel beschriebene Verfahren ist nicht mehr erforderlich.
 
 Um diese Funktionalität zu aktivieren, erstellen Sie einige wenige Produkteinträge für bestimmte Preisniveaus. Jeder kann Hunderte von Produkten innerhalb eines Katalogs repräsentieren. Sie verwenden die [RequestProductPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/dn263382)-Methodenüberladung, die ein App-definiertes Angebot angibt, das mit einem im Store aufgelisteten In-App-Produkt verknüpft ist. Zusätzlich zur Angabe einer Verknüpfung von Angebot und Produkt während des Aufrufs sollte Ihre App auch ein [ProductPurchaseDisplayProperties](https://msdn.microsoft.com/library/windows/apps/dn263384)-Objekt übergeben, das die Angebotsdetails des großen Katalogs enthält. Wenn diese Details nicht angegeben sind, werden stattdessen die Details für das gelistete Produkt verwendet.
 
@@ -58,4 +56,3 @@ Der folgende Code veranschaulicht den Erfüllungsaufruf sowie ein Muster für Me
 * [Store-Beispiel (zeigt Testversionen und In-App-Einkäufe)](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)
 * [RequestProductPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/dn263382)
 * [ProductPurchaseDisplayProperties](https://msdn.microsoft.com/library/windows/apps/dn263384)
-

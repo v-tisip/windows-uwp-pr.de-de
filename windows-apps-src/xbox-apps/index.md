@@ -1,6 +1,6 @@
 ---
 author: Mtoepke
-title: "UWP auf Xbox One"
+title: UWP auf XboxOne
 description: "Informationen zum Erstellen von Apps für die Universelle Windows-Plattform (UWP) auf Xbox One."
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -9,20 +9,17 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: 2d935f53-84db-4108-86dc-cb6a0749782f
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 36d19f660bc3c03377f864b1d659a19396917130
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 82c8fd0945ed49f8accf5e101acfbea151caa3a1
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="uwp-on-xbox-one"></a>UWP auf Xbox One
 
 Erste Schritte beim Erstellen von Apps für die Universelle Windows-Plattform (UWP) auf Xbox One.
 
-UWP auf Xbox One unterstützt die Entwicklung von Apps und Spielen. Sie müssen kein [ID@Xbox](http://www.xbox.com/Developers/id)-Entwickler sein, um Spiele oder Apps auf Xbox zu erstellen, zu testen und mit diesen zu experimentieren. Sie müssen sich jedoch bei [ID@Xbox](http://www.xbox.com/Developers/id) registrieren, wenn Sie ein Spiel auf Xbox One veröffentlichen und verkaufen oder die Vorteile von Xbox Live unter Windows 10 nutzen möchten. Registrieren Sie sich bei [ID@Xbox](http://www.xbox.com/Developers/id), um unserer Community aus freiwilligen Entwicklern und begeisterten Benutzern beizutreten. 
+UWP auf Xbox One unterstützt die Entwicklung von Apps und Spielen. Sie müssen kein Teil eines Entwicklerprogramms sein, um auf der Xbox zu experimentieren und Spiele oder Apps zu erstellen und zu testen. Wenn Sie zum Veröffentlichen und Verkaufen von Spielen auf Xbox One bereit sind oder Xbox Live unter Windows10 nutzen, müssen Sie dem [Xbox Live Creators-Programm](https://developer.microsoft.com/games/xbox/xboxlive/creator) beitreten oder ein [ID@Xbox](http://www.xbox.com/Developers/id)-Entwickler sein. Weitere Informationen finden Sie unter [Übersicht über das Entwicklerprogramm](https://developer.microsoft.com/games/xbox/docs/xboxlive/get-started/developer-program-overview.html).
 
-Dieser Abschnitt enthält die Schritte bei der Einrichtung, Informationen zum Authentifizierungsprozess, zur Installation der erforderlichen Version von Visual Studio und Windows 10-Tools sowie zum Einrichten, Ausführen und Debuggen einer einfachen ersten Anwendung. 
+Dieser Abschnitt enthält die Schritte bei der Einrichtung, Informationen zum Authentifizierungsprozess, zur Installation der erforderlichen Version von Visual Studio und Windows10-Tools sowie zum Einrichten, Ausführen und Debuggen einer einfachen ersten Anwendung. 
 
 | Thema      | Beschreibung |
 |------------|-------------|
@@ -47,4 +44,3 @@ Dieser Abschnitt enthält die Schritte bei der Einrichtung, Informationen zum Au
 - [Automatisieren des Starts von UWP-Apps unter Windows 10](automate-launching-uwp-apps.md)
 - [CPUSets für die Entwicklung von Spielen](cpusets-games.md)
   
-

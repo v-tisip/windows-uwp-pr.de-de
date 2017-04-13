@@ -8,21 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 518631e791746259dc4ee6f23184c8fc01ace427
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: e7d327cbe8d99b6b10ae4ccdeb8c7a6f0ee2ac5e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="windows-store-app-marketing-guidelines"></a>Marketingrichtlinien für Windows Store-Apps
 
 Erfahren Sie, wie Sie Ihre Apps und Inhalte im Windows Store bewerben. In diesen Richtlinien wird erläutert, wie Sie die verfügbaren Ressourcen in Kombination mit Empfehlungen für die Vermarktung von Apps in gedruckter und digitaler Werbung, in TV-Werbung und Werbung auf sozialen Plattformen verwenden.
 
 ## <a name="store-badges"></a>Store-Badges
 
-Wir haben spezielle Werbe-Badges erstellt, mit denen Sie mehr Kunden zum Eintrag Ihrer App im Windows Store lenken können. Diese Badges sind in 44 Sprachen verfügbar. Bedenken Sie, dass es bestimmte Anforderungen gibt, die Sie bei Verwendung dieser Bilder beachten müssen. Diese Vorgaben sowie Verwendungsbeispiele und Richtlinien sind in einer PDF-Datei verfügbar.
+Wir haben spezielle Werbe-Badges erstellt, mit denen Sie mehr Kunden zum Eintrag Ihrer App im Windows Store lenken können. Diese Badges sind in 44Sprachen verfügbar. Bedenken Sie, dass es bestimmte Anforderungen gibt, die Sie bei Verwendung dieser Bilder beachten müssen. Diese Vorgaben sowie Verwendungsbeispiele und Richtlinien sind in einer PDF-Datei verfügbar.
 
 [![Schaltfläche „Herunterladen“](images/downloadbutton.png)](http://go.microsoft.com/fwlink/p/?LinkId=529769) Windows Store-Marketingrichtlinien (PDF, Englisch)
 
@@ -38,7 +35,7 @@ Zur Vermarktung Ihrer App möchten Sie vielleicht zeigen, wie sie aussieht, wenn
 
 [![Schaltfläche „Herunterladen“](images/downloadbutton.png)](https://go.microsoft.com/fwlink/p/?LinkId=533057) Grafiken für Windows-Geräte
 
-## <a name="license-to-microsoft-marks"></a>Lizenz für Microsoft Marks
+## <a name="license-to-microsoft-marks"></a>Lizenz für MicrosoftMarks
 
 *Microsoft Marks* bezeichnet das *Microsoft-Badge* und die *Windows Store-Kachel*, die auf der Seite [Badge-Generator](http://go.microsoft.com/fwlink/p/?LinkID=534236) beschrieben werden. Die Verwendung dieser Badges setzt Folgendes voraus:
 
@@ -46,7 +43,7 @@ Zur Vermarktung Ihrer App möchten Sie vielleicht zeigen, wie sie aussieht, wenn
 
 -   Falls Sie bei Dev Center registriert sind, erfüllen Sie die Anforderungen im Abschnitt [„Lizenz für Microsoft Marks“](https://msdn.microsoft.com/library/windows/apps/hh694058.aspx#license_to_mark) der Vereinbarung für App-Entwickler.
 
--   Wenn Sie nicht bei Windows Dev Center registriert sind, gewährt Microsoft Ihnen eine weltweite, nicht exklusive, nicht übertragbare und gebührenfreie Lizenz zur Verwendung der Badges (ausschließlich gemäß der Beschreibung in den Windows Store-Marketingrichtlinien). Diese Richtlinien können von Microsoft geändert werden. In diesem Fall unternimmt Microsoft jedoch angemessene Schritte, um Sie zu neuen URLs weiterzuleiten, unter denen die Spezifikationen bereitgestellt werden. Microsoft behält sich alle hierin nicht ausdrücklich eingeräumten Rechte vor.
+-   Wenn Sie nicht bei Windows Dev Center registriert sind, gewährt Microsoft Ihnen eine weltweite, nicht exklusive, nicht übertragbare und gebührenfreie Lizenz zur Verwendung der Badges (ausschließlich gemäß der Beschreibung in den WindowsStore-Marketingrichtlinien). Diese Richtlinien können von Microsoft geändert werden. In diesem Fall unternimmt Microsoft jedoch angemessene Schritte, um Sie zu neuen URLs weiterzuleiten, unter denen die Spezifikationen bereitgestellt werden. Microsoft behält sich alle hierin nicht ausdrücklich eingeräumten Rechte vor.
 
 -   Beachten Sie die Logonutzungsbedingungen, die in den [Windows Store-Marketingrichtlinien](http://go.microsoft.com/fwlink/p/?LinkId=529769) beschrieben sind.
 
@@ -55,7 +52,6 @@ Microsoft ist der alleinige Eigentümer der Microsoft Marks und des damit verbun
  
 
  
-
 
 
 

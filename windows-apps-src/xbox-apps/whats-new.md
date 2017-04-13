@@ -7,18 +7,15 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, UWP"
+keywords: windows10, UWP
 ms.assetid: fe63c527-8f06-43a5-868f-de909f5664b3
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 96f9c9ef355382c72423187a7f81635571762071
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 5546177401630e8938f0d25d77ea42afdbfb55d7
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="whats-new-for-developers-in-the-latest-update-of-uwp-on-xbox-one"></a>Neuigkeiten für Entwickler in der neuesten Aktualisierung von UWP auf Xbox One
 
-Die Developer Preview-Version vom Juli 2016 für die Universelle Windows-Plattform (UWP) auf Xbox One enthält die folgenden neuen Features, Featureupdates und Fehlerkorrekturen.
+Die Developer Preview-Version vom Juli2016 für die Universelle Windows-Plattform (UWP) auf Xbox One enthält die folgenden neuen Features, Featureupdates und Fehlerkorrekturen.
 
 ## <a name="networking-using-tcpudp-sockets-is-now-available"></a>Netzwerke auf der Basis von TCP/UDP-Sockets sind jetzt verfügbar  
 Der ein- und ausgehende Netzwerkzugriff von Konsolen, die herkömmliche TCP/UDP-Sockets (WinSock, Windows.Networking.Sockets) verwenden, ist nun verfügbar.
@@ -57,5 +54,4 @@ Am WDP (Windows Device Portal)-Tool für Xbox wurden folgende Verbesserungen vor
 
 ## <a name="see-also"></a>Weitere Informationen
 - [Bekannte Probleme](known-issues.md)
-- [UWP auf Xbox One](index.md)
-
+- [UWP auf XboxOne](index.md)

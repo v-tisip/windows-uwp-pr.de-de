@@ -10,20 +10,17 @@ ms.prod: windows
 ms.technology: uwp
 keywords: "Chrome-Erweiterungen für Windows, Chrome-Apps für Windows, hwa-cli, .CRX in .AppX umwandeln"
 ms.assetid: 04f37333-48ba-441b-875e-246fbc3e1a4d
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 84d8875cc7b1c8540f54fec78cd675bd96919fd2
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: b2168242d5464dbf41f12c777aa5672753a4ae6e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="convert-your-existing-chrome-app-to-a-universal-windows-platform-app"></a>Konvertieren Ihrer vorhandenen Chrome-App in eine App für die Universelle Windows-Plattform
+# <a name="convert-your-existing-chrome-app-to-a-uwp-app"></a>Konvertieren Ihrer vorhandenen Chrome-App in einer UWP-App
 
 Wir haben die Konvertierung vorhandener gehosteter Chrome-Apps in Apps für die Universelle Windows-Plattform (UWP) einfach gemacht. Es gibt zwei Möglichkeiten, Ihre Chrome-App zu konvertieren:
 
-- Option Nr. 1: [ManifoldJS](http://manifoldjs.com/) akzeptiert nun Chrome-Manifeste als eine Form der Eingabe. 
+- Option Nr.1: [ManifoldJS](http://manifoldjs.com/) akzeptiert nun Chrome-Manifeste als eine Form der Eingabe. 
 
-- Option Nr. 2: Wir haben ein [CLI-Tool](https://github.com/MicrosoftEdge/hwa-cli) entwickelt, das ein `.appx`-Paket aus Ihren vorhandenen `.zip` oder `.crx` Dateien generiert.
+- Option Nr.2: Wir haben ein [CLI-Tool](https://github.com/MicrosoftEdge/hwa-cli) entwickelt, das ein `.appx`-Paket aus Ihren vorhandenen `.zip` oder `.crx` Dateien generiert.
 
 ## <a name="convert-your-existing-chrome-app-using-the-command-line-interface"></a>Konvertieren Sie Ihre vorhandene Chrome-App mittels der Befehlszeilenschnittstelle
 
@@ -74,19 +71,19 @@ Ihre Regeln sollten mindestens die Startseite Ihrer App enthalten. Das Konvertie
 
 *Hinweis: ACURs gelten nur für die Seitennavigation. Bilder, JavaScript-Bibliotheken und andere vergleichbare Ressourcen sind von diesen Einschränkungen nicht betroffen.*
 
-Viele Apps verwenden Drittanbieterwebsites für ihre Anmeldungsabläufe, z. B. Facebook und Google. Das Konvertierungstool erstellt automatisch einen Satz von ACURs für Sie, basierend auf den am häufigsten verwendeten Websites. Wenn Ihre Authentifizierungsmethode nicht in dieser Liste enthalten ist und es sich um eine Umleitung handelt, müssen Sie den Pfad/die Pfade als eine ACUR hinzufügen. Sie können auch die Verwendung eines [Webauthentifizierungsbrokers](./hwa-access-features.md) in Betracht ziehen.
+Viele Apps verwenden Drittanbieterwebsites für ihre Anmeldungsabläufe, z.B. Facebook und Google. Das Konvertierungstool erstellt automatisch einen Satz von ACURs für Sie, basierend auf den am häufigsten verwendeten Websites. Wenn Ihre Authentifizierungsmethode nicht in dieser Liste enthalten ist und es sich um eine Umleitung handelt, müssen Sie den Pfad/die Pfade als eine ACUR hinzufügen. Sie können auch die Verwendung eines [Webauthentifizierungsbrokers](./hwa-access-features.md) in Betracht ziehen.
 
 ### <a name="flash"></a>Flash
 
 Flash ist in Windows 10-Apps nicht zulässig. Sie müssen sicherstellen, dass dies keine Auswirkungen auf die App-Umgebung hat.
 
-In Bezug auf Anzeigen müssen Sie sicherstellen, dass der Werbeanbieter über eine HTML5-Option verfügt. Sie können sich in [Bing Ads](https://bingads.microsoft.com/) und [Anzeigen in Apps](http://adsinapps.microsoft.com/) näher informieren.
+In Bezug auf Anzeigen müssen Sie sicherstellen, dass der Werbeanbieter über eine HTML5-Option verfügt. Sie können [Bing Ads](https://bingads.microsoft.com/) und die [Microsoft Advertising-Bibliotheken](../monetize/display-ads-in-your-app.md) auschecken. 
 
 YouTube-Videos sollten weiter funktionieren, da sie nun [standardmäßig HTML5 verwenden `<video>`,](http://youtube-eng.blogspot.com/2015/01/youtube-now-defaults-to-html5_27.html), solange Sie die [`<iframe>` embed-Methode](https://developers.google.com/youtube/iframe_api_reference) verwenden. Wenn Ihre App noch die Flash-API verwendet, müssen Sie zum oben genannten Einbettungsstil wechseln.
 
 ### <a name="image-assets"></a>Bildressourcen
 
-Der Chrome-Webstore [erfordert bereits ein Symbolbild mit der Größe 128 x 128 für Ihre App](https://developer.chrome.com/webstore/images) in Ihrem App-Paket. In Bezug auf Windows 10-Apps müssen Sie mindestens App-Symbolbilder mit den Größen 44 x 44, 50 x 50, 150 x 150 und 600 x 350 bereitstellen. Das Konvertierungstool erstellt diese Bilder automatisch für Sie, basierend auf dem Bild mit 128 x 128. Für eine umfassendere und hochwertigere App-Umgebung empfehlen wir nachdrücklich das Erstellen eigener Bilddateien. Im Folgenden finden Sie einige [Richtlinien für Kachel- und Symbolressourcen](https://msdn.microsoft.com/library/windows/apps/mt412102.aspx).
+Der Chrome-Webstore [erfordert bereits ein Symbolbild mit der Größe 128x128 für Ihre App](https://developer.chrome.com/webstore/images) in Ihrem App-Paket. In Bezug auf Windows10-Apps müssen Sie mindestens App-Symbolbilder mit den Größen 44x44, 50x50, 150x150 und 600x350 bereitstellen. Das Konvertierungstool erstellt diese Bilder automatisch für Sie, basierend auf dem Bild mit 128x128. Für eine umfassendere und hochwertigere App-Umgebung empfehlen wir nachdrücklich das Erstellen eigener Bilddateien. Im Folgenden finden Sie einige [Richtlinien für Kachel- und Symbolressourcen](https://msdn.microsoft.com/library/windows/apps/mt412102.aspx).
 
 ### <a name="capabilities"></a>Funktionen
 
@@ -107,4 +104,3 @@ Chrome stellt Apps [spezielle APIs](https://developer.chrome.com/apps/api_index)
 - [Optimieren Ihrer Web-App durch den Zugriff auf Features für die Universelle Windows-Plattform (UWP)](./hwa-access-features.md)
 - [Anleitung für Apps für die Universelle Windows-Plattform (UWP)](http://go.microsoft.com/fwlink/p/?LinkID=397871)
 - [Herunterladen von Designressourcen für Windows Store-Apps](https://msdn.microsoft.com/library/windows/apps/xaml/bg125377.aspx)
-

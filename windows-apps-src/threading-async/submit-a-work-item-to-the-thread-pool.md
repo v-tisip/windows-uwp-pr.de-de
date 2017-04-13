@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, Threads, Threadpool
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d5141467e474f26a8aa681b4478cf60c979ae83b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 00d354e531dca1e4b8a31d77ea09da20425b1512
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="submit-a-work-item-to-the-thread-pool"></a>Übermitteln einer Arbeitsaufgabe an den Threadpool
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ** Wichtige APIs **
 
@@ -32,7 +30,7 @@ Erstellen Sie eine Arbeitsaufgabe, indem Sie [**RunAsync**](https://msdn.microso
 
 Drei Versionen von [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593) sind verfügbar. Damit können Sie optional die Priorität der Arbeitsaufgabe angeben und steuern, ob sie gleichzeitig mit anderen Arbeitsaufgaben ausgeführt wird.
 
-**Hinweis**  Verwenden Sie [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317), um auf den Benutzeroberflächenthread zuzugreifen und den Fortschritt der Arbeitsaufgabe anzuzeigen.
+**Hinweis:** Verwenden Sie [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317), um auf den Benutzeroberflächenthread zuzugreifen und den Fortschritt der Arbeitsaufgabe anzuzeigen.
 
 Im folgenden Beispiel werden eine Arbeitsaufgabe erstellt und ein Lambda für die Verarbeitung angegeben:
 
@@ -203,9 +201,9 @@ Beachten Sie, dass von der Arbeitsaufgabe die [**IAsyncInfo.Status**](https://ms
 
 ## <a name="handle-work-item-completion"></a>Behandeln der Vervollständigung der Arbeitsaufgabe
 
-Stellen Sie einen Vervollständigungshandler zur Verfügung, indem Sie die [**IAsyncAction.Completed**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.completed.aspx)-Eigenschaft der Arbeitsaufgabe festlegen. Geben Sie einen Delegaten an (Sie können eine Lambda-Funktion oder Delegatfunktion nutzen), mit dem die Arbeitsaufgabe durchgeführt wird. Verwenden Sie z. B. [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317), um auf den Benutzeroberflächenthread zuzugreifen und das Ergebnis anzuzeigen.
+Stellen Sie einen Vervollständigungshandler zur Verfügung, indem Sie die [**IAsyncAction.Completed**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.completed.aspx)-Eigenschaft der Arbeitsaufgabe festlegen. Geben Sie einen Delegaten an (Sie können eine Lambda-Funktion oder Delegatfunktion nutzen), mit dem die Arbeitsaufgabe durchgeführt wird. Verwenden Sie z.B. [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317), um auf den Benutzeroberflächenthread zuzugreifen und das Ergebnis anzuzeigen.
 
-Im folgenden Beispiel wird die Benutzeroberfläche mit dem Ergebnis der in Schritt 1 übermittelten Arbeitsaufgabe aktualisiert:
+Im folgenden Beispiel wird die Benutzeroberfläche mit dem Ergebnis der in Schritt1 übermittelten Arbeitsaufgabe aktualisiert:
 
 > [!div class="tabbedCodeSnippets"]
 > ``` cpp
@@ -257,7 +255,7 @@ Beachten Sie, dass vom Vervollständigungshandler überprüft wird, ob die Arbei
 
 ## <a name="summary-and-next-steps"></a>Zusammenfassung und nächste Schritte
 
-Weitere Informationen erhalten Sie durch das Herunterladen des Codes in dieser Schnellstartanleitung unter [Beispiel für das Erstellen einer Threadpool-Arbeitsaufgabe](http://go.microsoft.com/fwlink/p/?LinkID=328569) für Windows 8.1 und die erneute Verwendung des Quellcodes in einer win\_unap Windows 10-App.
+Weitere Informationen erhalten Sie durch das Herunterladen des Codes in dieser Schnellstartanleitung unter [Beispiel für das Erstellen einer Threadpool-Arbeitsaufgabe](http://go.microsoft.com/fwlink/p/?LinkID=328569) für Windows 8.1 und die erneute Verwendung des Quellcodes in einer win\_unap Windows10-App.
 
 ## <a name="related-topics"></a>Verwandte Themen
 
@@ -265,4 +263,3 @@ Weitere Informationen erhalten Sie durch das Herunterladen des Codes in dieser S
 * [Bewährte Methoden zum Verwenden des Threadpools](best-practices-for-using-the-thread-pool.md)
 * [Senden einer Arbeitsaufgabe mithilfe eines Timers](use-a-timer-to-submit-a-work-item.md)
  
-

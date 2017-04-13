@@ -8,14 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a69521d9ff9adb682a370b421458269507e9befe
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 1234a1209f7cc32901b093a44c2b71fc90a6f3b5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="category-and-subcategory-table"></a>Kategorie- und Unterkategorietabelle
 
 
@@ -66,6 +63,5 @@ Unterkategorien sind nur für einige Kategorien vorhanden. Denken Sie daran, das
 | Dienstprogramme + Tools           | Sichern + Verwalten <br> Datei-Manager                |
  
 
-> **Hinweis**  Informationen zu den Kategorien, die in Windows Store für Windows 8.1 und früheren Versionen verwendet wurden, sowie die Kategorien im Windows Phone Store und wie diese mit der vorangehenden Kategorieliste zusammenhängen, finden Sie unter [Kategorieänderungen für Windows Phone-Apps](how-your-app-appears-in-the-store-for-windows-10-customers.md#category-changes).
-
+> **Hinweis**  Informationen zu den Kategorien, die in Windows Store für Windows8.1 und früheren Versionen verwendet wurden, sowie die Kategorien im Windows Phone Store und wie diese mit der vorangehenden Kategorieliste zusammenhängen, finden Sie unter [Kategorieänderungen für Windows Phone-Apps](how-your-app-appears-in-the-store-for-windows-10-customers.md#category-changes).
 

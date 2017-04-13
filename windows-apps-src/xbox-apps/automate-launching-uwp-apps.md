@@ -2,15 +2,13 @@
 title: "Automatisieren des Starts für Apps der universellen Windows Plattform (UWP) in Windows10"
 description: "Mit der Protokoll- und Startaktivierung können Entwickler ihre UWP-Apps oder Spiele für automatisierte Tests automatisch starten."
 author: listurm
-translationtype: Human Translation
-ms.sourcegitcommit: c5d0f685f4c733cbe4ba4c07aab565b888ddfe58
 ms.openlocfilehash: 4b31ec06b1ded4882d26cffed029eb8179ff47c3
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
+# <a name="automate-launching-windows-10-uwp-apps"></a>Automatisieren des Starts von UWP-Apps unter Windows 10
 
-# Automatisieren des Starts von UWP-Apps unter Windows 10
-
-## Einführung
+## <a name="introduction"></a>Einführung
 
 Entwickler haben mehrere Möglichkeiten, einen automatisierten Start von UWP-Apps zu realisieren. Dieses Dokument beschreibt Methoden zum Starten einer App über die Protokoll- und Startaktivierung.
 
@@ -20,7 +18,7 @@ Die *Startaktivierung* stellt den normalen Start einer App dar, beispielsweise d
 
 Bei jeder Aktivierungsmethode können Sie entweder die Befehlszeile oder eine Startanwendung nutzen. Wird die App gerade ausgeführt, wird sie bei allen Aktivierungsmethoden in den Vordergrund geschaltet, wodurch sie erneut aktiviert wird. Dabei werden die neuen Aktivierungsargumente bereitgestellt. Somit besteht die Möglichkeit, Aktivierungsbefehle zu verwenden, um neue Nachrichten für die App bereitzustellen. Beachten Sie unbedingt, dass das Projekt kompiliert und für die Aktivierungsmethode bereitgestellt werden muss, damit die aktualisierte App ausgeführt wird. 
 
-## Protokollaktivierung
+## <a name="protocol-activation"></a>Protokollaktivierung
 
 Führen Sie diese Schritte zum Einrichten der Protokollaktivierung für Apps aus: 
 
@@ -37,7 +35,7 @@ Führen Sie diese Schritte zum Einrichten der Protokollaktivierung für Apps aus
 
 Nach der Einrichtung der Protokollaktivierung haben Sie zwei Möglichkeiten (Befehlszeile oder Startanwendung), die App über das Protokoll zu aktivieren. 
 
-### Befehlszeile
+### <a name="command-line"></a>Befehlszeile
 
 Die App wird per Protokoll aktiviert, indem Sie die Befehlszeile mit dem Startbefehl gefolgt vom vorher festgelegten Protokoll, einem Doppelpunkt („:“) und beliebigen Parametern verwenden. Die Parameter können eine beliebige Zeichenfolge sein. Um aber die Vorteile der Uniform Resource Identifier (URI)-Funktionen nutzen zu können, sollten Sie das standardmäßige URI-Format verwenden: 
 
@@ -57,7 +55,7 @@ Beispiele:
 
 Die Befehlszeilenaktivierung per Protokoll unterstützt Unicode-Zeichen bis zu maximal 2038 Zeichen auf dem unformatierten URI. 
 
-### Startanwendung
+### <a name="launcher-application"></a>Startanwendung
 
 Erstellen Sie zum Starten eine separate Anwendung, die die WinRT-API unterstützt. Im folgenden Beispiel wird der C++-Code für einen Start per Protokollaktivierung in einem Startprogramm gezeigt. Dabei ist **PackageURI** der URI für die Anwendung mit beliebigen Argumenten, beispielsweise `myapplication:` oder `myapplication:protocol activation arguments`.
 
@@ -100,7 +98,7 @@ Uri(URI));
 ```
 Für die Protokollaktivierung mit der Startanwendung gelten dieselben Einschränkungen für Argumente wie für die Protokollaktivierung mit der Befehlszeile. Beide unterstützen Unicode-Zeichen bis maximal 2038Zeichen auf dem unformatierten URI. 
 
-## Startaktivierung
+## <a name="launch-activation"></a>Startaktivierung
 
 Sie können die App auch mit der Startaktivierung starten. Es ist kein Setup erforderlich, dafür aber die Anwendungsbenutzermodell-ID (Application User Model ID, AUMID) der UWP-App. Die AUMID ist der Paketfamilienname gefolgt von einem Ausrufezeichen und der Anwendungs-ID. 
 
@@ -115,7 +113,7 @@ Die beste Möglichkeit zum Abrufen des Paketfamiliennamens besteht in der Durchf
 
 Sie finden die Anwendungs-ID in der Datei **Package.appxmanifest** (geöffnet in der XML-Ansicht) unter dem `<Applications>`-Element.
 
-### Befehlszeile
+### <a name="command-line"></a>Befehlszeile
 
 Ein Tool für die Durchführung einer Startaktivierung einer UWP-App ist im Windows 10-SDK enthalten. Es kann über die Befehlszeile ausgeführt werden und benötigt die AUMID der App, damit ein Start als Argument möglich ist.
 
@@ -131,7 +129,7 @@ Es sieht etwa wie folgt aus:
 
 Diese Option unterstützt keine Befehlszeilenargumente. 
 
-### Startanwendung
+### <a name="launcher-application"></a>Startanwendung
 
 Sie können eine separate Anwendung erstellen, die den Einsatz von COM zum Starten unterstützt. Das folgende Beispiel zeigt den C++-Code für den Start mit Startaktivierung in einem Startprogramm. Mit diesem Code erstellen Sie ein **ApplicationActivationManager**-Objekt und rufen **ActivateApplication** auf, indem Sie die zuvor gefundene AUMID und beliebige Argumente übergeben. Weitere Informationen zu den anderen Parametern finden Sie unter [IApplicationActivationManager::ActivateApplication-Methode (MSDN)](https://msdn.microsoft.com/library/windows/desktop/hh706903(v=vs.85).aspx).
 
@@ -177,7 +175,7 @@ Manager. hr = 0x%08lx \n", AUMID, hr);
 
 Dabei ist zu beachten, dass diese Methode im Gegensatz zur vorherigen Methode für den Start (also die Befehlszeilenmethode) übergebene Argumente unterstützt.
 
-## Akzeptieren von Argumenten
+## <a name="accepting-arguments"></a>Akzeptieren von Argumenten
 
 Damit Argumente, die bei der Aktivierung der UWP-App übergeben werden, akzeptiert werden, müssen Sie der App einen Code hinzufügen. Zur Feststellung, ob eine Protokoll- oder Startaktivierung stattgefunden hat, überschreiben Sie das **OnActivated**-Ereignis, überprüfen den Typ des Arguments und rufen dann die unformatierte Zeichenfolge oder die vorab analysierten Werte des Uri-Objekts ab. 
 
@@ -189,7 +187,7 @@ void OnActivated(IActivatedEventArgs^ args)
         // Check for launch activation
         if (args->Kind == ActivationKind::Launch)
         {
-            auto launchArgs = static_cast<LaunchActivatedEventArgs^>(args); 
+            auto launchArgs = static_cast<LaunchActivatedEventArgs^>(args);    
 Platform::String^ argval = launchArgs->Arguments;
             // Manipulate arguments …
         }
@@ -204,15 +202,9 @@ Platform::String^ argval = launchArgs->Arguments;
     }
 ```
 
-## Zusammenfassung
+## <a name="summary"></a>Zusammenfassung
 Zusammenfassend lässt sich sagen, dass für den Start der UWP-App verschiedene Methoden zur Verfügung stehen. Je nach Anforderungen und Anwendungsfällen können manche Methoden besser geeignet sein als andere. 
 
-## Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen
 - [UWP auf XboxOne](index.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

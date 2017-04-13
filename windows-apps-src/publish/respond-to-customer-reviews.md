@@ -8,14 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 06be2dad7022a25e07a159bec7f1d007ff608ed3
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 7de4e53df32979d87a19b7d0556ef716b901687b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="respond-to-customer-reviews"></a>Reagieren auf Kundenrezensionen
 
 
@@ -29,9 +26,9 @@ Um die Rezensionen zu Ihrer App anzuzeigen und Antworten bereitzustellen, suchen
 
 Wenn Sie eine Antwort auf eine Rezension senden, wird diese dem Kunden per E-Mail von Microsoft zugesendet. Diese E-Mail umfasst auch die Support-E-Mail-Adresse für Ihre App, über die der Kunde direkten Kontakt mit Ihnen aufnehmen kann. Wenn Sie während der App-Einreichung keine Support-E-Mail-Adresse angegeben haben, wird eine entsprechende Adresse angefordert, bevor Sie antworten können.
 
-Standardmäßig wird Ihre Antwort nur dem Kunden angezeigt, dem Sie antworten. Wenn Sie andere Kunden Ihre Antwort anzeigen möchten, aktivieren Sie das Kästchen **Diese Antwort veröffentlichen**, damit wir Ihre Antwort im Store-Eintrag Ihrer App direkt unter der Rezension des Kunden anzeigen können. Öffentliche Antworten werden allen Kunden angezeigt, die den Store auf einem Windows 10-Geräten anzeigen.
+Standardmäßig wird Ihre Antwort nur dem Kunden angezeigt, dem Sie antworten. Wenn Sie andere Kunden Ihre Antwort anzeigen möchten, aktivieren Sie das Kästchen **Diese Antwort veröffentlichen**, damit wir Ihre Antwort im Store-Eintrag Ihrer App direkt unter der Rezension des Kunden anzeigen können. Öffentliche Antworten werden allen Kunden angezeigt, die den Store auf einem Windows10-Geräten anzeigen.
 
-> **Wichtig**  Sie können eine öffentliche Antwort später nicht ändern (es sei denn, der Kunde überarbeitet seine ursprüngliche Rezension), so dass Sie deshalb Ihre Antwort sorgfältig überprüfen sollten, bevor Sie diese veröffentlichen. Wenn ein Kunde seine ursprüngliche Rezension überarbeitet, wird Ihre Antwort entfernt. Sie können dann bei Bedarf eine neue Antwort zur überarbeiteten Rezension geben.
+> **Wichtig** Sie können eine öffentliche Antwort später nicht ändern (es sei denn, der Kunde überarbeitet seine ursprüngliche Rezension). Überprüfen Sie deshalb Ihre Antwort sorgfältig, bevor Sie diese veröffentlichen. Wenn ein Kunde seine ursprüngliche Rezension überarbeitet, wird Ihre Antwort entfernt. Sie können dann bei Bedarf eine neue Antwort zur überarbeiteten Rezension geben.
 
 ## <a name="guidelines-for-responses"></a>Richtlinien für Antworten
 
@@ -54,4 +51,3 @@ Sie alleine sind für die Kommunikation mit Ihren Kunden verantwortlich. Microso
 
 
 Ihren Kunden zuzuhören und auf sie einzugehen, ist erst der Anfang. Entscheidend ist es, das Feedback praktisch umzusetzen. Wenn Sie an Ihrer App erhebliche Verbesserungen vornehmen, sollten Sie diese unbedingt im Store veröffentlichen, indem Sie eine [neue Einreichung erstellen](app-submissions.md), um Ihre App zu aktualisieren.
-

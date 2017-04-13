@@ -8,14 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 9a56c00384d494bbd38d394c464b68c0ff080fb8
-ms.lasthandoff: 02/07/2017
-
+keywords: windows10, UWP
+ms.openlocfilehash: f8a74261c6982ec89509579d3856bea743fd8743
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="trademark-and-copyright-protection"></a>Schutz von Marken und Urheberrechten
 
 
@@ -69,7 +66,6 @@ Lesen Sie die Benachrichtigung von Microsoft sorgfältig durch, und befolgen sie
  
 
  
-
 
 
 

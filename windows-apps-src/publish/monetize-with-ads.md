@@ -1,6 +1,6 @@
 ---
 author: jnHs
-Description: Wenn Ihre App die Anzeigenvermittlung verwendet oder Banner- bzw. Videointerstitialanzeigen aus Microsoft Advertising anzeigt, verwalten Sie die Verwendung Ihrer Anzeigen auf der Seite Monetisierung &gt; Gewinnbringende Nutzung mit Anzeigen.
+Description: Wenn Ihre App die Anzeigenvermittlung verwendet oder Banner- bzw. Interstitialanzeigen aus Microsoft Advertising anzeigt, verwalten Sie die Verwendung Ihrer Anzeigen auf der Seite Monetisierung &gt; Gewinnbringende Nutzung mit Anzeigen.
 title: Monetisierung durch Anzeigen
 ms.assetid: 09970DE3-461A-4E2A-88E3-68F2399BBCC8
 ms.author: wdg-dev-content
@@ -8,18 +8,15 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e82431c9b39999af9fe19ac147a6c031b9a3edc3
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 6418fe1b47ac89e8decb135aa9a2108b3b95ef82
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="monetize-with-ads"></a>Monetisierung durch Anzeigen
 
 
-Wenn Ihre App ein **AdMediatorControl**-, **AdControl**- oder **InterstitialAd**-Steuerelement zum Anzeigen von Banner- bzw. Video-Interstitialanzeigen verwendet, verwalten Sie die Verwendung Ihrer Anzeigen auf der Seite **Monetisierung** &gt; **Gewinnbringende Nutzung mit Anzeigen**.
+Wenn Ihre App ein **AdMediatorControl**-, **AdControl**- oder **InterstitialAd**-Steuerelement zum Anzeigen von Banner- oder Interstitialanzeigen verwendet, verwalten Sie die Verwendung Ihrer Anzeigen auf der Seite **Monetisierung** &gt; **Gewinnbringende Nutzung mit Anzeigen**.
 
 ## <a name="windows-ad-mediation"></a>Windows-Anzeigenvermittlung
 
@@ -40,7 +37,7 @@ Aktivieren Sie das Kontrollkästchen in diesem Abschnitt, wenn Sie Microsoft-Par
 
 Wenn Sie diese Auswahl ändern, müssen Sie Ihre App nicht neu veröffentlichen, damit die Änderungen wirksam werden. Weitere Informationen zu Microsoft-Partneranzeigen finden Sie unter [Informationen zu Partneranzeigen](about-affiliate-ads.md).
 
-> **Hinweis**  Wenn Ihre App die Anzeigenvermittlung verwendet (d. h. ein **AdMediatorControl**-Steuerelement zum Anzeigen von Werbeanzeigen verwendet), kann Ihre App nur Partneranzeigen anzeigen, wenn die Einstellungen für die Anzeigenvermittlung zum Anzeigen von Werbeanzeigen von Microsoft konfiguriert sind.
+> **Hinweis**  Wenn Ihre App die Anzeigenvermittlung verwendet (d.h. ein **AdMediatorControl**-Steuerelement zum Anzeigen von Werbeanzeigen verwendet), kann Ihre App nur Partneranzeigen anzeigen, wenn die Einstellungen für die Anzeigenvermittlung zum Anzeigen von Werbeanzeigen von Microsoft konfiguriert sind.
 
 ## <a name="community-ads"></a>Community-Anzeigen
 
@@ -52,26 +49,25 @@ Wenn Sie diese Auswahl ändern, müssen Sie Ihre App nicht neu veröffentlichen,
 
 In diesem Abschnitt erstellen Sie eine Microsoft Advertising-Anzeigeneinheit. Anzeigeeinheiten müssen Sie nur in den folgenden Szenarien erstellen:
 
--   Ihre App zeigt Werbebanner von Microsoft Advertising mithilfe eines [AdControl](https://msdn.microsoft.com/library/mt313154.aspx)-Objekts an.
--   Ihre App zeigt Video-Interstitialanzeigen aus Microsoft Advertising mithilfe eines [InterstitialAd](https://msdn.microsoft.com/library/mt313189.aspx)-Objekts an.
+-   Ihre App zeigt Banneranzeigen mithilfe eines [AdControl](https://msdn.microsoft.com/library/mt313154.aspx)-Objekts an.
+-   Ihre App zeigt Interstitialanzeigen mithilfe eines [InterstitialAd](https://msdn.microsoft.com/library/mt313189.aspx)-Objekts an.
 
 So erstellen Sie eine Anzeigeneinheit für diese Szenarien:
 
 1.  Der Name der Anzeigeneinheit.
-2.  Wählen Sie den Anzeigeneinheitstyp (**Banner** oder **Video-Interstitialanzeige**).
+2.  Wählen Sie den Anzeigeneinheitstyp (**Banner**, **Interstitialvideo** oder **Interstitialbanner**).
 3.  Wählen Sie den Gerätetyp (**Mobilgerät** oder **PC/Tablet**).
 4.  Klicken Sie auf **Anzeigeneinheit erstellen**.
 
 Ihre Anzeigeneinheiten werden in einer Tabelle am Ende dieses Abschnitts angezeigt. Für jede Anzeigeneinheit werden eine **Anwendungs-ID** und eine **Anzeigeneinheits-ID** angezeigt. Zum Einblenden von Anzeigen in Ihrer App müssen Sie diese Werte in Ihrem Code verwenden:
 
--   Wenn Ihre App Werbebanner anzeigt, weisen Sie diese Werte den Eigenschaften [ApplicationId](https://msdn.microsoft.com/library/mt313174.aspx) und [AdUnitId](https://msdn.microsoft.com/library/mt313171.aspx) Ihres [AdControl](https://msdn.microsoft.com/library/mt313154.aspx)-Objekts hinzu.
--   Wenn Ihre App Video-Interstitialanzeigen anzeigt, übergeben Sie diese Werte an die [RequestAd](https://msdn.microsoft.com/library/mt313192.aspx)-Methode Ihres [InterstitialAd](https://msdn.microsoft.com/library/mt313189.aspx)-Objekts.
+-   Wenn Ihre App Werbebanner anzeigt, weisen Sie diese Werte den Eigenschaften [ApplicationId](https://msdn.microsoft.com/library/mt313174.aspx) und [AdUnitId](https://msdn.microsoft.com/library/mt313171.aspx) Ihres [AdControl](https://msdn.microsoft.com/library/mt313154.aspx)-Objekts hinzu. Weitere Informationen finden Sie unter [AdControl in XAML und .NET](../monetize/adcontrol-in-xaml-and--net.md) und [AdControl in HTML5 und JavaScript](../monetize/adcontrol-in-html-5-and-javascript.md).
+-   Wenn Ihre App Interstitialanzeigen anzeigt, übergeben Sie diese Werte an die [RequestAd](https://msdn.microsoft.com/library/mt313192.aspx)-Methode Ihres [InterstitialAd](https://msdn.microsoft.com/library/mt313189.aspx)-Objekts. Weitere Informationen finden Sie unter [Interstitialanzeigen](../monetize/interstitial-ads.md).
 
-> **Hinweis**  Wenn Ihre App die Anzeigenvermittlung zum Anzeigen von Werbebannern aus Microsoft Advertising verwendet (d. h. ein **AdMediatorControl**-Objekt verwendet), müssen Sie keine Anzeigeneinheiten anfordern. In diesem Szenario werden Microsoft Advertising-Anzeigeeinheiten automatisch generiert.
-
- 
+> **Hinweis**  Wenn Ihre App ein **AdMediatorControl**-Objekt zum Anzeigen von Banneranzeigen aus Microsoft Advertising verwendet, müssen Sie keine Anzeigeneinheiten anfordern. In diesem Szenario werden Microsoft Advertising-Anzeigeeinheiten automatisch generiert.
 
  
 
  
 
+ 

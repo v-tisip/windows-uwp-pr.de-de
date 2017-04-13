@@ -8,27 +8,24 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+keywords: Windows10, UWP
 ms.openlocfilehash: 8b1d7259d16ba963d19c7656ff2572fa659a1710
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="getting-started-with-uwp-for-ios-developers"></a>Erste Schritte mit UWP für iOS-Entwickler
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Wenn Sie iOS-Entwickler sind und die Entwicklung für Windows 10 in Erwägung ziehen, bieten diese Dokumente einen sehr guten Einstieg. Darin werden einige der Konzepte vorgestellt, die Sie kennen müssen, um mit dem Schreiben von Apps beginnen zu können. Außerdem wird erläutert, wie Sie Ihre Apps im Windows Store veröffentlichen können.
+Wenn Sie iOS-Entwickler sind und die Entwicklung für Windows10 in Erwägung ziehen, bieten diese Dokumente einen sehr guten Einstieg. Darin werden einige der Konzepte vorgestellt, die Sie kennen müssen, um mit dem Schreiben von Apps beginnen zu können. Außerdem wird erläutert, wie Sie Ihre Apps im Windows Store veröffentlichen können.
 
 In diesem Abschnitt erfahren Sie schrittweise, wie Sie mit Microsoft Visual Studio und der Programmiersprache C# eine einfache App erstellen und wie sich der Prozess vielleicht von Ihren derzeit verwendeten Tools unterscheidet. (Kein Fan von C#? Andere verfügbare Programmiersprachen und -Tools werden unter [Erste Schritte: Auswählen einer Programmiersprache](getting-started-choosing-a-programming-language.md) behandelt.)
 
-Mit Windows 10 wird eine neue Plattform zum Erstellen beeindruckender Apps für Desktop-, Laptop- und Tablet-Geräte sowie Telefone uvm. eingeführt. Da UWP-Apps viele einzigartige Funktionen bieten, führt die einfache Portierung einer iOS-App dazu, dass die Vorteile dieser Features nicht genutzt werden können. Es empfiehlt sich deshalb, die neuen Steuerelemente und Funktionen auszuprobieren. Sie werden sehen, dass sie die Entwicklungsarbeit erleichtern und die Gestaltung neuer Apps ermöglichen.
+Mit Windows10 wird eine neue Plattform zum Erstellen beeindruckender Apps für Desktop-, Laptop- und Tablet-Geräte sowie Telefone uvm. eingeführt. Da UWP-Apps viele einzigartige Funktionen bieten, führt die einfache Portierung einer iOS-App dazu, dass die Vorteile dieser Features nicht genutzt werden können. Es empfiehlt sich deshalb, die neuen Steuerelemente und Funktionen auszuprobieren. Sie werden sehen, dass sie die Entwicklungsarbeit erleichtern und die Gestaltung neuer Apps ermöglichen.
 
-Fazit: Portieren Sie Ihre App nicht einfach nur, sondern **wandeln Sie sie um**, und profitieren Sie von den neuen Funktionen und neuen Geräten. Zielen Sie nicht auf den kleinsten gemeinsamen Nenner ab, sondern erstellen Sie funktionsreiche Umgebungen, die von einzigartigen Windows 10-Features profitieren, z. B. Live-Kacheln, Benachrichtigungen und Interaktion mit Cortana.
+Fazit: Portieren Sie Ihre App nicht einfach nur, sondern **wandeln Sie sie um**, und profitieren Sie von den neuen Funktionen und neuen Geräten. Zielen Sie nicht auf den kleinsten gemeinsamen Nenner ab, sondern erstellen Sie funktionsreiche Umgebungen, die von einzigartigen Windows10-Features profitieren, z.B. Live-Kacheln, Benachrichtigungen und Interaktion mit Cortana.
 
-Für die ersten Schritte bei diesen exemplarischen Vorgehensweisen benötigen Sie einen Computer, auf dem Windows 10 und Microsoft Visual Studio installiert sind. Sie können diese Software unter [Entwicklerdownloads für die Programmierung von Windows Store-Apps](https://developer.microsoft.com/en-us/windows/downloads) herunterladen. Sie haben keinen PC? Kein Problem: Sie können einen Mac verwenden. Informationen hierzu finden Sie unter [Installieren von Windows und der Entwicklertools auf dem Mac](setting-up-your-mac-with-windows-10.md).
+Für die ersten Schritte bei diesen exemplarischen Vorgehensweisen benötigen Sie einen Computer, auf dem Windows10 und Microsoft Visual Studio installiert sind. Sie können diese Software unter [Entwicklerdownloads für die Programmierung von WindowsStore-Apps](https://developer.microsoft.com/en-us/windows/downloads) herunterladen. Sie haben keinen PC? Kein Problem: Sie können einen Mac verwenden. Informationen hierzu finden Sie unter [Installieren von Windows und der Entwicklertools auf dem Mac](setting-up-your-mac-with-windows-10.md).
 
 | Thema | Beschreibung |
 |-------|-------------|
@@ -46,4 +43,3 @@ Für die ersten Schritte bei diesen exemplarischen Vorgehensweisen benötigen Si
  
 
  
-

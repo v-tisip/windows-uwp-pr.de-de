@@ -1,6 +1,6 @@
 ---
 author: mijacobs
-Description: "Gute Symbole harmonieren mit der Typografie und der übrigen Gestaltungssprache. Sie verwenden keine Metaphern und verdeutlichen lediglich, was benötigt wird, und das so klar und einfach wie möglich."
+Description: "Gute Symbole harmonieren mit der Typografie und der übrigen Gestaltungssprache. Sie verwenden keine Metaphern und geben einfach und schnell nur die erforderlichen Informationen weiter."
 title: Symbole
 ms.assetid: b90ac02d-5467-4304-99bd-292d6272a014
 label: Icons
@@ -10,34 +10,31 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 9ae92b196015fb958e90409f947c1e42184ec0d4
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 07df77f295e6454376b2fd8bcc7f12c9b2956bbc
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="icons-for-uwp-apps"></a>Symbole für UWP-Apps
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Gute Symbole harmonieren mit der Typografie und der übrigen Gestaltungssprache. Sie verwenden keine Metaphern und verdeutlichen lediglich, was benötigt wird, und das so klar und einfach wie möglich. 
+Gute Symbole harmonieren mit der Typografie und der übrigen Gestaltungssprache. Sie verwenden keine Metaphern und geben einfach und schnell nur die erforderlichen Informationen weiter. 
 
 ## <a name="linear-scaling-size-ramps"></a>Größenabstufungen für lineare Skalierungen 
 
 <table>
     <tr> 
-        <td>16 px x 16 px</td>
-        <td>24 px x 24 px</td>
-        <td>32 px x 32 px</td>
-        <td>48 px x 48 px</td>
+        <td>16px x 16px</td>
+        <td>24px x 24px</td>
+        <td>32px x 32px</td>
+        <td>48px x 48px</td>
     </tr>
     <tr> 
-        <td>![Symbole mit 16 x 16 effektiven Pixeln](images/icons-16x16.png)</td>
-        <td>![Symbole mit 24 x 24 effektiven Pixeln](images/icons-24x24.png)</td>
-        <td>![Symbole mit 32 x 32 effektiven Pixeln](images/icons-32x32.png)</td>
-        <td>![Symbole mit 48 x 48 effektiven Pixeln](images/icons-48x48.png)</td>
+        <td>![Symbole mit 16x16 effektiven Pixeln](images/icons-16x16.png)</td>
+        <td>![Symbole mit 24x24 effektiven Pixeln](images/icons-24x24.png)</td>
+        <td>![Symbole mit 32x32 effektiven Pixeln](images/icons-32x32.png)</td>
+        <td>![Symbole mit 48x48 effektiven Pixeln](images/icons-48x48.png)</td>
     </tr>
 </table>
 
@@ -45,7 +42,7 @@ Gute Symbole harmonieren mit der Typografie und der übrigen Gestaltungssprache.
 
 Grundsätzlich sollten Symbole den vorhandenen Platz mit geringem Abstand möglichst vollständig ausnutzen. Diese Formen sind Ausgangspunkte für die Bestimmung der Größe einfacher Formen. 
 
-![Raster der Größe 32 x 32 px](images/icons-common-shapes.png)
+![Raster der Größe 32x32px](images/icons-common-shapes.png)
 
 Verwenden Sie die Form, die der Ausrichtung des Symbols entspricht, und berücksichtigen Sie dabei diese grundlegenden Parameter. Symbole müssen die Form nicht unbedingt ausfüllen oder vollständig hinein passen. Sie können nach Bedarf angepasst werden, um ausgewogen zu wirken. 
 
@@ -134,9 +131,9 @@ Wir empfehlen, beim Erstellen von Symbolen ausschließlich rein geometrische For
 
 ## <a name="filled-shapes"></a>Gefüllte Formen 
 
-Bei Bedarf können Symbole gefüllte Formen enthalten, aber sie sollten bei einer Rastergröße von 32 × 32 px maximal 4 px groß sein. Gefüllte Kreise dürfen maximal 6 × 6 px groß sein. 
+Bei Bedarf können Symbole gefüllte Formen enthalten, aber sie sollten bei einer Rastergröße von 32×32px maximal 4px groß sein. Gefüllte Kreise dürfen maximal 6×6px groß sein. 
 
-![Füllung mit 5 px x 8 px ](images/icons-filled-shapes.png)
+![Füllung mit 5pxx8px ](images/icons-filled-shapes.png)
 
 ## <a name="badges"></a>Signale
 
@@ -178,9 +175,8 @@ Die Standardposition für jeden Status bzw. jede Aktion ist unten rechts. Verwen
 
 ### <a name="badge-sizing"></a>Signalgröße
 
-Signale sollten bei einem Raster der Größe 32 × 32 px 10 bis 18 px umfassen. 
+Signale sollten bei einem Raster der Größe 32×32px 10 bis 18px umfassen. 
 
 ## <a name="related-articles"></a>Verwandte Artikel
 
 * [Richtlinien für die Ressourcen für Kacheln und Symbole](../controls-and-patterns/tiles-and-notifications-app-assets.md)
-

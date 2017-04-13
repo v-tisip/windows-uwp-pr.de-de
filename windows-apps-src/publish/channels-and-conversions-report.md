@@ -8,30 +8,27 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Kanäle, Konvertierungen, Bericht, Analysen"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 60f639c6bad73273a6cc7f83cf65fdf321211ba1
-ms.lasthandoff: 02/07/2017
-
+keywords: "Windows10, UWP, Kanäle, Konvertierungen, Bericht, Analysen"
+ms.openlocfilehash: cbdd2e530594b97847196941580e2837d71698d0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="channels-and-conversions-report"></a>Bericht zu Kanälen und Abschlüssen
 
 
 Im Bericht zu **Kanälen und Konvertierungen** im Windows Dev Center-Dashboard können Sie sehen, wie Kunden unter Windows 10 zu dem Eintrag Ihrer App gelangt sind. Sie können [benutzerdefinierte Werbekampagnen](create-a-custom-app-promotion-campaign.md) für Ihre App oder deren Add-Ons nachverfolgen und sehen, wie viele dieser Besuche zu neuen Käufen führen. Sie können diese Informationen in Ihrem Dashboard anzeigen oder [den Bericht herunterladen](download-analytic-reports.md), um die Daten offline anzuzeigen.
 
-> **Wichtig**  In diesem Bericht werden nur Seitenaufrufe und Konvertierungsinformationen von Kunden unter Windows 10 angezeigt.
+> **Wichtig**  In diesem Bericht werden nur Seitenaufrufe und Konvertierungsinformationen von Kunden unter Windows10 angezeigt.
 
  
 
-In diesem Bericht bezieht sich ein *Kanal* auf die Methode, über die ein Kunde zu der Eintragsseite für Ihre App gelangt ist (z. B. durch Browsen und Suchen im Store, über einen Link von einer externen Website oder einen Link aus einer Ihrer benutzerdefinierten Kampagnen usw.). Die folgenden Kanaltypen sind enthalten:
+In diesem Bericht bezieht sich ein *Kanal* auf die Methode, über die ein Kunde zu der Eintragsseite für Ihre App gelangt ist (z.B. durch Browsen und Suchen im Store, über einen Link von einer externen Website oder einen Link aus einer Ihrer benutzerdefinierten Kampagnen usw.). Die folgenden Kanaltypen sind enthalten:
 
 -   **Store-Verkehr:** Der Kunde hat den Store durchsucht und ist dabei auf den Eintrag Ihrer App aufmerksam geworden.
 -   **Benutzerdefinierte Kampagne:** Der Kunde ist einem Link gefolgt, der eine [benutzerdefinierte Kampagnen-ID](create-a-custom-app-promotion-campaign.md) verwendet.
 -   **Sonstiges:** Der Kunde ist einem externen Link von einer Website (ohne benutzerdefinierte Kampagnen-ID) zu Ihrem App-Eintrag gefolgt oder der Kunde ist einem Link zu Ihrem App-Eintrag gefolgt, der von einer Onlinesuchmaschine zurückgegeben wurde.
 
-Ein *Seitenaufruf* bedeutet, dass ein Kunde die Store-Eintragsseite für Ihre App über den webbasierten Store oder innerhalb der Store-App auf Windows 10 angezeigt hat.
+Ein *Seitenaufruf* bedeutet, dass ein Kunde die Store-Eintragsseite für Ihre App über den webbasierten Store oder innerhalb der Store-App auf Windows10 angezeigt hat.
 
 *Konvertierung* bedeutet, dass ein Kunde eine Lizenz für Ihre App (entweder für eine kostenpflichtige oder eine kostenlose App) oder für ein Add-On neu erworben hat.
 
@@ -99,4 +96,3 @@ Das Diagramm **Aufschlüsselung der Konvertierungen** zeigt folgende Details zu 
  
 
  
-

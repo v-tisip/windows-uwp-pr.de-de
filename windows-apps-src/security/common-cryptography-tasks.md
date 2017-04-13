@@ -8,18 +8,15 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 3ce185e4bdd247c8b0ac71401a2ff863c64f880a
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 3a4dfeb102d8db35a6ae032eb5001b4873456b82
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="common-cryptography-tasks"></a>Allgemeine Kryptografieaufgaben
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Diese Artikel enthalten Beispielcode für allgemeine Kryptografieaufgaben der Universellen Windows-Plattform (UWP). Hierzu zählt das Erstellen zufälliger Zahlen, das Vergleichen von Puffern, das Konvertieren zwischen Zeichenfolgen und binären Daten, das Kopieren in und aus Bytearrays sowie das Codieren und Decodieren von Daten.
 
@@ -32,4 +29,3 @@ Diese Artikel enthalten Beispielcode für allgemeine Kryptografieaufgaben der Un
 | [Kopieren in und aus Bytearrays](copy-to-and-from-byte-arrays.md)                       | Dieser Beispielcode zeigt, wie Sie in einer UWP-App in und aus Bytearrays kopieren können.                             |
 | [Codieren und Decodieren von Daten](encode-and-decode-data.md)                                   | Dieser Beispielcode zeigt, wie Sie base64- und Hexadezimaldaten in einer UWP-App codieren und decodieren.            |
  
-

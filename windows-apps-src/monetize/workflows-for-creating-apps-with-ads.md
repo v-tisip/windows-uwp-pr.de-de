@@ -8,14 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Anzeigen, Werbung, AdControl, InterstitialAd"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: f01b69502d41a7128ac5f59589f6d014d92f52a3
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP, Anzeigen, Werbung, AdControl, InterstitialAd
+ms.openlocfilehash: 93b56259314c54a56cd8ebbef89694319a95e41c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="workflows-for-creating-apps-with-ads"></a>Workflows für das Erstellen von Apps mit Anzeigen
 
 
@@ -54,7 +51,7 @@ Verwenden Sie die Anweisungen in den folgenden exemplarischen Vorgehensweisen, u
 
 Wenn Sie **AdControl** oder **InterstitialAd** zum Anzeigen von Werbung in Ihrer App verwenden, müssen Sie eine Anwendungs-ID und eine Anzeigeneinheits-ID im Code angeben, um die App mit Ihrem Windows Dev Center-Konto zu verknüpfen und um Anzeigen zu schalten. Während Sie Ihre App entwickeln, verwenden Sie die Testwerte für die Anwendungs-ID und Anzeigeneinheits-ID, um zu beobachten, wie die App Anzeigen während der Testphase rendert. Dadurch können Sie während der Testphase feststellen, wie die App Anzeigen empfängt und rendert. Weitere Informationen finden Sie unter [Testmoduswerte](test-mode-values.md).
 
-Vollständige Beispielprojekte, die veranschaulichen, wie Sie JavaScript-/HTML- und XAML-Apps unter Verwendung von C# und C++ Werbebanner und Video-Interstitialanzeigen hinzufügen, finden Sie in den [Anzeigenbeispielen auf GitHub](http://aka.ms/githubads).
+Vollständige Beispielprojekte, die veranschaulichen, wie Sie JavaScript-/HTML- und XAML-Apps unter Verwendung von C# und C++ Werbebanner und Interstitialwerbung hinzufügen, finden Sie in den [Anzeigenbeispielen auf GitHub](http://aka.ms/githubads).
 
 ## <a name="configure-your-app-to-receive-live-ads"></a>Konfigurieren der App für den Empfang von Liveanzeigen
 
@@ -69,4 +66,3 @@ Nachdem die App veröffentlicht wurde und im Windows Store verfügbar ist, könn
  
 
  
-

@@ -8,14 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Windows Store-Sammlungs-API, Produkte anzeigen"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+keywords: Windows10, UWP, Windows Store-Sammlungs-API, Produkte anzeigen
 ms.openlocfilehash: 29db10862533e7b15c7a676fc3aecd4ba58f9514
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="query-for-products"></a>Produktabfrage
 
 
@@ -28,12 +25,12 @@ Diese Methode ist so konzipiert, dass sie von Ihrem Dienst als Reaktion auf eine
 
 Zur Verwendung dieser Methode benötigen Sie:
 
-* Ein Azure AD-Zugriffstoken, das mit dem Zielgruppen-URI `https://onestore.microsoft.com` erstellt wurde.
+* Ein AzureAD-Zugriffstoken, das mit dem Zielgruppen-URI `https://onestore.microsoft.com` erstellt wurde.
 * Ein Windows Store-ID-Schlüssel, der die Identität des Benutzers darstellt, dessen Produkte Sie abrufen möchten.
 
 Weitere Informationen finden Sie unter [Verwalten von Produktansprüchen aus einem Dienst](view-and-grant-products-from-a-service.md).
 
-## <a name="request"></a>Anfordern
+## <a name="request"></a>Anforderung
 
 ### <a name="request-syntax"></a>Anforderungssyntax
 
@@ -47,7 +44,7 @@ Weitere Informationen finden Sie unter [Verwalten von Produktansprüchen aus ein
 
 | Header         | Typ   | Beschreibung                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| Autorisierung  | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;.                           |
+| Autorisierung  | String | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;.                           |
 | Host           | string | Muss auf den Wert **collections.mp.microsoft.com** festgelegt werden.                                            |
 | Content-Length | number | Die Länge des Anforderungstexts.                                                                       |
 | Inhaltstyp   | string | Gibt den Anforderungs- und Antworttyp an. Derzeit wird als einziger Wert **application/json** unterstützt. |
@@ -73,7 +70,7 @@ Das UserIdentity-Objekt enthält die folgenden Parameter.
 
 | Parameter            | Typ   |  Beschreibung      | Erforderlich |
 |----------------------|--------|----------------|----------|
-| identityType         | string | Geben Sie den Zeichenfolgenwert **b2b** an.    | Ja.      |
+| identityType         | string | Gibt den Zeichenfolgenwert **b2b** an.    | Ja      |
 | identityValue        | Zeichenfolge | Der [Windows Store-ID-Schlüssel](view-and-grant-products-from-a-service.md#step-4), der die Identität des Benutzers darstellt, für den Sie Produkte abfragen möchten.  | Ja      |
 | localTicketReference | string | Der angeforderte Bezeichner für die zurückgegebenen Produkte. Die zurückgegebenen Elemente im Antworttext verfügen über ein übereinstimmendes *localTicketReference*-Element. Es wird empfohlen, denselben Wert als *userId*-Anspruch im Windows Store-ID-Schlüssel zu verwenden. | Ja      |
 
@@ -83,7 +80,7 @@ Das ProductSkuId-Objekt enthält die folgenden Parameter.
 
 | Parameter | Typ   | Beschreibung          | Erforderlich |
 |-----------|--------|----------------------|----------|
-| productId | string | Die [Store-ID](in-app-purchases-and-trials.md#store-ids) für ein [Produkt](in-app-purchases-and-trials.md#products-skus-and-availabilities) im Windows Store-Katalog. Ein Beispiel für eine Store-ID für ein Produkt ist 9NBLGGH42CFD. | Ja      |
+| Produkt-ID | string | Die [Store-ID](in-app-purchases-and-trials.md#store-ids) für ein [Produkt](in-app-purchases-and-trials.md#products-skus-and-availabilities) im Windows Store-Katalog. Ein Beispiel für eine Store-ID für ein Produkt ist 9NBLGGH42CFD. | Ja      |
 | skuID     | string | Die [Store-ID](in-app-purchases-and-trials.md#store-ids) für die [SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities) eines Produkts im Windows Store-Katalog. Ein Beispiel für eine Store-ID für eine SKU ist 0010.       | Ja      |
 
 <span/>
@@ -148,9 +145,9 @@ Das CollectionItemContractV6-Objekt enthält die folgenden Parameter.
 | orderId              | string             | Die Auftrags-ID, mit der dieser Artikel erworben wurde (sofern angegeben).              | Nein       |
 | orderLineItemId      | string             | Die Position des Auftrags, für den dieser Artikel erworben wurde (sofern vorhanden).              | Nein       |
 | ownershipType        | string             | Die Zeichenfolge *OwnedByBeneficiary*.   | Ja      |
-| productId            | string             | Die [Store-ID](in-app-purchases-and-trials.md#store-ids) für das [Produkt](in-app-purchases-and-trials.md#products-skus-and-availabilities) im Windows Store-Katalog. Ein Beispiel für eine Store-ID für ein Produkt ist 9NBLGGH42CFD.          | Ja      |
-| productType          | string             | Einer der folgenden Produkttypen: **Application**, **Durable** oder **UnmanagedConsumable**.        | Ja      |
-| purchasedCountry     | string             | N/V   | Nein       |
+| Produkt-ID            | string             | Die [Store-ID](in-app-purchases-and-trials.md#store-ids) für das [Produkt](in-app-purchases-and-trials.md#products-skus-and-availabilities) im Windows Store-Katalog. Ein Beispiel für eine Store-ID für ein Produkt ist 9NBLGGH42CFD.          | Ja      |
+| Produkttyp          | string             | Einer der folgenden Produkttypen: **Application**, **Durable** oder **UnmanagedConsumable**.        | Ja      |
+| purchasedCountry     | string             | Nicht verfügbar   | Nein       |
 | purchaser            | IdentityContractV6 | Die Identität des Artikelkäufers (sofern vorhanden). Details zu diesem Objekt finden Sie weiter unten.        | Nein       |
 | quantity             | number             | Die Artikelmenge. Derzeit beträgt die Menge immer 1.      | Nein       |
 | skuId                | string             | Die [Store-ID](in-app-purchases-and-trials.md#store-ids) für die [SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities) des Produkts im Windows Store-Katalog. Ein Beispiel für eine Store-ID für eine SKU ist 0010.     | Ja      |
@@ -219,4 +216,3 @@ Date: Tue, 22 Sep 2015 20:28:18 GMT
 * [Melden von verbrauchbaren Produkten als erfüllt](report-consumable-products-as-fulfilled.md)
 * [Gewähren kostenloser Produkte](grant-free-products.md)
 * [Verlängern eines Windows Store-ID-Schlüssels](renew-a-windows-store-id-key.md)
-

@@ -1,6 +1,6 @@
 ---
 author: jnHs
-Description: "Verwenden Sie im Windows Dev Center-Dashboard die Berichte zur Partnerleistung auf App- und Kontoebene, um Leistungsdaten für die Partneranzeigen in Ihren Apps anzuzeigen."
+Description: "Verwenden Sie im WindowsDevCenter-Dashboard die Berichte zur Partnerleistung auf App- und Kontoebene, um Leistungsdaten für die Partneranzeigen in Ihren Apps anzuzeigen."
 title: Bericht zur Partneranzeigen-Performance
 ms.assetid: 38AD494C-0F85-4FED-8732-9064D1FC503D
 ms.author: wdg-dev-content
@@ -8,22 +8,19 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 3b85abb11049a1e52e9d6a9cc61aebab407207a4
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 5187a644e4a952a8d3b199c68c2266e6e7c634f1
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="affiliates-performance-report"></a>Bericht zur Partneranzeigen-Performance
 
-Wenn Sie sich für die [Teilnahme am Microsoft-Partneranzeigenprogramm](about-affiliate-ads.md) entschieden haben, können Sie sich in den folgenden Berichten des Windows Dev Center-Dashboards Leistungsdaten für die in Ihrer App angezeigten Partneranzeigen ansehen:
+Wenn Sie sich für die [Teilnahme am Microsoft-Partneranzeigenprogramm](about-affiliate-ads.md) entschieden haben, können Sie sich in den folgenden Berichten des WindowsDevCenter-Dashboards Leistungsdaten für die in Ihrer App angezeigten Partneranzeigen ansehen:
 
 -   [Bericht zur Partnerleistung auf App-Ebene](#app-level-affiliate-ads-performance-report). Dieser Bericht enthält die Leistungsdaten für die Partneranzeigen in der aktuell im Dashboard ausgewählten App.
 -   [Bericht zur Partnerleistung auf Dashboardebene](#dashboard-level-affiliate-ads-performance-report). Dieser Bericht enthält eine Zusammenfassung der Leistungsdaten für Partneranzeigen in allen Apps, die Sie beim Microsoft-Partneranzeigenprogramm registriert haben.
 
-Die Berichte werden täglich aktualisiert. Standardmäßig werden die Berichte nach der Leistung in den letzten 30 Tagen auf allen Geräten gefiltert. Klicken Sie zum Ändern dieser Filter auf **Seitenfilter**, und wählen Sie einen anderen Zeitrahmen oder einen individuellen Gerätetyp aus. Beachten Sie, dass die Aggregation der Daten basierend auf UTC und nicht Ihrer jeweiligen Zeitzone erfolgt.
+Die Berichte werden täglich aktualisiert. Standardmäßig werden die Berichte nach der Leistung in den letzten 30Tagen auf allen Geräten gefiltert. Klicken Sie zum Ändern dieser Filter auf **Seitenfilter**, und wählen Sie einen anderen Zeitrahmen oder einen individuellen Gerätetyp aus. Beachten Sie, dass die Aggregation der Daten basierend auf UTC und nicht Ihrer jeweiligen Zeitzone erfolgt.
 
 Die folgenden Abschnitte enthalten weitere Details zu diesen Berichten.
 
@@ -54,4 +51,3 @@ Der Abschnitt **Affiliates performance** auf der Seite **Dashboardübersicht** e
  
 
  
-

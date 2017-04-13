@@ -8,17 +8,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 203face64ddb925601d23274c4e9cf9ab6d7c6f8
-ms.lasthandoff: 02/07/2017
-
+keywords: windows10, UWP
+ms.openlocfilehash: de9b10324d212a92a21f64f1b857cdf465e26b4c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="websockets"></a>WebSockets
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Wichtige APIs**
 
@@ -31,7 +28,7 @@ Mit dem [WebSocket-Protokoll](http://tools.ietf.org/html/rfc6455) werden Daten u
 
 | MessageWebSocket                                                         | StreamWebSocket                                                                               |
 |--------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
-| Geeignet für die meisten Szenarien, in denen die Nachrichten nicht besonders groß sind.   | Geeignet für Szenarien, in denen große Dateien (z. B. Fotos oder Videos) übertragen werden. |
+| Geeignet für die meisten Szenarien, in denen die Nachrichten nicht besonders groß sind.   | Geeignet für Szenarien, in denen große Dateien (z.B. Fotos oder Videos) übertragen werden. |
 | Ermöglicht die Benachrichtigung, dass eine gesamte WebSocket-Nachricht erhalten wurde. | Ermöglicht, dass bei jedem Lesevorgang Abschnitte einer Nachricht gelesen werden.                             |
 | Unterstützt UTF-8-Nachrichten und binäre Nachrichten.                                 | Unterstützt nur binäre Nachrichten.                                                                |
 | Ähnlich wie ein UDP- oder Datagrammsocket.                                     | Ähnlich wie ein TCP- oder Streamsocket.                                                            |
@@ -266,7 +263,7 @@ Bei Parameterprüfungsfehlern kann eine App den **HRESULT**-Wert aus der Ausnahm
 
 ## <a name="setting-timeouts-on-websocket-operations"></a>Festlegen von Timeouts für WebSocket-Vorgänge
 
-Die MessageWebSocket-Klasse und die StreamWebSocket-Klasse verwenden einen internen Systemdienst, um WebSocket-Clientanforderungen zu senden und Antworten von einem Server zu empfangen. Der standardmäßige Timeoutwert, der für einen WebSocket-Verbindungsvorgang verwendet wird, beträgt 60 Sekunden. Wenn der HTTP-Server, der WebSockets unterstützt, vorübergehend nicht verfügbar oder durch einen Netzwerkausfall blockiert ist und der Server nicht auf die WebSocket-Verbindungsanforderung antwortet oder antworten kann, wartet der interne Systemdienst die standardmäßig festgelegten 60 Sekunden ab, bevor ein Fehler zurückgegeben wird, der in der WebSocket ConnectAsync-Methode zur Auslösung einer Ausnahme führt. Falls die Namensabfrage für einen HTTP-Servernamen im URI mehrere IP-Adressen für den Namen zurückgibt, testet der interne Systemdienst bis zu fünf IP-Adressen für die Website. Dabei wird jeweils das Standardtimeout von 60 Sekunden eingehalten, bevor ein Fehler auftritt. Eine App, die eine WebSocket-Verbindungsanforderung ausführt, kann mehrere Minuten lang erneute Versuche für mehrere IP-Adressen durchführen, bevor ein Fehler zurückgegeben und eine Ausnahme ausgelöst wird. Dieses Verhalten kann für Benutzer den Anschein erwecken, als ob die App nicht mehr reagiert. Das Standardtimeout, das für Sende- und Empfangsvorgänge nach dem Herstellen einer WebSocket-Verbindung verwendet wird, beträgt 30 Sekunden.
+Die MessageWebSocket-Klasse und die StreamWebSocket-Klasse verwenden einen internen Systemdienst, um WebSocket-Clientanforderungen zu senden und Antworten von einem Server zu empfangen. Der standardmäßige Timeoutwert, der für einen WebSocket-Verbindungsvorgang verwendet wird, beträgt 60Sekunden. Wenn der HTTP-Server, der WebSockets unterstützt, vorübergehend nicht verfügbar oder durch einen Netzwerkausfall blockiert ist und der Server nicht auf die WebSocket-Verbindungsanforderung antwortet oder antworten kann, wartet der interne Systemdienst die standardmäßig festgelegten 60Sekunden ab, bevor ein Fehler zurückgegeben wird, der in der WebSocket ConnectAsync-Methode zur Auslösung einer Ausnahme führt. Falls die Namensabfrage für einen HTTP-Servernamen im URI mehrere IP-Adressen für den Namen zurückgibt, testet der interne Systemdienst bis zu fünf IP-Adressen für die Website. Dabei wird jeweils das Standardtimeout von 60Sekunden eingehalten, bevor ein Fehler auftritt. Eine App, die eine WebSocket-Verbindungsanforderung ausführt, kann mehrere Minuten lang erneute Versuche für mehrere IP-Adressen durchführen, bevor ein Fehler zurückgegeben und eine Ausnahme ausgelöst wird. Dieses Verhalten kann für Benutzer den Anschein erwecken, als ob die App nicht mehr reagiert. Das Standardtimeout, das für Sende- und Empfangsvorgänge nach dem Herstellen einer WebSocket-Verbindung verwendet wird, beträgt 30Sekunden.
 
 Wenn Apps schneller reagieren und diese Probleme verringert werden sollen, können Sie ein kürzeres Timeout für Verbindungsanforderungen festlegen. Somit tritt der Timeoutfehler früher auf als durch die Standardeinstellungen vorgegeben.
 
@@ -348,5 +345,4 @@ Das folgende Beispiel erstellt eine Aufgabe, die nach der angegebenen Verzögeru
         });
     }
 ```
-
 

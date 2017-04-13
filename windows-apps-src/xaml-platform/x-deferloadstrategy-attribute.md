@@ -8,17 +8,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 4ccc18920a98b3c2258b4965e96fa063124d0546
-ms.lasthandoff: 02/07/2017
-
+keywords: windows10, UWP
+ms.openlocfilehash: 0fd1e58549ba19397948864fe5fe0b31fcaf01d7
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xdeferloadstrategy-attribute"></a>x:DeferLoadStrategy-Attribut
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **x:DeferLoadStrategy="Lazy"** ist ein Feature, das zur Leistungsoptimierung des Starts oder von Strukturerstellungsszenarien einer XAML-App verwendet werden kann. Mit **X: DeferLoadStrategy = "Lazy"** wird die Erstellung eines Elements und seiner untergeordneten Elemente verzögert und damit Startzeit und Speicherverbrauch verringert, da die Elemente nicht erstellt werden müssen. Dies ist zur Reduzierung der Kosten für Elemente nützlich, die selten oder nur bedingt benötigt werden. Das Element wird verwirklicht, wenn Code oder VisualStateManager darauf verweist.
 
@@ -36,7 +33,7 @@ Die Einschränkungen für die Verwendung von **x:DeferLoadStrategy** sind:
 
 -   Erfordert eine Definition von [x:Name](x-name-attribute.md), da es eine Methode geben muss, um das Element später zu suchen.
 -   Nur ein [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) kann als verzögert markiert werden, mit Ausnahme der von [**FlyoutBase**](https://msdn.microsoft.com/library/windows/apps/dn279249) abgeleiteten Typen.
--   Stammelemente können in [**Page**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.page), [**UserControls**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.usercontrol) oder [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348) nicht verzögert werden.
+-   Stammelemente können in [**Page**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page), [**UserControls**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.usercontrol) oder [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348) nicht verzögert werden.
 -   Elemente in einem [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) können nicht verzögert werden.
 -   Funktioniert nicht mit lose mit [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048) geladenem XAML-Code.
 -   Durch das Verschieben eines übergeordneten Elements werden alle Elemente gelöscht, die nicht erkannt wurden.
@@ -93,5 +90,4 @@ private void RealizeElements_Click(object sender, RoutedEventArgs e)
     this.FindName("DeferredGrid"); // This will realize the deferred grid
 }
 ```
-
 

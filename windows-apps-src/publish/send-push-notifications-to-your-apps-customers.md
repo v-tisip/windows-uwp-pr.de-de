@@ -1,28 +1,32 @@
 ---
-author: shawjohn
-Description: "Erfahren Sie, wie Sie benutzerorientierte Pushbenachrichtigungen vom Windows Dev Center an die Kunden Ihrer App senden können, um diese zu einer Aktion zu animieren, z. B. eine App bewerten oder ein Add-On kaufen."
+author: JnHs
+Description: "Erfahren Sie, wie Sie benutzerorientierte Pushbenachrichtigungen vom Windows Dev Center an die Kunden Ihrer App senden können, um diese zu einer Aktion zu animieren, z.B. eine App bewerten oder ein Add-On kaufen."
 title: Senden benutzerorientierter Pushbenachrichtigungen an die Kunden Ihrer App
-ms.author: johnshaw
-ms.date: 02/08/2017
+ms.author: wdg-dev-content
+ms.date: 02/28/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: 16386c81-702d-47cd-9f91-67659f5dca73
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: a2bd3308863b6343a7616bf86e0b0036f1631bcd
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: ca57ff45d440ebd68f7fb85b7d6a5da0a9f1995c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="send-targeted-push-notifications-to-your-apps-customers"></a>Senden benutzerorientierter Pushbenachrichtigungen an die Kunden Ihrer App
 
-Ihr Erfolg als App-Entwickler hängt davon ab, dass Sie Ihre Kunden zum richtigen Zeitpunkt und mit der richtigen Nachricht erreichen. Windows Dev Center bietet eine datengestützte Kundenbindungsplattform, über die Sie allen Kunden oder nur einer bestimmten Gruppe von Windows 10-Kunden, die den von Ihnen für ein [Kundensegment](create-customer-segments.md) definierten Kriterien entsprechen, Pushbenachrichtigungen senden können.
+Ihr Erfolg als App-Entwickler hängt davon ab, Ihre Kunden zum richtigen Zeitpunkt und mit der richtigen Botschaft zu erreichen. Windows Dev Center bietet eine datengestützte Kundenbindungsplattform, über die Sie allen Kunden oder nur einer bestimmten Gruppe von Windows10-Kunden, die den von Ihnen für ein [Kundensegment](create-customer-segments.md) definierten Kriterien entsprechen, Pushbenachrichtigungen senden können.
 
-Mit benutzerorientierten Pushbenachrichtigungen können Sie Ihre Kunden zu einer Aktion animiern, z. B. eine App bewerten, ein Add-On kaufen, ein neues Feature ausprobieren oder eine andere App herunterladen.
+Mit benutzerorientierten Pushbenachrichtigungen können Sie Ihre Kunden zu einer Aktion animiern, z.B. eine App bewerten, ein Add-On kaufen, ein neues Feature ausprobieren oder eine andere App herunterladen.
 
 > **Wichtig** Benutzerorientierte Pushbenachrichtigungen können nur mit UWP-Apps verwendet werden.
+
+Beachten Sie beim Inhalt der Benachrichtigungen Folgendes:
+- Der Inhalt Ihrer Benachrichtigungen muss den [Inhaltsrichtlinien](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#content_policies) des Store entsprechen.
+- Der Inhalt Ihrer Benachrichtigung sollte keine vertraulichen oder potenziell vertraulichen Informationen enthalten.
+- Obgleich wir bemüht sind, Ihre Benachrichtigung wie geplant zu übermitteln, treten gelegentlich möglicherweise Latenzprobleme auf, die sich auf die Zustellung auswirken.
+- Achten Sie darauf, nicht zu häufig Benachrichtigungen zu senden. Mehr als einmal alle 30Minuten kann aufdringlich wirken (und in vielen Fällen ist es vorzuziehen, seltener als alle 30 Minuten eine Benachrichtigung zu senden).
+- Beachten Sie Folgendes: Wenn ein Kunde, der Ihre App verwendet (und zum Zeitpunkt, zu dem die Segmentmitgliedschaft bestimmt wird, mit seinem Microsoft-Konto angemeldet ist) das Gerät später an eine andere Person übergibt, sieht die andere Person unter Umständen die Benachrichtigung, die für den ursprünglichen Kunden bestimmt war. Weitere Informationen finden Sie unter [Konfigurieren Ihrer App für benutzerorientierte Pushbenachrichtigungen](../monetize/configure-your-app-to-receive-dev-center-notifications.md#notification-customers).
 
 ## <a name="getting-started-with-push-notifications"></a>Erste Schritte mit Pushbenachrichtigungen
 
@@ -33,18 +37,21 @@ Sie müssen drei übergeordnete Schritte durchführen, um Ihre Kunden mithilfe v
 
 ## <a name="to-create-and-send-a-targeted-push-notification"></a>So erstellen und senden Sie eine benutzerorientierte Pushbenachrichtigung
 
-1. Installieren Sie ggf. das [Microsoft Store Services SDK](http://aka.ms/store-em-sdk), und rufen Sie die [RegisterNotificationChannelAsync](https://msdn.microsoft.com/library/windows/apps/mt771190.aspx)-Methode im Startcode Ihrer App auf, um Ihre App für den Empfang von Benachrichtigungen zu registrieren. Weitere Informationen zum Aufrufen dieser Methode finden Sie unter [Konfigurieren Ihrer App zum Empfangen von Dev Center-Benachrichtigungen](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
-2.    Wählen Sie im [Windows Dev Center-Dashboard](https://developer.microsoft.com/dashboard/overview) Ihre App aus.
-3.    Erweitern Sie im linken Navigationsmenü **Dienste**, und wählen Sie **Pushbenachrichtigungen** aus.
-4.    Wählen Sie auf der Seite **Benutzerorientierte Pushbenachrichtigungen** die Option **Neue Benachrichtigung** aus.
-5.    Wählen Sie im Abschnitt **Vorlage auswählen** den zu sendenden Benachrichtigungstyp aus. Weitere Informationen finden Sie unter [Vorlagenbenachrichtigungstypen](#notification-template-types).
+Befolgen Sie diese Schritte, um eine Pushbenachrichtigung im Dashboard zu erstellen und an ein bestimmtes Kundensegment zu senden.
+
+> **Hinweis** Bevor Ihre App von Dev Center benutzerorientierte Pushbenachrichtigungen empfangen kann, müssen Sie zuerst die Methode [RegisterNotificationChannelAsync](https://msdn.microsoft.com/library/windows/apps/mt771190.aspx) in Ihrer App aufrufen, um Ihre App für den Empfang von Benachrichtigungen zu registrieren. Diese Methode ist im [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) verfügbar. Weitere Informationen zum Aufrufen dieser Methode, einschließlich eines Codebeispiels, finden Sie unter [Konfigurieren Ihrer App zum Empfangen von Dev Center-Benachrichtigungen](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
+
+1.    Wählen Sie im [WindowsDevCenter-Dashboard](https://developer.microsoft.com/dashboard/overview) Ihre App aus.
+2.    Erweitern Sie im linken Navigationsmenü **Dienste**, und wählen Sie **Pushbenachrichtigungen** aus.
+3.    Wählen Sie auf der Seite **Benutzerorientierte Pushbenachrichtigungen** die Option **Neue Benachrichtigung** aus.
+4.    Wählen Sie im Abschnitt **Vorlage auswählen** den zu sendenden Benachrichtigungstyp aus. Weitere Informationen finden Sie unter [Vorlagenbenachrichtigungstypen](#notification-template-types).
   ![Benachrichtigungsvorlagen](images/push-notifications-template.png)
-6.    Wählen Sie im Abschnitt **Benachrichtigungseinstellungen** einen **Namen** für die Benachrichtigung aus, und wählen Sie anschließend die **Kundengruppe** aus, an die die Benachrichtigung gesendet werden soll.
-Wenn Sie noch kein Segment erstellt haben, wählen Sie **Neue Kundengruppe erstellen** aus. Beachten Sie, dass es 24 Stunden dauert, bis ein neues Segment für Benachrichtigungen verfügbar ist. Weitere Informationen finden Sie unter [Erstellen von Kundensegmenten](create-customer-segments.md).
-7.    Wenn Sie festlegen möchten, wann eine Benachrichtigung gesendet werden soll, deaktivieren Sie das Kontrollkästchen **Benachrichtigung sofort senden**, und wählen Sie ein bestimmtes Datum und eine Uhrzeit aus.
-8.    Wenn die Benachrichtigung zu einem bestimmten Zeitpunkt ablaufen soll, deaktivieren Sie das Kontrollkästchen **Notification never expires**, und wählen Sie ein bestimmtes Ablaufdatum und eine Uhrzeit aus.
-9.    Wählen Sie im Abschnitt der **Benachrichtigungsinhalt** im Menü **Sprache** die Sprachen aus, in denen die Benachrichtigung angezeigt werden soll. Weitere Informationen finden Sie unter [Übersetzen Ihrer Benachrichtigungen](#translate-your-notifications).
-10.    Geben Sie im Abschnitt **Optionen** Text ein, und konfigurieren Sie alle weiteren gewünschten Optionen. Wenn Sie mit einer Vorlage begonnen haben, sind einige Optionen standardmäßig ausgewählt, die Sie jedoch beliebig ändern können.
+5.    Wählen Sie im Abschnitt **Benachrichtigungseinstellungen** einen **Namen** für die Benachrichtigung aus, und wählen Sie anschließend die **Kundengruppe** aus, an die die Benachrichtigung gesendet werden soll.
+Wenn Sie noch kein Segment erstellt haben, wählen Sie **Neue Kundengruppe erstellen** aus. Beachten Sie, dass es 24Stunden dauert, bis ein neues Segmentfür Benachrichtigungen verfügbar ist. Weitere Informationen finden Sie unter [Erstellen von Kundensegmenten](create-customer-segments.md).
+6.    Wenn Sie festlegen möchten, wann eine Benachrichtigung gesendet werden soll, deaktivieren Sie das Kontrollkästchen **Benachrichtigung sofort senden**, und wählen Sie ein bestimmtes Datum und eine Uhrzeit aus.
+7.    Wenn die Benachrichtigung zu einem bestimmten Zeitpunkt ablaufen soll, deaktivieren Sie das Kontrollkästchen **Notification never expires**, und wählen Sie ein bestimmtes Ablaufdatum und eine Uhrzeit aus.
+8.    Wählen Sie im Abschnitt der **Benachrichtigungsinhalt** im Menü **Sprache** die Sprachen aus, in denen die Benachrichtigung angezeigt werden soll. Weitere Informationen finden Sie unter [Übersetzen Ihrer Benachrichtigungen](#translate-your-notifications).
+9.    Geben Sie im Abschnitt **Optionen** Text ein, und konfigurieren Sie alle weiteren gewünschten Optionen. Wenn Sie mit einer Vorlage begonnen haben, sind einige Optionen standardmäßig ausgewählt, die Sie jedoch beliebig ändern können.
    Die verfügbaren Optionen variieren je nach Art der Benachrichtigung. Einige Optionen lauten:
    - **Aktivierungstyp** (interaktiver Popup-Typ). Sie können **Vordergrund**, **Hintergrund** oder **Protokoll** auswählen.
    - **Start** (interaktiver Popup-Typ). Sie können auswählen, ob die Benachrichtigung eine App oder Website öffnet.
@@ -54,21 +61,19 @@ Wenn Sie noch kein Segment erstellt haben, wählen Sie **Neue Kundengruppe erste
    - **Basis-URI** (interaktiver Popup-Typ). Weitere Informationen finden Sie unter [BaseURI](https://msdn.microsoft.com/library/windows/apps/br208712).
    - **Add image query** (interaktiver Popup-Typ). Weitere Informationen finden Sie unter [addImageQuery](https://msdn.microsoft.com/library/windows/apps/br230847).
    - **Visuell**. Ein Bild, Video und Sound. Ausführlichere Informationen finden Sie unter [visual](https://msdn.microsoft.com/library/windows/apps/br230847).
-   - **Eingabe**/**Aktion**/**Auswahl** (interaktiver Popup-Typ). Ermöglicht den Benutzern die Interaktion mit der Benachrichtigung. Weitere Informationen finden Sie unter [Adaptive und interaktive Popupbenachrichtigungen](../controls-and-patterns/tiles-and-notifications-adaptive-interactive-toasts.md#actions)
+   - **Eingabe**/**Aktion**/**Auswahl** (interaktiver Popup-Typ). Ermöglicht den Benutzern die Interaktion mit der Benachrichtigung. Weitere Informationen finden Sie unter [Adaptive und interaktive Popupbenachrichtigungen](../controls-and-patterns/tiles-and-notifications-adaptive-interactive-toasts.md#actions).
    - **Bindung** (interaktiver Kacheltyp). Die Popup-Vorlage. Ausführlichere Informationen finden Sie unter [binding](https://msdn.microsoft.com/library/windows/apps/br230843).
 
    > **Tipp** Versuchen Sie, mit der App [Notifications Visualizer](https://www.microsoft.com/store/apps/9nblggh5xsl1) adaptive Kacheln und interaktive Popupbenachrichtigungen zu entwerfen und zu testen.
 
-11.    Wählen Sie **Als Entwurf speichern** aus, um später weiter an der Benachrichtigung zu arbeiten, oder wählen Sie **Senden** aus, wenn Sie fertig sind.
-
-> **Hinweis** Der Inhalt Ihrer Benachrichtigungen muss den [Inhaltsrichtlinien](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#content_policies) des Store entsprechen.
+10.    Wählen Sie **Als Entwurf speichern** aus, um später weiter an der Benachrichtigung zu arbeiten, oder wählen Sie **Senden** aus, wenn Sie fertig sind.
 
 ## <a name="notification-template-types"></a>Benachrichtigungsvorlagentypen
 
 Sie können aus einer Vielzahl von Benachrichtigungsvorlagen auswählen.
 
 -    **Leer (Popup).** Beginnen Sie mit einer leeren Popupbenachrichtigung, die Sie anpassen können. Eine Popupbenachrichtigung ist eine auf dem Bildschirm angezeigte Popupbenutzeroberfläche, die es Ihrer App ermöglicht, immer mit dem Kunden zu kommunizieren, unabhängig davon, ob dieser gerade eine andere App, die Startseite oder den Desktop anzeigt.
--    **Leer (Kachel).** Beginnen Sie mit einer leeren Kachelbenachrichtigung, die Sie anpassen können. Kacheln stellen die Apps auf der Startseite dar. Es gibt Live-Kacheln, d. h., der angezeigte Inhalt kann sich aufgrund von Benachrichtigungen ändern.
+-    **Leer (Kachel).** Beginnen Sie mit einer leeren Kachelbenachrichtigung, die Sie anpassen können. Kacheln stellen die Apps auf der Startseite dar. Es gibt Live-Kacheln, d.h., der angezeigte Inhalt kann sich aufgrund von Benachrichtigungen ändern.
 -    **Bitten um Bewertungen (Popup).** Eine Popupbenachrichtigung, die Ihre Kunden bittet, die App zu bewerten. Wenn der Kunde die Benachrichtigung auswählt, wird die Store-Bewertungsseite für Ihre App angezeigt.
 -    **Um Feedback bitten (Popup).** Eine Popupbenachrichtigung, die Ihre Kunden um Feedback zur App bittet. Wenn der Kunde die Benachrichtigung auswählt, wird die Feedback-Hub-Seite für Ihre App angezeigt.
    > **Hinweis** Wenn Sie diesen Vorlagentyp auswählen, müssen Sie im Feld **Start** den Platzhalterwert {PACKAGE_FAMILY_NAME} durch den tatsächlichen Paketfamiliennamen (PFN) Ihrer App ersetzen. Sie finden den PFN Ihrer App auf der Seite [App-Identität](view-app-identity-details.md) (**App-Verwaltung** > **App-Identität**).
@@ -79,7 +84,7 @@ Sie können aus einer Vielzahl von Benachrichtigungsvorlagen auswählen.
 
   ![Feld „Start“ des Werbepopups](images/push-notifications-promote-toast-launch-box.png)
 -    **Sonderangebot (Popup).** Eine Popupbenachrichtigung, mit der Sie ein Sonderangebot für Ihre App ankündigen können. Wenn der Kunde die Benachrichtigung auswählt, wird der Store-Eintrag Ihrer App angezeigt.
-- **Aktualisierungsaufforderung (Popup).** Eine Popupbenachrichtigung, die Kunden mit einer älteren Version der App zur Installation der neuesten Version auffordert. Wenn der Kunde die Benachrichtigung auswählt, wird die Liste **Downloads und Updates** der Store-App angezeigt. Beachten Sie, dass Sie für diese Vorlage keine Kundensegmente erstellen müssen. Wir werden diese Benachrichtigung innerhalb von 24 Stunden einplanen und nach Möglichkeit an alle Benutzer senden, die noch nicht die neueste Version Ihrer App ausführen.
+- **Aktualisierungsaufforderung (Popup).** Eine Popupbenachrichtigung, die Kunden mit einer älteren Version der App zur Installation der neuesten Version auffordert. Wenn der Kunde die Benachrichtigung auswählt, wird die Liste **Downloads und Updates** der Store-App angezeigt. Beachten Sie, dass Sie für diese Vorlage keine Kundensegmente erstellen müssen. Wir werden diese Benachrichtigung innerhalb von 24Stunden einplanen und nach Möglichkeit an alle Benutzer senden, die noch nicht die neueste Version Ihrer App ausführen.
 
 ## <a name="measure-notification-performance"></a>Messen der Benachrichtigungsleistung
 
@@ -98,11 +103,11 @@ Wenn Sie die Benachrichtigung und Ihre App wie oben beschrieben für das [Messen
 2.  Erweitern Sie den Abschnitt **Dienste** im linken Menü, und wählen Sie dann **Pushbenachrichtigungen** aus, um die dieser App zugeordneten Benachrichtigungen anzuzeigen.
 3.    Wählen Sie auf der Seite **Benutzerorientierte Pushbenachrichtigungen** die Option **In Bearbeitung** oder **Abgeschlossen** aus, und prüfen Sie die Spalten **Übermittlungsrate** und **App launch rate**, um die allgemeine Leistung der einzelnen Benachrichtigungen zu ermitteln.
 4.  Um detailliertere Leistungsdetails anzuzeigen, wählen Sie einen Benachrichtigungsnamen aus. Im Abschnitt **Lieferstatistik** werden Daten zu **Anzahl** und **Prozentsatz** für die folgenden **Status**-Typen der Benachrichtigung angezeigt:
- - **Fehlgeschlagen**: Die Benachrichtigung wurde aus einem bestimmten Grund nicht übermittelt. Dies kann z. B. bei einem Problem im Windows-Benachrichtigungsdienst der Fall sein.
+ - **Fehlgeschlagen**: Die Benachrichtigung wurde aus einem bestimmten Grund nicht übermittelt. Dies kann z.B. bei einem Problem im Windows-Benachrichtigungsdienst der Fall sein.
  - **Channel expiration failure**: Die Benachrichtigung konnte nicht übermittelt werden, da der Kanal zwischen der App und Dev Center abgelaufen ist. Dies kann beispielsweise vorkommen, wenn der Kunde Ihre App seit längerem nicht mehr geöffnet hat.
  - **Senden**: Die Benachrichtigung befindet sich in der Warteschlange für das Senden.
  - **Gesendet**: Die Benachrichtigung wurde gesendet.
- - **Startet**: Die Benachrichtigung wurde gesendet, der Kunde hat darauf geklickt, und Ihre App wurde daher geöffnet. Beachten Sie, dass hiermit nur das Starten der Apps nachverfolgt wird. Benachrichtigungen, die den Kunden zu weiteren Aktionen wie z. B. dem Öffnen des Store zum Hinterlassen einer Bewertung auffordern, sind nicht Teil dieses Status.
+ - **Startet**: Die Benachrichtigung wurde gesendet, der Kunde hat darauf geklickt, und Ihre App wurde daher geöffnet. Beachten Sie, dass hiermit nur das Starten der Apps nachverfolgt wird. Benachrichtigungen, die den Kunden zu weiteren Aktionen wie z.B. dem Öffnen des Store zum Hinterlassen einer Bewertung auffordern, sind nicht Teil dieses Status.
  - **Unbekannt**: Wir konnten den Status dieser Benachrichtigung nicht ermitteln.
 
 ## <a name="translate-your-notifications"></a>Übersetzen Ihrer Benachrichtigungen
@@ -126,4 +131,3 @@ Beachten Sie im Zusammenhang mit Übersetzungen Folgendes:
 - [App „Notifications Visualizer”](https://www.microsoft.com/store/apps/9nblggh5xsl1)
 - [StoreServicesEngagementManager.RegisterNotificationChannelAsync() | registerNotificationChannelAsync()-Methode](https://msdn.microsoft.com/library/windows/apps/mt771190.aspx)
 - [Kundensegmentierung und Pushbenachrichtigungen: Eine neue Funktion des Windows Dev Center-Insider-Programms (Blogbeitrag)](https://blogs.windows.com/buildingapps/2016/08/17/customer-segmentation-and-push-notifications-a-new-windows-dev-center-insider-program-feature/#XTuCqrG8G5IMgWew.97)
-
