@@ -1,6 +1,6 @@
 ---
 author: DelfCo
-Description: "Entwickeln Sie Ihre App so, dass die Layouts und Schriftarten mehrerer Sprachen unterstützt werden – d. h. Sprachen mit Leserichtung von rechts nach links."
+Description: "Entwickeln Sie Ihre App so, dass die Layouts und Schriftarten mehrerer Sprachen unterstützt werden – also beispielsweise auch die Flussrichtung von rechts nach links (right-to-left, RTL)."
 title: "Anpassen von Layout und Schriftarten und Unterstützen von „Von rechts nach links“"
 ms.assetid: F2522B07-017D-40F1-B3C8-C4D0DFD03AC3
 label: Adjust layout and fonts, and support RTL
@@ -10,23 +10,20 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 4b7d34aaf891497af80ed8c94609e6a8fbbd3bec
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 9c700928d2ec0da21b518528289034296637eeff
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="adjust-layout-and-fonts-and-support-rtl"></a>Anpassen von Layout und Schriftarten und Unterstützen von „Von rechts nach links“
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Entwickeln Sie Ihre App so, dass die Layouts und Schriftarten mehrerer Sprachen unterstützt werden – d. h. Sprachen mit Leserichtung von rechts nach links
+Entwickeln Sie Ihre App so, dass die Layouts und Schriftarten mehrerer Sprachen unterstützt werden –also beispielsweise auch die Flussrichtung von rechts nach links (right-to-left, RTL).
 
 ## <a name="layout-guidelines"></a>Layoutrichtlinien
 
 
-Einige Sprachen, darunter Deutsch und Finnisch, benötigen für den Text mehr Raum als Englisch. Für die Schriftarten einiger Sprachen, z. B. Japanisch, wird eine größere Höhe benötigt. Und bei Sprachen wie Arabisch und Hebräisch muss die Leserichtung des Text- und des App-Layouts von rechts nach links verlaufen.
+Einige Sprachen, darunter Deutsch und Finnisch, benötigen für den Text mehr Raum als Englisch. Für die Schriftarten einiger Sprachen, z.B. Japanisch, wird eine größere Höhe benötigt. Und bei Sprachen wie Arabisch und Hebräisch muss die Leserichtung des Text- und des App-Layouts von rechts nach links verlaufen.
 
 Verwenden Sie flexible Layoutmechanismen anstelle einer absoluten Positionierung oder fester Breiten und Höhen. Bestimmte UI-Elemente können abhängig von der Sprache geändert werden.
 
@@ -117,4 +114,3 @@ C++:
 
 ## <a name="related-topics"></a>Verwandte Themen
 [FlowDirection](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.flowdirection.aspx)
-

@@ -9,18 +9,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 8b8af1942ed50df9f382773113a903360f8cb19b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1c0b24bce21ed145d61f6b5d05392a6fc3cc30aa
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="manual-control-of-the-system-media-transport-controls"></a>Manuelle Steuerung der Steuerelemente für den Systemmedientransport
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
-Ab Windows 10, Version 1607, werden UWP-Apps, welche die [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer)-Klasse für die Medienwiedergabe verwenden, standardmäßig und automatisch in die Steuerelemente für den Systemmedientransport (System Media Transport Controls, SMTC) integriert. Dies ist für die meisten Szenarien die empfohlene Methode für die Interaktion mit den SMTC. Weitere Informationen zum Anpassen der standardmäßigen SMTC-Integration mit **MediaPlayer** finden Sie unter [Integration in die Steuerelemente für den Systemmedientransport](integrate-with-systemmediatransportcontrols.md).
+Ab Windows10, Version1607, werden UWP-Apps, welche die [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer)-Klasse für die Medienwiedergabe verwenden, standardmäßig und automatisch in die Steuerelemente für den Systemmedientransport (System Media Transport Controls, SMTC) integriert. Dies ist für die meisten Szenarien die empfohlene Methode für die Interaktion mit den SMTC. Weitere Informationen zum Anpassen der standardmäßigen SMTC-Integration mit **MediaPlayer** finden Sie unter [Integration in die Steuerelemente für den Systemmedientransport](integrate-with-systemmediatransportcontrols.md).
 
 In verschiedenen Szenarien müssen Sie eine manuelle Steuerung der SMTC implementieren. Hierzu gehört die Verwendung einer [**MediaTimelineController**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.MediaTimelineController)-Klasse zum Steuern der Wiedergabe eines oder mehrerer Medienplayer. Ein anderes Szenario ist die Verwendung mehrerer Medienplayer mit nur einer Instanz der SMTC für Ihre App. Bei der Medienwiedergabe mithilfe der [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaElement)-Klasse müssen Sie die SMTC manuell steuern.
 
@@ -36,7 +33,7 @@ Sie können auch eine Instanz der [**SystemMediaTransportControls**](https://msd
 
 [!code-cs[InitSMTCMediaElement](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetInitSMTCMediaElement)]
 
-Legen Sie zum Aktivieren der von Ihrer App verwendeten Schaltflächen die entsprechende „IsEnabled“-Eigenschaft des **SystemMediaTransportControls**-Objekts fest, z. B. [**IsPlayEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278714), [**IsPauseEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278713), [**IsNextEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278712) und [**IsPreviousEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278715). Eine vollständige Liste der verfügbaren Steuerelemente finden Sie in der Referenzdokumentation zu **SystemMediaTransportControls**.
+Legen Sie zum Aktivieren der von Ihrer App verwendeten Schaltflächen die entsprechende „IsEnabled“-Eigenschaft des **SystemMediaTransportControls**-Objekts fest, z.B. [**IsPlayEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278714), [**IsPauseEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278713), [**IsNextEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278712) und [**IsPreviousEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278715). Eine vollständige Liste der verfügbaren Steuerelemente finden Sie in der Referenzdokumentation zu **SystemMediaTransportControls**.
 
 [!code-cs[EnableContols](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetEnableContols)]
 
@@ -48,7 +45,7 @@ Registrieren Sie einen Handler für das [**ButtonPressed**](https://msdn.microso
 
 Das [**ButtonPressed**](https://msdn.microsoft.com/library/windows/apps/dn278706)-Ereignis wird von den Systemsteuerelementen für den Medientransport ausgelöst, wenn eine der aktivierten Schaltflächen betätigt wird. Die an den Ereignishandler übergebene [**Button**](https://msdn.microsoft.com/library/windows/apps/dn278685)-Eigenschaft der [**SystemMediaTransportControlsButtonPressedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn278683)-Klasse ist ein Element der [**SystemMediaTransportControlsButton**](https://msdn.microsoft.com/library/windows/apps/dn278681)-Enumeration, die angibt, welche der aktivierten Schaltflächen betätigt wurde.
 
-Zum Aktualisieren von Objekten im UI-Thread des [**ButtonPressed**](https://msdn.microsoft.com/library/windows/apps/dn278706)-Ereignishandlers (z. B. ein [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)-Objekt) müssen Sie die Aufrufe über den [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) marshallen. Der Grund hierfür ist, dass der **ButtonPressed**-Ereignishandler nicht vom Benutzeroberflächenthread aufgerufen wird und daher eine Ausnahme ausgelöst wird, wenn Sie versuchen, die Benutzeroberfläche direkt zu ändern.
+Zum Aktualisieren von Objekten im UI-Thread des [**ButtonPressed**](https://msdn.microsoft.com/library/windows/apps/dn278706)-Ereignishandlers (z.B. ein [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)-Objekt) müssen Sie die Aufrufe über den [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) marshallen. Der Grund hierfür ist, dass der **ButtonPressed**-Ereignishandler nicht vom Benutzeroberflächenthread aufgerufen wird und daher eine Ausnahme ausgelöst wird, wenn Sie versuchen, die Benutzeroberfläche direkt zu ändern.
 
 [!code-cs[SystemMediaTransportControlsButtonPressed](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetSystemMediaTransportControlsButtonPressed)]
 
@@ -60,7 +57,7 @@ Melden Sie der [**SystemMediaTransportControls**](https://msdn.microsoft.com/lib
 
 ## <a name="update-the-system-media-transport-controls-with-media-info-and-thumbnails"></a>Aktualisieren der Steuerelemente für den Systemmedientransport mit Medieninformationen und Miniaturansichten
 
-Verwenden Sie die [**SystemMediaTransportControlsDisplayUpdater**](https://msdn.microsoft.com/library/windows/apps/dn278686)-Klasse, um die von den Transportsteuerelementen angezeigten Medieninfos (z. B. den Songtitel oder das Albumbild) für das aktuell wiedergegebene Medienelement zu aktualisieren. Rufen Sie eine Instanz dieser Klasse mit der [**SystemMediaTransportControls.DisplayUpdater**](https://msdn.microsoft.com/library/windows/apps/dn278707)-Eigenschaft ab. Für gewöhnliche Szenarien wird empfohlen, die Metadaten mit dem Aufruf der [**CopyFromFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn278694)-Methode und in der aktuell wiedergegebenen Mediendatei zu übergeben. Die Anzeigeaktualisierung wird die Metadaten und das Miniaturbild automatisch aus der Datei extrahieren.
+Verwenden Sie die [**SystemMediaTransportControlsDisplayUpdater**](https://msdn.microsoft.com/library/windows/apps/dn278686)-Klasse, um die von den Transportsteuerelementen angezeigten Medieninfos (z.B. den Songtitel oder das Albumbild) für das aktuell wiedergegebene Medienelement zu aktualisieren. Rufen Sie eine Instanz dieser Klasse mit der [**SystemMediaTransportControls.DisplayUpdater**](https://msdn.microsoft.com/library/windows/apps/dn278707)-Eigenschaft ab. Für gewöhnliche Szenarien wird empfohlen, die Metadaten mit dem Aufruf der [**CopyFromFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn278694)-Methode und in der aktuell wiedergegebenen Mediendatei zu übergeben. Die Anzeigeaktualisierung wird die Metadaten und das Miniaturbild automatisch aus der Datei extrahieren.
 
 Rufen Sie die [**Update**](https://msdn.microsoft.com/library/windows/apps/dn278701)-Methode auf, damit die Benutzeroberflächen der Steuerelemente für den Systemmedientransport mit den neuen Metadaten und der Miniaturansicht aktualisiert werden.
 
@@ -72,7 +69,7 @@ Wenn es Ihr Szenario erfordert, können Sie die von den Steuerelementen für den
 
 ## <a name="update-the-system-media-transport-controls-timeline-properties"></a>Aktualisieren der Zeitskalaeigenschaften der Steuerelemente für den Systemmedientransport
 
-Die Steuerelemente für den Systemmedientransport zeigen Informationen über die Zeitskala des aktuell wiedergegebenen Medienelements an, z. B. die aktuelle Wiedergabeposition, die Startzeit und die Endzeit des Medienelements. Erstellen Sie zum Aktualisieren der Zeitskalaeigenschaften der Steuerelemente für den Systemmedientransport ein neues [**SystemMediaTransportControlsTimelineProperties**](https://msdn.microsoft.com/library/windows/apps/mt218746)-Objekt. Legen Sie die Eigenschaften des Objekts so fest, dass sich der aktuelle Zustand des wiedergegebenen Medienelements widerspiegelt. Rufen Sie die [**SystemMediaTransportControls.UpdateTimelineProperties**](https://msdn.microsoft.com/library/windows/apps/mt218760)-Methode auf, damit die Zeitskala durch die Steuerelemente aktualisiert wird.
+Die Steuerelemente für den Systemmedientransport zeigen Informationen über die Zeitskala des aktuell wiedergegebenen Medienelements an, z.B. die aktuelle Wiedergabeposition, die Startzeit und die Endzeit des Medienelements. Erstellen Sie zum Aktualisieren der Zeitskalaeigenschaften der Steuerelemente für den Systemmedientransport ein neues [**SystemMediaTransportControlsTimelineProperties**](https://msdn.microsoft.com/library/windows/apps/mt218746)-Objekt. Legen Sie die Eigenschaften des Objekts so fest, dass sich der aktuelle Zustand des wiedergegebenen Medienelements widerspiegelt. Rufen Sie die [**SystemMediaTransportControls.UpdateTimelineProperties**](https://msdn.microsoft.com/library/windows/apps/mt218760)-Methode auf, damit die Zeitskala durch die Steuerelemente aktualisiert wird.
 
 [!code-cs[UpdateTimelineProperties](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetUpdateTimelineProperties)]
 
@@ -119,7 +116,6 @@ Weitere Informationen zur Audiowiedergabe im Hintergrund finden Sie unter [Wiede
 * [Beispiel für den Systemmedientransport](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls) 
 
  
-
 
 
 

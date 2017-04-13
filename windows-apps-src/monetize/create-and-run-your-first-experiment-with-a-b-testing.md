@@ -1,22 +1,19 @@
 ---
 author: mcleanbyron
 Description: "In dieser exemplarischen Vorgehensweise wird Ihr erstes Experiment mit A/B-Tests erstellt, ausgeführt und verwaltet."
-title: "Erstellen und Ausführen Ihres ersten Experiments mit A/B-Tests"
+title: "Erstellen und Ausführen des ersten Experiments"
 ms.assetid: 16A2B129-14E1-4C68-86E8-52F1BE58F256
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Microsoft Store Services SDK, A / B-Tests, Experimente"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: fb9e93747fa77031fe906d9ab7463fc41b73cdeb
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP, Microsoft Store Services SDK, A/B-Tests, Experimente
+ms.openlocfilehash: 8da21ae0968540cf43994673ceeeefa92cf56b18
+ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
+translationtype: HT
 ---
-
-# <a name="create-and-run-your-first-experiment-with-ab-testing"></a>Erstellen und Ausführen Ihres ersten Experiments mit A/B-Tests
+# <a name="create-and-run-your-first-experiment"></a>Erstellen und Ausführen des ersten Experiments
 
 In dieser exemplarischen Vorgehensweise führen Sie folgende Aktionen aus:
 * Erstellen eines [Projekts](run-app-experiments-with-a-b-testing.md#terms) für das Experiment im Dev Center-Dashboard, das verschiedene Remotevariablen festlegt, die den Text und die Farbe einer App-Schaltfläche darstellen
@@ -47,7 +44,7 @@ Zum Abschließen dieser exemplarischen Vorgehensweise benötigen Sie ein Windows
 
 ## <a name="code-the-experiment-in-your-app"></a>Codieren des Experiments in der App
 
-1. Erstellen Sie in Visual Studio 2015 ein neues UWP-Projekt (Universelle Windows-Plattform) mit Visual C#. Geben Sie dem Projekt den Namen **SampleExperiment**.
+1. Erstellen Sie in Visual Studio2015 ein neues UWP-Projekt (Universelle Windows-Plattform) mit Visual C#. Geben Sie dem Projekt den Namen **SampleExperiment**.
 2. Erweitern Sie im Projektmappen-Explorer den Projektknoten, klicken Sie mit der rechten Maustaste auf **Verweise**, und klicken Sie auf **Verweis hinzufügen**.
 3. Erweitern Sie im **Verweis-Manager** die Option **Universelle Windows-App**, und klicken Sie auf **Erweiterungen**.
 4. Aktivieren Sie in der Liste mit den SDKs das Kontrollkästchen neben **Microsoft Engagement Framework**, und klicken Sie anschließend auf **OK**.
@@ -56,7 +53,6 @@ Zum Abschließen dieser exemplarischen Vorgehensweise benötigen Sie ein Windows
 7. Doppelklicken Sie im Designer auf die Schaltfläche, um die Codedatei zu öffnen, und fügen Sie einen Ereignishandler für das **Click**-Ereignis hinzu.  
 8. Ersetzen Sie den gesamten Inhalt der Codedatei mit folgendem Code. Weisen Sie die ```projectId```-Variable dem Wert der [Projekt-ID](run-app-experiments-with-a-b-testing.md#terms) zu, den Sie im vorhergehenden Abschnitt aus dem Dev Center-Dashboard abgerufen haben.
 
-  > [!div class="tabbedCodeSnippets"]
   [!code-cs[SampleExperiment](./code/StoreSDKSamples/cs/ExperimentPage.xaml.cs#SampleExperiment)]
 
 10. Speichern Sie die Codedatei, und erstellen Sie das Projekt.
@@ -79,7 +75,8 @@ Zum Abschließen dieser exemplarischen Vorgehensweise benötigen Sie ein Windows
   9. Klicken Sie erneut auf das Dropdownsteuerelement, wählen Sie **b** aus, und klicken Sie auf **Variable hinzufügen**. Die Zeichenfolge **128** sollte automatisch in der Spalte **Variation A** angezeigt werden. Geben Sie in der Spalte **Variation B** die Zahl **255** ein.  
 10. Klicken Sie auf **Speichern** und dann auf **Aktivieren**.
 
-> **Wichtig**&nbsp;&nbsp;Nach dem Aktivieren eines Experiments können Sie die Experimentparameter nicht mehr ändern, wenn Sie beim Erstellen des Experiments nicht auf das Kontrollkästchen **Editable experiment** geklickt haben. In der Regel wird empfohlen, das Experiment vor der Aktivierung in der App zu codieren.
+> [!IMPORTANT]
+> Nach dem Aktivieren eines Experiments können Sie die Experimentparameter nicht mehr ändern, wenn Sie beim Erstellen des Experiments nicht auf das Kontrollkästchen **Editable experiment** geklickt haben. In der Regel wird empfohlen, das Experiment vor der Aktivierung in der App zu codieren.
 
 ## <a name="run-the-app-to-gather-experiment-data"></a>Ausführen der App, um Experimentdaten zu sammeln
 
@@ -91,17 +88,19 @@ Zum Abschließen dieser exemplarischen Vorgehensweise benötigen Sie ein Windows
 
 Warten Sie nach Abschluss des vorherigen Abschnitts mindestens ein paar Stunden, und führen Sie dann diese Schritte aus, um die Ergebnisse Ihres Experiments zu überprüfen und das Experiment abzuschließen.
 
-> **Hinweis**&nbsp;&nbsp;Sobald Sie ein Experiment aktivieren, beginnt Dev Center umgehend mit der Erfassung von Daten aus allen Apps, die zum Protokollieren von Daten für Ihr Experiment instrumentiert sind. Bis zur Anzeige von Experimentdaten im Dashboard können jedoch mehrere Stunden vergehen.
+> [!NOTE]
+> Wenn Sie ein Experiment aktivieren, beginnt Dev Center umgehend mit der Erfassung von Daten aus allen Apps, die zum Protokollieren von Daten für Ihr Experiment instrumentiert sind. Bis zur Anzeige von Experimentdaten im Dashboard können jedoch mehrere Stunden vergehen.
 
 1. Kehren Sie in Dev Center zur Seite **Experimentation** für Ihre App zurück.
 2. Klicken Sie im Abschnitt **Active experiments** auf **Optimize Button Clicks**, um zur Seite für dieses Experiment zu wechseln.
 3. Vergewissern Sie sich, dass die Ergebnisse in den Abschnitten **Results summary** und **Results details** Ihren Erwartungen entsprechen. Ausführlichere Informationen zu diesen Abschnitten finden Sie unter [Verwalten des Experiments im Dev Center-Dashboard](manage-your-experiment.md#review-the-results-of-your-experiment).
+    > [!NOTE]
+    > Dev Center meldet nur das erste Umwandlungsereignis für jeden Benutzer innerhalb eines Zeitraums von 24 Stunden. Wenn ein Benutzer innerhalb von 24 Stunden mehrere Umwandlungsereignisse in Ihrer App auslöst, wird nur das erste Umwandlungsereignis gemeldet. So soll verhindert werden, dass die Experimentergebnisse für eine Stichprobengruppe von Benutzern durch einen einzelnen Benutzer mit mehreren Umwandlungsereignissen verfälscht wird.
 
-  >**Hinweis**&nbsp;&nbsp;Dev Center meldet nur das erste Umwandlungsereignis für jeden Benutzer innerhalb eines Zeitraums von 24 Stunden. Wenn ein Benutzer innerhalb von 24 Stunden mehrere Umwandlungsereignisse in Ihrer App auslöst, wird nur das erste Umwandlungsereignis gemeldet. So soll verhindert werden, dass die Experimentergebnisse für eine Stichprobengruppe von Benutzern durch einen einzelnen Benutzer mit mehreren Umwandlungsereignissen verfälscht wird.
 4. Jetzt sind Sie bereit, das Experiment zu beenden. Klicken Sie im Abschnitt **Results summary** in der Spalte **Variation B** auf **Wechseln**. Dadurch wird für alle Benutzer Ihrer App zur blauen Schaltfläche gewechselt.
 5. Klicken Sie auf **OK**, um zu bestätigen, dass Sie das Experiment beenden möchten.
 6. Führen Sie die App **SampleExperiment** aus, die Sie im vorhergehenden Abschnitt erstellt haben.
-7. Vergewissern Sie sich, dass eine blaue Schaltfläche angezeigt wird. Beachten Sie, dass es bis zu zwei Minuten dauern kann, bis Ihre App eine aktualisierte Variantenzuweisung erhält.
+7. Vergewissern Sie sich, dass eine blaue Schaltfläche angezeigt wird. Beachten Sie, dass es bis zu zweiMinuten dauern kann, bis Ihre App eine aktualisierte Variantenzuweisung erhält.
 
 ## <a name="related-topics"></a>Verwandte Themen
 
@@ -110,4 +109,3 @@ Warten Sie nach Abschluss des vorherigen Abschnitts mindestens ein paar Stunden,
 * [Definieren des Experiments im Dev Center-Dashboard](define-your-experiment-in-the-dev-center-dashboard.md)
 * [Verwalten des Experiments im Dev Center-Dashboard](manage-your-experiment.md)
 * [Ausführen von App-Experimenten mit A/B-Tests](run-app-experiments-with-a-b-testing.md)
-

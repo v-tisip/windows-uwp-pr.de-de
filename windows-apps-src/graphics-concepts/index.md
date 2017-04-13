@@ -2,21 +2,17 @@
 title: "Lernanleitung für Direct3D-Grafiken"
 description: Beschreibt das Grafikkonzept, auf dem Microsoft Direct3D aufgebaut ist.
 ms.assetid: c3850a92-4d05-4f72-bf0f-6a0c79e841eb
-keywords:
-- "Lernanleitung für Direct3D-Grafiken"
+keywords: "Lernanleitung für Direct3D-Grafiken"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e62f9cfde35580dd384ef69fe6e5658d927ce3d8
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 9d46a13844fafc5f517fce16c39e33257ff8e9a5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="direct3d-graphics-learning-guide"></a>Lernanleitung für Direct3D-Grafiken
 
 
@@ -43,7 +39,7 @@ Beschreibt das Grafikkonzept, auf dem Microsoft Direct3D aufgebaut ist. Dieser D
 </tr>
 <tr class="even">
 <td align="left"><p>[Vertex- und Indexpuffer](vertex-and-index-buffers.md)</p></td>
-<td align="left"><p><em>Vertexpuffer</em> sind Speicherpuffer, die Vertexdaten enthalten. Scheitelpunkte (Vertices) in einem Vertexpuffer werden verarbeitet, um Transformation, Beleuchtung und Zuschneiden auszuführen. <em>Indexpuffer</em> sind Speicherpuffer mit Indexdaten, die Ganzzahl-Offsets in Vertexpuffer darstellen und zum Rendern von Grundtypen verwendet werden.</p></td>
+<td align="left"><p><em>Scheitelpunktpuffer</em> sind Speicherpuffer, die Scheitelpunktdaten enthalten. Scheitelpunkte in einem Scheitelpunktpuffer werden verarbeitet, um Transformation, Beleuchtung und Zuschneiden auszuführen. <em>Indexpuffer</em> sind Speicherpuffer mit Indexdaten, die Ganzzahl-Offsets in Vertexpuffer darstellen, und zum Rendern von Grundtypen verwendet werden.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>[Geräte](devices.md)</p></td>
@@ -75,11 +71,11 @@ Beschreibt das Grafikkonzept, auf dem Microsoft Direct3D aufgebaut ist. Dieser D
 </tr>
 <tr class="even">
 <td align="left"><p>[Ressourcen](resources.md)</p></td>
-<td align="left"><p>Eine Ressource ist ein Bereich im Speicher, auf den die Direct3D-Pipeline zugreifen kann. Damit die Pipeline effizient auf den Speicher zugreifen kann, müssen für die Pipeline bereitgestellte Daten (wie z. B. Input-Geometrie, Shader-Ressourcen und Texturen) in einer Ressource gespeichert werden. Es gibt zwei Arten von Ressourcen, aus denen alle Direct3D-Ressourcen abgeleitet sind: ein Puffer oder eine Textur. Bis zu 128 Ressourcen können für jede Pipeline-Phase aktiv sein.</p></td>
+<td align="left"><p>Eine Ressource ist ein Bereich im Speicher, auf den die Direct3D-Pipeline zugreifen kann. Damit die Pipeline effizient auf den Speicher zugreifen kann, müssen für die Pipeline bereitgestellte Daten (wie z.B. Input-Geometrie, Shader-Ressourcen und Texturen) in einer Ressource gespeichert werden. Es gibt zwei Arten von Ressourcen, aus denen alle Direct3D-Ressourcen abgeleitet sind: ein Puffer oder eine Textur. Bis zu 128 Ressourcen können für jede Pipeline-Phase aktiv sein.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>[Streaming-Ressourcen](streaming-resources.md)</p></td>
-<td align="left"><p><em>Streaming-Ressourcen</em> sind große logische Ressourcen, die kleine Mengen des physischen Speichers verwenden. Anstatt die gesamte große Ressource zu übergeben, werden nur kleine Teile der Ressource bei Bedarf gestreamt. Streaming-Ressourcen wurden vorher als <em>unterteilte Ressourcen</em> bezeichnet.</p></td>
+<td align="left"><p><em>Streamingressourcen</em> sind große logische Ressourcen, die wenig physischen Speicher belegen.. Anstatt die gesamte große Ressource zu übergeben, werden nur kleine Teile der Ressource bei Bedarf gestreamt. Streaming-Ressourcen wurden vorher als <em>unterteilte Ressourcen</em> bezeichnet.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[Anhänge](appendix.md)</p></td>
@@ -93,4 +89,3 @@ Beschreibt das Grafikkonzept, auf dem Microsoft Direct3D aufgebaut ist. Dieser D
  
 
  
-

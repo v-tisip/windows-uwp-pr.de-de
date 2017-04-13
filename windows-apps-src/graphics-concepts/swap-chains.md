@@ -2,27 +2,23 @@
 title: Swapchains
 description: "Eine Swapchain ist eine Sammlung von Puffern, die zum Anzeigen von Frames für den Benutzer verwendet werden."
 ms.assetid: A38E8BB7-1E77-4D93-B321-D3572A80D5DD
-keywords:
-- Swapchains
+keywords: Swapchains
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 8028c67e2ffb8f1b021ec486691251850de5fa8b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1598811ce05536c3396ef72bb9d1b06ddbba0fdc
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="swap-chains"></a>Swapchains
 
 
 Eine Swapchain ist eine Sammlung von Puffern, die zum Anzeigen von Frames für den Benutzer verwendet werden. Jedes Mal, wenn in einer Anwendung ein neuer Frame angezeigt werden soll, nimmt der erste Puffer in der Swapchain den Platz des angezeigten Puffers ein. Dieser Prozess wird *Austauschen* oder *Kippen* genannt.
 
-Eine Grafikkarte enthält einen Zeiger auf eine als Frontpuffer bezeichnete Oberfläche, die das auf dem Monitor anzuzeigende Bild darstellt. Wenn der Monitor aktualisiert wird, sendet die Grafikkarte den Inhalt des Frontpuffers zur Anzeige an dem Monitor. Dies führt aber beim Rendern von Grafiken in Echtzeit zu dem Problem des „Abreißens”. Im Wesentlichen besteht das Problem darin, dass die Aktualisierungsrate des Monitors im Vergleich zum Rest des Computers sehr langsam ist. Übliche Aktualisierungsraten liegen zwischen 60 Hz (60 Mal pro Sekunde) und 100 Hz.
+Eine Grafikkarte enthält einen Zeiger auf eine als Frontpuffer bezeichnete Oberfläche, die das auf dem Monitor anzuzeigende Bild darstellt. Wenn der Monitor aktualisiert wird, sendet die Grafikkarte den Inhalt des Frontpuffers zur Anzeige an dem Monitor. Dies führt aber beim Rendern von Grafiken in Echtzeit zu dem Problem des „Abreißens”. Im Wesentlichen besteht das Problem darin, dass die Aktualisierungsrate des Monitors im Vergleich zum Rest des Computers sehr langsam ist. Übliche Aktualisierungsraten liegen zwischen 60Hz (60Mal pro Sekunde) und 100Hz.
 
 Wenn Ihre Anwendung den Frontpuffer aktualisiert, während der Monitor sich mitten in einer Aktualisierung befindet, wird das angezeigte Bild in der Mitte abgerissen. Die obere Hälfte des Bildschirms enthält das alte Bild und die untere Hälfte das neue Bild. Dieses Problem wird als *Abreißen* bezeichnet.
 
@@ -37,7 +33,7 @@ Direct3D implementiert zwei Optionen, um ein Abreißen zu vermeiden:
 
 -   Eine Option, um die als Hintergrundpufferung bezeichnete Technik zu verwenden. Hintergrundpufferung ist der Prozess des Zeichnens einer Szene auf eine Offscreenoberfläche, die Hintergrundpuffer genannt wird. Jede Oberfläche mit Ausnahme des Frontpuffers wird als Offscreenoberfläche bezeichnet, weil diese nie direkt vom Monitor angezeigt werden.
 
-    Mit einem Hintergrundpuffer hat eine Anwendung die Möglichkeit, eine Szene zu rendern, wenn das System sich im Leerlauf befindet (d. h. keine Windows-Meldungen warten), ohne dass die Aktualisierungsrate des Monitors berücksichtigt werden muss. Hintergrundpufferung führt eine zusätzliche Schwierigkeit ein, nämlich die Frage, wie und wann der Hintergrundpuffer in den Frontpuffer verschoben werden soll.
+    Mit einem Hintergrundpuffer hat eine Anwendung die Möglichkeit, eine Szene zu rendern, wenn das System sich im Leerlauf befindet (d.h. keine Windows-Meldungen warten), ohne dass die Aktualisierungsrate des Monitors berücksichtigt werden muss. Hintergrundpufferung führt eine zusätzliche Schwierigkeit ein, nämlich die Frage, wie und wann der Hintergrundpuffer in den Frontpuffer verschoben werden soll.
 
 ## <a name="span-idsurfaceflippingspanspan-idsurfaceflippingspanspan-idsurfaceflippingspansurface-flipping"></a><span id="Surface_flipping"></span><span id="surface_flipping"></span><span id="SURFACE_FLIPPING"></span>Kippen von Oberflächen
 
@@ -56,7 +52,6 @@ Das Kippen der Oberfläche ist in Multimedia-, Animations- und Spielesoftware wi
  
 
  
-
 
 
 

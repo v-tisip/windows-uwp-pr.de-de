@@ -8,16 +8,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 70362ebd77f62aea3bba694b9f6592771d4ad273
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: b738ccfbb6d7d3ab3741c224092f698e4d537f6e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="enumerate-devices-over-a-network"></a>Auflisten von Geräten über ein Netzwerk
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **Wichtige APIs**
@@ -34,7 +32,7 @@ Einige Geräte-APIs stellen eine Auswahlzeichenfolge bereit, mit der Sie die ver
 
 Es gibt jedoch Situationen, in denen Sie die Geräte manuell ohne vordefinierte Auswahlzeichenfolge ermitteln möchten. Beispielsweise kann es vorkommen, dass Sie nur Informationen über AEP-Geräte sammeln müssen, ohne mit ihnen zu interagieren, oder mehr AEP-Objekte als durch die vordefinierte Auswahlzeichenfolge ermittelt finden möchten. In diesem Fall erstellen Sie eine eigene Auswahlzeichenfolge und verwenden sie gemäß den Anweisungen unter [Erstellen einer Geräteauswahl](build-a-device-selector.md).
 
-Wenn Sie eine eigene Auswahl erstellen, wird dringend empfohlen, den Umfang der Enumeration auf die für Sie relevanten Protokolle zu beschränken. Sie möchten z. B. nicht, dass das WLAN-Radio nach Wi-Fi Direct-Geräten sucht, wenn Sie ausdrücklich an UPnP-Geräten interessiert sind. Windows hat für jedes Protokoll eine Identität definiert, die Sie bei der Angabe des Enumerationsumfangs verwenden können. Die folgende Tabelle enthält die Protokolltypen und -bezeichner.
+Wenn Sie eine eigene Auswahl erstellen, wird dringend empfohlen, den Umfang der Enumeration auf die für Sie relevanten Protokolle zu beschränken. Sie möchten z.B. nicht, dass das WLAN-Radio nach Wi-Fi Direct-Geräten sucht, wenn Sie ausdrücklich an UPnP-Geräten interessiert sind. Windows hat für jedes Protokoll eine Identität definiert, die Sie bei der Angabe des Enumerationsumfangs verwenden können. Die folgende Tabelle enthält die Protokolltypen und -bezeichner.
 
 | Protokoll- oder Netzwerkgerätetyp              | ID                                         |
 |----------------------------------------------|--------------------------------------------|
@@ -42,7 +40,7 @@ Wenn Sie eine eigene Auswahl erstellen, wird dringend empfohlen, den Umfang der 
 | Webdienste für Geräte (Web Services on Devices, WSD)                | **{782232aa-a2f9-4993-971b-aedc551346b0}** |
 | Wi-Fi Direct                                 | **{0407d24e-53de-4c9a-9ba1-9ced54641188}** |
 | DNS-Dienstermittlung (DNS-SD)               | **{4526e8c1-8aac-4153-9b16-55e86ada0e54}** |
-| Point of Service (POS)                             | **{d4bf61b3-442e-4ada-882d-fa7B70c832d9}** |
+| PointofService (POS)                             | **{d4bf61b3-442e-4ada-882d-fa7B70c832d9}** |
 | Netzwerkdrucker (Active Directory-Drucker) | **{37aba761-2124-454c-8d82-c42962c2de2b}** |
 | Windows-Sofortverbindung (WNC)                    | **{4c1b1ef8-2f62-4b9f-9bc5-b21ab636138f}** |
 | WiGig-Docks                                  | **{a277f3a5-8764-4f88-8045-4c5e962640b1}** |
@@ -84,4 +82,3 @@ System.Devices.AepContainer.ProtocolIds:~~"{0e261de4-12f0-46e6-91ba-428607ccef64
  
 
  
-

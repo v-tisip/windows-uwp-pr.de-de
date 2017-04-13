@@ -8,17 +8,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: ef4527f72898c8c5a6ad9c56d975966402894b2c
-ms.lasthandoff: 02/08/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 7c8b8eb3ae3c097a346144c57d7899cb5e9584f5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="free-memory-when-your-app-moves-to-the-background"></a>Geben Sie Speicher frei, wenn Ihre App in den Hintergrund verschoben wird
 
-Dieser Artikel beschreibt, wie Sie die Größe des von Ihrer App verwendeten Speichers reduzieren, wenn diese in den Hintergrundzustand verschoben wird, sodass sie nicht angehalten und sogar beendet wird.
+Dieser Artikel beschreibt, wie Sie die Größe des Speichers reduzieren, den Ihre App verwendet, wenn sie in den Hintergrundzustand verschoben wird, so dass sie nicht angehalten und möglicherweise sogar beendet wird.
 
 ## <a name="new-background-events"></a>Neue Hintergrund-Ereignisse
 
@@ -108,4 +105,3 @@ Wenn eine App vom Hintergrund in den Vordergrund wechselt, erhält sie zuerst ei
 
 * [Abspielbeispiel für Hintergrundmedien](http://go.microsoft.com/fwlink/p/?LinkId=800141) - zeigt, wie Sie Speicher freigeben, wenn ihre App in den Hintergrund wechselt.
 * [Diagnosetools](https://blogs.msdn.microsoft.com/visualstudioalm/2015/01/16/diagnostic-tools-debugger-window-in-visual-studio-2015/) - beobachten Sie mit den Diagnosetools die Garbage Collection-Ereignisse, und prüfen Sie, ob Ihre App Speicher in der erwarteten Weise freigibt.
-

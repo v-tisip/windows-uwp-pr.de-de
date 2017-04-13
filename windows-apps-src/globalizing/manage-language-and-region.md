@@ -10,14 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c9d42dfd76c613c615e35aaa02e54037cd666b47
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 7c5c7024fbcf3533150f470b15cabc8a9d1d2cb3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="manage-language-and-region"></a>Verwalten von Sprache und Region
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
@@ -47,7 +44,7 @@ Der Benutzer kann Apps in einer völlig anderen Sprache ausführen als Windows s
 
 Für Windows Store-Apps wird eine Sprache als ein [BCP-47-Sprachtag](http://go.microsoft.com/fwlink/p/?linkid=227302) dargestellt. Die meisten APIs in Windows-Runtime, HTML und XAML können Zeichenfolgendarstellungen dieser BCP-47-Sprachtags zurückgeben oder akzeptieren. Weitere Informationen finden Sie in der [IANA-Liste der Sprachen](http://go.microsoft.com/fwlink/p/?linkid=227303).
 
-Eine Liste mit speziell vom Windows Store unterstützten Sprachtags finden Sie unter [Unterstützte Sprachen](https://msdn.microsoft.com/library/windows/apps/jj657969).
+Eine Liste mit speziell vom WindowsStore unterstützten Sprachtags finden Sie unter [Unterstützte Sprachen](https://msdn.microsoft.com/library/windows/apps/jj657969).
 
 ## <a name="tasks"></a>Aufgaben
 
@@ -74,27 +71,27 @@ Die Eigenschaft für die Standardsprache muss auch als erste Sprache im Manifest
 
 ### <a name="qualify-resources-with-their-language"></a>Qualifizieren von Ressourcen mit ihrer Sprache.
 
-Berücksichtigen Sie Ihr Zielpublikum sowie Sprache und Standort der Benutzer, die Sie ansprechen möchten. Viele Menschen, die in einer bestimmten Region leben, bevorzugen nicht die Hauptsprache dieser Region. Es gibt z. B. Millionen von Haushalten in den USA. in den hauptsächlich Spanisch gesprochen wird.
+Berücksichtigen Sie Ihr Zielpublikum sowie Sprache und Standort der Benutzer, die Sie ansprechen möchten. Viele Menschen, die in einer bestimmten Region leben, bevorzugen nicht die Hauptsprache dieser Region. Es gibt z.B. Millionen von Haushalten in den USA. in den hauptsächlich Spanisch gesprochen wird.
 
 Qualifizieren von Ressourcen mit einer Sprache:
 
--   Binden Sie ein Skript ein, falls für die Sprache kein Wert definiert ist, der besagt, dass Skripte unterdrückt werden sollen. Einzelheiten zu Sprachtags finden Sie unter [IANA Subtag Registry](http://go.microsoft.com/fwlink/p/?linkid=227303). Verwenden Sie z. B. "zh-Hant", "zh-Hant-TW" oder "zh-Hans", aber nicht "zh-CN" oder "zh-TW".
--   Markieren Sie den gesamten sprachlichen Inhalt für eine Sprache. Die Projekteigenschaft "Standardsprache" ist nicht die Sprache der nicht markierten Ressourcen (d. h. eine neutrale Sprache), sondern sie gibt an, welche markierte Sprache ausgewählt werden soll, wenn keine markierte Sprachressource zum Benutzer passt.
+-   Binden Sie ein Skript ein, falls für die Sprache kein Wert definiert ist, der besagt, dass Skripte unterdrückt werden sollen. Einzelheiten zu Sprachtags finden Sie unter [IANA Subtag Registry](http://go.microsoft.com/fwlink/p/?linkid=227303). Verwenden Sie z.B. "zh-Hant", "zh-Hant-TW" oder "zh-Hans", aber nicht "zh-CN" oder "zh-TW".
+-   Markieren Sie den gesamten sprachlichen Inhalt für eine Sprache. Die Projekteigenschaft "Standardsprache" ist nicht die Sprache der nicht markierten Ressourcen (d.h. eine neutrale Sprache), sondern sie gibt an, welche markierte Sprache ausgewählt werden soll, wenn keine markierte Sprachressource zum Benutzer passt.
 
 Markieren von Ressourcen mit einer genauen Darstellung des Inhalts.
 
 -   Windows führt einen komplexen Abgleich unter Berücksichtigung regionaler Varianten wie „en-US“ und „en-GB“ durch, sodass Anwendungen die Ressourcen mit einer exakten Inhaltsdarstellung markieren und Windows den korrekten Abgleich für jeden Benutzer überlassen können.
 -   Windows Store zeigt für Benutzer, die auf die Anwendung blicken, den Inhalt des Manifests an.
 -   Berücksichtigen Sie, dass für manche Tools und Komponenten wie Übersetzungsprogramme spezielle Sprachtags wie Informationen zu regionalen Dialekten für das Verständnis der Daten hilfreich sein können.
--   Markieren Sie Ressourcen unbedingt mit allen Einzelheiten, insbesondere dann, wenn mehrere Varianten verfügbar sind. Markieren Sie z. B. "en-GB" und "en-US", wenn beide für die Region spezifisch sind.
--   Bei Sprachen mit nur einem Standarddialekt muss keine Region hinzugefügt werden. Eine Verwendung von allgemeinen Tags ist in einigen Situationen vernünftig, so z. B. das Markieren von Ressourcen mit "ja" anstelle von "ja-JP".
+-   Markieren Sie Ressourcen unbedingt mit allen Einzelheiten, insbesondere dann, wenn mehrere Varianten verfügbar sind. Markieren Sie z.B. "en-GB" und "en-US", wenn beide für die Region spezifisch sind.
+-   Bei Sprachen mit nur einem Standarddialekt muss keine Region hinzugefügt werden. Eine Verwendung von allgemeinen Tags ist in einigen Situationen vernünftig, so z.B. das Markieren von Ressourcen mit "ja" anstelle von "ja-JP".
 
 In manchen Situationen müssen nicht alle Ressourcen lokalisiert werden.
 
 -   Markieren Sie Ressourcen wie UI-Zeichenfolgen, die in allen Sprachen bereitgestellt werden, mit ihrer eigenen Sprache, und stellen Sie sicher, dass alle diese Ressourcen in der Standardsprache vorhanden sind. Es muss keine neutrale Ressource angegeben werden (eine nicht mit einer Sprache markierte).
--   Geben Sie bei Ressourcen, die eine Teilmenge der Menge der Sprachen der Anwendung darstellen (partielle Lokalisierung), die Menge der Sprachen an, in denen die Ressourcen vorliegen, und stellen Sie sicher, dass alle diese Ressourcen in der Standardsprache vorliegen. Windows wählt nach Beachtung aller vom Benutzer gesprochenen Sprachen in der bevorzugten Reihenfolge die für den Benutzer bestmögliche Sprache aus. Z. B. muss nicht die ganze UI einer App ins Katalanische lokalisiert werden, wenn die App über einen vollständigen Satz von Ressourcen auf Spanisch verfügt. Wenn ein Benutzer Katalanisch und dann Spanisch spricht, werden die nicht auf Katalanisch verfügbaren Ressourcen auf Spanisch angezeigt.
--   Bei Ressourcen mit spezifischen Ausnahmen für bestimmte Sprachen, bei denen alle anderen Sprachen einer gemeinsamen Ressource zugeordnet werden, muss die für alle Sprachen zu verwendende Ressource mit dem Tag "und" für eine unbestimmte Sprache markiert werden. Windows interpretiert das Sprachtag „und“ ähnlich wie „\*“, d. h., spezifische Entsprechungen haben Vorrang vor der Hauptsprache der Anwendung. Wenn beispielsweise einige Ressourcen (z. B. die Breite eines Elements) für Finnisch verschieden sind, der Rest der Ressourcen aber für alle Sprachen übereinstimmt, sollte die Ressource für Finnisch mit dem Sprachtag "Finnisch" und die übrigen mit "und" markiert werden.
--   Verwenden Sie für Ressourcen, die auf dem Skript für eine Sprache anstatt auf der Sprache basieren, z. B. eine Schriftart oder eine Texthöhe, das Tag für eine unbestimmte Sprache mit einem angegebenen Skript an: 'und-&lt;script&gt;'. Verwenden Sie z. B. für lateinische Schriftarten „und-Latn\\fonts.css“ und für kyrillische Schriftarten „und-Cryl\\fonts.css“.
+-   Geben Sie bei Ressourcen, die eine Teilmenge der Menge der Sprachen der Anwendung darstellen (partielle Lokalisierung), die Menge der Sprachen an, in denen die Ressourcen vorliegen, und stellen Sie sicher, dass alle diese Ressourcen in der Standardsprache vorliegen. Windows wählt nach Beachtung aller vom Benutzer gesprochenen Sprachen in der bevorzugten Reihenfolge die für den Benutzer bestmögliche Sprache aus. Z.B. muss nicht die ganze UI einer App ins Katalanische lokalisiert werden, wenn die App über einen vollständigen Satz von Ressourcen auf Spanisch verfügt. Wenn ein Benutzer Katalanisch und dann Spanisch spricht, werden die nicht auf Katalanisch verfügbaren Ressourcen auf Spanisch angezeigt.
+-   Bei Ressourcen mit spezifischen Ausnahmen für bestimmte Sprachen, bei denen alle anderen Sprachen einer gemeinsamen Ressource zugeordnet werden, muss die für alle Sprachen zu verwendende Ressource mit dem Tag "und" für eine unbestimmte Sprache markiert werden. Windows interpretiert das Sprachtag „und“ ähnlich wie „\*“, d. h., spezifische Entsprechungen haben Vorrang vor der Hauptsprache der Anwendung. Wenn beispielsweise einige Ressourcen (z.B. die Breite eines Elements) für Finnisch verschieden sind, der Rest der Ressourcen aber für alle Sprachen übereinstimmt, sollte die Ressource für Finnisch mit dem Sprachtag "Finnisch" und die übrigen mit "und" markiert werden.
+-   Verwenden Sie für Ressourcen, die auf dem Skript für eine Sprache anstatt auf der Sprache basieren, z.B. eine Schriftart oder eine Texthöhe, das Tag für eine unbestimmte Sprache mit einem angegebenen Skript an: 'und-&lt;script&gt;'. Verwenden Sie z.B. für lateinische Schriftarten „und-Latn\\fonts.css“ und für kyrillische Schriftarten „und-Cryl\\fonts.css“.
 
 ### <a name="create-the-application-language-list"></a>Erstellen Sie die Anwendungssprachenliste.
 
@@ -104,24 +101,24 @@ Die Zuordnung zwischen Sprachen und Ressourcen ist schwierig. Wir empfehlen, Win
 
 Beispiele für optionale Komponenten in einem Sprachtag:
 
--   Skript für Sprachen mit Skriptunterdrückung. "en-Latn-US" passt z. B. zu "en-US".
--   Region "en-US" passt z. B. zu %%en".
--   Varianten. "de-DE-1996" passt z. B. zu %%de-DE".
--   "-x" und andere Erweiterungen. "en-US-x-Pirate" passt z. B. zu "en-US".
+-   Skript für Sprachen mit Skriptunterdrückung. "en-Latn-US" passt z.B. zu "en-US".
+-   Region "en-US" passt z.B. zu %%en".
+-   Varianten. "de-DE-1996" passt z.B. zu %%de-DE".
+-   "-x" und andere Erweiterungen. "en-US-x-Pirate" passt z.B. zu "en-US".
 
 Es gibt darüber hinaus viele Komponenten von Sprachtags, die nicht die Form "xx" oder "xx-yy" haben, und nicht alle passen zueinander.
 
 -   "zh-Hant" passt nicht zu "zh-Hans".
 
-Windows priorisiert die Zuordnung von Sprachen nach einer exakt definierten Standardmethode. "en-US" passt z. B. in der Reihenfolge der Priorität zu "en-US", "en", "en-GB" usw.
+Windows priorisiert die Zuordnung von Sprachen nach einer exakt definierten Standardmethode. "en-US" passt z.B. in der Reihenfolge der Priorität zu "en-US", "en", "en-GB" usw.
 
 -   Windows führt eine Zuordnung über Regionen durch. „en-US“ passt zu „en-US“, dann zu „en“ und dann zu „en-\*“.
--   Windows verfügt über zusätzliche Daten zur Affinitätszuordnung einer Region, z. B. die primäre Region für eine Sprache. "fr-FR" passt z. B. besser zu "fr-BE" als zu "fr-CA".
+-   Windows verfügt über zusätzliche Daten zur Affinitätszuordnung einer Region, z. B. die primäre Region für eine Sprache. "fr-FR" passt z.B. besser zu "fr-BE" als zu "fr-CA".
 -   Sie profitieren kostenlos von allen zukünftigen Verbesserungen der Sprachzuordnung in Windows, wenn Sie sich auf die Windows-APIs verlassen.
 
-Zuerst wird die erste Sprache in einer Liste abgeglichen und dann die zweite Sprache in der Liste (auch bei anderen regionalen Varianten). Eine Ressource für "en-GB" wird z. B. vor einer "fr-CA"-Ressource ausgewählt, wenn "en-US" die Anwendungssprache ist. Nur dann, wenn keine Ressourcen für eine Form von "en" vorhanden sind, wird eine Ressource für "fr-CA" gewählt.
+Zuerst wird die erste Sprache in einer Liste abgeglichen und dann die zweite Sprache in der Liste (auch bei anderen regionalen Varianten). Eine Ressource für "en-GB" wird z.B. vor einer "fr-CA"-Ressource ausgewählt, wenn "en-US" die Anwendungssprache ist. Nur dann, wenn keine Ressourcen für eine Form von "en" vorhanden sind, wird eine Ressource für "fr-CA" gewählt.
 
-Die Anwendungssprachenliste wird auf die regionale Variante des Benutzers festgelegt, auch wenn diese sich von der regionalen Variante der App unterscheidet. Wenn der Benutzer z. B. "en-GB" spricht, die App jedoch "en-US" unterstützt, schließt die Anwendungssprachenliste "en-GB"ein. Dadurch wird sichergestellt, dass Datumsangaben, Uhrzeiten und Zahlen den Erwartungen des Benutzers entsprechend formatiert werden („en-GB“), die UI-Ressourcen aber wegen des Sprachabgleichs trotzdem in der von der App unterstützten Sprache („en-US“) geladen werden.
+Die Anwendungssprachenliste wird auf die regionale Variante des Benutzers festgelegt, auch wenn diese sich von der regionalen Variante der App unterscheidet. Wenn der Benutzer z.B. "en-GB" spricht, die App jedoch "en-US" unterstützt, schließt die Anwendungssprachenliste "en-GB"ein. Dadurch wird sichergestellt, dass Datumsangaben, Uhrzeiten und Zahlen den Erwartungen des Benutzers entsprechend formatiert werden („en-GB“), die UI-Ressourcen aber wegen des Sprachabgleichs trotzdem in der von der App unterstützten Sprache („en-US“) geladen werden.
 
 Die Anwendungssprachenliste umfasst die folgenden Elemente:
 
@@ -227,7 +224,6 @@ Die folgende Tabelle enthält Beispiele für die Elemente, die dem Benutzer unte
  
 
  
-
 
 
 

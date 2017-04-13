@@ -1,24 +1,21 @@
 ---
 author: drewbatgit
 ms.assetid: dd2a1e01-c284-4d62-963e-f59f58dca61a
-description: "In diesem Artikel wird beschrieben, wie Medien von einem Gerät importiert werden. Erläutert werden zudem die Suche nach verfügbaren Medienquellen, das Importieren von Dateien wie Fotos und Sidecardateien und das Löschen der importierten Dateien vom Quellgerät."
+description: "In diesem Artikel wird beschrieben, wie Medien von einem Gerät importiert werden, darunter die Suche nach verfügbaren Medienquellen, das Importieren von Dateien wie Fotos und Sidecardateien und das Löschen der importierten Dateien vom Quellgerät."
 title: Importieren von Medien
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 4deda6efa9b9b9ea03bee76855e30c8e9a290480
-ms.lasthandoff: 02/08/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 588367c1e4c1676641d57bbd33df6bdaf0c854da
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="import-media-from-a-device"></a>Importieren von Medien von einem Gerät
 
-In diesem Artikel wird beschrieben, wie Medien von einem Gerät importiert werden. Erläutert werden zudem die Suche nach verfügbaren Medienquellen, das Importieren von Dateien wie Fotos und Sidecardateien und das Löschen der importierten Dateien vom Quellgerät.
+In diesem Artikel wird beschrieben, wie Medien von einem Gerät importiert werden, darunter die Suche nach verfügbaren Medienquellen, das Importieren von Dateien wie Videos, Fotos und Sidecardateien und das Löschen der importierten Dateien vom Quellgerät.
 
 > [!NOTE] 
 > Der Code in diesem Artikel wurde aus dem [**MediaImport UWP-App-Beispiel**](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MediaImport) übernommen und angepasst. Sie können dieses Beispiel klonen oder aus dem [**Git-Repository für universelle Windows-App-Beispiele**](https://github.com/Microsoft/Windows-universal-samples) herunterladen, um den Code im Kontext anzuzeigen oder ihn als Ausgangspunkt für Ihre eigene App zu verwenden.
@@ -62,7 +59,7 @@ Diese Klassen werden im [**MediaImport-Beispiel**](https://github.com/Microsoft/
 [!code-cs[GeneratorIncrementalLoadingClass](./code/PhotoImport_Win10/cs/MainPage.xaml.cs#SnippetGeneratorIncrementalLoadingClass)]
 
 
-# <a name="find-available-sources-from-which-media-can-be-imported"></a>Suchen nach verfügbaren Quellen, aus denen Medien importiert werden können
+## <a name="find-available-sources-from-which-media-can-be-imported"></a>Suchen nach verfügbaren Quellen, aus denen Medien importiert werden können
 
 Rufen Sie im Klickhandler für die Schaltfläche zur Suche nach Quellen die statische Methode [**PhotoImportManager.FindAllSourcesAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportManager.FindAllSourcesAsync) auf, um die Systemsuche nach Geräten, von denen Medien importiert werden können, zu starten. Durchlaufen Sie nach dem Warten auf den Abschluss des Vorgangs jedes [**PhotoImportSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSource)-Objekt in der zurückgegebenen Liste, fügen Sie einen Eintrag zu **ComboBox** hinzu, und legen Sie die **Tag**-Eigenschaft direkt auf das Quellobjekt fest, damit es einfach abgerufen werden kann, wenn der Benutzer eine Auswahl trifft.
 
@@ -76,13 +73,13 @@ Legen Sie im [**SelectionChanged**](https://msdn.microsoft.com/library/windows/a
 
 [!code-cs[SourcesSelectionChanged](./code/PhotoImport_Win10/cs/MainPage.xaml.cs#SnippetSourcesSelectionChanged)]
 
-# <a name="find-items-to-import"></a>Suchen nach zu importierenden Elementen
+## <a name="find-items-to-import"></a>Suchen nach zu importierenden Elementen
 
 Fügen Sie Klassenmembervariablen vom Typ [**PhotoImportSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSession) und [**PhotoImportFindItemsResult**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportFindItemsResult) hinzu, die in den folgenden Schritten verwendet werden.
 
 [!code-cs[DeclareImport](./code/PhotoImport_Win10/cs/MainPage.xaml.cs#SnippetDeclareImport)]
 
-Initialisieren Sie in der FindItems-Methode die **CancellationTokenSource**-Variable, sodass sie zum Abbrechen des Suchvorgangs verwendet werden kann, falls dies erforderlich ist. Erstellen Sie in einem **try**-Block eine neue Importsitzung durch Aufrufen von [**CreateImportSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSource.CreateImportSession) für das vom Benutzer ausgewählte [**PhotoImportSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSource)-Objekt. Erstellen Sie ein neues [**Progress**](https://msdn.microsoft.com/library/hh193692.aspx)-Objekt, um einen Rückruf zum Anzeigen des Status des Suchvorgangs bereitzustellen. Rufen Sie als Nächstes [**FindItemsAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSession.FindItemsAsync(Windows.Media.Import.PhotoImportContentTypeFilter,Windows.Media.Import.PhotoImportItemSelectionMode) auf, um den Suchvorgang zu starten. Stellen Sie einen [**PhotoImportContentTypeFilter**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportContentTypeFilter)-Wert bereit, um anzugeben, ob Fotos, Videos oder beides zurückgegeben werden sollen. Stellen Sie einen [**PhotoImportItemSelectionMode**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportItemSelectionMode)-Wert bereit, um anzugeben, ob alle, keine oder nur die neuen Medienelemente zurückgegeben werden, deren [**IsSelected**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportItem.IsSelected)-Eigenschaft auf „true“ festgelegt ist. Diese Eigenschaft ist an ein Kontrollkästchen für jedes Medienelement in der ListBox-Elementvorlage gebunden.
+Initialisieren Sie in der FindItems-Methode die **CancellationTokenSource**-Variable, sodass sie zum Abbrechen des Suchvorgangs verwendet werden kann, falls dies erforderlich ist. Erstellen Sie in einem **try**-Block eine neue Importsitzung durch Aufrufen von [**CreateImportSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSource.CreateImportSession) für das vom Benutzer ausgewählte [**PhotoImportSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportSource)-Objekt. Erstellen Sie ein neues [**Progress**](https://msdn.microsoft.com/library/hh193692.aspx)-Objekt, um einen Rückruf zum Anzeigen des Status des Suchvorgangs bereitzustellen. Rufen Sie als Nächstes [**FindItemsAsync**](https://docs.microsoft.com/uwp/api/windows.media.import.photoimportsession#Windows_Media_Import_PhotoImportSession_FindItemsAsync_Windows_Media_Import_PhotoImportContentTypeFilter_Windows_Media_Import_PhotoImportItemSelectionMode_) auf, um den Suchvorgang zu starten. Stellen Sie einen [**PhotoImportContentTypeFilter**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportContentTypeFilter)-Wert bereit, um anzugeben, ob Fotos, Videos oder beides zurückgegeben werden sollen. Stellen Sie einen [**PhotoImportItemSelectionMode**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportItemSelectionMode)-Wert bereit, um anzugeben, ob alle, keine oder nur die neuen Medienelemente zurückgegeben werden, deren [**IsSelected**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Import.PhotoImportItem.IsSelected)-Eigenschaft auf „true“ festgelegt ist. Diese Eigenschaft ist an ein Kontrollkästchen für jedes Medienelement in der ListBox-Elementvorlage gebunden.
 
 **FindItemsAsync** gibt [**IAsyncOperationWithProgress**](https://msdn.microsoft.com/library/windows/apps/br206594.aspx) zurück. Die Erweiterungsmethode [**AsTask**](https://msdn.microsoft.com/library/hh779750.aspx) wird verwendet, um eine Aufgabe zu erstellen, auf die gewartet werden kann, die mit dem Abbruchtoken abgebrochen werden kann und den Status mit dem bereitgestellten **Progress**-Objekt meldet.
 
@@ -121,6 +118,5 @@ Um erfolgreich importierte Elemente aus der Quelle zu löschen, aus der sie impo
 
 
  
-
 
 

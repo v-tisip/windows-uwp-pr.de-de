@@ -8,14 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Anzeigen, Werbung, AdControl, Ereignisse"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: cf285ebb4207b9a9a215bfb4a739b0bc6a2d934b
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP, Anzeigen, Werbung, AdControl, Ereignisse
+ms.openlocfilehash: a0b1130f8177166eef5b524ac4c4f1b065176eeb
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="adcontrol-events-in-c"></a>AdControl-Ereignisse in C\# #  
 
 
@@ -37,4 +34,3 @@ Weitere Informationen zum Behandeln von Ereignissen in C# finden Sie unter [Übe
  
 
  
-

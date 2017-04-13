@@ -2,21 +2,17 @@
 title: Zeilenlisten
 description: "Bei einer Zeilenliste handelt es sich um eine Liste isolierter Zeilensegmente. Zeilenlisten sind hilfreich für Aufgaben wie das Hinzufügen von Schneeregen oder Starkregen zu einer 3D-Szene. Anwendungen erstellen eine Zeilenliste, indem Sie eine Reihe von Vertizes ausfüllen."
 ms.assetid: 42BF32A1-3535-42A3-82C5-3945CB309F2C
-keywords:
-- Zeilenlisten
+keywords: Zeilenlisten
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 64ab9106986cd3fe5109b47710a7057ad6869c8d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8ebe6c67bd6b68023f59599cdcbd1f8f44f80e84
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="line-lists"></a>Zeilenlisten
 
 
@@ -28,9 +24,9 @@ Bei einer Zeilenlisten handelt es sich um eine Liste isolierter Zeilensegmente. 
 ## <a name="span-idexamplespanspan-idexamplespanspan-idexamplespanexample"></a><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Beispiel
 
 
-Die folgende Abbildung zeigt eine gerenderte Zeilenliste.
+Die folgende Abbildungzeigt eine gerenderte Zeilenliste.
 
-![Abbildung einer Zeilenliste](images/linelst.png)
+![Abbildungeiner Zeilenliste](images/linelst.png)
 
 Sie können einer Zeilenliste Materialien und Texturen zuweisen. Die Farben des Materials oder der Textur erscheinen nur entlang der gezogenen Zeilen, nicht an einer beliebigen Stelle zwischen den Zeilen.
 
@@ -71,7 +67,6 @@ d3dDevice->DrawPrimitive( D3DPT_LINELIST, 0, 3 );
  
 
  
-
 
 
 

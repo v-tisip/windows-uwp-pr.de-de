@@ -2,21 +2,17 @@
 title: "Sampling am nächstgelegenen Punkt"
 description: "Apps müssen nicht die Texturfilterung verwenden."
 ms.assetid: D7F88320-2C61-47E9-9B92-EC31D48DB079
-keywords:
-- "Sampling am nächstgelegenen Punkt"
+keywords: "Sampling am nächstgelegenen Punkt"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a2ead1b197ce4e504212f722aaf09d2038ec46f8
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 351acc87764fadc2cd967aaf1d918f4b4837c81f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="span-iddirect3dconceptsnearest-pointsamplingspannearest-point-sampling"></a><span id="direct3dconcepts.nearest-point_sampling"></span>Sampling am nächstgelegenen Punkt
 
 
@@ -26,9 +22,9 @@ Verwenden Sie Sampling am nächstgelegenen Punkt vorsichtig, da es manchmal Graf
 
 Dieser Effekt tritt auf, wenn Sie eine sehr kleine Textur auf ein sehr großes Polygon abbilden: ein Vorgang, der häufig als Vergrößerung bezeichnet wird. Bei der Verwendung einer Textur, die wie ein Schachbrett aussieht, ergibt das Sampling am nächstgelegenen Punkt beispielsweise ein größeres Schachbrett, das ausgeprägte Ränder zeigt. Im Gegensatz dazu führt die lineare Filterung der Textur zu einem Bild, in dem die Farben des Schachbretts reibungslos über das Polygon variieren.
 
-In den meisten Fällen erreichen Anwendungen die besten Ergebnisse durch Vermeiden von Sampling am nächstgelegenen Punkt, wann immer dies möglich ist. Die Mehrzahl der Hardware ist heute für die lineare Filterung optimiert, so dass Ihre Anwendung nicht unter einer Leistungsminderung leiden sollte. Wenn der gewünschte Effekt die Verwendung von Sampling am nächstgelegenen Punkt unbedingt erfordert - z. B. beim Verwenden von Texturen zum Anzeigen lesbarer Textzeichen - sollte Ihre Anwendung extrem vorsichtig sein, um ein Sampling an den Texel-Grenzen zu vermeiden, was zu unerwünschten Effekten führen könnte. Die folgende Abbildung zeigt, wie diese Artefakte aussehen könnten.
+In den meisten Fällen erreichen Anwendungen die besten Ergebnisse durch Vermeiden von Sampling am nächstgelegenen Punkt, wann immer dies möglich ist. Die Mehrzahl der Hardware ist heute für die lineare Filterung optimiert, so dass Ihre Anwendung nicht unter einer Leistungsminderung leiden sollte. Wenn der gewünschte Effekt die Verwendung von Sampling am nächstgelegenen Punkt unbedingt erfordert - z. B. beim Verwenden von Texturen zum Anzeigen lesbarer Textzeichen - sollte Ihre Anwendung extrem vorsichtig sein, um ein Sampling an den Texel-Grenzen zu vermeiden, was zu unerwünschten Effekten führen könnte. Die folgende Abbildungzeigt, wie diese Artefakte aussehen könnten.
 
-![Abbildung eines in sechs Abschnitte unterteilten Feldes mit nicht durchgehenden horizontalen Linien in den beiden Quadraten oben rechts](images/ptrtfct.png)
+![Abbildungeines in sechs Abschnitte unterteilten Feldes mit nicht durchgehenden horizontalen Linien in den beiden Quadraten oben rechts](images/ptrtfct.png)
 
 Die zwei Quadrate oben rechts in der Gruppe scheinen anders als ihre Nachbarn, wobei diagonale Versätze durch sie hindurchlaufen. Um solche Grafikartefakte zu vermeiden, müssen Sie mit Direct3D-Textur-Sampling-Regeln für die Filterung am nächstgelegenen Punkt vertraut sein. Direct3D ordnet eine Gleitkomma-Texturkoordinate zwischen \[0,0, 1,0\] (einschließlich 0,0 und 1,0) einem ganzzahligen Texel-Raumwert zwischen \ [- ,.5, n - 0,5\] zu, mit n als die Anzahl der Texel in einer bestimmten Dimension auf die Textur. Der resultierende Texturindex wird auf die nächste ganze Zahl gerundet. Diese Zuordnung kann Sampling-Ungenauigkeiten an Texel-Grenzen einführen.
 
@@ -36,7 +32,7 @@ Ein einfaches Beispiel: Stellen Sie sich eine Anwendung vor, die Polygone mit de
 
 ![Diagramm der Texturkoordinaten 0,0 und 1,0 an der Grenze zwischen Texeln](images/ptsmpprb.png)
 
-Die Texturkoordinaten 0,0 und 1,0 für diese Abbildung sind genau an der Grenze zwischen Texeln. Bei Verwendung der Methode, mit der Direct3D Werte zuordnet, liegen die Texturkoordinaten in einem Bereich zwischen \ [- 0,5, 4 - 0,5\], wobei 4 die Breite der Textur ist. Für diesen Fall ist das aufgenommene Texel das Texel 0 für einen Texturindex von 1,0. Wenn die Texturkoordinate jedoch lediglich leicht unter 1,0 lag, würde das aufgenommene Texel das Texel n sein, und nicht das Texel 0.
+Die Texturkoordinaten 0,0 und 1,0 für diese Abbildungsind genau an der Grenze zwischen Texeln. Bei Verwendung der Methode, mit der Direct3D Werte zuordnet, liegen die Texturkoordinaten in einem Bereich zwischen \ [- 0,5, 4 - 0,5\], wobei 4 die Breite der Textur ist. Für diesen Fall ist das aufgenommene Texel das Texel 0 für einen Texturindex von 1,0. Wenn die Texturkoordinate jedoch lediglich leicht unter 1,0 lag, würde das aufgenommene Texel das Texel n sein, und nicht das Texel 0.
 
 Das bedeutet, dass eine Vergrößerung einer kleinen Textur unter Verwendung von Texturkoordinaten von genau 0,0 und 1,0 mit Filterung am nächstgelegenen Punkt auf einem mit dem Bildschirmbereich ausgerichteten Dreieck zu Pixeln führt, für die die Texturzuordnung an der Grenze zwischen Texeln gesampelt wird. Eventuelle Ungenauigkeiten bei der Berechnung von Texturkoordinaten, wie geringfügig sie auch sein mögen, führen zu Artefakten entlang der Bereiche des ausgegebenen Bildes, die den Texel-Kanten der Texturzuordnung entsprechen.
 
@@ -54,7 +50,6 @@ Der beste Ansatz besteht in der Verwendung der Filterung am nächstgelegenen Pun
  
 
  
-
 
 
 

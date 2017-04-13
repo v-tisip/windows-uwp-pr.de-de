@@ -10,13 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
+keywords: Windows10, UWP
 ms.assetid: 868b4145-319b-4a97-82bd-c98d966144db
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: b14f83d9e834fcefbb3f9d1f9870f81686b44084
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 6dc3c9d15ebbda67dd055adb4b9d5548b6ac81e3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="app-bar-and-command-bar"></a>App-Leiste und Befehlsleiste
 
@@ -44,9 +42,9 @@ Das CommandBar-Steuerelement ist ein allgemeines, flexibles und kleines Steuerel
 XAML stellt das AppBar-Steuerelement und das CommandBar-Steuerelement bereit. Sie sollten AppBar nur verwenden, wenn Sie eine universelle Windows 8-App aktualisieren, in der AppBar verwendet wird, und möglichst wenige Änderungen vornehmen möchten. Für neue Apps in Windows 10 sollten Sie stattdessen das CommandBar-Steuerelement verwenden. In diesem Dokument wird davon ausgegangen, dass Sie das CommandBar-Steuerelement verwenden.
 
 ## <a name="examples"></a>Beispiele
-Eine erweiterte Befehlsleiste in der Microsoft Fotos-App:
+Eine erweiterte Befehlsleiste in der MicrosoftFotos-App:
 
-![Befehlsleiste in der Microsoft Fotos-App](images/control-examples/command-bar-photos.png)
+![Befehlsleiste in der MicrosoftFotos-App](images/control-examples/command-bar-photos.png)
 
 Eine Befehlsleiste im Outlook-Kalender auf einem Windows Phone:
 
@@ -104,7 +102,7 @@ Das CommandBar-Steuerelement verfügt über drei Eigenschaften, mit denen Sie Be
 
 ### <a name="primary-actions-and-overflow"></a>Primäre Aktionen und Überlauf
 
-Standardmäßig werden Elemente, die Sie der Befehlsleiste hinzufügen, der **PrimaryCommands**-Sammlung hinzugefügt. Diese Befehle werden links von der Schaltfläche für weitere Optionen (\[•••\]) im sogenannten Aktionsbereich angezeigt. Platzieren Sie die wichtigsten Befehle (also die, die auf der Leiste sichtbar bleiben sollen) im Aktionsbereich. Auf sehr kleinen Bildschirmen (Breite: 320 epx) passen maximal vier Elemente in den Aktionsbereich der Befehlsleiste.
+Standardmäßig werden Elemente, die Sie der Befehlsleiste hinzufügen, der **PrimaryCommands**-Sammlung hinzugefügt. Diese Befehle werden links von der Schaltfläche für weitere Optionen (\[•••\]) im sogenannten Aktionsbereich angezeigt. Platzieren Sie die wichtigsten Befehle (also die, die auf der Leiste sichtbar bleiben sollen) im Aktionsbereich. Auf sehr kleinen Bildschirmen (Breite: 320epx) passen maximal vier Elemente in den Aktionsbereich der Befehlsleiste.
 
 Sie können der **SecondaryCommands**-Sammlung auch Befehle hinzufügen. Diese Elemente werden im Überlaufbereich angezeigt. Platzieren Sie weniger wichtige Befehle im Überlaufbereich.
 
@@ -135,7 +133,7 @@ Hier sehen Sie, wie der oben gezeigte Codeausschnitt aussieht, wenn er von einer
 
 ![Befehlsleiste mit Beschriftungen auf der rechten Seite](images/app-bar-labels-on-right.png)
 
-Bei einzelnen App-Leistenschaltflächen kann die Position der Beschriftung nicht geändert werden. Dies muss über die Befehlsleiste erfolgen. App-Leistenschaltflächen können angeben, dass ihre Beschriftungen nie angezeigt werden, indem die neue [**LabelPosition**](https://msdn.microsoft.com/library/windows/apps/mt710920.aspx)-Eigenschaft auf **Collapsed** festgelegt wird. Wir empfehlen die Verwendung dieser Einstellung auf universell erkennbare Symbole zu begrenzen, z. B. „+“.
+Bei einzelnen App-Leistenschaltflächen kann die Position der Beschriftung nicht geändert werden. Dies muss über die Befehlsleiste erfolgen. App-Leistenschaltflächen können angeben, dass ihre Beschriftungen nie angezeigt werden, indem die neue [**LabelPosition**](https://msdn.microsoft.com/library/windows/apps/mt710920.aspx)-Eigenschaft auf **Collapsed** festgelegt wird. Wir empfehlen die Verwendung dieser Einstellung auf universell erkennbare Symbole zu begrenzen, z.B. „+“.
 
 Wenn Sie eine App-Leistenschaltfläche im Überlaufmenü (SecondaryCommands) platzieren, wird nur Text angezeigt. Die **LabelPosition** der App-Leistenschaltflächen im Überlauf wird ignoriert. Dies ist der gleiche Schalter in der App-Leistenschaltfläche im Aktionsbereich als primärer Befehl (oben) und im Überlaufbereich als sekundärer Befehl (unten).
 
@@ -252,7 +250,7 @@ Wenn der Benutzer nach dem Öffnen der Befehlsleiste außerhalb des Steuerelemen
 
 Befehlsleisten können am oberen Rand des App-Fensters, am unteren Rand des App-Fensters und inline platziert werden.
 
-![Beispiel 1 für die Platzierung der App-Leiste](images/AppbarGuidelines_Placement1.png)
+![Beispiel1 für die Platzierung der App-Leiste](images/AppbarGuidelines_Placement1.png)
 
 -   Bei kleinen Handheld-Geräten empfiehlt es sich, Befehlsleisten am unteren Bildschirmrand zu platzieren, da sie dort besser erreichbar sind.
 -   Wenn Sie bei Geräten mit größerem Bildschirm nur eine Befehlsleiste verwenden, wird empfohlen, sie in der Nähe des oberen Fensterrands zu platzieren.
@@ -260,7 +258,7 @@ Die Größe des physischen Bildschirms können Sie mithilfe der [**DiagonalSizeI
 
 Befehlsleisten können auf Bildschirmen mit einzelner Ansicht (linkes Beispiel) und auf Bildschirmen mit mehreren Ansichten (rechtes Beispiel) in folgenden Bildschirmbereichen platziert werden: Inlinebefehlsleisten können überall im Aktionsbereich platziert werden.
 
-![Beispiel 2 für die Platzierung der App-Leiste](images/AppbarGuidelines_Placement2.png)
+![Beispiel2 für die Platzierung der App-Leiste](images/AppbarGuidelines_Placement2.png)
 
 >**Fingereingabegeräte**: Wenn die Befehlsleiste für den Benutzer sichtbar bleiben muss, während die Bildschirmtastatur (oder ein Soft Input Panel, SIP) angezeigt wird, können Sie die Befehlsleiste der [BottomAppBar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.bottomappbar.aspx)-Eigenschaft einer Seite zuweisen. Sie wird dann verschoben und bleibt sichtbar, wenn die Bildschirmtastatur eingeblendet ist. Andernfalls müssen Sie die Befehlsleiste inline relativ zum App-Inhalt platzieren.
 
@@ -268,7 +266,7 @@ Befehlsleisten können auf Bildschirmen mit einzelner Ansicht (linkes Beispiel) 
 
 Priorisieren Sie die auf der Befehlsleiste angezeigten Aktionen auf der Grundlage ihrer Sichtbarkeit.
 
--   Platzieren Sie die wichtigsten Befehle, also die, die auf der Leiste sichtbar bleiben sollen, an erster Stelle im Aktionsbereich. Auf sehr kleinen Bildschirmen (Breite: 320 Epx) passen abhängig von anderen UI-Elementen 2 bis 4 Elemente in den Aktionsbereich der Befehlsleiste.
+-   Platzieren Sie die wichtigsten Befehle, also die, die auf der Leiste sichtbar bleiben sollen, an erster Stelle im Aktionsbereich. Auf sehr kleinen Bildschirmen (Breite: 320 Epx) passen abhängig von anderen UI-Elementen 2 bis 4Elemente in den Aktionsbereich der Befehlsleiste.
 -   Platzieren Sie weniger wichtige Befehle weiter hinten im Aktionsbereich der Leiste oder an erster Stelle im Überlaufbereich. Diese Befehle werden angezeigt, wenn auf der Leiste ausreichend Platz verfügbar ist. Sie werden jedoch in das Dropdownmenü des Überlaufbereichs verschoben, wenn nicht ausreichend Platz zur Verfügung steht.
 -   Platzieren Sie die am wenigsten wichtigen Befehle im Überlaufbereich. Diese Befehle werden immer im Dropdownmenü angezeigt.
 
@@ -278,7 +276,7 @@ Sie können zwar alle Aktionen im Überlaufbereich platzieren, sodass auf der Be
 
 ### <a name="command-bar-flyouts"></a>Flyouts auf einer Befehlsleiste
 
-Ziehen Sie logische Gruppierungen für die Befehle in Erwägung. Platzieren Sie z. B. die Befehle „Antworten“, „Allen antworten“ und „Weiterleiten“ im Menü „Antworten“. Mit einer App-Leistenschaltfläche wird zwar üblicherweise ein einzelner Befehl aktiviert, sie kann jedoch auch zum Anzeigen eines [**MenuFlyout**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.menuflyout.aspx)- oder [**Flyout**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flyout.aspx)-Elements mit benutzerdefiniertem Inhalt verwendet werden.
+Ziehen Sie logische Gruppierungen für die Befehle in Erwägung. Platzieren Sie z.B. die Befehle „Antworten“, „Allen antworten“ und „Weiterleiten“ im Menü „Antworten“. Mit einer App-Leistenschaltfläche wird zwar üblicherweise ein einzelner Befehl aktiviert, sie kann jedoch auch zum Anzeigen eines [**MenuFlyout**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.menuflyout.aspx)- oder [**Flyout**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flyout.aspx)-Elements mit benutzerdefiniertem Inhalt verwendet werden.
 
 ![Beispiel für Flyouts auf einer Befehlsleiste](images/AppbarGuidelines_Flyouts.png)
 
@@ -308,4 +306,3 @@ Ziehen Sie logische Gruppierungen für die Befehle in Erwägung. Platzieren Sie 
 
 * [Befehlsdesigngrundlagen für UWP-Apps](../layout/commanding-basics.md)
 * [**CommandBar-Klasse**](https://msdn.microsoft.com/library/windows/apps/dn279427)
-

@@ -2,21 +2,17 @@
 title: "Konfigurieren der Tiefenschablonenfunktionalität"
 description: "In diesem Abschnitt werden die Schritte zum Einrichten des Tiefenschablonenpuffers und der Tiefenschablonenphase für die Ausgabezusammenführungsphase behandelt."
 ms.assetid: B3F6CDAA-93ED-4DC1-8E69-972C557C7920
-keywords:
-- "Konfigurieren der Tiefenschablonenfunktionalität"
+keywords: "Konfigurieren der Tiefenschablonenfunktionalität"
 author: mtoepke
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 6814e5ee5aa99558830af4da3b43d102048f8bcb
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 9064c65732287777c90fe3987cda61c087e49508
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="span-iddirect3dconceptsconfiguringdepth-stencilfunctionalityspanconfiguring-depth-stencil-functionality"></a><span id="direct3dconcepts.configuring_depth-stencil_functionality"></span>Konfigurieren der Tiefenschablonenfunktionalität
 
 
@@ -58,17 +54,17 @@ Der Schablonen-Anteil des Tiefenschablonenpuffers kann zur Erstellung von Render
 
 ### <a name="span-idcompositingspanspan-idcompositingspanspan-idcompositingspancompositing"></a><span id="Compositing"></span><span id="compositing"></span><span id="COMPOSITING"></span>Zusammensetzen
 
-Ihre Anwendung kann die Schablonenpuffer verwenden, um 2D- oder 3D-Bilder mit einer 3D-Szene zu kombinieren. Im Schablonenpuffer wird eine Maske verwendet, um einen Bereich der Renderzieloberfläche zu verdecken. Gespeicherte 2D-Informationen, z. B. Text oder Bitmaps, können dann auf den verdeckten Bereich geschrieben werden. Alternativ kann die Anwendung zusätzliche 3D-Grundtypen auf den von der Schablone maskierten Bereich der Renderzieloberfläche rendern Es kann sogar eine ganze Szene gerendert werden.
+Ihre Anwendung kann die Schablonenpuffer verwenden, um 2D- oder 3D-Bilder mit einer 3D-Szene zu kombinieren. Auf der Renderzieloberfläche wird mit einer Maske in dem Schablonenpuffer ein Bereich verdeckt. Gespeicherte 2D-Informationen, z.B. Text oder Bitmaps, können dann in den verdeckten Bereich geschrieben werden. Alternativ kann die Anwendung weitere 3D-Grundtypen auf den durch die Schablone maskierten Bereich der Renderzieloberfläche rendern. Es kann sogar eine ganze Szene gerendert werden.
 
-Spiele fassen oft mehrere 3D-Szenen zusammen. Beispielsweise wird in Rennspielen oft ein Rückspiegel angezeigt. Der Spiegel enthält die Ansicht der 3D-Szene hinter der Fahrer. Es ist praktisch eine zweite 3D-Szene, die mit der Vorderansicht des Fahrers kombiniert wird.
+In Spielen sind häufig mehrere 3D-Szenen zusammengesetzt. Zum Beispiel gibt es in Fahrspielen normalerweise einen Rückspiegel. Im Spiegel ist die Ansicht der 3D-Szene hinter dem Fahrer sichtbar. Das ist im Grunde eine zweite 3D-Szene, die mit der Sicht des Fahrers nach vorne zusammengesetzt ist.
 
-### <a name="span-iddecalingspanspan-iddecalingspanspan-iddecalingspandecaling"></a><span id="Decaling"></span><span id="decaling"></span><span id="DECALING"></span>Verwenden von Decals
+### <a name="span-iddecalingspanspan-iddecalingspanspan-iddecalingspandecaling"></a><span id="Decaling"></span><span id="decaling"></span><span id="DECALING"></span>Rasterung
 
-Direct3D-Apps legen mithilfe von Decals fest, welche Pixel eines bestimmten Grundbilds auf die Renderzieloberfläche gezeichnet werden. Anwendungen wenden Decals auf Bilder von Grundtypen an, damit koplanare Polygone korrekt rendern können.
+Direct3D-Anwendungen steuern über die Rasterung, welche Pixel aus einem bestimmten Grundtypbild auf die Renderzieloberfläche gezeichnet werden. Anwendungen wenden Rasterungen für die Bilder der Grundtypen an, um komplanare Polygone richtig zu rendern.
 
-Beim Erstellen von Reifenspuren und gelben Straßenlinien sollten die Spuren direkt auf der Straßenoberfläche angezeigt werden. Die Z-Werte für die Spuren und die Straße sind allerdings identisch. Der Tiefenpuffer kann daher keine klare Trennung zwischen den beiden erstellen. Es werden Pixel des hinteren Grundtyps möglicherweise über dem vorderen Grundtyp (und umgekehrt) gerendert. Das resultierende Bild scheint von Frame zu Frame zu flimmern. Dieser Effekt wird „Z-Konflikt” oder „Flimmern” genannt.
+Zum Beispiel sollten für die Darstellung von Reifenspuren und gelben Linien auf einer Straße die Reifenspuren direkt auf der Straße angezeigt werden. Die Z-Werte für die Reifenspuren und die Straße sind aber gleich. Der Tiefenpuffer kann deshalb eventuell keine klare Trennung zwischen den beiden erzeugen. Einige Pixel im Hintergrund-Grundtyp werden möglicherweise auf dem Vordergrund-Grundtyp (und umgekehrt) gerendert. Das resultierende Bild scheint von Frame zu Frame zu schimmern. Dieser Effekt wird „Z-Konflikt” oder „Flimmern” genannt.
 
-Um dieses Problem zu beheben, verwenden Sie eine Schablone, um den hinteren Grundtyp dort zu maskieren, wo das Decal angezeigt werden soll. Deaktivieren Sie die Z-Pufferung und rendern Sie das Bild des im Vordergrund stehenden Grundtyps auf den maskierten Bereich der Renderzieloberfläche.
+Um dieses Problem zu beheben, verwenden Sie eine Schablone, mit der der Abschnitt des Hintergrund-Grundtyps maskiert wird, an dem die Rasterung angezeigt wird. Deaktivieren Sie die Z-Pufferung und rendern Sie das Bild des im Vordergrund stehenden Grundtyps auf den maskierten Bereich der Renderzieloberfläche.
 
 Mischen Sie unterschiedliche Texturen, um das Problem zu lösen.
 
@@ -78,17 +74,17 @@ Sie können die Schablonenpuffer für abstraktere Effekte wie Skizzieren und das
 
 Wenn Ihre Anwendung zwei Render-Durchgänge durchführt – einen zum Erstellen der Schablonenmaske und den zweiten zum Anwenden der Schablonenmaske auf das Bild, wobei die Grundtypen beim zweiten Durchgang etwas kleiner sind - enthält das resultierende Bild nur den Umriss des Grundtyps. Die Anwendung kann anschließend den von der Schablone maskierten Bereich des Bilds mit einer Volltonfarbe ausfüllen, um den Grundtyp mit Relief darzustellen.
 
-Weist die Schablonenmaske die gleiche Größe und Form wie der gerenderte Grundtyp auf, enthält das resultierende Bild dort eine Lücke, wo der Grundtyp dargestellt werden sollte. Ihre Anwendung kann anschließend die Lücke mit Schwarz füllen, um eine Silhouette des Grundtyps zu erstellen.
+Wenn die Schablonenmaske die gleiche Größe und Form wie der Grundtyp hat, den Sie rendern, enthält das resultierende Bild an der Stelle eine Lücke, an der sich der Grundtyp befinden sollte. Ihre Anwendung kann anschließend die Lücke mit Schwarz füllen, um eine Silhouette des Grundtyps zu erstellen.
 
 ### <a name="span-idtwosidedstencilspanspan-idtwosidedstencilspanspan-idtwosidedstencilspanspan-idtwo-sided-stencilspantwo-sided-stencil"></a><span id="Two_Sided_Stencil"></span><span id="two_sided_stencil"></span><span id="TWO_SIDED_STENCIL"></span><span id="two-sided-stencil"></span>Zweiseitige Schablone
 
-Schattenvolumen dienen zum Zeichnen von Schatten mithilfe des Schablonenpuffers. Die Anwendung berechnet das Volume des geworfenen Schattens durch das Verdecken der Geometrie, indem die Ränder der Silhouette berechnet und diese vom Licht weg in eine Gruppe von 3D-Volumes extrahiert werden. Diese Volumes werden dann zweimal in den Schablonenpuffer gerendert.
+Schattenvolumen dienen zum Zeichnen von Schatten mithilfe des Schablonenpuffers. Die Anwendung berechnet die Schattenvolumenumwandlung durch verdeckende Geometrie, indem die Ränder der Silhouette berechnet und aus dem Licht in eine Gruppe von 3D-Volumen extrudiert werden. Diese Volumen werden dann zweimal in den Schablonenpuffer gerendert.
 
-Beim ersten Rendern werden nach vorn gerichtete Polygone gezeichnet und der Schablonenpufferwert erhöht. Beim zweiten Rendern werden die nach hinten gerichteten Polygone des Schattenvolumens gezeichnet und die Werte der Schablonenpuffer verringert.
+Beim ersten Rendern werden die nach vorne gerichteten Polygone gezeichnet und die Werte im Schablonenpuffer erhöht. Beim zweiten Rendern werden die nach hinten gerichteten Polygone des Schattenvolumens gezeichnet und die Werte im Schablonenpuffer verringert.
 
-In der Regel heben sich alle erhöhten oder verringerten Werte gegenseitig auf. Allerdings wurde die Szene bereits mit normaler Geometrie gerendert, wodurch bei einigen Pixeln beim Z-Puffer-Test Fehler auftraten, wenn das Schattenvolumen gerendert wird. Die Werte links im Schablonenpuffer entsprechen den Pixeln des Schattens. Die übrigen Schablonenpuffer-Inhalte dienen als Maske, um ein großes, übergreifendes schwarzes Viereck als Alpha in die Szene einzublenden. Da der Schablonenpuffer als Maske fungiert, werden die Pixel des Schattens dunkler gemacht.
+In der Regel heben sich alle erhöhten oder verringerten Werte gegenseitig auf. Da die Szene aber bereits mit normaler Geometrie gerendert wurde, ist der Z-Puffer-Test für einige Pixel beim Rendern des Schattenvolumens nicht erfolgreich. Werte, die im Schablonenpuffer verblieben sind, entsprechen den Pixeln, die sich im Schatten befinden. Dieser verbliebene Inhalt des Schablonenpuffers wird als Maske verwendet, um ein großes, allumfassendes schwarzes Viereck in der Szene per Alpha-Überblendung zu überlagern. Das Ergebnis der Verwendung des Schablonenpuffers als Maske besteht darin, dass Pixel, die im Schatten liegen, dunkler werden.
 
-Dies bedeutet, dass die Geometrie des Schattens zweimal pro Lichtquelle gezeichnet wird, was auf den Vertex-Durchsatz der GPU Druck ausübt. Die zweiseitige Schablonenfunktion wurde als Schutzmaßnahme gegen diese Situation entwickelt. Dabei stehen Ihnen zwei Sets an Schablonenphasen zur Verfügung (wie unten angegeben): eins für nach vorne gerichtete Dreiecke und das andere für nach hinten gerichtete Dreiecke. Auf diese Weise wird nur ein einziger Durchlauf pro Schattenvolumen pro Lichtquelle gezeichnet.
+Dies bedeutet, dass die Schattengeometrie zweimal pro Lichtquelle gezeichnet wird, und somit der Vertexdurchsatz der GPU stark belastet wird. Das Feature „zweiseitige Schablone” wurde entwickelt, um diese Situation abzuschwächen. In diesen Ansatz gibt es zwei Gruppen von Schablonenzuständen, einen für die nach vorne gerichteten Dreiecke und den anderen für die nach hinten gerichteten Dreiecke. Auf diese Weise wird nur ein einziger Durchlauf pro Schattenvolumen pro Lichtquelle gezeichnet.
 
 ### <a name="span-idreadingthedepth-stencilbufferasatexturespanspan-idreadingthedepth-stencilbufferasatexturespanspan-idreadingthedepth-stencilbufferasatexturespanspan-idreading-the-depth-stencil-buffer-as-a-texturespanreading-the-depth-stencil-buffer-as-a-texture"></a><span id="Reading_the_Depth-Stencil_Buffer_as_a_Texture"></span><span id="reading_the_depth-stencil_buffer_as_a_texture"></span><span id="READING_THE_DEPTH-STENCIL_BUFFER_AS_A_TEXTURE"></span><span id="reading-the-depth-stencil-buffer-as-a-texture"></span>Den Tiefenschablonenpuffers als Textur lesen
 
@@ -102,4 +98,3 @@ Ein inaktiver Tiefenschablonenpuffer kann von einem Shader als Textur gelesen we
 [Grafikpipeline](graphics-pipeline.md)
 
 [Ausgabezusammenführungsphase](https://msdn.microsoft.com/library/windows/desktop/bb205120)
-

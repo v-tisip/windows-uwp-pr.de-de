@@ -2,21 +2,17 @@
 title: Ansichtstransformation
 description: Eine Ansichtstransformation lokalisiert den Betrachter im Weltbereich und transformiert dazu Scheitelpunkte in den Kamerabereich.
 ms.assetid: DA4C2051-4C28-4ABF-8C06-241C8CB87F2F
-keywords:
-- Ansichtstransformation
+keywords: Ansichtstransformation
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 08687ab044c460417d967047c1dd9fd473f06091
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 62b0958bfa298ed924a62de73c1747f353e63033
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="view-transform"></a>Ansichtstransformation
 
 
@@ -26,11 +22,11 @@ Es gibt viele Möglichkeiten, um eine Ansichtsmatrix erstellen. In allen Fällen
 
 ![Gleichung der Ansichtstransformation](images/viewtran.png)
 
-In dieser Formel ist V die zu erstellende Ansichtsmatrix, T ist eine Übersetzungsmatrix, die Objekte in der Welt neu positioniert und Rₓ bis R<sub>z</sub> sind Drehungsmatrizen, die Objekte um die x-, y- und z-Achse drehen. Die Übersetzungs- und Drehungsmatrizen basieren auf der logischen Position und Orientierung der Kamera im Weltbereich. Wenn die logische Position der Kamera in der Welt &lt;10,20,100&gt; ist, ist das Ziel der Übersetzungsmatrix die Verschiebung von Objekten um -10 Einheiten entlang der x-Achse, um -20 Einheiten entlang der y-Achse sowie um -100 Einheiten entlang der z-Achse. Die Drehungsmatrizen in der Formel basieren auf der Ausrichtung der Kamera, d. h. darauf, wie weit die Achsen des Kamerabereichs durch Drehung von der Übereinstimmung mit dem Weltbereich entfernt sind. Zum Beispiel: Wenn die erwähnte Kamera direkt nach unten zeigt, befindet sich ihre z-Achse 90 Grad (pi/2 Bogenmaß) außerhalb der Übereinstimmung mit der z-Achse des Weltbereichs, wie in der folgenden Abbildung illustriert.
+In dieser Formel ist V die zu erstellende Ansichtsmatrix, T ist eine Übersetzungsmatrix, die Objekte in der Welt neu positioniert und Rₓ bis R<sub>z</sub> sind Drehungsmatrizen, die Objekte um die x-, y- und z-Achse drehen. Die Übersetzungs- und Drehungsmatrizen basieren auf der logischen Position und Orientierung der Kamera im Weltbereich. Wenn die logische Position der Kamera in der Welt &lt;10,20,100&gt; ist, ist das Ziel der Übersetzungsmatrix die Verschiebung von Objekten um -10 Einheiten entlang der x-Achse, um -20 Einheiten entlang der y-Achse sowie um -100 Einheiten entlang der z-Achse. Die Drehungsmatrizen in der Formel basieren auf der Ausrichtung der Kamera, d.h. darauf, wie weit die Achsen des Kamerabereichs durch Drehung von der Übereinstimmung mit dem Weltbereich entfernt sind. Zum Beispiel: Wenn die erwähnte Kamera direkt nach unten zeigt, befindet sich ihre z-Achse 90 Grad (pi/2 Bogenmaß) außerhalb der Übereinstimmung mit der z-Achse des Weltbereichs, wie in der folgenden Abbildung illustriert.
 
 ![Illustration des Ansichtsbereichs der Kamera im Vergleich zum Weltbereich](images/camtop.png)
 
-Die Drehungsmatrizen wenden Drehungen gleicher (jedoch entgegengesetzter) Größe auf die Modelle in der Szene an. Die Ansichtsmatrix für diese Kamera enthält eine Drehung um -90 Grad um die x-Achse. Die Drehungsmatrix wird mit der Übersetzungsmatrix kombiniert, um eine Ansichtsmatrix zu schaffen, die die Position und die Ausrichtung der Objekte in der Szene so anpasst, dass ihr oberer Rand zur Kamera weist; dadurch entsteht der Eindruck, dass sich die Kamera über dem Modell befindet.
+Die Drehungsmatrizen wenden Drehungen gleicher (jedoch entgegengesetzter) Größe auf die Modelle in der Szene an. Die Ansichtsmatrix für diese Kamera enthält eine Drehung um -90Grad um die x-Achse. Die Drehungsmatrix wird mit der Übersetzungsmatrix kombiniert, um eine Ansichtsmatrix zu schaffen, die die Position und die Ausrichtung der Objekte in der Szene so anpasst, dass ihr oberer Rand zur Kamera weist; dadurch entsteht der Eindruck, dass sich die Kamera über dem Modell befindet.
 
 ## <a name="span-idsettingupaviewmatrixspanspan-idsettingupaviewmatrixspanspan-idsettingupaviewmatrixspansetting-up-a-view-matrix"></a><span id="Setting_Up_a_View_Matrix"></span><span id="setting_up_a_view_matrix"></span><span id="SETTING_UP_A_VIEW_MATRIX"></span>Einrichten einer Ansichtsmatrix
 
@@ -45,7 +41,6 @@ Direct3D verwendet die Welt- und Ansichtsmatrizen, um mehrere interne Datenstruk
  
 
  
-
 
 
 

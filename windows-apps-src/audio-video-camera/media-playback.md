@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 58b41c9d0d8bd7cd07b5a1f4aecf5936422a4ee8
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: b6931e6691f76afeca89412e029c41895949bf3f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="media-playback"></a>Medienwiedergabe
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
 Dieser Abschnitt enthält Informationen zum Erstellen von universellen Windows-Apps, mit denen Videos oder Audiodateien wiedergegeben werden können. 
 
@@ -33,20 +30,19 @@ Die folgende Tabelle enthält eine Aufstellung von ausführlichen Anleitungen zu
 | [Integration in die Steuerelemente für den Systemmedientransport](integrate-with-systemmediatransportcontrols.md)                               | In diesem Artikel wird erläutert, wie Sie Ihre App in die Steuerelemente für den Systemmedientransport integrieren können. Ab Windows 10, Version 1607, wird jede Instanz von **MediaPlayer**, die Sie erstellen, automatisch in SMTC angezeigt. In diesem Artikel wird erläutert, wie Sie für die Steuerelemente für den Systemmedientransport Metadaten über den Inhalt bereitstellen können, und wie Sie das Standardverhalten der Steuerelemente erweitern oder vollständig überschreiben können.                                   |
 | [Erstellen, Planen und Verwalten von Medienunterbrechungen](create-schedule-and-manage-media-breaks.md)                                                                             | In diesem Artikel wird beschrieben, wie Sie für Ihre App zur Medienwiedergabe Medienunterbrechungen erstellen, planen und verwalten. Ab Windows 10, Version 1607, können Sie die [**MediaBreakManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager)-Klasse verwenden, um schnell und einfach Medienunterbrechungen zu jedem [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem)-Element hinzuzufügen, das Sie mit einem [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) abspielen. Medienunterbrechungen werden normalerweise genutzt, um Audio- und Videoanzeigen in Medieninhalte einzufügen. Nachdem Sie eine oder mehrere Medienunterbrechungen geplant haben, spielt das System automatisch die Medieninhalte zum angegebenen Zeitpunkt während der Wiedergabe ab. Der **MediaBreakManager** stellt Ereignisse bereit, damit Ihre App reagieren kann, wenn Medienunterbrechungen beginnen, enden oder vom Benutzer übersprungen werden. Sie können auch auf eine [**MediaPlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession) für Ihre Medienunterbrechungen zugreifen, um Ereignisse, wie z. B. das Herunterladen und Puffern von Updates, zu überwachen.                                                                                                                     |
 | [Wiedergeben von Medien im Hintergrund](background-audio.md)                                                                             | In diesem Artikel wird beschrieben, wie Sie Ihre App so konfigurieren, dass die Medienwiedergabe fortgesetzt wird, wenn die App vom Vordergrund in den Hintergrund wechselt. Dies bedeutet, dass die App weiterhin Audio wiedergeben kann, auch nachdem der Benutzer die App minimiert hat, zur Startseite zurückgekehrt ist oder die App auf andere Weise verlassen hat. Mit Windows 10, Version 1607, wurde ein neues Einzelprozessmodell für die Medienwiedergabe im Hintergrund eingeführt, das wesentlich schneller und einfacher zu implementieren ist als das veraltete Zweiprozessmodell. Dieser Artikel enthält Informationen zum Umgang mit den neuen App-Lebenszyklusereignissen [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground) und [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground), mit denen Sie den Speicherbedarf Ihrer App verwalten können, während sie im Hintergrund ausgeführt werden.                                                                                                                    |
-| [Adaptives Streaming](adaptive-streaming.md)                                                       | In diesem Artikel wird beschrieben, wie Sie die Wiedergabe von Multimediainhalten für adaptives Streaming zu Apps für die universelle Windows-Plattform (UWP) hinzufügen können. Dieses Feature unterstützt derzeit die Wiedergabe von Inhalten über HTTP Live Streaming (HLS) und Dynamic Streaming over HTTP (DASH).                                          |
+| [Adaptives Streaming](adaptive-streaming.md)                                                       | In diesem Artikel wird beschrieben, wie Sie die Wiedergabe von Multimediainhalten für adaptives Streaming zu Apps für die universelle Windows-Plattform (UWP) hinzufügen können. Dieses Feature unterstützt derzeit die Wiedergabe von Inhalten über HTTP Live Streaming(HLS) und Dynamic Streaming over HTTP(DASH).                                          |
 | [Medienumwandlung](media-casting.md)                                                                 | In diesem Artikel wird beschrieben, wie Sie Medien von einer universellen Windows-App für Remotegeräte umwandeln.                                                                                                                                                                                                       |
 | [PlayReady DRM](playready-client-sdk.md)                                                          | In diesem Abschnitt wird beschrieben, wie Sie Ihrer UWP-App (Universelle Windows-Plattform) PlayReady-geschützte Medieninhalte hinzufügen.                                                                                                                                                                                |
 | [Verschlüsselte Medienerweiterung von PlayReady](playready-encrypted-media-extension.md)                     | In diesem Abschnitt wird beschrieben, wie Sie Ihre Web-App mit PlayReady ändern, um die Änderungen zu unterstützen, die gegenüber der Windows 8.1-Version in der Version für Windows 10 vorgenommen wurden.                                                                                                                                       |
 
 ## <a name="media-playback-sdk-samples"></a>SDK-Beispiele für die Medienwiedergabe
 
-Die folgenden SDK-Beispiele veranschaulichen die Funktionen zur Medienwiedergabe, die für UWP-Apps unter Windows 10 verfügbar sind. Verwenden Sie diese Beispiele, um die APIs zur Medienwiedergabe im Kontext zu sehen, oder als Ausgangspunkt für Ihre eigene App.
+Die folgenden SDK-Beispiele veranschaulichen die Funktionen zur Medienwiedergabe, die für UWP-Apps unter Windows10 verfügbar sind. Verwenden Sie diese Beispiele, um die APIs zur Medienwiedergabe im Kontext zu sehen, oder als Ausgangspunkt für Ihre eigene App.
 
 * [Beispiel für adaptives Streaming](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/AdaptiveStreaming)
 * [Hintergrundaudio-Beispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundMediaPlayback)
 * [Beispiel für den Systemmedientransport](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls)                                                                                               
  
-
 
 
 

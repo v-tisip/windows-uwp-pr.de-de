@@ -9,22 +9,19 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 426670f9b8d24a770f74aa0bdfaa5abb043c39ef
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: ed2f7dc63e478d3dde2eb58b502d373db3181501
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="test-surface-hub-apps-using-visual-studio"></a>Testen von Surface Hub-Apps mit Visual Studio
-Der Visual Studio-Simulator bietet eine Umgebung, in der Sie Apps für die universelle Windows-Plattform (UWP) entwerfen, entwickeln, debuggen und testen können, einschließlich Apps, die Sie für Microsoft Surface Hub entwickelt haben. Der Simulator verwendet nicht dieselbe Benutzeroberfläche wie ein Surface Hub, ist jedoch hilfreich, um das Erscheinungsbild und Verhalten Ihrer App bei der Bildschirmgröße und -auflösung von Surface Hubs zu testen.
+Der Visual Studio-Simulator bietet eine Umgebung, in der Sie Universelle Windows-Plattform (UWP)-Apps entwerfen, entwickeln, debuggen und testen können, einschließlich Apps, die Sie für Microsoft Surface Hub entwickelt haben. Der Simulator verwendet nicht dieselbe Benutzeroberfläche wie ein Surface Hub, ist jedoch hilfreich, um das Erscheinungsbild und Verhalten Ihrer App bei der Bildschirmgröße und -auflösung von Surface Hubs zu testen.
 
-Weitere Informationen finden Sie unter [Ausführen von Windows Store-Apps im Simulator](https://msdn.microsoft.com/library/hh441475.aspx).
+Weitere Informationen finden Sie unter [Ausführen von WindowsStore-Apps im Simulator](https://msdn.microsoft.com/library/hh441475.aspx).
 
 ## <a name="add-surface-hub-resolutions-to-the-simulator"></a>Hinzufügen von Surface Hub-Auflösungen zum Simulator
 So fügen Sie Surface Hub-Auflösungen zum Simulator hinzu:
 
-1. Erstellen Sie eine Konfiguration für denSurface Hub mit 55 Zoll, indem Sie den folgenden XML-Code in einer Datei namens **HardwareConfigurations-SurfaceHub55.xml** speichern.  
+1. Erstellen Sie eine Konfiguration für denSurface Hub mit 55Zoll, indem Sie den folgenden XML-Code in einer Datei namens **HardwareConfigurations-SurfaceHub55.xml** speichern.  
 
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -43,7 +40,7 @@ So fügen Sie Surface Hub-Auflösungen zum Simulator hinzu:
     </ArrayOfHardwareConfiguration>
     ```
 
-2. Erstellen Sie eine Konfiguration für denSurface Hub mit 84 Zoll, indem Sie den folgenden XML-Code in einer Datei namens **HardwareConfigurations-SurfaceHub84.xml** speichern.
+2. Erstellen Sie eine Konfiguration für denSurface Hub mit 84Zoll, indem Sie den folgenden XML-Code in einer Datei namens **HardwareConfigurations-SurfaceHub84.xml** speichern.
 
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -106,4 +103,3 @@ Weitere Informationen finden Sie unter [Bereitstellen und Debuggen von Apps für
 3. Wählen Sie entweder **Debugging starten (F5)** aus, um die Bereitstellung und das Debugging Ihrer App auf dem Surface Hub auszuführen, oder drücken Sie STRG+F5, um nur die Bereitstellung Ihrer App auszuführen.
 
    > **Tipp**&nbsp;&nbsp;Sollte auf dem Surface Hub der Willkommensbildschirm angezeigt werden, können Sie diesen durch Drücken einer beliebigen Schaltfläche schließen.
-

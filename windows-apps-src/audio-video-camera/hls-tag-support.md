@@ -8,21 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 34bac5b7332bcc258c76f15a6005f82f545eef4d
-ms.lasthandoff: 02/08/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 7bf47b166dfd05b906b37deded909d5a3b26ac6e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="http-live-streaming-hls-tag-support"></a>Unterstützung von HLS-Tags (HTTP Live Streaming)
 In der folgenden Tabelle sind die HLS-Tags aufgeführt, die für UWP-Apps unterstützt werden.
 
 > [!NOTE] 
 > Auf benutzerdefinierte Tags, die mit „X-” beginnen, kann wie im Artikel zu [Medienelementen, Wiedergabelisten und Titeln](media-playback-with-mediasource.md) beschrieben als zeitgesteuerte Metadaten zugegriffen werden.
 
-|Tag |Eingeführt in HLS-Protokollversion|Entwurfsversion des HLS-Protokolldokuments|Erforderlich auf dem Client|Juliversion von Windows 10|Windows 10, Version 1511|Windows 10, Version 1606 |
+|Tag |Eingeführt in HLS-Protokollversion|Entwurfsversion des HLS-Protokolldokuments|Erforderlich auf dem Client|Juliversion von Windows 10|Windows 10, Version 1511|Windows 10, Version 1607 |
 |---------------------|-----------|--------------|---------|--------------|-----|-----|
 |4.3.1.  Grundlegende Tags                 |             |                   |         |             |     |    |
 | 4.3.1.1.  EXTM3U |1|0|ERFORDERLICH|Unterstützt|Unterstützt|Unterstützt|
@@ -90,7 +87,6 @@ In der folgenden Tabelle sind die HLS-Tags aufgeführt, die für UWP-Apps unters
  
 
  
-
 
 
 

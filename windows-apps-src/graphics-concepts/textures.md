@@ -2,21 +2,17 @@
 title: Texturen
 description: "Texturen sind ein leistungsstarkes Tool, um mit dem Computer realistische 3D-Bilder zu erzeugen. Direct3D unterstützt einen umfangreichen Texturfunktionssatz, und ermöglicht Entwicklern, einfach auf erweiterte Texturtechniken zuzugreifen."
 ms.assetid: B9E85C9E-B779-4852-9166-6FA2240B7046
-keywords:
-- Texturen
+keywords: Texturen
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 4c78099f6bd30956c45a907a960a595288e0eaf4
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: ef5c72f3c667c63cb48c469349ae26c364050c19
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="textures"></a>Texturen
 
 
@@ -45,7 +41,7 @@ Für bessere Leistung sollten Sie dynamische Texturen verwenden. Eine dynamische
 </tr>
 <tr class="even">
 <td align="left"><p>[Grundlegende Texturkonzepte](basic-texturing-concepts.md)</p></td>
-<td align="left"><p>Obwohl frühe computergenerierte 3D-Bilder generell hoch entwickelt waren, sahen diese künstlich glänzend aus. Es fehlte ihnen an Kennzeichen wie etwa Abnutzungen, Rissen, Fingerabdrücken oder Flecken, die 3D-Objekten eine realistische optische Komplexität verleihen. Texturen sind besonders für den verbesserten Realismus von computergenerierten 3D-Bilder beliebt.</p></td>
+<td align="left"><p>Obwohl frühe computergenerierte 3D-Bilder generell hoch entwickelt waren, sahen diese künstlich glänzend aus. Es fehlte ihnen Kennzeichen – wie etwa Abnutzungen, Risse, Fingerabdrücke und Flecken -, die 3D-Objekten eine realistische optische Komplexität verleihen. Texturen sind besonders für den verbesserten Realismus von computergenerierten 3D-Bilder beliebt.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>[Texturadressierungsmodi](texture-addressing-modes.md)</p></td>
@@ -69,11 +65,11 @@ Für bessere Leistung sollten Sie dynamische Texturen verwenden. Eine dynamische
 </tr>
 <tr class="even">
 <td align="left"><p>[Lichtzuordnung mit Texturen](light-mapping-with-textures.md)</p></td>
-<td align="left"><p>Eine Lichtzuordnung ist eine Textur oder Texturgruppe, die Informationen über das Licht in einer 3D-Szene enthält. Lichtzuordnungen ordnen Grundtypen Licht- und Schattenbereiche zu. Multipass und das Mischen mehrerer Texturen ermöglichen Ihrer Anwendung, Szenen mit einer realistischeren Darstellung zu rendern als mit Schattierungstechniken.</p></td>
+<td align="left"><p>Eine Lichtzuordnung ist eine Textur oder Texturgruppe, die Informationen über das Licht in einer 3D-Szene enthält. Lichtzuordnungen ordnen Licht- und Schattenbereiche Grundtypen zu. Multipass und das Mischen mehrerer Texturen ermöglichen Ihrer Anwendung, Szenen mit einer realistischeren Darstellung zu rendern als mit Schattierungstechniken.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>[Komprimierte Texturressourcen](compressed-texture-resources.md)</p></td>
-<td align="left"><p>Texturzuordnungen sind digitale Bilder, die auf dreidimensionale Formen gezeichnet werden, um diesen mehr Details zu verleihen. Sie werden während der Rasterung auf diese Formen abgebildet. Der Prozess kann große Mengen der Systembusressourcen und Speicher verbrauchen. Um den von den Texturen verbrauchten Speicherbedarf zu reduzieren, unterstützt Direct3D die Komprimierung von Texturoberflächen. Einige Direct3D-Geräte bieten eine systemeigene Unterstützung für komprimierte Texturoberflächen.</p></td>
+<td align="left"><p>Texturzuordnungen sind digitale Bilder, die auf dreidimensionale Formen gezeichnet werden, um diesen mehr Details zu verleihen. Sie werden während der Rasterung in diesen Formen wiedergegeben. Der Prozess kann große Mengen des Systembuses und des Speichers verbrauchen. Um den von den Texturen verbrauchten Speicherplatz zu reduzieren, unterstützt Direct3D die Komprimierung von Texturoberflächen. Einige Direct3D-Geräte bieten eine systemeigene Unterstützung für komprimierte Texturoberflächen.</p></td>
 </tr>
 </tbody>
 </table>
@@ -88,7 +84,6 @@ Für bessere Leistung sollten Sie dynamische Texturen verwenden. Eine dynamische
  
 
  
-
 
 
 

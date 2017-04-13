@@ -8,16 +8,13 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 4e7895f65a6d16fc43acab9f1804e5a44bd8cb35
-ms.lasthandoff: 02/08/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 0cca599b448ab663d4ebf0004329ecce8f4309c4
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="handle-device-orientation-with-mediacapture"></a>Handhaben der Geräte- und Bildschirmausrichtung mit „MediaCapture“
-Wenn Ihre App ein Foto oder Video aufnimmt, das außerhalb der App verarbeitet werden soll, z. B. in einer Datei auf dem Gerät des Benutzers oder online, ist es wichtig, dass das Bild mit den richtigen Ausrichtungsmetadaten codiert wird. Dadurch wird bei der Anzeige durch eine andere App oder ein anderes Gerät das Bild korrekt ausgerichtet. Die Bestimmung der korrekten Ausrichtungsdaten für eine Mediendatei kann eine komplexe Aufgabe sein, da verschiedene Variablen berücksichtigt werden müssen. Dazu zählen die Ausrichtung des Geräte-Chassis, die Ausrichtung der Anzeige und die Platzierung der Kamera (nach vorne oder nach hinten gerichtete Kamera). 
+Wenn Ihre App ein Foto oder Video aufnimmt, das außerhalb der App angezeigt werden soll, z.B. in eine Datei auf dem Gerät des Benutzers gespeichert oder online freigegeben werden soll, ist es wichtig, dass das Bild mit den richtigen Ausrichtungsmetadaten codiert wird. Dadurch wird bei der Anzeige durch eine andere App oder ein anderes Gerät das Bild korrekt ausgerichtet. Die Bestimmung der korrekten Ausrichtungsdaten für eine Mediendatei kann eine komplexe Aufgabe sein, da verschiedene Variablen berücksichtigt werden müssen. Dazu zählen die Ausrichtung des Geräte-Chassis, die Ausrichtung der Anzeige und die Platzierung der Kamera (nach vorne oder nach hinten gerichtete Kamera). 
 
 Um die Handhabung der Ausrichtung zu vereinfachen, empfehlen wir die Verwendung der Hilfsklasse **CameraRotationHelper**, deren vollständige Definition am Ende dieses Artikels bereitgestellt wird. Sie können diese Klasse dem Projekt hinzufügen und dann die Schritte zum Hinzufügen von Ausrichtungsunterstützung zur Kamera-App in diesem Artikel ausführen. Die Hilfsklasse erleichtert auch das Drehen der Steuerelemente in der Kamera-UI, damit sie aus Sicht des Benutzers korrekt gerendert werden.
 
@@ -34,7 +31,7 @@ Der erste Schritt beim Hinzufügen der Ausrichtungsunterstützung zur App ist da
 [!code-cs[AutoRotationPreference](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetAutoRotationPreference)]
 
 ## <a name="tracking-the-camera-device-location"></a>Nachverfolgen der Position des Kamerageräts
-Um die richtige Ausrichtung für aufgenommene Medien zu berechnen, muss die App die Position des Kamerageräts am Chassis ermitteln. Fügen Sie eine boolesche Membervariable hinzu, um nachzuverfolgen, ob es sich um eine externe Kamera handelt, z. B. eine USB-Webcam. Fügen Sie eine weitere boolesche Variable hinzu, um nachzuverfolgen, ob die Vorschau gespiegelt werden soll. Dies ist bei der Verwendung einer nach vorne gerichteten Kamera der Fall. Fügen Sie außerdem eine Variable zum Speichern eines **DeviceInformation**-Objekts hinzu, das die ausgewählte Kamera darstellt.
+Um die richtige Ausrichtung für aufgenommene Medien zu berechnen, muss die App die Position des Kamerageräts am Chassis ermitteln. Fügen Sie eine boolesche Membervariable hinzu, um nachzuverfolgen, ob es sich um eine externe Kamera handelt, z.B. eine USB-Webcam. Fügen Sie eine weitere boolesche Variable hinzu, um nachzuverfolgen, ob die Vorschau gespiegelt werden soll. Dies ist bei der Verwendung einer nach vorne gerichteten Kamera der Fall. Fügen Sie außerdem eine Variable zum Speichern eines **DeviceInformation**-Objekts hinzu, das die ausgewählte Kamera darstellt.
 
 [!code-cs[CameraDeviceLocationBools](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetCameraDeviceLocationBools)]
 [!code-cs[DeclareCameraDevice](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetDeclareCameraDevice)]
@@ -118,7 +115,6 @@ Mit den folgenden Methoden können empfohlene Ausrichtungswerte für die angegeb
  
 
  
-
 
 
 

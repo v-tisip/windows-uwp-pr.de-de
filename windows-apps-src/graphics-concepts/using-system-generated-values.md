@@ -2,21 +2,17 @@
 title: Verwenden von systemgenerierten Werten
 description: "Systemgenerierte Werte werden von der Eingabe-Assemblerphase (IA) generiert (basierend auf der vom Benutzer bereitgestellten Eingabesemantik), um bestimmte Effizienzvorteile in Shader-Operationen zu ermöglichen."
 ms.assetid: C7CBA81D-68CA-4E9A-95E3-8185C280C843
-keywords:
-- Verwenden von systemgenerierten Werten
+keywords: Verwenden von systemgenerierten Werten
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 41a2fca9daf288f4c25f10500e332d2983e6a62d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: f2b9918161f99a6a841e57d9b2705093eb85809b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="span-iddirect3dconceptsusingsystem-generatedvaluesspanusing-system-generated-values"></a><span id="direct3dconcepts.using_system-generated_values"></span>Verwenden von systemgenerierten Werten
 
 
@@ -29,7 +25,7 @@ Beispielsweise kann die VS-Phase nach der Instanzen-ID suchen, um zusätzliche D
 
 Jede Shader-Phase identifiziert Scheitelpunkte anhand der Scheitelpunkt-ID. Dies ist eine 32-Bit-Ganzzahl ohne Vorzeichen, deren Standardwert 0 ist. Sie wird einem Scheitelpunkt zugewiesen, wenn der Grundtyp von der [Eingabe-Assembler (IA)-Phase](input-assembler-stage--ia-.md) verarbeitet wird. Fügen Sie die Scheitelpunkt-ID-Semantik der Anfügen der Shader-Eingabedeklaration hinzu, um die IA-Phase anzuweisen, eine ID für jeden Scheitelpunkt zu generieren.
 
-Die IA-Phase fügt jedem Scheitelpunkt eine Scheitelpunkt-ID zur Verwendung durch Shader-Phasen hinzu. Die Scheitelpunkt-ID wird für jeden Draw-Aufruf um 1 erhöht. Über indizierte Draw-Aufrufe wird die Zählung wieder auf den Anfangswert zurückgesetzt. Wenn die Scheitelpunkt-IDs überlaufen (d. h. die Anzahl 2³² – 1 überschreitet), erfolgt ein Umbruch zu 0.
+Die IA-Phase fügt jedem Scheitelpunkt eine Scheitelpunkt-ID zur Verwendung durch Shader-Phasen hinzu. Die Scheitelpunkt-ID wird für jeden Draw-Aufruf um 1 erhöht. Über indizierte Draw-Aufrufe wird die Zählung wieder auf den Anfangswert zurückgesetzt. Wenn die Scheitelpunkt-IDs überlaufen (d.h. die Anzahl 2³² – 1 überschreitet), erfolgt ein Umbruch zu 0.
 
 Bei allen Grundtypen ist den Scheitelpunkten eine Scheitelpunkt-ID zugeordnet (unabhängig von der Nachbarschaft der Scheitelpunkte).
 
@@ -38,7 +34,7 @@ Bei allen Grundtypen ist den Scheitelpunkten eine Scheitelpunkt-ID zugeordnet (u
 
 Jede Shader-Phase identifiziert Grundtypen anhand der Grundtyp-ID. Dies ist eine 32-Bit-Ganzzahl ohne Vorzeichen, deren Standardwert 0 ist. Sie wird einem Grundtyp zugewiesen, wenn er von der [Eingabe-Assembler (IA)-Phase](input-assembler-stage--ia-.md) verarbeitet wird. Fügen Sie die Grundtyp-ID-Semantik der Anfügen der Shader-Eingabedeklaration hinzu, um die IA-Phase anzuweisen, eine Grundtyp-ID zu generieren.
 
-Die IA-Phase fügt jedem Grundtyp eine Grundtyp-ID zu Verwendung durch die [Geometrie-Shader (GS)-Phase](geometry-shader-stage--gs-.md) oder die [Scheitelpunkt-Shader (VS)-Phase](vertex-shader-stage--vs-.md) (je nachdem, welche die erste aktive Phase nach der IA-Phase ist) hinzu. Für jeden indizierten Draw-Aufruf wird die Grundtyp-ID um 1 erhöht; wenn eine neu8e Instanz beginnt, wird die Grundtyp-ID jedoch auf 0 zurückgesetzt. Alle anderen Draw-Aufrufe ändern den Wert der Instanz-ID nicht. Wenn die Instanz-IDs überlaufen (d. h. die Anzahl 2³² – 1 überschreitet), erfolgt ein Umbruch zu 0.
+Die IA-Phase fügt jedem Grundtyp eine Grundtyp-ID zu Verwendung durch die [Geometrie-Shader (GS)-Phase](geometry-shader-stage--gs-.md) oder die [Scheitelpunkt-Shader (VS)-Phase](vertex-shader-stage--vs-.md) (je nachdem, welche die erste aktive Phase nach der IA-Phase ist) hinzu. Für jeden indizierten Draw-Aufruf wird die Grundtyp-ID um 1 erhöht; wenn eine neu8e Instanz beginnt, wird die Grundtyp-ID jedoch auf 0 zurückgesetzt. Alle anderen Draw-Aufrufe ändern den Wert der Instanz-ID nicht. Wenn die Instanz-IDs überlaufen (d.h. die Anzahl 2³² – 1 überschreitet), erfolgt ein Umbruch zu 0.
 
 Die [Pixel-Shader (PS)-Phase](pixel-shader-stage--ps-.md) hat keine separate Eingabe für eine Grundtyp-ID; allerdings verwendet eine Pixel-Shader-Eingabe, die eine Grundtyp-ID angibt, einen Konstanteninterpolationsmodus.
 
@@ -49,12 +45,12 @@ Die automatische Erzeugung einer Grundtyp-ID für benachbarte Grundtypen wird ni
 
 Jede Shader-Phase identifiziert anhand einer Instanz-ID die Instanz der Geometrie, die derzeit verarbeitet wird. Dies ist eine 32-Bit-Ganzzahl ohne Vorzeichen, deren Standardwert 0 ist.
 
-Die [Eingabe-Assembler (IA)-Phase](input-assembler-stage--ia-.md) fügt jedem Scheitelpunkt eine Instanz-ID hinzu, wenn die Scheitelpunkt-Shader-Eingabedeklaration die Instanz-ID-Semantik enthält. Für jeden indizierten Draw-Aufruf wird die Instanz-ID um 1 erhöht. Alle anderen Draw-Aufrufe ändern den Wert der Instanz-ID nicht. Wenn die Instanz-IDs überlaufen (d. h. die Anzahl 2³² – 1 überschreitet), erfolgt ein Umbruch zu 0.
+Die [Eingabe-Assembler (IA)-Phase](input-assembler-stage--ia-.md) fügt jedem Scheitelpunkt eine Instanz-ID hinzu, wenn die Scheitelpunkt-Shader-Eingabedeklaration die Instanz-ID-Semantik enthält. Für jeden indizierten Draw-Aufruf wird die Instanz-ID um 1 erhöht. Alle anderen Draw-Aufrufe ändern den Wert der Instanz-ID nicht. Wenn die Instanz-IDs überlaufen (d.h. die Anzahl 2³² – 1 überschreitet), erfolgt ein Umbruch zu 0.
 
 ## <a name="span-idexamplespanspan-idexamplespanspan-idexamplespanexample"></a><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Beispiel
 
 
-Die folgende Abbildung zeigt, wie einem instantiierten Dreieckstreifen in der [Eingabe-Assembler (IA)-Phase](input-assembler-stage--ia-.md) Systemwerte hinzugefügt werden.
+Die folgende Abbildungzeigt, wie einem instantiierten Dreieckstreifen in der [Eingabe-Assembler (IA)-Phase](input-assembler-stage--ia-.md) Systemwerte hinzugefügt werden.
 
 ![Illustration der Systemwerte für einen instantiierten Dreieckstreifen](images/d3d10-ia-example.png)
 
@@ -106,7 +102,6 @@ Die [Eingabe-Assembler (IA)-Phase](input-assembler-stage--ia-.md) generiert die 
  
 
  
-
 
 
 

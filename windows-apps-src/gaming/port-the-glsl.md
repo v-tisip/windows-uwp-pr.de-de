@@ -1,25 +1,22 @@
 ---
 author: mtoepke
 title: Portieren des GLSL-Codes
-description: Nachdem Sie den Code verschoben haben, mit dem die Puffer und Shaderobjekte erstellt und konfiguriert werden, muss der in diesen Shadern enthaltene Code von der GL Shader Language (GLSL) von OpenGL ES 2.0 in die High-Level Shader Language (HLSL) von Direct3D 11 portiert werden.
+description: "Nachdem Sie sich um den Code gekümmert haben, mit dem die Puffer und Shaderobjekte erstellt und konfiguriert werden, muss der in diesen Shadern enthaltene Code von der GL Shader Language (GLSL) von OpenGL ES 2.0 in die High-Level Shader Language (HLSL) von Direct3D 11 portiert werden."
 ms.assetid: 0de06c51-8a34-dc68-6768-ea9f75dc57ee
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Spiele, GLSL, Portieren"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+keywords: Windows10, UWP, Spiele, GLSL, Portieren
 ms.openlocfilehash: 7416a4dafe24f86243a3a9962d01db1dc7b61031
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="port-the-glsl"></a>Portieren der GLSL
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **Wichtige APIs**
@@ -49,7 +46,7 @@ Beachten Sie auch, dass Vertex-Shader erforderlich sind, um die SV\_POSITION-Sys
 
 Konstantenpuffer müssen mit **cbuffer** deklariert und mit einem speziellen Startregister für die Suche versehen werden.
 
-Direct3D 11: Deklaration eines HLSL-Konstantenpuffers
+Direct3D11: Deklaration eines HLSL-Konstantenpuffers
 
 ``` syntax
 cbuffer ModelViewProjectionConstantBuffer : register(b0)
@@ -67,7 +64,7 @@ Hier wird vom Konstantenpuffer das Register „b0“ für den gepackten Puffer v
 
 In diesem einfachen OpenGL ES 2.0-Beispiel verfügt der Vertex-Shader über drei Eingaben: eine konstante Modell-Ansicht-Projektion-4x4-Matrix und zwei Vektoren mit vier Koordinaten. Diese beiden Vektoren enthalten die Vertexposition und ihre Farbe. Der Shader wandelt den Positionsvektor in Perspektivenkoordinaten um und weist ihn der systeminternen gl\_Position-Funktion zur Rasterung zu. Außerdem wird die Vertexfarbe zur Interpolation während der Rasterung in eine abweichende Variable kopiert.
 
-OpenGL ES 2.0: Vertex-Shader für das Würfelobjekt (GLSL)
+OpenGLES2.0: Vertex-Shader für das Würfelobjekt (GLSL)
 
 ``` syntax
 uniform mat4 u_mvpMatrix; 
@@ -82,9 +79,9 @@ void main()
 }
 ```
 
-In Direct3D ist die konstante Modell-Ansicht-Projektion-Matrix in einem Konstantenpuffer enthalten, der unter Register b0 verpackt ist, und die Vertexposition und -farbe sind speziell mit der jeweils geeigneten HLSL-Semantik gekennzeichnet: POSITION und COLOR. Da das Eingabelayout eine bestimmte Anordnung dieser beiden Vertexwerte vorgibt, erstellen Sie dafür eine Struktur und deklarieren diese als Typ für den Eingabeparameter der body-Shaderfunktion (main). (Sie können die Werte auch als zwei einzelne Parameter angeben, was mitunter jedoch umständlich ist.) Außerdem geben Sie einen Ausgabetyp für diese Phase an, der die interpolierte Position und Farbe enthält, und deklarieren ihn als Rückgabewert für die body-Funktion des Vertex-Shaders.
+In Direct3D ist die konstante Modell-Ansicht-Projektion-Matrix in einem Konstantenpuffer enthalten, der unter Registerb0 verpackt ist, und die Vertexposition und -farbe sind speziell mit der jeweils geeigneten HLSL-Semantik gekennzeichnet: POSITION und COLOR. Da das Eingabelayout eine bestimmte Anordnung dieser beiden Vertexwerte vorgibt, erstellen Sie dafür eine Struktur und deklarieren diese als Typ für den Eingabeparameter der body-Shaderfunktion (main). (Sie können die Werte auch als zwei einzelne Parameter angeben, was mitunter jedoch umständlich ist.) Außerdem geben Sie einen Ausgabetyp für diese Phase an, der die interpolierte Position und Farbe enthält, und deklarieren ihn als Rückgabewert für die body-Funktion des Vertex-Shaders.
 
-Direct3D 11: Vertex-Shader für das Würfelobjekt (HLSL)
+Direct3D11: Vertex-Shader für das Würfelobjekt (HLSL)
 
 ``` syntax
 cbuffer ModelViewProjectionConstantBuffer : register(b0)
@@ -126,7 +123,7 @@ Der Ausgabedatentyp „PixelShaderInput“ wird während der Rasterung aufgefül
 
 Der Fragmentshader in GLSL im Beispiel ist sehr einfach gestaltet: Der interpolierte Farbwert wird für die systeminterne gl\_FragColor-Funktion bereitgestellt. Von OpenGL ES 2.0 wird er in das standardmäßige Renderziel geschrieben.
 
-OpenGL ES 2.0: Fragmentshader für das Würfelobjekt (GLSL)
+OpenGLES2.0: Fragmentshader für das Würfelobjekt (GLSL)
 
 ``` syntax
 varying vec4 destColor;
@@ -166,12 +163,12 @@ Die Farbe für das Pixel an der Position wird in das Renderziel geschrieben. Das
 [Zeichnen auf den Bildschirm](draw-to-the-screen.md) Anmerkungen
 -------
 
-Wenn Sie mit der HLSL-Semantik und dem Packen von Konstantenpuffern vertraut sind, können Sie einigen Debugaufwand vermeiden und Möglichkeiten zur Optimierung schaffen. Lesen Sie sich nach Möglichkeit die Themen [Variablensyntax (HLSL)](https://msdn.microsoft.com/library/windows/desktop/bb509706), [Einführung in Puffer in Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476898) und [Erstellen eines Konstantenpuffers](https://msdn.microsoft.com/library/windows/desktop/ff476896) durch. Hier sind als Anfang schon einmal einige Tipps aufgeführt, die in Verbindung mit der Semantik und Konstantenpuffern zu beachten sind:
+Wenn Sie mit der HLSL-Semantik und dem Packen von Konstantenpuffern vertraut sind, können Sie einigen Debugaufwand vermeiden und Möglichkeiten zur Optimierung schaffen. Lesen Sie sich nach Möglichkeit die Themen [Variablensyntax (HLSL)](https://msdn.microsoft.com/library/windows/desktop/bb509706), [Einführung in Puffer in Direct3D11](https://msdn.microsoft.com/library/windows/desktop/ff476898) und [Erstellen eines Konstantenpuffers](https://msdn.microsoft.com/library/windows/desktop/ff476896) durch. Hier sind als Anfang schon einmal einige Tipps aufgeführt, die in Verbindung mit der Semantik und Konstantenpuffern zu beachten sind:
 
 -   Überprüfen Sie stets den Direct3D-Konfigurationscode des Renderers, um sicherzustellen, dass die Strukturen für die Konstantenpuffer mit den cbuffer-Strukturdeklarationen der HLSL übereinstimmen und dass die Komponentenskalartypen für beide Deklarationen übereinstimmen.
 -   Verwenden Sie im C++-Code des Renderers [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/hh437833)-Typen in den Konstantenpufferdeklarationen, um für die richtige Verpackung der Daten zu sorgen.
 -   Die beste Möglichkeit zur effizienten Nutzung von Konstantenpuffern ist die Organisation von Shadervariablen in Konstantenpuffern anhand der Updatehäufigkeit. Wenn Sie beispielsweise über uniform-Daten verfügen, die einmal pro Frame aktualisiert werden, sowie über andere uniform-Daten, die nur bei Kamerabewegungen aktualisiert werden, empfiehlt sich das Aufteilen der Daten auf zwei separate Konstantenpuffer.
--   Semantik, deren Anwendung Sie vergessen oder die Sie auf fehlerhafte Weise angewendet haben, ist die wichtigste Ursache für Fehler der Shaderkompilierung (FXC). Deshalb sollten Sie die Semantik auf jeden Fall noch einmal überprüfen. Die Dokumente können etwas verwirrend erscheinen, da viele ältere Seiten und Beispiele noch auf andere Versionen der HLSL-Semantik des Stands vor Direct3D 11 verweisen.
+-   Semantik, deren Anwendung Sie vergessen oder die Sie auf fehlerhafte Weise angewendet haben, ist die wichtigste Ursache für Fehler der Shaderkompilierung (FXC). Deshalb sollten Sie die Semantik auf jeden Fall noch einmal überprüfen. Die Dokumente können etwas verwirrend erscheinen, da viele ältere Seiten und Beispiele noch auf andere Versionen der HLSL-Semantik des Stands vor Direct3D11 verweisen.
 -   Stellen Sie sicher, dass Sie wissen, auf welche Direct3D-Featureebene Sie für einen Shader jeweils abzielen. Die Semantik für Featureebene "9\_\*" unterscheidet sich von der Semantik für 11\_1.
 -   Mit der SV\_POSITION-Semantik werden die zugeordneten Daten für die Position nach der Interpolation zu Koordinatenwerten aufgelöst, wobei „x“ zwischen 0 und der Breite des Renderziels und „y“ zwischen 0 und der Höhe des Renderziels liegt. „z“ wird durch den ursprünglichen homogenen Koordinatenwert „w“ dividiert (z/w). „w“ ist 1 dividiert durch den Originalwert „w“ (1/w).
 
@@ -189,7 +186,6 @@ Wenn Sie mit der HLSL-Semantik und dem Packen von Konstantenpuffern vertraut sin
  
 
  
-
 
 
 

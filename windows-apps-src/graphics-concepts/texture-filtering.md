@@ -2,21 +2,17 @@
 title: Texturfilterung
 description: "Die Texturfilterung erzeugt eine Farbe für jedes Pixel im 2D-gerenderten Bild des Grundtyps, wenn dieser durch die Abbildung eines 3D-Grundtyps auf einem 2D-Bildschirm gerendert wird."
 ms.assetid: 1CCF4138-5D48-4B07-9490-996844F994D8
-keywords:
-- Texturfilterung
+keywords: Texturfilterung
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 97b2dc04c518bfec4b09a50707c08767932f05c6
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 43dccdc8a8834830b6c15fcfc1cd56216e27ee90
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="texture-filtering"></a>Texturfilterung
 
 
@@ -56,11 +52,11 @@ Direct3D unterstützt die folgenden Verfahren für die Texturfilterung.
 </tr>
 <tr class="even">
 <td align="left"><p>[Bilineare Texturfilterung](bilinear-texture-filtering.md)</p></td>
-<td align="left"><p><em>Die bilineare Filterung</em> berechnet den gewichteten Mittelwert der 4 Texel, die dem Samplingpunkt am nächsten liegen. Diese Filtermethode ist präziser und gängiger als das Filtern am nächstgelegenen Punkt. Dieser Ansatz ist effizient, da er in moderner Grafikhardware implementiert ist.</p></td>
+<td align="left"><p>Die <em>bilineare Filterung</em> berechnet den gewichteten Durchschnitt der 4Texel, die dem Sampling-Punkt am nächsten liegen. Diese Filtermethode ist präziser und gängiger als das Filtern am nächstgelegenen Punkt. Dieser Ansatz ist effizient, da er in moderner Grafikhardware implementiert ist.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>[Anisotropische Texturfilterung](anisotropic-texture-filtering.md)</p></td>
-<td align="left"><p><em>Anisotropie</em> ist die sichtbare Verzerrung der Texel eines 3D-Objekts, dessen Oberfläche gegenüber der Bildschirmebene in einem Winkel ausgerichtet ist. Wenn ein Pixel eines anisotropischen Grundtyps einem Texel zugeordnet ist, wird die Form verzerrt.</p></td>
+<td align="left"><p><em>Anisotropie</em> ist die sichtbare Verzerrung bei Texeln eines 3D-Objekts, dessen Oberfläche gegenüber der Bildschirmebene in einem Winkel ausgerichtet ist. Wenn ein Pixel eines anisotropischen Grundtyps einem Texel zugeordnet ist, wird die Form verzerrt.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[Texturfilterung mit Mipmaps](texture-filtering-with-mipmaps.md)</p></td>
@@ -79,7 +75,6 @@ Direct3D unterstützt die folgenden Verfahren für die Texturfilterung.
  
 
  
-
 
 
 

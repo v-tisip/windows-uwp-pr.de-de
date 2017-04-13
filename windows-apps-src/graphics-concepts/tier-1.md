@@ -1,35 +1,31 @@
 ---
-title: "Ebene 1"
-description: "In diesem Abschnitt wird die Unterstützung für die Ebene 1 beschrieben."
+title: Ebene1
+description: "In diesem Abschnitt wird die Unterstützung für die Ebene1 beschrieben."
 ms.assetid: 153DA429-0C99-4691-AEB4-124FD9B17BE2
-keywords:
-- "Ebene 1"
+keywords: Ebene1
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: de1010a39655e8ac24e213aa5682e9f739b88ecc
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 0c463e2a6ea4f43ea1f3eccab69a94f9d6f13170
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
+# <a name="tier-1"></a>Ebene1
 
-# <a name="tier-1"></a>Ebene 1
 
-
-In diesem Abschnitt wird die Unterstützung für die Ebene 1 beschrieben.
+In diesem Abschnitt wird die Unterstützung für die Ebene1 beschrieben.
 
 ## <a name="span-idtier1generallimitationsspanspan-idtier1generallimitationsspanspan-idtier1generallimitationsspantier-1-general-limitations"></a><span id="Tier_1_general_limitations"></span><span id="tier_1_general_limitations"></span><span id="TIER_1_GENERAL_LIMITATIONS"></span>Allgemeine Einschränkungen Ebene 1
 
 
--   Hardware mindestens auf Funktionsebene 11.0.
+-   Hardware mindestens auf Funktionsebene11.0.
 -   Quilting wird nicht unterstützt.
 -   Keine Unterstützung für Texture1D oder Texture3D.
 -   Keine Unterstützung für 2, 8 oder 16 Sample Multisampling Antialiasing (MSAA). Nur 4 x ist erforderlich, außer keine 128-BpP-Formate.
--   Kein Standard-Swizzlemuster (Layout innerhalb der 64 KB großen Kacheln und die Tail-MIP-Verpackung liegen in der Verantwortung des Hardwareherstellers).
+-   Kein Standard-Swizzlemuster (Layout innerhalb der 64KB großen Kacheln und die Tail-MIP-Verpackung liegen in der Verantwortung des Hardwareherstellers).
 -   Zugriffseinschränkungen für die Kacheln, wenn doppelte Zuordnungen vorhanden sind. Siehe [Kachelzugriffseinschränkungen bei doppelten Zuordnungen](tile-access-limitations-with-duplicate-mappings.md)
 
 ## <a name="span-idspecificlimitationsaffectingtier1onlyspanspan-idspecificlimitationsaffectingtier1onlyspanspan-idspecificlimitationsaffectingtier1onlyspanspecific-limitations-affecting-tier-1-only"></a><span id="Specific_limitations_affecting_tier_1_only"></span><span id="specific_limitations_affecting_tier_1_only"></span><span id="SPECIFIC_LIMITATIONS_AFFECTING_TIER_1_ONLY"></span>Bestimmte Einschränkungen, die nur Ebene 1 beeinflussen
@@ -45,7 +41,7 @@ Shader-Anweisungen für Klammerung-LOD und Feedback zum zugeordneten Status sind
 
 ### <a name="span-idalignmentconstraintsforstandardtileshapesspanspan-idalignmentconstraintsforstandardtileshapesspanspan-idalignmentconstraintsforstandardtileshapesspanalignment-constraints-for-standard-tile-shapes"></a><span id="Alignment_constraints_for_standard_tile_shapes"></span><span id="alignment_constraints_for_standard_tile_shapes"></span><span id="ALIGNMENT_CONSTRAINTS_FOR_STANDARD_TILE_SHAPES"></span>Ausrichtungseinschränkungen für Standardkachelformen
 
-Es ist nur sichergestellt, dass Mips (beginnend mit den besten), deren Abmessungen alles Vielfache der standardmäßigen Kachelgröße sind, die standardmäßigen Kachelformen unterstützen und einzelne willkürlich zugeordnete/nicht zugeordnete Kacheln haben können. Die erste Mipmap in einer Streamingressource, die eine Abmessung hat, die kein Vielfaches einer der standardmäßigen Kachelgröße ist, zusammen mit allen grobkörnigen Mipmaps, kann über eine nicht standardmäßige Kachelform verfügen. Dadurch passt sie sofort in N 64 KB große Kacheln für diesen Satz von Mips (N an die Anwendung gemeldet). Diese N-Kacheln gelten als eine verpackte Einheit, die von der Anwendung zu jeder Zeit entweder vollständig zugeordnet oder vollständig nicht zugeordnet werden muss. Die Zuordnung der einzelnen N-Kacheln können sich an willkürlich getrennten Orten in einem Kachelpool befinden.
+Es ist nur sichergestellt, dass Mips (beginnend mit den besten), deren Abmessungen alles Vielfache der standardmäßigen Kachelgröße sind, die standardmäßigen Kachelformen unterstützen und einzelne willkürlich zugeordnete/nicht zugeordnete Kacheln haben können. Die erste Mipmap in einer Streamingressource, die eine Abmessung hat, die kein Vielfaches einer der standardmäßigen Kachelgröße ist, zusammen mit allen grobkörnigen Mipmaps, kann über eine nicht standardmäßige Kachelform verfügen. Dadurch passt sie sofort in N 64KB große Kacheln für diesen Satz von Mips (N an die Anwendung gemeldet). Diese N-Kacheln gelten als eine verpackte Einheit, die von der Anwendung zu jeder Zeit entweder vollständig zugeordnet oder vollständig nicht zugeordnet werden muss. Die Zuordnung der einzelnen N-Kacheln können sich an willkürlich getrennten Orten in einem Kachelpool befinden.
 
 ### <a name="span-idarrayofmipmapsthatarentamultipleofstandardtilesizespanspan-idarrayofmipmapsthatarentamultipleofstandardtilesizespanspan-idarrayofmipmapsthatarentamultipleofstandardtilesizespanarray-of-mipmaps-that-arent-a-multiple-of-standard-tile-size"></a><span id="Array_of_mipmaps_that_aren_t_a_multiple_of_standard_tile_size"></span><span id="array_of_mipmaps_that_aren_t_a_multiple_of_standard_tile_size"></span><span id="ARRAY_OF_MIPMAPS_THAT_AREN_T_A_MULTIPLE_OF_STANDARD_TILE_SIZE"></span>Array von Mipmaps, die kein Vielfaches der standardmäßigen Kachelgröße sind
 
@@ -69,7 +65,6 @@ Min/Max-Reduzierungsfilterung wird nicht unterstützt. Siehe [Textursampling-Fea
  
 
  
-
 
 
 

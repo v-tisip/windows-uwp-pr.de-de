@@ -2,27 +2,23 @@
 title: Undurchsichtige und 1-Bit-Alpha-Texturen
 description: "Das Texturformat BC1 ist für Texturen, die undurchsichtig sind oder eine transparente Farbe haben."
 ms.assetid: 8C53ACDD-72ED-4307-B4F3-2FCF9A9F53EC
-keywords:
-- Undurchsichtige und 1-Bit-Alpha-Texturen
+keywords: Undurchsichtige und 1-Bit-Alpha-Texturen
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: f3718785527cd3d686fd81c3706f3f9284b96fba
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 56a63e5536523eaf290465bba73a436008bee2f7
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="span-iddirect3dconceptsopaqueand1-bitalphatexturesspanopaque-and-1-bit-alpha-textures"></a><span id="direct3dconcepts.opaque_and_1-bit_alpha_textures"></span>Undurchsichtige und 1-Bit-Alpha-Texturen
 
 
 Das Texturformat BC1 ist für Texturen, die undurchsichtig sind oder eine transparente Farbe haben.
 
-Für jeden undurchsichtigen oder 1-Bit-Alpha-Block sind zwei 16-Bit-Werte (RGB-5:6:5-Format) und eine 4x4-Bitmap mit 2 Bits pro Pixel gespeichert. Dies ergibt insgesamt 64 Bit für 16 Texel oder vier Bits pro Texel. Im Block Bitmap stehen 2 Bits pro Texel zwischen den vier Farben zur Auswahl, von denen zwei in den codierten Daten gespeichert sind. Die beiden anderen Farben werden von diesen gespeicherten Farben mittels linearer Interpolation abgeleitet. Dieser Aufbau ist im folgenden Diagramm dargestellt.
+Für jeden undurchsichtigen oder 1-Bit-Alpha-Block sind zwei 16-Bit-Werte (RGB-5:6:5-Format) und eine 4x4-Bitmap mit 2 Bits pro Pixel gespeichert. Dies ergibt insgesamt 64Bit für 16 Texel oder vier Bits pro Texel. Im Block Bitmap stehen 2 Bits pro Texel zwischen den vier Farben zur Auswahl, von denen zwei in den codierten Daten gespeichert sind. Die beiden anderen Farben werden von diesen gespeicherten Farben mittels linearer Interpolation abgeleitet. Dieser Aufbau ist im folgenden Diagramm dargestellt.
 
 ![Diagramm des Bitmap-Layouts](images/colors1.png)
 
@@ -137,7 +133,7 @@ Dies sieht wie die nachstehend dargestellten Reihe von Farben aus.
 
  
 
-![Abbildung eines undurchsichtig codierten Farbverlaufs](images/redsquares.png)
+![Abbildungeines undurchsichtig codierten Farbverlaufs](images/redsquares.png)
 
 ## <a name="span-idexampleof1bitalphaencodingspanspan-idexampleof1bitalphaencodingspanspan-idexampleof1bitalphaencodingspanexample-of-1-bit-alpha-encoding"></a><span id="Example_of_1_Bit_Alpha_Encoding"></span><span id="example_of_1_bit_alpha_encoding"></span><span id="EXAMPLE_OF_1_BIT_ALPHA_ENCODING"></span>Beispiel einer 1-Bit-Alpha-Kodierung
 
@@ -146,7 +142,7 @@ Dieses Format wird ausgewählt, wenn die vorzeichenlose 16-Bit-Ganzzahl, Farbe\_
 
 Die nachstehende Abbildung ist ein Beispiel für ein solches Bild.
 
-![Abbildung der 1-Bit-Alpha-Codierung](images/greenthing.png)
+![Abbildungder 1-Bit-Alpha-Codierung](images/greenthing.png)
 
 Wird das Bild weiß dargestellt, wäre das Texel als transparent codiert. Die RGBA-Komponenten der transparenten Texel sollten vor dem Vermischen auf NULL gesetzt werden.
 
@@ -171,7 +167,6 @@ Die Bitmap sieht dann wie im folgenden Diagramm aus.
  
 
  
-
 
 
 

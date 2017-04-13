@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e4cc17bf268ddb470c3c64dfe3e471053d8fca55
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e9d66feb6117fddfff62c217b55da813a63c4331
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="launch-the-windows-settings-app"></a>Starten der Windows-Einstellungs-App
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Wichtige APIs**
 
@@ -62,7 +59,7 @@ Weitere Informationen zum Starten von URIs finden Sie unter [Starten der Standar
 
 ## <a name="ms-settings-uri-scheme-reference"></a>ms-settings: URI-Schemareferenz
 
-Verwenden Sie die folgenden URIs, um verschiedenen Seiten der Einstellungs-App zu öffnen. Beachten Sie, dass in der Spalte „Unterstützte SKUs“ angegeben wird, ob die Einstellungsseite in Windows 10 für Desktopeditionen (Home, Pro, Enterprise und Education), Windows 10 Mobile oder beiden vorhanden ist.
+Verwenden Sie die folgenden URIs, um verschiedenen Seiten der Einstellungs-App zu öffnen. Beachten Sie, dass in der Spalte „Unterstützte SKUs“ angegeben wird, ob die Einstellungsseite in Windows10 für Desktopeditionen (Home, Pro, Enterprise und Education), Windows10 Mobile oder beiden vorhanden ist.
 
 <table border="1">
     <tr>
@@ -100,12 +97,12 @@ Verwenden Sie die folgenden URIs, um verschiedenen Seiten der Einstellungs-App z
     </tr>
     <tr>
         <td>Stromsparmodus</td>
-        <td>Beide<br>Nur auf Geräten mit Akku verfügbar, z. B. Tablets</td>
+        <td>Beide<br>Nur auf Geräten mit Akku verfügbar, z.B. Tablets</td>
         <td>ms-settings:batterysaver</td>
     </tr>
     <tr>
         <td>Akkubetrieb</td>
-        <td>Beide<br>Nur auf Geräten mit Akku verfügbar, z. B. Tablets</td>
+        <td>Beide<br>Nur auf Geräten mit Akku verfügbar, z.B. Tablets</td>
         <td>ms-settings:batterysaver-usagedetails</td>
     </tr>
     <tr>
@@ -383,4 +380,3 @@ Verwenden Sie die folgenden URIs, um verschiedenen Seiten der Einstellungs-App z
         <td>ms-settings:developers</td>
     </tr>
 </table><br/>
-

@@ -2,21 +2,17 @@
 title: Unterteilung von Texture3D-Unterressourcen
 description: Diese Tabelle zeigt die Unterteilung von Texture3D-Unterressourcen.
 ms.assetid: 210D03E4-CF12-47E0-BA2F-C8D059B17D3E
-keywords:
-- Unterteilung von Texture3D-Unterressourcen
+keywords: Unterteilung von Texture3D-Unterressourcen
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 6f6c2648ceefae5b13b481decc37be4047d938d4
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 3232ac03c2d0079faabff40b9325e819f8aca147
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="texture3d-subresource-tiling"></a>Unterteilung von Texture3D-Unterressourcen
 
 
@@ -28,7 +24,7 @@ Diese Tabelle nimmt die [**Texture2D**](https://msdn.microsoft.com/library/windo
 
  
 
-| Bits/Pixel (1 Sample/Pixel) | Kachelabmessungen (Pixel, B x H x T) |
+| Bits/Pixel (1Sample/Pixel) | Kachelabmessungen (Pixel, B x H x T) |
 |-----------------------------|---------------------------------|
 | 8                           | 64 x 32 x 32                        |
 | 16                          | 32 x 32 x 32                        |
@@ -50,7 +46,6 @@ Format-Bitanzahlen, die bei Streamingressourcen nicht unterstützt werden, sind 
  
 
  
-
 
 
 

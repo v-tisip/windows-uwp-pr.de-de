@@ -2,21 +2,17 @@
 title: Mehrstufige Texturvermischung
 description: "Direct3D-Apps können durch die Anwendung verschiedener Texturen auf eine Primitive im Laufe von mehreren Berechnungs- und Ausgabedurchläufen zahlreiche Spezialeffekte erzielen."
 ms.assetid: FB4D6E3F-4EF5-4D20-BF7E-1008E790E30C
-keywords:
-- Mehrstufige Texturvermischung
+keywords: Mehrstufige Texturvermischung
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 81e5683fd630d0c843ee59b26b5715090fdd0cea
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1ea0f10e4cec774a0b7d85bd813b8c4f720d0048
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="multipass-texture-blending"></a>Mehrstufige Texturvermischung
 
 
@@ -35,7 +31,7 @@ Durchführen der mehrstufigen Texturvermischung in einer C/C++-Anwendung:
 3.  Berechnen Sie die entsprechenden 3D-Objekte in der Szene und geben Sie diese aus.
 4.  Setzen Sie die nächste Textur in Texturphase 0.
 5.  Setzen Sie die Berechnungs- und Ausgabezustände, um die Ursprungs- und Zielvermischungsfaktoren nach Bedarf anzupassen. Das System vermischt die neuen Texturen mit den vorhandenen Pixeln in der Ziel-Ausgeben-Oberfläche gemäß dieser Parameter.
-6.  Wiederholen Sie die Schritte 3, 4 und 5 mit so vielen Texturen wie gewünscht.
+6.  Wiederholen Sie die Schritte3, 4 und 5 mit so vielen Texturen wie gewünscht.
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Verwandte Themen
 
@@ -45,7 +41,6 @@ Durchführen der mehrstufigen Texturvermischung in einer C/C++-Anwendung:
  
 
  
-
 
 
 

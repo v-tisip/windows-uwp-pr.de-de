@@ -10,14 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 4311ab1c817beaac5a57b12a4426f26ac8710fdf
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: e3da62c83012d2a854e53c0e7082ecacec8df766
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="multiple-inputs"></a>Mehrere Eingaben
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
@@ -47,7 +44,6 @@ Der Benutzer zeigt auf ein Produkt, und sagt dann „Dem Einkaufswagen hinzufüg
 
 Spracherkennung + Toucheingabe  
 Der Benutzer wählt ein Foto, indem er dieses gedrückt hält, und sagt dann „Foto senden“.
-
 
 
 

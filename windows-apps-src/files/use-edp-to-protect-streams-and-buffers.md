@@ -6,18 +6,10 @@ MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: "Schützen von Datenströmen und Puffern mithilfe von WIP (Windows Information Protection)"
 redirect_url: ../enterprise/wip-dev-guide
-translationtype: Human Translation
-ms.sourcegitcommit: fce67417d4990669a00192b465d9278842552253
 ms.openlocfilehash: 818d113b0b41fcec8bb5b854d3fdec449ae8ad5c
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# Schützen von Datenströmen und Puffern mithilfe von WIP (Windows Information Protection)
+# <a name="use-windows-information-protection-wip-to-protect-streams-and-buffers"></a>Schützen von Datenströmen und Puffern mithilfe von WIP (Windows Information Protection)
 
 Diese Seite ist veraltet. Sie finden hier die neue Seite: [Erstellen Sie eine optimierte App, die Unternehmensdaten und persönlichen Daten verwendet](../enterprise/wip-dev-guide.md).
-
-
-
-<!--HONumber=Nov16_HO1-->
-
-

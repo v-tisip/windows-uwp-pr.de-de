@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 045dfeb4696a4854b114d88da2a2cbb75d621a58
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="optimize-background-activity"></a>Optimieren von Hintergrundaktivitäten
 
 Universelle Windows-Apps sollten auf allen Gerätefamilien mit konsistenter Qualität ausgeführt werden. Auf akkubetriebenen Geräten stellt der Energieverbrauch einen wichtigen Faktor in Bezug auf die allgemeine Erfahrung der Benutzer mit Ihrer App dar. Jeder Benutzer wünscht sich eine Akkulaufzeit für den ganzen Tag. Hierfür muss jedoch jede auf dem Gerät installierte Software, einschließlich Ihrer Software, effizient ausgeführt werden. 
@@ -24,7 +21,7 @@ Das Verhalten von Hintergrundaufgaben stellt unbestritten den wichtigsten Faktor
 
 ## <a name="background-activity-allowance"></a>Einschränkungen für Hintergrundaktivitäten
 
-In Windows 10, Version 1607, können Benutzer im Abschnitt **Akku** der Einstellungs-App die „Akkunutzung nach App“ anzeigen. Hier wird ihnen eine Liste von Apps und der Prozentsatz der Akkulaufzeit (als Anteil an der Akkulaufzeit, die seit dem letzten Aufladen verwendet wurde) angezeigt, den die einzelnen Apps verbraucht haben. 
+In Windows10, Version1607, können Benutzer im Abschnitt **Akku** der Einstellungs-App die „Akkunutzung nach App“ anzeigen. Hier wird ihnen eine Liste von Apps und der Prozentsatz der Akkulaufzeit (als Anteil an der Akkulaufzeit, die seit dem letzten Aufladen verwendet wurde) angezeigt, den die einzelnen Apps verbraucht haben. 
 
 ![Akkunutzung nach App](images/battery-usage-by-app.png)
 
@@ -56,5 +53,4 @@ Testen Sie Ihre App auf realen Geräten, wenn Sie Szenarien mit hohem Energiever
 
 * [Erstellen und Registrieren einer Hintergrundaufgabe außerhalb von Prozessen](https://msdn.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)  
 * [Planen der Leistung](https://msdn.microsoft.com/windows/uwp/debug-test-perf/planning-and-measuring-performance)  
-
 

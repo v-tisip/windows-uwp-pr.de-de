@@ -10,16 +10,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b1962e58d3513ddff908a0d556731d83cce20af4
-ms.lasthandoff: 02/07/2017
-
+keywords: windows10, UWP
+ms.openlocfilehash: d9808feeabfa4ffce19d0e669352331804dfd751
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="adaptive-and-interactive-toast-notifications"></a>Adaptive und interaktive Popupbenachrichtigungen
 
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Mit adaptiven und interaktiven Popupbenachrichtigungen können Sie flexible Popupbenachrichtigungen mit mehr Inhalt, optionalen Inlinebildern und optionaler Benutzerinteraktion erstellen.
 
@@ -29,7 +27,7 @@ Beim adaptiven und interaktiven Popupbenachrichtigungsmodell haben diese Updates
 -   Drei verschiedene Aktivierungstypen für die wichtigste Popupbenachrichtigung und für jede Aktion.
 -   Die Option zum Erstellen von Benachrichtigungen für bestimmte Szenarios wie Alarme, Erinnerungen und eingehende Anrufe.
 
-**Hinweis**   Die Legacyvorlagen von Windows 8.1 und Windows Phone 8.1 finden Sie im [Legacy-Popupvorlagenkatalog](https://msdn.microsoft.com/library/windows/apps/hh761494).
+**Hinweis**   Die Legacyvorlagen von Windows8.1 und Windows Phone8.1 finden Sie im [Legacy-Popupvorlagenkatalog](https://msdn.microsoft.com/library/windows/apps/hh761494).
 
 
 ## <a name="getting-started"></a>Erste Schritte
@@ -44,7 +42,7 @@ Beim adaptiven und interaktiven Popupbenachrichtigungsmodell haben diese Updates
 
 Popupbenachrichtigungen werden mit XML erstellt und enthalten in der Regel diese wichtigen Elemente:
 
--   &lt;visual&gt; umfasst den Inhalt, den Benutzer visuell wahrnehmen können, z. B. Text und Bilder
+-   &lt;visual&gt; umfasst den Inhalt, den Benutzer visuell wahrnehmen können, z.B. Text und Bilder
 -   &lt;actions&gt; enthält Schaltflächen/Eingaben, die der Entwickler innerhalb der Benachrichtigung hinzufügen möchte
 -   &lt;audio&gt; legt den Ton beim Anzeigen der Benachrichtigung fest
 
@@ -119,7 +117,30 @@ ToastContent content = new ToastContent()
 };
 ```
 
-Und eine visuelle Darstellung der Struktur:
+Als Nächstes müssen wir das Popup in ein [XmlDocument](https://msdn.microsoft.com/en-us/library/windows/apps/windows.data.xml.dom.xmldocument.aspx)-Objekt konvertieren. Falls Sie das Popup in einer XML-Datei (hier „content.xml“ genannt) definiert haben, verwenden Sie diesen Code:
+
+```CSharp
+string xmlText = File.ReadAllText("content.xml");
+XmlDocument xmlContent = new XmlDocument();
+xmlContent.LoadXml(xmlText);
+```
+
+Falls Sie die Popupvorlage in C# definiert haben, verwenden Sie folgenden Code:
+
+```CSharp
+XmlDocument xmlContent = content.GetXml();
+```
+
+Unabhängig davon, wie Sie XMLDocument erstellen, können Sie dann diesen Code zum Erstellen und senden des Popups verwenden:
+
+```CSharp
+ToastNotification notification = new ToastNotification(xmlContent);
+ToastNotificationManager.CreateToastNotifier().Show(notification);
+```
+
+Eine vollständige App mit Popupbenachrichtigungen finden Sie unter [Schnellstart: Senden einer lokalen Popupbenachrichtigung](https://github.com/WindowsNotifications/quickstart-sending-local-toast-win10).
+
+Eine visuelle Darstellung der Struktur:
 
 ![Struktur der Popupbenachrichtigung](images/adaptivetoasts-structure.jpg)
 
@@ -129,7 +150,7 @@ Innerhalb des visuellen Elements benötigen Sie exakt ein Bindungselement, das d
 
 Kachelbenachrichtigungen in Apps für die Universelle Windows-Plattform (UWP) unterstützen mehrere Vorlagen, die auf unterschiedlichen Kachelgrößen basieren. Popupbenachrichtigungen haben jedoch nur einen Vorlagennamen: **ToastGeneric**. Mit nur einer Vorlage profitieren Sie mehrfach:
 
--   Sie können den Popupinhalt ändern, indem Sie z. B. eine weitere Textzeile bzw. ein Inlinebild hinzufügen oder die Anzeige der Miniaturansicht so ändern, dass statt des App-Symbols etwas anderes angezeigt wird. Dabei müssen Sie weder die gesamte Vorlage ändern noch eine ungültige Nutzlast aufgrund einer Nichtübereinstimmung zwischen dem Vorlagennamen und dem Inhalt riskieren.
+-   Sie können den Popupinhalt ändern, indem Sie z.B. eine weitere Textzeile bzw. ein Inlinebild hinzufügen oder die Anzeige der Miniaturansicht so ändern, dass statt des App-Symbols etwas anderes angezeigt wird. Dabei müssen Sie weder die gesamte Vorlage ändern noch eine ungültige Nutzlast aufgrund einer Nichtübereinstimmung zwischen dem Vorlagennamen und dem Inhalt riskieren.
 -   Sie können denselben Code verwenden, um die gleiche Nutzlast für die **Popupbenachrichtigung** an verschiedene Arten von Microsoft Windows-Geräten wie Smartphones, Tablets, PCs und Xbox zu schaffen. Diese Geräte akzeptieren die Benachrichtigung und zeigt sie dem Benutzer gemäß ihren UI-Richtlinien mit den entsprechenden visuellen Angeboten und Interaktionsmodellen an.
 
 Alle Attribute, die im Abschnitt „Visuelle Elemente“ und dessen untergeordneten Elemente unterstützt werden, finden Sie im Abschnitt mit den Schemas. Weitere Beispiele finden Sie unten im Abschnitt mit den XML-Beispielen.
@@ -145,9 +166,9 @@ Die Identität Ihrer App wird über ein App-Symbol angegeben. Wenn Sie jedoch Ap
 In UWP-Apps können Sie Ihren Popupbenachrichtigungen Schaltflächen und andere Eingaben hinzufügen, um Benutzern mehr Aktionen außerhalb der App zu ermöglichen. Diese Aktionen werden unter dem Element &lt;actions&gt; angegeben. Davon können Sie zwei Arten angeben:
 
 -   &lt;action&gt; wird als Schaltfläche auf Desktops und mobilen Geräten angezeigt. Sie können bis zu fünf benutzerdefinierte Aktionen oder Systemaktionen innerhalb einer Popupbenachrichtigung angeben.
--   &lt;input&gt; ermöglicht Benutzereingaben, z. B. schnelles Beantworten einer Nachricht oder Auswählen einer Option aus einem Dropdown-Menü.
+-   &lt;input&gt; ermöglicht Benutzereingaben, z.B. schnelles Beantworten einer Nachricht oder Auswählen einer Option aus einem Dropdown-Menü.
 
-Sowohl &lt;action&gt; als auch &lt;input&gt; gelten für die Windows-Gerätefamilie. Bei mobilen Geräten oder Desktop-Geräten stellt &lt;action&gt; beispielsweise eine Schaltfläche dar, auf die Benutzer tippen/klicken können. &lt;input&gt; für Text ist ein Feld, in dem Benutzer über eine physische Tastatur oder eine Bildschirmtastatur Text eingeben können. Diese Elemente passen sich auch an zukünftige Interaktionsszenarios an, z. B. eine per Sprachansage angekündigte Aktion oder eine Texteingabe per Diktat.
+Sowohl &lt;action&gt; als auch &lt;input&gt; gelten für die Windows-Gerätefamilie. Bei mobilen Geräten oder Desktop-Geräten stellt &lt;action&gt; beispielsweise eine Schaltfläche dar, auf die Benutzer tippen/klicken können. &lt;input&gt; für Text ist ein Feld, in dem Benutzer über eine physische Tastatur oder eine Bildschirmtastatur Text eingeben können. Diese Elemente passen sich auch an zukünftige Interaktionsszenarios an, z.B. eine per Sprachansage angekündigte Aktion oder eine Texteingabe per Diktat.
 
 Wenn vom Benutzer eine Aktion ausgeführt wird, können Sie eine der folgenden Aktionen ausführen, indem Sie das Attribut [**ActivationType**](https://msdn.microsoft.com/library/windows/desktop/dn408447) im &lt;action&gt;-Element angeben:
 
@@ -249,9 +270,9 @@ ToastContent content = new ToastContent()
 
  
 
-**Benachrichtigung mit Aktionen, Beispiel 1**
+**Benachrichtigung mit Aktionen**
 
-Dieses Beispiel zeigt Folgendes:
+In diesem Beispiel wird eine Benachrichtigung mit zwei möglichen Gegenmaßnahmen erstellt.
 
 ```XML
 <toast launch="app-defined-string">
@@ -307,75 +328,13 @@ ToastContent content = new ToastContent()
 };
 ```
 
-![Benachrichtigung mit Aktionen, Beispiel 1](images/adaptivetoasts-xmlsample02.jpg)
+![Benachrichtigung mit Aktionen, Beispiel1](images/adaptivetoasts-xmlsample02.jpg)
 
- 
 
-**Benachrichtigung mit Aktionen, Beispiel 2**
 
-Dieses Beispiel zeigt Folgendes:
+**Benachrichtigung mit Texteingabe und Aktionen, Beispiel1**
 
-```XML
-<toast launch="app-defined-string">
-  <visual>
-    <binding template="ToastGeneric">
-      <text>Restaurant suggestion...</text>
-      <text>We noticed that you are near Wasaki. Thomas left a 5 star rating after his last visit, do you want to try it?</text>
-    </binding>
-  </visual>
-  <actions>
-    <action activationType="foreground" content="Reviews" arguments="reviews" />
-    <action activationType="protocol" content="Show map" arguments="bingmaps:?q=sushi" />
-  </actions>
-</toast>
-```
-
-```CSharp
-ToastContent content = new ToastContent()
-{
-    Launch = "app-defined-string",
- 
-    Visual = new ToastVisual()
-    {
-        BindingGeneric = new ToastBindingGeneric()
-        {
-            Children =
-            {
-                new AdaptiveText()
-                {
-                    Text = "Restaurant suggestion..."
-                },
- 
-                new AdaptiveText()
-                {
-                    Text = "We noticed that you are near Wasaki. Thomas left a 5 star rating after his last visit, do you want to try it?"
-                }
-            }
-        }
-    },
- 
-    Actions = new ToastActionsCustom()
-    {
-        Buttons =
-        {
-            new ToastButton("Reviews", "reviews"),
- 
-            new ToastButton("Show map", "bingmaps:?q=sushi")
-            {
-                ActivationType = ToastActivationType.Protocol
-            }
-        }
-    }
-};
-```
-
-![Benachrichtigung mit Aktionen, Beispiel 2](images/adaptivetoasts-xmlsample03.jpg)
-
- 
-
-**Benachrichtigung mit Texteingabe und Aktionen, Beispiel 1**
-
-Dieses Beispiel zeigt Folgendes:
+In diesem Beispiel wird eine Benachrichtigung erstellt, die Texteingabe zusammen mit zwei Gegenmaßnahmen akzeptiert.
 
 ```XML
 <toast launch="developer-defined-string">
@@ -454,9 +413,9 @@ ToastContent content = new ToastContent()
 
  
 
-**Benachrichtigung mit Texteingabe und Aktionen, Beispiel 2**
+**Benachrichtigung mit Texteingabe und Aktionen, Beispiel2**
 
-Dieses Beispiel zeigt Folgendes:
+Dieses Beispiel erstellt eine Benachrichtigung, die Texteingabe und eine einzelne Aktion akzeptiert.
 
 ```XML
 <toast launch="developer-defined-string">
@@ -533,7 +492,7 @@ ToastContent content = new ToastContent()
 
 **Benachrichtigung mit Auswahleingabe und Aktionen**
 
-Dieses Beispiel zeigt Folgendes:
+In diesem Beispiel wird eine Benachrichtigung mit einem Dropdownmenü und zwei möglichen Aktionen erstellt.
 
 ```XML
 <toast launch="developer-defined-string">
@@ -617,7 +576,7 @@ ToastContent content = new ToastContent()
 
 **Erinnerungsbenachrichtigung**
 
-Dieses Beispiel zeigt Folgendes:
+Mit einem Menü und zwei Aktionen wie im vorherigen Beispiel können wir eine Erinnerungsbenachrichtigung erstellen:
 
 ```XML
 <toast scenario="reminder" launch="action=viewEvent&amp;eventId=1983">

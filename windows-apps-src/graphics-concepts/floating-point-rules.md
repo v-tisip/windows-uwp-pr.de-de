@@ -2,21 +2,17 @@
 title: "Regeln für Gleitkommazahlen"
 description: "Direct3D unterstützt mehrere Darstellungen für Gleitkommazahlen. Alle Gleitkommaberechnungen erfolgen gemäß einer bestimmten Teilmenge der IEEE 754-Regeln für 32-Bit-Gleitkommazahlen einfacher Genauigkeit."
 ms.assetid: 3B0C95E2-1025-4F70-BF14-EBFF2BB53AFF
-keywords:
-- "Regeln für Gleitkommazahlen"
+keywords: "Regeln für Gleitkommazahlen"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c36ef44bf02e6bbfe7a201004b19b2e99c1c27ca
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: f802bcc2e70a622e6ce8a80744908cfe185f31b0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="span-iddirect3dconceptsfloating-pointrulesspanfloating-point-rules"></a><span id="direct3dconcepts.floating-point_rules"></span>Regeln für Gleitkommazahlen
 
 
@@ -53,7 +49,7 @@ Einige dieser Regeln entsprechen nur einer einzigen der von IEEE-754 angebotenen
 
 -   Gemäß IEEE-754 muss ein Gleitkommavorgang als Ergebnis den einem unendlich genauen Ergebnis nächstliegenden darstellbaren Wert liefern (sog. mathematisches Runden).
 
-    Direct3D 11 und höher definieren dieselben Anforderungen wie IEEE-754: 32-Bit-Gleitkommavorgänge müssen Resultate mit einer Genauigkeit von 0,5 ULP (Unit in Last Place) für unendlich genaue Ergebnisse liefern. Dies bedeutet beispielsweise, dass Hardware keine mathematische Rundung durchführen muss, sondern Ergebnisse nach 32 Bits abschneiden darf, da das zu einem Fehler von höchstens 0,5 ULP führen würde. Diese Regel gilt nur für Addition, Subtraktion und Multiplikation.
+    Direct3D11 und höher definieren dieselben Anforderungen wie IEEE-754: 32-Bit-Gleitkommavorgänge müssen Resultate mit einer Genauigkeit von 0,5 ULP (Unit in Last Place) für unendlich genaue Ergebnisse liefern. Dies bedeutet beispielsweise, dass Hardware keine mathematische Rundung durchführen muss, sondern Ergebnisse nach 32 Bits abschneiden darf, da das zu einem Fehler von höchstens 0,5 ULP führen würde. Diese Regel gilt nur für Addition, Subtraktion und Multiplikation.
 
     Frühere Direct3D-Versionen definieren eine tolerantere Anforderung als IEEE-754: 32-Bit-Gleitkommavorgänge müssen Resultate mit einer Genauigkeit von 1 ULP (Unit in Last Place) für unendlich genaue Ergebnisse liefern. Dies bedeutet beispielsweise, dass Hardware keine mathematische Rundung durchführen muss, sondern Ergebnisse nach 32 Bits abschneiden darf, da das zu einem Fehler von höchstens 1 ULP führen würde.
 
@@ -85,7 +81,7 @@ Einige dieser Regeln entsprechen nur einer einzigen der von IEEE-754 angebotenen
 -   x\*1.0f ergibt immer x (außer für auf Null gesetzte Denorms).
 -   x/1.0f ergibt immer x (außer für auf Null gesetzte Denorms).
 -   x +/- 0.0f ergibt immer x (außer für auf Null gesetzte Denorms). Es gilt aber -0 + 0 = +0.
--   Fused-Vorgänge (z. B. mad und dp3) liefern Ergebnisse, die nicht ungenauer sind als die denkbar schlechteste serielle Anordnung einer Auswertung der Unfused-Erweiterung des Vorgangs. Bezüglich der Toleranz ist die Definition der denkbar schlechtesten Anordnung keine feste Definition für einen bestimmten Fused-Vorgang, sondern sie ist von den jeweiligen Eingabewerten abhängig. Für jeden einzelnen Schritt in einer Unfused-Erweiterung ist eine Toleranz von 1 ULP zugelassen (oder für jede Anweisung, die Direct3D mit einer höheren Toleranz als 1 ULP aufruft, ist diese höhere Toleranz zulässig).
+-   Fused-Vorgänge (z.B. mad und dp3) liefern Ergebnisse, die nicht ungenauer sind als die denkbar schlechteste serielle Anordnung einer Auswertung der Unfused-Erweiterung des Vorgangs. Bezüglich der Toleranz ist die Definition der denkbar schlechtesten Anordnung keine feste Definition für einen bestimmten Fused-Vorgang, sondern sie ist von den jeweiligen Eingabewerten abhängig. Für jeden einzelnen Schritt in einer Unfused-Erweiterung ist eine Toleranz von 1 ULP zugelassen (oder für jede Anweisung, die Direct3D mit einer höheren Toleranz als 1 ULP aufruft, ist diese höhere Toleranz zulässig).
 -   Für Fused-Vorgänge gelten dieselben NaN-Regeln wie für Unfused-Vorgänge.
 -   Die Toleranz für sqrt und rcp beträgt 1 ULP. Für die Shader-Anweisungen [**rcp**](https://msdn.microsoft.com/library/windows/desktop/hh447205) zur Berechnung des Kehrwerts und [**rsq**](https://msdn.microsoft.com/library/windows/desktop/hh447221) zur Berechnung der reziproken Quadratwurzel gelten eigene, ebenfalls weniger strikte Genauigkeitsanforderungen.
 -   Multiplizieren und Dividieren erfolgt jeweils auf der Genauigkeitsebene von 32-Bit-Gleitkommavorgängen (0,5 ULP Genauigkeit für das Multiplizieren und 1,0 ULP für reziproke Vorgänge). Wenn x/y direkt implementiert ist, muss die Genauigkeit der Ergebnisse größer oder gleich der Genauigkeit sein, die eine Methode mit zwei Schritten liefert.
@@ -160,7 +156,6 @@ Die Regeln für 32-Bit-Gleitkommazahlen gelten auch für 11-Bit- und 10-Bit-Glei
  
 
  
-
 
 
 

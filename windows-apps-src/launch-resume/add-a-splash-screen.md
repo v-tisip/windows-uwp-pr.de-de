@@ -8,18 +8,15 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 4b8d8b81b1807681d3aa3c5ed61359a5da64dfac
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 3fd841f824e09ab74c303571e5d917c56c659b9b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="add-a-splash-screen"></a>Hinzufügen eines Begrüßungsbildschirms
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Hier erfahren Sie, wie Sie das Bild und die Hintergrundfarbe für den Begrüßungsbildschirm der App mit Microsoft Visual Studio 2015 festlegen.
@@ -45,13 +42,13 @@ Wenn Sie eine Visual Studio 2015-Vorlage zum Erstellen der App verwenden, wird d
 
 4.  Drücken Sie zum Auswählen eines neuen Begrüßungsbildschirm-Bilds für eine UWP-App die Schaltfläche mit den Auslassungspunkten, die neben der Bezeichnung **1240 x 600 px** unterhalb von **Skalierte Anlagen** angezeigt wird. Wählen Sie das Bild mit 1240 x 600 Pixeln (PNG, JPG oder JPEG) aus, das Sie für den Begrüßungsbildschirm verwenden möchten.
 
-    **Wichtig**  Das Bild für den Begrüßungsbildschirm muss 620 x 300 Pixel groß sein und einen einfachen Skalierungsfaktor aufweisen. Beachten Sie beim Entwerfen des Begrüßungsbildschirms zudem, dass er kleiner als der Bildschirm und zentriert angezeigt wird. Im Gegensatz zum Begrüßungsbildschirm einer Windows Phone Store-App füllt er den Bildschirm nicht komplett aus.
+    **Wichtig**  Das Bild für den Begrüßungsbildschirm muss 620x300 Pixel groß sein und einen einfachen Skalierungsfaktor aufweisen. Beachten Sie beim Entwerfen des Begrüßungsbildschirms zudem, dass er kleiner als der Bildschirm und zentriert angezeigt wird. Im Gegensatz zum Begrüßungsbildschirm einer Windows Phone Store-App füllt er den Bildschirm nicht komplett aus.
 
      
 
 5.  Drücken Sie zum Auswählen eines neuen Bilds für eine Windows Phone Store-App die Schaltfläche mit den Auslassungszeichen, die neben der Bezeichnung **1152 x 1920 px** unterhalb von **Skalierte Anlagen** angezeigt wird. Wählen Sie das Bild mit 1152 x 1920 Pixeln (.png, .jpg oder .jpeg) aus, das Sie für den Begrüßungsbildschirm verwenden möchten.
 
-    **Wichtig**  Das Bild für den Begrüßungsbildschirm muss 1152 x 1920 Pixel aufweisen. Dabei handelt es sich um die richtige Größe für einen Skalierungsfaktor von 2,4. Ist dies die einzige Ressource, die Sie bereitstellen, wird es auf die Skalierungsfaktoren 1.4x und 1x nach unten skaliert.
+    **Wichtig**  Das Bild für den Begrüßungsbildschirm muss 1152x1920 Pixel aufweisen. Dabei handelt es sich um die richtige Größe für einen Skalierungsfaktor von 2,4. Ist dies die einzige Ressource, die Sie bereitstellen, wird es auf die Skalierungsfaktoren 1.4x und 1x nach unten skaliert.
 
      
 
@@ -65,7 +62,7 @@ Wenn Sie eine Visual Studio 2015-Vorlage zum Erstellen der App verwenden, wird d
 Falls das Laden der App einige Zeit dauert, können Sie erwägen, einen erweiterten Begrüßungsbildschirm hinzuzufügen. Eine Schritt-für-Schritt-Anleitung finden Sie unter [Erstellen eines benutzerdefinierten Begrüßungsbildschirms](create-a-customized-splash-screen.md).
 
 **Hinweis**  
-Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Dieser Artikel ist für Windows10-Entwickler bestimmt, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows8.x oder Windows Phone8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -81,4 +78,3 @@ Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die univer
  
 
  
-

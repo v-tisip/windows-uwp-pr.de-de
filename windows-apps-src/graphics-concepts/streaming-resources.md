@@ -1,6 +1,6 @@
 ---
 title: Streamingressourcen
-description: "Streamingressourcen sind große logische Ressourcen, die wenig physischen Speicher belegen. Anstatt eine gesamte große Ressource zu übergeben, werden je nach Bedarf kleine Teile der Ressource gestreamt. Streamingressourcen wurden früher als unterteilte Ressourcen bezeichnet."
+description: "Streamingressourcen sind große logische Ressourcen, die wenig physischen Speicher belegen. Anstatt die gesamte große Ressource zu übergeben, werden nur kleine Teile der Ressource bei Bedarf gestreamt. Streamingressourcen wurden früher als unterteilte Ressourcen bezeichnet."
 ms.assetid: 04F0486E-4B71-4073-88DA-2AF505F4F0C1
 keywords:
 - Streamingressourcen
@@ -12,17 +12,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 7bb706c94d26b1d27e7b9bf94ca3cfa7a57b41a6
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: f45c1d955d901366b0160d148cef88ce015aeaa2
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="streaming-resources"></a>Streamingressourcen
 
 
-*Streamingressourcen* sind große logische Ressourcen, die wenig physischen Speicher belegen.. Anstatt eine gesamte große Ressource zu übergeben, werden je nach Bedarf kleine Teile der Ressource gestreamt. Streamingressourcen wurden früher als *unterteilte Ressourcen* bezeichnet.
+*Streamingressourcen* sind große logische Ressourcen, die wenig physischen Speicher belegen.. Anstatt die gesamte große Ressource zu übergeben, werden nur kleine Teile der Ressource bei Bedarf gestreamt. Streamingressourcen wurden früher als *unterteilte Ressourcen* bezeichnet.
 
 ## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>Inhalt dieses Abschnitts
 
@@ -49,7 +46,7 @@ ms.lasthandoff: 02/07/2017
 </tr>
 <tr class="odd">
 <td align="left"><p>[Pipelinezugriff auf Streamingressourcen](pipeline-access-to-streaming-resources.md)</p></td>
-<td align="left"><p>Streamingressourcen können in Shaderressourcenansichten (SRV), Renderzielansichten (RTV), Tiefenschablonenansichten (DSV) und in unsortierten Zugriffsansichten (UAV) sowie in bestimmten Bindungen ohne Ansichten, z. B. Vertex-Pufferbindungen, verwendet werden.</p></td>
+<td align="left"><p>Streamingressourcen können in Shaderressourcenansichten (SRV), Renderzielansichten (RTV), Tiefenschablonenansichten (DSV) und in unsortierten Zugriffsansichten (UAV) sowie in bestimmten Bindungen ohne Ansichten, z.B. Vertex-Pufferbindungen, verwendet werden.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[Ebenen der Features von Streamingressourcen](streaming-resources-features-tiers.md)</p></td>
@@ -70,7 +67,6 @@ ms.lasthandoff: 02/07/2017
  
 
  
-
 
 
 

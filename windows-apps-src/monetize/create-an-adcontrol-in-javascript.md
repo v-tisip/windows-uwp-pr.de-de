@@ -8,20 +8,17 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Anzeigen, Werbung, AdControl, JavaScript"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d2ceafb9781ca2b9cd640e65d9bb420f0bf37928
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP, Anzeigen, Werbung, AdControl, JavaScript
+ms.openlocfilehash: b669925c3b630ddbfe82086231c46c951072244b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-an-adcontrol-in-javascript"></a>Erstellen eines AdControl-Elements in JavaScript
 
 
 
 
-Die Beispiele in diesem Artikel zeigen, wie Sie programmgesteuert ein [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx)-Element mit JavaScript erstellen. In diesem Artikel wird davon ausgegangen, dass Sie die erforderlichen Verweise auf das Projekt zur Verwendung eines **AdControl**-Elements bereits hinzugefügt haben. Weitere Informationen, einschließlich einer ausführlichen exemplarischem Vorgehensweise zum Erstellen und Initialisieren eines **AdControl**-Elements im HTML-Markup anstelle von JavaScript, finden Sie unter [„AdControl“ in HTML 5 und Javascript](adcontrol-in-html-5-and-javascript.md).
+Die Beispiele in diesem Artikel zeigen, wie Sie programmgesteuert ein [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx)-Element mit JavaScript erstellen. In diesem Artikel wird davon ausgegangen, dass Sie die erforderlichen Verweise auf das Projekt zur Verwendung eines **AdControl**-Elements bereits hinzugefügt haben. Weitere Informationen, einschließlich einer ausführlichen exemplarischem Vorgehensweise zum Erstellen und Initialisieren eines **AdControl**-Elements im HTML-Markup anstelle von JavaScript, finden Sie unter [„AdControl“ in HTML5 und Javascript](adcontrol-in-html-5-and-javascript.md).
 
 ## <a name="html-div-for-an-adcontrol"></a>HTML-div-Element für „AdControl“
 
@@ -56,4 +53,3 @@ Wenn Sie diesen Code verwenden und keine Anzeigen angezeigt werden, können Sie 
  
 
  
-

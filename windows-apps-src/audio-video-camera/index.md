@@ -1,7 +1,7 @@
 ---
 author: drewbatgit
 ms.assetid: 0fc12d26-f1cf-4da7-b5a7-735a5074b74a
-description: "Dieser Abschnitt stellt Informationen zum Erstellen von Apps für die Universelle Windows-Plattform (UWP) bereit, mit denen Fotos, Videos oder Audioaufnahmen aufgenommen, wiedergegeben oder bearbeitet werden können."
+description: "Dieser Abschnitt stellt Informationen zum Erstellen von Apps für die universelle Windows-Plattform (UWP) bereit, mit denen Fotos, Videos oder Audioaufnahmen aufgenommen, wiedergegeben oder bearbeitet werden können."
 title: Audio, Video und Kamera
 ms.author: drewbat
 ms.date: 02/08/2017
@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 2d3b61b35307536bc54f19b5857acfe946a010ce
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 4264912469d1da56d980b50575926ecf105e1f97
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="audio-video-and-camera"></a>Audio, Video und Kamera
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
 Dieser Abschnitt stellt Informationen zum Erstellen von Apps für die universelle Windows-Plattform (UWP) bereit, mit denen Fotos, Videos oder Audioaufnahmen aufgenommen, wiedergegeben oder bearbeitet werden können.
  
@@ -49,7 +46,6 @@ Dieser Abschnitt stellt Informationen zum Erstellen von Apps für die universell
  
 
  
-
 
 
 

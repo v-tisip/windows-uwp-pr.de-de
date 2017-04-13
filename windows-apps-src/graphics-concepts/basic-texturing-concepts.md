@@ -2,21 +2,17 @@
 title: Grundlegende Texturkonzepte
 description: "Obwohl frühe computergenerierte 3D-Bilder generell hoch entwickelt waren, sahen diese künstlich glänzend aus."
 ms.assetid: 3CA3905D-E837-48EB-A81F-319AA1C6537E
-keywords:
-- Grundlegende Texturkonzepte
+keywords: Grundlegende Texturkonzepte
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 3ee4476995f2d73c9de5027b817fbe68638d1529
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 52c21ff88f09c5136579fabf0b699fd71a8717bd
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="basic-texturing-concepts"></a>Grundlegende Texturkonzepte
 
 
@@ -38,7 +34,6 @@ Wenn die Anwendung ein Hardwareabstraktionsschichts- (HAL) oder Softwaregerät e
  
 
  
-
 
 
 

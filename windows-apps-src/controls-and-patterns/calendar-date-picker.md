@@ -10,12 +10,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 801e9192f3da2f72803dcb95168b1f8dfded6695
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 6d8e45d39c3781eefa9081971c51c001e95799df
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="calendar-date-picker"></a>Kalenderdatumsauswahl
 
@@ -41,7 +39,7 @@ Weitere Informationen zur Auswahl des passenden Steuerelements finden Sie im Art
 
 ## <a name="examples"></a>Beispiele
 
-Der Einstiegspunkt zeigt Platzhaltertext an, falls kein Datum festgelegt wurde. Andernfalls wird das ausgewählte Datum angezeigt. Wenn Benutzer den Einstiegspunkt auswählen, wird eine Kalenderansicht eingeblendet, damit sie ein Datum auswählen können. Die Kalenderansicht überlagert andere Elemente der Benutzeroberfläche. Die anderen Elemente der Benutzeroberfläche werden dadurch jedoch nicht „verschoben“.
+Der Einstiegspunkt zeigt Platzhaltertext an, falls kein Datum festgelegt wurde. Andernfalls wird das ausgewählte Datum angezeigt. Wenn Benutzer den Einstiegspunkt auswählen, wird eine Kalenderansicht eingeblendet, damit sie ein Datum auswählen können. Die Kalenderansicht überlagert andere Elemente der Benutzeroberfläche. Die anderen Elemente der Benutzeroberfläche werden dadurch jedoch nicht „beiseitegeschoben“.
 
 ![Beispiel für Kalenderdatumsauswahl](images/calendar-date-picker-2-views.png)
 
@@ -104,4 +102,3 @@ Als Standardtext für den Platzhalter wird „Datum auswählen“ angezeigt. Sie
 - [Kalenderansicht](calendar-view.md)
 - [Datumsauswahl](date-picker.md)
 - [Uhrzeitauswahl](time-picker.md)
-

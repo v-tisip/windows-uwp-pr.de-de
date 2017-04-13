@@ -2,21 +2,17 @@
 title: Kameraraumtransformationen
 description: Scheitelpunkte im Kameraraum werden berechnet, indem die Scheitelpunkte des Objekts mit der globalen Ansichtsmatrix transformiert werden.
 ms.assetid: 86EDEB95-8348-4FAA-897F-25251B32B076
-keywords:
-- Kameraraumtransformationen
+keywords: Kameraraumtransformationen
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 478202cc8fd4f968539e3081edd6c6feddcec38b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 907df69fdd0c785294283de858a0fcebd0c63513
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="camera-space-transformations"></a>Kameraraumtransformationen
 
 
@@ -28,7 +24,7 @@ Vertexspezifische Normalen im Kameraraum werden berechnet, indem die Normalen de
 
 N = N \* (wvMatrix⁻¹)<sup>T</sup>
 
-Die Matrixinversion und der Matrixaustausch werden auf einer 4 x 4-Matrix ausgeführt. Die Multiplikation kombiniert den normalen Teil mit dem 3 x 3-Teil der resultierenden 4 x 4-Matrix.
+Die Matrixinversion und der Matrixaustausch werden auf einer 4x4-Matrix ausgeführt. Die Multiplikation kombiniert den normalen Teil mit dem 3x3-Teil der resultierenden 4x4-Matrix.
 
 Wenn der Renderstatus so festgelegt ist, dass die Normalen normalisiert werden, werden Scheitelnormalenvektoren wie folgt nach der Transformation auf den Kameraraum normalisiert:
 
@@ -50,10 +46,10 @@ L<sub>dir</sub> = norm(V \* Lₚ). Dabei werden die Parameter in der folgenden T
 |-----------------|---------------|-----------------------------------------------|-----------------------------------------------------------|
 | L<sub>dir</sub> | Nicht zutreffend           | 3D-Vektor (X-, Y- und Z-Gleitkommawerte) | Richtungsvektor vom Objekt-Vertex bis zur Lichtquelle          |
 | V               | Nicht zutreffend           | 3D-Vektor (X-, Y- und Z-Gleitkommawerte) | Vertexposition im Kameraraum                           |
-| wvMatrix        | Identität      | 4 x 4-Matrix der Gleitkommawerte           | Zusammengesetzte Matrix mit globaler und Ansichtstransformation |
+| wvMatrix        | Identität      | 4x4-Matrix der Gleitkommawerte           | Zusammengesetzte Matrix mit globaler und Ansichtstransformation |
 | N               | Nicht zutreffend           | 3D-Vektor (X-, Y- und Z-Gleitkommawerte) | Vertexnormale                                             |
 | Lₚ              | Nicht zutreffend           | 3D-Vektor (X-, Y- und Z-Gleitkommawerte) | Position der Lichtquelle im Kameraraum                            |
-| vMatrix         | Identität      | 4 x 4-Matrix der Gleitkommawerte           | Matrix mit Ansichtstransformation                      |
+| vMatrix         | Identität      | 4x4-Matrix der Gleitkommawerte           | Matrix mit Ansichtstransformation                      |
 
  
 
@@ -65,7 +61,6 @@ L<sub>dir</sub> = norm(V \* Lₚ). Dabei werden die Parameter in der folgenden T
  
 
  
-
 
 
 

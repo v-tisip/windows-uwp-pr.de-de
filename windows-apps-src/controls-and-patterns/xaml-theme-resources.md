@@ -13,12 +13,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 51e5a3dac6ab8682cd9d10efafb7e1e38f9d53d4
-ms.lasthandoff: 02/07/2017
-
+keywords: windows10, UWP
+ms.openlocfilehash: a591600ac31b1582d4ce133a6539884d4616639f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="xaml-theme-resources"></a>XAML-Designressourcen
 
@@ -58,7 +56,7 @@ NICHT EMPFOHLEN:
 
 -   Verwenden Sie die [{ThemeResource}-Markuperweiterung](../xaml-platform/themeresource-markup-extension.md) nicht in Ihren Ressourcendefinitionen in [**ThemeDictionaries**](https://msdn.microsoft.com/library/windows/apps/br208807). Verwenden Sie stattdessen die [{StaticResource}-Markuperweiterung](../xaml-platform/staticresource-markup-extension.md).
 
-    AUSNAHME: Sie können die [{ThemeResource}-Markuperweiterung](../xaml-platform/themeresource-markup-extension.md) verwenden, um auf Ressourcen zu verweisen, die in Bezug auf das App-Design in [**ThemeDictionaries**](https://msdn.microsoft.com/library/windows/apps/br208807) agnostisch sind. Beispiele für diese Ressourcen sind Akzentfarbenressourcen wie `SystemAccentColor` oder Systemfarbenressourcen, die normalerweise das Präfix „SystemColor“ haben, z. B. `SystemColorButtonFaceColor`.
+    AUSNAHME: Sie können die [{ThemeResource}-Markuperweiterung](../xaml-platform/themeresource-markup-extension.md) verwenden, um auf Ressourcen zu verweisen, die in Bezug auf das App-Design in [**ThemeDictionaries**](https://msdn.microsoft.com/library/windows/apps/br208807) agnostisch sind. Beispiele für diese Ressourcen sind Akzentfarbenressourcen wie `SystemAccentColor` oder Systemfarbenressourcen, die normalerweise das Präfix „SystemColor“ haben, z.B. `SystemColorButtonFaceColor`.
 
 **Achtung**  Wenn Sie diesen Richtlinien nicht folgen, kann ein unerwartetes Verhalten im Zusammenhang mit Designs in Ihrer App auftreten. Weitere Informationen finden Sie im Abschnitt [Problembehandlung für Designressourcen](#troubleshooting_theme_resources).
  
@@ -446,6 +444,5 @@ Um dieses Problem zu beheben, verwenden Sie die [{StaticResource}-Markuperweiter
 ```
 
 Beachten Sie, dass die [{ThemeResource}-Markuperweiterung](../xaml-platform/themeresource-markup-extension.md) weiterhin im HighContrast-Wörterbuch anstelle der [{StaticResource}-Markuperweiterung](../xaml-platform/staticresource-markup-extension.md) verwendet wird. Diese Situation fällt unter die Ausnahme, die weiter oben in den Richtlinien angegeben wurde. Die meisten Pinselwerte für das HighContrast-Design verwenden eine Farbauswahl, die global vom System gesteuert wird, aber für XAML als Ressource mit einem speziellen Namen („SystemColor“ ist dem Namen vorangestellt) verfügbar gemacht wird. Das System ermöglicht es den Benutzern, im Center für erleichterte Bedienung die spezifischen Farben festzulegen, die für ihre Einstellungen für hohen Kontrast verwendet werden sollen. Diese Farbauswahl gilt für die speziell benannten Ressourcen. Das XAML-Framework verwendet das gleiche Designänderungsereignis, um auch diese Pinsel zu aktualisieren, wenn es erkennt, dass sie auf Systemebene geändert wurden. Darum wird hier die {ThemeResource}-Markuperweiterung verwendet.
-
 
 

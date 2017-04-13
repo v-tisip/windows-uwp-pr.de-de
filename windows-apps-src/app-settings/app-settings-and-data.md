@@ -10,14 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: cdb1035d3d035c92c29e84bdd04ca7692c7e19de
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: aa505ae4b58fe583f3303ee005deddae48ee3c8e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="app-settings-and-data"></a>App-Einstellungen und Daten
 
 
@@ -51,7 +48,6 @@ App-Daten werden von der App selbst erstellt und verwaltet. Sie beinhalten den L
 </tr>
 </tbody>
 </table>
-
 
 
 

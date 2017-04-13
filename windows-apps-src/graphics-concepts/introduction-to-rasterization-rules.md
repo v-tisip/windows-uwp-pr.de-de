@@ -2,21 +2,17 @@
 title: "Einführung in die Regeln für die Rasterung"
 description: "Häufig stimmen die als Scheitelpunkte angegebenen Punkte nicht exakt mit den Pixeln auf dem Bildschirm überein. Wenn dieser Fall eintritt, verwendet Direct3D Dreiecksrasterregeln, um zu entscheiden, welche Pixel für ein vorhandenes Dreieck gelten."
 ms.assetid: 4232CDBA-F669-4417-9378-F9013E83462C
-keywords:
-- "Einführung in die Regeln für die Rasterung"
+keywords: "Einführung in die Regeln für die Rasterung"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b7814c01d18e7a5ef121d151438a25921f35aaf2
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1c22f17991462ddf190ece2baa0360fa3e1d12a5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="introduction-to-rasterization-rules"></a>Einführung in die Regeln für die Rasterung
 
 
@@ -79,7 +75,6 @@ Punkt-Sprites und Patch-Grundtypen sind gerastert, da die Grundtypen zuerst in D
  
 
  
-
 
 
 

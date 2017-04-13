@@ -10,12 +10,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c3779262c24ef1bd124330fc7709b38abead1a7a
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: b033c58fed79db197858db99d71ad6a174a9a662
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="calendar-view"></a>Kalenderansicht
 
@@ -42,7 +40,7 @@ Weitere Informationen zur Auswahl des passenden Steuerelements finden Sie im Art
 
 ## <a name="examples"></a>Beispiele
 
-Die Kalenderansicht besteht aus drei Ansichten: Monat, Jahr und 10 Jahre. Standardmäßig wird beim Aufrufen des Kalenders die Monatsansicht angezeigt. Sie können mit der [**DisplayMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.displaymode.aspx)-Eigenschaft eine Standardansicht festlegen.
+Die Kalenderansicht besteht aus drei Ansichten: Monat, Jahr und 10Jahre. Standardmäßig wird beim Aufrufen des Kalenders die Monatsansicht angezeigt. Sie können mit der [**DisplayMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.displaymode.aspx)-Eigenschaft eine Standardansicht festlegen.
 
 ![Die drei Ansichten einer Kalenderansicht](images/calendar-view-3-views.png)
 
@@ -112,7 +110,7 @@ Hier wurde für die Jahres- und 10-Jahres-Ansicht ein 3x4-Raster festgelegt.
 calendarView1.SetYearDecadeDisplayDimensions(3, 4);
 ```
 
-Als frühestes Datum wird im Kalender standardmäßig das Datum vor 100 Jahren angezeigt, als spätestes Datum das Datum in 100 Jahren. Sie können das früheste und späteste Datum des Kalenders mit den Eigenschaften [**MinDate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.mindate.aspx) und [**MaxDate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.maxdate.aspx) ändern.
+Als frühestes Datum wird im Kalender standardmäßig das Datum vor 100Jahren angezeigt, als spätestes Datum das Datum in 100Jahren. Sie können das früheste und späteste Datum des Kalenders mit den Eigenschaften [**MinDate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.mindate.aspx) und [**MaxDate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.maxdate.aspx) ändern.
 
 ```csharp
 calendarView1.MinDate = new DateTime(2000, 1, 1);
@@ -125,9 +123,9 @@ Jeder Tag im Kalender wird durch ein [**CalendarViewDayItem**](https://msdn.micr
 
 Wenn ein Tag in der Kalenderansicht nicht auswählbar sein soll, setzen Sie dessen [**CalendarViewDayItem.IsBlackout**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarviewdayitem.isblackout.aspx)-Eigenschaft auf **true**. 
 
-Durch Aufrufen der [**CalendarViewDayItem.SetDensityColors**](https://msdn.microsoft.com/library/windows/apps/xaml/dn890067.aspx)-Methode können Sie Kontextinformationen zur Dichte von Ereignissen anzeigen. Sie können pro Tag zwischen 0 und 10 Dichtebalken in individuellen Farben festlegen. 
+Durch Aufrufen der [**CalendarViewDayItem.SetDensityColors**](https://msdn.microsoft.com/library/windows/apps/xaml/dn890067.aspx)-Methode können Sie Kontextinformationen zur Dichte von Ereignissen anzeigen. Sie können pro Tag zwischen0 und 10Dichtebalken in individuellen Farben festlegen. 
 
-Ein Kalender enthält unter anderem folgende Tagelemente. Tag 1 und 2 sind schwarz angezeigt und damit nicht buchbar. Für Tag 2, 3 und 4 wurden verschiedene Dichtebalken festgelegt.
+Ein Kalender enthält unter anderem folgende Tagelemente. Tag1 und2 sind schwarz angezeigt und damit nicht buchbar. Für Tag2,3 und4 wurden verschiedene Dichtebalken festgelegt.
 
 ![Kalendertage mit Dichtebalken](images/calendar-view-density-bars.png)
 
@@ -136,9 +134,9 @@ Ein Kalender enthält unter anderem folgende Tagelemente. Tag 1 und 2 sind sch
 Eine Kalenderansicht kann zahlreiche „CalendarViewDayItem“-Objekte enthalten. Damit die Benutzeroberfläche reaktionsfähig bleibt und Benutzer fließend durch den Kalender navigieren können, unterstützt die Kalenderansicht das Phasen-Rendering. Sie können damit die Verarbeitung eines Tagelements in Phasen unterteilen. Wenn ein Tag aus der Ansicht verschoben wird, bevor alle Phasen abgeschlossen sind, wird keine Zeit mehr zum Verarbeiten oder Rendern dieses Elements aufgewendet.
 
 In diesem Beispiel sehen Sie das Phasen-Rendering einer Kalenderansicht zur Terminplanung. 
-- In Phase 0 wird das Standardtagelement gerendert. 
-- In Phase 1 geben Sie an, welche Tage nicht buchbar sind. Hierzu zählen vergangene Tage, Sonntage und Tage, die bereits vollständig ausgebucht sind. 
-- In Phase 2 prüfen Sie jeden für den Tag gebuchten Termin. Bestätigte Termine werden durch einen grünen Dichtebalken und vorbehaltliche Termine durch einen blauen Dichtebalken gekennzeichnet. 
+- In Phase0 wird das Standardtagelement gerendert. 
+- In Phase1 geben Sie an, welche Tage nicht buchbar sind. Hierzu zählen vergangene Tage, Sonntage und Tage, die bereits vollständig ausgebucht sind. 
+- In Phase2 prüfen Sie jeden für den Tag gebuchten Termin. Bestätigte Termine werden durch einen grünen Dichtebalken und vorbehaltliche Termine durch einen blauen Dichtebalken gekennzeichnet. 
 
 Die `Bookings`-Klasse in diesem Beispiel stammt aus einer fiktiven Terminierungs-App und wird nicht angezeigt.
 
@@ -207,4 +205,3 @@ private void CalendarView_CalendarViewDayItemChanging(CalendarView sender,
 - [Kalenderdatumsauswahl](calendar-date-picker.md)
 - [Datumsauswahl](date-picker.md)
 - [Uhrzeitauswahl](time-picker.md)
-

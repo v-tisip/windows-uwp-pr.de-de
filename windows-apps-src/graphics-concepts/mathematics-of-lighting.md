@@ -2,21 +2,17 @@
 title: Beleuchtungsmathematik
 description: "Das Direct3D-Beleuchtungsmodell deckt Umgebungs-, diffuse, spiegelnde und ausstrahlende Beleuchtung ab. Dies bietet eine ausreichende Flexibilität zum Lösen einer breiten Palette an Beleuchtungssituationen. Die Gesamtmenge an Licht in einer Szene wird als globale Beleuchtung bezeichnet."
 ms.assetid: D0521F56-050D-4EDF-9BD1-34748E94B873
-keywords:
-- Beleuchtungsmathematik
+keywords: Beleuchtungsmathematik
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a7745e9a8c15398a3305d32e828e119832d8250c
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: fd26d7253de1422f81ff4c0b9bf94d45cd02b2fc
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="mathematics-of-lighting"></a>Beleuchtungsmathematik
 
 
@@ -65,11 +61,11 @@ Alle Beleuchtungsberechnungen erfolgen im Modellraum durch Ändern von Position 
 </tr>
 <tr class="even">
 <td align="left"><p>[Diffuse Beleuchtung](diffuse-lighting.md)</p></td>
-<td align="left"><p><em>Diffuse Beleuchtung</em> hängt sowohl von der Richtung des Lichts als auch von der Flächennormalen des Objektes ab. Diffuse Beleuchtung ist auf der Oberfläche eines Objekts durch die Änderung der Richtung des Lichts und den sich ändernden Oberflächenzahlvektor unterschiedlich. Es dauert länger, diffuse Beleuchtung zu berechnen, da sie sich für jeden Eckpunkt des Objektes ändert; der Vorteil der Verwendung liegt jedoch darin, dass sie Objekten einen Schatten und eine dreidimensionale (3D) Tiefe verleiht.</p></td>
+<td align="left"><p><em>Diffuse Beleuchtung</em> hängt sowohl von der Richtung des Lichts als auch von der Flächennormalen des Objekts ab. Diffuse Beleuchtung ist auf der Oberfläche eines Objekts durch die Änderung der Richtung des Lichts und den sich ändernden Oberflächenzahlvektor unterschiedlich. Es dauert länger, diffuse Beleuchtung zu berechnen, da sie sich für jeden Eckpunkt des Objektes ändert; der Vorteil der Verwendung liegt jedoch darin, dass sie Objekten einen Schatten und eine dreidimensionale (3D) Tiefe verleiht.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>[Spiegelnde Beleuchtung](specular-lighting.md)</p></td>
-<td align="left"><p><em>Spiegelnde Beleuchtung</em> bezeichnet die hellen spiegelnden hellsten Bildteile, die auftreten, wenn Licht auf eine Objektfläche trifft und in Richtung der Kamera reflektiert wird. Spiegelnde Beleuchtung ist intensiver als diffuses Licht und fällt über die Objektoberfläche schneller ab. Die Berechnung von spiegelnder Beleuchtung ist zeitaufwendiger als die für diffuse Beleuchtung; der Vorteil der Anwendung liegt jedoch darin, dass die Oberfläche erheblich detailreicher wird.</p></td>
+<td align="left"><p><em>Spiegelnde Beleuchtung</em> bezeichnet die glänzenden spiegelnden hellsten Bildteile, die auftreten, wenn Licht auf eine Objektfläche trifft und in Richtung der Kamera reflektiert wird. Spiegelnde Beleuchtung ist intensiver als diffuses Licht und fällt über die Objektoberfläche schneller ab. Die Berechnung von spiegelnder Beleuchtung ist zeitaufwendiger als die für diffuse Beleuchtung; der Vorteil der Anwendung liegt jedoch darin, dass die Oberfläche erheblich detailreicher wird.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[Ausstrahlende Beleuchtung](emissive-lighting.md)</p></td>
@@ -96,7 +92,6 @@ Alle Beleuchtungsberechnungen erfolgen im Modellraum durch Ändern von Position 
  
 
  
-
 
 
 

@@ -2,21 +2,17 @@
 title: Schablonenpuffer
 description: Mit einem Schablonenpuffer werden Pixel in einem Bild maskiert, um Spezialeffekte zu erzeugen.
 ms.assetid: 544B3B9E-31E3-41DA-8081-CC3477447E94
-keywords:
-- Schablonenpuffer
+keywords: Schablonenpuffer
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 981d9d25b860d1c168227c9f67537cf033165aac
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 131b573d990db4d24f33b33c38e4534a7932571b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="stencil-buffers"></a>Schablonenpuffer
 
 
@@ -33,7 +29,7 @@ Direct3D führt einen pixelweisen Test der Inhalte des Schablonenpuffers durch. 
 
 1.  Durchführen einer bitweisen AND-Operation des Schablonenreferenzwerts mit der Schablonenmaske.
 2.  Durchführen einer bitweisen AND-Operation des Schablonenpufferwerts für das aktuelle Pixel mit der Schablonenmaske.
-3.  Vergleichen des Ergebnisses von Schritt 1 mit dem Ergebnis von Schritt 2 anhand der Vergleichsfunktion.
+3.  Vergleichen des Ergebnisses von Schritt1 mit dem Ergebnis von Schritt2 anhand der Vergleichsfunktion.
 
 Die oben aufgeführten Schritte sind in der folgenden Codezeile dargestellt:
 
@@ -54,7 +50,7 @@ Sie können in Ihrer Anwendung die Funktionsweise des Schablonenpuffers anpassen
 ## <a name="span-idcompositingspanspan-idcompositingspanspan-idcompositingspancompositing"></a><span id="Compositing"></span><span id="compositing"></span><span id="COMPOSITING"></span>Zusammensetzung
 
 
-Die Anwendung kann mit dem Schablonenpuffer 2D- oder 3D-Bilder auf einer 3D-Szene zusammensetzen. Auf der Renderzieloberfläche wird mit einer Maske in dem Schablonenpuffer ein Bereich verdeckt. Gespeicherte 2D-Informationen, z. B. Text oder Bitmaps, können dann in den verdeckten Bereich geschrieben werden. Alternativ kann die Anwendung weitere 3D-Grundtypen auf den durch die Schablone maskierten Bereich der Renderzieloberfläche rendern. Es kann sogar eine ganze Szene gerendert werden.
+Die Anwendung kann mit dem Schablonenpuffer 2D- oder 3D-Bilder auf einer 3D-Szene zusammensetzen. Auf der Renderzieloberfläche wird mit einer Maske in dem Schablonenpuffer ein Bereich verdeckt. Gespeicherte 2D-Informationen, z.B. Text oder Bitmaps, können dann in den verdeckten Bereich geschrieben werden. Alternativ kann die Anwendung weitere 3D-Grundtypen auf den durch die Schablone maskierten Bereich der Renderzieloberfläche rendern. Es kann sogar eine ganze Szene gerendert werden.
 
 In Spielen sind häufig mehrere 3D-Szenen zusammengesetzt. Zum Beispiel gibt es in Fahrspielen normalerweise einen Rückspiegel. Im Spiegel ist die Ansicht der 3D-Szene hinter dem Fahrer sichtbar. Das ist im Grunde eine zweite 3D-Szene, die mit der Sicht des Fahrers nach vorne zusammengesetzt ist.
 
@@ -112,7 +108,6 @@ Dies bedeutet, dass die Schattengeometrie zweimal pro Lichtquelle gezeichnet wir
  
 
  
-
 
 
 

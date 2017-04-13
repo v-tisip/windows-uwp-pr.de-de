@@ -10,18 +10,15 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: fd4ba842a1d6f9eec6012a930a5dda5d7ff7c249
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: dbd5d649dbb9efd95b61f1cffa8266143c5bf2d9
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="guidelines-for-targeting"></a>Richtlinien für die Zielbestimmung
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Die Touchzielbestimmung in Windows verwendet den vollständigen Kontaktbereich jedes Fingers, der von einem Touchdigitalisierungsgerät erkannt wird. Die größere und komplexere Menge an Eingabedaten, die vom Digitalisierungsgerät gemeldet wird, wird verwendet, um die Präzision bei der Ermittlung des durch den Benutzer (höchstwahrscheinlich) beabsichtigten Ziels zu erhöhen.
+Die Touchzielbestimmung in Windows verwendet den vollständigen Kontaktbereich jedes Fingers, der durch ein Touchdigitalisierungsgerät erkannt wird. Die größere und komplexere Menge an Eingabedaten, die vom Digitalisierungsgerät gemeldet wird, wird verwendet, um die Präzision bei der Ermittlung des durch den Benutzer (höchstwahrscheinlich) beabsichtigten Ziels zu erhöhen.
 
 <div class="important-apis" >
 <b>Wichtige APIs</b><br/>
@@ -41,13 +38,13 @@ Um die Konsistenz bei unterschiedlichen Bildschirmgrößen und Pixeldichten zu w
 
 Pixel = Pixeldichte × Maße
 
-Die folgenden Beispiele verwenden diese Formel, um eine Zielgröße von 9 mm auf einem Display mit 135 PPI (Pixel Per Inch, Pixel pro Zoll) und einem einfachen Skalierungsplateau in die Pixelgröße umrechnen:
+Die folgenden Beispiele verwenden diese Formel, um eine Zielgröße von 9mm auf einem Display mit 135PPI (Pixel Per Inch, Pixel pro Zoll) und einem einfachen Skalierungsplateau in die Pixelgröße umrechnen:
 
 Pixel = 135 PPI × 9 mm
 
-Pixel = 135 PPI × (0,03937 Zoll pro mm × 9 mm)
+Pixel = 135PPI×(0,03937Zoll pro mm×9mm)
 
-Pixel = 135 PPI × 0,35433 Zoll
+Pixel = 135PPI×0,35433Zoll
 
 Pixel = 48 Pixel
 
@@ -63,7 +60,7 @@ Wenn zum Beispiel ein Aufsetzen erkannt wird, wird ein Tippen registriert, wenn 
 ## <a name="target-sizes"></a>Zielgrößen
 
 
-Verwenden Sie für Ihr Touchziel grundsätzlich mindestens eine Fläche von 9 x 9 mm (48 x 48-Pixel auf einem 135 PPI-Display bei einem Skalierungsplateau von 1,0). Verwenden Sie keine Touchziele mit weniger als 7 x 7 mm.
+Verwenden Sie für Ihr Touchziel grundsätzlich mindestens eine Fläche von 9x9mm (48x48-Pixel auf einem 135PPI-Display bei einem Skalierungsplateau von1,0). Verwenden Sie keine Touchziele mit weniger als 7x7mm.
 
 Im folgenden Diagramm wird gezeigt, dass die Größe eines Ziels in der Regel eine Kombination aus visuellem Ziel, tatsächlicher Zielgröße und dem Abstand zwischen dem tatsächlichen Ziel und den anderen potenziellen Zielen ist.
 
@@ -87,23 +84,23 @@ Die folgende Tabelle enthält die Mindestgrößen und die empfohlenen Größen f
 <tbody>
 <tr class="odd">
 <td align="left">Abstand</td>
-<td align="left">2 mm</td>
+<td align="left">2mm</td>
 <td align="left">Nicht zutreffend</td>
 </tr>
 <tr class="even">
 <td align="left">Visuelle Zielgröße</td>
-<td align="left">&lt; 60 % der tatsächlichen Größe</td>
-<td align="left">90 – 100 % der tatsächlichen Größe
-<p>Visuelle Ziele mit weniger als 4,2 x 4,2 mm (60 % der empfohlenen Mindestgröße von 7 x 7 mm) werden von den meisten Benutzern nicht als toucheingabefähiges Element erkannt.</p></td>
+<td align="left">&lt; 60% der tatsächlichen Größe</td>
+<td align="left">90 – 100% der tatsächlichen Größe
+<p>Visuelle Ziele mit weniger als 4,2x 4,2mm (60% der empfohlenen Mindestgröße von 7x7mm) werden von den meisten Benutzern nicht als toucheingabefähiges Element erkannt.</p></td>
 </tr>
 <tr class="odd">
 <td align="left">Tatsächliche Zielgröße</td>
-<td align="left">7 x 7 mm</td>
-<td align="left">Mindestens 9 x 0 mm (48 x 48 Pixel @ 1x)</td>
+<td align="left">7x7mm</td>
+<td align="left">Mindestens 9x0mm (48x48Pixel @ 1x)</td>
 </tr>
 <tr class="even">
 <td align="left">Gesamtzielgröße</td>
-<td align="left">11 x 11 mm (ca. 60 px: drei 20-px-Rastereinheiten @ 1x)</td>
+<td align="left">11 x 11 mm (ca. 60px: drei 20-px-Rastereinheiten @1x)</td>
 <td align="left">13,5 x 13,5 mm (72 x 72 px @ 1x)
 <p>Dies impliziert, dass die Größe des tatsächlichen Ziels und des Abstands zusammen größer sein muss als die jeweiligen Mindestgrößen.</p></td>
 </tr>
@@ -149,7 +146,7 @@ Beim Scrubbing wird eine beliebige Stelle in einem Feld mit Zielen berührt, und
 Halten Sie sich an die folgenden Richtlinien, wenn Sie Scrubbinginteraktionen entwerfen:
 
 -   Scrubbing wird in Verbindung mit der Mehrdeutigkeitsvermeidungs-UI verwendet. Weitere Informationen finden Sie unter [Richtlinien für visuelles Feedback](guidelines-for-visualfeedback.md).
--   Die empfohlene Mindestgröße für ein Scrubbing-Fingereingabeziel beträgt 20 px (3,75 mm @ 1x Größe).
+-   Die empfohlene Mindestgröße für ein Scrubbing-Fingereingabeziel beträgt 20px (3,75mm @1xGröße).
 -   Scrubbing hat Vorrang, wenn es auf einer Oberfläche ausgeführt wird, die Verschieben unterstützt (beispielsweise eine Webseite).
 -   Scrubbingziele sollten nah beieinander liegen.
 -   Eine Aktion wird abgebrochen, wenn Benutzer einen Finger vom Scrubbingziel wegziehen.
@@ -161,23 +158,22 @@ Halten Sie sich an die folgenden Richtlinien, wenn Sie Scrubbinginteraktionen en
 
 **Beispiele**
 * [Einfaches Eingabebeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Eingabebeispiel mit geringer Latenz](http://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Beispiel für Eingabe mit niedriger Latenz](http://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [Beispiel für den Benutzerinteraktionsmodus](http://go.microsoft.com/fwlink/p/?LinkID=619894)
 * [Beispiel für visuelle Fokuselemente](http://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **Archivbeispiele**
-* [Eingabe: Beispiel XAML-Benutzereingabeereignisse](http://go.microsoft.com/fwlink/p/?linkid=226855)
+* [Eingabe: Beispiel für XAML-Benutzereingabeereignisse](http://go.microsoft.com/fwlink/p/?linkid=226855)
 * [Eingabe: Beispiel für Gerätefunktionen](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [Eingabe: Beispiel für Fingereingabe-Treffertests](http://go.microsoft.com/fwlink/p/?linkid=231590)
-* [Beispiel für XAML-Bildlauf, -Verschiebung und -Zoomen](http://go.microsoft.com/fwlink/p/?linkid=251717)
+* [Beispiel für XAML-Bildlauf, -Verschiebung und -Zoom](http://go.microsoft.com/fwlink/p/?linkid=251717)
 * [Eingabe: vereinfachtes Freihandbeispiel](http://go.microsoft.com/fwlink/p/?linkid=246570)
-* [Eingabe: Beispiel für Windows 8-Bewegungen](http://go.microsoft.com/fwlink/p/?LinkId=264995)
+* [Eingabe: Beispiel für Windows8-Bewegungen](http://go.microsoft.com/fwlink/p/?LinkId=264995)
 * [Eingabe: Beispiel für Manipulationen und Gesten (C++)](http://go.microsoft.com/fwlink/p/?linkid=231605)
 * [Beispiel für die DirectX-Fingereingabe](http://go.microsoft.com/fwlink/p/?LinkID=231627)
  
 
  
-
 
 
 

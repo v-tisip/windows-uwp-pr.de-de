@@ -10,12 +10,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 53b130c3f97440bd381adda5c40532d46823ce02
-ms.lasthandoff: 02/07/2017
-
+keywords: windows10, UWP
+ms.openlocfilehash: 27d3de280201d92ee98f6e8a17afd85f76acd7d5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="create-adaptive-tiles"></a>Erstellen adaptiver Kacheln
 
@@ -24,7 +22,7 @@ ms.lasthandoff: 02/07/2017
 
 Vorlagen für adaptive Kacheln sind ein neues Feature in Windows 10 und ermöglichen den Entwurf eigener Inhalte für Kachelbenachrichtigungen mithilfe einer einfachen, flexiblen Markupsprache, die sich an unterschiedliche Bildschirmdichten anpasst. Dieser Artikel beschreibt, wie Sie adaptive Live-Kacheln für Ihre UWP-App (Universelle Windows-Plattform) erstellen. Die vollständige Liste adaptiver Elemente und Attribute finden Sie unter [Adaptives Kachelschema](tiles-and-notifications-adaptive-tiles-schema.md).
 
-(Wenn gewünscht, können Sie weiterhin die voreingestellten Vorlagen aus dem [Windows 8-Kachelvorlagenkatalog](https://msdn.microsoft.com/library/windows/apps/hh761491) beim Entwerfen von Benachrichtigungen für Windows 10 verwenden.)
+(Wenn gewünscht, können Sie weiterhin die voreingestellten Vorlagen aus dem [Windows8-Kachelvorlagenkatalog](https://msdn.microsoft.com/library/windows/apps/hh761491) beim Entwerfen von Benachrichtigungen für Windows10 verwenden.)
 
 
 ## <a name="getting-started"></a>Erste Schritte
@@ -36,7 +34,7 @@ Vorlagen für adaptive Kacheln sind ein neues Feature in Windows 10 und ermögli
 
 ## <a name="how-to-send-a-tile-notification"></a>Senden einer Kachelbenachrichtigung
 
-Lesen Sie den [Schnellstart zum Senden von lokalen Kachelbenachrichtigungen](tiles-and-notifications-create-adaptive-tiles.md). Die Dokumentation auf dieser Seite beschreibt alle visuellen UI-Möglichkeiten, die Ihnen mit anpassbaren Kacheln zur Verfügung stehen.
+Lesen Sie den [Schnellstart zum Senden von lokalen Kachelbenachrichtigungen](https://blogs.msdn.microsoft.com/tiles_and_toasts/2015/10/05/quickstart-sending-a-local-tile-notification-in-windows-10/). Die Dokumentation auf dieser Seite beschreibt alle visuellen UI-Möglichkeiten, die Ihnen mit anpassbaren Kacheln zur Verfügung stehen.
 
 
 ## <a name="usage-guidance"></a>Informationen zur Verwendung
@@ -386,7 +384,7 @@ new AdaptiveText()
 ## <a name="text-styles"></a>Textstile
 
 
-Stile steuern den Schriftgrad, die Schriftfarbe und Schriftbreite von text-Elementen. Es sind mehrere Stile verfügbar. Zusätzlich gibt es leichte („subtle“) Variationen jedes Stils, durch die die Deckkraft auf 60 % festgelegt und die Textfarbe normalerweise in einem hellgrauen Farbton angezeigt wird.
+Stile steuern den Schriftgrad, die Schriftfarbe und Schriftbreite von text-Elementen. Es sind mehrere Stile verfügbar. Zusätzlich gibt es leichte („subtle“) Variationen jedes Stils, durch die die Deckkraft auf 60% festgelegt und die Textfarbe normalerweise in einem hellgrauen Farbton angezeigt wird.
 
 ```XML
 <text hint-style="base">Header content</text>
@@ -421,12 +419,12 @@ new AdaptiveText()
 |--------------------------------|---------------------------|-------------|
 | &lt;text hint-style="\*" /&gt; | Zeichenhöhe               | Schriftbreite |
 | caption                        | 12 effektive Pixel (epx) | Regular     |
-| body                           | 15 Epx                    | Regular     |
-| base                           | 15 Epx                    | Semibold    |
-| subtitle                       | 20 Epx                    | Regular     |
-| title                          | 24 Epx                    | Semilight   |
-| subheader                      | 34 Epx                    | Light       |
-| header                         | 46 Epx                    | Light       |
+| body                           | 15Epx                    | Regular     |
+| base                           | 15Epx                    | Semibold    |
+| subtitle                       | 20Epx                    | Regular     |
+| title                          | 24Epx                    | Semilight   |
+| subheader                      | 34Epx                    | Light       |
+| header                         | 46Epx                    | Light       |
 
  
 
@@ -444,7 +442,7 @@ Durch diese Variationen wird die Zeilenhöhe verringert, sodass der Abstand zu I
 
 **Leichte Variationen des Textstils**
 
-Jeder Stil weist eine leichte Variation auf, durch die der Text eine 60 %-ige Deckkraft erhält und normalerweise in einem hellgrauen Farbton angezeigt wird.
+Jeder Stil weist eine leichte Variation auf, durch die der Text eine 60%-ige Deckkraft erhält und normalerweise in einem hellgrauen Farbton angezeigt wird.
 
 |                        |
 |------------------------|
@@ -653,7 +651,7 @@ Um eine Spalte doppelt so groß wie eine andere Spalte darzustellen, weisen Sie 
 
 ![Untergruppen, eine Spalte ist doppelt so groß wie die andere](images/adaptive-tiles-subgroups02.png)
 
-Wenn Ihre erste Spalte 20 % und die zweite Spalte 80 % der gesamten Breite einnehmen soll, weisen Sie der ersten Gewichtung 20 und der zweiten Gewichtung 80 zu. Wenn die Gewichtungen insgesamt 100 ergeben, werden sie prozentual ausgedrückt.
+Wenn Ihre erste Spalte 20% und die zweite Spalte 80% der gesamten Breite einnehmen soll, weisen Sie der ersten Gewichtung 20 und der zweiten Gewichtung 80 zu. Wenn die Gewichtungen insgesamt 100 ergeben, werden sie prozentual ausgedrückt.
 
 <table>
 <colgroup>
@@ -671,7 +669,7 @@ Wenn Ihre erste Spalte 20 % und die zweite Spalte 80 % der gesamten Breite ein
 </tr>
 <tr class="odd">
 <td align="left">80</td>
-<td align="left">80 %</td>
+<td align="left">80%</td>
 </tr>
 <tr class="even">
 <td align="left">Gesamtgewichtung: 100</td>
@@ -1218,7 +1216,7 @@ Sie können mit **hint-overlay** eine schwarze Überlagerung für Hintergrund- u
 
 **Verwenden von „hint-overlay“ für ein Hintergrundbild**
 
-Das Hintergrundbild wird standardmäßig auf eine Überlagerung von 20 % festgelegt, solange es in der Nutzlast Textelemente gibt. (Andernfalls wird standardmäßig eine Überlagerung von 0 % festgelegt.)
+Das Hintergrundbild wird standardmäßig auf eine Überlagerung von 20% festgelegt, solange es in der Nutzlast Textelemente gibt. (Andernfalls wird standardmäßig eine Überlagerung von 0% festgelegt.)
 
 ```XML
 <binding template="TileWide">
@@ -1249,7 +1247,7 @@ TileWide = new TileBinding()
 
 **Verwenden von „hint-overlay“ für ein Vorschaubild**
 
-In Version 1511 von Windows 10 unterstützen wir Überlagerungen für Vorschaubilder, genau wie für Hintergrundbilder. Geben Sie „hint-overlay“ für das Vorschaubildelement als ganze Zahl von 0 bis 100 an. Die Standardüberlagerung für Vorschaubilder ist 0 (keine Überlagerung).
+In Version 1511 von Windows10 unterstützen wir Überlagerungen für Vorschaubilder, genau wie für Hintergrundbilder. Geben Sie „hint-overlay“ für das Vorschaubildelement als ganze Zahl von 0 bis 100 an. Die Standardüberlagerung für Vorschaubilder ist 0 (keine Überlagerung).
 
 ```XML
 <binding template="TileMedium">
@@ -1273,7 +1271,7 @@ TileMedium = new TileBinding()
 }
 ```
 
-Dieses Beispiel zeigt ein Vorschaubild mit 20 % Deckkraft (links) und 0 % Deckkraft (rechts):
+Dieses Beispiel zeigt ein Vorschaubild mit 20% Deckkraft (links) und 0% Deckkraft (rechts):
 
 ![„hint-overlay“ für ein Vorschaubild](images/hintoverlay.png)
 
@@ -1397,13 +1395,12 @@ TileWide = new TileBinding()
 
 
 * [Adaptives Kachelschema](tiles-and-notifications-adaptive-tiles-schema.md)
-* [Schnellstart: Senden einer lokalen Kachelbenachrichtigung](tiles-and-notifications-create-adaptive-tiles.md)
+* [Schnellstart: Senden einer lokalen Kachelbenachrichtigung](https://blogs.msdn.microsoft.com/tiles_and_toasts/2015/10/05/quickstart-sending-a-local-tile-notification-in-windows-10/)
 * [Benachrichtigungsbibliothek auf GitHub](https://github.com/Microsoft/UWPCommunityToolkit/tree/dev/Notifications)
 * [Katalog für spezielle Kachelvorlagen](tiles-and-notifications-special-tile-templates-catalog.md)
  
 
  
-
 
 
 

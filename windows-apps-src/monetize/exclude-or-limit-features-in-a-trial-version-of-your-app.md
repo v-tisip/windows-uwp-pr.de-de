@@ -1,25 +1,23 @@
 ---
 author: mcleanbyron
-Description: "Wenn Sie Kunden ermöglichen, Ihre App während eines Testzeitraums kostenlos zu verwenden, können Sie durch die Deaktivierung oder Einschränkung einiger Features während des Testzeitraums Ihre Kunden dazu bringen, ein Upgrade auf die Vollversion Ihrer App auszuführen."
+Description: "Durch einen kostenlose, zeitlich begrenzte Testversion Ihrer App mit eingeschränkten Features können Sie Ihre Kunden motivieren, auf die Vollversion Ihrer App zu aktualisieren."
 title: "Ausschließen oder Einschränken von Features in einer Testversion"
 ms.assetid: 1B62318F-9EF5-432A-8593-F3E095CA7056
-keywords: "Windows 10, UWP, Testversion, In-App-Einkauf, IAP, Windows.ApplicationModel.Store"
+keywords: Windows10, UWP, Testversion, In-App-Kauf, IAP, Windows.ApplicationModel.Store
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 8b55c837e63792e6da4e684602e79d99ad7cff1e
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: badb14e5c915db68fb262002a8ee3321b62e2778
+ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
+translationtype: HT
 ---
+# <a name="exclude-or-limit-features-in-a-trial-version"></a>Ausschließen oder Beschränken von Features in einer Testversion
 
-# <a name="exclude-or-limit-features-in-a-trial-version"></a>Ausschließen oder Einschränken von Features in einer Testversion
 
-
->**Hinweis**&nbsp;&nbsp;In diesem Artikel wird die Verwendung von Mitgliedern des [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) Namespace erläutert. Wenn Ihre App auf Windows 10, Version 1607 oder höher ausgerichtet ist, wird empfohlen, den [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace zu verwenden, statt des **Windows.ApplicationModel.Store**-Namespace, um eine Testversion zu installieren. Weitere Informationen finden Sie unter [Implementieren einer Testversion der App](implement-a-trial-version-of-your-app.md).
+> [!NOTE]
+> In diesem Artikel wird veranschaulicht, wie Mitglieder des [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)-Namespace verwendet werden. Wenn Ihre App auf Windows10, Version1607 oder höher ausgerichtet ist, wird empfohlen, den [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace zu verwenden, statt des **Windows.ApplicationModel.Store**-Namespace, um eine Testversion zu installieren. Weitere Informationen finden Sie unter [Implementieren einer Testversion der App](implement-a-trial-version-of-your-app.md).
 
 Durch einen kostenlose, zeitlich begrenzte Testversion Ihrer App mit eingeschränkten Features können Sie Ihre Kunden motivieren, auf die Vollversion Ihrer App zu aktualisieren. Bestimmen Sie die einzuschränkenden Features, bevor Sie mit dem Codieren beginnen, und stellen Sie dann sicher, dass diese nur beim Erwerb einer Lizenz für die Vollversion der App verfügbar sind. Außerdem können Sie Features wie Banner oder Wasserzeichen aktivieren, die nur in der Testversion angezeigt werden, bevor ein Kunde Ihre App kauft.
 
@@ -106,7 +104,8 @@ Wenn dieser Pfad und diese Datei nicht vorhanden sind, müssen Sie diese währen
 
 Nachdem Sie die App mit dem simulierten Lizenzserver getestet haben, und bevor Sie die App zur Zertifizierung an einen Store übermitteln wie im nächsten Codebeispiel gezeigt, müssen Sie **CurrentAppSimulator** durch **CurrentApp** ersetzen.
 
->**Wichtig**&nbsp;&nbsp;Ihre App muss das **CurrentApp**-Objekt verwenden, wenn Sie sie an einen Store übermitteln, da ansonsten ein Zertifizierungsfehler auftritt.
+> [!IMPORTANT]
+> Ihre App muss das **CurrentApp**-Objekt verwenden, wenn Sie sie an einen Store übermitteln, da ansonsten ein Zertifizierungsfehler auftritt.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#InitializeLicenseRetailWithEvent)]
@@ -126,4 +125,3 @@ Weitere Informationen zum Beschreiben Ihrer App finden Sie unter [Erstellen von 
  
 
  
-

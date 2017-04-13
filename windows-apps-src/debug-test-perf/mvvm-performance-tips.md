@@ -8,22 +8,20 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 5833422a3074ddfa581011d91c8364bddb3c3088
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 2c803083a9f7a279a6cfb70087c5cd1f0c3def1e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="mvvm-and-language-performance-tips"></a>Tipps zu MVVM und Sprachleistung
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 In diesem Thema werden einige Leistungsaspekte in Bezug auf die Wahl von Softwaredesignmustern und Programmiersprachen erläutert.
 
-## <a name="the-model-view-viewmodel-mvvm-pattern"></a>Das Model-View-ViewModel (MVVM)-Muster
+## <a name="the-model-view-viewmodel-mvvm-pattern"></a>Das Model-View-ViewModel(MVVM)-Muster
 
-Das Model-View-ViewModel (MVVM)-Muster kommt in zahlreichen XAML-Apps zur Anwendung. (MVVM ähnelt sehr stark dem von Fowler beschriebenen Model-View-Presenter-Muster, ist aber speziell auf XAML zugeschnitten.) Das Problem mit dem MVVM-Muster: Es kann zu Apps mit zu vielen Ebenen und Zuordnungen führen. Vorteile von MVVM:
+Das Model-View-ViewModel(MVVM)-Muster kommt in zahlreichen XAML-Apps zur Anwendung. (MVVM ähnelt sehr stark dem von Fowler beschriebenen Model-View-Presenter-Muster, ist aber speziell auf XAML zugeschnitten.) Das Problem mit dem MVVM-Muster: Es kann zu Apps mit zu vielen Ebenen und Zuordnungen führen. Vorteile von MVVM:
 
 -   **Aufgabenteilung**. Es ist immer hilfreich, ein Problem in kleinere Teile zu zerlegen. Mit einem Muster wie MVVM oder MVC können Sie eine App (und sogar ein einzelnes Steuerelement) in die eigentliche Ansicht, ein logisches Modell der Ansicht (Ansichtsmodell) und die von der Ansicht unabhängige App-Logik (das Modell) unterteilen. Dabei hat es sich bewährt, dass sich die Designer mit einem Tool um die Ansicht, die Entwickler mit einem anderen Tool um das Modell und die Designintegratoren mit beiden Tools um Ansicht und Modell kümmern.
 -   **Unittests**. Für das Ansichtsmodell (und letztlich auch für das Modell) können Modultests durchgeführt werden, die von der Ansicht und somit von Fenstererstellung, Eingaben usw. unabhängig sind. Dank einer klein gehaltenen Ansicht können Sie einen großen Teil Ihrer App testen, ohne jemals ein Fenster erstellen zu müssen.
@@ -45,7 +43,6 @@ Es gibt mehrere konkrete Definitionen des MVVM-Musters sowie Drittanbieter-Frame
  
 
  
-
 
 
 

@@ -10,14 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c7275475e245d8fd68eb2979c16d0afe6ddc4a4c
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: d8240af0a610541cea5352ed841a08eb7093db96
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="accessibility"></a>Eingabehilfen  
 
 
@@ -31,11 +28,11 @@ Bei der Barrierefreiheit geht es darum, eine Anwendung so zu gestalten, dass sie
 
 | Artikel | Beschreibung |
 |---------|-------------|
-| [Übersicht über die Barrierefreiheit](accessibility-overview.md) | Dieser Artikel bietet eine Übersicht über die Konzepte und Technologien in Barrierefreiheitsszenarien für UWP-Apps. |
+| [Übersicht über die Barrierefreiheit](accessibility-overview.md) | Dieser Artikel bietet eine Übersicht über die Konzepte und Technologien im Zusammenhang mit Barrierefreiheitsszenarien für UWP-Apps. |
 | [Entwerfen von barrierefreier Software](designing-inclusive-software.md) | Erfahren Sie mehr über das Entwerfen inklusiver UWP-Apps für Windows 10.  Entwerfen und erstellen Sie inklusive Software unter Berücksichtigung der Barrierefreiheit. |
 | [Entwickeln von inklusiven Windows-Apps](developing-inclusive-windows-apps.md) | Dieser Artikel dient als Orientierungshilfe bei der Entwicklung barrierefreier UWP-Apps. |
 | [Barrierefreiheitstests](accessibility-testing.md) | Testverfahren, mit denen Sie sicherstellen können, dass Ihre UWP-App barrierefrei ist. |
-| [Barrierefreiheit im Store](accessibility-in-the-store.md) | Hier werden die Anforderungen beschrieben, die Sie erfüllen müssen, wenn Sie Ihre UWP-App im Windows Store als barrierefrei deklarieren möchten. |
+| [Barrierefreiheit im Store](accessibility-in-the-store.md) | Hier werden die Anforderungen beschrieben, die Sie erfüllen müssen, wenn Sie Ihre UWP-App im WindowsStore als barrierefrei deklarieren möchten. |
 | [Prüfliste für die Barrierefreiheit](accessibility-checklist.md) | Enthält eine Prüfliste, mit der Sie sicherstellen können, dass Ihre UWP-App barrierefrei ist. |
 | [Verfügbarmachen von grundlegenden Informationen zur Barrierefreiheit](basic-accessibility-information.md) | Grundlegende Informationen zur Barrierefreiheit werden häufig in die Kategorien Name, Rolle und Wert unterteilt. In diesem Thema wird der Code beschrieben, mit dem Ihre App die grundlegenden Informationen verfügbar machen kann, die für Hilfstechnologien erforderlich sind. |
 | [Barrierefreiheit der Tastaturnavigation](keyboard-accessibility.md) | Wenn Ihre App keine barrierefreie Bedienung mit der Tastatur ermöglicht, können Benutzer, die blind oder in ihrer Beweglichkeit eingeschränkt sind, Schwierigkeiten bei der Verwendung Ihrer App haben oder Ihre App möglicherweise überhaupt nicht nutzen. |
@@ -45,7 +42,6 @@ Bei der Barrierefreiheit geht es darum, eine Anwendung so zu gestalten, dass sie
 | [Benutzerdefinierte Automatisierungspeers](custom-automation-peers.md) | Beschreibt das Konzept von Automatisierungspeers für die Benutzeroberflächenautomatisierung und erläutert, wie Sie Unterstützung zur Benutzeroberflächenautomatisierung für eigene benutzerdefinierte UI-Klassen bereitstellen können. |
 | [Steuerelementmuster und Schnittstellen](control-patterns-and-interfaces.md) | Enthält eine Liste der Steuerelementmuster für die Microsoft-Benutzeroberflächenautomatisierung samt der Klassen, die Clients für den Zugriff verwenden, und der Schnittstellen, die Anbieter zur Implementierung verwenden. |
 
-<span id="related_topics"/>
 ## <a name="related-topics"></a>Verwandte Themen  
 * [**Windows.UI.Xaml.Automation**](https://msdn.microsoft.com/library/windows/apps/BR209179) 
-
+* [Erste Schritte mit der Sprachausgabe](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started)

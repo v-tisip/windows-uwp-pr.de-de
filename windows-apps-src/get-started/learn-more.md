@@ -9,32 +9,29 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 0bf7959be6278577cc8fe93011591e4523bee623
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 0c21257db05a058c2d92f32218b73d920cc7156c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 # <a name="whats-next"></a>Nächste Schritte
 
-Wo fangen Sie an, wenn Sie eine App schreiben und im Windows Store veröffentlichen möchten? Wenn die UWP-Plattform für Sie völlig neu ist, schauen Sie sich einige der <a href="https://channel9.msdn.com/">Channel 9</a>-Videos an, und führen Sie einige der <a href="https://mva.microsoft.com">Microsoft Virtual Academy</a>-Kurse durch. Wenn Sie bereits mit XAML und C# vertraut sind, können Sie beginnen, indem Sie die folgenden Themen lesen oder direkt [einige Beispiele herunterladen](https://msdn.microsoft.com/windows/uwp/get-started/get-uwp-app-samples).
+Wo fangen Sie an, wenn Sie eine App schreiben und im Windows Store veröffentlichen möchten? Wenn die UWP-Plattform für Sie völlig neu ist, schauen Sie sich einige der <a href="https://channel9.msdn.com/">Channel 9</a>-Videos an, und führen Sie einige der <a href="https://mva.microsoft.com">Microsoft Virtual Academy</a> und [LinkedIn Learning](https://www.linkedin.com/topic/windows-programming)-Kurse durch. Wenn Sie bereits mit der Windows-Entwicklung vertraut sind, können Sie beginnen, indem Sie die folgenden Themen lesen oder direkt [einige Beispiele herunterladen](https://msdn.microsoft.com/windows/uwp/get-started/get-uwp-app-samples).
 
-Es sind zahlreiche Tools und Frameworks verfügbar, die Sie beim Schreiben von Apps unterstützen. Viele von diesen unterstützen die plattformübergreifende Entwicklung. Wenn Sie beispielsweise 2D-Spiele schreiben möchten, finden Sie Informationen unter <a href="http://www.monogame.net">MonoGame</a>, oder sehen Sie sich die zahlreichen Frameworks unter [JavaScript-/HTML-Frameworks](https://html5gameengine.com/) an. Informationen zu 3D-Spielen finden Sie unter <a href="http://www.unity3d.com">Unity</a> und <a href="http://www.xamarin.com">Xamarin</a> an, wenn Ihr Fokus auf mobilen Geräten liegt.
+Es sind zahlreiche Tools und Frameworks verfügbar, die Sie beim Schreiben von Apps unterstützen. Viele von diesen unterstützen die plattformübergreifende Entwicklung. Wenn Sie beispielsweise 2D-Spiele schreiben möchten, finden Sie Informationen unter <a href="http://www.monogame.net">MonoGame</a>, oder sehen Sie sich die zahlreichen Frameworks unter [JavaScript-/HTML-Frameworks](https://html5gameengine.com/) an. Informationen zu 3D-Spielen finden Sie unter <a href="http://www.unity3d.com">Unity</a> und <a href="http://www.xamarin.com">Xamarin</a>, wenn Ihr Fokus auf mobilen Geräten liegt.
 
-Wenn Sie gerade die ersten Schritte unternehmen, empfehlen wir Ihnen, sich die UWP-Themen ansehen, um ein Gefühl für die Plattform zu erhalten. Anschließend können Sie untersuchen, wie Sie Ihre Benutzeroberfläche erstellen können, indem Sie XAML-Steuerelemente verwenden und anpassen. Für das Layout Ihrer App werden Sie XAML verwenden ([ein Lernprogramm, das Sie in XAML einführt, finden Sie hier](../layout/grid-tutorial.md). Die Hauptstärke von XAML besteht jedoch in der Verwendung der *Datenbindung*, durch die Steuerelemente mit den Informationen verbunden werden, die Ihre App anzeigen möchte. Wenn die Windows-Plattform für Sie neu ist, ist es wichtig, dass Sie dieses Konzept verstehen. 
+Wenn Sie etwas anderes als ein Spiel programmieren möchten, empfehlen wir Ihnen, sich die UWP-Themen anzusehen, um ein Gefühl für die Plattform zu erhalten. Anschließend können Sie untersuchen, wie Sie Ihre Benutzeroberfläche erstellen können, indem Sie XAML-Steuerelemente verwenden und anpassen. Für das Design Ihrer App werden Sie XAML verwenden ([ein Lernprogramm, das Sie in XAML einführt, finden Sie hier](../layout/grid-tutorial.md)). Die Hauptstärke von XAML besteht jedoch in der Verwendung der *Datenbindung*, durch die Steuerelemente mit den Informationen verbunden werden, die Ihre App anzeigen möchte. Wenn die Windows-Plattform für Sie neu ist, ist es wichtig, dass Sie dieses Konzept verstehen. 
 <table class="wdg-noborder">
 <tr>
- <td width=60><img src="images/icon3.png" width=64></td>
+ <td width=60><img src="images/icon3.png" alt="Bullet point" width=64></td>
     <td><h2>UWP und der Lebenszyklus von UWP-Apps</h2><p>Wie wird eine App gestartet, und was passiert, wenn Sie eine weitere App starten? Hier finden Sie Informationen hierzu.</p> <ul>
     <li><a href="https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide">Anleitung für Apps für die Universelle Windows-Plattform (UWP)</a></li>
     <li><a href="https://msdn.microsoft.com/windows/uwp/launch-resume/app-lifecycle">Lebenszyklus von UWP-Apps</a></li>
-    <li><a href="https://developer.microsoft.com/windows/windows-10-for-developers">Die Highlights in Windows 10</a></ul></td>  
+    <li><a href="https://developer.microsoft.com/windows/windows-10-for-developers">Die Highlights in Windows10</a></ul></td>  
 </tr>
 <tr>
- <td width=60><img src="images/icon7.png" width=64></td>
+ <td width=60><img src="images/icon7.png" alt="Bullet point" width=64></td>
     <td><h2>Benutzerumgebung (UX) und Benutzeroberfläche (UI)</h2><p>Welche Steuerelemente sind verfügbar, und wie können sie verwendet werden? In diesen Themen wird beschrieben, wie Steuerelemente und Code miteinander funktionieren und Sie diese an das Erscheinungsbild Ihrer App anpassen können.</p> <ul>
     <li><a href="https://developer.microsoft.com/windows/design">Design und Benutzeroberfläche (UI)</a></li>
     <li><a href="https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml">Definieren von Seitenlayouts mit XAML</a></li>
@@ -46,7 +43,7 @@ Wenn Sie gerade die ersten Schritte unternehmen, empfehlen wir Ihnen, sich die U
     </ul></td>  
 </tr>
 <tr>
- <td width=60><img src="images/icon6.png" width=64></td>
+ <td width=60><img src="images/icon6.png" alt="Bullet point" width=64></td>
     <td><h2>Daten und Dienste</h2><p>Erfahren Sie mehr über die Datenbindung, mit der Ihr Code Listen und Raster automatisch ausfüllen kann. Erfahren Sie, wie Sie Verknüpfungen mit externen Ressourcen herstellen können, um Daten für Ihre Apps abrufen zu können.</p> <ul>
     <li><a href="https://msdn.microsoft.com/windows/uwp/data-binding/index">Datenbindung</a></li>
     <li><a href="https://msdn.microsoft.com/windows/uwp/controls-and-patterns/listview-and-gridview">ListView-Steuerelemente, GridView-Steuerelemente und Datenbindung</a></li>
@@ -54,14 +51,14 @@ Wenn Sie gerade die ersten Schritte unternehmen, empfehlen wir Ihnen, sich die U
     </ul></td>  
 </tr>
 <tr>
- <td width=60><img src="images/icon4.png" width=64></td>
+ <td width=60><img src="images/icon4.png" alt="Bullet point" width=64></td>
     <td><h2>Publishing</h2><p>Teilen Sie Ihre Arbeit mit der ganzen Welt, und verdienen Sie Geld. Wir erklären Ihnen, wie Sie Ihre App in den Store hochladen können.</p> <ul>
     <li><a href="https://msdn.microsoft.com/windows/uwp/publish/index">Veröffentlichen von Windows-Apps</a></li>
     <li><a href="https://msdn.microsoft.com/windows/uwp/packaging/index">Verpacken von Apps</a></li>
     </ul></td>  
 </tr>
 <tr>
- <td width=60><img src="images/icon2.png" width=64></td>
+ <td width=60><img src="images/icon2.png" alt="Bullet point" width=64></td>
     <td><h2>Weitere Ressourcen</h2><p>Beispiele, Lernprogramme, Videos, weitere Tools und SDKs. Führen Sie Ihre Apps auf die nächste Ebene.</p>
     <ul>
     <li><a href="https://developer.microsoft.com/windows/develop">Anleitungen</a></li>
@@ -70,7 +67,7 @@ Wenn Sie gerade die ersten Schritte unternehmen, empfehlen wir Ihnen, sich die U
     <li><a href="https://msdn.microsoft.com/library/windows/apps/bg124285.aspx">API-Referenz</a></li>
      <li><a href="https://msdn.microsoft.com/windows/uwp/xbox-apps/index">Schreiben von Apps für Xbox One</a></li>
      <li><a href="https://www.microsoft.com/microsoft-hololens/developers">Entwickeln für HoloLens</a></li>
-     <li><a href="https://msdn.microsoft.com/windows/uwp/porting/index">Portieren von Apps auf Windows 10</a></li>
+     <li><a href="https://msdn.microsoft.com/windows/uwp/porting/index">Portieren von Apps auf Windows10</a></li>
       <li><a href="https://msdn.microsoft.com/windows/uwp/enterprise/index">Schreiben von Apps für Unternehmen</a></li>
       <li><a href="https://blogs.windows.com/buildingapps/2016/08/17/introducing-the-uwp-community-toolkit/#D1IfVxCZMQGZqlc7.97">UWP Community Toolkit</a></li>
     </ul>
@@ -95,12 +92,10 @@ Im [Windows-Entwicklerblog](https://blogs.windows.com/buildingapps) werden regel
 
 ## <a name="finding-help-in-the-dev-center"></a>Unterstützung im Dev Center
 
-Das [Microsoft Dev Center](http://developer.microsoft.com) enthält zahlreiche Dokumentationen für viele verschiedene Tools, Frameworks und Plattformen. Bei der Suche nach Themen und Beispielen sollten Sie darauf achten, UWP-spezifische Inhalte zu lesen. Wie können Sie sicher sein, dass Sie die richtigen Inhalte lesen?
-Die URLs von Themen mit konzeptionellen Inhalten, d. h. anderen als API-Referenzinhalte, enthalten „UWP“. Die Pfade von API-Inhalten enthalten Windows-Runtime APIs. 
+Die [docs.microsoft.com](http://docs.microsoft.com)-Website enthält zahlreiche Dokumentationen für viele verschiedene Tools, Frameworks und Plattformen. Bei der Suche nach Themen und Beispielen sollten Sie darauf achten, UWP-spezifische Inhalte zu lesen. Der UWP-Verweis beginnt im [Windows Dev Center](https://developer.microsoft.com/windows/apps), und den benötigten API-Verweis finden Sie unter [Entwickeln von UWP-Apps](https://docs.microsoft.com/uwp/api/).
+Beim Lesen der spezifischen Inhalte für UWP enthält der URL-Pfad **uwp**. Daher wird der Pfad oben auf der Seite wie folgt angezeigt:
 
-![Ein Beispiel für ein UWP-Konzeptthema](images/devcenter-topic2.png)
-
-![Ein Beispiel für ein UWP-Referenzthema](images/devcenter-topic1.png)
+![Suchen von UWP-Dokumenten](images/UWP-docs.png)
 
 Wenn Sie eine Suchmaschine verwenden, führt Sie das Anhängen von „Windows-App-Entwicklung“ an die Suchzeichenfolge in den meisten Fällen zu UWP-Inhalten.
 
@@ -169,7 +164,6 @@ Dies ist eine Liste der wichtigsten Abschnitte des Dev Center.
 <td align="left"><a href="https://www.microsoftstore.com/store/msusa/en_US/cat/Developer/categoryID.69418300?icid=en_US_Store_UH_BusEd_Dev">Hardware für Entwickler aus dem Microsoft Store.</a></td>
 </tr>
 </table>
-
 
 
 

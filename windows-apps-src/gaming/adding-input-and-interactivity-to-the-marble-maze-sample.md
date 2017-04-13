@@ -8,18 +8,15 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Spiele, Eingabe, Beispiel"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+keywords: Windows10, UWP, Spiele, Eingabe, Beispiel
 ms.openlocfilehash: dc667be326950151b08bbaded6d4e9a0b109523b
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="adding-input-and-interactivity-to-the-marble-maze-sample"></a>Hinzufügen von Eingaben und Interaktivität zum Marble Maze-Beispiel
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 UWP-Spiele können auf den verschiedensten Geräten ausgeführt werden, beispielsweise auf Desktopcomputern, Laptops und Tablets. Für ein Gerät sind viele verschiedene Eingabe- und Steuerungsmechanismen möglich. Unterstützen Sie mehrere Eingabegeräte, damit die Kunden Ihr Spiel ganz nach ihren persönlichen Vorlieben und Fähigkeiten spielen können. In diesem Dokument werden die wichtigsten Methoden beschrieben, die Sie berücksichtigen sollten, wenn Sie mit Eingabegeräten arbeiten. Außerdem erfahren Sie, wie diese Methoden in Marble Maze angewendet werden.
@@ -31,15 +28,15 @@ Hier sind einige der wichtigsten in diesem Dokument erörterten Punkte für das 
 
 -   Unterstützen Sie nach Möglichkeit mehrere Eingabegeräte, damit die Kunden Ihr Spiel ganz nach ihren persönlichen Vorlieben und Fähigkeiten spielen können. Die Verwendung eines Gamecontrollers und Sensors ist zwar optional, wird aber dringend empfohlen, um die Benutzerfreundlichkeit für die Spieler zu erhöhen. Die API für Gamecontroller und Sensoren soll Ihnen die Integration dieser Eingabegeräte erleichtern.
 -   Zum Initialisieren der Toucheingabe müssen Sie sich für Windows-Ereignisse registrieren, beispielsweise für das Aktivieren, Freigeben und Verschieben des Zeigers. Zum Initialisieren des Beschleunigungsmessers erstellen Sie ein [**Windows::Devices::Sensors::Accelerometer**](https://msdn.microsoft.com/library/windows/apps/br225687)-Objekt, wenn Sie die Anwendung initialisieren. Der Xbox 360-Controller muss nicht initialisiert werden.
--   Überlegen Sie bei Spielen für einen Spieler, ob Sie die Eingaben aller möglichen Xbox 360-Controller kombinieren möchten. Auf diese Weise müssen Sie nicht nachverfolgen, welche Eingabe von welchem Controller kommt.
+-   Überlegen Sie bei Spielen für einen Spieler, ob Sie die Eingaben aller möglichen Xbox360-Controller kombinieren möchten. Auf diese Weise müssen Sie nicht nachverfolgen, welche Eingabe von welchem Controller kommt.
 -   Verarbeiten Sie erst Windows-Ereignisse und dann Eingabegeräte.
--   Der Xbox 360-Controller und der Beschleunigungsmesser unterstützen Abrufe. Das heißt, Sie können Daten abrufen, wenn Sie sie benötigen. Für die Toucheingabe sollten Sie Touchereignisse in Datenstrukturen aufzeichnen, die für Ihren Eingabeverarbeitungscode verfügbar sind.
+-   Der Xbox360-Controller und der Beschleunigungsmesser unterstützen Abrufe. Das heißt, Sie können Daten abrufen, wenn Sie sie benötigen. Für die Toucheingabe sollten Sie Touchereignisse in Datenstrukturen aufzeichnen, die für Ihren Eingabeverarbeitungscode verfügbar sind.
 -   Überlegen Sie, ob Sie Eingabewerte in ein gemeinsames Format normalisieren möchten. Auf diese Weise können Sie die Interpretation der Eingabe durch andere Komponenten des Spiels wie beispielsweise die Simulation von Physikeffekten vereinfachen und leichter Spiele schreiben, die sich für unterschiedliche Bildschirmauflösungen eignen.
 
 ## <a name="input-devices-supported-by-marble-maze"></a>Von Marble Maze unterstützte Eingabegeräte
 
 
-Marble Maze unterstützt allgemeine Xbox 360-Controllergeräte, Maus und Toucheingabe zum Auswählen von Menüelementen und Xbox 360-Controller, Maus, Toucheingabe und Beschleunigungsmesser zum Steuern des Spielverlaufs. Marble Maze ruft die Eingaben vom Controller mithilfe der XInput-API ab. Bei der Toucheingabe können Anwendungen Eingaben mit der Fingerspitze nachverfolgen und darauf reagieren. Ein Beschleunigungsmesser ist ein Sensor, der die Kraft misst, die entlang der X-, Y- und Z-Achsen angewendet wird. Mit der Windows-Runtime können Sie den aktuellen Zustand des Beschleunigungsmessers abrufen und Touchereignisse über den Ereignisbehandlungsmechanismus der Windows-Runtime empfangen.
+Marble Maze unterstützt allgemeine Xbox360-Controllergeräte, Maus und Toucheingabe zum Auswählen von Menüelementen und Xbox360-Controller, Maus, Toucheingabe und Beschleunigungsmesser zum Steuern des Spielverlaufs. Marble Maze ruft die Eingaben vom Controller mithilfe der XInput-API ab. Bei der Toucheingabe können Anwendungen Eingaben mit der Fingerspitze nachverfolgen und darauf reagieren. Ein Beschleunigungsmesser ist ein Sensor, der die Kraft misst, die entlang der X-, Y- und Z-Achsen angewendet wird. Mit der Windows-Runtime können Sie den aktuellen Zustand des Beschleunigungsmessers abrufen und Touchereignisse über den Ereignisbehandlungsmechanismus der Windows-Runtime empfangen.
 
 > **Hinweis**  In diesem Dokument wird der Begriff Toucheingabe für Touch- und Mauseingabe sowie Zeigereingabe verwendet. Damit sind alle Geräte gemeint, die Zeigerereignisse verwenden. Da bei der Touch- und Mauseingabe Standardzeigerereignisse verwendet werden, können Sie jedes der Geräte verwenden, um Menüelemente auszuwählen und den Spielverlauf zu steuern.
 
@@ -52,7 +49,7 @@ Marble Maze unterstützt allgemeine Xbox 360-Controllergeräte, Maus und Touche
 ## <a name="initializing-input-devices"></a>Initialisieren von Eingabegeräten
 
 
-Der Xbox 360-Controller muss nicht initialisiert werden. Zum Initialisieren der Toucheingabe müssen Sie sich für Windows-Ereignisse registrieren, beispielsweise für das Aktivieren (z. B. wenn der Benutzer die Maustaste drückt oder den Bildschirm berührt), Freigeben und Verschieben des Zeigers. Zum Initialisieren des Beschleunigungsmessers müssen Sie ein [**Windows::Devices::Sensors::Accelerometer**](https://msdn.microsoft.com/library/windows/apps/br225687)-Objekt erstellen, wenn Sie die Anwendung initialisieren.
+Der Xbox360-Controller muss nicht initialisiert werden. Zum Initialisieren der Toucheingabe müssen Sie sich für Windows-Ereignisse registrieren, beispielsweise für das Aktivieren (z. B. wenn der Benutzer die Maustaste drückt oder den Bildschirm berührt), Freigeben und Verschieben des Zeigers. Zum Initialisieren des Beschleunigungsmessers müssen Sie ein [**Windows::Devices::Sensors::Accelerometer**](https://msdn.microsoft.com/library/windows/apps/br225687)-Objekt erstellen, wenn Sie die Anwendung initialisieren.
 
 Im folgenden Beispiel wird dargestellt, wie der **DirectXPage**-Konstruktor für die Zeigerereignisse [**Windows::UI::Core::CoreIndependentInputSource::PointerPressed**](https://msdn.microsoft.com/library/windows/apps/dn298471), [**Windows::UI::Core::CoreIndependentInputSource::PointerReleased**](https://msdn.microsoft.com/library/windows/apps/dn298472) und [**Windows::UI::Core::CoreIndependentInputSource::PointerMoved**](https://msdn.microsoft.com/library/windows/apps/dn298469) des [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834)-Elements registriert wird. Diese Ereignisse werden bei der Initialisierung der App und vor der Spielschleife registriert.
 
@@ -123,7 +120,7 @@ static bool wasButtonDown[XUSER_MAX_COUNT][buttonCount] = { false, };
 bool isButtonDown[XUSER_MAX_COUNT][buttonCount] = { false, };
 ```
 
-Sie können an ein Windows-Gerät bis zu vier Xbox 360-Controller anschließen. Damit nicht ermittelt werden muss, welcher Controller aktiv ist, kombiniert die **MarbleMaze::Update**-Methode die Eingaben aller Controller.
+Sie können an ein Windows-Gerät bis zu vier Xbox360-Controller anschließen. Damit nicht ermittelt werden muss, welcher Controller aktiv ist, kombiniert die **MarbleMaze::Update**-Methode die Eingaben aller Controller.
 
 ```cpp
 bool combinedButtonPressed[buttonCount] = { false, };
@@ -312,7 +309,7 @@ float combinedTiltX = 0.0f;
 float combinedTiltY = 0.0f;
 ```
 
-Die Eingabemechanismen der einzelnen Eingabegeräte können dabei unterschiedlich sein. Beispielsweise werden Zeigereingaben mit dem Ereignisbehandlungsmodell der Windows-Runtime behandelt. Die Eingabedaten des Xbox 360-Controllers dagegen rufen Sie bei Bedarf ab. Am besten halten Sie sich immer an die Eingabemechanismen, die für ein bestimmtes Gerät vorgeschrieben sind. In diesem Abschnitt wird beschrieben, wie Marble Maze die Eingaben von den einzelnen Geräten liest, die kombinierten Eingabewerte aktualisiert und sie verwendet, um den Spielzustand zu aktualisieren.
+Die Eingabemechanismen der einzelnen Eingabegeräte können dabei unterschiedlich sein. Beispielsweise werden Zeigereingaben mit dem Ereignisbehandlungsmodell der Windows-Runtime behandelt. Die Eingabedaten des Xbox360-Controllers dagegen rufen Sie bei Bedarf ab. Am besten halten Sie sich immer an die Eingabemechanismen, die für ein bestimmtes Gerät vorgeschrieben sind. In diesem Abschnitt wird beschrieben, wie Marble Maze die Eingaben von den einzelnen Geräten liest, die kombinierten Eingabewerte aktualisiert und sie verwendet, um den Spielzustand zu aktualisieren.
 
 ###  <a name="processing-pointer-input"></a>Verarbeiten von Zeigereingaben
 
@@ -422,7 +419,7 @@ if (m_accelerometer != nullptr)
 
 Da Sie nicht sicher sein können, dass der Computer des Benutzers über einen Beschleunigungsmesser verfügt, müssen Sie immer sicherstellen, dass Sie ein gültiges Beschleunigungsmesserobjekt haben, und erst dann die Werte vom Beschleunigungsmesser abrufen.
 
-### <a name="processing-xbox-360-controller-input"></a>Verarbeiten von Xbox 360-Controllereingaben
+### <a name="processing-xbox-360-controller-input"></a>Verarbeiten von Xbox360-Controllereingaben
 
 Das folgende Beispiel zeigt, wie die **MarbleMaze::Update**-Methode Werte vom Xbox 360-Controller abliest und die kombinierten Eingabewerte aktualisiert. Die **MarbleMaze::Update**-Methode verwendet eine „for“-Schleife, damit Eingaben von einem beliebigen angeschlossenen Controller empfangen werden können. Die **XInputGetState**-Methode füllt ein „XINPUT\_STATE“-Objekt mit dem aktuellen Zustand des Controllers. Die Werte **combinedTiltX** und **combinedTiltY** werden gemäß den X- und Y-Werten des linken Ministicks aktualisiert.
 
@@ -527,7 +524,6 @@ Lesen Sie [Hinzufügen von Audio zum Marble Maze-Beispiel](adding-audio-to-the-m
  
 
  
-
 
 
 

@@ -2,21 +2,17 @@
 title: "Auswählen einer Ressource"
 description: Eine Ressource ist eine von der 3D-Pipeline verwendete Datensammlung.
 ms.assetid: 6BAD6287-2930-42F8-BF51-69A379D1D2C3
-keywords:
-- "Auswählen einer Ressource"
+keywords: "Auswählen einer Ressource"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 73f2d2f6b6a925a425c94bcf1b5f957a82569236
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1722558dfbb9620d4d265a2a479109366780a514
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="choosing-a-resource"></a>Auswählen einer Ressource
 
 
@@ -44,7 +40,7 @@ Diese Tabelle enthält die Ressourcentypen, die an die einzelnen Pipelinephasen 
 ## <a name="span-ididentifyusagespanspan-ididentifyusagespanspan-ididentifyusagespanidentify-how-each-resource-will-be-used"></a><span id="Identify_Usage"></span><span id="identify_usage"></span><span id="IDENTIFY_USAGE"></span>Identifizieren der Verwendungsweise einer Ressource
 
 
-Nachdem Sie die Pipelinephasen ausgewählt haben, die Ihre Anwendung verwendet (und somit die Ressourcen, die für jede Phase erforderlich sind), ist der nächste Schritt die Verwendungsweise jeder Ressource, d. h. ob auf die Ressource von einer CPU oder GPU zugegriffen werden kann.
+Nachdem Sie die Pipelinephasen ausgewählt haben, die Ihre Anwendung verwendet (und somit die Ressourcen, die für jede Phase erforderlich sind), ist der nächste Schritt die Verwendungsweise jeder Ressource, d.h. ob auf die Ressource von einer CPU oder GPU zugegriffen werden kann.
 
 Die Hardware, auf der die App ausgeführt wird, muss mindestens eine CPU und eine GPU enthalten. Berücksichtigen Sie bei der Auswahl des Auslastungswerts, welcher Prozessortyp von der Ressource lesen oder darauf schreiben muss. Wählen Sie eine der folgenden Optionen aus.
 
@@ -85,7 +81,7 @@ Eine Ressource kann an mehr als eine Pipelinephase gebundenen sein, solange die 
 
 Überlegen Sie beim Binden einer Ressource, wie die GPU und CPU auf die Ressource zugreifen werden. Ressourcen, die einem einzigen Zweck dienen (verwenden Sie nicht mehrere Kennzeichen für die Nutzung, Bindung und den CPU-Zugriff) bieten sehr wahrscheinlich eine bessere Leistung.
 
-Betrachten Sie z. B. den Fall, in dem ein Renderziel mehrmals als Textur verwendet wird. Es ist unter Umständen schneller, zwei Ressourcen zu haben: ein Renderziel und eine Textur, die als Shaderressource verwendet wird. Jede Ressource würde nur ein Bindungskennzeichen mit dem Hinweis „Renderziel” oder „Shaderressource” verwenden. Die Daten würden von der Renderziel-Textur auf die Shader-Textur kopiert.
+Betrachten Sie z.B. den Fall, in dem ein Renderziel mehrmals als Textur verwendet wird. Es ist unter Umständen schneller, zwei Ressourcen zu haben: ein Renderziel und eine Textur, die als Shaderressource verwendet wird. Jede Ressource würde nur ein Bindungskennzeichen mit dem Hinweis „Renderziel” oder „Shaderressource” verwenden. Die Daten würden von der Renderziel-Textur auf die Shader-Textur kopiert.
 
 Das in diesem Beispiel dargestellte Verfahren kann die Leistung durch ein Isolieren des Renderziel-Schreibvorgangs vom Shader-Textur-Lesevorgang verbessern. Sie können dies nur durch das Implementieren beider Methoden und dem Messen des Leistungsunterschieds in Ihrer bestimmten Anwendung herausfinden.
 
@@ -97,7 +93,6 @@ Das in diesem Beispiel dargestellte Verfahren kann die Leistung durch ein Isolie
  
 
  
-
 
 
 

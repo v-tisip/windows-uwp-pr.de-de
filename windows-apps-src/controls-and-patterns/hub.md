@@ -10,12 +10,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 32a558866457c4a9e9a359f12d43af317fc0f84a
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: df2ed32801cbf1377e72b10aac0049575528408c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="hub-controlpattern"></a>Hub-Steuerelement/-Muster
 
@@ -127,4 +125,3 @@ Auf mobilen Geräten ist jeweils ein Hub-Abschnitt sichtbar.
 - [Navigationsgrundlagen](../layout/navigation-basics.md)
 - [Verwenden von Hubs](https://msdn.microsoft.com/library/windows/apps/xaml/dn308518)
 - [Beispiel für ein XAML-Hub-Steuerelement](http://go.microsoft.com/fwlink/p/?LinkID=310072)
-

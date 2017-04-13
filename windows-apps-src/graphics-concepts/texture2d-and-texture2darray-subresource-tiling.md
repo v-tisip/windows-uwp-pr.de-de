@@ -2,21 +2,17 @@
 title: Unterteilung von Texture2D- und Texture2DArray-Unterressourcen
 description: Diese Tabellen zeigen die Unterteilung von Texture2D- und Texture2DArray-Unterressourcen.
 ms.assetid: 2DC14DFC-5299-44D9-895F-5A223D3FD530
-keywords:
-- Unterteilung von Texture2D- und Texture2DArray-Unterressourcen
+keywords: Unterteilung von Texture2D- und Texture2DArray-Unterressourcen
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 8f6ca928fe9c4d93663c337ae57d3894995f35d2
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 4e4c4cb0293f2d595c7e009ddf1b86d17efe9e37
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="texture2d-and-texture2darray-subresource-tiling"></a>Unterteilung von Texture2D- und Texture2DArray-Unterressourcen
 
 
@@ -27,7 +23,7 @@ Diese Tabellen zeigen die Unterteilung von [**Texture2D**](https://msdn.microsof
 
 Die folgende Tabelle zeigt die Unterteilung von [**Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff471525)- und [**Texture2DArray**](https://msdn.microsoft.com/library/windows/desktop/ff471526)-Unterressourcen mit Multisampling (1).
 
-| Bits/Pixel (1 Beispiel/Pixel) | Kachelabmessungen (Pixel, B x H) |
+| Bits/Pixel (1Beispiel/Pixel) | Kachelabmessungen (Pixel, B x H) |
 |-----------------------------|-------------------------------|
 | 8                           | 256 x 256                       |
 | 16                          | 256 x 128                       |
@@ -46,7 +42,7 @@ Format-Bitanzahlen, die bei Streamingressourcen nicht unterstützt werden, sind 
 
 Die folgende Tabelle zeigt die Unterteilung von [**Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff471525)- und [**Texture2DArray**](https://msdn.microsoft.com/library/windows/desktop/ff471526)-Unterressourcen mit verschiedenen Multisampling-Anzahlen.
 
-| Bits/Pixel (1 Beispiel/Pixel) | Kachelabmessungen (Pixel, B x H) |
+| Bits/Pixel (1Beispiel/Pixel) | Kachelabmessungen (Pixel, B x H) |
 |-----------------------------|-------------------------------|
 | 1                           | 1 x 1                           |
 | 2                           | 2 x 1                           |
@@ -58,7 +54,7 @@ Die folgende Tabelle zeigt die Unterteilung von [**Texture2D**](https://msdn.mic
 
 Es sind ausschließlich Beispielanzahlen von 1 und 4 erforderlich (und zulässig), um mit Streamingressourcen unterstützt zu werden. Anzahlen von 2, 8 und 16 werden derzeit von Streamingressourcen nicht unterstützt, auch wenn sie angezeigt werden.
 
-In Implementierungen kann der Multiple Sample Antialiasing-Modus (MSAA) mit 2, 8 und/oder 16 Beispielen für Nicht-Streamingressourcen unterstützt werden, auch wenn dies von der Streamingressource nicht unterstützt wird.
+In Implementierungen kann der Multiple Sample Antialiasing-Modus (MSAA) mit 2, 8 und/oder 16Beispielen für Nicht-Streamingressourcen unterstützt werden, auch wenn dies von der Streamingressource nicht unterstützt wird.
 
 128-BpP-Formate können von Streamingressourcen mit Beispielanzahlen von mehr als 1 nicht verwendet werden.
 
@@ -72,7 +68,6 @@ Die Einschränkungen bei der Anzahl unterstützter Beispiele und Formate gehen a
  
 
  
-
 
 
 

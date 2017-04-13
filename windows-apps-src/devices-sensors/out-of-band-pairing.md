@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: dc0bad7d8625817cfffcc84f89afeed96a07a21f
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: ef9d4c390112be66035ab2ace6b6b799ee9d99ef
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="out-of-band-pairing"></a>Out-of-Band-Kopplung
 
@@ -32,7 +30,7 @@ Mithilfe der Out-of-Band-Kopplung können Apps ohne Geräteermittlung eine Verbi
 
 **connectionKind** – die Art der Verbindung. Gültige Werte sind „Network“ und „Bluetooth“.
 
-**physicalAddress** – die MAC-Adresse des Peripheriegeräts. Bei einem Netzwerkdrucker wäre dies z. B. die MAC-Adresse, die vom Testblatt des Druckers im Format AA:BB:CC:DD:EE:FF bereitgestellt wird.
+**physicalAddress** – die MAC-Adresse des Peripheriegeräts. Bei einem Netzwerkdrucker wäre dies z.B. die MAC-Adresse, die vom Testblatt des Druckers im Format AA:BB:CC:DD:EE:FF bereitgestellt wird.
 
 **connectionString** – die Verbindungszeichenfolge des Peripheriegeräts. Bei einem Netzwerkdrucker wäre dies z. B. die auf dem Testblatt im Format 192.168.1.1:9001 ausgegebene IP-Adresse. Dieses Feld wird bei allen Bluetooth-Peripheriegeräten weggelassen.
 
@@ -94,4 +92,3 @@ string oobBlobBTPrinter =
 printer = await PosPrinter.FromIdAsync(oobBlobBTPrinter);
 
 ```
-

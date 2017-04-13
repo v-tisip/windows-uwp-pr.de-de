@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d96565479d970bca724614768361ba390ab9d668
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: f1941a73937db19394e590026a16a023d025bba2
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="data-binding-in-depth"></a>Datenbindung im Detail
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **Wichtige APIs**
@@ -37,7 +35,7 @@ Sie können die Datenbindung einfach verwenden, um nur Werte aus einer Datenquel
 -   Sie können die unidirektionale Bindung verwenden, um ein [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)-Objekt an eine Sammlung von Nachrichtenartikeln in Echtzeit nach Zeitungsteil gruppiert zu binden.
 -   Sie könnten eine bidirektionale Bindung verwenden, um ein [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683)-Objekt an den Namen eines Kunden in einem Formular zu binden.
 
-Es gibt zwei Arten von Bindungen. Diese werden in der Regel beide im Benutzeroberflächenmarkup deklariert. Sie können entweder die [{x:Bind}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204783) oder die [{Binding}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204782) verwenden. Sie können sogar eine Mischung aus den beiden in derselben App verwenden – sogar im gleichen Benutzeroberflächenelement. {x:Bind} ist neu in Windows 10 und bietet eine bessere Leistung. Alle in diesem Thema beschriebenen Details gelten für beide Arten von Bindungen, es sei denn, es wird ausdrücklich auf eine Abweichung hingewiesen.
+Es gibt zwei Arten von Bindungen. Diese werden in der Regel beide im Benutzeroberflächenmarkup deklariert. Sie können entweder die [{x:Bind}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204783) oder die [{Binding}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204782) verwenden. Sie können sogar eine Mischung aus den beiden in derselben App verwenden – sogar im gleichen Benutzeroberflächenelement. {x:Bind} ist neu in Windows10 und bietet eine bessere Leistung. Alle in diesem Thema beschriebenen Details gelten für beide Arten von Bindungen, es sei denn, es wird ausdrücklich auf eine Abweichung hingewiesen.
 
 **Beispiel-Apps zur Veranschaulichung von {x:Bind}**
 
@@ -222,7 +220,7 @@ Code zur Unterstützung von **{X:Bind}** wird während der Kompilierung in den p
 
 **Einschränkungen**
 
-**{x:Bind}** eignet sich weder für spät gebundene Szenarien, z. B. das Navigieren in der Wörterbuchstruktur eines JSON-Objekts, noch Duck-Typing, was eine schwache Form der Eingabe basierend auf lexikalischen Übereinstimmungen von Eigenschaftennamen ist („Wenn ich einen Vogel sehe, der wie eine Ente läuft, wie eine Ente schwimmt und wie eine Ente schnattert, dann nenne ich diesen Vogel eine Ente.“). Im Fall von Duck-Typing könnte eine Bindung zur Alter-Eigenschaft auch mit einem Objekt vom Typ „Person“ oder „Wein“ erfüllt werden. Verwenden Sie für diese Szenarien **{Binding}**.
+**{x:Bind}** eignet sich weder für spät gebundene Szenarien, z.B. das Navigieren in der Wörterbuchstruktur eines JSON-Objekts, noch Duck-Typing, was eine schwache Form der Eingabe basierend auf lexikalischen Übereinstimmungen von Eigenschaftennamen ist („Wenn ich einen Vogel sehe, der wie eine Ente läuft, wie eine Ente schwimmt und wie eine Ente schnattert, dann nenne ich diesen Vogel eine Ente.“). Im Fall von Duck-Typing könnte eine Bindung zur Alter-Eigenschaft auch mit einem Objekt vom Typ „Person“ oder „Wein“ erfüllt werden. Verwenden Sie für diese Szenarien **{Binding}**.
 
 ### <a name="binding-object-declared-using-binding"></a>Mit {Binding} deklariertes Bindungsobjekt
 
@@ -374,7 +372,7 @@ Um immer dann einen Standardwert anzuzeigen, wenn die Bindungsquelle nicht aufge
 Wenn Sie ein Textsteuerelement an einen Wert binden, bei dem es sich nicht um eine Zeichenfolge handelt, wird der Wert vom Datenbindungsmodul in eine Zeichenfolge konvertiert. Wenn der Wert ein Verweistyp ist, ruft das Datenbindungsmodul den Zeichenfolgenwert ab, indem [**ICustomPropertyProvider.GetStringRepresentation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.icustompropertyprovider.getstringrepresentation) oder [**IStringable.ToString**](https://msdn.microsoft.com/library/Dn302136) abgerufen wird (falls verfügbar). Andernfalls wird [**Object.ToString**](https://msdn.microsoft.com/library/windows/apps/system.object.tostring.aspx) aufgerufen. Beachten Sie jedoch, dass das Bindungsmodul alle **ToString**-Implementierungen ignoriert, bei denen die Basisklassenimplementierung ausgeblendet wird. Stattdessen sollte bei Implementierungen von Unterklassen die **ToString**-Basisklassenmethode überschrieben werden. Auf ähnliche Weise werden in systemeigenen Sprachen analog dazu scheinbar [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878) und [**IStringable**](https://msdn.microsoft.com/library/Dn302135) implementiert. Alle Aufrufe von **GetStringRepresentation** und **IStringable.ToString** werden jedoch an **Object.ToString** oder eine Überschreibung dieser Methode weitergeleitet, und niemals an eine neue **ToString**-Implementierung, bei der die Basisklassenimplementierung ausgeblendet wird.
 
 > [!NOTE]
-> Ab Windows 10, Version 1607, wird über das XAML-Framework ein integrierter Konverter für die Konvertierung eines booleschen Operanden in einen Sichtbarkeitszustand bereitgestellt. Der Konverter verknüpft **true** mit dem Enumerationswert **Visible** und **false** mit dem Wert **Collapsed**, sodass Sie eine Visibility-Eigenschaft an einen booleschen Wert binden können, ohne einen Konverter zu erstellen. Für die Verwendung des integrierten Konverters muss die SDK-Zielversion der App mindestens 14393 lauten. Die Verwendung ist nicht möglich, wenn Ihre App für frühere Versionen von Windows 10 bestimmt ist. Weitere Informationen zu Zielversionen finden Sie unter [Versionsadaptiver Code](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
+> Ab Windows10, Version1607, wird über das XAML-Framework ein integrierter Konverter für die Konvertierung eines booleschen Operanden in einen Sichtbarkeitszustand bereitgestellt. Der Konverter verknüpft **true** mit dem Enumerationswert **Visible** und **false** mit dem Wert **Collapsed**, sodass Sie eine Visibility-Eigenschaft an einen booleschen Wert binden können, ohne einen Konverter zu erstellen. Für die Verwendung des integrierten Konverters muss die SDK-Zielversion der App mindestens 14393 lauten. Die Verwendung ist nicht möglich, wenn Ihre App für frühere Versionen von Windows10 bestimmt ist. Weitere Informationen zu Zielversionen finden Sie unter [Versionsadaptiver Code](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
 
 ## <a name="function-binding-in-xbind"></a>Funktionsbindung in {x:Bind}
 
@@ -523,7 +521,7 @@ Das folgende Beispiel veranschaulicht das Muster „has-a-group“. Die Seitenkl
     </GridView>
 ```
 
-Beachten Sie, dass die [**ItemsSource**](https://msdn.microsoft.com/library/windows/apps/BR242828) [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) verwenden muss (und nicht [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)), da sie die **Source**-Eigenschaft auf eine Ressource festlegen muss. Um das oben aufgeführte Beispiel im Kontext der vollständigen App zu sehen, laden Sie die Beispiel-App [Bookstore2](http://go.microsoft.com/fwlink/?linkid=532952) herunter. Im Gegensatz zum oben angezeigten Markup verwendet [Bookstore2](http://go.microsoft.com/fwlink/?linkid=532952) nur {Binding} allein.
+Beachten Sie, dass die [**ItemsSource**](https://msdn.microsoft.com/library/windows/apps/BR242828)[{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) verwenden muss (und nicht [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)), da sie die **Source**-Eigenschaft auf eine Ressource festlegen muss. Um das oben aufgeführte Beispiel im Kontext der vollständigen App zu sehen, laden Sie die Beispiel-App [Bookstore2](http://go.microsoft.com/fwlink/?linkid=532952) herunter. Im Gegensatz zum oben angezeigten Markup verwendet [Bookstore2](http://go.microsoft.com/fwlink/?linkid=532952) nur {Binding} allein.
 
 Sie haben zwei Möglichkeiten zum Implementieren des Musters „is-a-group“. Eine Möglichkeit besteht darin, eine eigene Gruppenklasse zu erstellen. Leiten Sie die Klasse von **List&lt;T&gt;** ab (wobei *T* der Typ der Elemente ist). Beispiel: `public class Author : List<BookSku>`. Die zweite Möglichkeit besteht in der Verwendung eines [LINQ](http://msdn.microsoft.com/library/bb397926.aspx)-Ausdrucks zum dynamischen Erstellen von Gruppenobjekten (und einer Gruppenklasse) aus ähnlichen Eigenschaftswerten der **BookSku**-Elemente. Dieser Ansatz, bei dem nur eine flache Liste von Elementen beibehalten wird, die ad-hoc zusammen gruppiert werden, ist typisch für eine App, die über einen Clouddienst auf Daten zugreift. Sie können Bücher beispielsweise nach Autor oder Genre gruppieren, ohne dafür spezielle Gruppenklassen wie **Author** und **Genre** zu benötigen.
 
@@ -655,6 +653,5 @@ MyTextBox.SetBinding(TextBox.ForegroundProperty, binding)
 | Source | Nicht unterstützt | `<ListView ItemsSource="{Binding Orders, Source={StaticResource MyData}}"/>` | Bei {x:Bind}: Verwenden Sie stattdessen eine Eigenschaft oder einen statischen Pfad. | 
 | Mode | `{x:Bind Name, Mode=OneWay}` | `{Binding Name, Mode=TwoWay}` | „Mode“ kann „OneTime“, „OneWay“ oder „TwoWay“ sein. Standardwert für {x:Bind} ist „OneTime“; Standardwert für {Binding} ist „OneWay“. | 
 | UpdateSourceTrigger | Nicht unterstützt | `<Binding UpdateSourceTrigger="Default [or] PropertyChanged [or] Explicit"/>` | {x:Bind} verwendet das PropertyChanged-Verhalten in allen Fällen, außer bei „TextBox.Text“, wo es auf den Verlust des Fokus wartet, um die Quelle zu aktualisieren. | 
-
 
 

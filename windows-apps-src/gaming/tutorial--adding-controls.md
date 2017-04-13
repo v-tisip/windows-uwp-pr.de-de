@@ -1,25 +1,22 @@
 ---
 author: mtoepke
 title: "Hinzufügen von Steuerelementen"
-description: "Jetzt sehen wir uns an, wie im Beispiel-Spiel Bewegungs-/Blicksteuerelemente in einem 3D-Spiel implementiert und einfache Steuerelemente für Toucheingabe, Maus und Gamecontroller entwickelt werden."
+description: "In diesem Thema befassen wir uns damit, wie das Beispielspiel die Bewegungs-/Blicksteuerung in einem 3D-Spiel implementiert und wie einfache Steuerungen für Toucheingabe, Maus und Gamecontroller entwickelt werden."
 ms.assetid: f9666abb-151a-74b4-ae0b-ef88f1f252f8
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Spiele, Steuerelemente, Eingabe"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+keywords: Windows10, UWP, Spiele, Steuerelemente, Eingabe
 ms.openlocfilehash: d70e9ef8efffd2a78f6c49596e716770a9162b5c
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="add-controls"></a>Hinzufügen von Steuerelementen
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
 In diesem Thema befassen wir uns damit, wie das Beispielspiel die Bewegungs-/Blicksteuerung in einem 3D-Spiel implementiert und wie einfache Steuerungen für Toucheingabe, Maus und Gamecontroller entwickelt werden.
 
@@ -31,7 +28,7 @@ In diesem Thema befassen wir uns damit, wie das Beispielspiel die Bewegungs-/Bli
 ## <a name="uwp-game-apps-and-controls"></a>UWP-Spiel-Apps und Steuerungen
 
 
-Ein gutes UWP-Spiel unterstützt viele unterschiedliche Schnittstellen. Ein potenzieller Spieler kann Windows 10 auf einem Tablet ohne physische Tasten, auf einem Medien-PC mit Xbox-Controller oder auf einem topmodernen Gaming-PC mit Hochleistungsmaus und Gaming-Tastatur verwenden. Ihr Spiel sollte all diese Geräte unterstützen, sofern sein Entwurf es zulässt.
+Ein gutes UWP-Spiel unterstützt viele unterschiedliche Schnittstellen. Ein potenzieller Spieler kann Windows10 auf einem Tablet ohne physische Tasten, auf einem Medien-PC mit Xbox-Controller oder auf einem topmodernen Gaming-PC mit Hochleistungsmaus und Gaming-Tastatur verwenden. Ihr Spiel sollte all diese Geräte unterstützen, sofern sein Entwurf es zulässt.
 
 In diesem Beispiel werden alle drei Geräte unterstützt. Es ist ein einfaches First-Person-Shooterspiel, und die für dieses Genre üblichen Bewegungs-/Blicksteuerungen lassen sich für alle drei Eingabetypen mühelos implementieren.
 
@@ -357,7 +354,7 @@ void MoveLookController::OnPointerPressed(
 }
 ```
 
-Falls in einem der drei Steuerungsbereiche (Bewegungsrechteck, Schießrechteck und übriger Bildschirm) ein [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278)-Ereignis aufgetreten ist, weist die **MoveLookController**-Instanz die Zeiger-ID für den Zeiger, von dem das Ereignis ausgelöst wurde, einer spezifischen, dem jeweiligen Bildschirmbereich entsprechenden Variable zu. Bei einem Ereignis im Bewegungsrechteck wird z. B. die **m\_movePointerID**-Variable auf die Zeiger-ID festgelegt, von der das Ereignis ausgelöst wurde. Außerdem wird eine boolesche Verwendungsvariable (in diesem Beispiel: **m\_lookInUse**) festgelegt, um anzugeben, dass die Steuerung noch nicht freigegeben wurde.
+Falls in einem der drei Steuerungsbereiche (Bewegungsrechteck, Schießrechteck und übriger Bildschirm) ein [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278)-Ereignis aufgetreten ist, weist die **MoveLookController**-Instanz die Zeiger-ID für den Zeiger, von dem das Ereignis ausgelöst wurde, einer spezifischen, dem jeweiligen Bildschirmbereich entsprechenden Variable zu. Bei einem Ereignis im Bewegungsrechteck wird z.B. die **m\_movePointerID**-Variable auf die Zeiger-ID festgelegt, von der das Ereignis ausgelöst wurde. Außerdem wird eine boolesche Verwendungsvariable (in diesem Beispiel: **m\_lookInUse**) festgelegt, um anzugeben, dass die Steuerung noch nicht freigegeben wurde.
 
 Im nächsten Schritt erfahren Sie, wie das Beispielspiel das [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276)-Touchscreenereignis behandelt.
 
@@ -472,7 +469,7 @@ void MoveLookController::OnPointerReleased(
 }
 ```
 
-Wenn die ID des Zeigers, von dem das [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279)-Ereignis ausgelöst wurde, die ID des zuvor erfassten Mauszeigers ist, legt die **MoveLookController**-Instanz die Geschwindigkeit auf Null fest, da der Spieler das Bewegungsrechteck nicht mehr berührt. Würde die Geschwindigkeit nicht auf 0 festgelegt, würde der Spieler den Zeiger weiter bewegen. Wenn Sie eine Art Trägheit implementieren möchten, fügen Sie hier die Methode hinzu, mit der die Geschwindigkeit im Laufe zukünftiger **Update**-Aufrufe der Spielschleife nach und nach auf Null reduziert wird.
+Wenn die ID des Zeigers, von dem das [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279)-Ereignis ausgelöst wurde, die ID des zuvor erfassten Mauszeigers ist, legt die **MoveLookController**-Instanz die Geschwindigkeit auf Null fest, da der Spieler das Bewegungsrechteck nicht mehr berührt. Würde die Geschwindigkeit nicht auf0 festgelegt, würde der Spieler den Zeiger weiter bewegen. Wenn Sie eine Art Trägheit implementieren möchten, fügen Sie hier die Methode hinzu, mit der die Geschwindigkeit im Laufe zukünftiger **Update**-Aufrufe der Spielschleife nach und nach auf Null reduziert wird.
 
 Andernfalls setzt die **MoveLookController**-Instanz die jeweiligen Zeiger-IDs zurück, wenn das [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279)-Ereignis im Schießrechteck oder Blickbereich ausgelöst wurde.
 
@@ -804,7 +801,7 @@ void MoveLookController::UpdateGameController()
 }
 ```
 
-Befindet sich der Gamecontroller im Zustand **Active**, überprüft die Methode, ob ein Benutzer den linken Analogstick in eine bestimmte Richtung bewegt hat. Die registrierte Bewegung des Sticks in eine Richtung muss aber größer sein als der Radius des inaktiven Bereichs. Andernfalls passiert nichts. Dieser Radius des inaktiven Bereichs ist erforderlich, um "Drifting" darzustellen, d. h. vom Controller erkannte winzige Bewegungen des Daumens, wenn dieser auf dem Stick liegt. Ohne den inaktiven Bereich kann der Spieler schnell die Geduld verlieren, da sich die Steuerung sehr unruhig anfühlt.
+Befindet sich der Gamecontroller im Zustand **Active**, überprüft die Methode, ob ein Benutzer den linken Analogstick in eine bestimmte Richtung bewegt hat. Die registrierte Bewegung des Sticks in eine Richtung muss aber größer sein als der Radius des inaktiven Bereichs. Andernfalls passiert nichts. Dieser Radius des inaktiven Bereichs ist erforderlich, um "Drifting" darzustellen, d.h. vom Controller erkannte winzige Bewegungen des Daumens, wenn dieser auf dem Stick liegt. Ohne den inaktiven Bereich kann der Spieler schnell die Geduld verlieren, da sich die Steuerung sehr unruhig anfühlt.
 
 Die Methode **Update** führt die gleiche Prüfung dann auf dem rechten Stick aus, um festzustellen, ob der Spieler die Richtung der Kamera geändert hat, solange die Bewegung auf dem Stick länger ist als irgendein anderer Totzonenradius.
 
@@ -1908,7 +1905,7 @@ void MoveLookController::UpdateGameController()
 ```
 
 > **Hinweis**  
-Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Dieser Artikel ist für Windows10-Entwickler bestimmt, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows8.x oder Windows Phone8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -1920,7 +1917,6 @@ Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die univer
  
 
  
-
 
 
 

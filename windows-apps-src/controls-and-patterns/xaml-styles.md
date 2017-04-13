@@ -8,12 +8,11 @@ title: XAML-Formatvorlagen
 ms.assetid: AB469A46-FAF5-42D0-9340-948D0EDF4150
 label: XAML styles
 template: detail.hbs
-translationtype: Human Translation
-ms.sourcegitcommit: 86f28a0509ead0632c942c6746fea19acac54931
 ms.openlocfilehash: d12358e6fcab2afa039426532d47616d74b22ef4
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-# XAML-Formatvorlagen
+# <a name="xaml-styles"></a>XAML-Formatvorlagen
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
@@ -21,7 +20,7 @@ ms.openlocfilehash: d12358e6fcab2afa039426532d47616d74b22ef4
 
 Das XAML-Framework bietet zahlreiche Anpassungsmöglichkeiten für die App-Darstellung. Sie können mit Stilen die Steuerelementeigenschaften festlegen und diese Einstellungen dann für andere Steuerelemente übernehmen, um so für ein einheitliches Erscheinungsbild zu sorgen.
 
-## Grundlagen zu Stilen
+## <a name="style-basics"></a>Grundlagen zu Stilen
 
 Verwenden Sie Stile, um visuelle Eigenschaften in wiederverwendbare Ressourcen auszulagern. Dieses Beispiel zeigt drei Schaltflächen mit einem Stil, der die Eigenschaften [**BorderBrush**](https://msdn.microsoft.com/library/windows/apps/br209397), [**BorderThickness**](https://msdn.microsoft.com/library/windows/apps/br209399) und [**Foreground**](https://msdn.microsoft.com/library/windows/apps/br209414) festlegt. Durch Anwenden eines Stils können Sie eine einheitliche Darstellung der Steuerelemente erreichen, ohne diese Eigenschaften separat für jedes Steuerelement festlegen zu müssen.
 
@@ -58,7 +57,7 @@ Jedes [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817)-Ele
 </StackPanel>
 ```
 
-## Anwenden impliziter oder expliziter Stile
+## <a name="apply-an-implicit-or-explicit-style"></a>Anwenden impliziter oder expliziter Stile
 
 Wenn Sie einen Stil als Ressource definieren, können Sie ihn auf zwei Arten auf Ihre Steuerelemente anwenden:
 
@@ -103,7 +102,7 @@ In diesem Beispiel besitzt der erste Stil ein [x:Key-Attribut](../xaml-platform/
 </Grid>
 ```
 
-## Verwenden abgeleiteter Stile
+## <a name="use-based-on-styles"></a>Verwenden abgeleiteter Stile
 
 Um die Verwaltung von Stilen zu vereinfachen und die Wiederverwendung zu optimieren, können Sie Stile erstellen, die von anderen Stilen erben. Verwenden Sie die [**BasedOn**](https://msdn.microsoft.com/library/windows/apps/br208852)-Eigenschaft, um abgeleitete Stile zu erstellen. Stile, die von anderen Stilen erben, müssen als Ziel denselben Steuerelementtyp haben oder ein Steuerelement, das von dem Typ abgeleitet wird, auf den der Basisstil verweist. Wenn das Ziel des Basisstils z.B. [**ContentControl**](https://msdn.microsoft.com/library/windows/apps/br209365) ist, können die von diesem abgeleiteten Stile **ContentControl** als Ziel haben oder Typen, die von **ContentControl** abgeleitet sind, z.B. [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) und [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527). Wenn ein Wert im abgeleiteten Stil nicht festgelegt wurde, wird er vom Basisstil vererbt. Möchten Sie den Wert vom Basisstil ändern, können Sie ihn im abgeleiteten Stil überschreiben. Das nächste Beispiel zeigt einen **Button** und ein [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316) mit Stilen, die von demselben Basisstil abgeleitet sind.
 
@@ -139,11 +138,11 @@ Der Basisstil hat als Ziel [**ContentControl**](https://msdn.microsoft.com/libra
 </StackPanel>
 ```
 
-## Verwenden von Tools für die problemlose Arbeit mit Stilen
+## <a name="use-tools-to-work-with-styles-easily"></a>Verwenden von Tools für die problemlose Arbeit mit Stilen
 
 Wenn Sie schnell einen Stil auf Ihr Steuerelement anwenden möchten, klicken Sie auf der Microsoft Visual Studio XAML-Entwicklungsoberfläche mit der rechten Maustaste auf das Steuerelement, und wählen Sie **Stil bearbeiten** oder **Vorlage bearbeiten** aus (je nach Steuerelement). Anschließend können Sie einen vorhandenen Stil anwenden, indem Sie **Ressource übernehmen** auswählen, oder einen neuen erstellen, indem Sie **Leer erstellen** auswählen. Wenn Sie einen leeren Stil erstellen, haben Sie die Möglichkeit, diesen auf der Seite, in der Datei App.xaml oder in einem eigenen Ressourcenverzeichnis zu definieren.
 
-## Einfache Formatierung
+## <a name="lightweight-styling"></a>Einfache Formatierung
 
 Das Überschreiben der Systempinsel geschieht gewöhnlich auf App- oder Seitenebene, und in keinem Fall wirkt sich die Farbüberschreibung auf alle Steuerelemente aus, die auf diesen Pinsel verweisen – und in XAML können zahlreiche Steuerelemente auf denselben Pinsel verweisen.
 
@@ -167,7 +166,7 @@ Für Zustände wie PointerOver (Mauszeiger über der Schaltfläche), **PointerPr
 
 Die Verwendung dieser Pinselüberschreibungen auf der **App.Resources**-Ebene verändert alle Schaltflächen in der gesamten App und nicht nur auf einer Seite.
 
-### Formatierung pro Steuerelement
+### <a name="per-control-styling"></a>Formatierung pro Steuerelement
 
 In anderen Fällen ist es möglicherweise erwünscht, nur ein einzelnes Steuerelement auf einer Seite in einer bestimmten Weise zu gestalten, ohne dass dies andere Versionen dieses Steuerelements betrifft:
 
@@ -200,16 +199,10 @@ In anderen Fällen ist es möglicherweise erwünscht, nur ein einzelnes Steuerel
 
 Dies betrifft nur das eine „besondere Kontrollkästchen“ (Special CheckBox) auf der Seite, auf der dieses Steuerelement vorhanden ist.
 
-## Ändern der standardmäßigen Systemstile
+## <a name="modify-the-default-system-styles"></a>Ändern der standardmäßigen Systemstile
 
 Verwenden Sie nach Möglichkeit die Stile der standardmäßigen Windows-Runtime-XAML-Ressourcen. Wenn Sie eigene Formatierungen definieren müssen, leiten Sie Ihre Stile am besten von diesen Standardstilen ab (indem Sie, wie zuvor erläutert, abgeleitete Stile verwenden oder eine Kopie des Originalstandardstils bearbeiten).
 
-## Die Eigenschaft eines Templates
+## <a name="the-template-property"></a>Die Eigenschaft eines Templates
 
 Für die [**Template**](https://msdn.microsoft.com/library/windows/apps/br209465)-Eigenschaft eines [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390)-Elements kann ein Stilsetter verwendet werden. Dieser erstellt letztendlich den größten Teil eines typischen XAML-Stils und der XAML-Ressourcen einer App. Eine ausführlichere Beschreibung finden Sie im Thema [Steuerelementvorlagen](control-templates.md).
-
-
-
-<!--HONumber=Nov16_HO1-->
-
-

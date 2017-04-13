@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: D677E126-C3D6-46B6-87A5-6237EBEDF1A9
 description: "Verwenden Sie diese Methode aus der Windows Store-Übermittlungs-API zum Löschen einer vorhandenen Add-On-Übermittlung."
-title: "Löschen einer Add-On-Übermittlung mit der Windows Store-Übermittlungs-API"
+title: "Löschen einer Add-On-Übermittlung"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, Windows Store-übermittlungs-API, add-on-übermittlung, löschen, in-app-produkt, IAP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 117ed98dc961231cdbc7258b1097b7e0452efe35
-ms.lasthandoff: 02/07/2017
-
+keywords: "Windows10, UWP, Windows Store-Übermittlungs-API, Add-On-Übermittlung, löschen, In-App-Produkt, IAP"
+ms.openlocfilehash: a1f2a545b75ac4416ac016d36836328b24433917
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="delete-an-add-on-submission-using-the-windows-store-submission-api"></a>Löschen einer Add-On-Übermittlung mit der Windows Store-Übermittlungs-API
+# <a name="delete-an-add-on-submission"></a>Löschen einer Add-On-Übermittlung
 
 
 
@@ -28,7 +25,7 @@ Verwenden Sie diese Methode der Windows Store-Übermittlungs-API zum Löschen ei
 Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
 * Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](create-and-manage-submissions-using-windows-store-services.md#prerequisites) für die Windows Store-Übermittlungs-API.
-* [Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken erhalten haben, haben Sie 60 Minuten Zeit, das Token zu verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
+* [Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60 Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
 
 >**Hinweis**&nbsp;&nbsp;Diese Methode kann nur für Windows Dev Center-Konten verwendet werden, die eine Berechtigung zur Verwendung der Windows Store-Übermittlungs-API erhalten haben. Diese Berechtigung ist nicht für alle Konten aktiviert.
 
@@ -55,7 +52,7 @@ Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie V
 
 | Name        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| inAppProductId | string | Erforderlich. Die Store-ID des Add-Ons, das die zu löschende Übermittlung enthält. Die Store-ID ist im Dev Center-Dashboard verfügbar.  |
+| inAppProductId | String | Erforderlich. Die Store-ID des Add-Ons, das die zu löschende Übermittlung enthält. Die Store-ID ist im Dev Center-Dashboard verfügbar.  |
 | submissionId | String | Erforderlich. Die ID der zu löschenden Übermittlung. Diese ID ist im Dev Center-Dashboard verfügbar und in den Antwortdaten für Anforderungen zum [Erstellen einer Add-On-Übermittlung](create-an-add-on-submission.md) enthalten.  |
 
 <span/>
@@ -93,10 +90,9 @@ Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die A
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten](create-and-manage-submissions-using-windows-store-services.md)
+* [Erstellen und Verwalten von Übermittlungen mit WindowsStore-Diensten](create-and-manage-submissions-using-windows-store-services.md)
 * [Abrufen einer Add-On-Übermittlung](get-an-add-on-submission.md)
 * [Erstellen einer Add-On-Übermittlung](create-an-add-on-submission.md)
 * [Ausführen eines Commit für eine Add-On-Übermittlung](commit-an-add-on-submission.md)
 * [Aktualisieren einer Add-On-Übermittlung](update-an-add-on-submission.md)
 * [Abrufen des Status einer Add-On-Übermittlung](get-status-for-an-add-on-submission.md)
-

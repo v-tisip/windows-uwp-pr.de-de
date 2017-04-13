@@ -2,21 +2,17 @@
 title: Dreieckstreifen
 description: "Ein Dreieckstreifen ist eine Reihe verbundener Dreiecke. Da die Dreiecke verbunden sind, muss die Anwendung nicht alle drei Scheitelpunkte für jedes Dreieck wiederholt angeben."
 ms.assetid: BACC74C5-14E5-4ECC-9139-C2FD1808DB82
-keywords:
-- Dreieckstreifen
+keywords: Dreieckstreifen
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 910b4b6aa536e0956b06c33a796a8d929e77acb9
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: fa94534e10bcf124f0a5ba24e59a51b525f2d44e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="triangle-strips"></a>Dreieckstreifen
 
 
@@ -31,7 +27,7 @@ Das System verwendet die Scheitelpunkte v1, v2 und v3 zum Zeichnen des ersten Dr
 
 Die meisten Objekte in 3D-Szenen bestehen aus Dreieckstreifen. Der Grund dafür ist, dass mit Dreieckstreifen komplexe Objekte so zusammengesetzt werden können, dass Speicherplatz und Verarbeitungszeit dabei effizient genutzt werden.
 
-Die folgende Abbildung zeigt einen gerenderte Dreieckstreifen.
+Die folgende Abbildungzeigt einen gerenderte Dreieckstreifen.
 
 ![Illustration eines gerenderten Dreieckstreifens](images/tstrip2.png)
 
@@ -73,7 +69,7 @@ Die folgende Abbildung zeigt einen Würfel. Je zwei Dreiecke bilden die einzelne
 
 ![Illustration eines Würfels mit zwei Dreiecken auf jeder Seite](images/cube3d.png)
 
-Sie können mit Dreiecken auch Grundtypen erstellen, deren Oberflächen wie glatte Kurven aussehen. Die folgende Abbildung zeigt die Simulation einer Kugel mithilfe von Dreiecken. Nach der Anwendung eines Materials kann die Kugel beim Rendern so gestaltet werden, dass sie rund wirkt.
+Sie können mit Dreiecken auch Grundtypen erstellen, deren Oberflächen wie glatte Kurven aussehen. Die folgende Abbildungzeigt die Simulation einer Kugel mithilfe von Dreiecken. Nach der Anwendung eines Materials kann die Kugel beim Rendern so gestaltet werden, dass sie rund wirkt.
 
 ![Illustration einer mithilfe von Dreiecken simulierten Kugel](images/sphere3d.png)
 
@@ -85,7 +81,6 @@ Sie können mit Dreiecken auch Grundtypen erstellen, deren Oberflächen wie glat
  
 
  
-
 
 
 

@@ -8,14 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 63c0634905b14ca9f9546c9fcc678c05edb67780
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 1a9647a9b915359f00ac22c88b715c9e938f6110
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="use-app-services"></a>Verwenden von App-Diensten
 
 In diesem Abschnitt wird die Integration von App-Diensten in Ihre UWP-App beschrieben, um die Freigabe von Daten und Funktionen für alle Apps zu ermöglichen.
@@ -26,4 +23,5 @@ In diesem Abschnitt wird die Integration von App-Diensten in Ihre UWP-App beschr
 | [Umwandeln eines App-Diensts für die Ausführung im gleichen Prozess wie die Host-App](convert-app-service-in-process.md) | Konvertieren Sie App-Dienstcode, der in einem separaten Hintergrundvorgang auf Code gestoßen ist, der im selben Prozess wie Ihr App-Dienstanbieter ausgeführt wird. |
 
 ## <a name="related-topics"></a>Verwandte Themen
-* [Kommunizieren mit einem App-Remotedienst](communicate-with-a-remote-app-service.md)
+* [Kommunikation mit einem App-Remotedienst](communicate-with-a-remote-app-service.md)
+* [Apps für die universelle Windows-Plattform (UWP): Beispiele](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AppServices) 

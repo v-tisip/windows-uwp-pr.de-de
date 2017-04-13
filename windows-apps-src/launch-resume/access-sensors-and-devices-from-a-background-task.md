@@ -8,18 +8,15 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ea665aee9d8e65f5542de96863dee5b9eec9e346
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 9acef8f03bcdd4a9c4d40133ab2507853d4d0145
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="access-sensors-and-devices-from-a-background-task"></a>Zugreifen auf Sensoren und Geräte von einer Hintergrundaufgabe aus
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) ermöglicht es Ihrer universellen Windows-App, im Hintergrund auf Sensoren und Peripheriegeräte zuzugreifen. Dies ist selbst dann möglich, wenn die Vordergrund-App angehalten wird. Je nachdem, wo Ihre App ausgeführt wird, kann sie eine Hintergrundaufgabe zum Synchronisieren von Daten mit Geräten oder zum Überwachen von Sensoren verwenden. Zur Verbesserung der Akkulaufzeit und Sicherstellung der Zustimmung durch den Benutzer unterliegt die Nutzung von [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) den Richtlinien, die in diesem Thema beschrieben werden.
@@ -123,11 +120,9 @@ In dieser Tabelle ist aufgeführt, welche Richtlinien für die Aufgabeninitiieru
 | Die App kann mithilfe der unterstützten Geräteperipherie-APIs (Windows-Runtime-APIs für USB, HID, Bluetooth, Sensoren usw.) auf das Gerät zugreifen. Falls Ihre App nicht auf das Gerät oder den Sensor zugreifen kann, wird der Zugriff auf die Hintergrundaufgabe verweigert. | ![Richtlinie gilt](images/ap-tools.png) |
 | Der von der App bereitgestellte Einstiegspunkt für die Hintergrundaufgabe wird im App-Paketmanifest registriert. | ![Richtlinie gilt](images/ap-tools.png) |
 | Es wird nur eine [DeviceUseTrigger](https://msdn.microsoft.com/library/windows/apps/dn297337)-Hintergrundaufgabe pro App ausgeführt. | ![Richtlinie gilt](images/ap-tools.png) |
-| Die maximale Anzahl von [DeviceUseTrigger](https://msdn.microsoft.com/library/windows/apps/dn297337)-Hintergrundaufgaben wurde auf dem Gerät (auf dem die App ausgeführt wird) noch nicht erreicht. | Familie der Desktopgeräte: Eine unbegrenzte Anzahl von Aufgaben kann registriert und parallel ausgeführt werden. |
-|  |  |
-|  | Familie der Mobilgeräte: 1 Aufgabe auf einem 512 MB-Gerät. Andernfalls können 2 Aufgaben registriert und parallel ausgeführt werden. |
+| Die maximale Anzahl von [DeviceUseTrigger](https://msdn.microsoft.com/library/windows/apps/dn297337)-Hintergrundaufgaben wurde auf dem Gerät (auf dem die App ausgeführt wird) noch nicht erreicht. | **Familie der Desktopgeräte**: Eine unbegrenzte Anzahl von Aufgaben kann registriert und parallel ausgeführt werden. **Familie der Mobilgeräte**: 1 Aufgabe auf einem 512-MB-Gerät. Andernfalls können 2 Aufgaben registriert und parallel ausgeführt werden. |
 | Maximale Anzahl von Peripheriegeräten oder Sensoren, auf die Ihre App über eine einzelne [DeviceUseTrigger](https://msdn.microsoft.com/library/windows/apps/dn297337)-Hintergrundaufgabe zugreifen kann, wenn sie die unterstützten APIs/Protokolle verwendet. | Unbegrenzt |
-| Die Hintergrundaufgabe verbraucht pro Minute 400 ms an CPU-Zeit (bei einer CPU mit 1 GHz), wenn der Bildschirm gesperrt ist. Bei nicht gesperrtem Bildschirm wird diese Zeit innerhalb von 5 Minuten verbraucht. Wenn diese Richtlinie nicht erfüllt wird, kann dies zum Abbruch der Aufgabe führen. | ![Richtlinie gilt](images/ap-tools.png) |
+| Die Hintergrundaufgabe verbraucht pro Minute 400ms an CPU-Zeit (bei einer CPU mit 1GHz), wenn der Bildschirm gesperrt ist. Bei nicht gesperrtem Bildschirm wird diese Zeit innerhalb von 5Minuten verbraucht. Wenn diese Richtlinie nicht erfüllt wird, kann dies zum Abbruch der Aufgabe führen. | ![Richtlinie gilt](images/ap-tools.png) |
  
 ### <a name="runtime-policy-checks"></a>Richtlinienprüfung zur Laufzeit
 
@@ -140,9 +135,7 @@ In dieser Tabelle ist aufgeführt, welche Laufzeitrichtlinien für universelle W
 | Das Gerät ist an das System angeschlossen (bzw. befindet sich bei einem Drahtlosgerät in Reichweite). | ![Richtlinienprüfung gilt](images/ap-tools.png) |
 | Aufgabe führt regelmäßig E/A-Vorgänge für das Gerät durch (1 E/A alle 5 Sekunden). | ![Richtlinienprüfung gilt](images/ap-tools.png) |
 | Die App hat die Aufgabe nicht abgebrochen. | ![Richtlinienprüfung gilt](images/ap-tools.png) |
-| Gesamtbetrachtungszeit-Limit – Gesamtzeit, die die Aufgabe der App im Hintergrund ausgeführt werden kann. | Familie der Desktopgeräte: 10 Minuten. |
-|  |  |
-|  | Familie der Mobilgeräte: Kein Zeitlimit. Um Ressourcen zu schonen, können maximal eine oder zwei Aufgaben gleichzeitig ausgeführt werden. |
+| Gesamtbetrachtungszeit-Limit – Gesamtzeit, die die Aufgabe der App im Hintergrund ausgeführt werden kann. | **Familie der Desktopgeräte**: 10 Minuten. **Familie der Mobilgeräte**: Kein Zeitlimit. Um Ressourcen zu schonen, können maximal eine oder zwei Aufgaben gleichzeitig ausgeführt werden. |
 | Die App wurde nicht beendet. | ![Richtlinienprüfung gilt](images/ap-tools.png) |
 
 ## <a name="best-practices"></a>Bewährte Methoden
@@ -182,4 +175,3 @@ Zum Abbrechen einer Aufgabe, die im Hintergrund Ihrer Vordergrund-App ausgeführ
 Für die [**Unregister**](https://msdn.microsoft.com/library/windows/apps/br229869)-Methode wird zusätzlich der boolesche Wert "true" oder „false“ verwendet, um anzugeben, ob derzeit ausgeführte Instanzen der Hintergrundaufgabe abgebrochen werden sollen, ohne deren Beendigung abzuwarten. Weitere Informationen finden Sie im API-Referenzthema für **Unregister**.
 
 Zusätzlich zu [**Unregister**](https://msdn.microsoft.com/library/windows/apps/br229869) muss Ihre App auch [**BackgroundTaskDeferral.Complete**](https://msdn.microsoft.com/library/windows/apps/hh700504) aufrufen. So wird dem System mitgeteilt, dass der asynchrone Vorgang, der einer Hintergrundaufgabe zugeordnet ist, abgeschlossen ist.
-

@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: fafb0e013e1eef5fba2c5ec24b235df5c3c8429a
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 4248f2ac1f8058f78b9bcdad56bdcff3668df61a
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="graphics-and-animation"></a>Grafiken und Animationen
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Die Themen in diesem Abschnitt enthalten erste Schritte zum Verwenden von Grafiken und Animationen in Store-Apps.
 
@@ -39,7 +37,6 @@ Grafiken und Animationen sind für die Verwendung durch App-Entwickler mithilfe 
  
 
  
-
 
 
 

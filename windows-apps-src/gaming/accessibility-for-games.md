@@ -8,12 +8,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Bedienungshilfen, Spiele"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+keywords: Windows10, UWP, Bedienungshilfen, Spiele
 ms.openlocfilehash: 74a3e3bf3b4f614a112bedd8a2777f8d641237a9
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 #  <a name="making-games-accessible"></a>Erstellen barrierefreier Spiele
 
@@ -27,7 +25,7 @@ Grundsätzlich betrachtet, ist es nicht schwierig, die Entwicklung barrierefreie
 
 Sie multiplizieren die Zahl der Benutzer, die Ihr Spiel spielen können, mit der Qualität Ihres Spiels und erhalten so die Verkaufszahlen für Ihr Spiel.
 
-Wenn Sie ein beeindruckendes Spiel entwickelt haben, das so kompliziert oder komplex ist, dass es nur von sehr wenigen Menschen gespielt werden kann, begrenzen Sie Ihre Verkaufszahlen. Und wenn Sie ein Spiel entwickeln, das von Menschen mit physischen, sensorischen oder kognitiven Behinderungen nicht gespielt werden kann, entgehen Ihnen ebenfalls mögliche Umsätze. Angesichts der Tatsache, dass beispielsweise [19 % der Bevölkerung der Vereinigten Staaten über eine Art von Behinderung verfügen](http://www.census.gov/newsroom/releases/archives/miscellaneous/cb12-134.html), kann dies potenziell einen großen Einfluss auf den Umsatz haben, den Sie mit Ihrem Spiel erzielen können. 
+Wenn Sie ein beeindruckendes Spiel entwickelt haben, das so kompliziert oder komplex ist, dass es nur von sehr wenigen Menschen gespielt werden kann, begrenzen Sie Ihre Verkaufszahlen. Und wenn Sie ein Spiel entwickeln, das von Menschen mit physischen, sensorischen oder kognitiven Behinderungen nicht gespielt werden kann, entgehen Ihnen ebenfalls mögliche Umsätze. Angesichts der Tatsache, dass beispielsweise [19% der Bevölkerung der Vereinigten Staaten über eine Art von Behinderung verfügen](http://www.census.gov/newsroom/releases/archives/miscellaneous/cb12-134.html), kann dies potenziell einen großen Einfluss auf den Umsatz haben, den Sie mit Ihrem Spiel erzielen können. 
 
 Weitere geschäftliche Begründungen finden Sie unter [Erstellen barrierefreier Videospiele](https://msdn.microsoft.com/library/windows/desktop/ee415219).
 
@@ -64,8 +62,8 @@ Behinderungen werden als „fehlende Übereinstimmung zwischen den Bedürfnissen
 
 ### <a name="vision"></a>Sehvermögen
 
-*   Medizinische langfristige Bedingungen wie grüner Star, Katarakte, Farbblindheit, Kurzsichtigkeit und diabetesbedingte Retinopathie
-*   Kurzfristige situationsbedingte Zustände wie ein kleiner Monitor oder Bildschirm, ein Bildschirm mit niedriger Auflösung oder ein Bildschirm, der aufgrund von hellen Lichtquellen auf dem Monitor blendet
+*    Medizinische langfristige Bedingungen wie grüner Star, Katarakte, Farbblindheit, Kurzsichtigkeit und diabetesbedingte Retinopathie
+*    Kurzfristige situationsbedingte Zustände wie ein kleiner Monitor oder Bildschirm, ein Bildschirm mit niedriger Auflösung oder ein Bildschirm, der aufgrund von hellen Lichtquellen auf dem Monitor blendet
         
 ### <a name="hearing"></a>Hörvermögen
 
@@ -94,7 +92,7 @@ Behinderungen werden als „fehlende Übereinstimmung zwischen den Bedürfnissen
 
 Das inklusive Design konzentriert sich auf das Erstellen von Produkten und Diensten, die für ein breiteres Spektrum von Verbrauchern besser zugänglich sind, darunter auch Menschen mit Behinderungen.
 
-Um erfolgreich zu sein, müssen die Spieledesigner von heute über die Entwicklung von unterhaltsamen Spielen für eine kleine, ausgewählte Zielgruppe hinaus denken. Spieledesigner müssen die Auswirkungen ihrer Designentscheidungen auf die allgemeine Barrierefreiheit des Spiels berücksichtigen, d. h. die Spielbarkeit des Spiels für ihre potenzielle Zielgruppe insgesamt, einschließlich Menschen mit Behinderungen.
+Um erfolgreich zu sein, müssen die Spieledesigner von heute über die Entwicklung von unterhaltsamen Spielen für eine kleine, ausgewählte Zielgruppe hinaus denken. Spieledesigner müssen die Auswirkungen ihrer Designentscheidungen auf die allgemeine Barrierefreiheit des Spiels berücksichtigen, d.h. die Spielbarkeit des Spiels für ihre potenzielle Zielgruppe insgesamt, einschließlich Menschen mit Behinderungen.
 
 Es muss daher ein Paradigmenwechsel vom herkömmlichen Spieledesign hin zum inklusiven Konzept für das Design von Spielen stattfinden. Das inklusive Spieledesign geht über das einfache Spieledesign hinaus, das der Zielgruppe Unterhaltung bietet. Es bedeutet, zusätzliche oder geänderte Personas zu entwickeln, um eine breitere Gruppe von Spielern anzusprechen. 
 
@@ -154,25 +152,25 @@ Ziel des Designs von Untertitelungen und Untertiteln für Ihr Spiel ist die opti
 
 Im Folgenden werden einige einfache Anleitungen aufgelistet, die Sie beim Design von Untertitelungen und Untertiteln berücksichtigen sollten:
 
-*   Wählen Sie eine einfache, lesbare Schriftart.
-*   Wählen Sie einen ausreichend großen Schriftgrad, oder stellen Sie eine Option für die Anpassung des Schriftgrads bereit, um größere Flexibilität zu bieten. (Der ideale Schriftgrad ist von der Bildschirmgröße, dem Abstand vom Bildschirm usw. abhängig.)
-*   Schaffen Sie einen hohen Kontrast zwischen Hintergrund und Schriftfarbe. (Weitere Informationen hierzu finden Sie unter [Informationen zum Kontrastverhältnis](https://msdn.microsoft.com/windows/uwp/accessibility/accessible-text-requirements).)
+*    Wählen Sie eine einfache, lesbare Schriftart.
+*    Wählen Sie einen ausreichend großen Schriftgrad, oder stellen Sie eine Option für die Anpassung des Schriftgrads bereit, um größere Flexibilität zu bieten. (Der ideale Schriftgrad ist von der Bildschirmgröße, dem Abstand vom Bildschirm usw. abhängig.)
+*    Schaffen Sie einen hohen Kontrast zwischen Hintergrund und Schriftfarbe. (Weitere Informationen hierzu finden Sie unter [Informationen zum Kontrastverhältnis](https://msdn.microsoft.com/windows/uwp/accessibility/accessible-text-requirements).)
 * Zeigen Sie auf dem Bildschirm kurze Sätze an. (Denken Sie daran, nicht zu viel über das Spiel zu verraten, indem Sie den Text anzeigen, bevor das Ereignis eintritt.)
-*   Stellen Sie klar, aus welcher Quelle der Audioeffekt stammt oder wer gerade spricht. (Beispiel: „Daniel: Hallo!“.)
-*   Bieten Sie die Möglichkeit, Untertitelungen und Untertitel ein- und auszuschalten. (Zusätzliches Feature: Bieten Sie die Möglichkeit an, anhand der Bedeutung auszuwählen, wie viele Audioinformationen angezeigt werden.)
+*    Stellen Sie klar, aus welcher Quelle der Audioeffekt stammt oder wer gerade spricht. (Beispiel: „Daniel: Hallo!“.)
+*    Bieten Sie die Möglichkeit, Untertitelungen und Untertitel ein- und auszuschalten. (Zusätzliches Feature: Bieten Sie die Möglichkeit an, anhand der Bedeutung auszuwählen, wie viele Audioinformationen angezeigt werden.)
 
 ### <a name="sound-feedback"></a>Audiofeedback
 
 Audio- oder Soundeffekte bieten dem Spieler Feedback, zusätzlich zum visuellen Feedback. Ein gutes Audiodesign des Spiels kann die Barrierefreiheit für Spieler mit Sehschwächen verbessern. Im Folgenden werden einige Anleitungen aufgeführt, die Sie berücksichtigen sollten:
 
-*   Verwenden Sie 3D-Audiohinweise, um zusätzliche räumliche Informationen bereitzustellen.
+*    Verwenden Sie 3D-Audiohinweise, um zusätzliche räumliche Informationen bereitzustellen.
 * Trennen Sie Musik-, Sprach- und Audio- bzw. Soundeffekte.
-*   Gestalten Sie die Sprachhinweise so, dass sie den Spielern nützliche Informationen bieten. (Beispiel: „Die Feinde nähern sich“ im Gegensatz zu „Die Feinde nähern sich von der Hintertür aus“.)
-*   Stellen Sie sicher, dass die Sprachhinweise mit einer akzeptablen Geschwindigkeit gesprochen werden, und ermöglichen Sie die Steuerung der Geschwindigkeit, um eine bessere Barrierefreiheit zu erzielen.
+*    Gestalten Sie die Sprachhinweise so, dass sie den Spielern nützliche Informationen bieten. (Beispiel: „Die Feinde nähern sich“ im Gegensatz zu „Die Feinde nähern sich von der Hintertür aus“.)
+*    Stellen Sie sicher, dass die Sprachhinweise mit einer akzeptablen Geschwindigkeit gesprochen werden, und ermöglichen Sie die Steuerung der Geschwindigkeit, um eine bessere Barrierefreiheit zu erzielen.
 
 ### <a name="fully-mappable-controls"></a>Vollständig zuordbare Steuerelemente
 
-Es gibt Unternehmen und Organisationen wie z. B. [Special Effect](http://www.specialeffect.org.uk/), die benutzerdefinierte Steuergeräte für Spiele entwickeln, die mit verschiedenen Gamingsystemen wie Windows und Xbox One verwendet werden können. Diese Anpassung ermöglicht Benutzern mit unterschiedlichen Arten von Behinderungen, Spiele zu spielen, die sie andernfalls möglicherweise nicht spielen könnten. Weitere Informationen zu Personen, die nun mithilfe angepasster Steuergeräte eigenständig Spiele spielen können, finden Sie unter [Unterstützte Personen](http://www.specialeffect.org.uk/who-we-helped).
+Es gibt Unternehmen und Organisationen wie z.B. [Special Effect](http://www.specialeffect.org.uk/), die benutzerdefinierte Steuergeräte für Spiele entwickeln, die mit verschiedenen Gamingsystemen wie Windows und Xbox One verwendet werden können. Diese Anpassung ermöglicht Benutzern mit unterschiedlichen Arten von Behinderungen, Spiele zu spielen, die sie andernfalls möglicherweise nicht spielen könnten. Weitere Informationen zu Personen, die nun mithilfe angepasster Steuergeräte eigenständig Spiele spielen können, finden Sie unter [Unterstützte Personen](http://www.specialeffect.org.uk/who-we-helped).
 
 Als Spieleentwickler können Sie die Barrierefreiheit Ihres Spiels verbessern, indem Sie die vollständige Zuordbarkeit von Steuerelemente ermöglichen, damit Spieler ihre benutzerdefinierten Steuergeräte anschließen und die Tasten entsprechend ihren Bedürfnissen zuordnen können.
 
@@ -192,9 +190,9 @@ Es gibt viele Faktoren, die beim Spielen von Videospielen eine lichtempfindliche
 
 Als Entwickler finden Sie hier einige Tipps für das Entwerfen eines Spiels, das auch von Spielern gespielt werden kann, die zur Lichtempfindlichkeitsepilepsie neigen:
 
-*   Vermeiden Sie Licht, das mit einer Frequenz von 5 bis 30 Blitzen pro Sekunde (Hertz) aufblitzt, da blitzendes Licht in diesem Bereich am wahrscheinlichsten Anfälle auslöst.
-*   Verwenden Sie ein automatisiertes System, um das Spiel auf Reize zu überprüfen, die einen Anfall von Lichtempfindlichkeitsepilepsie auslösen können. (Beispiel: [Harding Flash and Pattern Analyzer (FPA) G2](http://www.hardingfpa.com/harding-fpa-for-games/) von Cambridge Research System Ltd und Professor Graham Harding.) 
-*   Planen Sie Pausen zwischen Spiellevels ein, damit Spieler nicht ohne Unterbrechung spielen.
+*    Vermeiden Sie Licht, das mit einer Frequenz von 5 bis 30Blitzen pro Sekunde (Hertz) aufblitzt, da blitzendes Licht in diesem Bereich am wahrscheinlichsten Anfälle auslöst.
+*    Verwenden Sie ein automatisiertes System, um das Spiel auf Reize zu überprüfen, die einen Anfall von Lichtempfindlichkeitsepilepsie auslösen können. (Beispiel: [Harding Flash and Pattern Analyzer (FPA) G2](http://www.hardingfpa.com/harding-fpa-for-games/) von Cambridge Research System Ltd und Professor Graham Harding.) 
+*    Planen Sie Pausen zwischen Spiellevels ein, damit Spieler nicht ohne Unterbrechung spielen.
 
 ## <a name="other-accessibility-resources"></a>Weitere Ressourcen für barrierefreie Spiele
 
@@ -221,4 +219,3 @@ Im Folgenden finden Sie einige externe Websites, die zusätzliche Informationen 
 * [Microsoft Accessibility Developer Hub](https://developer.microsoft.com/windows/accessible-apps)
 * [Entwickeln von barrierefreien UWP-Apps](https://msdn.microsoft.com/windows/uwp/accessibility/accessibility)
 * [E-Book: Engineering Software For Accessibility (Entwickeln von barrierefreier Software)](https://www.microsoft.com/download/details.aspx?id=19262)
-

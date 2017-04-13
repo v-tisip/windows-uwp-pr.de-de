@@ -10,12 +10,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: f8b063f45afadda50fa9ea091bf6cba71a25e8c1
-ms.lasthandoff: 02/07/2017
-
+keywords: windows10, UWP
+ms.openlocfilehash: 4a9a1b18984ed418fc31061ff2ee392230117609
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="tiles-badges-and-notifications-for-uwp-apps"></a>Kacheln, Signale und Benachrichtigungen für UWP-Apps
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
@@ -26,7 +24,7 @@ Erfahren Sie, wie Sie mithilfe von Kacheln, Signalen, Popups und Benachrichtigun
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="images/tile-and-live-tile.png" />
 Eine Kachel ist die Darstellung einer App im Startmenü. Jede UWP-App verfügt über eine Kachel. Sie können verschiedene Kachelgrößen festlegen (klein, mittel, breit und groß).</p>
 
-<p>Sie können eine <em>Kachelbenachrichtigung</em> verwenden, um die Kachel zu aktualisieren und neue Informationen an den Benutzer zu übermitteln, z. B. neue Schlagzeilen oder den Betreff der letzten ungelesenen Nachricht.</p>
+<p>Sie können eine <em>Kachelbenachrichtigung</em> verwenden, um die Kachel zu aktualisieren und neue Informationen an den Benutzer zu übermitteln, z.B. neue Schlagzeilen oder den Betreff der letzten ungelesenen Nachricht.</p>
 
 <p>Sie können ein <em>Signal</em> verwenden, um Statusinfos oder zusammenfassende Informationen in Form einer vom System bereitgestellten Glyphe oder einer Zahl von 1 bis 99 bereitzustellen. Signale werden auch auf dem App-Symbol auf der Symbolleiste dargestellt. </p>
 
@@ -125,7 +123,6 @@ Eine Kachel ist die Darstellung einer App im Startmenü. Jede UWP-App verfügt �
  
 
  
-
 
 
 

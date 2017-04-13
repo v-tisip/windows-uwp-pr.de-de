@@ -8,18 +8,15 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Spiele, Vorlagen, Tools, DirectX"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+keywords: Windows10, UWP, Spiele, Vorlagen, Tools, DirectX
 ms.openlocfilehash: 2991efd40862eb1cd8842432b3eed3bbe49c8eb2
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="project-templates-and-tools-for-games"></a>Projektvorlagen und Tools für Spiele
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Hier erfahren Sie, was erforderlich ist, um mit dem Programmieren von DirectX-Spielen für die Universelle Windows-Plattform (UWP) beginnen zu können.
@@ -65,7 +62,7 @@ Zunächst benötigen Sie Visual Studio.
 
 Wenn Sie ein vorhandenes Spiel portieren, sind die folgenden Themen hilfreich:
 
--   [Portieren von OpenGL ES 2.0 zu DirectX 11](port-from-opengl-es-2-0-to-directx-11-1.md)
+-   [Portieren von OpenGLES2.0 zu DirectX11](port-from-opengl-es-2-0-to-directx-11-1.md)
 -   [Portieren von DirectX 9 zu UWP](porting-your-directx-9-game-to-windows-store.md)
 
 Wenn Sie ein neues DirectX-Spiel erstellen, sind die folgenden Themen hilfreich.
@@ -74,14 +71,13 @@ Wenn Sie ein neues DirectX-Spiel erstellen, sind die folgenden Themen hilfreich.
 -   [Entwickeln von Marble Maze, einem UWP-Spiel in C++ und DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
 
 > **Hinweis**  
-Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Dieser Artikel ist für Windows10-Entwickler bestimmt, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows8.x oder Windows Phone8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
  
 
  
-
 
 
 

@@ -2,21 +2,17 @@
 title: Indexpuffer
 description: Indexpuffer sind Speicherpuffer mit Indexdaten, die Ganzzahl-Offsets in Vertexpuffer darstellen, und zum Rendern von Grundtypen verwendet werden.
 ms.assetid: 14D3DEC5-CF74-488B-BE41-16BF5E3201BE
-keywords:
-- Indexpuffer
+keywords: Indexpuffer
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 6aa62a7506b37314b1952a6687920a2cdf3deca3
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: aeb526032489cac2fdbbc436f98eac0cda59b643
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="index-buffers"></a>Indexpuffer
 
 
@@ -29,7 +25,7 @@ Ein Vertexpuffer enthält Scheitelpunkte; deshalb können Sie einen Vertexpuffer
 ## <a name="span-idindexbufferdescriptionspanspan-idindexbufferdescriptionspanspan-idindexbufferdescriptionspanindex-buffer-description"></a><span id="Index_Buffer_Description"></span><span id="index_buffer_description"></span><span id="INDEX_BUFFER_DESCRIPTION"></span>Beschreibung des Indexpuffers
 
 
-Ein Indexpuffer wird anhand seiner Fähigkeiten beschrieben, wie z. B. wo im Speicher er vorhanden ist, ob Lese- und Schreibberechtigungen unterstützt werden, und nach Typ und Anzahl der enthaltenen Indizes.
+Ein Indexpuffer wird anhand seiner Fähigkeiten beschrieben, wie z.B. wo im Speicher er vorhanden ist, ob Lese- und Schreibberechtigungen unterstützt werden, und nach Typ und Anzahl der enthaltenen Indizes.
 
 Die Beschreibungen von Indexpuffern geben Ihrer Anwendung Hinweise darauf, wie ein vorhandener Puffer erstellt wurde. Sie stellen eine leere Beschreibungsstruktur für das System bereit, die mit den Fähigkeiten eines vorher erstellten Indexpuffers gefüllt wird.
 
@@ -48,7 +44,6 @@ Die Anwendung kann direkt Indizes in einen Indexpuffer schreiben, der im treiber
  
 
  
-
 
 
 

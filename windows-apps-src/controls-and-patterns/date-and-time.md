@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 127bf79ebe17e6156a95d4aae168e42b7ff53aa1
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 5da40bb4c680416f0766cf0d1a171f95358ea63e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="calendar-date-and-time-controls"></a>Kalender-, Datums- und Uhrzeitsteuerelemente
 
@@ -82,7 +80,7 @@ Der Einstiegspunkt zeigt das ausgewählte Datum an, und wenn der Benutzer den Ei
 
 **TimePicker** wird zur Auswahl eines einzelnen Uhrzeitwertes für Termine oder Abreisezeiten verwendet. Es handelt sich um eine statische Anzeige, die vom Benutzer oder im Code festgelegt wird, jedoch nicht aktualisiert wird, um die aktuelle Uhrzeit anzuzeigen. 
 
-Der Einstiegspunkt zeigt die ausgewählte Uhrzeit an, und wenn der Benutzer den Einstiegspunkt auswählt, wird eine Auswahloberfläche von der Bildschirmmitte aus vertikal erweitert, damit eine Auswahl getroffen werden kann. Die Zeitauswahl überlagert andere Elemente der Benutzeroberfläche. Die anderen Elemente der Benutzeroberfläche werden dadurch jedoch nicht „beiseitegeschoben“.
+Der Einstiegspunkt zeigt die ausgewählte Uhrzeit an, und wenn der Benutzer den Einstiegspunkt auswählt, wird eine Auswahloberfläche von der Bildschirmmitte aus vertikal erweitert, damit eine Auswahl getroffen werden kann. Die Zeitauswahl überlagert andere Elemente der Benutzeroberfläche. Die anderen Elemente der Benutzeroberfläche werden dadurch jedoch nicht „verschoben“.
 
 ![Beispiel für die Erweiterung der Zeitauswahl](images/controls_timepicker_expand.png)
 
@@ -110,7 +108,7 @@ Die in den XAML-Datums- und Uhrzeitsteuerelementen verwendeten Datumsobjekte wei
 - C# und Visual Basic verwenden die [ **System.DateTimeOffset** ](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetimeoffset.aspx)-Struktur, die Teil von .NET ist. 
 - C++ / CX verwendet die [ **Windows::Foundation::DateTime** ](https://msdn.microsoft.com/library/windows/apps/xaml/br205770.aspx)-Struktur. 
 
-Ein verwandtes Konzept ist die Calendar-Klasse, die beeinflusst, wie die Daten im Kontext interpretiert werden. Alle Windows-Runtime-Apps können die [ **Windows.Globalization.Calendar** ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.globalization.calendar.aspx)-Klasse verwenden. C# und Visual Basic-Apps können auch die [ **System.Globalization.Calendar** ](https://msdn.microsoft.com/library/windows/apps/xaml/system.globalization.calendar.aspx)-Klasse verwenden. Diese weist eine sehr ähnliche Funktionalität auf. (Windows-Runtime-Apps können die .NET-Basisklasse Calendar verwenden, nicht jedoch die spezifischen Implementierungen wie z. B. GregorianCalendar.)
+Ein verwandtes Konzept ist die Calendar-Klasse, die beeinflusst, wie die Daten im Kontext interpretiert werden. Alle Windows-Runtime-Apps können die [ **Windows.Globalization.Calendar** ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.globalization.calendar.aspx)-Klasse verwenden. C# und Visual Basic-Apps können auch die [ **System.Globalization.Calendar** ](https://msdn.microsoft.com/library/windows/apps/xaml/system.globalization.calendar.aspx)-Klasse verwenden. Diese weist eine sehr ähnliche Funktionalität auf. (Windows-Runtime-Apps können die .NET-Basisklasse Calendar verwenden, nicht jedoch die spezifischen Implementierungen wie z.B. GregorianCalendar.)
 
 .NET unterstützt auch einen Typ mit der Bezeichnung [ **DateTime**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetime.aspx), der implizit in [ **DateTimeOffset**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetimeoffset.aspx) konvertierbar ist. Somit könnte ein Typ „DateTime“ in .NET-Code verwendet werden, der zum Festlegen von Werten verwendet wird, bei denen es sich eigentlich um DateTimeOffset handelt. Weitere Informationen zum Unterschied zwischen DateTime und DateTimeOffset finden Sie in den Bemerkungen in der [ **DateTimeOffset** ](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetimeoffset.aspx)-Klasse.
 
@@ -127,4 +125,3 @@ Ein verwandtes Konzept ist die Calendar-Klasse, die beeinflusst, wie die Daten i
 - [**CalendarDatePicker-Klasse**](https://msdn.microsoft.com/library/windows/apps/dn950083)
 - [**DatePicker-Klasse**](https://msdn.microsoft.com/library/windows/apps/dn298584)
 - [**TimePicker-Klasse**](https://msdn.microsoft.com/library/windows/apps/dn299280)
-

@@ -8,14 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Spiele, UI, Navigation"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+keywords: Windows10, UWP, Spiele, UI, Navigation
 ms.openlocfilehash: 5b5789b90cefb6ba22c2a3d8b5ebbb45be5b0dad
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="ui-navigation-controller"></a>Benutzeroberflächen-Navigationscontroller
 
 Diese Seite beschreibt die Grundlagen der Programmierung für Benutzeroberflächen-Navigationsgeräte mit [Windows.Gaming.Input.UINavigationController][uinavigationcontroller] und zugehörigen APIs für die Universelle Windows-Plattform (UWP).
@@ -91,8 +88,8 @@ Die folgende Tabelle fasst zusammen, wie der _erforderliche Satz_ der Navigation
 |              Nach rechts | Linker Ministick nach rechts/Steuerkreuz nach rechts | Joystick nach rechts        | Steuerkreuz nach rechts        |
 |               Ansicht | Ansicht-Taste                         | Ansicht-Taste        | Ansicht-Taste        |
 |               Menü | Menü-Taste                         | Menü-Taste        | Menü-Taste        |
-|             Annehmen | A-Taste                            | Taste für Aktion 1    | A-Taste           |
-|             Abbrechen | B-Taste                            | Taste für Aktion 2    | B-Taste           |
+|             Annehmen | A-Taste                            | Taste für Aktion1    | A-Taste           |
+|             Abbrechen | B-Taste                            | Taste für Aktion2    | B-Taste           |
 
 Die folgende Tabelle fasst zusammen, wie der _optionale Satz_ der Navigationsbefehle verschiedenen Eingabegeräten zugeordnet wird.
 
@@ -236,4 +233,3 @@ Das [InputInterfacingUWP-Beispiel _(github)_](https://github.com/Microsoft/Xbox-
 [uinavigationreading]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.uinavigationreading.aspx
 [requireduinavigationbuttons]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.requireduinavigationbuttons.aspx
 [optionaluinavigationbuttons]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.optionaluinavigationbuttons.aspx
-

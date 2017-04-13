@@ -9,13 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
+keywords: Windows10, UWP
 ms.assetid: f04d1a3c-7dcd-4bc8-9586-3396923b312e
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 41d86777b3e8aa0b7d32c408beec3f55a4a35d7b
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: e5c8b5056581540abd5e0ddf75da7785648df1d5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="buttons"></a>Schaltflächen
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
@@ -30,9 +28,6 @@ Eine Schaltfläche ermöglicht dem Benutzer das unmittelbare Auslösen einer Akt
 <li>[**Button-Klasse**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)</li>
 <li>[**RepeatButton-Klasse**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.aspx)</li>
 <li>[**Click-Ereignis**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx)</li>
-<li> </li>
-<li> </li>
-<li> </li>
 </ul>
 </div>
 
@@ -46,7 +41,7 @@ Schaltflächen sollten nicht verwendet werden, um zu anderen Seiten zu navigiere
 
 ## <a name="example"></a>Beispiel
 
-In diesem Beispiel werden zwei Schaltflächen („Alle schließen“ und „Abbrechen“) in einem Dialogfeld des Microsoft Edge-Browsers verwendet. 
+In diesem Beispiel werden zwei Schaltflächen („Alle schließen“ und „Abbrechen“) in einem Dialogfeld des MicrosoftEdge-Browsers verwendet. 
 
 ![Beispiel für Schaltflächen in einem Dialogfeld](images/control-examples/buttons-edge.png)
 
@@ -88,7 +83,7 @@ private async void SubmitButton_Click(object sender, RoutedEventArgs e)
 
 Wenn Sie mit einem Finger oder Stift auf eine Schaltfläche tippen oder mit der linken Maustaste darauf klicken, löst die Schaltfläche das [**Click**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx)-Ereignis aus. Bei einer Schaltfläche mit Tastaturfokus wird das Click-Ereignis auch durch Drücken der Eingabe- oder Leertaste ausgelöst.
 
-Sie können für Schaltflächen generell keine [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx)-Ereignisse auf niedriger Ebene verarbeiten, da diese stattdessen mit dem Click-Verhalten konfiguriert sind. Weitere Informationen finden Sie unter [Übersicht über Ereignisse und Routingereignisse](https://msdn.microsoft.com/en-us/library/windows/apps/mt185584.aspx).
+Sie können für Schaltflächen generell keine [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx)-Ereignisse auf niedriger Ebene verarbeiten, da diese stattdessen mit dem Click-Verhalten konfiguriert sind. Weitere Informationen finden Sie unter [Übersicht über Ereignisse und Routingereignisse](https://msdn.microsoft.com/library/windows/apps/mt185584.aspx).
 
 Sie können durch Ändern der [**ClickMode**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.clickmode.aspx)-Eigenschaft festlegen, wie eine Schaltfläche das Click-Ereignis auslöst. Der ClickMode-Standardwert lautet **Release**. Wenn als ClickMode-Wert **Hover** festgelegt ist, kann das Click-Event nicht über die Tastatur oder durch Berührung ausgelöst werden. 
 
@@ -97,7 +92,7 @@ Sie können durch Ändern der [**ClickMode**](https://msdn.microsoft.com/library
 
 „Button“ ist ein [**ContentControl**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.contentcontrol.aspx)-Steuerelement. Die XAML-Inhaltseigenschaft ist [**Content**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.contentcontrol.content.aspx). Damit ist für XAML folgende Syntax möglich: `<Button>A button's content</Button>`. Sie können jedes Objekt als Inhalt der Schaltfläche festlegen. Wenn der Inhalt ein [UIElement](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.aspx) ist, wird er in der Schaltfläche gerendert. Wenn es sich beim Inhalt um einen anderen Objekttyp handelt, wird die entsprechende Zeichenfolgendarstellung in der Schaltfläche angezeigt.
 
-Im folgenden Beispiel wird ein **StackPanel**-Element, das das Bild einer Banane und Text enthält, als Inhalt einer Schaltfläche festgelegt.
+Im folgenden Beispiel wird ein **StackPanel**-Element, das das Bild einer Orange und Text enthält, als Inhalt einer Schaltfläche festgelegt.
 
 ```xaml
 <Button Click="Button_Click" 
@@ -169,7 +164,7 @@ private void Decrease_Click(object sender, RoutedEventArgs e)
 -   Stellen Sie sicher, dass sich, sobald der Benutzer eine Schaltfläche betätigt, der Status und das Erscheinungsbild der Schaltfläche ändern, um dem Benutzer ein Rückmeldung zu geben. „Normal“, „pressed“ und „disabled“ sind Beispiele von Schaltflächenstatus.
 -   Lösen Sie die Aktion der Schaltfläche aus, wenn der Benutzer auf die Schaltfläche tippt oder drückt. Die Aktion wird für gewöhnlich ausgelöst, wenn der Benutzer die Schaltfläche loslässt. Sie können aber auch festlegen, dass die Aktion einer Schaltfläche durch Berühren mit dem Finger ausgelöst wird.
 -   Verwenden Sie keine Befehlsschaltfläche zum Festlegen des Status.
--   Ändern Sie den Schaltflächentext nicht, während die App ausgeführt wird (z. B. den Text einer Schaltfläche „Weiter” in „Fortsetzen”).
+-   Ändern Sie den Schaltflächentext nicht, während die App ausgeführt wird (z.B. den Text einer Schaltfläche „Weiter” in „Fortsetzen”).
 -   Tauschen Sie nicht die standardmäßigen Stile „submit“, „reset“ und „button“.
 -   Überfrachten Sie eine Schaltfläche nicht mit Inhalt. Inhalte von Steuerelementen sollten kurz und prägnant sein (nicht mehr als ein Bild und ein kurzer Text).
 
@@ -177,7 +172,7 @@ private void Decrease_Click(object sender, RoutedEventArgs e)
 Die Zurück-Schaltfläche ist ein durch das System bereitgestelltes UI-Element, das die Rückwärtsnavigation über den Back-Stapel oder den Navigationsverlauf des Benutzers ermöglicht. Sie müssen keine eigene Zurück-Schaltfläche erstellen, aber unter Umständen ist etwas Aufwand erforderlich, um eine gute Rückwärtsnavigation zu ermöglichen. Weitere Informationen finden Sie unter [Verlauf und Rückwärtsnavigation](../layout/navigation-history-and-backwards-navigation.md).
 
 ## <a name="get-the-sample-code"></a>Beispielcode herunterladen
-*   [Beispiel für XAML-UI-Grundlagen](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)<br/>
+*   [Einfaches Beispiel für eine XAML-Benutzeroberfläche](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)<br/>
     Hier werden alle XAML-Steuerelemente in einem interaktiven Format dargestellt.
 
 
@@ -187,6 +182,5 @@ Die Zurück-Schaltfläche ist ein durch das System bereitgestelltes UI-Element, 
 - [Umschalter](toggles.md)
 - [Kontrollkästchen](checkbox.md)
 - [**Button-Klasse**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)
-
 
 

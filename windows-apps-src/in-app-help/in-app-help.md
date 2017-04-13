@@ -1,6 +1,6 @@
 ---
 author: QuinnRadich
-Description: Entwerfen Sie effektive eine Hilfe, die reaktiv innerhalb Ihrer App angezeigt wird.
+Description: Entwerfen Sie effektive Hilfe, die reaktiv innerhalb Ihrer App angezeigt wird.
 title: Richtlinien zum Entwerfen von In-App-Hilfe.
 label: In-app help
 template: detail.hbs
@@ -11,13 +11,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 6208b71b-37a7-40f5-91b0-19b665e7458a
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 19d4a4e00692bc983a56416951e82f71bf5f6be2
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 659a2871e540398d34b93c288d34fb80699c36c9
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="in-app-help-pages"></a>In-App-Hilfeseiten
 
 In den meisten Fällen empfiehlt es sich, dass die Hilfe in der Anwendung angezeigt wird, wenn der Benutzer dies wünscht.
@@ -39,7 +36,7 @@ In-App-Hilfe kann unterschiedliche Formen annehmen, entspricht jedoch in Bezug a
 Nützliche Anweisungen können schnell und einfach auf einer oder mehreren separaten Hilfeseiten in Ihrer App angezeigt werden.
 
 -   **Präzise sein:** Eine umfangreiche Bibliothek mit Hilfethemen ist umständlich und für eine In-App-Hilfe nicht geeignet.
--   **Konsistent sein:** Stellen Sie sicher, dass Benutzer die Hilfeseiten in jedem Bereich der App auf die gleiche Weise aufrufen können. Sie sollten nie danach suchen müssen.
+-   **Seien Sie konsistent:** Stellen Sie sicher, dass Benutzer die Hilfeseiten in jedem Bereich der App auf die gleiche Weise aufrufen können. Sie sollten nie danach suchen müssen.
 -   **Benutzer überfliegen Inhalte, anstatt sie zu lesen:** Da sich das Hilfethema, nach dem ein Benutzer sucht, möglicherweise auf derselben Seite wie andere Hilfethemen befindet, müssen Sie darauf achten, dass das gesuchte Hilfethema leicht zu erkennen ist.
 
 
@@ -62,4 +59,3 @@ In manchen Fällen kann es hilfreich sein, weitere Informationen zu einem Featur
 ## <a name="related-articles"></a>Verwandte Artikel
 
 * [Anleitungen für die App-Hilfe](guidelines-for-app-help.md)
-

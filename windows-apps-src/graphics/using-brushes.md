@@ -2,22 +2,20 @@
 author: Jwmsft
 ms.assetid: 02141F86-355E-4046-86EA-2A89D615B7DB
 title: Verwenden von Pinseln
-description: "Mit Pinselobjekten werden Innenbereiche oder Ränder von Formen, Text und Teilen von Steuerelementen gezeichnet, damit das gezeichnete Objekt auf einer Benutzeroberfläche sichtbar ist."
+description: "Mit Brush-Objekten werden Innenbereiche oder Ränder von Formen, Text und Teilen von Steuerelementen gezeichnet, damit das gezeichnete Objekt auf einer Benutzeroberfläche sichtbar ist."
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: bf3e4e169108f4cab98dcb460552daff8822c64c
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 71bac3ed2c62df9b47bf16881acbc5e401697a5f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="use-brushes"></a>Verwenden von Pinseln
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **Wichtige APIs**
@@ -32,11 +30,11 @@ Verwenden Sie für das Zeichnen von Objekten wie einer [**Shape**](https://msdn.
 
 ## <a name="solid-color-brushes"></a>Einfarbige Pinsel
 
-Ein [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) zeichnet einen Bereich mit einer einzelnen [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723), z. B. Rot oder Blau. Dies ist der einfachste Pinsel. Es gibt drei Möglichkeiten, in XAML einen **SolidColorBrush** und die zugehörige Volltonfarbe zu definieren: vordefinierte Farbnamen, hexadezimale Farbwerte und die Syntax für Eigenschaftselemente.
+Ein [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) zeichnet einen Bereich mit einer einzelnen [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723), z.B. Rot oder Blau. Dies ist der einfachste Pinsel. Es gibt drei Möglichkeiten, in XAML einen **SolidColorBrush** und die zugehörige Volltonfarbe zu definieren: vordefinierte Farbnamen, hexadezimale Farbwerte und die Syntax für Eigenschaftselemente.
 
 ### <a name="predefined-color-names"></a>Vordefinierte Farbnamen
 
-Sie können einen vordefinierten Farbnamen wie [**Yellow**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.yellow.aspx) oder [**Magenta**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.magenta.aspx) verwenden. Es stehen 256 benannte Farben zur Verfügung. Der XAML-Parser wandelt den Farbnamen in eine [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723)-Struktur mit den richtigen Farbkanälen um. Die 256 benannten Farben basieren auf den *X11*-Farbnamen der CSS3-Spezifikation (Cascading Style Sheets, Level 3). Möglicherweise kennen Sie diese Liste benannter Farben also bereits, wenn Sie über Vorkenntnisse in Webentwicklung oder -design verfügen.
+Sie können einen vordefinierten Farbnamen wie [**Yellow**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.yellow.aspx) oder [**Magenta**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.magenta.aspx) verwenden. Es stehen 256benannte Farben zur Verfügung. Der XAML-Parser wandelt den Farbnamen in eine [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723)-Struktur mit den richtigen Farbkanälen um. Die 256 benannten Farben basieren auf den *X11*-Farbnamen der CSS3-Spezifikation (Cascading Style Sheets, Level3). Möglicherweise kennen Sie diese Liste benannter Farben also bereits, wenn Sie über Vorkenntnisse in Webentwicklung oder -design verfügen.
 
 In diesem Beispiel wird die [**Fill**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.shapes.shape.fill.aspx)-Eigenschaft eines [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371) auf die vordefinierte Farbe [**Red**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.red.aspx) festgelegt.
 
@@ -48,11 +46,11 @@ Die folgende Abbildung zeigt den [**SolidColorBrush**](https://msdn.microsoft.co
 
 ![Ein gerenderter SolidColorBrush](images/brushes-solidcolorbrush.jpg)
 
-Wenn Sie einen [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) mit Code anstatt mit XAML definieren, sind die einzelnen benannten Farben als statische Eigenschaftswerte der [**Colors**](https://msdn.microsoft.com/library/windows/apps/windows.ui.colors)-Klasse verfügbar. Wenn Sie z. B. einen [**Color**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.solidcolorbrush.color.aspx)-Wert eines **SolidColorBrush** zum Darstellen der benannten Farbe „Orchid“ deklarieren möchten, legen Sie den **Color**-Wert auf den statischen Wert [**Colors.Orchid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.orchid.aspx) fest.
+Wenn Sie einen [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) mit Code anstatt mit XAML definieren, sind die einzelnen benannten Farben als statische Eigenschaftswerte der [**Colors**](https://msdn.microsoft.com/library/windows/apps/windows.ui.colors)-Klasse verfügbar. Wenn Sie z.B. einen [**Color**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.solidcolorbrush.color.aspx)-Wert eines **SolidColorBrush** zum Darstellen der benannten Farbe „Orchid“ deklarieren möchten, legen Sie den **Color**-Wert auf den statischen Wert [**Colors.Orchid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.orchid.aspx) fest.
 
 ### <a name="hexadecimal-color-values"></a>Hexadezimale Farbwerte
 
-Sie können eine Zeichenfolge im Hexadezimalformat verwenden, um präzise 24-Bit-Farbwerte mit 8-Bit-Alphakanal für einen [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) zu deklarieren. Zwei Zeichen im Bereich 0 bis F definieren die einzelnen Komponentenwerte. Die Reihenfolge der Komponentenwerte für die Hexadezimalzeichenfolge lautet wie folgt: Alphakanal (Deckkraft), roter Kanal, grüner Kanal und blauer Kanal (**ARGB**). Der Hexadezimalwert „#FFFF0000“ definiert z. B. ein vollständig deckendes Rot (Alpha=FF, Rot=FF, Grün=00 und Blau=00).
+Sie können eine Zeichenfolge im Hexadezimalformat verwenden, um präzise 24-Bit-Farbwerte mit 8-Bit-Alphakanal für einen [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) zu deklarieren. Zwei Zeichen im Bereich 0 bis F definieren die einzelnen Komponentenwerte. Die Reihenfolge der Komponentenwerte für die Hexadezimalzeichenfolge lautet wie folgt: Alphakanal (Deckkraft), roter Kanal, grüner Kanal und blauer Kanal (**ARGB**). Der Hexadezimalwert „#FFFF0000“ definiert z.B. ein vollständig deckendes Rot (Alpha=FF, Rot=FF, Grün=00 und Blau=00).
 
 In diesem XAML-Beispiel wird die [**Fill**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.shapes.shape.fill.aspx)-Eigenschaft eines [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371) auf den Hexadezimalwert „\#FFFF0000“ festgelegt. Das Ergebnis ist das gleiche wie bei der Verwendung der benannten Farbe [**Colors.Red**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.red.aspx).
 
@@ -64,7 +62,7 @@ In diesem XAML-Beispiel wird die [**Fill**](https://msdn.microsoft.com/library/w
 
 ### <a name="span-idpropertyelementsyntaxspanspan-idpropertyelementsyntaxspanspan-idpropertyelementsyntaxspanproperty-element-syntax"></a><span id="Property_element_syntax__"></span><span id="property_element_syntax__"></span><span id="PROPERTY_ELEMENT_SYNTAX__"></span>Syntax für Eigenschaftselemente
 
-Mithilfe der Syntax für Eigenschaftselemente können Sie einen [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) definieren. Diese Syntax ist ausführlicher als die zuvor gezeigten Methoden, und Sie können zusätzliche Eigenschaftswerte für ein Element angeben, wie z. B. die [**Opacity**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.brush.opacity.aspx) des Pinsels. Weitere Informationen zur XAML-Syntax, einschließlich der Syntax für Eigenschaftselemente, finden Sie unter [XAML-Übersicht](https://msdn.microsoft.com/library/windows/apps/Mt185595) und [Anleitung zur XAML-Syntax](https://msdn.microsoft.com/library/windows/apps/Mt185596).
+Mithilfe der Syntax für Eigenschaftselemente können Sie einen [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) definieren. Diese Syntax ist ausführlicher als die zuvor gezeigten Methoden, und Sie können zusätzliche Eigenschaftswerte für ein Element angeben, wie z.B. die [**Opacity**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.brush.opacity.aspx) des Pinsels. Weitere Informationen zur XAML-Syntax, einschließlich der Syntax für Eigenschaftselemente, finden Sie unter [XAML-Übersicht](https://msdn.microsoft.com/library/windows/apps/Mt185595) und [Anleitung zur XAML-Syntax](https://msdn.microsoft.com/library/windows/apps/Mt185596).
 
 In den vorhergehenden Beispielen kam die Zeichenfolge „SolidColorBrush“ in der Syntax nicht vor. Der erstellte Pinsel wird implizit und automatisch erstellt und ist Teil einer durchdachten Kurzschrift der XAML-Sprache, mit der die UI-Definition für die am häufigsten Anwendungsfälle unkompliziert gehalten wird. Im nächsten Beispiel werden ein [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371) und dann explizit der [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) als Elementwert für eine [**Rectangle.Fill**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.shapes.shape.fill.aspx)-Eigenschaft erstellt. Die [**Color**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.solidcolorbrush.color.aspx) von **SolidColorBrush** wird auf [**Blue**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.blue.aspx) und die [**Opacity**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.brush.opacity.aspx) auf 0,5 festgelegt.
 
@@ -84,7 +82,7 @@ Der [**GradientStop**](https://msdn.microsoft.com/library/windows/apps/BR210078)
 
 Die [**Color**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.gradientstop.color.aspx)-Eigenschaft des Farbverlaufsstopps gibt die Farbe am Farbverlaufsstopp an. Sie können diese Farbe mit einem vordefinierten Farbnamen oder mit hexadezimalen **ARGB**-Werten angeben.
 
-Die [**Offset**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.gradientstop.offset.aspx)-Eigenschaft eines [**GradientStop**](https://msdn.microsoft.com/library/windows/apps/BR210078) gibt die Position für jeden **GradientStop** entlang der Farbverlaufsachse an. Der **Offset** ist ein **double**-Wert zwischen 0 und 1. Mit einem**Offset** von 0 wird der **GradientStop** am Anfang der Farbverlaufsachse platziert, also in der Nähe des [**StartPoint**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.lineargradientbrush.startpoint.aspx). Ein **Offset** von 1 platziert den **GradientStop** am [**EndPoint**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.lineargradientbrush.endpoint.aspx). Ein sinnvoller [**LinearGradientBrush**](https://msdn.microsoft.com/library/windows/apps/BR210108) sollte mindestens über zwei **GradientStop**-Werte verfügen. Dabei sollte jeder **GradientStop** eine andere [**Color**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.gradientstop.color.aspx) und einen anderen **Offset** zwischen 0 und 1 aufweisen.
+Die [**Offset**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.gradientstop.offset.aspx)-Eigenschaft eines [**GradientStop**](https://msdn.microsoft.com/library/windows/apps/BR210078) gibt die Position für jeden **GradientStop** entlang der Farbverlaufsachse an. Der **Offset** ist ein **double**-Wert zwischen 0 und1. Mit einem**Offset** von 0 wird der **GradientStop** am Anfang der Farbverlaufsachse platziert, also in der Nähe des [**StartPoint**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.lineargradientbrush.startpoint.aspx). Ein **Offset** von 1 platziert den **GradientStop** am [**EndPoint**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.lineargradientbrush.endpoint.aspx). Ein sinnvoller [**LinearGradientBrush**](https://msdn.microsoft.com/library/windows/apps/BR210108) sollte mindestens über zwei **GradientStop**-Werte verfügen. Dabei sollte jeder **GradientStop** eine andere [**Color**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.gradientstop.color.aspx) und einen anderen **Offset** zwischen 0 und 1 aufweisen.
 
 Dieses Beispiel erstellt einen linearen Farbverlauf mit vier Farben, der zum Zeichnen eines [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371) verwendet wird.
 
@@ -140,7 +138,7 @@ So sieht der gerenderte [**ImageBrush**](https://msdn.microsoft.com/library/wind
 
 ## <a name="brushes-and-text"></a>Pinsel und Text
 
-Sie können mit Pinseln auch Renderingmerkmale auf Textelemente anwenden. Die [**Foreground**](https://msdn.microsoft.com/library/windows/apps/BR209665)-Eigenschaft von [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) akzeptiert z. B. einen [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076). Sie können alle hier beschriebenen Pinsel auf Text anwenden. Seien Sie jedoch beim Anwenden von Pinseln auf Text vorsichtig, da der Text unlesbar werden kann. Dies ist z. B. der Fall, wenn die verwendeten Pinsel mit dem Hintergrund verlaufen, über dem der Text gerendert wird, oder von den Konturen der Textzeichen ablenken. Verwenden Sie den [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962), der i. d. R. keine negativen Auswirkungen auf die Lesbarkeit hat. Es sei denn, Sie möchten das Textelement besonders dekorativ gestalten.
+Sie können mit Pinseln auch Renderingmerkmale auf Textelemente anwenden. Die [**Foreground**](https://msdn.microsoft.com/library/windows/apps/BR209665)-Eigenschaft von [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) akzeptiert z.B. einen [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076). Sie können alle hier beschriebenen Pinsel auf Text anwenden. Seien Sie jedoch beim Anwenden von Pinseln auf Text vorsichtig, da der Text unlesbar werden kann. Dies ist z. B. der Fall, wenn die verwendeten Pinsel mit dem Hintergrund verlaufen, über dem der Text gerendert wird, oder von den Konturen der Textzeichen ablenken. Verwenden Sie den [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962), der i.d.R. keine negativen Auswirkungen auf die Lesbarkeit hat. Es sei denn, Sie möchten das Textelement besonders dekorativ gestalten.
 
 Achten Sie auch bei Volltonfarben immer darauf, dass die ausgewählte Textfarbe einen ausreichenden Kontrast zur Hintergrundfarbe des Layoutcontainers für den Text aufweist. Die Stärke des Kontrasts zwischen Textvordergrund und Textcontainer sollte im Hinblick auf die Barrierefreiheit festgelegt werden.
 
@@ -179,7 +177,6 @@ Codebeispiele finden Sie auf den Referenzseiten für [**WebViewBrush**](https://
  
 
  
-
 
 
 

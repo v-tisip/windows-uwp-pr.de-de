@@ -8,16 +8,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: e1a7b61d8f5dfe6ae3477f349d23674d700d002b
+keywords: windows10, UWP
 ms.openlocfilehash: 2dab2719eae86487b93b9030b430b84aea7b2737
-ms.lasthandoff: 02/04/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 ## <a name="windows-app-certification-kit-tests"></a>Tests im Zertifizierungskit für Windows-Apps
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Das Zertifizierungskit für Windows-Apps enthält eine Reihe von Tests, mit denen Sie sicherstellen können, dass eine App für die Veröffentlichung im Windows Store bereit ist.
 
@@ -37,7 +35,7 @@ Apps dürfen im Registrierungsschlüssel HKEY\-LOCAL\-MACHINE\\Software\\Microso
 
 Die App wird beim Zertifizierungstest durchgehend auf Flexibilität und Stabilität geprüft.
 
-Das Zertifizierungskit für Windows-Apps ruft [**IApplicationActivationManager::ActivateApplication**](https://msdn.microsoft.com/library/windows/desktop/Hh706903) auf, um Apps zu starten. Damit eine App mit **ActivateApplication** gestartet werden kann, muss die Benutzerkontensteuerung (UAC) aktiviert sein und die Bildschirmauflösung mindestens 1024 x 768 oder 768 x 1024 betragen. Ist eine dieser Bedingungen nicht erfüllt, fällt die App bei diesem Test durch.
+Das Zertifizierungskit für Windows-Apps ruft [**IApplicationActivationManager::ActivateApplication**](https://msdn.microsoft.com/library/windows/desktop/Hh706903) auf, um Apps zu starten. Damit eine App mit **ActivateApplication** gestartet werden kann, muss die Benutzerkontensteuerung (UAC) aktiviert sein und die Bildschirmauflösung mindestens 1024x768 oder 768x1024 betragen. Ist eine dieser Bedingungen nicht erfüllt, fällt die App bei diesem Test durch.
 
 ### <a name="corrective-actions"></a>Maßnahmen
 
@@ -59,7 +57,7 @@ Führen Sie für die Datei mit dem Problem eine Problembehandlung durch, um das 
 
 ### <a name="background"></a>Hintergrund
 
-Die Verwendung der Betriebssystemversionsinformationen ist für den Windows Store eingeschränkt. Diese wurde von Apps häufig fälschlicherweise zum Überprüfen der Betriebssystemversion verwendet, damit Benutzern spezielle Funktionen für eine bestimmte Betriebssystemversion von der App bereitgestellt werden können.
+Die Verwendung der Betriebssystemversionsinformationen ist für den WindowsStore eingeschränkt. Diese wurde von Apps häufig fälschlicherweise zum Überprüfen der Betriebssystemversion verwendet, damit Benutzern spezielle Funktionen für eine bestimmte Betriebssystemversion von der App bereitgestellt werden können.
 
 ### <a name="test-details"></a>Testdetails
 
@@ -75,7 +73,7 @@ Dieser Test stellt sicher, dass die App über einen Abbruchhandler für deklarie
 
 ### <a name="background"></a>Hintergrund
 
-Windows-Apps können einen Prozess registrieren, der im Hintergrund ausgeführt wird. Eine E-Mail-App kann z. B. von Zeit zu Zeit einen Pingbefehl an einen Server senden. Wenn das Betriebssystem diese Ressourcen jedoch benötigt, wird die Hintergrundaufgabe abgebrochen, und Apps sollten diesen Abbruch problemlos behandeln. Apps ohne Abbruchhandler stürzen u. U. ab oder werden nicht geschlossen, wenn der Benutzer versucht, die App zu schließen.
+Windows-Apps können einen Prozess registrieren, der im Hintergrund ausgeführt wird. Eine E-Mail-App kann z.B. von Zeit zu Zeit einen Pingbefehl an einen Server senden. Wenn das Betriebssystem diese Ressourcen jedoch benötigt, wird die Hintergrundaufgabe abgebrochen, und Apps sollten diesen Abbruch problemlos behandeln. Apps ohne Abbruchhandler stürzen u.U. ab oder werden nicht geschlossen, wenn der Benutzer versucht, die App zu schließen.
 
 ### <a name="test-details"></a>Testdetails
 
@@ -95,9 +93,9 @@ Dieser Test wurde gemäß der Store-Richtlinie implementiert.
 
 ### <a name="test-details"></a>Testdetails
 
-Für Windows Phone 8.1-Apps wird mit dem Test geprüft, ob die Gesamtzahl der APPX-Pakete im Bündel kleiner als &lt; 512 ist, ob nur ein Hauptpaket im Bündel vorhanden ist und ob die Architektur des Hauptpakets im Bündel als ARM oder neutral gekennzeichnet ist.
+Für Windows Phone8.1-Apps wird mit dem Test geprüft, ob die Gesamtzahl der APPX-Pakete im Bündel kleiner als &lt; 512 ist, ob nur ein Hauptpaket im Bündel vorhanden ist und ob die Architektur des Hauptpakets im Bündel als ARM oder neutral gekennzeichnet ist.
 
-Für Windows 10-Apps wird mit dem Test geprüft, ob die Revisionsnummer in der Version des Bündels auf 0 festgelegt ist.
+Für Windows10-Apps wird mit dem Test geprüft, ob die Revisionsnummer in der Version des Bündels auf 0 festgelegt ist.
 
 ### <a name="corrective-action"></a>Maßnahmen
 
@@ -117,7 +115,7 @@ Apps müssen ein korrekt formatiertes App-Manifest besitzen.
 
 -   **Dateierweiterungen und Protokolle**
 
-    Von der App können die Dateierweiterungen deklariert werden, die ihr zugeordnet werden sollen. Bei nicht korrekter Verwendung wird von einer App u. U. eine große Anzahl von Dateierweiterungen deklariert, von denen die meisten nicht verwendet werden. Darunter leidet die Benutzerfreundlichkeit. Mit diesem Test wird eine Überprüfung der Anzahl von Dateierweiterungen durchgeführt, die einer App zugeordnet werden können.
+    Von der App können die Dateierweiterungen deklariert werden, die ihr zugeordnet werden sollen. Bei nicht korrekter Verwendung wird von einer App u.U. eine große Anzahl von Dateierweiterungen deklariert, von denen die meisten nicht verwendet werden. Darunter leidet die Benutzerfreundlichkeit. Mit diesem Test wird eine Überprüfung der Anzahl von Dateierweiterungen durchgeführt, die einer App zugeordnet werden können.
 
 -   **Frameworkabhängigkeitsregel**
 
@@ -127,7 +125,7 @@ Apps müssen ein korrekt formatiertes App-Manifest besitzen.
 
 -   **Überprüfung der prozessübergreifenden Kommunikation (Inter-process Communication, IPC)**
 
-    Dieser Test setzt die Anforderung durch, dass Windows Store-Apps außerhalb des App-Containers nicht mit Desktopkomponenten kommunizieren. Die prozessübergreifende Kommunikation ist nur für quergeladene Apps vorgesehen. Apps, die für [**ActivatableClassAttribute**](https://msdn.microsoft.com/library/windows/apps/BR211414) den Namen „DesktopApplicationPath“ angeben, bestehen diesen Test nicht.
+    Dieser Test setzt die Anforderung durch, dass WindowsStore-Apps außerhalb des App-Containers nicht mit Desktopkomponenten kommunizieren. Die prozessübergreifende Kommunikation ist nur für quergeladene Apps vorgesehen. Apps, die für [**ActivatableClassAttribute**](https://msdn.microsoft.com/library/windows/apps/BR211414) den Namen „DesktopApplicationPath“ angeben, bestehen diesen Test nicht.
 
 ### <a name="corrective-action"></a>Maßnahmen
 
@@ -187,7 +185,7 @@ Ein Ausnahmehandler wird ausgeführt, wenn in der App eine Ausnahmebedingung auf
 
 **Was ist zu tun, wenn die App den Test nicht besteht?**
 
-Aktivieren Sie beim Erstellen der App die Option "/SAFESEH" im Linker-Befehl. Diese Option ist in den Veröffentlichungskonfigurationen von Visual Studio standardmäßig aktiviert. Vergewissern Sie sich, dass diese Option in den Erstellungsanweisungen für alle alle ausführbaren Module Ihrer App aktiviert ist.
+Aktivieren Sie beim Erstellen der App die Option "/SAFESEH" im Linker-Befehl. Diese Option ist in den Veröffentlichungskonfigurationen von VisualStudio standardmäßig aktiviert. Vergewissern Sie sich, dass diese Option in den Erstellungsanweisungen für alle alle ausführbaren Module Ihrer App aktiviert ist.
 
 **Anmerkungen**
 
@@ -221,7 +219,7 @@ Aktivieren Sie beim Erstellen der App die Option "/DYNAMICBASE" im Linker-Befehl
 
 ASLR hat in der Regel keine Auswirkungen auf die Leistung. In einigen Szenarios ist auf 32-Bit-Systemen aber eine geringfügige Leistungsverbesserung zu beobachten. Es ist möglich, dass sich die Leistung bei einem stark belasteten System verschlechtert, bei dem viele Bilder an vielen unterschiedlichen Speicherbereichen geladen sind.
 
-Dieser Test wird nur für Apps ausgeführt, die in verwaltetem Code geschrieben wurden, z. B. mit C# oder .NET Framework.
+Dieser Test wird nur für Apps ausgeführt, die in verwaltetem Code geschrieben wurden, z.B. mit C# oder .NET Framework.
 
 ### <a name="span-idbinscope-5spanreadwrite-shared-pe-section"></a><span id="binscope-5"></span>Lesen/Schreiben des freigegebenen PE-Abschnitts
 
@@ -235,7 +233,7 @@ Entfernen Sie sämtliche freigegebenen Abschnitte aus der App, und erstellen Sie
 
 **Anmerkungen**
 
-Dieser Test wird nur für Apps ausgeführt, die in nicht verwalteten Sprachen geschrieben wurden, z. B. mit C oder C++.
+Dieser Test wird nur für Apps ausgeführt, die in nicht verwalteten Sprachen geschrieben wurden, z.B. mit C oder C++.
 
 ### <a name="appcontainercheck"></a>AppContainerCheck
 
@@ -247,7 +245,7 @@ Der AppContainerCheck-Test prüft, ob das **appcontainer**-Bit im PE-Header eine
 
 Wenn der Test für eine systemeigene ausführbare Datei nicht erfolgreich ist, stellen Sie sicher, dass Sie zum Erstellen der Datei den aktuellen Compiler und Linker und für den Linker das Kennzeichen */appcontainer* verwenden.
 
-Wenn der Test für eine verwaltete ausführbare Datei nicht erfolgreich ist, stellen Sie sicher, dass Sie zum Erstellen der Windows Store-App den aktuellen Compiler und Linker wie beispielsweise Microsoft Visual Studio verwenden.
+Wenn der Test für eine verwaltete ausführbare Datei nicht erfolgreich ist, stellen Sie sicher, dass Sie zum Erstellen der WindowsStore-App den aktuellen Compiler und Linker wie beispielsweise Microsoft Visual Studio verwenden.
 
 **Anmerkungen**
 
@@ -299,7 +297,7 @@ Signaturdateien für privaten Code sollten privat bleiben, da sie im Fall einer 
 
 ### <a name="corrective-actions"></a>Maßnahmen
 
-Entfernen Sie alle Signaturschlüssel für privaten Code (z. B. PFX- und SNK-Dateien) aus dem Paket.
+Entfernen Sie alle Signaturschlüssel für privaten Code (z.B. PFX- und SNK-Dateien) aus dem Paket.
 
 ## <a name="supported-api-test"></a>Test der unterstützten APIs
 
@@ -328,7 +326,7 @@ Prüfen Sie die Fehlermeldungen, um die von der App verwendete API zu identifizi
 
 Die App muss schnell auf Benutzerinteraktionen und Systembefehle reagieren, um Benutzern eine schnelle und flüssige Benutzeroberfläche zu bieten.
 
-Die Merkmale des Computers, auf dem der Test ausgeführt wird, können die Testergebnisse beeinflussen. Die Schwellenwerte des Leistungstests für die App-Zertifizierung sind so festgelegt, dass Computer mit geringem Energieverbrauch die Erwartungen der Kunden an eine schnelle und flüssige Benutzeroberfläche erfüllen. Um die Leistung Ihrer App zu ermitteln, empfehlen wir, die App auf einem PC mit geringem Energieverbrauch (z. B. einem PC mit Intel Atom-Prozessor) bei einer Auflösung von mindestens 1366 x 768 und mit einem herkömmlichen Festplattenlaufwerk (im Gegensatz zu einem Festkörperlaufwerk) zu testen.
+Die Merkmale des Computers, auf dem der Test ausgeführt wird, können die Testergebnisse beeinflussen. Die Schwellenwerte des Leistungstests für die App-Zertifizierung sind so festgelegt, dass Computer mit geringem Energieverbrauch die Erwartungen der Kunden an eine schnelle und flüssige Benutzeroberfläche erfüllen. Um die Leistung Ihrer App zu ermitteln, empfehlen wir, die App auf einem PC mit geringem Energieverbrauch (z.B. einem PC mit Intel Atom-Prozessor) bei einer Auflösung von mindestens 1366x768 und mit einem herkömmlichen Festplattenlaufwerk (im Gegensatz zu einem Festkörperlaufwerk) zu testen.
 
 ### <a name="bytecode-generation"></a>Generierung von Bytecode
 
@@ -456,7 +454,7 @@ Orientieren Sie sich an der folgenden Tabelle.
 <p>In der Datei „resources.pri” ist keine Standardressource angegeben.</p>
 </td><td>
 <p>Weitere Informationen finden Sie unter <a href="https://msdn.microsoft.com/library/windows/apps/xaml/hh465241.aspx">Richtlinien für App-Ressourcen</a>.</p>
-<p>In der Standardbuildkonfiguration nimmt Visual Studio nur Bildressourcen mit der Skalierung 200 % in das App-Paket auf, wenn ein Bündel generiert wird, andere Ressourcen werden im Ressourcenpaket abgelegt. Stellen Sie sicher, dass Sie entweder Bildressourcen mit der Skalierung 200 % einschließen oder Ihr Projekt für die Aufnahme der vorhandenen Ressourcen konfigurieren.</p>
+<p>In der Standardbuildkonfiguration nimmt Visual Studio nur Bildressourcen mit der Skalierung 200% in das App-Paket auf, wenn ein Bündel generiert wird, andere Ressourcen werden im Ressourcenpaket abgelegt. Stellen Sie sicher, dass Sie entweder Bildressourcen mit der Skalierung 200% einschließen oder Ihr Projekt für die Aufnahme der vorhandenen Ressourcen konfigurieren.</p>
 </td></tr>
 <tr><td>
 <p>In der Datei „resources.pri“ ist kein Ressourcenwert angegeben.</p>
@@ -464,17 +462,17 @@ Orientieren Sie sich an der folgenden Tabelle.
 <p>Stellen Sie sicher, dass für das App-Manifest gültige Ressourcen in „resources.pri“ definiert sind.</p>
 </td></tr>
 <tr><td>
-<p>Die Bilddatei „{Dateiname}“ muss kleiner als 204.800 Bytes sein.\*\*</p>
+<p>Die Bilddatei „{Dateiname}“ muss kleiner als 204.800Bytes sein.\*\*</p>
 </td><td>
 <p>Verringern Sie die Größe der angegebenen Bilder.</p>
 </td></tr>
 <tr><td>
 <p>Die Datei „{Dateiname}“ darf keinen Abschnitt mit umgekehrter Zuordnung enthalten.\*\*</p>
 </td><td>
-<p>Die umgekehrte Zuordnung wird zwar während des Debuggens mit F5 in Visual Studio beim Aufrufen von „makepri.exe“ generiert, sie kann jedoch entfernt werden, indem „makepri.exe“ beim Generieren einer PRI-Datei ohne den Parameter „/m“ ausgeführt wird.</p>
+<p>Die umgekehrte Zuordnung wird zwar während des Debuggens mit F5 in VisualStudio beim Aufrufen von „makepri.exe“ generiert, sie kann jedoch entfernt werden, indem „makepri.exe“ beim Generieren einer PRI-Datei ohne den Parameter „/m“ ausgeführt wird.</p>
 </td></tr>
 <tr><td colspan="2">
-<p>\*\* bedeutet, dass der Version 3.3 des Zertifizierungskits für Windows-Apps für Windows 8.1 ein Test hinzugefügt wurde, der nur bei der Verwendung dieser oder einer höheren Version des Kits anwendbar ist.</p>
+<p>\*\* bedeutet, dass der Version3.3 des Zertifizierungskits für Windows-Apps für Windows 8.1 ein Test hinzugefügt wurde, der nur bei der Verwendung dieser oder einer höheren Version des Kits anwendbar ist.</p>
 </td></tr>
 </table>
 
@@ -488,7 +486,7 @@ Windows Store-Apps sollten vollständig und betriebsbereit sein. Apps, für die 
 
 ### <a name="test-details"></a>Testdetails
 
-Bei diesem Test wird sichergestellt, dass die von der App verwendeten Bilder keine Standardbilder aus SDK-Beispielen oder aus Visual Studio sind.
+Bei diesem Test wird sichergestellt, dass die von der App verwendeten Bilder keine Standardbilder aus SDK-Beispielen oder aus VisualStudio sind.
 
 ### <a name="corrective-actions"></a>Maßnahmen
 
@@ -532,25 +530,25 @@ Testet den Inhalt der App-Pakete, um sicherzustellen, dass darin die richtige Da
 
 ### <a name="direct3d-feature-level-support"></a>Test auf Unterstützung der Direct3D-Featureebene
 
-Testet Microsoft Direct3D-Apps, um sicherzustellen, dass sie auf Geräten mit älterer Grafikhardware nicht abstürzen.
+Testet MicrosoftDirect3D-Apps, um sicherzustellen, dass sie auf Geräten mit älterer Grafikhardware nicht abstürzen.
 
 ### <a name="background"></a>Hintergrund
 
-Für den Windows Store ist es erforderlich, dass alle Anwendungen mit Direct3D bei Grafikkarten der Featureebene 9\-1 richtig gerendert bzw. ordnungsgemäß beendet werden.
+Für den Windows Store ist es erforderlich, dass alle Anwendungen mit Direct3D bei Grafikkarten der Featureebene9\-1 richtig gerendert bzw. ordnungsgemäß beendet werden.
 
 Da die Benutzer die Grafikhardware ihrer Geräte nach der Installation der App ändern können, muss Ihre App für den Fall, dass Sie eine Featureebene höher als 9\-1 verwenden, beim Start erkennen, ob die aktuelle Hardware die Mindestanforderungen erfüllt. Wenn die Mindestanforderungen nicht erfüllt sind, muss Ihre App dem Benutzer eine Meldung mit den Direct3D-Anforderungen anzeigen. Wird zudem eine App auf ein Gerät heruntergeladen, mit dem sie nicht kompatibel ist, sollte sie dies beim Start erkennen und dem Kunden eine Meldung bezüglich der erforderlichen Voraussetzungen anzeigen.
 
 ### <a name="test-details"></a>Testdetails
 
-Bei diesem Test wird überprüft, ob Apps unter der Featureebene 9\-1 richtig gerendert werden.
+Bei diesem Test wird überprüft, ob Apps unter der Featureebene9\-1 richtig gerendert werden.
 
 ### <a name="corrective-action"></a>Maßnahmen
 
-Stellen Sie sicher, dass die App unter der Direct3D-Featureebene 9\-1 richtig gerendert wird. Dies gilt auch, wenn die App für die Ausführung auf einer höheren Featureebene bestimmt ist. Weitere Informationen finden Sie unter [Entwickeln für unterschiedliche Direct3D-Featureebenen](http://go.microsoft.com/fwlink/p/?LinkID=253575).
+Stellen Sie sicher, dass die App unter der Direct3D-Featureebene9\-1 richtig gerendert wird. Dies gilt auch, wenn die App für die Ausführung auf einer höheren Featureebene bestimmt ist. Weitere Informationen finden Sie unter [Entwickeln für unterschiedliche Direct3D-Featureebenen](http://go.microsoft.com/fwlink/p/?LinkID=253575).
 
 ### <a name="direct3d-trim-after-suspend"></a>Direct3D-Kürzung nach dem Anhalten
 
-> **Hinweis**  Dieser Test gilt nur für Windows Store-Apps, die für Windows 8.1 und höher entwickelt wurden.
+> **Hinweis**  Dieser Test gilt nur für Windows Store-Apps, die für Windows8.1 und höher entwickelt wurden.
 
 ### <a name="background"></a>Hintergrund
 
@@ -640,7 +638,7 @@ Es wird sichergestellt, dass von Anwendungen während der Installation keine Unt
 
 ### <a name="background"></a>Hintergrund
 
-Komponenten des Betriebssystems (z. B. Trident, WWAHost usw.) sind für Dateisystempfade intern auf den MAX\-PATH-Wert begrenzt und funktionieren nicht ordnungsgemäß, wenn längere Pfade verwendet werden.
+Komponenten des Betriebssystems (z.B. Trident, WWAHost usw.) sind für Dateisystempfade intern auf den MAX\-PATH-Wert begrenzt und funktionieren nicht ordnungsgemäß, wenn längere Pfade verwendet werden.
 
 ### <a name="test-details"></a>Testdetails
 
@@ -668,11 +666,10 @@ Wenn für Apps im Manifest keine Hintergrundaufgabe angegeben ist, gilt der Test
 
 Aktualisieren Sie den JavaScript-Hintergrundcode so, dass „Close()” richtig aufgerufen wird.
 
-> **Hinweis**  Dieser Artikel ist für Windows 10-Entwickler gedacht, die UWP-Apps schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **Hinweis**  Dieser Artikel ist für Windows10-Entwickler gedacht, die UWP-Apps schreiben. Wenn Sie für Windows8.x oder Windows Phone8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
  
 
  
-

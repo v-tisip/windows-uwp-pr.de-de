@@ -2,13 +2,11 @@
 author: TylerMSFT
 Description: "Problembehandlung bei Ereignissen und Fehlern der Microsoft-Prüfung mithilfe der Ereignisanzeige."
 title: "Problembehandlung bei Microsoft Prüfung mithilfe der Ereignisanzeige."
-translationtype: Human Translation
-ms.sourcegitcommit: f2838d95da66eda32d9cea725a33fc4084d32359
 ms.openlocfilehash: 1b99b959cfdde997f7995c1bdf40d51921b2f1d5
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# Problembehandlung bei Microsoft Prüfung mithilfe der Ereignisanzeige.
+# <a name="troubleshoot-microsoft-take-a-test-with-the-event-viewer"></a>Problembehandlung bei Microsoft Prüfung mithilfe der Ereignisanzeige.
 
 Sie können die Ereignisanzeige nutzen um sich Ereignisse und Fehler der Prüfung anzeigen zu lassen. Prüfung protokolliert Ereignisse, wenn eine Sperrmodus-Anforderung empfangen wurde, wenn eine Geräteregistrierung erfolgreich war, die Sperrmodusrichtlinien erfolgreich angewendet wurden und vieles mehr.
 
@@ -20,9 +18,3 @@ So aktivieren Sie Ereignisse in der Ereignisanzeige
 So speichern Sie die Ereignisprotokolle
 1. Rechtsklick `Operational`
 2. Klick `Save All Events As…`
-
-
-
-<!--HONumber=Aug16_HO3-->
-
-

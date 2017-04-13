@@ -2,21 +2,17 @@
 title: Zeilenstrips
 description: "Ein Zeilenstrip ist ein Grundtyp, der aus verbundenen Zeilensegmenten besteht. Die Anwendung kann Zeilenstrips verwenden, um offene Polygone zu erstellen. Bei einem geschlossenes Polygon handelt es sich um ein Polygon, deren letzte Vertex über ein Liniensegment mit ihrem ersten Scheitelpunkt verbunden ist."
 ms.assetid: 6E8C58E1-B463-44FD-A69F-81CCBF25D856
-keywords:
-- Zeilenstrips
+keywords: Zeilenstrips
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 5fe51d8e07f064da6ef3ba1ad32060a014a31d97
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 316a036ca4460e9f1c9b8cafa7aa7a7f4dfe9174
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="line-strips"></a>Zeilenstrips
 
 
@@ -25,7 +21,7 @@ Ein Zeilenstrip ist eine Grundform, die aus verbundenen Zeilensegmenten besteht.
 ## <a name="span-idexamplespanspan-idexamplespanspan-idexamplespanexample"></a><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Beispiel
 
 
-Die folgende Abbildung zeigt einen gerenderten Zeilenstrip.
+Die folgende Abbildungzeigt einen gerenderten Zeilenstrip.
 
 ![Abbildung eines Zeilenstrips](images/linstrip.gif)
 
@@ -66,7 +62,6 @@ d3dDevice->DrawPrimitive( D3DPT_LINESTRIP, 0, 5 );
  
 
  
-
 
 
 

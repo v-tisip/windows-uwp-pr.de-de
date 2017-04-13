@@ -8,21 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, debuggen, testen, leistung"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a7ce6c003c24a1efd03cc48419438b59e4f2ec11
-ms.lasthandoff: 02/07/2017
-
+keywords: windows10, uwp, debuggen, testen, leistung
+ms.openlocfilehash: 6f399136be121288dcff4b482f9e022fc0323181
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
+# <a name="deploying-and-debugging-uwp-apps"></a>Bereitstellen und Debuggen von UWP-Apps
 
-# <a name="deploying-and-debugging-universal-windows-platform-uwp-apps"></a>Bereitstellen und Debuggen von UWP (Universelle Windows-Plattform)-Apps
-
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UPW-Apps unter Windows 10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Dieser Artikel führt Sie Schritt für Schritt durch die Ausrichtung Ihrer Apps auf verschiedene Bereitstellungs- und Debugziele.
 
-Microsoft Visual Studio ermöglicht es Ihnen, Ihre UWP-Apps (Universelle Windows-Plattform) auf einer Vielzahl von Windows 10-Geräten bereitzustellen und zu debuggen. Das Erstellen und Registrieren der App auf dem Zielgerät wird von Visual Studio abgewickelt.
+Microsoft Visual Studio ermöglicht es Ihnen, Ihre UWP-Apps (Universelle Windows-Plattform) auf einer Vielzahl von Windows10-Geräten bereitzustellen und zu debuggen. Das Erstellen und Registrieren der App auf dem Zielgerät wird von Visual Studio abgewickelt.
 
 ## <a name="picking-a-deployment-target"></a>Auswählen eines Bereitstellungsziels
 
@@ -44,12 +41,12 @@ Darüber hinaus kann über den Menübefehl **Debuggen**, **Andere**, **Installie
 
 ![Dialogfeld „Installiertes App-Paket debuggen"](images/gs-debug-uwp-apps-002.png)   
 
-Bei der Auswahl von **Eigenen Code zunächst nicht starten, sondern debuggen** wird der Visual Studio-Debugger an Ihre UWP-App angehängt, sobald Sie ihn starten. Dies bietet eine effektive Möglichkeit zum Debuggen von Steuerelementpfaden über [verschiedene Startmethoden](../xbox-apps/automate-launching-uwp-apps.md) (z. B. die Protokollaktivierung mit benutzerdefinierten Parametern).  
+Bei der Auswahl von **Eigenen Code zunächst nicht starten, sondern debuggen** wird der Visual Studio-Debugger an Ihre UWP-App angehängt, sobald Sie ihn starten. Dies bietet eine effektive Möglichkeit zum Debuggen von Steuerelementpfaden über [verschiedene Startmethoden](../xbox-apps/automate-launching-uwp-apps.md) (z.B. die Protokollaktivierung mit benutzerdefinierten Parametern).  
 
-UWP-Apps können unter Windows 8.1 oder höher entwickelt und kompiliert werden. Sie müssen jedoch unter Windows 10 ausgeführt werden. Wenn Sie eine UWP-App auf einem PC unter Windows 8.1 entwickeln, können Sie eine auf einem anderen Windows 10-Gerät ausgeführte UWP-App remote debuggen. Der Host und der Zielcomputer müssen sich im selben LAN befinden. Laden Sie hierzu auf beiden Computern die [Remotetools für Visual Studio](https://www.visualstudio.com/downloads/) herunter, und installieren Sie sie. Die installierte Version muss der installierten Version von Visual Studio entsprechen. Die ausgewählte Architektur der Auswahl (x86, x64) muss mit der Architektur der Ziel-App übereinstimmen.   
+UWP-Apps können unter Windows8.1 oder höher entwickelt und kompiliert werden. Sie müssen jedoch unter Windows10 ausgeführt werden. Wenn Sie eine UWP-App auf einem PC unter Windows8.1 entwickeln, können Sie eine auf einem anderen Windows10-Gerät ausgeführte UWP-App remote debuggen. Der Host und der Zielcomputer müssen sich im selben LAN befinden. Laden Sie hierzu auf beiden Computern die [Remotetools für Visual Studio](https://www.visualstudio.com/downloads/) herunter, und installieren Sie sie. Die installierte Version muss der installierten Version von Visual Studio entsprechen. Die ausgewählte Architektur der Auswahl (x86, x64) muss mit der Architektur der Ziel-App übereinstimmen.   
 
 ## <a name="package-layout"></a>Paketlayout
-In Visual Studio 2015 Update 3 wurde für Entwickler die Option hinzugefügt, den Layoutpfad für ihre UWP-Apps anzugeben. Hiermit wird festgelegt, an welchen Ort auf dem Datenträger das Paketlayout beim Erstellen der App kopiert wird. In der Standardeinstellung wird diese Eigenschaft relativ zum Stammverzeichnis des Projekts festgelegt. Wenn Sie diese Eigenschaft nicht ändern, entspricht das Verhalten dem der früheren Versionen von Visual Studio.
+In Visual Studio2015 Update3 wurde für Entwickler die Option hinzugefügt, den Layoutpfad für ihre UWP-Apps anzugeben. Hiermit wird festgelegt, an welchen Ort auf dem Datenträger das Paketlayout beim Erstellen der App kopiert wird. In der Standardeinstellung wird diese Eigenschaft relativ zum Stammverzeichnis des Projekts festgelegt. Wenn Sie diese Eigenschaft nicht ändern, entspricht das Verhalten dem der früheren Versionen von Visual Studio.
 
 Diese Eigenschaft kann in den **Debug**-Eigenschaften des Projekts geändert werden.
 
@@ -95,7 +92,7 @@ Suchen Sie dazu im Menü **Start** nach **Remotedebugger**, öffnen Sie den Debu
 
 Um die Einstellung in **Keine Authentifizierung** zu ändern, wechseln Sie unter **Remotedebugger** zu **Extras** -&gt; **Optionen**, und legen Sie **Keine Authentifizierung** fest. Nach dem Einrichten des Remotedebuggers müssen Sie zudem sicherstellen, dass das Hostgerät auf [Entwicklermodus](https://msdn.microsoft.com/windows/uwp/get-started/enable-your-device-for-development) gesetzt wurde. Anschließend können Sie die Bereitstellung über Ihren Entwicklungscomputer ausführen.
 
-Weitere Informationen finden Sie auf der Downloadseite für [Remotetools für Visual Studio](http://go.microsoft.com/fwlink/p/?LinkId=717039).
+Weitere Informationen finden Sie im [Visual Studio Download Center](https://www.visualstudio.com/downloads/).
 
 ## <a name="authentication-modes"></a>Authentifizierungsmodi
 
@@ -106,7 +103,7 @@ Für die Bereitstellung auf Remotecomputern gibt es drei Authentifizierungsmodi:
 - **Keine**: Dieser Authentifizierungsmodus sollte nur für die Bereitstellung auf Remote-PCs (Desktop oder Laptop) verwendet werden. Verwenden Sie diese Authentifizierungsmoduseinstellung, wenn Sie einen Testcomputer in einer Umgebung eingerichtet haben, bei der die Anmeldung über ein Testkonto erfolgte und keine Anmeldeinformationen eingegeben werden können. Die Remotedebuggereinstellungen müssen so festgelegt sein, dass sie den Modus „Keine Authentifizierung“ akzeptieren.
 
 ## <a name="advanced-remote-deployment-options"></a>Erweiterte Remotebereitstellungsoptionen
-Mit der Veröffentlichung von Visual Studio 2015 Update 3 und Windows 10 Anniversary Update sind neue erweiterte Remotebereitstellungsoptionen für bestimmte Windows 10-Geräte verfügbar. Die erweiterten Optionen für Remotebereitstellung finden Sie im Menü **Debuggen** für die Projekteigenschaften.
+Mit der Veröffentlichung von Visual Studio2015 Update3 und Windows10 Anniversary Update sind neue erweiterte Remotebereitstellungsoptionen für bestimmte Windows 10-Geräte verfügbar. Die erweiterten Optionen für Remotebereitstellung finden Sie im Menü **Debuggen** für die Projekteigenschaften.
 
 Zu den neuen Eigenschaften zählen:
 * Bereitstellungstyp
@@ -115,8 +112,8 @@ Zu den neuen Eigenschaften zählen:
 
 ### <a name="requirements"></a>Anforderungen
 Um die erweiterten Remotebereitstellungsoptionen verwenden zu können, müssen folgende Anforderungen erfüllt sein:
-* Visual Studio 2015 Update 3 muss mit Windows 10 Tools 1.4.1 (einschließlich des Windows 10 Anniversary Update-SDKs) installiert sein.
-* Ziel muss ein Windows 10 Anniversary Update-Xbox-Remotegerät sein
+* Visual Studio2015 Update3 muss mit Windows10 Tools1.4.1 (einschließlich des Windows10 Anniversary Update-SDKs) installiert sein.
+* Ziel muss ein Windows10 Anniversary Update-Xbox-Remotegerät sein
 * Verwenden des universellen Authentifizierungsmodus
 
 ### <a name="properties-pages"></a>Eigenschaftenseiten
@@ -134,7 +131,7 @@ Mit **Dateien auf Gerät kopieren** werden die Dateien über das Netzwerk physis
 Der beim **Kopieren von Dateien auf das Gerät** angegebene **Paketregistrierungspfad** ist der physische Speicherort auf dem Remotegerät, auf das die Dateien kopiert werden. Dieser Pfad kann als beliebiger relativer Pfad angegeben werden. Der Speicherort, an dem die Dateien bereitgestellt werden, ist relativ zum Stammverzeichnis der Entwicklungsdateien und daher je nach Zielgerät unterschiedlich. Es ist sinnvoll, diesen Pfad anzugeben, wenn mehrere Entwickler ein Gerät verwenden und an Paketen mit identischer Build-Abweichung arbeiten.
 
 > [!NOTE]
-> **Dateien auf Gerät kopieren** wird derzeit für Xbox unter Windows 10 Anniversary Update unterstützt.
+> **Dateien auf Gerät kopieren** wird derzeit für Xbox unter Windows10 Anniversary Update unterstützt.
 
 Auf dem Remotegerät wird das Layout je nach Gerätefamilie an folgenden Standardspeicherort kopiert:
   `Xbox: \\MY-DEVKIT\DevelopmentFiles\PACKAGE-REGISTRATION-PATH`
@@ -146,20 +143,20 @@ Um das Layout erfolgreich über das Netzwerk zu registrieren, müssen Sie zunäc
 
 Hilfe hierzu bieten die folgenden Beispiele:
 
-- Beispiel 1 (lokaler Layoutordner, auf den als Netzwerkfreigabe zugegriffen werden kann):
+- Beispiel1 (lokaler Layoutordner, auf den als Netzwerkfreigabe zugegriffen werden kann):
   * **Ordnerpfad des Layouts** = `D:\Layouts\App1`
   * **Paketregistrierungspfad** = `\\NETWORK-SHARE\Layouts\App1`
 
-- Beispiel 2 (Netzwerk-Layoutordner):
+- Beispiel2 (Netzwerk-Layoutordner):
   * **Ordnerpfad des Layouts** = `\\NETWORK-SHARE\Layouts\App1`
   * **Paketregistrierungspfad** = `\\NETWORK-SHARE\Layouts\App1`
 
-Wenn Sie das Layout zunächst über das Netzwerk registrieren, werden Ihre Anmeldeinformationen auf dem Zielgerät zwischengespeichert, sodass Sie sich nicht immer wieder anmelden müssen. Um zwischengespeicherte Anmeldeinformationen zu entfernen, verwenden Sie [WinAppDeployCmd.exe Tool](https://msdn.microsoft.com/windows/uwp/packaging/install-universal-windows-apps-with-the-winappdeploycmd-tool) (Teil des Windows 10-SDKs) mit dem Befehl **Deletecreds**.
+Wenn Sie das Layout zunächst über das Netzwerk registrieren, werden Ihre Anmeldeinformationen auf dem Zielgerät zwischengespeichert, sodass Sie sich nicht immer wieder anmelden müssen. Um zwischengespeicherte Anmeldeinformationen zu entfernen, verwenden Sie [WinAppDeployCmd.exe Tool](https://msdn.microsoft.com/windows/uwp/packaging/install-universal-windows-apps-with-the-winappdeploycmd-tool) (Teil des Windows10-SDKs) mit dem Befehl **Deletecreds**.
 
 Beim Registrieren des Geräts über das Netzwerk können Sie **Alle Dateien auf dem Gerät beibehalten** nicht auswählen, da keine Dateien physisch auf das Remotegerät kopiert werden.
 
 > [!NOTE]
-> **Layout über das Netzwerk registrieren** wird derzeit für Xbox unter Windows 10 Anniversary Update unterstützt.
+> **Layout über das Netzwerk registrieren** wird derzeit für Xbox unter Windows10 Anniversary Update unterstützt.
 
 Auf dem Remotegerät wird das Layout je nach Gerätefamilie an folgendem Standardspeicherort registriert:
   `Xbox: \\MY-DEVKIT\DevelopmentFiles\XrfsFiles`
@@ -191,7 +188,7 @@ Sie können die folgenden Bereitstellungsoptionen auf der Eigenschaftenseite **D
 
 ## <a name="symbols"></a>Symbole
 
-Symboldateien enthalten eine Vielzahl von Daten, die sehr hilfreich beim Debuggen von Code sind (z. B. Variablen, Funktionsnamen und Adressen von Einsprungspunkten). Mit diesen Daten können Sie die Ausnahmen und Ausführungsreihenfolge von Aufruflisten besser überblicken. Über den [Microsoft-Symbolserver](http://msdl.microsoft.com/download/symbols) stehen Symbole für die meisten Windows-Varianten zur Verfügung. Für schnellere Offline-Lookups können Sie jedoch auch unter [Herunterladen von Windows-Symbolpaketen](http://aka.ms/winsymbols) heruntergeladen werden.
+Symboldateien enthalten eine Vielzahl von Daten, die sehr hilfreich beim Debuggen von Code sind (z.B. Variablen, Funktionsnamen und Adressen von Einsprungspunkten). Mit diesen Daten können Sie die Ausnahmen und Ausführungsreihenfolge von Aufruflisten besser überblicken. Über den [Microsoft-Symbolserver](http://msdl.microsoft.com/download/symbols) stehen Symbole für die meisten Windows-Varianten zur Verfügung. Für schnellere Offline-Lookups können Sie jedoch auch unter [Herunterladen von Windows-Symbolpaketen](http://aka.ms/winsymbols) heruntergeladen werden.
 
 Wählen Sie zum Festlegen von Symboloptionen für Visual Studio **Extras > Optionen** aus, und navigieren Sie im Dialogfeld zu **Debuggen > Symbole**.
 
@@ -229,4 +226,3 @@ Eine vollständige Liste aller WinDbg-Befehle finden Sie unter [Debuggerbefehle]
 ## <a name="related-topics"></a>Verwandte Themen
 - [Testen und Debuggen von Tools für die Prozesslebensdauer-Verwaltung (Process Lifetime Management, PLM)](testing-debugging-plm.md)
 - [Debugging, Tests und Leistung](index.md)
-

@@ -1,25 +1,23 @@
 ---
 author: mcleanbyron
 description: "Verwenden Sie diese Methode der Windows Store-Übermittlungs-API, um das Paketrollout für ein Flight-Paket anzuhalten."
-title: "Anhalten des Paketrollouts für ein Flight-Paket mithilfe der Windows Store-Übermittlungs-API"
+title: "Anhalten des Rollouts für ein Test-Flight"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Windows Store-Übermittlungs-API, Paketrollout, Flight-Übermittlung, anhalten"
+keywords: "Windows10, UWP, Windows Store-Übermittlungs-API, Paketrollout, Flight-Übermittlung, anhalten"
 ms.assetid: f8ee0687-a421-48e7-a6eb-3fd5633c352b
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: ad63a543027ca0a1927eb72c1a7a227788770998
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 804e447f5b650a986580752fcba2a29014560e98
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
+# <a name="halt-the-rollout-for-a-flight"></a>Anhalten des Rollouts für ein Test-Flight
 
-# <a name="halt-the-package-rollout-for-a-package-flight-using-the-windows-store-submission-api"></a>Anhalten des Paketrollouts für ein Flight-Paket mithilfe der Windows Store-Übermittlungs-API
+Verwenden Sie diese Methode der Windows Store-Übermittlungs-API zum [Anhalten des Rollouts](../publish/gradual-package-rollout.md#completing-the-rollout) für eine Flight-Paket-Übermittlung. Weitere Informationen zum Erstellungsprozess einer Flight-Paket-Übermittlung mithilfe der Windows Store-Übermittlungs-API finden Sie unter [Verwalten von Flight-Paket-Übermittlungen](manage-flight-submissions.md).
 
-
-Verwenden Sie diese Methode der Windows Store-Übermittlungs-API zum [Anhalten des Paketrollouts](../publish/gradual-package-rollout.md#completing-the-rollout) für eine Flight-Paket-Übermittlung. Weitere Informationen zum Erstellungsprozess einer Flight-Paket-Übermittlung mithilfe der Windows Store-Übermittlungs-API finden Sie unter [Verwalten von Flight-Paket-Übermittlungen](manage-flight-submissions.md).
+>**Hinweis**&nbsp;&nbsp;Wenn Sie das Rollout für eine Flight-Paket-Übermittlung anhalten und dann [eine neue Flight-Paket-Übermittlung erstellen](create-a-flight-submission.md), ist die neue Übermittlung ein Klon der angehaltenen Übermittlung.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -47,7 +45,7 @@ Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie V
 
 | Header        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorisierung | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;. |
+| Autorisierung | String | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
@@ -55,9 +53,9 @@ Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie V
 
 | Name        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | string | Erforderlich. Die Store-ID der App mit der Flight-Paket-Übermittlung, deren Paketrollout angehalten werden soll. Weitere Informationen zur Store-ID finden Sie unter [Anzeigen von Details zur App-Identität](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
-| flightId | string | Erforderlich. Die Store-ID des Flight-Pakets mit der Übermittlung, deren Paketrollout angehalten werden soll. Diese ID ist im Dev Center-Dashboard verfügbar und in den Antwortdaten für Anforderungen zum [Erstellen eines Flight-Pakets](create-a-flight.md) und zum [Abrufen von Flight-Paketen für eine App](get-flights-for-an-app.md) enthalten.  |
-| submissionId | string | Erforderlich. Die ID der Übermittlung mit dem Paketrollout, das angehalten werden soll. Diese ID ist im Dev Center-Dashboard verfügbar und in den Antwortdaten für Anforderungen zum [Erstellen einer Flight-Paket-Übermittlung](create-a-flight-submission.md) enthalten.  |
+| applicationId | String | Erforderlich. Die Store-ID der App mit der Flight-Paket-Übermittlung, deren Paketrollout angehalten werden soll. Weitere Informationen zur Store-ID finden Sie unter [Anzeigen von Details zur App-Identität](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
+| flightId | String | Erforderlich. Die Store-ID des Flight-Pakets mit der Übermittlung, deren Paketrollout angehalten werden soll. Diese ID ist im Dev Center-Dashboard verfügbar und in den Antwortdaten für Anforderungen zum [Erstellen eines Flight-Pakets](create-a-flight.md) und zum [Abrufen von Flight-Paketen für eine App](get-flights-for-an-app.md) enthalten.  |
+| submissionId | String | Erforderlich. Die ID der Übermittlung mit dem Paketrollout, das angehalten werden soll. Diese ID ist im Dev Center-Dashboard verfügbar und in den Antwortdaten für Anforderungen zum [Erstellen einer Flight-Paket-Übermittlung](create-a-flight-submission.md) enthalten.  |
 
 <span/>
 
@@ -81,7 +79,7 @@ Das folgende Beispiel veranschaulicht den JSON-Antworttext für einen erfolgreic
 ```json
 {
     "isPackageRollout": true,
-    "packageRolloutPercentage": 0,
+    "packageRolloutPercentage": 0.0,
     "packageRolloutStatus": "PackageRolloutStopped",
     "fallbackSubmissionId": "1212922684621243058"
 }
@@ -101,7 +99,6 @@ Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die A
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [Schrittweiser Paketrollout](../publish/gradual-package-rollout.md)
+* [Schrittweises Paketrollout](../publish/gradual-package-rollout.md)
 * [Verwalten von Flight-Paket-Übermittlungen mit der Windows Store-Übermittlungs-API](manage-flight-submissions.md)
 * [Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten](create-and-manage-submissions-using-windows-store-services.md)
-

@@ -2,25 +2,21 @@
 title: Diffuse Lichtzuordnungen
 description: "Matte Oberflächen haben diffuse Reflektionen."
 ms.assetid: D02E76DB-1DA8-4B51-86EF-4DDB07C02541
-keywords:
-- Diffuse Lichtzuordnungen
+keywords: Diffuse Lichtzuordnungen
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 8084e603e979d54dace2f3f60aa43f48e8f1df05
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8defe6c73c9e9d809d10a75ee6208ef6781f1162
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="diffuse-light-maps"></a>Diffuse Lichtzuordnungen
 
 
-Matte Oberflächen haben diffuse Reflektionen. Die Helligkeit eines diffusen Lichts hängt von der Entfernung von der Lichtquelle und dem Winkel zwischen der Oberflächen-Normalen und dem Richtungsvektor der Lichtquelle ab. Textur-Lichtzuordnungen können eine komplexe diffuse Beleuchtung simulieren.
+Matte Oberflächen haben diffuse Reflektionen. Die Helligkeit von diffusem Licht ist von der Entfernung zur Lichtquelle und dem Winkel zwischen der Oberflächennormale und dem Richtungsvektor der Lichtquelle abhängig. Textur-Lichtzuordnungen können eine komplexe diffuse Beleuchtung simulieren.
 
 Die von Beleuchtungsberechnungen simulierten diffusen Beleuchtungseffekte erzeugen nur allgemeine Effekte. Ihre Anwendung kann über Textur-Lichtzuordnungen eine komplexere diffuse Beleuchtung simulieren.
 
@@ -32,7 +28,6 @@ Die von Beleuchtungsberechnungen simulierten diffusen Beleuchtungseffekte erzeug
  
 
  
-
 
 
 

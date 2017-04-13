@@ -2,21 +2,17 @@
 title: Tiefenpuffer
 description: Ein Tiefenpuffer oder Z-Puffer speichert Tiefeninformationen. Diese steuern, welche Bereiche von Polygonen dargestellt werden.
 ms.assetid: BE83A1D7-D43D-4013-8817-EFD2B24DC58E
-keywords:
-- Tiefenpuffer
+keywords: Tiefenpuffer
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 541794ea7d5df8534ddfc3272957d0b66813d18c
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b33ca3f4c4557578a3f0878308db45281b315201
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="depth-buffers"></a>Tiefenpuffer
 
 
@@ -42,7 +38,7 @@ Obwohl die meisten Anwendungen dieses Feature nicht verwenden, ist es möglich, 
 
 Fast alle im Markt verfügbaren Hardwarebeschleuniger unterstützten die Z-Pufferung. Die Z-Pufferung ist daher heute der am häufigsten verwendeten Tiefenpuffer-Typ. Trotz ihrer breitflächigen Nutzung haben Z-Puffer Nachteile. Aufgrund der erforderlichen Berechnungen tendieren die generierten Z-Werte in einem Z-Puffer zu einer ungleichmäßigen Verteilung auf den Z-Puffer-Bereich (in der Regel zwischen 0,0 und 1,0 – einschließlich dieser beiden Randwerte).
 
-Besonders das Verhältnis zwischen den entfernten und nahen Clippingebenen wirkt sich stark auf die ungleichmäßige Verteilung der Z-Werte aus. Mit einem Distanzverhältnis von 100 zwischen entfernter Ebene und naher Ebene wird 90 Prozent des Pufferbereichs für die ersten 10 Prozent des Tiefenbereichs der Szene genutzt. Standardanwendungen im Unterhaltungsbereich oder visuelle Simulationen mit Szenen in Außenbereichen erfordern häufig ein Verhältnis zwischen entfernter und naher Ebene, das zwischen 1.000 und 10.000 liegt. Bei einem Verhältnis von 1.000 wird 98 Prozent des Bereichs für die erste 2 Prozent des Tiefenbereichs genutzt. Bei höheren Verhältnissen wird die Verteilung noch schlechter. Dies kann zu versteckten Oberflächenartefakten bei entfernten Objekten führen – insbesondere bei der Verwendung von 16-Bit-Tiefenpuffern (die am häufigsten unterstützten Bittiefe).
+Besonders das Verhältnis zwischen den entfernten und nahen Clippingebenen wirkt sich stark auf die ungleichmäßige Verteilung der Z-Werte aus. Mit einem Distanzverhältnis von 100 zwischen entfernter Ebene und naher Ebene wird 90 Prozent des Pufferbereichs für die ersten 10Prozent des Tiefenbereichs der Szene genutzt. Standardanwendungen im Unterhaltungsbereich oder visuelle Simulationen mit Szenen in Außenbereichen erfordern häufig ein Verhältnis zwischen entfernter und naher Ebene, das zwischen 1.000 und 10.000 liegt. Bei einem Verhältnis von 1.000 wird 98Prozent des Bereichs für die erste 2Prozent des Tiefenbereichs genutzt. Bei höheren Verhältnissen wird die Verteilung noch schlechter. Dies kann zu versteckten Oberflächenartefakten bei entfernten Objekten führen – insbesondere bei der Verwendung von 16-Bit-Tiefenpuffern (die am häufigsten unterstützten Bittiefe).
 
 Bei einem W-basierten Tiefenpuffer ist die Verteilung zwischen den nahen und entfernten Clippingebenen hingegen häufig gleichmäßiger als bei einem Z-Puffer. Der wichtigste Vorteil ist, dass das Entfernungsverhältnis zwischen den entfernten und nahen Clippingebenen kein Problem mehr darstellt. Anwendungen können so mit großen Maximalbereichen arbeiten und erhalten trotzdem eine relativ präzise Tiefenpufferung für nahe Punkte. Ein W-basierter Tiefenpuffer ist jedoch auch nicht perfekt. Manchmal kann es zu versteckten Oberflächenartefakten bei nahen Objekten kommen. Ein weiterer Nachteil des W-gepufferten Ansatzes liegt in der Hardwareunterstützung: Die W-Pufferung wird nicht so weitflächig unterstützt wie die Z-Pufferung.
 
@@ -58,7 +54,6 @@ Die tatsächlichen Interpretation eines Tiefenwerts ist je nach Renderer untersc
  
 
  
-
 
 
 

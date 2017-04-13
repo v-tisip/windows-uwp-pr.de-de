@@ -2,21 +2,17 @@
 title: BC6H-Format
 description: "Das BC6H-Format ist ein Format für die Texturkomprimierung, das „High Dynamic Range“-Farbräume (HDR) in Quelldaten unterstützt."
 ms.assetid: 6781D967-9262-4EE7-B354-7A6D0EA0498E
-keywords:
-- BC6H-Format
+keywords: BC6H-Format
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a1cc569adbf15876693e91ac92e6bd364a267cb7
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2bca4f5e86229a9b6ffc622a65628f1b588c9ac6
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="bc6h-format"></a>BC6H-Format
 
 
@@ -36,8 +32,8 @@ BC6H wird durch die folgenden DXGI\_FORMAT-Enumerationswerte angegeben:
 **Hinweis:** Das 16-Bit-Gleitkommaformat für Farbkanäle wird häufig als „halb”-Gleitkommaformat bezeichnet. Dieses Format hat das folgende Bit-Layout:
 |                       |                                                 |
 |-----------------------|-------------------------------------------------|
-| UF16 (Gleitkomma ohne Vorzeichen) | 5 Bit Exponent + 11 Bit Mantisse              |
-| SF16 (Gleitkomma mit Vorzeichen)   | 1 Bit mit Vorzeichen + 5 Bit Exponent + 10 Bit Mantisse |
+| UF16 (Gleitkomma ohne Vorzeichen) | 5Bit Exponent + 11Bit Mantisse              |
+| SF16 (Gleitkomma mit Vorzeichen)   | 1Bit mit Vorzeichen + 5Bit Exponent + 10Bit Mantisse |
 
  
 
@@ -45,7 +41,7 @@ BC6H wird durch die folgenden DXGI\_FORMAT-Enumerationswerte angegeben:
 
 Das BC6H-Format kann für Texturressourcen wie [Texture2D](https://msdn.microsoft.com/library/windows/desktop/bb205277) (einschließlich Arrays), Texture3D oder TextureCube (einschließlich Arrays verwendet werden. Das Format gilt ebenfalls für alle Mip-Map-Oberflächen, die mit diesen Ressourcen verbunden sind.
 
-BC6H verwendet eine feste Blockgröße von 16 Byte (128 Bit) und eine feste Kachelgröße von 4 × 4-Texel. Genau wie mit vorherigen BC-Formaten werden Texturbilder, die größer als die unterstützte Kachelgröße (4 × 4) sind, durch die Verwendung mehrerer Blöcke komprimiert. Diese Adressierungsidentität gilt auch für dreidimensionale Bilder, MIP-Maps, Cube-Zuordnungen und Texturarrays. Alle Bildkacheln müssen das gleiche Format aufweisen.
+BC6H verwendet eine feste Blockgröße von 16 Byte (128Bit) und eine feste Kachelgröße von 4×4-Texel. Genau wie mit vorherigen BC-Formaten werden Texturbilder, die größer als die unterstützte Kachelgröße (4×4) sind, durch die Verwendung mehrerer Blöcke komprimiert. Diese Adressierungsidentität gilt auch für dreidimensionale Bilder, MIP-Maps, Cube-Zuordnungen und Texturarrays. Alle Bildkacheln müssen das gleiche Format aufweisen.
 
 Einschränkungen des BC6H-Formats:
 
@@ -98,28 +94,28 @@ Die folgende Tabelle enthält die Anzahl und Werte der Bit für jedes der 14 mö
 
 | Modus | Partitionsindizes | Partition | Farbendpunkte                  | Modus-Bit      |
 |------|-------------------|-----------|----------------------------------|----------------|
-| 1    | 46 Bit           | 5 Bit    | 75 Bit (10.555, 10.555, 10.555) | 2 Bit (00)    |
-| 2    | 46 Bit           | 5 Bit    | 75 Bit (7666, 7666, 7666)       | 2 Bit (01)    |
-| 3    | 46 Bit           | 5 Bit    | 72 Bit (11.555, 11.444, 11.444) | 5 Bit (00010) |
-| 4    | 46 Bit           | 5 Bit    | 72 Bit (11.444, 11.555, 11.444) | 5 Bit (00110) |
-| 5    | 46 Bit           | 5 Bit    | 72 Bit (11.444, 11.444, 11.555) | 5 Bit (01010) |
-| 6    | 46 Bit           | 5 Bit    | 72 Bit (9555, 9555, 9555)       | 5 Bit (01110) |
-| 7    | 46 Bit           | 5 Bit    | 72 Bit (8666, 8555, 8555)       | 5 Bit (10010) |
-| 8    | 46 Bit           | 5 Bit    | 72 Bit (8555, 8666, 8555)       | 5 Bit (10110) |
-| 9    | 46 Bit           | 5 Bit    | 72 Bit (8555, 8555, 8666)       | 5 Bit (11010) |
-| 10   | 46 Bit           | 5 Bit    | 72 Bit (6666, 6666, 6666)       | 5 Bit (11110) |
-| 11   | 63 Bit           | 0 Bit    | 60 Bit (10.10, 10.10, 10.10)    | 5 Bit (00011) |
-| 12   | 63 Bit           | 0 Bit    | 60 Bit (11.9, 11.9, 11.9)       | 5 Bit (00111) |
-| 13   | 63 Bit           | 0 Bit    | 60 Bit (12.8, 12.8, 12.8)       | 5 Bit (01011) |
-| 14   | 63 Bit           | 0 Bit    | 60 Bit (16.4, 16.4, 16.4)       | 5 Bit (01111) |
+| 1    | 46Bit           | 5Bit    | 75Bit (10.555, 10.555, 10.555) | 2Bit (00)    |
+| 2    | 46Bit           | 5Bit    | 75Bit (7666, 7666, 7666)       | 2Bit (01)    |
+| 3    | 46Bit           | 5Bit    | 72Bit (11.555, 11.444, 11.444) | 5Bit (00010) |
+| 4    | 46Bit           | 5Bit    | 72Bit (11.444, 11.555, 11.444) | 5Bit (00110) |
+| 5    | 46Bit           | 5Bit    | 72Bit (11.444, 11.444, 11.555) | 5Bit (01010) |
+| 6    | 46Bit           | 5Bit    | 72Bit (9555, 9555, 9555)       | 5Bit (01110) |
+| 7    | 46Bit           | 5Bit    | 72Bit (8666, 8555, 8555)       | 5Bit (10010) |
+| 8    | 46Bit           | 5Bit    | 72Bit (8555, 8666, 8555)       | 5Bit (10110) |
+| 9    | 46Bit           | 5Bit    | 72Bit (8555, 8555, 8666)       | 5Bit (11010) |
+| 10   | 46Bit           | 5Bit    | 72Bit (6666, 6666, 6666)       | 5Bit (11110) |
+| 11   | 63Bit           | 0Bit    | 60Bit (10.10, 10.10, 10.10)    | 5Bit (00011) |
+| 12   | 63Bit           | 0Bit    | 60Bit (11.9, 11.9, 11.9)       | 5Bit (00111) |
+| 13   | 63Bit           | 0Bit    | 60Bit (12.8, 12.8, 12.8)       | 5Bit (01011) |
+| 14   | 63Bit           | 0Bit    | 60Bit (16.4, 16.4, 16.4)       | 5Bit (01111) |
 
  
 
-Jedes Format dieser Tabelle kann durch Modus-Bits eindeutig identifiziert werden. Die ersten zehn Modi werden für Kacheln mit zwei Regionen verwendet, wobei das Modus-Bitfeld entweder 2 oder 5 Bit lang sein kann. Diese Blöcke haben ebenfalls Felder für die komprimierten Farbendpunkte (72 oder 75 Bit), die Partition (5 Bit) und die Partitionsindizes (46 Bit).
+Jedes Format dieser Tabelle kann durch Modus-Bits eindeutig identifiziert werden. Die ersten zehn Modi werden für Kacheln mit zwei Regionen verwendet, wobei das Modus-Bitfeld entweder 2 oder 5Bit lang sein kann. Diese Blöcke haben ebenfalls Felder für die komprimierten Farbendpunkte (72 oder 75Bit), die Partition (5Bit) und die Partitionsindizes (46Bit).
 
-Für die komprimierten Farbendpunkte geben die Werte der obigen Tabelle die Genauigkeit der gespeicherten RGB-Endpunkte und die verwendete Anzahl der Bit für jeden Farbwert an. Modus 3 gibt z. B. einen Endpunkt der Farbe der Präzisionsebene 11 an sowie die Anzahl der Bit, die zur Speicherung der Deltawerte der transformierten Farbendpunkte Rot, Blau und Grün (je 5, 4 und 4) verwendet werden. Modus 10 verwendet keine Delta-Komprimierung und speichert stattdessen explizit alle vier Farbendpunkte.
+Für die komprimierten Farbendpunkte geben die Werte der obigen Tabelle die Genauigkeit der gespeicherten RGB-Endpunkte und die verwendete Anzahl der Bit für jeden Farbwert an. Modus 3 gibt z.B. einen Endpunkt der Farbe der Präzisionsebene 11 an sowie die Anzahl der Bit, die zur Speicherung der Deltawerte der transformierten Farbendpunkte Rot, Blau und Grün (je 5, 4 und 4) verwendet werden. Modus 10 verwendet keine Delta-Komprimierung und speichert stattdessen explizit alle vier Farbendpunkte.
 
-Die letzten vier Textblock-Modi werden für Kacheln mit einer Region verwendet, wobei das Modusfeld 5 Bit ist. Diese Blöcke verfügen über 5 Felder für die Endpunkte (60 Bit) und die komprimierten Indizes (63 Bit). Modus 11 (wie auch Modus 10) verwendet keine Delta-Komprimierung und speichert stattdessen explizit beide Farbendpunkte.
+Die letzten vier Textblock-Modi werden für Kacheln mit einer Region verwendet, wobei das Modusfeld 5Bit ist. Diese Blöcke verfügen über 5 Felder für die Endpunkte (60Bit) und die komprimierten Indizes (63Bit). Modus 11 (wie auch Modus 10) verwendet keine Delta-Komprimierung und speichert stattdessen explizit beide Farbendpunkte.
 
 Modi 10011, 10111, 11011 und 11111 (nicht dargestellt) sind reserviert. Verwenden Sie diese nicht in Ihrem Encoder. Wenn die Hardware in einem dieser angegebenen Modi ausgeführt wird, darf der resultierende dekomprimierte Block nur Nullen in allen Kanälen - mit Ausnahme des Alphakanals - enthalten.
 
@@ -127,18 +123,18 @@ Für BC6H muss der Alphakanal - unabhängig vom Modus - immer 1,0 zurückgeben.
 
 ### <a name="span-idbc6h-partition-setspanspan-idbc6h-partition-setspanspan-idbc6h-partition-setspanbc6h-partition-set"></a><span id="BC6H-partition-set"></span><span id="bc6h-partition-set"></span><span id="BC6H-PARTITION-SET"></span>Festlegen der BC6H-Partition
 
-Es gibt 32 mögliche Partitionen für eine Kachel mit zwei Regionen. Diese werden in der folgenden Tabelle definiert. Jeder 4 × 4-Block stellt eine einzelne Form dar.
+Es gibt 32 mögliche Partitionen für eine Kachel mit zwei Regionen. Diese werden in der folgenden Tabelle definiert. Jeder 4×4-Block stellt eine einzelne Form dar.
 
 ![Tabelle mit Sätzen von BC6H-Partitionen](images/bc6h-partition-sets.png)
 
-In dieser Tabelle mit Sätzen von Partitionen ist der fett formatierte und unterstrichene Eintrag der Speicherort des korrigierten Indexes für die Teilmenge 1 (diese wird mit einer Bit weniger angegeben). Der korrigierte Index der Teilmenge 0 ist immer 0, da die Partitionierung immer so angeordnet ist, dass der Index 0 sich immer in der Teilmenge 0 befindet. Die Partitionsreihenfolge wird von oben links nach unten rechts und von links nach rechts und dann von oben nach unten ausgeführt.
+In dieser Tabelle mit Sätzen von Partitionen ist der fett formatierte und unterstrichene Eintrag der Speicherort des korrigierten Indexes für die Teilmenge1 (diese wird mit einer Bit weniger angegeben). Der korrigierte Index der Teilmenge0 ist immer 0, da die Partitionierung immer so angeordnet ist, dass der Index0 sich immer in der Teilmenge0 befindet. Die Partitionsreihenfolge wird von oben links nach unten rechts und von links nach rechts und dann von oben nach unten ausgeführt.
 
 ## <a name="span-idbc6h-compressed-endpoint-formatspanspan-idbc6h-compressed-endpoint-formatspanspan-idbc6h-compressed-endpoint-formatspanbc6h-compressed-endpoint-format"></a><span id="BC6H-compressed-endpoint-format"></span><span id="bc6h-compressed-endpoint-format"></span><span id="BC6H-COMPRESSED-ENDPOINT-FORMAT"></span>Komprimiertes Endpunktformat für BC6H
 
 
 ![Bitfelder für komprimierte BC6H-Endpunktformate](images/bc6h-headers-med.png)
 
-Diese Tabelle zeigt die Bitfelder für die komprimierten Endpunkte als Funktion des Endpunktformats an, wobei jede Spalte eine Codierung und jede Zeile ein Bitfeld angibt. Dieser Ansatz nimmt 82 Bit für Kacheln mit zwei Regionen und 65 Bit für Kacheln mit einer Region in Anspruch. Beispiel: die ersten 5 Bit für die Codierung \[16 4\] einer Region (genauer gesagt: die Spalte ganz rechts) sind die Bit m\ [4:0\], die nächsten 10 Bit sind die Bit rw\ [9:0\] usw., wobei die letzten 6 Bit bw\ [10:15\] sind.
+Diese Tabelle zeigt die Bitfelder für die komprimierten Endpunkte als Funktion des Endpunktformats an, wobei jede Spalte eine Codierung und jede Zeile ein Bitfeld angibt. Dieser Ansatz nimmt 82Bit für Kacheln mit zwei Regionen und 65Bit für Kacheln mit einer Region in Anspruch. Beispiel: die ersten 5Bit für die Codierung \[16 4\] einer Region (genauer gesagt: die Spalte ganz rechts) sind die Bit m\ [4:0\], die nächsten 10Bit sind die Bit rw\ [9:0\] usw., wobei die letzten 6Bit bw\ [10:15\] sind.
 
 Die Feldnamen in der obigen Tabelle sind wie folgt definiert:
 
@@ -331,7 +327,6 @@ unsigned short finish_unquantize(int comp)
  
 
  
-
 
 
 

@@ -1,26 +1,22 @@
 ---
 title: Projektionstransformation
-description: "Ein Projektionstransformation steuert die internen Elemente der Kamera, z. B. die Auswahl einer Linse für eine Kamera. Dies ist der komplizierteste der drei Transformationstypen."
+description: "Ein Projektionstransformation steuert die internen Elemente der Kamera, z.B. die Auswahl einer Linse für eine Kamera. Dies ist der komplizierteste der drei Transformationstypen."
 ms.assetid: 378F205D-3800-4477-9820-5EBE6528B14A
-keywords:
-- Projektionstransformation
+keywords: Projektionstransformation
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 83679e9a41adcad68f1341328de4c03b10db08e5
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: cb6704383bafe9ee3e5785701c78f92e84b90b3d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="projection-transform"></a>Projektionstransformation
 
 
-Eine *Projektionstransformation* steuert die internen Elemente der Kamera, z. B. die Auswahl einer Linse für eine Kamera. Dies ist der komplizierteste der drei Transformationstypen.
+Eine *Projektionstransformation* steuert die internen Elemente der Kamera, z.B. die Auswahl einer Linse für eine Kamera. Dies ist der komplizierteste der drei Transformationstypen.
 
 Die Projektionsmatrix ist in der Regel eine Skalierung und perspektivische Projektion. Die Projektionstransformation konvertiert das Ansichtsfrustum in eine Quaderform. Da das nähergelegene Ende des Ansichtsfrustrums kleiner als das weiter entfernt liegende Ende, hat dies die Wirkung, dass näher bei der Kamera liegende Objekte erweitert werden. So wird Perspektive auf die Szene angewandt.
 
@@ -32,7 +28,7 @@ Die Ansichtsmatrix verschiebt die Kamera an den Ursprung, indem um -D in die z-R
 
 ![Abbildung der Verschiebungsmatrix](images/projmat2.png)
 
-Wenn die Verschiebungsmatrix mit der Projektionsmatrix multipliziert wird (T\*P), ergibt dies die zusammengesetzte Projektionsmatrix, wie in der folgenden Abbildung dargestellt.
+Wenn die Verschiebungsmatrix mit der Projektionsmatrix multipliziert wird (T\*P), ergibt dies die zusammengesetzte Projektionsmatrix, wie in der folgenden Abbildungdargestellt.
 
 ![Abbildung der zusammengesetzten Projektionsmatrix](images/projmat3.png)
 
@@ -63,7 +59,7 @@ Unabhängig von der Formel, für die Sie sich entscheiden, sollten Sie den Zₙ-
 
 Direct3D kann die w-Komponente eines Scheitelpunkts, der durch die Welt-, Ansichts- und Projektionsmatrizen umgewandelt wurde, für tiefenbasierte Berechnungen im Tiefenpuffer oder bei Nebeleffekten einsetzen. Für derartige Berechnungen muss Ihre Projektionsmatrix w so normalisieren, dass es dem Welt-Bereich z entspricht. Wenn Ihre Projektionsmatrix also einen (3,4)-Koeffizienten enthält, der nicht 1 ist, müssen Sie alle Koeffizienten mit dem umgekehrten Wert des (3,4)-Koeffizienten skalieren, um eine korrekte Matrix zu erhalten. Wenn Sie keine kompatible Matrix bereitstellen, werden Nebeleffekte und Tiefenpufferung nicht ordnungsgemäß angewendet.
 
-Die folgende Abbildung zeigt eine nicht kompatible Projektionsmatrix und die gleiche Matrix so skaliert, dass Nebel im Bezug zum Auge ermöglicht wird.
+Die folgende Abbildungzeigt eine nicht kompatible Projektionsmatrix und die gleiche Matrix so skaliert, dass Nebel im Bezug zum Auge ermöglicht wird.
 
 ![Abbildungen einer nicht kompatiblen Projektionsmatrix und einer Matrix mit Nebel im Bezug zum Auge](images/eyerlmx.png)
 
@@ -79,7 +75,6 @@ Direct3D verwendet die derzeit festgelegte Projektionsmatrix in ihren w-basierte
  
 
  
-
 
 
 

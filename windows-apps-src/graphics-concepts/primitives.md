@@ -2,21 +2,17 @@
 title: Grundtypen
 description: "Ein 3D-Grundtyp ist eine Sammlung von Scheitelpunkten, die eine einzelne 3D-Entität bilden."
 ms.assetid: A1FE6F49-B0D4-4665-90E1-40AD98E668B1
-keywords:
-- Grundtypen
+keywords: Grundtypen
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e6734ff8534302d3866374adba45c34d70ae440a
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 22f143030d3973cf77cd3b0857cf9b67ff5503fb
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="primitives"></a>Grundtypen
 
 
@@ -47,7 +43,7 @@ Ein 3D-*Grundtyp* ist eine Sammlung von Scheitelpunkten, die eine einzelne 3D-En
 </tr>
 <tr class="odd">
 <td align="left"><p>[Zeilenstrips](line-strips.md)</p></td>
-<td align="left"><p>Ein Zeilenstrip ist ein Grundtyp, der aus verbundenen Liniensegmenten besteht. Die Anwendung kann Linienstrips verwenden, um offene Polygone zu erstellen. Bei einem geschlossenes Polygon handelt es sich um ein Polygon, dessen letzter Scheitelpunkt über ein Liniensegment mit dem ersten Scheitelpunkt verbunden ist.</p></td>
+<td align="left"><p>Ein Zeilenstrip ist ein Grundtyp, der aus verbundenen Liniensegmenten besteht. Die Anwendung kann Zeilenstrips verwenden, um offene Polygone zu erstellen. Bei einem geschlossenes Polygon handelt es sich um ein Polygon, dessen letzter Scheitelpunkt über ein Liniensegment mit dem ersten Scheitelpunkt verbunden ist.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[Dreieckslisten](triangle-lists.md)</p></td>
@@ -70,7 +66,6 @@ Ein 3D-*Grundtyp* ist eine Sammlung von Scheitelpunkten, die eine einzelne 3D-En
  
 
  
-
 
 
 

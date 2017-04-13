@@ -1,26 +1,22 @@
 ---
 title: Bilineare Texturfilterung
-description: "Die bilineare Filterung berechnet den gewichteten Mittelwert der 4 Texel, die dem Sampling-Punkt am nächsten liegen."
+description: "Die bilineare Filterung berechnet den gewichteten Mittelwert der 4Texel, die dem Sampling-Punkt am nächsten liegen."
 ms.assetid: 0851AD28-8246-4547-A663-47884DDDFC3E
-keywords:
-- Bilineare Texturfilterung
+keywords: Bilineare Texturfilterung
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 635ca5b2e09c32c8d9644b1f3196ef888ef5ebc2
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: f2b23fc0665695663875125f4e226e233c3ef7e2
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="bilinear-texture-filtering"></a>Bilineare Texturfilterung
 
 
-Die *bilineare Filterung* berechnet den gewichteten Durchschnitt der 4 Texel, die dem Sampling-Punkt am nächsten liegen. Diese Filtermethode ist präziser und gängiger als das Filtern am nächstgelegenen Punkt. Dieser Ansatz ist effizient, da er in moderner Grafikhardware implementiert wird.
+Die *bilineare Filterung* berechnet den gewichteten Durchschnitt der 4Texel, die dem Sampling-Punkt am nächsten liegen. Diese Filtermethode ist präziser und gängiger als das Filtern am nächstgelegenen Punkt. Dieser Ansatz ist effizient, da er in moderner Grafikhardware implementiert wird.
 
 
 ## <a name="span-idexamplespanspan-idexamplespanspan-idexamplespanexample"></a><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Beispiel
@@ -28,17 +24,17 @@ Die *bilineare Filterung* berechnet den gewichteten Durchschnitt der 4 Texel, d
 
 Texturen werden immer linear behandelt, von (0,0, 0,0) in der oberen linken Ecke bis (1,0, 1,0) in der unteren rechten Ecke. Die lineare Texturadressierung wird in der folgenden Abbildung dargestellt.
 
-![Abbildung einer 4 x 4-Textur mit einfarbigen Farbblöcken](images/bilinear-fig7a.png)
+![Abbildung einer 4x4-Textur mit einfarbigen Farbblöcken](images/bilinear-fig7a.png)
 
 Texturen werden in der Regel als einfarbige Farbblöcke dargestellt, obwohl man sich Texturen genauso wie Rasteranzeige vorstellen sollte: jedes Texel wird genau in der Mitte einer Rasterzelle definiert, wie in der folgenden Abbildung dargestellt.
 
-![Abbildung einer 4 × 4-Textur mit in der Mitte der Rasterzelle definierten Texels](images/bilinear-fig7b.png)
+![Abbildung einer 4×4-Textur mit in der Mitte der Rasterzelle definierten Texels](images/bilinear-fig7b.png)
 
 Wenn Sie den Texturen-Sampler nach der Farbe dieser Textur in UV-Koordinaten fragen, (0,375, 0,375) erhalten Sie die Volltonfarbe Rot (255, 0, 0). Das ergibt daher Sinn, da die Mitte der roten Texel-Zelle bei UV (0,375, 0,375) liegt. Was aber, wenn Sie den Sampler nach der Texturfarbe auf UV (0,25, 0,25) fragen? Dies ist nicht einfach, da der Punkt auf UV (0,25, 0,25) genau an der Grenze von 4 Texeln liegt.
 
 Die einfachste Methode ist hier, dass der Sampler die Farbe des nächstliegenden Texel zurück gibt. Dies wird als Punktfilterung bezeichnet (Infos finden Sie unter [Sampling am nächstgelegenen Punkt](nearest-point-sampling.md)). Dies ist generell aufgrund von körnigen oder „eckigen” Ergebnisse unerwünscht. Beim Filtern am nächstgelegenen Punkt stellen Punktsamples der Textur bei UV (0,25, 0,25) ein ganz anderes Problem dar: es gibt vier Texel mit dem gleichen Abstand vom Samplingpunkt, daher gibt es kein einziges naheliegendes Texel. Eines dieser vier Texel wird als die zurückgegebene Farbe ausgewählt, doch die Auswahl hängt der Abrundung der Koordinate ab, was störende Artefakte einbringen kann (lesen Sie den Artikel „Sampling am nächstgelegenen Punkt” in SDK).
 
-Eine etwas genauere und häufiger verwendete Filtermethode ist das Berechnen des gewichteten Mittelwerts der 4 Texel, die dem Samplingpunkt am nächsten liegen. Dies wird als *Bilineare Filterung* bezeichnet. Der zusätzliche Rechenaufwand für die bilineare Filterung ist in der Regel unerheblich, da diese Routine in moderner Grafikhardware verwendet wird. Hier sind die Farben, die wir an verschiedenen Sampling-Punkten mit bilinearer Filterung erhalten:
+Eine etwas genauere und häufiger verwendete Filtermethode ist das Berechnen des gewichteten Mittelwerts der 4Texel, die dem Samplingpunkt am nächsten liegen. Dies wird als *Bilineare Filterung* bezeichnet. Der zusätzliche Rechenaufwand für die bilineare Filterung ist in der Regel unerheblich, da diese Routine in moderner Grafikhardware verwendet wird. Hier sind die Farben, die wir an verschiedenen Sampling-Punkten mit bilinearer Filterung erhalten:
 
 ```
 UV: (0.5, 0.5)
@@ -85,9 +81,9 @@ Dies ist die Adresse des rote Texels in der zurückgegebene Farbe (alle anderen 
 = (255, 0, 0)
 ```
 
-Vergleichen Sie diese Berechnungen mit der folgenden Abbildung, auf der angezeigt wird, was geschieht, wenn die bilineare Filterberechnung bei jeder Textur auf der 4 x 4-Textur durchgeführt wird.
+Vergleichen Sie diese Berechnungen mit der folgenden Abbildung, auf der angezeigt wird, was geschieht, wenn die bilineare Filterberechnung bei jeder Textur auf der 4x4-Textur durchgeführt wird.
 
-![Abbildung einer 4 x 4-Textur mit bilinearer Filterung, die bei jeder Textur-Adresse ausgeführt wird](images/bilinear-fig7c.jpg)
+![Abbildung einer 4x4-Textur mit bilinearer Filterung, die bei jeder Textur-Adresse ausgeführt wird](images/bilinear-fig7c.jpg)
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Verwandte Themen
 
@@ -97,7 +93,6 @@ Vergleichen Sie diese Berechnungen mit der folgenden Abbildung, auf der angezeig
  
 
  
-
 
 
 

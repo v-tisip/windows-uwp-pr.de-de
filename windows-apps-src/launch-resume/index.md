@@ -9,18 +9,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 40400b8b17da9b010c0f03e9976201a1def025f8
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 412876d0b05b2e703482f8cc79a1f07268ac200f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="launching-resuming-and-background-tasks"></a>Starten, Fortsetzen und Hintergrundaufgaben
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
-Dieser Abschnitt enthält Informationen zu folgenden Themen:
+Dieser Abschnittenthält Informationen zu folgenden Themen:
 
 - Ereignisse beim Starten, Anhalten, Fortsetzen und Beenden einer App für die Universelle Windows-Plattform (UWP)
 - Starten von Apps mittels eines URI oder einer Dateiaktivierung
@@ -107,7 +104,7 @@ Im Abschnitt [Hintergrundaufgaben](support-your-app-with-background-tasks.md) er
 
 ## <a name="remote-systems"></a>Remotesysteme
 
-Im Abschnitt [Verbundene Apps und Geräte (Projekt „Rome“)](connected-apps-and-devices.md) wird beschrieben, wie Sie die Remote Systems-Plattform verwenden, um Remotegeräte zu entdecken, eine App auf einem Remotegerät zu starten und mit einem App-Dienst auf einem Remotegerät zu kommunizieren.
+Im Abschnitt [Verbundene Apps und Geräte (Project Rome)](connected-apps-and-devices.md) wird beschrieben, wie Sie die Remote Systems-Plattform verwenden, um Remotegeräte zu ermitteln, eine App auf einem Remotegerät zu starten und mit einem App-Dienst auf einem Remotegerät zu kommunizieren.
 
 | Thema | Beschreibung |
 |-------|-------------|
@@ -123,4 +120,3 @@ Im Abschnitt [Begrüßungsbildschirme](splash-screens.md) wird beschrieben, wie 
 |-------|-------------|
 | [Hinzufügen eines Begrüßungsbildschirms](add-a-splash-screen.md) | Legen Sie das Bild und die Hintergrundfarbe des Begrüßungsbildschirms Ihrer App fest. |
 | [Längere Anzeige des Begrüßungsbildschirms](create-a-customized-splash-screen.md) | Verlängern Sie die Anzeige eines Begrüßungsbildschirms, indem Sie für die App einen erweiterten Begrüßungsbildschirm erstellen. Mit diesem erweiterten Bildschirm wird der beim Starten der App angezeigte Begrüßungsbildschirm imitiert, der angepasst werden kann. |
-

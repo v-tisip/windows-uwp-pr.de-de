@@ -2,21 +2,17 @@
 title: "Einführung zu Texturen"
 description: Eine Texturressource ist eine Datenstruktur zum Speichern von Texel, der die kleinste Einheit einer Textur darstellt, die gelesen oder geschrieben werden kann. Wird eine Textur von einem Shader gelesen, kann sie durch Textursampler gefiltert werden.
 ms.assetid: 6F3C76A8-F762-4296-AE02-BFBD6476A5A8
-keywords:
-- "Einführung zu Texturen"
+keywords: "Einführung zu Texturen"
 author: mtoepke
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ccdca1396673b0eed9ef74c5f0ce3a6f97e02b6d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d642668a9af1e62f232e13e411e51e6d850de7f5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="introduction-to-textures"></a>Einführung zu Texturen
 
 
@@ -40,13 +36,13 @@ Es gibt verschiedene Texturarten: 1D, 2D und 3D, von denen jede mit oder ohne Mi
 
 ### <a name="span-idtexture1dresourcespanspan-idtexture1dresourcespanspan-idtexture1dresourcespanspan-idtexture1d-resourcespan1d-textures"></a><span id="Texture1D_Resource"></span><span id="texture1d_resource"></span><span id="TEXTURE1D_RESOURCE"></span><span id="texture1d-resource"></span>1D-Texturen
 
-In ihrer einfachsten Form enthält eine 1D-Textur die Texturdaten, die mit einer einzelnen Texturkoordinate behandelt werden können; sie können als Array von Texeln dargestellt werden, wie in der folgenden Abbildung dargestellt.
+In ihrer einfachsten Form enthält eine 1D-Textur die Texturdaten, die mit einer einzelnen Texturkoordinate behandelt werden können; sie können als Array von Texeln dargestellt werden, wie in der folgenden Abbildungdargestellt.
 
 Die folgende Abbildung zeigt eine 1D-Textur:
 
 ![1D-Textur](images/d3d10-1d-texture.png)
 
-Jeder Texel enthält eine Reihe von Farbkomponenten, die vom Format der gespeicherten Daten abhängig sind. Um eine höhere Komplexität zu erreichen, können Sie eine 1D-Textur mit Mipmap-Ebenen erstellen, wie in der folgenden Abbildung dargestellt.
+Jeder Texel enthält eine Reihe von Farbkomponenten, die vom Format der gespeicherten Daten abhängig sind. Um eine höhere Komplexität zu erreichen, können Sie eine 1D-Textur mit Mipmap-Ebenen erstellen, wie in der folgenden Abbildungdargestellt.
 
 ![1D-Textur mit Mipmap-Ebenen](images/d3d10-resource-texture1d.png)
 
@@ -132,4 +128,3 @@ Das Adress-Wrapping der Textur findet nach dem Berechnen der Texelposition statt
 
 
 [Texturen](textures.md)
-

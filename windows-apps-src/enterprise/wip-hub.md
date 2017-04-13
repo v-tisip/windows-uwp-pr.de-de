@@ -10,15 +10,12 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, Uwp, Windows Information Protection, Unternehmensdaten, Schutz von Unternehmensdaten, edp, optimierte Apps"
+keywords: Windows10, Uwp, Windows Information Protection, Unternehmensdaten, Schutz von Unternehmensdaten, edp, optimierte Apps
 ms.assetid: 08f0cfad-f15d-46f7-ae7c-824a8b1c44ea
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: b9bde047a70d31105680361d34cf71b33f708f93
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: f624d20d33f560f151b40bd1a405711d697fd4cb
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="windows-information-protection-wip"></a>Windows Information Protection (WIP)
 
 __Hinweis__ Die Windows Information Protection (WIP)-Richtlinie kann auf Windows 10, Version 1607 angewendet werden.
@@ -66,11 +63,11 @@ Wenn Sie bereit sind, die App zu optimieren, sehen Sie sich eines dieser Handbü
 
 **Für Universelle Windows-Plattform (UWP)-Apps, die Sie mithilfe von C erstellen#**
 
-[Erstellen Sie eine optimierte App, die Unternehmensdaten und persönlichen Daten verwendet](wip-dev-guide.md).
+[Entwicklerhandbuch für Windows Information Protection (WIP)](wip-dev-guide.md)
 
 **Für Desktop-Apps, die Sie mit C++ erstellen**
 
-[Erstellen Sie eine optimierte App, die Unternehmensdaten und persönliche Daten verwendet (C++)](http://go.microsoft.com/fwlink/?LinkId=822192).
+[Entwicklerhandbuch für Windows Information Protection (C++)](http://go.microsoft.com/fwlink/?LinkId=822192)
 
 
 ## <a name="create-non-enlightened-enterprise-app"></a>Erstellen einer nicht für Unternehmen optimierten App
@@ -100,4 +97,3 @@ Wenn Ihre App in einer MAM-Richtlinie enthalten sein soll, müssen Sie sie optim
 
 
  
-

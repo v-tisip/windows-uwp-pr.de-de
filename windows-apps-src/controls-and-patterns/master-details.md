@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 96f9f9855dba48203e4372cef88d1f6ab7d435f5
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d5933eec7b2f34b2c5939bb083113dfd3a1f965d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="masterdetails-pattern"></a>Master/Details-Muster
 
@@ -39,8 +37,8 @@ Beim Implementieren des Master/Details-Musters ist es ratsam, je nach Größe de
 
 | Verfügbare Fensterbreite | Empfohlenes Format |
 |------------------------|-------------------|
-| 320 Epx - 719 Epx        | Gestapelt           |
-| 720 Epx oder breiter       | Nebeneinander      |
+| 320Epx - 719Epx        | Gestapelt           |
+| 720Epx oder breiter       | Nebeneinander      |
 
  
 ## <a name="stacked-style"></a>Gestapeltes Format
@@ -95,4 +93,3 @@ Beispielcode, der Master/Details-Muster veranschaulicht, finden Sie unter
 - [Suche](search.md)
 - [App- und Befehlsleisten](app-bars.md)
 - [**ListView-Klasse (XAML)**](https://msdn.microsoft.com/library/windows/apps/br242878)
-

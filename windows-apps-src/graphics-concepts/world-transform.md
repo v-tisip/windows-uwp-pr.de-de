@@ -2,21 +2,17 @@
 title: Welttransformationen
 description: "Eine Welttransformation ändert die Koordinaten vom Modellbereich, in dem Scheitelpunkte relativ zum lokalen Ursprung definiert sind, zum Weltbereich."
 ms.assetid: 767B032C-69D0-4583-8FEB-247F4C41E31D
-keywords:
-- Welttransformationen
+keywords: Welttransformationen
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 45462cf0deb4e0bbf444fd4300a942cf05ad701c
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 6218747e0522235f1d71510a4ad4b6ce60def4a3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="world-transform"></a>Welttransformationen
 
 
@@ -36,7 +32,7 @@ Welttransformationen können eine beliebige Kombination von Übersetzungen, Dreh
 
 Sie erstellen, wie bei allen anderen Transformationen auch, die Welt, indem Sie eine Reihe von Matrizen zu einer einzelnen Matrix konkatenieren, die die Summe der Effekte der einzelnen Matrizen enthält. Im einfachste Fall befindet sich ein Modell am Ursprung der Welt, und seine lokalen Koordinatenachsen sind genauso ausgerichtet wie der Raum der Welt. In diesem Fall ist die Weltmatrix die Identitätsmatrix. In der Regel ist jedoch die Weltmatrix eine Kombination aus einer Übersetzung in den Raum der Welt und möglicherweise einer oder ggf. mehreren Drehungen des Modell.
 
-Direct3D verwendet die Welt- und Ansichtsmatrizen, die Sie einrichten, um mehrere interne Datenstrukturen zu konfigurieren. Jedes Mal, wenn Sie eine neue Welt- oder Ansichtsmatrix festlegen, berechnet das System die zugehörigen internen Strukturen. Diese Matrizen festzulegen – z. B. mehrere Tausend Male pro Frame ist rechenintensiv und zeitaufwändig. Sie können die Anzahl der erforderlichen Berechnungen minimieren, indem Sie die Welt- und die Ansichtsmatrizen zu einer Welt-Ansichtsmatrix verketten, die Sie als die Weltmatrix festlegen, und dann für die Ansichtsmatrix die Identitätsmatrix verwenden. Halten Sie zwischengespeicherte Kopien der einzelnen Welt- und Ansichtsmatrizen an, damit Sie die Weltmatrix bei Bedarf ändern, verketten und zurücksetzen können.
+Direct3D verwendet die Welt- und Ansichtsmatrizen, die Sie einrichten, um mehrere interne Datenstrukturen zu konfigurieren. Jedes Mal, wenn Sie eine neue Welt- oder Ansichtsmatrix festlegen, berechnet das System die zugehörigen internen Strukturen. Diese Matrizen festzulegen – z.B. mehrere Tausend Male pro Frame ist rechenintensiv und zeitaufwändig. Sie können die Anzahl der erforderlichen Berechnungen minimieren, indem Sie die Welt- und die Ansichtsmatrizen zu einer Welt-Ansichtsmatrix verketten, die Sie als die Weltmatrix festlegen, und dann für die Ansichtsmatrix die Identitätsmatrix verwenden. Halten Sie zwischengespeicherte Kopien der einzelnen Welt- und Ansichtsmatrizen an, damit Sie die Weltmatrix bei Bedarf ändern, verketten und zurücksetzen können.
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Verwandte Themen
 
@@ -46,7 +42,6 @@ Direct3D verwendet die Welt- und Ansichtsmatrizen, die Sie einrichten, um mehrer
  
 
  
-
 
 
 

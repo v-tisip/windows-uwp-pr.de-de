@@ -2,21 +2,17 @@
 title: Geometry-Shader-Stufe (GS-Stufe)
 description: "Die Geometry-Shader-Stufe (GS-Stufe) verarbeitet vollständige Grundformen (Dreiecke, Linien und Punkte) zusammen mit deren angrenzenden Vertices."
 ms.assetid: 8A1350DD-B006-488F-9DAF-14CD2483BA4E
-keywords:
-- Geometry-Shader-Stufe (GS-Stufe)
+keywords: Geometry-Shader-Stufe (GS-Stufe)
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1a4c6ab45f53eb2156ae82f562d775682c1b79ed
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 05ef26d8ad596a89cb1e9f2bb44d0e1b062097ee
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="geometry-shader-gs-stage"></a>Geometry-Shader-Stufe (GS-Stufe)
 
 
@@ -65,7 +61,7 @@ Wenn ein Geometry-Shader aktiv ist, wird er einmal für jede Grundform aufgerufe
 ## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Ausgabe
 
 
-Die Geometry-Shader-Stufe (GS-Stufe) kann mehrere Vertices ausgeben, die eine einzelne ausgewählte Topologie darstellen. Ausgabetopologien des Geometry-Shaders sind **Tristrip**, **Linestrip** und **Pointlist**. Die Anzahl der ausgegebenen Grundformen kann mit jedem Aufruf des Geometry-Shaders variieren. Die maximale Anzahl auszugebender Vertices muss allerdings statisch deklariert werden. Die nach einem Geometry-Shader-Aufruf ausgegeben Strips können beliebig lang sein. Neue Strips können mit der HLSL-Funktion [RestartStrip](https://msdn.microsoft.com/library/windows/desktop/bb509660) erstellt werden.
+Die Geometry-Shader-Stufe (GS-Stufe) kann mehrere Vertices ausgeben, die eine einzelne ausgewählte Topologie darstellen. Ausgabetopologien des Geometry-Shaders sind **Tristrip**, **Linestrip** und **Pointlist**. Die Anzahl der ausgegebenen Grundformen kann mit jedem Aufruf des Geometry-Shaders variieren. Die maximale Anzahl auszugebender Vertices muss allerdings statisch deklariert werden muss. Die nach einem Geometry-Shader-Aufruf ausgegeben Strips können beliebig lang sein. Neue Strips können mit der HLSL-Funktion [RestartStrip](https://msdn.microsoft.com/library/windows/desktop/bb509660) erstellt werden.
 
 Die Ausführung einer Geometry-Shader-Instanz erfolgt unabhängig von anderen Aufrufen, nur die Daten werden den Streams seriell hinzugefügt. Die Ausgaben eines bestimmten Geometry-Shader-Aufrufs sind unabhängig von anderen Aufrufen (jedoch wird die Reihenfolge berücksichtigt). Ein Geometry-Shader, der Dreieckstrips generiert, beginnt nach jedem Aufruf mit einem neuen Strip.
 
@@ -75,7 +71,7 @@ Ein Geometry-Shader gibt jeweils Daten für einen Vertex aus, der einem Ausgabes
 
 Es gibt drei Arten von Streamobjekten: **TriangleStream**, **LineStream** und **PointStream**. Alle sind Vorlagenobjekte. Die Topologie der Ausgabe wird durch ihren jeweiligen Objekttyp bestimmt, während das Format der in den Datenstrom angefügten Vertices durch den Vorlagentyp bestimmt wird.
 
-Wenn eine Geometry-Shader-Ausgabe als System Interpreted Value festgelegt ist (beispielsweise **SV\_RenderTargetArrayIndex** oder **SV\_Position**), erkennt die Hardware diese Daten und führt, abhängig vom Wert, bestimmte Schritte aus, bevor die Daten selbst als Eingabe für die nächste Shaderstufe übergeben werden. Wenn solche Ausgabedaten des Geometry-Shaders für die Hardware eine grundformbezogene Bedeutung haben (z. B. **SV\_RenderTargetArrayIndex** oder **SV\_ViewportArrayIndex**) statt einer vertexbezogenen (z. B. **SV\_ClipDistance\[n\]** oder **SV\_Position**), werden die grundformbezogenen Daten dem führenden Vertex entnommen, der für die Grundform ausgegeben wird.
+Wenn eine Geometry-Shader-Ausgabe als System Interpreted Value festgelegt ist (beispielsweise **SV\_RenderTargetArrayIndex** oder **SV\_Position**), erkennt die Hardware diese Daten und führt, abhängig vom Wert, bestimmte Schritte aus, bevor die Daten selbst als Eingabe für die nächste Shaderstufe übergeben werden. Wenn solche Ausgabedaten des Geometry-Shaders für die Hardware eine grundformbezogene Bedeutung haben (z.B. **SV\_RenderTargetArrayIndex** oder **SV\_ViewportArrayIndex**) statt einer vertexbezogenen (z.B. **SV\_ClipDistance\[n\]** oder **SV\_Position**), werden die grundformbezogenen Daten dem führenden Vertex entnommen, der für die Grundform ausgegeben wird.
 
 Vom Geometry-Shader können unvollständige Grundformen ausgegeben werden, wenn der Geometry-Shader beendet wird, bevor die Grundform fertig ist. Solche unvollständigen Grundformen werden ohne Rückmeldung verworfen. Das entspricht der Art und Weise, in der ein Input-Assembler (IA) unvollständige Grundformen behandelt.
 
@@ -89,7 +85,6 @@ Die Geometry-Shader kann Lade- und Textur Sampling-Vorgänge ausführen, für di
  
 
  
-
 
 
 

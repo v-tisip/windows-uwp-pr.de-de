@@ -1,26 +1,22 @@
 ---
 title: Primitive Topologien
-description: "Direct3D unterstützt mehrere primitive Topologien, die definieren, wie Scheitelpunkte, z. B. Punktelisten, Zeilenlisten und Dreieckstrips von der Pipeline interpretiert und gerendert werden."
+description: "Direct3D unterstützt mehrere primitive Topologien, die definieren, wie Scheitelpunkte, z.B. Punktelisten, Zeilenlisten und Dreieckstrips von der Pipeline interpretiert und gerendert werden."
 ms.assetid: 7AA5A4A2-0B7C-431D-B597-684D58C02BA5
-keywords:
-- Primitive Topologien
+keywords: Primitive Topologien
 author: mtoepke
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 487de51420cd6ce747d0257920429e9015bc1864
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d0d6bed3cbccd37fcd4fc835273099e8d26f671d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="primitive-topologies"></a>Primitive Topologien
 
 
-Direct3D unterstützt mehrere primitive Topologien, die definieren, wie Scheitelpunkte, z. B. Punktelisten, Linienlisten und Dreieckstrips von der Pipeline interpretiert und gerendert werden.
+Direct3D unterstützt mehrere primitive Topologien, die definieren, wie Scheitelpunkte, z.B. Punktelisten, Linienlisten und Dreieckstrips von der Pipeline interpretiert und gerendert werden.
 
 ## <a name="span-idprimitivetypesspanspan-idprimitivetypesspanspan-idprimitivetypesspanbasic-primitive-topologies"></a><span id="Primitive_Types"></span><span id="primitive_types"></span><span id="PRIMITIVE_TYPES"></span>Grundlegende primitive Topologien
 
@@ -49,17 +45,17 @@ Beispiel: Sie möchten eine Dreiecksliste mit angrenzenden Daten zeichnen. Eine 
 ## <a name="span-idwindingdirectionandleadingvertexpositionsspanspan-idwindingdirectionandleadingvertexpositionsspanspan-idwindingdirectionandleadingvertexpositionsspanspan-idwinding-direction-and-leading-vertex-positionsspanwinding-direction-and-leading-vertex-positions"></a><span id="Winding_Direction_and_Leading_Vertex_Positions"></span><span id="winding_direction_and_leading_vertex_positions"></span><span id="WINDING_DIRECTION_AND_LEADING_VERTEX_POSITIONS"></span><span id="winding-direction-and-leading-vertex-positions"></span>Wicklungsrichtung und führende Scheitelpunktpositionen
 
 
-Wie in der folgenden Abbildung gezeigt, ist ein führender Scheitelpunkt der nicht erste nicht angrenzende Scheitelpunkt in einen Grundtyp. Für einen Grundtyp können mehrere führende Scheitelpunkte definiert sein, vorausgesetzt, jeder wird für einen anderen Grundtyp verwendet.
+Wie in der folgenden Abbildunggezeigt, ist ein führender Scheitelpunkt der nicht erste nicht angrenzende Scheitelpunkt in einen Grundtyp. Für einen Grundtyp können mehrere führende Scheitelpunkte definiert sein, vorausgesetzt, jeder wird für einen anderen Grundtyp verwendet.
 
 -   Für einen Dreiecksstrip mit angrenzenden Daten sind die führenden Scheitelpunkte 0, 2, 4, 6 usw.
 -   Für einen Zeilenstrip mit angrenzenden Daten sind die führenden Scheitelpunkte 1, 2, 3 usw.
 -   Andererseits hat ein Grundtyp mit angrenzenden Daten keinen führenden Scheitelpunkt.
 
-Die folgende Abbildung zeigt die Scheitelpunktanordnung für alle Grundtypen, die der Eingabeassembler erzeugen kann.
+Die folgende Abbildungzeigt die Scheitelpunktanordnung für alle Grundtypen, die der Eingabeassembler erzeugen kann.
 
 ![Diagramm der Scheitelpunktanordnungen für Grundtypen](images/d3d10-primitive-topologies.png)
 
-In der folgenden Tabelle werden die Symbole aus der obigen Abbildung beschrieben.
+In der folgenden Tabelle werden die Symbole aus der obigen Abbildungbeschrieben.
 
 | Symbol                                                                                   | Name              | Beschreibung                                                                         |
 |------------------------------------------------------------------------------------------|-------------------|-------------------------------------------------------------------------------------|
@@ -88,7 +84,6 @@ Weitere Informationen zum Generieren von mehreren Strips finden Sie unter [Geome
  
 
  
-
 
 
 

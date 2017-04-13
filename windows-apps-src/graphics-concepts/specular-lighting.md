@@ -2,25 +2,21 @@
 title: Spiegelbeleuchtung
 description: "Spiegelbeleuchtung bezeichnet die glänzenden spiegelnden hellsten Bildteile, die auftreten, wenn Licht auf eine Objektfläche trifft und in Richtung der Kamera reflektiert wird."
 ms.assetid: 71F87137-B00F-48CE-8E6A-F98A139A742A
-keywords:
-- Spiegelbeleuchtung
+keywords: Spiegelbeleuchtung
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 54cb099e768ad1583f686d98375a0f1bcedd4e5d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: c57edefa190fbb56b8bbe2a0c06ef2828b780927
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="specular-lighting"></a>Spiegelbeleuchtung
 
 
-*Spiegelbeleuchtung* bezeichnet die glänzenden spiegelnden hellsten Bildteile, die auftreten, wenn Licht auf eine Objektfläche trifft und in Richtung der Kamera reflektiert wird. Spiegelbeleuchtung ist intensiver als diffuses Licht und fällt über die Objektoberfläche schneller ab. Die Berechnung der Spiegelbeleuchtung ist zeitaufwendiger als die für diffuse Beleuchtung. Der Vorteil der Anwendung liegt jedoch darin, dass die Oberfläche erheblich detailreicher wird.
+*Spiegelbeleuchtung* bezeichnet die glänzenden spiegelnden hellsten Bildteile, die auftreten, wenn Licht auf eine Objektfläche trifft und in Richtung der Kamera reflektiert wird. Spiegelnde Beleuchtung ist intensiver als diffuses Licht und fällt über die Objektoberfläche schneller ab. Die Berechnung der Spiegelbeleuchtung ist zeitaufwendiger als die für diffuse Beleuchtung. Der Vorteil der Anwendung liegt jedoch darin, dass die Oberfläche erheblich detailreicher wird.
 
 Für das Modellieren einer spiegelnden Reflektion muss dem System die Bewegungsrichtung des Lichts und der Blickwinkel des Betrachters bekannt sein. Das System verwendet eine vereinfachte Version des Phong-Beleuchtungsmodells, das mit einer Winkelhalbierenden die Intensität der spiegelnden Reflektion angleicht.
 
@@ -54,15 +50,15 @@ Variablen, Typen und Bereiche:
 
 Cₛ ist einer der folgenden Werte:
 
--   Vertexfarbe 1, wenn die Glanzmaterialquelle die diffuse Vertexfarbe ist und die erste Vertexfarbe in der Vertexdeklaration angegeben ist
--   Vertexfarbe 2, wenn die Glanzmaterialquelle die Glanzvertexfarbe ist und die zweite Vertexfarbe in der Vertexdeklaration angegeben ist
+-   Vertexfarbe1, wenn die Glanzmaterialquelle die diffuse Vertexfarbe ist und die erste Vertexfarbe in der Vertexdeklaration angegeben ist
+-   Vertexfarbe2, wenn die Glanzmaterialquelle die Glanzvertexfarbe ist und die zweite Vertexfarbe in der Vertexdeklaration angegeben ist
 -   Materialglanzfarbe
 
 **Hinweis**  Wenn die Option für die Glanzmaterialquelle verwendet wird und die Vertexfarbe nicht angegeben ist, wird die Materialglanzfarbe verwendet.
 
  
 
-Nachdem alle Lichter verarbeitet und getrennt interpoliert wurden, sollten Glanzkomponenten auf Werte zwischen 0 bis 255 festgelegt sein.
+Nachdem alle Lichter verarbeitet und getrennt interpoliert wurden, sollten Glanzkomponenten auf Werte zwischen0 bis255 festgelegt sein.
 
 ## <a name="span-idthehalfwayvectorspanspan-idthehalfwayvectorspanspan-idthehalfwayvectorspanthe-halfway-vector"></a><span id="The_Halfway_Vector"></span><span id="the_halfway_vector"></span><span id="THE_HALFWAY_VECTOR"></span>Die Winkelhalbierende
 
@@ -122,7 +118,6 @@ Für die Spiegelbeleuchtung ist eine intensivere Berechnung als für die diffuse
  
 
  
-
 
 
 

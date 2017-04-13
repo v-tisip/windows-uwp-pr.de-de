@@ -3,18 +3,17 @@ author: mcleblanc
 ms.assetid: 41ac0142-4d86-4bb3-b580-36d0d6956091
 title: "Referenz zu Geräteportal-APIs für HoloLens"
 description: "Hier erhalten Sie Informationen zu den HoloLens-REST-APIs für das Windows Device Portal, die Sie für den Zugriff auf die Daten und die programmatische Steuerung des Geräts verwenden können."
-translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 638ebca167b2ca56f00a83aab13b15c57b2dca2a
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-# Referenz zu Geräteportal-APIs für HoloLens
+# <a name="device-portal-api-reference-for-hololens"></a>Referenz zu Geräteportal-APIs für HoloLens
 
 Alle Komponenten im Windows Device Portal basieren auf REST-APIs, die Sie für den Zugriff auf die Daten und die programmatische Steuerung des Geräts verwenden können.
 
-## Holographic – Betriebssystem
+## <a name="holographic-os"></a>Holographic – Betriebssystem
 ---
-### Abrufen der HTTPS-Anforderungen für das Geräteportal
+### <a name="get-https-requirements-for-the-device-portal"></a>Abrufen der HTTPS-Anforderungen für das Geräteportal
 
 **Anforderung**
 
@@ -35,7 +34,7 @@ GET | /api/holographic/os/webmanagement/settings/https
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -46,7 +45,7 @@ GET | /api/holographic/os/webmanagement/settings/https
 - Standardstatuscodes
 
 ---
-### Abrufen des gespeicherten Pupillenabstands (Interpupillary Distance, IPD)
+### <a name="get-the-stored-interpupillary-distance-ipd"></a>Abrufen des gespeicherten Pupillenabstands (Interpupillary Distance, IPD)
 
 **Anforderung**
 
@@ -67,7 +66,7 @@ GET | /api/holographic/os/settings/ipd
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -78,7 +77,7 @@ GET | /api/holographic/os/settings/ipd
 - Standardstatuscodes
 
 ---
-### Abrufen einer Liste mit ETW-Anbietern für HoloLens
+### <a name="get-a-list-of-hololens-specific-etw-providers"></a>Abrufen einer Liste mit ETW-Anbietern für HoloLens
 
 **Anforderung**
 
@@ -99,7 +98,7 @@ GET | /api/holographic/os/etw/customproviders
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -110,7 +109,7 @@ GET | /api/holographic/os/etw/customproviders
 - Standardstatuscodes
 
 ---
-### Gibt den Status für alle aktiven Dienste zurück.
+### <a name="return-the-state-for-all-active-services"></a>Gibt den Status für alle aktiven Dienste zurück.
 
 **Anforderung**
 
@@ -131,7 +130,7 @@ GET | /api/holographic/os/services
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -142,7 +141,7 @@ GET | /api/holographic/os/services
 - Standardstatuscodes
 
 ---
-### Festlegen der HTTPS-Anforderung für das Geräteportal
+### <a name="set-the-https-requirement-for-the-device-portal"></a>Festlegen der HTTPS-Anforderung für das Geräteportal
 
 **Anforderung**
 
@@ -167,7 +166,7 @@ required   | (**Erforderlich**) Bestimmt, ob für das Geräteportal HTTPS erford
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -178,7 +177,7 @@ required   | (**Erforderlich**) Bestimmt, ob für das Geräteportal HTTPS erford
 - Standardstatuscodes
 
 ---
-### Festlegen des Pupillenabstands (Interpupillary Distance, IPD)
+### <a name="set-the-interpupillary-distance-ipd"></a>Festlegen des Pupillenabstands (Interpupillary Distance, IPD)
 
 **Anforderung**
 
@@ -203,7 +202,7 @@ ipd   | (**erforderlich**) Der neue IPD-Wert, der gespeichert werden soll. Diese
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -214,9 +213,9 @@ ipd   | (**erforderlich**) Der neue IPD-Wert, der gespeichert werden soll. Diese
 - Standardstatuscodes
 
 ---
-## Holographic – Wahrnehmung
+## Holographic perception
 ---
-### Akzeptieren von WebSocket-Upgrades und Ausführen eines Mirage-Clients, der Updates sendet
+### <a name="accept-websocket-upgrades-and-run-a-mirage-client-that-sends-updates"></a>Akzeptieren von WebSocket-Upgrades und Ausführen eines Mirage-Clients, der Updates sendet
 
 **Anforderung**
 
@@ -241,7 +240,7 @@ clientmode   | (**erforderlich**) Bestimmt den Nachverfolgungsmodus. Mit dem Wer
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -252,9 +251,9 @@ clientmode   | (**erforderlich**) Bestimmt den Nachverfolgungsmodus. Mit dem Wer
 - Standardstatuscodes
 
 ---
-## Holographic – Wärme
+## Holographic thermal
 ---
-### Abrufen des Wärmestatus des Geräts
+### <a name="get-the-thermal-stage-of-the-device"></a>Abrufen des Wärmestatus des Geräts
 
 **Anforderung**
 
@@ -274,7 +273,7 @@ GET | /api/holographic/
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -291,9 +290,9 @@ Wert | Beschreibung
 - Standardstatuscodes
 
 ---
-## HSimulation-Steuerung
+## HSimulation control
 ---
-### Erstellen eines Steuerungsdatenstroms oder Senden von Daten an einen erstellten Datenstrom
+### <a name="create-a-control-stream-or-post-data-to-a-created-stream"></a>Erstellen eines Steuerungsdatenstroms oder Senden von Daten an einen erstellten Datenstrom
 
 **Anforderung**
 
@@ -319,7 +318,7 @@ streamid   | (**erforderlich, wenn an einen erstellten Datenstrom gesendet wird*
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -330,7 +329,7 @@ streamid   | (**erforderlich, wenn an einen erstellten Datenstrom gesendet wird*
 - Standardstatuscodes
 
 ---
-### Löschen eines Steuerungsdatenstroms
+### <a name="delete-a-control-stream"></a>Löschen eines Steuerungsdatenstroms
 
 **Anforderung**
 
@@ -351,7 +350,7 @@ DELETE | /api/holographic/simulation/control/stream
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -362,7 +361,7 @@ DELETE | /api/holographic/simulation/control/stream
 - Standardstatuscodes
 
 ---
-### Abrufen eines Steuerungsdatenstroms.
+### <a name="get-a-control-stream"></a>Abrufen eines Steuerungsdatenstroms.
 
 **Anforderung**
 
@@ -383,7 +382,7 @@ GET/WebSocket | /api/holographic/simulation/control/stream
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -394,7 +393,7 @@ GET/WebSocket | /api/holographic/simulation/control/stream
 - Standardstatuscodes
 
 ---
-### Abrufen des Simulationsmodus
+### <a name="get-the-simluation-mode"></a>Abrufen des Simulationsmodus
 
 **Anforderung**
 
@@ -415,7 +414,7 @@ GET | /api/holographic/simulation/control/mode
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -426,7 +425,7 @@ GET | /api/holographic/simulation/control/mode
 - Standardstatuscodes
 
 ---
-### Festlegen des Simulationsmodus
+### <a name="set-the-simluation-mode"></a>Festlegen des Simulationsmodus
 
 **Anforderung**
 
@@ -451,7 +450,7 @@ mode   | (**erforderlich**) Gibt den Simulationsmodus an. Die möglichen Werte l
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -462,9 +461,9 @@ mode   | (**erforderlich**) Gibt den Simulationsmodus an. Die möglichen Werte l
 - Standardstatuscodes
 
 ---
-## HSimulation-Wiedergabe
+## HSimulation playback
 ---
-### Löschen einer Aufzeichnung
+### <a name="delete-a-recording"></a>Löschen einer Aufzeichnung
 
 **Anforderung**
 
@@ -489,7 +488,7 @@ recording   | (**erforderlich**) Der Name der zu löschenden Aufzeichnung.
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -500,7 +499,7 @@ recording   | (**erforderlich**) Der Name der zu löschenden Aufzeichnung.
 - Standardstatuscodes
 
 ---
-### Abrufen aller Aufzeichnungen
+### <a name="get-all-recordings"></a>Abrufen aller Aufzeichnungen
 
 **Anforderung**
 
@@ -521,7 +520,7 @@ GET | /api/holographic/simulation/playback/files
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -532,7 +531,7 @@ GET | /api/holographic/simulation/playback/files
 - Standardstatuscodes
 
 ---
-### Abrufen der Typen von Daten in einer geladenen Aufzeichnung
+### <a name="get-the-types-of-data-in-a-loaded-recording"></a>Abrufen der Typen von Daten in einer geladenen Aufzeichnung
 
 **Anforderung**
 
@@ -557,7 +556,7 @@ recording   | (**erforderlich**) Der Name der betreffenden Aufzeichnung.
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -568,7 +567,7 @@ recording   | (**erforderlich**) Der Name der betreffenden Aufzeichnung.
 - Standardstatuscodes
 
 ---
-### Abrufen aller geladenen Aufzeichnungen
+### <a name="get-all-the-loaded-recordings"></a>Abrufen aller geladenen Aufzeichnungen
 
 **Anforderung**
 
@@ -589,7 +588,7 @@ GET | /api/holographic/simulation/playback/session/files
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -600,7 +599,7 @@ GET | /api/holographic/simulation/playback/session/files
 - Standardstatuscodes
 
 ---
-### Abrufen des aktuellen Wiedergabestatus einer Aufzeichnung 
+### <a name="get-the-current-playback-state-of-a-recording"></a>Abrufen des aktuellen Wiedergabestatus einer Aufzeichnung 
 
 **Anforderung**
 
@@ -625,7 +624,7 @@ recording   | (**erforderlich**) Der Name der betreffenden Aufzeichnung.
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -636,7 +635,7 @@ recording   | (**erforderlich**) Der Name der betreffenden Aufzeichnung.
 - Standardstatuscodes
 
 ---
-### Laden einer Aufzeichnung
+### <a name="load-a-recording"></a>Laden einer Aufzeichnung
 
 **Anforderung**
 
@@ -661,7 +660,7 @@ recording   | (**erforderlich**) Der Name der zu ladenden Aufzeichnung.
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -672,7 +671,7 @@ recording   | (**erforderlich**) Der Name der zu ladenden Aufzeichnung.
 - Standardstatuscodes
 
 ---
-### Anhalten einer Aufzeichnung
+### <a name="pause-a-recording"></a>Anhalten einer Aufzeichnung
 
 **Anforderung**
 
@@ -708,7 +707,7 @@ recording   | (**erforderlich**) Der Name der anzuhaltenden Aufzeichnung.
 - Standardstatuscodes
 
 ---
-### Wiedergeben einer Aufzeichnung
+### <a name="play-a-recording"></a>Wiedergeben einer Aufzeichnung
 
 **Anforderung**
 
@@ -733,7 +732,7 @@ recording   | (**erforderlich**) Der Name der wiederzugebenden Aufzeichnung.
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -744,7 +743,7 @@ recording   | (**erforderlich**) Der Name der wiederzugebenden Aufzeichnung.
 - Standardstatuscodes
 
 ---
-### Beenden einer Aufzeichnung
+### <a name="stop-a-recording"></a>Beenden einer Aufzeichnung
 
 **Anforderung**
 
@@ -769,7 +768,7 @@ recording   | (**erforderlich**) Der Name der zu beendenden Aufzeichnung.
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -780,7 +779,7 @@ recording   | (**erforderlich**) Der Name der zu beendenden Aufzeichnung.
 - Standardstatuscodes
 
 ---
-### Entladen einer Aufzeichnung
+### <a name="unload-a-recording"></a>Entladen einer Aufzeichnung
 
 **Anforderung**
 
@@ -805,7 +804,7 @@ recording   | (**erforderlich**) Der Name der zu entladenden Aufzeichnung.
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -816,7 +815,7 @@ recording   | (**erforderlich**) Der Name der zu entladenden Aufzeichnung.
 - Standardstatuscodes
 
 ---
-### Hochladen einer Aufzeichnung
+### <a name="upload-a-recording"></a>Hochladen einer Aufzeichnung
 
 **Anforderung**
 
@@ -837,7 +836,7 @@ POST | /api/holographic/simulation/playback/file
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -848,9 +847,9 @@ POST | /api/holographic/simulation/playback/file
 - Standardstatuscodes
 
 ---
-## HSimulation-Aufzeichnung
+## HSimulation recording
 ---
-### Abrufen des Aufzeichnungsstatus
+### <a name="get-the-recording-state"></a>Abrufen des Aufzeichnungsstatus
 
 **Anforderung**
 
@@ -871,7 +870,7 @@ GET | /api/holographic/simulation/recording/status
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -882,7 +881,7 @@ GET | /api/holographic/simulation/recording/status
 - Standardstatuscodes
 
 ---
-### Starten einer Aufzeichnung
+### <a name="start-a-recording"></a>Starten einer Aufzeichnung
 
 **Anforderung**
 
@@ -914,7 +913,7 @@ Für diese Parameter muss genau einer der folgenden Parameter auf 1 festgelegt w
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -925,7 +924,7 @@ Für diese Parameter muss genau einer der folgenden Parameter auf 1 festgelegt w
 - Standardstatuscodes
 
 ---
-### Beenden der aktuellen Aufzeichnung
+### <a name="stop-the-current-recording"></a>Beenden der aktuellen Aufzeichnung
 
 **Anforderung**
 
@@ -946,7 +945,7 @@ POST | /api/holographic/simulation/recording/stop
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -957,9 +956,9 @@ POST | /api/holographic/simulation/recording/stop
 - Standardstatuscodes
 
 ---
-## Mixed-Reality-Aufnahme
+## Mixed reality capture
 ---
-### Löschen einer Mixed Reality-Aufnahme (Mixed Reality Capture, MRC) vom Gerät
+### <a name="delete-a-mixed-reality-capture-mrc-recording-from-the-device"></a>Löschen einer Mixed Reality-Aufnahme (Mixed Reality Capture, MRC) vom Gerät
 
 **Anforderung**
 
@@ -984,7 +983,7 @@ filename   | (**erforderlich**) Der Name der zu löschenden Videodatei. Der Name
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -995,7 +994,7 @@ filename   | (**erforderlich**) Der Name der zu löschenden Videodatei. Der Name
 - Standardstatuscodes
 
 ---
-### Herunterladen einer MRC-Datei (Mixed Reality Capture)
+### <a name="download-a-mixed-reality-capture-mrc-file"></a>Herunterladen einer MRC-Datei (Mixed Reality Capture)
 
 **Anforderung**
 
@@ -1021,7 +1020,7 @@ op   | (**optional**) Legen Sie diesen Wert auf **stream** fest, wenn Sie einen 
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -1032,7 +1031,7 @@ op   | (**optional**) Legen Sie diesen Wert auf **stream** fest, wenn Sie einen 
 - Standardstatuscodes
 
 ---
-### Abrufen der MRC-Einstellungen (Mixed Reality Capture)
+### <a name="get-the-mixed-reality-capture-mrc-settings"></a>Abrufen der MRC-Einstellungen (Mixed Reality Capture)
 
 **Anforderung**
 
@@ -1053,7 +1052,7 @@ GET | /api/holographic/mrc/settings
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -1064,7 +1063,7 @@ GET | /api/holographic/mrc/settings
 - Standardstatuscodes
 
 ---
-### Abrufen des Status der MRC-Aufzeichnung (Mixed Reality Capture)
+### <a name="get-the-status-of-the-mixed-reality-capture-mrc-recording"></a>Abrufen des Status der MRC-Aufzeichnung (Mixed Reality Capture)
 
 **Anforderung**
 
@@ -1085,7 +1084,7 @@ GET | /api/holographic/mrc/status
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -1096,7 +1095,7 @@ GET | /api/holographic/mrc/status
 - Standardstatuscodes
 
 ---
-### Abrufen der Liste der MRC-Dateien (Mixed Reality Capture)
+### <a name="get-the-list-of-mixed-reality-capture-mrc-files"></a>Abrufen der Liste der MRC-Dateien (Mixed Reality Capture)
 
 **Anforderung**
 
@@ -1117,7 +1116,7 @@ GET | /api/holographic/mrc/files
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -1128,7 +1127,7 @@ GET | /api/holographic/mrc/files
 - Standardstatuscodes
 
 ---
-### Festlegen der MRC-Einstellungen (Mixed Reality Capture)
+### <a name="set-the-mixed-reality-capture-mrc-settings"></a>Festlegen der MRC-Einstellungen (Mixed Reality Capture)
 
 **Anforderung**
 
@@ -1149,7 +1148,7 @@ POST | /api/holographic/mrc/settings
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -1160,7 +1159,7 @@ POST | /api/holographic/mrc/settings
 - Standardstatuscodes
 
 ---
-### Starten einer MRC-Aufzeichnung (Mixed Reality Capture)
+### <a name="starts-a-mixed-reality-capture-mrc-recording"></a>Starten einer MRC-Aufzeichnung (Mixed Reality Capture)
 
 **Anforderung**
 
@@ -1181,7 +1180,7 @@ POST | /api/holographic/mrc/video/control/start
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -1192,7 +1191,7 @@ POST | /api/holographic/mrc/video/control/start
 - Standardstatuscodes
 
 ---
-### Beenden der aktuellen MRC-Aufzeichnung (Mixed Reality Capture)
+### <a name="stop-the-current-mixed-reality-capture-mrc-recording"></a>Beenden der aktuellen MRC-Aufzeichnung (Mixed Reality Capture)
 
 **Anforderung**
 
@@ -1213,7 +1212,7 @@ POST | /api/holographic/mrc/video/control/stop
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -1224,7 +1223,7 @@ POST | /api/holographic/mrc/video/control/stop
 - Standardstatuscodes
 
 ---
-### Aufnehmen eines MRC-Fotos (Mixed Reality Capture)
+### <a name="take-a-mixed-reality-capture-mrc-photo"></a>Aufnehmen eines MRC-Fotos (Mixed Reality Capture)
 
 **Anforderung**
 
@@ -1245,7 +1244,7 @@ GET | /api/holographic/mrc/photo
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -1256,9 +1255,9 @@ GET | /api/holographic/mrc/photo
 - Standardstatuscodes
 
 ---
-## Mixed-Reality-Streaming
+## Mixed reality streaming
 ---
-### Starten des portionsweisen Downloads einer fragmentierten MP4-Datei
+### <a name="initiates-a-chunked-download-of-a-fragmented-mp4"></a>Starten des portionsweisen Downloads einer fragmentierten MP4-Datei
 
 **Anforderung**
 
@@ -1286,7 +1285,7 @@ loopback   | (**optional**) Gibt an, ob Audioaufnahmen der Anwendung aufgezeichn
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -1297,7 +1296,7 @@ loopback   | (**optional**) Gibt an, ob Audioaufnahmen der Anwendung aufgezeichn
 - Standardstatuscodes
 
 ---
-### Starten des portionsweisen Downloads einer fragmentierten MP4-Datei
+### <a name="initiates-a-chunked-download-of-a-fragmented-mp4"></a>Starten des portionsweisen Downloads einer fragmentierten MP4-Datei
 
 **Anforderung**
 
@@ -1325,7 +1324,7 @@ loopback   | (**optional**) Gibt an, ob Audioaufnahmen der Anwendung aufgezeichn
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -1336,7 +1335,7 @@ loopback   | (**optional**) Gibt an, ob Audioaufnahmen der Anwendung aufgezeichn
 - Standardstatuscodes
 
 ---
-### Starten des portionsweisen Downloads einer fragmentierten MP4-Datei
+### <a name="initiates-a-chunked-download-of-a-fragmented-mp4"></a>Starten des portionsweisen Downloads einer fragmentierten MP4-Datei
 
 **Anforderung**
 
@@ -1364,7 +1363,7 @@ loopback   | (**optional**) Gibt an, ob Audioaufnahmen der Anwendung aufgezeichn
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -1375,7 +1374,7 @@ loopback   | (**optional**) Gibt an, ob Audioaufnahmen der Anwendung aufgezeichn
 - Standardstatuscodes
 
 ---
-### Starten des portionsweisen Downloads einer fragmentierten MP4-Datei
+### <a name="initiates-a-chunked-download-of-a-fragmented-mp4"></a>Starten des portionsweisen Downloads einer fragmentierten MP4-Datei
 
 **Anforderung**
 
@@ -1403,7 +1402,7 @@ loopback   | (**optional**) Gibt an, ob Audioaufnahmen der Anwendung aufgezeichn
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -1412,9 +1411,3 @@ loopback   | (**optional**) Gibt an, ob Audioaufnahmen der Anwendung aufgezeichn
 **Statuscode**
 
 - Standardstatuscodes
-
-
-
-<!--HONumber=Aug16_HO3-->
-
-

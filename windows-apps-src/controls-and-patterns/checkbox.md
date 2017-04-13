@@ -10,12 +10,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: aeac6f2326fa7a80f8d90f1c10333933fa562a00
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 7e00ac2aa08033292ba8d3ce1cebe836fdc3808c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="check-boxes"></a>Kontrollkästchen
 
@@ -57,13 +55,13 @@ Benutzer können sowohl über **Kontrollkästchen** als auch über **Optionsfeld
 
 ## <a name="examples"></a>Beispiele
 
-Ein Kontrollkästchen in einem Dialogfeld im Microsoft Edge-Browser:
+Ein Kontrollkästchen in einem Dialogfeld im MicrosoftEdge-Browser:
 
-![Kontrollkästchen in einem Dialogfeld im Microsoft Edge-Browser](images/control-examples/check-box-edge.png)
+![Kontrollkästchen in einem Dialogfeld im MicrosoftEdge-Browser](images/control-examples/check-box-edge.png)
 
-Kontrollkästchen in der Alarm & Uhr-App in Windows:
+Kontrollkästchen in der Alarm&Uhr-App in Windows:
 
-![Kontrollkästchen in der Alarm & Uhr-App in Windows](images/control-examples/check-box-alarm.png)
+![Kontrollkästchen in der Alarm&Uhr-App in Windows](images/control-examples/check-box-alarm.png)
 
 ## <a name="create-a-checkbox"></a>Erstellen eines Kontrollkästchens
 
@@ -304,6 +302,5 @@ private void SetCheckedState()
 -   [**CheckBox-Klasse**](https://msdn.microsoft.com/library/windows/apps/br209316) 
 -   [Optionsfelder](radio-button.md)
 -   [Umschalter](toggles.md)
-
 
 

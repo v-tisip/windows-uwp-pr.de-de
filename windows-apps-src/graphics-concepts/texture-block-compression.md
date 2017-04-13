@@ -1,43 +1,39 @@
 ---
 title: Texturblockkomprimierung
-description: "Die Unterstützung der Blockkomprimierung (BC) für Texturen wurde in Direct3D 11 erweitert, um BC6H- und BC7-Algorithmen anzubieten."
+description: "Die Unterstützung der Blockkomprimierung (BC) für Texturen wurde in Direct3D11 erweitert, um BC6H- und BC7-Algorithmen anzubieten."
 ms.assetid: 63506C46-BF14-464B-B20C-8B8F359E7AFE
-keywords:
-- Texturblockkomprimierung
+keywords: Texturblockkomprimierung
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 3930d5d2350fcbb7878edec8a5a93dfd4c36caee
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 3288232e0010c1b23d58992cfd6c9f038a74a552
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="texture-block-compression"></a>Texturblockkomprimierung
 
 
-Die Unterstützung der Blockkomprimierung (BC) für Texturen wurde in Direct3D 11 erweitert, um BC6H- und BC7-Algorithmen anzubieten. BC6H unterstützt HDR-Farb-Quelldaten und BC7 bietet überdurchschnittliche Qualität bei der Komprimierung mit weniger Artefakte für Standard-RGB-Quelldaten.
+Die Unterstützung der Blockkomprimierung (BC) für Texturen wurde in Direct3D11 erweitert, um BC6H- und BC7-Algorithmen anzubieten. BC6H unterstützt HDR-Farb-Quelldaten und BC7 bietet überdurchschnittliche Qualität bei der Komprimierung mit weniger Artefakte für Standard-RGB-Quelldaten.
 
-Weitere Informationen zur Unterstützung des Blockkomprimierungsalgorithmus vor Direct3D 11, einschließlich der Unterstützung für die Formate BC1 bis BC5 Formate, finden Sie unter [Blockkomprimierung (Direct3D 10)](https://msdn.microsoft.com/library/windows/desktop/bb694531).
+Weitere Informationen zur Unterstützung des Blockkomprimierungsalgorithmus vor Direct3D11, einschließlich der Unterstützung für die Formate BC1 bis BC5 Formate, finden Sie unter [Blockkomprimierung (Direct3D10)](https://msdn.microsoft.com/library/windows/desktop/bb694531).
 
 **Hinweis zu Dateiformaten: ** Die Texturkomprimierungsformate BC6H und BC7 verwenden das Dateiformat DDS für die Speicherung der komprimierten Texturdaten. Weitere Informationen finden Sie in der [Programmieranleitung für DDS](https://msdn.microsoft.com/library/windows/desktop/bb943991).
 
-## <a name="span-idblockcompressionformatssupportedindirect3d11spanspan-idblockcompressionformatssupportedindirect3d11spanspan-idblockcompressionformatssupportedindirect3d11spanblock-compression-formats-supported-in-direct3d-11"></a><span id="Block_Compression_Formats_Supported_in_Direct3D_11"></span><span id="block_compression_formats_supported_in_direct3d_11"></span><span id="BLOCK_COMPRESSION_FORMATS_SUPPORTED_IN_DIRECT3D_11"></span>In Direct3D 11 unterstützte Blockkomprimierungsformate
+## <a name="span-idblockcompressionformatssupportedindirect3d11spanspan-idblockcompressionformatssupportedindirect3d11spanspan-idblockcompressionformatssupportedindirect3d11spanblock-compression-formats-supported-in-direct3d-11"></a><span id="Block_Compression_Formats_Supported_in_Direct3D_11"></span><span id="block_compression_formats_supported_in_direct3d_11"></span><span id="BLOCK_COMPRESSION_FORMATS_SUPPORTED_IN_DIRECT3D_11"></span>In Direct3D11 unterstützte Blockkomprimierungsformate
 
 
 | Quelldaten                                  | Erforderliche Mindestauflösung für die Datenkomprimierung                              | Empfohlenes Format | Minimaler unterstützte Featureebene |
 |----------------------------------------------|---------------------------------------------------------------------------|--------------------|---------------------------------|
-| Drei-Kanal-Farbe mit Alphakanal       | Drei Farbkanäle (5 Bit:6 Bit:5 Bit) mit 0 oder 1 Bit Alpha  | BC1                | Direct3D 9.1                    |
+| Drei-Kanal-Farbe mit Alphakanal       | Drei Farbkanäle (5 Bit:6 Bit:5 Bit) mit 0 oder 1Bit Alpha  | BC1                | Direct3D 9.1                    |
 | Drei-Kanal-Farbe mit Alphakanal       | Drei Farbkanäle (5 Bit:6 Bit:5 Bit) mit 4 Bit Alpha         | BC2                | Direct3D 9.1                    |
 | Drei-Kanal-Farbe mit Alphakanal       | Drei Farbkanäle (5 Bit:6 Bit:5 Bit) mit 8 Bit Alpha          | BC3                | Direct3D 9.1                    |
-| Ein-Kanal-Farbe                            | Ein Farbkanal (8 Bit)                                                | BC4                | Direct3D 10                     |
-| Zwei-Kanal-Farbe                            | Zwei Farbkanäle (8 Bit:8 Bit)                                        | BC5                | Direct3D 10                     |
-| Drei-Kanal-HDR- (High Dynamic Range) Farbe | Drei Farbkanäle (16 Bit:16 Bit:16-Bit) in „Halb“-Fließkomma\ * | BC6H               | Direct3D 11                     |
-| Drei-Kanal-Farbe, Alphakanal optional  | Drei Farbkanäle (4 bis 7 Bit pro Kanal) mit 0 bis 8 Bit für Alpha  | BC7                | Direct3D 11                     |
+| Ein-Kanal-Farbe                            | Ein Farbkanal (8Bit)                                                | BC4                | Direct3D 10                     |
+| Zwei-Kanal-Farbe                            | Zwei Farbkanäle (8Bit:8Bit)                                        | BC5                | Direct3D 10                     |
+| Drei-Kanal-HDR- (High Dynamic Range) Farbe | Drei Farbkanäle (16Bit:16Bit:16-Bit) in „Halb“-Fließkomma\ * | BC6H               | Direct3D 11                     |
+| Drei-Kanal-Farbe, Alphakanal optional  | Drei Farbkanäle (4 bis 7Bit pro Kanal) mit 0 bis 8 Bit für Alpha  | BC7                | Direct3D 11                     |
 
  
 
@@ -47,7 +43,7 @@ Weitere Informationen zur Unterstützung des Blockkomprimierungsalgorithmus vor 
 
 Die Formate BC1, BC2 und BC3 entsprechen den Direct3D 9 DXTn-Texturkomprimierungsformaten und sind mit den entsprechenden Direct3D 10-Formaten BC1, BC2 und BC3 identisch. Alle Featureebenen (D3D\_FEATURE\_LEVEL\_9\_1, D3D\_FEATURE\_LEVEL\_9\_2, D3D\_FEATURE\_LEVEL\_9\_3, D3D\_FEATURE\_LEVEL\_10\_0, D3D\_FEATURE\_LEVEL\_10\_1 und D3D\_FEATURE\_LEVEL\_11\_0) erfordern die Unterstützung für diese drei Formate.
 
-| Blockkomprimierungsformat | DXGI-Format                                                                           | Äquivalentes Direct3D 9-Format                               | Byte pro 4 x 4-Pixelblock |
+| Blockkomprimierungsformat | DXGI-Format                                                                           | Äquivalentes Direct3D9-Format                               | Byte pro 4 x 4-Pixelblock |
 |--------------------------|---------------------------------------------------------------------------------------|------------------------------------------------------------|---------------------------|
 | BC1                      | DXGI\_FORMAT\_BC1\_UNORM, DXGI\_FORMAT\_BC1\_UNORM\_SRGB, DXGI\_FORMAT\_BC1\_TYPELESS | D3DFMT\_DXT1, FourCC="DXT1"                                | 8                         |
 | BC2                      | DXGI\_FORMAT\_BC2\_UNORM, DXGI\_FORMAT\_BC2\_UNORM\_SRGB, DXGI\_FORMAT\_BC2\_TYPELESS | D3DFMT\_DXT2\*, FourCC="DXT2", D3DFMT\_DXT3, FourCC="DXT3" | 16                        |
@@ -60,7 +56,7 @@ Die Formate BC1, BC2 und BC3 entsprechen den Direct3D 9 DXTn-Texturkomprimierung
 ## <a name="span-idbc4andbc5formatsspanspan-idbc4andbc5formatsspanspan-idbc4andbc5formatsspanbc4-and-bc5-formats"></a><span id="BC4_and_BC5_Formats"></span><span id="bc4_and_bc5_formats"></span><span id="BC4_AND_BC5_FORMATS"></span>Formate BC4 und BC5
 
 
-| Blockkomprimierungsformat | DXGI-Format                                                                     | Äquivalentes Direct3D 9-Format | Byte pro 4 x 4-Pixelblock |
+| Blockkomprimierungsformat | DXGI-Format                                                                     | Äquivalentes Direct3D9-Format | Byte pro 4 x 4-Pixelblock |
 |--------------------------|---------------------------------------------------------------------------------|------------------------------|---------------------------|
 | BC4                      | DXGI\_FORMAT\_BC4\_UNORM, DXGI\_FORMAT\_BC4\_SNORM, DXGI\_FORMAT\_BC4\_TYPELESS | FourCC="ATI1"                | 8                         |
 | BC5                      | DXGI\_FORMAT\_BC5\_UNORM, DXGI\_FORMAT\_BC5\_SNORM, DXGI\_FORMAT\_BC5\_TYPELESS | FourCC="ATI2"                | 16                        |
@@ -72,9 +68,9 @@ Die Formate BC1, BC2 und BC3 entsprechen den Direct3D 9 DXTn-Texturkomprimierung
 
 Ausführlichere Informationen über dieses Format finden Sie in der Dokumentation zum [BC6H-Format](https://msdn.microsoft.com/library/windows/desktop/hh308952).
 
-| Blockkomprimierungsformat | DXGI-Format                                                                      | Äquivalentes Direct3D 9-Format | Byte pro 4 x 4-Pixelblock |
+| Blockkomprimierungsformat | DXGI-Format                                                                      | Äquivalentes Direct3D9-Format | Byte pro 4 x 4-Pixelblock |
 |--------------------------|----------------------------------------------------------------------------------|------------------------------|---------------------------|
-| BC6H                     | DXGI\_FORMAT\_BC6H\_UF16, DXGI\_FORMAT\_BC6H\_SF16, DXGI\_FORMAT\_BC6H\_TYPELESS | k. A.                          | 16                        |
+| BC6H                     | DXGI\_FORMAT\_BC6H\_UF16, DXGI\_FORMAT\_BC6H\_SF16, DXGI\_FORMAT\_BC6H\_TYPELESS | k.A.                          | 16                        |
 
  
 
@@ -85,9 +81,9 @@ Das Format BC6H kann für jeden 4x4-Pixel-Block unterschiedliche Kodierungsmodi 
 
 Ausführlichere Informationen über dieses Format finden Sie in der Dokumentation zum [BC7-Format](https://msdn.microsoft.com/library/windows/desktop/hh308953).
 
-| Blockkomprimierungsformat | DXGI-Format                                                                           | Äquivalentes Direct3D 9-Format | Byte pro 4 x 4-Pixelblock |
+| Blockkomprimierungsformat | DXGI-Format                                                                           | Äquivalentes Direct3D9-Format | Byte pro 4 x 4-Pixelblock |
 |--------------------------|---------------------------------------------------------------------------------------|------------------------------|---------------------------|
-| BC7                      | DXGI\_FORMAT\_BC7\_UNORM, DXGI\_FORMAT\_BC7\_UNORM\_SRGB, DXGI\_FORMAT\_BC7\_TYPELESS | k. A.                          | 16                        |
+| BC7                      | DXGI\_FORMAT\_BC7\_UNORM, DXGI\_FORMAT\_BC7\_UNORM\_SRGB, DXGI\_FORMAT\_BC7\_TYPELESS | k.A.                          | 16                        |
 
  
 
@@ -103,7 +99,6 @@ Das Format BC7 kann für jeden 4x4-Pixel-Block unterschiedliche Kodierungsmodi a
  
 
  
-
 
 
 

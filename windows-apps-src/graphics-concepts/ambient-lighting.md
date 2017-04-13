@@ -2,25 +2,21 @@
 title: Umgebungslicht
 description: "Das Umgebungslicht bietet konstante Beleuchtung für eine Szene."
 ms.assetid: C34FA65A-3634-4A4B-B183-4CDA89F4DC95
-keywords:
-- Umgebungslicht
+keywords: Umgebungslicht
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 77865a483f226fba912c03e2f9abe17eaa7fbee0
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: c03e3a67af7da1326e254a687c77c9c0fd1d5403
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="ambient-lighting"></a>Umgebungslicht
 
 
-Das Umgebungslicht bietet konstante Beleuchtung für eine Szene. Es erhellt die Scheitelpunkte aller Objekt gleichermaßen, da es nicht von anderen Beleuchtungsfaktoren wie vertexspezifischen Normalen, Lichteinfallsrichtung, Position der Lichtquelle, Reichweite oder Dämpfung abhängt. Das Umgebungslicht bleibt in alle Richtungen hin unverändert und es versieht alle Pixel eines Objekts mit der gleichen Farbe. Obwohl die Berechnung schnell ist, sehen die Objekte flach und unrealistisch aus.
+Das Umgebungslicht bietet konstante Beleuchtung für eine Szene. Sie leuchtet alle Objekteckpunkte gleich aus, da sie nicht von anderen Beleuchtungsfaktoren abhängig ist, wie der Eckpunktnormalen, der Richtung des Lichts, der Position der Lichtquelle, der Reichweite oder Abschwächung des Lichts. Umgebungsbeleuchtung ist in alle Richtungen konstant und färbt alle Pixel eines Objekts identisch. Obwohl die Berechnung schnell ist, sehen die Objekte flach und unrealistisch aus.
 
 Das Umgebungslicht ist zwar der schnellste Beleuchtungstyp, es erzeugt allerdings die unrealistischsten Ergebnisse. Direct3D enthält eine einzige globale Umgebungslichteigenschaft, die Sie ohne Erstellen des Lichts verwenden können. Alternativ können Sie jede Lichtquellen als Umgebungslicht festlegen.
 
@@ -91,7 +87,6 @@ Verwenden Sie neben dem Umgebungslicht diffuses oder Glanzlicht, um Objekten ein
  
 
  
-
 
 
 

@@ -2,21 +2,17 @@
 title: Ansichten
 description: "Der Begriff \\ 0034;Ansicht \\ 0034; wird für \\ 0034;Daten im erforderlichen Format \\ 0034; verwendet. Eine Konstantenpufferansicht (CBV) ist beispielweise ein Satz ordnungsgemäß formatierter, konstanter Pufferdaten. Dieser Abschnitt beschreibt die gängigsten und hilfreichsten Ansichten."
 ms.assetid: 0C7FB99F-7391-472F-BA53-576888DFC171
-keywords:
-- Ansichten
+keywords: Ansichten
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: beaed3bbaf6cab56c826788d0361b1200c73a003
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 0091afb549c778f367e12726054cb908eb0c3eba
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="views"></a>Ansichten
 
 
@@ -47,7 +43,7 @@ Der Begriff „Ansicht“ wird für „Daten im erforderlichen Format“ verwend
 </tr>
 <tr class="odd">
 <td align="left"><p>[Shaderressourcenansicht (SRV) und Unsortierte Zugriffsansicht (UAV)](shader-resource-view--srv-.md)</p></td>
-<td align="left"><p>Shaderressourcenansichten verpacken Texturen in der Regel in einem Format, so dass die Shader darauf zugreifen können. Eine unsortierte Zugriffsansicht bietet ähnliche Funktionen, ermöglicht aber das Lesen und Schreiben der Textur (oder einer anderen Ressource) in beliebiger Reihenfolge.</p></td>
+<td align="left"><p>Shaderressourcenansichten verpacken Texturen in der Regel in einem Format, sodass die Shader darauf zugreifen können. Eine unsortierte Zugriffsansicht bietet ähnliche Funktionen, ermöglicht aber das Lesen und Schreiben der Textur (oder einer anderen Ressource) in beliebiger Reihenfolge.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[Sampler](sampler.md)</p></td>
@@ -55,7 +51,7 @@ Der Begriff „Ansicht“ wird für „Daten im erforderlichen Format“ verwend
 </tr>
 <tr class="odd">
 <td align="left"><p>[Renderzielansicht (RTV)](render-target-view--rtv-.md)</p></td>
-<td align="left"><p>Renderziele ermöglichen das Rendern einer Szene, die auf dem Bildschirm gerendert werden soll, in einem temporären Zwischenpuffer statt im Hintergrundpuffer. Dieses Feature ermöglicht die Verwendung der komplexen Szene, die z. B. als eine Spiegelungstextur oder für andere Zwecke in der Grafikpipeline, oder vielleicht zum Hinzufügen von Pixelshader-Effekten zu der Szene vor dem Rendern gerendert werden kann.</p></td>
+<td align="left"><p>Renderziele ermöglichen das Rendern einer Szene, die auf dem Bildschirm gerendert werden soll, in einem temporären Zwischenpuffer statt im Hintergrundpuffer. Dieses Feature ermöglicht die Verwendung der komplexen Szene, die z.B. als eine Spiegelungstextur oder für andere Zwecke in der Grafikpipeline, oder vielleicht zum Hinzufügen von Pixelshader-Effekten zu der Szene vor dem Rendern gerendert werden kann.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[Tiefenschablonenansicht (Depth Stencil View, DSV)](depth-stencil-view--dsv-.md)</p></td>
@@ -82,7 +78,6 @@ Der Begriff „Ansicht“ wird für „Daten im erforderlichen Format“ verwend
  
 
  
-
 
 
 

@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 10d8799b73a941a4a0eb89fd369d67b2fc6a68c2
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 347d658f346ab14c60a4468c4a9935e555c2e016
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="device-portal-core-api-reference"></a>Referenz zu Kern-APIs des Device Portal
 
 Alle Komponenten im Windows Device Portal basieren auf REST-APIs, die Sie für den Zugriff auf die Daten und die programmatische Steuerung des Geräts verwenden können.
@@ -65,7 +62,7 @@ HTTP-Statuscode      | Beschreibung
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
-* Windows Desktop
+* Windows-Desktop
 * Xbox
 * HoloLens
 * IoT
@@ -83,21 +80,21 @@ GET | /api/app/packagemanager/state
 <br />
 **URI-Parameter**
 
-- Keiner
+- Keine
 
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -108,7 +105,7 @@ HTTP-Statuscode      | Beschreibung
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
-* Windows Desktop
+* Windows-Desktop
 * Xbox
 * HoloLens
 * IoT
@@ -137,13 +134,13 @@ package   | (**Erforderlich**) PackageFullName (von GET /api/app/packagemanager/
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -173,7 +170,7 @@ GET | /api/app/packagemanager/packages
 
 **URI-Parameter**
 
-- Keiner
+- Keine
 
 **Anforderungsheader**
 
@@ -181,7 +178,7 @@ GET | /api/app/packagemanager/packages
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -212,7 +209,7 @@ Die Antwort enthält eine Liste der installierten Pakete mit zugehörigen Detail
 ```
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -223,7 +220,7 @@ HTTP-Statuscode      | Beschreibung
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
-* Windows Desktop
+* Windows-Desktop
 * Xbox
 * HoloLens
 * IoT
@@ -233,7 +230,7 @@ HTTP-Statuscode      | Beschreibung
 ---
 ### <a name="get-the-installed-devices-on-the-machine"></a>Abrufen der auf dem Computer installierten Geräte
 
-**Anfordern**
+**Anforderung**
 
 Mit dem folgenden Anforderungsformat können Sie eine Liste der auf dem Computer installierten Geräte abrufen.
  
@@ -248,11 +245,11 @@ GET | /api/devicemanager/devices
 
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -273,7 +270,7 @@ Die Antwort enthält ein JSON-Array von Geräten, die mit dem Gerät verbunden s
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -284,7 +281,7 @@ HTTP-Statuscode      | Beschreibung
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
-* Windows Desktop
+* Windows-Desktop
 * IoT
 
 ---
@@ -292,7 +289,7 @@ HTTP-Statuscode      | Beschreibung
 ---
 ### <a name="get-the-list-of-all-crash-dumps-for-apps"></a>Abrufen der Liste aller Absturzabbilder für Apps
 
-**Anfordern**
+**Anforderung**
 
 Mit dem folgenden Anforderungsformat können Sie die Liste aller verfügbaren Absturzabbilder für jede quergeladene App abrufen.
  
@@ -311,7 +308,7 @@ GET | /api/debug/dump/usermode/dumps
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -319,7 +316,7 @@ Die Antwort enthält eine Liste der Absturzabbilder für jede quergeladene Anwen
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -356,11 +353,11 @@ packageFullname   | (**erforderlich**) Der vollständige Name des Pakets für di
 <br />
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -371,7 +368,7 @@ Die Antwort weist das folgende Format auf.
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -409,17 +406,17 @@ fileName   | (**erforderlich**) Der Name der Absturzabbilddatei, die gelöscht w
 <br />
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -456,17 +453,17 @@ packageFullname   | (**erforderlich**) Der vollständige Name des Pakets für di
 <br />
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -508,7 +505,7 @@ fileName   | (**erforderlich**) Der Name der Absturzabbilddatei, die Sie herunte
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -516,7 +513,7 @@ Die Antwort enthält eine Absturzabbilddatei. Sie können die Absturzabbilddatei
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -553,17 +550,17 @@ packageFullname   | (**erforderlich**) Der vollständige Name des Pakets für di
 <br />
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -598,7 +595,7 @@ GET | /api/debug/dump/kernel/dumplist
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -651,7 +648,7 @@ filename   | (**erforderlich**) Der Dateiname der Speicherabbilddatei. Sie finde
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -659,7 +656,7 @@ Die Antwort enthält die Speicherabbilddatei. Sie können diese Datei mithilfe v
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -694,7 +691,7 @@ GET | /api/debug/dump/kernel/crashcontrol
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -755,7 +752,7 @@ GET | /api/debug/dump/livekernel
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -763,7 +760,7 @@ Die Antwort enthält das vollständige Kernelmodus-Speicherabbild. Sie können d
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -802,7 +799,7 @@ pid   | (**erforderlich**) Die eindeutige Prozess-ID für den betreffenden Proze
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -810,7 +807,7 @@ Die Antwort enthält die Prozesssicherung. Sie können diese Datei mit WinDbg od
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -848,17 +845,17 @@ overwrite   | (**optional**) True oder False. Dieser Parameter gibt an, ob alte 
 <br />
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -868,7 +865,7 @@ HTTP-Statuscode      | Beschreibung
 <br />
 **Verfügbare Gerätefamilien**
 
-* Windows Desktop
+* Windows-Desktop
 * IoT
 
 ---
@@ -876,7 +873,7 @@ HTTP-Statuscode      | Beschreibung
 ---
 ### <a name="create-a-realtime-etw-session-over-a-websocket"></a>Erstellen einer Echtzeit-ETW-Sitzung über ein Websocket
 
-**Anfordern**
+**Anforderung**
 
 Mit dem folgenden Anforderungsformat können Sie eine Echtzeit-ETW-Sitzung erstellen. Dies erfolgt über ein Websocket.  ETW-Ereignisse werden auf dem Server zusammengefasst und einmal pro Sekunde an den Client gesendet. 
  
@@ -895,7 +892,7 @@ GET/WebSocket | /api/etw/session/realtime
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -903,7 +900,7 @@ Die Antwort enthält die ETW-Ereignisse von den aktivierten Anbietern.  ETW-WebS
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -989,7 +986,7 @@ GET | /api/etw/providers
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -1005,7 +1002,7 @@ Die Antwort enthält die Liste der ETW-Anbieter. Diese Liste enthält den Anzeig
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -1032,15 +1029,15 @@ GET | /api/etw/customproviders
 
 **URI-Parameter**
 
-- Keiner
+- Keine
 
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -1062,7 +1059,7 @@ GET | /api/etw/customproviders
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
-* Windows Desktop
+* Windows-Desktop
 * HoloLens
 * IoT
 
@@ -1071,7 +1068,7 @@ GET | /api/etw/customproviders
 ---
 ### <a name="get-the-machine-name"></a>Abrufen des Computernamens
 
-**Anfordern**
+**Anforderung**
 
 Sie können den Namen eines Computers durch Verwendung des folgenden Anforderungsformats abrufen.
  
@@ -1082,15 +1079,15 @@ GET | /api/os/machinename
 
 **URI-Parameter**
 
-- Keiner
+- Keine
 
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -1102,7 +1099,7 @@ Die Antwort enthält den Namen des Computers im folgenden Format.
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -1132,15 +1129,15 @@ GET | /api/os/info
 
 **URI-Parameter**
 
-- Keiner
+- Keine
 
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -1158,7 +1155,7 @@ Die Antwort enthält die Betriebssysteminformationen im folgenden Format.
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -1196,7 +1193,7 @@ GET | /api/os/devicefamily
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -1250,17 +1247,17 @@ name | (**erforderlich**) Der neue Name für den Computer.
 <br />
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -1269,7 +1266,7 @@ HTTP-Statuscode      | Beschreibung
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
-* Windows Desktop
+* Windows-Desktop
 * Xbox
 * HoloLens
 * IoT
@@ -1279,7 +1276,7 @@ HTTP-Statuscode      | Beschreibung
 ---
 ### <a name="get-the-list-of-running-processes"></a>Abrufen der Liste der ausgeführten Prozesse
 
-**Anfordern**
+**Anforderung**
 
 Mit dem folgenden Anforderungsformat können Sie die Liste der derzeit ausgeführten Prozesse abrufen.  Dies kann auch zu einer WebSocket-Verbindung aktualisiert werden, wobei einmal pro Sekunde die gleichen JSON-Daten per Push an den Client gesendet werden. 
  
@@ -1291,7 +1288,7 @@ GET/WebSocket | /api/resourcemanager/processes
 
 **URI-Parameter**
 
-- Keiner
+- Keine
 
 **Anforderungsheader**
 
@@ -1299,7 +1296,7 @@ GET/WebSocket | /api/resourcemanager/processes
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -1322,7 +1319,7 @@ Die Antwort enthält eine Liste der Prozesse mit Details für jeden Prozess. Die
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -1353,15 +1350,15 @@ Dies kann auch auf eine WebSocket-Verbindung aktualisiert werden.  Sie stellt un
 
 **URI-Parameter**
 
-- Keiner
+- Keine
 
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -1400,7 +1397,7 @@ Die Antwort enthält die Leistungsstatistik für das System, z. B. CPU- und GPU-
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -1411,7 +1408,7 @@ HTTP-Statuscode      | Beschreibung
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
-* Windows Desktop
+* Windows-Desktop
 * Xbox
 * HoloLens
 * IoT
@@ -1421,7 +1418,7 @@ HTTP-Statuscode      | Beschreibung
 ---
 ### <a name="get-the-current-battery-state"></a>Abrufen des aktuellen Akkustatus
 
-**Anfordern**
+**Anforderung**
 
 Mit dem folgenden Anforderungsformat können Sie den aktuellen Akkustatus abrufen.
  
@@ -1432,15 +1429,15 @@ GET | /api/power/battery
 
 **URI-Parameter**
 
-- Keiner
+- Keine
 
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -1460,7 +1457,7 @@ Die Informationen zum aktuellen Akkustatus werden im folgenden Format zurückgeg
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -1489,15 +1486,15 @@ GET | /api/power/activecfg
 
 **URI-Parameter**
 
-- Keiner
+- Keine
 
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -1508,7 +1505,7 @@ Das aktive Energieschema hat das folgende Format.
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -1537,11 +1534,11 @@ Optionen:
 
 **URI-Parameter**
 
-- Keiner
+- Keine
 
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
@@ -1551,7 +1548,7 @@ Eine vollständige Liste der verfügbaren Energiezustände ist auf einzelne Anwe
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -1578,15 +1575,15 @@ GET | /api/power/state
 
 **URI-Parameter**
 
-- Keiner
+- Keine
 
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -1597,7 +1594,7 @@ Die Informationen zum Energiezustand haben die folgende Vorlage.
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -1633,17 +1630,17 @@ scheme | (**erforderlich**) Die GUID des Schemas, das Sie als das aktive Energie
 <br />
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -1679,17 +1676,17 @@ valueDC | (**erforderlich**) Der für den Akkubetrieb zu verwendende Wert.
 <br />
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -1718,11 +1715,11 @@ FileName | (**erforderlich**) Der vollständige Name für die Datei, die Sie her
 <br />
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -1730,7 +1727,7 @@ Die Antwort ist eine Datei mit der Ruhezustandsuntersuchung.
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -1757,15 +1754,15 @@ GET | /api/power/sleepstudy/reports
 
 **URI-Parameter**
 
-- Keiner
+- Keine
 
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -1781,7 +1778,7 @@ Die Liste der verfügbaren Berichte hat die folgende Vorlage.
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -1808,15 +1805,15 @@ GET | /api/power/sleepstudy/transform
 
 **URI-Parameter**
 
-- Keiner
+- Keine
 
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -1824,7 +1821,7 @@ Die Antwort enthält die Transformation der Ruhezustandsuntersuchung.
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -1834,7 +1831,7 @@ HTTP-Statuscode      | Beschreibung
 <br />
 **Verfügbare Gerätefamilien**
 
-* Windows Desktop
+* Windows-Desktop
 * IoT
 
 ---
@@ -1842,7 +1839,7 @@ HTTP-Statuscode      | Beschreibung
 ---
 ### <a name="restart-the-target-computer"></a>Neustarten des Zielcomputers
 
-**Anfordern**
+**Anforderung**
 
 Mit dem folgenden Anforderungsformat können Sie den Zielcomputer neu starten.
  
@@ -1853,21 +1850,21 @@ POST | /api/control/restart
 
 **URI-Parameter**
 
-- Keiner
+- Keine
 
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -1895,21 +1892,21 @@ POST | /api/control/shutdown
 
 **URI-Parameter**
 
-- Keiner
+- Keine
 
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -1920,7 +1917,7 @@ HTTP-Statuscode      | Beschreibung
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
-* Windows Desktop
+* Windows-Desktop
 * Xbox
 * HoloLens
 * IoT
@@ -1930,7 +1927,7 @@ HTTP-Statuscode      | Beschreibung
 ---
 ### <a name="start-a-modern-app"></a>Starten einer Modern App
 
-**Anfordern**
+**Anforderung**
 
 Mit dem folgenden Anforderungsformat können Sie eine Modern App starten.
  
@@ -1950,17 +1947,17 @@ package   | (**erforderlich**) Der vollständige Name für das App-Paket, das Si
 <br />
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -1999,17 +1996,17 @@ forcestop   | (**optional**) Der Wert **yes** gibt an, dass das Beenden sämtlic
 <br />
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -2020,7 +2017,7 @@ HTTP-Statuscode      | Beschreibung
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
-* Windows Desktop
+* Windows-Desktop
 * Xbox
 * HoloLens
 * IoT
@@ -2030,7 +2027,7 @@ HTTP-Statuscode      | Beschreibung
 ---
 ### <a name="get-the-current-ip-configuration"></a>Abrufen der aktuellen IP-Konfiguration
 
-**Anfordern**
+**Anforderung**
 
 Mit dem folgenden Anforderungsformat können Sie die aktuelle IP-Konfiguration abrufen.
  
@@ -2049,7 +2046,7 @@ GET | /api/networking/ipconfig
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -2097,7 +2094,7 @@ Die Antwort enthält die IP-Konfiguration in der folgenden Vorlage.
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -2135,7 +2132,7 @@ GET | /api/wifi/interfaces
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -2159,7 +2156,7 @@ Eine Liste der verfügbaren Drahtlosschnittstellen mit Details im folgenden Form
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -2197,11 +2194,11 @@ interface   | (**erforderlich**) Die GUID für die Netzwerkschnittstelle, die zu
 <br />
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -2229,7 +2226,7 @@ Die Liste der an der angegebenen *interface* gefundenen Drahtlosnetzwerke. Diese
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -2271,17 +2268,17 @@ createprofile | (**erforderlich**) Erstellen Sie ein Profil für das Netzwerk au
 
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -2318,17 +2315,17 @@ profile   | (**erforderlich**) Der Name des zu löschenden Profils.
 <br />
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -2337,7 +2334,7 @@ HTTP-Statuscode      | Beschreibung
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
-* Windows Desktop
+* Windows-Desktop
 * Xbox
 * HoloLens
 * IoT
@@ -2347,7 +2344,7 @@ HTTP-Statuscode      | Beschreibung
 ---
 ### <a name="download-a-windows-error-reporting-wer-file"></a>Herunterladen einer WER-Datei (Windows Error Reporting)
 
-**Anfordern**
+**Anforderung**
 
 Mit dem folgenden Anforderungsformat können Sie eine WER-Datei herunterladen.
  
@@ -2369,11 +2366,11 @@ file   | (**erforderlich**) Der Name der Datei des Berichts, die heruntergeladen
 <br />
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -2381,7 +2378,7 @@ file   | (**erforderlich**) Der Name der Datei des Berichts, die heruntergeladen
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -2419,7 +2416,7 @@ name   | (**erforderlich**) Der Name des Berichts. Dieser sollte base64-codiert 
 <br />
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
@@ -2436,7 +2433,7 @@ name   | (**erforderlich**) Der Name des Berichts. Dieser sollte base64-codiert 
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -2464,15 +2461,15 @@ GET | /api/wer/reports
 
 **URI-Parameter**
 
-- Keiner
+- Keine
 
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -2494,7 +2491,7 @@ Die WER-Berichte in folgendem Format.
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -2504,7 +2501,7 @@ HTTP-Statuscode      | Beschreibung
 <br />
 **Verfügbare Gerätefamilien**
 
-* Windows Desktop
+* Windows-Desktop
 * HoloLens
 * IoT
 
@@ -2513,7 +2510,7 @@ HTTP-Statuscode      | Beschreibung
 ---
 ### <a name="start-tracing-with-a-custom-profile"></a>Starten der Ablaufverfolgung mit einem benutzerdefinierten Profil
 
-**Anfordern**
+**Anforderung**
 
 Mit dem folgenden Anforderungsformat können Sie ein WPR-Profil hochladen und die Ablaufverfolgung mit diesem Profil starten.  Es kann immer nur eine Spur ausgeführt werden. Das Profil bleibt nicht auf dem Gerät. 
  
@@ -2547,7 +2544,7 @@ Der Status der WPR-Sitzung im folgenden Format.
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -2588,7 +2585,7 @@ profile   | (**erforderlich**) Dieser Parameter ist beim Starten erforderlich. D
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -2603,7 +2600,7 @@ Beim Start gibt diese API den Status der WPR-Sitzung im folgenden Format zurück
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -2640,7 +2637,7 @@ GET | /api/wpr/boottrace
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -2689,7 +2686,7 @@ profile   | (**erforderlich**) Der Name des Profils, das eine Leistungs-Ablaufve
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -2704,7 +2701,7 @@ Beim Start gibt diese API den Status der WPR-Sitzung im folgenden Format zurück
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -2741,7 +2738,7 @@ GET | /api/wpr/trace
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -2786,7 +2783,7 @@ GET | /api/wpr/status
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -2801,7 +2798,7 @@ Der Status der WPR-Ablaufverfolgungssitzung im folgenden Format.
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -2838,7 +2835,7 @@ GET | /api/wpr/tracefiles
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -2899,7 +2896,7 @@ filename   | (**erforderlich**) Der Name der herunterzuladenden ETL-Ablaufverfol
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -2907,7 +2904,7 @@ filename   | (**erforderlich**) Der Name der herunterzuladenden ETL-Ablaufverfol
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -2948,7 +2945,7 @@ filename   | (**erforderlich**) Der Name der zu löschenden ETL-Ablaufverfolgung
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -2956,7 +2953,7 @@ filename   | (**erforderlich**) Der Name der zu löschenden ETL-Ablaufverfolgung
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -2967,7 +2964,7 @@ HTTP-Statuscode      | Beschreibung
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
-* Windows Desktop
+* Windows-Desktop
 * HoloLens
 * IoT
 
@@ -2976,7 +2973,7 @@ HTTP-Statuscode      | Beschreibung
 ---
 ### <a name="view-tags"></a>Anzeigen von Tags
 
-**Anfordern**
+**Anforderung**
 
 Anzeigen der derzeit für das Gerät angewendeten Tags.  Diese werden über DNS-SD-TXT-Datensätze im T-Schlüssel angekündigt.  
  
@@ -2987,11 +2984,11 @@ GET | /api/dns-sd/tags
 
 **URI-Parameter**
 
-- Keiner
+- Keine
 
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
@@ -3040,15 +3037,15 @@ DELETE | /api/dns-sd/tags
 
 **URI-Parameter**
 
-- Keiner
+- Keine
 
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
  - Keine
@@ -3091,11 +3088,11 @@ tagValue | (**Erforderlich**) Das zu entfernende Tag.
 
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
  - Keine
@@ -3137,11 +3134,11 @@ tagValue | (**Erforderlich**) Das hinzuzufügende Tag.
 
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
  - Keine
@@ -3180,11 +3177,11 @@ GET | /api/filesystem/apps/knownfolders
 
 **URI-Parameter**
 
-- Keiner
+- Keine
 
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
@@ -3238,7 +3235,7 @@ path | (**Optional**) Das Unterverzeichnis in dem oben angegebenen Ordner oder P
 
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
@@ -3298,7 +3295,7 @@ path | (**Optional**) Das Unterverzeichnis in dem oben angegebenen Ordner oder P
 
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
@@ -3319,7 +3316,7 @@ HTTP-Statuscode      | Beschreibung
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
-* Windows Desktop
+* Windows-Desktop
 * HoloLens
 * Xbox
 * IoT
@@ -3352,7 +3349,7 @@ path | (**Optional**) Das Unterverzeichnis in dem oben angegebenen Ordner oder P
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -3402,7 +3399,7 @@ path | (**Optional**) Das Unterverzeichnis in dem oben angegebenen Ordner oder P
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 
@@ -3447,11 +3444,11 @@ path | (**Optional**) Das Unterverzeichnis in dem oben angegebenen Ordner oder P
 
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
-- Keiner
+- Keine
 
 **Antwort**
 

@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: f6df625d9eaab9db1bd3aed96d3f07160001ae70
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 4c17bab575be207106abfac44104bb32bcffd6ac
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="lists"></a>Listen
 
@@ -85,7 +83,7 @@ Dies ist eine einfache Listenansicht mit gruppierten Daten auf einem Telefon.
 </tr>
 <tr class="odd">
 <td align="left"><p>[Invertierte Listen](inverted-lists.md)</p></td>
-<td align="left"><p>Bei invertierten Listen werden neue Elemente am Ende hinzugefügt, z. B. bei einer Chat-App. Befolgen Sie diese Richtlinien, um in Ihrer App eine invertierte Liste zu verwenden.</p></td>
+<td align="left"><p>Bei invertierten Listen werden neue Elemente am Ende hinzugefügt, z.B. bei einer Chat-App. Befolgen Sie diese Richtlinien, um in Ihrer App eine invertierte Liste zu verwenden.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[Aktualisieren durch Ziehen](pull-to-refresh.md)</p></td>
@@ -221,7 +219,7 @@ Es gibt drei verschiedene Auswahlmodi:
 
 -   Einzeln: Dabei kann der Benutzer jeweils nur ein Element auswählen.
 -   Mehrfach: Der Benutzer kann mehrere Elemente ohne Modifizierer auswählen.
--   Erweitert: Dabei kann der Benutzer mit Zusatztasten mehrere Elemente auswählen, z. B. durch Gedrückthalten der UMSCHALTTASTE.
+-   Erweitert: Dabei kann der Benutzer mit Zusatztasten mehrere Elemente auswählen, z.B. durch Gedrückthalten der UMSCHALTTASTE.
 
 Durch Tippen auf ein Element wird es ausgewählt. Das Tippen auf die Aktion auf der Befehlsleiste wirkt sich auf alle ausgewählten Elemente aus. Wenn kein Element ausgewählt ist, sind die Aktionen auf der Befehlsleiste mit Ausnahme von „Alle auswählen“ in der Regel inaktiv.
 
@@ -263,4 +261,3 @@ Empfehlungen für die Befehlsleiste finden Sie unter [Richtlinien für Befehlsle
 - [**GridView-Klasse**](https://msdn.microsoft.com/library/windows/apps/br242705)
 - [**ComboBox-Klasse**](https://msdn.microsoft.com/library/windows/apps/br209348)
 - [**ListBox-Klasse**](https://msdn.microsoft.com/library/windows/apps/br242868)
-

@@ -1,28 +1,25 @@
 ---
 author: mtoepke
-title: "Erstellen eines einfachen Spiels für die universelle Windows-Plattform (UWP) mit DirectX"
+title: "Erstellen eines Spiels für die universelle Windows-Plattform (UWP) mit DirectX"
 description: "In diesen Tutorials lernen Sie, wie Sie ein einfaches Spiel für die universelle Windows-Plattform (UWP) mit DirectX und C++ erstellen."
 ms.assetid: 9edc5868-38cf-58cc-1fb3-8fb85a7ab2c9
 keywords:
 - DirectX-Spielbeispiel
 - Spielbeispiel, Universelle Windows-Plattform (UWP)
-- "Direct3D 11-Spiel"
+- Direct3D11-Spiel
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 3ffce29c3ad7088dd24b848cb159b85a4db158e3
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8518a350f0c999d6110305c51f46fe12e5b590f0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-a-simple-universal-windows-platform-uwp-game-with-directx"></a>Erstellen eines einfachen Spiels für die universelle Windows-Plattform (UWP) mit DirectX
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 In diesen Tutorials lernen Sie, wie Sie ein einfaches Spiel für die universelle Windows-Plattform (UWP) mit DirectX und C++ erstellen. Wir befassen uns mit allen wichtigen Teilen eines Spiels. Hierzu zählen die Prozesse zum Laden von Ressourcen wie Grafiken und Gittern, das Erstellen einer Hauptschleife für das Spiel, das Implementieren einer einfachen Rendering-Pipeline sowie das Hinzufügen von Soundeffekten und Steuerelementen.
 
@@ -38,24 +35,24 @@ Wir machen Sie mit den Techniken und Überlegungen für die Entwicklung von UWP-
 
 Für dieses Tutorial müssen Sie mit den folgenden Themen vertraut sein:
 
--   Microsoft C++ mit Komponentenerweiterungen (C++/CX). Dies ist ein Update für Microsoft C++, das die automatische Verweiszählung einführt. Außerdem handelt es sich hierbei um die Sprache für die Entwicklung eines UWP-Spiels mit DirectX 11.1 oder einer höheren Version.
+-   Microsoft C++ mit Komponentenerweiterungen (C++/CX). Dies ist ein Update für MicrosoftC++, das die automatische Verweiszählung einführt. Außerdem handelt es sich hierbei um die Sprache für die Entwicklung eines UWP-Spiels mit DirectX11.1 oder einer höheren Version.
 -   Grundlegende Konzepte der linearen Algebra und der newtonschen Physik.
 -   Grundlegende Terminologie für die Grafikprogrammierung.
 -   Grundlegende Konzepte der Windows-Programmierung.
--   Grundlegende Kenntnisse der APIs von [Direct2D](https://msdn.microsoft.com/library/windows/apps/dd370990.aspx) und [Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/hh404569).
+-   Grundlegende Kenntnisse der APIs von [Direct2D](https://msdn.microsoft.com/library/windows/apps/dd370990.aspx) und [Direct3D11](https://msdn.microsoft.com/library/windows/desktop/hh404569).
 
-##  <a name="the-windows-store-direct3d-shooting-game-sample"></a>Beispiel für einen Windows Store-Direct3D-Shooter
+##  <a name="the-windows-store-direct3d-shooting-game-sample"></a>Beispiel für einen WindowsStore-Direct3D-Shooter
 
 
 Dieses Beispiel implementiert einen einfachen Schießstand, an dem der Spieler aus der Ich-Perspektive mit Bällen auf bewegliche Ziele schießt. Wird ein Ziel getroffen, erhält der Spieler eine bestimmte Anzahl von Punkten. Der Spieler kann nacheinander sechs Level mit jeweils steigendem Schwierigkeitsgrad absolvieren. Am Ende der Level werden die Punkte zusammengezählt, und der Spieler erhält einen endgültigen Punktestand.
 
 Das Beispiel veranschaulicht folgende Spielkonzepte:
 
--   Zusammenarbeit zwischen DirectX 11.1 und der Windows-Runtime
+-   Zusammenarbeit zwischen DirectX11.1 und der Windows-Runtime
 -   Dreidimensionale Ich-Perspektive und entsprechende Kamera
 -   Stereoskopische 3D-Effekte
 -   Kollisionserkennung zwischen Objekten in 3D
--   Behandlung von Spielereingaben per Maus, Toucheingabe und Xbox 360-Controller
+-   Behandlung von Spielereingaben per Maus, Toucheingabe und Xbox360-Controller
 -   Audiomixing und -wiedergabe
 -   Einfacher Spielzustandsautomat
 
@@ -77,7 +74,6 @@ Das Beispiel veranschaulicht folgende Spielkonzepte:
  
 
  
-
 
 
 

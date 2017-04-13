@@ -11,17 +11,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 2f00c27ae2248ebe39ed1cf426af640ec9200e73
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 392b0b0acf1443b2260a33bbf389d505f8cc7d0e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="sliders"></a>Schieberegler
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-Ein Schieberegler ist ein Steuerelement, über das der Benutzer aus einer Reihe von Werten auswählen kann, indem er ein Ziehpunkt-Steuerelement über eine Spur verschiebt.
+Ein Schieberegler ist ein Steuerelement, über das der Benutzer aus einer Reihe von Werten auswählen kann, indem er ein Schiebereglersteuerelement über einen Bereich verschiebt.
 
 ![Schiebereglersteuerelement](images/controls/slider.png)
 
@@ -112,8 +110,8 @@ private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e
 -   Deaktivieren Sie alle zugeordneten Beschriftungen und das visuelle Feedback, wenn Sie den Schieberegler deaktivieren.
 -   Bedenken Sie beim Festlegen der Flussrichtung bzw. Ausrichtung Ihres Schiebereglers die Textrichtung. In einigen Sprachen fließt das Skript von links nach rechts, und in anderen von rechts nach links.
 -   Verwenden Sie einen Schieberegler nicht als Statusanzeige.
--   Legen Sie für den Ziehpunkt des Schiebereglers keine andere Größe als die Standardgröße fest.
--   Erstellen Sie keinen fortlaufenden Schieberegler, wenn der Wertebereich groß ist und die Benutzer mit hoher Wahrscheinlichkeit einen von mehreren repräsentativen Werten aus dem Bereich auswählen. Verwenden Sie diese Werte stattdessen als einzige zulässige Schritte. Wenn der Höchstwert für einen Zeitwert beispielsweise 1 Monat ist, die Benutzer aber nur zwischen 1 Minute, 1 Stunde, 1 Tag oder 1 Monat auswählen sollen, erstellen Sie einen Schieberegler mit 4 Schrittpunkten.
+-   Legen Sie für die Miniaturansicht des Schiebereglers keine andere Größe als die Standardgröße fest.
+-   Erstellen Sie keinen fortlaufenden Schieberegler, wenn der Wertebereich groß ist und die Benutzer mit hoher Wahrscheinlichkeit einen von mehreren repräsentativen Werten aus dem Bereich auswählen. Verwenden Sie diese Werte stattdessen als einzige zulässige Schritte. Wenn der Höchstwert für einen Zeitwert beispielsweise 1Monat ist, die Benutzer aber nur zwischen 1Minute, 1Stunde, 1Tag oder 1Monat auswählen sollen, erstellen Sie einen Schieberegler mit 4Schrittpunkten.
 
 ## <a name="additional-usage-guidance"></a>Weitere Hinweise zur Verwendung
 
@@ -121,7 +119,7 @@ private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e
 
 Sie können den Schieberegler horizontal oder vertikal ausrichten. Bestimmen Sie anhand dieser Richtlinien das geeignete Layout.
 
--   Verwenden Sie eine natürliche Ausrichtung. Wenn der Schieberegler beispielsweise einen echten Wert darstellt, der normalerweise vertikal angezeigt wird (z. B. eine Temperatur), verwenden Sie die vertikale Ausrichtung.
+-   Verwenden Sie eine natürliche Ausrichtung. Wenn der Schieberegler beispielsweise einen echten Wert darstellt, der normalerweise vertikal angezeigt wird (z.B. eine Temperatur), verwenden Sie die vertikale Ausrichtung.
 -   Wenn das Steuerelement für die Suche in Medien verwendet wird, beispielsweise in einer Video-App, verwenden Sie die horizontale Ausrichtung.
 -   Wenn Sie einen Schieberegler auf einer Seite verwenden, die in eine Richtung geschwenkt werden kann (horizontal oder vertikal), verwenden Sie für den Schieberegler eine andere Ausrichtung als die Schwenkrichtung. Anderenfalls streifen Benutzer möglicherweise beim Schwenken der Seite den Schieberegler und ändern versehentlich den Wert.
 -   Wenn Sie noch nicht sicher sind, welche Ausrichtung Sie verwenden sollen, nehmen Sie die, die am besten zum Seitenlayout passt.
@@ -138,10 +136,10 @@ Die Bereichsrichtung ist die Richtung, in der Sie den Schieberegler bewegen, wen
 
 -   Verwenden Sie Schrittpunkte, wenn der Schieberegler keine beliebigen Werte zwischen minimalen und maximalen Werten zulassen soll. Wenn Sie beispielsweise einen Schieberegler verwenden, um die Anzahl der zu kaufenden Kinotickets anzugeben, lassen Sie keine Gleitkommawerte zu. Verwenden Sie den Schrittwert "1".
 -   Wenn Sie Schritte (auch als Andockpunkte bezeichnet) angeben, stellen Sie sicher, dass der letzte Schritt am Maximalwert des Schiebereglers ausgerichtet ist.
--   Verwenden Sie Teilstriche, wenn Sie Benutzern die Position wichtiger Werte zeigen möchten. So kann beispielsweise ein Schieberegler für die Zoomsteuerung Teilstriche für 50 %, 100 % und 200 % haben.
+-   Verwenden Sie Teilstriche, wenn Sie Benutzern die Position wichtiger Werte zeigen möchten. So kann beispielsweise ein Schieberegler für die Zoomsteuerung Teilstriche für 50%, 100% und 200% haben.
 -   Zeigen Sie Teilstriche an, wenn Benutzer den ungefähren Wert der Einstellung wissen müssen.
 -   Zeigen Sie Teilstriche und eine Wertbeschriftung an, wenn die Benutzer den genauen Wert der ausgewählten Einstellung erfahren sollen, ohne mit dem Steuerelement zu interagieren. Andernfalls können Sie die QuickInfo für den Wert verwenden, um den genauen Wert anzuzeigen.
--   Zeigen Sie immer Teilstriche an, wenn Schrittpunkte nicht offensichtlich sind. Wenn der Schieberegler beispielsweise 200 Pixel breit ist und 200 Andockpunkte hat, können Sie die Teilstriche ausblenden, da die Benutzer das Andockverhalten nicht bemerken. Wenn aber nur zehn Andockpunkte vorhanden sind, zeigen Sie Teilstriche an.
+-   Zeigen Sie immer Teilstriche an, wenn Schrittpunkte nicht offensichtlich sind. Wenn der Schieberegler beispielsweise 200Pixel breit ist und 200Andockpunkte hat, können Sie die Teilstriche ausblenden, da die Benutzer das Andockverhalten nicht bemerken. Wenn aber nur zehn Andockpunkte vorhanden sind, zeigen Sie Teilstriche an.
 
 ### <a name="labels"></a>Beschriftungen
 
@@ -180,4 +178,3 @@ Ziehen Sie beim Entwerfen eines benutzerdefinierten Schiebereglers Möglichkeite
 ## <a name="related-topics"></a>Verwandte Themen
 - [Umschalter](toggles.md)
 - [**Slider-Klasse**](https://msdn.microsoft.com/library/windows/apps/br209614)
-

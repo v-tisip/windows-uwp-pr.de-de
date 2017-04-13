@@ -10,14 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a733f3d87f2e6598e49d8926a7b10797e335c79c
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 84e53b5093d2d288dbe95f51b0a3f9a8e5e06fe0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="use-global-ready-formats"></a>Verwenden weltweit einsetzbarer Formate
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
@@ -43,11 +40,11 @@ Zur Vereinfachung der Anpassung an neue Märkte können Sie bereits bei der App-
 
 ## <a name="format-dates-and-times-appropriately"></a>Formatieren Sie Datumsangaben und Uhrzeiten entsprechend
 
-Es gibt viele verschiedene Möglichkeiten, um Datumsangaben und Uhrzeiten korrekt anzuzeigen. In den verschiedenen Regionen und Kulturen gelten unterschiedliche Konventionen für die Reihenfolge von Tag und Monat im Datum, für die Trennung von Stunden und Minuten und sogar für das zu verwendende Trennzeichen. Zudem kann das Datum in verschiedenen langen Formaten (Mittwoch, 28. März 2012) oder kurzen Formaten (28.03.12) angezeigt werden, die je nach Kultur variieren können. Und natürlich sind die Namen und Kurzformen für die Wochentage und Monate in jeder Sprache anders.
+Es gibt viele verschiedene Möglichkeiten, um Datumsangaben und Uhrzeiten korrekt anzuzeigen. In den verschiedenen Regionen und Kulturen gelten unterschiedliche Konventionen für die Reihenfolge von Tag und Monat im Datum, für die Trennung von Stunden und Minuten und sogar für das zu verwendende Trennzeichen. Zudem kann das Datum in verschiedenen langen Formaten (Mittwoch, 28.März2012) oder kurzen Formaten (28.03.12) angezeigt werden, die je nach Kultur variieren können. Und natürlich sind die Namen und Kurzformen für die Wochentage und Monate in jeder Sprache anders.
 
 Wenn Sie Benutzern erlauben möchten, ein Datum oder eine Uhrzeit auszuwählen, verwenden Sie die Standardsteuerelemente zur [Datums- und Uhrzeitauswahl](https://msdn.microsoft.com/library/windows/apps/hh465466). Diese verwenden automatisch die Datums- und Uhrzeitformate für die bevorzugte Sprache und Region des Benutzers.
 
-Wenn Sie selbst Datumsangaben oder Uhrzeiten anzeigen müssen, verwenden Sie die Formatierer [**Date/Time**](https://msdn.microsoft.com/library/windows/apps/br206859) und [**Number**](https://msdn.microsoft.com/library/windows/apps/br226136), um automatisch das vom Benutzer bevorzugte Format für Datumsangaben, Uhrzeiten und Zahlen anzuzeigen. Der folgende Code formatiert eine bestimmte Datum/Uhrzeit-Angabe gemäß der bevorzugten Sprache und Region. Wenn das aktuelle Datum z. B. der 3. Juni 2012 ist, zeigt der Formatierer 6/3/2012 an, wenn die bevorzugte Sprache des Benutzers „Englisch (USA)“ ist, aber 03.06.2012, wenn die bevorzugte Sprache des Benutzers „Deutsch (Deutschland)“ ist:
+Wenn Sie selbst Datumsangaben oder Uhrzeiten anzeigen müssen, verwenden Sie die Formatierer [**Date/Time**](https://msdn.microsoft.com/library/windows/apps/br206859) und [**Number**](https://msdn.microsoft.com/library/windows/apps/br226136), um automatisch das vom Benutzer bevorzugte Format für Datumsangaben, Uhrzeiten und Zahlen anzuzeigen. Der folgende Code formatiert eine bestimmte Datum/Uhrzeit-Angabe gemäß der bevorzugten Sprache und Region. Wenn das aktuelle Datum z.B. der 3.Juni2012 ist, zeigt der Formatierer 6/3/2012 an, wenn die bevorzugte Sprache des Benutzers „Englisch(USA)“ ist, aber 03.06.2012, wenn die bevorzugte Sprache des Benutzers „Deutsch(Deutschland)“ ist:
 
 ```CSharp
     // Use the Windows.Globalization.DateTimeFormatting.DateTimeFormatter class
@@ -109,14 +106,14 @@ Der folgende Code veranschaulicht, wie Währungen gemäß der vom Benutzer bevor
 
 ## <a name="use-a-culturally-appropriate-calendar"></a>Verwenden Sie einen kulturspezifischen Kalender
 
-Der Kalender ist für verschiedene Regionen und Sprachen unterschiedlich. Der gregorianische Kalender ist nicht der Standardkalender für alle Regionen. In einigen Regionen wählen Benutzer möglicherweise alternative Kalender aus, z. B. den japanischen Ära-Kalender oder den arabischen Mondkalender. In Datumsangaben und Uhrzeiten im Kalender werden auch verschiedene Zeitzonen und Sommerzeiten berücksichtigt.
+Der Kalender ist für verschiedene Regionen und Sprachen unterschiedlich. Der gregorianische Kalender ist nicht der Standardkalender für alle Regionen. In einigen Regionen wählen Benutzer möglicherweise alternative Kalender aus, z.B. den japanischen Ära-Kalender oder den arabischen Mondkalender. In Datumsangaben und Uhrzeiten im Kalender werden auch verschiedene Zeitzonen und Sommerzeiten berücksichtigt.
 
 Verwenden Sie die Standardsteuerelemente zur [Datums- und Uhrzeitauswahl](https://msdn.microsoft.com/library/windows/apps/hh465466), um Benutzern die Wahl eines Datums zu ermöglichen und die Verwendung des bevorzugten Kalenderformats zu gewährleisten. Bei komplexeren Szenarien, in denen direkt mit Vorgängen in Bezug auf das Kalenderdatum gearbeitet werden muss, stellt „Windows.Globalization“ eine [**Calendar**](https://msdn.microsoft.com/library/windows/apps/br206724)-Klasse bereit, die eine passende Kalenderdarstellung für die jeweilige Kultur, Region und den Kalendertyp ermöglicht.
 
 ## <a name="format-phone-numbers-appropriately"></a>Formatieren Sie Telefonnummern entsprechend
 Telefonnummern werden in verschiedenen Regionen unterschiedlich formatiert. Die Anzahl der Stellen, die Gruppierung der Ziffern und die Bedeutung bestimmter Teile der Telefonnummer variieren zwischen verschiedenen Ländern. Ab Windows 10, Version 1607, können Sie Telefonnummern für die aktuelle Region mit [**PhoneNumberFormatting**](https://msdn.microsoft.com/library/windows/apps/Windows.Globalization.PhoneNumberFormatting) formatieren.
 
-[**PhoneNumberInfo**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.globalization.phonenumberformatting.phonenumberinfo.aspx) analysiert eine Ziffernfolge und bestimmt, ob die Ziffern eine gültige Telefonnummer für diese Region bilden, vergleicht zwei Nummern auf Gleichheit und extrahiert die verschiedenen Funktionsteile einer Telefonnummer, z. B. den Ländercode oder den Code für die geographische Region.
+[**PhoneNumberInfo**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.globalization.phonenumberformatting.phonenumberinfo.aspx) analysiert eine Ziffernfolge und bestimmt, ob die Ziffern eine gültige Telefonnummer für diese Region bilden, vergleicht zwei Nummern auf Gleichheit und extrahiert die verschiedenen Funktionsteile einer Telefonnummer, z.B. den Ländercode oder den Code für die geographische Region.
 
 [**PhoneNumberFormatter**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.globalization.phonenumberformatting.phonenumberformatter.aspx) formatiert eine Ziffernfolge oder ein PhoneNumberInfo für die Anzeige, auch wenn die Ziffernfolge nur den Teil einer Telefonnummer darstellt. (Sie können diese partielle Nummernformatierung verwenden, um eine Zahl zu formatieren, die gerade von einem Benutzer eingegeben wird.) 
 
@@ -173,4 +170,3 @@ Für Szenarien, in denen Sie basierend auf den Sprach-, Regions- und Kultureinst
 * [Beispiel für Datums- und Uhrzeitformatierung](http://go.microsoft.com/fwlink/p/?linkid=231618)
 * [Beispiel für Globalisierungseinstellungen](http://go.microsoft.com/fwlink/p/?linkid=231608)
 * [Beispiel für Zahlenformatierung und Analyse](http://go.microsoft.com/fwlink/p/?linkid=231620)
-

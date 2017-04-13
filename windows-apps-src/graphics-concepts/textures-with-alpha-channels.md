@@ -2,25 +2,21 @@
 title: "Texturen mit Alphakanälen"
 description: "Es gibt zwei Möglichkeiten, Texturzuordnungen mit komplexer Transparenz zu kodieren."
 ms.assetid: 768A774A-4F21-4DDE-B863-14211DA92926
-keywords:
-- "Texturen mit Alphakanälen"
+keywords: "Texturen mit Alphakanälen"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 708f6a7903df2ead18cf40e01675c3d244c7f9b0
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1ea2282bb00f309f0dd2616898ce8d4a43215ff4
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="textures-with-alpha-channels"></a>Texturen mit Alphakanälen
 
 
-Es gibt zwei Möglichkeiten, Texturzuordnungen mit komplexer Transparenz zu kodieren. In jedem Fall geht ein Block, der die Transparenz beschreibt, dem bereits beschriebenen 64-Bit-Block voraus. Die Transparenz wird entweder als 4 x 4-Bitmap mit 4 Bits pro Pixel (explizite Kodierung) oder mit weniger Bits und linearer Interpolation dargestellt, die mit der für Farben verwendeten Kodierung vergleichbar ist.
+Es gibt zwei Möglichkeiten, Texturzuordnungen mit komplexer Transparenz zu kodieren. In jedem Fall geht ein Block, der die Transparenz beschreibt, dem bereits beschriebenen 64-Bit-Block voraus. Die Transparenz wird entweder als 4x4-Bitmap mit 4Bits pro Pixel (explizite Kodierung) oder mit weniger Bits und linearer Interpolation dargestellt, die mit der für Farben verwendeten Kodierung vergleichbar ist.
 
 Die Transparenzblock und der Farbblock sind wie in der folgenden Tabelle gezeigt angeordnet.
 
@@ -150,7 +146,6 @@ Der Farbvergleich, der in BC1 verwendet wird, um festzustellen, ob der Texel tra
  
 
  
-
 
 
 

@@ -8,17 +8,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Spiele, Gamepad, Vibration"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+keywords: Windows10, UWP, Spiele, Gamepad, Vibration
 ms.openlocfilehash: b92ddbaadd7fd09b252d5c8842ed89daf53a6982
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="gamepad-and-vibration"></a>Gamepad und Vibration
 
-Auf dieser Seite werden die Grundlagen der Programmierung für Xbox One-Gamepads mittels [Windows.Gaming.Input.Gamepad][gamepad] und verwandter APIs für die Universelle Windows-Plattform (UWP) beschrieben.
+Auf dieser Seite werden die Grundlagen der Programmierung für Xbox One-Gamepads mittels [Windows.Gaming.Input.Gamepad][gamepad] und verwandter APIs für die universelle Windows-Plattform (UWP) beschrieben.
 
 Auf dieser Seite erfahren Sie:
 * Wie Sie eine Liste mit verbundenen Gamepads und deren Benutzern erstellen
@@ -30,19 +27,19 @@ Auf dieser Seite erfahren Sie:
 
 ## <a name="gamepad-overview"></a>Gamepadübersicht
 
-Gamepads wie der Xbox Wireless Controller und der Xbox Wireless Controller S sind allgemeine Eingabegeräte für Spiele. Sie sind die Standardeingabegeräte für Xbox One und werden auch häufig von Windows-Spielern als Alternative zur Tastatur und Maus genutzt. Gamepads werden in Windows 10- und UWP-Apps für Xbox durch den [Windows.Gaming.Input][]-Namespace unterstützt.
+Gamepads wie der Xbox Wireless Controller und der Xbox Wireless ControllerS sind allgemeine Eingabegeräte für Spiele. Sie sind die Standardeingabegeräte für Xbox One und werden auch häufig von Windows-Spielern als Alternative zur Tastatur und Maus genutzt. Gamepads werden in Windows10- und UWP-Apps für Xbox durch den [Windows.Gaming.Input][]-Namespace unterstützt.
 
-Xbox One-Gamepads verfügen über ein Steuerkreuz (auch D-Pad genannt), über die Tasten **A**, **B**, **X**, **Y**, **Ansicht** und **Menü**, über einen linken und einen rechten Ministick, Bumper und Trigger sowie über insgesamt vier Vibrationsmotoren. Beide Ministicks liefern jeweils zwei analoge Werte für die X- und die Y-Achse und können auch gedrückt und somit als Taste verwendet werden. Jeder Trigger gibt mit einem analogen Wert an, wie stark er nach hinten gezogen wird.
+XboxOne-Gamepads verfügen über ein Steuerkreuz (auch D-Pad genannt), über die Tasten **A**, **B**, **X**, **Y**, **Ansicht** und **Menü**, über einen linken und einen rechten Ministick, Bumper und Trigger sowie über insgesamt vier Vibrationsmotoren. Beide Ministicks liefern jeweils zwei analoge Werte für die X- und die Y-Achse und können auch gedrückt und somit als Taste verwendet werden. Jeder Trigger gibt mit einem analogen Wert an, wie stark er nach hinten gezogen wird.
 
 > **Hinweis:** Der Xbox Elite Wireless Controller verfügt auf der Unterseite über vier weitere **Paddle**-Tasten. Diese können für redundanten Zugriff auf Spielebefehle verwendet werden, die nur schwer gemeinsam verwendet werden können (beispielsweise eine Kombination aus rechtem Ministick und einer der **A**-, **B**-, **X**- oder **Y**-Tasten), oder für dedizierten Zugriff auf zusätzliche Befehle.
 
-> **Hinweis:** `Windows.Gaming.Input.Gamepad` unterstützt auch Xbox 360-Gamepads, die das gleiche Steuerungslayout besitzen wie standardmäßige Xbox One-Gamepads.
+> **Hinweis:** `Windows.Gaming.Input.Gamepad` unterstützt auch Xbox360-Gamepads, die das gleiche Steuerungslayout besitzen wie standardmäßige Xbox One-Gamepads.
 
 ### <a name="vibration-and-impulse-triggers"></a>Vibration und Impulse Triggers
 
 Xbox One-Gamepads verfügen über zwei unabhängige Motoren für starke und dezente Gamepadvibrationen sowie über zwei dedizierte Motoren für kurze intensive Vibrationen an den einzelnen Triggern. (Aufgrund dieses einzigartigen Features werden die Trigger des Xbox One-Gamepads als _Impulse Triggers_ bezeichnet.)
 
-> **Hinweis:** Xbox 360-Gamepads sind nicht mit _Impulse Triggers_ ausgestattet.
+> **Hinweis:** Xbox360-Gamepads sind nicht mit _Impulse Triggers_ ausgestattet.
 
 Weitere Informationen finden Sie in der [Übersicht über Vibration und Impulse Triggers](#vibration-and-impulse-triggers-overview).
 
@@ -321,4 +318,3 @@ Das [GamepadVibrationUWP-Beispiel _(GitHub)_](https://github.com/Microsoft/Xbox-
 [gamepadreading]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepadreading.aspx
 [gamepadbuttons]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepadbuttons.aspx
 [gamepadvibration]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepadvibration.aspx
-

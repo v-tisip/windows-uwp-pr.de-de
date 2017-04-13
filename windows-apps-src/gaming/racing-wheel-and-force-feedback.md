@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, UWP, Spiele, Rennlenkrad, Kraftrückmeldung"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: ca8413a857fd4d8925a6767280a32a8336eeba19
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="racing-wheel-and-force-feedback"></a>Rennlenkräder und Kraftrückmeldung
 
-Auf dieser Seite werden die Grundlagen der Programmierung für Xbox One-Renklenkräder mittels [Windows.Gaming.Input.RacingWheel][racingwheel] und verwandter APIs für die Universelle Windows-Plattform (UWP) beschrieben.
+Auf dieser Seite werden die Grundlagen der Programmierung für Xbox One-Renklenkräder mittels [Windows.Gaming.Input.RacingWheel][Racingwheel] und verwandter APIs für die Universelle Windows-Plattform (UWP) beschrieben.
 
 Auf dieser Seite erfahren Sie:
 * Wie Sie eine Liste der verbundenen Rennlenkräder und ihrer Benutzer erstellen
@@ -30,7 +27,7 @@ Auf dieser Seite erfahren Sie:
 
 ## <a name="racing-wheel-overview"></a>Übersicht über Rennlenkräder
 
-Rennlenkräder sind Eingabegeräte, die Benutzern das Gefühl vermitteln, in einem echten Rennwagencockpit zu sitzen. Rennlenkräder sind das ideale Eingabegerät für Rennsportspiele im Arcade- und Simulationsstil, die Autos oder Trucks enthalten. Rennlenkräder werden in Windows 10- und Xbox One-UWP-Apps durch den Namespace [Windows.Gaming.Input][] unterstützt.
+Rennlenkräder sind Eingabegeräte, die Benutzern das Gefühl vermitteln, in einem echten Rennwagencockpit zu sitzen. Rennlenkräder sind das ideale Eingabegerät für Rennsportspiele im Arcade- und Simulationsstil, die Autos oder Trucks enthalten. Rennlenkräder werden in Windows10- und Xbox One-UWP-Apps durch den Namespace [Windows.Gaming.Input][] unterstützt.
 
 Xbox One-Rennlenkräder werden zu verschiedenen Preisen angeboten. In der Regel verfügen Rennlenkräder über mehr und bessere Eingabe- und Kraftrückmeldungsfunktionen, je höher ihr Preis liegt. Alle Rennlenkräder besitzen ein analoges Lenkrad, analoge Gas- und Bremsensteuerelemente sowie einige Lenkradtasten. Einige Rennlenkräder sind zusätzlich mit analogen Kupplungs- und Handbremsensteuerelementen, einer analogen Gangschaltung sowie Kraftrückmeldungsfunktionen ausgestattet. Nicht alle Rennlenkräder besitzen die gleichen Features. Darüber hinaus unterscheiden sie sich möglicherweise hinsichtlich der Unterstützung für bestimmte Features. Beispielsweise können Lenkräder unterschiedliche Drehbereiche unterstützen, und Gangschaltungen können eine unterschiedliche Zahl von Gängen unterstützen.
 
@@ -42,7 +39,7 @@ Weitere Informationen finden Sie unter [Ermitteln von Rennlenkradfunktionen](#de
 
 ### <a name="force-feedback"></a>Kraftrückmeldung
 
-Einige Xbox One-Rennlenkräder stellen eine echte Kraftrückmeldung und nicht einfach nur Vibrationen bereit, d. h., sie können echte Kräfte auf eine Steuerungsachse wie das Lenkrad ausüben. Spiele verwenden diese Fähigkeit, um ein besseres Spielerlebnis zu vermitteln (_simulierte Unfallschäden_, _„Gefühl für die Straße“_) und die Anforderungen in Bezug auf gutes Fahren zu erhöhen.
+Einige Xbox One-Rennlenkräder stellen eine echte Kraftrückmeldung und nicht einfach nur Vibrationen bereit, d.h., sie können echte Kräfte auf eine Steuerungsachse wie das Lenkrad ausüben. Spiele verwenden diese Fähigkeit, um ein besseres Spielerlebnis zu vermitteln (_simulierte Unfallschäden_, _„Gefühl für die Straße“_) und die Anforderungen in Bezug auf gutes Fahren zu erhöhen.
 
 Weitere Informationen finden Sie unter [Übersicht über die Kraftrückmeldung](#force-feedback-overview).
 
@@ -194,7 +191,7 @@ Weitere Informationen dazu, wie Sie die Kraftrückmeldungsfunktion der Rennlenkr
 
 ### <a name="reading-the-buttons"></a>Lesen der Tastenwerte
 
-Jede Rennlenkradtaste – die vier Richtungen des Steuerkreuzes, die Tasten **Vorheriger Gang** und **Nächster Gang** und 16 zusätzliche Tasten – stellt eine digitale Ablesewert bereit, der angibt, ob sie gedrückt (unten) oder freigegeben (oben) ist. Aus Effizienzgründen werden die Ablesewerte der Tasten nicht als einzelne boolesche Werte angezeigt, sondern in einem einzelnen Bitfeld zusammengefasst, dargestellt durch die Enumeration [RacingWheelButtons][].
+Jede Rennlenkradtaste – die vier Richtungen des Steuerkreuzes, die Tasten **Vorheriger Gang** und **Nächster Gang** und 16zusätzliche Tasten – stellt eine digitale Ablesewert bereit, der angibt, ob sie gedrückt (unten) oder freigegeben (oben) ist. Aus Effizienzgründen werden die Ablesewerte der Tasten nicht als einzelne boolesche Werte angezeigt, sondern in einem einzelnen Bitfeld zusammengefasst, dargestellt durch die Enumeration [RacingWheelButtons][].
 
 > **Hinweis**    Rennlenkräder besitzen zusätzliche Tasten für die Benutzeroberflächennavigation, beispielsweise die **Ansicht**- und **Menü**-Taste. Diese Tasten sind nicht in der Enumeration `RacingWheelButtons` enthalten und können nur gelesen werden, wenn auf das Rennlenkrad als Benutzeroberflächen-Navigationsgerät zugegriffen wird. Weitere Informationen finden Sie unter [Benutzeroberflächen-Navigationsgerät](ui-navigation-controller.md).
 
@@ -275,7 +272,7 @@ Das [InputInterfacingUWP-Beispiel _(github)_](https://github.com/Microsoft/Xbox-
 
 ## <a name="force-feedback-overview"></a>Übersicht über die Kraftrückmeldung
 
-Viele Rennlenkräder besitzen eine Kraftrückmeldungsfunktion, um ein umfassenderes und stärker herausforderndes Fahrerlebnis bereitzustellen. Rennlenkräder, die die Kraftrückmeldung unterstützen, besitzen in der Regel einen einzelnen Motor, der entlang einer einzelnen Achse (der Achse der Lenkraddrehung) Kraft auf das Lenkrad ausübt. Die Kraftrückmeldung wird in Windows 10- und Xbox One-UWP-Apps durch den Namespace [Windows.Gaming.Input.ForceFeedback] unterstützt.
+Viele Rennlenkräder besitzen eine Kraftrückmeldungsfunktion, um ein umfassenderes und stärker herausforderndes Fahrerlebnis bereitzustellen. Rennlenkräder, die die Kraftrückmeldung unterstützen, besitzen in der Regel einen einzelnen Motor, der entlang einer einzelnen Achse (der Achse der Lenkraddrehung) Kraft auf das Lenkrad ausübt. Die Kraftrückmeldung wird in Windows10- und Xbox One-UWP-Apps durch den Namespace [Windows.Gaming.Input.ForceFeedback] unterstützt.
 
 > **Hinweis**    Die Kraftrückmeldungs-APIs können mehrere Krafteinwirkungsachsen unterstützen. Xbox One-Rennlenkräder unterstützen zurzeit jedoch nur die Lenkraddrehungsachse als Kraftrückmeldungsachse.
 
@@ -387,4 +384,3 @@ Sie können das gesamte Kraftrückmeldungssystem auf einem bestimmten Rennlenkra
 [wheelmotor]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.racingwheel.wheelmotor.aspx
 [racingwheelreading]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.racingwheelreading.aspx
 [racingwheelbuttons]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.racingwheelbuttons.aspx
-

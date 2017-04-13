@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: d305746a-d370-4404-8cde-c85765bf3578
 description: "Verwenden Sie diese Methode in der Windows Store-Werbungs-API, um Zielgruppenprofile für Werbeanzeigenkampagnen zu verwalten."
-title: "Verwalten von Zielgruppenprofilen für Anzeigenkampagnen"
+title: Verwalten von Zielgruppenprofilen
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Windows Store Werbungs-API, Anzeigenkampagnen"
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: c737e27df4a911d3fcbdcb3128ece865bda2b703
-ms.lasthandoff: 02/08/2017
-
+keywords: Windows10, UWP, Windows Store Werbungs-API, Anzeigenkampagnen
+ms.openlocfilehash: 30fb160e389edd18fb3782d332b5603fc6207757
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="manage-targeting-profiles-for-ad-campaigns"></a>Verwalten von Zielgruppenprofilen für Anzeigenkampagnen
+# <a name="manage-targeting-profiles"></a>Verwalten von Zielgruppenprofilen
 
 
 Verwenden Sie diese Methoden in der Windows Store-Werbungs-API, um Benutzer, Regionen und Bestandstypen als Ziele für jede Lieferpositionen einer Werbeanzeigenkampagne auszuwählen. Zielgruppenprofile können erstellt und über mehrere Lieferpositionen der Übermittlung hinweg wiederverwendet werden.
@@ -28,7 +25,7 @@ Weitere Informationen über die Beziehung zwischen Zielgruppenprofilen und Anzei
 Zur Verwendung dieser Methoden sind folgende Schritte erforderlich:
 
 * Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](run-ad-campaigns-using-windows-store-services.md#prerequisites) für die Windows Store-Werbungs-API.
-* [Rufen Sie ein Azure AD-Zugriffstoken ab](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token), das in der Anforderungskopfzeile für diese Methoden verwendet wird. Nach Erhalt eines Zugriffstokens können Sie es 60 Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
+* [Rufen Sie ein Azure AD-Zugriffstoken ab](run-ad-campaigns-using-windows-store-services.md#obtain-an-azure-ad-access-token), das in der Anforderungskopfzeile für diese Methoden verwendet wird. Nach Erhalt eines Zugriffstokens können Sie es 60Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
 
 ## <a name="request"></a>Anfordern
 
@@ -139,7 +136,7 @@ Diese Methoden geben einen JSON-Antworttext mit einem [Zielgruppenprofil](#targe
 <span id="targeting-profile"/>
 ## <a name="targeting-profile-object"></a>Zielgruppenprofil-Objekt
 
-Die Anforderungs- und Antworttexte für diese Methoden enthalten die folgenden Felder. Die folgende Tabelle zeigt, welche Felder schreibgeschützt sind (d. h. sie können in der PUT-Methode nicht geändert werden) und welche Felder in dem Anforderungstext für die POST-Methode erforderlich sind.
+Die Anforderungs- und Antworttexte für diese Methoden enthalten die folgenden Felder. Die folgende Tabelle zeigt, welche Felder schreibgeschützt sind (d.h. sie können in der PUT-Methode nicht geändert werden) und welche Felder in dem Anforderungstext für die POST-Methode erforderlich sind.
 
 | Feld        | Typ   |  Beschreibung      |  Schreibgeschützt  | Standard  | Erforderlich für POST |  
 |--------------|--------|---------------|------|-------------|------------|
@@ -161,7 +158,7 @@ Das Feld *Alter* im Objekt [TargetingProfile](#targeting-profile) enthält eine 
 
 |  Ganzzahliger Wert für Feld *Alter*  |  Entsprechender Altersbereich  |  
 |---------------------------------|---------------------------|
-|     621     |            13 bis 17             |
+|     651     |            13 bis 17             |
 |     652     |           18 bis 24             |
 |     653     |            25 bis 34             |
 |     654     |            35 bis 49             |
@@ -228,16 +225,16 @@ Das Feld *Betriebssystemversion* im Objekt [TargetingProfile](#targeting-profile
 
 |  Ganzzahliger Wert für das Feld *osVersion*  |  Entsprechende Betriebssystemversion  |  
 |---------------------------------|---------------------------|
-|     500     |            Windows Phone 7             |
-|     501     |           Windows Phone 7.1             |
-|     502     |           Windows Phone 7.5             |
-|     503     |           Windows Phone 7.8             |
-|     504     |           Windows Phone 8.0             |
-|     505     |           Windows Phone 8.1             |
-|     506     |           Windows 8.0             |
-|     507     |           Windows 8.1             |
-|     508     |           Windows 10             |
-|     509     |           Windows 10 Mobile             |
+|     500     |            Windows Phone7             |
+|     501     |           Windows Phone7.1             |
+|     502     |           Windows Phone7.5             |
+|     503     |           Windows Phone7.8             |
+|     504     |           Windows Phone8.0             |
+|     505     |           Windows Phone8.1             |
+|     506     |           Windows8.0             |
+|     507     |           Windows8.1             |
+|     508     |           Windows10             |
+|     509     |           Windows10Mobile             |
 
 Die unterstützten Werte für das Feld *osVersion* können Sie programmgesteuert erhalten, indem Sie die folgende GET-Methode aufrufen.  Für die Kopfzeile ```Authorization``` übergeben Sie Ihr Azure AD-Zugriffstoken in Form eines **Bearer** &lt;*-Token*&gt;.
 
@@ -275,8 +272,8 @@ Das Feld *deviceType* im Objekt [TargetingProfile](#targeting-profile) enthält 
 
 |  Ganzzahliger Wert für das Feld *deviceType*  |  Entsprechender Gerätetyp  |  Beschreibung  |
 |---------------------------------|---------------------------|---------------------------|
-|     710     |  Windows   |  Hierbei handelt es sich um Geräte mit einer Desktop-Version von Windows 10 oder Windows 8.x.  |
-|     711     |  Phone     |  Hierbei handelt es sich um Geräte unter Windows 10 Mobile, Windows Phone 8.x oder Windows Phone 7.x.
+|     710     |  Windows   |  Hierbei handelt es sich um Geräte mit einer Desktop-Version von Windows10 oder Windows8.x.  |
+|     711     |  Phone     |  Hierbei handelt es sich um Geräte unter Windows10 Mobile, Windows Phone8.x oder Windows Phone7.x.
 
 Die unterstützten Werte für das Feld *deviceType* können Sie programmgesteuert erhalten, indem Sie die folgende GET-Methode aufrufen.  Für die Kopfzeile ```Authorization``` übergeben Sie Ihr Azure AD-Zugriffstoken in Form eines **Bearer** &lt;*-Token*&gt;.
 
@@ -332,7 +329,7 @@ Mit dem folgenden Codebeispiel wird der Antworttext für diese Methode veranscha
 <span id="country-code-values"/>
 ### <a name="country-code-values"></a>Werte für Ländercode
 
-Das Feld *country* in dem Objekt [TargetingProfile](#targeting-profile) enthält eine oder mehrere der folgenden Ganzzahlen, die die [ISO 3166-1-Alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) Ländercodes der Zielgruppenbenutzer identifizieren.
+Das Feld *country* in dem Objekt [TargetingProfile](#targeting-profile) enthält eine oder mehrere der folgenden Ganzzahlen, die die [ISO3166-1-Alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) Ländercodes der Zielgruppenbenutzer identifizieren.
 
 |  Ganzzahliger Wert für das Feld *country*  |  Entsprechender Ländercode  |  
 |-------------------------------------|------------------------------|
@@ -620,4 +617,3 @@ Mit dem folgenden Codebeispiel wird der Antworttext für diese Methode veranscha
 * [Verwalten von Lieferpositionen für Anzeigenkampagnen](manage-delivery-lines-for-ad-campaigns.md)
 * [Verwalten von Werbemitteln für Anzeigenkampagnen](manage-creatives-for-ad-campaigns.md)
 * [Abrufen der Leistungsdaten einer Anzeigenkampagne](get-ad-campaign-performance-data.md)
-

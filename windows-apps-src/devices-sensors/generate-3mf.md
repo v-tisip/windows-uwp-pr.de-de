@@ -1,6 +1,6 @@
 ---
 author: PatrickFarley
-Description: Beschreibt die Struktur des 3D Manufacturing Format-Dateityps und dessen Erstellung und Bearbeitung mit der Windows.Graphics.Printing3D-API.
+Description: Beschreibt die Struktur des 3D Manufacturing Format-Dateityps und wie dieser mit der Windows.Graphics.Printing3D-API erstellt und bearbeitet werden kann.
 MS-HAID: dev\_devices\_sensors.generate\_3mf
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
@@ -11,18 +11,15 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+keywords: Windows10, UWP
 ms.openlocfilehash: 2b1f15534e1388bfd61ba09faeb590464e44d8fd
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="generate-a-3mf-package"></a>Generieren eines 3MF-Pakets
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **Wichtige APIs**
@@ -149,10 +146,9 @@ Die folgende Methode akzeptiert ein fertiges **Printing3D3MFPackage** und speich
 ## <a name="related-topics"></a>Verwandte Themen
 
 [3D-Druck über Ihre App](https://msdn.microsoft.com/windows/uwp/devices-sensors/3d-print-from-app)  
-[Beispiel für 3D-Druck – UWP](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/3DPrinting)
+[Beispiel für 3D-Druck– UWP](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/3DPrinting)
  
 
  
 
  
-

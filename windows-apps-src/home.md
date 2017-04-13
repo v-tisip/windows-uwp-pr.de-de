@@ -3,14 +3,11 @@ Description: "Hier finden Sie die Informationen, die Sie zum Erstellen einer Uni
 title: "Anleitungen für Windows10-Apps – Entwicklung von Windows-Apps"
 ms.assetid: 2A39F3D8-85AD-4315-A69B-2B79242780E3
 redirect_url: https://developer.microsoft.com/windows/develop
-translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
 ms.openlocfilehash: 5b07b46627ca19f2a3cc02e72212a9870d778c7c
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-
-# Anleitungen für Windows10-Apps
+# <a name="how-to-guides-for-windows-10-apps"></a>Anleitungen für Windows10-Apps
 
 \[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -45,9 +42,3 @@ In den folgenden Artikeln finden Sie eine Einführung in die universelle Windows
 | [Threading und asynchrone Programmierung](threading-async/index.md) | Verwenden Sie die asynchrone Programmierung, damit Ihre App reaktionsfähig bleibt, indem sie weiterhin ausgeführt wird und auf die UI reagieren kann, während sie andere Aufgaben ausführt, die einige Zeit in Anspruch nehmen können. |
 | [Komponenten für Windows-Runtime](winrt-components/index.md) | Erfahren Sie mehr über diese eigenständigen Objekte, die Sie in jeder Sprache initialisieren können, einschließlich C#, Visual Basic, JavaScript und C++. Sie könnten beispielsweise eine Komponente für Windows-Runtime in C++ erstellen, die eine Drittanbieter-Bibliothek verwendet, um einen rechenintensiven Vorgang durchzuführen, oder verwenden Sie einfach vorhandenen Visual Basic- oder C#-Code in Ihrer universellen Windows-App erneut. 
 | [XAML-Plattform](xaml-platform/index.md) | Steigen Sie mit den grundlegenden Konzepten der XAML-Programmiersprache ein. Oder wenn Sie bereits mit XAML vertraut sind, überspringen Sie diesen Teil, und erfahren Sie, wie Windows-Runtime-Features mithilfe von Visual Studio in XAML implementiert werden können, um eine beeindruckende, universelle Windows-App zu erstellen. |
-
-
-
-<!--HONumber=Aug16_HO3-->
-
-

@@ -1,22 +1,19 @@
 ---
 author: mcleanbyron
 ms.assetid: cc24ba75-a185-4488-b70c-fd4078bc4206
-description: "Hier erfahren Sie, wie Sie die AdScheduler-Klasse verwenden, um Videoinhalten Werbung hinzuzufügen."
-title: "Hinzufügen von Werbung zu Videoinhalten in HTML 5 und JavaScript"
+description: "Hier erfahren Sie, wie Sie die AdScheduler-Klasse verwenden, um Videoinhalten Werbeanzeigen hinzuzufügen."
+title: "Hinzufügen von Werbeanzeigen zu Videoinhalten"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Anzeigen, Werbung, Video, Planer, JavaScript"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b42b57f385857301bb74037dbb5c0c7200653316
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP, Anzeigen, Werbung, Video, Planer, JavaScript
+ms.openlocfilehash: 88e0bb4ceb9cba12d1eb5857761f5b59afaa15f2
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="add-advertisements-to-video-content-in-html-5-and-javascript"></a>Hinzufügen von Werbung zu Videoinhalten in HTML 5 und JavaScript
+# <a name="add-advertisements-to-video-content"></a>Hinzufügen von Werbeanzeigen zu Videoinhalten
 
 
 In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie die [AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx)-Klasse zum Hinzufügen von Werbung zu Videoinhalten in einer App für die universelle Windows-Plattform (UWP) verwenden, die mit JavaScript und HTML geschrieben wurde.
@@ -29,7 +26,7 @@ Werbung für Videoinhalte variiert in Abhängigkeit davon, ob das Programm kürz
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-* Installieren Sie das [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) mit Visual Studio 2015.
+* Installieren Sie das [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) mit Visual Studio2015.
 
 * In Ihrem Projekt muss das [MediaPlayer](https://github.com/Microsoft/TVHelpers/wiki/MediaPlayer-Overview)-Steuerelement verwendet werden, um die Videoinhalte bereitstellen zu können, für die die Anzeigen eingeplant werden. Dieses Steuerelement ist in der Bibliotheksammlung [TVHelpers](https://github.com/Microsoft/TVHelpers) von Microsoft auf GitHub verfügbar.
 
@@ -58,7 +55,7 @@ Werbung für Videoinhalte variiert in Abhängigkeit davon, ob das Programm kürz
 
   a. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **Verweise**, und wählen Sie **Verweis hinzufügen...** aus.
 
-  b. Erweitern Sie im **Verweis-Manager** den Knoten **Universal Windows**, klicken Sie auf **Erweiterungen**, und wählen Sie dann das Kontrollkästchen neben **Microsoft Advertising SDK für JavaScript** (Version 10.0).
+  b. Erweitern Sie im **Verweis-Manager** den Knoten **Universal Windows**, klicken Sie auf **Erweiterungen**, und wählen Sie dann das Kontrollkästchen neben **Microsoft Advertising SDK für JavaScript** (Version10.0).
 
   c. Klicken Sie im **Verweis-Manager** auf „OK“.
 
@@ -97,10 +94,9 @@ Werbung für Videoinhalte variiert in Abhängigkeit davon, ob das Programm kürz
       [!code-javascript[TrialVersion](./code/AdvertisingSamples/AdSchedulerSamples/js/js/main.js#Snippet4)]
 
     <span/>
-    >**Hinweis**&nbsp;&nbsp;Sie müssen **play** auch aufrufen, wenn für die Funktion ein Fehler auftritt. [AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx) weist **MediaPlayer** nämlich an, dass die Anzeigen übersprungen werden sollen und direkt zum Inhalt navigiert werden soll. Unter Umständen besteht bei Ihnen auch eine andere geschäftliche Anforderung, z. B. das Einfügen einer integrierten Anzeige, falls eine Anzeige nicht erfolgreich von einem Remotestandort abgerufen werden kann.
+    >**Hinweis**&nbsp;&nbsp;Sie müssen **play** auch aufrufen, wenn für die Funktion ein Fehler auftritt. [AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx) weist **MediaPlayer** nämlich an, dass die Anzeigen übersprungen werden sollen und direkt zum Inhalt navigiert werden soll. Unter Umständen besteht bei Ihnen auch eine andere geschäftliche Anforderung, z.B. das Einfügen einer integrierten Anzeige, falls eine Anzeige nicht erfolgreich von einem Remotestandort abgerufen werden kann.
 
 8.  Während der Wiedergabe können Sie zusätzliche Ereignisse verarbeiten, mit denen Ihre App den Status bzw. Fehler nachverfolgen kann, die nach dem ersten Anzeigenabgleich auftreten. Der folgende Code zeigt einige dieser Ereignisse, einschließlich [onPodStart](https://msdn.microsoft.com/library/windows/apps/mt732206.aspx), [onPodEnd](https://msdn.microsoft.com/library/windows/apps/mt732205.aspx), [onPodCountdown](https://msdn.microsoft.com/library/windows/apps/mt732204.aspx), [onAdProgress](https://msdn.microsoft.com/library/windows/apps/mt732201.aspx), [onAllComplete](https://msdn.microsoft.com/library/windows/apps/mt732202.aspx) und [onErrorOccurred](https://msdn.microsoft.com/library/windows/apps/mt732203.aspx).
 
   > [!div class="tabbedCodeSnippets"]
   [!code-javascript[TrialVersion](./code/AdvertisingSamples/AdSchedulerSamples/js/js/main.js#Snippet5)]
-

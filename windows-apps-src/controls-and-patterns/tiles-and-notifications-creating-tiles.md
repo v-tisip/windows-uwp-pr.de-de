@@ -10,12 +10,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 11640527ffdb6883885345646310e5e4b786ad2b
-ms.lasthandoff: 02/07/2017
-
+keywords: windows10, UWP
+ms.openlocfilehash: e0fccee6ede019b6bb8d8792956d2dca791bf63b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="tiles-for-uwp-apps"></a>Kacheln für UWP-Apps
 
@@ -90,7 +88,7 @@ Nachdem Ihre App installiert wurde, können Sie die Kachel mit Benachrichtigunge
 
 1.  Erstellen Sie eine XML-Nutzlast (in Form von [**Windows.Data.Xml.Dom.XmlDocument**](https://msdn.microsoft.com/library/windows/apps/br206173)), die die Kachel beschreibt.
 
-    -   In Windows 10 wird ein neues adaptives Kachelschema eingeführt, das Sie verwenden können. Eine Anleitung hierzu finden Sie unter [Adaptive Kacheln](tiles-and-notifications-create-adaptive-tiles.md). Informationen zum Schema finden Sie unter [Adaptives Kachelschema](tiles-and-notifications-adaptive-tiles-schema.md). 
+    -   In Windows10 wird ein neues adaptives Kachelschema eingeführt, das Sie verwenden können. Eine Anleitung hierzu finden Sie unter [Adaptive Kacheln](tiles-and-notifications-create-adaptive-tiles.md). Informationen zum Schema finden Sie unter [Adaptives Kachelschema](tiles-and-notifications-adaptive-tiles-schema.md). 
 
     -   Mit den Windows 8.1-Kachelvorlagen können Sie Ihre Kachel definieren. Weitere Informationen finden Sie unter [Erstellen von Kacheln und Signalen (Windows 8.1)](https://msdn.microsoft.com/library/windows/apps/xaml/hh868260).
 
@@ -99,12 +97,11 @@ Nachdem Ihre App installiert wurde, können Sie die Kachel mit Benachrichtigunge
     -   Ein [**Windows.UI.Notifications.ScheduledTileNotification**](https://msdn.microsoft.com/library/windows/apps/hh701637)-Objekt zum Aktualisieren der Kachel zu einem bestimmten Zeitpunkt
 
 3.  Verwenden Sie [**Windows.UI.Notifications.TileUpdateManager.CreateTileUpdaterForApplication**](https://msdn.microsoft.com/library/windows/apps/br208623), um ein [**TileUpdater**](https://msdn.microsoft.com/library/windows/apps/br208628)-Objekt zu erstellen.
-4.  Rufen Sie die [**TileUpdater.Update**](https://msdn.microsoft.com/library/windows/apps/br208632)-Methode auf, und übergeben Sie sie an das in Schritt 2 erstellte Kachelbenachrichtigungsobjekt.
+4.  Rufen Sie die [**TileUpdater.Update**](https://msdn.microsoft.com/library/windows/apps/br208632)-Methode auf, und übergeben Sie sie an das in Schritt2 erstellte Kachelbenachrichtigungsobjekt.
 
  
 
  
-
 
 
 

@@ -1,6 +1,6 @@
 ---
 author: mijacobs
-Description: "Die Navigation in UWP-Apps (Apps für die Universelle Windows-Plattform) basiert auf einem flexiblen Modell aus Navigationsstrukturen, Navigationselementen und Funktionen auf Systemebene."
+Description: "Die Navigation in UWP-Apps (Apps für die universelle Windows-Plattform) basiert auf einem flexiblen Modell aus Navigationsstrukturen, Navigationselementen und Funktionen auf Systemebene."
 title: "Navigationsgrundlagen für UWP-Apps (Windows-Apps)"
 ms.assetid: B65D33BA-AAFE-434D-B6D5-1A0C49F59664
 label: Navigation design basics
@@ -11,19 +11,16 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 72596a2d902dff72af76c84115bc1eb0be8fa743
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 6397949c4c763db9d406790a6ffcb7f8ad94b7aa
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 #  <a name="navigation-design-basics-for-uwp-apps"></a>Navigationsdesigngrundlagen für UWP-Apps
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Die Navigation in UWP-Apps (Apps für die Universelle Windows-Plattform) basiert auf einem flexiblen Modell aus Navigationsstrukturen, Navigationselementen und Funktionen auf Systemebene. Gemeinsam ermöglichen sie eine Reihe intuitiver Benutzererfahrungen für die Navigation zwischen Apps, Seiten und Inhalten.
+Die Navigation in UWP-Apps (Apps für die universelle Windows-Plattform) basiert auf einem flexiblen Modell aus Navigationsstrukturen, Navigationselementen und Funktionen auf Systemebene. Gemeinsam ermöglichen sie eine Reihe intuitiver Benutzererfahrungen für die Navigation zwischen Apps, Seiten und Inhalten.
 
 In einigen Fällen kann es möglich sein, alle Inhalte und Funktionen der App auf einer einzelnen Seite anzuordnen, ohne dass der Benutzer mehr tun muss, als durch Verschieben in den Inhalten zu navigieren. Die meisten Apps verfügen jedoch in der Regel über mehrere Seiten mit Inhalten und Funktionen, die der Benutzer aufrufen und mit denen er interagieren kann. Wenn eine App mehrere Seiten hat, müssen Sie die geeignete Navigationsfunktionalität bereitstellen.
 
@@ -37,7 +34,7 @@ Damit sie fehlerlos und intuitiv von den Benutzern verwendet werden kann, umfass
 
     Navigationselemente können dem Benutzer helfen, zum gewünschten Inhalt zu gelangen, und sie können auch anzeigen, wo sich der Benutzer in der App befindet. Allerdings belegen sie auch Platz, der für Inhalte oder Steuerungselemente genutzt werden könnte. Daher ist es wichtig, dass Sie die für Ihre App-Struktur geeigneten Navigationselemente verwenden.
 
--   **Geeignete Reaktionen auf Navigationsfeatures auf Systemebene (z. B. „Zurück”)**
+-   **Geeignete Reaktionen auf Navigationsfeatures auf Systemebene (z.B. „Zurück”)**
 
     Um eine einheitliche intuitive Benutzererfahrung zu bieten, reagieren Sie in vorhersehbarer Weise auf Navigationsfeatures auf Systemebene.
 
@@ -86,7 +83,7 @@ Wann sollten Sie also Seiten in Hierarchien und wann als Peers anordnen? Zur Bea
 <li>Sie erwarten, dass der Benutzer die Seiten in einer bestimmten Reihenfolge durchlaufen wird. Sie ordnen die Hierarchie entsprechend an, um die Reihenfolge zu erzwingen.</li>
 <li>Es gibt eine klare Beziehung zwischen einer Seite als übergeordnetem Element und den anderen Seiten in der Gruppe als untergeordneten Elementen.</li>
 <li>In der Gruppe gibt es mehr als 7 Seiten.
-<p>Wenn eine Gruppe mehr als 7 Seiten enthält, wird es für Benutzer möglicherweise schwierig, zu verstehen, inwiefern sich die Seiten unterscheiden oder welche Position sie zurzeit in der Gruppe haben. Wenn Sie davon ausgehen, dass dies kein Problem für Ihre App ist, machen Sie aus den Seiten Peers. Ziehen Sie andernfalls eine hierarchische Struktur in Betracht, um die Seiten in zwei oder mehr kleinere Gruppen zu unterteilen. (Ein Hub-Steuerelement kann Ihnen dabei helfen, die Seiten in Kategorien zu gruppieren.)</p></li>
+<p>Wenn eine Gruppe mehr als 7Seiten enthält, wird es für Benutzer möglicherweise schwierig, zu verstehen, inwiefern sich die Seiten unterscheiden oder welche Position sie zurzeit in der Gruppe haben. Wenn Sie davon ausgehen, dass dies kein Problem für Ihre App ist, machen Sie aus den Seiten Peers. Ziehen Sie andernfalls eine hierarchische Struktur in Betracht, um die Seiten in zwei oder mehr kleinere Gruppen zu unterteilen. (Ein Hub-Steuerelement kann Ihnen dabei helfen, die Seiten in Kategorien zu gruppieren.)</p></li>
 </ul>
   </div>
   <div class="side-by-side-content-right">Wir empfehlen eine hierarchische Peer-Beziehung in folgenden Fällen:
@@ -94,7 +91,7 @@ Wann sollten Sie also Seiten in Hierarchien und wann als Peers anordnen? Zur Bea
 <li>Die Seiten können in beliebiger Reihenfolge angezeigt werden.</li>
 <li>Die Seiten sind deutlich voneinander abgegrenzt und verfügen nicht über eine offensichtliche Beziehung zwischen über- und untergeordneten Elementen.</li>
 <li><p>Es gibt weniger als acht Seiten in der Gruppe.</p>
-<p>Wenn eine Gruppe mehr als 7 Seiten enthält, wird es für Benutzer möglicherweise schwierig, zu verstehen, inwiefern sich die Seiten unterscheiden oder welche Position sie zurzeit in der Gruppe haben. Wenn Sie davon ausgehen, dass dies kein Problem für Ihre App ist, machen Sie aus den Seiten Peers. Ziehen Sie andernfalls eine hierarchische Struktur in Betracht, um die Seiten in zwei oder mehr kleinere Gruppen zu unterteilen. (Ein Hub-Steuerelement kann Ihnen dabei helfen, die Seiten in Kategorien zu gruppieren.)</p></li>
+<p>Wenn eine Gruppe mehr als 7Seiten enthält, wird es für Benutzer möglicherweise schwierig, zu verstehen, inwiefern sich die Seiten unterscheiden oder welche Position sie zurzeit in der Gruppe haben. Wenn Sie davon ausgehen, dass dies kein Problem für Ihre App ist, machen Sie aus den Seiten Peers. Ziehen Sie andernfalls eine hierarchische Struktur in Betracht, um die Seiten in zwei oder mehr kleinere Gruppen zu unterteilen. (Ein Hub-Steuerelement kann Ihnen dabei helfen, die Seiten in Kategorien zu gruppieren.)</p></li>
 </ul>
   </div>
 </div>
@@ -254,7 +251,6 @@ Sie können Navigationselemente kombinieren, um eine für Ihre App geeignete Nav
 
 
  
-
 
 
 

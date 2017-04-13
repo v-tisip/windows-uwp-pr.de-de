@@ -11,13 +11,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 058858be62a2d6bf3afc0c9461090d0211b39ebd
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 66afc2412323817f15594bb25e8f86475fc6f73f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 #  <a name="device-primer-for-universal-windows-platform-uwp-apps"></a>Einführung der Geräte für UWP-Apps (Universelle Windows-Plattform)
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
@@ -50,7 +47,7 @@ Eingabemöglichkeiten
 -   Maus
 -   Tastatur
 -   Toucheingabe auf Laptops und All-in-One-Desktops.
--   Es werden auch Gamepads verwendet, z. B. der Xbox-Controller.
+-   Es werden auch Gamepads verwendet, z.B. der Xbox-Controller.
 
 Typische Gerätefunktionen
 -   Kamera
@@ -62,8 +59,8 @@ Typische Gerätefunktionen
 Extrem leichte Tablet PCs sind mit Touchscreens, Kameras, Mikrofonen und Beschleunigungsmessern ausgestattet. Die Größe der Bildschirme von Tablets reicht normalerweise von 7 bis 13,3 Zoll. 2-in-1-Geräte können abhängig von der Konfiguration als Tablet oder Laptop mit einer Tastatur und Maus verwendet werden (in der Regel wird hierzu der Bildschirm aufgestellt oder nach hinten geklappt).
 
 Bildschirmgrößen
-- 7 bis 13,3 Zoll bei Tablets
-- 13,3 Zoll und größer bei 2-in-1-Geräten
+- 7 bis 13,3Zoll bei Tablets
+- 13,3Zoll und größer bei 2-in-1-Geräten
 
 ![Tabletgerät](images/device-primer/device-primer-tablet.png)
 
@@ -95,12 +92,12 @@ Typische Gerätefunktionen
 
 ## <a name="xbox-and-tv"></a>Xbox und Fernsehgeräte
 
-Die Erfahrung, die Sie machen, wenn Sie auf dem Sofa sitzen und mittels eines Gamepads oder einer Fernbedienung mit Ihrem Fernsehgerät interagieren, wird als **3-Meter-Erfahrung** (10-Fuß-Erfahrung) bezeichnet. Der Name kommt daher, dass sich der Benutzer im Allgemeinen ungefähr 3 Meter (10 Fuß) vom Bildschirm entfernt befindet. Dies stellt eine besondere Herausforderung dar, die beispielsweise bei einer *50-cm-Erfahrung* (2-Fuß-Erfahrung) oder bei der Interaktion mit einem PC nicht vorhanden ist. Wenn Sie eine App für Xbox One oder ein anderes Gerät entwickeln, das an einen Fernsehbildschirm angeschlossen ist und unter Umständen ein Gamepad oder Fernbedienung für die Eingabe verwendet, sollten Sie dies stets bedenken.
+Die Erfahrung, die Sie machen, wenn Sie auf dem Sofa sitzen und mittels eines Gamepads oder einer Fernbedienung mit Ihrem Fernsehgerät interagieren, wird als **3-Meter-Erfahrung** (10-Fuß-Erfahrung) bezeichnet. Der Name kommt daher, dass sich der Benutzer im Allgemeinen ungefähr 3Meter (10Fuß) vom Bildschirm entfernt befindet. Dies stellt eine besondere Herausforderung dar, die beispielsweise bei einer *50-cm-Erfahrung* (2-Fuß-Erfahrung) oder bei der Interaktion mit einem PC nicht vorhanden ist. Wenn Sie eine App für Xbox One oder ein anderes Gerät entwickeln, das an einen Fernsehbildschirm angeschlossen ist und unter Umständen ein Gamepad oder Fernbedienung für die Eingabe verwendet, sollten Sie dies stets bedenken.
 
 Die Schritte beim Entwickeln einer UWP-App für die 3-Meter-Erfahrung unterscheiden sich stark von der Entwicklung für eine der hier aufgeführten Gerätekategorien. Weitere Informationen finden Sie unter [Entwerfen für Xbox und Fernsehgeräte](designing-for-tv.md).
 
 Bildschirmgrößen
-- 24 Zoll und größer
+- 24Zoll und größer
 
 ![Xbox und Fernsehgeräte](images/device-primer/device-primer-tv-and-xbox.png)
 
@@ -115,10 +112,10 @@ Typische Verwendung
 Hinweise zur Benutzeroberfläche
 - Apps behalten in der Regel die gleiche Größe, es sei denn, eine andere App ist an der Seite angedockt.
 - Die Zurück-Schaltfläche des Systems ist eine nützliche Funktion, die in den meisten Xbox-Apps zur Verfügung steht und auf die mit der B-Taste auf dem Gamepad zugegriffen wird.
-- Da der Kunde etwa 3 Meter (10 Fuß) vom Bildschirm entfernt sitzt, stellen Sie sicher, dass die Benutzeroberfläche groß genug und klar sichtbar ist.
+- Da der Kunde etwa 3Meter (10 Fuß) vom Bildschirm entfernt sitzt, stellen Sie sicher, dass die Benutzeroberfläche groß genug und klar sichtbar ist.
 
 Eingaben
-- Gamepad (z. B. Xbox-Controller)
+- Gamepad (z.B. Xbox-Controller)
 - Fernbedienung
 - Sprache (gelegentlich, falls der Kunde Kinect oder ein Headset besitzt)
 
@@ -167,7 +164,7 @@ Typische Gerätefunktionen
 
  
 
-## <a name="surface-hub-devices"></a>Surface Hub-Geräte
+## <a name="surface-hub-devices"></a>SurfaceHub-Geräte
 
 
 Microsoft Surface Hub ist ein Gerät für die Zusammenarbeit mit großem Bildschirm, der für die gleichzeitige Verwendung durch mehrere Benutzer konzipiert ist.
@@ -200,10 +197,10 @@ Typische Gerätefunktionen
 
  
 
-## <a name="windows-iot-devices"></a>Windows IoT-Geräte
+## <a name="windows-iot-devices"></a>WindowsIoT-Geräte
 
 
-Bei Windows IoT-Geräten handelt es sich um eine neue Klasse von Geräten, bei denen das Einbetten von kleinen elektronischen Geräten, Sensoren und Verbindungen in physische Objekte im Mittelpunkt steht. Diese Geräte sind in der Regel über ein Netzwerk oder das Internet verbunden, um die erfassten realen Daten zu melden und in manchen Fällen auf diese Daten zu reagieren. Geräte können entweder keinen Bildschirm besitzen („monitorlose“ Geräte) oder an einen kleinen Bildschirm mit maximal 3,5 Zoll angeschlossen sein (Geräte mit Monitor).
+Bei WindowsIoT-Geräten handelt es sich um eine neue Klasse von Geräten, bei denen das Einbetten von kleinen elektronischen Geräten, Sensoren und Verbindungen in physische Objekte im Mittelpunkt steht. Diese Geräte sind in der Regel über ein Netzwerk oder das Internet verbunden, um die erfassten realen Daten zu melden und in manchen Fällen auf diese Daten zu reagieren. Geräte können entweder keinen Bildschirm besitzen („monitorlose“ Geräte) oder an einen kleinen Bildschirm mit maximal 3,5 Zoll angeschlossen sein (Geräte mit Monitor).
 
 Bildschirmgrößen
 -   3,5 Zoll oder kleiner

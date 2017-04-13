@@ -2,21 +2,17 @@
 title: "Ändern der Größe des Kachelpools"
 description: "Ändern der Größe eines Kachelpools zum Vergrößern eines Kachelpools, wenn die Anwendung mehr Arbeit der Streamingressourcen benötigt, welche in diese zuordnen, bzw. zum Verkleinern des Kachelpools, wenn weniger Speicherplatz benötigt wird."
 ms.assetid: A54A06DC-BDDB-42DC-85E8-C64241100ED5
-keywords:
-- "Ändern der Größe des Kachelpools"
+keywords: "Ändern der Größe des Kachelpools"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 918b9e7ada2d6c368bb51ff42139504e41c01f15
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 57d2f919b2813e31345e057a515ed9184ae40cd9
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="tile-pool-resizing"></a>Ändern der Größe des Kachelpools
 
 
@@ -24,7 +20,7 @@ ms.lasthandoff: 02/07/2017
 
 Wenn ein Kachelpool vergrößert wurde, werden weitere Kacheln durch den Anzeigetreiber am Ende über eine oder mehrere neue Vergaben hinzugefügt. Diese Aufschlüsselung der Vergaben ist in der Anwendung nicht sichtbar. Vorhandener Speicher im Kachelpool bleibt unverändert, und vorhandene Zuordnungen der Streamingressourcen im Arbeitsspeicher bleiben erhalten.
 
-Wenn ein Kachelpool verkleinert wird, werden die Kacheln ab dem Ende entfernt. Kacheln werden auch bis auf 0, d. h. bis auf die ursprüngliche Vergabegröße, entfernt. Das bedeutet, dass über die neue Größe hinaus keine neuen Zuordnungen hergestellt werden können. Bestehende Zuordnung über das Ende der neuen Größe hinaus bleiben jedoch unverändert und verwendbar. Der Anzeigetreiber wird den Arbeitsspeicher behalten, so lange Zuordnungen zu einem Teil der Vergaben, die der Treiber für die Kachelpoolspeicher verwendet, bestehen. Wenn nach dem Verkleinern ein Teil des Speichers aktiv gehalten wird, da Kachelzuordnungen darauf zeigen und der Kachelpool erneut (mit beliebiger Menge) vergrößert wurde, wird der vorhandene Arbeitsspeicher zunächst wiederverwendet, bevor jegliche zusätzlichen Vergaben für den Vergrößerungsvorgang erfolgen.
+Wenn ein Kachelpool verkleinert wird, werden die Kacheln ab dem Ende entfernt. Kacheln werden auch bis auf 0, d.h. bis auf die ursprüngliche Vergabegröße, entfernt. Das bedeutet, dass über die neue Größe hinaus keine neuen Zuordnungen hergestellt werden können. Bestehende Zuordnung über das Ende der neuen Größe hinaus bleiben jedoch unverändert und verwendbar. Der Anzeigetreiber wird den Arbeitsspeicher behalten, so lange Zuordnungen zu einem Teil der Vergaben, die der Treiber für die Kachelpoolspeicher verwendet, bestehen. Wenn nach dem Verkleinern ein Teil des Speichers aktiv gehalten wird, da Kachelzuordnungen darauf zeigen und der Kachelpool erneut (mit beliebiger Menge) vergrößert wurde, wird der vorhandene Arbeitsspeicher zunächst wiederverwendet, bevor jegliche zusätzlichen Vergaben für den Vergrößerungsvorgang erfolgen.
 
 Um Speicherplatz sparen zu können, muss eine Anwendung nicht nur einen Kachelpool verkleinern, sondern auch bestehende Zuordnungen über dem Ende der neuen, kleineren Kachelpoolgröße hinaus entfernen/erneut zuordnen.
 
@@ -38,7 +34,6 @@ Der Vorgang zur Verkleinerung (und Entfernen von Zuordnungen) resultiert nicht u
  
 
  
-
 
 
 

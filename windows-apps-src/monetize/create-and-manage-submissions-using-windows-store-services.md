@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: 7CC11888-8DC6-4FEE-ACED-9FA476B2125E
 description: "Verwenden Sie die Windows Store-Übermittlungs-API, um Übermittlungen für Apps programmgesteuert zu erstellen und zu verwalten, die für Ihr Windows Dev Center-Konto registriert sind."
-title: "Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten"
+title: "Erstellen und Verwalten von Übermittlungen"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Windows Store-Übermittlungs-API"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: f73470c456bf59544bc702b137da64f57c6a6943
-ms.lasthandoff: 02/07/2017
-
+keywords: "Windows10, UWP, Windows Store-Übermittlungs-API"
+ms.openlocfilehash: ca8bb623d06da0001b1b0751a5ac1ccc310bbd84
+ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
+translationtype: HT
 ---
-
-# <a name="create-and-manage-submissions-using-windows-store-services"></a>Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten
+# <a name="create-and-manage-submissions"></a>Erstellen und Verwalten von Übermittlungen
 
 
 Verwenden Sie die *Windows Store-Übermittlungs-API*, um Übermittlungen für Apps, Add-Ons (auch als In-App-Produkte oder IAPs bezeichnet) und Flight-Pakete für Ihr Windows Dev Center-Konto oder das Ihrer Organisation abzufragen und zu erstellen. Diese API ist hilfreich, wenn über Ihr Konto viele Apps oder Add-Ons verwaltet werden und Sie den Übermittlungsprozess für diese Ressourcen automatisieren und optimieren möchten. Diese API verwendet Azure Active Directory (Azure AD), um die Aufrufe von Ihrer App oder Ihrem Dienst zu authentifizieren.
@@ -24,7 +21,7 @@ Verwenden Sie die *Windows Store-Übermittlungs-API*, um Übermittlungen für Ap
 Die folgenden Schritte beschreiben den gesamten Prozess der Verwendung der Windows Store-Übermittlungs-API:
 
 1.  Stellen Sie sicher, dass Sie alle [Voraussetzungen](#prerequisites) erfüllt haben.
-3.  Vor dem Aufrufen einer Methode in der Windows Store-Übermittlungs-API müssen Sie [ein Azure AD-Zugriffstoken anfordern](#obtain-an-azure-ad-access-token). Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60 Minuten lang verwenden, bevor es abläuft. Nach dem Ablauf des Tokens können Sie ein neues Token generieren.
+3.  Vor dem Aufrufen einer Methode in der Windows Store-Übermittlungs-API müssen Sie [ein AzureAD-Zugriffstoken anfordern](#obtain-an-azure-ad-access-token). Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60 Minuten lang verwenden, bevor es abläuft. Nach dem Ablauf des Tokens können Sie ein neues Token generieren.
 4.  [Aufrufen der Windows Store-Übermittlungs-API](#call-the-windows-store-submission-api).
 
 
@@ -33,17 +30,17 @@ Die folgenden Schritte beschreiben den gesamten Prozess der Verwendung der Windo
 
 > * Diese API kann nur für Windows Dev Center-Konten verwendet werden, die eine Berechtigung zur Verwendung der API erhalten haben. Diese Berechtigung wird für Entwicklerkonten phasenweise aktiviert, und die Berechtigung ist zu diesem Zeitpunkt nicht für alle Konten aktiviert. Um früheren Zugriff anfordern, melden Sie sich beim Dev Center-Dashboard an, klicken Sie am unteren Rand des Dashboards auf **Feedback**, wählen Sie **Übermittlungs-API** für den Feedback-Bereich, und übermitteln Sie Ihre Anforderung. Sie erhalten eine E-Mail, wenn diese Berechtigung für Ihr Konto aktiviert ist.
 <br/><br/>
->* Wenn Sie diese API zum Erstellen einer Übermittlung von Apps, Flight-Paketen oder Add-Ons verwenden, achten Sie darauf, weitere Änderungen an der Übermittlung nur mithilfe der API, anstatt des Dev Center-Dashboards vorzunehmen. Wenn Sie das Dashboard verwenden, um eine Übermittlung ändern, die Sie ursprünglich mit der API erstellt haben, können Sie diese nicht mehr ändern oder ein Commit für die Übermittlung mithilfe der APIs ausführen. In einigen Fällen wird die Übermittlung im Fehlerzustand belassen, in dem es nicht mehr zur Übermittlung fortgesetzt werden kann. In diesem Fall müssen Sie die Übermittlung löschen und eine neue Übermittlung erstellen.
+>* Wenn Sie diese API zum Erstellen einer Übermittlung von Apps, Flight-Paketen oder Add-Ons verwenden, achten Sie darauf, weitere Änderungen an der Übermittlung nur mithilfe der API, anstatt des Dev Center-Dashboards vorzunehmen. Wenn Sie das Dashboard zum Ändern einer Übermittlung verwenden, die ursprünglich mit der API erstellt wurde, können Sie die Übermittlung nicht länger mithilfe der API ändern oder übermitteln. In einigen Fällen kann der Fehlerstatus der Übermittlung belassen werden, mit dem die Übermittlung nicht fortgesetzt werden kann. In diesem Fall müssen Sie die Übermittlung löschen und eine neue Übermittlung erstellen.
 <br/><br/>
-> * Diese API kann nicht mit Apps oder Add-Ons mit bestimmten Features verwendet werden, die im Dev Center-Dashboard im August 2016 eingeführt wurden, einschließlich (aber nicht beschränkt auf) erforderliche App-Updates und vom Store verwaltete Endverbraucher-Add-Ons. Bei Verwendung der Windows Store-Übermittlungs-API mit einer App oder einem Add-On, das eines dieser Features verwendet, gibt die API den Fehlercode 409 zurück. In diesem Fall müssen Sie das Dashboard verwenden, um die Übermittlungen für die App bzw. das Add-On zu verwalten.
+> * Diese API kann nicht mit Apps oder Add-Ons mit bestimmten Features verwendet werden, die im Dev Center-Dashboard im August2016 eingeführt wurden, einschließlich (aber nicht beschränkt auf) erforderliche App-Updates und vom Store verwaltete Endverbraucher-Add-Ons. Bei Verwendung der Windows Store-Übermittlungs-API mit einer App oder einem Add-On, das eines dieser Features verwendet, gibt die API den Fehlercode409 zurück. In diesem Fall müssen Sie das Dashboard verwenden, um die Übermittlungen für die App bzw. das Add-On zu verwalten.
 
 
 <span id="prerequisites" />
-## <a name="step-1-complete-prerequisites-for-using-the-windows-store-submission-api"></a>Schritt 1: Erfüllen der Voraussetzungen für die Verwendung der Windows Store-Übermittlungs-API
+## <a name="step-1-complete-prerequisites-for-using-the-windows-store-submission-api"></a>Schritt1: Erfüllen der Voraussetzungen für die Verwendung der Windows Store-Übermittlungs-API
 
 Stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllt haben, bevor Sie mit dem Schreiben von Code zum Aufrufen der Windows Store-Übermittlungs-API beginnen:
 
-* Sie (bzw. Ihre Organisation) müssen über ein Azure AD-Verzeichnis und die Berechtigung [Globaler Administrator](http://go.microsoft.com/fwlink/?LinkId=746654) für das Verzeichnis verfügen. Wenn Sie bereits mit Office 365 oder anderen Unternehmensdiensten von Microsoft arbeiten, verfügen Sie schon über ein Azure AD-Verzeichnis. Andernfalls können Sie [in Dev Center ein neues Azure AD-Instanz](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users) ohne zusätzliche Kosten erstellen.
+* Sie (bzw. Ihre Organisation) müssen über ein Azure AD-Verzeichnis und die Berechtigung [Globaler Administrator](http://go.microsoft.com/fwlink/?LinkId=746654) für das Verzeichnis verfügen. Wenn Sie bereits mit Office 365oder anderen Unternehmensdiensten von Microsoft arbeiten, verfügen Sie schon über ein Azure AD-Verzeichnis. Andernfalls können Sie [in Dev Center ein neues Azure AD-Instanz](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users) ohne zusätzliche Kosten erstellen.
 
 * Sie müssen [Ihrem Windows Dev Center-Konto eine Azure AD-Anwendung zuordnen](#associate-an-azure-ad-application-with-your-windows-dev-center-account) und Ihre Mandanten-ID, Client-ID und den Schlüssel abrufen. Sie benötigen diese Werte, um ein Azure AD-Zugriffstoken abzurufen, das Sie in Aufrufen von der Windows Store-Übermittlungs-API verwenden.
 
@@ -68,7 +65,7 @@ Vor der Verwendung der Windows Store-Übermittlungs-API müssen Sie Ihrem Dev Ce
 
 1.  Rufen Sie in Dev Center die **Kontoeinstellungen** auf, klicken Sie auf **Benutzer verwalten**, und ordnen Sie das Dev Center-Konto Ihrer Organisation dem Azure AD-Verzeichnis Ihrer Organisation zu. Ausführliche Anweisungen finden Sie unter [Verwalten von Kontobenutzern](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users).
 
-2.  Klicken Sie auf der Seite **Benutzer verwalten** auf **Azure AD-Apps hinzufügen**, und fügen Sie die Azure AD-Anwendung hinzu, die die App oder den Dienst darstellt, mit dem Sie auf Übermittlungen für Ihr Dev Center-Konto zugreifen. Weisen Sie ihr anschließend die Rolle **Manager** zu. Wenn diese Anwendung bereits in Ihrem Azure AD-Verzeichnis vorhanden ist, können Sie sie auf der Seite **Azure AD-Apps hinzufügen** auswählen, um sie Ihrem Dev Center-Konto hinzuzufügen. Andernfalls können Sie eine neue Azure AD-Anwendung auf der Seite **Azure AD-Apps hinzufügen** erstellen. Weitere Informationen finden Sie unter [Hinzufügen und Verwalten von Azure AD-Apps](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users#add-and-manage-azure-ad-applications).
+2.  Klicken Sie auf der Seite **Benutzer verwalten** auf **Azure AD-Apps hinzufügen**, und fügen Sie die AzureAD-Anwendung hinzu, die die App oder den Dienst darstellt, mit dem Sie auf Übermittlungen für Ihr Dev Center-Konto zugreifen. Weisen Sie ihr anschließend die Rolle **Manager** zu. Wenn diese Anwendung bereits in Ihrem AzureAD-Verzeichnis vorhanden ist, können Sie sie auf der Seite **Azure AD-Apps hinzufügen** auswählen, um sie Ihrem Dev Center-Konto hinzuzufügen. Andernfalls können Sie eine neue Azure AD-Anwendung auf der Seite **Azure AD-Apps hinzufügen** erstellen. Weitere Informationen finden Sie unter [Hinzufügen und Verwalten von Azure AD-Apps](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users#add-and-manage-azure-ad-applications).
 
 3.  Wechseln Sie zurück zur Seite **Benutzer verwalten**, klicken Sie auf den Namen Ihrer Azure AD-Anwendung, um die Anwendungseinstellungen aufzurufen, und kopieren Sie die Werte unter **Mandanten-ID** und **Client-ID**.
 
@@ -96,14 +93,14 @@ Geben Sie für den Wert *tenant\_id* im POST-URI und die Parameter *client\_id* 
 
 Nachdem das Zugriffstoken abgelaufen ist, können Sie es aktualisieren, indem Sie [diese Anleitung](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-code/#refreshing-the-access-tokens) befolgen.
 
-Beispiele, die das Abrufen eines Zugriffstokens mit C#-, Java- oder Python-Code veranschaulichen, finden Sie in den [Codebeispielen](#code-examples) zur Windows Store-Übermittlungs-API.
+Beispiele, die das Abrufen eines Zugriffstokens mit C#-, Java- oder Python-Code veranschaulichen, finden Sie in den [Codebeispielen](#code-examples) zur WindowsStore-Übermittlungs-API.
 
 <span id="call-the-windows-store-submission-api">
-## <a name="step-3-use-the-windows-store-submission-api"></a>Schritt 3: Verwenden der Windows Store-Übermittlungs-API
+## <a name="step-3-use-the-windows-store-submission-api"></a>Schritt3: Verwenden der Windows Store-Übermittlungs-API
 
-Nachdem Sie ein Azure AD-Zugriffstoken abgerufen haben, können Sie Methoden in der Windows Store-Übermittlungs-API aufrufen. Die API enthält viele Methoden, die in Szenarien für Apps, Add-Ons und Flight-Pakete gruppiert werden. Zum Erstellen oder Aktualisieren von Übermittlungen rufen Sie in der Regel mehrere Methoden in der Windows Store-Übermittlungs-API in einer bestimmten Reihenfolge auf. Informationen zu jedem Szenario und zur Syntax der einzelnen Methoden finden Sie in den Artikeln in der folgenden Tabelle.
+Nachdem Sie ein AzureAD-Zugriffstoken abgerufen haben, können Sie Methoden in der WindowsStore-Übermittlungs-API aufrufen. Die API enthält viele Methoden, die in Szenarien für Apps, Add-Ons und Flight-Pakete gruppiert werden. Zum Erstellen oder Aktualisieren von Übermittlungen rufen Sie in der Regel mehrere Methoden in der Windows Store-Übermittlungs-API in einer bestimmten Reihenfolge auf. Informationen zu jedem Szenario und zur Syntax der einzelnen Methoden finden Sie in den Artikeln in der folgenden Tabelle.
 
->**Hinweis**&nbsp;&nbsp;Nach dem Abrufen eines Zugriffstokens haben Sie 60 Minuten Zeit, um Methoden in der Windows Store-Übermittlungs-API aufzurufen, bevor es abläuft.
+>**Hinweis**&nbsp;&nbsp;Nach dem Abrufen eines Zugriffstokens haben Sie 60Minuten Zeit, um Methoden in der Windows Store-Übermittlungs-API aufzurufen, bevor es abläuft.
 
 | Szenario       | Beschreibung                                                                 |
 |---------------|----------------------------------------------------------------------|
@@ -120,13 +117,13 @@ Die folgenden Artikel enthalten ausführliche Codebeispiele, die zeigen, wie Sie
 * [Java-Codebeispiele](java-code-examples-for-the-windows-store-submission-api.md)
 * [Python-Codebeispiele](python-code-examples-for-the-windows-store-submission-api.md)
 
->**Hinweis:**&nbsp;&nbsp;Zusätzlich zu den oben aufgeführten Codebeispielen bieten wir ebenfalls ein Open-Source-PowerShell-Modul, das neben dem Windows Store-Übermittlungs-API ebenfalls eine Befehlszeilenschnittstelle anbietet. Dieses Modul heißt [StoreBroker](https://aka.ms/storebroker). Sie können dieses Modul zur direkten Verwaltung Ihrer App-, Flight- und Add-On-Übermittlungen von der Befehlszeile anstatt der Windows Store-Übermittlungs-API benutzen oder einfach die Quelle durchsuchen, um weitere Beispiele für das Aufrufen dieser API zu finden. Das StoreBroker-Modul wird innerhalb von Microsoft aktiv als primäre Methode verwendet, durch die viele Erstanbieter-Apps an den Store übermittelt werden. Weitere Informationen finden Sie in auf der [StoreBroker-Seite auf GitHub](https://aka.ms/storebroker).
+>**Hinweis:**&nbsp;&nbsp;Zusätzlich zu den oben aufgeführten Codebeispielen bieten wir auch ein Open-Source-PowerShell-Modul, das neben der Windows Store-Übermittlungs-API eine Befehlszeilenschnittstelle integriert. Dieses Modul heißt [StoreBroker](https://aka.ms/storebroker). Sie können dieses Modul verwenden, um Ihre App-, Flight- und Add-On-Übermittlungen über die Befehlszeile anstatt über die Windows Store-Übermittlungs-API direkt zu verwalten. Sie können auch ganz einfach die Quelle durchsuchen, um weitere Beispiele für das Aufrufen dieser API zu erhalten. Das StoreBroker-Modul wird innerhalb von Microsoft aktiv als primäre Methode verwendet, durch die viele Erstanbieter-Apps an den Store übermittelt werden. Weitere Informationen finden Sie in auf der [StoreBroker-Seite auf GitHub](https://aka.ms/storebroker).
 
 ## <a name="troubleshooting"></a>Problembehandlung
 
 | Problem      | Lösung                                          |
 |---------------|---------------------------------------------|
-| Nach dem Aufrufen der Windows Store-Übermittlungs-API über die PowerShell sind die Antwortdaten für die API beschädigt, wenn Sie diese aus dem JSON-Format in ein PowerShell-Objekt mit dem [ConvertFrom-Json](https://technet.microsoft.com/library/hh849898.aspx)-Cmdlet und zurück in das JSON-Format mit dem [ConvertTo-Json](https://technet.microsoft.com/library/hh849922.aspx)-Cmdlet konvertieren. |  Standardmäßig ist der Parameter *-Depth* für das [ConvertTo-Json](https://technet.microsoft.com/library/hh849922.aspx)-Cmdlet auf zwei Objektebenen festgelegt. Dies ist zu flach für die meisten JSON-Objekte, die von der Windows Store-Übermittlungs-API zurückgegeben werden. Legen Sie beim Aufrufen des [ConvertTo-Json](https://technet.microsoft.com/library/hh849922.aspx)-Cmdlets den Parameter *-Depth* auf eine größere Zahl fest, z. B. 20. |
+| Nach dem Aufrufen der Windows Store-Übermittlungs-API über die PowerShell sind die Antwortdaten für die API beschädigt, wenn Sie diese aus dem JSON-Format in ein PowerShell-Objekt mit dem [ConvertFrom-Json](https://technet.microsoft.com/library/hh849898.aspx)-Cmdlet und zurück in das JSON-Format mit dem [ConvertTo-Json](https://technet.microsoft.com/library/hh849922.aspx)-Cmdlet konvertieren. |  Standardmäßig ist der Parameter *-Depth* für das [ConvertTo-Json](https://technet.microsoft.com/library/hh849922.aspx)-Cmdlet auf zwei Objektebenen festgelegt. Dies ist zu flach für die meisten JSON-Objekte, die von der Windows Store-Übermittlungs-API zurückgegeben werden. Legen Sie beim Aufrufen des [ConvertTo-Json](https://technet.microsoft.com/library/hh849922.aspx)-Cmdlets den Parameter *-Depth* auf eine größere Zahl fest, z.B. 20. |
 
 ## <a name="additional-help"></a>Zusätzliche Hilfe
 
@@ -143,5 +140,3 @@ Wenn Sie Fragen zur Windows Store-Übermittlungs-API haben oder Hilfe beim Verwa
 * [Verwalten von Add-On-Übermittlungen](manage-add-on-submissions.md)
 * [Verwalten von Flight-Paketen](manage-flights.md)
 * [Verwalten von Flight-Paketübermittlungen](manage-flight-submissions.md)
- 
-

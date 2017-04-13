@@ -8,17 +8,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Spiele, Arcade-Joysticks, Eingabe"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+keywords: Windows10, UWP, Spiele, Arcade-Joysticks, Eingabe
 ms.openlocfilehash: b0411dcf1fd75ec7dc31d29a39e95f5c26073953
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="arcade-stick"></a>Arcade-Joystick
 
-Auf dieser Seite werden die Grundlagen der Programmierung für Xbox One-Arcade-Joysticks mittels [Windows.Gaming.Input.ArcadeStick][arcadestick] und verwandter APIs für die Universelle Windows-Plattform (UWP) beschrieben.
+Auf dieser Seite werden die Grundlagen der Programmierung für Xbox One-Arcade-Joysticks mittels [Windows.Gaming.Input.ArcadeStick][arcadestick] und verwandter APIs für die universelle Windows-Plattform (UWP) beschrieben.
 
 Auf dieser Seite erhalten Sie Informationen zu folgenden Vorgängen:
 * Erstellen einer Liste der verbundenen Arcade-Joysticks und ihrer Benutzer
@@ -29,7 +26,7 @@ Auf dieser Seite erhalten Sie Informationen zu folgenden Vorgängen:
 
 ## <a name="arcade-stick-overview"></a>Übersicht über Arcade-Joysticks
 
-Bei Arcade-Joysticks handelt es sich um Eingabegeräte, die den Eindruck klassischer Arcade-Automaten vermitteln und aufgrund ihrer äußerst präzisen digitalen Steuerelemente geschätzt werden. Arcade-Joysticks sind das ideale Eingabegerät für Kampfspiele und andere Spiele im Arcade-Stil und eignen sich für alle Spiele mit komplett digitaler Steuerung. Arcade-Joysticks werden in Windows 10- und Xbox One-UWP-Apps durch den Namespace [Windows.Gaming.Input][] unterstützt.
+Bei Arcade-Joysticks handelt es sich um Eingabegeräte, die den Eindruck klassischer Arcade-Automaten vermitteln und aufgrund ihrer äußerst präzisen digitalen Steuerelemente geschätzt werden. Arcade-Joysticks sind das ideale Eingabegerät für Kampfspiele und andere Spiele im Arcade-Stil und eignen sich für alle Spiele mit komplett digitaler Steuerung. Arcade-Joysticks werden in Windows10- und Xbox One-UWP-Apps durch den Namespace [Windows.Gaming.Input][] unterstützt.
 
 Xbox One-Arcade-Joysticks sind mit einem digitalen 8-Wege-Joystick, sechs **Aktionstasten** und zwei **Sondertasten** ausgestattet. Es handelt sich bei ihnen um vollständig digitale Eingabegeräte, die keine analoge Steuerung oder Vibration unterstützen. Xbox One-Arcade-Joysticks verfügen außerdem über Tasten für **Ansicht** und **Menü**, um die Benutzeroberflächennavigation zu unterstützen. Diese Tasten sind jedoch nicht für die Unterstützung von Befehlen im Spiel vorgesehen und können nicht direkt als Joystick-Tasten verwendet werden.
 
@@ -47,8 +44,8 @@ Als Benutzeroberflächen-Navigationscontroller weisen Arcade-Joysticks den [erfo
 |              Nach rechts | Joystick nach rechts         |
 |               Ansicht | Ansicht-Taste         |
 |               Menü | Menü-Taste         |
-|             Annehmen | Taste für Aktion 1     |
-|             Abbrechen | Taste für Aktion 2     |
+|             Annehmen | Taste für Aktion1     |
+|             Abbrechen | Taste für Aktion2     |
 
 Arcade-Joysticks ordnen keines der [optionalen Sätze](ui-navigation-controller.md#optional-set) mit Navigationsbefehlen zu.
 
@@ -167,4 +164,3 @@ Das [InputInterfacingUWP-Beispiel _(github)_](https://github.com/Microsoft/Xbox-
 [getcurrentreading]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.arcadestick.getcurrentreading.aspx
 [arcadestickreading]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.arcadestickreading.aspx
 [arcadestickbuttons]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.arcadestickbuttons.aspx
-

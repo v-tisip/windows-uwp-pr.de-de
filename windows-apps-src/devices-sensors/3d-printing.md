@@ -8,22 +8,20 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: de1c06d67db78cdc4638c27220d25f769912308e
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: af636e445d2cad70922b8f846140e0886cf7ef28
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="3d-printing"></a>3D-Druck
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132).\]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
 In diesem Abschnitt wird beschrieben, wie Sie die [3D-Druck-API](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.aspx) zum Hinzufügen von Funktionen für den 3D-Druck der universellen Windows-App verwenden.  
 
 <!-- ![the 3D printing from Unity sample uses Windows 3D print APIs to facilitate the printing of a textured model asset from Unity software](images/unity-app-screenshot-002.png) -->
 
-Weitere Informationen zum 3D-Druck mit Windows 10, z. B. Ressourcen für Hardwarepartner, Community-Diskussionsforen und allgemeine Hinweise zu Funktionen für den 3D-Druck finden Sie auf der Hardware Dev Center-Website unter [3D-Druck mit Windows 10](https://developer.microsoft.com/windows/hardware/3d-print-support-windows-10).
+Weitere Informationen zum 3D-Druck mit Windows10, z.B. Ressourcen für Hardwarepartner, Community-Diskussionsforen und allgemeine Hinweise zu Funktionen für den 3D-Druck finden Sie auf der Hardware Dev Center-Website unter [3D-Druck mit Windows10](https://developer.microsoft.com/windows/hardware/3d-print-support-windows-10).
 
 | Thema | Beschreibung |
 |-------|-------------|
@@ -32,9 +30,8 @@ Weitere Informationen zum 3D-Druck mit Windows 10, z. B. Ressourcen für Hardw
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [3D-Druck mit Windows 10 (Hardware Dev Center)](https://developer.microsoft.com/windows/hardware/3d-print-support-windows-10)
+* [3D-Druck mit Windows10 (Hardware Dev Center)](https://developer.microsoft.com/windows/hardware/3d-print-support-windows-10)
 * [UWP 3D-Druckbeispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/3DPrinting)
 * [UWP 3D-Druck mit Unity-Beispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/3DPrintingFromUnity)
 
  
-

@@ -7,18 +7,15 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Anzeigennetzwerke, App-Metadaten"
+keywords: Windows10, UWP, Anzeigennetzwerke, App-Metadaten
 ms.assetid: f0904086-d61f-4adb-82b6-25968cbec7f3
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 8ee555d335007a09c61247a929705aa2fff2469d
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: d377fe7e1eb71132ffa21dd1b11dddf9ca9bb084
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="app-metadata-api-for-advertising-networks"></a>App-Metadaten-API für Anzeigennetzwerke
 
-Anzeigennetzwerke können die *App-Metadaten-API* nutzen, um programmgesteuert Metadaten zu Apps im Windows Store abzurufen, einschließlich Details wie die Beschreibung und Kategorie für den Store-Eintrag der App und Angaben dazu, ob die App für Kinder unter 13 Jahren geeignet ist. Der Zugriff auf die API beschränkt sich derzeit auf Entwickler, die von Microsoft eine Berechtigung zur Nutzung der API erhalten haben.
+Anzeigennetzwerke können die *App-Metadaten-API* nutzen, um programmgesteuert Metadaten zu Apps im Windows Store abzurufen, einschließlich Details wie die Beschreibung und Kategorie für den Store-Eintrag der App und Angaben dazu, ob die App für Kinder unter 13Jahren geeignet ist. Der Zugriff auf die API beschränkt sich derzeit auf Entwickler, die von Microsoft eine Berechtigung zur Nutzung der API erhalten haben.
 
 In diesem Artikel wird erläutert, wie Sie über das [Portal für die App-Metadaten-API](https://admetadata.portal.azure-api.net/) Zugriff auf die API anfordern, Ihren Abonnementschlüssel für den Zugriff auf die API abrufen und die API aufrufen.
 
@@ -77,7 +74,7 @@ Diese Methode hat die folgende Anforderungssyntax.
 
 | Name        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------|
-| app_id | String | Erforderlich. Die ID der App, für die Sie Metadaten abrufen möchten. Folgende Werte sind möglich:<br/><br/><ul><li>Die Store-ID für die App. Beispiel für eine Store-ID: 9NBLGGH29DM8.</li><li>Die Produkt-ID (manchmal auch als *App-ID* bezeichnet) für eine App, die ursprünglich für Windows 8.x oder Windows Phone 8.x erstellt wurde. Die Produkt-ID ist eine GUID.</li></ul> |
+| app_id | String | Erforderlich. Die ID der App, für die Sie Metadaten abrufen möchten. Folgende Werte sind möglich:<br/><br/><ul><li>Die Store-ID für die App. Beispiel für eine Store-ID: 9NBLGGH29DM8.</li><li>Die Produkt-ID (manchmal auch als *App-ID* bezeichnet) für eine App, die ursprünglich für Windows8.x oder Windows Phone8.x erstellt wurde. Die Produkt-ID ist eine GUID.</li></ul> |
 
 <span/>
 
@@ -118,12 +115,12 @@ Weitere Informationen zu den Werten im Antworttext finden Sie in der folgenden T
 | storeId           | String  | Die Store-ID der App. Beispiel für eine Store-ID: 9NBLGGH29DM8.     |  
 | name           | String  | Der Name der App.   |
 | description           | String  | Die Beschreibung aus dem Store-Eintrag für die App.  |
-| phoneStoreGuid           | String  | Die Produkt-ID (Windows Phone 8.x) für die App. Dies ist eine GUID.  |
-| windowsStoreGuid           | String  | Die Produkt-ID (Windows 8.x) für die App. Dies ist eine GUID. |
+| phoneStoreGuid           | String  | Die Produkt-ID (Windows Phone8.x) für die App. Dies ist eine GUID.  |
+| windowsStoreGuid           | String  | Die Produkt-ID (Windows8.x) für die App. Dies ist eine GUID. |
 | storeCategory           | String  | Die Kategorie für die App im Store. Die unterstützten Werte finden Sie in der [Kategorie- und Unterkategorietabelle](../publish/category-and-subcategory-table.md) für Apps im Store.  |
 | iabCategory           | String  | Die Inhaltskategorie für die App gemäß Definition des Interactive Advertising Bureau (IAB). Beispielsweise **Nachrichten** oder **Sport**. Eine Liste der Inhaltskategorien finden Sie auf der Seite [IAB Tech Lab Content Taxonomy](https://www.iab.com/guidelines/iab-quality-assurance-guidelines-qag-taxonomy) der IAB-Website.   |
 | iabCategoryId           | String  | Die ID der Inhaltskategorie für die App. **IAB12** ist beispielsweise die ID für die Nachrichtenkategorie und **IAB17** die ID für die Sportkategorie. Eine Liste der IDs für Inhaltskategorien finden Sie in Abschnitt 5.1 der [OpenRTB API Specification](http://www.iab.com/wp-content/uploads/2015/05/OpenRTB_API_Specification_Version_2_3_1.pdf). |
-| coppa           | Boolean  | „True“, wenn sich die App an Kinder unter 13 Jahren richtet und daher bestimmten Anforderungen gemäß dem Children's Online Privacy Protection Act („COPPA“) unterliegt; andernfalls „False“.  |
+| coppa           | Boolean  | „True“, wenn sich die App an Kinder unter 13Jahren richtet und daher bestimmten Anforderungen gemäß dem Children's Online Privacy Protection Act („COPPA“) unterliegt; andernfalls „False“.  |
 | downloadUrl           | String  | Der Link zum App-Eintrag im Store. Dieser Link hat das Format ```https://www.microsoft.com/store/apps/<Store ID>```.  |
 | iconUrls           | String  |  Der relative Pfad zu den Symbol-URLs, die dieser App zugeordnet sind. Um die Symbole abzurufen, stellen Sie den URLs *http* oder *https* voran.  |
 | type           | String  | Eine der folgenden Zeichenfolgen: **App** oder **Game**.  |
@@ -135,4 +132,3 @@ Weitere Informationen zu den Werten im Antworttext finden Sie in der folgenden T
  
 
  
-

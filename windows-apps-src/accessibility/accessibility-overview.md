@@ -1,6 +1,6 @@
 ---
 author: Xansky
-Description: "Dieser Artikel bietet eine Übersicht über die Konzepte und Technologien in Barrierefreiheitsszenarien für Apps der Universellen Windows-Plattform (UWP)."
+Description: "Dieser Artikel bietet eine Übersicht über die Konzepte und Technologien in Barrierefreiheitsszenarien für Apps der universellen Windows-Plattform (UWP)."
 ms.assetid: AA053196-F331-4CBE-B032-4E9CBEAC699C
 title: "Übersicht über die Barrierefreiheit"
 label: Accessibility overview
@@ -10,20 +10,17 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a03953885179cf8e969e3b35a426aa958c528f54
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: f0fd2e03c58ac5ffa575cf2381df4c652422efea
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="accessibility-overview"></a>Übersicht über die Barrierefreiheit  
 
 
 
 
-Dieser Artikel bietet eine Übersicht über die Konzepte und Technologien in Barrierefreiheitsszenarien für Apps der Universellen Windows-Plattform (UWP).
+Dieser Artikel bietet eine Übersicht über die Konzepte und Technologien in Barrierefreiheitsszenarien für Apps der universellen Windows-Plattform (UWP).
 
 <span id="Accessibility_and_your_app"/>
 <span id="accessibility_and_your_app"/>
@@ -57,7 +54,7 @@ Hilfstechnologieprodukte umfassen eine breite Palette an Software und Hardware. 
 * Spracherkennungssoftware, mit der Sprache in geschriebenen Text konvertiert werden kann.
 * Bildschirmleseprogramme, die Text in Sprache oder andere Formate wie Braille konvertieren.
 * Die Sprachausgabe, die Teil von Windows ist. Die Sprachausgabe verfügt über einen Touchmodus, mit dem die Sprachausgabe anhand von Toucheingabe gesteuert werden kann, für Situationen, in denen keine Tastatur verfügbar ist.
-* Programme oder Einstellungen, mit denen die Anzeige oder bestimmte Bereiche der Anzeige angepasst werden, z. B. Designs mit hohem Kontrast, DPI (Dots per Inch)-Einstellungen der Anzeige oder die Bildschirmlupe.
+* Programme oder Einstellungen, mit denen die Anzeige oder bestimmte Bereiche der Anzeige angepasst werden, z.B. Designs mit hohem Kontrast, DPI (Dots per Inch)-Einstellungen der Anzeige oder die Bildschirmlupe.
 
 Apps mit guter Tastatur- und Bildschirmleseprogrammunterstützung funktionieren normalerweise ohne Probleme mit unterschiedlichen Hilfstechnologieprodukten. In vielen Fällen kann eine UWP-App ohne zusätzliche Anpassung der Informationen oder Struktur mit diesen Produkten verwendet werden. Es kann jedoch empfehlenswert sein, einige Einstellungen anzupassen, um eine optimale Barrierefreiheit zu erzielen oder um weitere Unterstützung zu implementieren.
 
@@ -79,7 +76,7 @@ Es sind einige andere Automatisierungseigenschaften verfügbar (einschließlich 
 <span id="keyboard_support"/>
 <span id="KEYBOARD_SUPPORT"/>
 ## <a name="keyboard-support"></a>Tastaturunterstützung  
-Um eine gute Tastaturunterstützung bereitzustellen, müssen Sie dafür sorgen, dass jeder Teil Ihrer Anwendung mit einer Tastatur verwendet werden kann. Wenn Ihre App hauptsächlich die Standardsteuerelemente und keine benutzerdefinierten Steuerelemente verwendet, ist das meiste schon getan. Das grundlegende XAML-Steuerelementmodell bietet integrierte Tastaturunterstützung, einschließlich Unterstützung für die TAB-Navigation, Texteingaben und steuerelementspezifischer Unterstützung. Die Elemente, die als Layoutcontainer dienen (z. B. Panels), verwenden die Layoutreihenfolge, um eine Standardaktivierreihenfolge festzulegen. Diese Reihenfolge ist häufig die richtige Aktivierreihenfolge zur barrierefreien Darstellung der UI. Wenn Sie die Steuerelemente [**ListBox**](https://msdn.microsoft.com/library/windows/apps/BR242868) und [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) zum Anzeigen von Daten verwenden, bieten diese Steuerelemente eine integrierte Unterstützung für die Navigation mittels Pfeiltasten. Oder wenn Sie ein [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265)-Steuerelement verwenden, werden die LEERTASTE oder EINGABETASTE bereits zur Schaltflächenaktivierung behandelt.
+Um eine gute Tastaturunterstützung bereitzustellen, müssen Sie dafür sorgen, dass jeder Teil Ihrer Anwendung mit einer Tastatur verwendet werden kann. Wenn Ihre App hauptsächlich die Standardsteuerelemente und keine benutzerdefinierten Steuerelemente verwendet, ist das meiste schon getan. Das grundlegende XAML-Steuerelementmodell bietet integrierte Tastaturunterstützung, einschließlich Unterstützung für die TAB-Navigation, Texteingaben und steuerelementspezifischer Unterstützung. Die Elemente, die als Layoutcontainer dienen (z.B. Panels), verwenden die Layoutreihenfolge, um eine Standardaktivierreihenfolge festzulegen. Diese Reihenfolge ist häufig die richtige Aktivierreihenfolge zur barrierefreien Darstellung der UI. Wenn Sie die Steuerelemente [**ListBox**](https://msdn.microsoft.com/library/windows/apps/BR242868) und [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) zum Anzeigen von Daten verwenden, bieten diese Steuerelemente eine integrierte Unterstützung für die Navigation mittels Pfeiltasten. Oder wenn Sie ein [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265)-Steuerelement verwenden, werden die LEERTASTE oder EINGABETASTE bereits zur Schaltflächenaktivierung behandelt.
 
 Weitere Informationen zu allen Aspekten der Tastaturunterstützung, einschließlich Aktivierreihenfolge und tastenbasierter Aktivierung oder Navigation, finden Sie unter [Barrierefreiheit der Tastaturnavigation](keyboard-accessibility.md).
 
@@ -179,10 +176,9 @@ Beim Erstellen eines benutzerdefinierten Steuerelements empfehlen wir, dass Sie 
 ## <a name="assistive-technology-support-in-apps-that-support-xaml--microsoft-directx-interop"></a>Hilfstechnologie in Apps, die XAML/Microsoft DirectX Interop unterstützt  
 Auf in einer XAML-Benutzeroberfläche gehostete Microsoft DirectX-Inhalte (mit [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/Dn252834) oder [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/Hh702041)) kann standardmäßig nicht direkt zugegriffen werden. Im [Beispiel für SwapChainPanel-Beispiel für DirectX/XAML-Interoperabilität](http://go.microsoft.com/fwlink/p/?LinkID=309155) wird veranschaulicht, wie Benutzeroberflächenautomatisierungs-Peers für den gehosteten DirectX-Inhalt erstellt werden. Diese Technik erlaubt den Zugriff auf den gehosteten Inhalt per Benutzeroberflächenautomatisierung.
 
-<span id="related_topics"/>
 ## <a name="related-topics"></a>Verwandte Themen  
 * [**Windows.UI.Xaml.Automation**](https://msdn.microsoft.com/library/windows/apps/BR209179)
 * [Entwerfen für Barrierefreiheit](https://msdn.microsoft.com/library/windows/apps/Hh700407)
 * [XAML-Beispiel für Barrierefreiheit](http://go.microsoft.com/fwlink/p/?linkid=238570)
-* [Barrierefreiheit](accessibility.md)
-
+* [Bedienungshilfen](accessibility.md)
+* [Erste Schritte mit der Sprachausgabe](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started)

@@ -11,13 +11,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 72e4985481f464cd45c13fd390d27c4ba0e7c618
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: af583deb51b93bffc05c4371466fa8412bb0476d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="graphics-pipeline"></a>Grafikpipeline
 
 
@@ -37,7 +34,7 @@ Die am häufigsten verwendeten Stufen sind die Vertex-Shader-Stufe (VS-Stufe) un
 |-|-|
 |Zweck|Die [Input-Assembler-Stufe (IA-Stufe)](input-assembler-stage--ia-.md) stellt für die Pipeline die Daten der grafischen Grundformen (Dreiecke, Linien und Punkte) und zugehörige Daten bereit, einschließlich semantischer IDs, welche die Effizienz der Shader erhöhen, weil damit Grundformen identifiziert werden können, die noch nicht verarbeitet wurden, sodass nur diese verarbeitet werden müssen.|
 |Eingabe|Daten von Grundformen (Dreiecke, Linien und/oder Punkte) aus Puffern im Speicher, die vom Benutzer gefüllt wurden Und möglicherweise zugehörige Daten. Für ein Dreieck wären 3 Vertices und möglicherweise 3 Vertices für jedes angrenzende Dreieck.|
-|Ausgabe|Grundformen mit angefügten, systemgenerierten Werten (z. B. eine Grundform-ID, eine Instanz-ID oder einen Vertex-ID).|
+|Ausgabe|Grundformen mit angefügten, systemgenerierten Werten (z.B. eine Grundform-ID, eine Instanz-ID oder einen Vertex-ID).|
 | | |
 
 <!---
@@ -112,7 +109,7 @@ Die am häufigsten verwendeten Stufen sind die Vertex-Shader-Stufe (VS-Stufe) un
 |-|-|
 |Zweck|Die [Hull-Shader-Stufe](hull-shader-stage--hs-.md) ist eine der Tesselationsstufen, auf der eine durchgehende Fläche eines Modell effizient in vielen Dreiecke unterteilt wird. Ein Hull-Shader wird einmal pro Patch aufgerufen. Er transformiert Eingabekontrollpunkte, die eine Oberfläche niederer Ordnung definieren, in Kontrollpunkte, die einen Patch bilden. Er führt außerdem pro Patch einige Berechnungen aus, um der Tessellatorstufe (TS-Stufe) und der Domain-Shader-Stufe (DS-Stufe) Daten bereitzustellen.|
 |Eingabe|1 bis 32 Eingabekontrollpunkte, die zusammen eine Fläche niederer Ordnung definieren.|
-|Ausgabe|1 bis 32 Ausgabekontrollpunkte, die zusammen einen Patch bilden. Der Hull-Shader deklariert den für die Tessellatorstufe (TS-Stufe) erforderlichen Status. Dies schließt bestimmte Informationen ein, wie z. B. die Anzahl der Kontrollpunkte, den Typ der Patchfläche und die Art der Partitionierung, die bei der Tesselierung verwendet werden soll.|
+|Ausgabe|1 bis 32 Ausgabekontrollpunkte, die zusammen einen Patch bilden. Der Hull-Shader deklariert den für die Tessellatorstufe (TS-Stufe) erforderlichen Status. Dies schließt bestimmte Informationen ein, wie z.B. die Anzahl der Kontrollpunkte, den Typ der Patchfläche und die Art der Partitionierung, die bei der Tesselierung verwendet werden soll.|
 | | |
 
 <!---
@@ -263,7 +260,7 @@ Die am häufigsten verwendeten Stufen sind die Vertex-Shader-Stufe (VS-Stufe) un
 |-|-|
 |Zweck|Die [Streamoutputstufe (SO-Stufe)](stream-output-stage--so-.md) liefert (streamt) kontinuierlich Vertexdaten aus der vorherigen aktiven Stufe einen oder mehrere Puffer im Speicher. Die in den Speicher gestreamten Daten können der Pipeline wieder als Eingabedaten zugeführt oder von der CPU eingelesen werden.|
 |Eingabe|Vertexdaten aus einer vorherigen Pipelinestufe.|
-|Ausgabe|Die Streamoutputstufe (SO-Stufe) liefert (streamt) kontinuierlich Vertexdaten aus der vorherigen aktiven Stufe (z. B. der Geometry-Shader-Stufe (GS-Stufe) ) in einen oder mehrere Puffer im Speicher. Wenn die Geometry-Shader-Stufe (GS-Stufe) inaktiv ist und die Streamoutputstufe (SO-Stufe) aktiv ist, liefert diese kontinuierlich Vertexdaten der Domain-Shader-Stufe (DS-Stufe) in Puffer im Speicher. Wenn auch DS inaktiv ist, stammen die Daten aus der Vertex-Shader-Stufe (VS-Stufe).|
+|Ausgabe|Die Streamoutputstufe (SO-Stufe) liefert (streamt) kontinuierlich Vertexdaten aus der vorherigen aktiven Stufe (z.B. der Geometry-Shader-Stufe (GS-Stufe) ) in einen oder mehrere Puffer im Speicher. Wenn die Geometry-Shader-Stufe (GS-Stufe) inaktiv ist und die Streamoutputstufe (SO-Stufe) aktiv ist, liefert diese kontinuierlich Vertexdaten der Domain-Shader-Stufe (DS-Stufe) in Puffer im Speicher. Wenn auch DS inaktiv ist, stammen die Daten aus der Vertex-Shader-Stufe (VS-Stufe).|
 | | |
 
 <!---
@@ -327,7 +324,7 @@ Die am häufigsten verwendeten Stufen sind die Vertex-Shader-Stufe (VS-Stufe) un
 
 | | |
 |-|-|
-|Zweck|Die [Pixel-Shader-Stufe (PS-Stufe)](pixel-shader-stage--ps-.md) empfängt interpolierte Daten einer Grundform und generiert pixelbezogene Daten wie z. B. Farben.|
+|Zweck|Die [Pixel-Shader-Stufe (PS-Stufe)](pixel-shader-stage--ps-.md) empfängt interpolierte Daten einer Grundform und generiert pixelbezogene Daten wie z.B. Farben.|
 |Eingabe|Wenn die Pipeline ohne einen Geometry-Shader konfiguriert wurde, ist ein Pixel-Shader auf 16 Eingaben mit je 32 Bits und 4 Komponenten beschränkt. Andernfalls kann ein Pixel-Shader bis zu 32 Eingaben mit je 32 Bits und 4 Komponente verarbeiten. Zu den Eingabedaten für den Pixel-Shader gehören Vertexattribute, die mit oder ohne perspektivische Korrekturen interpoliert werden können oder als Konstanten pro Grundform behandelt werden können. Pixel-Shader-Eingaben werden anhand der Vertexattribute der zu rasternden Grundform interpoliert, basierend auf dem deklarierten Interpolationsmodus. Wenn eine Grundform vor der Rasterung gekappt wird, wird der Interpolationsmodus auch während des Clippingvorgangs Clipping berücksichtigt. |
 |Ausgabe|Ein Pixel-Shader kann bis zu 8 Farben mit je 32 Bits und 4 Komponente ausgeben oder keine Farbe, wenn das Pixel verworfen wird. Registerkomponenten für die Pixel-Shader-Ausgabe müssen deklariert werden, bevor sie verwendet werden können. Jedes Register kann eine unterschiedliche Ausgabeschreibmaske besitzen.|
 | | |
@@ -414,4 +411,3 @@ Die am häufigsten verwendeten Stufen sind die Vertex-Shader-Stufe (VS-Stufe) un
  
 
  
-

@@ -8,14 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: bececce2784e1b76c73e147bb89efc84be48a5d7
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 93635403ad919381599211436b7ae70a8dd13ef1
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="appendices"></a>Anhänge
 
 In diesen Abschnitten werden ausführliche technische Details beschrieben.
@@ -49,7 +46,7 @@ In diesen Abschnitten werden ausführliche technische Details beschrieben.
 </tr>
 <tr class="even">
 <td align="left"><p>[Texturblockkomprimierung](texture-block-compression.md)</p></td>
-<td align="left"><p>Die Unterstützung der Blockkomprimierung (BC) für Texturen wurde in Direct3D 11 erweitert, um BC6H- und BC7-Algorithmen anzubieten. BC6H unterstützt HDR-Farb-Quelldaten und BC7 bietet überdurchschnittliche Qualität bei der Komprimierung mit weniger Artefakte für Standard-RGB-Quelldaten.</p></td>
+<td align="left"><p>Die Unterstützung der Blockkomprimierung (BC) für Texturen wurde in Direct3D11 erweitert, um BC6H- und BC7-Algorithmen anzubieten. BC6H unterstützt HDR-Farb-Quelldaten und BC7 bietet überdurchschnittliche Qualität bei der Komprimierung mit weniger Artefakte für Standard-RGB-Quelldaten.</p></td>
 </tr>
 </tbody>
 </table>
@@ -64,7 +61,6 @@ In diesen Abschnitten werden ausführliche technische Details beschrieben.
  
 
  
-
 
 
 

@@ -8,19 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Anzeigen, Werbung, AdControl, Silverlight, Windows Phone"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1f4606f5bb5446d8749f80e2bf4772a0b6db48b3
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP, Anzeigen, Werbung, AdControl, Silverlight, Windows Phone
+ms.openlocfilehash: 743b9faccaa120f1904b592fc09a965dc7878e03
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="adcontrol-in-windows-phone-silverlight"></a>„AdControl“ in Windows Phone Silverlight
 
-In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie die [AdControl](https://msdn.microsoft.com/library/windows/apps/hh524191.aspx)-Klasse nutzen können, um Werbebanner in einer Silverlight-App für Windows Phone 8.1 oder Windows Phone 8.0 anzuzeigen.
+In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie die [AdControl](https://msdn.microsoft.com/library/windows/apps/hh524191.aspx)-Klasse nutzen können, um Werbebanner in einer Silverlight-App für Windows Phone8.1 oder Windows Phone8.0 anzuzeigen.
 
-> **Hinweis für Windows Phone Silverlight 8.0**&nbsp;&nbsp;Werbebanner werden weiterhin für vorhandene Windows Phone 8.0 Silverlight-Apps unterstützt, die ein **AdControl**-Element einer früheren Version des Universal Ad Client SDK oder Microsoft Advertising SDK verwenden und im Store bereits verfügbar sind. In neuen Windows Phone 8.0 Silverlight-Projekten werden Werbebanner aber nicht mehr unterstützt. Außerdem gelten für einige Debug- und Testszenarien in Windows Phone 8.x Silverlight-Projekten Einschränkungen. Weitere Informationen finden Sie unter [Anzeigen von Werbung in Ihrer App](display-ads-in-your-app.md#silverlight_support).
+> **Hinweis für Windows Phone Silverlight 8.0**&nbsp;&nbsp;Werbebanner werden weiterhin für vorhandene Windows Phone8.0 Silverlight-Apps unterstützt, die ein **AdControl**-Element einer früheren Version des Universal Ad Client SDK oder Microsoft Advertising SDK verwenden und im Store bereits verfügbar sind. In neuen Windows Phone8.0 Silverlight-Projekten werden Werbebanner aber nicht mehr unterstützt. Außerdem gelten für einige Debug- und Testszenarien in Windows Phone8.x Silverlight-Projekten Einschränkungen. Weitere Informationen finden Sie unter [Anzeigen von Werbung in Ihrer App](display-ads-in-your-app.md#silverlight_support).
 
 ## <a name="add-the-advertising-assemblies-to-your-project"></a>Hinzufügen der Advertising-Assemblys zum Projekt
 
@@ -32,14 +29,14 @@ Laden Sie zuerst das NuGet-Paket mit den Microsoft Advertising-Assemblys für Wi
 
 3.  Geben Sie im Fenster **Paket-Manager-Konsole** einen dieser Befehle ein.
 
-  * Geben Sie diesen Befehl ein, wenn Ihr Projekt für Windows Phone 8.0 bestimmt ist.
+  * Geben Sie diesen Befehl ein, wenn Ihr Projekt für Windows Phone8.0 bestimmt ist.
 
       > [!div class="tabbedCodeSnippets"]
       ```syntax
       Install-Package Microsoft.Advertising.WindowsPhone.SL80 -Version 6.2.40501.1
       ```
 
-  * Geben Sie diesen Befehl ein, wenn Ihr Projekt für Windows Phone 8.1 bestimmt ist.
+  * Geben Sie diesen Befehl ein, wenn Ihr Projekt für Windows Phone8.1 bestimmt ist.
 
       > [!div class="tabbedCodeSnippets"]
       ```syntax
@@ -135,4 +132,3 @@ Laden Sie zuerst das NuGet-Paket mit den Microsoft Advertising-Assemblys für Wi
 
 
  
-

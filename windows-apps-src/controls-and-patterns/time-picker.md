@@ -10,12 +10,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 5cd0b42f05ca246005b09faa0e926bc2e625d2c1
-ms.lasthandoff: 02/07/2017
-
+keywords: windows10, UWP
+ms.openlocfilehash: 83ef423ce4e6fd57726879dd83a704c47cc43744
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="time-picker"></a>Zeitauswahl
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
@@ -69,4 +67,3 @@ Die fertige Zeitauswahl sieht wie folgt aus:
 - [Kalenderdatumsauswahl](calendar-date-picker.md)
 - [Kalenderansicht](calendar-view.md)
 - [Datumsauswahl](date-picker.md)
-

@@ -8,14 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Konzeptgenehmigung"
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 43c4448e7a581dae69f44c64fd2068e79cb6c7ed
-ms.lasthandoff: 02/08/2017
-
+keywords: Windows10, UWP, Konzeptgenehmigung
+ms.openlocfilehash: f05789d87f3260aa02d1e0dd33490b248efb42a7
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="concept-approval"></a>Konzeptgenehmigung
 
 Wenn Sie ein Spiel erstellen, das auf der Xbox ausgeführt wird, müssen Sie vor der Veröffentlichung an Microsoft einen Vorschlag für das Spiel zur *Konzeptgenehmigung* übermitteln. Diese allgemeine Übermittlung im Vorfeld bietet Microsoft und Ihnen Vorteile, indem zu Beginn des Prozesses wahrscheinliche Probleme oder Nachteile bei der Gesamtplanung für das Spiel erkannt werden. Stellen Sie sicher, dass der Content nicht übermäßig vulgär, beleidigend oder anstößig und für die Zielplattform geeignet ist. Nachdem Sie den Vorschlag übermittelt haben, wird er von Microsoft geprüft, und Sie werden dann über das Ergebnis informiert.
@@ -24,7 +21,7 @@ Wenn Sie ein Spiel für die universelle Windows-Plattform (UWP) entwickeln, ben�
 
 ## <a name="submit-your-concept-for-approval"></a>Übermitteln des Konzepts zur Genehmigung
 
-Als unabhängiger Spieleentwickler oder Spieleherausgeber können Sie Ihr Konzept über das ID@Xbox-Programm zur Genehmigung übermitteln. Weitere Informationen über ID@Xbox und zur Anwendung finden Sie [hier](http://www.xbox.com/Developers/id).
+Als unabhängiger Spieleentwickler oder Spieleherausgeber können Sie Ihr Konzept über das ID@Xbox-Programm zur Genehmigung übermitteln. Weitere Informationen zu ID@Xbox und zur Anwendung finden Sie [hier](http://www.xbox.com/Developers/id).
 
 Wenn Sie bereits ID@Xbox-Entwickler sind, sollten Sie einen Link zum Spieleinformationsformular (Game Information Form, GIF) erhalten haben, wo Sie Ihr Spielkonzept übermitteln können. Wenn Sie Fragen haben, wenden Sie sich an [id@xbox.com](mailto:id@xbox.com).
 

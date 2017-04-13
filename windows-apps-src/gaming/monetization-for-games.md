@@ -1,19 +1,17 @@
 ---
 author: joannaleecy
 title: "Monetarisierung für Spiele"
-description: "Implementieren Sie Banneranzeigen, Videointerstitialanzeigen und In-App-Käufe für Universal Spiele für die Universelle Windows-Plattform (UWP) unter Windows 10."
+description: "Implementieren Sie Banneranzeigen, Videointerstitialanzeigen und In-App-Käufe für Universal Spiele für die Universelle Windows-Plattform (UWP) unter Windows10."
 ms.assetid: 79f4e177-d8e7-45d3-8a78-31d4c2fe298a
 ms.author: joanlee
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Spiele, Monetisierung"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+keywords: Windows10, UWP, Spiele, Monetisierung
 ms.openlocfilehash: eccff6f037890fdd375eb150520db99a67aa718d
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 #  <a name="monetization-for-games"></a>Monetisierung für Spiele
 
@@ -29,7 +27,7 @@ Sie können ein UWP-Spiel folgendermaßen bewerben und monetisieren:
  
 ## <a name="worldwide-distribution-channel"></a>Weltweiter Vertriebskanal
 
-Im Windows Store kann Ihr Spiel zum Download in mehr als 200 Ländern und Regionen weltweit zur Verfügung gestellt werden, und für die Abrechnung werden verschiedene Zahlungsmethoden (einschließlich Visa, MasterCard und PayPal) unterstützt. Eine vollständige Liste der Länder und Regionen finden Sie unter [Märkte und angepasste Preise](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices).
+Im Windows Store kann Ihr Spiel zum Download in mehr als 200Ländern und Regionen weltweit zur Verfügung gestellt werden, und für die Abrechnung werden verschiedene Zahlungsmethoden (einschließlich Visa, MasterCard und PayPal) unterstützt. Eine vollständige Liste der Länder und Regionen finden Sie unter [Märkte und angepasste Preise](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices).
 
 ## <a name="set-a-price-for-your-game"></a>Festlegen eines Preises für Ihr Spiel 
 
@@ -54,12 +52,12 @@ Bei In-Game-Käufen handelt es sich um Produkte, die in einem Spiel gekauft werd
 
 Sie können zwei Arten von Add-Ons im Store erstellen: _Gebrauchsgüter_ oder _Verbrauchsartikel_. Gebrauchsgüter sind Elemente, die bis zu ihrem Ablauf für einen angegebenen Zeitraum erhalten bleiben und nur einmal erworben werden können. Verbrauchsartikel sind Elemente, die gekauft und immer wieder verwendet werden können.
 
-Beim Erstellen von Verbrauchsartikeln entscheiden Sie, wie Sie sie nachverfolgen möchten, d. h. ob sie _vom Entwickler verwaltet_ oder _vom Store verwaltet_ werden. (Dieses Feature ist ab Windows 10, Version 1607, verfügbar). Bei einem vom Entwickler verwalteten Verbrauchsartikel sind Sie für die Nachverfolgung des Guthabens des Benutzers an Elementen zuständig. Bei einem vom Store verwalteten Verbrauchsartikel verfolgt der Windows Store das Elementguthaben für Sie. Weitere Informationen finden Sie unter [Übersicht über Endverbraucher-Add-Ons](https://msdn.microsoft.com/windows/uwp/monetize/enable-consumable-add-on-purchases#overview-of-consumable-add-ons).
+Beim Erstellen von Verbrauchsartikeln entscheiden Sie, wie Sie sie nachverfolgen möchten, d.h. ob sie _vom Entwickler verwaltet_ oder _vom Store verwaltet_ werden. (Dieses Feature ist ab Windows10, Version 1607, verfügbar). Bei einem vom Entwickler verwalteten Verbrauchsartikel sind Sie für die Nachverfolgung des Guthabens des Benutzers an Elementen zuständig. Bei einem vom Store verwalteten Verbrauchsartikel verfolgt der Windows Store das Elementguthaben für Sie. Weitere Informationen finden Sie unter [Übersicht über Endverbraucher-Add-Ons](https://msdn.microsoft.com/windows/uwp/monetize/enable-consumable-add-on-purchases#overview-of-consumable-add-ons).
 
 ### <a name="create-in-game-purchases"></a>Erstellen von In-Game-Käufen
 
-Die aktuellen APIs für In-App-Käufe und Lizenzinformationen sind Teil des [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace im Windows SDK (ab Windows 10, Version 1607). Bei der Entwicklung eines neuen Spiels für 1607 oder eine höhere Version wird empfohlen, den __Windows.Services.Store__-Namespace zu verwenden, da er die aktuellen Add-On-Typen unterstützt und eine bessere Leistung bietet.
-Darüber hinaus wurde er für die Kompatibilität mit künftigen Arten von Produkten und Features entwickelt, die von Windows Dev Center und vom Store unterstützt werden. Verwenden Sie bei der Entwicklung für vorherige Windows 10-Versionen stattdessen den [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)-Namespace.
+Die aktuellen APIs für In-App-Käufe und Lizenzinformationen sind Teil des [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace im Windows SDK (ab Windows10, Version 1607). Bei der Entwicklung eines neuen Spiels für 1607 oder eine höhere Version wird empfohlen, den __Windows.Services.Store__-Namespace zu verwenden, da er die aktuellen Add-On-Typen unterstützt und eine bessere Leistung bietet.
+Darüber hinaus wurde er für die Kompatibilität mit künftigen Arten von Produkten und Features entwickelt, die von Windows Dev Center und vom Store unterstützt werden. Verwenden Sie bei der Entwicklung für vorherige Windows10-Versionen stattdessen den [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)-Namespace.
 
 Weitere Informationen finden Sie unter [In-App-Käufe und Testversionen](https://msdn.microsoft.com/windows/uwp/monetize/in-app-purchases-and-trials).
 
@@ -112,7 +110,7 @@ So erstellen Sie ein Paket, das in den Store hochgeladen werden kann:
 
 Weitere Informationen finden Sie unter [App-Übermittlungen](https://msdn.microsoft.com/windows/uwp/publish/app-submissions).
 
-Nachdem das Spiel an den Store übermittelt wurde, beginnt der [App-Zertifizierungsprozess](https://msdn.microsoft.com/windows/uwp/publish/the-app-certification-process). Dieser Prozess kann bis zu 16 Stunden dauern, und das Spiel wird erst nach Abschluss des Prozesses aufgeführt.
+Nachdem das Spiel an den Store übermittelt wurde, beginnt der [App-Zertifizierungsprozess](https://msdn.microsoft.com/windows/uwp/publish/the-app-certification-process). Dieser Prozess kann bis zu 16Stunden dauern, und das Spiel wird erst nach Abschluss des Prozesses aufgeführt.
 
 #### <a name="associate-your-game-solution-with-the-store"></a>Verknüpfen Ihrer Spielelösung mit dem Store
 
@@ -139,7 +137,7 @@ Weitere Konfigurationen für Add-Ons:
 * [Preise und Verfügbarkeit](https://msdn.microsoft.com/windows/uwp/publish/set-add-on-pricing-and-availability)
 * [Store-Eintrag](https://msdn.microsoft.com/windows/uwp/publish/create-add-on-store-listings)
 
-Verfügt Ihr Spiel über viele Add-Ons, können Sie sie mithilfe der __Windows Store-Übermittlungs-API__ programmgesteuert erstellen. Weitere Informationen finden Sie unter [Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten](https://msdn.microsoft.com/windows/uwp/monetize/create-and-manage-submissions-using-windows-store-services).
+Verfügt Ihr Spiel über viele Add-Ons, können Sie sie mithilfe der __Windows Store-Übermittlungs-API__ programmgesteuert erstellen. Weitere Informationen finden Sie unter [Erstellen und Verwalten von Übermittlungen mit WindowsStore-Diensten](https://msdn.microsoft.com/windows/uwp/monetize/create-and-manage-submissions-using-windows-store-services).
 
 ## <a name="display-ads-in-your-game"></a>Anzeigen von Werbung in Ihrem Spiel
 
@@ -180,7 +178,7 @@ Sie können während der Entwicklung mit diesen Testwerten überprüfen, wie die
 |AdType             | AdUnitId  | AppId                              |
 |-------------------|-----------|------------------------------------|
 |Banneranzeigen         |10865270   |3f83fe91-d6be-434d-a0ae-7351c5a997f1|
-|Interstitielle Anzeigen   |11389925   |d25517cb-12d4-4699-8bdc-52040c712cab|
+|Interstitielle Anzeigen    |11389925   |d25517cb-12d4-4699-8bdc-52040c712cab|
 
 Hier sind einige bewährte Methoden aufgeführt, die Sie beim Entwurfs- und Implementierungsprozess unterstützen.
 
@@ -210,11 +208,11 @@ Smaato ermöglicht die Integration von Banneranzeigen in UWP-Apps und -Spiele. L
 
 Mit AdDuplex können Sie Banner- oder Interstitialanzeigen in Ihrem Spiel implementieren.
 
-Weitere Informationen zum Integrieren von AdDuplex direkt in ein Windows 10-XAML-Projekt finden Sie auf der AdDuplex-Website:
-* Banneranzeigen: [Windows 10 SDK für XAML](https://adduplex.zendesk.com/hc/en-us/articles/204849031-Windows-10-SDK-for-XAML-apps-installation-and-usage) 
-* Interstitielle Anzeigen: [Windows 10 XAML AdDuplex Interstitial Ad Installation and Usage](https://adduplex.zendesk.com/hc/en-us/articles/204849091-Windows-10-XAML-AdDuplex-Interstitial-Ad-Installation-and-Usage) (Implementierung und Verwendung von AdDuplex-Interstitialanzeigen in Windows 10-XAML-Projekten)
+Weitere Informationen zum Integrieren von AdDuplex direkt in ein Windows10-XAML-Projekt finden Sie auf der AdDuplex-Website:
+* Banneranzeigen: [Windows10 SDK für XAML](https://adduplex.zendesk.com/hc/en-us/articles/204849031-Windows-10-SDK-for-XAML-apps-installation-and-usage) 
+* Interstitielle Anzeigen: [Windows 10 XAML AdDuplex Interstitial Ad Installation and Usage](https://adduplex.zendesk.com/hc/en-us/articles/204849091-Windows-10-XAML-AdDuplex-Interstitial-Ad-Installation-and-Usage) (Implementierung und Verwendung von AdDuplex-Interstitialanzeigen in Windows10-XAML-Projekten)
 
-Informationen zum Integrieren des AdDuplex SDK in Windows 10-UWP-Spiele, die mit Unity erstellt wurden, finden Sie unter [Windows 10 SDK for Unity apps installation and usage](https://adduplex.zendesk.com/hc/en-us/articles/207279435-Windows-10-SDK-for-Unity-apps-installation-and-usage) (Windows 10 SDK für Unity-Apps: Installation und Nutzung).
+Informationen zum Integrieren des AdDuplex SDK in Windows10-UWP-Spiele, die mit Unity erstellt wurden, finden Sie unter [Windows 10 SDK for Unity apps installation and usage](https://adduplex.zendesk.com/hc/en-us/articles/207279435-Windows-10-SDK-for-Unity-apps-installation-and-usage) (Windows 10 SDK für Unity-Apps: Installation und Nutzung).
 
 ## <a name="maximize-your-games-potential-through-ad-campaigns"></a>Maximieren des Potenzials Ihres Spiels über Anzeigenkampagnen
 
@@ -225,8 +223,8 @@ Wählen Sie zwischen verschiedenen Kampagnenarten, mit denen Sie die Zahl von Sp
 |Kampagnentyp             | Anzeigen für Ihr Spiel werden in folgenden Apps angezeigt:                                                                                                                                                                   |
 |--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |Kostenpflichtig                      |Apps, die dem Gerät oder der Kategorie Ihres Spiels entsprechen                                                                                                                                                   |
-|Kostenlose Community-Anzeigen            |Apps, die von anderen Entwicklern veröffentlicht werden, die ebenfalls Community-Anzeigenkampagnen nutzen. Weitere Informationen finden Sie unter [Informationen zu Community-Anzeigen](https://msdn.microsoft.com/windows/uwp/publish/about-community-ads).|
-|Kostenlose Eigenwerbung                |Nur in Apps, die Sie veröffentlicht haben. Weitere Informationen finden Sie unter [Über Eigenwerbung](https://msdn.microsoft.com/windows/uwp/publish/about-house-ads).                                                            |
+|Kostenlose Community-Anzeigen               |Apps, die von anderen Entwicklern veröffentlicht werden, die ebenfalls Community-Anzeigenkampagnen nutzen. Weitere Informationen finden Sie unter [Informationen zu Community-Anzeigen](https://msdn.microsoft.com/windows/uwp/publish/about-community-ads).|
+|Kostenlose Eigenwerbung                   |Nur in Apps, die Sie veröffentlicht haben. Weitere Informationen finden Sie unter [Über Eigenwerbung](https://msdn.microsoft.com/windows/uwp/publish/about-house-ads).                                                            |
 
 ## <a name="related-links"></a>Verwandte Links
 

@@ -2,21 +2,17 @@
 title: Vektoren, Scheitelpunkte und Quaternionen
 description: "Überall in Direct3D beschreiben Scheitelpunkte Position und Ausrichtung. Jeder Scheitelpunkt in einem Grundtyp wird durch einen Vektor, der seine Position, Farbe, Textur und Koordinaten angibt, sowie einen normalen Vektor für seine Ausrichtung beschrieben."
 ms.assetid: 94EC3D59-43FC-4509-A233-916E9FA8381E
-keywords:
-- Vektoren, Scheitelpunkte und Quaternionen
+keywords: Vektoren, Scheitelpunkte und Quaternionen
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 61017fd2f0d91fb953543857741146bb607a36f3
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 7b0fa178db12c421f5964f0dec2b8c6391ee1973
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="vectors-vertices-and-quaternions"></a>Vektoren, Scheitelpunkte und Quaternionen
 
 
@@ -26,7 +22,7 @@ Quaternionen fügen ein viertes Element zu den \[x, y, Z\]-Werten hinzu, die ein
 
 Die Durchführung einer Komposition mit Quaternionen ist vergleichbar mit ihrer Kombinierung. Die Komposition von zwei Quaternionen wird wie in der folgenden Abbildung gezeigt notiert.
 
-![Illustration der Quaternionendrehung](images/quateq.png)
+![Illustrationder Quaternionendrehung](images/quateq.png)
 
 Die Komposition von zwei Quaternionen für eine Geometrie bedeutet die „Drehung der Geometrie um Ache₂ mit Drehung₂ und anschließend um Achse₁ mit Drehung₁". In diesem Fall ist Q eine Drehung um eine einzelne Achse als Ergebnis der Anwendung von q₂ und dann von q₁ auf die Geometrie.
 
@@ -42,7 +38,6 @@ Wenn Sie Komposition und Interpolation zusammen verwenden, erhalten Sie damit ei
  
 
  
-
 
 
 

@@ -1,5 +1,5 @@
 ---
-description: "Hier finden Sie einen Designleitfaden und Codierungsanweisungen für das Hinzufügen von Steuerelementen und Mustern zu Ihrer UWP-App. Sie finden mehr als 45 leistungsstarke Steuerelemente für die Verwendung mit Ihrer App."
+description: "Hier finden Sie einen Designleitfaden und Codierungsanweisungen für das Hinzufügen von Steuerelementen und Mustern zu Ihrer UWP-App. Sie finden mehr als 45leistungsstarke Steuerelemente für die Verwendung mit Ihrer App."
 title: "UWP-Steuerelemente und -Muster – Entwicklung von Windows-Apps"
 author: mijacobs
 keywords: "UWP-Steuerelemente, Benutzeroberfläche, App-Steuerelemente"
@@ -11,16 +11,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.assetid: ce2e611c-c419-4a14-9095-b88ac711d1b8
-translationtype: Human Translation
-ms.sourcegitcommit: 412a3f70861c6cd1bbf003fe0bd78c8547a5f3f8
 ms.openlocfilehash: 7b525267c8f4d24af95f6d41d46d33a3adf10f8f
-ms.lasthandoff: 02/08/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="controls-and-patterns-for-uwp-apps"></a>Steuerelemente und Muster für UWP-Apps
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-In der UWP-App-Entwicklung ist ein <i>Steuerelement</i> ein UI-Element, das Inhalte anzeigt oder Interaktionen ermöglicht. Steuerelemente sind die Bausteine der Benutzeroberfläche. Wir stellen Ihnen mehr als 45 Steuerelemente bereit, angefangen bei einfachen Schaltflächen bis hin zu leistungsstarken Datensteuerelementen wie der Rasteransicht. Ein <i>Muster</i> ist eine Anleitung zum Kombinieren verschiedener Steuerelemente, um etwas Neues zu erstellen.
+In der UWP-App-Entwicklung ist ein <i>Steuerelement</i> ein UI-Element, das Inhalte anzeigt oder Interaktionen ermöglicht. Steuerelemente sind die Bausteine der Benutzeroberfläche. Wir stellen Ihnen mehr als 45Steuerelemente bereit, angefangen bei einfachen Schaltflächen bis hin zu leistungsstarken Datensteuerelementen wie der Rasteransicht. Ein <i>Muster</i> ist eine Anleitung zum Kombinieren verschiedener Steuerelemente, um etwas Neues zu erstellen.
 
 Die Artikel in diesem Abschnitt enthalten Designrichtlinien und Codierungsanweisungen für das Hinzufügen von Steuerelementen und Mustern zu Ihrer UWP-App. 
 
@@ -137,7 +135,7 @@ Detaillierte Informationen zu bestimmten Steuerelementen und Mustern.
 
 
 
-<li>[Kacheln, Badges und Benachrichtigungen](tiles-badges-notifications.md)
+<li>[Kacheln, Signale und Benachrichtigungen](tiles-badges-notifications.md)
 <ul>
 
 <li>[Kacheln](tiles-and-notifications-creating-tiles.md)</li>
@@ -154,7 +152,7 @@ Detaillierte Informationen zu bestimmten Steuerelementen und Mustern.
 
 <li>[Signalbenachrichtigungen](tiles-and-notifications-badges.md)</li>
 
-<li>[Visualisierungstool für Benachrichtigungen](tiles-and-notifications-notifications-visualizer.md)</li>
+<li>[Notifications Visualizer](tiles-and-notifications-notifications-visualizer.md)</li>
 
 <li>[Methoden für die Benachrichtigungsübermittlung](tiles-and-notifications-choosing-a-notification-delivery-method.md)</li>
 

@@ -2,21 +2,17 @@
 title: Scheitelpunkt-Shader- (VS) Phase
 description: "Die Scheitelpunkt-Shader- (VS) Phase verarbeitet Scheitelpunkte und führt dabei in der Regel Vorgänge wie Transformationen, das Anwenden von Skins und Beleuchtung durch. Ein Scheitelpunkt-Shader verarbeitet immer einen einzigen Eingabescheitelpunkt und erzeugt daraus einen einzigen Ausgabescheitelpunkt."
 ms.assetid: 5133C4BB-B4E6-4697-9276-F718AD44869C
-keywords:
-- Scheitelpunkt-Shader- (VS) Phase
+keywords: Scheitelpunkt-Shader- (VS) Phase
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 6819826d829036c6b2cb2de4f2f42025820de9fe
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 761296a9897ad99ec57527f073a1ad1c2d792966
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="vertex-shader-vs-stage"></a>Scheitelpunkt-Shader- (VS) Phase
 
 
@@ -47,12 +43,12 @@ Ein Scheitelpunkt-Shader kann Lade- und Textursampling-Vorgänge durchführen, b
 ## <a name="span-idinputspanspan-idinputspanspan-idinputspaninput"></a><span id="Input"></span><span id="input"></span><span id="INPUT"></span>Eingabe
 
 
-Ein einzelner Scheitelpunkt- mit den vom System generierten Werten Scheitelpunkt-ID und Instanz-ID. Jeder Scheitelpunkt-Shader-Eingabescheitelpunkt kann aus bis zu 16 32-Bit-Vektoren (mit jeweils bis zu 4 Komponenten) bestehen.
+Ein einzelner Scheitelpunkt- mit den vom System generierten Werten Scheitelpunkt-ID und Instanz-ID. Jeder Eingabevertex für einen Vertex-Shader kann aus mehreren 32-Bit-Vektoren bestehen (maximal 16, mit jeweils bis zu 4-Komponenten).
 
 ## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Ausgabe
 
 
-Ein einzelner Scheitelpunkt. Jeder Ausgabescheitelpunkt kann aus bis zu 16 32-Bit-Vektoren mit jeweils 4 Komponenten bestehen.
+Ein einzelner Vertex. Jeder Ausgabescheitelpunkt kann aus bis zu 16 32-Bit-Vektoren mit jeweils 4 Komponenten bestehen.
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Verwandte Themen
 
@@ -62,7 +58,6 @@ Ein einzelner Scheitelpunkt. Jeder Ausgabescheitelpunkt kann aus bis zu 16 32-Bi
  
 
  
-
 
 
 

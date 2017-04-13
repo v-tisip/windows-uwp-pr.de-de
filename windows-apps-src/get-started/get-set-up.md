@@ -1,8 +1,8 @@
 ---
 author: GrantMeStrength
 ms.assetid: 7D5EED8A-0742-4E12-A806-40FBAEFE6ABF
-title: Get set up
-description: It&quot;s easier than you think to get set up. Follow these instructions and start creating Universal Windows Platform (UWP) apps for Windows 10.
+title: Vorbereitung
+description: "Das Durchführen der Vorbereitung ist einfacher, als Sie denken. Befolgen Sie diese Anweisungen, um mit dem Erstellen von Universellen Windows-Plattform (UWP)-Apps für Windows 10 zu beginnen."
 ms.author: jken
 ms.date: 03/06/2017
 ms.topic: article
@@ -13,72 +13,72 @@ ms.openlocfilehash: 202480cd8e9107e18c7fa8c84a17089177f91dcb
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
 translationtype: HT
 ---
-# <a name="get-set-up"></a>Get set up
+# <a name="get-set-up"></a>Vorbereiten
 
-![Get ready to use Visual Studio](images/VisualStudio2017Hero_ImageXL-LG.png)
-
-
-It's easier than you think to get going. Follow these instructions and start creating Universal Windows Platform (UWP) apps for Windows 10.
-
-## <a name="1-get-windows-10"></a>1. Get Windows 10
-
-To develop UWP apps, you need the latest version of Windows.
-
--   [Get Windows 10 online](http://go.microsoft.com/fwlink/p/?LinkId=619312)
-
-Are you an MSDN subscriber? You can get ISO downloads here:
-
--   Get Windows 10 from [MSDN Subscriber Downloads](http://go.microsoft.com/fwlink/p/?LinkId=266384)
+![Vorbereitungen für die Verwendung von Visual Studio](images/VisualStudio2017Hero_ImageXL-LG.png)
 
 
+Die Vorbereitung ist einfacher, als Sie denken. Befolgen Sie diese Anweisungen, um mit dem Erstellen von Universellen Windows-Plattform (UWP)-Apps für Windows 10 zu beginnen.
 
-## <a name="2-download-or-update-visual-studio"></a>2. Download or update Visual Studio
+## <a name="1-get-windows-10"></a>1. Laden Sie Windows10 herunter.
 
-Microsoft Visual Studio 2017 helps you design, code, test, and debug your apps.
+Zum Entwickeln von UWP-Apps benötigen Sie die aktuelle Windows-Version.
 
-If you don't already have Visual Studio 2017, you can install the free Microsoft Visual Studio Community 2017. This download includes device simulators for testing your apps:
+-   [Windows10 online erhalten](http://go.microsoft.com/fwlink/p/?LinkId=619312)
 
--   [Download Windows 10 developer tools](https://go.microsoft.com/fwlink/p/?LinkID=534189)
+Sind Sie MSDN-Abonnent? ISO-Dateien stehen hier zum Download zur Verfügung:
 
-When you install Visual Studio, make sure to select the Universal Windows App Development Tools option, as shown here:
-
-![Visual Studio tools for UWP](images/vs-2017-community-setup.png)
-
-Need some help with Visual Studio? See [Get Started with Visual Studio](https://www.visualstudio.com/vs/getting-started).
-
-If you have already started using Visual Studio, but discover you are missing some components, you can launch the installer again from the *New project* dialog:
-
-   ![How to repeat the installation process](images/win10-cs-install.png)
+-   Laden Sie Windows10 von [Downloads für MSDN-Abonnenten](http://go.microsoft.com/fwlink/p/?LinkId=266384) herunter.
 
 
-## <a name="3-enable-your-device-for-development"></a>3. Enable your device for development
 
-It’s important to test your UWP apps on a real PCs and phones. Before you can deploy apps to your PC or Windows Phone, you have to enable it for development.
+## <a name="2-download-or-update-visual-studio"></a>2. Laden Sie Visual Studio herunter, oder aktualisieren Sie es.
 
--   For detailed instructions, see [Enable your device for development](enable-your-device-for-development.md).
+Microsoft Visual Studio2017 unterstützt Sie bei Entwurf, Codierung, Testen und Debuggen Ihrer Apps.
 
-## <a name="4-register-as-an-app-developer"></a>4. Register as an app developer
+Wenn Sie Visual Studio2017 noch nicht verwenden, können Sie Microsoft Visual Studio Community2017 kostenlos installieren. Dieser Download umfasst auch Geräte-Simulatoren zum Testen Ihrer Apps:
 
-You can start developing apps now, but before you can submit them to the store, you need a developer account.
+-   [Windows10-Entwicklertools herunterladen](https://go.microsoft.com/fwlink/p/?LinkID=534189)
 
--   To get a developer account, go to the [Sign up](sign-up.md) page.
+Verwenden Sie bei der Installation von Visual Studio die Option „Entwicklungstools für universelle Windows-Apps“, so wie hier gezeigt:
 
-## <a name="whats-next"></a>What's next?
+![Visual Studio-Tools für UWP](images/vs-2017-community-setup.png)
 
-After you've installed the tools and gotten a developer license or a developer account, use our tutorials to create your first app:
+Benötigen Sie Hilfe für Visual Studio? Wechseln Sie zu [Erste Schritte mit Visual Studio](https://www.visualstudio.com/vs/getting-started).
 
--   [Create your first app](your-first-app.md) tutorials
+Wenn Sie Visual Studio bereits verwenden, aber entdecken, dass Ihnen einige Komponenten fehlen, können Sie das Installationsprogramm erneut über das Dialogfeld *Neues Projekt* starten:
 
-## <a name="want-more-tools-and-downloads"></a>Want more tools and downloads?
-
-For the complete list of tools and downloads, see [Downloads](http://go.microsoft.com/fwlink/p/?linkid=285935).
+   ![So wiederholen Sie den Installationsvorgang](images/win10-cs-install.png)
 
 
-## <a name="see-also"></a>See Also
+## <a name="3-enable-your-device-for-development"></a>3. Aktivieren Sie Ihr Gerät für die Entwicklung
 
-* [Your first app](your-first-app.md)
-* [Publishing your Windows Store app](https://developer.microsoft.com/store/publish-apps).
-* [How-to articles on developing UWP apps](https://developer.microsoft.com/windows/apps/develop)
-* [Code Samples for UWP developers](https://developer.microsoft.com/windows/samples)
-* [What's a Universal Windows app?](whats-a-uwp.md)
-* [Sign up for Windows account](sign-up.md)
+UWP-Apps müssen auf echten Computern und Smartphones getestet werden. Bevor Sie Apps für Ihren Computer oder Ihr Windows Phone bereitstellen können, müssen Sie das Gerät für die Entwicklung registrieren.
+
+-   Ausführliche Anweisungen finden Sie unter [Aktivieren des Geräts für die Entwicklung](enable-your-device-for-development.md).
+
+## <a name="4-register-as-an-app-developer"></a>4. Registrieren als App-Entwickler
+
+Sie können jetzt mit der Entwicklung von Apps beginnen. Zum Übermitteln an den Store benötigen Sie jedoch ein Entwicklerkonto.
+
+-   Um ein Entwicklerkonto zu erhalten, müssen Sie auf die Seite für die [Registrierung](sign-up.md) zugreifen.
+
+## <a name="whats-next"></a>Nächste Schritte
+
+Nachdem Sie die Tools installiert und eine Entwicklerlizenz abgerufen bzw. ein Entwicklerkonto eingerichtet haben, können Sie unsere Lernprogramme zum Erstellen Ihrer ersten App nutzen:
+
+-   Lernprogramme zum Thema [Erstellen Ihrer ersten App](your-first-app.md)
+
+## <a name="want-more-tools-and-downloads"></a>Benötigen Sie mehr Tools und Downloads?
+
+Die vollständige Liste der Tools und Downloads finden Sie unter [Downloads](http://go.microsoft.com/fwlink/p/?linkid=285935).
+
+
+## <a name="see-also"></a>Weitere Informationen
+
+* [Ihre erste App](your-first-app.md)
+* [Veröffentlichen Ihrer Windows Store-Apps](https://developer.microsoft.com/store/publish-apps).
+* [Anleitungen zur Entwicklung von UWP-Apps](https://developer.microsoft.com/windows/apps/develop)
+* [Codebeispiele für UWP-Entwickler](https://developer.microsoft.com/windows/samples)
+* [Was ist eine universelle Windows-App?](whats-a-uwp.md)
+* [Für Windows-Konto anmelden](sign-up.md)

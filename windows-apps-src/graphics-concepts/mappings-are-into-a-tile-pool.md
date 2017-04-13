@@ -2,21 +2,17 @@
 title: Zuordnungen erfolgen in einen Kachelpool
 description: "Beim Erstellen einer Ressource als Streaming-Ressource stammen die Kacheln, die die Ressource bilden, aus Speicherorten in einem Kachelpool. Ein Kachelpool ist ein Speicherpool (gesichert durch eine oder mehrere Zuordnungen im Hintergrund – nicht sichtbar für die Anwendung)."
 ms.assetid: 58B8DBD5-62F5-4B94-8DD1-C7D57A812185
-keywords:
-- Zuordnungen erfolgen in einen Kachelpool
+keywords: Zuordnungen erfolgen in einen Kachelpool
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 9c8ba46cdd1968fd72307849005f91aa5e872260
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: bc5787333c266491e432abbb3c5039f73bdeb1f2
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="mappings-are-into-a-tile-pool"></a>Zuordnungen erfolgen in einen Kachelpool
 
 
@@ -26,7 +22,7 @@ Die Kosten für die Flexibilität des Auffüllens der Kacheln für eine Ressourc
 
 Mehrere Kachelpools können erstellt werden und eine beliebige Anzahl von Streaming-Ressourcen kann gleichzeitig in jeden beliebigen Kachelpool zuordnen. Kachelpools können auch vergrößert oder verkleinert werden. Weitere Informationen finden Sie unter [Ändern der Größe des Kachelpools](tile-pool-resizing.md). Eine Einschränkung zur Vereinfachung der Implementierung von Bildschirmtreibern und der Laufzeit liegt darin, dass eine Streaming-Ressource nur Zuordnungen in mindestens einem Kachelpool zu einem Zeitpunkt aufweisen kann (im Gegensatz zum gleichzeitigen Zuordnen in mehrere Kachelpools).
 
-Die mit einer Streaming-Ressource assoziierte Speicherkapazität (d.h. unabhängig vom Kachelpoolspeicher) ist etwa proportional zur Anzahl der Kacheln, die tatsächlich zu einem bestimmten Zeitpunkt dem Pool zugeordnet sind. Hinsichtlich der Hardware läuft diese Tatsache auf eine Skalierung des Speicherbedarfs für Seitentabellen hinaus, ungefähr in der Größe der zugeordneten Kacheln (z. B. über ein Seitentabellenschema mit mehreren Ebenen, ggf.).
+Die mit einer Streaming-Ressource assoziierte Speicherkapazität (d.h. unabhängig vom Kachelpoolspeicher) ist etwa proportional zur Anzahl der Kacheln, die tatsächlich zu einem bestimmten Zeitpunkt dem Pool zugeordnet sind. Hinsichtlich der Hardware läuft diese Tatsache auf eine Skalierung des Speicherbedarfs für Seitentabellen hinaus, ungefähr in der Größe der zugeordneten Kacheln (z.B. über ein Seitentabellenschema mit mehreren Ebenen, ggf.).
 
 Den Kachelpool kann man sich als eine vollständige Software-Abstraktion vorstellen, durch die Direct3D-Anwendungen wirksam in die Lage versetzt werden, die Seitentabellen auf den Grafikprozessor (GPU) zu programmieren, ohne die Implementierungsdetails auf niedriger Ebene wissen zu müssen (oder mit Zeigeradressen direkt umgehen zu müssen). Kachelpools wenden keine zusätzlichen Ebenen der Dereferenzierung in der Hardware an. Optimierungen einer Seitentabelle mit einer Ebene, die Konstrukte wie Seitenverzeichnisse verwendet, sind unabhängig vom Kachelpoolkonzept.
 
@@ -34,7 +30,7 @@ Lassen Sie uns herausfinden, welchen Speicherplatz die Seitentabelle im ungünst
 
 Nehmen wir an, dass jeder Seitentabelleneintrag 64 Bits umfasst.
 
-Für die ungünstigste Größe der Seitentabelle für eine einzelne Fläche nehmen wir unter Anwendung der Ressourcengrenzen in Direct3D 11 die Erstellung einer Streaming-Ressource mit einem Format von 128 Bit pro Element an (z. B. eine RGBA-Gleitkommazahl), also enthält eine 64 KB große Kachel nur 4096 Pixel. Die maximal unterstützte [**Texture2DArray**](https://msdn.microsoft.com/library/windows/desktop/ff471526)-Größe von 16384\*16384\*2048 (jedoch mit nur einer Mip-Map) würde etwa 1 GB Speicherplatz in der Seitentabelle erfordern, wenn vollständig gefüllt (ohne Mip-Maps), bei Verwendung von 64-Bit-Einträgen. Durch das Hinzufügen von Mip-Maps würde der Speicherbedarf der vollständig zugeordneten (ungünstigster Fall) Seitetabelle um etwa ein Drittel anwachsen, auf etwa 1,3 GB.
+Für die ungünstigste Größe der Seitentabelle für eine einzelne Fläche nehmen wir unter Anwendung der Ressourcengrenzen in Direct3D11 die Erstellung einer Streaming-Ressource mit einem Format von 128 Bit pro Element an (z. B. eine RGBA-Gleitkommazahl), also enthält eine 64 KB große Kachel nur 4096 Pixel. Die maximal unterstützte [**Texture2DArray**](https://msdn.microsoft.com/library/windows/desktop/ff471526)-Größe von 16384\*16384\*2048 (jedoch mit nur einer Mip-Map) würde etwa 1 GB Speicherplatz in der Seitentabelle erfordern, wenn vollständig gefüllt (ohne Mip-Maps), bei Verwendung von 64-Bit-Einträgen. Durch das Hinzufügen von Mip-Maps würde der Speicherbedarf der vollständig zugeordneten (ungünstigster Fall) Seitetabelle um etwa ein Drittel anwachsen, auf etwa 1,3 GB.
 
 Dieser Fall würde einen Zugriff auf etwa 10,6 Terabyte adressierbaren Speicher erlauben. Möglicherweise gibt es jedoch eine Grenze für die Menge an adressierbarem Speicher, wodurch sich diese Mengen verringern würden, vielleicht auf einen Wert im Terabytebereich.
 
@@ -63,7 +59,7 @@ Der anfängliche Inhalt der Seitentabelle ist **NULL** für alle Einträge. Anwe
 <tbody>
 <tr class="odd">
 <td align="left"><p>[Erstellung eines Kachelpools](tile-pool-creation.md)</p></td>
-<td align="left"><p>Anwendungen können einen oder mehrere Kachelpools pro Direct3D-Gerät erstellen. Die Gesamtgröße jedes Kachelpools ist auf Direct3D 11 Ressourcengröße beschränkt, die ungefähr 1/4 GPU-Arbeitsspeicher beträgt.</p></td>
+<td align="left"><p>Anwendungen können einen oder mehrere Kachelpools pro Direct3D-Gerät erstellen. Die Gesamtgröße jedes Kachelpools ist auf Direct3D11 Ressourcengröße beschränkt, die ungefähr 1/4 GPU-Arbeitsspeicher beträgt.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[Ändern der Größe des Kachelpools](tile-pool-resizing.md)</p></td>
@@ -86,7 +82,6 @@ Der anfängliche Inhalt der Seitentabelle ist **NULL** für alle Einträge. Anwe
  
 
  
-
 
 
 

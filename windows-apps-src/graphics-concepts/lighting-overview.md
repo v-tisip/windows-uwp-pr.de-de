@@ -1,5 +1,5 @@
 ---
-title: "Beleuchtung – Übersicht"
+title: "Beleuchtung– Übersicht"
 description: "Wenn Sie Direct3D-Beleuchtung verwenden, erlauben Sie es Direct3D, die Details der Beleuchtung für Sie zu übernehmen. Fortgeschrittene Benutzer können die Beleuchtung bei Bedarf selbst ausführen."
 ms.assetid: FCBF6A92-4EAC-4CCC-A76C-79985AF348AE
 author: PeterTurcan
@@ -8,15 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: cb5391dcd210b28b2971d39cfe8c9f2964889839
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 7f4ca6fdbd93d42dbefd955f31bd514b93886d03
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="lighting-overview"></a>Beleuchtung – Übersicht
+# <a name="lighting-overview"></a>Beleuchtung– Übersicht
 
 Wenn Sie Direct3D-Beleuchtung verwenden, erlauben Sie Direct3D, die Details der Beleuchtung für Sie zu übernehmen. Fortgeschrittene Benutzer können die Beleuchtung bei Bedarf selbst ausführen.
 
@@ -35,7 +32,7 @@ Beleuchtung ist zum Rendern einer Szene nicht erforderlich, allerdings sind Deta
 
 Obwohl direktes und Umgebungslicht die Objekte einer Szene beleuchten, sind sie unabhängig voneinander; sie haben äußerst unterschiedliche Effekte und erfordern eine vollkommen unterschiedliche Handhabung.
 
-*Direktes Licht* trifft direkt auf das Objekt. Direktes Licht hat immer eine Richtung und eine Farbe, und es ist ein bestimmender Faktor für Schattierungsalgorithmen, wie z. B. die Gouraud-Schattierung. Unterschiedliche Lichtquellen geben direktes Licht auf unterschiedliche Weise ab, wodurch spezielle Dämpfungseffekte entstehen.
+*Direktes Licht* trifft direkt auf das Objekt. Direktes Licht hat immer eine Richtung und eine Farbe, und es ist ein bestimmender Faktor für Schattierungsalgorithmen, wie z.B. die Gouraud-Schattierung. Unterschiedliche Lichtquellen geben direktes Licht auf unterschiedliche Weise ab, wodurch spezielle Dämpfungseffekte entstehen.
 
 *Umgebungslicht* ist praktisch überall in einer Szene zu finden. Umgebungslicht ist ein allgemeines Lichtniveau, das unabhängig von Objekten und deren Position in der Szene eine gesamte Szene ausfüllt. Umgebungslicht hat keine Position oder Richtung, sondern nur Farbe und Intensität. Jede Lichtquelle verstärkt das Umgebungslicht in einer Szene.
 
@@ -67,7 +64,7 @@ Direct3D beschreibt Farbe mittels der vier Komponenten (Rot, Grün, Blau und Alp
 
 Farbwerte für Lichtquellen bezeichnen die Menge einer bestimmten, von der Quelle abgegebenen Lichtkomponente. Da Lichter keine Alpha-Komponente verwenden, sind nur die roten, grünen und blauen-Komponenten einer Farbe relevant. Sie können sich die drei Komponenten als die rote, grüne und blaue Linse eines Videoprojektors vorstellen. Jede Linse kann ausgeschaltet sein (Wert von 0,0 in dem entsprechenden Element), sie kann so hell wie möglich eingestellt sein (Wert von 1,0), oder sie kann auf einen Wert dazwischen eingestellt sein.
 
-Die durch die Linsen kommenden Farben werden zur endgültigen Farbe des Lichts kombiniert. Eine Kombination aus z. B. R(1,0), G(1,0) und B(1,0) erzeugt weißes Licht, und die Kombination R(0,0), G(0,0) und B(0,0) erzeugt gar kein Licht. Sie können ein Licht mit nur einer Komponente erzeugen, wodurch rein rotes, grünes oder blaues Licht entsteht, oder Kombinationen für das Licht verwenden, um Farben wie Gelb oder Violett zu erzeugen. Sie können sogar negative Werte für die Farbkomponenten einstellen, um "dunkles Licht" zu erzeugen, das Licht aus einer Szene entfernt. Sie können die Komponenten auch auf einen Wert festlegen, der größer als 1,0 ist, um äußerst helles Licht zu erzeugen.
+Die durch die Linsen kommenden Farben werden zur endgültigen Farbe des Lichts kombiniert. Eine Kombination aus z.B. R(1,0), G(1,0) und B(1,0) erzeugt weißes Licht, und die Kombination R(0,0), G(0,0) und B(0,0) erzeugt gar kein Licht. Sie können ein Licht mit nur einer Komponente erzeugen, wodurch rein rotes, grünes oder blaues Licht entsteht, oder Kombinationen für das Licht verwenden, um Farben wie Gelb oder Violett zu erzeugen. Sie können sogar negative Werte für die Farbkomponenten einstellen, um "dunkles Licht" zu erzeugen, das Licht aus einer Szene entfernt. Sie können die Komponenten auch auf einen Wert festlegen, der größer als 1,0 ist, um äußerst helles Licht zu erzeugen.
 
 Bei Materialien bezeichnen Farbwerte allerdings, wie viel von einer Lichtkomponente von einer gerenderten Oberfläche aus diesem Material reflektiert wird. Ein Material mit den Farbkomponenten R(1,0), G(1,0), B(1,0) und A(1,0) reflektiert alles Licht, das auf dieses Material trifft. Entsprechend reflektiert ein Material mit R(0,0), G(1,0), B(0,0) und A(1,0) sämtliches grünes Licht, das auf dieses Material trifft. Materialien müssen mehrere Reflexionswerte besitzen, um verschiedene Effekttypen zu erzeugen.
 
@@ -81,7 +78,6 @@ Siehe [Lichttypen](light-types.md) und [Lichteigenschaften](light-properties.md)
  
 
  
-
 
 
 

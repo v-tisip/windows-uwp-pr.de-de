@@ -3,23 +3,21 @@ author: mcleanbyron
 Description: "Sie können konsumierbare In-App-Produkte – Artikel, die gekauft, verwendet und wieder gekauft werden können – über die Store-Handelsplattform anbieten, um Ihren Kunden eine stabile und zuverlässige Kaufumgebung bereitzustellen."
 title: "Unterstützen von Endverbraucher-Add-On-Käufen"
 ms.assetid: F79EE369-ACFC-4156-AF6A-72D1C7D3BDA4
-keywords: "uwp, verbrauchbar, add-ons, in-app-käufe, IAPs Windows.ApplicationModel.Store"
+keywords: "UWP, konsumierbar, Add-Ons, In-App-Käufe, IAPs Windows.ApplicationModel.Store"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 7395cf28f96b2f7aa9bc6a1d4c461385d50fcbf6
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e2ecaf364c581e82406c76831dd3e33c82594601
+ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
+translationtype: HT
 ---
+# <a name="enable-consumable-in-app-product-purchases"></a>Unterstützen von Käufen konsumierbarer In-App-Produkte
 
-# <a name="enable-consumable-in-app-product-purchases"></a>Unterstützen von Endverbraucher-Add-On-Käufen
 
-
->**Hinweis**&nbsp;&nbsp;In diesem Artikel wird die Verwendung von Mitgliedern des [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)-Namespace erläutert. Wenn Ihre App für Windows 10, Version 1607 oder höher, vorgesehen ist, empfehlen wir die Verwendung von Mitgliedern des [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace zum Verwalten von Add-Ons (auch als In-App-Produkte oder IAPs bezeichnet) anstelle des **Windows.ApplicationModel.Store**-Namespace. Weitere Informationen finden Sie unter [In-App-Käufe und Testversionen](in-app-purchases-and-trials.md).
+> [!NOTE]
+> In diesem Artikel wird veranschaulicht, wie Mitglieder des [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)-Namespace verwendet werden. Wenn Ihre App für Windows10, Version 1607 oder höher, vorgesehen ist, empfehlen wir die Verwendung von Mitgliedern des [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace zum Verwalten von Add-Ons (auch als In-App-Produkte oder IAPs bezeichnet) anstelle des **Windows.ApplicationModel.Store**-Namespace. Weitere Informationen finden Sie unter [In-App-Käufe und Testversionen](in-app-purchases-and-trials.md).
 
 Sie können In-App-Käufe von konsumierbaren Produkten – Artikel, die gekauft, verwendet und wieder gekauft werden können – über die Store-Handelsplattform anbieten, um den Kunden beim Kauf Stabilität und Zuverlässigkeit zu bieten. Dies ist besonders nützlich für Dinge wie spielinterne Währungen (Gold, Münzen usw.), die gekauft und dann zum Erwerben bestimmter Power-Ups verwendet werden können.
 
@@ -42,7 +40,8 @@ Im nächsten Beispiel wird eine In-App-Kaufanforderung für ein Consumable gezei
 
 Wenn Sie dem Kunden Zugriff auf das konsumierbare In-App-Produkt gewähren, müssen Sie dokumentieren, für welches Produkt der Kauf erfüllt wird (*productId*) und mit welcher Transaktion diese Erfüllung verbunden ist (*transactionId*).
 
->**Wichtig**&nbsp;&nbsp;Ihre App ist verantwortlich dafür, dass der Store ordnungsgemäß von der Erfüllung in Kenntnis gesetzt wird. Dieser Schritt ist die Grundlage dafür, dass der Kauf von den Kunden als fair und zuverlässig wahrgenommen wird.
+> [!IMPORTANT]
+> Ihre App ist verantwortlich dafür, dass der Store ordnungsgemäß von der Erfüllung in Kenntnis gesetzt wird. Dieser Schritt ist die Grundlage dafür, dass der Kauf von den Kunden als fair und zuverlässig wahrgenommen wird.
 
 Im folgenden Beispiel wird die Verwendung von [PurchaseResults](https://msdn.microsoft.com/library/windows/apps/dn263392)-Eigenschaften aus dem [RequestProductPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/dn263381)-Aufruf im vorangehenden Schritt zum Identifizieren des Produktkaufs gezeigt, der erfüllt werden muss. Es wird eine Sammlung verwendet, um die Produktinformationen an einem Ort zu speichern, auf den später verwiesen werden kann, um zu bestätigen, dass die lokale Erfüllung erfolgreich war.
 
@@ -51,7 +50,8 @@ Im folgenden Beispiel wird die Verwendung von [PurchaseResults](https://msdn.mic
 
 Im folgenden Beispiel wird die Verwendung des Arrays aus dem vorhergehenden Beispiel gezeigt, um auf Produkt-ID/Transaktions-ID-Paare zuzugreifen, die später beim Melden der Erfüllung an den Store verwendet werden.
 
->**Wichtig**&nbsp;&nbsp;Welche Methode Ihre App auch immer verwendet, um die Erfüllung nachzuverfolgen und zu bestätigen – die App muss eine angemessene Sorgfalt nachweisen, um sicherzustellen, dass Ihren Kunden keine Produkte in Rechnung gestellt werden, die sie nicht erhalten haben.
+> [!IMPORTANT]
+> Ganz gleich, welche Methode Ihre App verwendet, um die Erfüllung nachzuverfolgen und zu bestätigen – die App muss gebührende Sorgfalt demonstrieren, um sicherzustellen, dass Ihren Kunden keine Produkte in Rechnung gestellt werden, die sie nicht erhalten haben.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[EnableConsumablePurchases](./code/InAppPurchasesAndLicenses/cs/EnableConsumablePurchases.cs#IsLocallyFulfilled)]
@@ -60,7 +60,8 @@ Im folgenden Beispiel wird die Verwendung des Arrays aus dem vorhergehenden Beis
 
 Nachdem die lokale Erfüllung abgeschlossen wurde, muss Ihre App einen [ReportConsumableFulfillmentAsync](https://msdn.microsoft.com/library/windows/apps/dn263380)-Aufruf ausführen, der die *productId* und die Transaktion des Produktkaufs enthält.
 
->**Wichtig**&nbsp;&nbsp;Wenn erfüllte Käufe konsumierbarer In-App-Produkte nicht an den Store gemeldet werden, kann der Benutzer das Produkt erst dann erneut kaufen, wenn die Erfüllung des vorangehenden Kaufs gemeldet wird.
+> [!IMPORTANT]
+> Wenn erfüllte Käufe konsumierbarer In-App-Produkte nicht an den Store gemeldet werden, kann der Benutzer das Produkt erst dann erneut kaufen, wenn die Erfüllung des vorangehenden Kaufs gemeldet wird.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[EnableConsumablePurchases](./code/InAppPurchasesAndLicenses/cs/EnableConsumablePurchases.cs#ReportFulfillment)]
@@ -82,4 +83,3 @@ Im folgenden Beispiel wird gezeigt, auf welche Weise [GetUnfulfilledConsumablesA
  
 
  
-

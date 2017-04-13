@@ -11,14 +11,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ec6e7879faf3c33edc97b26b2d0721808a02dfdc
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: a9e7cda7794b3463ffa567bcf36ebec2d2d02687
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 #  <a name="command-design-basics-for-uwp-apps"></a>Befehlsdesigngrundlagen für UWP-Apps
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
@@ -52,14 +49,14 @@ Eine vollständige Liste finden Sie unter [Steuerelemente und UI-Elemente](https
 ##  <a name="place-commands-on-the-right-surface"></a> Platzieren von Befehlen auf der passenden Oberfläche
 
 
-Befehlselemente können in Ihrer App auf verschiedenen Oberflächen platziert werden. Hierzu zählen etwa die App-Canvas (Inhaltsbereich der App) sowie spezielle Befehlselemente (z. B. Befehlsleisten, Menüs, Dialogfelder und Flyouts), die als Befehlscontainer fungieren können. Im Anschluss finden Sie einige allgemeine Empfehlungen für die Platzierung von Befehlen:
+Befehlselemente können in Ihrer App auf verschiedenen Oberflächen platziert werden. Hierzu zählen etwa die App-Canvas (Inhaltsbereich der App) sowie spezielle Befehlselemente (z.B. Befehlsleisten, Menüs, Dialogfelder und Flyouts), die als Befehlscontainer fungieren können. Im Anschluss finden Sie einige allgemeine Empfehlungen für die Platzierung von Befehlen:
 
--   Ermöglichen Sie es den Benutzern nach Möglichkeit, Inhalte direkt auf der App-Canvas manipulieren, anstatt Befehle für die Interaktion mit dem Inhalt hinzuzufügen. Gestalten Sie also beispielsweise die Reise-App so, dass die Benutzer ihre Reiseroute verändern können, indem sie Aktivitäten in einer Liste auf der Canvas per Drag & Drop verschieben, anstatt die Aktivität auswählen und sie mithilfe entsprechender Befehlsschaltflächen nach oben/unten verschieben zu müssen.
+-   Ermöglichen Sie es den Benutzern nach Möglichkeit, Inhalte direkt auf der App-Canvas manipulieren, anstatt Befehle für die Interaktion mit dem Inhalt hinzuzufügen. Gestalten Sie also beispielsweise die Reise-App so, dass die Benutzer ihre Reiseroute verändern können, indem sie Aktivitäten in einer Liste auf der Canvas per Drag&Drop verschieben, anstatt die Aktivität auswählen und sie mithilfe entsprechender Befehlsschaltflächen nach oben/unten verschieben zu müssen.
 -   Wenn Benutzer Inhalte nicht direkt bearbeiten können, platzieren Sie die Befehle auf einer der folgenden Benutzeroberflächen:
 
     -   Auf der [Befehlsleiste](https://msdn.microsoft.com/library/windows/apps/hh465302): Platzieren Sie den Großteil der Befehle auf der Befehlsleiste. Dies kommt der Übersichtlichkeit zugute und erleichtert den Zugriff.
     -   Auf der App-Canvas: Befindet sich der Benutzer auf einer Seite oder in einer Ansicht mit nur einem Zweck, können Sie Befehle für diesen Zweck direkt auf der Canvas bereitstellen. Es sollte nur sehr wenige dieser Befehle geben.
-    -   In einem [Kontextmenü](https://msdn.microsoft.com/library/windows/apps/hh465308): Sie können Kontextmenüs für Zwischenablageaktionen (z. B. Ausschneiden, Kopieren und Einfügen) oder für Befehle verwenden, die auf Inhalte angewendet werden, die nicht ausgewählt werden können (z. B. Hinzufügen einer Stecknadel zu einem Standort auf einer Karte).
+    -   In einem [Kontextmenü](https://msdn.microsoft.com/library/windows/apps/hh465308): Sie können Kontextmenüs für Zwischenablageaktionen (z.B. Ausschneiden, Kopieren und Einfügen) oder für Befehle verwenden, die auf Inhalte angewendet werden, die nicht ausgewählt werden können (z.B. Hinzufügen einer Stecknadel zu einem Standort auf einer Karte).
 
 Die folgende Liste enthält die unter Windows verfügbaren Befehlsoberflächen sowie Empfehlungen für deren Verwendung:
 
@@ -75,7 +72,7 @@ Die folgende Liste enthält die unter Windows verfügbaren Befehlsoberflächen s
 <p><img src="images/content-area.png" alt="The content area of an app" /></p></td>
 
 <td align="left" style="vertical-align: top;">Wichtige oder häufig benötigte Befehle für die Hauptszenarien der App sollten auf der Canvas (dem Inhaltsbereich Ihrer App) platziert werden. Da Sie Befehle in der Nähe von (oder auf) Objekten platzieren können, die durch den Befehl beeinflusst werden, sind auf der Canvas platzierte Befehle besonders komfortabel und intuitiv.
-<p>Wählen Sie die Befehle für die Canvas aber mit Bedacht. Wenn Sie zu viele Befehle auf der App-Canvas positionieren, geht wertvoller Platz und die Übersichtlichkeit für den Benutzer verloren. Selten verwendete Befehle sind unter Umständen auf einer anderen Befehlsoberfläche besser aufgehoben – beispielsweise in einem Menü oder auf der Befehlsleiste im Bereich &quot;Mehr&quot;.</p></td>
+<p>Wählen Sie die Befehle für die Canvas aber mit Bedacht. Wenn Sie zu viele Befehle auf der App-Canvas positionieren, geht wertvoller Platz und die Übersichtlichkeit für den Benutzer verloren. Selten verwendete Befehle sind unter Umständen auf einer anderen Befehlsoberfläche besser aufgehoben – beispielsweise in einem Menü oder auf der Befehlsleiste im Bereich „Mehr“.</p></td>
 </tr>
 
 <tr class="even">
@@ -94,7 +91,7 @@ Die folgende Liste enthält die unter Windows verfügbaren Befehlsoberflächen s
 <p>Kontextmenüs eignen sich für Verknüpfungen mit häufig verwendeten Aktionen und ermöglichen den Zugriff auf sekundäre Befehle, die nur in bestimmten Kontexten relevant sind.</p>
 <p>Kontextmenüs sind für die folgenden Arten von Befehlen und Befehlsszenarien gedacht:</p>
 <ul>
-<li>Kontextbezogene Aktionen beim Auswählen von Text, z. B. Kopieren, Ausschneiden, Einfügen, Rechtschreibprüfung usw.</li>
+<li>Kontextbezogene Aktionen beim Auswählen von Text, z.B. Kopieren, Ausschneiden, Einfügen, Rechtschreibprüfung usw.</li>
 <li>Befehle für ein Objekt, das Gegenstand einer Aktion sein soll, aber weder ausgewählt noch anderweitig angegeben werden kann.</li>
 <li>Anzeigen von Befehlen in der Zwischenablage</li>
 <li>Benutzerdefinierte Befehle</li>
@@ -160,7 +157,6 @@ Ausführliche Informationen zum Optimieren der Benutzerfreundlichkeit bei einem 
  
 
  
-
 
 
 

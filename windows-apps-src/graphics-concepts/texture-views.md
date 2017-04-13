@@ -2,21 +2,17 @@
 title: Texturansichten
 description: "Auf Texturressourcen wird in Direct3D mit einer Ansicht zugegriffen, bei der es sich um einen Mechanismus für die Hardware-Interpretation einer Ressource im Speicher handelt."
 ms.assetid: 18DABFCE-8A36-4C4E-B08E-10428B05D701
-keywords:
-- Texturansichten
+keywords: Texturansichten
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: bd5f49364f40876747e34aaade3ca119230407aa
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 70b7b5da92f5be038fd1eb16ca27875704410449
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="texture-views"></a>Texturansichten
 
 
@@ -24,7 +20,7 @@ Auf Texturressourcen wird in Direct3D mit einer Ansicht zugegriffen, bei der es 
 
 Eine Ansicht unterstützt das Konzept einer typenlosen Ressource. Eine typenlose Ressource ist eine Ressource mit einer bestimmten Größe, die aber nicht mit einem bestimmten Datentyp erstellt wurde. Die Daten werden dynamisch interpretiert, wenn sie an die Pipeline gebunden sind.
 
-Die folgende Abbildung zeigt ein Beispiel für die Bindung eines 2D-Textur-Arrays mit 6 Texturen als Shader-Ressource durch die Erstellung einer Shader-Ressourcenansicht dafür. Die Ressource wird dann als Array von Texturen behandelt. (Hinweis: Eine Unterressource kann nichtgleichzeitig als Eingabe und Ausgabe an die Pipeline gebunden werden.)
+Die folgende Abbildungzeigt ein Beispiel für die Bindung eines 2D-Textur-Arrays mit 6 Texturen als Shader-Ressource durch die Erstellung einer Shader-Ressourcenansicht dafür. Die Ressource wird dann als Array von Texturen behandelt. (Hinweis: Eine Unterressource kann nichtgleichzeitig als Eingabe und Ausgabe an die Pipeline gebunden werden.)
 
 ![Illustration eines Textur-Arrays mit sechs Texturen](images/d3d10-cube-texture-faces.png)
 
@@ -42,7 +38,6 @@ Erstellen Sie ein Objekt für ein Renderziel durch Aufrufen von CreateRenderTarg
  
 
  
-
 
 
 

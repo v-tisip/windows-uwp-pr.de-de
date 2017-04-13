@@ -10,12 +10,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: aa53060a281a452d47461602866d1b67edc161aa
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 33a8b62a378e4a9abe20be04a49c94d886144cc5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="radio-buttons"></a>Optionsfelder
 
@@ -174,7 +172,7 @@ Ein Optionsfeld hat zwei Zustände: *aktiviert* und *deaktiviert*. Wenn ein Opti
 -   Verwenden Sie die standardmäßige Schriftart, es sei denn, Sie müssen gemäß Ihren Markenrichtlinien eine andere verwenden.
 -   Schließen Sie das Optionsfeld in ein Bezeichnungselement ein, sodass das Optionsfeld durch Tippen auf die Bezeichnung ausgewählt wird.
 -   Platzieren Sie den Bezeichnungstext hinter dem Optionsfeldsteuerelement und nicht davor oder darüber.
--   Ziehen Sie in Erwägung, Ihre Schaltflächen anzupassen. Standardmäßig besteht ein Optionsfeld aus zwei konzentrischen Kreisen – der innere ist ausgefüllt (und wird gezeigt, wenn das Optionsfeld aktiviert wird), und der äußere ist gestrichelt – und einigem Textinhalt. Wir ermutigen Sie jedoch, kreativ zu sein. Benutzer mögen es, direkt mit dem Inhalt einer App zu interagieren. Daher können Sie auswählen, den tatsächlichen Inhalt als Angebot anzuzeigen, unabhängig davon, ob er mit Grafiken oder als unauffälliger Textumschalter präsentiert wird.
+-   Ziehen Sie in Erwägung, Ihre Schaltflächen anzupassen. Standardmäßig besteht ein Optionsfeld aus zwei konzentrischen Kreisen– der innere ist ausgefüllt (und wird gezeigt, wenn das Optionsfeld aktiviert wird), und der äußere ist gestrichelt– und einigem Textinhalt. Wir ermutigen Sie jedoch, kreativ zu sein. Benutzer mögen es, direkt mit dem Inhalt einer App zu interagieren. Daher können Sie auswählen, den tatsächlichen Inhalt als Angebot anzuzeigen, unabhängig davon, ob er mit Grafiken oder als unauffälliger Textumschalter präsentiert wird.
 -   Eine Optionsfeldgruppe sollte nicht mehr als acht Optionen beinhalten. Wenn Sie mehr Optionen verwenden müssen, verwenden Sie stattdessen eine [Dropdownliste](lists.md), ein [Listenfeld](lists.md)oder eine [Listenansicht](lists.md).
 -   Zwei Optionsfeldgruppen sollten nicht direkt nebeneinander platziert werden. Wenn sich zwei Optionsfeldgruppen direkt nebeneinander befinden, ist es schwierig, festzustellen, welche Schaltflächen zu welcher Gruppe gehören. Verwenden Sie Gruppenbeschriftungen, um sie zu trennen.
 
@@ -197,4 +195,3 @@ Diese Abbildung zeigt die richtige Vorgehensweise zum Platzieren und Anordnen vo
 
 **Für Entwickler (XAML)**
 - [**Windows.UI.Xaml.Controls RadioButton-Klasse**](https://msdn.microsoft.com/library/windows/apps/br227544)
-

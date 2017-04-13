@@ -2,22 +2,20 @@
 author: Jwmsft
 ms.assetid: 54CC0BD4-1961-44D7-AB40-6E8B58E42D65
 title: Zeichnen von Formen
-description: "Erfahren Sie, wie Sie Formen wie Ellipsen, Rechtecke, Polygone und Pfade zeichnen. Mithilfe der Klasse Path visualisieren Sie eine komplexe, vektorbasierte Zeichnungssprache in einer XAML-Benutzeroberfläche. Beispielsweise können Sie auf diese Weise Bézierkurven zeichnen."
+description: "Erfahren Sie, wie Sie Formen wie Ellipsen, Rechtecke, Polygone und Pfade zeichnen. Mithilfe der Klasse Path visualisieren Sie eine ziemlich komplexe vektorbasierte Zeichnungssprache in einer XAML-Benutzeroberfläche. Beispielsweise können Sie auf diese Weise Bézierkurven zeichnen."
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ed405a14f1059f374432a587a24611f16d042a9c
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 193e9cbbcfae3d01b6a6aecd78993947f2098184
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="draw-shapes"></a>Zeichnen von Formen
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **Wichtige APIs**
@@ -67,7 +65,7 @@ In diesem Fall ist die [**Ellipse**](https://msdn.microsoft.com/library/windows/
 
 Wenn eine [**Ellipse**](https://msdn.microsoft.com/library/windows/apps/BR243343) in einem UI-Layout positioniert wird, wird davon ausgegangen, dass ihre Größe einem Rechteck dieser [**Width**](https://msdn.microsoft.com/library/windows/apps/BR208751) und [**Height**](https://msdn.microsoft.com/library/windows/apps/BR208718) entspricht. Der Bereich außerhalb des Rands weist kein Rendering auf, gehört jedoch weiterhin zur Größe des Layoutschlitzes.
 
-Eine Gruppe von 6 [**Ellipse**](https://msdn.microsoft.com/library/windows/apps/BR243343)-Elementen ist Teil der Steuerelementvorlage für das [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/BR227538)-Steuerelement. 2 konzentrische **Ellipse**-Elemente sind Teil eines [**RadioButton**](https://msdn.microsoft.com/library/windows/apps/BR227544).
+Eine Gruppe von 6 [**Ellipse**](https://msdn.microsoft.com/library/windows/apps/BR243343)-Elementen ist Teil der Steuerelementvorlage für das [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/BR227538)-Steuerelement. 2konzentrische **Ellipse**-Elemente sind Teil eines [**RadioButton**](https://msdn.microsoft.com/library/windows/apps/BR227544).
 
 ## <a name="span-idrectanglespanspan-idrectanglespanspan-idrectanglespanrectangle"></a><span id="Rectangle"></span><span id="rectangle"></span><span id="RECTANGLE"></span>Rectangle
 
@@ -75,7 +73,7 @@ Ein [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371) is
 
 Sie können die Ecken eines [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371) abrunden. Um abgerundete Ecken zu erstellen, geben Sie einen Wert für die Eigenschaften [**RadiusX**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.rectangle.radiusx.aspx) und [**RadiusY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.rectangle.radiusy) an. Diese Eigenschaften geben die x-Achse und die y-Achse einer Ellipse an, die die Kurven der Ecken angibt. Der zulässige Maximalwert für **RadiusX** ist [**Width**](https://msdn.microsoft.com/library/windows/apps/BR208751) geteilt durch zwei. Der zulässige Maximalwert für **RadiusY** ist [**Height**](https://msdn.microsoft.com/library/windows/apps/BR208718) geteilt durch zwei.
 
-Im nächsten Beispiel wird ein [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371) mit einer [**Width**](https://msdn.microsoft.com/library/windows/apps/BR208751) von 200 und einer [**Height**](https://msdn.microsoft.com/library/windows/apps/BR208718) von 100 erstellt. Es verwendet den Wert [**Blue**](https://msdn.microsoft.com/library/windows/apps/Hh747837) von [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) als [**Fill**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.fill) und den Wert [**Black**](https://msdn.microsoft.com/library/windows/apps/Hh747833) von **SolidColorBrush** als [**Stroke**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.stroke). Die [**StrokeThickness**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.strokethickness) wird als 3 festgelegt. Die [**RadiusX**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.rectangle.radiusx.aspx)-Eigenschaft wird auf 50, und die [**RadiusY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.rectangle.radiusy)-Eigenschaft wird auf 10 festgelegt. Damit erhält das **Rectangle** abgerundete Ecken.
+Im nächsten Beispiel wird ein [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371) mit einer [**Width**](https://msdn.microsoft.com/library/windows/apps/BR208751) von 200 und einer [**Height**](https://msdn.microsoft.com/library/windows/apps/BR208718) von100 erstellt. Es verwendet den Wert [**Blue**](https://msdn.microsoft.com/library/windows/apps/Hh747837) von [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) als [**Fill**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.fill) und den Wert [**Black**](https://msdn.microsoft.com/library/windows/apps/Hh747833) von **SolidColorBrush** als [**Stroke**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.stroke). Die [**StrokeThickness**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.strokethickness) wird als 3 festgelegt. Die [**RadiusX**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.rectangle.radiusx.aspx)-Eigenschaft wird auf 50, und die [**RadiusY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.rectangle.radiusy)-Eigenschaft wird auf 10 festgelegt. Damit erhält das **Rectangle** abgerundete Ecken.
 
 ```xml
 <Rectangle Fill="Blue"
@@ -105,7 +103,7 @@ Hier die gerenderte [**Rectangle**](https://msdn.microsoft.com/library/windows/a
 
 ![Ein gerendertes Rechteck](images/shapes-rectangle.jpg)
 
-**Tipp**  In einigen Szenarien für UI-Definitionen ist die Verwendung eines [**Border**](https://msdn.microsoft.com/library/windows/apps/BR209250)-Elements anstelle eines [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371)-Elements möglicherweise angemessener. Wenn Sie eine rechteckige Form um anderen Inhalt zeichnen möchten, ist **Border** u. U. besser geeignet. Rahmen können untergeordnete Elemente enthalten, und ihre Größe passt sich automatisch an den Inhalt an. Dagegen sind die Breite und Höhe von **Rectangle**-Elementen auf feste Werte festgelegt. Die Ecken von **Border** können durch Festlegen der [**CornerRadius**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.border.cornerradius)-Eigenschaft auch abgerundet werden.
+**Tipp**  In einigen Szenarien für UI-Definitionen ist die Verwendung eines [**Border**](https://msdn.microsoft.com/library/windows/apps/BR209250)-Elements anstelle eines [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371)-Elements möglicherweise angemessener. Wenn Sie eine rechteckige Form um anderen Inhalt zeichnen möchten, ist **Border** u.U. besser geeignet. Rahmen können untergeordnete Elemente enthalten, und ihre Größe passt sich automatisch an den Inhalt an. Dagegen sind die Breite und Höhe von **Rectangle**-Elementen auf feste Werte festgelegt. Die Ecken von **Border** können durch Festlegen der [**CornerRadius**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.border.cornerradius)-Eigenschaft auch abgerundet werden.
 
  
 
@@ -174,7 +172,7 @@ Wenn Sie die [**Fill**](https://msdn.microsoft.com/library/windows/apps/windows.
 
 Wie bei einem [**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR243359) definiert die [**Points**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.polyline.points.aspx)-Eigenschaft die Sammlung von Punkten, die zusammen die Grenze ergeben. In XAML definieren Sie die Punkte mit einer durch Trennzeichen getrennten Liste. Im CodeBehind verwenden Sie eine [**PointCollection**](https://msdn.microsoft.com/library/windows/apps/BR210220), um die Punkte zu definieren, und fügen der Sammlung jeden einzelnen Punkt als eine [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870)-Struktur hinzu.
 
-Im nächsten Beispiel wird eine [**Polyline**](https://msdn.microsoft.com/library/windows/apps/BR243365) mit vier Punkten bei `(10,200)`, `(60,140)`, `(130,140)` und `(180,200)` erstellt. Es ist ein [**Stroke**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.stroke) definiert, jedoch keine [**Fill**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.fill).
+Im nächsten Beispiel wird eine [**Polyline**](https://msdn.microsoft.com/library/windows/apps/BR243365) mit vierPunkten bei `(10,200)`, `(60,140)`, `(130,140)` und `(180,200)` erstellt. Es ist ein [**Stroke**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.stroke) definiert, jedoch keine [**Fill**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.fill).
 
 ```xml
 <Polyline Stroke="Black"
@@ -315,7 +313,6 @@ Durch die Verwendung von [**PathGeometry**](https://msdn.microsoft.com/library/w
  
 
  
-
 
 
 

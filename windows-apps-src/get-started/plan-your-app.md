@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 21e08e22e6c6ebada4445a05f32d2bd37244758f
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 #  <a name="plan-your-universal-windows-platform-uwp-app"></a>Planen einer App für die Universelle Windows-Plattform (UWP)
 
 Die Microsoft-Designteams unterteilen den Prozess der App-Erstellung in fünf einzelne Phasen - Konzept, Struktur, Dynamik, Darstellung und Prototyp. Wir möchten Sie dazu ermutigen, einen ähnlichen Prozess anzuwenden, um der Welt neue und ansprechende Erfahrungen zu vermitteln.
@@ -166,7 +163,7 @@ Betrachten Sie noch einmal das Beispiel der Reise-App. Damit sich die App besond
 -   Teilen: Benutzer teilen anstehende Reisen und ihre Reiserouten – und damit ihre Vorfreude auf die Reise – mit Freunden und Familie in zahlreichen sozialen Netzwerken.
 -   Suchen: Benutzer suchen und finden Aktivitäten oder Reiseziele in geteilten oder öffentlichen Reiserouten anderer Benutzer, die sie in ihre eigenen Reisen einbeziehen können.
 -   Benachrichtigungen: Benutzer werden benachrichtigt, wenn andere Reisende ihre Reiserouten aktualisieren.
--   Einstellungen: Benutzer konfigurieren die App wunschgemäß, z. B. für welche Reise Benachrichtigungen angezeigt werden sollen oder welche sozialen Gruppen die Reiserouten der Benutzer durchsuchen dürfen.
+-   Einstellungen: Benutzer konfigurieren die App wunschgemäß, z.B. für welche Reise Benachrichtigungen angezeigt werden sollen oder welche sozialen Gruppen die Reiserouten der Benutzer durchsuchen dürfen.
 -   Semantischer Zoom: Benutzer navigieren im Zeitplan ihrer Reise und vergrößern Bereiche, um ausführlichere Details der langen Liste mit geplanten Aktivitäten anzuzeigen.
 -   Benutzerkacheln: Benutzer wählen das Bild aus, das angezeigt werden soll, wenn sie ihre Reise mit Freunden teilen.
 
@@ -180,7 +177,7 @@ Hier geht es darum, die Grundlagen richtig festzulegen. Sie wissen nun, wodurch 
 
 **Wie sollten UI-Inhalte organisiert werden?**   Die meisten App-Inhalte können in Gruppen oder Hierarchien gegliedert werden. Das Element, das Sie als Gruppierung auf oberster Ebene des Inhalts auswählen, sollte mit den besonderen Stärken übereinstimmen.
 
-Im Beispiel der Reise-App stehen mehrere Methoden zum Gruppieren von Reiserouten zur Verfügung. Liegt der Fokus der App auf dem Entdecken interessanter Reiseziele, können Sie diese beispielsweise basierend auf dem jeweiligen Interessengebiet gruppieren, z. B. Abenteuer, Spaß in der Sonne oder romantische Ausflüge. Da der Fokus der App jedoch auf dem Planen von Reisen mit Freunden liegt, ist es sinnvoller, Reiserouten basierend auf sozialen Kreisen (z. B. Familie, Freunde oder Arbeit) zu gliedern.
+Im Beispiel der Reise-App stehen mehrere Methoden zum Gruppieren von Reiserouten zur Verfügung. Liegt der Fokus der App auf dem Entdecken interessanter Reiseziele, können Sie diese beispielsweise basierend auf dem jeweiligen Interessengebiet gruppieren, z. B. Abenteuer, Spaß in der Sonne oder romantische Ausflüge. Da der Fokus der App jedoch auf dem Planen von Reisen mit Freunden liegt, ist es sinnvoller, Reiserouten basierend auf sozialen Kreisen (z.B. Familie, Freunde oder Arbeit) zu gliedern.
 
 Die Auswahl der Gliederung für Inhalte hilft Ihnen bei der Entscheidung, welche Seiten oder Anzeigen Ihre App benötigt. Weitere Informationen finden Sie in den UI-Grundlagen.
 
@@ -217,7 +214,7 @@ Ausführlichere Informationen zur Verwendung der unterschiedlichen Oberflächen 
 
     -   Auf der [Befehlsleiste](https://msdn.microsoft.com/library/windows/apps/hh465302): Platzieren Sie die Mehrzahl der Befehle auf der Befehlsleiste. Diese bleibt in der Regel ausgeblendet, bis der Benutzer sie durch eine Tippbewegung einblendet.
     -   Auf der App-Canvas: Befindet sich der Benutzer auf einer Seite oder in einer Ansicht mit nur einem Zweck, können Sie Befehle für diesen Zweck direkt auf der Canvas bereitstellen. Es sollte nur sehr wenige dieser Befehle geben.
-    -   In einem [Kontextmenü](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/menus): Sie können Kontextmenüs für Zwischenablageaktionen (z. B. Ausschneiden, Kopieren und Einfügen) oder für Befehle verwenden, die auf Inhalte angewendet werden, die nicht ausgewählt werden können (z. B. Hinzufügen einer Stecknadel zu einem Standort auf einer Karte).
+    -   In einem [Kontextmenü](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/menus): Sie können Kontextmenüs für Zwischenablageaktionen (z.B. Ausschneiden, Kopieren und Einfügen) oder für Befehle verwenden, die auf Inhalte angewendet werden, die nicht ausgewählt werden können (z.B. Hinzufügen einer Stecknadel zu einem Standort auf einer Karte).
 
 **Entscheiden Sie, welches Layout Ihre App in den einzelnen Ansichten erhält.**  Entscheiden Sie, welches Layout Ihre App in den einzelnen Ansichten erhält. Windows unterstützt Hoch- und Querformatansichten sowie das Ändern der App-Größe auf eine beliebige Breite zwischen Vollbild und Mindestbreite. Ihre App soll in jeder Größe, auf jedem Bildschirm und in jeder Ausrichtung richtig angezeigt werden und funktionieren. Dazu müssen Sie das Layout der UI-Elements für unterschiedliche Größen und Ansichten planen. In diesem Fall passt sich die App-UI einfach an die Anforderungen und Einstellungen der Benutzer an.
 
@@ -242,4 +239,3 @@ Weitere Informationen zur Berücksichtigung unterschiedlicher Bildschirmgrößen
 Bevor Sie sich der Entwicklung der App widmen, sollten Sie das Design oder den Prototyp anhand von Richtlinien, Benutzereindrücken und Anforderungen überprüfen. Sie vermeiden dadurch möglicherweise eine spätere Überarbeitung. Für jedes Feature ist eine Reihe von Richtlinien für die Benutzerfreundlichkeit verfügbar, die Sie bei der optimalen Gestaltung Ihrer App unterstützen. Außerdem gilt es, eine Reihe von Store-Anforderungen zu erfüllen, um Apps im Windows Store veröffentlichen zu können. Sie können die App mithilfe des [Zertifizierungskits für Windows-Apps](https://developer.microsoft.com/windows/develop/app-certification-kit) auf die Einhaltung technischer Store-Anforderungen überprüfen. Außerdem können Sie mit den Leistungstools in Microsoft Visual Studio sicherstellen, dass die Benutzer in allen Szenarien von hoher Benutzerfreundlichkeit profitieren.
 
 Mithilfe der [detaillierten UX-Richtlinien für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/hh465424) behalten Sie die wichtigen Features der App im Blick. Analysieren Sie die Leistung der einzelnen Szenarien der App mit [Visual Studio-Leistungstools](https://msdn.microsoft.com/library/windows/apps/hh696636.aspx).
-

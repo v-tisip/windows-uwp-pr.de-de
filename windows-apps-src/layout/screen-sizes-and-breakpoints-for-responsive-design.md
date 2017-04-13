@@ -12,18 +12,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 7c992aa651069f6876aa920da88ada659480132e
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: cd6ba1378aeddb44aa66c53088f32286aff8d29f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 #  <a name="screen-sizes-and-break-points-for-responsive-design"></a>Bildschirmgrößen und Haltepunkte für reaktionsfähiges Design
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Die Anzahl der Geräteziele und Bildschirmgrößen bei Windows 10 ist zu groß, um alle bei der Optimierung der Benutzeroberfläche zu berücksichtigen. Stattdessen wird empfohlen, bei der Entwicklung einige wichtige Bildschirmbreiten (auch als „Haltepunkte“ bezeichnet) zu berücksichtigen: 360, 640, 1024 und 1366 epx.
+Die Anzahl der Geräteziele und Bildschirmgrößen bei Windows 10 ist zu groß, um alle beim Optimieren der Benutzeroberfläche zu bedenken. Stattdessen wird empfohlen, bei der Entwicklung einige wichtige Bildschirmbreiten (auch als „Haltepunkte“ bezeichnet) zu berücksichtigen: 360, 640, 1024 und 1366 epx.
 
 > [!TIP]
 > Bei der Entwicklung für bestimmte Haltepunkte sollten Sie den für Ihre App verfügbaren Bildschirmbereich (App-Fenster) berücksichtigen. Wenn die App im Vollbildmodus ausgeführt wird, hat das App-Fenster die gleiche Bildschirmgröße zur Verfügung, in anderen Fällen ist es jedoch kleiner.
@@ -107,4 +104,3 @@ In dieser Tabelle werden die verschiedenen Größenklassen beschrieben und allge
 
 Mit [**Continuum for Phones**](http://go.microsoft.com/fwlink/p/?LinkID=699431), einer neuen Funktion für kompatible Windows 10-Mobilgeräte, können Benutzer ihre Smartphones mit einem Bildschirm, einer Maus und einer Tastatur verbinden und damit ihr Gerät wie einen Laptop nutzen. Berücksichtigen Sie diese neue Funktion beim Entwerfen für bestimmte Haltepunkte – ein Mobiltelefon bleibt nicht immer in einer Klasse mit geringer Größe.
  
-

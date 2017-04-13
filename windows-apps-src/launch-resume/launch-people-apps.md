@@ -1,7 +1,7 @@
 ---
 author: TylerMSFT
 title: Starten der Kontakte-App
-description: "In diesem Thema wird das ms-people-URI-Schema beschrieben. Ihre App kann dieses URI-Schema verwenden, um die Kontakte-App für bestimmte Aktionen zu starten."
+description: "In diesem Thema wird das URI-Schema „ms-people“ beschrieben. Ihre App kann dieses URI-Schema verwenden, um die Kontakte-App für bestimmte Aktionen zu starten."
 ms.assetid: 1E604599-26EF-421C-932F-E9935CDB248E
 ms.author: twhitney
 ms.date: 02/08/2017
@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 25abea87eaf374a1a8b5432c522d51bd7bbc1c1e
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: f16ea404d4a458949fce7ae0ec8756aa3a17aa01
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="launch-the-people-app"></a>Starten der Kontakte-App
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 In diesem Thema wird das **ms-people:**-URI-Schema beschrieben. Ihre App kann dieses URI-Schema verwenden, um die Kontakte-App für bestimmte Aktionen zu starten.
@@ -213,4 +210,3 @@ In diesem Thema wird das **ms-people:**-URI-Schema beschrieben. Ihre App kann di
  
 
  
-

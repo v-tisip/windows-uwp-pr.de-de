@@ -2,27 +2,23 @@
 title: "Nicht mehr auffindbare Geräte"
 description: "Ein Direct3D-Gerät kann sich entweder im Zustand „betriebsbereit” oder im Zustand „nicht mehr auffindbar” befinden."
 ms.assetid: 1639CC02-8000-4208-AA95-91C1F0A3B08D
-keywords:
-- "Nicht mehr auffindbare Geräte"
+keywords: "Nicht mehr auffindbare Geräte"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c8f92ed1f8941147e3cb0f2555b01c26a708ed20
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 625fe26facb8903c36c4efbb38216005b0a4271b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="lost-devices"></a>Nicht mehr auffindbare Geräte
 
 
-Ein Direct3D-Gerät kann sich entweder im Zustand „betriebsbereit” oder im Zustand „nicht mehr auffindbar” befinden. Der *betriebsbereite* Zustand ist der Normalzustand des Geräts, in dem das Gerät ausgeführt wird und alles Rendering wie erwartet zeigt. Das Gerät nimmt eine Umstellung auf den Zustand *nicht mehr auffindbar* vor, wenn ein Ereignis wie z. B. der Verlust des Tastaturfokus in einer Vollbildanwendung das Rendering unmöglich macht. Der verlorene Zustand gekennzeichnet sich durch einen nicht angezeigten Ausfall aller Rendering-Vorgänge, was dazu führt, dass die Renderingmethoden möglicherweise Erfolgscodes zurückgeben, obwohl das Rendering fehlschlägt.
+Ein Direct3D-Gerät kann sich entweder im Zustand „betriebsbereit” oder im Zustand „nicht mehr auffindbar” befinden. Der *betriebsbereite* Zustand ist der Normalzustand des Geräts, in dem das Gerät ausgeführt wird und alles Rendering wie erwartet zeigt. Das Gerät nimmt eine Umstellung auf den Zustand *nicht mehr auffindbar* vor, wenn ein Ereignis wie z.B. der Verlust des Tastaturfokus in einer Vollbildanwendung das Rendering unmöglich macht. Der verlorene Zustand gekennzeichnet sich durch einen nicht angezeigten Ausfall aller Rendering-Vorgänge, was dazu führt, dass die Renderingmethoden möglicherweise Erfolgscodes zurückgeben, obwohl das Rendering fehlschlägt.
 
-Standardmäßig werden nicht alle Szenarien angegeben, durch die ein Gerät nicht mehr auffindbar sein kann. Einige typische Beispiele sind der Fokusverlust wenn z. B. der Benutzer ALT+TAB drückt oder wenn ein Systemdialogfeld initialisiert wird. Geräte können auch durch ein Energieverwaltungsereignis oder wenn eine andere Anwendung den Vollbildmodus startet nicht mehr auffindbar sein. Darüber hinaus versetzen Fehler beim Zurücksetzen eines Geräts das Gerät in den nicht mehr auffindbaren Zustand.
+Standardmäßig werden nicht alle Szenarien angegeben, durch die ein Gerät nicht mehr auffindbar sein kann. Einige typische Beispiele sind der Fokusverlust wenn z.B. der Benutzer ALT+TAB drückt oder wenn ein Systemdialogfeld initialisiert wird. Geräte können auch durch ein Energieverwaltungsereignis oder wenn eine andere Anwendung den Vollbildmodus startet nicht mehr auffindbar sein. Darüber hinaus versetzen Fehler beim Zurücksetzen eines Geräts das Gerät in den nicht mehr auffindbaren Zustand.
 
 Alle von [**IUnknown**](https://msdn.microsoft.com/library/windows/desktop/ms680509) abgeleiteten Methoden funktionieren garantiert, wenn ein Gerät nicht mehr auffindbar ist. Wenn ein Gerät nicht mehr auffindbar ist, bietet jede Funktion in der Regel die folgenden drei Optionen:
 
@@ -70,7 +66,6 @@ Kopiervorgänge können fehlschlagen, da keine primäre Oberfläche vorhanden is
  
 
  
-
 
 
 

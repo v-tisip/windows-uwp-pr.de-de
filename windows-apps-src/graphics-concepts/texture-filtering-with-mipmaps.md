@@ -2,21 +2,17 @@
 title: Texturfilterung mit Mipmaps
 description: "Ein Mipmap ist eine Sequenz von Texturen, von denen jede eine Darstellung desselben Bildes mit schrittweise niedrigerer Auflösung ist. Höhe und Breite der einzelnen Bilder bzw. Ebenen des Mipmaps sind jeweils um eine Zweierpotenz geringer als die der vorherigen Ebene."
 ms.assetid: 28E863A2-C776-40E4-8551-9851DF7EC93E
-keywords:
-- Texturfilterung mit Mipmaps
+keywords: Texturfilterung mit Mipmaps
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d5644fb4e57962de06874d15f7c9e97ed74106b4
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 65c775a265f7c5a0b15f76d867a9403308fc7128
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="texture-filtering-with-mipmaps"></a>Texturfilterung mit Mipmaps
 
 
@@ -26,19 +22,19 @@ Ein hochauflösendes Mipmap-Bild wird für Objekte verwendet, die sich nahe dem 
 
 Direct3D repräsentiert Mipmaps als Kette angefügter Flächen. Die Textur mit der höchsten Auflösung befindet sich am Anfang der Kette, und die nächste Mipmap-Ebene ist daran angehängt. Diese Ebene hat wiederum die nächste Mipmap-Ebene als Anhang und so weiter bis zur Mipmap-Ebene mit der niedrigsten Auflösung.
 
-Die folgenden Abbildungen zeigen ein Beispiel für diese Ebenen. Die Bitmap-Texturen repräsentieren ein Zeichen auf einem Container in einem 3D-Ego-Spiel. Bei der Erstellung als Mipmap ist die Textur mit der höchsten Auflösung die erste in dem Satz. Jede nachfolgende Textur in dem Mipmap-Satz hat eine um eine Zweierpotenz geringere Höhe und Breite. In diesem Fall ist die maximale Mipmap-Auflösung 256 x 256 Pixel. Die nächste Textur hat den Wert 128 x 128. Die letzte Textur in der Kette hat dann den Wert 64 x 64.
+Die folgenden Abbildungenzeigen ein Beispiel für diese Ebenen. Die Bitmap-Texturen repräsentieren ein Zeichen auf einem Container in einem 3D-Ego-Spiel. Bei der Erstellung als Mipmap ist die Textur mit der höchsten Auflösung die erste in dem Satz. Jede nachfolgende Textur in dem Mipmap-Satz hat eine um eine Zweierpotenz geringere Höhe und Breite. In diesem Fall ist die maximale Mipmap-Auflösung 256 x 256 Pixel. Die nächste Textur hat den Wert 128 x 128. Die letzte Textur in der Kette hat dann den Wert 64 x 64.
 
 Für das Zeichen gilt eine maximale Entfernung, aus der es noch sichtbar ist. Wenn der Benutzer weit von dem Zeichen entfernt beginnt, zeigt das Spiel die kleinste Textur in der Mipmap-Kette an, in diesem Fall die Textur mit der Auflösung 64 x 64.
 
-![Illustration einer 64 x 64-Textur eines Gefahrenzeichens](images/mip1.jpg)
+![Illustrationeiner 64 x 64-Textur eines Gefahrenzeichens](images/mip1.jpg)
 
-Wenn sich der Blickpunkt des Benutzers auf das Zeichen zu bewegt, werden Texturen mit zunehmender Auflösung in der Mipmap-Kette verwendet. Die Auflösung in der folgenden Abbildung ist 128 x 128.
+Wenn sich der Blickpunkt des Benutzers auf das Zeichen zu bewegt, werden Texturen mit zunehmender Auflösung in der Mipmap-Kette verwendet. Die Auflösung in der folgenden Abbildungist 128 x 128.
 
-![Illustration einer 128 x 128-Textur eines Gefahrenzeichens](images/mip2.jpg)
+![Illustrationeiner 128 x 128-Textur eines Gefahrenzeichens](images/mip2.jpg)
 
 Die Textur mit der höchsten Auflösung wird verwendet, wenn sich der Blickpunkt des Benutzers im minimal zulässigen Abstand von dem Zeichen befindet, wie in der nachfolgenden Abbildung gezeigt.
 
-![Illustration einer 256 x 256-Textur eines Gefahrenzeichens](images/mip3.jpg)
+![Illustrationeiner 256 x 256-Textur eines Gefahrenzeichens](images/mip3.jpg)
 
 Dies ist eine effizientere Möglichkeit zur Simulation der Perspektive für Texturen. Anstatt eine einzelne Textur mit vielen Auflösung zu rendern, ist es schneller, mehrere Texturen mit unterschiedlichen Auflösungen zu verwenden.
 
@@ -64,7 +60,6 @@ Direct3D kann die Mipmap-Texturfilterung automatisch ausführen. Anwendungen kö
  
 
  
-
 
 
 

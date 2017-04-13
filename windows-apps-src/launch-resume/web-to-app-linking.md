@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.assetid: 260cf387-88be-4a3d-93bc-7e4560f90abc
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 225f0d2bd5d8a2434c3e548064960f44f1df530e
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: df5d232cc997c0c888b3a2f092efeb937e991a85
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="support-web-to-app-linking-with-app-uri-handlers"></a>Unterstützung der Verknüpfung zwischen Web und App mit App-URI-Handlern
 
 Lernen Sie, wie sie die Bindung zwischen den Benutzern und Ihrer App durch die Unterstützung von Web-zu-App-Verlinkungen fördern. Web-zu-App-Verlinkungen erlauben es Ihnen, eine App mit einer Website zu verbinden Statt des Browsers wird Ihre app wird gestartet, wenn Benutzer einen HTTP- oder Https-Link zu Ihrer Website öffnen. Wenn Ihre App nicht installiert ist, wird ein Link zum Öffnen Ihrer Website bereitgestellt. Benutzer können dieser Erfahrung vertrauen, da nur Urheber verifizierten Contents registrieren können.
@@ -75,7 +72,7 @@ Das obige für eine JSON-Datei veranschaulicht die Verwendung von Platzhaltern. 
 | **\***       | Repräsentiert eine beliebige Teilzeichenfolge      |
 | **?**        | Steht für ein einzelnes Zeichen |
 
-Zum Beispiel, wenn `"excludePaths" : [ "/news/*", "/blog/*" ]` in dem obigen Beispiel gegeben ist, wird Ihre App alle Pfade unterstützen, die mit Ihrer Website-Adresse (z. B. msn.com) beginnen, **mit Ausnahme** der Pfade unter `/news/` und `/blog/`. **msn.com/weather.html** wird unterstützt, aber nicht ****msn.com/news/topnews.html****.
+Zum Beispiel, wenn `"excludePaths" : [ "/news/*", "/blog/*" ]` in dem obigen Beispiel gegeben ist, wird Ihre App alle Pfade unterstützen, die mit Ihrer Website-Adresse (z.B. msn.com) beginnen, **mit Ausnahme** der Pfade unter `/news/` und `/blog/`. **msn.com/weather.html** wird unterstützt, aber nicht ****msn.com/news/topnews.html****.
 
 
 ### <a name="multiple-apps"></a>Mehrere Apps
@@ -199,4 +196,3 @@ Wenn Sie der protocol activation logic zu folgen möchten, legen Sie einen Halte
 [Behandeln der URI-Aktivierung](https://msdn.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
 
 [Das Association Launching Sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AssociationLaunching) veranschaulicht die Verwendung des LaunchUriAsync() API.
-

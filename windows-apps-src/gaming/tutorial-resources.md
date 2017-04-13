@@ -3,35 +3,31 @@ author: mtoepke
 title: Erweitern des Spielbeispiels
 description: "Herzlichen Glückwunsch! Sie sind nun mit den Schlüsselkomponenten eines einfachen dreidimensionalen DirectX-Spiels für die Universelle Windows-Plattform (UWP) vertraut."
 ms.assetid: a1432c45-569e-7ecd-4098-f5ad6da9327e
-keywords:
-- DirectX, XAML
+keywords: DirectX, XAML
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e3f4abdb0a0f42d1b25a3adc1a78ab414affa77a
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2d36c8f8f4e3f51928f1c7707e0cb6f69386645d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="extend-the-game-sample"></a>Erweitern des Spielbeispiels
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Herzlichen Glückwunsch! Sie sind nun mit den Schlüsselkomponenten eines einfachen dreidimensionalen DirectX-Spiels für die universelle Windows-Plattform (UWP) vertraut. Sie können das Framework für ein Spiel (einschließlich Ansichtsanbieter und Rendering-Pipeline) einrichten und eine einfache Spielschleife implementieren. Zudem können Sie ein einfaches Benutzeroberflächenoverlay erstellen und Soundeffekte und Steuerelemente einbauen. Damit sind Sie der Erstellung eines eigenen Spiels einen großen Schritt näher gekommen. Hier finden Sie einige Ressourcen, um Ihre Kenntnisse im Bereich der DirectX-Spieleentwicklung weiter zu vertiefen.
 
 -   [DirectX-Grafik und -Spiele](https://msdn.microsoft.com/library/windows/desktop/ee663274)
--   [Übersicht über Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476345)
--   [Referenz für Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476147)
+-   [Übersicht über Direct3D11](https://msdn.microsoft.com/library/windows/desktop/ff476345)
+-   [Referenz für Direct3D11](https://msdn.microsoft.com/library/windows/desktop/ff476147)
 
 ## <a name="extending-the-game-sample-using-xaml-for-the-overlay"></a>Erweitern des Spielbeispiels: Verwenden von XAML für das Overlay
 
 
-Eine Alternative, auf die wir noch nicht näher eingegangen sind, ist die Verwendung von XAML anstelle von Direct2D für das Overlay. Beim Zeichnen von UI-Elementen hat XAML gegenüber Direct2D viele Vorteile. Der wichtigste: Das Windows 10-Erscheinungsbild lässt sich komfortabler in Ihr DirectX-Spiel integrieren. Viele der allgemeinen Elemente, Stile und Verhalten, die eine UWP-App ausmachen, sind eng in das XAML-Modell integriert und ersparen einem Spieleentwickler eine Menge Arbeit bei der Implementierung. Falls Ihr eigenes Spieldesign eine komplizierte Benutzeroberfläche hat, empfiehlt sich unter Umständen die Verwendung von XAML anstelle von Direct2D.
+Eine Alternative, auf die wir noch nicht näher eingegangen sind, ist die Verwendung von XAML anstelle von Direct2D für das Overlay. Beim Zeichnen von UI-Elementen hat XAML gegenüber Direct2D viele Vorteile. Der wichtigste: Das Windows10-Erscheinungsbild lässt sich komfortabler in Ihr DirectX-Spiel integrieren. Viele der allgemeinen Elemente, Stile und Verhalten, die eine UWP-App ausmachen, sind eng in das XAML-Modell integriert und ersparen einem Spieleentwickler eine Menge Arbeit bei der Implementierung. Falls Ihr eigenes Spieldesign eine komplizierte Benutzeroberfläche hat, empfiehlt sich unter Umständen die Verwendung von XAML anstelle von Direct2D.
 
 Welche Unterschiede bestehen also zwischen der Direct2D-Implementierung einer Benutzeroberfläche und der Implementierung der gleichen Benutzeroberfläche mit XAML?
 
@@ -200,7 +196,7 @@ Weitere Informationen zu diesem Prozess finden Sie unter [Interoperabilität von
 ## <a name="complete-code-for-the-xaml-game-sample-xaml-codebehinds"></a>Vollständiger Code für die XAML-CodeBehinds des XAML-Spielbeispiels
 
 
-Hier sehen Sie den vollständigen Code für die CodeBehinds in der XAML-Version des Beispielshooters mit Direct3D 11.1.
+Hier sehen Sie den vollständigen Code für die CodeBehinds in der XAML-Version des Beispielshooters mit Direct3D11.1.
 
 (Im Gegensatz zur in den anderen Themen behandelten Version des Spielbeispiels definiert die XAML-Version ihr Framework nicht in den Dateien **DirectXApp.cpp** und **GameInfoOverlay.cpp**, sondern in den Dateien **App.xaml.cpp** und **MainPage.xaml.cpp**.)
 
@@ -1520,7 +1516,6 @@ Eine Version des Beispielspiels, die XAML für das Overlay verwendet, finden Sie
  
 
  
-
 
 
 

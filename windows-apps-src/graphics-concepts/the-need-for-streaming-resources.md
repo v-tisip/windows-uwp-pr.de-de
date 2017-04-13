@@ -2,21 +2,17 @@
 title: Die Notwendigkeit zur Verwendung von Streamingressourcen
 description: "Streamingressourcen sind erforderlich, damit der GPU-Speicher nicht unnötig durch die Speicherung von Oberflächenbereichen belegt wird, auf die nicht zugegriffen wird, und um der Hardware mitzuteilen, wie angrenzende Kacheln gefiltert werden sollen."
 ms.assetid: A88BE65B-104F-4176-9809-C12580A3684C
-keywords:
-- Die Notwendigkeit zur Verwendung von Streamingressourcen
+keywords: Die Notwendigkeit zur Verwendung von Streamingressourcen
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: cdd98fcf0772cdcd1e2a75ecaf7d2e0b661e134b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 5060d0076d93f8bca7e1547c4d9fb05ad4b1a3f5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="the-need-for-streaming-resources"></a>Die Notwendigkeit zur Verwendung von Streamingressourcen
 
 
@@ -32,27 +28,27 @@ Eine andere Bezeichnung für Streamingressourcen ist *Texturen geringer Dichte*.
 ## <a name="span-idwithouttilingmemoryallocationsaremanagedatsubresourcegranularityspanspan-idwithouttilingmemoryallocationsaremanagedatsubresourcegranularityspanspan-idwithouttilingmemoryallocationsaremanagedatsubresourcegranularityspanwithout-tiling-memory-allocations-are-managed-at-subresource-granularity"></a><span id="Without_tiling__memory_allocations_are_managed_at_subresource_granularity"></span><span id="without_tiling__memory_allocations_are_managed_at_subresource_granularity"></span><span id="WITHOUT_TILING__MEMORY_ALLOCATIONS_ARE_MANAGED_AT_SUBRESOURCE_GRANULARITY"></span>Ohne Kachelzuordnung werden die Speicherzuordnungen mit der Präzision von Unterressourcen verwaltet.
 
 
-In einem Grafiksystem (d. h. einem Betriebssystem, einem Bildschirmtreiber und Grafikhardware) ohne Unterstützung von Streamingressourcen verwaltet das Grafiksystem alle Direct3D-Speicherzuordnung mit der Präzision von Unterressourcen.
+In einem Grafiksystem (d.h. einem Betriebssystem, einem Bildschirmtreiber und Grafikhardware) ohne Unterstützung von Streamingressourcen verwaltet das Grafiksystem alle Direct3D-Speicherzuordnung mit der Präzision von Unterressourcen.
 
 Für einen [Puffer](introduction-to-buffers.md) ist der gesamte Puffer die Unterressource.
 
-Für eine [Textur](textures.md) (z. B. [**Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff471525)) ist jede Mip-Ebene eine Unterressource; für ein Textur-Array (z. B. [**Texture2DArray**](https://msdn.microsoft.com/library/windows/desktop/ff471526)) ist jede Mip-Ebene an einem bestimmten Arraysegment eine Unterressource. Das Grafiksystem weist nur die Möglichkeit zur Verwaltung der Zuordnung von Vergaben bei dieser Unterressourcen-Granularität auf. Im Kontext von Streamingressourcen bezieht sich der Begriff „Zuordnung” auf die Sichtbarmachung der Daten für den Grafikprozessor.
+Für eine [Textur](textures.md) (z.B. [**Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff471525)) ist jede Mip-Ebene eine Unterressource; für ein Textur-Array (z.B. [**Texture2DArray**](https://msdn.microsoft.com/library/windows/desktop/ff471526)) ist jede Mip-Ebene an einem bestimmten Arraysegment eine Unterressource. Das Grafiksystem weist nur die Möglichkeit zur Verwaltung der Zuordnung von Vergaben bei dieser Unterressourcen-Granularität auf. Im Kontext von Streamingressourcen bezieht sich der Begriff „Zuordnung” auf die Sichtbarmachung der Daten für den Grafikprozessor.
 
 ## <a name="span-idwithouttilingcantaccessonlyasmallportionofmipmapchainspanspan-idwithouttilingcantaccessonlyasmallportionofmipmapchainspanspan-idwithouttilingcantaccessonlyasmallportionofmipmapchainspanwithout-tiling-cant-access-only-a-small-portion-of-mipmap-chain"></a><span id="Without_tiling__can_t_access_only_a_small_portion_of_mipmap_chain"></span><span id="without_tiling__can_t_access_only_a_small_portion_of_mipmap_chain"></span><span id="WITHOUT_TILING__CAN_T_ACCESS_ONLY_A_SMALL_PORTION_OF_MIPMAP_CHAIN"></span>Ohne Kacheln kann nur auf einen kleinen Teil der Mipmap-Kette zugegriffen werden.
 
 
 Angenommen, einer Anwendung ist bekannt, dass ein bestimmter Renderingvorgang nur auf einen kleinen Teil eines Image-Mipmaps zugreifen muss (möglicherweise sogar nicht einmal auf den gesamten Bereich eines bestimmten Mipmaps). Im Idealfall könnte die App das Grafiksystem über diese Anforderung informieren. Das Grafiksystem würde dann nur sicherstellen, dass der benötigte Speicher dem Grafikprozessor zugeordnet wird, ohne dass zu viel Speicher eingelagert wird.
 
-In der Praxis kann das Grafiksystem ohne Streamingressourcenunterstützung nur über den Speicher informiert werden, der auf dem Grafikprozessor bei Unterressourcengranularität (z. B. eine Reihe vollständiger Mipmap-Ebenen, auf die zugegriffen werden kann) zugeordnet werden muss. Es gibt im Grafiksystem auch keine bedarfsgesteuerte Fehlersuche; somit muss möglicherweise ein Großteil des überflüssigen Grafikprozessor-Speichers verwendet werden, um vollständige Unterressourcenzuordnungen zu erstellen, bevor ein Renderingbefehl, der auf einen Teil des Speichers verweist, ausgeführt wird. Dies ist nur eines der Probleme, die die Verwendung von großen Speicherzuordnungen in Direct3D ohne Streamingunterstützung erschwert.
+In der Praxis kann das Grafiksystem ohne Streamingressourcenunterstützung nur über den Speicher informiert werden, der auf dem Grafikprozessor bei Unterressourcengranularität (z.B. eine Reihe vollständiger Mipmap-Ebenen, auf die zugegriffen werden kann) zugeordnet werden muss. Es gibt im Grafiksystem auch keine bedarfsgesteuerte Fehlersuche; somit muss möglicherweise ein Großteil des überflüssigen Grafikprozessor-Speichers verwendet werden, um vollständige Unterressourcenzuordnungen zu erstellen, bevor ein Renderingbefehl, der auf einen Teil des Speichers verweist, ausgeführt wird. Dies ist nur eines der Probleme, die die Verwendung von großen Speicherzuordnungen in Direct3D ohne Streamingunterstützung erschwert.
 
 ## <a name="span-idsoftwarepagingtobreakthesurfaceintosmallertilesspanspan-idsoftwarepagingtobreakthesurfaceintosmallertilesspanspan-idsoftwarepagingtobreakthesurfaceintosmallertilesspansoftware-paging-to-break-the-surface-into-smaller-tiles"></a><span id="Software_paging_to_break_the_surface_into_smaller_tiles"></span><span id="software_paging_to_break_the_surface_into_smaller_tiles"></span><span id="SOFTWARE_PAGING_TO_BREAK_THE_SURFACE_INTO_SMALLER_TILES"></span>Softwareauslagerung, um die Oberfläche in kleinere Kacheln zu unterteilen
 
 
 Die Softwareauslagerung kann für die Unterteilung der Oberfläche in Kacheln verwendet werden, die klein genug sind, um von der Hardware behandelt zu werden.
 
-Direct3D unterstützt [**Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff471525) Oberflächen mit bis zu 16384 Pixeln auf einer Seite. Ein Bild, das 16384 breit und 16384 hoch ist und 4 Byte pro Pixel aufweist, würde 1 GB Videospeicher verbrauchen (und das Hinzufügen von Mipmaps würde diese Menge verdoppeln). In der Praxis müssten die gesamten 1 GB nur selten in einem einzelnen Renderingvorgang referenziert werden.
+Direct3D unterstützt [**Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff471525) Oberflächen mit bis zu 16384 Pixeln auf einer Seite. Ein Bild, das 16384 breit und 16384 hoch ist und 4 Byte pro Pixel aufweist, würde 1GB Videospeicher verbrauchen (und das Hinzufügen von Mipmaps würde diese Menge verdoppeln). In der Praxis müssten die gesamten 1GB nur selten in einem einzelnen Renderingvorgang referenziert werden.
 
-Einige Spieleentwickler modellieren Geländeoberflächen mit Größen von bis zu 128 KB x 128 KB. Auf vorhandenen Grafikprozessoren erreichen sie dies, indem sie die Oberfläche in Kacheln unterteilen, die für die Hardware klein genug sind. Die Anwendung muss herausfinden, welche der Kacheln erforderlich sein könnten und diese in einen Zwischenspeicher von Texturen auf dem Grafikprozessor zu laden – ein Softwareauslagerungssystem.
+Einige Spieleentwickler modellieren Geländeoberflächen mit Größen von bis zu 128KB x 128KB. Auf vorhandenen Grafikprozessoren erreichen sie dies, indem sie die Oberfläche in Kacheln unterteilen, die für die Hardware klein genug sind. Die Anwendung muss herausfinden, welche der Kacheln erforderlich sein könnten und diese in einen Zwischenspeicher von Texturen auf dem Grafikprozessor zu laden – ein Softwareauslagerungssystem.
 
 Ein erheblicher Nachteil dieses Ansatzes besteht darin, dass die Hardware keine Kenntnisse über die Auslagerungsprozesse hat. Wenn ein Teil eines Bildes auf dem Bildschirm angezeigt werden muss, der Kacheln überspannt, dann weiß die Hardware nicht, wie die feste Filterfunktion (effizient) auf allen Kacheln ausgeführt werden muss. Dies bedeutet, dass die Anwendung, die ihre eigene Software-Kachelunterteilung handhabt, zur manuellen Texturfilterung im Shader-Code greifen muss (dies kann sehr teuer werden, wenn ein hochwertiger anisotropischer Filter gewünscht wird); weiterhin wird möglicherweise Speicherplatz für die Erstellung von Rinnen rund um die Kacheln verschwendet, die Daten benachbarter Kacheln enthalten, damit die Hardwarefilterung mit festen Funktionen weiterhin nützlich sein kann.
 
@@ -83,7 +79,6 @@ Ein weiteres Szenario für Streamingressourcen ist die Aktivierung mehrerer Ress
  
 
  
-
 
 
 

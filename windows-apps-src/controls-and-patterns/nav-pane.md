@@ -10,33 +10,21 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a5f15129c424c92ac537116458c8433f6c96fa87
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 2d48a92d5af75f8543f7b69ac59865e51bd334ee
+ms.sourcegitcommit: d1d53f5100edffe3f3ee57b853dc8cd1568fe7a2
+translationtype: HT
 ---
 # <a name="nav-panes"></a>Navigationsbereiche
-
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Ein Navigationsbereich ist ein Muster, das trotz Einsparung des Bildschirmbereichs viele Navigationselemente auf oberster Ebene ermöglicht. Der Navigationsbereich wird häufig für mobile Apps verwendet, eignet sich aber auch gut für größere Bildschirme. Wenn der Bereich als eine Überlagerung verwendet wird, bleibt er reduziert und damit im Hintergrund, bis der Benutzer die Schaltfläche drückt; dies eignet sich gut für kleinere Bildschirme. Wenn der Bereich im angedockten Modus verwendet wird, bleibt er geöffnet. Dadurch kann er bei ausreichend vorhandenem Platz auf dem Bildschirm besser genutzt werden.
 
 ![Beispiel für einen Navigationsbereich](images/navHero.png)
 
-<div class="important-apis" >
-<b>Wichtige APIs</b><br/>
-<ul>
-<li>[**SplitView-Klasse**](https://msdn.microsoft.com/library/windows/apps/dn864360)</li>
-<li> </li>
-<li> </li>
-<li> </li>
-<li> </li>
-<li> </li>
-</ul>
-</div>
 
+**Wichtige APIs**
+
+* [**SplitView-Klasse**](https://msdn.microsoft.com/library/windows/apps/dn864360)
 
 ## <a name="is-this-the-right-pattern"></a>Ist dies das richtige Muster?
 
@@ -54,9 +42,6 @@ Das Navigationsbereichsmuster besteht aus einem Bereich für die Navigationskate
 
 Um Code zu testen, der dieses Muster implementiert, laden Sie die [XAML-Navigationslösung](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlNavigation) von GitHub herunter.
 
-<div class="microsoft-internal-note">
-Redlines für Navigationsbereich und Hamburger sind auf [UNI](http://uni/DesignDepot.FrontEnd/#/Search?c=t&t=Windows%2BRS1%2BControls&f=NavPane_Hamburger) verfügbar.
-</div>
 
 ### <a name="pane"></a>Bereich
 
@@ -112,10 +97,10 @@ Um die Anwendbarkeit einer Vielzahl von Geräten zu maximieren, wird die Nutzung
    -   Kleiner als oder gleich 640 Pixeln.
    -   Der Navigationsbereich sollte den Überlagerungsmodus verwenden, standardmäßig geschlossen.
 -   Mittelgroßes Fenster
-   -   Größer als 640 Pixel mit einer Breite, die kleiner als oder gleich 1007 Pixeln ist.
+   -   Größer als 640 Pixel mit einer Breite, die kleiner als oder gleich 1007Pixeln ist.
    -   Der Navigationsbereich sollte den Streifenmodus verwenden, standardmäßig geschlossen.
 -   Großes Fenster
-   -   Breite größer als 1007 Pixel.
+   -   Breite größer als 1007Pixel.
    -   Der Navigationsbereich sollte den Andockmodus verwenden, standardmäßig geöffnet.
 
 ## <a name="tailoring"></a>Anpassung
@@ -132,4 +117,3 @@ Um die [10-Fuß-Erfahrung](http://go.microsoft.com/fwlink/?LinkId=760736) Ihrer 
  
 
  
-

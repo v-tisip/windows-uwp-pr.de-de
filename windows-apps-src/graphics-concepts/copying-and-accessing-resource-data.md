@@ -2,21 +2,17 @@
 title: Kopieren und Zugreifen auf Ressourcendaten
 description: "Nutzungskennzeichen geben an, wie die Anwendung Ressourcendaten verwendet, um die Ressourcen im leistungsfähigsten Speicherbereich zu platzieren. Ressourcendaten werden von allen Ressourcen kopiert, damit CPU oder GPU ohne eine Beeinträchtigung der Leistung darauf zugreifen können."
 ms.assetid: 6A09702D-0FF2-4EA6-A353-0F95A3EE34E2
-keywords:
-- Kopieren und Zugreifen auf Ressourcendaten
+keywords: Kopieren und Zugreifen auf Ressourcendaten
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1dc6853a5675b6e22300650a5c44519436c391d0
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e26e6abf4b15584f8c04a837dcc6bd23aad0f1d0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="copying-and-accessing-resource-data"></a>Kopieren und Zugreifen auf Ressourcendaten
 
 
@@ -41,7 +37,7 @@ Es gibt zwei Haupttypen von Ressourcen: zuordbare und nicht zuordbare Ressourcen
 
 Das Kopieren von Daten auf nicht-zuordbare Ressourcen geht sehr schnell, da dies am häufigsten der Fall ist und optimiert wurde, um gute Ergebnisse zu liefern. Da die CPU nicht auf diese Ressourcen direkt zugreifen kann, werden diese optimiert, damit die GPU diese schnell ändern kann.
 
-Das Kopieren von Daten zwischen zuordbaren Ressourcen ist schwieriger, da die Leistung von der Verwendung abhängt, für die die Ressource erstellt wurde. Die GPU kann z. B. eine dynamische Ressource relativ schnell lesen, aber nicht darauf schreiben, während die GPU auf Staging-Ressourcen weder direkt schreiben noch diese lesen kann.
+Das Kopieren von Daten zwischen zuordbaren Ressourcen ist schwieriger, da die Leistung von der Verwendung abhängt, für die die Ressource erstellt wurde. Die GPU kann z.B. eine dynamische Ressource relativ schnell lesen, aber nicht darauf schreiben, während die GPU auf Staging-Ressourcen weder direkt schreiben noch diese lesen kann.
 
 Anwendungen, die Daten aus einer Ressource mit standardmäßiger Verwendung auf eine Ressource mit Staging-Verwendung kopieren möchten (damit die CPU die Daten lesen kann – ein sogenanntes GPU Readback Problem), müssen dabei vorsichtig sein. Weitere Informationen finden Sie unter [Zugreifen auf Ressourcendaten](#accessing) weiter unten.
 
@@ -139,7 +135,6 @@ Wenn eine Anwendung daher eine Ressource zuordnen möchte, die aus dem Videospei
  
 
  
-
 
 
 

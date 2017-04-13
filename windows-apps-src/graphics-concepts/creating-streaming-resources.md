@@ -2,21 +2,17 @@
 title: Erstellen von Streamingressourcen
 description: Streamingressourcen werden erstellt, indem Sie beim Erstellen einer Ressource laut Kennzeichen angeben, dass die Ressource eine Streamingressource ist.
 ms.assetid: B3F3E43C-54D4-458C-9E16-E13CB382C83F
-keywords:
-- Erstellen von Streamingressourcen
+keywords: Erstellen von Streamingressourcen
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 86f19b2afd580a16510fee8e97acfc2a388cad01
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 0f42d34251ccd6d9add87808e502ab66dc830905
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="creating-streaming-resources"></a>Erstellen von Streamingressourcen
 
 
@@ -24,7 +20,7 @@ Streamingressourcen werden erstellt, indem Sie beim Erstellen einer Ressource la
 
 Einschränkungen für das Erstellen einer Ressource als Streamingressource werden unter [Parameter für das Erstellen von Streamingressourcen](streaming-resource-creation-parameters.md) beschrieben.
 
-Beim Erstellen der Ressource wird dem Grafiksystem ein Nicht-Streamingressourcenspeicher zugewiesen, z. B. bei der Zuordnung für ein Array von 2D-Texturen.
+Beim Erstellen der Ressource wird dem Grafiksystem ein Nicht-Streamingressourcenspeicher zugewiesen, z.B. bei der Zuordnung für ein Array von 2D-Texturen.
 
 Wenn eine Streamingressource erstellt wird, weist das Grafiksystem dem Inhalt der Ressource keinen Speicher hinzu. Wenn eine Anwendung eine Streamingressource erstellt, reserviert das Grafiksystem stattdessen einen Adressbereich nur für die nebeneinander angeordnete Oberfläche und ermöglicht dann der Anwendung, die Zuordnung der Kacheln zu steuern. Die „Zuordnung” einer Kachel ist der physische Standort im Arbeitsspeicher, auf den die logische Kachel in einer Ressource verweist (oder **NULL** für eine nicht zugeordnete Kachel).
 
@@ -86,7 +82,6 @@ Verwechseln Sie dieses Konzept nicht mit der Zuordnung einer Direct3D-Ressource 
  
 
  
-
 
 
 

@@ -13,13 +13,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 43cbc8999d21d0534c4b6e557822345a69f66007
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 215cf54a5d6ed1b0c514768817cc11d1a85627e2
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="use-input-scope-to-change-the-touch-keyboard"></a>Verwenden des Eingabeumfangs zum Ändern der Bildschirmtastatur
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
@@ -143,7 +140,7 @@ Die Steuerelemente [**TextBox**](https://msdn.microsoft.com/library/windows/apps
 
 Diese Tabellen zeigen die Layouts des Soft Input Panel (SIP) auf Desktops und Mobilgeräten für allgemeine Eingabeumfangswerte. Die Auswirkungen des Eingabeumfangs auf die durch die Eigenschaften **IsSpellCheckEnabled** und **IsTextPredictionEnabled** aktivierten Features werden für jeden Eingabeumfang aufgeführt. Dies ist keine vollständige Liste der verfügbaren Eingabeumfangoptionen.
 
-> **Hinweis:**&nbsp;&nbsp;Bei der kleineren Variante des SIP auf Mobilgeräten ist es für mobile Apps besonders wichtig, den richtigen Eingabeumfang festzulegen. Wie nachfolgend gezeigt, bietet Windows Phone eine größere Auswahl an speziellen Tastaturlayouts. Ein Textfeld, dessen Eingabeumfang nicht in einer Windows Store-App festgelegt werden muss, profitiert möglicherweise davon, wenn es in einer Windows Phone Store-App festgelegt wird.
+> **Hinweis:**&nbsp;&nbsp;Bei der kleineren Variante des SIP auf Mobilgeräten ist es für mobile Apps besonders wichtig, den richtigen Eingabeumfang festzulegen. Wie nachfolgend gezeigt, bietet Windows Phone eine größere Auswahl an speziellen Tastaturlayouts. Ein Textfeld, dessen Eingabeumfang nicht in einer WindowsStore-App festgelegt werden muss, profitiert möglicherweise davon, wenn es in einer WindowsPhoneStore-App festgelegt wird.
 
 > **Tipp:**&nbsp;&nbsp;Bei den meisten Bildschirmtastaturen ist der Wechsel zwischen einem Layout mit Buchstaben sowie einem Layout mit Zahlen und Sonderzeichen möglich. In Windows schalten Sie über die **&123**-Taste um. Drücken Sie auf einem Windows Phone die Taste **&123**, um zum Layout mit Ziffern und Sonderzeichen zu wechseln, oder die Taste **abcd**, um zum alphabetischen Layout zu gelangen.
 
@@ -153,9 +150,9 @@ Diese Tabellen zeigen die Layouts des Soft Input Panel (SIP) auf Desktops und Mo
 
 Die Standardtastatur.
 
-| Windows                                                    | Windows Phone                                                    |
+| Windows                                                    | WindowsPhone                                                    |
 |------------------------------------------------------------|------------------------------------------------------------------|
-| ![Standardmäßige Windows-Bildschirmtastatur](images/input-scopes/kbdpcdefault.png) | ![Standardmäßige Windows Phone-Bildschirmtastatur](images/input-scopes/kbdwpdefault.png) |
+| ![Standardmäßige Windows-Bildschirmtastatur](images/input-scopes/kbdpcdefault.png) | ![Standardmäßige WindowsPhone-Bildschirmtastatur](images/input-scopes/kbdwpdefault.png) |
 
 Verfügbarkeit von Features:
 
@@ -172,7 +169,7 @@ Das standardmäßige Tastaturlayout für Ziffern und Sonderzeichen.
 
 | Windows                                                    | Windows Phone                                                    |
 |------------------------------------------------------------|------------------------------------------------------------------|
-| ![Windows-Bildschirmtastatur für Währungen](images/input-scopes/kbdpccurrencyamountandsymbol.png)<br>Enthält außerdem die Tasten „Seite nach links/rechts“, um weitere Sonderzeichen anzuzeigen.| ![Windows Phone-Bildschirmtastatur für Währungen](images/input-scopes/kbdwpcurrencyamountandsymbol.png) |
+| ![Windows-Bildschirmtastatur für Währungen](images/input-scopes/kbdpccurrencyamountandsymbol.png)<br>Enthält außerdem die Tasten „Seite nach links/rechts“, um weitere Sonderzeichen anzuzeigen.| ![WindowsPhone-Bildschirmtastatur für Währungen](images/input-scopes/kbdwpcurrencyamountandsymbol.png) |
 |Verfügbarkeit von Features:<ul><li>Rechtschreibprüfung: Standardmäßig aktiviert, kann deaktiviert werden</li><li>Autokorrektur: Immer deaktiviert</li><li>Automatische Großschreibung: Immer deaktiviert</li><li>Textvorhersage: Immer deaktiviert</li></ul>Identisch mit **Number** und **TelephoneNumber**. | Verfügbarkeit von Features:<ul><li>Rechtschreibprüfung: Standardmäßig aktiviert, kann deaktiviert werden</li><li>Autokorrektur: Standardmäßig aktiviert, kann deaktiviert werden</li><li>Automatische Großschreibung: Immer deaktiviert</li><li>Textvorhersage: Standardmäßig aktiviert, kann deaktiviert werden</li>| 
 
 ### <a name="url"></a>Url
@@ -183,7 +180,7 @@ Enthält die Tasten **.com** und ![Los-Taste](images/input-scopes/kbdgokey.png) 
 
 | Windows                                                    | Windows Phone                                                    |
 |------------------------------------------------------------|------------------------------------------------------------------|
-| ![Windows-Bildschirmtastatur für URLs](images/input-scopes/kbdpcurl.png)<br>Enthält außerdem die Tasten **:**, **-** und **/**.| ![Windows Phone-Bildschirmtastatur für URLs](images/input-scopes/kbdwpurl.png)<br>Halten Sie die Punkttaste gedrückt, um weitere Optionen ( - + &quot; / &amp; : , ) anzuzeigen. |
+| ![Windows-Bildschirmtastatur für URLs](images/input-scopes/kbdpcurl.png)<br>Enthält außerdem die Tasten **:**, **-** und **/**.| ![WindowsPhone-Bildschirmtastatur für URLs](images/input-scopes/kbdwpurl.png)<br>Halten Sie die Punkttaste gedrückt, um weitere Optionen ( - + &quot; / &amp; : , ) anzuzeigen. |
 |Verfügbarkeit von Features:<ul><li>Rechtschreibprüfung: Standardmäßig aktiviert, kann deaktiviert werden</li><li>Autokorrektur: Standardmäßig aktiviert, kann deaktiviert werden</li><li>Automatische Großschreibung: Immer deaktiviert</li><li>Textvorhersage: Immer deaktiviert</li></ul> | Verfügbarkeit von Features:<ul><li>Rechtschreibprüfung: Standardmäßig deaktiviert, kann aktiviert werden</li><li>Autokorrektur: Standardmäßig deaktiviert, kann aktiviert werden</li><li>Automatische Großschreibung: Standardmäßig deaktiviert, kann aktiviert werden</li><li>Textvorhersage: Standardmäßig deaktiviert, kann aktiviert werden</li></ul> |
 
 ### <a name="emailsmtpaddress"></a>EmailSmtpAddress
@@ -194,25 +191,25 @@ Enthält die Tasten **@** und **.com**. Halten Sie die Taste **.com** gedrückt,
 
 | Windows                                                    | Windows Phone                                                    |
 |------------------------------------------------------------|------------------------------------------------------------------|
-| ![Windows-Bildschirmtastatur für E-Mail-Adressen](images/input-scopes/kbdpcemailsmtpaddress.png)<br>Enthält außerdem die Tasten **_** und **-**.| ![Windows Phone-Bildschirmtastatur für E-Mail-Adressen](images/input-scopes/kbdwpemailsmtpaddress.png)<br>Halten Sie die PUNKTTASTE gedrückt, um weitere Optionen ( - _ , ; ) anzuzeigen. |
+| ![Windows-Bildschirmtastatur für E-Mail-Adressen](images/input-scopes/kbdpcemailsmtpaddress.png)<br>Enthält außerdem die Tasten **_** und **-**.| ![WindowsPhone-Bildschirmtastatur für E-Mail-Adressen](images/input-scopes/kbdwpemailsmtpaddress.png)<br>Halten Sie die PUNKTTASTE gedrückt, um weitere Optionen ( - _ , ; ) anzuzeigen. |
 |Verfügbarkeit von Features:<ul><li>Rechtschreibprüfung: Standardmäßig aktiviert, kann deaktiviert werden</li><li>Autokorrektur: Standardmäßig aktiviert, kann deaktiviert werden</li><li>Automatische Großschreibung: Immer deaktiviert</li><li>Textvorhersage: Immer deaktiviert</li></ul> | Verfügbarkeit von Features:<ul><li>Rechtschreibprüfung: Standardmäßig deaktiviert, kann aktiviert werden</li><li>Autokorrektur: Standardmäßig deaktiviert, kann aktiviert werden</li><li>Automatische Großschreibung: Standardmäßig deaktiviert, kann aktiviert werden</li><li>Textvorhersage: Standardmäßig deaktiviert, kann aktiviert werden</li></ul> |
 
 ### <a name="number"></a>Number
 
 `<TextBox InputScope="Number"/>`
 
-| Windows                                                    | Windows Phone                                                    |
+| Windows                                                    | WindowsPhone                                                    |
 |------------------------------------------------------------|------------------------------------------------------------------|
-| ![Windows-Bildschirmtastatur für Ziffern](images/input-scopes/kbdpccurrencyamountandsymbol.png)| ![Windows Phone-Bildschirmtastatur für Ziffern](images/input-scopes/kbdwpnumber.png)<br>Tastatur enthält Ziffern und einen Dezimalpunkt. Halten Sie die Dezimalpunkttaste gedrückt, um weitere Optionen ( , - ) anzuzeigen. |
+| ![Windows-Bildschirmtastatur für Ziffern](images/input-scopes/kbdpccurrencyamountandsymbol.png)| ![WindowsPhone-Bildschirmtastatur für Ziffern](images/input-scopes/kbdwpnumber.png)<br>Tastatur enthält Ziffern und einen Dezimalpunkt. Halten Sie die Dezimalpunkttaste gedrückt, um weitere Optionen ( , - ) anzuzeigen. |
 |Identisch mit **CurrencyAmountAndSymbol** und **TelephoneNumber**. | Verfügbarkeit von Features:<ul><li>Rechtschreibprüfung: Immer deaktiviert</li><li>Autokorrektur: Immer deaktiviert</li><li>Automatische Großschreibung: Immer deaktiviert</li><li>Textvorhersage: Immer deaktiviert</li></ul> |
 
 ### <a name="telephonenumber"></a>TelephoneNumber
 
 `<TextBox InputScope="TelephoneNumber"/>`
 
-| Windows                                                    | Windows Phone                                                    |
+| Windows                                                    | WindowsPhone                                                    |
 |------------------------------------------------------------|------------------------------------------------------------------|
-| ![Windows-Bildschirmtastatur für Telefonnummern](images/input-scopes/kbdpccurrencyamountandsymbol.png)| ![Windows Phone-Bildschirmtastatur für Telefonnummern](images/input-scopes/kbdwptelephonenumber.png)<br>Die Tastatur entspricht der Wähltastatur eines Telefons. Halten Sie die PUNKTTASTE gedrückt, um weitere Optionen ( , ( ) X ) anzuzeigen. ). Halten Sie die 0-TASTE gedrückt, um „+“ einzugeben. |
+| ![Windows-Bildschirmtastatur für Telefonnummern](images/input-scopes/kbdpccurrencyamountandsymbol.png)| ![WindowsPhone-Bildschirmtastatur für Telefonnummern](images/input-scopes/kbdwptelephonenumber.png)<br>Die Tastatur entspricht der Wähltastatur eines Telefons. Halten Sie die PUNKTTASTE gedrückt, um weitere Optionen ( , ( ) X ) anzuzeigen. ). Halten Sie die 0-TASTE gedrückt, um „+“ einzugeben. |
 |Identisch mit **CurrencyAmountAndSymbol** und **TelephoneNumber**. | Verfügbarkeit von Features:<ul><li>Rechtschreibprüfung: Immer deaktiviert</li><li>Autokorrektur: Immer deaktiviert</li><li>Automatische Großschreibung: Immer deaktiviert</li><li>Textvorhersage: Immer deaktiviert</li></ul> |
 
 ### <a name="search"></a>Suchen
@@ -221,18 +218,18 @@ Enthält die Tasten **@** und **.com**. Halten Sie die Taste **.com** gedrückt,
 
 Enthält die anstelle der **EINGABETASTE** die **Suchtaste**.
 
-| Windows                                                    | Windows Phone                                                    |
+| Windows                                                    | WindowsPhone                                                    |
 |------------------------------------------------------------|------------------------------------------------------------------|
-| ![Windows-Bildschirmtastatur für die Suche](images/input-scopes/kbdpcsearch.png)| ![Windows Phone-Bildschirmtastatur für die Suche](images/input-scopes/kbdwpsearch.png)|
+| ![Windows-Bildschirmtastatur für die Suche](images/input-scopes/kbdpcsearch.png)| ![WindowsPhone-Bildschirmtastatur für die Suche](images/input-scopes/kbdwpsearch.png)|
 |Verfügbarkeit von Features:<ul><li>Rechtschreibprüfung: Standardmäßig aktiviert, kann deaktiviert werden</li><li>Autokorrektur: Immer deaktiviert</li><li>Automatische Großschreibung: Immer deaktiviert</li><li>Textvorhersage: Standardmäßig aktiviert, kann deaktiviert werden</li></ul> | Verfügbarkeit von Features:<ul><li>Rechtschreibprüfung: Standardmäßig aktiviert, kann deaktiviert werden</li><li>Autokorrektur: Standardmäßig aktiviert, kann deaktiviert werden</li><li>Automatische Großschreibung: Immer deaktiviert</li><li>Textvorhersage: Standardmäßig aktiviert, kann deaktiviert werden</li></ul> |
 
 ### <a name="searchincremental"></a>SearchIncremental
 
 `<TextBox InputScope="SearchIncremental"/>`
 
-| Windows                                                    | Windows Phone                                                    |
+| Windows                                                    | WindowsPhone                                                    |
 |------------------------------------------------------------|------------------------------------------------------------------|
-| ![Standardmäßige Windows-Bildschirmtastatur](images/input-scopes/kbdpcdefault.png)<br>Gleiches Layout wie **Default**.| ![Standardmäßige Windows Phone-Bildschirmtastatur](images/input-scopes/kbdwpdefault.png)|
+| ![Standardmäßige Windows-Bildschirmtastatur](images/input-scopes/kbdpcdefault.png)<br>Gleiches Layout wie **Default**.| ![Standardmäßige WindowsPhone-Bildschirmtastatur](images/input-scopes/kbdwpdefault.png)|
 |Verfügbarkeit von Features:<ul><li>Rechtschreibprüfung: Standardmäßig deaktiviert, kann aktiviert werden</li><li>Autokorrektur: Immer deaktiviert</li><li>Automatische Großschreibung: Immer deaktiviert</li><li>Textvorhersage: Immer deaktiviert</li></ul> | Identisch mit **Default**. |
 
 ### <a name="formula"></a>Formula
@@ -250,17 +247,16 @@ Enthält die Taste **=**.
 
 `<TextBox InputScope="Chat"/>`
 
-| Windows                                                    | Windows Phone                                                    |
+| Windows                                                    | WindowsPhone                                                    |
 |------------------------------------------------------------|------------------------------------------------------------------|
-| ![Standardmäßige Windows-Bildschirmtastatur](images/input-scopes/kbdpcdefault.png)<br>Gleiches Layout wie **Default**.| ![Standardmäßige Windows Phone-Bildschirmtastatur](images/input-scopes/kbdwpdefault.png)<br>Gleiches Layout wie **Default**.|
+| ![Standardmäßige Windows-Bildschirmtastatur](images/input-scopes/kbdpcdefault.png)<br>Gleiches Layout wie **Default**.| ![Standardmäßige WindowsPhone-Bildschirmtastatur](images/input-scopes/kbdwpdefault.png)<br>Gleiches Layout wie **Default**.|
 |Verfügbarkeit von Features:<ul><li>Rechtschreibprüfung: Standardmäßig deaktiviert, kann aktiviert werden</li><li>Autokorrektur: Immer deaktiviert</li><li>Automatische Großschreibung: Immer deaktiviert</li><li>Textvorhersage: Immer deaktiviert</li></ul> | Verfügbarkeit von Features:<ul><li>Rechtschreibprüfung: Standardmäßig aktiviert, kann deaktiviert werden</li><li>Autokorrektur: Standardmäßig aktiviert, kann deaktiviert werden</li><li>Automatische Großschreibung: Standardmäßig aktiviert, kann deaktiviert werden</li><li>Textvorhersage: Standardmäßig aktiviert, kann deaktiviert werden</li></ul> |
 
 ### <a name="nameorphonenumber"></a>NameOrPhoneNumber
 
 `<TextBox InputScope="NameOrPhoneNumber"/>`
 
-| Windows                                                    | Windows Phone                                                    |
+| Windows                                                    | WindowsPhone                                                    |
 |------------------------------------------------------------|------------------------------------------------------------------|
 | ![Standardmäßige Windows-Bildschirmtastatur](images/input-scopes/kbdpcdefault.png)<br>Gleiches Layout wie **Default**.| ![Windows Phone-Bildschirmtastatur für Namen oder Telefonnummern](images/input-scopes/kbdwpnameorphonenumber.png)<br>Enthält die Tasten **;** und **@**. Die **&amp;123**-Taste wird durch die **123**-Taste ersetzt, die die Wähltastatur des Telefons öffnet (siehe **TelephoneNumber**).|
 |Verfügbarkeit von Features:<ul><li>Rechtschreibprüfung: Standardmäßig aktiviert, kann deaktiviert werden</li><li>Autokorrektur: Immer deaktiviert</li><li>Automatische Großschreibung: Immer aktiviert</li><li>Textvorhersage: Immer deaktiviert</li></ul> | Verfügbarkeit von Features:<ul><li>Rechtschreibprüfung: Standardmäßig deaktiviert, kann aktiviert werden</li><li>Autokorrektur: Standardmäßig deaktiviert, kann aktiviert werden</li><li>Automatische Großschreibung: Standardmäßig deaktiviert, kann aktiviert werden. Erster Buchstabe eines Worts wird groß geschrieben.</li><li>Textvorhersage: Standardmäßig deaktiviert, kann aktiviert werden</li></ul> |
-

@@ -6,13 +6,11 @@ ms.assetid: 3250F729-4FDD-4AD4-B856-B8BA575C3375
 label: Touch design guidelines
 template: detail.hbs
 redirect_url: https://msdn.microsoft.com/windows/uwp/input-and-devices/touch-interactions
-translationtype: Human Translation
-ms.sourcegitcommit: 2db7aaccfd56b1bdfda099b197a695bad8a9cba1
 ms.openlocfilehash: 28dfadf6010aed3fb2ed0d03b73f92631c17fcf4
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# Richtlinien für die Toucheingabe
+# <a name="touch-design-guidelines"></a>Richtlinien für die Toucheingabe
 
 
 
@@ -20,7 +18,7 @@ ms.openlocfilehash: 28dfadf6010aed3fb2ed0d03b73f92631c17fcf4
 
 Gestalten Sie die Benutzerinteraktion mit Ihren UWP-Apps (Universelle Windows-Plattform) intuitiv und unverwechselbar, und optimieren Sie diese für die Toucheingabe. Dabei sollte die Funktionalität jedoch für alle Eingabegeräte einheitlich sein.
 
-## <span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>Empfohlene und nicht empfohlene Vorgehensweisen
+## <a name="span-iddosanddontsspanspan-iddosanddontsspanspan-iddosanddontsspandos-and-donts"></a><span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>Empfohlene und nicht empfohlene Vorgehensweisen
 
 
 -   Entwerfen Sie Apps mit Toucheingabe als primär erwartete Eingabemethode.
@@ -31,7 +29,7 @@ Gestalten Sie die Benutzerinteraktion mit Ihren UWP-Apps (Universelle Windows-Pl
 -   Verwenden Sie nach Möglichkeit keine zeitlich festgelegten Interaktionen (Beispiel für eine richtige Verwendung: Berühren und Halten).
 -   Verwenden Sie nach Möglichkeit nicht die Anzahl der zu verwendenden Finger, um zwischen den Manipulationen zu unterscheiden.
 
-## <span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>Weitere Hinweise zur Verwendung
+## <a name="span-idadditionalusageguidancespanspan-idadditionalusageguidancespanspan-idadditionalusageguidancespanadditional-usage-guidance"></a><span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>Weitere Hinweise zur Verwendung
 
 
 Am wichtigsten ist, dass Sie beim Entwerfen Ihrer App davon ausgehen, dass die Benutzer in erster Linie die Fingereingabe als Eingabemethode verwenden. Wenn Sie die Steuerelemente der Plattform verwenden, ist keine zusätzliche Programmierung für die Unterstützung von Touchpad, Maus und Zeichen-/Eingabestift erforderlich, da sie in Windows8 standardmäßig bereitgestellt wird.
@@ -95,7 +93,7 @@ Mit den folgenden Techniken können Sie die immersive Wahrnehmung von Windows St
 
 Die Zielbestimmung wird durch Folgendes optimiert:
 
--   Größe der Fingereingabeziele
+-   Größe der Toucheingabeziele
 
     Klare Richtlinien für die Größe gewährleisten, dass Anwendungen eine angenehme UI bereitstellen, die Objekte und Steuerelemente enthält, die als Ziele einfach und sicher zu erreichen sind.
 
@@ -163,7 +161,7 @@ Darüber hinaus wird Folgendes dringend empfohlen:
 
 -   Entsprechende Beschreibungen und visuelle Hinweise haben einen großen Einfluss auf die Verwendung erweiterter Interaktionen.
 
-## <span id="related_topics"></span>Verwandte Artikel
+## <a name="span-idrelatedtopicsspanrelated-articles"></a><span id="related_topics"></span>Verwandte Artikel
 
 **Für Entwickler (XAML)**
 * [Interaktionen per Toucheingabe](https://msdn.microsoft.com/library/windows/apps/mt185617)
@@ -173,11 +171,5 @@ Darüber hinaus wird Folgendes dringend empfohlen:
  
 
 
-
-
-
-
-
-<!--HONumber=Sep16_HO3-->
 
 

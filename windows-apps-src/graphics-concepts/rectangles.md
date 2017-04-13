@@ -2,21 +2,17 @@
 title: Rechtecke
 description: In Direct3D und in der Windows-Programmierung werden Objekte auf dem Bildschirm in Bezug auf die umgebenden Rechtecke bezeichnet.
 ms.assetid: 3B78AE66-2C1A-4191-BDCA-D737E33460BA
-keywords:
-- Rechtecke
+keywords: Rechtecke
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a532179df604a1b241564b0d134871e384c6b32d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2128dd8fa6ff22e20cd8a25dea0fd44431c1fae2
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="rectangles"></a>Rechtecke
 
 
@@ -36,11 +32,11 @@ typedef struct tagRECT {
 } RECT, *PRECT, NEAR *NPRECT, FAR *LPRECT; 
 ```
 
-In diesem Beispiel bilden die linken und oberen Elemente die x- und y-Koordinaten für die linke obere Ecke des umgebenden Rechtecks. Entsprechend bilden die rechten und unteren Elemente die Koordinaten der unteren rechten Ecke. Die folgende Abbildung zeigt, wie Sie diese Werte darstellen können.
+In diesem Beispiel bilden die linken und oberen Elemente die x- und y-Koordinaten für die linke obere Ecke des umgebenden Rechtecks. Entsprechend bilden die rechten und unteren Elemente die Koordinaten der unteren rechten Ecke. Die folgende Abbildungzeigt, wie Sie diese Werte darstellen können.
 
-![Abbildung des durch die linken, oberen, rechten und unteren Werte begrenzten umgebenden Rechtecks](images/rect.png)
+![Abbildungdes durch die linken, oberen, rechten und unteren Werte begrenzten umgebenden Rechtecks](images/rect.png)
 
-Die Pixelspalte am rechten Rand sowie die Pixelzeile am unteren Rand sind nicht im RECT enthalten. Das Sperren eines RECT mit den Elementen {10, 10, 138, 138} ergibt ein Objekt, das 128 Pixel breit und hoch ist.
+Die Pixelspalte am rechten Rand sowie die Pixelzeile am unteren Rand sind nicht im RECT enthalten. Das Sperren eines RECT mit den Elementen {10, 10, 138, 138} ergibt ein Objekt, das 128Pixel breit und hoch ist.
 
 Für erhöhte Effizienz, Konsistenz und Bedienerfreundlichkeit arbeiten alle Direct3D-Darstellungsfunktionen mit Rechtecken.
 
@@ -52,7 +48,6 @@ Für erhöhte Effizienz, Konsistenz und Bedienerfreundlichkeit arbeiten alle Dir
  
 
  
-
 
 
 

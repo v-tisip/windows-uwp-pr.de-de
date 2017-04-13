@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 7b8b396078d59cc2ab3180e9af8b6017fd5edbda
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="device-portal-for-desktop"></a>Device Portal für Desktop
 
-Ab Windows 10, Version 1607, sind weitere Entwicklerfeatures für Desktops verfügbar. Diese Features sind nur verfügbar, wenn der Entwicklermodus aktiviert ist.
+Ab Windows 10, Version 1607, sind weitere Entwicklerfeatures für Desktop verfügbar. Diese Features sind nur verfügbar, wenn der Entwicklermodus aktiviert ist.
 
 Informationen zum Aktivieren des Entwicklermodus finden Sie unter [Aktivieren Ihres Geräts für die Entwicklung](../get-started/enable-your-device-for-development.md).
 
@@ -56,7 +54,7 @@ Sie haben zwei Möglichkeiten zum Herstellen einer Verbindung mit Device Portal:
 
 Für die Authentifizierung und sichere Kommunikation ist HTTPS erforderlich.
 
-Sie können die Authentifizierung deaktivieren, wenn Sie Device Portal in einer geschützten Umgebung verwenden, z. B. in einem Testlabor, in dem Sie allen im lokalen Netzwerk vertrauen, keine persönlichen Informationen auf dem Gerät gespeichert haben und in dem spezielle Anforderungen bestehen. Dies ermöglicht eine unverschlüsselte Kommunikation, und jeder, der die IP-Adresse Ihres Computers kennt, kann es steuern.
+Sie können die Authentifizierung deaktivieren, wenn Sie Device Portal in einer geschützten Umgebung verwenden, z.B. in einem Testlabor, in dem Sie allen im lokalen Netzwerk vertrauen, keine persönlichen Informationen auf dem Gerät gespeichert haben und in dem spezielle Anforderungen bestehen. Dies ermöglicht eine unverschlüsselte Kommunikation, und jeder, der die IP-Adresse Ihres Computers kennt, kann es steuern.
 
 ## <a name="device-portal-pages"></a>Seiten von Device Portal
 
@@ -78,7 +76,7 @@ Wenn Sie Portnummern für Device Portal auswählen möchten (z. B. 80 und 443), 
 
 - Unter HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WebManagement\Service
     - UseDynamicPorts: Ein erforderlicher DWORD-Wert. Legen Sie den Wert auf 0 fest, um die von Ihnen ausgewählten Portnummern beizubehalten.
-    - HttpPort: Ein erforderlicher DWORD-Wert. Enthält die Portnummer, an der Device Portal nach HTTP-Verbindungen lauscht.  
+    - HttpPort: Ein erforderlicher DWORD-Wert. Enthält die Portnummer, an der Device Portal nach HTTP-Verbindungen lauscht.    
     - HttpsPort: Ein erforderlicher DWORD-Wert. Enthält die Portnummer, an der Device Portal nach HTTPS-Verbindungen lauscht.
 
 ## <a name="failure-to-install-developer-mode-package-or-launch-device-portal"></a>Fehler beim Installieren des Entwicklermoduspakets oder beim Starten von Device Portal
@@ -112,4 +110,3 @@ So beheben Sie dieses Problem:
 
 1. Suchen nach Windows-Updates in den Einstellungen > Updates und Sicherheit > Windows-Updates.
 2. Starten Sie Ihren Computer neu, um sicherzustellen, dass alle Updates angewendet wurden.
-

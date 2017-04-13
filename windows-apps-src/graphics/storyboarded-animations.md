@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 5de5007327b86b401b2f85d6f80adbc2bed820a8
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 99b07dd5c19cf16b4337e5af1c46b7285333e474
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="storyboarded-animations"></a>Storyboardanimationen
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Storyboardanimationen sind nicht nur Animationen visueller Art. Eine Storyboardanimation bietet die Möglichkeit, den Wert einer Abhängigkeitseigenschaft zeitabhängig zu ändern. Einer der Hauptgründe für eine Storyboardanimation, die nicht aus der Animationsbibliothek stammt, ist die Definition des visuellen Zustands für ein Steuerelement als Teil einer Steuerelementvorlage oder Seitendefinition.
@@ -96,7 +94,7 @@ Unten ist eine Liste mit Szenarien zum Angeben von Animationszielen aufgeführt,
 
 Sie sehen, dass Zahlen in einigen Beispielen in eckige Klammern gesetzt sind. Dabei handelt es sich um einen Indexer. Damit wird angegeben, dass der davor stehende Eigenschaftsname als Wert eine Sammlung aufweist und dass Sie ein Element dieser Sammlung (Angabe per nullbasiertem Index) verwenden möchten.
 
-Sie können auch angefügte XAML-Eigenschaften animieren. Setzen Sie den vollständigen Namen der angefügten Eigenschaft stets in Klammern, z. B. `(Canvas.Left)`. Weitere Informationen finden Sie unter [Animieren von angefügten XAML-Eigenschaften](./storyboarded-animations.md#animating-xaml-attached-properties).
+Sie können auch angefügte XAML-Eigenschaften animieren. Setzen Sie den vollständigen Namen der angefügten Eigenschaft stets in Klammern, z.B. `(Canvas.Left)`. Weitere Informationen finden Sie unter [Animieren von angefügten XAML-Eigenschaften](./storyboarded-animations.md#animating-xaml-attached-properties).
 
 Weitere Informationen zur Verwendung eines Eigenschaftenpfads für die indirekte Auswahl der zu animierenden Eigenschaft finden Sie unter [Property-path-Syntax](https://msdn.microsoft.com/library/windows/apps/Mt185586) oder [**Angefügte Storyboard.TargetProperty-Eigenschaft**](https://msdn.microsoft.com/library/windows/apps/Hh759824).
 
@@ -122,7 +120,7 @@ Die beschriebenen Animationstypen werden auch als **From**/**To**/**By**-Animati
 -   Wenn Sie keinen **To**-Wert oder einen **By**-Wert angeben, wird als Endwert der Wert verwendet, den die animierte Eigenschaft vor dem Ausführen der Animation aufweist. In diesem Fall empfiehlt sich die Nutzung eines **From**-Werts, weil die Animation den Wert ansonsten gar nicht ändert, da der Start- und Endwert identisch sind.
 -   Eine Animation verfügt normalerweise über mindestens ein **From**-, **By**- oder **To**-Element, aber nicht über alle drei.
 
-Sehen wir uns das vorherige XAML-Beispiel und die **From**- und **To**-Werte sowie **Duration** erneut an. Im Beispiel wird die [**Opacity**](https://msdn.microsoft.com/library/windows/apps/BR208962)-Eigenschaft animiert, und der Eigenschaftstyp von **Opacity** lautet [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx). Als Animation muss hier also [**DoubleAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243136) verwendet werden.
+Sehen wir uns das vorherige XAML-Beispiel und die **From**- und **To**-Werte sowie **Duration** erneut an. Im Beispiel wird die [**Opacity**](https://msdn.microsoft.com/library/windows/apps/BR208962)-Eigenschaft animiert, und der Eigenschaftstyp von **Opacity** lautet[**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx). Als Animation muss hier also [**DoubleAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243136) verwendet werden.
 
 `From="1.0" To="0.0"` Gibt an, dass die [**Opacity**](https://msdn.microsoft.com/library/windows/apps/BR208962)-Eigenschaft während der Ausführung der Animation mit dem Wert „1“ beginnt und zu „0“ animiert wird. Anders ausgedrückt: Hinsichtlich der Bedeutung dieser [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx)-Werte für die **Opacity**-Eigenschaft bewirkt diese Animation, dass das Objekt undurchsichtig gestartet wird und dann transparent wird.
 
@@ -137,17 +135,17 @@ Sehen wir uns das vorherige XAML-Beispiel und die **From**- und **To**-Werte sow
 ...
 ```
 
-`Duration="0:0:1"` gibt die Dauer der Animation an, d. h. die Geschwindigkeit, mit der das Rechteck verblasst. Eine [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207)-Eigenschaft wird in der Form *Stunden*:*Minuten*:*Sekunden* angegeben. Die Zeitdauer in diesem Beispiel beträgt eine Sekunde.
+`Duration="0:0:1"` gibt die Dauer der Animation an, d.h. die Geschwindigkeit, mit der das Rechteck verblasst. Eine [ **Duration** ](https://msdn.microsoft.com/library/windows/apps/BR243207)-Eigenschaft wird in der Form *Stunden*:*Minuten*:*Sekunden* angegeben. Die Zeitdauer in diesem Beispiel beträgt eine Sekunde.
 
 Weitere Informationen zu [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR242377)-Werten und der XAML-Syntax finden Sie unter [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR242377).
 
-**Hinweis**  Wenn Sie sich in Bezug auf das gezeigte Beispiel sicher sind, dass der Startzustand des animierten Objekts für [**Opacity**](https://msdn.microsoft.com/library/windows/apps/BR208962) stets den Wert „1“ aufweist (durch standardmäßige oder explizite Festlegung), können Sie den **From**-Wert auslassen. Die Animation verwendet dann den impliziten Startwert, und das Ergebnis ist identisch.
+**Hinweis:** Wenn Sie sich in Bezug auf das gezeigte Beispiel sicher sind, dass der Startzustand des animierten Objekts für [**Opacity**](https://msdn.microsoft.com/library/windows/apps/BR208962) stets den Wert„1“ aufweist (durch standardmäßige oder explizite Festlegung), können Sie den **From**-Wert auslassen. Die Animation verwendet dann den impliziten Startwert, und das Ergebnis ist identisch.
 
  
 
 ### <a name="fromtoby-are-nullable"></a>From/To/By akzeptieren NULL-Werte
 
-Es wurde bereits erwähnt, dass Sie **From**, **To** oder **By** weglassen können und so aktuelle nicht animierte Werte als Ersatzwerte für einen fehlenden Wert verwenden können. **From**, **To** oder **By**-Eigenschaften einer Animation sind möglicherweise von einem anderen Typ, als Sie vermuten. Der Typ der [**DoubleAnimation.To**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.doubleanimation.easingfunction.aspx)-Eigenschaft lautet beispielsweise nicht [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx). Stattdessen gilt [**Nullable**](https://msdn.microsoft.com/library/windows/apps/xaml/b3h38hb0.aspx) für **Double**. Der Standardwert lautet **null**, nicht 0. Anhand dieses **null**-Werts kann das Animationssystem unterscheiden, dass Sie keinen spezifischen Wert für eine **From**-, **To**- oder **By**-Eigenschaft festgelegt haben. Visual C++-Komponentenerweiterungen (C++/CX) verfügen nicht über einen **Nullable**-Typ und nutzen stattdessen [**IReference**](https://msdn.microsoft.com/library/windows/apps/BR225864).
+Es wurde bereits erwähnt, dass Sie **From**, **To** oder **By** weglassen können und so aktuelle nicht animierte Werte als Ersatzwerte für einen fehlenden Wert verwenden können. **From**, **To** oder **By**-Eigenschaften einer Animation sind möglicherweise von einem anderen Typ, als Sie vermuten. Der Typ der [**DoubleAnimation.To**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.doubleanimation.easingfunction.aspx)-Eigenschaft lautet beispielsweise nicht [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx). Stattdessen gilt [**Nullable**](https://msdn.microsoft.com/library/windows/apps/xaml/b3h38hb0.aspx) für **Double**. Der Standardwert lautet **null**, nicht0. Anhand dieses **null**-Werts kann das Animationssystem unterscheiden, dass Sie keinen spezifischen Wert für eine **From**-, **To**- oder **By**-Eigenschaft festgelegt haben. VisualC++-Komponentenerweiterungen (C++/CX) verfügen nicht über einen **Nullable**-Typ und nutzen stattdessen [**IReference**](https://msdn.microsoft.com/library/windows/apps/BR225864).
 
 ### <a name="other-properties-of-an-animation"></a>Andere Eigenschaften einer Animation
 
@@ -163,7 +161,7 @@ Mit der [**AutoReverse**](https://msdn.microsoft.com/library/windows/apps/BR2432
 
 Mit der [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243211)-Eigenschaft wird entweder festgelegt, wie häufig eine Zeitachse wiedergegeben wird, oder eine längere Dauer, während der die Zeitachse wiederholt wird. Standardmäßig gilt für eine Zeitachse ein Durchlaufwert von "1x". Dies bedeutet, dass sie gemäß dem [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207)-Element einmal ausgeführt und nicht wiederholt wird.
 
-Sie können auch angeben, dass die Animation mehrfach durchlaufen werden soll. Mit dem Wert "3x" erreichen Sie z. B., dass die Animation dreimal ausgeführt wird. Alternativ dazu können Sie eine andere Dauer ([**Duration**](https://msdn.microsoft.com/library/windows/apps/BR242377)) für [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243211) angeben. Es ist ratsam, diesen **Duration**-Wert auf einen längeren Wert als den **Duration**-Wert der Animation selbst festzulegen. Wenn Sie z. B. für **RepeatBehavior** den Wert "0:0:10" festlegen und die Animation für [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207) den Wert "0:0:2" aufweist, wird die Animation fünfmal wiederholt. Falls diese Werte nicht ohne Rest teilbar sind, wird die Animation an dem Punkt abgeschnitten, an dem der **RepeatBehavior**-Zeitpunkt erreicht wird, also z. B. auch nach der Hälfte der Animation. Außerdem haben Sie noch die Möglichkeit, den Spezialwert "Forever" anzugeben, bei dem die Animation endlos lange ausgeführt wird, bis sie explizit beendet wird.
+Sie können auch angeben, dass die Animation mehrfach durchlaufen werden soll. Mit dem Wert "3x" erreichen Sie z.B., dass die Animation dreimal ausgeführt wird. Alternativ dazu können Sie eine andere Dauer ([**Duration**](https://msdn.microsoft.com/library/windows/apps/BR242377)) für [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243211) angeben. Es ist ratsam, diesen **Duration**-Wert auf einen längeren Wert als den **Duration**-Wert der Animation selbst festzulegen. Wenn Sie z.B. für **RepeatBehavior** den Wert "0:0:10" festlegen und die Animation für [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207) den Wert "0:0:2" aufweist, wird die Animation fünfmal wiederholt. Falls diese Werte nicht ohne Rest teilbar sind, wird die Animation an dem Punkt abgeschnitten, an dem der **RepeatBehavior**-Zeitpunkt erreicht wird, also z.B. auch nach der Hälfte der Animation. Außerdem haben Sie noch die Möglichkeit, den Spezialwert "Forever" anzugeben, bei dem die Animation endlos lange ausgeführt wird, bis sie explizit beendet wird.
 
 Weitere Informationen zu [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/BR210411)-Werten und zur XAML-Syntax finden Sie unter [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/BR210411).
 
@@ -218,7 +216,7 @@ Im nächsten Beispiel wird veranschaulicht, wie das [**Storyboard**](https://msd
 </Page>
 ```
 
-Das Definieren von Ressourcen auf der XAML-Stammebene einer XAML-Datei, z. B. page.xaml oder app.xaml, ist eine übliche Vorgehensweise zum Organisieren von Ressourcen mit Schlüsseln in XAML. Sie können Ressourcen auch auf separate Dateien aufteilen und diese in Apps oder Seiten zusammenführen. Weitere Informationen finden Sie unter [ResourceDictionary- und XAML-Ressourcenreferenzen](https://msdn.microsoft.com/library/windows/apps/Mt187273).
+Das Definieren von Ressourcen auf der XAML-Stammebene einer XAML-Datei, z.B. page.xaml oder app.xaml, ist eine übliche Vorgehensweise zum Organisieren von Ressourcen mit Schlüsseln in XAML. Sie können Ressourcen auch auf separate Dateien aufteilen und diese in Apps oder Seiten zusammenführen. Weitere Informationen finden Sie unter [ResourceDictionary- und XAML-Ressourcenreferenzen](https://msdn.microsoft.com/library/windows/apps/Mt187273).
 
 **Hinweis:**  Windows-Runtime-XAML unterstützt die Identifizierung von Ressourcen unter Verwendung des [x:Key-Attributs](https://msdn.microsoft.com/library/windows/apps/Mt204787) oder des [x:Name-Attributs](https://msdn.microsoft.com/library/windows/apps/Mt204788). Das x:Name-Attribut wird für ein [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490) häufiger verwendet, weil darauf später anhand des Variablennamens verwiesen werden soll, damit Sie dessen [**Begin**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.begin)-Methode aufrufen und die Animationen ausführen können. Wenn Sie dagegen das [x:Key-Attribut](https://msdn.microsoft.com/library/windows/apps/Mt204787) verwenden, müssen Sie [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/BR208794)-Methoden wie den [**Item**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.resourcedictionary.item)-Indexer zum Abrufen als Ressource mit Schlüssel nutzen und das abgerufene Objekt dann für das **Storyboard** umwandeln, um die **Storyboard**-Methoden zu verwenden.
 
@@ -234,14 +232,14 @@ Die Animationsvariante, für die das Risiko einer Verlangsamung des UI-Threads e
 
 Eine Animation ist unabhängig, wenn Sie diese Merkmale aufweist:
 
--   Das [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207)-Element der Animation hat einen Wert von 0 Sekunden (siehe Warnhinweis).
+-   Das [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207)-Element der Animation hat einen Wert von 0Sekunden (siehe Warnhinweis).
 -   Die Animation hat [**UIElement.Opacity**](https://msdn.microsoft.com/library/windows/apps/BR208962) als Ziel.
 -   Die Animation hat einen Untereigenschaftswert dieser [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911)-Eigenschaften: [**Transform3D**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.transform3d.aspx), [**RenderTransform**](https://msdn.microsoft.com/library/windows/apps/BR208980), [**Projection**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.projection.aspx), [**Clip**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.clip).
 -   Die Animation hat [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/Hh759771) oder [**Canvas.Top**](https://msdn.microsoft.com/library/windows/apps/Hh759772) als Ziel.
 -   Die Animation hat einen [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076)-Wert als Ziel und verwendet ein [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962)-Element, für das [**Color**](https://msdn.microsoft.com/library/windows/apps/BR242963) animiert wird.
 -   Die Animation ist ein [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320)-Element.
 
-**Achtung**  Damit Ihre Animation als unabhängige Animation behandelt wird, müssen Sie `Duration="0"` explizit festlegen. Wenn Sie z. B. `Duration="0"` aus diesem XAML-Beispiel entfernen, wird die Animation als abhängige Animation behandelt, obwohl die [**KeyTime**](https://msdn.microsoft.com/library/windows/apps/BR243169) des Frames "0:0:0" ist.
+**Achtung**  Damit Ihre Animation als unabhängige Animation behandelt wird, müssen Sie `Duration="0"` explizit festlegen. Wenn Sie z.B. `Duration="0"` aus diesem XAML-Beispiel entfernen, wird die Animation als abhängige Animation behandelt, obwohl die [**KeyTime**](https://msdn.microsoft.com/library/windows/apps/BR243169) des Frames "0:0:0" ist.
 
  
 
@@ -333,7 +331,6 @@ Bisher wurden die benutzerdefinierten Animationen vorgestellt, bei denen die Ani
  
 
  
-
 
 
 

@@ -10,18 +10,16 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 3d98936788057d4bd16f1ef44841ef0d8fb0648b
-ms.lasthandoff: 02/07/2017
-
+keywords: windows10, UWP
+ms.openlocfilehash: e7db3553ea158c1337e0a541fd497e16d1202af7
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="toggle-switches"></a>Umschalter
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
-Der Umschalter stellt einen physischen Schalter dar, mit dem Benutzer Dinge ein- oder ausschalten können. Mit **ToggleSwitch**-Steuerelementen können Sie Benutzern zwei Optionen anbieten, die sich gegenseitig ausschließen (z. B. Ein/Aus), wenn eine Option mit der Auswahl unmittelbar bestätigt wird.
+Der Umschalter stellt einen physischen Schalter dar, mit dem Benutzer Dinge ein- oder ausschalten können. Mit **ToggleSwitch**-Steuerelementen können Sie Benutzern zwei Optionen anbieten, die sich gegenseitig ausschließen (z.B. Ein/Aus), wenn eine Option mit der Auswahl unmittelbar bestätigt wird.
 
 <div class="important-apis" >
 <b>Wichtige APIs</b><br/>
@@ -158,7 +156,7 @@ Sie können auch komplexeren Inhalt verwenden, indem Sie die Eigenschaften [**On
 
 ## <a name="recommendations"></a>Empfehlungen
 
--   Ersetzen Sie die Beschriftungen „Ein“ und „Aus“, wenn es spezifischere Beschriftungen für die Einstellung gibt. Wenn Sie mit kurzen Beschriftungen (3 bis 4 Zeichen) einen besser geeigneten binären Gegensatz für eine bestimmte Einstellung darstellen können, verwenden Sie diese Beschriftungen. Wenn die Einstellung „Bilder anzeigen” lautet, könnten Sie beispielsweise „Einblenden”/„Ausblenden” verwenden. Die Verwendung spezifischerer Beschriftungen kann bei der Lokalisierung hilfreich sein.
+-   Ersetzen Sie die Beschriftungen „Ein“ und „Aus“, wenn es spezifischere Beschriftungen für die Einstellung gibt. Wenn Sie mit kurzen Beschriftungen (3bis 4Zeichen) einen besser geeigneten binären Gegensatz für eine bestimmte Einstellung darstellen können, verwenden Sie diese Beschriftungen. Wenn die Einstellung „Bilder anzeigen” lautet, könnten Sie beispielsweise „Einblenden”/„Ausblenden” verwenden. Die Verwendung spezifischerer Beschriftungen kann bei der Lokalisierung hilfreich sein.
 -   Die Beschriftungen „Ein“ und „Aus“ sollten nur ersetzt werden, falls unbedingt nötig. Behalten Sie die Standardbeschriftungen bei, sofern keine benutzerdefinierten Beschriftungen erforderlich sind.
 -   Beschriftungen sollten maximal 4 Zeichen lang sein.
 

@@ -1,26 +1,22 @@
 ---
 title: Rasterizerverhalten bei nicht zugeordneten Kacheln
-description: "Dieser Abschnitt beschreibt Rasterizerverhalten bei nicht zugeordneten Kacheln."
+description: Dieser Abschnittbeschreibt Rasterizerverhalten bei nicht zugeordneten Kacheln.
 ms.assetid: AC7B818D-E52B-4727-AEA2-39CFDC279CE7
-keywords:
-- Rasterizerverhalten bei nicht zugeordneten Kacheln
+keywords: Rasterizerverhalten bei nicht zugeordneten Kacheln
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 80ea4a6d6183d753b31c04d6d5d77d064ba62646
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b4f85689af4d1f4d69c7f50f094fc8487e4b59e6
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="span-iddirect3dconceptsrasterizerbehaviorwithnon-mappedtilesspanrasterizer-behavior-with-non-mapped-tiles"></a><span id="direct3dconcepts.rasterizer_behavior_with_non-mapped_tiles"></span>Rasterizerverhalten bei nicht zugeordneten Kacheln
 
 
-Dieser Abschnitt beschreibt Rasterizerverhalten bei nicht zugeordneten Kacheln.
+Dieser Abschnittbeschreibt Rasterizerverhalten bei nicht zugeordneten Kacheln.
 
 ## <a name="span-iddepthstencilviewspanspan-iddepthstencilviewspanspan-iddepthstencilviewspandepthstencilview"></a><span id="DepthStencilView"></span><span id="depthstencilview"></span><span id="DEPTHSTENCILVIEW"></span>DepthStencilView
 
@@ -50,7 +46,6 @@ Lesevorgänge aus RTVs geben 0 für fehlende Kacheln zurück, und Schreibvorgän
  
 
  
-
 
 
 

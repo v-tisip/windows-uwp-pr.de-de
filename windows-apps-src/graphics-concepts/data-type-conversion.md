@@ -2,21 +2,17 @@
 title: Konvertieren von Datentypen
 description: In den folgenden Abschnitten wird beschrieben, wie Direct3D Konvertierungen zwischen Datentypen behandelt.
 ms.assetid: B50AB8DE-CAED-465B-B18C-81F3A984B8AC
-keywords:
-- Konvertieren von Datentypen
+keywords: Konvertieren von Datentypen
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d6c9e684f4e555bc725077696973be2d3f15a2c5
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 6813f7b55957c185a85fe82b90297b6ba5a470eb
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="data-type-conversion"></a>Konvertieren von Datentypen
 
 
@@ -29,16 +25,16 @@ Der folgende Begriffe werden nachfolgend zur Beschreibung der verschiedenen Form
 
 | Begriff  | Definition                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 |-------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| SNORM | Normalisierter Ganzzahlwert mit Vorzeichen (Signed Normalized Integer). Bei einem n-Bit-Vielfachen von 2 liegt die höchste Zahl bei 1,0f (der 5-Bit-Wert 01111 entspricht z. B. 1,0f), und der kleinste Wert liegt bei -1,0f (der 5-Bit-Wert 10000 entspricht z. B. -1,0f). Des Weiteren entspricht der zweitkleinste Wert -1,0f (der 5-Bit-Wert 10001 entspricht z. B. -1, 0f). Aus diesem Grund gibt es zwei Ganzahldarstellungen für -1,0f. Für 0,0f und 1,0f gibt es nur eine einzige Darstellung. Dadurch ergibt sich eine Ganzzahldarstellungen für gleichmäßig verteilte Gleitkommawerte im Bereich (-1,0f ... 0,0f), und eine zweite Darstellungen für Zahlen im Bereich (0,0f ... 1,0f). |
-| UNORM | Normalisierte Ganzzahl ohne Vorzeichen (Unsigned Normalized Integer). Bei einem n-Bit-Wert stellt der Wert mit allen Bits auf 0 die Zahl 0,0f und der Wert mit allen Bits auf 1 die Zahl 1,0f dar. Es wird eine Folge von gleichmäßig verteilen Gleitkommawerten zwischen 0,0f und 1,0f dargestellt. Ein 2-Bit-UNORM-Wert stellt z. B. 0,0f, 1/3, 2/3 und 1,0f dar.                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| SINT  | Ganzzahl mit Vorzeichen (Signed integer). Ganzzahl mit dem Vielfachen von 2. Ein 3-Bit-SINT-Wert stellt z. B. die Ganzzahlen -4, -3, -2, -1, 0, 1, 2 und 3 dar.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| UINT  | Ganzzahl ohne Vorzeichen (Unsigned Integer). Ein 3-Bit-UINT-Wert stellt z. B. die Ganzzahlen 0, 1, 2, 3, 4, 5, 6 und 7 dar.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| SNORM | Normalisierter Ganzzahlwert mit Vorzeichen (Signed Normalized Integer). Bei einem n-Bit-Vielfachen von 2 liegt die höchste Zahl bei 1,0f (der 5-Bit-Wert 01111 entspricht z.B. 1,0f), und der kleinste Wert liegt bei -1,0f (der 5-Bit-Wert 10000 entspricht z.B. -1,0f). Des Weiteren entspricht der zweitkleinste Wert -1,0f (der 5-Bit-Wert 10001 entspricht z.B. -1, 0f). Aus diesem Grund gibt es zwei Ganzahldarstellungen für -1,0f. Für 0,0f und 1,0f gibt es nur eine einzige Darstellung. Dadurch ergibt sich eine Ganzzahldarstellungen für gleichmäßig verteilte Gleitkommawerte im Bereich (-1,0f ... 0,0f), und eine zweite Darstellungen für Zahlen im Bereich (0,0f ... 1,0f). |
+| UNORM | Normalisierte Ganzzahl ohne Vorzeichen (Unsigned Normalized Integer). Bei einem n-Bit-Wert stellt der Wert mit allen Bits auf 0 die Zahl 0,0f und der Wert mit allen Bits auf 1 die Zahl 1,0f dar. Es wird eine Folge von gleichmäßig verteilen Gleitkommawerten zwischen 0,0f und 1,0f dargestellt. Ein 2-Bit-UNORM-Wert stellt z.B. 0,0f, 1/3, 2/3 und 1,0f dar.                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| SINT  | Ganzzahl mit Vorzeichen (Signed integer). Ganzzahl mit dem Vielfachen von 2. Ein 3-Bit-SINT-Wert stellt z.B. die Ganzzahlen -4, -3, -2, -1, 0, 1, 2 und 3 dar.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| UINT  | Ganzzahl ohne Vorzeichen (Unsigned Integer). Ein 3-Bit-UINT-Wert stellt z.B. die Ganzzahlen 0, 1, 2, 3, 4, 5, 6 und 7 dar.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | FLOAT | Ein Gleitkommawert in einer von Direct3D definierten Darstellung.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | SRGB  | Ähnlich wie bei UNORM stehen hier alle Bits auf 0 für 0,0f und alle Bits auf 1 für 1,0f. Im Gegensatz zu UNORM stellen bei SRGB Ganzzahlen-Bitfolgen zwischen nur 0 und nur 1 einen nicht linearen Verlauf von Gleitkommazahlen zwischen 0,0f und 1,0f dar. Als Farbwerte dargestellt würde dieser nichtlineare Verlauf bei SRGB für einen "durchschnittlichen" Betrachter unter "durchschnittlichen" Betrachtungsbedingungen auf einem "durchschnittlichen" Display als linearer Verlauf von Helligkeitsstufen erscheinen. Ausführliche Informationen finden Sie im SRGB-Standard IEC 61996-2-1 der IEC (International Electrotechnical Commission).                |
 
  
 
-Die oben genannten Begriffe werden häufig als "Format Name Modifiers" verwendet. Sie beschreiben in diesem Zusammenhang, wie Daten im Speicher angeordnet sind und welche Konvertierung beim Transportpfad (u. U. einschließlich Filterung) aus dem Speicher zu einer Pipelineeinheit wie z. B. einem Shader ausgeführt werden müssen.
+Die oben genannten Begriffe werden häufig als "Format Name Modifiers" verwendet. Sie beschreiben in diesem Zusammenhang, wie Daten im Speicher angeordnet sind und welche Konvertierung beim Transportpfad (u. U. einschließlich Filterung) aus dem Speicher zu einer Pipelineeinheit wie z.B. einem Shader ausgeführt werden müssen.
 
 ## <a name="span-idfloatingpointconversionspanspan-idfloatingpointconversionspanspan-idfloatingpointconversionspanfloating-point-conversion"></a><span id="Floating_Point_Conversion"></span><span id="floating_point_conversion"></span><span id="FLOATING_POINT_CONVERSION"></span>Gleitkommawert-Konvertierung
 
@@ -86,7 +82,7 @@ Sofern nicht anders angegeben, werden bei Ganzzahlen alle Konvertierungen zu und
 <td align="left"><p>Bei einem n-Bit-Ganzzahlwert für einen Bereich mit Vorzeichen [-1,0f, 1,0f] wird die Konvertierung in Gleitkommazahlen wie folgt durchgeführt.</p>
 <ul>
 <li>Der kleinste Wert entspricht -1,0f. (der 5-Bit-Wert 10000 entspricht z. B. -1,0f).</li>
-<li>Alle anderen Werte werden in einen Gleitkommawert konvertiert (c). Das Ergebnis lautet = c * (1,0f / (2⁽ⁿ⁻¹⁾-1)). Der 5-Bit-Wert 10001 wird Z. B. zu -15,0f konvertiert, und dann durch 15,0f geteilt. Dies bringt als Ergebnis -1,0f.</li>
+<li>Alle anderen Werte werden in einen Gleitkommawert konvertiert (c). Das Ergebnis lautet = c * (1,0f / (2⁽ⁿ⁻¹⁾-1)). Der 5-Bit-Wert 10001 wird Z.B. zu -15,0f konvertiert, und dann durch 15,0f geteilt. Dies bringt als Ergebnis -1,0f.</li>
 </ul></td>
 </tr>
 <tr class="even">
@@ -236,7 +232,7 @@ Im Rahmen von Direct3D werden Festkomma-Ganzzahl-Darstellungen auf zwei Arten ve
 <tr class="even">
 <td align="left">Festkomma-Ganzzahl</td>
 <td align="left">FLOAT</td>
-<td align="left"><p>Gehen wir davon aus, dass eine bestimmte Festkommadarstellung in einen Gleitkommawert konvertiert wird, der nicht mehr als 24 Bit Informationen speichern kann und bei dem nicht mehr 23 Bits für die Nachkommakomponente reserviert sind. Nehmen wir an, die Festkommazahl fxp liegt in der Form i,f (i = Ganzahl-Bits, f = Nachkomma-Bits) vor. Die Konvertierung zu einem Gleitkommawert lässt sich in Pseudocode folgendermaßen darstellen.</p>
+<td align="left"><p>Gehen wir davon aus, dass eine bestimmte Festkommadarstellung in einen Gleitkommawert konvertiert wird, der nicht mehr als 24Bit Informationen speichern kann und bei dem nicht mehr 23 Bits für die Nachkommakomponente reserviert sind. Nehmen wir an, die Festkommazahl fxp liegt in der Form i,f (i = Ganzahl-Bits, f = Nachkomma-Bits) vor. Die Konvertierung zu einem Gleitkommawert lässt sich in Pseudocode folgendermaßen darstellen.</p>
 <p>float Ergebnis = (float)(fxp &gt;&gt; f) + // Ganzzahl</p>
 ((float)(fxp &amp; (2<sup>f</sup> - 1)) / (2<sup>f</sup>)); // Nachkommawert</td>
 </tr>
@@ -253,7 +249,6 @@ Im Rahmen von Direct3D werden Festkomma-Ganzzahl-Darstellungen auf zwei Arten ve
  
 
  
-
 
 
 

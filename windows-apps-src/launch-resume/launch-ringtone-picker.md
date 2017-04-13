@@ -1,7 +1,7 @@
 ---
 author: TylerMSFT
 title: "Schema „ms-tonepicker“"
-description: "In diesem Thema wird das URI-Schema „ms-tonepicker“ beschrieben, und wie Sie dieses verwenden können, um eine Tonauswahl anzuzeigen, Töne auszuwählen und zu speichern sowie den Anzeigenamen für Töne abzurufen."
+description: "In diesem Thema wird URI-Schema „ms-tonepicker“ beschrieben und wie Sie dieses verwenden können, um eine Tonauswahl anzuzeigen und Töne auszuwählen, zu speichern und den Anzeigenamen für Töne abzurufen."
 ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: 0c17e4fb-7241-4da9-b457-d6d3a7aefccb
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: bc3a34d16f8245ef2e932c46e76ce965ce8755b7
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 84cc1c7347b71a174b25635188ef2972c2bb39d9
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="choose-and-save-tones-using-the-ms-tonepicker-uri-scheme"></a>Wählen und Speichern von Tönen mithilfe des URI-Schemas „ms-tonepicker“
 
 In diesem Thema wird die Verwendung des URI-Schemas **ms-tonepicker:** beschrieben. Dieses URI-Schema kann verwendet werden, um:
@@ -102,7 +99,7 @@ Die Argumente, die Sie zum Anzeigen des Tools für das Speichern von Tönen übe
 
 | Rückgabewerte | Typ | Mögliche Werte | Beschreibung |
 |--------------|------|-------|-------------|
-| Ergebnis | Int32 | 0 – Erfolg.<br>1 – Vom Benutzer abgebrochen.<br>2 – Ungültige Datei.<br>3 – Ungültiger Inhaltstyp.<br>4 – Datei überschreitet die maximal zulässige Größe für Klingeltöne (1 MB in Windows 10).<br>5 – Datei überschreitet die Begrenzung auf 40 Sekunden.<br>6 – Datei wird durch Digital Rights Management geschützt.<br>7 – Ungültige Parameter. | Das Ergebnis des Auswahlvorgangs. |
+| Ergebnis | Int32 | 0 – Erfolg.<br>1 – Vom Benutzer abgebrochen.<br>2 – Ungültige Datei.<br>3 – Ungültiger Inhaltstyp.<br>4 – Datei überschreitet die maximal zulässige Größe für Klingeltöne (1MB in Windows10).<br>5 – Datei überschreitet die Begrenzung auf 40Sekunden.<br>6 – Datei wird durch Digital Rights Management geschützt.<br>7 – Ungültige Parameter. | Das Ergebnis des Auswahlvorgangs. |
 <br>
 **Beispiel: Speichern einer lokalen Musikdatei als Klingelton**
 
@@ -202,4 +199,3 @@ using (var connection = new AppServiceConnection())
     }
 }
 ```
-

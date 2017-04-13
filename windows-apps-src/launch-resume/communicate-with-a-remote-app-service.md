@@ -1,22 +1,19 @@
 ---
 author: PatrickFarley
 title: Kommunikation mit einem App-Remotedienst
-description: "Tauschen Sie Nachrichten mit einem App-Dienst aus, der auf einem Remotegerät mit Project &quot;Rome&quot; ausgeführt wird."
+description: "Tauschen Sie Nachrichten mit einem App-Dienst aus, der auf einem Remotegerät mit Project Rome ausgeführt wird."
 ms.assetid: a0261e7a-5706-4f9a-b79c-46a3c81b136f
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 0cac219625fbc7b6526c81cf11f010589d2bf000
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 3848ab99538ab198f92890ac06da733169084f6a
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="communicate-with-a-remote-app-service"></a>Kommunizieren mit einem App-Remotedienst
+# <a name="communicate-with-a-remote-app-service"></a>Kommunikation mit einem App-Remotedienst
 
 Sie können nicht nur eine App auf einem Remotegerät mithilfe eines URI starten, sondern auch *App-Dienste* auf Remotegeräten ausführen und mit ihnen kommunizieren. Jedes Windows-basierte Gerät kann als Client- oder Hostgerät verwendet werden. Dies bietet Ihnen eine nahezu unbegrenzte Anzahl von Möglichkeiten zur Interaktion mit verbundenen Geräten, ohne eine App in den Vordergrund bringen zu müssen.
 
@@ -89,9 +86,8 @@ Sie haben jetzt eine Verbindung zu einem App-Dienst auf einem aufgerufenen Hostg
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-[Übersicht über verbundene Apps und Geräte (Projekt „Rome“)](connected-apps-and-devices.md)  
+[Übersicht über verbundene Apps und Geräte (Project Rome)](connected-apps-and-devices.md)  
 [Starten einer Remote-App](launch-a-remote-app.md)  
 [Erstellen und Verwenden eines App-Diensts](how-to-create-and-consume-an-app-service.md)  
 [API-Referenz für Remotesysteme](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)  
 [Beispiel für Remotesysteme](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/RemoteSystems)
-

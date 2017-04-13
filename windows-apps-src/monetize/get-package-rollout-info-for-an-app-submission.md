@@ -1,22 +1,19 @@
 ---
 author: mcleanbyron
 description: "Verwenden Sie diese Methode der Windows Store-Übermittlungs-API, um Paketrollout-Informationen für eine App-Übermittlung abzurufen."
-title: "Abrufen der Paketrollout-Informationen für eine App-Übermittlung mithilfe der Windows Store-Übermittlungs-API"
+title: "Abrufen von Informationen zum Rollout für eine App-Übermittlung"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Windows Store-Übermittlungs-API, Paketrollout, App-Übermittlung"
+keywords: "Windows10, UWP, Windows Store-Übermittlungs-API, Paketrollout, App-Übermittlung"
 ms.assetid: 9ada5ac3-a86e-4bb6-8ebc-915ba9649e3c
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: ba9b48f2487016c4df7a14e0dc948dcf01952c99
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 8ff4c8d009d5dfaf6b016337cbfbb0693a0c1f42
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="get-package-rollout-info-for-an-app-submission-using-the-windows-store-submission-api"></a>Abrufen der Paketrollout-Informationen für eine App-Übermittlung mithilfe der Windows Store-Übermittlungs-API
+# <a name="get-rollout-info-for-an-app-submission"></a>Abrufen von Informationen zum Rollout für eine App-Übermittlung
 
 
 Verwenden Sie diese Methode der Windows Store-Übermittlungs-API, um [Paketrollout](../publish/gradual-package-rollout.md)-Informationen für eine Flight-Paket-Übermittlung abzurufen. Weitere Informationen zum Erstellungsprozess einer App-Übermittlung mithilfe der Windows Store-Übermittlungs-API finden Sie unter [Verwalten von App-Übermittlungen](manage-app-submissions.md).
@@ -46,7 +43,7 @@ Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie V
 
 | Header        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorisierung | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;. |
+| Autorisierung | String | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
@@ -54,8 +51,8 @@ Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie V
 
 | Name        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | string | Erforderlich. Die Store-ID der App mit der Übermittlung, deren Paketrollout-Informationen abgerufen werden sollen. Weitere Informationen zur Store-ID finden Sie unter [Anzeigen von Details zur App-Identität](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
-| submissionId | string | Erforderlich. Die ID der Übermittlung mit den Paketrollout-Informationen, die Sie abrufen möchten. Diese ID ist im Dev Center-Dashboard verfügbar und in den Antwortdaten für Anforderungen zum [Erstellen einer App-Übermittlung](create-an-app-submission.md) enthalten.  |
+| applicationId | String | Erforderlich. Die Store-ID der App mit der Übermittlung, deren Paketrollout-Informationen abgerufen werden sollen. Weitere Informationen zur Store-ID finden Sie unter [Anzeigen von Details zur App-Identität](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
+| submissionId | String | Erforderlich. Die ID der Übermittlung mit den Paketrollout-Informationen, die Sie abrufen möchten. Diese ID ist im Dev Center-Dashboard verfügbar und in den Antwortdaten für Anforderungen zum [Erstellen einer App-Übermittlung](create-an-app-submission.md) enthalten.  |
 
 <span/>
 
@@ -79,7 +76,7 @@ Das folgende Beispiel veranschaulicht den JSON-Antworttext für einen erfolgreic
 ```json
 {
     "isPackageRollout": true,
-    "packageRolloutPercentage": 25,
+    "packageRolloutPercentage": 25.0,
     "packageRolloutStatus": "PackageRolloutInProgress",
     "fallbackSubmissionId": "1212922684621243058"
 }
@@ -90,7 +87,7 @@ Ist für die App-Übermittlung schrittweises Paketrollout nicht aktiviert, wird 
 ```json
 {
     "isPackageRollout": false,
-    "packageRolloutPercentage": 0,
+    "packageRolloutPercentage": 0.0,
     "packageRolloutStatus": "PackageRolloutNotStarted",
     "fallbackSubmissionId": "0"
 }
@@ -110,7 +107,6 @@ Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die A
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [Schrittweiser Paketrollout](../publish/gradual-package-rollout.md)
+* [Schrittweises Paketrollout](../publish/gradual-package-rollout.md)
 * [Verwalten von App-Übermittlungen mithilfe der Windows Store-Übermittlungs-API](manage-app-submissions.md)
 * [Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten](create-and-manage-submissions-using-windows-store-services.md)
-

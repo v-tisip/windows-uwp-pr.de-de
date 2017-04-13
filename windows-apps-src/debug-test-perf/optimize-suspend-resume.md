@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 2771d7dae6df171855297ab988bbd00ecfa55d1d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 491ce616f557d26ad7a5fdf1c068f1c9784bd046
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="optimize-suspendresume"></a>Optimieren von Anhalten/Fortsetzen
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Erstellen Sie Apps für die Universelle Windows-Plattform (UWP), die die Verwendung des Prozesslebensdauer-Systems optimieren und nach dem Anhalten oder Beenden effizient fortgesetzt werden.
 
@@ -41,7 +39,7 @@ Ermitteln Sie den Zeitpunkt für die Zustandsspeicherung nicht auf der Grundlage
 
 Verringern Sie den Speicherbedarf Ihrer angehaltenen App. Wenn Ihre angehaltene App weniger Arbeitsspeicher beansprucht, reagiert das gesamte System schneller, und es müssen weniger angehaltene Apps (einschließlich Ihrer eigenen) beendet werden. Achten Sie dabei jedoch darauf, den Speicherbedarf nicht so weit zu verringern, dass sich die Fortsetzung der App erheblich verlangsamt, weil Ihre App erst wieder große Datenmengen in den Arbeitsspeicher laden muss.
 
-Bei verwalteten Apps wird nach Abschluss der Suspend-Handler der App ein Garbage Collection-Durchlauf ausgeführt. Machen Sie sich das zunutze, indem Sie Verweise auf Objekte freigeben, die zur Verringerung des Speicherbedarfs der angehaltenen App beitragen.
+Bei verwalteten Apps wird nach Abschluss der Suspend-Handler der App ein GarbageCollection-Durchlauf ausgeführt. Machen Sie sich das zunutze, indem Sie Verweise auf Objekte freigeben, die zur Verringerung des Speicherbedarfs der angehaltenen App beitragen.
 
 Im Idealfall ist die Anhaltelogik Ihrer App in weniger als einer Sekunde abgeschlossen. Je kürzer der Anhaltevorgang, desto besser. Dies kommt der Reaktionsgeschwindigkeit von anderen Apps und Teilen des Systems zugute. Bei Bedarf kann die Anhaltelogik bis zu fünf Sekunden (Desktopgeräte) bzw. bis zu zehn Sekunden (mobile Geräte) dauern. Nach diesem Zeitlimit wird die App abrupt beendet. Das gilt es zu vermeiden. Denn wenn der Benutzer wieder zu Ihrer App wechselt, wird ein neuer Prozess gestartet, was im Vergleich zur Fortsetzung einer angehaltenen App einen deutlich langsameren Eindruck hinterlässt.
 
@@ -92,7 +90,6 @@ Bei den meisten Apps ist keine Behandlung des [**Resuming**](https://msdn.micros
  
 
  
-
 
 
 

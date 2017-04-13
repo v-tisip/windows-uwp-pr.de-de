@@ -14,13 +14,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 67883baddbd19398018c4df358185b9f8977f0ba
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: c003e78b192aa85440219be739fc2fec6eba3c20
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="texture-addressing-modes"></a>Texturadressierungsmodi
 
 
@@ -82,7 +79,7 @@ Die folgende Abbildung zeigt eine angeklemmte Textur:
 
 Der Rand-Texturadressiermodus verursacht, dass Direct3D eine beliebige Farbe, die *Randfarbe*, für alle Texturkoordinaten außerhalb des Bereichs von 0,0 bis 1,0 (einschließlich) verwendet.
 
-In der folgenden Abbildung gibt die Anwendung an, dass die Textur für den Grundtyp mit einem roten Rahmen angewendet wird.
+In der folgenden Abbildunggibt die Anwendung an, dass die Textur für den Grundtyp mit einem roten Rahmen angewendet wird.
 
 ![Illustration einer Textur und einer Textur mit rotem Rand](images/border.png)
 
@@ -103,7 +100,6 @@ Die Einschränkungen für Texturwiederholungen können von der Größe der Textu
  
 
  
-
 
 
 

@@ -1,6 +1,6 @@
 ---
 author: TylerMSFT
-Description: "Mit der JavaScript-API für die App „Prüfung“ von Microsoft können Sie zuverlässige Bewertungen durchführen. „Prüfung“ stellt einen sicheren Browser bereit, der die Lernenden daran hindert, während eines Tests andere Computer- oder Internetressourcen zu verwenden."
+Description: "Mit der JavaScript-API für die App „Prüfung“ von Microsoft können Sie zuverlässige Bewertungen durchführen. „Prüfung“ stellt einen sicheren Browser bereit, der die Lernenden daran hindert, während eines Tests andere Computer- oder Internet-Ressourcen zu verwenden."
 title: "JavaScript-API „Prüfung”."
 ms.author: twhitney
 ms.date: 02/08/2017
@@ -9,20 +9,17 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: 9bff6318-504c-4d0e-ba80-1a5ea45743da
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: ac1a9b38a9857ae536025e682f98d01135850a19
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: e308280fcecf825061ddf503ce91f8607fcece72
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="take-a-test-javascript-api"></a>JavaScript-API „Prüfung”
 
 Bei [Prüfung](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) handelt es sich um eine browserbasierte App, die gesperrte Onlinebewertungen für wichtige Prüfungen rendert. Es werden API-Standards des SBAC-Browsers für wichtige Tests nach dem Common-Core-Bildungsplan unterstützt. Sie können sich auf den Inhalt der Bewertung anstatt auf das Sperren von Windows konzentrieren.
 
 Prüfung wird vom Microsoft-Browser Edge unterstützt und bietet eine JavaScript-API, mit der Webanwendungen Geräte für Prüfungen sperren können.
 
-Die API (basierend auf der [Common Core SBAC API](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf)) stellt Text-zu-Sprache und die Möglichkeit von diversen Abfragen bereit (z. B. ob das Gerät gesperrt ist, wer der ausführende Benutzer ist oder welche Prozesse auf dem System ausgeführt werden).
+Die API (basierend auf der [Common Core SBAC API](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf)) stellt Text-zu-Sprache und die Möglichkeit von diversen Abfragen bereit (z.B. ob das Gerät gesperrt ist, wer der ausführende Benutzer ist oder welche Prozesse auf dem System ausgeführt werden).
 
 Weitere Informationen zur App selbst finden Sie unter [Technische Referenz zur App „Prüfung“](https://technet.microsoft.com/edu/windows/take-a-test-app-technical).
 
@@ -69,7 +66,7 @@ Löscht zwischengespeicherte Webressourcen.
 `None`
 
 **Anforderungen**  
-Windows 10, Version 1607
+Windows10, Version1607
 
 ---
 
@@ -87,7 +84,7 @@ Schließt den Browser und entsperrt das Gerät.
 `None`
 
 **Anforderungen**  
-Windows 10, Version 1607
+Windows10, Version1607
 
 ---
 
@@ -99,13 +96,13 @@ Sperrt das Gerät. Wird auch zum Entsperren des Geräts verwendet.
 `browser.security.enableLockDown(true|false);`
 
 **Parameter**  
-`lockdown` - `true` wenn die App „Prüfung“ auf dem Sperrbildschirm ausgeführt werden soll und die in dem folgenden [Dokument](https://technet.microsoft.com/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396) behandelten Richtlinien angewendet werden sollen. `False` hält die Ausführung von „Prüfung“ auf dem Sperrbildschirm an und beendet sie. Wirkungslos, wenn die App nicht gesperrt ist.
+`lockdown` - `true` wenn die App „Prüfung“ auf dem Sperrbildschirm ausgeführt werden soll und die in dem folgenden[Dokument](https://technet.microsoft.com/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396) behandelten Richtlinien angewendet werden sollen. `False` hält die Ausführung von „Prüfung“ auf dem Sperrbildschirm an und beendet sie. Wirkungslos, wenn die App nicht gesperrt ist.
 
 **Rückgabewert**  
 `None`
 
 **Anforderungen**  
-Windows 10, Version 1607
+Windows10, Version1607
 
 ---
 
@@ -138,7 +135,7 @@ Ruft die Liste der MAC-Adressen für das Gerät ab.
 `An array of MAC addresses.`
 
 **Anforderungen**  
-Windows 10, Version 1607
+Windows10, Version1607
 
 ---
 
@@ -158,7 +155,7 @@ Ruft die Liste der ausgeführten Benutzerprozesse ab.
 **Anmerkung** Diese Liste enthält keine Systemprozesse.
 
 **Anforderungen**  
-Windows 10, Version 1607
+Windows10, Version1607
 
 ---
 
@@ -176,7 +173,7 @@ Stellt fest, ob auf das Gerät noch der Sperrmodus-Kontext angewendet wird.
 `True indicates that the lockdown context is applied to the device; otherwise false.`
 
 **Anforderungen**  
-Windows 10, Version 1607
+Windows10, Version1607
 
 ---
 
@@ -212,7 +209,7 @@ Ruft den Status der Sprachwiedergabe ab.
 `The speech playback status. Possible values are: “available”, “idle”, “paused”, and “speaking”.`
 
 **Anforderungen**  
-Windows 10, Version 1607
+Windows10, Version1607
 
 ---
 
@@ -230,7 +227,7 @@ Ruft eine Liste der verfügbaren Sprachbefehlpakete ab.
 `The available voice packs. For example: “Microsoft Zira Mobile”, “Microsoft Mark Mobile”`
 
 **Anforderungen**  
-Windows 10, Version 1607
+Windows10, Version1607
 
 ---
 
@@ -251,7 +248,7 @@ Hält die Sprachsynthese an.
 `None`
 
 **Anforderungen**  
-Windows 10, Version 1607
+Windows10, Version1607
 
 ---
 
@@ -269,7 +266,7 @@ Setzt die angehaltene Sprachsynthese fort.
 `None`
 
 **Anforderungen**  
-Windows 10, Version 1607
+Windows10, Version1607
 
 ---
 
@@ -301,7 +298,7 @@ Das Markup für Lautstärke und Tonhöhe muss innerhalb der SSML-Datei (Speech S
 Beim options-Objekt müssen Reihenfolge, Bezeichnung und Groß-/Kleinschreibung dem obigen Beispiel entsprechen.
 
 **Anforderungen**  
-Windows 10, Version 1607
+Windows10, Version1607
 
 ---
 
@@ -319,5 +316,4 @@ Beendet die Sprachsynthese.
 `None`
 
 **Anforderungen**  
-Windows 10, Version 1607
-
+Windows10, Version1607

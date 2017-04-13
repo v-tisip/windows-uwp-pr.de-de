@@ -1,26 +1,23 @@
 ---
 author: TylerMSFT
 title: "Starten einer App auf einem Remotegerät"
-description: "Erfahren Sie, wie Sie mithilfe von Projekt „Rome“ eine App auf einem Remotegerät starten können."
+description: "Erfahren Sie, wie Sie mithilfe von Project Rome eine App auf einem Remotegerät starten können."
 ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
+keywords: Windows10, UWP
 ms.assetid: 54f6a33d-a3b5-4169-8664-653dbab09175
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: e3ef31ed9a90122ae0634274ac5794e67017bc2f
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 15ab4c39f4da1bb524f912d4e6ab6b3e6a5f34c6
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="launch-an-app-on-a-remote-device"></a>Starten einer App auf einem Remotegerät
 
 In diesem Artikel wird das Starten einer Windows-App auf einem Remotegerät beschrieben.
 
-Ab Windows 10, Version 1607, kann eine UWP-App eine UWP-App oder Windows-Desktopanwendung remote auf einem anderen Geräte starten, auf dem ebenfalls Windows 10, Version 1607 oder höher, ausgeführt wird. Voraussetzung ist, dass beide Geräte mit dem gleichen Microsoft-Konto (MSA) angemeldet sind.
+Ab Windows10, Version 1607, kann eine UWP-App eine UWP-App oder Windows-Desktopanwendung remote auf einem anderen Geräte starten, auf dem ebenfalls Windows10, Version 1607 oder höher, ausgeführt wird. Voraussetzung ist, dass beide Geräte mit dem gleichen Microsoft-Konto (MSA) angemeldet sind.
 
 Das Feature für den Remotestart ermöglicht aufgabenorientierte Benutzeroberflächen, in denen ein Benutzer eine Aufgabe auf einem Gerät starten und auf einem anderen Gerät beenden kann. Wenn Benutzer beispielsweise auf dem Mobiltelefon im Auto Musik hören, könnten sie die Wiedergabe anschließend an ihre Xbox One übertragen, wenn sie zu Hause ankommen. Durch Remotestarten können Sie kontextbezogene Daten an die Remote-App übergeben, die gestartet wird, damit diese den Vorgang an der Stelle fortsetzt, an der dieser unterbrochen wurde.
 
@@ -68,7 +65,6 @@ Das [**RemoteLaunchUriStatus**](https://msdn.microsoft.com/library/windows/apps/
 ## <a name="related-topics"></a>Verwandte Themen
 
 [API-Referenz für Remotesysteme](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)  
-[Übersicht über verbundene Apps und Geräte (Projekt „Rome“)](connected-apps-and-devices.md)  
-[Entdecken von Remotegeräten](discover-remote-devices.md)  
+[Übersicht über verbundene Apps und Geräte (Project Rome)](connected-apps-and-devices.md)  
+[Ermitteln von Remotegeräten](discover-remote-devices.md)  
 Das [Beispiel für Remotesysteme](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/RemoteSystems) zeigt die Vorgehensweise zum Erkennen eines Remotesystems, Starten einer App auf einem Remotesystem und Verwenden von App-Diensten zum Senden von Nachrichten zwischen Apps, die auf zwei Systemen ausgeführt werden.
-

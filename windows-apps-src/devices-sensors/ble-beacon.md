@@ -7,18 +7,15 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
+keywords: Windows10, UWP
 ms.assetid: ff10bbc0-03a7-492c-b5fe-c5b9ce8ca32e
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: bfdb1b218676503699674c97fc962ad8161769dd
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: dbd68ceb310a53932108291cad3a33ea944b4d08
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="bluetooth-le-advertisements"></a>Bluetooth LE-Ankündigungen
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Wichtige APIs**
 
@@ -148,7 +145,7 @@ watcher.SignalStrengthFilter.OutOfRangeTimeout = TimeSpan.FromMilliseconds(2000)
 
 ### <a name="gauging-distance"></a>Messen der Entfernung
 
-Wenn der Rückruf Ihrer Bluetooth LE-Überwachung ausgelöst wird, enthalten die „EventArgs“ einen RSSI-Wert, der Sie über die Stärke des empfangenen Signals informiert (d. h., wie stark das Bluetooth-Signal ist).
+Wenn der Rückruf Ihrer Bluetooth LE-Überwachung ausgelöst wird, enthalten die „EventArgs“ einen RSSI-Wert, der Sie über die Stärke des empfangenen Signals informiert (d.h., wie stark das Bluetooth-Signal ist).
 
 ```csharp
 private async void OnAdvertisementReceived(BluetoothLEAdvertisementWatcher watcher, BluetoothLEAdvertisementReceivedEventArgs eventArgs)
@@ -160,4 +157,4 @@ private async void OnAdvertisementReceived(BluetoothLEAdvertisementWatcher watch
 
 Dieses kann zwar in eine ungefähre Entfernung übersetzt werden, sollte jedoch nicht zum Messen der echten Entfernung verwendet werden, da jeder Sender unterschiedlich ist. Unterschiedliche Umweltbedingungen können das Messen der Entfernung erschweren (wie Wände, Sendergehäuse oder sogar die Luftfeuchtigkeit).
 
-Eine Alternative zur Beurteilung der reinen Entfernung besteht im Definieren von „Buckets“. Sender tendieren dazu, 0 – 50 dBm zu melden, wenn sie sehr nahe sind,-50 – -90 dBm, wenn sie sich in einem mittleren Abstand befinden, und weniger als -90 dBm, wenn sie weit entfernt sind. Tests sind die beste Möglichkeit, diese Buckets für Ihre App festzulegen.
+Eine Alternative zur Beurteilung der reinen Entfernung besteht im Definieren von „Buckets“. Sender tendieren dazu, 0–50dBm zu melden, wenn sie sehr nahe sind,-50–-90dBm, wenn sie sich in einem mittleren Abstand befinden, und weniger als -90dBm, wenn sie weit entfernt sind. Tests sind die beste Möglichkeit, diese Buckets für Ihre App festzulegen.

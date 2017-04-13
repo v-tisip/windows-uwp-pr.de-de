@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.assetid: b771d452-c3ac-4d97-8482-eaf81bf34306
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 6be02f9ec4163df510827552e04be78fffe1a8a5
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 6bcc81d80bb3e2167b6d6e5ee078279bd830f04c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="inputs-and-devices"></a>Eingaben und Geräte
 
@@ -88,7 +86,7 @@ Die UWP stellt eine Reihe unterschiedlicher Verfahren für die Behandlung von To
 <div class="side-by-side-content-right">
 <p>
 <b>[Touchpad](touchpad-interactions.md)</b><br/>
-Ein Touchpad vereint die indirekte Multitoucheingabe mit der Präzisionseingabe eines Zeigegeräts (beispielsweise eine Maus). Durch diese Kombination ist das Touchpad sowohl für eine toucheingabeoptimierte Benutzeroberfläche als auch für die kleineren Ziele von Produktivitäts-Apps geeignet.
+Ein Touchpad vereint die indirekte Multitoucheingabe mit der Präzisionseingabe eines Zeigergeräts (beispielsweise eine Maus). Durch diese Kombination ist das Touchpad sowohl für eine toucheingabeoptimierte Benutzeroberfläche als auch für die kleineren Ziele von Produktivitäts-Apps geeignet.
 </p>
 </div>
 </div>
@@ -105,7 +103,7 @@ Die Mauseingabe eignet sich am besten für Benutzerinteraktionen, die Präzision
 <div class="side-by-side-content-right">
 <p>
 <b>[Gamepad und Fernbedienung](gamepad-and-remote-interactions.md)</b><br/>
-UWP-Apps unterstützen jetzt Gamepad- und Fernbedienungseingaben. Gamepads und Fernbedienungen sind die primären Eingabegeräte in Xbox- und TV-Umgebungen.
+UWP-Apps unterstützen jetzt Gamepad- und Remotesteuerungseingaben. Gamepads und Fernbedienungen sind die primären Eingabegeräte in Xbox- und TV-Umgebungen.
 </p>
 </div>
 </div>
@@ -115,7 +113,7 @@ UWP-Apps unterstützen jetzt Gamepad- und Fernbedienungseingaben. Gamepads und F
 <div class="side-by-side-content">
 <p>
 <b>[Mehrfacheingaben](multiple-input-design-guidelines.md)</b><br/>
-Um eine möglichst große Zahl von Benutzern und Geräten zu unterstützen, empfehlen wir, Ihre App für die Kompatibilität mit so vielen Eingabearten wie möglich zu entwickeln (Gesten, Spracherkennung, Toucheingabe, Touchpad, Maus und Tastatur). Dadurch werden Flexibilität, Benutzerfreundlichkeit und Barrierefreiheit optimiert.
+Um eine möglichst große Zahl von Benutzern und Geräten zu unterstützen, empfehlen wir, Ihre App für die Kompatibilität mit so vielen Eingabearten wie möglich zu entwickeln(Gesten, Spracherkennung, Toucheingabe, Touchpad, Maus und Tastatur). Dadurch werden Flexibilität, Benutzerfreundlichkeit und Barrierefreiheit optimiert.
 </p>
 </div>
 </div>
@@ -147,7 +145,7 @@ Mit den Core-Text-APIs im Windows.UI.Text.Core-Namespace kann eine UWP-App Texte
 <div class="side-by-side-content-right">
 <p>
 <b>[Auswählen von Text und Bildern](guidelines-for-textselection.md)</b><br/>
-In diesem Artikel wird das Auswählen und Bearbeiten von Text, Bildern und Steuerelementen beschrieben. Außerdem enthält er Richtlinien für die Benutzeroberfläche, die Sie bei der Verwendung dieser Mechanismen in Ihren Apps berücksichtigen sollten.
+In diesem Artikel wird das Auswählen und Bearbeiten von Text, Bildern und Steuerelementen beschrieben. Außerdem enthält er Richtlinien für die Benutzeroberfläche, die Sie bei Verwendung dieser Mechanismen in Ihren Apps berücksichtigen sollten.
 </p>
 </div>
 </div>
@@ -173,7 +171,7 @@ In diesem Artikel werden die Windows-Elemente für das Zoomen und die Größenä
 <div class="side-by-side-content-right">
 <p>
 <b>[Drehung](guidelines-for-rotation.md)</b><br/>
-In diesem Artikel wird die neue Windows-Benutzeroberfläche beschrieben, die Drehungen unterstützt. Außerdem enthält er Richtlinien für die Benutzeroberfläche, die Sie berücksichtigen sollten, wenn Sie diesen neuen Interaktionsmechanismus in einer UWP-App verwenden.
+In diesem Artikel wird die neue Windows-Benutzeroberfläche beschrieben, die Drehungen unterstützt. Außerdem enthält das Thema Richtlinien für die Benutzeroberfläche, die Sie berücksichtigen sollten, wenn Sie diesen neuen Interaktionsmechanismus in einer UWP-App verwenden.
 </p>
 </div>
 </div>
@@ -183,7 +181,7 @@ In diesem Artikel wird die neue Windows-Benutzeroberfläche beschrieben, die Dre
 <div class="side-by-side-content">
 <div class="side-by-side-content-left">
 <p><b>[Zielbestimmung](guidelines-for-targeting.md)</b><br/>
-Die Touchzielbestimmung in Windows verwendet den vollständigen Kontaktbereich jedes Fingers, der von einem Touchdigitalisierungsgerät erkannt wird. Die größere und komplexere Menge an Eingabedaten, die vom Digitalisierungsgerät gemeldet wird, wird verwendet, um die Präzision bei der Ermittlung des durch den Benutzer (höchstwahrscheinlich) beabsichtigten Ziels zu erhöhen.
+Die Touchzielbestimmung in Windows verwendet den vollständigen Kontaktbereich jedes Fingers, der durch ein Touchdigitalisierungsgerät erkannt wird. Die größere und komplexere Menge an Eingabedaten, die vom Digitalisierungsgerät gemeldet wird, wird verwendet, um die Präzision bei der Ermittlung des durch den Benutzer (höchstwahrscheinlich) beabsichtigten Ziels zu erhöhen.
 </p>
 </div>
 <div class="side-by-side-content-right">
@@ -210,4 +208,3 @@ Wenn Sie sich mit den Geräten vertraut machen, die UWP-Apps unterstützen, kön
   </div>
 </div>
 </div>
-

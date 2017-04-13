@@ -10,12 +10,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 27e91fad32818a920f393cba703773ea7fddcf0d
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 1e8d436e38125378053b92f75f1b2647d7eda8eb
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="accessibility-practices-to-avoid"></a>Nicht empfehlenswerte Praktiken für die Barrierefreiheit
 
@@ -40,4 +38,3 @@ Listet die Praktiken auf, die Sie vermeiden sollten, wenn Sie eine barrierefreie
 * [Barrierefreiheit](accessibility.md)
 * [Barrierefreiheit im Store](accessibility-in-the-store.md)
 * [Prüfliste für die Barrierefreiheit](accessibility-checklist.md)
-

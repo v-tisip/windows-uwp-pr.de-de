@@ -1,34 +1,31 @@
 ---
 author: mtoepke
 title: "Swapchainskalierung und Überlagerungen"
-description: "Hier erfahren Sie, wie Sie skalierte Swapketten zum schnelleren Berechnen und Ausgeben auf mobilen Geräten erstellen und Einblendungs-Swapketten (sofern verfügbar) verwenden, um die visuelle Qualität zu steigern."
+description: "Hier erfahren Sie, wie Sie skalierte Swapchains zum schnelleren Rendern auf mobilen Geräten erstellen und Überlagerungsswapchains (falls verfügbar) verwenden, um die visuelle Qualität zu steigern."
 ms.assetid: 3e4d2d19-cac3-eebc-52dd-daa7a7bc30d1
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Spiele, Swapketten-Skalierung, Einblendungen, directx"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+keywords: Windows10, UWP, Spiele, Swapketten-Skalierung, Einblendungen, directx
 ms.openlocfilehash: 02088fce03c88b4166d49cd36754ac956f254199
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="swap-chain-scaling-and-overlays"></a>Swapketten-Skalierung und Einblendungen
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Hier erfahren Sie, wie Sie skalierte Swapchains zum schnelleren Rendern auf mobilen Geräten erstellen und Überlagerungsswapchains (falls verfügbar) verwenden, um die visuelle Qualität zu steigern.
 
-## <a name="swap-chains-in-directx-112"></a>Swapchains unter DirectX 11.2
+## <a name="swap-chains-in-directx-112"></a>Swapchains unter DirectX11.2
 
 
-Unter Direct3D 11.2 können Sie UWP-Apps (Universelle Windows-Plattform) mit Swapchains erstellen, die von nicht systemeigenen (reduzierten) Auflösungen skaliert werden, um höhere Füllraten zu ermöglichen. Außerdem enthält Direct3D 11.2 APIs zum Rendern mit Hardwareüberlagerungen, damit Sie eine UI in einer anderen Swapchain mit systemeigener Auflösung darstellen können. So kann das Spiel die UI mit der höchsten systemeigenen Auflösung zeichnen und gleichzeitig eine hohe Framerate erzielen. Mobile Geräte und Anzeigen mit hohem DPI-Wert (z. B. 3840 x 2160) lassen sich auf diese Weise bestmöglich nutzen. In diesem Artikel wird erläutert, wie Sie sich überlappende Swapchains verwenden.
+Unter Direct3D11.2 können Sie UWP-Apps (Universelle Windows-Plattform) mit Swapchains erstellen, die von nicht systemeigenen (reduzierten) Auflösungen skaliert werden, um höhere Füllraten zu ermöglichen. Außerdem enthält Direct3D11.2 APIs zum Rendern mit Hardwareüberlagerungen, damit Sie eine UI in einer anderen Swapchain mit systemeigener Auflösung darstellen können. So kann das Spiel die UI mit der höchsten systemeigenen Auflösung zeichnen und gleichzeitig eine hohe Framerate erzielen. Mobile Geräte und Anzeigen mit hohem DPI-Wert (z. B. 3840 x 2160) lassen sich auf diese Weise bestmöglich nutzen. In diesem Artikel wird erläutert, wie Sie sich überlappende Swapchains verwenden.
 
-Mit Direct3D 11.2 wird auch ein neues Feature zur Erzielung einer geringeren Latenz mithilfe von Flipmodell-Swapchains eingeführt. Weitere Informationen finden Sie unter [Reduzieren der Latenz mit DXGI 1.3-Swapchains](reduce-latency-with-dxgi-1-3-swap-chains.md).
+Mit Direct3D11.2 wird auch ein neues Feature zur Erzielung einer geringeren Latenz mithilfe von Flipmodell-Swapchains eingeführt. Weitere Informationen finden Sie unter [Reduzieren der Latenz mit DXGI1.3-Swapchains](reduce-latency-with-dxgi-1-3-swap-chains.md).
 
 ## <a name="use-swap-chain-scaling"></a>Verwenden der Swapchainskalierung
 
@@ -201,7 +198,7 @@ Führen Sie die folgenden Schritte aus, um eine Vordergrund-Swapchain zu erstell
     }
     ```
 
-4.  Für Vordergrund-Swapchains wird immer prämultipliziertes Alpha verwendet. Es wird davon ausgegangen, dass die Farbwerte der einzelnen Pixel vor der Darstellung des Frames bereits mit dem Alphawert multipliziert wurden. Ein BGRA-Pixel mit 100 % Weiß und einem Alpha von 50 % wird beispielsweise auf (0,5, 0,5, 0,5, 0,5) festgelegt.
+4.  Für Vordergrund-Swapchains wird immer prämultipliziertes Alpha verwendet. Es wird davon ausgegangen, dass die Farbwerte der einzelnen Pixel vor der Darstellung des Frames bereits mit dem Alphawert multipliziert wurden. Ein BGRA-Pixel mit 100% Weiß und einem Alpha von 50% wird beispielsweise auf (0,5, 0,5, 0,5, 0,5) festgelegt.
 
     Der Schritt der Alphaprämultiplikation kann in der Ausgabezusammenführungsphase ausgeführt werden, indem ein App-Blend-Status (siehe [**ID3D11BlendState**](https://msdn.microsoft.com/library/windows/desktop/ff476349)) angewendet wird, bei dem das **SrcBlend**-Feld der [**D3D11\_RENDER\_TARGET\_BLEND\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476200)-Struktur auf **D3D11\_SRC\_ALPHA** festgelegt ist. Es können auch Ressourcen mit prämultiplizierten Alphawerten verwendet werden.
 
@@ -329,7 +326,6 @@ Führen Sie die folgenden Schritte aus, um eine Vordergrund-Swapchain zu erstell
  
 
  
-
 
 
 

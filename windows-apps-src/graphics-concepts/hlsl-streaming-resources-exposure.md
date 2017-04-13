@@ -2,21 +2,17 @@
 title: Exposition von HLSL-Streamingressourcen
 description: "Zur Unterstützung von Streamingressourcen in Shader Model 5 ist eine spezielle Microsoft High Level Shader Language (HLSL)-Syntax erforderlich."
 ms.assetid: 00A40D82-0565-43DC-82AB-0675B7E772E3
-keywords:
-- Exposition von HLSL-Streamingressourcen
+keywords: Exposition von HLSL-Streamingressourcen
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 4a6164c2a2dca3dd14998627ab7d9b4b62e02541
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 143e2379e64b38cc30384bd0fb4c983eeacb7f37
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="hlsl-streaming-resources-exposure"></a>Exposition von HLSL-Streamingressourcen
 
 
@@ -46,7 +42,7 @@ Ist weder clamp noch feedback angegeben, gibt der Compiler die Grundanweisung au
 
 Der clamp-Wert 0.0f gibt an, dass kein Clamp-Vorgang ausgeführt wird. Daher kann der Treibercompiler die Anweisung weiter an die Zielarchitektur anpassen. Ist feedback ein NULL-Register in einer Anweisung, wird das Feedback nicht verwendet. Daher kann der Treibercompiler die Anweisung weiter an die Zielarchitektur anpassen.
 
-Wenn der HLSL-Compiler erkennt, dass clamp den Wert 0.0f hat und feedback nicht verwendet wird, gibt der Compiler die entsprechende Grundanweisung aus (z. B. `sample` statt `sample_cl_s`).
+Wenn der HLSL-Compiler erkennt, dass clamp den Wert 0.0f hat und feedback nicht verwendet wird, gibt der Compiler die entsprechende Grundanweisung aus (z.B. `sample` statt `sample_cl_s`).
 
 Besteht ein Streamingressourcenzugriff aus mehreren Bytecodeanweisungen, beispielsweise für strukturierte Ressourcen, aggregiert der Compiler einzelne feedback-Werte mit der OR-Operation, um den endgültigen feedback-Wert zu erzeugen. Dadurch ergibt sich für einen solchen komplexen Zugriff ein einzelner feedback-Wert.
 
@@ -121,7 +117,6 @@ In der folgende Tabelle sind die HLSL-Methoden zusammengefasst, die geändert wu
  
 
  
-
 
 
 

@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: 8ac6d127-3475-4512-896d-80d1e1d66ccd
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: a5315534fc305c85dcf410b4808d2f8ebd844b3e
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 14b8892790b2a2b486b2ddd3e8cb529545c327bd
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="testing-and-debugging-tools-for-process-lifetime-management-plm"></a>Test- und Debugtools für die Prozesslebensdauer-Verwaltung (PLM)
 
 Einer der Hauptunterschiede zwischen UWP-Apps und traditionellen Desktopanwendungen besteht darin, dass UWP-Titel in einem App-Container enthalten sind, der der Prozesslebensdauer-Verwaltung (Process Lifecycle Management, PLM) unterliegt. UWP-Apps können plattformübergreifend durch den Runtime Broker-Dienst angehalten, fortgesetzt oder beendet werden. Um diese Übergänge beim Testen oder Debuggen des Codes, durch den sie behandelt werden, zu erzwingen, stehen Ihnen spezielle Tools zur Verfügung.
@@ -89,4 +86,3 @@ Beachten Sie, dass jeder **/enableDebug**-Aufruf später mit der Option **/disab
 ## <a name="related-topics"></a>Verwandte Themen
 - [Bereitstellen und Debuggen von UWP-Apps](deploying-and-debugging-uwp-apps.md)
 - [Debugging, Tests und Leistung](index.md)
-

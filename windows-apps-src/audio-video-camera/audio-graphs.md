@@ -8,17 +8,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+keywords: Windows10, UWP
 ms.openlocfilehash: 5d98b5366160ca52c02330a05e8b8d749e2296bd
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="audio-graphs"></a>Audiodiagramme
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 In diesem Artikel wird gezeigt, wie die APIs im [**Windows.Media.Audio**](https://msdn.microsoft.com/library/windows/apps/dn914341)-Namespace zum Erstellen von Audiodiagrammen für Audiorouting sowie Misch- und Verarbeitungsszenarien verwendet werden.
@@ -63,7 +60,7 @@ Die [**AudioGraph**](https://msdn.microsoft.com/library/windows/apps/dn914176)-K
 -   Das [**QuantumStarted**](https://msdn.microsoft.com/library/windows/apps/dn914241)-Ereignis tritt auf, wenn das Diagramm die Verarbeitung eines neuen Quantums von Audiodaten beginnt. Das [**QuantumProcessed**](https://msdn.microsoft.com/library/windows/apps/dn914240)-Ereignis tritt auf, wenn die Verarbeitung eines Quantums abgeschlossen ist.
 
 -   Als einzige [**AudioGraphSettings**](https://msdn.microsoft.com/library/windows/apps/dn914185)-Eigenschaft ist [**AudioRenderCategory**](https://msdn.microsoft.com/library/windows/apps/dn297724) erforderlich. Durch Angabe dieses Werts kann das System die Audiopipeline für die angegebene Kategorie optimieren.
--   Die Quantumgröße des Audiodiagramms bestimmt die Anzahl der Samples, die gleichzeitig verarbeitet werden. Standardmäßig beträgt die Quantumgröße 10 ms basierend auf der Standard-Samplingrate. Wenn Sie eine benutzerdefinierte Quantumgröße durch Festlegen der [**DesiredSamplesPerQuantum**](https://msdn.microsoft.com/library/windows/apps/dn914205)-Eigenschaft angeben, müssen Sie auch die [**QuantumSizeSelectionMode**](https://msdn.microsoft.com/library/windows/apps/dn914208)-Eigenschaft auf **ClosestToDesired** festlegen, oder der angegebene Wert wird ignoriert. Wenn dieser Wert verwendet wird, wählt das System eine Quantumgröße aus, die möglich nah an der von Ihnen angegebenen Größe liegt. Um die tatsächliche Quantumgröße zu bestimmen, überprüfen Sie die [**SamplesPerQuantum**](https://msdn.microsoft.com/library/windows/apps/dn914243)-Eigenschaft der **AudioGraph**-Klasse, nachdem sie erstellt wurde.
+-   Die Quantumgröße des Audiodiagramms bestimmt die Anzahl der Samples, die gleichzeitig verarbeitet werden. Standardmäßig beträgt die Quantumgröße 10ms basierend auf der Standard-Samplingrate. Wenn Sie eine benutzerdefinierte Quantumgröße durch Festlegen der [**DesiredSamplesPerQuantum**](https://msdn.microsoft.com/library/windows/apps/dn914205)-Eigenschaft angeben, müssen Sie auch die [**QuantumSizeSelectionMode**](https://msdn.microsoft.com/library/windows/apps/dn914208)-Eigenschaft auf **ClosestToDesired** festlegen, oder der angegebene Wert wird ignoriert. Wenn dieser Wert verwendet wird, wählt das System eine Quantumgröße aus, die möglich nah an der von Ihnen angegebenen Größe liegt. Um die tatsächliche Quantumgröße zu bestimmen, überprüfen Sie die [**SamplesPerQuantum**](https://msdn.microsoft.com/library/windows/apps/dn914243)-Eigenschaft der **AudioGraph**-Klasse, nachdem sie erstellt wurde.
 -   Wenn Sie das Audiodiagramm nur mit Dateien verwenden möchten und keine Ausgabe an ein Audiogerät planen, wird empfohlen, dass Sie die Standard-Quantumgröße verwenden, indem Sie die [**DesiredSamplesPerQuantum**](https://msdn.microsoft.com/library/windows/apps/dn914205)-Eigenschaft nicht festlegen.
 -   Die [**DesiredRenderDeviceAudioProcessing**](https://msdn.microsoft.com/library/windows/apps/dn958522)-Eigenschaft bestimmt Verarbeitungsleistung, die das primäre Darstellungsgerät für die Ausgabe des Audiodiagramms durchführt. Über die **Default**-Einstellung kann das System die Standardaudioverarbeitung für die angegebene Audiowiedergabekategorie verwenden. Durch diese Verarbeitung kann der Sound der Audiodaten auf einigen Geräten wesentlich verbessert werden, insbesondere auf mobilen Geräten mit kleinen Lautsprechern. Durch die **Raw**-Einstellung kann die Leistung durch Minimieren der Signalverarbeitungsleistung verbessert werden. Dies kann jedoch zu einer schlechteren Tonqualität auf einigen Geräten führen.
 -   Wenn die [**QuantumSizeSelectionMode**](https://msdn.microsoft.com/library/windows/apps/dn914208)-Eigenschaft auf **LowestLatency** festgelegt wird, verwendet das Audiodiagramm für [**DesiredRenderDeviceAudioProcessing**](https://msdn.microsoft.com/library/windows/apps/dn958522) automatisch **Raw**.
@@ -107,8 +104,8 @@ Mit einem Dateieingabeknoten können Sie Daten aus einer Audiodatei in das Diagr
 -   Dateieingabeknoten unterstützen die Dateiformate MP3, WAV, WMA und M4A.
 -   Legen Sie die [**StartTime**](https://msdn.microsoft.com/library/windows/apps/dn914130)-Eigenschaft so fest, dass in der Datei der Zeitoffset angegeben wird, an dem die Wiedergabe beginnen soll. Wenn diese Eigenschaft null ist, wird der Anfang der Datei verwendet. Legen Sie die [**EndTime**](https://msdn.microsoft.com/library/windows/apps/dn914118)-Eigenschaft so fest, dass in der Datei der Zeitoffset angegeben wird, an dem die Wiedergabe enden soll. Wenn diese Eigenschaft null ist, wird das Ende der Datei verwendet. Die Startzeit muss vor der Endzeit liegen, und der Wert für die Endzeit muss kleiner oder gleich der Dauer der Audiodatei sein. Sie können die Richtigkeit anhand des [**Duration**](https://msdn.microsoft.com/library/windows/apps/dn914116)-Eigenschaftswerts prüfen.
 -   Suchen Sie eine Position in der Audiodatei, indem Sie die [**Seek**](https://msdn.microsoft.com/library/windows/apps/dn914127)-Methode aufrufen und den Zeitoffset in der Datei angeben, an den die Wiedergabeposition verschoben werden soll. Der angegebene Wert muss zwischen den Eigenschaften [**StartTime**](https://msdn.microsoft.com/library/windows/apps/dn914130) und [**EndTime**](https://msdn.microsoft.com/library/windows/apps/dn914118) liegen. Die aktuelle Wiedergabeposition des Knotens können Sie mit der schreibgeschützten [**Position**](https://msdn.microsoft.com/library/windows/apps/dn914124)-Eigenschaft abrufen.
--   Aktivieren Sie Schleifen für die Audiodatei, indem Sie die [**LoopCount**](https://msdn.microsoft.com/library/windows/apps/dn914120)-Eigenschaft festlegen. Wenn diese nicht Null ist, gibt dieser Wert die Anzahl der Wiederholungen der Datei nach der ersten Wiedergabe an. Wenn Sie **LoopCount** beispielsweise auf 1 festlegen, wird die Datei insgesamt zweimal wiedergegeben. Wenn Sie den Wert auf 5 festlegen, wird die Datei insgesamt sechs Mal wiedergegeben. Indem Sie **LoopCount** auf Null setzen, wird die Datei in einer Schleife unbegrenzt wiedergegeben. Um die Schleife zu beenden, setzen Sie den Wert auf 0 fest.
--   Legen Sie zum Anpassen der Geschwindigkeit, mit der die Audiodatei wiedergegeben wird, die [**PlaybackSpeedFactor**](https://msdn.microsoft.com/library/windows/apps/dn914123)-Eigenschaft fest. Der Wert 1 zeigt die ursprüngliche Geschwindigkeit der Datei an. Der Wert 0,5 legt die halbe Geschwindigkeit und der Wert 2 ist die doppelte Geschwindigkeit fest.
+-   Aktivieren Sie Schleifen für die Audiodatei, indem Sie die [**LoopCount**](https://msdn.microsoft.com/library/windows/apps/dn914120)-Eigenschaft festlegen. Wenn diese nicht Null ist, gibt dieser Wert die Anzahl der Wiederholungen der Datei nach der ersten Wiedergabe an. Wenn Sie **LoopCount** beispielsweise auf1 festlegen, wird die Datei insgesamt zweimal wiedergegeben. Wenn Sie den Wert auf5 festlegen, wird die Datei insgesamt sechs Mal wiedergegeben. Indem Sie **LoopCount** auf Null setzen, wird die Datei in einer Schleife unbegrenzt wiedergegeben. Um die Schleife zu beenden, setzen Sie den Wert auf0 fest.
+-   Legen Sie zum Anpassen der Geschwindigkeit, mit der die Audiodatei wiedergegeben wird, die [**PlaybackSpeedFactor**](https://msdn.microsoft.com/library/windows/apps/dn914123)-Eigenschaft fest. Der Wert1 zeigt die ursprüngliche Geschwindigkeit der Datei an. Der Wert0,5 legt die halbe Geschwindigkeit und der Wert2 ist die doppelte Geschwindigkeit fest.
 
 ##  <a name="file-output-node"></a>Dateiausgabeknoten
 
@@ -248,7 +245,6 @@ Die räumliche Audiowiedergabe wird standardmäßig mit dem HRTF-Algorithmus (He
  
 
  
-
 
 
 

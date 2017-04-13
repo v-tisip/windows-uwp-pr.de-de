@@ -2,21 +2,17 @@
 title: Texturmischung
 description: "Direct3D kann bis zu acht Texturen auf Grundtypen in einer einzigen Übergabe auf Grundtypen mischen."
 ms.assetid: 9AD388FA-B2B9-44A9-B73E-EDBD7357ACFB
-keywords:
-- Texturmischung
+keywords: Texturmischung
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 363adc6537fe2c8421f938dbeee7735c9d336771
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1fed6a38121402e1aa0273b9186a9eab80fdf4ea
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="texture-blending"></a>Texturmischung
 
 
@@ -31,7 +27,7 @@ Direct3D unterstützt die mehrfache Texturmischung in einem Durchgang durch die 
 
 ![Diagramm einer Texturphase](images/texstg.png)
 
-Wie das obige Diagramm zeigt, mischen Texturphasen zwei Argumente unter Verwendung eines angegebenen Operators. Häufig ausgeführte Vorgänge sind u. a. die einfache Modulation oder Hinzufügung der Farb- oder Alphakomponenten der Argumente, insgesamt werden jedoch mehr als zwei Dutzend Vorgänge unterstützt. Die Argumente für eine Phase können eine zugeordnete Textur, der iterierte Farb- oder Alphawert (iteriert im Rahmen der Gouraud-Schattierung), ein beliebiger Farb- oder Alphawert oder das Ergebnis der vorherigen Texturphase sein.
+Wie das obige Diagramm zeigt, mischen Texturphasen zwei Argumente unter Verwendung eines angegebenen Operators. Häufig ausgeführte Vorgänge sind u.a. die einfache Modulation oder Hinzufügung der Farb- oder Alphakomponenten der Argumente, insgesamt werden jedoch mehr als zwei Dutzend Vorgänge unterstützt. Die Argumente für eine Phase können eine zugeordnete Textur, der iterierte Farb- oder Alphawert (iteriert im Rahmen der Gouraud-Schattierung), ein beliebiger Farb- oder Alphawert oder das Ergebnis der vorherigen Texturphase sein.
 
 **Hinweis** Direct3D unterscheidet die Farbmischung von der Alphamischung. Anwendungen stellen Mischvorgänge und Argumente für Farbe und Alpha einzeln ein, und die Ergebnisse dieser Einstellungen sind voneinander unabhängig.
 
@@ -45,7 +41,7 @@ Jede Phase in einem Gerät hat einen nullbasierten Index. Direct3D erlaubt bis z
 
 Verwenden Sie nur die Anzahl der Phasen, die Sie benötigen. die nicht verwendeten Mischungsphasen sind standardmäßig deaktiviert. Wenn Ihre Anwendung nur die ersten beiden Phasen verwendet, müssen daher nur Vorgänge und Argumente für Phase 0 und 1 festgelegt werden. Das System mischt die beiden Phasen und berücksichtigt die deaktivierten Phasen nicht.
 
-Wenn Ihre Anwendung für unterschiedliche Situationen unterschiedlich viele Phasen verwendet – z. B. vier Phasen für einige Objekte und nur zwei für andere -, müssen Sie nicht alle vorher verwendeten Phasen explizit deaktivieren. Eine Möglichkeit besteht darin, den Farbvorgang für die erste nicht verwendete Phase zu deaktivieren; dann werden alle Phasen mit einem höheren Index nicht angewendet. Eine weitere Möglichkeit ist, die Texturzuordnung ganz zu deaktivieren, indem Sie den Farbvorgang für die erste Texturphase (Phase 0) in den deaktivierten Zustand versetzen.
+Wenn Ihre Anwendung für unterschiedliche Situationen unterschiedlich viele Phasen verwendet – z.B. vier Phasen für einige Objekte und nur zwei für andere -, müssen Sie nicht alle vorher verwendeten Phasen explizit deaktivieren. Eine Möglichkeit besteht darin, den Farbvorgang für die erste nicht verwendete Phase zu deaktivieren; dann werden alle Phasen mit einem höheren Index nicht angewendet. Eine weitere Möglichkeit ist, die Texturzuordnung ganz zu deaktivieren, indem Sie den Farbvorgang für die erste Texturphase (Phase 0) in den deaktivierten Zustand versetzen.
 
 ## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>In diesem Abschnitt
 
@@ -83,7 +79,6 @@ Wenn Ihre Anwendung für unterschiedliche Situationen unterschiedlich viele Phas
  
 
  
-
 
 
 

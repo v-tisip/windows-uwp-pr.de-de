@@ -1,26 +1,22 @@
 ---
 title: "Kachelzugriffseinschränkungen bei doppelten Zuordnungen"
-description: "Bei doppelten Zuordnungen gibt es Kachelzugriffseinschränkungen, wie z. B. beim Kopieren von Streamingressourcen mit Quellen- und Zielüberlappung oder beim Rendern von Kacheln innerhalb des Bereichs Rendern freigegeben."
+description: "Bei doppelten Zuordnungen gibt es Kachelzugriffseinschränkungen, wie z.B. beim Kopieren von Streamingressourcen mit Quellen- und Zielüberlappung oder beim Rendern von Kacheln innerhalb des Bereichs Rendern freigegeben."
 ms.assetid: 6E40B1DC-BCF1-4B09-82A8-7B2D9B209A61
-keywords:
-- "Kachelzugriffseinschränkungen bei doppelten Zuordnungen"
+keywords: "Kachelzugriffseinschränkungen bei doppelten Zuordnungen"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 863dba7a8c2fa37a1bef3f3babb8674cbc22424c
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 13895acb5bb14cb1f0e5b91a2060e4eed9265a1c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="tile-access-limitations-with-duplicate-mappings"></a>Kachelzugriffseinschränkungen bei doppelten Zuordnungen
 
 
-Bei doppelten Zuordnungen gibt es Kachelzugriffseinschränkungen, wie z. B. beim Kopieren von Streamingressourcen mit Quellen- und Zielüberlappung oder beim Rendern von Kacheln innerhalb des Bereichs Rendern freigegeben.
+Bei doppelten Zuordnungen gibt es Kachelzugriffseinschränkungen, wie z.B. beim Kopieren von Streamingressourcen mit Quellen- und Zielüberlappung oder beim Rendern von Kacheln innerhalb des Bereichs Rendern freigegeben.
 
 ## <a name="span-idcopyingstreamingresourceswithoverlappingsourceanddestinationspanspan-idcopyingstreamingresourceswithoverlappingsourceanddestinationspanspan-idcopyingstreamingresourceswithoverlappingsourceanddestinationspancopying-streaming-resources-with-overlapping-source-and-destination"></a><span id="Copying_streaming_resources_with_overlapping_source_and_destination"></span><span id="copying_streaming_resources_with_overlapping_source_and_destination"></span><span id="COPYING_STREAMING_RESOURCES_WITH_OVERLAPPING_SOURCE_AND_DESTINATION"></span>Kopieren von Streamingressourcen mit überlappender Quelle und Ziel
 
@@ -73,7 +69,7 @@ Die zweite Option wird hier in Bezug auf die Bedeutung für die Streamingressour
 
 Wenn die anderen freigegebenen Ressourcenzuordnungen zuerst mit neuen Daten initialisiert werden (Wiederverwendung des Speichers für einen anderen Zweck), ist der nachfolgende Lese- oder Rendervorgang geeignet, da Daten nicht über inkompatible Interpretationen übertragen werden. Beim Wechseln zwischen den Zugriffen auf inkompatible Zuordnungen wie hier müssen Sie jedoch Barrieren angeben (Angeben einer Einschränkung der Datenzugriffsreihenfolge zwischen Ressourcen mit mehreren Kacheln).
 
-Wenn das Bindungskennzeichen für das Renderziel oder die Tiefenschablone nicht auf eine der Ressourcen festgelegt ist, die miteinander Zuordnungen teilen, gibt es sehr viel weniger Einschränkungen. Solange die Format- und Surface-Typen (z. B. Texture2D) identisch sind, können Kacheln freigegeben werden. Kompatible Formate ergeben sich unter anderem in Fällen wie z. B. BC\ * Oberflächen und entsprechend großes, unkomprimiertes 32-Bit- oder 16-Bit-Format pro Komponente, wie z. B. BC6H und R32G32B32A32. Viele 32-Bit-pro-Element-Formate können einen Alias mit R32\_\ * sowie (R10G10B10A2\_\ *, R8G8B8A8\_\ *, B8G8R8A8\_\ *, B8G8R8X8\_\ *, R16G16\_\ *); haben. Dieser Vorgang wurde schon immer für Nicht-Streamingressourcen zugelassen.
+Wenn das Bindungskennzeichen für das Renderziel oder die Tiefenschablone nicht auf eine der Ressourcen festgelegt ist, die miteinander Zuordnungen teilen, gibt es sehr viel weniger Einschränkungen. Solange die Format- und Surface-Typen (z.B. Texture2D) identisch sind, können Kacheln freigegeben werden. Kompatible Formate ergeben sich unter anderem in Fällen wie z.B. BC\ * Oberflächen und entsprechend großes, unkomprimiertes 32-Bit- oder 16-Bit-Format pro Komponente, wie z.B. BC6H und R32G32B32A32. Viele 32-Bit-pro-Element-Formate können einen Alias mit R32\_\ * sowie (R10G10B10A2\_\ *, R8G8B8A8\_\ *, B8G8R8A8\_\ *, B8G8R8X8\_\ *, R16G16\_\ *); haben. Dieser Vorgang wurde schon immer für Nicht-Streamingressourcen zugelassen.
 
 Das Freigeben zwischen verpackten und nicht verpackten Kacheln ist geeignet, wenn die Formate kompatibel und die Kacheln mit Volltonfarbe gefüllt sind.
 
@@ -87,7 +83,6 @@ Wenn die Zuordnungen der Ressourcenfreigabekachel keine Ähnlichkeiten aufweisen
  
 
  
-
 
 
 

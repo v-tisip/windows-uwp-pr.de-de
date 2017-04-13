@@ -11,12 +11,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: aba82e911a0641378378bee66d0b07e665ac4b5a
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 86052c0d3224ffe2a9312d2e48c5398a7466eeb0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="alignment-margin-and-padding"></a>Ausrichtung, Rand und Abstand
 
@@ -48,7 +46,7 @@ Die [**Margin**](https://msdn.microsoft.com/library/windows/apps/br208724)-Eigen
 
 In einem allgemeinen Layoutverhalten werden die Komponenten eines [**Margin**](https://msdn.microsoft.com/library/windows/apps/br208724)-Werts zuletzt beschränkt, und sie werden zudem erst beschränkt, nachdem [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) und [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) vollständig auf 0 beschränkt wurden. Gehen Sie daher mit Rändern vorsichtig vor, wenn der Container das Element bereits beschneidet oder beschränkt. Andernfalls kann ein Rand die Ursache dafür sein, dass ein Element scheinbar nicht dargestellt wird (weil eine seiner Abmessungen nach der Anwendung des Rands auf 0 beschränkt wurde).
 
-Mit einer Syntax wie `Margin="20"` können Sie einheitliche Randwerte festlegen. Mit dieser Syntax wird ein einheitlicher Rand von 20 Pixeln auf das Element angewendet, und zwar ein 20-Pixel-Rand an der linken, oberen, rechten und unteren Seite. Randwerte können auch in Form unterschiedlicher Werte auftreten, wobei jeder Wert für einen unterschiedlichen Rand steht, der auf die linke, obere, rechte und untere Seite angewendet wird (in dieser Reihenfolge). Beispiel: `Margin="0,10,5,25"`. Der zugrunde liegende Typ für die [**Margin**](https://msdn.microsoft.com/library/windows/apps/br208724)-Eigenschaft ist eine [**Thickness**](https://msdn.microsoft.com/library/windows/apps/br208864)-Struktur mit Eigenschaften, die [**Left**](https://msdn.microsoft.com/library/windows/apps/hh673893)-, [**Top**](https://msdn.microsoft.com/library/windows/apps/hh673840)-, [**Right**](https://msdn.microsoft.com/library/windows/apps/hh673881)- und [**Bottom**](https://msdn.microsoft.com/library/windows/apps/hh673775)-Werte als separate **Double**-Werte enthalten.
+Mit einer Syntax wie `Margin="20"` können Sie einheitliche Randwerte festlegen. Mit dieser Syntax wird ein einheitlicher Rand von 20Pixeln auf das Element angewendet, und zwar ein 20-Pixel-Rand an der linken, oberen, rechten und unteren Seite. Randwerte können auch in Form unterschiedlicher Werte auftreten, wobei jeder Wert für einen unterschiedlichen Rand steht, der auf die linke, obere, rechte und untere Seite angewendet wird (in dieser Reihenfolge). Beispiel: `Margin="0,10,5,25"`. Der zugrunde liegende Typ für die [**Margin**](https://msdn.microsoft.com/library/windows/apps/br208724)-Eigenschaft ist eine [**Thickness**](https://msdn.microsoft.com/library/windows/apps/br208864)-Struktur mit Eigenschaften, die [**Left**](https://msdn.microsoft.com/library/windows/apps/hh673893)-, [**Top**](https://msdn.microsoft.com/library/windows/apps/hh673840)-, [**Right**](https://msdn.microsoft.com/library/windows/apps/hh673881)- und [**Bottom**](https://msdn.microsoft.com/library/windows/apps/hh673775)-Werte als separate **Double**-Werte enthalten.
 
 Ränder sind additiv. Wenn beispielsweise zwei Elemente jeweils einen einheitlichen Rand von 10 Pixeln angeben und es sich dabei um benachbarte Peers mit beliebiger Ausrichtung handelt, beträgt der Abstand zwischen den Elementen 20 Pixel.
 
@@ -83,4 +81,3 @@ Die [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718)-Eigen
 * [**FrameworkElement.VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208749)
 * [**FrameworkElement.Margin**](https://msdn.microsoft.com/library/windows/apps/br208724)
 * [**Control.Padding**](https://msdn.microsoft.com/library/windows/apps/br209459)
-

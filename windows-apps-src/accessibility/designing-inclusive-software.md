@@ -11,13 +11,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 23d5f86377dd88877987a9d149377aaee8a4ac48
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 124c0eb2d8640559c2573c532c8dc6089f75d0e7
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="designing-inclusive-software-for-windows-10"></a>Entwerfen inklusiver Software für Windows 10  
 
 Erfahren Sie mehr über das Entwerfen inklusiver Apps für die Universelle Windows-Plattform (UWP) für Windows 10.  Entwerfen und erstellen Sie inklusive Software unter Berücksichtigung der Barrierefreiheit.
@@ -47,9 +44,9 @@ Es gibt im Wesentlichen zwei Arten von Benutzern von Hilfstechnologien (Assistiv
 1. Personen, die diese aufgrund von Behinderungen oder Beeinträchtigungen, altersbezogenen Umständen oder vorübergehenden Umständen (beispielsweise aufgrund eines gebrochenen Arms oder Beins) benötigen  
 2. Personen, die diese aus Präferenzgründen verwenden, da sie ein komfortableres oder bequemeres Computererlebnis bieten
 
-Die Mehrzahl der Computerbenutzer (54 Prozent) kennen irgendeine Art von Hilfstechnologie, und 44 Prozent der Computerbenutzer verwenden Hilfstechnologien. Viele von diesen verwenden jedoch keine Hilfstechnologien, die ihnen Vorteile bieten würden (Forrester 2004).  
+Die Mehrzahl der Computerbenutzer (54Prozent) kennen irgendeine Art von Hilfstechnologie, und 44Prozent der Computerbenutzer verwenden Hilfstechnologien. Viele von diesen verwenden jedoch keine Hilfstechnologien, die ihnen Vorteile bieten würden (Forrester2004).  
 
-Eine von Forrester Research im Auftrag von Microsoft 2003-2004 durchgeführte Studie kam zu dem Ergebnis, dass mehr als die Hälfte &mdash; 57 Prozent &mdash; der Computerbenutzer zwischen 18 und 64 Jahren in den Vereinigten Staaten von Hilfstechnologien profitieren könnten. Die Mehrzahl dieser Benutzer gab zwar keine Behinderungen oder Beeinträchtigungen, jedoch bestimmte aufgabenbezogene Schwierigkeiten oder Beeinträchtigungen bei der Verwendung von Computern an. Forrester (2003) ermittelte darüber hinaus die folgenden Zahlen für Benutzer mit spezifischen Schwierigkeiten: Einer von vier Benutzern hat Schwierigkeiten beim Sehen. Einer von vier Benutzern hat Schmerzen in Handgelenken oder Händen. Einer von fünf Benutzern hat Schwierigkeiten beim Hören.  
+Eine von Forrester Research im Auftrag von Microsoft 2003-2004 durchgeführte Studie kam zu dem Ergebnis, dass mehr als die Hälfte &mdash; 57Prozent &mdash; der Computerbenutzer zwischen 18 und 64Jahren in den Vereinigten Staaten von Hilfstechnologien profitieren könnten. Die Mehrzahl dieser Benutzer gab zwar keine Behinderungen oder Beeinträchtigungen, jedoch bestimmte aufgabenbezogene Schwierigkeiten oder Beeinträchtigungen bei der Verwendung von Computern an. Forrester (2003) ermittelte darüber hinaus die folgenden Zahlen für Benutzer mit spezifischen Schwierigkeiten: Einer von vier Benutzern hat Schwierigkeiten beim Sehen. Einer von vier Benutzern hat Schmerzen in Handgelenken oder Händen. Einer von fünf Benutzern hat Schwierigkeiten beim Hören.  
 
 Abgesehen von permanenten Behinderungen können Schwere und Art der Schwierigkeiten, die eine Person hat, während ihres Lebens unterschiedlich sein. Es gibt keine „normalen“ Menschen. Unsere Fähigkeiten unterliegen ständigen Veränderungen. Margaret Meade sagte einmal: „Wir sind alle einzigartig. Diese Einzigartigkeit ist uns allen gemeinsam.“  
 
@@ -65,7 +62,7 @@ Definieren Sie die potenziellen Benutzer Ihrer App. Denken Sie an all die unters
 Treffen Sie sich mit potenziellen Benutzern, die unterschiedliche Merkmale aufweisen. Stellen Sie sicher, dass Sie all ihre Bedürfnisse berücksichtigen, wenn Sie Ihre App entwerfen. Microsoft hat beispielsweise festgestellt, dass gehörlose Benutzer die Popupbenachrichtigungen auf ihren Xbox-Konsolen deaktivieren. Als wir gehörlose Benutzer dazu befragten, erfuhren wir, dass die Popupbenachrichtigungen einen Untertitelungsabschnitt verdecken. Dies wurde behoben, indem die Popups etwas weiter oben im Bildschirm angezeigt werden. Dies ist eine einfache Lösung, die auf der Basis der Telemetriedaten, die das Verhalten ursprünglich anzeigten, nicht notwendigerweise offensichtlich war.  
 
 ### <a name="choose-a-development-framework-wisely"></a>Wählen Sie das Entwicklungsframework überlegt aus  
-In der Entwurfsphase ist das von Ihnen verwendete Entwicklungsframework (d. h. UWP, Win32, Web) von kritischer Bedeutung für die Entwicklung Ihres Produkts. Wenn Sie das Framework auswählen können, denken Sie darüber nach, wie viel Aufwand das Erstellen Ihrer Steuerelemente innerhalb des Frameworks verursachen wird. Welche standardmäßigen oder integrierten Eigenschaften in Bezug auf Barrierefreiheit stellt das Framework bereit? Welche Steuerelemente müssen Sie anpassen? Bei der Wahl Ihres Frameworks entscheiden Sie im Wesentlichen darüber, wie viele der für eine barrierefreie App benötigten Steuerelemente Sie ohne Aufwand erhalten (d. h., wie viele dieser Steuerelemente bereits integriert sind), und wie viele Steuerelemente aufgrund von Steuerelementanpassungen zusätzlichen Entwicklungsaufwand erfordern.   
+In der Entwurfsphase ist das von Ihnen verwendete Entwicklungsframework (d.h. UWP, Win32, Web) von kritischer Bedeutung für die Entwicklung Ihres Produkts. Wenn Sie das Framework auswählen können, denken Sie darüber nach, wie viel Aufwand das Erstellen Ihrer Steuerelemente innerhalb des Frameworks verursachen wird. Welche standardmäßigen oder integrierten Eigenschaften in Bezug auf Barrierefreiheit stellt das Framework bereit? Welche Steuerelemente müssen Sie anpassen? Bei der Wahl Ihres Frameworks entscheiden Sie im Wesentlichen darüber, wie viele der für eine barrierefreie App benötigten Steuerelemente Sie ohne Aufwand erhalten (d.h., wie viele dieser Steuerelemente bereits integriert sind), und wie viele Steuerelemente aufgrund von Steuerelementanpassungen zusätzlichen Entwicklungsaufwand erfordern.   
 
 Verwenden Sie Windows-Standardsteuerelemente, wann immer möglich. Diese Steuerelemente verfügen bereits über die Technologie, die für die Schnittstellenbildung mit Hilfstechnologien erforderlich ist.
 
@@ -91,17 +88,17 @@ Um die Lesbarkeit sicherzustellen und unerwartete Verzerrungen des Texts zu mini
 Für Benutzer mit Sehschwächen ist es wichtig, dass die Benutzeroberfläche skalierbar ist. In Benutzeroberflächen, die bei hohen DPI-Auflösungen (dots per inch, Punkte pro Zoll) nicht ordnungsgemäß skaliert werden, überschneiden sich wichtige Komponenten möglicherweise oder überdecken andere Komponenten, sodass auf diese nicht mehr zugegriffen werden kann.  
 
 #### <a name="color-contrast-ratio"></a>Farbkontrastverhältnis  
-Die aktualisierte Fassung des Abschnitts 508 des Americans with Disability Act (ADA) und andere Gesetze erfordern, dass das Farbkontrastverhältnis zwischen Text und Hintergrund mindestens 5:1 betragen muss. Für großen Text (Schriftgrößen mit 18 Punkt oder 14 Punkt und fett) beträgt das erforderliche Kontrastverhältnis 3:1.  
+Die aktualisierte Fassung des Abschnitts508 des Americans with Disability Act (ADA) und andere Gesetze erfordern, dass das Farbkontrastverhältnis zwischen Text und Hintergrund mindestens 5:1 betragen muss. Für großen Text (Schriftgrößen mit 18Punkt oder 14Punkt und fett) beträgt das erforderliche Kontrastverhältnis 3:1.  
 
 #### <a name="color-combinations"></a>Farbkombinationen  
-Ungefähr 7 Prozent der Männer (und weniger als 1 Prozent der Frauen) weisen eine Farbsehschwäche auf. Benutzer mit Farbenblindheit haben Probleme bei der Unterscheidung zwischen bestimmten Farben. Es ist daher wichtig, dass niemals nur Farben verwendet werden, um Status oder Bedeutung in einer Anwendung zu vermitteln. Für dekorative Bilder (wie Symbole oder Hintergründe) sollten Farbkombinationen so gewählt werden, dass die Wahrnehmung des Bilds durch den farbenblinden Benutzer maximiert wird. Wenn Sie Ihre Benutzeroberfläche von Anfang an unter Berücksichtigung dieser Empfehlungen zur Farbgestaltung entwerfen, macht Ihre App bereits wichtige Fortschritte in Richtung eines inklusiven Designs.  
+Ungefähr 7Prozent der Männer (und weniger als 1Prozent der Frauen) weisen eine Farbsehschwäche auf. Benutzer mit Farbenblindheit haben Probleme bei der Unterscheidung zwischen bestimmten Farben. Es ist daher wichtig, dass niemals nur Farben verwendet werden, um Status oder Bedeutung in einer Anwendung zu vermitteln. Für dekorative Bilder (wie Symbole oder Hintergründe) sollten Farbkombinationen so gewählt werden, dass die Wahrnehmung des Bilds durch den farbenblinden Benutzer maximiert wird. Wenn Sie Ihre Benutzeroberfläche von Anfang an unter Berücksichtigung dieser Empfehlungen zur Farbgestaltung entwerfen, macht Ihre App bereits wichtige Fortschritte in Richtung eines inklusiven Designs.  
 
-## <a name="summary-mdash-seven-steps-for-inclusive-design"></a>Übersicht &mdash;sieben Schritte zum inklusiven Design  
+## <a name="summary-mdash-seven-steps-for-inclusive-design"></a>Übersicht: sieben Schritte zum inklusiven Design  
 Befolgen Sie diese sieben Schritte, um sicherzustellen, dass Ihre Software inklusiv ist.  
 1.    Entscheiden Sie zunächst, ob ein inklusives Design ein wichtiger Aspekt Ihrer Software ist. Wenn dies der Fall ist, informieren Sie sich darüber, wie sie Benutzern in der Praxis helfen kann, zu leben, zu arbeiten und zu spielen, um Anleitungen für Ihr Design zu erhalten.  
-2.    Verwenden Sie wenn möglich die Steuerelemente, die Ihr Framework Ihnen bereitstellt (d. h. Standardsteuerelemente), während Sie Lösungen für Ihre Anforderungen entwickeln, und vermeiden Sie unnötigen Aufwand und unnötige Kosten, um benutzerdefinierte Steuerelemente zu entwickeln.  
+2.    Verwenden Sie wenn möglich die Steuerelemente, die Ihr Framework Ihnen bereitstellt (d.h. Standardsteuerelemente), während Sie Lösungen für Ihre Anforderungen entwickeln, und vermeiden Sie unnötigen Aufwand und unnötige Kosten, um benutzerdefinierte Steuerelemente zu entwickeln.  
 3.    Entwerfen Sie eine logische Hierarchie für Ihr Produkt, und legen Sie fest, an welchen Stellen sich Standardsteuerelemente, mögliche benutzerdefinierte Steuerelemente und der Tastaturfokus in der Benutzeroberfläche befinden.  
-4.    Integrieren Sie nützliche Systemeinstellungen (z. B. Tastaturnavigation, hohen Kontrast und hohe DPI-Auflösung) in Ihr Produkt.  
+4.    Integrieren Sie nützliche Systemeinstellungen (z.B. Tastaturnavigation, hohen Kontrast und hohe DPI-Auflösung) in Ihr Produkt.  
 5.    Implementieren Sie Ihr Design unter Nutzung des [Microsoft-Hubs für die barrierefreie Entwicklung](https://developer.microsoft.com/windows/accessible-apps) und der Spezifikationen Ihres Frameworks in Bezug auf Barrierefreiheit als Referenzpunkten.  
 6.    Testen Sie Ihr Produkt mit Benutzern mit speziellen Bedürfnissen, um sicherzustellen, dass diese das von Ihnen implementierte inklusive Design nutzen können.  
 7.    Stellen Sie das fertige Produkt bereit, und dokumentieren Sie Ihre Implementierung für Personen, die möglicherweise nach Ihnen am Projekt arbeiten.  
@@ -112,4 +109,3 @@ Befolgen Sie diese sieben Schritte, um sicherzustellen, dass Ihre Software inklu
 * [Microsoft-Hub für die barrierefreie Entwicklung](https://developer.microsoft.com/windows/accessible-apps)
 * [Entwickeln von barrierefreien Windows-Apps](developing-inclusive-windows-apps.md) 
 * [Barrierefreiheit](accessibility.md)
-

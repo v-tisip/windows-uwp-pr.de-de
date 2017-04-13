@@ -2,27 +2,23 @@
 title: "Regeln für die Rasterung"
 description: "Regeln für die Rasterung definieren, wie Vektordaten Rasterdaten zugeordnet werden."
 ms.assetid: B604725F-96A5-4DB6-B597-9EC57FBBC024
-keywords:
-- "Regeln für die Rasterung"
+keywords: "Regeln für die Rasterung"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 9267cd0e9d01b8af6a697fbdf90c33cbca786df2
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: c7385f936f8e7bed23433e241aea3806a0d75bdf
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="rasterization-rules"></a>Regeln für die Rasterung
 
 
 Regeln für die Rasterung definieren, wie Vektordaten Rasterdaten zugeordnet werden. Das Rasterdaten werden an Positionen ganzer Zahlen angedockt, die dann entfernt und abgeschnitten werden (um die minimale Anzahl an Pixeln zu zeichnen), und Pro-Pixel-Attribute werden (aus den Vertex-Attributen) vor der Übergabe an einen Pixel-Shader interpoliert.
 
-Es gibt verschiedene Arten von Regeln, die vom Typ des Grundtyps abhängen, der zugeordnet wird, und davon, ob die Daten Multisampling verwenden, um Aliase zu reduzieren. Die folgenden Abbildungen veranschaulichen, wie die Ausnahmefälle behandelt werden.
+Es gibt verschiedene Arten von Regeln, die vom Typ des Grundtyps abhängen, der zugeordnet wird, und davon, ob die Daten Multisampling verwenden, um Aliase zu reduzieren. Die folgenden Abbildungenveranschaulichen, wie die Ausnahmefälle behandelt werden.
 
 ## <a name="span-idtrianglespanspan-idtrianglespanspan-idtrianglespantriangle-rasterization-rules-without-multisampling"></a><span id="Triangle"></span><span id="triangle"></span><span id="TRIANGLE"></span>Regeln für die Dreiecksrasterung (ohne Multisampling)
 
@@ -36,7 +32,7 @@ wobei gilt:
 
 Die Oben-links-Regel stellt sicher, dass angrenzende Dreiecke ein Mal gezeichnet werden.
 
-Diese Abbildung zeigt Beispiele für Pixel, die gezeichnet werden, weil sie innerhalb eines Dreiecks liegen oder die Oben-links-Regel erfüllen.
+Diese Abbildungzeigt Beispiele für Pixel, die gezeichnet werden, weil sie innerhalb eines Dreiecks liegen oder die Oben-links-Regel erfüllen.
 
 ![Beispiele für die Oben-Links-Dreiecksrasterung](images/d3d10-rasterrulestriangle.png)
 
@@ -58,7 +54,7 @@ Die folgende Abbildung zeigt einige Beispiele.
 
 Eine Linie mit Antialiasing ist wie ein Rechteck gerastert (mit Breite = 1). Das Rechteck überschneidet sich mit einem Renderziel und erzeugt Pro-Pixel-Abdeckungswerte, die in Pixel-Shader-Ausgabe-Alphakomponenten multipliziert werden. Es wird kein Antialiasing beim Zeichnen von Linien auf einem Renderziel mit Multisampling durchgeführt.
 
-Es gilt, dass es keine einzelne "beste" Methode zum Durchführen eines Linienrenderings mit Antialiasing gibt. Direct3D verwendet als Richtlinie die in der folgenden Abbildung dargestellte Methode. Diese Methode wurde empirisch abgeleitet ist und zeigt eine Reihe von visuellen Eigenschaften, die als wünschenswert angesehen werden.
+Es gilt, dass es keine einzelne "beste" Methode zum Durchführen eines Linienrenderings mit Antialiasing gibt. Direct3D verwendet als Richtlinie die in der folgenden Abbildungdargestellte Methode. Diese Methode wurde empirisch abgeleitet ist und zeigt eine Reihe von visuellen Eigenschaften, die als wünschenswert angesehen werden.
 
 Hardware muss diesem Algorithmus nicht exakt entsprechen. Tests für diesen Verweis sollten "angemessene" Toleranzen haben, die auf einigen der weiter unten aufgelisteten Prinzipien basieren, sodass verschiedene Hardwareimplementierungen und Filter-Kernel-Größen ermöglicht werden. Diese bei der Hardwareimplementierung zulässige Flexibilität kann jedoch nicht über Direct3D zu Anwendungen kommuniziert werden. Es können lediglich Linien gezeichnet und ihr Aussehen beobachten/gemessen werden.
 
@@ -102,7 +98,7 @@ Regeln für die Grundtypenrasterung werden normalerweise durch Multisample-Antia
 
 Multisampling-Formate können in Renderzielen verwendet werden, die wieder in Shader mithilfe von [load](https://msdn.microsoft.com/library/windows/desktop/bb509694) gelesen werden können, da für einzelne Beispiele, auf die der Shader zugreift, keine Lösung erforderlich ist. Tiefenformate werden für Multisample-Ressourcen nicht unterstützt. Daher sind Tiefenformate auf Renderziele beschränkt.
 
-Formate ohne Typ unterstützen Multisampling, um einer Ressourcenansicht das Interpretieren von Daten auf unterschiedliche Weise zu ermöglichen. Sie können z. B. eine Multisample-Ressource mit R8G8B8A8\_TYPELESS erstellen, sie mithilfe einer Renderzielansichts-Ressource mit einem R8G8B8A8\_UINT-Format rendern und dann den Inhalt in eine andere Ressource mit einem R8G8B8A8\_UNORM-Datenformat auflösen.
+Formate ohne Typ unterstützen Multisampling, um einer Ressourcenansicht das Interpretieren von Daten auf unterschiedliche Weise zu ermöglichen. Sie können z.B. eine Multisample-Ressource mit R8G8B8A8\_TYPELESS erstellen, sie mithilfe einer Renderzielansichts-Ressource mit einem R8G8B8A8\_UINT-Format rendern und dann den Inhalt in eine andere Ressource mit einem R8G8B8A8\_UNORM-Datenformat auflösen.
 
 ### <a name="span-idhardwaresupportspanspan-idhardwaresupportspanspan-idhardwaresupportspanhardware-support"></a><span id="Hardware_Support"></span><span id="hardware_support"></span><span id="HARDWARE_SUPPORT"></span>Hardwareunterstützung
 
@@ -126,7 +122,7 @@ Pixel-Shader werden immer mindestens mithilfe eines 2x2-Pixelbereichs ausgeführ
 
 Wenn Ableitungen für ein Attribut angefordert werden, das mir Schwerpunkt gesampelt wurde, wird die Berechnung der Hardware nicht angepasst, was zu ungenauen Ableitungen führen kann. Ein Shader erwartet einen Einheitenvektor im Renderzielraum, erhält jedoch unter Umständen einen Vektor ohne Einheit mit Bezug auf einen anderen Vektorraum. Daher liegt es in der Verantwortung der Anwendung, Vorsicht walten zu lassen, wenn Ableitungen von Attributen angefordert werden, die mit Schwerpunkt gesampelt werden.
 
-Tatsächlich empfiehlt es sich, Ableitungen und Schwerpunkt-Sampling nicht miteinander zu kombinieren. Schwerpunkt-Sampling ist in Situationen hilfreich, in denen es wichtig ist, das interpolierte Attribute eines Grundtyps nicht extrapoliert werden, was aber Nachteile mit sich bringt, z. B. dass Attribute anscheinend springen, wenn der Rand eines Grundtyps einen Pixel kreuzt (anstatt sich kontinuierlich zu ändern) oder dass Ableitungen nicht von Textur-Sampling-Vorgängen verwendet werden können, die LOD ableiten.
+Tatsächlich empfiehlt es sich, Ableitungen und Schwerpunkt-Sampling nicht miteinander zu kombinieren. Schwerpunkt-Sampling ist in Situationen hilfreich, in denen es wichtig ist, das interpolierte Attribute eines Grundtyps nicht extrapoliert werden, was aber Nachteile mit sich bringt, z.B. dass Attribute anscheinend springen, wenn der Rand eines Grundtyps einen Pixel kreuzt (anstatt sich kontinuierlich zu ändern) oder dass Ableitungen nicht von Textur-Sampling-Vorgängen verwendet werden können, die LOD ableiten.
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Verwandte Themen
 
@@ -138,7 +134,6 @@ Tatsächlich empfiehlt es sich, Ableitungen und Schwerpunkt-Sampling nicht mitei
  
 
  
-
 
 
 

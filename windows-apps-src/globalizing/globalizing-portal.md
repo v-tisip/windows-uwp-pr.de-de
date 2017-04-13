@@ -1,6 +1,6 @@
 ---
 author: DelfCo
-Description: "Globalisierung bedeutet das Entwerfen und Entwickeln einer App für verschiedene globale Märkte, ohne dass Änderungen oder Anpassungen erforderlich sind."
+Description: "Globalisierung beschreibt den Entwurf und die Entwicklung der App für verschiedene globale Märkte, ohne dass Änderungen oder Anpassungen erforderlich sind."
 Search.SourceType: Video
 title: Globalisierung und Lokalisierung
 ms.assetid: c0791eec-5bb8-4a13-8977-61d7d98e35ce
@@ -11,18 +11,15 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: fa7757a8657abfc84ee905cb05b0b3addc59f64e
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: f46a48e6f93dc152a76ab5791d722dbe757a90b6
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="globalization-and-localization"></a>Globalisierung und Lokalisierung
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Windows wird auf der ganzen Welt von Benutzern mit unterschiedlicher Kultur, Herkunft und Sprache verwendet. Benutzer sprechen beliebige Sprache oder sogar mehrere Sprachen. Die Benutzer sind über die ganze Welt verteilt, und jede Sprache kann ortsabhängig überall gesprochen werden. Sie können die Marktchancen Ihrer App erweitern, indem Sie mithilfe der *Globalisierung* und *Lokalisierung* eine variable App entwickeln.
+Windows wird auf der ganzen Welt in verschiedenen Märkten und von Anwendern unterschiedlicher Kulturen, Herkunft und Sprachen verwendet. Benutzer sprechen beliebige Sprache oder sogar mehrere Sprachen. Die Benutzer sind über die ganze Welt verteilt, und jede Sprache kann ortsabhängig überall gesprochen werden. Sie können die Marktchancen Ihrer App erweitern, indem Sie mithilfe der *Globalisierung* und *Lokalisierung* eine variable App entwickeln.
 
 **Globalisierung** beschreibt den Entwurf und die Entwicklung der App für verschiedene globale Märkte, ohne dass Änderungen oder Anpassungen erforderlich sind.
 
@@ -87,7 +84,7 @@ Das folgende Video enthält eine kurze Einführung dazu, wie Sie Ihre App für d
 
  
 
-Weitere Informationen finden Sie in der ursprünglich für Windows 8.x erstellten Dokumentation, die weiterhin für universelle Windows-Plattform-Apps (UWP) und Windows 10 gilt.
+Weitere Informationen finden Sie in der ursprünglich für Windows8.x erstellten Dokumentation, die weiterhin für universelle Windows-Plattform-Apps (UWP) und Windows10 gilt.
 
 -   [Globalisierung Ihrer App](https://msdn.microsoft.com/library/windows/apps/xaml/hh965328)
 -   [Sprachabgleich](https://msdn.microsoft.com/library/windows/apps/xaml/jj673578.aspx)
@@ -98,7 +95,6 @@ Weitere Informationen finden Sie in der ursprünglich für Windows 8.x erstellt
  
 
  
-
 
 
 

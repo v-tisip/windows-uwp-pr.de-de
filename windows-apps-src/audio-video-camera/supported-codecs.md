@@ -1,7 +1,7 @@
 ---
 author: drewbatgit
 ms.assetid: 9347AD7C-3A90-4073-BFF4-9E8237398343
-description: "In diesem Artikel sind die Audio- und Videocodecs sowie die Formate aufgeführt, die für UWP-Apps unterstützt werden."
+description: "In diesem Artikel wird aufgeführt, welche Audio- und Videocodecs und welche Formate für UWP-Apps unterstützt werden."
 title: "Unterstützte Codecs"
 ms.author: drewbat
 ms.date: 02/08/2017
@@ -9,19 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 2c477e9dc0cc86534a179edb8e3a9415f4872d93
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 0973195b8777a0154b733ba2625327bb9296bd6b
+ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
+translationtype: HT
 ---
-
 # <a name="supported-codecs"></a>Unterstützte Codecs
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
-In diesem Artikel wird aufgeführt, welche Audio-, Video- und Bildcodecs und -formate für UWP-Apps unterstützt werden.
+In diesem Artikel ist die Verfügbarkeit von Audio-, Video- und Bild-Codecs und -Formaten für UWP-Apps standardmäßig für jede Gerätefamilie aufgeführt. Beachten Sie, dass diese Tabellen die Codecs enthalten, die in der Windows10-Installation für die angegebene Gerätefamilie enthalten sind. Benutzer und Apps können zusätzliche Codecs installieren, die unter Umständen zur Verwendung zur Verfügung stehen. Sie können zur Laufzeit den Satz von Codecs abfragen, die derzeit für ein bestimmtes Gerät verfügbar sind. Weitere Informationen finden Sie unter [Abfragen von auf einem Gerät installierten Codecs](codec-query.md).
 
 In den folgenden Tabellen steht „D“ für Decoderunterstützung und „E“ für Encoderunterstützung.
 
@@ -71,7 +68,7 @@ In den folgenden Tabellen wird die Unterstützung von Audiocodecs und Formaten f
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">HE-AAC v1/AAC+</td>
+<td align="left">HE-AAC v1 / AAC+</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -86,7 +83,7 @@ In den folgenden Tabellen wird die Unterstützung von Audiocodecs und Formaten f
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">HE-AAC v2/eAAC+</td>
+<td align="left">HE-AAC v2 / eAAC+</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -131,7 +128,7 @@ In den folgenden Tabellen wird die Unterstützung von Audiocodecs und Formaten f
 <td align="left"></td>
 </tr>
 <tr class="odd">
-<td align="left">EAC3/EC3</td>
+<td align="left">EAC3 / EC3</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left">D</td>
@@ -1004,7 +1001,7 @@ In den folgenden Tabellen wird die Unterstützung von Audiocodecs und Formaten f
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">HE-AAC v1/AAC+</td>
+<td align="left">HE-AAC v1 / AAC+</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1019,7 +1016,7 @@ In den folgenden Tabellen wird die Unterstützung von Audiocodecs und Formaten f
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">HE-AAC v2/eAAC+</td>
+<td align="left">HE-AAC v2 / eAAC+</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left"></td>

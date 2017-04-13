@@ -2,21 +2,17 @@
 title: Statusobjekte
 description: "Der Gerätestatus wird in Statusobjekten gruppiert, wodurch der Aufwand für Statusänderungen erheblich reduziert wird. Es gibt mehrere Statusobjekte und jedes dient der Initialisierung einer Statusgruppe für eine bestimmte Pipelinephase. Statusobjekte variieren je nach der Version von Direct3D."
 ms.assetid: D998745C-2B75-4E59-9923-AD1A17A92E05
-keywords:
-- Statusobjekte
+keywords: Statusobjekte
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d3cdc8fda5062ea0b659029d8168a5df5be2fbe6
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: f046ab40ef4e05a8542f259330269e75ceb06f5f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="state-objects"></a>Statusobjekte
 
 
@@ -54,7 +50,7 @@ In Direct3D ist das Samplerobjekt nicht an eine bestimmte Textur gebunden, es be
 
 Die Verwendung von Statusobjekten in der API führt zu einer Reihe von Leistungsvorteilen. Dazu gehören: Überprüfen des Status bei der Objekterstellung, Aktivieren des Zwischenspeicherns von Statusobjekten in der Hardware und erhebliches Verringern der Statusmenge, die beim API-Aufruf für eine Statusfestlegung übergeben wird (durch Übergabe eines Handles an das Statusobjekt anstelle des Status).
 
-Um diese Leistungsverbesserungen zu erzielen, sollten Sie Ihre Statusobjekte beim Start Ihrer Anwendung erstellen, und zwar vor der Renderschleife. Statusobjekte sind unveränderlich, d. h., nachdem sie erstellt wurden, können sie nicht mehr geändert werden. Sie müssen sie stattdessen löschen und neu erstellen.
+Um diese Leistungsverbesserungen zu erzielen, sollten Sie Ihre Statusobjekte beim Start Ihrer Anwendung erstellen, und zwar vor der Renderschleife. Statusobjekte sind unveränderlich, d.h., nachdem sie erstellt wurden, können sie nicht mehr geändert werden. Sie müssen sie stattdessen löschen und neu erstellen.
 
 Sie können mehrere Samplerobjekte mit verschiedenen Samplerstatuskombinationen erstellen. Das Ändern des Samplerstatus erfolgt dann durch Aufrufen der entsprechenden „Set”-API, die ein Handle für das Objekt (statt des Samplerstatus) übergibt. Der Aufwand für eine Statusänderung bei jedem Rendern von Frames wird dadurch deutlich reduziert, da die Anzahl der Aufrufe und die Menge an Daten erheblich verringert werden.
 
@@ -70,7 +66,6 @@ Alternativ können Sie das Effektsystem verwenden, das automatisch die effizient
  
 
  
-
 
 
 

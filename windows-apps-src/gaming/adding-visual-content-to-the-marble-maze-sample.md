@@ -1,25 +1,22 @@
 ---
 author: mtoepke
 title: "Hinzufügen von visuellem Inhalt zum Marble Maze-Beispiel"
-description: "In diesem Dokument wird beschrieben, wie das Spiel „Marble Maze” Direct3D und Direct2D in der App-Umgebung der universellen Windows Plattform verwendet wird, sodass Sie die Muster erlernen und anpassen können, wenn Sie mit Ihrem eigenen Spielinhalt arbeiten."
+description: "In diesem Dokument wird beschrieben, wie das Spiel Marble Maze Direct3D und Direct2D in der App-Umgebung der universellen Windows Plattform verwendet wird, sodass Sie die Muster erlernen und anpassen können, wenn Sie mit Ihrem eigenen Spielinhalt arbeiten."
 ms.assetid: 6e43422e-e1a1-b79e-2c4b-7d5b4fa88647
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Spiele, Beispiel, DirectX, Grafiken"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+keywords: Windows10, UWP, Spiele, Beispiel, DirectX, Grafiken
 ms.openlocfilehash: b8ee07dc45e53f2ea73f87111fa9eb155854f10a
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="adding-visual-content-to-the-marble-maze-sample"></a>Hinzufügen von visuellem Inhalt zum Marble Maze-Beispiel
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 In diesem Dokument wird beschrieben, wie das Spiel Marble Maze Direct3D und Direct2D in der UWP-App-Umgebung (Universelle Windows-Plattform) verwendet, sodass Sie die Muster erlernen und anpassen können, wenn Sie mit Ihrem eigenen Spielinhalt arbeiten. Informationen dazu, wie visuelle Spielkomponenten in die Anwendungsgesamtstruktur von Marble Maze passen, finden Sie unter [Marble Maze-Anwendungsstruktur](marble-maze-application-structure.md).
@@ -53,20 +50,20 @@ Es folgen einige wichtige Punkte, die in diesem Dokument erläutert werden und d
 ## <a name="getting-started-with-directx-graphics"></a>Erste Schritte mit DirectX-Grafiken
 
 
-Bei der Planung des Spiels für die universelle Windows-Plattform (UWP) – Marble Maze – haben wir uns für C++ und Direct3D 11.1 entschieden, da dies jeweils die beste Wahl zum Erstellen von 3D-Spielen ist, die maximale Kontrolle über das Rendern und hohe Leistung erfordern. DirectX 11.1 unterstützt Hardware von DirectX 9 bis DirectX 11 und kann Sie daher dabei unterstützen, mehr Kunden auf effizientere Art und Weise zu erreichen, da Sie so den Code für frühere DirectX-Versionen nicht neu schreiben müssen.
+Bei der Planung des Spiels für die universelle Windows-Plattform (UWP)– Marble Maze– haben wir uns für C++ und Direct3D 11.1 entschieden, da dies jeweils die beste Wahl zum Erstellen von 3D-Spielen ist, die maximale Kontrolle über das Rendern und hohe Leistung erfordern. DirectX 11.1 unterstützt Hardware von DirectX 9 bis DirectX 11 und kann Sie daher dabei unterstützen, mehr Kunden auf effizientere Art und Weise zu erreichen, da Sie so den Code für frühere DirectX-Versionen nicht neu schreiben müssen.
 
 Marble Maze verwendet Direct3D 11.1 zum Rendern der 3-D-Spielobjekte, und zwar für die Murmel und das Labyrinth. Marble Maze nutzt zudem Direct2D, DirectWrite und die Windows-Bilderstellungskomponente (Windows Imaging Component, WIC) zum Zeichnen der 2-D-Spielobjekte, beispielsweise der Menüs und des Timers. Zuletzt nutzt Marble Maze XAML-Code, um eine App-Leiste bereitzustellen, und Sie können XAML-Steuerelemente hinzufügen.
 
 Die Entwicklung eines Spiels erfordert Planung. Wenn Sie sich noch nicht mit der DirectX-Grafik auskennen, empfehlen wir das Lesen des Themas "Erstellen eines DirectX-Spiels", um sich mit den Grundkonzepten der Erstellung eines UWP-DirectX-Spiels vertraut zu machen. Beim Durchlesen dieses Dokuments und Durchgehen des Marble Maze-Quellcodes können Sie sich auf die folgenden Ressourcen beziehen, um detailliertere Informationen zu DirectX-Grafiken zu erhalten.
 
--   [Direct3D 11-Grafiken](https://msdn.microsoft.com/library/windows/desktop/ff476080) Beschreibt Direct3D 11, eine leistungsstarke, hardwarebeschleunigte 3D-Grafik-API zum Rendern von 3D-Geometrien auf der Windows-Plattform.
+-   [Direct3D11-Grafiken](https://msdn.microsoft.com/library/windows/desktop/ff476080) Beschreibt Direct3D11, eine leistungsstarke, hardwarebeschleunigte 3D-Grafik-API zum Rendern von 3D-Geometrien auf der Windows-Plattform.
 -   [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370990) Beschreibt Direct2D, eine hardwarebeschleunigte 2D-Grafik-API, die das Rendern mit hoher Leistung und in hoher Qualität für 2D-Geometrien, Bitmaps und Text bereitstellt.
 -   [DirectWrite](https://msdn.microsoft.com/library/windows/desktop/dd368038) Enthält eine Beschreibung von DirectWrite, womit das Rendern von Text in hoher Qualität unterstützt wird.
 -   [Windows-Bilderstellungskomponente](https://msdn.microsoft.com/library/windows/desktop/ee719902) Beschreibt WIC, eine erweiterbare Plattform, die eine untergeordnete API für digitale Bilder bereitstellt.
 
 ### <a name="feature-levels"></a>Featureebenen
 
-In Direct3D 11 wird ein Paradigma mit der Bezeichnung Featureebenen eingeführt. Eine Featureebene ist ein klar definierter Satz mit GPU-Funktionen. Mithilfe von Featureebenen können Sie Ihr Spiel für die Ausführung mit früheren Versionen von Direct3D-Hardware vorsehen. Marble Maze unterstützt die Featureebene 9.1, da keine erweiterten Features von den höheren Ebenen erforderlich sind. Es wird empfohlen, einen möglichst großen Hardwarebereich zu unterstützen und den Spielinhalt zu skalieren, sodass all Ihre Kunden von einem großartigen Spielerlebnis profitieren können – ganz gleich, ob Sie einen normalen Computer oder Highend-Computer besitzen. Weitere Informationen zu Featureebenen finden Sie unter [Direct3D 11 unter kompatibler Hardware](https://msdn.microsoft.com/library/windows/desktop/ff476872).
+In Direct3D 11 wird ein Paradigma mit der Bezeichnung Featureebenen eingeführt. Eine Featureebene ist ein klar definierter Satz mit GPU-Funktionen. Mithilfe von Featureebenen können Sie Ihr Spiel für die Ausführung mit früheren Versionen von Direct3D-Hardware vorsehen. Marble Maze unterstützt die Featureebene 9.1, da keine erweiterten Features von den höheren Ebenen erforderlich sind. Es wird empfohlen, einen möglichst großen Hardwarebereich zu unterstützen und den Spielinhalt zu skalieren, sodass all Ihre Kunden von einem großartigen Spielerlebnis profitieren können – ganz gleich, ob Sie einen normalen Computer oder Highend-Computer besitzen. Weitere Informationen zu Featureebenen finden Sie unter [Direct3D11 unter kompatibler Hardware](https://msdn.microsoft.com/library/windows/desktop/ff476872).
 
 ## <a name="initializing-direct3d-and-direct2d"></a>Initialisieren von Direct3D und Direct2D
 
@@ -254,7 +251,7 @@ DX::ThrowIfFailed(
 
 Die **DeviceResources::CreateWindowSizeDependentResources**-Methode initialisiert die Grafikressourcen anhand einer Vorgehensweise, die für die meisten Spiele geeignet ist.
 
-> **Hinweis**  Der Begriff *Ansicht* hat in der Windows-Runtime eine andere Bedeutung als in Direct3D. In der Windows-Runtime bezieht sich eine Ansicht auf die Sammlung von Einstellungen zur Benutzeroberfläche für eine App. Dazu gehören auch der Anzeigebereich und das Eingabeverhalten sowie der zum Verarbeiten verwendete Thread. Die benötigte Konfiguration und die benötigten Einstellungen geben Sie beim Erstellen einer Ansicht an. Der Einrichtungsprozess der App-Ansicht wird unter [Marble Maze-Anwendungsstruktur](marble-maze-application-structure.md) beschrieben. In Direct3D hat der Begriff "Ansicht" mehrere Bedeutungen. Zunächst werden anhand einer Ressourcenansicht die Unterressourcen definiert, auf die eine Ressource zugreifen kann. Wenn beispielsweise ein Texturobjekt einer Shader-Ressourcenansicht zugeordnet wird, kann dieser Shader später auf die Textur zugreifen. Ein Vorteil einer Ressourcenansicht besteht darin, dass Daten auf unterschiedliche Art und Weise in verschiedenen Stufen der Rendering-Pipeline interpretiert werden können. Weitere Informationen zu Ressourcenansichten finden Sie unter [Texturansichten (Direct3D 10)](https://msdn.microsoft.com/library/windows/desktop/bb205128). Bei der Verwendung im Kontext einer Ansichtstransformation oder Ansichtstransformationsmatrix bezieht sich der Begriff Ansicht auf den Standort und die Ausrichtung der Kamera. Bei einer Ansichtstransformation werden Objekte in der Welt um die Position und Ausrichtung der Kamera herum neu angeordnet. Weitere Informationen zu Ansichtstransformationen finden Sie unter [Ansichtstransformation (Direct3D 9)](https://msdn.microsoft.com/library/windows/desktop/bb206342). Die Verwendung von Ressourcen- und Matrixansichten in Marble Maze werden in diesem Thema detaillierter beschrieben.
+> **Hinweis**  Der Begriff *Ansicht* hat in der Windows-Runtime eine andere Bedeutung als in Direct3D. In der Windows-Runtime bezieht sich eine Ansicht auf die Sammlung von Einstellungen zur Benutzeroberfläche für eine App. Dazu gehören auch der Anzeigebereich und das Eingabeverhalten sowie der zum Verarbeiten verwendete Thread. Die benötigte Konfiguration und die benötigten Einstellungen geben Sie beim Erstellen einer Ansicht an. Der Einrichtungsprozess der App-Ansicht wird unter [Marble Maze-Anwendungsstruktur](marble-maze-application-structure.md) beschrieben. In Direct3D hat der Begriff "Ansicht" mehrere Bedeutungen. Zunächst werden anhand einer Ressourcenansicht die Unterressourcen definiert, auf die eine Ressource zugreifen kann. Wenn beispielsweise ein Texturobjekt einer Shader-Ressourcenansicht zugeordnet wird, kann dieser Shader später auf die Textur zugreifen. Ein Vorteil einer Ressourcenansicht besteht darin, dass Daten auf unterschiedliche Art und Weise in verschiedenen Stufen der Rendering-Pipeline interpretiert werden können. Weitere Informationen zu Ressourcenansichten finden Sie unter [Texturansichten (Direct3D10)](https://msdn.microsoft.com/library/windows/desktop/bb205128). Bei der Verwendung im Kontext einer Ansichtstransformation oder Ansichtstransformationsmatrix bezieht sich der Begriff Ansicht auf den Standort und die Ausrichtung der Kamera. Bei einer Ansichtstransformation werden Objekte in der Welt um die Position und Ausrichtung der Kamera herum neu angeordnet. Weitere Informationen zu Ansichtstransformationen finden Sie unter [Ansichtstransformation (Direct3D9)](https://msdn.microsoft.com/library/windows/desktop/bb206342). Die Verwendung von Ressourcen- und Matrixansichten in Marble Maze werden in diesem Thema detaillierter beschrieben.
 
  
 
@@ -905,7 +902,6 @@ Lesen Sie den Abschnitt [Hinzufügen von Eingaben und Interaktivität zum Marble
  
 
  
-
 
 
 

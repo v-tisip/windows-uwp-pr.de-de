@@ -1,6 +1,6 @@
 ---
 author: Jwmsft
-Description: "Benutzen Sie eine geschachtelte UI, um mehrere Aktionen auf einem Listenelement zu ermöglichen"
+Description: "Benutze eine geschachtelte UI, um mehrere Aktionen über Listenelementen zu ermöglichen"
 title: Geschachtelte UI bei Listenelementen
 label: Nested UI in list items
 template: detail.hbs
@@ -9,19 +9,17 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
+keywords: Windows10, UWP
 ms.assetid: 60a29717-56f2-4388-a9ff-0098e34d5896
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: cfda479d2a05dfac4125688d3666abfb23bc45a2
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: b3b41e81f48f790c85377208816668ba302d3738
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="nested-ui-in-list-items"></a>Geschachtelte UI bei Listenelementen
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-Eine geschachtelte UI ist eine Benutzeroberfläche (User Interface, UI) mit geschachtelten Steuerelementen, die in einem Container eingeschlossen sind, der ebenfalls unabhängig den Fokus erhalten kann.
+Eine geschachtelte UI ist eine Benutzeroberfläche (User Interface, UI) mit geschachtelten Steuerelementen, die in einem Container eingeschlossen sind und auch unabhängig den Fokus erhalten kann.
 
 Sie können dem Benutzer mit geschachtelten UIs weitere Optionen zur Verfügung stellen, mit denen sie wichtige Aktionen schneller ausführen können. Bedenken Sie jedoch, dass die Benutzeroberfläche komplizierter wird, je mehr Aktionen Sie anbieten. Wenn Sie diese Art von Benutzeroberfläche verwenden, sollten Sie besonders vorsichtig vorgehen. Dieser Artikel enthält Richtlinien, um die beste Vorgehensweise für Ihre UI zu ermitteln.
 
@@ -310,4 +308,3 @@ public static class DependencyObjectExtensions
     }
 }
 ```
-
