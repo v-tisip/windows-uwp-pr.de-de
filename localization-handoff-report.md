@@ -6,14 +6,14 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\devices-sensors\barcode-scanner.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/1e0de453d23d1f5a2acf0f154a9f6240d976df4b?path=windows-apps-src%2Fdevices-sensors%2Fbarcode-scanner.md&_a=contents) | HandedOffSuccess | [Details](#d52a19c1bd94e9372e2ba5bf88a1f174236910692471)
+ [windows-apps-src\composition\composition-effects.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/195f5facf84c448287d9e831de5d91faf360a639?path=windows-apps-src%2Fcomposition%2Fcomposition-effects.md&_a=contents) | HandedOffSuccess | [Details](#d615befd54a98247c08df29cad5bc8109df2c7a3731)
 
 ## Item Details
-##### <a name='d52a19c1bd94e9372e2ba5bf88a1f174236910692471'></a> Source: [windows-apps-src\devices-sensors\barcode-scanner.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/1e0de453d23d1f5a2acf0f154a9f6240d976df4b?path=windows-apps-src%2Fdevices-sensors%2Fbarcode-scanner.md&_a=contents)
+##### <a name='d615befd54a98247c08df29cad5bc8109df2c7a3731'></a> Source: [windows-apps-src\composition\composition-effects.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/195f5facf84c448287d9e831de5d91faf360a639?path=windows-apps-src%2Fcomposition%2Fcomposition-effects.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [barcode-scanner.455e85e8e1e7205f3b034de314a5b6d4bb94cb62.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/aee4508ea1595f9909de807fc53cb72fd1ec5440?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fbarcode-scanner.455e85e8e1e7205f3b034de314a5b6d4bb94cb62.de-de.xlf&_a=contents)
-* Handoff Datetime: 2017-04-13 23:05:20
+* Handoff File: [composition-effects.834744e6e7575fac5fd526f0651c652549119e2a.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/c93a4001efe91c25020d5b5506220c7b0bc569ac?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fcomposition-effects.834744e6e7575fac5fd526f0651c652549119e2a.de-de.xlf&_a=contents)
+* Handoff Datetime: 2017-04-14 16:26:59
 * Handoff Reason: Include
 * Handoff Name: 
 * Archive File: 
@@ -21,6 +21,11 @@
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Handback Name: 
+* Current Target File: [windows-apps-src\graphics\composition-effects.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/f115520bb9810fdf6c8881cf29401fc35169c29a?path=windows-apps-src%2Fgraphics%2Fcomposition-effects.md&_a=contents)
+* Current Handback File: [composition-effects.edede44d930f977b680649c1d498ceca2c092923.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2386795deab063908b859e86feddcc7b91c2f943?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fcomposition-effects.edede44d930f977b680649c1d498ceca2c092923.de-de.xlf&_a=contents)
+* Current Handback Datetime: 2017-03-01 15:55:30
+* Bilingual File: [composition-effects.edede44d930f977b680649c1d498ceca2c092923.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2386795deab063908b859e86feddcc7b91c2f943?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fcomposition-effects.edede44d930f977b680649c1d498ceca2c092923.de-de.xlf&_a=contents)
+* Bilingual Datetime: 2017-03-01 16:20:55
 * [Back to Top](#report-top)
 
 
