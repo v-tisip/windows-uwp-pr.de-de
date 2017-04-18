@@ -6,14 +6,14 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\debug-test-perf\deploying-and-debugging-uwp-apps.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/f2e23ab45849a6bb3b6c483508e1e34468446091?path=windows-apps-src%2Fdebug-test-perf%2Fdeploying-and-debugging-uwp-apps.md&_a=contents) | HandedOffSuccess | [Details](#3bb60e053294fd54274b9a856ddd6b276e17bcc52356)
+ [windows-apps-src\publish\dev-center-insider-program.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/0add464bf006050d138ee12061c4ed366228d542?path=windows-apps-src%2Fpublish%2Fdev-center-insider-program.md&_a=contents) | HandedOffSuccess | [Details](#213599cd9fba02e5523db54e31ff5ec2f1198d6d5020)
 
 ## Item Details
-##### <a name='3bb60e053294fd54274b9a856ddd6b276e17bcc52356'></a> Source: [windows-apps-src\debug-test-perf\deploying-and-debugging-uwp-apps.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/f2e23ab45849a6bb3b6c483508e1e34468446091?path=windows-apps-src%2Fdebug-test-perf%2Fdeploying-and-debugging-uwp-apps.md&_a=contents)
+##### <a name='213599cd9fba02e5523db54e31ff5ec2f1198d6d5020'></a> Source: [windows-apps-src\publish\dev-center-insider-program.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/0add464bf006050d138ee12061c4ed366228d542?path=windows-apps-src%2Fpublish%2Fdev-center-insider-program.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [deploying-and-debugging-uwp-apps.1cca675e4c7c6a2c5c293e18816f2f54cf7491b3.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/086c324821d22a746fa4d53cf517893cdc7cadd0?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fdeploying-and-debugging-uwp-apps.1cca675e4c7c6a2c5c293e18816f2f54cf7491b3.de-de.xlf&_a=contents)
-* Handoff Datetime: 2017-04-18 19:11:18
+* Handoff File: [dev-center-insider-program.54de90971e5b8fc4d5a14386bc36fd7d20fcdc7b.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/0ab85770bae2256f4584f828c203da5ecc74d206?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fdev-center-insider-program.54de90971e5b8fc4d5a14386bc36fd7d20fcdc7b.de-de.xlf&_a=contents)
+* Handoff Datetime: 2017-04-18 21:09:33
 * Handoff Reason: Include
 * Handoff Name: 
 * Archive File: 
@@ -21,10 +21,10 @@
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Handback Name: 
-* Current Target File: [windows-apps-src\debug-test-perf\deploying-and-debugging-uwp-apps.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/f115520bb9810fdf6c8881cf29401fc35169c29a?path=windows-apps-src%2Fdebug-test-perf%2Fdeploying-and-debugging-uwp-apps.md&_a=contents)
-* Current Handback File: [deploying-and-debugging-uwp-apps.1cca675e4c7c6a2c5c293e18816f2f54cf7491b3.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2386795deab063908b859e86feddcc7b91c2f943?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fdeploying-and-debugging-uwp-apps.1cca675e4c7c6a2c5c293e18816f2f54cf7491b3.de-de.xlf&_a=contents)
+* Current Target File: [windows-apps-src\publish\dev-center-insider-program.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.de-de/commit/f115520bb9810fdf6c8881cf29401fc35169c29a?path=windows-apps-src%2Fpublish%2Fdev-center-insider-program.md&_a=contents)
+* Current Handback File: [dev-center-insider-program.54de90971e5b8fc4d5a14386bc36fd7d20fcdc7b.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2386795deab063908b859e86feddcc7b91c2f943?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fdev-center-insider-program.54de90971e5b8fc4d5a14386bc36fd7d20fcdc7b.de-de.xlf&_a=contents)
 * Current Handback Datetime: 2017-03-01 15:55:30
-* Bilingual File: [deploying-and-debugging-uwp-apps.1cca675e4c7c6a2c5c293e18816f2f54cf7491b3.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2386795deab063908b859e86feddcc7b91c2f943?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fdeploying-and-debugging-uwp-apps.1cca675e4c7c6a2c5c293e18816f2f54cf7491b3.de-de.xlf&_a=contents)
+* Bilingual File: [dev-center-insider-program.54de90971e5b8fc4d5a14386bc36fd7d20fcdc7b.de-de.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/2386795deab063908b859e86feddcc7b91c2f943?path=ol-handback%2Fcpubwin%2Fwindows-uwp.de-de%2Fmaster%2Fdev-center-insider-program.54de90971e5b8fc4d5a14386bc36fd7d20fcdc7b.de-de.xlf&_a=contents)
 * Bilingual Datetime: 2017-03-01 16:20:55
 * [Back to Top](#report-top)
 
