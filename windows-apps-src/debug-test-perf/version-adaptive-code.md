@@ -1,123 +1,88 @@
 ---
 author: jwmsft
 title: Versionsadaptiver Code
-description: "Erfahren Sie, wie Sie neue APIs nutzen und gleichzeitig die Kompatibilität mit früheren Versionen gewährleisten."
+description: "Mithilfe der neuen ApiInformation-Klasse können Sie neue APIs nutzen und gleichzeitig die Kompatibilität mit früheren Versionen gewährleisten."
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
+keywords: Windows10, UWP
 ms.assetid: 3293e91e-6888-4cc3-bad3-61e5a7a7ab4e
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: f8d6c28daea2a3d5be67ad2b5da5a05a46f736cc
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: d5b9a3b02c5acbb2ad7bcd00b9af4f7d6edd91de
+ms.sourcegitcommit: 73ea31d42a9b352af38b5eb5d3c06504b50f6754
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/27/2017
 ---
+# <a name="version-adaptive-code"></a><span data-ttu-id="2a9b1-104">Versionsadaptiver Code</span><span class="sxs-lookup"><span data-stu-id="2a9b1-104">Version adaptive code</span></span>
 
-# <a name="version-adaptive-code-use-new-apis-while-maintaining-compatibility-with-previous-versions"></a>Versionsadaptiver Code: Verwenden neuer APIs bei gleichzeitiger Gewährleistung der Kompatibilität mit früheren Versionen
+<span data-ttu-id="2a9b1-105">Das Schreiben von adaptivem Code ist vergleichbar mit dem [Erstellen einer adaptiven Benutzeroberfläche](https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml).</span><span class="sxs-lookup"><span data-stu-id="2a9b1-105">You can think about writing adaptive code similarly to how you think about [creating an adaptive UI](https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml).</span></span> <span data-ttu-id="2a9b1-106">Dabei können Sie etwa Ihre grundlegende Benutzeroberfläche für den kleinsten Bildschirm entwerfen und anschließend Elemente verschieben oder hinzufügen, wenn erkannt wird, dass die App auf einem größeren Bildschirm ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-106">You might design your base UI to run on the smallest screen, and then move or add elements when you detect that your app is running on a larger screen.</span></span> <span data-ttu-id="2a9b1-107">Bei adaptivem Code schreiben Sie Ihren Basiscode für die niedrigste Betriebssystemversion und können anschließend ausgewählte Features hinzufügen, wenn erkannt wird, dass Ihre App unter einer höheren Version ausgeführt wird, die über das neue Feature verfügt.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-107">With adaptive code, you write your base code to run on the lowest OS version, and you can add hand-selected features when you detect that your app is running on a higher version where the new feature is available.</span></span>
 
-Mit jeder Version des Windows 10 SDKs kommen spannende neue Funktionen hinzu, die Sie nicht ungenutzt lassen sollten. Da allerdings nicht alle Kunden ihre Geräte gleichzeitig auf die neueste Version von Windows 10 aktualisieren, müssen Sie sicherstellen, dass Ihre App auf einem möglichst breiten Gerätespektrum verwendet werden kann. Hier zeigen wir Ihnen, wie Sie Ihre App so gestalten, dass sie unter früheren Versionen von Windows 10 ausgeführt werden kann, aber auch neue Features nutzt, wenn sie auf einem Gerät ausgeführt wird, auf dem das neueste Update installiert ist.
+<span data-ttu-id="2a9b1-108">Wichtige Hintergrundinformationen über ApiInformation, API-Verträge und das Konfigurieren von Visual Studio finden Sie unter [Versionsadaptive Apps](version-adaptive-apps.md).</span><span class="sxs-lookup"><span data-stu-id="2a9b1-108">For important background info about ApiInformation, API contracts, and configuring Visual Studio, see [Version adaptive apps](version-adaptive-apps.md).</span></span>
 
-Mit den beiden folgenden Schritten können Sie sicherstellen, dass Ihre App auf einem möglichst breiten Spektrum von Windows 10-Geräten verwendet werden kann: Erstens: Konfigurieren Sie Ihr Visual Studio-Projekt mit den neuesten APIs. Dies beeinflusst die Kompilierung der App. Zweitens: Führen Sie Laufzeitprüfungen durch, um sicherzustellen, dass nur APIs aufgerufen werden, die auf dem Gerät vorhanden sind, auf dem die App ausgeführt wird.
+### <a name="runtime-api-checks"></a><span data-ttu-id="2a9b1-109">API-Laufzeitprüfungen</span><span class="sxs-lookup"><span data-stu-id="2a9b1-109">Runtime API checks</span></span>
 
-## <a name="configure-your-visual-studio-project"></a>Konfigurieren des Visual Studio-Projekts
+<span data-ttu-id="2a9b1-110">Verwenden Sie die [Windows.Foundation.Metadata.ApiInformation](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.aspx)-Klasse in einer Bedingung in Ihrem Code, um zu testen, ob die aufzurufende API vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-110">You use the [Windows.Foundation.Metadata.ApiInformation](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.aspx) class in a condition in your code to test for the presence of the API you want to call.</span></span> <span data-ttu-id="2a9b1-111">Diese Bedingung wird immer ausgewertet – ganz gleich, wo Ihre App ausgeführt wird. Das Ergebnis ist aber nur dann **True**, wenn sie auf einem Gerät ausgeführt wird, auf dem die API vorhanden ist und somit aufgerufen werden kann.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-111">This condition is evaluated wherever your app runs, but it evaluates to **true** only on devices where the API is present and therefore available to call.</span></span> <span data-ttu-id="2a9b1-112">So können Sie Apps mit versionsadaptivem Code erstellen, die APIs verwenden, welche nur unter bestimmten Betriebssystemversionen verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-112">This lets you write version adaptive code in order to create apps that use APIs that are available only on certain OS versions.</span></span>
 
-Im ersten Schritt zur Unterstützung mehrerer Versionen von Windows 10 müssen im Visual Studio-Projekt die unterstützten *Ziel*- und *Mindestversionen* des Betriebssystems/SDKs angegeben werden.
-- *Ziel*: Die SDK-Version, für die Visual Studio den App-Code kompiliert und alle Tools ausführt. Alle APIs und Ressourcen in dieser SDK-Version stehen zur Kompilierzeit im App-Code zur Verfügung.
-- *Minimum*: Die SDK-Version, die die niedrigste Betriebssystemversion unterstützt, unter der Ihre App ausgeführt werden kann (und vom Store bereitgestellt wird), und die Version, für die Visual Studio den Markupcode der App kompiliert. 
-
-Zur Laufzeit wird Ihre App für die Betriebssystemversion ausgeführt, für die sie bereitgestellt wurde. Wenn Sie also Ressourcen verwenden oder APIs aufrufen, die in dieser Version nicht zur Verfügung stehen, löst Ihre App Ausnahmen aus. Weiter unten in diesem Artikel erfahren Sie, wie Sie mithilfe von Laufzeitprüfungen die passenden APIs aufrufen.
-
-Die Einstellungen für Ziel- und Mindestversion geben jeweils das Ende eines Bereichs von Betriebssystem-/SDK-Versionen an. Wenn Sie Ihre App allerdings unter der Mindestversion testen, können Sie sicher sein, dass sie unter jeder beliebigen Version zwischen der Mindest- und Zielversion verwendet werden kann.
+<span data-ttu-id="2a9b1-113">Hier gehen wir anhand von spezifischen Beispielen auf die Nutzung neuer Features der Windows Insider Preview ein.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-113">Here, we look at specific examples for targeting new features in the Windows Insider Preview.</span></span> <span data-ttu-id="2a9b1-114">Eine allgemeine Übersicht über die Verwendung von **ApiInformation** finden Sie in der [Anleitung für UWP-Apps](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide) sowie im Blogbeitrag [Dynamically detecting features with API contracts](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/) (Dynamisches Erkennen von Features mithilfe von API-Verträgen).</span><span class="sxs-lookup"><span data-stu-id="2a9b1-114">For a general overview of using **ApiInformation**, see [Guide to UWP apps](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide) and the blog post [Dynamically detecting features with API contracts](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/).</span></span>
 
 > [!TIP]
-> Visual Studio gibt im Zusammenhang mit der API-Kompatibilität keine Warnungen aus. Daher müssen Sie selbst testen und sicherstellen, dass Ihre App unter allen Betriebssystemversionen zwischen Mindest- und Zielversion (jeweils einschließlich) erwartungsgemäß funktioniert.
+> <span data-ttu-id="2a9b1-115">Eine hohe Anzahl von API-Laufzeitprüfungen kann die Leistung Ihrer App beeinträchtigen.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-115">Numerous runtime API checks can affect the performance of your app.</span></span> <span data-ttu-id="2a9b1-116">Die Prüfungen werden in diesen Beispielen inline veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-116">We show the checks inline in these examples.</span></span> <span data-ttu-id="2a9b1-117">In Produktionscode empfiehlt es sich, die Prüfung nur einmal durchzuführen, das Ergebnis zwischenzuspeichern und es anschließend in der gesamten App zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-117">In production code, you should perform the check once and cache the result, then used the cached result throughout your app.</span></span> 
 
-Wenn Sie ein neues Projekt in Visual Studio 2015 (Update 2 oder höher) erstellen, werden Sie aufgefordert, die von Ihrer App unterstützte Ziel- und Mindestversion festzulegen. Die Zielversion ist standardmäßig die höchste installierte SDK-Version, die Mindestversion die niedrigste installierte SDK-Version. Als Ziel- und Mindestversion stehen nur SDK-Versionen zur Auswahl, die auf Ihrem Computer installiert sind. 
+### <a name="unsupported-scenarios"></a><span data-ttu-id="2a9b1-118">Nicht unterstützte Szenarien</span><span class="sxs-lookup"><span data-stu-id="2a9b1-118">Unsupported scenarios</span></span>
 
-![Festlegen des Ziel-SDKs in Visual Studio](images/vs-target-sdk-1.png)
+<span data-ttu-id="2a9b1-119">In den meisten Fällen können Sie die auf die SDK-Version10240 festgelegte Mindestversion Ihrer App beibehalten und neue APIs auf der Grundlage von Laufzeitprüfungen aktivieren, wenn die App unter einer höheren Version ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-119">In most cases, you can keep your app's Minimum Version set to SDK version 10240 and use runtime checks to enable any new APIs when your app runs on later a version.</span></span> <span data-ttu-id="2a9b1-120">In bestimmten Fällen müssen Sie allerdings die Mindestversion Ihrer App erhöhen, um neue Features verwenden zu können.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-120">However, there are some cases where you must increase your app's Minimum Version in order to use new features.</span></span>
 
-In der Regel empfiehlt es sich, die Standardeinstellungen beizubehalten. Falls Sie jedoch eine Vorschauversion des SDKs installiert haben und Produktionscode schreiben, empfiehlt es sich, die Zielversion zu ändern und auf die neueste offizielle SDK-Version festzulegen. 
+<span data-ttu-id="2a9b1-121">Die Mindestversion der App muss erhöht werden, wenn Sie Folgendes verwenden:</span><span class="sxs-lookup"><span data-stu-id="2a9b1-121">You must increase your app's Minimum Version if you use:</span></span>
+- <span data-ttu-id="2a9b1-122">Eine neue API, die eine Funktion erfordert, die in einer früheren Version nicht verfügbar ist.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-122">a new API that requires a capability that isn't available in an earlier version.</span></span> <span data-ttu-id="2a9b1-123">Die unterstützte Mindestversion muss auf eine höhere Version festgelegt werden, die über diese Funktion verfügt.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-123">You must increase the minimum supported version to one that includes that capability.</span></span> <span data-ttu-id="2a9b1-124">Weitere Informationen finden Sie unter [Deklaration der App-Funktionen](../packaging/app-capability-declarations.md).</span><span class="sxs-lookup"><span data-stu-id="2a9b1-124">For more info, see [App capability declarations](../packaging/app-capability-declarations.md).</span></span>
+- <span data-ttu-id="2a9b1-125">Einen neuen Ressourcenschlüssel, der zu „generic.xaml“ hinzugefügt wurde und in einer früheren Version nicht verfügbar war.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-125">any new resource keys added to generic.xaml and not available in a previous version.</span></span> <span data-ttu-id="2a9b1-126">Die zur Laufzeit verwendete Version von „generic.xaml“ wird durch die auf dem Gerät ausgeführte Betriebssystemversion bestimmt.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-126">The version of generic.xaml used at runtime is determined by the OS version the device is running on.</span></span> <span data-ttu-id="2a9b1-127">Mit API-Laufzeitprüfungen lässt sich nicht ermitteln, ob XAML-Ressourcen vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-127">You can't use runtime API checks to determine the presence of XAML resources.</span></span> <span data-ttu-id="2a9b1-128">Daher dürfen nur Ressourcenschlüssel verwendet werden, die in der von der App unterstützten Mindestversion zur Verfügung stehen. Andernfalls bringt eine [XAMLParseException](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.markup.xamlparseexception.aspx) Ihre App zur Laufzeit zum Absturz.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-128">So, you must only use resource keys that are available in the minimum version that your app supports or a [XAMLParseException](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.markup.xamlparseexception.aspx) will cause your app to crash at runtime.</span></span>
 
-Navigieren Sie zum Ändern der Mindest- und Zielversion für ein bereits in Visual Studio erstelltes Projekt zu „Projekt“ > „Eigenschaften“ > Registerkarte „Anwendung“ > „Ziel“.
+### <a name="adaptive-code-options"></a><span data-ttu-id="2a9b1-129">Optionen für adaptiven Code</span><span class="sxs-lookup"><span data-stu-id="2a9b1-129">Adaptive code options</span></span>
 
-![Ändern des Ziel-SDKs in Visual Studio](images/vs-target-sdk-2.png) 
+<span data-ttu-id="2a9b1-130">Adaptiver Code kann auf zwei Arten erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-130">There are two ways to create adaptive code.</span></span> <span data-ttu-id="2a9b1-131">In den meisten Fällen schreiben Sie den Markupcode Ihrer App für die Mindestversion und verwenden dann Ihren App-Code, um ggf. die Nutzung neuerer Betriebssystemfeatures zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-131">In most cases, you write your app markup to run on the Minimum version, then use your app code to tap into newer OS features when present.</span></span> <span data-ttu-id="2a9b1-132">Wenn Sie allerdings eine Eigenschaft in einem visuellen Zustand aktualisieren müssen und sich zwischen Betriebssystemversionen lediglich ein Eigenschafts- oder Enumerationswert ändert, können Sie einen erweiterbaren Zustandsauslöser erstellen, dessen Aktivierung davon abhängt, ob eine API vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-132">However, if you need to update a property in a visual state, and there is only a property or enumeration value change between OS versions, you can create an extensible state trigger that’s activated based on the presence of an API.</span></span>
 
-Im Anschluss finden Sie die Buildnummern für die einzelnen SDKs:
-- Windows 10-Version 1506: SDK-Version 10240
-- Windows 10-Version 1511 (November-Updates): SDK-Version 10586
-- Windows 10, Version 1607 (Anniversary Update): SDK Version 14393.
+<span data-ttu-id="2a9b1-133">Im Anschluss finden Sie eine Gegenüberstellung dieser Optionen:</span><span class="sxs-lookup"><span data-stu-id="2a9b1-133">Here, we compare these options.</span></span>
 
-Sie können jede beliebige veröffentlichte Version des SDKs aus dem [Windows SDK- und Emulator-Archiv](https://developer.microsoft.com/downloads/sdk-archive) herunterladen. Das neueste Windows Insider Preview SDK können Sie im Entwicklerabschnitt der [Windows Insider-Website](https://insider.windows.com/) herunterladen.
+**<span data-ttu-id="2a9b1-134">App-Code</span><span class="sxs-lookup"><span data-stu-id="2a9b1-134">App code</span></span>**
 
-## <a name="write-adaptive-code"></a>Schreiben von adaptivem Code
+<span data-ttu-id="2a9b1-135">Verwendung</span><span class="sxs-lookup"><span data-stu-id="2a9b1-135">When to use:</span></span>
+- <span data-ttu-id="2a9b1-136">Empfohlen für alle Szenarien mit adaptivem Code mit Ausnahme bestimmter Fälle, die weiter unten für erweiterbare Auslöser definiert sind.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-136">Recommended for all adaptive code scenarios except for specific cases defined below for extensible triggers.</span></span>
 
-Das Schreiben von adaptivem Code ist vergleichbar mit dem [Erstellen einer adaptiven UI](https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml). Dabei können Sie etwa Ihre grundlegende Benutzeroberfläche für den kleinsten Bildschirm entwerfen und anschließend Elemente verschieben oder hinzufügen, wenn erkannt wird, dass die App auf einem größeren Bildschirm ausgeführt wird. Bei adaptivem Code schreiben Sie Ihren Basiscode für die niedrigste Betriebssystemversion und können anschließend ausgewählte Features hinzufügen, wenn erkannt wird, dass Ihre App unter einer höheren Version ausgeführt wird, die über das neue Feature verfügt.
+<span data-ttu-id="2a9b1-137">Vorteile:</span><span class="sxs-lookup"><span data-stu-id="2a9b1-137">Benefits:</span></span>
+- <span data-ttu-id="2a9b1-138">Weniger Aufwand/Komplexität für Entwickler beim Einbinden von API-Unterschieden in das Markup</span><span class="sxs-lookup"><span data-stu-id="2a9b1-138">Avoids developer overhead/complexity of tying API differences into markup.</span></span>
 
-### <a name="runtime-api-checks"></a>API-Laufzeitprüfungen
+<span data-ttu-id="2a9b1-139">Nachteile:</span><span class="sxs-lookup"><span data-stu-id="2a9b1-139">Drawbacks:</span></span>
+- <span data-ttu-id="2a9b1-140">Keine Designerunterstützung</span><span class="sxs-lookup"><span data-stu-id="2a9b1-140">No Designer support.</span></span>
 
-Verwenden Sie die [Windows.Foundation.Metadata.ApiInformation](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.aspx)-Klasse in einer Bedingung in Ihrem Code, um zu testen, ob die aufzurufende API vorhanden ist. Diese Bedingung wird immer ausgewertet – ganz gleich, wo Ihre App ausgeführt wird. Das Ergebnis ist aber nur dann **True**, wenn sie auf einem Gerät ausgeführt wird, auf dem die API vorhanden ist und somit aufgerufen werden kann. So können Sie Apps mit versionsadaptivem Code erstellen, die APIs verwenden, welche nur unter bestimmten Betriebssystemversionen verfügbar sind.
+**<span data-ttu-id="2a9b1-141">Zustandsauslöser</span><span class="sxs-lookup"><span data-stu-id="2a9b1-141">State Triggers</span></span>**
 
-Hier gehen wir anhand von spezifischen Beispielen auf die Nutzung neuer Features in Windows Insider Preview ein. Eine allgemeine Übersicht über die Verwendung von **ApiInformation** finden Sie in der [Anleitung für UWP-Apps](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide) sowie im Blogbeitrag [Dynamically detecting features with API contracts](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/) (Dynamisches Erkennen von Features mithilfe von API-Verträgen).
+<span data-ttu-id="2a9b1-142">Verwendung</span><span class="sxs-lookup"><span data-stu-id="2a9b1-142">When to use:</span></span>
+- <span data-ttu-id="2a9b1-143">Verwenden Sie diese Option, wenn sich zwischen Betriebssystemversionen nur eine Eigenschaft oder Enumeration geändert hat, keine Änderung der Logik erforderlich ist und eine Verbindung mit einem visuellen Zustand besteht.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-143">Use when there is only a property or enum change between OS versions that doesn’t require logic changes, and is connected to a visual state.</span></span>
 
-> [!TIP]
-> Eine hohe Anzahl von API-Laufzeitprüfungen kann die Leistung Ihrer App beeinträchtigen. Die Prüfungen werden in diesen Beispielen inline veranschaulicht. In Produktionscode empfiehlt es sich, die Prüfung nur einmal durchzuführen, das Ergebnis zwischenzuspeichern und es anschließend in der gesamten App zu verwenden. 
+<span data-ttu-id="2a9b1-144">Vorteile:</span><span class="sxs-lookup"><span data-stu-id="2a9b1-144">Benefits:</span></span>
+- <span data-ttu-id="2a9b1-145">Ermöglicht die Erstellung spezifischer visueller Zustände, die abhängig davon ausgelöst werden, ob eine API vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-145">Lets you create specific visual states that are triggered based on the presence of an API.</span></span>
+- <span data-ttu-id="2a9b1-146">Eingeschränkte Designerunterstützung verfügbar.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-146">Some designer support available.</span></span>
 
-### <a name="unsupported-scenarios"></a>Nicht unterstützte Szenarien
+<span data-ttu-id="2a9b1-147">Nachteile:</span><span class="sxs-lookup"><span data-stu-id="2a9b1-147">Drawbacks:</span></span>
+- <span data-ttu-id="2a9b1-148">Die Verwendung von benutzerdefinierten Auslösern ist auf visuelle Zustände beschränkt, weshalb sich die Option nicht für komplizierte adaptive Layouts eignet.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-148">Use of custom triggers is restricted to visual states, which doesn’t lend itself to complicated adaptive layouts.</span></span>
+- <span data-ttu-id="2a9b1-149">Wertänderungen müssen mithilfe von Settern angegeben werden, sodass nur einfache Änderungen möglich sind.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-149">Must use Setters to specify value changes, so only simple changes are possible.</span></span>
+- <span data-ttu-id="2a9b1-150">Die Einrichtung und Verwendung benutzerdefinierter Zustandsauslöser ist relativ aufwendig.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-150">Custom state triggers are fairly verbose to set up and use.</span></span>
 
-In den meisten Fällen können Sie die auf die SDK-Version 10240 festgelegte Mindestversion Ihrer App beibehalten und neue APIs auf der Grundlage von Laufzeitprüfungen aktivieren, wenn die App unter einer höheren Version ausgeführt wird. In bestimmten Fällen müssen Sie allerdings die Mindestversion Ihrer App erhöhen, um neue Features verwenden zu können.
+## <a name="adaptive-code-examples"></a><span data-ttu-id="2a9b1-151">Beispiele für adaptiven Code</span><span class="sxs-lookup"><span data-stu-id="2a9b1-151">Adaptive code examples</span></span>
 
-Die Mindestversion der App muss erhöht werden, wenn Sie Folgendes verwenden:
-- Eine neue API, die eine Funktion erfordert, die in einer früheren Version nicht verfügbar ist. Die unterstützte Mindestversion muss auf eine höhere Version festgelegt werden, die über diese Funktion verfügt. Weitere Informationen finden Sie unter [Deklaration der App-Funktionen](../packaging/app-capability-declarations.md).
-- Einen neuen Ressourcenschlüssel, der zu „generic.xaml“ hinzugefügt wurde und in einer früheren Version nicht verfügbar war. Die zur Laufzeit verwendete Version von „generic.xaml“ wird durch die auf dem Gerät ausgeführte Betriebssystemversion bestimmt. Mit API-Laufzeitprüfungen lässt sich nicht ermitteln, ob XAML-Ressourcen vorhanden sind. Daher dürfen nur Ressourcenschlüssel verwendet werden, die in der von der App unterstützten Mindestversion zur Verfügung stehen. Andernfalls bringt eine [XAMLParseException](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.markup.xamlparseexception.aspx) Ihre App zur Laufzeit zum Absturz.
+<span data-ttu-id="2a9b1-152">In diesem Abschnitt zeigen wir verschiedene Beispiele für adaptiven Code, in denen neue APIs aus der Windows10-Version1607 (Windows Insider Preview) verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-152">In this section, we show several examples of adaptive code that use APIs that are new in Windows 10, version 1607 (Windows Insider Preview).</span></span>
 
-### <a name="adaptive-code-options"></a>Optionen für adaptiven Code
+### <a name="example-1-new-enum-value"></a><span data-ttu-id="2a9b1-153">Beispiel1: Neuer Enumerationswert</span><span class="sxs-lookup"><span data-stu-id="2a9b1-153">Example 1: New enum value</span></span>
 
-Adaptiver Code kann auf zwei Arten erstellt werden. In den meisten Fällen schreiben Sie den Markupcode Ihrer App für die Mindestversion und verwenden dann Ihren App-Code, um ggf. die Nutzung neuerer Betriebssystemfeatures zu ermöglichen. Wenn Sie allerdings eine Eigenschaft in einem visuellen Zustand aktualisieren müssen und sich zwischen Betriebssystemversionen lediglich ein Eigenschafts- oder Enumerationswert ändert, können Sie einen erweiterbaren Zustandsauslöser erstellen, dessen Aktivierung davon abhängt, ob eine API vorhanden ist.
+<span data-ttu-id="2a9b1-154">In der Windows10-Version1607 wird die [InputScopeNameValue](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.inputscopenamevalue.aspx)-Enumeration um einen neuen Wert erweitert: **ChatWithoutEmoji**.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-154">Windows 10, version 1607 adds a new value to the [InputScopeNameValue](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.inputscopenamevalue.aspx) enumeration: **ChatWithoutEmoji**.</span></span> <span data-ttu-id="2a9b1-155">Dieser neue Eingabeumfang besitzt das gleiche Eingabeverhalten wie der Eingabeumfang **Chat** (Rechtschreibprüfung, AutoVervollständigen, automatische Großschreibung), wird aber einer Bildschirmtastatur ohne Emoji-Schaltfläche zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-155">This new input scope has the same input behavior as the **Chat** input scope (spellchecking, auto-complete, auto-capitalization), but it maps to a touch keyboard without an emoji button.</span></span> <span data-ttu-id="2a9b1-156">Dies ist hilfreich, wenn Sie Ihre eigene Emoji-Auswahl erstellen und die integrierte Emoji-Schaltfläche auf der Bildschirmtastatur deaktivieren möchten.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-156">This is useful if you create your own emoji picker and want to disable the built-in emoji button in the touch keyboard.</span></span> 
 
-Im Anschluss finden Sie eine Gegenüberstellung dieser Optionen:
-
-**App-Code**
-
-Verwendung
-- Empfohlen für alle Szenarien mit adaptivem Code mit Ausnahme bestimmter Fälle, die weiter unten für erweiterbare Auslöser definiert sind.
-
-Vorteile:
-- Weniger Aufwand/Komplexität für Entwickler beim Einbinden von API-Unterschieden in das Markup
-
-Nachteile:
-- Keine Designerunterstützung
-
-**Zustandsauslöser**
-
-Verwendung
-- Verwenden Sie diese Option, wenn sich zwischen Betriebssystemversionen nur eine Eigenschaft oder Enumeration geändert hat, keine Änderung der Logik erforderlich ist und eine Verbindung mit einem visuellen Zustand besteht.
-
-Vorteile:
-- Ermöglicht die Erstellung spezifischer visueller Zustände, die abhängig davon ausgelöst werden, ob eine API vorhanden ist.
-- Eingeschränkte Designerunterstützung verfügbar.
-
-Nachteile:
-- Die Verwendung von benutzerdefinierten Auslösern ist auf visuelle Zustände beschränkt, weshalb sich die Option nicht für komplizierte adaptive Layouts eignet.
-- Wertänderungen müssen mithilfe von Settern angegeben werden, sodass nur einfache Änderungen möglich sind.
-- Die Einrichtung und Verwendung benutzerdefinierter Zustandsauslöser ist relativ aufwendig.
-
-## <a name="adaptive-code-examples"></a>Beispiele für adaptiven Code
-
-In diesem Abschnitt zeigen wir verschiedene Beispiele für adaptiven Code, in denen neue APIs aus der Windows 10-Version 1607 (Windows Insider Preview) verwendet werden.
-
-### <a name="example-1-new-enum-value"></a>Beispiel 1: Neuer Enumerationswert
-
-In der Windows 10-Version 1607 wird die [InputScopeNameValue](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.inputscopenamevalue.aspx)-Enumeration um einen neuen Wert erweitert: **ChatWithoutEmoji**. Dieser neue Eingabeumfang besitzt das gleiche Eingabeverhalten wie der Eingabeumfang **Chat** (Rechtschreibprüfung, AutoVervollständigen, automatische Großschreibung), wird aber einer Bildschirmtastatur ohne Emoji-Schaltfläche zugeordnet. Dies ist hilfreich, wenn Sie Ihre eigene Emoji-Auswahl erstellen und die integrierte Emoji-Schaltfläche auf der Bildschirmtastatur deaktivieren möchten. 
-
-Dieses Beispiel zeigt, wie Sie überprüfen, ob der **ChatWithoutEmoji**-Enumerationswert vorhanden ist, und die [InputScope](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.inputscope.aspx)-Eigenschaft eines **TextBox**-Elements festlegen, falls dies der Fall ist. Ist der Wert in dem System, auf dem die App ausgeführt wird, nicht vorhanden, wird **InputScope** stattdessen auf **Chat** festgelegt. Der hier gezeigte Code kann in einem Page-Konstruktor oder in einem Page.Loaded-Ereignishandler platziert werden.
+<span data-ttu-id="2a9b1-157">Dieses Beispiel zeigt, wie Sie überprüfen, ob der **ChatWithoutEmoji**-Enumerationswert vorhanden ist, und die [InputScope](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.inputscope.aspx)-Eigenschaft eines **TextBox**-Elements festlegen, falls dies der Fall ist.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-157">This example shows how to check if the **ChatWithoutEmoji** enum value is present and sets the [InputScope](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.inputscope.aspx) property of a **TextBox** if it is.</span></span> <span data-ttu-id="2a9b1-158">Ist der Wert in dem System, auf dem die App ausgeführt wird, nicht vorhanden, wird **InputScope** stattdessen auf **Chat** festgelegt.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-158">If it’s not present on the system the app is run on, the **InputScope** is set to **Chat** instead.</span></span> <span data-ttu-id="2a9b1-159">Der hier gezeigte Code kann in einem Page-Konstruktor oder in einem Page.Loaded-Ereignishandler platziert werden.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-159">The code shown could be placed in a Page consructor or Page.Loaded event handler.</span></span>
 
 > [!TIP]
-> Verlassen Sie sich beim Prüfen einer API nicht auf .NET-Sprachfeatures, sondern verwenden Sie statische Zeichenfolgen. Andernfalls versucht Ihre App unter Umständen, auf einen nicht definierten Typ zuzugreifen, was einen Absturz zur Laufzeit zur Folge hat.
+> <span data-ttu-id="2a9b1-160">Verlassen Sie sich beim Prüfen einer API nicht auf .NET-Sprachfeatures, sondern verwenden Sie statische Zeichenfolgen. Andernfalls versucht Ihre App unter Umständen, auf einen nicht definierten Typ zuzugreifen, was einen Absturz zur Laufzeit zur Folge hat.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-160">When you check an API, use static strings instead of relying on .NET language features, otherwise your app might try to access a type that isn’t defined and crash at runtime.</span></span>
 
-**C#**
+**<span data-ttu-id="2a9b1-161">C#</span><span class="sxs-lookup"><span data-stu-id="2a9b1-161">C#</span></span>**
 ```csharp
 // Create a TextBox control for sending messages 
 // and initialize an InputScope object.
@@ -152,9 +117,9 @@ messageBox.Text = messageBox.InputScope.Names[0].NameValue.ToString();
 rootGrid.Children.Add(messageBox);
 ```
 
-Im vorherigen Beispiel wird das TextBox-Element erstellt, und alle Eigenschaften werden im Code festgelegt. Wenn Sie allerdings bereits über XAML verfügen und lediglich die InputScope-Eigenschaft für Systeme ändern möchten, auf denen der neue Wert unterstützt wird, können Sie dies wie hier zu sehen ohne XAML-Änderung implementieren. Der Standardwert wird in XAML auf **Chat** festgelegt und im Code überschrieben, falls der **ChatWithoutEmoji**-Wert vorhanden ist.
+<span data-ttu-id="2a9b1-162">Im vorherigen Beispiel wird das TextBox-Element erstellt, und alle Eigenschaften werden im Code festgelegt.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-162">In the previous example, the TextBox is created and all properties are set in code.</span></span> <span data-ttu-id="2a9b1-163">Wenn Sie allerdings bereits über XAML verfügen und lediglich die InputScope-Eigenschaft für Systeme ändern möchten, auf denen der neue Wert unterstützt wird, können Sie dies wie hier zu sehen ohne XAML-Änderung implementieren.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-163">However, if you have existing XAML, and just need to change the InputScope property on systems where the new value is supported, you can do that without changing your XAML, as shown here.</span></span> <span data-ttu-id="2a9b1-164">Der Standardwert wird in XAML auf **Chat** festgelegt und im Code überschrieben, falls der **ChatWithoutEmoji**-Wert vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-164">You set the default value to **Chat** in XAML, but you override it in code if the **ChatWithoutEmoji** value is present.</span></span>
 
-**XAML**
+**<span data-ttu-id="2a9b1-165">XAML</span><span class="sxs-lookup"><span data-stu-id="2a9b1-165">XAML</span></span>**
 ```xaml
 <TextBox x:Name="messageBox"
          AcceptsReturn="True" TextWrapping="Wrap"
@@ -162,7 +127,7 @@ Im vorherigen Beispiel wird das TextBox-Element erstellt, und alle Eigenschaften
          Loaded="messageBox_Loaded"/>
 ```
 
-**C#**
+**<span data-ttu-id="2a9b1-166">C#</span><span class="sxs-lookup"><span data-stu-id="2a9b1-166">C#</span></span>**
 ```csharp
 private void messageBox_Loaded(object sender, RoutedEventArgs e)
 {
@@ -185,30 +150,30 @@ private void messageBox_Loaded(object sender, RoutedEventArgs e)
 }
 ```
 
-Nachdem wir nun über ein konkretes Beispiel verfügen, sehen wir uns einmal an, wie in diesem Fall die Einstellungen für Mindest- und Zielversion angewendet werden.
+<span data-ttu-id="2a9b1-167">Nachdem wir nun über ein konkretes Beispiel verfügen, sehen wir uns einmal an, wie in diesem Fall die Einstellungen für Mindest- und Zielversion angewendet werden.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-167">Now that we have a concrete example, let’s see how the Target and Minimum version settings apply to it.</span></span>
 
-In diesen Beispielen können Sie den Chat-Enumerationswert in XAML oder in Code ohne Überprüfung verwenden, da der Wert in der unterstützten Mindestversion des Betriebssystems vorhanden ist. 
+<span data-ttu-id="2a9b1-168">In diesen Beispielen können Sie den Chat-Enumerationswert in XAML oder in Code ohne Überprüfung verwenden, da der Wert in der unterstützten Mindestversion des Betriebssystems vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-168">In these examples, you can use the Chat enum value in XAML, or in code without a check, because it’s present in the minimum supported OS version.</span></span> 
 
-Wenn Sie den ChatWithoutEmoji-Wert in XAML oder in Code ohne Überprüfung verwenden, wird er ohne Fehler kompiliert, da der Wert in der Zielversion des Betriebssystems vorhanden ist. Auch die Ausführung auf einem System mit der Zielversion des Betriebssystems ist ohne Fehler möglich. Wenn die App allerdings auf einem System mit der Mindestversion des Betriebssystems ausgeführt wird, stürzt sie zur Laufzeit ab, da der ChatWithoutEmoji-Enumerationswert nicht vorhanden ist. Daher dürfen Sie diesen Wert nur in Code verwenden und müssen ihn mit einer API-Laufzeitprüfung umschließen, sodass er nur aufgerufen wird, wenn dies auf dem aktuellen System unterstützt wird.
+<span data-ttu-id="2a9b1-169">Wenn Sie den ChatWithoutEmoji-Wert in XAML oder in Code ohne Überprüfung verwenden, wird er ohne Fehler kompiliert, da der Wert in der Zielversion des Betriebssystems vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-169">If you use the ChatWithoutEmoji value in XAML, or in code without a check, it will compile without error because it's present in the Target OS version.</span></span> <span data-ttu-id="2a9b1-170">Auch die Ausführung auf einem System mit der Zielversion des Betriebssystems ist ohne Fehler möglich.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-170">It will also run without error on a system with the Target OS version.</span></span> <span data-ttu-id="2a9b1-171">Wenn die App allerdings auf einem System mit der Mindestversion des Betriebssystems ausgeführt wird, stürzt sie zur Laufzeit ab, da der ChatWithoutEmoji-Enumerationswert nicht vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-171">However, when the app runs on a system with an OS using the Minimum version, it will crash at runtime because the ChatWithoutEmoji enum value is not present.</span></span> <span data-ttu-id="2a9b1-172">Daher dürfen Sie diesen Wert nur in Code verwenden und müssen ihn mit einer API-Laufzeitprüfung umschließen, sodass er nur aufgerufen wird, wenn dies auf dem aktuellen System unterstützt wird.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-172">Therefore, you must use this value only in code, and wrap it in a runtime API check so it’s called only if it’s supported on the current system.</span></span>
 
-### <a name="example-2-new-control"></a>Beispiel 2: Neues Steuerelement
+### <a name="example-2-new-control"></a><span data-ttu-id="2a9b1-173">Beispiel2: Neues Steuerelement</span><span class="sxs-lookup"><span data-stu-id="2a9b1-173">Example 2: New control</span></span>
 
-Eine neue Version von Windows verfügt üblicherweise über neue Steuerelemente für die UWP-API-Oberfläche, die den Funktionsumfang der Plattform erweitern. Das Vorhandensein eines neuen Steuerelements kann mithilfe der [ApiInformation.IsTypePresent](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.istypepresent.aspx)-Methode ermittelt werden.
+<span data-ttu-id="2a9b1-174">Eine neue Version von Windows verfügt üblicherweise über neue Steuerelemente für die UWP-API-Oberfläche, die den Funktionsumfang der Plattform erweitern.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-174">A new version of Windows typically brings new controls to the UWP API surface that bring new functionality to the platform.</span></span> <span data-ttu-id="2a9b1-175">Das Vorhandensein eines neuen Steuerelements kann mithilfe der [ApiInformation.IsTypePresent](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.istypepresent.aspx)-Methode ermittelt werden.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-175">To leverage the presence of a new control, use the  [ApiInformation.IsTypePresent](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.istypepresent.aspx) method.</span></span>
 
-In der Windows 10-Version 1607 wird ein neues Mediensteuerelement namens [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) eingeführt. Dieses Steuerelement basiert auf der [MediaPlayer](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.aspx)-Klasse, stellt beispielweise Features wie die problemlose Einbindung von Hintergrundaudio bereit und profitiert von Verbesserungen bei der Architektur des Medienstapels.
+<span data-ttu-id="2a9b1-176">In der Windows10-Version1607 wird ein neues Mediensteuerelement namens [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) eingeführt.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-176">Windows 10, version 1607 introduces a new media control called [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx).</span></span> <span data-ttu-id="2a9b1-177">Dieses Steuerelement basiert auf der [MediaPlayer](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.aspx)-Klasse, stellt beispielweise Features wie die problemlose Einbindung von Hintergrundaudio bereit und profitiert von Verbesserungen bei der Architektur des Medienstapels.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-177">This control builds on the [MediaPlayer](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.aspx) class, so it brings features like the ability to easily tie into background audio, and it makes use of architectural improvements in the media stack.</span></span>
 
-Wenn die App allerdings auf einem Gerät mit einer älteren Windows 10-Version als 1607 ausgeführt wird, muss anstelle des neuen **MediaPlayerElement**-Steuerelements das [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaelement.aspx)-Steuerelement verwendet werden. Sie können mithilfe der [**ApiInformation.IsTypePresent**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.istypepresent.aspx)-Methode zur Laufzeit überprüfen, ob das MediaPlayerElement-Steuerelement vorhanden ist, und dann das geeignete Steuerelement für das System laden, auf dem die App ausgeführt wird.
+<span data-ttu-id="2a9b1-178">Wenn die App allerdings auf einem Gerät mit einer älteren Windows10-Version als1607 ausgeführt wird, muss anstelle des neuen **MediaPlayerElement**-Steuerelements das [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaelement.aspx)-Steuerelement verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-178">However, if the app runs on a device that’s running a version of Windows 10 older than version 1607, you must use the [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaelement.aspx) control instead of the new **MediaPlayerElement** control.</span></span> <span data-ttu-id="2a9b1-179">Sie können mithilfe der [**ApiInformation.IsTypePresent**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.istypepresent.aspx)-Methode zur Laufzeit überprüfen, ob das MediaPlayerElement-Steuerelement vorhanden ist, und dann das geeignete Steuerelement für das System laden, auf dem die App ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-179">You can use the [**ApiInformation.IsTypePresent**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.istypepresent.aspx) method to check for the presence of the MediaPlayerElement control at runtime, and load whichever control is suitable for the system where the app is running.</span></span>
 
-Dieses Beispiel zeigt, wie Sie eine App erstellen, die abhängig davon, ob der MediaPlayerElement-Typ vorhanden ist, entweder das neue MediaPlayerElement-Steuerelement oder das alte MediaElement-Steuerelement verwendet. In diesem Code werden die Steuerelemente samt dazugehöriger Benutzeroberfläche und entsprechendem Code mithilfe der [UserControl](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.usercontrol.aspx)-Klasse in Komponenten zerlegt, sodass sie abhängig von der Betriebssystemversion einbezogen werden können. Alternativ können Sie ein benutzerdefiniertes Steuerelement verwendet. Dieses bietet mehr Funktionen und benutzerdefiniertes Verhalten als in diesem einfachen Beispiel erforderlich.
+<span data-ttu-id="2a9b1-180">Dieses Beispiel zeigt, wie Sie eine App erstellen, die abhängig davon, ob der MediaPlayerElement-Typ vorhanden ist, entweder das neue MediaPlayerElement-Steuerelement oder das alte MediaElement-Steuerelement verwendet.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-180">This example shows how to create an app that uses either the new MediaPlayerElement or the old MediaElement depending on whether MediaPlayerElement type is present.</span></span> <span data-ttu-id="2a9b1-181">In diesem Code werden die Steuerelemente samt dazugehöriger Benutzeroberfläche und entsprechendem Code mithilfe der [UserControl](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.usercontrol.aspx)-Klasse in Komponenten zerlegt, sodass sie abhängig von der Betriebssystemversion einbezogen werden können.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-181">In this code, you use the [UserControl](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.usercontrol.aspx) class to componentize the controls and their related UI and code so that you can switch them in and out based on the OS version.</span></span> <span data-ttu-id="2a9b1-182">Alternativ können Sie ein benutzerdefiniertes Steuerelement verwendet. Dieses bietet mehr Funktionen und benutzerdefiniertes Verhalten als in diesem einfachen Beispiel erforderlich.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-182">As an alternative, you can use a custom control, which provides more functionality and custom behavior than what’s needed for this simple example.</span></span>
  
-**MediaPlayerUserControl** 
+**<span data-ttu-id="2a9b1-183">MediaPlayerUserControl</span><span class="sxs-lookup"><span data-stu-id="2a9b1-183">MediaPlayerUserControl</span></span>** 
 
-`MediaPlayerUserControl` kapselt ein **MediaPlayerElement** und mehrere Schaltflächen für eine framebasierte Mediennavigation. „UserControl“ ermöglicht die Behandlung dieser Steuerelemente als einzelne Entität und erleichtert den Wechsel zu „MediaElement“ bei älteren Systemen. Dieses Benutzersteuerelement sollte nur für Systeme verwendet werden, die über „MediaPlayerElement“ verfügen, sodass im Code innerhalb dieses Benutzersteuerelements keine ApiInformation-Prüfungen ausgeführt werden.
+<span data-ttu-id="2a9b1-184">`MediaPlayerUserControl` kapselt ein **MediaPlayerElement** und mehrere Schaltflächen für eine framebasierte Mediennavigation.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-184">The `MediaPlayerUserControl` encapsulates a **MediaPlayerElement** and several buttons that are used to skip through the media frame by frame.</span></span> <span data-ttu-id="2a9b1-185">„UserControl“ ermöglicht die Behandlung dieser Steuerelemente als einzelne Entität und erleichtert den Wechsel zu „MediaElement“ bei älteren Systemen.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-185">The UserControl lets you treat these controls as a single entity and makes it easier to switch with a MediaElement on older systems.</span></span> <span data-ttu-id="2a9b1-186">Dieses Benutzersteuerelement sollte nur für Systeme verwendet werden, die über „MediaPlayerElement“ verfügen, sodass im Code innerhalb dieses Benutzersteuerelements keine ApiInformation-Prüfungen ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-186">This user control should be used only on systems where MediaPlayerElement is present, so you don’t use ApiInformation checks in the code inside this user control.</span></span>
 
 > [!NOTE]
-> Die Schaltflächen für die Frameschritte werden außerhalb des Medienplayers platziert, um dieses Beispiel möglichst einfach und prägnant zu halten. Zur Verbesserung der Benutzerfreundlichkeit sollten Sie „MediaTransportControls“ mit Ihren benutzerdefinierten Schaltflächen anpassen. Weitere Informationen finden Sie unter [Benutzerdefinierte Transportsteuerelemente](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/custom-transport-controls). 
+> <span data-ttu-id="2a9b1-187">Die Schaltflächen für die Frameschritte werden außerhalb des Medienplayers platziert, um dieses Beispiel möglichst einfach und prägnant zu halten.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-187">To keep this example simple and focused, the frame step buttons are placed outside of the media player.</span></span> <span data-ttu-id="2a9b1-188">Zur Verbesserung der Benutzerfreundlichkeit sollten Sie „MediaTransportControls“ mit Ihren benutzerdefinierten Schaltflächen anpassen.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-188">For a better user experiance, you should customize the MediaTransportControls to include your custom buttons.</span></span> <span data-ttu-id="2a9b1-189">Weitere Informationen finden Sie unter [Benutzerdefinierte Transportsteuerelemente](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/custom-transport-controls).</span><span class="sxs-lookup"><span data-stu-id="2a9b1-189">See [Custom transport controls](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/custom-transport-controls) for more info.</span></span> 
 
-**XAML**
+**<span data-ttu-id="2a9b1-190">XAML</span><span class="sxs-lookup"><span data-stu-id="2a9b1-190">XAML</span></span>**
 ```xaml
 <UserControl
     x:Class="MediaApp.MediaPlayerUserControl"
@@ -235,7 +200,7 @@ Dieses Beispiel zeigt, wie Sie eine App erstellen, die abhängig davon, ob der M
 </UserControl>
 ```
 
-**C#**
+**<span data-ttu-id="2a9b1-191">C#</span><span class="sxs-lookup"><span data-stu-id="2a9b1-191">C#</span></span>**
 ```csharp
 using System;
 using Windows.Media.Core;
@@ -277,11 +242,11 @@ namespace MediaApp
 }
 ```
 
-**MediaElementUserControl**
+**<span data-ttu-id="2a9b1-192">MediaElementUserControl</span><span class="sxs-lookup"><span data-stu-id="2a9b1-192">MediaElementUserControl</span></span>**
  
-`MediaElementUserControl` kapselt ein **MediaElement**-Steuerelement.
+<span data-ttu-id="2a9b1-193">`MediaElementUserControl` kapselt ein **MediaElement**-Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-193">The `MediaElementUserControl` encapsulates a **MediaElement** control.</span></span>
 
-**XAML**
+**<span data-ttu-id="2a9b1-194">XAML</span><span class="sxs-lookup"><span data-stu-id="2a9b1-194">XAML</span></span>**
 ```xaml
 <UserControl
     x:Class="MediaApp.MediaElementUserControl"
@@ -302,13 +267,13 @@ namespace MediaApp
 ```
 
 > [!NOTE]
-> Die Codepage für `MediaElementUserControl` enthält nur generierten Code und wird daher nicht gezeigt.
+> <span data-ttu-id="2a9b1-195">Die Codepage für `MediaElementUserControl` enthält nur generierten Code und wird daher nicht gezeigt.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-195">The code page for `MediaElementUserControl` contains only generated code, so it's not shown.</span></span>
 
-**Initialisieren eines Steuerelements auf der Grundlage von „IsTypePresent“**
+**<span data-ttu-id="2a9b1-196">Initialisieren eines Steuerelements auf der Grundlage von „IsTypePresent“</span><span class="sxs-lookup"><span data-stu-id="2a9b1-196">Initialize a control based on IsTypePresent</span></span>**
 
-Rufen Sie zur Laufzeit **ApiInformation.IsTypePresent** auf, um zu prüfen, ob „MediaPlayerElement“ vorhanden ist. Falls ja, wird `MediaPlayerUserControl` geladen. Andernfalls wird `MediaElementUserControl` geladen.
+<span data-ttu-id="2a9b1-197">Rufen Sie zur Laufzeit **ApiInformation.IsTypePresent** auf, um zu prüfen, ob „MediaPlayerElement“ vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-197">At runtime, you call **ApiInformation.IsTypePresent** to check for MediaPlayerElement.</span></span> <span data-ttu-id="2a9b1-198">Wenn vorhanden, laden Sie `MediaPlayerUserControl`, andernfalls laden Sie `MediaElementUserControl`.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-198">If it's present, you load `MediaPlayerUserControl`, if it's not, you load `MediaElementUserControl`.</span></span>
 
-**C#**
+**<span data-ttu-id="2a9b1-199">C#</span><span class="sxs-lookup"><span data-stu-id="2a9b1-199">C#</span></span>**
 ```csharp
 public MainPage()
 {
@@ -332,19 +297,19 @@ public MainPage()
 ```
 
 > [!IMPORTANT]
-> Zur Erinnerung: Diese Überprüfung legt nur das `mediaControl`-Objekt auf `MediaPlayerUserControl` oder `MediaElementUserControl` fest. Diese bedingten Überprüfungen müssen überall im Code durchgeführt werden, wo Sie ermitteln müssen, ob die MediaPlayerElement- oder die MediaElement-API verwendet werden soll. Es empfiehlt sich, die Prüfung nur einmal durchzuführen, das Ergebnis zwischenzuspeichern und es anschließend in der gesamten App zu verwenden.
+> <span data-ttu-id="2a9b1-200">Zur Erinnerung: Diese Überprüfung legt nur das `mediaControl`-Objekt auf `MediaPlayerUserControl` oder `MediaElementUserControl` fest.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-200">Remember that this check only sets the `mediaControl` object to either `MediaPlayerUserControl` or `MediaElementUserControl`.</span></span> <span data-ttu-id="2a9b1-201">Diese bedingten Überprüfungen müssen überall im Code durchgeführt werden, wo Sie ermitteln müssen, ob die MediaPlayerElement- oder die MediaElement-API verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-201">You need to perform these conditional checks anywhere else in your code that you need to determine whether to use MediaPlayerElement or MediaElement APIs.</span></span> <span data-ttu-id="2a9b1-202">Es empfiehlt sich, die Prüfung nur einmal durchzuführen, das Ergebnis zwischenzuspeichern und es anschließend in der gesamten App zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-202">You should perform the check once and cache the result, then used the cached result throughout your app.</span></span>
 
-## <a name="state-trigger-examples"></a>Beispiele für Zustandsauslöser
+## <a name="state-trigger-examples"></a><span data-ttu-id="2a9b1-203">Beispiele für Zustandsauslöser</span><span class="sxs-lookup"><span data-stu-id="2a9b1-203">State trigger examples</span></span>
 
-Mithilfe erweiterbarer Zustandsauslöser können Sie Markup und Code zusammen verwenden, um Änderungen des visuellen Zustands auf der Grundlage einer im Code überprüften Bedingung auszulösen (in diesem Fall: das Vorhandensein einer bestimmten API). In allgemeinen Szenarien mit adaptivem Code wird die Verwendung von Zustandsauslösern aufgrund des zusätzlichen Aufwands und der Beschränkung auf visuelle Zustände nicht empfohlen. 
+<span data-ttu-id="2a9b1-204">Mithilfe erweiterbarer Zustandsauslöser können Sie Markup und Code zusammen verwenden, um Änderungen des visuellen Zustands auf der Grundlage einer im Code überprüften Bedingung auszulösen (in diesem Fall: das Vorhandensein einer bestimmten API).</span><span class="sxs-lookup"><span data-stu-id="2a9b1-204">Extensible state triggers let you use markup and code together to trigger visual state changes based on a condition that you check in code; in this case, the presence of a specific API.</span></span> <span data-ttu-id="2a9b1-205">In allgemeinen Szenarien mit adaptivem Code wird die Verwendung von Zustandsauslösern aufgrund des zusätzlichen Aufwands und der Beschränkung auf visuelle Zustände nicht empfohlen.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-205">We don’t recommend state triggers for common adaptive code scenarios because of the overhead involved, and the restriction to only visual states.</span></span> 
 
-Verwenden Sie Zustandsauslöser nur dann für adaptiven Code, wenn lediglich geringfügige Benutzeroberflächenänderungen zwischen Betriebssystemversionen vorliegen, die sich nicht auf die restliche Benutzeroberfläche auswirken (etwa die Änderung einer Eigenschaft oder eines Enumerationswerts für ein Steuerelement).
+<span data-ttu-id="2a9b1-206">Verwenden Sie Zustandsauslöser nur dann für adaptiven Code, wenn lediglich geringfügige Benutzeroberflächenänderungen zwischen Betriebssystemversionen vorliegen, die sich nicht auf die restliche Benutzeroberfläche auswirken (etwa die Änderung einer Eigenschaft oder eines Enumerationswerts für ein Steuerelement).</span><span class="sxs-lookup"><span data-stu-id="2a9b1-206">You should use state triggers for adaptive code only when you have small UI changes between different OS versions that won’t impact the remaining UI, such as a property or enum value change on a control.</span></span>
 
-### <a name="example-1-new-property"></a>Beispiel 1: Neue Eigenschaft
+### <a name="example-1-new-property"></a><span data-ttu-id="2a9b1-207">Beispiel1: Neue Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="2a9b1-207">Example 1: New property</span></span>
 
-Der erste Schritt bei der Einrichtung eines erweiterbaren Zustandsauslösers besteht in der Verwendung von Unterklassen für die [StateTriggerBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.statetriggerbase.aspx)-Klasse zur Erstellung eines benutzerdefinierten Auslösers, dessen Aktivierung davon abhängt, ob eine API vorhanden ist. Dieses Beispiel zeigt einen Auslöser, der aktiviert wird, wenn das Vorhandensein der Eigenschaft der in XAML festgelegten `_isPresent`-Variablen entspricht.
+<span data-ttu-id="2a9b1-208">Der erste Schritt bei der Einrichtung eines erweiterbaren Zustandsauslösers besteht in der Verwendung von Unterklassen für die [StateTriggerBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.statetriggerbase.aspx)-Klasse zur Erstellung eines benutzerdefinierten Auslösers, dessen Aktivierung davon abhängt, ob eine API vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-208">The first step in setting up an extensible state trigger is subclassing the [StateTriggerBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.statetriggerbase.aspx) class to create a custom trigger that will be active based on the presence of an API.</span></span> <span data-ttu-id="2a9b1-209">Dieses Beispiel zeigt einen Auslöser, der aktiviert wird, wenn das Vorhandensein der Eigenschaft der in XAML festgelegten `_isPresent`-Variablen entspricht.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-209">This example shows a trigger that activates if the property presence matches the `_isPresent` variable set in XAML.</span></span>
 
-**C#**
+**<span data-ttu-id="2a9b1-210">C#</span><span class="sxs-lookup"><span data-stu-id="2a9b1-210">C#</span></span>**
 ```csharp
 class IsPropertyPresentTrigger : StateTriggerBase
 {
@@ -374,13 +339,13 @@ class IsPropertyPresentTrigger : StateTriggerBase
 }
 ```
 
-Im nächsten Schritt wird der visuelle Zustandsauslöser in XAML eingerichtet, um abhängig vom Vorhandensein der API zwei unterschiedliche visuelle Zustände zu erhalten. 
+<span data-ttu-id="2a9b1-211">Im nächsten Schritt wird der visuelle Zustandsauslöser in XAML eingerichtet, um abhängig vom Vorhandensein der API zwei unterschiedliche visuelle Zustände zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-211">The next step is setting up the visual state trigger in XAML so that two different visual states result based on the presence of the API.</span></span> 
 
-In der Windows 10-Version 1607 wird für die [FrameworkElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.aspx)-Klasse eine neue Eigenschaft namens [AllowFocusOnInteraction](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.allowfocusoninteraction.aspx) eingeführt, die bestimmt, ob ein Steuerelement den Fokus erhält, wenn ein Benutzer damit interagiert. Dies ist hilfreich, falls ein Textfeld für die Dateneingabe den Fokus behalten (und die Bildschirmtastatur weiter angezeigt werden) soll, wenn der Benutzer auf eine Schaltfläche klickt.
+<span data-ttu-id="2a9b1-212">In der Windows10-Version1607 wird für die [FrameworkElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.aspx)-Klasse eine neue Eigenschaft namens [AllowFocusOnInteraction](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.allowfocusoninteraction.aspx) eingeführt, die bestimmt, ob ein Steuerelement den Fokus erhält, wenn ein Benutzer damit interagiert.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-212">Windows 10, version 1607 introduces a new property on the [FrameworkElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.aspx) class called [AllowFocusOnInteraction](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.allowfocusoninteraction.aspx) that determines whether a control takes focus when  a user interacts with it.</span></span> <span data-ttu-id="2a9b1-213">Dies ist hilfreich, falls ein Textfeld für die Dateneingabe den Fokus behalten (und die Bildschirmtastatur weiter angezeigt werden) soll, wenn der Benutzer auf eine Schaltfläche klickt.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-213">This is useful if you want to keep focus on a text box for data entry (and keep the touch keyboard showing) while the user clicks a button.</span></span>
 
-Der Auslöser in diesem Beispiel überprüft, ob die Eigenschaft vorhanden ist. Ist die Eigenschaft vorhanden, wird die **AllowFocusOnInteraction**-Eigenschaft für eine Schaltfläche auf **False** festgelegt. Ist die Eigenschaft nicht vorhanden, wird der ursprüngliche Zustand der Schaltfläche beibehalten. Das TextBox-Element dient zur Veranschaulichung der Auswirkung dieser Eigenschaft, wenn Sie den Code ausführen.
+<span data-ttu-id="2a9b1-214">Der Auslöser in diesem Beispiel überprüft, ob die Eigenschaft vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-214">The trigger in this example checks if the property is present.</span></span> <span data-ttu-id="2a9b1-215">Ist die Eigenschaft vorhanden, wird die **AllowFocusOnInteraction**-Eigenschaft für eine Schaltfläche auf **False** festgelegt. Ist die Eigenschaft nicht vorhanden, wird der ursprüngliche Zustand der Schaltfläche beibehalten.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-215">If the property is present it sets the **AllowFocusOnInteraction** property on a Button to **false**; if the property isn’t present, the Button retains its original state.</span></span> <span data-ttu-id="2a9b1-216">Das TextBox-Element dient zur Veranschaulichung der Auswirkung dieser Eigenschaft, wenn Sie den Code ausführen.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-216">The TextBox is included to make it easier to see the effect of this property when you run the code.</span></span>
 
-**XAML**
+**<span data-ttu-id="2a9b1-217">XAML</span><span class="sxs-lookup"><span data-stu-id="2a9b1-217">XAML</span></span>**
 ```xaml
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <StackPanel>
@@ -408,11 +373,11 @@ Der Auslöser in diesem Beispiel überprüft, ob die Eigenschaft vorhanden ist. 
 </Grid>
 ```
 
-### <a name="example-2-new-enum-value"></a>Beispiel 2: Neuer Enumerationswert
+### <a name="example-2-new-enum-value"></a><span data-ttu-id="2a9b1-218">Beispiel2: Neuer Enumerationswert</span><span class="sxs-lookup"><span data-stu-id="2a9b1-218">Example 2: New enum value</span></span>
 
-Dieses Beispiel zeigt, wie Sie abhängig davon, ob ein Wert vorhanden ist, unterschiedliche Enumerationswerte festlegen. Hierbei kommt ein benutzerdefinierter Zustandsauslöser zum Einsatz, um das gleiche Ergebnis zu erhalten wie im vorherigen Chatbeispiel. In diesem Beispiel wird der neue ChatWithoutEmoji-Eingabeumfang verwendet, wenn auf dem Gerät die Windows 10-Version 1607 ausgeführt wird. Andernfalls wird der Eingabeumfang **Chat** verwendet. Die visuellen Zustände, die diesen Auslöser verwenden, werden im *if-else*-Stil eingerichtet, wobei die Wahl des Eingabeumfangs davon abhängt, ob der neue Enumerationswert vorhanden ist.
+<span data-ttu-id="2a9b1-219">Dieses Beispiel zeigt, wie Sie abhängig davon, ob ein Wert vorhanden ist, unterschiedliche Enumerationswerte festlegen.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-219">This example shows how to set different enumeration values based on whether a value is present.</span></span> <span data-ttu-id="2a9b1-220">Hierbei kommt ein benutzerdefinierter Zustandsauslöser zum Einsatz, um das gleiche Ergebnis zu erhalten wie im vorherigen Chatbeispiel.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-220">It uses a custom state trigger to achieve the same result as the previous chat example.</span></span> <span data-ttu-id="2a9b1-221">In diesem Beispiel wird der neue ChatWithoutEmoji-Eingabeumfang verwendet, wenn auf dem Gerät die Windows10-Version1607 ausgeführt wird. Andernfalls wird der Eingabeumfang **Chat** verwendet.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-221">In this example, you use the new ChatWithoutEmoji input scope if the device is running Windows 10, version 1607, otherwise the **Chat** input scope is used.</span></span> <span data-ttu-id="2a9b1-222">Die visuellen Zustände, die diesen Auslöser verwenden, werden im *if-else*-Stil eingerichtet, wobei die Wahl des Eingabeumfangs davon abhängt, ob der neue Enumerationswert vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="2a9b1-222">The visual states that use this trigger are set up in an *if-else* style where the input scope is chosen based on the presence of the new enum value.</span></span>
 
-**C#**
+**<span data-ttu-id="2a9b1-223">C#</span><span class="sxs-lookup"><span data-stu-id="2a9b1-223">C#</span></span>**
 ```csharp
 class IsEnumPresentTrigger : StateTriggerBase
 {
@@ -443,7 +408,7 @@ class IsEnumPresentTrigger : StateTriggerBase
 }
 ```
 
-**XAML**
+**<span data-ttu-id="2a9b1-224">XAML</span><span class="sxs-lookup"><span data-stu-id="2a9b1-224">XAML</span></span>**
 ```xaml
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
@@ -479,8 +444,8 @@ class IsEnumPresentTrigger : StateTriggerBase
     </VisualStateManager.VisualStateGroups>
 </Grid>
 ```
-## <a name="related-articles"></a>Verwandte Artikel
 
-- [Anleitung für UWP-Apps](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)
-- [Dynamically detecting features with API contracts (Dynamisches Erkennen von Features mithilfe von API-Verträgen)](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)
+## <a name="related-articles"></a><span data-ttu-id="2a9b1-225">Verwandte Artikel</span><span class="sxs-lookup"><span data-stu-id="2a9b1-225">Related articles</span></span>
 
+- [<span data-ttu-id="2a9b1-226">Anleitung für UWP-Apps</span><span class="sxs-lookup"><span data-stu-id="2a9b1-226">Guide to UWP apps</span></span>](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)
+- [<span data-ttu-id="2a9b1-227">Dynamically detecting features with API contracts (Dynamisches Erkennen von Features mithilfe von API-Verträgen)</span><span class="sxs-lookup"><span data-stu-id="2a9b1-227">Dynamically detecting features with API contracts</span></span>](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)

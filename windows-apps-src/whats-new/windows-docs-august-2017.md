@@ -1,0 +1,78 @@
+---
+author: QuinnRadich
+title: "Neuigkeiten in der Windows-Dokumentation im August 2017 – Entwicklung von UWP-Apps"
+description: "Neue Features, Videos und Entwicklerleitfäden in der Entwicklerdokumentation für Windows10 im August2017"
+keywords: "Neuigkeiten, Update, Features, Anleitungen für Entwickler, Windows10, 1708"
+ms.author: quradic
+ms.date: 08/03/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+redirect_url: windows-docs-latest
+ms.openlocfilehash: 43eebdc73f626034d9aaea12d18bdb6ce8657d90
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/09/2017
+---
+# <a name="whats-new-in-the-windows-developer-docs-in-august-2017"></a><span data-ttu-id="f3b7a-104">Neuigkeiten in der Windows-Entwicklerdokumentation im August 2017</span><span class="sxs-lookup"><span data-stu-id="f3b7a-104">What's New in the Windows Developer Docs in August 2017</span></span>
+
+<span data-ttu-id="f3b7a-105">Die Entwicklerdokumentation für die Windows-Plattform wird ständig mit Informationen über neue Features für Entwickler aktualisiert.</span><span class="sxs-lookup"><span data-stu-id="f3b7a-105">The Windows Developer Documentation is constantly being updated with information on new features available to developers across the Windows platform.</span></span> <span data-ttu-id="f3b7a-106">Die folgenden Featureübersichten, Entwicklerleitfäden und Videos wurden erst kürzlich bereitgestellt und enthalten neue oder aktualisierte Informationen für Windows-Entwickler.</span><span class="sxs-lookup"><span data-stu-id="f3b7a-106">The following feature overviews, developer guidance, and videos have recently been made available, containing new and updated information for Windows developers.</span></span>
+
+<span data-ttu-id="f3b7a-107">Nach der [Installation der Tools und des SDKs](http://go.microsoft.com/fwlink/?LinkId=821431) unter Windows10 können Sie entweder [eine neue universelle Windows-App erstellen](../get-started/your-first-app.md) oder sich mit der Verwendung von [vorhandenem App-Code unter Windows](../porting/index.md) vertraut machen.</span><span class="sxs-lookup"><span data-stu-id="f3b7a-107">[Install the tools and SDK](http://go.microsoft.com/fwlink/?LinkId=821431) on Windows 10 and you’re ready to either [create a new Universal Windows app](../get-started/your-first-app.md) or explore how you can use your [existing app code on Windows](../porting/index.md).</span></span>
+
+## <a name="features"></a><span data-ttu-id="f3b7a-108">Features</span><span class="sxs-lookup"><span data-stu-id="f3b7a-108">Features</span></span>
+
+### <a name="windows-template-studio"></a><span data-ttu-id="f3b7a-109">Windows Template Studio</span><span class="sxs-lookup"><span data-stu-id="f3b7a-109">Windows Template Studio</span></span>
+
+<span data-ttu-id="f3b7a-110">Verwenden Sie die neue Erweiterung [Windows Template Studio](https://aka.ms/wtsinstall) für Visual Studio2017, um UWP-Apps mit den gewünschten Seiten, Frameworks und Features zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="f3b7a-110">Use the new [Windows Template Studio](https://aka.ms/wtsinstall) extension for Visual Studio 2017 to quickly build a UWP app with the pages, framework, and features that you want.</span></span> <span data-ttu-id="f3b7a-111">Diese assistentenbasierte Umgebung implementiert bewährte Methoden und Muster, damit Sie Zeit sparen, wenn Sie Ihrer App Features hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="f3b7a-111">This wizard-based experience implements proven patterns and best practices to save you time and trouble adding features to your app.</span></span>
+
+![Windows Template Studio](images/template-studio.png)
+
+### <a name="conditional-xaml"></a><span data-ttu-id="f3b7a-113">Bedingte XAML</span><span class="sxs-lookup"><span data-stu-id="f3b7a-113">Conditional XAML</span></span>
+
+<span data-ttu-id="f3b7a-114">Sie können jetzt [bedingte XAML](../debug-test-perf/conditional-xaml.md) ausprobieren, um [versionsadaptive Apps](../debug-test-perf/version-adaptive-apps.md) zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="f3b7a-114">You can now preview [conditional XAML](../debug-test-perf/conditional-xaml.md) to create [version adaptive apps](../debug-test-perf/version-adaptive-apps.md).</span></span> <span data-ttu-id="f3b7a-115">Mit bedingter XAML können Sie die Methode ApiInformation.IsApiContractPresent im XAML-Markup verwenden. Damit sind Sie in der Lage, im Markup nur dann Eigenschaften festzulegen und Objekte zu initialisieren, wenn die entsprechende API vorhanden ist, ohne Code-Behind zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="f3b7a-115">Conditional XAML lets you use the ApiInformation.IsApiContractPresent method in XAML markup, so you can set properties and instantiate objects in markup based on the presence of an API, without needing to use code behind.</span></span>
+
+### <a name="game-mode"></a><span data-ttu-id="f3b7a-116">Spielmodus</span><span class="sxs-lookup"><span data-stu-id="f3b7a-116">Game Mode</span></span>
+
+<span data-ttu-id="f3b7a-117">Mithilfe der [Game Mode](https://msdn.microsoft.com/library/windows/desktop/mt808808)-APIs für die Universelle Windows-Plattform (UWP) sorgen Sie für ein optimiertes Spielerlebnis, indem Sie den Spielmodus in Windows10 nutzen.</span><span class="sxs-lookup"><span data-stu-id="f3b7a-117">The [Game Mode](https://msdn.microsoft.com/library/windows/desktop/mt808808) APIs for the Universal Windows Platform (UWP) allow you to produce the most optimized gaming experience by taking advantage of Game Mode in Windows 10.</span></span> <span data-ttu-id="f3b7a-118">Diese APIs befinden sich im Header <expandedresources.h>.</span><span class="sxs-lookup"><span data-stu-id="f3b7a-118">These APIs are located in the <expandedresources.h> header.</span></span>
+
+![Spielmodus](images/game-mode.png)
+
+### <a name="submission-api-supports-video-trailers-and-gaming-options"></a><span data-ttu-id="f3b7a-120">Übermittlungs-API unterstützt Videotrailer und Spieloptionen</span><span class="sxs-lookup"><span data-stu-id="f3b7a-120">Submission API supports video trailers and gaming options</span></span>
+
+<span data-ttu-id="f3b7a-121">Die [Windows Store-Übermittlungs-API](../monetize/create-and-manage-submissions-using-windows-store-services.md) ermöglicht Ihnen jetzt, [Videotrailer](../monetize/manage-app-submissions.md#trailer-object) und [Spieloptionen](../monetize/manage-app-submissions.md#gaming-options-object) mit Ihrer App zu übermitteln.</span><span class="sxs-lookup"><span data-stu-id="f3b7a-121">The [Windows Store submission API](../monetize/create-and-manage-submissions-using-windows-store-services.md) now enables you to include [video trailers](../monetize/manage-app-submissions.md#trailer-object) and [gaming options](../monetize/manage-app-submissions.md#gaming-options-object) with your app submissions.</span></span>
+
+
+## <a name="developer-guidance"></a><span data-ttu-id="f3b7a-122">Anleitungen für Entwickler</span><span class="sxs-lookup"><span data-stu-id="f3b7a-122">Developer Guidance</span></span>
+
+### <a name="data-schemas-for-store-products"></a><span data-ttu-id="f3b7a-123">Datenschemata für Store-Produkte</span><span class="sxs-lookup"><span data-stu-id="f3b7a-123">Data schemas for Store products</span></span>
+
+<span data-ttu-id="f3b7a-124">Wir haben den Artikel [Datenschemata für Store-Produkte](../monetize/data-schemas-for-store-products.md) hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="f3b7a-124">We've added the [Data schemas for Store products](../monetize/data-schemas-for-store-products.md) article.</span></span> <span data-ttu-id="f3b7a-125">Dieser Artikel enthält Schemata für auf den Store bezogenen Daten für mehrere Objekte im Namespace [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx), z.B. [StoreProduct](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct) und [StoreAppLicense](https://docs.microsoft.com/uwp/api/windows.services.store.storeapplicense).</span><span class="sxs-lookup"><span data-stu-id="f3b7a-125">This article provides schemas for the Store-related data available for several objects in the [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) namespace, including [StoreProduct](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct) and [StoreAppLicense](https://docs.microsoft.com/uwp/api/windows.services.store.storeapplicense).</span></span>
+
+### <a name="desktop-bridge"></a><span data-ttu-id="f3b7a-126">Desktop-Brücke</span><span class="sxs-lookup"><span data-stu-id="f3b7a-126">Desktop Bridge</span></span>
+
+<span data-ttu-id="f3b7a-127">Wir haben zwei Anleitungen hinzugefügt, mit deren Hilfe Sie für Benutzer von Windows10 die neuen Möglichkeiten moderner Umgebungen bereitstellen können.</span><span class="sxs-lookup"><span data-stu-id="f3b7a-127">We've added two guides that help you to add modern experiences that light up for Windows 10 users.</span></span>
+
+<span data-ttu-id="f3b7a-128">Informieren Sie sich im Artikel [Verbessern Sie Ihre Desktop-Anwendung für Windows10](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-enhance) über die richtigen Dateien, und schreiben Sie dann Code, um die UWP-Erfahrung für Windows10-Benutzer zu verbessern.</span><span class="sxs-lookup"><span data-stu-id="f3b7a-128">See [Enhance your desktop application for Windows 10](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-enhance) to find and reference the correct files, and then write code to light up UWP experiences for Windows 10 users.</span></span>  
+
+<span data-ttu-id="f3b7a-129">Im Artikel [Erweitern Sie Ihre Desktop-Anwendung mit modernen UWP-Komponenten](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-extend) erfahren Sie, wie Sie moderne XAML-Benutzeroberflächen und andere UWP-Funktionen verwenden, die in einem UWP-App-Container ausgeführt werden müssen.</span><span class="sxs-lookup"><span data-stu-id="f3b7a-129">See [Extend your desktop application with modern UWP components](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-extend) to incorporate modern XAML UIs and other UWP experiences that must run in a UWP app container.</span></span>
+
+### <a name="getting-started-with-point-of-service"></a><span data-ttu-id="f3b7a-130">Erste Schritte mit Point Of Service-Geräten</span><span class="sxs-lookup"><span data-stu-id="f3b7a-130">Getting started with point of service</span></span>
+
+<span data-ttu-id="f3b7a-131">Wir haben den neuen Leitfaden [Erste Schritte mit Point Of Service-Geräten](https://docs.microsoft.com/en-us/windows/uwp/devices-sensors/pos-get-started) hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="f3b7a-131">We've added a new guide to help you [get started with point of service devices](https://docs.microsoft.com/en-us/windows/uwp/devices-sensors/pos-get-started).</span></span> <span data-ttu-id="f3b7a-132">Es umfasst Themen wie Geräteenumeration, Überprüfen von Gerätefunktionen, Anfordern von Geräten und die gemeinsame Nutzung von Geräten.</span><span class="sxs-lookup"><span data-stu-id="f3b7a-132">It covers topics like device enumeration, checking device capabilities, claiming devices, and device sharing.</span></span> 
+
+
+## <a name="videos"></a><span data-ttu-id="f3b7a-133">Videos</span><span class="sxs-lookup"><span data-stu-id="f3b7a-133">Videos</span></span>
+
+### <a name="mixed-reality"></a><span data-ttu-id="f3b7a-134">Mixed Reality</span><span class="sxs-lookup"><span data-stu-id="f3b7a-134">Mixed Reality</span></span>
+
+<span data-ttu-id="f3b7a-135">Für [Microsoft HoloLens – Kurs 250](https://developer.microsoft.com/en-us/windows/mixed-reality/mixed_reality_250) wurde eine Reihe von neuen Videolernprogrammen veröffentlicht.</span><span class="sxs-lookup"><span data-stu-id="f3b7a-135">A series of new tutorial videos have been released for [Microsoft HoloLens Course 250](https://developer.microsoft.com/en-us/windows/mixed-reality/mixed_reality_250).</span></span> <span data-ttu-id="f3b7a-136">Sie finden in diesen Videokursen Informationen zum Erstellen gemeinsamer Erfahrungen auf Mixed Reality-Geräten. Vorausgesetzt wird, dass Sie die Tools bereits installiert haben und mit den Grundlagen der Entwicklung für Mixed Reality vertraut sind.</span><span class="sxs-lookup"><span data-stu-id="f3b7a-136">If you've already installed the tools and are famiilar with the basics of development for Mixed Reality, check out these video courses for information upon creating shared experiences across Mixed Reality devices.</span></span>
+
+### <a name="narrator-and-dev-mode"></a><span data-ttu-id="f3b7a-137">Sprachausgabe und Entwicklermodus</span><span class="sxs-lookup"><span data-stu-id="f3b7a-137">Narrator and Dev Mode</span></span>
+
+<span data-ttu-id="f3b7a-138">Sie wissen möglicherweise bereits, dass Sie die [Sprachausgabe](https://support.microsoft.com/help/22798/windows-10-narrator-get-started) verwenden können, um zu testen, wie gut Ihre App auf dem Bildschirm lesen kann.</span><span class="sxs-lookup"><span data-stu-id="f3b7a-138">You might already know that you can use [Narrator](https://support.microsoft.com/help/22798/windows-10-narrator-get-started) to test the screen reading experience of your app.</span></span> <span data-ttu-id="f3b7a-139">Die Sprachausgabe bietet aber auch einen Entwicklermodus für eine gute visuelle Darstellung der Informationen, die für die Sprachausgabe verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="f3b7a-139">But Narrator also features a developer mode, which gives you a good visual representation of the information exposed to it.</span></span> <span data-ttu-id="f3b7a-140">[Sehen Sie sich das Video an](https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-Narrator-and-Dev-Mode), und erfahren Sie dann mehr über [Sprachausgabe im Entwicklermodus](https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-Narrator-and-Dev-Mode).</span><span class="sxs-lookup"><span data-stu-id="f3b7a-140">[Watch the video](https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-Narrator-and-Dev-Mode), then learn more about [Narrator developer mode](https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-Narrator-and-Dev-Mode).</span></span>
+
+### <a name="windows-template-studio"></a><span data-ttu-id="f3b7a-141">Windows Template Studio</span><span class="sxs-lookup"><span data-stu-id="f3b7a-141">Windows Template Studio</span></span>
+
+<span data-ttu-id="f3b7a-142">Eine ausführlichere Übersicht über Windows Template Studio erhält [dieses Video](https://channel9.msdn.com/Blogs/One-Dev-Minute/Getting-Started-with-Windows-Template-Studio).</span><span class="sxs-lookup"><span data-stu-id="f3b7a-142">A more detailed overview of the Windows Template Studio is given in [this video](https://channel9.msdn.com/Blogs/One-Dev-Minute/Getting-Started-with-Windows-Template-Studio).</span></span> <span data-ttu-id="f3b7a-143">Wenn Sie fertig sind, [installieren Sie die Erweiterung](https://aka.ms/wtsinstall) oder [sehen Sie sich den Quellcode und die Dokumentation an](https://aka.ms/wtsinstall).</span><span class="sxs-lookup"><span data-stu-id="f3b7a-143">When you're ready, [install the extension](https://aka.ms/wtsinstall) or [check out the source code and documentation](https://aka.ms/wtsinstall).</span></span>

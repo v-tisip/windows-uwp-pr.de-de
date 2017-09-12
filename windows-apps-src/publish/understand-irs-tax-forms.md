@@ -3,128 +3,131 @@ author: jnHs
 Description: "Informationen zu den Steuerformularen, die von Microsoft ausgestellt werden, einschließlich ihres Empfängers und des Zeitpunkts der Verfügbarkeit."
 title: "Erläuterung der von Microsoft ausgestellten IRS-Steuerformulare"
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 06/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
+keywords: Windows10, UWP
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 5f51e1c5a44767e49b5c3dc5f578c2532da11008
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: bffb666184f52e6e6491d8651414ecbc269352b8
+ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/21/2017
 ---
+# <a name="understand-irs-tax-forms-issued-by-microsoft"></a><span data-ttu-id="b12e1-104">Erläuterung der von Microsoft ausgestellten IRS-Steuerformulare</span><span class="sxs-lookup"><span data-stu-id="b12e1-104">Understand IRS tax forms issued by Microsoft</span></span>
 
-# <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Erläuterung der von Microsoft ausgestellten IRS-Steuerformulare
+<span data-ttu-id="b12e1-105">Je nach Ihrem Standort und der Höhe des Umsatzes und/oder der Zahlungen, die Sie erhalten, erhalten Sie jedes Jahr mindestens ein Steuerformular von Microsoft.</span><span class="sxs-lookup"><span data-stu-id="b12e1-105">Depending on your location and the amount of sales and/or payments you receive, you may receive one or more tax forms from Microsoft each year.</span></span> <span data-ttu-id="b12e1-106">Microsoft muss diese Formulare ausstellen und bei der Bundessteuerbehörde der USA (IRS) einreichen.</span><span class="sxs-lookup"><span data-stu-id="b12e1-106">Microsoft is required to issue these forms and file them with the Internal Revenue Service (IRS).</span></span>
 
-Je nach Ihrem Standort und der Höhe des Umsatzes und/oder der Zahlungen, die Sie erhalten, erhalten Sie jedes Jahr mindestens ein Steuerformular von Microsoft. Microsoft muss diese Formulare ausstellen und bei der Bundessteuerbehörde der USA (IRS) einreichen.
+<span data-ttu-id="b12e1-107">Nachfolgend erläutern wir diese Formulare eingehender, etwa, wer sie erhält und wann sie zur Verfügung gestellt werden.</span><span class="sxs-lookup"><span data-stu-id="b12e1-107">Below, we'll explain more about these forms, including who will receive them and when they are made available.</span></span>
 
-Nachfolgend erläutern wir diese Formulare eingehender, etwa, wer sie erhält und wann sie zur Verfügung gestellt werden.
+## <a name="types-of-tax-forms"></a><span data-ttu-id="b12e1-108">Arten von Steuerformularen</span><span class="sxs-lookup"><span data-stu-id="b12e1-108">Types of tax forms</span></span>
 
-## <a name="types-of-tax-forms"></a>Arten von Steuerformularen
-
-| IRS-Steuerformular | Beschreibung | Verfügbarkeit |
+| <span data-ttu-id="b12e1-109">IRS-Steuerformular</span><span class="sxs-lookup"><span data-stu-id="b12e1-109">IRS tax form</span></span> | <span data-ttu-id="b12e1-110">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="b12e1-110">Description</span></span> | <span data-ttu-id="b12e1-111">Verfügbarkeit</span><span class="sxs-lookup"><span data-stu-id="b12e1-111">Availability</span></span> |
 |--------------|-------------|--------------|
-|1099-MISC, 1099-K | Im Zusammenhang mit Verkaufsaktivitäten und/oder Zahlungen an Sie für die Teilnahme am Microsoft Marketplace | Gedruckte Formulare werden mit elektronischen Siegeln mit spätestens dem **31. Januar** versehen, und die PDF-Kopien werden zur gleichen Zeit im Dev Center zur Verfügung stehen (**Dashboard > Kontoeinstellungen > Steuerprofil**) |
-|1042-S | Im Zusammenhang mit den Zahlungen an Sie, die der Quellensteuer der USA unterliegen. | Gedruckte Formulare werden mit elektronischen Siegeln mit spätestens dem **15. März** versehen, und die PDF-Kopien werden zur gleichen Zeit im Dev Center zur Verfügung stehen (**Dashboard > Kontoeinstellungen > Steuerprofil**) |
+|<span data-ttu-id="b12e1-112">1099-MISC, 1099-K</span><span class="sxs-lookup"><span data-stu-id="b12e1-112">1099-MISC, 1099-K</span></span> | <span data-ttu-id="b12e1-113">Im Zusammenhang mit Verkaufsaktivitäten und/oder Zahlungen an Sie für die Teilnahme am Microsoft Marketplace</span><span class="sxs-lookup"><span data-stu-id="b12e1-113">Related to sales activity and/or payments made to you for participation in Microsoft's marketplaces</span></span> | <span data-ttu-id="b12e1-114">Gedruckte Formulare werden mit elektronischen Siegeln mit spätestens dem **31.Januar** versehen, und die PDF-Kopien werden zur gleichen Zeit im Dev Center zur Verfügung stehen (**Dashboard > Kontoeinstellungen > Steuerprofil**)</span><span class="sxs-lookup"><span data-stu-id="b12e1-114">Printed forms will be postmarked on or before **January 31**, and .pdf copies will be available in Dev Center (**Dashboard > Account settings > Tax profile**) at the same time</span></span> |
+|<span data-ttu-id="b12e1-115">1042-S</span><span class="sxs-lookup"><span data-stu-id="b12e1-115">1042-S</span></span> | <span data-ttu-id="b12e1-116">Im Zusammenhang mit den Zahlungen an Sie, die der Quellensteuer der USA unterliegen.</span><span class="sxs-lookup"><span data-stu-id="b12e1-116">Related to payments made to you that are subject to United States withholding tax.</span></span> | <span data-ttu-id="b12e1-117">Gedruckte Formulare werden mit elektronischen Siegeln mit spätestens dem **15.März** versehen, und die PDF-Kopien werden zur gleichen Zeit im Dev Center zur Verfügung stehen (**Dashboard > Kontoeinstellungen > Steuerprofil**)</span><span class="sxs-lookup"><span data-stu-id="b12e1-117">Printed forms will be postmarked on or before **March 15**, and .pdf copies will be available in Dev Center (**Dashboard > Account settings > Tax profile**) at the same time</span></span> |
 
-> **Hinweis** Die Adresse auf den IRS.Steuerformularen entspricht der Adresse in Ihrem [Steuerprofil](setting-up-your-payout-account-and-tax-forms.md#tax-forms). Wenn sich Ihre Adresse geändert hat, aktualisieren Sie die Adresse auch in Ihrem **Steuerprofil**.
+> [!NOTE]
+> <span data-ttu-id="b12e1-118">Die Adresse auf den IRS.Steuerformularen entspricht der Adresse in Ihrem [Steuerprofil](setting-up-your-payout-account-and-tax-forms.md#tax-forms)..</span><span class="sxs-lookup"><span data-stu-id="b12e1-118">The address listed on IRS tax forms comes from the address in your [Tax profile](setting-up-your-payout-account-and-tax-forms.md#tax-forms).</span></span> <span data-ttu-id="b12e1-119">Wenn sich Ihre Adresse geändert hat, aktualisieren Sie die Adresse auch in Ihrem **Steuerprofil**.</span><span class="sxs-lookup"><span data-stu-id="b12e1-119">If your address has changed, please make sure to update the address in your **Tax profile**.</span></span>
 
-## <a name="for-developers-located-in-the-united-states"></a>Für Entwickler in den USA
+## <a name="for-developers-located-in-the-united-states"></a><span data-ttu-id="b12e1-120">Für Entwickler in den USA</span><span class="sxs-lookup"><span data-stu-id="b12e1-120">For developers located in the United States</span></span>
 
 <table>
   <tr>
-     <th>Wenn ich Entwickler in den USA bin, kostenpflichtige Apps verkaufe und... </th>
-     <th> Ich sollte dieses Formular erhalten</th>
+     <th><span data-ttu-id="b12e1-121">Wenn ich Entwickler in den USA bin, kostenpflichtige Apps verkaufe und...</span><span class="sxs-lookup"><span data-stu-id="b12e1-121">If I'm a United States developer selling paid apps and ...</span></span> </th>
+     <th> <span data-ttu-id="b12e1-122">Ich sollte dieses Formular erhalten</span><span class="sxs-lookup"><span data-stu-id="b12e1-122">I should receive this form</span></span></th>
   </tr>
   <tr> 
-     <td valign="top">Ich habe **mehr als 200 App-Verkäufe** mit einem Gesamtumsatz von **mehr als 20.000 US-Dollar** im entsprechenden Geschäftsjahr (Verkäufe über den Windows 10-Store Brasilien und China werden **nicht** gezählt.) getätigt</td>
-    <td valign="top">**1099-K**:<br>
-Einreichende Instanz: Microsoft Corporation<br>
-EIN: \*\*\*\*\*4442<br>
-<br>
-**Wichtig:** Formular 1099-K enthält **Bruttoeinkaufsbeträge**, keine an Sie erfolgten Zahlungen.</td>
+     <td valign="top"><span data-ttu-id="b12e1-123">Ich habe **mehr als 200 App-Verkäufe** mit einem Gesamtumsatz von **mehr als 20.000 US-Dollar** im entsprechenden Geschäftsjahr (Verkäufe über den Windows10-Store Brasilien und China werden **nicht** gezählt.) getätigt</span><span class="sxs-lookup"><span data-stu-id="b12e1-123">I had **greater than 200 app sales** with a total purchase amount of these sales **greater than $20,000 USD** in the applicable tax year (**not** counting sales made in Brazil and China through the Windows 10 Store.)</span></span></td>
+    <td valign="top"><span data-ttu-id="b12e1-124">**1099-K**:</span><span class="sxs-lookup"><span data-stu-id="b12e1-124">**1099-K** :</span></span><br>
+<span data-ttu-id="b12e1-125">Einreichende Instanz: Microsoft Corporation</span><span class="sxs-lookup"><span data-stu-id="b12e1-125">Filer: Microsoft Corporation</span></span><br>
+<span data-ttu-id="b12e1-126">EIN: \*\*\*\*\*4442</span><span class="sxs-lookup"><span data-stu-id="b12e1-126">EIN: \*\*\*\*\*4442</span></span><br>
+<br><span data-ttu-id="b12e1-127">
+**Wichtig:** Formular 1099-K enthält **Bruttoeinkaufsbeträge**, keine an Sie erfolgten Zahlungen.</span><span class="sxs-lookup"><span data-stu-id="b12e1-127">
+**Important:** Form 1099-K contains **gross purchase** amounts, not payments made to you.</span></span></td>
   </tr>
   <tr> 
-     <td valign="top">Ich habe **mindestens 10 Dollar an Zahlungen** für App-Verkäufe in Brasilien und China über den Windows 10-Store erhalten.<br>
+     <td valign="top"><span data-ttu-id="b12e1-128">Ich habe **mindestens 10 Dollar an Zahlungen** für App-Verkäufe in Brasilien und China über den Windows10-Store erhalten.</span><span class="sxs-lookup"><span data-stu-id="b12e1-128">I received **at least $10 in payments** for app sales made in Brazil and China through the Windows 10 Store.</span></span><br>
 <br>
-**ODER**<br>
+**<span data-ttu-id="b12e1-129">ODER</span><span class="sxs-lookup"><span data-stu-id="b12e1-129">OR</span></span>**<br>
 <br>
-Ich habe mindestens 600 US-Dollar an Zahlungen erhalten, die nicht im Zusammenhang mit App-Verkäufen von Microsoft im entsprechenden Geschäftsjahr stehen (z. B. Anreizzahlungen oder Zahlungen für einen Wettbewerb oder eine Werbeaktion)</td>
-    <td valign="top">**1099-MISC**:<br>
-Zahlende Instanz: Microsoft Corporation<br>
-EIN: \*\*\*\*\*4442<br>
-<br>
-**Wichtig:** Bestimmte Unternehmenseinheiten erhalten keine 1099-MISC-Formulare, ungeachtet der erhaltenen Zahlungen von Microsoft.  Weitere Informationen erhalten Sie bei Ihrem Steuerberater.</td>
+<span data-ttu-id="b12e1-130">Ich habe mindestens 600 US-Dollar an Zahlungen erhalten, die nicht im Zusammenhang mit App-Verkäufen von Microsoft im entsprechenden Geschäftsjahr stehen (z.B. Anreizzahlungen oder Zahlungen für einen Wettbewerb oder eine Werbeaktion)</span><span class="sxs-lookup"><span data-stu-id="b12e1-130">I received at least $600 in payments not related to app sales from Microsoft in the applicable tax year (e.g. incentive payments or payments from a contest or promotion)</span></span></td>
+    <td valign="top"><span data-ttu-id="b12e1-131">**1099-MISC**:</span><span class="sxs-lookup"><span data-stu-id="b12e1-131">**1099-MISC** :</span></span><br>
+<span data-ttu-id="b12e1-132">Zahlende Instanz: Microsoft Corporation</span><span class="sxs-lookup"><span data-stu-id="b12e1-132">Payer: Microsoft Corporation</span></span><br>
+<span data-ttu-id="b12e1-133">EIN: \*\*\*\*\*4442</span><span class="sxs-lookup"><span data-stu-id="b12e1-133">EIN: \*\*\*\*\*4442</span></span><br>
+<br><span data-ttu-id="b12e1-134">
+**Wichtig:** Bestimmte Unternehmenseinheiten erhalten keine 1099-MISC-Formulare, ungeachtet der erhaltenen Zahlungen von Microsoft.</span><span class="sxs-lookup"><span data-stu-id="b12e1-134">
+**Important:** Certain business entities will not receive 1099-MISC forms regardless of the payment amounts received from Microsoft.</span></span>  <span data-ttu-id="b12e1-135">Weitere Informationen erhalten Sie bei Ihrem Steuerberater.</span><span class="sxs-lookup"><span data-stu-id="b12e1-135">Please consult your tax professional for further information.</span></span></td>
   </tr>
   <tr>
-    <td valign="top">Keine der Antworten oben trifft zu.</td>
-    <td valign="top">Keine</td>
+    <td valign="top"><span data-ttu-id="b12e1-136">Keine der Antworten oben trifft zu.</span><span class="sxs-lookup"><span data-stu-id="b12e1-136">None of the above apply.</span></span></td>
+    <td valign="top"><span data-ttu-id="b12e1-137">Keine</span><span class="sxs-lookup"><span data-stu-id="b12e1-137">None</span></span></td>
   </tr>
   <tr>
     <td valign="top">&nbsp;</td>
     <td valign="top">&nbsp;</td>
   </tr>
   <tr>
-     <th>Wenn ich Entwickler in den USA bin, kostenpflichtige Apps verkaufe und... </th>
-     <th> Ich sollte dieses Formular erhalten</th>
+     <th><span data-ttu-id="b12e1-138">Wenn ich Entwickler in den USA bin, kostenpflichtige Apps verkaufe und...</span><span class="sxs-lookup"><span data-stu-id="b12e1-138">If I'm a United States developer selling paid apps and ...</span></span> </th>
+     <th> <span data-ttu-id="b12e1-139">Ich sollte dieses Formular erhalten</span><span class="sxs-lookup"><span data-stu-id="b12e1-139">I should receive this form</span></span></th>
   </tr>
   <tr> 
-     <td valign="top">Ich habe **mindestens 600 US-Dollar an Zahlungen** für Anzeigen in Apps (Microsoft Advertising) im entsprechenden Geschäftsjahr erhalten</td>
-    <td valign="top">**1099-MISC**:<br>
-Zahlende Instanz: Microsoft Online Inc<br>
-EIN: \*\*\*\*\*0505<br>
-<br>
-**Wichtig:** Bestimmte Unternehmenseinheiten erhalten keine 1099-MISC-Formulare, ungeachtet der erhaltenen Zahlungen von Microsoft.  Weitere Informationen erhalten Sie bei Ihrem Steuerberater.  </td>
+     <td valign="top"><span data-ttu-id="b12e1-140">Ich habe **mindestens 600 US-Dollar an Zahlungen** für Anzeigen in Apps im entsprechenden Geschäftsjahr erhalten.</span><span class="sxs-lookup"><span data-stu-id="b12e1-140">I received **at least $600 in payments** from ads in apps in the applicable tax year</span></span></td>
+    <td valign="top"><span data-ttu-id="b12e1-141">**1099-MISC**:</span><span class="sxs-lookup"><span data-stu-id="b12e1-141">**1099-MISC** :</span></span><br>
+<span data-ttu-id="b12e1-142">Zahlende Instanz: Microsoft Online Inc</span><span class="sxs-lookup"><span data-stu-id="b12e1-142">Payer: Microsoft Online Inc</span></span><br>
+<span data-ttu-id="b12e1-143">EIN: \*\*\*\*\*0505</span><span class="sxs-lookup"><span data-stu-id="b12e1-143">EIN: \*\*\*\*\*0505</span></span><br>
+<br><span data-ttu-id="b12e1-144">
+**Wichtig:** Bestimmte Unternehmenseinheiten erhalten keine 1099-MISC-Formulare, ungeachtet der erhaltenen Zahlungen von Microsoft.</span><span class="sxs-lookup"><span data-stu-id="b12e1-144">
+**Important:** Certain business entities will not receive 1099-MISC forms regardless of the payment amounts received from Microsoft.</span></span>  <span data-ttu-id="b12e1-145">Weitere Informationen erhalten Sie bei Ihrem Steuerberater.</span><span class="sxs-lookup"><span data-stu-id="b12e1-145">Please consult your tax professional for further information.</span></span>  </td>
   </tr>
   <tr> 
-     <td valign="top">Ich habe **weniger als 600 US-Dollar an Zahlungen** für Anzeigen in Apps (Microsoft Advertising) im entsprechenden Geschäftsjahr erhalten</td>
-     <td valign="top">Keine</td>
+     <td valign="top"><span data-ttu-id="b12e1-146">Ich habe **weniger als 600 US-Dollar an Zahlungen** für Anzeigen in Apps entsprechenden Geschäftsjahr erhalten.</span><span class="sxs-lookup"><span data-stu-id="b12e1-146">I received **less than $600 in payments** from ads in apps in the applicable tax year</span></span></td>
+     <td valign="top"><span data-ttu-id="b12e1-147">Keine</span><span class="sxs-lookup"><span data-stu-id="b12e1-147">None</span></span></td>
   </tr>
 </table>
 
 
-## <a name="for-developers-located-outside-of-the-united-states"></a>Für Entwickler außerhalb der USA
+## <a name="for-developers-located-outside-of-the-united-states"></a><span data-ttu-id="b12e1-148">Für Entwickler außerhalb der USA</span><span class="sxs-lookup"><span data-stu-id="b12e1-148">For developers located outside of the United States</span></span>
 
 <table>
   <tr>
-    <td valign="top">**Ich habe ein Formular 1042-S von Microsoft erhalten. Wofür ist das?**</td>
-    <td valign="top">Microsoft hat Ihnen mindestens ein Formular 1042-S bereitgestellt, da wir Ihnen Beträge bezahlt haben, die an die Steuerbehörde der USA gemeldet werden müssen und quellensteuerpflichtig sind.  Formular 1042-S wird für diese Meldeanforderung verwendet.</td>
+    <td valign="top">**<span data-ttu-id="b12e1-149">Ich habe ein Formular 1042-S von Microsoft erhalten.</span><span class="sxs-lookup"><span data-stu-id="b12e1-149">I received a form 1042-S from Microsoft.</span></span> <span data-ttu-id="b12e1-150">Wofür ist das?</span><span class="sxs-lookup"><span data-stu-id="b12e1-150">What is it for?</span></span>**</td>
+    <td valign="top"><span data-ttu-id="b12e1-151">Microsoft hat Ihnen mindestens ein Formular 1042-S bereitgestellt, da wir Ihnen Beträge bezahlt haben, die an die Steuerbehörde der USA gemeldet werden müssen und quellensteuerpflichtig sind.</span><span class="sxs-lookup"><span data-stu-id="b12e1-151">Microsoft has provided you with a 1042-S form or forms because we paid you revenue that is considered reportable to the United States tax authorities and was subject to withholding tax.</span></span>  <span data-ttu-id="b12e1-152">Formular 1042-S wird für diese Meldeanforderung verwendet.</span><span class="sxs-lookup"><span data-stu-id="b12e1-152">Form 1042-S is used for this reporting requirement.</span></span></td>
   </tr>
   <tr>
-    <td valign="top">**Was muss ich mit den Formularen tun?**</td>
-    <td valign="top">Im Allgemeinen ist keine spezifische Aktion Ihrerseits erforderlich. Das Formular 1042-S kann hilfreich sein, wenn Sie bei Ihren Steuerbehörden eine beliebige Form eines Steuerkredits beantragen möchten.  Bei Ihren Steuerberatern erhalten Sie weitere Informationen zu diesem Thema.</td>
+    <td valign="top">**<span data-ttu-id="b12e1-153">Was muss ich mit den Formularen tun?</span><span class="sxs-lookup"><span data-stu-id="b12e1-153">What should I do with the forms?</span></span>**</td>
+    <td valign="top"><span data-ttu-id="b12e1-154">Im Allgemeinen ist keine spezifische Aktion Ihrerseits erforderlich.</span><span class="sxs-lookup"><span data-stu-id="b12e1-154">Generally, no specific action is required on your part.</span></span> <span data-ttu-id="b12e1-155">Das Formular 1042-S kann hilfreich sein, wenn Sie bei Ihren Steuerbehörden eine beliebige Form eines Steuerkredits beantragen möchten.</span><span class="sxs-lookup"><span data-stu-id="b12e1-155">The form 1042-S may be useful to you if you want to apply to your local tax authorities for any form of tax credit.</span></span>  <span data-ttu-id="b12e1-156">Bei Ihren Steuerberatern erhalten Sie weitere Informationen zu diesem Thema.</span><span class="sxs-lookup"><span data-stu-id="b12e1-156">You should consult with your own tax advisors to get more information on this topic.</span></span></td>
   </tr>
   <tr>
-    <td valign="top">**Warum wurde Steuer auf meine Zahlungen einbehalten, als ich ein Formular W8 ausgefüllt habe?**</td>
-    <td valign="top">Steuern werden in einem der folgenden Fälle einbehalten:<br>
-     1. Sie haben den Abschnitt zum Steuerabkommen des W8 nicht ordnungsgemäß ausgefüllt oder<br>
-     2. Sie wohnen in einem Land, das über kein Steuerabkommen mit den USA verfügt.
+    <td valign="top">**<span data-ttu-id="b12e1-157">Warum wurde Steuer auf meine Zahlungen einbehalten, als ich ein Formular W8 ausgefüllt habe?</span><span class="sxs-lookup"><span data-stu-id="b12e1-157">Why was tax withheld on my payments when I completed a W8 form?</span></span>**</td>
+    <td valign="top"><span data-ttu-id="b12e1-158">Steuern werden in einem der folgenden Fälle einbehalten:</span><span class="sxs-lookup"><span data-stu-id="b12e1-158">Taxes will be withheld if either:</span></span><br>
+     1. <span data-ttu-id="b12e1-159">Sie haben den Abschnittzum Steuerabkommen des W8 nicht ordnungsgemäß ausgefüllt oder</span><span class="sxs-lookup"><span data-stu-id="b12e1-159">You did not complete the tax treaty section of the W8 correctly, or</span></span><br>
+     2. <span data-ttu-id="b12e1-160">Sie wohnen in einem Land, das über kein Steuerabkommen mit den USA verfügt.</span><span class="sxs-lookup"><span data-stu-id="b12e1-160">You are resident in a country that does not have a tax treaty with the United States.</span></span>
 
      You can visit Dev Center at any time to submit an updated W8 form.<br>
      <br>
      **Note:** Not all income is subject to tax withholding.</td>
   </tr>
   <tr>
-    <td valign="top">**Ich habe ein aktualisiertes W8-Formular mit gültigen Informationen zum Abkommen übermittelt. Kann Microsoft mir die einbehaltene Steuer zurückerstatten?**</td>
-    <td valign="top">Sobald die Steuer einbehalten wurde, kann diese nicht zurückerstattet werden. Besprechen Sie mit Ihren Steuerberatern, ob Sie eine lokale Gutschrift für diese Steuern beantragen können oder ob Sie eine Erstattung von IRS fordern möchten.</td>
+    <td valign="top">**<span data-ttu-id="b12e1-161">Ich habe ein aktualisiertes W8-Formular mit gültigen Informationen zum Abkommen übermittelt.</span><span class="sxs-lookup"><span data-stu-id="b12e1-161">I submitted an updated W8 form with valid treaty information.</span></span> <span data-ttu-id="b12e1-162">Kann Microsoft mir die einbehaltene Steuer zurückerstatten?</span><span class="sxs-lookup"><span data-stu-id="b12e1-162">Can Microsoft refund me the tax that was withheld?</span></span>**</td>
+    <td valign="top"><span data-ttu-id="b12e1-163">Sobald die Steuer einbehalten wurde, kann diese nicht zurückerstattet werden.</span><span class="sxs-lookup"><span data-stu-id="b12e1-163">Once tax has been withheld, it cannot be refunded.</span></span> <span data-ttu-id="b12e1-164">Besprechen Sie mit Ihren Steuerberatern, ob Sie eine lokale Gutschrift für diese Steuern beantragen können oder ob Sie eine Erstattung von IRS fordern möchten.</span><span class="sxs-lookup"><span data-stu-id="b12e1-164">You should discuss with your tax advisers whether you can claim a local credit for these taxes, or whether you can seek a refund from the IRS.</span></span></td>
   </tr>
   <tr>
-    <td valign="top">**Welche Umsätze werden im Formular 1042-S angegeben?**</td>
-    <td valign="top">Nur Verkäufe an **Käufer in den USA, die der Quellensteuer unterliegen,** müssen angegeben werden.  Alle anderen Verkäufe müssen nicht angegeben werden.</td>
+    <td valign="top">**<span data-ttu-id="b12e1-165">Welche Umsätze werden im Formular 1042-S angegeben?</span><span class="sxs-lookup"><span data-stu-id="b12e1-165">What sales are reported on form 1042-S?</span></span>**</td>
+    <td valign="top"><span data-ttu-id="b12e1-166">Nur Verkäufe an **Käufer in den USA, die der Quellensteuer unterliegen,** müssen angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="b12e1-166">Only sales made **to buyers located in the United States that were classified as subject to tax withholding** are reportable.</span></span>  <span data-ttu-id="b12e1-167">Alle anderen Verkäufe müssen nicht angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="b12e1-167">All other sales are not considered reportable.</span></span></td>
   </tr>
   <tr>
-    <td valign="top">**Warum habe ich 3 Kopien desselben Formulars 1042-S in einem Umschlag erhalten?**</td>
-    <td valign="top">Die IRS-Bestimmungen erfordern die Bereitstellung von drei Kopien des Formulars:
+    <td valign="top">**<span data-ttu-id="b12e1-168">Warum habe ich 3 Kopien desselben Formulars 1042-S in einem Umschlag erhalten?</span><span class="sxs-lookup"><span data-stu-id="b12e1-168">Why did I get 3 copies of the same form 1042-S in one envelope?</span></span>**</td>
+    <td valign="top"><span data-ttu-id="b12e1-169">Die IRS-Bestimmungen erfordern die Bereitstellung von drei Kopien des Formulars:</span><span class="sxs-lookup"><span data-stu-id="b12e1-169">IRS regulations require three copies of the form to be provided:</span></span>
 <ul>
-<li>Eine für die Unterlagen des Empfängers</li>
-<li>Eine zum Einreichen mit einer Bundessteuererklärung in den USA (sofern zutreffend)</li>
-<li>Eine zum Einreichen mit einer Landessteuererklärung in den USA (sofern zutreffend)</li>
+<li><span data-ttu-id="b12e1-170">Eine für die Unterlagen des Empfängers</span><span class="sxs-lookup"><span data-stu-id="b12e1-170">One for the recipient's records</span></span></li>
+<li><span data-ttu-id="b12e1-171">Eine zum Einreichen mit einer Bundessteuererklärung in den USA (sofern zutreffend)</span><span class="sxs-lookup"><span data-stu-id="b12e1-171">One for filing with a United States Federal tax return (if applicable)</span></span></li>
+<li><span data-ttu-id="b12e1-172">Eine zum Einreichen mit einer Landessteuererklärung in den USA (sofern zutreffend)</span><span class="sxs-lookup"><span data-stu-id="b12e1-172">One for filing with a United States State tax return (if applicable)</span></span></li>
 </ul></td>
   </tr>
 </table>
 
 
-> **Hinweis** Bei weiteren Fragen oder Anliegen im Zusammenhang mit **IRS-Steuerformularen** erstellen Sie ein [Supportticket](http://aka.ms/storesupport). Microsoft kann keine Fragen im Zusammenhang mit Ihren spezifischen Steuerumständen beantworten. Bei diesen Fragen wenden Sie sich an Ihre Steuerexperten.
-
+> [!NOTE]
+> <span data-ttu-id="b12e1-173">Bei weiteren Fragen oder Anliegen im Zusammenhang mit **IRS-Steuerformularen** erstellen Sie ein [Supportticket](http://aka.ms/storesupport).</span><span class="sxs-lookup"><span data-stu-id="b12e1-173">If you have additional questions or concerns related to **IRS tax forms**, please create a [support ticket](http://aka.ms/storesupport).</span></span> <span data-ttu-id="b12e1-174">Microsoft kann keine Fragen im Zusammenhang mit Ihren spezifischen Steuerumständen beantworten. Bei diesen Fragen wenden Sie sich an Ihre Steuerexperten.</span><span class="sxs-lookup"><span data-stu-id="b12e1-174">Microsoft cannot answer questions related to your specific tax circumstances; for those questions, please seek advice from your tax professional.</span></span>

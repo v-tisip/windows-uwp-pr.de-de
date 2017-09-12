@@ -1,109 +1,115 @@
 ---
 author: mcleanbyron
 ms.assetid: 3aeddb83-5314-447b-b294-9fc28273cd39
-description: "Erfahren Sie mehr über die Installation der Microsoft Advertising-Bibliotheken."
-title: Installieren der Microsoft Advertising-Bibliotheken
+description: "Erfahren Sie mehr über die Installation des Microsoft Advertising-SDK."
+title: Installieren des Microsoft Advertising-SDK
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP, Anzeigen, Werbung, Installieren, SDK, Bibliotheken
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 034b597c945f9f12700ac442e4b3014b0bc84c78
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows 10, UWP, Anzeigen, Werbung, Installieren, SDK, Werbebibliotheken
+ms.openlocfilehash: e953b327a32bc8385cc45190e5fd11dd5acee4b8
+ms.sourcegitcommit: c5c96ec4b6ccef57f69eb341b06e6280994c9767
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/27/2017
 ---
+# <a name="install-the-microsoft-advertising-sdk"></a><span data-ttu-id="180fb-104">Installieren des Microsoft Advertising-SDK</span><span class="sxs-lookup"><span data-stu-id="180fb-104">Install the Microsoft Advertising SDK</span></span>
 
-# <a name="install-the-microsoft-advertising-libraries"></a>Installieren der Microsoft Advertising-Bibliotheken
+<span data-ttu-id="180fb-105">Installieren Sie eines der folgenden SDKs, um Anzeigen in Ihre Windows-Apps darzustellen:</span><span class="sxs-lookup"><span data-stu-id="180fb-105">To display ads in your Windows apps, install one of the following SDKs:</span></span>
 
+* <span data-ttu-id="180fb-106">Installieren Sie für UWP-Apps unter Windows10 das [Microsoft Advertising-SDK](http://aka.ms/ads-sdk-uwp).</span><span class="sxs-lookup"><span data-stu-id="180fb-106">For UWP apps for Windows 10, install the [Microsoft Advertising SDK](http://aka.ms/ads-sdk-uwp).</span></span> <span data-ttu-id="180fb-107">Dieses SDK ist eine Erweiterung von Visual Studio2015 und späteren Versionen.</span><span class="sxs-lookup"><span data-stu-id="180fb-107">This SDK is an extension to Visual Studio 2015 and later versions.</span></span>
+* <span data-ttu-id="180fb-108">Für Apps für Windows8.1 und Windows Phone8.x-Apps verwenden Sie das [Microsoft Advertising-SDK for Windows and Windows Phone 8.x](http://aka.ms/store-8-sdk).</span><span class="sxs-lookup"><span data-stu-id="180fb-108">For apps for Windows 8.1 and Windows Phone 8.x, install the [Microsoft Advertising SDK for Windows and Windows Phone 8.x](http://aka.ms/store-8-sdk).</span></span> <span data-ttu-id="180fb-109">Dieses SDK ist eine Erweiterung von Visual Studio2015 und Visual Studio2013.</span><span class="sxs-lookup"><span data-stu-id="180fb-109">This SDK is an extension to Visual Studio 2015 and Visual Studio 2013.</span></span>
 
+> [!NOTE]
+> <span data-ttu-id="180fb-110">Wenn Sie eine JavaScript/HTML UWP-App entwickeln, und Windows10 SDK (14393) oder höher installiert haben, müssen Sie auch die WinJS-Bibliothek installieren.</span><span class="sxs-lookup"><span data-stu-id="180fb-110">If you are developing a JavaScript/HTML UWP app and you have installed Windows 10 SDK (14393) or later, you must also install the WinJS library.</span></span> <span data-ttu-id="180fb-111">Diese Bibliothek war in den früheren Versionen des Windows10 SDK enthalten. Ab Windows10 SDK (14393) muss diese Bibliothek jedoch separat installiert werden.</span><span class="sxs-lookup"><span data-stu-id="180fb-111">This library used to be included in previous versions of the Windows 10 SDK, but starting with the Windows 10 SDK (14393) this library must be installed separately.</span></span> <span data-ttu-id="180fb-112">Informationen zur Installation von WinJS finden Sie unter [WinJS herunterladen](http://try.buildwinjs.com/download/GetWinJS/).</span><span class="sxs-lookup"><span data-stu-id="180fb-112">To install WinJS, see [Get WinJS](http://try.buildwinjs.com/download/GetWinJS/).</span></span>
 
+<span id="install-msi" />
+## <a name="install-via-msi"></a><span data-ttu-id="180fb-113">Installation über MSI</span><span class="sxs-lookup"><span data-stu-id="180fb-113">Install via MSI</span></span>
 
-Für Apps für die universelle Windows-Plattform (UWP) für Windows 10 sind die Microsoft Advertising-Bibliotheken im [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) enthalten. Dieses SDK ist eine Erweiterung von Visual Studio 2015 und späteren Versionen. Weitere Informationen zur Installation dieses SDKs finden Sie in [diesem Artikel](microsoft-store-services-sdk.md).
+<span data-ttu-id="180fb-114">So installieren Sie das Microsoft Advertising-SDK über das MSI-Installationsprogramm:</span><span class="sxs-lookup"><span data-stu-id="180fb-114">To install the Microsoft Advertising SDK via the MSI installer:</span></span>
 
-> **Hinweis**&nbsp;&nbsp;Wenn Sie Windows 10 SDK (14393) oder höher installiert haben, müssen Sie auch die WinJS-Bibliothek installieren, wenn Sie einer JavaScript/HTML-UWP-App Anzeigen hinzufügen möchten. Diese Bibliothek war in den früheren Versionen des Windows 10 SDK enthalten. Ab Windows 10 SDK (14393) muss diese Bibliothek jedoch separat installiert werden. Informationen zur Installation von WinJS finden Sie unter [WinJS herunterladen](http://try.buildwinjs.com/download/GetWinJS/).
+1.  <span data-ttu-id="180fb-115">Schließen Sie alle Instanzen von Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="180fb-115">Close all instances of Visual Studio.</span></span>
 
-Für XAML- und JavaScript/HTML-Apps für Windows 8.1 und Windows Phone 8.x sind die Microsoft Advertising-Bibliotheken im [Microsoft Advertising SDK für Windows und Windows Phone 8.x](http://aka.ms/store-8-sdk) enthalten. Dieser SDK ist eine Erweiterung von Visual Studio 2015 und Visual Studio 2013.
+2. <span data-ttu-id="180fb-116">Wenn Sie zuvor eine frühere Version des Microsoft Advertising SDKs, des Universal Ad Client SDKs, der Ad Mediator-Erweiterung oder des Microsoft Store Engagement and Monetization SDKs installiert haben, deinstallieren Sie diese SDK-Versionen jetzt.</span><span class="sxs-lookup"><span data-stu-id="180fb-116">If you previously installed any previous version of the Microsoft Advertising SDK, Universal Ad Client SDK, Ad Mediator extension, or Microsoft Store Engagement and Monetization SDK, uninstall these SDK versions now.</span></span> <span data-ttu-id="180fb-117">Öffnen Sie optional ein **Eingabeaufforderungsfenster**, und führen Sie diese Befehle aus, um alle älteren Advertising SDK-Versionen zu löschen, die möglicherweise mit Visual Studio installiert wurden und die nicht in der Liste der installierten Programme auf Ihrem Computer angezeigt werden:</span><span class="sxs-lookup"><span data-stu-id="180fb-117">Optionally, open a **Command Prompt** window and run these commands to clean out any older advertising SDK versions that may have been installed with Visual Studio, but which may not appear in the list of installed programs on your computer:</span></span>
+  ```
+  MsiExec.exe /x{5C87A4DB-31C7-465E-9356-71B485B69EC8}
+  MsiExec.exe /x{6AB13C21-C3EC-46E1-8009-6FD5EBEE515B}
+  MsiExec.exe /x{6AC81125-8485-463D-9352-3F35A2508C11}
+  ```
 
-Für Windows Phone Silverlight 8.x-Apps sind die Microsoft Advertising-Bibliotheken in einem NuGet-Paket verfügbar, das Sie herunterladen und für Ihr Projekt installieren können. Weitere Informationen finden Sie unter [AdControl in Windows Phone Silverlight](adcontrol-in-windows-phone-silverlight.md).
+3.  <span data-ttu-id="180fb-118">Laden Sie das [Microsoft Advertising-SDK](http://aka.ms/ads-sdk-uwp) (für UWP-Apps für Windows 10) oder das [Microsoft Advertising-SDK for Windows and Windows Phone 8.x](http://aka.ms/store-8-sdk) (für XAML und JavaScript/HTML-Apps für Windows 8.1 und Windows Phone 8.x) herunter und installieren Sie es.</span><span class="sxs-lookup"><span data-stu-id="180fb-118">Download and install the [Microsoft Advertising SDK](http://aka.ms/ads-sdk-uwp) (for UWP apps for Windows 10) or [Microsoft Advertising SDK for Windows and Windows Phone 8.x](http://aka.ms/store-8-sdk) (for XAML and JavaScript/HTML apps for Windows 8.1 and Windows Phone 8.x).</span></span> <span data-ttu-id="180fb-119">Die Installation kann einige Minuten dauern.</span><span class="sxs-lookup"><span data-stu-id="180fb-119">It may take a few minutes to install.</span></span> <span data-ttu-id="180fb-120">Warten Sie unbedingt, bis der Vorgang abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="180fb-120">Be sure and wait until the process has finished.</span></span>
 
-## <a name="library-names-for-advertising"></a>Bibliotheksnamen für Werbung
+4.  <span data-ttu-id="180fb-121">Starten Sie Visual Studio neu.</span><span class="sxs-lookup"><span data-stu-id="180fb-121">Restart Visual Studio.</span></span>
 
+5.  <span data-ttu-id="180fb-122">Wenn Sie ein bestehendes Projekt haben, das auf Werbebibliotheken aus einer früheren Version des Microsoft Advertising-SDKs, des Universal Ad Client SDKs oder des Microsoft Store Engagement and Monetization SDKs verweist, empfehlen wir, Ihr Projekt in Visual Studio zu öffnen, zu bereinigen und neu zu erstellen (klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf den Projektknoten, wählen Sie **Bereinigen** aus, klicken Sie dann mit der rechten Maustaste erneut auf den Projektknoten, und wählen Sie **Neu erstellen** aus).</span><span class="sxs-lookup"><span data-stu-id="180fb-122">If you have an existing project that references advertising libraries from any earlier version of the Microsoft Advertising SDK, Universal Ad Client SDK, or Microsoft Store Engagement and Monetization SDK, we recommend that you open your project in Visual Studio and clean and rebuild your project (in **Solution Explorer**, right-click your project node and choose **Clean**, and then right-click your project node again and choose **Rebuild**).</span></span>
 
-Es gibt mehrere unterschiedliche Advertising-Bibliotheken im Microsoft Store-Services-SDK und Microsoft Advertising SDK for Windows and Windows Phone 8.x:
+  <span data-ttu-id="180fb-123">Wenn Sie das Microsoft Advertising-SDK zum ersten Mal in Ihrem Projekt verwenden, sind Sie jetzt bereit, [Ihrem Projekt eine Referenz zum Microsoft Advertising-SDK hinzuzufügen](#reference).</span><span class="sxs-lookup"><span data-stu-id="180fb-123">Otherwise, if you are using the Microsoft Advertising SDK for the first time in your project, you are now ready to [add a reference to the Microsoft Advertising SDK](#reference).</span></span>
 
-* Der Microsoft Store Services SDK enthält die Microsoft Advertising-Bibliotheken (die die Klassen [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) und [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) für XAML- und JavaScript/HTML-Apps bereitstellen).
+<span id="install-nuget" />
+## <a name="install-via-nuget-uwp-only"></a><span data-ttu-id="180fb-124">Installieren über NuGet (nur UWP)</span><span class="sxs-lookup"><span data-stu-id="180fb-124">Install via NuGet (UWP only)</span></span>
 
-* Der Microsoft Advertising SDK for Windows and Windows Phone 8.x enthält zwei Sätze von Anzeigenbibliotheken: die Microsoft Advertising-Bibliotheken (die die Klassen [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) und [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) für XAML- und JavaScript/HTML-Apps bereitstellen) und die Bibliotheken für die Anzeigenvermittlung (die die Klasse **AdMediatorControl** bereitstellen).
+<span data-ttu-id="180fb-125">So installieren Sie das Microsoft Advertising-SDK für ein bestimmtes UWP-Projekt über NuGet</span><span class="sxs-lookup"><span data-stu-id="180fb-125">To install the Microsoft Advertising SDK in a specific UWP project via NuGet:</span></span>
 
-In dieser Dokumentation wird die Verwendung der Klassen **AdControl** und **InterstitialAd** in den Microsoft Advertising-Bibliotheken zur Anzeige von Banner- oder Videointerstitialanzeigen beschrieben. Informationen zur Verwendung der Anzeigenvermittlung für Windows 8.1- und Windows Phone 8.x-Apps finden Sie unter [Maximieren des Umsatzes durch Anzeigenvermittlung](https://msdn.microsoft.com/library/windows/apps/xaml/dn864359.aspx).
+1.  <span data-ttu-id="180fb-126">Schließen Sie alle Instanzen von Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="180fb-126">Close all instances of Visual Studio.</span></span>
 
->**Hinweis**&nbsp;&nbsp;Die Anzeigenvermittlung mithilfe der **AdMediatorControl**-Klasse wird derzeit für UWP-Apps unter Windows 10 nicht unterstützt. Die serverseitige Vermittlung wird in Kürze für UWP-Apps erhältlich sein. Dabei werden für Banneranzeigen (**AdControl**) und Videointerstitialanzeigen (**InterstitialAd**) dieselben APIs verwendet.
+2.  <span data-ttu-id="180fb-127">Wenn Sie zuvor eine frühere Version des Microsoft Advertising SDKs, des Universal Ad Client SDKs, der Ad Mediator-Erweiterung oder des Microsoft Store Engagement and Monetization SDKs installiert haben, deinstallieren Sie diese SDK-Versionen jetzt.</span><span class="sxs-lookup"><span data-stu-id="180fb-127">If you previously installed any previous version of the Microsoft Advertising SDK, Universal Ad Client SDK, Ad Mediator extension, or Microsoft Store Engagement and Monetization SDK, uninstall these SDK versions now.</span></span> <span data-ttu-id="180fb-128">Öffnen Sie optional ein **Eingabeaufforderungsfenster**, und führen Sie diese Befehle aus, um alle älteren Advertising SDK-Versionen zu löschen, die möglicherweise mit Visual Studio installiert wurden und die nicht in der Liste der installierten Programme auf Ihrem Computer angezeigt werden:</span><span class="sxs-lookup"><span data-stu-id="180fb-128">Optionally, open a **Command Prompt** window and run these commands to clean out any older advertising SDK versions that may have been installed with Visual Studio, but which may not appear in the list of installed programs on your computer:</span></span>
+  ```
+  MsiExec.exe /x{5C87A4DB-31C7-465E-9356-71B485B69EC8}
+  MsiExec.exe /x{6AB13C21-C3EC-46E1-8009-6FD5EBEE515B}
+  MsiExec.exe /x{6AC81125-8485-463D-9352-3F35A2508C11}
+  ```
 
-Bevor Sie eines der Anzeigensteuerelemente in Ihrem App-Code verwenden können, müssen Sie auf die entsprechende Bibliothek in Ihrem Projekt verweisen. In den folgenden Tabellen werden die Namen der einzelnen Bibliotheken aufgelistet, wie sie im Dialogfeld **Verweis-Manager** in Visual Studio angezeigt werden.
+3.  <span data-ttu-id="180fb-129">Starten Sie Visual Studio, und öffnen Sie das Projekt, in dem Sie das Microsoft Advertising-SDK verwenden möchten.</span><span class="sxs-lookup"><span data-stu-id="180fb-129">Start Visual Studio and open the project in which you want to use the Microsoft Advertising SDK.</span></span>
+    > [!NOTE]
+    > <span data-ttu-id="180fb-130">Wenn Ihr Projekt bereits Bibliotheksreferenzen aus einer früheren MSI-Installation des SDKs enthält, entfernen Sie diese Verweise aus Ihrem Projekt.</span><span class="sxs-lookup"><span data-stu-id="180fb-130">If your project already includes library references from an earlier MSI installation of the SDK, remove these references from your project.</span></span> <span data-ttu-id="180fb-131">Diese Verweise sind mit Warnsymbolen versehen, da die Bibliotheken, auf die sie verweisen, in den vorherigen Schritten entfernt wurden.</span><span class="sxs-lookup"><span data-stu-id="180fb-131">These references will have warning icons next to them because the libraries they reference were removed in the previous steps.</span></span>
 
+4. <span data-ttu-id="180fb-132">Klicken Sie in Visual Studio auf **Projekt** und **NuGet-Pakete verwalten**.</span><span class="sxs-lookup"><span data-stu-id="180fb-132">In Visual Studio, click **Project** and **Manage NuGet Packages**.</span></span>
 
-<table>
-    <thead>
-        <tr><th>Name des Steuerelements</th><th>Projekttyp</th><th>Name der Bibliothek im Verweis-Manager</th><th>Versionsnummer</th></tr>
-    </thead>
-    <tbody>
-    <tr>
-            <td rowspan="3">**AdControl** und **InterstitialAd** (XAML)</td>
-            <td>UWP</td>
-            <td>Microsoft Advertising SDK für XAML</td>
-            <td>10.0</td>
-        </tr>
-        <tr>
-            <td>Windows 8.1</td>
-            <td>Ad Mediator SDK für Windows 8.1 XAML</td>
-            <td>1.0</td>
-        </tr>
-        <tr>
-            <td>Windows Phone 8.1</td>
-            <td>Ad Mediator SDK für Windows Phone 8.1 XAML</td>
-            <td>1.0</td>
-        </tr>
-    <tr>
-            <td rowspan="3">**AdControl** und **InterstitialAd** (JavaScript/HTML)</td>
-            <td>UWP</td>
-            <td>Microsoft Advertising SDK für JavaScript</td>
-            <td>10.0</td>
-        </tr>
-        <tr>
-            <td>Windows 8.1</td>
-            <td>Microsoft Advertising SDK für Windows 8.1 Native (JS)</td>
-            <td>8.5</td>
-        </tr>
-        <tr>
-            <td>Windows Phone 8.1</td>
-            <td>Microsoft Advertising SDK für Windows Phone 8.1 Native (JS)</td>
-            <td>8.5</td>
-        </tr>
-    <tr>
-            <td rowspan="3">**AdMediatorControl** (nur XAML)</td>
-            <td>UWP</td>
-            <td>Microsoft Advertising Universal SDK</td>
-            <td>1.0</td>
-        </tr>
-        <tr>
-            <td>Windows 8.1</td>
-            <td>Ad Mediator SDK für Windows 8.1 XAML</td>
-            <td>1.0</td>
-        </tr>
-        <tr>
-            <td>Windows Phone 8.1</td>
-            <td>Ad Mediator SDK für Windows Phone 8.1 XAML</td>
-            <td>1.0</td>
-        </tr>
-    </tbody>
-</table>
+5. <span data-ttu-id="180fb-133">Geben Sie in das Suchfeld **Microsoft.Advertising.XAML** (für ein XAML-Projekt) oder **Microsoft.Advertising.JS** (für ein JavaScript/HTML-Projekt) ein, und installieren Sie das entsprechende Paket.</span><span class="sxs-lookup"><span data-stu-id="180fb-133">In the search box, type **Microsoft.Advertising.XAML** (for a XAML project) or **Microsoft.Advertising.JS** (for a JavaScript/HTML project) and install the corresponding package.</span></span> <span data-ttu-id="180fb-134">Wenn das Paket fertig ist installieren, speichern Sie die Projektmappe.</span><span class="sxs-lookup"><span data-stu-id="180fb-134">When the package is done installing, save your solution.</span></span>
+    > [!NOTE]
+    > <span data-ttu-id="180fb-135">Wenn das **Ausgabe**-Fenster einen *Installationspaket*-Fehler anzeigt, der Ihnen mitteilt, dass der angegebene Pfad zu lang ist, müssen Sie NuGet möglicherweise so konfigurieren, dass es Pakete an einen anderen Speicherort mit einem kürzeren Pfad extrahiert.</span><span class="sxs-lookup"><span data-stu-id="180fb-135">If the **Output** window reports an *Install-Package* error that indicates the specified path is too long, you may need to configure NuGet to extract packages to an alternate location with a shorter path than the default location.</span></span> <span data-ttu-id="180fb-136">Fügen Sie hierzu den ```repositoryPath```-Wert einer nuget.config-Datei auf Ihrem Computer hinzu, und weisen Sie ihn einem kurzen Ordnerpfad zu, unter dem die NuGet-Pakete extrahiert werden können.</span><span class="sxs-lookup"><span data-stu-id="180fb-136">To do this, add the ```repositoryPath``` value to a nuget.config file on your computer and assign it to a short folder path where NuGet packages can be extracted.</span></span> <span data-ttu-id="180fb-137">Weitere Informationen finden Sie in [diesem Artikel](http://docs.nuget.org/ndocs/consume-packages/configuring-nuget-behavior) in der NuGet-Dokumentation.</span><span class="sxs-lookup"><span data-stu-id="180fb-137">For more information, see [this article](http://docs.nuget.org/ndocs/consume-packages/configuring-nuget-behavior) in the NuGet documentation.</span></span> <span data-ttu-id="180fb-138">Sie können auch versuchen, das Visual Studio-Projekt in einen anderen Ordner mit einem kürzeren Pfad zu verschieben.</span><span class="sxs-lookup"><span data-stu-id="180fb-138">Alternatively, you can try moving your Visual Studio project to an alternate folder with a shorter path.</span></span>
 
- 
+6. <span data-ttu-id="180fb-139">Schließen Sie die Lösung und öffnen Sie es erneut.</span><span class="sxs-lookup"><span data-stu-id="180fb-139">Close your solution and then reopen it.</span></span>
 
- 
+7.  <span data-ttu-id="180fb-140">Wenn Ihr Projekt bereits auf Bibliotheken aus einer früheren Version des Microsoft Advertising-SDKs verweist, die über NuGet installiert wurde, und Sie Ihr Projekt auf eine neuere Version des SDKs aktualisiert haben, empfehlen wir, das Projekt zu bereinigen und neu zu erstellen (klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf den Projektknoten, wählen Sie **Bereinigen** aus, klicken Sie dann mit der rechten Maustaste erneut auf den Projektknoten, und wählen Sie **Neu erstellen**).</span><span class="sxs-lookup"><span data-stu-id="180fb-140">If your project already references libraries from an earlier version of the Microsoft Advertising SDK that was installed via NuGet and you have updated your project to a newer release of the SDK, we recommend that you clean and rebuild your project (in **Solution Explorer**, right-click your project node and choose **Clean**, and then right-click your project node again and choose **Rebuild**).</span></span>
 
- 
+  <span data-ttu-id="180fb-141">Wenn Sie das SDK zum ersten Mal in Ihrem Projekt verwenden, sind Sie jetzt bereit, [Ihrem Projekt eine Referenz zum Microsoft Advertising-SDK hinzuzufügen](#reference).</span><span class="sxs-lookup"><span data-stu-id="180fb-141">Otherwise, if you are using the SDK for the first time in your project, you are now ready to [add a reference to the Microsoft Advertising SDK](#reference).</span></span>
 
+<span id="reference" />
+## <a name="add-a-reference-to-the-microsoft-advertising-sdk"></a><span data-ttu-id="180fb-142">Hinzufügen eines Verweises auf das Microsoft Advertising-SDK</span><span class="sxs-lookup"><span data-stu-id="180fb-142">Add a reference to the Microsoft Advertising SDK</span></span>
+
+<span data-ttu-id="180fb-143">Folgen Sie nach der Installation des Microsoft Advertising-SDK diesen Anweisungen, um einen Verweis auf das SDK in Ihrem Projekt zu erstellen und die Werbe-APIs zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="180fb-143">After you install the Microsoft Advertising SDK, follow these instructions to reference the SDK in your project so you can use the advertising APIs.</span></span>
+
+1. <span data-ttu-id="180fb-144">Öffnen Sie das Projekt in Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="180fb-144">Open your project in Visual Studio.</span></span>
+    > [!NOTE]
+    > <span data-ttu-id="180fb-145">Sollte in Ihrem Projekt die Zielplattform **ANYCPU** definiert sein, müssen Sie eine architekturspezifische Buildausgabe verwenden (z.B. **X86**) und das Projekt entsprechend aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="180fb-145">If your project targets **Any CPU**, update your project to use an architecture-specific build output (for example, **x86**).</span></span> <span data-ttu-id="180fb-146">Sollte in Ihrem Projekt die Zielplattform **Jede CPU** definiert sein, können Sie bei den folgenden Schritten keinen Verweis auf das Microsoft Advertising-SDK hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="180fb-146">If your project targets **Any CPU**, you will not be able to successfully add a reference to the Microsoft Advertising SDK in the following steps.</span></span> <span data-ttu-id="180fb-147">Weitere Informationen finden Sie unter [Referenzfehler, die durch die Ausrichtung auf eine beliebige CPU (Any CPU) in Ihrem Projekt verursacht werden](known-issues-for-the-advertising-libraries.md#reference_errors).</span><span class="sxs-lookup"><span data-stu-id="180fb-147">For more information, see [Reference errors caused by targeting Any CPU in your project](known-issues-for-the-advertising-libraries.md#reference_errors).</span></span>
+
+2. <span data-ttu-id="180fb-148">Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **Verweise**, und wählen Sie **Verweis hinzufügen...** aus.</span><span class="sxs-lookup"><span data-stu-id="180fb-148">In **Solution Explorer**, right click **References** and select **Add Reference…**</span></span>
+
+3. <span data-ttu-id="180fb-149">Wählen Sie im **Verweis-Manager** je nach Projekttyp einen der folgenden Verweise aus:</span><span class="sxs-lookup"><span data-stu-id="180fb-149">In **Reference Manager**, select one of the following references depending on your project type:</span></span>
+
+    -   <span data-ttu-id="180fb-150">Bei UWP (Universelle Windows-Plattform)-Projekten: Erweitern Sie **Universelles Windows**, klicken Sie auf **Erweiterungen**, und wählen Sie dann das Kontrollkästchen neben **Microsoft Advertising-SDK für XAML** (für XAML-Apps) oder **Microsoft Advertising-SDK für JavaScript** (für Apps, die mit JavaScript und HTML erstellt wurden) aus.</span><span class="sxs-lookup"><span data-stu-id="180fb-150">For a Universal Windows Platform (UWP) project: Expand **Universal Windows**, click **Extensions**, and then select the check box next to **Microsoft Advertising SDK for XAML** (for XAML apps) or **Microsoft Advertising SDK for JavaScript** (for apps built using JavaScript and HTML).</span></span>
+
+    -   <span data-ttu-id="180fb-151">Bei Windows8.1-Projekten: Erweitern Sie **Windows8.1**, klicken Sie auf **Erweiterungen**, und wählen Sie dann das Kontrollkästchen neben **Ad Mediator SDK für Windows8.1 XAML** (für XAML-Apps) oder **Microsoft Advertising-SDK für Windows8.1 Native (JS)** (für Apps, die mit JavaScript und HTML erstellt wurden) aus.</span><span class="sxs-lookup"><span data-stu-id="180fb-151">For a Windows 8.1 project: Expand **Windows 8.1**, click **Extensions**, and then select the check box next to **Ad Mediator SDK for Windows 8.1 XAML** (for XAML apps) or **Microsoft Advertising SDK for Windows 8.1 Native (JS)** (for apps built using JavaScript and HTML).</span></span>
+
+    -   <span data-ttu-id="180fb-152">Bei Windows Phone8.1-Projekten: Erweitern Sie **Windows Phone8.1**, klicken Sie auf **Erweiterungen**, und wählen Sie dann das Kontrollkästchen neben **Ad Mediator SDK für Windows Phone8.1 XAML** (für XAML-Apps) oder **Microsoft Advertising-SDK für Windows Phone8.1 Native (JS)** (für Apps, die mit JavaScript und HTML erstellt wurden) aus.</span><span class="sxs-lookup"><span data-stu-id="180fb-152">For a Windows Phone 8.1 project: Expand **Windows Phone 8.1**, click **Extensions**, and then select the check box next to **Ad Mediator SDK for Windows Phone 8.1 XAML** (for XAML apps) or **Microsoft Advertising SDK for Windows Phone 8.1 Native (JS)** (for apps built using JavaScript and HTML).</span></span>
+
+4.  <span data-ttu-id="180fb-153">Klicken Sie im **Verweis-Manager** auf „OK“.</span><span class="sxs-lookup"><span data-stu-id="180fb-153">In **Reference Manager**, click OK.</span></span>
+
+<span data-ttu-id="180fb-154">Exemplarische Vorgehensweisen zur erstmaligen Verwendung der Werbe-APIs finden Sie in den folgenden Artikeln:</span><span class="sxs-lookup"><span data-stu-id="180fb-154">For walkthroughs that show how to get started using the advertising APIs, see the following articles:</span></span>
+
+* [<span data-ttu-id="180fb-155">Interstitialwerbung</span><span class="sxs-lookup"><span data-stu-id="180fb-155">Interstitial ads</span></span>](interstitial-ads.md)
+* [<span data-ttu-id="180fb-156">Native Anzeigen</span><span class="sxs-lookup"><span data-stu-id="180fb-156">Native ads</span></span>](native-ads.md)
+* [<span data-ttu-id="180fb-157">AdControl in XAML und .NET</span><span class="sxs-lookup"><span data-stu-id="180fb-157">AdControl in XAML and .NET</span></span>](adcontrol-in-xaml-and--net.md)
+* [<span data-ttu-id="180fb-158">AdControl in HTML 5 und Javascript</span><span class="sxs-lookup"><span data-stu-id="180fb-158">AdControl in HTML 5 and Javascript</span></span>](adcontrol-in-html-5-and-javascript.md)
+
+<span id="framework" />
+## <a name="understanding-framework-packages-in-the-microsoft-advertising-sdk-uwp-only"></a><span data-ttu-id="180fb-159">Grundlegendes zu Frameworkpaketen im Microsoft Advertising-SDK (nur UWP)</span><span class="sxs-lookup"><span data-stu-id="180fb-159">Understanding framework packages in the Microsoft Advertising SDK (UWP only)</span></span>
+
+<span data-ttu-id="180fb-160">Die Bibliothek „Microsoft.Advertising.dll“ im [Microsoft Advertising-SDK](http://aka.ms/ads-sdk-uwp) (für UWP-Apps) ist als *Frameworkpaket* konfiguriert.</span><span class="sxs-lookup"><span data-stu-id="180fb-160">The Microsoft.Advertising.dll library in the [Microsoft Advertising SDK](http://aka.ms/ads-sdk-uwp) (for UWP apps) is configured as a *framework package*.</span></span> <span data-ttu-id="180fb-161">Diese Bibliothek enthält die Werbe-APIs in den [Microsoft.Advertising](https://msdn.microsoft.com/library/windows/apps/mt313187.aspx)- und [Microsoft.Advertising.WinRT.UI](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.aspx)-Namespaces.</span><span class="sxs-lookup"><span data-stu-id="180fb-161">This library contains the advertising APIs in the [Microsoft.Advertising](https://msdn.microsoft.com/library/windows/apps/mt313187.aspx) and [Microsoft.Advertising.WinRT.UI](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.aspx) namespaces.</span></span>
+
+<span data-ttu-id="180fb-162">Da es sich bei dieser Bibliothek um ein Frameworkpaket handelt, bedeutet dies Folgendes: Nachdem ein Benutzer eine Version Ihrer App installiert hat, die diese Bibliothek verwendet, wird diese Bibliothek automatisch auf dessen Gerät über Windows Update aktualisiert, wenn eine neue Version der Bibliothek mit Fixes und Leistungsverbesserungen veröffentlicht wird.</span><span class="sxs-lookup"><span data-stu-id="180fb-162">Because this library is a framework package, this means that after a user installs a version of your app that uses this library, this library is automatically updated on their device through Windows Update whenever we publish a new version of the library with fixes and performance improvements.</span></span> <span data-ttu-id="180fb-163">Dadurch wird sichergestellt, dass Ihre Kunden stets die neueste Version der Bibliothek auf ihren Geräten installiert haben.</span><span class="sxs-lookup"><span data-stu-id="180fb-163">This helps to ensure that your customers always have the latest available version of the library installed on their devices.</span></span>
+
+<span data-ttu-id="180fb-164">Wenn wir eine neue Version des SDKs veröffentlichen, in der neue APIs oder Features in dieser Bibliothek eingeführt werden, müssen Sie die neueste Version des SDKs zur Verwendung dieser Features installieren.</span><span class="sxs-lookup"><span data-stu-id="180fb-164">If we release a new version of the SDK that introduces new APIs or features in this library, you will need to install the latest version of the SDK to use those features.</span></span> <span data-ttu-id="180fb-165">In diesem Szenario müssen Sie auch die aktualisierte App im Store veröffentlichen.</span><span class="sxs-lookup"><span data-stu-id="180fb-165">In this scenario, you would also need to publish your updated app to the Store.</span></span>

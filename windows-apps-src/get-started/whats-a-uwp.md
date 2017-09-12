@@ -1,114 +1,108 @@
 ---
 author: GrantMeStrength
 ms.assetid: C9787269-B54F-4FFA-A884-D4A3BF28F80D
-title: Was ist eine App der universellen Windows-Plattform (UWP)?
-description: "Hier werden die verschiedenen App-Typen vorgestellt, die wir als universelle Windows-Apps bezeichnen – Windows Store-Apps, Windows Phone Store-Apps und Windows-Runtime-Apps."
+title: Was ist eine Universelle Windows-Plattform (UWP)-App?
+description: "Hier erfahren Sie mehr über die verschiedenen Arten von universellen Windows-Apps – Windows Store-Apps, Windows Phone Store -Apps und Windows-Runtime-Apps."
 ms.author: jken
-ms.date: 02/08/2017
+ms.date: 03/22/2017
 ms.topic: article
-ms.prod: windows
+pms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 0507086a7c7ea67f43f61feef6dc5c8de5afe2e5
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 3bbced2db33210952b6c8a45f98e36582330d7d9
+ms.sourcegitcommit: 214a1dcb24e0811811bd7a4a07bfe707ecd93b18
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/15/2017
 ---
+# <a name="whats-a-universal-windows-platform-uwp-app"></a><span data-ttu-id="48bd6-104">Was ist eine Universelle Windows-Plattform (UWP)-App?</span><span class="sxs-lookup"><span data-stu-id="48bd6-104">What's a Universal Windows Platform (UWP) app?</span></span>
 
-# <a name="whats-a-universal-windows-platform-uwp-app"></a>Was ist eine universellen Windows-Plattform (UWP)-App?
+<span data-ttu-id="48bd6-105">Die Universelle Windows-Plattform (UWP) ist die App-Plattform für Windows10.</span><span class="sxs-lookup"><span data-stu-id="48bd6-105">The Universal Windows Platform (UWP) is the app platform for Windows 10.</span></span> <span data-ttu-id="48bd6-106">Sie können mit nur einem API-Satz, einem App-Paket und einem Store Apps für UWP entwickeln, um alle Windows10-Geräte zu erreichen – PCs, Tablets, Telefone, Xbox, HoloLens, Surface Hub und mehr.</span><span class="sxs-lookup"><span data-stu-id="48bd6-106">You can develop apps for UWP with just one API set, one app package, and one store to reach all Windows 10 devices – PC, tablet, phone, Xbox, HoloLens, Surface Hub and more.</span></span> <span data-ttu-id="48bd6-107">Es ist einfacher, eine Reihe von Bildschirmgrößen und eine Vielzahl von Interaktionsmodellen zu unterstützen, sei es Touch, Maus und Tastatur, einen Gamecontroller oder einen Stift.</span><span class="sxs-lookup"><span data-stu-id="48bd6-107">It’s easier to support a number of screen sizes, and also a variety of interaction models, whether it be touch, mouse and keyboard, a game controller, or a pen.</span></span> <span data-ttu-id="48bd6-108">Die Idee der UWP-Apps besteht im Prinzip darin, dass Benutzer ihre *Erfahrungen* auf ALLEN Geräten nutzen und jeweils das Gerät verwenden möchten, das für die entsprechende Aufgabe am einfachsten oder produktivsten einzusetzen ist.</span><span class="sxs-lookup"><span data-stu-id="48bd6-108">At the core of UWP apps is the idea that users want their *experiences* to be mobile across ALL their devices, and they want to use whatever device is most convenient or productive for the task at hand.</span></span>
 
-Wenn Sie noch nicht mit der Windows-Plattform vertraut sind oder aus dem Bereich .NET, Windows Forms oder Silverlight kommen, möchten Sie jetzt vielleicht wissen, was eine UWP-App tatsächlich *ist*. 
+<span data-ttu-id="48bd6-109">UWP ist auch flexibel: Sie müssen C# und XAML nicht verwenden, wenn Sie nicht möchten.</span><span class="sxs-lookup"><span data-stu-id="48bd6-109">UWP is also flexible: you don't have to use C# and XAML if you don't want to.</span></span> <span data-ttu-id="48bd6-110">Entwickeln Sie gerne in Unity oder MonoGame?</span><span class="sxs-lookup"><span data-stu-id="48bd6-110">Do you like developing in Unity or MonoGame?</span></span> <span data-ttu-id="48bd6-111">Bevorzugen Sie JavaScript?</span><span class="sxs-lookup"><span data-stu-id="48bd6-111">Prefer JavaScript?</span></span> <span data-ttu-id="48bd6-112">Kein Problem; Sie können beliebige Programmiersprachen verwenden.</span><span class="sxs-lookup"><span data-stu-id="48bd6-112">Not a problem, use them all you want.</span></span> <span data-ttu-id="48bd6-113">Sie haben eine mit C++ entwickelte Desktop-App, die Sie mit UWP-Features erweitern und im Store verkaufen möchten?</span><span class="sxs-lookup"><span data-stu-id="48bd6-113">Have a C++ desktop app that you want to extend with UWP features and sell in the store?</span></span> <span data-ttu-id="48bd6-114">Das ist auch möglich.</span><span class="sxs-lookup"><span data-stu-id="48bd6-114">That's okay, too.</span></span> 
 
-Wie in einem bekannten Buch einmal gesagt wurde: „Nur keine Panik“, denn bald wird alles geklärt. 
-
-Eine universellen Windows-Plattform (UWP)-App ist eine Windows-Benutzeroberfläche auf der Basis der universellen Windows-Plattform (UWP), die erstmals unter Windows 8 als Windows-Runtime eingeführt wurde. Die Idee der UWP-Apps besteht im Prinzip darin, dass Benutzer ihre *Erfahrungen* auf ALLEN Geräten nutzen und jeweils das Gerät verwenden möchten, das für die entsprechende Aufgabe am einfachsten oder produktivsten einzusetzen ist.
-
-Mit Windows 10 ist die Entwicklung von Apps für die UWP einfacher. Sie benötigen nur einen API-Satz, ein App-Paket und einen Speicher für alle Windows 10-Geräte – PC, Tablet, Smartphone, Xbox, HoloLens, Surface Hub und mehr. Es ist einfacher, eine Reihe von Bildschirmgrößen und eine Vielzahl von Interaktionsmodellen zu unterstützen, sei es Touch, Maus und Tastatur, ein Gamecontroller oder ein Stift. Wichtig an dieser Stelle: Sie brauchen C# und XAML nicht zu verwenden, wenn Sie das nicht möchten. Entwickeln Sie gerne in Unity oder in MonoGame? Bevorzugen Sie JavaScript? Kein Problem, Sie können beliebige Programmiersprachen verwenden.
-
-Fazit: Sie können mit vertrauten Programmiersprachen, Frameworks und APIs in einem einzigen Projekt arbeiten und denselben Code auf dem großen Spektrum der heute vorhandenen Windows-Hardware ausführen lassen. Nachdem Sie Ihre UWP-App entwickelt haben, können Sie sie im Store veröffentlichen und damit der ganzen Welt präsentieren.
+<span data-ttu-id="48bd6-115">Fazit: Sie können mit vertrauten Programmiersprachen, Frameworks und APIs in einem einzigen Projekt arbeiten und denselben Code auf dem breiten Spektrum der heute verfügbaren Windows-Hardware ausführen lassen.</span><span class="sxs-lookup"><span data-stu-id="48bd6-115">The bottom line: You can spend your time working with familiar programming languages, frameworks and APIs, all in single project, and have the very same code run on the huge range of Windows hardware that exists today.</span></span> <span data-ttu-id="48bd6-116">Nachdem Sie Ihre UWP-App entwickelt haben, können Sie sie im Store veröffentlichen und damit der ganzen Welt präsentieren.</span><span class="sxs-lookup"><span data-stu-id="48bd6-116">Once you've written your UWP app, you can then publish it to the store for the world to see.</span></span>
 
 ![Windows-Geräte](images/1894834-hig-device-primer-01-500.png)
+ 
+##<a name="so-what-exactly-is-a-uwp-app"></a><span data-ttu-id="48bd6-118">Was also ist eine UWP-App *genau*?</span><span class="sxs-lookup"><span data-stu-id="48bd6-118">So, what *exactly* is a UWP app?</span></span>
 
-##<a name="so-what-exactly-is-a-uwp-app"></a>Was also ist eine UWP-App *genau*?
+<span data-ttu-id="48bd6-119">Was ist das Besondere an einer UWP-App?</span><span class="sxs-lookup"><span data-stu-id="48bd6-119">What makes a UWP app special?</span></span> <span data-ttu-id="48bd6-120">Dies sind einige der Merkmale, die UWP-Apps unter Windows 10 von anderen Apps unterscheiden.</span><span class="sxs-lookup"><span data-stu-id="48bd6-120">Here are some of the characteristics that make UWP apps on Windows 10 different.</span></span>
 
+-   **<span data-ttu-id="48bd6-121">Es gibt eine gemeinsame API-Oberfläche für alle Geräte.</span><span class="sxs-lookup"><span data-stu-id="48bd6-121">There's a common API surface across all devices.</span></span>**
 
-Was ist das Besondere an einer UWP-App? Hier sind einige der Merkmale, die UWP-Apps unter Windows 10 von anderen Apps abheben.
+    <span data-ttu-id="48bd6-122">Die zentralen APIs für die Universelle Windows-Plattform (UWP) sind für alle Arten von Windows-Geräten dieselben.</span><span class="sxs-lookup"><span data-stu-id="48bd6-122">The Universal Windows Platform (UWP) core APIs are the same for all classes of Windows device.</span></span> <span data-ttu-id="48bd6-123">Wenn Ihre App nur die zentralen APIs verwendet, wird sie auf jedem Windows10-Gerät ausgeführt, unabhängig davon, ob Sie sie für einen Desktop-PC, eine Xbox oder einen Mixed Reality-Headset entwickeln.</span><span class="sxs-lookup"><span data-stu-id="48bd6-123">If your app uses only the core APIs, it will run on any Windows 10 device, no matter if you are targeting a desktop PC, an Xbox or a Mixed Reality headset.</span></span>
 
--   Sie entwickeln für Gerätefamilien, nicht für ein Betriebssystem.
+-   **<span data-ttu-id="48bd6-124">Mithilfe von Erweiterungs-SDKs kann Ihre App auf bestimmten Gerätetypen interessante Aktionen ausführen.</span><span class="sxs-lookup"><span data-stu-id="48bd6-124">Extension SDKs let your app do cool stuff on specific device types.</span></span>**
 
-    Eine Gerätefamilie identifiziert die APIs, Systemmerkmale und Verhaltensweisen, die Sie auf allen Geräten innerhalb der Gerätefamilie erwarten können. Es bestimmt außerdem die Gerätegruppe, auf der Ihre App aus dem Store installiert werden kann.
+    <span data-ttu-id="48bd6-125">Erweiterungs-SDKs fügen jeder Geräteklasse spezielle APIs hinzu.</span><span class="sxs-lookup"><span data-stu-id="48bd6-125">Extension SDKs add specialized APIs for each device class.</span></span> <span data-ttu-id="48bd6-126">Wenn Ihre UWP-App beispielsweise auf HoloLens ausgerichtet ist, können Sie zusätzlich zu den normalen UWP-Kern-APIs HoloLens-Features hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="48bd6-126">For example, if your UWP app targets HoloLens, you can add HoloLens features in addition to the normal UWP core APIs.</span></span>
+    <span data-ttu-id="48bd6-127">Wenn Sie die universellen APIs verwenden, kann Ihr App-Paket auf allen Geräten ausgeführt werden, die Windows10 ausführen.</span><span class="sxs-lookup"><span data-stu-id="48bd6-127">If you target the universal APIs, your app package can run on all devices that run Windows 10.</span></span> <span data-ttu-id="48bd6-128">Wenn Ihre UWP-App jedoch gerätespezifische APIs verwenden soll, wenn es auf Geräten einer bestimmten Klasse ausgeführt wird, können Sie zur Laufzeit überprüfen lassen, ob eine API vorhanden ist, bevor sie aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="48bd6-128">But if you want your UWP app to take advantage of device specific APIs in the event it is running on a particular class of device, you can check at run-time if an API exists before calling it.</span></span> 
 
--   Apps werden mit dem AppX-Paketformat gepackt und verteilt.
+-   **<span data-ttu-id="48bd6-129">Apps werden im AppX-Paketformat verpackt und über den Store verteilt.</span><span class="sxs-lookup"><span data-stu-id="48bd6-129">Apps are packaged using the .AppX packaging format and distributed from the Store.</span></span>**
 
-    Alle UWP-Apps werden als AppX-Paket verteilt. Dies stellt einen vertrauenswürdigen Installationsmechanismus bereit und stellt sicher, dass Ihre Apps problemlos bereitgestellt und aktualisiert werden können.
+    <span data-ttu-id="48bd6-130">Alle UWP-Apps werden als AppX-Paket verteilt.</span><span class="sxs-lookup"><span data-stu-id="48bd6-130">All UWP apps are distributed as an AppX package.</span></span> <span data-ttu-id="48bd6-131">Dies stellt einen vertrauenswürdigen Installationsmechanismus bereit und stellt sicher, dass Ihre Apps problemlos bereitgestellt und aktualisiert werden können.</span><span class="sxs-lookup"><span data-stu-id="48bd6-131">This provides a trustworthy installation mechanism and ensures that your apps can be deployed and updated seamlessly.</span></span>
 
--   Es gibt einen Store für alle Geräte.
+-   **<span data-ttu-id="48bd6-132">Es gibt einen Store für alle Geräte.</span><span class="sxs-lookup"><span data-stu-id="48bd6-132">There's one store for all devices.</span></span>**
 
-    Nach der Registrierung als App-Entwickler können Sie Ihre App an den Store übermitteln und auf allen Gerätefamilien oder nur für eine Auswahl zur Verfügung stellen. Sie übermitteln und verwalten alle Ihre Apps für Windows-Geräte an einem zentralen Ort.
+    <span data-ttu-id="48bd6-133">Nach der Registrierung als App-Entwickler können Sie Ihre App an den Store übermitteln und auf für Geräte aller Art oder nur für bestimmte Geräte zur Verfügung stellen.</span><span class="sxs-lookup"><span data-stu-id="48bd6-133">After you register as an app developer, you can submit your app to the store and make it available on all types device, or only those you choose.</span></span> <span data-ttu-id="48bd6-134">Sie übermitteln und verwalten alle Ihre Apps für Windows-Geräte an einem zentralen Ort.</span><span class="sxs-lookup"><span data-stu-id="48bd6-134">You submit and manage all your apps for Windows devices in one place.</span></span>
 
--   Es gibt eine allgemeine API-Oberfläche für Gerätefamilien.
+-   **<span data-ttu-id="48bd6-135">Apps unterstützen adaptive Steuerelemente und Eingaben</span><span class="sxs-lookup"><span data-stu-id="48bd6-135">Apps support adaptive controls and input</span></span>**
 
-    Die zentralen UWP-APIs (Universelle Windows-Plattform) sind für alle Windows-Gerätefamilien identisch. Wenn Ihre App nur die wichtigsten APIs verwendet, kann sie auf allen Windows 10-Geräten ausgeführt werden.
-
--   Erweiterungs-SDKs können Ihre App auf speziellen Geräten hervorheben.
-
-    Erweiterungs-SDKs fügen spezielle APIs für jede Gerätefamilie hinzu. Wenn sich Ihre App an eine bestimmte Gerätefamilie richtet, können Sie sie mit diesen APIs hervorheben. Sie können weiterhin über ein App-Paket verfügen, das auf allen Geräten ausgeführt wird, indem Sie vor dem Aufrufen einer Erweiterungs-API überprüfen, auf welcher Gerätefamilie Ihre App ausgeführt wird.
-
--   Adaptive Steuerelemente und Eingaben
-
-    Benutzeroberflächenelemente verwenden *effektive Pixel* (siehe [Reaktionsfähiges Design – Grundlagen für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/Dn958435)), sodass sie sich selbst basierend auf der Anzahl der auf dem Gerät verfügbaren Pixel automatisch anpassen. Sie funktionieren außerdem mit mehreren Arten von Eingaben, z. B. Tastatur, Maus, Touch, Stift und Xbox One-Controller. Wenn Sie die Benutzeroberfläche auf eine bestimmte Bildschirmgröße oder ein bestimmtes Gerät anpassen müssen, helfen Ihnen neue Layoutbereiche und Tools dabei, die Benutzeroberfläche auf die Geräte anzupassen, auf denen Ihre App möglicherweise ausgeführt wird.
-
-Eine ausführlichere Betrachtung der UWP finden Sie unter [Anleitung für Universal Windows Platform-Apps](universal-application-platform-guide.md).
-
-## <a name="use-a-language-you-already-know"></a>Verwenden einer vertrauten Sprache
+    <span data-ttu-id="48bd6-136">Benutzeroberflächenelemente verwenden *effektive Pixel* (siehe [Reaktionsfähiges Design 101 für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/Dn958435)), sodass sie ein Layout zurückgeben können, das auf der Basis der auf dem Gerät verfügbaren Bildschirmpixel funktioniert.</span><span class="sxs-lookup"><span data-stu-id="48bd6-136">UI elements use *effective pixels* (see [Responsive design 101 for UWP apps](https://msdn.microsoft.com/library/windows/apps/Dn958435)), so they can respond with a layout that works based on the number of screen pixels available on the device.</span></span> <span data-ttu-id="48bd6-137">Sie funktionieren außerdem mit mehreren Arten von Eingaben, z.B. Tastatur, Maus, Touch, Stift und Xbox One-Controller.</span><span class="sxs-lookup"><span data-stu-id="48bd6-137">And they work well with multiple types of input such as keyboard, mouse, touch, pen, and Xbox One controllers.</span></span> <span data-ttu-id="48bd6-138">Wenn Sie die Benutzeroberfläche auf eine bestimmte Bildschirmgröße oder ein bestimmtes Gerät anpassen müssen, helfen Ihnen neue Layoutbereiche und Tools dabei, die Benutzeroberfläche auf die Geräte anzupassen, auf denen Ihre App möglicherweise ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="48bd6-138">If you need to further tailor your UI to a specific screen size or device, new layout panels and tooling help you adapt your UI to the devices your app may run on.</span></span>
 
 
-Sie können mit den Programmiersprachen, die Sie am besten kennen, z. B. C# oder Visual Basic mit XAML, JavaScript mit HTML oder C++ mit DirectX und/oder Extensible Application Markup Language (XAML) UWP-Apps erstellen. Sie können sogar Komponenten in einer Programmiersprache schreiben und in einer App verwenden, die in einer anderen Sprache geschrieben ist.
 
-UWP-Apps verwenden die Windows-Runtime. Hierbei handelt es sich um eine systemeigene, in das Betriebssystem integrierte API. Diese API ist in C++ implementiert und wird in JavaScript, C#, Visual Basic und C++ unterstützt, als wäre sie Teil der jeweiligen Sprache.
-
-Microsoft Visual Studio 2015 stellt eine Vorlage für UWP-Apps für jede Sprache bereit. Damit können Sie ein einzelnes Projekt für alle Geräte erstellen. Nachdem Sie Ihre Arbeit abgeschlossen haben, können Sie ein App-Paket erstellen und aus Visual Studio heraus an den Windows Store senden, um die App für Kunden mit beliebigen Windows 10-Geräten bereitzustellen.
-
-## <a name="uwp-apps-come-to-life-on-windows"></a>UWP-Apps entfalten unter Windows ihre Vielseitigkeit
+## <a name="use-a-language-you-already-know"></a><span data-ttu-id="48bd6-139">Verwenden einer vertrauten Sprache</span><span class="sxs-lookup"><span data-stu-id="48bd6-139">Use a language you already know</span></span>
 
 
-Unter Windows kann Ihre App relevante Infos in Echtzeit für Benutzer bereitstellen, damit sie immer wieder auf die App zugreifen. In der modernen App-Welt mit vielen Konkurrenzprodukten muss Ihre App so attraktiv sein, dass sie von Benutzern gern und häufig genutzt wird. Windows bietet Ihnen viele Ressourcen, mit deren Hilfe Sie erreichen können, dass Benutzer Ihre App immer wieder nutzen:
+<span data-ttu-id="48bd6-140">UWP-Apps verwenden die Windows-Runtime. Dies ist eine native, in das Betriebssystem integrierte API.</span><span class="sxs-lookup"><span data-stu-id="48bd6-140">UWP apps use the Windows Runtime, a native API built into the operating system.</span></span> <span data-ttu-id="48bd6-141">Diese API ist in C++ implementiert und wird in C#, Visual Basic, C++ und JavaScript unterstützt.</span><span class="sxs-lookup"><span data-stu-id="48bd6-141">This API is implemented in C++ and supported in C#, Visual Basic, C++, and JavaScript.</span></span> <span data-ttu-id="48bd6-142">Einige Optionen für das Schreiben von Apps in UWP sind:</span><span class="sxs-lookup"><span data-stu-id="48bd6-142">Some options for writing apps in UWP include:</span></span>
+-   <span data-ttu-id="48bd6-143">XAML-UI und ein in C#, VB oder C++ geschriebenes Back-End</span><span class="sxs-lookup"><span data-stu-id="48bd6-143">XAML UI and a C#, VB, or C++ backend</span></span>
+-   <span data-ttu-id="48bd6-144">DirectX UI und ein in C++ geschriebenes Back-End</span><span class="sxs-lookup"><span data-stu-id="48bd6-144">DirectX UI and a C++ backend</span></span>
+-   <span data-ttu-id="48bd6-145">JavaScript und HTML</span><span class="sxs-lookup"><span data-stu-id="48bd6-145">JavaScript and HTML</span></span>
 
--   Auf Live-Kacheln und dem Sperrbildschirm werden kontextbezogene, relevante und aktuelle Informationen auf einen Blick sichtbar angezeigt.
--   Pushbenachrichtigungen informieren Benutzer in Echtzeit über wichtige Ereignisse, sobald diese verfügbar sind.
+<span data-ttu-id="48bd6-146">Microsoft Visual Studio 2017 stellt eine Vorlage für UWP-Apps für jede Sprache bereit. Damit können Sie ein einziges Projekt für alle Geräte erstellen.</span><span class="sxs-lookup"><span data-stu-id="48bd6-146">Microsoft Visual Studio 2017 provides a UWP app template for each language that lets you create a single project for all devices.</span></span> <span data-ttu-id="48bd6-147">Nachdem Sie Ihre Arbeit abgeschlossen haben, können Sie ein App-Paket erstellen und aus Visual Studio heraus an den Windows Store senden, um die App für Kunden mit beliebigen Windows 10-Geräten bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="48bd6-147">When your work is finished, you can produce an app package and submit it to the Windows Store from within Visual Studio to get your app out to customers on any Windows 10 device.</span></span>
 
--   Benachrichtigungen und Inhalte, auf die Benutzer reagieren müssen, können Sie im neuen Info-Center organisieren und anzeigen.
-
--   Hintergrundausführung und Auslöser erwecken Ihre App zum Leben, wenn der Benutzer sie benötigt.
-
--   Per Sprache und mit Bluetooth LE-Geräten kann Ihre App Benutzern die Interaktion mit der Welt um sie herum ermöglichen.
-
-Schließlich können Sie auch Roamingdaten und das Windows-Schließfach für Anmeldeinformationen nutzen, um auf allen Windows-Bildschirmen, auf denen Benutzer Ihre App ausführen, für eine einheitliche Roamingumgebung zu sorgen. Roamingdaten sind eine einfache Möglichkeit zum Speichern der Präferenzen und Einstellungen von Benutzern in der Cloud, ohne Ihre eigene Infrastruktur für die Synchronisierung erstellen zu müssen. Und Sie können die Anmeldeinformationen von Benutzern im Schließfach für Anmeldeinformationen speichern, wo Sicherheit und Zuverlässigkeit oberste Priorität haben.
-
-##  <a name="monetize-your-app-your-way"></a>Machen Sie Ihre App nach Ihren eigenen Vorstellungen zu Geld
+## <a name="uwp-apps-come-to-life-on-windows"></a><span data-ttu-id="48bd6-148">UWP-Apps entfalten unter Windows ihre Vielseitigkeit</span><span class="sxs-lookup"><span data-stu-id="48bd6-148">UWP apps come to life on Windows</span></span>
 
 
-Unter Windows können Sie Ihre App nach Ihren eigenen Vorstellungen zu Geld machen – für Smartphones, Tablets, PCs und andere Geräte. Wir bieten Ihnen verschiedene Möglichkeiten, wie Sie Ihre App und die zugehörigen Dienste zu Geld machen können. Sie müssen nur die für Sie am besten geeignete Methode auswählen:
+<span data-ttu-id="48bd6-149">Unter Windows kann Ihre App relevante Infos in Echtzeit für Benutzer bereitstellen, damit sie immer wieder auf die App zugreifen.</span><span class="sxs-lookup"><span data-stu-id="48bd6-149">On Windows, your app can deliver relevant, real-time info to your users and keep them coming back for more.</span></span> <span data-ttu-id="48bd6-150">In der modernen App-Welt mit vielen Konkurrenzprodukten muss Ihre App so attraktiv sein, dass sie von Benutzern gern und häufig genutzt wird.</span><span class="sxs-lookup"><span data-stu-id="48bd6-150">In the modern app economy, your app has to be engaging to stay at the front of your users’ lives.</span></span> <span data-ttu-id="48bd6-151">Windows bietet Ihnen viele Ressourcen, mit deren Hilfe Sie erreichen können, dass Benutzer Ihre App immer wieder nutzen:</span><span class="sxs-lookup"><span data-stu-id="48bd6-151">Windows provides you with lots of resources to help keep your users returning to your app:</span></span>
 
--   Ein bezahlter Download ist die einfachste Möglichkeit. Geben Sie einfach nur Ihren Preis an.
--   Testversionen sind eine großartige Möglichkeit, um Benutzern vor dem Kauf das Ausprobieren Ihrer App zu ermöglichen. Gegenüber den herkömmlicheren „Freemium“-Optionen verbessert dies die Auffindbarkeit und steigert die Kaufabschlüsse.
--   In-App-Käufe bieten in Bezug auf die Monetarisierung von Apps die größte Flexibilität.
+-   <span data-ttu-id="48bd6-152">Auf Live-Kacheln und dem Sperrbildschirm werden kontextbezogene, relevante und aktuelle Informationen auf einen Blick sichtbar angezeigt.</span><span class="sxs-lookup"><span data-stu-id="48bd6-152">Live tiles and the lock screen show contextually relevant and timely info at a glance.</span></span>
 
-## <a name="lets-get-started"></a>Los geht's
+-   <span data-ttu-id="48bd6-153">Pushbenachrichtigungen informieren Benutzer in Echtzeit über wichtige Ereignisse, sobald diese verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="48bd6-153">Push notifications bring real-time, breaking alerts to your user’s attention when they're needed.</span></span>
+
+-   <span data-ttu-id="48bd6-154">Benachrichtigungen und Inhalte, auf die Benutzer reagieren müssen, können Sie im neuen Info-Center organisieren und anzeigen.</span><span class="sxs-lookup"><span data-stu-id="48bd6-154">The Action Center is a place where you can organize and display notifications and content that users need to take action on.</span></span>
+
+-   <span data-ttu-id="48bd6-155">Hintergrundausführung und Auslöser erwecken Ihre App zum Leben, wenn der Benutzer sie benötigt.</span><span class="sxs-lookup"><span data-stu-id="48bd6-155">Background execution and triggers bring your app to life just when the user needs it.</span></span>
+
+-   <span data-ttu-id="48bd6-156">Ihre App kann Sprache und Bluetooth LE-Geräte verwenden, um Benutzer bei der Interaktion mit der Welt um sie herum zu unterstützen.</span><span class="sxs-lookup"><span data-stu-id="48bd6-156">Your app can use voice and Bluetooth LE devices to help users interact with the world around them.</span></span>
+
+-   <span data-ttu-id="48bd6-157">Unterstützung für funktionsreiche, digitale Freihandeingaben und das innovative Dial.</span><span class="sxs-lookup"><span data-stu-id="48bd6-157">Support for rich, digital ink and the innovative Dial.</span></span>
+
+-   <span data-ttu-id="48bd6-158">Cortana fügt Ihrer Software persönliche Züge hinzu.</span><span class="sxs-lookup"><span data-stu-id="48bd6-158">Cortana adds personality to your software.</span></span>
+
+-   <span data-ttu-id="48bd6-159">XAML stellt Ihnen die nötigen Tools bereit, um störungsfreie, animierte Benutzeroberflächen zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="48bd6-159">XAML provides you with the tools to create smooth, animated user interfaces.</span></span>
+
+<span data-ttu-id="48bd6-160">Schließlich können Sie auch Roamingdaten und das Windows-Schließfach für Anmeldeinformationen nutzen, um auf allen Windows-Bildschirmen, auf denen Benutzer Ihre App ausführen, für eine einheitliche Roamingumgebung zu sorgen.</span><span class="sxs-lookup"><span data-stu-id="48bd6-160">Finally, you can use roaming data and the Windows Credential Locker to enable a consistent roaming experience across all of the Windows screens where users run your app.</span></span> <span data-ttu-id="48bd6-161">Roamingdaten sind eine einfache Möglichkeit zum Speichern der Präferenzen und Einstellungen von Benutzern in der Cloud, ohne Ihre eigene Infrastruktur für die Synchronisierung erstellen zu müssen.</span><span class="sxs-lookup"><span data-stu-id="48bd6-161">Roaming data gives you an easy way to store a user’s preferences and settings in the cloud, without having to build your own sync infrastructure.</span></span> <span data-ttu-id="48bd6-162">Darüber hinaus können Sie die Anmeldeinformationen von Benutzern im Schließfach für Anmeldeinformationen speichern, wo Sicherheit und Zuverlässigkeit oberste Priorität haben.</span><span class="sxs-lookup"><span data-stu-id="48bd6-162">And you can store user credentials in the Credential Locker, where security and reliability are the top priority.</span></span>
+
+##  <a name="monetize-your-app"></a><span data-ttu-id="48bd6-163">Monetisieren Ihrer App</span><span class="sxs-lookup"><span data-stu-id="48bd6-163">Monetize your app</span></span>
 
 
-Eine ausführlichere Betrachtung der UWP finden Sie unter [Anleitung für Universal Windows Platform-Apps](universal-application-platform-guide.md). Sehen Sie sich dann [Vorbereiten](get-set-up.md) an, um die Tools herunterladen, Sie zum Erstellen von Apps benötigen.
+<span data-ttu-id="48bd6-164">Unter Windows können Sie Ihre App nach eigenen Vorstellungen zu Geld machen – für Telefone, Tablets, PCs und andere Geräte.</span><span class="sxs-lookup"><span data-stu-id="48bd6-164">On Windows, you can choose how you'll monetize your app—across phones, tablets, PCs, and other devices.</span></span> <span data-ttu-id="48bd6-165">Wir bieten Ihnen verschiedene Möglichkeiten, wie Sie Ihre App und die zugehörigen Dienste zu Geld machen können.</span><span class="sxs-lookup"><span data-stu-id="48bd6-165">We give you a number of ways to make money with your app and the services it delivers.</span></span> <span data-ttu-id="48bd6-166">Sie müssen nur die für Sie am besten geeignete Methode auswählen:</span><span class="sxs-lookup"><span data-stu-id="48bd6-166">All you need to do is choose the one that works best for you:</span></span>
 
-## <a name="related-topics"></a>Verwandte Themen
+-   <span data-ttu-id="48bd6-167">Ein bezahlter Download ist die einfachste Möglichkeit.</span><span class="sxs-lookup"><span data-stu-id="48bd6-167">A paid download is the simplest option.</span></span> <span data-ttu-id="48bd6-168">Geben Sie einfach nur Ihren Preis an.</span><span class="sxs-lookup"><span data-stu-id="48bd6-168">Just name your price.</span></span>
+-   <span data-ttu-id="48bd6-169">Dank Testversionen können Benutzern Ihre App vor dem Kauf testen. Im Vergleich zu den herkömmlicheren „Freemium“-Optionen kann sie leichter gefunden werden, und die Zahl der Konversionen ist höher.</span><span class="sxs-lookup"><span data-stu-id="48bd6-169">Trials let users try your app before buying it, providing easier discoverability and conversion than the more traditional "freemium" options.</span></span>
+-   <span data-ttu-id="48bd6-170">Verwenden Sie Verkaufspreise für Apps und Add-Ons.</span><span class="sxs-lookup"><span data-stu-id="48bd6-170">Use sale prices for apps and add-ons.</span></span>
+-   <span data-ttu-id="48bd6-171">In-App-Käufe und -Anzeigen sind ebenfalls verfügbar.</span><span class="sxs-lookup"><span data-stu-id="48bd6-171">In-app purchases and ads are also available.</span></span>
+
+## <a name="lets-get-started"></a><span data-ttu-id="48bd6-172">Machen Sie die ersten Schritte</span><span class="sxs-lookup"><span data-stu-id="48bd6-172">Let's get started</span></span>
 
 
-* [Anleitung für UWP-Apps (Universelle Windows-Plattform)](universal-application-platform-guide.md)
-* [Einrichten](get-set-up.md)
+<span data-ttu-id="48bd6-173">Eine ausführlichere Beschreibung der UWP finden Sie unter [Anleitung für Apps für die universelle Windows-Plattform (UWP)](universal-application-platform-guide.md).</span><span class="sxs-lookup"><span data-stu-id="48bd6-173">For a more detailed look at the UWP, read the [Guide to Universal Windows Platform apps](universal-application-platform-guide.md).</span></span> <span data-ttu-id="48bd6-174">Navigieren Sie anschließend zu [Vorbereiten](get-set-up.md), um die Tools herunterzuladen, die Sie benötigen, um mit dem Erstellen von Apps zu beginnen, und schreiben Sie [Ihre erste App](your-first-app.md)!</span><span class="sxs-lookup"><span data-stu-id="48bd6-174">Then, check out [Get set up](get-set-up.md) to download the tools you need to start creating apps, and then write [your first app](your-first-app.md)!</span></span>
 
-## <a name="more-advanced-topics"></a>Fortgeschrittenere Themen
 
-* [.NET Native - Bedeutung für UWP-Entwickler (Universelle Windows-Plattform)](https://blogs.windows.com/buildingapps/2015/08/20/net-native-what-it-means-for-universal-windows-platform-uwp-developers/#TYsD3tJuBJpK3Hc7.97)
-* [Universelle Windows-Apps in .NET](https://blogs.msdn.microsoft.com/dotnet/2015/07/30/universal-windows-apps-in-net)
-* [.NET für UWP-Apps](https://msdn.microsoft.com/en-us/library/mt185501.aspx)
+## <a name="more-advanced-topics"></a><span data-ttu-id="48bd6-175">Fortgeschrittenere Themen</span><span class="sxs-lookup"><span data-stu-id="48bd6-175">More advanced topics</span></span>
 
+* [<span data-ttu-id="48bd6-176">.NET Native - Bedeutung für UWP-Entwickler (Universelle Windows-Plattform)</span><span class="sxs-lookup"><span data-stu-id="48bd6-176">.NET Native - What it means for Universal Windows Platform (UWP) developers</span></span>](https://blogs.windows.com/buildingapps/2015/08/20/net-native-what-it-means-for-universal-windows-platform-uwp-developers/#TYsD3tJuBJpK3Hc7.97)
+* [<span data-ttu-id="48bd6-177">Universelle Windows-Apps in .NET</span><span class="sxs-lookup"><span data-stu-id="48bd6-177">Universal Windows apps in .NET</span></span>](https://blogs.msdn.microsoft.com/dotnet/2015/07/30/universal-windows-apps-in-net)
+* [<span data-ttu-id="48bd6-178">.NET für UWP-Apps</span><span class="sxs-lookup"><span data-stu-id="48bd6-178">.NET for UWP apps</span></span>](https://msdn.microsoft.com/library/mt185501.aspx)

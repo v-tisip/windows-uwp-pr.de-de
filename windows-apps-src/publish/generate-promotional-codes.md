@@ -4,143 +4,121 @@ Description: "Sie können Werbecodes für Apps oder Add-Ons generieren, die Sie 
 title: Generieren von Werbecodes
 ms.assetid: 9B632266-64EC-4D62-A4C4-55B6643D8750
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 06/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: fb97ccb1555e214871603861a3e5edeaaf3a55d7
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 97d0cb79a00140a7255923131f78c2b3fecff1d9
+ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/21/2017
 ---
-
-# <a name="generate-promotional-codes"></a>Generieren von Werbecodes
-
-
-Sie können Werbecodes für Apps oder Add-Ons generieren, die Sie im Windows Store veröffentlicht haben. Werbecodes sind eine einfache Möglichkeit, einflussreichen Benutzern kostenlosen Zugriff auf Ihre App oder Ihr Add-On zu ermöglichen. Sie können Werbecodes auch in Kundendienstszenarien verwenden, indem Sie Benutzern kostenlosen Zugriff auf Ihre App oder Ihr Add-On gewähren, oder für [Betatests](beta-testing-and-targeted-distribution.md) mit Windows 10.
-
-Jeder Werbecode hat eine entsprechende eindeutige einlösbare URL, die Sie an einen einzelnen Benutzer oder eine Benutzergruppe verteilen können. Der Benutzer muss nur auf die URL klicken, um den Code einzulösen und Ihre App oder Ihr Add-On über den Windows Store zu installieren.
-
-Auf dem Windows Dev Center-Dashboard können Sie folgende Aktionen ausführen:
-
--   Bestellen von Werbecodes für Ihre App
--   Herunterladen einer erfüllten Werbecodebestellung
--   Überprüfen der Werbecodenutzung für Ihre Apps, u. a.:
-    -   Zusammenfassungen der Werbecodebestellungen für alle Ihre Apps (auf der Seite **Dashboard-Übersicht**) und für jede einzelne App (auf der Seite **App-Übersicht** für jede App).
-    -   Eine ausführliche Zusammenfassung der Werbecodebestellungen für jede App (auf der Seite **Werbecodes** für jede App).
-
-> **Hinweis**  Sie können Werbecodes auch dann generieren, wenn Sie auf der Dashboardseite [Preise und Verfügbarkeit](set-app-pricing-and-availability.md) für Ihre App die Option **Diese App ausblenden und den Erwerb verhindern. Kunden mit einem Werbecode können die App auf Windows 10-Geräten weiterhin herunterladen** ausgewählt haben. Ihre App muss die abschließende Veröffentlichungsphase des [App-Zertifizierungsprozesses](the-app-certification-process.md) bestehen, bevor Benutzer einen Werbecode zur Installation einlösen können.
-
-## <a name="promotional-code-policies"></a>Richtlinien für Werbecodes
+# <a name="generate-promotional-codes"></a><span data-ttu-id="5f222-104">Generieren von Werbecodes</span><span class="sxs-lookup"><span data-stu-id="5f222-104">Generate promotional codes</span></span>
 
 
-Beachten Sie die folgenden Richtlinien für Werbecodes:
+<span data-ttu-id="5f222-105">Sie können Werbecodes für Apps oder Add-Ons generieren, die Sie im Windows Store veröffentlicht haben.</span><span class="sxs-lookup"><span data-stu-id="5f222-105">You can generate promotional codes for an app or add-on that you have published in the Windows Store.</span></span> <span data-ttu-id="5f222-106">Werbecodes sind eine einfache Möglichkeit, einflussreichen Benutzern kostenlosen Zugriff auf Ihre App oder Ihr Add-On zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="5f222-106">Promotional codes are an easy way to give influential users free access to your app or add-on.</span></span> <span data-ttu-id="5f222-107">Sie können Werbecodes auch in Kundendienstszenarien verwenden, indem Sie Benutzern kostenlosen Zugriff auf Ihre App oder Ihr Add-On gewähren, oder für [Betatests](beta-testing-and-targeted-distribution.md) mit Windows10.</span><span class="sxs-lookup"><span data-stu-id="5f222-107">You might also use promotional codes to address customer service scenarios by giving users free access to your app or add-on, or for [beta testing](beta-testing-and-targeted-distribution.md) with Windows 10.</span></span>
 
--   Werbecodes können für alle über den Windows Store veröffentlichten Apps oder Add-Ons generiert werden. Benutzer können die Codes mit allen Versionen von Windows einlösen, die von Ihren Apps oder Add-Ons unterstützt werden.
--   Werbecodes laufen sechs Monate nach dem Datum der Bestellung ab, es sei denn, Sie wählen ein früheres Ablaufdatum aus.
--   Sie können für alle Apps oder Add-Ons alle 6 Monate bis zu 500 Werbecodes generieren. Der Zeitraum von 6 Monaten beginnt mit der Übermittlung der ersten Werbecodebestellung.
--   Sie müssen die in der [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058) definierten Anforderungen erfüllen, einschließlich Abschnitt **3k. Werbecodes**.
+<span data-ttu-id="5f222-108">Jeder Werbecode hat eine entsprechende eindeutige einlösbare URL, die Sie an einen einzelnen Benutzer oder eine Benutzergruppe verteilen können.</span><span class="sxs-lookup"><span data-stu-id="5f222-108">Each promotional code has a corresponding unique redeemable URL that you can distribute to a single user or to a group of users.</span></span> <span data-ttu-id="5f222-109">Der Benutzer muss nur auf die URL klicken, um den Code einzulösen und Ihre App oder Ihr Add-On über den Windows Store zu installieren.</span><span class="sxs-lookup"><span data-stu-id="5f222-109">The user can simply click the URL to redeem the code and install your app or add-on from the Windows Store.</span></span>
 
-## <a name="order-promotional-codes"></a>Bestellen von Werbecodes
+> [!TIP] 
+> <span data-ttu-id="5f222-110">Sie können [benutzerorientierte Pushbenachrichtigungen](send-push-notifications-to-your-apps-customers.md) verwenden, um einen Werbecode an ein Segment Ihrer Kunden zu verteilen.</span><span class="sxs-lookup"><span data-stu-id="5f222-110">You can use [targeted push notifications](send-push-notifications-to-your-apps-customers.md) to distribute a promotional code to a segment of your customers.</span></span> <span data-ttu-id="5f222-111">Verwenden Sie dabei unbedingt einen Werbecode, der mehreren Kunden die Nutzung des gleichen Codes ermöglicht.</span><span class="sxs-lookup"><span data-stu-id="5f222-111">When doing so, be sure to use a promotional code that allows multiple customers to use the same code.</span></span>
 
+<span data-ttu-id="5f222-112">Auf dem Windows Dev Center-Dashboard können Sie folgende Aktionen ausführen:</span><span class="sxs-lookup"><span data-stu-id="5f222-112">In the Windows Dev Center dashboard, you can:</span></span>
 
-So bestellen Sie Werbecodes für Apps oder Add-Ons, die Sie im Windows Store veröffentlicht haben
+-   <span data-ttu-id="5f222-113">Bestellen von Werbecodes für Ihre App oder Ihr Add-On</span><span class="sxs-lookup"><span data-stu-id="5f222-113">Order a set of promotional codes for your app or add-on.</span></span>
+-   <span data-ttu-id="5f222-114">Herunterladen einer erfüllten Werbecodebestellung</span><span class="sxs-lookup"><span data-stu-id="5f222-114">Download a fulfilled promotional codes order.</span></span>
+-   <span data-ttu-id="5f222-115">Überprüfen der Werbecodenutzung</span><span class="sxs-lookup"><span data-stu-id="5f222-115">Review promotional code usage.</span></span>
 
-1.  Gehen Sie auf dem Windows Dev Center-Dashboard wie folgt vor:
-    -   Navigieren Sie auf der Seite **App-Übersicht** für Ihre App zum Abschnitt **Werbecodes**, und klicken Sie auf **Codes verwalten**.
-    -   Erweitern Sie auf einer beliebigen Dashboardseite für Ihre App im linken Navigationsmenü **Monetisierung**, und klicken Sie auf **Werbecodes**. Klicken Sie auf der Seite **Werbecodes** auf **Codes bestellen**.
+> [!NOTE]
+> <span data-ttu-id="5f222-116">Sie können Werbecodes generieren, auch wenn Sie für [Sichtbarkeit](set-app-pricing-and-availability.md#visibility) die Option **Stop acquisition: Any customer with a direct link can see the product’s Store listing, but they can only download it if they owned the product before, or have a promotional code and are using a Windows 10 device.** ausgewählt haben.</span><span class="sxs-lookup"><span data-stu-id="5f222-116">You can generate promotional codes even if you have selected the [Visibility](set-app-pricing-and-availability.md#visibility) option **Stop acquisition: Any customer with a direct link can see the product’s Store listing, but they can only download it if they owned the product before, or have a promotional code and are using a Windows 10 device.**</span></span>
 
-2.  Geben Sie auf der Seite **Neue Werbecodes bestellen** Folgendes ein:
-    -   Wählen Sie die Apps oder Add-Ons, für die Sie Codes generieren möchten.
-    -   Geben Sie einen Namen für die Bestellung an. Anhand dieses Namens können Sie beim Überprüfen der Werbecode-Nutzungsdaten zwischen verschiedenen Codebestellungen unterscheiden.
-    -   Wählen Sie den Auftragstyp. Sie können auch auswählen, dass ein Satz von Werbecodes generiert werden soll, die jeweils nur einmal verwendet werden können, oder dass ein Werbecode generiert wird, der mehrmals verwendet werden kann.
-    -   Geben Sie die zu bestellenden Codemenge an.
-    -   Geben Sie an, wann die Werbecodes aktiv werden sollen. Um ein spezifisches Startdatum und eine spezifische Startuhrzeit zu wählen, entfernen Sie die Markierung für das Kontrollkästchen **Codes werden umgehend aktiv**.
-    -   Geben Sie an, wann die Werbecodes ablaufen sollen. Um ein spezifisches Startdatum und eine spezifische Startuhrzeit zu wählen, entfernen Sie die Markierung für das Kontrollkästchen **Codes laufen nach 6 Monaten ab**.
+<span data-ttu-id="5f222-117">Hinweis: Ihre App muss die abschließende Veröffentlichungsphase des [App-Zertifizierungsprozesses](the-app-certification-process.md) bestehen, bevor Kunden einen Werbecode zur Installation einlösen können.</span><span class="sxs-lookup"><span data-stu-id="5f222-117">Note that your app must pass the final publishing phase of the [app certification process](the-app-certification-process.md) before customers can redeem a promotional code to install it.</span></span>
 
-3.  Klicken Sie auf **Codes bestellen**. Die Bestellung wird übermittelt, und das Dashboard leitet Sie zur Seite **Werbecodes** weiter, auf der die neue Bestellung in der Zusammenfassungstabelle der Werbecodebestellungen als **Ausstehend** aufgeführt wird.
-
-Werbecodes stehen in der Regel innerhalb von 60 Minuten nach Übermittlung der Bestellung zum Download zur Verfügung, wobei dies in einigen Fällen länger dauern kann. Wenn Ihre Bestellung erfüllt wurde und die Codes zum Download zur Verfügung stehen, wechselt der Bestellungsstatus zu **Verfügbar**.
-
-## <a name="download-and-distribute-promotional-codes"></a>Herunterladen und Verteilen von Werbecodes
+## <a name="promotional-code-policies"></a><span data-ttu-id="5f222-118">Richtlinien für Werbecodes</span><span class="sxs-lookup"><span data-stu-id="5f222-118">Promotional code policies</span></span>
 
 
-So laden Sie erfüllte Werbecodebestellungen herunter und verteilen die Codes an die Benutzer Ihrer App
+<span data-ttu-id="5f222-119">Beachten Sie die folgenden Richtlinien für Werbecodes:</span><span class="sxs-lookup"><span data-stu-id="5f222-119">Be aware of the following policies for promotional codes:</span></span>
 
-1.  Kehren Sie auf dem Windows Dev Center-Dashboard zur Seite **Werbecodes** für Ihre App zurück (erweitern Sie **Monetarisierung**, und klicken Sie auf **Werbecodes**).
-2.  Vergewissern Sie sich, dass die Bestellung den Status **Verfügbar** aufweist. Klicken Sie auf den Link zum **Herunterladen** Ihrer Bestellung, und speichern Sie die bereitgestellte Datei auf Ihrem Computer. Diese Datei enthält Informationen zu Ihrer Werbecodebestellung im TSV-Format (Tabulatorgetrennte Werte).
-3.  Öffnen Sie die TSV-Datei im Editor Ihrer Wahl. Öffnen Sie für ein optimales Ergebnis die TSV-Datei in einer Anwendung, die Daten in tabellarischer Struktur anzeigen kann, z. B. Microsoft Excel. Allerdings können Sie die Datei auch in einem Text-Editor öffnen.
+-   <span data-ttu-id="5f222-120">Werbecodes können für alle über den Windows Store veröffentlichten Apps oder Add-Ons generiert werden.</span><span class="sxs-lookup"><span data-stu-id="5f222-120">You can generate promotional codes for any app or add-on that you published to the Windows Store.</span></span> <span data-ttu-id="5f222-121">Kunden können die Codes mit allen Versionen von Windows einlösen, die von Ihren Apps oder Add-Ons unterstützt werden.</span><span class="sxs-lookup"><span data-stu-id="5f222-121">Customers can redeem the codes on any versions of Windows that are supported by your app or add-on.</span></span>
+-   <span data-ttu-id="5f222-122">Werbecodes laufen sechs Monate nach dem Datum der Bestellung ab, es sei denn, Sie wählen ein früheres Ablaufdatum aus.</span><span class="sxs-lookup"><span data-stu-id="5f222-122">Promotional codes expire 6 months after the date you order them (unless you choose an earlier expiration date).</span></span>
+-   <span data-ttu-id="5f222-123">Sie können für alle Apps oder Add-Ons alle 6Monate Codes generieren, die bis zu 1600Einlösungen ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="5f222-123">For each of your apps or add-ons, you can generate codes that allow up to 1600 redemptions every 6 months.</span></span> <span data-ttu-id="5f222-124">Der Zeitraum von sechs Monaten beginnt mit der Übermittlung der ersten Werbecodebestellung, auch wenn Sie ein früheres Ablaufdatum auswählen.</span><span class="sxs-lookup"><span data-stu-id="5f222-124">The 6 month period begins when the first promotional code order is submitted, even if you choose an earlier expiration date.</span></span> <span data-ttu-id="5f222-125">Die Summe aller 1600 Einlösungen pro Produkt bezieht sich auf Codes zur einmaligen Verwendung und Codes, die mehrmals verwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="5f222-125">The total of 1600 redemptions per product applies to both single-use codes and codes that can be used multiple times.</span></span>
+-   <span data-ttu-id="5f222-126">Sie müssen die in der [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058) definierten Anforderungen erfüllen, einschließlich Abschnitt **3k. Werbecodes**.</span><span class="sxs-lookup"><span data-stu-id="5f222-126">You must follow the requirements defined in the [App Developer Agreement](https://msdn.microsoft.com/library/windows/apps/hh694058), including section **3k. Promotional Codes**.</span></span>
 
-    Die Datei enthält Spalten mit den folgenden Daten für jeden Code:
-
-    -   **Produktname**: Der Name der App oder des Add-Ons, dem der Code zugeordnet ist.
-    -   **Bestellungsname**: Der Name der Bestellung, in der dieser Code erfüllt wurde.
-    -   **Werbecode**: Der Code selbst. Dies ist eine 5x5-Zeichenfolge von alphanumerischen Zeichen, die durch Bindestriche getrennt sind. Beispiel:
-
-        DM3GY-M2GYM-6YMW6-4QHHT-23W2Z
-
-    -   **Einlösbare URL**: Die URL, mit der ein Benutzer den Code einlösen und die App bzw. das Add-On installieren kann. Die URL weist das folgende Format auf:
-
-        https://account.microsoft.com/billing/redeem?mstoken=&lt;promotional_code>
-
-    -   **Startdatum**: Das Datum, an dem dieser Code gültig wird.
-    -   **Ablaufdatum**: Das Datum, an dem dieser Code abläuft.
-    -   **Code-ID**: Eine eindeutige ID für diesen Code.
-    -   **Bestellungs-ID**: Eine eindeutige ID für die Bestellung, in der dieser Code erfüllt wurde.
-    -   **Ausgegeben an**: Ein leeres Feld, in das Sie einen Wert eintragen können, der den Benutzer identifiziert, an den Sie den Code verteilt haben.
-    -   **Verfügbar**: Die Anzahl der Codes, die noch eingelöst werden können.
-    -   **Eingelöst**: Die Anzahl der Codes, die eingelöst wurden.
-
-4.  Sie können die einlösbaren URLs in einem beliebigen, von Ihnen bevorzugten Kommunikationsformat verteilen (z. B. E-Mail, SMS-Nachricht oder gedruckte Karten). Die Kommunikation sollte Folgendes enthalten:
-    -   Eine Erklärung, für welche App bzw. welches Add-On der Werbecode vorgesehen ist, und optional eine Beschreibung, warum der Benutzer den Code erhält.
-    -   Die einlösbare URL für den Code.
-    -   Anweisungen zum Aufrufen der einlösbaren URL, Anmelden mit dem Microsoft-Konto und Befolgen der Anweisungen zum Herunterladen und Installieren Ihrer App.
-
-## <a name="code-redemption-user-experience"></a>Benutzererfahrung bei Einlösung des Codes
+## <a name="order-promotional-codes"></a><span data-ttu-id="5f222-127">Bestellen von Werbecodes</span><span class="sxs-lookup"><span data-stu-id="5f222-127">Order promotional codes</span></span>
 
 
-Wenn Sie eine einlösbare URL verteilt haben, wird in den folgenden Schritten die Benutzererfahrung beim Einlösen der App beschrieben.
+<span data-ttu-id="5f222-128">So bestellen Sie Werbecodes für Apps oder Add-Ons, die Sie im Windows Store veröffentlicht haben</span><span class="sxs-lookup"><span data-stu-id="5f222-128">To order promotional codes for an app or add-on that you published to the Windows Store:</span></span>
 
-1.  Der Benutzer klickt auf die einlösbare URL.
+1.  <span data-ttu-id="5f222-129">Erweitern Sie im linken Naviagationsmenü des Windows Dev Center-Dashboards **Bewerben** und wählen Sie dann **Angebotscodes** aus.</span><span class="sxs-lookup"><span data-stu-id="5f222-129">In the left navigation menu of the Windows Dev Center dashboard, expand **Attract** and then select **Promo codes.**</span></span>
 
-    Der Browser öffnet eine authentifizierte Seite **Code einlösen** unter <https://account.microsoft.com/billing/redeem>. Diese Seite enthält eine Beschreibung der App, für die der Benutzer den Code einlöst.
+2.   <span data-ttu-id="5f222-130">Klicken Sie auf der Seite **Werbecodes** auf **Codes bestellen**.</span><span class="sxs-lookup"><span data-stu-id="5f222-130">On the **Promotional codes** page, click **Order codes**.</span></span>
 
-2.  Der Benutzer klickt auf **Einlösen**.
+3.  <span data-ttu-id="5f222-131">Geben Sie auf der Seite **Neue Werbecodes bestellen** Folgendes ein:</span><span class="sxs-lookup"><span data-stu-id="5f222-131">On the **New promotional codes order** page, enter the following:</span></span>
+    -   <span data-ttu-id="5f222-132">Wählen Sie die Apps oder Add-Ons, für die Sie Codes generieren möchten.</span><span class="sxs-lookup"><span data-stu-id="5f222-132">Select the app or add-on for which you want to generate codes.</span></span>
+    -   <span data-ttu-id="5f222-133">Geben Sie einen Namen für die Bestellung an.</span><span class="sxs-lookup"><span data-stu-id="5f222-133">Specify a name for the order.</span></span> <span data-ttu-id="5f222-134">Anhand dieses Namens können Sie beim Überprüfen der Werbecode-Nutzungsdaten zwischen verschiedenen Codebestellungen unterscheiden.</span><span class="sxs-lookup"><span data-stu-id="5f222-134">You can use this name to differentiate between different orders of codes when reviewing your promotional code usage data.</span></span>
+    -   <span data-ttu-id="5f222-135">Wählen Sie den Auftragstyp.</span><span class="sxs-lookup"><span data-stu-id="5f222-135">Select the order type.</span></span> <span data-ttu-id="5f222-136">Sie können auch auswählen, dass ein Satz von Werbecodes generiert werden soll, die jeweils nur einmal verwendet werden können, oder dass ein Werbecode generiert wird, der mehrmals verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="5f222-136">You can choose to generate a set of promo codes that can each be used once, or you can choose to generate one promo code that can be used multiple times.</span></span> 
+    -   <span data-ttu-id="5f222-137">Geben Sie die Anzahl der zu bestellenden Codes (sofern eine Reihe von Codes generiert wird) oder die Häufigkeit an, mit der der Code eingelöst werden kann (sofern ein Code generiert wird, der mehrmals verwendet werden kann).</span><span class="sxs-lookup"><span data-stu-id="5f222-137">Specify the number of codes to order (if generating a set of codes) or the number of times the code can be redeemed (if generating one code to be used multiple times).</span></span>
+    -   <span data-ttu-id="5f222-138">Geben Sie an, wann die Werbecodes aktiv werden sollen.</span><span class="sxs-lookup"><span data-stu-id="5f222-138">Specify when the promotional codes should become active.</span></span> <span data-ttu-id="5f222-139">Um ein spezifisches Startdatum und eine spezifische Startuhrzeit zu wählen, entfernen Sie die Markierung für das Kontrollkästchen **Codes werden umgehend aktiv**.</span><span class="sxs-lookup"><span data-stu-id="5f222-139">To choose a specific start date and time, clear the **Codes are active immediately** check box.</span></span> <span data-ttu-id="5f222-140">Andernfalls sind die Codes sofort aktiv.</span><span class="sxs-lookup"><span data-stu-id="5f222-140">Otherwise, the codes will be active immediately.</span></span>
+    -   <span data-ttu-id="5f222-141">Geben Sie an, wann die Werbecodes ablaufen sollen.</span><span class="sxs-lookup"><span data-stu-id="5f222-141">Specify when the promotional codes should expire.</span></span> <span data-ttu-id="5f222-142">Um ein spezifisches Ablaufdatum und eine frühere Ablaufzeit als sechs Monate zu wählen, deaktivieren Sie das Kontrollkästchen **Codes laufen nach 6 Monaten ab**.</span><span class="sxs-lookup"><span data-stu-id="5f222-142">To choose a specific expire date and time earlier than 6 months, clear the **Codes expire after 6 months** check box.</span></span>
 
-    Der Browser navigiert zur Seite **Danke** mit dem Link **Abrufen *****&lt;Name Ihrer App&gt;***.
-
-    > **Hinweis**  Benutzern wird bei diesem Schritt eine Fehlermeldung angezeigt, wenn Ihre App noch nicht veröffentlicht wurde.
-
-3.  Der Benutzer klickt auf **Abrufen** ***&lt;Name Ihrer App&gt;***.
-
-4.  Wenn sich der Benutzer an einem Computer mit Windows Store für Windows 10 oder Windows 8.1 befindet, wird die Übersichtsseite für die App im Windows Store geöffnet. Der Benutzer kann dann zum kostenlosen Installieren der App auf **Installieren** klicken.
-
-    Wenn sich der Benutzer an einem Computer oder einem Gerät befindet, auf dem Windows Store nicht installiert ist, wird im Browser die Windows Store-Webseite für die App geöffnet. Der Benutzer kann zum kostenlosen Installieren der App auf **Installieren** klicken.
-
-    > **Hinweis**  In einigen Fällen wird auf der App-Seite die Schaltfläche **Kaufen** anstelle der Schaltfläche **Installieren** angezeigt, obwohl die App erfolgreich über den Werbecode eingelöst wurde. Der Benutzer kann dann zum kostenlosen Installieren der App auf **Kaufen** klicken.
-
-## <a name="review-your-promotional-codes"></a>Überprüfen der Werbecodes
+4.  <span data-ttu-id="5f222-143">Klicken Sie auf **Codes bestellen**.</span><span class="sxs-lookup"><span data-stu-id="5f222-143">Click **Order codes**.</span></span> <span data-ttu-id="5f222-144">Sie werden dann zurück auf die Seite **Werbecodes** geleitet, auf der Sie Ihre neue Bestellung in der Zusammenfassungstabelle der Werbecodebestellungen für diese App sehen.</span><span class="sxs-lookup"><span data-stu-id="5f222-144">You'll then be returned to the **Promotional codes** page, where you'll be able to see your new order in the summary table of promotional code orders for that app.</span></span>
 
 
-Es gibt mehrere Möglichkeiten, die Nutzung von Werbecodes zu überprüfen.
+## <a name="download-and-distribute-promotional-codes"></a><span data-ttu-id="5f222-145">Herunterladen und Verteilen von Werbecodes</span><span class="sxs-lookup"><span data-stu-id="5f222-145">Download and distribute promotional codes</span></span>
 
--   Besuchen Sie zum Anzeigen einer Übersicht über die Werbecodebestellungen für alle Apps die Seite **Dashboard-Übersicht**, und navigieren Sie zum Abschnitt **Werbecodes** auf dieser Seite. In diesem Abschnitt werden die verbleibenden Werbecodes für alle Apps, die Gesamtanzahl von eingelösten Werbecodes für alle Apps und die Gesamtanzahl von Werbecodebestellungen angezeigt, die Sie für alle Ihre Apps aufgegeben haben.
--   Navigieren Sie zum Anzeigen einer Übersicht über die Werbecodebestellungen für eine bestimmte App zur Seite **App-Übersicht** für die App, und navigieren Sie zum Abschnitt **Werbecodes** auf dieser Seite. In diesem Abschnitt werden die verbleibenden aktiven Werbecodes für die App, die Gesamtanzahl von eingelösten Werbecodes für die App und die Gesamtanzahl von Werbecodebestellungen angezeigt, die Sie für die App aufgegeben haben.
--   Navigieren Sie zum Anzeigen einer ausführlichen Übersicht über die Werbecodebestellungen für eine bestimmte App zur Seite **Werbecodes** für Ihre App (Erweitern Sie **Monetarisierung**, und klicken Sie auf **Werbecodes**). Sie können die folgenden detaillierten Informationen für alle aktuellen und inaktiven Werbecodes für die App überprüfen:
-    -   Bestellungsname
-    -   Name der App oder des Add-Ons
-    -   Bestellungsdatum
-    -   Ablaufdatum
-    -   Status
+<span data-ttu-id="5f222-146">So laden Sie erfüllte Werbecodebestellungen herunter und verteilen die Codes an Kunden:</span><span class="sxs-lookup"><span data-stu-id="5f222-146">To download a fulfilled promotional code order and distribute the codes to customers:</span></span>
 
-Sie können auch eine aktive Bestellung aus dieser Tabelle herunterladen.
+1.  <span data-ttu-id="5f222-147">Erweitern Sie im linken Naviagationsmenü des Windows Dev Center-Dashboards **Bewerben** und wählen Sie dann **Angebotscodes** aus.</span><span class="sxs-lookup"><span data-stu-id="5f222-147">In the left navigation menu of the Windows Dev Center dashboard, expand **Attract** and then select **Promo codes.**</span></span>
+2.  <span data-ttu-id="5f222-148">Klicken Sie auf den Link zum **Herunterladen** Ihres Angebotscodes, und speichern Sie die Datei auf Ihrem Computer.</span><span class="sxs-lookup"><span data-stu-id="5f222-148">Click the **Download** link for the promotional code order, then save the generated file to your computer.</span></span> <span data-ttu-id="5f222-149">Diese Datei enthält Informationen zu Ihrer Werbecodebestellung im TSV-Format (.tsv).</span><span class="sxs-lookup"><span data-stu-id="5f222-149">This file contains information about your promotional codes order in tab-separated value (.tsv) format.</span></span>
+3.  <span data-ttu-id="5f222-150">Öffnen Sie die .tsv-Datei im Editor Ihrer Wahl.</span><span class="sxs-lookup"><span data-stu-id="5f222-150">Open the .tsv file in the editor of your choice.</span></span> <span data-ttu-id="5f222-151">Öffnen Sie für ein optimales Ergebnis die .tsv-Datei in einer Anwendung, die Daten in tabellarischer Struktur anzeigen kann, z.B. Microsoft Excel.</span><span class="sxs-lookup"><span data-stu-id="5f222-151">For the best experience, open the .tsv file in an application that can display the data in a tabular structure, such as Microsoft Excel.</span></span> <span data-ttu-id="5f222-152">Allerdings können Sie die Datei auch in einem Text-Editor öffnen.</span><span class="sxs-lookup"><span data-stu-id="5f222-152">However, you can open the file in any text editor.</span></span>
+
+    <span data-ttu-id="5f222-153">Die Datei enthält Spalten mit den folgenden Daten für jeden Code:</span><span class="sxs-lookup"><span data-stu-id="5f222-153">The file contains the following columns of data for each code:</span></span>
+
+    -   <span data-ttu-id="5f222-154">**Produktname**: Der Name der App oder des Add-Ons, dem der Code zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="5f222-154">**Product name**: The name of the app or add-on that the code is associated with.</span></span>
+    -   <span data-ttu-id="5f222-155">**Bestellungsname**: Der Name der Bestellung, in der dieser Code erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="5f222-155">**Order name**: The name of the order in which this code was generated.</span></span>
+    -   <span data-ttu-id="5f222-156">**Werbecode**: Der Code selbst.</span><span class="sxs-lookup"><span data-stu-id="5f222-156">**Promotional code**: The code itself.</span></span> <span data-ttu-id="5f222-157">Dies ist eine 5x5-Zeichenfolge von alphanumerischen Zeichen, die durch Bindestriche getrennt sind.</span><span class="sxs-lookup"><span data-stu-id="5f222-157">This is a 5x5 string of alphanumeric characters separated by hyphens.</span></span> <span data-ttu-id="5f222-158">Beispiel: DM3GY-M2GYM-6YMW6-4QHHT-23W2Z</span><span class="sxs-lookup"><span data-stu-id="5f222-158">For example: DM3GY-M2GYM-6YMW6-4QHHT-23W2Z</span></span>
+    -   <span data-ttu-id="5f222-159">**Einlösbare URL**: Die URL, mit der ein Kunde den Code einlösen und die App bzw. das Add-On installieren kann.</span><span class="sxs-lookup"><span data-stu-id="5f222-159">**Redeemable URL**: The URL that a customer can use to redeem the code and install your app or add-on.</span></span> <span data-ttu-id="5f222-160">Die URL hat das folgende Format: http://go.microsoft.com/fwlink/?LinkId=532540&mstoken=&lt;Werbecode></span><span class="sxs-lookup"><span data-stu-id="5f222-160">The URL has the following format: http://go.microsoft.com/fwlink/?LinkId=532540&mstoken=&lt;promotional_code></span></span>
+    -   <span data-ttu-id="5f222-161">**Startdatum**: Das Datum, an dem dieser Code aktiv wurde.</span><span class="sxs-lookup"><span data-stu-id="5f222-161">**Start date**: The date this code became active.</span></span>
+    -   <span data-ttu-id="5f222-162">**Ablaufdatum**: Das Datum, an dem dieser Code abläuft.</span><span class="sxs-lookup"><span data-stu-id="5f222-162">**Expire date**: The date this code expires.</span></span>
+    -   <span data-ttu-id="5f222-163">**Code-ID**: Eine eindeutige ID für diesen Code.</span><span class="sxs-lookup"><span data-stu-id="5f222-163">**Code ID**: A unique ID for this code.</span></span>
+    -   <span data-ttu-id="5f222-164">**Bestellungs-ID**: Eine eindeutige ID für die Bestellung, in der dieser Code erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="5f222-164">**Order ID**: A unique ID for the order in which this code was generated.</span></span>
+    -   <span data-ttu-id="5f222-165">**Ausgegeben an**: Ein leeres Feld, mit dem Sie nachverfolgen können, welchem Kunden Sie den Code gegeben haben.</span><span class="sxs-lookup"><span data-stu-id="5f222-165">**Given to**: An empty field that you can use to keep track of which customer you gave the code to.</span></span>
+    -   <span data-ttu-id="5f222-166">**Verfügbar**: Wie häufig der Code noch eingelöst werden kann (zum Zeitpunkt der Dateierstellung).</span><span class="sxs-lookup"><span data-stu-id="5f222-166">**Available**: The number of times the code is still available to redeem (at the time the file was generated).</span></span>
+    -   <span data-ttu-id="5f222-167">**Eingelöst**: Wie häufig der Code eingelöst wurde (zum Zeitpunkt der Dateierstellung).</span><span class="sxs-lookup"><span data-stu-id="5f222-167">**Redeemed**: The number of times that the code has been redeemed (at the time the file was generated).</span></span>
+
+4.  <span data-ttu-id="5f222-168">Sie können die einlösbaren URLs in einem beliebigen, von Ihnen bevorzugten Kommunikationsformat an Kunden verteilen (z.B. zielgruppenorientierte Benachrichtigungen, E-Mail, SMS-Nachricht oder gedruckte Karten).</span><span class="sxs-lookup"><span data-stu-id="5f222-168">Distribute the redeemable URLs to your customers via any communication format you prefer (for example targeted notifications, email, SMS messages, or printed cards).</span></span> <span data-ttu-id="5f222-169">Die Kommunikation sollte Folgendes enthalten:</span><span class="sxs-lookup"><span data-stu-id="5f222-169">We recommend that your communication includes the following:</span></span>
+    -   <span data-ttu-id="5f222-170">Eine Erklärung, für welche App bzw. welches Add-On der Werbecode vorgesehen ist, und optional eine Beschreibung, warum der Kunde den Code erhält.</span><span class="sxs-lookup"><span data-stu-id="5f222-170">An explanation of which app or add-on the promotional code is for, and optionally a description of why the customer is receiving the code.</span></span>
+    -   <span data-ttu-id="5f222-171">Die einlösbare URL für den Code.</span><span class="sxs-lookup"><span data-stu-id="5f222-171">The redeemable URL for the code.</span></span>
+    -   <span data-ttu-id="5f222-172">Anweisungen zum Aufrufen der einlösbaren URL, Anmelden mit dem Microsoft-Konto und Befolgen der Anweisungen zum Herunterladen und Installieren Ihrer App.</span><span class="sxs-lookup"><span data-stu-id="5f222-172">Instructions that guide the customer to visit the redeemable URL, log in using their Microsoft account, and follow the instructions to download and install your app.</span></span>
+
+## <a name="code-redemption-user-experience"></a><span data-ttu-id="5f222-173">Benutzererfahrung bei Einlösung des Codes</span><span class="sxs-lookup"><span data-stu-id="5f222-173">Code redemption user experience</span></span>
+
+<span data-ttu-id="5f222-174">Nachdem Sie einen Werbecode (oder seine einlösbare URL) an Kunden verteilt haben, können sie diese URL verwenden, um das Produkt kostenlos zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="5f222-174">After you distribute a promotional code (or its redeemable URL) to a customer, they can use that URL to get the product for free.</span></span> <span data-ttu-id="5f222-175">Durch Klicken auf die einlösbare URL wird eine authentifizierte Seite **Code einlösen** unter <https://account.microsoft.com/billing/redeem> geöffnet.</span><span class="sxs-lookup"><span data-stu-id="5f222-175">Clicking the redeemable URL will launch an authenticated **Redeem your code** page at <https://account.microsoft.com/billing/redeem>.</span></span> <span data-ttu-id="5f222-176">Diese Seite enthält eine Beschreibung der App, für die der Benutzer den Code einlöst.</span><span class="sxs-lookup"><span data-stu-id="5f222-176">This page includes a description of the app the user is about to redeem.</span></span> <span data-ttu-id="5f222-177">Wenn der Kunde nicht mit seinem Microsoft-Konto angemeldet ist, kann er dazu aufgefordert werden.</span><span class="sxs-lookup"><span data-stu-id="5f222-177">If the customer is not logged in with their Microsoft account, they may be prompted to do so.</span></span> <span data-ttu-id="5f222-178">Der Kunde kann auch <https://account.microsoft.com/billing/redeem> aufrufen und den Code direkt eingeben.</span><span class="sxs-lookup"><span data-stu-id="5f222-178">Your customer can also visit <https://account.microsoft.com/billing/redeem> and enter the code directly.</span></span>
+
+> [!IMPORTANT]
+> <span data-ttu-id="5f222-179">Es wird empfohlen, dass Sie Werbecodes erst an Ihre Kunden verteilen, wenn Ihr Produkt den Veröffentlichungsprozess abgeschlossen hat (auch wenn Sie **Make this product available but not discoverable in the Store** ausgewählt haben).</span><span class="sxs-lookup"><span data-stu-id="5f222-179">We recommend that you don't distribute promotional codes to your customers until your product has completed the publishing process (even if you have selected **Make this product available but not discoverable in the Store**).</span></span> <span data-ttu-id="5f222-180">Kunden wird einen Fehler angezeigt, wenn sie versuchen, einen Werbecode für ein Produkt zu verwenden, das noch nicht veröffentlicht wurde.</span><span class="sxs-lookup"><span data-stu-id="5f222-180">Customers will see an error if they try to use a promotional code for a product which hasn't been published yet.</span></span>
+
+<span data-ttu-id="5f222-181">Wenn der Kunde auf **Einlösen** klickt, wird die Übersicht der App im Windows Store geöffnet (auf einem Windows10- oder Windows8.1-Gerät). Dort kann er auf **Installieren** klicken, um die App kostenlos herunterzuladen und zu installieren.</span><span class="sxs-lookup"><span data-stu-id="5f222-181">After the customer clicks **Redeem**, the Windows Store will open to the overview page for the app (if they are on a Windows 10 or Windows 8.1 device), where they can click **Install** to download and install the app for free.</span></span> <span data-ttu-id="5f222-182">Wenn sich der Kunde an einem Computer oder einem Gerät befindet, auf dem Windows Store nicht installiert ist, öffnet der Link die Windows Store-Webseite für die App.</span><span class="sxs-lookup"><span data-stu-id="5f222-182">If the customer is on a computer or device that does not have the Windows Store installed, the link will launch the Windows Store web page for the app.</span></span> <span data-ttu-id="5f222-183">Der Code wird auf das Microsoft-Konto des Kunden angewendet, damit er die App später kostenlos auf einem Windows-Gerät herunterladen kann (das mit dem gleichen Microsoft-Konto verknüpft ist).</span><span class="sxs-lookup"><span data-stu-id="5f222-183">The code will be applied to the customer's Microsoft account, so they can later download the app on a Windows device (that is associated with the same Microsoft account) for free.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="5f222-184">In einigen Fällen wird dem Kunden womöglich die Schaltfläche **Kaufen** anstelle der Schaltfläche **Installieren** angezeigt, obwohl die App erfolgreich über den Werbecode eingelöst wurde.</span><span class="sxs-lookup"><span data-stu-id="5f222-184">In some cases the customer may see a **Buy** button instead of **Install**, even though the app was successfully redeemed via the promotional code.</span></span> <span data-ttu-id="5f222-185">Der Kunde kann dann zum kostenlosen Installieren der App auf **Kaufen** klicken.</span><span class="sxs-lookup"><span data-stu-id="5f222-185">The customer can click **Buy** to install the app for no charge.</span></span>
+
+
+## <a name="review-your-promotional-codes"></a><span data-ttu-id="5f222-186">Überprüfen der Werbecodes</span><span class="sxs-lookup"><span data-stu-id="5f222-186">Review your promotional codes</span></span>
+
+<span data-ttu-id="5f222-187">Navigieren Sie zum Anzeigen einer ausführlichen Übersicht über die Werbecodebestellungen für eine App und ihre Add-Ons zur Seite **Werbecodes** für die App (Erweitern Sie **Monetarisierung**, und klicken Sie auf **Werbecodes**).</span><span class="sxs-lookup"><span data-stu-id="5f222-187">To review a detailed summary of promotional code orders for an app and its add-ons, navigate to the **Promotional codes** page for the app (expand **Monetization** and click **Promotional codes**).</span></span> <span data-ttu-id="5f222-188">Sie können die folgenden detaillierten Informationen für alle aktuellen und inaktiven Werbecodes für die App überprüfen:</span><span class="sxs-lookup"><span data-stu-id="5f222-188">You can review the following details for all current and inactive promotional codes for the app:</span></span>
+    -   <span data-ttu-id="5f222-189">Bestellungsname</span><span class="sxs-lookup"><span data-stu-id="5f222-189">Order name</span></span>
+    -   <span data-ttu-id="5f222-190">App oder Add-On</span><span class="sxs-lookup"><span data-stu-id="5f222-190">App or add-on</span></span>
+    -   <span data-ttu-id="5f222-191">Startdatum</span><span class="sxs-lookup"><span data-stu-id="5f222-191">Start date</span></span>
+    -   <span data-ttu-id="5f222-192">Ablaufdatum</span><span class="sxs-lookup"><span data-stu-id="5f222-192">Expire date</span></span>
+    -   <span data-ttu-id="5f222-193">Verfügbar</span><span class="sxs-lookup"><span data-stu-id="5f222-193">Available</span></span>
+    -   <span data-ttu-id="5f222-194">Eingelöst</span><span class="sxs-lookup"><span data-stu-id="5f222-194">Redeemed</span></span>
+
+<span data-ttu-id="5f222-195">Sie können auch eine aktive Bestellung aus dieser Tabelle herunterladen, wie oben beschrieben.</span><span class="sxs-lookup"><span data-stu-id="5f222-195">You can also download an order from this table, as described above.</span></span> 
 
  
-
- 
-
 
 
 

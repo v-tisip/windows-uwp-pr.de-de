@@ -6,125 +6,120 @@ ms.assetid: 4641FFBB-8D82-4290-94C1-D87617997F61
 label: Calendar, date, and time controls
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 127bf79ebe17e6156a95d4aae168e42b7ff53aa1
-ms.lasthandoff: 02/07/2017
-
+pm-contact: kisai
+design-contact: ksulliv
+dev-contact: joyate
+doc-status: Published
+ms.openlocfilehash: f2ffe1fa42f3202ee3fce8850d151b40af2e486a
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/22/2017
 ---
-# <a name="calendar-date-and-time-controls"></a>Kalender-, Datums- und Uhrzeitsteuerelemente
+# <a name="calendar-date-and-time-controls"></a><span data-ttu-id="e8879-105">Kalender-, Datums- und Uhrzeitsteuerelemente</span><span class="sxs-lookup"><span data-stu-id="e8879-105">Calendar, date, and time controls</span></span>
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-Datums- und Uhrzeitsteuerelemente bieten Ihnen standardmäßige lokalisierte Methoden, den Benutzern die Anzeige oder Festlegung von Datums-und Uhrzeitwerten in Ihrer App zu ermöglichen. Dieser Artikel enthält Entwurfsrichtlinien und hilft Ihnen beim Auswählen des richtigen Steuerelements.
+<span data-ttu-id="e8879-106">Datums- und Uhrzeitsteuerelemente bieten Ihnen standardmäßige lokalisierte Methoden, den Benutzern die Anzeige oder Festlegung von Datums-und Uhrzeitwerten in Ihrer App zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="e8879-106">Date and time controls give you standard, localized ways to let a user view and set date and time values in your app.</span></span> <span data-ttu-id="e8879-107">Dieser Artikel enthält Entwurfsrichtlinien und hilft Ihnen beim Auswählen des richtigen Steuerelements.</span><span class="sxs-lookup"><span data-stu-id="e8879-107">This article provides design guidelines and helps you pick the right control.</span></span>
 
-<div class="important-apis" >
-<b>Wichtige APIs</b><br/>
-<ul>
-<li>[**CalendarView-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.aspx)</li>
-<li>[**CalendarDatePicker-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.aspx)</li>
-<li>[**DatePicker-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.datepicker.aspx)</li>
-<li>[**TimePicker-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.aspx)</li>
-</ul>
-</div>
+> <span data-ttu-id="e8879-108">**Wichtige APIs:** [Klasse „CalendarView“](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.aspx), [Klasse „CalendarDatePicker“](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.aspx), [Klasse „DatePicker“](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.datepicker.aspx), [Klasse „TimePicker“](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.aspx)</span><span class="sxs-lookup"><span data-stu-id="e8879-108">**Important APIs**: [CalendarView class](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.aspx), [CalendarDatePicker class](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.aspx), [DatePicker class](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.datepicker.aspx), [TimePicker class](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.aspx)</span></span>
 
 
-## <a name="which-date-or-time-control-should-you-use"></a>Welches Datums- bzw. Uhrzeitsteuerelement sollten Sie verwenden?
+## <a name="which-date-or-time-control-should-you-use"></a><span data-ttu-id="e8879-109">Welches Datums- bzw. Uhrzeitsteuerelement sollten Sie verwenden?</span><span class="sxs-lookup"><span data-stu-id="e8879-109">Which date or time control should you use?</span></span>
 
-Es stehen vier Datums- und Uhrzeitsteuerelemente zur Auswahl. Welches Steuerelement Sie verwenden, hängt vom jeweiligen Szenario ab. Die Informationen in diesem Abschnitt sollen Ihnen dabei helfen, das richtige Steuerelement für Ihre App auszuwählen.
+<span data-ttu-id="e8879-110">Es stehen vier Datums- und Uhrzeitsteuerelemente zur Auswahl. Welches Steuerelement Sie verwenden, hängt vom jeweiligen Szenario ab.</span><span class="sxs-lookup"><span data-stu-id="e8879-110">There are four date and time controls to choose from; the control you use depends on your scenario.</span></span> <span data-ttu-id="e8879-111">Die Informationen in diesem Abschnitt sollen Ihnen dabei helfen, das richtige Steuerelement für Ihre App auszuwählen.</span><span class="sxs-lookup"><span data-stu-id="e8879-111">Use this info to pick the right control to use in your app.</span></span>
 
 &nbsp;|&nbsp;|&nbsp;                                                                                                                      
 --------------------|-------|-------------------------------------------------------------------------------------------------------------------------------
-Kalenderansicht       |![Beispiel für eine Kalenderansicht](images/controls_calendar_monthview_small.png)|Verwenden Sie diese Ansicht, um ein einzelnes Datum oder einen Datumsbereich aus einem immer sichtbaren Kalender auszuwählen.                   
-Kalenderdatumsauswahl|![Beispiel für eine Kalenderdatumsauswahl](images/calendar-date-picker-closed.png)|Verwenden Sie diese Ansicht, um ein einzelnes Datum aus einem kontextbezogenen Kalender auszuwählen. 
-Datumsauswahl         |![Beispiel für eine Datumsauswahl](images/date-picker-closed.png)|Verwenden Sie diese Ansicht, um ein einzelnes bekanntes Datum auszuwählen, wenn kontextbezogene Informationen nicht wichtig sind.
-Uhrzeitauswahl         |![Beispiel für eine Zeitauswahl](images/time-picker-closed.png)|Verwenden Sie diese Ansicht zum Auswählen eines einzelnen Uhrzeitwertes.                                        
+<span data-ttu-id="e8879-112">Kalenderansicht</span><span class="sxs-lookup"><span data-stu-id="e8879-112">Calendar view</span></span>       |![Beispiel für eine Kalenderansicht](images/controls_calendar_monthview_small.png)|<span data-ttu-id="e8879-114">Verwenden Sie diese Ansicht, um ein einzelnes Datum oder einen Datumsbereich aus einem immer sichtbaren Kalender auszuwählen.</span><span class="sxs-lookup"><span data-stu-id="e8879-114">Use to pick a single date or a range of dates from an always visible calendar.</span></span>                   
+<span data-ttu-id="e8879-115">Kalenderdatumsauswahl</span><span class="sxs-lookup"><span data-stu-id="e8879-115">Calendar date picker</span></span>|![Beispiel für eine Kalenderdatumsauswahl](images/calendar-date-picker-closed.png)|<span data-ttu-id="e8879-117">Verwenden Sie diese Ansicht, um ein einzelnes Datum aus einem kontextbezogenen Kalender auszuwählen.</span><span class="sxs-lookup"><span data-stu-id="e8879-117">Use to pick a single date from a contextual calendar.</span></span> 
+<span data-ttu-id="e8879-118">Datumsauswahl</span><span class="sxs-lookup"><span data-stu-id="e8879-118">Date picker</span></span>         |![Beispiel für eine Datumsauswahl](images/date-picker-closed.png)|<span data-ttu-id="e8879-120">Verwenden Sie diese Ansicht, um ein einzelnes bekanntes Datum auszuwählen, wenn kontextbezogene Informationen nicht wichtig sind.</span><span class="sxs-lookup"><span data-stu-id="e8879-120">Use to pick a single known date when contextual info isn't important.</span></span>
+<span data-ttu-id="e8879-121">Uhrzeitauswahl</span><span class="sxs-lookup"><span data-stu-id="e8879-121">Time picker</span></span>         |![Beispiel für eine Zeitauswahl](images/time-picker-closed.png)|<span data-ttu-id="e8879-123">Verwenden Sie diese Ansicht zum Auswählen eines einzelnen Uhrzeitwertes.</span><span class="sxs-lookup"><span data-stu-id="e8879-123">Use to pick a single time value.</span></span>                                        
 
 <!-- This table seems redundant, not sure it's needed.-->
 
-### <a name="calendar-view"></a>Kalenderansicht
+### <a name="calendar-view"></a><span data-ttu-id="e8879-124">Kalenderansicht</span><span class="sxs-lookup"><span data-stu-id="e8879-124">Calendar view</span></span>
 
-Mit **CalendarView** können Benutzer einen Kalender anzeigen und mit diesem interagieren. Als Ansichten sind Monat, Jahr und zehn Jahre möglich. Benutzer können ein einzelnes Datum oder einen Datumsbereich auswählen. Es gibt keine Auswahloberfläche, und der Kalender ist immer sichtbar.
+<span data-ttu-id="e8879-125">Mit **CalendarView** können Benutzer einen Kalender anzeigen und mit diesem interagieren. Als Ansichten sind Monat, Jahr und zehn Jahre möglich.</span><span class="sxs-lookup"><span data-stu-id="e8879-125">**CalendarView** lets a user view and interact with a calendar that they can navigate by month, year, or decade.</span></span> <span data-ttu-id="e8879-126">Benutzer können ein einzelnes Datum oder einen Datumsbereich auswählen.</span><span class="sxs-lookup"><span data-stu-id="e8879-126">A user can select a single date or a range of dates.</span></span> <span data-ttu-id="e8879-127">Es gibt keine Auswahloberfläche, und der Kalender ist immer sichtbar.</span><span class="sxs-lookup"><span data-stu-id="e8879-127">It doesn't have a picker surface and the calendar is always visible.</span></span>
 
-Die Kalenderansicht besteht aus drei Ansichten: Monat, Jahr und Jahrzehnt. Standardmäßig ist in der Kalenderansicht zunächst die Monatsansicht geöffnet, Sie können jedoch jede Ansicht als Startansicht angeben.
+<span data-ttu-id="e8879-128">Die Kalenderansicht besteht aus drei Ansichten: Monat, Jahr und Jahrzehnt.</span><span class="sxs-lookup"><span data-stu-id="e8879-128">The calendar view is made up of 3 separate views: the month view, year view, and decade view.</span></span> <span data-ttu-id="e8879-129">Standardmäßig ist in der Kalenderansicht zunächst die Monatsansicht geöffnet, Sie können jedoch jede Ansicht als Startansicht angeben.</span><span class="sxs-lookup"><span data-stu-id="e8879-129">By default, it starts with the month view open, but you can specify any view as the startup view.</span></span>
 
 ![Beispiel für eine Kalenderdatumsauswahl](images/calendar-view-3-views.png)
 
-- Wenn es wichtig ist, das Benutzer gleichzeitig mehrere Tage auswählen können, müssen Sie eine **CalendarView** verwenden.
-- Wenn der Benutzern jeweils nur ein Datum auswählen soll und der Kalender nicht permanent sichtbar sein muss, kann möglicherweise ein Steuerelement **CalendarDatePicker** bzw. **DatePicker** verwendet werden.
+- <span data-ttu-id="e8879-131">Wenn es wichtig ist, das Benutzer gleichzeitig mehrere Tage auswählen können, müssen Sie eine **CalendarView** verwenden.</span><span class="sxs-lookup"><span data-stu-id="e8879-131">If you need to let a user select multiple dates, you must use a **CalendarView**.</span></span>
+- <span data-ttu-id="e8879-132">Wenn der Benutzern jeweils nur ein Datum auswählen soll und der Kalender nicht permanent sichtbar sein muss, kann möglicherweise ein Steuerelement **CalendarDatePicker** bzw. **DatePicker** verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="e8879-132">If you need to let a user pick only a single date and don’t need a calendar to be always visible, consider using a **CalendarDatePicker** or **DatePicker** control.</span></span>
 
-### <a name="calendar-date-picker"></a>Kalenderdatumsauswahl
+### <a name="calendar-date-picker"></a><span data-ttu-id="e8879-133">Kalenderdatumsauswahl</span><span class="sxs-lookup"><span data-stu-id="e8879-133">Calendar date picker</span></span>
 
-**CalendarDatePicker** ist ein Dropdownsteuerelement, das für die Auswahl eines einzelnen Datums aus einer Kalenderansicht optimiert ist, in der kontextbezogene Informationen wie der Wochentag oder die Belegung des Kalenders von Bedeutung sind. Sie können den Kalender bearbeiten, um Kontext hinzuzufügen oder verfügbare Tage einzugrenzen.
+<span data-ttu-id="e8879-134">**CalendarDatePicker** ist ein Dropdownsteuerelement, das für die Auswahl eines einzelnen Datums aus einer Kalenderansicht optimiert ist, in der kontextbezogene Informationen wie der Wochentag oder die Belegung des Kalenders von Bedeutung sind.</span><span class="sxs-lookup"><span data-stu-id="e8879-134">**CalendarDatePicker** is a drop down control that’s optimized for picking a single date from a calendar view where contextual information like the day of the week or fullness of the calendar is important.</span></span> <span data-ttu-id="e8879-135">Sie können den Kalender bearbeiten, um Kontext hinzuzufügen oder verfügbare Tage einzugrenzen.</span><span class="sxs-lookup"><span data-stu-id="e8879-135">You can modify the calendar to provide additional context or to limit available dates.</span></span>
 
-Der Einstiegspunkt zeigt Platzhaltertext an, falls kein Datum festgelegt wurde. Andernfalls wird das ausgewählte Datum angezeigt. Wenn Benutzer den Einstiegspunkt auswählen, wird eine Kalenderansicht eingeblendet, damit sie ein Datum auswählen können. Die Kalenderansicht überlagert andere Elemente der Benutzeroberfläche. Die anderen Elemente der Benutzeroberfläche werden dadurch jedoch nicht „beiseitegeschoben“.
+<span data-ttu-id="e8879-136">Der Einstiegspunkt zeigt Platzhaltertext an, falls kein Datum festgelegt wurde. Andernfalls wird das ausgewählte Datum angezeigt.</span><span class="sxs-lookup"><span data-stu-id="e8879-136">The entry point displays placeholder text if a date has not been set; otherwise, it displays the chosen date.</span></span> <span data-ttu-id="e8879-137">Wenn Benutzer den Einstiegspunkt auswählen, wird eine Kalenderansicht eingeblendet, damit sie ein Datum auswählen können.</span><span class="sxs-lookup"><span data-stu-id="e8879-137">When the user selects the entry point, a calendar view expands for the user to make a date selection.</span></span> <span data-ttu-id="e8879-138">Die Kalenderansicht überlagert andere Elemente der Benutzeroberfläche. Die anderen Elemente der Benutzeroberfläche werden dadurch jedoch nicht „beiseitegeschoben“.</span><span class="sxs-lookup"><span data-stu-id="e8879-138">The calendar view overlays other UI; it doesn't push other UI out of the way.</span></span>
 
 ![Beispiel für eine Kalenderdatumsauswahl](images/calendar-date-picker-2-views.png)
 
-- Verwenden Sie eine Kalenderdatumsauswahl, um beispielsweise einen Termin oder ein Abreisedatum auszuwählen. 
+- <span data-ttu-id="e8879-140">Verwenden Sie eine Kalenderdatumsauswahl, um beispielsweise einen Termin oder ein Abreisedatum auszuwählen.</span><span class="sxs-lookup"><span data-stu-id="e8879-140">Use a calendar date picker for things like choosing an appointment or departure date.</span></span> 
 
-### <a name="date-picker"></a>Datumsauswahl
+### <a name="date-picker"></a><span data-ttu-id="e8879-141">Datumsauswahl</span><span class="sxs-lookup"><span data-stu-id="e8879-141">Date picker</span></span>
 
-Das **DatePicker**-Steuerelement bietet eine standardisierte Methode zum Auswählen eines bestimmten Datums. 
+<span data-ttu-id="e8879-142">Das **DatePicker**-Steuerelement bietet eine standardisierte Methode zum Auswählen eines bestimmten Datums.</span><span class="sxs-lookup"><span data-stu-id="e8879-142">The **DatePicker** control provides a standardized way to choose a specific date.</span></span> 
 
-Der Einstiegspunkt zeigt das ausgewählte Datum an, und wenn der Benutzer den Einstiegspunkt auswählt, wird eine Auswahloberfläche von der Bildschirmmitte aus vertikal erweitert, damit eine Auswahl getroffen werden kann. Die Datumsauswahl überlagert andere Elemente der Benutzeroberfläche; die anderen Elemente der Benutzeroberfläche werden jedoch nicht „beiseitegeschoben“.
+<span data-ttu-id="e8879-143">Der Einstiegspunkt zeigt das ausgewählte Datum an, und wenn der Benutzer den Einstiegspunkt auswählt, wird eine Auswahloberfläche von der Bildschirmmitte aus vertikal erweitert, damit eine Auswahl getroffen werden kann.</span><span class="sxs-lookup"><span data-stu-id="e8879-143">The entry point displays the chosen date, and when the user selects the entry point, a picker surface expands vertically from the middle for the user to make a selection.</span></span> <span data-ttu-id="e8879-144">Die Datumsauswahl überlagert andere Elemente der Benutzeroberfläche; die anderen Elemente der Benutzeroberfläche werden jedoch nicht „beiseitegeschoben“.</span><span class="sxs-lookup"><span data-stu-id="e8879-144">The date picker overlays other UI; it doesn't push other UI out of the way.</span></span>
 
 ![Beispiel für die Erweiterung der Datumsauswahl](images/controls_datepicker_expand.png)
 
-- Verwenden Sie eine Datumsauswahl, damit Benutzer ein bekanntes Datum wie etwa einen Geburtstag auswählen können, bei dem der Kalenderkontext unwichtig ist.
+- <span data-ttu-id="e8879-146">Verwenden Sie eine Datumsauswahl, damit Benutzer ein bekanntes Datum wie etwa einen Geburtstag auswählen können, bei dem der Kalenderkontext unwichtig ist.</span><span class="sxs-lookup"><span data-stu-id="e8879-146">Use a date picker to let a user pick a known date, such as a date of birth, where the context of the calendar is not important.</span></span>
 
-### <a name="time-picker"></a>Uhrzeitauswahl
+### <a name="time-picker"></a><span data-ttu-id="e8879-147">Uhrzeitauswahl</span><span class="sxs-lookup"><span data-stu-id="e8879-147">Time picker</span></span>
 
-**TimePicker** wird zur Auswahl eines einzelnen Uhrzeitwertes für Termine oder Abreisezeiten verwendet. Es handelt sich um eine statische Anzeige, die vom Benutzer oder im Code festgelegt wird, jedoch nicht aktualisiert wird, um die aktuelle Uhrzeit anzuzeigen. 
+<span data-ttu-id="e8879-148">**TimePicker** wird zur Auswahl eines einzelnen Uhrzeitwertes für Termine oder Abreisezeiten verwendet.</span><span class="sxs-lookup"><span data-stu-id="e8879-148">The **TimePicker** is used to select a single time value for things like appointments or a departure time.</span></span> <span data-ttu-id="e8879-149">Es handelt sich um eine statische Anzeige, die vom Benutzer oder im Code festgelegt wird, jedoch nicht aktualisiert wird, um die aktuelle Uhrzeit anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="e8879-149">It's a static display that is set by the user or in code, but it doesn't update to display the current time.</span></span> 
 
-Der Einstiegspunkt zeigt die ausgewählte Uhrzeit an, und wenn der Benutzer den Einstiegspunkt auswählt, wird eine Auswahloberfläche von der Bildschirmmitte aus vertikal erweitert, damit eine Auswahl getroffen werden kann. Die Zeitauswahl überlagert andere Elemente der Benutzeroberfläche. Die anderen Elemente der Benutzeroberfläche werden dadurch jedoch nicht „beiseitegeschoben“.
+<span data-ttu-id="e8879-150">Der Einstiegspunkt zeigt die ausgewählte Uhrzeit an, und wenn der Benutzer den Einstiegspunkt auswählt, wird eine Auswahloberfläche von der Bildschirmmitte aus vertikal erweitert, damit eine Auswahl getroffen werden kann.</span><span class="sxs-lookup"><span data-stu-id="e8879-150">The entry point displays the chosen time, and when the user selects the entry point, a picker surface expands vertically from the middle for the user to make a selection.</span></span> <span data-ttu-id="e8879-151">Die Zeitauswahl überlagert andere Elemente der Benutzeroberfläche. Die anderen Elemente der Benutzeroberfläche werden dadurch jedoch nicht „verschoben“.</span><span class="sxs-lookup"><span data-stu-id="e8879-151">The time picker overlays other UI; it doesn't push other UI out of the way.</span></span>
 
 ![Beispiel für die Erweiterung der Zeitauswahl](images/controls_timepicker_expand.png)
 
-- Verwenden Sie die Zeitauswahl, um Benutzern die Auswahl eines einzelnen Zeitwerts zu ermöglichen.
+- <span data-ttu-id="e8879-153">Verwenden Sie die Zeitauswahl, um Benutzern die Auswahl eines einzelnen Zeitwerts zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="e8879-153">Use a time picker to let a user pick a single time value.</span></span>
 
-## <a name="create-a-date-or-time-control"></a>Erstellen eines Datums oder Uhrzeitsteuerelements
+## <a name="create-a-date-or-time-control"></a><span data-ttu-id="e8879-154">Erstellen eines Datums oder Uhrzeitsteuerelements</span><span class="sxs-lookup"><span data-stu-id="e8879-154">Create a date or time control</span></span>
 
-Informationen und Beispiele zu den einzelnen Datums- und Textsteuerelementen finden Sie in den folgenden Artikeln.
+<span data-ttu-id="e8879-155">Informationen und Beispiele zu den einzelnen Datums- und Textsteuerelementen finden Sie in den folgenden Artikeln.</span><span class="sxs-lookup"><span data-stu-id="e8879-155">See these articles for info and examples specific to each date and time control.</span></span>
 
-- [**Kalenderansicht**](calendar-view.md)
-- [**Kalenderdatumsauswahl**](calendar-date-picker.md)
-- [**Datumsauswahl**](date-picker.md)
-- [**Uhrzeitauswahl**](time-picker.md)
+- [<span data-ttu-id="e8879-156">Kalenderansicht</span><span class="sxs-lookup"><span data-stu-id="e8879-156">Calendar view</span></span>](calendar-view.md)
+- [<span data-ttu-id="e8879-157">Kalenderdatumsauswahl</span><span class="sxs-lookup"><span data-stu-id="e8879-157">Calendar date picker</span></span>](calendar-date-picker.md)
+- [<span data-ttu-id="e8879-158">Datumsauswahl</span><span class="sxs-lookup"><span data-stu-id="e8879-158">Date picker</span></span>](date-picker.md)
+- [<span data-ttu-id="e8879-159">Uhrzeitauswahl</span><span class="sxs-lookup"><span data-stu-id="e8879-159">Time Picker</span></span>](time-picker.md)
 
-### <a name="globalization"></a>Globalisierung
+### <a name="globalization"></a><span data-ttu-id="e8879-160">Globalisierung</span><span class="sxs-lookup"><span data-stu-id="e8879-160">Globalization</span></span>
 
-Die XAML-Datumssteuerelemente unterstützen jedes der von Windows unterstützten Kalendersysteme. Diese Kalender werden in der [**Windows.Globalization.CalendarIdentifiers**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.globalization.calendaridentifiers.aspx)-Klasse angegeben. Jedes Steuerelement verwendet den richtigen Kalender für die standardmäßige Sprache Ihrer App. Alternativ können Sie die **CalendarIdentifier**-Eigenschaft festlegen, um ein bestimmtes Kalendersystem zu verwenden.
+<span data-ttu-id="e8879-161">Die XAML-Datumssteuerelemente unterstützen jedes der von Windows unterstützten Kalendersysteme.</span><span class="sxs-lookup"><span data-stu-id="e8879-161">The XAML date controls support each of the calendar systems supported by Windows.</span></span> <span data-ttu-id="e8879-162">Diese Kalender werden in der Klasse [Windows.Globalization.CalendarIdentifiers](https://msdn.microsoft.com/library/windows/apps/xaml/windows.globalization.calendaridentifiers.aspx) angegeben.</span><span class="sxs-lookup"><span data-stu-id="e8879-162">These calendars are specified in the [Windows.Globalization.CalendarIdentifiers](https://msdn.microsoft.com/library/windows/apps/xaml/windows.globalization.calendaridentifiers.aspx) class.</span></span> <span data-ttu-id="e8879-163">Jedes Steuerelement verwendet den richtigen Kalender für die standardmäßige Sprache Ihrer App. Alternativ können Sie die **CalendarIdentifier**-Eigenschaft festlegen, um ein bestimmtes Kalendersystem zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="e8879-163">Each control uses the correct calendar for your app's default language, or you can set the **CalendarIdentifier** property to use a specific calendar system.</span></span>
 
-Das Zeitauswahl-Steuerelement unterstützt jedes der Uhrsysteme, die in der [ **Windows.Globalization.ClockIdentifiers** ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.globalization.clockidentifiers.aspx)-Klasse angegeben sind. Sie können für die [ **ClockIdentifier** ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.clockidentifier.aspx)-Eigenschaft festlegen, dass das 12-Stunden- oder 24-Stunden-Uhrzeitformat verwendet werden soll. Die Art der Eigenschaft ist „String“ (Zeichenfolge), Sie müssen jedoch Werte verwenden, die den statischen Zeichenfolgeneigenschaften der ClockIdentifiers-Klasse entsprechen. Dies lauten: TwelveHour (Zeichenfolge „12HourClock“) und TwentyFourHour (Zeichenfolge „24HourClock“). Der Standardwert lautet „12HourClock“
-
-
-### <a name="datetime-and-calendar-values"></a>Werte für Datum/Uhrzeit und Kalender
-
-Die in den XAML-Datums- und Uhrzeitsteuerelementen verwendeten Datumsobjekte weisen je nach Programmiersprache eine unterschiedliche Darstellung auf. 
-- C# und Visual Basic verwenden die [ **System.DateTimeOffset** ](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetimeoffset.aspx)-Struktur, die Teil von .NET ist. 
-- C++ / CX verwendet die [ **Windows::Foundation::DateTime** ](https://msdn.microsoft.com/library/windows/apps/xaml/br205770.aspx)-Struktur. 
-
-Ein verwandtes Konzept ist die Calendar-Klasse, die beeinflusst, wie die Daten im Kontext interpretiert werden. Alle Windows-Runtime-Apps können die [ **Windows.Globalization.Calendar** ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.globalization.calendar.aspx)-Klasse verwenden. C# und Visual Basic-Apps können auch die [ **System.Globalization.Calendar** ](https://msdn.microsoft.com/library/windows/apps/xaml/system.globalization.calendar.aspx)-Klasse verwenden. Diese weist eine sehr ähnliche Funktionalität auf. (Windows-Runtime-Apps können die .NET-Basisklasse Calendar verwenden, nicht jedoch die spezifischen Implementierungen wie z. B. GregorianCalendar.)
-
-.NET unterstützt auch einen Typ mit der Bezeichnung [ **DateTime**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetime.aspx), der implizit in [ **DateTimeOffset**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetimeoffset.aspx) konvertierbar ist. Somit könnte ein Typ „DateTime“ in .NET-Code verwendet werden, der zum Festlegen von Werten verwendet wird, bei denen es sich eigentlich um DateTimeOffset handelt. Weitere Informationen zum Unterschied zwischen DateTime und DateTimeOffset finden Sie in den Bemerkungen in der [ **DateTimeOffset** ](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetimeoffset.aspx)-Klasse.
-
-> **Hinweis**&nbsp;&nbsp;Eigenschaften, die Datumsobjekte verwenden, können nicht als XAML-Attributzeichenfolge festgelegt werden, da der Windows-Runtime-XAML-Parser nicht über eine Konvertierungslogik zum Konvertieren von Zeichenfolgen in Datumsangaben als DateTime/DateTimeOffset-Objekte verfügt. In der Regel legen Sie diese Werte im Code fest. Eine andere Möglichkeit besteht darin, ein Datum zu definieren, das als Datenobjekt oder im Datenkontext verfügbar ist, und anschließend die Eigenschaft als XAML-Attribut festzulegen, das auf einen [\{Binding\}-Markuperweiterung](../xaml-platform/binding-markup-extension.md)-Ausdruck verweist, der auf das Datum als Daten zugreifen kann.
-
-## <a name="get-the-sample-code"></a>Beispielcode herunterladen
-* [Beispiel für XAML-UI-Grundlagen](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
+<span data-ttu-id="e8879-164">Das Zeitauswahl-Steuerelement unterstützt jedes der Uhrsysteme, die in der Klasse [Windows.Globalization.ClockIdentifiers](https://msdn.microsoft.com/library/windows/apps/xaml/windows.globalization.clockidentifiers.aspx) definiert sind.</span><span class="sxs-lookup"><span data-stu-id="e8879-164">The time picker control supports each of the clock systems specified in the [Windows.Globalization.ClockIdentifiers](https://msdn.microsoft.com/library/windows/apps/xaml/windows.globalization.clockidentifiers.aspx) class.</span></span> <span data-ttu-id="e8879-165">Sie können in der Eigenschaft [ClockIdentifier](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.clockidentifier.aspx) festlegen, ob das 12-Stunden- oder das 24-Stunden-Format verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="e8879-165">You can set the [ClockIdentifier](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.clockidentifier.aspx) property to use either a 12-hour clock or 24-hour clock.</span></span> <span data-ttu-id="e8879-166">Die Art der Eigenschaft ist „String“ (Zeichenfolge), Sie müssen jedoch Werte verwenden, die den statischen Zeichenfolgeneigenschaften der ClockIdentifiers-Klasse entsprechen.</span><span class="sxs-lookup"><span data-stu-id="e8879-166">The type of the property is String, but you must use values that correspond to the static string properties of the ClockIdentifiers class.</span></span> <span data-ttu-id="e8879-167">Dies lauten: TwelveHour (Zeichenfolge „12HourClock“) und TwentyFourHour (Zeichenfolge „24HourClock“).</span><span class="sxs-lookup"><span data-stu-id="e8879-167">These are: TwelveHour (the string "12HourClock")and TwentyFourHour (the string "24HourClock").</span></span> <span data-ttu-id="e8879-168">Der Standardwert lautet „12HourClock“</span><span class="sxs-lookup"><span data-stu-id="e8879-168">"12HourClock" is the default value.</span></span>
 
 
-## <a name="related-topics"></a>Verwandte Themen
+### <a name="datetime-and-calendar-values"></a><span data-ttu-id="e8879-169">Werte für Datum/Uhrzeit und Kalender</span><span class="sxs-lookup"><span data-stu-id="e8879-169">DateTime and Calendar values</span></span>
 
-**Für Entwickler (XAML)**
-- [**CalendarView-Klasse**](https://msdn.microsoft.com/library/windows/apps/dn890052)
-- [**CalendarDatePicker-Klasse**](https://msdn.microsoft.com/library/windows/apps/dn950083)
-- [**DatePicker-Klasse**](https://msdn.microsoft.com/library/windows/apps/dn298584)
-- [**TimePicker-Klasse**](https://msdn.microsoft.com/library/windows/apps/dn299280)
+<span data-ttu-id="e8879-170">Die in den XAML-Datums- und Uhrzeitsteuerelementen verwendeten Datumsobjekte weisen je nach Programmiersprache eine unterschiedliche Darstellung auf.</span><span class="sxs-lookup"><span data-stu-id="e8879-170">The date objects used in the XAML date and time controls have a different representation depending on your programming language.</span></span> 
+- <span data-ttu-id="e8879-171">C# und Visual Basic verwenden die Struktur [System.DateTimeOffset](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetimeoffset.aspx), die Teil von .NET ist.</span><span class="sxs-lookup"><span data-stu-id="e8879-171">C# and Visual Basic use the [System.DateTimeOffset](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetimeoffset.aspx) structure that is part of .NET.</span></span> 
+- <span data-ttu-id="e8879-172">C++/CX verwendet die Struktur [Windows::Foundation::DateTime](https://msdn.microsoft.com/library/windows/apps/xaml/br205770.aspx).</span><span class="sxs-lookup"><span data-stu-id="e8879-172">C++/CX uses the [Windows::Foundation::DateTime](https://msdn.microsoft.com/library/windows/apps/xaml/br205770.aspx) structure.</span></span> 
 
+<span data-ttu-id="e8879-173">Ein verwandtes Konzept ist die Calendar-Klasse, die beeinflusst, wie die Daten im Kontext interpretiert werden.</span><span class="sxs-lookup"><span data-stu-id="e8879-173">A related concept is the Calendar class, which influences how dates are interpreted in context.</span></span> <span data-ttu-id="e8879-174">Alle Windows-Runtime-Apps können die Klasse [Windows.Globalization.Calendar](https://msdn.microsoft.com/library/windows/apps/xaml/windows.globalization.calendar.aspx) verwenden.</span><span class="sxs-lookup"><span data-stu-id="e8879-174">All Windows Runtime apps can use the [Windows.Globalization.Calendar](https://msdn.microsoft.com/library/windows/apps/xaml/windows.globalization.calendar.aspx) class.</span></span> <span data-ttu-id="e8879-175">C#- und VisualBasic-Apps können alternativ die Klasse [System.Globalization.Calendar](https://msdn.microsoft.com/library/windows/apps/xaml/system.globalization.calendar.aspx) verwenden, deren Funktionalität sehr ähnlich ist.</span><span class="sxs-lookup"><span data-stu-id="e8879-175">C# and Visual Basic apps can alternatively use the [System.Globalization.Calendar](https://msdn.microsoft.com/library/windows/apps/xaml/system.globalization.calendar.aspx) class, which has very similar functionality.</span></span> <span data-ttu-id="e8879-176">(Windows-Runtime-Apps können die .NET-Basisklasse Calendar verwenden, nicht jedoch die spezifischen Implementierungen wie z.B. GregorianCalendar.)</span><span class="sxs-lookup"><span data-stu-id="e8879-176">(Windows Runtime apps can use the base .NET Calendar class but not the specific implementations; for example, GregorianCalendar.)</span></span>
+
+<span data-ttu-id="e8879-177">.NET unterstützt auch einen Typ namens [DateTime](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetime.aspx), der implizit in [DateTimeOffset](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetimeoffset.aspx) konvertierbar ist.</span><span class="sxs-lookup"><span data-stu-id="e8879-177">.NET also supports a type named [DateTime](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetime.aspx), which is implicitly convertible to a [DateTimeOffset](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetimeoffset.aspx).</span></span> <span data-ttu-id="e8879-178">Somit könnte ein Typ „DateTime“ in .NET-Code verwendet werden, der zum Festlegen von Werten verwendet wird, bei denen es sich eigentlich um DateTimeOffset handelt.</span><span class="sxs-lookup"><span data-stu-id="e8879-178">So you might see a "DateTime" type being used in .NET code that's used to set values that are really DateTimeOffset.</span></span> <span data-ttu-id="e8879-179">Weitere Informationen zum Unterschied zwischen „DateTime“ und „DateTimeOffset“ finden Sie in den Bemerkungen zur Klasse [DateTimeOffset](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetimeoffset.aspx).</span><span class="sxs-lookup"><span data-stu-id="e8879-179">For more info on the difference between DateTime and DateTimeOffset, see Remarks in the [DateTimeOffset](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetimeoffset.aspx) class.</span></span>
+
+> <span data-ttu-id="e8879-180">**Hinweis**&nbsp;&nbsp;Eigenschaften, die Datumsobjekte verwenden, können nicht als XAML-Attributzeichenfolge festgelegt werden, da der Windows-Runtime-XAML-Parser nicht über eine Konvertierungslogik zum Konvertieren von Zeichenfolgen in Datumsangaben als DateTime/DateTimeOffset-Objekte verfügt.</span><span class="sxs-lookup"><span data-stu-id="e8879-180">**Note**&nbsp;&nbsp;Properties that take date objects can't be set as a XAML attribute string, because the Windows Runtime XAML parser doesn't have a conversion logic for converting strings to dates as DateTime/DateTimeOffset objects.</span></span> <span data-ttu-id="e8879-181">In der Regel legen Sie diese Werte im Code fest.</span><span class="sxs-lookup"><span data-stu-id="e8879-181">You typically set these values in code.</span></span> <span data-ttu-id="e8879-182">Eine andere Möglichkeit besteht darin, ein Datum zu definieren, das als Datenobjekt oder im Datenkontext verfügbar ist, und anschließend die Eigenschaft als XAML-Attribut festzulegen, das auf einen [\{Binding\}-Markuperweiterung](../xaml-platform/binding-markup-extension.md)-Ausdruck verweist, der auf das Datum als Daten zugreifen kann.</span><span class="sxs-lookup"><span data-stu-id="e8879-182">Another possible technique is to define a date that's available as a data object or in the data context, then set the property as a XAML attribute that references a [\{Binding\} markup extension](../xaml-platform/binding-markup-extension.md) expression that can access the date as data.</span></span>
+
+## <a name="get-the-sample-code"></a><span data-ttu-id="e8879-183">Beispielcode herunterladen</span><span class="sxs-lookup"><span data-stu-id="e8879-183">Get the sample code</span></span>
+* [<span data-ttu-id="e8879-184">Beispiel für XAML-UI-Grundlagen</span><span class="sxs-lookup"><span data-stu-id="e8879-184">XAML UI basics sample</span></span>](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
+
+
+## <a name="related-topics"></a><span data-ttu-id="e8879-185">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="e8879-185">Related topics</span></span>
+
+**<span data-ttu-id="e8879-186">Für Entwickler (XAML)</span><span class="sxs-lookup"><span data-stu-id="e8879-186">For developers (XAML)</span></span>**
+- [<span data-ttu-id="e8879-187">CalendarView-Klasse</span><span class="sxs-lookup"><span data-stu-id="e8879-187">CalendarView class</span></span>](https://msdn.microsoft.com/library/windows/apps/dn890052)
+- [<span data-ttu-id="e8879-188">CalendarDatePicker-Klasse</span><span class="sxs-lookup"><span data-stu-id="e8879-188">CalendarDatePicker class</span></span>](https://msdn.microsoft.com/library/windows/apps/dn950083)
+- [<span data-ttu-id="e8879-189">DatePicker-Klasse</span><span class="sxs-lookup"><span data-stu-id="e8879-189">DatePicker class</span></span>](https://msdn.microsoft.com/library/windows/apps/dn298584)
+- [<span data-ttu-id="e8879-190">TimePicker-Klasse</span><span class="sxs-lookup"><span data-stu-id="e8879-190">TimePicker class</span></span>](https://msdn.microsoft.com/library/windows/apps/dn299280)

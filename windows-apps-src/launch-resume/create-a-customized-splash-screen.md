@@ -8,65 +8,64 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 220e2e1bee237120acd35d2a4111bf7390b8e619
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 83551438a629e39407c24cfd98d4a761ba3c039b
+ms.sourcegitcommit: e8cc657d85566768a6efb7cd972ebf64c25e0628
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/26/2017
 ---
-
-# <a name="display-a-splash-screen-for-more-time"></a>Längere Anzeige des Begrüßungsbildschirms
-
-
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+# <a name="display-a-splash-screen-for-more-time"></a><span data-ttu-id="d5bcf-105">Längere Anzeige des Begrüßungsbildschirms</span><span class="sxs-lookup"><span data-stu-id="d5bcf-105">Display a splash screen for more time</span></span>
 
 
-**Wichtige APIs**
+<span data-ttu-id="d5bcf-106">\[ Aktualisiert für UWP-Apps unter Windows10.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-106">\[ Updated for UWP apps on Windows 10.</span></span> <span data-ttu-id="d5bcf-107">Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span><span class="sxs-lookup"><span data-stu-id="d5bcf-107">For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span></span>
 
--   [**SplashScreen-Klasse**](https://msdn.microsoft.com/library/windows/apps/br224763)
--   [**Window.SizeChanged-Ereignis**](https://msdn.microsoft.com/library/windows/apps/br209055)
--   [**Application.OnLaunched-Methode**](https://msdn.microsoft.com/library/windows/apps/br242335)
 
-Verlängern Sie die Anzeige eines Begrüßungsbildschirms, indem Sie für die App einen erweiterten Begrüßungsbildschirm erstellen. Mit diesem erweiterten Bildschirm wird der beim Starten der App angezeigte Begrüßungsbildschirm imitiert. Er kann aber angepasst werden. Mit einem erweiterten Begrüßungsbildschirm können Sie das Startverhalten unabhängig davon definieren, ob Sie Echtzeitinformationen zum Ladevorgang anzeigen oder der App lediglich zusätzliche Zeit zum Vorbereiten der UI-Anfangselemente geben möchten.
+**<span data-ttu-id="d5bcf-108">Wichtige APIs</span><span class="sxs-lookup"><span data-stu-id="d5bcf-108">Important APIs</span></span>**
 
-> **Hinweis**  Die Bezeichnung „erweiterter Begrüßungsbildschirm“ in diesem Thema bezieht sich auf einen Begrüßungsbildschirm, der für längere Zeit auf dem Bildschirm angezeigt wird. Sie bezieht sich nicht auf eine Unterklasse, die von der [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763)-Klasse abgeleitet ist.
+-   [**<span data-ttu-id="d5bcf-109">SplashScreen-Klasse</span><span class="sxs-lookup"><span data-stu-id="d5bcf-109">SplashScreen class</span></span>**](https://msdn.microsoft.com/library/windows/apps/br224763)
+-   [**<span data-ttu-id="d5bcf-110">Window.SizeChanged-Ereignis</span><span class="sxs-lookup"><span data-stu-id="d5bcf-110">Window.SizeChanged event</span></span>**](https://msdn.microsoft.com/library/windows/apps/br209055)
+-   [**<span data-ttu-id="d5bcf-111">Application.OnLaunched-Methode</span><span class="sxs-lookup"><span data-stu-id="d5bcf-111">Application.OnLaunched method</span></span>**](https://msdn.microsoft.com/library/windows/apps/br242335)
+
+<span data-ttu-id="d5bcf-112">Verlängern Sie die Anzeige eines Begrüßungsbildschirms, indem Sie für die App einen erweiterten Begrüßungsbildschirm erstellen.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-112">Display a splash screen for more time by creating an extended splash screen for your app.</span></span> <span data-ttu-id="d5bcf-113">Mit diesem erweiterten Bildschirm wird der beim Starten der App angezeigte Begrüßungsbildschirm imitiert. Er kann aber angepasst werden.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-113">This extended screen imitates the splash screen shown when your app is launched, but can be customized.</span></span> <span data-ttu-id="d5bcf-114">Mit einem erweiterten Begrüßungsbildschirm können Sie das Startverhalten unabhängig davon definieren, ob Sie Echtzeitinformationen zum Ladevorgang anzeigen oder der App lediglich zusätzliche Zeit zum Vorbereiten der UI-Anfangselemente geben möchten.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-114">Whether you want to show real-time loading information or simply give your app extra time to prepare its initial UI, an extended splash screen lets you define the launch experience.</span></span>
+
+> <span data-ttu-id="d5bcf-115">**Hinweis**  Die Bezeichnung „erweiterter Begrüßungsbildschirm“ in diesem Thema bezieht sich auf einen Begrüßungsbildschirm, der für längere Zeit auf dem Bildschirm angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-115">**Note**  The phrase "extended splash screen" in this topic refers to a splash screen that stays on the screen for an extended period of time.</span></span> <span data-ttu-id="d5bcf-116">Sie bezieht sich nicht auf eine Unterklasse, die von der [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763)-Klasse abgeleitet ist.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-116">It does not mean a subclass that derives from the [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) class.</span></span>
 
  
 
-Stellen Sie sicher, dass der erweiterte Begrüßungsbildschirm den standardmäßigen Begrüßungsbildschirm genau imitiert, indem Sie sich an die folgenden Empfehlungen halten:
+<span data-ttu-id="d5bcf-117">Stellen Sie sicher, dass der erweiterte Begrüßungsbildschirm den standardmäßigen Begrüßungsbildschirm genau imitiert, indem Sie sich an die folgenden Empfehlungen halten:</span><span class="sxs-lookup"><span data-stu-id="d5bcf-117">Make sure your extended splash screen accurately imitates the default splash screen by following these recommendations:</span></span>
 
--   Sie sollten für die Seite mit dem erweiterten Begrüßungsbildschirm ein Bild mit 620 x 300 Pixeln verwenden. Es sollte zudem mit dem Bild übereinstimmen, das im App-Manifest für den Begrüßungsbildschirm angegeben ist (dem Bild des App-Begrüßungsbildschirms). In Microsoft Visual Studio 2015 werden die Einstellungen für den Begrüßungsbildschirm im App-Manifest (Datei „Package.appxmanifest“) auf der Registerkarte **Visuelle Anlagen** im Abschnitt **Begrüßungsbildschirm** gespeichert.
--   Sie sollten für den erweiterten Begrüßungsbildschirm eine Hintergrundfarbe verwenden, die mit der in Ihrem App-Manifest für Ihren Begrüßungsbildschirm angegebenen Hintergrundfarbe konsistent ist (dem Hintergrund des Begrüßungsbildschirms Ihrer App).
--   Sie müssen im Code die [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763)-Klasse verwenden, um das Bild des App-Begrüßungsbildschirms an den gleichen Koordinaten zu positionieren, an denen der standardmäßige Begrüßungsbildschirms positioniert wird.
--   Der Code sollte mithilfe der [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763)-Klasse auf Ereignisse zur Änderung der Fenstergröße (beispielsweise beim Drehen des Bildschirms oder Verschieben der App neben eine andere App auf dem Bildschirm) reagieren, um die Elemente auf dem erweiterten Begrüßungsbildschirm neu anzuordnen.
+-   <span data-ttu-id="d5bcf-118">Sie sollten für die Seite mit dem erweiterten Begrüßungsbildschirm ein Bild mit 620x300 Pixeln verwenden. Es sollte zudem mit dem Bild übereinstimmen, das im App-Manifest für den Begrüßungsbildschirm angegeben ist (dem Bild des App-Begrüßungsbildschirms).</span><span class="sxs-lookup"><span data-stu-id="d5bcf-118">Your extended splash screen page should use a 620 x 300 pixel image that is consistent with the image specified for your splash screen in your app manifest (your app's splash screen image).</span></span> <span data-ttu-id="d5bcf-119">In Microsoft Visual Studio2015 werden die Einstellungen für den Begrüßungsbildschirm im App-Manifest (Datei „Package.appxmanifest“) auf der Registerkarte **Visuelle Anlagen** im Abschnitt **Begrüßungsbildschirm** gespeichert.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-119">In Microsoft Visual Studio 2015, splash screen settings are stored in the **Splash Screen** section of the **Visual Assets** tab in your app manifest (Package.appxmanifest file).</span></span>
+-   <span data-ttu-id="d5bcf-120">Sie sollten für den erweiterten Begrüßungsbildschirm eine Hintergrundfarbe verwenden, die mit der in Ihrem App-Manifest für Ihren Begrüßungsbildschirm angegebenen Hintergrundfarbe konsistent ist (dem Hintergrund des Begrüßungsbildschirms Ihrer App).</span><span class="sxs-lookup"><span data-stu-id="d5bcf-120">Your extended splash screen should use a background color that is consistent with the background color specified for your splash screen in your app manifest (your app's splash screen background).</span></span>
+-   <span data-ttu-id="d5bcf-121">Sie müssen im Code die [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763)-Klasse verwenden, um das Bild des App-Begrüßungsbildschirms an den gleichen Koordinaten zu positionieren, an denen der standardmäßige Begrüßungsbildschirms positioniert wird.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-121">Your code should use the [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) class to position your app's splash screen image at the same screen coordinates as the default splash screen.</span></span>
+-   <span data-ttu-id="d5bcf-122">Der Code sollte mithilfe der [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763)-Klasse auf Ereignisse zur Änderung der Fenstergröße (beispielsweise beim Drehen des Bildschirms oder Verschieben der App neben eine andere App auf dem Bildschirm) reagieren, um die Elemente auf dem erweiterten Begrüßungsbildschirm neu anzuordnen.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-122">Your code should respond to window resize events (such as when the screen is rotated or your app is moved next to another app onscreen) by using the [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) class to reposition items on your extended splash screen.</span></span>
 
-Erstellen Sie mit den folgenden Schritten einen erweiterten Begrüßungsbildschirm, der den standardmäßigen Begrüßungsbildschirm wirkungsvoll imitiert.
+<span data-ttu-id="d5bcf-123">Erstellen Sie mit den folgenden Schritten einen erweiterten Begrüßungsbildschirm, der den standardmäßigen Begrüßungsbildschirm wirkungsvoll imitiert.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-123">Use the following steps to create an extended splash screen that effectively imitates the default splash screen.</span></span>
 
-## <a name="add-a-blank-page-item-to-your-existing-app"></a>Hinzufügen des Elements **Leere Seite** zur vorhandenen App
-
-
-In diesem Thema wird davon ausgegangen, dass Sie einem vorhandenen App-Projekt für die universelle Windows-Plattform (UWP) mit C#, Visual Basic oder C++ einen erweiterten Begrüßungsbildschirm hinzufügen möchten.
-
--   Öffnen Sie die App in Visual Studio 2015.
--   Öffnen Sie in der Menüleiste **Projekt**, und klicken Sie auf **Neues Element hinzufügen**. Das Dialogfeld **Neues Element hinzufügen** wird angezeigt.
--   Fügen Sie der App in diesem Dialogfeld ein neues Element **Leere Seite** hinzu. In diesem Thema erhält die Seite mit dem erweiterten Begrüßungsbildschirm den Namen „ExtendedSplash“.
-
-Beim Hinzufügen des Elements **Leere Seite** werden zwei Dateien erstellt: eine für Markup (ExtendedSplash.xaml) und eine für Code (ExtendedSplash.xaml.cs).
-
-## <a name="essential-xaml-for-an-extended-splash-screen"></a>Grundlegender XAML-Code für einen erweiterten Begrüßungsbildschirm
+## <a name="add-a-blank-page-item-to-your-existing-app"></a><span data-ttu-id="d5bcf-124">Hinzufügen des Elements **Leere Seite** zur vorhandenen App</span><span class="sxs-lookup"><span data-stu-id="d5bcf-124">Add a **Blank Page** item to your existing app</span></span>
 
 
-Führen Sie diese Schritte aus, um dem erweiterten Begrüßungsbildschirm ein Bild und ein Statussteuerelement hinzuzufügen.
+<span data-ttu-id="d5bcf-125">In diesem Thema wird davon ausgegangen, dass Sie einem vorhandenen App-Projekt für die universelle Windows-Plattform (UWP) mit C#, Visual Basic oder C++ einen erweiterten Begrüßungsbildschirm hinzufügen möchten.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-125">This topic assumes you want to add an extended splash screen to an existing Universal Windows Platform (UWP) app project using C#, Visual Basic, or C++.</span></span>
 
-In der Datei „ExtendedSplash.xaml“:
+-   <span data-ttu-id="d5bcf-126">Öffnen Sie die App in Visual Studio 2015.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-126">Open your app in Visual Studio 2015.</span></span>
+-   <span data-ttu-id="d5bcf-127">Öffnen Sie in der Menüleiste **Projekt**, und klicken Sie auf **Neues Element hinzufügen**.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-127">Press or open **Project** from the menu bar and click **Add New Item**.</span></span> <span data-ttu-id="d5bcf-128">Das Dialogfeld **Neues Element hinzufügen** wird angezeigt.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-128">An **Add New Item** dialog box will appear.</span></span>
+-   <span data-ttu-id="d5bcf-129">Fügen Sie der App in diesem Dialogfeld ein neues Element **Leere Seite** hinzu.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-129">From this dialog box, add a new **Blank Page** to your app.</span></span> <span data-ttu-id="d5bcf-130">In diesem Thema erhält die Seite mit dem erweiterten Begrüßungsbildschirm den Namen „ExtendedSplash“.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-130">This topic names the extended splash screen page "ExtendedSplash".</span></span>
 
--   Ändern Sie die [**Background**](https://msdn.microsoft.com/library/windows/apps/br209396)-Eigenschaft des [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704)-Standardelements, um sie an die Hintergrundfarbe anzupassen, die Sie im App-Manifest für den Begrüßungsbildschirm der App festgelegt haben (im Abschnitt **Visuelle Anlagen** der Datei „Package.appxmanifest“). Die Standardfarbe des Begrüßungsbildschirms ist Hellgrau (Hexadezimalwert \#464646). Beachten Sie, dass dieses **Grid**-Element standardmäßig bereitgestellt wird, wenn Sie eine neues Element **Leere Seite** erstellen. Sie müssen nicht zwingend ein **Grid**-Element verwenden. Es handelt sich dabei lediglich um eine gut geeignete Basis zum Erstellen eines erweiterten Begrüßungsbildschirms.
--   Fügen Sie dem [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704)-Element ein [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267)-Element hinzu. Sie verwenden dieses **Canvas**-Element zum Positionieren des Bilds für den erweiterten Begrüßungsbildschirm.
--   Fügen Sie dem [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267)-Element ein [**Image**](https://msdn.microsoft.com/library/windows/apps/br242752)-Element hinzu. Verwenden Sie für den erweiterten Begrüßungsbildschirm das gleiche Bild mit einer Größe von 600 x 320 Pixeln, das Sie für den standardmäßigen Begrüßungsbildschirm gewählt haben.
--   (Optional) Fügen Sie ein Statussteuerelement hinzu, um Benutzern anzuzeigen, dass die App geladen wird. In diesem Thema wird anstelle eines bestimmten oder unbestimmten [**ProgressBar**](https://msdn.microsoft.com/library/windows/apps/br227529)-Elements ein [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538)-Element hinzugefügt.
+<span data-ttu-id="d5bcf-131">Beim Hinzufügen des Elements **Leere Seite** werden zwei Dateien erstellt: eine für Markup (ExtendedSplash.xaml) und eine für Code (ExtendedSplash.xaml.cs).</span><span class="sxs-lookup"><span data-stu-id="d5bcf-131">Adding a **Blank Page** item generates two files, one for markup (ExtendedSplash.xaml) and another for code (ExtendedSplash.xaml.cs).</span></span>
 
-Fügen Sie in „ExtendedSplash.xaml“ folgenden Code hinzu, um die Elemente [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) und [**Image**](https://msdn.microsoft.com/library/windows/apps/br242752) sowie ein [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538)-Steuerelement zu definieren:
+## <a name="essential-xaml-for-an-extended-splash-screen"></a><span data-ttu-id="d5bcf-132">Grundlegender XAML-Code für einen erweiterten Begrüßungsbildschirm</span><span class="sxs-lookup"><span data-stu-id="d5bcf-132">Essential XAML for an extended splash screen</span></span>
+
+
+<span data-ttu-id="d5bcf-133">Führen Sie diese Schritte aus, um dem erweiterten Begrüßungsbildschirm ein Bild und ein Statussteuerelement hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-133">Follow these steps to add an image and progress control to your extended splash screen.</span></span>
+
+<span data-ttu-id="d5bcf-134">In der Datei „ExtendedSplash.xaml“:</span><span class="sxs-lookup"><span data-stu-id="d5bcf-134">In your ExtendedSplash.xaml file:</span></span>
+
+-   <span data-ttu-id="d5bcf-135">Ändern Sie die [**Background**](https://msdn.microsoft.com/library/windows/apps/br209396)-Eigenschaft des [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704)-Standardelements, um sie an die Hintergrundfarbe anzupassen, die Sie im App-Manifest für den Begrüßungsbildschirm der App festgelegt haben (im Abschnitt **Visuelle Anlagen** der Datei „Package.appxmanifest“).</span><span class="sxs-lookup"><span data-stu-id="d5bcf-135">Change the [**Background**](https://msdn.microsoft.com/library/windows/apps/br209396) property of the default [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) element to match the background color you set for your app's splash screen in your app manifest (in the **Visual Assets** section of your Package.appxmanifest file).</span></span> <span data-ttu-id="d5bcf-136">Die Standardfarbe des Begrüßungsbildschirms ist Hellgrau (Hexadezimalwert \#464646).</span><span class="sxs-lookup"><span data-stu-id="d5bcf-136">The default splash screen color is a light gray (hex value \#464646).</span></span> <span data-ttu-id="d5bcf-137">Beachten Sie, dass dieses **Grid**-Element standardmäßig bereitgestellt wird, wenn Sie eine neues Element **Leere Seite** erstellen.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-137">Note that this **Grid** element is provided by default when you create a new **Blank Page**.</span></span> <span data-ttu-id="d5bcf-138">Sie müssen nicht zwingend ein **Grid**-Element verwenden. Es handelt sich dabei lediglich um eine gut geeignete Basis zum Erstellen eines erweiterten Begrüßungsbildschirms.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-138">You don't have to use a **Grid**; it's just a convenient base for building an extended splash screen.</span></span>
+-   <span data-ttu-id="d5bcf-139">Fügen Sie dem [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704)-Element ein [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267)-Element hinzu.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-139">Add a [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) element to the [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704).</span></span> <span data-ttu-id="d5bcf-140">Sie verwenden dieses **Canvas**-Element zum Positionieren des Bilds für den erweiterten Begrüßungsbildschirm.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-140">You'll use this **Canvas** to position your extended splash screen image.</span></span>
+-   <span data-ttu-id="d5bcf-141">Fügen Sie dem [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267)-Element ein [**Image**](https://msdn.microsoft.com/library/windows/apps/br242752)-Element hinzu.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-141">Add an [**Image**](https://msdn.microsoft.com/library/windows/apps/br242752) element to the [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267).</span></span> <span data-ttu-id="d5bcf-142">Verwenden Sie für den erweiterten Begrüßungsbildschirm das gleiche Bild mit einer Größe von 600 x 320 Pixeln, das Sie für den standardmäßigen Begrüßungsbildschirm gewählt haben.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-142">Use the same 600 x 320 pixel image for your extended splash screen that you chose for the default splash screen.</span></span>
+-   <span data-ttu-id="d5bcf-143">(Optional) Fügen Sie ein Statussteuerelement hinzu, um Benutzern anzuzeigen, dass die App geladen wird.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-143">(Optional) Add a progress control to show users that your app is loading.</span></span> <span data-ttu-id="d5bcf-144">In diesem Thema wird anstelle eines bestimmten oder unbestimmten [**ProgressBar**](https://msdn.microsoft.com/library/windows/apps/br227529)-Elements ein [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538)-Element hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-144">This topic adds a [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538), instead of a determinate or indeterminate [**ProgressBar**](https://msdn.microsoft.com/library/windows/apps/br227529).</span></span>
+
+<span data-ttu-id="d5bcf-145">Fügen Sie in „ExtendedSplash.xaml“ folgenden Code hinzu, um die Elemente [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) und [**Image**](https://msdn.microsoft.com/library/windows/apps/br242752) sowie ein [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538)-Steuerelement zu definieren:</span><span class="sxs-lookup"><span data-stu-id="d5bcf-145">Add the following code to define [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) and [**Image**](https://msdn.microsoft.com/library/windows/apps/br242752) elements, as well as a [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) control, in ExtendedSplash.xaml:</span></span>
 
 ```xml
     <Grid Background="#464646">
@@ -77,29 +76,29 @@ Fügen Sie in „ExtendedSplash.xaml“ folgenden Code hinzu, um die Elemente [*
     </Grid>
 ```
 
-**Hinweis**  Mit diesem Code wird die Breite des [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538)-Elements auf 20 Pixel festgelegt. Sie können die Breite manuell auf einen Wert festlegen, der für Ihre App geeignet ist. Das Steuerelement wird jedoch nicht für Breiten unterhalb von 20 Pixel gerendert.
+<span data-ttu-id="d5bcf-146">**Hinweis**  Mit diesem Code wird die Breite des [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538)-Elements auf 20Pixel festgelegt.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-146">**Note**  This code sets the width of the [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) to 20 pixels.</span></span> <span data-ttu-id="d5bcf-147">Sie können die Breite manuell auf einen Wert festlegen, der für Ihre App geeignet ist. Das Steuerelement wird jedoch nicht für Breiten unterhalb von 20Pixel gerendert.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-147">You can manually set its width to a value that works for your app, however, the control will not render at widths of less than 20 pixels.</span></span>
 
  
 
-## <a name="essential-code-for-an-extended-splash-screen-class"></a>Grundlegender Code für die Klasse eines erweiterten Begrüßungsbildschirms
+## <a name="essential-code-for-an-extended-splash-screen-class"></a><span data-ttu-id="d5bcf-148">Grundlegender Code für die Klasse eines erweiterten Begrüßungsbildschirms</span><span class="sxs-lookup"><span data-stu-id="d5bcf-148">Essential code for an extended splash screen class</span></span>
 
 
-Der erweiterte Begrüßungsbildschirm muss entsprechend reagieren, wenn sich die Fenstergröße (nur Windows) oder die Ausrichtung ändert. Die Position des verwendeten Bilds muss aktualisiert werden, damit der erweiterte Begrüßungsbildschirm unabhängig von der Änderung des Fensters gut aussieht.
+<span data-ttu-id="d5bcf-149">Der erweiterte Begrüßungsbildschirm muss entsprechend reagieren, wenn sich die Fenstergröße (nur Windows) oder die Ausrichtung ändert.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-149">Your extended splash screen needs to respond whenever the window size (Windows only) or orientation changes.</span></span> <span data-ttu-id="d5bcf-150">Die Position des verwendeten Bilds muss aktualisiert werden, damit der erweiterte Begrüßungsbildschirm unabhängig von der Änderung des Fensters gut aussieht.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-150">The position of the image you use must be updated so that your extended splash screen looks good no matter how the window changes.</span></span>
 
-Führen Sie die folgenden Schritte aus, um Methoden zu definieren, damit der erweiterte Begrüßungsbildschirm richtig dargestellt wird.
+<span data-ttu-id="d5bcf-151">Führen Sie die folgenden Schritte aus, um Methoden zu definieren, damit der erweiterte Begrüßungsbildschirm richtig dargestellt wird.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-151">Use these steps to define methods to correctly display your extended splash screen.</span></span>
 
-1.  **Hinzufügen von erforderlichen Namespaces**
+1.  **<span data-ttu-id="d5bcf-152">Hinzufügen von erforderlichen Namespaces</span><span class="sxs-lookup"><span data-stu-id="d5bcf-152">Add required namespaces</span></span>**
 
-    Sie müssen „ExtendedSplash.xaml.cs“ die folgenden Namespaces hinzufügen, um auf die [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763)-Klasse und [**Window.SizeChanged**](https://msdn.microsoft.com/library/windows/apps/br209055)-Ereignisse zugreifen zu können.
+    <span data-ttu-id="d5bcf-153">Sie müssen „ExtendedSplash.xaml.cs“ die folgenden Namespaces hinzufügen, um auf die [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763)-Klasse und [**Window.SizeChanged**](https://msdn.microsoft.com/library/windows/apps/br209055)-Ereignisse zugreifen zu können.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-153">You'll need to add the following namespaces to ExtendedSplash.xaml.cs to access the [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) class, [**Window.SizeChanged**](https://msdn.microsoft.com/library/windows/apps/br209055) events.</span></span>
 
     ```cs
     using Windows.ApplicationModel.Activation;
     using Windows.UI.Core;
     ```
 
-2.  **Erstellen Sie eine partielle Klasse, und deklarieren Sie Klassenvariablen.**
+2.  **<span data-ttu-id="d5bcf-154">Erstellen Sie eine partielle Klasse, und deklarieren Sie Klassenvariablen.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-154">Create a partial class and declare class variables</span></span>**
 
-    Fügen Sie den folgenden Code in die Datei „ExtendedSplash.xaml.cs“ ein, um eine partielle Klasse zum Darstellen eines erweiterten Begrüßungsbildschirms zu erstellen.
+    <span data-ttu-id="d5bcf-155">Fügen Sie den folgenden Code in die Datei „ExtendedSplash.xaml.cs“ ein, um eine partielle Klasse zum Darstellen eines erweiterten Begrüßungsbildschirms zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-155">Include the following code in ExtendedSplash.xaml.cs to create a partial class to represent an extended splash screen.</span></span>
 
     ```cs
     partial class ExtendedSplash : Page
@@ -113,11 +112,11 @@ Führen Sie die folgenden Schritte aus, um Methoden zu definieren, damit der erw
     }
     ```
 
-    Diese Klassenvariablen werden von verschiedenen Methoden verwendet. Die `splashImageRect`-Variable speichert die Koordinaten der Position, an der das System das Begrüßungsbildschirmbild für die App angezeigt hat. Die `splash`-Variable speichert ein [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763)-Objekt, und die `dismissed`-Variable verfolgt, ob der vom System angezeigte Begrüßungsbildschirm geschlossen wurde.
+    <span data-ttu-id="d5bcf-156">Diese Klassenvariablen werden von verschiedenen Methoden verwendet.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-156">These class variables are used by several methods.</span></span> <span data-ttu-id="d5bcf-157">Die `splashImageRect`-Variable speichert die Koordinaten der Position, an der das System das Begrüßungsbildschirmbild für die App angezeigt hat.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-157">The `splashImageRect` variable stores the coordinates where the system displayed the splash screen image for the app.</span></span> <span data-ttu-id="d5bcf-158">Die `splash`-Variable speichert ein [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763)-Objekt, und die `dismissed`-Variable verfolgt, ob der vom System angezeigte Begrüßungsbildschirm geschlossen wurde.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-158">The `splash` variable stores a [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) object, and the `dismissed` variable tracks whether or not the splash screen that is displayed by the system has been dismissed.</span></span>
 
-3.  **Definieren eines Konstruktors für die Klasse, der das Bild richtig positioniert**
+3.  **<span data-ttu-id="d5bcf-159">Definieren eines Konstruktors für die Klasse, der das Bild richtig positioniert</span><span class="sxs-lookup"><span data-stu-id="d5bcf-159">Define a constructor for your class that correctly positions the image</span></span>**
 
-    Mit dem folgenden Code wird ein Konstruktor für die Klasse des erweiterten Begrüßungsbildschirms definiert, der eine Überprüfung auf Ereignisse zum Ändern der Fenstergröße durchführt, das Bild und (optional) das Statussteuerelement auf dem erweiterten Begrüßungsbildschirm positioniert, einen Rahmen für die Navigation erstellt und eine asynchrone Methode zum Wiederherstellen eines gespeicherten Sitzungszustands aufruft.
+    <span data-ttu-id="d5bcf-160">Mit dem folgenden Code wird ein Konstruktor für die Klasse des erweiterten Begrüßungsbildschirms definiert, der eine Überprüfung auf Ereignisse zum Ändern der Fenstergröße durchführt, das Bild und (optional) das Statussteuerelement auf dem erweiterten Begrüßungsbildschirm positioniert, einen Rahmen für die Navigation erstellt und eine asynchrone Methode zum Wiederherstellen eines gespeicherten Sitzungszustands aufruft.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-160">The following code defines a constructor for the extended splash screen class that listens for window resizing events, positions the image and (optional) progress control on the extended splash screen, creates a frame for navigation, and calls an asynchronous method to restore a saved session state.</span></span>
 
     ```cs
     public ExtendedSplash(SplashScreen splashscreen, bool loadState)
@@ -147,11 +146,11 @@ Führen Sie die folgenden Schritte aus, um Methoden zu definieren, damit der erw
     }
     ```
 
-    Registrieren Sie den [**Window.SizeChanged**](https://msdn.microsoft.com/library/windows/apps/br209055)-Handler (in diesem Beispiel `ExtendedSplash_OnResize`) im Klassenkonstruktor, damit das Bild von der App auf dem erweiterten Begrüßungsbildschirm richtig positioniert wird.
+    <span data-ttu-id="d5bcf-161">Registrieren Sie den [**Window.SizeChanged**](https://msdn.microsoft.com/library/windows/apps/br209055)-Handler (in diesem Beispiel `ExtendedSplash_OnResize`) im Klassenkonstruktor, damit das Bild von der App auf dem erweiterten Begrüßungsbildschirm richtig positioniert wird.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-161">Make sure to register your [**Window.SizeChanged**](https://msdn.microsoft.com/library/windows/apps/br209055) handler (`ExtendedSplash_OnResize` in the example) in your class constructor so that your app positions the image correctly in your extended splash screen.</span></span>
 
-4.  **Definieren Sie eine Klassenmethode, um das Bild auf dem erweiterten Begrüßungsbildschirm zu positionieren**
+4.  **<span data-ttu-id="d5bcf-162">Definieren Sie eine Klassenmethode, um das Bild auf dem erweiterten Begrüßungsbildschirm zu positionieren</span><span class="sxs-lookup"><span data-stu-id="d5bcf-162">Define a class method to position the image in your extended splash screen</span></span>**
 
-    Mit diesem Code wird veranschaulicht, wie das Bild mithilfe der `splashImageRect`-Klassenvariablen auf dem erweiterten Begrüßungsbildschirm positioniert wird.
+    <span data-ttu-id="d5bcf-163">Mit diesem Code wird veranschaulicht, wie das Bild mithilfe der `splashImageRect`-Klassenvariablen auf dem erweiterten Begrüßungsbildschirm positioniert wird.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-163">This code demonstrates how to position the image on the extended splash screen page with the `splashImageRect` class variable.</span></span>
 
     ```cs
     void PositionImage()
@@ -163,9 +162,9 @@ Führen Sie die folgenden Schritte aus, um Methoden zu definieren, damit der erw
     }
     ```
 
-5.  **(Optional) Definieren einer Klassenmethode, um ein Statussteuerelement auf dem erweiterten Begrüßungsbildschirm zu positionieren**
+5.  **<span data-ttu-id="d5bcf-164">(Optional) Definieren einer Klassenmethode, um ein Statussteuerelement auf dem erweiterten Begrüßungsbildschirm zu positionieren</span><span class="sxs-lookup"><span data-stu-id="d5bcf-164">(Optional) Define a class method to position a progress control in your extended splash screen</span></span>**
 
-    Wenn Sie sich für das Hinzufügen eines [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538)-Elements zum erweiterten Begrüßungsbildschirm entscheiden, sollten Sie es relativ zum Bild des Begrüßungsbildschirms positionieren. Fügen Sie der Datei „ExtendedSplash.xaml.cs“ den folgenden Code hinzu, um das **ProgressRing**-Element 32 Pixel unter dem Bild zu zentrieren.
+    <span data-ttu-id="d5bcf-165">Wenn Sie sich für das Hinzufügen eines [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538)-Elements zum erweiterten Begrüßungsbildschirm entscheiden, sollten Sie es relativ zum Bild des Begrüßungsbildschirms positionieren.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-165">If you chose to add a [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) to your extended splash screen, position it relative to the splash screen image.</span></span> <span data-ttu-id="d5bcf-166">Fügen Sie der Datei „ExtendedSplash.xaml.cs“ den folgenden Code hinzu, um das **ProgressRing**-Element 32Pixel unter dem Bild zu zentrieren.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-166">Add the following code to ExtendedSplash.xaml.cs to center the **ProgressRing** 32 pixels below the image.</span></span>
 
     ```cs
     void PositionRing()
@@ -175,9 +174,9 @@ Führen Sie die folgenden Schritte aus, um Methoden zu definieren, damit der erw
     }
     ```
 
-6.  **Definieren Sie innerhalb der Klasse einen Handler für das Dismissed-Ereignis.**
+6.  **<span data-ttu-id="d5bcf-167">Definieren Sie innerhalb der Klasse einen Handler für das Dismissed-Ereignis.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-167">Inside the class, define a handler for the Dismissed event</span></span>**
 
-    Legen Sie in der Datei „ExtendedSplash.xaml.cs“ die `dismissed`-Klassenvariable als Reaktion auf das [**SplashScreen.Dismissed**](https://msdn.microsoft.com/library/windows/apps/br224764)-Ereignis auf „true“ fest. Falls Ihre App über Setupvorgänge verfügt, fügen Sie sie diesem Ereignishandler hinzu.
+    <span data-ttu-id="d5bcf-168">Legen Sie in der Datei „ExtendedSplash.xaml.cs“ die `dismissed`-Klassenvariable als Reaktion auf das [**SplashScreen.Dismissed**](https://msdn.microsoft.com/library/windows/apps/br224764)-Ereignis auf „true“ fest.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-168">In ExtendedSplash.xaml.cs, respond when the [**SplashScreen.Dismissed**](https://msdn.microsoft.com/library/windows/apps/br224764) event occurs by setting the `dismissed` class variable to true.</span></span> <span data-ttu-id="d5bcf-169">Falls Ihre App über Setupvorgänge verfügt, fügen Sie sie diesem Ereignishandler hinzu.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-169">If your app has setup operations, add them to this event handler.</span></span>
 
     ```cs
     // Include code to be executed when the system has transitioned from the splash screen to the extended splash screen (application's first view).
@@ -189,21 +188,21 @@ Führen Sie die folgenden Schritte aus, um Methoden zu definieren, damit der erw
     }
     ```
 
-    Führen Sie nach Abschluss des App-Setups eine Navigation weg vom erweiterten Begrüßungsbildschirm durch. Mit dem folgenden Code wird eine Methode mit dem Namen `DismissExtendedSplash` definiert. Diese dient der Navigation zur `MainPage`, die in der Datei „MainPage.xaml“ der App definiert ist.
+    <span data-ttu-id="d5bcf-170">Führen Sie nach Abschluss des App-Setups eine Navigation weg vom erweiterten Begrüßungsbildschirm durch.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-170">After app setup is complete, navigate away from your extended splash screen.</span></span> <span data-ttu-id="d5bcf-171">Mit dem folgenden Code wird eine Methode mit dem Namen `DismissExtendedSplash` definiert. Diese dient der Navigation zur `MainPage`, die in der Datei „MainPage.xaml“ der App definiert ist.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-171">The following code defines a method called `DismissExtendedSplash` that navigates to the `MainPage` defined in your app's MainPage.xaml file.</span></span>
 
     ```cs
-    void DismissExtendedSplash()
-    {
-        // Navigate to mainpage
-        rootFrame.Navigate(typeof(MainPage));
-        // Place the frame in the current Window
-        Window.Current.Content = rootFrame;
-    }
-    ```
+    async void DismissExtendedSplash()
+      {
+         await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,() =>            {
+              rootFrame = new Frame();
+              rootFrame.Content = new MainPage(); Window.Current.Content = rootFrame;
+            });
+      }
+      ```
 
-7.  **Definieren Sie innerhalb der Klasse einen Handler für Windows.SizeChanged-Ereignisse.**
+7.  **<span data-ttu-id="d5bcf-172">Definieren Sie innerhalb der Klasse einen Handler für Windows.SizeChanged-Ereignisse.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-172">Inside the class, define a handler for Window.SizeChanged events</span></span>**
 
-    Bereiten Sie den erweiterten Begrüßungsbildschirm so vor, dass die Elemente neu angeordnet werden, wenn Benutzer die Größe des Fensters ändern. Mit diesem Code wird beim Auftreten eines [**Window.SizeChanged**](https://msdn.microsoft.com/library/windows/apps/br209055)-Ereignisses reagiert, indem die neuen Koordinaten erfasst werden und das Bild neu positioniert wird. Wenn Sie dem erweiterten Begrüßungsbildschirm ein Statussteuerelement hinzugefügt haben, sollten Sie es in diesem Ereignishandler ebenfalls neu positionieren.
+    <span data-ttu-id="d5bcf-173">Bereiten Sie den erweiterten Begrüßungsbildschirm so vor, dass die Elemente neu angeordnet werden, wenn Benutzer die Größe des Fensters ändern.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-173">Prepare your extended splash screen to reposition its elements if a user resizes the window.</span></span> <span data-ttu-id="d5bcf-174">Mit diesem Code wird beim Auftreten eines [**Window.SizeChanged**](https://msdn.microsoft.com/library/windows/apps/br209055)-Ereignisses reagiert, indem die neuen Koordinaten erfasst werden und das Bild neu positioniert wird.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-174">This code responds when a [**Window.SizeChanged**](https://msdn.microsoft.com/library/windows/apps/br209055) event occurs by capturing the new coordinates and repositioning the image.</span></span> <span data-ttu-id="d5bcf-175">Wenn Sie dem erweiterten Begrüßungsbildschirm ein Statussteuerelement hinzugefügt haben, sollten Sie es in diesem Ereignishandler ebenfalls neu positionieren.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-175">If you added a progress control to your extended splash screen, reposition it inside this event handler as well.</span></span>
 
     ```cs
     void ExtendedSplash_OnResize(Object sender, WindowSizeChangedEventArgs e)
@@ -221,13 +220,13 @@ Führen Sie die folgenden Schritte aus, um Methoden zu definieren, damit der erw
     }
     ```
 
-    **Hinweis**  Bevor Sie versuchen, die Bildposition abzurufen, müssen Sie wie im Beispiel gezeigt sicherstellen, dass die Klassenvariable (`splash`) ein gültiges [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763)-Objekt enthält (siehe Beispiel).
+    <span data-ttu-id="d5bcf-176">**Hinweis**  Bevor Sie versuchen, die Bildposition abzurufen, müssen Sie wie im Beispiel gezeigt sicherstellen, dass die Klassenvariable (`splash`) ein gültiges [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763)-Objekt enthält (siehe Beispiel).</span><span class="sxs-lookup"><span data-stu-id="d5bcf-176">**Note**  Before you try to get the image location make sure the class variable (`splash`) contains a valid [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) object, as shown in the example.</span></span>
 
      
 
-8.  **(Optional) Hinzufügen einer Klassenmethode zum Wiederherstellen eines gespeicherten Sitzungszustands**
+8.  **<span data-ttu-id="d5bcf-177">(Optional) Hinzufügen einer Klassenmethode zum Wiederherstellen eines gespeicherten Sitzungszustands</span><span class="sxs-lookup"><span data-stu-id="d5bcf-177">(Optional) Add a class method to restore a saved session state</span></span>**
 
-    Der Code, den Sie der [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)-Methode unter „Schritt 4: [Ändern Sie den Startaktivierungshandler](#modify-the-launch-activation-handler)“ hinzugefügt haben, führt dazu, dass die App beim Starten einen erweiterten Begrüßungsbildschirm anzeigt. Sie können das Hinzufügen der folgenden asynchronen Methode zur Datei „ExtendedSplash.xaml.cs“ erwägen, um alle Methoden für das Starten der App unter der Klasse für den erweiterten Begrüßungsbildschirm zusammenzufassen, damit der Zustand der App wiederhergestellt wird.
+    <span data-ttu-id="d5bcf-178">Der Code, den Sie der [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)-Methode unter „Schritt4: [Ändern Sie den Startaktivierungshandler](#modify-the-launch-activation-handler)“ hinzugefügt haben, führt dazu, dass die App beim Starten einen erweiterten Begrüßungsbildschirm anzeigt.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-178">The code you added to the [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) method in Step 4: [Modify the launch activation handler](#modify-the-launch-activation-handler) causes your app to display an extended splash screen when it launches.</span></span> <span data-ttu-id="d5bcf-179">Sie können das Hinzufügen der folgenden asynchronen Methode zur Datei „ExtendedSplash.xaml.cs“ erwägen, um alle Methoden für das Starten der App unter der Klasse für den erweiterten Begrüßungsbildschirm zusammenzufassen, damit der Zustand der App wiederhergestellt wird.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-179">To consolidate all methods related to app launch in your extended splash screen class, you could consider adding an asynchronous method to your ExtendedSplash.xaml.cs file to restore the app's state.</span></span>
 
     ```cs
     async void RestoreStateAsync(bool loadState)
@@ -239,16 +238,16 @@ Führen Sie die folgenden Schritte aus, um Methoden zu definieren, damit der erw
     }
     ```
 
-    Beim Ändern des Startaktivierungshandlers in „App.xaml.cs“ sollten Sie zusätzlich `loadstate` auf „true“ festlegen, wenn das vorherige [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694)-Element der App **Terminated** lautete. Ist dies der Fall, stellt die `RestoreStateAsync`-Methode den vorherigen Zustand der App wieder her. Eine Übersicht über das Starten, Anhalten und Beenden einer App finden Sie unter [App-Lebenszyklus](app-lifecycle.md).
+    <span data-ttu-id="d5bcf-180">Beim Ändern des Startaktivierungshandlers in „App.xaml.cs“ sollten Sie zusätzlich `loadstate` auf „true“ festlegen, wenn das vorherige [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694)-Element der App **Terminated** lautete.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-180">When you modify the launch activation handler in App.xaml.cs, you'll also set `loadstate` to true if the previous [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694) of your app was **Terminated**.</span></span> <span data-ttu-id="d5bcf-181">Ist dies der Fall, stellt die `RestoreStateAsync`-Methode den vorherigen Zustand der App wieder her.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-181">If so, the `RestoreStateAsync` method restores the app to its previous state.</span></span> <span data-ttu-id="d5bcf-182">Eine Übersicht über das Starten, Anhalten und Beenden einer App finden Sie unter [App-Lebenszyklus](app-lifecycle.md).</span><span class="sxs-lookup"><span data-stu-id="d5bcf-182">For an overview of app launch, suspension, and termination, see [App lifecycle](app-lifecycle.md).</span></span>
 
-## <a name="modify-the-launch-activation-handler"></a>Ändern Sie den Startaktivierungshandler
+## <a name="modify-the-launch-activation-handler"></a><span data-ttu-id="d5bcf-183">Ändern Sie den Startaktivierungshandler</span><span class="sxs-lookup"><span data-stu-id="d5bcf-183">Modify the launch activation handler</span></span>
 
 
-Beim Starten Ihrer App übergibt das System Begrüßungsbildschirminformationen an den Handler für das Startaktivierungsereignis. Sie können diese Informationen verwenden, um das Bild auf der Seite mit dem erweiterten Begrüßungsbildschirm richtig zu positionieren. Sie können diese Begrüßungsbildschirminformationen aus den Argumenten des Aktivierungsereignisses abrufen, die an den [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)-Handler der App übergeben werden (siehe `args`-Variable im folgenden Code).
+<span data-ttu-id="d5bcf-184">Beim Starten Ihrer App übergibt das System Begrüßungsbildschirminformationen an den Handler für das Startaktivierungsereignis.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-184">When your app is launched, the system passes splash screen information to the app's launch activation event handler.</span></span> <span data-ttu-id="d5bcf-185">Sie können diese Informationen verwenden, um das Bild auf der Seite mit dem erweiterten Begrüßungsbildschirm richtig zu positionieren.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-185">You can use this information to correctly position the image on your extended splash screen page.</span></span> <span data-ttu-id="d5bcf-186">Sie können diese Begrüßungsbildschirminformationen aus den Argumenten des Aktivierungsereignisses abrufen, die an den [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)-Handler der App übergeben werden (siehe `args`-Variable im folgenden Code).</span><span class="sxs-lookup"><span data-stu-id="d5bcf-186">You can get this splash screen information from the activation event arguments that are passed to your app's [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) handler (see the `args` variable in the following code).</span></span>
 
-Wenn Sie den [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)-Handler für Ihre App noch nicht außer Kraft gesetzt haben, finden Sie unter [App-Lebenszyklus](app-lifecycle.md) Informationen zum Behandeln von Aktivierungsereignissen.
+<span data-ttu-id="d5bcf-187">Wenn Sie den [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)-Handler für Ihre App noch nicht außer Kraft gesetzt haben, finden Sie unter [App-Lebenszyklus](app-lifecycle.md) Informationen zum Behandeln von Aktivierungsereignissen.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-187">If you have not already overridden the [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) handler for your app, see [App lifecycle](app-lifecycle.md) to learn how to handle activation events.</span></span>
 
-Fügen Sie in der Datei „App.xaml.cs“ den folgenden Code zum Erstellen und Anzeigen eines erweiterten Begrüßungsbildschirms hinzu.
+<span data-ttu-id="d5bcf-188">Fügen Sie in der Datei „App.xaml.cs“ den folgenden Code zum Erstellen und Anzeigen eines erweiterten Begrüßungsbildschirms hinzu.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-188">In App.xaml.cs, add the following code to create and display an extended splash screen.</span></span>
 
 ```cs
 protected override void OnLaunched(LaunchActivatedEventArgs args)
@@ -264,14 +263,14 @@ protected override void OnLaunched(LaunchActivatedEventArgs args)
 }
 ```
 
-## <a name="complete-code"></a>Vollständiger Code
+## <a name="complete-code"></a><span data-ttu-id="d5bcf-189">Vollständiger Code</span><span class="sxs-lookup"><span data-stu-id="d5bcf-189">Complete code</span></span>
 
 
-> **Hinweis**  Der folgende Code unterscheidet sich leicht von den Codeausschnitten der vorherigen Schritte.
--   „ExtendedSplash.xaml“ enthält eine `DismissSplash`-Schaltfläche. Beim Klicken auf diese Schaltfläche wird mit dem `DismissSplashButton_Click`-Ereignishandler die `DismissExtendedSplash`-Methode aufgerufen. Rufen Sie in der App `DismissExtendedSplash` auf, wenn das Laden von Ressourcen oder Initialisieren der UI in der App abgeschlossen ist.
--   Für diese App wird auch eine Projektvorlage für eine UWP-App verwendet, bei der die [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682)-Navigation zum Einsatz kommt. Der Startaktivierungshandler ([**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)) definiert in „App.xaml.cs“ dann ein `rootFrame`-Element und verwendet es zum Festlegen des Inhalts für das App-Fenster.
+> <span data-ttu-id="d5bcf-190">**Hinweis**  Der folgende Code unterscheidet sich leicht von den Codeausschnitten der vorherigen Schritte.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-190">**Note**  The following code slightly differs from the snippets shown in the previous steps.</span></span>
+-   <span data-ttu-id="d5bcf-191">„ExtendedSplash.xaml“ enthält eine `DismissSplash`-Schaltfläche.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-191">ExtendedSplash.xaml includes a `DismissSplash` button.</span></span> <span data-ttu-id="d5bcf-192">Beim Klicken auf diese Schaltfläche wird mit dem `DismissSplashButton_Click`-Ereignishandler die `DismissExtendedSplash`-Methode aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-192">When this button is clicked, an event handler, `DismissSplashButton_Click`, calls the `DismissExtendedSplash` method.</span></span> <span data-ttu-id="d5bcf-193">Rufen Sie in der App `DismissExtendedSplash` auf, wenn das Laden von Ressourcen oder Initialisieren der UI in der App abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-193">In your app, call `DismissExtendedSplash` when your app is done loading resources or initializing its UI.</span></span>
+-   <span data-ttu-id="d5bcf-194">Für diese App wird auch eine Projektvorlage für eine UWP-App verwendet, bei der die [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682)-Navigation zum Einsatz kommt.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-194">This app also uses a UWP app project template, which uses [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) navigation.</span></span> <span data-ttu-id="d5bcf-195">Der Startaktivierungshandler ([**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)) definiert in „App.xaml.cs“ dann ein `rootFrame`-Element und verwendet es zum Festlegen des Inhalts für das App-Fenster.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-195">As a result, in App.xaml.cs, the launch activation handler ([**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)) defines a `rootFrame` and uses it to set the content of the app window.</span></span>
 
-ExtendedSplash.xaml: Dieses Beispiel enthält eine `DismissSplash`-Schaltfläche, da keine App-Ressourcen geladen werden müssen. Blenden Sie den erweiterten Begrüßungsbildschirm in der App automatisch aus, wenn das Laden von Ressourcen oder Vorbereiten der UI-Anfangselemente in der App abgeschlossen ist.
+<span data-ttu-id="d5bcf-196">ExtendedSplash.xaml: Dieses Beispiel enthält eine `DismissSplash`-Schaltfläche, da keine App-Ressourcen geladen werden müssen.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-196">ExtendedSplash.xaml: This example includes a `DismissSplash` button because it doesn't have app resources to load.</span></span> <span data-ttu-id="d5bcf-197">Blenden Sie den erweiterten Begrüßungsbildschirm in der App automatisch aus, wenn das Laden von Ressourcen oder Vorbereiten der UI-Anfangselemente in der App abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-197">In your app, dismiss the extended splash screen automatically when your app is done loading resources or preparing its initial UI.</span></span>
 
 ```xml
 <Page
@@ -295,7 +294,7 @@ ExtendedSplash.xaml: Dieses Beispiel enthält eine `DismissSplash`-Schaltfläche
 </Page>
 ```
 
-ExtendedSplash.xaml.cs: Beachten Sie, dass die `DismissExtendedSplash`-Methode vom Click-Ereignishandler für die `DismissSplash`-Schaltfläche aufgerufen wird. In der App benötigen Sie keine `DismissSplash`-Schaltfläche. Rufen Sie stattdessen `DismissExtendedSplash` auf, wenn das Laden der Ressourcen in der App abgeschlossen ist und Sie die Navigation zur Hauptseite durchführen möchten.
+<span data-ttu-id="d5bcf-198">ExtendedSplash.xaml.cs: Beachten Sie, dass die `DismissExtendedSplash`-Methode vom Click-Ereignishandler für die `DismissSplash`-Schaltfläche aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-198">ExtendedSplash.xaml.cs: Note that the `DismissExtendedSplash` method is called from the click event handler for the `DismissSplash` button.</span></span> <span data-ttu-id="d5bcf-199">In der App benötigen Sie keine `DismissSplash`-Schaltfläche.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-199">In your app, you won't need a `DismissSplash` button.</span></span> <span data-ttu-id="d5bcf-200">Rufen Sie stattdessen `DismissExtendedSplash` auf, wenn das Laden der Ressourcen in der App abgeschlossen ist und Sie die Navigation zur Hauptseite durchführen möchten.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-200">Instead, call `DismissExtendedSplash` when your app is done loading resources and you want to navigate to its main page.</span></span>
 
 ```cs
 using System;
@@ -421,9 +420,9 @@ namespace SplashScreenExample
 }
 ```
 
-App.xaml.cs: Dieses Projekt wurde mithilfe der UWP-App-Projektvorlage **Leere App (XAML)** in Visual Studio 2015 erstellt. Die Ereignishandler `OnNavigationFailed` und `OnSuspending` werden automatisch erstellt und müssen nicht geändert werden, um einen erweiterten Begrüßungsbildschirm zu implementieren. In diesem Thema wird nur `OnLaunched` geändert.
+<span data-ttu-id="d5bcf-201">App.xaml.cs: Dieses Projekt wurde mithilfe der UWP-App-Projektvorlage **Leere App (XAML)** in Visual Studio2015 erstellt.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-201">App.xaml.cs: This project was created using the UWP app **Blank App (XAML)** project template in Visual Studio 2015.</span></span> <span data-ttu-id="d5bcf-202">Die Ereignishandler `OnNavigationFailed` und `OnSuspending` werden automatisch erstellt und müssen nicht geändert werden, um einen erweiterten Begrüßungsbildschirm zu implementieren.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-202">Both the `OnNavigationFailed` and `OnSuspending` event handlers are automatically generated and don't need to be changed to implement an extended splash screen.</span></span> <span data-ttu-id="d5bcf-203">In diesem Thema wird nur `OnLaunched` geändert.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-203">This topic only modifies `OnLaunched`.</span></span>
 
-Falls Sie für Ihre App keine Projektvorlage verwendet haben, finden Sie unter „Schritt 4: [Ändern Sie den Startaktivierungshandler](#modify-the-launch-activation-handler) ein Beispiel für die Änderung von `OnLaunched` ohne [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682)-Navigation.
+<span data-ttu-id="d5bcf-204">Falls Sie für Ihre App keine Projektvorlage verwendet haben, finden Sie unter „Schritt4: [Ändern Sie den Startaktivierungshandler](#modify-the-launch-activation-handler) ein Beispiel für die Änderung von `OnLaunched` ohne [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682)-Navigation.</span><span class="sxs-lookup"><span data-stu-id="d5bcf-204">If you didn't use a project template for your app, see Step 4: [Modify the launch activation handler](#modify-the-launch-activation-handler) for an example of a modified `OnLaunched` that doesn't use [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) navigation.</span></span>
 
 ```cs
 using System;
@@ -540,19 +539,18 @@ namespace SplashScreenExample
 }
 ```
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a><span data-ttu-id="d5bcf-205">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="d5bcf-205">Related topics</span></span>
 
 
-* [App-Lebenszyklus](app-lifecycle.md)
+* [<span data-ttu-id="d5bcf-206">App-Lebenszyklus</span><span class="sxs-lookup"><span data-stu-id="d5bcf-206">App lifecycle</span></span>](app-lifecycle.md)
 
-**Referenz**
+**<span data-ttu-id="d5bcf-207">Referenz</span><span class="sxs-lookup"><span data-stu-id="d5bcf-207">Reference</span></span>**
 
-* [**Windows.ApplicationModel.Activation-Namespace**](https://msdn.microsoft.com/library/windows/apps/br224766)
-* [**Windows.ApplicationModel.Activation.SplashScreen-Klasse**](https://msdn.microsoft.com/library/windows/apps/br224763)
-* [**Windows.ApplicationModel.Activation.SplashScreen.ImageLocation-Eigenschaft**](https://msdn.microsoft.com/library/windows/apps/br224765)
-* [**Windows.ApplicationModel.Core.CoreApplicationView.Activated-Ereignis**](https://msdn.microsoft.com/library/windows/apps/br225018)
-
- 
+* [**<span data-ttu-id="d5bcf-208">Windows.ApplicationModel.Activation-Namespace</span><span class="sxs-lookup"><span data-stu-id="d5bcf-208">Windows.ApplicationModel.Activation namespace</span></span>**](https://msdn.microsoft.com/library/windows/apps/br224766)
+* [**<span data-ttu-id="d5bcf-209">Windows.ApplicationModel.Activation.SplashScreen-Klasse</span><span class="sxs-lookup"><span data-stu-id="d5bcf-209">Windows.ApplicationModel.Activation.SplashScreen class</span></span>**](https://msdn.microsoft.com/library/windows/apps/br224763)
+* [**<span data-ttu-id="d5bcf-210">Windows.ApplicationModel.Activation.SplashScreen.ImageLocation-Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="d5bcf-210">Windows.ApplicationModel.Activation.SplashScreen.ImageLocation property</span></span>**](https://msdn.microsoft.com/library/windows/apps/br224765)
+* [**<span data-ttu-id="d5bcf-211">Windows.ApplicationModel.Core.CoreApplicationView.Activated-Ereignis</span><span class="sxs-lookup"><span data-stu-id="d5bcf-211">Windows.ApplicationModel.Core.CoreApplicationView.Activated event</span></span>**](https://msdn.microsoft.com/library/windows/apps/br225018)
 
  
 
+ 

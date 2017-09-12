@@ -6,143 +6,139 @@ ms.assetid: FD53B716-C43D-408D-8B07-522BC1F3DF9D
 label: Progress controls
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 6ff820d49ef6fe788a44822d8f966ce54b2730ae
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+pm-contact: kisai
+design-contact: jeffarn
+dev-contact: mitra
+doc-status: Published
+ms.openlocfilehash: d85c32a1e0cbd826877fa22182647103bdc9eac9
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/22/2017
 ---
-# <a name="progress-controls"></a>Statussteuerelemente
+# <a name="progress-controls"></a><span data-ttu-id="97eb8-104">Statussteuerelemente</span><span class="sxs-lookup"><span data-stu-id="97eb8-104">Progress controls</span></span>
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-Ein Statussteuerelement gibt dem Benutzer eine Rückmeldung, dass ein Vorgang mit langer Laufzeit ausgeführt wird. Dies kann bedeuten, dass der Benutzer bei Anzeigen der Statusanzeige nicht mit der App interagieren kann. Je nach verwendetem Indikator wird auch die Länge der Wartezeit angegeben.
+<span data-ttu-id="97eb8-105">Ein Statussteuerelement gibt dem Benutzer eine Rückmeldung, dass ein Vorgang mit langer Laufzeit ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="97eb8-105">A progress control provides feedback to the user that a long-running operation is underway.</span></span> <span data-ttu-id="97eb8-106">Dies kann bedeuten, dass der Benutzer bei Anzeigen der Statusanzeige nicht mit der App interagieren kann. Je nach verwendetem Indikator wird auch die Länge der Wartezeit angegeben.</span><span class="sxs-lookup"><span data-stu-id="97eb8-106">It can mean that the user cannot interact with the app when the progress indicator is visible, and can also indicate how long the wait time might be, depending on the indicator used.</span></span>
 
-<div class="important-apis" >
-<b>Wichtige APIs</b><br/>
-<ul>
-<li>[**ProgressBar-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressbar.aspx)</li>
-<li>[**IsIndeterminate-Eigenschaft**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressbar.isindeterminate.aspx)</li>
-<li>[**ProgressRing-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressring.aspx)</li>
-<li>[**IsActive-Eigenschaft**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressring.isactive.aspx)</li>
-</ul>
-</div>
+> <span data-ttu-id="97eb8-107">**Wichtige APIs**: [ProgressBar-Klasse](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressbar.aspx), [IsIndeterminate Eigenschaft](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressbar.isindeterminate.aspx), [ProgressRing-Klasse](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressring.aspx), [IsActive-Eigenschaft](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressring.isactive.aspx)</span><span class="sxs-lookup"><span data-stu-id="97eb8-107">**Important APIs**: [ProgressBar class](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressbar.aspx), [IsIndeterminate property](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressbar.isindeterminate.aspx), [ProgressRing class](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressring.aspx), [IsActive property](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressring.isactive.aspx)</span></span>
 
-## <a name="types-of-progress"></a>Typen von Statussteuerelementen
+## <a name="types-of-progress"></a><span data-ttu-id="97eb8-108">Typen von Statussteuerelementen</span><span class="sxs-lookup"><span data-stu-id="97eb8-108">Types of progress</span></span>
 
-Es gibt zwei Steuerelemente, die dem Benutzer anzeigen, dass ein Vorgang ausgeführt wird: ein ProgressBar-Element oder ein ProgressRing-Element.
+<span data-ttu-id="97eb8-109">Es gibt zwei Steuerelemente, die dem Benutzer anzeigen, dass ein Vorgang ausgeführt wird: ein ProgressBar-Element oder ein ProgressRing-Element.</span><span class="sxs-lookup"><span data-stu-id="97eb8-109">There are two controls to show the user that an operation is underway – either through a ProgressBar or through a ProgressRing.</span></span>
 
--   Der ProgressBar-Status *bestimmt* gibt den Prozentsatz an, zu dem eine Aufgabe abgeschlossen ist. Dieses Element für Vorgänge verwendet werden, deren Dauer bekannt ist, deren Fortschritt jedoch nicht die Interaktion des Benutzers mit der App blockieren sollte.
--   Der ProgressBar-Status *unbestimmt* gibt an, dass ein Vorgang ausgeführt wird, der die Interaktion des Benutzers mit der App nicht blockiert und dessen Abschlusszeit nicht bekannt ist.
--   Für das ProgressRing-Element gibt es nur den Status *unbestimmt*. Es sollte verwendet werden, wenn vor dem Abschluss eines Vorgangs keine Benutzerinteraktion möglich ist.
+-   <span data-ttu-id="97eb8-110">Der ProgressBar-Status *bestimmt* gibt den Prozentsatz an, zu dem eine Aufgabe abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="97eb8-110">The ProgressBar *determinate* state shows the percentage completed of a task.</span></span> <span data-ttu-id="97eb8-111">Dieses Element für Vorgänge verwendet werden, deren Dauer bekannt ist, deren Fortschritt jedoch nicht die Interaktion des Benutzers mit der App blockieren sollte.</span><span class="sxs-lookup"><span data-stu-id="97eb8-111">This should be used during an operation whose duration is known, but it's progress should not block the user's interaction with the app.</span></span>
+-   <span data-ttu-id="97eb8-112">Der ProgressBar-Status *unbestimmt* gibt an, dass ein Vorgang ausgeführt wird, der die Interaktion des Benutzers mit der App nicht blockiert und dessen Abschlusszeit nicht bekannt ist.</span><span class="sxs-lookup"><span data-stu-id="97eb8-112">The ProgressBar *indeterminate* state shows that an operation is underway, does not block user interaction with the app, and its completion time is unknown.</span></span>
+-   <span data-ttu-id="97eb8-113">Für das ProgressRing-Element gibt es nur den Status *unbestimmt*. Es sollte verwendet werden, wenn vor dem Abschluss eines Vorgangs keine Benutzerinteraktion möglich ist.</span><span class="sxs-lookup"><span data-stu-id="97eb8-113">The ProgressRing only has an *indeterminate* state, and should be used when any further user interaction is blocked until the operation has completed.</span></span>
 
-Ein Statussteuerelement ist zudem schreibgeschützt und nicht interaktiv. Dies bedeutet, dass der Benutzer diese Steuerelemente nicht direkt aufrufen oder verwenden kann.
+<span data-ttu-id="97eb8-114">Ein Statussteuerelement ist zudem schreibgeschützt und nicht interaktiv.</span><span class="sxs-lookup"><span data-stu-id="97eb8-114">Additionally, a progress control is read only, and not interactive.</span></span> <span data-ttu-id="97eb8-115">Dies bedeutet, dass der Benutzer diese Steuerelemente nicht direkt aufrufen oder verwenden kann.</span><span class="sxs-lookup"><span data-stu-id="97eb8-115">Meaning that the user cannot invoke or use these controls directly.</span></span>
 
 ![ProgressBar-Status](images/ProgressBar_TwoStates.png)
 
-*Von oben nach unten – unbestimmtes ProgressBar-Element und bestimmtes ProgressBar-Element*
+*<span data-ttu-id="97eb8-117">Von oben nach unten – unbestimmtes ProgressBar-Element und bestimmtes ProgressBar-Element</span><span class="sxs-lookup"><span data-stu-id="97eb8-117">Top to bottom - Indeterminate ProgressBar and a determinate ProgressBar</span></span>*
 
 ![ProgressRing-Status](images/ProgressRing_SingleState.png)
 
-*Ein unbestimmtes ProgressRing-Element*
+*<span data-ttu-id="97eb8-119">Ein unbestimmtes ProgressRing-Element</span><span class="sxs-lookup"><span data-stu-id="97eb8-119">An indeterminate ProgressRing</span></span>*
 
-## <a name="when-to-use-each-control"></a>Verwendung der einzelnen Steuerelemente
+## <a name="when-to-use-each-control"></a><span data-ttu-id="97eb8-120">Verwendung der einzelnen Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="97eb8-120">When to use each control</span></span>
 
-Es ist nicht immer klar erkennbar, welches Steuerelement oder welcher Status (bestimmt oder unbestimmt) zu verwenden ist, um einen Vorgang anzuzeigen. Manchmal ist eine Aufgabe so deutlich zu erkennen, dass kein Statussteuerelement erforderlich ist. Manchmal ist jedoch auch bei Verwendung eines Statussteuerelements eine Textzeile erforderlich, die den Benutzer darüber informiert, welcher Vorgang gerade ausgeführt wird.
+<span data-ttu-id="97eb8-121">Es ist nicht immer klar erkennbar, welches Steuerelement oder welcher Status (bestimmt oder unbestimmt) zu verwenden ist, um einen Vorgang anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="97eb8-121">It's not always obvious what control or what state (determinate vs indeterminate) to use when trying to show something is happening.</span></span> <span data-ttu-id="97eb8-122">Manchmal ist eine Aufgabe so deutlich zu erkennen, dass kein Statussteuerelement erforderlich ist. Manchmal ist jedoch auch bei Verwendung eines Statussteuerelements eine Textzeile erforderlich, die den Benutzer darüber informiert, welcher Vorgang gerade ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="97eb8-122">Sometimes a task is obvious enough that it doesn’t require a progress control at all – and sometimes even if a progress control is used, a line of text is still necessary in order to explain to the user what operation is underway.</span></span>
 
-### <a name="progressbar"></a>ProgressBar
--   **Verfügt das Steuerelement über eine festgelegte Dauer oder ein vorhersehbares Ende?**
+### <a name="progressbar"></a><span data-ttu-id="97eb8-123">ProgressBar</span><span class="sxs-lookup"><span data-stu-id="97eb8-123">ProgressBar</span></span>
+-   **<span data-ttu-id="97eb8-124">Verfügt das Steuerelement über eine festgelegte Dauer oder ein vorhersehbares Ende?</span><span class="sxs-lookup"><span data-stu-id="97eb8-124">Does the control have a defined duration or predictable end?</span></span>**
 
-    Verwenden Sie in diesem Fall eine bestimmte Statusanzeige, und aktualisieren Sie deren Prozentsatz oder Wert entsprechend.
+    <span data-ttu-id="97eb8-125">Verwenden Sie in diesem Fall eine bestimmte Statusanzeige, und aktualisieren Sie deren Prozentsatz oder Wert entsprechend.</span><span class="sxs-lookup"><span data-stu-id="97eb8-125">Use a determinate ProgressBar then, and update the percentage or value accordingly.</span></span>
 
--   **Kann der Benutzer fortfahren, ohne den Status des Vorgang zu überwachen?**
+-   **<span data-ttu-id="97eb8-126">Kann der Benutzer fortfahren, ohne den Status des Vorgang zu überwachen?</span><span class="sxs-lookup"><span data-stu-id="97eb8-126">Can the user continue without having to monitor the operation’s progress?</span></span>**
 
-    Bei Verwendung eines ProgressBar-Elements ist die Interaktion nicht modal. Das bedeutet in der Regel, dass der Benutzer durch den Abschluss des Vorgangs nicht blockiert wird und die aktive App bis zum Abschluss der Aktion weiterhin verwenden kann.
+    <span data-ttu-id="97eb8-127">Bei Verwendung eines ProgressBar-Elements ist die Interaktion nicht modal. Das bedeutet in der Regel, dass der Benutzer durch den Abschluss des Vorgangs nicht blockiert wird und die aktive App bis zum Abschluss der Aktion weiterhin verwenden kann.</span><span class="sxs-lookup"><span data-stu-id="97eb8-127">When a ProgressBar is in use, interaction is non-modal, typically meaning that the user is not blocked by that operation’s completion, and can continue to use the app in other ways until that aspect has completed.</span></span>
 
--   **Schlüsselwörter**
+-   **<span data-ttu-id="97eb8-128">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="97eb8-128">Keywords</span></span>**
 
-    Wenn der anzuzeigende Vorgang sich mit den folgenden Schlüsselwörtern in Verbindung bringen lässt oder wenn Sie während des Vorgangs Text anzeigen möchten, in dem diese Schlüsselwörter vorkommen, sollten Sie ein ProgressBar-Element verwenden:
+    <span data-ttu-id="97eb8-129">Wenn der anzuzeigende Vorgang sich mit den folgenden Schlüsselwörtern in Verbindung bringen lässt oder wenn Sie während des Vorgangs Text anzeigen möchten, in dem diese Schlüsselwörter vorkommen, sollten Sie ein ProgressBar-Element verwenden:</span><span class="sxs-lookup"><span data-stu-id="97eb8-129">If your operation falls around these keywords, or if you’re showing text that alongside the progress operation that matches these keywords; consider using a ProgressBar:</span></span>
 
-    - *Wird geladen...*
-    - *Wird abgerufen...*
-    - *In Bearbeitung...*
+    - *<span data-ttu-id="97eb8-130">Wird geladen...</span><span class="sxs-lookup"><span data-stu-id="97eb8-130">Loading...</span></span>*
+    - *<span data-ttu-id="97eb8-131">Wird abgerufen...</span><span class="sxs-lookup"><span data-stu-id="97eb8-131">Retrieving</span></span>*
+    - *<span data-ttu-id="97eb8-132">In Bearbeitung...</span><span class="sxs-lookup"><span data-stu-id="97eb8-132">Working...</span></span>*
 
-### <a name="progressring"></a>ProgressRing
+### <a name="progressring"></a><span data-ttu-id="97eb8-133">ProgressRing</span><span class="sxs-lookup"><span data-stu-id="97eb8-133">ProgressRing</span></span>
 
--   **Muss der Benutzer den Abschluss des Vorgangs abwarten, bevor er seine Aktivität fortsetzen kann?**
+-   **<span data-ttu-id="97eb8-134">Muss der Benutzer den Abschluss des Vorgangs abwarten, bevor er seine Aktivität fortsetzen kann?</span><span class="sxs-lookup"><span data-stu-id="97eb8-134">Will the operation cause the user to wait to continue?</span></span>**
 
-    Wenn ein Vorgang bis zu seinem Abschluss eine umfassende Interaktion mit der App erfordert, empfiehlt sich die Verwendung eines ProgressRing-Elements. Das ProgressRing-Steuerelement ist für modale Interaktionen vorgesehen, in denen die Aktivitäten des Benutzers blockiert werden, bis das ProgressRing-Element nicht mehr angezeigt wird.
+    <span data-ttu-id="97eb8-135">Wenn ein Vorgang bis zu seinem Abschluss eine umfassende Interaktion mit der App erfordert, empfiehlt sich die Verwendung eines ProgressRing-Elements.</span><span class="sxs-lookup"><span data-stu-id="97eb8-135">If an operation requires all (or a large portion of) interaction with the app to wait until it has been completed, then the ProgressRing is the better choice.</span></span> <span data-ttu-id="97eb8-136">Das ProgressRing-Steuerelement ist für modale Interaktionen vorgesehen, in denen die Aktivitäten des Benutzers blockiert werden, bis das ProgressRing-Element nicht mehr angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="97eb8-136">The ProgressRing control is used for modal interactions, meaning that the user is blocked until the ProgressRing disappears.</span></span>
 
--   **Wartet die App darauf, dass der Benutzer eine Aufgabe ausführt?**
+-   **<span data-ttu-id="97eb8-137">Wartet die App darauf, dass der Benutzer eine Aufgabe ausführt?</span><span class="sxs-lookup"><span data-stu-id="97eb8-137">Is the app waiting for the user to complete a task?</span></span>**
 
-    In diesem Fall verwenden Sie ein ProgressRing-Steuerelement, um den Benutzer auf eine unbestimmte Wartezeit hinzuweisen.
+    <span data-ttu-id="97eb8-138">In diesem Fall verwenden Sie ein ProgressRing-Steuerelement, um den Benutzer auf eine unbestimmte Wartezeit hinzuweisen.</span><span class="sxs-lookup"><span data-stu-id="97eb8-138">If so, use a ProgressRing, as they’re meant to indicate an unknown wait time for the user.</span></span>
 
--   **Schlüsselwörter**
+-   **<span data-ttu-id="97eb8-139">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="97eb8-139">Keywords</span></span>**
 
-    Wenn der anzuzeigende Vorgang sich mit den folgenden Schlüsselwörtern in Verbindung bringen lässt oder wenn Sie während des Vorgangs Text anzeigen möchten, in dem diese Schlüsselwörter vorkommen, sollten Sie ein ProgressRing-Element verwenden:
+    <span data-ttu-id="97eb8-140">Wenn der anzuzeigende Vorgang sich mit den folgenden Schlüsselwörtern in Verbindung bringen lässt oder wenn Sie während des Vorgangs Text anzeigen möchten, in dem diese Schlüsselwörter vorkommen, sollten Sie ein ProgressRing-Element verwenden:</span><span class="sxs-lookup"><span data-stu-id="97eb8-140">If your operation falls around these keywords, or if you’re showing text alongside the progress operation that matches these keywords; consider using a ProgressRing:</span></span>
 
-    - *Wird aktualisiert*
-    - *Anmelden...*
-    - *Verbinden...*
+    - *<span data-ttu-id="97eb8-141">Wird aktualisiert</span><span class="sxs-lookup"><span data-stu-id="97eb8-141">Refreshing</span></span>*
+    - *<span data-ttu-id="97eb8-142">Anmelden...</span><span class="sxs-lookup"><span data-stu-id="97eb8-142">Signing in...</span></span>*
+    - *<span data-ttu-id="97eb8-143">Verbinden...</span><span class="sxs-lookup"><span data-stu-id="97eb8-143">Connecting...</span></span>*
 
-### <a name="no-progress-indication-necessary"></a>Keine Fortschrittsanzeige erforderlich
--   **Müssen Benutzer wissen, dass Vorgänge ausgeführt werden?**
+### <a name="no-progress-indication-necessary"></a><span data-ttu-id="97eb8-144">Keine Fortschrittsanzeige erforderlich</span><span class="sxs-lookup"><span data-stu-id="97eb8-144">No progress indication necessary</span></span>
+-   **<span data-ttu-id="97eb8-145">Müssen Benutzer wissen, dass Vorgänge ausgeführt werden?</span><span class="sxs-lookup"><span data-stu-id="97eb8-145">Does the user need to know that something is happening?</span></span>**
 
-    Wenn die App z. B. im Hintergrund einen Download ausführt, der nicht vom Benutzer eingeleitet wurde, ist es auch nicht unbedingt erforderlich, den Benutzer darüber zu informieren.
+    <span data-ttu-id="97eb8-146">Wenn die App z.B. im Hintergrund einen Download ausführt, der nicht vom Benutzer eingeleitet wurde, ist es auch nicht unbedingt erforderlich, den Benutzer darüber zu informieren.</span><span class="sxs-lookup"><span data-stu-id="97eb8-146">For example, if the app is downloading something in the background and the user didn’t initiate the download, the user doesn’t necessarily need to know about it.</span></span>
 
--   **Wird der Vorgang im Hintergrund ausgeführt, ohne die Aktivitäten des Benutzers zu blockieren, und ist er für Benutzer von geringem Interesse, aber nicht völlig irrelevant?**
+-   **<span data-ttu-id="97eb8-147">Wird der Vorgang im Hintergrund ausgeführt, ohne die Aktivitäten des Benutzers zu blockieren, und ist er für Benutzer von geringem Interesse, aber nicht völlig irrelevant?</span><span class="sxs-lookup"><span data-stu-id="97eb8-147">Is the operation a background activity that doesn't block user activity and is of minimal (but still some) interest to the user?</span></span>**
 
-    Verwenden Sie Text, wenn die App Aufgaben ausführt, die zwar nicht immer sichtbar sein müssen, bei denen aber der Status angezeigt werden soll.
+    <span data-ttu-id="97eb8-148">Verwenden Sie Text, wenn die App Aufgaben ausführt, die zwar nicht immer sichtbar sein müssen, bei denen aber der Status angezeigt werden soll.</span><span class="sxs-lookup"><span data-stu-id="97eb8-148">Use text when your app is performing tasks that don't have to be visible all the time, but you still need to show the status.</span></span>
 
--   **Möchte der Benutzer nur über den Abschluss des Vorgangs informiert werden?**
+-   **<span data-ttu-id="97eb8-149">Möchte der Benutzer nur über den Abschluss des Vorgangs informiert werden?</span><span class="sxs-lookup"><span data-stu-id="97eb8-149">Does the user only care about the completion of the operation?</span></span>**
 
-    Manchmal ist es am besten, nur auf den Abschluss eines Vorgangs hinzuweisen oder den unmittelbaren Abschluss des Vorgangs durch ein visuelles Element anzukündigen, und den restlichen Vorgang im Hintergrund auszuführen.
+    <span data-ttu-id="97eb8-150">Manchmal ist es am besten, nur auf den Abschluss eines Vorgangs hinzuweisen oder den unmittelbaren Abschluss des Vorgangs durch ein visuelles Element anzukündigen, und den restlichen Vorgang im Hintergrund auszuführen.</span><span class="sxs-lookup"><span data-stu-id="97eb8-150">Sometimes it’s best to show a notice only when the operation is completed, or give a visual that the operation has been completed immediately, and run the finishing touches in the background.</span></span>
 
-## <a name="progress-controls-best-practices"></a>Bewährte Methoden für Statussteuerelemente
+## <a name="progress-controls-best-practices"></a><span data-ttu-id="97eb8-151">Bewährte Methoden für Statussteuerelemente</span><span class="sxs-lookup"><span data-stu-id="97eb8-151">Progress controls best practices</span></span>
 
-Manchmal ist eine visuelle Darstellung hilfreich, um zu ermitteln, zu welchem Zeitpunkt welches Statussteuerelement verwendet werden sollte:
+<span data-ttu-id="97eb8-152">Manchmal ist eine visuelle Darstellung hilfreich, um zu ermitteln, zu welchem Zeitpunkt welches Statussteuerelement verwendet werden sollte:</span><span class="sxs-lookup"><span data-stu-id="97eb8-152">Sometimes it’s best to see some visual representations of when and where to use these different progress controls:</span></span>
 
-**ProgressBar – bestimmt**
+**<span data-ttu-id="97eb8-153">ProgressBar – bestimmt</span><span class="sxs-lookup"><span data-stu-id="97eb8-153">ProgressBar - Determinate</span></span>**
 
 ![Beispiel für ein bestimmtes ProgressBar-Element](images/PB_DeterminateExample.png)
 
-Beim ersten Beispiel handelt es sich um ein bestimmtes ProgressBar-Steuerelement. Wenn die Dauer des Vorgangs bekannt ist, etwa beim Installieren, Herunterladen oder Einrichten, eignet sich ein bestimmtes ProgressBar-Steuerelement.
+<span data-ttu-id="97eb8-155">Beim ersten Beispiel handelt es sich um ein bestimmtes ProgressBar-Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="97eb8-155">The first example is the determinate ProgressBar.</span></span> <span data-ttu-id="97eb8-156">Wenn die Dauer des Vorgangs bekannt ist, etwa beim Installieren, Herunterladen oder Einrichten, eignet sich ein bestimmtes ProgressBar-Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="97eb8-156">When the duration of the operation is known, when installing, downloading, setting up, etc; a determinate ProgressBar is best.</span></span>
 
-**ProgressBar – unbestimmt**
+**<span data-ttu-id="97eb8-157">ProgressBar – unbestimmt</span><span class="sxs-lookup"><span data-stu-id="97eb8-157">ProgressBar - Indeterminate</span></span>**
 
 ![Beispiel für ein unbestimmtes ProgressBar-Element](images/PB_IndeterminateExample.png)
 
-Wenn die Dauer des Vorgangs nicht bekannt ist, verwenden Sie ein unbestimmtes ProgressBar-Steuerelement. Unbestimmte ProgressBar-Elemente können auch beim Ausfüllen virtualisierter Listen verwendet werden oder um einen glatten visuellen Übergang von einem unbestimmten zu einem bestimmten ProgressBar-Element zu erstellen.
+<span data-ttu-id="97eb8-159">Wenn die Dauer des Vorgangs nicht bekannt ist, verwenden Sie ein unbestimmtes ProgressBar-Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="97eb8-159">When it is not known how long the operation will take, use an indeterminate ProgressBar.</span></span> <span data-ttu-id="97eb8-160">Unbestimmte ProgressBar-Elemente können auch beim Ausfüllen virtualisierter Listen verwendet werden oder um einen glatten visuellen Übergang von einem unbestimmten zu einem bestimmten ProgressBar-Element zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="97eb8-160">Indeterminate ProgressBars are also good when filling a virtualized list, and creating a smooth visual transition between an indeterminate to determinate ProgressBar.</span></span>
 
--   **Befindet sich der Vorgang in einer virtualisierten Sammlung?**
+-   **<span data-ttu-id="97eb8-161">Befindet sich der Vorgang in einer virtualisierten Sammlung?</span><span class="sxs-lookup"><span data-stu-id="97eb8-161">Is the operation in a virtualized collection?</span></span>**
 
-    In diesem Fall legen Sie nicht für jedes angezeigte Listenelement eine Statusanzeige fest. Positionieren Sie stattdessen ein ProgressBar-Element am Anfang der Auflistung der zu ladenden Elemente, um anzuzeigen, dass die Elemente geladen werden.
+    <span data-ttu-id="97eb8-162">In diesem Fall legen Sie nicht für jedes angezeigte Listenelement eine Statusanzeige fest.</span><span class="sxs-lookup"><span data-stu-id="97eb8-162">If so, do not put a progress indicator on each list item as they appear.</span></span> <span data-ttu-id="97eb8-163">Positionieren Sie stattdessen ein ProgressBar-Element am Anfang der Auflistung der zu ladenden Elemente, um anzuzeigen, dass die Elemente geladen werden.</span><span class="sxs-lookup"><span data-stu-id="97eb8-163">Instead, use a ProgressBar and place it at the top of the collection of items being loaded in, to show that the items are being fetched.</span></span>
 
-**ProgressRing – unbestimmt**
+**<span data-ttu-id="97eb8-164">ProgressRing – unbestimmt</span><span class="sxs-lookup"><span data-stu-id="97eb8-164">ProgressRing - Indeterminate</span></span>**
 
 ![Beispiel für ein unbestimmtes ProgressRing-Steuerelement](images/PR_IndeterminateExample.png)
 
-Unbestimmte ProgressRing-Elemente werden verwendet, wenn jegliche Benutzerinteraktion mit der App ausgesetzt ist oder die App auf eine Benutzereingabe wartet, um den Vorgang fortzusetzen. Das „Anmelden...“- Beispiel oben ist ein optimales Szenario für das ProgressRing-Steuerelement, da der Benutzer die App erst weiterverwenden kann, nachdem der Anmeldevorgang abgeschlossen ist.
+<span data-ttu-id="97eb8-166">Unbestimmte ProgressRing-Elemente werden verwendet, wenn jegliche Benutzerinteraktion mit der App ausgesetzt ist oder die App auf eine Benutzereingabe wartet, um den Vorgang fortzusetzen.</span><span class="sxs-lookup"><span data-stu-id="97eb8-166">The indeterminate ProgressRing is used when any further user interaction with the app is halted, or the app is waiting for the user’s input to continue.</span></span> <span data-ttu-id="97eb8-167">Das „Anmelden...“-</span><span class="sxs-lookup"><span data-stu-id="97eb8-167">The “signing in…”</span></span> <span data-ttu-id="97eb8-168">Beispiel oben ist ein optimales Szenario für das ProgressRing-Steuerelement, da der Benutzer die App erst weiterverwenden kann, nachdem der Anmeldevorgang abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="97eb8-168">example above is a perfect scenario for the ProgressRing, the user cannot continue using the app until the sign is has completed.</span></span>
 
-## <a name="customizing-a-progress-control"></a>Anpassen eines Statussteuerelements
+## <a name="customizing-a-progress-control"></a><span data-ttu-id="97eb8-169">Anpassen eines Statussteuerelements</span><span class="sxs-lookup"><span data-stu-id="97eb8-169">Customizing a progress control</span></span>
 
-Die beiden Statussteuerelemente sind recht einfach gehalten. Bei verschiedenen visuellen Features der Steuerelemente sind jedoch deren Anpassungsoptionen nicht offensichtlich.
+<span data-ttu-id="97eb8-170">Die beiden Statussteuerelemente sind recht einfach gehalten. Bei verschiedenen visuellen Features der Steuerelemente sind jedoch deren Anpassungsoptionen nicht offensichtlich.</span><span class="sxs-lookup"><span data-stu-id="97eb8-170">Both progress controls are rather simple; but some visual features of the controls are not obvious to customize.</span></span>
 
-**Ändern der Größe des ProgressRing-Elements**
+**<span data-ttu-id="97eb8-171">Ändern der Größe des ProgressRing-Elements</span><span class="sxs-lookup"><span data-stu-id="97eb8-171">Sizing the ProgressRing</span></span>**
 
-Sie können das ProgressRing-Element so groß gestalten, wie Sie möchten. Die Mindestgröße beträgt jedoch 20 x 20 Epx. Um die Größe eines ProgressRing-Elements zu ändern, müssen Sie dessen Höhe und Breite festlegen. Wenn nur die Höhe oder nur die Breite festgelegt wird, erhält das Steuerelement die Mindestgröße (20 x 20 Epx). Wenn die Höhe und die Breite auf zwei verschiedene Größen festgelegt sind, wird die kleinere Größen verwendet.
-Um sicherzustellen, dass Ihr ProgressRing-Steuerelement seinen Zweck erfüllt, legen Sie für die Höhe und die Breite denselben Wert fest:
+<span data-ttu-id="97eb8-172">Sie können das ProgressRing-Element so groß gestalten, wie Sie möchten. Die Mindestgröße beträgt jedoch 20x20Epx.</span><span class="sxs-lookup"><span data-stu-id="97eb8-172">The ProgressRing can be sized as large as you want, but can only be as small as 20x20epx.</span></span> <span data-ttu-id="97eb8-173">Um die Größe eines ProgressRing-Elements zu ändern, müssen Sie dessen Höhe und Breite festlegen.</span><span class="sxs-lookup"><span data-stu-id="97eb8-173">In order to resize a ProgressRing, you must set its height and width.</span></span> <span data-ttu-id="97eb8-174">Wenn nur die Höhe oder nur die Breite festgelegt wird, erhält das Steuerelement die Mindestgröße (20x20Epx). Wenn die Höhe und die Breite auf zwei verschiedene Größen festgelegt sind, wird die kleinere Größen verwendet.</span><span class="sxs-lookup"><span data-stu-id="97eb8-174">If only height or width are set, the control will assume minimum sizing (20x20epx) – conversely if the height and width are set to two different sizes, the smaller of the sizes will be assumed.</span></span>
+<span data-ttu-id="97eb8-175">Um sicherzustellen, dass Ihr ProgressRing-Steuerelement seinen Zweck erfüllt, legen Sie für die Höhe und die Breite denselben Wert fest:</span><span class="sxs-lookup"><span data-stu-id="97eb8-175">To ensure your ProgressRing is correct for your needs, set bother the height and the width to the same value:</span></span>
 
 ```XAML
 <ProgressRing Height="100" Width="100"/>
 ```
 
-Wenn das ProgressRing-Element sichtbar und animiert sein soll, legen Sie die IsActive-Eigenschaft auf „true“ fest:
+<span data-ttu-id="97eb8-176">Wenn das ProgressRing-Element sichtbar und animiert sein soll, legen Sie die IsActive-Eigenschaft auf „true“ fest:</span><span class="sxs-lookup"><span data-stu-id="97eb8-176">To make your ProgressRing visible, and animate, you must set the IsActive property to true:</span></span>
 
 ```XAML
 <ProgressRing IsActive="True" Height="100" Width="100"/>
@@ -152,32 +148,31 @@ Wenn das ProgressRing-Element sichtbar und animiert sein soll, legen Sie die IsA
 progressRing.IsActive = true;
 ```
 
-**Farben der Statussteuerelemente**
+**<span data-ttu-id="97eb8-177">Farben der Statussteuerelemente</span><span class="sxs-lookup"><span data-stu-id="97eb8-177">Coloring the progress controls</span></span>**
 
-Standardmäßig ist die Grundfarbe der Statussteuerelemente auf die Akzentfarbe des Systems festgelegt. Dies können Sie anpassen, indem Sie einfach die „Foreground“-Eigenschaft der Steuerelemente ändern.
+<span data-ttu-id="97eb8-178">Standardmäßig ist die Grundfarbe der Statussteuerelemente auf die Akzentfarbe des Systems festgelegt.</span><span class="sxs-lookup"><span data-stu-id="97eb8-178">By default, the main coloring of the progress controls is set to the accent color of the system.</span></span> <span data-ttu-id="97eb8-179">Dies können Sie anpassen, indem Sie einfach die „Foreground“-Eigenschaft der Steuerelemente ändern.</span><span class="sxs-lookup"><span data-stu-id="97eb8-179">To override this brush simply change the foreground property on either control.</span></span>
 
 ```XAML
 <ProgressRing IsActive="True" Height="100" Width="100" Foreground="Blue"/>
 <ProgressBar Width="100" Foreground="Green"/>
 ```
 
-Durch das Ändern die Vordergrundfarbe des ProgressRing-Elements ändern sich die Farben der Punkte. Die „Foreground“-Eigenschaft des ProgressBar-Elements ändert dann die Füllfarbe der Leiste. Um den ungefüllten Teil der Leiste zu ändern, überschreiben Sie einfach die „Background“-Eigenschaft.
+<span data-ttu-id="97eb8-180">Durch das Ändern die Vordergrundfarbe des ProgressRing-Elements ändern sich die Farben der Punkte.</span><span class="sxs-lookup"><span data-stu-id="97eb8-180">Changing the foreground color for the ProgressRing will change the colors of the dots.</span></span> <span data-ttu-id="97eb8-181">Die „Foreground“-Eigenschaft des ProgressBar-Elements ändert dann die Füllfarbe der Leiste. Um den ungefüllten Teil der Leiste zu ändern, überschreiben Sie einfach die „Background“-Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="97eb8-181">The foreground property for the ProgressBar will change the fill color of the bar – to alter the unfilled portion of the bar, simply override the background property.</span></span>
 
-**Anzeigen eines Wartecursors**
+**<span data-ttu-id="97eb8-182">Anzeigen eines Wartecursors</span><span class="sxs-lookup"><span data-stu-id="97eb8-182">Showing a wait cursor</span></span>**
 
-Manchmal ist es am besten, nur kurz einen Wartecursor anzuzeigen, wenn eine App oder ein Vorgang etwas Zeit erfordert und Sie dem Benutzer anzeigen müssen, dass mit der App oder dem Bereich, in dem sich der Wartecursor befindet, bis zu dessen Ausblenden nicht interagiert werden sollte.
+<span data-ttu-id="97eb8-183">Manchmal ist es am besten, nur kurz einen Wartecursor anzuzeigen, wenn eine App oder ein Vorgang etwas Zeit erfordert und Sie dem Benutzer anzeigen müssen, dass mit der App oder dem Bereich, in dem sich der Wartecursor befindet, bis zu dessen Ausblenden nicht interagiert werden sollte.</span><span class="sxs-lookup"><span data-stu-id="97eb8-183">Sometimes it’s best to just show a brief wait cursor, when the app or operation needs time to think, and you need to indicate to the user that the app or area where the wait cursor is visible should not be interacted with until the wait cursor has disappeared.</span></span>
 
 ```C#
 Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Wait, 10);
 ```
 
-## <a name="related-articles"></a>Verwandte Artikel
+## <a name="related-articles"></a><span data-ttu-id="97eb8-184">Verwandte Artikel</span><span class="sxs-lookup"><span data-stu-id="97eb8-184">Related articles</span></span>
 
 
-- [**ProgressBar-Klasse**](https://msdn.microsoft.com/library/windows/apps/br227529)
-- [**ProgressRing-Klasse**](https://msdn.microsoft.com/library/windows/apps/br227538)
+- [<span data-ttu-id="97eb8-185">ProgressBar-Klasse</span><span class="sxs-lookup"><span data-stu-id="97eb8-185">ProgressBar class</span></span>](https://msdn.microsoft.com/library/windows/apps/br227529)
+- [<span data-ttu-id="97eb8-186">ProgressRing-Klasse</span><span class="sxs-lookup"><span data-stu-id="97eb8-186">ProgressRing class</span></span>](https://msdn.microsoft.com/library/windows/apps/br227538)
 
-**Für Entwickler (XAML)**
-- [Hinzufügen von Statussteuerelementen](https://msdn.microsoft.com/library/windows/apps/xaml/hh780651)
-- [So wird's gemacht: Erstellen einer benutzerdefinierten unbestimmten Statusleiste für Windows Phone](http://go.microsoft.com/fwlink/p/?LinkID=392426)
-
+**<span data-ttu-id="97eb8-187">Für Entwickler (XAML)</span><span class="sxs-lookup"><span data-stu-id="97eb8-187">For developers (XAML)</span></span>**
+- [<span data-ttu-id="97eb8-188">Hinzufügen von Statussteuerelementen</span><span class="sxs-lookup"><span data-stu-id="97eb8-188">Adding progress controls</span></span>](https://msdn.microsoft.com/library/windows/apps/xaml/hh780651)
+- [<span data-ttu-id="97eb8-189">So wird's gemacht: Erstellen einer benutzerdefinierten unbestimmten Statusleiste für Windows Phone</span><span class="sxs-lookup"><span data-stu-id="97eb8-189">How to create a custom indeterminate progress bar for Windows Phone</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=392426)

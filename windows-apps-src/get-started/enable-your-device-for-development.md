@@ -2,221 +2,258 @@
 author: GrantMeStrength
 ms.assetid: 54973C62-9669-4988-934E-9273FB0425FD
 title: "Aktivieren Ihres Geräts für die Entwicklung"
-description: "Konfigurieren Sie Ihr Windows 10-Gerät für die Entwicklung und das Debugging."
+description: "Konfigurieren Sie Ihr Windows10-Gerät für die Entwicklung und das Debugging."
 keywords: "Erste Schritte Entwicklerlizenz Visual Studio, Entwicklerlizenz Gerät aktivieren"
 ms.author: jken
-ms.date: 02/08/2017
+ms.date: 03/12/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: dc1bf476c93ef9843c20244f24a199c7888eb4a5
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8a7b01205acf12d4a0ab6d3d7024311b3944f103
+ms.sourcegitcommit: 0fa9ae00117e8e6b04ed38956e605bb74c1261c6
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
+# <a name="enable-your-device-for-development"></a><span data-ttu-id="597a5-104">Aktivieren Ihres Geräts für die Entwicklung</span><span class="sxs-lookup"><span data-stu-id="597a5-104">Enable your device for development</span></span>
 
-# <a name="enable-your-device-for-development"></a>Aktivieren Ihres Geräts für die Entwicklung
+## <a name="activate-developer-mode-sideload-apps-and-access-other-developer-features"></a><span data-ttu-id="597a5-105">Aktivieren Sie den Entwicklermodus, laden Sie Apps quer und greifen Sie auf andere Entwicklerfeatures zu</span><span class="sxs-lookup"><span data-stu-id="597a5-105">Activate Developer Mode, sideload apps and access other developer features</span></span>
 
-Bevor Sie Apps schreiben können, müssen Sie auf Ihrem Entwicklungs-PC sowie auf allen anderen Geräten, auf denen Sie Ihren Code testen werden, den Entwicklermodus aktivieren. 
+![Aktivieren Sie Ihre Geräte für die Entwicklung](images/developer-poster.png)
 
-![Aktivieren Ihrer Geräte für die Entwicklung](images/developer-poster.png)
+<span data-ttu-id="597a5-107">Wenn Sie Ihren Computer für normale tägliche Aktivitäten wie Spiele, Surfen im Web, E-Mail oder Office-Apps verwenden, müssen und sollten Sie den Entwicklermodus *nicht* aktivieren.</span><span class="sxs-lookup"><span data-stu-id="597a5-107">If you are using your computer for ordinary day-to-day activities such as games, web browsing, email or Office apps, you do *not* need to activate Developer Mode and in fact, you shouldn't activate it.</span></span> <span data-ttu-id="597a5-108">Die restlichen Informationen auf dieser Seite sind nicht von Bedeutung und Sie können beruhigt Ihre Arbeit fortsetzen.</span><span class="sxs-lookup"><span data-stu-id="597a5-108">The rest of the information on this page won't matter to you, and you can safely get back to whatever it is you were doing.</span></span> <span data-ttu-id="597a5-109">Vielen Dank für Ihren Besuch!</span><span class="sxs-lookup"><span data-stu-id="597a5-109">Thanks for stopping by!</span></span>
 
-## <a name="use-developer-features"></a>Verwenden von Entwicklerfeatures
-
-### <a name="develop-your-app-with-microsoft-visual-studio"></a>Entwickeln Ihrer App mit Microsoft Visual Studio
-
-Sie müssen den Entwicklermodus auf Ihrem PC aktivieren, bevor Sie ein UWP-App-Projekt in Visual Studio öffnen können. Wenn Sie ein UWP-Projekt öffnen und der Entwicklermodus nicht aktiviert ist, wird automatisch die Einstellungsseite **Für Entwickler** geöffnet. Führen Sie die Schritte zum Aktivieren des Entwicklermodus im nächsten Abschnitt aus.
-
-Wenn Sie ein UWP-App-Projekt in Visual Studio unter Windows 10, Version 1511 oder älter öffnen, wird in Visual Studio dieses Dialogfeld angezeigt. 
+<span data-ttu-id="597a5-110">Wenn Sie allerdings Software schreiben und dazu Visual Studio zum ersten Mal auf einem Computer verwenden, *müssen* Sie den Entwicklermodus auf dem Entwicklungs-PC und auf allen Geräten aktivieren, die Sie zum Testen des Codes verwenden.</span><span class="sxs-lookup"><span data-stu-id="597a5-110">However, if you are writing software with Visual Studio on a computer for first time, you *will* need to enable Developer Mode on both the development PC, and on any devices you'll use to test your code.</span></span> <span data-ttu-id="597a5-111">Wenn Sie ein UWP-Projekt öffnen, während der Entwicklermodus nicht aktiviert ist, wird entweder die Seite mit den Einstellungen **Für Entwickler** oder dieses Dialogfeld in Visual Studio angezeigt:</span><span class="sxs-lookup"><span data-stu-id="597a5-111">Opening a UWP project when Developer Mode is not enabled will either open the **For developers** settings page, or cause this dialog to appear in Visual Studio:</span></span>
 
 ![Dialogfeld zum Aktivieren des Entwicklermodus in Visual Studio](images/latestenabledialog.png)
 
-Wenn dieses Dialogfeld angezeigt wird, klicken Sie auf **Einstellungen für Entwickler**, um die Einstellungsseite **Für Entwickler** zu öffnen, und aktivieren Sie den Entwicklermodus.
-
-> Sie können jederzeit zur Seite **Für Entwickler** wechseln, um den Entwicklermodus zu aktivieren oder zu deaktivieren: Geben Sie einfach in der Taskleiste im Cortana-Suchfeld „Entwicklereinstellungen“ ein.
-
-### <a name="enable-your-windows-10-devices"></a>Aktivieren Ihrer Windows 10-Geräte
-
-Sie können ein Gerät für die Entwicklung oder nur für das Querladen aktivieren.
-
--   *Querladen* dient zum Installieren und Ausführen oder Testen einer App, die nicht vom Windows Store zertifiziert wurde. Hierzu zählen beispielsweise interne Unternehmens-Apps.
--   Im *Entwicklermodus* können Sie Apps querladen und Apps aus Visual Studio im Debugmodus ausführen. 
-
-    Wenn Sie den Entwicklermodus aktivieren, wird ein Paket mit Optionen installiert, das Folgendes enthält:
-    - Installiert Windows Device Portal. Nur wenn die Option **Geräteportal aktivieren** aktiviert ist, ist das Geräteportal aktiviert und Firewallregeln werden für es konfiguriert.
-    - Installiert, aktiviert und konfiguriert die Firewallregeln für SSH-Dienste, die eine Remote-Installation von Apps ermöglichen.
-    - (Nur Desktop) Ermöglicht das Aktivieren des Windows-Subsystems für Linux. Weitere Informationen finden Sie unter [Über Bash on Ubuntu unter Windows](https://msdn.microsoft.com/commandline/wsl/about).
-
-Nähere Informationen zu den Optionen finden Sie unter [Welche Einstellungen soll ich auswählen: Querladen von Apps oder Entwicklermodus?](https://msdn.microsoft.com/en-us/windows/uwp/get-started/enable-your-device-for-development#which-settings-should-i-choose-sideload-apps-or-developer-mode)
-
-**So verwenden Sie Entwicklerfeatures**
-
-1.  Navigieren Sie auf dem zu aktivierenden Gerät zu **Einstellungen**. Wählen Sie **Update und Sicherheit** und dann **Für Entwickler** aus.
-2.  Wählen Sie die geeignete Zugriffsebene aus: **Entwicklermodus** zum Entwickeln von UWP-Apps. 
-3.  Lesen Sie den Haftungsausschluss für die ausgewählte Einstellung, und klicken Sie dann auf **Ja** um die Änderung zu übernehmen.
+<span data-ttu-id="597a5-113">Wenn dieses Dialogfeld angezeigt wird, klicken Sie auf **Einstellungen für Entwickler**, um die Einstellungsseite **Für Entwickler** zu öffnen.</span><span class="sxs-lookup"><span data-stu-id="597a5-113">When you see this dialog, click **settings for developers** to open the **For developers** settings page.</span></span>
 
 > [!NOTE]
-> Wenn Ihr Gerät einem Unternehmen gehört, können von Ihrer Organisation einige Optionen deaktiviert werden, wie hier dargestellt.
+> <span data-ttu-id="597a5-114">Sie können jederzeit zur Seite **Für Entwickler** wechseln, um den Entwicklermodus zu aktivieren oder zu deaktivieren: Geben Sie einfach in der Taskleiste im Cortana-Suchfeld „für Entwickler“ ein.</span><span class="sxs-lookup"><span data-stu-id="597a5-114">You can go to the **For developers** page at any time to enable or disable Developer Mode: simply enter "for developers" into the Cortana search box in the taskbar.</span></span>
 
-Hier sehen Sie die Einstellungsseite auf Desktopgeräten.
+## <a name="accessing-settings-for-developers"></a><span data-ttu-id="597a5-115">Zugriff auf Entwicklereinstellungen</span><span class="sxs-lookup"><span data-stu-id="597a5-115">Accessing settings for Developers</span></span>
+
+<span data-ttu-id="597a5-116">So aktivieren Sie den Entwicklermodus und greifen auf andere Einstellungen zu:</span><span class="sxs-lookup"><span data-stu-id="597a5-116">To enable Developer mode, or access other settings:</span></span>
+
+1.  <span data-ttu-id="597a5-117">Wählen Sie im Dialogfeld **Für Entwickler** die Zugriffsebene aus, die Sie benötigen.</span><span class="sxs-lookup"><span data-stu-id="597a5-117">From the **For developers** settings dialog, choose the level of access that you need.</span></span>
+2.  <span data-ttu-id="597a5-118">Lesen Sie den Haftungsausschluss für die ausgewählte Einstellung, und klicken Sie dann auf **Ja**, um die Änderung zu übernehmen.</span><span class="sxs-lookup"><span data-stu-id="597a5-118">Read the disclaimer for the setting you chose, then click **Yes** to accept the change.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="597a5-119">Wenn Ihr Gerät einem Unternehmen gehört, sind einige Optionen möglicherweise von Ihrer Organisation deaktiviert.</span><span class="sxs-lookup"><span data-stu-id="597a5-119">If your device is owned by an organization, some options might be disabled by your organization.</span></span>
+
+<span data-ttu-id="597a5-120">Hier sehen Sie die Einstellungsseite auf Desktopgeräten:</span><span class="sxs-lookup"><span data-stu-id="597a5-120">Here's the settings page on the desktop device family:</span></span>
 
 ![Navigieren Sie zu „Einstellungen > Update und Sicherheit“, und wählen Sie „Für Entwickler“ aus, um Ihre Optionen anzuzeigen.](images/devmode-pc-options.png)
 
-Hier sehen Sie die Einstellungsseite auf Mobilgeräten.
+<span data-ttu-id="597a5-122">Hier sehen Sie die Einstellungsseite auf Mobilgeräten:</span><span class="sxs-lookup"><span data-stu-id="597a5-122">Here's the settings page on the mobile device family:</span></span>
 
 ![Navigieren Sie auf Ihrem Smartphone unter „Einstellungen“ zu „Update und Sicherheit“.](images/devmode-mob.png)
 
-## <a name="developer-mode-features"></a>Features im Entwicklermodus
+## <a name="which-setting-should-i-choose-sideload-apps-or-developer-mode"></a><span data-ttu-id="597a5-124">Welche Einstellung soll ich auswählen: Querladen von Apps oder Entwicklermodus?</span><span class="sxs-lookup"><span data-stu-id="597a5-124">Which setting should I choose: sideload apps or Developer Mode?</span></span>
 
-Für jede Gerätefamilie können zusätzliche Entwicklerfeatures verfügbar sein. Diese Features sind nur verfügbar, wenn der Entwicklermodus auf dem Gerät aktiviert ist, und können sich abhängig von der verwendeten Betriebssystemversion unterscheiden.
+ <span data-ttu-id="597a5-125">Sie können ein Gerät für die Entwicklung oder nur für das Querladen aktivieren.</span><span class="sxs-lookup"><span data-stu-id="597a5-125">You can enable a device for development, or just for sideloading.</span></span>
 
-Diese Abbildung zeigt Entwicklerfeatures für Mobilgeräte mit Windows 10, Version 1511.
+-   <span data-ttu-id="597a5-126">*Windows Store-Apps* ist die Standardeinstellung.</span><span class="sxs-lookup"><span data-stu-id="597a5-126">*Windows Store apps* is the default setting.</span></span> <span data-ttu-id="597a5-127">Wenn Sie keine Apps entwickeln oder spezielle interne Apps verwenden, die von Ihrem Unternehmen ausgestellt sind, sollten Sie diese Einstellung aktiviert lassen.</span><span class="sxs-lookup"><span data-stu-id="597a5-127">If you aren't developing apps, or using special internal apps issued by your company, keep this setting active.</span></span>
+-   <span data-ttu-id="597a5-128">*Querladen* dient zum Installieren und Ausführen oder Testen einer App, die nicht vom Windows Store zertifiziert wurde.</span><span class="sxs-lookup"><span data-stu-id="597a5-128">*Sideloading* is installing and then running or testing an app that has not been certified by the Windows Store.</span></span> <span data-ttu-id="597a5-129">Hierzu zählen beispielsweise interne Unternehmens-Apps.</span><span class="sxs-lookup"><span data-stu-id="597a5-129">For example, an app that is internal to your company only.</span></span>
+-   <span data-ttu-id="597a5-130">Im *Entwicklermodus* können Sie Apps querladen und Apps aus Visual Studio im Debugmodus ausführen.</span><span class="sxs-lookup"><span data-stu-id="597a5-130">*Developer mode* lets you sideload apps, and also run apps from Visual Studio in debug mode.</span></span> 
+
+<span data-ttu-id="597a5-131">Standardmäßig können Sie nur UWP-Apps (Universelle Windows-Plattform) aus dem Windows Store installieren.</span><span class="sxs-lookup"><span data-stu-id="597a5-131">By default, you can only install Universal Windows Platform (UWP) apps from the Windows Store.</span></span> <span data-ttu-id="597a5-132">Wenn Sie diese Einstellungen ändern, um die Entwicklerfeatures zu verwenden, kann hierdurch die Sicherheitsstufe Ihres Geräts geändert werden.</span><span class="sxs-lookup"><span data-stu-id="597a5-132">Changing these settings to use developer features can change the level of security of your device.</span></span> <span data-ttu-id="597a5-133">Sie sollten keine Apps aus nicht überprüften Quellen installieren.</span><span class="sxs-lookup"><span data-stu-id="597a5-133">You should not install apps from unverified sources.</span></span>
+
+### <a name="sideload-apps"></a><span data-ttu-id="597a5-134">Querladen von Apps</span><span class="sxs-lookup"><span data-stu-id="597a5-134">Sideload apps</span></span>
+
+<span data-ttu-id="597a5-135">Die Einstellung für das Querladen von Apps wird normalerweise von Unternehmen oder Bildungseinrichtungen verwendet, die benutzerdefinierte Apps auf verwalteten Geräten installieren müssen, ohne den Windows Store zu nutzen.</span><span class="sxs-lookup"><span data-stu-id="597a5-135">The Sideload apps setting is typically used by companies or schools that need to install custom apps on managed devices without going through the Windows Store.</span></span> <span data-ttu-id="597a5-136">In diesem Fall wird im Unternehmen häufig eine Richtlinie erzwungen, mit der die Einstellung *Windows Store-Apps* deaktiviert wird, wie oben in der Abbildung der Einstellungsseite dargestellt.</span><span class="sxs-lookup"><span data-stu-id="597a5-136">In this case, it's common for the organization to enforce a policy that disables the *Windows Store apps* setting, as shown previously in the image of the settings page.</span></span> <span data-ttu-id="597a5-137">Die Organisation stellt außerdem das erforderliche Zertifikat und den Installationsspeicherort zum Querladen von Apps bereit.</span><span class="sxs-lookup"><span data-stu-id="597a5-137">The organization also provides the required certificate and install location to sideload apps.</span></span> <span data-ttu-id="597a5-138">Weitere Informationen finden Sie in den TechNet-Artikeln [Querladen von Branchen-Apps in Windows 10](https://technet.microsoft.com/library/mt269549.aspx) und [Erste Schritte mit der Bereitstellung von Apps in Microsoft Intune](https://technet.microsoft.com/library/dn646955.aspx).</span><span class="sxs-lookup"><span data-stu-id="597a5-138">For more info, see the TechNet articles [Sideload apps in Windows 10](https://technet.microsoft.com/library/mt269549.aspx) and [Get started with app deployment in Microsoft Intune](https://technet.microsoft.com/library/dn646955.aspx).</span></span>
+
+<span data-ttu-id="597a5-139">Spezifische Informationen für Gerätefamilien</span><span class="sxs-lookup"><span data-stu-id="597a5-139">Device family specific info</span></span>
+
+-   <span data-ttu-id="597a5-140">Desktopgeräte: Sie können ein App-Paket (APPX-Datei) und jedes Zertifikat, das zur Ausführung der App benötigt wird, mit dem Windows PowerShell-Skript installieren, das mit dem Paket erstellt wird („Add-AppDevPackage.ps1“).</span><span class="sxs-lookup"><span data-stu-id="597a5-140">On the desktop device family: You can install an app package (.appx) and any certificate that is needed to run the app by running the Windows PowerShell script that is created with the package ("Add-AppDevPackage.ps1").</span></span> <span data-ttu-id="597a5-141">Weitere Informationen finden Sie unter [Verpacken von UWP-Apps](../packaging/packaging-uwp-apps.md).</span><span class="sxs-lookup"><span data-stu-id="597a5-141">For more info, see [Packaging UWP apps](../packaging/packaging-uwp-apps.md).</span></span>
+
+-   <span data-ttu-id="597a5-142">Mobilgeräte: Wenn das erforderliche Zertifikat bereits installiert ist, tippen Sie auf die Datei, um beliebige APPX-Dateien zu installieren, die Sie über eine E-Mail oder eine SD-Karte erhalten haben.</span><span class="sxs-lookup"><span data-stu-id="597a5-142">On the mobile device family: If the required certificate is already installed, you can tap the file to install any .appx sent to you via email or on an SD card.</span></span>
+
+<span data-ttu-id="597a5-143">Das **Querladen von Apps** ist eine sicherere Option als der Entwicklermodus, da Sie Apps ohne vertrauenswürdiges Zertifikat nicht auf dem Gerät installieren können.</span><span class="sxs-lookup"><span data-stu-id="597a5-143">**Sideload apps** is a more secure option than Developer Mode because you cannot install apps on the device without a trusted certificate.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="597a5-144">Achten Sie beim Querladen von Apps darauf, dass diese von einer vertrauenswürdigen Quelle stammen.</span><span class="sxs-lookup"><span data-stu-id="597a5-144">If you sideload apps, you should still only install apps from trusted sources.</span></span> <span data-ttu-id="597a5-145">Wenn Sie eine quergeladene, nicht vom Windows Store zertifizierte App installieren, bestätigen Sie, dass Sie über alle erforderlichen Rechte zum Querladen dieser App verfügen und die alleinige Verantwortung für jegliche Schäden tragen, die durch das Installieren und Ausführen dieser App entstehen können.</span><span class="sxs-lookup"><span data-stu-id="597a5-145">When you install a sideloaded app that has not been certified by the Windows Store, you are agreeing that you have obtained all rights necessary to sideload the app and that you are solely responsible for any harm that results from installing and running the app.</span></span> <span data-ttu-id="597a5-146">Weitere Informationen finden Sie in diesen [Datenschutzbestimmungen](http://go.microsoft.com/fwlink/?LinkId=521839) im Abschnitt zu Windows &gt; „Windows Store“.</span><span class="sxs-lookup"><span data-stu-id="597a5-146">See the Windows &gt; Windows Store section of this [privacy statement](http://go.microsoft.com/fwlink/?LinkId=521839).</span></span>
+
+### <a name="developer-mode"></a><span data-ttu-id="597a5-147">Entwicklermodus</span><span class="sxs-lookup"><span data-stu-id="597a5-147">Developer Mode</span></span>
+
+<span data-ttu-id="597a5-148">Der Entwicklermodus ersetzt die Windows 8.1-Anforderungen durch eine Entwicklerlizenz.</span><span class="sxs-lookup"><span data-stu-id="597a5-148">Developer Mode replaces the Windows 8.1 requirements for a developer license.</span></span>  <span data-ttu-id="597a5-149">Neben dem Querladen bietet der Entwicklermodus Debug- und zusätzliche Bereitstellungsoptionen.</span><span class="sxs-lookup"><span data-stu-id="597a5-149">In addition to sideloading, the Developer Mode setting enables debugging and additional deployment options.</span></span> <span data-ttu-id="597a5-150">Hierzu gehört das Starten eines SSH-Diensts, der Bereitstellungen auf diesem Gerät ermöglicht.</span><span class="sxs-lookup"><span data-stu-id="597a5-150">This includes starting an SSH service to allow this device to be deployed to.</span></span> <span data-ttu-id="597a5-151">Um den Dienst zu beenden, müssen Sie den Entwicklermodus deaktivieren.</span><span class="sxs-lookup"><span data-stu-id="597a5-151">In order to stop this service, you have to disable Developer Mode.</span></span>
+
+<span data-ttu-id="597a5-152">Spezifische Informationen für Gerätefamilien</span><span class="sxs-lookup"><span data-stu-id="597a5-152">Device family specific info</span></span>
+
+-   <span data-ttu-id="597a5-153">Desktopgeräte:</span><span class="sxs-lookup"><span data-stu-id="597a5-153">On the desktop device family:</span></span>
+
+    <span data-ttu-id="597a5-154">Aktivieren Sie den Entwicklermodus, um Apps in Visual Studio zu entwickeln und zu debuggen.</span><span class="sxs-lookup"><span data-stu-id="597a5-154">Enable Developer Mode to develop and debug apps in Visual Studio.</span></span> <span data-ttu-id="597a5-155">Wie bereits beschrieben, wird in Visual Studio eine Meldung angezeigt, wenn der Entwicklermodus nicht aktiviert ist.</span><span class="sxs-lookup"><span data-stu-id="597a5-155">As stated previously, you will be prompted in Visual Studio if Developer Mode is not enabled.</span></span>
+
+    <span data-ttu-id="597a5-156">Auf PCs mit Version vor dem Fall Creators Update ermöglicht dies Aktivieren das Windows-Subsystem für Linux.</span><span class="sxs-lookup"><span data-stu-id="597a5-156">On pre-Fall-Creators-Update PCs, this allows enabling of the Windows subsystem for Linux.</span></span> <span data-ttu-id="597a5-157">Weitere Informationen finden Sie unter [Über Bash on Ubuntu unter Windows](https://msdn.microsoft.com/commandline/wsl/about).</span><span class="sxs-lookup"><span data-stu-id="597a5-157">For more info, see [About Bash on Ubuntu on Windows](https://msdn.microsoft.com/commandline/wsl/about).</span></span>  <span data-ttu-id="597a5-158">Ab dem Fall Creators Update ist der Entwicklermodus für WSL nicht mehr erforderlich.</span><span class="sxs-lookup"><span data-stu-id="597a5-158">Developer Mode is no longer required for WSL, as of the Fall Creators Update.</span></span>  
+
+-   <span data-ttu-id="597a5-159">Mobilgeräte:</span><span class="sxs-lookup"><span data-stu-id="597a5-159">On the mobile device family:</span></span>
+
+    <span data-ttu-id="597a5-160">Aktivieren Sie den Entwicklermodus, um Apps aus Visual Studio auf dem Gerät bereitzustellen und zu debuggen.</span><span class="sxs-lookup"><span data-stu-id="597a5-160">Enable developer mode to deploy apps from Visual Studio and debug them on the device.</span></span>
+
+    <span data-ttu-id="597a5-161">Sie können auf die Datei tippen, um beliebige APPX-Dateien zu installieren, die Sie per E-Mail oder auf einer SD-Karte erhalten haben.</span><span class="sxs-lookup"><span data-stu-id="597a5-161">You can tap the file to install any .appx sent to you via email or on an SD card.</span></span> <span data-ttu-id="597a5-162">Installieren Sie keine Apps aus nicht überprüften Quellen.</span><span class="sxs-lookup"><span data-stu-id="597a5-162">Do not install apps from unverified sources.</span></span>
+
+## <a name="additional-developer-mode-features"></a><span data-ttu-id="597a5-163">Weitere Features im Entwicklermodus</span><span class="sxs-lookup"><span data-stu-id="597a5-163">Additional Developer Mode features</span></span>
+
+<span data-ttu-id="597a5-164">Für jede Gerätefamilie können zusätzliche Entwicklerfeatures verfügbar sein.</span><span class="sxs-lookup"><span data-stu-id="597a5-164">For each device family, additional developer features might be available.</span></span> <span data-ttu-id="597a5-165">Diese Features sind nur verfügbar, wenn der Entwicklermodus auf dem Gerät aktiviert ist, und können sich abhängig von der verwendeten Betriebssystemversion unterscheiden.</span><span class="sxs-lookup"><span data-stu-id="597a5-165">These features are available only when Developer Mode is enabled on the device, and might vary depending on your OS version.</span></span>
+
+<span data-ttu-id="597a5-166">Wenn Sie den Entwicklermodus aktivieren, wird ein Paket mit Optionen installiert, das Folgendes enthält:</span><span class="sxs-lookup"><span data-stu-id="597a5-166">When you enable Developer Mode, a package of options is installed that includes:</span></span>
+- <span data-ttu-id="597a5-167">Windows Device Portal.</span><span class="sxs-lookup"><span data-stu-id="597a5-167">Windows Device Portal.</span></span> <span data-ttu-id="597a5-168">Nur wenn die Option **Geräteportal aktivieren** aktiviert ist, ist das Geräteportal aktiviert und Firewallregeln werden für es konfiguriert.</span><span class="sxs-lookup"><span data-stu-id="597a5-168">Device Portal is enabled and firewall rules are configured for it only when the **Enable Device Portal** option is turned on.</span></span>
+- <span data-ttu-id="597a5-169">Installiert, aktiviert und konfiguriert die Firewallregeln für SSH-Dienste, die eine Remote-Installation von Apps ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="597a5-169">Installs, enables, and configures firewall rules for SSH services that allow remote installation of apps.</span></span>
+
+
+<span data-ttu-id="597a5-170">Diese Abbildung zeigt Entwicklerfeatures für Mobilgeräte mit Windows 10:</span><span class="sxs-lookup"><span data-stu-id="597a5-170">This image shows developer features for the mobile device family on Windows 10:</span></span>
 
 ![Entwicklermodusoptionen für Mobilgeräte](images/devmode-mob-options.png) 
 
-### <a name="span-iddevice-discovery-and-pairingspandevice-portal"></a><span id="device-discovery-and-pairing"></span>Geräteportal
+### <a name="span-iddevice-discovery-and-pairingspandevice-portal"></a><span data-ttu-id="597a5-172"><span id="device-discovery-and-pairing"></span>Geräteportal</span><span class="sxs-lookup"><span data-stu-id="597a5-172"><span id="device-discovery-and-pairing"></span>Device Portal</span></span>
 
-Weitere Informationen zur Gerätesuche und zum Device Portal finden Sie in der [Übersicht über das Windows Device Portal](../debug-test-perf/device-portal.md).
+<span data-ttu-id="597a5-173">Weitere Informationen zum Device Portal finden Sie in der [Übersicht über das Windows Device Portal](../debug-test-perf/device-portal.md).</span><span class="sxs-lookup"><span data-stu-id="597a5-173">To learn more about Device Portal, see [Windows Device Portal overview](../debug-test-perf/device-portal.md).</span></span>
 
-Gerätespezifische Anweisungen zum Einrichten finden Sie in folgenden Artikeln:
-- [Geräteportal für Desktop](https://msdn.microsoft.com/windows/uwp/debug-test-perf/device-portal-desktop)
-- [Geräteportal für HoloLens](https://developer.microsoft.com/windows/holographic/using_the_windows_device_portal)
-- [Geräteportal für IoT](https://developer.microsoft.com/windows/iot/docs/DevicePortal)
-- [Geräteportal für Mobilgeräte](../debug-test-perf/device-portal-mobile.md)
-- [Geräteportal für Xbox](../debug-test-perf/device-portal-xbox.md)
+<span data-ttu-id="597a5-174">Gerätespezifische Anweisungen zum Einrichten finden Sie in folgenden Artikeln:</span><span class="sxs-lookup"><span data-stu-id="597a5-174">For device specific setup instructions, see:</span></span>
+- [<span data-ttu-id="597a5-175">Geräteportal für Desktop</span><span class="sxs-lookup"><span data-stu-id="597a5-175">Device Portal for Desktop</span></span>](https://msdn.microsoft.com/windows/uwp/debug-test-perf/device-portal-desktop)
+- [<span data-ttu-id="597a5-176">Geräteportal für HoloLens</span><span class="sxs-lookup"><span data-stu-id="597a5-176">Device Portal for HoloLens</span></span>](https://developer.microsoft.com/windows/holographic/using_the_windows_device_portal)
+- [<span data-ttu-id="597a5-177">Device Portal für IoT</span><span class="sxs-lookup"><span data-stu-id="597a5-177">Device Portal for IoT</span></span>](https://developer.microsoft.com/windows/iot/docs/DevicePortal)
+- [<span data-ttu-id="597a5-178">Device Portal für Mobilgeräte</span><span class="sxs-lookup"><span data-stu-id="597a5-178">Device Portal for Mobile</span></span>](../debug-test-perf/device-portal-mobile.md)
+- [<span data-ttu-id="597a5-179">Geräteportal für Xbox</span><span class="sxs-lookup"><span data-stu-id="597a5-179">Device Portal for Xbox</span></span>](../debug-test-perf/device-portal-xbox.md)
 
-Wenn Probleme beim Aktivieren des Entwicklermodus oder des Geräteportals auftreten, finden Sie im Forum [Bekannte Probleme](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) Problemumgehungen. 
+<span data-ttu-id="597a5-180">Wenn Sie Probleme beim Aktivieren des Entwicklermodus oder des Geräteportals haben, finden Sie im Forum [Bekannte Probleme](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) Problemumgehungen für diese Probleme. Suchen Sie andernfalls unter [Fehler beim Installieren des Entwicklermoduspakets](#failure-to-install-developer-mode-package) nach zusätzlichen Detail und welche WSUS KBs zugelassen werden, um das Paket im Entwicklermodus zu erlauben oder zu entsperren.</span><span class="sxs-lookup"><span data-stu-id="597a5-180">If you encounter problems enabling Developer Mode or Device Portal, see the [Known Issues](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) forum to find workarounds for these issues, or visit [Failure to install the Developer Mode package](#failure-to-install-developer-mode-package) for additional details and which WSUS KBs to allow in order to unblock the Developer Mode package.</span></span> 
 
-###<a name="ssh"></a>SSH
+###<a name="ssh"></a><span data-ttu-id="597a5-181">SSH</span><span class="sxs-lookup"><span data-stu-id="597a5-181">SSH</span></span>
 
-Wenn Sie den Entwicklermodus auf Ihrem Gerät aktivieren, sind SSH-Dienste aktiviert.  Diese werden verwendet, wenn Ihr Gerät ein Bereitstellungsziel für UWP-Anwendungen ist.   Die Namen der Dienste sind „SSH Server Broker“ und „SSH Server Proxy“.
+<span data-ttu-id="597a5-182">Wenn Sie den Entwicklermodus auf Ihrem Gerät aktivieren, sind SSH-Dienste aktiviert.</span><span class="sxs-lookup"><span data-stu-id="597a5-182">SSH services are enabled when you enable Developer Mode on your device.</span></span>  <span data-ttu-id="597a5-183">Diese werden verwendet, wenn Ihr Gerät ein Bereitstellungsziel für UWP-Anwendungen ist.</span><span class="sxs-lookup"><span data-stu-id="597a5-183">This is used when your device is a deployment target for UWP applications.</span></span>   <span data-ttu-id="597a5-184">Die Namen der Dienste sind „SSH Server Broker“ und „SSH Server Proxy“.</span><span class="sxs-lookup"><span data-stu-id="597a5-184">The names of the services are 'SSH Server Broker' and 'SSH Server Proxy'.</span></span>
 
 > [!NOTE]
-> Dies ist nicht die OpenSSH-Implementierung von Microsoft, die Sie auf [GitHub](https://github.com/PowerShell/Win32-OpenSSH) finden.
+> <span data-ttu-id="597a5-185">Dies ist nicht die OpenSSH-Implementierung von Microsoft, die Sie auf [GitHub](https://github.com/PowerShell/Win32-OpenSSH) finden.</span><span class="sxs-lookup"><span data-stu-id="597a5-185">This is not Microsoft's OpenSSH implementation, which you can find on [GitHub](https://github.com/PowerShell/Win32-OpenSSH).</span></span>
 
-Wenn Sie die SSH-Dienste nutzen möchten, können Sie die Gerätesuche aktivieren, um eine Pin-Kopplung zu ermöglichen. Wenn ein anderer SSH-Dienst ausgeführt werden soll, können Sie diesen auf einem anderen Anschluss einrichten oder die SSH-Dienste im Entwicklermodus deaktivieren. Um die SSH-Dienste zu deaktivieren, deaktivieren Sie einfach den Entwicklermodus.  
+<span data-ttu-id="597a5-186">Wenn Sie die SSH-Dienste nutzen möchten, können Sie die Gerätesuche aktivieren, um eine Pin-Kopplung zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="597a5-186">In order to take advantage of the SSH services, you can enable device discovery to allow pin pairing.</span></span> <span data-ttu-id="597a5-187">Wenn ein anderer SSH-Dienst ausgeführt werden soll, können Sie diesen auf einem anderen Anschluss einrichten oder die SSH-Dienste im Entwicklermodus deaktivieren.</span><span class="sxs-lookup"><span data-stu-id="597a5-187">If you intend to run another SSH service, you can set this up on a different port or turn off the Developer Mode SSH services.</span></span> <span data-ttu-id="597a5-188">Um die SSH-Dienste zu deaktivieren, deaktivieren Sie einfach den Entwicklermodus.</span><span class="sxs-lookup"><span data-stu-id="597a5-188">To turn off the SSH services, simply disable Developer Mode.</span></span>  
 
-### <a name="device-discovery"></a>Gerätesuche
+### <a name="device-discovery"></a><span data-ttu-id="597a5-189">Gerätesuche</span><span class="sxs-lookup"><span data-stu-id="597a5-189">Device Discovery</span></span>
 
-Wenn Sie die Gerätesuche aktivieren, ist Ihr Gerät über mDNS für andere Geräte im Netzwerk sichtbar.  Dieses Feature ermöglicht auch das Abrufen der SSH-PIN zur Kopplung mit diesem Gerät.  
+<span data-ttu-id="597a5-190">Wenn Sie die Gerätesuche aktivieren, ist Ihr Gerät über mDNS für andere Geräte im Netzwerk sichtbar.</span><span class="sxs-lookup"><span data-stu-id="597a5-190">When you enable device discovery, you are allowing your device to be visible to other devices on the network through mDNS.</span></span>  <span data-ttu-id="597a5-191">Dieses Feature ermöglicht auch das Abrufen der SSH-PIN zur Kopplung mit diesem Gerät.</span><span class="sxs-lookup"><span data-stu-id="597a5-191">This feature also allows you to get the SSH PIN for pairing to this device.</span></span>  
 
 ![PIN-Kopplung](images/devmode-pc-pinpair.PNG)
 
-Die Gerätesuche sollte nur aktiviert werden, wenn das Gerät ein Bereitstellungsziel sein soll. Wenn beispielsweise eine App über das Geräteportal zum Testen auf einem Smartphone bereitgestellt wird, müssen Sie die Gerätesuche auf dem Smartphone, jedoch nicht auf Ihrem Entwicklungscomputer aktivieren.
+<span data-ttu-id="597a5-193">Die Gerätesuche sollte nur aktiviert werden, wenn das Gerät ein Bereitstellungsziel sein soll.</span><span class="sxs-lookup"><span data-stu-id="597a5-193">You should enable device discovery only if you intend to make the device a deployment target.</span></span> <span data-ttu-id="597a5-194">Wenn beispielsweise eine App über das Geräteportal zum Testen auf einem Smartphone bereitgestellt wird, müssen Sie die Gerätesuche auf dem Smartphone, jedoch nicht auf Ihrem Entwicklungscomputer aktivieren.</span><span class="sxs-lookup"><span data-stu-id="597a5-194">For example, if you use Device Portal to deploy an app to a phone for testing, you need to enable device discovery on the phone, but not on your development PC.</span></span>
 
-### <a name="error-reporting-mobile-only"></a>Fehlerberichterstattung (nur Mobile)
+### <a name="error-reporting-mobile-only"></a><span data-ttu-id="597a5-195">Fehlerberichterstattung (nur Mobile)</span><span class="sxs-lookup"><span data-stu-id="597a5-195">Error reporting (Mobile only)</span></span>
 
-Legen Sie diesen Wert fest, um anzugeben, wie viele Absturzabbilder auf dem Smartphone gespeichert werden.
+<span data-ttu-id="597a5-196">Legen Sie diesen Wert fest, um anzugeben, wie viele Absturzabbilder auf dem Smartphone gespeichert werden.</span><span class="sxs-lookup"><span data-stu-id="597a5-196">Set this value to specify how many crash dumps are saved on your phone.</span></span>
 
-Indem Sie Absturzabbilder auf Ihrem Smartphone speichern, haben Sie direkt nach einem Absturz sofort Zugriff auf wichtige Informationen. Abbilder werden nur für von Entwicklern signierte Apps erfasst. Sie finden die Abbilder im Speicher Ihres Smartphones im Ordner „Documents\\Debug“. Weitere Informationen zu Abbilddateien finden Sie im Artikel zum [Verwenden von Dumpdateien](https://msdn.microsoft.com/library/d5zhxt22.aspx).
+<span data-ttu-id="597a5-197">Indem Sie Absturzabbilder auf Ihrem Smartphone speichern, haben Sie direkt nach einem Absturz sofort Zugriff auf wichtige Informationen.</span><span class="sxs-lookup"><span data-stu-id="597a5-197">Collecting crash dumps on your phone gives you instant access to important crash information directly after the crash occurs.</span></span> <span data-ttu-id="597a5-198">Abbilder werden nur für von Entwicklern signierte Apps erfasst.</span><span class="sxs-lookup"><span data-stu-id="597a5-198">Dumps are collected for developer-signed apps only.</span></span> <span data-ttu-id="597a5-199">Sie finden die Abbilder im Speicher Ihres Smartphones im Ordner „Documents\\Debug“.</span><span class="sxs-lookup"><span data-stu-id="597a5-199">You can find the dumps in your phone's storage in the Documents\\Debug folder.</span></span> <span data-ttu-id="597a5-200">Weitere Informationen zu Abbilddateien finden Sie im Artikel zum [Verwenden von Dumpdateien](https://msdn.microsoft.com/library/d5zhxt22.aspx).</span><span class="sxs-lookup"><span data-stu-id="597a5-200">For more info about dump files, see [Using dump files](https://msdn.microsoft.com/library/d5zhxt22.aspx).</span></span>
 
-### <a name="optimizations-for-windows-explorer-remote-desktop-and-powershell-desktop-only"></a>Optimierungen für Windows-Explorer, Remotedesktop und PowerShell (nur Desktop)
+### <a name="optimizations-for-windows-explorer-remote-desktop-and-powershell-desktop-only"></a><span data-ttu-id="597a5-201">Optimierungen für Windows-Explorer, Remotedesktop und PowerShell (nur Desktop)</span><span class="sxs-lookup"><span data-stu-id="597a5-201">Optimizations for Windows Explorer, Remote Desktop, and PowerShell (Desktop only)</span></span>
 
- Auf der Desktopgerätefamilie finden Sie auf der Einstellungsseite **Für Entwickler** Verknüpfungen zu den Einstellungen, die Sie zum Optimieren Ihres PCs für Entwicklungsaufgaben verwenden können. Für jede Einstellung können Sie das Kontrollkästchen aktivieren und auf **Übernehmen** klicken, oder Sie können auf den Link **Einstellungen anzeigen** klicken, um die Einstellungsseite für diese Option zu öffnen. 
+ <span data-ttu-id="597a5-202">Auf der Desktopgerätefamilie finden Sie auf der Einstellungsseite **Für Entwickler** Verknüpfungen zu den Einstellungen, die Sie zum Optimieren Ihres PCs für Entwicklungsaufgaben verwenden können.</span><span class="sxs-lookup"><span data-stu-id="597a5-202">On the desktop device family, the **For developers** settings page has shortcuts to settings that you can use to optimize your PC for development tasks.</span></span> <span data-ttu-id="597a5-203">Für jede Einstellung können Sie das Kontrollkästchen aktivieren und auf **Übernehmen** klicken, oder Sie können auf den Link **Einstellungen anzeigen** klicken, um die Einstellungsseite für diese Option zu öffnen.</span><span class="sxs-lookup"><span data-stu-id="597a5-203">For each setting, you can select the checkbox and click **Apply**, or click the **Show settings** link to open the settings page for that option.</span></span> 
 
-## <a name="which-settings-should-i-choose-sideload-apps-or-developer-mode"></a>Welche Einstellungen soll ich auswählen: Querladen von Apps oder Entwicklermodus?
 
-Standardmäßig können Sie nur UWP-Apps (Universelle Windows-Plattform) aus dem Windows Store installieren. Wenn Sie diese Einstellungen ändern, um die Entwicklerfeatures zu verwenden, kann hierdurch die Sicherheitsstufe Ihres Geräts geändert werden. Sie sollten keine Apps aus nicht überprüften Quellen installieren.
 
-### <a name="sideload-apps"></a>Querladen von Apps
+**<span data-ttu-id="597a5-204">Tipp</span><span class="sxs-lookup"><span data-stu-id="597a5-204">Tip</span></span>**  
+<span data-ttu-id="597a5-205">Es gibt verschiedene Tools, mit denen Sie eine App von einem Windows10-PC auf einem mobilen Gerät bereitstellen können.</span><span class="sxs-lookup"><span data-stu-id="597a5-205">There are several tools you can use to deploy an app from a Windows 10 PC to a Windows 10 mobile device.</span></span> <span data-ttu-id="597a5-206">Beide Geräte müssen über eine kabelgebundene oder drahtlose Verbindung mit dem gleichen Subnetz des Netzwerks verbunden sein oder über USB verbunden werden.</span><span class="sxs-lookup"><span data-stu-id="597a5-206">Both devices must be connected to the same subnet of the network by a wired or wireless connection, or they must be connected by USB.</span></span> <span data-ttu-id="597a5-207">Mit beiden aufgeführten Methoden wird nur das App-Paket (APPX) installiert, nicht die Zertifikate.</span><span class="sxs-lookup"><span data-stu-id="597a5-207">Either of the ways listed installs only the app package (.appx); they do not install certificates.</span></span>
 
-Die Einstellung für das Querladen von Apps wird normalerweise von Unternehmen oder Bildungseinrichtungen verwendet, die benutzerdefinierte Apps auf verwalteten Geräten installieren müssen, ohne den Windows Store zu nutzen. In diesem Fall wird im Unternehmen häufig eine Richtlinie erzwungen, mit der die Einstellung *Windows Store-Apps* deaktiviert wird, wie oben in der Abbildung der Einstellungsseite dargestellt. Die Organisation stellt außerdem das erforderliche Zertifikat und den Installationsspeicherort zum Querladen von Apps bereit. Weitere Informationen finden Sie in den TechNet-Artikeln [Querladen von Branchen-Apps in Windows 10](https://technet.microsoft.com/library/mt269549.aspx) und [Erste Schritte mit der Bereitstellung von Apps in Microsoft Intune](https://technet.microsoft.com/library/dn646955.aspx).
+-   <span data-ttu-id="597a5-208">Verwenden Sie das Tool für die Windows10-Anwendungsbereitstellung (WinAppDeployCmd).</span><span class="sxs-lookup"><span data-stu-id="597a5-208">Use the Windows 10 Application Deployment (WinAppDeployCmd) tool.</span></span> <span data-ttu-id="597a5-209">Weitere Informationen zum [Tool WinAppDeployCmd](http://msdn.microsoft.com/library/windows/apps/mt203806.aspx).</span><span class="sxs-lookup"><span data-stu-id="597a5-209">Learn more about [the WinAppDeployCmd tool](http://msdn.microsoft.com/library/windows/apps/mt203806.aspx).</span></span>
+-   <span data-ttu-id="597a5-210">Ab Windows10, Version 1511, ist im [Device Portal](../debug-test-perf/device-portal-desktop.md) die Bereitstellung aus Ihrem Browser auf einem mobilen Gerät unter Windows10, Version 1511 oder höher, möglich.</span><span class="sxs-lookup"><span data-stu-id="597a5-210">Starting in Windows 10, Version 1511, you can use [Device Portal](../debug-test-perf/device-portal-desktop.md) to deploy from your browser to a mobile device running Windows 10, Version 1511 or later.</span></span> <span data-ttu-id="597a5-211">Im Geräteportal können Sie auf der Seite **[Apps](../debug-test-perf/device-portal.md#apps)** ein App-Paket (APPX) hochladen und auf dem Gerät installieren.</span><span class="sxs-lookup"><span data-stu-id="597a5-211">Use the **[Apps](../debug-test-perf/device-portal.md#apps)** page in Device Portal to upload an app package (.appx) and install it on the device.</span></span>
 
-Spezifische Informationen für Gerätefamilien
+## <a name="failure-to-install-developer-mode-package"></a><span data-ttu-id="597a5-212">Fehler beim Installieren des Entwicklermoduspakets</span><span class="sxs-lookup"><span data-stu-id="597a5-212">Failure to install Developer Mode package</span></span>
+<span data-ttu-id="597a5-213">In manchen Fällen wird der Entwicklermodus aufgrund von Problemen mit dem Netzwerk oder dem Administrator nicht ordnungsgemäß installiert.</span><span class="sxs-lookup"><span data-stu-id="597a5-213">Sometimes, due to network or administrative issues, Developer Mode won't install correctly.</span></span> <span data-ttu-id="597a5-214">Das Entwicklermoduspaket ist für die **dezentrale** Bereitstellungen auf diesem PC erforderlich – verwenden Sie Device Portal über einen Browser oder Device Discovery SSH – aber nicht für die lokale Entwicklung.</span><span class="sxs-lookup"><span data-stu-id="597a5-214">The Developer Mode package is required for **remote** deployment to this PC -- using Device Portal from a browser or Device Discovery to enable SSH -- but not for local development.</span></span>  <span data-ttu-id="597a5-215">Selbst wenn diese Probleme auftreten, können Sie Ihre App weiterhin mithilfe von Visual Studio oder von diesem Gerät auf ein anderes Gerät bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="597a5-215">Even if you encounter these issues, you can still deploy your app locally using Visual Studio, or from this device to another device.</span></span> 
 
--   Desktopgeräte: Sie können ein App-Paket (APPX-Datei) und jedes Zertifikat, das zur Ausführung der App benötigt wird, mit dem Windows PowerShell-Skript installieren, das mit dem Paket erstellt wird („Add-AppDevPackage.ps1“). Weitere Informationen finden Sie unter [Verpacken von UWP-Apps](../packaging/packaging-uwp-apps.md).
+<span data-ttu-id="597a5-216">Im Forum zu den [bekannten Problemen](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) finden Sie entsprechende Problemumgehungen und vieles mehr.</span><span class="sxs-lookup"><span data-stu-id="597a5-216">See the [Known Issues](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) forum to find workarounds to these issues and more.</span></span> 
 
--   Mobilgeräte: Wenn das erforderliche Zertifikat bereits installiert ist, tippen Sie auf die Datei, um beliebige APPX-Dateien zu installieren, die Sie über eine E-Mail oder eine SD-Karte erhalten haben.
+### <a name="failed-to-locate-the-package"></a><span data-ttu-id="597a5-217">Das Paket konnte nicht gefunden werden</span><span class="sxs-lookup"><span data-stu-id="597a5-217">Failed to locate the package</span></span>
 
-Das **Querladen von Apps** ist eine sicherere Option als der Entwicklermodus, da Sie Apps ohne vertrauenswürdiges Zertifikat nicht auf dem Gerät installieren können.
+<span data-ttu-id="597a5-218">"Developer Mode package couldn’t be located in Windows Update.</span><span class="sxs-lookup"><span data-stu-id="597a5-218">"Developer Mode package couldn’t be located in Windows Update.</span></span> <span data-ttu-id="597a5-219">Error Code 0x80004005 Learn more"</span><span class="sxs-lookup"><span data-stu-id="597a5-219">Error Code 0x80004005 Learn more"</span></span>   
 
-> [!NOTE]
-> Achten Sie beim Querladen von Apps darauf, dass diese von einer vertrauenswürdigen Quelle stammen. Wenn Sie eine quergeladene, nicht vom Windows Store zertifizierte App installieren, bestätigen Sie, dass Sie über alle erforderlichen Rechte zum Querladen dieser App verfügen und die alleinige Verantwortung für jegliche Schäden tragen, die durch das Installieren und Ausführen dieser App entstehen können. Weitere Informationen finden Sie in diesen [Datenschutzbestimmungen](http://go.microsoft.com/fwlink/?LinkId=521839) im Abschnitt zu Windows &gt; „Windows Store“.
+<span data-ttu-id="597a5-220">Dieser Fehler kann aufgrund eines Netzwerkverbindungsproblems, aufgrund von Enterprise-Einstellungen oder weil das Paket nicht vorhanden ist, auftreten.</span><span class="sxs-lookup"><span data-stu-id="597a5-220">This error may occur due to a network connectivity problem, Enterprise settings, or the package may be missing.</span></span> 
 
-### <a name="developer-mode"></a>Entwicklermodus
+<span data-ttu-id="597a5-221">So beheben Sie dieses Problem:</span><span class="sxs-lookup"><span data-stu-id="597a5-221">To fix this issue:</span></span>
 
-Der Entwicklermodus ersetzt die Windows 8.1-Anforderungen durch eine Entwicklerlizenz.  Neben dem Querladen bietet der Entwicklermodus Debug- und zusätzliche Bereitstellungsoptionen. Hierzu gehört das Starten eines SSH-Diensts, der Bereitstellungen auf diesem Gerät ermöglicht. Um den Dienst zu beenden, müssen Sie den Entwicklermodus deaktivieren.
+1. <span data-ttu-id="597a5-222">Stellen Sie sicher, dass Ihr Computer mit dem Internet verbunden ist.</span><span class="sxs-lookup"><span data-stu-id="597a5-222">Ensure your computer is connected to the Internet.</span></span> 
+2. <span data-ttu-id="597a5-223">Wenn Sie einen in eine Domäne eingebundenen Computer verwenden, sprechen Sie mit dem Netzwerkadministrator.</span><span class="sxs-lookup"><span data-stu-id="597a5-223">If you are on a domain-joined computer, speak to your network administrator.</span></span> <span data-ttu-id="597a5-224">Das Entwicklermoduspaket ist genau wie alle anderen Features standardmäßig in WSUS blockiert.</span><span class="sxs-lookup"><span data-stu-id="597a5-224">The Developer Mode package, like all Features on Demand,  is blocked by default in WSUS.</span></span> <span data-ttu-id="597a5-225">2.1.</span><span class="sxs-lookup"><span data-stu-id="597a5-225">2.1.</span></span> <span data-ttu-id="597a5-226">Um das Entwicklermoduspaket in der aktuellen und vorherigen Versionen zu entsperren, sollte die folgenden KBs in WSUS zugelassen werden: 4016509, 3180030, 3197985</span><span class="sxs-lookup"><span data-stu-id="597a5-226">In order to unblock the Developer Mode package in the current and previous releases, the following KBs should be allowed in WSUS: 4016509, 3180030, 3197985</span></span>  
+3. <span data-ttu-id="597a5-227">Suchen nach Windows-Updates in den Einstellungen > Updates und Sicherheit > Windows-Updates.</span><span class="sxs-lookup"><span data-stu-id="597a5-227">Check for Windows updates in the Settings > Updates and Security > Windows Updates.</span></span>
+4. <span data-ttu-id="597a5-228">Stellen Sie sicher, dass das Windows-Entwicklermoduspaket in den Einstellungen > System > Apps und Features > Optionale Features verwalten > Feature hinzufügen vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="597a5-228">Verify that the Windows Developer Mode package is present in Settings > System > Apps & Features > Manage optional features > Add a feature.</span></span> <span data-ttu-id="597a5-229">Wenn es nicht vorhanden ist, kann Windows das richtige Paket für Ihren Computer nicht finden.</span><span class="sxs-lookup"><span data-stu-id="597a5-229">If it is missing, Windows cannot find the correct package for your computer.</span></span> 
 
-Spezifische Informationen für Gerätefamilien
+<span data-ttu-id="597a5-230">Nachdem Sie einen der oben genannten Schritte durchgeführt haben, deaktivieren Sie den Entwicklermodus, und aktivieren Sie ihn dann erneut, um die Korrektur zu überprüfen.</span><span class="sxs-lookup"><span data-stu-id="597a5-230">After doing any of the above steps, disable and then re-enable Developer Mode to verify the fix.</span></span> 
 
--   Desktopgeräte:
 
-    Aktivieren Sie den Entwicklermodus, um Apps in Visual Studio zu entwickeln und zu debuggen. Wie bereits beschrieben, wird in Visual Studio eine Meldung angezeigt, wenn der Entwicklermodus nicht aktiviert ist.
+### <a name="failed-to-install-the-package"></a><span data-ttu-id="597a5-231">Fehler beim Installieren des Pakets</span><span class="sxs-lookup"><span data-stu-id="597a5-231">Failed to install the package</span></span>
 
-    Ermöglicht das Aktivieren des Windows-Subsystems für Linux. Weitere Informationen finden Sie unter [Über Bash on Ubuntu unter Windows](https://msdn.microsoft.com/commandline/wsl/about).
+<span data-ttu-id="597a5-232">"Developer Mode package failed to install.</span><span class="sxs-lookup"><span data-stu-id="597a5-232">"Developer Mode package failed to install.</span></span> <span data-ttu-id="597a5-233">Error Code 0x80004005 Learn more"</span><span class="sxs-lookup"><span data-stu-id="597a5-233">Error code 0x80004005  Learn more"</span></span>
 
--   Mobilgeräte:
+<span data-ttu-id="597a5-234">Dieser Fehler kann aufgrund von Inkompatibilitäten zwischen dem Build von Windows und dem Entwicklermoduspaket auftreten.</span><span class="sxs-lookup"><span data-stu-id="597a5-234">This error may occur due to incompatibilities between your build of Windows and the Developer Mode package.</span></span> 
 
-    Aktivieren Sie den Entwicklermodus, um Apps aus Visual Studio auf dem Gerät bereitzustellen und zu debuggen.
+<span data-ttu-id="597a5-235">So beheben Sie dieses Problem:</span><span class="sxs-lookup"><span data-stu-id="597a5-235">To fix this issue:</span></span>
 
-    Sie können auf die Datei tippen, um beliebige APPX-Dateien zu installieren, die Sie per E-Mail oder auf einer SD-Karte erhalten haben. Installieren Sie keine Apps aus nicht überprüften Quellen.
+1. <span data-ttu-id="597a5-236">Suchen nach Windows-Updates in den Einstellungen > Updates und Sicherheit > Windows-Updates.</span><span class="sxs-lookup"><span data-stu-id="597a5-236">Check for Windows updates in the Settings > Updates and Security > Windows Updates.</span></span>
+2. <span data-ttu-id="597a5-237">Starten Sie Ihren Computer neu, um sicherzustellen, dass alle Updates angewendet wurden.</span><span class="sxs-lookup"><span data-stu-id="597a5-237">Reboot your computer to ensure all updates are applied.</span></span>
 
-**Tipp**  
-Es gibt verschiedene Tools, mit denen Sie eine App von einem Windows 10-PC auf einem mobilen Gerät bereitstellen können. Beide Geräte müssen über eine kabelgebundene oder drahtlose Verbindung mit dem gleichen Subnetz des Netzwerks verbunden sein oder über USB verbunden werden. Mit beiden aufgeführten Methoden wird nur das App-Paket (APPX) installiert, nicht die Zertifikate.
 
--   Verwenden Sie das Tool für die Windows 10-Anwendungsbereitstellung (WinAppDeployCmd). Weitere Informationen zum [Tool WinAppDeployCmd](http://msdn.microsoft.com/library/windows/apps/mt203806.aspx).
--   Ab Windows 10, Version 1511, ist im [Device Portal](#device_portal) die Bereitstellung aus Ihrem Browser auf einem mobilen Gerät unter Windows 10, Version 1511 oder höher, möglich. Im Geräteportal können Sie auf der Seite **[Apps](../debug-test-perf/device-portal.md#apps)** ein App-Paket (APPX) hochladen und auf dem Gerät installieren.
+## <a name="use-group-policies-or-registry-keys-to-enable-a-device"></a><span data-ttu-id="597a5-238">Verwenden von Gruppenrichtlinien oder Registrierungsschlüsseln zum Aktivieren von Geräten</span><span class="sxs-lookup"><span data-stu-id="597a5-238">Use group policies or registry keys to enable a device</span></span>
 
-## <a name="use-group-policies-or-registry-keys-to-enable-a-device"></a>Verwenden von Gruppenrichtlinien oder Registrierungsschlüsseln zum Aktivieren von Geräten
+<span data-ttu-id="597a5-239">Entwickler sollten meist die Einstellungs-Apps verwenden, um Geräte für das Debuggen zu aktivieren.</span><span class="sxs-lookup"><span data-stu-id="597a5-239">For most developers, you want to use the settings app to enable your device for debugging.</span></span> <span data-ttu-id="597a5-240">In bestimmten Szenarien wie z.B. bei automatisierten Tests stehen weitere Möglichkeiten zum Aktivieren Ihres Windows10-Desktopgeräts für die Entwicklung zur Verfügung.</span><span class="sxs-lookup"><span data-stu-id="597a5-240">In certain scenarios, such as automated tests, you can use other ways to enable your Windows 10 desktop device for development.</span></span>
 
-Entwickler sollten meist die Einstellungs-Apps verwenden, um Geräte für das Debuggen zu aktivieren. In bestimmten Szenarien wie z. B. bei automatisierten Tests stehen weitere Möglichkeiten zum Aktivieren Ihres Windows 10-Desktopgeräts für die Entwicklung zur Verfügung.
+<span data-ttu-id="597a5-241">Sie können mithilfe von „gpedit.msc“ die Gruppenrichtlinien für die Geräteaktivierung festlegen (es sei denn, Sie verwenden Windows10 Home).</span><span class="sxs-lookup"><span data-stu-id="597a5-241">You can use gpedit.msc to set the group policies to enable your device, unless you have Windows 10 Home.</span></span> <span data-ttu-id="597a5-242">In Windows10 Home müssen die Registrierungsschlüssel für die Geräteaktivierung direkt mithilfe von regedit oder von PowerShell-Befehlen festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="597a5-242">If you do have Windows 10 Home, you need to use regedit or PowerShell commands to set the registry keys directly to enable your device.</span></span>
 
-Sie können mithilfe von „gpedit.msc“ die Gruppenrichtlinien für die Geräteaktivierung festlegen (es sei denn, Sie verwenden Windows 10 Home). In Windows 10 Home müssen die Registrierungsschlüssel für die Geräteaktivierung direkt mithilfe von regedit oder von PowerShell-Befehlen festgelegt werden.
+**<span data-ttu-id="597a5-243">Aktivieren des Geräts mithilfe von „gpedit“</span><span class="sxs-lookup"><span data-stu-id="597a5-243">Use gpedit to enable your device</span></span>**
 
-**Aktivieren des Geräts mithilfe von „gpedit“**
+1.  <span data-ttu-id="597a5-244">Führen Sie **Gpedit.msc** aus.</span><span class="sxs-lookup"><span data-stu-id="597a5-244">Run **Gpedit.msc**.</span></span>
+2.  <span data-ttu-id="597a5-245">Navigieren Sie zu „Richtlinie für "Lokaler Computer" &gt; Computerkonfiguration &gt; Administrative Vorlagen &gt; Windows-Komponenten &gt; App-Paketbereitstellung.</span><span class="sxs-lookup"><span data-stu-id="597a5-245">Go to Local Computer Policy &gt; Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; App Package Deployment</span></span>
+3.  <span data-ttu-id="597a5-246">Bearbeiten Sie zum Aktivieren des Querladens die folgenden Richtlinien:</span><span class="sxs-lookup"><span data-stu-id="597a5-246">To enable sideloading, edit the policies to enable:</span></span>
 
-1.  Führen Sie **Gpedit.msc** aus.
-2.  Navigieren Sie zu „Richtlinie für "Lokaler Computer" &gt; Computerkonfiguration &gt; Administrative Vorlagen &gt; Windows-Komponenten &gt; App-Paketbereitstellung.
-3.  Bearbeiten Sie zum Aktivieren des Querladens die folgenden Richtlinien:
+    -   **<span data-ttu-id="597a5-247">Zulassen, dass alle vertrauenswürdigen Apps installiert werden</span><span class="sxs-lookup"><span data-stu-id="597a5-247">Allow all trusted apps to install</span></span>**
 
-    -   **Zulassen, dass alle vertrauenswürdigen Apps installiert werden**
+    - <span data-ttu-id="597a5-248">ODER</span><span class="sxs-lookup"><span data-stu-id="597a5-248">OR -</span></span>
 
-    - ODER
+    <span data-ttu-id="597a5-249">Bearbeiten Sie zum Aktivieren des Entwicklermodus die Richtlinien, um beide zu aktivieren:</span><span class="sxs-lookup"><span data-stu-id="597a5-249">To enable developer mode, edit the policies to enable both:</span></span>
 
-    Bearbeiten Sie zum Aktivieren des Entwicklermodus die Richtlinien, um beide zu aktivieren:
+    -   **<span data-ttu-id="597a5-250">Zulassen, dass alle vertrauenswürdigen Apps installiert werden</span><span class="sxs-lookup"><span data-stu-id="597a5-250">Allow all trusted apps to install</span></span>**
+    -   **<span data-ttu-id="597a5-251">Hiermit wird die Entwicklung von Windows Store-Apps und Ihre Installation aus einer integrierten Entwicklungsumgebung (IDE) zugelassen.</span><span class="sxs-lookup"><span data-stu-id="597a5-251">Allows development of Windows Store apps and installing them from an integrated development environment (IDE)</span></span>**
 
-    -   **Zulassen, dass alle vertrauenswürdigen Apps installiert werden**
-    -   **Hiermit wird die Entwicklung von Windows Store-Apps und Ihre Installation aus einer integrierten Entwicklungsumgebung (IDE) zugelassen.**
+4.  <span data-ttu-id="597a5-252">Starten Sie Ihren Computer neu.</span><span class="sxs-lookup"><span data-stu-id="597a5-252">Reboot your machine.</span></span>
 
-4.  Starten Sie Ihren Computer neu.
+**<span data-ttu-id="597a5-253">Aktivieren des Geräts mithilfe von „regedit“</span><span class="sxs-lookup"><span data-stu-id="597a5-253">Use regedit to enable your device</span></span>**
 
-**Aktivieren des Geräts mithilfe von „regedit“**
+1.  <span data-ttu-id="597a5-254">Führen Sie **regedit** aus.</span><span class="sxs-lookup"><span data-stu-id="597a5-254">Run **regedit**.</span></span>
+2.  <span data-ttu-id="597a5-255">Legen Sie diesen DWORD-Wert auf 1 fest, um das Querladen zu aktivieren.</span><span class="sxs-lookup"><span data-stu-id="597a5-255">To enable sideloading, set the value of this DWORD to 1:</span></span>
 
-1.  Führen Sie **regedit** aus.
-2.  Legen Sie diesen DWORD-Wert auf 1 fest, um das Querladen zu aktivieren.
+    -   **<span data-ttu-id="597a5-256">HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowAllTrustedApps</span><span class="sxs-lookup"><span data-stu-id="597a5-256">HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowAllTrustedApps</span></span>**
 
-    -   **HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowAllTrustedApps**
+    - <span data-ttu-id="597a5-257">ODER</span><span class="sxs-lookup"><span data-stu-id="597a5-257">OR -</span></span>
 
-    - ODER
+    <span data-ttu-id="597a5-258">Um den Entwicklermodus zu aktivieren, legen Sie diese DWORD-Werte auf 1 fest:</span><span class="sxs-lookup"><span data-stu-id="597a5-258">To enable developer mode, set the values of this DWORD to 1:</span></span>
 
-    Um den Entwicklermodus zu aktivieren, legen Sie diese DWORD-Werte auf 1 fest:
+    -   **<span data-ttu-id="597a5-259">HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowDevelopmentWithoutDevLicense</span><span class="sxs-lookup"><span data-stu-id="597a5-259">HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowDevelopmentWithoutDevLicense</span></span>**
 
-    -   **HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowDevelopmentWithoutDevLicense**
+**<span data-ttu-id="597a5-260">Aktivieren des Geräts mithilfe von PowerShell</span><span class="sxs-lookup"><span data-stu-id="597a5-260">Use PowerShell to enable your device</span></span>**
 
-**Aktivieren des Geräts mithilfe von PowerShell**
+1.  <span data-ttu-id="597a5-261">Führen Sie PowerShell mit Administratorrechten aus.</span><span class="sxs-lookup"><span data-stu-id="597a5-261">Run PowerShell with administrator privileges.</span></span>
+2.  <span data-ttu-id="597a5-262">Führen Sie zum Aktivieren des Querladens diesen Befehl aus:</span><span class="sxs-lookup"><span data-stu-id="597a5-262">To enable sideloading, run this command:</span></span>
 
-1.  Führen Sie PowerShell mit Administratorrechten aus.
-2.  Führen Sie zum Aktivieren des Querladens diesen Befehl aus:
+    -   **<span data-ttu-id="597a5-263">PS C:\\WINDOWS\\system32&gt; reg add "HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock" /t REG\_DWORD /f /v "AllowAllTrustedApps" /d "1"</span><span class="sxs-lookup"><span data-stu-id="597a5-263">PS C:\\WINDOWS\\system32&gt; reg add "HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock" /t REG\_DWORD /f /v "AllowAllTrustedApps" /d "1"</span></span>**
 
-    -   **PS C:\\WINDOWS\\system32&gt; reg add "HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock" /t REG\_DWORD /f /v "AllowAllTrustedApps" /d "1"**
+    - <span data-ttu-id="597a5-264">ODER</span><span class="sxs-lookup"><span data-stu-id="597a5-264">OR -</span></span>
 
-    - ODER
+    <span data-ttu-id="597a5-265">Führen Sie zum Aktivieren des Entwicklermodus diesen Befehl aus:</span><span class="sxs-lookup"><span data-stu-id="597a5-265">To enable developer mode, run this command:</span></span>
 
-    Führen Sie zum Aktivieren des Entwicklermodus diesen Befehl aus:
+    -   **<span data-ttu-id="597a5-266">PS C:\\WINDOWS\\system32&gt; reg add "HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock" /t REG\_DWORD /f /v "AllowDevelopmentWithoutDevLicense" /d "1"</span><span class="sxs-lookup"><span data-stu-id="597a5-266">PS C:\\WINDOWS\\system32&gt; reg add "HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock" /t REG\_DWORD /f /v "AllowDevelopmentWithoutDevLicense" /d "1"</span></span>**
 
-    -   **PS C:\\WINDOWS\\system32&gt; reg add "HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock" /t REG\_DWORD /f /v "AllowDevelopmentWithoutDevLicense" /d "1"**
+## <a name="upgrade-your-device-from-windows-81-to-windows-10"></a><span data-ttu-id="597a5-267">Aktualisieren Ihres Geräts von Windows 8.1 auf Windows 10</span><span class="sxs-lookup"><span data-stu-id="597a5-267">Upgrade your device from Windows 8.1 to Windows 10</span></span>
 
-## <a name="upgrade-your-device-from-windows-81-to-windows-10"></a>Aktualisieren Ihres Geräts von Windows 8.1 auf Windows 10
+<span data-ttu-id="597a5-268">Wenn Sie Apps auf Ihrem Windows8.1-Gerät erstellen oder querladen, müssen Sie eine Entwicklerlizenz installieren.</span><span class="sxs-lookup"><span data-stu-id="597a5-268">When you create or sideload apps on your Windows 8.1 device, you have to install a developer license.</span></span> <span data-ttu-id="597a5-269">Beim Upgrade Ihres Geräts von Windows8.1 auf Windows10 bleiben diese Informationen erhalten.</span><span class="sxs-lookup"><span data-stu-id="597a5-269">If you upgrade your device from Windows 8.1 to Windows 10, this information remains.</span></span> <span data-ttu-id="597a5-270">Führen Sie den folgenden Befehl aus, um diese Informationen von Ihrem aktualisierten Windows10-Gerät zu entfernen.</span><span class="sxs-lookup"><span data-stu-id="597a5-270">Run the following command to remove this information from your upgraded Windows 10 device.</span></span> <span data-ttu-id="597a5-271">Dieser Schritt ist nicht erforderlich, wenn Sie ein Upgrade von Windows8.1 direkt auf Windows10, Version1511 oder höher, ausführen.</span><span class="sxs-lookup"><span data-stu-id="597a5-271">This step is not required if you upgrade directly from Windows 8.1 to Windows 10, Version 1511 or later.</span></span>
 
-Wenn Sie Apps auf Ihrem Windows 8.1-Gerät erstellen oder querladen, müssen Sie eine Entwicklerlizenz installieren. Beim Upgrade Ihres Geräts von Windows 8.1 auf Windows 10 bleiben diese Informationen erhalten. Führen Sie den folgenden Befehl aus, um diese Informationen von Ihrem aktualisierten Windows 10-Gerät zu entfernen. Dieser Schritt ist nicht erforderlich, wenn Sie ein Upgrade von Windows 8.1 direkt auf Windows 10, Version 1511 oder höher, ausführen.
+**<span data-ttu-id="597a5-272">So heben Sie die Registrierung einer Entwicklerlizenz auf</span><span class="sxs-lookup"><span data-stu-id="597a5-272">To unregister a developer license</span></span>**
 
-**So heben Sie die Registrierung einer Entwicklerlizenz auf**
+1.  <span data-ttu-id="597a5-273">Führen Sie PowerShell mit Administratorrechten aus.</span><span class="sxs-lookup"><span data-stu-id="597a5-273">Run PowerShell with administrator privileges.</span></span>
+2.  <span data-ttu-id="597a5-274">Führen Sie folgenden Befehl aus: **unregister-windowsdeveloperlicense**.</span><span class="sxs-lookup"><span data-stu-id="597a5-274">Run this command: **unregister-windowsdeveloperlicense**.</span></span>
 
-1.  Führen Sie PowerShell mit Administratorrechten aus.
-2.  Führen Sie folgenden Befehl aus: **unregister-windowsdeveloperlicense**.
+<span data-ttu-id="597a5-275">Danach müssen Sie Ihr Gerät wie in diesem Thema beschrieben für die Entwicklung aktivieren, damit Sie weiterhin auf diesem Gerät entwickeln können.</span><span class="sxs-lookup"><span data-stu-id="597a5-275">After this you need to enable your device for development as described in this topic so that you can continue to develop on this device.</span></span> <span data-ttu-id="597a5-276">Andernfalls erhalten Sie möglicherweise eine Fehlermeldung, wenn Sie Ihre App debuggen oder versuchen, ein Paket dafür zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="597a5-276">If you don't do that, you might get an error when you debug your app, or you try to create a package for it.</span></span> <span data-ttu-id="597a5-277">Hier ist ein Beispiel für diesen Fehler:</span><span class="sxs-lookup"><span data-stu-id="597a5-277">Here is an example of this error:</span></span>
 
-Danach müssen Sie Ihr Gerät wie in diesem Thema beschrieben für die Entwicklung aktivieren, damit Sie weiterhin auf diesem Gerät entwickeln können. Andernfalls erhalten Sie möglicherweise eine Fehlermeldung, wenn Sie Ihre App debuggen oder versuchen, ein Paket dafür zu erstellen. Hier ist ein Beispiel für diesen Fehler:
+<span data-ttu-id="597a5-278">Fehler : DEP0700 : Registrierung der App fehlgeschlagen.</span><span class="sxs-lookup"><span data-stu-id="597a5-278">Error : DEP0700 : Registration of the app failed.</span></span>
 
-Fehler : DEP0700 : Registrierung der App fehlgeschlagen.
+## <a name="see-also"></a><span data-ttu-id="597a5-279">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="597a5-279">See Also</span></span>
 
+* [<span data-ttu-id="597a5-280">Ihre erste App</span><span class="sxs-lookup"><span data-stu-id="597a5-280">Your first app</span></span>](your-first-app.md)
+* <span data-ttu-id="597a5-281">[Veröffentlichen Ihrer Windows Store-Apps](https://developer.microsoft.com/store/publish-apps).</span><span class="sxs-lookup"><span data-stu-id="597a5-281">[Publishing your Windows Store app](https://developer.microsoft.com/store/publish-apps).</span></span>
+* [<span data-ttu-id="597a5-282">Anleitungen zur Entwicklung von UWP-Apps</span><span class="sxs-lookup"><span data-stu-id="597a5-282">How-to articles on developing UWP apps</span></span>](https://developer.microsoft.com/windows/apps/develop)
+* [<span data-ttu-id="597a5-283">Codebeispiele für UWP-Entwickler</span><span class="sxs-lookup"><span data-stu-id="597a5-283">Code Samples for UWP developers</span></span>](https://developer.microsoft.com/windows/samples)
+* [<span data-ttu-id="597a5-284">Was ist eine universelle Windows-App?</span><span class="sxs-lookup"><span data-stu-id="597a5-284">What's a Universal Windows app?</span></span>](whats-a-uwp.md)
+* [<span data-ttu-id="597a5-285">Für Windows-Konto anmelden</span><span class="sxs-lookup"><span data-stu-id="597a5-285">Sign up for Windows account</span></span>](sign-up.md)

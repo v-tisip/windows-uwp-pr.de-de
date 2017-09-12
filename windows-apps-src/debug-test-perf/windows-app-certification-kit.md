@@ -1,106 +1,105 @@
 ---
-author: mcleblanc
+author: PatrickFarley
 ms.assetid: 78D833B9-E528-4BCA-9C48-A757F17E6C22
 title: "Zertifizierungskit für Windows-Apps"
 description: "Damit Ihre App möglichst gute Chancen auf eine Veröffentlichung im Windows Store oder Windows-Zertifizierung hat, sollten Sie sie auf Ihrem Computer überprüfen und testen, bevor Sie sie zur Zertifizierung übermitteln. In diesem Thema wird erläutert, wie Sie das Zertifizierungskit für Windows-Apps installieren und ausführen."
-ms.author: markl
+ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: f30eaa7edf229872170a3f661c931787938acb2d
-ms.lasthandoff: 02/07/2017
-
+keywords: windows10, UWP
+ms.openlocfilehash: fb5303898bfb0d7021ba4c0aa48afd5038bcad4d
+ms.sourcegitcommit: 8c4d50ef819ed1a2f8cac4eebefb5ccdaf3fa898
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/27/2017
 ---
-# <a name="windows-app-certification-kit"></a>Zertifizierungskit für Windows-Apps
+# <a name="windows-app-certification-kit"></a><span data-ttu-id="e7449-105">Zertifizierungskit für Windows-Apps</span><span class="sxs-lookup"><span data-stu-id="e7449-105">Windows App Certification Kit</span></span>
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+<span data-ttu-id="e7449-106">\[ Aktualisiert für UWP-Apps unter Windows10.</span><span class="sxs-lookup"><span data-stu-id="e7449-106">\[ Updated for UWP apps on Windows 10.</span></span> <span data-ttu-id="e7449-107">Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]</span><span class="sxs-lookup"><span data-stu-id="e7449-107">For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span></span>
 
 
-Damit Ihre App möglichst gute Chancen auf eine [Veröffentlichung im Windows Store](https://msdn.microsoft.com/library/windows/apps/Hh694062) oder [Windows-Zertifizierung](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) hat, sollten Sie sie auf Ihrem Computer überprüfen und testen, bevor Sie sie zur Zertifizierung übermitteln. In diesem Thema wird erläutert, wie Sie das [Zertifizierungskit für Windows-Apps](http://go.microsoft.com/fwlink/p/?LinkID=309666) installieren und ausführen.
+<span data-ttu-id="e7449-108">Damit Ihre App möglichst gute Chancen auf eine [Veröffentlichung im Windows Store](https://msdn.microsoft.com/library/windows/apps/Hh694062) oder [Windows-Zertifizierung](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) hat, sollten Sie sie auf Ihrem Computer überprüfen und testen, bevor Sie sie zur Zertifizierung übermitteln.</span><span class="sxs-lookup"><span data-stu-id="e7449-108">To give your app the best chance of being [published on the Windows Store](https://msdn.microsoft.com/library/windows/apps/Hh694062), or becoming [Windows Certified](https://msdn.microsoft.com/windows/desktop/jj134964.aspx), validate and test it locally before you submit it for certification.</span></span> <span data-ttu-id="e7449-109">In diesem Thema wird erläutert, wie Sie das [Zertifizierungskit für Windows-Apps](http://go.microsoft.com/fwlink/p/?LinkID=309666) installieren und ausführen.</span><span class="sxs-lookup"><span data-stu-id="e7449-109">This topic shows you how to install and run the [Windows App Certification Kit](http://go.microsoft.com/fwlink/p/?LinkID=309666).</span></span>
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a><span data-ttu-id="e7449-110">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="e7449-110">Prerequisites</span></span>
 
-Voraussetzungen für das Testen einer universellen Windows-App:
+<span data-ttu-id="e7449-111">Voraussetzungen für das Testen einer universellen Windows-App:</span><span class="sxs-lookup"><span data-stu-id="e7449-111">Prerequisites for testing a Universal Windows app:</span></span>
 
--   Installieren und verwenden Sie Windows 10.
--   Sie müssen das [Zertifizierungskit für Windows-Apps, Version 10]( http://go.microsoft.com/fwlink/p/?LinkID=309666) installieren, das im Windows Software Development Kit (SDK) für Windows 10 enthalten ist.
--   Sie benötigen eine gültige Entwicklerlizenz für Ihren Computer. Informationen hierzu finden Sie unter [Anfordern einer Entwicklerlizenz](https://msdn.microsoft.com/library/windows/apps/Hh974578).
--   Sie müssen die zu testende Windows-App auf Ihrem Computer bereitstellen.
+-   <span data-ttu-id="e7449-112">Installieren und verwenden Sie Windows 10.</span><span class="sxs-lookup"><span data-stu-id="e7449-112">You must install and run Windows 10.</span></span>
+-   <span data-ttu-id="e7449-113">Sie müssen das [Zertifizierungskit für Windows-Apps, Version10]( http://go.microsoft.com/fwlink/p/?LinkID=309666) installieren, das im Windows Software Development Kit (SDK) für Windows10 enthalten ist.</span><span class="sxs-lookup"><span data-stu-id="e7449-113">You must install [Windows App Certification Kit version 10]( http://go.microsoft.com/fwlink/p/?LinkID=309666), which is included in the Windows Software Development Kit (SDK) for Windows 10.</span></span>
+-   <span data-ttu-id="e7449-114">Sie müssen [Ihr Gerät für die Entwicklung aktivieren](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development).</span><span class="sxs-lookup"><span data-stu-id="e7449-114">You must [enable your device for development](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development).</span></span>
+-   <span data-ttu-id="e7449-115">Sie müssen die zu testende Windows-App auf Ihrem Computer bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="e7449-115">You must deploy the Windows app that you want to test to your computer.</span></span>
 
-**Hinweis zu direkten Upgrades**
+**<span data-ttu-id="e7449-116">Hinweis zu direkten Upgrades</span><span class="sxs-lookup"><span data-stu-id="e7449-116">A note about in-place upgrades</span></span>**
 
-Beim Installieren einer neueren Version des [Zertifizierungskits für Windows-Apps]( http://go.microsoft.com/fwlink/p/?LinkID=309666) werden alle vorherigen Versionen des Kits ersetzt, die auf dem Computer installiert sind.
+<span data-ttu-id="e7449-117">Beim Installieren einer neueren Version des [Zertifizierungskits für Windows-Apps]( http://go.microsoft.com/fwlink/p/?LinkID=309666) werden alle vorherigen Versionen des Kits ersetzt, die auf dem Computer installiert sind.</span><span class="sxs-lookup"><span data-stu-id="e7449-117">The installation of a more recent [Windows App Certification Kit]( http://go.microsoft.com/fwlink/p/?LinkID=309666) will replace any previous version of the kit that is installed on the machine.</span></span>
 
-## <a name="validate-your-windows-app-using-the-windows-app-certification-kit-interactively"></a>Interaktive Überprüfung der Windows-App mit dem Zertifizierungskit für Windows-Apps
+## <a name="validate-your-windows-app-using-the-windows-app-certification-kit-interactively"></a><span data-ttu-id="e7449-118">Interaktive Überprüfung der Windows-App mit dem Zertifizierungskit für Windows-Apps</span><span class="sxs-lookup"><span data-stu-id="e7449-118">Validate your Windows app using the Windows App Certification Kit interactively</span></span>
 
-1.  Suchen Sie im Startmenü**** nach den Einträgen **Apps** und **Windows Kits**, und klicken Sie auf die Option für das Zertifizierungskit für Windows-Apps****.
+1.  <span data-ttu-id="e7449-119">Suchen Sie im Startmenü**** nach den Einträgen **Apps** und **Windows Kits**, und klicken Sie auf die Option für das Zertifizierungskit für Windows-Apps****.</span><span class="sxs-lookup"><span data-stu-id="e7449-119">From the **Start** menu, search **Apps**, find **Windows Kits**, and click **Windows App Cert Kit**.</span></span>
 
-2.  Wählen Sie im Zertifizierungskit für Windows-Apps die Kategorie der auszuführenden Überprüfung aus. Beispiel: Wenn Sie eine Windows-App überprüfen, wählen Sie die Option zum **Überprüfen einer Windows-App** aus.
+2.  <span data-ttu-id="e7449-120">Wählen Sie im Zertifizierungskit für Windows-Apps die Kategorie der auszuführenden Überprüfung aus.</span><span class="sxs-lookup"><span data-stu-id="e7449-120">From the Windows App Certification Kit, select the category of validation you would like to perform.</span></span> <span data-ttu-id="e7449-121">Beispiel: Wenn Sie eine Windows-App überprüfen, wählen Sie die Option zum **Überprüfen einer Windows-App** aus.</span><span class="sxs-lookup"><span data-stu-id="e7449-121">For example: If you are validating a Windows app, select **Validate a Windows app**.</span></span>
 
-    Sie können direkt zur jeweiligen App navigieren oder die App in einer Liste auf der Benutzeroberfläche auswählen. Bei der erstmaligen Ausführung des Zertifizierungskits für Windows-Apps werden auf der Benutzeroberfläche alle Windows-Apps aufgelistet, die auf dem Computer installiert sind. Bei nachfolgenden Ausführungen werden die Windows-Apps angezeigt, die Sie bereits überprüft haben. Falls die zu testende App nicht in der Liste enthalten ist, können Sie auf **Meine App ist nicht aufgeführt** klicken, um eine Liste aller installierten Apps im System anzuzeigen.
+    <span data-ttu-id="e7449-122">Sie können direkt zur jeweiligen App navigieren oder die App in einer Liste auf der Benutzeroberfläche auswählen.</span><span class="sxs-lookup"><span data-stu-id="e7449-122">You may browse directly to the app you're testing, or choose the app from a list in the UI.</span></span> <span data-ttu-id="e7449-123">Bei der erstmaligen Ausführung des Zertifizierungskits für Windows-Apps werden auf der Benutzeroberfläche alle Windows-Apps aufgelistet, die auf dem Computer installiert sind.</span><span class="sxs-lookup"><span data-stu-id="e7449-123">When the Windows App Certification Kit is run for the first time, the UI lists all the Windows apps that you have installed on your computer.</span></span> <span data-ttu-id="e7449-124">Bei nachfolgenden Ausführungen werden die Windows-Apps angezeigt, die Sie bereits überprüft haben.</span><span class="sxs-lookup"><span data-stu-id="e7449-124">For any subsequent runs, the UI will display the most recent Windows apps that you have validated.</span></span> <span data-ttu-id="e7449-125">Falls die zu testende App nicht in der Liste enthalten ist, können Sie auf **Meine App ist nicht aufgeführt** klicken, um eine Liste aller installierten Apps im System anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="e7449-125">If the app that you want to test is not listed, you can click on **My app isn't listed** to get a comprehensive list of all apps installed on your system.</span></span>
 
-3.  Nachdem Sie die zu testende App eingegeben oder ausgewählt haben, klicken Sie auf **Weiter**.
+3.  <span data-ttu-id="e7449-126">Nachdem Sie die zu testende App eingegeben oder ausgewählt haben, klicken Sie auf **Weiter**.</span><span class="sxs-lookup"><span data-stu-id="e7449-126">After you have input or selected the app that you want to test, click **Next**.</span></span>
 
-4.  Auf dem nächsten Bildschirm sehen Sie den Testworkflow für die App, die Sie testen möchten. Wenn ein Test in der Liste deaktiviert ist, kann er nicht für Ihre Umgebung angewendet werden. Wenn Sie eine z. B. einer Windows 10-App unter Windows 7 testen, werden nur statische Tests für den Workflow angewendet. Beachten Sie, dass der Windows Store alle Tests aus diesem Workflow anwenden kann. Wählen Sie aus, welche Tests Sie ausführen möchten, und klicken Sie dann auf **Weiter**.
+4.  <span data-ttu-id="e7449-127">Auf dem nächsten Bildschirm sehen Sie den Testworkflow für die App, die Sie testen möchten.</span><span class="sxs-lookup"><span data-stu-id="e7449-127">From the next screen, you will see the test workflow that aligns to the app type you are testing.</span></span> <span data-ttu-id="e7449-128">Wenn ein Test in der Liste deaktiviert ist, kann er nicht für Ihre Umgebung angewendet werden.</span><span class="sxs-lookup"><span data-stu-id="e7449-128">If a test is grayed out in the list, the test is not applicable to your environment.</span></span> <span data-ttu-id="e7449-129">Wenn Sie eine z.B. einer Windows10-App unter Windows7 testen, werden nur statische Tests für den Workflow angewendet.</span><span class="sxs-lookup"><span data-stu-id="e7449-129">For example, if you are testing a Windows 10 app on Windows 7, only static tests will apply to the workflow.</span></span> <span data-ttu-id="e7449-130">Beachten Sie, dass der WindowsStore alle Tests aus diesem Workflow anwenden kann.</span><span class="sxs-lookup"><span data-stu-id="e7449-130">Note that the Windows Store may apply all tests from this workflow.</span></span> <span data-ttu-id="e7449-131">Wählen Sie aus, welche Tests Sie ausführen möchten, und klicken Sie dann auf **Weiter**.</span><span class="sxs-lookup"><span data-stu-id="e7449-131">Select the tests you want to run and click **Next**.</span></span>
 
-    Das Zertifizierungskit für Windows-Apps beginnt mit dem Überprüfen der App.
+    <span data-ttu-id="e7449-132">Das Zertifizierungskit für Windows-Apps beginnt mit dem Überprüfen der App.</span><span class="sxs-lookup"><span data-stu-id="e7449-132">The Windows App Certification Kit begins validating the app.</span></span>
 
-5.  Geben Sie den Pfad zu dem Ordner an, in dem der Testbericht gespeichert werden soll, wenn Sie nach dem Testen dazu aufgefordert werden.
+5.  <span data-ttu-id="e7449-133">Geben Sie den Pfad zu dem Ordner an, in dem der Testbericht gespeichert werden soll, wenn Sie nach dem Testen dazu aufgefordert werden.</span><span class="sxs-lookup"><span data-stu-id="e7449-133">At the prompt after the test, enter the path to the folder where you want to save the test report.</span></span>
 
-    Vom Zertifizierungskit für Windows-Apps werden ein XML-Bericht und ein HTML-Bericht erstellt und in diesem Ordner gespeichert.
+    <span data-ttu-id="e7449-134">Vom Zertifizierungskit für Windows-Apps werden ein XML-Bericht und ein HTML-Bericht erstellt und in diesem Ordner gespeichert.</span><span class="sxs-lookup"><span data-stu-id="e7449-134">The Windows App Certification Kit creates an HTML along with an XML report and saves it in this folder.</span></span>
 
-6.  Öffnen Sie die Berichtsdatei, und überprüfen Sie die Ergebnisse des Tests.
+6.  <span data-ttu-id="e7449-135">Öffnen Sie die Berichtsdatei, und überprüfen Sie die Ergebnisse des Tests.</span><span class="sxs-lookup"><span data-stu-id="e7449-135">Open the report file and review the results of the test.</span></span>
 
-**Hinweis**  Bei Verwendung von Visual Studio können Sie das Zertifizierungskit für Windows-Apps ausführen, wenn Sie das App-Paket erstellen. Informationen zur Vorgehensweise finden Sie unter [Verpacken von UWP-Apps](https://msdn.microsoft.com/library/windows/apps/Mt627715).
+<span data-ttu-id="e7449-136">**Hinweis**  Bei Verwendung von Visual Studio können Sie das Zertifizierungskit für Windows-Apps ausführen, wenn Sie das App-Paket erstellen.</span><span class="sxs-lookup"><span data-stu-id="e7449-136">**Note**  If you're using Visual Studio, you can run the Windows App Certification Kit when you create your app package.</span></span> <span data-ttu-id="e7449-137">Informationen zur Vorgehensweise finden Sie unter [Verpacken von UWP-Apps](https://msdn.microsoft.com/library/windows/apps/Mt627715).</span><span class="sxs-lookup"><span data-stu-id="e7449-137">See [Packaging UWP apps](https://msdn.microsoft.com/library/windows/apps/Mt627715) to learn how.</span></span>
 
  
 
-## <a name="validate-your-windows-app-using-the-windows-app-certification-kit-from-a-command-line"></a>Überprüfung der Windows-App mit dem Zertifizierungskit für Windows-Apps über eine Befehlszeile
+## <a name="validate-your-windows-app-using-the-windows-app-certification-kit-from-a-command-line"></a><span data-ttu-id="e7449-138">Überprüfung der Windows-App mit dem Zertifizierungskit für Windows-Apps über eine Befehlszeile</span><span class="sxs-lookup"><span data-stu-id="e7449-138">Validate your Windows app using the Windows App Certification Kit from a command line</span></span>
 
-**Wichtig**  Das Zertifizierungskit für Windows-Apps muss im Kontext einer aktiven Benutzersitzung ausgeführt werden.
+<span data-ttu-id="e7449-139">**Wichtig**  Das Zertifizierungskit für Windows-Apps muss im Kontext einer aktiven Benutzersitzung ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="e7449-139">**Important**  The Windows App Certification Kit must be run within the context of an active user session.</span></span>
 
-1.  Navigieren Sie im Befehlsfenster zum Verzeichnis mit dem Zertifizierungskit für Windows-Apps.
+1.  <span data-ttu-id="e7449-140">Navigieren Sie im Befehlsfenster zum Verzeichnis mit dem Zertifizierungskit für Windows-Apps.</span><span class="sxs-lookup"><span data-stu-id="e7449-140">In the command window, navigate to the directory that contains the Windows App Certification Kit.</span></span>
 
-    **Hinweis**   Der Standardpfad lautet „C:\\Programme\\Windows Kits\\10\\App Certification Kit\\“.
+    <span data-ttu-id="e7449-141">**Hinweis**   Der Standardpfad lautet „C:\\Programme\\Windows Kits\\10\\App Certification Kit\\“.</span><span class="sxs-lookup"><span data-stu-id="e7449-141">**Note**   The default path is C:\\Program Files\\Windows Kits\\10\\App Certification Kit\\.</span></span>
 
-2.  Geben Sie die folgenden Befehle in dieser Reihenfolge ein, um eine App zu testen, die bereits auf dem Testcomputer installiert ist:
+2.  <span data-ttu-id="e7449-142">Geben Sie die folgenden Befehle in dieser Reihenfolge ein, um eine App zu testen, die bereits auf dem Testcomputer installiert ist:</span><span class="sxs-lookup"><span data-stu-id="e7449-142">Enter the following commands in this order to test an app that is already installed on your test computer:</span></span>
 
     `appcert.exe reset`
 
     `appcert.exe test -packagefullname [package full name] -reportoutputpath [report file name]`
 
-    Wenn Sie App nicht installiert ist, können Sie die folgenden Befehle verwenden. Das Zertifizierungskit für Windows-Apps öffnet das Paket und wendet den entsprechenden Testworkflow an:
+    <span data-ttu-id="e7449-143">Wenn Sie App nicht installiert ist, können Sie die folgenden Befehle verwenden.</span><span class="sxs-lookup"><span data-stu-id="e7449-143">Or you can use the following commands if the app is not installed.</span></span> <span data-ttu-id="e7449-144">Das Zertifizierungskit für Windows-Apps öffnet das Paket und wendet den entsprechenden Testworkflow an:</span><span class="sxs-lookup"><span data-stu-id="e7449-144">The Windows App Certification Kit will open the package and apply the appropriate test workflow:</span></span>
 
     `appcert.exe reset`
 
     `appcert.exe test -appxpackagepath [package path] -reportoutputpath [report file name]`
 
-3.  Öffnen Sie nach dem Test die Berichtsdatei `[report file name]`, und überprüfen Sie die Testergebnisse.
+3.  <span data-ttu-id="e7449-145">Öffnen Sie nach dem Test die Berichtsdatei `[report file name]`, und überprüfen Sie die Testergebnisse.</span><span class="sxs-lookup"><span data-stu-id="e7449-145">After the test completes, open the report file named `[report file name]` and review the test results.</span></span>
 
-**Hinweis**  Das Zertifizierungskit für Windows-Apps kann über einen Dienst ausgeführt werden. Der Dienst muss den Kitvorgang jedoch innerhalb einer aktiven Benutzersitzung initiieren, und die Ausführung unter „Session0“ ist nicht möglich.
+<span data-ttu-id="e7449-146">**Hinweis**  Das Zertifizierungskit für Windows-Apps kann über einen Dienst ausgeführt werden. Der Dienst muss den Kitvorgang jedoch innerhalb einer aktiven Benutzersitzung initiieren, und die Ausführung unter „Session0“ ist nicht möglich.</span><span class="sxs-lookup"><span data-stu-id="e7449-146">**Note**  The Windows App Certification Kit can be run from a service, but the service must initiate the kit process within an active user session and cannot be run in Session0.</span></span>
 
-**Hinweis**   Weitere Informationen zur Befehlszeile des Zertifizierungskits für Windows-Apps erhalten Sie durch Eingabe des Befehls `appcert.exe /?`
+<span data-ttu-id="e7449-147">**Hinweis**   Weitere Informationen zur Befehlszeile des Zertifizierungskits für Windows-Apps erhalten Sie durch Eingabe des Befehls</span><span class="sxs-lookup"><span data-stu-id="e7449-147">**Note**   For more info about the Windows App Certification Kit command line, enter the command</span></span> `appcert.exe /?`
 
-## <a name="testing-with-a-low-power-computer"></a>Testen mit einem Computer mit geringem Energieverbrauch
+## <a name="testing-with-a-low-power-computer"></a><span data-ttu-id="e7449-148">Testen mit einem Computer mit geringem Energieverbrauch</span><span class="sxs-lookup"><span data-stu-id="e7449-148">Testing with a low-power computer</span></span>
 
-Die Leistungstestgrenzen des Zertifizierungskits für Windows-Apps basieren auf der Leistung eines Computers mit geringem Energieverbrauch.
+<span data-ttu-id="e7449-149">Die Leistungstestgrenzen des Zertifizierungskits für Windows-Apps basieren auf der Leistung eines Computers mit geringem Energieverbrauch.</span><span class="sxs-lookup"><span data-stu-id="e7449-149">The performance test thresholds of the Windows App Certification Kit are based on the performance of a low-power computer.</span></span>
 
-Die Eigenschaften des Computers, auf dem der Test ausgeführt wird, können die Testergebnisse beeinflussen. Um festzustellen, ob die Leistung Ihrer App den [Windows Store-Richtlinien](https://msdn.microsoft.com/library/windows/apps/Dn764944) entspricht, empfehlen wir, die App auf einem Computer mit geringem Energieverbrauch zu testen, z. B. einem Computer mit Intel Atom-Prozessor, einer Auflösung von 1366 x 768 (oder höher) und herkömmlichem Festplattenlaufwerk (kein Solid-State-Laufwerk).
+<span data-ttu-id="e7449-150">Die Eigenschaften des Computers, auf dem der Test ausgeführt wird, können die Testergebnisse beeinflussen.</span><span class="sxs-lookup"><span data-stu-id="e7449-150">The characteristics of the computer on which the test is performed can influence the test results.</span></span> <span data-ttu-id="e7449-151">Um festzustellen, ob die Leistung Ihrer App den [WindowsStore-Richtlinien](https://msdn.microsoft.com/library/windows/apps/Dn764944) entspricht, empfehlen wir, die App auf einem Computer mit geringem Energieverbrauch zu testen, z.B. einem Computer mit Intel Atom-Prozessor, einer Auflösung von 1366x768 (oder höher) und herkömmlichem Festplattenlaufwerk (kein Solid-State-Laufwerk).</span><span class="sxs-lookup"><span data-stu-id="e7449-151">To determine if your app’s performance meets the [Windows Store Policies](https://msdn.microsoft.com/library/windows/apps/Dn764944), we recommend that you test your app on a low-power computer, such as an Intel Atom processor-based computer with a screen resolution of 1366x768 (or higher) and a rotational hard drive (as opposed to a solid-state hard drive).</span></span>
 
-Da Computer mit geringem Energieverbrauch weiterentwickelt werden, können sich die Leistungsmerkmale im Laufe der Zeit ändern. Verwenden Sie die aktuellen [Windows Store-Richtlinien](https://msdn.microsoft.com/library/windows/apps/Dn764944), und testen Sie Ihre App mit der aktuellen Version des Zertifizierungskits für Windows-Apps, um sicherzustellen, dass Ihre App den aktuellen Leistungsanforderungen entspricht.
+<span data-ttu-id="e7449-152">Da Computer mit geringem Energieverbrauch weiterentwickelt werden, können sich die Leistungsmerkmale im Laufe der Zeit ändern.</span><span class="sxs-lookup"><span data-stu-id="e7449-152">As low-power computers evolve, their performance characteristics might change over time.</span></span> <span data-ttu-id="e7449-153">Verwenden Sie die aktuellen [Windows Store-Richtlinien](https://msdn.microsoft.com/library/windows/apps/Dn764944), und testen Sie Ihre App mit der aktuellen Version des Zertifizierungskits für Windows-Apps, um sicherzustellen, dass Ihre App den aktuellen Leistungsanforderungen entspricht.</span><span class="sxs-lookup"><span data-stu-id="e7449-153">Refer to the most current [Windows Store Policies](https://msdn.microsoft.com/library/windows/apps/Dn764944) and test your app with the most current version of the Windows App Certification Kit to make sure that your app complies with the latest performance requirements.</span></span>
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a><span data-ttu-id="e7449-154">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="e7449-154">Related topics</span></span>
 
-* [Tests im Zertifizierungskit für Windows-Apps](windows-app-certification-kit-tests.md)
-* [Windows Store-Richtlinien](https://msdn.microsoft.com/library/windows/apps/Dn764944)
+* [<span data-ttu-id="e7449-155">Tests im Zertifizierungskit für Windows-Apps</span><span class="sxs-lookup"><span data-stu-id="e7449-155">Windows App Certification Kit tests</span></span>](windows-app-certification-kit-tests.md)
+* [<span data-ttu-id="e7449-156">WindowsStore-Richtlinien</span><span class="sxs-lookup"><span data-stu-id="e7449-156">Windows Store Policies</span></span>](https://msdn.microsoft.com/library/windows/apps/Dn764944)
  
 
  
-
 
 
 

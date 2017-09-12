@@ -1,75 +1,145 @@
 ---
 author: jnHs
-Description: "Im Bericht „Käufe” des Windows Dev Center-Dashboards können Sie sehen, wer Ihre App erworben hat. Außerdem können Sie demografische und plattformspezifische Details einsehen."
+Description: "Im Bericht „Käufe“ im Windows Dev Center-Dashboards können Sie sehen, wer Ihre App erworben und installiert hat. Außerdem können Sie demografische und plattformspezifische Details einsehen."
 title: "Bericht „Käufe“"
 ms.assetid: 21126362-F3CD-4006-AD3F-82FC88E3B862
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 08/04/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a668c3d03c11ac4c6c27cddeefafeb3c42caf1e3
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: d6540db7a3d0a045fa6a2c8fec617f045f4a1bf4
+ms.sourcegitcommit: 2b436dc5e5681b8884e0531ee303f851a3e3ccf2
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/18/2017
 ---
-
-# <a name="acquisitions-report"></a>Bericht „Käufe“
-
-
-Im Bericht **Käufe** des Windows Dev Center-Dashboards können Sie sehen, wer Ihre App erworben hat. Außerdem können Sie demografische und plattformspezifische Details einsehen. Sie können diese Informationen in Ihrem Dashboard anzeigen oder [den Bericht herunterladen](download-analytic-reports.md), um die Daten offline anzuzeigen. Sie können diese Daten auch programmgesteuert mit der Methode [get app acquisitions](../monetize/get-app-acquisitions.md) der [Windows Store-Analyse-REST-API](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
-
-In diesem Bericht steht „Kauf“ für einen neuen Kunden, der eine Lizenz Ihrer App erworben hat (entweder für eine kostenpflichtige oder eine kostenlose App).
-
-> **Wichtig**  Im Bericht **Käufe** sind keine Daten über Erstattungen, Rückbuchungen, Rückvergütungen usw. enthalten. Besuchen Sie [Auszahlungszusammenfassung](payout-summary.md), um die Erträge aus Ihren Apps zu schätzen. Klicken Sie im Abschnitt **Reserviert** auf den Link **Reservierte Transaktionen herunterladen**.
+# <a name="acquisitions-report"></a><span data-ttu-id="0d22c-104">Bericht „Käufe“</span><span class="sxs-lookup"><span data-stu-id="0d22c-104">Acquisitions report</span></span>
 
 
+<span data-ttu-id="0d22c-105">Im Bericht **Käufe** im Windows Dev Center-Dashboards können Sie sehen, wer Ihre App erworben und installiert hat. Außerdem können Sie demografische und plattformspezifische Details einsehen.</span><span class="sxs-lookup"><span data-stu-id="0d22c-105">The **Acquisitions** report in the Windows Dev Center dashboard lets you see who has acquired and installed your app, along with demographic and platform details.</span></span> <span data-ttu-id="0d22c-106">Außerdem können Sie damit Informationen abrufen, wie Kunden unter Windows10 zum Eintrag Ihrer App gelangt sind.</span><span class="sxs-lookup"><span data-stu-id="0d22c-106">It also lets you get info about how customers on Windows 10 have arrived at your app's listing.</span></span>
 
-## <a name="apply-filters"></a>Anwenden von Filtern
+<span data-ttu-id="0d22c-107">Sie können diese Daten in Ihrem Dashboard anzeigen oder den [Bericht herunterladen](download-analytic-reports.md), um ihn offline anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="0d22c-107">You can view this data in your dashboard, or [download the report](download-analytic-reports.md) to view offline.</span></span> <span data-ttu-id="0d22c-108">Sie können diese Daten aber auch programmgesteuert mit unseren [REST-API für Analysen](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.</span><span class="sxs-lookup"><span data-stu-id="0d22c-108">Alternatively, you can programmatically retrieve this data by using our [analytics REST API](../monetize/access-analytics-data-using-windows-store-services.md).</span></span>
 
+<span data-ttu-id="0d22c-109">In diesem Bericht steht **Kauf** für einen neuen Kunden, der eine Lizenz Ihrer App erworben hat (entweder für eine kostenpflichtige oder eine kostenlose App).</span><span class="sxs-lookup"><span data-stu-id="0d22c-109">In this report, an **acquisition** means a new customer has obtained a license to your app (whether you charged money or you've offered it for free).</span></span> <span data-ttu-id="0d22c-110">**Installieren** bezieht sich auf die App, die auf einem Windows10-Gerät installiert wird.</span><span class="sxs-lookup"><span data-stu-id="0d22c-110">An **install** refers to the app being installed on a Windows 10 device.</span></span>
 
-Im oberen Seitenbereich können Sie **Filter anwenden** erweitern, um alle Daten auf dieser Seite nach Datumsbereich und/oder Gerätetyp zu filtern.
-
--   **Datum**: Der Standardfilter lautet **Letzte 30 Tage**, aber er kann bis auf **Letzte 12 Monate** erweitert werden.
--   **Gerätetyp**: Die Standardeinstellung ist **Alle Geräte**. Wenn Daten für Käufe nur für einen bestimmten Gerätetyp angezeigt werden sollen, können Sie hier einen bestimmten auswählen.
-
-Die Informationen in den unten angezeigten Diagrammen beziehen sich auf den unter **Filter anwenden** ausgewählten Zeitraum.
-
-Die Informationen in allen unten angezeigten Diagrammen beziehen sich auf den im Abschnitt **Filter anwenden** ausgewählten Zeitraum. Standardmäßig gehören dazu Daten für alle Gerätetypen, sofern Sie nicht mithilfe von **Filter anwenden** einen bestimmten Gerätetyp herausgefiltert haben.
-
-## <a name="acquisitions"></a>Käufe
+> [!IMPORTANT]
+> <span data-ttu-id="0d22c-111">Im Bericht **Käufe** sind keine Daten über Erstattungen, Rückbuchungen, Rückvergütungen usw. enthalten. Um die Erträge aus Ihren Apps zu schätzen, besuchen Sie [Auszahlungszusammenfassung](payout-summary.md).</span><span class="sxs-lookup"><span data-stu-id="0d22c-111">The **Acquisitions** report does not include data about refunds, reversals, chargebacks, etc. To estimate your app proceeds, visit [Payout summary](payout-summary.md).</span></span> <span data-ttu-id="0d22c-112">Klicken Sie im Abschnitt **Reserviert** auf den Link **Reservierte Transaktionen herunterladen**.</span><span class="sxs-lookup"><span data-stu-id="0d22c-112">In the **Reserved** section, click the **Download reserved transactions** link.</span></span>
+>
+> <span data-ttu-id="0d22c-113">Mit Ausnahme von Informationen zu den Seitenaufrufen (wie unten beschrieben) enthält dieser Bericht keine Daten im Zusammenhang mit Kunden, die eine App erwerben, ohne auf einem Microsoft-Konto angemeldet zu sein.</span><span class="sxs-lookup"><span data-stu-id="0d22c-113">Except for page view data (as described below), this report does not include data related to customers who acquire an app without being signed in to a Microsoft account.</span></span>
 
 
-Das Diagramm **Käufe** zeigt, wie oft Ihre App im ausgewählten Zeitraum pro Tag oder Woche gekauft wurde. (Wenn Sie die Daten über einen längeren Zeitraum mithilfe von **Filter anwenden** filtern, werden die Daten nach Woche gruppiert.)
+## <a name="apply-filters"></a><span data-ttu-id="0d22c-114">Anwenden von Filtern</span><span class="sxs-lookup"><span data-stu-id="0d22c-114">Apply filters</span></span>
 
-Sie können auch anzeigen, wie oft die App während ihrer gesamten Lebensdauer gekauft wurde. Zeigt den kumulierten Gesamtwert aller Käufe an (ab der ersten Veröffentlichung Ihrer App).
+<span data-ttu-id="0d22c-115">Im oberen Bereich der Seite können Sie den Zeitraum auswählen, für den die Daten angezeigt werden sollen.</span><span class="sxs-lookup"><span data-stu-id="0d22c-115">Near the top of the page, you can select the time period for which you want to show data.</span></span> <span data-ttu-id="0d22c-116">Die Standardeinstellung ist **30D** (30Tage), aber Sie können Daten für 3, 6 oder 12Monate anzeigen, oder für einen benutzerdefinierten Zeitraum, den Sie angeben.</span><span class="sxs-lookup"><span data-stu-id="0d22c-116">The default selection is **30D** (30 days), but you can choose to show data for 3, 6, or 12 months, or for a custom data range that you specify.</span></span>
 
-Optional können Sie die Ergebnisse nach Markt und/oder Betriebssystemversion filtern.
+<span data-ttu-id="0d22c-117">Sie können ebenfalls **Filter** erweitern, um alle Daten auf dieser Seite nach Markt und/oder Gerätetyp zu filtern.</span><span class="sxs-lookup"><span data-stu-id="0d22c-117">You can also expand **Filters** to filter all of the data on this page by market and/or by device type.</span></span>
 
-## <a name="customer-demographic"></a>Kundendemografie
+-   <span data-ttu-id="0d22c-118">**Markt**: der Standardfilter lautet **Alle Märkte**, aber Sie können die Daten für Verkäufe auf einen oder mehrere Märkte begrenzen.</span><span class="sxs-lookup"><span data-stu-id="0d22c-118">**Market**: The default filter is **All markets**, but you can limit the data to acquisitions in one or more markets.</span></span>
+-   <span data-ttu-id="0d22c-119">**Gerätetyp**: Die Standardeinstellung ist **Alle Geräte**.</span><span class="sxs-lookup"><span data-stu-id="0d22c-119">**Device type**: The default setting is **All devices**.</span></span> <span data-ttu-id="0d22c-120">Wenn Daten für Käufe nur für einen bestimmten Gerätetyp angezeigt werden sollen, können Sie hier einen bestimmten auswählen.</span><span class="sxs-lookup"><span data-stu-id="0d22c-120">If you want to show data for acquisitions from a certain device type only, you can choose a specific one here.</span></span>
+
+<span data-ttu-id="0d22c-121">Die Informationen in allen unten angezeigten Diagrammen beziehen sich auf den ausgewählten Zeitraum und alle von Ihnen ausgewählten Filter.</span><span class="sxs-lookup"><span data-stu-id="0d22c-121">The info in all of the charts listed below will reflect the date range and any filters you've selected.</span></span> <span data-ttu-id="0d22c-122">In einigen Abschnitten können Sie zusätzliche Filter anwenden.</span><span class="sxs-lookup"><span data-stu-id="0d22c-122">Some sections also allow you to apply additional filters.</span></span>
 
 
-Das Diagramm **Kundendemografie** zeigt demografische Informationen zu den Personen, die Ihre App erworben haben. Sie können sehen, wie viele Käufe (im ausgewählten Zeitraum) von Personen einer bestimmten Altersgruppe getätigt wurden und welches Geschlecht die Käufer hatten.
+## <a name="acquisitions"></a><span data-ttu-id="0d22c-123">Käufe</span><span class="sxs-lookup"><span data-stu-id="0d22c-123">Acquisitions</span></span>
 
-> **Hinweis**  Einige Kunden haben festgelegt, dass sie diese Informationen nicht freigeben möchten. Falls die Altersgruppe oder das Geschlecht nicht ermittelt werden konnten, wird der Kauf als **Unbekannt** kategorisiert.
+<span data-ttu-id="0d22c-124">Das Diagramm **Käufe** zeigt, wie oft Ihre Käufe (ein neuer Kunde, der eine Lizenz für Ihre App ausgewählt hat) im ausgewählten Zeitraum pro Tag oder Woche gekauft wurde.</span><span class="sxs-lookup"><span data-stu-id="0d22c-124">The **Acquisitions** chart shows the number of daily or weekly acquisitions (a new customer obtaining a license for your app) over the selected period of time.</span></span> <span data-ttu-id="0d22c-125">(Wenn Sie **Filter anwenden** zum Anzeigen von Daten für eine längere Dauer verwenden, werden die Kaufdaten nach Woche gruppiert.) Nur Käufe von Kunden, die auf einem gültigen Microsoft-Konto angemeldet sind, sind in diesem Diagramm enthalten.</span><span class="sxs-lookup"><span data-stu-id="0d22c-125">(When you use **Apply filters** to show data for a longer duration, the acquisition data will be grouped by week.) Only acquisitions made by customers who are signed in with a valid Microsoft account are included in this chart.</span></span>
+
+<span data-ttu-id="0d22c-126">Sie können auch anzeigen, wie oft die App während ihrer gesamten Lebensdauer gekauft wurde, indem Sie **App Insgesamt** auswählen.</span><span class="sxs-lookup"><span data-stu-id="0d22c-126">You can also see the lifetime number of acquisitions for your app by selecting **App cumulative**.</span></span> <span data-ttu-id="0d22c-127">Zeigt den kumulierten Gesamtwert aller Käufe an (ab der ersten Veröffentlichung Ihrer App).</span><span class="sxs-lookup"><span data-stu-id="0d22c-127">This shows the cumulative total of all acquisitions, starting from when your app was first published.</span></span>
+
+<span data-ttu-id="0d22c-128">Sie können optional die Ergebnisse danach filtern, ob die Übernahme vom Client oder einem webbasierten Store und/oder Betriebssystemversion stammt.</span><span class="sxs-lookup"><span data-stu-id="0d22c-128">You can optionally filter the results by whether the acquisition originated from the client or web-based Store and/or by OS version.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="0d22c-129">Sie können diese Daten auch programmgesteuert mit der Methode [Abrufen von App-Käufen](../monetize/get-app-acquisitions.md) unserer [Analyse-REST-API](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.</span><span class="sxs-lookup"><span data-stu-id="0d22c-129">You can also programmatically retrieve this data by using the [get app acquisitions](../monetize/get-app-acquisitions.md) method in our [analytics REST API](../monetize/access-analytics-data-using-windows-store-services.md).</span></span>
+
+## <a name="installs"></a><span data-ttu-id="0d22c-130">Installiert</span><span class="sxs-lookup"><span data-stu-id="0d22c-130">Installs</span></span>
+
+<span data-ttu-id="0d22c-131">Das Diagramm **Installiert** Diagramm zeigt, wie oft festgestellt wurde, dass ein Kunde Ihre App über den ausgewählten Zeitraum erfolgreich auf Windows10-Geräten installiert hat.</span><span class="sxs-lookup"><span data-stu-id="0d22c-131">The **Installs** chart shows how many times we have detected that customers have successfully installed your app on Windows 10 devices over the selected period of time.</span></span> <span data-ttu-id="0d22c-132">Sie sehen die Gesamtanzahl, zusammen mit einem Diagramm, das die Installation pro Tag oder Woche anzeigt (abhängig von der Dauer, die Sie ausgewählt haben).</span><span class="sxs-lookup"><span data-stu-id="0d22c-132">The total number is shown, along with a chart showing installs by day or week (depending on the duration you've selected).</span></span> <span data-ttu-id="0d22c-133">Optional können Sie die Ergebnisse nach Paketversion filtern.</span><span class="sxs-lookup"><span data-stu-id="0d22c-133">You can optionally filter the results by a specific package version.</span></span>
+
+<span data-ttu-id="0d22c-134">Zur Gesamtübersicht der Installationen gehören:</span><span class="sxs-lookup"><span data-stu-id="0d22c-134">The install total includes:</span></span>
+-   **<span data-ttu-id="0d22c-135">Installationen auf mehreren Windows 10-Geräten.</span><span class="sxs-lookup"><span data-stu-id="0d22c-135">Installs on multiple Windows 10 devices.</span></span>** <span data-ttu-id="0d22c-136">Wenn derselbe Kunde Ihre App beispielsweise aus zwei Windows 10-PCs und einem Windows 10-Smartphone installiert, werden drei Installationen gezählt.</span><span class="sxs-lookup"><span data-stu-id="0d22c-136">For example, if the same customer installs your app on two Windows 10 PCs and one Windows 10 phone, that counts as three installs.</span></span>
+-   **<span data-ttu-id="0d22c-137">Erneute Installationen.</span><span class="sxs-lookup"><span data-stu-id="0d22c-137">Reinstalls.</span></span>** <span data-ttu-id="0d22c-138">Wenn eine Kunde Ihre App beispielsweise heute installiert, morgen deinstalliert und im nächsten Monat erneut installiert, werden zwei Installationen gezählt.</span><span class="sxs-lookup"><span data-stu-id="0d22c-138">For example, if a customer installs your app today, uninstalls your app tomorrow, and then reinstalls your app next month, that counts as two installs.</span></span>
+
+<span data-ttu-id="0d22c-139">Von der Gesamtansicht der Installationen sind ausgenommen:</span><span class="sxs-lookup"><span data-stu-id="0d22c-139">The install total does not include or reflect:</span></span>
+-   **<span data-ttu-id="0d22c-140">Installationen auf Nicht-Windows 10-Geräten.</span><span class="sxs-lookup"><span data-stu-id="0d22c-140">Installs on non-Windows 10 devices.</span></span>** <span data-ttu-id="0d22c-141">Wenn Ihre App frühere Betriebssystemversionen z.B. Windows8.x oder Windows Phone8.x unterstützt, zählen wir keine Installationen auf diesen Geräten.</span><span class="sxs-lookup"><span data-stu-id="0d22c-141">If your app supports earlier OS versions such as Windows 8.x or Windows Phone 8.x, we don't count any installs on those devices.</span></span>
+-   **<span data-ttu-id="0d22c-142">Deinstallationen.</span><span class="sxs-lookup"><span data-stu-id="0d22c-142">Uninstalls.</span></span>** <span data-ttu-id="0d22c-143">Wenn ein Kunde Ihre App vom Gerät deinstalliert, wird diese nicht von der Gesamtanzahl der Installationen abgezogen.</span><span class="sxs-lookup"><span data-stu-id="0d22c-143">When a customer uninstalls your app from their device, we don’t subtract that from the total number of installs.</span></span>
+-   **<span data-ttu-id="0d22c-144">Updates.</span><span class="sxs-lookup"><span data-stu-id="0d22c-144">Updates.</span></span>** <span data-ttu-id="0d22c-145">Wenn ein Kunde Ihre App beispielsweise heute installiert und eine Woche später eine App-Aktualisierung installiert, zählt dies nur als eine Installation.</span><span class="sxs-lookup"><span data-stu-id="0d22c-145">For example, if a customer installs your app today, and then installs an app update a week later, that only counts as one install.</span></span>
+-   **<span data-ttu-id="0d22c-146">Vorinstallationen.</span><span class="sxs-lookup"><span data-stu-id="0d22c-146">Preinstalls.</span></span>** <span data-ttu-id="0d22c-147">Wenn ein Kunde ein Gerät kauft, auf dem Ihre App vorinstalliert wurde, zählt dies nicht als Installation.</span><span class="sxs-lookup"><span data-stu-id="0d22c-147">If a customer buys a device that has your app preinstalled, we don’t count that as an install.</span></span>
+-   **<span data-ttu-id="0d22c-148">Vom System initiierte Installationen.</span><span class="sxs-lookup"><span data-stu-id="0d22c-148">System-initiated installs.</span></span>** <span data-ttu-id="0d22c-149">Wenn Windows aus irgendeinem Grund Ihre App automatisch installiert, zählt dies nicht als Installation.</span><span class="sxs-lookup"><span data-stu-id="0d22c-149">If Windows installs your app automatically for some reason, we don’t count that as an install.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="0d22c-150">Sie können diese Daten auch programmgesteuert mit der Methode [Abrufen von App-Installationen](../monetize/get-app-installs.md) unserer [Analyse-REST-API](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.</span><span class="sxs-lookup"><span data-stu-id="0d22c-150">You can also programmatically retrieve this data by using the [get app installs](../monetize/get-app-installs.md) method in our [analytics REST API](../monetize/access-analytics-data-using-windows-store-services.md).</span></span>
+
+## <a name="acquisition-funnel"></a><span data-ttu-id="0d22c-151">App-Erwerbstrichter</span><span class="sxs-lookup"><span data-stu-id="0d22c-151">Acquisition funnel</span></span>
+
+<span data-ttu-id="0d22c-152">Der **Erwerbstrichter** zeigt an, wie viele Kunden jeden Schrittdes Trichters ausgeführt hat, von der Store-Seite mit der App bis hin zur Anzeige des Wechselkurses.</span><span class="sxs-lookup"><span data-stu-id="0d22c-152">The **Acquisition funnel** shows you how many customers completed each step of the funnel, from viewing the Store page to using the app, along with the conversion rate.</span></span> <span data-ttu-id="0d22c-153">Diese Daten helfen Ihnen Bereiche zu identifizieren, in denen Sie mehr investieren möchten, um die Käufe, Installationen oder Nutzung zu erhöhen.</span><span class="sxs-lookup"><span data-stu-id="0d22c-153">This data can help you identify areas where you might want to invest more to increase your acquisitions, installs, or usage.</span></span>
+
+> [!IMPORTANT]
+> <span data-ttu-id="0d22c-154">Der **Erwerbstrichter** zeigt nur Daten für Kunden auf Windows 10 über die letzten 90 Tage an.</span><span class="sxs-lookup"><span data-stu-id="0d22c-154">The **Acquisition funnel** shows data only for customers on Windows 10 over the last 90 days.</span></span>
+
+<span data-ttu-id="0d22c-155">Die Schritte im Trichter sehen folgendermaßen aus:</span><span class="sxs-lookup"><span data-stu-id="0d22c-155">The steps in the funnel are:</span></span>
+
+- <span data-ttu-id="0d22c-156">**Seitenaufrufe**: Dieser Wert gibt die Gesamtanzahl der Store-Einträge Ihrer App an, einschließlich der Kontakte, die nicht mit einem Microsoft-Konto angemeldet sind.</span><span class="sxs-lookup"><span data-stu-id="0d22c-156">**Page views**: This number represents the total views of your app's Store listing, including people who aren't signed in with a Microsoft account.</span></span> <span data-ttu-id="0d22c-157">Dies umfasst nicht die Daten von Kunden, die diese Informationen nicht an Microsoft weitergeben möchten.</span><span class="sxs-lookup"><span data-stu-id="0d22c-157">This does not include data from customers who have opted out of providing this information to Microsoft.</span></span>
+- <span data-ttu-id="0d22c-158">**Käufe**: die Anzahl der neuen Kunden, die eine Lizenz für Ihre App (Wenn sie mit ihrem Microsoft-Konto angemeldet sind) innerhalb von 48 Stunden nach Ansicht im Store-Eintrag erhalten haben.</span><span class="sxs-lookup"><span data-stu-id="0d22c-158">**Acquisitions**: The number of new customers who obtained a license to your app (when signed in with their Microsoft account) within 48 hours of viewing its Store listing.</span></span>
+- <span data-ttu-id="0d22c-159">**Installiert**: die Anzahl der Kunden, die die App nach dem Erwerb installiert haben.</span><span class="sxs-lookup"><span data-stu-id="0d22c-159">**Installs**: The number of customers who installed the app after acquiring it.</span></span>
+- <span data-ttu-id="0d22c-160">**Verwendung**: die Anzahl der Kunden, die die App nach der Installation genutzt haben.</span><span class="sxs-lookup"><span data-stu-id="0d22c-160">**Usage**: The number of customers who used the app after installing it.</span></span>
+
+<span data-ttu-id="0d22c-161">Sie können optional die Ergebnisse nach Geschlecht und/oder Altersgruppe filtern, sowie durch benutzerdefinierte Kampagnen-ID</span><span class="sxs-lookup"><span data-stu-id="0d22c-161">You can optionally filter the results by gender and/or age group, as well as by custom campaign ID.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="0d22c-162">Sie können diese Daten auch programmgesteuert mit der Methode [Abrufen von App-Erwerbstrichterdaten](../monetize/get-acquisition-funnel-data.md) unserer [Analyse-REST-API](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.</span><span class="sxs-lookup"><span data-stu-id="0d22c-162">You can also programmatically retrieve this data by using the [get app acquisition funnel data](../monetize/get-acquisition-funnel-data.md) method in our [analytics REST API](../monetize/access-analytics-data-using-windows-store-services.md).</span></span>
+
+## <a name="markets"></a><span data-ttu-id="0d22c-163">Märkte</span><span class="sxs-lookup"><span data-stu-id="0d22c-163">Markets</span></span>
+
+<span data-ttu-id="0d22c-164">Das Diagramm **Märkte** zeigt die Gesamtanzahl von Käufen für die Installationen im ausgewählten Zeitraum für jeden Markt an, auf dem Ihre App erhältlich ist.</span><span class="sxs-lookup"><span data-stu-id="0d22c-164">The **Markets** chart shows the total number of acquisitions or installs over the selected period of time for each market in which your app is available.</span></span> <span data-ttu-id="0d22c-165">Sie können auswählen, ob Sie Daten für **Käufe** oder **Installiert** anzeigen möchten.</span><span class="sxs-lookup"><span data-stu-id="0d22c-165">You can choose whether to display data for **Acquisitions** or **Installs**.</span></span>
+
+<span data-ttu-id="0d22c-166">Sie können diese Daten in einer visuellen **Karte** anzeigen, oder die Einstellung auf eine Anzeige in Form einer **Tabelle** festlegen.</span><span class="sxs-lookup"><span data-stu-id="0d22c-166">You can view this data in a visual **Map** form, or toggle the setting to view it in **Table** form.</span></span> <span data-ttu-id="0d22c-167">Die Tabellenform zeigt jeweils fünf Märkten an, die alphabetisch oder nach der höchsten/niedrigst möglichen Anzahl von Käufen oder Installationen sortiert sind.</span><span class="sxs-lookup"><span data-stu-id="0d22c-167">Table form will show five markets at a time, sorted either alphabetically or by highest/lowest number of acquisitions or installs.</span></span> <span data-ttu-id="0d22c-168">Sie können auch die Daten zum Anzeigen von Informationen für alle Märkte zusammen herunterladen.</span><span class="sxs-lookup"><span data-stu-id="0d22c-168">You can also download the data to view info for all markets together.</span></span>
+
+
+## <a name="customer-demographic"></a><span data-ttu-id="0d22c-169">Kundendemografie</span><span class="sxs-lookup"><span data-stu-id="0d22c-169">Customer demographic</span></span>
+
+<span data-ttu-id="0d22c-170">Das Diagramm **Kundendemografie** zeigt demografische Informationen zu den Personen, die Ihre App erworben haben.</span><span class="sxs-lookup"><span data-stu-id="0d22c-170">The **Customer demographic** chart shows demographic info about the people who acquired your app.</span></span> <span data-ttu-id="0d22c-171">Sie können sehen, wie viele Käufe (im ausgewählten Zeitraum) von Personen einer bestimmten Altersgruppe getätigt wurden und welches Geschlecht die Käufer hatten.</span><span class="sxs-lookup"><span data-stu-id="0d22c-171">You can see how many acquisitions (over the selected period of time) were made by people in a certain age group and by which gender.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="0d22c-172">Einige Kunden haben festgelegt, dass sie diese Informationen nicht freigeben möchten.</span><span class="sxs-lookup"><span data-stu-id="0d22c-172">Some customers have opted not to share this info.</span></span> <span data-ttu-id="0d22c-173">Falls die Altersgruppe oder das Geschlecht nicht ermittelt werden konnten, wird der Kauf als **Unbekannt** kategorisiert.</span><span class="sxs-lookup"><span data-stu-id="0d22c-173">If we were unable to determine the age group or gender, the acquisition is categorized as **Unknown**.</span></span>
 
  
 
-## <a name="markets"></a>Märkte
+## <a name="app-page-views-and-conversions-by-channel"></a><span data-ttu-id="0d22c-174">App-Seitenaufrufe und Konvertierungen nach -Kanal</span><span class="sxs-lookup"><span data-stu-id="0d22c-174">App page views and conversions by channel</span></span>
+
+<span data-ttu-id="0d22c-175">Mit dem Diagramm **App-Seitenaufrufe und Konvertierungen nach -Kanal** können Sie sehen, wie Kunden unter Windows 10 zu dem Eintrag Ihrer App im ausgewählten Zeitraum gelangt sind.</span><span class="sxs-lookup"><span data-stu-id="0d22c-175">The **App page views and conversions by channel** chart lets you see how customers on Windows 10 arrived at your app's listing over the selected period of time.</span></span>
+
+<span data-ttu-id="0d22c-176">In diesem Diagramm bezieht sich ein *Kanal* auf die Methode, über die ein Kunde zu der Eintragsseite für Ihre App gelangt ist (z.B. durch Browsen und Suchen im Store, über einen Link von einer externen Website oder einen Link aus einer Ihrer benutzerdefinierten Kampagnen usw.).</span><span class="sxs-lookup"><span data-stu-id="0d22c-176">In this chart, a *channel* refers to the method in which a customer arrived at your app's listing page (for example, browsing and searching in the Store, a link from an external website, a link from one of your custom campaigns, etc.).</span></span> <span data-ttu-id="0d22c-177">Die folgenden Kanaltypen sind enthalten:</span><span class="sxs-lookup"><span data-stu-id="0d22c-177">The following channel types are included:</span></span>
+
+-   <span data-ttu-id="0d22c-178">**Store-Verkehr:** Der Kunde hat den Store durchsucht und ist dabei auf den Eintrag Ihrer App aufmerksam geworden.</span><span class="sxs-lookup"><span data-stu-id="0d22c-178">**Store traffic:** The customer was browsing or searching within the Store when they viewed your app's listing.</span></span>
+-   <span data-ttu-id="0d22c-179">**Benutzerdefinierte Kampagne:** Der Kunde ist einem Link gefolgt, der eine [benutzerdefinierte Kampagnen-ID](create-a-custom-app-promotion-campaign.md) verwendet.</span><span class="sxs-lookup"><span data-stu-id="0d22c-179">**Custom campaign:** The customer followed a link that used a [custom campaign ID](create-a-custom-app-promotion-campaign.md).</span></span>
+-   <span data-ttu-id="0d22c-180">**Sonstiges:** Der Kunde ist einem externen Link von einer Website (ohne benutzerdefinierte Kampagnen-ID) zu Ihrem App-Eintrag gefolgt oder der Kunde ist einem Link zu Ihrem App-Eintrag gefolgt, der von einer Onlinesuchmaschine zurückgegeben wurde.</span><span class="sxs-lookup"><span data-stu-id="0d22c-180">**Other:** The customer followed an external link (without any custom campaign ID) from a website to your app's listing or the customer followed a link from a search engine to your app's listing.</span></span>
+
+<span data-ttu-id="0d22c-181">Ein *Seitenaufruf* bedeutet, dass ein Kunde die Store-Eintragsseite für Ihre App über den webbasierten Store oder innerhalb der Store-App auf Windows10 angezeigt hat.</span><span class="sxs-lookup"><span data-stu-id="0d22c-181">A *page view* means that a customer viewed your app's Store listing page, either via the web-based Store or from within the Store app on Windows 10.</span></span> <span data-ttu-id="0d22c-182">Dies umfasst Kontakte, die nicht mit einem Microsoft-Konto angemeldet sind.</span><span class="sxs-lookup"><span data-stu-id="0d22c-182">This includes views by people who aren't signed in with a Microsoft account.</span></span> <span data-ttu-id="0d22c-183">Einige Kunden haben festgelegt, das sie Microsoft diese Informationen nicht zur Verfügung stellen möchten.</span><span class="sxs-lookup"><span data-stu-id="0d22c-183">Some customers have opted out of providing this information to Microsoft.</span></span>
+
+<span data-ttu-id="0d22c-184">*Konvertierung* bedeutet, dass ein Kunde (der mit einem Microsoft-Konto angemeldet ist) eine Lizenz für Ihre App (entweder für eine kostenpflichtige oder eine kostenlose App) neu erworben hat.</span><span class="sxs-lookup"><span data-stu-id="0d22c-184">A *conversion* means that a customer (signed in with a Microsoft account) has newly obtained a license to your app (whether you charged money or you've offered it for free).</span></span>
+
+<span data-ttu-id="0d22c-185">Die Seitenansicht und Konvertierungszahlen geben nicht die Anzahl an eindeutigen Kunden wieder.</span><span class="sxs-lookup"><span data-stu-id="0d22c-185">Page view and conversion numbers are not counts of unique customers.</span></span> <span data-ttu-id="0d22c-186">Informationen für Konvertierungszahlen finden Sie im [Erwerbstrichter](#acquisition-funnel)-Diagramm.</span><span class="sxs-lookup"><span data-stu-id="0d22c-186">For conversion rate info, see the [Acquisition funnel](#acquisition-funnel) chart.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="0d22c-187">Der Kunden gelangt möglicherweise zu dem Eintrag Ihrer App durch Klicken auf eine nicht von Ihnen erstellte, benutzerdefinierte Kampagne.</span><span class="sxs-lookup"><span data-stu-id="0d22c-187">Customers could arrive at your app's listing by clicking on a custom campaign not created by you.</span></span> <span data-ttu-id="0d22c-188">Wir zählen jeden Seitenaufruf innerhalb einer Sitzung mit der Kampagnen-ID, die der Kunde zuerst im Store eingibt.</span><span class="sxs-lookup"><span data-stu-id="0d22c-188">We stamp every page view within a session with the campaign ID from which the customer first entered the Store.</span></span> <span data-ttu-id="0d22c-189">Wir fügen der Kampagnen-ID anschließend Konvertierungen für alle Käufe innerhalb von 24 Stunden hinzu.</span><span class="sxs-lookup"><span data-stu-id="0d22c-189">We then attribute conversions to that campaign ID for all acquisitions within 24 hours.</span></span> <span data-ttu-id="0d22c-190">Aus diesem Grund sehen Sie möglicherweise eine höhere Anzahl an Gesamtkonvertierungen als die Konvertierungen für Ihre Kampagnen-ID anzeigt, und Sie haben möglicherweise Konvertierungen oder Add-On-Konvertierungen, die keine Seitenansichten haben.</span><span class="sxs-lookup"><span data-stu-id="0d22c-190">Because of this, you may see a higher number of total conversions than the total conversions for your campaign IDs, and you may have conversions or add-on conversions that have zero page views.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="0d22c-191">Sie können diese Daten auch programmgesteuert mit der Methode [Abrufen von App-Konvertierungen nach Kanal](../monetize/get-app-conversions-by-channel.md) unserer [Analyse-REST-API](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.</span><span class="sxs-lookup"><span data-stu-id="0d22c-191">You can also programmatically retrieve this data by using the [get app conversions by channel](../monetize/get-app-conversions-by-channel.md) method in our [analytics REST API](../monetize/access-analytics-data-using-windows-store-services.md).</span></span>
+
+## <a name="app-page-views-and-conversions-by-campaign-id"></a><span data-ttu-id="0d22c-192">App-Seitenaufrufe und -Konvertierungen nach Kampagnen-ID</span><span class="sxs-lookup"><span data-stu-id="0d22c-192">App page views and conversions by campaign ID</span></span>
+
+<span data-ttu-id="0d22c-193">Mit dem Diagramm **App-Seitenaufrufe und -Konvertierungen nach Kampagnen-ID** können Sie Konvertierungen und Seitenaufrufe wie oben beschrieben für jede Ihrer [benutzerdefinierten Werbekampagnen](create-a-custom-app-promotion-campaign.md) nachverfolgen,.</span><span class="sxs-lookup"><span data-stu-id="0d22c-193">The **App page views and conversions by campaign ID** chart lets you track conversions and page views, as described above, for each of your [custom promotion campaigns](create-a-custom-app-promotion-campaign.md).</span></span> <span data-ttu-id="0d22c-194">Die höchsten Kampagnen-IDs werden angezeigt, und mithilfe der Filter können Sie bestimmte Kampagnen-ID einbeziehen oder ausschließen.</span><span class="sxs-lookup"><span data-stu-id="0d22c-194">The top campaign IDs are shown, and you can use the filters to exclude or include specific campaign IDs.</span></span>
+
+## <a name="total-campaign-conversions"></a><span data-ttu-id="0d22c-195">Gesamtanzahl der Konvertierungen pro Kampagne</span><span class="sxs-lookup"><span data-stu-id="0d22c-195">Total campaign conversions</span></span>
+
+<span data-ttu-id="0d22c-196">Das Diagramm der **Gesamtanzahl der Konvertierungen pro Kampagne** enthält die Gesamtanzahl der App- und Add-On-Konvertierungen aus allen Ihren benutzerdefinierten Kampagnen im ausgewählten Zeitraum.</span><span class="sxs-lookup"><span data-stu-id="0d22c-196">The **Total campaign conversions** chart shows the total number of app and add-on conversions from all custom campaigns during the selected period of time.</span></span>
 
 
-Das Diagramm **Märkte** zeigt die Gesamtanzahl von Käufen im ausgewählten Zeitraum nach Markt. Standardmäßig wird der Markt mit den meisten Käufen an oberster Stelle vor den Märkten mit weniger Käufen angezeigt. Sie können die Reihenfolge umkehren, indem Sie auf den Pfeil in der Spalte **Käufe** des Diagramms klicken.
-
-## <a name="os-version"></a>Betriebssystemversion
-
-
-Im Diagramm **Betriebssystemversion** wird die Gesamtzahl der Käufe entsprechend dem Betriebssystem des Kunden angezeigt (bzw. über [großvolumige Käufe durch Organisationen](organizational-licensing.md)). In einigen Fällen können diese Informationen jedoch nicht ermittelt werden. Die Betriebssystemversion wird dann als **Unbekannt** angegeben.
 
 
 
  
 
  
-

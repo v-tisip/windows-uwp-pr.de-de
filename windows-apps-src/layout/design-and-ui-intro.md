@@ -7,101 +7,118 @@ label: Intro to UWP app design
 template: detail.hbs
 op-migration-status: ready
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 08/9/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 90096443a0b67b816869e6c9e607ccfd43f0cea1
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8db6dbe00c20b6371ae7007f07e628d16467ea9d
+ms.sourcegitcommit: 0d5b3daddb3ae74f91178c58e35cbab33854cb7f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/09/2017
 ---
-
-#  <a name="introduction-to-uwp-app-design"></a>Einführung in das UWP-App-Design 
+#  <a name="introduction-to-uwp-app-design"></a><span data-ttu-id="98f41-105">Einführung in das UWP-App-Design</span><span class="sxs-lookup"><span data-stu-id="98f41-105">Introduction to UWP app design</span></span>
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Eine App für die Universelle Windows-Plattform (UWP) kann auf beliebigen Windows-Geräten ausgeführt werden – Smartphones, Tablets oder PCs.
+<span data-ttu-id="98f41-106">Eine App für die universelle Windows-Plattform (UWP) kann auf beliebigen Windows-Geräten ausgeführt werden – Smartphones, Tablets oder PCs.</span><span class="sxs-lookup"><span data-stu-id="98f41-106">A Universal Windows Platform (UWP) app can run on any Windows-based device, from your phone to your tablet or PC.</span></span> 
 
-![Windows-Geräte](images/1894834-hig-device-primer-01-500.png)
+<span data-ttu-id="98f41-107">Der Entwurf einer App, die auf so vielen verschiedenen mobilen Geräten gut aussieht, kann eine große Herausforderung darstellen.</span><span class="sxs-lookup"><span data-stu-id="98f41-107">Designing an app that looks good on such a wide variety of devices can be a big challenge.</span></span> <span data-ttu-id="98f41-108">Glücklicherweise bietet die universelle Windows-Plattform (UWP) eine Reihe von integrierten Funktionen und universellen Bausteinen, mit denen Sie eine Benutzerumgebung erstellen können, auf der eine Vielzahl von Geräten, Bildschirmen und Eingabemethoden einwandfrei funktioniert.</span><span class="sxs-lookup"><span data-stu-id="98f41-108">Fortunately, the Universal Windows Platform (UWP) provides a set of built-in features and universal building blocks that help you create a UX that works well with a variety of devices, screens, and input methods.</span></span> <span data-ttu-id="98f41-109">Dieser Artikel beschreibt die UI-Features und Vorteile von UWP-Apps und gibt allgemeine Designtipps zum Erstellen Ihrer ersten UWP-App.</span><span class="sxs-lookup"><span data-stu-id="98f41-109">This articles describes the UI features and benefits of UWP apps and provides some high-level design guidance for creating your first UWP app.</span></span> 
 
-Der Entwurf einer App, die auf so vielen verschiedenen mobilen Geräten gut aussieht, kann eine große Herausforderung darstellen. Wie also entwerfen Sie eine App, die ein hervorragendes Benutzererlebnis auf Geräten bietet, die über deutlich unterschiedliche Bildschirmgrößen und verschiedene Eingabemethoden verfügen? Glücklicherweise bietet die Universelle Windows-Plattform (UWP) eine Reihe von integrierten Funktionen und universellen Bausteinen, mit denen Sie genau dies tun können. 
+## <a name="video-summary"></a><span data-ttu-id="98f41-110">Video-Zusammenfassung</span><span class="sxs-lookup"><span data-stu-id="98f41-110">Video summary</span></span>
 
-![ein Design für eine App, die auf Windows-Telefonen, Tablets und PCs ausgeführt werden kann](images/food-truck-finder/uap-foodtruck--md-detail.png)
+> [!VIDEO https://channel9.msdn.com/Blogs/One-Dev-Minute/Designing-Universal-Windows-Platform-apps/player]
 
-Dieser Artikel beschreibt die UI-Features und Vorteile von UWP-Apps und gibt allgemeine Designtipps zum Erstellen Ihrer ersten UWP-App. Lassen Sie uns zunächst einen Blick auf einige der Features werfen, die Sie erhalten, wenn Sie eine UWP-App erstellen. 
 
-## <a name="uwp-app-features"></a>UWP-App-Features
+<!--
+![windows-powered devices](images/1894834-hig-device-primer-01-500.png)
+-->
 
-### <a name="effective-pixels-and-scaling"></a>Effektive Pixel und Skalierung
+<!--
+![A design for an app that runs on windows phone, tablets, and pcs](images/food-truck-finder/uap-foodtruck--md-detail.png)
+-->
 
-UWP-Apps passen automatisch die Größe von Steuerelementen, Schriftarten und anderer UI-Elemente an, damit sie auf allen Geräten lesbar sind.
 
-Wenn Ihre App auf einem Gerät ausgeführt wird, verwendet das System einen Algorithmus, um die Art der Anzeige der UI-Elemente auf dem Bildschirm zu normalisieren. Dieser Skalierungsalgorithmus berücksichtigt den Abstand zum Bildschirm und die Bildschirmdichte (Pixel pro Zoll), um die wahrgenommene Größe (anstelle der physischen Größe) zu optimieren. Mit dem Skalierungsalgorithmus wird sichergestellt, dass der Schriftgrad 24 Pixel auf einem 3 Meter entfernten Surface Hub genauso für den Benutzer lesbar ist wie der Schriftgrad 24 Pixel auf einem 5-Zoll-Smartphone, das nur einige Zentimeter entfernt ist.
+## <a name="uwp-features"></a><span data-ttu-id="98f41-111">UWP-Features</span><span class="sxs-lookup"><span data-stu-id="98f41-111">UWP features</span></span>
+
+<span data-ttu-id="98f41-112">Lassen Sie uns zunächst einen Blick auf einige der Features werfen, die Sie erhalten, wenn Sie eine UWP-App erstellen.</span><span class="sxs-lookup"><span data-stu-id="98f41-112">Let's start by taking a look at some of the features that you get when you create a UWP app.</span></span>
+
+### <a name="effective-pixels-and-scaling"></a><span data-ttu-id="98f41-113">Effektive Pixel und Skalierung</span><span class="sxs-lookup"><span data-stu-id="98f41-113">Effective pixels and scaling</span></span>
+
+<span data-ttu-id="98f41-114">UWP-Apps passen automatisch die Größe von Steuerelementen, Schriftarten und anderer UI-Elemente an, damit sie auf allen Geräten lesbar sind und die Interaktion erleichtern.</span><span class="sxs-lookup"><span data-stu-id="98f41-114">UWP apps automatically adjust the size of controls, fonts, and other UI elements so that they are legible and easy to interact with on all devices.</span></span>
+
+<span data-ttu-id="98f41-115">Wenn Ihre App auf einem Gerät ausgeführt wird, verwendet das System einen Algorithmus, um die Art der Anzeige der UI-Elemente auf dem Bildschirm zu normalisieren.</span><span class="sxs-lookup"><span data-stu-id="98f41-115">When your app runs on a device, the system uses an algorithm to normalize the way UI elements display on the screen.</span></span> <span data-ttu-id="98f41-116">Dieser Skalierungsalgorithmus berücksichtigt den Abstand zum Bildschirm und die Bildschirmdichte (Pixel pro Zoll), um die wahrgenommene Größe (anstelle der physischen Größe) zu optimieren.</span><span class="sxs-lookup"><span data-stu-id="98f41-116">This scaling algorithm takes into account viewing distance and screen density (pixels per inch) to optimize for perceived size (rather than physical size).</span></span> <span data-ttu-id="98f41-117">Mit dem Skalierungsalgorithmus wird sichergestellt, dass der Schriftgrad 24 Pixel auf einem 3 Meter entfernten Surface Hub genauso für den Benutzer lesbar ist wie der Schriftgrad 24 Pixel auf einem 5-Zoll-Smartphone, das nur einige Zentimeter entfernt ist.</span><span class="sxs-lookup"><span data-stu-id="98f41-117">The scaling algorithm ensures that a 24 px font on Surface Hub 10 feet away is just as legible to the user as a 24 px font on 5" phone that's a few inches away.</span></span>
 
 ![Sichtabstände für verschiedene Geräte](images/1910808-hig-uap-toolkit-03.png)
 
-Aufgrund der Funktionsweise des Skalierungssystems beim Entwerfen Ihrer UWP-App, verwenden Sie *effektive Pixeln*, und nicht die tatsächlichen physischen Pixel. Welche Auswirkungen hat dies beim Entwerfen Ihrer App?
+<span data-ttu-id="98f41-119">Aufgrund der Funktionsweise des Skalierungssystems beim Entwerfen Ihrer UWP-App, verwenden Sie *effektive Pixeln*, und nicht die tatsächlichen physischen Pixel.</span><span class="sxs-lookup"><span data-stu-id="98f41-119">Because of how the scaling system works, when you design your UWP app, you're designing in *effective pixels*, not actual physical pixels.</span></span> <span data-ttu-id="98f41-120">Welche Auswirkungen hat dies beim Entwerfen Ihrer App?</span><span class="sxs-lookup"><span data-stu-id="98f41-120">So, how does that impact the way you design your app?</span></span>
 
--   Sie können die Pixeldichte und die tatsächliche Bildschirmauflösung beim Entwerfen ignorieren. Entwerfen Sie stattdessen für die effektive Auflösung (die Auflösung in effektiven Pixeln) für eine Größenklasse (Details finden Sie im Artikel [Bildschirmgrößen und Haltepunkte](screen-sizes-and-breakpoints-for-responsive-design.md)).
+-   <span data-ttu-id="98f41-121">Sie können die Pixeldichte und die tatsächliche Bildschirmauflösung beim Entwerfen ignorieren.</span><span class="sxs-lookup"><span data-stu-id="98f41-121">You can ignore the pixel density and the actual screen resolution when designing.</span></span> <span data-ttu-id="98f41-122">Entwerfen Sie stattdessen für die effektive Auflösung (die Auflösung in effektiven Pixeln) für eine Größenklasse (Details finden Sie im Artikel [Bildschirmgrößen und Haltepunkte](screen-sizes-and-breakpoints-for-responsive-design.md)).</span><span class="sxs-lookup"><span data-stu-id="98f41-122">Instead, design for the effective resolution (the resolution in effective pixels) for a size class (for details, see the [Screen sizes and breakpoints article](screen-sizes-and-breakpoints-for-responsive-design.md)).</span></span>
 
--   Wenn das System die Benutzeroberfläche skaliert, erfolgt dies durch die Multiplikation mit vier. Um eine scharfe Darstellung zu gewährleisten, docken Sie Ihre Entwürfe an das 4 x 4-Pixelraster an: Stellen Sie Ränder, Größen und Positionen von UI-Elementen (nicht jedoch die Größe, Text kann eine beliebige Größe aufweisen) und die Position des Textes als ein Vielfaches von 4 in effektiven Pixeln dar.
+-   <span data-ttu-id="98f41-123">Wenn das System die Benutzeroberfläche skaliert, erfolgt dies durch die Multiplikation mit vier.</span><span class="sxs-lookup"><span data-stu-id="98f41-123">When the system scales your UI, it does so by multiples of 4.</span></span> <span data-ttu-id="98f41-124">Um eine scharfe Darstellung zu gewährleisten, docken Sie Ihre Entwürfe an das 4 x 4-Pixelraster: Stellen Sie Ränder, Größen und die Positionen von UI-Elementen auf ein Vielfaches von 4 in effektiven Pixeln ein.</span><span class="sxs-lookup"><span data-stu-id="98f41-124">To ensure a crisp appearance, snap your designs to the 4x4 pixel grid: make margins, sizes, and the positions of UI elements a multiple of 4 effective pixels.</span></span> <span data-ttu-id="98f41-125">Beachten Sie, dass Text diese Anforderung nicht hat. Der Text kann eine beliebige Größe und Position haben.</span><span class="sxs-lookup"><span data-stu-id="98f41-125">Note that text doesn't have this requirement; the text can have any size and position.</span></span> 
 
-Diese Abbildung zeigt Designelemente, die dem 4 x 4-Pixelraster zugeordnet sind. Das Designelement wird immer scharfe Kanten aufweisen.
+<span data-ttu-id="98f41-126">Diese Abbildung zeigt Designelemente, die dem 4 x 4-Pixelraster zugeordnet sind.</span><span class="sxs-lookup"><span data-stu-id="98f41-126">This illustration shows design elements that map to the 4x4 pixel grid.</span></span> <span data-ttu-id="98f41-127">Das Designelement wird immer scharfe Kanten aufweisen.</span><span class="sxs-lookup"><span data-stu-id="98f41-127">The design element will always have crisp, sharp edges.</span></span>
 
 ![Andocken an das 4x4-Pixelraster](images/rsp-design/epx-4pixelgood.png)
 
-Die nächste Abbildung zeigt Designelemente, die nicht an das 4 x 4-Raster angedockt werden. Auf einigen Geräten werden diese Designelemente verschwommene, weiche Kanten aufweisen.
-
-![Designelemente, die nicht am 4 x 4-Pixelraster ausgerichtet werden](images/rsp-design/offthegridillustration.png)
-
 > [!TIP]
-> Legen Sie beim Erstellen von Bildschirmmodellen in Bildbearbeitungsprogrammen die DPI auf 72 und die Bildgröße auf effektive Auflösung für die Zielgrößenklasse fest. (Eine Liste der Größenklassen und effektiven Auflösungen finden Sie im Abschnitt [Empfehlungen für bestimmte Größenklassen](#sizeclasses) dieses Artikels.)
+> <span data-ttu-id="98f41-129">Legen Sie beim Erstellen von Bildschirmmodellen in Bildbearbeitungsprogrammen die DPI auf 72 und die Bildgröße auf effektive Auflösung für die Zielgrößenklasse fest.</span><span class="sxs-lookup"><span data-stu-id="98f41-129">When creating screen mockups in image editing programs, set the DPI to 72 and set the image dimensions to the effective resolution for the size class you're targeting.</span></span> <span data-ttu-id="98f41-130">Eine Liste der Größenklassen und effektiven Auflösungen finden Sie unter dem [Artikel Bildschirmgrößen und Haltepunkte](screen-sizes-and-breakpoints-for-responsive-design.md).</span><span class="sxs-lookup"><span data-stu-id="98f41-130">For a list of size classes and effective resolutions, see the [Screen sizes and breakpoints article](screen-sizes-and-breakpoints-for-responsive-design.md).</span></span>
 
 
-### <a name="universal-input-and-smart-interactions"></a>Universelle Eingabe und Smart-Interaktionen
+### <a name="universal-input-and-smart-interactions"></a><span data-ttu-id="98f41-131">Universelle Eingabe und Smart-Interaktionen</span><span class="sxs-lookup"><span data-stu-id="98f41-131">Universal input and smart interactions</span></span>
 
-Eine andere integrierte Funktion von UWP ist universelle Eingabe über Smart-Interaktionen. Obwohl Sie Ihre Apps für bestimmte Eingabemethoden und Geräte entwerfen können, müssen Sie dies nicht unbedingt tun. Der Grund dafür ist, dass Apps für die universelle Windows-Plattform standardmäßig auf Smart-Interaktionen basieren. Dies bedeutet, dass Sie um eine Klick-Interaktion herum entwerfen können, ohne zu wissen oder festzulegen, ob der Klick von einem echten Mausklick oder einem Fingertipp stammt.
+<span data-ttu-id="98f41-132">Eine andere integrierte Funktion von UWP ist universelle Eingabe über Smart-Interaktionen.</span><span class="sxs-lookup"><span data-stu-id="98f41-132">Another built-in capability of the UWP is universal input enabled via smart interactions.</span></span> <span data-ttu-id="98f41-133">Obwohl Sie Ihre Apps für bestimmte Eingabemethoden und Geräte entwerfen können, müssen Sie dies nicht unbedingt tun.</span><span class="sxs-lookup"><span data-stu-id="98f41-133">Although you can design your apps for specific input modes and devices, you aren’t required to.</span></span> <span data-ttu-id="98f41-134">Der Grund dafür ist, dass Apps für die universelle Windows-Plattform standardmäßig auf Smart-Interaktionen basieren.</span><span class="sxs-lookup"><span data-stu-id="98f41-134">That’s because Universal Windows apps by default rely on smart interactions.</span></span> <span data-ttu-id="98f41-135">Dies bedeutet, dass Sie um eine Klick-Interaktion herum entwerfen können, ohne zu wissen oder festzulegen, ob der Klick von einem echten Mausklick oder einem Fingertipp stammt.</span><span class="sxs-lookup"><span data-stu-id="98f41-135">That means you can design around a click interaction without having to know or define whether the click comes from an actual mouse click or the tap of a finger.</span></span>
 
-### <a name="universal-controls-and-styles"></a>Universelle Steuerelemente und Stile
+### <a name="universal-controls-and-styles"></a><span data-ttu-id="98f41-136">Universelle Steuerelemente und Stile</span><span class="sxs-lookup"><span data-stu-id="98f41-136">Universal controls and styles</span></span>
 
 
-Die UWP bietet auch einige nützliche Bausteine, die den Entwurf von Apps für mehrere Gerätefamilien vereinfachen.
+<span data-ttu-id="98f41-137">Die UWP bietet auch einige nützliche Bausteine, die den Entwurf von Apps für mehrere Gerätefamilien vereinfachen.</span><span class="sxs-lookup"><span data-stu-id="98f41-137">The UWP also provides some useful building blocks that make it easier to design apps for multiple device families.</span></span>
 
--   **Universelle Steuerelemente**
+-   **<span data-ttu-id="98f41-138">Universelle Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="98f41-138">Universal controls</span></span>**
 
-    Die UWP bietet einen Satz von universellen Steuerelementen, die garantiert gut auf allen Windows-Geräten funktionieren. Dieser Satz universeller Steuerelemente enthält allgemeine Formularsteuerelemente wie Optionsschaltflächen und Textfelder bis hin zu komplexen Steuerelementen wie Rasteransicht und Listenansicht, mit denen Listen an Elementen aus einem Datenstrom und einer Vorlage generiert werden können. Diese Steuerelemente sind eingabebewusst und werden mit dem richtigen Satz an Eingabeaufforderungen, Ereigniszuständen und allgemeiner Funktionalität für jede Gerätefamilie bereitgestellt.
+    <span data-ttu-id="98f41-139">Die UWP bietet einen Satz von universellen Steuerelementen, die garantiert gut auf allen Windows-Geräten funktionieren.</span><span class="sxs-lookup"><span data-stu-id="98f41-139">The UWP provides a set of universal controls that are guaranteed to work well on all Windows-powered devices.</span></span> <span data-ttu-id="98f41-140">Dieser Satz universeller Steuerelemente enthält allgemeine Formularsteuerelemente wie Optionsschaltflächen und Textfelder bis hin zu komplexen Steuerelementen wie Rasteransicht und Listenansicht, mit denen Listen an Elementen aus einem Datenstrom und einer Vorlage generiert werden können.</span><span class="sxs-lookup"><span data-stu-id="98f41-140">This set of universal controls includes everything from common form controls like radio button and text box to sophisticated controls like grid view and list view that can generate lists of items from a stream of data and a template.</span></span> <span data-ttu-id="98f41-141">Diese Steuerelemente sind eingabebewusst und werden mit dem richtigen Satz an Eingabeaufforderungen, Ereigniszuständen und allgemeiner Funktionalität für jede Gerätefamilie bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="98f41-141">These controls are input-aware and deploy with the proper set of input affordances, event states, and overall functionality for each device family.</span></span>
 
-    Eine vollständige Liste dieser Steuerelemente und der Muster, die Sie aus ihnen erstellen können, finden Sie im Abschnitt [Steuerelemente und Muster](https://dev.windows.com/design/controls-patterns).
+    <span data-ttu-id="98f41-142">Eine vollständige Liste dieser Steuerelemente und der Muster, die Sie aus ihnen erstellen können, finden Sie im Abschnitt [Steuerelemente und Muster](https://dev.windows.com/design/controls-patterns).</span><span class="sxs-lookup"><span data-stu-id="98f41-142">For a complete list of these controls and the patterns you can make from them, see the [Controls and patterns](https://dev.windows.com/design/controls-patterns) section.</span></span>
 
--   **Universelle Stile**
+-   **<span data-ttu-id="98f41-143">Universelle Stile</span><span class="sxs-lookup"><span data-stu-id="98f41-143">Universal styles</span></span>**
 
-    Ihre UWP-App erhält automatisch eine Reihe von Standardstilen, die diese Features bieten:
+    <span data-ttu-id="98f41-144">Ihre UWP-App erhält automatisch eine Reihe von Standardstilen, die diese Features bieten:</span><span class="sxs-lookup"><span data-stu-id="98f41-144">Your UWP app automatically gets a default set of styles that gives you these features:</span></span>
 
-    -   Eine Reihe von Stilen, die Ihrer App automatisch ein helles oder dunkles Design (Ihrer Wahl) verleihen und die die bevorzugte Akzentfarbe des Benutzers integrieren können.
+    -   <span data-ttu-id="98f41-145">Eine Reihe von Stilen, die Ihrer App automatisch ein helles oder dunkles Design (Ihrer Wahl) verleihen und die die bevorzugte Akzentfarbe des Benutzers integrieren können.</span><span class="sxs-lookup"><span data-stu-id="98f41-145">A set of styles that automatically gives your app a light or dark theme (your choice) and can incorporate the user's accent color preference.</span></span>
 
         ![helles und dunkles Design](images/1910808-hig-uap-toolkit-01.png)
 
-    -   Eine Segoe-basierter Typenverlauf, der sicherstellt, dass der App-Text auf allen Geräten scharf dargestellt wird.
-    -   Standardanimationen für Interaktionen.
-    -   Automatische Unterstützung von Modi mit hohem Kontrast. Bei der Entwicklung unserer Stile wurden hohe Kontraste berücksichtigt, sodass Ihre App auch auf einem Gerät im Modus mit hohem Kontrast gut dargestellt wird.
-    -   Automatische Unterstützung anderer Sprachen. Die Standardstile wählen automatisch die richtige Schriftart für jede Sprache aus, die Windows unterstützt. Sie können sogar mehrere Sprachen in derselben App verwenden, die dann ebenfalls richtig dargestellt werden.
-    -   Integrierte Unterstützung für die Leserichtung von rechts nach links.
+    -   <span data-ttu-id="98f41-147">Eine Segoe-basierter Typenverlauf, der sicherstellt, dass der App-Text auf allen Geräten scharf dargestellt wird.</span><span class="sxs-lookup"><span data-stu-id="98f41-147">A Segoe-based type ramp that ensures that app text looks crisp on all devices.</span></span>
+    -   <span data-ttu-id="98f41-148">Standardanimationen für Interaktionen.</span><span class="sxs-lookup"><span data-stu-id="98f41-148">Default animations for interactions.</span></span>
+    -   <span data-ttu-id="98f41-149">Automatische Unterstützung von Modi mit hohem Kontrast.</span><span class="sxs-lookup"><span data-stu-id="98f41-149">Automatic support for high-contrast modes.</span></span> <span data-ttu-id="98f41-150">Bei der Entwicklung unserer Stile wurden hohe Kontraste berücksichtigt, sodass Ihre App auch auf einem Gerät im Modus mit hohem Kontrast gut dargestellt wird.</span><span class="sxs-lookup"><span data-stu-id="98f41-150">Our styles were designed with high-contrast in mind, so when your app runs on a device in high-contrast mode, it will display properly.</span></span>
+    -   <span data-ttu-id="98f41-151">Automatische Unterstützung anderer Sprachen.</span><span class="sxs-lookup"><span data-stu-id="98f41-151">Automatic support for other languages.</span></span> <span data-ttu-id="98f41-152">Die Standardstile wählen automatisch die richtige Schriftart für jede Sprache aus, die Windowsunterstützt.</span><span class="sxs-lookup"><span data-stu-id="98f41-152">Our default styles automatically select the correct font for every language that Windows supports.</span></span> <span data-ttu-id="98f41-153">Sie können sogar mehrere Sprachen in derselben App verwenden, die dann ebenfalls richtig dargestellt werden.</span><span class="sxs-lookup"><span data-stu-id="98f41-153">You can even use multiple languages in the same app and they'll be displayed properly.</span></span>
+    -   <span data-ttu-id="98f41-154">Integrierte Unterstützung für die Leserichtung von rechts nach links.</span><span class="sxs-lookup"><span data-stu-id="98f41-154">Built-in support for RTL reading order.</span></span>
 
-    Sie können diese Standardstile anpassen, um Ihrer App eine persönliche Note zu verleihen, oder Sie können sie vollständig durch Ihre eigene visuelle Benutzeroberfläche erstellen. Hier sehen Sie als Beispiel ein Design für eine Wetter-App mit einem einzigartigen visuellen Stil:
+    <span data-ttu-id="98f41-155">Sie können diese Standardstile anpassen, um Ihrer App eine persönliche Note zu verleihen, oder Sie können sie vollständig durch Ihre eigene visuelle Benutzeroberfläche erstellen.</span><span class="sxs-lookup"><span data-stu-id="98f41-155">You can customize these default styles to give your app a personal touch, or you can completely replace them with your own to create a unique visual experience.</span></span> <span data-ttu-id="98f41-156">Hier sehen Sie als Beispiel ein Design für eine Wetter-App mit einem einzigartigen visuellen Stil:</span><span class="sxs-lookup"><span data-stu-id="98f41-156">For example, here's a design for a weather app with a unique visual style:</span></span>
 
     ![eine Wetter-App mit eigenem visuellem Stil](images/weather/uwp-weather-tab-phone-700.png)
 
-Nachdem wir die Bausteine von UWP-Apps beschrieben haben, sehen wir uns jetzt an, wie diese zu einer UI zusammengefügt werden. 
-    
-## <a name="the-anatomy-of-a-typical-uwp-app"></a>Die Anatomie einer typischen UWP-App
+## <a name="uwp-and-the-fluent-design-system"></a><span data-ttu-id="98f41-158">UWP und Fluent Design-System</span><span class="sxs-lookup"><span data-stu-id="98f41-158">UWP and the Fluent Design System</span></span>
 
+ <span data-ttu-id="98f41-159">Mit dem Fluent Design-System können Sie moderne, klare Benutzeroberflächen erstellen, die Licht, Tiefe, Bewegung, Material und Skalierung enthalten.</span><span class="sxs-lookup"><span data-stu-id="98f41-159">The Fluent Design System helps you create modern, clean UI that incorporates light, depth, motion, material, and scale.</span></span> <span data-ttu-id="98f41-160">Fluent Design wird auf allen Windows10-Geräten und Apps angewendet, um schöne, ansprechende und intuitive Benutzeroberflächen zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="98f41-160">Fluent Design is being applied across Windows 10 devices and apps to create beautiful, engaging, and intuitive experiences.</span></span> 
+ 
+ <span data-ttu-id="98f41-161">Wie können Sie Fluent Design in Ihre App integrieren?</span><span class="sxs-lookup"><span data-stu-id="98f41-161">How can you incorporate Fluent Design into your app?</span></span> <span data-ttu-id="98f41-162">Wir fügen ständig neue Steuerelemente und Features hinzu, die Ihnen die Arbeit erleichtern.</span><span class="sxs-lookup"><span data-stu-id="98f41-162">We're continually adding new controls and features that make it easy.</span></span> <span data-ttu-id="98f41-163">Hier ist eine Liste der aktuellen Fluent Design-Features für UWP:</span><span class="sxs-lookup"><span data-stu-id="98f41-163">Here's a list of current Fluent Design features for UWP:</span></span>  
 
-Moderne Benutzeroberflächen sind äußerst komplex und bestehen aus Textelementen, Formen, Farben und Animationen, die sich wiederum aus den einzelnen Pixeln des Bildschirms des verwendeten Geräts zusammensetzen. Wenn Sie eine Benutzeroberfläche entwerfen, kann die reine Anzahl an Möglichkeiten verwirrend sein.
+* <span data-ttu-id="98f41-164">[Acryl](../style/acrylic.md) ist eine Art von Pinsel, der eine transparente Oberfläche erzeugt.</span><span class="sxs-lookup"><span data-stu-id="98f41-164">[Acrylic](../style/acrylic.md) is a type of brush that creates semi-transparent surfaces.</span></span>
+* <span data-ttu-id="98f41-165">[Parallax](../style/parallax.md) ist eine einfache Methode zum Hinzufügen von dreidimensionaler Perspektive, Tiefe und Bewegung für den Bildlauf in Inhalten, wie bei Listen.</span><span class="sxs-lookup"><span data-stu-id="98f41-165">[Parallax](../style/parallax.md) adds three-dimensional perspective, depth, and movement to scrolling content, such as lists.</span></span>
+* <span data-ttu-id="98f41-166">[Einblenden](../style/reveal.md) verwendet Licht, um einen Schwebeeffekt zu erstellen, der interaktive UI-Elemente beleuchtet.</span><span class="sxs-lookup"><span data-stu-id="98f41-166">[Reveal](../style/reveal.md) uses light to create a hover effect that illuminates interactive UI elements.</span></span> 
+* <span data-ttu-id="98f41-167">[Verbundene Animationen](../style/connected-animation.md) bietet ordnungsgemäße Übergänge der Szenen, um die Benutzerfreundlichkeit durch das Beibehalten des Kontexts und der Bereitstellung der Kontinuität zu verbessern.</span><span class="sxs-lookup"><span data-stu-id="98f41-167">[Connected animations](../style/connected-animation.md) provide graceful scene transitions that improve usability by maintaining context and providing continuity.</span></span> 
 
-Der Einfachheit halber sehen wir uns den Aufbau einer App aus der Entwurfsperspektive an. Nehmen wir an, dass eine App aus Bildschirmen und Seiten besteht. Jede Seite verfügt über eine Benutzeroberfläche, die sich aus drei Arten von UI-Elementen zusammensetzt: Navigation, Befehle und Inhalt.
+<span data-ttu-id="98f41-168">Wir haben ebenfalls unsere [Entwurfsrichtlinien](https://developer.microsoft.com/windows/apps/design) aktualisiert (die Sie gerade lesen), da sie auf Fluent-Entwurfsprinzipien basieren.</span><span class="sxs-lookup"><span data-stu-id="98f41-168">We've also updated our [design guidelines](https://developer.microsoft.com/windows/apps/design) (which you're current reading) so they're based on Fluent Design principles.</span></span>
+
+## <a name="the-anatomy-of-a-typical-uwp-app"></a><span data-ttu-id="98f41-169">Die Anatomie einer typischen UWP-App</span><span class="sxs-lookup"><span data-stu-id="98f41-169">The anatomy of a typical UWP app</span></span>
+
+<span data-ttu-id="98f41-170">Nachdem wir die Bausteine von UWP-Apps beschrieben haben, sehen wir uns jetzt an, wie diese zu einer UI zusammengefügt werden.</span><span class="sxs-lookup"><span data-stu-id="98f41-170">Now that we've described the building blocks of UWP apps, let's take a look at how to put them together to create a UI.</span></span>
+
+<span data-ttu-id="98f41-171">Moderne Benutzeroberflächen sind äußerst komplex und bestehen aus Textelementen, Formen, Farben und Animationen, die sich wiederum aus den einzelnen Pixeln des Bildschirms des verwendeten Geräts zusammensetzen.</span><span class="sxs-lookup"><span data-stu-id="98f41-171">A modern user interface is a complex thing, made up of text, shapes, colors, and animations which are ultimately made up out of individual pixels of the screen of the device you're using.</span></span> <span data-ttu-id="98f41-172">Wenn Sie eine Benutzeroberfläche entwerfen, kann die reine Anzahl an Möglichkeiten verwirrend sein.</span><span class="sxs-lookup"><span data-stu-id="98f41-172">When you start designing a user interface, the sheer number of choices can be overwhelming.</span></span>
+
+<span data-ttu-id="98f41-173">Der Einfachheit halber sehen wir uns den Aufbau einer App aus der Entwurfsperspektive an.</span><span class="sxs-lookup"><span data-stu-id="98f41-173">To make things simpler, let's define the anatomy of an app from a design perspective.</span></span> <span data-ttu-id="98f41-174">Nehmen wir an, dass eine App aus Bildschirmen und Seiten besteht.</span><span class="sxs-lookup"><span data-stu-id="98f41-174">Let's say that an app is made up of screens and pages.</span></span> <span data-ttu-id="98f41-175">Jede Seite verfügt über eine Benutzeroberfläche, die sich aus drei Arten von UI-Elementen zusammensetzt: Navigation, Befehle und Inhalt.</span><span class="sxs-lookup"><span data-stu-id="98f41-175">Each page has a user interface, made up of three types of UI elements: navigation, commanding, and content elements.</span></span>
 
 
 
@@ -114,118 +131,118 @@ Der Einfachheit halber sehen wir uns den Aufbau einer App aus der Entwurfsperspe
 <tr class="odd">
 <td align="left"><p><img src="images/1895065-hig-anatomyofanapp-02.png" alt="Navigation, command, and content areas of an address book app" /></p>
 <p></p></td>
-<td align="left"><strong>Navigationselemente</strong>
-<p>Mithilfe von Navigationselementen können Benutzer die Inhalte auswählen, die sie anzeigen möchten. Zu den Navigationselementen zählen beispielsweise [Registerkarten und Pivots](../controls-and-patterns/tabs-pivot.md), [Hyperlinks](../controls-and-patterns/hyperlinks.md) und [Navigationsbereiche](../controls-and-patterns/nav-pane.md).</p>
-<p>Navigationselemente werden ausführlich im Artikel [Navigationsdesigngrundlagen](navigation-basics.md) behandelt.</p>
-<strong>Befehlselemente</strong>
-<p>Befehlselemente initiieren Aktionen wie etwa das Bearbeiten, Speichern oder Freigeben von Inhalten. Zu den Befehlselementen zählen beispielsweise [Schaltflächen](../controls-and-patterns/buttons.md) und die [Befehlsleiste](../controls-and-patterns/app-bars.md). Zu den Befehlselementen können auch Tastenkombinationen gehören, die nicht auf dem Bildschirm angezeigt werden.</p>
-<p>Befehlselemente werden ausführlich im Artikel [Befehlsdesigngrundlagen](commanding-basics.md) behandelt.</p>
-<strong>Inhaltselemente</strong>
-<p>Die Inhaltselemente zeigen die Inhalte der App an. Bei einer Zeichen-App kann als Inhalt beispielsweise eine Zeichnung und bei einer Nachrichten-App beispielsweise ein Nachrichtenartikel angezeigt werden.</p>
-<p>Inhaltselemente werden ausführlich im Artikel [Inhaltsdesigngrundlagen](content-basics.md) behandelt.</p></td>
+<td align="left"><strong><span data-ttu-id="98f41-176">Navigationselemente</span><span class="sxs-lookup"><span data-stu-id="98f41-176">Navigation elements</span></span></strong>
+<p><span data-ttu-id="98f41-177">Mithilfe von Navigationselementen können Benutzer die Inhalte auswählen, die sie anzeigen möchten.</span><span class="sxs-lookup"><span data-stu-id="98f41-177">Navigation elements help users choose the content they want to display.</span></span> <span data-ttu-id="98f41-178">Zu den Navigationselementen zählen beispielsweise [Registerkarten und Pivots](../controls-and-patterns/tabs-pivot.md), [Hyperlinks](../controls-and-patterns/hyperlinks.md) und [Navigationsbereiche](../controls-and-patterns/navigationview.md).</span><span class="sxs-lookup"><span data-stu-id="98f41-178">Examples of navigation elements include [tabs and pivots](../controls-and-patterns/tabs-pivot.md), [hyperlinks](../controls-and-patterns/hyperlinks.md), and [nav panes](../controls-and-patterns/navigationview.md).</span></span></p>
+<p><span data-ttu-id="98f41-179">Navigationselemente werden ausführlich im Artikel [Navigationsdesigngrundlagen](navigation-basics.md) behandelt.</span><span class="sxs-lookup"><span data-stu-id="98f41-179">Navigation elements are covered in detail in the [Navigation design basics](navigation-basics.md) article.</span></span></p>
+<strong><span data-ttu-id="98f41-180">Befehlselemente</span><span class="sxs-lookup"><span data-stu-id="98f41-180">Command elements</span></span></strong>
+<p><span data-ttu-id="98f41-181">Befehlselemente initiieren Aktionen wie etwa das Bearbeiten, Speichern oder Freigeben von Inhalten.</span><span class="sxs-lookup"><span data-stu-id="98f41-181">Command elements initiate actions, such as manipulating, saving, or sharing content.</span></span> <span data-ttu-id="98f41-182">Zu den Befehlselementen zählen beispielsweise [Schaltflächen](../controls-and-patterns/buttons.md) und die [Befehlsleiste](../controls-and-patterns/app-bars.md).</span><span class="sxs-lookup"><span data-stu-id="98f41-182">Examples of command elements include [button](../controls-and-patterns/buttons.md) and the [command bar](../controls-and-patterns/app-bars.md).</span></span> <span data-ttu-id="98f41-183">Zu den Befehlselementen können auch Tastenkombinationen gehören, die nicht auf dem Bildschirm angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="98f41-183">Command elements can also include keyboard shortcuts that aren't actually visible on the screen.</span></span></p>
+<p><span data-ttu-id="98f41-184">Befehlselemente werden ausführlich im Artikel [Befehlsdesigngrundlagen](commanding-basics.md) behandelt.</span><span class="sxs-lookup"><span data-stu-id="98f41-184">Command elements are covered in detail in the [Command design basics](commanding-basics.md) article.</span></span></p>
+<strong><span data-ttu-id="98f41-185">Inhaltselemente</span><span class="sxs-lookup"><span data-stu-id="98f41-185">Content elements</span></span></strong>
+<p><span data-ttu-id="98f41-186">Die Inhaltselemente zeigen die Inhalte der App an.</span><span class="sxs-lookup"><span data-stu-id="98f41-186">Content elements display the app's content.</span></span> <span data-ttu-id="98f41-187">Bei einer Zeichen-App kann als Inhalt beispielsweise eine Zeichnung und bei einer Nachrichten-App beispielsweise ein Nachrichtenartikel angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="98f41-187">For a painting app, the content might be a drawing; for a news app, the content might be a news article.</span></span></p>
+<p><span data-ttu-id="98f41-188">Inhaltselemente werden ausführlich im Artikel [Inhaltsdesigngrundlagen](content-basics.md) behandelt.</span><span class="sxs-lookup"><span data-stu-id="98f41-188">Content elements are covered in detail in the [Content design basics](content-basics.md) article.</span></span></p></td>
 </tr>
 </tbody>
 </table>
 
  
 
-Eine App verfügt mindestens über einen Begrüßungsbildschirm und eine Startseite, die die Benutzeroberfläche definiert. Eine typische App besitzt mehrere Seiten und Bildschirme, und die Navigations-, Befehls- und Inhaltselemente können je nach Seite variieren.
+<span data-ttu-id="98f41-189">Eine App verfügt mindestens über einen Begrüßungsbildschirm und eine Startseite, die die Benutzeroberfläche definiert.</span><span class="sxs-lookup"><span data-stu-id="98f41-189">At a minimum, an app has a splash screen and a home page that defines the user interface.</span></span> <span data-ttu-id="98f41-190">Eine typische App besitzt mehrere Seiten und Bildschirme, und die Navigations-, Befehls- und Inhaltselemente können je nach Seite variieren.</span><span class="sxs-lookup"><span data-stu-id="98f41-190">A typical app will have multiple pages and screens, and navigation, command, and content elements might change from page to page.</span></span>
 
-Bei der Entscheidung für die UI-Elemente für Ihre App sollten Sie die Geräte und Bildschirmgrößen berücksichtigen, auf denen Ihre App ausgeführt werden wird.
+<span data-ttu-id="98f41-191">Bei der Entscheidung für die UI-Elemente für Ihre App sollten Sie die Geräte und Bildschirmgrößen berücksichtigen, auf denen Ihre App ausgeführt werden wird.</span><span class="sxs-lookup"><span data-stu-id="98f41-191">When deciding on the right UI elements for your app, you might also consider the devices and the screen sizes your app will run on.</span></span>
 
-## <a name="tailoring-your-app-for-specific-devices-and-screen-sizes"></a>Anpassen Ihrer App an bestimmte Geräte und Bildschirmgrößen
+## <a name="tailoring-your-app-for-specific-devices-and-screen-sizes"></a><span data-ttu-id="98f41-192">Anpassen Ihrer App an bestimmte Geräte und Bildschirmgrößen</span><span class="sxs-lookup"><span data-stu-id="98f41-192">Tailoring your app for specific devices and screen sizes.</span></span>
 
+<span data-ttu-id="98f41-193">UWP-Apps verwenden effektive Pixel, um sicherzustellen, dass Ihre Designelemente lesbar sind und auf allen Geräten mit Windows verwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="98f41-193">UWP apps use effective pixels to guarantee that your design elements will be legible and usable on all Windows-powered devices.</span></span> <span data-ttu-id="98f41-194">Warum sollten also Sie überhaupt die Benutzeroberfläche Ihrer App für eine bestimmte Gerätefamilie anpassen wollen?</span><span class="sxs-lookup"><span data-stu-id="98f41-194">So, why would you ever want to customize your app's UI for a specific device family?</span></span>
 
-UWP-Apps verwenden effektive Pixel, um sicherzustellen, dass Ihre Designelemente lesbar sind und auf allen Geräten mit Windows verwendet werden können. Warum sollten also Sie überhaupt die Benutzeroberfläche Ihrer App für eine bestimmte Gerätefamilie anpassen wollen?
-
-**Hinweis**  
-Bevor wir fortfahren, möchten wir Sie darauf aufmerksam machen, dass Windows keine Möglichkeit für Ihre App zum Erkennen des Geräts bietet, auf dem sie ausgeführt wird. Sie kann die Gerätefamilie des Geräts (mobil, Desktop usw.), auf dem sie ausgeführt wird, die effektive Auflösung und den für die App verfügbaren Bildschirmbereich (Größe des App-Fensters) erkennen.
+**<span data-ttu-id="98f41-195">Hinweis</span><span class="sxs-lookup"><span data-stu-id="98f41-195">Note</span></span>**  
+<span data-ttu-id="98f41-196">Bevor wir fortfahren, möchten wir Sie darauf aufmerksam machen, dass Windows keine Möglichkeit für Ihre App zum Erkennen des Geräts bietet, auf dem sie ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="98f41-196">Before we go any further, Windows doesn't provide a way for your app to detect the specific device your app is running on.</span></span> <span data-ttu-id="98f41-197">Sie kann die Gerätefamilie des Geräts (mobil, Desktop usw.), auf dem sie ausgeführt wird, die effektive Auflösung und den für die App verfügbaren Bildschirmbereich (Größe des App-Fensters) erkennen.</span><span class="sxs-lookup"><span data-stu-id="98f41-197">It can tell you the device family (mobile, desktop, etc) the app is running on, the effective resolution, and the amount of screen space available to the app (the size of the app's window).</span></span>
 
  
 
--   **Effektive Bildschirmbereichnutzung und reduzierte Navigation**
+-   **<span data-ttu-id="98f41-198">Effektive Bildschirmbereichnutzung und reduzierte Navigation</span><span class="sxs-lookup"><span data-stu-id="98f41-198">To make the most effective use of space and reduce the need to navigate</span></span>**
 
-    Wenn Sie eine App für ein Gerät mit einem kleinen Bildschirm entwickeln, z. B. Smartphone, kann die App auf einem PC mit einem viel größeren Bildschirm verwendet werden, eine Menge des Bildschirmbereichs bleibt jedoch vermutlich ungenutzt. Sie können die App anpassen, damit mehr Inhalt angezeigt wird, wenn eine bestimmte Bildschirmgröße überschritten wird. Bei einer Shopping-App beispielsweise wird auf einem Smartphone ggf. eine Kategorie zum bestimmten Zeitpunkt anzeigt, während auf einem PC oder Laptop mehrere Kategorien und Produkte gleichzeitig angezeigt werden.
+    <span data-ttu-id="98f41-199">Wenn Sie eine App für ein Gerät mit einem kleinen Bildschirm entwickeln, z.B. Smartphone, kann die App auf einem PC mit einem viel größeren Bildschirm verwendet werden, eine Menge des Bildschirmbereichs bleibt jedoch vermutlich ungenutzt.</span><span class="sxs-lookup"><span data-stu-id="98f41-199">If you design an app to look good on a device that has a small screen, such as a phone, the app will be usable on a PC with a much bigger display, but there will probably be some wasted space.</span></span> <span data-ttu-id="98f41-200">Sie können die App anpassen, damit mehr Inhalt angezeigt wird, wenn eine bestimmte Bildschirmgröße überschritten wird.</span><span class="sxs-lookup"><span data-stu-id="98f41-200">You can customize the app to display more content when the screen is above a certain size.</span></span> <span data-ttu-id="98f41-201">Bei einer Shopping-App beispielsweise wird auf einem Smartphone ggf. eine Kategorie zum bestimmten Zeitpunkt anzeigt, während auf einem PC oder Laptop mehrere Kategorien und Produkte gleichzeitig angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="98f41-201">For example, a shopping app might display one merchandise category at a time on a phone, but show multiple categories and products simultaneously on a PC or laptop.</span></span>
 
-    Durch das Platzieren von mehr Inhalt auf dem Bildschirm reduzieren Sie die erforderliche Navigation des Benutzers.
+    <span data-ttu-id="98f41-202">Durch das Platzieren von mehr Inhalt auf dem Bildschirm reduzieren Sie die erforderliche Navigation des Benutzers.</span><span class="sxs-lookup"><span data-stu-id="98f41-202">By putting more content on the screen, you reduce the amount of navigation that the user needs to perform.</span></span>
 
--   **Profitieren von Gerätefunktionen**
+-   **<span data-ttu-id="98f41-203">Profitieren von Gerätefunktionen</span><span class="sxs-lookup"><span data-stu-id="98f41-203">To take advantage of devices' capabilities</span></span>**
 
-    Bestimmte Geräte verfügen über bestimmte Gerätefunktionen. Smartphones z. B. verfügen wahrscheinlich über einen Positionssensor und eine Kamera, während ein PC darüber möglicherweise nicht verfügt. Ihre App kann erkennen, welche Funktionen verfügbar sind und Features die Verwendung dieser ermöglichen.
+    <span data-ttu-id="98f41-204">Bestimmte Geräte verfügen über bestimmte Gerätefunktionen.</span><span class="sxs-lookup"><span data-stu-id="98f41-204">Certain devices are more likely to have certain device capabilities.</span></span> <span data-ttu-id="98f41-205">Smartphones z.B. verfügen wahrscheinlich über einen Positionssensor und eine Kamera, während ein PC darüber möglicherweise nicht verfügt.</span><span class="sxs-lookup"><span data-stu-id="98f41-205">For example, phones are likely to have a location sensor and a camera, while a PC might not have either.</span></span> <span data-ttu-id="98f41-206">Ihre App kann erkennen, welche Funktionen verfügbar sind und Features die Verwendung dieser ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="98f41-206">Your app can detect which capabilities are available and enable features that use them.</span></span>
 
--   **Optimieren für Eingabe**
+-   **<span data-ttu-id="98f41-207">Optimieren für Eingabe</span><span class="sxs-lookup"><span data-stu-id="98f41-207">To optimize for input</span></span>**
 
-    Die universelle Steuerelementbibliothek kann mit allen Eingabetypen (Toucheingabe, Stift, Tastatur, Maus) verwendet werden. Sie können jedoch eine Optimierung für bestimmte Eingabetypen erreichen, indem Sie Ihre UI-Elemente neu anordnen. Wenn Sie z. B. Elemente für die Navigation am unteren Bildschirmrand platzieren, ist der Zugriff auf diese für Smartphonebenutzer einfacher; die meisten PC-Benutzer hingegen erwarten, dass Elemente für die Navigation eher am oberen Bildschirmrand angezeigt werden.
+    <span data-ttu-id="98f41-208">Die universelle Steuerelementbibliothek kann mit allen Eingabetypen (Toucheingabe, Stift, Tastatur, Maus) verwendet werden. Sie können jedoch eine Optimierung für bestimmte Eingabetypen erreichen, indem Sie Ihre UI-Elemente neu anordnen.</span><span class="sxs-lookup"><span data-stu-id="98f41-208">The universal control library works with all input types (touch, pen, keyboard, mouse), but you can still optimize for certain input types by re-arranging your UI elements.</span></span> <span data-ttu-id="98f41-209">Wenn Sie z.B. Elemente für die Navigation am unteren Bildschirmrand platzieren, ist der Zugriff auf diese für Smartphonebenutzer einfacher; die meisten PC-Benutzer hingegen erwarten, dass Elemente für die Navigation eher am oberen Bildschirmrand angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="98f41-209">For example, if you place navigation elements at the bottom of the screen, they'll be easier for phone users to access—but most PC users expect to see navigation elements toward the top of the screen.</span></span>
 
-## <a name="responsive-design-techniques"></a>Reaktionsfähige Designtechniken
+## <a name="responsive-design-techniques"></a><span data-ttu-id="98f41-210">Reaktionsfähige Designtechniken</span><span class="sxs-lookup"><span data-stu-id="98f41-210">Responsive design techniques</span></span>
 
 
-Wenn Sie die Benutzeroberfläche Ihrer App für bestimmte Bildschirmbreiten optimieren, spricht man vom Erstellen eines reaktionsfähigen Designs. Im folgenden werden sechs reaktionsfähige Designtechniken aufgeführt, mit denen Sie die Benutzeroberfläche Ihrer App anpassen können:
+<span data-ttu-id="98f41-211">Wenn Sie die Benutzeroberfläche Ihrer App für bestimmte Bildschirmbreiten optimieren, spricht man vom Erstellen eines reaktionsfähigen Designs.</span><span class="sxs-lookup"><span data-stu-id="98f41-211">When you optimize your app's UI for specific screen widths, we say that you're creating a responsive design.</span></span> <span data-ttu-id="98f41-212">Im folgenden werden sechs reaktionsfähige Designtechniken aufgeführt, mit denen Sie die Benutzeroberfläche Ihrer App anpassen können:</span><span class="sxs-lookup"><span data-stu-id="98f41-212">Here are six responsive design techniques you can use to customize your app's UI.</span></span>
 
-### <a name="reposition"></a>Ändern der Position
+### <a name="reposition"></a><span data-ttu-id="98f41-213">Ändern der Position</span><span class="sxs-lookup"><span data-stu-id="98f41-213">Reposition</span></span>
 
-Sie können den Ort und die Position der UI-Elemente der App ändern, um auf jedem Gerät ein optimales Ergebnis zu erzielen. In diesem Beispiel ist für das Hochformat auf Smartphone oder Phablet ein Bildlauf der Benutzeroberfläche erforderlich, da nur ein gesamter Frame zu einem Zeitpunkt sichtbar ist. Wenn die App auf einem Gerät mit zwei vollständigen Frames verwendet wird, egal ob im Hoch- oder im Querformat, kann Frame B den dedizierten Speicherplatz belegen. Wenn Sie ein Raster für die Positionierung verwenden, können Sie das gleiche Raster für eine Neuanordnung der UI-Elemente verwenden.
+<span data-ttu-id="98f41-214">Sie können den Ort und die Position der UI-Elemente der App ändern, um auf jedem Gerät ein optimales Ergebnis zu erzielen.</span><span class="sxs-lookup"><span data-stu-id="98f41-214">You can alter the location and position of app UI elements to get the most out of each device.</span></span> <span data-ttu-id="98f41-215">In diesem Beispiel ist für das Hochformat auf Smartphone oder Phablet ein Bildlauf der Benutzeroberfläche erforderlich, da nur ein gesamter Frame zu einem Zeitpunkt sichtbar ist.</span><span class="sxs-lookup"><span data-stu-id="98f41-215">In this example, the portrait view on phone or phablet necessitates a scrolling UI because only one full frame is visible at a time.</span></span> <span data-ttu-id="98f41-216">Wenn die App auf einem Gerät mit zwei vollständigen Frames verwendet wird, egal ob im Hoch- oder im Querformat, kann FrameB den dedizierten Speicherplatz belegen.</span><span class="sxs-lookup"><span data-stu-id="98f41-216">When the app translates to a device that allows two full on-screen frames, whether in portrait or landscape orientation, frame B can occupy a dedicated space.</span></span> <span data-ttu-id="98f41-217">Wenn Sie ein Raster für die Positionierung verwenden, können Sie das gleiche Raster für eine Neuanordnung der UI-Elemente verwenden.</span><span class="sxs-lookup"><span data-stu-id="98f41-217">If you're using a grid for positioning, you can stick to the same grid when UI elements are repositioned.</span></span>
 
 ![Ändern der Position](images/rsp-design/rspd-reposition.png)
 
-In diesem Beispielentwurf einer Foto-App ändert die Foto-App die Position des Inhalts auf größeren Bildschirmen.
+<span data-ttu-id="98f41-219">In diesem Beispielentwurf einer Foto-App ändert die Foto-App die Position des Inhalts auf größeren Bildschirmen.</span><span class="sxs-lookup"><span data-stu-id="98f41-219">In this example design for a photo app, the photo app repositions its content on larger screens.</span></span>
 
-![ein Design für eine App, die Inhalte auf größeren Bildschirm neu positioniert](images/rsp-design/rspd-reposition-type1.png)
+![Ein Entwurf für eine App, die die Position der Inhalte auf größeren Bildschirmen ändert](images/rsp-design/rspd-reposition-type1.png)
 
-### <a name="resize"></a>Ändern der Größe
+### <a name="resize"></a><span data-ttu-id="98f41-221">Ändern der Größe</span><span class="sxs-lookup"><span data-stu-id="98f41-221">Resize</span></span>
 
-Sie können die Framegröße optimieren, indem Sie die Ränder und die Größe der UI-Elemente anpassen. Dadurch können Sie, wie im Beispiel dargestellt, die Lesbarkeit auf einem größeren Bildschirm verbessern, indem Sie den Inhaltsframe vergrößern.
+<span data-ttu-id="98f41-222">Sie können die Framegröße optimieren, indem Sie die Ränder und die Größe der UI-Elemente anpassen.</span><span class="sxs-lookup"><span data-stu-id="98f41-222">You can optimize the frame size by adjusting the margins and size of UI elements.</span></span> <span data-ttu-id="98f41-223">Dadurch können Sie, wie im Beispiel dargestellt, die Lesbarkeit auf einem größeren Bildschirm verbessern, indem Sie den Inhaltsframe vergrößern.</span><span class="sxs-lookup"><span data-stu-id="98f41-223">This could allow you, as the example here shows, to augment the reading experience on a larger screen by simply growing the content frame.</span></span>
 
 ![Ändern der Größe von Designelementen](images/rsp-design/rspd-resize.png)
 
-### <a name="reflow"></a>Neuanordnen
+### <a name="reflow"></a><span data-ttu-id="98f41-225">Neuanordnen</span><span class="sxs-lookup"><span data-stu-id="98f41-225">Reflow</span></span>
 
-Durch Änderung der Anordnung von UI-Elementen basierend auf dem Gerät und der Ausrichtung kann Ihre App eine optimale Ansicht der Inhalte bieten. Beim Wechseln zu einem größeren Bildschirm beispielsweise ist es ggf. sinnvoll zu größeren Containern zu wechseln, Spalten hinzuzufügen und Listenelemente auf andere Weise zu generieren.
+<span data-ttu-id="98f41-226">Durch Änderung der Anordnung von UI-Elementen basierend auf dem Gerät und der Ausrichtung kann Ihre App eine optimale Ansicht der Inhalte bieten.</span><span class="sxs-lookup"><span data-stu-id="98f41-226">By changing the flow of UI elements based on device and orientation, your app can offer an optimal display of content.</span></span> <span data-ttu-id="98f41-227">Beim Wechseln zu einem größeren Bildschirm beispielsweise ist es ggf. sinnvoll zu größeren Containern zu wechseln, Spalten hinzuzufügen und Listenelemente auf andere Weise zu generieren.</span><span class="sxs-lookup"><span data-stu-id="98f41-227">For instance, when going to a larger screen, it might make sense to switch larger containers, add columns, and generate list items in a different way.</span></span>
 
-Dieses Beispiel zeigt, wie eine einzelne Spalte mit Inhalt für vertikalen Bildlauf auf dem Smartphone oder Phablet auf einem größeren Bildschirm zur Anzeige von zwei Textspalten neu angeordnet werden kann.
+<span data-ttu-id="98f41-228">Dieses Beispiel zeigt, wie eine einzelne Spalte mit Inhalt für vertikalen Bildlauf auf dem Smartphone oder Phablet auf einem größeren Bildschirm zur Anzeige von zwei Textspalten neu angeordnet werden kann.</span><span class="sxs-lookup"><span data-stu-id="98f41-228">This example shows how a single column of vertically scrolling content on phone or phablet can be reflowed on a larger screen to display two columns of text.</span></span>
 
 ![Neuanordnen von Designelementen](images/rsp-design/rspd-reflow.png)
 
-###  <a name="reveal"></a>Einblenden
+### <a name="showhide"></a><span data-ttu-id="98f41-230">Anzeigen/Ausblenden</span><span class="sxs-lookup"><span data-stu-id="98f41-230">Show/hide</span></span>
 
-Das Einblenden von UI-Elementen kann von der Bildschirmfläche sowie davon abhängig gemacht werden, ob das Gerät zusätzliche Funktionen, bestimmte Situationen oder bevorzugte Bildschirmausrichtungen unterstützt.
+<span data-ttu-id="98f41-231">Das Ein- und Ausblenden von UI-Elementen kann von der Bildschirmfläche sowie davon abhängig gemacht werden, ob das Gerät zusätzliche Funktionen, bestimmte Situationen oder bevorzugte Bildschirmausrichtungen unterstützt.</span><span class="sxs-lookup"><span data-stu-id="98f41-231">You can show or hide UI elements based on screen real estate, or when the device supports additional functionality, specific situations, or preferred screen orientations.</span></span>
 
-In diesem Beispiel mit Registerkarten ist die mittlere Registerkarte mit dem Kamerasymbol möglicherweise für die App auf einem Smartphone oder Phablet bestimmt und bei größeren Geräten nicht anwendbar. Deshalb ist sie auf dem Gerät auf der rechten Seite eingeblendet. Ein weiteres häufiges Beispiel für das Einblenden oder Ausblenden der Benutzeroberfläche bezieht sich auf Media Player-Steuerelemente. Hierbei sind die Schaltflächen bei kleineren Geräten minimiert und werden bei Geräten mit größerem Bildschirm vergrößert. Der Media Player auf dem PC kann z. B. wesentlich mehr Funktionen auf dem Bildschirm anzeigen als auf einem Smartphone.
+<span data-ttu-id="98f41-232">In diesem Beispiel mit Registerkarten ist die mittlere Registerkarte mit dem Kamerasymbol möglicherweise für die App auf einem Smartphone oder Phablet bestimmt und bei größeren Geräten nicht anwendbar. Deshalb ist sie auf dem Gerät auf der rechten Seite eingeblendet.</span><span class="sxs-lookup"><span data-stu-id="98f41-232">In this example with tabs, the middle tab with the camera icon might be specific to the app on phone or phablet and not be applicable on larger devices, which is why it's revealed in the device on the right.</span></span> <span data-ttu-id="98f41-233">Ein weiteres häufiges Beispiel für das Einblenden oder Ausblenden der Benutzeroberfläche bezieht sich auf MediaPlayer-Steuerelemente. Hierbei sind die Schaltflächen bei kleineren Geräten minimiert und werden bei Geräten mit größerem Bildschirm vergrößert.</span><span class="sxs-lookup"><span data-stu-id="98f41-233">Another common example of revealing or hiding UI applies to media player controls, where the button set is reduced on smaller devices and expanded on larger devices.</span></span> <span data-ttu-id="98f41-234">Der Media Player auf dem PC kann z.B. wesentlich mehr Funktionen auf dem Bildschirm anzeigen als auf einem Smartphone.</span><span class="sxs-lookup"><span data-stu-id="98f41-234">The media player on PC, for instance, can handle far more on-screen functionality than it can on a phone.</span></span>
 
 ![Ausblenden von Designelementen](images/rsp-design/rspd-revealhide.png)
 
-Die Methode zum Ein- und Ausblenden umfasst die Wahl, wann mehr Metadaten angezeigt werden sollen. Wenn der verfügbare Bildschirmbereich knapp ist, z. B. bei einem Smartphone oder einem Phablet, wird empfohlen, eine minimale Menge von Metadaten anzuzeigen. Mit einem Laptop oder Desktop-PC kann eine wesentlich höhere Menge von Metadaten angezeigt werden. Einige Beispiele zur Verwendung von Ein- oder Ausblenden für Metadaten umfassen:
+<span data-ttu-id="98f41-236">Die Methode zum Ein- und Ausblenden umfasst die Wahl, wann mehr Metadaten angezeigt werden sollen.</span><span class="sxs-lookup"><span data-stu-id="98f41-236">Part of the reveal-or-hide technique includes choosing when to display more metadata.</span></span> <span data-ttu-id="98f41-237">Wenn der verfügbare Bildschirmbereich knapp ist, z.B. bei einem Smartphone oder einem Phablet, wird empfohlen, eine minimale Menge von Metadaten anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="98f41-237">When real estate is at a premium, such as with a phone or phablet, it's best to show a minimal amount of metadata.</span></span> <span data-ttu-id="98f41-238">Mit einem Laptop oder Desktop-PC kann eine wesentlich höhere Menge von Metadaten angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="98f41-238">With a laptop or desktop PC, a significant amount of metadata can be surfaced.</span></span> <span data-ttu-id="98f41-239">Einige Beispiele zur Verwendung von Ein- oder Ausblenden für Metadaten umfassen:</span><span class="sxs-lookup"><span data-stu-id="98f41-239">Some examples of how to handle showing or hiding metadata include:</span></span>
 
--   In einer E-Mail-App können Sie den Avatar des Benutzers anzeigen.
--   In einer Musik-App können Sie weitere Informationen zu einem Album oder Interpreten anzeigen.
--   In einer Video-App können Sie weitere Informationen zu einem Film oder einer Show anzeigen, z. B. Details zu Besetzung und Crew.
--   In jeder App können Sie Spalten aufteilen und mehr Details anzeigen.
--   In jeder App können Sie etwas vertikal oder horizontal anordnen. Beim Wechseln von Smartphone oder Phablet auf größere Geräte, können aus gestapelten Listenelementen Zeilen mit Listenelementen und Spalten mit Metadaten werden.
+-   <span data-ttu-id="98f41-240">In einer E-Mail-App können Sie den Avatar des Benutzers anzeigen.</span><span class="sxs-lookup"><span data-stu-id="98f41-240">In an email app, you can display the user's avatar.</span></span>
+-   <span data-ttu-id="98f41-241">In einer Musik-App können Sie weitere Informationen zu einem Album oder Interpreten anzeigen.</span><span class="sxs-lookup"><span data-stu-id="98f41-241">In a music app, you can display more info about an album or artist.</span></span>
+-   <span data-ttu-id="98f41-242">In einer Video-App können Sie weitere Informationen zu einem Film oder einer Show anzeigen, z.B. Details zu Besetzung und Crew.</span><span class="sxs-lookup"><span data-stu-id="98f41-242">In a video app, you can display more info about a film or a show, such as showing cast and crew details.</span></span>
+-   <span data-ttu-id="98f41-243">In jeder App können Sie Spalten aufteilen und mehr Details anzeigen.</span><span class="sxs-lookup"><span data-stu-id="98f41-243">In any app, you can break apart columns and reveal more details.</span></span>
+-   <span data-ttu-id="98f41-244">In jeder App können Sie etwas vertikal oder horizontal anordnen.</span><span class="sxs-lookup"><span data-stu-id="98f41-244">In any app, you can take something that's vertically stacked and lay it out horizontally.</span></span> <span data-ttu-id="98f41-245">Beim Wechseln von Smartphone oder Phablet auf größere Geräte, können aus gestapelten Listenelementen Zeilen mit Listenelementen und Spalten mit Metadaten werden.</span><span class="sxs-lookup"><span data-stu-id="98f41-245">When going from phone or phablet to larger devices, stacked list items can change to reveal rows of list items and columns of metadata.</span></span>
 
-### <a name="replace"></a>Ersetzen
+### <a name="replace"></a><span data-ttu-id="98f41-246">Ersetzen</span><span class="sxs-lookup"><span data-stu-id="98f41-246">Replace</span></span>
 
-Mit diesem Verfahren kann die Benutzeroberfläche für eine bestimmte Gerätegrößenklasse oder Ausrichtung geändert werden. In diesem Beispiel ist der Navigationsbereich mit seiner kompakten, vorübergehenden Benutzeroberfläche gut für kleinere Geräte geeignet, auf einem größeren Gerät stellen jedoch Registerkarten u. U. die bessere Wahl dar.
+<span data-ttu-id="98f41-247">Mit diesem Verfahren kann die Benutzeroberfläche für eine bestimmte Gerätegrößenklasse oder Ausrichtung geändert werden.</span><span class="sxs-lookup"><span data-stu-id="98f41-247">This technique lets you switch the user interface for a specific device size-class or orientation.</span></span> <span data-ttu-id="98f41-248">In diesem Beispiel ist der Navigationsbereich mit seiner kompakten, vorübergehenden Benutzeroberfläche gut für kleinere Geräte geeignet, auf einem größeren Gerät stellen jedoch Registerkarten u. U. die bessere Wahl dar.</span><span class="sxs-lookup"><span data-stu-id="98f41-248">In this example, the nav pane and its compact, transient UI works well for a smaller device, but on a larger device tabs might be a better choice.</span></span>
 
 ![Ersetzen von Designelementen](images/rsp-design/rspd-replace.png)
 
-###  <a name="re-architect"></a>Ändern der Architektur
+###  <a name="re-architect"></a><span data-ttu-id="98f41-250"> Ändern der Architektur</span><span class="sxs-lookup"><span data-stu-id="98f41-250">Re-architect</span></span>
 
-Sie können die Architektur Ihrer App reduzieren oder erweitern, um eine bessere Darstellung für bestimmte Geräte zu erzielen. In diesem Beispiel wird, vom linken Gerät zum rechten, das Verknüpfen von Seiten veranschaulicht.
+<span data-ttu-id="98f41-251">Sie können die Architektur Ihrer App reduzieren oder erweitern, um eine bessere Darstellung für bestimmte Geräte zu erzielen.</span><span class="sxs-lookup"><span data-stu-id="98f41-251">You can collapse or fork the architecture of your app to better target specific devices.</span></span> <span data-ttu-id="98f41-252">In diesem Beispiel wird, vom linken Gerät zum rechten, das Verknüpfen von Seiten veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="98f41-252">In this example, going from the left device to the right device demonstrates the joining of pages.</span></span>
 
 ![ein Beispiel für das erneute Erstellen der Architektur einer Benutzeroberfläche](images/rsp-design/rspd-rearchitect.png)
 
-Hier sehen Sie ein Beispiel für diese Methode, die beim Entwerfen einer Smart Home-App angewendet wird.
+<span data-ttu-id="98f41-254">Hier sehen Sie ein Beispiel für diese Methode, die beim Entwerfen einer Smart Home-App angewendet wird.</span><span class="sxs-lookup"><span data-stu-id="98f41-254">Here's an example of this technique applied to the design for a smart home app.</span></span>
 
 ![ein Beispiel für einen Entwurf, der die Technik zum erneuten Erstellen des reaktionsfähigen Designs nutzt](images/rsp-design/rspd-rearchitect-type1.png)
 
+## <a name="tools-and-design-toolkits"></a><span data-ttu-id="98f41-256">Tools und Design-Toolkits</span><span class="sxs-lookup"><span data-stu-id="98f41-256">Tools and design toolkits</span></span>
 
-## <a name="related-articles"></a>Verwandte Artikel
+<span data-ttu-id="98f41-257">Wir bieten eine Reihe von Tools an, die Sie beim Entwerfen Ihrer UWP-App unterstützen.</span><span class="sxs-lookup"><span data-stu-id="98f41-257">We provide a variety of tools to help you design you UWP app.</span></span> <span data-ttu-id="98f41-258">Weitere Informationen für XD, Illustrator, Photoshop, Framer und Sketch-Toolkits sowie zusätzliche Entwicklungstools und Downloads für Schriftarten finden Sie auf der [Design-Toolkits-Seite](../design-downloads/index.md).</span><span class="sxs-lookup"><span data-stu-id="98f41-258">See our [Design toolkits page](../design-downloads/index.md) for XD, Illustrator, Photoshop, Framer, and Sketch toolkits, as well as additional design tools and font downloads.</span></span> 
 
-- [Was ist eine UWP-App?](https://msdn.microsoft.com/library/windows/apps/dn726767.aspx)
+<span data-ttu-id="98f41-259">Um Ihren Computer so einzurichten, dass er das Codieren von UWP-Apps ermöglicht, lesen Sie den Artikel [Erste Schritte &gt;Vorbereiten](../get-started/get-set-up.md).</span><span class="sxs-lookup"><span data-stu-id="98f41-259">To get your machine set up to actually code UWP apps, see our [Get started &gt; Get set up](../get-started/get-set-up.md) article.</span></span> 
+
+## <a name="related-articles"></a><span data-ttu-id="98f41-260">Verwandte Artikel</span><span class="sxs-lookup"><span data-stu-id="98f41-260">Related articles</span></span>
+
+- [<span data-ttu-id="98f41-261">Was ist eine UWP-App?</span><span class="sxs-lookup"><span data-stu-id="98f41-261">What's a UWP app?</span></span>](https://msdn.microsoft.com/library/windows/apps/dn726767.aspx)
+- [<span data-ttu-id="98f41-262">Design-Toolkits</span><span class="sxs-lookup"><span data-stu-id="98f41-262">Design toolkits</span></span>](../design-downloads/index.md)
 
  
-
-
-
-
-

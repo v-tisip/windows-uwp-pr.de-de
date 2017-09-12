@@ -1,327 +1,176 @@
 ---
-author: awkoren
-Description: "In diesem Handbuch wird erläutert, wie Sie Ihre Visual Studio-Lösung zum Bearbeiten, Debuggen und Packen Ihrer konvertierten Desktop-Brücke-App konfigurieren."
+author: normesta
+Description: "In diesem Handbuch wird erläutert, wie Sie Ihre Visual Studio-Lösung zum Bearbeiten, Debuggen und Packen Ihrer konvertierten Desktop-App für die Desktop-Brücke konfigurieren."
 Search.Product: eADQiWindows 10XVcnh
-title: "Handbuch zur Desktop-Brücke-Verpackung von .NET Desktop-Apps mit Visual Studio"
-ms.author: alkoren
-ms.date: 02/08/2017
+title: "Verpacken einer App mit Visual Studio (Desktop-Brücke)"
+ms.author: normesta
+ms.date: 07/20/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: windows10, UWP
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 8aa68312d6ce81c809c79ddcafe7732944a628be
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: d8919448b965f18ff7f8fdaeda325889e495ef85
+ms.sourcegitcommit: f6dd9568eafa10ee5cb2b849c0d82d84a1c5fb93
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/02/2017
 ---
+# <a name="package-an-app-by-using-visual-studio-desktop-bridge"></a><span data-ttu-id="e57a9-104">Verpacken einer App mit Visual Studio (Desktop-Brücke)</span><span class="sxs-lookup"><span data-stu-id="e57a9-104">Package an app by using Visual Studio (Desktop Bridge)</span></span>
 
-# <a name="desktop-bridge-packaging-guide-for-net-desktop-apps-with-visual-studio"></a>Handbuch zur Desktop-Brücke-Verpackung von .NET Desktop-Apps mit Visual Studio
+<span data-ttu-id="e57a9-105">Sie können Visual Studio verwenden, um ein Paket für Ihre Desktop-App zu generieren.</span><span class="sxs-lookup"><span data-stu-id="e57a9-105">You can use Visual Studio to generate a package for your desktop app.</span></span> <span data-ttu-id="e57a9-106">Anschließend können Sie das Paket im Windows Store veröffentlichen oder es auf einem oder mehreren PCs querladen.</span><span class="sxs-lookup"><span data-stu-id="e57a9-106">Then, you can publish that package to the Windows store or sideload it onto one or more PCs.</span></span>
 
-Die Windows 10 Anniversary Update bietet Entwicklern die Option, die Desktop-Brücke zum Packen von vorhandenen Win32-Apps über das neue Paketmodell (.appx), zu nutzen und so das Querladen im Store zu ermöglichen. Dieses Handbuch beschreibt, wie Sie Ihre Visual Studio-Lösung so konfigurieren, dass Sie Ihre App bearbeiten, debuggen und verpacken können. 
+<span data-ttu-id="e57a9-107">Dieser Anleitung zeigt, wie Sie Ihre Lösung einrichten und ein Paket für Ihre Desktopanwendung generieren.</span><span class="sxs-lookup"><span data-stu-id="e57a9-107">This guide shows you how to set up your solution and then generate a package for your desktop application.</span></span>
 
-Füllen Sie zunächst das Formular unter [Bereitstellen vorhandener Apps und Spiele im Windows Store mithilfe der Desktop-Brücke](https://developer.microsoft.com/windows/projects/campaigns/desktop-bridge) aus. Microsoft nimmt mit Ihnen Kontakt auf und beginnt den Onboardingprozess. Sobald Ihr Konto für das Einrichten von Desktop-Brücke-Apps freigeschaltet wurde, folgen den Anweisungen in diesem Dokument, um das Appxupload-Paket für den Upload vorzubereiten. 
+## <a name="first-consider-how-youll-distribute-your-app"></a><span data-ttu-id="e57a9-108">Überlegen Sie zunächst, wie Sie Ihre App verteilen möchten.</span><span class="sxs-lookup"><span data-stu-id="e57a9-108">First, consider how you'll distribute your app</span></span>
 
-> Sie haben Feedback zur oder Probleme bei der Nutzung der Desktop-Brücke? Die [UserVoice für Windows-Entwickler](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial)-Plattform ist der beste Ort für Featurevorschläge. Teilen Sie Fragen und Problemberichte bitte über die [Entwicklerforen für Universelle Windows-Apps](https://social.msdn.microsoft.com/Forums/home?forum=wpdevelop) mit.
+<span data-ttu-id="e57a9-109">Wenn Sie Ihre App im [Windows Store-](https://www.microsoft.com/store/apps) veröffentlichen möchten, beginnen Sie mit dem Ausfüllen [dieses Formulars](https://developer.microsoft.com/windows/projects/campaigns/desktop-bridge).</span><span class="sxs-lookup"><span data-stu-id="e57a9-109">If you plan to publish your app to the [Windows Store](https://www.microsoft.com/store/apps), start by filling out [this form](https://developer.microsoft.com/windows/projects/campaigns/desktop-bridge).</span></span> <span data-ttu-id="e57a9-110">Microsoft nimmt mit Ihnen Kontakt auf und beginnt den Onboardingprozess.</span><span class="sxs-lookup"><span data-stu-id="e57a9-110">Microsoft will contact you to start the onboarding process.</span></span> <span data-ttu-id="e57a9-111">Im Rahmen dieses Prozesses reservieren Sie einen Namen im Store und erhalten Informationen, die Sie benötigen, um Ihre App zu verpacken.</span><span class="sxs-lookup"><span data-stu-id="e57a9-111">As part of this process, you'll reserve a name in the store, and obtain information that you'll need to package your app.</span></span>
 
-## <a name="default-universal-windows-platform-packages"></a>Standardmäßige Pakete für die universelle Windows-Plattform
+## <a name="add-a-packaging-project-to-your-solution"></a><span data-ttu-id="e57a9-112">Hinzufügen eines Verpackungsprojekts zur Lösung</span><span class="sxs-lookup"><span data-stu-id="e57a9-112">Add a packaging project to your solution</span></span>
 
-Mit Visual Studio können Sie Debug- und Veröffentlichungspakete generieren, die über den Windows Store oder per App-Querladen verteilt werden können. Im Rahmen der Paketerstellung unterstützt Sie Visual Studio beim Erstellen einer Appxupload-Datei, die dann an den Store übermittelt werden kann. Weitere Informationen finden Sie unter [Verpacken von UWP-Apps](..\packaging\packaging-uwp-apps.md).
+1. <span data-ttu-id="e57a9-113">Öffnen Sie in Visual Studio die Lösung mit Ihrem Desktopanwendungsprojekt.</span><span class="sxs-lookup"><span data-stu-id="e57a9-113">In Visual Studio, open the solution that contains your desktop application project.</span></span>
 
-## <a name="desktop-bridge-packages"></a>Desktop-Brücke-Pakete
+2. <span data-ttu-id="e57a9-114">Fügen Sie der Projektmappe eine JavaScript **Leere App (Universal Windows)**-Projekt hinzu.</span><span class="sxs-lookup"><span data-stu-id="e57a9-114">Add a JavaScript **Blank App (Universal Windows)** project to your solution.</span></span>
 
-Die [Desktop-Brücke](desktop-to-uwp-root.md) ermöglicht verschiedene Konfigurationen zur Integration von Win32-Binärdateien in ein Anwendungspaket (Appx). Die Nutzung der Desktop-Brücke umfasst vier grundsätzliche Schritte. 
+   <span data-ttu-id="e57a9-115">Sie müssen keinen Code hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="e57a9-115">You won't have to add any code to it.</span></span> <span data-ttu-id="e57a9-116">Es dient nur, um ein Paket zu generieren.</span><span class="sxs-lookup"><span data-stu-id="e57a9-116">It's just there to generate a package for you.</span></span> <span data-ttu-id="e57a9-117">Wir nennen das Projekt „packaging project“.</span><span class="sxs-lookup"><span data-stu-id="e57a9-117">We'll refer to this project as the "packaging project".</span></span>
 
-- **Schritt 1 – Konvertieren**: Verpacken der vorhandenen Win32-Binärdateien ohne Codeändern oder mit minimalen Codeänderungen.
-- **Schritt 2 – Optimieren**: Einbeziehen einiger grundlegender UWP-Features (z. B. eine Live-Kachel) in die vorhandene App mithilfe eines Verweises auf Windows.winmd über den vorhandenen Win32-Code.
-- **Schritt 3 – Erweitern**: Einbeziehen von erweiterten UWP-Funktionalitäten (z. B. Hintergrundaufgaben) in die vorhandene App. Wenn Ihre UWP-Apps und Win32-Komponenten über verwalteten Sprachen (z. B. C# oder VB.Net) erstellt wurden, umfasst das erstellte Paket gemischte Binärdateien, die zur Gewährleistung der korrekten .NET Native Verarbeitung sorgfältig verarbeitet werden müssen. 
-- **Schritt 4 – Migrieren**: Sie haben die Benutzeroberfläche zu XAML und C#/VB.NET migriert. Es ist jedoch noch immer älterer Win32-Code vorhanden. Der Einstiegspunkt ist nun eine ausführbare UWP-.NET-Dateien. Es gibt im Paket jedoch noch immer Binärdateien, die Win32-APIs verwenden.
+   ![JavaScript-UWP-Projekt](images/desktop-to-uwp/javascript-uwp-project.png)
 
-In der folgenden Tabelle werden einige der Veränderungen Ihre App in den vier Schritten aufgeführt. 
+   >[!IMPORTANT]
+   ><span data-ttu-id="e57a9-119">Im Allgemeinen sollten Sie die JavaScript-Version des Projekts verwenden.</span><span class="sxs-lookup"><span data-stu-id="e57a9-119">In general, you should use the JavaScript version of this project.</span></span>  <span data-ttu-id="e57a9-120">Die C#-, VB.NET- und C++ Versionen haben einige Probleme. Wenn Sie diese verwenden wollen, lesen Sie vorher [Bekannte Probleme](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-known-issues#known-issues-anchor).</span><span class="sxs-lookup"><span data-stu-id="e57a9-120">The C#, VB.NET, and C++ versions have a few issues but if you want to use of those, see the [Known Issues](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-known-issues#known-issues-anchor) guide before you do.</span></span>
 
-| Schritt | Binärdateien | EntryPoint | .NET Native | F5-Debuggen |
-|---|---|---|---|---|
-| 1 (Konvertieren) | Win32 | Win32 | N/V | VS-Erweiterung |
-| 2 (Optimieren) | Verweis auf WinMD | Win32 | N/V | VS-Erweiterung |
-| 3 (Erweitern) | Win32 + CoreCLR (*) | Win32 | Durch Benutzer (**) | VS-Erweiterung |
-| 4 (Migrieren)    | CoreCLR (*) + Win32 | UWP | Durch Benutzer (**) | VS |
-| 5 (UWP) | CoreCLR | UWP |Durch Store | VS |
+## <a name="add-the-desktop-application-binaries-to-the-packaging-project"></a><span data-ttu-id="e57a9-121">Hinzufügen von Desktopanwendungs-Binärdateien zum Verpackungsprojekt</span><span class="sxs-lookup"><span data-stu-id="e57a9-121">Add the desktop application binaries to the packaging project</span></span>
 
-(*) [CoreCLR](https://github.com/dotnet/coreclr) verweist auf die für in einer verwalteten Sprache (C# / VB.NET) geschriebenen UWP-Komponenten erforderliche .NET Core-Laufzeitumgebung. Diese Komponenten erfordern außerdem die .NET Native-Verarbeitung.
+<span data-ttu-id="e57a9-122">Hinzufügen von Binärdateien direkt zum Verpackungsprojekt.</span><span class="sxs-lookup"><span data-stu-id="e57a9-122">Add the binaries directly to the packaging project.</span></span>
 
-(**) In Schritt 3 und 4 muss der Benutzer die CoreCLR-Assemblys verarbeiten, um die.NET Native-Binärdateien und die entsprechenden Symbole vor der Veröffentlichung im Store zu erstellen.
+1. <span data-ttu-id="e57a9-123">In **Projektmappen-Explorer** erweitern Sie den Verpacken-Projektordner, erstellen einen Unterordner und benennen ihn beliebig (z.B.: **win32**).</span><span class="sxs-lookup"><span data-stu-id="e57a9-123">In **Solution Explorer**, expand the packaging project folder, create a subfolder, and name it whatever you want (For example: **win32**).</span></span>
 
-## <a name="configure-your-visual-studio-solution"></a>Konfigurieren der Visual Studio-Lösung
+2. <span data-ttu-id="e57a9-124">Klicken Sie jetzt mit der rechten Maustaste auf den Unterordner und wählen Sie **Vorhandenes Elemente hinzufügen** aus.</span><span class="sxs-lookup"><span data-stu-id="e57a9-124">Right-click the subfolder, and then choose **Add Existing Item**.</span></span>
 
-Visual Studio umfasst die zur Konfiguration des Anwendungspaktes erforderlichen Tools (beispielsweise den Manifest-Editor und den Assistenten zum Erstellen von Paketen). Um diese Tools verwenden zu können, benötigen Sie ein UWP-Projekt. Dieses fungiert als Appx-Container für die App. Sie können jedes UWP-Projekt verwenden (einschließlich C#, VB.NET, C++ oder JavaScript). Es gibt jedoch einige bekannte Probleme mit C#, VB.NET und C++ Projekten (weitere Informationen hierzu im Abschnitt [Bekannte Probleme](#known-issues-anchor) weiter unten in diesem Dokument). Daher verwenden wir für dieses Beispiel JavaScript. 
+3. <span data-ttu-id="e57a9-125">Im **Vorhandenes Element hinzufügen** Dialogfeld suchen Sie die Dateien aus Ihrem Desktopanwendung-Ausgabeordner und fügen diese hinzu.</span><span class="sxs-lookup"><span data-stu-id="e57a9-125">In the **Add Existing Item** dialog box, locate and then add the files from your desktop application's output folder.</span></span> <span data-ttu-id="e57a9-126">Dazu umfasst nicht nur die ausführbaren Dateien, sondern auch alle DLLs oder config-Dateien, die sich in diesem Ordner befinden.</span><span class="sxs-lookup"><span data-stu-id="e57a9-126">This includes not just the executable files, but any dlls or .config files that are located in that folder.</span></span>
 
-Wenn Sie Ihre App im Kontext des Appx-Anwendungsmodells debuggen möchten, müssen Sie ein weiteres Projekts hinzufügen, mit dem das F5-Appx-Debuggen möglich ist. Weitere Informationen finden Sie im Abschnitt [Debuggen Ihrer Desktop-Brücke App](#debugging-anchor).
+   ![Ausführbare Referenzdatei](images/desktop-to-uwp/cpp-exe-reference.png)
 
-Beginnen wir mit Schritt 1.
+   <span data-ttu-id="e57a9-128">Jedes Mal, wenn Sie an Ihrem Desktopanwendung-Projekt Änderungen vornehmen, müssen Sie eine neue Version dieser Dateien in das Verpacken-Projekt kopieren.</span><span class="sxs-lookup"><span data-stu-id="e57a9-128">Every time you make a change to your desktop application project, you'll have to copy a new version of those files to the packaging project.</span></span> <span data-ttu-id="e57a9-129">Sie können dies automatisieren, indem Sie der Projektdatei des Verpackung-Projekts ein Postbuildereignis hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="e57a9-129">You can automate this by adding a post-build event to the project file of the packaging project.</span></span> <span data-ttu-id="e57a9-130">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="e57a9-130">Here's an example.</span></span>
 
-### <a name="step-1-convert"></a>Schritt 1: Konvertieren
+   ```XML
+   <Target Name="PostBuildEvent">
+     <Copy SourceFiles="..\MyWindowsFormsApplication\bin\Debug\MyWindowsFormsApplication.exe"
+       DestinationFolder="win32" />
+     <Copy SourceFiles="..\MyWindowsFormsApplication\bin\Debug\MyWindowsFormsApplication.exe.config"
+       DestinationFolder="win32" />
+     <Copy SourceFiles="..\MyWindowsFormsApplication\bin\Debug\MyWindowsFormsApplication.pdb"
+       DestinationFolder="win32" />
+     <Copy SourceFiles="..\MyWindowsFormsApplication\bin\Debug\MyBusinessLogicLibrary.dll"
+       DestinationFolder="win32" />
+     <Copy SourceFiles="..\MyWindowsFormsApplication\bin\Debug\MyBusinessLogicLibrary.pdb"
+       DestinationFolder="win32" />
+   </Target>
+   ```
 
-Dieser Schritt veranschaulicht, wie Sie eine Desktop-Brücke-App aus einem vorhandenen Win32-Projekt erstellen. In diesem Beispiel verwenden wir ein einfaches WinForms-Projekt, das Lese- und Schreibvorgänge in der Registrierung durchführt.
+## <a name="modify-the-package-manifest"></a><span data-ttu-id="e57a9-131">Bearbeiten des Paketmanifests</span><span class="sxs-lookup"><span data-stu-id="e57a9-131">Modify the package manifest</span></span>
 
-![](images/desktop-to-uwp/net-1.png)
+<span data-ttu-id="e57a9-132">Das Paketprojekt enthält eine Datei, die die Einstellungen des Pakets beschreibt.</span><span class="sxs-lookup"><span data-stu-id="e57a9-132">The packaging project contains a file that describes the settings of your package.</span></span> <span data-ttu-id="e57a9-133">Standardmäßig beschreibt diese Datei eine UWP-App. Sie müssen sie so anpassen, dass das System weiß, dass das Paket eine Desktopanwendung enthält, die in voller Vertrauenswürdigkeit ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="e57a9-133">By default, this file describes a UWP app, so you'll have to modify it so that the system understands that your package includes a desktop application that runs in full trust.</span></span>  
 
-#### <a name="add-the-uwp-project"></a>Hinzufügen des UWP-Projekts 
+1. <span data-ttu-id="e57a9-134">Erweitern Sie im **Lösungs-Explorer** das Verpacken-Projekt, klicken Sie mit Rechts auf die **package.appxmanifest** Datei und wählen Sie **Code anzeigen** aus.</span><span class="sxs-lookup"><span data-stu-id="e57a9-134">In **Solution Explorer**, expand the packaging project, right-click the **package.appxmanifest** file, and then choose **View Code**.</span></span>
 
-Fügen Sie ein JavaScript-UWP-Projekt zur Lösung hinzu, um das Desktop-Brücke-Paket zu erstellen.
+   ![Referenz-Dotnet-Projekt](images/desktop-to-uwp/reference-dotnet-project.png)
 
-> Hinweis: Wir verwenden zwar eine JavaScript-UWP-Vorlage, werden jedoch keinen JavaScript-Code schreiben. Das nutzen das Projekt nur als Hilfsmittel.
+2. <span data-ttu-id="e57a9-136">Fügen Sie diesen Namespace am Anfang der Datei hinzu und fügen Sie das Namespacepräfix zu Liste der ``IgnorableNamespaces`` hinzu.</span><span class="sxs-lookup"><span data-stu-id="e57a9-136">Add this namespace to the top of the file, and add the namespace prefix to the list of ``IgnorableNamespaces``.</span></span>
 
-![](images/desktop-to-uwp/net-2.png)
+   ```XML
+   xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+   ```
+   <span data-ttu-id="e57a9-137">Wenn Sie fertig sind, sehen die Namespacedeklarationen wie folgt aus:</span><span class="sxs-lookup"><span data-stu-id="e57a9-137">When you're done, your namespace declarations will look something like this:</span></span>
 
-#### <a name="add-the-win32-binaries-to-the-win32-folder"></a>Hinzufügen von Win32-Binärdateien zum Win32-Ordner
+   ```XML
+   <Package
+     xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+     xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+     xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+     xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+     IgnorableNamespaces="uap mp rescap">
+   ```
 
-Alle Win32-Binärdateien in Ihrem UWP-Projekt werden in einem Ordner namens win32 gespeichert (der Name ist jedoch nicht vorgeschrieben und kann beliebig gewählt werden).
+3. <span data-ttu-id="e57a9-138">Suchen Sie das ``TargetDeviceFamily``-Element und legen das ``Name``-Attribut auf **Windows.Desktop**, das ``MinVersion``-Attribut auf die Mindestversion des Paketprojekts und das ``MaxVersionTested`` auf die Zielversion des Projekts fest.</span><span class="sxs-lookup"><span data-stu-id="e57a9-138">Find the ``TargetDeviceFamily`` element, and set the ``Name`` attribute to **Windows.Desktop**, the ``MinVersion`` attribute to the minimum version of the packaging project, and the ``MaxVersionTested`` to the target version of the packaging project.</span></span>
 
-Wenn Sie Visual Studio verwenden, können Sie das Projekt für das Kopieren der Dateien nach jeder Erstellung automatisieren und so den Entwicklungsworkflow optimieren. Um ein AfterBuild-Ziel einzufügen, dass alle Win32-Ausgabedateien in die Win32-Ordner des UWP-Projekts kopiert, bearbeiten Sie Ihre Projektdatei (in diesem Beispiel .csproj) wie folgt: 
+   ```XML
+   <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.10586.0" MaxVersionTested="10.0.15063.0" />
+   ```
 
-```xml
-  <Target Name="AfterBuild">
-    <PropertyGroup>
-      <TargetUWP>..\MyDesktopApp.Package\win32\</TargetUWP>
-    </PropertyGroup>
-     <ItemGroup>
-       <Win32Binaries Include="$(TargetDir)\*" />
-     </ItemGroup>
-    <Copy SourceFiles="@(Win32Binaries)" DestinationFolder="$(TargetUWP)" />
-  </Target>
-```
+   <span data-ttu-id="e57a9-139">Sie finden die Mindestversion und die Zielversion auf den Eigenschaftenseiten des Verpackung-Projekts.</span><span class="sxs-lookup"><span data-stu-id="e57a9-139">You can find the minimum version and target version in the property pages of the packaging project.</span></span>
 
-Wenn Sie ein anderes Tool zur Erstellung der Win32-Binärdateien verwenden, kopieren Sie einfach alle erforderlichen Dateien zur Laufzeit in den win32-Ordner. 
+   ![Einstellungen für Mindest- und Zielversion](images/desktop-to-uwp/min-target-version-settings.png)
 
-#### <a name="edit-the-app-manifest-to-enable-the-desktop-bridge-extensions"></a>Bearbeiten des App-Manifests zur Aktivierung von Desktop-Brücke Erweiterungen
 
-Die Vorlage enthält ein package.appxmanifest, das Sie zum Hinzufügen von Desktop-Brücke Erweiterungen verwenden können. Um diese Datei zu bearbeiten, klicken Sie mit der rechten Maustaste, und wählen Sie "Code anzeigen". Fügen Sie dann die folgenden Elemente ein oder bearbeiten Sie diese: 
+4. <span data-ttu-id="e57a9-141">Entfernen Sie das ``StartPage``-Attribut aus dem ``Application``-Element.</span><span class="sxs-lookup"><span data-stu-id="e57a9-141">Remove the ``StartPage`` attribute from the ``Application`` element.</span></span> <span data-ttu-id="e57a9-142">Fügen Sie dann die ``Executable``- und ``EntryPoint``-Attribute hinzu.</span><span class="sxs-lookup"><span data-stu-id="e57a9-142">Then, add the``Executable`` and ``EntryPoint`` attributes.</span></span>
 
-- `<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities" IgnorableNamespaces="uap rescap">`
+   <span data-ttu-id="e57a9-143">Das ``Application``-Ergebnis sieht wie folgt aus.</span><span class="sxs-lookup"><span data-stu-id="e57a9-143">The ``Application`` element will look like this.</span></span>
 
-- `<TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.14393.0" MaxVersionTested="10.0.14393.0" />`
+   ```XML
+   <Application Id="App"  Executable=" " EntryPoint=" ">
+   ```
 
-- `<rescap:Capability Name="runFullTrust" />`
+5. <span data-ttu-id="e57a9-144">Legen Sie das ``Executable`` Attribut auf den Namen der ausführbaren Datei für Ihre Desktopanwendung fest.</span><span class="sxs-lookup"><span data-stu-id="e57a9-144">Set the ``Executable`` attribute to the name of your desktop application's executable file.</span></span> <span data-ttu-id="e57a9-145">Legen Sie anschließend das ``EntryPoint``-Attribut auf **Windows.FullTrustApplication** fest.</span><span class="sxs-lookup"><span data-stu-id="e57a9-145">Then, set the ``EntryPoint`` attribute to **Windows.FullTrustApplication**.</span></span>
 
-- `<Application Id="MyDesktopAppStep1" Executable="win32\MyDesktopApp.exe" EntryPoint="Windows.FullTrustApplication">`
+   <span data-ttu-id="e57a9-146">Das ``Application``-Element sieht etwa wie folgt aus.</span><span class="sxs-lookup"><span data-stu-id="e57a9-146">The ``Application`` element will look similar to this.</span></span>
 
-Hier ist ein vollständiges Beispiel der Manifestdatei: 
+   ```XML
+   <Application Id="App"  Executable="win32\MyWindowsFormsApplication.exe" EntryPoint="Windows.FullTrustApplication">
+   ```
+6. <span data-ttu-id="e57a9-147">Fügen Sie die ``runFullTrust``-Funktion zum ``Capabilities`` Element hinzu.</span><span class="sxs-lookup"><span data-stu-id="e57a9-147">Add the ``runFullTrust`` capability to the ``Capabilities`` element.</span></span>
 
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
-        xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+   ```XML
+     <rescap:Capability Name="runFullTrust"/>
+   ```
+   <span data-ttu-id="e57a9-148">Blaue Wellenlinien werden möglicherweise unter dieser Deklaration angezeigt, doch sie können problemlos ignoriert werden.</span><span class="sxs-lookup"><span data-stu-id="e57a9-148">Blue squiggly marks might appear beneath this declaration, but you can safely ignore them.</span></span>
 
-        xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
-        xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
-        IgnorableNamespaces="uap rescap mp">
-  <Identity Name="MyDesktopAppStep1"
-            ProcessorArchitecture="x64"
-            Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
-            Version="1.0.0.5" />
-  <mp:PhoneIdentity PhoneProductId="6f6600a4-6da1-4d91-b493-35808d01f8de" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
-  <Properties>
-    <DisplayName>MyDesktopAppStep1</DisplayName>
-    <PublisherDisplayName>CN=Test</PublisherDisplayName>
-    <Logo>Assets\SampleAppx.150x150.png</Logo>
-  </Properties>
-  <Resources>
-    <Resource Language="en-us" />
-  </Resources>
-  <Dependencies>
-    <TargetDeviceFamily Name="Windows.Desktop" 
-                        MinVersion="10.0.14393.0" 
-                        MaxVersionTested="10.0.14393.0" />
-  </Dependencies>
-  <Capabilities>
-    <rescap:Capability Name="runFullTrust" />
-  </Capabilities>
-  <Applications>
-    <Application Id="MyDesktopAppStep1" 
-                 Executable="win32\MyDesktopApp.exe" 
-                 EntryPoint="Windows.FullTrustApplication">
-      <uap:VisualElements DisplayName="MyDesktopAppStep1" 
-                          Description="MyDesktopAppStep1" 
-                          BackgroundColor="#777777" 
-                          Square150x150Logo="Assets\SampleAppx.150x150.png" 
-                          Square44x44Logo="Assets\SampleAppx.44x44.png">
-      </uap:VisualElements>
-    </Application>
-  </Applications>
-</Package>
-```
+   >[!IMPORTANT]
+   <span data-ttu-id="e57a9-149">Wenn Sie ein Pakets für eine C++-Desktopanwendung erstellen, müssen Sie einige zusätzliche Daten in der Manifestdatei ändern, damit Sie die Visual C++-Laufzeitbibliotheken zusammen mit Ihrer App bereitstellen können.</span><span class="sxs-lookup"><span data-stu-id="e57a9-149">If your creating a package for a C++ desktop application, you'll have to make a few extra changes to your manifest file so that you can deploy the Visual C++ runtimes along with your app.</span></span> <span data-ttu-id="e57a9-150">Weitere Informationen finden Sie unter [Visual C++-Laufzeiten in einem Projekt für die Desktop-Brücke nutzen](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project/).</span><span class="sxs-lookup"><span data-stu-id="e57a9-150">See [Using Visual C++ runtimes in a desktop bridge project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project/).</span></span>
 
-#### <a name="configure-the-win32-binaries"></a>Konfigurieren der Win32-Binärdateien
+7. <span data-ttu-id="e57a9-151">Erstellen Sie das Verpacken-Projekt, um sicherzustellen, dass keine Fehler angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="e57a9-151">Build the packaging project to ensure that no errors appear.</span></span>
 
-Um die für die App erforderlichen Binärdateien in das Ausgabepaket einzubeziehen, wählen Sie alle Dateien in Visual Studio aus. Legen Sie die Eigenschaften auf "Inhalt" fest, und das Buildverhalten auf "Kopieren, wenn neuer". 
+8. <span data-ttu-id="e57a9-152">Wenn Sie das Paket testen möchten, lesen Sie [Ausführen, Debuggen und Testen eine verpackten Desktop-App (Desktop-Brücke)](desktop-to-uwp-debug.md).</span><span class="sxs-lookup"><span data-stu-id="e57a9-152">If you want to test your package, see [Run, debug, and test a packaged desktop app (Desktop Bridge)](desktop-to-uwp-debug.md).</span></span>
 
-![](images/desktop-to-uwp/net-3.png)
+   <span data-ttu-id="e57a9-153">Lesen Sie dann den nächsten Abschnitt, um Ihr Paket zu generieren.</span><span class="sxs-lookup"><span data-stu-id="e57a9-153">Then, return to this guide, and see the next section to generate your package.</span></span>
 
-Wenn Sie den Commit der Binärdateien für Ihr Quellcode-Repository vermeiden möchten, können Sie die Datei .gitignore nutzen, um die Dateien im Ordner win32 auszuschließen. 
+## <a name="generate-a-package"></a><span data-ttu-id="e57a9-154">Generieren eines Pakets</span><span class="sxs-lookup"><span data-stu-id="e57a9-154">Generate a package</span></span>
 
-#### <a name="optional-use-wildcards-to-specify-the-files-in-your-win32-folder"></a>Optional: Verwenden Sie Platzhalter, um die Dateien im Ordner win32 angeben.
+<span data-ttu-id="e57a9-155">Um ein Paket für Ihre App zu generieren, befolgen Sie die Anleitung im Thema [Verpacken von UWP-Apps](..\packaging\packaging-uwp-apps.md).</span><span class="sxs-lookup"><span data-stu-id="e57a9-155">To generate a package your app, follow the guidance described in this topic: [Packaging UWP Apps](..\packaging\packaging-uwp-apps.md).</span></span>
 
-Wenn die Win32-App mehrere Dateien benötigt, können Sie in der Projektdatei mit Platzhaltern festlegen, welche Dateien als "Inhalt" gekennzeichnet werden sollen. Sie müssen die Datei . jsproj mit einem Texteditor öffnen und die benötigten Dateien wie unten dargestellt einfügen.
+<span data-ttu-id="e57a9-156">Wenn Sie die Seite **Auswählen und Konfigurieren von Paketen** erreichen, nehmen Sie sich einen Moment Zeit und überlegen Sie, welche Arten von Binärdateien Sie in Ihrem Paket haben möchten.</span><span class="sxs-lookup"><span data-stu-id="e57a9-156">When you reach the **Select and Configure Packages** screen, Take a moment to consider what sorts of binaries you're including in your package before you select any of the checkboxes.</span></span>
 
-```xml
-<Content Include="win32\*.dll">
-  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-</Content>
-<Content Include="win32\*.exe">
-  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-</Content>
-<Content Include="win32\*.config">
-  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-</Content>
-<Content Include="win32\*.pdb">
-  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-</Content>
-```
+* <span data-ttu-id="e57a9-157">Wenn Sie die Desktopanwendung [erweiterten](desktop-to-uwp-extend.md), indem Sie ein C#-, C++ oder VB.NET-basiertes Universellen Windows-Plattform-Projekt der Projektmappe hinzufügen, wählen die **x86**- und **x64**-Kontrollkästchen.</span><span class="sxs-lookup"><span data-stu-id="e57a9-157">If you've [extended](desktop-to-uwp-extend.md) your desktop application by adding a adding a C#, C++, or VB.NET-based Universal Windows Platform project to your solution, select the **x86** and **x64** checkboxes.</span></span>  
 
-### <a name="step-2-enhance"></a>Schritt 2: Optimieren
+* <span data-ttu-id="e57a9-158">Wählen Sie andernfalls das **Neutral**-Kontrollkästchen.</span><span class="sxs-lookup"><span data-stu-id="e57a9-158">Otherwise, choose the **Neutral** checkbox.</span></span>
 
-Wenn Sie die UWP-APIs über Ihren Win32-Code aufrufen möchten, müssen Sie einen Verweis auf `\Program Files (x86)\Windows Kits\10\UnionMetadata\Windows.winmd` hinzufügen. Die vollständige Liste der UWP-APIs für die App ist im Artikel [Unterstützte UWP-APIs für Apps, die mit der Desktop-Brücke konvertiert wurden](desktop-to-uwp-supported-api.md) zu finden.  
+>[!NOTE]
+<span data-ttu-id="e57a9-159">Der Grund für das Auswählen jeder unterstützten Plattform ist, das eine Lösung, die Sie erweitert haben, zwei Arten von Binärdateien enthält. Eine für das UWP-Projekt und eine für das Desktop-Projekt.</span><span class="sxs-lookup"><span data-stu-id="e57a9-159">The reason that you'd have to explicitly choose each supported platform is because an solution that you've extended contains two types of binaries; one for the UWP project and one for the desktop project.</span></span> <span data-ttu-id="e57a9-160">Da diese Arten von Binärdateien unterschiedlich sind, muss .NET Native explizit systemeigene Binärdateien für jede Plattform erstellen.</span><span class="sxs-lookup"><span data-stu-id="e57a9-160">Because these are different types of binaries, .NET Native needs to explicitly produce native binaries for each platform.</span></span>
 
-Da diese Datei unter Windows 10 nicht erforderlich ist, müssen Sie sie nicht verteilen. Legen Sie in den Verweiseigenschaften die Eigenschaft "Lokal kopieren" auf "Falsch" fest.
+<span data-ttu-id="e57a9-161">Wenn Fehler auftreten, wenn Sie versuchen, das Paket zu generieren, finden Sie unter der [Bekannte Probleme](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-known-issues#known-issues-anchor) Hilfen. Wenn Ihr Problem in dieser Liste nicht angezeigt wird, teilen Sie uns das Problem [hier](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge) mit.</span><span class="sxs-lookup"><span data-stu-id="e57a9-161">If you receive errors when you attempt to generate your package, see the [Known Issues](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-known-issues#known-issues-anchor) guide and if your issue does not appear in that list, please share the issue with us [here](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge).</span></span>
 
-![](images/desktop-to-uwp/net-4.png)
+## <a name="next-steps"></a><span data-ttu-id="e57a9-162">Nächste Schritte</span><span class="sxs-lookup"><span data-stu-id="e57a9-162">Next steps</span></span>
 
-Wenn die Win32-Binärdateien hinzufügen möchten, verwenden Sie die gleichen Abläufe wie in Schritt 1. 
+**<span data-ttu-id="e57a9-163">Ausführer Ihrer App/Suchen und Beheben von Problemen</span><span class="sxs-lookup"><span data-stu-id="e57a9-163">Run your app / find and fix issues</span></span>**
 
-### <a name="step-3-extend"></a>Schritt 3: Erweitern 
+<span data-ttu-id="e57a9-164">Siehe [Ausführen, Debuggen und Testen eine verpackten Desktop-App (Desktop-Brücke)](desktop-to-uwp-debug.md)</span><span class="sxs-lookup"><span data-stu-id="e57a9-164">See [Run, debug, and test a packaged desktop app (Desktop Bridge)](desktop-to-uwp-debug.md)</span></span>
 
-In diesem Beispiel werden wir eine Win32-App um eine Hintergrundaufgabe erweitern. Dies erfordert das Registrieren der Hintergrundaufgabe im package.appxmanifest der UWP-App. Außerdem müssen Sie einen Verweis auf das Projekt hinzufügen, das der Hintergrundaufgabe implementiert (siehe unten).
+**<span data-ttu-id="e57a9-165">Verbessern Sie Ihre Desktop-App durch Hinzufügen von UWP-APIs</span><span class="sxs-lookup"><span data-stu-id="e57a9-165">Enhance your desktop app by adding UWP APIs</span></span>**
 
-```xml
-<Extensions>
-  <Extension Category="windows.backgroundTasks" 
-              EntryPoint="BackgroundTasks.MyBackgroundTask">
-    <BackgroundTasks>
-      <Task Type="timer" />
-    </BackgroundTasks>
-  </Extension>
-</Extensions>
-```
+<span data-ttu-id="e57a9-166">Siehe [Verbessern Sie Ihre Desktopanwendung für Windows10](desktop-to-uwp-enhance.md)</span><span class="sxs-lookup"><span data-stu-id="e57a9-166">See [Enhance your desktop application for Windows 10](desktop-to-uwp-enhance.md)</span></span>
 
-Wenn die Hintergrundaufgabe in C# oder VB.NET implementiert ist, enthält die Ausgabe CoreCLR-Binärdateien, die vor der Übermittlung an den Store durch die .NET Native-Tools verarbeitet werden müssen (wie in Schritt 3 und 4, "Erstellen von Appxupload mit gemischten Binärdateien", beschrieben).
+**<span data-ttu-id="e57a9-167">Erweitern Sie Ihre Desktop-App durch Hinzufügen von UWP-Komponenten</span><span class="sxs-lookup"><span data-stu-id="e57a9-167">Extend your desktop app by adding UWP components</span></span>**
 
-### <a name="step-4-migrate"></a>Schritt 4: Migrieren
+<span data-ttu-id="e57a9-168">Siehe [Erweitern Sie Ihre Desktopanwendung mit modernen Windows-UWP-Komponenten](desktop-to-uwp-extend.md)</span><span class="sxs-lookup"><span data-stu-id="e57a9-168">See [Extend your desktop application with modern UWP components](desktop-to-uwp-extend.md).</span></span>
 
-In diesem Szenario ist bereits ein C#-UWP-Einstiegspunkt vorhanden. Daher muss kein weiteres UWP-Projekt hinzugefügt werden. Sie müssen allerdings die Aktivitäten aus Schritt 1 durchführen, um die Win32-Binärdateien einzubeziehen und zu konfigurieren.
+**<span data-ttu-id="e57a9-169">Verteilen Ihrer App</span><span class="sxs-lookup"><span data-stu-id="e57a9-169">Distribute your app</span></span>**
 
-Verwenden Sie die [**FullTrustProcessLauncher**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.FullTrustProcessLauncher)-APIs, um den Win32-Prozess auszuführen. Sie müssen die Desktop-Erweiterung und die *FullTrustProcess*-Funktionalität zum Manifest der App hinzufügen, um die APIs wie folgt nutzen zu können: 
+<span data-ttu-id="e57a9-170">Weitere Informationen finden Sie in [Verteilen einer verpackten Desktop-App (Desktop-Brücke)](desktop-to-uwp-distribute.md)</span><span class="sxs-lookup"><span data-stu-id="e57a9-170">See [Distribute a packaged desktop app (Desktop Bridge)](desktop-to-uwp-distribute.md)</span></span>
 
-```xml
-..
-xmlns:desktop=http://schemas.microsoft.com/appx/manifest/desktop/windows10
-..
-<desktop:Extension Category="windows.fullTrustProcess" 
-                    Executable="win32\MyDesktopApp.exe" />
-```
+**<span data-ttu-id="e57a9-171">Antworten auf bestimmte Fragen finden</span><span class="sxs-lookup"><span data-stu-id="e57a9-171">Find answers to specific questions</span></span>**
 
-## <a name="generate-packages-for-your-desktop-bridge-app"></a>Generieren von Paketen für die Desktop-Brücke-App
+<span data-ttu-id="e57a9-172">Unser Team überwacht diese [StackOverflow-Tags](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge).</span><span class="sxs-lookup"><span data-stu-id="e57a9-172">Our team monitors these [StackOverflow tags](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge).</span></span>
 
-Nachdem Sie die oben genannten Schritte ausgeführt haben, sollten Sie Ihre Pakete mit Visual Studio wie in [Verpacken von UWP-Apps](..\packaging\packaging-uwp-apps.md) beschrieben generieren können. 
+**<span data-ttu-id="e57a9-173">Geben Sie Feedback zu diesem Artikel</span><span class="sxs-lookup"><span data-stu-id="e57a9-173">Give feedback about this article</span></span>**
 
-### <a name="steps-1-and-2-create-appxupload-with-win32-binaries"></a>Schritt 1 und 2: Erstellen von Appxupload mit Win32-Binärdateien
-
-Um Paketen mit der *FullTrust*-Funktionalität übermitteln zu können, müssen Sie eine Appxupload-Datei generieren, die die Symbole für jede Plattform in einer Appxsym-Datei und ein Paket mit den Plattform Appx-Paketen enthält.
-
-In den Schritten 1 und 2 enthält das Paket keine CoreCLR-Binärdateien. Daher müssen Sie sich nicht um die Auswahl der Plattform kümmern. Wählen Sie "Neutral" und "Release (alle CPUs)", wie in der folgenden Abbildung dargestellt.
-
-![](images/desktop-to-uwp/net-5.png)
-
-Nachdem Sie die Option "Store-Pakete generieren" ausgewählt haben, generiert der Assistent die Appxupload-Datei, die an den Store übermittelt werden kann.
-
-### <a name="step-3-and-4-create-appxupload-with-mixed-binaries"></a>Schritt 3 und 4: Erstellen von Appxupload mit gemischte Binärdateien
-
-Sie sollten auch eine Releaseversion erstellen. In diesem Fall ist es notwendig, die Zielplattformen anzugeben. .NET Native benötigt diese Informationen zur Erstellung der nativen Binärdateien für die einzelnen Plattformen.
-
-![](images/desktop-to-uwp/net-6.png)
-
-Um die neue Appxupload-Datei zu erstellen, erstellen wir ein neues Zip-Archiv. In dieses nehmen wir die generierten Appxsym und Appxbundle aus dem Ordner "_Test" auf.
-
-Erstellen Sie eine neue Zip-Datei, die die Dateien Appxsym und Appxbundle enthält, und ändern Sie die Dateierweiterung in Appxupload.
-
-![](images/desktop-to-uwp/net-7.png)
-
-<span id="debugging-anchor" />
-## <a name="debugging-your-desktop-bridge-app"></a>Debuggen der Desktop-Brücke-App
-
-Auch wenn Sie Ihre Projekte in Visual Studio ohne Debuggen (STRG+F5) beginnen können, gibt es ein bekanntes Problem, durch das Visual Studio sich nicht einfach in laufenden Prozesse einhängen kann. Sie können jedoch das Einhängen jedoch später über eine der folgenden Methoden durchführen:
-
-### <a name="attach-to-the-running-app"></a>Einhängen in eine laufende App
-
-#### <a name="attach-to-an-existing-process"></a>Einhängen in einen vorhandene Prozess
-
-Nachdem Sie die App mit STRG+F5 erfolgreich gestartet haben, können Sie sich in den Win32-Prozess einhängen. Sie können jedoch kein Debugging für .NET Native-Module durchführen. 
-
-![](images/desktop-to-uwp/net-8.png)
-
-#### <a name="attach-to-an-installed-app"></a>Einhängen in eine installierte App
-
-Sie können sich auch in eine vorhandenes Appx-Paket einhängen. Verwenden Sie hierzu die Option Debuggen -> Andere Debugziele -> Installiertes App-Paket debuggen.
-
-![](images/desktop-to-uwp/net-9.png)
-
-Dort können Sie den lokalen Computer oder einen Remotecomputer auswählen.
-
-![](images/desktop-to-uwp/net-10.png)
-
-Mit dieser Option sollten Sie in der Lage sein, .NET Native-Code zu debuggen.
-
-### <a name="use-visual-studio-extension-to-debug-your-desktop-bridge-app"></a>Verwenden der Visual Studio-Erweiterung zum Debuggen der Desktop-Brücke-App 
-
-Wenn Sie die App über F5 debuggen möchten, müssen Sie die Visual Studio 2017-Erweiterung [Desktop Bridge Debugging Project](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.DesktoptoUWPPackagingProject) aus der Visual Studio Gallery installieren
-
-Mit diesem Projekt können Sie eine Win32-App debuggen, die mit Visual Studio (wie in diesem Dokument beschrieben) oder über den Desktop App Converter zu UWP migriert wird.
-
-#### <a name="add-the-debugging-project-to-your-solution"></a>Hinzufügen des Debuggen Projekts zur Lösung
-
-Fügen Sie zunächst in der Lösung ein neues Desktop-Brücke-Debugging-Projekt zu Ihrem Projekt hinzu.
-
-![](images/desktop-to-uwp/net-11.png)
-
-Um dieses Projekt zu konfigurieren, müssen Sie die Eigenschaft PackageLayout im Eigenschaftenfenster jeder zu debuggenden Konfiguration/Plattform definieren.
-Für Debug/x86 legen wir die Paketlayouteigenschaft auf den Ordner bin\x86\debug des UWP-Projekts fest (mit einem relativen Pfad): `..\MyDesktopApp.Package\bin\x86\Debug`. 
-
-![](images/desktop-to-uwp/net-12.png)
-
-Dann bearbeiten wir die Datei AppXFileLayout.xml, um den Einstiegspunkt anzugeben:
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" 
-         xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
-    <MyProjectOutputPath>$(PackageLayout)</MyProjectOutputPath>
-  </PropertyGroup>
-  <ItemGroup>
-    <LayoutFile Include="$(MyProjectOutputPath)\win32\MyDesktopApp.exe">
-      <PackagePath>$(PackageLayout)\win32\MyDesktopApp.exe</PackagePath>
-    </LayoutFile>
-  </ItemGroup>
-</Project>
-```
-
-Schließlich konfigurieren Sie die Abhängigkeiten der Lösung. So stellen Sie sicher, dass die Projekte in der richtigen Reihenfolge erstellt werden. 
-
-Sehen wir uns als Beispiel die in Schritt 3 erstellte Lösung an.
-
-![](images/desktop-to-uwp/net-13.png)
-
-Um die Buildreihenfolge zu konfigurieren, können Sie die Projektabhängigkeiten-Konfiguration verwenden. Klicken Sie mit der rechten Maustaste auf die Lösung, und wählen Sie die Option "Projektabhängigkeiten" aus. Nachdem Sie die richtigen Abhängigkeiten festgelegt haben, können Sie die Buildreihenfolge überprüfen (siehe unten für Schritt 3):
-
-![](images/desktop-to-uwp/net-14.png)
-
-<span id="known-issues-anchor" />
-## <a name="known-issues-with-cvbnet-and-c-uwp-projects"></a>Bekannte Probleme mit C#/VB.NET und C++ UWP-Projekten
-
-Wenn Sie ein C#-Projekt zum Verpacken der App verwenden möchten, müssen Sie die folgenden bekannten Probleme berücksichtigen. 
-
-- **Das Erstellen der App im Debugmodus führt zum Fehler: Microsoft.Net.CoreRuntime.targets(235,5): Fehler: Anwendungen mit benutzerdefinierten Einstiegspunkten für ausführbare Dateien werden nicht unterstützt. Überprüfen Sie das Attribut "Executable" im Application-Elements des Paketmanifests.** Verwenden Sie zur Umgehung des Problems den Releasemodus.
-
-- **Im Stammordner des UWP-Projekts gespeichert gespeicherte Win32-Binärdateien werden in der Relaseversion entfernt**. Wenn Sie keinen Ordner zur Speicherung der Win32-Binärdateien verwenden, entfernt der .NET Native-Compiler diese aus dem fertigen Paket. Dies führt zu einem Manifest-Validierungsfehler, da der Einstiegspunkt für die ausführbare Datei nicht gefunden werden kann.
-
-
+<span data-ttu-id="e57a9-174">Verwenden Sie den Kommentarabschnitt weiter unten.</span><span class="sxs-lookup"><span data-stu-id="e57a9-174">Use the comments section below.</span></span>

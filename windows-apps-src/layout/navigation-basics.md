@@ -1,259 +1,206 @@
 ---
 author: mijacobs
-Description: "Die Navigation in UWP-Apps (Apps für die Universelle Windows-Plattform) basiert auf einem flexiblen Modell aus Navigationsstrukturen, Navigationselementen und Funktionen auf Systemebene."
-title: "Navigationsgrundlagen für UWP-Apps (Windows-Apps)"
+Description: "Die Navigation in UWP-Apps (Apps für die universelle Windows-Plattform) basiert auf einem flexiblen Modell aus Navigationsstrukturen, Navigationselementen und Funktionen auf Systemebene."
+title: "Navigationsgrundlagen für UWP-Apps"
 ms.assetid: B65D33BA-AAFE-434D-B6D5-1A0C49F59664
 label: Navigation design basics
 template: detail.hbs
 op-migration-status: ready
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 72596a2d902dff72af76c84115bc1eb0be8fa743
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: a944e02ea116c0e054918397d9d46d366d43622a
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/22/2017
 ---
-
-#  <a name="navigation-design-basics-for-uwp-apps"></a>Navigationsdesigngrundlagen für UWP-Apps
+# <a name="navigation-design-basics-for-uwp-apps"></a><span data-ttu-id="0de1b-104">Navigationsdesigngrundlagen für UWP-Apps</span><span class="sxs-lookup"><span data-stu-id="0de1b-104">Navigation design basics for UWP apps</span></span>
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Die Navigation in UWP-Apps (Apps für die Universelle Windows-Plattform) basiert auf einem flexiblen Modell aus Navigationsstrukturen, Navigationselementen und Funktionen auf Systemebene. Gemeinsam ermöglichen sie eine Reihe intuitiver Benutzererfahrungen für die Navigation zwischen Apps, Seiten und Inhalten.
+<span data-ttu-id="0de1b-105">Wenn Sie sich eine App als eine Sammlung von Seiten vorstellen, beschreibt der Begriff *Navigation* den Wechselvorgang zwischen Seiten und innerhalb einer Seite.</span><span class="sxs-lookup"><span data-stu-id="0de1b-105">If you think of an app as a collection of pages, the term *navigation* describes the act of moving between pages and within the page.</span></span> <span data-ttu-id="0de1b-106">Es ist der Ausgangspunkt der Benutzererfahrung.</span><span class="sxs-lookup"><span data-stu-id="0de1b-106">It's the starting point of the user experience.</span></span> <span data-ttu-id="0de1b-107">So finden Benutzer die Inhalte und Funktionen, für die sie sich interessieren.</span><span class="sxs-lookup"><span data-stu-id="0de1b-107">It's how users find the content and features they're interested in.</span></span> <span data-ttu-id="0de1b-108">Sie ist sehr wichtig, und es kann schwierig sein, sie richtig einzustellen.</span><span class="sxs-lookup"><span data-stu-id="0de1b-108">It's very important, and it can be difficult to get right.</span></span> 
 
-In einigen Fällen kann es möglich sein, alle Inhalte und Funktionen der App auf einer einzelnen Seite anzuordnen, ohne dass der Benutzer mehr tun muss, als durch Verschieben in den Inhalten zu navigieren. Die meisten Apps verfügen jedoch in der Regel über mehrere Seiten mit Inhalten und Funktionen, die der Benutzer aufrufen und mit denen er interagieren kann. Wenn eine App mehrere Seiten hat, müssen Sie die geeignete Navigationsfunktionalität bereitstellen.
+> <span data-ttu-id="0de1b-109">**Wichtige APIs**: [Frame](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.Frame), [Pivot-Klasse](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.Pivot), [NavigationView-Klasse](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.NavigationView)</span><span class="sxs-lookup"><span data-stu-id="0de1b-109">**Important APIs**: [Frame](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.Frame), [Pivot class](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.Pivot), [NavigationView class](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.NavigationView)</span></span>
 
-Damit sie fehlerlos und intuitiv von den Benutzern verwendet werden kann, umfasst die mehrseitige Navigation in UWP-Apps Folgendes (später ausführlich beschrieben):
+<span data-ttu-id="0de1b-110">Ein Grund für das herausfordernde Einrichten der Navigation ist die große Anzahl an Entscheidungen, die wir als App-Entwickler treffen müssen.</span><span class="sxs-lookup"><span data-stu-id="0de1b-110">Part of the reason it's difficult to get right is that, as app designers, we have a huge number of choices to make.</span></span> <span data-ttu-id="0de1b-111">Wenn wir ein Buch entwerfen würden, würden unsere Entscheidungen einfach sein: in welcher Reihenfolge die Kapitel aufgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="0de1b-111">If we were designing a book, our choices would be simple: what order do the chapters go in.</span></span> <span data-ttu-id="0de1b-112">Bei einer App können wir eine Navigationserfahrung erstellen, die ein Buch imitiert und bei der der Benutzer durch eine Reihe von Seiten blättert.</span><span class="sxs-lookup"><span data-stu-id="0de1b-112">With an app, we can create a navigation experience that mimics a book, requiring the user to go through a series of pages in order.</span></span> <span data-ttu-id="0de1b-113">Oder wir bieten ein Menü an, mit dem der Benutzer direkt zu einer beliebigen Seite wechseln kann – aber wenn wir zu viele Seiten haben, wird den Benutzer möglicherweise mit der Anzahl an Optionen überfordert.</span><span class="sxs-lookup"><span data-stu-id="0de1b-113">Or we could provide a menu that lets the user jump directly to any page he or she wants--but if we have too many pages, we might overwhelm the user with choices.</span></span> <span data-ttu-id="0de1b-114">Oder wir platzieren alle Elemente auf einer Seite und bieten Filtermechanismen zum Anzeigen der Inhalte an.</span><span class="sxs-lookup"><span data-stu-id="0de1b-114">Or we could put everything on a single page and provide filtering mechanisms for viewing content.</span></span> 
 
--   **Die richtige Navigationsstruktur**
+<span data-ttu-id="0de1b-115">Obwohl es kein einzelnes Navigationsdesign gibt, das für jede App funktioniert, können Sie einer Reihe von Prinzipien und Richtlinien folgen, mit der Sie das richtige Design für Ihre App bestimmen können.</span><span class="sxs-lookup"><span data-stu-id="0de1b-115">While there's no single navigation design that works for every app, there are a set of principles and guidelines you can follow to help you figure out the right design for your app.</span></span> 
 
-    Das Erstellen einer für Benutzer sinnvollen Navigationsstruktur ist für die Entwicklung einer intuitiven Navigationsfunktionalität entscheidend.
+## <a name="principles-of-good-design"></a><span data-ttu-id="0de1b-116">Prinzipien des guten Designs</span><span class="sxs-lookup"><span data-stu-id="0de1b-116">Principles of good design</span></span> 
+<span data-ttu-id="0de1b-117">Beginnen wir mit den Grundprinzipien, die Forschungen zufolge die Grundlage für gutes Navigationsdesign bilden:</span><span class="sxs-lookup"><span data-stu-id="0de1b-117">Let's start with the basic principles that research has shown form the foundation of good navigation design:</span></span> 
 
--   **Kompatible Navigationselemente**, die die ausgewählte Struktur unterstützen.
+* <span data-ttu-id="0de1b-118">Seien Sie konsistent: Erfüllen Sie die Benutzererwartungen.</span><span class="sxs-lookup"><span data-stu-id="0de1b-118">Be consistent: Meet user expectations.</span></span>
+* <span data-ttu-id="0de1b-119">Halten Sie es einfach: Nicht mehr als erforderlich tun.</span><span class="sxs-lookup"><span data-stu-id="0de1b-119">Keep it simple: Don't do more than you need to.</span></span>
+* <span data-ttu-id="0de1b-120">Behalten Sie die Übersicht: Navigationsfunktionen sollten nicht die Übersicht des Benutzers einschränken.</span><span class="sxs-lookup"><span data-stu-id="0de1b-120">Keep it clean: Don't let navigation features get in the user's way.</span></span>
 
-    Navigationselemente können dem Benutzer helfen, zum gewünschten Inhalt zu gelangen, und sie können auch anzeigen, wo sich der Benutzer in der App befindet. Allerdings belegen sie auch Platz, der für Inhalte oder Steuerungselemente genutzt werden könnte. Daher ist es wichtig, dass Sie die für Ihre App-Struktur geeigneten Navigationselemente verwenden.
+### <a name="be-consistent"></a><span data-ttu-id="0de1b-121">Achten Sie auf Einheitlichkeit</span><span class="sxs-lookup"><span data-stu-id="0de1b-121">Be consistent</span></span> 
+<span data-ttu-id="0de1b-122">Die Navigation sollte den Benutzererwartungen entsprechen und auf die Standardkonventionen für Symbole, Positionierung und Formatierung beruhen.</span><span class="sxs-lookup"><span data-stu-id="0de1b-122">Navigation should be consistent with user expectations, leaning on standard conventions  for icons, location and styling.</span></span> 
 
--   **Geeignete Reaktionen auf Navigationsfeatures auf Systemebene (z. B. „Zurück”)**
+<span data-ttu-id="0de1b-123">In der folgenden Abbildung können Sie beispielsweise die Orte sehen, an denen Benutzer in der Regel Funktionen erwarten, wie der Navigationsbereich und die Befehlsleiste.</span><span class="sxs-lookup"><span data-stu-id="0de1b-123">For example, in the following illustration, you can see the spots where users will typically expect to find functionality, like the navigation pane and command bar.</span></span> <span data-ttu-id="0de1b-124">Unterschiedliche Gerätefamilien verfügen über ihre eigenen Konventionen für Navigationselemente.</span><span class="sxs-lookup"><span data-stu-id="0de1b-124">Different device families have their own conventions for navigational elements.</span></span> <span data-ttu-id="0de1b-125">Beispielsweise wird der Navigationsbereich in der Regel auf der linken Seite des Bildschirms für Tablets, aber für Mobilgeräte oben angezeigt.</span><span class="sxs-lookup"><span data-stu-id="0de1b-125">For example,  the navigation pane typically appears on the left side of the screen for tablets, but up top for mobile devices.</span></span>
 
-    Um eine einheitliche intuitive Benutzererfahrung zu bieten, reagieren Sie in vorhersehbarer Weise auf Navigationsfeatures auf Systemebene.
+<figure class="wdg-figure">
+  ![Bevorzugte Orte für Navigationselemente](images/nav/nav-component-layout.png)
+  <figcaption><span data-ttu-id="0de1b-127">Benutzer erwarten, gewisse UI-Elemente an Standardorten zu finden.</span><span class="sxs-lookup"><span data-stu-id="0de1b-127">Users expect to find certain UI elements in standard locations.</span></span></figcaption>
+</figure> 
 
-## <a name="build-the-right-navigation-structure"></a>Erstellen der richtigen Navigationsstruktur
+### <a name="keep-it-simple"></a><span data-ttu-id="0de1b-128">Einfachheit</span><span class="sxs-lookup"><span data-stu-id="0de1b-128">Keep it simple</span></span>
+<span data-ttu-id="0de1b-129">Ein weiterer wichtiger Faktor des Navigationsdesigns ist das Hicksche Gesetz, das oft in Bezug auf Navigationsoptionen genannt wird.</span><span class="sxs-lookup"><span data-stu-id="0de1b-129">Another important factor in navigation design is the Hick-Hyman Law, often cited in relation to navigational options.</span></span> <span data-ttu-id="0de1b-130">Dieses Gesetz ermutigt uns, zum Menü weniger Optionen hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="0de1b-130">This law encourages us to add fewer options to the menu.</span></span> <span data-ttu-id="0de1b-131">Je mehr Optionen vorhanden sind, desto langsamer werden die Benutzerinteraktionen mit diesen Optionen, besonders, wenn Benutzer eine neue App erkunden.</span><span class="sxs-lookup"><span data-stu-id="0de1b-131">The more options there are, the slower user interactions with them will be, particularly when users are exploring a new app.</span></span> 
+
+<figure class="wdg-figure">
+  ![Ein einfaches Menü im Vergleich zu einem komplexen Menü](images/nav/nav-simple-menus.png)
+  <figcaption> <span data-ttu-id="0de1b-133">Beachten Sie, dass dem Benutzer im linken Bereich weniger Optionen zur Verfügung stehen, während es auf der rechten Seite mehrere gibt.</span><span class="sxs-lookup"><span data-stu-id="0de1b-133">On the left, notice there are fewer options for the  user to select, whereas on the right, there are several.</span></span> <span data-ttu-id="0de1b-134">Dem Hickschen Gesetz zufolge ist es für den Benutzer einfacher, das linke Menü zu verstehen und zu nutzen.</span><span class="sxs-lookup"><span data-stu-id="0de1b-134">The  Hick-Hyman Law indicates that the menu on the left will be  easier for users to understand and utilize.</span></span>
+</figcaption>
+</figure> 
+
+### <a name="keep-it-clean"></a><span data-ttu-id="0de1b-135">Bleiben Sie konsistent</span><span class="sxs-lookup"><span data-stu-id="0de1b-135">Keep it clean</span></span>
+<span data-ttu-id="0de1b-136">Das letzte wichtige Merkmal der Navigation ist eine saubere Interaktion, was sich auf die physische Interaktion der Benutzer mit der Navigation über eine Vielzahl von Kontexten bezieht.</span><span class="sxs-lookup"><span data-stu-id="0de1b-136">The final key characteristic of navigation is clean interaction, which refers to the physical way that users interact with navigation across a variety of contexts.</span></span> <span data-ttu-id="0de1b-137">Hierbei handelt es sich um einen Bereich, bei dem Sie sich in die Rolle des Benutzers versetzen müssen, um Ihr Design zu vermitteln.</span><span class="sxs-lookup"><span data-stu-id="0de1b-137">This is one area where putting yourself in the users position will inform your design.</span></span> <span data-ttu-id="0de1b-138">Versuchen Sie, Ihren Benutzer und sein Verhalten zu verstehen.</span><span class="sxs-lookup"><span data-stu-id="0de1b-138">Try to understand your user and their behaviors.</span></span> <span data-ttu-id="0de1b-139">Wenn Sie beispielsweise eine Koch-App entwickeln, könnten Sie einen schnellen Zugriff auf eine Einkaufsliste und einen Timer bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="0de1b-139">For example, if you're designing a cooking app, you might consider providing easy access to a shopping list and a timer.</span></span> 
+
+## <a name="three-general-rules"></a><span data-ttu-id="0de1b-140">Drei allgemeine Regeln</span><span class="sxs-lookup"><span data-stu-id="0de1b-140">Three general rules</span></span>
+<span data-ttu-id="0de1b-141">Nehmen wir jetzt unsere Designprinzipien – Konsistenz, Einfachheit und saubere Interaktionen – und verwenden sie, um einige allgemeinen Regeln aufzustellen.</span><span class="sxs-lookup"><span data-stu-id="0de1b-141">Now lets take our design principles--consistency, simplicity, and clean interaction--and use them to come up with some general rules.</span></span> <span data-ttu-id="0de1b-142">Wie mit allen Faustregeln, sollten sie als Ausgangspunkt gesehen und bei Bedarf optimiert werden.</span><span class="sxs-lookup"><span data-stu-id="0de1b-142">As with any rule of thumb, use them as starting points and tweak as needed.</span></span> 
+
+1. <span data-ttu-id="0de1b-143">Vermeiden Sie tiefe Navigationshierarchien.</span><span class="sxs-lookup"><span data-stu-id="0de1b-143">Avoid deep navigational hierarchies.</span></span> <span data-ttu-id="0de1b-144">Wie viele Navigationsebenen sind für Ihre Benutzer am besten geeignet?</span><span class="sxs-lookup"><span data-stu-id="0de1b-144">How many levels of navigation are best for your users?</span></span> <span data-ttu-id="0de1b-145">Eine Navigation auf oberster Ebene und Hierarchieebene darunter ist in der Regel ausreichend.</span><span class="sxs-lookup"><span data-stu-id="0de1b-145">A top-level navigation and one level beneath it is usually plenty.</span></span> <span data-ttu-id="0de1b-146">Wenn Sie über drei Navigationsebenen hinausgehen, verstoßen Sie gegen das Prinzip der Einfachheit.</span><span class="sxs-lookup"><span data-stu-id="0de1b-146">If you go beyond three levels of navigation, then you break the principle of simplicity.</span></span> <span data-ttu-id="0de1b-147">Schlimmer noch: Sie gehen das Risiko ein, dass der Benutzer sich in einer tiefen Hierarchie verirrt.</span><span class="sxs-lookup"><span data-stu-id="0de1b-147">Even worse, you risk stranding your user in a deep hierarchy that they will have difficulty leaving.</span></span>
+
+2. <span data-ttu-id="0de1b-148">Vermeiden Sie zu viele Navigationsoptionen.</span><span class="sxs-lookup"><span data-stu-id="0de1b-148">Avoid too many navigational options.</span></span> <span data-ttu-id="0de1b-149">Es werden meist drei bis sechs Navigationselemente pro Ebene verwendet.</span><span class="sxs-lookup"><span data-stu-id="0de1b-149">Three to six navigation elements per level are most common.</span></span> <span data-ttu-id="0de1b-150">Wenn Ihre Navigation mehr Elemente benötigt, besonders auf der obersten Hierarchieebene, dann können Sie Ihre App in mehrere Apps aufteilen, da Sie möglicherweise in der einen App zu viele Funktionen haben.</span><span class="sxs-lookup"><span data-stu-id="0de1b-150">If your navigation needs more than this, especially at the top level of your hierarchy, then you might consider splitting your app into multiple apps, since you may be trying to do too much in one place.</span></span> <span data-ttu-id="0de1b-151">Zu viele Navigationselemente in einer App führen üblicherweise zu inkonsistenten und irrelevanten Zielen.</span><span class="sxs-lookup"><span data-stu-id="0de1b-151">Too many navigation elements in an app usually lead to inconsistent and unrelated objectives.</span></span>
+
+3. <span data-ttu-id="0de1b-152">Vermeiden Sie „Pogo Sticking”.</span><span class="sxs-lookup"><span data-stu-id="0de1b-152">Avoid "pogo-sticking."</span></span> <span data-ttu-id="0de1b-153">Pogo Sticking tritt auf, wenn der Benutzer für die Navigation zu zugehörigen Inhalten eine Ebene nach oben und erneut eine nach unten navigieren muss.</span><span class="sxs-lookup"><span data-stu-id="0de1b-153">Pogo-sticking occurs when there is related content, but navigating to it requires the user to go up a level and then down again.</span></span> <span data-ttu-id="0de1b-154">Pogo Sticking verstößt gegen das Prinzip der sauberen Interaktion durch unnötige Klicks oder Interaktionen, um ein offensichtliches Ziel zu erreichen; in diesem Fall das Betrachten von aufgereihten, zugehörigen Inhalten.</span><span class="sxs-lookup"><span data-stu-id="0de1b-154">Pogo-sticking violates the principle of clean interaction by requiring unnecessary clicks or interactions to achieve an obvious goal—in this case, looking at related content in a series.</span></span> <span data-ttu-id="0de1b-155">(Die Ausnahme dieser Regel liegt in Such- und Durchsuchungsvorgängen, in denen Pogo Sticking möglicherweise die einzige Möglichkeit ist, für die erforderliche Vielfalt und Tiefe zu sorgen.)</span><span class="sxs-lookup"><span data-stu-id="0de1b-155">(The exception to this rule is in search and browse, where pogo-sticking may be the only way to provide the diversity and depth required.)</span></span>
+<figure class="wdg-figure">
+  ![Ein Beispiel für Pogo Sticking](images/nav/nav-pogo-sticking-1.png)
+  <figcaption> <span data-ttu-id="0de1b-157">Pogo Sticking zum Navigieren einer App – der Benutzer muss (mit dem grünen Rückwärtspfeil) auf die Hauptseite zurückkehren, um zur Registerkarte „Projekte” zu navigieren.</span><span class="sxs-lookup"><span data-stu-id="0de1b-157">Pogo-sticking to navigate through an app—the user has to go back (green back arrow)  to the main page in order to navigate to the “Projects” tab.</span></span>
+</figcaption>
+</figure> 
+<figure class="wdg-figure">
+  ![Das Problem des Pogo Stickings kann durch eine laterale Navigation mit Wischbewegungen behoben werden.](images/nav/nav-pogo-sticking-2.png)
+  <figcaption><span data-ttu-id="0de1b-159">Sie können einige Pogo Sticking-Probleme mit einem Symbol beheben (beachten Sie die Wischbewegung in Grün).</span><span class="sxs-lookup"><span data-stu-id="0de1b-159">You can resolve some pogo-sticking issues with an icon (note the swipe gesture in green).</span></span>
+</figcaption>
+</figure> 
 
 
-Betrachten Sie eine App als eine Sammlung von Seitengruppen, wobei jede Seite einen einzigartigen Satz von Inhalten oder Funktionen enthält. So besitzt eine Foto-App beispielsweise eine Seite für die Aufnahme von Fotos, eine Seite für die Bildbearbeitung und eine andere Seite für die Verwaltung Ihrer Bildbibliothek. Die Anordnung dieser Seiten in Gruppen definiert die Navigationsstruktur der App. Es gibt zwei allgemeine Methoden zum Anordnen einer Gruppe von Seiten:
+## <a name="use-the-right-structure"></a><span data-ttu-id="0de1b-160">Verwenden Sie die richtige Navigationsstruktur</span><span class="sxs-lookup"><span data-stu-id="0de1b-160">Use the right structure</span></span> 
+<span data-ttu-id="0de1b-161">Nun, da Sie mit den allgemeinen Navigationsgrundsätzen und -regeln vertraut sind, ist es Zeit, die wichtigsten Entscheidungen bezüglich der Navigation zu treffen: wie sollten Sie Ihre App strukturieren?</span><span class="sxs-lookup"><span data-stu-id="0de1b-161">Now that you're familiar with general navigation principles and rules, it's time to make the most important of all navigation decisions: how should you structure your app?</span></span> <span data-ttu-id="0de1b-162">Es gibt zwei allgemeine Strukturen: flache und hierarchische.</span><span class="sxs-lookup"><span data-stu-id="0de1b-162">There are two general structures: flat and hierarchal.</span></span> 
 
-<table class="uwpd-noborder uwpd-top-aligned-table">
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">In einer Hierarchie</th>
-<th align="left">Als Peers</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><p><img src="images/nav/nav-pages-hiearchy.png" alt="Pages arranged in a hierarchy" /></p></td>
-<td style="text-align: center;"><p><img src="images/nav/nav-pages-peer.png" alt="Pages arranged as peers" /></p></td>
-</tr>
-<tr class="even">
-<td style="vertical-align: top">Seiten sind in einer Baumstruktur organisiert. Jede untergeordnete Seite hat nur ein übergeordnetes Element. Ein übergeordnetes Element kann jedoch eine oder mehrere untergeordnete Seiten haben. Um eine untergeordnete Seite aufzurufen, durchlaufen Sie das übergeordnete Element. </td>
-<td style="vertical-align: top"> Die Seiten existieren nebeneinander. Sie können in beliebiger Reihenfolge von einer Seite zur nächsten wechseln. </td>
-</tr>
-</tbody>
-</table>
+### <a name="flatlateral"></a><span data-ttu-id="0de1b-163">Flach/lateral</span><span class="sxs-lookup"><span data-stu-id="0de1b-163">Flat/lateral</span></span>
+<span data-ttu-id="0de1b-164">In einer flachen/lateralen Struktur stehen die Seiten parallel zueinander.</span><span class="sxs-lookup"><span data-stu-id="0de1b-164">In a flat/lateral structure, pages exist side-by-side.</span></span> <span data-ttu-id="0de1b-165">Sie können in beliebiger Reihenfolge von einer Seite zur nächsten wechseln.</span><span class="sxs-lookup"><span data-stu-id="0de1b-165">You can go from on page to another in any order.</span></span> 
+<figure class="wdg-figure">
+  <img src="images/nav/nav-pages-peer.png" alt="Pages arranged in a flat structure" />
+<figcaption><span data-ttu-id="0de1b-166">In einer flachen Struktur angeordnete Seiten</span><span class="sxs-lookup"><span data-stu-id="0de1b-166">Pages arranged in a flat structure</span></span></figcaption>
+</figure> 
 
- 
+<span data-ttu-id="0de1b-167">Flache Strukturen haben viele Vorteile: sie sind einfach und übersichtlich, und durch sie können die Benutzer direkt zu einer bestimmten Seite wechseln, ohne über zwischengeschaltete Seiten navigieren zu müssen.</span><span class="sxs-lookup"><span data-stu-id="0de1b-167">Flat structures have many benefits: they're simple and they're easy to understand, and they let the user jump directly to a specific page without having to wade through intermediary pages.</span></span>  <span data-ttu-id="0de1b-168">Im Allgemeinen sind flache Strukturen gut – aber sie funktionieren nicht für jede App.</span><span class="sxs-lookup"><span data-stu-id="0de1b-168">In general, flat structures are great--but they don't work for every app.</span></span> <span data-ttu-id="0de1b-169">Wenn Ihre App viele Seiten hat, kann eine flache Liste den Benutzer verwirren.</span><span class="sxs-lookup"><span data-stu-id="0de1b-169">If your app has a lot of pages, a flat list can be overwhelming.</span></span> <span data-ttu-id="0de1b-170">Eine flache Struktur kann Seiten nicht in einer bestimmten Reihenfolge anzeigen.</span><span class="sxs-lookup"><span data-stu-id="0de1b-170">If pages need to be viewed in a particular order, a flat structure doesn't work.</span></span> 
 
-Eine typische App verwendet beide Anordnungen, wobei einige Teile als Peers und einige Teile in Hierarchien angeordnet sind.
+<span data-ttu-id="0de1b-171">Wir empfehlen die Verwendung einer flachen Struktur bei:</span><span class="sxs-lookup"><span data-stu-id="0de1b-171">We recommend using a flat structure when:</span></span> 
+<ul>
+<li><span data-ttu-id="0de1b-172">Die Seiten können in beliebiger Reihenfolge angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="0de1b-172">The pages can be viewed in any order.</span></span></li>
+<li><span data-ttu-id="0de1b-173">Die Seiten sind deutlich voneinander abgegrenzt und verfügen nicht über eine offensichtliche Beziehung zwischen über- und untergeordneten Elementen.</span><span class="sxs-lookup"><span data-stu-id="0de1b-173">The pages are clearly distinct from each other and don't have an obvious parent/child relationship.</span></span></li>
+<li><span data-ttu-id="0de1b-174">Es gibt weniger als acht Seiten in der Gruppe.</span><span class="sxs-lookup"><span data-stu-id="0de1b-174">There are fewer than 8 pages in the group.</span></span><br/>
+<span data-ttu-id="0de1b-175">Wenn eine Gruppe mehr als 7Seiten enthält, wird es für Benutzer möglicherweise schwierig, zu verstehen, inwiefern sich die Seiten unterscheiden oder welche Position sie zurzeit in der Gruppe haben.</span><span class="sxs-lookup"><span data-stu-id="0de1b-175">When there are more than 7 pages in the group, it might be difficult for users to understand how the pages are unique or to understand their current location within the group.</span></span> <span data-ttu-id="0de1b-176">Wenn Sie davon ausgehen, dass dies kein Problem für Ihre App ist, machen Sie aus den Seiten Peers.</span><span class="sxs-lookup"><span data-stu-id="0de1b-176">If you don't think that's an issue for your app, go ahead and make the pages peers.</span></span> <span data-ttu-id="0de1b-177">Ziehen Sie andernfalls eine hierarchische Struktur in Betracht, um die Seiten in zwei oder mehr kleinere Gruppen zu unterteilen.</span><span class="sxs-lookup"><span data-stu-id="0de1b-177">Otherwise, consider using a hierarchical structure to break the pages into two or more smaller groups.</span></span> <span data-ttu-id="0de1b-178">(Ein Hub-Steuerelement kann Ihnen dabei helfen, die Seiten in Kategorien zu gruppieren.)</span><span class="sxs-lookup"><span data-stu-id="0de1b-178">(A hub control can help you group pages into categories.)</span></span></li>
+</ul>
+
+
+### <a name="hierarchical"></a><span data-ttu-id="0de1b-179">Hierarchisch</span><span class="sxs-lookup"><span data-stu-id="0de1b-179">Hierarchical</span></span>
+
+<span data-ttu-id="0de1b-180">In einer hierarchischen Struktur werden Seiten in einer Baumstruktur organisiert.</span><span class="sxs-lookup"><span data-stu-id="0de1b-180">In a hierarchical structure, pages are organized into a tree-like structure.</span></span> <span data-ttu-id="0de1b-181">Jede untergeordnete Seite hat nur ein übergeordnetes Element. Ein übergeordnetes Element kann jedoch eine oder mehrere untergeordnete Seiten haben.</span><span class="sxs-lookup"><span data-stu-id="0de1b-181">Each child page has only one parent, but a parent can have one or more child pages.</span></span> <span data-ttu-id="0de1b-182">Um eine untergeordnete Seite aufzurufen, durchlaufen Sie das übergeordnete Element.</span><span class="sxs-lookup"><span data-stu-id="0de1b-182">To reach a child page, you travel through the parent.</span></span>
+
+<figure class="wdg-figure">
+  <img src="images/nav/nav-pages-hiearchy.png" alt="Pages arranged in a hierarchy" />
+<figcaption><span data-ttu-id="0de1b-183">In einer Hierarchie angeordnete Seiten</span><span class="sxs-lookup"><span data-stu-id="0de1b-183">Pages arranged in a hierarchy</span></span></figcaption>
+</figure>
+
+<span data-ttu-id="0de1b-184">Hierarchische Strukturen eignen sich für das Organisieren von komplexen Inhalten, die viele der Seiten umfassen, oder wenn Seiten in einer bestimmten Reihenfolge angezeigt werden sollen.</span><span class="sxs-lookup"><span data-stu-id="0de1b-184">Hierarchical structures are good for organizing complex content that spans lots of pages or when pages should be viewed in a particular order.</span></span> <span data-ttu-id="0de1b-185">Der Nachteil besteht darin, dass hierarchische Seiten Navigationsmehraufwand verursachen: je tiefer die Struktur, desto mehr Klicks sind für das Wechseln der Seiten erforderlich.</span><span class="sxs-lookup"><span data-stu-id="0de1b-185">The downside is that hierarchical pages introduce some navigation overhead: the deeper the structure, the more clicks it takes for users to get from page to page.</span></span> 
+
+<span data-ttu-id="0de1b-186">Wir empfehlen eine hierarchische Struktur bei:</span><span class="sxs-lookup"><span data-stu-id="0de1b-186">We recommend a hiearchical structure when:</span></span> 
+<ul>
+<li><span data-ttu-id="0de1b-187">Sie erwarten, dass der Benutzer die Seiten in einer bestimmten Reihenfolge durchlaufen wird.</span><span class="sxs-lookup"><span data-stu-id="0de1b-187">You expect the user to traverse the pages in a specific order.</span></span> <span data-ttu-id="0de1b-188">Sie ordnen die Hierarchie entsprechend an, um die Reihenfolge zu erzwingen.</span><span class="sxs-lookup"><span data-stu-id="0de1b-188">Arrange the hierarchy to enforce that order.</span></span></li>
+<li><span data-ttu-id="0de1b-189">Es gibt eine klare Beziehung zwischen einer Seite als übergeordnetem Element und den anderen Seiten in der Gruppe als untergeordneten Elementen.</span><span class="sxs-lookup"><span data-stu-id="0de1b-189">There is a clear parent-child relationship between one of the pages and the other pages in the group.</span></span></li>
+<li><span data-ttu-id="0de1b-190">In der Gruppe gibt es mehr als 7 Seiten.</span><span class="sxs-lookup"><span data-stu-id="0de1b-190">There are more than 7 pages in the group.</span></span><br/>
+<span data-ttu-id="0de1b-191">Wenn eine Gruppe mehr als 7Seiten enthält, wird es für Benutzer möglicherweise schwierig, zu verstehen, inwiefern sich die Seiten unterscheiden oder welche Position sie zurzeit in der Gruppe haben.</span><span class="sxs-lookup"><span data-stu-id="0de1b-191">When there are more than 7 pages in the group, it might be difficult for users to understand how the pages are unique or to understand their current location within the group.</span></span> <span data-ttu-id="0de1b-192">Wenn Sie davon ausgehen, dass dies kein Problem für Ihre App ist, machen Sie aus den Seiten Peers.</span><span class="sxs-lookup"><span data-stu-id="0de1b-192">If you don't think that's an issue for your app, go ahead and make the pages peers.</span></span> <span data-ttu-id="0de1b-193">Ziehen Sie andernfalls eine hierarchische Struktur in Betracht, um die Seiten in zwei oder mehr kleinere Gruppen zu unterteilen.</span><span class="sxs-lookup"><span data-stu-id="0de1b-193">Otherwise, consider using a hierarchical structure to break the pages into two or more smaller groups.</span></span> <span data-ttu-id="0de1b-194">(Ein Hub-Steuerelement kann Ihnen dabei helfen, die Seiten in Kategorien zu gruppieren.)</span><span class="sxs-lookup"><span data-stu-id="0de1b-194">(A hub control can help you group pages into categories.)</span></span></li>
+</ul>
+
+### <a name="combining-structures"></a><span data-ttu-id="0de1b-195">Kombinieren von Strukturen</span><span class="sxs-lookup"><span data-stu-id="0de1b-195">Combining structures</span></span>
+<span data-ttu-id="0de1b-196">Sie haben müssen nicht die eine oder andere Struktur wählen; viele durchdachte Apps verwenden sowohl flache als auch hierarchische Strukturen:</span><span class="sxs-lookup"><span data-stu-id="0de1b-196">You don't have choose one structure or the other; many well-design apps use both flat and hierarchical structures:</span></span>
 
 ![App mit einer Hybridstruktur](images/nav/nav-hybridstructure.png.png)
 
-Wann sollten Sie also Seiten in Hierarchien und wann als Peers anordnen? Zur Beantwortung dieser Frage müssen Sie die Anzahl der Seiten in der Gruppe berücksichtigen. Sie müssen feststellen, ob die Seiten in einer bestimmten Reihenfolge durchlaufen werden, und Sie müssen die Beziehung zwischen den Seiten ermitteln. Im Allgemeinen sind flachere Strukturen einfacher zu verstehen und schneller zu navigieren, aber manchmal ist es angemessen, eine tiefe Hierarchie zu verwenden.
+<span data-ttu-id="0de1b-198">Diese Apps verwenden flache Strukturen für Seiten auf obersten Ebenen, die in beliebiger Reihenfolge angezeigt werden können, und hierarchische Strukturen für Seiten, die komplexere Beziehungen haben.</span><span class="sxs-lookup"><span data-stu-id="0de1b-198">These apps use flat structures for top-level pages that can be viewed in any order, and hierarchical structures for pages that have more complex relationships.</span></span> 
 
-
-
-<div class="side-by-side">
-<div class="side-by-side-content">
-  <div class="side-by-side-content-left">Wir empfehlen eine hierarchische Beziehung in folgenden Fällen:
-<ul>
-<li>Sie erwarten, dass der Benutzer die Seiten in einer bestimmten Reihenfolge durchlaufen wird. Sie ordnen die Hierarchie entsprechend an, um die Reihenfolge zu erzwingen.</li>
-<li>Es gibt eine klare Beziehung zwischen einer Seite als übergeordnetem Element und den anderen Seiten in der Gruppe als untergeordneten Elementen.</li>
-<li>In der Gruppe gibt es mehr als 7 Seiten.
-<p>Wenn eine Gruppe mehr als 7 Seiten enthält, wird es für Benutzer möglicherweise schwierig, zu verstehen, inwiefern sich die Seiten unterscheiden oder welche Position sie zurzeit in der Gruppe haben. Wenn Sie davon ausgehen, dass dies kein Problem für Ihre App ist, machen Sie aus den Seiten Peers. Ziehen Sie andernfalls eine hierarchische Struktur in Betracht, um die Seiten in zwei oder mehr kleinere Gruppen zu unterteilen. (Ein Hub-Steuerelement kann Ihnen dabei helfen, die Seiten in Kategorien zu gruppieren.)</p></li>
-</ul>
-  </div>
-  <div class="side-by-side-content-right">Wir empfehlen eine hierarchische Peer-Beziehung in folgenden Fällen:
-<ul>
-<li>Die Seiten können in beliebiger Reihenfolge angezeigt werden.</li>
-<li>Die Seiten sind deutlich voneinander abgegrenzt und verfügen nicht über eine offensichtliche Beziehung zwischen über- und untergeordneten Elementen.</li>
-<li><p>Es gibt weniger als acht Seiten in der Gruppe.</p>
-<p>Wenn eine Gruppe mehr als 7 Seiten enthält, wird es für Benutzer möglicherweise schwierig, zu verstehen, inwiefern sich die Seiten unterscheiden oder welche Position sie zurzeit in der Gruppe haben. Wenn Sie davon ausgehen, dass dies kein Problem für Ihre App ist, machen Sie aus den Seiten Peers. Ziehen Sie andernfalls eine hierarchische Struktur in Betracht, um die Seiten in zwei oder mehr kleinere Gruppen zu unterteilen. (Ein Hub-Steuerelement kann Ihnen dabei helfen, die Seiten in Kategorien zu gruppieren.)</p></li>
-</ul>
-  </div>
-</div>
-</div>
- 
-
-## <a name="use-the-right-navigation-elements"></a>Verwenden der richtigen Navigationselementen
-
-
-Navigationselemente können zwei Aufgaben erfüllen: Dadurch kann der Benutzer den gewünschten Inhalt abrufen, und einige Elemente zeigen Benutzern auch an, wo sie sich in der App befinden. Allerdings benötigen diese auch Platz, den die App für Inhalte oder Steuerungselemente nutzen könnte, daher ist es wichtig, dass Sie die für Ihre App-Struktur geeigneten Navigationselemente verwenden.
-
-### <a name="peer-to-peer-navigation-elements"></a>Peer-to-Peer-Navigationselemente
-
-Peer-zu-Peer-Navigationselemente ermöglichen die Navigation zwischen Seiten auf der gleichen Ebene in der gleichen Unterstruktur.
-
-![Peer-to-Peer-Navigation](images/nav/nav-lateralmovement.png)
-
-Bei der Peer-to-Peer-Navigation empfehlen wir die Nutzung von Registerkarten oder eines Navigationsbereichs.
-
-<table>
-<thead>
-<tr class="header">
-<th align="left">Navigationselement</th>
-<th align="left">Beschreibung</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="vertical-align:top;">[Registerkarten und Pivot](../controls-and-patterns/tabs-pivot.md)
-<p><img src="images/nav/nav-tabs-sm-300.png" alt="Tab-based navigation" /></p></td>
-<td style="vertical-align:top;">Zeigt eine dauerhafte Liste mit Links zu Seiten auf derselben Ebene an.
-<p>Verwenden Sie in folgenden Fällen Registerkarten/Pivots:</p>
-<ul>
-<li><p>Es sind 2 bis 5 Seiten vorhanden.</p>
-<p>(Sie können Registerkarten/Pivots bei mehr als fünf Seiten verwenden, es kann aber schwierig sein, alle Registerkarten/Pivots auf dem Bildschirm anzuzeigen.)</p></li>
-<li>Sie erwarten, dass Benutzer häufig zwischen Seiten wechseln werden.</li>
-</ul>
-<p>Dieser Entwurf für eine App, die Restaurants findet, verwendet Registerkarten/Pivots:</p>
-<p><img src="images/food-truck-finder/uap-foodtruck-tabletphone-sbs-sm-400.png" alt="Example of an app using tabs/pivots pattern" /></p></td>
-</tr>
-<tr class="even">
-<td style="vertical-align:top;">[Navigationsbereich](../controls-and-patterns/nav-pane.md)
-<p><img src="images/nav/nav-navpane-4page-thumb.png" alt="A navigation pane" /></p></td>
-<td style="vertical-align:top;">Zeigt eine Liste mit Links zu den übergeordneten Seiten an.
-<p>Verwenden Sie in folgenden Fällen einen Navigationsbereich:</p>
-<ul>
-<li>Sie erwarten nicht, dass Benutzer häufig zwischen Seiten wechseln werden.</li>
-<li>Sie möchten Platz sparen, wobei Sie eine Verlangsamung der Navigationsvorgänge in Kauf nehmen.</li>
-<li>Die Seiten befinden sich auf der obersten Ebene.</li>
-</ul>
-<p>Dieser Entwurf einer Smart Home-App enthält einen Navigationsbereich:</p>
-<p><img src="images/smart-home/uap-smarthome-tabletphone-sbs-sm-400.png" alt="Example of an app that uses a nav pane pattern" /></p>
-<p></p></td>
-</tr>
-</tbody>
-</table>
-
- 
-
-Wenn die Navigationsstruktur über mehrere Ebenen verfügt, empfehlen wir, dass Peer-to-Peer-Navigationselemente nur mit den Peers innerhalb der aktuellen Unterstruktur verknüpft sind. Beachten Sie die folgende Abbildung, die eine Navigationsstruktur mit drei Ebenen zeigt:
+<span data-ttu-id="0de1b-199">Wenn die Navigationsstruktur über mehrere Ebenen verfügt, empfehlen wir, dass Peer-to-Peer-Navigationselemente nur mit den Peers innerhalb der aktuellen Unterstruktur verknüpft sind.</span><span class="sxs-lookup"><span data-stu-id="0de1b-199">If your navigation structure has multiple levels, we recommend that peer-to-peer navigation elements only link to the peers within their current subtree.</span></span> <span data-ttu-id="0de1b-200">Beachten Sie die folgende Abbildung, die eine Navigationsstruktur mit drei Ebenen zeigt:</span><span class="sxs-lookup"><span data-stu-id="0de1b-200">Consider the following illustration, which shows a navigation structure that has three levels:</span></span>
 
 ![App mit zwei Unterstrukturen](images/nav/nav-subtrees.png)
--   Auf Ebene 1 sollte das Peer-to-Peer-Navigationselement Zugriff auf die Seiten A, B, C und D ermöglichen.
--   Auf Ebene 2 sollten die Peer-to-Peer Navigationselemente für die A2-Seiten nur mit den anderen A2-Seiten verknüpft werden. Sie sollten nicht mit Seiten auf Ebene 2 in der C-Unterstruktur verknüpft sein.
+-   <span data-ttu-id="0de1b-202">Auf Ebene 1 sollte das Peer-to-Peer-Navigationselement Zugriff auf die Seiten A, B, C und D ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="0de1b-202">For level 1, the peer-to-peer navigation element should provide access to pages A, B, C, and D.</span></span>
+-   <span data-ttu-id="0de1b-203">Auf Ebene 2 sollten die Peer-to-Peer Navigationselemente für die A2-Seiten nur mit den anderen A2-Seiten verknüpft werden.</span><span class="sxs-lookup"><span data-stu-id="0de1b-203">At level 2, the peer-to-peer navigation elements for the A2 pages should only link to the other A2 pages.</span></span> <span data-ttu-id="0de1b-204">Sie sollten nicht mit Seiten auf Ebene 2 in der C-Unterstruktur verknüpft sein.</span><span class="sxs-lookup"><span data-stu-id="0de1b-204">They should not link to level 2 pages in the C subtree.</span></span>
 
 ![App mit zwei Unterstrukturen](images/nav/nav-subtrees2.png)
+ 
 
-### <a name="hierarchical-navigation-elements"></a>Hierarchische Navigationselemente
+## <a name="use-the-right-controls"></a><span data-ttu-id="0de1b-206">Verwenden Sie die richtigen Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="0de1b-206">Use the right controls</span></span>
 
-Hierarchische Navigationselemente ermöglichen die Navigation zwischen einer übergeordneten Seite und den untergeordneten Seiten.
+<span data-ttu-id="0de1b-207">Sobald Sie sich für eine Seitenstruktur entschieden haben, müssen Sie entscheiden, wie der Benutzer durch die Seiten navigieren soll.</span><span class="sxs-lookup"><span data-stu-id="0de1b-207">Once you've decided on a page structure, you need to decide how users navigate through those pages.</span></span> <span data-ttu-id="0de1b-208">UWP bietet eine Vielzahl von Navigationssteuerelementen, die Sie dabei unterstützen.</span><span class="sxs-lookup"><span data-stu-id="0de1b-208">UWP provides a variety of navigation controls to help you.</span></span> <span data-ttu-id="0de1b-209">Da diese Steuerelemente für alle UWP-Apps verfügbar sind, wird deren Verwendung eine konsistente und zuverlässige Navigationsfunktionalität gewährleisten.</span><span class="sxs-lookup"><span data-stu-id="0de1b-209">Because these controls are available to every UWP app, using them helps ensure a consistent and reliable navigation experience.</span></span> 
 
-![Hierarchische Navigation](images/nav/nav-verticalmovement.png)
 
 <table>
-<thead>
-<tr class="header">
-<th align="left">Navigationselement</th>
-<th align="left">Beschreibung</th>
+<tr>
+    <th><span data-ttu-id="0de1b-210">Steuerelement</span><span class="sxs-lookup"><span data-stu-id="0de1b-210">Control</span></span></th>
+    <th><span data-ttu-id="0de1b-211">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="0de1b-211">Description</span></span></th>
 </tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="vertical-align:top;">[Hub](../controls-and-patterns/hub.md)
-<p><img src="images/higsecone-hub-thumb.png" alt="Hub" /></p></td>
-<td align="left">Ein Hub ist eine spezielle Art von Navigationssteuerelement, das eine Vorschau/Übersicht der untergeordneten Seiten bereitstellt. Im Gegensatz zum Navigationsbereich oder den Registerkarten ermöglicht es die Navigation zu diesen untergeordneten Seiten über in die Seite selbst eingebettete Links und Abschnittsüberschriften.
-<p>Verwenden Sie in folgenden Fällen einen Hub:</p>
+<tr>
+    <td>[<span data-ttu-id="0de1b-212">Frame</span><span class="sxs-lookup"><span data-stu-id="0de1b-212">Frame</span></span>](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.Frame)</td>
+    <td><span data-ttu-id="0de1b-213">Mit wenigen Ausnahmen verwendet jede App mit mehrere Seiten den Frame.</span><span class="sxs-lookup"><span data-stu-id="0de1b-213">With few exceptions, any app that has multiple pages uses the frame.</span></span> <span data-ttu-id="0de1b-214">In einem typischen Szenario hat die App eine Hauptseite, die den Frame und ein primäres Navigationselement beinhaltet, z.B. ein Navigationssteuerelement.</span><span class="sxs-lookup"><span data-stu-id="0de1b-214">In a typical setup, the app has a main page that contains the frame and a primary navigation element, such as a navigation view control.</span></span> <span data-ttu-id="0de1b-215">Wählt der Benutzer eine Seite, wird sie durch den Frame geladen und angezeigt.</span><span class="sxs-lookup"><span data-stu-id="0de1b-215">When the user selects a page, the frame loads and displays it.</span></span></td>
+</tr>
+<tr>
+    <td>[<span data-ttu-id="0de1b-216">Registerkarten und Pivot</span><span class="sxs-lookup"><span data-stu-id="0de1b-216">Tabs and pivot</span></span>](../controls-and-patterns/tabs-pivot.md)<br/><br/>
+    <img src="images/nav/nav-tabs-sm-300.png" alt="Tab-based navigation" /></td>
+    <td><span data-ttu-id="0de1b-217">Zeigt eine Liste mit Links zu Seiten auf derselben Ebene an.</span><span class="sxs-lookup"><span data-stu-id="0de1b-217">Displays a list of links to pages at the same level.</span></span>
+<p><span data-ttu-id="0de1b-218">Verwenden Sie in folgenden Fällen Registerkarten/Pivots:</span><span class="sxs-lookup"><span data-stu-id="0de1b-218">Use tabs/pivots when:</span></span></p>
 <ul>
-<li>Sie gehen davon aus, dass Benutzer einen Teil des Inhalts der untergeordneten Seiten anzeigen möchten, ohne zu jeder einzeln navigieren zu müssen.</li>
-</ul>
-<p>Hubs fördern das Erkennen und Erforschen, weshalb sie ideal für Medien, Newsreader und Shopping-Apps geeignet sind.</p>
-<p></p></td>
+<li><p><span data-ttu-id="0de1b-219">Es sind 2 bis 5 Seiten vorhanden.</span><span class="sxs-lookup"><span data-stu-id="0de1b-219">There are 2-5 pages.</span></span></p>
+<p><span data-ttu-id="0de1b-220">(Sie können Registerkarten/Pivots bei mehr als fünf Seiten verwenden, es kann aber schwierig sein, alle Registerkarten/Pivots auf dem Bildschirm anzuzeigen.)</span><span class="sxs-lookup"><span data-stu-id="0de1b-220">(You can use tabs/pivots when there are more than 5 pages, but it might be difficult to fit all the tabs/pivots on the screen.)</span></span></p></li>
+<li><span data-ttu-id="0de1b-221">Sie erwarten, dass Benutzer häufig zwischen Seiten wechseln werden.</span><span class="sxs-lookup"><span data-stu-id="0de1b-221">You expect users to switch between pages frequently.</span></span></li>
+</ul></td>
 </tr>
-
-<tr class="even">
-<td style="vertical-align:top;">[Master/Details](../controls-and-patterns/master-details.md)
-<p><img src="images/higsecone-masterdetail-thumb.png" alt="Master/details" /></p></td>
-<td align="left">Zeigt eine Liste (Masteransicht) der Elementübersichten an. Durch Auswahl eines Elements wird die entsprechende Elementseite im Detailbereich angezeigt.
-<p>Verwenden Sie in folgenden Fällen das Master/Details-Element:</p>
+<tr>
+    <td>[<span data-ttu-id="0de1b-222">Navigationsansicht</span><span class="sxs-lookup"><span data-stu-id="0de1b-222">Nav view</span></span>](../controls-and-patterns/navigationview.md)<br/><br/>
+    <img src="images/nav/nav-navpane-4page-thumb.png" alt="A navigation pane" /></td>
+    <td><span data-ttu-id="0de1b-223">Zeigt eine Liste mit Links zu den übergeordneten Seiten an.</span><span class="sxs-lookup"><span data-stu-id="0de1b-223">Displays a list of links to top-level pages.</span></span>
+<p><span data-ttu-id="0de1b-224">Verwenden Sie in folgenden Fällen einen Navigationsbereich:</span><span class="sxs-lookup"><span data-stu-id="0de1b-224">Use a navigation pane when:</span></span></p>
 <ul>
-<li>Sie erwarten, dass Benutzer häufig zwischen untergeordneten Elementen wechseln werden.</li>
-<li>Sie möchten es dem Benutzer ermöglichen, Vorgänge auf hoher Ebene, z. B. Löschen oder Sortieren, für einzelne Elemente oder Gruppen von Elementen durchzuführen, und Sie möchten es dem Benutzer ermöglichen, Details für jedes Element anzuzeigen oder zu aktualisieren.</li>
+<li><span data-ttu-id="0de1b-225">Sie erwarten nicht, dass Benutzer häufig zwischen Seiten wechseln werden.</span><span class="sxs-lookup"><span data-stu-id="0de1b-225">You don't expect users to switch between pages frequently.</span></span></li>
+<li><span data-ttu-id="0de1b-226">Sie möchten Platz sparen, wobei Sie eine Verlangsamung der Navigationsvorgänge in Kauf nehmen.</span><span class="sxs-lookup"><span data-stu-id="0de1b-226">You want to conserve space at the expense of slowing down navigation operations.</span></span></li>
+<li><span data-ttu-id="0de1b-227">Die Seiten befinden sich auf der obersten Ebene.</span><span class="sxs-lookup"><span data-stu-id="0de1b-227">The pages exist at the top level.</span></span></li>
+</ul></td>
+</tr>
+<tr>
+<td>[<span data-ttu-id="0de1b-228">Master/Details</span><span class="sxs-lookup"><span data-stu-id="0de1b-228">Master/details</span></span>](../controls-and-patterns/master-details.md)<br/><br/>
+<img src="images/higsecone-masterdetail-thumb.png" alt="Master/details" /></td>
+<td><span data-ttu-id="0de1b-229">Zeigt eine Liste (Masteransicht) der Elementübersichten an.</span><span class="sxs-lookup"><span data-stu-id="0de1b-229">Displays a list (master view) of item summaries.</span></span> <span data-ttu-id="0de1b-230">Durch Auswahl eines Elements wird die entsprechende Elementseite im Detailbereich angezeigt.</span><span class="sxs-lookup"><span data-stu-id="0de1b-230">Selecting an item displays its corresponding items page in the details section.</span></span>
+<p><span data-ttu-id="0de1b-231">Verwenden Sie in folgenden Fällen das Master/Details-Element:</span><span class="sxs-lookup"><span data-stu-id="0de1b-231">Use the Master/details element when:</span></span></p>
+<ul>
+<li><span data-ttu-id="0de1b-232">Sie erwarten, dass Benutzer häufig zwischen untergeordneten Elementen wechseln werden.</span><span class="sxs-lookup"><span data-stu-id="0de1b-232">You expect users to switch between child items frequently.</span></span></li>
+<li><span data-ttu-id="0de1b-233">Sie möchten es dem Benutzer ermöglichen, Vorgänge auf hoher Ebene, z. B. Löschen oder Sortieren, für einzelne Elemente oder Gruppen von Elementen durchzuführen, und Sie möchten es dem Benutzer ermöglichen, Details für jedes Element anzuzeigen oder zu aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="0de1b-233">You want to enable the user to perform high-level operations, such as deleting or sorting, on individual items or groups of items, and also want to enable the user to view or update the details for each item.</span></span></li>
 </ul>
-<p>Master/Details-Elemente eignen sich gut für E-Mail-Posteingänge, Kontaktlisten und die Dateneingabe.</p>
-<p>Dieser Entwurf für eine Aktien-App verwendet ein Master/Details-Muster:</p>
-<p><img src="images/stock-tracker/uap-finance-tabletphone-sbs-sm.png" alt="Example of a stock trading app that has a master/details pattern" /></p></td>
+<p><span data-ttu-id="0de1b-234">Master/Details-Elemente eignen sich gut für E-Mail-Posteingänge, Kontaktlisten und die Dateneingabe.</span><span class="sxs-lookup"><span data-stu-id="0de1b-234">Master/details elements are well suited for email inboxes, contact lists, and data entry.</span></span></p>
+</td>
 </tr>
-</tbody>
-</table>
-
- 
-
-### <a name="historical-navigation-elements"></a>Historische Navigationselemente
-
-<table>
-<thead>
-<tr class="header">
-<th align="left">Navigationselement</th>
-<th align="left">Beschreibung</th>
+<tr>
+<td s>[<span data-ttu-id="0de1b-235">Zurück</span><span class="sxs-lookup"><span data-stu-id="0de1b-235">Back</span></span>](navigation-history-and-backwards-navigation.md)</td>
+<td style="vertical-align:top;"><span data-ttu-id="0de1b-236">Der Benutzer kann den Navigationsverlauf innerhalb einer App und, abhängig vom Gerät, von App zu App zurückverfolgen.</span><span class="sxs-lookup"><span data-stu-id="0de1b-236">Lets the user traverse the navigation history within an app and, depending on the device, from app to app.</span></span> <span data-ttu-id="0de1b-237">Weitere Informationen finden Sie im Artikel [Navigationsverlauf und Rückwärtsnavigation](navigation-history-and-backwards-navigation.md).</span><span class="sxs-lookup"><span data-stu-id="0de1b-237">For more info, see the [Navigation history and backwards navigation article](navigation-history-and-backwards-navigation.md).</span></span></td>
 </tr>
-</thead>
-<tbody>
 <tr class="odd">
-<td style="vertical-align:top;">[Zurück](navigation-history-and-backwards-navigation.md)</td>
-<td style="vertical-align:top;">Der Benutzer kann den Navigationsverlauf innerhalb einer App und, abhängig vom Gerät, von App zu App zurückverfolgen. Weitere Informationen finden Sie im Artikel [Navigationsverlauf und Rückwärtsnavigation](navigation-history-and-backwards-navigation.md).</td>
+<td><span data-ttu-id="0de1b-238">Hyperlinks und Schaltflächen</span><span class="sxs-lookup"><span data-stu-id="0de1b-238">Hyperlinks and buttons</span></span></td>
+<td><span data-ttu-id="0de1b-239">Im Inhalt eingebettete Navigationselemente werden im Inhalt einer Seite angezeigt.</span><span class="sxs-lookup"><span data-stu-id="0de1b-239">Content-embedded navigation elements appear in a page's content.</span></span> <span data-ttu-id="0de1b-240">Im Gegensatz zu anderen Navigationselementen, die für alle Gruppen oder Unterstrukturen der Seite konsistent sein sollten, sind im Inhalt eingebettete Navigationselemente auf jeder Seite einzigartig.</span><span class="sxs-lookup"><span data-stu-id="0de1b-240">Unlike other navigation elements, which should be consistent across the page's group or subtree, content-embedded navigation elements are unique from page to page.</span></span></td>
 </tr>
-</tbody>
 </table>
 
- 
-
-### <a name="content-level-navigation-elements"></a>Navigationselemente auf Inhaltsebene
-
-<table>
-<thead>
-<tr class="header">
-<th align="left">Navigationselement</th>
-<th align="left">Beschreibung</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="vertical-align:top;">Hyperlinks und Schaltflächen</td>
-<td style="vertical-align:top;">Im Inhalt eingebettete Navigationselemente werden im Inhalt einer Seite angezeigt. Im Gegensatz zu anderen Navigationselementen, die für alle Gruppen oder Unterstrukturen der Seite konsistent sein sollten, sind im Inhalt eingebettete Navigationselemente auf jeder Seite einzigartig.</td>
-</tr>
-</tbody>
-</table>
-
- 
-
-### <a name="combining-navigation-elements"></a>Kombinieren von Navigationselementen
-
-Sie können Navigationselemente kombinieren, um eine für Ihre App geeignete Navigationserfahrung zu erstellen. Ihre App kann beispielsweise einen Navigationsbereich verwenden, um auf Seiten auf oberster Ebene und Registerkarten auf Seiten der zweiten Ebene zuzugreifen.
+## <a name="next-add-navigation-code-to-your-app"></a><span data-ttu-id="0de1b-241">Nächster Schritt: Hinzufügen von Navigationscode zu Ihrer App</span><span class="sxs-lookup"><span data-stu-id="0de1b-241">Next: Add navigation code to your app</span></span>
+<span data-ttu-id="0de1b-242">Im nächsten Artikel, [Implementierung grundlegender Navigation,](navigate-between-two-pages.md), erfahren Sie den XAML und Code, die für die Verwendung von Frame-Steuerelementen zur Bereitstellung einer grundlegenden Navigation in Ihrer App erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="0de1b-242">The next article, [Implement basic navigation](navigate-between-two-pages.md), shows the XAML and code required to use a Frame control to enable basic navigation in your app.</span></span> 
 
 
-
-
-
-
- 
+<!--
+## History and the back button
+UWP provides a back button and a system for traversing the user's navigation hsitory within an app. This system does most of the work for you, but there are a few APIs you need to call so that it works properly. For more info and instructions, see [History and backwards navigation](navigation-history-and-backwards-navigation.md). 
+-->
 
 
 

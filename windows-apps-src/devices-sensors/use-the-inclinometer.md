@@ -1,48 +1,52 @@
 ---
-author: DBirtolo
+author: mukin
 ms.assetid: 16AD53CA-1252-456C-8567-2263D3EC95F3
 title: Verwenden des Neigungsmessers
 description: "Hier erfahren Sie, wie Sie mithilfe des Neigungsmessers Werte für Stampf-, Roll- und Gierwinkel ermitteln."
-ms.author: dbirtolo
-ms.date: 02/08/2017
+ms.author: mukin
+ms.date: 06/06/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b8ebfaf4c294fccf61534203bce0326f9dbec977
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: b0fcc9e45d1a9e1921e77ce8b59817a5ca1c0dd2
+ms.sourcegitcommit: ca060f051e696da2c1e26e9dd4d2da3fa030103d
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/03/2017
 ---
-# <a name="use-the-inclinometer"></a>Verwenden des Neigungsmessers
+# <a name="use-the-inclinometer"></a><span data-ttu-id="5af62-104">Verwenden des Neigungsmessers</span><span class="sxs-lookup"><span data-stu-id="5af62-104">Use the inclinometer</span></span>
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+<span data-ttu-id="5af62-105">\[ Aktualisiert für UWP-Apps unter Windows10.</span><span class="sxs-lookup"><span data-stu-id="5af62-105">\[ Updated for UWP apps on Windows 10.</span></span> <span data-ttu-id="5af62-106">Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span><span class="sxs-lookup"><span data-stu-id="5af62-106">For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span></span>
 
-**Wichtige APIs**
+**<span data-ttu-id="5af62-107">Wichtige APIs</span><span class="sxs-lookup"><span data-stu-id="5af62-107">Important APIs</span></span>**
 
--   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
--   [**Neigungsmesser**](https://msdn.microsoft.com/library/windows/apps/BR225766)
+-   [**<span data-ttu-id="5af62-108">Windows.Devices.Sensors</span><span class="sxs-lookup"><span data-stu-id="5af62-108">Windows.Devices.Sensors</span></span>**](https://msdn.microsoft.com/library/windows/apps/BR206408)
+-   [**<span data-ttu-id="5af62-109">Neigungsmesser</span><span class="sxs-lookup"><span data-stu-id="5af62-109">Inclinometer</span></span>**](https://msdn.microsoft.com/library/windows/apps/BR225766)
 
-Hier erfahren Sie, wie Sie mithilfe des Neigungsmessers Werte für Nick-, Roll- und Gierwinkel ermitteln.
+**<span data-ttu-id="5af62-110">Beispiel</span><span class="sxs-lookup"><span data-stu-id="5af62-110">Sample</span></span>**
 
-Bei einigen 3D-Spielen wird ein Neigungsmesser als Eingabegerät benötigt. Ein gängiges Beispiel hierfür ist ein Flugsimulator, der die drei Achsen des Neigungsmessers (X, Y und Z) dem Höhenleitwerk sowie dem Quer- und Seitenruder eines Flugzeugs zuordnet.
+-   <span data-ttu-id="5af62-111">Eine umfassendere Implementierung finden Sie unter [Beispiel für einen Neigungsmesser](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Inclinometer).</span><span class="sxs-lookup"><span data-stu-id="5af62-111">For a more complete implementation, see the [inclinometer sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Inclinometer).</span></span>
 
- ## <a name="prerequisites"></a>Voraussetzungen
+<span data-ttu-id="5af62-112">Hier erfahren Sie, wie Sie mithilfe des Neigungsmessers Werte für Gier-, Roll- und Nickwinkel ermitteln.</span><span class="sxs-lookup"><span data-stu-id="5af62-112">Learn how to use the inclinometer to determine pitch, roll, and yaw.</span></span>
 
-Sie sollten mit XAML (Extensible Application Markup Language), Microsoft Visual C# und Ereignissen vertraut sein.
+<span data-ttu-id="5af62-113">Bei einigen 3D-Spielen wird ein Neigungsmesser als Eingabegerät benötigt.</span><span class="sxs-lookup"><span data-stu-id="5af62-113">Some 3-D games require an inclinometer as an input device.</span></span> <span data-ttu-id="5af62-114">Ein gängiges Beispiel hierfür ist ein Flugsimulator, der die drei Achsen des Neigungsmessers (X, Y und Z) dem Höhenleitwerk sowie dem Quer- und Seitenruder eines Flugzeugs zuordnet.</span><span class="sxs-lookup"><span data-stu-id="5af62-114">One common example is the flight simulator, which maps the three axes of the inclinometer (X, Y, and Z) to the elevator, aileron, and rudder inputs of the aircraft.</span></span>
 
-Das verwendete Gerät oder der Emulator muss einen Neigungsmesser unterstützen.
+ ## <a name="prerequisites"></a><span data-ttu-id="5af62-115">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="5af62-115">Prerequisites</span></span>
 
- ## <a name="create-a-simple-inclinometer-app"></a>Erstellen einer einfachen Neigungsmesser-App
+<span data-ttu-id="5af62-116">Sie sollten mit XAML (Extensible Application Markup Language), Microsoft VisualC# und Ereignissen vertraut sein.</span><span class="sxs-lookup"><span data-stu-id="5af62-116">You should be familiar with Extensible Application Markup Language (XAML), Microsoft Visual C#, and events.</span></span>
 
-Dieser Abschnitt ist in zwei Unterabschnitte unterteilt: Der erste Unterabschnitt enthält die Schritte zum Erstellen einer einfachen Neigungsmesseranwendung. Im zweiten Unterabschnitt wird die erstellte App dann näher erläutert.
+<span data-ttu-id="5af62-117">Das verwendete Gerät oder der Emulator muss einen Neigungsmesser unterstützen.</span><span class="sxs-lookup"><span data-stu-id="5af62-117">The device or emulator that you're using must support a inclinometer.</span></span>
 
-###  <a name="instructions"></a>Anweisungen
+ ## <a name="create-a-simple-inclinometer-app"></a><span data-ttu-id="5af62-118">Erstellen einer einfachen Neigungsmesser-App</span><span class="sxs-lookup"><span data-stu-id="5af62-118">Create a simple inclinometer app</span></span>
 
--   Erstellen Sie ein neues Projekt. Wählen Sie dabei unter den Projektvorlagen für **Visual C#** die Option **Leere App (Universelle Windows-App)** aus.
+<span data-ttu-id="5af62-119">Dieser Abschnitt ist in zwei Unterabschnitte unterteilt:</span><span class="sxs-lookup"><span data-stu-id="5af62-119">This section is divided into two subsections.</span></span> <span data-ttu-id="5af62-120">Der erste Unterabschnitt enthält die Schritte zum Erstellen einer einfachen Neigungsmesseranwendung.</span><span class="sxs-lookup"><span data-stu-id="5af62-120">The first subsection will take you through the steps necessary to create a simple inclinometer application from scratch.</span></span> <span data-ttu-id="5af62-121">Im zweiten Unterabschnitt wird die erstellte App dann näher erläutert.</span><span class="sxs-lookup"><span data-stu-id="5af62-121">The following subsection explains the app you have just created.</span></span>
 
--   Öffnen Sie die Projektdatei „MainPage.xaml.cs“, und ersetzen Sie den vorhandenen Code durch den folgenden Code.
+###  <a name="instructions"></a><span data-ttu-id="5af62-122">Anweisungen</span><span class="sxs-lookup"><span data-stu-id="5af62-122">Instructions</span></span>
+
+-   <span data-ttu-id="5af62-123">Erstellen Sie ein neues Projekt. Wählen Sie dabei unter den Projektvorlagen für **VisualC#** die Option **Leere App (Universelle Windows-App)** aus.</span><span class="sxs-lookup"><span data-stu-id="5af62-123">Create a new project, choosing a **Blank App (Universal Windows)** from the **Visual C#** project templates.</span></span>
+
+-   <span data-ttu-id="5af62-124">Öffnen Sie die Projektdatei „MainPage.xaml.cs“, und ersetzen Sie den vorhandenen Code durch den folgenden Code.</span><span class="sxs-lookup"><span data-stu-id="5af62-124">Open your project's MainPage.xaml.cs file and replace the existing code with the following.</span></span>
 
 ```csharp
     using System;
@@ -107,9 +111,9 @@ Dieser Abschnitt ist in zwei Unterabschnitte unterteilt: Der erste Unterabschnit
     }
 ```
 
-Sie müssen den Namespace im vorhergehenden Codeausschnitt durch den Namen ersetzen, den Sie für Ihr Projekt angegeben haben. Wenn Sie z. B. ein Projekt mit dem Namen **InclinometerCS** erstellt haben, ersetzen Sie `namespace App1` durch `namespace InclinometerCS`.
+<span data-ttu-id="5af62-125">Sie müssen den Namespace im vorhergehenden Codeausschnitt durch den Namen ersetzen, den Sie für Ihr Projekt angegeben haben.</span><span class="sxs-lookup"><span data-stu-id="5af62-125">You'll need to rename the namespace in the previous snippet with the name you gave your project.</span></span> <span data-ttu-id="5af62-126">Wenn Sie z.B. ein Projekt mit dem Namen **InclinometerCS** erstellt haben, ersetzen Sie `namespace App1` durch `namespace InclinometerCS`.</span><span class="sxs-lookup"><span data-stu-id="5af62-126">For example, if you created a project named **InclinometerCS**, you'd replace `namespace App1` with `namespace InclinometerCS`.</span></span>
 
--   Öffnen Sie die Datei „MainPage.xaml“, und ersetzen Sie den ursprünglichen Inhalt durch den folgenden XML-Code.
+-   <span data-ttu-id="5af62-127">Öffnen Sie die Datei „MainPage.xaml“, und ersetzen Sie den ursprünglichen Inhalt durch den folgenden XML-Code.</span><span class="sxs-lookup"><span data-stu-id="5af62-127">Open the file MainPage.xaml and replace the original contents with the following XML.</span></span>
 
 ```xml
         <Page
@@ -133,25 +137,25 @@ Sie müssen den Namespace im vorhergehenden Codeausschnitt durch den Namen erset
     </Page>
 ```
 
-Sie müssen den ersten Teil des Klassennamens im vorhergehenden Codeausschnitt durch den Namespace Ihrer App ersetzen. Wenn Sie z. B. ein Projekt mit dem Namen **InclinometerCS** erstellt haben, ersetzen Sie `x:Class="App1.MainPage"` durch `x:Class="InclinometerCS.MainPage"`. Ersetzen Sie außerdem `xmlns:local="using:App1"` durch `xmlns:local="using:InclinometerCS"`.
+<span data-ttu-id="5af62-128">Sie müssen den ersten Teil des Klassennamens im vorhergehenden Codeausschnitt durch den Namespace Ihrer App ersetzen.</span><span class="sxs-lookup"><span data-stu-id="5af62-128">You'll need to replace the first part of the class name in the previous snippet with the namespace of your app.</span></span> <span data-ttu-id="5af62-129">Wenn Sie z.B. ein Projekt mit dem Namen **InclinometerCS** erstellt haben, ersetzen Sie `x:Class="App1.MainPage"` durch `x:Class="InclinometerCS.MainPage"`.</span><span class="sxs-lookup"><span data-stu-id="5af62-129">For example, if you created a project named **InclinometerCS**, you'd replace `x:Class="App1.MainPage"` with `x:Class="InclinometerCS.MainPage"`.</span></span> <span data-ttu-id="5af62-130">Ersetzen Sie außerdem `xmlns:local="using:App1"` durch `xmlns:local="using:InclinometerCS"`.</span><span class="sxs-lookup"><span data-stu-id="5af62-130">You should also replace `xmlns:local="using:App1"` with `xmlns:local="using:InclinometerCS"`.</span></span>
 
--   Drücken Sie F5 oder wählen Sie **Debuggen** > **Debugging starten** aus, um die App zu erstellen, bereitzustellen und auszuführen.
+-   <span data-ttu-id="5af62-131">Drücken Sie F5 oder wählen Sie **Debuggen** > **Debugging starten** aus, um die App zu erstellen, bereitzustellen und auszuführen.</span><span class="sxs-lookup"><span data-stu-id="5af62-131">Press F5 or select **Debug** > **Start Debugging** to build, deploy, and run the app.</span></span>
 
-Wenn die App ausgeführt wird, können Sie die Neigungsmesserwerte ändern, indem Sie das Gerät bewegen oder die Emulatortools verwenden.
+<span data-ttu-id="5af62-132">Wenn die App ausgeführt wird, können Sie die Neigungsmesserwerte ändern, indem Sie das Gerät bewegen oder die Emulatortools verwenden.</span><span class="sxs-lookup"><span data-stu-id="5af62-132">Once the app is running, you can change the inclinometer values by moving the device or using the emulator tools.</span></span>
 
--   Beenden Sie die App, indem Sie zu Visual Studio zurückkehren und UMSCHALT+F5 drücken oder **Debuggen** > **Debugging beenden** auswählen.
+-   <span data-ttu-id="5af62-133">Beenden Sie die App, indem Sie zu Visual Studio zurückkehren und UMSCHALT+F5 drücken oder **Debuggen** > **Debugging beenden** auswählen.</span><span class="sxs-lookup"><span data-stu-id="5af62-133">Stop the app by returning to Visual Studio and pressing Shift+F5 or select **Debug** > **Stop Debugging** to stop the app.</span></span>
 
-###  <a name="explanation"></a>Erläuterung
+###  <a name="explanation"></a><span data-ttu-id="5af62-134">Erläuterung</span><span class="sxs-lookup"><span data-stu-id="5af62-134">Explanation</span></span>
 
-Das vorherige Beispiel zeigt, wie wenig Code Sie schreiben müssen, um Neigungsmessereingaben in Ihre App zu integrieren.
+<span data-ttu-id="5af62-135">Das vorherige Beispiel zeigt, wie wenig Code Sie schreiben müssen, um Neigungsmessereingaben in Ihre App zu integrieren.</span><span class="sxs-lookup"><span data-stu-id="5af62-135">The previous example demonstrates how little code you'll need to write in order to integrate inclinometer input in your app.</span></span>
 
-Die App stellt eine Verbindung mit dem Standardneigungsmesser in der **MainPage**-Methode her.
+<span data-ttu-id="5af62-136">Die App stellt eine Verbindung mit dem Standardneigungsmesser in der **MainPage**-Methode her.</span><span class="sxs-lookup"><span data-stu-id="5af62-136">The app establishes a connection with the default inclinometer in the **MainPage** method.</span></span>
 
 ```csharp
 _inclinometer = Inclinometer.GetDefault();
 ```
 
-Die App legt das Berichtsintervall in der **MainPage**-Methode fest. Mit diesem Code wird das vom Gerät unterstützte Mindestintervall abgerufen und mit einem angeforderten Intervall von 16 Millisekunden verglichen (entspricht etwa einer Aktualisierungsrate von 60 Hz). Wenn das unterstützte Mindestintervall größer als das angeforderte Intervall ist, legt der Code den Wert auf das Minimum fest. Andernfalls wird der Wert auf das angeforderte Intervall festgelegt.
+<span data-ttu-id="5af62-137">Die App legt das Berichtsintervall in der **MainPage**-Methode fest.</span><span class="sxs-lookup"><span data-stu-id="5af62-137">The app establishes the report interval within the **MainPage** method.</span></span> <span data-ttu-id="5af62-138">Mit diesem Code wird das vom Gerät unterstützte Mindestintervall abgerufen und mit einem angeforderten Intervall von 16 Millisekunden verglichen (entspricht etwa einer Aktualisierungsrate von 60Hz).</span><span class="sxs-lookup"><span data-stu-id="5af62-138">This code retrieves the minimum interval supported by the device and compares it to a requested interval of 16 milliseconds (which approximates a 60-Hz refresh rate).</span></span> <span data-ttu-id="5af62-139">Wenn das unterstützte Mindestintervall größer als das angeforderte Intervall ist, legt der Code den Wert auf das Minimum fest.</span><span class="sxs-lookup"><span data-stu-id="5af62-139">If the minimum supported interval is greater than the requested interval, the code sets the value to the minimum.</span></span> <span data-ttu-id="5af62-140">Andernfalls wird der Wert auf das angeforderte Intervall festgelegt.</span><span class="sxs-lookup"><span data-stu-id="5af62-140">Otherwise, it sets the value to the requested interval.</span></span>
 
 ```csharp
 uint minReportInterval = _inclinometer.MinimumReportInterval;
@@ -159,14 +163,14 @@ uint reportInterval = minReportInterval > 16 ? minReportInterval : 16;
 _inclinometer.ReportInterval = reportInterval;
 ```
 
-Die neuen Neigungsmesserdaten werden in der **ReadingChanged**-Methode erfasst. Wenn der Sensortreiber neue Daten vom Sensor empfängt, übergibt er die Werte mithilfe dieses Ereignishandlers an Ihre App. Die App registriert diesen Ereignishandler in der folgenden Zeile.
+<span data-ttu-id="5af62-141">Die neuen Neigungsmesserdaten werden in der **ReadingChanged**-Methode erfasst.</span><span class="sxs-lookup"><span data-stu-id="5af62-141">The new inclinometer data is captured in the **ReadingChanged** method.</span></span> <span data-ttu-id="5af62-142">Wenn der Sensortreiber neue Daten vom Sensor empfängt, übergibt er die Werte mithilfe dieses Ereignishandlers an Ihre App.</span><span class="sxs-lookup"><span data-stu-id="5af62-142">Each time the sensor driver receives new data from the sensor, it passes the values to your app using this event handler.</span></span> <span data-ttu-id="5af62-143">Die App registriert diesen Ereignishandler in der folgenden Zeile.</span><span class="sxs-lookup"><span data-stu-id="5af62-143">The app registers this event handler on the following line.</span></span>
 
 ```csharp
 _inclinometer.ReadingChanged += new TypedEventHandler<Inclinometer,
 InclinometerReadingChangedEventArgs>(ReadingChanged);
 ```
 
-Die neuen Werte werden in die TextBlock-Elemente des XAML-Projektcodes geschrieben.
+<span data-ttu-id="5af62-144">Die neuen Werte werden in die TextBlock-Elemente des XAML-Projektcodes geschrieben.</span><span class="sxs-lookup"><span data-stu-id="5af62-144">These new values are written to the TextBlocks found in the project's XAML.</span></span>
 
 ```xml
 <TextBlock HorizontalAlignment="Left" Height="21" Margin="0,8,0,0" TextWrapping="Wrap" Text="Pitch: " VerticalAlignment="Top" Width="45" Foreground="#FFF9F4F4"/>
@@ -176,8 +180,4 @@ Die neuen Werte werden in die TextBlock-Elemente des XAML-Projektcodes geschrieb
  <TextBlock HorizontalAlignment="Left" Height="19" Margin="0,56,0,0" TextWrapping="Wrap" Text="Yaw:" VerticalAlignment="Top" Width="55" Foreground="#FFF7F3F3"/>
  <TextBlock x:Name="txtYaw" HorizontalAlignment="Left" Height="19" Margin="55,56,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="54" Foreground="#FFF6F2F2"/>
 ```
-
- ## <a name="related-topics"></a>Verwandte Themen
-
-* [Neigungsmesserbeispiel](http://go.microsoft.com/fwlink/p/?linkid=241380)
 

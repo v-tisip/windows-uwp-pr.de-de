@@ -9,32 +9,31 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c9c359fd424b4c9526ebfc610adc7097bb83cbda
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 3d36708b5b11a089ffa126b760f0990f2da39e38
+ms.sourcegitcommit: f6dd9568eafa10ee5cb2b849c0d82d84a1c5fb93
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/02/2017
 ---
-
-# <a name="launch-the-windows-maps-app"></a>Starten der Windows-Karten-App
-
-
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+# <a name="launch-the-windows-maps-app"></a><span data-ttu-id="be80a-104">Starten der Windows-Karten-App</span><span class="sxs-lookup"><span data-stu-id="be80a-104">Launch the Windows Maps app</span></span>
 
 
-Erfahren Sie, wie Sie die Windows-Karten-App aus Ihrer App starten können. In diesem Thema werden die **bingmaps:, ms-drive-to:, ms-walk-to:** und **ms-settings:** -Uniform Resource Identifier (URI)-Schemas erläutert. Verwenden Sie diese URI-Schemas zum Starten der Windows-Karten-App für bestimmte Karten, Wegbeschreibungen und Suchergebnisse oder um über die Einstellungs-App Offlinekarten für Windows-Karten herunterzuladen.
+<span data-ttu-id="be80a-105">\[ Aktualisiert für UWP-Apps unter Windows 10.</span><span class="sxs-lookup"><span data-stu-id="be80a-105">\[ Updated for UWP apps on Windows 10.</span></span> <span data-ttu-id="be80a-106">Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span><span class="sxs-lookup"><span data-stu-id="be80a-106">For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span></span>
 
-**Tipp** Um mehr über das Starten der Windows-Karten-App aus Ihrer App zu erfahren, laden Sie das [Kartenbeispiel für die Universelle Windows-Plattform (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977) aus dem Repository [Beispiele für universelle Windows-Plattform](http://go.microsoft.com/fwlink/p/?LinkId=619979) auf GitHub herunter.
 
-## <a name="introducing-uris"></a>Einführung in URIs
+<span data-ttu-id="be80a-107">Erfahren Sie, wie Sie die Windows-Karten-App aus Ihrer App starten können.</span><span class="sxs-lookup"><span data-stu-id="be80a-107">Learn how to launch the Windows Maps app from your app.</span></span> <span data-ttu-id="be80a-108">In diesem Kapitel werden die URI-(Uniform Resource Identifier)-Schemas **bingmaps:, *ms-drive-to:, ms-walk-to:** und **ms-settings:** erläutert.</span><span class="sxs-lookup"><span data-stu-id="be80a-108">This topic describes the **bingmaps:, *ms-drive-to:, ms-walk-to:** and **ms-settings:** Uniform Resource Identifier (URI) schemes.</span></span> <span data-ttu-id="be80a-109">Verwenden Sie diese URI-Schemas zum Starten der Windows-Karten-App für bestimmte Karten, Wegbeschreibungen und Suchergebnisse oder um über die Einstellungs-App Offlinekarten für Windows-Karten herunterzuladen.</span><span class="sxs-lookup"><span data-stu-id="be80a-109">Use these URI schemes to launch the Windows Maps app to specific maps, directions, and search results or to download Windows Maps offline maps from the Settings app.</span></span>
 
-Mit URI-Schemas können Sie Apps öffnen, indem Sie auf Hyperlinks klicken (oder programmgesteuert in Ihrer App). Ebenso wie Sie eine neue E-Mail mithilfe von **mailto:** starten oder einen Webbrowser mithilfe von **http:**verwenden können, haben Sie auch die Möglichkeit, die Windows-Karten-App mithilfe von **bingmaps:**, **ms-drive-to:** und **ms-walk-to:** zu öffnen.
+<span data-ttu-id="be80a-110">**Tipp** Um mehr über das Starten der Windows-Karten-App aus Ihrer App zu erfahren, laden Sie das [Kartenbeispiel für die Universelle Windows-Plattform (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977) aus dem Repository [Beispiele für universelle Windows-Plattform](http://go.microsoft.com/fwlink/p/?LinkId=619979) auf GitHub herunter.</span><span class="sxs-lookup"><span data-stu-id="be80a-110">**Tip** To learn more about launching the Windows Maps app from your app, download the [Universal Windows Platform (UWP) map sample](http://go.microsoft.com/fwlink/p/?LinkId=619977) from the [Windows-universal-samples repo](http://go.microsoft.com/fwlink/p/?LinkId=619979) on GitHub.</span></span>
 
--   Der **bingmaps:**-URI stellt Karten für Standorte, Suchergebnisse, Wegbeschreibungen und Datenverkehr bereit.
--   Der **ms-drive-to:**-URI stellt detaillierte Fahrtwegbeschreibungen von Ihrem aktuellen Standort bereit.
--   Der **ms-walk-to:**-URI stellt detaillierte Fußwegbeschreibungen von Ihrem aktuellen Standort bereit.
+## <a name="introducing-uris"></a><span data-ttu-id="be80a-111">Einführung in URIs</span><span class="sxs-lookup"><span data-stu-id="be80a-111">Introducing URIs</span></span>
 
-Der folgende URI startet beispielsweise die Windows-Karten-App und zeigt eine über New York City zentrierte Karte an.
+<span data-ttu-id="be80a-112">Mit URI-Schemas können Sie Apps öffnen, indem Sie auf Hyperlinks klicken (oder programmgesteuert in Ihrer App).</span><span class="sxs-lookup"><span data-stu-id="be80a-112">URI schemes let you open apps by clicking hyperlinks (or programmatically, in your app).</span></span> <span data-ttu-id="be80a-113">Ebenso wie Sie eine neue E-Mail mithilfe von **mailto:** starten oder einen Webbrowser mithilfe von **http:**verwenden können, haben Sie auch die Möglichkeit, die Windows-Karten-App mithilfe von **bingmaps:**, **ms-drive-to:** und **ms-walk-to:** zu öffnen.</span><span class="sxs-lookup"><span data-stu-id="be80a-113">Just as you can start a new email using **mailto:** or open a web browser using **http:**, you can open the Windows maps app using **bingmaps:**, **ms-drive-to:**, and **ms-walk-to:**.</span></span>
+
+-   <span data-ttu-id="be80a-114">Der **bingmaps:**-URI stellt Karten für Standorte, Suchergebnisse, Wegbeschreibungen und Datenverkehr bereit.</span><span class="sxs-lookup"><span data-stu-id="be80a-114">The **bingmaps:** URI provides maps for locations, search results, directions, and traffic.</span></span>
+-   <span data-ttu-id="be80a-115">Der **ms-drive-to:**-URI stellt detaillierte Fahrtwegbeschreibungen von Ihrem aktuellen Standort bereit.</span><span class="sxs-lookup"><span data-stu-id="be80a-115">The **ms-drive-to:** URI provides turn-by-turn driving directions from your current location.</span></span>
+-   <span data-ttu-id="be80a-116">Der **ms-walk-to:**-URI stellt detaillierte Fußwegbeschreibungen von Ihrem aktuellen Standort bereit.</span><span class="sxs-lookup"><span data-stu-id="be80a-116">The **ms-walk-to:** URI provides turn-by-turn walking directions from your current location.</span></span>
+
+<span data-ttu-id="be80a-117">Der folgende URI startet beispielsweise die Windows-Karten-App und zeigt eine über New York City zentrierte Karte an.</span><span class="sxs-lookup"><span data-stu-id="be80a-117">For example, the following URI opens the Windows Maps app and displays a map centered over New York City.</span></span>
 
 ```xml
 <bingmaps:?cp=40.726966~-74.006076>
@@ -42,20 +41,20 @@ Der folgende URI startet beispielsweise die Windows-Karten-App und zeigt eine ü
 
 ![Eine über New York City zentrierte Karte.](images/mapnyc.png)
 
-Beschreibung des URI-Schemas:
+<span data-ttu-id="be80a-119">Beschreibung des URI-Schemas:</span><span class="sxs-lookup"><span data-stu-id="be80a-119">Here is a description of the URI scheme:</span></span>
 
-**bingmaps:?query**
+**<span data-ttu-id="be80a-120">bingmaps:?query</span><span class="sxs-lookup"><span data-stu-id="be80a-120">bingmaps:?query</span></span>**
 
-In diesem URI-Schema steht *query* für eine Reihe von Parametername-/-wert-Paaren:
+<span data-ttu-id="be80a-121">In diesem URI-Schema steht *query* für eine Reihe von Parametername-/-wert-Paaren:</span><span class="sxs-lookup"><span data-stu-id="be80a-121">In this URI scheme, *query* is a series of parameter name/value pairs:</span></span>
 
-**&param1=value1&param2=value2 …**
+**<span data-ttu-id="be80a-122">&param1=value1&param2=value2 …</span><span class="sxs-lookup"><span data-stu-id="be80a-122">&param1=value1&param2=value2 …</span></span>**
 
-Eine vollständige Liste der verfügbaren Parameter finden Sie unter dem [bingmaps:](#bingmaps-param-reference)-, [ms-drive-to:](#ms-drive-to-param-reference)- und [ms-walk-to:](#ms-walk-to-param-reference)-Parameterverweis. Weiter unten in diesem Thema finden Sie dazu Beispiele.
+<span data-ttu-id="be80a-123">Eine vollständige Liste der verfügbaren Parameter finden Sie unter dem [bingmaps:](#bingmaps-param-reference)-, [ms-drive-to:](#ms-drive-to-param-reference)- und [ms-walk-to:](#ms-walk-to-param-reference)-Parameterverweis.</span><span class="sxs-lookup"><span data-stu-id="be80a-123">For a full list of the available parameters, see the [bingmaps:](#bingmaps-param-reference), [ms-drive-to:](#ms-drive-to-param-reference), and [ms-walk-to:](#ms-walk-to-param-reference) parameter reference.</span></span> <span data-ttu-id="be80a-124">Weiter unten in diesem Thema finden Sie dazu Beispiele.</span><span class="sxs-lookup"><span data-stu-id="be80a-124">There are also examples later in this topic.</span></span>
 
-## <a name="launch-a-uri-from-your-app"></a>Starten eines URIs aus Ihrer App
+## <a name="launch-a-uri-from-your-app"></a><span data-ttu-id="be80a-125">Starten eines URIs aus Ihrer App</span><span class="sxs-lookup"><span data-stu-id="be80a-125">Launch a URI from your app</span></span>
 
 
-Um die Windows-Karten-App aus Ihrer App zu starten, rufen Sie die [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476)-Methode mit einem **bingmaps:**-, **ms-drive-to:**- oder **ms-walk-to:**-URI auf. Im folgenden Beispiel wird derselbe URI wie im vorherigen Beispiel gestartet. Weitere Informationen zum Starten von Apps mithilfe des URIs finden Sie unter [Starten der Standard-App für einen URI](launch-default-app.md).
+<span data-ttu-id="be80a-126">Um die Windows-Karten-App aus Ihrer App zu starten, rufen Sie die [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476)-Methode mit einem **bingmaps:**-, **ms-drive-to:**- oder **ms-walk-to:**-URI auf.</span><span class="sxs-lookup"><span data-stu-id="be80a-126">To launch the Windows Maps app from your app, call the [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) method with a **bingmaps:**, **ms-drive-to:**, or **ms-walk-to:** URI.</span></span> <span data-ttu-id="be80a-127">Im folgenden Beispiel wird derselbe URI wie im vorherigen Beispiel gestartet.</span><span class="sxs-lookup"><span data-stu-id="be80a-127">The following example launches the same URI from the previous example.</span></span> <span data-ttu-id="be80a-128">Weitere Informationen zum Starten von Apps mithilfe des URIs finden Sie unter [Starten der Standard-App für einen URI](launch-default-app.md).</span><span class="sxs-lookup"><span data-stu-id="be80a-128">For more info about launching apps via URI, see [Launch the default app for a URI](launch-default-app.md).</span></span>
 
 ```cs
 // Center on New York City
@@ -67,110 +66,110 @@ launcherOptions.TargetApplicationPackageFamilyName = "Microsoft.WindowsMaps_8wek
 var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherOptions);
 ```
 
-In diesem Beispiel wird die [**LauncherOptions**](https://msdn.microsoft.com/library/windows/apps/hh701435)-Klasse verwendet, um sicherzustellen, dass die Windows-Karten-App gestartet wird.
+<span data-ttu-id="be80a-129">In diesem Beispiel wird die [**LauncherOptions**](https://msdn.microsoft.com/library/windows/apps/hh701435)-Klasse verwendet, um sicherzustellen, dass die Windows-Karten-App gestartet wird.</span><span class="sxs-lookup"><span data-stu-id="be80a-129">In this example, the [**LauncherOptions**](https://msdn.microsoft.com/library/windows/apps/hh701435) class is used to help ensure the Windows Maps app is launched.</span></span>
 
-## <a name="display-known-locations"></a>Anzeigen bekannter Positionen
+## <a name="display-known-locations"></a><span data-ttu-id="be80a-130">Anzeigen bekannter Positionen</span><span class="sxs-lookup"><span data-stu-id="be80a-130">Display known locations</span></span>
 
-Es gibt mehrere Möglichkeiten, den Mittelpunkt und den Zoomfaktor der Karte zu steuern. Mithilfe der Parameter *cp* (Mittelpunkt) und *lvl* (Zoomfaktor) lassen sich vorhersagbare Ergebnisse am einfachsten erzielen. Der *bb*-Parameter (der einen durch Breiten- und Längengrad begrenzten Bereich angibt) ist weniger vorhersagbar, weil er die Bildschirmauflösung berücksichtigt und Mittelpunkt und Zoomfaktor der Karten basierend auf den bereitgestellten Koordinaten ermittelt. Der *bb*-Parameter wird ignoriert, wenn alle drei Parameter (*bb*, *cp* und *lvl*) vorhanden sind.
+<span data-ttu-id="be80a-131">Es gibt viele Steueroptionen, um die verschiedenen Teile der Karte anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="be80a-131">There are many options to control which part of the map to show.</span></span> <span data-ttu-id="be80a-132">Verwenden Sie den *cp* (Mittelpunkt)-Parameter, entweder mit dem *rad* (Radius) oder dem *Lvl* (Zoomfaktor)-Parameter, um einen Standort anzuzeigen und in zu vergrößern.</span><span class="sxs-lookup"><span data-stu-id="be80a-132">You can use the *cp* (center point) parameter with either the *rad* (radius) or the *lvl* (zoom level) parameters to show a location and choose how close to zoom in to it.</span></span> <span data-ttu-id="be80a-133">Bei Verwendung des *cp* -Parameters können Sie auch eine *Hdg* (Überschrift) und *Pit* (Zeichenbreite) angeben, um anzugeben, in welche Richtung gesucht werden soll.</span><span class="sxs-lookup"><span data-stu-id="be80a-133">When you use the *cp* parameter, you can also specify a *hdg* (heading) and *pit* (pitch) to control what direction to look.</span></span> <span data-ttu-id="be80a-134">Eine weitere Methode ist die Verwendung der *bb* (Begrenzungsrahmen) Parameter, um die maximalen Koordiante für Süden, Osten, Norden und Westen des Bereichs anzugeben, die Sie anzeigen möchten.</span><span class="sxs-lookup"><span data-stu-id="be80a-134">Another method is to use the *bb* (bounding box) parameter to provide the maximum south, east, north, and west coordinates of the area you want to show.</span></span>
 
-Verwenden Sie zum Steuern der Art der Ansicht die *ss* (Streetside) und *sty* (Formatvorlage) und Parameter. Der *ss*-Parameter fügt die Karte in einer Streetside-Ansicht ein. Mit dem *sty*-Parameter können Sie zwischen Straßen-, Luft- und 3D-Ansicht wechseln. Bei der Verwendung des 3D-Formats können die *hdg*-, *pit*- und *rad*-Parameter verwendet werden, um die 3D-Ansicht anzugeben. *hdg* gibt die Richtung der Ansicht, *pit* den Nickwinkel der Ansicht und *rad* den Abstand vom Mittelpunkt in der Ansicht an. Weitere Informationen zu diesen und anderen Parametern finden Sie unter [bingmaps: Parameterverweis](#bingmaps-param-reference).
+<span data-ttu-id="be80a-135">Verwenden Sie zum Steuern der Art der Ansicht die *ss* (Streetside) und *sty* (Formatvorlage) und Parameter.</span><span class="sxs-lookup"><span data-stu-id="be80a-135">To control the type of view, use the *sty* (style) and *ss* (Streetside) parameters.</span></span> <span data-ttu-id="be80a-136">Mit dem *sty*-Parameter können Sie zwischen Straßen- und Luftansicht wechseln.</span><span class="sxs-lookup"><span data-stu-id="be80a-136">The *sty* parameter lets you switch between road and aerial views.</span></span> <span data-ttu-id="be80a-137">Der *ss*-Parameter fügt die Karte in einer Streetside-Ansicht ein.</span><span class="sxs-lookup"><span data-stu-id="be80a-137">The *ss* parameter puts the map into a Streetside view.</span></span> <span data-ttu-id="be80a-138">Weitere Informationen zu diesen und anderen Parametern finden Sie unter [bingmaps: Parameterverweis](#bingmaps-param-reference).</span><span class="sxs-lookup"><span data-stu-id="be80a-138">For more info about these and other parameters, see the [bingmaps: parameter reference](#bingmaps-param-reference).</span></span>
 
-| Beispiel-URI                                                                 | Ergebnisse                                                                                                                                                                                                   |
-|----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| bingmaps:?                                                                 | Öffnet die Karten-App.                                                                                                                                                                                       |
-| bingmaps:?cp=40.726966~-74.006076                                          | Zeigt eine über New York City zentrierte Karte an.                                                                                                                                                               |
-| bingmaps:?cp=40.726966~-74.006076&lvl=10                                   | Zeigt eine über New York City zentrierte Karte mit Zoomfaktor 10 an.                                                                                                                                       |
-| bingmaps:?bb=39.719\_-74.52~41.71\_-73.5                                   | Zeigt eine Karte von New York City mit einem Begrenzungsrahmen in der Größe des Bildschirms an.                                                                                                                          |
-| bingmaps:?bb=39.719\_-74.52~41.71\_-73.5&cp=47~-122                        | Zeigt eine Karte von New York City an, die dem im Begrenzungsrahmenargument angegebenen Bereich entspricht. Der im **cp**-Argument angegebene Mittelpunkt von Seattle wird ignoriert.                                      |
-| bingmaps:?bb=39.719\_-74.52~41.71\_-73.5&cp=47~-122&lvl=8                  | Zeigt eine Karte von New York City an, die dem im **bb**-Argument angegebenen Bereich entspricht. Das **cp**-Argument, das Seattle angibt, wird ignoriert, da **cp** und **lvl** ignoriert werden, wenn **bb** angegeben ist. |
-| bingmaps:?collection=point.36.116584\_-115.176753\_Caesars%20Palace&lvl=16 | Zeigt den Punkt „Caesar’s Palace“ (in Las Vegas) auf einer Karte mit Zoomfaktor 16 an.                                                                                                            |
-| bingmaps:?collection=point.40.726966\_-74.006076\_Some%255FBusiness        | Zeigt den Punkt „Some\_Business“ (in Las Vegas) auf einer Karte an.                                                                                                                                          |
-| bingmaps:?cp=40.726966~-74.006076&trfc=1&sty=a                             | Zeigt eine Karte von New York City mit Verkehr im Luftansichtformat an.                                                                                                                                               |
-| bingmaps:?cp=47.6204~-122.3491&sty=3d                                      | Zeigt eine 3D-Ansicht der Space Needle an.                                                                                                                                                                   |
-| bingmaps:?cp=47.6204~-122.3491&sty=3d&rad=200&pit=75&hdg=165               | Zeigt eine 3D-Ansicht der Space Needle mit einem Radius von 200 m, einem Neigungswinkel von 75 Grad und der Richtung mit 165 Grad an.                                                                                        |
-| bingmaps:?cp=47.6204~-122.3491&ss=1                                        | Zeigt eine Streetside-Ansicht der Space Needle an.                                                                                                                                                           |
+
+| <span data-ttu-id="be80a-139">Beispiel-URI</span><span class="sxs-lookup"><span data-stu-id="be80a-139">Sample URI</span></span>                                                                 | <span data-ttu-id="be80a-140">Ergebnisse</span><span class="sxs-lookup"><span data-stu-id="be80a-140">Results</span></span>                                                                                                                                                                                        |
+|----------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <span data-ttu-id="be80a-141">bingmaps:?</span><span class="sxs-lookup"><span data-stu-id="be80a-141">bingmaps:?</span></span>                                                                 | <span data-ttu-id="be80a-142">Öffnet die Karten-App.</span><span class="sxs-lookup"><span data-stu-id="be80a-142">Opens the Maps app.</span></span>                                                                                                                                                                            |
+| <span data-ttu-id="be80a-143">bingmaps:?cp=40.726966~-74.006076</span><span class="sxs-lookup"><span data-stu-id="be80a-143">bingmaps:?cp=40.726966~-74.006076</span></span>                                          | <span data-ttu-id="be80a-144">Zeigt eine über New York City zentrierte Karte an.</span><span class="sxs-lookup"><span data-stu-id="be80a-144">Displays a map centered over New York City.</span></span>                                                                                                                                                    |
+| <span data-ttu-id="be80a-145">bingmaps:?cp=40.726966~-74.006076&lvl=10</span><span class="sxs-lookup"><span data-stu-id="be80a-145">bingmaps:?cp=40.726966~-74.006076&lvl=10</span></span>                                   | <span data-ttu-id="be80a-146">Zeigt eine über New York City zentrierte Karte mit Zoomfaktor 10 an.</span><span class="sxs-lookup"><span data-stu-id="be80a-146">Displays a map centered over New York City with a zoom level of 10.</span></span>                                                                                                                            |
+| <span data-ttu-id="be80a-147">bingmaps:?bb=39.719\_-74.52~41.71\_-73.5</span><span class="sxs-lookup"><span data-stu-id="be80a-147">bingmaps:?bb=39.719\_-74.52~41.71\_-73.5</span></span>                                   | <span data-ttu-id="be80a-148">Zeigt eine Karte von New York City an, die dem im **bb**-Argument angegebenen Bereich entspricht.</span><span class="sxs-lookup"><span data-stu-id="be80a-148">Displays a map of New York City, which is the area specified in the **bb** argument.</span></span>                                                                                                           |
+| <span data-ttu-id="be80a-149">bingmaps:?bb=39.719\_-74.52~41.71\_-73.5&cp=47~-122</span><span class="sxs-lookup"><span data-stu-id="be80a-149">bingmaps:?bb=39.719\_-74.52~41.71\_-73.5&cp=47~-122</span></span>                        | <span data-ttu-id="be80a-150">Zeigt eine Karte von New York City an, die dem im Begrenzungsrahmenargument angegebenen Bereich entspricht.</span><span class="sxs-lookup"><span data-stu-id="be80a-150">Displays a map of New York City, which is the area specified in the bounding box argument.</span></span> <span data-ttu-id="be80a-151">Der im **cp**-Argument angegebene Mittelpunkt von Seattle wird ignoriert, da *bb* angegeben wurde.</span><span class="sxs-lookup"><span data-stu-id="be80a-151">The center point for Seattle specified in the **cp** argument is ignored because *bb* is specified.</span></span> |
+| <span data-ttu-id="be80a-152">bingmaps:?collection=point.36.116584\_-115.176753\_Caesars%20Palace&lvl=16</span><span class="sxs-lookup"><span data-stu-id="be80a-152">bingmaps:?collection=point.36.116584\_-115.176753\_Caesars%20Palace&lvl=16</span></span> | <span data-ttu-id="be80a-153">Zeigt den Punkt „Caesar’s Palace“ (in Las Vegas) auf einer Karte mit Zoomfaktor 16 an.</span><span class="sxs-lookup"><span data-stu-id="be80a-153">Displays a map with a point named Caesars Palace (in Las Vegas) and sets the zoom level to 16.</span></span>                                                                                                 |
+| <span data-ttu-id="be80a-154">bingmaps:?collection=point.40.726966\_-74.006076\_Some%255FBusiness</span><span class="sxs-lookup"><span data-stu-id="be80a-154">bingmaps:?collection=point.40.726966\_-74.006076\_Some%255FBusiness</span></span>        | <span data-ttu-id="be80a-155">Zeigt den Punkt „Some\_Business“ (in Las Vegas) auf einer Karte an.</span><span class="sxs-lookup"><span data-stu-id="be80a-155">Displays a map with a point named Some\_Business (in Las Vegas).</span></span>                                                                                                                               |
+| <span data-ttu-id="be80a-156">bingmaps:?cp=40.726966~-74.006076&trfc=1&sty=a</span><span class="sxs-lookup"><span data-stu-id="be80a-156">bingmaps:?cp=40.726966~-74.006076&trfc=1&sty=a</span></span>                             | <span data-ttu-id="be80a-157">Zeigt eine Karte von New York City mit Verkehr im Luftansichtformat an.</span><span class="sxs-lookup"><span data-stu-id="be80a-157">Displays a map of New York City with traffic on and aerial map style.</span></span>                                                                                                                          |
+| <span data-ttu-id="be80a-158">bingmaps:?cp=47.6204~-122.3491&sty=3d</span><span class="sxs-lookup"><span data-stu-id="be80a-158">bingmaps:?cp=47.6204~-122.3491&sty=3d</span></span>                                      | <span data-ttu-id="be80a-159">Zeigt eine 3D-Ansicht der Space Needle an.</span><span class="sxs-lookup"><span data-stu-id="be80a-159">Displays a 3D view of the Space Needle.</span></span>                                                                                                                                                        |
+| <span data-ttu-id="be80a-160">bingmaps:?cp=47.6204~-122.3491&sty=3d&rad=200&pit=75&hdg=165</span><span class="sxs-lookup"><span data-stu-id="be80a-160">bingmaps:?cp=47.6204~-122.3491&sty=3d&rad=200&pit=75&hdg=165</span></span>               | <span data-ttu-id="be80a-161">Zeigt eine 3D-Ansicht der Space Needle mit einem Radius von 200 m, einem Neigungswinkel von 75 Grad und der Richtung mit 165 Grad an.</span><span class="sxs-lookup"><span data-stu-id="be80a-161">Displays a 3D view of the Space Needle with a radius of 200m, a pitch of 75 degrees, and a heading of 165 degrees.</span></span>                                                                             |
+| <span data-ttu-id="be80a-162">bingmaps:?cp=47.6204~-122.3491&ss=1</span><span class="sxs-lookup"><span data-stu-id="be80a-162">bingmaps:?cp=47.6204~-122.3491&ss=1</span></span>                                        | <span data-ttu-id="be80a-163">Zeigt eine Streetside-Ansicht der Space Needle an.</span><span class="sxs-lookup"><span data-stu-id="be80a-163">Displays a Streetside view of the Space Needle.</span></span>                                                                                                                                                |
+
+
+## <a name="display-search-results"></a><span data-ttu-id="be80a-164">Anzeigen von Suchergebnissen</span><span class="sxs-lookup"><span data-stu-id="be80a-164">Display search results</span></span>
+
+<span data-ttu-id="be80a-165">Bei einer Standortsuche mithilfe des *q*-Parameters wird empfohlen, die Suchbegriffe so genau wie möglich und zusammen mit dem *cp*, *bb* oder *where*-Parameter festzulegen, um eine Position anzugeben.</span><span class="sxs-lookup"><span data-stu-id="be80a-165">When searching for places using the *q* parameter, we recommend making the terms as specific as possible and using the *cp*, *bb*, or *where* parameters to specify a search location.</span></span> <span data-ttu-id="be80a-166">Wenn Sie keinen Standort für die Suche angeben und der aktuelle Standort des Benutzers nicht verfügbar ist, gibt die Suche keine aussagekräftigen Ergebnisse zurück.</span><span class="sxs-lookup"><span data-stu-id="be80a-166">If you do not specify a search location and the user's current location isn't available, the search may not return meaningful results.</span></span> <span data-ttu-id="be80a-167">Suchergebnisse werden in der am besten geeigneten Kartenansicht angezeigt.</span><span class="sxs-lookup"><span data-stu-id="be80a-167">Search results are displayed in the most appropriate map view.</span></span> <span data-ttu-id="be80a-168">Weitere Informationen zu diesen und anderen Parametern finden Sie unter [bingmaps: Parameterverweis](#bingmaps-param-reference).</span><span class="sxs-lookup"><span data-stu-id="be80a-168">For more info about these and other parameters, see the [bingmaps: parameter reference](#bingmaps-param-reference).</span></span>
+
+
+| <span data-ttu-id="be80a-169">Beispiel-URI</span><span class="sxs-lookup"><span data-stu-id="be80a-169">Sample URI</span></span>                                                    | <span data-ttu-id="be80a-170">Ergebnisse</span><span class="sxs-lookup"><span data-stu-id="be80a-170">Results</span></span>                                                                            |
+|---------------------------------------------------------------|------------------------------------------------------------------------------------|
+| <span data-ttu-id="be80a-171">bingmaps:?q=1600%20Pennsylvania%20Ave,%20Washington,%20DC</span><span class="sxs-lookup"><span data-stu-id="be80a-171">bingmaps:?q=1600%20Pennsylvania%20Ave,%20Washington,%20DC</span></span>     | <span data-ttu-id="be80a-172">Zeigt eine Karte an und sucht die Adresse des Weißen Hauses in Washington, D.C.</span><span class="sxs-lookup"><span data-stu-id="be80a-172">Displays a map and searches for the address of the White House in Washington, D.C.</span></span> |
+| <span data-ttu-id="be80a-173">bingmaps:?q=coffee&where=Seattle</span><span class="sxs-lookup"><span data-stu-id="be80a-173">bingmaps:?q=coffee&where=Seattle</span></span>                              | <span data-ttu-id="be80a-174">Sucht nach „Kaffee“ in Seattle.</span><span class="sxs-lookup"><span data-stu-id="be80a-174">Searches for coffee in Seattle.</span></span>                                                    |
+| <span data-ttu-id="be80a-175">bingmaps:?cp=40.726966~-74.006076&where=New%20York</span><span class="sxs-lookup"><span data-stu-id="be80a-175">bingmaps:?cp=40.726966~-74.006076&where=New%20York</span></span>            | <span data-ttu-id="be80a-176">Sucht nach New York in der Nähe des angegebenen Mittelpunkts.</span><span class="sxs-lookup"><span data-stu-id="be80a-176">Searches for New York near the specified center point.</span></span>                             |
+| <span data-ttu-id="be80a-177">bingmaps:?bb=39.719\_-74.52~41.71\_-73.5&q=pizza</span><span class="sxs-lookup"><span data-stu-id="be80a-177">bingmaps:?bb=39.719\_-74.52~41.71\_-73.5&q=pizza</span></span>              | <span data-ttu-id="be80a-178">Suche nach einer Pizzeria im angegebenen Begrenzungsrahmen (d.h. in New York City).</span><span class="sxs-lookup"><span data-stu-id="be80a-178">Searches for pizza in the specified bounding box (that is, in New York City).</span></span>      |
 
  
-## <a name="display-search-results"></a>Anzeigen von Suchergebnissen
-
-Bei einer Unternehmenssuche mithilfe des *q*-Parameters wird empfohlen, die Suchbegriffe so genau wie möglich und zusammen mit dem *cp*-Parameter oder dem *where*-Parameter festzulegen, um eine Position anzugeben. Wenn der Benutzer der Karten-App keine Berechtigung zur Nutzung seiner Positionsdaten erteilt hat und Sie keine Position für eine Unternehmenssuche angeben, wird die Suche möglicherweise auf Landesebene durchgeführt und gibt keine aussagekräftigen Ergebnisse zurück. Suchergebnisse werden in der am besten geeigneten Kartenansicht angezeigt. Sofern der *lvl*-Parameter (Zoomfaktor) nicht unbedingt festgelegt werden muss, wird empfohlen, die Auswahl der Karten-App zu überlassen. Weitere Informationen zu diesen und anderen Parametern finden Sie unter [bingmaps: Parameterverweis](#bingmaps-param-reference).
-
-| Beispiel-URI                                                    | Ergebnisse                                                                                                                                         |
-|---------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
-| bingmaps:?where=1600%20Pennsylvania%20Ave,%20Washington,%20DC | Zeigt eine Karte an und sucht die Adresse des Weißen Hauses in Washington, D.C.                                                              |
-| bingmaps:?cp=40.726966~-74.006076&lvl=10&where=New%20York     | Sucht in der Nähe des angegebenen Mittelpunkts nach „New York“, zeigt die Ergebnisse auf einer Karte an und legt den Zoomfaktor auf 10 fest.                            |
-| bingmaps:?lvl=10&where=New%20York                             | Sucht nach New York und zeigt das Ergebnis mit dem Zoomfaktor 10 an.                                                                                    |
-| bingmaps:?cp=40.726966~-74.006076&lvl=14.5&q=pizza            | Sucht in der Nähe des angegebenen Mittelpunkts (hier New York City) nach einer Pizzeria, zeigt die Ergebnisse auf einer Karte an und legt den Zoomfaktor auf 14,5 fest. |
-| bingmaps:?q=coffee&where=Seattle                              | Sucht nach „Kaffee“ in Seattle.                                                                                                                 |
-
- 
-## <a name="display-multiple-points"></a>Anzeigen mehrerer Punkte
+## <a name="display-multiple-points"></a><span data-ttu-id="be80a-179">Anzeigen mehrerer Punkte</span><span class="sxs-lookup"><span data-stu-id="be80a-179">Display multiple points</span></span>
 
 
-Verwenden Sie den *collection*-Parameter zum Anzeigen eines benutzerdefinierten Satzes von Punkten auf der Karte. Wenn mehr als ein Punkt vorhanden ist, wird eine Punktliste angezeigt. Eine Sammlung kann bis zu 25 Punkte umfassen, die in der angegebenen Reihenfolge aufgeführt sind. Die Sammlung hat Vorrang vor den Such- und Routenanforderungen. Weitere Informationen zu diesen und anderen Parametern finden Sie unter [bingmaps: Parameterverweis](#bingmaps-param-reference).
+<span data-ttu-id="be80a-180">Verwenden Sie den *collection*-Parameter zum Anzeigen eines benutzerdefinierten Satzes von Punkten auf der Karte.</span><span class="sxs-lookup"><span data-stu-id="be80a-180">Use the *collection* parameter to show a custom set of points on the map.</span></span> <span data-ttu-id="be80a-181">Wenn mehr als ein Punkt vorhanden ist, wird eine Punktliste angezeigt.</span><span class="sxs-lookup"><span data-stu-id="be80a-181">If there is more than one point, a list of points is displayed.</span></span> <span data-ttu-id="be80a-182">Eine Sammlung kann bis zu 25 Punkte umfassen, die in der angegebenen Reihenfolge aufgeführt sind.</span><span class="sxs-lookup"><span data-stu-id="be80a-182">There can be up to 25 points in a collection and they are listed in the order provided.</span></span> <span data-ttu-id="be80a-183">Die Sammlung hat Vorrang vor den Such- und Routenanforderungen.</span><span class="sxs-lookup"><span data-stu-id="be80a-183">The collection takes precedence over search and directions requests.</span></span> <span data-ttu-id="be80a-184">Weitere Informationen zu diesen und anderen Parametern finden Sie unter [bingmaps: Parameterverweis](#bingmaps-param-reference).</span><span class="sxs-lookup"><span data-stu-id="be80a-184">For more info about this parameter and others, see the [bingmaps: parameter reference](#bingmaps-param-reference).</span></span>
 
-| Beispiel-URI | Ergebnisse                                                                                                                   |
+| <span data-ttu-id="be80a-185">Beispiel-URI</span><span class="sxs-lookup"><span data-stu-id="be80a-185">Sample URI</span></span> | <span data-ttu-id="be80a-186">Ergebnisse</span><span class="sxs-lookup"><span data-stu-id="be80a-186">Results</span></span>                                                                                                                   |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
-| bingmaps:?collection=point.36.116584\_-115.176753\_Caesars%20Palace                                                                                                | Sucht nach „Caesar’s Palace“ in Las Vegas und zeigt die Ergebnisse in der am besten geeigneten Kartenansicht auf einer Karte an.                         |
-| bingmaps:?collection=point.36.116584\_-115.176753\_Caesars%20Palace&lvl=16                                                                                         | Zeigt die Ortsmarke „Caesars Palace“ in Las Vegas mit dem Zoomfaktor 16 an.                                               |
-| bingmaps:?collection=point.36.116584\_-115.176753\_Caesars%20Palace~point.36.113126\_-115.175188\_The%20Bellagio&lvl=16&cp=36.114902~-115.176669                   | Zeit die beiden Ortsmarken „Caesars Palace“ und „The Bellagio“ in Las Vegas mit dem Zoomfaktor 16 an.              |
-| bingmaps:?collection=point.40.726966\_-74.006076\_Fake%255FBusiness%255Fwith%255FUnderscore                                                                        | Zeigt New York mit der Ortsmarke „Fake\_Business\_with\_Underscore“ an.                                                  |
-| bingmaps:?collection=name.Hotel%20List~point.36.116584\_-115.176753\_Caesars%20Palace~point.36.113126\_-115.175188\_The%20Bellagio&lvl=16&cp=36.114902~-115.176669 | Zeigt die Liste „Hotel List“ und die beiden Ortsmarken „Caesars Palace“ und „The Bellagio“ in Las Vegas mit dem Zoomfaktor 16 an. |
+| <span data-ttu-id="be80a-187">bingmaps:?collection=point.36.116584\_-115.176753\_Caesars%20Palace</span><span class="sxs-lookup"><span data-stu-id="be80a-187">bingmaps:?collection=point.36.116584\_-115.176753\_Caesars%20Palace</span></span>                                                                                                | <span data-ttu-id="be80a-188">Sucht nach „Caesar’s Palace“ in Las Vegas und zeigt die Ergebnisse in der am besten geeigneten Kartenansicht auf einer Karte an.</span><span class="sxs-lookup"><span data-stu-id="be80a-188">Searches for Caesar's Palace in Las Vegas and displays the results on a map in the best map view.</span></span>                         |
+| <span data-ttu-id="be80a-189">bingmaps:?collection=point.36.116584\_-115.176753\_Caesars%20Palace&lvl=16</span><span class="sxs-lookup"><span data-stu-id="be80a-189">bingmaps:?collection=point.36.116584\_-115.176753\_Caesars%20Palace&lvl=16</span></span>                                                                                         | <span data-ttu-id="be80a-190">Zeigt die Ortsmarke „Caesars Palace“ in Las Vegas mit dem Zoomfaktor 16 an.</span><span class="sxs-lookup"><span data-stu-id="be80a-190">Displays a pushpin named Caesars Palace in Las Vegas and zooms to level 16.</span></span>                                               |
+| <span data-ttu-id="be80a-191">bingmaps:?collection=point.36.116584\_-115.176753\_Caesars%20Palace~point.36.113126\_-115.175188\_The%20Bellagio&lvl=16&cp=36.114902~-115.176669</span><span class="sxs-lookup"><span data-stu-id="be80a-191">bingmaps:?collection=point.36.116584\_-115.176753\_Caesars%20Palace~point.36.113126\_-115.175188\_The%20Bellagio&lvl=16&cp=36.114902~-115.176669</span></span>                   | <span data-ttu-id="be80a-192">Zeit die beiden Ortsmarken „Caesars Palace“ und „The Bellagio“ in Las Vegas mit dem Zoomfaktor 16 an.</span><span class="sxs-lookup"><span data-stu-id="be80a-192">Displays a pushpin named Caesars Palace and a pushpin named The Bellagio in Las Vegas and zooms to level 16.</span></span>              |
+| <span data-ttu-id="be80a-193">bingmaps:?collection=point.40.726966\_-74.006076\_Fake%255FBusiness%255Fwith%255FUnderscore</span><span class="sxs-lookup"><span data-stu-id="be80a-193">bingmaps:?collection=point.40.726966\_-74.006076\_Fake%255FBusiness%255Fwith%255FUnderscore</span></span>                                                                        | <span data-ttu-id="be80a-194">Zeigt New York mit der Ortsmarke „Fake\_Business\_with\_Underscore“ an.</span><span class="sxs-lookup"><span data-stu-id="be80a-194">Displays New York with a pushpin named Fake\_Business\_with\_Underscore.</span></span>                                                  |
+| <span data-ttu-id="be80a-195">bingmaps:?collection=name.Hotel%20List~point.36.116584\_-115.176753\_Caesars%20Palace~point.36.113126\_-115.175188\_The%20Bellagio&lvl=16&cp=36.114902~-115.176669</span><span class="sxs-lookup"><span data-stu-id="be80a-195">bingmaps:?collection=name.Hotel%20List~point.36.116584\_-115.176753\_Caesars%20Palace~point.36.113126\_-115.175188\_The%20Bellagio&lvl=16&cp=36.114902~-115.176669</span></span> | <span data-ttu-id="be80a-196">Zeigt die Liste „Hotel List“ und die beiden Ortsmarken „Caesars Palace“ und „The Bellagio“ in Las Vegas mit dem Zoomfaktor 16 an.</span><span class="sxs-lookup"><span data-stu-id="be80a-196">Displays a list named Hotel List and two pushpins for Caesars Palace and The Bellagio in Las Vegas and zooms to level 16.</span></span> |
 
  
 
-## <a name="display-directions-and-traffic"></a>Anzeigen von Wegbeschreibungen und Verkehr
+## <a name="display-directions-and-traffic"></a><span data-ttu-id="be80a-197">Anzeigen von Wegbeschreibungen und Verkehr</span><span class="sxs-lookup"><span data-stu-id="be80a-197">Display directions and traffic</span></span>
 
 
-Sie können Wegbeschreibungen zwischen zwei Punkten mit dem *rtp*-Parameter anzeigen. Diese Punkte können eine Adresse oder Breiten- und Längengradkoordinaten sein. Verwenden Sie den *trfc*-Parameter zum Anzeigen von Verkehrsinformationen. Verwenden Sie den *mode*-Parameter, um die Art der Anweisungen anzugeben (fahren, laufen oder öffentliche Verkehrsmittel). Wenn *mode* nicht angegeben ist, werden Wegbeschreibungen mithilfe der Einstellung für die Transportmethode des Benutzers bereitgestellt. Weitere Informationen zu diesen und anderen Parametern finden Sie unter [bingmaps: Parameterverweis](#bingmaps-param-reference).
+<span data-ttu-id="be80a-198">Sie können Wegbeschreibungen zwischen zwei Punkten mit dem *rtp*-Parameter anzeigen. Diese Punkte können Adressen oder Breiten- und Längengradkoordinaten sein.</span><span class="sxs-lookup"><span data-stu-id="be80a-198">You can display directions between two points using the *rtp* parameter; those points can be either addresses or latitude and longitude coordinates.</span></span> <span data-ttu-id="be80a-199">Verwenden Sie den *trfc*-Parameter zum Anzeigen von Verkehrsinformationen.</span><span class="sxs-lookup"><span data-stu-id="be80a-199">Use the *trfc* parameter to show traffic information.</span></span> <span data-ttu-id="be80a-200">Verwenden Sie den *mode*-Parameter, um die Art der Anweisungen anzugeben (fahren, laufen oder öffentliche Verkehrsmittel).</span><span class="sxs-lookup"><span data-stu-id="be80a-200">To specify the type of directions: driving, walking, or transit, use the *mode* parameter.</span></span> <span data-ttu-id="be80a-201">Wenn *mode* nicht angegeben ist, werden Wegbeschreibungen mithilfe der Einstellung für die bevorzugten Transportmethode des Benutzers bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="be80a-201">If *mode* isn't specified, directions will be provided using the user's preferred mode of transportation.</span></span> <span data-ttu-id="be80a-202">Weitere Informationen zu diesen und anderen Parametern finden Sie unter [bingmaps: Parameterverweis](#bingmaps-param-reference).</span><span class="sxs-lookup"><span data-stu-id="be80a-202">For more info about these parameters and others, see the [bingmaps: parameter reference](#bingmaps-param-reference).</span></span>
 
 ![Beispiel für eine Wegbeschreibung](images/windowsmapgcdirections.png)
 
-| Beispiel-URI                                                                                                              | Ergebnisse                                                                                                                                                         |
+| <span data-ttu-id="be80a-204">Beispiel-URI</span><span class="sxs-lookup"><span data-stu-id="be80a-204">Sample URI</span></span>                                                                                                              | <span data-ttu-id="be80a-205">Ergebnisse</span><span class="sxs-lookup"><span data-stu-id="be80a-205">Results</span></span>                                                                                                                                                         |
 |-------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| bingmaps:?rtp=pos.44.9160\_-110.4158~pos.45.0475\_-109.4187                                                             | Zeigt eine Karte mit Punkt-zu-Punkt-Wegbeschreibungen an. Da *mode* nicht angegeben ist, werden Wegbeschreibungen mithilfe der Einstellung für die Transportmethode des Benutzers bereitgestellt. |
-| bingmaps:?cp=43.0332~-87.9167&trfc=1                                                                                    | Zeigt eine über Milwaukee, Wisconsin, USA zentrierte Karte mit Verkehr an.                                                                                                        |
-| bingmaps:?rtp=adr.One Microsoft Way, Redmond, WA 98052~pos.39.0731\_-108.7238                                           | Zeigt eine Karte mit Wegbeschreibungen von der angegebenen Adresse zur angegebenen Position an.                                                                            |
-| bingmaps:?rtp=adr.1%20Microsoft%20Way,%20Redmond,%20WA,%2098052~pos.36.1223\_-111.9495\_Grand%20Canyon%20northern%20rim | Zeigt eine Wegbeschreibung von 1 Microsoft Way, Redmond, Washington, 98052, USA zum nördlichen Rand des Grand Canyon an.                                                                |
-| bingmaps:?rtp=adr.Davenport, CA~adr.Yosemite Village                                                                    | Zeigt eine Karte mit Anfahrtsbeschreibungen von der angegebenen Position zum angegebenen Orientierungspunkt an.                                                                   |
-| bingmaps:?rtp=adr.Mountain%20View,%20CA~adr.San%20Francisco%20International%20Airport,%20CA&mode=d                      | Zeigt die Anfahrtsbeschreibung von Mountain View, Kalifornien, USA nach San Francisco International Airport, Kalifornien, USA an.                                                                  |
-| bingmaps:?rtp=adr.Mountain%20View,%20CA~adr.San%20Francisco%20International%20Airport,%20CA&mode=w                      | Zeigt die Fußwegbeschreibungen von Mountain View, Kalifornien, USA nach San Francisco International Airport, Kalifornien, USA an.                                                                  |
-| bingmaps:?rtp=adr.Mountain%20View,%20CA~adr.San%20Francisco%20International%20Airport,%20CA&mode=t                      | Zeigt Wegbeschreibungen für öffentliche Verkehrsmittel von Mountain View, Kalifornien, USA nach San Francisco International Airport, Kalifornien, USA an.                                                                  |
+| <span data-ttu-id="be80a-206">bingmaps:?rtp=pos.44.9160\_-110.4158~pos.45.0475\_-109.4187</span><span class="sxs-lookup"><span data-stu-id="be80a-206">bingmaps:?rtp=pos.44.9160\_-110.4158~pos.45.0475\_-109.4187</span></span>                                                             | <span data-ttu-id="be80a-207">Zeigt eine Karte mit Punkt-zu-Punkt-Wegbeschreibungen an.</span><span class="sxs-lookup"><span data-stu-id="be80a-207">Displays a map with point-to-point directions.</span></span> <span data-ttu-id="be80a-208">Da *mode* nicht angegeben ist, werden Wegbeschreibungen mithilfe der Einstellung für die Transportmethode des Benutzers bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="be80a-208">Because *mode* is not specified, directions will be provided using the user's mode of transportation preference.</span></span> |
+| <span data-ttu-id="be80a-209">bingmaps:?cp=43.0332~-87.9167&trfc=1</span><span class="sxs-lookup"><span data-stu-id="be80a-209">bingmaps:?cp=43.0332~-87.9167&trfc=1</span></span>                                                                                    | <span data-ttu-id="be80a-210">Zeigt eine über Milwaukee, Wisconsin, USA zentrierte Karte mit Verkehr an.</span><span class="sxs-lookup"><span data-stu-id="be80a-210">Displays a map centered over Milwaukee, WI with traffic.</span></span>                                                                                                        |
+| <span data-ttu-id="be80a-211">bingmaps:?rtp=adr.One Microsoft Way, Redmond, WA 98052~pos.39.0731\_-108.7238</span><span class="sxs-lookup"><span data-stu-id="be80a-211">bingmaps:?rtp=adr.One Microsoft Way, Redmond, WA 98052~pos.39.0731\_-108.7238</span></span>                                           | <span data-ttu-id="be80a-212">Zeigt eine Karte mit Wegbeschreibungen von der angegebenen Adresse zur angegebenen Position an.</span><span class="sxs-lookup"><span data-stu-id="be80a-212">Displays a map with directions from the specified address to the specified location.</span></span>                                                                            |
+| <span data-ttu-id="be80a-213">bingmaps:?rtp=adr.1%20Microsoft%20Way,%20Redmond,%20WA,%2098052~pos.36.1223\_-111.9495\_Grand%20Canyon%20northern%20rim</span><span class="sxs-lookup"><span data-stu-id="be80a-213">bingmaps:?rtp=adr.1%20Microsoft%20Way,%20Redmond,%20WA,%2098052~pos.36.1223\_-111.9495\_Grand%20Canyon%20northern%20rim</span></span> | <span data-ttu-id="be80a-214">Zeigt eine Wegbeschreibung von 1 Microsoft Way, Redmond, Washington, 98052, USA zum nördlichen Rand des Grand Canyon an.</span><span class="sxs-lookup"><span data-stu-id="be80a-214">Displays directions from 1 Microsoft Way, Redmond, WA, 98052 to the Grand Canyon's northern rim.</span></span>                                                                |
+| <span data-ttu-id="be80a-215">bingmaps:?rtp=adr.Davenport, CA~adr.Yosemite Village</span><span class="sxs-lookup"><span data-stu-id="be80a-215">bingmaps:?rtp=adr.Davenport, CA~adr.Yosemite Village</span></span>                                                                    | <span data-ttu-id="be80a-216">Zeigt eine Karte mit Anfahrtsbeschreibungen von der angegebenen Position zum angegebenen Orientierungspunkt an.</span><span class="sxs-lookup"><span data-stu-id="be80a-216">Displays a map with driving directions from the specified location to the specified landmark.</span></span>                                                                   |
+| <span data-ttu-id="be80a-217">bingmaps:?rtp=adr.Mountain%20View,%20CA~adr.San%20Francisco%20International%20Airport,%20CA&mode=d</span><span class="sxs-lookup"><span data-stu-id="be80a-217">bingmaps:?rtp=adr.Mountain%20View,%20CA~adr.San%20Francisco%20International%20Airport,%20CA&mode=d</span></span>                      | <span data-ttu-id="be80a-218">Zeigt die Anfahrtsbeschreibung von Mountain View, Kalifornien, USA nach San Francisco International Airport, Kalifornien, USA an.</span><span class="sxs-lookup"><span data-stu-id="be80a-218">Displays driving directions from Mountain View, CA to San Francisco International Airport, CA.</span></span>                                                                  |
+| <span data-ttu-id="be80a-219">bingmaps:?rtp=adr.Mountain%20View,%20CA~adr.San%20Francisco%20International%20Airport,%20CA&mode=w</span><span class="sxs-lookup"><span data-stu-id="be80a-219">bingmaps:?rtp=adr.Mountain%20View,%20CA~adr.San%20Francisco%20International%20Airport,%20CA&mode=w</span></span>                      | <span data-ttu-id="be80a-220">Zeigt die Fußwegbeschreibungen von Mountain View, Kalifornien, USA nach San Francisco International Airport, Kalifornien, USA an.</span><span class="sxs-lookup"><span data-stu-id="be80a-220">Displays walking directions from Mountain View, CA to San Francisco International Airport, CA.</span></span>                                                                  |
+| <span data-ttu-id="be80a-221">bingmaps:?rtp=adr.Mountain%20View,%20CA~adr.San%20Francisco%20International%20Airport,%20CA&mode=t</span><span class="sxs-lookup"><span data-stu-id="be80a-221">bingmaps:?rtp=adr.Mountain%20View,%20CA~adr.San%20Francisco%20International%20Airport,%20CA&mode=t</span></span>                      | <span data-ttu-id="be80a-222">Zeigt Wegbeschreibungen für öffentliche Verkehrsmittel von Mountain View, Kalifornien, USA nach San Francisco International Airport, Kalifornien, USA an.</span><span class="sxs-lookup"><span data-stu-id="be80a-222">Displays transit directions from Mountain View, CA to San Francisco International Airport, CA.</span></span>                                                                  |
 
  
 
-## <a name="display-turn-by-turn-directions"></a>Anzeigen detaillierter Wegbeschreibungen
+## <a name="display-turn-by-turn-directions"></a><span data-ttu-id="be80a-223">Anzeigen detaillierter Wegbeschreibungen</span><span class="sxs-lookup"><span data-stu-id="be80a-223">Display turn-by-turn directions</span></span>
 
 
-Mit den **ms-drive-to:**- und **ms-walk-to:**-URI-Schemas können Sie direkt eine detaillierte Ansicht einer Route starten. Diese URI-Schemas können nur Wegbeschreibungen von der aktuellen Position des Benutzers bereitstellen. Wenn Sie Wegbeschreibungen zwischen Punkten bereitstellen müssen, die nicht die aktuelle Position des Benutzers enthalten, verwenden Sie das **bingmaps:**-URI-Schema wie im vorherigen Abschnitt beschrieben. Weitere Informationen zu diesen URI-Schemas finden Sie unter dem [ms-drive-to:](#ms-drive-to-param-reference)- und [ms-walk-to:](#ms-walk-to-param-reference)-Parameterverweis.
+<span data-ttu-id="be80a-224">Mit den **ms-drive-to:**- und **ms-walk-to:**-URI-Schemas können Sie direkt eine detaillierte Ansicht einer Route starten.</span><span class="sxs-lookup"><span data-stu-id="be80a-224">The **ms-drive-to:** and **ms-walk-to:** URI schemes let you launch directly into a turn-by-turn view of a route.</span></span> <span data-ttu-id="be80a-225">Diese URI-Schemas können nur Wegbeschreibungen von der aktuellen Position des Benutzers bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="be80a-225">These URI schemes can only provide directions from the user's current location.</span></span> <span data-ttu-id="be80a-226">Wenn Sie Wegbeschreibungen zwischen Punkten bereitstellen müssen, die nicht die aktuelle Position des Benutzers enthalten, verwenden Sie das **bingmaps:**-URI-Schema wie im vorherigen Abschnitt beschrieben.</span><span class="sxs-lookup"><span data-stu-id="be80a-226">If you must provide directions between points that do not include the user's current location, use the **bingmaps:** URI scheme as described in the previous section.</span></span> <span data-ttu-id="be80a-227">Weitere Informationen zu diesen URI-Schemas finden Sie unter dem [ms-drive-to:](#ms-drive-to-param-reference)- und [ms-walk-to:](#ms-walk-to-param-reference)-Parameterverweis.</span><span class="sxs-lookup"><span data-stu-id="be80a-227">For more info about these URI schemes, see the [ms-drive-to:](#ms-drive-to-param-reference) and [ms-walk-to:](#ms-walk-to-param-reference) parameter reference.</span></span>
 
-> **Wichtig**  Wenn die URI-Schemas **ms-drive-to:** oder **ms-walk-to:** gestartet werden, überprüft die Karten-App, ob für das Gerät bereits ein GPS-Positionsfixpunkt bestimmt wurde. Ist dies der Fall, geht die Karten-App zu detaillierten Wegbeschreibungen über. Falls nicht, zeigt die App die Routenübersicht an, wie unter [Anzeigen von Wegbeschreibungen und Verkehr](#display-directions-and-traffic) beschrieben.
+> <span data-ttu-id="be80a-228">**Wichtig**  Wenn die URI-Schemas **ms-drive-to:** oder **ms-walk-to:** gestartet werden, überprüft die Karten-App, ob für das Gerät bereits ein GPS-Positionsfixpunkt bestimmt wurde.</span><span class="sxs-lookup"><span data-stu-id="be80a-228">**Important**  When the **ms-drive-to:** or **ms-walk-to:** URI schemes are launched, the Maps app will check to see if the device has ever had a GPS location fix.</span></span> <span data-ttu-id="be80a-229">Ist dies der Fall, geht die Karten-App zu detaillierten Wegbeschreibungen über.</span><span class="sxs-lookup"><span data-stu-id="be80a-229">If it has, then the Maps app will proceed to turn-by-turn directions.</span></span> <span data-ttu-id="be80a-230">Falls nicht, zeigt die App die Routenübersicht an, wie unter [Anzeigen von Wegbeschreibungen und Verkehr](#display-directions-and-traffic) beschrieben.</span><span class="sxs-lookup"><span data-stu-id="be80a-230">If it hasn't, the app will display the route overview, as described in [Display directions and traffic](#display-directions-and-traffic).</span></span>
 
  
 
 ![Beispiel für eine detaillierte Wegbeschreibung](images/windowsmapsappdirections.png)
 
-| Beispiel-URI                                                                                                | Ergebnisse                                                                                       |
+| <span data-ttu-id="be80a-232">Beispiel-URI</span><span class="sxs-lookup"><span data-stu-id="be80a-232">Sample URI</span></span>                                                                                                | <span data-ttu-id="be80a-233">Ergebnisse</span><span class="sxs-lookup"><span data-stu-id="be80a-233">Results</span></span>                                                                                       |
 |-----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
-| ms-drive-to:?destination.latitude=47.680504&destination.longitude=-122.328262&destination.name=Green Lake | Zeigt eine Karte mit detaillierten Anfahrtsbeschreibungen von Ihrem aktuellen Standort zu Green Lake. |
-| ms-walk-to:?destination.latitude=47.680504&destination.longitude=-122.328262&destination.name=Green Lake  | Zeigt eine Karte mit detaillierten Fußwegbeschreibungen von Ihrem aktuellen Standort zu Green Lake. |
+| <span data-ttu-id="be80a-234">ms-drive-to:?destination.latitude=47.680504&destination.longitude=-122.328262&destination.name=Green Lake</span><span class="sxs-lookup"><span data-stu-id="be80a-234">ms-drive-to:?destination.latitude=47.680504&destination.longitude=-122.328262&destination.name=Green Lake</span></span> | <span data-ttu-id="be80a-235">Zeigt eine Karte mit detaillierten Anfahrtsbeschreibungen von Ihrem aktuellen Standort zu Green Lake.</span><span class="sxs-lookup"><span data-stu-id="be80a-235">Displays a map with turn-by-turn driving directions to Green Lake from your current location.</span></span> |
+| <span data-ttu-id="be80a-236">ms-walk-to:?destination.latitude=47.680504&destination.longitude=-122.328262&destination.name=Green Lake</span><span class="sxs-lookup"><span data-stu-id="be80a-236">ms-walk-to:?destination.latitude=47.680504&destination.longitude=-122.328262&destination.name=Green Lake</span></span>  | <span data-ttu-id="be80a-237">Zeigt eine Karte mit detaillierten Fußwegbeschreibungen von Ihrem aktuellen Standort zu Green Lake.</span><span class="sxs-lookup"><span data-stu-id="be80a-237">Displays a map with turn-by-turn walking directions to Green Lake from your current location.</span></span> |
 
 
-## <a name="download-offline-maps"></a>Herunterladen von Offlinekarten
+## <a name="download-offline-maps"></a><span data-ttu-id="be80a-238">Herunterladen von Offlinekarten</span><span class="sxs-lookup"><span data-stu-id="be80a-238">Download offline maps</span></span>
 
 
-Mit dem **ms-settings:**-URI-Schema können Sie direkt eine bestimmte Seite in der Einstellungs-App öffnen. Die Karten-App wird zwar nicht durch das **ms-settings:**-URI-Schema gestartet, Sie haben jedoch die Möglichkeit, die Seite für die Offlinekarten direkt in der Einstellungs-App zu starten. Außerdem zeigt das URI-Schema ein Bestätigungsdialogfeld zum Herunterladen der von der Karten-App verwendeten Offlinekarten an. Das URI-Schema akzeptiert einen Punkt, der durch einen Breiten- und Längengrad angegeben wird, und bestimmt automatisch, ob für eine Region mit diesem Punkt Offlinekarten verfügbar sind.  Wenn der übergebene Breiten- und Längengrad in mehrere Download-Regionen fällt, kann der Benutzer im Bestätigungsdialogfeld auswählen, welche dieser Regionen heruntergeladen werden soll. Wenn Offlinekarten für eine Region mit diesem Punkt nicht verfügbar sind, wird die Seite mit den Offlinekarten in der Einstellungs-App mit einem Fehlerdialogfeld angezeigt.
+<span data-ttu-id="be80a-239">Mit dem **ms-settings:**-URI-Schema können Sie direkt eine bestimmte Seite in der Einstellungs-App öffnen.</span><span class="sxs-lookup"><span data-stu-id="be80a-239">The **ms-settings:** URI scheme lets you launch directly into a particular page in the Settings app.</span></span> <span data-ttu-id="be80a-240">Die Karten-App wird zwar nicht durch das **ms-settings:**-URI-Schema gestartet, Sie haben jedoch die Möglichkeit, die Seite für die Offlinekarten direkt in der Einstellungs-App zu starten. Außerdem zeigt das URI-Schema ein Bestätigungsdialogfeld zum Herunterladen der von der Karten-App verwendeten Offlinekarten an.</span><span class="sxs-lookup"><span data-stu-id="be80a-240">While the **ms-settings:** URI scheme doesn't launch into the Maps app, it does allow you to launch directly to the Offline Maps page in the Settings app and displays a confirmation dialog to download the offline maps used by the Maps app.</span></span> <span data-ttu-id="be80a-241">Das URI-Schema akzeptiert einen Punkt, der durch einen Breiten- und Längengrad angegeben wird, und bestimmt automatisch, ob für eine Region mit diesem Punkt Offlinekarten verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="be80a-241">The URI scheme accepts a point specified by a latitude and longitude and automatically determines if there are offline maps available for a region containing that point.</span></span>  <span data-ttu-id="be80a-242">Wenn der übergebene Breiten- und Längengrad in mehrere Download-Regionen fällt, kann der Benutzer im Bestätigungsdialogfeld auswählen, welche dieser Regionen heruntergeladen werden soll.</span><span class="sxs-lookup"><span data-stu-id="be80a-242">If the latitude and longitude passed happen to fall within multiple download regions, the confirmation dialog will let the user pick which of those regions to download.</span></span> <span data-ttu-id="be80a-243">Wenn Offlinekarten für eine Region mit diesem Punkt nicht verfügbar sind, wird die Seite mit den Offlinekarten in der Einstellungs-App mit einem Fehlerdialogfeld angezeigt.</span><span class="sxs-lookup"><span data-stu-id="be80a-243">If offline maps are not available for a region containing that point, the offline Maps page in the Settings app is displayed with an error dialog.</span></span>
 
-| Beispiel-URI                                                                                                | Ergebnisse                                                                                       |
+| <span data-ttu-id="be80a-244">Beispiel-URI</span><span class="sxs-lookup"><span data-stu-id="be80a-244">Sample URI</span></span>                                                                                                | <span data-ttu-id="be80a-245">Ergebnisse</span><span class="sxs-lookup"><span data-stu-id="be80a-245">Results</span></span>                                                                                       |
 |-----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
-| ms-settings:maps-downloadmaps?latlong=47.6,-122.3 | Öffnet die Einstellungs-App auf der Offlinekarten-Seite mit einem Bestätigungsdialogfeld, das angezeigt wird, um Karten für die Region herunterzuladen, die den Punkt mit dem angegebenen Breiten- und Längengrad enthält. |
+| <span data-ttu-id="be80a-246">ms-settings:maps-downloadmaps?latlong=47.6,-122.3</span><span class="sxs-lookup"><span data-stu-id="be80a-246">ms-settings:maps-downloadmaps?latlong=47.6,-122.3</span></span> | <span data-ttu-id="be80a-247">Öffnet die Einstellungs-App auf der Offlinekarten-Seite mit einem Bestätigungsdialogfeld, das angezeigt wird, um Karten für die Region herunterzuladen, die den Punkt mit dem angegebenen Breiten- und Längengrad enthält.</span><span class="sxs-lookup"><span data-stu-id="be80a-247">Opens the Settings app to the Offline Maps page with a confirmation dialog displayed to download maps for the region containing the specified latitude-longitude point.</span></span> |
  
 
 <span id="bingmaps-param-reference"/>
-## <a name="bingmaps-parameter-reference"></a>bingmaps: Parameterverweis
+## <a name="bingmaps-parameter-reference"></a><span data-ttu-id="be80a-248">bingmaps: Parameterverweis</span><span class="sxs-lookup"><span data-stu-id="be80a-248">bingmaps: parameter reference</span></span>
 
 
-Die Syntax für jeden Parameter in dieser Tabelle wird mithilfe von ABNF (Augmented Backus-Naur Form) angezeigt.
+<span data-ttu-id="be80a-249">Die Syntax für jeden Parameter in dieser Tabelle wird mithilfe von ABNF (Augmented Backus-Naur Form) angezeigt.</span><span class="sxs-lookup"><span data-stu-id="be80a-249">The syntax for each parameter in this table is shown by using Augmented Backus–Naur Form (ABNF).</span></span>
 
 <table>
 <colgroup>
@@ -181,256 +180,256 @@ Die Syntax für jeden Parameter in dieser Tabelle wird mithilfe von ABNF (Augmen
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Parameter</th>
-<th align="left">Definition</th>
-<th align="left">ABNF-Definition und Beispiel</th>
-<th align="left">Details</th>
+<th align="left"><span data-ttu-id="be80a-250">Parameter</span><span class="sxs-lookup"><span data-stu-id="be80a-250">Parameter</span></span></th>
+<th align="left"><span data-ttu-id="be80a-251">Definition</span><span class="sxs-lookup"><span data-stu-id="be80a-251">Definition</span></span></th>
+<th align="left"><span data-ttu-id="be80a-252">ABNF-Definition und Beispiel</span><span class="sxs-lookup"><span data-stu-id="be80a-252">ABNF Definition and Example</span></span></th>
+<th align="left"><span data-ttu-id="be80a-253">Details</span><span class="sxs-lookup"><span data-stu-id="be80a-253">Details</span></span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>**cp**</p></td>
-<td align="left"><p>Mittelpunkt</p></td>
-<td align="left"><p>cp = "cp=" cpval</p>
-<p>cpval = degreeslat "~" degreeslon</p>
-<p>degreeslat = ["-"] 1*3DIGIT ["." 1*7DIGIT]</p>
-<p>degreeslon = ["-"] 1*2DIGIT ["." 1*7DIGIT]</p>
-<p>Beispiel:</p>
-<p>cp=40.726966~-74.006076</p></td>
-<td align="left"><p>Beide Werte müssen in Dezimalgrad ausgedrückt und durch eine Tilde (**~**) getrennt werden.</p>
-<p>Gültige Längengradwerte liegen zwischen -180 und einschließlich +180.</p>
-<p>Gültige Breitengradwerte liegen zwischen -90 und einschließlich +90.</p></td>
+<td align="left"><p>**<span data-ttu-id="be80a-254">cp</span><span class="sxs-lookup"><span data-stu-id="be80a-254">cp</span></span>**</p></td>
+<td align="left"><p><span data-ttu-id="be80a-255">Mittelpunkt</span><span class="sxs-lookup"><span data-stu-id="be80a-255">Center point</span></span></p></td>
+<td align="left"><p><span data-ttu-id="be80a-256">cp = "cp=" cpval</span><span class="sxs-lookup"><span data-stu-id="be80a-256">cp = "cp=" cpval</span></span></p>
+<p><span data-ttu-id="be80a-257">cpval = degreeslat "~" degreeslon</span><span class="sxs-lookup"><span data-stu-id="be80a-257">cpval = degreeslat "~" degreeslon</span></span></p>
+<p><span data-ttu-id="be80a-258">degreeslat = ["-"] 1*3DIGIT ["." 1*7DIGIT]</span><span class="sxs-lookup"><span data-stu-id="be80a-258">degreeslat = ["-"] 1*3DIGIT ["." 1*7DIGIT]</span></span></p>
+<p><span data-ttu-id="be80a-259">degreeslon = ["-"] 1*2DIGIT ["." 1*7DIGIT]</span><span class="sxs-lookup"><span data-stu-id="be80a-259">degreeslon = ["-"] 1*2DIGIT ["." 1*7DIGIT]</span></span></p>
+<p><span data-ttu-id="be80a-260">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="be80a-260">Example:</span></span></p>
+<p><span data-ttu-id="be80a-261">cp=40.726966~-74.006076</span><span class="sxs-lookup"><span data-stu-id="be80a-261">cp=40.726966~-74.006076</span></span></p></td>
+<td align="left"><p><span data-ttu-id="be80a-262">Beide Werte müssen in Dezimalgrad ausgedrückt und durch eine Tilde (**~**) getrennt werden.</span><span class="sxs-lookup"><span data-stu-id="be80a-262">Both values must be expressed in decimal degrees and separated by a tilde(**~**).</span></span></p>
+<p><span data-ttu-id="be80a-263">Gültige Längengradwerte liegen zwischen -180 und einschließlich +180.</span><span class="sxs-lookup"><span data-stu-id="be80a-263">Valid longitude values are between -180 and +180 inclusive.</span></span></p>
+<p><span data-ttu-id="be80a-264">Gültige Breitengradwerte liegen zwischen -90 und einschließlich +90.</span><span class="sxs-lookup"><span data-stu-id="be80a-264">Valid latitude values are between -90 and +90 inclusive.</span></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**bb**</p></td>
-<td align="left"><p>Begrenzungsrahmen</p></td>
-<td align="left"><p>bb = "bb=" southlatitude "_" westlongitude "~" northlatitude "_" eastlongitude</p>
-<p>southlatitude = degreeslat</p>
-<p>northlatitude = degreeslat</p>
-<p>westlongitude = degreeslon</p>
-<p>eastlongitude = degreeslon</p>
-<p>degreeslat = ["-"] 13DIGIT ["." 17DIGIT]</p>
-<p>degreeslon = ["-"] 12DIGIT ["." 17DIGIT]</p>
-<p>Beispiel:</p>
-<p>bb=39.719_-74.52~41.71_-73.5</p></td>
-<td align="left"><p>Ein rechteckiger Bereich, der den in Dezimalgrad ausgedrückten Begrenzungsrahmen angibt. Die untere linke Ecke und die obere rechte Ecke werden durch eine Tilde (**~**) getrennt. Breiten- und Längengrad sind jeweils durch einen Unterstrich (**_**) getrennt.</p>
-<p>Gültige Längengradwerte liegen zwischen -180 und einschließlich +180.</p>
-<p>Gültige Breitengradwerte liegen zwischen -90 und einschließlich +90.</p><p>Die Parameter „cp“ und „lvl“ werden ignoriert, wenn ein Begrenzungsrahmen bereitgestellt wird.</p></td>
+<td align="left"><p>**<span data-ttu-id="be80a-265">bb</span><span class="sxs-lookup"><span data-stu-id="be80a-265">bb</span></span>**</p></td>
+<td align="left"><p><span data-ttu-id="be80a-266">Begrenzungsrahmen</span><span class="sxs-lookup"><span data-stu-id="be80a-266">Bounding box</span></span></p></td>
+<td align="left"><p><span data-ttu-id="be80a-267">bb = "bb=" southlatitude "_" westlongitude "~" northlatitude "_" eastlongitude</span><span class="sxs-lookup"><span data-stu-id="be80a-267">bb = "bb=" southlatitude "_" westlongitude "~" northlatitude "_" eastlongitude</span></span></p>
+<p><span data-ttu-id="be80a-268">southlatitude = degreeslat</span><span class="sxs-lookup"><span data-stu-id="be80a-268">southlatitude = degreeslat</span></span></p>
+<p><span data-ttu-id="be80a-269">northlatitude = degreeslat</span><span class="sxs-lookup"><span data-stu-id="be80a-269">northlatitude = degreeslat</span></span></p>
+<p><span data-ttu-id="be80a-270">westlongitude = degreeslon</span><span class="sxs-lookup"><span data-stu-id="be80a-270">westlongitude = degreeslon</span></span></p>
+<p><span data-ttu-id="be80a-271">eastlongitude = degreeslon</span><span class="sxs-lookup"><span data-stu-id="be80a-271">eastlongitude = degreeslon</span></span></p>
+<p><span data-ttu-id="be80a-272">degreeslat = ["-"] 13DIGIT ["." 17DIGIT]</span><span class="sxs-lookup"><span data-stu-id="be80a-272">degreeslat = ["-"] 13DIGIT ["." 17DIGIT]</span></span></p>
+<p><span data-ttu-id="be80a-273">degreeslon = ["-"] 12DIGIT ["." 17DIGIT]</span><span class="sxs-lookup"><span data-stu-id="be80a-273">degreeslon = ["-"] 12DIGIT ["." 17DIGIT]</span></span></p>
+<p><span data-ttu-id="be80a-274">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="be80a-274">Example:</span></span></p>
+<p><span data-ttu-id="be80a-275">bb=39.719_-74.52~41.71_-73.5</span><span class="sxs-lookup"><span data-stu-id="be80a-275">bb=39.719_-74.52~41.71_-73.5</span></span></p></td>
+<td align="left"><p><span data-ttu-id="be80a-276">Ein rechteckiger Bereich, der den in Dezimalgrad ausgedrückten Begrenzungsrahmen angibt. Die untere linke Ecke und die obere rechte Ecke werden durch eine Tilde (**~**) getrennt.</span><span class="sxs-lookup"><span data-stu-id="be80a-276">A rectangular area that specifies the bounding box expressed in decimal degrees, using a tilde (**~**) to separate the lower left corner from the upper right corner.</span></span> <span data-ttu-id="be80a-277">Breiten- und Längengrad sind jeweils durch einen Unterstrich (**_**) getrennt.</span><span class="sxs-lookup"><span data-stu-id="be80a-277">Latitude and longitude for each are separated with an underscore (**_**).</span></span></p>
+<p><span data-ttu-id="be80a-278">Gültige Längengradwerte liegen zwischen -180 und einschließlich +180.</span><span class="sxs-lookup"><span data-stu-id="be80a-278">Valid longitude values are between -180 and +180 inclusive.</span></span></p>
+<p><span data-ttu-id="be80a-279">Gültige Breitengradwerte liegen zwischen -90 und einschließlich +90.</span><span class="sxs-lookup"><span data-stu-id="be80a-279">Valid latitude values are between -90 and +90 inclusive.</span></span></p><p><span data-ttu-id="be80a-280">Die Parameter „cp“ und „lvl“ werden ignoriert, wenn ein Begrenzungsrahmen bereitgestellt wird.</span><span class="sxs-lookup"><span data-stu-id="be80a-280">The cp and lvl parameters are ignored when a bounding box is provided.</span></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>**where**</p></td>
-<td align="left"><p>Position</p></td>
-<td align="left"><p>where = "where=" whereval</p>
-<p>whereval = 1*( ALPHA / DIGIT / "-" / "." / "_" / pct-encoded / "!" / "$" / "'" / "(" / ")" / "*" / "+" / "," / ";" / ":" / "@" / "/" / "?")</p>
-<p>Beispiel:</p>
-<p>where=1600%20Pennsylvania%20Ave,%20Washington,%20DC</p></td>
-<td align="left"><p>Ein Suchbegriff für eine bestimmte Position, Sehenswürdigkeit oder einen bestimmten Ort.</p></td>
+<td align="left"><p>**<span data-ttu-id="be80a-281">where</span><span class="sxs-lookup"><span data-stu-id="be80a-281">where</span></span>**</p></td>
+<td align="left"><p><span data-ttu-id="be80a-282">Position</span><span class="sxs-lookup"><span data-stu-id="be80a-282">Location</span></span></p></td>
+<td align="left"><p><span data-ttu-id="be80a-283">where = "where=" whereval</span><span class="sxs-lookup"><span data-stu-id="be80a-283">where = "where=" whereval</span></span></p>
+<p><span data-ttu-id="be80a-284">whereval = 1*( ALPHA / DIGIT / "-" / "." / "_" / pct-encoded / "!" / "$" / "'" / "(" / ")" / "*" / "+" / "," / ";" / ":" / "@" / "/" / "?")</span><span class="sxs-lookup"><span data-stu-id="be80a-284">whereval = 1*( ALPHA / DIGIT / "-" / "." / "_" / pct-encoded / "!" / "$" / "'" / "(" / ")" / "*" / "+" / "," / ";" / ":" / "@" / "/" / "?")</span></span></p>
+<p><span data-ttu-id="be80a-285">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="be80a-285">Example:</span></span></p>
+<p><span data-ttu-id="be80a-286">where=1600%20Pennsylvania%20Ave,%20Washington,%20DC</span><span class="sxs-lookup"><span data-stu-id="be80a-286">where=1600%20Pennsylvania%20Ave,%20Washington,%20DC</span></span></p></td>
+<td align="left"><p><span data-ttu-id="be80a-287">Ein Suchbegriff für eine bestimmte Position, Sehenswürdigkeit oder einen bestimmten Ort.</span><span class="sxs-lookup"><span data-stu-id="be80a-287">Search term for a specific location, landmark or place.</span></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**q**</p></td>
-<td align="left"><p>Abfrageausdruck</p></td>
-<td align="left"><p>q = "q="</p>
-<p>whereval</p>
-<p>Beispiel:</p>
-<p>q=mexican%20restaurants</p></td>
-<td align="left"><p>Suchbegriff für ein lokales Unternehmen oder eine Unternehmenskategorie.</p></td>
+<td align="left"><p>**<span data-ttu-id="be80a-288">q</span><span class="sxs-lookup"><span data-stu-id="be80a-288">q</span></span>**</p></td>
+<td align="left"><p><span data-ttu-id="be80a-289">Abfrageausdruck</span><span class="sxs-lookup"><span data-stu-id="be80a-289">Query Term</span></span></p></td>
+<td align="left"><p><span data-ttu-id="be80a-290">q = "q="</span><span class="sxs-lookup"><span data-stu-id="be80a-290">q = "q="</span></span></p>
+<p><span data-ttu-id="be80a-291">whereval</span><span class="sxs-lookup"><span data-stu-id="be80a-291">whereval</span></span></p>
+<p><span data-ttu-id="be80a-292">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="be80a-292">Example:</span></span></p>
+<p><span data-ttu-id="be80a-293">q=mexican%20restaurants</span><span class="sxs-lookup"><span data-stu-id="be80a-293">q=mexican%20restaurants</span></span></p></td>
+<td align="left"><p><span data-ttu-id="be80a-294">Suchbegriff für ein lokales Unternehmen oder eine Unternehmenskategorie.</span><span class="sxs-lookup"><span data-stu-id="be80a-294">Search term for local business or category of businesses.</span></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>**lvl**</p></td>
-<td align="left"><p>Zoomfaktor</p></td>
-<td align="left"><p>lvl = "lvl=" 1*2DIGIT ["." 1*2DIGIT]</p>
-<p>Beispiel:</p>
-<p>lvl=10.50</p></td>
-<td align="left"><p>Definiert den Zoomfaktor der Kartenansicht. Gültige Werte sind 1 bis 20, wobei 1 durchgehend gezoomt ist.</p></td>
+<td align="left"><p>**<span data-ttu-id="be80a-295">lvl</span><span class="sxs-lookup"><span data-stu-id="be80a-295">lvl</span></span>**</p></td>
+<td align="left"><p><span data-ttu-id="be80a-296">Zoomfaktor</span><span class="sxs-lookup"><span data-stu-id="be80a-296">Zoom Level</span></span></p></td>
+<td align="left"><p><span data-ttu-id="be80a-297">lvl = "lvl=" 1*2DIGIT ["." 1*2DIGIT]</span><span class="sxs-lookup"><span data-stu-id="be80a-297">lvl = "lvl=" 1*2DIGIT ["." 1*2DIGIT]</span></span></p>
+<p><span data-ttu-id="be80a-298">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="be80a-298">Example:</span></span></p>
+<p><span data-ttu-id="be80a-299">lvl=10.50</span><span class="sxs-lookup"><span data-stu-id="be80a-299">lvl=10.50</span></span></p></td>
+<td align="left"><p><span data-ttu-id="be80a-300">Definiert den Zoomfaktor der Kartenansicht.</span><span class="sxs-lookup"><span data-stu-id="be80a-300">Defines the zoom level of the map view.</span></span> <span data-ttu-id="be80a-301">Gültige Werte sind 1 bis 20, wobei 1 durchgehend gezoomt ist.</span><span class="sxs-lookup"><span data-stu-id="be80a-301">Valid values are 1-20 where 1 is zoomed all the way out.</span></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**sty**</p></td>
-<td align="left"><p>Stil</p></td>
-<td align="left"><p>sty = "sty=" ("a" / "r"/"3d")</p>
-<p>Beispiel:</p>
-<p>sty=a</p></td>
-<td align="left"><p>Definiert den Kartenstil. Gültige Werte für diesen Parameter umfassen:</p>
+<td align="left"><p>**<span data-ttu-id="be80a-302">sty</span><span class="sxs-lookup"><span data-stu-id="be80a-302">sty</span></span>**</p></td>
+<td align="left"><p><span data-ttu-id="be80a-303">Stil</span><span class="sxs-lookup"><span data-stu-id="be80a-303">Style</span></span></p></td>
+<td align="left"><p><span data-ttu-id="be80a-304">sty = "sty=" ("a" / "r"/"3d")</span><span class="sxs-lookup"><span data-stu-id="be80a-304">sty = "sty=" ("a" / "r"/"3d")</span></span></p>
+<p><span data-ttu-id="be80a-305">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="be80a-305">Example:</span></span></p>
+<p><span data-ttu-id="be80a-306">sty=a</span><span class="sxs-lookup"><span data-stu-id="be80a-306">sty=a</span></span></p></td>
+<td align="left"><p><span data-ttu-id="be80a-307">Definiert den Kartenstil.</span><span class="sxs-lookup"><span data-stu-id="be80a-307">Defines the map style.</span></span> <span data-ttu-id="be80a-308">Gültige Werte für diesen Parameter umfassen:</span><span class="sxs-lookup"><span data-stu-id="be80a-308">Valid values for this parameter include:</span></span></p>
 <ul>
-<li>**a**: Zeigt eine Luftansicht der Karte an.</li>
-<li>**r**: Zeigt eine Straßenansicht der Karte an.</li>
-<li>**3d**: Zeigt eine 3D-Ansicht der Karte an. Verwenden Sie den Wert in Verbindung mit dem **cp**-Parameter und optional mit dem **rad**-Parameter.</li>
+<li><span data-ttu-id="be80a-309">**a**: Zeigt eine Luftansicht der Karte an.</span><span class="sxs-lookup"><span data-stu-id="be80a-309">**a**: Display an aerial view of the map.</span></span></li>
+<li><span data-ttu-id="be80a-310">**r**: Zeigt eine Straßenansicht der Karte an.</span><span class="sxs-lookup"><span data-stu-id="be80a-310">**r**: Display a road view of the map.</span></span></li>
+<li><span data-ttu-id="be80a-311">**3d**: Zeigt eine 3D-Ansicht der Karte an.</span><span class="sxs-lookup"><span data-stu-id="be80a-311">**3d**: Display a 3D view of the map.</span></span> <span data-ttu-id="be80a-312">Verwenden Sie den Wert in Verbindung mit dem **cp**-Parameter und optional mit dem **rad**-Parameter.</span><span class="sxs-lookup"><span data-stu-id="be80a-312">Use in conjunction with the **cp** parameter and optionally with the **rad** parameter.</span></span></li>
 </ul>
-<p>Unter Windows 10 sind die Stile der Luftansicht und der 3D-Ansicht identisch.</p>
-<div class="alert">
-**Hinweis**  Wenn der **sty**-Parameter ausgelassen wird, werden dieselben Ergebnisse wie bei sty=r zurückgegeben.
+<p><span data-ttu-id="be80a-313">Unter Windows 10 sind die Stile der Luftansicht und der 3D-Ansicht identisch.</span><span class="sxs-lookup"><span data-stu-id="be80a-313">In Windows 10, the aerial view and 3D view styles are the same.</span></span></p>
+<div class="alert"><span data-ttu-id="be80a-314">
+**Hinweis**  Wenn der **sty**-Parameter ausgelassen wird, werden dieselben Ergebnisse wie bei sty=r zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="be80a-314">
+**Note**  Omitting the **sty** parameter produces the same results as sty=r.</span></span>
 </div>
 <div>
  
 </div></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>**rad**</p></td>
-<td align="left"><p>Radius</p></td>
-<td align="left"><p>rad = "rad=" 1*8DIGIT</p>
-<p>Beispiel:</p>
-<p>rad=1000</p></td>
-<td align="left"><p>Eine kreisförmige Fläche, die die gewünschte Kartenansicht festlegt. Der Radiuswert wird in Metern gemessen.</p></td>
+<td align="left"><p>**<span data-ttu-id="be80a-315">rad</span><span class="sxs-lookup"><span data-stu-id="be80a-315">rad</span></span>**</p></td>
+<td align="left"><p><span data-ttu-id="be80a-316">Radius</span><span class="sxs-lookup"><span data-stu-id="be80a-316">Radius</span></span></p></td>
+<td align="left"><p><span data-ttu-id="be80a-317">rad = "rad=" 1*8DIGIT</span><span class="sxs-lookup"><span data-stu-id="be80a-317">rad = "rad=" 1*8DIGIT</span></span></p>
+<p><span data-ttu-id="be80a-318">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="be80a-318">Example:</span></span></p>
+<p><span data-ttu-id="be80a-319">rad=1000</span><span class="sxs-lookup"><span data-stu-id="be80a-319">rad=1000</span></span></p></td>
+<td align="left"><p><span data-ttu-id="be80a-320">Eine kreisförmige Fläche, die die gewünschte Kartenansicht festlegt.</span><span class="sxs-lookup"><span data-stu-id="be80a-320">A circular area that specifies the desired map view.</span></span> <span data-ttu-id="be80a-321">Der Radiuswert wird in Metern gemessen.</span><span class="sxs-lookup"><span data-stu-id="be80a-321">The radius value is measured in meters.</span></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**pit**</p></td>
-<td align="left"><p>Nickwinkel</p></td>
-<td align="left"><p>pit = "pit=" Nickwinkel</p>
-<p>Beispiel:</p>
-<p>pit=60</p></td>
-<td align="left"><p>Gibt den Winkel der Kartenansicht an, wobei der Wert 90 der Ansicht des Horizonts (Maximum) und der Wert 0 der Draufsicht (Minimum) entspricht.</p><p>Gültige Nickwerte liegen zwischen 0 und einschließlich 90.</td>
+<td align="left"><p>**<span data-ttu-id="be80a-322">pit</span><span class="sxs-lookup"><span data-stu-id="be80a-322">pit</span></span>**</p></td>
+<td align="left"><p><span data-ttu-id="be80a-323">Nickwinkel</span><span class="sxs-lookup"><span data-stu-id="be80a-323">Pitch</span></span></p></td>
+<td align="left"><p><span data-ttu-id="be80a-324">pit = "pit=" Nickwinkel</span><span class="sxs-lookup"><span data-stu-id="be80a-324">pit = "pit=" pitch</span></span></p>
+<p><span data-ttu-id="be80a-325">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="be80a-325">Example:</span></span></p>
+<p><span data-ttu-id="be80a-326">pit=60</span><span class="sxs-lookup"><span data-stu-id="be80a-326">pit=60</span></span></p></td>
+<td align="left"><p><span data-ttu-id="be80a-327">Gibt den Winkel der Kartenansicht an, wobei der Wert 90 der Ansicht des Horizonts (Maximum) und der Wert 0 der Draufsicht (Minimum) entspricht.</span><span class="sxs-lookup"><span data-stu-id="be80a-327">Indicates the angle that the map is viewed at, where 90 is looking out at the horizon (maximum) and 0 is looking straight down (minimum).</span></span></p><p><span data-ttu-id="be80a-328">Gültige Nickwerte liegen zwischen 0 und einschließlich 90.</span><span class="sxs-lookup"><span data-stu-id="be80a-328">Valid pitch values are between 0 and 90 inclusive.</span></span></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>**hdg**</p></td>
-<td align="left"><p>Richtung</p></td>
-<td align="left"><p>hdg = "hdg=" Richtung</p>
-<p>Beispiel:</p>
-<p>hdg=180</p></td>
-<td align="left"><p>Gibt die Richtung der Karte in Grad an, dabei gilt: 0 oder 360 = Norden, 90 = Osten, 180 = Süden und 270 = Westen.</p></td>
+<td align="left"><p>**<span data-ttu-id="be80a-329">hdg</span><span class="sxs-lookup"><span data-stu-id="be80a-329">hdg</span></span>**</p></td>
+<td align="left"><p><span data-ttu-id="be80a-330">Richtung</span><span class="sxs-lookup"><span data-stu-id="be80a-330">Heading</span></span></p></td>
+<td align="left"><p><span data-ttu-id="be80a-331">hdg = "hdg=" Richtung</span><span class="sxs-lookup"><span data-stu-id="be80a-331">hdg = "hdg=" heading</span></span></p>
+<p><span data-ttu-id="be80a-332">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="be80a-332">Example:</span></span></p>
+<p><span data-ttu-id="be80a-333">hdg=180</span><span class="sxs-lookup"><span data-stu-id="be80a-333">hdg=180</span></span></p></td>
+<td align="left"><p><span data-ttu-id="be80a-334">Gibt die Richtung der Karte in Grad an, dabei gilt: 0 oder 360 = Norden, 90 = Osten, 180 = Süden und 270 = Westen.</span><span class="sxs-lookup"><span data-stu-id="be80a-334">Indicates the direction the map is heading in degrees, where 0 or 360 = North, 90 = East, 180 = South, and 270 = West.</span></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**ss**</p></td>
-<td align="left"><p>Streetside</p></td>
-<td align="left"><p>ss = "ss=" BIT</p>
-<p>Beispiel:</p>
-<p>ss=1</p></td>
-<td align="left"><p>Gibt an, dass bei <code>ss=1</code> Straßenbilder angezeigt werden. Wenn der **ss**-Parameter ausgelassen wird, wird dasselbe Ergebnis wie bei <code>ss=0</code> zurückgegeben. Verwenden Sie den Wert in Verbindung mit dem **cp**-Parameter, um die Position der Straßenansicht festzulegen.</p>
-<div class="alert">
-> **Hinweis**  Straßenbilder sind nicht in allen Regionen verfügbar.
+<td align="left"><p>**<span data-ttu-id="be80a-335">ss</span><span class="sxs-lookup"><span data-stu-id="be80a-335">ss</span></span>**</p></td>
+<td align="left"><p><span data-ttu-id="be80a-336">Streetside</span><span class="sxs-lookup"><span data-stu-id="be80a-336">Streetside</span></span></p></td>
+<td align="left"><p><span data-ttu-id="be80a-337">ss = "ss=" BIT</span><span class="sxs-lookup"><span data-stu-id="be80a-337">ss = "ss=" BIT</span></span></p>
+<p><span data-ttu-id="be80a-338">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="be80a-338">Example:</span></span></p>
+<p><span data-ttu-id="be80a-339">ss=1</span><span class="sxs-lookup"><span data-stu-id="be80a-339">ss=1</span></span></p></td>
+<td align="left"><p><span data-ttu-id="be80a-340">Gibt an, dass bei <code>ss=1</code> Straßenbilder angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="be80a-340">Indicates that street-level imagery is shown when <code>ss=1</code>.</span></span> <span data-ttu-id="be80a-341">Wenn der **ss**-Parameter ausgelassen wird, wird dasselbe Ergebnis wie bei <code>ss=0</code> zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="be80a-341">Omitting the **ss** parameter produces the same result as <code>ss=0</code>.</span></span> <span data-ttu-id="be80a-342">Verwenden Sie den Wert in Verbindung mit dem **cp**-Parameter, um die Position der Straßenansicht festzulegen.</span><span class="sxs-lookup"><span data-stu-id="be80a-342">Use in conjunction with the **cp** parameter to specify the location of the street-level view.</span></span></p>
+<div class="alert"><span data-ttu-id="be80a-343">
+**Hinweis**  Straßenbilder sind nicht in allen Regionen verfügbar.</span><span class="sxs-lookup"><span data-stu-id="be80a-343">
+**Note**  Street-level imagery is not available in all regions.</span></span>
 </div>
 <div>
  
 </div></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>**trfc**</p></td>
-<td align="left"><p>Verkehr</p></td>
-<td align="left"><p>trfc = "trfc=" BIT</p>
-<p>Beispiel:</p>
-<p>trfc=1</p></td>
-<td align="left"><p>Gibt an, ob die Karte Verkehrsinformationen enthält. Wenn der trfc-Parameter ausgelassen wird, werden dieselben Ergebnisse wie bei <code>trfc=0</code> zurückgegeben.</p>
-<div class="alert">
-> **Hinweis**  Verkehrsinformationen sind nicht in allen Regionen verfügbar.
+<td align="left"><p>**<span data-ttu-id="be80a-344">trfc</span><span class="sxs-lookup"><span data-stu-id="be80a-344">trfc</span></span>**</p></td>
+<td align="left"><p><span data-ttu-id="be80a-345">Verkehr</span><span class="sxs-lookup"><span data-stu-id="be80a-345">Traffic</span></span></p></td>
+<td align="left"><p><span data-ttu-id="be80a-346">trfc = "trfc=" BIT</span><span class="sxs-lookup"><span data-stu-id="be80a-346">trfc = "trfc=" BIT</span></span></p>
+<p><span data-ttu-id="be80a-347">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="be80a-347">Example:</span></span></p>
+<p><span data-ttu-id="be80a-348">trfc=1</span><span class="sxs-lookup"><span data-stu-id="be80a-348">trfc=1</span></span></p></td>
+<td align="left"><p><span data-ttu-id="be80a-349">Gibt an, ob die Karte Verkehrsinformationen enthält.</span><span class="sxs-lookup"><span data-stu-id="be80a-349">Specifies whether traffic information is included on the map.</span></span> <span data-ttu-id="be80a-350">Wenn der trfc-Parameter ausgelassen wird, werden dieselben Ergebnisse wie bei <code>trfc=0</code> zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="be80a-350">Omitting the trfc parameter produces the same results as <code>trfc=0</code>.</span></span></p>
+<div class="alert"><span data-ttu-id="be80a-351">
+**Hinweis**  Verkehrsinformationen sind nicht in allen Regionen verfügbar.</span><span class="sxs-lookup"><span data-stu-id="be80a-351">
+**Note**  Traffic data is not available in all regions.</span></span>
 </div>
 <div>
  
 </div></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**rtp**</p></td>
-<td align="left"><p>Route</p></td>
-<td align="left"><p>rtp = "rtp=" (waypoint "~" [waypoint]) / ("~" waypoint)</p>
-<p>waypoint = ("pos." point ) / ("adr." whereval)</p>
-<p>point = "point." pointval ["_" title]</p>
-<p>pointval = degreeslat "" degreeslon</p>
-<p>degreeslat = ["-"] 13DIGIT ["." 17DIGIT]</p>
-<p>degreeslon = ["-"] 12DIGIT ["." 17DIGIT]</p>
-<p>title = whereval</p>
-<p>whereval = 1( ALPHA / DIGIT / "-" / "." / "_" / pct-encoded / "!" / "$" / "'" / "(" / ")" / "" / "+" / "," / ";" / ":" / "@" / "/" / "?")</p>
+<td align="left"><p>**<span data-ttu-id="be80a-352">rtp</span><span class="sxs-lookup"><span data-stu-id="be80a-352">rtp</span></span>**</p></td>
+<td align="left"><p><span data-ttu-id="be80a-353">Route</span><span class="sxs-lookup"><span data-stu-id="be80a-353">Route</span></span></p></td>
+<td align="left"><p><span data-ttu-id="be80a-354">rtp = "rtp=" (waypoint "~" [waypoint]) / ("~" waypoint)</span><span class="sxs-lookup"><span data-stu-id="be80a-354">rtp = "rtp=" (waypoint "~" [waypoint]) / ("~" waypoint)</span></span></p>
+<p><span data-ttu-id="be80a-355">waypoint = ("pos."</span><span class="sxs-lookup"><span data-stu-id="be80a-355">waypoint = ("pos."</span></span> <span data-ttu-id="be80a-356">point ) / ("adr."</span><span class="sxs-lookup"><span data-stu-id="be80a-356">point ) / ("adr."</span></span> <span data-ttu-id="be80a-357">whereval)</span><span class="sxs-lookup"><span data-stu-id="be80a-357">whereval)</span></span></p>
+<p><span data-ttu-id="be80a-358">point = "point."</span><span class="sxs-lookup"><span data-stu-id="be80a-358">point = "point."</span></span> <span data-ttu-id="be80a-359">pointval ["_" title]</span><span class="sxs-lookup"><span data-stu-id="be80a-359">pointval ["_" title]</span></span></p>
+<p><span data-ttu-id="be80a-360">pointval = degreeslat "" degreeslon</span><span class="sxs-lookup"><span data-stu-id="be80a-360">pointval = degreeslat "" degreeslon</span></span></p>
+<p><span data-ttu-id="be80a-361">degreeslat = ["-"] 13DIGIT ["." 17DIGIT]</span><span class="sxs-lookup"><span data-stu-id="be80a-361">degreeslat = ["-"] 13DIGIT ["." 17DIGIT]</span></span></p>
+<p><span data-ttu-id="be80a-362">degreeslon = ["-"] 12DIGIT ["." 17DIGIT]</span><span class="sxs-lookup"><span data-stu-id="be80a-362">degreeslon = ["-"] 12DIGIT ["." 17DIGIT]</span></span></p>
+<p><span data-ttu-id="be80a-363">title = whereval</span><span class="sxs-lookup"><span data-stu-id="be80a-363">title = whereval</span></span></p>
+<p><span data-ttu-id="be80a-364">whereval = 1( ALPHA / DIGIT / "-" / "." / "_" / pct-encoded / "!" / "$" / "'" / "(" / ")" / "" / "+" / "," / ";" / ":" / "@" / "/" / "?")</span><span class="sxs-lookup"><span data-stu-id="be80a-364">whereval = 1( ALPHA / DIGIT / "-" / "." / "_" / pct-encoded / "!" / "$" / "'" / "(" / ")" / "" / "+" / "," / ";" / ":" / "@" / "/" / "?")</span></span></p>
 
 
-<p>Beispiele:</p>
-<p>rtp=adr.Mountain%20View,%20CA~adr.SFO</p>
-<p>rtp=adr.One%20Microsoft%20Way,%20Redmond,%20WA~pos.45.23423_-122.1232 _My%20Picnic%20Spot</p></td>
-<td align="left"><p>Definiert den Start- und Endpunkt einer auf der Karte dargestellten Route getrennt durch eine Tilde (**~**). Jeder Wegpunkt wird entweder durch eine Position mittels Längengrad, Breitengrad und optionalem Titel oder durch einen Adressbezeichner definiert.</p>
-<p>Eine vollständige Route enthält genau zwei Wegpunkte. Beispielsweise wird eine Route mit zwei Wegpunkten von <code>rtp="A"~"B"</code> definiert.</p>
-<p>Außerdem ist es zulässig, eine unvollständige Route anzugeben. Beispielsweise können Sie mit <code>rtp="A"~</code> nur den Startpunkt einer Route definieren. In diesem Fall wird die Wegbeschreibungseingabe so angezeigt, dass das Feld **Von:** den angegebenen Wegpunkt enthält und das Feld **Nach:** den Fokus hat.</p>
-<p>Wenn nur der Endpunkt der Route angegeben wird, wie bei <code>rtp=~"B"</code>, wird der Bereich für die Wegbeschreibung mit dem angegebenen Wegpunkt im Feld **Nach:** angezeigt. Wenn ein genauer aktueller Standort verfügbar ist, wird die aktuelle Position automatisch im Feld **Von** ausgefüllt und hat den Fokus.</p>
-<p>Bei einer unvollständigen Route wird keine Routenlinie gezeichnet.</p>
-<p>Geben Sie dies zusammen mit dem **mode**-Parameter an, um die Transportmethode (fahren, laufen oder öffentliche Verkehrsmittel) anzugeben. Wenn **mode** nicht angegeben ist, werden Wegbeschreibungen mithilfe der Einstellung für die Transportmethode des Benutzers bereitgestellt.</p>
-<div class="alert">
-**Hinweis**  Ein Titel kann für eine Position verwendet werden, wenn diese durch den **pos**-Parameterwert festgelegt ist. Anstatt der Breiten- und Längengrade wird der Titel angezeigt.
+<p><span data-ttu-id="be80a-365">Beispiele:</span><span class="sxs-lookup"><span data-stu-id="be80a-365">Examples:</span></span></p>
+<p><span data-ttu-id="be80a-366">rtp=adr.Mountain%20View,%20CA~adr.SFO</span><span class="sxs-lookup"><span data-stu-id="be80a-366">rtp=adr.Mountain%20View,%20CA~adr.SFO</span></span></p>
+<p><span data-ttu-id="be80a-367">rtp=adr.One%20Microsoft%20Way,%20Redmond,%20WA~pos.45.23423_-122.1232 _My%20Picnic%20Spot</span><span class="sxs-lookup"><span data-stu-id="be80a-367">rtp=adr.One%20Microsoft%20Way,%20Redmond,%20WA~pos.45.23423_-122.1232 _My%20Picnic%20Spot</span></span></p></td>
+<td align="left"><p><span data-ttu-id="be80a-368">Definiert den Start- und Endpunkt einer auf der Karte dargestellten Route getrennt durch eine Tilde (**~**).</span><span class="sxs-lookup"><span data-stu-id="be80a-368">Defines the start and end of a route to draw on the map, separated by a tilde (**~**).</span></span> <span data-ttu-id="be80a-369">Jeder Wegpunkt wird entweder durch eine Position mittels Längengrad, Breitengrad und optionalem Titel oder durch einen Adressbezeichner definiert.</span><span class="sxs-lookup"><span data-stu-id="be80a-369">Each of the waypoints is defined by either a position using ltitude, longitude, and optional title or an address identifier.</span></span></p>
+<p><span data-ttu-id="be80a-370">Eine vollständige Route enthält genau zwei Wegpunkte.</span><span class="sxs-lookup"><span data-stu-id="be80a-370">A complete route contains exactly two waypoints.</span></span> <span data-ttu-id="be80a-371">Beispielsweise wird eine Route mit zwei Wegpunkten von <code>rtp="A"~"B"</code> definiert.</span><span class="sxs-lookup"><span data-stu-id="be80a-371">For example, a route with two waypoints is defined by <code>rtp="A"~"B"</code>.</span></span></p>
+<p><span data-ttu-id="be80a-372">Außerdem ist es zulässig, eine unvollständige Route anzugeben.</span><span class="sxs-lookup"><span data-stu-id="be80a-372">It's also acceptable to specify an incomplete route.</span></span> <span data-ttu-id="be80a-373">Beispielsweise können Sie mit <code>rtp="A"~</code> nur den Startpunkt einer Route definieren.</span><span class="sxs-lookup"><span data-stu-id="be80a-373">For example, you can define only the start of a route with <code>rtp="A"~</code>.</span></span> <span data-ttu-id="be80a-374">In diesem Fall wird die Wegbeschreibungseingabe so angezeigt, dass das Feld **Von:** den angegebenen Wegpunkt enthält und das Feld **Nach:** den Fokus hat.</span><span class="sxs-lookup"><span data-stu-id="be80a-374">In this case, the directions input is displayed with the provided waypoint in the **From** field and the **To** field has focus.</span></span></p>
+<p><span data-ttu-id="be80a-375">Wenn nur der Endpunkt der Route angegeben wird, wie bei <code>rtp=~"B"</code>, wird der Bereich für die Wegbeschreibung mit dem angegebenen Wegpunkt im Feld **Nach:** angezeigt.</span><span class="sxs-lookup"><span data-stu-id="be80a-375">If only the end of a route is specified, as with <code>rtp=~"B"</code>, the directions panel is displayed with the provided waypoint in the **To** field.</span></span> <span data-ttu-id="be80a-376">Wenn ein genauer aktueller Standort verfügbar ist, wird die aktuelle Position automatisch im Feld **Von** ausgefüllt und hat den Fokus.</span><span class="sxs-lookup"><span data-stu-id="be80a-376">If an accurate current location is available, the current location is pre-populated in the **From** field with focus.</span></span></p>
+<p><span data-ttu-id="be80a-377">Bei einer unvollständigen Route wird keine Routenlinie gezeichnet.</span><span class="sxs-lookup"><span data-stu-id="be80a-377">No route line is drawn when an incomplete route is given.</span></span></p>
+<p><span data-ttu-id="be80a-378">Geben Sie dies zusammen mit dem **mode**-Parameter an, um die Transportmethode (fahren, laufen oder öffentliche Verkehrsmittel) anzugeben.</span><span class="sxs-lookup"><span data-stu-id="be80a-378">Use in conjunction with the **mode** parameter to specify the mode of transportation (driving, transit, or walking).</span></span> <span data-ttu-id="be80a-379">Wenn **mode** nicht angegeben ist, werden Wegbeschreibungen mithilfe der Einstellung für die Transportmethode des Benutzers bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="be80a-379">If **mode** isn't specified, directions will be provided using the user's mode of transportation preference.</span></span></p>
+<div class="alert"><span data-ttu-id="be80a-380">
+**Hinweis**  Ein Titel kann für eine Position verwendet werden, wenn diese durch den **pos**-Parameterwert festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="be80a-380">
+**Note**  A title can be used for a location if the location is specified by the **pos** parameter value.</span></span> <span data-ttu-id="be80a-381">Anstatt der Breiten- und Längengrade wird der Titel angezeigt.</span><span class="sxs-lookup"><span data-stu-id="be80a-381">Rather than showing the latitude and longitude, the title will be displayed.</span></span>
 </div>
 <div>
  
 </div></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>**mode**</p></td>
-<td align="left"><p>Transportmethode</p></td>
-<td align="left"><p>mode = "mode=" ("d" / "t" / "w")</p>
-<p>Beispiel:</p>
-<p>mode=d</p></td>
-<td align="left"><p>Legt die Transportmethode fest. Gültige Werte für diesen Parameter umfassen:</p>
+<td align="left"><p>**<span data-ttu-id="be80a-382">mode</span><span class="sxs-lookup"><span data-stu-id="be80a-382">mode</span></span>**</p></td>
+<td align="left"><p><span data-ttu-id="be80a-383">Transportmethode</span><span class="sxs-lookup"><span data-stu-id="be80a-383">Transportation mode</span></span></p></td>
+<td align="left"><p><span data-ttu-id="be80a-384">mode = "mode=" ("d" / "t" / "w")</span><span class="sxs-lookup"><span data-stu-id="be80a-384">mode = "mode=" ("d" / "t" / "w")</span></span></p>
+<p><span data-ttu-id="be80a-385">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="be80a-385">Example:</span></span></p>
+<p><span data-ttu-id="be80a-386">mode=d</span><span class="sxs-lookup"><span data-stu-id="be80a-386">mode=d</span></span></p></td>
+<td align="left"><p><span data-ttu-id="be80a-387">Legt die Transportmethode fest.</span><span class="sxs-lookup"><span data-stu-id="be80a-387">Defines the transportation mode.</span></span> <span data-ttu-id="be80a-388">Gültige Werte für diesen Parameter umfassen:</span><span class="sxs-lookup"><span data-stu-id="be80a-388">Valid values for this parameter include:</span></span></p>
 <ul>
-<li>**d**: Zeigt eine Routenübersicht für Wegbeschreibungen an.</li>
-<li>**t**: Zeigt eine Routenübersicht für Wegbeschreibungen für öffentliche Verkehrsmittel an.</li>
-<li>**w**: Zeigt eine Routenübersicht für Fußwegbeschreibungen an.</li>
+<li><span data-ttu-id="be80a-389">**d**: Zeigt eine Routenübersicht für Wegbeschreibungen an.</span><span class="sxs-lookup"><span data-stu-id="be80a-389">**d**: Displays route overview for driving directions</span></span></li>
+<li><span data-ttu-id="be80a-390">**t**: Zeigt eine Routenübersicht für Wegbeschreibungen für öffentliche Verkehrsmittel an.</span><span class="sxs-lookup"><span data-stu-id="be80a-390">**t**: Displays route overview for transit directions</span></span></li>
+<li><span data-ttu-id="be80a-391">**w**: Zeigt eine Routenübersicht für Fußwegbeschreibungen an.</span><span class="sxs-lookup"><span data-stu-id="be80a-391">**w**: Displays route overview for walking directions</span></span></li>
 </ul>
-<p>Verwenden Sie den Wert in Verbindung mit dem **rtp**-Parameter für die Routenbeschreibungen. Wenn **mode** nicht angegeben ist, werden Wegbeschreibungen mithilfe der Einstellung für die Transportmethode des Benutzers bereitgestellt. Ein **mode**-Parameter kann ohne Routenparameter bereitgestellt werden, um die Wegbeschreibungseingabe für diese Methode vom aktuellen Standort einzugeben.</p></td>
+<p><span data-ttu-id="be80a-392">Verwenden Sie den Wert in Verbindung mit dem **rtp**-Parameter für die Routenbeschreibungen.</span><span class="sxs-lookup"><span data-stu-id="be80a-392">Use in conjunction with the **rtp** parameter for transportation directions.</span></span> <span data-ttu-id="be80a-393">Wenn **mode** nicht angegeben ist, werden Wegbeschreibungen mithilfe der Einstellung für die Transportmethode des Benutzers bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="be80a-393">If **mode** isn't specified, directions will be provided using the user's mode of transportation preference.</span></span> <span data-ttu-id="be80a-394">Ein **mode**-Parameter kann ohne Routenparameter bereitgestellt werden, um die Wegbeschreibungseingabe für diese Methode vom aktuellen Standort einzugeben.</span><span class="sxs-lookup"><span data-stu-id="be80a-394">A **mode** can be provided with no route parameter to enter directions input for that mode from the current location.</span></span></p></td>
 </tr>
 
 <tr class="even">
-<td align="left"><p>**collection**</p></td>
-<td align="left"><p>Sammlung</p></td>
-<td align="left"><p>collection = "collection="(name"~"/)point["~"point]</p>
-<p>name = "name." whereval </p>
-<p>whereval = 1( ALPHA / DIGIT / "-" / "." / "_" / pct-encoded / "!" / "$" / "'" / "(" / ")" / "" / "+" / "," / ";" / ":" / "@" / "/" / "?") </p>
-<p>point = "point." pointval ["_" title] </p>
-<p>pointval = degreeslat "" degreeslon </p>
-<p>degreeslat = ["-"] 13DIGIT ["." 17DIGIT] </p>
-<p>degreeslon = ["-"] 12DIGIT ["." 17DIGIT] </p>
-<p>title = whereval</p>
+<td align="left"><p>**<span data-ttu-id="be80a-395">collection</span><span class="sxs-lookup"><span data-stu-id="be80a-395">collection</span></span>**</p></td>
+<td align="left"><p><span data-ttu-id="be80a-396">Sammlung</span><span class="sxs-lookup"><span data-stu-id="be80a-396">Collection</span></span></p></td>
+<td align="left"><p><span data-ttu-id="be80a-397">collection = "collection="(name"~"/)point["~"point]</span><span class="sxs-lookup"><span data-stu-id="be80a-397">collection = "collection="(name"~"/)point["~"point]</span></span></p>
+<p><span data-ttu-id="be80a-398">name = "name."</span><span class="sxs-lookup"><span data-stu-id="be80a-398">name = "name."</span></span> <span data-ttu-id="be80a-399">whereval</span><span class="sxs-lookup"><span data-stu-id="be80a-399">whereval</span></span> </p>
+<p><span data-ttu-id="be80a-400">whereval = 1( ALPHA / DIGIT / "-" / "." / "_" / pct-encoded / "!" / "$" / "'" / "(" / ")" / "" / "+" / "," / ";" / ":" / "@" / "/" / "?")</span><span class="sxs-lookup"><span data-stu-id="be80a-400">whereval = 1( ALPHA / DIGIT / "-" / "." / "_" / pct-encoded / "!" / "$" / "'" / "(" / ")" / "" / "+" / "," / ";" / ":" / "@" / "/" / "?")</span></span> </p>
+<p><span data-ttu-id="be80a-401">point = "point."</span><span class="sxs-lookup"><span data-stu-id="be80a-401">point = "point."</span></span> <span data-ttu-id="be80a-402">pointval ["_" title]</span><span class="sxs-lookup"><span data-stu-id="be80a-402">pointval ["_" title]</span></span> </p>
+<p><span data-ttu-id="be80a-403">pointval = degreeslat "" degreeslon</span><span class="sxs-lookup"><span data-stu-id="be80a-403">pointval = degreeslat "" degreeslon</span></span> </p>
+<p><span data-ttu-id="be80a-404">degreeslat = ["-"] 13DIGIT ["." 17DIGIT]</span><span class="sxs-lookup"><span data-stu-id="be80a-404">degreeslat = ["-"] 13DIGIT ["." 17DIGIT]</span></span> </p>
+<p><span data-ttu-id="be80a-405">degreeslon = ["-"] 12DIGIT ["." 17DIGIT]</span><span class="sxs-lookup"><span data-stu-id="be80a-405">degreeslon = ["-"] 12DIGIT ["." 17DIGIT]</span></span> </p>
+<p><span data-ttu-id="be80a-406">title = whereval</span><span class="sxs-lookup"><span data-stu-id="be80a-406">title = whereval</span></span></p>
 
 
-<p>Beispiel:</p>
-<p>collection=name.My%20Trip%20Stops~point.36.116584_-115.176753_Las%20Vegas~point.37.8268_-122.4798_Golden%20Gate%20Bridge</p></td>
-<td align="left"><p>Eine Sammlung von Punkten, die der Karte und Liste hinzugefügt werden sollen. Die Sammlung von Punkten kann mithilfe des Namensparameters benannt werden. Ein Punkt wird mithilfe eines Breitengrads, Längengrads und eines optionalen Titels angegeben.</p>
-<p>Trennen Sie Namen und mehrere Punkte durch Tilden (**~**).</p>
-<p>Wenn das angegebene Element eine Tilde enthält, muss die Tilde als <code>%7E</code> codiert sein. Wenn es nicht zusammen mit den Parametern für den Mittelpunkt und Zoomfaktor angegeben wird, liefert die Sammlung die beste Kartenansicht.</p>
+<p><span data-ttu-id="be80a-407">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="be80a-407">Example:</span></span></p>
+<p><span data-ttu-id="be80a-408">collection=name.My%20Trip%20Stops~point.36.116584_-115.176753_Las%20Vegas~point.37.8268_-122.4798_Golden%20Gate%20Bridge</span><span class="sxs-lookup"><span data-stu-id="be80a-408">collection=name.My%20Trip%20Stops~point.36.116584_-115.176753_Las%20Vegas~point.37.8268_-122.4798_Golden%20Gate%20Bridge</span></span></p></td>
+<td align="left"><p><span data-ttu-id="be80a-409">Eine Sammlung von Punkten, die der Karte und Liste hinzugefügt werden sollen.</span><span class="sxs-lookup"><span data-stu-id="be80a-409">Collection of points to be added to the map and list.</span></span> <span data-ttu-id="be80a-410">Die Sammlung von Punkten kann mithilfe des Namensparameters benannt werden.</span><span class="sxs-lookup"><span data-stu-id="be80a-410">The collection of points can be named using the name parameter.</span></span> <span data-ttu-id="be80a-411">Ein Punkt wird mithilfe eines Breitengrads, Längengrads und eines optionalen Titels angegeben.</span><span class="sxs-lookup"><span data-stu-id="be80a-411">A point is specified using a latitude, longitude, and optional title.</span></span></p>
+<p><span data-ttu-id="be80a-412">Trennen Sie Namen und mehrere Punkte durch Tilden (**~**).</span><span class="sxs-lookup"><span data-stu-id="be80a-412">Separate name and multiple points with tildes (**~**).</span></span></p>
+<p><span data-ttu-id="be80a-413">Wenn das angegebene Element eine Tilde enthält, muss die Tilde als <code>%7E</code> codiert sein.</span><span class="sxs-lookup"><span data-stu-id="be80a-413">If the item you specify contains a tilde, make sure the tilde is encoded as <code>%7E</code>.</span></span> <span data-ttu-id="be80a-414">Wenn es nicht zusammen mit den Parametern für den Mittelpunkt und Zoomfaktor angegeben wird, liefert die Sammlung die beste Kartenansicht.</span><span class="sxs-lookup"><span data-stu-id="be80a-414">If not accompanied by Center point and Zoom Level parameters, the collection will provide the best map view.</span></span></p>
 
-<p>**Wichtig** Wenn das angegebene Element einen Unterstrich enthält, muss der Unterstrich als „%255F“ doppelt verschlüsselt werden.</p>
-
-<p>Wenn das angegebene Element einen Unterstrich enthält, muss der Unterstrich als „%255F“ doppelt verschlüsselt sein.</p></td>
+<p><span data-ttu-id="be80a-415">**Wichtig** Wenn das angegebene Element einen Unterstrich enthält, muss der Unterstrich als „%255F“ doppelt verschlüsselt werden.</span><span class="sxs-lookup"><span data-stu-id="be80a-415">**Important** If the item you specify contains an underscore, make sure the underscore is double encoded as %255F.</span></span></p></td>
 </tr>
 </tbody>
 </table>
 
- 
+  
 <span id="ms-drive-to-param-reference"/>
-## ms-drive-to: Parameterverweis
+## <span data-ttu-id="be80a-416">ms-drive-to: Parameterverweis</span><span class="sxs-lookup"><span data-stu-id="be80a-416">ms-drive-to: parameter reference</span></span>
 
 
-Der URI zum Starten einer Anforderung für detaillierte Wegbeschreibungen muss nicht codiert werden und hat das folgende Format.
+<span data-ttu-id="be80a-417">Der URI zum Starten einer Anforderung für detaillierte Wegbeschreibungen muss nicht codiert werden und hat das folgende Format.</span><span class="sxs-lookup"><span data-stu-id="be80a-417">The URI to launch a request for turn-by-turn driving directions does not need to be encoded and has the following format.</span></span>
 
-> **Hinweis**  In diesem URI-Schema wird der Startpunkt nicht angegeben. Beim Startpunkt wird immer davon ausgegangen, dass es sich um die aktuelle Position handelt. Wenn Sie einen anderen Startpunkt als die aktuelle Position angeben müssen, finden Sie weitere Informationen unter [Anzeigen von Wegbeschreibungen und Verkehr](#display-directions-and-traffic).
+> <span data-ttu-id="be80a-418">**Hinweis**  In diesem URI-Schema wird der Startpunkt nicht angegeben.</span><span class="sxs-lookup"><span data-stu-id="be80a-418">**Note**  You don’t specify the starting point in this URI scheme.</span></span> <span data-ttu-id="be80a-419">Beim Startpunkt wird immer davon ausgegangen, dass es sich um die aktuelle Position handelt.</span><span class="sxs-lookup"><span data-stu-id="be80a-419">The starting point is always assumed to be the current location.</span></span> <span data-ttu-id="be80a-420">Wenn Sie einen anderen Startpunkt als die aktuelle Position angeben müssen, finden Sie weitere Informationen unter [Anzeigen von Wegbeschreibungen und Verkehr](#display-directions-and-traffic).</span><span class="sxs-lookup"><span data-stu-id="be80a-420">If you need to specify a starting point other than the current location, see [Display directions and traffic](#display-directions-and-traffic).</span></span>
 
  
 
-| Parameter | Definition | Beispiel | Details |
+| <span data-ttu-id="be80a-421">Parameter</span><span class="sxs-lookup"><span data-stu-id="be80a-421">Parameter</span></span> | <span data-ttu-id="be80a-422">Definition</span><span class="sxs-lookup"><span data-stu-id="be80a-422">Definition</span></span> | <span data-ttu-id="be80a-423">Beispiel</span><span class="sxs-lookup"><span data-stu-id="be80a-423">Example</span></span> | <span data-ttu-id="be80a-424">Details</span><span class="sxs-lookup"><span data-stu-id="be80a-424">Details</span></span> |
 |------------|-----------|---------|---------|
-| **destination.latitude** | Breitengrad des Ziels | Beispiel: destination.latitude=47.6451413797194 | Der Breitengrad des Ziels. Gültige Breitengradwerte liegen zwischen -90 und einschließlich +90. |
-| **destination.longitude** | Längengrad des Ziels | Beispiel: destination.longitude=-122.141964733601 | Der Längengrad des Ziels. Gültige Längengradwerte liegen zwischen -180 und einschließlich +180. |
-| **destination.name** | Name des Ziels | Beispiel: destination.name=Redmond, WA | Der Name des Ziels. Eine Codierung des URI oder des **destination.name**-Werts ist nicht erforderlich. |
+| **<span data-ttu-id="be80a-425">destination.latitude</span><span class="sxs-lookup"><span data-stu-id="be80a-425">destination.latitude</span></span>** | <span data-ttu-id="be80a-426">Breitengrad des Ziels</span><span class="sxs-lookup"><span data-stu-id="be80a-426">Destination latitude</span></span> | <span data-ttu-id="be80a-427">Beispiel: destination.latitude=47.6451413797194</span><span class="sxs-lookup"><span data-stu-id="be80a-427">Example: destination.latitude=47.6451413797194</span></span> | <span data-ttu-id="be80a-428">Der Breitengrad des Ziels.</span><span class="sxs-lookup"><span data-stu-id="be80a-428">The latitude of the destination.</span></span> <span data-ttu-id="be80a-429">Gültige Breitengradwerte liegen zwischen -90 und einschließlich +90.</span><span class="sxs-lookup"><span data-stu-id="be80a-429">Valid latitude values are between -90 and +90 inclusive.</span></span> |
+| **<span data-ttu-id="be80a-430">destination.longitude</span><span class="sxs-lookup"><span data-stu-id="be80a-430">destination.longitude</span></span>** | <span data-ttu-id="be80a-431">Längengrad des Ziels</span><span class="sxs-lookup"><span data-stu-id="be80a-431">Destination longitude</span></span> | <span data-ttu-id="be80a-432">Beispiel: destination.longitude=-122.141964733601</span><span class="sxs-lookup"><span data-stu-id="be80a-432">Example: destination.longitude=-122.141964733601</span></span> | <span data-ttu-id="be80a-433">Der Längengrad des Ziels.</span><span class="sxs-lookup"><span data-stu-id="be80a-433">The longitude of the destination.</span></span> <span data-ttu-id="be80a-434">Gültige Längengradwerte liegen zwischen -180 und einschließlich +180.</span><span class="sxs-lookup"><span data-stu-id="be80a-434">Valid longitude values are between -180 and +180 inclusive.</span></span> |
+| **<span data-ttu-id="be80a-435">destination.name</span><span class="sxs-lookup"><span data-stu-id="be80a-435">destination.name</span></span>** | <span data-ttu-id="be80a-436">Name des Ziels</span><span class="sxs-lookup"><span data-stu-id="be80a-436">Name of the destination</span></span> | <span data-ttu-id="be80a-437">Beispiel: destination.name=Redmond, WA</span><span class="sxs-lookup"><span data-stu-id="be80a-437">Example: destination.name=Redmond, WA</span></span> | <span data-ttu-id="be80a-438">Der Name des Ziels.</span><span class="sxs-lookup"><span data-stu-id="be80a-438">The name of the destination.</span></span> <span data-ttu-id="be80a-439">Eine Codierung des URI oder des **destination.name**-Werts ist nicht erforderlich.</span><span class="sxs-lookup"><span data-stu-id="be80a-439">You do not have to encode the **destination.name** value.</span></span> |
 
  
 <span id="ms-walk-to-param-reference"/>
-## <a name="ms-walk-to-parameter-reference"></a>ms-walk-to: Parameterverweis
+## <a name="ms-walk-to-parameter-reference"></a><span data-ttu-id="be80a-440">ms-walk-to: Parameterverweis</span><span class="sxs-lookup"><span data-stu-id="be80a-440">ms-walk-to: parameter reference</span></span>
 
 
-Der URI zum Starten einer Anforderung für detaillierte Fußwegbeschreibungen muss nicht codiert werden und hat das folgende Format.
+<span data-ttu-id="be80a-441">Der URI zum Starten einer Anforderung für detaillierte Fußwegbeschreibungen muss nicht codiert werden und hat das folgende Format.</span><span class="sxs-lookup"><span data-stu-id="be80a-441">The URI to launch a request for turn-by-turn walking directions does not need to be encoded and has the following format.</span></span>
 
-> **Hinweis**  In diesem URI-Schema wird der Startpunkt nicht angegeben. Beim Startpunkt wird immer davon ausgegangen, dass es sich um die aktuelle Position handelt. Wenn Sie einen anderen Startpunkt als die aktuelle Position angeben müssen, finden Sie weitere Informationen unter [Anzeigen von Wegbeschreibungen und Verkehr](#display-directions-and-traffic).
-
+> <span data-ttu-id="be80a-442">**Hinweis**  In diesem URI-Schema wird der Startpunkt nicht angegeben.</span><span class="sxs-lookup"><span data-stu-id="be80a-442">**Note**  You don’t specify the starting point in this URI scheme.</span></span> <span data-ttu-id="be80a-443">Beim Startpunkt wird immer davon ausgegangen, dass es sich um die aktuelle Position handelt.</span><span class="sxs-lookup"><span data-stu-id="be80a-443">The starting point is always assumed to be the current location.</span></span> <span data-ttu-id="be80a-444">Wenn Sie einen anderen Startpunkt als die aktuelle Position angeben müssen, finden Sie weitere Informationen unter [Anzeigen von Wegbeschreibungen und Verkehr](#display-directions-and-traffic).</span><span class="sxs-lookup"><span data-stu-id="be80a-444">If you need to specify a starting point other than the current location, see [Display directions and traffic](#display-directions-and-traffic).</span></span>
  
 
-| Parameter | Definition | Beispiel | Details |
+| <span data-ttu-id="be80a-445">Parameter</span><span class="sxs-lookup"><span data-stu-id="be80a-445">Parameter</span></span> | <span data-ttu-id="be80a-446">Definition</span><span class="sxs-lookup"><span data-stu-id="be80a-446">Definition</span></span> | <span data-ttu-id="be80a-447">Beispiel</span><span class="sxs-lookup"><span data-stu-id="be80a-447">Example</span></span> | <span data-ttu-id="be80a-448">Details</span><span class="sxs-lookup"><span data-stu-id="be80a-448">Details</span></span> |
 |-----------|------------|---------|----------|
-| **destination.latitude** | Breitengrad des Ziels | Beispiel: destination.latitude=47.6451413797194 | Der Breitengrad des Ziels. Gültige Breitengradwerte liegen zwischen -90 und einschließlich +90. |
-| **destination.longitude** | Längengrad des Ziels | Beispiel: destination.longitude=-122.141964733601 | Der Längengrad des Ziels. Gültige Längengradwerte liegen zwischen -180 und einschließlich +180. |
-| **destination.name** | Name des Ziels | Beispiel: destination.name=Redmond, WA | Der Name des Ziels. Eine Codierung des URI oder des **destination.name**-Werts ist nicht erforderlich. |
+| **<span data-ttu-id="be80a-449">destination.latitude</span><span class="sxs-lookup"><span data-stu-id="be80a-449">destination.latitude</span></span>** | <span data-ttu-id="be80a-450">Breitengrad des Ziels</span><span class="sxs-lookup"><span data-stu-id="be80a-450">Destination latitude</span></span> | <span data-ttu-id="be80a-451">Beispiel: destination.latitude=47.6451413797194</span><span class="sxs-lookup"><span data-stu-id="be80a-451">Example: destination.latitude=47.6451413797194</span></span> | <span data-ttu-id="be80a-452">Der Breitengrad des Ziels.</span><span class="sxs-lookup"><span data-stu-id="be80a-452">The latitude of the destination.</span></span> <span data-ttu-id="be80a-453">Gültige Breitengradwerte liegen zwischen -90 und einschließlich +90.</span><span class="sxs-lookup"><span data-stu-id="be80a-453">Valid latitude values are between -90 and +90 inclusive.</span></span> |
+| **<span data-ttu-id="be80a-454">destination.longitude</span><span class="sxs-lookup"><span data-stu-id="be80a-454">destination.longitude</span></span>** | <span data-ttu-id="be80a-455">Längengrad des Ziels</span><span class="sxs-lookup"><span data-stu-id="be80a-455">Destination longitude</span></span> | <span data-ttu-id="be80a-456">Beispiel: destination.longitude=-122.141964733601</span><span class="sxs-lookup"><span data-stu-id="be80a-456">Example: destination.longitude=-122.141964733601</span></span> | <span data-ttu-id="be80a-457">Der Längengrad des Ziels.</span><span class="sxs-lookup"><span data-stu-id="be80a-457">The longitude of the destination.</span></span> <span data-ttu-id="be80a-458">Gültige Längengradwerte liegen zwischen -180 und einschließlich +180.</span><span class="sxs-lookup"><span data-stu-id="be80a-458">Valid longitude values are between -180 and +180 inclusive.</span></span> |
+| **<span data-ttu-id="be80a-459">destination.name</span><span class="sxs-lookup"><span data-stu-id="be80a-459">destination.name</span></span>** | <span data-ttu-id="be80a-460">Name des Ziels</span><span class="sxs-lookup"><span data-stu-id="be80a-460">Name of the destination</span></span> | <span data-ttu-id="be80a-461">Beispiel: destination.name=Redmond, WA</span><span class="sxs-lookup"><span data-stu-id="be80a-461">Example: destination.name=Redmond, WA</span></span> | <span data-ttu-id="be80a-462">Der Name des Ziels.</span><span class="sxs-lookup"><span data-stu-id="be80a-462">The name of the destination.</span></span> <span data-ttu-id="be80a-463">Eine Codierung des URI oder des **destination.name**-Werts ist nicht erforderlich.</span><span class="sxs-lookup"><span data-stu-id="be80a-463">You do not have to encode the **destination.name** value.</span></span> |
 
  
-## <a name="ms-settings-parameter-reference"></a>ms-settings: Parameterverweis
+## <a name="ms-settings-parameter-reference"></a><span data-ttu-id="be80a-464">ms-settings: Parameterverweis</span><span class="sxs-lookup"><span data-stu-id="be80a-464">ms-settings: parameter reference</span></span>
 
 
-Die Syntax für Karten-App-spezifische Parameter für das **ms-settings:**-URI-Schema wird unten definiert. **maps-downloadmaps** wird zusammen mit dem **ms-settings:**-URI in Form von **ms-settings:maps-downloadmaps?** angegeben, um die Offlineseite für Karteneinstellungen anzugeben.
+<span data-ttu-id="be80a-465">Die Syntax für Karten-App-spezifische Parameter für das **ms-settings:**-URI-Schema wird unten definiert.</span><span class="sxs-lookup"><span data-stu-id="be80a-465">The syntax for maps app specific parameters for the **ms-settings:** URI scheme is defined below.</span></span> <span data-ttu-id="be80a-466">**maps-downloadmaps** wird zusammen mit dem **ms-settings:**-URI in Form von **ms-settings:maps-downloadmaps?** angegeben, um die Offlineseite für Karteneinstellungen anzugeben.</span><span class="sxs-lookup"><span data-stu-id="be80a-466">**maps-downloadmaps** is specified along with the **ms-settings:** URI in the form of **ms-settings:maps-downloadmaps?** to indicate the offline maps settings page.</span></span>
 
  
 
-| Parameter | Definition | Beispiel | Details |
+| <span data-ttu-id="be80a-467">Parameter</span><span class="sxs-lookup"><span data-stu-id="be80a-467">Parameter</span></span> | <span data-ttu-id="be80a-468">Definition</span><span class="sxs-lookup"><span data-stu-id="be80a-468">Definition</span></span> | <span data-ttu-id="be80a-469">Beispiel</span><span class="sxs-lookup"><span data-stu-id="be80a-469">Example</span></span> | <span data-ttu-id="be80a-470">Details</span><span class="sxs-lookup"><span data-stu-id="be80a-470">Details</span></span> |
 |-----------|------------|---------|----------|
-| **latlong** | Punkt, der die Region für die Offlinekarte definiert. | Beispiel: latlong=47.6,-122.3 | Der GeoPoint wird durch einen durch ein Komma getrennten Breiten- und Längengrad angegeben. Gültige Breitengradwerte liegen zwischen -90 und einschließlich +90. Gültige Längengradwerte liegen zwischen -180 und einschließlich +180. |
+| **<span data-ttu-id="be80a-471">latlong</span><span class="sxs-lookup"><span data-stu-id="be80a-471">latlong</span></span>** | <span data-ttu-id="be80a-472">Punkt, der die Region für die Offlinekarte definiert.</span><span class="sxs-lookup"><span data-stu-id="be80a-472">Point defining offline map region.</span></span> | <span data-ttu-id="be80a-473">Beispiel: latlong=47.6,-122.3</span><span class="sxs-lookup"><span data-stu-id="be80a-473">Example: latlong=47.6,-122.3</span></span> | <span data-ttu-id="be80a-474">Der GeoPoint wird durch einen durch ein Komma getrennten Breiten- und Längengrad angegeben.</span><span class="sxs-lookup"><span data-stu-id="be80a-474">The geopoint is specified by a comma separated latitude and longitude.</span></span> <span data-ttu-id="be80a-475">Gültige Breitengradwerte liegen zwischen -90 und einschließlich +90.</span><span class="sxs-lookup"><span data-stu-id="be80a-475">Valid latitude values are between -90 and +90 inclusive.</span></span> <span data-ttu-id="be80a-476">Gültige Längengradwerte liegen zwischen -180 und einschließlich +180.</span><span class="sxs-lookup"><span data-stu-id="be80a-476">Valid longitude values are between -180 and +180 inclusive.</span></span> |
  
 
  
-

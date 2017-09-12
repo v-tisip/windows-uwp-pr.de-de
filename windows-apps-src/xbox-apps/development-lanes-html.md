@@ -9,25 +9,30 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: edd40cc4-2604-4bc6-bd81-f671389a70fa
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 9f7a70bb726fc6eb6f7465068cf33acb7aa33a39
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 5c139a80f8f24b47047cc2a8b6fb6f812f54f0e6
+ms.sourcegitcommit: de6bc8acec2cd5ebc36bb21b2ce1a9980c3e78b2
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/17/2017
 ---
+# <a name="bringing-html-games-to-uwp-on-xbox"></a><span data-ttu-id="99d9b-104">Portieren von HTML-Spielen auf die UWP auf Xbox</span><span class="sxs-lookup"><span data-stu-id="99d9b-104">Bringing HTML games to UWP on Xbox</span></span>
+<span data-ttu-id="99d9b-105">Xbox One ist eine hervorragende Plattform für HTML 5-Spiele.</span><span class="sxs-lookup"><span data-stu-id="99d9b-105">Xbox One is an excellent platform for HTML 5 games.</span></span> <span data-ttu-id="99d9b-106">HTML 5-Spiele werden auf der [Edge](https://developer.microsoft.com/microsoft-edge/)-Browser-Engine ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="99d9b-106">HTML 5 games run on the [Edge](https://developer.microsoft.com/microsoft-edge/) browser engine.</span></span> <span data-ttu-id="99d9b-107">Edge ist schnell und unterstützt HTML5- und CSS3-Features wie WebGL und Canvas uneingeschränkt.</span><span class="sxs-lookup"><span data-stu-id="99d9b-107">Edge is fast and fully supports HTML 5 and CSS 3 features such as WebGL and canvas.</span></span>
 
-# <a name="bringing-html-games-to-uwp-on-xbox"></a>Portieren von HTML-Spielen auf die UWP auf Xbox
-Xbox One ist eine hervorragende Plattform für HTML5-Spiele. HTML 5-Spiele werden auf der [Edge](https://developer.microsoft.com/microsoft-edge/)-Browser-Engine ausgeführt. Edge ist schnell und unterstützt HTML5- und CSS3-Features wie WebGL und Canvas uneingeschränkt.
+<span data-ttu-id="99d9b-108">Beliebte Spielengines wie [Construct 2](https://www.scirra.com/blog/176/announcing-xbox-one-export-beta) bieten Unterstützung für Xbox One.</span><span class="sxs-lookup"><span data-stu-id="99d9b-108">Popular game engines such as [Construct 2](https://www.scirra.com/blog/176/announcing-xbox-one-export-beta) have support for Xbox One.</span></span> <span data-ttu-id="99d9b-109">Wir haben noch nicht alle HTML-Frameworks und -Engines getestet, aber wir gehen davon aus, dass die meisten auf Xbox One verwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="99d9b-109">We haven't tested every HTML framework and engine, but from what we have seen so far, we believe most of them will work on Xbox One.</span></span>
 
-Beliebte Spielengines wie [Construct 2](https://www.scirra.com/blog/176/announcing-xbox-one-export-beta) bieten Unterstützung für Xbox One. Wir haben noch nicht alle HTML-Frameworks und -Engines getestet, aber wir gehen davon aus, dass die meisten auf Xbox One verwendet werden können.
+<span data-ttu-id="99d9b-110">HTML-Spiele sind mit jedem anderen Typ von Spiel vergleichbar.</span><span class="sxs-lookup"><span data-stu-id="99d9b-110">HTML games are on a level playing field with any other type of game.</span></span> <span data-ttu-id="99d9b-111">Entwickler können Vollzugriff auf systemeigene APIs wie Controllereingaben, Kinect und vieles mehr erhalten.</span><span class="sxs-lookup"><span data-stu-id="99d9b-111">Developers can get full access to native APIs such as controller input, Kinect, and more.</span></span>
 
-HTML-Spiele sind mit jedem anderen Typ von Spiel vergleichbar. Entwickler können Vollzugriff auf systemeigene APIs wie Controllereingaben, Kinect und vieles mehr erhalten.
+<span data-ttu-id="99d9b-112">Xbox One wird auf der universellen Windows-Plattform ausgeführt. Dies bedeutet, dass wie bei anderen Microsoft-Geräten gehostete Web-Apps unterstützt werden, bei denen es sich um vollständig servergestützte Anwendungen handelt.</span><span class="sxs-lookup"><span data-stu-id="99d9b-112">Xbox One runs on the Universal Windows Platform and that means that, like other Microsoft devices, it supports Hosted Web Apps, which are applications that come completely from a server.</span></span> <span data-ttu-id="99d9b-113">Weitere Informationen hierzu finden Sie unter [Gehostete Web-Apps](http://microsoftedge.github.io/WebAppsDocs/en-US/win10/HWA.htm).</span><span class="sxs-lookup"><span data-stu-id="99d9b-113">To learn more, see [Hosted Web Apps](http://microsoftedge.github.io/WebAppsDocs/en-US/win10/HWA.htm).</span></span>
 
-Xbox One wird auf der universellen Windows-Plattform ausgeführt. Dies bedeutet, dass wie bei anderen Microsoft-Geräten gehostete Web-Apps unterstützt werden, bei denen es sich um vollständig servergestützte Anwendungen handelt. Weitere Informationen hierzu finden Sie unter [Gehostete Web-Apps](http://microsoftedge.github.io/WebAppsDocs/en-US/win10/HWA.htm).
 
-Laden Sie zunächst die Engine Ihrer Wahl herunter, und suchen Sie nach Anweisungen für Windows 10-Apps. Lesen Sie außerdem den [Erste Schritte-Leitfaden](getting-started.md) mit Informationen dazu, wie Sie die Konsole als Development-Kit nutzen und Bereitstellungen von Visual Studio aus durchführen.
+<span data-ttu-id="99d9b-114">In diesem Video wird ausführlicher auf gepackte Web-Apps und gehostete Web-Apps eingegangen und gezeigt, wie sie erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="99d9b-114">This video goes into more detail about Packaged Web apps and Hosted Web Apps on Xbox, including how to build them.</span></span>
+</br>
+</br>
+<iframe src="https://channel9.msdn.com/Events/Xbox/App-Dev-on-Xbox/Web-Apps-on-Xbox/player#time=04m21s:paused" width="600" height="338" height="658.1199951171875" allowFullScreen frameBorder="0"></iframe>
 
-## <a name="see-also"></a>Weitere Informationen
-- [Portieren vorhandener Spiele zu Xbox](development-lanes-landing.md)
-- [UWP auf Xbox One](index.md)
 
+<span data-ttu-id="99d9b-115">Laden Sie zunächst das Modul Ihrer Wahl herunter, und suchen Sie nach Anweisungen für Windows 10-Apps.</span><span class="sxs-lookup"><span data-stu-id="99d9b-115">To get started, download your engine of choice and look for instructions for Windows 10 apps.</span></span> <span data-ttu-id="99d9b-116">Lesen Sie außerdem den [Erste Schritte-Leitfaden](getting-started.md) mit Informationen dazu, wie Sie die Konsole als Development-Kit nutzen und Bereitstellungen von Visual Studio aus durchführen.</span><span class="sxs-lookup"><span data-stu-id="99d9b-116">Also be sure to read the [getting started guide](getting-started.md) for information about turning your console into a development kit and how to deploy from Visual Studio.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="99d9b-117">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="99d9b-117">See also</span></span>
+- [<span data-ttu-id="99d9b-118">Portieren vorhandener Spiele zu Xbox</span><span class="sxs-lookup"><span data-stu-id="99d9b-118">Bringing existing games to Xbox</span></span>](development-lanes-landing.md)
+- [<span data-ttu-id="99d9b-119">UWP auf XboxOne</span><span class="sxs-lookup"><span data-stu-id="99d9b-119">UWP on Xbox One</span></span>](index.md)

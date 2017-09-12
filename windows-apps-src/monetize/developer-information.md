@@ -1,44 +1,37 @@
 ---
 author: mcleanbyron
 ms.assetid: 278114aa-2a44-4d63-a1d2-d512d8aababc
-description: "Allgemeine Entwicklerinformationen über die Microsoft Advertising-Bibliotheken im Microsoft Store Services SDK"
-title: Entwicklerinformationen zu den Microsoft Advertising-Bibliotheken
+description: Erhalten Sie allgemeine Entwicklerinformationen zu den Microsoft Advertising-Bibliotheken.
+title: "Informationen für Entwickler"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, anzeigen, werbung"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 44b5266a104b2f706537cea2167b395487f275d2
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP, Anzeigen, Werbung
+ms.openlocfilehash: 9e4fe88d7fe66e594685f756cb173396c0d0968a
+ms.sourcegitcommit: a9e4be98688b3a6125fd5dd126190fcfcd764f95
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/21/2017
 ---
+# <a name="developer-information"></a><span data-ttu-id="f7267-104">Informationen für Entwickler</span><span class="sxs-lookup"><span data-stu-id="f7267-104">Developer information</span></span>
 
-# <a name="developer-information-about-the-microsoft-advertising-libraries"></a>Entwicklerinformationen zu den Microsoft Advertising-Bibliotheken
-
-
-
-
-Die Themen in diesem Abschnitt bieten Entwicklern nützliche Informationen über die Microsoft Advertising-Bibliotheken im Microsoft Store Services SDK (für UWP-Apps) und im Microsoft Advertising SDK für Windows und Windows Phone 8.x (für Windows 8.1- und Windows Phone 8.x-Apps).
+<span data-ttu-id="f7267-105">Die Themen in diesem Abschnittbieten Entwicklern nützliche Informationen über die Microsoft Advertising-Bibliotheken im [Microsoft Advertising-SDK](http://aka.ms/ads-sdk-uwp) (für UWP-Apps) und im [Microsoft Advertising-SDK für Windows und Windows Phone8.x](http://aka.ms/store-8-sdk) (für Windows8.1- und Windows Phone8.x-Apps).</span><span class="sxs-lookup"><span data-stu-id="f7267-105">The topics in this section provide useful information to developers about the Microsoft advertising libraries in the [Microsoft Advertising SDK](http://aka.ms/ads-sdk-uwp) (for UWP apps) and the [Microsoft Advertising SDK for Windows and Windows Phone 8.x](http://aka.ms/store-8-sdk) (for Windows 8.1 and Windows Phone 8.x apps).</span></span>
 
 
-## <a name="in-this-section"></a>Inhalt dieses Abschnitts
+## <a name="in-this-section"></a><span data-ttu-id="f7267-106">Inhalt dieses Abschnitts</span><span class="sxs-lookup"><span data-stu-id="f7267-106">In this section</span></span>
 
-| Thema                                                                                                       | Beschreibung                 |
+| <span data-ttu-id="f7267-107">Thema</span><span class="sxs-lookup"><span data-stu-id="f7267-107">Topic</span></span>                                                                                                       | <span data-ttu-id="f7267-108">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f7267-108">Description</span></span>                 |
 |-------------------------------------------------------------------------------------------------------------|-----------------------------|
-| [Richtlinien für die Benutzeroberfläche und Benutzerumgebung](ui-and-user-experience-guidelines.md) |  Enthält Richtlinien für die Benutzeroberfläche und Benutzererfahrung für das Anzeigen von Werbung in Apps.  |
-| [Testmoduswerte](test-mode-values.md)        |  Enthält Informationen zur Verwendung von Testanwendungs-ID und Anzeigeneinheits-ID beim Testen der App.   |
-| [Einrichten von Anzeigenblöcken in der App](set-up-ad-units-in-your-app.md)      | Beschreibt, wie Testanwendungs-ID und Anzeigeneinheits-IDs in der App mit den Produktwerten aus dem Windows Dev Center-Dashboard ersetzt werden, nachdem die Tests abgeschlossen sind und die App an das Windows Dev Center übermittelt werden kann.   |
-| [Fehlerbehandlung](error-handling-with-advertising-libraries.md)                                    |  Beschreibt die Behandlung von Fehlern, die in den Microsoft Advertising-Bibliotheken von der **AdControl**-Klasse generiert werden.   |
-| [Übermitteln einer App mit Werbung an den Windows Store](submit-an-app-with-ads-to-the-windows-store.md)                                    |  Beschreibt die Anforderungen aus der Vereinbarung für App-Entwickler, die Apps mit Werbung erfüllen müssen, bevor sie veröffentlicht werden können.   |
-| [Unterstützte Größen für Banner-Anzeigen](supported-ad-sizes-for-banner-ads.md)                                    |  Enthält die für Werbebanner unterstützten Größen.   |
-| [Unterstützte Märkte für Microsoft Advertising](supported-markets-for-microsoft-advertising.md)                                    |  Listet die unterstützten Märkte für Werbung auf.   |
+| [<span data-ttu-id="f7267-109">Richtlinien für die Benutzeroberfläche und Benutzerumgebung</span><span class="sxs-lookup"><span data-stu-id="f7267-109">UI and user experience guidelines</span></span>](ui-and-user-experience-guidelines.md) |  <span data-ttu-id="f7267-110">Enthält Richtlinien für die Benutzeroberfläche und Benutzererfahrung für das Anzeigen von Werbung in Apps.</span><span class="sxs-lookup"><span data-stu-id="f7267-110">Provides UI and user experience guidelines for displaying ads in apps.</span></span>  |
+| [<span data-ttu-id="f7267-111">Testmoduswerte</span><span class="sxs-lookup"><span data-stu-id="f7267-111">Test mode values</span></span>](test-mode-values.md)        |  <span data-ttu-id="f7267-112">Enthält Informationen zur Verwendung von Testanwendungs-ID und Anzeigeneinheits-ID beim Testen der App.</span><span class="sxs-lookup"><span data-stu-id="f7267-112">Provides information about test application ID and ad unit ID to use while you are testing your app.</span></span>   |
+| [<span data-ttu-id="f7267-113">Einrichten von Anzeigenblöcken in der App</span><span class="sxs-lookup"><span data-stu-id="f7267-113">Set up ad units in your app</span></span>](set-up-ad-units-in-your-app.md)      | <span data-ttu-id="f7267-114">Beschreibt, wie Testanwendungs-ID und Anzeigeneinheits-IDs in der App mit den Produktwerten aus dem Windows Dev Center-Dashboard ersetzt werden, nachdem die Tests abgeschlossen sind und die App an das Windows Dev Center übermittelt werden kann.</span><span class="sxs-lookup"><span data-stu-id="f7267-114">Describes how to replace test application ID and ad unit ID values in your app with production values from the Windows Dev Center dashboard when you finish testing your app and are ready to submit it to Windows Dev Center.</span></span>   |
+| [<span data-ttu-id="f7267-115">Fehlerbehandlung</span><span class="sxs-lookup"><span data-stu-id="f7267-115">Error handling</span></span>](error-handling-with-advertising-libraries.md)                                    |  <span data-ttu-id="f7267-116">Beschreibt die Behandlung von Fehlern, die in den Microsoft Advertising-Bibliotheken von der **AdControl**-Klasse generiert werden.</span><span class="sxs-lookup"><span data-stu-id="f7267-116">Describes how to handle errors that are generated by the **AdControl** class in the Microsoft advertising libraries.</span></span>   |
+| [<span data-ttu-id="f7267-117">Unterstützte Größen für Banner-Anzeigen</span><span class="sxs-lookup"><span data-stu-id="f7267-117">Supported ad sizes for banner ads</span></span>](supported-ad-sizes-for-banner-ads.md)                                    |  <span data-ttu-id="f7267-118">Enthält die für Werbebanner unterstützten Größen.</span><span class="sxs-lookup"><span data-stu-id="f7267-118">Provides the supported sizes for banner ads.</span></span>   |
 
 
 
  
 
  
-

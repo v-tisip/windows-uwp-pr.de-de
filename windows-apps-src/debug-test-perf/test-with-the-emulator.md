@@ -1,248 +1,248 @@
 ---
-author: mcleblanc
+author: PatrickFarley
 ms.assetid: 7234DD5F-8E86-424E-99A0-93D01F1311F2
-title: "Testen mit dem Emulator für Microsoft Windows 10 Mobile"
-description: "Mit den Tools des Emulators für Microsoft Windows 10 Mobile können Sie die Interaktion mit einem Gerät praxisnah simulieren und die Features Ihrer App testen."
-ms.author: markl
+title: "Testen mit dem Emulator für Microsoft Windows10Mobile"
+description: "Mit den Tools des Emulators für Microsoft Windows10Mobile können Sie die Interaktion mit einem Gerät praxisnah simulieren und die Features Ihrer App testen."
+ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c20b64cdc2a1335d4739d6790512eddd76bc8a08
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8eadf3ecc099e1f622ec49db4efa8f4f67c52d13
+ms.sourcegitcommit: e8cc657d85566768a6efb7cd972ebf64c25e0628
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/26/2017
 ---
-# <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Tests mit dem Emulator für Microsoft Windows 10 Mobile
+# <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a><span data-ttu-id="cba18-104">Tests mit dem Emulator für Microsoft Windows10Mobile</span><span class="sxs-lookup"><span data-stu-id="cba18-104">Test with the Microsoft Emulator for Windows 10 Mobile</span></span>
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+<span data-ttu-id="cba18-105">\[ Aktualisiert für UWP-Apps unter Windows10.</span><span class="sxs-lookup"><span data-stu-id="cba18-105">\[ Updated for UWP apps on Windows 10.</span></span> <span data-ttu-id="cba18-106">Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span><span class="sxs-lookup"><span data-stu-id="cba18-106">For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span></span>
 
-Mit den Tools des Emulators für Microsoft Windows 10 Mobile können Sie die praktische Interaktion mit einem Gerät simulieren und die Features Ihrer App testen. Der Emulator ist eine Desktopanwendung zur Emulierung eines mobilen Geräts unter Windows 10. Die Anwendung stellt eine virtualisierte Umgebung bereit, in der Sie Windows-Apps ohne physisches Gerät debuggen und testen können. Außerdem steht Ihnen eine isolierte Umgebung für Ihre Anwendungsprototypen zur Verfügung.
+<span data-ttu-id="cba18-107">Mit den Tools des Emulators für Microsoft Windows10Mobile können Sie die praktische Interaktion mit einem Gerät simulieren und die Features Ihrer App testen.</span><span class="sxs-lookup"><span data-stu-id="cba18-107">Simulate real-world interaction with a device and test the features of your app by using the tools included with Microsoft Emulator for Windows 10 Mobile.</span></span> <span data-ttu-id="cba18-108">Der Emulator ist eine Desktopanwendung zur Emulierung eines mobilen Geräts unter Windows10.</span><span class="sxs-lookup"><span data-stu-id="cba18-108">The emulator is a desktop application that emulates a mobile device running Windows 10.</span></span> <span data-ttu-id="cba18-109">Die Anwendung stellt eine virtualisierte Umgebung bereit, in der Sie Windows-Apps ohne physisches Gerät debuggen und testen können.</span><span class="sxs-lookup"><span data-stu-id="cba18-109">It provides a virtualized environment in which you can debug and test Windows apps without a physical device.</span></span> <span data-ttu-id="cba18-110">Außerdem steht Ihnen eine isolierte Umgebung für Ihre Anwendungsprototypen zur Verfügung.</span><span class="sxs-lookup"><span data-stu-id="cba18-110">It also provides an isolated environment for your application prototypes.</span></span>
 
-Die Leistung des Emulators ist mit der Leistung eines echten Geräts vergleichbar. Es empfiehlt sich jedoch, die App vor der Veröffentlichung im Windows Store auf einem physischen Gerät zu testen.
+<span data-ttu-id="cba18-111">Die Leistung des Emulators ist mit der Leistung eines echten Geräts vergleichbar.</span><span class="sxs-lookup"><span data-stu-id="cba18-111">The emulator is designed to provide comparable performance to an actual device.</span></span> <span data-ttu-id="cba18-112">Es empfiehlt sich jedoch, die App vor der Veröffentlichung im Windows Store auf einem physischen Gerät zu testen.</span><span class="sxs-lookup"><span data-stu-id="cba18-112">Before you publish your app to the Windows Store, however, we recommend that you test your app on a physical device.</span></span>
 
-Sie können Ihre universelle App mithilfe eines eindeutigen Windows 10 Mobile-Emulatorimages für verschiedene Bildschirmauflösungen und -größen testen. Mit den enthaltenen Tools des Microsoft-Emulators können Sie die praktische Interaktion mit einem Gerät simulieren und verschiedene Features Ihrer App testen.
+<span data-ttu-id="cba18-113">Sie können Ihre universelle App mithilfe eines eindeutigen Windows10Mobile-Emulatorimages für verschiedene Bildschirmauflösungen und -größen testen.</span><span class="sxs-lookup"><span data-stu-id="cba18-113">You can test your universal app using a unique Windows 10 Mobile emulator image for various screen resolution and screen size configurations.</span></span> <span data-ttu-id="cba18-114">Mit den enthaltenen Tools des Microsoft-Emulators können Sie die praktische Interaktion mit einem Gerät simulieren und verschiedene Features Ihrer App testen.</span><span class="sxs-lookup"><span data-stu-id="cba18-114">You can simulate real-world interaction with a device and test various features of your app by using the tools included in the Microsoft Emulator.</span></span>
 
-## <a name="system-requirements"></a>Systemanforderungen
+## <a name="system-requirements"></a><span data-ttu-id="cba18-115">Systemanforderungen</span><span class="sxs-lookup"><span data-stu-id="cba18-115">System requirements</span></span>
 
-Ihr Computer muss folgende Anforderungen erfüllen:
+<span data-ttu-id="cba18-116">Ihr Computer muss folgende Anforderungen erfüllen:</span><span class="sxs-lookup"><span data-stu-id="cba18-116">Your computer must meet the following requirements:</span></span>
 
-BIOS
+<span data-ttu-id="cba18-117">BIOS</span><span class="sxs-lookup"><span data-stu-id="cba18-117">BIOS</span></span>
 
--   Hardwareunterstützte Virtualisierung
--   SLAT (Second Level Address Translation)
--   Hardwarebasierte Datenausführungsverhinderung (Data Execution Prevention, DEP)
+-   <span data-ttu-id="cba18-118">Hardwareunterstützte Virtualisierung</span><span class="sxs-lookup"><span data-stu-id="cba18-118">Hardware-assisted virtualization.</span></span>
+-   <span data-ttu-id="cba18-119">SLAT (Second Level Address Translation)</span><span class="sxs-lookup"><span data-stu-id="cba18-119">Second Level Address Translation (SLAT).</span></span>
+-   <span data-ttu-id="cba18-120">Hardwarebasierte Datenausführungsverhinderung (Data Execution Prevention, DEP)</span><span class="sxs-lookup"><span data-stu-id="cba18-120">Hardware-based Data Execution Prevention (DEP).</span></span>
 
-RAM
+<span data-ttu-id="cba18-121">RAM</span><span class="sxs-lookup"><span data-stu-id="cba18-121">RAM</span></span>
 
--   Mindestens 4 GB
+-   <span data-ttu-id="cba18-122">Mindestens 4GB</span><span class="sxs-lookup"><span data-stu-id="cba18-122">4 GB or more.</span></span>
 
-Betriebssystem
+<span data-ttu-id="cba18-123">Betriebssystem</span><span class="sxs-lookup"><span data-stu-id="cba18-123">Operating system</span></span>
 
--   Mindestens Windows 8 (Windows 10 empfohlen)
--   64 Bit
--   Mindestens Pro-Edition
+-   <span data-ttu-id="cba18-124">Mindestens Windows8 (Windows10 empfohlen)</span><span class="sxs-lookup"><span data-stu-id="cba18-124">Windows 8 or higher (Windows 10 strongly recommended)</span></span>
+-   <span data-ttu-id="cba18-125">64Bit</span><span class="sxs-lookup"><span data-stu-id="cba18-125">64-bit</span></span>
+-   <span data-ttu-id="cba18-126">Mindestens Pro-Edition</span><span class="sxs-lookup"><span data-stu-id="cba18-126">Pro edition or higher</span></span>
 
-Informationen zum Überprüfen der BIOS-Anforderungen finden Sie unter [So wird's gemacht: Aktivieren von Hyper-V für den Emulator für Windows Phone 8](https://msdn.microsoft.com/library/windows/apps/xaml/jj863509.aspx).
+<span data-ttu-id="cba18-127">Informationen zum Überprüfen der BIOS-Anforderungen finden Sie unter [So wird's gemacht: Aktivieren von Hyper-V für den Emulator für Windows Phone8](https://msdn.microsoft.com/library/windows/apps/xaml/jj863509.aspx).</span><span class="sxs-lookup"><span data-stu-id="cba18-127">To check the BIOS requirements, see [How to enable Hyper-V for the emulator for Windows Phone 8](https://msdn.microsoft.com/library/windows/apps/xaml/jj863509.aspx).</span></span>
 
-Klicken Sie zum Überprüfen der RAM- und Betriebssystemanforderungen in der Systemsteuerung auf **System und Sicherheit** und anschließend auf **System**.
+<span data-ttu-id="cba18-128">Klicken Sie zum Überprüfen der RAM- und Betriebssystemanforderungen in der Systemsteuerung auf **System und Sicherheit** und anschließend auf **System**.</span><span class="sxs-lookup"><span data-stu-id="cba18-128">To check requirements for RAM and operating system, in Control Panel, click **System and Security**, and then click **System**.</span></span>
 
-Für den Microsoft-Emulator für Windows 10 Mobile wird Visual Studio 2015 benötigt. Er ist nicht mit älteren Versionen von Visual Studio kompatibel.
+<span data-ttu-id="cba18-129">Für den Microsoft-Emulator für Windows10Mobile wird Visual Studio2015 benötigt. Er ist nicht mit älteren Versionen von Visual Studio kompatibel.</span><span class="sxs-lookup"><span data-stu-id="cba18-129">Microsoft Emulator for Windows 10 Mobile requires Visual Studio 2015; it is not backward compatible with earlier versions of Visual Studio.</span></span>
 
-Der Microsoft-Emulator für Windows 10 Mobile kann keine Apps laden, die für eine Windows Phone-Betriebssystemversion vor Windows Phone OS 7.1 konzipiert sind.
+<span data-ttu-id="cba18-130">Der Microsoft-Emulator für Windows10Mobile kann keine Apps laden, die für eine WindowsPhone-Betriebssystemversion vor Windows Phone OS7.1 konzipiert sind.</span><span class="sxs-lookup"><span data-stu-id="cba18-130">Microsoft Emulator for Windows 10 Mobile cannot load apps that target the Windows Phone OS version earlier than Windows Phone OS 7.1.</span></span>
 
-## <a name="installing-and-uninstalling"></a>Installation und Deinstallation
+## <a name="installing-and-uninstalling"></a><span data-ttu-id="cba18-131">Installation und Deinstallation</span><span class="sxs-lookup"><span data-stu-id="cba18-131">Installing and uninstalling</span></span>
 
--   **Installation**.
+-   <span data-ttu-id="cba18-132">**Installation**.</span><span class="sxs-lookup"><span data-stu-id="cba18-132">**Installing**.</span></span>
 
-    Der Microsoft-Emulator für Windows 10 Mobile ist im Windows 10-SDK enthalten. Das Windows 10-SDK und der Emulator können zusammen mit Visual Studio 2015 installiert werden. Weitere Informationen finden Sie auf der [Downloadseite für Visual Studio](https://go.microsoft.com/fwlink/p/?LinkId=534785).
+    <span data-ttu-id="cba18-133">Der Microsoft-Emulator für Windows10Mobile ist im Windows10-SDK enthalten.</span><span class="sxs-lookup"><span data-stu-id="cba18-133">Microsoft Emulator for Windows 10 Mobile ships as part of the Windows 10 SDK.</span></span> <span data-ttu-id="cba18-134">Das Windows10-SDK und der Emulator können zusammen mit Visual Studio2015 installiert werden.</span><span class="sxs-lookup"><span data-stu-id="cba18-134">The Windows 10 SDK and emulator can be installed as part of the Visual Studio 2015 install.</span></span> <span data-ttu-id="cba18-135">Weitere Informationen finden Sie auf der [Downloadseite für Visual Studio](https://go.microsoft.com/fwlink/p/?LinkId=534785).</span><span class="sxs-lookup"><span data-stu-id="cba18-135">See the [Visual Studio download page](https://go.microsoft.com/fwlink/p/?LinkId=534785).</span></span>
 
-    Der Microsoft-Emulator für Windows 10 Mobile kann auch über das Microsoft-Emulator-Setup installiert werden. Weitere Informationen finden Sie auf der [Downloadseite für Windows 10-Tools](https://go.microsoft.com/fwlink/p/?LinkID=534189).
+    <span data-ttu-id="cba18-136">Der Microsoft-Emulator für Windows10Mobile kann auch über das Microsoft-Emulator-Setup installiert werden.</span><span class="sxs-lookup"><span data-stu-id="cba18-136">You can also install the Microsoft Emulator for Windows 10 Mobile using the Microsoft Emulator setup.</span></span> <span data-ttu-id="cba18-137">Weitere Informationen finden Sie auf der [Downloadseite für Windows10-Tools](https://go.microsoft.com/fwlink/p/?LinkID=534189).</span><span class="sxs-lookup"><span data-stu-id="cba18-137">See the [Windows 10 Tools download page](https://go.microsoft.com/fwlink/p/?LinkID=534189).</span></span>
 
--   **Deinstallation**.
+-   <span data-ttu-id="cba18-138">**Deinstallation**.</span><span class="sxs-lookup"><span data-stu-id="cba18-138">**Uninstalling**.</span></span>
 
-    Der Microsoft-Emulator für Windows 10 Mobile kann über die Setup-/Reparaturfunktion von Visual Studio deinstalliert werden Alternativ können Sie in der **Systemsteuerung** zu **Programme und Features** navigieren und den Emulator dort entfernen.
+    <span data-ttu-id="cba18-139">Der Microsoft-Emulator für Windows10Mobile kann über die Setup-/Reparaturfunktion von Visual Studio deinstalliert werden</span><span class="sxs-lookup"><span data-stu-id="cba18-139">You can uninstall the Microsoft Emulator for Windows 10 Mobile using Visual Studio setup/repair.</span></span> <span data-ttu-id="cba18-140">Alternativ können Sie in der Systemsteuerung**** zu **Programme und Features** navigieren und den Emulator dort entfernen.</span><span class="sxs-lookup"><span data-stu-id="cba18-140">Or you can use **Programs and Features** under **Control Panel** to remove the emulator.</span></span>
 
-    Wenn Sie den Microsoft-Emulator für Windows 10 Mobile deinstallieren, wird automatisch auch der virtuelle, für den Emulator erstellte Hyper-V-Ethernetadapter entfernt. Dieser virtuelle Adapter kann in der **Systemsteuerung** unter **Netzwerkverbindungen** manuell entfernt werden.
+    <span data-ttu-id="cba18-141">Wenn Sie den Microsoft-Emulator für Windows10Mobile deinstallieren, wird automatisch auch der virtuelle, für den Emulator erstellte Hyper-V-Ethernetadapter entfernt.</span><span class="sxs-lookup"><span data-stu-id="cba18-141">When you uninstall the Microsoft Emulator for Windows 10 Mobile, the Hyper-V Virtual Ethernet Adapter that was created for the emulator to use is not automatically removed.</span></span> <span data-ttu-id="cba18-142">Dieser virtuelle Adapter kann in der Systemsteuerung**** unter **Netzwerkverbindungen** manuell entfernt werden.</span><span class="sxs-lookup"><span data-stu-id="cba18-142">You can manually remove this virtual adapter from **Network Connections** in **Control Panel**.</span></span>
 
-## <a name="whats-new-in-microsoft-emulator-for-windows-10-mobile"></a>Neues beim Microsoft-Emulator für Windows 10 Mobile
+## <a name="whats-new-in-microsoft-emulator-for-windows-10-mobile"></a><span data-ttu-id="cba18-143">Neues beim Microsoft-Emulator für Windows10Mobile</span><span class="sxs-lookup"><span data-stu-id="cba18-143">What’s new in Microsoft Emulator for Windows 10 Mobile</span></span>
 
-Neben der Unterstützung der Universal Windows Platform (UWP) bietet der Emulator folgende zusätzliche Funktionen:
+<span data-ttu-id="cba18-144">Neben der Unterstützung der Universal Windows Platform (UWP) bietet der Emulator folgende zusätzliche Funktionen:</span><span class="sxs-lookup"><span data-stu-id="cba18-144">In addition to providing support for Universal Windows Platform (UWP), the emulator has added the following functionality:</span></span>
 
--   Unterstützung des Mauseingabemodus zur Unterscheidung zwischen Maus- und einzelner Toucheingabe.
--   NFC-Unterstützung. Der Emulator ermöglicht NFC-Simulationen sowie das Testen und Entwickeln universeller Apps mit NFC- und Näherungsfunktionen.
--   Systemeigene Hardwarebeschleunigung verbessert die Grafikleistung im Emulator durch die Verwendung der lokalen Grafikkarte. Um die Beschleunigung verwenden zu können, muss eine unterstützte Grafikkarte installiert sein, und Sie müssen die Beschleunigung auf der Registerkarte **Sensoren** auf der Einstellungsbenutzeroberfläche **Zusätzliche Tools** des Emulators aktivieren.
+-   <span data-ttu-id="cba18-145">Unterstützung des Mauseingabemodus zur Unterscheidung zwischen Maus- und einzelner Toucheingabe.</span><span class="sxs-lookup"><span data-stu-id="cba18-145">Mouse input mode support to differentiate between mouse and single touch input.</span></span>
+-   <span data-ttu-id="cba18-146">NFC-Unterstützung.</span><span class="sxs-lookup"><span data-stu-id="cba18-146">NFC Support.</span></span> <span data-ttu-id="cba18-147">Der Emulator ermöglicht NFC-Simulationen sowie das Testen und Entwickeln universeller Apps mit NFC- und Näherungsfunktionen.</span><span class="sxs-lookup"><span data-stu-id="cba18-147">The emulator allows you to simulate NFC and make it possible to test and develop NFC/Proximity-enabled universal apps.</span></span>
+-   <span data-ttu-id="cba18-148">Systemeigene Hardwarebeschleunigung verbessert die Grafikleistung im Emulator durch die Verwendung der lokalen Grafikkarte.</span><span class="sxs-lookup"><span data-stu-id="cba18-148">Native hardware acceleration improves graphics performance in the emulator by using the local graphics card.</span></span> <span data-ttu-id="cba18-149">Um die Beschleunigung verwenden zu können, muss eine unterstützte Grafikkarte installiert sein, und Sie müssen die Beschleunigung auf der Registerkarte **Sensoren** auf der Einstellungsbenutzeroberfläche **Zusätzliche Tools** des Emulators aktivieren.</span><span class="sxs-lookup"><span data-stu-id="cba18-149">You must have a supported graphics card installed, and enable acceleration on the **Sensors** tab of the emulator's **Additional Tools** settings user interface in order to use acceleration.</span></span>
 
-## <a name="features-that-you-can-test-in-the-emulator"></a>Features, die Sie im Emulator testen können
+## <a name="features-that-you-can-test-in-the-emulator"></a><span data-ttu-id="cba18-150">Features, die Sie im Emulator testen können</span><span class="sxs-lookup"><span data-stu-id="cba18-150">Features that you can test in the emulator</span></span>
 
-Zusätzlich zu den neuen Features, die im vorherigen Abschnitt erwähnt wurden, können Sie im Emulator für Microsoft Windows 10 Mobile die folgenden häufig verwendeten Features testen.
+<span data-ttu-id="cba18-151">Zusätzlich zu den neuen Features, die im vorherigen Abschnitt erwähnt wurden, können Sie im Emulator für Microsoft Windows 10 Mobile die folgenden häufig verwendeten Features testen.</span><span class="sxs-lookup"><span data-stu-id="cba18-151">In addition to the new features mentioned in the previous section, you can test the following commonly used features in the Microsoft Emulator for Windows 10 Mobile.</span></span>
 
--   **Bildschirmauflösung, Bildschirmgröße und Arbeitsspeicher**. Stellen Sie Ihre App einem breiten Markt zur Verfügung, indem Sie sie unter verschiedenen Emulatorimages testen, die verschiedene Bildschirmauflösungen, physische Größen und Arbeitsspeicherbeschränkungen simulieren.
+-   <span data-ttu-id="cba18-152">**Bildschirmauflösung, Bildschirmgröße und Arbeitsspeicher**.</span><span class="sxs-lookup"><span data-stu-id="cba18-152">**Screen resolution, screen size, and memory**.</span></span> <span data-ttu-id="cba18-153">Stellen Sie Ihre App einem breiten Markt zur Verfügung, indem Sie sie unter verschiedenen Emulatorimages testen, die verschiedene Bildschirmauflösungen, physische Größen und Arbeitsspeicherbeschränkungen simulieren.</span><span class="sxs-lookup"><span data-stu-id="cba18-153">Reach a broad market for your app by testing it on various emulator images to simulate various screen resolutions, physical sizes, and memory constraints.</span></span>
 
     ![Verfügbare Emulatoren mit Auflösung, Größe und Arbeitsspeicher](images/em-list.png)
 
--   **Bildschirmkonfiguration**. Ändern Sie den Emulatormodus von Hochformat in Querformat. Ändern Sie die Zoomeinstellung, um den Emulator an Ihren Desktopbildschirm anzupassen.
+-   <span data-ttu-id="cba18-155">**Bildschirmkonfiguration**.</span><span class="sxs-lookup"><span data-stu-id="cba18-155">**Screen configuration**.</span></span> <span data-ttu-id="cba18-156">Ändern Sie den Emulatormodus von Hochformat in Querformat.</span><span class="sxs-lookup"><span data-stu-id="cba18-156">Change the emulator from portrait to landscape mode.</span></span> <span data-ttu-id="cba18-157">Ändern Sie die Zoomeinstellung, um den Emulator an Ihren Desktopbildschirm anzupassen.</span><span class="sxs-lookup"><span data-stu-id="cba18-157">Change the zoom setting to fit the emulator to your desktop screen.</span></span>
 
--   **Netzwerke**. Der Windows Phone-Emulator verfügt über eine integrierte Netzwerkunterstützung. Die Netzwerkfunktionen sind standardmäßig aktiviert. In den meisten Umgebungen müssen Sie für den Windows Phone-Emulator keine Netzwerktreiber installieren oder manuell Netzwerkoptionen konfigurieren.
+-   <span data-ttu-id="cba18-158">**Netzwerke**.</span><span class="sxs-lookup"><span data-stu-id="cba18-158">**Networking**.</span></span> <span data-ttu-id="cba18-159">Der WindowsPhone-Emulator verfügt über eine integrierte Netzwerkunterstützung.</span><span class="sxs-lookup"><span data-stu-id="cba18-159">Networking support is integrated with Windows Phone Emulator.</span></span> <span data-ttu-id="cba18-160">Die Netzwerkfunktionen sind standardmäßig aktiviert.</span><span class="sxs-lookup"><span data-stu-id="cba18-160">Networking is enabled by default.</span></span> <span data-ttu-id="cba18-161">In den meisten Umgebungen müssen Sie für den WindowsPhone-Emulator keine Netzwerktreiber installieren oder manuell Netzwerkoptionen konfigurieren.</span><span class="sxs-lookup"><span data-stu-id="cba18-161">You do not have to install network drivers for Windows Phone Emulator or configure networking options manually in most environments.</span></span>
 
-    Der Emulator verwendet die Netzwerkverbindung des Hostcomputers. Er erscheint nicht als separates Gerät im Netzwerk. Dadurch werden einige der Konfigurationsprobleme vermieden, die bei Benutzern mit dem Emulator aus dem Windows Phone SDK 8.0 aufgetreten sind.
+    <span data-ttu-id="cba18-162">Der Emulator verwendet die Netzwerkverbindung des Hostcomputers.</span><span class="sxs-lookup"><span data-stu-id="cba18-162">The emulator uses the network connection of the host computer.</span></span> <span data-ttu-id="cba18-163">Er erscheint nicht als separates Gerät im Netzwerk.</span><span class="sxs-lookup"><span data-stu-id="cba18-163">It does not appear as a separate device on the network.</span></span> <span data-ttu-id="cba18-164">Dadurch werden einige der Konfigurationsprobleme vermieden, die bei Benutzern mit dem Emulator aus dem Windows Phone SDK8.0 aufgetreten sind.</span><span class="sxs-lookup"><span data-stu-id="cba18-164">This eliminates some of the configuration issues that users encountered with the Windows Phone SDK 8.0 emulator.</span></span>
 
--   **Sprach- und Regionseinstellungen**. Bereiten Sie Ihre App für den internationalen Markt vor, indem Sie die Anzeigesprache und die Regionseinstellungen im Windows Phone-Emulator ändern.
+-   <span data-ttu-id="cba18-165">**Sprach- und Regionseinstellungen**.</span><span class="sxs-lookup"><span data-stu-id="cba18-165">**Language and region settings**.</span></span> <span data-ttu-id="cba18-166">Bereiten Sie Ihre App für den internationalen Markt vor, indem Sie die Anzeigesprache und die Regionseinstellungen im WindowsPhone-Emulator ändern.</span><span class="sxs-lookup"><span data-stu-id="cba18-166">Prepare your app for an international market by changing the display language and region settings in Windows Phone Emulator.</span></span>
 
-    Navigieren Sie im ausgeführten Emulator zur **Einstellungs**-App, wählen Sie die **Systemeinstellungen** aus, und wählen Sie dann **Sprache** oder **Region** aus. Ändern Sie die Einstellungen, die Sie testen möchten. Wenn Sie dazu aufgefordert werden, klicken Sie auf **restart phone**, um die neuen Einstellungen anzuwenden und den Emulator neu zu starten.
+    <span data-ttu-id="cba18-167">Navigieren Sie im ausgeführten Emulator zur **Einstellungs**-App, wählen Sie die **System**einstellungen aus, und wählen Sie dann **Sprache** oder **Region** aus.</span><span class="sxs-lookup"><span data-stu-id="cba18-167">On the running emulator, go to the **Settings** app, then select the **system** settings, then select **language** or **region**.</span></span> <span data-ttu-id="cba18-168">Ändern Sie die Einstellungen, die Sie testen möchten.</span><span class="sxs-lookup"><span data-stu-id="cba18-168">Change the settings that you want to test.</span></span> <span data-ttu-id="cba18-169">Wenn Sie dazu aufgefordert werden, klicken Sie auf **restart phone**, um die neuen Einstellungen anzuwenden und den Emulator neu zu starten.</span><span class="sxs-lookup"><span data-stu-id="cba18-169">If you're prompted, click **restart phone** to apply the new settings and restart the emulator.</span></span>
 
--   **Anwendungslebenszyklus und Markieren als veraltet**. Testen Sie das Verhalten Ihrer App, wenn diese deaktiviert oder als veraltet markiert wird, indem Sie auf der Seite **Debug** der Projekteigenschaften den Wert der Option **Tombstone upon deactivation while debugging** ändern.
+-   <span data-ttu-id="cba18-170">**Anwendungslebenszyklus und Markieren als veraltet**.</span><span class="sxs-lookup"><span data-stu-id="cba18-170">**Application lifecycle and tombstoning**.</span></span> <span data-ttu-id="cba18-171">Testen Sie das Verhalten Ihrer App, wenn diese deaktiviert oder als veraltet markiert wird, indem Sie auf der Seite **Debug** der Projekteigenschaften den Wert der Option **Tombstone upon deactivation while debugging** ändern.</span><span class="sxs-lookup"><span data-stu-id="cba18-171">Test the behavior or your app when it's deactivated or tombstoned by changing the value of the option **Tombstone upon deactivation while debugging** on the **Debug** page of project properties.</span></span>
 
--   **Lokaler Ordnerspeicher (früher „isolierter Speicher“)**. Daten im isolierten Speicher bleiben während der Emulatorausführung erhalten, gehen beim Schließen des Emulators aber verloren.
+-   <span data-ttu-id="cba18-172">**Lokaler Ordnerspeicher (früher „isolierter Speicher“)**.</span><span class="sxs-lookup"><span data-stu-id="cba18-172">**Local folder storage (previously known as isolated storage)**.</span></span> <span data-ttu-id="cba18-173">Daten im isolierten Speicher bleiben während der Emulatorausführung erhalten, gehen beim Schließen des Emulators aber verloren.</span><span class="sxs-lookup"><span data-stu-id="cba18-173">Data in isolated storage persists while the emulator is running, but is lost once the emulator closes.</span></span>
 
--   **Mikrofon**. Erfordert und nutzt das Mikrofon des Hostcomputers.
+-   <span data-ttu-id="cba18-174">**Mikrofon**.</span><span class="sxs-lookup"><span data-stu-id="cba18-174">**Microphone**.</span></span> <span data-ttu-id="cba18-175">Erfordert und nutzt das Mikrofon des Hostcomputers.</span><span class="sxs-lookup"><span data-stu-id="cba18-175">Requires and uses the microphone on the host computer.</span></span>
 
--   **Phone-Tastatur**. Der Emulator unterstützt die Zuordnung der Hardware-Tastatur auf Ihrem Entwicklungscomputer zu einer Windows Phone-Tastatur. Das Verhalten der Tasten ist das gleiche wie auf einem Windows Phone-Gerät
+-   <span data-ttu-id="cba18-176">**Phone-Tastatur**.</span><span class="sxs-lookup"><span data-stu-id="cba18-176">**Phone keyboard**.</span></span> <span data-ttu-id="cba18-177">Der Emulator unterstützt die Zuordnung der Hardware-Tastatur auf Ihrem Entwicklungscomputer zu einer Windows Phone-Tastatur.</span><span class="sxs-lookup"><span data-stu-id="cba18-177">The emulator supports mapping of the hardware keyboard on your development computer to the keyboard on a Windows Phone.</span></span> <span data-ttu-id="cba18-178">Das Verhalten der Tasten ist das gleiche wie auf einem Windows Phone-Gerät</span><span class="sxs-lookup"><span data-stu-id="cba18-178">The behavior of the keys is the same as on a Windows Phone device</span></span>
 
--   **Sperrbildschirm**. Drücken Sie bei geöffnetem Emulator auf Ihrer Computertastatur zweimal F12. Die F12-TASTE emuliert die Ein/Aus-Taste des Smartphones. Mit dem ersten Tastendruck wird das Display ausgeschaltet. Mit dem zweiten Tastendruck wird das Display wieder eingeschaltet, und der Sperrbildschirm ist aktiviert. Entsperren Sie den Bildschirm, indem Sie den Sperrbildschirm mithilfe der Maus nach oben schieben.
+-   <span data-ttu-id="cba18-179">**Sperrbildschirm**.</span><span class="sxs-lookup"><span data-stu-id="cba18-179">**Lock screen**.</span></span> <span data-ttu-id="cba18-180">Drücken Sie bei geöffnetem Emulator auf Ihrer Computertastatur zweimal F12.</span><span class="sxs-lookup"><span data-stu-id="cba18-180">With the emulator open, press F12 on your computer keyboard twice.</span></span> <span data-ttu-id="cba18-181">Die F12-TASTE emuliert die Ein/Aus-Taste des Smartphones.</span><span class="sxs-lookup"><span data-stu-id="cba18-181">The F12 key emulates the power button on the phone.</span></span> <span data-ttu-id="cba18-182">Mit dem ersten Tastendruck wird das Display ausgeschaltet.</span><span class="sxs-lookup"><span data-stu-id="cba18-182">The first key press turns off the display.</span></span> <span data-ttu-id="cba18-183">Mit dem zweiten Tastendruck wird das Display wieder eingeschaltet, und der Sperrbildschirm ist aktiviert.</span><span class="sxs-lookup"><span data-stu-id="cba18-183">The second key press turns the display on again with the lock screen engaged.</span></span> <span data-ttu-id="cba18-184">Entsperren Sie den Bildschirm, indem Sie den Sperrbildschirm mithilfe der Maus nach oben schieben.</span><span class="sxs-lookup"><span data-stu-id="cba18-184">Unlock the screen by using the mouse to slide the lock screen upward.</span></span>
 
-## <a name="features-that-you-cant-test-in-the-emulator"></a>Features, die Sie im Emulator nicht testen können
+## <a name="features-that-you-cant-test-in-the-emulator"></a><span data-ttu-id="cba18-185">Features, die Sie im Emulator nicht testen können</span><span class="sxs-lookup"><span data-stu-id="cba18-185">Features that you can't test in the emulator</span></span>
 
-Testen Sie die folgenden Features nur auf einem physischen Gerät:
+<span data-ttu-id="cba18-186">Testen Sie die folgenden Features nur auf einem physischen Gerät:</span><span class="sxs-lookup"><span data-stu-id="cba18-186">Test the following features only on a physical device.</span></span>
 
--   Kompass
--   Gyroskop
--   Vibrationscontroller
--   Helligkeit. Die Helligkeitsstufe des Emulators entspricht immer "Hoch".
--   Videos mit hoher Auflösung. Videos mit einer höheren Auflösung als VGA (640 x 480) können nicht zuverlässig angezeigt werden. Dies gilt insbesondere für Emulatorimages mit nur 512 MB Arbeitsspeicher.
+-   <span data-ttu-id="cba18-187">Kompass</span><span class="sxs-lookup"><span data-stu-id="cba18-187">Compass</span></span>
+-   <span data-ttu-id="cba18-188">Gyroskop</span><span class="sxs-lookup"><span data-stu-id="cba18-188">Gyroscope</span></span>
+-   <span data-ttu-id="cba18-189">Vibrationscontroller</span><span class="sxs-lookup"><span data-stu-id="cba18-189">Vibration controller</span></span>
+-   <span data-ttu-id="cba18-190">Helligkeit.</span><span class="sxs-lookup"><span data-stu-id="cba18-190">Brightness.</span></span> <span data-ttu-id="cba18-191">Die Helligkeitsstufe des Emulators entspricht immer "Hoch".</span><span class="sxs-lookup"><span data-stu-id="cba18-191">The brightness level of the emulator is always High.</span></span>
+-   <span data-ttu-id="cba18-192">Videos mit hoher Auflösung.</span><span class="sxs-lookup"><span data-stu-id="cba18-192">High-resolution video.</span></span> <span data-ttu-id="cba18-193">Videos mit einer höheren Auflösung als VGA (640x480) können nicht zuverlässig angezeigt werden. Dies gilt insbesondere für Emulatorimages mit nur 512MB Arbeitsspeicher.</span><span class="sxs-lookup"><span data-stu-id="cba18-193">Videos with a resolution higher than VGA resolution (640 x 480) cannot be displayed reliably, especially on emulator images with only 512MB of memory.</span></span>
 
-## <a name="mouse-input"></a>Mauseingabe
+## <a name="mouse-input"></a><span data-ttu-id="cba18-194">Mauseingabe</span><span class="sxs-lookup"><span data-stu-id="cba18-194">Mouse input</span></span>
 
-Simuliert Mauseingaben über die physische Maus oder das physische Trackpad Ihres Windows-PCs und die Mauseingabeschaltfläche auf der Symbolleiste des Emulators. Dieses Feature ist hilfreich, wenn der Benutzer in Ihrer App eine mit seinem Windows 10-Gerät gekoppelte Maus verwenden kann.
+<span data-ttu-id="cba18-195">Simuliert Mauseingaben über die physische Maus oder das physische Trackpad Ihres Windows-PCs und die Mauseingabeschaltfläche auf der Symbolleiste des Emulators.</span><span class="sxs-lookup"><span data-stu-id="cba18-195">Simulate mouse input using the physical mouse or trackpad on your Windows PC and the mouse input button on the emulator toolbar.</span></span> <span data-ttu-id="cba18-196">Dieses Feature ist hilfreich, wenn der Benutzer in Ihrer App eine mit seinem Windows10-Gerät gekoppelte Maus verwenden kann.</span><span class="sxs-lookup"><span data-stu-id="cba18-196">This feature is useful if your app provides the user with an ability to utilize a mouse paired to their Windows 10 device to provide input.</span></span>
 
-Tippen Sie auf der Symbolleiste des Emulators auf die Mauseingabeschaltfläche, um die Mauseingabe zu aktivieren. Jedes Klickereignis innerhalb des Emulators wird nun als Mausereignis an das im Emulator ausgeführte Windows 10 Mobile-Betriebssystem gesendet.
+<span data-ttu-id="cba18-197">Tippen Sie auf der Symbolleiste des Emulators auf die Mauseingabeschaltfläche, um die Mauseingabe zu aktivieren.</span><span class="sxs-lookup"><span data-stu-id="cba18-197">Tap the mouse input button on the emulator toolbar to enable mouse input.</span></span> <span data-ttu-id="cba18-198">Jedes Klickereignis innerhalb des Emulators wird nun als Mausereignis an das im Emulator ausgeführte Windows10Mobile-Betriebssystem gesendet.</span><span class="sxs-lookup"><span data-stu-id="cba18-198">Any click events within the emulator chrome will now be sent to the Windows 10 Mobile OS running inside the emulator VM as mouse events.</span></span>
 
 ![Emulatorbildschirm mit aktivierter Mauseingabe](images/emulator-with-mouse-enabled.png)
 
-Der Emulatorbildschirm mit aktivierter Mauseingabe.
+<span data-ttu-id="cba18-200">Der Emulatorbildschirm mit aktivierter Mauseingabe.</span><span class="sxs-lookup"><span data-stu-id="cba18-200">The emulator screen with the mouse input enabled.</span></span>
 
 ![Die Mauseingabeschaltfläche auf der Symbolleiste des Emulators.](images/emulator-showing-mouse-input-button-bar.png)
 
-Die Mauseingabeschaltfläche auf der Symbolleiste des Emulators.
+<span data-ttu-id="cba18-202">Die Mauseingabeschaltfläche auf der Symbolleiste des Emulators.</span><span class="sxs-lookup"><span data-stu-id="cba18-202">The mouse input button on the emulator toolbar.</span></span>
 
-## <a name="keyboard-input"></a>Tastatureingabe
+## <a name="keyboard-input"></a><span data-ttu-id="cba18-203">Tastatureingabe</span><span class="sxs-lookup"><span data-stu-id="cba18-203">Keyboard input</span></span>
 
-Der Emulator unterstützt die Zuordnung der Hardware-Tastatur auf Ihrem Entwicklungscomputer zu einer Windows Phone-Tastatur. Das Verhalten der Tasten ist das gleiche wie auf einem Windows Phone-Gerät. 
+<span data-ttu-id="cba18-204">Der Emulator unterstützt die Zuordnung der Hardware-Tastatur auf Ihrem Entwicklungscomputer zu einer Windows Phone-Tastatur.</span><span class="sxs-lookup"><span data-stu-id="cba18-204">The emulator supports mapping of the hardware keyboard on your development computer to the keyboard on a Windows Phone.</span></span> <span data-ttu-id="cba18-205">Das Verhalten der Tasten ist das gleiche wie auf einem Windows Phone-Gerät.</span><span class="sxs-lookup"><span data-stu-id="cba18-205">The behavior of the keys is the same as on a Windows Phone device.</span></span> 
 
-Die Hardware-Tastatur ist standardmäßig nicht aktiviert. Diese Implementierung entspricht eine gleitende Tastatur, die bereitgestellt werden muss, bevor Sie verwendet werden kann. Bevor Sie die Hardwaretastatur aktivieren, akzeptiert der Emulator Tastatureingaben nur von den Steuerelementtasten.
+<span data-ttu-id="cba18-206">Die Hardware-Tastatur ist standardmäßig nicht aktiviert.</span><span class="sxs-lookup"><span data-stu-id="cba18-206">By default, the hardware keyboard is not enabled.</span></span> <span data-ttu-id="cba18-207">Diese Implementierung entspricht eine gleitende Tastatur, die bereitgestellt werden muss, bevor Sie verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="cba18-207">This implementation is equivalent to a sliding keyboard that must be deployed before you can use it.</span></span> <span data-ttu-id="cba18-208">Bevor Sie die Hardwaretastatur aktivieren, akzeptiert der Emulator Tastatureingaben nur von den Steuerelementtasten.</span><span class="sxs-lookup"><span data-stu-id="cba18-208">Before you enable the hardware keyboard, the emulator accepts key input only from the control keys.</span></span>
 
-Sonderzeichen auf der Tastatur einer lokalisierten Version eines Windows-Entwicklungscomputer werden vom Emulator nicht unterstützt. Um Sonderzeichen einzugeben, die auf einer lokalisierten Tastatur vorhanden sind, verwenden Sie stattdessen den Eingabebereich (Software Input Panel, SIP). 
+<span data-ttu-id="cba18-209">Sonderzeichen auf der Tastatur einer lokalisierten Version eines Windows-Entwicklungscomputer werden vom Emulator nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="cba18-209">Special characters on the keyboard of a localized version of a Windows development computer are not supported by the emulator.</span></span> <span data-ttu-id="cba18-210">Um Sonderzeichen einzugeben, die auf einer lokalisierten Tastatur vorhanden sind, verwenden Sie stattdessen den Eingabebereich (Software Input Panel, SIP).</span><span class="sxs-lookup"><span data-stu-id="cba18-210">To enter special characters that are present on a localized keyboard, use the Software Input Panel (SIP) instead.</span></span> 
 
-Drücken Sie F4, um die Tastatur des Computers im Emulator zu verwenden.
+<span data-ttu-id="cba18-211">Drücken Sie F4, um die Tastatur des Computers im Emulator zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="cba18-211">To use your computer’s keyboard in the emulator, press F4.</span></span>
 
-Drücken Sie F4, um die Verwendung der Tastatur des Computers im Emulator zu beenden.
+<span data-ttu-id="cba18-212">Drücken Sie F4, um die Verwendung der Tastatur des Computers im Emulator zu beenden.</span><span class="sxs-lookup"><span data-stu-id="cba18-212">To stop using your computer’s keyboard in the emulator, press F4.</span></span>
 
-Die folgende Tabelle enthält die Tasten einer Hardwaretastatur, die Sie verwenden können, um Schaltflächen und andere Steuerelemente auf einem Windows Phone zu emulieren.
+<span data-ttu-id="cba18-213">Die folgende Tabelle enthält die Tasten einer Hardwaretastatur, die Sie verwenden können, um Schaltflächen und andere Steuerelemente auf einem Windows Phone zu emulieren.</span><span class="sxs-lookup"><span data-stu-id="cba18-213">The following table lists the keys on a hardware keyboard that you can use to emulate the buttons and other controls on a Windows Phone.</span></span>
 
-Beachten Sie, dass mit Emulator Build 10.0.14332 die Zuordnung der Computerhardwaretasten geändert wurde. Die Einträge in der zweiten Spalte der folgenden Tabelle bezeichnen diese neuen Tasten. 
+<span data-ttu-id="cba18-214">Beachten Sie, dass mit Emulator Build 10.0.14332 die Zuordnung der Computerhardwaretasten geändert wurde.</span><span class="sxs-lookup"><span data-stu-id="cba18-214">Note that in Emulator Build 10.0.14332 the computer hardware key mapping was changed.</span></span> <span data-ttu-id="cba18-215">Die Einträge in der zweiten Spalte der folgenden Tabelle bezeichnen diese neuen Tasten.</span><span class="sxs-lookup"><span data-stu-id="cba18-215">Values in the second column of the table below represent these new keys.</span></span> 
 
-Computerhardwaretasten (Emulator Build 10.0.14295 und früher) | Computerhardwaretasten (Emulator Build 10.0.14332 und höher) | Windows Phone-Hardwaretaste | Hinweise
+<span data-ttu-id="cba18-216">Computerhardwaretasten (Emulator Build 10.0.14295 und früher)</span><span class="sxs-lookup"><span data-stu-id="cba18-216">Computer hardware keys (Emulator Build 10.0.14295 and earlier)</span></span> | <span data-ttu-id="cba18-217">Computerhardwaretasten (Emulator Build 10.0.14332 und höher)</span><span class="sxs-lookup"><span data-stu-id="cba18-217">Computer hardware keys (Emulator Build 10.0.14332 and newer)</span></span> | <span data-ttu-id="cba18-218">Windows Phone-Hardwaretaste</span><span class="sxs-lookup"><span data-stu-id="cba18-218">Windows Phone hardware button</span></span> | <span data-ttu-id="cba18-219">Hinweise</span><span class="sxs-lookup"><span data-stu-id="cba18-219">Notes</span></span>
 --------------------- | ------------------------- | ----------------------------- | -----
-F1 | WIN + ESC | Zurück | Eine lange Betätigung funktioniert wie erwartet.
-F2 | WIN + F2 | Start | Eine lange Betätigung funktioniert wie erwartet.
-F3 | WIN + F3 | Suche |  
-F4 | F4 (keine Änderung) | Schaltet die Verwendung der lokalen Computertastatur ein oder aus. | 
-F6 | WIN + F6 | Kamera halb | Eine dedizierte Kamerataste, die halb gedrückt wird.
-F7 | WIN + F7 | Kamera ganz | Eine dedizierte Kamerataste
-F9 | WIN + F9 | Lauter | 
-F10 | WIN + F10 | Leiser | 
-F12 | WIN + F12 | Stromversorgung | Drücken Sie die Taste F12 zweimal, um den Sperrbildschirm zu aktivieren. Eine lange Betätigung funktioniert wie erwartet.
-ESC | WIN + ESC | Zurück | Eine lange Betätigung funktioniert wie erwartet.
+<span data-ttu-id="cba18-220">F1</span><span class="sxs-lookup"><span data-stu-id="cba18-220">F1</span></span> | <span data-ttu-id="cba18-221">WIN + ESC</span><span class="sxs-lookup"><span data-stu-id="cba18-221">WIN + ESC</span></span> | <span data-ttu-id="cba18-222">Zurück</span><span class="sxs-lookup"><span data-stu-id="cba18-222">BACK</span></span> | <span data-ttu-id="cba18-223">Eine lange Betätigung funktioniert wie erwartet.</span><span class="sxs-lookup"><span data-stu-id="cba18-223">Long presses work as expected.</span></span>
+<span data-ttu-id="cba18-224">F2</span><span class="sxs-lookup"><span data-stu-id="cba18-224">F2</span></span> | <span data-ttu-id="cba18-225">WIN + F2</span><span class="sxs-lookup"><span data-stu-id="cba18-225">WIN + F2</span></span> | <span data-ttu-id="cba18-226">Start</span><span class="sxs-lookup"><span data-stu-id="cba18-226">START</span></span> | <span data-ttu-id="cba18-227">Eine lange Betätigung funktioniert wie erwartet.</span><span class="sxs-lookup"><span data-stu-id="cba18-227">Long presses work as expected.</span></span>
+<span data-ttu-id="cba18-228">F3</span><span class="sxs-lookup"><span data-stu-id="cba18-228">F3</span></span> | <span data-ttu-id="cba18-229">WIN + F3</span><span class="sxs-lookup"><span data-stu-id="cba18-229">WIN + F3</span></span> | <span data-ttu-id="cba18-230">Suche</span><span class="sxs-lookup"><span data-stu-id="cba18-230">SEARCH</span></span> |  
+<span data-ttu-id="cba18-231">F4</span><span class="sxs-lookup"><span data-stu-id="cba18-231">F4</span></span> | <span data-ttu-id="cba18-232">F4 (keine Änderung)</span><span class="sxs-lookup"><span data-stu-id="cba18-232">F4 (no change)</span></span> | <span data-ttu-id="cba18-233">Schaltet die Verwendung der lokalen Computertastatur ein oder aus.</span><span class="sxs-lookup"><span data-stu-id="cba18-233">Toggles between using the local computer’s keyboard and not using the local computer’s keyboard.</span></span> | 
+<span data-ttu-id="cba18-234">F6</span><span class="sxs-lookup"><span data-stu-id="cba18-234">F6</span></span> | <span data-ttu-id="cba18-235">WIN + F6</span><span class="sxs-lookup"><span data-stu-id="cba18-235">WIN + F6</span></span> | <span data-ttu-id="cba18-236">Kamera halb</span><span class="sxs-lookup"><span data-stu-id="cba18-236">CAMERA HALF</span></span> | <span data-ttu-id="cba18-237">Eine dedizierte Kamerataste, die halb gedrückt wird.</span><span class="sxs-lookup"><span data-stu-id="cba18-237">A dedicated camera button that is pressed halfway.</span></span>
+<span data-ttu-id="cba18-238">F7</span><span class="sxs-lookup"><span data-stu-id="cba18-238">F7</span></span> | <span data-ttu-id="cba18-239">WIN + F7</span><span class="sxs-lookup"><span data-stu-id="cba18-239">WIN + F7</span></span> | <span data-ttu-id="cba18-240">Kamera ganz</span><span class="sxs-lookup"><span data-stu-id="cba18-240">CAMERA FULL</span></span> | <span data-ttu-id="cba18-241">Eine dedizierte Kamerataste</span><span class="sxs-lookup"><span data-stu-id="cba18-241">A dedicated camera button.</span></span>
+<span data-ttu-id="cba18-242">F9</span><span class="sxs-lookup"><span data-stu-id="cba18-242">F9</span></span> | <span data-ttu-id="cba18-243">WIN + F9</span><span class="sxs-lookup"><span data-stu-id="cba18-243">WIN + F9</span></span> | <span data-ttu-id="cba18-244">Lauter</span><span class="sxs-lookup"><span data-stu-id="cba18-244">VOLUME UP</span></span> | 
+<span data-ttu-id="cba18-245">F10</span><span class="sxs-lookup"><span data-stu-id="cba18-245">F10</span></span> | <span data-ttu-id="cba18-246">WIN + F10</span><span class="sxs-lookup"><span data-stu-id="cba18-246">WIN + F10</span></span> | <span data-ttu-id="cba18-247">Leiser</span><span class="sxs-lookup"><span data-stu-id="cba18-247">VOLUME DOWN</span></span> | 
+<span data-ttu-id="cba18-248">F12</span><span class="sxs-lookup"><span data-stu-id="cba18-248">F12</span></span> | <span data-ttu-id="cba18-249">WIN + F12</span><span class="sxs-lookup"><span data-stu-id="cba18-249">WIN + F12</span></span> | <span data-ttu-id="cba18-250">Stromversorgung</span><span class="sxs-lookup"><span data-stu-id="cba18-250">POWER</span></span> | <span data-ttu-id="cba18-251">Drücken Sie die Taste F12 zweimal, um den Sperrbildschirm zu aktivieren.</span><span class="sxs-lookup"><span data-stu-id="cba18-251">Press the F12 key twice to enable the lock screen.</span></span> <span data-ttu-id="cba18-252">Eine lange Betätigung funktioniert wie erwartet.</span><span class="sxs-lookup"><span data-stu-id="cba18-252">Long presses work as expected.</span></span>
+<span data-ttu-id="cba18-253">ESC</span><span class="sxs-lookup"><span data-stu-id="cba18-253">ESC</span></span> | <span data-ttu-id="cba18-254">WIN + ESC</span><span class="sxs-lookup"><span data-stu-id="cba18-254">WIN + ESC</span></span> | <span data-ttu-id="cba18-255">Zurück</span><span class="sxs-lookup"><span data-stu-id="cba18-255">BACK</span></span> | <span data-ttu-id="cba18-256">Eine lange Betätigung funktioniert wie erwartet.</span><span class="sxs-lookup"><span data-stu-id="cba18-256">Long presses work as expected.</span></span>
  
 
 
-## <a name="near-field-communications-nfc"></a>Near Field Communication (NFC)
+## <a name="near-field-communications-nfc"></a><span data-ttu-id="cba18-257">Near Field Communication (NFC)</span><span class="sxs-lookup"><span data-stu-id="cba18-257">Near Field Communications (NFC)</span></span>
 
-Erstellen und testen Sie Apps mit NFC-Features (Near Field Communication) unter Windows 10 Mobile mithilfe der Registerkarte **NFC** im Menü **Zusätzliche Tools** des Emulators. NFC kann in einer Vielzahl von Szenarien eingesetzt werden – von Näherungsszenarien (z. B. „Zum Senden berühren“) bis hin zur Emulierung von Karten (z. B. „Zum Bezahlen berühren“).
+<span data-ttu-id="cba18-258">Erstellen und testen Sie Apps mit NFC-Features (Near Field Communication) unter Windows 10 Mobile mithilfe der Registerkarte **NFC** im Menü **Zusätzliche Tools** des Emulators.</span><span class="sxs-lookup"><span data-stu-id="cba18-258">Build and test apps that use Near Field Communication (NFC) enabled features on Windows 10 Mobile by using the **NFC** tab of the emulator’s **Additional Tools** menu.</span></span> <span data-ttu-id="cba18-259">NFC kann in einer Vielzahl von Szenarien eingesetzt werden – von Näherungsszenarien (z.B. „Zum Senden berühren“) bis hin zur Emulierung von Karten (z.B. „Zum Bezahlen berühren“).</span><span class="sxs-lookup"><span data-stu-id="cba18-259">NFC is useful for a number of scenarios ranging from Proximity scenarios (such as tap to share) to card emulation (such as tap to pay).</span></span>
 
-Zum Testen Ihrer App können Sie mithilfe eines Emulatorpaars zwei sich berührende Smartphones simulieren. Alternativ können Sie Ihre App testen, indem Sie eine Berührung mit einem Tag simulieren. Unter Windows 10 verfügen mobile Geräte zudem über HCE (Host Karte Emulation). Mithilfe des Smartphone-Emulators können Sie die Berührung Ihres Geräts mit einem Bezahlterminal für APDU-Befehl/Antwort-Datenverkehr simulieren.
+<span data-ttu-id="cba18-260">Zum Testen Ihrer App können Sie mithilfe eines Emulatorpaars zwei sich berührende Smartphones simulieren. Alternativ können Sie Ihre App testen, indem Sie eine Berührung mit einem Tag simulieren.</span><span class="sxs-lookup"><span data-stu-id="cba18-260">You can test your app by simulating a pair of phones tapping together by using a pair of emulators, or you can test your app by simulating a tap to a tag.</span></span> <span data-ttu-id="cba18-261">Unter Windows10 verfügen mobile Geräte zudem über HCE (Host Karte Emulation). Mithilfe des Smartphone-Emulators können Sie die Berührung Ihres Geräts mit einem Bezahlterminal für APDU-Befehl/Antwort-Datenverkehr simulieren.</span><span class="sxs-lookup"><span data-stu-id="cba18-261">Also in Windows 10, mobile devices are enabled with HCE (Host Card Emulation) feature and by using the phone emulator you can simulate tapping your device to a payment terminal for APDU command-response traffic.</span></span>
 
-Die NFC-Registerkarte unterstützt drei Modi.
+<span data-ttu-id="cba18-262">Die NFC-Registerkarte unterstützt drei Modi.</span><span class="sxs-lookup"><span data-stu-id="cba18-262">The NFC tab supports three modes:</span></span>
 
--   Näherungsmodus
--   HCE-Modus (Host Card Emulation)
--   Smartcardlesemodus
+-   <span data-ttu-id="cba18-263">Näherungsmodus</span><span class="sxs-lookup"><span data-stu-id="cba18-263">Proximity Mode</span></span>
+-   <span data-ttu-id="cba18-264">HCE-Modus (Host Card Emulation)</span><span class="sxs-lookup"><span data-stu-id="cba18-264">HCE (Host Card Emulation) Mode</span></span>
+-   <span data-ttu-id="cba18-265">Smartcardlesemodus</span><span class="sxs-lookup"><span data-stu-id="cba18-265">Smart Card Reader Mode</span></span>
 
-In allen Modi bietet das Emulatorfenster drei interessante Bereiche.
+<span data-ttu-id="cba18-266">In allen Modi bietet das Emulatorfenster drei interessante Bereiche.</span><span class="sxs-lookup"><span data-stu-id="cba18-266">In all modes, the emulator window has three areas of interest.</span></span>
 
--   Der Abschnitt links oben ist modusspezifisch. Die Features dieses Abschnitts sind abhängig vom gewählten Modus und werden in den modusspezifischen Abschnitten weiter unten ausführlich beschrieben.
--   Rechts oben befinden sich die Protokolle. Wenn Sie ein Gerätepaar aneinander oder ein Gerät an das POS-Terminal halten, wird dieses Ereignis protokolliert. Gleiches gilt, wenn die Geräte wieder voneinander getrennt werden. In diesem Abschnitt wird auch erfasst, ob Ihre App vor dem Verbindungsabbruch reagiert hat, und alle Aktionen, die Sie auf der Benutzeroberfläche des Emulators ausgeführt haben, werden mit Zeitstempel dokumentiert. Die Protokolle bleiben beim Moduswechsel erhalten und können mithilfe der Löschschaltfläche**** über dem Protokollbildschirm**** jederzeit gelöscht werden.
--   Die untere Bildschirmhälfte fungiert als Meldungsprotokoll und zeigt abhängig vom ausgewählten Modus die Aufzeichnung aller Meldungen, die über die derzeit ausgewählte Verbindung gesendet oder empfangen werden.
+-   <span data-ttu-id="cba18-267">Der Abschnitt links oben ist modusspezifisch.</span><span class="sxs-lookup"><span data-stu-id="cba18-267">The top left section is specific to the mode selected.</span></span> <span data-ttu-id="cba18-268">Die Features dieses Abschnitts sind abhängig vom gewählten Modus und werden in den modusspezifischen Abschnitten weiter unten ausführlich beschrieben.</span><span class="sxs-lookup"><span data-stu-id="cba18-268">The features of this section depend on the mode, and are detailed in the mode-specific sections below.</span></span>
+-   <span data-ttu-id="cba18-269">Rechts oben befinden sich die Protokolle.</span><span class="sxs-lookup"><span data-stu-id="cba18-269">The top right section lists the logs.</span></span> <span data-ttu-id="cba18-270">Wenn Sie ein Gerätepaar aneinander oder ein Gerät an das POS-Terminal halten, wird dieses Ereignis protokolliert. Gleiches gilt, wenn die Geräte wieder voneinander getrennt werden.</span><span class="sxs-lookup"><span data-stu-id="cba18-270">When you tap a pair of devices together (or tap to the POS terminal) the tap event is logged and when the devices are untapped the untap event is logged.</span></span> <span data-ttu-id="cba18-271">In diesem Abschnitt wird auch erfasst, ob Ihre App vor dem Verbindungsabbruch reagiert hat, und alle Aktionen, die Sie auf der Benutzeroberfläche des Emulators ausgeführt haben, werden mit Zeitstempel dokumentiert.</span><span class="sxs-lookup"><span data-stu-id="cba18-271">This section also records if your app responded before the connection is broken or any other action you have taken in the emulator UI with time stamps.</span></span> <span data-ttu-id="cba18-272">Die Protokolle bleiben beim Moduswechsel erhalten und können mithilfe der Löschschaltfläche**** über dem Protokollbildschirm**** jederzeit gelöscht werden.</span><span class="sxs-lookup"><span data-stu-id="cba18-272">Logs are persistent between mode switches, and you can clear the logs at any point by hitting the **Clear** button above the **Logs** screen.</span></span>
+-   <span data-ttu-id="cba18-273">Die untere Bildschirmhälfte fungiert als Meldungsprotokoll und zeigt abhängig vom ausgewählten Modus die Aufzeichnung aller Meldungen, die über die derzeit ausgewählte Verbindung gesendet oder empfangen werden.</span><span class="sxs-lookup"><span data-stu-id="cba18-273">The bottom half of the screen is the message log and shows the transcript of all messages sent or received over the currently selected connection, depending on the mode selected.</span></span>
 
-> **Wichtig**  Beim erstmaligen Starten des Tapper-Tools erscheint eine Eingabeaufforderung der Windows-Firewall. Aktivieren Sie unbedingt alle drei Kontrollkästchen, und lassen Sie das Tool durch die Firewall, da es ansonsten nicht funktioniert.
+> <span data-ttu-id="cba18-274">**Wichtig**  Beim erstmaligen Starten des Tapper-Tools erscheint eine Eingabeaufforderung der Windows-Firewall.</span><span class="sxs-lookup"><span data-stu-id="cba18-274">**Important**  When you first launch the tapper tool, you will get a Windows Firewall prompt.</span></span> <span data-ttu-id="cba18-275">Aktivieren Sie unbedingt alle drei Kontrollkästchen, und lassen Sie das Tool durch die Firewall, da es ansonsten nicht funktioniert.</span><span class="sxs-lookup"><span data-stu-id="cba18-275">You MUST select ALL 3 check boxes and allow the tool through the firewall, or the tool will silently fail to work.</span></span>
 
-Halten Sie sich nach dem Starten des Schnellstart-Installationsprogramms an die obige Anweisung, und aktivieren Sie in der Eingabeaufforderung der Firewall alle drei Kontrollkästchen. Das Tapper-Tool muss außerdem auf dem gleichen physischen Hostcomputer installiert und verwendet werden wie der Microsoft-Emulator.
+<span data-ttu-id="cba18-276">Halten Sie sich nach dem Starten des Schnellstart-Installationsprogramms an die obige Anweisung, und aktivieren Sie in der Eingabeaufforderung der Firewall alle drei Kontrollkästchen.</span><span class="sxs-lookup"><span data-stu-id="cba18-276">After launching the quick start installer, make sure you follow the above instruction to select all 3 check boxes on the firewall prompt.</span></span> <span data-ttu-id="cba18-277">Das Tapper-Tool muss außerdem auf dem gleichen physischen Hostcomputer installiert und verwendet werden wie der Microsoft-Emulator.</span><span class="sxs-lookup"><span data-stu-id="cba18-277">Also, the tapper tool must be installed and used on the same physical host machine as the Microsoft Emulator.</span></span>
 
-### <a name="proximity-mode"></a>Näherungsmodus
+### <a name="proximity-mode"></a><span data-ttu-id="cba18-278">Näherungsmodus</span><span class="sxs-lookup"><span data-stu-id="cba18-278">Proximity mode</span></span>
 
-Zum Simulieren der Berührung zweier Smartphones müssen Sie ein Windows Phone 8-Emulatorpaar starten. Da Visual Studio die Ausführung zweier identischer Emulatoren nicht unterstützt, muss für die Emulatoren jeweils eine andere Auflösung ausgewählt werden.
+<span data-ttu-id="cba18-279">Zum Simulieren der Berührung zweier Smartphones müssen Sie ein WindowsPhone8-Emulatorpaar starten.</span><span class="sxs-lookup"><span data-stu-id="cba18-279">To simulate a pair of phones tapping together you'll need to launch a pair of Windows Phone 8 emulators.</span></span> <span data-ttu-id="cba18-280">Da Visual Studio die Ausführung zweier identischer Emulatoren nicht unterstützt, muss für die Emulatoren jeweils eine andere Auflösung ausgewählt werden.</span><span class="sxs-lookup"><span data-stu-id="cba18-280">Since Visual Studio doesn't support running two identical emulators at the same time, you'll need to select different resolutions for each of the emulators to work around it.</span></span>
 
 ![Die Näherungsseite für NFC](images/emulator-nfc-proximity.png)
 
-Wenn Sie das Kontrollkästchen **Enable discovery of peer devices** aktivieren, enthält das Dropdownfeld **Peer device** Microsoft-Emulatoren (die auf dem gleichen physischen Hostcomputer oder im lokalen Netzwerk ausgeführt werden) sowie die Windows-Computer, auf denen der Simulatortreiber ausgeführt wird (auf dem gleichen Computer oder im lokalen Netzwerk).
+<span data-ttu-id="cba18-282">Wenn Sie das Kontrollkästchen **Enable discovery of peer devices** aktivieren, enthält das Dropdownfeld **Peer device** Microsoft-Emulatoren (die auf dem gleichen physischen Hostcomputer oder im lokalen Netzwerk ausgeführt werden) sowie die Windows-Computer, auf denen der Simulatortreiber ausgeführt wird (auf dem gleichen Computer oder im lokalen Netzwerk).</span><span class="sxs-lookup"><span data-stu-id="cba18-282">When you check the **Enable discovery of peer devices** checkbox, the **Peer device** dropdown box shows Microsoft Emulators (running on the same physical host machine or in the local network) as well as the Windows machines running the simulator driver (running on the same machine or in the local network).</span></span>
 
-Wenn beide Emulatoren ausgeführt werden, gehen Sie wie folgt vor:
+<span data-ttu-id="cba18-283">Wenn beide Emulatoren ausgeführt werden, gehen Sie wie folgt vor:</span><span class="sxs-lookup"><span data-stu-id="cba18-283">Once both emulators are running:</span></span>
 
--   Wählen Sie in der Liste mit den Peergeräten**** den gewünschten Ziel-Emulator aus.
--   Aktivieren Sie das Optionsfeld **Send to peer device** (An Peergerät senden).
--   Klicken Sie auf die Schaltfläche **Tap** (Berühren). Dadurch wird die Berührung der beiden Geräte simuliert und der entsprechende NFC-Benachrichtigungssound ausgegeben.
--   Klicken Sie zum Trennen der beiden Geräte einfach auf die Schaltfläche **Untap** (Trennen).
+-   <span data-ttu-id="cba18-284">Wählen Sie in der Liste mit den Peergeräten**** den gewünschten Ziel-Emulator aus.</span><span class="sxs-lookup"><span data-stu-id="cba18-284">Select the emulator you would like to target in the **Peer device** list.</span></span>
+-   <span data-ttu-id="cba18-285">Aktivieren Sie das Optionsfeld **Send to peer device** (An Peergerät senden).</span><span class="sxs-lookup"><span data-stu-id="cba18-285">Select the **Send to peer device** radio button.</span></span>
+-   <span data-ttu-id="cba18-286">Klicken Sie auf die Schaltfläche **Tap** (Berühren).</span><span class="sxs-lookup"><span data-stu-id="cba18-286">Click **Tap** button.</span></span> <span data-ttu-id="cba18-287">Dadurch wird die Berührung der beiden Geräte simuliert und der entsprechende NFC-Benachrichtigungssound ausgegeben.</span><span class="sxs-lookup"><span data-stu-id="cba18-287">This will simulate the two devices tapping together and you should be hearing the NFC tap notification sound</span></span>
+-   <span data-ttu-id="cba18-288">Klicken Sie zum Trennen der beiden Geräte einfach auf die Schaltfläche **Untap** (Trennen).</span><span class="sxs-lookup"><span data-stu-id="cba18-288">To disconnect the 2 devices, simply hit the **Untap** button.</span></span>
 
-Alternativ können Sie das Kontrollkästchen **Automatically untap in (seconds)** aktivieren und angeben, nach wie vielen Sekunden die Berührung automatisch beendet werden soll. Damit wird die praktische Verwendung der Funktion simuliert, da Benutzer ihre Smartphones üblicherweise nur kurz aneinander halten. Beachten Sie jedoch, dass das Meldungsprotokoll momentan nach dem Trennen der Verbindung nicht mehr verfügbar ist.
+<span data-ttu-id="cba18-289">Alternativ können Sie das Kontrollkästchen **Automatically untap in (seconds)** aktivieren und angeben, nach wie vielen Sekunden die Berührung automatisch beendet werden soll. Damit wird die praktische Verwendung der Funktion simuliert, da Benutzer ihre Smartphones üblicherweise nur kurz aneinander halten.</span><span class="sxs-lookup"><span data-stu-id="cba18-289">Alternatively, you can enable **Automatically untap in (seconds)** check box where you can specify the number of seconds you want the devices to be tapped and they will be automatically untapped after the specified number of seconds (simulating what would be expected of a user in real life, they would only hold their phones together for a short time).</span></span> <span data-ttu-id="cba18-290">Beachten Sie jedoch, dass das Meldungsprotokoll momentan nach dem Trennen der Verbindung nicht mehr verfügbar ist.</span><span class="sxs-lookup"><span data-stu-id="cba18-290">Note however that currently the message log isn't available after the connection has been untapped.</span></span>
 
-So simulieren Sie das Lesen der Meldungen eines Tags oder das Empfangen der Meldungen eines anderen Geräts:
+<span data-ttu-id="cba18-291">So simulieren Sie das Lesen der Meldungen eines Tags oder das Empfangen der Meldungen eines anderen Geräts:</span><span class="sxs-lookup"><span data-stu-id="cba18-291">To simulate reading messages from a tag or receiving messages from another device:</span></span>
 
--   Aktivieren Sie das Optionsfeld **Send to self** (An mich senden), um Szenarien mit nur einem NFC-fähigen Gerät zu testen.
--   Klicken Sie auf die Schaltfläche **Tap** (Berühren). Dadurch wird die Berührung eines Geräts mit einem Tag simuliert und der entsprechende NFC-Benachrichtigungssound ausgegeben.
--   Klicken Sie zum Trennen der Verbindung einfach auf die Schaltfläche **Untap** (Trennen).
+-   <span data-ttu-id="cba18-292">Aktivieren Sie das Optionsfeld **Send to self** (An mich senden), um Szenarien mit nur einem NFC-fähigen Gerät zu testen.</span><span class="sxs-lookup"><span data-stu-id="cba18-292">Select the **Send to self** radio button to test scenarios that require only one NFC enabled device.</span></span>
+-   <span data-ttu-id="cba18-293">Klicken Sie auf die Schaltfläche **Tap** (Berühren).</span><span class="sxs-lookup"><span data-stu-id="cba18-293">Click **Tap** button.</span></span> <span data-ttu-id="cba18-294">Dadurch wird die Berührung eines Geräts mit einem Tag simuliert und der entsprechende NFC-Benachrichtigungssound ausgegeben.</span><span class="sxs-lookup"><span data-stu-id="cba18-294">This will simulate the tapping a device to a tag and you should be hearing the NFC tap notification sound</span></span>
+-   <span data-ttu-id="cba18-295">Klicken Sie zum Trennen der Verbindung einfach auf die Schaltfläche **Untap** (Trennen).</span><span class="sxs-lookup"><span data-stu-id="cba18-295">To disconnect, simply hit the **Untap** button.</span></span>
 
-Im Näherungsmodus können Sie Meldungen von einem Tag oder von einem anderen Peergerät simulieren. Folgende Meldungstypen können mit dem Tool gesendet werden:
+<span data-ttu-id="cba18-296">Im Näherungsmodus können Sie Meldungen von einem Tag oder von einem anderen Peergerät simulieren.</span><span class="sxs-lookup"><span data-stu-id="cba18-296">Using the proximity mode you can inject messages as if they came from a tag or another peer device.</span></span> <span data-ttu-id="cba18-297">Folgende Meldungstypen können mit dem Tool gesendet werden:</span><span class="sxs-lookup"><span data-stu-id="cba18-297">The toolallows you to send messages of the following types.</span></span>
 
--   WindowsURI
--   WindowsMime
--   WritableTag
--   Pairing:Bluetooth
--   NDEF
--   NDEF:MIME
--   NDEF:URI
--   NDEF:wkt.U
+-   <span data-ttu-id="cba18-298">WindowsURI</span><span class="sxs-lookup"><span data-stu-id="cba18-298">WindowsURI</span></span>
+-   <span data-ttu-id="cba18-299">WindowsMime</span><span class="sxs-lookup"><span data-stu-id="cba18-299">WindowsMime</span></span>
+-   <span data-ttu-id="cba18-300">WritableTag</span><span class="sxs-lookup"><span data-stu-id="cba18-300">WritableTag</span></span>
+-   <span data-ttu-id="cba18-301">Pairing:Bluetooth</span><span class="sxs-lookup"><span data-stu-id="cba18-301">Pairing:Bluetooth</span></span>
+-   <span data-ttu-id="cba18-302">NDEF</span><span class="sxs-lookup"><span data-stu-id="cba18-302">NDEF</span></span>
+-   <span data-ttu-id="cba18-303">NDEF:MIME</span><span class="sxs-lookup"><span data-stu-id="cba18-303">NDEF:MIME</span></span>
+-   <span data-ttu-id="cba18-304">NDEF:URI</span><span class="sxs-lookup"><span data-stu-id="cba18-304">NDEF:URI</span></span>
+-   <span data-ttu-id="cba18-305">NDEF:wkt.U</span><span class="sxs-lookup"><span data-stu-id="cba18-305">NDEF:wkt.U</span></span>
 
-Zum Erstellen dieser Meldungen können Sie entweder die Nutzlastfenster**** bearbeiten oder die Meldungen in einer Datei bereitstellen. Weitere Informationen zu diesen Typen und zu deren Verwendung finden Sie im Anmerkungsabschnitt der[**ProximityDevice.PublishBinaryMessage**](https://msdn.microsoft.com/library/windows/apps/Hh701129)-Referenzseite.
+<span data-ttu-id="cba18-306">Zum Erstellen dieser Meldungen können Sie entweder die Nutzlastfenster**** bearbeiten oder die Meldungen in einer Datei bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="cba18-306">You can either create these messages by editing the **Payload** windows or providing them in a file.</span></span> <span data-ttu-id="cba18-307">Weitere Informationen zu diesen Typen und zu deren Verwendung finden Sie im Anmerkungsabschnitt der[**ProximityDevice.PublishBinaryMessage**](https://msdn.microsoft.com/library/windows/apps/Hh701129)-Referenzseite.</span><span class="sxs-lookup"><span data-stu-id="cba18-307">For more information about these types and how to use them please refer to the Remarks section of the[**ProximityDevice.PublishBinaryMessage**](https://msdn.microsoft.com/library/windows/apps/Hh701129) reference page.</span></span>
 
-Das Windows 8-Treiberkit (Windows Driver Kit, WDK) enthält ein Treiberbeispiel, in dem das gleiche Protokoll verfügbar gemacht wird wie im Windows Phone 8-Emulator. Laden Sie das WDK herunter, erstellen Sie den Beispieltreiber, installieren Sie ihn auf einem Gerät unter Windows 8, und fügen Sie anschließend die IP-Adresse oder den Hostnamen des Geräts der Geräteliste hinzu, oder koppeln Sie es entweder mit einem anderen Gerät unter Windows 8 oder mit einem Windows Phone 8-Emulator.
+<span data-ttu-id="cba18-308">Das Windows8-Treiberkit (Windows Driver Kit, WDK) enthält ein Treiberbeispiel, in dem das gleiche Protokoll verfügbar gemacht wird wie im WindowsPhone8-Emulator.</span><span class="sxs-lookup"><span data-stu-id="cba18-308">The Windows 8 Driver Kit (WDK) includes a driver sample that exposes the same protocol as the Windows Phone 8 emulator.</span></span> <span data-ttu-id="cba18-309">Laden Sie das WDK herunter, erstellen Sie den Beispieltreiber, installieren Sie ihn auf einem Gerät unter Windows8, und fügen Sie anschließend die IP-Adresse oder den Hostnamen des Geräts der Geräteliste hinzu, oder koppeln Sie es entweder mit einem anderen Gerät unter Windows8 oder mit einem WindowsPhone8-Emulator.</span><span class="sxs-lookup"><span data-stu-id="cba18-309">You'll need to download the DDK, build that sample driver, install it on a Windows 8 device, then add the Windows 8 device's IP address or hostname to the devices list and tap it either with another Windows 8 device or with a Windows Phone 8 emulator.</span></span>
 
-### <a name="host-card-emulation-hce-mode"></a>HCE-Modus (Host Card Emulation)
+### <a name="host-card-emulation-hce-mode"></a><span data-ttu-id="cba18-310">HCE-Modus (Host Card Emulation)</span><span class="sxs-lookup"><span data-stu-id="cba18-310">Host Card Emulation (HCE) Mode</span></span>
 
-Im HCE-Modus (Host Card Emulation) können Sie Ihre HCE-basierte Kartenemulationsanwendung mit selbst erstellten Skripts testen, um ein Smartcardleseterminal (beispielsweise ein POS-Terminal) zu simulieren. Dieses Tool setzt voraus, dass Sie mit den ISO-7816-4-konformen Befehl/Antwort-Paaren vertraut sind, die zwischen einem Leseterminal (wie etwa einem POS-, Ausweis- oder Transit-Kartenleser) und der (in Ihrer Anwendung emulierten) Smartcard übermittelt werden.
+<span data-ttu-id="cba18-311">Im HCE-Modus (Host Card Emulation) können Sie Ihre HCE-basierte Kartenemulationsanwendung mit selbst erstellten Skripts testen, um ein Smartcardleseterminal (beispielsweise ein POS-Terminal) zu simulieren.</span><span class="sxs-lookup"><span data-stu-id="cba18-311">In Host Card Emulation (HCE) mode you can test your HCE-based card emulation application by writing your own custom scripts to simulate a smart card reader terminal, such as a Point of Sale (POS) terminal.</span></span> <span data-ttu-id="cba18-312">Dieses Tool setzt voraus, dass Sie mit den ISO-7816-4-konformen Befehl/Antwort-Paaren vertraut sind, die zwischen einem Leseterminal (wie etwa einem POS-, Ausweis- oder Transit-Kartenleser) und der (in Ihrer Anwendung emulierten) Smartcard übermittelt werden.</span><span class="sxs-lookup"><span data-stu-id="cba18-312">This tool assumes that you are familiar with the command response pairs (compliant with ISO-7816-4) that are sent between a reader terminal (such as POS, badge reader or transit card reader) and the smart card (that you are emulating in your application).</span></span>
 
 ![Die HCE-Seite für NFC](images/emulator-nfc-hce.png)
 
--   Klicken Sie im Skript-Editor-Abschnitt auf die Schaltfläche **Hinzufügen**, um ein neues Skript zu erstellen. Nach der Bearbeitung können Sie einen Namen für Ihr Skript angeben und es durch Klicken auf die Schaltfläche **Speichern** speichern.
--   Gespeicherte Skripts sind beim nächsten Start des Emulators verfügbar.
--   Führen Sie Ihre Skripts aus, indem Sie im Skript-Editor-Fenster auf die Wiedergabeschaltfläche**** klicken. Mit dieser Aktion wird eine Berührung zwischen Smartphone und Terminal sowie das Senden von Befehlen aus Ihrem Skript simuliert. Alternativ können Sie auf die Schaltfläche **Tap** (Berühren) und anschließend auf die Wiedergabeschaltfläche**** tippen. Das Skript wird erst ausgeführt, wenn Sie auf die Wiedergabeschaltfläche**** tippen.
--   Durch Klicken auf die Schaltfläche **Beenden** wird die Befehlsübermittlung an Ihre Anwendung beendet. Die Geräte bleiben jedoch gekoppelt, bis Sie auf die Schaltfläche **Untap** (Trennen) klicken.
--   Wenn Sie ein Skript löschen möchten, wählen Sie es im Dropdownmenü aus, und klicken Sie anschließend auf die Schaltfläche **Löschen**.
--   Die Syntax Ihrer Skripts wird vom Emulator-Tool erst überprüft, wenn Sie das Skript mithilfe der Wiedergabeschaltfläche**** ausführen. Die vom Skript gesendeten Meldungen sind abhängig von der Implementierung Ihrer Kartenemulations-App.
+-   <span data-ttu-id="cba18-314">Klicken Sie im Skript-Editor-Abschnitt auf die Schaltfläche **Hinzufügen**, um ein neues Skript zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="cba18-314">Create a new script by clicking the **Add** button in the script editor section.</span></span> <span data-ttu-id="cba18-315">Nach der Bearbeitung können Sie einen Namen für Ihr Skript angeben und es durch Klicken auf die Schaltfläche **Speichern** speichern.</span><span class="sxs-lookup"><span data-stu-id="cba18-315">You can provide a name for your script and after you are done with editing, you can save your script using the **Save** button.</span></span>
+-   <span data-ttu-id="cba18-316">Gespeicherte Skripts sind beim nächsten Start des Emulators verfügbar.</span><span class="sxs-lookup"><span data-stu-id="cba18-316">Your saved scripts will be available the next time you launch the emulator.</span></span>
+-   <span data-ttu-id="cba18-317">Führen Sie Ihre Skripts aus, indem Sie im Skript-Editor-Fenster auf die Wiedergabeschaltfläche**** klicken.</span><span class="sxs-lookup"><span data-stu-id="cba18-317">Run your scripts by hitting the **Play** button in the scripts editor window.</span></span> <span data-ttu-id="cba18-318">Mit dieser Aktion wird eine Berührung zwischen Smartphone und Terminal sowie das Senden von Befehlen aus Ihrem Skript simuliert.</span><span class="sxs-lookup"><span data-stu-id="cba18-318">This action results in simulating of tapping your phone to the terminal and sending commands written in your script.</span></span> <span data-ttu-id="cba18-319">Alternativ können Sie auf die Schaltfläche **Tap** (Berühren) und anschließend auf die Wiedergabeschaltfläche**** tippen. Das Skript wird erst ausgeführt, wenn Sie auf die Wiedergabeschaltfläche**** tippen.</span><span class="sxs-lookup"><span data-stu-id="cba18-319">Alternatively you can hit the **Tap** button and then the **Play** button, until you hit **Play** the script will not run.</span></span>
+-   <span data-ttu-id="cba18-320">Durch Klicken auf die Schaltfläche **Beenden** wird die Befehlsübermittlung an Ihre Anwendung beendet. Die Geräte bleiben jedoch gekoppelt, bis Sie auf die Schaltfläche **Untap** (Trennen) klicken.</span><span class="sxs-lookup"><span data-stu-id="cba18-320">Stop sending commands by hitting the **Stop** button, which stops sending the commands to your application but the devices remain tapped until you hit the **Untap** button.</span></span>
+-   <span data-ttu-id="cba18-321">Wenn Sie ein Skript löschen möchten, wählen Sie es im Dropdownmenü aus, und klicken Sie anschließend auf die Schaltfläche **Löschen**.</span><span class="sxs-lookup"><span data-stu-id="cba18-321">Delete your scripts by selecting the script in the dropdown menu and hitting **Delete** button.</span></span>
+-   <span data-ttu-id="cba18-322">Die Syntax Ihrer Skripts wird vom Emulator-Tool erst überprüft, wenn Sie das Skript mithilfe der Wiedergabeschaltfläche**** ausführen.</span><span class="sxs-lookup"><span data-stu-id="cba18-322">The emulator tool does not check for the syntax of your scripts until you run the script using the **Play** button.</span></span> <span data-ttu-id="cba18-323">Die vom Skript gesendeten Meldungen sind abhängig von der Implementierung Ihrer Kartenemulations-App.</span><span class="sxs-lookup"><span data-stu-id="cba18-323">The messages sent by your script are dependent on your implementation of your card emulation app.</span></span>
 
-Zahlungs-Apps können auch mithilfe des Terminalsimulators von MasterCard ([https://www.terminalsimulator.com/](https://www.terminalsimulator.com/ )) getestet werden.
+<span data-ttu-id="cba18-324">Zahlungs-Apps können auch mithilfe des Terminalsimulators von MasterCard ([https://www.terminalsimulator.com/](https://www.terminalsimulator.com/ )) getestet werden.</span><span class="sxs-lookup"><span data-stu-id="cba18-324">You can also use the terminal simulator tool from MasterCard ([https://www.terminalsimulator.com/](https://www.terminalsimulator.com/ )) for payments app testing.</span></span>
 
--   Aktivieren Sie unterhalb des Skript-Editor-Fensters das Kontrollkästchen für den MasterCard-Listener****, und starten Sie den Simulator von MasterCard.
--   Mithilfe dieses Tools können Sie Befehle generieren, die dann über das NFC-Tool an Ihre im Emulator ausgeführte Anwendung weitergeleitet werden.
+-   <span data-ttu-id="cba18-325">Aktivieren Sie unterhalb des Skript-Editor-Fensters das Kontrollkästchen für den MasterCard-Listener****, und starten Sie den Simulator von MasterCard.</span><span class="sxs-lookup"><span data-stu-id="cba18-325">Check the **Enable MasterCard** listener checkbox below the script editor windows and launch the simulator from MasterCard.</span></span>
+-   <span data-ttu-id="cba18-326">Mithilfe dieses Tools können Sie Befehle generieren, die dann über das NFC-Tool an Ihre im Emulator ausgeführte Anwendung weitergeleitet werden.</span><span class="sxs-lookup"><span data-stu-id="cba18-326">Using the tool, you can generate commands that are relayed to your application running on the emulator through the NFC tool.</span></span>
 
-Weitere Informationen zur HCE-Unterstützung sowie zur Entwicklung von HCE-Apps in Windows 10 Mobile finden Sie im [Blog des NFC-Teams von Microsoft](http://go.microsoft.com/fwlink/?LinkId=534749).
+<span data-ttu-id="cba18-327">Weitere Informationen zur HCE-Unterstützung sowie zur Entwicklung von HCE-Apps in Windows10Mobile finden Sie im [Blog des NFC-Teams von Microsoft](http://go.microsoft.com/fwlink/?LinkId=534749).</span><span class="sxs-lookup"><span data-stu-id="cba18-327">To learn more about HCE support and how to develop HCE apps in Windows 10 Mobile, please refer to the [Microsoft NFC Team Blog](http://go.microsoft.com/fwlink/?LinkId=534749).</span></span>
 
-### <a name="how-to-create-scripts-for-hce-testing"></a>So wird's gemacht: Erstellen von Skripts für HCE-Tests
+### <a name="how-to-create-scripts-for-hce-testing"></a><span data-ttu-id="cba18-328">So wird's gemacht: Erstellen von Skripts für HCE-Tests</span><span class="sxs-lookup"><span data-stu-id="cba18-328">How to Create Scripts for HCE Testing</span></span>
 
-Die Skripts werden als C#-Code geschrieben, und die Run-Methode Ihres Skripts wird durch Klicken auf die Wiedergabeschaltfläche**** aufgerufen. Diese Methode verwendet eine IScriptProcessor-Schnittstelle, um APDU Befehle zu senden/empfangen, im Protokollfenster auszugeben und das Zeitlimit für eine APDU-Antwort des Smartphones zu steuern.
+<span data-ttu-id="cba18-329">Die Skripts werden als C#-Code geschrieben, und die Run-Methode Ihres Skripts wird durch Klicken auf die Wiedergabeschaltfläche**** aufgerufen. Diese Methode verwendet eine IScriptProcessor-Schnittstelle, um APDU Befehle zu senden/empfangen, im Protokollfenster auszugeben und das Zeitlimit für eine APDU-Antwort des Smartphones zu steuern.</span><span class="sxs-lookup"><span data-stu-id="cba18-329">The scripts are written as C# code and your script’s Run method is called when you click the **Play** button, this method takes an IScriptProcessor interface which is used to transceive APDU commands, output to the log window, and control the timeout for waiting on an APDU response from the phone.</span></span>
 
-Im Anschluss finden Sie Informationen zu den verfügbaren Funktionen:
+<span data-ttu-id="cba18-330">Im Anschluss finden Sie Informationen zu den verfügbaren Funktionen:</span><span class="sxs-lookup"><span data-stu-id="cba18-330">Below is a reference on what functionality is available:</span></span>
 
 ```csharp     
         public interface IScriptProcessor
@@ -265,332 +265,332 @@ Im Anschluss finden Sie Informationen zu den verfügbaren Funktionen:
         }
 ```
 
-### <a name="smart-card-reader-mode"></a>Smartcardlesemodus
+### <a name="smart-card-reader-mode"></a><span data-ttu-id="cba18-331">Smartcardlesemodus</span><span class="sxs-lookup"><span data-stu-id="cba18-331">Smart Card Reader Mode</span></span>
 
-Der Emulator kann mit einem Smartcard-Lesegerät Ihres Hostcomputers verbunden werden. Dadurch erscheinen eingelegte oder in die Nähe gehaltene Smartcards in Ihrer Smartphone-Anwendung, und die APDU-basierte Kommunikation über die [**Windows.Devices.SmartCards.SmartCardConnection**](https://msdn.microsoft.com/library/windows/apps/Dn608002) -Klasse wird ermöglicht. Hierzu muss Ihr Computer über ein kompatibles Smartcard-Lesegerät verfügen. USB-Smartcardleser mit NFC (kontaktlos) und Einschub (Kontakt) sind weit verbreitet. Um die Verwendung eines angeschlossenen Smartcardlesers mit dem Emulator zu ermöglichen, wählen Sie zunächst den Kartenlesermodus**** aus. Daraufhin erscheint eine Dropdownliste mit allen angeschlossenen und kompatiblen Smartcardlesern des Hostsystems, in der Sie den gewünschten Smartcardleser auswählen können.
+<span data-ttu-id="cba18-332">Der Emulator kann mit einem Smartcard-Lesegerät Ihres Hostcomputers verbunden werden. Dadurch erscheinen eingelegte oder in die Nähe gehaltene Smartcards in Ihrer Smartphone-Anwendung, und die APDU-basierte Kommunikation über die [**Windows.Devices.SmartCards.SmartCardConnection**](https://msdn.microsoft.com/library/windows/apps/Dn608002) -Klasse wird ermöglicht.</span><span class="sxs-lookup"><span data-stu-id="cba18-332">The emulator can be connected to a smart card reader device on your host computer, such that smart cards inserted or tapped will show up to your phone application and can be communicated to with APDUs using the [**Windows.Devices.SmartCards.SmartCardConnection**](https://msdn.microsoft.com/library/windows/apps/Dn608002) class.</span></span> <span data-ttu-id="cba18-333">Hierzu muss Ihr Computer über ein kompatibles Smartcard-Lesegerät verfügen. USB-Smartcardleser mit NFC (kontaktlos) und Einschub (Kontakt) sind weit verbreitet.</span><span class="sxs-lookup"><span data-stu-id="cba18-333">For this to work, you will need a compatible smart card reader device attached to your computer, USB smart card readers (both NFC/contactless and insert/contact) are widely available.</span></span> <span data-ttu-id="cba18-334">Um die Verwendung eines angeschlossenen Smartcardlesers mit dem Emulator zu ermöglichen, wählen Sie zunächst den Kartenlesermodus**** aus. Daraufhin erscheint eine Dropdownliste mit allen angeschlossenen und kompatiblen Smartcardlesern des Hostsystems, in der Sie den gewünschten Smartcardleser auswählen können.</span><span class="sxs-lookup"><span data-stu-id="cba18-334">To enable the emulator to work with an attached smart card reader, first choose the **Card Reader** mode which should show a dropdown box listing all the compatible smart card readers attached to the host system, then choose the smart card reader device you’d like to be connected from the dropdown.</span></span>
 
-Beachten Sie, dass einige NFC-fähige Smartcardleser bestimmte Arten von NFC-Karten und die APDU-Standardbefehle für PC/SC-Speicherkarten nicht unterstützen.
+<span data-ttu-id="cba18-335">Beachten Sie, dass einige NFC-fähige Smartcardleser bestimmte Arten von NFC-Karten und die APDU-Standardbefehle für PC/SC-Speicherkarten nicht unterstützen.</span><span class="sxs-lookup"><span data-stu-id="cba18-335">Note that not all NFC-capable smart card readers support some types of NFC cards, and some do not support the standard PC/SC storage card APDU commands.</span></span>
 
-## <a name="multi-point-input"></a>Multitoucheingabe
+## <a name="multi-point-input"></a><span data-ttu-id="cba18-336">Multitoucheingabe</span><span class="sxs-lookup"><span data-stu-id="cba18-336">Multi-point input</span></span>
 
-Simulieren Sie Multitoucheingaben für das Zusammendrücken und Zoomen, Drehen und Verschieben von Objekten mithilfe der Schaltfläche **Multi-touch Input** auf der Symbolleiste des Emulators. Dieses Feature ist hilfreich, wenn Ihre App Fotos, Karten oder andere visuelle Elemente anzeigt, die Benutzer zusammendrücken und vergrößern/verkleinern, drehen und verschieben können.
+<span data-ttu-id="cba18-337">Simulieren Sie Multitoucheingaben für das Zusammendrücken und Zoomen, Drehen und Verschieben von Objekten mithilfe der Schaltfläche **Multi-touch Input** auf der Symbolleiste des Emulators.</span><span class="sxs-lookup"><span data-stu-id="cba18-337">Simulate multi-touch input for pinching and zooming, rotating, and panning objects by using the **Multi-touch Input** button on the emulator toolbar.</span></span> <span data-ttu-id="cba18-338">Dieses Feature ist hilfreich, wenn Ihre App Fotos, Karten oder andere visuelle Elemente anzeigt, die Benutzer zusammendrücken und vergrößern/verkleinern, drehen und verschieben können.</span><span class="sxs-lookup"><span data-stu-id="cba18-338">This feature is useful if your app displays photos, maps, or other visual elements that users can pinch and zoom, rotate, or pan.</span></span>
 
-1.  Tippen Sie auf der Symbolleiste des Emulators auf die Schaltfläche **Multitoucheingabe**, um die Multitoucheingabe zu aktivieren. Auf dem Bildschirm des Emulators erscheinen zwei Berührungspunkte, die um einen Mittelpunkt angeordnet sind.
-2.  Klicken Sie mit der rechten Maustaste auf einen der Berührungspunkte, und ziehen Sie ihn an die gewünschte Stelle, um die Punkte ohne Bildschirmberührung zu positionieren.
-3.  Klicken Sie mit der linken Maustaste auf einen der Berührungspunkte, und ziehen Sie ihn, um das Zusammendrücken und Zoomen bzw. das Drehen oder Verschieben zu simulieren.
-4.  Tippen Sie auf der Symbolleiste des Emulators auf die Schaltfläche für die Einzeltoucheingabe****, um zur normalen Eingabe zurückzukehren.
+1.  <span data-ttu-id="cba18-339">Tippen Sie auf der Symbolleiste des Emulators auf die Schaltfläche **Multitoucheingabe**, um die Multitoucheingabe zu aktivieren.</span><span class="sxs-lookup"><span data-stu-id="cba18-339">Tap the **Multi-touch Input** button on the emulator toolbar to enable multi-point input.</span></span> <span data-ttu-id="cba18-340">Auf dem Bildschirm des Emulators erscheinen zwei Berührungspunkte, die um einen Mittelpunkt angeordnet sind.</span><span class="sxs-lookup"><span data-stu-id="cba18-340">Two touch points appear on the emulator screen around a center point.</span></span>
+2.  <span data-ttu-id="cba18-341">Klicken Sie mit der rechten Maustaste auf einen der Berührungspunkte, und ziehen Sie ihn an die gewünschte Stelle, um die Punkte ohne Bildschirmberührung zu positionieren.</span><span class="sxs-lookup"><span data-stu-id="cba18-341">Right-click and drag one of the touch points to position them without touching the screen.</span></span>
+3.  <span data-ttu-id="cba18-342">Klicken Sie mit der linken Maustaste auf einen der Berührungspunkte, und ziehen Sie ihn, um das Zusammendrücken und Zoomen bzw. das Drehen oder Verschieben zu simulieren.</span><span class="sxs-lookup"><span data-stu-id="cba18-342">Left-click and drag one of the touch points to simulate pinching and zooming, rotating, or panning.</span></span>
+4.  <span data-ttu-id="cba18-343">Tippen Sie auf der Symbolleiste des Emulators auf die Schaltfläche für die Einzeltoucheingabe****, um zur normalen Eingabe zurückzukehren.</span><span class="sxs-lookup"><span data-stu-id="cba18-343">Tap the **Single Point Input** button on the emulator toolbar to restore normal input.</span></span>
 
-Der folgende Screenshot zeigt die Multitoucheingabe:
+<span data-ttu-id="cba18-344">Der folgende Screenshot zeigt die Multitoucheingabe:</span><span class="sxs-lookup"><span data-stu-id="cba18-344">The following screenshot shows multi-touch input.</span></span>
 
-1.  Das kleine Bild links zeigt die Schaltfläche **Multi-touch Input** auf der Symbolleiste des Emulators.
-2.  Das mittlere Bild zeigt den Bildschirm des Emulators mit den Berührungspunkten nach dem Tippen auf die Schaltfläche **Multi-touch Input**.
-3.  Das rechte Bild zeigt den Bildschirm des Emulators, nachdem die Berührungspunkte gezogen wurden, um das Bild zu vergrößern/verkleinern.
+1.  <span data-ttu-id="cba18-345">Das kleine Bild links zeigt die Schaltfläche **Multi-touch Input** auf der Symbolleiste des Emulators.</span><span class="sxs-lookup"><span data-stu-id="cba18-345">The small left image shows the **Multi-touch Input** button on the emulator toolbar.</span></span>
+2.  <span data-ttu-id="cba18-346">Das mittlere Bild zeigt den Bildschirm des Emulators mit den Berührungspunkten nach dem Tippen auf die Schaltfläche **Multi-touch Input**.</span><span class="sxs-lookup"><span data-stu-id="cba18-346">The middle image shows the emulator screen after tapping the **Multi-touch Input** button to display the touch points.</span></span>
+3.  <span data-ttu-id="cba18-347">Das rechte Bild zeigt den Bildschirm des Emulators, nachdem die Berührungspunkte gezogen wurden, um das Bild zu vergrößern/verkleinern.</span><span class="sxs-lookup"><span data-stu-id="cba18-347">The right image shows the emulator screen after dragging the touch points to zoom the image.</span></span>
 
 ![Multitoucheingabe-Option auf der Symbolleiste des Emulators](images/em-multipoint.png)
 
-## <a name="accelerometer"></a>Beschleunigungsmesser
+## <a name="accelerometer"></a><span data-ttu-id="cba18-349">Beschleunigungsmesser</span><span class="sxs-lookup"><span data-stu-id="cba18-349">Accelerometer</span></span>
 
-Verwenden Sie die Registerkarte **Accelerometer** der zusätzlichen Tools**** des Emulators, um Apps zu testen, die die Bewegungen des Smartphones nachverfolgen.
+<span data-ttu-id="cba18-350">Verwenden Sie die Registerkarte **Accelerometer** der zusätzlichen Tools**** des Emulators, um Apps zu testen, die die Bewegungen des Smartphones nachverfolgen.</span><span class="sxs-lookup"><span data-stu-id="cba18-350">Test apps that track the movement of the phone by using the **Accelerometer** tab of the emulator's **Additional Tools**.</span></span>
 
-Sie können den Beschleunigungsmesser mit einer Liveeingabe oder mit einer zuvor aufgezeichneten Eingabe testen. Als aufgezeichnete Daten ist nur das simulierte Schütteln des Smartphones verfügbar. Für den Beschleunigungsmesser können keine eigenen Simulationen aufgezeichnet oder gespeichert werden.
+<span data-ttu-id="cba18-351">Sie können den Beschleunigungsmesser mit einer Liveeingabe oder mit einer zuvor aufgezeichneten Eingabe testen.</span><span class="sxs-lookup"><span data-stu-id="cba18-351">You can test the accelerometer sensor with live input or pre-recorded input.</span></span> <span data-ttu-id="cba18-352">Als aufgezeichnete Daten ist nur das simulierte Schütteln des Smartphones verfügbar.</span><span class="sxs-lookup"><span data-stu-id="cba18-352">The only type of recorded data that’s available simulates shaking the phone.</span></span> <span data-ttu-id="cba18-353">Für den Beschleunigungsmesser können keine eigenen Simulationen aufgezeichnet oder gespeichert werden.</span><span class="sxs-lookup"><span data-stu-id="cba18-353">You can’t record or save your own simulations for the accelerometer.</span></span>
 
-1.  Wählen Sie die gewünschte Ausgangsausrichtung in der Dropdownliste **Orientation** aus.
+1.  <span data-ttu-id="cba18-354">Wählen Sie die gewünschte Ausgangsausrichtung in der Dropdownliste **Orientation** aus.</span><span class="sxs-lookup"><span data-stu-id="cba18-354">Select the desired starting orientation in the **Orientation** drop-down list.</span></span>
 
-2.  -   Wählen Sie die Art der Eingabe aus.
+2.  -   <span data-ttu-id="cba18-355">Wählen Sie die Art der Eingabe aus.</span><span class="sxs-lookup"><span data-stu-id="cba18-355">Select the type of input.</span></span>
 
-        **So führen Sie die Simulation mit einer Liveeingabe durch**
+        **<span data-ttu-id="cba18-356">So führen Sie die Simulation mit einer Liveeingabe durch</span><span class="sxs-lookup"><span data-stu-id="cba18-356">To run the simulation with live input</span></span>**
 
-        Ziehen Sie den farbigen Punkt in der Mitte des Beschleunigungsmessersimulators, um eine Bewegung des Geräts in einer 3D-Ebene zu simulieren.
+        <span data-ttu-id="cba18-357">Ziehen Sie den farbigen Punkt in der Mitte des Beschleunigungsmessersimulators, um eine Bewegung des Geräts in einer 3D-Ebene zu simulieren.</span><span class="sxs-lookup"><span data-stu-id="cba18-357">In the middle of the accelerometer simulator, drag the colored dot to simulate movement of the device in a 3D plane.</span></span>
 
-        Wenn Sie den Punkt entlang der horizontalen Achse bewegen, dreht sich der Simulator hin und her. Wenn Sie den Punkt entlang der vertikalen Achse bewegen, bewegt sich der Simulator vor und zurück. (Mit anderen Worten: Er dreht sich um die X-Achse.) Während der Bewegung des Punkts werden die X-, Y- und Z-Koordinaten auf der Grundlage der Drehungsberechnungen aktualisiert. Sie können den Punkt nicht außerhalb des Begrenzungskreises im Touchpadbereich bewegen.
+        <span data-ttu-id="cba18-358">Wenn Sie den Punkt entlang der horizontalen Achse bewegen, dreht sich der Simulator hin und her.</span><span class="sxs-lookup"><span data-stu-id="cba18-358">Moving the dot on the horizontal access rotates the simulator from side to side.</span></span> <span data-ttu-id="cba18-359">Wenn Sie den Punkt entlang der vertikalen Achse bewegen, bewegt sich der Simulator vor und zurück. (Mit anderen Worten: Er dreht sich um die X-Achse.)</span><span class="sxs-lookup"><span data-stu-id="cba18-359">Moving the dot on the vertical access rotates the simulator back and forth, rotating around the x-axis.</span></span> <span data-ttu-id="cba18-360">Während der Bewegung des Punkts werden die X-, Y- und Z-Koordinaten auf der Grundlage der Drehungsberechnungen aktualisiert.</span><span class="sxs-lookup"><span data-stu-id="cba18-360">As you drag the dot, the X, Y, and Z coordinates update based on the rotation calculations.</span></span> <span data-ttu-id="cba18-361">Sie können den Punkt nicht außerhalb des Begrenzungskreises im Touchpadbereich bewegen.</span><span class="sxs-lookup"><span data-stu-id="cba18-361">You cannot move the dot outside the bounding circle in the touch pad area.</span></span>
 
-        Optional: Klicken Sie auf **Reset**, um die Ausgangsausrichtung wiederherzustellen.
+        <span data-ttu-id="cba18-362">Optional: Klicken Sie auf **Reset**, um die Ausgangsausrichtung wiederherzustellen.</span><span class="sxs-lookup"><span data-stu-id="cba18-362">Optionally, click **Reset** to restore the starting orientation.</span></span>
 
-    -   **So führen Sie die Simulation mit einer aufgezeichneten Eingabe durch**
+    -   **<span data-ttu-id="cba18-363">So führen Sie die Simulation mit einer aufgezeichneten Eingabe durch</span><span class="sxs-lookup"><span data-stu-id="cba18-363">To run the simulation with recorded input</span></span>**
 
-        Klicken Sie im Abschnitt **Recorded Data** auf die Schaltfläche **Play**, um die Wiedergabe der simulierten Daten zu starten. Die Liste **Recorded Data** enthält nur die Option für Schütteln. Während der Wiedergabe der Daten bewegt sich der Simulator auf dem Bildschirm nicht.
+        <span data-ttu-id="cba18-364">Klicken Sie im Abschnitt **Recorded Data** auf die Schaltfläche **Play**, um die Wiedergabe der simulierten Daten zu starten.</span><span class="sxs-lookup"><span data-stu-id="cba18-364">In the **Recorded Data** section, click the **Play** button to start playback of the simulated data.</span></span> <span data-ttu-id="cba18-365">Die Liste **Recorded Data** enthält nur die Option für Schütteln.</span><span class="sxs-lookup"><span data-stu-id="cba18-365">The only option available in the **Recorded Data** list is shake.</span></span> <span data-ttu-id="cba18-366">Während der Wiedergabe der Daten bewegt sich der Simulator auf dem Bildschirm nicht.</span><span class="sxs-lookup"><span data-stu-id="cba18-366">The simulator does not move on the screen when it plays back the data.</span></span>
 
 ![Seite "Accelerometer" in den zusätzlichen Tools des Emulators](images/em-accelerometer.png)
 
-## <a name="location-and-driving"></a>Position und Fahrt
+## <a name="location-and-driving"></a><span data-ttu-id="cba18-368">Position und Fahrt</span><span class="sxs-lookup"><span data-stu-id="cba18-368">Location and driving</span></span>
 
-Verwenden Sie die Registerkarte **Location** der zusätzlichen Tools**** des Emulators, um Apps mit Navigationsfunktionen oder Geofencing zu testen. Dieses Feature ermöglicht das Simulieren der Fortbewegung per Auto, Fahrrad oder zu Fuß unter praxisnahen Bedingungen.
+<span data-ttu-id="cba18-369">Verwenden Sie die Registerkarte **Location** der zusätzlichen Tools**** des Emulators, um Apps mit Navigationsfunktionen oder Geofencing zu testen.</span><span class="sxs-lookup"><span data-stu-id="cba18-369">Test apps that use navigation or geofencing by using the **Location** tab of the emulator's **Additional Tools**.</span></span> <span data-ttu-id="cba18-370">Dieses Feature ermöglicht das Simulieren der Fortbewegung per Auto, Fahrrad oder zu Fuß unter praxisnahen Bedingungen.</span><span class="sxs-lookup"><span data-stu-id="cba18-370">This feature is useful for simulating driving, biking, or walking in conditions similar to the real world.</span></span>
 
-Sie können während des App-Tests Ortswechsel mit unterschiedlichen Geschwindigkeiten und Genauigkeitsprofilen simulieren. Mithilfe des Positionssimulators können Sie Veränderungen bei der Nutzung der Standort-API ermitteln, die die Benutzerfreundlichkeit erhöhen. So können Sie mithilfe des Tools beispielsweise feststellen, ob Sie zur erfolgreichen Erkennung von Geofences in unterschiedlichen Szenarien die Geofence-Parameter (wie Größe oder Verweildauer) justieren müssen.
+<span data-ttu-id="cba18-371">Sie können während des App-Tests Ortswechsel mit unterschiedlichen Geschwindigkeiten und Genauigkeitsprofilen simulieren.</span><span class="sxs-lookup"><span data-stu-id="cba18-371">You can test your app while you simulate moving from one location to another at different speeds and with different accuracy profiles.</span></span> <span data-ttu-id="cba18-372">Mithilfe des Positionssimulators können Sie Veränderungen bei der Nutzung der Standort-API ermitteln, die die Benutzerfreundlichkeit erhöhen.</span><span class="sxs-lookup"><span data-stu-id="cba18-372">The location simulator can help you to identify changes in your usage of the location APIs usage that improve the user experience.</span></span> <span data-ttu-id="cba18-373">So können Sie mithilfe des Tools beispielsweise feststellen, ob Sie zur erfolgreichen Erkennung von Geofences in unterschiedlichen Szenarien die Geofence-Parameter (wie Größe oder Verweildauer) justieren müssen.</span><span class="sxs-lookup"><span data-stu-id="cba18-373">For example, the tool can help you identify that you have to tune geofence parameters, such as size or dwell time, to detect the geofences successfully in different scenarios.</span></span>
 
-Die Registerkarte **Location** unterstützt drei Modi. In allen Modi gilt: Wenn der Emulator eine neue Position erhält, kann mit dieser Position das [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/BR225540)-Ereignis ausgelöst oder auf einen [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/Hh973536)-Anruf in Ihrer App mit Positionsbestimmung reagiert werden.
+<span data-ttu-id="cba18-374">Die Registerkarte **Location** unterstützt drei Modi.</span><span class="sxs-lookup"><span data-stu-id="cba18-374">The **Location** tab supports three modes.</span></span> <span data-ttu-id="cba18-375">In allen Modi gilt: Wenn der Emulator eine neue Position erhält, kann mit dieser Position das [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/BR225540)-Ereignis ausgelöst oder auf einen [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/Hh973536)-Anruf in Ihrer App mit Positionsbestimmung reagiert werden.</span><span class="sxs-lookup"><span data-stu-id="cba18-375">In all modes, when the emulator receives a new position, that position is available to trigger the [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/BR225540) event or to respond to a [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/Hh973536) call in your location-aware app.</span></span>
 
--   Im Modus **Pin** markieren Sie Orte auf der Karte. Wenn Sie auf **Play all points** klicken, sendet der Positionssimulator die Position der einzelnen Markierungen nacheinander an den Emulator und verwendet dabei das im Textfeld **Seconds per pin** angegebene Intervall.
+-   <span data-ttu-id="cba18-376">Im Modus **Pin** markieren Sie Orte auf der Karte.</span><span class="sxs-lookup"><span data-stu-id="cba18-376">In **Pin** mode, you place pushpins on the map.</span></span> <span data-ttu-id="cba18-377">Wenn Sie auf **Play all points** klicken, sendet der Positionssimulator die Position der einzelnen Markierungen nacheinander an den Emulator und verwendet dabei das im Textfeld **Seconds per pin** angegebene Intervall.</span><span class="sxs-lookup"><span data-stu-id="cba18-377">When you click **Play all points**, the location simulator sends the location of each pin to the emulator one after another, at the interval specified in the **Seconds per pin** text box.</span></span>
 
--   Im Modus **Live** markieren Sie Orte auf der Karte. Der Positionssimulator sendet die Position der einzelnen Markierungen sofort an den Emulator, wenn die jeweilige Markierung gesetzt wird.
+-   <span data-ttu-id="cba18-378">Im Modus **Live** markieren Sie Orte auf der Karte.</span><span class="sxs-lookup"><span data-stu-id="cba18-378">In **Live** mode, you place pushpins on the map.</span></span> <span data-ttu-id="cba18-379">Der Positionssimulator sendet die Position der einzelnen Markierungen sofort an den Emulator, wenn die jeweilige Markierung gesetzt wird.</span><span class="sxs-lookup"><span data-stu-id="cba18-379">The location simulator sends the location of each pin to the emulator immediately as you place them on the map.</span></span>
 
--   Im Modus **Route** platzieren Sie Wegpunkte auf der Karte, und der Positionssimulator berechnet automatisch eine Route. Entlang der Route befinden sich unsichtbare Markierungen im Abstand von jeweils einer Sekunde. Haben Sie also beispielsweise das Geschwindigkeitsprofil **Walking** mit einer angenommenen Geschwindigkeit von fünf Kilometern pro Stunde ausgewählt, wird alle 1,39 Meter eine unsichtbare Markierung generiert. Wenn Sie auf **Play all points** klicken, sendet der Positionssimulator die Position der einzelnen Markierungen nacheinander an den Emulator und verwendet dabei das Intervall, das sich aufgrund des in der Dropdownliste ausgewählten Geschwindigkeitsprofils ergibt.
+-   <span data-ttu-id="cba18-380">Im Modus **Route** platzieren Sie Wegpunkte auf der Karte, und der Positionssimulator berechnet automatisch eine Route.</span><span class="sxs-lookup"><span data-stu-id="cba18-380">In **Route** mode, you place pushpins on the map to indicate waypoints, and the location simulator automatically calculates a route.</span></span> <span data-ttu-id="cba18-381">Entlang der Route befinden sich unsichtbare Markierungen im Abstand von jeweils einer Sekunde.</span><span class="sxs-lookup"><span data-stu-id="cba18-381">The route includes invisible pins at one-second intervals along the route.</span></span> <span data-ttu-id="cba18-382">Haben Sie also beispielsweise das Geschwindigkeitsprofil **Walking** mit einer angenommenen Geschwindigkeit von fünf Kilometern pro Stunde ausgewählt, wird alle 1,39Meter eine unsichtbare Markierung generiert.</span><span class="sxs-lookup"><span data-stu-id="cba18-382">For example, if you have select the **Walking** speed profile, which assumes a speed of 5 kilometers per hour, then invisible pins are generated at intervals of 1.39 meters.</span></span> <span data-ttu-id="cba18-383">Wenn Sie auf **Play all points** klicken, sendet der Positionssimulator die Position der einzelnen Markierungen nacheinander an den Emulator und verwendet dabei das Intervall, das sich aufgrund des in der Dropdownliste ausgewählten Geschwindigkeitsprofils ergibt.</span><span class="sxs-lookup"><span data-stu-id="cba18-383">When you click **Play all points**, the location simulator sends the location of each pin to the emulator one after another, at the interval determined by the speed profile selected in the drop-down list.</span></span>
 
-In allen Modi des Positionssimulators haben Sie folgende Möglichkeiten:
+<span data-ttu-id="cba18-384">In allen Modi des Positionssimulators haben Sie folgende Möglichkeiten:</span><span class="sxs-lookup"><span data-stu-id="cba18-384">In all modes of the location simulator, you can do the following things.</span></span>
 
--   Sie können mithilfe des Suchfelds**** nach einer Position suchen.
+-   <span data-ttu-id="cba18-385">Sie können mithilfe des Suchfelds**** nach einer Position suchen.</span><span class="sxs-lookup"><span data-stu-id="cba18-385">You can search for a location by using the **Search** box.</span></span>
 
--   Sie können die Karte vergrößern**** und verkleinern****.
+-   <span data-ttu-id="cba18-386">Sie können die Karte vergrößern**** und verkleinern****.</span><span class="sxs-lookup"><span data-stu-id="cba18-386">You can **Zoom in** and **Zoom out** on the map.</span></span>
 
--   Sie können die aktuellen Datenpunkte in einer XML-Datei speichern und die Datei später laden, um die gleichen Datenpunkte erneut zu verwenden.
+-   <span data-ttu-id="cba18-387">Sie können die aktuellen Datenpunkte in einer XML-Datei speichern und die Datei später laden, um die gleichen Datenpunkte erneut zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="cba18-387">You can save the current set of data points to an XML file, and reload the file later to reuse the same data points.</span></span>
 
--   Sie können den Markierungsmodus ein- und ausschalten**** sowie alle Punkte löschen****.
+-   <span data-ttu-id="cba18-388">Sie können den Markierungsmodus ein- und ausschalten**** sowie alle Punkte löschen****.</span><span class="sxs-lookup"><span data-stu-id="cba18-388">You can **Toggle pushpin mode on or off** and **Clear all points**.</span></span>
 
-In den Modi "Pin" und "Route" haben Sie außerdem folgende Möglichkeiten:
+<span data-ttu-id="cba18-389">In den Modi "Pin" und "Route" haben Sie außerdem folgende Möglichkeiten:</span><span class="sxs-lookup"><span data-stu-id="cba18-389">In Pin and Route mode, you can also do the following things.</span></span>
 
--   Speichern einer erstellten Route zur späteren Verwendung.
+-   <span data-ttu-id="cba18-390">Speichern einer erstellten Route zur späteren Verwendung.</span><span class="sxs-lookup"><span data-stu-id="cba18-390">Save a route you created for later use.</span></span>
 
--   Laden einer zuvor erstellten Route. Sie können sogar Routendateien laden, die mit einer älteren Version des Tools erstellt wurden.
+-   <span data-ttu-id="cba18-391">Laden einer zuvor erstellten Route.</span><span class="sxs-lookup"><span data-stu-id="cba18-391">Load a route previously created.</span></span> <span data-ttu-id="cba18-392">Sie können sogar Routendateien laden, die mit einer älteren Version des Tools erstellt wurden.</span><span class="sxs-lookup"><span data-stu-id="cba18-392">You can even load route files created in previous versions of the tool.</span></span>
 
--   Ändern einer Route durch Löschen von Markierungen (im Modus "Pin") oder Wegpunkten (im Modus "Route").
+-   <span data-ttu-id="cba18-393">Ändern einer Route durch Löschen von Markierungen (im Modus "Pin") oder Wegpunkten (im Modus "Route").</span><span class="sxs-lookup"><span data-stu-id="cba18-393">Modify a route by deleting pushpins (in Pin mode) or waypoints (in Route mode).</span></span>
 
-**Genauigkeitsprofile**
+**<span data-ttu-id="cba18-394">Genauigkeitsprofile</span><span class="sxs-lookup"><span data-stu-id="cba18-394">Accuracy profiles</span></span>**
 
-Über die Dropdownliste **Accuracy profile** können Sie in jedem Modus des Positionssimulators ein Genauigkeitsprofil auswählen.
+<span data-ttu-id="cba18-395">Über die Dropdownliste **Accuracy profile** können Sie in jedem Modus des Positionssimulators ein Genauigkeitsprofil auswählen.</span><span class="sxs-lookup"><span data-stu-id="cba18-395">In all modes of the location simulator, you can select one of the following accuracy profiles in the **Accuracy profile** drop-down list.</span></span>
 
-| Profil  | Beschreibung                                        |
+| <span data-ttu-id="cba18-396">Profil</span><span class="sxs-lookup"><span data-stu-id="cba18-396">Profile</span></span>  | <span data-ttu-id="cba18-397">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="cba18-397">Description</span></span>                                        |
 |----------|----------------------------------------------------|
-| Pinpoint | Geht von absolut exakten Positionsdaten aus. Diese Einstellung ist zwar nicht realistisch, aber hilfreich, um die Logik Ihrer App zu testen.  |
-| Urban    | Geht davon aus, dass aufgrund von Gebäuden die Anzahl der Satelliten mit Sichtverbindung eingeschränkt ist, gleichzeitig aber eine hohe Dichte an Mobilfunkmasten und WLAN-Zugriffspunkten herrscht, die zur Positionsbestimmung herangezogen werden können. |
-| Suburban | Geht davon aus, dass die Positionsbestimmung per Satellit relativ gut funktioniert und dass ein ausreichend dichtes Netz von Mobilfunkmasten vorhanden, die Dichte von WLAN-Zugriffspunkten aber nicht besonders hoch ist.  |
-| Rural    | Geht davon aus, dass die Positionsbestimmung per Satellit gut funktioniert, aber nur wenige Mobilfunkmasten und nahezu gar keine WLAN-Zugriffspunkte für die Positionsbestimmung zur Verfügung stehen. |
+| <span data-ttu-id="cba18-398">Pinpoint</span><span class="sxs-lookup"><span data-stu-id="cba18-398">Pinpoint</span></span> | <span data-ttu-id="cba18-399">Geht von absolut exakten Positionsdaten aus.</span><span class="sxs-lookup"><span data-stu-id="cba18-399">Assumes perfectly accurate location readings.</span></span> <span data-ttu-id="cba18-400">Diese Einstellung ist zwar nicht realistisch, aber hilfreich, um die Logik Ihrer App zu testen.</span><span class="sxs-lookup"><span data-stu-id="cba18-400">This setting is not realistic, but it's useful for testing the logic of your app.</span></span>  |
+| <span data-ttu-id="cba18-401">Urban</span><span class="sxs-lookup"><span data-stu-id="cba18-401">Urban</span></span>    | <span data-ttu-id="cba18-402">Geht davon aus, dass aufgrund von Gebäuden die Anzahl der Satelliten mit Sichtverbindung eingeschränkt ist, gleichzeitig aber eine hohe Dichte an Mobilfunkmasten und WLAN-Zugriffspunkten herrscht, die zur Positionsbestimmung herangezogen werden können.</span><span class="sxs-lookup"><span data-stu-id="cba18-402">Assumes that buildings are restricting the number of satellites in view, but there is often a high density of cell towers and Wi-Fi access points that can be used for positioning.</span></span> |
+| <span data-ttu-id="cba18-403">Suburban</span><span class="sxs-lookup"><span data-stu-id="cba18-403">Suburban</span></span> | <span data-ttu-id="cba18-404">Geht davon aus, dass die Positionsbestimmung per Satellit relativ gut funktioniert und dass ein ausreichend dichtes Netz von Mobilfunkmasten vorhanden, die Dichte von WLAN-Zugriffspunkten aber nicht besonders hoch ist.</span><span class="sxs-lookup"><span data-stu-id="cba18-404">Assumes that satellite positioning is relatively good and there is good density of cell towers, but the density of Wi-Fi access points is not high.</span></span>  |
+| <span data-ttu-id="cba18-405">Rural</span><span class="sxs-lookup"><span data-stu-id="cba18-405">Rural</span></span>    | <span data-ttu-id="cba18-406">Geht davon aus, dass die Positionsbestimmung per Satellit gut funktioniert, aber nur wenige Mobilfunkmasten und nahezu gar keine WLAN-Zugriffspunkte für die Positionsbestimmung zur Verfügung stehen.</span><span class="sxs-lookup"><span data-stu-id="cba18-406">Assumes that satellite positioning is good, but there is low density of cell towers and almost no Wi-Fi access points that can be used for positioning.</span></span> |
 
-**Geschwindigkeitsprofile**
+**<span data-ttu-id="cba18-407">Geschwindigkeitsprofile</span><span class="sxs-lookup"><span data-stu-id="cba18-407">Speed profiles</span></span>**
 
-Im Modus **Route** können Sie über die Dropdownliste eines der folgenden Geschwindigkeitsprofile auswählen:
+<span data-ttu-id="cba18-408">Im Modus **Route** können Sie über die Dropdownliste eines der folgenden Geschwindigkeitsprofile auswählen:</span><span class="sxs-lookup"><span data-stu-id="cba18-408">In **Route** mode, you can select one of the following speed profiles in the drop-down list.</span></span>
 
-| Profil | Geschwindigkeit pro Stunde               | Geschwindigkeit pro Sekunde | Beschreibung | 
+| <span data-ttu-id="cba18-409">Profil</span><span class="sxs-lookup"><span data-stu-id="cba18-409">Profile</span></span> | <span data-ttu-id="cba18-410">Geschwindigkeit pro Stunde</span><span class="sxs-lookup"><span data-stu-id="cba18-410">Speed per hour</span></span>               | <span data-ttu-id="cba18-411">Geschwindigkeit pro Sekunde</span><span class="sxs-lookup"><span data-stu-id="cba18-411">Speed per second</span></span> | <span data-ttu-id="cba18-412">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="cba18-412">Description</span></span> | 
 |---------|------------------------------|------------------|-------------|
-| Speed Limit | Die Geschwindigkeitsbegrenzung der Route. | Nicht zutreffend   | Die Route wird unter Berücksichtigung der geltenden Geschwindigkeitsbegrenzung durchlaufen. |
-| Walking     | 5 km/h                   | 1,39 m/s           | Die Route wird mit einer natürlichen Schrittgeschwindigkeit von 5 km/h durchlaufen. |
-| Biking      | 25 km/h                  | 6,94 m/s           | Die Route wird mit einer natürlichen Radfahrergeschwindigkeit von 25 km/h durchlaufen. |
-| Fast        |                          |                  |Die Route wird ohne Berücksichtigung der geltenden Geschwindigkeitsbegrenzung durchlaufen. | 
+| <span data-ttu-id="cba18-413">Speed Limit</span><span class="sxs-lookup"><span data-stu-id="cba18-413">Speed Limit</span></span> | <span data-ttu-id="cba18-414">Die Geschwindigkeitsbegrenzung der Route.</span><span class="sxs-lookup"><span data-stu-id="cba18-414">Speed limit of the route</span></span> | <span data-ttu-id="cba18-415">Nicht zutreffend</span><span class="sxs-lookup"><span data-stu-id="cba18-415">Not applicable</span></span>   | <span data-ttu-id="cba18-416">Die Route wird unter Berücksichtigung der geltenden Geschwindigkeitsbegrenzung durchlaufen.</span><span class="sxs-lookup"><span data-stu-id="cba18-416">Traverse the route at the posted speed limit.</span></span> |
+| <span data-ttu-id="cba18-417">Walking</span><span class="sxs-lookup"><span data-stu-id="cba18-417">Walking</span></span>     | <span data-ttu-id="cba18-418">5km/h</span><span class="sxs-lookup"><span data-stu-id="cba18-418">5 km/h</span></span>                   | <span data-ttu-id="cba18-419">1,39m/s</span><span class="sxs-lookup"><span data-stu-id="cba18-419">1.39 m</span></span>           | <span data-ttu-id="cba18-420">Die Route wird mit einer natürlichen Schrittgeschwindigkeit von 5km/h durchlaufen.</span><span class="sxs-lookup"><span data-stu-id="cba18-420">Traverse the route at a natural walking pace of 5 km/h.</span></span> |
+| <span data-ttu-id="cba18-421">Biking</span><span class="sxs-lookup"><span data-stu-id="cba18-421">Biking</span></span>      | <span data-ttu-id="cba18-422">25 km/h</span><span class="sxs-lookup"><span data-stu-id="cba18-422">25 km/h</span></span>                  | <span data-ttu-id="cba18-423">6,94 m/s</span><span class="sxs-lookup"><span data-stu-id="cba18-423">6.94 m</span></span>           | <span data-ttu-id="cba18-424">Die Route wird mit einer natürlichen Radfahrergeschwindigkeit von 25km/h durchlaufen.</span><span class="sxs-lookup"><span data-stu-id="cba18-424">Traverse the route at a natural biking pace of 25 km/h.</span></span> |
+| <span data-ttu-id="cba18-425">Fast</span><span class="sxs-lookup"><span data-stu-id="cba18-425">Fast</span></span>        |                          |                  |<span data-ttu-id="cba18-426">Die Route wird ohne Berücksichtigung der geltenden Geschwindigkeitsbegrenzung durchlaufen.</span><span class="sxs-lookup"><span data-stu-id="cba18-426">Traverse the route faster than the posted speed limit.</span></span> | 
 
-**Modus "Route"**
+**<span data-ttu-id="cba18-427">Modus "Route"</span><span class="sxs-lookup"><span data-stu-id="cba18-427">Route mode</span></span>**
 
-Der Modus "Route" besitzt folgende Features und Einschränkungen.
+<span data-ttu-id="cba18-428">Der Modus "Route" besitzt folgende Features und Einschränkungen.</span><span class="sxs-lookup"><span data-stu-id="cba18-428">Route mode has the following features and limitations.</span></span>
 
--   Der Modus "Route" erfordert eine Internetverbindung.
+-   <span data-ttu-id="cba18-429">Der Modus "Route" erfordert eine Internetverbindung.</span><span class="sxs-lookup"><span data-stu-id="cba18-429">Route mode requires an Internet connection.</span></span>
 
--   Bei Verwendung des Genauigkeitsprofils "Urban", "Suburban" oder "Rural" berechnet der Positionssimulator für jede Markierung eine simulierte satellitenbasierte Position, eine simulierte WLAN-basierte Position und eine simulierte mobilfunkbasierte Position. Ihre App erhält lediglich eine dieser Positionen. Die drei Koordinatensätze für die aktuelle Position werden auf der Karte und in der Liste **Current location** in unterschiedlichen Farben angezeigt.
+-   <span data-ttu-id="cba18-430">Bei Verwendung des Genauigkeitsprofils "Urban", "Suburban" oder "Rural" berechnet der Positionssimulator für jede Markierung eine simulierte satellitenbasierte Position, eine simulierte WLAN-basierte Position und eine simulierte mobilfunkbasierte Position.</span><span class="sxs-lookup"><span data-stu-id="cba18-430">When the Urban, Suburban, or Rural accuracy profile is selected, the location simulator calculates a simulated satellite-based position, a simulated Wi-Fi position, and a simulated cellular position for each pin.</span></span> <span data-ttu-id="cba18-431">Ihre App erhält lediglich eine dieser Positionen.</span><span class="sxs-lookup"><span data-stu-id="cba18-431">Your app receives only one of these positions.</span></span> <span data-ttu-id="cba18-432">Die drei Koordinatensätze für die aktuelle Position werden auf der Karte und in der Liste **Current location** in unterschiedlichen Farben angezeigt.</span><span class="sxs-lookup"><span data-stu-id="cba18-432">The three sets of coordinates for the current location are displayed in different colors on the map and in the **Current location** list.</span></span>
 
--   Die Genauigkeit der Markierungen entlang der Route ist nicht einheitlich. Für einige der Markierungen wird die Satellitengenauigkeit, für andere die WLAN- oder die Mobilfunkgenauigkeit verwendet.
+-   <span data-ttu-id="cba18-433">Die Genauigkeit der Markierungen entlang der Route ist nicht einheitlich.</span><span class="sxs-lookup"><span data-stu-id="cba18-433">The accuracy of the pins along route the route is not uniform.</span></span> <span data-ttu-id="cba18-434">Für einige der Markierungen wird die Satellitengenauigkeit, für andere die WLAN- oder die Mobilfunkgenauigkeit verwendet.</span><span class="sxs-lookup"><span data-stu-id="cba18-434">Some of the pins use satellite accuracy, some use Wi-Fi accuracy, and some use cellular accuracy.</span></span>
 
--   Für die Route können maximal 20 Wegpunkte ausgewählt werden.
+-   <span data-ttu-id="cba18-435">Für die Route können maximal 20Wegpunkte ausgewählt werden.</span><span class="sxs-lookup"><span data-stu-id="cba18-435">You cannot select more than 20 waypoints for the route.</span></span>
 
--   Positionen für die sichtbaren und unsichtbaren Markierungen auf der Karte werden nur generiert, wenn Sie ein neues Genauigkeitsprofil auswählen. Wenn Sie die Route innerhalb einer Emulatorsitzung mehrmals mit dem gleichen Genauigkeitsprofil durchlaufen, werden dabei die zuvor generierten Positionen wiederverwendet.
+-   <span data-ttu-id="cba18-436">Positionen für die sichtbaren und unsichtbaren Markierungen auf der Karte werden nur generiert, wenn Sie ein neues Genauigkeitsprofil auswählen.</span><span class="sxs-lookup"><span data-stu-id="cba18-436">Positions for the visible and invisible pins on the map are generated only once when you select a new accuracy profile.</span></span> <span data-ttu-id="cba18-437">Wenn Sie die Route innerhalb einer Emulatorsitzung mehrmals mit dem gleichen Genauigkeitsprofil durchlaufen, werden dabei die zuvor generierten Positionen wiederverwendet.</span><span class="sxs-lookup"><span data-stu-id="cba18-437">When you play the route more than once with the same accuracy profile during the same emulator session, the previously generated positions are reused.</span></span>
 
-Der folgende Screenshot zeigt den Modus "Route": Die orangefarbene Linie ist die Route. Der blaue Punkt ist die per Satellit bestimmte, exakte Position des Fahrzeugs. Die roten und grünen Punkte sind weniger genaue Positionen, die mithilfe der Positionsbestimmung per WLAN und Mobilfunk und unter Verwendung des Genauigkeitsprofils "Suburban" berechnet wurden. Die drei berechneten Positionen werden auch in der Liste **Current location** angezeigt.
+<span data-ttu-id="cba18-438">Der folgende Screenshot zeigt den Modus "Route":</span><span class="sxs-lookup"><span data-stu-id="cba18-438">The following screenshot shows Route mode.</span></span> <span data-ttu-id="cba18-439">Die orangefarbene Linie ist die Route.</span><span class="sxs-lookup"><span data-stu-id="cba18-439">The orange line indicates the route.</span></span> <span data-ttu-id="cba18-440">Der blaue Punkt ist die per Satellit bestimmte, exakte Position des Fahrzeugs.</span><span class="sxs-lookup"><span data-stu-id="cba18-440">The blue dot indicates the accurate location of the car determined by satellite-based positioning.</span></span> <span data-ttu-id="cba18-441">Die roten und grünen Punkte sind weniger genaue Positionen, die mithilfe der Positionsbestimmung per WLAN und Mobilfunk und unter Verwendung des Genauigkeitsprofils "Suburban" berechnet wurden.</span><span class="sxs-lookup"><span data-stu-id="cba18-441">The red and green dots indicate less accurate locations calculated by using Wi-Fi and cellular positioning and the Suburban accuracy profile.</span></span> <span data-ttu-id="cba18-442">Die drei berechneten Positionen werden auch in der Liste **Current location** angezeigt.</span><span class="sxs-lookup"><span data-stu-id="cba18-442">The three calculated locations are also displayed in the **Current location** list.</span></span>
 
 ![Seite "Location" in den zusätzlichen Tools des Emulators](images/em-drive.png)
 
-**Weitere Informationen zum Positionssimulator**
+**<span data-ttu-id="cba18-444">Weitere Informationen zum Positionssimulator</span><span class="sxs-lookup"><span data-stu-id="cba18-444">More info about the location simulator</span></span>**
 
--   Sie können eine Position mit der standardmäßigen Genauigkeitseinstellung anfordern. Die Einschränkung, die in der Windows Phone 8-Version des Positionssimulators galt und beim Anfordern einer Position die Verwendung der Genauigkeitseinstellung "High" erforderte, wurde aufgehoben.
+-   <span data-ttu-id="cba18-445">Sie können eine Position mit der standardmäßigen Genauigkeitseinstellung anfordern.</span><span class="sxs-lookup"><span data-stu-id="cba18-445">You can request a position with the accuracy set to Default.</span></span> <span data-ttu-id="cba18-446">Die Einschränkung, die in der WindowsPhone8-Version des Positionssimulators galt und beim Anfordern einer Position die Verwendung der Genauigkeitseinstellung "High" erforderte, wurde aufgehoben.</span><span class="sxs-lookup"><span data-stu-id="cba18-446">A limitation that existed in the Windows Phone 8 version of the location simulator, and required you to request a position with the accuracy set to High, has been fixed.</span></span>
 
--   Erstellen Sie zum Testen des Geofencings im Emulator eine Simulation, die dem Geofencing-Modul eine Aufwärmphase zugesteht, sodass das Modul die Bewegungsmuster analysieren und sich darauf einstellen kann.
+-   <span data-ttu-id="cba18-447">Erstellen Sie zum Testen des Geofencings im Emulator eine Simulation, die dem Geofencing-Modul eine Aufwärmphase zugesteht, sodass das Modul die Bewegungsmuster analysieren und sich darauf einstellen kann.</span><span class="sxs-lookup"><span data-stu-id="cba18-447">When you test geofencing in the emulator, create a simulation that gives the geofencing engine a “warm-up” period to learn and adjust to the movement patterns.</span></span>
 
--   Die einzigen simulierten Positionseigenschaften sind Breitengrad, Längengrad, Genauigkeit und Positionsquelle. Andere Eigenschaften wie Geschwindigkeit, Richtung usw. werden vom Positionssimulator nicht simuliert.
+-   <span data-ttu-id="cba18-448">Die einzigen simulierten Positionseigenschaften sind Breitengrad, Längengrad, Genauigkeit und Positionsquelle.</span><span class="sxs-lookup"><span data-stu-id="cba18-448">The only position properties that are simulated are the Latitude, Longitude, Accuracy, and PositionSource.</span></span> <span data-ttu-id="cba18-449">Andere Eigenschaften wie Geschwindigkeit, Richtung usw. werden vom Positionssimulator nicht simuliert.</span><span class="sxs-lookup"><span data-stu-id="cba18-449">The location simulator does not simulate other properties such as Speed, Heading, and so forth.</span></span>
 
-## <a name="network"></a>Netzwerk
+## <a name="network"></a><span data-ttu-id="cba18-450">Netzwerk</span><span class="sxs-lookup"><span data-stu-id="cba18-450">Network</span></span>
 
-Verwenden Sie die Registerkarte **Netzwerk** der zusätzlichen Tools**** des Emulators, um Ihre App mit unterschiedlicher Netzwerkgeschwindigkeit und unterschiedlicher Signalstärke zu testen. Dieses Feature ist hilfreich, wenn Ihre App Webdienste aufruft oder Daten überträgt.
+<span data-ttu-id="cba18-451">Verwenden Sie die Registerkarte **Netzwerk** der zusätzlichen Tools**** des Emulators, um Ihre App mit unterschiedlicher Netzwerkgeschwindigkeit und unterschiedlicher Signalstärke zu testen.</span><span class="sxs-lookup"><span data-stu-id="cba18-451">Test your app with different network speeds and different signal strengths by using the **Network** tab of the emulator's **Additional Tools**.</span></span> <span data-ttu-id="cba18-452">Dieses Feature ist hilfreich, wenn Ihre App Webdienste aufruft oder Daten überträgt.</span><span class="sxs-lookup"><span data-stu-id="cba18-452">This feature is useful if your app calls web services or transfers data.</span></span>
 
-Mit dem Netzwerksimulationsfeature können Sie sicherstellen, dass Ihre App in der Praxis gut funktioniert. Der Windows Phone-Emulator wird in der Regel auf einem Computer mit schneller WLAN- oder Ethernetverbindung ausgeführt. Ihre App wird dagegen auf Smartphones ausgeführt, die üblicherweise über eine langsamere Mobilfunkverbindung verfügen.
+<span data-ttu-id="cba18-453">Mit dem Netzwerksimulationsfeature können Sie sicherstellen, dass Ihre App in der Praxis gut funktioniert.</span><span class="sxs-lookup"><span data-stu-id="cba18-453">The network simulation feature helps you to make sure that your app runs well in the real world.</span></span> <span data-ttu-id="cba18-454">Der WindowsPhone-Emulator wird in der Regel auf einem Computer mit schneller WLAN- oder Ethernetverbindung ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="cba18-454">The Windows Phone Emulator runs on a computer that usually has a fast WiFi or Ethernet connection.</span></span> <span data-ttu-id="cba18-455">Ihre App wird dagegen auf Smartphones ausgeführt, die üblicherweise über eine langsamere Mobilfunkverbindung verfügen.</span><span class="sxs-lookup"><span data-stu-id="cba18-455">Your app, however, runs on phones that are typically connected over a slower cellular connection.</span></span>
 
-1.  Aktivieren Sie das Kontrollkästchen **Netzwerksimulation aktivieren**, um Ihre App mit unterschiedlicher Netzwerkgeschwindigkeit und unterschiedlicher Signalstärke zu testen.
-2.  Wählen Sie in der Dropdownliste **Netzwerkgeschwindigkeit** eine der folgenden Optionen aus:
-    -   Kein Netzwerk
-    -   2G
-    -   3G
-    -   4G
+1.  <span data-ttu-id="cba18-456">Aktivieren Sie das Kontrollkästchen **Netzwerksimulation aktivieren**, um Ihre App mit unterschiedlicher Netzwerkgeschwindigkeit und unterschiedlicher Signalstärke zu testen.</span><span class="sxs-lookup"><span data-stu-id="cba18-456">Check **Enable network simulation** to test your app with different network speeds and different signal strengths.</span></span>
+2.  <span data-ttu-id="cba18-457">Wählen Sie in der Dropdownliste **Netzwerkgeschwindigkeit** eine der folgenden Optionen aus:</span><span class="sxs-lookup"><span data-stu-id="cba18-457">In the **Network speed** dropdown list, select one of the following options:</span></span>
+    -   <span data-ttu-id="cba18-458">Kein Netzwerk</span><span class="sxs-lookup"><span data-stu-id="cba18-458">No network</span></span>
+    -   <span data-ttu-id="cba18-459">2G</span><span class="sxs-lookup"><span data-stu-id="cba18-459">2G</span></span>
+    -   <span data-ttu-id="cba18-460">3G</span><span class="sxs-lookup"><span data-stu-id="cba18-460">3G</span></span>
+    -   <span data-ttu-id="cba18-461">4G</span><span class="sxs-lookup"><span data-stu-id="cba18-461">4G</span></span>
 
-3.  Wählen Sie in der Dropdownliste **Signalstärke** eine der folgenden Optionen aus:
-    -   Gut
-    -   Mittelmäßig
-    -   Schlecht
+3.  <span data-ttu-id="cba18-462">Wählen Sie in der Dropdownliste **Signalstärke** eine der folgenden Optionen aus:</span><span class="sxs-lookup"><span data-stu-id="cba18-462">In the **Signal strength** dropdown list, select one of the following options:</span></span>
+    -   <span data-ttu-id="cba18-463">Gut</span><span class="sxs-lookup"><span data-stu-id="cba18-463">Good</span></span>
+    -   <span data-ttu-id="cba18-464">Mittelmäßig</span><span class="sxs-lookup"><span data-stu-id="cba18-464">Average</span></span>
+    -   <span data-ttu-id="cba18-465">Schlecht</span><span class="sxs-lookup"><span data-stu-id="cba18-465">Poor</span></span>
 
-4.  Deaktivieren Sie das Kontrollkästchen **Enable network simulation**, um zum Standardverhalten zurückzukehren und wieder die Netzwerkeinstellungen des Entwicklungscomputers zu verwenden.
+4.  <span data-ttu-id="cba18-466">Deaktivieren Sie das Kontrollkästchen **Enable network simulation**, um zum Standardverhalten zurückzukehren und wieder die Netzwerkeinstellungen des Entwicklungscomputers zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="cba18-466">Clear **Enable network simulation** to restore the default behavior, which uses the network settings of your development computer.</span></span>
 
-Die Registerkarte **Network** gibt auch Aufschluss über die aktuellen Netzwerkeinstellungen.
+<span data-ttu-id="cba18-467">Die Registerkarte **Network** gibt auch Aufschluss über die aktuellen Netzwerkeinstellungen.</span><span class="sxs-lookup"><span data-stu-id="cba18-467">You can also review the current network settings on the **Network** tab.</span></span>
 
 ![Seite "Network" in den zusätzlichen Tools des Emulators](images/em-network.png)
 
-## <a name="sd-card"></a>SD-Karte
+## <a name="sd-card"></a><span data-ttu-id="cba18-469">SD-Karte</span><span class="sxs-lookup"><span data-stu-id="cba18-469">SD card</span></span>
 
-Verwenden Sie die Registerkarte **SD-Karte** der zusätzlichen Tools**** des Emulators, um Ihre App mit einer simulierten, austauschbaren SD-Karte zu testen. Dieses Feature ist hilfreich, wenn Ihre App Dateien liest oder schreibt.
+<span data-ttu-id="cba18-470">Verwenden Sie die Registerkarte **SD-Karte** der zusätzlichen Tools**** des Emulators, um Ihre App mit einer simulierten, austauschbaren SD-Karte zu testen.</span><span class="sxs-lookup"><span data-stu-id="cba18-470">Test your app with a simulated removable SD card by using the **SD Card** tab of the emulator's **Additional Tools**.</span></span> <span data-ttu-id="cba18-471">Dieses Feature ist hilfreich, wenn Ihre App Dateien liest oder schreibt.</span><span class="sxs-lookup"><span data-stu-id="cba18-471">This feature is useful if your app reads or write files.</span></span>
 
 ![Seite „SD-Karte“ in den zusätzlichen Tools des Emulators](images/em-sdcard.png)
 
-Die Registerkarte **SD-Karte** simuliert mithilfe eines Ordner auf dem Entwicklungscomputer eine austauschbare SD-Karte im Smartphone.
+<span data-ttu-id="cba18-473">Die Registerkarte **SD-Karte** simuliert mithilfe eines Ordner auf dem Entwicklungscomputer eine austauschbare SD-Karte im Smartphone.</span><span class="sxs-lookup"><span data-stu-id="cba18-473">The **SD Card** tab uses a folder on the development computer to simulate a removable SD card in the phone.</span></span>
 
-1.  **Wählen Sie einen Ordner aus**.
+1.  <span data-ttu-id="cba18-474">**Wählen Sie einen Ordner aus**.</span><span class="sxs-lookup"><span data-stu-id="cba18-474">**Select a folder**.</span></span>
 
-    Klicken Sie auf **Browse**, um auf dem Entwicklungscomputer einen Ordner für die Inhalte der simulierten SD-Karte auszuwählen.
+    <span data-ttu-id="cba18-475">Klicken Sie auf **Browse**, um auf dem Entwicklungscomputer einen Ordner für die Inhalte der simulierten SD-Karte auszuwählen.</span><span class="sxs-lookup"><span data-stu-id="cba18-475">Click **Browse** to pick a folder on the development computer to hold the contents of the simulated SD card.</span></span>
 
-2.  **Setzen Sie die SD-Karte ein.**
+2.  <span data-ttu-id="cba18-476">**Setzen Sie die SD-Karte ein.**</span><span class="sxs-lookup"><span data-stu-id="cba18-476">**Insert the SD card**.</span></span>
 
-    Klicken Sie nach dem Auswählen eines Ordners auf **Insert SD card**. Nach dem Einsetzen der SD-Karte kann Folgendes passieren:
+    <span data-ttu-id="cba18-477">Klicken Sie nach dem Auswählen eines Ordners auf **Insert SD card**.</span><span class="sxs-lookup"><span data-stu-id="cba18-477">After selecting a folder, click **Insert SD card**.</span></span> <span data-ttu-id="cba18-478">Nach dem Einsetzen der SD-Karte kann Folgendes passieren:</span><span class="sxs-lookup"><span data-stu-id="cba18-478">When you insert the SD card, the following things happen:</span></span>
 
-    -   Falls Sie keinen oder einen ungültigen Ordner angegeben haben, tritt ein Fehler auf.
-    -   Die Dateien aus dem angegebenen Ordner auf dem Entwicklungscomputer werden in den Stammordner der simulierten SD-Karte des Emulators kopiert. Eine Statusanzeige informiert über den Status der Synchronisierung.
-    -   Die Schaltfläche **Insert the SD card** wird zu **Eject SD card**.
-    -   Wenn Sie während des Synchronisierungsvorgangs auf **Eject SD card** klicken, wird der Vorgang abgebrochen.
+    -   <span data-ttu-id="cba18-479">Falls Sie keinen oder einen ungültigen Ordner angegeben haben, tritt ein Fehler auf.</span><span class="sxs-lookup"><span data-stu-id="cba18-479">If you didn't specify a folder, or the folder's not valid, an error occurs.</span></span>
+    -   <span data-ttu-id="cba18-480">Die Dateien aus dem angegebenen Ordner auf dem Entwicklungscomputer werden in den Stammordner der simulierten SD-Karte des Emulators kopiert.</span><span class="sxs-lookup"><span data-stu-id="cba18-480">The files in the specified folder on the development computer are copied to the root folder of the simulated SD card on the emulator.</span></span> <span data-ttu-id="cba18-481">Eine Statusanzeige informiert über den Status der Synchronisierung.</span><span class="sxs-lookup"><span data-stu-id="cba18-481">A progress bar indicates the progress of the sync operation.</span></span>
+    -   <span data-ttu-id="cba18-482">Die Schaltfläche **Insert the SD card** wird zu **Eject SD card**.</span><span class="sxs-lookup"><span data-stu-id="cba18-482">The **Insert the SD card** button changes to **Eject SD card**.</span></span>
+    -   <span data-ttu-id="cba18-483">Wenn Sie während des Synchronisierungsvorgangs auf **Eject SD card** klicken, wird der Vorgang abgebrochen.</span><span class="sxs-lookup"><span data-stu-id="cba18-483">If you click **Eject SD card** while the sync operation is in progress, the operation is canceled.</span></span>
 
-3.  Optional: Aktivieren oder deaktivieren Sie das Kontrollkästchen **Sync updated files back to the local folder when I eject the SD card**.
+3.  <span data-ttu-id="cba18-484">Optional: Aktivieren oder deaktivieren Sie das Kontrollkästchen **Sync updated files back to the local folder when I eject the SD card**.</span><span class="sxs-lookup"><span data-stu-id="cba18-484">Optionally, select or clear **Sync updated files back to the local folder when I eject the SD card**.</span></span>
 
-    Diese Option ist standardmäßig aktiviert. Wenn diese Option aktiviert ist, werden Dateien aus dem Emulator beim Auswerfen der SD-Karte wieder mit dem Ordner auf dem Entwicklungscomputer synchronisiert.
+    <span data-ttu-id="cba18-485">Diese Option ist standardmäßig aktiviert.</span><span class="sxs-lookup"><span data-stu-id="cba18-485">This option is enabled by default.</span></span> <span data-ttu-id="cba18-486">Wenn diese Option aktiviert ist, werden Dateien aus dem Emulator beim Auswerfen der SD-Karte wieder mit dem Ordner auf dem Entwicklungscomputer synchronisiert.</span><span class="sxs-lookup"><span data-stu-id="cba18-486">When this option is enabled, files are synced from the emulator back to the folder on the development computer when you eject the SD card.</span></span>
 
-4.  **Werfen Sie die SD-Karte aus.**
+4.  <span data-ttu-id="cba18-487">**Werfen Sie die SD-Karte aus.**</span><span class="sxs-lookup"><span data-stu-id="cba18-487">**Eject the SD card**.</span></span>
 
-    Klicken Sie auf **Eject SD card**. Nach dem Auswerfen der SD-Karte kann Folgendes passieren:
+    <span data-ttu-id="cba18-488">Klicken Sie auf **Eject SD card**.</span><span class="sxs-lookup"><span data-stu-id="cba18-488">Click **Eject SD card**.</span></span> <span data-ttu-id="cba18-489">Nach dem Auswerfen der SD-Karte kann Folgendes passieren:</span><span class="sxs-lookup"><span data-stu-id="cba18-489">When you eject the SD card, the following things happen:</span></span>
 
-    -   Wenn Sie das Kontrollkästchen **Sync updated files back to the local folder when I eject the SD card** aktiviert haben, passiert Folgendes:
-        -   Die Dateien auf der simulierten SD-Karte des Emulators werden in den angegebenen Ordner auf dem Entwicklungscomputer kopiert. Eine Statusanzeige informiert über den Status der Synchronisierung.
-        -   Die Schaltfläche **Eject SD card** wird zu **Cancel sync**.
-        -   Wenn Sie während des Synchronisierungsvorgangs auf **Synchronisierung abbrechen** klicken, wird die Karte ausgeworfen, und die Ergebnisse des Synchronisierungsvorgangs sind unvollständig.
-    -   Die Schaltfläche **Eject SD card** wird wieder zu **Insert SD card**.
+    -   <span data-ttu-id="cba18-490">Wenn Sie das Kontrollkästchen **Sync updated files back to the local folder when I eject the SD card** aktiviert haben, passiert Folgendes:</span><span class="sxs-lookup"><span data-stu-id="cba18-490">if you have selected **Sync updated files back to the local folder when I eject the SD card**, the following things happen:</span></span>
+        -   <span data-ttu-id="cba18-491">Die Dateien auf der simulierten SD-Karte des Emulators werden in den angegebenen Ordner auf dem Entwicklungscomputer kopiert.</span><span class="sxs-lookup"><span data-stu-id="cba18-491">The files on the simulated SD card on the emulator are copied to the specified folder on the development computer.</span></span> <span data-ttu-id="cba18-492">Eine Statusanzeige informiert über den Status der Synchronisierung.</span><span class="sxs-lookup"><span data-stu-id="cba18-492">A progress bar indicates the progress of the sync operation.</span></span>
+        -   <span data-ttu-id="cba18-493">Die Schaltfläche **Eject SD card** wird zu **Cancel sync**.</span><span class="sxs-lookup"><span data-stu-id="cba18-493">The **Eject SD card** button changes to **Cancel sync**.</span></span>
+        -   <span data-ttu-id="cba18-494">Wenn Sie während des Synchronisierungsvorgangs auf **Synchronisierung abbrechen** klicken, wird die Karte ausgeworfen, und die Ergebnisse des Synchronisierungsvorgangs sind unvollständig.</span><span class="sxs-lookup"><span data-stu-id="cba18-494">If you click **Cancel sync** while the sync operation is in progress, the card is ejected and the results of the sync operation are incomplete.</span></span>
+    -   <span data-ttu-id="cba18-495">Die Schaltfläche **Eject SD card** wird wieder zu **Insert SD card**.</span><span class="sxs-lookup"><span data-stu-id="cba18-495">The **Eject SD card** button changes back to **Insert SD card**.</span></span>
 
-> **Hinweis**  Da die vom Smartphone verwendete SD-Karte mit dem FAT32-Dateisystem formatiert ist, beträgt die maximale Dateigröße 32 GB.
+> <span data-ttu-id="cba18-496">**Hinweis**  Da die vom Smartphone verwendete SD-Karte mit dem FAT32-Dateisystem formatiert ist, beträgt die maximale Dateigröße 32 GB.</span><span class="sxs-lookup"><span data-stu-id="cba18-496">**Note**  Since an SD card used by the phone is formatted with the FAT32 file system, 32GB is the maximum size.</span></span>
 
-Die Geschwindigkeit von Lese- und Schreibvorgängen wird für die simulierte SD-Karte realistisch gedrosselt. Der Zugriff auf eine SD-Karte dauert länger als der Zugriff auf die Festplatte des Computers.
+<span data-ttu-id="cba18-497">Die Geschwindigkeit von Lese- und Schreibvorgängen wird für die simulierte SD-Karte realistisch gedrosselt.</span><span class="sxs-lookup"><span data-stu-id="cba18-497">The speed of reading from and writing to the simulated SD card is throttled to imitate real-world speeds.</span></span> <span data-ttu-id="cba18-498">Der Zugriff auf eine SD-Karte dauert länger als der Zugriff auf die Festplatte des Computers.</span><span class="sxs-lookup"><span data-stu-id="cba18-498">Accessing an SD card is slower than accessing the computer's hard drive.</span></span>
 
-## <a name="notifications"></a>Benachrichtigungen
+## <a name="notifications"></a><span data-ttu-id="cba18-499">Benachrichtigungen</span><span class="sxs-lookup"><span data-stu-id="cba18-499">Notifications</span></span>
 
-Verwenden Sie die Registerkarte **Benachrichtigungen** der **zusätzlichen Tools** des Emulators, um Pushbenachrichtigungen an Ihre App zu senden. Dieses Feature ist hilfreich, wenn Ihre App Pushbenachrichtigungen empfängt.
+<span data-ttu-id="cba18-500">Verwenden Sie die Registerkarte **Benachrichtigungen** der **zusätzlichen Tools** des Emulators, um Pushbenachrichtigungen an Ihre App zu senden.</span><span class="sxs-lookup"><span data-stu-id="cba18-500">Send push notifications to your app by using the **Notifications** tab of the emulator's **Additional Tools**.</span></span> <span data-ttu-id="cba18-501">Dieses Feature ist hilfreich, wenn Ihre App Pushbenachrichtigungen empfängt.</span><span class="sxs-lookup"><span data-stu-id="cba18-501">This feature is useful if your app receives push notifications.</span></span>
 
-Sie können ganz einfach Pushbenachrichtigungen testen, ohne den funktionsfähigen Clouddienst zu erstellen, der nach der Veröffentlichung Ihrer App benötigt wird.
+<span data-ttu-id="cba18-502">Sie können ganz einfach Pushbenachrichtigungen testen, ohne den funktionsfähigen Clouddienst zu erstellen, der nach der Veröffentlichung Ihrer App benötigt wird.</span><span class="sxs-lookup"><span data-stu-id="cba18-502">You can easily test push notifications without creating the working cloud service that's required after you publish your app.</span></span>
 
-1.  **Aktivieren Sie die Simulation.**
+1.  **<span data-ttu-id="cba18-503">Aktivieren Sie die Simulation.</span><span class="sxs-lookup"><span data-stu-id="cba18-503">Enable simulation.</span></span>**
 
-    Wenn Sie **Enabled** auswählen, verwenden alle im Emulator bereitgestellten Apps anstelle der WNS oder des MPN-Diensts das Simulationsmodul, bis Sie die Simulation wieder deaktivieren.
+    <span data-ttu-id="cba18-504">Wenn Sie **Enabled** auswählen, verwenden alle im Emulator bereitgestellten Apps anstelle der WNS oder des MPN-Diensts das Simulationsmodul, bis Sie die Simulation wieder deaktivieren.</span><span class="sxs-lookup"><span data-stu-id="cba18-504">After you select **Enabled**, all apps deployed on the emulator use the simulation engine instead of the WNS or MPN service until you disable simulation.</span></span>
 
-2.  **Wählen Sie eine App für den Empfang von Benachrichtigungen aus.**
+2.  **<span data-ttu-id="cba18-505">Wählen Sie eine App für den Empfang von Benachrichtigungen aus.</span><span class="sxs-lookup"><span data-stu-id="cba18-505">Select an app to receive notifications.</span></span>**
 
-    Die Liste **AppId** wird automatisch mit allen Apps aufgefüllt, die für den Emulator bereitgestellt wurden und für Pushbenachrichtigungen geeignet sind. Wählen Sie in der Dropdownliste eine App aus.
+    <span data-ttu-id="cba18-506">Die Liste **AppId** wird automatisch mit allen Apps aufgefüllt, die für den Emulator bereitgestellt wurden und für Pushbenachrichtigungen geeignet sind.</span><span class="sxs-lookup"><span data-stu-id="cba18-506">The **AppId** list is automatically populated with all apps deployed to the emulator that are enabled for push notifications.</span></span> <span data-ttu-id="cba18-507">Wählen Sie in der Dropdownliste eine App aus.</span><span class="sxs-lookup"><span data-stu-id="cba18-507">Select an app in the drop-down list.</span></span>
 
-    Falls Sie nach der Simulationsaktivierung eine weitere, für Pushbenachrichtigungen geeignete App bereitgestellt haben, klicken Sie auf **Aktualisieren**, um die App der Liste hinzuzufügen.
+    <span data-ttu-id="cba18-508">Falls Sie nach der Simulationsaktivierung eine weitere, für Pushbenachrichtigungen geeignete App bereitgestellt haben, klicken Sie auf **Aktualisieren**, um die App der Liste hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="cba18-508">If you deploy another push-enabled app after enabling simulation, click **Refresh** to add the app to the list.</span></span>
 
-3.  **Wählen Sie einen Benachrichtigungskanal aus.**
+3.  **<span data-ttu-id="cba18-509">Wählen Sie einen Benachrichtigungskanal aus.</span><span class="sxs-lookup"><span data-stu-id="cba18-509">Select a notification channel.</span></span>**
 
-    Nachdem Sie in der Liste **AppId** eine App ausgewählt haben, wird die Liste **URI** automatisch mit allen Benachrichtigungskanälen aufgefüllt, die für die ausgewählte App registriert sind. Wählen Sie in der Dropdownliste einen Benachrichtigungskanal aus.
+    <span data-ttu-id="cba18-510">Nachdem Sie in der Liste **AppId** eine App ausgewählt haben, wird die Liste **URI** automatisch mit allen Benachrichtigungskanälen aufgefüllt, die für die ausgewählte App registriert sind.</span><span class="sxs-lookup"><span data-stu-id="cba18-510">After you select an app in the **AppId** list, the **URI** list is automatically populated with all the notification channels registered for the selected app.</span></span> <span data-ttu-id="cba18-511">Wählen Sie in der Dropdownliste einen Benachrichtigungskanal aus.</span><span class="sxs-lookup"><span data-stu-id="cba18-511">Select a notification channel in the drop-down list.</span></span>
 
-4.  **Wählen Sie einen Benachrichtigungstyp aus.**
+4.  **<span data-ttu-id="cba18-512">Wählen Sie einen Benachrichtigungstyp aus.</span><span class="sxs-lookup"><span data-stu-id="cba18-512">Select a notification type.</span></span>**
 
-    Nachdem Sie in der Liste **URI** einen Benachrichtigungskanal ausgewählt haben, wird die Liste **Notification Type** automatisch mit allen Typen aufgefüllt, die für den Benachrichtigungsdienst verfügbar sind. Wählen Sie in der Dropdownliste einen Benachrichtigungstyp aus.
+    <span data-ttu-id="cba18-513">Nachdem Sie in der Liste **URI** einen Benachrichtigungskanal ausgewählt haben, wird die Liste **Notification Type** automatisch mit allen Typen aufgefüllt, die für den Benachrichtigungsdienst verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="cba18-513">After you select a notification channel in the **URI** list, the **Notification Type** list is automatically populated with all the types available for the notification service.</span></span> <span data-ttu-id="cba18-514">Wählen Sie in der Dropdownliste einen Benachrichtigungstyp aus.</span><span class="sxs-lookup"><span data-stu-id="cba18-514">Select a notification type in the drop-down list.</span></span>
 
-    Der Simulator ermittelt anhand des URI-Formats des Benachrichtigungskanals, ob die App WNS- oder MPN-Pushbenachrichtigungen verwendet.
+    <span data-ttu-id="cba18-515">Der Simulator ermittelt anhand des URI-Formats des Benachrichtigungskanals, ob die App WNS- oder MPN-Pushbenachrichtigungen verwendet.</span><span class="sxs-lookup"><span data-stu-id="cba18-515">The simulator uses the Uri format of the notification channel to determine whether the app is using WNS or MPN push notifications.</span></span>
 
-    Die Simulation unterstützt alle Benachrichtigungstypen. Der standardmäßige Benachrichtigungstyp ist **Tile**.
+    <span data-ttu-id="cba18-516">Die Simulation unterstützt alle Benachrichtigungstypen.</span><span class="sxs-lookup"><span data-stu-id="cba18-516">Simulation supports all notification types.</span></span> <span data-ttu-id="cba18-517">Der standardmäßige Benachrichtigungstyp ist **Tile**.</span><span class="sxs-lookup"><span data-stu-id="cba18-517">The default notification type is **Tile**.</span></span>
 
-    -   Folgende WNS-Benachrichtigungstypen werden unterstützt:
+    -   <span data-ttu-id="cba18-518">Folgende WNS-Benachrichtigungstypen werden unterstützt:</span><span class="sxs-lookup"><span data-stu-id="cba18-518">The following WNS notification types are supported.</span></span>
 
-        -   Raw
-        -   Toast
+        -   <span data-ttu-id="cba18-519">Raw</span><span class="sxs-lookup"><span data-stu-id="cba18-519">Raw</span></span>
+        -   <span data-ttu-id="cba18-520">Toast</span><span class="sxs-lookup"><span data-stu-id="cba18-520">Toast</span></span>
 
-            Wenn Ihre App WNS-Benachrichtigungen verwendet und Sie den Benachrichtigungstyp **Toast** auswählen, enthält die Simulationsregisterkarte die Felder **Tag** und **Group**. Sie können diese Optionen aktivieren und Werte für **Tag** und **Group** eingeben, um Popupbenachrichtigungen im Benachrichtigungscenter zu verwalten.
+            <span data-ttu-id="cba18-521">Wenn Ihre App WNS-Benachrichtigungen verwendet und Sie den Benachrichtigungstyp **Toast** auswählen, enthält die Simulationsregisterkarte die Felder **Tag** und **Group**.</span><span class="sxs-lookup"><span data-stu-id="cba18-521">When your app uses WNS notifications and you select the **Toast** notification type, the simulation tab displays the **Tag** and **Group** fields.</span></span> <span data-ttu-id="cba18-522">Sie können diese Optionen aktivieren und Werte für **Tag** und **Group** eingeben, um Popupbenachrichtigungen im Benachrichtigungscenter zu verwalten.</span><span class="sxs-lookup"><span data-stu-id="cba18-522">You can select these options and enter **Tag** and **Group** values to manage toast notifications in the Notification Center.</span></span>
 
-        -   Tile
-        -   Badge
+        -   <span data-ttu-id="cba18-523">Tile</span><span class="sxs-lookup"><span data-stu-id="cba18-523">Tile</span></span>
+        -   <span data-ttu-id="cba18-524">Badge</span><span class="sxs-lookup"><span data-stu-id="cba18-524">Badge</span></span>
 
-    -   Folgende MPN-Benachrichtigungstypen werden unterstützt:
+    -   <span data-ttu-id="cba18-525">Folgende MPN-Benachrichtigungstypen werden unterstützt:</span><span class="sxs-lookup"><span data-stu-id="cba18-525">The following MPN notification types are supported.</span></span>
 
-        -   Raw
-        -   Toast
-        -   Tile
+        -   <span data-ttu-id="cba18-526">Raw</span><span class="sxs-lookup"><span data-stu-id="cba18-526">Raw</span></span>
+        -   <span data-ttu-id="cba18-527">Toast</span><span class="sxs-lookup"><span data-stu-id="cba18-527">Toast</span></span>
+        -   <span data-ttu-id="cba18-528">Tile</span><span class="sxs-lookup"><span data-stu-id="cba18-528">Tile</span></span>
 
-5.  **Wählen Sie eine Benachrichtigungsvorlage aus.**
+5.  **<span data-ttu-id="cba18-529">Wählen Sie eine Benachrichtigungsvorlage aus.</span><span class="sxs-lookup"><span data-stu-id="cba18-529">Select a notification template.</span></span>**
 
-    Nachdem Sie in der Liste **Notification Type** einen Benachrichtigungstyp ausgewählt haben, wird die Liste **Templates** automatisch mit allen Vorlagen aufgefüllt, die für den Benachrichtigungstyp verfügbar sind. Wählen Sie in der Dropdownliste eine Vorlage aus.
+    <span data-ttu-id="cba18-530">Nachdem Sie in der Liste **Notification Type** einen Benachrichtigungstyp ausgewählt haben, wird die Liste **Templates** automatisch mit allen Vorlagen aufgefüllt, die für den Benachrichtigungstyp verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="cba18-530">After you select a notification type in the **Notification Type** list, the **Templates** list is automatically populated with all the templates available for the notification type.</span></span> <span data-ttu-id="cba18-531">Wählen Sie in der Dropdownliste eine Vorlage aus.</span><span class="sxs-lookup"><span data-stu-id="cba18-531">Select a template in the drop-down list.</span></span>
 
-    Die Simulation unterstützt alle Vorlagentypen.
+    <span data-ttu-id="cba18-532">Die Simulation unterstützt alle Vorlagentypen.</span><span class="sxs-lookup"><span data-stu-id="cba18-532">Simulation supports all template types.</span></span>
 
-6.  **Optional: Ändern Sie die Benachrichtigungsnutzlast.**
+6.  **<span data-ttu-id="cba18-533">Optional: Ändern Sie die Benachrichtigungsnutzlast.</span><span class="sxs-lookup"><span data-stu-id="cba18-533">Optionally, change the notification payload.</span></span>**
 
-    Nachdem Sie in der Liste **Templates** eine Vorlage ausgewählt haben, wird das Feld **Notification Payload** automatisch mit einer Beispielnutzlast für die Vorlage aufgefüllt. Sehen Sie sich die Beispielnutzlast im Textfeld **Notification Payload** an.
+    <span data-ttu-id="cba18-534">Nachdem Sie in der Liste **Templates** eine Vorlage ausgewählt haben, wird das Feld **Notification Payload** automatisch mit einer Beispielnutzlast für die Vorlage aufgefüllt.</span><span class="sxs-lookup"><span data-stu-id="cba18-534">After you select a template in the **Templates** list, the **Notification Payload** text box is automatically populated with a sample payload for the template.</span></span> <span data-ttu-id="cba18-535">Sehen Sie sich die Beispielnutzlast im Textfeld **Notification Payload** an.</span><span class="sxs-lookup"><span data-stu-id="cba18-535">Review the sample payload in the **Notification Payload** text box.</span></span>
 
-    -   Sie können die Beispielnutzlast unverändert senden.
+    -   <span data-ttu-id="cba18-536">Sie können die Beispielnutzlast unverändert senden.</span><span class="sxs-lookup"><span data-stu-id="cba18-536">You can send the sample payload without changing it.</span></span>
 
-    -   Sie können die Beispielnutzlast im Textfeld ändern.
+    -   <span data-ttu-id="cba18-537">Sie können die Beispielnutzlast im Textfeld ändern.</span><span class="sxs-lookup"><span data-stu-id="cba18-537">You can edit the sample payload in the text box.</span></span>
 
-    -   Sie können auf **Load** klicken, um eine Nutzlast aus einer Text- oder XML-Datei zu laden.
+    -   <span data-ttu-id="cba18-538">Sie können auf **Load** klicken, um eine Nutzlast aus einer Text- oder XML-Datei zu laden.</span><span class="sxs-lookup"><span data-stu-id="cba18-538">You can click **Load** to load a payload from a text or XML file.</span></span>
 
-    -   Sie können auf **Save** klicken, um den XML-Text der Nutzlast zur späteren Verwendung zu speichern.
+    -   <span data-ttu-id="cba18-539">Sie können auf **Save** klicken, um den XML-Text der Nutzlast zur späteren Verwendung zu speichern.</span><span class="sxs-lookup"><span data-stu-id="cba18-539">You can click **Save** to save the XML text of the payload to use again later.</span></span>
 
-    Der Simulator überprüft den XML-Text der Nutzlast nicht.
+    <span data-ttu-id="cba18-540">Der Simulator überprüft den XML-Text der Nutzlast nicht.</span><span class="sxs-lookup"><span data-stu-id="cba18-540">The simulator does not validate the XML text of the payload.</span></span>
 
-7.  **Senden Sie die Pushbenachrichtigung.**
+7.  **<span data-ttu-id="cba18-541">Senden Sie die Pushbenachrichtigung.</span><span class="sxs-lookup"><span data-stu-id="cba18-541">Send the push notification.</span></span>**
 
-    Klicken Sie auf **Send**, um die Pushbenachrichtigung an die ausgewählte App zu senden.
+    <span data-ttu-id="cba18-542">Klicken Sie auf **Send**, um die Pushbenachrichtigung an die ausgewählte App zu senden.</span><span class="sxs-lookup"><span data-stu-id="cba18-542">Click **Send** to deliver the push notification to the selected app.</span></span>
 
-    Auf dem Bildschirm erscheint eine Meldung, die darüber informiert, ob der Vorgang erfolgreich war.
+    <span data-ttu-id="cba18-543">Auf dem Bildschirm erscheint eine Meldung, die darüber informiert, ob der Vorgang erfolgreich war.</span><span class="sxs-lookup"><span data-stu-id="cba18-543">The screen displays a message to indicate success or failure.</span></span>
 
 ![Seite "Notifications" in den zusätzlichen Tools des Emulators](images/em-notifications.png)
 
-## <a name="sensors"></a>Sensoren
+## <a name="sensors"></a><span data-ttu-id="cba18-545">Sensoren</span><span class="sxs-lookup"><span data-stu-id="cba18-545">Sensors</span></span>
 
-Verwenden Sie die Registerkarte **Sensors** der zusätzlichen Tools**** des Emulators, um zu testen, wie Ihre App auf preisgünstigen Smartphones funktioniert, die nicht über alle optionalen Sensoren oder Kamerafeatures verfügen. Dieses Feature ist hilfreich, wenn Ihre App die Kamera oder Sensoren des Smartphones verwendet und Sie mit Ihrer App den größtmöglichen Markt erreichen möchten.
+<span data-ttu-id="cba18-546">Verwenden Sie die Registerkarte **Sensors** der zusätzlichen Tools**** des Emulators, um zu testen, wie Ihre App auf preisgünstigen Smartphones funktioniert, die nicht über alle optionalen Sensoren oder Kamerafeatures verfügen.</span><span class="sxs-lookup"><span data-stu-id="cba18-546">Test how your app works on low-cost phones that don't have all the optional sensors or camera features by using the **Sensors** tab of the emulator's **Additional Tools**.</span></span> <span data-ttu-id="cba18-547">Dieses Feature ist hilfreich, wenn Ihre App die Kamera oder Sensoren des Smartphones verwendet und Sie mit Ihrer App den größtmöglichen Markt erreichen möchten.</span><span class="sxs-lookup"><span data-stu-id="cba18-547">This feature is useful if your app uses the camera or some of the phone's sensors, and you want your app to reach the largest possible market.</span></span>
 
--   Standardmäßig sind alle Sensoren in der Liste **Optional sensors** aktiviert. Aktivieren oder deaktivieren Sie einzelne Kontrollkästchen, um einzelne Sensoren zu aktivieren oder zu deaktivieren.
--   Klicken Sie auf **Apply**, nachdem Sie Ihre Auswahl geändert haben. Anschließend müssen Sie den Emulator neu starten.
--   Wenn Sie Änderungen vornehmen und anschließend die Registerkarte wechseln oder das Fenster mit den zusätzlichen Tools**** schließen, ohne auf **Apply** zu klicken, werden Ihre Änderungen verworfen.
--   Ihre Einstellungen bleiben zwischen Emulatorsitzungen erhalten, bis Sie sie ändern oder zurücksetzen. Wenn Sie einen Prüfpunkt aufzeichnen, werden die Einstellungen zusammen mit dem Prüfpunkt gespeichert. Die Einstellungen bleiben nur für den spezifischen Emulator erhalten, den Sie verwenden – also beispielsweise für **Emulator 8.1 WVGA 4" 512MB**.
+-   <span data-ttu-id="cba18-548">Standardmäßig sind alle Sensoren in der Liste **Optional sensors** aktiviert.</span><span class="sxs-lookup"><span data-stu-id="cba18-548">By default, all sensors are enabled in the **Optional sensors** list.</span></span> <span data-ttu-id="cba18-549">Aktivieren oder deaktivieren Sie einzelne Kontrollkästchen, um einzelne Sensoren zu aktivieren oder zu deaktivieren.</span><span class="sxs-lookup"><span data-stu-id="cba18-549">Select or clear individual check boxes to enable or disable individual sensors.</span></span>
+-   <span data-ttu-id="cba18-550">Klicken Sie auf **Apply**, nachdem Sie Ihre Auswahl geändert haben.</span><span class="sxs-lookup"><span data-stu-id="cba18-550">After you change your selections, click **Apply**.</span></span> <span data-ttu-id="cba18-551">Anschließend müssen Sie den Emulator neu starten.</span><span class="sxs-lookup"><span data-stu-id="cba18-551">Then you have to restart the emulator.</span></span>
+-   <span data-ttu-id="cba18-552">Wenn Sie Änderungen vornehmen und anschließend die Registerkarte wechseln oder das Fenster mit den zusätzlichen Tools**** schließen, ohne auf **Apply** zu klicken, werden Ihre Änderungen verworfen.</span><span class="sxs-lookup"><span data-stu-id="cba18-552">If you make changes, and then you switch tabs or close the **Additional Tools** window without clicking **Apply**, your changes are discarded.</span></span>
+-   <span data-ttu-id="cba18-553">Ihre Einstellungen bleiben zwischen Emulatorsitzungen erhalten, bis Sie sie ändern oder zurücksetzen.</span><span class="sxs-lookup"><span data-stu-id="cba18-553">Your settings are persisted between for the emulator session until you change them or reset them.</span></span> <span data-ttu-id="cba18-554">Wenn Sie einen Prüfpunkt aufzeichnen, werden die Einstellungen zusammen mit dem Prüfpunkt gespeichert.</span><span class="sxs-lookup"><span data-stu-id="cba18-554">If you capture a checkpoint, the settings are saved with the checkpoint.</span></span> <span data-ttu-id="cba18-555">Die Einstellungen bleiben nur für den spezifischen Emulator erhalten, den Sie verwenden – also beispielsweise für **Emulator 8.1 WVGA 4" 512MB**.</span><span class="sxs-lookup"><span data-stu-id="cba18-555">The settings are persisted only for the specific emulator that you're using - for example, **Emulator 8.1 WVGA 4" 512MB**.</span></span>
 
 ![Seite "Sensors" in den zusätzlichen Tools des Emulators](images/em-sensors.png)
 
-**Sensoroptionen**
+**<span data-ttu-id="cba18-557">Sensoroptionen</span><span class="sxs-lookup"><span data-stu-id="cba18-557">Sensor options</span></span>**
 
-Sie können folgende optionale Hardwaresensoren aktivieren oder deaktivieren:
+<span data-ttu-id="cba18-558">Sie können folgende optionale Hardwaresensoren aktivieren oder deaktivieren:</span><span class="sxs-lookup"><span data-stu-id="cba18-558">You can enable or disable the following optional hardware sensors:</span></span>
 
--   Umgebungslichtsensor
--   Nach vorne gerichtete Kamera
--   Gyroskop
--   Kompass (Magnetometer)
--   NFC
--   Softwareschaltflächen (nur bei einigen hochauflösenden Emulatorbildern)
+-   <span data-ttu-id="cba18-559">Umgebungslichtsensor</span><span class="sxs-lookup"><span data-stu-id="cba18-559">Ambient light sensor</span></span>
+-   <span data-ttu-id="cba18-560">Nach vorne gerichtete Kamera</span><span class="sxs-lookup"><span data-stu-id="cba18-560">Front-facing camera</span></span>
+-   <span data-ttu-id="cba18-561">Gyroskop</span><span class="sxs-lookup"><span data-stu-id="cba18-561">Gyroscope</span></span>
+-   <span data-ttu-id="cba18-562">Kompass (Magnetometer)</span><span class="sxs-lookup"><span data-stu-id="cba18-562">Compass (magnetometer)</span></span>
+-   <span data-ttu-id="cba18-563">NFC</span><span class="sxs-lookup"><span data-stu-id="cba18-563">NFC</span></span>
+-   <span data-ttu-id="cba18-564">Softwareschaltflächen (nur bei einigen hochauflösenden Emulatorbildern)</span><span class="sxs-lookup"><span data-stu-id="cba18-564">Software buttons (only on some high-resolution emulator images)</span></span>
 
-**Kameraoptionen**
+**<span data-ttu-id="cba18-565">Kameraoptionen</span><span class="sxs-lookup"><span data-stu-id="cba18-565">Camera options</span></span>**
 
-Sie können die optionale, nach vorne gerichtete Kamera aktivieren oder deaktivieren, indem Sie in der Liste **Optional sensors** das entsprechende Kontrollkästchen aktivieren oder deaktivieren.
+<span data-ttu-id="cba18-566">Sie können die optionale, nach vorne gerichtete Kamera aktivieren oder deaktivieren, indem Sie in der Liste **Optional sensors** das entsprechende Kontrollkästchen aktivieren oder deaktivieren.</span><span class="sxs-lookup"><span data-stu-id="cba18-566">You can enable or disable the optional front-facing camera by selecting or clearing the check box in the **Optional sensors** list.</span></span>
 
-Außerdem können Sie in der Dropdownliste **Camera** eines der folgenden Kameraprofile auswählen:
+<span data-ttu-id="cba18-567">Außerdem können Sie in der Dropdownliste **Camera** eines der folgenden Kameraprofile auswählen:</span><span class="sxs-lookup"><span data-stu-id="cba18-567">You can also select one of the following camera profiles in the **Camera** dropdown list.</span></span>
 
--   Windows Phone 8.0 camera.
--   Windows Phone 8.1 camera.
+-   <span data-ttu-id="cba18-568">Windows Phone 8.0 camera.</span><span class="sxs-lookup"><span data-stu-id="cba18-568">Windows Phone 8.0 camera.</span></span>
+-   <span data-ttu-id="cba18-569">Windows Phone 8.1 camera.</span><span class="sxs-lookup"><span data-stu-id="cba18-569">Windows Phone 8.1 camera.</span></span>
 
-Im Anschluss folgt eine Liste mit den Kamerafeatures, die von den einzelnen Profilen unterstützt werden:
+<span data-ttu-id="cba18-570">Im Anschluss folgt eine Liste mit den Kamerafeatures, die von den einzelnen Profilen unterstützt werden:</span><span class="sxs-lookup"><span data-stu-id="cba18-570">Here is the list of camera features supported by each of the profiles.</span></span>
 
-| Feature            | Windows Phone 8.0 camera | Windows Phone 8.1 camera  |
+| <span data-ttu-id="cba18-571">Feature</span><span class="sxs-lookup"><span data-stu-id="cba18-571">Feature</span></span>            | <span data-ttu-id="cba18-572">Windows Phone 8.0 camera</span><span class="sxs-lookup"><span data-stu-id="cba18-572">Windows Phone 8.0 camera</span></span> | <span data-ttu-id="cba18-573">Windows Phone 8.1 camera</span><span class="sxs-lookup"><span data-stu-id="cba18-573">Windows Phone 8.1 camera</span></span>  |
 |--------------------|--------------------------|---------------------------|
-| Auflösung         | 640 x 480 (VGA)          | 640 x 480 (VGA) oder höher |
-| Autofokus          | Ja                      | Ja                       |
-| Blitz              | Nein                       | Ja                       |
-| Zoom               | 2x (digital oder optisch)  | 2x (digital oder optisch)   |
-| Videoauflösung   | 640 x 480 (VGA)          | 640 x 480 (VGA) oder höher |
-| Vorschauauflösung | 640 x 480 (VGA)          | 640 x 480 (VGA)           |
+| <span data-ttu-id="cba18-574">Auflösung</span><span class="sxs-lookup"><span data-stu-id="cba18-574">Resolution</span></span>         | <span data-ttu-id="cba18-575">640x480 (VGA)</span><span class="sxs-lookup"><span data-stu-id="cba18-575">640 x 480 (VGA)</span></span>          | <span data-ttu-id="cba18-576">640x480 (VGA) oder höher</span><span class="sxs-lookup"><span data-stu-id="cba18-576">640 x 480 (VGA) or better</span></span> |
+| <span data-ttu-id="cba18-577">Autofokus</span><span class="sxs-lookup"><span data-stu-id="cba18-577">Autofocus</span></span>          | <span data-ttu-id="cba18-578">Ja</span><span class="sxs-lookup"><span data-stu-id="cba18-578">Yes</span></span>                      | <span data-ttu-id="cba18-579">Ja</span><span class="sxs-lookup"><span data-stu-id="cba18-579">Yes</span></span>                       |
+| <span data-ttu-id="cba18-580">Blitz</span><span class="sxs-lookup"><span data-stu-id="cba18-580">Flash</span></span>              | <span data-ttu-id="cba18-581">Nein</span><span class="sxs-lookup"><span data-stu-id="cba18-581">No</span></span>                       | <span data-ttu-id="cba18-582">Ja</span><span class="sxs-lookup"><span data-stu-id="cba18-582">Yes</span></span>                       |
+| <span data-ttu-id="cba18-583">Zoom</span><span class="sxs-lookup"><span data-stu-id="cba18-583">Zoom</span></span>               | <span data-ttu-id="cba18-584">2x (digital oder optisch)</span><span class="sxs-lookup"><span data-stu-id="cba18-584">2x (digital or optical)</span></span>  | <span data-ttu-id="cba18-585">2x (digital oder optisch)</span><span class="sxs-lookup"><span data-stu-id="cba18-585">2x (digital or optical)</span></span>   |
+| <span data-ttu-id="cba18-586">Videoauflösung</span><span class="sxs-lookup"><span data-stu-id="cba18-586">Video resolution</span></span>   | <span data-ttu-id="cba18-587">640x480 (VGA)</span><span class="sxs-lookup"><span data-stu-id="cba18-587">640 x 480 (VGA)</span></span>          | <span data-ttu-id="cba18-588">640x480 (VGA) oder höher</span><span class="sxs-lookup"><span data-stu-id="cba18-588">640 x 480 (VGA) or better</span></span> |
+| <span data-ttu-id="cba18-589">Vorschauauflösung</span><span class="sxs-lookup"><span data-stu-id="cba18-589">Preview resolution</span></span> | <span data-ttu-id="cba18-590">640x480 (VGA)</span><span class="sxs-lookup"><span data-stu-id="cba18-590">640 x 480 (VGA)</span></span>          | <span data-ttu-id="cba18-591">640x480 (VGA)</span><span class="sxs-lookup"><span data-stu-id="cba18-591">640 x 480 (VGA)</span></span>           |
 
-## <a name="frame-rate-counters"></a>Bildfrequenzzähler
+## <a name="frame-rate-counters"></a><span data-ttu-id="cba18-592">Bildfrequenzzähler</span><span class="sxs-lookup"><span data-stu-id="cba18-592">Frame rate counters</span></span>
 
-Mithilfe der Bildfrequenzzähler des Windows Phone-Emulators können Sie die Leistung Ihrer App im Betrieb überwachen.
+<span data-ttu-id="cba18-593">Mithilfe der Bildfrequenzzähler des WindowsPhone-Emulators können Sie die Leistung Ihrer App im Betrieb überwachen.</span><span class="sxs-lookup"><span data-stu-id="cba18-593">Use the frame rate counters in Windows Phone emulator to monitor the performance of your running app.</span></span>
 
-![Bildfrequenzzähler im Windows Phone-Emulator](images/em-frameratecounters.PNG)
+![Bildfrequenzzähler im WindowsPhone-Emulator](images/em-frameratecounters.PNG)
 
-**Beschreibung der Bildfrequenzzähler**
+**<span data-ttu-id="cba18-595">Beschreibung der Bildfrequenzzähler</span><span class="sxs-lookup"><span data-stu-id="cba18-595">Descriptions of the frame rate counters</span></span>**
 
-Die folgende Tabelle beschreibt die einzelnen Bildfrequenzzähler:
+<span data-ttu-id="cba18-596">Die folgende Tabelle beschreibt die einzelnen Bildfrequenzzähler:</span><span class="sxs-lookup"><span data-stu-id="cba18-596">The following table describes each frame rate counter.</span></span>
 
-| Bildfrequenzzähler                           | Beschreibung        |
+| <span data-ttu-id="cba18-597">Bildfrequenzzähler</span><span class="sxs-lookup"><span data-stu-id="cba18-597">Frame rate counter</span></span>                           | <span data-ttu-id="cba18-598">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="cba18-598">Description</span></span>        |
 |----------------------------------------------|--------------------|
-| Composition (Render) Thread Frame Rate (FPS) | Die Bildschirmaktualisierungsrate.  |
-| User Interface Thread Frame Rate (FPS)       | Die Ausführungsrate des UI-Threads.    |
-| Texture Memory Usage                         | Die Video- und Systemspeicherkopien von in der App verwendeten Texturen.    |
-| Surface Counter                              | Die Anzahl expliziter Oberflächen, die zur Verarbeitung an die GPU übergeben werden.     |
-| Intermediate Surface Counter                 | Die Anzahl impliziter Oberflächen, die aufgrund von zwischengespeicherten Oberflächen generiert wurden.    |
-| Screen Fill Rate Counter                     | Die Anzahl von Pixeln, die pro Frame im Sinne von Bildschirmen gezeichnet werden. Der Wert "1" steht für die Anzahl von Pixeln in der aktuellen Bildschirmauflösung (beispielsweise 480 x 800 Pixel). |
+| <span data-ttu-id="cba18-599">Composition (Render) Thread Frame Rate (FPS)</span><span class="sxs-lookup"><span data-stu-id="cba18-599">Composition (Render) Thread Frame Rate (FPS)</span></span> | <span data-ttu-id="cba18-600">Die Bildschirmaktualisierungsrate.</span><span class="sxs-lookup"><span data-stu-id="cba18-600">The rate at which the screen is updated.</span></span>  |
+| <span data-ttu-id="cba18-601">User Interface Thread Frame Rate (FPS)</span><span class="sxs-lookup"><span data-stu-id="cba18-601">User Interface Thread Frame Rate (FPS)</span></span>       | <span data-ttu-id="cba18-602">Die Ausführungsrate des UI-Threads.</span><span class="sxs-lookup"><span data-stu-id="cba18-602">The rate at which the UI thread is running.</span></span>    |
+| <span data-ttu-id="cba18-603">Texture Memory Usage</span><span class="sxs-lookup"><span data-stu-id="cba18-603">Texture Memory Usage</span></span>                         | <span data-ttu-id="cba18-604">Die Video- und Systemspeicherkopien von in der App verwendeten Texturen.</span><span class="sxs-lookup"><span data-stu-id="cba18-604">The video memory and system memory copies of textures being used in the app.</span></span>    |
+| <span data-ttu-id="cba18-605">Surface Counter</span><span class="sxs-lookup"><span data-stu-id="cba18-605">Surface Counter</span></span>                              | <span data-ttu-id="cba18-606">Die Anzahl expliziter Oberflächen, die zur Verarbeitung an die GPU übergeben werden.</span><span class="sxs-lookup"><span data-stu-id="cba18-606">The number of explicit surfaces being passed to the GPU for processing.</span></span>     |
+| <span data-ttu-id="cba18-607">Intermediate Surface Counter</span><span class="sxs-lookup"><span data-stu-id="cba18-607">Intermediate Surface Counter</span></span>                 | <span data-ttu-id="cba18-608">Die Anzahl impliziter Oberflächen, die aufgrund von zwischengespeicherten Oberflächen generiert wurden.</span><span class="sxs-lookup"><span data-stu-id="cba18-608">The number of implicit surfaces generated as a result of cached surfaces.</span></span>    |
+| <span data-ttu-id="cba18-609">Screen Fill Rate Counter</span><span class="sxs-lookup"><span data-stu-id="cba18-609">Screen Fill Rate Counter</span></span>                     | <span data-ttu-id="cba18-610">Die Anzahl von Pixeln, die pro Frame im Sinne von Bildschirmen gezeichnet werden.</span><span class="sxs-lookup"><span data-stu-id="cba18-610">The number of pixels being painted per frame in terms of screens.</span></span> <span data-ttu-id="cba18-611">Der Wert "1" steht für die Anzahl von Pixeln in der aktuellen Bildschirmauflösung (beispielsweise 480x800Pixel).</span><span class="sxs-lookup"><span data-stu-id="cba18-611">A value of 1 represents the number of pixels in the current screen resolution – for example, 480 x 800 pixels.</span></span> |
 
-**Aktivieren und Deaktivieren der Bildfrequenzzähler**
+**<span data-ttu-id="cba18-612">Aktivieren und Deaktivieren der Bildfrequenzzähler</span><span class="sxs-lookup"><span data-stu-id="cba18-612">Enabling and disabling the frame rate counters</span></span>**
 
-Sie können die Anzeige der Bildfrequenzzähler in Ihrem Code aktivieren oder deaktivieren. Wenn Sie in Visual Studio ein Windows Phone-App-Projekt erstellen, wird der Datei „App.xaml.cs” automatisch der folgende Code hinzugefügt, um die Bildfrequenzzähler zu aktivieren. Wenn Sie die Bildfrequenzzähler deaktivieren möchten, legen Sie **EnableFrameRateCounter** auf **false** fest, oder kommentieren Sie die Codezeile aus.
+<span data-ttu-id="cba18-613">Sie können die Anzeige der Bildfrequenzzähler in Ihrem Code aktivieren oder deaktivieren.</span><span class="sxs-lookup"><span data-stu-id="cba18-613">You can enable or disable the display of the frame rate counters in your code.</span></span> <span data-ttu-id="cba18-614">Wenn Sie in Visual Studio ein WindowsPhone-App-Projekt erstellen, wird der Datei „App.xaml.cs” automatisch der folgende Code hinzugefügt, um die Bildfrequenzzähler zu aktivieren.</span><span class="sxs-lookup"><span data-stu-id="cba18-614">When you create a Windows Phone app project in Visual Studio, the following code to enable the frame rate counters is added by default in the file App.xaml.cs.</span></span> <span data-ttu-id="cba18-615">Wenn Sie die Bildfrequenzzähler deaktivieren möchten, legen Sie **EnableFrameRateCounter** auf **false** fest, oder kommentieren Sie die Codezeile aus.</span><span class="sxs-lookup"><span data-stu-id="cba18-615">To disable the frame rate counters, set **EnableFrameRateCounter** to **false** or comment out the line of code.</span></span>
 
 > [!div class="tabbedCodeSnippets"]
 >```csharp
@@ -614,53 +614,52 @@ Sie können die Anzeige der Bildfrequenzzähler in Ihrem Code aktivieren oder de
 >End If
 >```
 
-## <a name="known-issues"></a>Bekannte Probleme
+## <a name="known-issues"></a><span data-ttu-id="cba18-616">Bekannte Probleme</span><span class="sxs-lookup"><span data-stu-id="cba18-616">Known Issues</span></span>
 
-Im Folgenden werden bekannte Probleme mit dem Emulator sowie Möglichkeiten beschrieben, diese zu umgehen.
+<span data-ttu-id="cba18-617">Im Folgenden werden bekannte Probleme mit dem Emulator sowie Möglichkeiten beschrieben, diese zu umgehen.</span><span class="sxs-lookup"><span data-stu-id="cba18-617">The following are known issues with the emulator, with suggested ways to work around problems if you encounter them.</span></span>
 
-### <a name="error-message-failed-while-removing-virtual-ethernet-switch"></a>Fehlermeldung: „Fehler beim Entfernen des virtuellen Ethernet-Switchs.“
+### <a name="error-message-failed-while-removing-virtual-ethernet-switch"></a><span data-ttu-id="cba18-618">Fehlermeldung: „Fehler beim Entfernen des virtuellen Ethernet-Switchs.“</span><span class="sxs-lookup"><span data-stu-id="cba18-618">Error message: “Failed while removing virtual Ethernet switch”</span></span>
 
-In bestimmten Situationen (etwa beim Aktualisieren auf einen neuen Windows 10-Test-Flight), kann es vorkommen, dass ein dem Emulator zugeordneter virtueller Netzwerkswitch in einen Zustand versetzt wird, in dem er nicht mehr über die Benutzeroberfläche gelöscht werden kann.
+<span data-ttu-id="cba18-619">In bestimmten Situationen (etwa beim Aktualisieren auf einen neuen Windows10-Test-Flight), kann es vorkommen, dass ein dem Emulator zugeordneter virtueller Netzwerkswitch in einen Zustand versetzt wird, in dem er nicht mehr über die Benutzeroberfläche gelöscht werden kann.</span><span class="sxs-lookup"><span data-stu-id="cba18-619">In certain situations, including after you update to a new Windows 10 flight, a virtual network switch associated with the emulator can get into a state where it can't be deleted through the user interface.</span></span>
 
-Führen Sie zum Beheben dieses Problems an einer Eingabeaufforderung mit Administratorrechten den Befehl „Netcfg -d“ aus: `C:\Program Files (x86)\Microsoft XDE\<version>\XdeCleanup.exe`. Starten Sie den Computer nach Ausführung des Befehls neu, um den Wiederherstellungsvorgang abzuschließen.
+<span data-ttu-id="cba18-620">Führen Sie zum Beheben dieses Problems an einer Eingabeaufforderung mit Administratorrechten den Befehl „Netcfg -d“ aus: `C:\Program Files (x86)\Microsoft XDE\<version>\XdeCleanup.exe`.</span><span class="sxs-lookup"><span data-stu-id="cba18-620">To recover from this situation run "netcfg -d" from an administrator command prompt: `C:\Program Files (x86)\Microsoft XDE\<version>\XdeCleanup.exe`.</span></span> <span data-ttu-id="cba18-621">Starten Sie den Computer nach Ausführung des Befehls neu, um den Wiederherstellungsvorgang abzuschließen.</span><span class="sxs-lookup"><span data-stu-id="cba18-621">When the command is finished running, reboot your computer to complete the recovery process.</span></span>
 
-**Hinweis**  Dieser Befehl löscht nicht nur die mit dem Emulator verknüpften Geräte, sondern alle Netzwerkgeräte. Beim Neustart des Computers werden alle Hardwarenetzwerkgeräte automatisch erkannt.
+<span data-ttu-id="cba18-622">**Hinweis**  Dieser Befehl löscht nicht nur die mit dem Emulator verknüpften Geräte, sondern alle Netzwerkgeräte.</span><span class="sxs-lookup"><span data-stu-id="cba18-622">**Note**  This command will delete all networking devices, not just those associated with the emulator.</span></span> <span data-ttu-id="cba18-623">Beim Neustart des Computers werden alle Hardwarenetzwerkgeräte automatisch erkannt.</span><span class="sxs-lookup"><span data-stu-id="cba18-623">When your computer starts again, all hardware networking devices will be discovered automatically.</span></span>
  
-### <a name="unable-to-launch-the-emulators"></a>Die Emulatoren können nicht gestartet werden.
+### <a name="unable-to-launch-the-emulators"></a><span data-ttu-id="cba18-624">Die Emulatoren können nicht gestartet werden.</span><span class="sxs-lookup"><span data-stu-id="cba18-624">Unable to launch the emulators</span></span>
 
-Der Microsoft-Emulator enthält „XDECleanup.exe“ – ein Tool, das alle VMs, differenzierenden Datenträger und emulatorspezifischen Netzwerkswitches löscht. Dieses Tool ist bereits in den Binärdateien (XDE) des Emulators enthalten. Verwenden Sie dieses Tool zum Bereinigen von Emulator-VMs, wenn diese einen fehlerhaften Zustand aufweisen. Führen Sie das Tool über eine Eingabeaufforderung mit Administratorrechten aus:`C:\Program Files (x86)\Microsoft XDE\<version>\XdeCleanup.exe`
+<span data-ttu-id="cba18-625">Der Microsoft-Emulator enthält „XDECleanup.exe“ – ein Tool, das alle VMs, differenzierenden Datenträger und emulatorspezifischen Netzwerkswitches löscht. Dieses Tool ist bereits in den Binärdateien (XDE) des Emulators enthalten.</span><span class="sxs-lookup"><span data-stu-id="cba18-625">Microsoft Emulator includes XDECleanup.exe, a tool that deletes all VMs, diff disks, and emulator specific network switches, and it ships with the emulator (XDE) binaries already.</span></span> <span data-ttu-id="cba18-626">Verwenden Sie dieses Tool zum Bereinigen von Emulator-VMs, wenn diese einen fehlerhaften Zustand aufweisen.</span><span class="sxs-lookup"><span data-stu-id="cba18-626">You should use this tool to clean up emulator VMs if they get into a bad state.</span></span> <span data-ttu-id="cba18-627">Führen Sie das Tool über eine Eingabeaufforderung mit Administratorrechten aus:</span><span class="sxs-lookup"><span data-stu-id="cba18-627">Run the tool from an administrator command prompt:</span></span>`C:\Program Files (x86)\Microsoft XDE\<version>\XdeCleanup.exe`
 
-> **Hinweis**  „XDECleanup.exe“ löscht alle emulatorspezifischen Hyper-V-VMs sowie alle VM-Prüfpunkte und gespeicherten Zustände.
+> <span data-ttu-id="cba18-628">**Hinweis**  „XDECleanup.exe“ löscht alle emulatorspezifischen Hyper-V-VMs sowie alle VM-Prüfpunkte und gespeicherten Zustände.</span><span class="sxs-lookup"><span data-stu-id="cba18-628">**Note**  XDECleanup.exe deletes all emulator specific Hyper-V VMs, and it also deletes any VM checkpoints or saved states.</span></span>
 
-### <a name="uninstall-windows-10-for-mobile-image"></a>Deinstallieren des Windows 10 Mobile-Image
+### <a name="uninstall-windows-10-for-mobile-image"></a><span data-ttu-id="cba18-629">Deinstallieren des Windows10Mobile-Image</span><span class="sxs-lookup"><span data-stu-id="cba18-629">Uninstall Windows 10 for Mobile Image</span></span>
 
-Wenn Sie den Emulator installieren, wird ein VHD-Image mit Windows 10 Mobile installiert. Dieses erhält einen eigenen Eintrag in der Liste **Programme und Features** in der Systemsteuerung. Wenn Sie das Image deinstallieren möchten, suchen Sie in der Liste mit den installierten Programmen nach **Windows 10 Mobile Image – <version>**, klicken Sie mit der rechten Maustaste darauf, und wählen Sie **Deinstallieren** aus.
+<span data-ttu-id="cba18-630">Wenn Sie den Emulator installieren, wird ein VHD-Image mit Windows10Mobile installiert. Dieses erhält einen eigenen Eintrag in der Liste **Programme und Features** in der Systemsteuerung.</span><span class="sxs-lookup"><span data-stu-id="cba18-630">When you install the emulator, a Windows 10 for Mobile VHD image is installed, which gets its own entry in the **Programs and Features** list in the Control Panel.</span></span> <span data-ttu-id="cba18-631">Wenn Sie das Image deinstallieren möchten, suchen Sie in der Liste mit den installierten Programmen nach **Windows10 Mobile Image – <version>**, klicken Sie mit der rechten Maustaste darauf, und wählen Sie **Deinstallieren** aus.</span><span class="sxs-lookup"><span data-stu-id="cba18-631">If you wish to uninstall the image, find **Windows 10 for Mobile Image - <version>** in the list of installed programs, right-click on it, and choose **Uninstall**.</span></span>
 
-In der aktuellen Version müssen Sie die VHD-Datei für den Emulator manuell löschen. Wenn Sie den Emulator unter dem Standardpfad installiert haben, befindet sich die VHD-Datei unter „C:\\Programme (x86)\\Windows Kits\\10\\Emulation\\Mobile\\<version>\\flash.vhd“.
+<span data-ttu-id="cba18-632">In der aktuellen Version müssen Sie die VHD-Datei für den Emulator manuell löschen.</span><span class="sxs-lookup"><span data-stu-id="cba18-632">In the current release, you must then manually delete the VHD file for the emulator.</span></span> <span data-ttu-id="cba18-633">Wenn Sie den Emulator unter dem Standardpfad installiert haben, befindet sich die VHD-Datei unter „C:\\Programme(x86)\\Windows Kits\\10\\Emulation\\Mobile\\<version>\\flash.vhd“.</span><span class="sxs-lookup"><span data-stu-id="cba18-633">If you installed the emulator to the default path, the VHD file is at C:\\Program Files (x86)\\Windows Kits\\10\\Emulation\\Mobile\\<version>\\flash.vhd.</span></span>
 
-###<a name="how-to-disable-hardware-accelerated-graphics"></a>So deaktivieren sie hardwarebeschleunigte Grafiken
+###<a name="how-to-disable-hardware-accelerated-graphics"></a><span data-ttu-id="cba18-634">So deaktivieren sie hardwarebeschleunigte Grafiken</span><span class="sxs-lookup"><span data-stu-id="cba18-634">How to disable hardware accelerated graphics</span></span>
 
-Standardmäßig verwendet der Windows 10 Mobile-Emulator hardwarebeschleunigte Grafiken. Wenn Probleme beim Starten des Emulators mit aktivierter Hardwarbeschleunigung auftreten, können Sie diese durch Festlegen eines Registrierungswerts deaktivieren.
+<span data-ttu-id="cba18-635">Standardmäßig verwendet der Windows10 Mobile-Emulator hardwarebeschleunigte Grafiken.</span><span class="sxs-lookup"><span data-stu-id="cba18-635">By default, Windows 10 Mobile Emulator uses hardware accelerated graphics.</span></span> <span data-ttu-id="cba18-636">Wenn Probleme beim Starten des Emulators mit aktivierter Hardwarbeschleunigung auftreten, können Sie diese durch Festlegen eines Registrierungswerts deaktivieren.</span><span class="sxs-lookup"><span data-stu-id="cba18-636">If you are having trouble launching the emulator with hardware acceleration enabled, you can turn it off by setting a registry value.</span></span>
 
-So deaktivieren sie die Hardwarbeschleunigung:
+<span data-ttu-id="cba18-637">So deaktivieren sie die Hardwarbeschleunigung:</span><span class="sxs-lookup"><span data-stu-id="cba18-637">To disable hardware acceleration:</span></span>
 
-1. Starten Sie den Registrierungs-Editor.
-2. Erstellen Sie den folgenden Registrierungsunterschlüssel, wenn er nicht vorhanden ist: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Xde\10.0
-3. Klicken Sie auf den Ordner „10.0”, zeigen Sie auf **Neu**, und klicken Sie dann auf **DWORD-Wert**.
-4. Geben Sie **DisableRemoteFx** ein, und drücken Sie die EINGABETASTE.
-5. Doppelklicken Sie auf **DisableRemoteFx**, geben Sie im Feld **Wert** den Wert 1 ein, wählen Sie die Option **Decimal** aus, und klicken Sie dann auf **OK**.
-6. Schließen Sie den Registrierungs-Editor.
+1. <span data-ttu-id="cba18-638">Starten Sie den Registrierungs-Editor.</span><span class="sxs-lookup"><span data-stu-id="cba18-638">Start Registry Editor.</span></span>
+2. <span data-ttu-id="cba18-639">Erstellen Sie den folgenden Registrierungsunterschlüssel, wenn er nicht vorhanden ist: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Xde\10.0</span><span class="sxs-lookup"><span data-stu-id="cba18-639">Create the following registry subkey if it doesn't exist: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Xde\10.0</span></span>
+3. <span data-ttu-id="cba18-640">Klicken Sie auf den Ordner „10.0”, zeigen Sie auf **Neu**, und klicken Sie dann auf **DWORD-Wert**.</span><span class="sxs-lookup"><span data-stu-id="cba18-640">Right click the 10.0 folder, point to **New**, and then click **DWORD Value**.</span></span>
+4. <span data-ttu-id="cba18-641">Geben Sie **DisableRemoteFx** ein, und drücken Sie die EINGABETASTE.</span><span class="sxs-lookup"><span data-stu-id="cba18-641">Type **DisableRemoteFx**, and then press Enter.</span></span>
+5. <span data-ttu-id="cba18-642">Doppelklicken Sie auf **DisableRemoteFx**, geben Sie im Feld **Wert** den Wert 1 ein, wählen Sie die Option **Decimal** aus, und klicken Sie dann auf **OK**.</span><span class="sxs-lookup"><span data-stu-id="cba18-642">Double-click **DisableRemoteFx**, enter 1 in the **Value** data box, select the **Decimal** option, and then click **OK**.</span></span>
+6. <span data-ttu-id="cba18-643">Schließen Sie den Registrierungs-Editor.</span><span class="sxs-lookup"><span data-stu-id="cba18-643">Close Registry Editor.</span></span>
 
-**Hinweis:** Nach dem Festlegen dieses Registrierungswerts müssen Sie die virtuelle Maschine im Hyper-V-Manager für diejenige Konfiguration löschen, die Sie in Visual Studio gestartet haben, und dann den Emulator mit Softwarerendering neu starten.
+<span data-ttu-id="cba18-644">**Hinweis:** Nach dem Festlegen dieses Registrierungswerts müssen Sie die virtuelle Maschine im Hyper-V-Manager für diejenige Konfiguration löschen, die Sie in Visual Studio gestartet haben, und dann den Emulator mit Softwarerendering neu starten.</span><span class="sxs-lookup"><span data-stu-id="cba18-644">**Note:** After setting this registry value, you must delete the virtual machine in Hyper-V manager for the configuration that you launched in Visual Studio, and then relaunch the emulator with software-rendered graphics.</span></span>
 
-## <a name="support-resources"></a>Supportressourcen
+## <a name="support-resources"></a><span data-ttu-id="cba18-645">Supportressourcen</span><span class="sxs-lookup"><span data-stu-id="cba18-645">Support Resources</span></span>
 
-Antworten und Problemlösungen für die Windows 10-Tools finden Sie im [Forum für Windows 10-Tools](http://go.microsoft.com/fwlink/?LinkId=534765). Eine Liste mit allen Foren für Windows 10-Entwickler finden Sie [hier](http://go.microsoft.com/fwlink/?LinkId=535000).
+<span data-ttu-id="cba18-646">Antworten und Problemlösungen für die Windows10-Tools finden Sie im [Forum für Windows10-Tools](http://go.microsoft.com/fwlink/?LinkId=534765).</span><span class="sxs-lookup"><span data-stu-id="cba18-646">To find answers and solve problems as you start working with the Windows 10 tools, please visit [Windows 10 Tools forum](http://go.microsoft.com/fwlink/?LinkId=534765).</span></span> <span data-ttu-id="cba18-647">Eine Liste mit allen Foren für Windows10-Entwickler finden Sie [hier](http://go.microsoft.com/fwlink/?LinkId=535000).</span><span class="sxs-lookup"><span data-stu-id="cba18-647">To see all the forums for Windows 10 development, visit [this link](http://go.microsoft.com/fwlink/?LinkId=535000).</span></span>
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a><span data-ttu-id="cba18-648">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="cba18-648">Related topics</span></span>
 
-* [Ausführen von Windows Phone-Apps im Emulator](https://msdn.microsoft.com/library/windows/apps/xaml/dn632391.aspx)
-* [Windows und Windows Phone SDK-Archiv](https://dev.windows.com/downloads/sdk-archive)
+* [<span data-ttu-id="cba18-649">Ausführen von WindowsPhone-Apps im Emulator</span><span class="sxs-lookup"><span data-stu-id="cba18-649">Run Windows Phone apps in the emulator</span></span>](https://msdn.microsoft.com/library/windows/apps/xaml/dn632391.aspx)
+* [<span data-ttu-id="cba18-650">Windows und Windows Phone SDK-Archiv</span><span class="sxs-lookup"><span data-stu-id="cba18-650">Windows and Windows Phone SDK archive</span></span>](https://dev.windows.com/downloads/sdk-archive)
  
-
 

@@ -1,38 +1,37 @@
 ---
-author: eliotcowley
+author: drewbatgit
 ms.assetid: BF877F23-1238-4586-9C16-246F3F25AE35
 description: "In diesem Artikel wird beschrieben, wie Sie einer UWP-App (Universelle Windows-Plattform) adaptives Streaming von Multimediainhalten mit Microsoft PlayReady-Inhaltsschutz hinzufügen."
 title: Adaptives Streaming mit PlayReady
-ms.author: elcowle
+ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 861ec2823080192a5b2d9b557af14ca5e3ab43fb
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: aebd2e2de0b1c4991b69b02f1f215ab58feef4a9
+ms.sourcegitcommit: cd9b4bdc9c3a0b537a6e910a15df8541b49abf9c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/21/2017
 ---
+# <a name="adaptive-streaming-with-playready"></a><span data-ttu-id="232d9-104">Adaptives Streaming mit PlayReady</span><span class="sxs-lookup"><span data-stu-id="232d9-104">Adaptive streaming with PlayReady</span></span>
 
-# <a name="adaptive-streaming-with-playready"></a>Adaptives Streaming mit PlayReady
+<span data-ttu-id="232d9-105">\[ Aktualisiert für UWP-Apps unter Windows10.</span><span class="sxs-lookup"><span data-stu-id="232d9-105">\[ Updated for UWP apps on Windows 10.</span></span> <span data-ttu-id="232d9-106">Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span><span class="sxs-lookup"><span data-stu-id="232d9-106">For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span></span>
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+<span data-ttu-id="232d9-107">In diesem Artikel wird beschrieben, wie Sie einer UWP-App (Universelle Windows-Plattform) adaptives Streaming von Multimediainhalten mit Microsoft PlayReady-Inhaltsschutz hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="232d9-107">This article describes how to add adaptive streaming of multimedia content with Microsoft PlayReady content protection to a Universal Windows Platform (UWP) app.</span></span> 
 
-In diesem Artikel wird beschrieben, wie Sie einer UWP-App (Universelle Windows-Plattform) adaptives Streaming von Multimediainhalten mit Microsoft PlayReady-Inhaltsschutz hinzufügen. 
+<span data-ttu-id="232d9-108">Dieses Feature unterstützt derzeit die Wiedergabe von Dynamic Streaming over HTTP (DASH)-Inhalten.</span><span class="sxs-lookup"><span data-stu-id="232d9-108">This feature currently supports playback of Dynamic streaming over HTTP (DASH) content.</span></span>
 
-Dieses Feature unterstützt derzeit die Wiedergabe von Dynamic Streaming over HTTP (DASH)-Inhalten.
+<span data-ttu-id="232d9-109">HLS (Apple HTTP Live Streaming) wird mit PlayReady nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="232d9-109">HLS (Apple's HTTP Live Streaming) is not supported with PlayReady.</span></span>
 
-HLS (Apple HTTP Live Streaming) wird mit PlayReady nicht unterstützt.
+<span data-ttu-id="232d9-110">Smooth Streaming wird zurzeit ebenfalls nicht nativ unterstützt. PlayReady ist jedoch erweiterbar, und mithilfe von zusätzlichem Code oder zusätzlichen Bibliotheken kann PlayReady-geschütztes Smooth Streaming unterstützt werden, um die Nutzung von Software- oder sogar Hardware-DRM (Digital Rights Management) zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="232d9-110">Smooth streaming is also currently not supported natively; however, PlayReady is extensible and by using additional code or libraries, PlayReady-protected Smooth streaming can be supported, leveraging software or even hardware DRM (digital rights management).</span></span>
 
-Smooth Streaming wird zurzeit ebenfalls nicht nativ unterstützt. PlayReady ist jedoch erweiterbar, und mithilfe von zusätzlichem Code oder zusätzlichen Bibliotheken kann PlayReady-geschütztes Smooth Streaming unterstützt werden, um die Nutzung von Software- oder sogar Hardware-DRM (Digital Rights Management) zu ermöglichen.
+<span data-ttu-id="232d9-111">Dieser Artikel befasst sich nur mit den Aspekten des für PlayReady spezifischen adaptiven Streamings.</span><span class="sxs-lookup"><span data-stu-id="232d9-111">This article only deals with the aspects of adaptive streaming specific to PlayReady.</span></span> <span data-ttu-id="232d9-112">Informationen zur allgemeinen Implementierung des adaptiven Streamings finden Sie unter [Adaptives Streaming](adaptive-streaming.md).</span><span class="sxs-lookup"><span data-stu-id="232d9-112">For information about implementing adaptive streaming in general, see [Adaptive streaming](adaptive-streaming.md).</span></span>
 
-Dieser Artikel befasst sich nur mit den Aspekten des für PlayReady spezifischen adaptiven Streamings. Informationen zur allgemeinen Implementierung des adaptiven Streamings finden Sie unter [Adaptives Streaming](adaptive-streaming.md).
+<span data-ttu-id="232d9-113">In diesem Artikel wird Code aus dem [Beispiel zu adaptivem Streaming](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AdaptiveStreaming) im Microsoft-Repository **Beispiele für die Universelle Windows-Plattform** auf GitHub verwendet.</span><span class="sxs-lookup"><span data-stu-id="232d9-113">This article uses code from the [Adaptive streaming sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AdaptiveStreaming) in Microsoft's **Windows-universal-samples** repository on GitHub.</span></span> <span data-ttu-id="232d9-114">Szenario 4 behandelt adaptives Streaming mit PlayReady.</span><span class="sxs-lookup"><span data-stu-id="232d9-114">Scenario 4 deals with using adaptive streaming with PlayReady.</span></span> <span data-ttu-id="232d9-115">Sie können das Repository als ZIP-Datei herunterladen, indem Sie auf die Stammebene des Repository navigieren und die Schaltfläche **ZIP-Datei herunterladen** wählen.</span><span class="sxs-lookup"><span data-stu-id="232d9-115">You can download the repo in a ZIP file by navigating to the root level of the repository and selecting the **Download ZIP** button.</span></span>
 
-In diesem Artikel wird Code aus dem [Beispiel zu adaptivem Streaming](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AdaptiveStreaming) im Microsoft-Repository **Beispiele für die Universelle Windows-Plattform** auf GitHub verwendet. Szenario 4 behandelt adaptives Streaming mit PlayReady. Sie können das Repository als ZIP-Datei herunterladen, indem Sie auf die Stammebene des Repository navigieren und die Schaltfläche **ZIP-Datei herunterladen** wählen.
-
-Sie benötigen die folgenden **using**-Anweisungen:
+<span data-ttu-id="232d9-116">Sie benötigen die folgenden **using**-Anweisungen:</span><span class="sxs-lookup"><span data-stu-id="232d9-116">You will need the following **using** statements:</span></span>
 
 ```csharp
 using LicenseRequest;
@@ -48,9 +47,9 @@ using Windows.Media.Streaming.Adaptive;
 using Windows.UI.Xaml.Controls;
 ```
 
-Der Namespace **LicenseRequest** stammt aus **CommonLicenseRequest.cs**, einer PlayReady-Datei, die Lizenznehmern von Microsoft zur Verfügung gestellt wird.
+<span data-ttu-id="232d9-117">Der Namespace **LicenseRequest** stammt aus **CommonLicenseRequest.cs**, einer PlayReady-Datei, die Lizenznehmern von Microsoft zur Verfügung gestellt wird.</span><span class="sxs-lookup"><span data-stu-id="232d9-117">The **LicenseRequest** namespace is from **CommonLicenseRequest.cs**, a PlayReady file provided by Microsoft to licensees.</span></span>
 
-Sie müssen einige globale Variablen deklarieren:
+<span data-ttu-id="232d9-118">Sie müssen einige globale Variablen deklarieren:</span><span class="sxs-lookup"><span data-stu-id="232d9-118">You will need to declare a few global variables:</span></span>
 
 ```csharp
 private AdaptiveMediaSource ams = null;
@@ -59,17 +58,17 @@ private string playReadyLicenseUrl = "";
 private string playReadyChallengeCustomData = "";
 ```
 
-Sie sollten auch die folgende Konstante deklarieren:
+<span data-ttu-id="232d9-119">Sie sollten auch die folgende Konstante deklarieren:</span><span class="sxs-lookup"><span data-stu-id="232d9-119">You will also want to declare the following constant:</span></span>
 
 ```csharp
 private const uint MSPR_E_CONTENT_ENABLING_ACTION_REQUIRED = 0x8004B895;
 ```
 
-## <a name="setting-up-the-mediaprotectionmanager"></a>Einrichten von „MediaProtectionManager“
+## <a name="setting-up-the-mediaprotectionmanager"></a><span data-ttu-id="232d9-120">Einrichten von „MediaProtectionManager“</span><span class="sxs-lookup"><span data-stu-id="232d9-120">Setting up the MediaProtectionManager</span></span>
 
-Um Ihrer UWP-App PlayReady-Inhaltsschutz hinzuzufügen, müssen Sie ein [MediaProtectionManager](https://msdn.microsoft.com/library/windows/apps/br207040)-Objekt einrichten. Diese Einrichtung erfolgt beim Initialisieren Ihres [**AdaptiveMediaSource**](https://msdn.microsoft.com/library/windows/apps/dn946912)-Objekts.
+<span data-ttu-id="232d9-121">Um Ihrer UWP-App PlayReady-Inhaltsschutz hinzuzufügen, müssen Sie ein [MediaProtectionManager](https://msdn.microsoft.com/library/windows/apps/br207040)-Objekt einrichten.</span><span class="sxs-lookup"><span data-stu-id="232d9-121">To add PlayReady content protection to your UWP app, you will need to set up a [MediaProtectionManager](https://msdn.microsoft.com/library/windows/apps/br207040) object.</span></span> <span data-ttu-id="232d9-122">Diese Einrichtung erfolgt beim Initialisieren Ihres [**AdaptiveMediaSource**](https://msdn.microsoft.com/library/windows/apps/dn946912)-Objekts.</span><span class="sxs-lookup"><span data-stu-id="232d9-122">You do this when initializing your [**AdaptiveMediaSource**](https://msdn.microsoft.com/library/windows/apps/dn946912) object.</span></span>
 
-Mit dem folgenden Code wird ein [MediaProtectionManager](https://msdn.microsoft.com/library/windows/apps/br207040)-Objekt eingerichtet:
+<span data-ttu-id="232d9-123">Mit dem folgenden Code wird ein [MediaProtectionManager](https://msdn.microsoft.com/library/windows/apps/br207040)-Objekt eingerichtet:</span><span class="sxs-lookup"><span data-stu-id="232d9-123">The following code sets up a [MediaProtectionManager](https://msdn.microsoft.com/library/windows/apps/br207040):</span></span>
 
 ```csharp
 private void SetUpProtectionManager(ref MediaElement mediaElement)
@@ -102,9 +101,9 @@ private void SetUpProtectionManager(ref MediaElement mediaElement)
 }
 ```
 
-Dieser Code kann einfach in Ihre App kopiert werden, da er für die Einrichtung des Inhaltsschutzes erforderlich ist.
+<span data-ttu-id="232d9-124">Dieser Code kann einfach in Ihre App kopiert werden, da er für die Einrichtung des Inhaltsschutzes erforderlich ist.</span><span class="sxs-lookup"><span data-stu-id="232d9-124">This code can simply be copied to your app, since it is mandatory for setting up content protection.</span></span>
 
-Das [ComponentLoadFailed](https://msdn.microsoft.com/library/windows/apps/br207041)-Ereignis wird ausgelöst, wenn das Laden von Binärdaten fehlschlägt. Zum Behandeln dieses Ereignisses müssen wir einen Ereignishandler hinzufügen, der signalisiert, dass das Laden nicht abgeschlossen wurde:
+<span data-ttu-id="232d9-125">Das [ComponentLoadFailed](https://msdn.microsoft.com/library/windows/apps/br207041)-Ereignis wird ausgelöst, wenn das Laden von Binärdaten fehlschlägt.</span><span class="sxs-lookup"><span data-stu-id="232d9-125">The [ComponentLoadFailed](https://msdn.microsoft.com/library/windows/apps/br207041) event is fired when the load of binary data fails.</span></span> <span data-ttu-id="232d9-126">Zum Behandeln dieses Ereignisses müssen wir einen Ereignishandler hinzufügen, der signalisiert, dass das Laden nicht abgeschlossen wurde:</span><span class="sxs-lookup"><span data-stu-id="232d9-126">We need to add an event handler to handle this, signaling that the load did not complete:</span></span>
 
 ```csharp
 private void ProtectionManager_ComponentLoadFailed(
@@ -115,7 +114,7 @@ private void ProtectionManager_ComponentLoadFailed(
 }
 ```
 
-Ebenso müssen wir einen Ereignishandler für das [ServiceRequested](https://msdn.microsoft.com/library/windows/apps/br207045)-Ereignis hinzufügen, das beim Anfordern eines Diensts ausgelöst wird. Dieser Code überprüft, um welche Art von Anforderung es sich handelt, und reagiert entsprechend:
+<span data-ttu-id="232d9-127">Ebenso müssen wir einen Ereignishandler für das [ServiceRequested](https://msdn.microsoft.com/library/windows/apps/br207045)-Ereignis hinzufügen, das beim Anfordern eines Diensts ausgelöst wird.</span><span class="sxs-lookup"><span data-stu-id="232d9-127">Similarly, we need to add an event handler for the [ServiceRequested](https://msdn.microsoft.com/library/windows/apps/br207045) event, which fires when a service is requested.</span></span> <span data-ttu-id="232d9-128">Dieser Code überprüft, um welche Art von Anforderung es sich handelt, und reagiert entsprechend:</span><span class="sxs-lookup"><span data-stu-id="232d9-128">This code checks what kind of request it is, and responds appropriately:</span></span>
 
 ```csharp
 private async void ProtectionManager_ServiceRequested(
@@ -143,9 +142,9 @@ private async void ProtectionManager_ServiceRequested(
 }
 ```
 
-## <a name="individualization-service-requests"></a>Individualisierungsdienstanforderung
+## <a name="individualization-service-requests"></a><span data-ttu-id="232d9-129">Individualisierungsdienstanforderung</span><span class="sxs-lookup"><span data-stu-id="232d9-129">Individualization service requests</span></span>
 
-Der folgende Code sendet reaktiv eine PlayReady-Individualisierungsdienstanforderung. Wir übergeben die Anforderung als Parameter an die Funktion. Wir platzieren den Aufruf in einem try/catch-Block. Wenn keine Ausnahmen auftreten, wurde die Anforderung in unseren Augen erfolgreich abgeschlossen:
+<span data-ttu-id="232d9-130">Der folgende Code sendet reaktiv eine PlayReady-Individualisierungsdienstanforderung.</span><span class="sxs-lookup"><span data-stu-id="232d9-130">The following code reactively makes a PlayReady individualization service request.</span></span> <span data-ttu-id="232d9-131">Wir übergeben die Anforderung als Parameter an die Funktion.</span><span class="sxs-lookup"><span data-stu-id="232d9-131">We pass in the request as a parameter to the function.</span></span> <span data-ttu-id="232d9-132">Wir platzieren den Aufruf in einem try/catch-Block. Wenn keine Ausnahmen auftreten, wurde die Anforderung in unseren Augen erfolgreich abgeschlossen:</span><span class="sxs-lookup"><span data-stu-id="232d9-132">We surround the call in a try/catch block, and if there are no exceptions, we say the request completed successfully:</span></span>
 
 ```csharp
 async Task<bool> ReactiveIndivRequest(
@@ -184,7 +183,7 @@ async Task<bool> ReactiveIndivRequest(
 }
 ```
 
-Alternativ soll vielleicht proaktiv eine Individualisierungsdienstanforderung gesendet werden. In diesem Fall wird anstelle des Codes, mit dem `ReactiveIndivRequest` in `ProtectionManager_ServiceRequested` aufgerufen wird, die folgende Funktion aufgerufen:
+<span data-ttu-id="232d9-133">Alternativ soll vielleicht proaktiv eine Individualisierungsdienstanforderung gesendet werden. In diesem Fall wird anstelle des Codes, mit dem `ReactiveIndivRequest` in `ProtectionManager_ServiceRequested` aufgerufen wird, die folgende Funktion aufgerufen:</span><span class="sxs-lookup"><span data-stu-id="232d9-133">Alternatively, we may want to proactively make an individualization service request, in which case we call the following function in place of the code calling `ReactiveIndivRequest` in `ProtectionManager_ServiceRequested`:</span></span>
 
 ```csharp
 async void ProActiveIndivRequest()
@@ -194,9 +193,9 @@ async void ProActiveIndivRequest()
 }
 ```
 
-## <a name="license-acquisition-service-requests"></a>Lizenzerwerb-Dienstanforderungen
+## <a name="license-acquisition-service-requests"></a><span data-ttu-id="232d9-134">Lizenzerwerb-Dienstanforderungen</span><span class="sxs-lookup"><span data-stu-id="232d9-134">License acquisition service requests</span></span>
 
-Falls es sich bei der Anforderung stattdessen um [PlayReadyLicenseAcquisitionServiceRequest](https://msdn.microsoft.com/library/windows/apps/dn986285) handelt, rufen wir die folgende Funktion auf, um die PlayReady-Lizenz anzufordern und zu erwerben. Wir teilen dem übergebenen **MediaProtectionServiceCompletion**-Objekt mit, ob die Anforderung erfolgreich war, und schließen die Anforderung ab:
+<span data-ttu-id="232d9-135">Falls es sich bei der Anforderung stattdessen um [PlayReadyLicenseAcquisitionServiceRequest](https://msdn.microsoft.com/library/windows/apps/dn986285) handelt, rufen wir die folgende Funktion auf, um die PlayReady-Lizenz anzufordern und zu erwerben.</span><span class="sxs-lookup"><span data-stu-id="232d9-135">If instead the request was a [PlayReadyLicenseAcquisitionServiceRequest](https://msdn.microsoft.com/library/windows/apps/dn986285), we call the following function to request and acquire the PlayReady license.</span></span> <span data-ttu-id="232d9-136">Wir teilen dem übergebenen **MediaProtectionServiceCompletion**-Objekt mit, ob die Anforderung erfolgreich war, und schließen die Anforderung ab:</span><span class="sxs-lookup"><span data-stu-id="232d9-136">We tell the **MediaProtectionServiceCompletion** object that we passed in whether the request was successful or not, and we complete the request:</span></span>
 
 ```csharp
 async void LicenseAcquisitionRequest(
@@ -276,9 +275,9 @@ async void LicenseAcquisitionRequest(
 }
 ```
 
-## <a name="initializing-the-adaptivemediasource"></a>Initialisieren von „AdaptiveMediaSource“
+## <a name="initializing-the-adaptivemediasource"></a><span data-ttu-id="232d9-137">Initialisieren von „AdaptiveMediaSource“</span><span class="sxs-lookup"><span data-stu-id="232d9-137">Initializing the AdaptiveMediaSource</span></span>
 
-Schließlich benötigen Sie eine Funktion zum Initialisieren des [AdaptiveMediaSource](https://msdn.microsoft.com/library/windows/apps/dn946912)-Objekts, das aus einem bestimmten [Uri](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx)- und [MediaElement](https://msdn.microsoft.com/library/windows/apps/br242926)-Objekt erstellt wurde. Bei **Uri** sollte es sich um den Link zur Mediendatei (HLS oder DASH) handeln. **MediaElement** muss in Ihrem XAML-Code definiert werden.
+<span data-ttu-id="232d9-138">Schließlich benötigen Sie eine Funktion zum Initialisieren des [AdaptiveMediaSource](https://msdn.microsoft.com/library/windows/apps/dn946912)-Objekts, das aus einem bestimmten [Uri](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx)- und [MediaElement](https://msdn.microsoft.com/library/windows/apps/br242926)-Objekt erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="232d9-138">Finally, you will need a function to initialize the [AdaptiveMediaSource](https://msdn.microsoft.com/library/windows/apps/dn946912), created from a given [Uri](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) and [MediaElement](https://msdn.microsoft.com/library/windows/apps/br242926).</span></span> <span data-ttu-id="232d9-139">Bei **Uri** sollte es sich um den Link zur Mediendatei (HLS oder DASH) handeln. **MediaElement** muss in Ihrem XAML-Code definiert werden.</span><span class="sxs-lookup"><span data-stu-id="232d9-139">The **Uri** should be the link to the media file (HLS or DASH); the **MediaElement** should be defined in your XAML.</span></span>
 
 ```csharp
 async private void InitializeAdaptiveMediaSource(System.Uri uri, MediaElement m)
@@ -297,11 +296,10 @@ async private void InitializeAdaptiveMediaSource(System.Uri uri, MediaElement m)
 }
 ```
 
-Sie können diese Funktion in jedem Ereignis aufrufen, das den Start des adaptiven Streamings behandelt, z. B. in einem Click-Ereignis für eine Schaltfläche.
+<span data-ttu-id="232d9-140">Sie können diese Funktion in jedem Ereignis aufrufen, das den Start des adaptiven Streamings behandelt, z.B. in einem Click-Ereignis für eine Schaltfläche.</span><span class="sxs-lookup"><span data-stu-id="232d9-140">You can call this function in whichever event handles the start of adaptive streaming; for example, in a button click event.</span></span>
 
-## <a name="see-also"></a>Weitere Informationen
-- [PlayReady DRM](playready-client-sdk.md)
-
+## <a name="see-also"></a><span data-ttu-id="232d9-141">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="232d9-141">See also</span></span>
+- [<span data-ttu-id="232d9-142">PlayReady DRM</span><span class="sxs-lookup"><span data-stu-id="232d9-142">PlayReady DRM</span></span>](playready-client-sdk.md)
 
 
 

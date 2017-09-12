@@ -1,55 +1,61 @@
 ---
 author: Jwmsft
 Description: "Mittels Verschiebung und Bildlauf können Benutzer Inhalte erreichen, die sich jenseits der Bildschirmgrenzen befinden."
-title: "Richtlinien für Bildlaufleisten"
+title: Bildlaufanzeige-Steuerelemente
 ms.assetid: 1BFF0E81-BF9C-43F7-95F6-EFC6BDD5EC31
-label: Scroll bars
+label: Scrollbars
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ffa13b2bfc89a94370beee7fa47372f948c3f700
-ms.lasthandoff: 02/07/2017
-
+pm-contact: Abarlow, pagildea
+design-contact: ksulliv
+dev-contact: regisb
+doc-status: Published
+ms.openlocfilehash: b60842d25c54c15c7c478e1e5183ecd3317bb82c
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/22/2017
 ---
-# <a name="scroll-bars"></a>Bildlaufleisten
+# <a name="scroll-viewer-controls"></a><span data-ttu-id="9d05e-104">Bildlaufanzeige-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="9d05e-104">Scroll viewer controls</span></span>
 
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Mittels Verschiebung und Bildlauf können Benutzer Inhalte erreichen, die sich jenseits der Bildschirmgrenzen befinden.
+<span data-ttu-id="9d05e-105">Wenn mehr UI-Inhalte anzuzeigen sind, als in einen Bereich passen, verwenden Sie das Bildlaufanzeige-Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="9d05e-105">When there is more UI content to show than you can fit in an area, use the scroll viewer control.</span></span>
 
-Ein Bildlaufanzeigesteuerelement umfasst so viele Inhalte, wie in den Viewport passen, und entweder eine oder zwei Bildlaufleisten. Fingerbewegungen können zum Verschieben und Zoomen verwendet werden (die Bildlaufleisten werden nur während der Bearbeitung eingeblendet), während der Zeiger für den Bildlauf genutzt werden kann. Bei einer Streichbewegung erfolgt die Verschiebung mit Trägheit.
+> <span data-ttu-id="9d05e-106">**Wichtige APIs**: [ScrollViewer-Klasse](https://msdn.microsoft.com/library/windows/apps/br209527), [ScrollBar-Klasse](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.scrollbar.aspx)</span><span class="sxs-lookup"><span data-stu-id="9d05e-106">**Important APIs**: [ScrollViewer class](https://msdn.microsoft.com/library/windows/apps/br209527), [ScrollBar class](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.scrollbar.aspx)</span></span>
 
-**Hinweis**: Windows verfügt über zwei Visualisierungen für den Bildlauf, die vom Eingabemodus des Benutzers abhängen: Bildlaufanzeigen bei Verwendung von Touch- oder Gamepad und interaktive Bildlaufleisten bei anderen Eingabegeräten, darunter Maus, Tastatur und Eingabestift.
+<span data-ttu-id="9d05e-107">Mithilfe von Bildlaufanzeigen kann Inhalt über die Grenzen des Anzeigebereichs (sichtbarer Bereich) hinausgehen.</span><span class="sxs-lookup"><span data-stu-id="9d05e-107">Scroll viewers enable content to extend beyond the bounds of the viewport (visable area).</span></span> <span data-ttu-id="9d05e-108">Benutzer können diesen Inhalt durch Bedienen der Bildlaufanzeigenoberfläche über Toucheingabe, Mausrad, Tastatur oder ein Gamepad oder mithilfe des Maus- oder Stiftcursors anzeigen, um mit der Bildlaufleiste der Bildlaufanzeige zu interagieren.</span><span class="sxs-lookup"><span data-stu-id="9d05e-108">Users reach this content by manipulating the scroll viewer surface through touch, mousewheel, keyboard, or a gamepad, or by using the mouse or pen cursor to interact with the scroll viewer's scrollbar.</span></span> <span data-ttu-id="9d05e-109">Diese Abbildungzeigt mehrere Beispiele für Bildlaufanzeige-Steuerelemente.</span><span class="sxs-lookup"><span data-stu-id="9d05e-109">This image shows several examples of scroll viewer controls.</span></span>
+
+![Screenshot mit einem standardmäßigen Bildlaufleisten-Steuerelement](images/ScrollBar_Standard.jpg)
+
+<span data-ttu-id="9d05e-111">Abhängig von der Situation verwendet die Bildlaufleiste der Bildlaufanzeige zwei verschiedene Visualisierungen, die in der folgenden Abbildunggezeigt werden: den Verschiebungsindikator (links) und die herkömmliche Bildlaufleiste (rechts).</span><span class="sxs-lookup"><span data-stu-id="9d05e-111">Depending on the situation, the scroll viewer's scrollbar uses two different visualizations, shown in the following illustration: the panning indicator (left) and the traditional scrollbar (right).</span></span>
 
 ![Beispiel für standardmäßige Bildlaufleisten- und Verschiebungsindikatoren-Steuerelemente](images/SCROLLBAR.png)
 
+<span data-ttu-id="9d05e-113">Die Bildlaufanzeige erkennt die Eingabemethode des Benutzers und ermittelt damit die anzuzeigende Visualisierung.</span><span class="sxs-lookup"><span data-stu-id="9d05e-113">The scroll viewer is conscious of the user’s input method and uses it to determine which visualization to display.</span></span>
+
+* <span data-ttu-id="9d05e-114">Wenn in einem Bereich ein Bildlauf durchgeführt wird, ohne die Bildlaufleiste direkt zu benutzen, z.B. durch Berühren, wird der Verschiebungsindikator eingeblendet, welcher die aktuelle Bildlaufposition anzeigt.</span><span class="sxs-lookup"><span data-stu-id="9d05e-114">When the region is scrolled without manipulating the scrollbar directly, for example, by touch, the panning indicator appears, displaying the current scroll position.</span></span>
+* <span data-ttu-id="9d05e-115">Wenn der Maus- oder Stiftcursor über den Verschiebungsindikator bewegt wird, verwandelt sich dieser in eine herkömmliche Bildlaufleiste.</span><span class="sxs-lookup"><span data-stu-id="9d05e-115">When the mouse or pen cursor moves over the panning indicator, it morphs into the traditional scrollbar.</span></span>  <span data-ttu-id="9d05e-116">Durch Ziehen des Ziehpunkts der Bildlaufleiste wird der Bildlaufbereich verändert.</span><span class="sxs-lookup"><span data-stu-id="9d05e-116">Dragging the scrollbar thumb manipulates the scrolling region.</span></span>
+
+<!--
 <div class="microsoft-internal-note">
-Die vollständigen Redlines finden Sie unter [Designdepot](http://designdepot/DesignDepot.FrontEnd/#/ML/Dashboard/1805).
+See complete redlines in [UNI]http://uni/DesignDepot.FrontEnd/#/ProductNav/3378/0/dv/?t=Windows|Controls|ScrollControls&f=RS2
 </div>
+-->
 
-<div class="important-apis" >
-<b>Wichtige APIs</b><br/>
-<ul>
-<li>[**ScrollViewer-Klasse**](https://msdn.microsoft.com/library/windows/apps/br209527)</li>
-<li>[**ScrollBar-Klasse**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.scrollbar.aspx)</li>
-</ul>
-</div>
+![Bildlaufleisten in Aktion](images/conscious-scroll.gif)
+
+> [!NOTE]
+> <span data-ttu-id="9d05e-118">Wenn die Bildlaufleiste sichtbar ist, überlagert sie mit 16px den Inhalt innerhalb des ScrollViewer.</span><span class="sxs-lookup"><span data-stu-id="9d05e-118">When the scrollbar is visible it is overlaid as 16px on top of the content inside your ScrollViewer.</span></span> <span data-ttu-id="9d05e-119">Für ein gutes Benutzeroberflächendesign sollten Sie sicherstellen, dass durch diese Überlagerung keine interaktiven Inhalte verdeckt werden.</span><span class="sxs-lookup"><span data-stu-id="9d05e-119">In order to ensure good UX design you will want to ensure that no interactive content is obscured by this overlay.</span></span> <span data-ttu-id="9d05e-120">Wenn sich Benutzeroberflächen lieber nicht überlappen sollen, lassen Sie vom Rand des Anzeigebereichs 16px Abstand für die Bildlaufleiste.</span><span class="sxs-lookup"><span data-stu-id="9d05e-120">Additionally if you would prefer not to have UX overlap, leave 16px of padding on the edge of the viewport to allow for the scrollbar.</span></span>
 
 
-## <a name="examples"></a>Beispiele
-
-Ein [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.aspx) ermöglicht es, Inhalte in einem kleineren Bereich als der tatsächlichen Größe anzuzeigen. Wenn der Inhalt der Bildlaufanzeige nicht vollständig sichtbar ist, zeigt die Bildlaufanzeige Bildlaufleisten an, mit denen der Benutzer den sichtbaren Inhaltsbereich verschieben kann. Der Bereich, der den gesamten Inhalt der Bildlaufanzeige enthält, ist der *Umfang*. Der sichtbare Bereich des Inhalts ist der *Viewport*.
-
-![Screenshot mit einem standardmäßigen Bildlaufleistensteuerelement](images/ScrollBar_Standard.jpg)
-
-## <a name="create-a-scroll-viewer"></a>Erstellen einer Bildlaufanzeige
-Um Ihrer Seite einen vertikalen Bildlauf hinzuzufügen, umschließen Sie den Seiteninhalt in einer Bildlaufanzeige.
+## <a name="create-a-scroll-viewer"></a><span data-ttu-id="9d05e-121">Erstellen einer Bildlaufanzeige</span><span class="sxs-lookup"><span data-stu-id="9d05e-121">Create a scroll viewer</span></span>
+<span data-ttu-id="9d05e-122">Um Ihrer Seite einen vertikalen Bildlauf hinzuzufügen, umschließen Sie den Seiteninhalt in einer Bildlaufanzeige.</span><span class="sxs-lookup"><span data-stu-id="9d05e-122">To add vertical scrolling to your page, wrap the page content in a scroll viewer.</span></span>
 
 ```xaml
 <Page
@@ -66,7 +72,8 @@ Um Ihrer Seite einen vertikalen Bildlauf hinzuzufügen, umschließen Sie den Sei
     </ScrollViewer>
 </Page>
 ```
-Dieser XAML-Code veranschaulicht das Einfügen eines Bilds in einer Bildlaufanzeige und das Aktivieren des Zooms.
+
+<span data-ttu-id="9d05e-123">Dieser XAML-Code veranschaulicht das Einfügen eines Bilds in einer Bildlaufanzeige und das Aktivieren des Zooms.</span><span class="sxs-lookup"><span data-stu-id="9d05e-123">This XAML shows how to place an image in a scroll viewer and enable zooming.</span></span>
 
 ```xaml
 <ScrollViewer ZoomMode="Enabled" MaxZoomFactor="10"
@@ -76,54 +83,56 @@ Dieser XAML-Code veranschaulicht das Einfügen eines Bilds in einer Bildlaufanze
 </ScrollViewer>
 ```
 
-## <a name="scrollviewer-in-a-control-template"></a>ScrollViewer in einer Steuerelementvorlage
+## <a name="scrollviewer-in-a-control-template"></a><span data-ttu-id="9d05e-124">ScrollViewer in einer Steuerelementvorlage</span><span class="sxs-lookup"><span data-stu-id="9d05e-124">ScrollViewer in a control template</span></span>
 
-Normalerweise ist das ScrollViewer-Steuerelement Teil von anderen Steuerelementen. Eine ScrollViewer-Komponente zeigt zusammen mit der [**ScrollContentPresenter**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollcontentpresenter.aspx)-Klasse zur Unterstützung nur dann einen Viewport sowie Bildlaufleisten an, wenn der Layoutbereich des Hoststeuerelements einschränkt wird und kleiner als die Größe des erweiterten Inhalts ist. Dies ist häufig bei Listen der Fall, daher enthalten [**ListView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listview.aspx)- und [**GridView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridview.aspx)-Vorlagen immer ScrollViewer. [**TextBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx) und [**RichEditBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx) umfassen ebenfalls ScrollViewer in ihren Vorlagen.
+<span data-ttu-id="9d05e-125">Normalerweise ist das ScrollViewer-Steuerelement Teil von anderen Steuerelementen.</span><span class="sxs-lookup"><span data-stu-id="9d05e-125">It's typical for a ScrollViewer control to exist as a composite part of other controls.</span></span> <span data-ttu-id="9d05e-126">Eine ScrollViewer-Komponente zeigt zusammen mit der [ScrollContentPresenter](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollcontentpresenter.aspx)-Klasse zur Unterstützung nur dann einen Viewport sowie Bildlaufleisten an, wenn der Layoutbereich des Hoststeuerelements einschränkt wird und kleiner als die Größe des erweiterten Inhalts ist.</span><span class="sxs-lookup"><span data-stu-id="9d05e-126">A ScrollViewer part, along with the [ScrollContentPresenter](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollcontentpresenter.aspx) class for support, will display a viewport along with scrollbars only when the host control's layout space is being constrained smaller than the expanded content size.</span></span> <span data-ttu-id="9d05e-127">Dies ist häufig bei Listen der Fall, daher enthalten [ListView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listview.aspx)- und [GridView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridview.aspx)-Vorlagen immer ScrollViewer.</span><span class="sxs-lookup"><span data-stu-id="9d05e-127">This is often the case for lists, so [ListView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listview.aspx) and [GridView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridview.aspx) templates always include a ScrollViewer.</span></span> <span data-ttu-id="9d05e-128">[TextBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx) und [RichEditBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx) enthalten ebenfalls ScrollViewer in ihren Vorlagen.</span><span class="sxs-lookup"><span data-stu-id="9d05e-128">[TextBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx) and [RichEditBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx) also include a ScrollViewer in their templates.</span></span>
 
-Wenn eine **ScrollViewer**-Komponente in einem Steuerelement vorhanden ist, ist im Hoststeuerelement häufig die Ereignisbehandlung für bestimmte Eingabeereignisse und Bearbeitungen integriert, mit denen ein Bildlauf für den Inhalt durchgeführt werden kann. GridView interpretiert z. B. eine Wischbewegung, wodurch für den Inhalt ein horizontaler Bildlauf durchgeführt wird. Die Eingabeereignisse und Manipulationen von Rohdaten, die das Hoststeuerelement empfängt, werden als durch das Steuerelement behandelt betrachtet, und untergeordnete Ereignisse wie [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.pointerpressed.aspx) werden nicht ausgelöst oder per Bubbling an übergeordnete Container weitergeleitet. Sie können das integrierte Verhalten des Steuerelements teilweise ändern, indem Sie eine Steuerelementklasse und die virtuellen **On***-Methoden für Ereignisse überschreiben oder eine neue Vorlage für das Steuerelement verwenden. In beiden Fällen ist es allerdings nicht unkompliziert, das ursprüngliche Standardverhalten zu reproduzieren, das in der Regel vorhanden ist, damit das Steuerelement wie erwartet auf Ereignisse und Eingabeaktionen und -gesten des Benutzers reagiert. Sie sollten daher genau überlegen, ob das Eingabeereignis wirklich ausgelöst werden soll. Sie sollten überprüfen, ob andere Eingabeereignisse oder Gesten vorhanden sind, die nicht von dem Steuerelement behandelt werden, und diese im Entwurf für die App oder die Steuerelementinteraktion verwenden.
+<span data-ttu-id="9d05e-129">Wenn eine **ScrollViewer**-Komponente in einem Steuerelement vorhanden ist, ist im Hoststeuerelement häufig die Ereignisbehandlung für bestimmte Eingabeereignisse und Bearbeitungen integriert, mit denen ein Bildlauf für den Inhalt durchgeführt werden kann.</span><span class="sxs-lookup"><span data-stu-id="9d05e-129">When a **ScrollViewer** part exists in a control, the host control often has built-in event handling for certain input events and manipulations that enable the content to scroll.</span></span> <span data-ttu-id="9d05e-130">GridView interpretiert z. B. eine Wischbewegung, wodurch für den Inhalt ein horizontaler Bildlauf durchgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="9d05e-130">For example, a GridView interprets a swipe gesture and this causes the content to scroll horizontally.</span></span> <span data-ttu-id="9d05e-131">Die Eingabeereignisse und Manipulationen von Rohdaten, die das Hoststeuerelement empfängt, werden als durch das Steuerelement behandelt betrachtet, und untergeordnete Ereignisse wie [PointerPressed](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.pointerpressed.aspx) werden nicht ausgelöst oder per Bubbling an übergeordnete Container weitergeleitet.</span><span class="sxs-lookup"><span data-stu-id="9d05e-131">The input events and raw manipulations that the host control receives are considered handled by the control, and lower-level events such as [PointerPressed](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.pointerpressed.aspx) won't be raised and won't bubble to any parent containers either.</span></span> <span data-ttu-id="9d05e-132">Sie können das integrierte Verhalten des Steuerelements teilweise ändern, indem Sie eine Steuerelementklasse und die virtuellen **On***-Methoden für Ereignisse überschreiben oder eine neue Vorlage für das Steuerelement verwenden.</span><span class="sxs-lookup"><span data-stu-id="9d05e-132">You can change some of the built-in control handling by overriding a control class and the **On*** virtual methods for events, or by retemplating the control.</span></span> <span data-ttu-id="9d05e-133">In beiden Fällen ist es allerdings nicht unkompliziert, das ursprüngliche Standardverhalten zu reproduzieren, das in der Regel vorhanden ist, damit das Steuerelement wie erwartet auf Ereignisse und Eingabeaktionen und -gesten des Benutzers reagiert.</span><span class="sxs-lookup"><span data-stu-id="9d05e-133">But in either case it's not trivial to reproduce the original default behavior, which is typically there so that the control reacts in expected ways to events and to a user's input actions and gestures.</span></span> <span data-ttu-id="9d05e-134">Sie sollten daher genau überlegen, ob das Eingabeereignis wirklich ausgelöst werden soll.</span><span class="sxs-lookup"><span data-stu-id="9d05e-134">So you should consider whether you really need that input event to fire.</span></span> <span data-ttu-id="9d05e-135">Sie sollten überprüfen, ob andere Eingabeereignisse oder Gesten vorhanden sind, die nicht von dem Steuerelement behandelt werden, und diese im Entwurf für die App oder die Steuerelementinteraktion verwenden.</span><span class="sxs-lookup"><span data-stu-id="9d05e-135">You might want to investigate whether there are other input events or gestures that are not being handled by the control, and use those in your app or control interaction design.</span></span>
 
-Damit Steuerelemente, die einen ScrollViewer enthalten, einige Verhaltensweisen und Eigenschaften innerhalb der ScrollViewer-Komponente steuern können, definiert ScrollViewer eine Reihe von angefügten XAML-Eigenschaften, die in Stilen festgelegt und in Vorlagenbindungen verwendet werden können. Weitere Informationen zu angefügten Eigenschaften finden Sie unter [Übersicht über angefügte Eigenschaften](../xaml-platform/attached-properties-overview.md).
+<span data-ttu-id="9d05e-136">Damit Steuerelemente, die einen ScrollViewer enthalten, einige Verhaltensweisen und Eigenschaften innerhalb der ScrollViewer-Komponente steuern können, definiert ScrollViewer eine Reihe von angefügten XAML-Eigenschaften, die in Stilen festgelegt und in Vorlagenbindungen verwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="9d05e-136">To make it possible for controls that include a ScrollViewer to influence some of the behavior and properties that are from within the ScrollViewer part, ScrollViewer defines a number of XAML attached properties that can be set in styles and used in template bindings.</span></span> <span data-ttu-id="9d05e-137">Weitere Informationen zu angefügten Eigenschaften finden Sie unter [Übersicht über angefügte Eigenschaften](../xaml-platform/attached-properties-overview.md).</span><span class="sxs-lookup"><span data-stu-id="9d05e-137">For more info about attached properties, see [Attached properties overview](../xaml-platform/attached-properties-overview.md).</span></span>
 
-**Angefügte XAML-Eigenschaften für ScrollViewer**
+**<span data-ttu-id="9d05e-138">Angefügte XAML-Eigenschaften für ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="9d05e-138">ScrollViewer XAML attached properties</span></span>**
 
-ScrollViewer definiert die folgenden angefügten XAML-Eigenschaften:
-- [ScrollViewer.BringIntoViewOnFocusChange](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.bringintoviewonfocuschange.aspx)
-- [ScrollViewer.HorizontalScrollBarVisibility](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.horizontalscrollbarvisibility.aspx)
-- [ScrollViewer.HorizontalScrollMode](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.horizontalscrollmode.aspx)
-- [ScrollViewer.IsDeferredScrollingEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.isdeferredscrollingenabled.aspx)
-- [ScrollViewer.IsHorizontalRailEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.ishorizontalrailenabled.aspx)
-- [ScrollViewer.IsHorizontalScrollChainingEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.ishorizontalscrollchainingenabled.aspx)
-- [ScrollViewer.IsScrollInertiaEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.isscrollinertiaenabled.aspx)
-- [ScrollViewer.IsVerticalRailEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.isverticalrailenabled.aspx)
-- [ScrollViewer.IsVerticalScrollChainingEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.isverticalscrollchainingenabled.aspx)
-- [ScrollViewer.IsZoomChainingEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.iszoominertiaenabled.aspx)
-- [ScrollViewer.IsZoomInertiaEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.iszoominertiaenabled.aspx)
-- [ScrollViewer.VerticalScrollBarVisibility](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.verticalscrollbarvisibilityproperty.aspx)
-- [ScrollViewer.VerticalScrollMode](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.verticalscrollmode.aspx)
-- [ScrollViewer.ZoomMode](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.zoommode.aspx)
+<span data-ttu-id="9d05e-139">ScrollViewer definiert die folgenden angefügten XAML-Eigenschaften:</span><span class="sxs-lookup"><span data-stu-id="9d05e-139">ScrollViewer defines the following XAML attached properties:</span></span>
 
-Diese angefügten XAML-Eigenschaften sind für Fälle vorgesehen, in denen ScrollViewer implizit ist, z. B. wenn der ScrollViewer in der Standardvorlage für ListView oder GridView vorhanden ist und Sie das Bildlaufverhalten des Steuerelements ohne Zugriff auf Vorlagenelemente steuern möchten.
+- [<span data-ttu-id="9d05e-140">ScrollViewer.BringIntoViewOnFocusChange</span><span class="sxs-lookup"><span data-stu-id="9d05e-140">ScrollViewer.BringIntoViewOnFocusChange</span></span>](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.bringintoviewonfocuschange.aspx)
+- [<span data-ttu-id="9d05e-141">ScrollViewer.HorizontalScrollBarVisibility</span><span class="sxs-lookup"><span data-stu-id="9d05e-141">ScrollViewer.HorizontalScrollBarVisibility</span></span>](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.horizontalscrollbarvisibility.aspx)
+- [<span data-ttu-id="9d05e-142">ScrollViewer.HorizontalScrollMode</span><span class="sxs-lookup"><span data-stu-id="9d05e-142">ScrollViewer.HorizontalScrollMode</span></span>](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.horizontalscrollmode.aspx)
+- [<span data-ttu-id="9d05e-143">ScrollViewer.IsDeferredScrollingEnabled</span><span class="sxs-lookup"><span data-stu-id="9d05e-143">ScrollViewer.IsDeferredScrollingEnabled</span></span>](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.isdeferredscrollingenabled.aspx)
+- [<span data-ttu-id="9d05e-144">ScrollViewer.IsHorizontalRailEnabled</span><span class="sxs-lookup"><span data-stu-id="9d05e-144">ScrollViewer.IsHorizontalRailEnabled</span></span>](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.ishorizontalrailenabled.aspx)
+- [<span data-ttu-id="9d05e-145">ScrollViewer.IsHorizontalScrollChainingEnabled</span><span class="sxs-lookup"><span data-stu-id="9d05e-145">ScrollViewer.IsHorizontalScrollChainingEnabled</span></span>](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.ishorizontalscrollchainingenabled.aspx)
+- [<span data-ttu-id="9d05e-146">ScrollViewer.IsScrollInertiaEnabled</span><span class="sxs-lookup"><span data-stu-id="9d05e-146">ScrollViewer.IsScrollInertiaEnabled</span></span>](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.isscrollinertiaenabled.aspx)
+- [<span data-ttu-id="9d05e-147">ScrollViewer.IsVerticalRailEnabled</span><span class="sxs-lookup"><span data-stu-id="9d05e-147">ScrollViewer.IsVerticalRailEnabled</span></span>](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.isverticalrailenabled.aspx)
+- [<span data-ttu-id="9d05e-148">ScrollViewer.IsVerticalScrollChainingEnabled</span><span class="sxs-lookup"><span data-stu-id="9d05e-148">ScrollViewer.IsVerticalScrollChainingEnabled</span></span>](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.isverticalscrollchainingenabled.aspx)
+- [<span data-ttu-id="9d05e-149">ScrollViewer.IsZoomChainingEnabled</span><span class="sxs-lookup"><span data-stu-id="9d05e-149">ScrollViewer.IsZoomChainingEnabled</span></span>](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.iszoominertiaenabled.aspx)
+- [<span data-ttu-id="9d05e-150">ScrollViewer.IsZoomInertiaEnabled</span><span class="sxs-lookup"><span data-stu-id="9d05e-150">ScrollViewer.IsZoomInertiaEnabled</span></span>](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.iszoominertiaenabled.aspx)
+- [<span data-ttu-id="9d05e-151">ScrollViewer.VerticalScrollBarVisibility</span><span class="sxs-lookup"><span data-stu-id="9d05e-151">ScrollViewer.VerticalScrollBarVisibility</span></span>](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.verticalscrollbarvisibilityproperty.aspx)
+- [<span data-ttu-id="9d05e-152">ScrollViewer.VerticalScrollMode</span><span class="sxs-lookup"><span data-stu-id="9d05e-152">ScrollViewer.VerticalScrollMode</span></span>](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.verticalscrollmode.aspx)
+- [<span data-ttu-id="9d05e-153">ScrollViewer.ZoomMode</span><span class="sxs-lookup"><span data-stu-id="9d05e-153">ScrollViewer.ZoomMode</span></span>](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.zoommode.aspx)
 
-Im Folgenden wird z. B. erläutert, wie Sie die vertikalen Bildlaufleisten für die integrierte Bildlaufanzeige einer ListView immer sichtbar machen.
+<span data-ttu-id="9d05e-154">Diese angefügten XAML-Eigenschaften sind für Fälle vorgesehen, in denen ScrollViewer implizit ist, z. B. wenn der ScrollViewer in der Standardvorlage für ListView oder GridView vorhanden ist und Sie das Bildlaufverhalten des Steuerelements ohne Zugriff auf Vorlagenelemente steuern möchten.</span><span class="sxs-lookup"><span data-stu-id="9d05e-154">These XAML attached properties are intended for cases where the ScrollViewer is implicit, such as when the ScrollViewer exists in the default template for a ListView or GridView, and you want to be able to influence the scrolling behavior of the control without accessing template parts.</span></span>
+
+<span data-ttu-id="9d05e-155">Im Folgenden wird z. B. erläutert, wie Sie die vertikalen Bildlaufleisten für die integrierte Bildlaufanzeige einer ListView immer sichtbar machen.</span><span class="sxs-lookup"><span data-stu-id="9d05e-155">For example, here's how to make the vertical scrollbars always visible for a ListView's built in scroll viewer.</span></span>
+
 ```xaml
 <ListView ScrollViewer.VerticalScrollBarVisibility="Visible"/>
 ```
 
-In Fällen, in denen im XAML-Code wie im Beispielcode gezeigt ein ScrollViewer explizit vorhanden ist, müssen Sie keine Syntax mit angefügten Eigenschaften verwenden. Verwenden Sie einfach eine Attributsyntax, z. B. `<ScrollViewer VerticalScrollBarVisibility="Visible"/>`.
+<span data-ttu-id="9d05e-156">In Fällen, in denen im XAML-Code wie im Beispielcode gezeigt ein ScrollViewer explizit vorhanden ist, müssen Sie keine Syntax mit angefügten Eigenschaften verwenden.</span><span class="sxs-lookup"><span data-stu-id="9d05e-156">For cases where a ScrollViewer is explicit in your XAML, as is shown in the example code, you don't need to use attached property syntax.</span></span> <span data-ttu-id="9d05e-157">Verwenden Sie einfach eine Attributsyntax, z.B. `<ScrollViewer VerticalScrollBarVisibility="Visible"/>`.</span><span class="sxs-lookup"><span data-stu-id="9d05e-157">Just use attribute syntax, for example `<ScrollViewer VerticalScrollBarVisibility="Visible"/>`.</span></span>
 
 
-## <a name="dos-and-donts"></a>Empfohlene und nicht empfohlene Vorgehensweisen
+## <a name="dos-and-donts"></a><span data-ttu-id="9d05e-158">Empfohlene und nicht empfohlene Vorgehensweisen</span><span class="sxs-lookup"><span data-stu-id="9d05e-158">Do's and don'ts</span></span>
 
--   Verwenden Sie möglichst ein Design für einen vertikalen Bildlauf und nicht für einen horizontalen Bildlauf.
--   Verwenden Sie die Verschiebung entlang einer Achse für Inhaltsbereiche, die über eine Viewportgrenze (vertikal oder horizontal) hinausgehen. Verwenden Sie die Verschiebung entlang zweier Achsen für Inhaltsbereiche, die über beide Viewportgrenzen (vertikal und horizontal) hinausgehen.
--   Verwenden Sie in der Listen- und Rasteransicht sowie im Kombinationsfeld, Listenfeld, Texteingabefeld und für Hubsteuerelemente die integrierte Bildlauffunktionalität. Wenn die Anzahl von Elementen so groß ist, dass sie nicht alle gleichzeitig angezeigt werden können, hat der Benutzer mit diesen Steuerelementen die Möglichkeit, einen vertikalen oder horizontalen Bildlauf durch die Elementliste durchzuführen.
--   Wenn der Benutzer die Verschiebung in beide Richtungen um einen größeren Bereich herum ausführen und möglicherweise auch zoomen soll (wenn Sie dem Benutzer beispielsweise das Verschieben und Zoomen über ein Bild in voller Größe ermöglichen möchten, anstatt ein Bild mit an den Bildschirm angepasster Größe zu verwenden), positionieren Sie das Bild in einer Bildlaufanzeige.
--   Wenn der Benutzer in einer langen Textpassage einen Bildlauf ausführen wird, konfigurieren Sie die Bildlaufanzeige ausschließlich für den vertikalen Bildlauf.
--   Bei Verwendung einer Bildlaufanzeige darf diese nur ein Objekt umfassen. Beachten Sie, dass es sich bei dem einen Objekt um einen Layoutbereich handeln kann, der wiederum eine beliebige Anzahl eigener Objekte enthält.
--   Platzieren Sie kein [Pivot](tabs-pivot.md)-Steuerelement in einer Bildlaufanzeige, um Konflikte mit der Pivot-Bildlauflogik zu vermeiden.
+-   <span data-ttu-id="9d05e-159">Verwenden Sie möglichst ein Design für einen vertikalen Bildlauf und nicht für einen horizontalen Bildlauf.</span><span class="sxs-lookup"><span data-stu-id="9d05e-159">Whenever possible, design for vertical scrolling rather than horizontal.</span></span>
+-   <span data-ttu-id="9d05e-160">Verwenden Sie die Verschiebung entlang einer Achse für Inhaltsbereiche, die über eine Viewportgrenze (vertikal oder horizontal) hinausgehen.</span><span class="sxs-lookup"><span data-stu-id="9d05e-160">Use one-axis panning for content regions that extend beyond one viewport boundary (vertical or horizontal).</span></span> <span data-ttu-id="9d05e-161">Verwenden Sie die Verschiebung entlang zweier Achsen für Inhaltsbereiche, die über beide Viewportgrenzen (vertikal und horizontal) hinausgehen.</span><span class="sxs-lookup"><span data-stu-id="9d05e-161">Use two-axis panning for content regions that extend beyond both viewport boundaries (vertical and horizontal).</span></span>
+-   <span data-ttu-id="9d05e-162">Verwenden Sie in der Listen- und Rasteransicht sowie im Kombinationsfeld, Listenfeld, Texteingabefeld und für Hubsteuerelemente die integrierte Bildlauffunktionalität.</span><span class="sxs-lookup"><span data-stu-id="9d05e-162">Use the built-in scroll functionality in the list view, grid view, combo box, list box, text input box, and hub controls.</span></span> <span data-ttu-id="9d05e-163">Wenn die Anzahl von Elementen so groß ist, dass sie nicht alle gleichzeitig angezeigt werden können, hat der Benutzer mit diesen Steuerelementen die Möglichkeit, einen vertikalen oder horizontalen Bildlauf durch die Elementliste durchzuführen.</span><span class="sxs-lookup"><span data-stu-id="9d05e-163">With those controls, if there are too many items to show all at once, the user is able to scroll either horizontally or vertically over the list of items.</span></span>
+-   <span data-ttu-id="9d05e-164">Wenn der Benutzer die Verschiebung in beide Richtungen um einen größeren Bereich herum ausführen und möglicherweise auch zoomen soll (wenn Sie dem Benutzer beispielsweise das Verschieben und Zoomen über ein Bild in voller Größe ermöglichen möchten, anstatt ein Bild mit an den Bildschirm angepasster Größe zu verwenden), positionieren Sie das Bild in einer Bildlaufanzeige.</span><span class="sxs-lookup"><span data-stu-id="9d05e-164">If you want the user to pan in both directions around a larger area, and possibly to zoom, too, for example, if you want to allow the user to pan and zoom over a full-sized image (rather than an image sized to fit the screen) then place the image inside a scroll viewer.</span></span>
+-   <span data-ttu-id="9d05e-165">Wenn der Benutzer in einer langen Textpassage einen Bildlauf ausführen wird, konfigurieren Sie die Bildlaufanzeige ausschließlich für den vertikalen Bildlauf.</span><span class="sxs-lookup"><span data-stu-id="9d05e-165">If the user will scroll through a long passage of text, configure the scroll viewer to scroll vertically only.</span></span>
+-   <span data-ttu-id="9d05e-166">Bei Verwendung einer Bildlaufanzeige darf diese nur ein Objekt umfassen.</span><span class="sxs-lookup"><span data-stu-id="9d05e-166">Use a scroll viewer to contain one object only.</span></span> <span data-ttu-id="9d05e-167">Beachten Sie, dass es sich bei dem einen Objekt um einen Layoutbereich handeln kann, der wiederum eine beliebige Anzahl eigener Objekte enthält.</span><span class="sxs-lookup"><span data-stu-id="9d05e-167">Note that the one object can be a layout panel, in turn containing any number of objects of its own.</span></span>
+-   <span data-ttu-id="9d05e-168">Platzieren Sie kein [Pivot](tabs-pivot.md)-Steuerelement in einer Bildlaufanzeige, um Konflikte mit der Pivot-Bildlauflogik zu vermeiden.</span><span class="sxs-lookup"><span data-stu-id="9d05e-168">Don't place a [Pivot](tabs-pivot.md) control inside a scroll viewer to avoid conflicts with pivot's scrolling logic.</span></span>
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a><span data-ttu-id="9d05e-169">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="9d05e-169">Related topics</span></span>
 
-**Für Entwickler (XAML)**
-* [**ScrollViewer-Klasse**](https://msdn.microsoft.com/library/windows/apps/br209527)
+**<span data-ttu-id="9d05e-170">Für Entwickler (XAML)</span><span class="sxs-lookup"><span data-stu-id="9d05e-170">For developers (XAML)</span></span>**
 
+* [<span data-ttu-id="9d05e-171">ScrollViewer-Klasse</span><span class="sxs-lookup"><span data-stu-id="9d05e-171">ScrollViewer class</span></span>](https://msdn.microsoft.com/library/windows/apps/br209527)

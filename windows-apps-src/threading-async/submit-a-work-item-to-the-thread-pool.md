@@ -1,40 +1,40 @@
 ---
-author: TylerMSFT
+author: normesta
 ms.assetid: E2A1200C-9583-40FA-AE4D-C9E6F6C32BCF
 title: Senden einer Arbeitsaufgabe an den Threadpool
 description: "Hier erfahren Sie, wie Sie Arbeit in einem separaten Thread erledigen können, indem Sie eine Arbeitsaufgabe an den Threadpool übermitteln."
-ms.author: twhitney
+ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, Threads, Threadpool
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d5141467e474f26a8aa681b4478cf60c979ae83b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: eb1bcccb9657750c434a2090e22fbd3fc89dc0fa
+ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/08/2017
 ---
-# <a name="submit-a-work-item-to-the-thread-pool"></a>Übermitteln einer Arbeitsaufgabe an den Threadpool
+# <a name="submit-a-work-item-to-the-thread-pool"></a><span data-ttu-id="c1e36-104">Übermitteln einer Arbeitsaufgabe an den Threadpool</span><span class="sxs-lookup"><span data-stu-id="c1e36-104">Submit a work item to the thread pool</span></span>
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+<span data-ttu-id="c1e36-105">\[ Aktualisiert für UWP-Apps unter Windows 10.</span><span class="sxs-lookup"><span data-stu-id="c1e36-105">\[ Updated for UWP apps on Windows 10.</span></span> <span data-ttu-id="c1e36-106">Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span><span class="sxs-lookup"><span data-stu-id="c1e36-106">For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span></span>
 
-** Wichtige APIs **
+<span data-ttu-id="c1e36-107">** Wichtige APIs **</span><span class="sxs-lookup"><span data-stu-id="c1e36-107">** Important APIs **</span></span>
 
--   [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593)
--   [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/BR206580)
+-   [**<span data-ttu-id="c1e36-108">RunAsync</span><span class="sxs-lookup"><span data-stu-id="c1e36-108">RunAsync</span></span>**](https://msdn.microsoft.com/library/windows/apps/BR230593)
+-   [**<span data-ttu-id="c1e36-109">IAsyncAction</span><span class="sxs-lookup"><span data-stu-id="c1e36-109">IAsyncAction</span></span>**](https://msdn.microsoft.com/library/windows/apps/BR206580)
 
-Hier erfahren Sie, wie Sie Arbeit in einem separaten Thread erledigen können, indem Sie eine Arbeitsaufgabe an den Threadpool übermitteln. Somit sorgen Sie dafür, dass die Benutzeroberfläche bei der Erledigung von Arbeit, die viel Zeit in Anspruch nimmt, reaktionsfähig bleibt, und Sie können mehrere Aufgaben parallel bearbeiten.
+<span data-ttu-id="c1e36-110">Hier erfahren Sie, wie Sie Arbeit in einem separaten Thread erledigen können, indem Sie eine Arbeitsaufgabe an den Threadpool übermitteln.</span><span class="sxs-lookup"><span data-stu-id="c1e36-110">Learn how to do work in a separate thread by submitting a work item to the thread pool.</span></span> <span data-ttu-id="c1e36-111">Somit sorgen Sie dafür, dass die Benutzeroberfläche bei der Erledigung von Arbeit, die viel Zeit in Anspruch nimmt, reaktionsfähig bleibt, und Sie können mehrere Aufgaben parallel bearbeiten.</span><span class="sxs-lookup"><span data-stu-id="c1e36-111">Use this to maintain a responsive UI while still completing work that takes a noticeable amount of time, and use it to complete multiple tasks in parallel.</span></span>
 
-## <a name="create-and-submit-the-work-item"></a>Erstellen und Senden der Arbeitsaufgabe
+## <a name="create-and-submit-the-work-item"></a><span data-ttu-id="c1e36-112">Erstellen und Senden der Arbeitsaufgabe</span><span class="sxs-lookup"><span data-stu-id="c1e36-112">Create and submit the work item</span></span>
 
-Erstellen Sie eine Arbeitsaufgabe, indem Sie [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593) aufrufen. Stellen Sie einen Delegaten zur Durchführung der Arbeit bereit (Sie können eine Lambda-Funktion oder Delegatfunktion verwenden). **RunAsync** gibt ein [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/BR206580)-Objekt zurück. Speichern Sie dieses Objekt, da es im nächsten Schritt verwendet wird.
+<span data-ttu-id="c1e36-113">Erstellen Sie eine Arbeitsaufgabe, indem Sie [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593) aufrufen.</span><span class="sxs-lookup"><span data-stu-id="c1e36-113">Create a work item by calling [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593).</span></span> <span data-ttu-id="c1e36-114">Stellen Sie einen Delegaten zur Durchführung der Arbeit bereit (Sie können eine Lambda-Funktion oder Delegatfunktion verwenden).</span><span class="sxs-lookup"><span data-stu-id="c1e36-114">Supply a delegate to do the work (you can use a lambda, or a delegate function).</span></span> <span data-ttu-id="c1e36-115">**RunAsync** gibt ein [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/BR206580)-Objekt zurück. Speichern Sie dieses Objekt, da es im nächsten Schritt verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="c1e36-115">Note that **RunAsync** returns an [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/BR206580) object; store this object for use in the next step.</span></span>
 
-Drei Versionen von [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593) sind verfügbar. Damit können Sie optional die Priorität der Arbeitsaufgabe angeben und steuern, ob sie gleichzeitig mit anderen Arbeitsaufgaben ausgeführt wird.
+<span data-ttu-id="c1e36-116">Drei Versionen von [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593) sind verfügbar. Damit können Sie optional die Priorität der Arbeitsaufgabe angeben und steuern, ob sie gleichzeitig mit anderen Arbeitsaufgaben ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="c1e36-116">Three versions of [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593) are available so that you can optionally specify the priority of the work item, and control whether it runs concurrently with other work items.</span></span>
 
-**Hinweis**  Verwenden Sie [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317), um auf den Benutzeroberflächenthread zuzugreifen und den Fortschritt der Arbeitsaufgabe anzuzeigen.
+<span data-ttu-id="c1e36-117">**Hinweis:** Verwenden Sie [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317), um auf den Benutzeroberflächenthread zuzugreifen und den Fortschritt der Arbeitsaufgabe anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="c1e36-117">**Note**  Use [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) to access the UI thread and show progress from the work item.</span></span>
 
-Im folgenden Beispiel werden eine Arbeitsaufgabe erstellt und ein Lambda für die Verarbeitung angegeben:
+<span data-ttu-id="c1e36-118">Im folgenden Beispiel werden eine Arbeitsaufgabe erstellt und ein Lambda für die Verarbeitung angegeben:</span><span class="sxs-lookup"><span data-stu-id="c1e36-118">The following example creates a work item and supplies a lambda to do the work:</span></span>
 
 > [!div class="tabbedCodeSnippets"]
 > ``` cpp
@@ -197,15 +197,15 @@ Im folgenden Beispiel werden eine Arbeitsaufgabe erstellt und ein Lambda für di
 > m_workItem = asyncAction;
 > ```
 
-Nach dem Aufruf von [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593) wird die Arbeitsaufgabe vom Threadpool in eine Warteschlange eingereiht und ausgeführt, wenn ein Thread verfügbar wird. Arbeitsaufgaben im Threadpool werden asynchron und in einer beliebigen Reihenfolge ausgeführt. Stellen Sie daher sicher, dass Ihre Arbeitsaufgaben über eine unabhängige Funktionsweise funktionieren.
+<span data-ttu-id="c1e36-119">Nach dem Aufruf von [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593) wird die Arbeitsaufgabe vom Threadpool in eine Warteschlange eingereiht und ausgeführt, wenn ein Thread verfügbar wird.</span><span class="sxs-lookup"><span data-stu-id="c1e36-119">Following the call to [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593), the work item is queued by the thread pool and runs when a thread becomes available.</span></span> <span data-ttu-id="c1e36-120">Arbeitsaufgaben im Threadpool werden asynchron und in einer beliebigen Reihenfolge ausgeführt. Stellen Sie daher sicher, dass Ihre Arbeitsaufgaben über eine unabhängige Funktionsweise funktionieren.</span><span class="sxs-lookup"><span data-stu-id="c1e36-120">Thread pool work items run asynchronously and they can run in any order, so make sure your work items function independently.</span></span>
 
-Beachten Sie, dass von der Arbeitsaufgabe die [**IAsyncInfo.Status**](https://msdn.microsoft.com/library/windows/apps/BR206593)-Eigenschaft überprüft und bei einem Abbruch der Arbeitsaufgabe beendet wird.
+<span data-ttu-id="c1e36-121">Beachten Sie, dass von der Arbeitsaufgabe die [**IAsyncInfo.Status**](https://msdn.microsoft.com/library/windows/apps/BR206593)-Eigenschaft überprüft und bei einem Abbruch der Arbeitsaufgabe beendet wird.</span><span class="sxs-lookup"><span data-stu-id="c1e36-121">Note that the work item checks the [**IAsyncInfo.Status**](https://msdn.microsoft.com/library/windows/apps/BR206593) property, and exits if the work item is cancelled.</span></span>
 
-## <a name="handle-work-item-completion"></a>Behandeln der Vervollständigung der Arbeitsaufgabe
+## <a name="handle-work-item-completion"></a><span data-ttu-id="c1e36-122">Behandeln der Vervollständigung der Arbeitsaufgabe</span><span class="sxs-lookup"><span data-stu-id="c1e36-122">Handle work item completion</span></span>
 
-Stellen Sie einen Vervollständigungshandler zur Verfügung, indem Sie die [**IAsyncAction.Completed**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.completed.aspx)-Eigenschaft der Arbeitsaufgabe festlegen. Geben Sie einen Delegaten an (Sie können eine Lambda-Funktion oder Delegatfunktion nutzen), mit dem die Arbeitsaufgabe durchgeführt wird. Verwenden Sie z. B. [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317), um auf den Benutzeroberflächenthread zuzugreifen und das Ergebnis anzuzeigen.
+<span data-ttu-id="c1e36-123">Stellen Sie einen Vervollständigungshandler zur Verfügung, indem Sie die [**IAsyncAction.Completed**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.completed.aspx)-Eigenschaft der Arbeitsaufgabe festlegen.</span><span class="sxs-lookup"><span data-stu-id="c1e36-123">Provide a completion handler by setting the [**IAsyncAction.Completed**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.completed.aspx) property of the work item.</span></span> <span data-ttu-id="c1e36-124">Geben Sie einen Delegaten an (Sie können eine Lambda-Funktion oder Delegatfunktion nutzen), mit dem die Arbeitsaufgabe durchgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="c1e36-124">Supply a delegate (you can use a lambda or a delegate function) to handle work item completion.</span></span> <span data-ttu-id="c1e36-125">Verwenden Sie z.B. [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317), um auf den Benutzeroberflächenthread zuzugreifen und das Ergebnis anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="c1e36-125">For example, use [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) to access the UI thread and show the result.</span></span>
 
-Im folgenden Beispiel wird die Benutzeroberfläche mit dem Ergebnis der in Schritt 1 übermittelten Arbeitsaufgabe aktualisiert:
+<span data-ttu-id="c1e36-126">Im folgenden Beispiel wird die Benutzeroberfläche mit dem Ergebnis der in Schritt1 übermittelten Arbeitsaufgabe aktualisiert:</span><span class="sxs-lookup"><span data-stu-id="c1e36-126">The following example updates the UI with the result of the work item submitted in step 1:</span></span>
 
 > [!div class="tabbedCodeSnippets"]
 > ``` cpp
@@ -253,16 +253,15 @@ Im folgenden Beispiel wird die Benutzeroberfläche mit dem Ergebnis der in Schri
 > });
 > ```
 
-Beachten Sie, dass vom Vervollständigungshandler überprüft wird, ob die Arbeitsaufgabe abgebrochen wurde, bevor eine Aktualisierung der Benutzeroberfläche bereitgestellt wird.
+<span data-ttu-id="c1e36-127">Beachten Sie, dass vom Vervollständigungshandler überprüft wird, ob die Arbeitsaufgabe abgebrochen wurde, bevor eine Aktualisierung der Benutzeroberfläche bereitgestellt wird.</span><span class="sxs-lookup"><span data-stu-id="c1e36-127">Note that the completion handler checks whether the work item was cancelled before dispatching a UI update.</span></span>
 
-## <a name="summary-and-next-steps"></a>Zusammenfassung und nächste Schritte
+## <a name="summary-and-next-steps"></a><span data-ttu-id="c1e36-128">Zusammenfassung und nächste Schritte</span><span class="sxs-lookup"><span data-stu-id="c1e36-128">Summary and next steps</span></span>
 
-Weitere Informationen erhalten Sie durch das Herunterladen des Codes in dieser Schnellstartanleitung unter [Beispiel für das Erstellen einer Threadpool-Arbeitsaufgabe](http://go.microsoft.com/fwlink/p/?LinkID=328569) für Windows 8.1 und die erneute Verwendung des Quellcodes in einer win\_unap Windows 10-App.
+<span data-ttu-id="c1e36-129">Weitere Informationen erhalten Sie durch das Herunterladen des Codes in dieser Schnellstartanleitung unter [Beispiel für das Erstellen einer Threadpool-Arbeitsaufgabe](http://go.microsoft.com/fwlink/p/?LinkID=328569) für Windows 8.1 und die erneute Verwendung des Quellcodes in einer win\_unap Windows10-App.</span><span class="sxs-lookup"><span data-stu-id="c1e36-129">You can learn more by downloading the code from this quickstart in the [Creating a ThreadPool work item sample](http://go.microsoft.com/fwlink/p/?LinkID=328569) written for Windows 8.1, and re-using the source code in a win\_unap Windows 10 app.</span></span>
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a><span data-ttu-id="c1e36-130">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="c1e36-130">Related topics</span></span>
 
-* [Senden einer Arbeitsaufgabe an den Threadpool](submit-a-work-item-to-the-thread-pool.md)
-* [Bewährte Methoden zum Verwenden des Threadpools](best-practices-for-using-the-thread-pool.md)
-* [Senden einer Arbeitsaufgabe mithilfe eines Timers](use-a-timer-to-submit-a-work-item.md)
+* [<span data-ttu-id="c1e36-131">Senden einer Arbeitsaufgabe an den Threadpool</span><span class="sxs-lookup"><span data-stu-id="c1e36-131">Submit a work item to the thread pool</span></span>](submit-a-work-item-to-the-thread-pool.md)
+* [<span data-ttu-id="c1e36-132">Bewährte Methoden zum Verwenden des Threadpools</span><span class="sxs-lookup"><span data-stu-id="c1e36-132">Best practices for using the thread pool</span></span>](best-practices-for-using-the-thread-pool.md)
+* [<span data-ttu-id="c1e36-133">Senden einer Arbeitsaufgabe mithilfe eines Timers</span><span class="sxs-lookup"><span data-stu-id="c1e36-133">Use a timer to submit a work item</span></span>](use-a-timer-to-submit-a-work-item.md)
  
-

@@ -1,44 +1,42 @@
 ---
-author: Xansky
-description: Verwenden von Kontakten und Kalenderinformationen in Ihrer UWP-App
+author: normesta
+description: Erfahren Sie, wie Kontakte und Kalenderinformationen in Ihrer UWP-App verwendet werden.
 title: Kontakte und Kalender
 ms.assetid: b7e53ab5-2828-4fb7-8656-2bec70b3467f
-ms.author: mhopkins
+ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, Kontakte, Kalender, Termine, E-Mail-Nachrichten
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: f0e61f5c586ccd1225fb9e4edf5ab93580cfd043
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2d90823c60f9a86bcff2228763911aaf7f5049a1
+ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/08/2017
 ---
+# <a name="contacts-and-calendar"></a><span data-ttu-id="7a864-104">Kontakte und Kalender</span><span class="sxs-lookup"><span data-stu-id="7a864-104">Contacts and calendar</span></span>
 
-# <a name="contacts-and-calendar"></a>Kontakte und Kalender
+<span data-ttu-id="7a864-105">\[ Aktualisiert für UWP-Apps unter Windows10.</span><span class="sxs-lookup"><span data-stu-id="7a864-105">\[ Updated for UWP apps on Windows 10.</span></span> <span data-ttu-id="7a864-106">Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span><span class="sxs-lookup"><span data-stu-id="7a864-106">For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span></span>
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+<span data-ttu-id="7a864-107">Sie können Benutzern den Zugriff auf ihre Kontakte und Termine ermöglichen, sodass sie Inhalte, E-Mails, Kalenderinformationen oder Nachrichten mit anderen Benutzern oder beliebiger, von Ihnen entwickelter Funktionalität teilen können.</span><span class="sxs-lookup"><span data-stu-id="7a864-107">You can let your users access their contacts and appointments so they can share content, email, calendar info, or messages with each other, or whatever functionality you design.</span></span>
 
-Sie können Benutzern den Zugriff auf ihre Kontakte und Termine ermöglichen, sodass sie Inhalte, E-Mails, Kalenderinformationen oder Nachrichten mit anderen Benutzern oder beliebiger, von Ihnen entwickelter Funktionalität teilen können.
+<span data-ttu-id="7a864-108">Die folgenden Themen enthalten Informationen zu verschiedenen Verfahren, wie Ihre App auf Kontakte und Termine zugreifen kann:</span><span class="sxs-lookup"><span data-stu-id="7a864-108">To see a few different ways in which your app can access contacts and appointments, see these topics:</span></span>
 
-Die folgenden Themen enthalten Informationen zu verschiedenen Verfahren, wie Ihre App auf Kontakte und Termine zugreifen kann:
-
-| Thema | Beschreibung |
+| <span data-ttu-id="7a864-109">Thema</span><span class="sxs-lookup"><span data-stu-id="7a864-109">Topic</span></span> | <span data-ttu-id="7a864-110">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="7a864-110">Description</span></span> |
 |-------|-------------|
-| [Auswählen von Kontakten](selecting-contacts.md) | Mit dem [<strong>Windows.ApplicationModel.Contacts</strong>](https://msdn.microsoft.com/library/windows/apps/BR225002)-Namespace verfügen Sie über mehrere Optionen zum Auswählen von Kontakten. Wir zeigen Ihnen hier, wie Sie einen einzelnen Kontakt oder mehrere Kontakte auswählen und wie Sie die Kontaktauswahl so konfigurieren, dass nur die von der App benötigten Kontaktinformationen abgerufen werden. |
-| [Senden von E-Mails](sending-email.md) | Hier erfahren Sie, wie Sie das Dialogfeld zum Verfassen einer E-Mail starten, damit Benutzer eine E-Mail senden können. Sie können die Felder der E-Mail vor dem Anzeigen des Dialogfelds mit Daten füllen. Die Nachricht wird erst gesendet, wenn Benutzer auf die Schaltfläche „Senden“ tippen. |
-| [Senden einer SMS](sending-an-sms-message.md) | In diesem Thema erfahren Sie, wie Sie das Dialogfeld zum Verfassen einer SMS starten, damit Benutzer eine SMS senden können. Sie können die Felder der SMS vor dem Anzeigen des Dialogfelds mit Daten füllen. Die Nachricht wird erst gesendet, wenn Benutzer auf die Schaltfläche „Senden“ tippen. |
-| [Verwalten von Terminen](managing-appointments.md) | Mit dem [<strong>Windows.ApplicationModel.Appointments</strong>](https://msdn.microsoft.com/library/windows/apps/Dn263359)-Namespace können Sie in der Kalender-App eines Benutzers Termine erstellen und verwalten. Hier erfahren Sie, wie Sie einen Termin erstellen, einer Kalender-App hinzufügen, in der Kalender-App ersetzen und aus der Kalender-App entfernen. Außerdem wird erläutert, wie Sie eine Zeitspanne für eine Kalender-App anzeigen und ein Terminwiederholungsobjekt erstellen. |
-| [Verbinden der App mit Aktionen auf einer Visitenkarte](integrating-with-contacts.md) | Zeigt, wie Ihre App neben Aktionen auf einer Visitenkarte oder einer kleinen Visitenkarte angezeigt werden kann. Benutzer können Ihre App auswählen, um eine Aktion auszuführen, z. B. eine Profilseite zu öffnen, einen Anruf zu tätigen oder eine Nachricht zu senden. |
+| [<span data-ttu-id="7a864-111">Auswählen von Kontakten</span><span class="sxs-lookup"><span data-stu-id="7a864-111">Select contacts</span></span>](selecting-contacts.md) | <span data-ttu-id="7a864-112">Mit dem [<strong>Windows.ApplicationModel.Contacts</strong>](https://msdn.microsoft.com/library/windows/apps/BR225002)-Namespace verfügen Sie über mehrere Optionen zum Auswählen von Kontakten.</span><span class="sxs-lookup"><span data-stu-id="7a864-112">Through the [<strong>Windows.ApplicationModel.Contacts</strong>](https://msdn.microsoft.com/library/windows/apps/BR225002) namespace, you have several options for selecting contacts.</span></span> <span data-ttu-id="7a864-113">Wir zeigen Ihnen hier, wie Sie einen einzelnen Kontakt oder mehrere Kontakte auswählen und wie Sie die Kontaktauswahl so konfigurieren, dass nur die von der App benötigten Kontaktinformationen abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="7a864-113">Here, we'll show you how to select a single contact or multiple contacts, and we'll show you how to configure the contact picker to retrieve only the contact information that your app needs.</span></span> |
+| [<span data-ttu-id="7a864-114">Senden von E-Mails</span><span class="sxs-lookup"><span data-stu-id="7a864-114">Send email</span></span>](sending-email.md) | <span data-ttu-id="7a864-115">Hier erfahren Sie, wie Sie das Dialogfeld zum Verfassen einer E-Mail starten, damit Benutzer eine E-Mail senden können.</span><span class="sxs-lookup"><span data-stu-id="7a864-115">Shows how to launch the compose email dialog to allow the user to send an email message.</span></span> <span data-ttu-id="7a864-116">Sie können die Felder der E-Mail vor dem Anzeigen des Dialogfelds mit Daten füllen.</span><span class="sxs-lookup"><span data-stu-id="7a864-116">You can pre-populate the fields of the email with data before showing the dialog.</span></span> <span data-ttu-id="7a864-117">Die Nachricht wird erst gesendet, wenn Benutzer auf die Schaltfläche „Senden“ tippen.</span><span class="sxs-lookup"><span data-stu-id="7a864-117">The message will not be sent until the user taps the send button.</span></span> |
+| [<span data-ttu-id="7a864-118">Senden einer SMS</span><span class="sxs-lookup"><span data-stu-id="7a864-118">Send an SMS message</span></span>](sending-an-sms-message.md) | <span data-ttu-id="7a864-119">In diesem Thema erfahren Sie, wie Sie das Dialogfeld zum Verfassen einer SMS starten, damit Benutzer eine SMS senden können.</span><span class="sxs-lookup"><span data-stu-id="7a864-119">This topic shows you how to launch the compose SMS dialog to allow the user to send an SMS message.</span></span> <span data-ttu-id="7a864-120">Sie können die Felder der SMS vor dem Anzeigen des Dialogfelds mit Daten füllen.</span><span class="sxs-lookup"><span data-stu-id="7a864-120">You can pre-populate the fields of the SMS with data before showing the dialog.</span></span> <span data-ttu-id="7a864-121">Die Nachricht wird erst gesendet, wenn Benutzer auf die Schaltfläche „Senden“ tippen.</span><span class="sxs-lookup"><span data-stu-id="7a864-121">The message will not be sent until the user taps the send button.</span></span> |
+| [<span data-ttu-id="7a864-122">Verwalten von Terminen</span><span class="sxs-lookup"><span data-stu-id="7a864-122">Manage appointments</span></span>](managing-appointments.md) | <span data-ttu-id="7a864-123">Mit dem [<strong>Windows.ApplicationModel.Appointments</strong>](https://msdn.microsoft.com/library/windows/apps/Dn263359)-Namespace können Sie in der Kalender-App eines Benutzers Termine erstellen und verwalten.</span><span class="sxs-lookup"><span data-stu-id="7a864-123">Through the [<strong>Windows.ApplicationModel.Appointments</strong>](https://msdn.microsoft.com/library/windows/apps/Dn263359) namespace, you can create and manage appointments in a user's calendar app.</span></span> <span data-ttu-id="7a864-124">Hier erfahren Sie, wie Sie einen Termin erstellen, einer Kalender-App hinzufügen, in der Kalender-App ersetzen und aus der Kalender-App entfernen.</span><span class="sxs-lookup"><span data-stu-id="7a864-124">Here, we'll show you how to create an appointment, add it to a calendar app, replace it in the calendar app, and remove it from the calendar app.</span></span> <span data-ttu-id="7a864-125">Außerdem wird erläutert, wie Sie eine Zeitspanne für eine Kalender-App anzeigen und ein Terminwiederholungsobjekt erstellen.</span><span class="sxs-lookup"><span data-stu-id="7a864-125">We'll also show how to display a time span for a calendar app and create an appointment-recurrence object.</span></span> |
+| [<span data-ttu-id="7a864-126">Verbinden der App mit Aktionen auf einer Visitenkarte</span><span class="sxs-lookup"><span data-stu-id="7a864-126">Connect your app to actions on a contact card</span></span>](integrating-with-contacts.md) | <span data-ttu-id="7a864-127">Zeigt, wie Ihre App neben Aktionen auf einer Visitenkarte oder einer kleinen Visitenkarte angezeigt werden kann.</span><span class="sxs-lookup"><span data-stu-id="7a864-127">Shows how to make your app appear next to actions on a contact card or mini contact card.</span></span> <span data-ttu-id="7a864-128">Benutzer können Ihre App auswählen, um eine Aktion auszuführen, z.B. eine Profilseite zu öffnen, einen Anruf zu tätigen oder eine Nachricht zu senden.</span><span class="sxs-lookup"><span data-stu-id="7a864-128">Users can choose your app to perform an action such as open a profile page, place a call, or send a message.</span></span> |
 
  
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a><span data-ttu-id="7a864-129">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="7a864-129">Related topics</span></span>
 
-* [Beispiel zur Termin-API](http://go.microsoft.com/fwlink/p/?linkid=309836)
-* [Beispiel zur Kontakt-Manager-API](http://go.microsoft.com/fwlink/p/?LinkID=310079)
-* [Beispiel-App für die Kontaktauswahl](http://go.microsoft.com/fwlink/p/?linkid=231575)
-* [Beispiel zum Behandeln von Kontaktaktionen](http://go.microsoft.com/fwlink/p/?LinkID=320151)
-* [Beispiel für die Visitenkartenintegration](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCardIntegration)
-
+* [<span data-ttu-id="7a864-130">Beispiel zur Termin-API</span><span class="sxs-lookup"><span data-stu-id="7a864-130">Appointments API sample</span></span>](http://go.microsoft.com/fwlink/p/?linkid=309836)
+* [<span data-ttu-id="7a864-131">Beispiel zur Kontakt-Manager-API</span><span class="sxs-lookup"><span data-stu-id="7a864-131">Contact manager API sample</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=310079)
+* [<span data-ttu-id="7a864-132">Beispiel-App für die Kontaktauswahl</span><span class="sxs-lookup"><span data-stu-id="7a864-132">Contact Picker app sample</span></span>](http://go.microsoft.com/fwlink/p/?linkid=231575)
+* [<span data-ttu-id="7a864-133">Beispiel zum Behandeln von Kontaktaktionen</span><span class="sxs-lookup"><span data-stu-id="7a864-133">Handling Contact Actions sample</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=320151)
+* [<span data-ttu-id="7a864-134">Beispiel für die Visitenkartenintegration</span><span class="sxs-lookup"><span data-stu-id="7a864-134">Contact Card Integration Sample</span></span>](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCardIntegration)

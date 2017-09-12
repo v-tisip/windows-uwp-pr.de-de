@@ -8,96 +8,95 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Spiele, Gamepad, Vibration"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b92ddbaadd7fd09b252d5c8842ed89daf53a6982
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP, Spiele, Gamepad, Vibration
+ms.openlocfilehash: d09bfcd3dae004f07e07401f4e6ba65ac5027b32
+ms.sourcegitcommit: ae93435e1f9c010a054f55ed7d6bd2f268223957
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/10/2017
 ---
+# <a name="gamepad-and-vibration"></a><span data-ttu-id="7b3d0-104">Gamepad und Vibration</span><span class="sxs-lookup"><span data-stu-id="7b3d0-104">Gamepad and vibration</span></span>
 
-# <a name="gamepad-and-vibration"></a>Gamepad und Vibration
+<span data-ttu-id="7b3d0-105">Auf dieser Seite werden die Grundlagen der Programmierung für Xbox One-Gamepads mittels [Windows.Gaming.Input.Gamepad][gamepad] und verwandter APIs für die universelle Windows-Plattform (UWP) beschrieben.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-105">This page describes the basics of programming for Xbox One gamepads using [Windows.Gaming.Input.Gamepad][gamepad] and related APIs for the Universal Windows Platform (UWP).</span></span>
 
-Auf dieser Seite werden die Grundlagen der Programmierung für Xbox One-Gamepads mittels [Windows.Gaming.Input.Gamepad][gamepad] und verwandter APIs für die Universelle Windows-Plattform (UWP) beschrieben.
-
-Auf dieser Seite erfahren Sie:
-* Wie Sie eine Liste mit verbundenen Gamepads und deren Benutzern erstellen
-* Wie Sie ermitteln, ob ein Gamepad hinzugefügt oder entfernt wurde
-* Wie Sie Eingaben von Gamepads lesen
-* Wie Sie Vibrations- und Impulsbefehle senden
-* Wie sich Gamepads als Navigationsgerät verhalten
+<span data-ttu-id="7b3d0-106">Auf dieser Seite erfahren Sie:</span><span class="sxs-lookup"><span data-stu-id="7b3d0-106">By reading this page, you'll learn:</span></span>
+* <span data-ttu-id="7b3d0-107">Wie Sie eine Liste mit verbundenen Gamepads und deren Benutzern erstellen</span><span class="sxs-lookup"><span data-stu-id="7b3d0-107">how to gather a list of connected gamepads and their users</span></span>
+* <span data-ttu-id="7b3d0-108">Wie Sie ermitteln, ob ein Gamepad hinzugefügt oder entfernt wurde</span><span class="sxs-lookup"><span data-stu-id="7b3d0-108">how to detect that a gamepad has been added or removed</span></span>
+* <span data-ttu-id="7b3d0-109">Wie Sie Eingaben von Gamepads lesen</span><span class="sxs-lookup"><span data-stu-id="7b3d0-109">how to read input from one or more gamepads</span></span>
+* <span data-ttu-id="7b3d0-110">Wie Sie Vibrations- und Impulsbefehle senden</span><span class="sxs-lookup"><span data-stu-id="7b3d0-110">how to send vibration and impulse commands</span></span>
+* <span data-ttu-id="7b3d0-111">Wie sich Gamepads als Navigationsgerät verhalten</span><span class="sxs-lookup"><span data-stu-id="7b3d0-111">how gamepads behave as a navigation device</span></span>
 
 
-## <a name="gamepad-overview"></a>Gamepadübersicht
+## <a name="gamepad-overview"></a><span data-ttu-id="7b3d0-112">Gamepadübersicht</span><span class="sxs-lookup"><span data-stu-id="7b3d0-112">Gamepad overview</span></span>
 
-Gamepads wie der Xbox Wireless Controller und der Xbox Wireless Controller S sind allgemeine Eingabegeräte für Spiele. Sie sind die Standardeingabegeräte für Xbox One und werden auch häufig von Windows-Spielern als Alternative zur Tastatur und Maus genutzt. Gamepads werden in Windows 10- und UWP-Apps für Xbox durch den [Windows.Gaming.Input][]-Namespace unterstützt.
+<span data-ttu-id="7b3d0-113">Gamepads wie der Xbox Wireless Controller und der Xbox Wireless ControllerS sind allgemeine Eingabegeräte für Spiele.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-113">Gamepads like the Xbox Wireless Controller and Xbox Wireless Controller S are general-purpose gaming input devices.</span></span> <span data-ttu-id="7b3d0-114">Sie sind die Standardeingabegeräte für Xbox One und werden auch häufig von Windows-Spielern als Alternative zur Tastatur und Maus genutzt.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-114">They're the standard input device on Xbox One and a common choice for Windows gamers when they don't favor a keyboard and mouse.</span></span> <span data-ttu-id="7b3d0-115">Gamepads werden in Windows10- und UWP-Apps für Xbox durch den [Windows.Gaming.Input][]-Namespace unterstützt.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-115">Gamepads are supported in Windows 10 and Xbox UWP apps by the [Windows.Gaming.Input][] namespace.</span></span>
 
-Xbox One-Gamepads verfügen über ein Steuerkreuz (auch D-Pad genannt), über die Tasten **A**, **B**, **X**, **Y**, **Ansicht** und **Menü**, über einen linken und einen rechten Ministick, Bumper und Trigger sowie über insgesamt vier Vibrationsmotoren. Beide Ministicks liefern jeweils zwei analoge Werte für die X- und die Y-Achse und können auch gedrückt und somit als Taste verwendet werden. Jeder Trigger gibt mit einem analogen Wert an, wie stark er nach hinten gezogen wird.
+<span data-ttu-id="7b3d0-116">XboxOne-Gamepads verfügen über ein Steuerkreuz (auch D-Pad genannt), über die Tasten **A**, **B**, **X**, **Y**, **Ansicht** und **Menü**, über einen linken und einen rechten Ministick, Bumper und Trigger sowie über insgesamt vier Vibrationsmotoren.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-116">Xbox One gamepads are equipped with a directional pad (or D-pad); **A**, **B**, **X**, **Y**, **view**, and **menu** buttons; left and right thumbsticks, bumpers, and triggers; and a total of four vibration motors.</span></span> <span data-ttu-id="7b3d0-117">Beide Ministicks liefern jeweils zwei analoge Werte für die X- und die Y-Achse und können auch gedrückt und somit als Taste verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-117">Both thumbsticks provide dual analog readings in the X and Y axes, and also act as a button when pressed inward.</span></span> <span data-ttu-id="7b3d0-118">Jeder Trigger gibt mit einem analogen Wert an, wie stark er nach hinten gezogen wird.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-118">Each trigger provides an analog reading that represents how far its pulled back.</span></span>
 
-> **Hinweis:** Der Xbox Elite Wireless Controller verfügt auf der Unterseite über vier weitere **Paddle**-Tasten. Diese können für redundanten Zugriff auf Spielebefehle verwendet werden, die nur schwer gemeinsam verwendet werden können (beispielsweise eine Kombination aus rechtem Ministick und einer der **A**-, **B**-, **X**- oder **Y**-Tasten), oder für dedizierten Zugriff auf zusätzliche Befehle.
+> <span data-ttu-id="7b3d0-119">**Hinweis:** Der Xbox Elite Wireless Controller verfügt auf der Unterseite über vier weitere **Paddle**-Tasten.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-119">**Note**    The Xbox Elite Wireless Controller is equipped with four additional **paddle** buttons on its underside.</span></span> <span data-ttu-id="7b3d0-120">Diese können für redundanten Zugriff auf Spielebefehle verwendet werden, die nur schwer gemeinsam verwendet werden können (beispielsweise eine Kombination aus rechtem Ministick und einer der **A**-, **B**-, **X**- oder **Y**-Tasten), oder für dedizierten Zugriff auf zusätzliche Befehle.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-120">These can be used to provide redundant access to game commands that are difficult to use together (such as the right thumbstick together with any of the **A**, **B**, **X**, or **Y** buttons) or to provide dedicated access to additional commands.</span></span>
 
-> **Hinweis:** `Windows.Gaming.Input.Gamepad` unterstützt auch Xbox 360-Gamepads, die das gleiche Steuerungslayout besitzen wie standardmäßige Xbox One-Gamepads.
+> <span data-ttu-id="7b3d0-121">**Hinweis:** `Windows.Gaming.Input.Gamepad` unterstützt auch Xbox360-Gamepads, die das gleiche Steuerungslayout besitzen wie standardmäßige Xbox One-Gamepads.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-121">**Note**    `Windows.Gaming.Input.Gamepad` also supports Xbox 360 gamepads, which have the same control layout as standard Xbox One gamepads.</span></span>
 
-### <a name="vibration-and-impulse-triggers"></a>Vibration und Impulse Triggers
+### <a name="vibration-and-impulse-triggers"></a><span data-ttu-id="7b3d0-122">Vibration und Impulse Triggers</span><span class="sxs-lookup"><span data-stu-id="7b3d0-122">Vibration and impulse triggers</span></span>
 
-Xbox One-Gamepads verfügen über zwei unabhängige Motoren für starke und dezente Gamepadvibrationen sowie über zwei dedizierte Motoren für kurze intensive Vibrationen an den einzelnen Triggern. (Aufgrund dieses einzigartigen Features werden die Trigger des Xbox One-Gamepads als _Impulse Triggers_ bezeichnet.)
+<span data-ttu-id="7b3d0-123">Xbox One-Gamepads verfügen über zwei unabhängige Motoren für starke und dezente Gamepadvibrationen sowie über zwei dedizierte Motoren für kurze intensive Vibrationen an den einzelnen Triggern. (Aufgrund dieses einzigartigen Features werden die Trigger des Xbox One-Gamepads als _Impulse Triggers_ bezeichnet.)</span><span class="sxs-lookup"><span data-stu-id="7b3d0-123">Xbox One gamepads provide two independent motors for strong and subtle gamepad vibration as well as two dedicated motors for providing sharp vibration to each trigger (this unique feature is the reason that Xbox One gamepad triggers are referred to as _impulse triggers_).</span></span>
 
-> **Hinweis:** Xbox 360-Gamepads sind nicht mit _Impulse Triggers_ ausgestattet.
+> <span data-ttu-id="7b3d0-124">**Hinweis:** Xbox360-Gamepads sind nicht mit _Impulse Triggers_ ausgestattet.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-124">**Note**    Xbox 360 gamepads are not equipped with _impulse triggers_.</span></span>
 
-Weitere Informationen finden Sie in der [Übersicht über Vibration und Impulse Triggers](#vibration-and-impulse-triggers-overview).
+<span data-ttu-id="7b3d0-125">Weitere Informationen finden Sie in der [Übersicht über Vibration und Impulse Triggers](#vibration-and-impulse-triggers-overview).</span><span class="sxs-lookup"><span data-stu-id="7b3d0-125">For more information, see [Vibration and impulse triggers overview](#vibration-and-impulse-triggers-overview).</span></span>
 
-### <a name="thumbstick-deadzones"></a>Inaktive Ministick-Bereiche
+### <a name="thumbstick-deadzones"></a><span data-ttu-id="7b3d0-126">Inaktive Ministick-Bereiche</span><span class="sxs-lookup"><span data-stu-id="7b3d0-126">Thumbstick deadzones</span></span>
 
-Ein Ministick, der sich in der Mittelstellung (und damit im Ruhezustand) befindet, liefert im Idealfall immer den gleichen neutralen Wert für die X- und die Y-Achse. Aufgrund von mechanischen Kräften und der Empfindlichkeit des Ministicks handelt es sich bei den tatsächlichen Werten in der Mittelposition jedoch lediglich um (ggf. schwankende) Näherungswerte für den idealen neutralen Wert. Aus diesem Grund müssen Sie stets einen kleinen _inaktiven Bereich_ (also einen Bereich von zu ignorierenden Werten in der Nähe der idealen Mittelposition) verwenden, um herstellungsbedingte Abweichungen, mechanische Abnutzung und andere Gamepadeffekte zu kompensieren.
+<span data-ttu-id="7b3d0-127">Ein Ministick, der sich in der Mittelstellung (und damit im Ruhezustand) befindet, liefert im Idealfall immer den gleichen neutralen Wert für die X- und die Y-Achse.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-127">A thumbstick at rest in the center position would ideally produce the same, neutral reading in the X and Y axes every time.</span></span> <span data-ttu-id="7b3d0-128">Aufgrund von mechanischen Kräften und der Empfindlichkeit des Ministicks handelt es sich bei den tatsächlichen Werten in der Mittelposition jedoch lediglich um (ggf. schwankende) Näherungswerte für den idealen neutralen Wert.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-128">However, due to mechanical forces and the sensitivity of the thumbstick, actual readings in the center position only approximate the ideal neutral value and can vary between subsequent readings.</span></span> <span data-ttu-id="7b3d0-129">Aus diesem Grund müssen Sie stets einen kleinen _inaktiven Bereich_ (also einen Bereich von zu ignorierenden Werten in der Nähe der idealen Mittelposition) verwenden, um herstellungsbedingte Abweichungen, mechanische Abnutzung und andere Gamepadeffekte zu kompensieren.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-129">For this reason, you must always use a small _deadzone_--a range of values near the ideal center position that are ignored--to compensate for manufacturing differences, mechanical wear, or other gamepad issues.</span></span>
 
-Durch größere inaktive Bereiche lassen sich ganz einfach beabsichtigte Eingaben von unbeabsichtigten Eingaben unterscheiden.
+<span data-ttu-id="7b3d0-130">Durch größere inaktive Bereiche lassen sich ganz einfach beabsichtigte Eingaben von unbeabsichtigten Eingaben unterscheiden.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-130">Larger deadzones offer a simple strategy for separating intentional input from unintentional input.</span></span>
 
-Weitere Informationen finden Sie unter [Lesen der Ministicks](#reading-the-thumbsticks).
+<span data-ttu-id="7b3d0-131">Weitere Informationen finden Sie unter [Lesen der Ministicks](#reading-the-thumbsticks).</span><span class="sxs-lookup"><span data-stu-id="7b3d0-131">For more information, see [Reading the thumbsticks](#reading-the-thumbsticks).</span></span>
 
-### <a name="ui-navigation"></a>Benutzeroberflächennavigation
+### <a name="ui-navigation"></a><span data-ttu-id="7b3d0-132">Benutzeroberflächennavigation</span><span class="sxs-lookup"><span data-stu-id="7b3d0-132">UI navigation</span></span>
 
-Um den Aufwand für die Unterstützung unterschiedlicher Eingabegeräte für die Benutzeroberflächennavigation zu verringern und die Konsistenz zwischen Spielen und Geräten zu fördern, dienen die meisten _physischen_ Eingabegeräte gleichzeitig als getrennte _logische_ Eingabegeräte, die als [Benutzeroberflächen-Navigationscontroller](ui-navigation-controller.md) bezeichnet werden. Der Benutzeroberflächen-Navigationscontroller stellt über verschiedene Eingabegeräte hinweg ein gemeinsames Vokabular für Benutzeroberflächen-Navigationsbefehle bereit.
+<span data-ttu-id="7b3d0-133">Um den Aufwand für die Unterstützung unterschiedlicher Eingabegeräte für die Benutzeroberflächennavigation zu verringern und die Konsistenz zwischen Spielen und Geräten zu fördern, dienen die meisten _physischen_ Eingabegeräte gleichzeitig als getrennte _logische_ Eingabegeräte, die als [Benutzeroberflächen-Navigationscontroller](ui-navigation-controller.md) bezeichnet werden.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-133">In order to ease the burden of supporting the different input devices for user interface navigation and to encourage consistency between games and devices, most _physical_ input devices simultaneously act as a separate _logical_ input device called a [UI navigation controller](ui-navigation-controller.md).</span></span> <span data-ttu-id="7b3d0-134">Der Benutzeroberflächen-Navigationscontroller stellt über verschiedene Eingabegeräte hinweg ein gemeinsames Vokabular für Benutzeroberflächen-Navigationsbefehle bereit.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-134">The UI navigation controller provides a common vocabulary for UI navigation commands across input devices.</span></span>
 
-Als Benutzeroberflächen-Navigationscontroller ordnen Gamepads den [erforderlichen Satz](ui-navigation-controller.md#required-set) von Navigationsbefehlen dem linken Ministick und dem Steuerkreuz sowie den Tasten **Ansicht**, **Menü**, **A** und **B** zu.
+<span data-ttu-id="7b3d0-135">Als Benutzeroberflächen-Navigationscontroller ordnen Gamepads den [erforderlichen Satz](ui-navigation-controller.md#required-set) von Navigationsbefehlen dem linken Ministick und dem Steuerkreuz sowie den Tasten **Ansicht**, **Menü**, **A** und **B** zu.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-135">As a UI navigation controller, gamepads map the [required set](ui-navigation-controller.md#required-set) of navigation commands to the left thumbstick, D-pad, **view**, **menu**, **A**, and **B** buttons.</span></span>
 
-| Navigationsbefehl | Gamepadeingabe                       |
+| <span data-ttu-id="7b3d0-136">Navigationsbefehl</span><span class="sxs-lookup"><span data-stu-id="7b3d0-136">Navigation command</span></span> | <span data-ttu-id="7b3d0-137">Gamepadeingabe</span><span class="sxs-lookup"><span data-stu-id="7b3d0-137">Gamepad input</span></span>                       |
 | ------------------:| ----------------------------------- |
-|                 Nach oben | Linker Ministick nach oben/Steuerkreuz nach oben       |
-|               Nach unten | Linker Ministick nach unten/Steuerkreuz nach unten   |
-|               Nach links | Linker Ministick nach links/Steuerkreuz nach links   |
-|              Nach rechts | Linker Ministick nach rechts/Steuerkreuz nach rechts |
-|               Ansicht | Ansicht-Taste                         |
-|               Menü | Menü-Taste                         |
-|             Annehmen | A-Taste                            |
-|             Abbrechen | B-Taste                            |
+|                 <span data-ttu-id="7b3d0-138">Nach oben</span><span class="sxs-lookup"><span data-stu-id="7b3d0-138">Up</span></span> | <span data-ttu-id="7b3d0-139">Linker Ministick nach oben/Steuerkreuz nach oben</span><span class="sxs-lookup"><span data-stu-id="7b3d0-139">Left thumbstick up / D-pad up</span></span>       |
+|               <span data-ttu-id="7b3d0-140">Nach unten</span><span class="sxs-lookup"><span data-stu-id="7b3d0-140">Down</span></span> | <span data-ttu-id="7b3d0-141">Linker Ministick nach unten/Steuerkreuz nach unten</span><span class="sxs-lookup"><span data-stu-id="7b3d0-141">Left thumbstick down / D-pad down</span></span>   |
+|               <span data-ttu-id="7b3d0-142">Nach links</span><span class="sxs-lookup"><span data-stu-id="7b3d0-142">Left</span></span> | <span data-ttu-id="7b3d0-143">Linker Ministick nach links/Steuerkreuz nach links</span><span class="sxs-lookup"><span data-stu-id="7b3d0-143">Left thumbstick left / D-pad left</span></span>   |
+|              <span data-ttu-id="7b3d0-144">Nach rechts</span><span class="sxs-lookup"><span data-stu-id="7b3d0-144">Right</span></span> | <span data-ttu-id="7b3d0-145">Linker Ministick nach rechts/Steuerkreuz nach rechts</span><span class="sxs-lookup"><span data-stu-id="7b3d0-145">Left thumbstick right / D-pad right</span></span> |
+|               <span data-ttu-id="7b3d0-146">Ansicht</span><span class="sxs-lookup"><span data-stu-id="7b3d0-146">View</span></span> | <span data-ttu-id="7b3d0-147">Ansicht-Taste</span><span class="sxs-lookup"><span data-stu-id="7b3d0-147">View button</span></span>                         |
+|               <span data-ttu-id="7b3d0-148">Menü</span><span class="sxs-lookup"><span data-stu-id="7b3d0-148">Menu</span></span> | <span data-ttu-id="7b3d0-149">Menü-Taste</span><span class="sxs-lookup"><span data-stu-id="7b3d0-149">Menu button</span></span>                         |
+|             <span data-ttu-id="7b3d0-150">Annehmen</span><span class="sxs-lookup"><span data-stu-id="7b3d0-150">Accept</span></span> | <span data-ttu-id="7b3d0-151">A-Taste</span><span class="sxs-lookup"><span data-stu-id="7b3d0-151">A button</span></span>                            |
+|             <span data-ttu-id="7b3d0-152">Abbrechen</span><span class="sxs-lookup"><span data-stu-id="7b3d0-152">Cancel</span></span> | <span data-ttu-id="7b3d0-153">B-Taste</span><span class="sxs-lookup"><span data-stu-id="7b3d0-153">B button</span></span>                            |
 
-Darüber hinaus ordnen Gamepads den gesamten [optionalen Satz](ui-navigation-controller.md#optional-set) der Navigationsbefehle den restlichen Eingaben zu.
+<span data-ttu-id="7b3d0-154">Darüber hinaus ordnen Gamepads den gesamten [optionalen Satz](ui-navigation-controller.md#optional-set) der Navigationsbefehle den restlichen Eingaben zu.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-154">Additionally, gamepads map all of the [optional set](ui-navigation-controller.md#optional-set) of navigation commands to the remaining inputs.</span></span>
 
-| Navigationsbefehl | Gamepadeingabe          |
+| <span data-ttu-id="7b3d0-155">Navigationsbefehl</span><span class="sxs-lookup"><span data-stu-id="7b3d0-155">Navigation command</span></span> | <span data-ttu-id="7b3d0-156">Gamepadeingabe</span><span class="sxs-lookup"><span data-stu-id="7b3d0-156">Gamepad input</span></span>          |
 | ------------------:| ---------------------- |
-|            Seite nach oben | Linker Trigger           |
-|          Seite nach unten | Rechter Trigger          |
-|          Seite nach links | Linker Bumper            |
-|         Seite nach rechts | Rechter Bumper           |
-|          Bildlauf nach oben | Rechter Ministick nach oben    |
-|        Bildlauf nach unten | Rechter Ministick nach unten  |
-|        Bildlauf nach links | Rechter Ministick nach links  |
-|       Bildlauf nach rechts | Rechter Ministick nach rechts |
-|          Kontext 1 | X-Taste               |
-|          Kontext 2 | Y-Taste               |
-|          Kontext 3 | Linken Ministick drücken  |
-|          Kontext 4 | Rechten Ministick drücken |
+|            <span data-ttu-id="7b3d0-157">Seite nach oben</span><span class="sxs-lookup"><span data-stu-id="7b3d0-157">Page Up</span></span> | <span data-ttu-id="7b3d0-158">Linker Trigger</span><span class="sxs-lookup"><span data-stu-id="7b3d0-158">Left trigger</span></span>           |
+|          <span data-ttu-id="7b3d0-159">Seite nach unten</span><span class="sxs-lookup"><span data-stu-id="7b3d0-159">Page Down</span></span> | <span data-ttu-id="7b3d0-160">Rechter Trigger</span><span class="sxs-lookup"><span data-stu-id="7b3d0-160">Right trigger</span></span>          |
+|          <span data-ttu-id="7b3d0-161">Seite nach links</span><span class="sxs-lookup"><span data-stu-id="7b3d0-161">Page Left</span></span> | <span data-ttu-id="7b3d0-162">Linker Bumper</span><span class="sxs-lookup"><span data-stu-id="7b3d0-162">Left bumper</span></span>            |
+|         <span data-ttu-id="7b3d0-163">Seite nach rechts</span><span class="sxs-lookup"><span data-stu-id="7b3d0-163">Page Right</span></span> | <span data-ttu-id="7b3d0-164">Rechter Bumper</span><span class="sxs-lookup"><span data-stu-id="7b3d0-164">Right bumper</span></span>           |
+|          <span data-ttu-id="7b3d0-165">Bildlauf nach oben</span><span class="sxs-lookup"><span data-stu-id="7b3d0-165">Scroll Up</span></span> | <span data-ttu-id="7b3d0-166">Rechter Ministick nach oben</span><span class="sxs-lookup"><span data-stu-id="7b3d0-166">Right thumbstick up</span></span>    |
+|        <span data-ttu-id="7b3d0-167">Bildlauf nach unten</span><span class="sxs-lookup"><span data-stu-id="7b3d0-167">Scroll Down</span></span> | <span data-ttu-id="7b3d0-168">Rechter Ministick nach unten</span><span class="sxs-lookup"><span data-stu-id="7b3d0-168">Right thumbstick down</span></span>  |
+|        <span data-ttu-id="7b3d0-169">Bildlauf nach links</span><span class="sxs-lookup"><span data-stu-id="7b3d0-169">Scroll Left</span></span> | <span data-ttu-id="7b3d0-170">Rechter Ministick nach links</span><span class="sxs-lookup"><span data-stu-id="7b3d0-170">Right thumbstick left</span></span>  |
+|       <span data-ttu-id="7b3d0-171">Bildlauf nach rechts</span><span class="sxs-lookup"><span data-stu-id="7b3d0-171">Scroll Right</span></span> | <span data-ttu-id="7b3d0-172">Rechter Ministick nach rechts</span><span class="sxs-lookup"><span data-stu-id="7b3d0-172">Right thumbstick right</span></span> |
+|          <span data-ttu-id="7b3d0-173">Kontext 1</span><span class="sxs-lookup"><span data-stu-id="7b3d0-173">Context 1</span></span> | <span data-ttu-id="7b3d0-174">X-Taste</span><span class="sxs-lookup"><span data-stu-id="7b3d0-174">X Button</span></span>               |
+|          <span data-ttu-id="7b3d0-175">Kontext 2</span><span class="sxs-lookup"><span data-stu-id="7b3d0-175">Context 2</span></span> | <span data-ttu-id="7b3d0-176">Y-Taste</span><span class="sxs-lookup"><span data-stu-id="7b3d0-176">Y Button</span></span>               |
+|          <span data-ttu-id="7b3d0-177">Kontext 3</span><span class="sxs-lookup"><span data-stu-id="7b3d0-177">Context 3</span></span> | <span data-ttu-id="7b3d0-178">Linken Ministick drücken</span><span class="sxs-lookup"><span data-stu-id="7b3d0-178">Left thumbstick press</span></span>  |
+|          <span data-ttu-id="7b3d0-179">Kontext 4</span><span class="sxs-lookup"><span data-stu-id="7b3d0-179">Context 4</span></span> | <span data-ttu-id="7b3d0-180">Rechten Ministick drücken</span><span class="sxs-lookup"><span data-stu-id="7b3d0-180">Right thumbstick press</span></span> |
 
 
-## <a name="detect-and-track-gamepads"></a>Erkennen und Nachverfolgen von Gamepads
+## <a name="detect-and-track-gamepads"></a><span data-ttu-id="7b3d0-181">Erkennen und Nachverfolgen von Gamepads</span><span class="sxs-lookup"><span data-stu-id="7b3d0-181">Detect and track gamepads</span></span>
 
-Gamepads werden vom System verwaltet. Daher müssen Sie diese nicht erstellen oder initialisieren. Das System stellt eine Liste mit verbundenen Gamepads sowie Ereignisse bereit, um Sie zu benachrichtigen, wenn ein Gamepad hinzugefügt oder entfernt wird.
+<span data-ttu-id="7b3d0-182">Gamepads werden vom System verwaltet. Daher müssen Sie diese nicht erstellen oder initialisieren.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-182">Gamepads are managed by the system, therefore you don't have to create or initialize them.</span></span> <span data-ttu-id="7b3d0-183">Das System stellt eine Liste mit verbundenen Gamepads sowie Ereignisse bereit, um Sie zu benachrichtigen, wenn ein Gamepad hinzugefügt oder entfernt wird.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-183">The system provides a list of connected gamepads and events to notify you when a gamepad is added or removed.</span></span>
 
-### <a name="the-gamepads-list"></a>Die Gamepadliste
+### <a name="the-gamepads-list"></a><span data-ttu-id="7b3d0-184">Die Gamepadliste</span><span class="sxs-lookup"><span data-stu-id="7b3d0-184">The gamepads list</span></span>
 
-Die [Gamepad][]-Klasse stellt die statische Eigenschaft [Gamepads][] bereit. Hierbei handelt es sich um eine schreibgeschützte Liste mit derzeit verbundenen Gamepads. Da Sie möglicherweise nur an einigen der verbundenen Gamepads interessiert sind, empfiehlt es sich, eine eigene Sammlung zu verwalten, statt über die Eigenschaft `Gamepads` auf diese zuzugreifen.
+<span data-ttu-id="7b3d0-185">Die [Gamepad][]-Klasse stellt die statische Eigenschaft [Gamepads][] bereit. Hierbei handelt es sich um eine schreibgeschützte Liste mit derzeit verbundenen Gamepads.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-185">The [Gamepad][] class provides a static property, [Gamepads][], which is a read-only list of gamepads that are currently connected.</span></span> <span data-ttu-id="7b3d0-186">Da Sie möglicherweise nur an einigen der verbundenen Gamepads interessiert sind, empfiehlt es sich, eine eigene Sammlung zu verwalten, statt über die Eigenschaft `Gamepads` auf diese zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-186">Because you might only be interested in some of the connected gamepads, its recommended that you maintain your own collection instead of accessing them through the `Gamepads` property.</span></span>
 
-Im folgenden Beispiel werden alle verbundenen Gamepads in eine neue Sammlung kopiert.
+<span data-ttu-id="7b3d0-187">Im folgenden Beispiel werden alle verbundenen Gamepads in eine neue Sammlung kopiert.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-187">The following example copies all connected gamepads into a new collection.</span></span>
 
 ```cpp
 auto myGamepads = ref new Vector<Gamepad^>();
@@ -109,11 +108,11 @@ for (auto gamepad : Gamepad::Gamepads)
 }
 ```
 
-### <a name="adding-and-removing-gamepads"></a>Hinzufügen und Entfernen von Gamepads
+### <a name="adding-and-removing-gamepads"></a><span data-ttu-id="7b3d0-188">Hinzufügen und Entfernen von Gamepads</span><span class="sxs-lookup"><span data-stu-id="7b3d0-188">Adding and removing gamepads</span></span>
 
-Wenn ein Gamepad hinzugefügt oder entfernt wird, wird das Ereignis [GamepadAdded][] bzw. [GamepadRemoved][] ausgelöst. Sie können Handler für diese Ereignisse registrieren, um die derzeit verbundenen Gamepads nachzuverfolgen.
+<span data-ttu-id="7b3d0-189">Wenn ein Gamepad hinzugefügt oder entfernt wird, wird das Ereignis [GamepadAdded][] bzw. [GamepadRemoved][] ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-189">When a gamepad is added or removed the [GamepadAdded][] and [GamepadRemoved][] events are raised.</span></span> <span data-ttu-id="7b3d0-190">Sie können Handler für diese Ereignisse registrieren, um die derzeit verbundenen Gamepads nachzuverfolgen.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-190">You can register handlers for these events to keep track of the gamepads that are currently connected.</span></span>
 
-Im folgenden Beispiel wird mit der Nachverfolgung eines hinzugefügten Gamepads begonnen.
+<span data-ttu-id="7b3d0-191">Im folgenden Beispiel wird mit der Nachverfolgung eines hinzugefügten Gamepads begonnen.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-191">The following example starts tracking a gamepad that's been added.</span></span>
 
 ```cpp
 Gamepad::GamepadAdded += ref new EventHandler<Gamepad^>(Platform::Object^, Gamepad^ args)
@@ -123,7 +122,7 @@ Gamepad::GamepadAdded += ref new EventHandler<Gamepad^>(Platform::Object^, Gamep
 }
 ```
 
-Im folgenden Beispiel wird die Nachverfolgung eines entfernen Arcade-Joysticks beendet.
+<span data-ttu-id="7b3d0-192">Im folgenden Beispiel wird die Nachverfolgung eines entfernen Arcade-Joysticks beendet.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-192">The following example stops tracking an arcade stick that's been removed.</span></span>
 
 ```cpp
 Gamepad::GamepadRemoved += ref new EventHandler<Gamepad^>(Platform::Object^, Gamepad^ args)
@@ -137,21 +136,21 @@ Gamepad::GamepadRemoved += ref new EventHandler<Gamepad^>(Platform::Object^, Gam
 }
 ```
 
-### <a name="users-and-headsets"></a>Benutzer und Headsets
+### <a name="users-and-headsets"></a><span data-ttu-id="7b3d0-193">Benutzer und Headsets</span><span class="sxs-lookup"><span data-stu-id="7b3d0-193">Users and headsets</span></span>
 
-Jedes Gamepad kann mit einem Benutzerkonto verknüpft werden, um die Identität des Benutzers mit dem Spiel zu verknüpfen, und mit einem Headset verbunden werden, um Sprachchats oder Features im Spiel zu unterstützen. Weitere Informationen zu Benutzern und Headsets finden Sie unter [Nachverfolgen von Benutzern und ihren Geräten](input-practices-for-games.md#tracking-users-and-their-devices) sowie unter [Headsets](headset.md).
+<span data-ttu-id="7b3d0-194">Jedes Gamepad kann mit einem Benutzerkonto verknüpft werden, um die Identität des Benutzers mit dem Spiel zu verknüpfen, und mit einem Headset verbunden werden, um Sprachchats oder Features im Spiel zu unterstützen.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-194">Each gamepad can be associated with a user account to link their identity to their gameplay, and can have a headset attached to facilitate voice chat or in-game features.</span></span> <span data-ttu-id="7b3d0-195">Weitere Informationen zu Benutzern und Headsets finden Sie unter [Nachverfolgen von Benutzern und ihren Geräten](input-practices-for-games.md#tracking-users-and-their-devices) sowie unter [Headsets](headset.md).</span><span class="sxs-lookup"><span data-stu-id="7b3d0-195">To learn more about working with users and headsets, see [Tracking users and their devices](input-practices-for-games.md#tracking-users-and-their-devices) and [Headset](headset.md).</span></span>
 
-## <a name="reading-the-gamepad"></a>Lesen des Gamepads
+## <a name="reading-the-gamepad"></a><span data-ttu-id="7b3d0-196">Lesen des Gamepads</span><span class="sxs-lookup"><span data-stu-id="7b3d0-196">Reading the gamepad</span></span>
 
-Nachdem Sie das Gamepad identifiziert haben, für das Sie sich interessieren, können Sie Eingaben davon erfassen. Anders als im Fall anderer Eingaben, die Sie möglicherweise kennen, teilen Gamepads Zustandsänderungen jedoch nicht durch das Auslösen von Ereignissen mit. Stattdessen müssen Sie regelmäßig ihren aktuellen Zustand lesen, indem Sie sie _abfragen_.
+<span data-ttu-id="7b3d0-197">Nachdem Sie das Gamepad identifiziert haben, für das Sie sich interessieren, können Sie Eingaben davon erfassen.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-197">After you identify the gamepad that you're interested in, you're ready to gather input from it.</span></span> <span data-ttu-id="7b3d0-198">Anders als im Fall anderer Eingaben, die Sie möglicherweise kennen, teilen Gamepads Zustandsänderungen jedoch nicht durch das Auslösen von Ereignissen mit.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-198">However, unlike some other kinds of input that you might be used to, gamepads don't communicate state-change by raising events.</span></span> <span data-ttu-id="7b3d0-199">Stattdessen müssen Sie regelmäßig ihren aktuellen Zustand lesen, indem Sie sie _abfragen_.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-199">Instead, you take regular readings of their current state by _polling_ them.</span></span>
 
-### <a name="polling-the-gamepad"></a>Abfragen des Gamepads
+### <a name="polling-the-gamepad"></a><span data-ttu-id="7b3d0-200">Abfragen des Gamepads</span><span class="sxs-lookup"><span data-stu-id="7b3d0-200">Polling the gamepad</span></span>
 
-Beim Abfragen wird eine Momentaufnahme des Navigationsgeräts zu einem bestimmten Zeitpunkt erfasst. Dieser Ansatz zum Erfassen von Eingaben ist für die meisten Spiele geeignet, da deren Logik üblicherweise in einer deterministischen Schleife ausgeführt wird und nicht ereignisgesteuert ist. Es ist in der Regel auch einfacher, Befehle in Spielen anhand von Eingaben zu interpretieren, die alle gemeinsam erfasst werden, als anhand zahlreicher Eingaben, die im Laufe der Zeit erfasst werden.
+<span data-ttu-id="7b3d0-201">Beim Abfragen wird eine Momentaufnahme des Navigationsgeräts zu einem bestimmten Zeitpunkt erfasst.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-201">Polling captures a snapshot of the navigation device at a precise point in time.</span></span> <span data-ttu-id="7b3d0-202">Dieser Ansatz zum Erfassen von Eingaben ist für die meisten Spiele geeignet, da deren Logik üblicherweise in einer deterministischen Schleife ausgeführt wird und nicht ereignisgesteuert ist. Es ist in der Regel auch einfacher, Befehle in Spielen anhand von Eingaben zu interpretieren, die alle gemeinsam erfasst werden, als anhand zahlreicher Eingaben, die im Laufe der Zeit erfasst werden.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-202">This approach to input gathering is a good fit for most games because their logic typically runs in a deterministic loop rather than being event-driven; its also typically simpler to interpret game commands from input gathered all at once than it is from many single inputs gathered over time.</span></span>
 
-Gamepads werden durch Aufrufen von [GetCurrentReading][] abgefragt. Diese Funktion gibt einen [GamepadReading][]-Wert mit dem Zustand des Gamepads zurück.
+<span data-ttu-id="7b3d0-203">Gamepads werden durch Aufrufen von [GetCurrentReading][] abgefragt. Diese Funktion gibt einen [GamepadReading][]-Wert mit dem Zustand des Gamepads zurück.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-203">You poll a gamepad by calling [GetCurrentReading][]; this function returns a [GamepadReading][] that contains the state of the gamepad.</span></span>
 
-Im folgenden Beispiel wird der aktuelle Zustand eines Gamepads abgefragt.
+<span data-ttu-id="7b3d0-204">Im folgenden Beispiel wird der aktuelle Zustand eines Gamepads abgefragt.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-204">The following example polls a gamepad for its current state.</span></span>
 
 ```cpp
 auto gamepad = myGamepads[0];
@@ -159,13 +158,13 @@ auto gamepad = myGamepads[0];
 GamepadReading reading = gamepad->GetCurrentReading();
 ```
 
-Zusätzlich zum Zustand des Gamepads enthält jeder Wert einen Zeitstempel, der den genauen Zeitpunkt angibt, zu dem der Zustand abgerufen wurde. Der Zeitstempel ist nützlich, um einen Bezug zu den Zeitpunkten vorheriger Werte oder zum Zeitpunkt der Spielsimulation herzustellen.
+<span data-ttu-id="7b3d0-205">Zusätzlich zum Zustand des Gamepads enthält jeder Wert einen Zeitstempel, der den genauen Zeitpunkt angibt, zu dem der Zustand abgerufen wurde.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-205">In addition to the gamepad state, each reading includes a timestamp that indicates precisely when the state was retrieved.</span></span> <span data-ttu-id="7b3d0-206">Der Zeitstempel ist nützlich, um einen Bezug zu den Zeitpunkten vorheriger Werte oder zum Zeitpunkt der Spielsimulation herzustellen.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-206">The timestamp is useful for relating to the timing of previous readings or to the timing of the game simulation.</span></span>
 
-### <a name="reading-the-thumbsticks"></a>Lesen der Ministicks
+### <a name="reading-the-thumbsticks"></a><span data-ttu-id="7b3d0-207">Lesen der Ministicks</span><span class="sxs-lookup"><span data-stu-id="7b3d0-207">Reading the thumbsticks</span></span>
 
-Jeder Ministick liefert einen analogen Wert zwischen -1,0 und +1,0 auf der X- und der Y-Achse. Auf der X-Achse entspricht der Wert -1,0 der äußerst linken Ministickposition und der Wert +1,0 der äußerst rechten Position. Auf der Y-Achse entspricht der Wert -1,0 der niedrigsten Ministickposition und der Wert +1,0 der höchsten Position. Auf beiden Achsen ist der Wert annähernd 0,0, wenn sich der Stick in der Mittelposition befindet, der genaue Wert kann jedoch variieren (auch zwischen nachfolgend erfassten Werten). Das ist normal. Informationen zur Kompensierung dieser Abweichungen finden Sie weiter unten in diesem Abschnitt.
+<span data-ttu-id="7b3d0-208">Jeder Ministick liefert einen analogen Wert zwischen -1,0 und +1,0 auf der X- und der Y-Achse.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-208">Each thumbstick provides an analog reading between -1.0 and +1.0 in the X and Y axes.</span></span> <span data-ttu-id="7b3d0-209">Auf der X-Achse entspricht der Wert -1,0 der äußerst linken Ministickposition und der Wert +1,0 der äußerst rechten Position.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-209">In the X axis, a value of -1.0 corresponds to the left-most thumbstick position; a value of +1.0 corresponds to right-most position.</span></span> <span data-ttu-id="7b3d0-210">Auf der Y-Achse entspricht der Wert -1,0 der niedrigsten Ministickposition und der Wert +1,0 der höchsten Position.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-210">In the Y axis, a value of -1.0 corresponds to the bottom-most thumbstick position; a value of +1.0 corresponds to the top-most position.</span></span> <span data-ttu-id="7b3d0-211">Auf beiden Achsen ist der Wert annähernd 0,0, wenn sich der Stick in der Mittelposition befindet, der genaue Wert kann jedoch variieren (auch zwischen nachfolgend erfassten Werten). Das ist normal. Informationen zur Kompensierung dieser Abweichungen finden Sie weiter unten in diesem Abschnitt.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-211">In both axes, the value is approximately 0.0 when the stick is in the center position, but its normal for the precise value to vary, even between subsequent readings; strategies for mitigating this variation are discussed later in this section.</span></span>
 
-Der X-Achsenwert des linken Ministicks wird aus der `LeftThumbstickX`-Eigenschaft der [GamepadReading][]-Struktur gelesen. Der Y-Achsenwert stammt aus der `LeftThumbstickY`-Eigenschaft. Der X-Achsenwert des rechten Ministicks wird aus der `RightThumbstickX`-Eigenschaft gelesen. Der Y-Achsenwert stammt aus der `RightThumbstickY`-Eigenschaft.
+<span data-ttu-id="7b3d0-212">Der X-Achsenwert des linken Ministicks wird aus der `LeftThumbstickX`-Eigenschaft der [GamepadReading][]-Struktur gelesen. Der Y-Achsenwert stammt aus der `LeftThumbstickY`-Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-212">The value of the left thumbstick's X axis is read from the `LeftThumbstickX` property of the [GamepadReading][] structure; the value of the Y axis is read from the `LeftThumbstickY` property.</span></span> <span data-ttu-id="7b3d0-213">Der X-Achsenwert des rechten Ministicks wird aus der `RightThumbstickX`-Eigenschaft gelesen. Der Y-Achsenwert stammt aus der `RightThumbstickY`-Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-213">The value of the right thumbstick's X axis is read from the `RightThumbstickX` property; the value of the Y axis is read from the `RightThumbstickY` property.</span></span>
 
 ```cpp
 float leftStickX = reading.LeftThumbstickX;   // returns a value between -1.0 and +1.0
@@ -174,9 +173,9 @@ float rightStickX = reading.RightThumbstickX; // returns a value between -1.0 an
 float rightStickY = reading.RightThumbstickY; // returns a value between -1.0 and +1.0
 ```
 
-Sie werden feststellen, dass die gelesenen Ministickwerte nicht zuverlässig einen neutralen 0,0-Wert liefern, wenn sich der Ministick in der Mittelstellung (und damit im Ruhezustand) befindet. Stattdessen erhalten Sie verschiedene Näherungswerte für 0,0, wann immer der Ministicks bewegt wurde und wieder in die Mittelstellung zurückkehrt. Zur Kompensierung dieser Abweichungen können Sie einen kleinen _inaktiven Bereich_ implementieren (also einen zu ignorierenden Wertebereich nahe der idealen Mittelposition). Zur Implementierung eines inaktiven Bereichs können Sie beispielsweise ermitteln, wie weit sich der Ministick von der Mittelposition entfernt hat, und dabei die Werte ignorieren, die eine bestimmte, von Ihnen gewählte Entfernung unterschreiten. Die grobe Entfernung kann mit dem Satz des Pythagoras berechnet werden. (Die Berechnung ist nicht exakt, da die Ministickwerte im Grunde polarer und nicht planarer Natur sind.) Dadurch entsteht ein radialer inaktiver Bereich.
+<span data-ttu-id="7b3d0-214">Sie werden feststellen, dass die gelesenen Ministickwerte nicht zuverlässig einen neutralen 0,0-Wert liefern, wenn sich der Ministick in der Mittelstellung (und damit im Ruhezustand) befindet. Stattdessen erhalten Sie verschiedene Näherungswerte für 0,0, wann immer der Ministicks bewegt wurde und wieder in die Mittelstellung zurückkehrt.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-214">When reading the thumbstick values, you'll notice that they don't reliably produce a neutral reading of 0.0 when the thumbstick is at rest in the center position; instead, they'll produce different values near 0.0 each time the thumbstick is moved and returned to the center position.</span></span> <span data-ttu-id="7b3d0-215">Zur Kompensierung dieser Abweichungen können Sie einen kleinen _inaktiven Bereich_ implementieren (also einen zu ignorierenden Wertebereich nahe der idealen Mittelposition).</span><span class="sxs-lookup"><span data-stu-id="7b3d0-215">To mitigate these variations, you can implement a small _deadzone_, which is a range of values near the ideal center position that are ignored.</span></span> <span data-ttu-id="7b3d0-216">Zur Implementierung eines inaktiven Bereichs können Sie beispielsweise ermitteln, wie weit sich der Ministick von der Mittelposition entfernt hat, und dabei die Werte ignorieren, die eine bestimmte, von Ihnen gewählte Entfernung unterschreiten.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-216">One way to implement a deadzone is to determine how far from center the thumbstick has moved, and ignoring the readings that are nearer than some distance you choose.</span></span> <span data-ttu-id="7b3d0-217">Die grobe Entfernung kann mit dem Satz des Pythagoras berechnet werden. (Die Berechnung ist nicht exakt, da die Ministickwerte im Grunde polarer und nicht planarer Natur sind.)</span><span class="sxs-lookup"><span data-stu-id="7b3d0-217">You can compute the distance roughly--its not exact because thumbstick readings are essentially polar, not planar, values--just by using the Pythagorean theorem.</span></span> <span data-ttu-id="7b3d0-218">Dadurch entsteht ein radialer inaktiver Bereich.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-218">This produces a radial deadzone.</span></span>
 
-Das folgende Beispiel veranschaulicht einen einfachen radialen inaktiven Bereich unter Verwendung des Satzes des Pythagoras.
+<span data-ttu-id="7b3d0-219">Das folgende Beispiel veranschaulicht einen einfachen radialen inaktiven Bereich unter Verwendung des Satzes des Pythagoras.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-219">The following example demonstrates a basic radial deadzone using the Pythagorean theorem.</span></span>
 
 ```cpp
 float leftStickX = reading.LeftThumbstickX;   // returns a value between -1.0 and +1.0
@@ -191,32 +190,32 @@ auto oppositeSquared = leftStickY * leftStickY;
 auto adjacentSquared = leftStickX * leftStickX;
 
 // accept and process input if true; otherwise, reject and ignore it.
-if((oppositeSquared + adjacentSquared) < deadzoneSquared)
+if((oppositeSquared + adjacentSquared) > deadzoneSquared)
 {
     // input accepted, process it
 }
 ```
 
-Jeder Ministick kann auch gedrückt werden und somit als Taste fungieren. Weitere Informationen zum Lesen dieser Eingabe finden Sie unter [Lesen der Tasten](#reading-the-buttons).
+<span data-ttu-id="7b3d0-220">Jeder Ministick kann auch gedrückt werden und somit als Taste fungieren. Weitere Informationen zum Lesen dieser Eingabe finden Sie unter [Lesen der Tasten](#reading-the-buttons).</span><span class="sxs-lookup"><span data-stu-id="7b3d0-220">Each thumbstick also acts as a button when pressed inward; for more information on reading this input, see [Reading the buttons](#reading-the-buttons).</span></span>
 
-### <a name="reading-the-triggers"></a>Lesen der Trigger
+### <a name="reading-the-triggers"></a><span data-ttu-id="7b3d0-221">Lesen der Trigger</span><span class="sxs-lookup"><span data-stu-id="7b3d0-221">Reading the triggers</span></span>
 
-Die Trigger werden als Gleitkommawerte zwischen 0,0 (vollständig losgelassen) und 1,0 (vollständig gedrückt) dargestellt. Der Wert des linken Triggers wird aus der `LeftTrigger`-Eigenschaft der [GamepadReading][]-Struktur gelesen. Der Wert des rechten Triggers stammt aus der `RightTrigger`-Eigenschaft.
+<span data-ttu-id="7b3d0-222">Die Trigger werden als Gleitkommawerte zwischen 0,0 (vollständig losgelassen) und 1,0 (vollständig gedrückt) dargestellt.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-222">The triggers are represented as floating-point values between 0.0 (fully released) and 1.0 (fully depressed).</span></span> <span data-ttu-id="7b3d0-223">Der Wert des linken Triggers wird aus der `LeftTrigger`-Eigenschaft der [GamepadReading][]-Struktur gelesen. Der Wert des rechten Triggers stammt aus der `RightTrigger`-Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-223">The value of the left trigger is read from the `LeftTrigger` property of the [GamepadReading][] structure; the value of the right trigger is read from the `RightTrigger` property.</span></span>
 
 ```cpp
 float leftTrigger  = reading.LeftTrigger;  // returns a value between 0.0 and 1.0
 float rightTrigger = reading.RightTrigger; // returns a value between 0.0 and 1.0
 ```
 
-### <a name="reading-the-buttons"></a>Lesen der Tasten
+### <a name="reading-the-buttons"></a><span data-ttu-id="7b3d0-224">Lesen der Tasten</span><span class="sxs-lookup"><span data-stu-id="7b3d0-224">Reading the buttons</span></span>
 
-Jede der Gamepadtasten (die vier Richtungen des Steuerkreuzes, der linke und rechte Bumper, der linke und rechte (gedrückte) Ministick sowie die Tasten **A**, **B**, **X**, **Y**, **Ansicht** und **Menü**) liefern einen digitalen Wert, der angibt, ob die Taste gedrückt (unten) oder nicht gedrückt (oben) ist. Aus Effizienzgründen werden die Werte der Tasten nicht als einzelne boolesche Werte dargestellt, sondern in einem einzelnen Bitfeld zusammengefasst, das durch die Enumeration [GamepadButtons][] dargestellt wird.
+<span data-ttu-id="7b3d0-225">Jede der Gamepadtasten (die vier Richtungen des Steuerkreuzes, der linke und rechte Bumper, der linke und rechte (gedrückte) Ministick sowie die Tasten **A**, **B**, **X**, **Y**, **Ansicht** und **Menü**) liefern einen digitalen Wert, der angibt, ob die Taste gedrückt (unten) oder nicht gedrückt (oben) ist.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-225">Each of the gamepad buttons--the four directions of the D-pad, left and right bumpers, left and right thumbstick press, **A**, **B**, **X**, **Y**, **view**, and **menu**--provide a digital reading that indicate whether its pressed (down), or released (up).</span></span> <span data-ttu-id="7b3d0-226">Aus Effizienzgründen werden die Werte der Tasten nicht als einzelne boolesche Werte dargestellt, sondern in einem einzelnen Bitfeld zusammengefasst, das durch die Enumeration [GamepadButtons][] dargestellt wird.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-226">For efficiency, button readings aren't represented as individual boolean values; instead they're all packed into a single bitfield that's represented by the [GamepadButtons][] enumeration.</span></span>
 
-> **Hinweis:** Der Xbox Elite Wireless Controller verfügt auf der Unterseite über vier weitere **Paddle**-Tasten. Diese Tasten werden ebenfalls in der `GamepadButtons`-Enumeration dargestellt, und ihre Werte werden auf die gleiche Weise gelesen wie die Werte der standardmäßigen Gamepadtasten.
+> <span data-ttu-id="7b3d0-227">**Hinweis:** Der Xbox Elite Wireless Controller verfügt auf der Unterseite über vier weitere **Paddle**-Tasten.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-227">**Note**    The Xbox Elite Wireless Controller is equipped with four additional **paddle** buttons on its underside.</span></span> <span data-ttu-id="7b3d0-228">Diese Tasten werden ebenfalls in der `GamepadButtons`-Enumeration dargestellt, und ihre Werte werden auf die gleiche Weise gelesen wie die Werte der standardmäßigen Gamepadtasten.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-228">These buttons are also represented in the `GamepadButtons` enumeration and their values are read in the same way as the standard gamepad buttons.</span></span>
 
-Die Tastenwerte werden aus der `Buttons`-Eigenschaft der [GamepadReading][]-Struktur gelesen. Da diese Eigenschaft ein Bitfeld ist, wird eine bitweise Maskierung verwendet, um den Wert der Taste zu isolieren, an der Sie interessiert sind. Die Taste ist gedrückt (unten), wenn das entsprechende Bit festgelegt ist. Andernfalls ist sie nicht gedrückt (oben).
+<span data-ttu-id="7b3d0-229">Die Tastenwerte werden aus der `Buttons`-Eigenschaft der [GamepadReading][]-Struktur gelesen.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-229">The button values are read from the `Buttons` property of the [GamepadReading][] structure.</span></span> <span data-ttu-id="7b3d0-230">Da diese Eigenschaft ein Bitfeld ist, wird eine bitweise Maskierung verwendet, um den Wert der Taste zu isolieren, an der Sie interessiert sind.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-230">Because this property is a bitfield, bitwise masking is used to isolate the value of the button that you're interested in.</span></span> <span data-ttu-id="7b3d0-231">Die Taste ist gedrückt (unten), wenn das entsprechende Bit festgelegt ist. Andernfalls ist sie nicht gedrückt (oben).</span><span class="sxs-lookup"><span data-stu-id="7b3d0-231">The button is pressed (down) when the corresponding bit is set; otherwise its released (up).</span></span>
 
-Im folgenden Beispiel wird ermittelt, ob die A-Taste gedrückt ist.
+<span data-ttu-id="7b3d0-232">Im folgenden Beispiel wird ermittelt, ob die A-Taste gedrückt ist.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-232">The following example determines whether the A button is pressed.</span></span>
 
 ```cpp
 if (GamepadButtons::A == (reading.Buttons & GamepadButtons::A))
@@ -225,7 +224,7 @@ if (GamepadButtons::A == (reading.Buttons & GamepadButtons::A))
 }
 ```
 
-Im folgenden Beispiel wird ermittelt, ob die A-Taste losgelassen wurde.
+<span data-ttu-id="7b3d0-233">Im folgenden Beispiel wird ermittelt, ob die A-Taste losgelassen wurde.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-233">The following example determines whether the A button is released.</span></span>
 
 ```cpp
 if (GamepadButtons::None == (reading.Buttons & GamepadButtons::A))
@@ -234,27 +233,27 @@ if (GamepadButtons::None == (reading.Buttons & GamepadButtons::A))
 }
 ```
 
-In einigen Fällen möchten Sie möglicherweise ermitteln, ob eine Taste von „Gedrückt“ zu „Losgelassen“ oder von „Losgelassen“ zu „Gedrückt“ wechselt, ob mehrere Tasten gedrückt oder losgelassen werden oder ob verschiedene Tasten in einer bestimmten Weise angeordnet sind – einige gedrückt, andere nicht. Informationen zum Ermitteln dieser Bedingungen finden Sie unter [Erkennen von Tastenübergängen](input-practices-for-games.md#detecting-button-transitions) sowie unter [Erkennen von komplexen Tastenanordnungen](input-practices-for-games.md#detecting-complex-button-arrangements).
+<span data-ttu-id="7b3d0-234">In einigen Fällen möchten Sie möglicherweise ermitteln, ob eine Taste von „Gedrückt“ zu „Losgelassen“ oder von „Losgelassen“ zu „Gedrückt“ wechselt, ob mehrere Tasten gedrückt oder losgelassen werden oder ob verschiedene Tasten in einer bestimmten Weise angeordnet sind – einige gedrückt, andere nicht.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-234">Sometimes you might want to determine when a button transitions from pressed to released or released to pressed, whether multiple buttons are pressed or released, or if a set of buttons are arranged in a particular way--some pressed, some not.</span></span> <span data-ttu-id="7b3d0-235">Informationen zum Ermitteln dieser Bedingungen finden Sie unter [Erkennen von Tastenübergängen](input-practices-for-games.md#detecting-button-transitions) sowie unter [Erkennen von komplexen Tastenanordnungen](input-practices-for-games.md#detecting-complex-button-arrangements).</span><span class="sxs-lookup"><span data-stu-id="7b3d0-235">For information on how to detect each of these conditions, see [Detecting button transitions](input-practices-for-games.md#detecting-button-transitions) and [Detecting complex button arrangements](input-practices-for-games.md#detecting-complex-button-arrangements).</span></span>
 
-## <a name="run-the-gamepad-input-sample"></a>Ausführen des Gamepad-Eingabebeispiels
+## <a name="run-the-gamepad-input-sample"></a><span data-ttu-id="7b3d0-236">Ausführen des Gamepad-Eingabebeispiels</span><span class="sxs-lookup"><span data-stu-id="7b3d0-236">Run the gamepad input sample</span></span>
 
-Im [GamepadUWP-Beispiel _(GitHub)_](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/Samples/System/GamepadUWP) wird veranschaulicht, wie Sie eine Verbindung mit einem Gamepad herstellen und dessen Zustand lesen.
-
-
-## <a name="vibration-and-impulse-triggers-overview"></a>Übersicht über Vibration und Impulse Triggers
-
-Die Vibrationsmotoren in einem Gamepad erzeugen fühlbares Feedback für den Benutzer. Dies wird in Spielen verwendet, um die Immersion zu verbessern, Statusinformationen (wie etwa eine Beschädigung) zu vermitteln, auf wichtige, in der Nähe befindliche Objekte hinzuweisen oder für andere kreative Zwecke.
-
-Xbox One-Gamepads sind mit insgesamt vier unabhängigen Vibrationsmotoren ausgestattet. Zwei dieser Motoren sind groß und befinden sich im Gehäuse des Gamepads. Der linke Motor erzeugt starke, intensive Vibrationen, während der rechte Motor für sanftere, dezentere Vibrationen zuständig ist. Die anderen beiden Motoren sind klein, befinden sich in den Triggern und erzeugen kurze, intensive Vibrationen direkt an den Triggerfingern des Benutzers. Aufgrund dieses einzigartigen Features des Xbox One-Gamepads werden die Trigger dieses Gamepads als _Impulse Triggers_ bezeichnet. Gemeinsam lässt sich mithilfe dieser Motoren eine Vielzahl von Tastempfindungen erzeugen.
+<span data-ttu-id="7b3d0-237">Im [GamepadUWP-Beispiel _(GitHub)_](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/Samples/System/GamepadUWP) wird veranschaulicht, wie Sie eine Verbindung mit einem Gamepad herstellen und dessen Zustand lesen.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-237">The [GamepadUWP sample _(github)_](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/Samples/System/GamepadUWP) demonstrates how to connect to a gamepad and read its state.</span></span>
 
 
-## <a name="using-vibration-and-impulse"></a>Verwenden von Vibrationen und Impulsen
+## <a name="vibration-and-impulse-triggers-overview"></a><span data-ttu-id="7b3d0-238">Übersicht über Vibration und Impulse Triggers</span><span class="sxs-lookup"><span data-stu-id="7b3d0-238">Vibration and impulse triggers overview</span></span>
 
-Gamepadvibrationen werden über die [Vibration][]-Eigenschaft der [Gamepad][]-Klasse gesteuert. `Vibration` ist eine Instanz der [GamepadVibration][]-Struktur, die sich aus vier Gleitkommawerten zusammensetzt, welche jeweils für die Intensität eines der Motoren stehen.
+<span data-ttu-id="7b3d0-239">Die Vibrationsmotoren in einem Gamepad erzeugen fühlbares Feedback für den Benutzer.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-239">The vibration motors inside a gamepad are for providing tactile feedback to the user.</span></span> <span data-ttu-id="7b3d0-240">Dies wird in Spielen verwendet, um die Immersion zu verbessern, Statusinformationen (wie etwa eine Beschädigung) zu vermitteln, auf wichtige, in der Nähe befindliche Objekte hinzuweisen oder für andere kreative Zwecke.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-240">Games use this ability to create a greater sense of immersion, to help communicate status information (such as taking damage), to signal proximity to important objects, or for other creative uses.</span></span>
 
-Die Elemente der `Gamepad.Vibration`-Eigenschaft können zwar auch direkt geändert werden, es empfiehlt sich jedoch, eine separate `GamepadVibration`-Instanz mit den gewünschten Werten zu initialisieren und diese anschließend in die `Gamepad.Vibration`-Eigenschaft zu kopieren, um alle Motorintensitäten gleichzeitig zu ändern.
+<span data-ttu-id="7b3d0-241">Xbox One-Gamepads sind mit insgesamt vier unabhängigen Vibrationsmotoren ausgestattet.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-241">Xbox One gamepads are equipped with a total of four independent vibration motors.</span></span> <span data-ttu-id="7b3d0-242">Zwei dieser Motoren sind groß und befinden sich im Gehäuse des Gamepads. Der linke Motor erzeugt starke, intensive Vibrationen, während der rechte Motor für sanftere, dezentere Vibrationen zuständig ist.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-242">Two are large motors located in the gamepad body; the left motor provides rough, high-amplitude vibration, while the right motor provides gentler, more-subtle vibration.</span></span> <span data-ttu-id="7b3d0-243">Die anderen beiden Motoren sind klein, befinden sich in den Triggern und erzeugen kurze, intensive Vibrationen direkt an den Triggerfingern des Benutzers. Aufgrund dieses einzigartigen Features des Xbox One-Gamepads werden die Trigger dieses Gamepads als _Impulse Triggers_ bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-243">The other two are small motors, one inside each trigger, that provide sharp bursts of vibration directly to the user's trigger fingers; this unique ability of the Xbox One gamepad is the reason its triggers are referred to as _impulse triggers_.</span></span> <span data-ttu-id="7b3d0-244">Gemeinsam lässt sich mithilfe dieser Motoren eine Vielzahl von Tastempfindungen erzeugen.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-244">By orchestrating these motors together, a wide range of tactile sensations can be produced.</span></span>
 
-Im folgenden Beispiel wird das gleichzeitige Ändern aller Motorintensitäten veranschaulicht.
+
+## <a name="using-vibration-and-impulse"></a><span data-ttu-id="7b3d0-245">Verwenden von Vibrationen und Impulsen</span><span class="sxs-lookup"><span data-stu-id="7b3d0-245">Using vibration and impulse</span></span>
+
+<span data-ttu-id="7b3d0-246">Gamepadvibrationen werden über die [Vibration][]-Eigenschaft der [Gamepad][]-Klasse gesteuert.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-246">Gamepad vibration is controlled through the [Vibration][] property of the [Gamepad][] class.</span></span> `Vibration` <span data-ttu-id="7b3d0-247">ist eine Instanz der [GamepadVibration][]-Struktur, die sich aus vier Gleitkommawerten zusammensetzt, welche jeweils für die Intensität eines der Motoren stehen.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-247">is an instance of the [GamepadVibration][] structure which is made up of four floating point values; each value represents the intensity of one of the motors.</span></span>
+
+<span data-ttu-id="7b3d0-248">Die Elemente der `Gamepad.Vibration`-Eigenschaft können zwar auch direkt geändert werden, es empfiehlt sich jedoch, eine separate `GamepadVibration`-Instanz mit den gewünschten Werten zu initialisieren und diese anschließend in die `Gamepad.Vibration`-Eigenschaft zu kopieren, um alle Motorintensitäten gleichzeitig zu ändern.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-248">Although the members of the `Gamepad.Vibration` property can be modified directly, its recommended to initialize a separate `GamepadVibration` instance to the values you want, and then copying it into the `Gamepad.Vibration` property to change the actual motor intensities all at once.</span></span>
+
+<span data-ttu-id="7b3d0-249">Im folgenden Beispiel wird das gleichzeitige Ändern aller Motorintensitäten veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-249">The following example demonstrates how to change the motor intensities all at once.</span></span>
 
 ```cpp
 // get the first gamepad
@@ -269,11 +268,11 @@ GamepadVibration vibration;
 gamepad.Vibration = vibration.
 ```
 
-### <a name="using-the-vibration-motors"></a>Verwenden der Vibrationsmotoren
+### <a name="using-the-vibration-motors"></a><span data-ttu-id="7b3d0-250">Verwenden der Vibrationsmotoren</span><span class="sxs-lookup"><span data-stu-id="7b3d0-250">Using the vibration motors</span></span>
 
-Der linke und der rechte Vibrationsmotor akzeptieren Gleitkommawerte zwischen 0,0 (keine Vibration) und 1,0 (stärkste Vibration). Die Intensität des linken Motors wird durch die `LeftMotor`-Eigenschaft der [GamepadVibration][]-Struktur festgelegt. Die Intensität des rechten Motors wird durch die `RightMotor`-Eigenschaft festgelegt.
+<span data-ttu-id="7b3d0-251">Der linke und der rechte Vibrationsmotor akzeptieren Gleitkommawerte zwischen 0,0 (keine Vibration) und 1,0 (stärkste Vibration).</span><span class="sxs-lookup"><span data-stu-id="7b3d0-251">The left and right vibration motors take floating point values between 0.0 (no vibration) and 1.0 (most intense vibration).</span></span> <span data-ttu-id="7b3d0-252">Die Intensität des linken Motors wird durch die `LeftMotor`-Eigenschaft der [GamepadVibration][]-Struktur festgelegt. Die Intensität des rechten Motors wird durch die `RightMotor`-Eigenschaft festgelegt.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-252">The intensity of the left motor is set by the `LeftMotor` property of the [GamepadVibration][] structure; the intensity of the right motor is set by the `RightMotor` property.</span></span>
 
-Im folgenden Beispiel wird die Intensität beider Vibrationsmotoren festgelegt und die Gamepadvibration aktiviert.
+<span data-ttu-id="7b3d0-253">Im folgenden Beispiel wird die Intensität beider Vibrationsmotoren festgelegt und die Gamepadvibration aktiviert.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-253">The following example sets the intensity of both vibration motors and activates gamepad vibration.</span></span>
 
 ```cpp
 GamepadVibration vibration;
@@ -282,13 +281,13 @@ vibration.RightMotor = 0.25; // sets the intensity of the right motor to 25%
 gamepad.Vibration = vibration;
 ```
 
-Vergessen Sie nicht, dass diese beiden Motoren nicht identisch sind. Wenn Sie die Eigenschaften also auf den gleichen Wert festlegen, werden in den beiden Motoren nicht die gleichen Vibrationen erzeugt. Der linke Motor erzeugt eine stärkere Vibration mit einer niedrigeren Frequenz, während der rechte Motor für den gleichen Wert eine sanftere Vibration mit höherer Frequenz erzeugt. Selbst bei Verwendung des Maximalwerts erreicht der linke Motor nicht die hohen Frequenzen des rechten Motors, und mit dem rechten Motor lassen sich nicht die gleichen hohen Kräfte erzeugen wie mit dem linken Motor. Da die Motoren allerdings fest mit dem Gamepadgehäuse verbunden sind, nehmen Spieler die Vibrationen nicht vollständig unabhängig voneinander wahr, obwohl die Motoren unterschiedliche Eigenschaften haben und mit unterschiedlicher Intensität vibrieren können. Dadurch lässt sich eine größere, ausdrucksstärkere Bandbreite von Empfindungen vermitteln als mit zwei identischen Motoren.
+<span data-ttu-id="7b3d0-254">Vergessen Sie nicht, dass diese beiden Motoren nicht identisch sind. Wenn Sie die Eigenschaften also auf den gleichen Wert festlegen, werden in den beiden Motoren nicht die gleichen Vibrationen erzeugt.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-254">Remember that these two motors are not identical so setting these properties to the same value doesn't produce the same vibration in one motor as in the other.</span></span> <span data-ttu-id="7b3d0-255">Der linke Motor erzeugt eine stärkere Vibration mit einer niedrigeren Frequenz, während der rechte Motor für den gleichen Wert eine sanftere Vibration mit höherer Frequenz erzeugt.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-255">For any value, the left motor produces a stronger vibration at a lower frequency than the right motor which--for the same value--produces a gentler vibration at a higher frequency.</span></span> <span data-ttu-id="7b3d0-256">Selbst bei Verwendung des Maximalwerts erreicht der linke Motor nicht die hohen Frequenzen des rechten Motors, und mit dem rechten Motor lassen sich nicht die gleichen hohen Kräfte erzeugen wie mit dem linken Motor.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-256">Even at the maximum value, the left motor can't produce the high frequencies of the right motor, nor can the right motor produce the high forces of the left motor.</span></span> <span data-ttu-id="7b3d0-257">Da die Motoren allerdings fest mit dem Gamepadgehäuse verbunden sind, nehmen Spieler die Vibrationen nicht vollständig unabhängig voneinander wahr, obwohl die Motoren unterschiedliche Eigenschaften haben und mit unterschiedlicher Intensität vibrieren können.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-257">Still, because the motors are rigidly connected by the gamepad body, players don't experience the vibrations fully independently even though the motors have different characteristics and can vibrate with different intensities.</span></span> <span data-ttu-id="7b3d0-258">Dadurch lässt sich eine größere, ausdrucksstärkere Bandbreite von Empfindungen vermitteln als mit zwei identischen Motoren.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-258">This arrangement allows for a wider, more expressive range of sensations to be produced than if the motors were identical.</span></span>
 
-### <a name="using-the-impulse-triggers"></a>Verwenden der Impulse Triggers
+### <a name="using-the-impulse-triggers"></a><span data-ttu-id="7b3d0-259">Verwenden der Impulse Triggers</span><span class="sxs-lookup"><span data-stu-id="7b3d0-259">Using the impulse triggers</span></span>
 
-Jeder Impulse Trigger-Motor akzeptiert einen Gleitkommawert zwischen 0,0 (keine Vibration) und 1,0 (stärkste Vibration). Die Intensität des linken Triggermotors wird durch die `LeftTrigger`-Eigenschaft der [GamepadVibration][]-Struktur festgelegt. Die Intensität des rechten Triggers wird durch die `RightTrigger`-Eigenschaft festgelegt.
+<span data-ttu-id="7b3d0-260">Jeder Impulse Trigger-Motor akzeptiert einen Gleitkommawert zwischen 0,0 (keine Vibration) und 1,0 (stärkste Vibration).</span><span class="sxs-lookup"><span data-stu-id="7b3d0-260">Each impulse trigger motor takes a floating point value between 0.0 (no vibration) and 1.0 (most intense vibration).</span></span> <span data-ttu-id="7b3d0-261">Die Intensität des linken Triggermotors wird durch die `LeftTrigger`-Eigenschaft der [GamepadVibration][]-Struktur festgelegt. Die Intensität des rechten Triggers wird durch die `RightTrigger`-Eigenschaft festgelegt.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-261">The intensity of the left trigger motor is set by the `LeftTrigger` property of the [GamepadVibration][] structure; the intensity of the right trigger is set by the `RightTrigger` property.</span></span>
 
-Das folgende Beispiel legt die Intensität der beiden Impulse Triggers fest und aktiviert sie.
+<span data-ttu-id="7b3d0-262">Das folgende Beispiel legt die Intensität der beiden Impulse Triggers fest und aktiviert sie.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-262">The following example sets intensity of both impulse triggers and activates them.</span></span>
 
 ```cpp
 GamepadVibration vibration;
@@ -297,28 +296,28 @@ vibration.RightTrigger = 0.50; // sets the intensity of the right trigger to 50%
 gamepad.Vibration = vibration;
 ```
 
-Im Gegensatz zu den anderen Motoren sind die beiden Vibrationsmotoren innerhalb der Trigger identisch und erzeugen bei Verwendung des gleichen Werts jeweils die gleiche Vibration. Da diese Motoren jedoch nicht fest verbunden sind, nehmen die Spieler die Vibrationen unabhängig voneinander wahr. Dank dieses Designs können über beide Trigger gleichzeitig vollständig unabhängige Empfindungen erzeugt werden, um spezifischere Informationen zu vermitteln als mit den Motoren im Gamepadgehäuse möglich wäre.
+<span data-ttu-id="7b3d0-263">Im Gegensatz zu den anderen Motoren sind die beiden Vibrationsmotoren innerhalb der Trigger identisch und erzeugen bei Verwendung des gleichen Werts jeweils die gleiche Vibration.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-263">Unlike the others, the two vibration motors inside the triggers are identical so they produce the same vibration in either motor for the same value.</span></span> <span data-ttu-id="7b3d0-264">Da diese Motoren jedoch nicht fest verbunden sind, nehmen die Spieler die Vibrationen unabhängig voneinander wahr.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-264">However, because these motors are not rigidly connected in any way, players experience the vibrations independently.</span></span> <span data-ttu-id="7b3d0-265">Dank dieses Designs können über beide Trigger gleichzeitig vollständig unabhängige Empfindungen erzeugt werden, um spezifischere Informationen zu vermitteln als mit den Motoren im Gamepadgehäuse möglich wäre.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-265">This arrangement allows for fully independent sensations to be directed to both triggers simultaneously, and helps them to convey more specific information than the motors in the gamepad body can.</span></span>
 
 
-## <a name="run-the-gamepad-vibration-sample"></a>Ausführen des Gamepad-Vibrationsbeispiels
+## <a name="run-the-gamepad-vibration-sample"></a><span data-ttu-id="7b3d0-266">Ausführen des Gamepad-Vibrationsbeispiels</span><span class="sxs-lookup"><span data-stu-id="7b3d0-266">Run the gamepad vibration sample</span></span>
 
-Das [GamepadVibrationUWP-Beispiel _(GitHub)_](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/Samples/System/GamepadVibrationUWP) veranschaulicht, wie mithilfe der Gamepad-Vibrationsmotoren und der Impulse Triggers eine Reihe von Effekten erzeugt wird.
+<span data-ttu-id="7b3d0-267">Das [GamepadVibrationUWP-Beispiel _(GitHub)_](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/Samples/System/GamepadVibrationUWP) veranschaulicht, wie mithilfe der Gamepad-Vibrationsmotoren und der Impulse Triggers eine Reihe von Effekten erzeugt wird.</span><span class="sxs-lookup"><span data-stu-id="7b3d0-267">The [GamepadVibrationUWP sample _(github)_](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/Samples/System/GamepadVibrationUWP) demonstrates how the gamepad vibration motors and impulse triggers are used to produce a variety of effects.</span></span>
 
-## <a name="see-also"></a>Weitere Informationen
-[Windows.Gaming.Input.UINavigationController][]
-[Windows.Gaming.Input.IGameController][]
+## <a name="see-also"></a><span data-ttu-id="7b3d0-268">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="7b3d0-268">See also</span></span>
+<span data-ttu-id="7b3d0-269">[Windows.Gaming.Input.UINavigationController][]
+[Windows.Gaming.Input.IGameController][]</span><span class="sxs-lookup"><span data-stu-id="7b3d0-269">[Windows.Gaming.Input.UINavigationController][]
+[Windows.Gaming.Input.IGameController][]</span></span>
 
 
-[Windows.Gaming.Input]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.aspx
-[Windows.Gaming.Input.UINavigationController]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.uinavigationcontroller.aspx
-[Windows.Gaming.Input.IGameController]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.igamecontroller.aspx
-[gamepad]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.aspx
-[gamepads]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.gamepads.aspx
-[gamepadadded]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.gamepadadded.aspx
-[gamepadremoved]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.gamepadremoved.aspx
-[getcurrentreading]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.getcurrentreading.aspx
-[vibration]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.vibration.aspx
-[gamepadreading]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepadreading.aspx
-[gamepadbuttons]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepadbuttons.aspx
-[gamepadvibration]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepadvibration.aspx
-
+[<span data-ttu-id="7b3d0-270">Windows.Gaming.Input</span><span class="sxs-lookup"><span data-stu-id="7b3d0-270">Windows.Gaming.Input</span></span>]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.aspx
+[<span data-ttu-id="7b3d0-271">Windows.Gaming.Input.UINavigationController</span><span class="sxs-lookup"><span data-stu-id="7b3d0-271">Windows.Gaming.Input.UINavigationController</span></span>]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.uinavigationcontroller.aspx
+[<span data-ttu-id="7b3d0-272">Windows.Gaming.Input.IGameController</span><span class="sxs-lookup"><span data-stu-id="7b3d0-272">Windows.Gaming.Input.IGameController</span></span>]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.igamecontroller.aspx
+[<span data-ttu-id="7b3d0-273">gamepad</span><span class="sxs-lookup"><span data-stu-id="7b3d0-273">gamepad</span></span>]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.aspx
+[<span data-ttu-id="7b3d0-274">gamepads</span><span class="sxs-lookup"><span data-stu-id="7b3d0-274">gamepads</span></span>]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.gamepads.aspx
+[<span data-ttu-id="7b3d0-275">gamepadadded</span><span class="sxs-lookup"><span data-stu-id="7b3d0-275">gamepadadded</span></span>]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.gamepadadded.aspx
+[<span data-ttu-id="7b3d0-276">gamepadremoved</span><span class="sxs-lookup"><span data-stu-id="7b3d0-276">gamepadremoved</span></span>]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.gamepadremoved.aspx
+[<span data-ttu-id="7b3d0-277">getcurrentreading</span><span class="sxs-lookup"><span data-stu-id="7b3d0-277">getcurrentreading</span></span>]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.getcurrentreading.aspx
+[<span data-ttu-id="7b3d0-278">vibration</span><span class="sxs-lookup"><span data-stu-id="7b3d0-278">vibration</span></span>]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.vibration.aspx
+[<span data-ttu-id="7b3d0-279">gamepadreading</span><span class="sxs-lookup"><span data-stu-id="7b3d0-279">gamepadreading</span></span>]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepadreading.aspx
+[<span data-ttu-id="7b3d0-280">gamepadbuttons</span><span class="sxs-lookup"><span data-stu-id="7b3d0-280">gamepadbuttons</span></span>]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepadbuttons.aspx
+[<span data-ttu-id="7b3d0-281">gamepadvibration</span><span class="sxs-lookup"><span data-stu-id="7b3d0-281">gamepadvibration</span></span>]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepadvibration.aspx

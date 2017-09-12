@@ -1,79 +1,48 @@
 ---
 author: mtoepke
-title: Spiele und DirectX
+title: Programmierung von Spielen
 description: "Die Universelle Windows-Plattform (UWP) bietet neue Möglichkeiten zum Erstellen, Verteilen und Monetisieren von Spielen. Hier erhalten Sie Informationen zum Starten eines neuen Spiels oder Portieren eines vorhandenen Spiels."
 ms.assetid: 4073b835-c900-4ff2-9fc5-da52f9432a1f
 ms.author: mtoepke
-ms.date: 02/08/2017
+ms.date: 06/13/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, Spiele, DirectX
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c3a24c15f61204f3ecbc0587cf54e1da69ee712c
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2f98c038c745615d16227334d7e87426394d5c79
+ms.sourcegitcommit: a61e9fc06f74dc54c36abf7acb85eeb606e475b8
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/15/2017
 ---
+# <a name="game-programming"></a><span data-ttu-id="3058c-105">Programmierung von Spielen</span><span class="sxs-lookup"><span data-stu-id="3058c-105">Game programming</span></span>
 
-# <a name="games-and-directx"></a>Spiele und DirectX
+<span data-ttu-id="3058c-106">Die Universelle Windows-Plattform (UWP) bietet neue Möglichkeiten zum Erstellen, Verteilen und Monetisieren von Spielen.</span><span class="sxs-lookup"><span data-stu-id="3058c-106">Universal Windows Platform (UWP) offers new opportunities to create, distribute, and monetize games.</span></span> <span data-ttu-id="3058c-107">Informationen Sie zum Erstellen eines Spiels für Windows10.</span><span class="sxs-lookup"><span data-stu-id="3058c-107">Learn about creating a game for Windows 10.</span></span>
 
-
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie unter [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
-Die Universelle Windows-Plattform (UWP) bietet neue Möglichkeiten zum Erstellen, Verteilen und Monetisieren von Spielen. Hier erhalten Sie Informationen zum Starten eines neuen Spiels oder Portieren eines vorhandenen Spiels.
-
-| Thema | Beschreibung |
+| <span data-ttu-id="3058c-108">Thema</span><span class="sxs-lookup"><span data-stu-id="3058c-108">Topic</span></span> | <span data-ttu-id="3058c-109">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="3058c-109">Description</span></span> |
 |---------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Handbuch zur Entwicklung von Spielen unter Windows 10](e2e.md) | Ein umfassender Leitfaden für Ressourcen und Informationen zur Entwicklung von UWP-Spielen. |
-| [Spieletechnologien für Apps für die Universelle Windows-Plattform](game-development-platform-guide.md) | Dieses Handbuch enthält Informationen über verfügbare Technologien für die Entwicklung von UWP-Spielen. |
-| [Projektvorlagen und Tools für Spiele](prepare-your-dev-environment-for-windows-store-directx-game-development.md) | Hier erfahren Sie, was erforderlich ist, um mit dem Programmieren von DirectX-Spielen für UWP beginnen zu können. |
-| [Das App-Objekt und DirectX](about-the-metro-style-user-interface-and-directx.md) | Für die UWP mit DirectX-Spielen werden nur wenige der UI-Elemente und -objekte der Windows-Benutzeroberfläche genutzt. Da sie auf einer niedrigeren Ebene des Windows-Runtime-Stapels ausgeführt werden, müssen sie stattdessen auf eine grundlegendere Weise mit dem Benutzeroberflächenframework interagieren, und zwar indem sie direkt auf das App-Objekt zugreifen und mit diesem interagieren. Im Folgenden erfahren Sie, zu welchem Zeitpunkt und auf welche Weise eine solche Interaktion erfolgt und wie Sie dieses Modell als DirectX-Entwickler beim Entwickeln von UWP-Apps effizient nutzen können. |
-| [Starten und Reaktivieren von Apps](launching-and-resuming-apps-directx-and-cpp.md) | Erfahren Sie, wie Sie Ihre UWP-DirectX-App starten, anhalten und fortsetzen können. |
-| [2D-Grafiken für DirectX-Spiele](working-with-2d-graphics-in-your-directx-game.md) | Hier finden Sie Informationen zum Einsatz von 2D-Bitmapgrafiken und -effekten im Allgemeinen und in Ihrem Spiel. |
-| [Grundlegendes zu 3D-Grafiken für DirectX-Spiele](an-introduction-to-3d-graphics-with-directx.md) | Im Folgenden zeigen wir Ihnen, wie Sie grundlegende Konzepte von 3D-Grafiken durch die Programmierung mit DirectX umsetzen können. |
-| [Laden von Ressourcen im DirectX-Spiel](load-a-game-asset.md) | In den meisten Spielen werden Ressourcen und Objekte (wie Shader, Texturen, vordefinierte Gitter oder andere Grafikdaten) an bestimmten Stellen aus dem lokalen Speicher oder über einen anderen Datenstrom geladen. Dieser Abschnitt enthält eine allgemeine Übersicht über die Aspekte, die beim Laden dieser Dateien zur Verwendung in Ihrem UWP-Spiel zu berücksichtigen sind. |
-| [Erstellen eines einfachen UWP-Spiels mit DirectX](tutorial--create-your-first-metro-style-directx-game.md) | In diesen Tutorials lernen Sie, wie Sie ein einfaches UWP-Spiel mit DirectX und C++ erstellen. Wir befassen uns mit allen wichtigen Teilen eines Spiels. Hierzu zählen die Prozesse zum Laden von Ressourcen wie Grafiken und Gittern, zum Erstellen einer Hauptschleife für das Spiel, zum Implementieren einer einfachen Rendering-Pipeline sowie zum Hinzufügen von Soundeffekten und Steuerelementen. |
-| [Entwickeln von Marble Maze, einem UWP-Spiel in C++ und DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md) | In diesem Abschnitt der Dokumentation wird das Erstellen von UWP-3D-Spielen mit DirectX und Visual C++ beschrieben. Die vorliegende Dokumentation veranschaulicht, wie Sie das 3D-Spiel Marble Maze erstellen, das auf neuen Formfaktoren wie Tablet PCs genau wie auf herkömmlichen Desktopcomputern und Laptops gespielt werden kann. |
-| [Unterstützen der Bildschirmausrichtung](supporting-screen-rotation-directx-and-cpp.md) | An dieser Stelle erläutern wir die bewährten Methoden zum Umgang mit der Bildschirmausrichtung in Ihrer UWP-DirectX-App, sodass die Grafikhardware der Windows 10-Geräte effizient und effektiv verwendet wird. |
-| [Audio für Spiele](working-with-audio-in-your-directx-game.md) | Hier erfahren Sie, wie Sie Musik und Sound entwickeln und in Ihr DirectX-Spiel integrieren. Außerdem erfahren Sie, wie Sie Audiosignale verarbeiten, um dynamischen und positionsbezogenen Sound zu erzeugen. |
-| [Toucheingabesteuerelemente für Spiele](tutorial--adding-touch-controls-to-your-directx-game.md) | Hier erfahren Sie, wie Sie Ihrem UWP-Spiel mit DirectX und C++ einfache touchbasierte Steuerelemente hinzufügen. Wir zeigen Ihnen, wie Sie touchbasierte Steuerelemente hinzufügen, um eine Kamera mit fester Ebene in einer Direct3D-Umgebung zu bewegen, indem die Kameraperspektive durch Bewegen des Fingers oder Eingabestifts geändert wird. |
-| [Bewegungs-/Blicksteuerungen für Spiele](tutorial--adding-move-look-controls-to-your-directx-game.md) | Hier erfahren Sie, wie Sie Ihrem DirectX-Spiel herkömmliche Bewegungs-/Blicksteuerungen für Maus und Tastatur (auch als Maussteuerungen bezeichnet) hinzufügen. |
-| [Relative Mausbewegung](relative-mouse-movement.md) | Erfahren Sie, wie Sie relative Maussteuerungen hinzufügen, die nicht den Systemcursor verwenden und keine absoluten Bildschirmkoordinaten zurückgeben, sondern stattdessen das Pixeldelta zwischen Mausbewegungen nachverfolgen. |
-| [Optimieren von Eingabe und Renderschleife](optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md) | Die Eingabelatenz kann das Spielerlebnis erheblich beeinträchtigen. Spiele wirken professioneller, wenn in diesem Bereich eine Optimierung vorgenommen wird. Außerdem kann eine richtige Optimierung der Eingabeereignisse zu einer besseren Akkulaufzeit führen. Hier erfahren Sie, wie Sie die richtigen Verarbeitungsoptionen für [CoreDispatcher](optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md)-Eingabeereignisse auswählen, um sicherzustellen, dass die Eingaben im Spiel so reibungslos wie möglich verarbeitet werden. |
-| [Swapchainskalierung und Überlagerungen](multisampling--scaling--and-overlay-swap-chains.md) | Hier erfahren Sie, wie Sie skalierte Swapchains zum schnelleren Rendern auf mobilen Geräten erstellen und Überlagerungsswapchains (falls verfügbar) verwenden, um die visuelle Qualität zu steigern. |
-| [Reduzieren der Latenz mit DXGI 1.3-Swapchains](reduce-latency-with-dxgi-1-3-swap-chains.md) | Verwenden Sie DXGI 1.3 zum Reduzieren der geltenden Framelatenz, indem Sie warten, bis die Swapchain den geeigneten Zeitpunkt zum Beginnen mit dem Rendern eines neuen Frames signalisiert. |
-| [Multisampling in UWP-Apps](multisampling--multi-sample-anti-aliasing--in-windows-store-apps.md) | Hier erfahren Sie, wie Sie das Multisampling in UWP-Apps verwenden, die mit Direct3D erstellt wurden. |
-| [Behandeln von Szenarien mit entfernten Geräten in Direct3D 11](handling-device-lost-scenarios.md) | In diesem Thema wird erläutert, wie Sie die Geräteschnittstellenkette für Direct3D und DXGI neu erstellen, wenn die Grafikkarte entfernt oder neu initialisiert wird. |
-| [Asynchrone Programmierung für Spiele](asynchronous-programming-directx-and-cpp.md) | Dieses Thema behandelt verschiedene Aspekte, die Sie beim Verwenden der asynchronen Programmierung und des Threadings mit DirectX berücksichtigen sollten. |
-| [Netzwerkfunktionen für Spiele](work-with-networking-in-your-directx-game.md) | Erfahren Sie, wie Sie Netzwerkfeatures entwickeln und in ein DirectX-Spiel integrieren. |
-| [Barrierefreiheit von Spielen](accessibility-for-games.md) | Erfahren Sie, wie Sie die Barrierefreiheit von Spielen verbessern. |
-| [Cloud für Spiele](cloud-for-games.md) | Erfahren Sie, wie Sie Cloudtechnologien für die Entwicklung von Spielen nutzen können. |
-| [Gewinnbringende Nutzung von Spielen](monetization-for-games.md) | Hier erfahren Sie, wie Sie Ihr Spiel gewinnbringend nutzen können. |
-| [Interoperabilität von DirectX und XAML](directx-and-xaml-interop.md) | In Ihrem UWP-Spiel können Sie eine Kombination aus Extensible Application Markup Language (XAML) und Microsoft DirectX verwenden. |
-| [Packen Ihres Spiels](package-your-windows-store-directx-game.md) | Umfangreichere UWP-Spiele können leicht relativ groß werden. Dies gilt besonders für Spiele, bei denen mehrere Sprachen mit regionsspezifischen Ressourcen unterstützt werden oder die über optionale HD-Ressourcen verfügen. In diesem Thema erfahren Sie, wie Sie App-Pakete und App-Bündel zum Anpassen der App verwenden, damit Kunden nur die wirklich benötigten Ressourcen erhalten. |
-| [Konzeptgenehmigung](concept-approval.md) | Hier erfahren Sie, wie Sie Ihr Produkt zur Konzeptgenehmigung übermitteln, die Sie benötigen, wenn das Produkt auf der Xbox ausgeführt wird oder Xbox Live verwendet. |
-| [Handbücher zum Portieren von Spielen](porting-guides.md) | Hier finden Sie Anleitungen zum Portieren von vorhandenen Spielen zu Direct3D 11, UWP und Windows 10. |
-| [Ressourcen für die Spieleprogrammierung](additional-directx-game-programming-resources.md) | Weitere Informationen zur Spieleprogrammierung unter Windows finden Sie in den folgenden Ressourcen. |
+| [<span data-ttu-id="3058c-110">Handbuch zur Entwicklung von Spielen unter Windows10</span><span class="sxs-lookup"><span data-stu-id="3058c-110">Windows 10 game development guide</span></span>](e2e.md) | <span data-ttu-id="3058c-111">Ein umfassender Leitfaden für Ressourcen und Informationen zur Entwicklung von UWP-Spielen.</span><span class="sxs-lookup"><span data-stu-id="3058c-111">An end-to-end guide with resources and information for developing UWP games.</span></span> |
+| [<span data-ttu-id="3058c-112">Planen</span><span class="sxs-lookup"><span data-stu-id="3058c-112">Planning</span></span>](planning.md) | <span data-ttu-id="3058c-113">Dieses Thema enthält eine Liste der Artikel für die Phase der Spieleplanung.</span><span class="sxs-lookup"><span data-stu-id="3058c-113">This topic contains a list of articles for the game planning stage.</span></span> |
+| [<span data-ttu-id="3058c-114">UWP-Programmierung</span><span class="sxs-lookup"><span data-stu-id="3058c-114">UWP programming</span></span>](uwp-programming.md) | <span data-ttu-id="3058c-115">Erfahren Sie, wie Sie Windows-Runtime-APIs zum Entwickeln von UWP-Spielen verwenden können.</span><span class="sxs-lookup"><span data-stu-id="3058c-115">Learn how to use Windows Runtime APIs to develop UWP games.</span></span> |
+| [<span data-ttu-id="3058c-116">Entwicklung von Spielen (Video)</span><span class="sxs-lookup"><span data-stu-id="3058c-116">Game development videos</span></span>](game-development-videos.md) | <span data-ttu-id="3058c-117">Eine Sammlung von Videos zur Spieleentwicklung von wichtigen Konferenzen und Veranstaltungen.</span><span class="sxs-lookup"><span data-stu-id="3058c-117">A collection of game dev videos from major conferences and events.</span></span> |
+
+<span data-ttu-id="3058c-118">Weitere Informationen zum Entwickeln von UWP-Spielen mit DirectX finden Sie unter [DirectX-Programmierung ](directx-programming.md).</span><span class="sxs-lookup"><span data-stu-id="3058c-118">To learn about developing UWP games using DirectX, go to [DirectX programming](directx-programming.md).</span></span>
+
+> **<span data-ttu-id="3058c-119">Hinweis:</span><span class="sxs-lookup"><span data-stu-id="3058c-119">Note</span></span>**  
+<span data-ttu-id="3058c-120">Dieser Artikel ist für Windows10-Entwickler bestimmt, die Apps für die universelle Windows-Plattform (UWP) schreiben.</span><span class="sxs-lookup"><span data-stu-id="3058c-120">This article is for Windows 10 developers writing Universal Windows Platform (UWP) apps.</span></span> <span data-ttu-id="3058c-121">Wenn Sie für Windows8.x oder Windows Phone8.x entwickeln, hilft Ihnen die [archivierte Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132) weiter.</span><span class="sxs-lookup"><span data-stu-id="3058c-121">If you’re developing for Windows 8.x or Windows Phone 8.x, see the [archived documentation](http://go.microsoft.com/fwlink/p/?linkid=619132).</span></span>
 
  
 
-> **Hinweis**  
-Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die Universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, hilft Ihnen die [archivierte Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132) weiter.
+<span data-ttu-id="3058c-122">Damit Sie die Übersichten und Lernprogramme zur Spieleentwicklung optimal nutzen können, sollten Sie mit den folgenden Themen vertraut sein:</span><span class="sxs-lookup"><span data-stu-id="3058c-122">To make the best use of the game development overviews and tutorials, you should be familiar with the following subjects:</span></span>
 
- 
-
-Damit Sie die Übersichten und Lernprogramme zur Spieleentwicklung optimal nutzen können, sollten Sie mit den folgenden Themen vertraut sein:
-
--   Microsoft C++ mit Komponentenerweiterungen (C++/CX). Dies ist ein Update für Microsoft C++, das die automatische Verweiszählung einführt. Außerdem handelt es sich hierbei um die Sprache für die Entwicklung eines UWP-Spiels mit DirectX 11.1 oder einer höheren Version.
--   Grundlegende Terminologie für die Grafikprogrammierung.
--   Grundlegende Konzepte der Windows-Programmierung.
--   Grundlegende Kenntnisse der APIs von Direct3D 9 oder 11.
+-   <span data-ttu-id="3058c-123">Microsoft C++ mit Komponentenerweiterungen (C++/CX).</span><span class="sxs-lookup"><span data-stu-id="3058c-123">Microsoft C++ with Component Extensions (C++/CX).</span></span> <span data-ttu-id="3058c-124">Dies ist ein Update für MicrosoftC++, das die automatische Verweiszählung einführt. Außerdem handelt es sich hierbei um die Sprache für die Entwicklung eines UWP-Spiels mit DirectX11.1 oder einer höheren Version</span><span class="sxs-lookup"><span data-stu-id="3058c-124">This is an update to Microsoft C++ that incorporates automatic reference counting, and is the language for developing UWP games with DirectX 11.1 or later versions</span></span>
+-   <span data-ttu-id="3058c-125">Grundlegende Terminologie für die Grafikprogrammierung</span><span class="sxs-lookup"><span data-stu-id="3058c-125">Basic graphics programming terminology</span></span>
+-   <span data-ttu-id="3058c-126">Grundlegende Konzepte der Windows-Programmierung</span><span class="sxs-lookup"><span data-stu-id="3058c-126">Basic Windows programming concepts</span></span>
+-   <span data-ttu-id="3058c-127">Grundlegende Kenntnisse der APIs von Direct3D 9 oder 11</span><span class="sxs-lookup"><span data-stu-id="3058c-127">Basic familiarity with the Direct3D 9 or 11 APIs</span></span>
 
  
 
  
-
 
 
 

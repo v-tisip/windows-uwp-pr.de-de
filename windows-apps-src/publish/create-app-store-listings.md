@@ -4,120 +4,152 @@ Description: "Im Abschnitt „Store-Einträge“ des App-Übermittlungsprozesses
 title: "Erstellen von Store-Einträgen für Apps"
 ms.assetid: 50D67219-B6C6-4EF0-B76A-926A5F24997D
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 08/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: dcce4d53dd095c634f893d40f87eaf69cf546f1d
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 004169178c906ac892865569fd2ed483bd2471fa
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/09/2017
 ---
+# <a name="create-app-store-listings"></a><span data-ttu-id="6ca17-104">Erstellen von Store-Einträgen für Apps</span><span class="sxs-lookup"><span data-stu-id="6ca17-104">Create app Store listings</span></span>
 
-# <a name="create-app-store-listings"></a>Erstellen von Store-Einträgen für Apps
+
+<span data-ttu-id="6ca17-105">Im Abschnitt **Store-Einträge** des [App-Übermittlungsprozesses](app-submissions.md) stellen Sie den Text und die [Bilder](app-screenshots-and-images.md) bereit, die den Kunden im Store-Eintrag Ihrer App angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="6ca17-105">The **Store listings** section of the [app submission process](app-submissions.md) is where you provide the text and [images](app-screenshots-and-images.md) that customers will see in your app's Store listing.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="6ca17-106">Wir haben vor kurzem die Optionen auf dieser Seite aktualisiert.</span><span class="sxs-lookup"><span data-stu-id="6ca17-106">We have recently updated the options on this page.</span></span> <span data-ttu-id="6ca17-107">Wenn Sie eine laufende Übermittlung hatten, bevor die neueren Optionen verfügbar waren, zeigt diese Übermittlung immer noch die älteren Optionen an.</span><span class="sxs-lookup"><span data-stu-id="6ca17-107">If you had an in-progress submission from before the newer options were available, that submission will still show the older options.</span></span> <span data-ttu-id="6ca17-108">Sie können diese Übermittlung löschen und dann eine neue erstellen, wenn Sie die neuen Optionen für diese App verwenden möchten.</span><span class="sxs-lookup"><span data-stu-id="6ca17-108">You can delete that submission and then create a new one if you want to use the new options for that app.</span></span> <span data-ttu-id="6ca17-109">Andernfalls werden die neueren Optionen mit dem nächsten Update nach der Veröffentlichung der laufenden Übermittlung verfügbar.</span><span class="sxs-lookup"><span data-stu-id="6ca17-109">Otherwise, the newer options will become available with the next update after you publish your in-progress submission.</span></span>
+
+<span data-ttu-id="6ca17-110">Viele der Felder in einem **Store-Eintrag** sind optional. Es wird jedoch empfohlen, mehrere Bilder und so viele Infos wie möglich bereitzustellen, damit Ihr Eintrag auffällt.</span><span class="sxs-lookup"><span data-stu-id="6ca17-110">Many of the fields in a **Store listing** are optional, but we suggest providing multiple images and as much info as possible to make your listing stand out.</span></span> <span data-ttu-id="6ca17-111">Im Schritt **Store-Eintrag** sollten Sie mindestens eine Textbeschreibung und mindestens einen [Screenshot](app-screenshots-and-images.md#screenshots) angeben.</span><span class="sxs-lookup"><span data-stu-id="6ca17-111">The minimum required for the **Store listings** step to be considered complete is a text description and at least one [screenshot](app-screenshots-and-images.md#screenshots).</span></span>
+
+> [!TIP]
+> <span data-ttu-id="6ca17-112">Sie können ebenfalls [Store-Einträge importieren oder exportieren](import-and-export-store-listings.md), wenn Sie Ihre Eintragsinformationen offline in eine CSV-Datei eingeben möchten, anstatt diese Informationen direkt im Dashboard anzugeben.</span><span class="sxs-lookup"><span data-stu-id="6ca17-112">You can also [import and export Store listings](import-and-export-store-listings.md) if you'd like to enter your listing info offline in a .csv file, rather than providing this info directly in the dashboard.</span></span> <span data-ttu-id="6ca17-113">Dies kann besonders dann hilfreich sein, wenn Sie Einträge in vielen Sprachen haben.</span><span class="sxs-lookup"><span data-stu-id="6ca17-113">This may be especially convenient if you have listings in many languages.</span></span>
+
+<span data-ttu-id="6ca17-114">Standardmäßig verwenden wir denselben Store-Eintrag (pro Sprache) für alle Ihre Zielbetriebssysteme.</span><span class="sxs-lookup"><span data-stu-id="6ca17-114">By default, we'll use the same Store listing (per language) for all of your targeted operating systems.</span></span> <span data-ttu-id="6ca17-115">Wenn Sie einen benutzerdefinierten Store-Eintrag für ein bestimmtes Betriebssystem verwenden möchten, können Sie [plattformspezifische Store-Einträge erstellen](create-platform-specific-store-listings.md).</span><span class="sxs-lookup"><span data-stu-id="6ca17-115">If you'd like to use a customized Store listing for a specific operating system, you can [create platform-specific Store listings](create-platform-specific-store-listings.md).</span></span> <span data-ttu-id="6ca17-116">Ihr Standardeintrag wird für Kunden unter Windows10 immer angezeigt.</span><span class="sxs-lookup"><span data-stu-id="6ca17-116">Your default listing will always be shown to customers on Windows 10.</span></span>
+
+## <a name="store-listing-languages"></a><span data-ttu-id="6ca17-117">Sprachen für Store-Einträge</span><span class="sxs-lookup"><span data-stu-id="6ca17-117">Store listing languages</span></span>
+
+<span data-ttu-id="6ca17-118">Sie müssen die Seite **Store-Eintrag** für mindestens eine Sprache ausfüllen.</span><span class="sxs-lookup"><span data-stu-id="6ca17-118">You must complete the **Store listing** page for at least one language.</span></span> <span data-ttu-id="6ca17-119">Es wird empfohlen, einen Store-Eintrag in jeder Sprache bereitzustellen, die Ihre Pakete unterstützen. Sie haben jedoch die Möglichkeit, Sprachen zu entfernen, für die Sie keinen Store-Eintrag bereitstellen möchten.</span><span class="sxs-lookup"><span data-stu-id="6ca17-119">We recommend providing a Store listing in each language that your packages support, but you have flexibility to remove languages for which you don’t wish to provide a Store listing.</span></span> <span data-ttu-id="6ca17-120">Sie können auch Store-Einträge in zusätzlichen Sprachen bereitstellen, die von Ihren Paketen nicht unterstützt werden.</span><span class="sxs-lookup"><span data-stu-id="6ca17-120">You can also create Store listings in additional languages which aren’t supported by your packages.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="6ca17-121">Wenn Ihre Übermittlung bereits Pakete enthält, werden die in Ihren Paketen unterstützten [Sprachen](supported-languages.md) in der Übermittlungsübersicht angezeigt (es sei denn, Sie diese entfernen welche).</span><span class="sxs-lookup"><span data-stu-id="6ca17-121">If your submission includes packages already, we’ll show the [languages](supported-languages.md) supported in your packages on the submission overview page (unless you remove any of them).</span></span>
+
+<span data-ttu-id="6ca17-122">Klicken Sie zum Hinzufügen oder Entfernen von Sprachen für Ihre Store-Einträge in der Übermittlungsübersicht auf **Add/remove languages**.</span><span class="sxs-lookup"><span data-stu-id="6ca17-122">To add or remove languages for your Store listings, click **Add/remove languages** from the submission overview page.</span></span> <span data-ttu-id="6ca17-123">Wenn Sie bereits Pakete hochgeladen haben, sind die Sprachen dafür im Abschnitt **Languages supported by your packages** aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="6ca17-123">If you‘ve already uploaded packages, you’ll see their languages listed in the **Languages supported by your packages** section.</span></span> <span data-ttu-id="6ca17-124">Klicken Sie zum Entfernen einer oder mehrerer dieser Sprachen auf **Entfernen**.</span><span class="sxs-lookup"><span data-stu-id="6ca17-124">To remove one or more of these languages, click **Remove**.</span></span> <span data-ttu-id="6ca17-125">Wenn Sie später eine Sprache angeben möchten, die Sie zuvor aus diesem Abschnittentfernt haben, können Sie auf **Hinzufügen** klicken.</span><span class="sxs-lookup"><span data-stu-id="6ca17-125">If you later decide to include a language that you previously removed from this section, you can click **Add**.</span></span>
+
+<span data-ttu-id="6ca17-126">Im Abschnitt **Additional Store listing languages** können Sie auf **Manage additional languages** klicken, um Sprachen hinzuzufügen oder zu entfernen, die  *nicht* in Ihren Paketen enthalten sind.</span><span class="sxs-lookup"><span data-stu-id="6ca17-126">In the **Additional Store listing languages** section, you can click **Manage additional languages** to add or remove languages that are *not* included in your packages.</span></span> <span data-ttu-id="6ca17-127">Aktivieren Sie die Kontrollkästchen für die Sprachen, die Sie hinzufügen möchten, und klicken Sie dann auf **Aktualisieren**.</span><span class="sxs-lookup"><span data-stu-id="6ca17-127">Check the boxes for the languages that you’d like to add, then click **Update**.</span></span> <span data-ttu-id="6ca17-128">Die ausgewählten Sprachen werden im Abschnitt **Additional Store listing languages** angezeigt.</span><span class="sxs-lookup"><span data-stu-id="6ca17-128">The languages you’ve selected will be displayed in the **Additional Store listing languages** section.</span></span> <span data-ttu-id="6ca17-129">Klicken Sie zum Entfernen einer oder mehrerer dieser Sprachen auf **Entfernen** (oder klicken Sie auf **Manage additional languages**, und deaktivieren Sie die Kontrollkästchen für die Sprachen, die Sie entfernen möchten).</span><span class="sxs-lookup"><span data-stu-id="6ca17-129">To remove one or more of these languages, click **Remove** (or click **Manage additional languages** and uncheck the box for languages you’d like to remove).</span></span>
+
+<span data-ttu-id="6ca17-130">Wenn Sie Ihre Auswahl getroffen haben, klicken Sie auf **Speichern**, um zur Übermittlungsübersicht zurückzukehren.</span><span class="sxs-lookup"><span data-stu-id="6ca17-130">When you have finished making your selections, click **Save** to return to the submission overview page.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="6ca17-131">Wenn Sie einen Store-Eintrag in einer Sprache erstellen, die von Ihren Paketen nicht unterstützt wird, müssen Sie angeben, welcher Ihrer reservierten App-Namen in diesem Store-Eintrag angezeigt werden soll, da für diese Sprache kein verknüpftes Paket vorliegt, von dem der Name abgerufen werden könnte.</span><span class="sxs-lookup"><span data-stu-id="6ca17-131">When creating a Store listing in a language that isn't supported by your packages, you'll need to indicate which of your reserved app names should be displayed in that Store listing, since there isn't an associated package in that language from which to pull the name.</span></span> <span data-ttu-id="6ca17-132">Der Name, den Sie hier wählen, gilt nur für den Store-Eintrag für diese Sprache und wirkt sich nicht auf den Namen aus, der angezeigt wird, wenn ein Kunde die App installiert.</span><span class="sxs-lookup"><span data-stu-id="6ca17-132">The name you choose here only applies to the Store listing for this language and does not impact the name displayed when a customer installs the app.</span></span>
+
+<span data-ttu-id="6ca17-133">Klicken Sie zum Bearbeiten eines Store-Eintrags in der Übermittlungsübersicht auf den Namen der Sprache.</span><span class="sxs-lookup"><span data-stu-id="6ca17-133">To edit a Store listing, click the language name from the submission overview page.</span></span>
+
+<span data-ttu-id="6ca17-134">Oben auf der Seite **Store-Eintrag** sehen Sie die Felder, die dem standardmäßigen Store-Eintrag für die ausgewählte Sprache zugeordnet sind.</span><span class="sxs-lookup"><span data-stu-id="6ca17-134">At the top of the **Store listing** page are the fields associated with your default Store listing for the selected language.</span></span> <span data-ttu-id="6ca17-135">Diese Felder sind für alle Kunden sichtbar, sofern keine Pakete für frühere Betriebssystemversionen (Windows8.x oder früher, Windows Phone8.x oder früher) vorhanden sind und Sie keine plattformspezifischen Store-Einträge mit verschiedenen Screenshots oder Informationen erstellt haben, die Kunden unter den angegebenen Betriebssystemversionen angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="6ca17-135">These fields will be shown to all of your customers, unless you have packages targeting earlier OS versions (Windows 8.x or earlier; Windows Phone 8.x or earlier) and create platform-specific Store listings to include different screenshots or info to display to customers on specified OS versions.</span></span> <span data-ttu-id="6ca17-136">Weitere Informationen finden Sie unter [Erstellen plattformspezifischer Store-Einträge](create-platform-specific-store-listings.md).</span><span class="sxs-lookup"><span data-stu-id="6ca17-136">For more info, see [Create platform-specific Store listings](create-platform-specific-store-listings.md).</span></span>
+
+## <a name="description"></a><span data-ttu-id="6ca17-137">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="6ca17-137">Description</span></span>
+
+<span data-ttu-id="6ca17-138">Über das Beschreibungsfeld können Sie Ihren Kunden den Zweck der App mitteilen.</span><span class="sxs-lookup"><span data-stu-id="6ca17-138">The description field is where you can tell customers what your app does.</span></span> <span data-ttu-id="6ca17-139">Dieses Feld ist erforderlich und kann bis zu 10.000 Zeichen reinen Text enthalten.</span><span class="sxs-lookup"><span data-stu-id="6ca17-139">This field is required, and will accept up to 10,000 characters of plain text.</span></span>
+
+<span data-ttu-id="6ca17-140">Tipps zum Erstellen einer aussagekräftigen Beschreibung finden Sie unter [Erstellen einer interessanten App-Beschreibung](write-a-great-app-description.md).</span><span class="sxs-lookup"><span data-stu-id="6ca17-140">For some tips on making your description stand out, see [Write a great app description](write-a-great-app-description.md).</span></span>
+
+## <a name="release-notes"></a><span data-ttu-id="6ca17-141">Versionshinweise</span><span class="sxs-lookup"><span data-stu-id="6ca17-141">Release notes</span></span>
+
+<span data-ttu-id="6ca17-142">Wenn Sie Ihre App erstmalig einrichten, werden Sie dieses Feld wahrscheinlich leer lassen.</span><span class="sxs-lookup"><span data-stu-id="6ca17-142">If this is the first time you're submitting your app, you'll probably want to leave this field blank.</span></span> <span data-ttu-id="6ca17-143">Bei Updates einer vorhandenen App teilen Sie dem Kunden hier mit, was sich in der aktuellen Version geändert hat.</span><span class="sxs-lookup"><span data-stu-id="6ca17-143">For an update to an existing app, this is where you can let customer know what's changed in the latest release.</span></span> <span data-ttu-id="6ca17-144">Dieses Feld ist auf 1.500 Zeichen beschränkt.</span><span class="sxs-lookup"><span data-stu-id="6ca17-144">This field has a 1500 character limit.</span></span>
+
+## <a name="screenshots"></a><span data-ttu-id="6ca17-145">Screenshots</span><span class="sxs-lookup"><span data-stu-id="6ca17-145">Screenshots</span></span>
+
+<span data-ttu-id="6ca17-146">Ein Bildschirmfoto ist erforderlich, um Ihre App zu übermitteln.</span><span class="sxs-lookup"><span data-stu-id="6ca17-146">One screenshot is required in order to submit your app.</span></span> <span data-ttu-id="6ca17-147">Wir empfehlen die Bereitstellung von mindestens einem Bildschirmfoto für jeden Gerätetyp, den Ihre App unterstützt.</span><span class="sxs-lookup"><span data-stu-id="6ca17-147">We recommend providing at least one screenshot for each device type that your app supports.</span></span>
+
+<span data-ttu-id="6ca17-148">Weitere Informationen finden Sie unter [App-Screenshots und -Bilder](app-screenshots-and-images.md#screenshots).</span><span class="sxs-lookup"><span data-stu-id="6ca17-148">For more info, see [App screenshots and images](app-screenshots-and-images.md#screenshots).</span></span>
+
+## <a name="store-logos"></a><span data-ttu-id="6ca17-149">Store-Logos</span><span class="sxs-lookup"><span data-stu-id="6ca17-149">Store logos</span></span> 
+
+<span data-ttu-id="6ca17-150">Store-Logos sind optionale Bilder, die Sie hochladen können, um die Art und Weise zu verbessern, auf die Ihre App für Kunden angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="6ca17-150">Store logos are optional images that you can upload to enhance the way your app is displayed to customers.</span></span> <span data-ttu-id="6ca17-151">Sie können optional auch angeben, dass nur hier hochgeladene Bilder im Store-Eintrag der App für Windows10-Kunden verwendet werden sollen, statt dem Store die Verwendung von Logobildern aus den Paketen Ihrer App zu erlauben.</span><span class="sxs-lookup"><span data-stu-id="6ca17-151">You can also optionally specify that only images you upload here should be used in your app’s Store listing for Windows 10 customers, rather than allowing the Store to use logo images from your app’s packages.</span></span>
+
+> [!IMPORTANT]
+> <span data-ttu-id="6ca17-152">Wenn Ihre App Xbox unterstützt oder wenn Windows Phone8.1 oder frühere Versionen unterstützt werden, müssen Sie hier bestimmte Bilder bereitstellen, damit der Eintrag im Store korrekt angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="6ca17-152">If your app supports Xbox, or if it supports Windows Phone 8.1 or earlier, you must provide certain images here in order for the listing to appear properly in the Store.</span></span> 
+
+<span data-ttu-id="6ca17-153">Weitere Informationen finden Sie unter [Store-Logos](app-screenshots-and-images.md#store-logos).</span><span class="sxs-lookup"><span data-stu-id="6ca17-153">For more info, see [Store logos](app-screenshots-and-images.md#store-logos).</span></span>
+
+## <a name="additional-art-assets"></a><span data-ttu-id="6ca17-154">Zusätzliche Grafikobjekte</span><span class="sxs-lookup"><span data-stu-id="6ca17-154">Additional art assets</span></span>
+
+<span data-ttu-id="6ca17-155">Sie können zusätzliche Ressourcen für das Produkt übermitteln, einschließlich Trailer und Werbebilder.</span><span class="sxs-lookup"><span data-stu-id="6ca17-155">You can submit additional assets for your product, including trailers and promotional images.</span></span> <span data-ttu-id="6ca17-156">Diese sind optional, aber es empfiehlt sich, so viele wie möglich hochzuladen.</span><span class="sxs-lookup"><span data-stu-id="6ca17-156">These are all optional, but we recommend that you consider uploading as many of them as possible.</span></span> <span data-ttu-id="6ca17-157">Diese Bilder können Kunden eine bessere Vorstellung davon bieten, worum es sich bei Ihrem Produkt handelt, und den Eintrag ansprechender gestalten.</span><span class="sxs-lookup"><span data-stu-id="6ca17-157">These images can help give customers a better idea of what your product is and make a more enticing listing.</span></span>
+
+<span data-ttu-id="6ca17-158">Weitere Informationen finden Sie unter [Zusätzliche Grafikobjekte](app-screenshots-and-images.md#additional-art-assets).</span><span class="sxs-lookup"><span data-stu-id="6ca17-158">For more info, see [Additional art assets](app-screenshots-and-images.md#additional-art-assets).</span></span>
+
+## <a name="additional-information"></a><span data-ttu-id="6ca17-159">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="6ca17-159">Additional information</span></span>
+
+<span data-ttu-id="6ca17-160">Die Felder in diesem Abschnittsind alle optional, können jedoch verwendet werden, um Kunden mehr Informationen zur Funktionsweise Ihrer App und zu den Voraussetzungen für eine optimale Nutzung anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="6ca17-160">The fields in this section are all optional, but can be used to help customers understand more about what your app does and what is required for the best experience.</span></span> <span data-ttu-id="6ca17-161">Wir empfehlen die Überprüfung der unten beschriebenen Optionen und die Bereitstellung aller Informationen, die Kunden über Ihre App vielleicht wissen müssen oder die Kunden zum Herunterladen bewegen können.</span><span class="sxs-lookup"><span data-stu-id="6ca17-161">We suggest reviewing the options described below and providing any information that customers might need to know about your app, or that could help entice them to download it.</span></span>
+
+### <a name="app-features"></a><span data-ttu-id="6ca17-162">App-Features</span><span class="sxs-lookup"><span data-stu-id="6ca17-162">App features</span></span>
+
+<span data-ttu-id="6ca17-163">Hierbei handelt es sich um kurze Zusammenfassungen der wichtigsten App-Features.</span><span class="sxs-lookup"><span data-stu-id="6ca17-163">These are short summaries of your app's key features.</span></span> <span data-ttu-id="6ca17-164">Diese werden dem Kunden neben der Beschreibung als Aufzählung im Store-Eintrag Ihrer App angezeigt.</span><span class="sxs-lookup"><span data-stu-id="6ca17-164">They are displayed to the customer as a bulleted list in your app's Store listing, in addition to the Description.</span></span> <span data-ttu-id="6ca17-165">Die Beschreibung sollte pro Feature nur wenige Wörter (und nicht mehr als 200Zeichen) enthalten.</span><span class="sxs-lookup"><span data-stu-id="6ca17-165">Keep these brief, with just a few words (and no more than 200 characters) per feature.</span></span> <span data-ttu-id="6ca17-166">Sie können bis zu 20Features hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="6ca17-166">You may include up to 20 features.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="6ca17-167">Ihre App-Features werden im Store-Eintrag mit Aufzählungszeichen versehen. Fügen Sie daher keine eigenen Aufzählungszeichen hinzu.</span><span class="sxs-lookup"><span data-stu-id="6ca17-167">Your app features will appear bulleted in your Store listing, so don't add your own bullets.</span></span>
+
+### <a name="additional-system-requirements"></a><span data-ttu-id="6ca17-168">Weitere Systemanforderungen</span><span class="sxs-lookup"><span data-stu-id="6ca17-168">Additional system requirements</span></span>
+
+<span data-ttu-id="6ca17-169">Bei Bedarf können Sie die Hardwarekonfigurationen beschreiben, die für die ordnungsgemäße Funktionsweise der App erforderlich sind, über die Informationen hinaus, die Sie im Abschnitt **Systemanforderungen** unter [App-Eigenschaften](enter-app-properties.md#system-requirements) angegeben haben.</span><span class="sxs-lookup"><span data-stu-id="6ca17-169">If needed, you can describe the hardware configurations that your app requires to work properly (beyond the info you provided in the **System requirements** section in [App properties](enter-app-properties.md#system-requirements).</span></span> <span data-ttu-id="6ca17-170">Dies ist besonders wichtig, wenn Ihre App Hardware benötigt, die u.U. nicht auf jedem Computer vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="6ca17-170">This is especially important if your app requires hardware that might not be available on every computer.</span></span>
+
+<span data-ttu-id="6ca17-171">Sie können bis zu 11Elemente sowohl für **Mindesthardwareanforderungen** als auch für **Empfohlene Hardware** eingeben.</span><span class="sxs-lookup"><span data-stu-id="6ca17-171">You can enter up to 11 items for both **Minimum hardware** and **Recommended hardware**.</span></span>  <span data-ttu-id="6ca17-172">Diese werden dem Kunden im App-Eintrag als Aufzählung angezeigt.</span><span class="sxs-lookup"><span data-stu-id="6ca17-172">They are displayed to the customer as a bulleted list in your app's listing.</span></span> <span data-ttu-id="6ca17-173">Die Beschreibung sollte pro Element nur wenige Wörter (und nicht mehr als 200Zeichen) enthalten.</span><span class="sxs-lookup"><span data-stu-id="6ca17-173">Keep these brief, with just a few words (and no more than 200 characters) per item.</span></span>
+
+<span data-ttu-id="6ca17-174">Die Informationen, die Sie hier eingeben, werden Kunden im Store-Eintrag Ihrer App unter Windows10, Version 1607 oder höher, zusammen mit den auf der Eigenschaftenseite des Produkts angegebenen Anforderungen angezeigt.</span><span class="sxs-lookup"><span data-stu-id="6ca17-174">The info you enter here will be shown to customers viewing your app's Store listing on Windows 10, version 1607 or later, along with the requirements you indicated on the product's properties page.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="6ca17-175">Die zusätzlichen Systemanforderungen werden im Store-Eintrag mit Aufzählungszeichen versehen. Fügen Sie daher keine eigenen Aufzählungszeichen hinzu.</span><span class="sxs-lookup"><span data-stu-id="6ca17-175">Your additional system requirements will appear bulleted in your Store listing, so don't add your own bullets.</span></span>
+
+### <a name="developed-by"></a><span data-ttu-id="6ca17-176">Entwickelt von</span><span class="sxs-lookup"><span data-stu-id="6ca17-176">Developed by</span></span>
+
+<span data-ttu-id="6ca17-177">Geben Sie hier Text ein, wenn Sie das Feld **Entwickelt von** im Store-Eintrag Ihrer App anzeigen möchten.</span><span class="sxs-lookup"><span data-stu-id="6ca17-177">Enter text here if you want to include a **Developed by** field in your app's Store listing.</span></span> <span data-ttu-id="6ca17-178">(Das Feld **Veröffentlicht von** zeigt den mit Ihrem Konto verknüpften Anzeigename des Herausgebers an, wenn Sie einen Wert für das Feld **Veröffentlicht von** angeben.)</span><span class="sxs-lookup"><span data-stu-id="6ca17-178">(The **Published by** field will list the publisher display name associated with your account, whether or not you provide a value for the **Developed by** field.)</span></span>
+
+<span data-ttu-id="6ca17-179">Dieses Feld ist auf 255 Zeichen beschränkt.</span><span class="sxs-lookup"><span data-stu-id="6ca17-179">This field has a 255 character limit.</span></span>
 
 
-Im Abschnitt **Store-Einträge** des [App-Übermittlungsprozesses](app-submissions.md) stellen Sie den Text und die [Bilder](app-screenshots-and-images.md) bereit, die den Kunden im Store-Eintrag Ihrer App angezeigt werden.
+## <a name="shared-fields"></a><span data-ttu-id="6ca17-180">Freigegebene Felder</span><span class="sxs-lookup"><span data-stu-id="6ca17-180">Shared fields</span></span>
 
-Viele der Felder in einem **Store-Eintrag** sind optional. Es wird jedoch empfohlen, mehrere Bilder und so viele Infos wie möglich bereitzustellen, damit Ihr Eintrag auffällt. Im Schritt **Store-Eintrag** sollten Sie mindestens eine Textbeschreibung und mindestens einen [Screenshot](app-screenshots-and-images.md) angeben.
+<span data-ttu-id="6ca17-181">Mit den unten beschriebenen Elementen können Kunden Ihr Produkt finden und verstehen.</span><span class="sxs-lookup"><span data-stu-id="6ca17-181">The items described below help customers discover and understand your product.</span></span> <span data-ttu-id="6ca17-182">Die hier eingegebenen Informationen gelten für alle Store-Einträge einer bestimmten Sprache, auch wenn Sie [plattformspezifische Store-Einträge erstellen](create-platform-specific-store-listings.md).</span><span class="sxs-lookup"><span data-stu-id="6ca17-182">The info you enter here will apply to all of your Store listings in a given language, regardless of operating system, even if you [create platform-specific Store listings](create-platform-specific-store-listings.md).</span></span>
 
-Standardmäßig verwenden wir denselben Store-Eintrag (pro Sprache) für alle Ihre Zielbetriebssysteme. Wenn Sie einen benutzerdefinierten Store-Eintrag für ein bestimmtes Betriebssystem verwenden möchten, können Sie [plattformspezifische Store-Einträge erstellen](create-platform-specific-store-listings.md).
+### <a name="search-terms"></a><span data-ttu-id="6ca17-183">Suchbegriffe</span><span class="sxs-lookup"><span data-stu-id="6ca17-183">Search terms</span></span>
 
-## <a name="store-listing-languages"></a>Sprachen für Store-Einträge
+<span data-ttu-id="6ca17-184">Suchbegriffe (früher als Schlüsselwörter bezeichnet) sind einzelne Wörter oder kurze Ausdrücke, die für Kunden nicht angezeigt werden, jedoch dazu beitragen, dass Ihre App in Suchergebnissen für den Begriff erscheint.</span><span class="sxs-lookup"><span data-stu-id="6ca17-184">Search terms (formerly called keywords) are single words or short phrases that are not displayed to customers, but can help your app appear in search results related to the term.</span></span> <span data-ttu-id="6ca17-185">Sie können bis zu 7 Suchbegriffe mit jeweils maximal 30 Zeichen aufnehmen und nicht mehr als 21 separate Wörter für alle Suchbegriffe verwenden.</span><span class="sxs-lookup"><span data-stu-id="6ca17-185">You can include up to 7 search terms with a maximum of 30 characters each, and can use no more than 21 separate words across all search terms.</span></span>
 
-Sie müssen die Seite **Store-Eintrag** für mindestens eine Sprache ausfüllen. Es wird empfohlen, einen Store-Eintrag in jeder Sprache bereitzustellen, die Ihre Pakete unterstützen. Sie haben jedoch die Möglichkeit, Sprachen zu entfernen, für die Sie keinen Store-Eintrag bereitstellen möchten. Sie können auch Store-Einträge in zusätzlichen Sprachen bereitstellen, die von Ihren Paketen nicht unterstützt werden.
+<span data-ttu-id="6ca17-186">Beim Hinzufügen von Suchbegriffen sollten Sie überlegen, mit welchen Begriffen Kunden nach Ihrer App suchen würden, insbesondere, wenn sie nicht im App-Namen vorkommen.</span><span class="sxs-lookup"><span data-stu-id="6ca17-186">When adding search terms, think about the words that customers might use when searching for apps like yours, especially if they're not part of your app's name.</span></span> <span data-ttu-id="6ca17-187">Verwenden Sie nur Suchbegriffe, die wirklich für Ihre App relevant sind.</span><span class="sxs-lookup"><span data-stu-id="6ca17-187">Be sure not to use any search terms that are not actually relevant to your app.</span></span>
 
-> **Hinweis:** Wenn Ihre Übermittlung bereits Pakete enthält, werden die in Ihren Paketen unterstützten [Sprachen](supported-languages.md) in der Übermittlungsübersicht angezeigt (es sei denn, Sie entfernen diese).
 
-Klicken Sie zum Hinzufügen oder Entfernen von Sprachen für Ihre Store-Einträge in der Übermittlungsübersicht auf **Manage Store listing languages**. Wenn Sie bereits Pakete hochgeladen haben, sind die Sprachen dafür im Abschnitt **Languages supported by your packages** aufgeführt. Klicken Sie zum Entfernen einer oder mehrerer dieser Sprachen auf **Entfernen**. Wenn Sie später eine Sprache angeben möchten, die Sie zuvor aus diesem Abschnitt entfernt haben, können Sie auf **Hinzufügen** klicken.
+### <a name="privacy-policy"></a><span data-ttu-id="6ca17-188">Datenschutzrichtlinie</span><span class="sxs-lookup"><span data-stu-id="6ca17-188">Privacy policy</span></span>
 
-Im Abschnitt **Additional Store listing languages** können Sie auf **Manage additional languages** klicken, um Sprachen hinzuzufügen oder zu entfernen, die  *nicht* in Ihren Paketen enthalten sind. Aktivieren Sie die Kontrollkästchen für die Sprachen, die Sie hinzufügen möchten, und klicken Sie dann auf **Aktualisieren**. Die ausgewählten Sprachen werden im Abschnitt **Additional Store listing languages** angezeigt. Klicken Sie zum Entfernen einer oder mehrerer dieser Sprachen auf **Entfernen** (oder klicken Sie auf **Manage additional languages**, und deaktivieren Sie die Kontrollkästchen für die Sprachen, die Sie entfernen möchten).
+<span data-ttu-id="6ca17-189">Wenn Ihre App über eine Datenschutzrichtlinie verfügt, geben Sie die URL hier ein.</span><span class="sxs-lookup"><span data-stu-id="6ca17-189">If you have a privacy policy for your app, enter its URL here.</span></span> <span data-ttu-id="6ca17-190">Sie müssen sicherstellen, dass die geltenden Datenschutzgesetze eingehalten werden und müssen bei Bedarf eine Datenschutzrichtlinie bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="6ca17-190">You are responsible for ensuring your app complies with privacy laws and regulations, and for providing a privacy policy, if required.</span></span>
 
-Wenn Sie Ihre Auswahl getroffen haben, klicken Sie auf **Speichern**, um zur Übermittlungsübersicht zurückzukehren.
+> [!IMPORTANT]
+> <span data-ttu-id="6ca17-191">Microsoft stellt keine standardmäßigen Datenschutzrichtlinien für Ihre App bereit.</span><span class="sxs-lookup"><span data-stu-id="6ca17-191">Microsoft doesn't provide a default privacy policy for your app.</span></span> <span data-ttu-id="6ca17-192">Außerdem ist Ihre App nicht durch Datenschutzrichtlinien von Microsoft abgedeckt.</span><span class="sxs-lookup"><span data-stu-id="6ca17-192">Likewise, your app is not covered by any Microsoft privacy policy.</span></span> <span data-ttu-id="6ca17-193">Um festzustellen, ob Ihre App eine Datenschutzrichtlinie benötigt, lesen Sie die [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058) und die [Windows Store-Richtlinien](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_5_1).</span><span class="sxs-lookup"><span data-stu-id="6ca17-193">To determine if your app requires a privacy policy, review the [App Developer Agreement](https://msdn.microsoft.com/library/windows/apps/hh694058) and the [Windows Store Policies](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_5_1).</span></span>
 
-> **Hinweis:** Wenn Sie einen Store-Eintrag in einer Sprache erstellen, die von Ihren Paketen nicht unterstützt wird, müssen Sie angeben, welcher Ihrer reservierten App-Namen in diesem Store-Eintrag angezeigt werden soll, da für diese Sprache kein verknüpftes Paket vorliegt, von dem der Name abgerufen werden könnte. Der Name, den Sie hier wählen, gilt nur für den Store-Eintrag für diese Sprache und wirkt sich nicht auf den Namen aus, der angezeigt wird, wenn ein Kunde die App installiert.
+### <a name="copyright-and-trademark-info"></a><span data-ttu-id="6ca17-194">Urheberrecht- und Markeninformationen</span><span class="sxs-lookup"><span data-stu-id="6ca17-194">Copyright and trademark info</span></span>
 
-Klicken Sie zum Bearbeiten eines Store-Eintrags in der Übermittlungsübersicht auf den Namen der Sprache. Die Abschnitte der Seite **Store-Eintrag** werden nachstehend beschrieben.
+<span data-ttu-id="6ca17-195">Zusätzliche Urheberrecht- und Markeninformationen können Sie bei Bedarf hier eingeben.</span><span class="sxs-lookup"><span data-stu-id="6ca17-195">If you'd like to provide additional copyright and/or trademark info, enter it here.</span></span> <span data-ttu-id="6ca17-196">Dieses Feld ist auf 200 Zeichen beschränkt.</span><span class="sxs-lookup"><span data-stu-id="6ca17-196">This field has a 200 character limit.</span></span>
 
-## <a name="default-store-listing-fields"></a>Standardmäßige Store-Eintrags-Felder
+### <a name="additional-license-terms"></a><span data-ttu-id="6ca17-197">Zusätzliche Lizenzbedingungen</span><span class="sxs-lookup"><span data-stu-id="6ca17-197">Additional license terms</span></span>
 
-Oben auf der Seite **Store-Eintrag** sehen Sie die Felder, die dem standardmäßigen Store-Eintrag für die ausgewählte Sprache zugeordnet sind. Diese Felder sind für alle Kunden sichtbar, sofern keine Pakete für frühere Betriebssystemversionen (Windows 8.x oder früher, Windows Phone 8.x oder früher) vorhanden sind und Sie keine plattformspezifischen Store-Einträge mit verschiedenen Screenshots oder Informationen erstellt haben, die Kunden unter den angegebenen Betriebssystemversionen angezeigt werden. Weitere Informationen finden Sie unter [Erstellen plattformspezifischer Store-Einträge](create-platform-specific-store-listings.md).
+<span data-ttu-id="6ca17-198">Lassen Sie dieses Feld leer, wenn Sie möchten, dass Ihre App für Kunden gemäß den **Standardbedingungen für anwendungsbezogene Lizenzen** (am Ende der [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058)) lizenziert wird.</span><span class="sxs-lookup"><span data-stu-id="6ca17-198">Leave this field blank if you want your app to be licensed to customers under the terms of the **Standard Application License Terms** (which are linked to from the [App Developer Agreement](https://msdn.microsoft.com/library/windows/apps/hh694058)).</span></span>
 
-### <a name="description"></a>Beschreibung
+<span data-ttu-id="6ca17-199">Wenn sich Ihre Lizenzbedingungen von den **Standardbedingungen für anwendungsbezogene Lizenzen** unterscheiden, geben Sie sie hier ein.</span><span class="sxs-lookup"><span data-stu-id="6ca17-199">If your license terms are different from the **Standard Application License Terms**, enter them here.</span></span>
 
-Über das Beschreibungsfeld können Sie Ihren Kunden den Zweck der App mitteilen. Dieses Feld ist erforderlich und kann bis zu 10.000 Zeichen reinen Text enthalten.
+<span data-ttu-id="6ca17-200">Wenn Sie einen einzelnen URL in dieses Feld eingeben, wird dieser für Kunden als Link angezeigt, auf den sie klicken können, um Ihre zusätzlichen Lizenzbedingungen zu lesen.</span><span class="sxs-lookup"><span data-stu-id="6ca17-200">If you enter a single URL into this field, it will be displayed to customers as a link that they can click to read your additional license terms.</span></span> <span data-ttu-id="6ca17-201">Dies ist hilfreich, wenn Ihre zusätzlichen Lizenzbedingungen sehr lang sind, oder wenn Sie Links oder Formatierungen in die zusätzlichen Lizenzbedingungen einschließen möchten, auf die geklickt werden kann.</span><span class="sxs-lookup"><span data-stu-id="6ca17-201">This is useful if your additional license terms are very long, or if you want to include clickable links or formatting in your additional license terms.</span></span>
 
-Tipps zum Erstellen einer aussagekräftigen Beschreibung finden Sie unter [Erstellen einer interessanten App-Beschreibung](write-a-great-app-description.md).
+<span data-ttu-id="6ca17-202">Sie können auch bis zu 10.000 Zeichen Texts in dieses Feld eingeben.</span><span class="sxs-lookup"><span data-stu-id="6ca17-202">You can also enter up to 10,000 characters of text in this field.</span></span> <span data-ttu-id="6ca17-203">Wenn Sie dies tun, werden Kunden die zusätzlichen Lizenzbedingungen als reiner Text angezeigt.</span><span class="sxs-lookup"><span data-stu-id="6ca17-203">If you do that, customers will see these additional license terms displayed as plain text.</span></span>
 
-### <a name="release-notes"></a>Versionshinweise
+### <a name="website"></a><span data-ttu-id="6ca17-204">Website</span><span class="sxs-lookup"><span data-stu-id="6ca17-204">Website</span></span>
 
-Wenn Sie Ihre App erstmalig einrichten, werden Sie dieses Feld wahrscheinlich leer lassen. Bei Updates einer vorhandenen App teilen Sie dem Kunden hier mit, was sich in der aktuellen Version geändert hat. Dieses Feld ist auf 1.500 Zeichen beschränkt.
+<span data-ttu-id="6ca17-205">Geben Sie die URL der Webseite für Ihre App ein.</span><span class="sxs-lookup"><span data-stu-id="6ca17-205">Enter the URL of the web page for your app.</span></span> <span data-ttu-id="6ca17-206">Diese URL muss auf eine Seite Ihrer eigenen Website verweisen, nicht auf den Webeintrag Ihrer App im Store.</span><span class="sxs-lookup"><span data-stu-id="6ca17-206">This URL must point to a page on your own website, not your app's web listing in the Store.</span></span>
 
-### <a name="screenshots"></a>Screenshots
+### <a name="support-contact-info"></a><span data-ttu-id="6ca17-207">Support – Kontaktinfos</span><span class="sxs-lookup"><span data-stu-id="6ca17-207">Support contact info</span></span>
 
-In den meisten Fällen sehen Sie mehrere Felder zur Bereitstellung von Screenshots für unterschiedliche Gerätetypen. Es ist nicht erforderlich, separate Screenshots für unterschiedliche Gerätetypen bereitzustellen. Für die Einreichung ist ein Screenshot ausreichend (Sie können jedoch bis zu neun Screenshots pro Gerätetyp hinzufügen). In den meisten Fällen empfehlen wir, Screenshots für so viele Gerätetypen hinzuzufügen, wie von Ihrer App unterstützt werden, damit die Kunden sehen, wie die App auf ihrem Gerät aussieht.
+<span data-ttu-id="6ca17-208">Geben Sie die URL der Webseite ein, auf der Ihre Kunden Support für die App erhalten, oder eine E-Mail-Adresse, unter der Kunden den Support erreichen können.</span><span class="sxs-lookup"><span data-stu-id="6ca17-208">Enter the URL of the web page where your customers can go for support on your app, or an email address that customers can contact for support.</span></span>
 
-Weitere Informationen finden Sie unter [App-Screenshots und -Bilder](app-screenshots-and-images.md).
-
-### <a name="app-tile-icon"></a>Symbol für App-Kachel
-
-Das Symbol für die App-Kachel wird verwendet, wenn der Store-Eintrag der App Kunden mit Windows Phone 8.1 und früher angezeigt wird (und in bestimmten Store-Layouts für Kunden mit Windows 10). Sie müssen eine PNG-Datei mit 300 x 300 Pixel bereitstellen.
-
-Weitere Informationen finden Sie unter [Symbol für App-Kachel](app-screenshots-and-images.md#app-tile-icon).
-
-### <a name="app-features"></a>App-Features
-
-Hierbei handelt es sich um kurze Zusammenfassungen der wichtigsten App-Features. Diese werden dem Kunden neben der Beschreibung als Aufzählung im Store-Eintrag Ihrer App angezeigt. Die Beschreibung sollte pro Feature nur wenige Wörter (und nicht mehr als 200 Zeichen) enthalten. Sie können bis zu 20 Features hinzufügen.
-
-**Hinweis:** Diese werden im Store-Eintrag mit Aufzählungszeichen versehen. Fügen Sie daher keine eigenen Aufzählungszeichen hinzu.
-
-### <a name="additional-system-requirements"></a>Weitere Systemanforderungen
-
-Bei Bedarf können Sie die Hardwarekonfigurationen beschreiben, die für die ordnungsgemäße Funktionsweise der App erforderlich sind, über die Informationen hinaus, die Sie im Abschnitt **Systemanforderungen** unter [App-Eigenschaften](enter-app-properties.md#system-requirements) angegeben haben. Dies ist besonders wichtig, wenn Ihre App Hardware benötigt, die u. U. nicht auf jedem Computer vorhanden ist.
-
- Sie können bis zu 11 Elemente sowohl für **Mindesthardwareanforderungen** als auch für **Empfohlene Hardware** eingeben.  Diese werden dem Kunden im App-Eintrag als Aufzählung angezeigt. Die Beschreibung sollte pro Element nur wenige Wörter (und nicht mehr als 200 Zeichen) enthalten. Die Informationen, die Sie hier eingeben, werden Kunden im Store-Eintrag Ihrer App unter Windows 10, Version 1607 oder höher, zusammen mit den auf der Eigenschaftenseite des Produkts angegebenen Anforderungen angezeigt.
-
-**Hinweis:** Diese werden im Eintrag mit Aufzählungszeichen versehen. Fügen Sie daher keine eigenen Aufzählungszeichen hinzu.
-
-## <a name="shared-fields"></a>Freigegebene Felder
-
-Die unten beschriebenen Elemente sind freigegebene Felder, die unabhängig vom Betriebssystem für alle Store-Einträge einer bestimmten Sprache gelten, auch wenn Sie [plattformspezifische Store-Einträge erstellen](create-platform-specific-store-listings.md).
-
-### <a name="keywords"></a>Schlüsselwörter
-
-Schlüsselwörter sind einzelne Wörter oder kurze Ausdrücke, die für Kunden nicht angezeigt werden, jedoch dazu beitragen, dass Ihre App in Suchergebnissen erscheint. Sie können bis zu sieben Schlüsselwörter mit maximal 30 Zeichen einschließen.
-
-Wenn Sie Schlüsselwörter hinzufügen möchten, sollten Sie überlegen, mit welchen Begriffen Kunden nach Ihrer App suchen würden, insbesondere, wenn sie nicht im App-Namen vorkommen. Verwenden Sie nur Schlüsselwörter, die wirklich für Ihre App relevant sind.
-
-### <a name="copyright-and-trademark-info"></a>Urheberrecht- und Markeninformationen
-
-Zusätzliche Urheberrecht- und Markeninformationen können Sie bei Bedarf hier eingeben. Dieses Feld ist auf 200 Zeichen beschränkt.
-
-### <a name="additional-license-terms"></a>Zusätzliche Lizenzbedingungen
-
-Lassen Sie dieses Feld leer, wenn Sie möchten, dass Ihre App für Kunden gemäß den **Standardbedingungen für anwendungsbezogene Lizenzen** (am Ende der [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058)) lizenziert wird.
-
-Wenn sich Ihre Lizenzbedingungen von den **Standardbedingungen für anwendungsbezogene Lizenzen** unterscheiden, geben Sie sie hier ein.
-
-Wenn Sie einen einzelnen URL in dieses Feld eingeben, wird dieser für Kunden als Link angezeigt, auf den sie klicken können, um Ihre zusätzlichen Lizenzbedingungen zu lesen. Dies ist hilfreich, wenn Ihre zusätzlichen Lizenzbedingungen sehr lang sind, oder wenn Sie Links oder Formatierungen in die zusätzlichen Lizenzbedingungen einschließen möchten, auf die geklickt werden kann.
-
-Sie können auch bis zu 10.000 Zeichen Texts in dieses Feld eingeben. Wenn Sie dies tun, werden Kunden die zusätzlichen Lizenzbedingungen als reiner Text angezeigt.
-
-### <a name="website"></a>Website
-
-Geben Sie die URL der Webseite für Ihre App ein. Diese URL muss auf eine Seite Ihrer eigenen Website verweisen, nicht auf den Webeintrag Ihrer App im Store.
-
-### <a name="support-contact-info"></a>Support – Kontaktinfos
-
-Geben Sie die URL der Webseite ein, auf der Ihre Kunden Support für die App erhalten, oder eine E-Mail-Adresse, unter der Kunden den Support erreichen können.
-
-**Wichtig:** Microsoft bietet keinen App-Support für Ihre Kunden.
-
-### <a name="privacy-policy"></a>Datenschutzrichtlinie
-
-Wenn Ihre App über eine Datenschutzrichtlinie verfügt, geben Sie die URL hier ein. Sie müssen sicherstellen, dass die geltenden Datenschutzgesetze eingehalten werden und müssen bei Bedarf eine Datenschutzrichtlinie bereitstellen.
-
-**Wichtig:** Microsoft stellt keine standardmäßigen Datenschutzrichtlinien für Ihre App bereit. Außerdem ist Ihre App nicht durch Datenschutzrichtlinien von Microsoft abgedeckt. Um festzustellen, ob Ihre App eine Datenschutzrichtlinie benötigt, lesen Sie die [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058) und die [Windows Store-Richtlinien](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_5_1).
+> [!IMPORTANT]
+> <span data-ttu-id="6ca17-209">Microsoft bietet keinen App-Support für Ihre Kunden.</span><span class="sxs-lookup"><span data-stu-id="6ca17-209">Microsoft doesn't provide your customers with support for your app.</span></span>
 

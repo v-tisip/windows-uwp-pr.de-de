@@ -1,207 +1,206 @@
 ---
-author: mcleblanc
+author: PatrickFarley
 ms.assetid: 60fc48dd-91a9-4dd6-a116-9292a7c1f3be
 title: "Übersicht über das Windows Device Portal"
 description: "Hier erfahren Sie, wie Sie mit dem Windows Device Portal Ihr Gerät per Remotezugriff über ein Netzwerk oder eine USB-Verbindung konfigurieren und verwalten."
-ms.author: markl
+ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 8dfbdad7604e3aa7fad60ed777d16b4acd56b5ab
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: f22600f2bbd5dc43996550c853c6defd04565ad4
+ms.sourcegitcommit: e8cc657d85566768a6efb7cd972ebf64c25e0628
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/26/2017
 ---
-# <a name="windows-device-portal-overview"></a>Übersicht über das Windows Device Portal
+# <a name="windows-device-portal-overview"></a><span data-ttu-id="dbb93-104">Übersicht über das Windows Device Portal</span><span class="sxs-lookup"><span data-stu-id="dbb93-104">Windows Device Portal overview</span></span>
 
-Mit dem Windows Device Portal können Sie Ihr Gerät remote über ein Netzwerk oder eine USB-Verbindung konfigurieren und verwalten. Es bietet zudem erweiterte Diagnosetools, mit denen Sie Probleme beim Windows-Gerät behandeln und dessen Leistung in Echtzeit anzeigen können.
+<span data-ttu-id="dbb93-105">Mit dem Windows Device Portal können Sie Ihr Gerät per Remotezugriff über ein Netzwerk oder eine USB-Verbindung konfigurieren und verwalten.</span><span class="sxs-lookup"><span data-stu-id="dbb93-105">The Windows Device Portal lets you configure and manage your device remotely over a network or USB connection.</span></span> <span data-ttu-id="dbb93-106">Es bietet zudem erweiterte Diagnosetools, mit denen Sie Probleme beim Windows-Gerät behandeln und dessen Leistung in Echtzeit anzeigen können.</span><span class="sxs-lookup"><span data-stu-id="dbb93-106">It also provides advanced diagnostic tools to help you troubleshoot and view the real time performance of your Windows device.</span></span>
 
-Das Geräteportal ist ein Webserver auf Ihrem Gerät, mit dem Sie über einen Webbrowser auf dem PC eine Verbindung herstellen können. Wenn Ihr Gerät über einen Webbrowser verfügt, können Sie auch mit dem Browser auf dem Gerät eine lokale Verbindung herstellen.
+<span data-ttu-id="dbb93-107">Das Geräteportal ist ein Webserver auf Ihrem Gerät, mit dem Sie über einen Webbrowser auf dem PC eine Verbindung herstellen können.</span><span class="sxs-lookup"><span data-stu-id="dbb93-107">The Device Portal is a web server on your device that you can connect to from a web browser on your PC.</span></span> <span data-ttu-id="dbb93-108">Wenn Ihr Gerät über einen Webbrowser verfügt, können Sie auch mit dem Browser auf dem Gerät eine lokale Verbindung herstellen.</span><span class="sxs-lookup"><span data-stu-id="dbb93-108">If your device has a web browser, you can also connect locally with the browser on your device.</span></span>
 
-Das Windows Device Portal ist für jede Gerätefamilie verfügbar, die Features und die Einrichtung variieren jedoch abhängig von den Anforderungen des Geräts. Dieser Artikel enthält eine allgemeine Beschreibung des Device Portals und Links zu Artikeln mit ausführlicheren Informationen für jede Gerätefamilie.
+<span data-ttu-id="dbb93-109">Das Windows Device Portal ist für jede Gerätefamilie verfügbar, die Features und die Einrichtung variieren jedoch abhängig von den Anforderungen des Geräts.</span><span class="sxs-lookup"><span data-stu-id="dbb93-109">Windows Device Portal is available on each device family, but features and setup vary based on the device's requirements.</span></span> <span data-ttu-id="dbb93-110">Dieser Artikel enthält eine allgemeine Beschreibung des Device Portals und Links zu Artikeln mit ausführlicheren Informationen für jede Gerätefamilie.</span><span class="sxs-lookup"><span data-stu-id="dbb93-110">This article provides a general description of Device Portal and links to articles with more specific information for each device family.</span></span>
 
-Alle Komponenten im Windows Device Portal basieren auf [REST-APIs](device-portal-api-core.md), die Sie für den Zugriff auf die Daten und die programmatische Steuerung Ihres Geräts verwenden können.
+<span data-ttu-id="dbb93-111">Alle Komponenten im Windows Device Portal basieren auf [REST-APIs](device-portal-api-core.md), die Sie für den Zugriff auf die Daten und die programmatische Steuerung Ihres Geräts verwenden können.</span><span class="sxs-lookup"><span data-stu-id="dbb93-111">Everything in the Windows Device Portal is built on top of [REST API's](device-portal-api-core.md) that you can use to access the data and control your device programmatically.</span></span>
 
-## <a name="setup"></a>Setup
+## <a name="setup"></a><span data-ttu-id="dbb93-112">Setup</span><span class="sxs-lookup"><span data-stu-id="dbb93-112">Setup</span></span>
 
-Für jedes Gerät gelten spezielle Anweisungen zum Herstellen der Verbindung mit dem Device Portal, diese allgemeinen Schritte sind jedoch für jedes Gerät erforderlich:
-1. Aktivieren Sie den Entwicklermodus und das Device Portal auf Ihrem Gerät.
-2. Verbinden Sie das Gerät und den PC über das lokale Netzwerk oder per USB.
-3. Navigieren Sie im Browser zu der Seite für das Geräteportal. In dieser Tabelle sind die Ports und Protokolle aufgeführt, die von jeder Gerätefamilie verwendet werden.
+<span data-ttu-id="dbb93-113">Für jedes Gerät gelten spezielle Anweisungen zum Herstellen der Verbindung mit dem Device Portal, diese allgemeinen Schritte sind jedoch für jedes Gerät erforderlich:</span><span class="sxs-lookup"><span data-stu-id="dbb93-113">Each device has specific instructions for connecting to Device Portal, but each requires these general steps:</span></span>
+1. <span data-ttu-id="dbb93-114">Aktivieren Sie den Entwicklermodus und das Device Portal auf Ihrem Gerät.</span><span class="sxs-lookup"><span data-stu-id="dbb93-114">Enable Developer Mode and Device Portal on your device.</span></span>
+2. <span data-ttu-id="dbb93-115">Verbinden Sie das Gerät und den PC über das lokale Netzwerk oder per USB.</span><span class="sxs-lookup"><span data-stu-id="dbb93-115">Connect your device and PC via local network or USB.</span></span>
+3. <span data-ttu-id="dbb93-116">Navigieren Sie im Browser zu der Seite für das Geräteportal.</span><span class="sxs-lookup"><span data-stu-id="dbb93-116">Navigate to the Device Portal page in your browser.</span></span> <span data-ttu-id="dbb93-117">In dieser Tabelle sind die Ports und Protokolle aufgeführt, die von jeder Gerätefamilie verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="dbb93-117">This table shows the ports and protcols used by each device family.</span></span>
 
-Gerätefamilie | Standardmäßig aktiviert? | HTTP | HTTPS | USB
+<span data-ttu-id="dbb93-118">Gerätefamilie</span><span class="sxs-lookup"><span data-stu-id="dbb93-118">Device family</span></span> | <span data-ttu-id="dbb93-119">Standardmäßig aktiviert?</span><span class="sxs-lookup"><span data-stu-id="dbb93-119">On by default?</span></span> | <span data-ttu-id="dbb93-120">HTTP</span><span class="sxs-lookup"><span data-stu-id="dbb93-120">HTTP</span></span> | <span data-ttu-id="dbb93-121">HTTPS</span><span class="sxs-lookup"><span data-stu-id="dbb93-121">HTTPS</span></span> | <span data-ttu-id="dbb93-122">USB</span><span class="sxs-lookup"><span data-stu-id="dbb93-122">USB</span></span>
 --------------|----------------|------|-------|----
-HoloLens | Ja, im Entwicklermodus | 80 (Standard) | 443 (Standard) | http://127.0.0.1:10080
-IoT | Ja, im Entwicklermodus | 8080 | Über Registrierungsschlüssel aktivieren | Nicht verfügbar
-Xbox | Im Entwicklermodus aktivieren | Deaktiviert | 11443 | Nicht verfügbar
-Desktop| Im Entwicklermodus aktivieren | 50080\* | 50043\* | Nicht verfügbar
-Telefon | Im Entwicklermodus aktivieren | 80| 443 | http://127.0.0.1:10080
+<span data-ttu-id="dbb93-123">HoloLens</span><span class="sxs-lookup"><span data-stu-id="dbb93-123">HoloLens</span></span> | <span data-ttu-id="dbb93-124">Ja, im Entwicklermodus</span><span class="sxs-lookup"><span data-stu-id="dbb93-124">Yes, in Dev Mode</span></span> | <span data-ttu-id="dbb93-125">80 (Standard)</span><span class="sxs-lookup"><span data-stu-id="dbb93-125">80 (default)</span></span> | <span data-ttu-id="dbb93-126">443 (Standard)</span><span class="sxs-lookup"><span data-stu-id="dbb93-126">443 (default)</span></span> | <span data-ttu-id="dbb93-127">http://127.0.0.1:10080</span><span class="sxs-lookup"><span data-stu-id="dbb93-127">http://127.0.0.1:10080</span></span>
+<span data-ttu-id="dbb93-128">IoT</span><span class="sxs-lookup"><span data-stu-id="dbb93-128">IoT</span></span> | <span data-ttu-id="dbb93-129">Ja, im Entwicklermodus</span><span class="sxs-lookup"><span data-stu-id="dbb93-129">Yes, in Dev Mode</span></span> | <span data-ttu-id="dbb93-130">8080</span><span class="sxs-lookup"><span data-stu-id="dbb93-130">8080</span></span> | <span data-ttu-id="dbb93-131">Über Registrierungsschlüssel aktivieren</span><span class="sxs-lookup"><span data-stu-id="dbb93-131">Enable via regkey</span></span> | <span data-ttu-id="dbb93-132">Nicht verfügbar</span><span class="sxs-lookup"><span data-stu-id="dbb93-132">N/A</span></span>
+<span data-ttu-id="dbb93-133">Xbox</span><span class="sxs-lookup"><span data-stu-id="dbb93-133">Xbox</span></span> | <span data-ttu-id="dbb93-134">Im Entwicklermodus aktivieren</span><span class="sxs-lookup"><span data-stu-id="dbb93-134">Enable inside Dev Mode</span></span> | <span data-ttu-id="dbb93-135">Deaktiviert</span><span class="sxs-lookup"><span data-stu-id="dbb93-135">Disabled</span></span> | <span data-ttu-id="dbb93-136">11443</span><span class="sxs-lookup"><span data-stu-id="dbb93-136">11443</span></span> | <span data-ttu-id="dbb93-137">Nicht verfügbar</span><span class="sxs-lookup"><span data-stu-id="dbb93-137">N/A</span></span>
+<span data-ttu-id="dbb93-138">Desktop</span><span class="sxs-lookup"><span data-stu-id="dbb93-138">Desktop</span></span>| <span data-ttu-id="dbb93-139">Im Entwicklermodus aktivieren</span><span class="sxs-lookup"><span data-stu-id="dbb93-139">Enable inside Dev Mode</span></span> | <span data-ttu-id="dbb93-140">50080\*</span><span class="sxs-lookup"><span data-stu-id="dbb93-140">50080\*</span></span> | <span data-ttu-id="dbb93-141">50043\*</span><span class="sxs-lookup"><span data-stu-id="dbb93-141">50043\*</span></span> | <span data-ttu-id="dbb93-142">Nicht verfügbar</span><span class="sxs-lookup"><span data-stu-id="dbb93-142">N/A</span></span>
+<span data-ttu-id="dbb93-143">Telefon</span><span class="sxs-lookup"><span data-stu-id="dbb93-143">Phone</span></span> | <span data-ttu-id="dbb93-144">Im Entwicklermodus aktivieren</span><span class="sxs-lookup"><span data-stu-id="dbb93-144">Enable inside Dev Mode</span></span> | <span data-ttu-id="dbb93-145">80</span><span class="sxs-lookup"><span data-stu-id="dbb93-145">80</span></span>| <span data-ttu-id="dbb93-146">443</span><span class="sxs-lookup"><span data-stu-id="dbb93-146">443</span></span> | <span data-ttu-id="dbb93-147">http://127.0.0.1:10080</span><span class="sxs-lookup"><span data-stu-id="dbb93-147">http://127.0.0.1:10080</span></span>
 
-\ * Dies ist nicht stets der Fall, da Device Portal auf Desktops Ports in flüchtigen Bereich anfordert (> 50.000), um Konflikte mit vorhandenen Portanforderungen auf dem Gerät zu verhindern.  Weitere Informationen hierzu finden Sie im Abschnitt zu [Porteinstellungen](device-portal-desktop.md#setting-port-numbers) für den Desktop.  
+<span data-ttu-id="dbb93-148">\ * Dies ist nicht stets der Fall, da Device Portal auf Desktops Ports in flüchtigen Bereich anfordert (> 50.000), um Konflikte mit vorhandenen Portanforderungen auf dem Gerät zu verhindern.</span><span class="sxs-lookup"><span data-stu-id="dbb93-148">\* This is not always the case, as Device Portal on desktop claims ports in the ephemeral range (>50,000) to prevent collisions with existing port claims on the device.</span></span>  <span data-ttu-id="dbb93-149">Weitere Informationen hierzu finden Sie im Abschnitt zu [Porteinstellungen](device-portal-desktop.md#setting-port-numbers) für den Desktop.</span><span class="sxs-lookup"><span data-stu-id="dbb93-149">To learn more, see the [Port Settings](device-portal-desktop.md#setting-port-numbers) section for desktop.</span></span>  
 
-Gerätespezifische Anweisungen zum Einrichten finden Sie in folgenden Artikeln:
-- [Device Portal für HoloLens](https://dev.windows.com/holographic/using_the_windows_device_portal)
-- [Device Portal für IoT](https://go.microsoft.com/fwlink/?LinkID=616499)
-- [Device Portal für Mobilgeräte](device-portal-mobile.md)
-- [Device Portal für Xbox](device-portal-xbox.md)
-- [Device Portal für Desktop](device-portal-desktop.md#set-up-device-portal-on-windows-desktop)
+<span data-ttu-id="dbb93-150">Gerätespezifische Anweisungen zum Einrichten finden Sie in folgenden Artikeln:</span><span class="sxs-lookup"><span data-stu-id="dbb93-150">For device-specific setup instructions, see:</span></span>
+- [<span data-ttu-id="dbb93-151">Device Portal für HoloLens</span><span class="sxs-lookup"><span data-stu-id="dbb93-151">Device Portal for HoloLens</span></span>](https://docs.microsoft.com/en-us/windows/uwp/debug-test-perf/device-portal-hololens)
+- [<span data-ttu-id="dbb93-152">Device Portal für IoT</span><span class="sxs-lookup"><span data-stu-id="dbb93-152">Device Portal for IoT</span></span>](https://go.microsoft.com/fwlink/?LinkID=616499)
+- [<span data-ttu-id="dbb93-153">Device Portal für Mobilgeräte</span><span class="sxs-lookup"><span data-stu-id="dbb93-153">Device Portal for Mobile</span></span>](device-portal-mobile.md)
+- [<span data-ttu-id="dbb93-154">Device Portal für Xbox</span><span class="sxs-lookup"><span data-stu-id="dbb93-154">Device Portal for Xbox</span></span>](device-portal-xbox.md)
+- [<span data-ttu-id="dbb93-155">Device Portal für Desktop</span><span class="sxs-lookup"><span data-stu-id="dbb93-155">Device Portal for Desktop</span></span>](device-portal-desktop.md#set-up-device-portal-on-windows-desktop)
 
-## <a name="features"></a>Features
+## <a name="features"></a><span data-ttu-id="dbb93-156">Features</span><span class="sxs-lookup"><span data-stu-id="dbb93-156">Features</span></span>
 
-### <a name="toolbar-and-navigation"></a>Symbolleiste und Navigation
+### <a name="toolbar-and-navigation"></a><span data-ttu-id="dbb93-157">Symbolleiste und Navigation</span><span class="sxs-lookup"><span data-stu-id="dbb93-157">Toolbar and navigation</span></span>
 
-Die Symbolleiste am oberen Rand der Seite ermöglicht den Zugriff auf häufig verwendete Status und Features.
-- **Herunterfahren**: Schaltet das Gerät aus.
-- **Neu starten**: Schaltet das Gerät aus und wieder ein.
-- **Hilfe**: Öffnet die Hilfeseite.
+<span data-ttu-id="dbb93-158">Die Symbolleiste am oberen Rand der Seite ermöglicht den Zugriff auf häufig verwendete Status und Features.</span><span class="sxs-lookup"><span data-stu-id="dbb93-158">The toolbar at the top of the page provides access to commonly used status and features.</span></span>
+- <span data-ttu-id="dbb93-159">**Herunterfahren**: Schaltet das Gerät aus.</span><span class="sxs-lookup"><span data-stu-id="dbb93-159">**Shutdown**: Turns off the device.</span></span>
+- <span data-ttu-id="dbb93-160">**Neu starten**: Schaltet das Gerät aus und wieder ein.</span><span class="sxs-lookup"><span data-stu-id="dbb93-160">**Restart**: Cycles power on the device.</span></span>
+- <span data-ttu-id="dbb93-161">**Hilfe**: Öffnet die Hilfeseite.</span><span class="sxs-lookup"><span data-stu-id="dbb93-161">**Help**: Opens the help page.</span></span>
 
-Verwenden Sie die Links im Navigationsbereich am linken Rand der Seite, um zu den verfügbaren Verwaltungs- und Überwachungstools für Ihr Gerät zu navigieren.
+<span data-ttu-id="dbb93-162">Verwenden Sie die Links im Navigationsbereich am linken Rand der Seite, um zu den verfügbaren Verwaltungs- und Überwachungstools für Ihr Gerät zu navigieren.</span><span class="sxs-lookup"><span data-stu-id="dbb93-162">Use the links in the navigation pane along the left side of the page to navigate to the available management and monitoring tools for your device.</span></span>
 
-Hier werden Tools beschrieben, die für alle Geräte verwendet werden können. Je nach Gerät sind möglicherweise andere Optionen verfügbar. Weitere Informationen finden Sie auf der entsprechenden Seite für Ihr Gerät.
+<span data-ttu-id="dbb93-163">Hier werden Tools beschrieben, die für alle Geräte verwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="dbb93-163">Tools that are common across devices are described here.</span></span> <span data-ttu-id="dbb93-164">Je nach Gerät sind möglicherweise andere Optionen verfügbar.</span><span class="sxs-lookup"><span data-stu-id="dbb93-164">Other options might be available depending on the device.</span></span> <span data-ttu-id="dbb93-165">Weitere Informationen finden Sie auf der entsprechenden Seite für Ihr Gerät.</span><span class="sxs-lookup"><span data-stu-id="dbb93-165">For more info, see the specific page for your device.</span></span>
 
-### <a name="home"></a>Startseite
+### <a name="home"></a><span data-ttu-id="dbb93-166">Startseite</span><span class="sxs-lookup"><span data-stu-id="dbb93-166">Home</span></span>
 
-Die Geräteportalsitzung beginnt auf der Startseite. Die Startseite enthält in der Regel Informationen über das Gerät, z. B. Name und Betriebssystemversion, sowie Einstellungen, die Sie für das Gerät festlegen können.
+<span data-ttu-id="dbb93-167">Die Geräteportalsitzung beginnt auf der Startseite.</span><span class="sxs-lookup"><span data-stu-id="dbb93-167">Your Device Portal session starts at the home page.</span></span> <span data-ttu-id="dbb93-168">Die Startseite enthält in der Regel Informationen über das Gerät, z. B. Name und Betriebssystemversion, sowie Einstellungen, die Sie für das Gerät festlegen können.</span><span class="sxs-lookup"><span data-stu-id="dbb93-168">The home page typically has information about the device, such as name and OS version, and preferences that you can set for the device.</span></span>
 
-### <a name="apps"></a>Apps
+### <a name="apps"></a><span data-ttu-id="dbb93-169">Apps</span><span class="sxs-lookup"><span data-stu-id="dbb93-169">Apps</span></span>
 
-Bietet Installations-/Deinstallations- und Verwaltungsfunktionen für AppX-Pakete und-Bündel auf Ihrem Gerät.
+<span data-ttu-id="dbb93-170">Bietet Installations-/Deinstallations- und Verwaltungsfunktionen für AppX-Pakete und-Bündel auf Ihrem Gerät.</span><span class="sxs-lookup"><span data-stu-id="dbb93-170">Provides install/uninstall and management functionality for AppX packages and bundles on your device.</span></span>
 
 ![Geräteportal für mobile Geräte](images/device-portal/mob-device-portal-apps.png)
 
-- **Installierte Apps**: Hier können Sie Apps entfernen und starten.
-- **Ausgeführte Apps**: Listet Apps auf, die derzeit ausgeführt werden.
-- **App installieren**: Wählen Sie in einem Ordner auf dem Computer oder im Netzwerk App-Pakete für die Installation aus.
-- **Abhängigkeit**: Hier fügen Sie Abhängigkeiten für die zu installierende App hinzu.
-- **Bereitstellen**: Zum Bereitstellen der ausgewählten App und Abhängigkeiten auf Ihrem Gerät.
+- <span data-ttu-id="dbb93-172">**Installierte Apps**: Hier können Sie Apps entfernen und starten.</span><span class="sxs-lookup"><span data-stu-id="dbb93-172">**Installed apps**: Remove and start apps.</span></span>
+- <span data-ttu-id="dbb93-173">**Ausgeführte Apps**: Listet Apps auf, die derzeit ausgeführt werden, und bietet die Möglichkeit, diese zu schließen.</span><span class="sxs-lookup"><span data-stu-id="dbb93-173">**Running apps**: Lists apps that are running currently and provides the option to close them.</span></span>
+- <span data-ttu-id="dbb93-174">**App installieren**: Wählen Sie in einem Ordner auf dem Computer oder im Netzwerk App-Pakete für die Installation aus.</span><span class="sxs-lookup"><span data-stu-id="dbb93-174">**Install app**: Select app packages for installation from a folder on your computer or network.</span></span>
+- <span data-ttu-id="dbb93-175">**Abhängigkeit**: Hier fügen Sie Abhängigkeiten für die zu installierende App hinzu.</span><span class="sxs-lookup"><span data-stu-id="dbb93-175">**Dependency**: Add dependencies for the app you are going to install.</span></span>
+- <span data-ttu-id="dbb93-176">**Bereitstellen**: Zum Bereitstellen der ausgewählten App und Abhängigkeiten auf Ihrem Gerät.</span><span class="sxs-lookup"><span data-stu-id="dbb93-176">**Deploy**: Deploy the selected app and dependencies to your device.</span></span>
 
-**So installieren Sie eine App**
+**<span data-ttu-id="dbb93-177">So installieren Sie eine App</span><span class="sxs-lookup"><span data-stu-id="dbb93-177">To install an app</span></span>**
 
-1.    Wenn Sie [ein App-Paket erstellt haben](https://msdn.microsoft.com/library/windows/apps/xaml/hh454036(v=vs.140).aspx), können Sie es per Remotezugriff auf Ihrem Gerät installieren. Nachdem Sie es in Visual Studio erstellt haben, wird ein Ausgabeordner generiert.
+1.  <span data-ttu-id="dbb93-178">Wenn Sie [ein App-Paket erstellt haben](https://msdn.microsoft.com/library/windows/apps/xaml/hh454036(v=vs.140).aspx), können Sie es per Remotezugriff auf Ihrem Gerät installieren.</span><span class="sxs-lookup"><span data-stu-id="dbb93-178">When you've [created an app package](https://msdn.microsoft.com/library/windows/apps/xaml/hh454036(v=vs.140).aspx), you can remotely install it onto your device.</span></span> <span data-ttu-id="dbb93-179">Nachdem Sie es in Visual Studio erstellt haben, wird ein Ausgabeordner generiert.</span><span class="sxs-lookup"><span data-stu-id="dbb93-179">After you build it in Visual Studio, an output folder is generated.</span></span>
 
     ![App-Installation](images/device-portal/iot-installapp0.png)
-2.    Klicken Sie auf „Durchsuchen“, und suchen Sie das App-Paket („.appx“).
-3.    Klicken Sie auf „Durchsuchen“, und suchen Sie die Zertifikatdatei („.cer“). (Nicht auf allen Geräten erforderlich.)
-4.    Fügen Sie Abhängigkeiten hinzu. Wenn mehrere vorhanden sind, fügen Sie jede einzeln hinzu.     
-5.    Klicken Sie unter **Bereitstellen** auf **Los**. 
-6.    Wenn Sie eine weitere App installieren möchten, klicken Sie auf die Schaltfläche **Zurücksetzen**, um die Felder löschen.
+2.  <span data-ttu-id="dbb93-181">Klicken Sie auf „Durchsuchen“, und suchen Sie das App-Paket („.appx“).</span><span class="sxs-lookup"><span data-stu-id="dbb93-181">Click browse and find your app package (.appx).</span></span>
+3.  <span data-ttu-id="dbb93-182">Klicken Sie auf „Durchsuchen“, und suchen Sie die Zertifikatdatei („.cer“).</span><span class="sxs-lookup"><span data-stu-id="dbb93-182">Click browse and find the certificate file (.cer).</span></span> <span data-ttu-id="dbb93-183">(Nicht auf allen Geräten erforderlich.)</span><span class="sxs-lookup"><span data-stu-id="dbb93-183">(Not required on all devices.)</span></span>
+4.  <span data-ttu-id="dbb93-184">Fügen Sie Abhängigkeiten hinzu.</span><span class="sxs-lookup"><span data-stu-id="dbb93-184">Add dependencies.</span></span> <span data-ttu-id="dbb93-185">Wenn mehrere vorhanden sind, fügen Sie jede einzeln hinzu.</span><span class="sxs-lookup"><span data-stu-id="dbb93-185">If you have more than one, add each one individually.</span></span>     
+5.  <span data-ttu-id="dbb93-186">Klicken Sie unter **Bereitstellen** auf **Los**.</span><span class="sxs-lookup"><span data-stu-id="dbb93-186">Under **Deploy**, click **Go**.</span></span> 
+6.  <span data-ttu-id="dbb93-187">Wenn Sie eine weitere App installieren möchten, klicken Sie auf die Schaltfläche **Zurücksetzen**, um die Felder löschen.</span><span class="sxs-lookup"><span data-stu-id="dbb93-187">To install another app, click the **Reset** button to clear the fields.</span></span>
 
 
-**So deinstallieren Sie eine App**
+**<span data-ttu-id="dbb93-188">So deinstallieren Sie eine App</span><span class="sxs-lookup"><span data-stu-id="dbb93-188">To uninstall an app</span></span>**
 
-1.    Stellen Sie sicher, dass die App nicht ausgeführt wird. 
-2.    Wenn sie ausgeführt wird, wechseln Sie zu „Running apps“, und schließen Sie sie. Wenn Sie versuchen, eine App zu deinstallieren, die gerade ausgeführt wird, verursacht dies Probleme beim erneuten Installieren der App. 
-3.    Sobald Sie bereit sind, klicken Sie auf **Deinstallieren**.
+1.  <span data-ttu-id="dbb93-189">Stellen Sie sicher, dass die App nicht ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="dbb93-189">Ensure that your app is not running.</span></span> 
+2.  <span data-ttu-id="dbb93-190">Wenn sie ausgeführt wird, wechseln Sie zu „Running apps“, und schließen Sie sie.</span><span class="sxs-lookup"><span data-stu-id="dbb93-190">If it is, go to 'running apps' and close it.</span></span> <span data-ttu-id="dbb93-191">Wenn Sie versuchen, eine App zu deinstallieren, die gerade ausgeführt wird, verursacht dies Probleme beim erneuten Installieren der App.</span><span class="sxs-lookup"><span data-stu-id="dbb93-191">If you attempt to uninstall while the app is running, it will cause issues when trying to re-install the app.</span></span> 
+3.  <span data-ttu-id="dbb93-192">Sobald Sie bereit sind, klicken Sie auf **Deinstallieren**.</span><span class="sxs-lookup"><span data-stu-id="dbb93-192">Once you're ready, click **Uninstall**.</span></span>
 
-### <a name="processes"></a>Prozesse
+### <a name="processes"></a><span data-ttu-id="dbb93-193">Prozesse</span><span class="sxs-lookup"><span data-stu-id="dbb93-193">Processes</span></span>
 
-Zeigt Details zu derzeit ausgeführten Prozessen an. Diese umfassen Apps und Systemprozesse.
+<span data-ttu-id="dbb93-194">Zeigt Details zu derzeit ausgeführten Prozessen an.</span><span class="sxs-lookup"><span data-stu-id="dbb93-194">Shows details about currently running processes.</span></span> <span data-ttu-id="dbb93-195">Diese umfassen Apps und Systemprozesse.</span><span class="sxs-lookup"><span data-stu-id="dbb93-195">This includes both apps and system processes.</span></span>
 
-Auf dieser Seite werden wie im Task-Manager auf dem PC die derzeit ausgeführten Prozesse sowie ihre Speicherauslastung angezeigt.  Auf manchen Plattformen (Desktop, IoT und HoloLens) können Sie Prozesse beenden.
+<span data-ttu-id="dbb93-196">Auf dieser Seite werden wie im Task-Manager auf dem PC die derzeit ausgeführten Prozesse sowie ihre Speicherauslastung angezeigt.</span><span class="sxs-lookup"><span data-stu-id="dbb93-196">Much like the Task Manager on your PC, this page lets you see which processes are currently running as well as their memory usage.</span></span>  <span data-ttu-id="dbb93-197">Auf manchen Plattformen (Desktop, IoT und HoloLens) können Sie Prozesse beenden.</span><span class="sxs-lookup"><span data-stu-id="dbb93-197">On some platforms (Desktop, IoT, and HoloLens) you can terminate processes.</span></span>
 
 ![Geräteportal für mobile Geräte](images/device-portal/mob-device-portal-processes.png)
 
-### <a name="performance"></a>Leistung
+### <a name="performance"></a><span data-ttu-id="dbb93-199">Leistung</span><span class="sxs-lookup"><span data-stu-id="dbb93-199">Performance</span></span>
 
-Zeigt Echtzeitgraphen mit Informationen zur Systemdiagnose an, z. B. Stromverbrauch, Bildfrequenz und CPU-Last.
+<span data-ttu-id="dbb93-200">Zeigt Echtzeitgraphen mit Informationen zur Systemdiagnose an, z. B. Stromverbrauch, Bildfrequenz und CPU-Last.</span><span class="sxs-lookup"><span data-stu-id="dbb93-200">Shows real-time graphs of system diagnostic info, like power usage, frame rate, and CPU load.</span></span>
 
-Die folgenden Metriken sind verfügbar:
-- **CPU**: Verfügbarkeit in Prozent
-- **Arbeitsspeicher**: Gesamter Arbeitsspeicher, genutzter Arbeitsspeicher, verfügbarer zugesicherter Arbeitsspeicher, ausgelagerter Arbeitsspeicher und nicht ausgelagerter Arbeitsspeicher
-- **GPU**: Auslastung des GPU-Moduls, gesamte Verfügbarkeit in Prozent
-- **E/A**: Lese- und Schreibvorgänge
-- **Netzwerk**: Empfangene und gesendete Daten
+<span data-ttu-id="dbb93-201">Die folgenden Metriken sind verfügbar:</span><span class="sxs-lookup"><span data-stu-id="dbb93-201">These are the available metrics:</span></span>
+- <span data-ttu-id="dbb93-202">**CPU**: Verfügbarkeit in Prozent</span><span class="sxs-lookup"><span data-stu-id="dbb93-202">**CPU**: Percent of total available</span></span>
+- <span data-ttu-id="dbb93-203">**Arbeitsspeicher**: Gesamter Arbeitsspeicher, genutzter Arbeitsspeicher, verfügbarer zugesicherter Arbeitsspeicher, ausgelagerter Arbeitsspeicher und nicht ausgelagerter Arbeitsspeicher</span><span class="sxs-lookup"><span data-stu-id="dbb93-203">**Memory**: Total, in use, available committed, paged, and non-paged</span></span>
+- <span data-ttu-id="dbb93-204">**GPU**: Auslastung des GPU-Moduls, gesamte Verfügbarkeit in Prozent</span><span class="sxs-lookup"><span data-stu-id="dbb93-204">**GPU**: GPU engine utilization, percent of total available</span></span>
+- <span data-ttu-id="dbb93-205">**E/A**: Lese- und Schreibvorgänge</span><span class="sxs-lookup"><span data-stu-id="dbb93-205">**I/O**: Reads and writes</span></span>
+- <span data-ttu-id="dbb93-206">**Netzwerk**: Empfangene und gesendete Daten</span><span class="sxs-lookup"><span data-stu-id="dbb93-206">**Network**: Received and sent</span></span>
 
 ![Geräteportal für mobile Geräte](images/device-portal/mob-device-portal-perf.png)
 
-### <a name="event-tracing-for-windows-etw"></a>Ereignisablaufverfolgung für Windows (ETW)
+### <a name="event-tracing-for-windows-etw"></a><span data-ttu-id="dbb93-208">Ereignisablaufverfolgung für Windows (ETW)</span><span class="sxs-lookup"><span data-stu-id="dbb93-208">Event Tracing for Windows (ETW)</span></span>
 
-Verwaltet die Echtzeit-Ereignisablaufverfolgung für Windows (ETW) auf dem Gerät.
+<span data-ttu-id="dbb93-209">Verwaltet die Echtzeit-Ereignisablaufverfolgung für Windows (ETW) auf dem Gerät.</span><span class="sxs-lookup"><span data-stu-id="dbb93-209">Manages realtime Event Tracing for Windows (ETW) on the device.</span></span>
 
 ![Geräteportal für mobile Geräte](images/device-portal/mob-device-portal-etw.png)
 
-Aktivieren Sie **Anbieter ausblenden**, um nur die Liste der Ereignisse anzuzeigen.
-- **Registrierte Anbieter**: Wählen Sie den ETW-Anbieter und die Ablaufverfolgungsebene aus. Für die Ablaufverfolgungsebene wird einer der folgenden Werte festgelegt:
-    1. Abnormal exit or termination
-    2. Severe errors
-    3. Warnungen
-    4. Non-error warnings
-    5. Detailed trace (*)
+<span data-ttu-id="dbb93-211">Aktivieren Sie **Anbieter ausblenden**, um nur die Liste der Ereignisse anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="dbb93-211">Check **Hide providers** to show the Events list only.</span></span>
+- <span data-ttu-id="dbb93-212">**Registrierte Anbieter**: Wählen Sie den ETW-Anbieter und die Ablaufverfolgungsebene aus.</span><span class="sxs-lookup"><span data-stu-id="dbb93-212">**Registered providers**: Select the ETW provider and the tracing level.</span></span> <span data-ttu-id="dbb93-213">Für die Ablaufverfolgungsebene wird einer der folgenden Werte festgelegt:</span><span class="sxs-lookup"><span data-stu-id="dbb93-213">Tracing level is one of these values:</span></span>
+    1. <span data-ttu-id="dbb93-214">Abnormal exit or termination</span><span class="sxs-lookup"><span data-stu-id="dbb93-214">Abnormal exit or termination</span></span>
+    2. <span data-ttu-id="dbb93-215">Severe errors</span><span class="sxs-lookup"><span data-stu-id="dbb93-215">Severe errors</span></span>
+    3. <span data-ttu-id="dbb93-216">Warnungen</span><span class="sxs-lookup"><span data-stu-id="dbb93-216">Warnings</span></span>
+    4. <span data-ttu-id="dbb93-217">Non-error warnings</span><span class="sxs-lookup"><span data-stu-id="dbb93-217">Non-error warnings</span></span>
+    5. <span data-ttu-id="dbb93-218">Detailed trace (*)</span><span class="sxs-lookup"><span data-stu-id="dbb93-218">Detailed trace (*)</span></span>
 
-Klicken oder tippen Sie auf **Aktivieren**, um die Ablaufverfolgung zu starten. Der Anbieter wird der Liste **Aktivierte Anbieter** hinzugefügt.
-- **Benutzerdefinierte Anbieter**: Wählen Sie einen benutzerdefinierten ETW-Anbieter und die Ablaufverfolgungsebene aus. Identifizieren Sie den Anbieter anhand seiner GUID. Fügen Sie keine Klammern in die GUID ein.
-- **Aktivierte Anbieter**: Listet die aktivierten Anbieter auf. Wählen Sie einen Anbieter aus der Dropdownliste aus, und klicken oder tippen Sie auf **Deaktivieren**, um die Ablaufverfolgung zu beenden. Klicken oder tippen Sie auf **Beenden**, um sämtliche Ablaufverfolgung anzuhalten.
-- **Anbieterverlauf**: Zeigt die ETW-Anbieter an, die während der aktuellen Sitzung aktiviert wurden. Klicken oder tippen Sie auf **Aktivieren**, um einen Anbieter zu aktivieren, der deaktiviert war. Klicken oder tippen Sie auf **Löschen**, um den Verlauf zu löschen.
-- **Ereignisse**: Listet ETW-Ereignisse der ausgewählten Anbieter in Tabellenform auf. Diese Tabelle wird in Echtzeit aktualisiert. Klicken Sie unter der Tabelle auf die Schaltfläche **Löschen**, um alle ETW-Ereignisse aus der Tabelle zu löschen. Hierdurch werden keine Anbieter deaktiviert. Sie können auf **In Datei speichern** klicken, um die derzeit erfassten ETW-Ereignisse in eine lokale CSV-Datei zu exportieren.
+<span data-ttu-id="dbb93-219">Klicken oder tippen Sie auf **Aktivieren**, um die Ablaufverfolgung zu starten.</span><span class="sxs-lookup"><span data-stu-id="dbb93-219">Click or tap **Enable** to start tracing.</span></span> <span data-ttu-id="dbb93-220">Der Anbieter wird der Liste **Aktivierte Anbieter** hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="dbb93-220">The provider is added to the **Enabled Providers** dropdown.</span></span>
+- <span data-ttu-id="dbb93-221">**Benutzerdefinierte Anbieter**: Wählen Sie einen benutzerdefinierten ETW-Anbieter und die Ablaufverfolgungsebene aus.</span><span class="sxs-lookup"><span data-stu-id="dbb93-221">**Custom providers**: Select a custom ETW provider and the tracing level.</span></span> <span data-ttu-id="dbb93-222">Identifizieren Sie den Anbieter anhand seiner GUID.</span><span class="sxs-lookup"><span data-stu-id="dbb93-222">Identify the provider by its GUID.</span></span> <span data-ttu-id="dbb93-223">Fügen Sie keine Klammern in die GUID ein.</span><span class="sxs-lookup"><span data-stu-id="dbb93-223">Don't include brackets in the GUID.</span></span>
+- <span data-ttu-id="dbb93-224">**Aktivierte Anbieter**: Listet die aktivierten Anbieter auf.</span><span class="sxs-lookup"><span data-stu-id="dbb93-224">**Enabled providers**: Lists the enabled providers.</span></span> <span data-ttu-id="dbb93-225">Wählen Sie einen Anbieter aus der Dropdownliste aus, und klicken oder tippen Sie auf **Deaktivieren**, um die Ablaufverfolgung zu beenden.</span><span class="sxs-lookup"><span data-stu-id="dbb93-225">Select a provider from the dropdown and click or tap **Disable** to stop tracing.</span></span> <span data-ttu-id="dbb93-226">Klicken oder tippen Sie auf **Beenden**, um sämtliche Ablaufverfolgung anzuhalten.</span><span class="sxs-lookup"><span data-stu-id="dbb93-226">Click or tap **Stop all** to suspend all tracing.</span></span>
+- <span data-ttu-id="dbb93-227">**Anbieterverlauf**: Zeigt die ETW-Anbieter an, die während der aktuellen Sitzung aktiviert wurden.</span><span class="sxs-lookup"><span data-stu-id="dbb93-227">**Providers history**: Shows the ETW providers that were enabled during the current session.</span></span> <span data-ttu-id="dbb93-228">Klicken oder tippen Sie auf **Aktivieren**, um einen Anbieter zu aktivieren, der deaktiviert war.</span><span class="sxs-lookup"><span data-stu-id="dbb93-228">Click or tap **Enable** to activate a provider that was disabled.</span></span> <span data-ttu-id="dbb93-229">Klicken oder tippen Sie auf **Löschen**, um den Verlauf zu löschen.</span><span class="sxs-lookup"><span data-stu-id="dbb93-229">Click or tap **Clear** to clear the history.</span></span>
+- <span data-ttu-id="dbb93-230">**Ereignisse**: Listet ETW-Ereignisse der ausgewählten Anbieter in Tabellenform auf.</span><span class="sxs-lookup"><span data-stu-id="dbb93-230">**Events**: Lists ETW events from the selected providers in table format.</span></span> <span data-ttu-id="dbb93-231">Diese Tabelle wird in Echtzeit aktualisiert.</span><span class="sxs-lookup"><span data-stu-id="dbb93-231">This table is updated in real time.</span></span> <span data-ttu-id="dbb93-232">Klicken Sie unter der Tabelle auf die Schaltfläche **Löschen**, um alle ETW-Ereignisse aus der Tabelle zu löschen.</span><span class="sxs-lookup"><span data-stu-id="dbb93-232">Beneath the table, click the **Clear** button to delete all ETW events from the table.</span></span> <span data-ttu-id="dbb93-233">Hierdurch werden keine Anbieter deaktiviert.</span><span class="sxs-lookup"><span data-stu-id="dbb93-233">This does not disable any providers.</span></span> <span data-ttu-id="dbb93-234">Sie können auf **In Datei speichern** klicken, um die derzeit erfassten ETW-Ereignisse in eine lokale CSV-Datei zu exportieren.</span><span class="sxs-lookup"><span data-stu-id="dbb93-234">You can click **Save to file** to export the currently collected ETW events to a CSV file locally.</span></span>
 
-Weitere Informationen zur Verwendung von ETW-Ablaufverfolgung finden Sie im [Blogbeitrag](https://blogs.windows.com/buildingapps/2016/06/10/using-device-portal-to-view-debug-logs-for-uwp/) zu deren Verwendung zum Sammeln von Echtzeitprotokollen in Ihrer App. 
+<span data-ttu-id="dbb93-235">Weitere Informationen zur Verwendung von ETW-Ablaufverfolgung finden Sie im [Blogbeitrag](https://blogs.windows.com/buildingapps/2016/06/10/using-device-portal-to-view-debug-logs-for-uwp/) zu deren Verwendung zum Sammeln von Echtzeitprotokollen in Ihrer App.</span><span class="sxs-lookup"><span data-stu-id="dbb93-235">For more details on using ETW tracing, see the [blogpost](https://blogs.windows.com/buildingapps/2016/06/10/using-device-portal-to-view-debug-logs-for-uwp/) about using it to collect real-time logs from your app.</span></span> 
 
-### <a name="performance-tracing"></a>Leistungsüberwachung
+### <a name="performance-tracing"></a><span data-ttu-id="dbb93-236">Leistungsüberwachung</span><span class="sxs-lookup"><span data-stu-id="dbb93-236">Performance tracing</span></span>
 
-Zeichnen Sie [Windows Performance Recorder](https://msdn.microsoft.com/library/windows/hardware/hh448205.aspx) (WPR)-Leistungsüberwachungen von Ihrem Gerät auf.
+<span data-ttu-id="dbb93-237">Zeichnen Sie [Windows Performance Recorder](https://msdn.microsoft.com/library/windows/hardware/hh448205.aspx) (WPR)-Leistungsüberwachungen von Ihrem Gerät auf.</span><span class="sxs-lookup"><span data-stu-id="dbb93-237">Capture [Windows Performance Recorder](https://msdn.microsoft.com/library/windows/hardware/hh448205.aspx) (WPR) traces from your device.</span></span>
 
 ![Geräteportal für mobile Geräte](images/device-portal/mob-device-portal-perf-tracing.png)
 
-- **Verfügbare Profile**: Wählen Sie in der Dropdownliste das WPR-Profil aus, und klicken oder tippen Sie auf **Starten**, um die Ablaufverfolgung zu starten.
-- **Benutzerdefinierte Profile**: Klicken oder tippen Sie auf **Durchsuchen**, um ein WPR-Profil vom PC auszuwählen. Klicken oder tippen Sie auf **Hochladen und starten**, um die Ablaufverfolgung zu starten.
+- <span data-ttu-id="dbb93-239">**Verfügbare Profile**: Wählen Sie in der Dropdownliste das WPR-Profil aus, und klicken oder tippen Sie auf **Starten**, um die Ablaufverfolgung zu starten.</span><span class="sxs-lookup"><span data-stu-id="dbb93-239">**Available profiles**: Select the WPR profile from the dropdown, and click or tap **Start** to start tracing.</span></span>
+- <span data-ttu-id="dbb93-240">**Benutzerdefinierte Profile**: Klicken oder tippen Sie auf **Durchsuchen**, um ein WPR-Profil vom PC auszuwählen.</span><span class="sxs-lookup"><span data-stu-id="dbb93-240">**Custom profiles**: Click or tap **Browse** to choose a WPR profile from your PC.</span></span> <span data-ttu-id="dbb93-241">Klicken oder tippen Sie auf **Hochladen und starten**, um die Ablaufverfolgung zu starten.</span><span class="sxs-lookup"><span data-stu-id="dbb93-241">Click or tap **Upload and start** to start tracing.</span></span>
 
-Klicken Sie auf **Beenden**, um die Ablaufverfolgung zu beenden. Lassen Sie diese Seite geöffnet, bis der Download der Ablaufverfolgungsdatei („.etl“) abgeschlossen ist.
+<span data-ttu-id="dbb93-242">Klicken Sie auf **Beenden**, um die Ablaufverfolgung zu beenden.</span><span class="sxs-lookup"><span data-stu-id="dbb93-242">To stop the trace, click **Stop**.</span></span> <span data-ttu-id="dbb93-243">Lassen Sie diese Seite geöffnet, bis der Download der Ablaufverfolgungsdatei („.etl“) abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="dbb93-243">Stay on this page until the trace file (.ETL) has completed downloading.</span></span>
 
-Aufgezeichnete ETL-Dateien können in [Windows Performance Analyzer](https://msdn.microsoft.com/library/windows/hardware/hh448170.aspx) für die Analyse geöffnet werden.
+<span data-ttu-id="dbb93-244">Aufgezeichnete ETL-Dateien können in [Windows Performance Analyzer](https://msdn.microsoft.com/library/windows/hardware/hh448170.aspx) für die Analyse geöffnet werden.</span><span class="sxs-lookup"><span data-stu-id="dbb93-244">Captured ETL files can be opened for analysis in [Windows Performance Analyzer](https://msdn.microsoft.com/library/windows/hardware/hh448170.aspx).</span></span>
 
-### <a name="devices"></a>Geräte
+### <a name="devices"></a><span data-ttu-id="dbb93-245">Geräte</span><span class="sxs-lookup"><span data-stu-id="dbb93-245">Devices</span></span>
 
-Listet alle Peripheriegeräte auf, die an das Gerät angeschlossen sind.
+<span data-ttu-id="dbb93-246">Listet alle Peripheriegeräte auf, die an das Gerät angeschlossen sind.</span><span class="sxs-lookup"><span data-stu-id="dbb93-246">Enumerates all peripherals attached to your device.</span></span>
 
 ![Geräteportal für mobile Geräte](images/device-portal/mob-device-portal-devices.png)
 
-### <a name="networking"></a>Netzwerke
+### <a name="networking"></a><span data-ttu-id="dbb93-248">Netzwerke</span><span class="sxs-lookup"><span data-stu-id="dbb93-248">Networking</span></span>
 
-Verwaltet die Netzwerkverbindungen auf dem Gerät.  Durch das Ändern dieser Einstellungen wird das Gerät wahrscheinlich vom Geräteportal getrennt, sofern es nicht per USB mit dem Geräteportal verbunden ist.
-- **Profile**: Wählen Sie ein anderes zu verwendendes WLAN-Profil aus.  
-- **Verfügbare Netzwerke**: Die auf dem Gerät verfügbaren WLAN-Netzwerke. Durch Klicken oder Tippen auf ein Netzwerk können Sie eine Verbindung mit ihm herstellen und ggf. ein Kennwort eingeben. Hinweis: Das Geräteportal unterstützt noch keine Unternehmensauthentifizierung. 
+<span data-ttu-id="dbb93-249">Verwaltet die Netzwerkverbindungen auf dem Gerät.</span><span class="sxs-lookup"><span data-stu-id="dbb93-249">Manages network connections on the device.</span></span>  <span data-ttu-id="dbb93-250">Durch das Ändern dieser Einstellungen wird das Gerät wahrscheinlich vom Geräteportal getrennt, sofern es nicht per USB mit dem Geräteportal verbunden ist.</span><span class="sxs-lookup"><span data-stu-id="dbb93-250">Unless you are connected to Device Portal via USB, changing these settings will likely disconnect you from Device Portal.</span></span>
+- <span data-ttu-id="dbb93-251">**Profile**: Wählen Sie ein anderes zu verwendendes WLAN-Profil aus.</span><span class="sxs-lookup"><span data-stu-id="dbb93-251">**Profiles**: Select a different WiFi profile to use.</span></span>  
+- <span data-ttu-id="dbb93-252">**Verfügbare Netzwerke**: Die auf dem Gerät verfügbaren WLAN-Netzwerke.</span><span class="sxs-lookup"><span data-stu-id="dbb93-252">**Available networks**: The WiFi networks available to the device.</span></span> <span data-ttu-id="dbb93-253">Durch Klicken oder Tippen auf ein Netzwerk können Sie eine Verbindung mit ihm herstellen und ggf. ein Kennwort eingeben.</span><span class="sxs-lookup"><span data-stu-id="dbb93-253">Clicking or tapping on a network will allow you to connect to it and supply a passkey if needed.</span></span> <span data-ttu-id="dbb93-254">Hinweis: Das Geräteportal unterstützt noch keine Unternehmensauthentifizierung.</span><span class="sxs-lookup"><span data-stu-id="dbb93-254">Note: Device Portal does not yet support Enterprise Authentication.</span></span> 
 
 ![Geräteportal für mobile Geräte](images/device-portal/mob-device-portal-network.png)
 
-### <a name="app-file-explorer"></a>App-Datei-Explorer
+### <a name="app-file-explorer"></a><span data-ttu-id="dbb93-256">App-Datei-Explorer</span><span class="sxs-lookup"><span data-stu-id="dbb93-256">App File Explorer</span></span>
 
-Ermöglicht das Anzeigen von und Interagieren mit Dateien, die von Ihren quergeladenen Apps gespeichert wurden.  Dies ist eine neue, plattformübergreifende Version von [Isolated Storage Explorer](https://msdn.microsoft.com/library/windows/apps/hh286408(v=vs.105).aspx) aus Windows Phone 8.1. Weitere Informationen zum App-Datei-Explorer und zu dessen Verwendung finden Sie in [diesem Blogbeitrag](https://blogs.windows.com/buildingapps/2016/06/08/using-the-app-file-explorer-to-see-your-app-data/). 
+<span data-ttu-id="dbb93-257">Ermöglicht das Anzeigen von und Interagieren mit Dateien, die von Ihren quergeladenen Apps gespeichert wurden.</span><span class="sxs-lookup"><span data-stu-id="dbb93-257">Allows you to view and manipulate files stored by your sideloaded apps.</span></span>  <span data-ttu-id="dbb93-258">Dies ist eine neue, plattformübergreifende Version von [Isolated Storage Explorer](https://msdn.microsoft.com/library/windows/apps/hh286408(v=vs.105).aspx) aus Windows Phone8.1. Weitere Informationen zum App-Datei-Explorer und zu dessen Verwendung finden Sie in [diesem Blogbeitrag](https://blogs.windows.com/buildingapps/2016/06/08/using-the-app-file-explorer-to-see-your-app-data/).</span><span class="sxs-lookup"><span data-stu-id="dbb93-258">This is a new, cross-platform version of the [Isolated Storage Explorer](https://msdn.microsoft.com/library/windows/apps/hh286408(v=vs.105).aspx) from Windows Phone 8.1  See [this blog post](https://blogs.windows.com/buildingapps/2016/06/08/using-the-app-file-explorer-to-see-your-app-data/) to learn more about the App File Explorer and how to use it.</span></span> 
 
 ![Geräteportal für mobile Geräte](images/device-portal/mob-device-portal-AppFileExplorer.png)
 
-## <a name="service-features-and-notes"></a>Service-Features und Hinweise
+## <a name="service-features-and-notes"></a><span data-ttu-id="dbb93-260">Service-Features und Hinweise</span><span class="sxs-lookup"><span data-stu-id="dbb93-260">Service Features and Notes</span></span>
 
-### <a name="dns-sd"></a>DNS-SD
+### <a name="dns-sd"></a><span data-ttu-id="dbb93-261">DNS-SD</span><span class="sxs-lookup"><span data-stu-id="dbb93-261">DNS-SD</span></span>
 
-Das Geräteportal kündigt seine Präsenz im lokalen Netzwerk mithilfe von DNS-SD an.  Alle Geräteportalinstanzen, unabhängig von deren Gerätetyp, kündigen sich unter „WDP._wdp._tcp.local“ an. Die TXT-Datensätze für die Instanz des Dienstes liefern Folgendes:
+<span data-ttu-id="dbb93-262">Das Geräteportal kündigt seine Präsenz im lokalen Netzwerk mithilfe von DNS-SD an.</span><span class="sxs-lookup"><span data-stu-id="dbb93-262">Device Portal advertises its presence on the local network using DNS-SD.</span></span>  <span data-ttu-id="dbb93-263">Alle Geräteportalinstanzen, unabhängig von deren Gerätetyp, kündigen sich unter „WDP._wdp._tcp.local“ an.</span><span class="sxs-lookup"><span data-stu-id="dbb93-263">All Device Portal instances, regardless of their device type, advertise under "WDP._wdp._tcp.local".</span></span> <span data-ttu-id="dbb93-264">Die TXT-Datensätze für die Instanz des Dienstes liefern Folgendes:</span><span class="sxs-lookup"><span data-stu-id="dbb93-264">The TXT records for the service instance provide the following:</span></span>
 
-Key | Typ | Beschreibung 
+<span data-ttu-id="dbb93-265">Key</span><span class="sxs-lookup"><span data-stu-id="dbb93-265">Key</span></span> | <span data-ttu-id="dbb93-266">Typ</span><span class="sxs-lookup"><span data-stu-id="dbb93-266">Type</span></span> | <span data-ttu-id="dbb93-267">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="dbb93-267">Description</span></span> 
 ----|------|-------------
-S | int | Sicherer Port für Geräteportal.  Wenn 0 (null), lauscht das Geräteportal nicht auf HTTPS-Verbindungen. 
-D | String | Typ des Geräts.  Dieser wird das Format „Windows.*“ aufweisen, z. B. Windows.Xbox oder Windows.Desktop
-A | String | Gerätearchitektur.  Diese ist ARM, x86 oder AMD64.  
-T | Mit NULL-Zeichen getrennt Liste mit Zeichenfolgen | Vom Benutzer angewendete Tags für das Gerät. Informationen zur Verwendung finden Sie unter der Tags-REST-API. Liste wird durch Doppelnull beendet.  
+<span data-ttu-id="dbb93-268">S</span><span class="sxs-lookup"><span data-stu-id="dbb93-268">S</span></span> | <span data-ttu-id="dbb93-269">int</span><span class="sxs-lookup"><span data-stu-id="dbb93-269">int</span></span> | <span data-ttu-id="dbb93-270">Sicherer Port für Geräteportal.</span><span class="sxs-lookup"><span data-stu-id="dbb93-270">Secure port for Device Portal.</span></span>  <span data-ttu-id="dbb93-271">Wenn 0 (null), lauscht das Geräteportal nicht auf HTTPS-Verbindungen.</span><span class="sxs-lookup"><span data-stu-id="dbb93-271">If 0 (zero), Device Portal is not listening for HTTPS connections.</span></span> 
+<span data-ttu-id="dbb93-272">D</span><span class="sxs-lookup"><span data-stu-id="dbb93-272">D</span></span> | <span data-ttu-id="dbb93-273">String</span><span class="sxs-lookup"><span data-stu-id="dbb93-273">string</span></span> | <span data-ttu-id="dbb93-274">Typ des Geräts.</span><span class="sxs-lookup"><span data-stu-id="dbb93-274">Type of device.</span></span>  <span data-ttu-id="dbb93-275">Dieser wird das Format „Windows.*“ aufweisen, z. B. Windows.Xbox oder Windows.Desktop</span><span class="sxs-lookup"><span data-stu-id="dbb93-275">This will be in the format "Windows.*", e.g. Windows.Xbox or Windows.Desktop</span></span>
+<span data-ttu-id="dbb93-276">A</span><span class="sxs-lookup"><span data-stu-id="dbb93-276">A</span></span> | <span data-ttu-id="dbb93-277">String</span><span class="sxs-lookup"><span data-stu-id="dbb93-277">string</span></span> | <span data-ttu-id="dbb93-278">Gerätearchitektur.</span><span class="sxs-lookup"><span data-stu-id="dbb93-278">Device architecture.</span></span>  <span data-ttu-id="dbb93-279">Diese ist ARM, x86 oder AMD64.</span><span class="sxs-lookup"><span data-stu-id="dbb93-279">This will be ARM, x86, or AMD64.</span></span>  
+<span data-ttu-id="dbb93-280">T</span><span class="sxs-lookup"><span data-stu-id="dbb93-280">T</span></span> | <span data-ttu-id="dbb93-281">Mit NULL-Zeichen getrennt Liste mit Zeichenfolgen</span><span class="sxs-lookup"><span data-stu-id="dbb93-281">null-character delineated list of strings</span></span> | <span data-ttu-id="dbb93-282">Vom Benutzer angewendete Tags für das Gerät.</span><span class="sxs-lookup"><span data-stu-id="dbb93-282">User-applied tags for the device.</span></span> <span data-ttu-id="dbb93-283">Informationen zur Verwendung finden Sie unter der Tags-REST-API.</span><span class="sxs-lookup"><span data-stu-id="dbb93-283">See the Tags REST API for how to use this.</span></span> <span data-ttu-id="dbb93-284">Liste wird durch Doppelnull beendet.</span><span class="sxs-lookup"><span data-stu-id="dbb93-284">List is double-null terminated.</span></span>  
 
-Es wird vorgeschlagen, die Verbindung über den HTTPS-Anschluss herzustellen, da nicht alle Geräte auf dem vom DNS-SD-Datensatz angekündigten HTTP-Port lauschen. 
+<span data-ttu-id="dbb93-285">Es wird vorgeschlagen, die Verbindung über den HTTPS-Anschluss herzustellen, da nicht alle Geräte auf dem vom DNS-SD-Datensatz angekündigten HTTP-Port lauschen.</span><span class="sxs-lookup"><span data-stu-id="dbb93-285">Connecting on the HTTPS port is suggested, as not all devices are listening on the HTTP port advertised by the DNS-SD record.</span></span> 
 
-### <a name="csrf-protection-and-scripting"></a>CSRF-Schutz und -Skripting
+### <a name="csrf-protection-and-scripting"></a><span data-ttu-id="dbb93-286">CSRF-Schutz und -Skripting</span><span class="sxs-lookup"><span data-stu-id="dbb93-286">CSRF Protection and Scripting</span></span>
 
-Zum Schutz vor [CSRF-Angriffen](https://wikipedia.org/wiki/Cross-site_request_forgery) ist bei allen Nicht-GET-Anfragen ein eindeutiges Token erforderlich. Dieses Token, der X-CSFR-Token-Anforderungsheader, wird von einem Sitzungscookie CSRF-Token, abgeleitet. In der Web-Benutzeroberfläche des Geräteportals wird das CSRF-Token-Cookie bei jeder Anforderung in den X-CSRF-Token-Header kopiert.
+<span data-ttu-id="dbb93-287">Zum Schutz vor [CSRF-Angriffen](https://wikipedia.org/wiki/Cross-site_request_forgery) ist bei allen Nicht-GET-Anfragen ein eindeutiges Token erforderlich.</span><span class="sxs-lookup"><span data-stu-id="dbb93-287">In order to protect against [CSRF attacks](https://wikipedia.org/wiki/Cross-site_request_forgery), a unique token is required on all non-GET requests.</span></span> <span data-ttu-id="dbb93-288">Dieses Token, der X-CSFR-Token-Anforderungsheader, wird von einem Sitzungscookie CSRF-Token, abgeleitet.</span><span class="sxs-lookup"><span data-stu-id="dbb93-288">This token, the X-CSRF-Token request header, is derived from a session cookie, CSRF-Token.</span></span> <span data-ttu-id="dbb93-289">In der Web-Benutzeroberfläche des Geräteportals wird das CSRF-Token-Cookie bei jeder Anforderung in den X-CSRF-Token-Header kopiert.</span><span class="sxs-lookup"><span data-stu-id="dbb93-289">In the Device Portal web UI, the CSRF-Token cookie is copied into the X-CSRF-Token header on each request.</span></span>
 
-**Wichtig:** Dieser Schutz verhindert die Verwendung der REST-APIs auf einem eigenständigen Client (z. B. Befehlszeilenprogramme). Dies kann auf drei Arten gelöst werden: 
+<span data-ttu-id="dbb93-290">**Wichtig:** Dieser Schutz verhindert die Verwendung der REST-APIs auf einem eigenständigen Client (z.B. Befehlszeilenprogramme).</span><span class="sxs-lookup"><span data-stu-id="dbb93-290">**Important** This protection prevents usages of the REST APIs from a standalone client (e.g. command-line utilities).</span></span> <span data-ttu-id="dbb93-291">Dies kann auf drei Arten gelöst werden:</span><span class="sxs-lookup"><span data-stu-id="dbb93-291">This can be solved in 3 ways:</span></span> 
 
-1. Verwendung des „Auto-“-Benutzernamens. Clients, die ihrem Benutzernamen „Auto-“ voranstellen, umgehen CSRF-Schutz. Es ist wichtig, dass dieser Benutzername nicht zur Anmeldung beim Geräteportal über den Browser verwendet wird, da dies den Dienst für CSRF-Angriffe öffnet. Beispiel: Wenn der Benutzername des Geräteportals „Admin“ lautet, sollte ```curl -u auto-admin:password <args>``` zum Umgehen des CSRF Schutzes verwendet werden. 
+1. <span data-ttu-id="dbb93-292">Verwendung des „Auto-“-Benutzernamens.</span><span class="sxs-lookup"><span data-stu-id="dbb93-292">Use of the "auto-" username.</span></span> <span data-ttu-id="dbb93-293">Clients, die ihrem Benutzernamen „Auto-“ voranstellen, umgehen CSRF-Schutz.</span><span class="sxs-lookup"><span data-stu-id="dbb93-293">Clients that prepend "auto-" to their username will bypass CSRF protection.</span></span> <span data-ttu-id="dbb93-294">Es ist wichtig, dass dieser Benutzername nicht zur Anmeldung beim Geräteportal über den Browser verwendet wird, da dies den Dienst für CSRF-Angriffe öffnet.</span><span class="sxs-lookup"><span data-stu-id="dbb93-294">It is important that this username not be used to log in to Device Portal through the browser, as it will open up the service to CSRF attacks.</span></span> <span data-ttu-id="dbb93-295">Beispiel: Wenn der Benutzername des Geräteportals „Admin“ lautet, sollte ```curl -u auto-admin:password <args>``` zum Umgehen des CSRF Schutzes verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="dbb93-295">Example: If Device Portal's username is "admin", ```curl -u auto-admin:password <args>``` should be used to bypass CSRF protection.</span></span> 
 
-2. Implementieren des Cookie-zu-Header-Schemas in den Client. Dies erfordert eine GET-Anforderung zur Erstellung des Sitzungscookies und dann die Aufnahme von Header und Cookie in alle nachfolgenden Anforderungen. 
+2. <span data-ttu-id="dbb93-296">Implementieren des Cookie-zu-Header-Schemas in den Client.</span><span class="sxs-lookup"><span data-stu-id="dbb93-296">Implement the cookie-to-header scheme in the client.</span></span> <span data-ttu-id="dbb93-297">Dies erfordert eine GET-Anforderung zur Erstellung des Sitzungscookies und dann die Aufnahme von Header und Cookie in alle nachfolgenden Anforderungen.</span><span class="sxs-lookup"><span data-stu-id="dbb93-297">This requires a GET request to establish the session cookie, and then the inclusion of both the header and the cookie on all subsequent requests.</span></span> 
  
-3. Deaktivieren der Authentifizierung und Verwenden von HTTP. CSRF-Schutz bezieht sich nur auf HTTPS-Endpunkte, sodass für Verbindungen auf HTTP-Endpunkten keine der oben genannten Schritte ausgeführt werden müssen. 
+3. <span data-ttu-id="dbb93-298">Deaktivieren der Authentifizierung und Verwenden von HTTP.</span><span class="sxs-lookup"><span data-stu-id="dbb93-298">Disable authentication and use HTTP.</span></span> <span data-ttu-id="dbb93-299">CSRF-Schutz bezieht sich nur auf HTTPS-Endpunkte, sodass für Verbindungen auf HTTP-Endpunkten keine der oben genannten Schritte ausgeführt werden müssen.</span><span class="sxs-lookup"><span data-stu-id="dbb93-299">CSRF protection only applies to HTTPS endpoints, so connections on HTTP endpoints will not need to do either of the above.</span></span> 
 
-**Hinweis:** Ein Benutzer mit einem Benutzernamen, der mit „Auto-“ beginnt, kann sich nicht über den Browser am Geräteportal anmelden.  
+<span data-ttu-id="dbb93-300">**Hinweis:** Ein Benutzer mit einem Benutzernamen, der mit „Auto-“ beginnt, kann sich nicht über den Browser am Geräteportal anmelden.</span><span class="sxs-lookup"><span data-stu-id="dbb93-300">**Note**: a username that begins with "auto-" will not be able to log into Device Portal via the browser.</span></span>  
 
-#### <a name="cross-site-websocket-hijacking-cswsh-protection"></a>Schutz vor websiteübergreifendem WebSocket-Hijacking (Cross-Site WebSocket Hijacking, CSWSH)
+#### <a name="cross-site-websocket-hijacking-cswsh-protection"></a><span data-ttu-id="dbb93-301">Schutz vor websiteübergreifendem WebSocket-Hijacking (Cross-Site WebSocket Hijacking, CSWSH)</span><span class="sxs-lookup"><span data-stu-id="dbb93-301">Cross-Site WebSocket Hijacking (CSWSH) protection</span></span>
 
-Zum Schutz vor [CSWSH-Angriffen](https://www.christian-schneider.net/CrossSiteWebSocketHijacking.html) müssen alle Clients, die eine WebSocket-Verbindung mit einem Geräteportal herstellen, einen dem Hostheader entsprechenden Origin-Header angeben.  Dadurch wird gegenüber dem Geräteportal belegt, dass die Anforderung entweder von der Benutzeroberfläche des Geräteportals oder von einer gültigen Clientanwendung stammt.  Anforderungen ohne Origin-Header werden abgelehnt. 
-
+<span data-ttu-id="dbb93-302">Zum Schutz vor [CSWSH-Angriffen](https://www.christian-schneider.net/CrossSiteWebSocketHijacking.html) müssen alle Clients, die eine WebSocket-Verbindung mit einem Geräteportal herstellen, einen dem Hostheader entsprechenden Origin-Header angeben.</span><span class="sxs-lookup"><span data-stu-id="dbb93-302">To protect against [CSWSH attacks](https://www.christian-schneider.net/CrossSiteWebSocketHijacking.html), all clients opening a WebSocket connection to Device Portal must also provide an Origin header that matches the Host header.</span></span>  <span data-ttu-id="dbb93-303">Dadurch wird gegenüber dem Geräteportal belegt, dass die Anforderung entweder von der Benutzeroberfläche des Geräteportals oder von einer gültigen Clientanwendung stammt.</span><span class="sxs-lookup"><span data-stu-id="dbb93-303">This proves to Device Portal that the request comes either from the Device Portal UI or a valid client application.</span></span>  <span data-ttu-id="dbb93-304">Anforderungen ohne Origin-Header werden abgelehnt.</span><span class="sxs-lookup"><span data-stu-id="dbb93-304">Without the Origin header your request will be rejected.</span></span> 

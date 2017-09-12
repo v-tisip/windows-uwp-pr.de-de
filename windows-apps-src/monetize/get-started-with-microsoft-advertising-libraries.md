@@ -1,47 +1,32 @@
 ---
 author: mcleanbyron
 ms.assetid: ae45490f-3eb1-4b7f-8e18-bf82f0ca5d6d
-description: "Holen Sie sich die Informationen, die Sie für den Einstieg in die Verwendung der Microsoft Advertising-Bibliotheken benötigen, um Banner und Video-Interstitialwerbung in Ihre Apps einzufügen."
-title: Erste Schritte mit den Microsoft Advertising-Bibliotheken
+description: "Holen Sie sich die Informationen, die Sie für den Einstieg in die Verwendung der Microsoft Advertising-Bibliotheken benötigen, um Banner und Interstitialwerbung in Ihre Apps einzufügen."
+title: Erste Schritte mit den Advertising-Bibliotheken
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 07/20/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Anzeigen, Werbung, erste Schritte"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 81392a218165d4e0c2b954bdc6cb7789f7aa63f1
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP, Anzeigen, Werbung, erste Schritte
+ms.openlocfilehash: fab1b459d7d736d48a95c22d39bab10bafe060bb
+ms.sourcegitcommit: a9e4be98688b3a6125fd5dd126190fcfcd764f95
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/21/2017
 ---
+# <a name="get-started-with-the-microsoft-advertising-sdk"></a><span data-ttu-id="e2518-104">Erste Schritte mit dem Microsoft Advertising-SDK</span><span class="sxs-lookup"><span data-stu-id="e2518-104">Get started with the Microsoft Advertising SDK</span></span>
 
-# <a name="get-started-with-the-microsoft-advertising-libraries"></a>Erste Schritte mit den Microsoft Advertising-Bibliotheken
+<span data-ttu-id="e2518-105">Dieser Artikel enthält Informationen, die Sie für den Einstieg in die Verwendung des Microsoft Advertising-SDKs benötigen.</span><span class="sxs-lookup"><span data-stu-id="e2518-105">This topic provides the information you need to get started using the Microsoft Advertising SDK to add ads to your apps.</span></span> <span data-ttu-id="e2518-106">Nachdem Sie die Themen in diesem Abschnitt gelesen haben, gehen Sie weiter zu den [Exemplarische Vorgehensweisen für Entwickler](developer-walkthroughs.md), um Beispiele dafür anzuzeigen, wie Sie Code schreiben, der Anzeigen in Ihren Apps einblendet.</span><span class="sxs-lookup"><span data-stu-id="e2518-106">After you have read the topics in this section, move on to the [developer walkthroughs](developer-walkthroughs.md) to see examples about how to write the code that will show ads in your apps.</span></span>
+
+<span data-ttu-id="e2518-107">Vollständige Beispielprojekte, die veranschaulichen, wie Sie JavaScript-/HTML- und XAML-Apps unter Verwendung von C# und C++ Werbebanner und Interstitialwerbung hinzufügen, finden Sie in den [Anzeigenbeispielen auf GitHub](http://aka.ms/githubads).</span><span class="sxs-lookup"><span data-stu-id="e2518-107">For complete sample projects that demonstrate how to add banner and interstitial ads to JavaScript/HTML apps and XAML apps using C# and C++, see the [advertising samples on GitHub](http://aka.ms/githubads).</span></span>
 
 
+## <a name="in-this-section"></a><span data-ttu-id="e2518-108">Inhalt dieses Abschnitts</span><span class="sxs-lookup"><span data-stu-id="e2518-108">In this section</span></span>
 
-
-Dieses Thema enthält die Informationen, die Sie für den Einstieg in die Verwendung der Microsoft Advertising-Bibliotheken benötigen, um Banner und Video-Interstitialwerbung in Ihre Apps einzufügen. Nachdem Sie die Themen in diesem Abschnitt gelesen haben, gehen Sie weiter zu den [Exemplarische Vorgehensweisen für Entwickler](developer-walkthroughs.md), um Beispiele dafür anzuzeigen, wie Sie Code schreiben, der Anzeigen in Ihren Apps einblendet.
-
-Vollständige Beispielprojekte, die veranschaulichen, wie Sie JavaScript-/HTML- und XAML-Apps unter Verwendung von C# und C++ Werbebanner und Video-Interstitialanzeigen hinzufügen, finden Sie in den [Anzeigenbeispielen auf GitHub](http://aka.ms/githubads).
-
- 
-
-## <a name="in-this-section"></a>Inhalt dieses Abschnitts
-
-| Thema                                                                                                       | Beschreibung                 |
+| <span data-ttu-id="e2518-109">Thema</span><span class="sxs-lookup"><span data-stu-id="e2518-109">Topic</span></span>                                                                                                       | <span data-ttu-id="e2518-110">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="e2518-110">Description</span></span>                 |
 |-------------------------------------------------------------------------------------------------------------|-----------------------------|
-| [Installieren der Microsoft Advertising-Bibliotheken](install-the-microsoft-advertising-libraries.md) |  Enthält Einzelheiten zur Installation und listet die Namen der Microsoft Advertising Bibliotheken und der Bibliotheken der Anzeigenvermittlung auf, wie sie im Dialogfeld **Verweis-Manager** in Visual Studio erscheinen.  |
-| [Workflows für das Erstellen von Apps mit Anzeigen](workflows-for-creating-apps-with-ads.md)     |  Beschreibt die wesentlichen Schritte zum Entwickeln und Veröffentlichen einer App mit Anzeigen.   |
-| [Aktualisieren Ihrer App auf die neuesten Microsoft Advertising-Bibliotheken](update-your-app-to-the-latest-advertising-libraries.md)  | Wenn Sie über eine App verfügen, die Werbebanner mithilfe von **AdControl** oder **AdMediatorControl** anzeigt, ermitteln Sie anhand der Anweisungen in diesem Artikel, ob Sie Ihre App aktualisieren müssen, damit in dieser mithilfe des neuesten Advertising SDKs weiterhin Werbebanner angezeigt werden.  |
-| [Migrieren Ihrer UWP-Apps von „AdMediatorControl“ zu „AdControl“](migrate-from-admediatorcontrol-to-adcontrol.md)  | Anleitung zur Migration von **AdMediatorControl** zu **AdControl** in UWP-Apps. Die Anzeigenvermittlung mit der **AdMediatorControl**-Klasse wird für UWP-Apps mit der [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) nicht mehr unterstützt.   |
-| [Versionshinweise](release-notes-for-the-advertising-libraries.md)         |  Enthält Versionshinweise für die aktuelle Version der Microsoft Advertising-Bibliotheken im Microsoft Store-Services-SDK (für UWP-Apps) und im Microsoft Advertising-SDK für Windows und Windows Phone 8.x (für Windows 8.1- und Windows Phone 8.x-Apps).   |
-| [Bekannte Probleme](known-issues-for-the-advertising-libraries.md)      |  Listet alle bekannten Probleme für die aktuelle Version der Microsoft Advertising-Bibliotheken im Microsoft Store-Services-SDK (für UWP-Apps) und im Microsoft Advertising-SDK für Windows und Windows Phone 8.x (für Windows 8.1- und Windows Phone 8.x-Apps) auf.   |
-| [Zusätzliche Hilfe](additional-help.md)                                    |   Enthält Links zu weiteren Ressourcen zum Entwickeln von Apps mit Anzeigen.  |
-| [Wichtiger Hinweis – Lizenzbedingungen](important-notice-eula.md)                                    |   Enthält Details zu den Lizenzbedingungen für die Microsoft Advertising-Bibliotheken.   |
-
-
- 
-
- 
-
+| [<span data-ttu-id="e2518-111">Installieren des Microsoft Advertising-SDK</span><span class="sxs-lookup"><span data-stu-id="e2518-111">Install the Microsoft Advertising SDK</span></span>](install-the-microsoft-advertising-libraries.md) |  <span data-ttu-id="e2518-112">Enthält Informationen zur Installation für das Microsoft Advertising-SDK.</span><span class="sxs-lookup"><span data-stu-id="e2518-112">Provides installation details for the Microsoft Advertising SDK.</span></span>  |
+| [<span data-ttu-id="e2518-113">Aktualisieren Ihrer App auf die neuesten Microsoft Advertising-Bibliotheken</span><span class="sxs-lookup"><span data-stu-id="e2518-113">Update your app to the latest Microsoft advertising libraries</span></span>](update-your-app-to-the-latest-advertising-libraries.md)  | <span data-ttu-id="e2518-114">Wenn Sie über eine App verfügen, die Werbebanner mithilfe von **AdControl** oder **AdMediatorControl** anzeigt, ermitteln Sie anhand der Anweisungen in diesem Artikel, ob Sie Ihre App aktualisieren müssen, damit in dieser mithilfe des neuesten SDKs weiterhin Werbebanner angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="e2518-114">If you have an existing app that displays banner ads using **AdControl** or **AdMediatorControl**, follow the instructions in this article to determine whether you need to update your app to use the latest SDK in order for your app to continue to receive banner ads.</span></span>  |
+| [<span data-ttu-id="e2518-115">Versionshinweise</span><span class="sxs-lookup"><span data-stu-id="e2518-115">Release notes</span></span>](release-notes-for-the-advertising-libraries.md)         |  <span data-ttu-id="e2518-116">Enthält Versionshinweise für die aktuelle Version des Microsoft Advertising-SDKs.</span><span class="sxs-lookup"><span data-stu-id="e2518-116">Provides release notes for the current release of the Microsoft Advertising SDK.</span></span>   |
+| [<span data-ttu-id="e2518-117">Bekannte Probleme</span><span class="sxs-lookup"><span data-stu-id="e2518-117">Known issues</span></span>](known-issues-for-the-advertising-libraries.md)      |  <span data-ttu-id="e2518-118">Erfahren Sie mehr über bekannte Probleme mit der aktuellen Version des Microsoft Advertising-SDKs.</span><span class="sxs-lookup"><span data-stu-id="e2518-118">Lists the known issues with the current release of the Microsoft Advertising SDK.</span></span>   |

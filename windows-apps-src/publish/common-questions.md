@@ -1,74 +1,72 @@
 ---
-author: shawjohn
-Description: "Häufige Fragen zu Anzeigenkampagnen"
+author: JnHs
+Description: Allgemeine Fragen zu Anzeigenkampagnen
 title: "Häufige Fragen zu Anzeigenkampagnen"
 ms.assetid: EAF7CC74-7DE4-4D11-B9A6-29C6EA6E734B
-ms.author: johnshaw
-ms.date: 02/08/2017
+ms.author: wdg-dev-content
+ms.date: 06/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 20a05337052392446d733af7da180f9466fef05f
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: c4b46dbb30afd9cdfdaa218af460dd9872c960ef
+ms.sourcegitcommit: 5ece992c31870df4c089360ef47501bd4ce14fa9
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/22/2017
 ---
+# <a name="common-questions-about-ad-campaigns"></a><span data-ttu-id="c74f0-104">Häufige Fragen zu Anzeigenkampagnen</span><span class="sxs-lookup"><span data-stu-id="c74f0-104">Common questions about ad campaigns</span></span>
 
-# <a name="common-questions-about-ad-campaigns"></a>Häufige Fragen zu Anzeigenkampagnen
+### <a name="how-much-does-it-cost-to-run-an-ad-for-my-app"></a><span data-ttu-id="c74f0-105">Wie viel kostet eine Anzeige für meine App?</span><span class="sxs-lookup"><span data-stu-id="c74f0-105">How much does it cost to run an ad for my app?</span></span>
 
-## <a name="how-much-does-it-cost-to-run-an-ad-for-my-app"></a>Wie viel kostet eine Anzeige für meine App?
+<span data-ttu-id="c74f0-106">Das entscheiden Sie selbst. Denken Sie jedoch an eines: Je mehr Sie ausgeben, desto mehr Kunden werden auf Ihre Anzeige aufmerksam.</span><span class="sxs-lookup"><span data-stu-id="c74f0-106">It’s really up to you, but remember: the more you spend, the more people will see your ad.</span></span> <span data-ttu-id="c74f0-107">Und je mehr Nutzer Ihre Anzeige sehen, desto mehr Klicks und Installationen sollten Sie erzielen.</span><span class="sxs-lookup"><span data-stu-id="c74f0-107">The more people see your ad, the more clicks and installs you should get.</span></span> <span data-ttu-id="c74f0-108">Weitere Informationen zum Erstellen einer Anzeigenkampagne für Ihre App finden Sie in [diesem Artikel](create-an-ad-campaign-for-your-app.md).</span><span class="sxs-lookup"><span data-stu-id="c74f0-108">Take a look at [this article](create-an-ad-campaign-for-your-app.md) for information about creating an ad campaign for your app.</span></span>
 
-Das entscheiden Sie selbst. Denken Sie jedoch an eines: Je mehr Sie ausgeben, desto mehr Kunden werden auf Ihre Anzeige aufmerksam. Und je mehr Nutzer Ihre Anzeige sehen, desto mehr Klicks und Installationen sollten Sie erzielen. Weitere Informationen zum Erstellen einer Anzeigenkampagne für Ihre App finden Sie in [diesem Artikel](create-an-ad-campaign-for-your-app.md).
+### <a name="how-can-i-increase-the-maximum-monthly-budget-amount-allowed-for-my-ad-campaign"></a><span data-ttu-id="c74f0-109">Wie kann ich das für meine Anzeigenkampagne maximal zulässige monatliche Budget erhöhen?</span><span class="sxs-lookup"><span data-stu-id="c74f0-109">How can I increase the maximum monthly budget amount allowed for my ad campaign?</span></span>
 
-## <a name="how-can-i-increase-the-maximum-monthly-budget-amount-allowed-for-my-ad-campaign"></a>Wie kann ich das für meine Anzeigenkampagne maximal zulässige monatliche Budget erhöhen?
+<span data-ttu-id="c74f0-110">Wenn Sie in einem Monat mehr als 10.000USD für Ihre Anzeigenkampagnen ausgeben möchten, wenden Sie sich an [aiacare@microsoft.com](mailto:aiacare@microsoft.com).</span><span class="sxs-lookup"><span data-stu-id="c74f0-110">If you plan to spend more than $10,000 in a month on your ad campaigns, please contact [aiacare@microsoft.com](mailto:aiacare@microsoft.com).</span></span> <span data-ttu-id="c74f0-111">Wir werden Sie auf ein Premiumkonto aktualisieren, in dem Sie bis zu 50.000USD pro Kampagne ausgeben können.</span><span class="sxs-lookup"><span data-stu-id="c74f0-111">We will upgrade you to a premium account, which lets you spend up to $50,000 per campaign.</span></span> <span data-ttu-id="c74f0-112">Ein Premiumkonto stellt Ihnen darüber hinaus zusätzliche Funktionen bereit, wie die Möglichkeit, Start- und Enddaten für Kampagnen festzulegen und eine Ziel-URL für Ihre Kampagne anzugeben.</span><span class="sxs-lookup"><span data-stu-id="c74f0-112">A premium account also gives you additional capabilities, such as the ability to set campaign start and end dates and to specify a destination URL for your campaign.</span></span>
 
-Wenn Sie in einem Monat mehr als 10.000 USD für Ihre Anzeigenkampagnen ausgeben möchten, wenden Sie sich an [aiacare@microsoft.com](mailto:aiacare@microsoft.com). Wir werden Sie auf ein Premiumkonto aktualisieren, in dem Sie bis zu 50.000 USD pro Kampagne ausgeben können. Ein Premiumkonto stellt Ihnen darüber hinaus zusätzliche Funktionen bereit, wie die Möglichkeit, Start- und Enddaten für Kampagnen festzulegen und eine Ziel-URL für Ihre Kampagne anzugeben.
+### <a name="can-i-run-ads-for-one-of-my-apps-in-my-other-apps"></a><span data-ttu-id="c74f0-113">Kann ich Anzeigen für eine meiner Apps in anderen Apps präsentieren?</span><span class="sxs-lookup"><span data-stu-id="c74f0-113">Can I run ads for one of my apps in my other apps?</span></span>
 
-## <a name="can-i-run-ads-for-one-of-my-apps-in-my-other-apps"></a>Kann ich Anzeigen für eine meiner Apps in anderen Apps präsentieren?
+<span data-ttu-id="c74f0-114">Ja.</span><span class="sxs-lookup"><span data-stu-id="c74f0-114">Yes.</span></span> <span data-ttu-id="c74f0-115">Wir bezeichnen diese Anzeigen als *Eigenwerbung*, die Sie kostenlos ausführen können.</span><span class="sxs-lookup"><span data-stu-id="c74f0-115">We call these *house ads*, and you can run them free of charge.</span></span> <span data-ttu-id="c74f0-116">Weitere Informationen zu Community-Anzeigen finden Sie in [diesem Artikel](about-house-ads.md).</span><span class="sxs-lookup"><span data-stu-id="c74f0-116">Check out [this article](about-house-ads.md) for more information about community ads.</span></span>
 
-Ja. Wir bezeichnen diese Anzeigen als *Eigenwerbung*, die Sie kostenlos ausführen können. Weitere Informationen zu Community-Anzeigen finden Sie in [diesem Artikel](about-house-ads.md).
+### <a name="can-i-cross-promote-my-app-with-apps-from-other-developers-in-the-store"></a><span data-ttu-id="c74f0-117">Kann ich meine App mit Apps von anderen Entwicklern im Store gemeinsam bewerben?</span><span class="sxs-lookup"><span data-stu-id="c74f0-117">Can I cross-promote my app with apps from other developers in the Store?</span></span>
 
-## <a name="can-i-cross-promote-my-app-with-apps-from-other-developers-in-the-store"></a>Kann ich meine App mit Apps von anderen Entwicklern im Store gemeinsam bewerben?
+<span data-ttu-id="c74f0-118">Ja.</span><span class="sxs-lookup"><span data-stu-id="c74f0-118">Yes.</span></span> <span data-ttu-id="c74f0-119">Wir bezeichnen diese Anzeigen als *Community-Anzeigen*, die Sie kostenlos präsentieren können.</span><span class="sxs-lookup"><span data-stu-id="c74f0-119">We call these *community ads*, and you can run them free of charge.</span></span> <span data-ttu-id="c74f0-120">Nachdem Sie sich für die [Teilnahme an Community-Anzeigen](about-community-ads.md#opt-in-to-community-ads) entschieden und eine [kostenlose Community-Anzeigenkampagne](create-an-ad-campaign-for-your-app.md) erstellt haben, teilt sich Ihre App den Platz für Werbeanzeigen mit anderen Entwicklern, die sich ebenfalls für die Nutzung von Community-Anzeigen entschieden haben.</span><span class="sxs-lookup"><span data-stu-id="c74f0-120">After you [opt-in to community ads](about-community-ads.md#opt-in-to-community-ads), you can [create a free community ad campaign](create-an-ad-campaign-for-your-app.md) and your app will share promotional ad space with other developers who also opt in to community ads.</span></span> <span data-ttu-id="c74f0-121">Weitere Informationen finden Sie in [diesem Artikel](about-community-ads.md).</span><span class="sxs-lookup"><span data-stu-id="c74f0-121">Check out [this article](about-community-ads.md) for more information.</span></span>
 
-Ja. Wir bezeichnen diese Anzeigen als *Community-Anzeigen*, die Sie kostenlos präsentieren können. Nachdem Sie sich für die [Teilnahme an Community-Anzeigen](about-community-ads.md#how-to-opt-in-to-community-ads) entschieden und eine [kostenlose Community-Anzeigenkampagne](create-an-ad-campaign-for-your-app.md) erstellt haben, teilt sich Ihre App den Platz für Werbeanzeigen mit anderen Entwicklern, die sich ebenfalls für die Nutzung von Community-Anzeigen entschieden haben. Weitere Informationen finden Sie in [diesem Artikel](about-community-ads.md).
+### <a name="how-can-i-customize-my-ad"></a><span data-ttu-id="c74f0-122">Wie kann ich meine Anzeige anpassen?</span><span class="sxs-lookup"><span data-stu-id="c74f0-122">How can I customize my ad?</span></span>
 
-## <a name="how-can-i-customize-my-ad"></a>Wie kann ich meine Anzeige anpassen?
+<span data-ttu-id="c74f0-123">Wenn Sie eine der Standardanzeigenvorlagen verwenden, können Sie die Größe, die Bilder und die Hintergrundfarbe der Anzeige auswählen.</span><span class="sxs-lookup"><span data-stu-id="c74f0-123">If you use one of the default ad templates, you can choose the size, imagery, and background color of your ad.</span></span> <span data-ttu-id="c74f0-124">Sie können Ihrer Anzeige auch einen eigenen Slogan hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="c74f0-124">You can also add a custom tag line to your ad if you want.</span></span> <span data-ttu-id="c74f0-125">Alternativ können Sie eigene Anzeigenentwürfe hochladen, die unseren Anforderungen entsprechen.</span><span class="sxs-lookup"><span data-stu-id="c74f0-125">Alternatively, you can upload your own ad designs that meet our requirements.</span></span> <span data-ttu-id="c74f0-126">Weitere Informationen finden Sie unter [Erstellen einer Anzeigenkampagne für Ihre App](create-an-ad-campaign-for-your-app.md).</span><span class="sxs-lookup"><span data-stu-id="c74f0-126">For more information, see [Create an ad campaign for your app.](create-an-ad-campaign-for-your-app.md)</span></span>
 
-Wenn Sie eine der Standardanzeigenvorlagen verwenden, können Sie die Größe, die Bilder und die Hintergrundfarbe der Anzeige auswählen. Sie können Ihrer Anzeige auch einen eigenen Slogan hinzufügen. Alternativ können Sie eigene Anzeigenentwürfe hochladen, die unseren Anforderungen entsprechen. Weitere Informationen finden Sie unter [Erstellen einer Anzeigenkampagne für Ihre App](create-an-ad-campaign-for-your-app.md).
+### <a name="where-will-my-ad-appear"></a><span data-ttu-id="c74f0-127">Wo erscheint meine Anzeige?</span><span class="sxs-lookup"><span data-stu-id="c74f0-127">Where will my ad appear?</span></span>
 
-## <a name="where-will-my-ad-appear"></a>Wo erscheint meine Anzeige?
+<span data-ttu-id="c74f0-128">Ihre Anzeige erscheint in Apps, die der Altersfreigabe und der Betriebssystemversion Ihrer App entsprechen.</span><span class="sxs-lookup"><span data-stu-id="c74f0-128">Your ad will appear in apps that share your app's age rating and OS version.</span></span> <span data-ttu-id="c74f0-129">Sie legen diese Eigenschaften fest, wenn Sie Ihre App im WindowsStore veröffentlichen.</span><span class="sxs-lookup"><span data-stu-id="c74f0-129">You set these properties when you publish your app in the Windows Store.</span></span> <span data-ttu-id="c74f0-130">Für „universelle” Kampagnen werden Ihre Anzeigen auch in MSN.com, Outlook.com, Skype und anderen Microsoft-Premium-Eigenschaften angezeigt.</span><span class="sxs-lookup"><span data-stu-id="c74f0-130">For “Universal” campaigns, your ads will also appear within MSN.com, Outlook.com, Skype, and other Microsoft premium properties.</span></span>
 
-Ihre Anzeige erscheint in Apps, die der Altersfreigabe und der Betriebssystemversion Ihrer App entsprechen. Sie legen diese Eigenschaften fest, wenn Sie Ihre App im Windows Store veröffentlichen. Für „universelle” Kampagnen werden Ihre Anzeigen auch in MSN.com, Outlook.com, Skype und anderen Microsoft-Premium-Eigenschaften angezeigt.
+<span data-ttu-id="c74f0-131">Anzeigenkampagnen werden derzeit in folgenden Ländern und Regionen unterstützt:</span><span class="sxs-lookup"><span data-stu-id="c74f0-131">Ad campaigns are currently supported in these countries and regions:</span></span>
 
-Anzeigenkampagnen werden derzeit in folgenden Ländern und Regionen unterstützt:
+<span data-ttu-id="c74f0-132">Ägypten, Algerien, Argentinien, Australien, Bahamas, Bahrain, Barbados, Belgien, Belize, Bolivien, Brasilien, Chile, China, Dänemark, Dominikanische Republik, Ecuador, El Salvador, Finnland, Frankreich, Großbritannien, Guatemala, Haiti, Honduras, Hongkong, Indien, Indonesien, Irak, Irland, Italien, Jamaika, Jordan, Kanada, Katar, Kolumbien, Kuwait, Libanon, Malaysia, Marokko, Mexiko, Neuseeland, Nicaragua, Niederlande, Norwegen, Oman, Österreich, Panama, Paraguay, Peru, Philippinen, Puerto Rico, Saudi-Arabien, Schweden, Schweiz, Singapur, Spanien, Südafrika, Taiwan, Thailand, Trinidad und Tobago, Tunesien, Uruguay, Venezuela, Vereinigte Arabische Emirate, Vereinigte Staaten, Vietnam.</span><span class="sxs-lookup"><span data-stu-id="c74f0-132">Algeria, Argentina, Australia, Austria, Bahamas, Bahrain, Barbados, Belgium, Belize, Bolivia, Brazil, Canada, Chile, China, Colombia, Denmark, Dominican Republic, Ecuador, Egypt, El Salvador, Finland, France, Germany, Guatemala, Haiti, Honduras, Hong Kong SAR, India, Indonesia, Iraq, Ireland, Italy, Jamaica, Jordan, Kuwait, Lebanon, Malaysia, Mexico, Morocco, New Zealand, Netherlands, Nicaragua, Norway, Oman, Panama, Paraguay, Peru, Philippines, Puerto Rico, Qatar, Saudi Arabia, Singapore, Spain, South Africa, Sweden, Switzerland, Taiwan, Thailand, Trinidad and Tobago, Tunisia, United Arab Emirates, United Kingdom, United States, Uruguay, Venezuela, Vietnam.</span></span>
 
-Ägypten, Algerien, Argentinien, Australien, Bahamas, Bahrain, Barbados, Belgien, Belize, Bolivien, Brasilien, Chile, China, Dänemark, Dominikanische Republik, Ecuador, El Salvador, Finnland, Frankreich, Großbritannien, Guatemala, Haiti, Honduras, Hongkong, Indien, Indonesien, Irak, Irland, Italien, Jamaika, Jordan, Kanada, Katar, Kolumbien, Kuwait, Libanon, Malaysia, Marokko, Mexiko, Neuseeland, Nicaragua, Niederlande, Norwegen, Oman, Österreich, Panama, Paraguay, Peru, Philippinen, Puerto Rico, Saudi-Arabien, Schweden, Schweiz, Singapur, Spanien, Südafrika, Taiwan, Thailand, Trinidad und Tobago, Tunesien, Uruguay, Venezuela, Vereinigte Arabische Emirate, Vereinigte Staaten, Vietnam.
+### <a name="what-languages-are-supported-for-ad-campaigns"></a><span data-ttu-id="c74f0-133">Welche Sprachen werden für Anzeigenkampagnen unterstützt?</span><span class="sxs-lookup"><span data-stu-id="c74f0-133">What languages are supported for ad campaigns?</span></span>
 
-## <a name="what-languages-are-supported-for-ad-campaigns"></a>Welche Sprachen werden für Anzeigenkampagnen unterstützt?
+<span data-ttu-id="c74f0-134">Sie können in den folgenden Sprachen Anzeigenkampagnen erstellen:</span><span class="sxs-lookup"><span data-stu-id="c74f0-134">You can create ad campaigns in the following languages:</span></span>
 
-Sie können in den folgenden Sprachen Anzeigenkampagnen erstellen:
+<span data-ttu-id="c74f0-135">Arabisch, Chinesisch (traditionell), Chinesisch (vereinfacht), Dänisch, Deutsch, Englisch, Finnisch, Französisch, Italienisch, Niederländisch, Norwegisch, Portugiesisch (Brasilien), Portugiesisch (Portugal), Schwedisch, Spanisch.</span><span class="sxs-lookup"><span data-stu-id="c74f0-135">Arabic, Chinese (Simplified), Chinese (Traditional), Danish, Dutch, English, Finnish, French, German, Italian, Norwegian, Portuguese (Brazil), Portuguese (Portugal), Spanish, Swedish.</span></span>
 
-Arabisch, Chinesisch (traditionell), Chinesisch (vereinfacht), Dänisch, Deutsch, Englisch, Finnisch, Französisch, Italienisch, Niederländisch, Norwegisch, Portugiesisch (Brasilien), Portugiesisch (Portugal), Schwedisch, Spanisch.
+### <a name="when-will-i-be-billed"></a><span data-ttu-id="c74f0-136">Wann erfolgt die Abrechnung?</span><span class="sxs-lookup"><span data-stu-id="c74f0-136">When will I be billed?</span></span>
 
-## <a name="when-will-i-be-billed"></a>Wann erfolgt die Abrechnung?
+<span data-ttu-id="c74f0-137">Ihnen werden jedes Mal, wenn auf Ihrem Konto 50$ Gebühren anfallen (oder der entsprechende Betrag in der lokalen Währung Ihres Markts oder Ihrer Region), alle kostenpflichtigen Kampagnen für Ihr Konto in Rechnung gestellt.</span><span class="sxs-lookup"><span data-stu-id="c74f0-137">You will be billed each time your account accrues $50 of charges (or the equivalent amount in the local currency of your market or region) for all paid campaigns for your account.</span></span>
 
-Ihnen werden jedes Mal, wenn auf Ihrem Konto 50 $ Gebühren anfallen (oder der entsprechende Betrag in der lokalen Währung Ihres Markts oder Ihrer Region), alle kostenpflichtigen Kampagnen für Ihr Konto in Rechnung gestellt.
+<span data-ttu-id="c74f0-138">Wenn auf Ihrem Konto in dem Zeitraum von 30 Tagen nach dem letzten Abrechnungsdatum weniger als 50$ Gebühren anfallen, werden Ihnen diese Gebühren zu Beginn des Folgemonats in Rechnung gestellt.</span><span class="sxs-lookup"><span data-stu-id="c74f0-138">If your account accrues less than $50 of charges in the 30-day period after your last billing date, you will be billed for those charges early in the following month.</span></span> <span data-ttu-id="c74f0-139">Dadurch wird sichergestellt, dass auf Ihrem Konto nicht länger als einen Monat Gebühren für Anzeigenkampagnen offen bleiben.</span><span class="sxs-lookup"><span data-stu-id="c74f0-139">This helps to ensure that your account doesn’t maintain a running balance of ad campaign charges for more than a month.</span></span>
 
-Wenn auf Ihrem Konto in dem Zeitraum von 30 Tagen nach dem letzten Abrechnungsdatum weniger als 50 $ Gebühren anfallen, werden Ihnen diese Gebühren zu Beginn des Folgemonats in Rechnung gestellt. Dadurch wird sichergestellt, dass auf Ihrem Konto nicht länger als einen Monat Gebühren für Anzeigenkampagnen offen bleiben.
+<span data-ttu-id="c74f0-140">Wenn Sie nicht warten möchten, bis die Abrechnung erstellt wird, können Sie Ihre Rechnung sofort bezahlen, indem Sie **Jetzt abrechnen** auf der Seite **Rechnungszusammenfassung** (**Werbeaktionen** > **Abrechnungsverlauf**) auswählen.</span><span class="sxs-lookup"><span data-stu-id="c74f0-140">If you don’t want to wait to be billed, you can pay your bill immediately by selecting **Charge now** on the **Billing summary** page (**Promotions** > **Billing history**).</span></span> <span data-ttu-id="c74f0-141">Ihre Zahlungsmethode wird mit dem Betrag belastet, der unter **Nicht abgerechneter Betrag** aufgelistet wird.</span><span class="sxs-lookup"><span data-stu-id="c74f0-141">Your payment method will be charged the amount listed under **Unbilled amount**.</span></span>
 
-Wenn Sie nicht warten möchten, bis die Abrechnung erstellt wird, können Sie Ihre Rechnung sofort bezahlen, indem Sie **Jetzt abrechnen** auf der Seite **Rechnungszusammenfassung** (**Werbeaktionen** > **Abrechnungsverlauf**) auswählen. Ihre Zahlungsmethode wird mit dem Betrag belastet, der unter **Nicht abgerechneter Betrag** aufgelistet wird.
+### <a name="how-do-i-delete-a-credit-card-or-edit-the-details-of-a-credit-card"></a><span data-ttu-id="c74f0-142">Wie kann ich eine Kreditkarte löschen oder die Details einer Kreditkarte bearbeiten?</span><span class="sxs-lookup"><span data-stu-id="c74f0-142">How do I delete a credit card or edit the details of a credit card?</span></span>
 
-## <a name="how-do-i-delete-a-credit-card-or-edit-the-details-of-a-credit-card"></a>Wie kann ich eine Kreditkarte löschen oder die Details einer Kreditkarte bearbeiten?
+<span data-ttu-id="c74f0-143">Wechseln Sie zu <http://commerce.microsoft.com>, melden Sie sich mit den Anmeldeinformationen Ihres Microsoft-Kontos an, und nehmen Sie die erforderlichen Änderungen vor.</span><span class="sxs-lookup"><span data-stu-id="c74f0-143">Go to <http://commerce.microsoft.com>, log in with your Microsoft account credentials, and make the necessary changes.</span></span>
 
-Wechseln Sie zu <http://commerce.microsoft.com>, melden Sie sich mit den Anmeldeinformationen Ihres Microsoft-Kontos an, und nehmen Sie die erforderlichen Änderungen vor.
+### <a name="related-topics"></a><span data-ttu-id="c74f0-144">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="c74f0-144">Related topics</span></span>
 
-## <a name="related-topics"></a>Verwandte Themen
-
-* [Erstellen einer Anzeigenkampagne für Ihre App](create-an-ad-campaign-for-your-app.md)
-* [Verwalten Ihrer Anzeigenkampagne](managing-your-ad-campaign.md)
-* [Über Eigenwerbung](about-house-ads.md)
-* [Informationen zu Community-Anzeigen](about-community-ads.md)
-* [Bericht „Anzeigen für die App-Installation“](app-install-ads-reports.md)
-
+* [<span data-ttu-id="c74f0-145">Erstellen einer Anzeigenkampagne für Ihre App</span><span class="sxs-lookup"><span data-stu-id="c74f0-145">Create an ad campaign for your app</span></span>](create-an-ad-campaign-for-your-app.md)
+* [<span data-ttu-id="c74f0-146">Verwalten Ihrer Anzeigenkampagne</span><span class="sxs-lookup"><span data-stu-id="c74f0-146">Managing your ad campaign</span></span>](managing-your-ad-campaign.md)
+* [<span data-ttu-id="c74f0-147">Über Eigenwerbung</span><span class="sxs-lookup"><span data-stu-id="c74f0-147">About house ads</span></span>](about-house-ads.md)
+* [<span data-ttu-id="c74f0-148">Informationen zu Community-Anzeigen</span><span class="sxs-lookup"><span data-stu-id="c74f0-148">About community ads</span></span>](about-community-ads.md)
+* [<span data-ttu-id="c74f0-149">Bericht „Anzeigen für die App-Installation“</span><span class="sxs-lookup"><span data-stu-id="c74f0-149">App install ads report</span></span>](app-install-ads-reports.md)

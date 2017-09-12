@@ -1,127 +1,127 @@
 ---
-author: DBirtolo
+author: mukin
 ms.assetid: 23001DA5-C099-4C02-ACE9-3597F06ECBF4
 title: IDs der AEP-Dienstklasse
 description: "Die AEP-Dienste (Zuordnungsendpunkt) bieten einen Programmierungsvertrag für Dienste, die von einem Gerät über ein bestimmtes Protokoll unterstützt werden. Für mehrere dieser Dienste sind Bezeichner festgelegt, die verwendet werden sollen, wenn auf sie verwiesen wird."
-ms.author: dbirtolo
+ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d2259c82acf700d21f4c3f51a367180bb976f636
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 055bc11143c6d93e5019021abfc72988f34ddf90
+ms.sourcegitcommit: a2908889b3566882c7494dc81fa9ece7d1d19580
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/31/2017
 ---
-# <a name="aep-service-class-ids"></a>IDs der AEP-Dienstklasse
+# <a name="aep-service-class-ids"></a><span data-ttu-id="fb797-105">IDs der AEP-Dienstklasse</span><span class="sxs-lookup"><span data-stu-id="fb797-105">AEP service class IDs</span></span>
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+<span data-ttu-id="fb797-106">\[ Aktualisiert für UWP-Apps unter Windows 10.</span><span class="sxs-lookup"><span data-stu-id="fb797-106">\[ Updated for UWP apps on Windows 10.</span></span> <span data-ttu-id="fb797-107">Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span><span class="sxs-lookup"><span data-stu-id="fb797-107">For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span></span>
 
 
-**Wichtige APIs**
+**<span data-ttu-id="fb797-108">Wichtige APIs</span><span class="sxs-lookup"><span data-stu-id="fb797-108">Important APIs</span></span>**
 
-- [**Windows.Devices.Enumeration**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration)
+- [**<span data-ttu-id="fb797-109">Windows.Devices.Enumeration</span><span class="sxs-lookup"><span data-stu-id="fb797-109">Windows.Devices.Enumeration</span></span>**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration)
 
-Die AEP-Dienste (Zuordnungsendpunkt) bieten einen Programmierungsvertrag für Dienste, die von einem Gerät über ein bestimmtes Protokoll unterstützt werden. Für mehrere dieser Dienste sind Bezeichner festgelegt, die verwendet werden sollen, wenn auf sie verwiesen wird. Diese Verträge werden durch die **System.Devices.AepService.ServiceClassId**-Eigenschaft gekennzeichnet. In diesem Abschnitt sind einige bekannte IDs der AEP-Dienstklasse aufgeführt. Die Klassen-ID des AEP-Diensts gilt auch für Protokolle mit benutzerdefinierten Klassen-IDs.
+<span data-ttu-id="fb797-110">Die AEP-Dienste (Zuordnungsendpunkt) bieten einen Programmierungsvertrag für Dienste, die von einem Gerät über ein bestimmtes Protokoll unterstützt werden.</span><span class="sxs-lookup"><span data-stu-id="fb797-110">Association Endpoint (AEP) services provide a programming contract for services that a device supports over a given protocol.</span></span> <span data-ttu-id="fb797-111">Für mehrere dieser Dienste sind Bezeichner festgelegt, die verwendet werden sollen, wenn auf sie verwiesen wird.</span><span class="sxs-lookup"><span data-stu-id="fb797-111">Several of these services have established identifiers that should be used when referencing them.</span></span> <span data-ttu-id="fb797-112">Diese Verträge werden durch die **System.Devices.AepService.ServiceClassId**-Eigenschaft gekennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="fb797-112">These contracts are identified with the **System.Devices.AepService.ServiceClassId** property.</span></span> <span data-ttu-id="fb797-113">In diesem Abschnitt sind einige bekannte IDs der AEP-Dienstklasse aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="fb797-113">This topic lists several well-known AEP service class IDs.</span></span> <span data-ttu-id="fb797-114">Die Klassen-ID des AEP-Diensts gilt auch für Protokolle mit benutzerdefinierten Klassen-IDs.</span><span class="sxs-lookup"><span data-stu-id="fb797-114">The AEP service class ID is also applicable to protocols with custom class IDs.</span></span>
 
-App-Entwickler sollten auf Basis der Klassen-IDs erweiterte Abfragesyntaxfilter (Advanced Query Syntax, AQS) verwenden, um ihre Abfragen auf die zu verwendenden AEP-Dienste zu beschränken. Dadurch werden sowohl die Abfrageergebnisse auf die betreffenden Dienste beschränkt als auch Leistung, Akkulaufzeit und Dienstqualität für das Gerät erheblich verbessert. Eine Anwendung kann z. B. diese Dienstklassen-IDs verwenden, um ein Gerät für die Miracast-Synchronisierung oder als DLNA-DMR (Digital Media-Renderer) zu verwenden. Weitere Informationen zur Interaktion zwischen Geräten und Diensten finden Sie unter [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991).
+<span data-ttu-id="fb797-115">App-Entwickler sollten auf Basis der Klassen-IDs erweiterte Abfragesyntaxfilter (Advanced Query Syntax, AQS) verwenden, um ihre Abfragen auf die zu verwendenden AEP-Dienste zu beschränken.</span><span class="sxs-lookup"><span data-stu-id="fb797-115">An app developer should use advanced query syntax (AQS) filters based on the class IDs to limit their queries to the AEP services they plan to use.</span></span> <span data-ttu-id="fb797-116">Dadurch werden sowohl die Abfrageergebnisse auf die betreffenden Dienste beschränkt als auch Leistung, Akkulaufzeit und Dienstqualität für das Gerät erheblich verbessert.</span><span class="sxs-lookup"><span data-stu-id="fb797-116">This will both limit the query results to the relevant services and will significantly increase the performance, battery life, and quality of service for the device.</span></span> <span data-ttu-id="fb797-117">Eine Anwendung kann z.B. diese Dienstklassen-IDs verwenden, um ein Gerät für die Miracast-Synchronisierung oder als DLNA-DMR (Digital Media-Renderer) zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="fb797-117">For example, an application can use these service class IDs to use a device as a Miracast sync or DLNA digital media renderer (DMR).</span></span> <span data-ttu-id="fb797-118">Weitere Informationen zur Interaktion zwischen Geräten und Diensten finden Sie unter [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991).</span><span class="sxs-lookup"><span data-stu-id="fb797-118">For more information about how devices and services interact with each other, see [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991).</span></span>
 
-## <a name="bluetooth-and-bluetooth-le-services"></a>Bluetooth- und Bluetooth LE-Dienste
+## <a name="bluetooth-and-bluetooth-le-services"></a><span data-ttu-id="fb797-119">Bluetooth- und Bluetooth LE-Dienste</span><span class="sxs-lookup"><span data-stu-id="fb797-119">Bluetooth and Bluetooth LE services</span></span>
 
-Bluetooth-Dienste zählen zu einem von zwei Protokollen, dem Bluetooth- oder Bluetooth LE-Protokoll. Bezeichner für diese Protokolle:
+<span data-ttu-id="fb797-120">Bluetooth-Dienste zählen zu einem von zwei Protokollen, dem Bluetooth- oder Bluetooth LE-Protokoll.</span><span class="sxs-lookup"><span data-stu-id="fb797-120">Bluetooth services fall under one of two protocols, either the Bluetooth protocol or the Bluetooth LE protocol.</span></span> <span data-ttu-id="fb797-121">Bezeichner für diese Protokolle:</span><span class="sxs-lookup"><span data-stu-id="fb797-121">The identifiers for these protocols are:</span></span>
 
--   Bluetooth-Protokoll-ID: {e0cbf06c-cd8b-4647-bb8a263b43f0f974}
--   Bluetooth LE-Protokoll-ID: {bb7bb05e-5972-42b5-94fc76eaa7084d49}
+-   <span data-ttu-id="fb797-122">Bluetooth-Protokoll-ID: {e0cbf06c-cd8b-4647-bb8a263b43f0f974}</span><span class="sxs-lookup"><span data-stu-id="fb797-122">Bluetooth protocol ID: {e0cbf06c-cd8b-4647-bb8a263b43f0f974}</span></span>
+-   <span data-ttu-id="fb797-123">Bluetooth LE-Protokoll-ID: {bb7bb05e-5972-42b5-94fc76eaa7084d49}</span><span class="sxs-lookup"><span data-stu-id="fb797-123">Bluetooth LE protocol ID: {bb7bb05e-5972-42b5-94fc76eaa7084d49}</span></span>
 
-Das Bluetooth-Protokoll unterstützt verschiedene Dienste, die alle dasselbe grundlegende Format aufweisen. Die ersten vier Ziffern der GUID variieren je nach Dienst, aber alle Bluetooth-GUIDs enden mit **0000-0000-1000-8000-00805F9B34FB**. Der RFCOMM-Dienst weist den Vorspann 0x0003 auf, wodurch sich die vollständige ID **00030000-0000-1000-8000-00805F9B34FB** ergeben würde. Die folgende Tabelle enthält einige allgemeine Bluetooth-Dienste.
+<span data-ttu-id="fb797-124">Das Bluetooth-Protokoll unterstützt verschiedene Dienste, die alle dasselbe grundlegende Format aufweisen.</span><span class="sxs-lookup"><span data-stu-id="fb797-124">The Bluetooth protocol supports several services, all following the same basic format.</span></span> <span data-ttu-id="fb797-125">Die ersten vier Ziffern der GUID variieren je nach Dienst, aber alle Bluetooth-GUIDs enden mit **0000-0000-1000-8000-00805F9B34FB**.</span><span class="sxs-lookup"><span data-stu-id="fb797-125">The first four digits of the GUID vary based upon the service, but all Bluetooth GUIDs end with **0000-0000-1000-8000-00805F9B34FB**.</span></span> <span data-ttu-id="fb797-126">Der RFCOMM-Dienst weist den Vorspann 0x0003 auf, wodurch sich die vollständige ID **00030000-0000-1000-8000-00805F9B34FB** ergeben würde.</span><span class="sxs-lookup"><span data-stu-id="fb797-126">For example, the RFCOMM service has the precursor of 0x0003, so the full ID would be **00030000-0000-1000-8000-00805F9B34FB**.</span></span> <span data-ttu-id="fb797-127">Die folgende Tabelle enthält einige allgemeine Bluetooth-Dienste.</span><span class="sxs-lookup"><span data-stu-id="fb797-127">The following table lists some common Bluetooth services.</span></span>
 
-| Dienstname                         | GUID                                     |
+| <span data-ttu-id="fb797-128">Dienstname</span><span class="sxs-lookup"><span data-stu-id="fb797-128">Service name</span></span>                         | <span data-ttu-id="fb797-129">GUID</span><span class="sxs-lookup"><span data-stu-id="fb797-129">GUID</span></span>                                     |
 |--------------------------------------|------------------------------------------|
-| RFCOMM                               | **00030000-0000-1000-8000-00805F9B34FB** |
-| GATT: Warnungsbenachrichtigungsdienst    | **18110000-0000-1000-8000-00805F9B34FB** |
-| GATT: E/A für Automatisierung                 | **18150000-0000-1000-8000-00805F9B34FB** |
-| GATT: Akkudienst               | **180F0000-0000-1000-8000-00805F9B34FB** |
-| GATT: Blutdruck                | **18100000-0000-1000-8000-00805F9B34FB** |
-| GATT: Körperbau              | **181B0000-0000-1000-8000-00805F9B34FB** |
-| GATT: Verbindungsmanagement               | **181E0000-0000-1000-8000-00805F9B34FB** |
-| GATT: Fortlaufende Zuckerspiegelüberwachung | **181F0000-0000-1000-8000-00805F9B34FB** |
-| GATT: Aktueller Zeitdienst          | **18050000-0000-1000-8000-00805F9B34FB** |
-| GATT: Radfahrleistung                 | **18180000-0000-1000-8000-00805F9B34FB** |
-| GATT: Radfahrgeschwindigkeit und -frequenz     | **18160000-0000-1000-8000-00805F9B34FB** |
-| GATT: Geräteinformationen            | **180A0000-0000-1000-8000-00805F9B34FB** |
-| GATT: Umgebungsabtastung         | **181A0000-0000-1000-8000-00805F9B34FB** |
-| GATT: Generischer Zugriff                | **18000000-0000-1000-8000-00805F9B34FB** |
-| GATT: Generisches Attribut             | **18010000-0000-1000-8000-00805F9B34FB** |
-| GATT: Blutzucker                       | **18080000-0000-1000-8000-00805F9B34FB** |
-| GATT: Indikator für den Gesundheitszustand            | **18090000-0000-1000-8000-00805F9B34FB** |
-| GATT: Herzfrequenz                    | **180D0000-0000-1000-8000-00805F9B34FB** |
-| GATT: Menschliches Schnittstellengerät        | **18120000-0000-1000-8000-00805F9B34FB** |
-| GATT: Sofortige Warnung               | **18020000-0000-1000-8000-00805F9B34FB** |
-| GATT: Positionierung in Gebäuden            | **18210000-0000-1000-8000-00805F9B34FB** |
-| GATT: Internetprotokollunterstützung     | **18200000-0000-1000-8000-00805F9B34FB** |
-| GATT: Verbindungsausfall                     | **18030000-0000-1000-8000-00805F9B34FB** |
-| GATT: Position und Navigation       | **18190000-0000-1000-8000-00805F9B34FB** |
-| GATT: Dienst für nächsten Sommerzeitwechsel       | **18070000-0000-1000-8000-00805F9B34FB** |
-| GATT: Dienst für Warnstatus des Mobiltelefons    | **180E0000-0000-1000-8000-00805F9B34FB** |
-| GATT: Pulsoximeter                | **18220000-0000-1000-8000-00805F9B34FB** |
-| GATT: Referenzzeit-Aktualisierungsdienst | **18060000-0000-1000-8000-00805F9B34FB** |
-| GATT: Laufgeschwindigkeit und -frequenz     | **18140000-0000-1000-8000-00805F9B34FB** |
-| GATT: Abtastparameter               | **18130000-0000-1000-8000-00805F9B34FB** |
-| GATT: Tx-Leistung                      | **18040000-0000-1000-8000-00805F9B34FB** |
-| GATT: Benutzerdaten                     | **181C0000-0000-1000-8000-00805F9B34FB** |
-| GATT: Gewichtsskala                  | **181D0000-0000-1000-8000-00805F9B34FB** |
+| <span data-ttu-id="fb797-130">RFCOMM</span><span class="sxs-lookup"><span data-stu-id="fb797-130">RFCOMM</span></span>                               | **<span data-ttu-id="fb797-131">00030000-0000-1000-8000-00805F9B34FB</span><span class="sxs-lookup"><span data-stu-id="fb797-131">00030000-0000-1000-8000-00805F9B34FB</span></span>** |
+| <span data-ttu-id="fb797-132">GATT: Warnungsbenachrichtigungsdienst</span><span class="sxs-lookup"><span data-stu-id="fb797-132">GATT - Alert notification service</span></span>    | **<span data-ttu-id="fb797-133">18110000-0000-1000-8000-00805F9B34FB</span><span class="sxs-lookup"><span data-stu-id="fb797-133">18110000-0000-1000-8000-00805F9B34FB</span></span>** |
+| <span data-ttu-id="fb797-134">GATT: E/A für Automatisierung</span><span class="sxs-lookup"><span data-stu-id="fb797-134">GATT - Automation IO</span></span>                 | **<span data-ttu-id="fb797-135">18150000-0000-1000-8000-00805F9B34FB</span><span class="sxs-lookup"><span data-stu-id="fb797-135">18150000-0000-1000-8000-00805F9B34FB</span></span>** |
+| <span data-ttu-id="fb797-136">GATT: Akkudienst</span><span class="sxs-lookup"><span data-stu-id="fb797-136">GATT - Battery service</span></span>               | **<span data-ttu-id="fb797-137">180F0000-0000-1000-8000-00805F9B34FB</span><span class="sxs-lookup"><span data-stu-id="fb797-137">180F0000-0000-1000-8000-00805F9B34FB</span></span>** |
+| <span data-ttu-id="fb797-138">GATT: Blutdruck</span><span class="sxs-lookup"><span data-stu-id="fb797-138">GATT - Blood pressure</span></span>                | **<span data-ttu-id="fb797-139">18100000-0000-1000-8000-00805F9B34FB</span><span class="sxs-lookup"><span data-stu-id="fb797-139">18100000-0000-1000-8000-00805F9B34FB</span></span>** |
+| <span data-ttu-id="fb797-140">GATT: Körperbau</span><span class="sxs-lookup"><span data-stu-id="fb797-140">GATT - Body composition</span></span>              | **<span data-ttu-id="fb797-141">181B0000-0000-1000-8000-00805F9B34FB</span><span class="sxs-lookup"><span data-stu-id="fb797-141">181B0000-0000-1000-8000-00805F9B34FB</span></span>** |
+| <span data-ttu-id="fb797-142">GATT: Verbindungsmanagement</span><span class="sxs-lookup"><span data-stu-id="fb797-142">GATT - Bond management</span></span>               | **<span data-ttu-id="fb797-143">181E0000-0000-1000-8000-00805F9B34FB</span><span class="sxs-lookup"><span data-stu-id="fb797-143">181E0000-0000-1000-8000-00805F9B34FB</span></span>** |
+| <span data-ttu-id="fb797-144">GATT: Fortlaufende Zuckerspiegelüberwachung</span><span class="sxs-lookup"><span data-stu-id="fb797-144">GATT - Continuous glucose monitoring</span></span> | **<span data-ttu-id="fb797-145">181F0000-0000-1000-8000-00805F9B34FB</span><span class="sxs-lookup"><span data-stu-id="fb797-145">181F0000-0000-1000-8000-00805F9B34FB</span></span>** |
+| <span data-ttu-id="fb797-146">GATT: Aktueller Zeitdienst</span><span class="sxs-lookup"><span data-stu-id="fb797-146">GATT - Current time service</span></span>          | **<span data-ttu-id="fb797-147">18050000-0000-1000-8000-00805F9B34FB</span><span class="sxs-lookup"><span data-stu-id="fb797-147">18050000-0000-1000-8000-00805F9B34FB</span></span>** |
+| <span data-ttu-id="fb797-148">GATT: Radfahrleistung</span><span class="sxs-lookup"><span data-stu-id="fb797-148">GATT - Cycling power</span></span>                 | **<span data-ttu-id="fb797-149">18180000-0000-1000-8000-00805F9B34FB</span><span class="sxs-lookup"><span data-stu-id="fb797-149">18180000-0000-1000-8000-00805F9B34FB</span></span>** |
+| <span data-ttu-id="fb797-150">GATT: Radfahrgeschwindigkeit und -frequenz</span><span class="sxs-lookup"><span data-stu-id="fb797-150">GATT - Cycling speed and cadence</span></span>     | **<span data-ttu-id="fb797-151">18160000-0000-1000-8000-00805F9B34FB</span><span class="sxs-lookup"><span data-stu-id="fb797-151">18160000-0000-1000-8000-00805F9B34FB</span></span>** |
+| <span data-ttu-id="fb797-152">GATT: Geräteinformationen</span><span class="sxs-lookup"><span data-stu-id="fb797-152">GATT - Device information</span></span>            | **<span data-ttu-id="fb797-153">180A0000-0000-1000-8000-00805F9B34FB</span><span class="sxs-lookup"><span data-stu-id="fb797-153">180A0000-0000-1000-8000-00805F9B34FB</span></span>** |
+| <span data-ttu-id="fb797-154">GATT: Umgebungsabtastung</span><span class="sxs-lookup"><span data-stu-id="fb797-154">GATT - Environmental sensing</span></span>         | **<span data-ttu-id="fb797-155">181A0000-0000-1000-8000-00805F9B34FB</span><span class="sxs-lookup"><span data-stu-id="fb797-155">181A0000-0000-1000-8000-00805F9B34FB</span></span>** |
+| <span data-ttu-id="fb797-156">GATT: Generischer Zugriff</span><span class="sxs-lookup"><span data-stu-id="fb797-156">GATT - Generic access</span></span>                | **<span data-ttu-id="fb797-157">18000000-0000-1000-8000-00805F9B34FB</span><span class="sxs-lookup"><span data-stu-id="fb797-157">18000000-0000-1000-8000-00805F9B34FB</span></span>** |
+| <span data-ttu-id="fb797-158">GATT: Generisches Attribut</span><span class="sxs-lookup"><span data-stu-id="fb797-158">GATT - Generic attribute</span></span>             | **<span data-ttu-id="fb797-159">18010000-0000-1000-8000-00805F9B34FB</span><span class="sxs-lookup"><span data-stu-id="fb797-159">18010000-0000-1000-8000-00805F9B34FB</span></span>** |
+| <span data-ttu-id="fb797-160">GATT: Blutzucker</span><span class="sxs-lookup"><span data-stu-id="fb797-160">GATT - Glucose</span></span>                       | **<span data-ttu-id="fb797-161">18080000-0000-1000-8000-00805F9B34FB</span><span class="sxs-lookup"><span data-stu-id="fb797-161">18080000-0000-1000-8000-00805F9B34FB</span></span>** |
+| <span data-ttu-id="fb797-162">GATT: Indikator für den Gesundheitszustand</span><span class="sxs-lookup"><span data-stu-id="fb797-162">GATT - Health thermometer</span></span>            | **<span data-ttu-id="fb797-163">18090000-0000-1000-8000-00805F9B34FB</span><span class="sxs-lookup"><span data-stu-id="fb797-163">18090000-0000-1000-8000-00805F9B34FB</span></span>** |
+| <span data-ttu-id="fb797-164">GATT: Herzfrequenz</span><span class="sxs-lookup"><span data-stu-id="fb797-164">GATT - Heart rate</span></span>                    | **<span data-ttu-id="fb797-165">180D0000-0000-1000-8000-00805F9B34FB</span><span class="sxs-lookup"><span data-stu-id="fb797-165">180D0000-0000-1000-8000-00805F9B34FB</span></span>** |
+| <span data-ttu-id="fb797-166">GATT: Menschliches Schnittstellengerät</span><span class="sxs-lookup"><span data-stu-id="fb797-166">GATT - Human interface device</span></span>        | **<span data-ttu-id="fb797-167">18120000-0000-1000-8000-00805F9B34FB</span><span class="sxs-lookup"><span data-stu-id="fb797-167">18120000-0000-1000-8000-00805F9B34FB</span></span>** |
+| <span data-ttu-id="fb797-168">GATT: Sofortige Warnung</span><span class="sxs-lookup"><span data-stu-id="fb797-168">GATT - Immediate alert</span></span>               | **<span data-ttu-id="fb797-169">18020000-0000-1000-8000-00805F9B34FB</span><span class="sxs-lookup"><span data-stu-id="fb797-169">18020000-0000-1000-8000-00805F9B34FB</span></span>** |
+| <span data-ttu-id="fb797-170">GATT: Positionierung in Gebäuden</span><span class="sxs-lookup"><span data-stu-id="fb797-170">GATT - Indoor positioning</span></span>            | **<span data-ttu-id="fb797-171">18210000-0000-1000-8000-00805F9B34FB</span><span class="sxs-lookup"><span data-stu-id="fb797-171">18210000-0000-1000-8000-00805F9B34FB</span></span>** |
+| <span data-ttu-id="fb797-172">GATT: Internetprotokollunterstützung</span><span class="sxs-lookup"><span data-stu-id="fb797-172">GATT - Internet protocol support</span></span>     | **<span data-ttu-id="fb797-173">18200000-0000-1000-8000-00805F9B34FB</span><span class="sxs-lookup"><span data-stu-id="fb797-173">18200000-0000-1000-8000-00805F9B34FB</span></span>** |
+| <span data-ttu-id="fb797-174">GATT: Verbindungsausfall</span><span class="sxs-lookup"><span data-stu-id="fb797-174">GATT - Link loss</span></span>                     | **<span data-ttu-id="fb797-175">18030000-0000-1000-8000-00805F9B34FB</span><span class="sxs-lookup"><span data-stu-id="fb797-175">18030000-0000-1000-8000-00805F9B34FB</span></span>** |
+| <span data-ttu-id="fb797-176">GATT: Position und Navigation</span><span class="sxs-lookup"><span data-stu-id="fb797-176">GATT - Location and navigation</span></span>       | **<span data-ttu-id="fb797-177">18190000-0000-1000-8000-00805F9B34FB</span><span class="sxs-lookup"><span data-stu-id="fb797-177">18190000-0000-1000-8000-00805F9B34FB</span></span>** |
+| <span data-ttu-id="fb797-178">GATT: Dienst für nächsten Sommerzeitwechsel</span><span class="sxs-lookup"><span data-stu-id="fb797-178">GATT - Next DST change service</span></span>       | **<span data-ttu-id="fb797-179">18070000-0000-1000-8000-00805F9B34FB</span><span class="sxs-lookup"><span data-stu-id="fb797-179">18070000-0000-1000-8000-00805F9B34FB</span></span>** |
+| <span data-ttu-id="fb797-180">GATT: Dienst für Warnstatus des Mobiltelefons</span><span class="sxs-lookup"><span data-stu-id="fb797-180">GATT - Phone alert status service</span></span>    | **<span data-ttu-id="fb797-181">180E0000-0000-1000-8000-00805F9B34FB</span><span class="sxs-lookup"><span data-stu-id="fb797-181">180E0000-0000-1000-8000-00805F9B34FB</span></span>** |
+| <span data-ttu-id="fb797-182">GATT: Pulsoximeter</span><span class="sxs-lookup"><span data-stu-id="fb797-182">GATT - Pulse oximeter</span></span>                | **<span data-ttu-id="fb797-183">18220000-0000-1000-8000-00805F9B34FB</span><span class="sxs-lookup"><span data-stu-id="fb797-183">18220000-0000-1000-8000-00805F9B34FB</span></span>** |
+| <span data-ttu-id="fb797-184">GATT: Referenzzeit-Aktualisierungsdienst</span><span class="sxs-lookup"><span data-stu-id="fb797-184">GATT - Reference time update service</span></span> | **<span data-ttu-id="fb797-185">18060000-0000-1000-8000-00805F9B34FB</span><span class="sxs-lookup"><span data-stu-id="fb797-185">18060000-0000-1000-8000-00805F9B34FB</span></span>** |
+| <span data-ttu-id="fb797-186">GATT: Laufgeschwindigkeit und -frequenz</span><span class="sxs-lookup"><span data-stu-id="fb797-186">GATT - Running speed and cadence</span></span>     | **<span data-ttu-id="fb797-187">18140000-0000-1000-8000-00805F9B34FB</span><span class="sxs-lookup"><span data-stu-id="fb797-187">18140000-0000-1000-8000-00805F9B34FB</span></span>** |
+| <span data-ttu-id="fb797-188">GATT: Abtastparameter</span><span class="sxs-lookup"><span data-stu-id="fb797-188">GATT - Scan parameters</span></span>               | **<span data-ttu-id="fb797-189">18130000-0000-1000-8000-00805F9B34FB</span><span class="sxs-lookup"><span data-stu-id="fb797-189">18130000-0000-1000-8000-00805F9B34FB</span></span>** |
+| <span data-ttu-id="fb797-190">GATT: Tx-Leistung</span><span class="sxs-lookup"><span data-stu-id="fb797-190">GATT - Tx power</span></span>                      | **<span data-ttu-id="fb797-191">18040000-0000-1000-8000-00805F9B34FB</span><span class="sxs-lookup"><span data-stu-id="fb797-191">18040000-0000-1000-8000-00805F9B34FB</span></span>** |
+| <span data-ttu-id="fb797-192">GATT: Benutzerdaten</span><span class="sxs-lookup"><span data-stu-id="fb797-192">GATT - User data</span></span>                     | **<span data-ttu-id="fb797-193">181C0000-0000-1000-8000-00805F9B34FB</span><span class="sxs-lookup"><span data-stu-id="fb797-193">181C0000-0000-1000-8000-00805F9B34FB</span></span>** |
+| <span data-ttu-id="fb797-194">GATT: Gewichtsskala</span><span class="sxs-lookup"><span data-stu-id="fb797-194">GATT - Weight scale</span></span>                  | **<span data-ttu-id="fb797-195">181D0000-0000-1000-8000-00805F9B34FB</span><span class="sxs-lookup"><span data-stu-id="fb797-195">181D0000-0000-1000-8000-00805F9B34FB</span></span>** |
 
  
 
-Eine vollständige Liste der verfügbaren Bluetooth-Dienste finden Sie [hier](http://go.microsoft.com/fwlink/p/?LinkID=619586) und [hier](http://go.microsoft.com/fwlink/p/?LinkID=619587) auf den Bluetooth-Protokoll- und -Dienstseiten. Sie können auch die [**GattServiceUuids**](https://msdn.microsoft.com/library/windows/apps/Dn297571)-API verwenden, um einige allgemeine GATT-Dienste abzurufen.
+<span data-ttu-id="fb797-196">Eine vollständige Liste der verfügbaren Bluetooth-Dienste finden Sie [hier](http://go.microsoft.com/fwlink/p/?LinkID=619586) und [hier](http://go.microsoft.com/fwlink/p/?LinkID=619587) auf den Bluetooth-Protokoll- und -Dienstseiten.</span><span class="sxs-lookup"><span data-stu-id="fb797-196">For a more complete listing of available Bluetooth services, see Bluetooth's protocol and service pages [here](http://go.microsoft.com/fwlink/p/?LinkID=619586) and [here](http://go.microsoft.com/fwlink/p/?LinkID=619587).</span></span> <span data-ttu-id="fb797-197">Sie können auch die [**GattServiceUuids**](https://msdn.microsoft.com/library/windows/apps/Dn297571)-API verwenden, um einige allgemeine GATT-Dienste abzurufen.</span><span class="sxs-lookup"><span data-stu-id="fb797-197">You can also use the [**GattServiceUuids**](https://msdn.microsoft.com/library/windows/apps/Dn297571) API to get some common GATT services.</span></span>
 
-## <a name="custom-bluetooth-le-services"></a>Benutzerdefinierte Bluetooth LE-Dienste
+## <a name="custom-bluetooth-le-services"></a><span data-ttu-id="fb797-198">Benutzerdefinierte Bluetooth LE-Dienste</span><span class="sxs-lookup"><span data-stu-id="fb797-198">Custom Bluetooth LE services</span></span>
 
-Benutzerdefinierte Bluetooth LE-Dienste verwenden die folgende Protokollkennung: {bb7bb05e-5972-42b5-94fc76eaa7084d49}
+<span data-ttu-id="fb797-199">Benutzerdefinierte Bluetooth LE-Dienste verwenden die folgende Protokollkennung: {bb7bb05e-5972-42b5-94fc76eaa7084d49}</span><span class="sxs-lookup"><span data-stu-id="fb797-199">Custom Bluetooth LE services use the following protocol identifier: {bb7bb05e-5972-42b5-94fc76eaa7084d49}</span></span>
 
-Benutzerdefinierte Profile werden mit ihren eigenen definierten GUIDs definiert. Diese benutzerdefinierte GUID sollte für **System.Devices.AepService.ServiceClassId** verwendet werden.
+<span data-ttu-id="fb797-200">Benutzerdefinierte Profile werden mit ihren eigenen definierten GUIDs definiert.</span><span class="sxs-lookup"><span data-stu-id="fb797-200">Custom profiles are defined with their own defined GUIDs.</span></span> <span data-ttu-id="fb797-201">Diese benutzerdefinierte GUID sollte für **System.Devices.AepService.ServiceClassId** verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="fb797-201">This custom GUID should be used for **System.Devices.AepService.ServiceClassId**.</span></span>
 
-## <a name="upnp-services"></a>UPnP-Dienste
+## <a name="upnp-services"></a><span data-ttu-id="fb797-202">UPnP-Dienste</span><span class="sxs-lookup"><span data-stu-id="fb797-202">UPnP services</span></span>
 
-UPnP-Dienste verwenden die folgende Protokollkennung: {0e261de4-12f0-46e6-91ba428607ccef64}
+<span data-ttu-id="fb797-203">UPnP-Dienste verwenden die folgende Protokollkennung: {0e261de4-12f0-46e6-91ba428607ccef64}</span><span class="sxs-lookup"><span data-stu-id="fb797-203">UPnP services use the following protocol identifier: {0e261de4-12f0-46e6-91ba428607ccef64}</span></span>
 
-In der Regel wird der Name aller UPnP-Dienste mithilfe des in RFC 4122 definierten Algorithmus mit einem Hash in eine GUID verwandelt. In der folgenden Tabelle sind einige in Windows definierte allgemeine UPnP-Dienste aufgeführt.
+<span data-ttu-id="fb797-204">In der Regel wird der Name aller UPnP-Dienste mithilfe des in RFC 4122 definierten Algorithmus mit einem Hash in eine GUID verwandelt.</span><span class="sxs-lookup"><span data-stu-id="fb797-204">In general, all UPnP services have their name hashed into a GUID using the algorithm defined in RFC 4122.</span></span> <span data-ttu-id="fb797-205">In der folgenden Tabelle sind einige in Windows definierte allgemeine UPnP-Dienste aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="fb797-205">The following table lists some common UPnP services defined in Windows.</span></span>
 
-| Dienstname                       | GUID                                     |
+| <span data-ttu-id="fb797-206">Dienstname</span><span class="sxs-lookup"><span data-stu-id="fb797-206">Service name</span></span>                       | <span data-ttu-id="fb797-207">GUID</span><span class="sxs-lookup"><span data-stu-id="fb797-207">GUID</span></span>                                     |
 |------------------------------------|------------------------------------------|
-| Verbindungs-Manager                 | **ba36014c-b51f-51cc-bf711ad779ced3c6**  |
-| AV-Transport                       | **deeacb78-707a-52df-b1c66f945e7e25bf**  |
-| Renderingkontrolle                  | **cc7fe721-a3c7-5a14-8c494419dc895513**  |
-| Ebene-3-Weiterleitung                 | **97d477fa-f403-577b-a714b29a9007797f**  |
-| Konfiguration der allgemeinen WAN-Schnittstelle | **e4c1c624-c3c4-5104-b72eac425d9d157c**  |
-| WAP-IP-Verbindung                  | **e4ac1c23-b5ac-5c27-88146bd837d8832c**  |
-| WFA-WLAN-Konfiguration             | **23d5f7db-747f-5099-8f213ddfd0c3c688**  |
-| Drucker, erweitert                   | **fb9074da-3d9f-5384-922e9978ae51ef0c**  |
-| Drucker, grundlegend                      | **5d2a7252-d45c-5158-87-a405212da327e1** |
-| Medienempfängerregistrierungsstelle           | **0b4a2add-d725-5198-b2ba852b8bf8d183**  |
-| Inhaltsverzeichnis                  | **89e701dd-0597-5279-a31c235991d0db1c**  |
-| Wählen                               | **085dfa4a-3948-53c7-a0d716d8ec26b29b**  |
+| <span data-ttu-id="fb797-208">Verbindungs-Manager</span><span class="sxs-lookup"><span data-stu-id="fb797-208">Connection manager</span></span>                 | **<span data-ttu-id="fb797-209">ba36014c-b51f-51cc-bf711ad779ced3c6</span><span class="sxs-lookup"><span data-stu-id="fb797-209">ba36014c-b51f-51cc-bf711ad779ced3c6</span></span>**  |
+| <span data-ttu-id="fb797-210">AV-Transport</span><span class="sxs-lookup"><span data-stu-id="fb797-210">AV transport</span></span>                       | **<span data-ttu-id="fb797-211">deeacb78-707a-52df-b1c66f945e7e25bf</span><span class="sxs-lookup"><span data-stu-id="fb797-211">deeacb78-707a-52df-b1c66f945e7e25bf</span></span>**  |
+| <span data-ttu-id="fb797-212">Renderingkontrolle</span><span class="sxs-lookup"><span data-stu-id="fb797-212">Rendering control</span></span>                  | **<span data-ttu-id="fb797-213">cc7fe721-a3c7-5a14-8c494419dc895513</span><span class="sxs-lookup"><span data-stu-id="fb797-213">cc7fe721-a3c7-5a14-8c494419dc895513</span></span>**  |
+| <span data-ttu-id="fb797-214">Ebene-3-Weiterleitung</span><span class="sxs-lookup"><span data-stu-id="fb797-214">Layer 3 forwarding</span></span>                 | **<span data-ttu-id="fb797-215">97d477fa-f403-577b-a714b29a9007797f</span><span class="sxs-lookup"><span data-stu-id="fb797-215">97d477fa-f403-577b-a714b29a9007797f</span></span>**  |
+| <span data-ttu-id="fb797-216">Konfiguration der allgemeinen WAN-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="fb797-216">WAN common interface configuration</span></span> | **<span data-ttu-id="fb797-217">e4c1c624-c3c4-5104-b72eac425d9d157c</span><span class="sxs-lookup"><span data-stu-id="fb797-217">e4c1c624-c3c4-5104-b72eac425d9d157c</span></span>**  |
+| <span data-ttu-id="fb797-218">WAP-IP-Verbindung</span><span class="sxs-lookup"><span data-stu-id="fb797-218">WAP IP connection</span></span>                  | **<span data-ttu-id="fb797-219">e4ac1c23-b5ac-5c27-88146bd837d8832c</span><span class="sxs-lookup"><span data-stu-id="fb797-219">e4ac1c23-b5ac-5c27-88146bd837d8832c</span></span>**  |
+| <span data-ttu-id="fb797-220">WFA-WLAN-Konfiguration</span><span class="sxs-lookup"><span data-stu-id="fb797-220">WFA WLAN configuration</span></span>             | **<span data-ttu-id="fb797-221">23d5f7db-747f-5099-8f213ddfd0c3c688</span><span class="sxs-lookup"><span data-stu-id="fb797-221">23d5f7db-747f-5099-8f213ddfd0c3c688</span></span>**  |
+| <span data-ttu-id="fb797-222">Drucker, erweitert</span><span class="sxs-lookup"><span data-stu-id="fb797-222">Printer enhanced</span></span>                   | **<span data-ttu-id="fb797-223">fb9074da-3d9f-5384-922e9978ae51ef0c</span><span class="sxs-lookup"><span data-stu-id="fb797-223">fb9074da-3d9f-5384-922e9978ae51ef0c</span></span>**  |
+| <span data-ttu-id="fb797-224">Drucker, grundlegend</span><span class="sxs-lookup"><span data-stu-id="fb797-224">Printer basic</span></span>                      | **<span data-ttu-id="fb797-225">5d2a7252-d45c-5158-87-a405212da327e1</span><span class="sxs-lookup"><span data-stu-id="fb797-225">5d2a7252-d45c-5158-87-a405212da327e1</span></span>** |
+| <span data-ttu-id="fb797-226">Medienempfängerregistrierungsstelle</span><span class="sxs-lookup"><span data-stu-id="fb797-226">Media receiver registrar</span></span>           | **<span data-ttu-id="fb797-227">0b4a2add-d725-5198-b2ba852b8bf8d183</span><span class="sxs-lookup"><span data-stu-id="fb797-227">0b4a2add-d725-5198-b2ba852b8bf8d183</span></span>**  |
+| <span data-ttu-id="fb797-228">Inhaltsverzeichnis</span><span class="sxs-lookup"><span data-stu-id="fb797-228">Content directory</span></span>                  | **<span data-ttu-id="fb797-229">89e701dd-0597-5279-a31c235991d0db1c</span><span class="sxs-lookup"><span data-stu-id="fb797-229">89e701dd-0597-5279-a31c235991d0db1c</span></span>**  |
+| <span data-ttu-id="fb797-230">Wählen</span><span class="sxs-lookup"><span data-stu-id="fb797-230">DIAL</span></span>                               | **<span data-ttu-id="fb797-231">085dfa4a-3948-53c7-a0d716d8ec26b29b</span><span class="sxs-lookup"><span data-stu-id="fb797-231">085dfa4a-3948-53c7-a0d716d8ec26b29b</span></span>**  |
 
  
 
-## <a name="wsd-services"></a>WSD-Dienste
+## <a name="wsd-services"></a><span data-ttu-id="fb797-232">WSD-Dienste</span><span class="sxs-lookup"><span data-stu-id="fb797-232">WSD services</span></span>
 
-WSD-Dienste verwenden die folgende Protokollkennung: {782232aa-a2f9-4993-971baedc551346b0}
+<span data-ttu-id="fb797-233">WSD-Dienste verwenden die folgende Protokollkennung: {782232aa-a2f9-4993-971baedc551346b0}</span><span class="sxs-lookup"><span data-stu-id="fb797-233">WSD services use the following protocol identifier: {782232aa-a2f9-4993-971baedc551346b0}</span></span>
 
-In der Regel wird der Name aller WSD-Dienste mithilfe des in RFC 4122 definierten Algorithmus mit einem Hash in eine GUID verwandelt. In der folgenden Tabelle sind einige in Windows definierte allgemeine WSD-Dienste aufgeführt.
+<span data-ttu-id="fb797-234">In der Regel wird der Name aller WSD-Dienste mithilfe des in RFC 4122 definierten Algorithmus mit einem Hash in eine GUID verwandelt.</span><span class="sxs-lookup"><span data-stu-id="fb797-234">In general, all WSD services have their name hashed into a GUID using the algorithm defined in RFC 4122.</span></span> <span data-ttu-id="fb797-235">In der folgenden Tabelle sind einige in Windows definierte allgemeine WSD-Dienste aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="fb797-235">The following table lists some common WSD services defined in Windows.</span></span>
 
-| Dienstname | GUID                                    |
+| <span data-ttu-id="fb797-236">Dienstname</span><span class="sxs-lookup"><span data-stu-id="fb797-236">Service name</span></span> | <span data-ttu-id="fb797-237">GUID</span><span class="sxs-lookup"><span data-stu-id="fb797-237">GUID</span></span>                                    |
 |--------------|-----------------------------------------|
-| Drucker      | **65dca7bd-2611-583e-9a12ad90f47749cf** |
-| Scanner      | **56ec8b9e-0237-5cae-aa3fd322dd2e6c1e** |
+| <span data-ttu-id="fb797-238">Drucker</span><span class="sxs-lookup"><span data-stu-id="fb797-238">Printer</span></span>      | **<span data-ttu-id="fb797-239">65dca7bd-2611-583e-9a12ad90f47749cf</span><span class="sxs-lookup"><span data-stu-id="fb797-239">65dca7bd-2611-583e-9a12ad90f47749cf</span></span>** |
+| <span data-ttu-id="fb797-240">Scanner</span><span class="sxs-lookup"><span data-stu-id="fb797-240">Scanner</span></span>      | **<span data-ttu-id="fb797-241">56ec8b9e-0237-5cae-aa3fd322dd2e6c1e</span><span class="sxs-lookup"><span data-stu-id="fb797-241">56ec8b9e-0237-5cae-aa3fd322dd2e6c1e</span></span>** |
 
  
 
-## <a name="aqs-sample"></a>AQS-Beispiel
+## <a name="aqs-sample"></a><span data-ttu-id="fb797-242">AQS-Beispiel</span><span class="sxs-lookup"><span data-stu-id="fb797-242">AQS sample</span></span>
 
-Diese AQS filtert nach allen UPnP-**AssociationEndpointService**-Objekten, die DIAL unterstützen. In diesem Fall wird [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) auf **AsssociationEndpointService** festgelegt.
+<span data-ttu-id="fb797-243">Diese AQS filtert nach allen UPnP-**AssociationEndpointService**-Objekten, die DIAL unterstützen.</span><span class="sxs-lookup"><span data-stu-id="fb797-243">This AQS will filter for all UPnP **AssociationEndpointService** objects that support DIAL.</span></span> <span data-ttu-id="fb797-244">In diesem Fall wird [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) auf **AsssociationEndpointService** festgelegt.</span><span class="sxs-lookup"><span data-stu-id="fb797-244">In this case, [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) is set to **AsssociationEndpointService**.</span></span>
 
 ``` syntax
 System.Devices.AepService.ProtocolId:="{0e261de4-12f0-46e6-91ba-428607ccef64}" AND
@@ -131,4 +131,3 @@ System.Devices.AepService.ServiceClassId:="{085DFA4A-3948-53C7-A0D716D8EC26B29B}
  
 
  
-

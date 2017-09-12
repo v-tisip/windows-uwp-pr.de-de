@@ -1,42 +1,42 @@
 ---
-author: TylerMSFT
+author: normesta
 ms.assetid: 1B077801-0A58-4A34-887C-F1E85E9A37B0
 title: "Erstellen einer regelmäßigen Arbeitsaufgabe"
 description: "Hier erfahren Sie, wie Sie eine Arbeitsaufgabe erstellen, die regelmäßig wiederholt wird."
-ms.author: twhitney
+ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, regelmäßige Arbeitsaufgabe, Threading, Timer"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 66e8b283631e6a74aa1dabeb53bfc86c304a642c
-ms.lasthandoff: 02/07/2017
-
+keywords: "Windows10, UWP, regelmäßige Arbeitsaufgabe, Threading, Timer"
+ms.openlocfilehash: 59dd19692143b155c33f8fdd7f3197f724ebb0ac
+ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/08/2017
 ---
-# <a name="create-a-periodic-work-item"></a>Erstellen einer regelmäßigen Arbeitsaufgabe
+# <a name="create-a-periodic-work-item"></a><span data-ttu-id="4b82a-104">Erstellen einer regelmäßigen Arbeitsaufgabe</span><span class="sxs-lookup"><span data-stu-id="4b82a-104">Create a periodic work item</span></span>
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+<span data-ttu-id="4b82a-105">\[ Aktualisiert für UWP-Apps unter Windows10.</span><span class="sxs-lookup"><span data-stu-id="4b82a-105">\[ Updated for UWP apps on Windows 10.</span></span> <span data-ttu-id="4b82a-106">Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span><span class="sxs-lookup"><span data-stu-id="4b82a-106">For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span></span>
 
-** Wichtige APIs **
+<span data-ttu-id="4b82a-107">** Wichtige APIs **</span><span class="sxs-lookup"><span data-stu-id="4b82a-107">** Important APIs **</span></span>
 
--   [**CreatePeriodicTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967915)
--   [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/BR230587)
+-   [**<span data-ttu-id="4b82a-108">CreatePeriodicTimer</span><span class="sxs-lookup"><span data-stu-id="4b82a-108">CreatePeriodicTimer</span></span>**](https://msdn.microsoft.com/library/windows/apps/Hh967915)
+-   [**<span data-ttu-id="4b82a-109">ThreadPoolTimer</span><span class="sxs-lookup"><span data-stu-id="4b82a-109">ThreadPoolTimer</span></span>**](https://msdn.microsoft.com/library/windows/apps/BR230587)
 
-Hier erfahren Sie, wie Sie eine Arbeitsaufgabe erstellen, die regelmäßig wiederholt wird.
+<span data-ttu-id="4b82a-110">Hier erfahren Sie, wie Sie eine Arbeitsaufgabe erstellen, die regelmäßig wiederholt wird.</span><span class="sxs-lookup"><span data-stu-id="4b82a-110">Learn how to create a work item that repeats periodically.</span></span>
 
-## <a name="create-the-periodic-work-item"></a>Erstellen der regelmäßigen Arbeitsaufgabe
+## <a name="create-the-periodic-work-item"></a><span data-ttu-id="4b82a-111">Erstellen der regelmäßigen Arbeitsaufgabe</span><span class="sxs-lookup"><span data-stu-id="4b82a-111">Create the periodic work item</span></span>
 
-Verwenden Sie die [**CreatePeriodicTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967915)-Methode, um eine regelmäßige Arbeitsaufgabe zu erstellen. Stellen Sie eine Lambda-Funktion zum Ausführen der Arbeit bereit, und geben Sie mit dem *period*-Parameter das Intervall zwischen den Übermittlungen an. Das Intervall wird anhand einer [**TimeSpan**](https://msdn.microsoft.com/library/windows/apps/BR225996)-Struktur angegeben. Nach jedem Verstreichen des Intervalls wird die Arbeitsaufgabe erneut gesendet. Stellen Sie daher sicher, dass es lang genug ist, um die Arbeit auszuführen.
+<span data-ttu-id="4b82a-112">Verwenden Sie die [**CreatePeriodicTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967915)-Methode, um eine regelmäßige Arbeitsaufgabe zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="4b82a-112">Use the [**CreatePeriodicTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967915) method to create a periodic work item.</span></span> <span data-ttu-id="4b82a-113">Stellen Sie eine Lambda-Funktion zum Ausführen der Arbeit bereit, und geben Sie mit dem *period*-Parameter das Intervall zwischen den Übermittlungen an.</span><span class="sxs-lookup"><span data-stu-id="4b82a-113">Supply a lambda that accomplishes the work, and use the *period* parameter to specify the interval between submissions.</span></span> <span data-ttu-id="4b82a-114">Das Intervall wird anhand einer [**TimeSpan**](https://msdn.microsoft.com/library/windows/apps/BR225996)-Struktur angegeben.</span><span class="sxs-lookup"><span data-stu-id="4b82a-114">The period is specified using a [**TimeSpan**](https://msdn.microsoft.com/library/windows/apps/BR225996) structure.</span></span> <span data-ttu-id="4b82a-115">Nach jedem Verstreichen des Intervalls wird die Arbeitsaufgabe erneut gesendet. Stellen Sie daher sicher, dass es lang genug ist, um die Arbeit auszuführen.</span><span class="sxs-lookup"><span data-stu-id="4b82a-115">The work item will be resubmitted every time the period elapses, so make sure the period is long enough for work to complete.</span></span>
 
-[**CreateTimer**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.createtimer.aspx) gibt ein [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/BR230587)-Objekt zurück. Speichern Sie das Objekt für den Fall, dass der Timer abgebrochen werden muss.
+<span data-ttu-id="4b82a-116">[**CreateTimer**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.createtimer.aspx) gibt ein [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/BR230587)-Objekt zurück.</span><span class="sxs-lookup"><span data-stu-id="4b82a-116">[**CreateTimer**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.createtimer.aspx) returns a [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/BR230587) object.</span></span> <span data-ttu-id="4b82a-117">Speichern Sie das Objekt für den Fall, dass der Timer abgebrochen werden muss.</span><span class="sxs-lookup"><span data-stu-id="4b82a-117">Store this object in case the timer needs to be canceled.</span></span>
 
-> **Hinweis:** Für das Intervall sollte nicht Null (oder ein Wert kleiner als eine Millisekunde) angegeben werden. Andernfalls verhält sich der regelmäßige Timer wie ein einmaliger Timer.
+> <span data-ttu-id="4b82a-118">**Hinweis:** Für das Intervall sollte nicht Null (oder ein Wert kleiner als eine Millisekunde) angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="4b82a-118">**Note**  Avoid specifying a value of zero (or any value less than one millisecond) for the interval.</span></span> <span data-ttu-id="4b82a-119">Andernfalls verhält sich der regelmäßige Timer wie ein einmaliger Timer.</span><span class="sxs-lookup"><span data-stu-id="4b82a-119">This causes the periodic timer to behave as a single-shot timer instead.</span></span>
 
-> **Hinweis:** Sie können [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) verwenden, um auf die Benutzeroberfläche zuzugreifen und den Status der Arbeitsaufgabe anzuzeigen.
+> <span data-ttu-id="4b82a-120">**Hinweis:** Sie können [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) verwenden, um auf die Benutzeroberfläche zuzugreifen und den Status der Arbeitsaufgabe anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="4b82a-120">**Note**  You can use [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) to access the UI and show progress from the work item.</span></span>
 
-Das folgende Beispiel erstellt eine Arbeitsaufgabe, die alle 60 Sekunden ausgeführt wird:
+<span data-ttu-id="4b82a-121">Das folgende Beispiel erstellt eine Arbeitsaufgabe, die alle 60Sekunden ausgeführt wird:</span><span class="sxs-lookup"><span data-stu-id="4b82a-121">The following example creates a work item that runs once every 60 seconds:</span></span>
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -88,11 +88,11 @@ Das folgende Beispiel erstellt eine Arbeitsaufgabe, die alle 60 Sekunden ausgef
 >         }), period);
 > ```
 
-## <a name="handle-cancellation-of-the-periodic-work-item-optional"></a>Behandeln des Abbruchs der regelmäßigen Arbeitsaufgabe (optional)
+## <a name="handle-cancellation-of-the-periodic-work-item-optional"></a><span data-ttu-id="4b82a-122">Behandeln des Abbruchs der regelmäßigen Arbeitsaufgabe (optional)</span><span class="sxs-lookup"><span data-stu-id="4b82a-122">Handle cancellation of the periodic work item (optional)</span></span>
 
-Bei Bedarf können Sie den Abbruch des regelmäßigen Timers mit einem [**TimerDestroyedHandler**](https://msdn.microsoft.com/library/windows/apps/Hh967926)-Element verarbeiten. Stellen Sie mithilfe der [**CreatePeriodicTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967915)-Überladung eine zusätzliche Lambda-Funktion bereit, die den Abbruch der regelmäßigen Arbeitsaufgabe behandelt.
+<span data-ttu-id="4b82a-123">Bei Bedarf können Sie den Abbruch des regelmäßigen Timers mit einem [**TimerDestroyedHandler**](https://msdn.microsoft.com/library/windows/apps/Hh967926)-Element verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="4b82a-123">If needed, you can handle cancellation of the periodic timer with a [**TimerDestroyedHandler**](https://msdn.microsoft.com/library/windows/apps/Hh967926).</span></span> <span data-ttu-id="4b82a-124">Stellen Sie mithilfe der [**CreatePeriodicTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967915)-Überladung eine zusätzliche Lambda-Funktion bereit, die den Abbruch der regelmäßigen Arbeitsaufgabe behandelt.</span><span class="sxs-lookup"><span data-stu-id="4b82a-124">Use the [**CreatePeriodicTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967915) overload to supply an additional lambda that handles cancellation of the periodic work item.</span></span>
 
-Das folgende Beispiel erstellt eine regelmäßige Arbeitsaufgabe, die alle 60 Sekunden wiederholt wird, und stellt außerdem einen Abbruchhandler bereit:
+<span data-ttu-id="4b82a-125">Das folgende Beispiel erstellt eine regelmäßige Arbeitsaufgabe, die alle 60Sekunden wiederholt wird, und stellt außerdem einen Abbruchhandler bereit:</span><span class="sxs-lookup"><span data-stu-id="4b82a-125">The following example creates a periodic work item that repeats every 60 seconds and it also supplies a cancellation handler:</span></span>
 
 > [!div class="tabbedCodeSnippets"]
 > ``` csharp
@@ -187,9 +187,9 @@ Das folgende Beispiel erstellt eine regelmäßige Arbeitsaufgabe, die alle 60 S
 >         }));
 > ```
 
-## <a name="cancel-the-timer"></a>Abbrechen des Timers
+## <a name="cancel-the-timer"></a><span data-ttu-id="4b82a-126">Abbrechen des Timers</span><span class="sxs-lookup"><span data-stu-id="4b82a-126">Cancel the timer</span></span>
 
-Rufen Sie ggf. die [**Cancel**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.cancel.aspx)-Methode auf, um die Wiederholung der regelmäßigen Arbeitsaufgabe zu beenden. Falls die Arbeitsaufgabe beim Abbruch des regelmäßigen Timers ausgeführt wird, kann sie noch abgeschlossen werden. Das [**TimerDestroyedHandler**](https://msdn.microsoft.com/library/windows/apps/Hh967926)-Element (sofern verwendet) wird aufgerufen, wenn alle Instanzen der regelmäßigen Arbeitsaufgabe abgeschlossen wurden.
+<span data-ttu-id="4b82a-127">Rufen Sie ggf. die [**Cancel**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.cancel.aspx)-Methode auf, um die Wiederholung der regelmäßigen Arbeitsaufgabe zu beenden.</span><span class="sxs-lookup"><span data-stu-id="4b82a-127">When necessary, call the [**Cancel**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.cancel.aspx) method to stop the periodic work item from repeating.</span></span> <span data-ttu-id="4b82a-128">Falls die Arbeitsaufgabe beim Abbruch des regelmäßigen Timers ausgeführt wird, kann sie noch abgeschlossen werden.</span><span class="sxs-lookup"><span data-stu-id="4b82a-128">If the work item is running when the periodic timer is cancelled it is allowed to complete.</span></span> <span data-ttu-id="4b82a-129">Das [**TimerDestroyedHandler**](https://msdn.microsoft.com/library/windows/apps/Hh967926)-Element (sofern verwendet) wird aufgerufen, wenn alle Instanzen der regelmäßigen Arbeitsaufgabe abgeschlossen wurden.</span><span class="sxs-lookup"><span data-stu-id="4b82a-129">The [**TimerDestroyedHandler**](https://msdn.microsoft.com/library/windows/apps/Hh967926) (if provided) is called when all instances of the periodic work item have completed.</span></span>
 
 > [!div class="tabbedCodeSnippets"]
 > ``` csharp
@@ -199,14 +199,13 @@ Rufen Sie ggf. die [**Cancel**](https://msdn.microsoft.com/library/windows/apps/
 > PeriodicTimer->Cancel();
 > ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a><span data-ttu-id="4b82a-130">Hinweise</span><span class="sxs-lookup"><span data-stu-id="4b82a-130">Remarks</span></span>
 
-Informationen zu einmaligen Timern finden Sie unter [Senden einer Arbeitsaufgabe mithilfe eines Timers](use-a-timer-to-submit-a-work-item.md).
+<span data-ttu-id="4b82a-131">Informationen zu einmaligen Timern finden Sie unter [Senden einer Arbeitsaufgabe mithilfe eines Timers](use-a-timer-to-submit-a-work-item.md).</span><span class="sxs-lookup"><span data-stu-id="4b82a-131">For information about single-use timers, see [Use a timer to submit a work item](use-a-timer-to-submit-a-work-item.md).</span></span>
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a><span data-ttu-id="4b82a-132">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="4b82a-132">Related topics</span></span>
 
-* [Senden einer Arbeitsaufgabe an den Threadpool](submit-a-work-item-to-the-thread-pool.md)
-* [Bewährte Methoden zum Verwenden des Threadpools](best-practices-for-using-the-thread-pool.md)
-* [Senden einer Arbeitsaufgabe mithilfe eines Timers](use-a-timer-to-submit-a-work-item.md)
+* [<span data-ttu-id="4b82a-133">Senden einer Arbeitsaufgabe an den Threadpool</span><span class="sxs-lookup"><span data-stu-id="4b82a-133">Submit a work item to the thread pool</span></span>](submit-a-work-item-to-the-thread-pool.md)
+* [<span data-ttu-id="4b82a-134">Bewährte Methoden zum Verwenden des Threadpools</span><span class="sxs-lookup"><span data-stu-id="4b82a-134">Best practices for using the thread pool</span></span>](best-practices-for-using-the-thread-pool.md)
+* [<span data-ttu-id="4b82a-135">Senden einer Arbeitsaufgabe mithilfe eines Timers</span><span class="sxs-lookup"><span data-stu-id="4b82a-135">Use a timer to submit a work item</span></span>](use-a-timer-to-submit-a-work-item.md)
  
-

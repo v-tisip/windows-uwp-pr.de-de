@@ -10,195 +10,199 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 73e119663483a62d06b29b3212053ba9a0d181ee
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 288cca64cc93438c8f8c0000cfeba1fdda918733
+ms.sourcegitcommit: a7a1b41c7dce6d56250ce3113137391d65d9e401
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/11/2017
 ---
-
-# <a name="guidelines-for-panning"></a>Anleitungen für das Verschieben
+# <a name="guidelines-for-panning"></a><span data-ttu-id="ffac1-105">Anleitungen für das Verschieben</span><span class="sxs-lookup"><span data-stu-id="ffac1-105">Guidelines for panning</span></span>
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Mit einer Verschiebung oder einem Bildlauf können Benutzer innerhalb einer einzelnen Ansicht navigieren, um den Inhalt der Ansicht anzuzeigen, der nicht in den Anzeigebereich passt. Beispiele für Ansichten sind die Ordnerstruktur eines Computers, eine Dokumentbibliothek oder ein Fotoalbum.
+<span data-ttu-id="ffac1-106">Mit einer Verschiebung oder einem Bildlauf können Benutzer innerhalb einer einzelnen Ansicht navigieren, um den Inhalt der Ansicht anzuzeigen, der nicht in den Anzeigebereich passt.</span><span class="sxs-lookup"><span data-stu-id="ffac1-106">Panning or scrolling lets users navigate within a single view, to display the content of the view that does not fit within the viewport.</span></span> <span data-ttu-id="ffac1-107">Beispiele für Ansichten sind die Ordnerstruktur eines Computers, eine Dokumentbibliothek oder ein Fotoalbum.</span><span class="sxs-lookup"><span data-stu-id="ffac1-107">Examples of views include the folder structure of a computer, a library of documents, or a photo album.</span></span>
 
 <div class="important-apis" >
-<b>Wichtige APIs</b><br/>
+<b><span data-ttu-id="ffac1-108">Wichtige APIs</span><span class="sxs-lookup"><span data-stu-id="ffac1-108">Important APIs</span></span></b><br/>
 <ul>
-<li>[**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)</li>
-<li>[**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)</li>
+<li>[**<span data-ttu-id="ffac1-109">Windows.UI.Input</span><span class="sxs-lookup"><span data-stu-id="ffac1-109">Windows.UI.Input</span></span>**](https://msdn.microsoft.com/library/windows/apps/br242084)</li>
+<li>[**<span data-ttu-id="ffac1-110">Windows.UI.Xaml.Input</span><span class="sxs-lookup"><span data-stu-id="ffac1-110">Windows.UI.Xaml.Input</span></span>**](https://msdn.microsoft.com/library/windows/apps/br227994)</li>
 </ul>
 </div>
 
 
-## <a name="dos-and-donts"></a>Empfohlene und nicht empfohlene Vorgehensweisen
+## <a name="dos-and-donts"></a><span data-ttu-id="ffac1-111">Empfohlene und nicht empfohlene Vorgehensweisen</span><span class="sxs-lookup"><span data-stu-id="ffac1-111">Dos and don'ts</span></span>
 
 
-**Verschiebungsindikatoren und Bildlaufleisten**
+**<span data-ttu-id="ffac1-112">Verschiebungsindikatoren und Bildlaufleisten</span><span class="sxs-lookup"><span data-stu-id="ffac1-112">Panning indicators and scroll bars</span></span>**
 
--   Stellen Sie sicher, dass eine Verschiebung bzw. ein Bildlauf möglich ist, bevor Sie Inhalt in die App laden.
+-   <span data-ttu-id="ffac1-113">Stellen Sie sicher, dass eine Verschiebung bzw. ein Bildlauf möglich ist, bevor Sie Inhalt in die App laden.</span><span class="sxs-lookup"><span data-stu-id="ffac1-113">Ensure panning/scrolling is possible before loading content into your app.</span></span>
 
--   Zeigen Sie Verschiebungsanzeigen und Bildlaufleisten als Hinweise auf die Position und die Größe an. Blenden Sie sie aus, wenn Sie eine benutzerdefinierte Navigationsfunktion bereitstellen.
+-   <span data-ttu-id="ffac1-114">Zeigen Sie Verschiebungsanzeigen und Bildlaufleisten als Hinweise auf die Position und die Größe an.</span><span class="sxs-lookup"><span data-stu-id="ffac1-114">Display panning indicators and scroll bars to provide location and size cues.</span></span> <span data-ttu-id="ffac1-115">Blenden Sie sie aus, wenn Sie eine benutzerdefinierte Navigationsfunktion bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="ffac1-115">Hide them if you provide a custom navigation feature.</span></span>
 
-    **Hinweis**  Anders als standardmäßige Bildlaufleisten haben Verschiebungsindikatoren rein informativen Charakter. Sie werden nicht für Eingabegeräte verfügbar gemacht und können in keiner Weise geändert werden.
+    <span data-ttu-id="ffac1-116">**Hinweis**  Anders als standardmäßige Bildlaufleisten haben Verschiebungsindikatoren rein informativen Charakter.</span><span class="sxs-lookup"><span data-stu-id="ffac1-116">**Note**  Unlike standard scroll bars, panning indicators are purely informative.</span></span> <span data-ttu-id="ffac1-117">Sie werden nicht für Eingabegeräte verfügbar gemacht und können in keiner Weise geändert werden.</span><span class="sxs-lookup"><span data-stu-id="ffac1-117">They are not exposed to input devices and cannot be manipulated in any way.</span></span>
 
      
 
-**Verschiebung entlang einer Achse (eindimensionaler Überlauf)**
+**<span data-ttu-id="ffac1-118">Verschiebung entlang einer Achse (eindimensionaler Überlauf)</span><span class="sxs-lookup"><span data-stu-id="ffac1-118">Single-axis panning (one-dimensional overflow)</span></span>**
 
--   Verwenden Sie die Verschiebung entlang einer Achse für Inhaltsbereiche, die über eine Viewportgrenze (vertikal oder horizontal) hinausgehen.
+-   <span data-ttu-id="ffac1-119">Verwenden Sie die Verschiebung entlang einer Achse für Inhaltsbereiche, die über eine Viewportgrenze (vertikal oder horizontal) hinausgehen.</span><span class="sxs-lookup"><span data-stu-id="ffac1-119">Use one-axis panning for content regions that extend beyond one viewport boundary (vertical or horizontal).</span></span>
 
-    -   Vertikale Verschiebung für eine eindimensionale Liste von Elementen.
-    -   Horizontale Verschiebung für ein Raster von Elementen.
--   Verwenden Sie bei der Verschiebung entlang einer Achse keine erforderlichen Andockpunkte, wenn Benutzer in der Lage sein müssen, den Inhalt zu verschieben und zwischen Andockpunkten anzuhalten. Erforderliche Andockpunkte gewährleisten, dass der Benutzer an einem Andockpunkt anhält. Verwenden Sie stattdessen Näherungsandockpunkte.
+    -   <span data-ttu-id="ffac1-120">Vertikale Verschiebung für eine eindimensionale Liste von Elementen.</span><span class="sxs-lookup"><span data-stu-id="ffac1-120">Vertical panning for a one-dimensional list of items.</span></span>
+    -   <span data-ttu-id="ffac1-121">Horizontale Verschiebung für ein Raster von Elementen.</span><span class="sxs-lookup"><span data-stu-id="ffac1-121">Horizontal panning for a grid of items.</span></span>
+-   <span data-ttu-id="ffac1-122">Verwenden Sie bei der Verschiebung entlang einer Achse keine erforderlichen Andockpunkte, wenn Benutzer in der Lage sein müssen, den Inhalt zu verschieben und zwischen Andockpunkten anzuhalten.</span><span class="sxs-lookup"><span data-stu-id="ffac1-122">Don’t use mandatory snap-points with single-axis panning if a user must be able to pan and stop between snap-points.</span></span> <span data-ttu-id="ffac1-123">Erforderliche Andockpunkte gewährleisten, dass der Benutzer an einem Andockpunkt anhält.</span><span class="sxs-lookup"><span data-stu-id="ffac1-123">Mandatory snap-points guarantee that the user will stop on a snap-point.</span></span> <span data-ttu-id="ffac1-124">Verwenden Sie stattdessen Näherungsandockpunkte.</span><span class="sxs-lookup"><span data-stu-id="ffac1-124">Use proximity snap-points instead.</span></span>
 
-**Formfreie Verschiebung (zweidimensionaler Überlauf)**
+**<span data-ttu-id="ffac1-125">Formfreie Verschiebung (zweidimensionaler Überlauf)</span><span class="sxs-lookup"><span data-stu-id="ffac1-125">Freeform panning (two-dimensional overflow)</span></span>**
 
--   Verwenden Sie die Verschiebung entlang zweier Achsen für Inhaltsbereiche, die über beide Viewportgrenzen (vertikal und horizontal) hinausgehen.
+-   <span data-ttu-id="ffac1-126">Verwenden Sie die Verschiebung entlang zweier Achsen für Inhaltsbereiche, die über beide Viewportgrenzen (vertikal und horizontal) hinausgehen.</span><span class="sxs-lookup"><span data-stu-id="ffac1-126">Use two-axis panning for content regions that extend beyond both viewport boundaries (vertical and horizontal).</span></span>
 
-    -   Setzen Sie das Standardverhalten der Führungsschienen außer Kraft, und verwenden Sie die formfreie Verschiebung für unstrukturierten Inhalt, den der Benutzer wahrscheinlich in mehrere Richtungen verschieben möchte.
--   Die formfreie Verschiebung eignet sich in der Regel für die Navigation innerhalb von Bildern oder Karten.
+    -   <span data-ttu-id="ffac1-127">Setzen Sie das Standardverhalten der Führungsschienen außer Kraft, und verwenden Sie die formfreie Verschiebung für unstrukturierten Inhalt, den der Benutzer wahrscheinlich in mehrere Richtungen verschieben möchte.</span><span class="sxs-lookup"><span data-stu-id="ffac1-127">Override the default rails behavior and use freeform panning for unstructured content where the user is likely to move in multiple directions.</span></span>
+-   <span data-ttu-id="ffac1-128">Die formfreie Verschiebung eignet sich in der Regel für die Navigation innerhalb von Bildern oder Karten.</span><span class="sxs-lookup"><span data-stu-id="ffac1-128">Freeform panning is typically suited to navigating within images or maps.</span></span>
 
-**Seitenansicht**
+**<span data-ttu-id="ffac1-129">Seitenansicht</span><span class="sxs-lookup"><span data-stu-id="ffac1-129">Paged view</span></span>**
 
--   Verwenden Sie erforderliche Andockpunkte, wenn sich der Inhalt aus separaten Elementen zusammensetzt oder Sie ein Element vollständig anzeigen möchten. Dies können z. B. Seiten eines Buchs oder einer Zeitschrift, eine Spalte mit Elementen oder einzelne Bilder sein.
+-   <span data-ttu-id="ffac1-130">Verwenden Sie erforderliche Andockpunkte, wenn sich der Inhalt aus separaten Elementen zusammensetzt oder Sie ein Element vollständig anzeigen möchten.</span><span class="sxs-lookup"><span data-stu-id="ffac1-130">Use mandatory snap-points when the content is composed of discrete elements or you want to display an entire element.</span></span> <span data-ttu-id="ffac1-131">Dies können z.B. Seiten eines Buchs oder einer Zeitschrift, eine Spalte mit Elementen oder einzelne Bilder sein.</span><span class="sxs-lookup"><span data-stu-id="ffac1-131">This can include pages of a book or magazine, a column of items, or individual images.</span></span>
 
-    -   An jeder logischen Grenze sollte ein Andockpunkt platziert werden.
-    -   Jedes Element sollte in seiner Größe an die Ansicht angepasst oder skaliert werden.
+    -   <span data-ttu-id="ffac1-132">An jeder logischen Grenze sollte ein Andockpunkt platziert werden.</span><span class="sxs-lookup"><span data-stu-id="ffac1-132">A snap-point should be placed at each logical boundary.</span></span>
+    -   <span data-ttu-id="ffac1-133">Jedes Element sollte in seiner Größe an die Ansicht angepasst oder skaliert werden.</span><span class="sxs-lookup"><span data-stu-id="ffac1-133">Each element should be sized or scaled to fit the view.</span></span>
 
-**Logische und Schlüsselpunkte**
+**<span data-ttu-id="ffac1-134">Logische und Schlüsselpunkte</span><span class="sxs-lookup"><span data-stu-id="ffac1-134">Logical and key points</span></span>**
 
--   Verwenden Sie Näherungsandockpunkte, wenn der Inhalt Schlüsselpunkte oder logische Orte aufweist, an denen Benutzer wahrscheinlich anhalten. Ein Beispiel hierfür wäre eine Abschnittsüberschrift.
+-   <span data-ttu-id="ffac1-135">Verwenden Sie Näherungsandockpunkte, wenn der Inhalt Schlüsselpunkte oder logische Orte aufweist, an denen Benutzer wahrscheinlich anhalten.</span><span class="sxs-lookup"><span data-stu-id="ffac1-135">Use proximity snap-points if there are key points or logical places in the content that a user will likely stop.</span></span> <span data-ttu-id="ffac1-136">Ein Beispiel hierfür wäre eine Abschnittsüberschrift.</span><span class="sxs-lookup"><span data-stu-id="ffac1-136">For example, a section header.</span></span>
 
--   Wenn Beschränkungen oder Grenzen der maximalen und minimalen Größe definiert sind, sollte ein visuelles Feedback erfolgen, wenn der Benutzer die Grenzen erreicht oder überschreitet.
+-   <span data-ttu-id="ffac1-137">Wenn Beschränkungen oder Grenzen der maximalen und minimalen Größe definiert sind, sollte ein visuelles Feedback erfolgen, wenn der Benutzer die Grenzen erreicht oder überschreitet.</span><span class="sxs-lookup"><span data-stu-id="ffac1-137">If maximum and minimum size constraints or boundaries are defined, use visual feedback to demonstrate when the user reaches or exceeds those boundaries.</span></span>
 
-**Verketten von eingebettetem oder geschachteltem Inhalt**
+**<span data-ttu-id="ffac1-138">Verketten von eingebettetem oder geschachteltem Inhalt</span><span class="sxs-lookup"><span data-stu-id="ffac1-138">Chaining embedded or nested content</span></span>**
 
--   Verwenden Sie die Verschiebung entlang einer Achse (normalerweise horizontal) und Spaltenlayouts für text- und rasterbasierte Inhalte. In diesen Fällen wird der Inhalt meist umgebrochen und fließt natürlich von Spalte zu Spalte, sodass die Benutzeroberfläche bei allen Windows Store-Apps konsistent und erkennbar bleibt.
+-   <span data-ttu-id="ffac1-139">Verwenden Sie die Verschiebung entlang einer Achse (normalerweise horizontal) und Spaltenlayouts für text- und rasterbasierte Inhalte.</span><span class="sxs-lookup"><span data-stu-id="ffac1-139">Use single-axis panning (typically horizontal) and column layouts for text and grid-based content.</span></span> <span data-ttu-id="ffac1-140">In diesen Fällen wird der Inhalt meist umgebrochen und fließt natürlich von Spalte zu Spalte, sodass die Benutzeroberfläche bei allen Windows Store-Apps konsistent und erkennbar bleibt.</span><span class="sxs-lookup"><span data-stu-id="ffac1-140">In these cases, content typically wraps and flows naturally from column to column and keeps the user experience consistent and discoverable across Windows Store apps.</span></span>
 
--   Verwenden Sie keine eingebetteten verschiebbaren Bereiche zum Anzeigen von Text oder Elementlisten. Da die Verschiebungsanzeigen und Bildlaufleisten nur angezeigt werden, wenn der Eingabekontakt im Bereich erkannt wird, wäre die Benutzeroberfläche andernfalls weder intuitiv noch erkennbar.
+-   <span data-ttu-id="ffac1-141">Verwenden Sie keine eingebetteten verschiebbaren Bereiche zum Anzeigen von Text oder Elementlisten.</span><span class="sxs-lookup"><span data-stu-id="ffac1-141">Don't use embedded pannable regions to display text or item lists.</span></span> <span data-ttu-id="ffac1-142">Da die Verschiebungsanzeigen und Bildlaufleisten nur angezeigt werden, wenn der Eingabekontakt im Bereich erkannt wird, wäre die Benutzeroberfläche andernfalls weder intuitiv noch erkennbar.</span><span class="sxs-lookup"><span data-stu-id="ffac1-142">Because the panning indicators and scroll bars are displayed only when the input contact is detected within the region, it is not an intuitive or discoverable user experience.</span></span>
 
--   Verketten Sie keine verschiebbaren Bereiche miteinander bzw. platzieren Sie nicht einen verschiebbaren Bereich in einem anderen, wenn beide in derselben Richtung verschoben werden, wie hier gezeigt. Dies kann zu einer unbeabsichtigten Verschiebung im übergeordneten Bereich führen, wenn eine Grenze des untergeordneten Bereichs erreicht wird. Es ist sinnvoll, die Achsen für die Verschiebung im rechten Winkel zueinander anzuordnen.
+-   <span data-ttu-id="ffac1-143">Verketten Sie keine verschiebbaren Bereiche miteinander bzw. platzieren Sie nicht einen verschiebbaren Bereich in einem anderen, wenn beide in derselben Richtung verschoben werden, wie hier gezeigt.</span><span class="sxs-lookup"><span data-stu-id="ffac1-143">Don't chain or place one pannable region within another pannable region if they both pan in the same direction, as shown here.</span></span> <span data-ttu-id="ffac1-144">Dies kann zu einer unbeabsichtigten Verschiebung im übergeordneten Bereich führen, wenn eine Grenze des untergeordneten Bereichs erreicht wird.</span><span class="sxs-lookup"><span data-stu-id="ffac1-144">This can result in the parent area being panned unintentionally when a boundary for the child area is reached.</span></span> <span data-ttu-id="ffac1-145">Es ist sinnvoll, die Achsen für die Verschiebung im rechten Winkel zueinander anzuordnen.</span><span class="sxs-lookup"><span data-stu-id="ffac1-145">Consider making the panning axis perpendicular.</span></span>
 
     ![Abbildung eines eingebetteten verschiebbaren Bereichs, in dem der Bildlauf in derselben Richtung erfolgt wie im Container](images/scrolling-embedded3.png)
 
-## <a name="additional-usage-guidance"></a>Weitere Hinweise zur Verwendung
+## <a name="additional-usage-guidance"></a><span data-ttu-id="ffac1-147">Weitere Hinweise zur Verwendung</span><span class="sxs-lookup"><span data-stu-id="ffac1-147">Additional usage guidance</span></span>
 
+<span data-ttu-id="ffac1-148">Das Verschieben per Toucheingabe mittels Streif- oder Ziehbewegung mit einem oder mehreren Fingern funktioniert wie der Bildlauf mit der Maus.</span><span class="sxs-lookup"><span data-stu-id="ffac1-148">Panning with touch, by using a swipe or slide gesture with one or more fingers, is like scrolling with the mouse.</span></span> <span data-ttu-id="ffac1-149">Die Verschiebungsinteraktion gleicht eher dem Drehen des Mausrads oder Verschieben des Bildlauffelds als dem Klicken auf die Bildlaufleiste.</span><span class="sxs-lookup"><span data-stu-id="ffac1-149">The panning interaction is most similar to rotating the mouse wheel or sliding the scroll box, rather than clicking the scroll bar.</span></span> <span data-ttu-id="ffac1-150">Sofern keine Unterscheidung in einer API gemacht wird oder für eine gerätespezifische Windows-UI erforderlich ist, bezeichnen wir beide Interaktionen einfach als Verschiebung.</span><span class="sxs-lookup"><span data-stu-id="ffac1-150">Unless a distinction is made in an API or required by some device-specific Windows UI, we simply refer to both interactions as panning.</span></span>
 
-Das Verschieben per Toucheingabe mittels Streif- oder Ziehbewegung mit einem oder mehreren Fingern funktioniert wie der Bildlauf mit der Maus. Die Verschiebungsinteraktion gleicht eher dem Drehen des Mausrads oder Verschieben des Bildlauffelds als dem Klicken auf die Bildlaufleiste. Sofern keine Unterscheidung in einer API gemacht wird oder für eine gerätespezifische Windows-UI erforderlich ist, bezeichnen wir beide Interaktionen einfach als Verschiebung.
+> <div id="main">
+> <strong><span class="uwpd-prelease"><span data-ttu-id="ffac1-151">Vorabversion.</span><span class="sxs-lookup"><span data-stu-id="ffac1-151">Prerelease.</span></span></span> <span data-ttu-id="ffac1-152">Fall Creators Update (Windows10 Insider Preview-Build 16215 und höher) - Abweichende Funktionsweise</span><span class="sxs-lookup"><span data-stu-id="ffac1-152">Fall Creators Update (Windows 10 Insider Preview Build 16215 and later) - Behavior change</span></span></strong>
+> </div>
+> <span data-ttu-id="ffac1-153">Beim Schwenken/Bildlauf in UWP-App wird jetzt standardmäßig anstelle der Textauswahl ein aktiver Stifts verwendet (z.B. Toucheingabe, Touchpad und passiver Stift).</span><span class="sxs-lookup"><span data-stu-id="ffac1-153">By default, instead of text selection, an active pen now scrolls/pans in UWP apps (like touch, touchpad, and passive pen).</span></span>  
+> <span data-ttu-id="ffac1-154">Wenn Ihre App vom vorherigen Verhalten abhängig ist, können Sie die Stift-Bildlaufaktionen außer Kraft setzen und auf das vorherige Verhalten zurückzusetzen.</span><span class="sxs-lookup"><span data-stu-id="ffac1-154">If your app depends on the previous behavior, you can override pen scrolling and revert to the previous behavior.</span></span> <span data-ttu-id="ffac1-155">Weitere Details finden Sie im API-Referenzthema unter [ScrollViewer-Klasse] (https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer).</span><span class="sxs-lookup"><span data-stu-id="ffac1-155">See the [ScrollViewer Class] (https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer) API reference topic for details.</span></span>
 
-Je nach Eingabegerät verwendet der Benutzer eine der folgenden Methoden, um die Anzeige in einem verschiebbaren Bereich zu verschieben:
+<span data-ttu-id="ffac1-156">Je nach Eingabegerät verwendet der Benutzer eine der folgenden Methoden, um die Anzeige in einem verschiebbaren Bereich zu verschieben:</span><span class="sxs-lookup"><span data-stu-id="ffac1-156">Depending on the input device, the user pans within a pannable region by using one of these:</span></span>
 
--   Eine Maus, ein Touchpad oder ein aktiver Zeichen-/Eingabestift zum Klicken auf die Bildlaufpfeile, Ziehen des Bildlauffelds oder Klicken in die Bildlaufleiste
--   Die Radtaste der Maus, um das Ziehen des Bildlauffelds zu emulieren
--   Die erweiterten Schaltflächen (XBUTTON1 und XBUTTON2) bei Unterstützung durch die Maus
--   Die Pfeiltasten auf der Tastatur, um das Ziehen des Bildlauffelds zu emulieren, oder die BILD-AB- oder BILD-AUF-TASTE, um das Klicken in die Bildlaufleiste zu emulieren
--   Toucheingabe, Touchpad oder ein passiver Zeichen-/Eingabestift zum Ziehen oder Streifen der Finger in die gewünschte Richtung
+-   <span data-ttu-id="ffac1-157">Eine Maus, ein Touchpad oder ein aktiver Zeichen-/Eingabestift zum Klicken auf die Bildlaufpfeile, Ziehen des Bildlauffelds oder Klicken in die Bildlaufleiste</span><span class="sxs-lookup"><span data-stu-id="ffac1-157">A mouse, touchpad, or active pen/stylus to click the scroll arrows, drag the scroll box, or click within the scroll bar.</span></span>
+-   <span data-ttu-id="ffac1-158">Die Radtaste der Maus, um das Ziehen des Bildlauffelds zu emulieren</span><span class="sxs-lookup"><span data-stu-id="ffac1-158">The wheel button of the mouse to emulate dragging the scroll box.</span></span>
+-   <span data-ttu-id="ffac1-159">Die erweiterten Schaltflächen (XBUTTON1 und XBUTTON2) bei Unterstützung durch die Maus</span><span class="sxs-lookup"><span data-stu-id="ffac1-159">The extended buttons (XBUTTON1 and XBUTTON2), if supported by the mouse.</span></span>
+-   <span data-ttu-id="ffac1-160">Die Pfeiltasten auf der Tastatur, um das Ziehen des Bildlauffelds zu emulieren, oder die BILD-AB- oder BILD-AUF-TASTE, um das Klicken in die Bildlaufleiste zu emulieren</span><span class="sxs-lookup"><span data-stu-id="ffac1-160">The keyboard arrow keys to emulate dragging the scroll box or the page keys to emulate clicking within the scroll bar.</span></span>
+-   <span data-ttu-id="ffac1-161">Toucheingabe, Touchpad oder ein passiver Zeichen-/Eingabestift zum Ziehen oder Streifen der Finger in die gewünschte Richtung</span><span class="sxs-lookup"><span data-stu-id="ffac1-161">Touch, touchpad, or passive pen/stylus to slide or swipe the fingers in the desired direction.</span></span>
 
-Beim Ziehen werden die Finger nur in der Verschiebungsrichtung bewegt. Diese Bewegung führt zu einem 1:1-Verhältnis, d. h. der Inhalt wird genauso schnell und weit verschoben wie die Finger bewegt werden. Beim Streifen, dem schnellen Ziehen und Anheben der Finger, werden die folgenden physischen Aspekte auf die Verschiebungsanimation angewendet:
+<span data-ttu-id="ffac1-162">Beim Ziehen werden die Finger nur in der Verschiebungsrichtung bewegt.</span><span class="sxs-lookup"><span data-stu-id="ffac1-162">Sliding involves moving the fingers slowly in the panning direction.</span></span> <span data-ttu-id="ffac1-163">Diese Bewegung führt zu einem 1:1-Verhältnis, d.h. der Inhalt wird genauso schnell und weit verschoben wie die Finger bewegt werden.</span><span class="sxs-lookup"><span data-stu-id="ffac1-163">This results in a one-to-one relationship, where the content pans at the same speed and distance as the fingers.</span></span> <span data-ttu-id="ffac1-164">Beim Streifen, dem schnellen Ziehen und Anheben der Finger, werden die folgenden physischen Aspekte auf die Verschiebungsanimation angewendet:</span><span class="sxs-lookup"><span data-stu-id="ffac1-164">Swiping, which involves rapidly sliding and lifting the fingers, results in the following physics being applied to the panning animation:</span></span>
 
--   Verlangsamung (Trägheit): Wenn die Finger angehoben werden, wird die Verschiebung langsamer. Dies ist mit allmählichem Anhalten auf glattem Untergrund vergleichbar.
--   Absorption: Die Dynamik der Verschiebung bewirkt bei der Verlangsamung ein leichtes Zurückspringen, wenn entweder ein Andockpunkt oder eine Grenze des Inhaltsbereichs erreicht wird.
+-   <span data-ttu-id="ffac1-165">Verlangsamung (Trägheit): Wenn die Finger angehoben werden, wird die Verschiebung langsamer.</span><span class="sxs-lookup"><span data-stu-id="ffac1-165">Deceleration (inertia): Lifting the fingers causes panning to start decelerating.</span></span> <span data-ttu-id="ffac1-166">Dies ist mit allmählichem Anhalten auf glattem Untergrund vergleichbar.</span><span class="sxs-lookup"><span data-stu-id="ffac1-166">This is similar to sliding to a stop on a slippery surface.</span></span>
+-   <span data-ttu-id="ffac1-167">Absorption: Die Dynamik der Verschiebung bewirkt bei der Verlangsamung ein leichtes Zurückspringen, wenn entweder ein Andockpunkt oder eine Grenze des Inhaltsbereichs erreicht wird.</span><span class="sxs-lookup"><span data-stu-id="ffac1-167">Absorption: Panning momentum during deceleration causes a slight bounce-back effect if either a snap point or a content area boundary is reached.</span></span>
 
-**Arten der Verschiebung**
+**<span data-ttu-id="ffac1-168">Arten der Verschiebung</span><span class="sxs-lookup"><span data-stu-id="ffac1-168">Types of panning</span></span>**
 
-Windows 8 unterstützt drei Arten der Verschiebung:
+<span data-ttu-id="ffac1-169">Windows8 unterstützt drei Arten der Verschiebung:</span><span class="sxs-lookup"><span data-stu-id="ffac1-169">Windows 8 supports three types of panning:</span></span>
 
--   Eine Achse – die Verschiebung wird nur in eine Richtung unterstützt (horizontal oder vertikal).
--   Führungsschienen – die Verschiebung wird in alle Richtungen unterstützt. Sobald jedoch der Benutzer in einer bestimmten Richtung eine Distanzschwelle überschreitet, wird die Verschiebung auf die betreffende Achse beschränkt.
--   Formfrei – die Verschiebung wird in alle Richtungen unterstützt.
+-   <span data-ttu-id="ffac1-170">Eine Achse – die Verschiebung wird nur in eine Richtung unterstützt (horizontal oder vertikal).</span><span class="sxs-lookup"><span data-stu-id="ffac1-170">Single axis - panning is supported in one direction only (horizontal or vertical).</span></span>
+-   <span data-ttu-id="ffac1-171">Führungsschienen – die Verschiebung wird in alle Richtungen unterstützt.</span><span class="sxs-lookup"><span data-stu-id="ffac1-171">Rails - panning is supported in all directions.</span></span> <span data-ttu-id="ffac1-172">Sobald jedoch der Benutzer in einer bestimmten Richtung eine Distanzschwelle überschreitet, wird die Verschiebung auf die betreffende Achse beschränkt.</span><span class="sxs-lookup"><span data-stu-id="ffac1-172">However, once the user crosses a distance threshold in a specific direction, then panning is restricted to that axis.</span></span>
+-   <span data-ttu-id="ffac1-173">Formfrei – die Verschiebung wird in alle Richtungen unterstützt.</span><span class="sxs-lookup"><span data-stu-id="ffac1-173">Freeform - panning is supported in all directions.</span></span>
 
-**Verschiebungs-UI**
+**<span data-ttu-id="ffac1-174">Verschiebungs-UI</span><span class="sxs-lookup"><span data-stu-id="ffac1-174">Panning UI</span></span>**
 
-Die Interaktion für die Verschiebung ist von Eingabegerät zu Eingabegerät unterschiedlich, bietet aber trotzdem eine ähnliche Funktion.
+<span data-ttu-id="ffac1-175">Die Interaktion für die Verschiebung ist von Eingabegerät zu Eingabegerät unterschiedlich, bietet aber trotzdem eine ähnliche Funktion.</span><span class="sxs-lookup"><span data-stu-id="ffac1-175">The interaction experience for panning is unique to the input device while still providing similar functionality.</span></span>
 
-**Verschiebbare Bereiche** Das Verhalten verschiebbarer Bereiche wird für Entwickler von Windows Store-Apps mit JavaScript zur Entwurfszeit über Cascading Stylesheets (CSS) verfügbar gemacht.
+<span data-ttu-id="ffac1-176">**Verschiebbare Bereiche** Das Verhalten verschiebbarer Bereiche wird für Entwickler von WindowsStore-Apps mit JavaScript zur Entwurfszeit über Cascading Stylesheets (CSS) verfügbar gemacht.</span><span class="sxs-lookup"><span data-stu-id="ffac1-176">**Pannable regions** Pannable region behaviors are exposed to Windows Store app using JavaScript developers at design time through Cascading Style Sheets (CSS).</span></span>
 
-Abhängig vom erkannten Eingabegerät sind zwei Anzeigemodi für die Verschiebung verfügbar:
+<span data-ttu-id="ffac1-177">Abhängig vom erkannten Eingabegerät sind zwei Anzeigemodi für die Verschiebung verfügbar:</span><span class="sxs-lookup"><span data-stu-id="ffac1-177">There are two panning display modes based on the input device detected:</span></span>
 
--   Verschiebungsanzeigen für Fingereingabe.
--   Bildlaufleisten für andere Eingabegeräte wie Maus, Touchpad, Tastatur und Eingabestift.
+-   <span data-ttu-id="ffac1-178">Verschiebungsanzeigen für Fingereingabe.</span><span class="sxs-lookup"><span data-stu-id="ffac1-178">Panning indicators for touch.</span></span>
+-   <span data-ttu-id="ffac1-179">Bildlaufleisten für andere Eingabegeräte wie Maus, Touchpad, Tastatur und Eingabestift.</span><span class="sxs-lookup"><span data-stu-id="ffac1-179">Scroll bars for other input devices, including mouse, touchpad, keyboard, and stylus.</span></span>
 
-**Hinweis**  Verschiebungsanzeigen sind nur sichtbar, wenn der Berührungskontakt innerhalb des verschiebbaren Bereichs erfolgt. Ebenso ist die Bildlaufleiste nur sichtbar, wenn sich der Mauszeiger, Eingabe-/Zeichenstiftcursor oder Tastaturfokus im bildlauffähigen Bereich befindet.
+<span data-ttu-id="ffac1-180">**Hinweis**  Verschiebungsanzeigen sind nur sichtbar, wenn der Berührungskontakt innerhalb des verschiebbaren Bereichs erfolgt.</span><span class="sxs-lookup"><span data-stu-id="ffac1-180">**Note**  Panning indicators are only visible when the touch contact is within the pannable region.</span></span> <span data-ttu-id="ffac1-181">Ebenso ist die Bildlaufleiste nur sichtbar, wenn sich der Mauszeiger, Eingabe-/Zeichenstiftcursor oder Tastaturfokus im bildlauffähigen Bereich befindet.</span><span class="sxs-lookup"><span data-stu-id="ffac1-181">Similarly, the scroll bar is only visible when the mouse cursor, pen/stylus cursor, or keyboard focus is within the scrollable region.</span></span>
 
  
 
-**Verschiebungsindikatoren** Verschiebungsindikatoren sind mit dem Bildlauffeld auf einer Bildlaufleiste vergleichbar. Sie zeigen das Verhältnis zwischen dem angezeigten Inhalt und dem gesamten verschiebbaren Bereich und die relative Position des angezeigten Inhalts im verschiebbaren Bereich an.
+<span data-ttu-id="ffac1-182">**Verschiebungsindikatoren** Verschiebungsindikatoren sind mit dem Bildlauffeld auf einer Bildlaufleiste vergleichbar.</span><span class="sxs-lookup"><span data-stu-id="ffac1-182">**Panning indicators** Panning indicators are similar to the scroll box in a scroll bar.</span></span> <span data-ttu-id="ffac1-183">Sie zeigen das Verhältnis zwischen dem angezeigten Inhalt und dem gesamten verschiebbaren Bereich und die relative Position des angezeigten Inhalts im verschiebbaren Bereich an.</span><span class="sxs-lookup"><span data-stu-id="ffac1-183">They indicate the proportion of displayed content to total pannable area and the relative position of the displayed content in the pannable area.</span></span>
 
-Das folgende Diagramm zeigt zwei verschiebbare Bereiche unterschiedlicher Länge und die zugehörigen Verschiebungsindikatoren.
+<span data-ttu-id="ffac1-184">Das folgende Diagramm zeigt zwei verschiebbare Bereiche unterschiedlicher Länge und die zugehörigen Verschiebungsindikatoren.</span><span class="sxs-lookup"><span data-stu-id="ffac1-184">The following diagram shows two pannable areas of different lengths and their panning indicators.</span></span>
 
 ![Abbildung, die zwei verschiebbare Bereiche unterschiedlicher Länge und die zugehörigen Verschiebungsindikatoren zeigt](images/scrolling-indicators.png)
 
-**Verschiebungsverhalten**
-**Andockpunkte** Beim Verschieben mit der Streifbewegung weist die Interaktion ein Trägheitsverhalten auf, wenn der Berührungskontakt gelöst wird. Ohne direkte Eingabe des Benutzers wird der Inhalt aufgrund der Trägheit weiter verschoben, bis eine Distanzschwelle erreicht wird. Verwenden Sie Andockpunkte, um dieses Trägheitsverhalten zu ändern.
+<span data-ttu-id="ffac1-186">**Verschiebungsverhalten**
+**Andockpunkte** Beim Verschieben mit der Streifbewegung weist die Interaktion ein Trägheitsverhalten auf, wenn der Berührungskontakt gelöst wird.</span><span class="sxs-lookup"><span data-stu-id="ffac1-186">**Panning behaviors**
+**Snap points** Panning with the swipe gesture introduces inertia behavior into the interaction when the touch contact is lifted.</span></span> <span data-ttu-id="ffac1-187">Ohne direkte Eingabe des Benutzers wird der Inhalt aufgrund der Trägheit weiter verschoben, bis eine Distanzschwelle erreicht wird.</span><span class="sxs-lookup"><span data-stu-id="ffac1-187">With inertia, the content continues to pan until some distance threshold is reached without direct input from the user.</span></span> <span data-ttu-id="ffac1-188">Verwenden Sie Andockpunkte, um dieses Trägheitsverhalten zu ändern.</span><span class="sxs-lookup"><span data-stu-id="ffac1-188">Use snap points to modify this inertia behavior.</span></span>
 
-Mit Andockpunkten werden logische Stopps im App-Inhalt festgelegt. Von Benutzern werden Andockpunkte als Paginierungsmechanismus wahrgenommen. Sie minimieren die Ermüdung durch ständiges Ziehen oder Streifen in großen verschiebbaren Bereichen. Mit Andockpunkten können Sie ungenaue Benutzereingaben behandeln und sicherstellen, dass eine bestimmte Teilmenge des Inhalts oder wichtige Informationen im Viewport angezeigt werden.
+<span data-ttu-id="ffac1-189">Mit Andockpunkten werden logische Stopps im App-Inhalt festgelegt.</span><span class="sxs-lookup"><span data-stu-id="ffac1-189">Snap points specify logical stops in your app content.</span></span> <span data-ttu-id="ffac1-190">Von Benutzern werden Andockpunkte als Paginierungsmechanismus wahrgenommen. Sie minimieren die Ermüdung durch ständiges Ziehen oder Streifen in großen verschiebbaren Bereichen.</span><span class="sxs-lookup"><span data-stu-id="ffac1-190">Cognitively, snap points act as a paging mechanism for the user and minimize fatigue from excessive sliding or swiping in large pannable regions.</span></span> <span data-ttu-id="ffac1-191">Mit Andockpunkten können Sie ungenaue Benutzereingaben behandeln und sicherstellen, dass eine bestimmte Teilmenge des Inhalts oder wichtige Informationen im Viewport angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="ffac1-191">With them, you can handle imprecise user input and ensure a specific subset of content or key information is displayed in the viewport.</span></span>
 
-Es gibt zwei Arten von Andockpunkten:
+<span data-ttu-id="ffac1-192">Es gibt zwei Arten von Andockpunkten:</span><span class="sxs-lookup"><span data-stu-id="ffac1-192">There are two types of snap-points:</span></span>
 
--   Näherung - Nachdem der Kontakt aufhoben wurde, wird ein Andockpunkt ausgewählt, wenn die Trägheitsbewegung innerhalb einer Distanzschwelle zum Andockpunkt anhält. Die Verschiebung kann trotzdem zwischen Näherungsandockpunkten angehalten werden.
--   Erforderlich – Der ausgewählte Andockpunkt ist der Punkt direkt vor oder nach dem Andockpunkt, der vor dem Aufheben des Kontakts zuletzt überschritten wurde (abhängig von der Richtung und Geschwindigkeit der Bewegung). Die Verschiebung muss an einem erforderlichen Andockpunkt enden.
+-   <span data-ttu-id="ffac1-193">Näherung - Nachdem der Kontakt aufhoben wurde, wird ein Andockpunkt ausgewählt, wenn die Trägheitsbewegung innerhalb einer Distanzschwelle zum Andockpunkt anhält.</span><span class="sxs-lookup"><span data-stu-id="ffac1-193">Proximity - After the contact is lifted, a snap point is selected if inertia stops within a distance threshold of the snap point.</span></span> <span data-ttu-id="ffac1-194">Die Verschiebung kann trotzdem zwischen Näherungsandockpunkten angehalten werden.</span><span class="sxs-lookup"><span data-stu-id="ffac1-194">Panning can still stop between proximity snap points.</span></span>
+-   <span data-ttu-id="ffac1-195">Erforderlich – Der ausgewählte Andockpunkt ist der Punkt direkt vor oder nach dem Andockpunkt, der vor dem Aufheben des Kontakts zuletzt überschritten wurde (abhängig von der Richtung und Geschwindigkeit der Bewegung).</span><span class="sxs-lookup"><span data-stu-id="ffac1-195">Mandatory - The snap point selected is the one that immediately precedes or succeeds the last snap point crossed before the contact was lifted (depending on the direction and velocity of the gesture).</span></span> <span data-ttu-id="ffac1-196">Die Verschiebung muss an einem erforderlichen Andockpunkt enden.</span><span class="sxs-lookup"><span data-stu-id="ffac1-196">Panning must stop on a mandatory snap point.</span></span>
 
-Andockpunkte für die Verschiebung sind nützlich für Anwendungen wie Webbrowser und Fotoalben, die in Seiten aufgeteilten Inhalt emulieren oder logische Gruppen von Elementen aufweisen, die dynamisch neu gruppiert werden können, damit sie in einen Viewport oder eine Anzeige passen.
+<span data-ttu-id="ffac1-197">Andockpunkte für die Verschiebung sind nützlich für Anwendungen wie Webbrowser und Fotoalben, die in Seiten aufgeteilten Inhalt emulieren oder logische Gruppen von Elementen aufweisen, die dynamisch neu gruppiert werden können, damit sie in einen Viewport oder eine Anzeige passen.</span><span class="sxs-lookup"><span data-stu-id="ffac1-197">Panning snap-points are useful for applications such as web browsers and photo albums that emulate paginated content or have logical groupings of items that can be dynamically regrouped to fit within a viewport or display.</span></span>
 
-Die folgenden Diagramme zeigen, wie der Inhalt automatisch zu einem logischen Ort verschoben wird, wenn der Benutzer die Verschiebung bis zu einem bestimmten Punkt ausführt und dann loslässt.
+<span data-ttu-id="ffac1-198">Die folgenden Diagramme zeigen, wie der Inhalt automatisch zu einem logischen Ort verschoben wird, wenn der Benutzer die Verschiebung bis zu einem bestimmten Punkt ausführt und dann loslässt.</span><span class="sxs-lookup"><span data-stu-id="ffac1-198">The following diagrams show how panning to a certain point and releasing causes the content to automatically pan to a logical location.</span></span>
 
 |                                                                |                                                                                         |                                                                                                                 |
 |----------------------------------------------------------------|-----------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
 | ![Abbildung eines verschiebbaren Bereichs](images/ux-panning-snap1.png) | ![Abbildung eines verschiebbaren Bereichs, der nach links verschoben wird](images/ux-panning-snap2.png) | ![Abbildung eines verschiebbaren Bereichs, in dem die Verschiebung an einem logischen Andockpunkt beendet wurde](images/ux-panning-snap3.png) |
-| Streifen zum Verschieben.                                                  | Aufheben des Berührungskontakts.                                                                     | Der verschiebbare Bereich stoppt am Andockpunkt, nicht an der Stelle, an der der Berührungskontakt aufgehoben wurde.                                |
+| <span data-ttu-id="ffac1-202">Streifen zum Verschieben.</span><span class="sxs-lookup"><span data-stu-id="ffac1-202">Swipe to pan.</span></span>                                                  | <span data-ttu-id="ffac1-203">Aufheben des Berührungskontakts.</span><span class="sxs-lookup"><span data-stu-id="ffac1-203">Lift touch contact.</span></span>                                                                     | <span data-ttu-id="ffac1-204">Der verschiebbare Bereich stoppt am Andockpunkt, nicht an der Stelle, an der der Berührungskontakt aufgehoben wurde.</span><span class="sxs-lookup"><span data-stu-id="ffac1-204">Pannable region stops at the snap point, not where the touch contact was lifted.</span></span>                                |
 
  
 
-**Führungsschienen** Inhalt kann breiter und höher als die Abmessungen und die Auflösung eines Anzeigegeräts sein. Aus diesem Grund ist oft eine zweidimensionale Verschiebung (horizontal und vertikal) erforderlich. Führungsschienen verbessern in diesen Fällen die Benutzerfreundlichkeit, da sie die Verschiebung entlang der Bewegungsachse (vertikal oder horizontal) hervorheben.
+<span data-ttu-id="ffac1-205">**Führungsschienen** Inhalt kann breiter und höher als die Abmessungen und die Auflösung eines Anzeigegeräts sein.</span><span class="sxs-lookup"><span data-stu-id="ffac1-205">**Rails** Content can be wider and taller than the dimensions and resolution of a display device.</span></span> <span data-ttu-id="ffac1-206">Aus diesem Grund ist oft eine zweidimensionale Verschiebung (horizontal und vertikal) erforderlich.</span><span class="sxs-lookup"><span data-stu-id="ffac1-206">For this reason, two-dimensional panning (horizontal and vertical) is often necessary.</span></span> <span data-ttu-id="ffac1-207">Führungsschienen verbessern in diesen Fällen die Benutzerfreundlichkeit, da sie die Verschiebung entlang der Bewegungsachse (vertikal oder horizontal) hervorheben.</span><span class="sxs-lookup"><span data-stu-id="ffac1-207">Rails improve the user experience in these cases by emphasizing panning along the axis of motion (vertical or horizontal).</span></span>
 
-Das folgende Diagramm verdeutlicht das Konzept der Führungsschienen.
+<span data-ttu-id="ffac1-208">Das folgende Diagramm verdeutlicht das Konzept der Führungsschienen.</span><span class="sxs-lookup"><span data-stu-id="ffac1-208">The following diagram demonstrates the concept of rails.</span></span>
 
 ![Diagramm eines Bildschirms mit Führungsschienen, die die Verschiebung einschränken](images/ux-panning-rails.png)
 
-**Verketten von eingebettetem oder geschachteltem Inhalt**
+**<span data-ttu-id="ffac1-210">Verketten von eingebettetem oder geschachteltem Inhalt</span><span class="sxs-lookup"><span data-stu-id="ffac1-210">Chaining embedded or nested content</span></span>**
 
-Wenn ein Benutzer in einem Element, das in ein anderes zoomfähiges oder bildlauffähiges Element geschachtelt ist, ein Zoom- oder Bildlauflimit erreicht, können Sie angeben, ob das übergeordnete Element den im untergeordneten Element begonnenen Zoom- oder Bildlaufvorgang fortsetzen soll. Dies wird als Verketten von Zoom- oder Bildlaufvorgängen bezeichnet.
+<span data-ttu-id="ffac1-211">Wenn ein Benutzer in einem Element, das in ein anderes zoomfähiges oder bildlauffähiges Element geschachtelt ist, ein Zoom- oder Bildlauflimit erreicht, können Sie angeben, ob das übergeordnete Element den im untergeordneten Element begonnenen Zoom- oder Bildlaufvorgang fortsetzen soll.</span><span class="sxs-lookup"><span data-stu-id="ffac1-211">After a user hits a zoom or scroll limit on an element that has been nested within another zoomable or scrollable element, you can specify whether that parent element should continue the zooming or scrolling operation begun in its child element.</span></span> <span data-ttu-id="ffac1-212">Dies wird als Verketten von Zoom- oder Bildlaufvorgängen bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="ffac1-212">This is called zoom or scroll chaining.</span></span>
 
-Die Verkettung wird für die Verschiebung in einem Inhaltsbereich mit einer Achse, der mindestens einen Bereich für die Verschiebung entlang einer Achse oder die formfreie Verschiebung enthält (sofern die Berührung in einem dieser untergeordneten Bereiche erfolgt). Wenn die Grenze des untergeordneten Bereichs für die Verschiebung in einer bestimmten Richtung erreicht wird, wird die Verschiebung in derselben Richtung für den übergeordneten Bereich aktiviert.
+<span data-ttu-id="ffac1-213">Die Verkettung wird für die Verschiebung in einem Inhaltsbereich mit einer Achse, der mindestens einen Bereich für die Verschiebung entlang einer Achse oder die formfreie Verschiebung enthält (sofern die Berührung in einem dieser untergeordneten Bereiche erfolgt).</span><span class="sxs-lookup"><span data-stu-id="ffac1-213">Chaining is used for panning within a single-axis content area that contains one or more single-axis or freeform panning regions (when the touch contact is within one of these child regions).</span></span> <span data-ttu-id="ffac1-214">Wenn die Grenze des untergeordneten Bereichs für die Verschiebung in einer bestimmten Richtung erreicht wird, wird die Verschiebung in derselben Richtung für den übergeordneten Bereich aktiviert.</span><span class="sxs-lookup"><span data-stu-id="ffac1-214">When the panning boundary of the child region is reached in a specific direction, panning is then activated on the parent region in the same direction.</span></span>
 
-Wenn ein verschiebbarer Bereich in einen anderen verschiebbaren Bereich geschachtelt ist, ist es wichtig, ausreichend Platz zwischen dem Container und dem eingebetteten Inhalt zu lassen. In den folgenden Diagrammen befindet sich ein verschiebbarer Bereich in einem anderen verschiebbaren Bereich. Die Bereiche können jeweils im rechten Winkel zueinander verschoben werden. In jedem Bereich ist ausreichend Platz für die Verschiebung vorhanden.
+<span data-ttu-id="ffac1-215">Wenn ein verschiebbarer Bereich in einen anderen verschiebbaren Bereich geschachtelt ist, ist es wichtig, ausreichend Platz zwischen dem Container und dem eingebetteten Inhalt zu lassen.</span><span class="sxs-lookup"><span data-stu-id="ffac1-215">When a pannable region is nested inside another pannable region it's important to specify enough space between the container and the embedded content.</span></span> <span data-ttu-id="ffac1-216">In den folgenden Diagrammen befindet sich ein verschiebbarer Bereich in einem anderen verschiebbaren Bereich. Die Bereiche können jeweils im rechten Winkel zueinander verschoben werden.</span><span class="sxs-lookup"><span data-stu-id="ffac1-216">In the following diagrams, one pannable region is placed inside another pannable region, each going in perpendicular directions.</span></span> <span data-ttu-id="ffac1-217">In jedem Bereich ist ausreichend Platz für die Verschiebung vorhanden.</span><span class="sxs-lookup"><span data-stu-id="ffac1-217">There is plenty of space for users to pan in each region.</span></span>
 
 ![Abbildung eines eingebetteten verschiebbaren Bereichs](images/scrolling-embedded.png)
 
-Wenn wie im folgenden Diagramm nicht genügend Platz vorhanden ist, kann der eingebettete verschiebbare Bereich die Verschiebung im Container stören, was dazu führen kann, dass in einem oder mehreren der verschiebbaren Bereiche eine unbeabsichtigte Verschiebung erfolgt.
+<span data-ttu-id="ffac1-219">Wenn wie im folgenden Diagramm nicht genügend Platz vorhanden ist, kann der eingebettete verschiebbare Bereich die Verschiebung im Container stören, was dazu führen kann, dass in einem oder mehreren der verschiebbaren Bereiche eine unbeabsichtigte Verschiebung erfolgt.</span><span class="sxs-lookup"><span data-stu-id="ffac1-219">Without enough space, as shown in the following diagram, the embedded pannable region can interfere with panning in the container and result in unintentional panning in one or more of the pannable regions.</span></span>
 
 ![Abbildung eines eingebetteten verschiebbaren Bereichs mit unzureichendem Abstand](images/ux-panning-embedded-wrong.png)
 
-Dieser Leitfaden ist auch für Apps wie Fotoalben oder Karten-Apps hilfreich, die uneingeschränkte Verschiebung in einzelnen Bildern oder Karten und gleichzeitig die Verschiebung entlang einer Achse im Album (zum vorherigen oder nächsten Bild) bzw. im Detailbereich unterstützen. In Apps, die über einen Detail- oder Optionsbereich für das formfreie Verschieben eines Bilds oder einer Karte verfügen, empfehlen wir, das Seitenlayout mit den Detail- und Optionsbereichen zu beginnen, da der Bereich zum ungehinderten Verschieben eines Bilds oder einer Karte das Verschieben in den Detailbereich stören kann.
+<span data-ttu-id="ffac1-221">Dieser Leitfaden ist auch für Apps wie Fotoalben oder Karten-Apps hilfreich, die uneingeschränkte Verschiebung in einzelnen Bildern oder Karten und gleichzeitig die Verschiebung entlang einer Achse im Album (zum vorherigen oder nächsten Bild) bzw. im Detailbereich unterstützen.</span><span class="sxs-lookup"><span data-stu-id="ffac1-221">This guidance is also useful for apps such as photo albums or mapping apps that support unconstrained panning within an individual image or map while also supporting single-axis panning within the album (to the previous or next images) or details area.</span></span> <span data-ttu-id="ffac1-222">In Apps, die über einen Detail- oder Optionsbereich für das formfreie Verschieben eines Bilds oder einer Karte verfügen, empfehlen wir, das Seitenlayout mit den Detail- und Optionsbereichen zu beginnen, da der Bereich zum ungehinderten Verschieben eines Bilds oder einer Karte das Verschieben in den Detailbereich stören kann.</span><span class="sxs-lookup"><span data-stu-id="ffac1-222">In apps that provide a detail or options area corresponding to a freeform panning image or map, we recommend that the page layout start with the details and options area as the unconstrained panning area of the image or map might interfere with panning to the details area.</span></span>
 
-## <a name="related-articles"></a>Verwandte Artikel
+## <a name="related-articles"></a><span data-ttu-id="ffac1-223">Verwandte Artikel</span><span class="sxs-lookup"><span data-stu-id="ffac1-223">Related articles</span></span>
 
 
-* [Benutzerdefinierte Benutzerinteraktionen](https://msdn.microsoft.com/library/windows/apps/mt185599)
-* [Optimieren von ListView und GridView](https://msdn.microsoft.com/library/windows/apps/mt204776)
-* [Barrierefreiheit der Tastaturnavigation](https://msdn.microsoft.com/library/windows/apps/mt244347)
+* [<span data-ttu-id="ffac1-224">Benutzerdefinierte Benutzerinteraktionen</span><span class="sxs-lookup"><span data-stu-id="ffac1-224">Custom user interactions</span></span>](https://msdn.microsoft.com/library/windows/apps/mt185599)
+* [<span data-ttu-id="ffac1-225">Optimieren von ListView und GridView</span><span class="sxs-lookup"><span data-stu-id="ffac1-225">Optimize ListView and GridView</span></span>](https://msdn.microsoft.com/library/windows/apps/mt204776)
+* [<span data-ttu-id="ffac1-226">Barrierefreiheit der Tastaturnavigation</span><span class="sxs-lookup"><span data-stu-id="ffac1-226">Keyboard accessibility</span></span>](https://msdn.microsoft.com/library/windows/apps/mt244347)
 
-**Beispiele**
-* [Einfaches Eingabebeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Eingabebeispiel mit geringer Latenz](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Beispiel für den Benutzerinteraktionsmodus](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Beispiel für visuelle Fokuselemente](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+**<span data-ttu-id="ffac1-227">Beispiele</span><span class="sxs-lookup"><span data-stu-id="ffac1-227">Samples</span></span>**
+* [<span data-ttu-id="ffac1-228">Einfaches Eingabebeispiel</span><span class="sxs-lookup"><span data-stu-id="ffac1-228">Basic input sample</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [<span data-ttu-id="ffac1-229">Beispiel für Eingabe mit niedriger Latenz</span><span class="sxs-lookup"><span data-stu-id="ffac1-229">Low latency input sample</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [<span data-ttu-id="ffac1-230">Beispiel für den Benutzerinteraktionsmodus</span><span class="sxs-lookup"><span data-stu-id="ffac1-230">User interaction mode sample</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [<span data-ttu-id="ffac1-231">Beispiel für visuelle Fokuselemente</span><span class="sxs-lookup"><span data-stu-id="ffac1-231">Focus visuals sample</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=619895)
 
-**Archivbeispiele**
-* [Eingabe: Beispiel XAML-Benutzereingabeereignisse](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Eingabe: Beispiel für Gerätefunktionen](http://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Eingabe: Beispiel für Fingereingabe-Treffertests](http://go.microsoft.com/fwlink/p/?linkid=231590)
-* [Beispiel für XAML-Bildlauf, -Verschiebung und -Zoomen](http://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Eingabe: vereinfachtes Freihandbeispiel](http://go.microsoft.com/fwlink/p/?linkid=246570)
-* [Eingabe: Beispiel für Windows 8-Bewegungen](http://go.microsoft.com/fwlink/p/?LinkId=264995)
-* [Eingabe: Beispiel für Manipulationen und Gesten (C++)](http://go.microsoft.com/fwlink/p/?linkid=231605)
-* [Beispiel für die DirectX-Fingereingabe](http://go.microsoft.com/fwlink/p/?LinkID=231627)
+**<span data-ttu-id="ffac1-232">Archivbeispiele</span><span class="sxs-lookup"><span data-stu-id="ffac1-232">Archive samples</span></span>**
+* [<span data-ttu-id="ffac1-233">Eingabe: Beispiel für XAML-Benutzereingabeereignisse</span><span class="sxs-lookup"><span data-stu-id="ffac1-233">Input: XAML user input events sample</span></span>](http://go.microsoft.com/fwlink/p/?linkid=226855)
+* [<span data-ttu-id="ffac1-234">Eingabe: Beispiel für Gerätefunktionen</span><span class="sxs-lookup"><span data-stu-id="ffac1-234">Input: Device capabilities sample</span></span>](http://go.microsoft.com/fwlink/p/?linkid=231530)
+* [<span data-ttu-id="ffac1-235">Eingabe: Beispiel für Fingereingabe-Treffertests</span><span class="sxs-lookup"><span data-stu-id="ffac1-235">Input: Touch hit testing sample</span></span>](http://go.microsoft.com/fwlink/p/?linkid=231590)
+* [<span data-ttu-id="ffac1-236">Beispiel für XAML-Bildlauf, -Verschiebung und -Zoom</span><span class="sxs-lookup"><span data-stu-id="ffac1-236">XAML scrolling, panning, and zooming sample</span></span>](http://go.microsoft.com/fwlink/p/?linkid=251717)
+* [<span data-ttu-id="ffac1-237">Eingabe: vereinfachtes Freihandbeispiel</span><span class="sxs-lookup"><span data-stu-id="ffac1-237">Input: Simplified ink sample</span></span>](http://go.microsoft.com/fwlink/p/?linkid=246570)
+* [<span data-ttu-id="ffac1-238">Eingabe: Beispiel für Windows8-Bewegungen</span><span class="sxs-lookup"><span data-stu-id="ffac1-238">Input: Windows 8 gestures sample</span></span>](http://go.microsoft.com/fwlink/p/?LinkId=264995)
+* [<span data-ttu-id="ffac1-239">Eingabe: Beispiel für Manipulationen und Gesten (C++)</span><span class="sxs-lookup"><span data-stu-id="ffac1-239">Input: Manipulations and gestures (C++) sample</span></span>](http://go.microsoft.com/fwlink/p/?linkid=231605)
+* [<span data-ttu-id="ffac1-240">Beispiel für die DirectX-Fingereingabe</span><span class="sxs-lookup"><span data-stu-id="ffac1-240">DirectX touch input sample</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=231627)
  
 
  
-
 
 
 

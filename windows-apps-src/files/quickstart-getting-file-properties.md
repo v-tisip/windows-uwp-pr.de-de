@@ -8,50 +8,50 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 89dee43da35e9a31bb7a795324119cb429d3734e
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: e564c44a99419f1900ab6c322af4ea6dedb195cb
+ms.sourcegitcommit: 8c4d50ef819ed1a2f8cac4eebefb5ccdaf3fa898
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/27/2017
 ---
-# <a name="get-file-properties"></a>Abrufen von Dateieigenschaften
+# <a name="get-file-properties"></a><span data-ttu-id="e8966-104">Abrufen von Dateieigenschaften</span><span class="sxs-lookup"><span data-stu-id="e8966-104">Get file properties</span></span>
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
-
-
-**Wichtige APIs**
-
--   [**StorageFile.GetBasicPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/hh701737)
--   [**StorageFile.Properties**](https://msdn.microsoft.com/library/windows/apps/br227225)
--   [**StorageItemContentProperties.RetrievePropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/hh770652)
-
-Es werden Eigenschaften – oberste Ebene, grundlegend und erweitert – für eine Datei abgerufen, die durch ein [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)-Objekt dargestellt wird.
-
-**Hinweis**  Weitere Informationen finden Sie im [Beispiel zum Dateizugriff](http://go.microsoft.com/fwlink/p/?linkid=619995).
-
- 
+<span data-ttu-id="e8966-105">\[ Aktualisiert für UWP-Apps unter Windows 10.</span><span class="sxs-lookup"><span data-stu-id="e8966-105">\[ Updated for UWP apps on Windows 10.</span></span> <span data-ttu-id="e8966-106">Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span><span class="sxs-lookup"><span data-stu-id="e8966-106">For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span></span>
 
 
-## <a name="prerequisites"></a>Voraussetzungen
+**<span data-ttu-id="e8966-107">Wichtige APIs</span><span class="sxs-lookup"><span data-stu-id="e8966-107">Important APIs</span></span>**
 
--   **Kenntnisse in der asynchronen Programmierung für Apps für die universelle Windows-Plattform (UWP)**
+-   [**<span data-ttu-id="e8966-108">StorageFile.GetBasicPropertiesAsync</span><span class="sxs-lookup"><span data-stu-id="e8966-108">StorageFile.GetBasicPropertiesAsync</span></span>**](https://msdn.microsoft.com/library/windows/apps/hh701737)
+-   [**<span data-ttu-id="e8966-109">StorageFile.Properties</span><span class="sxs-lookup"><span data-stu-id="e8966-109">StorageFile.Properties</span></span>**](https://msdn.microsoft.com/library/windows/apps/br227225)
+-   [**<span data-ttu-id="e8966-110">StorageItemContentProperties.RetrievePropertiesAsync</span><span class="sxs-lookup"><span data-stu-id="e8966-110">StorageItemContentProperties.RetrievePropertiesAsync</span></span>**](https://msdn.microsoft.com/library/windows/apps/hh770652)
 
-    Informationen zum Schreiben von asynchronen Apps in C# oder Visual Basic finden Sie unter [Aufrufen asynchroner APIs in C# oder Visual Basic](https://msdn.microsoft.com/library/windows/apps/mt187337). Informationen zum Schreiben von asynchronen Apps in C++ finden Sie unter [Asynchrone Programmierung in C++](https://msdn.microsoft.com/library/windows/apps/mt187334).
+<span data-ttu-id="e8966-111">Es werden Eigenschaften – oberste Ebene, grundlegend und erweitert – für eine Datei abgerufen, die durch ein [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)-Objekt dargestellt wird.</span><span class="sxs-lookup"><span data-stu-id="e8966-111">Get properties—top-level, basic, and extended—for a file represented by a [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) object.</span></span>
 
--   **Zugriffsberechtigungen für den Speicherort**
-
-    Der Code in diesen Beispielen erfordert beispielsweise den Zugriff auf die **picturesLibrary**-Funktion, während Ihr Speicherort einen anderen Zugriffstyp oder keinen Zugriff voraussetzt. Weitere Informationen finden Sie unter [Berechtigungen für den Dateizugriff](file-access-permissions.md).
-
-## <a name="getting-a-files-top-level-properties"></a>Abrufen von Eigenschaften der obersten Ebene einer Datei
-
-Auf viele Dateieigenschaften der obersten Ebene kann in Form von Membern der [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)-Klasse zugegriffen werden. Diese Eigenschaften enthalten für eine Datei Attribute, Inhaltstyp, Erstellungsdatum, Anzeigename, Dateityp usw.
-
-**Hinweis**  Denken Sie daran, die **picturesLibrary**-Funktion anzugeben.
+<span data-ttu-id="e8966-112">**Hinweis**  Weitere Informationen finden Sie im [Beispiel zum Dateizugriff](http://go.microsoft.com/fwlink/p/?linkid=619995).</span><span class="sxs-lookup"><span data-stu-id="e8966-112">**Note**  Also see the [File access sample](http://go.microsoft.com/fwlink/p/?linkid=619995).</span></span>
 
  
 
-In diesem Beispiel werden alle Dateien der Bildbibliothek aufgezählt, wobei für jede Datei auf einige Eigenschaften der obersten Ebene zugegriffen wird.
+
+## <a name="prerequisites"></a><span data-ttu-id="e8966-113">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="e8966-113">Prerequisites</span></span>
+
+-   **<span data-ttu-id="e8966-114">Verstehen der asynchronen Programmierung für UWP-Apps (Universelle Windows-Plattform)</span><span class="sxs-lookup"><span data-stu-id="e8966-114">Understand async programming for Universal Windows Platform (UWP) apps</span></span>**
+
+    <span data-ttu-id="e8966-115">Informationen zum Schreiben von asynchronen Apps in C# oder Visual Basic finden Sie unter [Aufrufen asynchroner APIs in C# oder Visual Basic](https://msdn.microsoft.com/library/windows/apps/mt187337).</span><span class="sxs-lookup"><span data-stu-id="e8966-115">You can learn how to write asynchronous apps in C# or Visual Basic, see [Call asynchronous APIs in C# or Visual Basic](https://msdn.microsoft.com/library/windows/apps/mt187337).</span></span> <span data-ttu-id="e8966-116">Informationen zum Schreiben von asynchronen Apps in C++ finden Sie unter [Asynchrone Programmierung in C++](https://msdn.microsoft.com/library/windows/apps/mt187334).</span><span class="sxs-lookup"><span data-stu-id="e8966-116">To learn how to write asynchronous apps in C++, see [Asynchronous programming in C++](https://msdn.microsoft.com/library/windows/apps/mt187334).</span></span>
+
+-   **<span data-ttu-id="e8966-117">Zugriffsberechtigungen für den Speicherort</span><span class="sxs-lookup"><span data-stu-id="e8966-117">Access permissions to the location</span></span>**
+
+    <span data-ttu-id="e8966-118">Der Code in diesen Beispielen erfordert beispielsweise den Zugriff auf die **picturesLibrary**-Funktion, während Ihr Speicherort einen anderen Zugriffstyp oder keinen Zugriff voraussetzt.</span><span class="sxs-lookup"><span data-stu-id="e8966-118">For example, the code in these examples require the **picturesLibrary** capability, but your location may require a different capability or no capability at all.</span></span> <span data-ttu-id="e8966-119">Weitere Informationen finden Sie unter [Berechtigungen für den Dateizugriff](file-access-permissions.md).</span><span class="sxs-lookup"><span data-stu-id="e8966-119">To learn more, see [File access permissions](file-access-permissions.md).</span></span>
+
+## <a name="getting-a-files-top-level-properties"></a><span data-ttu-id="e8966-120">Abrufen von Eigenschaften der obersten Ebene einer Datei</span><span class="sxs-lookup"><span data-stu-id="e8966-120">Getting a file's top-level properties</span></span>
+
+<span data-ttu-id="e8966-121">Auf viele Dateieigenschaften der obersten Ebene kann in Form von Membern der [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)-Klasse zugegriffen werden.</span><span class="sxs-lookup"><span data-stu-id="e8966-121">Many top-level file properties are accessible as members of the [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) class.</span></span> <span data-ttu-id="e8966-122">Diese Eigenschaften enthalten für eine Datei Attribute, Inhaltstyp, Erstellungsdatum, Anzeigename, Dateityp usw.</span><span class="sxs-lookup"><span data-stu-id="e8966-122">These properties include the files attributes, content type, creation date, display name, file type, and so on.</span></span>
+
+<span data-ttu-id="e8966-123">**Hinweis**  Denken Sie daran, die **picturesLibrary**-Funktion anzugeben.</span><span class="sxs-lookup"><span data-stu-id="e8966-123">**Note**  Remember to declare the **picturesLibrary** capability.</span></span>
+
+ 
+
+<span data-ttu-id="e8966-124">In diesem Beispiel werden alle Dateien der Bildbibliothek aufgezählt, wobei für jede Datei auf einige Eigenschaften der obersten Ebene zugegriffen wird.</span><span class="sxs-lookup"><span data-stu-id="e8966-124">This example enumerates all of the files in the Pictures library, accessing a few of each file's top-level properties.</span></span>
 
 ```csharp
 // Enumerate all files in the Pictures library.
@@ -69,11 +69,11 @@ foreach (Windows.Storage.StorageFile file in files)
 }
 ```
 
-## <a name="getting-a-files-basic-properties"></a>Abrufen von grundlegenden Eigenschaften einer Datei
+## <a name="getting-a-files-basic-properties"></a><span data-ttu-id="e8966-125">Abrufen von grundlegenden Eigenschaften einer Datei</span><span class="sxs-lookup"><span data-stu-id="e8966-125">Getting a file's basic properties</span></span>
 
-Viele grundlegende Dateieigenschaften werden abgerufen, indem zuerst die [**StorageFile.GetBasicPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/hh701737)-Methode aufgerufen wird. Diese Methode gibt ein [**BasicProperties**](https://msdn.microsoft.com/library/windows/apps/br212113)-Objekt zurück, das Eigenschaften für die Größe des Elements (Datei oder Ordner) und das letzte Änderungsdatum des Elements definiert.
+<span data-ttu-id="e8966-126">Viele grundlegende Dateieigenschaften werden abgerufen, indem zuerst die [**StorageFile.GetBasicPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/hh701737)-Methode aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="e8966-126">Many basic file properties are obtained by first calling the [**StorageFile.GetBasicPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/hh701737) method.</span></span> <span data-ttu-id="e8966-127">Diese Methode gibt ein [**BasicProperties**](https://msdn.microsoft.com/library/windows/apps/br212113)-Objekt zurück, das Eigenschaften für die Größe des Elements (Datei oder Ordner) und das letzte Änderungsdatum des Elements definiert.</span><span class="sxs-lookup"><span data-stu-id="e8966-127">This method returns a [**BasicProperties**](https://msdn.microsoft.com/library/windows/apps/br212113) object, which defines properties for the size of the item (file or folder) as well as when the item was last modified.</span></span>
 
-In diesem Beispiel werden alle Dateien der Bildbibliothek aufgezählt, wobei für jede Datei auf einige grundlegende Eigenschaften zugegriffen wird.
+<span data-ttu-id="e8966-128">In diesem Beispiel werden alle Dateien der Bildbibliothek aufgezählt, wobei für jede Datei auf einige grundlegende Eigenschaften zugegriffen wird.</span><span class="sxs-lookup"><span data-stu-id="e8966-128">This example enumerates all of the files in the Pictures library, accessing a few of each file's basic properties.</span></span>
 
 ```csharp
 // Enumerate all files in the Pictures library.
@@ -94,11 +94,13 @@ foreach (Windows.Storage.StorageFile file in files)
 }
  ```
 
-## <a name="getting-a-files-extended-properties"></a>Abrufen von erweiterten Eigenschaften einer Datei
+## <a name="getting-a-files-extended-properties"></a><span data-ttu-id="e8966-129">Abrufen von erweiterten Eigenschaften einer Datei</span><span class="sxs-lookup"><span data-stu-id="e8966-129">Getting a file's extended properties</span></span>
 
-Neben den Eigenschaften der obersten Ebene und den grundlegenden Eigenschaften sind dem Inhalt der Datei viele Eigenschaften zugeordnet. Auf diese erweiterten Eigenschaften wird zugegriffen, indem die [**BasicProperties.RetrievePropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br212124)-Methode aufgerufen wird. (Ein [**BasicProperties**](https://msdn.microsoft.com/library/windows/apps/br212113)-Objekt wird durch den Aufruf einer [**StorageFile.Properties**](https://msdn.microsoft.com/library/windows/apps/br227225)-Eigenschaft abgerufen.) Während auf Dateieigenschaften der obersten Ebene und grundlegende Dateieigenschaften in Form von Eigenschaften einer Klasse zugegriffen werden kann – [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) und **BasicProperties**, werden erweiterte Eigenschaften abgerufen, indem eine [IEnumerable](http://go.microsoft.com/fwlink/p/?LinkID=313091) -Sammlung von [String](http://go.microsoft.com/fwlink/p/?LinkID=325032)-Objekten mit den Namen der abzurufenden Eigenschaften an die **BasicProperties.RetrievePropertiesAsync**-Methode übergeben wird. Diese Methode gibt dann eine [IDictionary](http://go.microsoft.com/fwlink/p/?LinkId=325238) -Sammlung zurück. Anschließend werden die einzelnen erweiterten Eigenschaften anhand des Namens oder Indexes aus der Sammlung abgerufen.
+<span data-ttu-id="e8966-130">Neben den Eigenschaften der obersten Ebene und den grundlegenden Eigenschaften sind dem Inhalt der Datei viele Eigenschaften zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="e8966-130">Aside from the top-level and basic file properties, there are many properties associated with the file's contents.</span></span> <span data-ttu-id="e8966-131">Auf diese erweiterten Eigenschaften wird zugegriffen, indem die [**BasicProperties.RetrievePropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br212124)-Methode aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="e8966-131">These extended properties are accessed by calling the [**BasicProperties.RetrievePropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br212124) method.</span></span> <span data-ttu-id="e8966-132">(Ein [**BasicProperties**](https://msdn.microsoft.com/library/windows/apps/br212113)-Objekt wird durch den Aufruf einer [**StorageFile.Properties**](https://msdn.microsoft.com/library/windows/apps/br227225)-Eigenschaft abgerufen.) Während auf Dateieigenschaften der obersten Ebene und grundlegende Dateieigenschaften in Form von Eigenschaften einer Klasse zugegriffen werden kann – [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) und **BasicProperties**, werden erweiterte Eigenschaften abgerufen, indem eine [IEnumerable](http://go.microsoft.com/fwlink/p/?LinkID=313091) -Sammlung von [String](http://go.microsoft.com/fwlink/p/?LinkID=325032)-Objekten mit den Namen der abzurufenden Eigenschaften an die **BasicProperties.RetrievePropertiesAsync**-Methode übergeben wird.</span><span class="sxs-lookup"><span data-stu-id="e8966-132">(A [**BasicProperties**](https://msdn.microsoft.com/library/windows/apps/br212113) object is obtained by calling the [**StorageFile.Properties**](https://msdn.microsoft.com/library/windows/apps/br227225) property.) While top-level and basic file properties are accessible as properties of a class—[**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) and **BasicProperties**, respectively—extended properties are obtained by passing an [IEnumerable](http://go.microsoft.com/fwlink/p/?LinkID=313091) collection of [String](http://go.microsoft.com/fwlink/p/?LinkID=325032) objects representing the names of the properties that are to be retrieved to the **BasicProperties.RetrievePropertiesAsync** method.</span></span> <span data-ttu-id="e8966-133">Diese Methode gibt dann eine [IDictionary](http://go.microsoft.com/fwlink/p/?LinkId=325238) -Sammlung zurück.</span><span class="sxs-lookup"><span data-stu-id="e8966-133">This method then returns an [IDictionary](http://go.microsoft.com/fwlink/p/?LinkId=325238) collection.</span></span> <span data-ttu-id="e8966-134">Anschließend werden die einzelnen erweiterten Eigenschaften anhand des Namens oder Indexes aus der Sammlung abgerufen.</span><span class="sxs-lookup"><span data-stu-id="e8966-134">Each extended property is then retrieved from the collection by name or by index.</span></span>
 
-In diesem Beispiel werden alle Dateien der Bildbibliothek aufgezählt und die Namen der gewünschten Eigenschaften (**DataAccessed** und **FileOwner**) in einem [List](http://go.microsoft.com/fwlink/p/?LinkID=325246)-Objekt angegeben. Dieses [List](http://go.microsoft.com/fwlink/p/?LinkID=325246)-Objekt wird an [**BasicProperties.RetrievePropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br212124) übergeben, um die Eigenschaften abzurufen. Diese Eigenschaften werden dann anhand des Namens aus dem zurückgegebenen [IDictionary](http://go.microsoft.com/fwlink/p/?LinkId=325238)-Objekt abgerufen.
+<span data-ttu-id="e8966-135">In diesem Beispiel werden alle Dateien der Bildbibliothek aufgezählt und die Namen der gewünschten Eigenschaften (**DataAccessed** und **FileOwner**) in einem [List](http://go.microsoft.com/fwlink/p/?LinkID=325246)-Objekt angegeben. Dieses [List](http://go.microsoft.com/fwlink/p/?LinkID=325246)-Objekt wird an [**BasicProperties.RetrievePropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br212124) übergeben, um die Eigenschaften abzurufen. Diese Eigenschaften werden dann anhand des Namens aus dem zurückgegebenen [IDictionary](http://go.microsoft.com/fwlink/p/?LinkId=325238)-Objekt abgerufen.</span><span class="sxs-lookup"><span data-stu-id="e8966-135">This example enumerates all of the files in the Pictures library, specifies the names of desired properties (**DataAccessed** and **FileOwner**) in a [List](http://go.microsoft.com/fwlink/p/?LinkID=325246) object, passes that [List](http://go.microsoft.com/fwlink/p/?LinkID=325246) object to [**BasicProperties.RetrievePropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br212124) to retrieve those properties, and then retrieves those properties by name from the returned [IDictionary](http://go.microsoft.com/fwlink/p/?LinkId=325238) object.</span></span>
+
+<span data-ttu-id="e8966-136">Weitere Informationen finden Sie unter der [Windows Core-Eigenschaften](https://msdn.microsoft.com/library/windows/desktop/mt805470) für eine vollständige Liste der erweiterten Eigenschaften einer Datei.</span><span class="sxs-lookup"><span data-stu-id="e8966-136">See the [Windows Core Properties](https://msdn.microsoft.com/library/windows/desktop/mt805470) for a complete list of a file's extended properties.</span></span>
 
 ```csharp
 const string dateAccessedProperty = "System.DateAccessed";
@@ -141,4 +143,3 @@ foreach (Windows.Storage.StorageFile file in files)
  
 
  
-

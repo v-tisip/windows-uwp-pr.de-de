@@ -2,35 +2,42 @@
 author: mcleanbyron
 ms.assetid: 14C23FE6-3EAF-445E-85C1-DF188A7822CA
 description: "Verwenden Sie die Codebeispiele in diesem Abschnitt, um mehr über die Verwendung der Windows Store-Übermittlungs-API zu erfahren."
-title: "Codebeispiele für die Windows Store-Übermittlungs-API"
+title: "Codebeispiele für die Übermittlungs-API"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Codebeispiele für Windows 10, UWP, Windows Store-Übermittlungs-API"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 44dd7cbf39825c47783886d12b116bf99a6630e8
-ms.lasthandoff: 02/07/2017
-
+keywords: "Codebeispiele für Windows10, UWP, Windows Store-Übermittlungs-API"
+ms.openlocfilehash: c5344667922a7445ad7694f36a542b3ff35c4bdb
+ms.sourcegitcommit: a7a1b41c7dce6d56250ce3113137391d65d9e401
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/11/2017
 ---
+# <a name="code-examples-for-the-submission-api"></a><span data-ttu-id="f1b8f-104">Codebeispiele für die Übermittlungs-API</span><span class="sxs-lookup"><span data-stu-id="f1b8f-104">Code examples for the submission API</span></span>
 
-# <a name="code-examples-for-the-windows-store-submission-api"></a>Codebeispiele für die Windows Store-Übermittlungs-API
+<span data-ttu-id="f1b8f-105">Dieser Abschnitt enthält Codebeispiele für die Verwendung der [Windows Store-Übermittlungs-API](create-and-manage-submissions-using-windows-store-services.md) in verschiedenen Programmiersprachen.</span><span class="sxs-lookup"><span data-stu-id="f1b8f-105">This section provides code examples for using the [Windows Store submission API](create-and-manage-submissions-using-windows-store-services.md) in several different programming languages.</span></span>
 
-Dieser Abschnitt enthält Codebeispiele für die Verwendung der *Windows Store-Übermittlungs-API* in verschiedenen Programmiersprachen.
+> [!NOTE]
+> <span data-ttu-id="f1b8f-106">Zusätzlich zu den unten aufgeführten Codebeispielen bieten wir auch ein Open-Source-PowerShell-Modul, das neben der Windows Store-Übermittlungs-API eine Befehlszeilenschnittstelle integriert.</span><span class="sxs-lookup"><span data-stu-id="f1b8f-106">In addition to the code examples listed below, we also provide an open-source PowerShell module which implements a command-line interface on top of the Windows Store submission API.</span></span> <span data-ttu-id="f1b8f-107">Dieses Modul heißt [StoreBroker](https://aka.ms/storebroker).</span><span class="sxs-lookup"><span data-stu-id="f1b8f-107">This module is called [StoreBroker](https://aka.ms/storebroker).</span></span> <span data-ttu-id="f1b8f-108">Sie können dieses Modul verwenden, um Ihre App-, Flight- und Add-On-Übermittlungen über die Befehlszeile anstatt über die Windows Store-Übermittlungs-API direkt zu verwalten. Sie können auch ganz einfach die Quelle durchsuchen, um weitere Beispiele für das Aufrufen dieser API zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="f1b8f-108">You can use this module to manage your app, flight, and add-on submissions from the command line instead of calling the Windows Store submission API directly, or you can simply browse the source to see more examples for how to call this API.</span></span> <span data-ttu-id="f1b8f-109">Das StoreBroker-Modul wird innerhalb von Microsoft aktiv als primäre Methode verwendet, durch die viele Erstanbieter-Apps an den Store übermittelt werden.</span><span class="sxs-lookup"><span data-stu-id="f1b8f-109">The StoreBroker module is actively used within Microsoft as the primary way that many first-party applications are submitted to the Store.</span></span> <span data-ttu-id="f1b8f-110">Weitere Informationen finden Sie in auf der [StoreBroker-Seite auf GitHub](https://aka.ms/storebroker).</span><span class="sxs-lookup"><span data-stu-id="f1b8f-110">For more information, see our [StoreBroker page on GitHub](https://aka.ms/storebroker).</span></span>
 
->**Hinweis:**&nbsp;&nbsp;Zusätzlich zu den unten aufgeführten Codebeispielen bieten wir ebenfalls ein Open-Source-PowerShell-Modul, das neben dem Windows Store-Übermittlungs-API ebenfalls eine Befehlszeilenschnittstelle anbietet. Dieses Modul heißt [StoreBroker](https://aka.ms/storebroker). Sie können dieses Modul zur direkten Verwaltung Ihrer App-, Flight- und Add-On-Übermittlungen von der Befehlszeile anstatt der Windows Store-Übermittlungs-API benutzen oder einfach die Quelle durchsuchen, um weitere Beispiele für das Aufrufen dieser API zu finden. Das StoreBroker-Modul wird innerhalb von Microsoft aktiv als primäre Methode verwendet, durch die viele Erstanbieter-Apps an den Store übermittelt werden. Weitere Informationen finden Sie in auf der [StoreBroker-Seite auf GitHub](https://aka.ms/storebroker).
+## <a name="app-submissions-add-on-submissions-and-package-flight-submissions"></a><span data-ttu-id="f1b8f-111">App-Übermittlungen, Add-On-Übermittlungen und Flight-Paket-Übermittlungen</span><span class="sxs-lookup"><span data-stu-id="f1b8f-111">App submissions, add-on submissions, and package flight submissions</span></span>
 
-## <a name="in-this-section"></a>Inhalt dieses Abschnitts
+<span data-ttu-id="f1b8f-112">Die folgenden Artikel enthalten Codebeispiele für die Verwendung der Übermittlungs-API zum Erstellen von App-Übermittlungen, Add-On-Übermittlungen und Flight-Paket-Übermittlungen.</span><span class="sxs-lookup"><span data-stu-id="f1b8f-112">The following articles provide code examples for using the submission API to create app submissions, add-on submissions, and package flight submissions.</span></span>
 
-| Thema                                                                                                       | Beschreibung                 |
-|-------------------------------------------------------------------------------------------------------------|-----------------------------|
-| [C#-Codebeispiele](csharp-code-examples-for-the-windows-store-submission-api.md) | Verwenden Sie die C#-Codebeispiele in diesem Abschnitt, um mehr über die Verwendung der Windows Store-Übermittlungs-API zu erfahren. |
-| [Java-Codebeispiele](java-code-examples-for-the-windows-store-submission-api.md) | Verwenden Sie die Java-Codebeispiele in diesem Abschnitt, um mehr über die Verwendung der Windows Store-Übermittlungs-API zu erfahren. |
-| [Python-Codebeispiele](python-code-examples-for-the-windows-store-submission-api.md)  | Verwenden Sie die Python-Codebeispiele in diesem Abschnitt, um mehr über die Verwendung der Windows Store-Übermittlungs-API zu erfahren.  |
+* [<span data-ttu-id="f1b8f-113">C#-Beispiel: Übermittlungen für Apps, Add-Ons und Flights</span><span class="sxs-lookup"><span data-stu-id="f1b8f-113">C# sample: submissions for apps, add-ons, and flights</span></span>](csharp-code-examples-for-the-windows-store-submission-api.md)
+* [<span data-ttu-id="f1b8f-114">Java-Beispiel: Übermittlungen für Apps, Add-Ons und Flights</span><span class="sxs-lookup"><span data-stu-id="f1b8f-114">Java sample: submissions for apps, add-ons, and flights</span></span>](java-code-examples-for-the-windows-store-submission-api.md)
+* [<span data-ttu-id="f1b8f-115">Python-Beispiel: Übermittlungen für Apps, Add-Ons und Flights</span><span class="sxs-lookup"><span data-stu-id="f1b8f-115">Python sample: submissions for apps, add-ons, and flights</span></span>](python-code-examples-for-the-windows-store-submission-api.md)
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="game-options-and-trailers"></a><span data-ttu-id="f1b8f-116">Spieloptionen und Trailer</span><span class="sxs-lookup"><span data-stu-id="f1b8f-116">Game options and trailers</span></span>
 
-* [Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten](create-and-manage-submissions-using-windows-store-services.md)
+<span data-ttu-id="f1b8f-117">Die folgenden Artikel enthalten Codebeispiele für die Verwendung der Übermittlungs-API zum Definieren von spielspezifischen Optionen und Übermitteln von Videotrailern für Apps.</span><span class="sxs-lookup"><span data-stu-id="f1b8f-117">The following articles provide code examples for using the submission API to define game-specific options and to submit video trailers for apps.</span></span>
 
+* [<span data-ttu-id="f1b8f-118">C#-Beispiel: App-Übermittlung mit Spieloptionen und Trailer</span><span class="sxs-lookup"><span data-stu-id="f1b8f-118">C# sample: app submission with game options and trailers</span></span>](csharp-code-examples-for-submissions-game-options-and-trailers.md)
+* [<span data-ttu-id="f1b8f-119">Java-Beispiel: App-Übermittlung mit Spieloptionen und Trailer</span><span class="sxs-lookup"><span data-stu-id="f1b8f-119">Java sample: app submission with game options and trailers</span></span>](java-code-examples-for-submissions-game-options-and-trailers.md)
+* [<span data-ttu-id="f1b8f-120">Python-Beispiel: App-Übermittlung mit Spieloptionen und Trailer</span><span class="sxs-lookup"><span data-stu-id="f1b8f-120">Python sample: app submission with game options and trailers</span></span>](python-code-examples-for-submissions-game-options-and-trailers.md)
+
+## <a name="related-topics"></a><span data-ttu-id="f1b8f-121">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="f1b8f-121">Related topics</span></span>
+
+* [<span data-ttu-id="f1b8f-122">Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten</span><span class="sxs-lookup"><span data-stu-id="f1b8f-122">Create and manage submissions using Windows Store services</span></span>](create-and-manage-submissions-using-windows-store-services.md)

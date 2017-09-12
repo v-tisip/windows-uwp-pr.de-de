@@ -1,81 +1,81 @@
 ---
-author: DBirtolo
+author: mukin
 ms.assetid: E0B9532F-1195-4927-99BE-F41565D891AD
 title: "Auflisten von Geräten über ein Netzwerk"
 description: "Zusätzlich zum Ermitteln von lokal verbundenen Geräten können Sie mithilfe der Windows.Devices.Enumeration-APIs Geräte über Drahtlos- und Netzwerkprotokolle enumerieren."
-ms.author: dbirtolo
+ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 70362ebd77f62aea3bba694b9f6592771d4ad273
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 4f7f6d9e7e92b7b40e23e835394b372358fb41f9
+ms.sourcegitcommit: a2908889b3566882c7494dc81fa9ece7d1d19580
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/31/2017
 ---
-# <a name="enumerate-devices-over-a-network"></a>Auflisten von Geräten über ein Netzwerk
+# <a name="enumerate-devices-over-a-network"></a><span data-ttu-id="b9573-104">Auflisten von Geräten über ein Netzwerk</span><span class="sxs-lookup"><span data-stu-id="b9573-104">Enumerate devices over a network</span></span>
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+<span data-ttu-id="b9573-105">\[ Aktualisiert für UWP-Apps unter Windows10.</span><span class="sxs-lookup"><span data-stu-id="b9573-105">\[ Updated for UWP apps on Windows 10.</span></span> <span data-ttu-id="b9573-106">Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span><span class="sxs-lookup"><span data-stu-id="b9573-106">For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span></span>
 
 
-**Wichtige APIs**
+**<span data-ttu-id="b9573-107">Wichtige APIs</span><span class="sxs-lookup"><span data-stu-id="b9573-107">Important APIs</span></span>**
 
-- [**Windows.Devices.Enumeration**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration)
+- [**<span data-ttu-id="b9573-108">Windows.Devices.Enumeration</span><span class="sxs-lookup"><span data-stu-id="b9573-108">Windows.Devices.Enumeration</span></span>**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration)
 
-Zusätzlich zum Ermitteln von lokal verbundenen Geräten können Sie mithilfe der [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459)-APIs Geräte über Drahtlos- und Netzwerkprotokolle enumerieren.
+<span data-ttu-id="b9573-109">Zusätzlich zum Ermitteln von lokal verbundenen Geräten können Sie mithilfe der [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459)-APIs Geräte über Drahtlos- und Netzwerkprotokolle enumerieren.</span><span class="sxs-lookup"><span data-stu-id="b9573-109">In addition to discovering locally connected devices, you can use the [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) APIs to enumerate devices over wireless and networked protocols.</span></span>
 
-## <a name="enumerating-devices-over-networked-or-wireless-protocols"></a>Auflisten von Geräten über Netzwerk- oder Drahtlosprotokolle
+## <a name="enumerating-devices-over-networked-or-wireless-protocols"></a><span data-ttu-id="b9573-110">Auflisten von Geräten über Netzwerk- oder Drahtlosprotokolle</span><span class="sxs-lookup"><span data-stu-id="b9573-110">Enumerating devices over networked or wireless protocols</span></span>
 
-Manchmal müssen Sie Geräte enumerieren, die nicht lokal verbunden und nur über Drahtlos- oder Netzwerkprotokolle auffindbar sind. Hierzu verfügen die [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459)-APIs über drei unterschiedliche Arten von Geräteobjekten: **AssociationEndpoint** (AEP), **AssociationEndpointContainer** (AEP Container) und **AssociationEndpointService** (AEP Service). Als Gruppe werden sie als AEPs oder AEP-Objekte bezeichnet.
+<span data-ttu-id="b9573-111">Manchmal müssen Sie Geräte enumerieren, die nicht lokal verbunden und nur über Drahtlos- oder Netzwerkprotokolle auffindbar sind.</span><span class="sxs-lookup"><span data-stu-id="b9573-111">Sometimes you need to enumerate devices that are not locally connected and can only be discovered over a wireless or networking protocols.</span></span> <span data-ttu-id="b9573-112">Hierzu verfügen die [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459)-APIs über drei unterschiedliche Arten von Geräteobjekten: **AssociationEndpoint** (AEP), **AssociationEndpointContainer** (AEP Container) und **AssociationEndpointService** (AEP Service).</span><span class="sxs-lookup"><span data-stu-id="b9573-112">In order to do so, the [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) APIs have three different kinds of device objects: the **AssociationEndpoint** (AEP), the **AssociationEndpointContainer** (AEP Container), and the **AssociationEndpointService** (AEP Service).</span></span> <span data-ttu-id="b9573-113">Als Gruppe werden sie als AEPs oder AEP-Objekte bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="b9573-113">As a group these are referred to as AEPs or AEP objects.</span></span>
 
-Einige Geräte-APIs stellen eine Auswahlzeichenfolge bereit, mit der Sie die verfügbaren AEP-Objekte durchlaufen können. Dies kann zwei Arten von Geräten umfassen: mit dem System gekoppelte und nicht mit dem System gekoppelte Geräte. Einige Geräte erfordern möglicherweise keine Kopplung. Diese Geräte-APIs können versuchen, das Gerät zu koppeln, wenn dies für die Interaktion erforderlich ist. Wi-Fi Direct ist ein Beispiel für APIs, die diesem Muster folgen. Wenn das Gerät von diesen Geräte-APIs nicht automatisch gekoppelt wird, können Sie es mithilfe des [**DeviceInformationPairing**](https://msdn.microsoft.com/library/windows/apps/Mt168396)-Objekts aus [**DeviceInformation.Pairing**](https://msdn.microsoft.com/library/windows/apps/Dn705960) koppeln.
+<span data-ttu-id="b9573-114">Einige Geräte-APIs stellen eine Auswahlzeichenfolge bereit, mit der Sie die verfügbaren AEP-Objekte durchlaufen können.</span><span class="sxs-lookup"><span data-stu-id="b9573-114">Some device APIs provide a selector string that you can use to enumerate through the available AEP objects.</span></span> <span data-ttu-id="b9573-115">Dies kann zwei Arten von Geräten umfassen: mit dem System gekoppelte und nicht mit dem System gekoppelte Geräte.</span><span class="sxs-lookup"><span data-stu-id="b9573-115">This could include both devices that are paired and are not paired with the system.</span></span> <span data-ttu-id="b9573-116">Einige Geräte erfordern möglicherweise keine Kopplung.</span><span class="sxs-lookup"><span data-stu-id="b9573-116">Some of the devices might not require pairing.</span></span> <span data-ttu-id="b9573-117">Diese Geräte-APIs können versuchen, das Gerät zu koppeln, wenn dies für die Interaktion erforderlich ist.</span><span class="sxs-lookup"><span data-stu-id="b9573-117">Those device APIs may attempt to pair the device if pairing it is necessary before interacting with it.</span></span> <span data-ttu-id="b9573-118">Wi-Fi Direct ist ein Beispiel für APIs, die diesem Muster folgen.</span><span class="sxs-lookup"><span data-stu-id="b9573-118">Wi-Fi Direct is an example of APIs that follow this pattern.</span></span> <span data-ttu-id="b9573-119">Wenn das Gerät von diesen Geräte-APIs nicht automatisch gekoppelt wird, können Sie es mithilfe des [**DeviceInformationPairing**](https://msdn.microsoft.com/library/windows/apps/Mt168396)-Objekts aus [**DeviceInformation.Pairing**](https://msdn.microsoft.com/library/windows/apps/Dn705960) koppeln.</span><span class="sxs-lookup"><span data-stu-id="b9573-119">If those device APIs do not automatically pair the device, you can pair it using the [**DeviceInformationPairing**](https://msdn.microsoft.com/library/windows/apps/Mt168396) object available from [**DeviceInformation.Pairing**](https://msdn.microsoft.com/library/windows/apps/Dn705960).</span></span>
 
-Es gibt jedoch Situationen, in denen Sie die Geräte manuell ohne vordefinierte Auswahlzeichenfolge ermitteln möchten. Beispielsweise kann es vorkommen, dass Sie nur Informationen über AEP-Geräte sammeln müssen, ohne mit ihnen zu interagieren, oder mehr AEP-Objekte als durch die vordefinierte Auswahlzeichenfolge ermittelt finden möchten. In diesem Fall erstellen Sie eine eigene Auswahlzeichenfolge und verwenden sie gemäß den Anweisungen unter [Erstellen einer Geräteauswahl](build-a-device-selector.md).
+<span data-ttu-id="b9573-120">Es gibt jedoch Situationen, in denen Sie die Geräte manuell ohne vordefinierte Auswahlzeichenfolge ermitteln möchten.</span><span class="sxs-lookup"><span data-stu-id="b9573-120">However, there may be cases where you want to manually discover devices on your own without using a pre-defined selector string.</span></span> <span data-ttu-id="b9573-121">Beispielsweise kann es vorkommen, dass Sie nur Informationen über AEP-Geräte sammeln müssen, ohne mit ihnen zu interagieren, oder mehr AEP-Objekte als durch die vordefinierte Auswahlzeichenfolge ermittelt finden möchten.</span><span class="sxs-lookup"><span data-stu-id="b9573-121">For example, you may just need to gather information about AEP devices without interacting with them or you may want to find more AEP objects than will be discovered with the pre-defined selector string.</span></span> <span data-ttu-id="b9573-122">In diesem Fall erstellen Sie eine eigene Auswahlzeichenfolge und verwenden sie gemäß den Anweisungen unter [Erstellen einer Geräteauswahl](build-a-device-selector.md).</span><span class="sxs-lookup"><span data-stu-id="b9573-122">In this case, you will build your own selector string and use it following the instructions under [Build a device selector](build-a-device-selector.md).</span></span>
 
-Wenn Sie eine eigene Auswahl erstellen, wird dringend empfohlen, den Umfang der Enumeration auf die für Sie relevanten Protokolle zu beschränken. Sie möchten z. B. nicht, dass das WLAN-Radio nach Wi-Fi Direct-Geräten sucht, wenn Sie ausdrücklich an UPnP-Geräten interessiert sind. Windows hat für jedes Protokoll eine Identität definiert, die Sie bei der Angabe des Enumerationsumfangs verwenden können. Die folgende Tabelle enthält die Protokolltypen und -bezeichner.
+<span data-ttu-id="b9573-123">Wenn Sie eine eigene Auswahl erstellen, wird dringend empfohlen, den Umfang der Enumeration auf die für Sie relevanten Protokolle zu beschränken.</span><span class="sxs-lookup"><span data-stu-id="b9573-123">When you build your own selector, it is strongly recommended that you limit your scope of enumeration to the protocols that you are interested in.</span></span> <span data-ttu-id="b9573-124">Sie möchten z.B. nicht, dass das WLAN-Radio nach Wi-Fi Direct-Geräten sucht, wenn Sie ausdrücklich an UPnP-Geräten interessiert sind.</span><span class="sxs-lookup"><span data-stu-id="b9573-124">For example, you don't want to have the Wi-Fi radio search for Wi-Fi Direct devices if you are particularly interested in UPnP devices.</span></span> <span data-ttu-id="b9573-125">Windows hat für jedes Protokoll eine Identität definiert, die Sie bei der Angabe des Enumerationsumfangs verwenden können.</span><span class="sxs-lookup"><span data-stu-id="b9573-125">Windows has defined an identity for each protocol that you can use to scope your enumeration.</span></span> <span data-ttu-id="b9573-126">Die folgende Tabelle enthält die Protokolltypen und -bezeichner.</span><span class="sxs-lookup"><span data-stu-id="b9573-126">The following table lists the protocol types and identifiers.</span></span>
 
-| Protokoll- oder Netzwerkgerätetyp              | ID                                         |
+| <span data-ttu-id="b9573-127">Protokoll- oder Netzwerkgerätetyp</span><span class="sxs-lookup"><span data-stu-id="b9573-127">Protocol or network device type</span></span>              | <span data-ttu-id="b9573-128">ID</span><span class="sxs-lookup"><span data-stu-id="b9573-128">Id</span></span>                                         |
 |----------------------------------------------|--------------------------------------------|
-| UPnP (einschließlich DIAL und DLNA)               | **{0e261de4-12f0-46e6-91ba-428607ccef64}** |
-| Webdienste für Geräte (Web Services on Devices, WSD)                | **{782232aa-a2f9-4993-971b-aedc551346b0}** |
-| Wi-Fi Direct                                 | **{0407d24e-53de-4c9a-9ba1-9ced54641188}** |
-| DNS-Dienstermittlung (DNS-SD)               | **{4526e8c1-8aac-4153-9b16-55e86ada0e54}** |
-| Point of Service (POS)                             | **{d4bf61b3-442e-4ada-882d-fa7B70c832d9}** |
-| Netzwerkdrucker (Active Directory-Drucker) | **{37aba761-2124-454c-8d82-c42962c2de2b}** |
-| Windows-Sofortverbindung (WNC)                    | **{4c1b1ef8-2f62-4b9f-9bc5-b21ab636138f}** |
-| WiGig-Docks                                  | **{a277f3a5-8764-4f88-8045-4c5e962640b1}** |
-| WLAN-Bereitstellung für HP-Drucker           | **{c85ef710-f344-4792-bb6d-85a4346f1e69}** |
-| Bluetooth                                    | **{e0cbf06c-cd8b-4647-bb8a-263b43f0f974}** |
-| Bluetooth LE                                 | **{bb7bb05e-5972-42b5-94fc-76eaa7084d49}** |
+| <span data-ttu-id="b9573-129">UPnP (einschließlich DIAL und DLNA)</span><span class="sxs-lookup"><span data-stu-id="b9573-129">UPnP (including DIAL and DLNA)</span></span>               | **<span data-ttu-id="b9573-130">{0e261de4-12f0-46e6-91ba-428607ccef64}</span><span class="sxs-lookup"><span data-stu-id="b9573-130">{0e261de4-12f0-46e6-91ba-428607ccef64}</span></span>** |
+| <span data-ttu-id="b9573-131">Webdienste für Geräte (Web Services on Devices, WSD)</span><span class="sxs-lookup"><span data-stu-id="b9573-131">Web services on devices (WSD)</span></span>                | **<span data-ttu-id="b9573-132">{782232aa-a2f9-4993-971b-aedc551346b0}</span><span class="sxs-lookup"><span data-stu-id="b9573-132">{782232aa-a2f9-4993-971b-aedc551346b0}</span></span>** |
+| <span data-ttu-id="b9573-133">Wi-Fi Direct</span><span class="sxs-lookup"><span data-stu-id="b9573-133">Wi-Fi Direct</span></span>                                 | **<span data-ttu-id="b9573-134">{0407d24e-53de-4c9a-9ba1-9ced54641188}</span><span class="sxs-lookup"><span data-stu-id="b9573-134">{0407d24e-53de-4c9a-9ba1-9ced54641188}</span></span>** |
+| <span data-ttu-id="b9573-135">DNS-Dienstermittlung (DNS-SD)</span><span class="sxs-lookup"><span data-stu-id="b9573-135">DNS service discovery (DNS-SD)</span></span>               | **<span data-ttu-id="b9573-136">{4526e8c1-8aac-4153-9b16-55e86ada0e54}</span><span class="sxs-lookup"><span data-stu-id="b9573-136">{4526e8c1-8aac-4153-9b16-55e86ada0e54}</span></span>** |
+| <span data-ttu-id="b9573-137">PointofService (POS)</span><span class="sxs-lookup"><span data-stu-id="b9573-137">Point of service</span></span>                             | **<span data-ttu-id="b9573-138">{d4bf61b3-442e-4ada-882d-fa7B70c832d9}</span><span class="sxs-lookup"><span data-stu-id="b9573-138">{d4bf61b3-442e-4ada-882d-fa7B70c832d9}</span></span>** |
+| <span data-ttu-id="b9573-139">Netzwerkdrucker (Active Directory-Drucker)</span><span class="sxs-lookup"><span data-stu-id="b9573-139">Network printers (active directory printers)</span></span> | **<span data-ttu-id="b9573-140">{37aba761-2124-454c-8d82-c42962c2de2b}</span><span class="sxs-lookup"><span data-stu-id="b9573-140">{37aba761-2124-454c-8d82-c42962c2de2b}</span></span>** |
+| <span data-ttu-id="b9573-141">Windows-Sofortverbindung (WNC)</span><span class="sxs-lookup"><span data-stu-id="b9573-141">Windows connect now (WNC)</span></span>                    | **<span data-ttu-id="b9573-142">{4c1b1ef8-2f62-4b9f-9bc5-b21ab636138f}</span><span class="sxs-lookup"><span data-stu-id="b9573-142">{4c1b1ef8-2f62-4b9f-9bc5-b21ab636138f}</span></span>** |
+| <span data-ttu-id="b9573-143">WiGig-Docks</span><span class="sxs-lookup"><span data-stu-id="b9573-143">WiGig docks</span></span>                                  | **<span data-ttu-id="b9573-144">{a277f3a5-8764-4f88-8045-4c5e962640b1}</span><span class="sxs-lookup"><span data-stu-id="b9573-144">{a277f3a5-8764-4f88-8045-4c5e962640b1}</span></span>** |
+| <span data-ttu-id="b9573-145">WLAN-Bereitstellung für HP-Drucker</span><span class="sxs-lookup"><span data-stu-id="b9573-145">Wi-Fi provisioning for HP printers</span></span>           | **<span data-ttu-id="b9573-146">{c85ef710-f344-4792-bb6d-85a4346f1e69}</span><span class="sxs-lookup"><span data-stu-id="b9573-146">{c85ef710-f344-4792-bb6d-85a4346f1e69}</span></span>** |
+| <span data-ttu-id="b9573-147">Bluetooth</span><span class="sxs-lookup"><span data-stu-id="b9573-147">Bluetooth</span></span>                                    | **<span data-ttu-id="b9573-148">{e0cbf06c-cd8b-4647-bb8a-263b43f0f974}</span><span class="sxs-lookup"><span data-stu-id="b9573-148">{e0cbf06c-cd8b-4647-bb8a-263b43f0f974}</span></span>** |
+| <span data-ttu-id="b9573-149">Bluetooth LE</span><span class="sxs-lookup"><span data-stu-id="b9573-149">Bluetooth LE</span></span>                                 | **<span data-ttu-id="b9573-150">{bb7bb05e-5972-42b5-94fc-76eaa7084d49}</span><span class="sxs-lookup"><span data-stu-id="b9573-150">{bb7bb05e-5972-42b5-94fc-76eaa7084d49}</span></span>** |
 
  
 
-## <a name="aqs-examples"></a>AQS-Beispiele
+## <a name="aqs-examples"></a><span data-ttu-id="b9573-151">AQS-Beispiele</span><span class="sxs-lookup"><span data-stu-id="b9573-151">AQS examples</span></span>
 
-Jede AEP-Art verfügt über eine Eigenschaft, mit der Sie Ihre Enumeration auf ein bestimmtes Protokoll beschränken können. Beachten Sie, dass Sie den OR-Operator in einem AQS-Filter verwenden können, um mehrere Protokolle zu kombinieren. Die folgenden Beispiele für AQS-Filterzeichenfolgen zeigen die Abfrage für AEP-Geräte.
+<span data-ttu-id="b9573-152">Jede AEP-Art verfügt über eine Eigenschaft, mit der Sie Ihre Enumeration auf ein bestimmtes Protokoll beschränken können.</span><span class="sxs-lookup"><span data-stu-id="b9573-152">Each AEP kind has a property you can use to constrain your enumeration to a specific protocol.</span></span> <span data-ttu-id="b9573-153">Beachten Sie, dass Sie den OR-Operator in einem AQS-Filter verwenden können, um mehrere Protokolle zu kombinieren.</span><span class="sxs-lookup"><span data-stu-id="b9573-153">Keep in mind you can use the OR operator in an AQS filter to combine multiple protocols.</span></span> <span data-ttu-id="b9573-154">Die folgenden Beispiele für AQS-Filterzeichenfolgen zeigen die Abfrage für AEP-Geräte.</span><span class="sxs-lookup"><span data-stu-id="b9573-154">Here are some examples of AQS filter strings that show how to query for AEP devices.</span></span>
 
-Diese AQS führt Abfragen für alle **AssociationEndpoint**-UPnP-Objekte aus, wenn [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) auf **AssociationEndpoint** festgelegt ist.
+<span data-ttu-id="b9573-155">Diese AQS führt Abfragen für alle **AssociationEndpoint**-UPnP-Objekte aus, wenn [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) auf **AssociationEndpoint** festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="b9573-155">This AQS queries for all UPnP **AssociationEndpoint** objects when the [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) is set to **AsssociationEndpoint**.</span></span>
 
 ``` syntax
 System.Devices.Aep.ProtocolId:="{0e261de4-12f0-46e6-91ba-428607ccef64}"
 ```
 
-Diese AQS führt Abfragen für alle **AssociationEndpoint**-UPnP- und WSD-Objekte aus, wenn [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) auf **AssociationEndpoint** festgelegt ist.
+<span data-ttu-id="b9573-156">Diese AQS führt Abfragen für alle **AssociationEndpoint**-UPnP- und WSD-Objekte aus, wenn [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) auf **AssociationEndpoint** festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="b9573-156">This AQS queries for all UPnP and WSD **AssociationEndpoint** objects when the [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) is set to **AsssociationEndpoint**.</span></span>
 
 ``` syntax
 System.Devices.Aep.ProtocolId:="{782232aa-a2f9-4993-971b-aedc551346b0}" OR
 System.Devices.Aep.ProtocolId:="{0e261de4-12f0-46e6-91ba-428607ccef64}"
 ```
 
-Diese AQS führt Abfragen für alle **AssociationEndpointService**-UPnP-Objekte aus, wenn [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) auf **AssociationEndpointService** festgelegt ist.
+<span data-ttu-id="b9573-157">Diese AQS führt Abfragen für alle **AssociationEndpointService**-UPnP-Objekte aus, wenn [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) auf **AssociationEndpointService** festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="b9573-157">This AQS queries for all UPnP **AssociationEndpointService** objects if the [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) is set to **AsssociationEndpointService**.</span></span>
 
 ``` syntax
 System.Devices.AepService.ProtocolId:="{0e261de4-12f0-46e6-91ba-428607ccef64}"
 ```
 
-Diese AQS führt Abfragen für **AssociationEndpointContainer**-Objekte aus, wenn [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) auf **AssociationEndpointContainer** festgelegt ist, findet diese jedoch nur, indem das UPnP-Protokoll enumeriert wird. Normalerweise wäre es nicht sinnvoll, Container zu enumerieren, die nur von einem Protokoll stammen. Dies kann jedoch nützlich sein, um den Filter auf Protokolle zu beschränken, von denen Ihr Gerät erkannt werden kann.
+<span data-ttu-id="b9573-158">Diese AQS führt Abfragen für **AssociationEndpointContainer**-Objekte aus, wenn [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) auf **AssociationEndpointContainer** festgelegt ist, findet diese jedoch nur, indem das UPnP-Protokoll enumeriert wird.</span><span class="sxs-lookup"><span data-stu-id="b9573-158">This AQS queries **AssociationEndpointContainer** objects when the [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) is set to **AssociationEndpointContainer**, but only finds them by enumerating the UPnP protocol.</span></span> <span data-ttu-id="b9573-159">Normalerweise wäre es nicht sinnvoll, Container zu enumerieren, die nur von einem Protokoll stammen.</span><span class="sxs-lookup"><span data-stu-id="b9573-159">Typically, it wouldn't be useful to enumerate containers that only come from one protocol.</span></span> <span data-ttu-id="b9573-160">Dies kann jedoch nützlich sein, um den Filter auf Protokolle zu beschränken, von denen Ihr Gerät erkannt werden kann.</span><span class="sxs-lookup"><span data-stu-id="b9573-160">However, this might be useful by limiting your filter to protocols where you know your device can be discovered.</span></span>
 
 ``` syntax
 System.Devices.AepContainer.ProtocolIds:~~"{0e261de4-12f0-46e6-91ba-428607ccef64}"
@@ -84,4 +84,3 @@ System.Devices.AepContainer.ProtocolIds:~~"{0e261de4-12f0-46e6-91ba-428607ccef64
  
 
  
-

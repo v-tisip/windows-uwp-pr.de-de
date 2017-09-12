@@ -6,442 +6,457 @@ ms.assetid: 1FCE66AF-34B4-436A-9FC9-D0CF4BDA5A01
 label: Adaptive and interactive toast notifications
 template: detail.hbs
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b1962e58d3513ddff908a0d556731d83cce20af4
-ms.lasthandoff: 02/07/2017
-
+keywords: windows10, UWP
+ms.openlocfilehash: c8e77773b9118c3177dc958ddc7b51d32a452fa5
+ms.sourcegitcommit: 9d1ca16a7edcbbcae03fad50a4a10183a319c63a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/09/2017
 ---
-# <a name="adaptive-and-interactive-toast-notifications"></a>Adaptive und interaktive Popupbenachrichtigungen
+# <a name="adaptive-and-interactive-toast-notifications"></a><span data-ttu-id="75634-104">Adaptive und interaktive Popupbenachrichtigungen</span><span class="sxs-lookup"><span data-stu-id="75634-104">Adaptive and interactive toast notifications</span></span>
 
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Mit adaptiven und interaktiven Popupbenachrichtigungen können Sie flexible Popupbenachrichtigungen mit mehr Inhalt, optionalen Inlinebildern und optionaler Benutzerinteraktion erstellen.
+<span data-ttu-id="75634-105">Mit adaptiven und interaktiven Popupbenachrichtigungen können Sie flexible Benachrichtigungen mit Text, Bildern und Schaltflächen/Eingaben erstellen.</span><span class="sxs-lookup"><span data-stu-id="75634-105">Adaptive and interactive toast notifications let you create flexible notifications with text, images, and buttons/inputs.</span></span>
 
-Beim adaptiven und interaktiven Popupbenachrichtigungsmodell haben diese Updates Vorrang vor dem Legacy-Popupvorlagenkatalog:
+> <span data-ttu-id="75634-106">**Wichtige APIs**: [UWP Community Toolkit Notifications-NuGet-Paket](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)</span><span class="sxs-lookup"><span data-stu-id="75634-106">**Important APIs**: [UWP Community Toolkit Notifications nuget package](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)</span></span>
 
--   Die Option zum Einschließen von Schaltflächen und Eingaben in den Benachrichtigungen.
--   Drei verschiedene Aktivierungstypen für die wichtigste Popupbenachrichtigung und für jede Aktion.
--   Die Option zum Erstellen von Benachrichtigungen für bestimmte Szenarios wie Alarme, Erinnerungen und eingehende Anrufe.
-
-**Hinweis**   Die Legacyvorlagen von Windows 8.1 und Windows Phone 8.1 finden Sie im [Legacy-Popupvorlagenkatalog](https://msdn.microsoft.com/library/windows/apps/hh761494).
+> [!NOTE]
+> <span data-ttu-id="75634-107">Die Legacyvorlagen von Windows8.1 und Windows Phone8.1 finden Sie im [Legacy-Popupvorlagenkatalog](https://msdn.microsoft.com/library/windows/apps/hh761494).</span><span class="sxs-lookup"><span data-stu-id="75634-107">To see the legacy templates from Windows 8.1 and Windows Phone 8.1, see the [legacy toast template catalog](https://msdn.microsoft.com/library/windows/apps/hh761494).</span></span>
 
 
-## <a name="getting-started"></a>Erste Schritte
+## <a name="getting-started"></a><span data-ttu-id="75634-108">Erste Schritte</span><span class="sxs-lookup"><span data-stu-id="75634-108">Getting started</span></span>
 
-**Installieren Sie die Benachrichtigungsbibliothek.** Wenn Sie C# anstelle von XML verwenden möchten, um Benachrichtigungen zu generieren, installieren Sie das NuGet-Paket mit dem Namen [Microsoft.Toolkit.Uwp.Notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/). (Suchen Sie nach „Benachrichtigungen UWP“.) Die in diesem Artikel bereitgestellten C#-Beispiele verwenden Version 1.0.0 des NuGet-Pakets.
+**<span data-ttu-id="75634-109">Installieren Sie die Benachrichtigungsbibliothek.</span><span class="sxs-lookup"><span data-stu-id="75634-109">Install Notifications library.</span></span>** <span data-ttu-id="75634-110">Wenn Sie C# anstelle von XML verwenden möchten, um Benachrichtigungen zu generieren, installieren Sie das NuGet-Paket mit dem Namen [Microsoft.Toolkit.Uwp.Notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/). (Suchen Sie nach „Benachrichtigungen UWP“.)</span><span class="sxs-lookup"><span data-stu-id="75634-110">If you'd like to use C# instead of XML to generate notifications, install the NuGet package named [Microsoft.Toolkit.Uwp.Notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) (search for "notifications uwp").</span></span> <span data-ttu-id="75634-111">Die in diesem Artikel bereitgestellten C#-Beispiele verwenden Version 1.0.0 des NuGet-Pakets.</span><span class="sxs-lookup"><span data-stu-id="75634-111">The C# samples provided in this article use version 1.0.0 of the NuGet package.</span></span>
 
-**Installieren Sie den Notifications Visualizer.** Diese kostenlose UWP-App hilft Ihnen, interaktive Popupbenachrichtigungen zu entwerfen, indem sie während der Bearbeitung des Popups sofort eine Vorschau des Popups bereitstellen, ähnlich dem XAML-Editor/der Entwurfsansicht von Visual Studio. Weitere Informationen finden Sie in [diesem Blogbeitrag](http://blogs.msdn.com/b/tiles_and_toasts/archive/2015/09/22/introducing-notifications-visualizer-for-windows-10.aspx). Der Download von Notifications Visualizer steht [hier](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) bereit.
-
-
-## <a name="toast-notification-structure"></a>Struktur der Popupbenachrichtigung
+**<span data-ttu-id="75634-112">Installieren Sie den Notifications Visualizer.</span><span class="sxs-lookup"><span data-stu-id="75634-112">Install Notifications Visualizer.</span></span>** <span data-ttu-id="75634-113">Diese kostenlose UWP-App hilft Ihnen, interaktive Popupbenachrichtigungen zu entwerfen, indem sie während der Bearbeitung des Popups sofort eine Vorschau des Popups bereitstellen, ähnlich dem XAML-Editor/der Entwurfsansicht von Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="75634-113">This free UWP app helps you design interactive toast notifications by providing an instant visual preview of your toast as you edit it, similar to Visual Studio's XAML editor/design view.</span></span> <span data-ttu-id="75634-114">Weitere Informationen finden Sie in [diesem Blogbeitrag](http://blogs.msdn.com/b/tiles_and_toasts/archive/2015/09/22/introducing-notifications-visualizer-for-windows-10.aspx). Der Download von Notifications Visualizer steht [hier](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) bereit.</span><span class="sxs-lookup"><span data-stu-id="75634-114">You can read [this blog post](http://blogs.msdn.com/b/tiles_and_toasts/archive/2015/09/22/introducing-notifications-visualizer-for-windows-10.aspx) for more information, and you can download Notifications Visualizer [here](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1).</span></span>
 
 
-Popupbenachrichtigungen werden mit XML erstellt und enthalten in der Regel diese wichtigen Elemente:
+## <a name="sending-a-toast-notification"></a><span data-ttu-id="75634-115">Senden einer Popupbenachrichtigung</span><span class="sxs-lookup"><span data-stu-id="75634-115">Sending a toast notification</span></span>
 
--   &lt;visual&gt; umfasst den Inhalt, den Benutzer visuell wahrnehmen können, z. B. Text und Bilder
--   &lt;actions&gt; enthält Schaltflächen/Eingaben, die der Entwickler innerhalb der Benachrichtigung hinzufügen möchte
--   &lt;audio&gt; legt den Ton beim Anzeigen der Benachrichtigung fest
+<span data-ttu-id="75634-116">Weitere Informationen zum Senden einer Benachrichtigung finden Sie unter [Senden einer lokalen Popupbenachrichtigung](tiles-and-notifications-send-local-toast.md).</span><span class="sxs-lookup"><span data-stu-id="75634-116">To learn how to send a notification, see [Send local toast](tiles-and-notifications-send-local-toast.md).</span></span> <span data-ttu-id="75634-117">In dieser Dokumentation wird nur die Erstellung des Popupinhalts behandelt.</span><span class="sxs-lookup"><span data-stu-id="75634-117">This documentation only covers creating the toast content.</span></span>
 
-Hier sehen Sie ein Codebeispiel:
 
-```XML
-<toast launch="app-defined-string">
-  <visual>
-    <binding template="ToastGeneric">
-      <text>Sample</text>
-      <text>This is a simple toast notification example</text>
-      <image placement="AppLogoOverride" src="oneAlarm.png" />
-    </binding>
-  </visual>
-  <actions>
-    <action content="check" arguments="check" imageUri="check.png" />
-    <action content="cancel" arguments="cancel" />
-  </actions>
-  <audio src="ms-winsoundevent:Notification.Reminder"/>
-</toast>
-```
+## <a name="toast-notification-structure"></a><span data-ttu-id="75634-118">Struktur der Popupbenachrichtigung</span><span class="sxs-lookup"><span data-stu-id="75634-118">Toast notification structure</span></span>
 
-```CSharp
+<span data-ttu-id="75634-119">Popupbenachrichtigungen sind eine Kombination aus einigen Dateneigenschaften wie Tag/Group (mit denen Sie die Benachrichtigung identifizieren können) und dem *Popupinhalt*.</span><span class="sxs-lookup"><span data-stu-id="75634-119">Toast notifications are a combination of some data properties like Tag/Group (which let you identify the notification) and the *toast content*.</span></span>
+
+<span data-ttu-id="75634-120">Die Kernkomponenten des Popupinhalts sind...</span><span class="sxs-lookup"><span data-stu-id="75634-120">The core components of toast content are...</span></span>
+* <span data-ttu-id="75634-121">**launch**: Hiermit wird definiert, welche Argumente wieder an Ihre App übergeben werden, wenn der Benutzer auf Ihr Popup klickt, sodass Sie einen Deep-Link zum richtigen Inhalt bereitstellen können, der im Popup angezeigt wurde.</span><span class="sxs-lookup"><span data-stu-id="75634-121">**launch**: This defines what arguments will be passed back to your app when the user clicks your toast, allowing you to deep link into the correct content that the toast was displaying.</span></span> <span data-ttu-id="75634-122">Weitere Informationen hierzu finden Sie unter [Senden einer lokalen Popupbenachrichtigung](tiles-and-notifications-send-local-toast.md).</span><span class="sxs-lookup"><span data-stu-id="75634-122">To learn more, see [Send local toast](tiles-and-notifications-send-local-toast.md).</span></span>
+* <span data-ttu-id="75634-123">**visual**: der visuelle Teil des Popups, einschließlich der generischen Bindung, die Text, Bilder und App-Logos enthält</span><span class="sxs-lookup"><span data-stu-id="75634-123">**visual**: The visual portion of the toast, including the generic binding that contains text, images, and app logos.</span></span>
+* <span data-ttu-id="75634-124">**actions**: der interaktive Teil des Popups, einschließlich Eingaben und Aktionen</span><span class="sxs-lookup"><span data-stu-id="75634-124">**actions**: The interactive portion of the toast, including inputs and actions.</span></span>
+* <span data-ttu-id="75634-125">**audio**: steuert die Tonwiedergabe, während dem Benutzer das Popup angezeigt wird</span><span class="sxs-lookup"><span data-stu-id="75634-125">**audio**: Controls the audio played when the toast is shown to the user.</span></span>
+
+<span data-ttu-id="75634-126">Der Popupinhalt ist in XML-Rohdaten definiert, aber Sie können unsere [NuGet-Bibliothek](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) verwenden, um ein C# (oder C++)-Objektmodell für die Erstellung des Popupinhalts zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="75634-126">The toast content is defined in raw XML, but you can use our [NuGet library](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) to get a C# (or C++) object model for constructing the toast content.</span></span> <span data-ttu-id="75634-127">In diesem Artikel werden alle Elemente des Popupinhalts dokumentiert.</span><span class="sxs-lookup"><span data-stu-id="75634-127">This article documents everything that goes within the toast content.</span></span>
+
+```csharp
 ToastContent content = new ToastContent()
 {
     Launch = "app-defined-string",
  
     Visual = new ToastVisual()
     {
-        BindingGeneric = new ToastBindingGeneric()
-        {
-            Children =
-            {
-                new AdaptiveText()
-                {
-                    Text = "Sample"
-                },
- 
-                new AdaptiveText()
-                {
-                    Text = "This is a simple toast notification example"
-                }
-            },
- 
-            AppLogoOverride = new ToastGenericAppLogo()
-            {
-                Source = "oneAlarm.png"
-            }
-        }
+        BindingGeneric = new ToastBindingGeneric() { ... }
     },
  
-    Actions = new ToastActionsCustom()
-    {
-        Buttons =
-        {
-            new ToastButton("check", "check")
-            {
-                ImageUri = "check.png"
-            },
+    Actions = new ToastActionsCustom() { ... },
  
-            new ToastButton("cancel", "cancel")
-            {
-                ImageUri = "cancel.png"
-            }
-        }
-    },
- 
-    Audio = new ToastAudio()
-    {
-        Src = new Uri("ms-winsoundevent:Notification.Reminder")
-    }
+    Audio = new ToastAudio() { ... }
 };
 ```
 
-Und eine visuelle Darstellung der Struktur:
+```xml
+<toast launch="app-defined-string">
 
-![Struktur der Popupbenachrichtigung](images/adaptivetoasts-structure.jpg)
+  <visual>
+    <binding template="ToastGeneric">
+      ...
+    </binding>
+  </visual>
 
-### <a name="visual"></a>Visuelle Elemente
+  <actions>
+    ...
+  </actions>
 
-Innerhalb des visuellen Elements benötigen Sie exakt ein Bindungselement, das den visuellen Inhalt des Popups aufweist.
+  <audio src="ms-winsoundevent:Notification.Reminder"/>
 
-Kachelbenachrichtigungen in Apps für die Universelle Windows-Plattform (UWP) unterstützen mehrere Vorlagen, die auf unterschiedlichen Kachelgrößen basieren. Popupbenachrichtigungen haben jedoch nur einen Vorlagennamen: **ToastGeneric**. Mit nur einer Vorlage profitieren Sie mehrfach:
+</toast>
+```
 
--   Sie können den Popupinhalt ändern, indem Sie z. B. eine weitere Textzeile bzw. ein Inlinebild hinzufügen oder die Anzeige der Miniaturansicht so ändern, dass statt des App-Symbols etwas anderes angezeigt wird. Dabei müssen Sie weder die gesamte Vorlage ändern noch eine ungültige Nutzlast aufgrund einer Nichtübereinstimmung zwischen dem Vorlagennamen und dem Inhalt riskieren.
--   Sie können denselben Code verwenden, um die gleiche Nutzlast für die **Popupbenachrichtigung** an verschiedene Arten von Microsoft Windows-Geräten wie Smartphones, Tablets, PCs und Xbox zu schaffen. Diese Geräte akzeptieren die Benachrichtigung und zeigt sie dem Benutzer gemäß ihren UI-Richtlinien mit den entsprechenden visuellen Angeboten und Interaktionsmodellen an.
+<span data-ttu-id="75634-128">Hier sehen Sie eine visuelle Darstellung des Inhalts des Popups:</span><span class="sxs-lookup"><span data-stu-id="75634-128">Here is a visual representation of the toast's content:</span></span>
 
-Alle Attribute, die im Abschnitt „Visuelle Elemente“ und dessen untergeordneten Elemente unterstützt werden, finden Sie im Abschnitt mit den Schemas. Weitere Beispiele finden Sie unten im Abschnitt mit den XML-Beispielen.
+![Aufbau einer Popupbenachrichtigung](images/adaptivetoasts-structure.jpg)
 
-Die Identität Ihrer App wird über ein App-Symbol angegeben. Wenn Sie jedoch AppLogoOverride verwenden, wird der Name Ihrer App unterhalb der Textzeilen angezeigt.
 
-| Normales Popupfenster                                                                              | Popupfenster mit appLogoOverride                                                          |
+## <a name="visual"></a><span data-ttu-id="75634-130">Visuelles Element</span><span class="sxs-lookup"><span data-stu-id="75634-130">Visual</span></span>
+
+<span data-ttu-id="75634-131">Jedes Popup muss ein visuelles Element angeben, in dem Sie eine generische Popupbindung angeben müssen, die Text, Bilder, Logos und vieles mehr enthalten kann.</span><span class="sxs-lookup"><span data-stu-id="75634-131">Each toast must specify a visual, where you must provide a generic toast binding, which can contain text, images, logos, and more.</span></span> <span data-ttu-id="75634-132">Diese Elemente werden auf verschiedenen Windows-Geräten wie Desktops, Smartphones, Tablets und Xbox wiedergegeben.</span><span class="sxs-lookup"><span data-stu-id="75634-132">These elements will be rendered on various Windows devices, including desktop, phones, tablets, and Xbox.</span></span>
+
+<span data-ttu-id="75634-133">Alle Attribute, die im Abschnitt „Visuelle Elemente“ unterstützt werden, sowie die untergeordneten Elemente [finden Sie in der Schemadokumentation](tiles-and-notifications-toast-schema.md#toastvisual).</span><span class="sxs-lookup"><span data-stu-id="75634-133">For all attributes supported in the visual section and its child elements, [see the schema documentation](tiles-and-notifications-toast-schema.md#toastvisual).</span></span>
+
+<span data-ttu-id="75634-134">Die Identität Ihrer App in der Popupbenachrichtigung wird über Ihr App-Symbol angegeben.</span><span class="sxs-lookup"><span data-stu-id="75634-134">Your app's identity on the toast notification is conveyed via your app icon.</span></span> <span data-ttu-id="75634-135">Wenn Sie jedoch die App-Logo-Überschreibung verwenden, wird der Name Ihrer App unterhalb der Textzeilen angezeigt.</span><span class="sxs-lookup"><span data-stu-id="75634-135">However, if you use the app logo override, we will display your app name beneath your lines of text.</span></span>
+
+| <span data-ttu-id="75634-136">Normales Popupfenster</span><span class="sxs-lookup"><span data-stu-id="75634-136">Normal toast</span></span>                                                                              | <span data-ttu-id="75634-137">Popupfenster mit appLogoOverride</span><span class="sxs-lookup"><span data-stu-id="75634-137">Toast with appLogoOverride</span></span>                                                          |
 | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
 | ![Benachrichtigung ohne appLogoOverride](images/adaptivetoasts-withoutapplogooverride.jpg) | ![Benachrichtigung mit appLogoOverride](images/adaptivetoasts-withapplogooverride.jpg) |
 
-### <a name="actions"></a>Aktionen
 
-In UWP-Apps können Sie Ihren Popupbenachrichtigungen Schaltflächen und andere Eingaben hinzufügen, um Benutzern mehr Aktionen außerhalb der App zu ermöglichen. Diese Aktionen werden unter dem Element &lt;actions&gt; angegeben. Davon können Sie zwei Arten angeben:
+## <a name="text-elements"></a><span data-ttu-id="75634-140">Textelemente</span><span class="sxs-lookup"><span data-stu-id="75634-140">Text elements</span></span>
 
--   &lt;action&gt; wird als Schaltfläche auf Desktops und mobilen Geräten angezeigt. Sie können bis zu fünf benutzerdefinierte Aktionen oder Systemaktionen innerhalb einer Popupbenachrichtigung angeben.
--   &lt;input&gt; ermöglicht Benutzereingaben, z. B. schnelles Beantworten einer Nachricht oder Auswählen einer Option aus einem Dropdown-Menü.
+<span data-ttu-id="75634-141">Jedes Popup muss mindestens ein Textelement enthalten und kann zwei zusätzliche Textelemente enthalten, wobei alle den Typ [AdaptiveText](tiles-and-notifications-toast-schema.md#adaptivetext) aufweisen müssen.</span><span class="sxs-lookup"><span data-stu-id="75634-141">Each toast must have at least one text element, and can contain two additional text elements, all of type [AdaptiveText](tiles-and-notifications-toast-schema.md#adaptivetext).</span></span>
 
-Sowohl &lt;action&gt; als auch &lt;input&gt; gelten für die Windows-Gerätefamilie. Bei mobilen Geräten oder Desktop-Geräten stellt &lt;action&gt; beispielsweise eine Schaltfläche dar, auf die Benutzer tippen/klicken können. &lt;input&gt; für Text ist ein Feld, in dem Benutzer über eine physische Tastatur oder eine Bildschirmtastatur Text eingeben können. Diese Elemente passen sich auch an zukünftige Interaktionsszenarios an, z. B. eine per Sprachansage angekündigte Aktion oder eine Texteingabe per Diktat.
+![Popup mit Titel und Beschreibung](images/toast-title-and-description.jpg)
 
-Wenn vom Benutzer eine Aktion ausgeführt wird, können Sie eine der folgenden Aktionen ausführen, indem Sie das Attribut [**ActivationType**](https://msdn.microsoft.com/library/windows/desktop/dn408447) im &lt;action&gt;-Element angeben:
+<span data-ttu-id="75634-143">Seit dem Anniversary Update können Sie mithilfe der **HintMaxLines**-Eigenschaft für den Text steuern, wie viele Zeilen Text angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="75634-143">Since the Anniversary Update, you can control how many lines of text are displayed by using the **HintMaxLines** property on the text.</span></span> <span data-ttu-id="75634-144">In der Standardeinstellung werden im Titel zeigt bis zu 2 Textzeilen angezeigt. Die Beschreibungszeilen zeigen jeweils bis zu 4 Textzeilen an.</span><span class="sxs-lookup"><span data-stu-id="75634-144">By default, the title displays up to 2 lines of text, and the description lines each display up to 4 lines of text.</span></span>
 
--   Aktivieren der App im Vordergrund mit einem aktionsspezifischen Argument, das zum Navigieren zu einer bestimmten Seite bzw. einem bestimmten Kontext verwendet werden kann
--   Aktivieren der Hintergrundaufgabe der App ohne Auswirkung auf die Benutzer.
--   Aktivieren einer anderen App per Protokollstart.
--   Angeben einer auszuführenden Systemaktion. Die aktuell verfügbaren Systemaktionen sind die Funktionen zum erneuten Erinnern und zum Schließen geplanter Alarme/Erinnerungen. Auf diese wird in einem späteren Abschnitt eingegangen.
-
-Alle Attribute, die im Abschnitt „Visuelle Elemente“ und dessen untergeordneten Elemente unterstützt werden, finden Sie im Abschnitt mit den Schemas. Weitere Beispiele finden Sie unten im Abschnitt mit den XML-Beispielen.
-
-### <a name="audio"></a>Audio
-
-Benutzerdefinierte Audioeffekte wurden schon immer von Mobile unterstützt und wird in der Desktop-Version 1511 (Build 10586) oder einer neueren Version unterstützt. Benutzerdefinierte Audioeffekte können über die folgenden Pfade verwiesen werden:
-
--   ms-appx:///
--   ms-appdata:///
-
-Sie können alternativ aus der [Liste "ms-winsoundevents"](https://msdn.microsoft.com/library/windows/apps/br230842) auswählen, welche bisher immer auf beiden Plattformen unterstützt wurden.
-
-Erhalten Sie unter der [Seite](https://msdn.microsoft.com/library/windows/apps/br230842) Informationen zu Töne für Popupbenachrichtigungen. Informationen für das Senden einer Popupbenachrichtigung mit benutzerdefinierten Audioeffekten [finden Sie unter folgenden Blogbeitrag](https://blogs.msdn.microsoft.com/tiles_and_toasts/2016/06/18/quickstart-sending-a-toast-notification-with-custom-audio/).
-
-## <a name="alarms-reminders-and-incoming-calls"></a>Alarme, Erinnerungen und eingehende Anrufe
-
-
-Sie können Popupbenachrichtigungen für Alarme, Erinnerungen und eingehende Anrufe verwenden. Das Design dieser speziellen Popups stimmt mit dem von Standardpopups überein. Für einige benutzerdefinierte, szenariobasierte Benutzeroberflächen und Muster sind jedoch spezielle Popups möglich:
-
--   Eine Erinnerungs-Popupbenachrichtigung bleibt auf dem Bildschirm, bis der Benutzer sie schließt oder eine Aktion ausführt. Unter Windows Mobile können Erinnerungs-Popupbenachrichtigungen auch vorab vergrößert angezeigt werden.
--   Alarmbenachrichtigungen teilen nicht nur die oben genannten Verhaltensweisen mit Erinnerungsbenachrichtigungen, sondern können zudem automatisch Audioschleifen abspielen.
--   Benachrichtigungen über eingehende Anrufe werden auf Windows Mobile-Geräten im Vollbildmodus angezeigt. Dies erfolgt durch Angabe des Szenarioattributs innerhalb des Stammelements einer &lt;Popupbenachrichtigung&gt;: &lt;Popupszenario = " {default | alarm | reminder | incomingCall }" &gt;
-
-## <a name="xml-examples"></a>XML-Beispiele
-
-
-**Hinweis**  Die Screenshots für diese Beispiele zu Popupbenachrichtigungen stammen aus einer Desktop-App. Auf mobilen Geräten wird die Popupbenachrichtigung möglicherweise reduziert angezeigt. Über einen Ziehpunkt am unteren Rand des Popups kann sie vergrößert werden.
-
- 
-
-**Benachrichtigung mit umfassenden Visualisierungen**
-
-Dieses Beispiel zeigt, wie Sie mehrere Textzeilen, ein optionales kleines Bild zum Außerkraftsetzen des Anwendungslogos und eine optionale Miniaturansicht für ein Inlinebild erstellen.
-
-```XML
-<toast launch="app-defined-string">
-  <visual>
-    <binding template="ToastGeneric">
-      <text>Photo Share</text>
-      <text>Andrew sent you a picture</text>
-      <text>See it in full size!</text>
-      <image src="https://unsplash.it/360/180?image=1043" />
-      <image placement="appLogoOverride" src="https://unsplash.it/64?image=883" hint-crop="circle" />
-    </binding>
-  </visual>
-</toast>
-```
-
-```CSharp
-ToastContent content = new ToastContent()
+```csharp
+new ToastBindingGeneric()
 {
-    Launch = "app-defined-string",
- 
-    Visual = new ToastVisual()
+    Children =
     {
-        BindingGeneric = new ToastBindingGeneric()
+        new AdaptiveText()
         {
-            Children =
-            {
-                new AdaptiveText()
-                {
-                    Text = "Photo Share"
-                },
- 
-                new AdaptiveText()
-                {
-                    Text = "Andrew sent you a picture"
-                },
- 
-                new AdaptiveText()
-                {
-                    Text = "See it in full size!"
-                },
- 
-                new AdaptiveImage()
-                {
-                    Source = "https://unsplash.it/360/180?image=1043"
-                }
-            },
- 
-            AppLogoOverride = new ToastGenericAppLogo()
-            {
-                Source = "https://unsplash.it/64?image=883",
-                HintCrop = ToastGenericAppLogoCrop.Circle
-            }
+            Text = "Adaptive Tiles Meeting",
+            HintMaxLines = 1
+        },
+
+        new AdaptiveText()
+        {
+            Text = "Conf Room 2001 / Building 135"
+        },
+
+        new AdaptiveText()
+        {
+            Text = "10:00 AM - 10:30 AM"
         }
     }
+}
+```
+
+```xml
+<binding template="ToastGeneric">
+    <text hint-maxLines="1">Adaptive Tiles Meeting</text>
+    <text>Conf Room 2001 / Building 135</text>
+    <text>10:00 AM - 10:30 AM</text>
+</binding>
+```
+
+
+## <a name="app-logo-override"></a><span data-ttu-id="75634-145">Überschreibung des App-Logos</span><span class="sxs-lookup"><span data-stu-id="75634-145">App logo override</span></span>
+
+<span data-ttu-id="75634-146">Standardmäßig zeigt das Popup Ihr App-Logo an.</span><span class="sxs-lookup"><span data-stu-id="75634-146">By default, your toast will display your app's logo.</span></span> <span data-ttu-id="75634-147">Allerdings können Sie dieses Logo mit Ihrem eigenen [ToastGenericAppLogo](tiles-and-notifications-toast-schema.md#toastgenericapplogo)-Bild überschreiben.</span><span class="sxs-lookup"><span data-stu-id="75634-147">However, you can override this logo with your own [ToastGenericAppLogo](tiles-and-notifications-toast-schema.md#toastgenericapplogo) image.</span></span> <span data-ttu-id="75634-148">Wenn es sich beispielsweise um eine Benachrichtigung von einer Person handelt, empfehlen wir, das App-Logo mit einem Bild der betreffenden Person zu überschreiben.</span><span class="sxs-lookup"><span data-stu-id="75634-148">For example, if this is a notification from a person, we recommend overriding the app logo with a picture of that person.</span></span>
+
+![Popup mit App-Logo-Überschreibung](images/toast-applogooverride.jpg)
+
+<span data-ttu-id="75634-150">Sie können die **HintCrop**-Eigenschaft verwenden, um den Zuschnitt des Bilds zu ändern.</span><span class="sxs-lookup"><span data-stu-id="75634-150">You can use the **HintCrop** property to change the cropping of the image.</span></span> <span data-ttu-id="75634-151">So ergibt *Kreis* z. B. ein kreisförmig zugeschnittenes Bild.</span><span class="sxs-lookup"><span data-stu-id="75634-151">For example, *circle* results in a circle-cropped image.</span></span> <span data-ttu-id="75634-152">Andernfalls ist das Bild quadratisch.</span><span class="sxs-lookup"><span data-stu-id="75634-152">Otherwise, the image is square.</span></span> <span data-ttu-id="75634-153">Bildabmessungen sind 64x64Pixel bei einer Skalierung von 100%.</span><span class="sxs-lookup"><span data-stu-id="75634-153">Image dimensions are 64x64 pixels at 100% scaling.</span></span>
+
+```csharp
+new ToastBindingGeneric()
+{
+    ...
+
+    AppLogoOverride = new ToastGenericAppLogo()
+    {
+        Source = "https://unsplash.it/64?image=883",
+        HintCrop = ToastGenericAppLogoCrop.Circle
+    }
+}
+```
+
+```xml
+<binding template="ToastGeneric">
+    ...
+    <image placement="appLogoOverride" hint-crop="circle" src="https://unsplash.it/64?image=883"/>
+</binding>
+```
+
+
+## <a name="hero-image"></a><span data-ttu-id="75634-154">Favoritenbild</span><span class="sxs-lookup"><span data-stu-id="75634-154">Hero image</span></span>
+
+<span data-ttu-id="75634-155">**Neu im Anniversary Update**: Popups können ein Favoritenbild anzeigen. Dabei handelt es sich um ein ausgewähltes [ToastGenericHeroImage](tiles-and-notifications-toast-schema.md#toastgenericheroimage), das an hervorgehobener Stelle innerhalb des Popup-Banners und im Info-Center angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="75634-155">**New in Anniversary Update**: Toasts can display a hero image, which is a featured [ToastGenericHeroImage](tiles-and-notifications-toast-schema.md#toastgenericheroimage) displayed prominently within the toast banner and while inside Action Center.</span></span> <span data-ttu-id="75634-156">Bildabmessungen sind 360x180Pixel bei einer Skalierung von 100%.</span><span class="sxs-lookup"><span data-stu-id="75634-156">Image dimensions are 360x180 pixels at 100% scaling.</span></span>
+
+![Popup mit Favoritenbild](images/toast-heroimage.jpg)
+
+```csharp
+new ToastBindingGeneric()
+{
+    ...
+
+    HeroImage = new ToastHeroImage()
+    {
+        Source = "https://unsplash.it/360/180?image=1043"
+    }
+}
+```
+
+```xml
+<binding template="ToastGeneric">
+    ...
+    <image placement="hero" src="https://unsplash.it/360/180?image=1043"/>
+</binding>
+```
+
+
+## <a name="inline-image"></a><span data-ttu-id="75634-158">Inline-Bild</span><span class="sxs-lookup"><span data-stu-id="75634-158">Inline image</span></span>
+
+<span data-ttu-id="75634-159">Sie können ein Inline-Bild in voller Breite bereitstellen, das angezeigt wird, wenn das Popup erweitert wird.</span><span class="sxs-lookup"><span data-stu-id="75634-159">You can provide a full-width inline-image that appears when you expand the toast.</span></span>
+
+![Popup mit zusätzlichem Bild](images/toast-additionalimage.jpg)
+
+```csharp
+new ToastBindingGeneric()
+{
+    Children =
+    {
+        ...
+
+        new AdaptiveImage()
+        {
+            Source = "https://unsplash.it/360/180?image=1043"
+        }
+    }
+}
+```
+
+```xml
+<binding template="ToastGeneric">
+    ...
+    <image src="https://unsplash.it/360/180?image=1043" />
+</binding>
+```
+
+
+## <a name="attribution-text"></a><span data-ttu-id="75634-161">Zuschreibungstext</span><span class="sxs-lookup"><span data-stu-id="75634-161">Attribution text</span></span>
+
+<span data-ttu-id="75634-162">**Neu im Anniversary Update**: Wenn Sie die Quelle des Inhalts angeben müssen, können Sie Zuschreibungstext verwenden.</span><span class="sxs-lookup"><span data-stu-id="75634-162">**New in Anniversary Update**: If you need to reference the source of your content, you can use attribution text.</span></span> <span data-ttu-id="75634-163">Dieser Text wird zusammen mit der Identität Ihrer App oder dem Zeitstempel der Benachrichtigung immer am unteren Rand der Benachrichtigung angezeigt.</span><span class="sxs-lookup"><span data-stu-id="75634-163">This text is always displayed at the bottom of your notification, along with your app's identity or the notification's timestamp.</span></span>
+
+<span data-ttu-id="75634-164">Für ältere Versionen von Windows, die Zuschreibungstext nicht unterstützen, wird der Text einfach als weiteres Textelement angezeigt (sofern Sie nicht bereits die maximalen drei Textelemente verwenden).</span><span class="sxs-lookup"><span data-stu-id="75634-164">On older versions of Windows that don't support attribution text, the text will simply be displayed as another text element (assuming you don't already have the maximum of three text elements).</span></span>
+
+![Popup mit Zuschreibungstext](images/toast-attributiontext.jpg)
+
+```csharp
+new ToastBindingGeneric()
+{
+    ...
+
+    Attribution = new ToastGenericAttributionText()
+    {
+        Text = "Via SMS"
+    }
+}
+```
+
+```xml
+<binding template="ToastGeneric">
+    ...
+    <text placement="attribution">Via SMS</text>
+</binding>
+```
+
+
+## <a name="custom-timestamp"></a><span data-ttu-id="75634-166">Benutzerdefinierter Zeitstempel</span><span class="sxs-lookup"><span data-stu-id="75634-166">Custom timestamp</span></span>
+
+<span data-ttu-id="75634-167">**Neu im Creators Update**: Sie können jetzt den vom System bereitgestellten Zeitstempel mit Ihrem eigenen Zeitstempel überschreiben, der genau angibt, wann die Nachricht/die Informationen/der Inhalt erstellt wurden.</span><span class="sxs-lookup"><span data-stu-id="75634-167">**New in Creators Update**: You can now override the system-provided timestamp with your own timestamp that accurately represents when the message/information/content was generated.</span></span> <span data-ttu-id="75634-168">Dieser Zeitstempel wird im Info-Center angezeigt.</span><span class="sxs-lookup"><span data-stu-id="75634-168">This timestamp is visible within Action Center.</span></span>
+
+![Popup mit benutzerdefiniertem Zeitstempel](images/toast-customtimestamp.jpg)
+
+<span data-ttu-id="75634-170">Weitere Informationen zum Verwenden eines benutzerdefinierten Zeitstempels [finden Sie in diesem Blogbeitrag](https://blogs.msdn.microsoft.com/tiles_and_toasts/2017/01/09/custom-timestamp-on-toast-notifications-windows-10-creators-update/).</span><span class="sxs-lookup"><span data-stu-id="75634-170">To learn more about using a custom timestamp, please [see this blog post](https://blogs.msdn.microsoft.com/tiles_and_toasts/2017/01/09/custom-timestamp-on-toast-notifications-windows-10-creators-update/).</span></span>
+
+```csharp
+ToastContent toastContent = new ToastContent()
+{
+    DisplayTimestamp = new DateTime(2017, 04, 15, 19, 45, 00, DateTimeKind.Utc),
+    ...
 };
 ```
 
-![Benachrichtigung mit umfassenden Visualisierungen](images/adaptivetoasts-xmlsample01.jpg)
-
- 
-
-**Benachrichtigung mit Aktionen, Beispiel 1**
-
-Dieses Beispiel zeigt Folgendes:
-
-```XML
-<toast launch="app-defined-string">
-  <visual>
-    <binding template="ToastGeneric">
-      <text>Microsoft Company Store</text>
-      <text>New Halo game is back in stock!</text>
-    </binding>
-  </visual>
-  <actions>
-    <action activationType="foreground" content="See more details" arguments="details"/>
-    <action activationType="background" content="Remind me later" arguments="later"/>
-  </actions>
+```xml
+<toast displayTimestamp="2017-04-15T19:45:00Z">
+  ...
 </toast>
 ```
 
-```CSharp
-ToastContent content = new ToastContent()
+
+## <a name="adaptive-content"></a><span data-ttu-id="75634-171">Adaptiver Inhalt</span><span class="sxs-lookup"><span data-stu-id="75634-171">Adaptive content</span></span>
+
+<span data-ttu-id="75634-172">**Neu im Anniversary Update**: Zusätzlich zu dem oben angegebenen Inhalt können Sie auch zusätzlichen adaptiven Inhalt anzeigen, der sichtbar ist, wenn das Popup erweitert wird.</span><span class="sxs-lookup"><span data-stu-id="75634-172">**New in Anniversary Update**: In addition to the content specified above, you can also display additional adaptive content that is visible when the toast is expanded.</span></span>
+
+<span data-ttu-id="75634-173">Dieser zusätzliche Inhalt wird mit Adaptive angegeben. Mehr zu diesem Thema erfahren Sie in der [Dokumentation zu adaptiven Kacheln](tiles-and-notifications-create-adaptive-tiles.md).</span><span class="sxs-lookup"><span data-stu-id="75634-173">This additional content is specified using Adaptive, which you can learn more about by reading the [Adaptive Tiles documentation](tiles-and-notifications-create-adaptive-tiles.md).</span></span>
+
+<span data-ttu-id="75634-174">Beachten Sie, dass jeglicher adaptiver Inhalt in einer AdaptiveGroup enthalten sein müssen.</span><span class="sxs-lookup"><span data-stu-id="75634-174">Note that any adaptive content must be contained within an AdaptiveGroup.</span></span> <span data-ttu-id="75634-175">Andernfalls wird der nicht mit Adaptive gerendert.</span><span class="sxs-lookup"><span data-stu-id="75634-175">Otherwise it will not be rendered using adaptive.</span></span>
+
+
+### <a name="columns-and-text-elements"></a><span data-ttu-id="75634-176">Spalten und Textelemente</span><span class="sxs-lookup"><span data-stu-id="75634-176">Columns and text elements</span></span>
+
+<span data-ttu-id="75634-177">Hier ist ein Beispiel, in dem Spalten und einige erweiterte adaptive Textelemente verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="75634-177">Here's an example where columns and some advanced adaptive text elements are used.</span></span> <span data-ttu-id="75634-178">Da die Textelemente in einer AdaptiveGroup enthalten sind, unterstützen sie alle erweiterten adaptiven Stileigenschaften.</span><span class="sxs-lookup"><span data-stu-id="75634-178">Since the text elements are within an AdaptiveGroup, they support all the rich adaptive styling properties.</span></span>
+
+![Popup mit zusätzlichem Text](images/toast-additionaltext.jpg)
+
+```csharp
+new ToastBindingGeneric()
 {
-    Launch = "app-defined-string",
- 
-    Visual = new ToastVisual()
+    Children =
     {
-        BindingGeneric = new ToastBindingGeneric()
+        ...
+
+        new AdaptiveGroup()
         {
             Children =
             {
-                new AdaptiveText()
+                new AdaptiveSubgroup()
                 {
-                    Text = "Microsoft Company Store"
+                    Children =
+                    {
+                        new AdaptiveText()
+                        {
+                            Text = "52 attendees",
+                            HintStyle = AdaptiveTextStyle.Base
+                        },
+                        new AdaptiveText()
+                        {
+                            Text = "23 minute drive",
+                            HintStyle = AdaptiveTextStyle.CaptionSubtle
+                        }
+                    }
                 },
- 
-                new AdaptiveText()
+                new AdaptiveSubgroup()
                 {
-                    Text = "New Halo game is back in stock!"
+                    Children =
+                    {
+                        new AdaptiveText()
+                        {
+                            Text = "1 Microsoft Way",
+                            HintStyle = AdaptiveTextStyle.CaptionSubtle,
+                            HintAlign = AdaptiveTextAlign.Right
+                        },
+                        new AdaptiveText()
+                        {
+                            Text = "Bellevue, WA 98008",
+                            HintStyle = AdaptiveTextStyle.CaptionSubtle,
+                            HintAlign = AdaptiveTextAlign.Right
+                        }
+                    }
                 }
-            }
-        }
-    },
- 
-    Actions = new ToastActionsCustom()
-    {
-        Buttons =
-        {
-            new ToastButton("See more details", "details"),
- 
-            new ToastButton("Remind me later", "later")
-            {
-                ActivationType = ToastActivationType.Background
             }
         }
     }
-};
+}
 ```
 
-![Benachrichtigung mit Aktionen, Beispiel 1](images/adaptivetoasts-xmlsample02.jpg)
-
- 
-
-**Benachrichtigung mit Aktionen, Beispiel 2**
-
-Dieses Beispiel zeigt Folgendes:
-
-```XML
-<toast launch="app-defined-string">
-  <visual>
-    <binding template="ToastGeneric">
-      <text>Restaurant suggestion...</text>
-      <text>We noticed that you are near Wasaki. Thomas left a 5 star rating after his last visit, do you want to try it?</text>
-    </binding>
-  </visual>
-  <actions>
-    <action activationType="foreground" content="Reviews" arguments="reviews" />
-    <action activationType="protocol" content="Show map" arguments="bingmaps:?q=sushi" />
-  </actions>
-</toast>
+```xml
+<binding template="ToastGeneric">
+    ...
+    <group>
+        <subgroup>
+            <text hint-style="base">52 attendees</text>
+            <text hint-style="captionSubtle">23 minute drive</text>
+        </subgroup>
+        <subgroup>
+            <text hint-style="captionSubtle" hint-align="right">1 Microsoft Way</text>
+            <text hint-style="captionSubtle" hint-align="right">Bellevue, WA 98008</text>
+        </subgroup>
+    </group>
+</binding>
 ```
 
-```CSharp
+
+## <a name="inputs-and-buttons"></a><span data-ttu-id="75634-180">Eingaben und Schaltflächen</span><span class="sxs-lookup"><span data-stu-id="75634-180">Inputs and buttons</span></span>
+
+<span data-ttu-id="75634-181">Eingaben und Schaltflächen werden innerhalb des Bereichs „Aktionen“ der Popupregion des Popups angegeben. Das bedeutet, dass sie nur angezeigt werden, wenn das Popup erweitert wird.</span><span class="sxs-lookup"><span data-stu-id="75634-181">Inputs and buttons are specified within the Actions region of the toast region of the toast, meaning they are only visible when the toast is expanded.</span></span>
+
+
+### <a name="quick-reply-text-box"></a><span data-ttu-id="75634-182">Textfeld für schnelle Antworten</span><span class="sxs-lookup"><span data-stu-id="75634-182">Quick reply text box</span></span>
+
+<span data-ttu-id="75634-183">Um ein Textfeld für schnelle Antworten– etwa für ein Nachrichten-Szenario – zu aktivieren, fügen Sie eine Texteingabe und eine Schaltfläche hinzu, und verweisen Sie auf die ID der Texteingabe, damit die Schaltfläche neben der Eingabe angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="75634-183">To enable a quick reply text box, like for a messaging scenario, add a text input and a button, and reference the text input's id so that the button is displayed adjacent to the input.</span></span>
+
+![Benachrichtigung mit Texteingabe und Aktionen](images/adaptivetoasts-xmlsample05.jpg)
+
+```csharp
 ToastContent content = new ToastContent()
 {
-    Launch = "app-defined-string",
- 
-    Visual = new ToastVisual()
-    {
-        BindingGeneric = new ToastBindingGeneric()
-        {
-            Children =
-            {
-                new AdaptiveText()
-                {
-                    Text = "Restaurant suggestion..."
-                },
- 
-                new AdaptiveText()
-                {
-                    Text = "We noticed that you are near Wasaki. Thomas left a 5 star rating after his last visit, do you want to try it?"
-                }
-            }
-        }
-    },
- 
-    Actions = new ToastActionsCustom()
-    {
-        Buttons =
-        {
-            new ToastButton("Reviews", "reviews"),
- 
-            new ToastButton("Show map", "bingmaps:?q=sushi")
-            {
-                ActivationType = ToastActivationType.Protocol
-            }
-        }
-    }
-};
-```
-
-![Benachrichtigung mit Aktionen, Beispiel 2](images/adaptivetoasts-xmlsample03.jpg)
-
- 
-
-**Benachrichtigung mit Texteingabe und Aktionen, Beispiel 1**
-
-Dieses Beispiel zeigt Folgendes:
-
-```XML
-<toast launch="developer-defined-string">
-  <visual>
-    <binding template="ToastGeneric">
-      <text>Andrew B.</text>
-      <text>Shall we meet up at 8?</text>
-      <image placement="appLogoOverride" src="https://unsplash.it/64?image=883" hint-crop="circle" />
-    </binding>
-  </visual>
-  <actions>
-    <input id="message" type="text" placeHolderContent="Type a reply" />
-    <action activationType="background" content="Reply" arguments="reply" />
-    <action activationType="foreground" content="Video call" arguments="video" />
-  </actions>
-</toast>
-```
-
-```CSharp
-ToastContent content = new ToastContent()
-{
-    Launch = "app-defined-string",
- 
-    Visual = new ToastVisual()
-    {
-        BindingGeneric = new ToastBindingGeneric()
-        {
-            Children =
-            {
-                new AdaptiveText()
-                {
-                    Text = "Andrew B."
-                },
- 
-                new AdaptiveText()
-                {
-                    Text = "Shall we meet up at 8?"
-                }
-            },
- 
-            AppLogoOverride = new ToastGenericAppLogo()
-            {
-                Source = "https://unsplash.it/64?image=883",
-                HintCrop = ToastGenericAppLogoCrop.Circle
-            }
-        }
-    },
+    ...
  
     Actions = new ToastActionsCustom()
     {
         Inputs =
         {
-            new ToastTextBox("message")
+            new ToastTextBox("tbReply")
             {
                 PlaceholderContent = "Type a reply"
             }
         },
- 
+
         Buttons =
         {
-            new ToastButton("Reply", "reply")
+            new ToastButton("Reply", "action=reply&convId=9318")
+            {
+                ActivationType = ToastActivationType.Background,
+
+                // To place the button next to the text box,
+                // reference the text box's Id and provide an image
+                TextBoxId = "tbReply",
+                ImageUri = "Assets/Reply.png"
+            }
+        }
+    }
+};
+```
+
+```xml
+<toast launch="app-defined-string">
+
+    ...
+
+    <actions>
+
+        <input id="textBox" type="text" placeholderContent="Type a reply"/>
+
+        <action
+            content="Send",
+            arguments="action=reply&amp;convId=9318"
+            activationType="background"
+            hint-inputId="textBox"
+            imageUri="Assets/Reply.png"/>
+
+    </actions>
+
+</toast>
+```
+
+
+### <a name="inputs-with-buttons-bar"></a><span data-ttu-id="75634-185">Eingaben mit Schaltflächenleiste</span><span class="sxs-lookup"><span data-stu-id="75634-185">Inputs with buttons bar</span></span>
+
+<span data-ttu-id="75634-186">Es können auch eine oder mehrere Eingaben mit normalen Schaltflächen unterhalb der Eingaben angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="75634-186">You also can have one (or many) inputs with normal buttons displayed below the inputs.</span></span>
+
+![Benachrichtigung mit Text und Eingabeaktionen](images/adaptivetoasts-xmlsample04.jpg)
+
+```csharp
+ToastContent content = new ToastContent()
+{
+    ...
+ 
+    Actions = new ToastActionsCustom()
+    {
+        Inputs =
+        {
+            new ToastTextBox("tbReply")
+            {
+                PlaceholderContent = "Type a reply"
+            }
+        },
+
+        Buttons =
+        {
+            new ToastButton("Reply", "action=reply&threadId=9218")
             {
                 ActivationType = ToastActivationType.Background
             },
- 
-            new ToastButton("Video call", "video")
+
+            new ToastButton("Video call", "action=videocall&threadId=9218")
             {
                 ActivationType = ToastActivationType.Foreground
             }
@@ -450,134 +465,41 @@ ToastContent content = new ToastContent()
 };
 ```
 
-![Benachrichtigung mit Texteingabe und Aktionen](images/adaptivetoasts-xmlsample04.jpg)
+```xml
+<toast launch="app-defined-string">
 
- 
+    ...
 
-**Benachrichtigung mit Texteingabe und Aktionen, Beispiel 2**
+    <actions>
 
-Dieses Beispiel zeigt Folgendes:
+        <input id="textBox" type="text" placeholderContent="Type a reply"/>
 
-```XML
-<toast launch="developer-defined-string">
-  <visual>
-    <binding template="ToastGeneric">
-      <text>Andrew B.</text>
-      <text>Shall we meet up at 8?</text>
-      <image placement="appLogoOverride" src="https://unsplash.it/64?image=883" hint-crop="circle" />
-    </binding>
-  </visual>
-  <actions>
-    <input id="message" type="text" placeHolderContent="Type a reply" />
-    <action activationType="background" content="Reply" arguments="reply" hint-inputId="message" imageUri="Assets/Icons/send.png"/>
-  </actions>
+        <action
+            content="Reply",
+            arguments="action=reply&amp;threadId=9218"
+            activationType="background"/>
+
+        <action
+            content="Video call",
+            arguments="action=videocall&amp;threadId=9218"
+            activationType="foreground"/>
+
+    </actions>
+
 </toast>
 ```
 
-```CSharp
+
+### <a name="selection-input"></a><span data-ttu-id="75634-188">Auswahleingabe</span><span class="sxs-lookup"><span data-stu-id="75634-188">Selection input</span></span>
+
+<span data-ttu-id="75634-189">Zusätzlich zu Textfeldern können Sie auch ein Auswahlmenü verwenden.</span><span class="sxs-lookup"><span data-stu-id="75634-189">In addition to text boxes, you can also use a selection menu.</span></span>
+
+![Benachrichtigung mit Auswahleingabe und Aktionen](images/adaptivetoasts-xmlsample06.jpg)
+
+```csharp
 ToastContent content = new ToastContent()
 {
-    Launch = "app-defined-string",
- 
-    Visual = new ToastVisual()
-    {
-        BindingGeneric = new ToastBindingGeneric()
-        {
-            Children =
-            {
-                new AdaptiveText()
-                {
-                    Text = "Andrew B."
-                },
- 
-                new AdaptiveText()
-                {
-                    Text = "Shall we meet up at 8?"
-                }
-            },
- 
-            AppLogoOverride = new ToastGenericAppLogo()
-            {
-                Source = "https://unsplash.it/64?image=883",
-                HintCrop = ToastGenericAppLogoCrop.Circle
-            }
-        }
-    },
- 
-    Actions = new ToastActionsCustom()
-    {
-        Inputs =
-        {
-            new ToastTextBox("message")
-            {
-                PlaceholderContent = "Type a reply"
-            }
-        },
- 
-        Buttons =
-        {
-            new ToastButton("Reply", "reply")
-            {
-                TextBoxId = "message",
-                ImageUri = "Assets/Icons/send.png",
-                ActivationType = ToastActivationType.Background
-            }
-        }
-    }
-};
-```
-
-![Benachrichtigung mit Texteingabe und Aktionen](images/adaptivetoasts-xmlsample05.jpg)
-
- 
-
-**Benachrichtigung mit Auswahleingabe und Aktionen**
-
-Dieses Beispiel zeigt Folgendes:
-
-```XML
-<toast launch="developer-defined-string">
-  <visual>
-    <binding template="ToastGeneric">
-      <text>Spicy Heaven</text>
-      <text>When do you plan to come in tomorrow?</text>
-    </binding>
-  </visual>
-  <actions>
-    <input id="time" type="selection" defaultInput="2" >
-      <selection id="1" content="Breakfast" />
-      <selection id="2" content="Lunch" />
-      <selection id="3" content="Dinner" />
-    </input>
-    <action activationType="background" content="Reserve" arguments="reserve" />
-    <action activationType="foreground" content="Call Restaurant" arguments="call" />
-  </actions>
-</toast>
-```
-
-```CSharp
-ToastContent content = new ToastContent()
-{
-    Launch = "app-defined-string",
- 
-    Visual = new ToastVisual()
-    {
-        BindingGeneric = new ToastBindingGeneric()
-        {
-            Children =
-            {
-                new AdaptiveText()
-                {
-                    Text = "Spicy Heaven"
-                },
- 
-                new AdaptiveText()
-                {
-                    Text = "When do you plan to come in tomorrow?"
-                }
-            }
-        }
-    },
+    ...
  
     Actions = new ToastActionsCustom()
     {
@@ -585,50 +507,152 @@ ToastContent content = new ToastContent()
         {
             new ToastSelectionBox("time")
             {
-                DefaultSelectionBoxItemId = "2",
+                DefaultSelectionBoxItemId = "lunch",
                 Items =
                 {
-                    new ToastSelectionBoxItem("1", "Breakfast"),
-                    new ToastSelectionBoxItem("2", "Lunch"),
-                    new ToastSelectionBoxItem("3", "Dinner")
+                    new ToastSelectionBoxItem("breakfast", "Breakfast"),
+                    new ToastSelectionBoxItem("lunch", "Lunch"),
+                    new ToastSelectionBoxItem("dinner", "Dinner")
                 }
             }
         },
+
+        Buttons = { ... }
+};
+```
+
+```xml
+<toast launch="app-defined-string">
+
+    ...
+
+    <actions>
+
+        <input id="time" type="selection" defaultInput="lunch">
+            <selection id="breakfast" content="Breakfast" />
+            <selection id="lunch" content="Lunch" />
+            <selection id="dinner" content="Dinner" />
+        </input>
+
+        ...
+
+    </actions>
+
+</toast>
+```
+
+
+## <a name="buttons"></a><span data-ttu-id="75634-191">Schaltflächen</span><span class="sxs-lookup"><span data-stu-id="75634-191">Buttons</span></span>
+
+<span data-ttu-id="75634-192">Schaltflächen machen Ihr Popup interaktiv. Sie erlauben dem Benutzer, in Ihrer Popupbenachrichtigung schnelle Aktionen auszuführen, ohne den aktuellen Workflow zu unterbrechen.</span><span class="sxs-lookup"><span data-stu-id="75634-192">Buttons make your toast interactive, letting the user take quick actions on your toast notification without interrupting their current workflow.</span></span> <span data-ttu-id="75634-193">Benutzer können z.B. eine Nachricht direkt in einem Popup beantworten oder eine E-Mail löschen, ohne die E-Mail-App überhaupt zu öffnen.</span><span class="sxs-lookup"><span data-stu-id="75634-193">For example, users can reply to a message directly from within a toast, or delete an email without even opening the email app.</span></span>
+
+<span data-ttu-id="75634-194">Schaltflächen können die folgenden verschiedenen Aktionen ausführen...</span><span class="sxs-lookup"><span data-stu-id="75634-194">Buttons can perform the following different actions...</span></span>
+
+-   <span data-ttu-id="75634-195">Aktivieren der App im Vordergrund mit einem Argument, das zum Navigieren zu einer bestimmten Seite bzw. einem bestimmten Kontext verwendet werden kann</span><span class="sxs-lookup"><span data-stu-id="75634-195">Activating the app in the foreground, with an argument that can be used to navigate to a specific page/context.</span></span>
+-   <span data-ttu-id="75634-196">Aktivieren der Hintergrundaufgabe der App für eine schnelle Antwort oder ein ähnliches Szenario</span><span class="sxs-lookup"><span data-stu-id="75634-196">Activating the app's background task, for a quick-reply or similar scenario.</span></span>
+-   <span data-ttu-id="75634-197">Aktivieren einer anderen App per Protokollstart</span><span class="sxs-lookup"><span data-stu-id="75634-197">Activating another app via protocol launch.</span></span>
+-   <span data-ttu-id="75634-198">Durchführen einer Systemaktion, z.B. erneute Erinnerung oder Schließen der Benachrichtigung</span><span class="sxs-lookup"><span data-stu-id="75634-198">Performing a system action, like snoozing or dismissing the notification.</span></span>
+
+<span data-ttu-id="75634-199">Beachten Sie, dass Sie nur bis zu 5 Schaltflächen haben können (einschließlich Elementen des Kontextmenüs, die später erläutert werden).</span><span class="sxs-lookup"><span data-stu-id="75634-199">Note that you can only have up to 5 buttons (including context menu items which we discuss later).</span></span>
+
+![Benachrichtigung mit Aktionen, Beispiel1](images/adaptivetoasts-xmlsample02.jpg)
+
+```csharp
+ToastContent content = new ToastContent()
+{
+    ...
  
+    Actions = new ToastActionsCustom()
+    {
         Buttons =
         {
-            new ToastButton("Reserve", "reserve")
-            {
-                ActivationType = ToastActivationType.Background
-            },
- 
-            new ToastButton("Call Restaurant", "call")
+            new ToastButton("See more details", "action=viewdetails&contentId=351")
             {
                 ActivationType = ToastActivationType.Foreground
+            },
+
+            new ToastButton("Remind me later", "action=remindlater&contentId=351")
+            {
+                ActivationType = ToastActivationType.Background
             }
         }
     }
 };
 ```
 
-![Benachrichtigung mit Auswahleingabe und Aktionen](images/adaptivetoasts-xmlsample06.jpg)
+```xml
+<toast launch="app-defined-string">
 
+    ...
+
+    <actions>
+
+        <action
+            content="See more details",
+            arguments="action=viewdetails&amp;contentId=351"
+            activationType="foreground"/>
+
+        <action
+            content="Remind me later",
+            arguments="action=remindlater&amp;contentId=351"
+            activationType="background"/>
+
+    </actions>
+
+</toast>
+```
+
+
+### <a name="snoozedismiss-buttons"></a><span data-ttu-id="75634-201">Schaltflächen für erneutes Erinnern/Schließen</span><span class="sxs-lookup"><span data-stu-id="75634-201">Snooze/dismiss buttons</span></span>
+
+<span data-ttu-id="75634-202">Mithilfe eines Auswahlmenüs und zwei Schaltflächen können wir eine Erinnerungsbenachrichtigung erstellen, welche die Systemaktionen zum erneuten Erinnern und Schließen verwendet.</span><span class="sxs-lookup"><span data-stu-id="75634-202">Using a selection menu and two buttons, we can create a reminder notification that utilizes the system snooze and dismiss actions.</span></span> <span data-ttu-id="75634-203">Legen Sie unbedingt das Szenario für die Benachrichtigung auf „Erinnerung“ fest, damit sie sich wie eine Erinnerung verhält.</span><span class="sxs-lookup"><span data-stu-id="75634-203">Make sure to set the scenario to Reminder for the notification to behave like a reminder.</span></span>
+
+![Erinnerungsbenachrichtigung](images/adaptivetoasts-xmlsample07.jpg)
+
+<span data-ttu-id="75634-205">Wir verknüpfen die Schaltfläche „Erneut erinnern“ mithilfe der *SepectionBoxId*-Eigenschaft der Popupschaltfläche mit der Auswahlmenüeingabe.</span><span class="sxs-lookup"><span data-stu-id="75634-205">We link the Snooze button to the selection menu input using the *SepectionBoxId* property on the toast button.</span></span>
+
+```csharp
+ToastContent content = new ToastContent()
+{
+    Scenario = ToastScenario.Reminder,
+
+    ...
  
+    Actions = new ToastActionsCustom()
+    {
+        Inputs =
+        {
+            new ToastSelectionBox("snoozeTime")
+            {
+                DefaultSelectionBoxItemId = "15",
+                Items =
+                {
+                    new ToastSelectionBoxItem("5", "5 minutes"),
+                    new ToastSelectionBoxItem("15", "15 minutes"),
+                    new ToastSelectionBoxItem("60", "1 hour"),
+                    new ToastSelectionBoxItem("240", "4 hours"),
+                    new ToastSelectionBoxItem("1440", "1 day")
+                }
+            }
+        },
 
-**Erinnerungsbenachrichtigung**
+        Buttons =
+        {
+            new ToastButtonSnooze()
+            {
+                SelectionBoxId = "snoozeTime"
+            },
+ 
+            new ToastButtonDismiss()
+        }
+    }
+};
+```
 
-Dieses Beispiel zeigt Folgendes:
-
-```XML
+```xml
 <toast scenario="reminder" launch="action=viewEvent&amp;eventId=1983">
    
-  <visual>
-    <binding template="ToastGeneric">
-      <text>Adaptive Tiles Meeting</text>
-      <text>Conf Room 2001 / Building 135</text>
-      <text>10:00 AM - 10:30 AM</text>
-    </binding>
-  </visual>
+  ...
  
   <actions>
      
@@ -649,514 +673,86 @@ Dieses Beispiel zeigt Folgendes:
 </toast>
 ```
 
-```CSharp
+<span data-ttu-id="75634-206">Gehen Sie wie folgt vor, um die Systemaktionen zum erneuten Erinnern und Schließen zu verwenden:</span><span class="sxs-lookup"><span data-stu-id="75634-206">To use the system snooze and dismiss actions, do the following:</span></span>
+
+-   <span data-ttu-id="75634-207">Angeben eines ToastButtonSnooze oder ToastButtonDismiss</span><span class="sxs-lookup"><span data-stu-id="75634-207">Specify a ToastButtonSnooze or ToastButtonDismiss</span></span>
+-   <span data-ttu-id="75634-208">Geben Sie optional eine benutzerdefinierte Inhaltszeichenfolge an:</span><span class="sxs-lookup"><span data-stu-id="75634-208">Optionally specify a custom content string:</span></span>
+    -   <span data-ttu-id="75634-209">Wenn Sie keine Zeichenfolge bereitstellen, verwenden wir für „Erneut erinnern“ und „Schließen“ automatisch lokalisierte Zeichenfolgen.</span><span class="sxs-lookup"><span data-stu-id="75634-209">If you don't provide a string, we'll automatically use localized strings for "Snooze" and "Dismiss".</span></span>
+-   <span data-ttu-id="75634-210">Geben Sie optional die *SelectionBoxId* an:</span><span class="sxs-lookup"><span data-stu-id="75634-210">Optionally specify the *SelectionBoxId*:</span></span>
+    -   <span data-ttu-id="75634-211">Wenn Sie nicht möchten, dass der Benutzer ein Intervall für das erneute Erinnern auswählen kann, sondern das erneute Erinnern an die Benachrichtigung nur einmal in einem vom System definierten (in allen Betriebssystemen einheitlichen) Zeitintervall erfolgt, legen Sie keinen Wert für &lt;input&gt; fest.</span><span class="sxs-lookup"><span data-stu-id="75634-211">If you don't want the user to select a snooze interval and instead just want your notification to snooze only once for a system-defined time interval (that is consistent across the OS), then don't construct any &lt;input&gt; at all.</span></span>
+    -   <span data-ttu-id="75634-212">Wenn Sie Intervalle für das erneute Erinnern angeben möchten:</span><span class="sxs-lookup"><span data-stu-id="75634-212">If you want to provide snooze interval selections:</span></span>
+        -   <span data-ttu-id="75634-213">Geben Sie *SelectionBoxId* in der Aktion für das erneute Erinnern an</span><span class="sxs-lookup"><span data-stu-id="75634-213">Specify *SelectionBoxId* in the snooze action</span></span>
+        -   <span data-ttu-id="75634-214">Stimmen Sie die ID der Eingabe auf den Wert für *SelectionBoxId* der Aktion für das erneute Erinnern ab</span><span class="sxs-lookup"><span data-stu-id="75634-214">Match the id of the input with the *SelectionBoxId* of the snooze action</span></span>
+        -   <span data-ttu-id="75634-215">Legen Sie für den Wert von *ToastSelectionBoxItem* eine positive ganze Zahl (nonNegativeInteger) fest, die dem Intervall für das erneute Erinnern in Minuten entspricht.</span><span class="sxs-lookup"><span data-stu-id="75634-215">Specify *ToastSelectionBoxItem*'s value to be a nonNegativeInteger which represents snooze interval in minutes.</span></span>
+
+
+
+## <a name="audio"></a><span data-ttu-id="75634-216">Audio</span><span class="sxs-lookup"><span data-stu-id="75634-216">Audio</span></span>
+
+<span data-ttu-id="75634-217">Benutzerdefinierte Audioeffekte wurden schon immer von Mobile unterstützt und wird in der Desktop-Version 1511 (Build 10586) oder einer neueren Version unterstützt.</span><span class="sxs-lookup"><span data-stu-id="75634-217">Custom audio has always been supported by Mobile, and is supported in Desktop Version 1511 (build 10586) or newer.</span></span> <span data-ttu-id="75634-218">Benutzerdefinierte Audioeffekte können über die folgenden Pfade verwiesen werden:</span><span class="sxs-lookup"><span data-stu-id="75634-218">Custom audio can be referenced via the following paths:</span></span>
+
+-   <span data-ttu-id="75634-219">ms-appx:///</span><span class="sxs-lookup"><span data-stu-id="75634-219">ms-appx:///</span></span>
+-   <span data-ttu-id="75634-220">ms-appdata:///</span><span class="sxs-lookup"><span data-stu-id="75634-220">ms-appdata:///</span></span>
+
+<span data-ttu-id="75634-221">Sie können alternativ aus der [Liste "ms-winsoundevents"](https://msdn.microsoft.com/library/windows/apps/br230842) auswählen, welche bisher immer auf beiden Plattformen unterstützt wurden.</span><span class="sxs-lookup"><span data-stu-id="75634-221">Alternatively, you can pick from the [list of ms-winsoundevents](https://msdn.microsoft.com/library/windows/apps/br230842), which have always been supported on both platforms.</span></span>
+
+```csharp
 ToastContent content = new ToastContent()
 {
-    Launch = "action=viewEvent&eventId=1983",
-    Scenario = ToastScenario.Reminder,
- 
-    Visual = new ToastVisual()
-    {
-        BindingGeneric = new ToastBindingGeneric()
-        {
-            Children =
-            {
-                new AdaptiveText()
-                {
-                    Text = "Adaptive Tiles Meeting"
-                },
- 
-                new AdaptiveText()
-                {
-                    Text = "Conf Room 2001 / Building 135"
-                },
- 
-                new AdaptiveText()
-                {
-                    Text = "10:00 AM - 10:30 AM"
-                }
-            }
-        }
-    },
- 
-    Actions = new ToastActionsCustom()
-    {
-        Inputs =
-        {
-            new ToastSelectionBox("snoozeTime")
-            {
-                DefaultSelectionBoxItemId = "15",
-                Items =
-                {
-                    new ToastSelectionBoxItem("5", "5 minutes"),
-                    new ToastSelectionBoxItem("15", "15 minutes"),
-                    new ToastSelectionBoxItem("60", "1 hour"),
-                    new ToastSelectionBoxItem("240", "4 hours"),
-                    new ToastSelectionBoxItem("1440", "1 day")
-                }
-            }
-        },
- 
-        Buttons =
-        {
-            new ToastButtonSnooze()
-            {
-                SelectionBoxId = "snoozeTime"
-            },
- 
-            new ToastButtonDismiss()
-        }
-    }
-};
-```
+    ...
 
-![Erinnerungsbenachrichtigung](images/adaptivetoasts-xmlsample07.jpg)
-
- 
-
-## <a name="handling-activation-foreground-and-background"></a>Behandeln der Aktivierung (Vordergrund und Hintergrund)
-
-Informationen zum Behandeln von Popupaktivierungen (wenn der Benutzer auf das Popup oder auf Schaltflächen im Popup klickt) finden Sie unter [Schnellstart: Senden einer lokalen Popupbenachrichtigung und Behandeln der Aktivierung](https://blogs.msdn.microsoft.com/tiles_and_toasts/2015/07/08/quickstart-sending-a-local-toast-notification-and-handling-activations-from-it-windows-10/).
-
-
-## <a name="schemas-ltvisualgt-and-ltaudiogt"></a>Schemas: &lt;visual&gt; und &lt;audio&gt;
-
-
-In den folgenden XML-Schemas bedeutet das Suffix „?“, dass ein Attribut optional ist.
-
-```
-<toast launch? duration? activationType? scenario? >
-  <visual lang? baseUri? addImageQuery? >
-    <binding template? lang? baseUri? addImageQuery? >
-      <text lang? hint-maxLines? >content</text>
-      <image src placement? alt? addImageQuery? hint-crop? />
-      <group>
-        <subgroup hint-weight? hint-textStacking? >
-          <text />
-          <image />
-        </subgroup>
-      </group>
-    </binding>
-  </visual>
-  <audio src? loop? silent? />
-</toast>
-```
-
-```
-ToastContent content = new ToastContent()
-{
-    Launch = ?,
-    Duration = ?,
-    ActivationType = ?,
-    Scenario = ?,
- 
-    Visual = new ToastVisual()
-    {
-        Language = ?,
-        BaseUri = ?,
-        AddImageQuery = ?,
-        BindingGeneric = new ToastBindingGeneric()
-        {
-            Children =
-            {
-                new AdaptiveText()
-                {
-                    Text = ?,
-                    Language = ?,
-                    HintMaxLines = ?
-                },
- 
-                new AdaptiveGroup()
-                {
-                    Children =
-                    {
-                        new AdaptiveSubgroup()
-                        {
-                            HintWeight = ?,
-                            HintTextStacking = ?,
-                            Children =
-                            {
-                                new AdaptiveText(),
-                                new AdaptiveImage()
-                            }
-                        }
-                    }
-                },
- 
-                new AdaptiveImage()
-                {
-                    Source = ?,
-                    AddImageQuery = ?,
-                    AlternateText = ?,
-                    HintCrop = ?
-                }
-            }
-        }
-    },
- 
     Audio = new ToastAudio()
     {
-        Src = ?,
-        Loop = ?,
-        Silent = ?
+        Src = new Uri("ms-appx:///Assets/NewMessage.mp3")
     }
-};
+}
 ```
 
-**Attribute in &lt;toast&gt;**
+```xml
+<toast launch="app-defined-string">
 
-launch?
+    ...
 
--   launch? = string
--   Dies ist ein optionales Attribut.
--   Eine Zeichenfolge wird an die Anwendung übergeben, wenn sie durch das Popup aktiviert wird.
--   Abhängig vom Wert für „activationType“ kann dieser Wert von der App im Vordergrund, innerhalb der Hintergrundaufgabe oder von einer anderen App empfangen werden, die per Protokollstart über die ursprüngliche App gestartet wird.
--   Das Format und der Inhalt dieser Zeichenfolge werden von der App für eigene Zwecke definiert.
--   Wenn der Benutzer zum Starten der zugeordneten App auf das Popup tippt oder klickt, stellt die Startzeichenfolge der App den Kontext bereit, um dem Benutzer eine Ansicht passend zum Popupinhalt zu ermöglichen, anstatt sie in der Standardgröße starten.
--   Ist die Aktivierung erfolgt, weil der Benutzer auf eine Aktion statt auf den Popuptext geklickt hat, erhält der Entwickler die vordefinierten „Argumente“ in diesem &lt;action&gt;-Tag zurück, statt des vordefinierten „launch“ im &lt;toast&gt;-Tag.
+    <audio src="ms-appx:///Assets/NewMessage.mp3"/>
 
-duration?
-
--   duration? = "short|long"
--   Dies ist ein optionales Attribut. Der Standardwert lautet „kurz“.
--   Es dient nur für bestimmte Szenarien und appCompat. Im Alarmszenario wird es nicht mehr benötigt.
--   Die Verwendung dieser Eigenschaft wird nicht empfohlen.
-
-activationType?
-
--   activationType? = "foreground | background | protocol | system"
--   Dies ist ein optionales Attribut.
--   Der Standardwert lautet „foreground“
-
-scenario?
-
--   scenario? = "default | alarm | reminder | incomingCall"
--   Dies ist ein optionales Attribut, der Standardwert lautet „default“.
--   Sie benötigen es nur, wenn es sich bei Ihrem Szenario um einen Alarm, eine Erinnerung oder einen eingehenden Anruf handelt.
--   Verwenden Sie es nicht, um die Benachrichtigung dauerhaft auf dem Bildschirm anzuzeigen.
-
-**Attribute in &lt;visual&gt;**
-
-lang?
-
--   In [diesem Artikel zu Elementschemas](https://msdn.microsoft.com/library/windows/apps/br230847) finden Sie ausführliche Informationen zu diesem optionalen Attribut.
-
-baseUri?
-
--   In [diesem Artikel zu Elementschemas](https://msdn.microsoft.com/library/windows/apps/br230847) finden Sie ausführliche Informationen zu diesem optionalen Attribut.
-
-addImageQuery?
-
--   In [diesem Artikel zu Elementschemas](https://msdn.microsoft.com/library/windows/apps/br230847) finden Sie ausführliche Informationen zu diesem optionalen Attribut.
-
-**Attribute in &lt;binding&gt;**
-
-template?
-
--   \[Important\] template? = "ToastGeneric"
--   Wenn Sie eines der neuen Features für adaptive und interaktive Benachrichtigungen verwenden, stellen Sie sicher, dass Sie mit der Vorlage „ToastGeneric“ statt mit der Legacyvorlage beginnen.
--   Möglicherweise können Sie die Legacyvorlagen mit den neuen Aktionen verwenden, aber da dies nicht der gewünschte Anwendungsfall ist, können wir keinen Erfolg garantieren.
-
-lang?
-
--   In [diesem Artikel zu Elementschemas](https://msdn.microsoft.com/library/windows/apps/br230847) finden Sie ausführliche Informationen zu diesem optionalen Attribut.
-
-baseUri?
-
--   In [diesem Artikel zu Elementschemas](https://msdn.microsoft.com/library/windows/apps/br230847) finden Sie ausführliche Informationen zu diesem optionalen Attribut.
-
-addImageQuery?
-
--   In [diesem Artikel zu Elementschemas](https://msdn.microsoft.com/library/windows/apps/br230847) finden Sie ausführliche Informationen zu diesem optionalen Attribut.
-
-**Attribute in &lt;text&gt;**
-
-lang?
-
--   In [diesem Artikel zu Elementschemas](https://msdn.microsoft.com/library/windows/apps/br230847) finden Sie ausführliche Informationen zu diesem optionalen Attribut.
-
-**Attribute in &lt;image&gt;**
-
-src
-
--   In [diesem Artikel zu Elementschemas](https://msdn.microsoft.com/library/windows/apps/br230844) finden Sie ausführliche Informationen zu diesem erforderlichen Attribut.
-
-placement?
-
--   placement? = "inline" | "appLogoOverride"
--   Dieses Attribut ist optional.
--   Es bestimmt, wo dieses Bild angezeigt wird.
--   „inline“ bedeutet innerhalb des Popuptextes, unter dem Text; „appLogoOverride“ steht für das Ersetzen des Anwendungssymbols (das in der oberen linken Ecke des Popups angezeigt wird).
--   Für jeden Platzierungswert ist maximal ein Bild möglich.
-
-alt?
-
--   In [diesem Artikel zu Elementschemas](https://msdn.microsoft.com/library/windows/apps/br230844) finden Sie ausführliche Informationen zu diesem optionalen Attribut.
-
-addImageQuery?
-
--   In [diesem Artikel zu Elementschemas](https://msdn.microsoft.com/library/windows/apps/br230844) finden Sie ausführliche Informationen zu diesem optionalen Attribut.
-
-hint-crop?
-
--   hint-crop? = "none" | "circle"
--   Dieses Attribut ist optional.
--   „none“ ist der Standardwert, sodass kein Zuschneiden möglich ist.
--   „circle“ schneidet das Bild in Kreisform. Verwenden Sie diese Option für Profilbilder eines Kontakts, Bilder einer Person usw.
-
-**Attribute in &lt;audio&gt;**
-
-src?
-
--   In [diesem Artikel zu Elementschemas](https://msdn.microsoft.com/library/windows/apps/br230842) finden Sie ausführliche Informationen zu diesem optionalen Attribut.
-
-loop?
-
--   In [diesem Artikel zu Elementschemas](https://msdn.microsoft.com/library/windows/apps/br230842) finden Sie ausführliche Informationen zu diesem optionalen Attribut.
-
-silent?
-
--   In [diesem Artikel zu Elementschemas](https://msdn.microsoft.com/library/windows/apps/br230842) finden Sie ausführliche Informationen zu diesem optionalen Attribut.
-
-## <a name="schemas-ltactiongt"></a>Schemas: &lt;action&gt;
-
-
-In den folgenden XML-Schemas bedeutet das Suffix „?“, dass ein Attribut optional ist.
-
-```
-<toast>
-  <visual>
-  </visual>
-  <audio />
-  <actions>
-    <input id type title? placeHolderContent? defaultInput? >
-      <selection id content />
-    </input>
-    <action content arguments activationType? imageUri? hint-inputId />
-  </actions>
 </toast>
 ```
 
-```
+<span data-ttu-id="75634-222">Erhalten Sie unter der [Seite](https://msdn.microsoft.com/library/windows/apps/br230842) Informationen zu Töne für Popupbenachrichtigungen.</span><span class="sxs-lookup"><span data-stu-id="75634-222">See the [audio schema page](https://msdn.microsoft.com/library/windows/apps/br230842) for information on audio in toast notifications.</span></span> <span data-ttu-id="75634-223">Informationen für das Senden einer Popupbenachrichtigung mit benutzerdefinierten Audioeffekten [finden Sie unter folgenden Blogbeitrag](https://blogs.msdn.microsoft.com/tiles_and_toasts/2016/06/18/quickstart-sending-a-toast-notification-with-custom-audio/).</span><span class="sxs-lookup"><span data-stu-id="75634-223">To learn how to send a toast using custom audio, [see this blog post](https://blogs.msdn.microsoft.com/tiles_and_toasts/2016/06/18/quickstart-sending-a-toast-notification-with-custom-audio/).</span></span>
+
+
+## <a name="alarms-reminders-and-incoming-calls"></a><span data-ttu-id="75634-224">Alarme, Erinnerungen und eingehende Anrufe</span><span class="sxs-lookup"><span data-stu-id="75634-224">Alarms, reminders, and incoming calls</span></span>
+
+<span data-ttu-id="75634-225">Um Alarme, Erinnerungen und Benachrichtigungen über eingehende Anrufe zu erstellen, verwenden Sie einfach eine normale Popupbenachrichtigung mit einem zugewiesenen Szenariowert.</span><span class="sxs-lookup"><span data-stu-id="75634-225">To create alarms, reminders, and incoming call notifications, you simply use a normal toast notification with a scenario value assigned to it.</span></span> <span data-ttu-id="75634-226">Das Szenario umfasst einige Verhaltensweisen, um eine konsistente und einheitliche Benutzererfahrung zu schaffen.</span><span class="sxs-lookup"><span data-stu-id="75634-226">The scenario adusts a few behaviors to create a consistent and unified user experience.</span></span>
+
+* <span data-ttu-id="75634-227">**Erinnerung**: Die Benachrichtigung bleibt auf dem Bildschirm, bis der Benutzer sie schließt oder eine Aktion ausführt.</span><span class="sxs-lookup"><span data-stu-id="75634-227">**Reminder**: The notification will stay on screen until the user dismisses it or takes action.</span></span> <span data-ttu-id="75634-228">Unter Windows Mobile wird das Popup auch vorab vergrößert angezeigt.</span><span class="sxs-lookup"><span data-stu-id="75634-228">On Windows Mobile, the toast will also show pre-expanded.</span></span> <span data-ttu-id="75634-229">Ein Erinnerungston wird wiedergegeben.</span><span class="sxs-lookup"><span data-stu-id="75634-229">A reminder sound will be played.</span></span>
+* <span data-ttu-id="75634-230">**Alarm**: Zusätzlich zu den Erinnerungsverhaltensweisen wird bei Alarmen zusätzlich eine Audioschleife mit einem standardmäßigen Alarmton wiedergegeben.</span><span class="sxs-lookup"><span data-stu-id="75634-230">**Alarm**: In addition to the reminder behaviors, alarms will additionally loop audio with a default alarm sound.</span></span>
+* <span data-ttu-id="75634-231">**IncomingCall**: Benachrichtigungen über eingehende Anrufe werden auf Windows Mobile-Geräten im Vollbildmodus angezeigt.</span><span class="sxs-lookup"><span data-stu-id="75634-231">**IncomingCall**: Incoming call notifications are displayed full screen on Windows Mobile devices.</span></span> <span data-ttu-id="75634-232">Andernfalls weisen sie die gleichen Verhaltensweisen wie Alarme auf, außer dass sie einen Klingelton verwenden.</span><span class="sxs-lookup"><span data-stu-id="75634-232">Otherwise, they have the same behaviors as alarms except they use ringtone audio.</span></span>
+
+```csharp
 ToastContent content = new ToastContent()
 {
-    Visual = ...
- 
-    Actions = new ToastActionsCustom()
-    {
-        Inputs =
-        {
-            new ToastSelectionBox("id")
-            {
-                Title = ?
-                DefaultSelectionBoxItemId = ?,
-                Items =
-                {
-                    new ToastSelectionBoxItem("id", "content")
-                }
-            },
- 
-            new ToastTextBox("id")
-            {
-                Title = ?,
-                PlaceholderContent = ?,
-                DefaultInput = ?
-            }
-        },
- 
-        Buttons =
-        {
-            new ToastButton("content", "args")
-            {
-                ActivationType = ?,
-                ImageUri = ?,
-                TextBoxId = ?
-            },
- 
-            new ToastButtonSnooze("content")
-            {
-                SelectionBoxId = "snoozeTime"
-            },
- 
-            new ToastButtonDismiss("content")
-        }
-    }
-};
+    Scenario = ToastScenario.Reminder,
+
+    ...
+}
 ```
 
-**Attribute in &lt;input&gt;**
+```xml
+<toast scenario="reminder" launch="app-defined-string">
 
-id
+    ...
 
--   id = string
--   Dieses Attribut ist erforderlich.
--   Das id-Attribut ist erforderlich und wird von Entwicklern verwendet, um Eingaben des Benutzers abzurufen, sobald die App (im Vordergrund oder im Hintergrund) aktiviert ist.
-
-type
-
--   type = "text | selection"
--   Dieses Attribut ist erforderlich.
--   Damit wird eine Texteingabe oder Eingabe aus einer Liste von vordefinierten Optionen angegeben.
--   Auf Mobilgeräten und Desktops wird damit angegeben, ob eine Eingabe per Textfeld oder per Listenfeld erfolgen soll.
-
-title?
-
--   title? = string
--   Das Title-Attribut ist optional. Entwickler können damit einen Titel für die Eingabe festlegen, damit Shells gerendert werden können.
--   Auf Mobilgeräten und Desktops wird dieser Titel über der Eingabe angezeigt.
-
-placeHolderContent?
-
--   placeHolderContent? = string
--   Das Attribut „placeHolderContent“ ist optional und der ausgegraute Hinweistext für den Texteingabetyp. Dieses Attribut wird ignoriert, wenn der Eingabetyp nicht „text“ lautet.
-
-defaultInput?
-
--   defaultInput? = string
--   Das Attribut „defaultInput“ ist optional und wird verwendet, um einen Standardeingabewert bereitzustellen.
--   Beim Eingabetyp „text“ wird dieser als Zeichenfolgeneingabe behandelt.
--   Lautet der Eingabetyp „selection“, wird angenommen, dass dieser die ID einer der verfügbaren Auswahl in diesen Eingabeelementen ist.
-
-**Attribute in &lt;selection&gt;**
-
-id
-
--   Dieses Attribut ist erforderlich. Hiermit wird die Auswahl des Benutzers ermittelt. Die ID wird an Ihre App zurückgegeben.
-
-content
-
--   Dieses Attribut ist erforderlich. Es enthält die Zeichenfolge, die für dieses Auswahlelement angezeigt werden soll.
-
-**Attribute in &lt;action&gt;**
-
-content
-
--   content = string
--   Das Inhaltsattribut ist erforderlich. Es enthält die Textzeichenfolge, die auf der Schaltfläche angezeigt wird.
-
-arguments
-
--   arguments = string
--   Die Argument-Attribut ist erforderlich. Es beschreibt die von der App definierten Daten, die die App später abrufen kann, nachdem sie vom Benutzer durch diese Aktion aktiviert wird.
-
-activationType?
-
--   activationType? = "foreground | background | protocol | system"
--   Das Attribut „activationType“ ist optional und der Standardwert lautet „foreground“.
--   Es beschreibt die Art der Aktivierung, die diese Aktion auslöst: im Vordergrund, im Hintergrund, Starten einer anderen App über Protokollstart oder Aufrufen einer Systemaktion.
-
-imageUri?
-
--   imageUri? = string
--   ImageUri ist optional und wird verwendet, um ein Bildsymbol für diese Aktion bereitzustellen, welches auf der Schaltfläche im Textkontext angezeigt wird.
-
-hint-inputId
-
--   hint-inputId = string
--   Das hint-inpudId-Attribut ist erforderlich. Es wird speziell für das schnelle Beantworten einer Nachricht verwendet.
--   Der Wert muss der ID entsprechen, die dem Eingabeelement zugeordnet werden soll.
--   Auf Mobilgeräten und Desktops wird die Schaltfläche rechts neben dem Eingabefeld platziert.
-
-## <a name="attributes-for-system-handled-actions"></a>Attribute für systemgesteuerte Aktionen
-
-
-Das System kann Aktionen für die Funktionen zum erneuen Erinnern und zum Schließen von Benachrichtigungen auslösen, wenn Sie nicht wünschen, dass Ihre App das erneute Erinnern/Neuplanen von Benachrichtigungen im Hintergrund ausführt. Systemgesteuerte Aktionen können kombiniert (oder einzeln festgelegt) werden. Wir raten jedoch davon ab, eine erneute Erinnerung ohne Möglichkeit zum Schließen zu implementieren.
-
-Kombinationsfeld für Systembefehle: SnoozeAndDismiss
-
-```
-<toast>
-  <visual>
-  </visual>
-  <actions hint-systemCommands="SnoozeAndDismiss" />
 </toast>
 ```
 
-```
-ToastContent content = new ToastContent()
-{
-    Visual = ...
- 
-    Actions = new ToastActionsSnoozeAndDismiss()
-};
-```
 
-Einzelne systemgesteuerte Aktionen
+## <a name="handling-activation"></a><span data-ttu-id="75634-233">Behandeln der Aktivierung</span><span class="sxs-lookup"><span data-stu-id="75634-233">Handling activation</span></span>
+<span data-ttu-id="75634-234">Informationen dazu, wie Sie Popupaktivierungen behandeln (der Benutzer klickt auf Ihr Popup oder auf Schaltflächen im Popup), finden Sie unter [Senden einer lokalen Popupbenachrichtigung](tiles-and-notifications-send-local-toast.md).</span><span class="sxs-lookup"><span data-stu-id="75634-234">To learn how to handle toast activations (the user clicking your toast or buttons on the toast), see [Send local toast](tiles-and-notifications-send-local-toast.md).</span></span>
 
-```
-<toast>
-  <visual>
-  </visual>
-  <actions>
-  <input id="snoozeTime" type="selection" defaultInput="10">
-    <selection id="5" content="5 minutes" />
-    <selection id="10" content="10 minutes" />
-    <selection id="20" content="20 minutes" />
-    <selection id="30" content="30 minutes" />
-    <selection id="60" content="1 hour" />
-  </input>
-  <action activationType="system" arguments="snooze" hint-inputId="snoozeTime" content=""/>
-  <action activationType="system" arguments="dismiss" content=""/>
-  </actions>
-</toast>
-```
-
-```
-ToastContent content = new ToastContent()
-{
-    Visual = ...
- 
-    Actions = new ToastActionsCustom()
-    {
-        Inputs =
-        {
-            new ToastSelectionBox("snoozeTime")
-            {
-                DefaultSelectionBoxItemId = "15",
-                Items =
-                {
-                    new ToastSelectionBoxItem("5", "5 minutes"),
-                    new ToastSelectionBoxItem("10", "10 minutes"),
-                    new ToastSelectionBoxItem("20", "20 minutes"),
-                    new ToastSelectionBoxItem("30", "30 minutes"),
-                    new ToastSelectionBoxItem("60", "1 hour")
-                }
-            }
-        },
- 
-        Buttons =
-        {
-            new ToastButtonSnooze()
-            {
-                SelectionBoxId = "snoozeTime"
-            },
- 
-            new ToastButtonDismiss()
-        }
-    }
-};
-```
-
-Gehen Sie wie folgt vor, um individuelle Aktionen zum erneuten Erinnern und Schließen zu erstellen:
-
--   Legen Sie Folgendes fest: activationType = "system"
--   Legen Sie Argumente fest = "snooze" | "dismiss"
--   Legen Sie Inhalt fest:
-    -   Wenn Sie wünschen, dass lokalisierte Zeichenfolgen für „snooze“ und „dismiss“ in den Aktionen angezeigt werden, legen Sie den Inhalt als leere Zeichenfolge fest: &lt;action content = ""/&gt;
-    -   Wenn Sie eine benutzerdefinierte Zeichenfolge wünschen, geben Sie seinen Wert an: &lt;action content="Erinnere mich später" /&gt;
--   Legen Sie Eingaben fest:
-    -   Wenn Sie nicht möchten, dass der Benutzer ein Intervall für das erneute Erinnern auswählen kann, sondern das erneute Erinnern an die Benachrichtigung nur einmal in einem vom System definierten (in allen Betriebssystemen einheitlichen) Zeitintervall erfolgt, legen Sie keinen Wert für &lt;input&gt; fest.
-    -   Wenn Sie mögliche Intervalle für das erneute Erinnern bereitstellen möchten:
-        -   Gegen Sie „hint-inputId“ in der Aktion für das erneute Erinnerung an.
-        -   Stimmen Sie die ID der Eingabe auf den Wert für „hint-inputId“ der Aktion für das erneute Erinnern ab: &lt;input id="snoozeTime"&gt;&lt;/input&gt;&lt;action hint-inputId="snoozeTime"/&gt;
-        -   Legen Sie für die Auswahl-ID eine positive ganze Zahl (nonNegativeInteger) fest, die dem Intervall für das erneute Erinnern in Minuten entspricht: &lt;selection id="240" /&gt; bedeutet, dass die erneute Erinnerung in vier Stunden erfolgt.
-        -   Stellen Sie sicher, dass der Wert für „defaultInput“ in &lt;input&gt; einer der IDs der untergeordneten &lt;selection&gt; -Elemente entspricht.
-        -   Sie können bis zu (jedoch nicht mehr als) 5 &lt;selection&gt;-Werte bereitstellen
 
  
+## <a name="related-topics"></a><span data-ttu-id="75634-235">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="75634-235">Related topics</span></span>
 
- 
-## <a name="related-topics"></a>Verwandte Themen
-
-* [Schnellstart: Senden einer lokalen Popupbenachrichtigung und Behandeln der Aktivierung](http://blogs.msdn.com/b/tiles_and_toasts/archive/2015/07/08/quickstart-sending-a-local-toast-notification-and-handling-activations-from-it-windows-10.aspx)
-* [Benachrichtigungsbibliothek auf GitHub](https://github.com/Microsoft/UWPCommunityToolkit/tree/dev/Notifications)
+* [<span data-ttu-id="75634-236">Senden einer lokalen Popupbenachrichtigung und Behandeln der Aktivierung</span><span class="sxs-lookup"><span data-stu-id="75634-236">Send a local toast and handle activation</span></span>](tiles-and-notifications-send-local-toast.md)
+* [<span data-ttu-id="75634-237">Benachrichtigungsbibliothek auf GitHub</span><span class="sxs-lookup"><span data-stu-id="75634-237">Notifications library on GitHub</span></span>](https://github.com/Microsoft/UWPCommunityToolkit/tree/dev/Notifications)

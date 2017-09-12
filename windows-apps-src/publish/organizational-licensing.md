@@ -1,95 +1,100 @@
 ---
 author: jnHs
-Description: "Sie können angeben, ob und wie Ihre App für Volume-Käufe über den Windows Store für Unternehmen angeboten wird, indem Sie die Einstellungen auf der Seite für Verfügbarkeit und Preise einer App-Übermittlung im Abschnitt Unternehmenslizenzierung festlegen."
+Description: "Sie können angeben, ob und wie Ihre App für Volume-Käufe über den Windows Store für Unternehmen und Microsoft Store für Bildungseinrichtungen angeboten wird, indem Sie die Einstellungen auf der Seite für Verfügbarkeit und Preise einer App-Übermittlung im Abschnitt Unternehmenslizenzierung festlegen."
 title: "Lizenzierungsoptionen für Unternehmen"
 ms.assetid: 1EB139B0-67E7-4F66-AAEF-491B1E52E96F
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 06/14/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 0fb906dc84085d3006be7f5f25d895e1150f9265
-ms.lasthandoff: 02/07/2017
-
+keywords: "Windows 10, UWP, Store für Unternehmen, Store für Bildungseinrichtungen, Organisation, Volumenlizenzierung"
+ms.openlocfilehash: 8bb44a65f2ded280cfe8eda39663b64ef2edb3c8
+ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/21/2017
 ---
-
-# <a name="organizational-licensing-options"></a>Lizenzierungsoptionen für Unternehmen
-
-
-Sie können angeben, ob und wie Ihre App für Volume-Käufe über den Windows Store für Unternehmen angeboten wird, indem Sie die Einstellungen auf der Seite [Verfügbarkeit und Preise](set-app-pricing-and-availability.md#organizational-licensing) einer App-Übermittlung im Abschnitt **Unternehmenslizenzierung** festlegen.
-
-Über diese Einstellung können Sie Ihre App wahlweise für Organisationen verfügbar zu machen, die mehrere Lizenzen für ihre Benutzer erwerben und bereitstellen. Ihnen wird so die Möglichkeit gegeben, Ihre Reichweite auf Windows 10-Geschäftskunden für verschiedene Gerätetypen einschließlich PCs, Tablets und Smartphones zu erweitern. Sie müssen zudem Organisationslizenzierung für [Branchen-Apps](distribute-lob-apps-to-enterprises.md) zulassen, die Sie direkt für Unternehmen veröffentlichen.
-
-> **Hinweis**  Die Auswahlmöglichkeiten für Ihre Apps werden unabhängig voneinander konfiguriert. Sie können Ihre Einstellungen für eine App jederzeit ändern, indem Sie eine neue Übermittlung erstellen, und die Änderungen werden wirksam, nachdem die Übermittlung den [Zertifizierungsprozess](the-app-certification-process.md) abgeschlossen hat.
-
-## <a name="allowing-your-app-to-be-offered-to-organizations"></a>Anbieten Ihrer App an Organisationen
-
-Standardmäßig ist das Kontrollkästchen **Meine App für Organisationen mit Store-verwalteter (online) Volumenlizenzierung und Verteilung verfügbar machen** aktiviert. Das bedeutet, Sie möchten Ihre App für die Aufnahme in App-Katalogen verfügbar machen, die Organisationen für den Erwerb von Volumenlizenzen zur Verfügung gestellt werden. Die Lizenzen sollen dabei über das Onlinelizenzierungssystem des Store verwaltet werden.
-
-> **Note**  Dies garantiert nicht, dass Ihre App für alle Unternehmen verfügbar gemacht wird.
-
-Wenn Sie Ihre App Organisationen nicht für den Erwerb von Volumenlizenzen anbieten möchten, deaktivieren Sie das Kontrollkästchen. Beachten Sie, dass diese Änderung erst erfolgt, nachdem die App den Zertifizierungsprozess abgeschlossen hat. Wenn Unternehmen bereits zuvor Lizenzen für Ihre App erworben haben, bleiben die Lizenzen weiterhin gültig, und Personen, die die App bereits besitzen, können sie weiterhin verwenden.
-
-> **Tipp**  Wenn Sie Branchen-Apps exklusiv für ein konkretes Unternehmen veröffentlichen möchten, können Sie eine Unternehmenszuordnung einrichten und dem Unternehmen das direkte Hinzufügen der Apps zum privaten Store gestatten. Weitere Informationen finden Sie unter [Verteilen von Branchen-Apps an Unternehmen](distribute-lob-apps-to-enterprises.md).
-
-## <a name="allowing-disconnected-offline-licensing"></a>Zulassen der getrennten (Offline-) Lizenzierung
+# <a name="organizational-licensing-options"></a><span data-ttu-id="00ec9-104">Lizenzierungsoptionen für Unternehmen</span><span class="sxs-lookup"><span data-stu-id="00ec9-104">Organizational licensing options</span></span>
 
 
-Viele Unternehmen benötigen Apps, die offline lizenziert werden können. Einige Unternehmen müssen beispielsweise Apps auf Geräten bereitstellen, die nur selten oder nie mit dem Internet verbunden sind. Wenn Sie Ihre App für diese Kunden verfügbar machen möchten, aktivieren Sie das Kontrollkästchen **Organisationsverwaltete (offline) Lizenzierung und Verteilung von Organisationen zulassen**.
+<span data-ttu-id="00ec9-105">Sie können angeben, ob und wie Ihre App für Volume-Käufe über den Windows Store für Unternehmen und den Windows Store für Bildungseinrichtungen angeboten wird, indem Sie die Einstellungen auf der Seite [Verfügbarkeit und Preise](set-app-pricing-and-availability.md#organizational-licensing) einer App-Übermittlung im Abschnitt **Unternehmenslizenzierung** festlegen.</span><span class="sxs-lookup"><span data-stu-id="00ec9-105">You can indicate whether and how your app can be offered for volume purchases through Microsoft Store for Business and Microsoft Store for Education in the **Organizational licensing** section of the [Pricing and availability](set-app-pricing-and-availability.md#organizational-licensing) page of an app submission.</span></span>
 
-> **Hinweis**  Dieses Kontrollkästchen ist standardmäßig deaktiviert. Aktivieren Sie das Kontrollkästchen, damit wir Ihre App für geprüfte Unternehmen verfügbar machen können, die sie mithilfe der organisationsverwalteten (offline) Lizenzierung installieren. Organisationen müssen eine zusätzliche Überprüfung durchlaufen, um kostenpflichtige Apps bei ihren Kunden auf diese Weise zu installieren.
+<span data-ttu-id="00ec9-106">Über diese Einstellung können Sie Ihre App wahlweise für Organisationen (Unternehmen und Bildungseinrichtungen) verfügbar zu machen, die mehrere Lizenzen für ihre Benutzer erwerben und bereitstellen. Ihnen wird so die Möglichkeit gegeben, Ihre Reichweite auf Windows10-Geschäftskunden für verschiedene Gerätetypen einschließlich PCs, Tablets und Smartphones zu erweitern.</span><span class="sxs-lookup"><span data-stu-id="00ec9-106">Through these settings, you can opt to allow your app to be made available to organizations (business and educational) who acquire and deploy multiple licenses for their users, providing an opportunity to increase your reach to organizations across Windows 10 device types, including PCs, tablets and phones.</span></span>
 
-Über die Offlinelizenzierung können Unternehmen Ihre App auf Volumenbasis erwerben, und anschließend auf den Geräten installieren, ohne auf das Lizenzierungssystem des Store zugreifen zu müssen. Die Organisation kann Ihr App-Paket zusammen mit einer Lizenz herunterladen, über die sie auf Geräten installiert werden kann (über ihre eigenen Verwaltungstools oder durch das Vorabladen von Apps auf Betriebssystem-Images), ohne eine Benachrichtigung an den Store senden zu müssen, wenn eine bestimmte Lizenz verwendet wurde. Durch Aktivieren dieses Szenario wird die Flexibilität bei der Bereitstellung drastisch erhöht und damit möglicherweise auch die Attraktivität Ihrer App bei diesen Kunden erheblich gesteigert.
+> [!NOTE]
+> <span data-ttu-id="00ec9-107">Die Auswahlmöglichkeiten für Ihre Apps werden unabhängig voneinander konfiguriert.</span><span class="sxs-lookup"><span data-stu-id="00ec9-107">Selections for each of your apps are configured independently from each other.</span></span> <span data-ttu-id="00ec9-108">Sie können Ihre Einstellungen für eine App jederzeit ändern, indem Sie eine neue Übermittlung erstellen, und die Änderungen werden wirksam, nachdem die Übermittlung den [Zertifizierungsprozess](the-app-certification-process.md) abgeschlossen hat.</span><span class="sxs-lookup"><span data-stu-id="00ec9-108">You may change your preferences for an app at any time by creating a new submission, and your changes will take effect after the submission completes the [certification process](the-app-certification-process.md).</span></span>
 
-> **Wichtig** Die Offlinelizenzierung wird für XAP-Pakete nicht unterstützt.  
+<span data-ttu-id="00ec9-109">Sie müssen zudem Organisationslizenzierung für jede [Branchen-Apps](distribute-lob-apps-to-enterprises.md) zulassen, die Sie direkt für Unternehmen veröffentlichen.</span><span class="sxs-lookup"><span data-stu-id="00ec9-109">You will also need to allow organizational licensing for any [line-of-business (LOB) apps](distribute-lob-apps-to-enterprises.md) that you publish directly to enterprises.</span></span>
+
+## <a name="allowing-your-app-to-be-offered-to-organizations"></a><span data-ttu-id="00ec9-110">Anbieten Ihrer App an Organisationen</span><span class="sxs-lookup"><span data-stu-id="00ec9-110">Allowing your app to be offered to organizations</span></span>
+
+<span data-ttu-id="00ec9-111">Standardmäßig ist das Kontrollkästchen **Meine App für Organisationen mit Store-verwalteter (online) Volumenlizenzierung und Verteilung verfügbar machen** aktiviert.</span><span class="sxs-lookup"><span data-stu-id="00ec9-111">By default, the box labeled **Make my app available to organizations with Store-managed (online) licensing and distribution** is checked.</span></span> <span data-ttu-id="00ec9-112">Das bedeutet, Sie möchten Ihre App für die Aufnahme in App-Katalogen verfügbar machen, die Organisationen für den Erwerb von Volumenlizenzen zur Verfügung gestellt werden. Die Lizenzen sollen dabei über das Onlinelizenzierungssystem des Store verwaltet werden.</span><span class="sxs-lookup"><span data-stu-id="00ec9-112">This means that you wish your app to be available for inclusion in catalogs of apps that will be made available to organizations for volume acquisition, with app licenses managed through the Store's online licensing system.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="00ec9-113">Dies garantiert nicht, dass Ihre App für alle Organisationen verfügbar gemacht wird.</span><span class="sxs-lookup"><span data-stu-id="00ec9-113">This does not guarantee that your app will be made available to all organizations.</span></span>
+
+<span data-ttu-id="00ec9-114">Wenn Sie Ihre App Organisationen nicht für den Erwerb von Volumenlizenzen anbieten möchten, deaktivieren Sie das Kontrollkästchen.</span><span class="sxs-lookup"><span data-stu-id="00ec9-114">If you prefer not to allow us to offer your app to organizations for volume acquisition, uncheck this box.</span></span> <span data-ttu-id="00ec9-115">Beachten Sie, dass diese Änderung erst erfolgt, nachdem die App den Zertifizierungsprozess abgeschlossen hat.</span><span class="sxs-lookup"><span data-stu-id="00ec9-115">Note that this change will only take place after the app completes the certification process.</span></span> <span data-ttu-id="00ec9-116">Wenn Unternehmen bereits zuvor Lizenzen für Ihre App erworben haben, bleiben die Lizenzen weiterhin gültig, und Personen, die die App bereits besitzen, können sie weiterhin verwenden.</span><span class="sxs-lookup"><span data-stu-id="00ec9-116">If any organizations had previously acquired licenses to your app, those licenses will still be valid, and the people who have the app already can continue to use it.</span></span>
+
+> [!TIP]
+> <span data-ttu-id="00ec9-117">Wenn Sie Branchen-Apps exklusiv für eine konkrete Organisation veröffentlichen möchten, können Sie eine Unternehmenszuordnung einrichten und der Organisation das direkte Hinzufügen der Apps zum privaten Speicher gestatten.</span><span class="sxs-lookup"><span data-stu-id="00ec9-117">To publish line-of-business (LOB) apps exclusively to a specific organization, you can set up an enterprise association and allow the organization to add the apps directly their private store.</span></span> <span data-ttu-id="00ec9-118">Weitere Informationen finden Sie unter [Verteilen von Branchen-Apps an Unternehmen](distribute-lob-apps-to-enterprises.md).</span><span class="sxs-lookup"><span data-stu-id="00ec9-118">For more info, see [Distribute LOB apps to enterprises](distribute-lob-apps-to-enterprises.md).</span></span>
+
+
+## <a name="allowing-disconnected-offline-licensing"></a><span data-ttu-id="00ec9-119">Zulassen der getrennten (Offline-) Lizenzierung</span><span class="sxs-lookup"><span data-stu-id="00ec9-119">Allowing disconnected (offline) licensing</span></span>
+
+<span data-ttu-id="00ec9-120">Viele Unternehmen benötigen Apps, die offline lizenziert werden können.</span><span class="sxs-lookup"><span data-stu-id="00ec9-120">Many organizations need apps enabled for offline licensing.</span></span> <span data-ttu-id="00ec9-121">Einige Unternehmen müssen beispielsweise Apps auf Geräten bereitstellen, die nur selten oder nie mit dem Internet verbunden sind.</span><span class="sxs-lookup"><span data-stu-id="00ec9-121">For example, some organizations need to deploy apps to devices which rarely or never connect to the internet.</span></span> <span data-ttu-id="00ec9-122">Wenn Sie Ihre App für diese Kunden verfügbar machen möchten, aktivieren Sie das Kontrollkästchen **Organisationsverwaltete (offline) Lizenzierung und Verteilung von Organisationen zulassen**.</span><span class="sxs-lookup"><span data-stu-id="00ec9-122">If you want to allow your app to be made available to these customers, check the box labeled **Allow organization-managed (offline) licensing and distribution for organizations**.</span></span>
+
+<span data-ttu-id="00ec9-123">Standardmäßig ist das Kontrollkästchen **deaktiviert**.</span><span class="sxs-lookup"><span data-stu-id="00ec9-123">Note that this box is **unchecked** by default.</span></span> <span data-ttu-id="00ec9-124">Aktivieren Sie das Kontrollkästchen, damit wir Ihre App für geprüfte Unternehmen verfügbar machen können, die sie mithilfe der organisationsverwalteten (offline) Lizenzierung installieren.</span><span class="sxs-lookup"><span data-stu-id="00ec9-124">You must check the box to allow us to make your app available to verified organizations who will install it using organization-managed (offline) licensing.</span></span> <span data-ttu-id="00ec9-125">Organisationen müssen eine zusätzliche Überprüfung durchlaufen, um kostenpflichtige Apps bei ihren Kunden auf diese Weise zu installieren.</span><span class="sxs-lookup"><span data-stu-id="00ec9-125">Organizations must go through additional validation in order to install paid apps to their end users in this way.</span></span>
+
+<span data-ttu-id="00ec9-126">Über die Offlinelizenzierung können Unternehmen Ihre App auf Volumenbasis erwerben, und anschließend auf den Geräten installieren, ohne auf das Lizenzierungssystem des Store zugreifen zu müssen.</span><span class="sxs-lookup"><span data-stu-id="00ec9-126">Offline licensing allows organizations to acquire your app on a volume basis, and then install the app without requiring each device to contact the Store's licensing system.</span></span> <span data-ttu-id="00ec9-127">Die Organisation kann Ihr App-Paket zusammen mit einer Lizenz herunterladen, über die sie auf Geräten installiert werden kann (über ihre eigenen Verwaltungstools oder durch das Vorabladen von Apps auf Betriebssystem-Images), ohne eine Benachrichtigung an den Store senden zu müssen, wenn eine bestimmte Lizenz verwendet wurde.</span><span class="sxs-lookup"><span data-stu-id="00ec9-127">The organization is able to download your app's package along with a license which lets them install it to devices (via their own management tools or by preloading apps on OS images) without notifying the Store when a particular license has been used.</span></span> <span data-ttu-id="00ec9-128">Durch Aktivieren dieses Szenario wird die Flexibilität bei der Bereitstellung drastisch erhöht und damit möglicherweise auch die Attraktivität Ihrer App bei diesen Kunden erheblich gesteigert.</span><span class="sxs-lookup"><span data-stu-id="00ec9-128">Enabling this scenario greatly increases deployment flexibility, and it may substantially increase the attractiveness of your app with these customers.</span></span>
+
+> [!IMPORTANT]
+> <span data-ttu-id="00ec9-129">Die Offlinelizenzierung wird für XAP-Pakete nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="00ec9-129">Offline licensing is not supported for .xap packages.</span></span>  
 
  
-## <a name="paid-app-support"></a>Unterstützung für kostenpflichtige Apps
+## <a name="paid-app-support"></a><span data-ttu-id="00ec9-130">Unterstützung für kostenpflichtige Apps</span><span class="sxs-lookup"><span data-stu-id="00ec9-130">Paid app support</span></span>
 
-Zurzeit können Entwicklerkonten in bestimmten Märkten Volumenkäufe kostenpflichtiger Apps im Windows Store für Unternehmen anbieten. 
+<span data-ttu-id="00ec9-131">Zurzeit können Entwicklerkonten in bestimmten Märkten Volumenkäufe kostenpflichtiger Apps im Microsoft Store für Unternehmen anbieten.</span><span class="sxs-lookup"><span data-stu-id="00ec9-131">Currently, developer accounts located in certain markets are able to offer paid apps for volume acquisition through Microsoft Store for Business.</span></span> 
 
-> **Hinweis** In einigen Märkten kann sich der Preis einer App im Windows Store für Unternehmen von dem Preis unterscheiden, der Einzelhandelskunden im Windows Store für das gleiche Preisniveau angezeigt wird. Die Auszahlung der Erlöse aus Unternehmenskäufen funktioniert genau wie die Auszahlung von Erlösen aus Verbraucherkäufen Ihrer App. Weitere Informationen finden Sie unter [Bezahlung](getting-paid-apps.md) und [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058).
+> [!NOTE]
+> <span data-ttu-id="00ec9-132">In einigen Märkten kann sich der Preis einer App im Windows Store für Unternehmen oder im Windows Store für Bildungseinrichtungen von dem Preis unterscheiden, der Einzelhandelskunden im Windows Store für das gleiche Preisniveau angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="00ec9-132">In some markets, the price shown for an app in Microsoft Store for Business or Microsoft Store for Education may be different than the price shown to retail customers in the Windows Store for the same price tier.</span></span> <span data-ttu-id="00ec9-133">Die Auszahlung der Erlöse aus Unternehmenskäufen funktioniert genau wie die Auszahlung von Erlösen aus Verbraucherkäufen Ihrer App.</span><span class="sxs-lookup"><span data-stu-id="00ec9-133">Payout of proceeds from organizational purchases works just the same as it does for consumer purchases of your app.</span></span> <span data-ttu-id="00ec9-134">Weitere Informationen finden Sie unter [Bezahlung](getting-paid-apps.md) und [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058).</span><span class="sxs-lookup"><span data-stu-id="00ec9-134">For more info, see [Getting paid](getting-paid-apps.md) and the [App Developer Agreement](https://msdn.microsoft.com/library/windows/apps/hh694058).</span></span> <span data-ttu-id="00ec9-135">Eine Liste der Märkte, in denen Microsoft Store für Unternehmen und Microsoft Store für Bildungseinrichtungen verfügbar sind, finden Sie unter [Microsoft Store für Unternehmen und Microsoft Store für Bildungseinrichtungen – Übersicht](https://technet.microsoft.com/itpro/windows/manage/windows-store-for-business-overview#supported-markets).</span><span class="sxs-lookup"><span data-stu-id="00ec9-135">For a list of markets where Microsoft Store for Business and Microsoft Store for Education are available, see [Microsoft Store for Business and Microsoft Store for Education overview](https://technet.microsoft.com/itpro/windows/manage/windows-store-for-business-overview#supported-markets).</span></span>
 
-Wenn Ihr Land oder Ihre Region unten nicht aufgeführt ist, werden Ihre kostenpflichtigen Apps zurzeit nicht im Windows Store für Unternehmen angeboten werden. Wenn dies der Fall ist, werden die Lizenzierungsoptionen für Unternehmen, die Sie für Ihre kostenpflichtigen Apps einrichten, möglicherweise zu einem späteren Zeitpunkt angewendet, da der Windows Store für Unternehmen kontinuierlich Unterstützung für die Übermittlung kostenpflichtiger Apps aus zusätzlichen Entwicklerkontenmärkten hinzufügt.
+<span data-ttu-id="00ec9-136">Wenn Ihr Land oder Ihre Region unten nicht aufgeführt ist, werden Ihre kostenpflichtigen Apps zurzeit nicht im Microsoft Store für Unternehmen und Microsoft Store für Bildungseinrichtungen angeboten werden.</span><span class="sxs-lookup"><span data-stu-id="00ec9-136">If your country or region is not listed below, your paid apps currently will not be offered in Microsoft Store for Business and Microsoft Store for Education.</span></span> <span data-ttu-id="00ec9-137">Wenn dies der Fall ist, werden die Lizenzierungsoptionen für Unternehmen, die Sie für Ihre kostenpflichtigen Apps einrichten, möglicherweise zu einem späteren Zeitpunkt angewendet, da wir später Unterstützung für die Übermittlung aus zusätzlichen Entwicklerkontenmärkten hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="00ec9-137">If this is the case, the organizational licensing selections you make for your paid apps may be applied at a later time, as we may add support for submissions from additional developer account markets in the future.</span></span>
 
-Zu diesem Zeitpunkt können Entwickler in den folgenden Ländern und Regionen über den Windows Store für Unternehmen kostenpflichtige Apps an Unternehmenskunden verteilen.
+<span data-ttu-id="00ec9-138">Zu diesem Zeitpunkt können Entwickler in den folgenden Ländern und Regionen über den Microsoft Store für Unternehmen und den Windows Store für Bildungseinrichtungen kostenpflichtige Apps an Unternehmenskunden verteilen.</span><span class="sxs-lookup"><span data-stu-id="00ec9-138">At this time, developers located in the following countries and regions can distribute paid apps to organizational customers via Microsoft Store for Business and Microsoft Store for Education:</span></span>
 
-- Österreich
-- Belgien
-- Bulgarien
-- Kanada
-- Kroatien
-- Zypern
-- Tschechische Republik
-- Dänemark
-- Estland
-- Finnland
-- Frankreich
-- Deutschland
-- Griechenland
-- Ungarn
-- Irland
-- Isle of Man
-- Italien
-- Lettland
-- Liechtenstein
-- Litauen
-- Luxemburg
-- Malta
-- Monaco
-- Niederlande
-- Norwegen
-- Polen
-- Portugal
-- Rumänien
-- Slowakei
-- Slowenien
-- Spanien
-- Schweden
-- Schweiz
-- Vereinigtes Königreich
-- USA
-
+- <span data-ttu-id="00ec9-139">Österreich</span><span class="sxs-lookup"><span data-stu-id="00ec9-139">Austria</span></span>
+- <span data-ttu-id="00ec9-140">Belgien</span><span class="sxs-lookup"><span data-stu-id="00ec9-140">Belgium</span></span>
+- <span data-ttu-id="00ec9-141">Bulgarien</span><span class="sxs-lookup"><span data-stu-id="00ec9-141">Bulgaria</span></span>
+- <span data-ttu-id="00ec9-142">Kanada</span><span class="sxs-lookup"><span data-stu-id="00ec9-142">Canada</span></span>
+- <span data-ttu-id="00ec9-143">Kroatien</span><span class="sxs-lookup"><span data-stu-id="00ec9-143">Croatia</span></span>
+- <span data-ttu-id="00ec9-144">Zypern</span><span class="sxs-lookup"><span data-stu-id="00ec9-144">Cyprus</span></span>
+- <span data-ttu-id="00ec9-145">Tschechische Republik</span><span class="sxs-lookup"><span data-stu-id="00ec9-145">Czech Republic</span></span>
+- <span data-ttu-id="00ec9-146">Dänemark</span><span class="sxs-lookup"><span data-stu-id="00ec9-146">Denmark</span></span>
+- <span data-ttu-id="00ec9-147">Estland</span><span class="sxs-lookup"><span data-stu-id="00ec9-147">Estonia</span></span>
+- <span data-ttu-id="00ec9-148">Finnland</span><span class="sxs-lookup"><span data-stu-id="00ec9-148">Finland</span></span>
+- <span data-ttu-id="00ec9-149">Frankreich</span><span class="sxs-lookup"><span data-stu-id="00ec9-149">France</span></span>
+- <span data-ttu-id="00ec9-150">Deutschland</span><span class="sxs-lookup"><span data-stu-id="00ec9-150">Germany</span></span>
+- <span data-ttu-id="00ec9-151">Griechenland</span><span class="sxs-lookup"><span data-stu-id="00ec9-151">Greece</span></span>
+- <span data-ttu-id="00ec9-152">Ungarn</span><span class="sxs-lookup"><span data-stu-id="00ec9-152">Hungary</span></span>
+- <span data-ttu-id="00ec9-153">Irland</span><span class="sxs-lookup"><span data-stu-id="00ec9-153">Ireland</span></span>
+- <span data-ttu-id="00ec9-154">Isle of Man</span><span class="sxs-lookup"><span data-stu-id="00ec9-154">Isle of Man</span></span>
+- <span data-ttu-id="00ec9-155">Italien</span><span class="sxs-lookup"><span data-stu-id="00ec9-155">Italy</span></span>
+- <span data-ttu-id="00ec9-156">Lettland</span><span class="sxs-lookup"><span data-stu-id="00ec9-156">Latvia</span></span>
+- <span data-ttu-id="00ec9-157">Liechtenstein</span><span class="sxs-lookup"><span data-stu-id="00ec9-157">Liechtenstein</span></span>
+- <span data-ttu-id="00ec9-158">Litauen</span><span class="sxs-lookup"><span data-stu-id="00ec9-158">Lithuania</span></span>
+- <span data-ttu-id="00ec9-159">Luxemburg</span><span class="sxs-lookup"><span data-stu-id="00ec9-159">Luxembourg</span></span>
+- <span data-ttu-id="00ec9-160">Malta</span><span class="sxs-lookup"><span data-stu-id="00ec9-160">Malta</span></span>
+- <span data-ttu-id="00ec9-161">Monaco</span><span class="sxs-lookup"><span data-stu-id="00ec9-161">Monaco</span></span>
+- <span data-ttu-id="00ec9-162">Niederlande</span><span class="sxs-lookup"><span data-stu-id="00ec9-162">Netherlands</span></span>
+- <span data-ttu-id="00ec9-163">Norwegen</span><span class="sxs-lookup"><span data-stu-id="00ec9-163">Norway</span></span>
+- <span data-ttu-id="00ec9-164">Polen</span><span class="sxs-lookup"><span data-stu-id="00ec9-164">Poland</span></span>
+- <span data-ttu-id="00ec9-165">Portugal</span><span class="sxs-lookup"><span data-stu-id="00ec9-165">Portugal</span></span>
+- <span data-ttu-id="00ec9-166">Rumänien</span><span class="sxs-lookup"><span data-stu-id="00ec9-166">Romania</span></span>
+- <span data-ttu-id="00ec9-167">Slowakei</span><span class="sxs-lookup"><span data-stu-id="00ec9-167">Slovakia</span></span>
+- <span data-ttu-id="00ec9-168">Slowenien</span><span class="sxs-lookup"><span data-stu-id="00ec9-168">Slovenia</span></span>
+- <span data-ttu-id="00ec9-169">Spanien</span><span class="sxs-lookup"><span data-stu-id="00ec9-169">Spain</span></span>
+- <span data-ttu-id="00ec9-170">Schweden</span><span class="sxs-lookup"><span data-stu-id="00ec9-170">Sweden</span></span>
+- <span data-ttu-id="00ec9-171">Schweiz</span><span class="sxs-lookup"><span data-stu-id="00ec9-171">Switzerland</span></span>
+- <span data-ttu-id="00ec9-172">Vereinigtes Königreich</span><span class="sxs-lookup"><span data-stu-id="00ec9-172">United Kingdom</span></span>
+- <span data-ttu-id="00ec9-173">USA</span><span class="sxs-lookup"><span data-stu-id="00ec9-173">United States</span></span>

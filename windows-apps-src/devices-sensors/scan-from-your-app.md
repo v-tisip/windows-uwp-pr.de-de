@@ -1,50 +1,50 @@
 ---
-author: DBirtolo
+author: PatrickFarley
 ms.assetid: 374D1983-60E0-4E18-ABBB-04775BAA0F0D
 title: Scannen aus Ihrer App
 description: "Erfahren Sie, wie Sie Inhalte über Ihre App mithilfe eines Flachbett-, Einzugs- oder automatisch konfigurierten Scanners scannen können."
-ms.author: dbirtolo
+ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 2dc8ef975c58ba5eb1d8b59bee773c7b6219a03c
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: c1db020b242c43808d356076641e375cb1581ed3
+ms.sourcegitcommit: d2ec178103f49b198da2ee486f1681e38dcc8e7b
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/28/2017
 ---
-# <a name="scan-from-your-app"></a>Scannen aus Ihrer App
+# <a name="scan-from-your-app"></a><span data-ttu-id="323da-104">Scannen aus Ihrer App</span><span class="sxs-lookup"><span data-stu-id="323da-104">Scan from your app</span></span>
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+<span data-ttu-id="323da-105">\[ Aktualisiert für UWP-Apps unter Windows 10.</span><span class="sxs-lookup"><span data-stu-id="323da-105">\[ Updated for UWP apps on Windows 10.</span></span> <span data-ttu-id="323da-106">Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span><span class="sxs-lookup"><span data-stu-id="323da-106">For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span></span>
 
-**Wichtige APIs**
+**<span data-ttu-id="323da-107">Wichtige APIs</span><span class="sxs-lookup"><span data-stu-id="323da-107">Important APIs</span></span>**
 
--   [**Windows.Devices.Scanners**](https://msdn.microsoft.com/library/windows/apps/Dn264250)
--   [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393)
--   [**DeviceClass**](https://msdn.microsoft.com/library/windows/apps/BR225381)
+-   [**<span data-ttu-id="323da-108">Windows.Devices.Scanners</span><span class="sxs-lookup"><span data-stu-id="323da-108">Windows.Devices.Scanners</span></span>**](https://msdn.microsoft.com/library/windows/apps/Dn264250)
+-   [**<span data-ttu-id="323da-109">DeviceInformation</span><span class="sxs-lookup"><span data-stu-id="323da-109">DeviceInformation</span></span>**](https://msdn.microsoft.com/library/windows/apps/BR225393)
+-   [**<span data-ttu-id="323da-110">DeviceClass</span><span class="sxs-lookup"><span data-stu-id="323da-110">DeviceClass</span></span>**](https://msdn.microsoft.com/library/windows/apps/BR225381)
 
-Erfahren Sie, wie Sie Inhalte über Ihre App mithilfe eines Flachbett-, Einzugs- oder automatisch konfigurierten Scanners scannen können.
+<span data-ttu-id="323da-111">Erfahren Sie, wie Sie Inhalte über Ihre App mithilfe eines Flachbett-, Einzugs- oder automatisch konfigurierten Scanners scannen können.</span><span class="sxs-lookup"><span data-stu-id="323da-111">Learn here how to scan content from your app by using a flatbed, feeder, or auto-configured scan source.</span></span>
 
-**Wichtig** Die [**Windows.Devices.Scanners**](https://msdn.microsoft.com/library/windows/apps/Dn264250)-APIs sind Teil der [Desktopgerätefamilie](https://msdn.microsoft.com/library/windows/apps/Dn894631). Apps können diese APIs nur in der Desktopversion von Windows 10 verwenden.
+<span data-ttu-id="323da-112">**Wichtig** Die [**Windows.Devices.Scanners**](https://msdn.microsoft.com/library/windows/apps/Dn264250)-APIs sind Teil der [Desktopgerätefamilie](https://msdn.microsoft.com/library/windows/apps/Dn894631).</span><span class="sxs-lookup"><span data-stu-id="323da-112">**Important**  The [**Windows.Devices.Scanners**](https://msdn.microsoft.com/library/windows/apps/Dn264250) APIs are part of the desktop [device family](https://msdn.microsoft.com/library/windows/apps/Dn894631).</span></span> <span data-ttu-id="323da-113">Apps können diese APIs nur in der Desktopversion von Windows 10 verwenden.</span><span class="sxs-lookup"><span data-stu-id="323da-113">Apps can use these APIs only on the desktop version of Windows 10.</span></span>
 
-Damit Sie über Ihre App scannen können, müssen Sie zunächst die verfügbaren Scanner auflisten, indem Sie ein neues [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393)-Objekt deklarieren und den [**DeviceClass**](https://msdn.microsoft.com/library/windows/apps/BR225381)-Typ abrufen. Nur Scanner, die lokal mit WIA-Treibern installiert sind, werden in Ihrer App aufgeführt und stehen darin zur Verfügung.
+<span data-ttu-id="323da-114">Damit Sie über Ihre App scannen können, müssen Sie zunächst die verfügbaren Scanner auflisten, indem Sie ein neues [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393)-Objekt deklarieren und den [**DeviceClass**](https://msdn.microsoft.com/library/windows/apps/BR225381)-Typ abrufen.</span><span class="sxs-lookup"><span data-stu-id="323da-114">To scan from your app, you must first list the available scanners by declaring a new [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) object and getting the [**DeviceClass**](https://msdn.microsoft.com/library/windows/apps/BR225381) type.</span></span> <span data-ttu-id="323da-115">Nur Scanner, die lokal mit WIA-Treibern installiert sind, werden in Ihrer App aufgeführt und stehen darin zur Verfügung.</span><span class="sxs-lookup"><span data-stu-id="323da-115">Only scanners that are installed locally with WIA drivers are listed and available to your app.</span></span>
 
-Nachdem Ihre App verfügbare Scanner aufgelistet hat, kann sie die auf dem Scannertyp basierenden automatisch konfigurierten Scaneinstellungen verwenden oder einfach unter Verwendung der verfügbaren Flachbett- oder Einzugsscanquelle scannen. Damit die automatisch konfigurierten Einstellungen verwendet werden können, muss der Scanner mit der automatischen Konfiguration kompatibel sein und darf nicht sowohl über einen Flachbett- als auch über einen Einzugsscanner verfügen. Weitere Informationen finden Sie unter [Automatisch konfigurierter Scan](https://msdn.microsoft.com/library/windows/hardware/Ff539393).
+<span data-ttu-id="323da-116">Nachdem Ihre App verfügbare Scanner aufgelistet hat, kann sie die auf dem Scannertyp basierenden automatisch konfigurierten Scaneinstellungen verwenden oder einfach unter Verwendung der verfügbaren Flachbett- oder Einzugsscanquelle scannen.</span><span class="sxs-lookup"><span data-stu-id="323da-116">After your app has listed available scanners, it can use the auto-configured scan settings based on the scanner type, or just scan using the available flatbed or feeder scan source.</span></span> <span data-ttu-id="323da-117">Damit die automatisch konfigurierten Einstellungen verwendet werden können, muss der Scanner mit der automatischen Konfiguration kompatibel sein und darf nicht sowohl über einen Flachbett- als auch über einen Einzugsscanner verfügen.</span><span class="sxs-lookup"><span data-stu-id="323da-117">To use auto-configured settings, the scanner must be enabled for auto-configuration must not be equipped with both a flatbed and a feeder scanner.</span></span> <span data-ttu-id="323da-118">Weitere Informationen finden Sie unter [Automatisch konfigurierter Scan](https://msdn.microsoft.com/library/windows/hardware/Ff539393).</span><span class="sxs-lookup"><span data-stu-id="323da-118">For more info, see [Auto-Configured Scanning](https://msdn.microsoft.com/library/windows/hardware/Ff539393).</span></span>
 
-## <a name="enumerate-available-scanners"></a>Aufzählen verfügbarer Scanner
+## <a name="enumerate-available-scanners"></a><span data-ttu-id="323da-119">Aufzählen verfügbarer Scanner</span><span class="sxs-lookup"><span data-stu-id="323da-119">Enumerate available scanners</span></span>
 
-Windows erkennt Scanner nicht automatisch. Sie müssen diesen Schritt ausführen, damit Ihre App mit dem Scanner kommunizieren kann. In diesem Beispiel erfolgt die Scannergeräteaufzählung mit dem [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459)-Namespace.
+<span data-ttu-id="323da-120">Windows erkennt Scanner nicht automatisch.</span><span class="sxs-lookup"><span data-stu-id="323da-120">Windows does not detect scanners automatically.</span></span> <span data-ttu-id="323da-121">Sie müssen diesen Schritt ausführen, damit Ihre App mit dem Scanner kommunizieren kann.</span><span class="sxs-lookup"><span data-stu-id="323da-121">You must perform this step in order for your app to communicate with the scanner.</span></span> <span data-ttu-id="323da-122">In diesem Beispiel erfolgt die Scannergeräteaufzählung mit dem [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459)-Namespace.</span><span class="sxs-lookup"><span data-stu-id="323da-122">In this example, the scanner device enumeration is done using the [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) namespace.</span></span>
 
-1.  Fügen Sie zunächst diese using-Anweisungen zu Ihrer Klassendefinitionsdatei hinzu.
+1.  <span data-ttu-id="323da-123">Fügen Sie zunächst diese using-Anweisungen zu Ihrer Klassendefinitionsdatei hinzu.</span><span class="sxs-lookup"><span data-stu-id="323da-123">First, add these using statements to your class definition file.</span></span>
 
 ``` csharp
     using Windows.Devices.Enumeration;
     using Windows.Devices.Scanners;
 ```
 
-2.  Implementieren Sie dann die Geräteüberwachung, um mit der Scanneraufzählung zu beginnen. Weitere Informationen finden Sie unter [Aufzählen von Geräten](enumerate-devices.md).
+2.  <span data-ttu-id="323da-124">Implementieren Sie dann die Geräteüberwachung, um mit der Scanneraufzählung zu beginnen.</span><span class="sxs-lookup"><span data-stu-id="323da-124">Next, implement a device watcher to start enumerating scanners.</span></span> <span data-ttu-id="323da-125">Weitere Informationen finden Sie unter [Aufzählen von Geräten](enumerate-devices.md).</span><span class="sxs-lookup"><span data-stu-id="323da-125">For more info, see [Enumerate devices](enumerate-devices.md).</span></span>
 
 ```csharp
     void InitDeviceWatcher()
@@ -58,7 +58,7 @@ Windows erkennt Scanner nicht automatisch. Sie müssen diesen Schritt ausführen
     }
 ```
 
-3.  Erstellen Sie einen Ereignishandler für den Fall, dass ein Scanner hinzugefügt wird.
+3.  <span data-ttu-id="323da-126">Erstellen Sie einen Ereignishandler für den Fall, dass ein Scanner hinzugefügt wird.</span><span class="sxs-lookup"><span data-stu-id="323da-126">Create an event handler for when a scanner is added.</span></span>
 
 ```csharp
     private async void OnScannerAdded(DeviceWatcher sender,  DeviceInformation deviceInfo)
@@ -87,34 +87,34 @@ Windows erkennt Scanner nicht automatisch. Sie müssen diesen Schritt ausführen
     }
 ```
 
-## <a name="scan"></a>Überprüfen
+## <a name="scan"></a><span data-ttu-id="323da-127">Überprüfen</span><span class="sxs-lookup"><span data-stu-id="323da-127">Scan</span></span>
 
-1.  **Abrufen eines ImageScanner-Objekts**
+1.  **<span data-ttu-id="323da-128">Abrufen eines ImageScanner-Objekts</span><span class="sxs-lookup"><span data-stu-id="323da-128">Get an ImageScanner object</span></span>**
 
-Für jeden [**ImageScannerScanSource**](https://msdn.microsoft.com/library/windows/apps/Dn264238)-Aufzählungstyp (ob **Default**, **AutoConfigured**, **Flatbed** oder **Feeder**) müssen Sie zunächst ein [**ImageScanner**](https://msdn.microsoft.com/library/windows/apps/Dn263806)-Objekt erstellen, indem Sie wie folgt die [**ImageScanner.FromIdAsync**](https://msdn.microsoft.com/library/windows/apps/windows.devices.scanners.imagescanner.fromidasync)-Methode aufrufen.
+<span data-ttu-id="323da-129">Für jeden [**ImageScannerScanSource**](https://msdn.microsoft.com/library/windows/apps/Dn264238)-Aufzählungstyp (ob **Default**, **AutoConfigured**, **Flatbed** oder **Feeder**) müssen Sie zunächst ein [**ImageScanner**](https://msdn.microsoft.com/library/windows/apps/Dn263806)-Objekt erstellen, indem Sie wie folgt die [**ImageScanner.FromIdAsync**](https://msdn.microsoft.com/library/windows/apps/windows.devices.scanners.imagescanner.fromidasync)-Methode aufrufen.</span><span class="sxs-lookup"><span data-stu-id="323da-129">For each [**ImageScannerScanSource**](https://msdn.microsoft.com/library/windows/apps/Dn264238) enumeration type, whether it's **Default**, **AutoConfigured**, **Flatbed**, or **Feeder**, you must first create an [**ImageScanner**](https://msdn.microsoft.com/library/windows/apps/Dn263806) object by calling the [**ImageScanner.FromIdAsync**](https://msdn.microsoft.com/library/windows/apps/windows.devices.scanners.imagescanner.fromidasync) method, like this.</span></span>
 
  ```csharp
     ImageScanner myScanner = await ImageScanner.FromIdAsync(deviceId);
  ```
 
-2.  **Einfach scannen**
+2.  **<span data-ttu-id="323da-130">Einfach scannen</span><span class="sxs-lookup"><span data-stu-id="323da-130">Just scan</span></span>**
 
-Zum Scan mit den Standardeinstellungen ist Ihre App bei der Auswahl eines Scanners vom [**Windows.Devices.Scanners**](https://msdn.microsoft.com/library/windows/apps/Dn264250)-Namespace abhängig und scannt aus dieser Quelle. Es werden keine Scaneinstellungen geändert. Die möglichen Scanner sind „Automatisch konfiguriert“, „Flachbett“ und „Einzug“. Bei dieser Scanart kommt es wahrscheinlich zu einem erfolgreichen Scanvorgang, selbst wenn der Scan von der falschen Quelle aus stattfindet (wie Flachbett anstelle von Einzug).
+<span data-ttu-id="323da-131">Zum Scan mit den Standardeinstellungen ist Ihre App bei der Auswahl eines Scanners vom [**Windows.Devices.Scanners**](https://msdn.microsoft.com/library/windows/apps/Dn264250)-Namespace abhängig und scannt aus dieser Quelle.</span><span class="sxs-lookup"><span data-stu-id="323da-131">To scan with the default settings, your app relies on the [**Windows.Devices.Scanners**](https://msdn.microsoft.com/library/windows/apps/Dn264250) namespace to select a scanner and scans from that source.</span></span> <span data-ttu-id="323da-132">Es werden keine Scaneinstellungen geändert.</span><span class="sxs-lookup"><span data-stu-id="323da-132">No scan settings are changed.</span></span> <span data-ttu-id="323da-133">Die möglichen Scanner sind „Automatisch konfiguriert“, „Flachbett“ und „Einzug“.</span><span class="sxs-lookup"><span data-stu-id="323da-133">The possible scanners are auto-configure, flatbed, or feeder.</span></span> <span data-ttu-id="323da-134">Bei dieser Scanart kommt es wahrscheinlich zu einem erfolgreichen Scanvorgang, selbst wenn der Scan von der falschen Quelle aus stattfindet (wie Flachbett anstelle von Einzug).</span><span class="sxs-lookup"><span data-stu-id="323da-134">This type of scan will most likely produce a successful scan operation, even if it scans from the wrong source, like flatbed instead of feeder.</span></span>
 
-**Hinweis**: Wenn der Benutzer das Dokument zum Scannen in den Einzug legt, erfolgt der Scanvorgang stattdessen über das Flachbett. Wenn der Benutzer versucht, aus einem leeren Einzug zu scannen, generiert der Scanauftrag keine gescannten Dateien.
+<span data-ttu-id="323da-135">**Hinweis**: Wenn der Benutzer das Dokument zum Scannen in den Einzug legt, erfolgt der Scanvorgang stattdessen über das Flachbett.</span><span class="sxs-lookup"><span data-stu-id="323da-135">**Note**  If the user places the document to scan in the feeder, the scanner will scan from the flatbed instead.</span></span> <span data-ttu-id="323da-136">Wenn der Benutzer versucht, aus einem leeren Einzug zu scannen, generiert der Scanauftrag keine gescannten Dateien.</span><span class="sxs-lookup"><span data-stu-id="323da-136">If the user tries to scan from an empty feeder, the scan job won't produce any scanned files.</span></span>
  
 ```csharp
     var result = await myScanner.ScanFilesToFolderAsync(ImageScannerScanSource.Default,
         folder).AsTask(cancellationToken.Token, progress);
 ```
 
-3.  **Scannen aus der Quelle „Automatisch konfiguriert“, „Flachbett“ oder „Einzug“**
+3.  **<span data-ttu-id="323da-137">Scannen aus der Quelle „Automatisch konfiguriert“, „Flachbett“ oder „Einzug“</span><span class="sxs-lookup"><span data-stu-id="323da-137">Scan from Auto-configured, Flatbed, or Feeder source</span></span>**
 
-Ihre App kann den [automatisch konfigurierten Scan](https://msdn.microsoft.com/library/windows/hardware/Ff539393) des Geräts mit den optimalen Scaneinstellungen verwenden. Bei dieser Option kann das Gerät selbst die besten Scaneinstellungen, wie Farbmodus und Scanauflösung, basierend auf dem zu scannenden Inhalt bestimmen. Das Gerät wählt die Scaneinstellungen zur Laufzeit für jeden neuen Scanauftrag.
+<span data-ttu-id="323da-138">Ihre App kann den [automatisch konfigurierten Scan](https://msdn.microsoft.com/library/windows/hardware/Ff539393) des Geräts mit den optimalen Scaneinstellungen verwenden.</span><span class="sxs-lookup"><span data-stu-id="323da-138">Your app can use the device's [Auto-Configured Scanning](https://msdn.microsoft.com/library/windows/hardware/Ff539393) to scan with the most optimal scan settings.</span></span> <span data-ttu-id="323da-139">Bei dieser Option kann das Gerät selbst die besten Scaneinstellungen, wie Farbmodus und Scanauflösung, basierend auf dem zu scannenden Inhalt bestimmen.</span><span class="sxs-lookup"><span data-stu-id="323da-139">With this option, the device itself can determine the best scan settings, like color mode and scan resolution, based on the content being scanned.</span></span> <span data-ttu-id="323da-140">Das Gerät wählt die Scaneinstellungen zur Laufzeit für jeden neuen Scanauftrag.</span><span class="sxs-lookup"><span data-stu-id="323da-140">The device selects the scan settings at run time for each new scan job.</span></span>
 
-**Hinweis**: Da diese Funktion nicht von allen Scannern unterstützt wird, muss die App prüfen, ob der Scanner die Funktion unterstützt, bevor sie diese Einstellung verwendet.
+<span data-ttu-id="323da-141">**Hinweis**: Da diese Funktion nicht von allen Scannern unterstützt wird, muss die App prüfen, ob der Scanner die Funktion unterstützt, bevor sie diese Einstellung verwendet.</span><span class="sxs-lookup"><span data-stu-id="323da-141">**Note**  Not all scanners support this feature, so the app must check if the scanner supports this feature before using this setting.</span></span>
 
-In diesem Beispiel prüft die App zunächst, ob der Scanner die automatische Konfiguration unterstützt, und startet dann den Scanvorgang. Um einen Flachbett- oder Einzugsscanner anzugeben, ersetzen Sie einfach **AutoConfigured** durch **Flatbed** oder **Feeder**.
+<span data-ttu-id="323da-142">In diesem Beispiel prüft die App zunächst, ob der Scanner die automatische Konfiguration unterstützt, und startet dann den Scanvorgang.</span><span class="sxs-lookup"><span data-stu-id="323da-142">In this example, the app first checks if the scanner is capable of auto-configuration and then scans.</span></span> <span data-ttu-id="323da-143">Um einen Flachbett- oder Einzugsscanner anzugeben, ersetzen Sie einfach **AutoConfigured** durch **Flatbed** oder **Feeder**.</span><span class="sxs-lookup"><span data-stu-id="323da-143">To specify either flatbed or feeder scanner, simply replace **AutoConfigured** with **Flatbed** or **Feeder**.</span></span>
 
 ```csharp
     if (myScanner.IsScanSourceSupported(ImageScannerScanSource.AutoConfigured))
@@ -127,9 +127,9 @@ In diesem Beispiel prüft die App zunächst, ob der Scanner die automatische Kon
     }
 ```
 
-## <a name="preview-the-scan"></a>Scanvorschau
+## <a name="preview-the-scan"></a><span data-ttu-id="323da-144">Scanvorschau</span><span class="sxs-lookup"><span data-stu-id="323da-144">Preview the scan</span></span>
 
-Sie können Code hinzufügen, um eine Scanvorschau vor dem Scan in einen Ordner anzuzeigen. Im folgenden Beispiel prüft die App, ob der **Flatbed**-Scanner die Vorschau unterstützt, und zeigt dann die Scanvorschau an.
+<span data-ttu-id="323da-145">Sie können Code hinzufügen, um eine Scanvorschau vor dem Scan in einen Ordner anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="323da-145">You can add code to preview the scan before scanning to a folder.</span></span> <span data-ttu-id="323da-146">Im folgenden Beispiel prüft die App, ob der **Flatbed**-Scanner die Vorschau unterstützt, und zeigt dann die Scanvorschau an.</span><span class="sxs-lookup"><span data-stu-id="323da-146">In the example below, the app checks if the **Flatbed** scanner supports preview, then previews the scan.</span></span>
 
 ```csharp
 if (myScanner.IsPreviewSupported(ImageScannerScanSource.Flatbed))
@@ -140,9 +140,9 @@ if (myScanner.IsPreviewSupported(ImageScannerScanSource.Flatbed))
                     ImageScannerScanSource.Flatbed, stream);
 ```
 
-## <a name="cancel-the-scan"></a>Abbrechen des Scans
+## <a name="cancel-the-scan"></a><span data-ttu-id="323da-147">Abbrechen des Scans</span><span class="sxs-lookup"><span data-stu-id="323da-147">Cancel the scan</span></span>
 
-Sie können wie folgt zulassen, dass Benutzer den Scanauftrag während der Ausführung abbrechen.
+<span data-ttu-id="323da-148">Sie können wie folgt zulassen, dass Benutzer den Scanauftrag während der Ausführung abbrechen.</span><span class="sxs-lookup"><span data-stu-id="323da-148">You can let users cancel the scan job midway through a scan, like this.</span></span>
 
 ```csharp
 void CancelScanning()
@@ -160,22 +160,21 @@ void CancelScanning()
 }
 ```
 
-## <a name="scan-with-progress"></a>Scannen mit Fortschritt
+## <a name="scan-with-progress"></a><span data-ttu-id="323da-149">Scannen mit Fortschritt</span><span class="sxs-lookup"><span data-stu-id="323da-149">Scan with progress</span></span>
 
-1.  Erstellen eines **System.Threading.CancellationTokenSource**-Objekts.
+1.  <span data-ttu-id="323da-150">Erstellen eines **System.Threading.CancellationTokenSource**-Objekts.</span><span class="sxs-lookup"><span data-stu-id="323da-150">Create a **System.Threading.CancellationTokenSource** object.</span></span>
 
 ```csharp
 cancellationToken = new CancellationTokenSource();
 ```
 
-2.  Richten Sie den Fortschritts-Ereignishandler ein, und rufen Sie den Scanfortschritt ab.
+2.  <span data-ttu-id="323da-151">Richten Sie den Fortschritts-Ereignishandler ein, und rufen Sie den Scanfortschritt ab.</span><span class="sxs-lookup"><span data-stu-id="323da-151">Set up the progress event handler and get the progress of the scan.</span></span>
 
 ```csharp
     rootPage.NotifyUser("Scanning", NotifyType.StatusMessage);
     var progress = new Progress<UInt32>(ScanProgress);
 ```
 
-## <a name="scanning-to-the-pictures-library"></a>Scannen in die Bildbibliothek
+## <a name="scanning-to-the-pictures-library"></a><span data-ttu-id="323da-152">Scannen in die Bildbibliothek</span><span class="sxs-lookup"><span data-stu-id="323da-152">Scanning to the pictures library</span></span>
 
-Benutzer können dynamisch mit der [**FolderPicker**](https://msdn.microsoft.com/library/windows/apps/BR207881)-Klasse in beliebige Ordner scannen. Sie müssen aber die Funktion *Bildbibliothek* im Manifest deklarieren, damit Benutzer in diesen Ordner scannen können. Weitere Informationen zu App-Funktionen finden Sie unter [Deklarationen der App-Funktionen](https://msdn.microsoft.com/library/windows/apps/Mt270968).
-
+<span data-ttu-id="323da-153">Benutzer können dynamisch mit der [**FolderPicker**](https://msdn.microsoft.com/library/windows/apps/BR207881)-Klasse in beliebige Ordner scannen. Sie müssen aber die Funktion *Bildbibliothek* im Manifest deklarieren, damit Benutzer in diesen Ordner scannen können.</span><span class="sxs-lookup"><span data-stu-id="323da-153">Users can scan to any folder dynamically using the [**FolderPicker**](https://msdn.microsoft.com/library/windows/apps/BR207881) class, but you must declare the *Pictures Library* capability in the manifest to allow users to scan to that folder.</span></span> <span data-ttu-id="323da-154">Weitere Informationen zu App-Funktionen finden Sie unter [Deklarationen der App-Funktionen](https://msdn.microsoft.com/library/windows/apps/Mt270968).</span><span class="sxs-lookup"><span data-stu-id="323da-154">For more info on app capabilities, see [App capability declarations](https://msdn.microsoft.com/library/windows/apps/Mt270968).</span></span>

@@ -1,89 +1,86 @@
 ---
 author: mcleanbyron
 ms.assetid: E59FB6FE-5318-46DF-B050-73F599C3972A
-description: "Verwenden Sie diese Methode der Windows Store-Übermittlungs-API zum Abrufen von Informationen über In-App-Einkäufe für eine App, die für Ihr Windows Dev Center-Konto registriert wurde."
-title: "Abrufen von Add-Ons für eine App mithilfe der Windows Store-Übermittlungs-API"
+description: "Verwenden Sie diese Methode in der Windows Store-Übermittlungs-API zum Abrufen von Informationen über In-App-Einkäufe für eine App, die für Ihr Windows Dev Center-Konto registriert wurde."
+title: "Abrufen von Add-Ons für eine App"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Windows Store-Übermittlungs-API, Add-Ons, In-App-Produkte, IAPs"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 73ce08bfa72a8508d71811267f8cd8e2377a3613
-ms.lasthandoff: 02/07/2017
-
+keywords: "Windows10, UWP, Windows Store-Übermittlungs-API, Add-Ons, In-App-Produkte, IAPs"
+ms.openlocfilehash: 9c39bfe9754805dccf5ccb82c9834d6d4deea385
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/09/2017
 ---
-
-# <a name="get-add-ons-for-an-app-using-the-windows-store-submission-api"></a>Abrufen von Add-Ons für eine App mithilfe der Windows Store-Übermittlungs-API
-
+# <a name="get-add-ons-for-an-app"></a><span data-ttu-id="f3c43-104">Abrufen von Add-Ons für eine App</span><span class="sxs-lookup"><span data-stu-id="f3c43-104">Get add-ons for an app</span></span>
 
 
 
-Verwenden Sie diese Methode der Windows Store-Übermittlungs-API, die Add-Ons (auch als In-App-Produkte oder IAPs bezeichnet) für eine App auflisten, die für Ihr Windows Dev Center-Konto registriert wurde.
 
-## <a name="prerequisites"></a>Voraussetzungen
+<span data-ttu-id="f3c43-105">Verwenden Sie diese Methode in der Windows Store-Übermittlungs-API zum Auflisten der Add-Ons für eine App, die für Ihr Windows Dev Center-Konto registriert ist.</span><span class="sxs-lookup"><span data-stu-id="f3c43-105">Use this method in the Windows Store submission API to list the add-ons for an app that is registered to your Windows Dev Center account.</span></span>
 
-Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
+## <a name="prerequisites"></a><span data-ttu-id="f3c43-106">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="f3c43-106">Prerequisites</span></span>
 
-* Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](create-and-manage-submissions-using-windows-store-services.md#prerequisites) für die Windows Store-Übermittlungs-API.
-* [Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken erhalten haben, haben Sie 60 Minuten Zeit, das Token zu verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
+<span data-ttu-id="f3c43-107">Zur Verwendung dieser Methode sind folgende Schritte erforderlich:</span><span class="sxs-lookup"><span data-stu-id="f3c43-107">To use this method, you need to first do the following:</span></span>
 
->**Hinweis**&nbsp;&nbsp;Diese Methode kann nur für Windows Dev Center-Konten verwendet werden, die eine Berechtigung zur Verwendung der Windows Store-Übermittlungs-API erhalten haben. Diese Berechtigung ist nicht für alle Konten aktiviert.
+* <span data-ttu-id="f3c43-108">Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](create-and-manage-submissions-using-windows-store-services.md#prerequisites) für die Windows Store-Übermittlungs-API.</span><span class="sxs-lookup"><span data-stu-id="f3c43-108">If you have not done so already, complete all the [prerequisites](create-and-manage-submissions-using-windows-store-services.md#prerequisites) for the Windows Store submission API.</span></span>
+* <span data-ttu-id="f3c43-109">[Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="f3c43-109">[Obtain an Azure AD access token](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) to use in the request header for this method.</span></span> <span data-ttu-id="f3c43-110">Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60 Minuten lang verwenden, bevor es abläuft.</span><span class="sxs-lookup"><span data-stu-id="f3c43-110">After you obtain an access token, you have 60 minutes to use it before it expires.</span></span> <span data-ttu-id="f3c43-111">Wenn das Token abgelaufen ist, können Sie ein neues abrufen.</span><span class="sxs-lookup"><span data-stu-id="f3c43-111">After the token expires, you can obtain a new one.</span></span>
 
-## <a name="request"></a>Anforderung
+## <a name="request"></a><span data-ttu-id="f3c43-112">Anforderung</span><span class="sxs-lookup"><span data-stu-id="f3c43-112">Request</span></span>
 
-Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie Verwendungsbeispiele und Beschreibungen des Header und Anforderungstexts.
+<span data-ttu-id="f3c43-113">Diese Methode hat die folgende Syntax.</span><span class="sxs-lookup"><span data-stu-id="f3c43-113">This method has the following syntax.</span></span> <span data-ttu-id="f3c43-114">In den folgenden Abschnitten finden Sie Verwendungsbeispiele und Beschreibungen des Header und Anforderungstexts.</span><span class="sxs-lookup"><span data-stu-id="f3c43-114">See the following sections for usage examples and descriptions of the header and request body.</span></span>
 
-| Methode | Anforderungs-URI                                                      |
+| <span data-ttu-id="f3c43-115">Methode</span><span class="sxs-lookup"><span data-stu-id="f3c43-115">Method</span></span> | <span data-ttu-id="f3c43-116">Anforderungs-URI</span><span class="sxs-lookup"><span data-stu-id="f3c43-116">Request URI</span></span>                                                      |
 |--------|------------------------------------------------------------------|
-| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listinappproducts``` |
+| <span data-ttu-id="f3c43-117">GET</span><span class="sxs-lookup"><span data-stu-id="f3c43-117">GET</span></span>    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listinappproducts``` |
 
 <span/>
  
-### <a name="request-header"></a>Anforderungsheader
+### <a name="request-header"></a><span data-ttu-id="f3c43-118">Anforderungsheader</span><span class="sxs-lookup"><span data-stu-id="f3c43-118">Request header</span></span>
 
-| Header        | Typ   | Beschreibung                                                                 |
+| <span data-ttu-id="f3c43-119">Header</span><span class="sxs-lookup"><span data-stu-id="f3c43-119">Header</span></span>        | <span data-ttu-id="f3c43-120">Typ</span><span class="sxs-lookup"><span data-stu-id="f3c43-120">Type</span></span>   | <span data-ttu-id="f3c43-121">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f3c43-121">Description</span></span>                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorisierung | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;. |
+| <span data-ttu-id="f3c43-122">Autorisierung</span><span class="sxs-lookup"><span data-stu-id="f3c43-122">Authorization</span></span> | <span data-ttu-id="f3c43-123">String</span><span class="sxs-lookup"><span data-stu-id="f3c43-123">string</span></span> | <span data-ttu-id="f3c43-124">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="f3c43-124">Required.</span></span> <span data-ttu-id="f3c43-125">Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;.</span><span class="sxs-lookup"><span data-stu-id="f3c43-125">The Azure AD access token in the form **Bearer** &lt;*token*&gt;.</span></span> |
 
 <span/>
 
-### <a name="request-parameters"></a>Anforderungsparameter
+### <a name="request-parameters"></a><span data-ttu-id="f3c43-126">Anforderungsparameter</span><span class="sxs-lookup"><span data-stu-id="f3c43-126">Request parameters</span></span>
 
 
-|  Name  |  Typ  |  Beschreibung  |  Erforderlich  |
+|  <span data-ttu-id="f3c43-127">Name</span><span class="sxs-lookup"><span data-stu-id="f3c43-127">Name</span></span>  |  <span data-ttu-id="f3c43-128">Typ</span><span class="sxs-lookup"><span data-stu-id="f3c43-128">Type</span></span>  |  <span data-ttu-id="f3c43-129">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f3c43-129">Description</span></span>  |  <span data-ttu-id="f3c43-130">Erforderlich</span><span class="sxs-lookup"><span data-stu-id="f3c43-130">Required</span></span>  |
 |------|------|------|------|
-|  applicationId  |  string  |  Die Store-ID der App, für die Sie Add-Ons abrufen möchten. Weitere Informationen zur Store-ID finden Sie unter [Anzeigen von Details zur App-Identität](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |  Ja  |
-|  top  |  int  |  Die Anzahl von Elementen, die in der Anforderung zurückgegeben werden sollen (d. h. die Anzahl der zurückzugebenden-Add-Ons). Wenn die App mehr Add-Ons als der Wert verfügt, den Sie in der Abfrage festlegen, enthält der Antworttext einen relativen URI-Pfad, den Sie an den URI der Methode anfügen können, um die nächste Seite mit Daten anzufordern.  |  Nein  |
-|  skip |  int  | Die Anzahl der Elemente, die in der Abfrage umgangen werden sollen, bevor die verbleibenden Elemente zurückgegeben werden. Verwenden Sie diesen Parameter, um große Datensätze durchzublättern. Zum Beispiel werden bei top=10 und skip=0 die Elemente 1 bis 10 abgerufen, bei top=10 und skip=10 die Elemente 11 bis 20 und so weiter.   |  Nein  |
+|  <span data-ttu-id="f3c43-131">applicationId</span><span class="sxs-lookup"><span data-stu-id="f3c43-131">applicationId</span></span>  |  <span data-ttu-id="f3c43-132">string</span><span class="sxs-lookup"><span data-stu-id="f3c43-132">string</span></span>  |  <span data-ttu-id="f3c43-133">Die Store-ID der App, für die Sie Add-Ons abrufen möchten.</span><span class="sxs-lookup"><span data-stu-id="f3c43-133">The Store ID of the app for which you want to retrieve the add-ons.</span></span> <span data-ttu-id="f3c43-134">Weitere Informationen zur Store-ID finden Sie unter [Anzeigen von Details zur App-Identität](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).</span><span class="sxs-lookup"><span data-stu-id="f3c43-134">For more information about the Store ID, see [View app identity details](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).</span></span>  |  <span data-ttu-id="f3c43-135">Ja</span><span class="sxs-lookup"><span data-stu-id="f3c43-135">Yes</span></span>  |
+|  <span data-ttu-id="f3c43-136">top</span><span class="sxs-lookup"><span data-stu-id="f3c43-136">top</span></span>  |  <span data-ttu-id="f3c43-137">int</span><span class="sxs-lookup"><span data-stu-id="f3c43-137">int</span></span>  |  <span data-ttu-id="f3c43-138">Die Anzahl von Elementen, die in der Anforderung zurückgegeben werden sollen (d.h. die Anzahl der zurückzugebenden-Add-Ons).</span><span class="sxs-lookup"><span data-stu-id="f3c43-138">The number of items to return in the request (that is, the number of add-ons to return).</span></span> <span data-ttu-id="f3c43-139">Wenn die App mehr Add-Ons als der Wert verfügt, den Sie in der Abfrage festlegen, enthält der Antworttext einen relativen URI-Pfad, den Sie an den URI der Methode anfügen können, um die nächste Seite mit Daten anzufordern.</span><span class="sxs-lookup"><span data-stu-id="f3c43-139">If the app has more add-ons than the value you specify in the query, the response body includes a relative URI path that you can append to the method URI to request the next page of data.</span></span>  |  <span data-ttu-id="f3c43-140">Nein</span><span class="sxs-lookup"><span data-stu-id="f3c43-140">No</span></span>  |
+|  <span data-ttu-id="f3c43-141">skip</span><span class="sxs-lookup"><span data-stu-id="f3c43-141">skip</span></span> |  <span data-ttu-id="f3c43-142">int</span><span class="sxs-lookup"><span data-stu-id="f3c43-142">int</span></span>  | <span data-ttu-id="f3c43-143">Die Anzahl der Elemente, die in der Abfrage umgangen werden sollen, bevor die verbleibenden Elemente zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="f3c43-143">The number of items to bypass in the query before returning the remaining items.</span></span> <span data-ttu-id="f3c43-144">Verwenden Sie diesen Parameter, um große Datensätze durchzublättern.</span><span class="sxs-lookup"><span data-stu-id="f3c43-144">Use this parameter to page through data sets.</span></span> <span data-ttu-id="f3c43-145">Zum Beispiel werden bei top=10 und skip=0 die Elemente 1 bis 10 abgerufen, bei top=10 und skip=10 die Elemente 11 bis 20 und so weiter.</span><span class="sxs-lookup"><span data-stu-id="f3c43-145">For example, top=10 and skip=0 retrieves items 1 through 10, top=10 and skip=10 retrieves items 11 through 20, and so on.</span></span>   |  <span data-ttu-id="f3c43-146">Nein</span><span class="sxs-lookup"><span data-stu-id="f3c43-146">No</span></span>  |
 
 <span/>
 
-### <a name="request-body"></a>Anforderungstext
+### <a name="request-body"></a><span data-ttu-id="f3c43-147">Anforderungstext</span><span class="sxs-lookup"><span data-stu-id="f3c43-147">Request body</span></span>
 
-Stellen Sie keinen Anforderungstext für diese Methode bereit.
+<span data-ttu-id="f3c43-148">Stellen Sie keinen Anforderungstext für diese Methode bereit.</span><span class="sxs-lookup"><span data-stu-id="f3c43-148">Do not provide a request body for this method.</span></span>
 
-### <a name="request-examples"></a>Anforderungsbeispiele
+### <a name="request-examples"></a><span data-ttu-id="f3c43-149">Anforderungsbeispiele</span><span class="sxs-lookup"><span data-stu-id="f3c43-149">Request examples</span></span>
 
-Im folgenden Beispiel wird veranschaulicht, wie alle Add-Ons für eine App aufgelistet werden können.
+<span data-ttu-id="f3c43-150">Im folgenden Beispiel wird veranschaulicht, wie alle Add-Ons für eine App aufgelistet werden können.</span><span class="sxs-lookup"><span data-stu-id="f3c43-150">The following example demonstrates how to list all the add-ons for an app.</span></span>
 
 ```
 GET https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/listinappproducts HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-Im folgenden Beispiel wird veranschaulicht, wie die ersten 10 Add-Ons für eine App aufgelistet werden können.
+<span data-ttu-id="f3c43-151">Im folgenden Beispiel wird veranschaulicht, wie die ersten 10 Add-Ons für eine App aufgelistet werden können.</span><span class="sxs-lookup"><span data-stu-id="f3c43-151">The following example demonstrates how to list the first 10 add-ons for an app.</span></span>
 
 ```
 GET https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/listinappproducts?top=10 HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-## <a name="response"></a>Antwort
+## <a name="response"></a><span data-ttu-id="f3c43-152">Antwort</span><span class="sxs-lookup"><span data-stu-id="f3c43-152">Response</span></span>
 
-Das folgende Beispiel veranschaulicht den JSON-Antworttext, der von einer erfolgreichen Anforderung für die ersten 10 Add-Ons für eine App mit insgesamt 53 Add-Ons zurückgegeben wird. Aus Platzgründen sind in diesem Beispiel nur die Daten für die ersten drei Add-Ons dargestellt, die von der Anforderung zurückgegeben werden. Weitere Informationen zu den Werten im Antworttext finden Sie im folgenden Abschnitt.
+<span data-ttu-id="f3c43-153">Das folgende Beispiel veranschaulicht den JSON-Antworttext, der von einer erfolgreichen Anforderung für die ersten 10 Add-Ons für eine App mit insgesamt 53 Add-Ons zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="f3c43-153">The following example demonstrates the JSON response body returned by a successful request for the first 10 add-ons for an app with 53 total add-ons.</span></span> <span data-ttu-id="f3c43-154">Aus Platzgründen sind in diesem Beispiel nur die Daten für die ersten drei Add-Ons dargestellt, die von der Anforderung zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="f3c43-154">For brevity, this example only shows the data for the first three add-ons returned by the request.</span></span> <span data-ttu-id="f3c43-155">Weitere Informationen zu den Werten im Antworttext finden Sie im folgenden Abschnitt.</span><span class="sxs-lookup"><span data-stu-id="f3c43-155">For more details about the values in the response body, see the following section.</span></span>
 
 ```json
 {
@@ -104,31 +101,30 @@ Das folgende Beispiel veranschaulicht den JSON-Antworttext, der von einer erfolg
 }
 ```
 
-### <a name="response-body"></a>Antworttext
+### <a name="response-body"></a><span data-ttu-id="f3c43-156">Antworttext</span><span class="sxs-lookup"><span data-stu-id="f3c43-156">Response body</span></span>
 
-| Wert      | Typ   | Beschreibung                                                                                                                                                                                                                                                                         |
+| <span data-ttu-id="f3c43-157">Wert</span><span class="sxs-lookup"><span data-stu-id="f3c43-157">Value</span></span>      | <span data-ttu-id="f3c43-158">Typ</span><span class="sxs-lookup"><span data-stu-id="f3c43-158">Type</span></span>   | <span data-ttu-id="f3c43-159">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f3c43-159">Description</span></span>                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| @nextLink  | string | Wenn weitere Datenseiten vorhanden sind, enthält diese Zeichenfolge einen relativen Pfad, den Sie an den Basisanforderungs-URI ```https://manage.devcenter.microsoft.com/v1.0/my/``` zum Anfordern der nächsten Datenseite anfügen können. Wenn beispielsweise der Parameter *top* des anfänglichen Anforderungstexts auf 10 festgelegt ist, für die App jedoch 50 Add-Ons vorhanden sind, enthält der Antworttext den @nextLink-Wert ```applications/{applicationid}/listinappproducts/?skip=10&top=10```, der angibt, dass Sie ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationid}/listinappproducts/?skip=10&top=10``` aufrufen können, um die nächsten 10 Add-Ons anzufordern. |
-| value      | array  | Ein Array von Objekten, die die Store-ID für jedes Add-On für die angegebene App auflisten. Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie unter [-Add-On-Ressource](get-app-data.md#add-on-object).                                                                                                                           |
-| totalCount | int    | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage (d. h. die Gesamtanzahl der Add-Ons für die angegebene App).                                                                                                                                                                                                                             |
+| @nextLink  | <span data-ttu-id="f3c43-160">String</span><span class="sxs-lookup"><span data-stu-id="f3c43-160">string</span></span> | <span data-ttu-id="f3c43-161">Wenn weitere Datenseiten vorhanden sind, enthält diese Zeichenfolge einen relativen Pfad, den Sie an den Basisanforderungs-URI ```https://manage.devcenter.microsoft.com/v1.0/my/``` zum Anfordern der nächsten Datenseite anfügen können.</span><span class="sxs-lookup"><span data-stu-id="f3c43-161">If there are additional pages of data, this string contains a relative path that you can append to the base ```https://manage.devcenter.microsoft.com/v1.0/my/``` request URI to request the next page of data.</span></span> <span data-ttu-id="f3c43-162">Wenn beispielsweise der Parameter *top* des anfänglichen Anforderungstexts auf 10 festgelegt ist, für die App jedoch 50Add-Ons vorhanden sind, enthält der Antworttext den @nextLink-Wert ```applications/{applicationid}/listinappproducts/?skip=10&top=10```, der angibt, dass Sie ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationid}/listinappproducts/?skip=10&top=10``` aufrufen können, um die nächsten 10Add-Ons anzufordern.</span><span class="sxs-lookup"><span data-stu-id="f3c43-162">For example, if the *top* parameter of the initial request body is set to 10 but there are 50 add-ons for the app, the response body will include a @nextLink value of ```applications/{applicationid}/listinappproducts/?skip=10&top=10```, which indicates that you can call ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationid}/listinappproducts/?skip=10&top=10``` to request the next 10 add-ons.</span></span> |
+| <span data-ttu-id="f3c43-163">value</span><span class="sxs-lookup"><span data-stu-id="f3c43-163">value</span></span>      | <span data-ttu-id="f3c43-164">array</span><span class="sxs-lookup"><span data-stu-id="f3c43-164">array</span></span>  | <span data-ttu-id="f3c43-165">Ein Array von Objekten, die die Store-ID für jedes Add-On für die angegebene App auflisten.</span><span class="sxs-lookup"><span data-stu-id="f3c43-165">An array of objects that list the Store ID of each add-on for the specified app.</span></span> <span data-ttu-id="f3c43-166">Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie unter [-Add-On-Ressource](get-app-data.md#add-on-object).</span><span class="sxs-lookup"><span data-stu-id="f3c43-166">For more information about the data in each object, see [add-on resource](get-app-data.md#add-on-object).</span></span>                                                                                                                           |
+| <span data-ttu-id="f3c43-167">totalCount</span><span class="sxs-lookup"><span data-stu-id="f3c43-167">totalCount</span></span> | <span data-ttu-id="f3c43-168">int</span><span class="sxs-lookup"><span data-stu-id="f3c43-168">int</span></span>    | <span data-ttu-id="f3c43-169">Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage (d.h. die Gesamtanzahl der Add-Ons für die angegebene App).</span><span class="sxs-lookup"><span data-stu-id="f3c43-169">The total number of rows in the data result for the query (that is, the total number of add-ons for the specified app).</span></span>                                                                                                                                                                                                                             |
 
 <span/>
 
-## <a name="error-codes"></a>Fehlercodes
+## <a name="error-codes"></a><span data-ttu-id="f3c43-170">Fehlercodes</span><span class="sxs-lookup"><span data-stu-id="f3c43-170">Error codes</span></span>
 
-Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die Antwort einen der folgenden HTTP-Fehlercodes.
+<span data-ttu-id="f3c43-171">Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die Antwort einen der folgenden HTTP-Fehlercodes.</span><span class="sxs-lookup"><span data-stu-id="f3c43-171">If the request cannot be successfully completed, the response will contain one of the following HTTP error codes.</span></span>
 
-| Fehlercode |  Beschreibung   |
+| <span data-ttu-id="f3c43-172">Fehlercode</span><span class="sxs-lookup"><span data-stu-id="f3c43-172">Error code</span></span> |  <span data-ttu-id="f3c43-173">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f3c43-173">Description</span></span>   |
 |--------|------------------|
-| 404  | Es wurden keine Add-Ons gefunden. |
-| 409  | Die Add-Ons verwenden Dev Center-Dashboard-Funktionen, die [derzeit nicht von der Windows Store-Übermittlungs-API unterstützt werden](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
+| <span data-ttu-id="f3c43-174">404</span><span class="sxs-lookup"><span data-stu-id="f3c43-174">404</span></span>  | <span data-ttu-id="f3c43-175">Es wurden keine Add-Ons gefunden.</span><span class="sxs-lookup"><span data-stu-id="f3c43-175">No add-ons were found.</span></span> |
+| <span data-ttu-id="f3c43-176">409</span><span class="sxs-lookup"><span data-stu-id="f3c43-176">409</span></span>  | <span data-ttu-id="f3c43-177">Die Add-Ons verwenden Dev Center-Dashboard-Funktionen, die [derzeit nicht von der Windows Store-Übermittlungs-API unterstützt werden](create-and-manage-submissions-using-windows-store-services.md#not_supported).</span><span class="sxs-lookup"><span data-stu-id="f3c43-177">The add-ons use Dev Center dashboard features that are [currently not supported by the Windows Store submission API](create-and-manage-submissions-using-windows-store-services.md#not_supported).</span></span>  |
 
 <span/>
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a><span data-ttu-id="f3c43-178">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="f3c43-178">Related topics</span></span>
 
-* [Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten](create-and-manage-submissions-using-windows-store-services.md)
-* [Abrufen aller Apps](get-all-apps.md)
-* [Abrufen einer App](get-an-app.md)
-* [Abrufen von Flight-Paketen für eine App](get-flights-for-an-app.md)
-
+* [<span data-ttu-id="f3c43-179">Erstellen und Verwalten von Übermittlungen mit WindowsStore-Diensten</span><span class="sxs-lookup"><span data-stu-id="f3c43-179">Create and manage submissions using Windows Store services</span></span>](create-and-manage-submissions-using-windows-store-services.md)
+* [<span data-ttu-id="f3c43-180">Abrufen aller Apps</span><span class="sxs-lookup"><span data-stu-id="f3c43-180">Get all apps</span></span>](get-all-apps.md)
+* [<span data-ttu-id="f3c43-181">Abrufen einer App</span><span class="sxs-lookup"><span data-stu-id="f3c43-181">Get an app</span></span>](get-an-app.md)
+* [<span data-ttu-id="f3c43-182">Abrufen von Flight-Paketen für eine App</span><span class="sxs-lookup"><span data-stu-id="f3c43-182">Get package flights for an app</span></span>](get-flights-for-an-app.md)

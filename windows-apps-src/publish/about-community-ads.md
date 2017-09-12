@@ -4,44 +4,41 @@ Description: "Sie können Ihre App mit Apps von anderen Entwicklern bewerben. Di
 title: Informationen zu Community-Anzeigen
 ms.assetid: F55CE478-99AF-4B70-90D1-D16419562136
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 07/05/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 13963ddf9f745c6de2e6d7ef7d948f649b2f6f5e
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: c16f474fe8242e2994350f5261c26c7148aea5e4
+ms.sourcegitcommit: 10f8dcf69d37cdb61562fc9f4d268ccb499c368f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/07/2017
 ---
+# <a name="about-community-ads"></a><span data-ttu-id="15988-105">Informationen zu Community-Anzeigen</span><span class="sxs-lookup"><span data-stu-id="15988-105">About community ads</span></span>
 
-# <a name="about-community-ads"></a>Informationen zu Community-Anzeigen
+<span data-ttu-id="15988-106">Wenn Ihre App [Banneranzeigen oder Banner-Interstitialwerbung anzeigt](../monetize/display-ads-in-your-app.md), können Sie Ihre App mit anderen Entwicklern mit Apps im WindowsStore kostenlos bewerben.</span><span class="sxs-lookup"><span data-stu-id="15988-106">If your app [displays banner or banner interstitial ads](../monetize/display-ads-in-your-app.md), you can cross-promote your app with other developers with apps in the Windows Store for free.</span></span> <span data-ttu-id="15988-107">Dieses Feature wird *Community-Anzeigen* genannt.</span><span class="sxs-lookup"><span data-stu-id="15988-107">We call this feature *community ads*.</span></span>  
 
-Wenn Ihre App ein **AdMediatorControl**- oder ein **AdControl**-Element zum Anzeigen von Werbebannern verwendet, können Sie Ihre App mit anderen Entwicklern mit Apps im Windows Store kostenlos bewerben. Dieses Feature wird *Community-Anzeigen* genannt.  
+<span data-ttu-id="15988-108">Das funktioniert wie folgt:</span><span class="sxs-lookup"><span data-stu-id="15988-108">Here's how this program works:</span></span>
 
-Das funktioniert wie folgt:
+* <span data-ttu-id="15988-109">Nachdem Sie sich für die [Teilnahme an Community-Anzeigen](#how-to-opt-in-to-community-ads) entschieden und eine [kostenlose Community-Anzeigenkampagne](create-an-ad-campaign-for-your-app.md) erstellt haben, teilt sich Ihre App den Platz für Werbeanzeigen mit anderen Entwicklern, die sich ebenfalls für die Nutzung von Community-Anzeigen entschieden haben.</span><span class="sxs-lookup"><span data-stu-id="15988-109">After you [opt-in to community ads](#how-to-opt-in-to-community-ads) and [create a free community ad campaign](create-an-ad-campaign-for-your-app.md), your app will share promotional ad space with other developers who also opt in to community ads.</span></span> <span data-ttu-id="15988-110">In Ihrer App werden Anzeigen für Apps anderer Entwickler angezeigt, die an Community-Anzeigen teilnehmen. Im Gegenzug werden in deren Apps Anzeigen für Ihre App angezeigt.</span><span class="sxs-lookup"><span data-stu-id="15988-110">Your app will show ads for apps published by other developers who participate in community ads, and their apps will show ads for your app.</span></span>
+* <span data-ttu-id="15988-111">Durch die Anzeige von Community-Anzeigen in Ihrer App erwerben Sie Guthaben für Werbefläche in anderen Apps.</span><span class="sxs-lookup"><span data-stu-id="15988-111">You earn credits for promotional ad space in other apps by showing community ads in your app.</span></span> <span data-ttu-id="15988-112">Das Guthaben wird wie folgt berechnet:</span><span class="sxs-lookup"><span data-stu-id="15988-112">Credits are calculated according to the following process:</span></span>
+  * <span data-ttu-id="15988-113">Für jedes Land bzw. jede Region, in dem bzw. in der eine App verfügbar ist, die Community-Anzeigen bereitstellt, wird der jeweils aktuelle eCPM-Wert (effektive Kosten pro tausend Anzeigenaufrufe) für das Land oder die Region mit der Anzahl von Anforderungen für Community-Anzeigen multipliziert, die von Ihrer App im betreffenden Land oder in der betreffenden Region gestellt wurden.</span><span class="sxs-lookup"><span data-stu-id="15988-113">For each country or region where an app that is serving community ads is available, the current market-rate eCPM (effective cost per thousand impressions) value for the country or region is multiplied by the number of requests for community ads made by your app in that country or region.</span></span> <span data-ttu-id="15988-114">Dieser Wert entspricht dem Guthaben, das Sie im betreffenden Land oder in der betreffenden Region für Ihre App erworben haben.</span><span class="sxs-lookup"><span data-stu-id="15988-114">This value is the credits you have earned for your app in that country or region.</span></span>
+  * <span data-ttu-id="15988-115">Ihr gesamtes erworbenes Guthaben für einen bestimmten Zeitraum entspricht der Summe sämtlicher Guthaben, die mit allen Ihren Apps, die Community-Anzeigen bereitstellen, in allen Ländern oder Regionen erwirtschaftet wurden.</span><span class="sxs-lookup"><span data-stu-id="15988-115">Your total credits earned for a given time period is equal to the sum of all credits earned in each country or region for each of your apps that is serving community ads.</span></span>
+* <span data-ttu-id="15988-116">Ihr Guthaben wird gleichmäßig auf alle aktiven Community-Anzeigenkampagnen verteilt und auf der Grundlage der jeweils aktuellen eCPM-Werte der Länder, auf die Ihre Community-Anzeigenkampagnen ausgerichtet sind, in Anzeigenaufrufe für Ihre App umgewandelt.</span><span class="sxs-lookup"><span data-stu-id="15988-116">Your credits are divided equally across all active community ad campaigns, and are converted to ad impressions for your app based on the current market-rate eCPM values of the countries your community ad campaigns target.</span></span>
+* <span data-ttu-id="15988-117">Informationen zum Nachverfolgen der Performance der Community-Anzeigen in Ihrer App finden Sie im [Bericht zur Anzeigen-Performance](advertising-performance-report.md).</span><span class="sxs-lookup"><span data-stu-id="15988-117">To track the performance of the community ads in your app, refer to the [advertising performance report](advertising-performance-report.md).</span></span>
 
-* Nachdem Sie sich für die [Teilnahme an Community-Anzeigen](#how-to-opt-in-to-community-ads) entschieden und eine [kostenlose Community-Anzeigenkampagne](create-an-ad-campaign-for-your-app.md) erstellt haben, teilt sich Ihre App den Platz für Werbeanzeigen mit anderen Entwicklern, die sich ebenfalls für die Nutzung von Community-Anzeigen entschieden haben. In Ihrer App werden Anzeigen für Apps anderer Entwickler angezeigt, die an Community-Anzeigen teilnehmen. Im Gegenzug werden in deren Apps Anzeigen für Ihre App angezeigt.
-* Durch die Anzeige von Community-Anzeigen in Ihrer App erwerben Sie Guthaben für Werbefläche in anderen Apps. Das Guthaben wird wie folgt berechnet:
-  * Für jedes Land bzw. jede Region, in dem bzw. in der eine App verfügbar ist, die Community-Anzeigen bereitstellt, wird der jeweils aktuelle eCPM-Wert (effektive Kosten pro tausend Anzeigenaufrufe) für das Land oder die Region mit der Anzahl von Anforderungen für Community-Anzeigen multipliziert, die von Ihrer App im betreffenden Land oder in der betreffenden Region gestellt wurden. Dieser Wert entspricht dem Guthaben, das Sie im betreffenden Land oder in der betreffenden Region für Ihre App erworben haben.
-  * Ihr gesamtes erworbenes Guthaben für einen bestimmten Zeitraum entspricht der Summe sämtlicher Guthaben, die mit allen Ihren Apps, die Community-Anzeigen bereitstellen, in allen Ländern oder Regionen erwirtschaftet wurden.
-* Ihr Guthaben wird gleichmäßig auf alle aktiven Community-Anzeigenkampagnen verteilt und auf der Grundlage der jeweils aktuellen eCPM-Werte der Länder, auf die Ihre Community-Anzeigenkampagnen ausgerichtet sind, in Anzeigenaufrufe für Ihre App umgewandelt.
-* Informationen zum Nachverfolgen der Performance der Community-Anzeigen in Ihrer App finden Sie im [Bericht zur Anzeigen-Performance auf Kontoebene](advertising-performance-report.md#account-level-advertising-performance-report).
+### <a name="opt-in-to-community-ads"></a><span data-ttu-id="15988-118">Melden Sie sich für Community-Anzeigen an</span><span class="sxs-lookup"><span data-stu-id="15988-118">Opt in to community ads</span></span>
 
-## <a name="how-to-opt-in-to-community-ads"></a>So melden Sie sich für Community-Anzeigen an
+<span data-ttu-id="15988-119">Bevor Sie eine Community-Anzeigenkampagne für eine Ihrer Apps erstellen können, müssen Sie sich auf der Seite **Monetisierung** &gt; **Gewinnbringende Nutzung mit Anzeigen** für die App im Windows Dev Center-Dashboard anmelden.</span><span class="sxs-lookup"><span data-stu-id="15988-119">Before you can create a community ad campaign for one of your apps, you must opt in on the **Monetization** &gt; **Monetize with ads** page for the app in the Windows Dev Center dashboard.</span></span>
 
-So melden Sie sich für Community-Anzeigen an:
+<span data-ttu-id="15988-120">Gehen Sie zum Anmelden wie folgt vor:</span><span class="sxs-lookup"><span data-stu-id="15988-120">To opt in, do one of the following:</span></span>
+  * <span data-ttu-id="15988-121">Wenn Ihre App eine UWP-App für Windows10 ist, wechseln Sie zum Abschnitt **Anzeigenvermittlung** auf der Seite, und aktivieren Sie das Kästchen **MicrosoftCommunity-Anzeigen** in der Liste **Weitere Anzeigennetzwerke**.</span><span class="sxs-lookup"><span data-stu-id="15988-121">If your app is a UWP app that targets Windows 10, go to the **Ad mediation** section on the page and check the **Microsoft Community ads** box in the **Other ad networks** list.</span></span>
+  * <span data-ttu-id="15988-122">Wenn Ihre App für Windows 8.x oder Windows Phone 8.x gilt, wechseln Sie zum Abschnitt **Community-Anzeigen** auf der Seite, und aktivieren Sie das Kästchen **Show community ads in my app**.</span><span class="sxs-lookup"><span data-stu-id="15988-122">If your app targets Windows 8.x or Windows Phone 8.x, go to the **Community ads** section on the page and check the **Show community ads in my app** box.</span></span>
 
-1. Navigieren Sie im Windows Dev Center-Dashboard zu **Monetarisierung** &gt; **Gewinnbringende Nutzung mit Anzeigen**.
-2. Aktivieren Sie im Abschnitt **Community ads** das Kontrollkästchen **Show community ads in my app**.
-   > **Hinweis**  Nach dem Aktivieren oder Deaktivieren dieses Kontrollkästchens müssen Sie Ihre App nicht neu veröffentlichen, damit die Änderungen wirksam werden.
+<span data-ttu-id="15988-123">Sie müssen Ihre App nicht noch einmal veröffentlichen, nachdem Sie Ihre Auswahl getroffen haben.</span><span class="sxs-lookup"><span data-stu-id="15988-123">You do not need to republish your app after making your selections.</span></span> <span data-ttu-id="15988-124">Wenn Sie sich angemeldet haben, werden Sie feststellen, dass Sie **Community-Anzeige (kostenlos)** als Kampagnentyp angeben können, wenn Sie eine [Anzeigenkampagne erstellen](create-an-ad-campaign-for-your-app.md).</span><span class="sxs-lookup"><span data-stu-id="15988-124">Once you've opted in, you'll be able to select **Community ad (free)** as the campaign type when you [create an ad campaign](create-an-ad-campaign-for-your-app.md).</span></span>
 
-3. [Erstellen Sie eine Anzeigenkampagne](create-an-ad-campaign-for-your-app.md) für Ihre App. Wählen Sie den Kampagnentyp **Kostenlose Community-Anzeigen** aus.
+### <a name="related-topics"></a><span data-ttu-id="15988-125">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="15988-125">Related topics</span></span>
 
-
-## <a name="related-topics"></a>Verwandte Themen
-
-* [Monetisierung durch Werbeanzeigen](monetize-with-ads.md)
-* [Erstellen einer Anzeigenkampagne für Ihre App](create-an-ad-campaign-for-your-app.md)
-
+* [<span data-ttu-id="15988-126">Monetisierung durch Werbeanzeigen</span><span class="sxs-lookup"><span data-stu-id="15988-126">Monetize with ads</span></span>](monetize-with-ads.md)
+* [<span data-ttu-id="15988-127">Erstellen einer Anzeigenkampagne für Ihre App</span><span class="sxs-lookup"><span data-stu-id="15988-127">Create an ad campaign for your app</span></span>](create-an-ad-campaign-for-your-app.md)

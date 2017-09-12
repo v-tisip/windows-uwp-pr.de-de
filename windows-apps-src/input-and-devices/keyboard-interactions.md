@@ -1,741 +1,589 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Reagieren Sie in Ihren Apps auf Tastaturaktionen von Hardware- oder Softwaretastaturen, indem Sie sowohl Tastatur- als auch Klassen-Ereignishandler verwenden.
+Description: "Erfahren Sie, wie Sie Ihre UWP-Apps entwerfen und optimieren, sodass sie die bestmögliche Umgebung für erfahrene Tastaturbenutzer und Personen mit Einschränkungen und anderen Anforderungen an Barrierefreiheit bieten."
 title: Tastaturinteraktionen
 ms.assetid: FF819BAC-67C0-4EC9-8921-F087BE188138
 label: Keyboard interactions
 template: detail.hbs
-keywords: Tastatur, Erreichbarkeit, Navigation, Fokus, Text, Eingabe, Benutzerinteraktionen
+keywords: Tastatur, Barrierefreiheit, Navigation, Fokus, Text, Eingabe, Benutzerinteraktionen, Gamepad, Fernbedienung
 ms.author: kbridge
-ms.date: 02/08/2017
+ms.date: 03/29/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 53ee08b33bcbbd895d0c6ea6cd621eeec2af40f5
-ms.lasthandoff: 02/07/2017
-
+pm-contact: chigy
+design-contact: kimsea
+dev-contact: niallm
+doc-status: Published
+ms.openlocfilehash: 22a95cfb77740d7521c62f0b7153130ccdc1b552
+ms.sourcegitcommit: ba0d20f6fad75ce98c25ceead78aab6661250571
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/24/2017
 ---
-
-# <a name="keyboard-interactions"></a>Tastaturinteraktionen
+# <a name="keyboard-interactions"></a><span data-ttu-id="18ba9-104">Tastaturinteraktionen</span><span class="sxs-lookup"><span data-stu-id="18ba9-104">Keyboard interactions</span></span>
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Die Tastatureingabe ist ein wichtiger Teil der Erfahrung, die Benutzer bei der Interaktion mit Apps machen. Die Tastatur ist unentbehrlich für Personen mit bestimmten körperlichen Beeinträchtigungen oder für Benutzer, die die Tastatur als effizienteste Methode ansehen, um mit einer App zu interagieren. Benutzer sollten beispielsweise in der Lage sein, mit der TAB-Taste und den Pfeiltasten in der App zu navigieren, mit der LEERTASTE und der EINGABETASTE UI-Elemente zu aktivieren und mit Tastenkombinationen auf Befehle zuzugreifen.  
+![Tastaturfavoritenbild](images/keyboard/keyboard-hero.jpg)
 
-![Tastaturfavoritenbild](images/input-patterns/input-keyboard-small.jpg)
+<span data-ttu-id="18ba9-106">Erfahren Sie, wie Sie Ihre UWP-Apps entwerfen und optimieren, sodass sie die bestmögliche Umgebung für erfahrene Tastaturbenutzer und Personen mit Einschränkungen und anderen Anforderungen an Barrierefreiheit bieten.</span><span class="sxs-lookup"><span data-stu-id="18ba9-106">Learn how to design and optimize your UWP apps so they provide the best experience possible for both keyboard power users and those with disabilities and other accessibility requirements.</span></span>
 
-<div class="important-apis" >
-<b>Wichtige APIs</b><br/>
-<ul>
-<li>[**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941)</li>
-<li>[**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942)</li>
-<li>[**KeyRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943072)</li>
-</ul>
-</div>
- 
+<span data-ttu-id="18ba9-107">Auf verschiedenen Geräten ist die Tastatureingabe ein wichtiger Teil der Gesamtinteraktion mit der Universellen Windows-Plattform (UWP).</span><span class="sxs-lookup"><span data-stu-id="18ba9-107">Across devices, keyboard input is an important part of the overall Universal Windows Platform (UWP) interaction experience.</span></span> <span data-ttu-id="18ba9-108">Eine gut durchdachte Tastatur ermöglicht Benutzern die effiziente UI-Navigation in Ihrer App und Zugriff auf die gesamte Funktionalität, ohne die Hände von der Tastatur zu nehmen.</span><span class="sxs-lookup"><span data-stu-id="18ba9-108">A well-designed keyboard experience lets users efficiently navigate the UI of your app and access its full functionality without ever lifting their hands from the keyboard.</span></span>
+
+![Bild von Tastatur und Gamepad](images/keyboard/keyboard-gamepad.jpg)
+
+***<span data-ttu-id="18ba9-110">Allgemeine Interaktionsmuster sind bei Tastatur und Gamepad gleich.</span><span class="sxs-lookup"><span data-stu-id="18ba9-110">Common interaction patterns are shared between keyboard and gamepad</span></span>***
+
+<span data-ttu-id="18ba9-111">In diesem Thema konzentrieren wir uns speziell auf das UWP-App-Design für die Tastatureingabe auf PCs.</span><span class="sxs-lookup"><span data-stu-id="18ba9-111">In this topic, we focus specifically on UWP app design for keyboard input on PCs.</span></span> <span data-ttu-id="18ba9-112">Eine gut durchdachte Tastatur ist jedoch wichtig für die Unterstützung von Eingabehilfen (z.B. die Windows-Sprachausgabe), die Verwendung von Softwaretastaturen (z.B. die [Touch-Tastatur](#touch-keyboard) und die [Bildschirmtastatur](#osk)) und andere Gerätetypen, z.B. Xbox-Gamepad und -Fernbedienung.</span><span class="sxs-lookup"><span data-stu-id="18ba9-112">However, a well-designed keyboard experience is important for supporting accessibility tools such as Windows Narrator, using software keyboards such as the [touch keyboard](#touch-keyboard) and the [On-Screen Keyboard (OSK)](#osk), and for handling other input device types, such as the Xbox gamepad and remote control.</span></span>
+
+<span data-ttu-id="18ba9-113">Viele der hier erwähnten Richtlinien und Empfehlungen, einschließlich [visueller Fokuselemente](#focus-visual), [Zugriffstasten](#access-keys), und [UI-Navigation](#navigation), gelten auch für diese anderen Szenarien.</span><span class="sxs-lookup"><span data-stu-id="18ba9-113">Many of the guidelines and recommendations discussed here, including [focus visuals](#focus-visual), [access keys](#access-keys), and [UI navigation](#navigation), are also applicable to these other scenarios.</span></span>
+
+<span data-ttu-id="18ba9-114">**HINWEIS** Während Hardware- und Softwaretastaturen für die Texteingabe verwendet werden, liegt der Fokus dieses Themas auf Navigation und Interaktion.</span><span class="sxs-lookup"><span data-stu-id="18ba9-114">**NOTE**  While both hardware and software keyboards are used for text input, the focus of this topic is navigation and interaction.</span></span>
+
+## <a name="built-in-support"></a><span data-ttu-id="18ba9-115">Integrierte Unterstützung</span><span class="sxs-lookup"><span data-stu-id="18ba9-115">Built-in support</span></span>
+
+<span data-ttu-id="18ba9-116">Zusammen mit der Maus ist die Tastatur das am häufigsten verwendete Peripheriegerät für PCs und daher ein wesentlicher Bestandteil des PC-Erlebnisses.</span><span class="sxs-lookup"><span data-stu-id="18ba9-116">Along with the mouse, the keyboard is the most widely used peripheral on PCs and, as such, is a fundamental part of the PC experience.</span></span> <span data-ttu-id="18ba9-117">PC-Benutzer erwarten ein umfassendes und konsistentes Erlebnis bei Tastatureingaben in System-Apps und individuellen Apps.</span><span class="sxs-lookup"><span data-stu-id="18ba9-117">PC users expect a comprehensive and consistent experience from both the system and individual apps in response to keyboard input.</span></span>
+
+<span data-ttu-id="18ba9-118">Alle UWP-Steuerelemente enthalten integrierte Unterstützung für umfangreiche Tastaturfunktionen und Benutzerinteraktionen, während die Plattform selbst eine umfassende Grundlage für das Erstellen von Tastaturfunktionen bietet, die Ihrer Meinung nach am besten für Ihre benutzerdefinierten Steuerelemente und Apps geeignet sind.</span><span class="sxs-lookup"><span data-stu-id="18ba9-118">All UWP controls include built-in support for rich keyboard experiences and user interactions, while the platform itself provides an extensive foundation for creating keyboard experiences that you feel are best suited to both your custom controls and apps.</span></span>
+
+![Bild von Tastatur mit Telefon](images/keyboard/keyboard-phone.jpg)
+
+***<span data-ttu-id="18ba9-120">UWP unterstützt Tastatur auf allen Geräten</span><span class="sxs-lookup"><span data-stu-id="18ba9-120">UWP supports keyboard with any device</span></span>***
+
+## <a name="basic-experiences"></a><span data-ttu-id="18ba9-121">Grundlegende Funktionen</span><span class="sxs-lookup"><span data-stu-id="18ba9-121">Basic experiences</span></span>
+![Fokusbasierte Geräte](images/keyboard/focus-based-devices.jpg)
+
+<span data-ttu-id="18ba9-123">Wie bereits erwähnt, ist die Tastatureingabe für Navigation und Befehle von Eingabegeräten wie Xbox-Gamepad und -Fernbedienung und Eingabehilfen wie der Sprachausgabe zum Großteil gleich.</span><span class="sxs-lookup"><span data-stu-id="18ba9-123">As mentioned previously, input devices such as the Xbox gamepad and remote control, and accessibility tools such as Narrator, share much of the keyboard input experience for navigation and commanding.</span></span> <span data-ttu-id="18ba9-124">Die Einheitlichkeit in Bezug auf Eingabetypen und Tools minimiert zusätzliche Aufgaben und trägt zur Erreichung des Ziels der Universellen Windows-Plattform bei: einmal erstellen, überall ausführen.</span><span class="sxs-lookup"><span data-stu-id="18ba9-124">This common experience across input types and tools minimizes additional work from you and contributes to the "build once, run anywhere" goal of the Universal Windows Platform.</span></span>
+
+<span data-ttu-id="18ba9-125">Bei Bedarf identifizieren wir wichtige Unterschiede, die Sie kennen sollten, und beschreiben Maßnahmen, die Sie berücksichtigen sollten.</span><span class="sxs-lookup"><span data-stu-id="18ba9-125">Where necessary, we’ll identify key differences you should be aware of and describe any mitigations you should consider.</span></span>
+
+<span data-ttu-id="18ba9-126">Hier sind die Geräte und die Tools, die in diesem Thema erläutert werden:</span><span class="sxs-lookup"><span data-stu-id="18ba9-126">Here are the devices and tools discussed in this topic:</span></span>
+
+| <span data-ttu-id="18ba9-127">Gerät/Tool</span><span class="sxs-lookup"><span data-stu-id="18ba9-127">Device/tool</span></span>                       | <span data-ttu-id="18ba9-128">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="18ba9-128">Description</span></span>     |
+|-----------------------------------|-----------------|
+|<span data-ttu-id="18ba9-129">Tastatur (Hardware und Software)</span><span class="sxs-lookup"><span data-stu-id="18ba9-129">Keyboard (hardware and software)</span></span>   |<span data-ttu-id="18ba9-130">Neben der standardmäßigen Hardwaretastatur unterstützen UWP-Apps zwei Softwaretastaturen: [Touch-Tastatur (oder Softwaretastatur)](#touch-keyboard) und [Bildschirmtastatur](#osk).</span><span class="sxs-lookup"><span data-stu-id="18ba9-130">In addition to the standard hardware keyboard, UWP apps support two software keyboards: the [touch (or software keyboard)](#touch-keyboard) and the [On-Screen Keyboard](#osk).</span></span>|
+|<span data-ttu-id="18ba9-131">Gamepad und Fernbedienung</span><span class="sxs-lookup"><span data-stu-id="18ba9-131">Gamepad and remote control</span></span>         |<span data-ttu-id="18ba9-132">Xbox-Gamepad und -Fernbedienung sind grundlegende Eingabegeräte im [10-Fuß-Bereich](designing-for-tv.md).</span><span class="sxs-lookup"><span data-stu-id="18ba9-132">The Xbox gamepad and remote control are fundamental input devices in the [10-foot experience](designing-for-tv.md).</span></span>
+<span data-ttu-id="18ba9-133">Ausführliche Informationen zur UWP-Unterstützung für Gamepad und Fernbedienung finden Sie unter [Interaktionen mit Gamepad und Fernbedienung](gamepad-and-remote-interactions.md).</span><span class="sxs-lookup"><span data-stu-id="18ba9-133">For specific details on UWP support for gamepad and remote control, see [Gamepad and remote control interactions](gamepad-and-remote-interactions.md).</span></span>|
+|<span data-ttu-id="18ba9-134">Bildschirmleseprogramme (Sprachausgabe)</span><span class="sxs-lookup"><span data-stu-id="18ba9-134">Screen readers (Narrator)</span></span>          |<span data-ttu-id="18ba9-135">Die Sprachausgabe ist ein integriertes Bildschirmleseprogramm für Windows, das eindeutige Interaktion und Funktionalität bietet, aber dennoch auf der einfachen Tastaturnavigation und -eingabe basiert.</span><span class="sxs-lookup"><span data-stu-id="18ba9-135">Narrator is a built-in screen reader for Windows that provides unique interaction experiences and functionality, but still relies on basic keyboard navigation and input.</span></span>
+<span data-ttu-id="18ba9-136">Weitere Informationen zur Sprachausgabe finden Sie unter [Erste Schritte mit Sprachausgabe](https://support.microsoft.com/help/22798/windows-10-narrator-get-started).</span><span class="sxs-lookup"><span data-stu-id="18ba9-136">For Narrator details, see [Getting started with Narrator](https://support.microsoft.com/help/22798/windows-10-narrator-get-started).</span></span>|
+
+## <a name="custom-experiences-and-efficient-keyboarding"></a><span data-ttu-id="18ba9-137">Benutzerdefinierte Erfahrungen und effiziente Tastaturfunktionen</span><span class="sxs-lookup"><span data-stu-id="18ba9-137">Custom experiences and efficient keyboarding</span></span>
+<span data-ttu-id="18ba9-138">Wie bereits erwähnt, ist Die Tastaturunterstützung ist ein wesentlicher Bestandteil dafür, dass Ihre Anwendungen optimal für Benutzer mit unterschiedlichen Kenntnissen, Fähigkeiten und Erwartungen funktionieren.</span><span class="sxs-lookup"><span data-stu-id="18ba9-138">As mentioned, keyboard support is integral to ensuring your applications work great for users with different skills, abilities, and expectations.</span></span> <span data-ttu-id="18ba9-139">Wir empfehlen Ihnen, folgendes zu priorisieren.</span><span class="sxs-lookup"><span data-stu-id="18ba9-139">We recommend that you prioritize the following.</span></span>
+- <span data-ttu-id="18ba9-140">Unterstützung der Tastaturnavigation und Interaktion</span><span class="sxs-lookup"><span data-stu-id="18ba9-140">Support keyboard navigation and interaction</span></span>
+    - <span data-ttu-id="18ba9-141">Stellen Sie sicher, dass ausführbare Elemente als Tabstopps gekennzeichnet sind (und nicht bedienbare Elemente andersartig gekennzeichnet sind), und die Reihenfolge für die Seitennavigation logisch und vorhersehbar ist (weiter Informationen finden Sie unter [Tabstopps](#tab-stops))</span><span class="sxs-lookup"><span data-stu-id="18ba9-141">Ensure actionable items are identified as tab stops (and non-actionable items are not), and navigation order is logical and predictable (see [Tab stops](#tab-stops))</span></span>
+    - <span data-ttu-id="18ba9-142">Legen Sie den anfänglichen Fokus auf das logischste Element fest (weitere Informationen finden Sie unter [Anfänglicher Fokus](#initial-focus))</span><span class="sxs-lookup"><span data-stu-id="18ba9-142">Set initial focus on the most logical element (see [Initial focus](#initial-focus))</span></span>
+    - <span data-ttu-id="18ba9-143">Bieten Sie eine Navigation mittels Pfeiltasten für "innere Navigationsvorgänge" an (siehe [Navigation](#navigation))</span><span class="sxs-lookup"><span data-stu-id="18ba9-143">Provide arrow key navigation for "inner navigations" (see [Navigation](#navigation))</span></span>
+- <span data-ttu-id="18ba9-144">Unterstützen Sie Tastenkombinationen</span><span class="sxs-lookup"><span data-stu-id="18ba9-144">Support keyboard shortcuts</span></span>
+    - <span data-ttu-id="18ba9-145">Stellen Sie Zugriffstasten für schnelle Aktionen bereit (siehe [Schnellinfos](#accelerators))</span><span class="sxs-lookup"><span data-stu-id="18ba9-145">Provide accelerator keys for quick actions (see [Accelerators](#accelerators))</span></span>
+    - <span data-ttu-id="18ba9-146">Bereitstellen von Zugriffstasten, um die Benutzeroberfläche Ihrer App zu navigieren (siehe [Zugriffstasten](access-keys.md))</span><span class="sxs-lookup"><span data-stu-id="18ba9-146">Provide access keys to navigate your app's UI (see [Access keys](access-keys.md))</span></span>
+
+### <a name="focus-visuals-a-namefocus-visual"></a><span data-ttu-id="18ba9-147">Visuelle Fokuselemente <a name="focus-visual"></span><span class="sxs-lookup"><span data-stu-id="18ba9-147">Focus visuals <a name="focus-visual"></span></span>
+
+<span data-ttu-id="18ba9-148">Die UWP unterstützt ein einzelnes Design für visuelle Fokuselemente, das gut für alle Eingabearten und -funktionen funktioniert.</span><span class="sxs-lookup"><span data-stu-id="18ba9-148">The UWP supports a single focus visual design that works well for all input types and experiences.</span></span>
+![Visuelles Fokuselement](images/keyboard/focus-visual.png)
+
+<span data-ttu-id="18ba9-150">Ein visuelles Fokuselement:</span><span class="sxs-lookup"><span data-stu-id="18ba9-150">A focus visual:</span></span>
+-   <span data-ttu-id="18ba9-151">wird angezeigt, wenn ein UI-Element über eine Tastatur und/oder ein Gamepad/eine Fernbedienung den Fokus erhält</span><span class="sxs-lookup"><span data-stu-id="18ba9-151">Is shown when a UI element receives focus from a keyboard and/or gamepad/remote control</span></span>
+-   <span data-ttu-id="18ba9-152">wird als hervorgehobener Rahmen um das UI-Element wiedergegeben, um anzugeben, dass eine Aktion ausgeführt werden kann</span><span class="sxs-lookup"><span data-stu-id="18ba9-152">Is rendered as a highlighted border around the UI element to indicate an action can be taken</span></span>
+-   <span data-ttu-id="18ba9-153">unterstützt einen Benutzer dabei, in einer App-UI zu navigieren, ohne die Orientierung zu verlieren</span><span class="sxs-lookup"><span data-stu-id="18ba9-153">Helps a user navigate an app UI without getting lost</span></span>
+-   <span data-ttu-id="18ba9-154">kann für Ihre App angepasst werden (siehe [Visuelle Fokuselemente mit hoher Sichtbarkeit](guidelines-for-visualfeedback.md#high-visibility-focus-visuals))</span><span class="sxs-lookup"><span data-stu-id="18ba9-154">Can be customized for your app (See [High visibility focus  visuals](guidelines-for-visualfeedback.md#high-visibility-focus-visuals))</span></span>
+
+<span data-ttu-id="18ba9-155">**HINWEIS** Das visuelle UWP-Fokuselement entspricht nicht dem Fokusrechteck der Sprachausgabe.</span><span class="sxs-lookup"><span data-stu-id="18ba9-155">**NOTE** The UWP focus visual is not the same as the Narrator focus rectangle.</span></span>
+
+### <a name="tab-stops-a-nametab-stops"></a><span data-ttu-id="18ba9-156">Tabstopps <a name="tab-stops"></span><span class="sxs-lookup"><span data-stu-id="18ba9-156">Tab stops <a name="tab-stops"></span></span>
+
+<span data-ttu-id="18ba9-157">Damit ein Steuerelement (einschließlich der Navigationselemente) über die Tastatur verwendet werden kann, muss auf dem Steuerelement der Fokus liegen.</span><span class="sxs-lookup"><span data-stu-id="18ba9-157">To use a control (including navigation elements) with the keyboard, the control must have focus.</span></span> <span data-ttu-id="18ba9-158">Eine Möglichkeit für ein Steuerelement, den Tastaturfokus zu erhalten, ist, es über TAB-Navigation zugänglich zu machen, indem es als Tabstopp in der Aktivierreihenfolge Ihrer App identifiziert wird.</span><span class="sxs-lookup"><span data-stu-id="18ba9-158">One way for a control to receive keyboard focus is to make it accessible through tab navigation by identifying it as a tab stop in your app’s tab order.</span></span>
+
+<span data-ttu-id="18ba9-159">Damit ein Steuerelement in der Aktivierreihenfolge enthalten ist, muss die [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/br209419)-Eigenschaft auf **true** und die [**IsTabStop**](https://msdn.microsoft.com/library/windows/apps/br209422)-Eigenschaft auf **true** festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="18ba9-159">For a control to be included in the tab order, the [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/br209419) property must be set to **true** and the [**IsTabStop**](https://msdn.microsoft.com/library/windows/apps/br209422) property must be set to **true.**</span></span>
+
+<span data-ttu-id="18ba9-160">Um ein Steuerelement explizit aus der Aktivierreihenfolge auszuschließen, legen Sie die [**IsTabStop**](https://msdn.microsoft.com/library/windows/apps/br209422)-Eigenschaft auf **false** fest.</span><span class="sxs-lookup"><span data-stu-id="18ba9-160">To specifically exclude a control from the tab order, set the [**IsTabStop**](https://msdn.microsoft.com/library/windows/apps/br209422) property to **false.**</span></span>
+
+<span data-ttu-id="18ba9-161">Standardmäßig entspricht die Aktivierreihenfolge der Reihenfolge, in der UI-Elemente erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="18ba9-161">By default, tab order reflects the order in which UI elements are created.</span></span> <span data-ttu-id="18ba9-162">Wenn beispielsweise ein `StackPanel` die Elemente `Button`, `Checkbox` und `TextBox` enthält, ist die Aktivierreihenfolge `Button`, `Checkbox` und`TextBox`.</span><span class="sxs-lookup"><span data-stu-id="18ba9-162">For example, if a `StackPanel` contains a `Button`, a `Checkbox`, and a `TextBox`, tab order is `Button`, `Checkbox`, and `TextBox`.</span></span>
+
+<span data-ttu-id="18ba9-163">Sie können die Standardaktivierreihenfolge überschreiben, indem Sie die [**TabIndex**](https://msdn.microsoft.com/library/windows/apps/br209461)-Eigenschaft festlegen.</span><span class="sxs-lookup"><span data-stu-id="18ba9-163">You can override the default tab order by setting the [**TabIndex**](https://msdn.microsoft.com/library/windows/apps/br209461) property.</span></span>
+
+#### <a name="tab-order-should-be-logical-and-predictable"></a><span data-ttu-id="18ba9-164">Aktivierreihenfolge sollte logisch und vorhersehbar sein</span><span class="sxs-lookup"><span data-stu-id="18ba9-164">Tab order should be logical and predictable</span></span>
+
+<span data-ttu-id="18ba9-165">Ein gut durchdachtes Tastatur-Navigationsmodell, das eine logische und vorhersehbare Aktivierreihenfolge verwendet, macht Ihre App intuitiver und unterstützt Benutzer dabei, Funktionen effizienter und effektiver zu erkunden, zu identifizieren und auf sie zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="18ba9-165">A well-designed keyboard navigation model, using a logical and predictable tab order, makes your app more intuitive and helps users explore, discover, and access functionality more efficiently and effectively.</span></span>
+
+<span data-ttu-id="18ba9-166">Alle interaktiven Steuerelemente (die nicht in einer [Gruppe](#control-group) enthalten sind) sollten über Tabstopps verfügen, nicht interaktive Steuerelemente, z. B. `labels`, dagegen nicht.</span><span class="sxs-lookup"><span data-stu-id="18ba9-166">All interactive controls should have tab stops (unless they are in a [group](#control-group)), while non-interactive controls, such as `labels`, should not.</span></span>
+
+<span data-ttu-id="18ba9-167">Vermeiden Sie eine Aktivierreihenfolge, durch die der Fokus in Ihrer Anwendung wechselt.</span><span class="sxs-lookup"><span data-stu-id="18ba9-167">Avoid tab order that make the focus jump around in your application.</span></span> <span data-ttu-id="18ba9-168">Beispielsweise sollte eine Liste mit Steuerelementen in einer formularähnlichen UI eine Aktivierreihenfolge aufweisen, die von oben nach unten und von links nach rechts verläuft.</span><span class="sxs-lookup"><span data-stu-id="18ba9-168">For example, a list of controls in a form-like UI should have a tab order that flows top to bottom and left to right.</span></span>
+
+<span data-ttu-id="18ba9-169">Auf der Seite [Barrierefreiheit der Tastaturnavigation](../accessibility/keyboard-accessibility.md) finden Sie weitere Details zum Anpassen von Tabstopps.</span><span class="sxs-lookup"><span data-stu-id="18ba9-169">See [Keyboard accessibility](../accessibility/keyboard-accessibility.md) page for more details about customizing tab stops.</span></span>
+
+#### <a name="try-to-coordinate-tab-order-and-visual-order"></a><span data-ttu-id="18ba9-170">Koordinieren von Aktivierreihenfolge und visueller Reihenfolge</span><span class="sxs-lookup"><span data-stu-id="18ba9-170">Try to coordinate tab order and visual order</span></span>
+
+<span data-ttu-id="18ba9-171">Die Koordinierung der Aktivierreihenfolge und visuellen Reihenfolge (auch Lesereihenfolge oder Anzeigereihenfolge) vereinfacht die Benutzernavigation in der App-UI.</span><span class="sxs-lookup"><span data-stu-id="18ba9-171">Coordinating tab order and visual order (also referred to as reading order or display order) helps reduce confusion for users as they navigate through your app’s UI.</span></span>
+
+<span data-ttu-id="18ba9-172">Versuchen Sie, die wichtigsten Befehle, Steuerelemente und Inhalte zuerst in der Aktivierreihenfolge und der visuellen Reihenfolge einzustufen und darzustellen.</span><span class="sxs-lookup"><span data-stu-id="18ba9-172">Try to rank and present the most important commands, controls, and content first in both the tab order and the visual order.</span></span> <span data-ttu-id="18ba9-173">Die tatsächliche Anzeigeposition kann jedoch vom übergeordneten Layoutcontainer und bestimmten Eigenschaften der untergeordneten Elemente abhängen, die das Layout beeinflussen.</span><span class="sxs-lookup"><span data-stu-id="18ba9-173">However, the actual display position can depend on the parent layout container and certain properties of the child elements that influence the layout.</span></span> <span data-ttu-id="18ba9-174">Insbesondere kann sich die visuelle Reihenfolge von Layouts mit einer Raster- oder Tabellenmetapher erheblich von der Aktivierreihenfolge unterscheiden.</span><span class="sxs-lookup"><span data-stu-id="18ba9-174">Specifically, layouts that use a grid metaphor or a table metaphor can have a visual order quite different from the tab order.</span></span>
+
+<span data-ttu-id="18ba9-175">**HINWEIS** Die visuelle Reihenfolge ist auch von Gebietsschema und Sprache abhängig.</span><span class="sxs-lookup"><span data-stu-id="18ba9-175">**NOTE** Visual order is also dependent on locale and language.</span></span>
+
+### <a name="initial-focus-a-nameinitial-focus"></a><span data-ttu-id="18ba9-176">Anfänglicher Fokus <a name="initial-focus"></span><span class="sxs-lookup"><span data-stu-id="18ba9-176">Initial focus <a name="initial-focus"></span></span>
+
+<span data-ttu-id="18ba9-177">Der anfängliche Fokus gibt das UI-Element an, das den Fokus erhält, wenn eine Anwendung oder eine Seite zum ersten Mal gestartet oder aktiviert wird.</span><span class="sxs-lookup"><span data-stu-id="18ba9-177">Initial focus specifies the UI element that receives focus when an application or a page is first launched or activated.</span></span> <span data-ttu-id="18ba9-178">Wenn Sie eine Tastatur verwenden, beginnt ein Benutzer von diesem Element die Interaktion mit der App-UI.</span><span class="sxs-lookup"><span data-stu-id="18ba9-178">When using a keyboard, it is from this element that a user starts interacting with your app’s UI.</span></span>
+
+<span data-ttu-id="18ba9-179">Für UWP-Apps wird der anfängliche Fokus auf das Element mit dem höchsten [**TabIndex**](https://msdn.microsoft.com/library/windows/apps/br209461) festgelegt, der den Fokus erhalten kann.</span><span class="sxs-lookup"><span data-stu-id="18ba9-179">For UWP apps, initial focus is set to the element with the highest [**TabIndex**](https://msdn.microsoft.com/library/windows/apps/br209461) that can receive focus.</span></span> <span data-ttu-id="18ba9-180">Untergeordnete Elemente von Container-Steuerelementen werden ignoriert.</span><span class="sxs-lookup"><span data-stu-id="18ba9-180">Child elements of container controls are ignored.</span></span> <span data-ttu-id="18ba9-181">Bei einer Verknüpfung erhält das erste Element in der visuellen Struktur den Fokus.</span><span class="sxs-lookup"><span data-stu-id="18ba9-181">In a tie, the first element in the visual tree receives focus.</span></span>
+
+#### <a name="set-initial-focus-on-the-most-logical-element"></a><span data-ttu-id="18ba9-182">Festlegen des anfänglichen Fokus auf das logischste Element</span><span class="sxs-lookup"><span data-stu-id="18ba9-182">Set initial focus on the most logical element</span></span>
+
+<span data-ttu-id="18ba9-183">Legen Sie den anfänglichen Fokus auf das UI-Element für die erste, oder primäre, Aktion, die Benutzer mit der größten Wahrscheinlichkeit durchführen, wenn Sie Ihre App starten oder zu einer Seite navigieren.</span><span class="sxs-lookup"><span data-stu-id="18ba9-183">Set initial focus on the UI element for the first, or primary, action that users are most likely to take when launching your app or navigating to a page.</span></span> <span data-ttu-id="18ba9-184">Beispiele:</span><span class="sxs-lookup"><span data-stu-id="18ba9-184">Some examples include:</span></span>
+-   <span data-ttu-id="18ba9-185">Eine Foto-App, wobei der Fokus auf dem ersten Element in einer Galerie liegt</span><span class="sxs-lookup"><span data-stu-id="18ba9-185">A photo app where focus is set to the first item in a gallery</span></span>
+-   <span data-ttu-id="18ba9-186">Eine Musik-App, wobei der Fokus auf der Wiedergabe-Taste liegt</span><span class="sxs-lookup"><span data-stu-id="18ba9-186">A music app where focus is set to the play button</span></span>
+
+#### <a name="dont-set-initial-focus-on-an-element-that-exposes-a-potentially-negative-or-even-disastrous-outcome"></a><span data-ttu-id="18ba9-187">Kein anfänglicher Fokus auf ein Element mit potenziell negativen oder verhängnisvollen Ergebnissen</span><span class="sxs-lookup"><span data-stu-id="18ba9-187">Don’t set initial focus on an element that exposes a potentially negative, or even disastrous, outcome</span></span>
+
+<span data-ttu-id="18ba9-188">Dieser Funktionsumfang sollte vom Benutzer festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="18ba9-188">This level of functionality should be a user’s choice.</span></span> <span data-ttu-id="18ba9-189">Das Festlegen des anfänglichen Fokus auf ein Element mit einem signifikanten Ergebnis resultiert möglicherweise in unerwünschtem Datenverlust oder Systemzugriff.</span><span class="sxs-lookup"><span data-stu-id="18ba9-189">Setting initial focus to an element with a significant outcome might result in unintended data loss or system access.</span></span> <span data-ttu-id="18ba9-190">Legen Sie beispielsweise nicht den Fokus auf die Schaltfläche "Löschen" beim Navigieren zu einer E-Mail-Nachricht.</span><span class="sxs-lookup"><span data-stu-id="18ba9-190">For example, don’t set focus to the delete button when navigating to an e-mail.</span></span>
+
+<span data-ttu-id="18ba9-191">Auf der Seite [Barrierefreiheit der Tastaturnavigation](../accessibility/keyboard-accessibility.md) finden Sie weitere Informationen zum Überschreiben der Aktivierreihenfolge.</span><span class="sxs-lookup"><span data-stu-id="18ba9-191">See [Keyboard accessibility](../accessibility/keyboard-accessibility.md) page for more details about overriding tab order.</span></span>
+
+### <a name="navigation-a-namenavigation"></a><span data-ttu-id="18ba9-192">Navigation <a name="navigation"></span><span class="sxs-lookup"><span data-stu-id="18ba9-192">Navigation <a name="navigation"></span></span>
+
+<span data-ttu-id="18ba9-193">Die Tastaturnavigation wird in der Regel durch die TAB-Tasten und die Pfeiltasten unterstützt.</span><span class="sxs-lookup"><span data-stu-id="18ba9-193">Keyboard navigation is typically supported through the Tab keys and the Arrow keys.</span></span>
+
+![TAB-Tasten und Pfeiltasten](images/keyboard/tab-and-arrow.png)
+
+<span data-ttu-id="18ba9-195">Standardmäßig weisen UWP-Steuerelemente dieses grundlegende Tastaturverhalten auf:</span><span class="sxs-lookup"><span data-stu-id="18ba9-195">By default, UWP controls follow these basic keyboard behaviors:</span></span>
+-   <span data-ttu-id="18ba9-196">**TAB-Tasten** dienen der Navigation zwischen ausführbaren/aktiven Steuerelementen in der Aktivierreihenfolge.</span><span class="sxs-lookup"><span data-stu-id="18ba9-196">**Tab keys** navigate between actionable/active controls in tab order.</span></span>
+-   <span data-ttu-id="18ba9-197">**UMSCHALT + TAB** dient der Navigation zwischen Steuerelementen in umgekehrter Aktivierreihenfolge.</span><span class="sxs-lookup"><span data-stu-id="18ba9-197">**Shift + Tab** navigate controls in reverse tab order.</span></span> <span data-ttu-id="18ba9-198">Wenn der Benutzer mit der Pfeiltaste in das Steuerelement navigiert ist, liegt der Fokus auf dem letzten bekannten Wert im Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="18ba9-198">If user has navigated inside the control using arrow key, focus is set to the last known value inside the control.</span></span>
+-   <span data-ttu-id="18ba9-199">**Pfeiltasten** ermöglichen die steuerelementspezifische „interne Navigation“, wenn der Benutzer zur „internen Navigation“ wechselt. Pfeiltasten dienen nicht der Navigation außerhalb des Steuerelements.</span><span class="sxs-lookup"><span data-stu-id="18ba9-199">**Arrow keys** expose control-specific "inner navigation" When user enters "inner navigation,"" arrow keys do not navigate out of a control.</span></span> <span data-ttu-id="18ba9-200">Beispiele:</span><span class="sxs-lookup"><span data-stu-id="18ba9-200">Some examples include:</span></span>
+    -   <span data-ttu-id="18ba9-201">Nach-oben-/Nach-unten-Pfeiltaste verschiebt Fokus in `ListView` und</span><span class="sxs-lookup"><span data-stu-id="18ba9-201">Up/Down arrow key moves focus inside `ListView` and</span></span> `MenuFlyout`
+    -   <span data-ttu-id="18ba9-202">Ändern der derzeit ausgewählten Werte für `Slider` und</span><span class="sxs-lookup"><span data-stu-id="18ba9-202">Modify currently selected values for `Slider` and</span></span> `RatingsControl`
+    -   <span data-ttu-id="18ba9-203">Internes Verschieben des Textcursors</span><span class="sxs-lookup"><span data-stu-id="18ba9-203">Move caret inside</span></span> `TextBox`
+    -   <span data-ttu-id="18ba9-204">Internes Erweitern/Reduzieren von Elementen</span><span class="sxs-lookup"><span data-stu-id="18ba9-204">Expand/collapse items inside</span></span> `TreeView`
+
+<span data-ttu-id="18ba9-205">Verwenden Sie dieses Standardverhalten, um die Tastaturnavigation Ihrer App zu optimieren.</span><span class="sxs-lookup"><span data-stu-id="18ba9-205">Use these default behaviors to optimize your app’s keyboard navigation.</span></span>
+
+#### <a name="use-inner-navigation-with-sets-of-related-controls"></a><span data-ttu-id="18ba9-206">Verwenden Sie die „interne Navigation“ mit Gruppen verwandter Steuerelemente.</span><span class="sxs-lookup"><span data-stu-id="18ba9-206">Use "inner navigation" with sets of related controls</span></span>
+
+<span data-ttu-id="18ba9-207">Durch Bereitstellen der Pfeiltastennavigation für eine Gruppe verwandter Steuerelemente wird ihre Beziehung innerhalb der gesamten Organisation der App-UI verstärkt.</span><span class="sxs-lookup"><span data-stu-id="18ba9-207">Providing arrow key navigation into a set of related controls reinforces their relationship within the overall organization of your app’s UI.</span></span>
+
+<span data-ttu-id="18ba9-208">Das hier gezeigte Steuerelement `ContentDialog` ermöglicht beispielsweise standardmäßig die interne Navigation für eine horizontale Reihe von Tasten. (Informationen zu benutzerdefinierten Steuerelementen finden Sie im Abschnitt [Steuerelementgruppe](#control-group)).</span><span class="sxs-lookup"><span data-stu-id="18ba9-208">For example, the `ContentDialog` control shown here provides inner navigation by default for a horizontal row of buttons (for custom controls, see the [Control Group](#control-group) section).</span></span>
+
+![Dialogfeldbeispiel](images/keyboard/dialog.png)
+
+***<span data-ttu-id="18ba9-210">Interaktion mit einer Sammlung verwandter Tasten durch Pfeiltastennavigation vereinfacht</span><span class="sxs-lookup"><span data-stu-id="18ba9-210">Interaction with a collection of related buttons is made easier with arrow key navigation</span></span>***
+
+<span data-ttu-id="18ba9-211">Wenn Elemente in einer einzelnen Spalte angezeigt werden, erfolgt die Elementnavigation mit der Nach-oben-/Nach-unten-Pfeiltaste.</span><span class="sxs-lookup"><span data-stu-id="18ba9-211">If items are displayed in a single column, Up/Down arrow key navigates items.</span></span> <span data-ttu-id="18ba9-212">Wenn Elemente in einer einzelnen Zeile angezeigt werden, erfolgt die Elementnavigation mit der Rechts-/Links-Pfeiltaste.</span><span class="sxs-lookup"><span data-stu-id="18ba9-212">If items are displayed in a single row, Right/Left arrow key navigates items.</span></span> <span data-ttu-id="18ba9-213">Wenn sich die Elemente in mehreren Spalten befinden, erfolgt die Navigation über alle 4 Pfeiltasten.</span><span class="sxs-lookup"><span data-stu-id="18ba9-213">If items are multiple columns, all 4 arrow keys navigate.</span></span>
+
+#### <a name="make-a-set-of-related-controls-a-single-tab-stop"></a><span data-ttu-id="18ba9-214">Konvertieren einer Gruppe verwandter Steuerelemente in einen einzelnen Tabstopp</span><span class="sxs-lookup"><span data-stu-id="18ba9-214">Make a set of related controls a single tab stop</span></span>
+
+<span data-ttu-id="18ba9-215">Durch Konvertieren einer Gruppe verwandter oder komplementärer Steuerelemente in einen einzelnen Tabstopp können Sie die Anzahl der Tabstopps in Ihrer App minimieren.</span><span class="sxs-lookup"><span data-stu-id="18ba9-215">By making a set of related, or complementary, controls a single tab stop, you can minimize the number of overall tab stops in your app.</span></span>
+
+<span data-ttu-id="18ba9-216">Die folgenden Abbildungen zeigen beispielsweise zwei gestapelte `ListView`-Steuerelemente.</span><span class="sxs-lookup"><span data-stu-id="18ba9-216">For example, the following images show two stacked `ListView` controls.</span></span> <span data-ttu-id="18ba9-217">Die Abbildung auf der linken Seite zeigt die Pfeiltastennavigation zwischen `ListView`-Steuerelementen für einen Tabstopp. Die Abbildung auf der rechten Seite zeigt, wie die Navigation zwischen untergeordneten Elementen einfacher und effizienter gestaltet werden kann, da die Navigation in übergeordneten Steuerelementen nicht mit einer TAB-Taste erfolgt.</span><span class="sxs-lookup"><span data-stu-id="18ba9-217">The image on the left shows arrow key navigation used with a tab stop to navigate between `ListView` controls, while the image on the right shows how navigation between child elements could be made easier and more efficient by eliminating the need for to traverse parent controls with a tab key.</span></span>
 
 
-Eine gut durchdachte Tastatur-UI ist ein wichtiger Aspekt für die Barrierefreiheit von Software. Sie ermöglicht es Benutzern mit einer Sehbeeinträchtigung oder mit bestimmten motorischen Einschränkungen, in einer App zu navigieren und mit deren Features zu interagieren. Diese Benutzer können u. U. keine Maus bedienen und sind auf verschiedene Hilfstechnologien wie etwa Tastaturerweiterungstools, Bildschirmtastaturen, Bildschirmlupen, Bildschirmleseprogramme oder die Möglichkeit der Spracheingabe angewiesen.
-
-Benutzer können mit universellen Apps über eine Hardwaretastatur und zwei Softwaretastaturen (Bildschirmtastatur oder Touch-Bildschirmtastatur) interagieren.
-
-Bildschirmtastatur  
-Bei der Bildschirmtastatur handelt es sich um eine visuelle Softwaretastatur, die Sie anstelle der physischen Tastatur zum Eingeben von Daten per Touch, Maus, Zeichen-/Eingabestift oder mit einem anderen Zeigegerät verwenden können. Ein Touchscreen ist nicht erforderlich. Die Bildschirmtastatur ist für Systeme ohne physische Tastatur oder für Benutzer vorgesehen, deren Mobilitätseinschränkungen die Verwendung herkömmlicher physischer Eingabegeräte verhindern. Die Bildschirmtastatur emuliert nahezu alle Funktionen der Hardwaretastatur.
-
-Die Bildschirmtastatur kann auf der Seite „Tastatur“ unter „Einstellungen &gt; Erleichterte Bedienung“ aktiviert werden.
-
-**Hinweis**: Die Bildschirmtastatur hat Priorität gegenüber der Touch-Bildschirmtastatur. Diese wird nicht angezeigt, wenn die Bildschirmtastatur angezeigt wird.
-
- 
-
-![Bildschirmtastatur](images/input-patterns/osk.png)
-
-<sup>Bildschirmtastatur</sup>
-
-Touch-Bildschirmtastatur  
-Bei der Touch-Bildschirmtastatur handelt es sich um eine visuelle Softwaretastatur für die Texteingabe per Touchscreen. Sie ist kein Ersatz für die Bildschirmtastatur, da sie nur für Texteingaben verwendet wird (keine Emulation der Hardwaretastatur).
-
-Abhängig vom Gerät wird die Touch-Bildschirmtastatur angezeigt, wenn ein Textfeld oder ein anderes bearbeitbares Textsteuerelement im Fokus steht, oder wenn der Benutzer sie über das **Benachrichtigungs-Center**manuell aktiviert.
-
-![Symbol der Touch-Bildschirmtastatur im Benachrichtigungs-Center](images/input-patterns/touch-keyboard-notificationcenter.png)
-
-**Hinweis**: Möglicherweise muss der Benutzer zum Bildschirm **Tablet-Modus** unter „Einstellungen &gt; System“ wechseln und „Durch die Verwendung des Geräts als Tablet wird die Toucheingabe in Windows verbessert“ aktivieren, um die automatische Anzeige der Touch-Bildschirmtastatur zu aktivieren.
-
- 
-
-Wenn Ihre App den Fokus programmgesteuert auf ein Texteingabesteuerelement festlegt, wird die Touch-Bildschirmtastatur nicht aufgerufen. Dadurch wird unerwartetes, nicht direkt vom Benutzer ausgelöstes Verhalten verhindert. Allerdings wird die Tastatur automatisch ausgeblendet, wenn der Fokus programmgesteuert auf ein nicht textuelles Eingabesteuerelement bewegt wird.
-
-Die Bildschirmtastatur bleibt in der Regel sichtbar, während der Benutzer zwischen Steuerelementen in einem Formular navigiert. Dieses Verhalten kann je nach den anderen Steuerelementtypen innerhalb des Formulars variieren.
-
-Im Folgenden finden Sie eine Liste der nicht bearbeitbaren Steuerelemente, die in einer Texteingabesitzung mit der Bildschirmtastatur den Fokus erhalten können, ohne dass die Tastatur ausgeblendet wird. Statt die Benutzeroberfläche unnötigerweise zu ändern und den Benutzer möglicherweise zu verwirren, bleibt die Bildschirmtastatur angezeigt, da der Benutzer wahrscheinlich zwischen diesen Steuerelementen und der Texteingabe über die Bildschirmtastatur hin und her wechselt.
-
--   Kontrollkästchen
--   Kombinationsfeld
--   Optionsfeld
--   Bildlaufleiste
--   Struktur
--   Strukturelement
--   Menü
--   Menüleiste
--   Menüelement
--   Symbolleiste
--   Liste
--   Listenelement
-
-Hier finden Sie einige Beispiele für verschiedene Modi der Touch-Bildschirmtastatur. Das erste Bild zeigt das Standardlayout, das zweite das Daumenlayout. (Letzteres ist unter Umständen nicht in allen Sprachen verfügbar.)
-
-Hier finden Sie einige Beispiele für verschiedene Modi der Touch-Bildschirmtastatur. Das erste Bild zeigt das Standardlayout, das zweite das Daumenlayout. (Letzteres ist unter Umständen nicht in allen Sprachen verfügbar.)
 <table>
-<tr>
-    <td>**Touch-Bildschirmtastatur mit Standardlayout  **</td>
-    <td>![Touch-Bildschirmtastatur mit Standardlayout](images/touchkeyboard-standard.png)</td>
-</tr>
-<tr>
-    <td>**Touch-Bildschirmtastatur mit erweitertem Layout  **</td>
-    <td>![Touch-Bildschirmtastatur mit erweitertem Layout](images/touchkeyboard-expanded.png)</td>
-</tr>
-<tr>
-    <td>**Touch-Bildschirmtastatur im standardmäßigen Daumenlayoutmodus:  **</td>
-    <td>![Touch-Bildschirmtastatur mit Daumenlayout](images/touchkeyboard-thumb.png)</td>
-</tr>
-<tr>
-    <td>**Touch-Bildschirmtastatur mit numerischem Daumenlayout  **</td>
-    <td>![Touch-Bildschirmtastatur mit numerischem Daumenlayout](images/touchkeyboard-numeric-thumb.png)</td>
-</tr>
+  <td>![Pfeil und TAB](images/keyboard/arrow-and-tab.png)</td>
+  <td>![Nur Pfeil](images/keyboard/arrow-only.png)</td>
 </table>
 
+***<span data-ttu-id="18ba9-220">Die Interaktion mit zwei gestapelten ListView-Steuerelementen kann durch Eliminierung von Tabstopps und Navigation mit den Pfeiltasten einfacher und effizienter gestaltet werden.</span><span class="sxs-lookup"><span data-stu-id="18ba9-220">Interaction with two stacked ListView controls can be made easier and more efficient by eliminating the tab stop and navigating with just arrow keys.</span></span>***
 
-Erfolgreiche Tastaturinteraktionen ermöglichen es Benutzern, einfache App-Szenarien nur über die Tastatur auszuführen; Benutzer können demnach über die Tastatur alle interaktiven Elemente erreichen und Standardfunktionen aktivieren. Eine Reihe von Faktoren kann den Erfolg beeinflussen, z. B. Tastaturnavigation, Tastenkombinationen für die Barrierefreiheit sowie Tastenkombinationen für erfahrene Benutzer.
+<span data-ttu-id="18ba9-221">Im Abschnitt [Steuerelementgruppe](#control-group) erfahren Sie, wie Sie die Optimierungsbeispiele auf Ihre Anwendungs-UI anwenden.</span><span class="sxs-lookup"><span data-stu-id="18ba9-221">Visit [Control Group](#control-group) section to learn how to apply the optimization examples to your application UI.</span></span>
 
-**Hinweis**  Die Touch-Bildschirmtastatur unterstützt keine Umschaltung und nur die wenigsten Systembefehle (siehe [Muster](#keyboard_command_patterns)).
+### <a name="interaction-and-commanding"></a><span data-ttu-id="18ba9-222">Interaktion und Befehle</span><span class="sxs-lookup"><span data-stu-id="18ba9-222">Interaction and commanding</span></span>
 
-## <a name="navigation"></a>Navigation
+<span data-ttu-id="18ba9-223">Wenn ein Steuerelement den Fokus hat, kann ein Benutzer mit ihm interagieren und zugehörige Funktionalität über spezielle Tastatureingaben aufrufen.</span><span class="sxs-lookup"><span data-stu-id="18ba9-223">Once a control has focus, a user can interact with it and invoke any associated functionality using specific keyboard input.</span></span>
 
+#### <a name="text-entry"></a><span data-ttu-id="18ba9-224">Texteingabe</span><span class="sxs-lookup"><span data-stu-id="18ba9-224">Text entry</span></span>
 
-Damit ein Steuerelement (einschließlich der Navigationselemente) über die Tastatur verwendet werden kann, muss auf dem Steuerelement der Fokus liegen. Eine Möglichkeit, einem Steuerelement den Tastaturfokus zuzuweisen, besteht darin, es per TAB-Navigation zugänglich zu machen. Ein gut durchdachtes Tastaturnavigationsmodell enthält eine logische und vorhersehbare Aktivierreihenfolge, die es dem Benutzer ermöglicht, die App schnell und effizient zu erkunden und zu verwenden.
+<span data-ttu-id="18ba9-225">Für Steuerelemente, die speziell der Texteingabe dienen (wie `TextBox` und `RichEditBox`), werden alle Tastatureingaben zur Eingabe von Text oder Navigation in Text verwendet, was Priorität gegenüber anderen Tastaturbefehlen hat.</span><span class="sxs-lookup"><span data-stu-id="18ba9-225">For those controls specifically designed for text input such as `TextBox` and `RichEditBox`, all keyboard input is used for entering or navigating text, which takes priority over other keyboard commands.</span></span> <span data-ttu-id="18ba9-226">Beispielsweise erkennt das Dropdownmenü für ein `AutoSuggestBox`-Steuerelement nicht die **Leertaste** als Auswahlbefehl.</span><span class="sxs-lookup"><span data-stu-id="18ba9-226">For example, the drop down menu for an `AutoSuggestBox` control does not recognize the **Space** key as a selection command.</span></span>
 
-Alle interaktiven Steuerelemente (die nicht in einer Gruppe enthalten sind) sollten über Tabstopps verfügen, nicht interaktive Steuerelemente, z. B. Beschriftungen, dagegen nicht.
+![Texteingabe](images/keyboard/text-entry.png)
 
-Eine Gruppe verwandter Steuerelemente kann in einer Steuerelementgruppe zusammengefasst und einem einzelnen Tabstopp zugeordnet werden. Steuerelementgruppen werden für Steuerelemente verwendet, die sich wie ein einzelnes Steuerelement verhalten, z. B. Optionsfelder. Sie können auch verwendet werden, wenn es zu viele Steuerelemente für eine effiziente Navigation mit der TAB-TASTE allein gibt. Der Pfeiltasten, POS1, ENDE, BILD-AUF und BILD-AB verschieben den Eingabefokus zwischen den Steuerelementen in einer Gruppe (es ist nicht möglich, mit diesen Tasten aus einer Steuerelementgruppe heraus zu navigieren).
+#### <a name="space-key"></a><span data-ttu-id="18ba9-228">Leertaste</span><span class="sxs-lookup"><span data-stu-id="18ba9-228">Space key</span></span>
 
-Sie sollten den anfänglichen Fokus Ihrer Tastatur auf das Element festlegen, mit dem Benutzer beim Starten der App intuitiv (oder mit der größten Wahrscheinlichkeit) als Erstes interagieren. Häufig handelt es sich dabei um die Hauptansicht der App. So können Benutzer sofort damit beginnen, mithilfe der Pfeiltasten durch den Inhalt der App zu scrollen.
+<span data-ttu-id="18ba9-229">Wenn Sie sich nicht im Texteingabemodus befinden, ruft die **Leertaste** die Aktion oder den Befehl auf, der mit dem fokussierten Steuerelement verknüpft ist (vergleichbar mit dem Tippen oder dem Klicken mit einer Maus).</span><span class="sxs-lookup"><span data-stu-id="18ba9-229">When not in text entry mode, the **Space** key invokes the action or command associated with the focused control (just like a tap with touch or a click with a mouse).</span></span>
 
-Legen Sie den anfänglichen Tastaturfokus nicht auf ein Element mit potenziell negativen oder verhängnisvollen Ergebnissen fest. Dadurch kann der Verlust von Daten oder des Systemzugriffs verhindert werden.
+![LEERTASTE](images/keyboard/space-key.png)
 
-Versuchen Sie, die wichtigsten Befehle, Steuerelemente und Inhalte zuerst in der Aktivierreihenfolge und der Anzeigereihenfolge (oder visuellen Hierarchie) einzustufen und darzustellen. Die tatsächliche Anzeigeposition kann jedoch vom übergeordneten Layoutcontainer und bestimmten Eigenschaften der untergeordneten Elemente abhängen, die das Layout beeinflussen. Insbesondere kann sich die Leserichtung von Layouts mit einer Raster- oder Tabellenmetapher erheblich von der Aktivierreihenfolge unterscheiden. Dies ist nicht immer ein Problem, aber Sie sollten die Funktionen der App sowohl als UI für die Toucheingabe als auch als UI für die Verwendung mit der Tastatur testen.
+#### <a name="enter-key"></a><span data-ttu-id="18ba9-231">EINGABETASTE</span><span class="sxs-lookup"><span data-stu-id="18ba9-231">Enter key</span></span>
 
-Die Aktivierreihenfolge sollte möglichst der Leserichtung folgen. Dies ist weniger verwirrend für den Benutzer und abhängig vom Gebietsschema und der Sprache.
+<span data-ttu-id="18ba9-232">Die **EINGABETASTE** ermöglicht eine Vielzahl an gängigen Benutzerinteraktionen, abhängig vom fokussierten Steuerelement:</span><span class="sxs-lookup"><span data-stu-id="18ba9-232">The **Enter** key can perform a variety of common user interactions, depending on the control with focus:</span></span>
+-   <span data-ttu-id="18ba9-233">Aktiviert Befehlssteuerelemente wie `Button` oder `Hyperlink`.</span><span class="sxs-lookup"><span data-stu-id="18ba9-233">Activates command controls such as a `Button` or `Hyperlink`.</span></span> <span data-ttu-id="18ba9-234">Für mehr Benutzerfreundlichkeit aktiviert die **EINGABETASTE** auch Steuerelemente, die Befehlssteuerelementen ähneln, wie `ToggleButton` oder `AppBarToggleButton`.</span><span class="sxs-lookup"><span data-stu-id="18ba9-234">To avoid end user confusion, the **Enter** key also activates controls that look like command controls such as `ToggleButton` or `AppBarToggleButton`.</span></span>
+-   <span data-ttu-id="18ba9-235">Zeigt die Auswahl-UI für Steuerelemente an, z.B. `ComboBox` und `DatePicker`.</span><span class="sxs-lookup"><span data-stu-id="18ba9-235">Displays the picker UI for controls such as `ComboBox` and `DatePicker`.</span></span> <span data-ttu-id="18ba9-236">Die **EINGABETASTE** bestätigt und schließt auch die Auswahl-UI.</span><span class="sxs-lookup"><span data-stu-id="18ba9-236">The **Enter** key also commits and closes the picker UI.</span></span>
+-   <span data-ttu-id="18ba9-237">Aktiviert Listensteuerelemente wie `ListView`, `GridView` und `ComboBox`.</span><span class="sxs-lookup"><span data-stu-id="18ba9-237">Activates list controls such as `ListView`, `GridView`, and `ComboBox`.</span></span>
+    -   <span data-ttu-id="18ba9-238">Die **EINGABETASTE** führt die Auswahlaktion als **LEERTASTE** für Listen- und Rasterelemente durch, es sei denn, es ist eine zusätzliche Aktion für diese Elemente vorhanden (wodurch ein neues Fenster geöffnet wird).</span><span class="sxs-lookup"><span data-stu-id="18ba9-238">The **Enter** key performs the selection action as the **Space** key for list and grid items, unless there is an additional action associated with these items (opening a new window).</span></span>
+    -   <span data-ttu-id="18ba9-239">Wenn eine weitere Aktion mit dem Steuerelement verknüpft ist, führt die **EINGABETASTE** die zusätzliche Aktion und die **LEERTASTE** die Auswahlaktion durch.</span><span class="sxs-lookup"><span data-stu-id="18ba9-239">If an additional action is associated with the control, the **Enter** key performs the additional action and the **Space** key performs the selection action.</span></span>
 
-Weisen Sie Tastaturschaltflächen in der Benutzeroberfläche Ihrer App entsprechende Funktionen zu (Zurück- und Vorwärts-Schaltflächen).
+<span data-ttu-id="18ba9-240">**HINWEIS** Die **EINGABETASTE** und die **LEERTASTE** führen nicht immer dieselbe Aktion aus, aber oft.</span><span class="sxs-lookup"><span data-stu-id="18ba9-240">**NOTE** The **Enter** key and **Space** key do not always perform the same action, but often do.</span></span>
 
-Versuchen Sie, das Navigieren zurück zum Startbildschirm der App und zwischen wichtigen Inhalten so unkompliziert wie möglich zu machen.
+![EINGABETASTE](images/keyboard/enter-key.png)
 
-Verwenden Sie die Pfeiltasten als Tastenkombinationen für die ordnungsgemäße interne Navigation zwischen untergeordneten Elementen zusammengesetzter Elemente. Wenn Knoten der Strukturansicht separate untergeordnete Elemente für die Verarbeitung der Erweitern/Reduzieren-Funktion und der Knotenaktivierung aufweisen, sollten Sie die NACH-LINKS- und die NACH-RECHTS-Taste verwenden, um die Erweitern/Reduzieren-Funktion über die Tastatur bereitzustellen. Dies entspricht den Plattformsteuerelementen.
+<span data-ttu-id="18ba9-242">Die ESC-TASTE ermöglicht Benutzern das Abbrechen einer Übergangs-UI (sowie aller laufenden Aktionen in dieser UI).</span><span class="sxs-lookup"><span data-stu-id="18ba9-242">The Esc key lets a user cancel transient UI (along with any ongoing actions in that UI).</span></span>
 
-Da die Touch-Bildschirmtastatur einen großen Teil des Bildschirms verdeckt, stellt die Universelle Windows-Plattform (UWP) sicher, dass das fokussierte Eingabefeld eingeblendet wird, wenn ein Benutzer durch die Steuerelemente des Formulars navigiert, einschließlich der Steuerelemente, die derzeit nicht sichtbar sind. Benutzerdefinierte Steuerelemente sollten dieses Verhalten emulieren.
+<span data-ttu-id="18ba9-243">Beispiele umfassen:</span><span class="sxs-lookup"><span data-stu-id="18ba9-243">Examples of this experience include:</span></span>
+-   <span data-ttu-id="18ba9-244">Benutzer öffnet eine `ComboBox` mit einem ausgewählten Wert und verwendet die Pfeiltasten zum Verschieben der Fokusauswahl auf einen neuen Wert.</span><span class="sxs-lookup"><span data-stu-id="18ba9-244">User opens a `ComboBox` with a selected value and uses the arrow keys to move the focus selection to a new value.</span></span> <span data-ttu-id="18ba9-245">Durch Drücken der ESC-TASTE wird die `ComboBox` geschlossen und der ausgewählte Wert auf den ursprünglichen Wert zurückgesetzt.</span><span class="sxs-lookup"><span data-stu-id="18ba9-245">Pressing the Esc key closes the `ComboBox` and resets the selected value back to the original value.</span></span>
+-   <span data-ttu-id="18ba9-246">Der Benutzer ruft eine Aktion zum dauerhaften Löschen für eine E-Mail auf und wird mit einem `ContentDialog` aufgefordert, die Aktion zu bestätigen.</span><span class="sxs-lookup"><span data-stu-id="18ba9-246">User invokes a permanent delete action for an email and is prompted with a `ContentDialog` to confirm the action.</span></span> <span data-ttu-id="18ba9-247">Der Benutzer entscheidet, dass dies nicht die gewünschte Aktion ist, und drückt die **ESC-TASTE**, um das Dialogfeld zu schließen.</span><span class="sxs-lookup"><span data-stu-id="18ba9-247">The user decides this is not the intended action and presses the **Esc** key to close the dialog.</span></span> <span data-ttu-id="18ba9-248">Da die **ESC-TASTE** mit der Schaltfläche **Abbrechen** verknüpft ist, wird das Dialogfeld geschlossen und die Aktion abgebrochen.</span><span class="sxs-lookup"><span data-stu-id="18ba9-248">As the **Esc** key is associated with the **Cancel** button, the dialog is closed and the action is canceled.</span></span> <span data-ttu-id="18ba9-249">Die **ESC-TASTE** wirkt sich nur auf die Übergangs-UI aus. Die App-UI wird nicht geschlossen, und es wird auch nicht durch sie zurücknavigiert.</span><span class="sxs-lookup"><span data-stu-id="18ba9-249">The **Esc** key only affects transient UI, it does not close, or back navigate through, app UI.</span></span>
 
-![Formular mit und ohne angezeigte Touch-Bildschirmtastatur](images/input-patterns/touch-keyboard-pan1.png)
+![ESC-TASTE](images/keyboard/esc-key.png)
 
-Manchmal müssen bestimmte UI-Elemente dauerhaft auf dem Bildschirm zu sehen sein. Gestalten Sie die UI so, dass sich die Formularsteuerelemente in einer verschiebbaren Region befinden und die wichtigen UI-Elemente statisch sind. Beispiel:
+#### <a name="home-and-end-keys"></a><span data-ttu-id="18ba9-251">POS1-TASTE und ENDE-TASTE</span><span class="sxs-lookup"><span data-stu-id="18ba9-251">Home and End keys</span></span>
 
-![Formular mit Bereichen, die immer sichtbar sein sollen](images/input-patterns/touch-keyboard-pan2.png)
-## <a name="activation"></a>Aktivierung
+<span data-ttu-id="18ba9-252">Die Tasten **POS1** und **ENDE** ermöglichen Benutzern, einen Bildlauf zum Anfang oder Ende eines UI-Bereichs durchzuführen.</span><span class="sxs-lookup"><span data-stu-id="18ba9-252">The **Home** and **End** keys let a user scroll to the beginning or end of a UI region.</span></span>
 
+<span data-ttu-id="18ba9-253">Beispiele umfassen:</span><span class="sxs-lookup"><span data-stu-id="18ba9-253">Examples of this experience include:</span></span>
+-   <span data-ttu-id="18ba9-254">Für die Steuerelemente `ListView` und `GridView` verlagert die Taste **POS1** den Fokus auf das erste Element und führt einen Bildlauf in die Ansicht durch. Die Taste **ENDE** verlagert den Fokus auf das letzte Element und führt einen Bildlauf in die Ansicht durch.</span><span class="sxs-lookup"><span data-stu-id="18ba9-254">For `ListView` and `GridView` controls, the **Home** key moves focus to the first element and scrolls it into view, whereas the **End** key moves focus to the last element and scrolls it into view.</span></span>
+-   <span data-ttu-id="18ba9-255">Für das Steuerelement `ScrollView` führt die Taste **POS1** einen Bildlauf zum Anfang des Bereichs durch. Die Taste **ENDE** führt einen Bildlauf zum Ende des Bereichs durch (Fokus wird nicht geändert).</span><span class="sxs-lookup"><span data-stu-id="18ba9-255">For a `ScrollView` control, the **Home** key scrolls to the top of the region, whereas the **End** key scrolls to the bottom of the region (focus is not changed).</span></span>
 
-Ein Steuerelement kann auf unterschiedliche Arten aktiviert werden, je nachdem, ob es derzeit den Fokus hat oder nicht.
+![POS1-TASTE und ENDE-TASTE](images/keyboard/home-and-end.png)
 
-LEERTASTE, EINGABETASTE und ESC-TASTE  
-Die LEERTASTE sollte das Steuerelement mit dem Eingabefokus aktivieren. Die EINGABETASTE sollte ein Standardsteuerelement oder das Steuerelement mit dem Eingabefokus aktivieren. Ein Standardsteuerelement ist das Steuerelement mit dem anfänglichen Fokus oder eines, das ausschließlich auf die EINGABETASTE reagiert (in der Regel ändert sich dies mit dem Eingabefokus). Zudem sollte die ESC-Taste vorübergehende UI, z. B. Menüs und Dialogfelder, schließen oder beenden.
+#### <a name="page-up-and-page-down-keys"></a><span data-ttu-id="18ba9-257">BILD-AUF-TASTE und BILD-AB-TASTE</span><span class="sxs-lookup"><span data-stu-id="18ba9-257">Page up and Page down keys</span></span>
 
-Die hier gezeigte Rechner-App verwendet die LEERTASTE zum Aktivieren der Schaltfläche mit dem Fokus und legt die EINGABETASTE auf die Schaltfläche „=“ und die ESC-Taste auf die Schaltfläche „C“ fest.
+<span data-ttu-id="18ba9-258">Die **BILD-TASTEN** ermöglichen Benutzern das Durchführen eines Bildlaufs in einem UI-Bereich in einzelnen Inkrementen.</span><span class="sxs-lookup"><span data-stu-id="18ba9-258">The **Page** keys let a user scroll a UI region in discrete increments.</span></span>
 
-![Rechner-App](images/input-patterns/calculator.png)
+<span data-ttu-id="18ba9-259">Für die Steuerelemente `ListView` und `GridView` führt die **BILD-AUF-TASTE** einen Bildlauf nach oben im Bereich um ein „Bild“ (in der Regel die Viewporthöhe) durch und verlagert den Fokus nach oben im Bereich.</span><span class="sxs-lookup"><span data-stu-id="18ba9-259">For example, for `ListView` and `GridView` controls, the **Page up** key scrolls the region up by a "page" (typically the viewport height) and moves focus to the top of the region.</span></span> <span data-ttu-id="18ba9-260">Alternativ führt die **BILD-AB-TASTE** einen Bildlauf nach unten im Bereich um ein Bild durch und verlagert den Fokus nach unten im Bereich.</span><span class="sxs-lookup"><span data-stu-id="18ba9-260">Alternately, the **Page down** key scrolls the region down by a page and moves focus to the bottom of the region.</span></span>
 
-Umschalttasten der Tastatur  
-Die Umschalttasten der Tastatur fallen in die folgenden Kategorien:
+![BILD-AUF-TASTE und BILD-AB-TASTE](images/keyboard/page-up-and-down.png)
 
+### <a name="keyboard-shortcuts"></a><span data-ttu-id="18ba9-262">Tastenkombinationen</span><span class="sxs-lookup"><span data-stu-id="18ba9-262">Keyboard shortcuts</span></span>
 
-| Kategorie | Beschreibung |
-|----------|-------------|
-| Tastenkombination | Führen Sie eine allgemeine Aktion ohne UI durch, z. B. „STRG+S“ für **Speichern**. Implementieren Sie Tastenkombinationen für wichtige Funktionen der App. Nicht jeder Befehl hat oder erfordert eine Tastenkombination. |   
-| Zugriffstaste/Abkürzungstaste | Zugewiesen zu jedem sichtbaren Steuerelement der obersten Ebene wie „ALT+F“ für das Menü **Datei**. Eine Zugriffstaste ruft einen Befehl nicht auf und aktiviert ihn nicht. |
-| Tastenkombination | Führen Sie standardmäßige systemdefinierte oder App-definierte Befehle wie „ALT+Druck“ für die Bildschirmaufzeichnung, „ALT+TAB“ zum Wechseln von Apps oder „F1“ für Hilfe aus. Ein mit einer Tastenkombination verknüpfter Befehl muss nicht unbedingt ein Menüelement sein. |
-| Anwendungstaste/Menütaste | Zeigen Sie das Kontextmenü an. |
-| Fenstertaste/Befehlstaste | Aktivieren Sie Systembefehle wie **Systemmenü**, **Sperrbildschirm** oder **Desktop anzeigen**. |
+<span data-ttu-id="18ba9-263">Tastenkombinationen können Ihre App einfacher und effizienter machen.</span><span class="sxs-lookup"><span data-stu-id="18ba9-263">Keyboard shortcuts can make your app easier and more efficient to use.</span></span>
 
-Zugriffstasten und Tastenkombinationen unterstützen die direkte Interaktion mit den Steuerelementen. Eine Navigation mit der TAB-Taste ist nicht erforderlich.
-> Während einige Steuerelemente über systeminterne Beschriftungen verfügen, beispielsweise Befehlsschaltflächen, Kontrollkästchen und Optionsfelder, weisen andere Steuerelemente wie Listenansichten externe Beschriftungen auf. Bei Steuerelementen mit externen Beschriftungen wird die Zugriffstaste einer Beschriftung zugewiesen, die, nachdem sie aufgerufen wurde, den Fokus auf ein Element oder einen Wert im zugehörigen Steuerelement setzt.
+<span data-ttu-id="18ba9-264">Zusätzlich zur Navigation und Aktivierung über die Tastatur empfiehlt es sich, Tastenkombinationen für die Funktionen Ihrer App zu implementieren.</span><span class="sxs-lookup"><span data-stu-id="18ba9-264">In addition to implementing keyboard navigation and activation for your app, it is a good practice to implement shortcuts for your app's functionality.</span></span> <span data-ttu-id="18ba9-265">Die TAB-Navigation ist eine gute, einfache Form der Tastaturunterstützung. Bei komplexeren Formularen kann es aber sinnvoll sein, auch Unterstützung für Tastenkombinationen hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="18ba9-265">Tab navigation provides a good, basic level of keyboard support, but with complex forms you may want to add support for shortcut keys as well.</span></span> <span data-ttu-id="18ba9-266">Hierdurch kann Ihre App effizienter genutzt werden – auch von Menschen, die sowohl Tastatur als auch Zeigegeräte nutzen.</span><span class="sxs-lookup"><span data-stu-id="18ba9-266">This can make your application more efficient to use, even for people who use both a keyboard and pointing devices.</span></span>
 
+<span data-ttu-id="18ba9-267">Tastenkombinationen sind eine effiziente Methode für den Zugriff auf App-Funktionen und verbessern daher die Produktivität der Benutzer.</span><span class="sxs-lookup"><span data-stu-id="18ba9-267">A shortcut is a keyboard combination that enhances productivity by providing an efficient way for the user to access app functionality.</span></span> <span data-ttu-id="18ba9-268">Es gibt zwei Arten von Tastenkombinationen:</span><span class="sxs-lookup"><span data-stu-id="18ba9-268">There are two kinds of shortcut:</span></span>
+-   <span data-ttu-id="18ba9-269">[Tastenkombinationen mit der STRG-Taste](#accelerators) ermöglichen den schnellen Zugriff auf App-Befehle.</span><span class="sxs-lookup"><span data-stu-id="18ba9-269">An [accelerator key](#accelerators) is a shortcut to an app command.</span></span> <span data-ttu-id="18ba9-270">Ihr App kann UI-Elemente aufweisen, die exakt dem Befehl entsprechen.</span><span class="sxs-lookup"><span data-stu-id="18ba9-270">Your app may or may not have UI that corresponds exactly to the command.</span></span> <span data-ttu-id="18ba9-271">Hierbei handelt es sich um eine Kombination aus der STRG-TASTE und einer Buchstabentaste.</span><span class="sxs-lookup"><span data-stu-id="18ba9-271">Accelerator keys consist of the Ctrl key plus a letter key.</span></span>
+-   <span data-ttu-id="18ba9-272">[Tastenkombinationen mit der ALT-TASTE](#access-keys) ermöglichen den schnellen Zugriff auf UI-Elemente Ihrer App.</span><span class="sxs-lookup"><span data-stu-id="18ba9-272">An [access key](#access-keys) is a shortcut to a piece of UI in your app.</span></span> <span data-ttu-id="18ba9-273">Hierbei handelt es sich um eine Kombination aus der ALT-TASTE und einer Buchstabentaste.</span><span class="sxs-lookup"><span data-stu-id="18ba9-273">Access keys consist of the Alt key plus a letter key.</span></span>
 
-Im vorliegenden Beispiel werden die Zugriffstasten für die Registerkarte **Seitenlayout** in **Word** gezeigt.
+<span data-ttu-id="18ba9-274">Besuchen Sie diese Seite, um eine umfassende Liste mit [Tastenkombinationen für Windows](https://support.microsoft.com/help/12445/windows-keyboard-shortcuts) sowie [anwendungsspezifischen Tastenkombinationen](https://support.microsoft.com/help/13805/windows-keyboard-shortcuts-in-apps) zu erhalten, die in von Microsoft entwickelten Anwendungen verwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="18ba9-274">Visit this page for exhaustive listing of [keyboard shortcuts for Windows](https://support.microsoft.com/help/12445/windows-keyboard-shortcuts) as well as [application specific keyboard shortcuts](https://support.microsoft.com/help/13805/windows-keyboard-shortcuts-in-apps) used by applications developed by Microsoft.</span></span>
 
-![Zugriffstasten für die Registerkarte „Seitenlayout“ in Word](images/input-patterns/accesskeys-show.png)
+#### <a name="accelerators-a-nameaccelerators"></a><span data-ttu-id="18ba9-275">Tastenkombinationen mit der STRG-Taste <a name="accelerators"></span><span class="sxs-lookup"><span data-stu-id="18ba9-275">Accelerators <a name="accelerators"></span></span>
 
-Hier wird der Textfeldwert „Einzug links“ hervorgehoben, nachdem die in der zugehörigen Beschriftung identifizierte Zugriffstaste eingegeben wurde.
+<span data-ttu-id="18ba9-276">Tastenkombinationen mit der STRG-Taste ermöglichen es Benutzern, häufige Aktionen in Anwendungen schnell auszuführen.</span><span class="sxs-lookup"><span data-stu-id="18ba9-276">Accelerators help users perform common actions that exists on application quickly.</span></span> <span data-ttu-id="18ba9-277">Das Bereitstellen konsistenter Tastenkombinationen mit der STRG-Taste, die Benutzer sich leicht merken und in Anwendungen mit ähnlichen Aufgaben verwenden können, ist sehr wichtig, damit diese Tastenkombinationen hilfreich und effizient sind.</span><span class="sxs-lookup"><span data-stu-id="18ba9-277">Providing a consistent accelerator keys that users can easily remember and use across applications that offer similar tasks is very important for making accelerator useful as well as powerful.</span></span>
 
-![Der Textfeldwert „Einzug links“ wird hervorgehoben, nachdem die in der zugehörigen Beschriftung identifizierte Zugriffstaste eingegeben wurde.](images/input-patterns/accesskeys-entered.png)
+<span data-ttu-id="18ba9-278">Beispiele für Tastenkombinationen mit der STRG-Taste:</span><span class="sxs-lookup"><span data-stu-id="18ba9-278">Examples of Accelerators:</span></span>
+-   <span data-ttu-id="18ba9-279">Durch Drücken von STRG + N in der Mail-App wird ein neues E-Mail-Element gestartet.</span><span class="sxs-lookup"><span data-stu-id="18ba9-279">Pressing Ctrl + N key anywhere in Mail app launches a new mail item.</span></span>
+-   <span data-ttu-id="18ba9-280">Durch Drücken von STRG + E in der Edge- und Store-App können Benutzer schnell Text im Suchfeld eingeben.</span><span class="sxs-lookup"><span data-stu-id="18ba9-280">Pressing Ctrl + E key anywhere in Edge and Store app lets user quickly enter text in search box.</span></span>
 
-## <a name="usability-and-accessibility"></a>Benutzerfreundlichkeit und Barrierefreiheit
+<span data-ttu-id="18ba9-281">Tastenkombinationen mit der STRG-Taste weisen die folgenden Merkmale auf:</span><span class="sxs-lookup"><span data-stu-id="18ba9-281">Accelerators have the following characteristics:</span></span>
+-   <span data-ttu-id="18ba9-282">Sie verwenden primär die STRG- und Funktionstastensequenzen (Windows-Systemtastenkombinationen verwenden ebenfalls ALT in Verbindung mit nicht alphanumerischen Tasten und der Windows-Logo-Taste).</span><span class="sxs-lookup"><span data-stu-id="18ba9-282">They primarily use Ctrl and Function key sequences (Windows system shortcut keys also use Alt+non-alphanumeric keys and the Windows logo key).</span></span>
+-   <span data-ttu-id="18ba9-283">Sie dienen in erster Linie erweiterten Benutzer hinsichtlich Effizienz.</span><span class="sxs-lookup"><span data-stu-id="18ba9-283">They are primarily for efficiency for advanced users.</span></span>
+-   <span data-ttu-id="18ba9-284">Sie werden nur den am häufigsten verwendeten Befehlen zugewiesen.</span><span class="sxs-lookup"><span data-stu-id="18ba9-284">They are assigned only to the most commonly used commands.</span></span>
+-   <span data-ttu-id="18ba9-285">Ihre Speicherung ist vorgesehen, und sie werden nur in Menüs, QuickInfos und in der Hilfe dokumentiert.</span><span class="sxs-lookup"><span data-stu-id="18ba9-285">They are intended to be memorized, and are documented only in menus, tooltips, and Help.</span></span>
+-   <span data-ttu-id="18ba9-286">Sie wirken sich auf das gesamte Programm aus, sie haben jedoch keine Auswirkung, wenn sie nicht angewendet werden.</span><span class="sxs-lookup"><span data-stu-id="18ba9-286">They have effect throughout the entire program, but have no effect if they don't apply.</span></span>
+-   <span data-ttu-id="18ba9-287">Sie müssen konsistent zugewiesen werden, da sie gespeichert und nicht direkt dokumentiert werden.</span><span class="sxs-lookup"><span data-stu-id="18ba9-287">They must be assigned consistently because they are memorized and not directly documented.</span></span>
 
+#### <a name="access-keys-a-nameaccess-keys"></a><span data-ttu-id="18ba9-288">Tastenkombinationen mit der STRG-Taste <a name="access-keys"></span><span class="sxs-lookup"><span data-stu-id="18ba9-288">Access keys <a name="access-keys"></span></span>
 
-Eine gut durchdachte Tastaturinteraktionserfahrung ist ein wichtiger Aspekt für die Barrierefreiheit von Software. Sie ermöglicht es Benutzern mit einer Sehbeeinträchtigung oder mit bestimmten motorischen Einschränkungen, in einer App zu navigieren und mit deren Features zu interagieren. Diese Benutzer können u. U. keine Maus bedienen und sind auf verschiedene Hilfstechnologien wie Tastaturerweiterungstools, Bildschirmtastaturen, Bildschirmlupen, Bildschirmleseprogramme oder die Möglichkeit der Spracheingabe angewiesen. Für diese Benutzer ist Vollständigkeit wichtiger als Konsistenz.
+<span data-ttu-id="18ba9-289">Tastenkombinationen mit der STRG-Taste bieten Benutzern mit Anforderungen für Barrierefreiheit und erfahrenen Tastaturbenutzern eine effiziente und effektive Möglichkeit, in der App-UI zu navigieren.</span><span class="sxs-lookup"><span data-stu-id="18ba9-289">Access keys provide both users with accessibility requirements and advanced keyboard users with an efficient and effective way to navigate your app’s UI.</span></span>
 
-Erfahrene Benutzer haben oftmals eine starke Vorliebe für die Verwendung der Tastatur, da tastaturbasierte Befehle viel schneller eingegeben werden können. Zudem ist es dafür nicht erforderlich, die Hände von der Tastatur wegzubewegen. Für diese Benutzer sind Effizienz und Konsistenz entscheidend. Die Vollständigkeit hingegen ist nur für am häufigsten verwendeten Befehle wichtig.
+<span data-ttu-id="18ba9-290">Auf der Seite [Tastenkombinationen mit der STRG-Taste](access-keys.md) finden Sie umfassendere Informationen zur Unterstützung von Tastenkombinationen mit der STRG-Taste mit UWP.</span><span class="sxs-lookup"><span data-stu-id="18ba9-290">See [Access keys](access-keys.md) page for more in-depth information for supporting access keys with UWP.</span></span>
 
-Es gibt geringfügige Unterschiede beim Entwerfen von Elementen für die Benutzerfreundlichkeit und Barrierefreiheit. Daher werden zwei unterschiedliche Tastaturzugriffsmechanismen unterstützt.
+<span data-ttu-id="18ba9-291">Tastenkombinationen mit der STRG-Taste ermöglichen es Benutzern mit motorischen Einschränkungen, jeweils eine Taste zu drücken, um eine Aktion für ein bestimmtes Element in der UI durchzuführen.</span><span class="sxs-lookup"><span data-stu-id="18ba9-291">Access keys help users with motor function disabilities an ability to press one key at a time to action on a specific item in the UI.</span></span> <span data-ttu-id="18ba9-292">Darüber hinaus können Tastenkombinationen mit der STRG-Taste verwendet werden, um zusätzliche Tastenkombinationen zu kommunizieren, damit erfahrene Benutzer schnell Aktionen durchführen können.</span><span class="sxs-lookup"><span data-stu-id="18ba9-292">Moreover, access keys can be used to communicate additional shortcut keys to help advanced users perform actions quickly.</span></span>
 
-Zugriffstasten weisen die folgenden Merkmale auf:
+<span data-ttu-id="18ba9-293">Tastenkombinationen mit der STRG-Taste weisen die folgenden Merkmale auf:</span><span class="sxs-lookup"><span data-stu-id="18ba9-293">Access keys have the following characteristics:</span></span>
+-   <span data-ttu-id="18ba9-294">Sie verwenden ALT und eine alphanumerische Taste.</span><span class="sxs-lookup"><span data-stu-id="18ba9-294">They use the Alt key plus an alphanumeric key.</span></span>
+-   <span data-ttu-id="18ba9-295">Sie dienen in erster Linie der Barrierefreiheit.</span><span class="sxs-lookup"><span data-stu-id="18ba9-295">They are primarily for accessibility.</span></span>
+-   <span data-ttu-id="18ba9-296">Sie sind direkt in der UI neben dem Steuerelement mit [Zugriffstasteninfos](access-keys.md) dokumentiert.</span><span class="sxs-lookup"><span data-stu-id="18ba9-296">They are documented directly in the UI adjacent to the control by use of [Key Tips](access-keys.md).</span></span>
+-   <span data-ttu-id="18ba9-297">Sie wirken sich nur auf das aktuelle Fenster aus und navigieren zum entsprechenden Menü- oder Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="18ba9-297">They have effect only in the current window, and navigate to the corresponding menu item or control.</span></span>
+-   <span data-ttu-id="18ba9-298">Sie werden nicht konsistent zugewiesen, da dies nicht immer möglich ist.</span><span class="sxs-lookup"><span data-stu-id="18ba9-298">They aren't assigned consistently because they can't always be.</span></span> <span data-ttu-id="18ba9-299">Zugriffstasten sollten jedoch für die am häufigsten verwendeten Befehle, insbesondere für Schaltflächen für den Commit, konsistent zugewiesen werden.</span><span class="sxs-lookup"><span data-stu-id="18ba9-299">However, access keys should be assigned consistently for commonly used commands, especially commit buttons.</span></span>
+-   <span data-ttu-id="18ba9-300">Sie sind lokalisiert.</span><span class="sxs-lookup"><span data-stu-id="18ba9-300">They are localized.</span></span>
 
--   Zugriffstasten ermöglichen den schnellen Zugriff auf UI-Elemente in Ihrer App.
--   Sie verwenden ALT und eine alphanumerische Taste.
--   Sie dienen in erster Linie der Barrierefreiheit.
--   Sie sind allen Menüs und den meisten Dialogfeldsteuerelementen zugewiesen.
--   Ihre Speicherung ist nicht vorgesehen, daher werden sie direkt in der UI dokumentiert, indem das entsprechende Steuerelement-Beschriftungszeichen unterstrichen wird.
--   Sie wirken sich nur auf das aktuelle Fenster aus und navigieren zum entsprechenden Menüelement oder Steuerelement.
--   Sie werden nicht konsistent zugewiesen, da dies nicht immer möglich ist. Zugriffstasten sollten jedoch für die am häufigsten verwendeten Befehle, insbesondere für Schaltflächen für den Commit, konsistent zugewiesen werden.
--   Sie sind lokalisiert.
+#### <a name="common-keyboard-shortcuts"></a><span data-ttu-id="18ba9-301">Häufig verwendete Tastenkombinationen</span><span class="sxs-lookup"><span data-stu-id="18ba9-301">Common keyboard shortcuts</span></span>
 
-Da die Speicherung von Zugriffstasten nicht vorgesehen ist, werden sie einem Zeichen zugewiesen, das sich am Anfang der Beschriftung befindet, um es einfacher finden zu können, und zwar selbst dann, wenn später in der Beschriftung ein Schlüsselwort vorhanden ist.
+<span data-ttu-id="18ba9-302">Die folgende Tabelle enthält einige Beispiele für häufig verwendete Tastaturbefehle.</span><span class="sxs-lookup"><span data-stu-id="18ba9-302">The following table is a small sample of frequently used keyboard commands.</span></span> <span data-ttu-id="18ba9-303">Eine vollständige Liste der Tastaturbefehle erhalten Sie unter [Tastenkombinationen in Windows](https://support.microsoft.com/kb/126449).</span><span class="sxs-lookup"><span data-stu-id="18ba9-303">For a complete list of keyboard commands, see [Windows Keyboard Shortcut Keys](https://support.microsoft.com/kb/126449).</span></span>
 
-Demgegenüber weisen Tastenkombinationen die folgenden Merkmale auf:
-
--   Eine Tastenkombination ist eine Verknüpfung zu einem App-Befehl.
--   Sie verwenden primär die STRG- und Funktionstastensequenzen (Windows-Systemtastenkombinationen verwenden ebenfalls ALT in Verbindung mit nicht alphanumerischen Tasten und der Windows-Logo-Taste).
--   Sie dienen in erster Linie erweiterten Benutzer hinsichtlich Effizienz.
--   Sie werden nur den am häufigsten verwendeten Befehlen zugewiesen.
--   Ihre Speicherung ist vorgesehen, und sie werden nur in Menüs, QuickInfos und in der Hilfe dokumentiert.
--   Sie wirken sich auf das gesamte Programm aus, sie haben jedoch keine Auswirkung, wenn sie nicht angewendet werden.
--   Sie müssen konsistent zugewiesen werden, da sie gespeichert und nicht direkt dokumentiert werden.
--   Sie sind nicht lokalisiert.
-
-Da die Speicherung von Tastenkombinationen vorgesehen ist, verwenden die am häufigsten verwendeten Tastenkombinationen idealerweise Buchstaben vom ersten oder die einprägsamsten Zeichen des Schlüsselworts im Befehl, beispielsweise STRG+C für Kopiervorgänge und STRG+Q für Anforderungen.
-
-Die Benutzer müssen in der Lage sein, alle von der App unterstützten Funktionen nur mithilfe der Hardwaretastatur oder der Bildschirmtastatur auszuführen.
-
-Benutzern, die auf Sprachausgabe und andere Hilfstechnologien angewiesen sind, sollte eine einfache Möglichkeit geboten werden, die Tastenkombinationen der App zu erkennen. Weisen Sie mithilfe von QuickInfos, Namen und Beschreibungen zur Verwendung durch Bildschirmleseprogramme oder anderen Hinweisen auf dem Bildschirm auf Tastenkombinationen hin. Zumindest sollten die Zugriffstasten und Tastenkombinationen im Hilfeinhalt Ihrer App gut dokumentiert sein.
-
-Weisen Sie keine bekannten oder standardmäßigen Tastenkombinationen zu anderen Funktionen zu. Beispielsweise wird STRG+F in der Regel für die Suche verwendet.
-
-Versuchen Sie nicht, allen interaktiven Steuerelementen in einer dichten UI zuzuweisen. Stellen Sie hingegen einfach sicher, dass die wichtigsten und am häufigsten verwendeten Befehle Zugriffstasten aufweisen, oder verwenden Sie Steuerelementgruppen, und weisen Sie der Steuerelement-Gruppenbeschriftung eine Zugriffstaste zu.
-
-Ändern Sie Befehle nicht mithilfe von Tastaturmodifizierern. Dies ist nicht auffindbar und kann Verwirrung stiften.
-
-Deaktivieren Sie ein Steuerelement nicht, wenn es den Eingabefokus besitzt. Dies kann die Tastatureingabe stören.
-
-Zum Gewährleisten von erfolgreichen Tastaturinteraktionserfahrungen ist es von entscheidender Bedeutung, die App sorgfältig und exklusiv mit der Tastatur zu testen.
-
-## <a name="text-input"></a>Texteingabe
-
-
-Fragen Sie immer die Gerätefunktionen ab, wenn Sie sich auf die Tastatureingabe verlassen. Auf einigen Geräten (wie Telefonen) kann die Touch-Bildschirmtastatur nur für Texteingaben verwendet werden, da sie viele der auf der Hardwaretastatur (wie ALT, die Funktionstasten oder die Windows-Logo-Taste) vorhandenen Tastenkombinationen oder Befehlstasten nicht bereitstellt.
-
-Geben Sie Benutzer nicht die Möglichkeit, die Touch-Bildschirmtastatur zum Navigieren in der App zu verwenden. In Abhängigkeit des Steuerelements, das den Fokus erhält, wird die Touch-Bildschirmtastatur möglicherweise geschlossen.
-
-Versuchen Sie, die Tastatur während der gesamten Interaktion mit dem Formular anzuzeigen. Dies beseitigt Benutzeroberflächenirritationen, die Benutzer in der Mitte eines Formulars oder eines Texteingabeflusses verwirren könnten.
-
-Stellen Sie sicher, dass Benutzer das Eingabefeld, in das sie Text eingeben, immer sehen können. Die Touch-Bildschirmtastatur verdeckt die Hälfte des Bildschirms. Daher sollte das Eingabefeld mit dem Fokus angezeigt werden, wenn der Benutzer das Formular durchläuft.
-
-Eine Standardhardwaretastatur oder OSK besteht aus sieben Tastentypen, wobei jeder Typ eine eindeutige Funktion unterstützt:
-
--   Zeichentaste: Sendet ein literales Zeichen an das Fenster mit dem Eingabefokus.
--   Zusatztaste: Ändert beim gleichzeitigen Drücken die Funktion einer primären Taste, beispielsweise STRG, ALT, UMSCHALT und die Windows-Logo-Taste.
--   Navigationstaste: Verschiebt den Eingabefokus oder die Texteingabeposition, beispielsweise TAB, POS1, ENDE, BILD-AUF, BILD-AB und direktionale Pfeiltasten.
--   Bearbeitungstaste: Ändert Text, beispielsweise die Tasten UMSCHALT, TAB, EINGABETASTE, EINFG, RÜCKTASTE und ENTF.
--   Funktionstaste: Führt eine spezielle Funktion aus, beispielsweise die Tasten F1–F12.
--   Umschalttaste: Versetzt das System in einen Modus, beispielsweise die Tasten FESTSTELLTASTE, ROLLEN und NUM-TASTE.
--   Befehlstaste: Führt eine Systemaufgabe oder Befehlsaktivierung aus, beispielsweise die Tasten LEERTASTE, EINGABETASTE, ESC, PAUSE/UNTBR und DRUCKEN.
-
-Zusätzlich zu diesen Kategorien ist eine sekundäre Klasse von Tasten und Tastenkombinationen vorhanden, die als Verknüpfungen zu einer App-Funktion verwendet werden können.
-
--   Zugriffstaste: Stellt Steuerelemente oder Menüelemente zur Verfügung, indem die ALT-TASTE zusammen mit einer Zeichentaste gedrückt wird. Auf sie wird durch die Unterstreichung der Zugriffstasten-Zeichenzuweisung in einem Menü oder das Anzeigen des bzw. der Zugriffstastenzeichen(s) in einer Überlagerung hingewiesen.
--   Tastenkombination: Stellt App-Befehle zur Verfügung, indem eine Funktionstaste oder die STRG-TASTE mit einer Zeichentaste verwendet wird. Ihr App kann UI-Elemente aufweisen, die dem Befehl entsprechen.
-
-Eine weitere Klasse von Tastenkombinationen, die so genannte SAS (Secure Attention Sequence), kann nicht von einer App abgefangen werden. Dieses Sicherheitsfeature dient zum Schutz des Systems des Benutzers bei der Anmeldung und enthält STRG-ALT-ENTF und WINDOWS-L.
-
-Die Editor-App wird hier mit dem erweiterten Dateimenü gezeigt, das Zugriffstasten und Tastenkombinationen enthält.
-
-![Die Editor-App mit einem erweiterten Dateimenü, das Zugriffstasten und Tastenkombinationen enthält.](images/input-patterns/notepad.png)
-
-## <a name="keyboard-commands"></a>Tastaturbefehle
-
-
-Im Folgenden finden Sie eine vollständige Liste der Tastaturinteraktionen, die über verschiedene Geräte hinweg bereitgestellt werden, die die Tastatureingabe unterstützen. Für einige Geräte und Plattformen sind systemeigene Tastaturanschläge und Interaktionen erforderlich, wobei diese nicht notiert sind.
-
-Verwenden Sie beim Entwerfen von benutzerdefinierten Steuerelementen und Interaktionen diese Tastatursprache konsistent, damit Ihre App intuitiv, verlässlich und einfach zu erlernen ist.
-
-Definieren Sie nicht die Standardtastaturverknüpfungen.
-
-In den folgenden Tabellen sind häufig verwendete Tastaturbefehle aufgeführt. Eine vollständige Liste der Tastaturbefehle erhalten Sie unter [Tastenkombinationen in Windows](http://go.microsoft.com/fwlink/p/?linkid=325424).
-
-**Navigationsbefehle**
-
-| Aktion                               | Tastenkombination                                      |
+| <span data-ttu-id="18ba9-304">Aktion</span><span class="sxs-lookup"><span data-stu-id="18ba9-304">Action</span></span>                               | <span data-ttu-id="18ba9-305">Tastenkombination</span><span class="sxs-lookup"><span data-stu-id="18ba9-305">Key command</span></span>                                      |
 |--------------------------------------|--------------------------------------------------|
-| Zurück                                 | ALT+NACH-LINKS-TASTE oder die RÜCKTASTE auf speziellen Tastaturen |
-| Vorwärts                              | ALT+NACH-RECHTS-TASTE                                        |
-| Nach oben                                   | ALT+NACH-OBEN-TASTE                                           |
-| Abbrechen oder Modus beenden   | ESC                                              |
-| Durch die Elemente in einer Liste navigieren         | Pfeiltaste (NACH-LINKS, NACH-RECHTS, NACH-OBEN, NACH-UNTEN)                |
-| Zur nächsten Elementliste springen           | STRG+NACH-LINKS-TASTE                                        |
-| Semantischer Zoom                        | STRG+PLUS-TASTE oder STRG+MINUS-TASTE                                 |
-| Zu einem benannten Element in einer Sammlung springen | Einen Elementnamen eingeben                           |
-| Nächste Seite                            | BILD-AUF, BILD-AB oder LEERTASTE                   |
-| Nächste Registerkarte                             | STRG+TAB                                         |
-| Vorherige Registerkarte                         | STRG+UMSCHALT+TAB                                   |
-| App-Leiste öffnen                         | Windows+Z                                        |
-| Ein Element aktivieren oder in ein Element navigieren    | EINGABETASTE                                            |
-| Auswählen                               | LEERTASTE                                         |
-| Fortlaufend auswählen                  | UMSCHALT+Pfeiltaste                                  |
-| Alle auswählen                           | STRG+A                                           |
+| <span data-ttu-id="18ba9-306">Alle auswählen</span><span class="sxs-lookup"><span data-stu-id="18ba9-306">Select all</span></span>                           | <span data-ttu-id="18ba9-307">STRG+A</span><span class="sxs-lookup"><span data-stu-id="18ba9-307">Ctrl+A</span></span>                                           |
+| <span data-ttu-id="18ba9-308">Fortlaufend auswählen</span><span class="sxs-lookup"><span data-stu-id="18ba9-308">Continuously select</span></span>                  | <span data-ttu-id="18ba9-309">UMSCHALT+Pfeiltaste</span><span class="sxs-lookup"><span data-stu-id="18ba9-309">Shift+Arrow key</span></span>                                  |
+| <span data-ttu-id="18ba9-310">Speichern</span><span class="sxs-lookup"><span data-stu-id="18ba9-310">Save</span></span>                                 | <span data-ttu-id="18ba9-311">STRG+S</span><span class="sxs-lookup"><span data-stu-id="18ba9-311">Ctrl+S</span></span>                                           |
+| <span data-ttu-id="18ba9-312">Suchen</span><span class="sxs-lookup"><span data-stu-id="18ba9-312">Find</span></span>                                 | <span data-ttu-id="18ba9-313">STRG+F</span><span class="sxs-lookup"><span data-stu-id="18ba9-313">Ctrl+F</span></span>                                           |
+| <span data-ttu-id="18ba9-314">Drucken</span><span class="sxs-lookup"><span data-stu-id="18ba9-314">Print</span></span>                                | <span data-ttu-id="18ba9-315">STRG+P</span><span class="sxs-lookup"><span data-stu-id="18ba9-315">Ctrl+P</span></span>                                           |
+| <span data-ttu-id="18ba9-316">Kopieren</span><span class="sxs-lookup"><span data-stu-id="18ba9-316">Copy</span></span>                                 | <span data-ttu-id="18ba9-317">STRG+C</span><span class="sxs-lookup"><span data-stu-id="18ba9-317">Ctrl+C</span></span>                                           |
+| <span data-ttu-id="18ba9-318">Ausschneiden</span><span class="sxs-lookup"><span data-stu-id="18ba9-318">Cut</span></span>                                  | <span data-ttu-id="18ba9-319">STRG+X</span><span class="sxs-lookup"><span data-stu-id="18ba9-319">Ctrl+X</span></span>                                           |
+| <span data-ttu-id="18ba9-320">Einfügen</span><span class="sxs-lookup"><span data-stu-id="18ba9-320">Paste</span></span>                                | <span data-ttu-id="18ba9-321">STRG+V</span><span class="sxs-lookup"><span data-stu-id="18ba9-321">Ctrl+V</span></span>                                           |
+| <span data-ttu-id="18ba9-322">Rückgängig machen</span><span class="sxs-lookup"><span data-stu-id="18ba9-322">Undo</span></span>                                 | <span data-ttu-id="18ba9-323">STRG+Z</span><span class="sxs-lookup"><span data-stu-id="18ba9-323">Ctrl+Z</span></span>                                           |
+| <span data-ttu-id="18ba9-324">Nächste Registerkarte</span><span class="sxs-lookup"><span data-stu-id="18ba9-324">Next tab</span></span>                             | <span data-ttu-id="18ba9-325">STRG+TAB</span><span class="sxs-lookup"><span data-stu-id="18ba9-325">Ctrl+Tab</span></span>                                         |
+| <span data-ttu-id="18ba9-326">Registerkarte schließen</span><span class="sxs-lookup"><span data-stu-id="18ba9-326">Close tab</span></span>                            | <span data-ttu-id="18ba9-327">STRG+F4 oder STRG+W</span><span class="sxs-lookup"><span data-stu-id="18ba9-327">Ctrl+F4 or Ctrl+W</span></span>                                |
+| <span data-ttu-id="18ba9-328">Semantischer Zoom</span><span class="sxs-lookup"><span data-stu-id="18ba9-328">Semantic zoom</span></span>                        | <span data-ttu-id="18ba9-329">STRG+PLUS-TASTE oder STRG+MINUS-TASTE</span><span class="sxs-lookup"><span data-stu-id="18ba9-329">Ctrl++ or Ctrl+-</span></span>                                 |
 
- 
+## <a name="advanced-experiences"></a><span data-ttu-id="18ba9-330">Erweiterte Funktionen</span><span class="sxs-lookup"><span data-stu-id="18ba9-330">Advanced experiences</span></span>
 
-**Gebräuchliche Befehle**
+<span data-ttu-id="18ba9-331">In diesem Abschnitterläutern wir einige der komplexeren Tastaturinteraktionen, die durch UWP-Apps unterstützt werden, sowie einige der Verhaltensweisen, die Sie bei Verwendung Ihrer App auf verschiedenen Geräten und mit verschiedenen Tools berücksichtigen sollten.</span><span class="sxs-lookup"><span data-stu-id="18ba9-331">In this section, we discuss some of the more complex keyboard interaction experiences supported by UWP apps, along with some of the behaviors you should be aware of when your app is used on different devices and with different tools.</span></span>
 
-| Aktion                                                 | Tastenkombination     |
-|--------------------------------------------------------|-----------------|
-| Ein Element anheften                                            | STRG+UMSCHALT+1    |
-| Speichern                                                   | STRG+S          |
-| Suchen                                                   | STRG+F          |
-| Drucken                                                  | STRG+P          |
-| Kopieren                                                   | STRG+C          |
-| Ausschneiden                                                    | STRG+X          |
-| Neues Element                                               | STRG+N          |
-| Einfügen                                                  | STRG+V          |
-| Öffnen                                                   | STRG+O          |
-| Adresse öffnen (z. B. eine URL in Internet Explorer) | STRG+L oder ALT+D |
+### <a name="control-group-a-namecontrol-group"></a><span data-ttu-id="18ba9-332">Steuerelementgruppe <a name="control-group"></span><span class="sxs-lookup"><span data-stu-id="18ba9-332">Control group <a name="control-group"></span></span>
 
- 
+<span data-ttu-id="18ba9-333">Sie können eine Gruppe verwandter oder komplementärer Steuerelemente in einer „Steuerelementgruppe“ (oder einem direktionalen Bereich) gruppieren, was die „interne Navigation“ mit den Pfeiltasten aktiviert.</span><span class="sxs-lookup"><span data-stu-id="18ba9-333">You can group a set of related, or complementary, controls in a "control group" (or directional area), which enables "inner navigation" using the arrow keys.</span></span> <span data-ttu-id="18ba9-334">Die Steuerelementgruppe kann ein einzelner Tabstopp sein, oder Sie können mehrere Tabstopps innerhalb der Steuerelementgruppe angeben.</span><span class="sxs-lookup"><span data-stu-id="18ba9-334">The control group can be a single tab stop, or you can specify multiple tab stops within the control group.</span></span>
 
-**Navigationsbefehle für Medien**
+#### <a name="arrow-key-navigation"></a><span data-ttu-id="18ba9-335">Pfeiltastennavigation</span><span class="sxs-lookup"><span data-stu-id="18ba9-335">Arrow key navigation</span></span>
 
-| Aktion       | Tastenkombination |
-|--------------|-------------|
-| Wiedergabe/Anhalten   | STRG+P      |
-| Nächstes Element    | STRG+F      |
-| Vorschau des Elements anzeigen | STRG+B      |
+<span data-ttu-id="18ba9-336">Benutzer erwarten Unterstützung für die Pfeiltastennavigation, wenn eine Gruppe ähnlicher, verwandter Steuerelemente in einem UI-Bereich vorhanden ist:</span><span class="sxs-lookup"><span data-stu-id="18ba9-336">Users expect support for arrow key navigation when there is a group of similar, related controls in a UI region:</span></span>
+-   `AppBarButtons` <span data-ttu-id="18ba9-337">in</span><span class="sxs-lookup"><span data-stu-id="18ba9-337">in a</span></span> `CommandBar`
+-   `ListItems` <span data-ttu-id="18ba9-338">oder `GridItems` in `ListView` oder</span><span class="sxs-lookup"><span data-stu-id="18ba9-338">or `GridItems` inside `ListView` or</span></span> `GridView`
+-   `Buttons` <span data-ttu-id="18ba9-339">in</span><span class="sxs-lookup"><span data-stu-id="18ba9-339">inside</span></span> `ContentDialog`
 
- 
+<span data-ttu-id="18ba9-340">UWP-Steuerelemente unterstützen die Pfeiltastennavigation standardmäßig.</span><span class="sxs-lookup"><span data-stu-id="18ba9-340">UWP controls support arrow key navigation by default.</span></span> <span data-ttu-id="18ba9-341">Verwenden Sie für benutzerdefinierte Layouts und Steuerelementgruppen `XYFocusKeyboardNavigation="Enabled"`, um ein ähnliches Verhalten zu erzeugen.</span><span class="sxs-lookup"><span data-stu-id="18ba9-341">For custom layouts and control groups, use `XYFocusKeyboardNavigation="Enabled"` to provide similar behavior.</span></span>
 
-Hinweis: Die Tastenbefehle für die Mediennavigation wie "Wiedergeben"/"Anhalten" oder "Nächstes Element" entsprechen den jeweiligen Tastenkombinationen für "Drucken" und "Suchen". Häufig verwendete Befehle sollten Priorität gegenüber Navigationsbefehlen für Medien haben. Wenn eine App z. B. sowohl das Wiedergeben von Medien als auch das Drucken unterstützt, sollte die Tastenkombination STRG+P den Druckvorgang starten.
-## <a name="visual-feedback"></a>Visuelles Feedback
-
-
-Verwenden Sie Fokusrechtecke nur bei Tastaturinteraktionen. Wenn der Benutzer eine Touch-Interaktion auslöst, blenden Sie die für Tastaturinteraktionen spezifische UI schrittweise aus. Somit bleibt die Benutzeroberfläche sauber und aufgeräumt.
-
-Zeigen Sie kein visuelles Feedback an, wenn ein Element keine Interaktionen unterstützt (z. B. statischer Text). Beachten Sie, dass die Benutzeroberfläche dadurch sauber und aufgeräumt bleibt.
-
-Versuchen Sie, für alle Elemente, die das gleiche Eingabeziel darstellen, das gleiche visuelle Feedback anzuzeigen.
-
-Versuchen Sie, Schaltflächen (z. B. „+“ und „-“) bereitzustellen, um Hinweise für touchbasierte Manipulationen wie etwa Schwenken, Drehen, Zoomen usw. zu emulieren.
-
-Allgemeine Informationen zum visuellen Feedback finden Sie unter [Richtlinien für visuelles Feedback](guidelines-for-visualfeedback.md).
-
-
-## <a name="keyboard-events-and-focus"></a>Tastaturereignisse und Fokus
-
-
-Die folgenden Tastaturereignisse können sowohl für Hardware- als auch für Touch-Bildschirmtastaturen eintreten.
-
-| Ereignis                                      | Beschreibung                    |
-|--------------------------------------------|--------------------------------|
-| [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) | Tritt auf, wenn eine Taste gedrückt wird.  |
-| [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942)     | Tritt auf, wenn eine Taste losgelassen wird. |
-
-
-**Wichtig**  
-Einige Windows-Runtime-Steuerelemente verarbeiten Eingabeereignisse intern. In diesen Fällen tritt ein Eingabeereignis möglicherweise nicht ein, weil der Ereignislistener den zugehörigen Handler nicht aufruft. Normalerweise wird diese Tastenteilmenge vom Klassenhandler verarbeitet, um eine integrierte Unterstützung für die Barrierefreiheit des einfachen Tastaturzugriffs bereitzustellen. Die Klasse [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) setzt beispielsweise die [**OnKeyDown**](https://msdn.microsoft.com/library/windows/apps/hh967982)-Ereignisse für die LEERTASTE und die EINGABETASTE (sowie für [**OnPointerPressed**](https://msdn.microsoft.com/library/windows/apps/hh967989)) außer Kraft und leitet sie an das Ereignis [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) des Steuerelements weiter. Wenn von der Steuerelementklasse ein Tastendruck verarbeitet wird, werden die Ereignisse [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) und [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) nicht ausgelöst.
-
-Dadurch wird ein integriertes Tastaturäquivalent zum Aufrufen der Schaltfläche bereitgestellt, das dem Tippen mit dem Finger oder Klicken mit einer Maus ähnelt. Andere Tasten als die LEER- oder EINGABETASTE lösen die Ereignisse [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) und [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) trotzdem aus. Weitere Informationen zur Funktionsweise der klassenbasierten Verarbeitung von Ereignissen (insbesondere den Abschnitt „Eingabe-Ereignishandler in Steuerelementen“) finden Sie unter [Übersicht über Ereignisse und Routingereignisse](https://msdn.microsoft.com/library/windows/apps/mt185584).
-
-
-Die Steuerelemente der UI generieren nur dann Tastaturereignisse, wenn sie den Eingabefokus aufweisen. Ein einzelnes Steuerelement steht im Fokus, wenn Benutzer im Layout auf das Steuerelement klicken oder tippen oder mit der TAB-Taste im Inhaltsbereich eine Aktivierreihenfolge durchlaufen.
-
-Sie können auch die [**Focus**](https://msdn.microsoft.com/library/windows/apps/hh702161)-Methode eines Steuerelements aufrufen, um den Fokus zu erzwingen. Dies ist notwendig, wenn Sie Tastenkombinationen implementieren, da der Tastaturfokus beim Laden der UI nicht standardmäßig festgelegt wird. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Beispiel für Tastenkombinationen](#shortcut_keys_example).
-
-Damit ein Steuerelement den Eingabefokus erhält, muss es aktiviert und sichtbar sein. Außerdem müssen die Eigenschaften [**IsTabStop**](https://msdn.microsoft.com/library/windows/apps/br209422) und [**HitTestVisible**](https://msdn.microsoft.com/library/windows/apps/br208933) den Wert **true** haben. Dies ist der Standardzustand der meisten Steuerelemente. Wenn ein Steuerelement den Eingabefokus aufweist, kann es Tastatureingabeereignisse auslösen und auf diese reagieren. Dies wird weiter unten in diesem Thema beschrieben. Mit den Ereignissen [**GotFocus**](https://msdn.microsoft.com/library/windows/apps/br208927) und [**LostFocus**](https://msdn.microsoft.com/library/windows/apps/br208943) können Sie außerdem reagieren, wenn ein Steuerelement den Fokus erhält oder verliert.
-
-Standardmäßig entspricht die Aktivierreihenfolge von Steuerelementen der Reihenfolge, in der sie in der Extensible Application Markup Language (XAML) angezeigt werden. Mit der Eigenschaft [**TabIndex**](https://msdn.microsoft.com/library/windows/apps/br209461) können Sie diese Reihenfolge jedoch ändern. Weitere Informationen finden Sie unter [Implementieren von Barrierefreiheit für den Tastaturzugriff](https://msdn.microsoft.com/library/windows/apps/hh868161).
-
-## <a name="keyboard-event-handlers"></a>Tastaturereignishandler
-
-
-Ein Eingabe-Ereignishandler implementiert einen Delegaten, der die folgenden Informationen bereitstellt:
-
--   Den Sender des Ereignisses. Der Sender meldet das Objekt, dem der Ereignishandler angefügt ist.
--   Ereignisdaten. Bei Tastaturereignissen sind diese Daten eine Instanz von [**KeyRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943072). [**KeyEventHandler**](https://msdn.microsoft.com/library/windows/apps/br227904) ist der Delegat für Handler. Die wichtigsten Eigenschaften von **KeyRoutedEventArgs** für die meisten Handler-Szenarien sind [**Key**](https://msdn.microsoft.com/library/windows/apps/hh943074) und möglicherweise [**KeyStatus**](https://msdn.microsoft.com/library/windows/apps/hh943075).
--   [**OriginalSource**](https://msdn.microsoft.com/library/windows/apps/br208810). Da es sich bei Tastaturereignissen um Routingereignisse handelt, stellen die Ereignisdaten **OriginalSource** bereit. Wenn Sie bewusst das Bubbling von Ereignissen in der Objektstruktur zulassen, ist **OriginalSource** manchmal eher das fragliche Objekt als der Sender. Das hängt jedoch vom Design ab. Weitere Informationen dazu, wie Sie **OriginalSource** anstelle des Senders verwenden können, finden Sie im Abschnitt „Routingereignisse der Tastatur“ in diesem Thema oder unter [Übersicht über Ereignisse und Routingereignisse](https://msdn.microsoft.com/library/windows/apps/mt185584).
-
-### <a name="attaching-a-keyboard-event-handler"></a>Anfügen eines Tastaturereignishandlers
-
-Sie können Funktionen von Tastatur-Ereignishandlern für jedes Objekt anfügen, das das Ereignis als Member einschließt. Dazu gehört jede von [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) abgeleitete Klasse. Das folgende XAML-Beispiel zeigt, wie Sie Handler für das Ereignis [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) für [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) anfügen.
-
-```xaml
-<Grid KeyUp="Grid_KeyUp">
-  ...
-</Grid>
-```
-
-Sie können einen Ereignishandler auch manuell im Code anfügen. Weitere Informationen finden Sie unter [Übersicht über Ereignisse und Routingereignisse](https://msdn.microsoft.com/library/windows/apps/mt185584).
-
-### <a name="defining-a-keyboard-event-handler"></a>Definieren eines Tastaturereignishandlers
-
-Das folgende Beispiel zeigt eine unvollständige Ereignishandler-Definition für den im vorherigen Beispiel hinzugefügten Ereignishandler [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942).
-
-```csharp
-void Grid_KeyUp(object sender, KeyRoutedEventArgs e)
-{
-    //handling code here
-}
-```
-
-```vb
-Private Sub Grid_KeyUp(ByVal sender As Object, ByVal e As KeyRoutedEventArgs)
-    ' handling code here
-End Sub
-```
-
-```c++
-void MyProject::MainPage::Grid_KeyUp(
-  Platform::Object^ sender,
-  Windows::UI::Xaml::Input::KeyRoutedEventArgs^ e)
-  {
-      //handling code here
-  }
-```
-
-### <a name="using-keyroutedeventargs"></a>Verwenden von KeyRoutedEventArgs
-
-Alle Tastaturereignisse verwenden [**KeyRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943072) für Ereignisdaten. **KeyRoutedEventArgs** enthält die folgenden Eigenschaften:
-
--   [**Key**](https://msdn.microsoft.com/library/windows/apps/hh943074)
--   [**KeyStatus**](https://msdn.microsoft.com/library/windows/apps/hh943075)
--   [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073)
--   [**OriginalSource**](https://msdn.microsoft.com/library/windows/apps/br208810) (geerbt von [**RoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br208809))
-
-### <a name="key"></a>Key
-
-Das Ereignis [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) wird ausgelöst, wenn eine Taste gedrückt wird. Entsprechend wird das Ereignis [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) ausgelöst, wenn eine Taste losgelassen wird. In der Regel lauschen Sie auf Ereignisse, um einen bestimmten Tastenwert zu verarbeiten. Überprüfen Sie den Wert [**Key**](https://msdn.microsoft.com/library/windows/apps/hh943074) in den Ereignisdaten, um die gedrückte oder losgelassene Taste zu ermitteln. **Key** gibt einen [**VirtualKey**](https://msdn.microsoft.com/library/windows/apps/br241812)-Wert zurück. Die **VirtualKey**-Enumeration umfasst alle unterstützten Tasten.
-
-### <a name="modifier-keys"></a>Zusatztasten
-
-Zusatztasten sind Tasten wie beispielsweise STRG oder UMSCHALT, die Benutzer normalerweise in Kombination mit anderen Tasten drücken. Ihre App kann diese Kombinationen als Tastenkombinationen zum Aufrufen von App-Befehlen nutzen.
-
-Sie erkennen Tastenkombinationen mithilfe des Codes in den Ereignishandlern [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) und [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942). Sie können dann den Zustand "Gedrückt" der Zusatztasten überwachen, die für Sie von Interesse sind. Wenn für eine Nichtzusatztaste ein Tastaturereignis auftritt, können Sie überprüfen, ob gleichzeitig eine Zusatztaste gedrückt wurde.
-
-> [!NOTE]
-> Die ALT-Taste wird durch den Wert **VirtualKey.Menu** dargestellt.
-
- 
-
-### <a name="shortcut-keys-example"></a>Beispiel für Tastenkombinationen
-
-
-Im folgenden Beispiel wird die Implementierung von Tastenkombinationen gezeigt. In diesem Beispiel können Benutzer die Medienwiedergabe mit den Schaltflächen „Play“, „Pause“ und „Stop“ oder mit den Tastenkombinationen STRG+P, STRG+A und STRG+S steuern. Das Schaltflächen-XAML zeigt die Tastenkombinationen in Form von QuickInfos und [**AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/br209081)-Eigenschaften in den Schaltflächenbeschriftungen. Diese Selbstdokumentation ist wichtig, um die Benutzerfreundlichkeit und Barrierefreiheit der App zu erhöhen. Weitere Informationen finden Sie unter [Barrierefreiheit für den Tastaturzugriff](https://msdn.microsoft.com/library/windows/apps/mt244347).
-
-Beachten Sie auch, dass die Seite den Eingabefokus auf sich selbst festlegt, wenn sie geladen wird. Ohne diesen Schritt hat kein Steuerelement anfangs den Eingabefokus, und die App löst erst Eingabeereignisse aus, wenn Benutzer den Eingabefokus manuell festlegen (beispielsweise durch Drücken der TAB-TASTE oder Klicken auf ein Steuerelement).
-
-```xaml
-<Grid KeyDown="Grid_KeyDown">
-
-  <Grid.RowDefinitions>
-    <RowDefinition Height="Auto" />
-    <RowDefinition Height="Auto" />
-  </Grid.RowDefinitions>
-
-  <MediaElement x:Name="DemoMovie" Source="xbox.wmv"
-    Width="500" Height="500" Margin="20" HorizontalAlignment="Center" />
-
-  <StackPanel Grid.Row="1" Margin="10"
-    Orientation="Horizontal" HorizontalAlignment="Center">
-
-    <Button x:Name="PlayButton" Click="MediaButton_Click"
-      ToolTipService.ToolTip="Shortcut key: Ctrl+P"
-      AutomationProperties.AcceleratorKey="Control P">
-      <TextBlock>Play</TextBlock>
-    </Button>
-
-    <Button x:Name="PauseButton" Click="MediaButton_Click"
-      ToolTipService.ToolTip="Shortcut key: Ctrl+A"
-      AutomationProperties.AcceleratorKey="Control A">
-      <TextBlock>Pause</TextBlock>
-    </Button>
-
-    <Button x:Name="StopButton" Click="MediaButton_Click"
-      ToolTipService.ToolTip="Shortcut key: Ctrl+S"
-      AutomationProperties.AcceleratorKey="Control S">
-      <TextBlock>Stop</TextBlock>
-    </Button>
-
-  </StackPanel>
-
-</Grid>
-```
-
-```c++
-//showing implementations but not header definitions
-void MainPage::OnNavigatedTo(NavigationEventArgs^ e)
-{
-    (void) e;    // Unused parameter
-    this->Loaded+=ref new RoutedEventHandler(this,&amp;MainPage::ProgrammaticFocus);
-}
-void MainPage::ProgrammaticFocus(Object^ sender, RoutedEventArgs^ e) {
-    this->Focus(Windows::UI::Xaml::FocusState::Programmatic);
-}
-
-void KeyboardSupport::MainPage::MediaButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
-{
-    FrameworkElement^ fe = safe_cast<FrameworkElement^>(sender);
-    if (fe->Name == "PlayButton") {DemoMovie->Play();}
-    if (fe->Name == "PauseButton") {DemoMovie->Pause();}
-    if (fe->Name == "StopButton") {DemoMovie->Stop();}
-}
-
-
-void KeyboardSupport::MainPage::Grid_KeyDown(Platform::Object^ sender, Windows::UI::Xaml::Input::KeyRoutedEventArgs^ e)
-{
-    if (e->Key == VirtualKey::Control) isCtrlKeyPressed = true;
-}
-
-
-void KeyboardSupport::MainPage::Grid_KeyUp(Platform::Object^ sender, Windows::UI::Xaml::Input::KeyRoutedEventArgs^ e)
-{
-    if (e->Key == VirtualKey::Control) isCtrlKeyPressed = false;
-    else if (isCtrlKeyPressed) {
-        if (e->Key==VirtualKey::P) {
-            DemoMovie->Play();
-        }
-        if (e->Key==VirtualKey::A) {DemoMovie->Pause();}
-        if (e->Key==VirtualKey::S) {DemoMovie->Stop();}
-    }
-}
-```
-
-```csharp
-protected override void OnNavigatedTo(NavigationEventArgs e)
-{
-    // Set the input focus to ensure that keyboard events are raised.
-    this.Loaded += delegate { this.Focus(FocusState.Programmatic); };
-}
-
-private void MediaButton_Click(object sender, RoutedEventArgs e)
-{
-    switch ((sender as Button).Name)
-    {
-        case "PlayButton": DemoMovie.Play(); break;
-        case "PauseButton": DemoMovie.Pause(); break;
-        case "StopButton": DemoMovie.Stop(); break;
-    }
-}
-
-private void Grid_KeyUp(object sender, KeyRoutedEventArgs e)
-{
-    if (e.Key == VirtualKey.Control) isCtrlKeyPressed = false;
-}
-
-private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
-{
-    if (e.Key == VirtualKey.Control) isCtrlKeyPressed = true;
-    else if (isCtrlKeyPressed)
-    {
-        switch (e.Key)
-        {
-            case VirtualKey.P: DemoMovie.Play(); break;
-            case VirtualKey.A: DemoMovie.Pause(); break;
-            case VirtualKey.S: DemoMovie.Stop(); break;
-        }
-    }
-}
-```
-
-```VisualBasic
-Private isCtrlKeyPressed As Boolean
-Protected Overrides Sub OnNavigatedTo(e As Navigation.NavigationEventArgs)
-
-End Sub
-
-Private Sub Grid_KeyUp(sender As Object, e As KeyRoutedEventArgs)
-    If e.Key = Windows.System.VirtualKey.Control Then
-        isCtrlKeyPressed = False
-    End If
-End Sub
-
-Private Sub Grid_KeyDown(sender As Object, e As KeyRoutedEventArgs)
-    If e.Key = Windows.System.VirtualKey.Control Then isCtrlKeyPressed = True
-    If isCtrlKeyPressed Then
-        Select Case e.Key
-            Case Windows.System.VirtualKey.P
-                DemoMovie.Play()
-            Case Windows.System.VirtualKey.A
-                DemoMovie.Pause()
-            Case Windows.System.VirtualKey.S
-                DemoMovie.Stop()
-        End Select
-    End If
-End Sub
-
-Private Sub MediaButton_Click(sender As Object, e As RoutedEventArgs)
-    Dim fe As FrameworkElement = CType(sender, FrameworkElement)
-    Select Case fe.Name
-        Case "PlayButton"
-            DemoMovie.Play()
-        Case "PauseButton"
-            DemoMovie.Pause()
-        Case "StopButton"
-            DemoMovie.Stop()
-    End Select
-End Sub
-```
-
-> [!NOTE]
-> Durch das Festlegen der [**AutomationProperties.AcceleratorKey**](https://msdn.microsoft.com/library/windows/apps/hh759762)- oder [**AutomationProperties.AccessKey**](https://msdn.microsoft.com/library/windows/apps/hh759763)-Eigenschaft in XAML werden Zeichenfolgeninformationen zum Dokumentieren der Tastenkombination zum Auslösen der jeweiligen Aktion bereitgestellt. Die Informationen werden von Microsoft-Benutzeroberflächenautomatisierungsclients wie der Sprachausgabe erfasst und normalerweise direkt für den Benutzer bereitgestellt.
->
-> Mit dem Festlegen der Eigenschaft **AutomationProperties.AcceleratorKey** oder **AutomationProperties.AccessKey** ist keine eigene Aktion verknüpft. Sie müssen weiterhin Handler für [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941)- oder [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942)-Ereignisse anhängen, um das Verhalten der Tastenkombination tatsächlich in die App zu implementieren. Außerdem wird der Unterstrichzusatz für eine Zugriffstaste nicht automatisch bereitgestellt. Sie müssen den Text für die jeweilige Taste in Ihrem mnemonischen Zeichen explizit als [**Underline**](https://msdn.microsoft.com/library/windows/apps/br209982)-Formatierung unterstreichen, wenn in der UI unterstrichener Text angezeigt werden soll.
-
- 
-
-## <a name="keyboard-routed-events"></a>Routingereignisse der Tastatur
-
-
-Bestimmte Ereignisse gelten als Routingereignisse, wie z. B. [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) und [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942). Routingereignisse verwenden die Bubbling-Routingstrategie. Bei der Bubbling-Routingstrategie geht ein Ereignis von einem untergeordneten Objekt aus und wird jeweils an die übergeordneten Objekte in der Struktur weitergeleitet. Dadurch ergibt sich eine weitere Möglichkeit, dasselbe Ereignis zu behandeln und mit denselben Ereignisdaten zu interagieren.
-
-Im folgenden XAML-Beispiel werden [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942)-Ereignisse für ein [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267)-Objekt und zwei [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265)-Objekte definiert. Wenn Sie in diesem Fall eine Taste loslassen, während der Fokus auf einem der **Button**-Objekte liegt, wird das Ereignis **KeyUp** ausgelöst. Das Ereignis wird per Bubbling an die übergeordnete **Canvas** weitergeleitet.
-
-```xaml
-<StackPanel KeyUp="StackPanel_KeyUp">
-  <Button Name="ButtonA" Content="Button A"/>
-  <Button Name="ButtonB" Content="Button B"/>
-  <TextBlock Name="statusTextBlock"/>
-</StackPanel>
-```
-
-Das folgende Beispiel zeigt, wie der Ereignishandler [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) für den entsprechenden XAML-Inhalt im vorherigen Beispiel implementiert wird.
-
-```csharp
-void StackPanel_KeyUp(object sender, KeyRoutedEventArgs e)
-{
-    statusTextBlock.Text = String.Format(
-        "The key {0} was pressed while focus was on {1}",
-        e.Key.ToString(), (e.OriginalSource as FrameworkElement).Name);
-}
-```
-
-Beachten Sie die Verwendung der Eigenschaft [**OriginalSource**](https://msdn.microsoft.com/library/windows/apps/br208810) im vorherigen Handler. Hier meldet **OriginalSource** das Objekt, das das Ereignis ausgelöst hat. Bei dem Objekt kann es sich nicht um [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635) handeln, da **StackPanel** kein Steuerelement ist und nicht im Fokus stehen kann. Nur eine der beiden Schaltflächen in **StackPanel** kann das Ereignis ausgelöst haben. Die Frage ist, welche? Mit **OriginalSource** können Sie das tatsächliche Quellobjekt des Ereignisses unterscheiden, wenn Sie das Ereignis für ein übergeordnetes Objekt verarbeiten.
-
-### <a name="the-handled-property-in-event-data"></a>Die Handled-Eigenschaft in Ereignisdaten
-
-Je nach Ihrer Strategie für die Ereignisverarbeitung empfiehlt sich vielleicht nur ein Ereignishandler, der auf ein Bubbling-Ereignis reagiert. Wenn beispielsweise ein bestimmter [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942)-Handler an eines der [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265)-Steuerelemente angefügt ist, hat dieses zuerst Gelegenheit, das Ereignis zu verarbeiten. In diesem Fall ist es nicht sinnvoll, dass auch das übergeordnete Panel das Ereignis behandelt. Verwenden Sie in diesem Szenario die Eigenschaft [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073) in den Ereignisdaten.
-
-Der Zweck der Eigenschaft [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073) in der Datenklasse eines Routingereignisses besteht darin, zu melden, dass ein anderer Handler, den Sie an früherer Stelle in der Ereignisroute registriert haben, bereits tätig war. Dies beeinflusst das Verhalten des Routingereignissystems. Wenn Sie **Handled** in einem Ereignishandler auf **true** festlegen, ist das Routing eines Ereignisses beendet, und das Ereignis wird nicht mehr an nachfolgende übergeordnete Elemente gesendet.
-
-### <a name="addhandler-and-already-handled-keyboard-events"></a>"AddHandler " und bereits behandelte Tastaturereignisse
-
-Sie können eine spezielle Technik verwenden, um Handler anzufügen, die auf bereits als verarbeitet markierte Ereignisse reagieren können. Bei dieser Technik wird mit der Methode [**AddHandler**](https://msdn.microsoft.com/library/windows/apps/hh702399) ein Handler registriert, und es werden keine XAML-Attribute und keine sprachspezifische Syntax verwendet, die Handler wie „+=“ in C\# hinzufügen. 
-
-Eine generelle Einschränkung dieser Technik besteht darin, dass die API **AddHandler** einen Parameter vom Typ [**RoutedEvent**](https://msdn.microsoft.com/library/windows/apps/br208808) verwendet, der das fragliche Routingereignis identifiziert. Nicht alle Routingereignisse bieten einen **RoutedEvent**-Bezeichner. Dieser Umstand wirkt sich somit darauf aus, welche Routingereignisse im Fall [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073) noch verarbeitet werden können. Die Ereignisse [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) und [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) haben Routingereignisbezeichner ([**KeyDownEvent**](https://msdn.microsoft.com/library/windows/apps/hh702416) und [**KeyUpEvent**](https://msdn.microsoft.com/library/windows/apps/hh702418)) in [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911). Andere Texteingabe-Ereignisse, wie [**TextBox.TextChanged**](https://msdn.microsoft.com/library/windows/apps/br209706), besitzen jedoch keine Routingereignisbezeichner und können deshalb für die Technik **AddHandler** nicht verwendet werden.
-
-### <a name="overriding-keyboard-events-and-behavior"></a>Überschreiben von Tastaturereignissen und Verhalten
-
-Sie können die wichtigsten Ereignisse für bestimmte Steuerelemente überschreiben (z. B. [**GridView**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.GridView)), um eine konsistente Fokusnavigation für verschiedene Eingabegeräte (darunter Tastatur und Gamepad) bereitzustellen.
-
-Im folgenden Beispiel subklassifizieren wir die Steuerung und überschreiben das KeyDown-Verhalten, um den Fokus zum GridView-Inhalt zu verschieben, wenn eine Pfeiltaste betätigt wird.
-
-```csharp
-public class CustomGridView : GridView
-  {
-    protected override void OnKeyDown(KeyRoutedEventArgs e)
-    {
-      // Override arrow key behaviors.
-      if (e.Key != Windows.System.VirtualKey.Left && e.Key !=
-        Windows.System.VirtualKey.Right && e.Key != 
-          Windows.System.VirtualKey.Down && e.Key != 
-            Windows.System.VirtualKey.Up)
-              base.OnKeyDown(e);
-      else
-        FocusManager.TryMoveFocus(FocusNavigationDirection.Down);
-    }
-  }
-```
-
-> [!NOTE]
-> Wenn ein GridView nur für Layoutzwecke verwendet wird, sollten Sie möglicherweise andere Steuerelemente verwenden, wie z. B. [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.ItemsControl) mit [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.ItemsWrapGrid).
-
-## <a name="commanding"></a>Befehle
-
-Eine geringe Anzahl von UI-Elementen verfügt über integrierte Unterstützung für die Steuerung. Die Steuerung verwendet eingabebezogene Routingereignisse in der zugrundeliegenden Implementierung. Sie ermöglicht die Verarbeitung verwandter UI-Eingaben (eine bestimmte Zeigeraktion oder Zugriffstaste) durch das Aufrufen eines einzelnen Befehlshandlers.
-
-Wenn die Steuerung für ein UI-Element verfügbar ist, sollten Sie dessen Steuerungs-APIs anstelle einzelner Eingabeereignisse verwenden. Weitere Informationen finden Sie unter [**ButtonBase.Command**](https://msdn.microsoft.com/library/windows/apps/br227740).
-
-Sie können auch [**ICommand**](https://msdn.microsoft.com/library/windows/apps/br227885) implementieren, um die Befehlsfunktionalität zu kapseln, die Sie über normale Ereignishandler aufrufen. Auf diese Weise können Sie die Steuerung auch verwenden, wenn keine **Command**-Eigenschaft verfügbar ist.
-
-## <a name="text-input-and-controls"></a>Texteingabe und Steuerelemente
-
-Bestimmte Steuerelemente reagieren mit einer eigenen Verarbeitung auf Tastaturereignisse. So ist beispielsweise das Steuerelement [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) dazu gedacht, über die Tastatur eingegebenen Text zu erfassen und visuell darzustellen. Es verwendet in seiner eigenen Logik [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) und [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) zum Erfassen von Tastaturanschlägen und löst dann auch sein eigenes [**TextChanged**](https://msdn.microsoft.com/library/windows/apps/br209706)-Ereignis aus, wenn der Text tatsächlich geändert wurde.
-
-Trotzdem können Sie generell einer [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br208942) oder einem verwandten Steuerelement, das der Verarbeitung von Texteingaben dient, Handler für [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208941) und [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br209683) hinzufügen. Jedoch reagiert ein Steuerelement möglicherweise im Rahmen seines Designs nicht auf alle Tastenwerte, die es über Tastaturereignisse empfängt. Das Verhalten hängt ganz vom jeweiligen Steuerelement ab.
-
-Beispielsweise verarbeitet [**ButtonBase**](https://msdn.microsoft.com/library/windows/apps/br227736) (die Basisklasse von [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265)) [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) so, dass eine Überprüfung für die LEERTASTE oder für die EINGABETASTE durchgeführt werden kann. **ButtonBase** verarbeitet **KeyUp** analog zu einem Ereignis für das Drücken der linken Maustaste, um ein [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737)-Ereignis auszulösen. Diese Verarbeitung des Ereignisses wird beim Überschreiben der virtuellen Methode [**OnKeyUp**](https://msdn.microsoft.com/library/windows/apps/hh967983) durch **ButtonBase** erreicht. In der Implementierung wird [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073) auf **true** festgelegt. Als Ergebnis empfängt kein übergeordnetes Element einer Schaltfläche, die bei der LEERTASTE auf ein Tastaturereignis lauscht, das bereits verarbeitete Element für seine eigenen Handler.
-
-[**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) ist ein weiteres Beispiel. Einige Tasten, wie die Pfeiltasten, werden von **TextBox** nicht als Text angesehen und gelten stattdessen als spezifisch für das UI-Steuerelementverhalten **TextBox** markiert diese Ereignisse als verarbeitet.
-
-Benutzerdefinierte Steuerelemente können ein ähnliches eigenes Überschreibungsverhalten für Tastaturereignisse implementieren und [**OnKeyDown**](https://msdn.microsoft.com/library/windows/apps/hh967982) / [**OnKeyUp**](https://msdn.microsoft.com/library/windows/apps/hh967983) überschreiben. Wenn Ihr benutzerdefiniertes Steuerelement bestimmte Zugriffstasten verarbeitet oder ein Steuerelement- oder Fokusverhalten besitzt, das mit dem für [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) geschilderten Szenario vergleichbar ist, sollten Sie diese Logik in Ihre eigenen **OnKeyDown** / **OnKeyUp**-Überschreibungen aufnehmen.
-
-## <a name="the-touch-keyboard"></a>Die Touch-Bildschirmtastatur
-
-Steuerelemente für die Texteingabe bieten automatische Unterstützung für die Touch-Bildschirmtastatur. Wenn Benutzer den Eingabefokus per Fingereingabe auf ein Textsteuerelement festlegen, wird automatisch die Bildschirmtastatur angezeigt. Wenn sich der Eingabefokus nicht auf einem Textsteuerelement befindet, ist die Bildschirmtastatur ausgeblendet.
-
-Wenn die Bildschirmtastatur angezeigt wird, wird Ihre UI automatisch umpositioniert, um sicherzustellen, dass das Element mit dem Fokus sichtbar bleibt. Dies kann dazu führen, dass andere wichtige Bereiche der UI nicht mehr auf dem Bildschirm angezeigt werden. Sie können das Standardverhalten jedoch deaktivieren und eigene UI-Anpassungen vornehmen, wenn die Bildschirmtastatur eingeblendet wird. Weitere Informationen finden Sie im [Beispiel zur Reaktion auf die Anzeige der Bildschirmtastatur](http://go.microsoft.com/fwlink/p/?linkid=231633).
-
-Wenn Sie ein benutzerdefiniertes Steuerelement erstellen, das zwar Texteingabe erfordert, aber nicht von einem Standardsteuerelement für die Texteingabe abgeleitet ist, können Sie Unterstützung für die Touch-Bildschirmtastatur hinzufügen, indem Sie die richtigen Steuerelementmuster der Benutzeroberflächenautomatisierung implementieren. Weitere Informationen finden Sie unter [Reagieren auf das Vorhandensein der Touch-Bildschirmtastatur](respond-to-the-presence-of-the-touch-keyboard.md) und im [Beispiel für die Touch-Bildschirmtastatur](http://go.microsoft.com/fwlink/p/?linkid=246019).
-
-Durch Drücken von Tasten auf der Touch-Bildschirmtastatur werden genau wie beim Drücken von Tasten auf Hardwaretastaturen die Ereignisse [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) und [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) ausgelöst. Die Touch-Bildschirmtastatur löst jedoch keine Eingabeereignisse für STRG+A, STRG+Z, STRG+X, STRG+C und STRG+V aus, da diese Tastenkombinationen für Textänderungen im Eingabesteuerelement reserviert sind.
-
-Benutzer können Daten in Ihre App schneller und einfacher eingeben, indem Sie den Eingabeumfang des Textsteuerelements an die Art der Daten anpassen, die der Benutzer vermutlich eingeben wird. Der Eingabeumfang bietet einen Hinweis auf die Art von Text, die vermutlich über das Steuerelement eingegeben wird. Auf diese Weise kann das System ein spezielles Bildschirmtastaturlayout für den Eingabetyp bereitstellen. Wird ein Textfeld beispielsweise nur verwendet, um eine vierstellige PIN einzugeben, legen Sie die Eigenschaft [**InputScope**](https://msdn.microsoft.com/library/windows/apps/hh702632) auf [**Number**](https://msdn.microsoft.com/library/windows/apps/hh702028) fest. Dies weist das System an, das Layout der Zehnertastatur anzuzeigen, das dem Benutzer die Eingabe der PIN erleichtert. Weitere Informationen finden Sie unter [Verwenden des Eingabeumfangs zum Ändern der Bildschirmtastatur](https://msdn.microsoft.com/library/windows/apps/mt280229).
-
-
-## <a name="additional-articles-in-this-section"></a>Weitere Artikel in diesem Abschnitt
+<span data-ttu-id="18ba9-342">Ziehen Sie in Betracht, die Pfeiltastennavigation für folgende Steuerelemente zu unterstützen:</span><span class="sxs-lookup"><span data-stu-id="18ba9-342">Consider adding support for arrow key navigation when you have for following controls:</span></span>
 
 <table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Thema</th>
-<th align="left">Beschreibung</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>[Reagieren auf das Vorhandensein der Bildschirmtastatur](respond-to-the-presence-of-the-touch-keyboard.md)</p></td>
-<td align="left"><p>Hier erfahren Sie, wie Sie die UI Ihrer App beim Ein- oder Ausblenden der Touch-Bildschirmtastatur anpassen können.</p></td>
-</tr>
-</tbody>
+  <tr>
+    <td>
+      <p>![Dialogfeld](images/keyboard/dialog.png)</p>
+      <p>**<span data-ttu-id="18ba9-344">Schaltflächen</span><span class="sxs-lookup"><span data-stu-id="18ba9-344">Buttons</span></span>**</p>
+      <p>![Optionsschaltfläche](images/keyboard/radiobutton.png)</p>
+      <p>**<span data-ttu-id="18ba9-346">Optionsschaltflächen</span><span class="sxs-lookup"><span data-stu-id="18ba9-346">RadioButtons</span></span>**</p>     
+    </td>
+    <td>
+      <p>![App-Leiste](images/keyboard/appbar.png)</p>
+      <p>**<span data-ttu-id="18ba9-348">Schaltflächen auf App-Leiste</span><span class="sxs-lookup"><span data-stu-id="18ba9-348">AppBarButtons</span></span>**</p>
+      <p>![Listen- und Rasterelemente](images/keyboard/list-and-grid-items.png)</p>
+      <p>**<span data-ttu-id="18ba9-350">Listenelemente und Rasterelemente</span><span class="sxs-lookup"><span data-stu-id="18ba9-350">ListItems and GridItems</span></span>**</p>
+    </td>    
+  </tr>
 </table>
 
-## <a name="related-articles"></a>Verwandte Artikel
+#### <a name="tab-stops"></a><span data-ttu-id="18ba9-351">Tabstopps</span><span class="sxs-lookup"><span data-stu-id="18ba9-351">Tab stops</span></span>
 
-**Entwickler**
-* [Identifizieren von Eingabegeräten](identify-input-devices.md)
-* [Reagieren auf das Vorhandensein der Bildschirmtastatur](respond-to-the-presence-of-the-touch-keyboard.md)
+<span data-ttu-id="18ba9-352">Anhängig von Funktionalität und Layout Ihrer App ist die beste Navigationsoption für eine Steuerelementgruppe evtl. ein einzelner Tabstopp mit Pfeilnavigation zu untergeordneten Elementen, mehrere Tabstopps oder eine Kombination.</span><span class="sxs-lookup"><span data-stu-id="18ba9-352">Depending on your app’s functionality and layout, the best navigation option for a control group might be a single tab stop with arrow navigation to child elements, multiple tab stops, or some combination.</span></span>
 
-**Designer**
-* [Tastaturentwurfsrichtlinien](https://msdn.microsoft.com/library/windows/apps/hh972345)
+##### <a name="use-multiple-tab-stops-and-arrow-keys-for-buttons"></a><span data-ttu-id="18ba9-353">Verwenden mehrerer Tabstopps und Pfeiltasten für Schaltflächen</span><span class="sxs-lookup"><span data-stu-id="18ba9-353">Use multiple tab stops and arrow keys for buttons</span></span>
 
-**Beispiele**
-* [Beispiel für grundlegende Eingabe](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Beispiel für Eingabe mit niedriger Latenz](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Beispiel für visuelle Fokuselemente](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+<span data-ttu-id="18ba9-354">Benutzer, für die Barrierefreiheit wichtig ist, benötigen gut etablierte Tastaturnavigationsregeln, bei denen nicht typischerweise Pfeiltasten zum Navigieren in verschiedenen Schaltflächen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="18ba9-354">Accessibility users rely on well-established keyboard navigation rules, which do not typically use arrow keys to navigate a collection of buttons.</span></span> <span data-ttu-id="18ba9-355">Allerdings empfinden Benutzer ohne Sehschwäche das Verhalten evtl. als natürlich.</span><span class="sxs-lookup"><span data-stu-id="18ba9-355">However, users without visual impairments might feel that the behavior is natural.</span></span>
 
-**Archivbeispiele**
-* [Eingabebeispiel](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Eingabe: Beispiel für Gerätefunktionen](http://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Eingabe: Beispiel für die Bildschirmtastatur](http://go.microsoft.com/fwlink/p/?linkid=246019)
-* [Beispiel für die Reaktion auf die Anzeige der Bildschirmtastatur](http://go.microsoft.com/fwlink/p/?linkid=231633)
-* [Beispiel für die XAML-Textbearbeitung](http://go.microsoft.com/fwlink/p/?LinkID=251417)
- 
+<span data-ttu-id="18ba9-356">Ein Beispiel des UWP-Standardverhaltens ist in diesem Fall das `ContentDialog`.</span><span class="sxs-lookup"><span data-stu-id="18ba9-356">An example of default UWP behavior in this case is the `ContentDialog`.</span></span> <span data-ttu-id="18ba9-357">Während Pfeiltasten zum Navigieren zwischen Schaltflächen verwendet werden können, ist jede Schaltfläche auch ein Tabstopp.</span><span class="sxs-lookup"><span data-stu-id="18ba9-357">While arrow keys can be used to navigate between buttons, each button is also a tab stop.</span></span>
 
- 
+##### <a name="assign-single-tab-stop-to-familiar-ui-patterns"></a><span data-ttu-id="18ba9-358">Zuweisen einzelner Tabstopps zu vertrauten UI-Mustern</span><span class="sxs-lookup"><span data-stu-id="18ba9-358">Assign single tab stop to familiar UI patterns</span></span>
 
+<span data-ttu-id="18ba9-359">In Fällen, in denen das Layout einem bekannten UI-Muster für Steuerelementgruppen folgt, kann das Zuweisen eines einzelnen Tabstopps zur Gruppe die Navigationseffizienz für Benutzer verbessern.</span><span class="sxs-lookup"><span data-stu-id="18ba9-359">In cases where your layout follows a well-known UI pattern for control groups, assigning a single tab stop to the group can improve navigation efficiency for users.</span></span>
+
+<span data-ttu-id="18ba9-360">Dazu gehören:</span><span class="sxs-lookup"><span data-stu-id="18ba9-360">Examples include:</span></span>
+-   `RadioButtons`
+-   <span data-ttu-id="18ba9-361">Mehrere `ListViews`, die wie eine einzelne aussehen und sich entsprechend verhalten</span><span class="sxs-lookup"><span data-stu-id="18ba9-361">Multiple `ListViews` that look like and behave like a single</span></span> `ListView`
+-   <span data-ttu-id="18ba9-362">Jede UI, die wie ein Kachelraster aussehen und sich entsprechend verhalten soll (z.B. Kacheln im Startmenü)</span><span class="sxs-lookup"><span data-stu-id="18ba9-362">Any UI made to look and behave like grid of tiles (such as the Start menu tiles)</span></span>
+
+#### <a name="specifying-control-group-behavior"></a><span data-ttu-id="18ba9-363">Angeben von Steuerelementgruppenverhalten</span><span class="sxs-lookup"><span data-stu-id="18ba9-363">Specifying control group behavior</span></span>
+
+<span data-ttu-id="18ba9-364">Verwenden Sie die folgenden APIs, um benutzerdefiniertes Steuerelementgruppenverhalten zu unterstützen (alle werden später in diesem Thema ausführlich erläutert):</span><span class="sxs-lookup"><span data-stu-id="18ba9-364">Use the following APIs to support custom control group behavior (all are discussed in more detail later in this topic):</span></span>
+
+-   <span data-ttu-id="18ba9-365">[XYFocusKeyboardNavigation](custom-keyboard-interactions.md#xyfocuskeyboardnavigation) ermöglicht die Pfeiltastennavigation zwischen Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="18ba9-365">[XYFocusKeyboardNavigation](custom-keyboard-interactions.md#xyfocuskeyboardnavigation) enables arrow key navigation between controls</span></span>
+-   <span data-ttu-id="18ba9-366">[TabFocusNavigation](custom-keyboard-interactions.md#tab-navigation) gibt an, ob mehrere Tabstopps vorhanden sind oder ein einzelner Tabstopp vorhanden ist</span><span class="sxs-lookup"><span data-stu-id="18ba9-366">[TabFocusNavigation](custom-keyboard-interactions.md#tab-navigation) indicates whether there are multiple tab stops or single tab stop</span></span>
+-   <span data-ttu-id="18ba9-367">[FindFirstFocusableElement und FindLastFocusableElement](managing-focus-navigation.md#findfirstfocusableelement) legen den Fokus auf das erste Element mit der Taste **POS1** und das letzte Element mit der Taste **ENDE**</span><span class="sxs-lookup"><span data-stu-id="18ba9-367">[FindFirstFocusableElement and FindLastFocusableElement](managing-focus-navigation.md#findfirstfocusableelement) sets focus on the first item with **Home** key and the last item with **End** key</span></span>
+
+<span data-ttu-id="18ba9-368">Die folgende Abbildungzeigt ein intuitives Tastaturnavigationsverhalten für eine Steuerelementgruppe mit zugeordneten Optionsfeldern.</span><span class="sxs-lookup"><span data-stu-id="18ba9-368">The following image shows an intuitive keyboard navigation behavior for a control group of associated radio buttons.</span></span> <span data-ttu-id="18ba9-369">In diesem Fall wird Folgendes empfohlen: ein einzelner Tabstopp für die Steuerelementgruppe, interne Navigation zwischen den Optionsfeldern mit den Pfeiltasten, Taste **POS1** verknüpft mit dem ersten Optionsfeld und Taste **ENDE** verknüpft mit dem letzten Optionsfeld.</span><span class="sxs-lookup"><span data-stu-id="18ba9-369">In this case, we recommend a single tab stop for the control group, inner navigation between the radio buttons using the arrow keys, **Home** key bound to the first radio button, and **End** key bound to the last radio button.</span></span>
+
+![Kombination](images/keyboard/putting-it-all-together.png)
+
+### <a name="keyboard-and-narrator"></a><span data-ttu-id="18ba9-371">Tastatur und Sprachausgabe</span><span class="sxs-lookup"><span data-stu-id="18ba9-371">Keyboard and Narrator</span></span>
+
+<span data-ttu-id="18ba9-372">Die Sprachausgabe ist eine UI-Eingabehilfe für Tastaturbenutzer. (Weitere Eingabetypen werden ebenfalls unterstützt.)</span><span class="sxs-lookup"><span data-stu-id="18ba9-372">Narrator is a UI accessibility tool geared towards keyboard users (other input types are also supported).</span></span> <span data-ttu-id="18ba9-373">Allerdings geht die Sprachausgabefunktionalität über die Tastaturinteraktionen hinaus, die von den UWP-Apps unterstützt werden, und beim Entwerfen der UWP-App für die Sprachausgabe ist besondere Sorgfalt erforderlich.</span><span class="sxs-lookup"><span data-stu-id="18ba9-373">However, Narrator functionality goes beyond the keyboard interactions supported by UWP apps and extra care is required when designing your UWP app for Narrator.</span></span> <span data-ttu-id="18ba9-374">(Die [Seite mit den Grundlagen der Sprachausgabe](https://support.microsoft.com/help/22808/windows-10-narrator-learning-basics) leitet Sie durch die Sprachausgabe.)</span><span class="sxs-lookup"><span data-stu-id="18ba9-374">(The [Narrator basics page](https://support.microsoft.com/help/22808/windows-10-narrator-learning-basics) guides you through the Narrator user experience.)</span></span>
+
+<span data-ttu-id="18ba9-375">Einige der Unterschiede zwischen dem UWP-Tastaturverhalten und der Sprachausgabe umfassen:</span><span class="sxs-lookup"><span data-stu-id="18ba9-375">Some of the differences between UWP keyboard behaviors and those supported by Narrator include:</span></span>
+-   <span data-ttu-id="18ba9-376">Zusätzliche Tastenkombinationen für die Navigation zu UI-Elementen, die nicht über die Standardtastaturnavigation verfügbar sind, z.B. FESTSTELLTASTE + Pfeiltasten zum Lesen von Steuerelementbeschriftungen.</span><span class="sxs-lookup"><span data-stu-id="18ba9-376">Extra key combinations for navigation to UI elements that are not exposed through standard keyboard navigation, such as Caps lock + arrow keys to read control labels.</span></span>
+-   <span data-ttu-id="18ba9-377">Navigation zu deaktivierten Elementen.</span><span class="sxs-lookup"><span data-stu-id="18ba9-377">Navigation to disabled items.</span></span> <span data-ttu-id="18ba9-378">Standardmäßig werden deaktivierte Elemente nicht über die Standardtastaturnavigation verfügbar gemacht.</span><span class="sxs-lookup"><span data-stu-id="18ba9-378">By default, disabled items are not exposed through standard keyboard navigation.</span></span>
+    -   <span data-ttu-id="18ba9-379">Steuerelementansichten für schnellere Navigation basierend auf UI-Granularität.</span><span class="sxs-lookup"><span data-stu-id="18ba9-379">Control "views" for quicker navigation based on UI granularity.</span></span> <span data-ttu-id="18ba9-380">Benutzer können zu Elementen, Zeichen, Wörtern, Zeilen, Absätzen, Links, Überschriften, Tabellen, Landmarks und Vorschlägen navigieren.</span><span class="sxs-lookup"><span data-stu-id="18ba9-380">Users can navigate to items, characters, word, lines, paragraphs, links, headings, tables, landmarks, and suggestions.</span></span> <span data-ttu-id="18ba9-381">Die Standardtastaturnavigation macht diese Objekte als einfache Liste verfügbar, was die Navigation unter Umständen verkompliziert, es sein denn, Sie stellen Tastenkombinationen bereit.</span><span class="sxs-lookup"><span data-stu-id="18ba9-381">Standard keyboard navigation exposes these objects as a flat list, which might make navigation cumbersome unless you provide shortcut keys.</span></span>
+
+#### <a name="case-study--autosuggestbox-control"></a><span data-ttu-id="18ba9-382">Fallstudie – AutoSuggestBox-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="18ba9-382">Case Study – AutoSuggestBox control</span></span>
+
+<span data-ttu-id="18ba9-383">Die Suchschaltfläche für `AutoSuggestBox` ist nicht bei der standardmäßigen Tastaturnavigation mit der TAB-Taste und den Pfeiltasten zugänglich, da der Benutzer die **EINGABETASTE** drücken kann, um die Suchabfrage zu senden.</span><span class="sxs-lookup"><span data-stu-id="18ba9-383">The search button for the `AutoSuggestBox` is not accessible to standard keyboard navigation using tab and arrow keys because the user can press the **Enter** key to submit the search query.</span></span> <span data-ttu-id="18ba9-384">Sie ist jedoch über die Sprachausgabe zugänglich, wenn der Benutzer FESTSTELLTASTE + eine Pfeiltaste drückt.</span><span class="sxs-lookup"><span data-stu-id="18ba9-384">However, it is accessible through Narrator when the user presses Caps Lock + an arrow key.</span></span>
+
+![Automatische Vorschläge für Tastaturfokus](images/keyboard/auto-suggest-keyboard.png)
+
+<span data-ttu-id="18ba9-386">***Über die Tastatur*** *verwenden Benutzer* die ***EINGABETASTE***, * um eine Suchabfrage zu senden.*</span><span class="sxs-lookup"><span data-stu-id="18ba9-386">***With keyboard***, *users use* ***Enter*** *key to submit search query*</span></span>
+
+<table>
+  <tr>
+    <td>
+      <p>![Automatische Vorschläge für Sprachausgabefokus](images/keyboard/auto-suggest-narrator-1.png)</p>
+      <p><span data-ttu-id="18ba9-388">**Mit der Sprachausgabe** *können Benutzer über die EINGABETASTE eine Suchabfrage übermitteln.*</span><span class="sxs-lookup"><span data-stu-id="18ba9-388">**With Narrator,** *users can use Enter key to submit search query*</span></span></P>
+    </td>
+    <td>
+      <p>![Automatische Vorschläge für Sprachausgabefokus bei Suche](images/keyboard/auto-suggest-narrator-2.png)</p>
+      <p>*<span data-ttu-id="18ba9-390">Der Benutzer kann auch mit FESTSTELLTASTE + NACH-RECHTS-TASTE + LEERTASTE auf die Suchschaltfläche zugreifen.</span><span class="sxs-lookup"><span data-stu-id="18ba9-390">User is also able to access the search button by Caps Lock + Right arrow key, then press Space key</span></span>*</p>
+    </td>
+  </tr>
+</table>
+
+### <a name="keyboard-and-the-xbox-gamepad-and-remote-control"></a><span data-ttu-id="18ba9-391">Tastatur und Xbox-Gamepad und -Fernbedienung</span><span class="sxs-lookup"><span data-stu-id="18ba9-391">Keyboard and the Xbox gamepad and remote control</span></span>
+
+<span data-ttu-id="18ba9-392">Xbox-Gamepads und -Fernbedienungen unterstützen das Verhalten und die Funktionen der UWP-Tastatur größtenteils.</span><span class="sxs-lookup"><span data-stu-id="18ba9-392">Xbox gamepads and remote controls support many UWP keyboard behaviors and experiences.</span></span> <span data-ttu-id="18ba9-393">Da jedoch verschiedene Tastenoptionen einer Tastatur fehlen, stehen bei Gamepad und Fernbedienung viele Tastaturoptimierungen nicht zur Verfügung (Fernbedienung noch eingeschränkter als Gamepad).</span><span class="sxs-lookup"><span data-stu-id="18ba9-393">However, due to the lack of various key options available on a keyboard, gamepad and remote control lack many keyboard optimizations (remote control is even more limited than gamepad).</span></span>
+
+<span data-ttu-id="18ba9-394">Unter [Entwerfen für Xbox und Fernsehgeräte](designing-for-tv.md#gamepad-and-remote-control) finden Sie weitere Informationen zur UWP-Unterstützung für die Eingabe per Gamepad und Fernbedienung.</span><span class="sxs-lookup"><span data-stu-id="18ba9-394">See [designing for Xbox and TV](designing-for-tv.md#gamepad-and-remote-control) for more detail on UWP support for gamepad and remote control input.</span></span>
+
+<span data-ttu-id="18ba9-395">Im Folgenden finden Sie einige wichtige Zuordnungen zwischen Tastatur, Gamepad und Fernbedienung.</span><span class="sxs-lookup"><span data-stu-id="18ba9-395">The following shows some key mappings between keyboard, gamepad, and remote control.</span></span>
+
+| **<span data-ttu-id="18ba9-396">Tastatur</span><span class="sxs-lookup"><span data-stu-id="18ba9-396">Keyboard</span></span>**  | **<span data-ttu-id="18ba9-397">Gamepad</span><span class="sxs-lookup"><span data-stu-id="18ba9-397">Gamepad</span></span>**                         | **<span data-ttu-id="18ba9-398">Fernbedienung</span><span class="sxs-lookup"><span data-stu-id="18ba9-398">Remote control</span></span>**  |
+|---------------|-------------------------------------|---------------------|
+| <span data-ttu-id="18ba9-399">LEERTASTE</span><span class="sxs-lookup"><span data-stu-id="18ba9-399">Space</span></span>         | <span data-ttu-id="18ba9-400">A-TASTE</span><span class="sxs-lookup"><span data-stu-id="18ba9-400">A button</span></span>                            | <span data-ttu-id="18ba9-401">Auswahltaste</span><span class="sxs-lookup"><span data-stu-id="18ba9-401">Select button</span></span>       |
+| <span data-ttu-id="18ba9-402">EINGABETASTE</span><span class="sxs-lookup"><span data-stu-id="18ba9-402">Enter</span></span>         | <span data-ttu-id="18ba9-403">A-TASTE</span><span class="sxs-lookup"><span data-stu-id="18ba9-403">A button</span></span>                            | <span data-ttu-id="18ba9-404">Auswahltaste</span><span class="sxs-lookup"><span data-stu-id="18ba9-404">Select button</span></span>       |
+| <span data-ttu-id="18ba9-405">ESCAPE-TASTE</span><span class="sxs-lookup"><span data-stu-id="18ba9-405">Escape</span></span>        | <span data-ttu-id="18ba9-406">B-TASTE</span><span class="sxs-lookup"><span data-stu-id="18ba9-406">B button</span></span>                            | <span data-ttu-id="18ba9-407">Zurücktaste</span><span class="sxs-lookup"><span data-stu-id="18ba9-407">Back button</span></span>         |
+| <span data-ttu-id="18ba9-408">POS1/ENDE</span><span class="sxs-lookup"><span data-stu-id="18ba9-408">Home/End</span></span>      | <span data-ttu-id="18ba9-409">n.a.</span><span class="sxs-lookup"><span data-stu-id="18ba9-409">N/A</span></span>                                 | <span data-ttu-id="18ba9-410">n.a.</span><span class="sxs-lookup"><span data-stu-id="18ba9-410">N/A</span></span>                 |
+| <span data-ttu-id="18ba9-411">Bild AUF/BILD AB</span><span class="sxs-lookup"><span data-stu-id="18ba9-411">Page Up/Down</span></span>  | <span data-ttu-id="18ba9-412">Auslösertaste für vertikalen Bildlauf, Bumper-Taste für horizontalen Bildlauf</span><span class="sxs-lookup"><span data-stu-id="18ba9-412">Trigger button for vertical scroll, Bumper button for horizontal scroll</span></span>   | <span data-ttu-id="18ba9-413">n.a.</span><span class="sxs-lookup"><span data-stu-id="18ba9-413">N/A</span></span>                 |
+
+<span data-ttu-id="18ba9-414">Einige der wichtigsten Unterschiede, die Sie beim Entwerfen Ihrer UWP-App für die Verwendung mit Gamepad und Fernbedienung beachten sollten, sind:</span><span class="sxs-lookup"><span data-stu-id="18ba9-414">Some key differences you should be aware of when designing your UWP app for use with gamepad and remote control usage include:</span></span>
+-   <span data-ttu-id="18ba9-415">Die Texteingabe erfordert, dass der Benutzer A drückt, um ein Textsteuerelement zu aktivieren.</span><span class="sxs-lookup"><span data-stu-id="18ba9-415">Text entry requires the user to press A to activate a text control.</span></span>
+-   <span data-ttu-id="18ba9-416">Die Fokusnavigation ist nicht auf Steuerelementgruppen beschränkt, Benutzer können frei zu beliebigen fokussierbaren UI-Elementen in der App navigieren.</span><span class="sxs-lookup"><span data-stu-id="18ba9-416">Focus navigation is not limited to control groups, users can navigate freely to any focusable UI element in the app.</span></span>
+
+    <span data-ttu-id="18ba9-417">**HINWEIS** Der Fokus kann auf jedes beliebige fokussierbare UI-Element in Tastendruckrichtung verlagert werden, es sei denn, es handelt sich um eine Overlay-UI, oder [Fokusaktivierung](designing-for-tv.md#focus-engagement) ist angegeben. Dies verhindert, dass der Fokus in einen/aus einem Bereich wechselt, bis er durch die A-Taste belegt/nicht belegt ist.</span><span class="sxs-lookup"><span data-stu-id="18ba9-417">**NOTE** Focus can move to any focusable UI element in the key press direction unless it is in an overlay UI or [focus engagement](designing-for-tv.md#focus-engagement) is specified, which prevents focus from entering/exiting a region until engaged/disengaged with the A button.</span></span> <span data-ttu-id="18ba9-418">Weitere Informationen finden Sie im Abschnitt zur [direktionalen Navigation](#directional-navigation).</span><span class="sxs-lookup"><span data-stu-id="18ba9-418">For more info, see the [directional navigation](#directional-navigation) section.</span></span>
+-   <span data-ttu-id="18ba9-419">Das Steuerkreuz und der linke Stick werden zum Verlagern des Fokus zwischen Steuerelementen und für die interne Navigation verwendet.</span><span class="sxs-lookup"><span data-stu-id="18ba9-419">D-pad and left stick buttons are used to move focus between controls and for inner navigation.</span></span>
+
+    <span data-ttu-id="18ba9-420">**HINWEIS** Gamepad und Fernbedienung navigieren nur zu Elementen in derselben visuellen Reihenfolge wie die gedrückte Richtungstaste.</span><span class="sxs-lookup"><span data-stu-id="18ba9-420">**NOTE** Gamepad and remote control only navigate to items that are in the same visual order as the directional key pressed.</span></span> <span data-ttu-id="18ba9-421">Die Navigation in diese Richtung wird deaktiviert, wenn es kein nachfolgendes Element gibt, das den Fokus erhalten kann.</span><span class="sxs-lookup"><span data-stu-id="18ba9-421">Navigation is disabled in that direction when there is no subsequent element that can receive focus.</span></span> <span data-ttu-id="18ba9-422">Abhängig von der Situation gilt diese Einschränkung für Tastaturbenutzer nicht immer.</span><span class="sxs-lookup"><span data-stu-id="18ba9-422">Depending on the situation, keyboard users do not always have that constraint.</span></span> <span data-ttu-id="18ba9-423">Im Abschnitt [Integrierte Tastaturoptimierung](#built-in-keyboard-optimization) erhalten Sie weitere Infos.</span><span class="sxs-lookup"><span data-stu-id="18ba9-423">See the [Built in keyboard optimization](#built-in-keyboard-optimization) section for more info.</span></span>
+
+#### <a name="directional-navigation-a-namedirectional-navigation"></a><span data-ttu-id="18ba9-424">Direktionale Navigation <a name="directional-navigation"></span><span class="sxs-lookup"><span data-stu-id="18ba9-424">Directional navigation <a name="directional-navigation"></span></span>
+
+<span data-ttu-id="18ba9-425">Die direktionale Navigation wird über die UWP-Hilfsklasse [Focus Manager](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.FocusManager) verwaltet, die die gedrückte Richtungstaste (Pfeiltaste, Steuerkreuz) verwendet und versucht, den Fokus in die entsprechende visuelle Richtung zu verlagern.</span><span class="sxs-lookup"><span data-stu-id="18ba9-425">Directional navigation is managed by a UWP [Focus Manager](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.FocusManager) helper class, which takes the directional key pressed (arrow key, D-pad) and attempts to move focus in the corresponding visual direction.</span></span>
+
+<span data-ttu-id="18ba9-426">Wenn eine App nicht mehr den [Mausmodus](designing-for-tv.md#mouse-mode) verwendet, wird die direktionale Navigation anders als bei der Tastatur auf die gesamte Anwendung für Gamepad und Fernbedienung angewendet.</span><span class="sxs-lookup"><span data-stu-id="18ba9-426">Unlike the keyboard, when an app opts out of [Mouse Mode](designing-for-tv.md#mouse-mode), directional navigation is applied across the entire application for gamepad and remote control .</span></span> <span data-ttu-id="18ba9-427">Gehen Sie zum [Artikel zur XY-Fokusnavigation und -interaktion](designing-for-tv.md#xy-focus-navigation-and-interaction), um weitere Informationen zu direktionalen Navigationsoptimierungen für Gamepad und Fernbedienung zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="18ba9-427">Visit [XY focus navigation and interaction article](designing-for-tv.md#xy-focus-navigation-and-interaction) for more detail on directional navigation optimizations for gamepad and remote control.</span></span>
+
+<span data-ttu-id="18ba9-428">**HINWEIS** Die Navigation mithilfe der TAB-TASTE der Tastatur wird nicht als direktionale Navigation betrachtet.</span><span class="sxs-lookup"><span data-stu-id="18ba9-428">**NOTE** Navigation using the keyboard Tab key is not considered directional navigation.</span></span> <span data-ttu-id="18ba9-429">Weitere Informationen finden Sie im Abschnitt [Tabstopps](#tab-stops).</span><span class="sxs-lookup"><span data-stu-id="18ba9-429">For more info, see the [Tab stops](#tab-stops) section.</span></span>
+
+<table>
+  <tr>
+    <td>
+      <p>![direktionale Navigation](images/keyboard/directional-navigation.png)</p>
+      <p>***<span data-ttu-id="18ba9-431">Direktionale Navigation unterstützt</span><span class="sxs-lookup"><span data-stu-id="18ba9-431">Directional navigation supported</span></span>*** </br>*<span data-ttu-id="18ba9-432">Durch das Verwenden von Richtungstasten (Tastaturpfeile, Gamepad und Steuerkreuz der Fernbedienung) können Benutzer zwischen verschiedenen Steuerelementen navigieren.</span><span class="sxs-lookup"><span data-stu-id="18ba9-432">Using directional keys (keyboard arrows, gamepad and remote control D-pad), user can navigate between different controls.</span></span>*</p>
+    </td>
+    <td>
+      <p>![keine direktionale Navigation](images/keyboard/no-directional-navigation.png)</p>
+      <p>***<span data-ttu-id="18ba9-434">Direktionale Navigation nicht unterstützt</span><span class="sxs-lookup"><span data-stu-id="18ba9-434">Directional navigation not supported</span></span>*** </br>*<span data-ttu-id="18ba9-435">Der Benutzer kann nicht zwischen verschiedenen Steuerelementen mit Richtungstasten navigieren.</span><span class="sxs-lookup"><span data-stu-id="18ba9-435">User cannot navigate between different controls using directional keys.</span></span> <span data-ttu-id="18ba9-436">Andere Methoden zum Navigieren zwischen Steuerelementen (TAB-TASTE) sind nicht betroffen.</span><span class="sxs-lookup"><span data-stu-id="18ba9-436">Other methods of navigating between controls (tab key) are not impacted.</span></span>*</p>
+    </td>
+  </tr>
+</table>
+
+### <a name="built-in-keyboard-optimization-a-namebuilt-in-keyboard-optimization"></a><span data-ttu-id="18ba9-437">Integrierte Tastaturoptimierung <a name="built-in-keyboard-optimization"></span><span class="sxs-lookup"><span data-stu-id="18ba9-437">Built in keyboard optimization <a name="built-in-keyboard-optimization"></span></span>
+
+<span data-ttu-id="18ba9-438">Je nach Layout und Steuerelementen können UWP-Apps speziell für die Tastatureingabe optimiert werden.</span><span class="sxs-lookup"><span data-stu-id="18ba9-438">Depending on the layout and controls used, UWP apps can be optimized specifically for keyboard input.</span></span>
+
+<span data-ttu-id="18ba9-439">Das folgende Beispiel zeigt eine Gruppe von Listenelementen, Rasterelementen und Menüelementen, die zu einem einzelnen Tabstopp zugewiesen wurden (siehe Abschnitt [Tabstopps](#tab-stops)).</span><span class="sxs-lookup"><span data-stu-id="18ba9-439">The following example shows a group of list items, grid items, and menu items that have been assigned to a single tab stop (see the [Tab stops](#tab-stops) section).</span></span> <span data-ttu-id="18ba9-440">Wenn die Gruppe im Fokus steht, wird die interne Navigation mit den Richtungspfeiltasten in der entsprechenden visuellen Reihenfolge ausgeführt (siehe Abschnitt [Navigation](#navigation)).</span><span class="sxs-lookup"><span data-stu-id="18ba9-440">When the group has focus, inner navigation is performed with the directional arrow keys in the corresponding visual order (see [Navigation](#navigation) section).</span></span>
+
+![Pfeiltastennavigation in einzelner Spalte](images/keyboard/single-column-arrow.png)
+
+***<span data-ttu-id="18ba9-442">Pfeiltastennavigation in einzelner Spalte</span><span class="sxs-lookup"><span data-stu-id="18ba9-442">Single Column Arrow Key Navigation</span></span>***
+
+![Pfeiltastennavigation in einzelner Zeile](images/keyboard/single-row-arrow.png)
+
+***<span data-ttu-id="18ba9-444">Pfeiltastennavigation in einzelner Zeile</span><span class="sxs-lookup"><span data-stu-id="18ba9-444">Single Row Arrow Key Navigation</span></span>***
+
+![Pfeiltastennavigation in mehreren Spalten und Zeilen](images/keyboard/multiple-column-and-row-navigation.png)
+
+***<span data-ttu-id="18ba9-446">Pfeiltastennavigation in mehreren Spalten und Zeilen</span><span class="sxs-lookup"><span data-stu-id="18ba9-446">Multiple Column/Row Arrow Key Navigation</span></span>***
+
+#### <a name="wrapping-homogeneous-list-and-grid-view-items"></a><span data-ttu-id="18ba9-447">Umschließen homogener Listen- und Rasteransichtselemente</span><span class="sxs-lookup"><span data-stu-id="18ba9-447">Wrapping homogeneous List and Grid View Items</span></span>
+
+<span data-ttu-id="18ba9-448">Die direktionale Navigation ist nicht immer die effizienteste Möglichkeit, durch mehrere Zeilen und Spalten der Listen- und Rasteransichtselemente zu navigieren.</span><span class="sxs-lookup"><span data-stu-id="18ba9-448">Directional navigation is not always the most efficient way to navigate multiple rows and columns of List and GridView items.</span></span>
+
+<span data-ttu-id="18ba9-449">**HINWEIS** Menüelemente sind in der Regel Listen mit einer Spalte, aber in einigen Fällen können spezielle Fokusregeln gelten (siehe [Popup-UI](#popup-ui)).</span><span class="sxs-lookup"><span data-stu-id="18ba9-449">**NOTE** Menu items are typically single column lists, but special focus rules might apply in some cases (see [Popup UI](#popup-ui)).</span></span>
+
+<span data-ttu-id="18ba9-450">Listen- und Rasterobjekte können mit mehreren Zeilen und Spalten erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="18ba9-450">List and Grid objects can be created with multiple rows and columns.</span></span> <span data-ttu-id="18ba9-451">Diese befinden sich in der Regel in einer zeilenweise absteigenden (Ausfüllen einer kompletten Zeile vor dem Ausfüllen der nächsten Zeile) oder spaltenweise absteigenden (Ausfüllen einer kompletten Spalte vor dem Ausfüllen der nächsten Spalte) Reihenfolge.</span><span class="sxs-lookup"><span data-stu-id="18ba9-451">These are typically in row-major (where items fill entire row first before filling in the next row) or column-major (where items fill entire column first before filling in the next column) order.</span></span> <span data-ttu-id="18ba9-452">Die zeilenweise oder spaltenweise absteigende Reihenfolge hängt von der Bildlaufrichtung ab, und Sie sollten sicherstellen, dass es keinen Konflikt mit der Elementreihenfolge gibt.</span><span class="sxs-lookup"><span data-stu-id="18ba9-452">Row or column major order depends on scroll direction and you should ensure that item order does not conflict with this direction.</span></span>
+
+<span data-ttu-id="18ba9-453">Wenn bei zeilenweise absteigender Reihenfolge (Eingabe der Elemente von links nach rechts und von oben nach unten) der Fokus auf dem letzten Element in einer Zeile liegt und die NACH-RECHTS-TASTE gedrückt wird, wird der Fokus zum ersten Element in der nächsten Zeile verlagert.</span><span class="sxs-lookup"><span data-stu-id="18ba9-453">In row-major order (where items fill in left to right, top to bottom), when the focus is on the last item in a row and the Right arrow key is pressed, focus is moved to the first item in the next row.</span></span> <span data-ttu-id="18ba9-454">Dieses Verhalten tritt auch umgekehrt auf: Wenn der Fokus auf dem ersten Element in einer Zeile liegt und die NACH-LINKS-TASTE gedrückt wird, wird der Fokus auf das letzte Element in der vorherigen Zeile verlagert.</span><span class="sxs-lookup"><span data-stu-id="18ba9-454">This same behavior occurs in reverse: When focus is set to the first item in a row and the Left arrow key is pressed, focus is moved to the last item in the previous row.</span></span>
+
+<span data-ttu-id="18ba9-455">Wenn bei spaltenweise absteigender Reihenfolge (Eingabe der Elemente von oben nach unten und von links nach rechts) der Fokus auf dem letzten Element in einer Spalte liegt und die NACH-UNTEN-TASTE gedrückt wird, wird der Fokus zum ersten Element in der nächsten Spalte verlagert.</span><span class="sxs-lookup"><span data-stu-id="18ba9-455">In column-major order (where items fill in top to bottom, left to right), when the focus is on the last item in a column and user presses the Down arrow key, focus is moved to the first item in the next column.</span></span> <span data-ttu-id="18ba9-456">Dieses Verhalten tritt auch umgekehrt auf: Wenn der Fokus auf dem ersten Element in einer Spalte liegt und die NACH-OBEN-TASTE gedrückt wird, wird der Fokus auf das letzte Element in der vorherigen Spalte verlagert.</span><span class="sxs-lookup"><span data-stu-id="18ba9-456">This same behavior occurs in reverse: When focus is set to the first item in a column and the Up arrow key is pressed, focus is moved to the last item in the previous column.</span></span>
+
+<table>
+  <tr>
+    <td>
+      <p>![zeilenweise absteigende Tastaturnavigation](images/keyboard/row-major-keyboard.png)</p>
+      <p>***<span data-ttu-id="18ba9-458">Zeilenweise absteigende Tastaturnavigation</span><span class="sxs-lookup"><span data-stu-id="18ba9-458">Row major keyboard navigation</span></span>***</p>
+    </td>
+    <td>
+      <p>![spaltenweise absteigende Tastaturnavigation](images/keyboard/column-major-keyboard.png)</p>
+      <p>***<span data-ttu-id="18ba9-460">Spaltenweise absteigende Tastaturnavigation</span><span class="sxs-lookup"><span data-stu-id="18ba9-460">Column major keyboard navigation</span></span>***</p>
+    </td>
+  </tr>
+</table>
+
+#### <a name="popup-ui-a-namepopup-ui"></a><span data-ttu-id="18ba9-461">Popup-UI <a name="popup-ui"></span><span class="sxs-lookup"><span data-stu-id="18ba9-461">Popup UI <a name="popup-ui"></span></span>
+
+<span data-ttu-id="18ba9-462">Wie bereits erwähnt, sollten Sie versuchen, sicherzustellen, dass die direktionale Navigation der visuellen Reihenfolge der Steuerelemente in der UI Ihrer App entspricht.</span><span class="sxs-lookup"><span data-stu-id="18ba9-462">As mentioned, you should try to ensure directional navigation corresponds to the visual order of the controls in your app’s UI.</span></span>
+
+<span data-ttu-id="18ba9-463">Einige Steuerelemente, z.B. `ContextMenu`, `AppBarOverflowMenu` und `AutoSuggest`, enthalten Popupmenüs, die an einer Position und in einer Richtung relativ zum primären Steuerelement angezeigt werden (auf Grundlage der verfügbaren Bildschirmfläche).</span><span class="sxs-lookup"><span data-stu-id="18ba9-463">Some controls, such as `ContextMenu`, `AppBarOverflowMenu`, and `AutoSuggest`, include a menu popup that is displayed in a location and direction relative to the primary control (based on available screen space).</span></span> <span data-ttu-id="18ba9-464">Wenn beispielsweise nicht genügend Platz vorhanden ist, um das Menü nach unten (Standardrichtung) zu öffnen, wird es nach oben geöffnet.</span><span class="sxs-lookup"><span data-stu-id="18ba9-464">For example, when there is insufficient space for the menu to open downwards (the default direction), it opens upwards.</span></span> <span data-ttu-id="18ba9-465">Es kann nicht garantiert werden, dass das Menü jedes Mal in dieselbe Richtung geöffnet wird.</span><span class="sxs-lookup"><span data-stu-id="18ba9-465">There is no guarantee that the menu opens in the same direction every time.</span></span>
+
+<table>
+  <td>![Befehlsleiste wird mit NACH-UNTEN-TASTE nach unten geöffnet](images/keyboard/command-bar-open-down.png)</td>
+  <td>![Befehlsleiste wird mit NACH-OBEN-TASTE nach oben geöffnet](images/keyboard/command-bar-open-up.png)</td>
+</table>
+
+<span data-ttu-id="18ba9-468">Wenn das Menü zum ersten Mal geöffnet wird (und vom Benutzer kein Element ausgewählt wurde), legt die NACH-UNTEN-TASTE den Fokus für diese Steuerelemente immer auf das erste Element im Menü. Die NACH-OBEN-TASTE legt den Fokus für diese Steuerelemente immer auf das letzte Element im Menü.</span><span class="sxs-lookup"><span data-stu-id="18ba9-468">For these controls, when the menu is first opened (and no item has been selected by the user), the Down arrow key always sets focus to the first item and the Up arrow key always sets focus to the last item on the menu.</span></span> <span data-ttu-id="18ba9-469">Wenn das letzte Element ausgewählt und die NACH-UNTEN-TASTE gedrückt wird, wird der Fokus gleichermaßen auf das erste Element im Menü verlagert. Wenn das erste Element ausgewählt und die NACH-OBEN-TASTE gedrückt wird, wird der Fokus gleichermaßen auf das letzte Element im Menü verlagert</span><span class="sxs-lookup"><span data-stu-id="18ba9-469">Similarly, when the last item is selected and the Down arrow key is pressed, focus moves to the first item on the menu and when the first item is selected and the Up arrow key is pressed, focus moves to the last item on the menu.</span></span>
+
+<span data-ttu-id="18ba9-470">Sie sollten versuchen, diese Verhaltensweisen für Ihre benutzerdefinierten Steuerelemente zu emulieren.</span><span class="sxs-lookup"><span data-stu-id="18ba9-470">You should try to emulate these same behaviors in your custom controls.</span></span> <span data-ttu-id="18ba9-471">Ein Codebeispiel zum Implementieren dieses Verhaltens finden Sie in der Dokumentation zum [Verwalten der Fokusnavigation](managing-focus-navigation.md#popup-ui-code-sample) .</span><span class="sxs-lookup"><span data-stu-id="18ba9-471">Code sample on how to implement this behavior can be found in [Managing focus navigation](managing-focus-navigation.md#popup-ui-code-sample) documentation.</span></span>
+
+## <a name="test-your-app"></a><span data-ttu-id="18ba9-472">Testen der App</span><span class="sxs-lookup"><span data-stu-id="18ba9-472">Test your app</span></span>
+
+<span data-ttu-id="18ba9-473">Testen Sie Ihre App mit allen unterstützten Eingabegeräten, um sicherzustellen, dass eine einheitliche und intuitive Navigation zu UI-Elementen möglich ist und keine unerwarteten Elemente die gewünschte Aktivierreihenfolge beeinträchtigen.</span><span class="sxs-lookup"><span data-stu-id="18ba9-473">Test your app with all supported input devices to ensure UI elements can be navigated to in a coherent and intuitive way and that no unexpected elements interfere with the desired tab order.</span></span>
+
+## <a name="related-articles"></a><span data-ttu-id="18ba9-474">Verwandte Artikel</span><span class="sxs-lookup"><span data-stu-id="18ba9-474">Related articles</span></span>
+* [<span data-ttu-id="18ba9-475">Tastaturereignisse</span><span class="sxs-lookup"><span data-stu-id="18ba9-475">Keyboard events</span></span>](keyboard-events.md)
+* [<span data-ttu-id="18ba9-476">Identifizieren von Eingabegeräten</span><span class="sxs-lookup"><span data-stu-id="18ba9-476">Identify input devices</span></span>](identify-input-devices.md)
+* [<span data-ttu-id="18ba9-477">Reagieren auf das Vorhandensein der Bildschirmtastatur</span><span class="sxs-lookup"><span data-stu-id="18ba9-477">Respond to the presence of the touch keyboard</span></span>](respond-to-the-presence-of-the-touch-keyboard.md)
+* [<span data-ttu-id="18ba9-478">Beispiel für visuelle Fokuselemente</span><span class="sxs-lookup"><span data-stu-id="18ba9-478">Focus visuals sample</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+
+## <a name="appendix"></a><span data-ttu-id="18ba9-479">Anhang</span><span class="sxs-lookup"><span data-stu-id="18ba9-479">Appendix</span></span>
+
+### <a name="software-keyboard-a-nametouch-keyboard"></a><span data-ttu-id="18ba9-480">Softwaretastatur <a name="touch-keyboard"></span><span class="sxs-lookup"><span data-stu-id="18ba9-480">Software keyboard <a name="touch-keyboard"></span></span>
+
+<span data-ttu-id="18ba9-481">Bei der Softwaretastatur handelt es sich um eine Tastatur auf dem Bildschirm, die der Benutzer anstelle der physischen Tastatur zum Eingeben von Daten per Touch, Maus, Zeichen-/Eingabestift oder mit einem anderen Zeigegerät verwenden kann. Ein Touchscreen ist nicht erforderlich.</span><span class="sxs-lookup"><span data-stu-id="18ba9-481">Software keyboard is a keyboard that is displayed on screen that user can use instead of the physical keyboard to type and enter data using touch, mouse, pen/stylus or other pointing device (a touch screen is not required).</span></span> <span data-ttu-id="18ba9-482">Auf einem Touchscreen kann diese Tastatur auch direkt zum Eingeben von Text verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="18ba9-482">On touch screen, these keyboards can be touched directly to enter text as well.</span></span> <span data-ttu-id="18ba9-483">Auf Xbox One-Geräten müssen einzelne Tasten ausgewählt werden, indem Sie visuelle Fokuselemente verschieben oder Tastenkombinationen mit dem Gamepad oder der Fernbedienung verwenden.</span><span class="sxs-lookup"><span data-stu-id="18ba9-483">On Xbox One devices, individual keys need to be selected by moving focus visual or using shortcut keys using gamepad or remote control.</span></span>
+
+![Windows10-Bildschirmtastatur](images/keyboard/kbdpcdefault.png)
+
+***<span data-ttu-id="18ba9-485">Windows10-Bildschirmtastatur</span><span class="sxs-lookup"><span data-stu-id="18ba9-485">Windows 10 Touch Keyboard</span></span>***
+
+![Windows 10 Phone-Bildschirmtastatur](images/keyboard/kbdwpdefault.png)
+
+***<span data-ttu-id="18ba9-487">Windows Phone 10-Bildschirmtastatur</span><span class="sxs-lookup"><span data-stu-id="18ba9-487">Windows Phone 10 Touch Keyboard</span></span>***
+
+![Xbox one-Bildschirmtastatur](images/keyboard/xbox-onscreen-keyboard.png)
+
+***<span data-ttu-id="18ba9-489">Xbox One-Bildschirmtastatur</span><span class="sxs-lookup"><span data-stu-id="18ba9-489">Xbox One Onscreen Keyboard</span></span>***
+
+<span data-ttu-id="18ba9-490">Abhängig vom Gerät wird die Softwaretastatur angezeigt, wenn ein Textfeld oder ein anderes bearbeitbares Textsteuerelement im Fokus steht, oder wenn der Benutzer sie über das **Benachrichtigungs-Center**manuell aktiviert.</span><span class="sxs-lookup"><span data-stu-id="18ba9-490">Depending on the device, the software keyboard appears when a text field or other editable text control gets focus, or when the user manually enables it through the **Notification Center**:</span></span>
+
+![Symbol der Bildschirmtastatur im Benachrichtigungs-Center](images/keyboard/touch-keyboard-notificationcenter.png)
+
+<span data-ttu-id="18ba9-492">Wenn Ihre App den Fokus programmgesteuert auf ein Texteingabesteuerelement festlegt, wird die Bildschirmtastatur nicht aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="18ba9-492">If your app sets focus programmatically to a text input control, the touch keyboard is not invoked.</span></span> <span data-ttu-id="18ba9-493">Dadurch wird unerwartetes, nicht direkt vom Benutzer ausgelöstes Verhalten verhindert.</span><span class="sxs-lookup"><span data-stu-id="18ba9-493">This eliminates unexpected behaviors not instigated directly by the user.</span></span> <span data-ttu-id="18ba9-494">Allerdings wird die Tastatur automatisch ausgeblendet, wenn der Fokus programmgesteuert auf ein nicht textuelles Eingabesteuerelement bewegt wird.</span><span class="sxs-lookup"><span data-stu-id="18ba9-494">However, the keyboard does automatically hide when focus is moved programmatically to a non-text input control.</span></span>
+
+<span data-ttu-id="18ba9-495">Die Bildschirmtastatur bleibt in der Regel sichtbar, während der Benutzer zwischen Steuerelementen in einem Formular navigiert.</span><span class="sxs-lookup"><span data-stu-id="18ba9-495">The touch keyboard typically remains visible while the user navigates between controls in a form.</span></span> <span data-ttu-id="18ba9-496">Dieses Verhalten kann je nach den anderen Steuerelementtypen innerhalb des Formulars variieren.</span><span class="sxs-lookup"><span data-stu-id="18ba9-496">This behavior can vary based on the other control types within the form.</span></span>
+
+<span data-ttu-id="18ba9-497">Im Folgenden finden Sie eine Liste der nicht bearbeitbaren Steuerelemente, die in einer Texteingabesitzung mit der Bildschirmtastatur den Fokus erhalten können, ohne dass die Tastatur ausgeblendet wird.</span><span class="sxs-lookup"><span data-stu-id="18ba9-497">The following is a list of non-edit controls that can receive focus during a text entry session using the touch keyboard without dismissing the keyboard.</span></span> <span data-ttu-id="18ba9-498">Statt die Benutzeroberfläche unnötigerweise zu ändern und den Benutzer möglicherweise zu verwirren, bleibt die Bildschirmtastatur angezeigt, da der Benutzer wahrscheinlich zwischen diesen Steuerelementen und der Texteingabe über die Bildschirmtastatur hin und her wechselt.</span><span class="sxs-lookup"><span data-stu-id="18ba9-498">Rather than needlessly churn the UI and potentially disorient the user, the touch keyboard remains in view because the user is likely to go back and forth between these controls and text entry with the touch keyboard.</span></span>
+
+-   <span data-ttu-id="18ba9-499">Kontrollkästchen</span><span class="sxs-lookup"><span data-stu-id="18ba9-499">Check box</span></span>
+-   <span data-ttu-id="18ba9-500">Kombinationsfeld</span><span class="sxs-lookup"><span data-stu-id="18ba9-500">Combo box</span></span>
+-   <span data-ttu-id="18ba9-501">Optionsfeld</span><span class="sxs-lookup"><span data-stu-id="18ba9-501">Radio button</span></span>
+-   <span data-ttu-id="18ba9-502">Bildlaufleiste</span><span class="sxs-lookup"><span data-stu-id="18ba9-502">Scroll bar</span></span>
+-   <span data-ttu-id="18ba9-503">Struktur</span><span class="sxs-lookup"><span data-stu-id="18ba9-503">Tree</span></span>
+-   <span data-ttu-id="18ba9-504">Strukturelement</span><span class="sxs-lookup"><span data-stu-id="18ba9-504">Tree item</span></span>
+-   <span data-ttu-id="18ba9-505">Menü</span><span class="sxs-lookup"><span data-stu-id="18ba9-505">Menu</span></span>
+-   <span data-ttu-id="18ba9-506">Menüleiste</span><span class="sxs-lookup"><span data-stu-id="18ba9-506">Menu bar</span></span>
+-   <span data-ttu-id="18ba9-507">Menüelement</span><span class="sxs-lookup"><span data-stu-id="18ba9-507">Menu item</span></span>
+-   <span data-ttu-id="18ba9-508">Symbolleiste</span><span class="sxs-lookup"><span data-stu-id="18ba9-508">Toolbar</span></span>
+-   <span data-ttu-id="18ba9-509">Liste</span><span class="sxs-lookup"><span data-stu-id="18ba9-509">List</span></span>
+-   <span data-ttu-id="18ba9-510">Listenelement</span><span class="sxs-lookup"><span data-stu-id="18ba9-510">List item</span></span>
+
+<span data-ttu-id="18ba9-511">Hier finden Sie einige Beispiele für verschiedene Modi der Touch-Bildschirmtastatur.</span><span class="sxs-lookup"><span data-stu-id="18ba9-511">Here are examples of different modes for the touch keyboard.</span></span> <span data-ttu-id="18ba9-512">Das erste Bild zeigt das Standardlayout, das zweite das Daumenlayout. (Letzteres ist unter Umständen nicht in allen Sprachen verfügbar.)</span><span class="sxs-lookup"><span data-stu-id="18ba9-512">The first image is the default layout, the second is the thumb layout (which might not be available in all languages).</span></span>
+
+![Bildschirmtastatur mit Standardlayout](images/keyboard/touchkeyboard-standard.png)
+
+***<span data-ttu-id="18ba9-514">Bildschirmtastatur mit Standardlayout</span><span class="sxs-lookup"><span data-stu-id="18ba9-514">The touch keyboard in default layout mode</span></span>***
+
+![Bildschirmtastatur mit erweitertem Layout](images/keyboard/touchkeyboard-expanded.png)
+
+***<span data-ttu-id="18ba9-516">Bildschirmtastatur mit erweitertem Layout</span><span class="sxs-lookup"><span data-stu-id="18ba9-516">The touch keyboard in expanded layout mode</span></span>***
+
+![Bildschirmtastatur mit Daumenlayout](images/keyboard/touchkeyboard-thumb.png)
+
+***<span data-ttu-id="18ba9-518">Bildschirmtastatur mit standardmäßigem Daumenlayout</span><span class="sxs-lookup"><span data-stu-id="18ba9-518">The touch keyboard in default thumb layout mode</span></span>***
+
+![Bildschirmtastatur mit numerischem Daumenlayout](images/keyboard/touchkeyboard-numeric-thumb.png)
+
+***<span data-ttu-id="18ba9-520">Bildschirmtastatur mit numerischem Daumenlayout</span><span class="sxs-lookup"><span data-stu-id="18ba9-520">The touch keyboard in numeric thumb layout mode</span></span>***
+
+<span data-ttu-id="18ba9-521">Erfolgreiche Tastaturinteraktionen ermöglichen es Benutzern, einfache App-Szenarien nur über die Tastatur auszuführen; Benutzer können demnach über die Tastatur alle interaktiven Elemente erreichen und Standardfunktionen aktivieren.</span><span class="sxs-lookup"><span data-stu-id="18ba9-521">Successful keyboard interactions enable users to accomplish basic app scenarios using only the keyboard; that is, users can reach all interactive elements and activate default functionality.</span></span> <span data-ttu-id="18ba9-522">Eine Reihe von Faktoren kann den Erfolg beeinflussen, z. B. Tastaturnavigation, Tastenkombinationen für die Barrierefreiheit sowie Tastenkombinationen für erfahrene Benutzer.</span><span class="sxs-lookup"><span data-stu-id="18ba9-522">A number of factors can affect the degree of success, including keyboard navigation, access keys for accessibility, and accelerator (or shortcut) keys for advanced users.</span></span>
+
+<span data-ttu-id="18ba9-523">**HINWEIS** Die Bildschirmtastatur unterstützt weder die Umschaltung noch die meisten Systembefehle.</span><span class="sxs-lookup"><span data-stu-id="18ba9-523">**NOTE**  The touch keyboard does not support toggle and most system commands.</span></span>
+
+#### <a name="on-screen-keyboard-a-nameosk"></a><span data-ttu-id="18ba9-524">Bildschirmtastatur <a name="osk"></span><span class="sxs-lookup"><span data-stu-id="18ba9-524">On-Screen Keyboard <a name="osk"></span></span>
+<span data-ttu-id="18ba9-525">Wie bei der Softwaretastatur handelt es sich bei der Bildschirmtastatur um eine visuelle Softwaretastatur, die Sie anstelle der physischen Tastatur zum Eingeben von Daten per Touch, Maus, Zeichen-/Eingabestift oder mit einem anderen Zeigegerät verwenden können. Ein Touchscreen ist nicht erforderlich.</span><span class="sxs-lookup"><span data-stu-id="18ba9-525">Like software keyboard, the On-Screen Keyboard is a visual, software keyboard that you can use instead of the physical keyboard to type and enter data using touch, mouse, pen/stylus or other pointing device (a touch screen is not required).</span></span> <span data-ttu-id="18ba9-526">Die Bildschirmtastatur ist für Systeme ohne physische Tastatur oder für Benutzer vorgesehen, deren Mobilitätseinschränkungen die Verwendung herkömmlicher physischer Eingabegeräte verhindern.</span><span class="sxs-lookup"><span data-stu-id="18ba9-526">The On-Screen Keyboard is provided for systems that don't have a physical keyboard, or for users whose mobility impairments prevent them from using traditional physical input devices.</span></span> <span data-ttu-id="18ba9-527">Die Bildschirmtastatur emuliert nahezu alle Funktionen der Hardwaretastatur.</span><span class="sxs-lookup"><span data-stu-id="18ba9-527">The On-Screen Keyboard emulates most, if not all, the functionality of a hardware keyboard.</span></span>
+
+<span data-ttu-id="18ba9-528">Die Bildschirmtastatur kann auf der Seite „Tastatur“ unter „Einstellungen &gt; Erleichterte Bedienung“ aktiviert werden.</span><span class="sxs-lookup"><span data-stu-id="18ba9-528">The On-Screen Keyboard can be turned on from the Keyboard page in Settings &gt; Ease of access.</span></span>
+
+<span data-ttu-id="18ba9-529">**HINWEIS** Die Bildschirmtastatur hat Priorität gegenüber der Touch-Tastatur. Diese wird nicht angezeigt, wenn die Bildschirmtastatur angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="18ba9-529">**NOTE** The On-Screen Keyboard has priority over the touch keyboard, which won't be shown if the On-Screen Keyboard is present.</span></span>
+
+![Bildschirmtastatur](images/keyboard/osk.png)
+
+***<span data-ttu-id="18ba9-531">Bildschirmtastatur</span><span class="sxs-lookup"><span data-stu-id="18ba9-531">On-Screen Keyboard</span></span>***
+
+<span data-ttu-id="18ba9-532">Gehen Sie zur [Seite „Bildschirmtastatur“](https://support.microsoft.com/help/10762/windows-use-on-screen-keyboard), um weitere Informationen zur Bildschirmtastatur zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="18ba9-532">Visit [On-Screen keyboard page](https://support.microsoft.com/help/10762/windows-use-on-screen-keyboard) for more details about On-Screen Keyboard.</span></span>
