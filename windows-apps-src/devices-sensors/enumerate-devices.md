@@ -1,17 +1,19 @@
 ---
-author: DBirtolo
+author: mukin
 ms.assetid: 4311D293-94F0-4BBD-A22D-F007382B4DB8
 title: "Auflisten von Geräten"
 description: "Der Enumeration-Namespace ermöglicht die Suche nach Geräten, die intern mit dem System verbunden, extern verbunden oder über Drahtlos- oder Netzwerkprotokolle erkannt werden können."
-ms.author: dbirtolo
+ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: 1bf6b8fc87061625b8bc206faf43da99a6b11bf5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: afd98ed5f522c4227ab199f2405c7976210478c3
+ms.sourcegitcommit: a2908889b3566882c7494dc81fa9ece7d1d19580
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/31/2017
 ---
 # <a name="enumerate-devices"></a>Auflisten von Geräten
 
@@ -154,7 +156,7 @@ Beim Enumerieren von **AssociationEndpoint**-, **AssociationEndpointContainer**-
 ## <a name="save-a-device-for-later-use"></a>Speichern eines Geräts zur späteren Verwendung
 
 
-Jedes [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393)-Objekt wird durch eine Kombination aus zwei Informationselementen eindeutig identifiziert: [**DeviceInformation.Id**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.id) und [**DeviceInformation.Kind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.kind.aspx). Wenn Sie diese beiden Informationselemente beibehalten, können Sie das **DeviceInformation**-Objekt erneut erstellen, nachdem es verloren gegangen ist, indem Sie diese Informationen für [**CreateFromIdAsync**](https://msdn.microsoft.com/library/windows/apps/br225425.aspx) bereitstellen. Auf diese Weise können Sie Benutzereinstellungen für ein Gerät speichern, mit dem die App verwendet wird.
+Jedes [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393)-Objekt wird durch eine Kombination aus zwei Informationselementen eindeutig identifiziert: [**DeviceInformation.Id**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.id) und [**DeviceInformation.Kind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.kind.aspx). Wenn Sie diese beiden Informationselemente beibehalten, können Sie ein **DeviceInformation**-Objekt erneut erstellen, nachdem es verloren gegangen ist, indem Sie diese Informationen für [**CreateFromIdAsync**](https://msdn.microsoft.com/library/windows/apps/br225425.aspx) bereitstellen. Auf diese Weise können Sie Benutzereinstellungen für ein Gerät speichern, mit dem die App verwendet wird.
 
 
  

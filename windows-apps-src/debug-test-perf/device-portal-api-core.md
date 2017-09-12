@@ -1,17 +1,19 @@
 ---
-author: dbirtolo
+author: mukin
 ms.assetid: bfabd3d5-dd56-4917-9572-f3ba0de4f8c0
 title: Referenz zu Kern-APIs des Device Portal
 description: "Hier erhalten Sie Informationen zu den Kern-REST-APIs für das Windows Device Portal, die Sie für den Zugriff auf die Daten und die programmatische Steuerung des Geräts verwenden können."
-ms.author: dbirtolo
+ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 347d658f346ab14c60a4468c4a9935e555c2e016
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: b6df8f361df82ef65098877027cf1857fa575b0b
+ms.sourcegitcommit: d2ec178103f49b198da2ee486f1681e38dcc8e7b
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/28/2017
 ---
 # <a name="device-portal-core-api-reference"></a>Referenz zu Kern-APIs des Device Portal
 
@@ -1272,6 +1274,69 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
+## User information
+---
+### <a name="get-the-active-user"></a>Aktiven Benutzer ermitteln
+
+**Anforderung**
+
+Mit dem folgenden Anforderungsformat können Sie den Namen des aktiven Gerätebenutzers abrufen.
+ 
+Methode      | Anforderungs-URI
+:------     | :-----
+GET | /api/users/activeuser
+<br />
+
+**URI-Parameter**
+
+- Keine
+
+**Anforderungsheader**
+
+- Keine
+
+**Anforderungstext**
+
+- Keine
+
+**Antwort**
+
+Die Antwort enthält Benutzerinformationen im folgenden Format. 
+
+Bei Erfolg: 
+```
+{
+    "UserDisplayName" : string, 
+    "UserSID" : string
+}
+```
+Bei Misserfolg:
+```
+{
+    "Code" : int, 
+    "CodeText" : string, 
+    "Reason" : string, 
+    "Success" : bool
+}
+```
+
+**Statuscode**
+
+Diese API hat die folgenden erwarteten Statuscodes:
+
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
+**Verfügbare Gerätefamilien**
+
+* Windows-Desktop
+* HoloLens
+* IoT
+
+---
 ## Performance data
 ---
 ### <a name="get-the-list-of-running-processes"></a>Abrufen der Liste der ausgeführten Prozesse
@@ -2023,6 +2088,52 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
+### <a name="kill-process-by-pid"></a>Prozess per PID beenden
+
+**Anforderung**
+
+Mit dem folgenden Anforderungsformat können Sie einen Prozess beenden.
+ 
+Methode      | Anforderungs-URI
+:------     | :-----
+DELETE | /api/taskmanager/process
+<br />
+
+**URI-Parameter**
+
+Sie können im Anforderungs-URI die folgenden zusätzlichen Parameter angeben:
+
+URI-Parameter | Beschreibung
+:---          | :---
+pid   | (**erforderlich**) Die eindeutige Prozess-ID für den zu beendenden Prozess.
+<br />
+**Anforderungsheader**
+
+- Keine
+
+**Anforderungstext**
+
+- Keine
+
+**Antwort**
+
+**Statuscode**
+
+Diese API hat die folgenden erwarteten Statuscodes:
+
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
+**Verfügbare Gerätefamilien**
+
+* Windows-Desktop
+* HoloLens
+* IoT
+
+---
 ## Networking
 ---
 ### <a name="get-the-current-ip-configuration"></a>Abrufen der aktuellen IP-Konfiguration
@@ -2262,8 +2373,8 @@ URI-Parameter | Beschreibung
 :---          | :---
 interface   | (**erforderlich**) Die GUID für die Netzwerkschnittstelle, die zum Herstellen der Verbindung mit dem Netzwerk verwendet werden soll.
 op   | (**erforderlich**) Gibt die durchzuführende Aktion an. Mögliche Werte sind „connect“ und „disconnect“.
-ssid   | (**erforderlich, wenn *op* == connect**) Die SSID des Netzwerks, mit dem die Verbindung hergestellt werden soll.
-Schlüssel   | (**erforderlich, wenn *op* == connect und Netzwerk erfordert Authentifizierung**) Die gemeinsam verwendete Schlüssel.
+ssid   | (**Erforderlich, wenn *op* == connect**) Die SSID des Netzwerks, mit dem die Verbindung hergestellt werden soll.
+key   | (**Erforderlich, wenn *op* == connect und Netzwerk erfordert Authentifizierung**) Der gemeinsam verwendete Schlüssel.
 createprofile | (**erforderlich**) Erstellen Sie ein Profil für das Netzwerk auf dem Gerät.  Dadurch stellt das Gerät künftig automatisch eine Verbindung zum Netzwerk her. Dies kann **ja** oder **nein** sein. 
 
 **Anforderungsheader**
@@ -3088,7 +3199,7 @@ tagValue | (**Erforderlich**) Das zu entfernende Tag.
 
 **Anforderungsheader**
 
-- Keine
+- Keiner
 
 **Anforderungstext**
 

@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Karte, Standort, Positionsfunktion
-ms.openlocfilehash: 05fa3330f5346f69061cb60cf8b54de451845e06
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: f5af2815783568cb234f1196e065f18b145c7e68
+ms.sourcegitcommit: 8c4d50ef819ed1a2f8cac4eebefb5ccdaf3fa898
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/27/2017
 ---
 # <a name="get-the-users-location"></a>Abrufen der Position eines Benutzers
 
@@ -29,7 +31,7 @@ Ermitteln Sie den Standort des Benutzers, und reagieren Sie auf Änderungen des 
 
 
 1.  Doppelklicken Sie im **Projektmappen-Explorer** auf **package.appxmanifest**, und wählen Sie die Registerkarte **Funktionen** aus.
-2.  Wählen Sie in der Liste **Funktionen** die Registerkarte **Funktionen** aus. Dadurch wird der Paketmanifestdatei die `Location`-Gerätefunktion hinzugefügt.
+2.  Überprüfen Sie das Kontrollkästchen **Position** in der Liste **Funktionen**. Dadurch wird der Paketmanifestdatei die `location`-Gerätefunktion hinzugefügt.
 
 ```XML
   <Capabilities>

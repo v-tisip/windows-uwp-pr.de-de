@@ -2,22 +2,22 @@
 author: mcleanbyron
 ms.assetid: 8AC56AAF-8D8C-4193-A6B3-BB5D0669D994
 description: "Verwenden Sie die Python-Codebeispiele in diesem Abschnitt, um mehr über die Verwendung der Windows Store-Übermittlungs-API zu erfahren."
-title: "Python-Codebeispiele für die Übermittlungs-API"
+title: "Python-Beispiel: Übermittlungen für Apps, Add-Ons und Flights"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows10, UWP, Windows Store-Übermittlungs-API, Codebeispiele"
-ms.openlocfilehash: a46907ecfea1de60b8a32cdaea7076f056a41ff5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: "Windows10, UWP, Windows Store-Übermittlungs-API, Codebeispiele, Python"
+ms.openlocfilehash: 01d40aa31531aa4d5b75f02627bc7e6234963c7e
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/09/2017
 ---
-# <a name="python-code-examples-for-the-submission-api"></a>Python-Codebeispiele für die Übermittlungs-API
+# <a name="python-sample-submissions-for-apps-add-ons-and-flights"></a>Python-Beispiel: Übermittlungen für Apps, Add-Ons und Flights
 
-Dieser Artikel enthält Python-Codebeispiele für das Verwenden der *Windows Store-Übermittlungs-API*. Weitere Informationen über diese API finden Sie unter [Erstellen und Verwalten von Übermittlungen mit WindowsStore-Diensten](create-and-manage-submissions-using-windows-store-services.md).
-
-In diesen Codebeispielen werden die folgenden Aufgaben gezeigt:
+Dieser Artikel enthält Python-Codebeispiele zeigt das Verwenden der [Windows Store-Übermittlungs-API](create-and-manage-submissions-using-windows-store-services.md) für diese Aufgaben:
 
 * [Abrufen eines Azure AD-Zugriffstokens](#token)
 * [Erstellen eines Add-Ons](#create-add-on)
@@ -36,7 +36,7 @@ Im folgenden Beispiel wird gezeigt, wie Sie ein [Azure AD-Zugriffstoken abrufen]
 <span id="create-add-on" />
 ## <a name="create-an-add-on"></a>Erstellen eines Add-Ons
 
-Das folgende Beispiel zeigt, wie Sie ein Add-On [erstellen](create-an-add-on.md) und anschließend [löschen](delete-an-add-on.md). (Add-Ons werden auch als In-App-Produkte oder IAP bezeichnet.)
+Das folgende Beispiel zeigt, wie Sie EIN Flight-Paket [erstellen](create-an-add-on.md) und anschließend ein Add-On [löschen](delete-an-add-on.md).
 
 [!code[SubmissionApi](./code/StoreServicesExamples_Submission/python/Examples.py#L26-L52)]
 
@@ -91,4 +91,4 @@ Das folgende Beispiel zeigt, wie Sie verschiedene Methoden in der Windows Store-
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [Erstellen und Verwalten von Übermittlungen mit WindowsStore-Diensten](create-and-manage-submissions-using-windows-store-services.md)
+* [Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten](create-and-manage-submissions-using-windows-store-services.md)

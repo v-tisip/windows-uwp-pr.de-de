@@ -2,22 +2,22 @@
 author: mcleanbyron
 ms.assetid: 4920D262-B810-409E-BA3A-F68AADF1B1BC
 description: "Verwenden Sie die Java-Codebeispiele in diesem Abschnitt, um mehr über die Verwendung der Windows Store-Übermittlungs-API zu erfahren."
-title: "Java-Codebeispiele für die Übermittlungs-API"
+title: "Java-Beispiel: Übermittlungen für Apps, Add-Ons und Flights"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows10, UWP, Windows Store-Übermittlungs-API, Codebeispiele"
-ms.openlocfilehash: ff5e857e0f5ce110ab7afc64bd2faa28f7bea517
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: "Windows10, UWP, Windows Store-Übermittlungs-API, Codebeispiele, Java"
+ms.openlocfilehash: daa91b5354abc070b1ba538f7d818125e4bc94a9
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/09/2017
 ---
-# <a name="java-code-examples-for-the-submission-api"></a>Java-Codebeispiele für die Übermittlungs-API
+# <a name="java-sample-submissions-for-apps-add-ons-and-flights"></a>Java-Beispiel: Übermittlungen für Apps, Add-Ons und Flights
 
-Dieser Artikel enthält Java-Codebeispiele für das Verwenden der *Windows Store-Übermittlungs-API*. Weitere Informationen über diese API finden Sie unter [Erstellen und Verwalten von Übermittlungen mit WindowsStore-Diensten](create-and-manage-submissions-using-windows-store-services.md).
-
-In diesen Codebeispielen werden die folgenden Aufgaben gezeigt:
+Dieser Artikel enthält Java-Codebeispiele zeigt das Verwenden der [Windows Store-Übermittlungs-API](create-and-manage-submissions-using-windows-store-services.md) für diese Aufgaben:
 
 * [Abrufen eines Azure AD-Zugriffstokens](#token)
 * [Erstellen eines Add-Ons](#create-add-on)
@@ -52,7 +52,7 @@ Im folgenden Beispiel wird gezeigt, wie Sie ein [Azure AD-Zugriffstoken abrufen]
 <span id="create-add-on" />
 ## <a name="create-an-add-on"></a>Erstellen eines Add-Ons
 
-Das folgende Beispiel zeigt, wie Sie ein Add-On [erstellen](create-an-add-on.md) und anschließend [löschen](delete-an-add-on.md). (Add-Ons werden auch als In-App-Produkte oder IAP bezeichnet.)
+Das folgende Beispiel zeigt, wie Sie EIN Flight-Paket [erstellen](create-an-add-on.md) und anschließend ein Add-On [löschen](delete-an-add-on.md).
 
 [!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L310-L345)]
 
@@ -124,4 +124,4 @@ Die folgende Codeauflistung enthält alle vorherigen Beispiele in einer einzigen
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [Erstellen und Verwalten von Übermittlungen mit WindowsStore-Diensten](create-and-manage-submissions-using-windows-store-services.md)
+* [Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten](create-and-manage-submissions-using-windows-store-services.md)

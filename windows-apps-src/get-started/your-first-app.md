@@ -1,5 +1,5 @@
 ---
-author: GrantMeStrength
+author: jken
 ms.assetid: A77DA371-C0FE-4FAE-9E77-ADC3C9314EDF
 title: Erstellen Ihrer ersten App
 description: "Das Erstellen einer UWP (Universelle Windows-Plattform)-App für Windows 10 ist einfacher, als Sie denken."
@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows10, UWP
-ms.openlocfilehash: 54c80c7d1f4620f0270752167684dd4ce11b9c5c
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: fca180db42fcd5b8b9c30bd67fe2bb890a817c78
+ms.sourcegitcommit: a2908889b3566882c7494dc81fa9ece7d1d19580
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/31/2017
 ---
 # <a name="create-your-first-app"></a>Erstellen Ihrer ersten App
 
@@ -19,10 +21,11 @@ translationtype: HT
 
 ![Erstellen Sie Ihre App.](images/build-your-app.png)
 
-Willkommen bei der UWP-Plattform! Diese Lernprogramme unterstützen Sie beim Erstellen Ihrer ersten UWP-App in der von Ihnen bevorzugten Programmiersprache. Sie erfahren Folgendes:
+Willkommen bei der UWP-Platform ([Was ist eigentlich UWP?](whats-a-uwp.md))! Diese Lernprogramme unterstützen Sie beim Erstellen Ihrer ersten UWP-App in der von Ihnen bevorzugten Programmiersprache. Sie erfahren Folgendes:
 
 -   Erstellen von UWP-Projekten in Microsoft Visual Studio
 -   Hinzufügen von Benutzeroberflächen-Elementen und Code zum Projekt
+-   Verwenden Sie die Freihandeingabe und Wählen in Ihren Apps.
 -   Verwenden von Drittanbieterbibliotheken, um neue Funktionen hinzuzufügen
 -   Erstellen und Debuggen Ihrer App auf dem lokalen Computer
 
@@ -32,13 +35,13 @@ Wählen Sie zunächst Ihre Lieblingssprache aus.
 
 Verwenden Sie Ihre .NET-, WPF- oder Silverlight-Kenntnisse, um Apps mit XAML mit C# zu erstellen.
 
-* [Erstellen einer „Hello, world“-App mit XAML mit C##](create-a-hello-world-app-xaml-universal.md)
+* [Erstellen einer „Hello, world“-App mit XAML mit C#](create-a-hello-world-app-xaml-universal.md)
 
 Wenn Sie die Grundlagen erlernen oder Ihr Gedächtnis auffrischen möchten, lesen Sie Folgendes:
 
-* [C#-Grundlagen für Neueinsteiger](https://mva.microsoft.com/en-US/training-courses/c-fundamentals-for-absolute-beginners-16169?l=Lvld4EQIC_2706218949)
-* [VB-Grundlagen für Neueinsteiger](http://www.microsoftvirtualacademy.com/training-courses/vb-fundamentals-for-absolute-beginners)
-* [Entwicklerhandbuch für Windows10](https://mva.microsoft.com/en-US/training-courses/a-developers-guide-to-windows-10-12618)
+* [C#-Grundlagen für Neueinsteiger](https://go.microsoft.com/fwlink/?linkid=850801)
+* [VB-Grundlagen für Neueinsteiger](https://go.microsoft.com/fwlink/?linkid=850802)
+* [Entwicklerhandbuch für Windows10](https://go.microsoft.com/fwlink/?linkid=850804)
 * [Microsoft Virtual Academy](http://www.microsoftvirtualacademy.com/)
 
 Wenn Sie etwas Komplizierteres als "Hello, World!" ausprobieren möchten, versuchen Sie es mit diesem Lernprogramm für C# und MonoGame:
@@ -52,6 +55,7 @@ Nutzen Sie Ihre Webkenntnisse, um Store-Apps mit HTML5, CSS3 und JavaScript zu e
 * [Erstellen einer „Hello, world“-App mit HTML und JavaScript](create-a-hello-world-app-js-uwp.md)
 * [Ein einfaches 2D-UWP-Spiel für den Windows Store, geschrieben in JavaScript und CreateJS](get-started-tutorial-game-js2d.md)
 * [Ein 3D-UWP-Spiel für den Windows Store, geschrieben in JavaScript und ThreeJS](get-started-tutorial-game-js3d.md)
+* [Eine Web-App mit einer einzelnen Seite mit REST-API](get-started-tutorial-fullstack-web-app.md)
 
 Müssen Sie Ihre Webkenntnisse auffrischen?
 
@@ -69,6 +73,19 @@ Weitere Informationen zu C++:
 
 * [C++: Schnelleinstieg: eine allgemeine Sprache und Bibliothek](http://www.microsoftvirtualacademy.com/training-courses/c-a-general-purpose-language-and-library-jump-start)
 * [Microsoft Virtual Academy](http://go.microsoft.com/fwlink/p/?LinkID=389916)
+
+## <a name="using-features-unique-to-windows-10"></a>Verwenden der einzigartigen Features von Windows10
+
+Was ist das Besondere an Windows 10? Unter anderem die Freihandeingabe und der Surface Dial-Controller.
+
+* [Verwenden von Ink in Ihrer UWP-App](ink-walkthrough.md)
+* [Support: Surface Dial](radialcontroller-walkthrough.md)
+
+## <a name="cutting-edge-ideas"></a>Innovative Ideen
+
+Möchten Sie die erweiterte Realität erkunden?
+
+* [Hinzufügen von WebVR zu einem Babylon.js-Spiel](adding-webvr-to-a-babylonjs-game.md)
 
 ## <a name="objective-c"></a>Objective-C
 
@@ -89,5 +106,4 @@ Sind Sie eher ein iOS-Entwickler?
 * [Was ist eine universelle Windows-App?](whats-a-uwp.md)
 * [Vorbereiten](get-set-up.md)
 * [Für Windows-Konto anmelden](sign-up.md)
-
 

@@ -9,14 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Anzeigen, Werbung, AdControl, JavaScript
-ms.openlocfilehash: b669925c3b630ddbfe82086231c46c951072244b
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 5a64f58c7f66dd1177549562364a483641b1fd32
+ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="create-an-adcontrol-in-javascript"></a>Erstellen eines AdControl-Elements in JavaScript
-
-
-
 
 Die Beispiele in diesem Artikel zeigen, wie Sie programmgesteuert ein [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx)-Element mit JavaScript erstellen. In diesem Artikel wird davon ausgegangen, dass Sie die erforderlichen Verweise auf das Projekt zur Verwendung eines **AdControl**-Elements bereits hinzugefügt haben. Weitere Informationen, einschließlich einer ausführlichen exemplarischem Vorgehensweise zum Erstellen und Initialisieren eines **AdControl**-Elements im HTML-Markup anstelle von JavaScript, finden Sie unter [„AdControl“ in HTML5 und Javascript](adcontrol-in-html-5-and-javascript.md).
 
@@ -42,7 +41,8 @@ Instanziieren Sie **AdControl** in der **app.onactivated**-Funktion.
 
 In diesem Beispiel wird davon ausgegangen, dass Sie die Ereignishandlermethoden **myAdError**, **myAdRefreshed** und **myAdEngagedChanged** bereits deklariert haben.
 
->**Hinweis**&nbsp;&nbsp;Die in diesem Beispiel angezeigten Werte *applicationId* und *adUnitId* sind [Testmoduswerte](test-mode-values.md). Sie müssen [diese Werte mit Livewerten aus Windows Dev Center ersetzen](set-up-ad-units-in-your-app.md), bevor Sie Ihre App für die Übermittlung einreichen.
+> [!NOTE]
+> Die in diesem Beispiel angezeigten Werte *applicationId* und *adUnitId* sind [Testmoduswerte](test-mode-values.md). Sie müssen [diese Werte mit Livewerten aus Windows Dev Center ersetzen](set-up-ad-units-in-your-app.md), bevor Sie Ihre App für die Übermittlung einreichen.
 
 Wenn Sie diesen Code verwenden und keine Anzeigen angezeigt werden, können Sie versuchen, ein **position:relativ**-Attribut im **div**-Element einzufügen, das das **AdControl** enthält. Dadurch wird die Standardeinstellung von **IFrame** überschrieben. Anzeigen werden ordnungsgemäß angezeigt, sofern sie nicht aufgrund des Werts dieses Attributs nicht angezeigt werden. Beachten Sie, dass neue Anzeigeeinheiten unter Umständen bis zu 30 Minuten nicht verfügbar sind.
 

@@ -6,14 +6,20 @@ ms.assetid: 41E3F928-AA55-42A2-9281-EC3907C4F898
 label: Radio buttons
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: 33a8b62a378e4a9abe20be04a49c94d886144cc5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: kisai
+design-contact: kimsea
+dev-contact: mitra
+doc-status: Published
+ms.openlocfilehash: 370c5266277ff442f26c9aeb951d869ec70b31c5
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="radio-buttons"></a>Optionsfelder
 
@@ -21,19 +27,11 @@ translationtype: HT
 
 Mit Optionsfeldern können Benutzer eine oder mehrere Optionen auswählen. Jede Option wird durch ein Optionsfeld dargestellt. Benutzer können nur ein einziges Optionsfeld in einer Gruppe von Optionsfeldern auswählen.
 
+> **Wichtige APIs**: [RadioButton-Klasse](https://msdn.microsoft.com/library/windows/apps/br227544), [Checked-Ereignis](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx), [IsChecked-Eigenschaft](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx)
+
 (Falls Sie sich über die englische Bezeichnung „Radio Button” wundern: Optionsfelder sind im Englischen nach den Tasten mit voreingestellten Sendern an einem Radio benannt.)
 
 ![Optionsfelder](images/controls/radio-button.png)
-
-<div class="important-apis" >
-<b>Wichtige APIs</b><br/>
-<ul>
-<li>[**RadioButton-Klasse**](https://msdn.microsoft.com/library/windows/apps/br227544)</li>
-<li>[**Checked-Ereignis**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx)</li>
-<li>[**IsChecked-Eigenschaft**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx)</li>
-</ul>
-</div>
-
 
 ## <a name="is-this-the-right-control"></a>Ist dies das richtige Steuerelement?
 
@@ -68,7 +66,7 @@ Optionsfelder in den Microsoft Edge-Browsereinstellungen.
 
 Optionsfelder funktionieren in Gruppen. Es gibt zwei Arten zur Gruppierung von Optionsfeld-Steuerelementen:
 - Platzieren Sie sie im gleichen übergeordneten Container.
-- Legen Sie die [**GroupName**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.radiobutton.groupname.aspx)-Eigenschaft für jedes Optionsfeld auf denselben Wert fest.
+- Legen Sie die [GroupName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.radiobutton.groupname.aspx)-Eigenschaft für jedes Optionsfeld auf denselben Wert fest.
 
 > **Hinweis**
             &nbsp;&nbsp;Eine Gruppe von Optionsfeldern verhält sich wie ein einzelnes Steuerelement, wenn der Zugriff darauf über die Tastatur erfolgt. Der Benutzer kann mit der TAB-TASTE nur auf die jeweils ausgewählte Option zugreifen, mithilfe der Pfeiltasten kann der Benutzer jedoch in der Gruppe navigieren.
@@ -159,7 +157,7 @@ Die Optionsfeldgruppen sehen wie folgt aus.
 
 ![Optionsfelder in zwei Gruppen](images/radio-button-groups.png)
 
-Ein Optionsfeld hat zwei Zustände: *aktiviert* und *deaktiviert*. Wenn ein Optionsfeld aktiviert ist, lautet die [ **IsChecked** ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx)- Eigenschaft **true**. Wenn ein Optionsfeld deaktiviert ist, lautet die **IsChecked**-Eigenschaft **false**. Ein Optionsfeld kann durch Klicken auf ein anderes Optionsfeld in derselben Gruppe deaktiviert werden, jedoch nicht durch erneutes Klicken auf das Optionsfeld selbst. Sie können ein Optionsfeld jedoch programmgesteuert durch Festlegen der IsChecked-Eigenschaft auf **false** deaktivieren.
+Ein Optionsfeld hat zwei Zustände: *aktiviert* und *deaktiviert*. Wenn ein Optionsfeld aktiviert ist, lautet die [IsChecked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx)-Eigenschaft **true**. Wenn ein Optionsfeld deaktiviert ist, lautet die **IsChecked**-Eigenschaft **false**. Ein Optionsfeld kann durch Klicken auf ein anderes Optionsfeld in derselben Gruppe deaktiviert werden, jedoch nicht durch erneutes Klicken auf das Optionsfeld selbst. Sie können ein Optionsfeld jedoch programmgesteuert durch Festlegen der IsChecked-Eigenschaft auf **false** deaktivieren.
 
 ## <a name="recommendations"></a>Empfehlungen
 
@@ -194,4 +192,4 @@ Diese Abbildung zeigt die richtige Vorgehensweise zum Platzieren und Anordnen vo
 
 
 **Für Entwickler (XAML)**
-- [**Windows.UI.Xaml.Controls RadioButton-Klasse**](https://msdn.microsoft.com/library/windows/apps/br227544)
+- [Windows.UI.Xaml.Controls RadioButton-Klasse](https://msdn.microsoft.com/library/windows/apps/br227544)

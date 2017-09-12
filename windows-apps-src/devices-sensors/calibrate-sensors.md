@@ -1,17 +1,19 @@
 ---
-author: DBirtolo
+author: mukin
 ms.assetid: ECE848C2-33DE-46B0-BAE7-647DB62779BB
 title: Kalibrieren von Sensoren
 description: "Für Sensoren in einem auf dem Magnetometer – Kompass, Neigungsmesser und Ausrichtungssensor – basierenden Gerät kann aufgrund von Umweltfaktoren eine Kalibrierung erforderlich sein."
-ms.author: dbirtolo
+ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: d67146cd0382032eddf8cfe1b47f9348727cb79a
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 066332395dde8d52d970bc79e2597ccaacaddb18
+ms.sourcegitcommit: a2908889b3566882c7494dc81fa9ece7d1d19580
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/31/2017
 ---
 # <a name="calibrate-sensors"></a>Kalibrieren von Sensoren
 
@@ -28,8 +30,8 @@ Für Sensoren in einem auf dem Magnetometer – Kompass, Neigungsmesser und Ausr
 
 Die [**MagnetometerAccuracy**](https://msdn.microsoft.com/library/windows/apps/Dn297552)-Aufzählung bietet vier Werte, mit deren Hilfe Sie bestimmen können, ob das Gerät, auf dem Ihre App ausgeführt wird, kalibriert werden muss. Wenn ein Gerät kalibriert werden muss, sollten Sie den Benutzer über die Notwendigkeit einer Kalibrierung informieren. Fordern Sie den Benutzer jedoch nicht zu häufig auf, eine Kalibrierung durchzuführen. Dies sollte nicht öfter als einmal alle 10Minuten erfolgen.
 
-| Wert           | Beschreibung                                                                                                                                                      |-----------------|-------------------|                                                                                                                                              | **Unknown**     | Der Sensortreiber konnte die aktuelle Genauigkeit nicht ermitteln. Dies bedeutet nicht notwendigerweise, dass das Gerät falsch kalibriert ist. Es ist Aufgabe Ihrer App, die geeigneten Schritte festzulegen, wenn **Unknown** zurückgegeben wird. Falls Ihre App von exakten Sensorwerten abhängig ist, sollten Sie den Benutzer auffordern, das Gerät zu kalibrieren. | | **Unzuverlässig**  | Das Magnetometer ist aktuell hochgradig ungenau. Wenn dieser Wert zuerst zurückgegeben wird, sollten Apps immer zu einer Kalibrierung durch den Benutzer auffordern. | | **Ungefähr** | Die Daten sind für bestimmt Anwendungen genau genug. Eine Virtual-Reality-App, die lediglich wissen muss, ob der Benutzer das Gerät nach oben/unten oder links/rechts bewegt hat, kann ohne Kalibrierung fortgesetzt werden. Apps, die einen absoluten Kurs benötigen, z. B. eine Navigations-App, die wissen muss, in welche Richtung Sie fahren, um Sie zu führen, müssen eine Kalibrierung anfordern. | | **Hoch**        |  Die Daten sind genau. Es ist keine Kalibrierung erforderlich. Dies gilt auch für Apps, die einen absoluten Kurs benötigen, wie Augmented-Reality- oder Navigations-Apps. |
+| Wert           | Beschreibung                                                                                                                                                      |-----------------|-------------------|                                                                                                                                              | **Unknown**     | Der Sensortreiber konnte die aktuelle Genauigkeit nicht ermitteln. Dies bedeutet nicht notwendigerweise, dass das Gerät falsch kalibriert ist. Es ist Aufgabe Ihrer App, die geeigneten Schritte festzulegen, wenn **Unknown** zurückgegeben wird. Falls Ihre App von exakten Sensorwerten abhängig ist, sollten Sie den Benutzer auffordern, das Gerät zu kalibrieren. | | **Unreliable**  | Das Magnetometer ist aktuell hochgradig ungenau. Wenn dieser Wert zuerst zurückgegeben wird, sollten Apps immer zu einer Kalibrierung durch den Benutzer auffordern. | | **Approximate** | Die Daten sind für bestimmt Anwendungen genau genug. Eine Virtual-Reality-App, die lediglich wissen muss, ob der Benutzer das Gerät nach oben/unten oder links/rechts bewegt hat, kann ohne Kalibrierung fortgesetzt werden. Apps, die einen absoluten Kurs benötigen, z. B. eine Navigations-App, die wissen muss, in welche Richtung Sie fahren, um Sie zu führen, müssen eine Kalibrierung anfordern. | | **High**        | Die Daten sind genau. Es ist keine Kalibrierung erforderlich. Dies gilt auch für Apps, die einen absoluten Kurs benötigen, wie Augmented-Reality- oder Navigations-Apps. |
 
-## <a name="how-to-calibrate-the-magnetometer"></a>So geht's: Kalibrieren des Magnetometers
+## <a name="how-to-calibrate-the-magnetometer"></a>So wird's gemacht: Kalibrieren des Magnetometers
 
 Dieses kurze Video enthält eine Übersicht zu den Kalibrierungsverfahren für das Magnetometer.<iframe src="https://hubs-video.ssl.catalog.video.msn.com/embed/727bd0e3-9116-49c3-8af6-0b4339324b71/IA?csid=ux-en-us&MsnPlayerLeadsWith=html&PlaybackMode=Inline&MsnPlayerDisplayShareBar=false&MsnPlayerDisplayInfoButton=false&iframe=true&QualityOverride=HD" width="720" height="405" allowFullScreen="true" frameBorder="0" scrolling="no">One Dev Minute – Sensorkalibrierung</iframe>

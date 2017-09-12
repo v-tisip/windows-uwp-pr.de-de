@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: PatrickFarley
 ms.assetid: 78D833B9-E528-4BCA-9C48-A757F17E6C22
 title: "Zertifizierungskit für Windows-Apps"
 description: "Damit Ihre App möglichst gute Chancen auf eine Veröffentlichung im Windows Store oder Windows-Zertifizierung hat, sollten Sie sie auf Ihrem Computer überprüfen und testen, bevor Sie sie zur Zertifizierung übermitteln. In diesem Thema wird erläutert, wie Sie das Zertifizierungskit für Windows-Apps installieren und ausführen."
-ms.author: markl
+ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows10, UWP
-ms.openlocfilehash: 118d4643c3d4fcb8549549e9d58d4b64d64f0885
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: fb5303898bfb0d7021ba4c0aa48afd5038bcad4d
+ms.sourcegitcommit: 8c4d50ef819ed1a2f8cac4eebefb5ccdaf3fa898
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/27/2017
 ---
 # <a name="windows-app-certification-kit"></a>Zertifizierungskit für Windows-Apps
 
@@ -26,7 +28,7 @@ Voraussetzungen für das Testen einer universellen Windows-App:
 
 -   Installieren und verwenden Sie Windows 10.
 -   Sie müssen das [Zertifizierungskit für Windows-Apps, Version10]( http://go.microsoft.com/fwlink/p/?LinkID=309666) installieren, das im Windows Software Development Kit (SDK) für Windows10 enthalten ist.
--   Sie benötigen eine gültige Entwicklerlizenz für Ihren Computer. Informationen hierzu finden Sie unter [Anfordern einer Entwicklerlizenz](https://msdn.microsoft.com/library/windows/apps/Hh974578).
+-   Sie müssen [Ihr Gerät für die Entwicklung aktivieren](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development).
 -   Sie müssen die zu testende Windows-App auf Ihrem Computer bereitstellen.
 
 **Hinweis zu direkten Upgrades**

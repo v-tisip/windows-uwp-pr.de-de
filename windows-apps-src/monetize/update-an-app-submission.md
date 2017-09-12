@@ -4,14 +4,16 @@ ms.assetid: E8751EBF-AE0F-4107-80A1-23C186453B1C
 description: "Verwenden Sie diese Methode aus der Windows Store-Übermittlungs-Api zur Aktualisierung einer vorhandenen App-Übermittlung."
 title: "Aktualisieren einer App-Übermittlung"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows10, UWP, Windows Store-Übermittlung-API, App-Übermittlung, Aktualisieren"
-ms.openlocfilehash: a4b7816d0d6e47282864992044eea58eaaa05d1d
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: b3c071c0d4f070c1a0ac95d6f35c73fcbb4e0455
+ms.sourcegitcommit: a7a1b41c7dce6d56250ce3113137391d65d9e401
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/11/2017
 ---
 # <a name="update-an-app-submission"></a>Aktualisieren einer App-Übermittlung
 
@@ -26,8 +28,6 @@ Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 * Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](create-and-manage-submissions-using-windows-store-services.md#prerequisites) für die Windows Store-Übermittlungs-API.
 * [Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60 Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
 * Erstellen Sie Übermittlung für eine App im Dev Center-Konto. Sie können dies im Dev Center-Dashboard oder durch Verwenden der Methode [Erstellen einer App-Übermittlung](create-an-app-submission.md) erreichen.
-
->**Hinweis**&nbsp;&nbsp;Diese Methode kann nur für Windows Dev Center-Konten verwendet werden, die eine Berechtigung zur Verwendung der Windows Store-Übermittlungs-API erhalten haben. Diese Berechtigung ist nicht für alle Konten aktiviert.
 
 ## <a name="request"></a>Anforderung
 
@@ -73,6 +73,7 @@ Der Anforderungstext hat folgende Parameter.
 | automaticBackupEnabled           |  boolean  |   Gibt an, ob Windows die App-Daten in automatische Sicherungen auf OneDrive aufnehmen können. Weitere Informationen finden Sie unter [App-Deklarationen](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).   |   
 | canInstallOnRemovableMedia           |  boolean  |   Gibt an, ob Kunden die App auf Wechselmedien installieren können. Weitere Informationen finden Sie unter [App-Deklarationen](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).     |   
 | isGameDvrEnabled           |  boolean |   Gibt an, ob game DVR für die App aktiviert ist.    |   
+| gamingOptions           |  Objekt |   Ein Array mit genau einer [Spieloptionenressource](manage-app-submissions.md#gaming-options-object), die spielbezogene Einstellungen für die App definiert.<br/><br/>**Hinweis:**&nbsp;&nbsp;Die Möglichkeit zum Konfigurieren von Gaming-Optionen mit dieser API ist zurzeit nicht für alle Entwicklerkonten verfügbar. Wenn Ihr Konto keinen Zugriff auf diese Ressource hat, ist der *gamingOptions* Wert Null.     |   
 | hasExternalInAppProducts           |     boolean          |   Gibt an, ob die App Benutzern Käufe außerhalb der Windows Store-e-Commerce-Systems gestattet. Weitere Informationen finden Sie unter [App-Deklarationen](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).     |   
 | meetAccessibilityGuidelines           |    boolean           |  Gibt an, ob getestet wurde, ob die App die Richtlinien zur Barrierefreiheit erfüllt. Weitere Informationen finden Sie unter [App-Deklarationen](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).      |   
 | notesForCertification           |  string  |   Enthält [Hinweise zur Zertifizierung](https://msdn.microsoft.com/windows/uwp/publish/notes-for-certification) für Ihre App.    |    
@@ -80,7 +81,8 @@ Der Anforderungstext hat folgende Parameter.
 | packageDeliveryOptions    | object  | Enthält den schrittweisen Paketrollout sowie erforderliche Einstellungen für die Übermittlung. Weitere Informationen finden Sie unter [options-Objekt für die Paketübermittlung](manage-app-submissions.md#package-delivery-options-object).  |
 | enterpriseLicensing           |  string  |  Einer der [Werte für Enterprise-Lizenzierung](manage-app-submissions.md#enterprise-licensing), die das Verhalten der Enterprise-Lizenzierung für die App angeben.  |    
 | allowMicrosftDecideAppAvailabilityToFutureDeviceFamilies           |  boolean   |  Gibt an, ob Microsoft [die App für zukünftige Windows10-Gerätefamilien verfügbar machen](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) darf.    |    
-| allowTargetFutureDeviceFamilies           | boolean   |  Gibt an, ob die App [auf zukünftige Windows10-Gerätefamilien abzielen](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) darf.     |    
+| allowTargetFutureDeviceFamilies           | boolean   |  Gibt an, ob die App [auf zukünftige Windows10-Gerätefamilien abzielen](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) darf.     |   
+| trailers           |  Array |   Ein Array mit [Trailerressourcen](manage-app-submissions.md#trailer-object), die Videotrailer für den App-Eintrag darstellen. <br/><br/>**Hinweis:**&nbsp;&nbsp;Die Möglichkeit einen Trailer zu übermitteln mit dieser API ist derzeit nicht für alle Entwicklerkonten verfügbar. Wenn Ihr Konto keinen Zugriff auf diese Ressource hat, ist der *trailers* Wert Null.  |   
 
 <span/>
 
@@ -108,16 +110,16 @@ Content-Type: application/json
       "baseListing": {
         "copyrightAndTrademarkInfo": "",
         "keywords": [
-          "epub"
-        ],
+              "epub"
+            ],
         "licenseTerms": "",
         "privacyPolicy": "",
         "supportContact": "",
         "websiteUrl": "",
         "description": "Description",
         "features": [
-          "Free ebook reader"
-        ],
+              "Free ebook reader"
+            ],
         "releaseNotes": "",
         "images": [
           {
@@ -143,6 +145,7 @@ Content-Type: application/json
   "automaticBackupEnabled": false,
   "canInstallOnRemovableMedia": true,
   "isGameDvrEnabled": false,
+  "gamingOptions": [],
   "hasExternalInAppProducts": false,
   "meetAccessibilityGuidelines": true,
   "notesForCertification": "",
@@ -172,7 +175,8 @@ Content-Type: application/json
     "Holographic": true,
     "Xbox": false,
     "Team": true
-  }
+  },
+  "trailers": []
 }
 ```
 
@@ -233,6 +237,7 @@ Das folgende Beispiel veranschaulicht den JSON-Antworttext für einen erfolgreic
   "automaticBackupEnabled": false,
   "canInstallOnRemovableMedia": true,
   "isGameDvrEnabled": false,
+  "gamingOptions": [],
   "hasExternalInAppProducts": false,
   "meetAccessibilityGuidelines": true,
   "notesForCertification": "",
@@ -284,7 +289,8 @@ Das folgende Beispiel veranschaulicht den JSON-Antworttext für einen erfolgreic
     "Xbox": false,
     "Team": true
   },
-  "friendlyName": "Submission 2"
+  "friendlyName": "Submission 2",
+  "trailers": []
 }
 ```
 

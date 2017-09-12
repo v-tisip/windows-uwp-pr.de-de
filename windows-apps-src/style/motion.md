@@ -1,66 +1,79 @@
 ---
 author: mijacobs
-Description: "Gut gestaltete Animationen machen Apps lebhaft und lassen sie realistisch und perfekt erscheinen. Helfen Sie Benutzern dabei, Kontextänderungen zu verstehen, und verbinden Sie Interaktionen mit visuellen Übergängen."
+Description: "Gut gestaltete Bewegungen machen Apps lebhaft und lassen sie realistisch und perfekt erscheinen. Helfen Sie Benutzern dabei, Kontextänderungen zu verstehen, und verbinden Sie Interaktionen mit visuellen Übergängen."
 title: Bewegung und Animation in UWP-Apps
 ms.assetid: 21AA1335-765E-433A-85D8-560B340AE966
 label: Motion
 template: detail.hbs
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: 9478cb5669d38008d42bbd57ba07fb9b47a81eef
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: stmoy
+design-contact: jeffarn
+doc-status: Published
+ms.openlocfilehash: d24edf5eaacb65ca28f2f2727f441cb833141dcf
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="motion-for-uwp-apps"></a>Bewegung für UWP-Apps
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Gut gestaltete Animationen machen Apps lebhaft und lassen sie realistisch und perfekt erscheinen. Helfen Sie Benutzern dabei, Kontextänderungen zu verstehen, und verbinden Sie Interaktionen mit visuellen Übergängen.
+Gut gestaltete Bewegungen machen Apps lebhaft und lassen sie realistisch und perfekt erscheinen. Bewegung hilft Benutzern dabei, Kontextänderungen zu verstehen, und sie zeigt Benutzern auch an, wo diese sich in der App befinden. Interaktionen werden mit visuellen Übergängen verbunden. Bewegung fügt der Oberfläche Geschwindigkeit und Mehrdimensionalität hinzu.
 
-## <a name="benefits-of-animation"></a>Vorteile der Animation
+## <a name="benefits-of-motion"></a>Vorteile von Bewegung
+
+Bewegung bedeutet mehr, als nur Dinge beweglich zu machen. Bewegung ist ein Tool zum Erstellen eines physischen Ökosystems, das Benutzer mithilfe verschiedener Eingabetypen wie Maus, Tastatur, Toucheingabe und Stift aktiv bearbeiten können. Die Qualität der Erfahrung hängt davon ab, wie gut die App auf den Benutzer reagiert und welche Art von Persönlichkeit die Benutzeroberfläche vermittelt.
+
+Stellen Sie sicher, dass die Bewegung einem Zweck in Ihrer App dient. Die besten UWP-Apps (Universelle Windows-Plattform) verwenden Bewegung, um die Benutzeroberfläche zum Leben zu erwecken. Bewegung sollte:
+
+- Feedback basierend auf dem Verhalten des Benutzers geben.
+- Dem Benutzer beibringen, wie er mit der Benutzeroberfläche interagieren kann.
+- Angeben, wie zu vorherigen oder folgenden Ansichten navigiert werden kann.
+
+Wenn ein Benutzer mehr Zeit in Ihrer App verbringt oder Aufgaben in Ihrer App komplexer werden, wird qualitativ hochwertige Bewegung immer wichtiger: Mit Bewegung kann die Art und Weise verändert werden, wie der Benutzer die kognitive Belastung und die Benutzerfreundlichkeit Ihrer App wahrnimmt. Bewegung bringt viele weitere direkte Vorteile mit sich:
+
+- **Bewegung unterstützt die Interaktion und trägt dazu bei, dass sich Benutzer zurechtfinden.**
+
+    Bewegung ist direktional: Sie bewegt sich vor und zurück, in den Inhalt hinein und aus ihm hinaus und hinterlässt gleichzeitig mentale „Brotkrümel“-Hinweise, wie der Benutzer zur aktuellen Ansicht gelangt ist. Übergänge können Benutzern beim Erlernen der Bedienung neuer Apps helfen, indem Analogien mit Aufgaben hergestellt werden, mit denen der Benutzer bereits vertraut ist.
+
+- **Bewegung kann den Eindruck verbesserter Leistung vermitteln.**
+
+    Wenn die Netzwerkgeschwindigkeit langsamer wird oder das System nicht reagiert, können Animationen dem Benutzer die Wartezeit kürzer erscheinen lassen. Durch Animationen kann dem Benutzer mitgeteilt werden, dass die App noch mit der Verarbeitung beschäftigt und nicht eingefroren ist, und es können passiv neue Informationen angezeigt werden, die den Benutzer möglicherweise interessieren.
+
+- **Bewegung schafft Persönlichkeit.**
+
+    Bewegung ist häufig der allgemeine Thread, der die Persönlichkeit der Apps abbildet, wenn Benutzer durch eine Oberfläche navigieren.
+
+- **Bewegung schafft Eleganz.**
+
+    Durch fließende, reaktionsfähige Bewegungen wirken Benutzeroberflächen natürlich, und sie sorgen dafür, dass emotionale Verbindungen mit der Oberfläche entstehen.
+
+## <a name="examples-of-motion"></a>Beispiele für Bewegung
+
+Im Folgenden finden Sie einige Beispiele für Bewegung in einer App.
+
+Hier verwendet eine App eine verbundene Animation, um ein Elementbild zu animieren, wenn es als Teil der Überschrift der nächsten Seite weiterbesteht. Dieser Effekt trägt dazu bei, Benutzerkontext beim Übergang beizubehalten.
+
+![Verbundene Animation](images/connected-animations/example.gif)
+
+Hier werden bei einem Bildlauf oder Schwenken der UI verschiedene Objekte mithilfe eines Parallax-Effekts unterschiedlich schnell verschoben. Dadurch entsteht ein Gefühl von Tiefe, Perspektive und Bewegung.
+
+![Beispiel für Parallax mit einer Liste und einem Hintergrundbild](images/_Parallax_v2.gif)
 
 
-Animation bedeutet nicht nur, Dinge beweglich zu machen. Durch Animation lässt sich ein physisches Ökosystem für den Benutzer erstellen, in dem er leben und das er durch Berührungen verändern kann. Die Qualität der Erfahrung hängt davon ab, wie gut die App auf den Benutzer reagiert und welche Art von Persönlichkeit die Benutzeroberfläche vermittelt.
-
-Achten Sie darauf, dass die Animation einem Zweck in Ihrer App dient. Die besten UWP-Apps (Universelle Windows-Plattform) verwenden Animation, um die Benutzeroberfläche zum Leben zu erwecken. Die Animation sollte folgenden Zwecken dienen:
-
--   Feedback basierend auf dem Verhalten des Benutzers geben.
--   Dem Benutzer beibringen, wie er mit der Benutzeroberfläche interagieren kann.
--   Angeben, wie zu vorherigen oder folgenden Ansichten navigiert werden kann.
-
-Wenn ein Benutzer mehr Zeit in Ihrer App verbringt oder Aufgaben in Ihrer App komplexer werden, wird hochwertige Animation immer wichtiger: Durch Animation lässt sich beeinflussen, wie der Benutzer die kognitive Belastung und die Benutzerfreundlichkeit Ihrer App wahrnimmt. Animation bringt viele weitere direkte Vorteile mit sich:
-
--   **Animation bietet Hinweise hinsichtlich der Interaktion.**
-
-    Animation ist direktional: Sie bewegt sich vor und zurück, in den Inhalt hinein und aus ihm hinaus und hinterlässt gleichzeitig kleine „Brotkrümel“-Hinweise, wie der Benutzer zur aktuellen Ansicht gelangt ist.
-
--   **Animation kann den Eindruck verbesserter Leistung vermitteln.**
-
-    Wenn die Netzwerkgeschwindigkeit langsamer wird oder das System nicht reagiert, können Animationen dem Benutzer die Wartezeit kürzer erscheinen lassen.
-
--   **Animation schafft Persönlichkeit.**
-
-    Die wohlüberlegte Windows Phone-Benutzeroberfläche nutzt Bewegung, um den Eindruck zu vermitteln, dass eine App mit dem Hier und Jetzt beschäftigt ist, und wirkt dem Gefühl entgegen, dass der Benutzer sich durch geschachtelte Hierarchien gräbt.
-
--   **Animation schafft Konsistenz.**
-
-    Übergänge können Benutzern beim Erlernen der Bedienung neuer Apps helfen, indem Analogien mit Aufgaben hergestellt werden, mit denen der Benutzer bereits vertraut ist.
-
--   **Animation schafft Eleganz.**
-
-    Durch Animationen kann dem Benutzer mitgeteilt werden, dass das Telefon noch mit der Verarbeitung beschäftigt und nicht eingefroren ist, und es können passiv neue Informationen angezeigt werden, die den Benutzer möglicherweise interessieren.
-
-<h2>Inhalt dieses Abschnitts</h2>
+## <a name="types-of-motion"></a>Arten von Bewegung
 
 <table>
-<tr>
-<th align="left">Animationstyp</th>
-<th align="left">Beschreibung</th>
-</tr>
+    <tr>
+        <th align="left">Bewegungsart</th>
+        <th align="left">Beschreibung</th>
+    </tr>
     <tr>
         <td>[Hinzufügen und Löschen](motion-list.md)
         </td>
@@ -68,45 +81,39 @@ Wenn ein Benutzer mehr Zeit in Ihrer App verbringt oder Aufgaben in Ihrer App ko
         </td>
     </tr>
     <tr>
-        <td>[Drag & Drop](motion-dragdrop.md)
+        <td>[Verbundene Animation](connected-animation.md)
         </td>
-        <td>Verwenden Sie Drag & Drop-Animationen, wenn Benutzer Objekte verschieben, z. B. wenn sie ein Element innerhalb einer Liste verschieben oder ein Element auf einem anderen ablegen.
+        <td>Mit verbundenen Animationen können Sie eine dynamische und ansprechende Navigationsfunktionalität erstellen, indem Sie den Übergang eines Elements zwischen zwei verschiedenen Ansichten animieren. So können Benutzer den Kontext beibehalten, und es entsteht Kontinuität zwischen den Ansichten. In einer verbundenen Animation scheint ein Element zwischen zwei Ansichten weiterzubestehen, während sich der UI-Inhalt ändert. Dabei fliegt das Element von seinem Standort in der Quellansicht über den Bildschirm zu seinem Ziel in der neuen Ansicht herüber. Dadurch wird der gemeinsame Inhalt zwischen den beiden Ansichten unterstrichen, und es entsteht ein schöner, dynamischer Effekt als Teil eines Übergangs. 
         </td>
     </tr>
     <tr>
-        <td>[Rand](motion-edgebased.md)
+        <td>[Inhaltsübergang](content-transition-animations.md)
         </td>
-        <td>Randbasierte Animationen blenden UI-Elemente ein oder aus, die vom Bildschirmrand ausgehen. Die Aktionen zum Anzeigen und Ausblenden können von Benutzern oder von der App initiiert werden. Die UI-Elemente können die Anwendung überlagern oder Teil der Hauptoberfläche der App sein. Wenn das UI-Element Teil der App-Oberfläche ist, müssen Sie möglicherweise die Größe der restlichen App entsprechend anpassen.
+        <td>Mithilfe von Inhaltsübergangsanimationen können Sie den Inhalt eines Bildschirmbereichs ändern und gleichzeitig den Container oder Hintergrund unverändert lassen. Neuer Inhalt wird eingeblendet. Muss vorhandener Inhalt ersetzt werden, wird dieser Inhalt ausgeblendet.
         </td>
-    </tr>   
+    </tr>
     <tr>
-        <td>[Einblenden](motion-fade.md)
+        <td>[Drill](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.drillinthemeanimation)
+        </td>
+        <td>Verwenden Sie eine Drill-in-Animation, wenn ein Benutzer in einer logischen Hierarchie in Vorwärtsrichtung navigiert, beispielsweise von einer Masterliste zu einer Detailseite. Verwenden Sie eine Drill-out-Animation, wenn ein Benutzer in einer logischen Hierarchie in Rückwärtsrichtung navigiert, wie von einer Detailseite zu einer Masterseite.
+        </td>
+    </tr>
+    <tr>
+        <td>[Ein- und Ausblenden](motion-fade.md)
         </td>
         <td>Verwenden Sie Ein- und Ausblendungsanimationen, um Elemente anzuzeigen oder nicht anzuzeigen. Die beiden üblichen Animationen dieser Art sind das Einblenden und das Ausblenden.
         </td>
-    </tr>   
+    </tr>
+        <tr>
+        <td>[Parallax](parallax.md)
+        </td>
+        <td>Ein visueller Parallax-Effekt hilft dabei, ein Gefühl von Tiefe, Perspektive und Bewegung zu erzeugen. Dieser Effekt wird erzielt, indem bei einem Bildlauf oder Schwenken der UI verschiedene Objekte unterschiedlich schnell verschoben werden.
+        </td>
+    </tr> 
     <tr>
-        <td>[Zeiger](motion-pointer.md)
+        <td>[Feedback durch Drücken](motion-pointer.md)
         </td>
-        <td>Zeigeranimationen stellen visuelles Feedback für Benutzer bereit, wenn diese auf ein Element tippen. Bei der Animation für „Zeiger nach unten“ wird das gedrückte Element leicht verkleinert und geneigt. Sie wird wiedergegeben, wenn erstmalig auf ein Element getippt wird. Die Animation für „Zeiger nach oben“, mit der der ursprüngliche Zustand des Elements wiederhergestellt wird, wird beim Loslassen des Zeigers wiedergegeben.
-        </td>
-    </tr>   
-    <tr>
-        <td>[Popupanimationen](motion-popup-animations.md)
-        </td>
-        <td>Verwenden Sie Popupanimationen, um Popup-UI-Elemente für Flyouts oder benutzerdefinierte Popup-UI-Elemente anzuzeigen und auszublenden. Popupelemente sind Container, die über dem Inhalt der App angezeigt werden und ausgeblendet werden, wenn Benutzer außerhalb des Popupelements tippen oder klicken.
-        </td>
-    </tr>     
-    <tr>
-        <td>[Ändern der Position](motion-reposition.md)
-        </td>
-        <td>Verschiebt Elemente an eine neue Position.
+        <td>Zeigerdruckanimationen stellen visuelles Feedback für Benutzer bereit, wenn diese auf ein Element tippen. Bei der Animation für „Zeiger nach unten“ wird das gedrückte Element leicht verkleinert und geneigt. Sie wird wiedergegeben, wenn erstmalig auf ein Element getippt wird. Die Animation für „Zeiger nach oben“, mit der der ursprüngliche Zustand des Elements wiederhergestellt wird, wird beim Loslassen des Zeigers wiedergegeben.
         </td>
     </tr>
 </table>
-
- 
-
- 
-
- 

@@ -1,17 +1,19 @@
 ---
-author: DBirtolo
+author: mukin
 ms.assetid: 1889AC3A-A472-4294-89B8-A642668A8A6E
 title: Verwenden des Ausrichtungssensors
 description: "Hier erfahren Sie, wie Sie mithilfe der Ausrichtungssensoren die Ausrichtung des Geräts ermitteln."
-ms.author: dbirtolo
-ms.date: 02/08/2017
+ms.author: mukin
+ms.date: 06/06/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: 435c2d7ca1bf2a256356c28a83d51e493d98e014
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 2a354d4e3f26d0a8ac3678d4f07d606c7cf88cc5
+ms.sourcegitcommit: ca060f051e696da2c1e26e9dd4d2da3fa030103d
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/03/2017
 ---
 # <a name="use-the-orientation-sensor"></a>Verwenden des Ausrichtungssensors
 
@@ -22,6 +24,11 @@ translationtype: HT
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371)
 -   [**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/BR206399)
+
+**Beispiele**
+
+-   [Beispiel für einen Ausrichtungssensor](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/OrientationSensor)
+-   [Beispiel für einen einfachen Ausrichtungssensor](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleOrientationSensor)
 
 Hier erfahren Sie, wie Sie mithilfe der Ausrichtungssensoren die Ausrichtung des Geräts ermitteln.
 
@@ -348,9 +355,3 @@ Diese neuen Werte werden in ein TextBlock-Element des XAML-Projektcodes geschrie
 <TextBlock HorizontalAlignment="Left" Height="24" Margin="8,8,0,0" TextWrapping="Wrap" Text="Current Orientation:" VerticalAlignment="Top" Width="101" Foreground="#FFF8F7F7"/>
  <TextBlock x:Name="txtOrientation" HorizontalAlignment="Left" Height="24" Margin="118,8,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="175" Foreground="#FFFEFAFA"/>
 ```
-
-## <a name="related-topics"></a>Verwandte Themen
-
-* [OrientationSensor-Beispiel](http://go.microsoft.com/fwlink/p/?linkid=241382)
-* [Beispiel für den SimpleOrientation-Sensor](http://go.microsoft.com/fwlink/p/?linkid=241383)
- 

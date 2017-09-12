@@ -6,14 +6,19 @@ ms.assetid: 43DC68BF-FA86-43D2-8807-70A359453048
 label: Text controls
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: 8be1dac30047a647d7f80464b53fe2fc3527d2c3
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: miguelrb
+design-contact: ksulliv
+doc-status: Published
+ms.openlocfilehash: 16b019678e94e131ba1105bb92d7ea3ab301828c
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="text-controls"></a>Textsteuerelemente
 
@@ -24,17 +29,8 @@ Textsteuerelemente bestehen aus Texteingabefeldern, Kennwortfeldern, Feldern mit
 - Für die Anzeige von schreibgeschütztem Text stehen die Steuerelemente [TextBlock](text-block.md) und [RichTextBlock](rich-text-block.md) zur Verfügung.
 - Die Steuerelemente für Texteingabe und Textbearbeitung sind: [TextBox](text-box.md), [AutoSuggestBox](auto-suggest-box.md), [PasswordBox](password-box.md) und [RichEditBox](rich-edit-box.md).
 
-<div class="important-apis" >
-<b>Wichtige APIs</b><br/>
-<ul>
-<li>[**AutoSuggestBox-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx)</li>
-<li>[**PasswordBox-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx)</li>
-<li>[**RichEditBox-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx)</li>
-<li>[**RichTextBlock-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx)</li>
-<li> [**TextBlock-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx)</li>
-<li>[**TextBox-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx)</li>
-</ul>
-</div>
+> **Wichtige APIs**: [AutoSuggestBox-Klasse](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx), [PasswordBox-Klasse](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx), [RichEditBox-Klasse](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx), [RichTextBlock-Klasse](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx), [TextBlock-Klasse](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx), [TextBox-Klasse](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx)
+
 
 ## <a name="is-this-the-right-control"></a>Ist dies das richtige Steuerelement?
 
@@ -73,7 +69,7 @@ Es bestehen zahlreiche Möglichkeiten, Benutzereingaben in Ihrer App zu erhalten
 -   **Ist es praktisch umsetzbar, alle gültigen Werte effizient aufzuzählen?** Wenn dies der Fall ist, ziehen Sie die Verwendung eines der Auswahlsteuerelemente in Betracht, wie [Kontrollkästchen](checkbox.md), [Dropdownliste](lists.md), Listenfeld, [Optionsfeld](radio-button.md), [Schieberegler](slider.md), [Umschalter](toggles.md), [Datumsauswahl](date-and-time.md) oder Zeitauswahl.
 -   **Gibt es nur relativ wenige gültige Werte?** Wenn dies der Fall ist, sollten Sie eine [Einblendliste](lists.md) oder ein Listenfeld in Erwägung ziehen, insbesondere, wenn die Werte viele Zeichen enthalten.
 -   **Gelten für die Daten keinerlei Einschränkungen? Oder ist die Gültigkeit der Daten nur durch das Format (bestimmte Länge oder Zeichentypen) beschränkt?** Wenn ja, verwenden Sie einen Texteingabesteuerelement. Sie können die Anzahl der Zeichen, die eingegeben werden können, beschränken, und Sie können das Format in Ihrem App-Code überprüfen.
--   **Stellt der Wert einen Datentyp dar, der über ein spezielles allgemeines Steuerelement verfügt?** Ist dies der Fall, verwenden Sie das entsprechende Steuerelement anstelle eines Texteingabesteuerelements. Verwenden Sie anstelle eines Texteingabesteuerelements zum Beispiel [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/br211681), um eine Dateneingabe zu akzeptieren.
+-   **Stellt der Wert einen Datentyp dar, der über ein spezielles allgemeines Steuerelement verfügt?** Ist dies der Fall, verwenden Sie das entsprechende Steuerelement anstelle eines Texteingabesteuerelements. Verwenden Sie anstelle eines Texteingabesteuerelements zum Beispiel [DatePicker](https://msdn.microsoft.com/library/windows/apps/br211681), um eine Dateneingabe zu akzeptieren.
 -   Wenn die Daten streng numerisch sind:
     -   **Handelt es sich bei dem Wert, der eingegeben wird, um einen Näherungswert und/oder ist der Wert relativ zu einem anderen Wert auf derselben Seite?** Wenn dies der Fall ist, sollten Sie einen [Schieberegler](slider.md) verwenden.
     -   **Wäre es für Benutzer hilfreich, sofort Feedback zur Auswirkung von Einstellungsänderungen zu erhalten?** Wenn dies der Fall ist, sollten Sie einen [Schieberegler](slider.md) verwenden, eventuell zusammen mit einem begleitenden Steuerelement.
@@ -97,18 +93,18 @@ Kennwortfeld
 
 Informationen und Beispiele für jedes Textsteuerelement finden Sie in den folgenden Artikeln.
 
--   [**AutoSuggestBox**](auto-suggest-box.md)
--   [**PasswordBox**](password-box.md)
--   [**RichEditBox**](rich-edit-box.md)
--   [**RichTextBlock**](rich-text-block.md)
--   [**TextBlock**](text-block.md)
--   [**TextBox**](text-box.md)
+-   [AutoSuggestBox](auto-suggest-box.md)
+-   [PasswordBox](password-box.md)
+-   [RichEditBox](rich-edit-box.md)
+-   [RichTextBlock](rich-text-block.md)
+-   [TextBlock](text-block.md)
+-   [TextBox](text-box.md)
 
 ## <a name="font-and-style-guidelines"></a>Richtlinien für Schriftart und -schnitt
 Richtlinien für Schriftarten finden Sie in den folgenden Artikeln:
 
-- [**Richtlinien für Schriftarten**](fonts.md)
-- [**Symbolliste und Richtlinien für Segoe MDL2-Symbole**](segoe-ui-symbol-font.md)
+- [Richtlinien für Schriftarten](fonts.md)
+- [Symbolliste und Richtlinien für Segoe MDL2-Symbole](segoe-ui-symbol-font.md)
 
 
 ## <a name="choose-the-right-keyboard-for-your-text-control"></a>Auswählen der richtigen Tastatur für Ihr Textsteuerelement
@@ -144,7 +140,7 @@ Der gerenderte Text sieht wie folgt aus:
 
 ![Textblock mit farbiger Schriftart](images/text-block-color-fonts.png)
 
-Weitere Informationen finden Sie unter der [**IsColorFontEnabled**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.iscolorfontenabled.aspx)-Eigenschaft.
+Weitere Informationen finden Sie unter der [IsColorFontEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.iscolorfontenabled.aspx)-Eigenschaft.
 
 ## <a name="guidelines-for-line-and-paragraph-separators"></a>Richtlinien für Zeilen- und Absatztrennzeichen
 
@@ -187,11 +183,11 @@ Für TextBox- und RichEditBox-Steuerelemente ist die Rechtschreibprüfung standa
 ## <a name="related-articles"></a>Verwandte Artikel
 
 **Für Designer**
-- [**Richtlinien für Schriftarten**](fonts.md)
-- [**Symbolliste und Richtlinien für Segoe MDL2-Symbole**](segoe-ui-symbol-font.md)
+- [Richtlinien für Schriftarten](fonts.md)
+- [Symbolliste und Richtlinien für Segoe MDL2-Symbole](segoe-ui-symbol-font.md)
 - [Hinzufügen von Suchfunktionen](https://msdn.microsoft.com/library/windows/apps/hh465231)
 
 **Für Entwickler (XAML)**
-- [**TextBox-Klasse**](https://msdn.microsoft.com/library/windows/apps/br209683)
-- [**Windows.UI.Xaml.Controls PasswordBox-Klasse**](https://msdn.microsoft.com/library/windows/apps/br227519)
+- [TextBox-Klasse](https://msdn.microsoft.com/library/windows/apps/br209683)
+- [Windows.UI.Xaml.Controls PasswordBox-Klasse](https://msdn.microsoft.com/library/windows/apps/br227519)
 - [StringLength-Eigenschaft](https://msdn.microsoft.com/library/system.string.length.aspx)

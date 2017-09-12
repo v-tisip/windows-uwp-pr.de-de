@@ -4,14 +4,16 @@ Description: "Add-Ons werden über das Windows Dev Center-Dashboard veröffentli
 title: "Add-On-Übermittlungen"
 ms.assetid: E175AF9E-A1D4-45DF-B353-5E24E573AE67
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 06/26/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: 7de8b6db65bb9ec58f16643dc8b477c274513c9a
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 85ad5e297eed8daa5205aedc1253191fcff5fd49
+ms.sourcegitcommit: 8c4d50ef819ed1a2f8cac4eebefb5ccdaf3fa898
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/27/2017
 ---
 # <a name="add-on-submissions"></a>Add-On-Übermittlungen
 
@@ -21,7 +23,8 @@ Add-Ons werden über das Windows Dev Center-Dashboard veröffentlicht. Sie müss
 
 Der erste Schritt bei der Add-On-Übermittlung besteht darin, das Add-On im Dashboard zu erstellen, indem Sie den [Produkt-Typ und die Produkt-ID definieren](set-your-add-on-product-id.md). Danach können Sie eine Übermittlung erstellen, damit Ihr Add-On über den Windows Store erworben werden kann. Sie können ein Add-On gleichzeitig mit [Ihrer App einreichen](app-submissions.md) oder unabhängig vorgehen. Außerdem können Sie [Updates](#updating-an-add-on-after-publication) für Add-Ons ausführen, nachdem die App im Store eingetragen wurde, ohne dass die App erneut übermittelt werden muss.
 
-> **Hinweis**&nbsp;&nbsp;In diesem Abschnitt der Dokumentation wird das Übermitteln von Add-Ons im Dev Center-Dashboard beschrieben. Alternativ dazu können Sie auch die [Windows Store-Übermittlungs-API](../monetize/create-and-manage-submissions-using-windows-store-services.md) verwenden, um Add-On-Übermittlungen zu automatisieren.
+> [!NOTE]
+> In diesem Abschnitt der Dokumentation wird das Übermitteln von Add-Ons im Dev Center-Dashboard beschrieben. Alternativ dazu können Sie auch die [Windows Store-Übermittlungs-API](../monetize/create-and-manage-submissions-using-windows-store-services.md) verwenden, um Add-On-Übermittlungen zu automatisieren.
 
 ## <a name="checklist-for-submitting-an-add-on"></a>Prüfliste für die Übermittlung eines Add-Ons
 
@@ -49,16 +52,17 @@ Hier finden Sie eine Liste mit den Informationen, die Sie beim Erstellen Ihrer A
 ### <a name="pricing-and-availability-page"></a>Seite „Preise und Verfügbarkeit“
 | Feldname                    | Hinweise                                       |
 |-------------------------------|---------------------------------------------|
-| [**Grundpreis**](set-add-on-pricing-and-availability.md#base-price)                | Erforderlich                                    |
-| [**Märkte und angepasste Preise**](set-add-on-pricing-and-availability.md#markets-and-custom-prices)  | Standard: in allen möglichen Märkten verfügbar |
-| [**Sonderangebotsverkaufspreise**](put-apps-and-add-ons-on-sale.md)               | Optional                             |
-| [**Verteilung und Sichtbarkeit**](set-add-on-pricing-and-availability.md#distribution-and-visibility)   | Standard: Das Add-On kann von Kunden beim Browsen oder Suchen im Store gefunden werden. |
-| [**Veröffentlichungsdatum**](set-add-on-pricing-and-availability.md#publish-date)                | Standard: Das Add-On wird direkt nach der Zertifizierung veröffentlicht. |
+| [**Märkte**](set-add-on-pricing-and-availability.md#markets)  | Standard: alle möglichen Märkte |
+| [**Sichtbarkeit**](set-add-on-pricing-and-availability.md#visibility)   | Standard: Zum Kauf erhältlich. Kann im App-Eintrag angezeigt werden |
+| [**Zeitplan**](set-add-on-pricing-and-availability.md#schedule)    | Standard: so schnell wie möglich veröffentlichen
+| [**Preise**](set-add-on-pricing-and-availability.md#pricing)                | Nötig                                    |
+| [**Sonderpreise**](put-apps-and-add-ons-on-sale.md)               | Optional                             |
+| [**Veröffentlichungsdatum**](set-add-on-pricing-and-availability.md#publish-date)                | Standard: so schnell wie möglich veröffentlichen |
 
 <span/>
 
 ### <a name="store-listings"></a>Store-Einträge
-Ein Store-Eintrag ist erforderlich. Es wird empfohlen, für jede von der App unterstützte [Sprache](create-add-on-store-listings.md#languages) Store-Einträge anzugeben.
+Ein Store-Eintrag ist erforderlich. Es wird empfohlen, für jede von der App unterstützte [Sprache](create-add-on-store-listings.md#store-listing-languages) Store-Einträge anzugeben.
 
 | Feldname                    | Hinweise                                       |
 |-------------------------------|---------------------------------------------|
@@ -70,14 +74,16 @@ Ein Store-Eintrag ist erforderlich. Es wird empfohlen, für jede von der App unt
 
 Nachdem Sie diese Informationen eingegeben haben, klicken Sie auf **An Store einreichen**. In den meisten Fällen dauert der Zertifizierungsprozess etwa eine Stunde. Danach wird Ihr Add-On im Store veröffentlicht und steht für Kunden zum Kauf bereit.
 
->**Hinweis**&nbsp;&nbsp;Das Add-On muss außerdem im Code Ihrer App implementiert werden. Weitere Informationen finden Sie unter [In-App-Käufe und Testversionen](../monetize/in-app-purchases-and-trials.md).
+> [!NOTE]
+> Das Add-On muss außerdem im Code Ihrer App implementiert werden. Weitere Informationen finden Sie unter [In-App-Käufe und Testversionen](../monetize/in-app-purchases-and-trials.md).
 
 
 ## <a name="updating-an-add-on-after-publication"></a>Aktualisieren eines Add-Ons nach der Veröffentlichung
 
 Sie können ein veröffentlichtes Add-On jederzeit ändern. Add-On-Änderungen werden unabhängig von Ihrer App eingereicht und veröffentlicht. Sie müssen daher in der Regel nicht die gesamte App aktualisieren, um Änderungen an einem Add-On vorzunehmen, z.B. das Aktualisieren des Preises oder der Beschreibung.
 
-> **Wichtig**&nbsp;&nbsp;Wenn die App für Kunden unter Windows8.x verfügbar ist, müssen Sie eine neue App-Übermittlung erstellen und veröffentlichen, um die Add-On-Updates für diese Kunden sichtbar zu machen. Auch wenn Sie neue Add-Ons einer App für Windows 8.x hinzufügen, nachdem die App veröffentlicht wurde, müssen Sie den App-Code aktualisieren, um auf diese Add-Ons zu verweisen, und die App dann erneut übermitteln. Andernfalls sind die neuen Add-Ons nicht für Kunden unter Windows 8.x sichtbar.
+> [!IMPORTANT]
+> Wenn die App für Kunden unter Windows8.x verfügbar ist, müssen Sie eine neue App-Übermittlung erstellen und veröffentlichen, um die Add-On-Updates für diese Kunden sichtbar zu machen. Auch wenn Sie neue Add-Ons einer App für Windows 8.x hinzufügen, nachdem die App veröffentlicht wurde, müssen Sie den App-Code aktualisieren, um auf diese Add-Ons zu verweisen, und die App dann erneut übermitteln. Andernfalls sind die neuen Add-Ons nicht für Kunden unter Windows 8.x sichtbar.
 
 Wechseln Sie zum Übermitteln von Updates im Dashboard zur Seite des Add-Ons, und klicken Sie auf **Aktualisieren**. Dadurch wird eine neue Übermittlung für das Add-On erstellt, wobei die Informationen aus der vorherigen Übermittlung als Ausgangspunkt verwendet werden. Ändern Sie die gewünschten Informationen, und klicken Sie dann auf **An Store übermitteln**.
 

@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: PatrickFarley
 ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
 title: "Device Portal für Desktop"
 description: "Hier erfahren Sie, wie das Windows Device Portal die Diagnose und Automatisierung auf dem Windows-Desktop öffnet."
-ms.author: markl
+ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 7b8b396078d59cc2ab3180e9af8b6017fd5edbda
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 32155bfbb676a5f79dd4b1629f0a88368da36828
+ms.sourcegitcommit: 0fa9ae00117e8e6b04ed38956e605bb74c1261c6
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="device-portal-for-desktop"></a>Device Portal für Desktop
 
@@ -76,37 +78,11 @@ Wenn Sie Portnummern für Device Portal auswählen möchten (z. B. 80 und 443), 
 
 - Unter HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WebManagement\Service
     - UseDynamicPorts: Ein erforderlicher DWORD-Wert. Legen Sie den Wert auf 0 fest, um die von Ihnen ausgewählten Portnummern beizubehalten.
-    - HttpPort: Ein erforderlicher DWORD-Wert. Enthält die Portnummer, an der Device Portal nach HTTP-Verbindungen lauscht.    
+    - HttpPort: Ein erforderlicher DWORD-Wert. Enthält die Portnummer, an der Device Portal nach HTTP-Verbindungen lauscht.  
     - HttpsPort: Ein erforderlicher DWORD-Wert. Enthält die Portnummer, an der Device Portal nach HTTPS-Verbindungen lauscht.
 
-## <a name="failure-to-install-developer-mode-package-or-launch-device-portal"></a>Fehler beim Installieren des Entwicklermoduspakets oder beim Starten von Device Portal
-In manchen Fällen wird der Entwicklermodus aufgrund von Problemen mit dem Netzwerk oder der Kompatibilität nicht ordnungsgemäß installiert. Das Entwicklermoduspaket ist für die **Remote**-Bereitstellung (Device Portal und SSH), nicht jedoch für die lokale Entwicklung erforderlich.  Selbst wenn diese Probleme auftreten, können Sie Ihre App weiterhin mithilfe von Visual Studio bereitstellen. 
+## <a name="failure-to-install-developer-mode-package"></a>Fehler beim Installieren des Entwicklermoduspakets
+In manchen Fällen wird der Entwicklermodus aufgrund von Problemen mit dem Netzwerk oder der Kompatibilität nicht ordnungsgemäß installiert. Das Entwicklermoduspaket ist für die **remote** Bereitstellung auf dem PC erforderlich – verwenden Sie Device Portal über einen Browser oder Device Discovery zur Aktivierung von SSH – aber nicht für die lokale Entwicklung.  Selbst wenn diese Probleme auftreten, können Sie Ihre App weiterhin mithilfe von Visual Studio bereitstellen. 
 
-Im Forum zu den [bekannten Problemen](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) finden Sie entsprechende Problemumgehungen und vieles mehr. 
+Im Forum [Bekannte Probleme](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) und auf der [Entwicklermodusseite](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development#failure-to-install-developer-mode-package) finden Sie entsprechende Problemumgehungen und vieles mehr. 
 
-### <a name="failed-to-locate-the-package"></a>Das Paket konnte nicht gefunden werden
-
-"Developer Mode package couldn’t be located in Windows Update. Error Code 0x001234 Learn more"   
-
-Dieser Fehler kann aufgrund eines Netzwerkverbindungsproblems, aufgrund von Enterprise-Einstellungen oder weil das Paket nicht vorhanden ist, auftreten. 
-
-So beheben Sie dieses Problem:
-
-1. Stellen Sie sicher, dass Ihr Computer mit dem Internet verbunden ist. 
-2. Wenn Sie einen in eine Domäne eingebundenen Computer verwenden, sprechen Sie mit dem Netzwerkadministrator. 
-3. Suchen nach Windows-Updates in den Einstellungen > Updates und Sicherheit > Windows-Updates.
-4. Stellen Sie sicher, dass das Windows-Entwicklermoduspaket in den Einstellungen > System > Apps und Features > Optionale Features verwalten > Feature hinzufügen vorhanden ist. Wenn es nicht vorhanden ist, kann Windows das richtige Paket für Ihren Computer nicht finden. 
-
-Nachdem Sie einen der oben genannten Schritte durchgeführt haben, deaktivieren Sie den Entwicklermodus, und aktivieren Sie ihn dann erneut, um die Korrektur zu überprüfen. 
-
-
-### <a name="failed-to-install-the-package"></a>Fehler beim Installieren des Pakets
-
-"Developer Mode package failed to install. Error code 0x001234  Learn more"
-
-Dieser Fehler kann aufgrund von Inkompatibilitäten zwischen dem Build von Windows und dem Entwicklermoduspaket auftreten. 
-
-So beheben Sie dieses Problem:
-
-1. Suchen nach Windows-Updates in den Einstellungen > Updates und Sicherheit > Windows-Updates.
-2. Starten Sie Ihren Computer neu, um sicherzustellen, dass alle Updates angewendet wurden.

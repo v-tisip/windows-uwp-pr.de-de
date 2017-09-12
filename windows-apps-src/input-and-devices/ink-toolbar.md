@@ -1,8 +1,8 @@
 ---
 author: Karl-Bridge-Microsoft
 Description: "Fügen Sie einer App für die Freihandeingabe in der universellen Windows-Plattform (UWP) eine Standard-InkToolbar hinzu. Fügen Sie der InkToolbar einen anpassbaren Stift hinzu und binden Sie diesen an eine benutzerdefinierte Definition für den Stift."
-title: "Hinzufügen von InkToolbar zu einer Freihandeingabe-App für die universelle Windows-Plattform (UWP)"
-label: Add an InkToolbar to a Universal Windows Platform (UWP) inking app
+title: "Hinzufügen von InkToolbar zu einer App für die universelle Windows-Plattform (UWP)"
+label: Add an InkToolbar to a Universal Windows Platform (UWP) app
 template: detail.hbs
 keywords: Windows Ink, Windows-Freihandeingabe, DirectInk, InkPresenter, InkCanvas, InkToolbar, Universelle Windows-Platform, UWP, Benutzerinteraktion, Eingabe
 ms.author: kbridge
@@ -11,11 +11,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.assetid: d888f75f-c2a0-4134-81db-907b5e24fcc5
-ms.openlocfilehash: dd307bd6d7551c1e95de29360a8601484b37e742
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: a4bff46c2ab0f0f1f9a689f2744c9a77ac90630d
+ms.sourcegitcommit: c519e3d34bef37f87bb44f02b295187849bb5eea
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/25/2017
 ---
-# <a name="add-an-inktoolbar-to-a-universal-windows-platform-uwp-inking-app"></a>Hinzufügen von InkToolbar zu einer Freihandeingabe-App für die universelle Windows-Plattform (UWP)
+# <a name="add-an-inktoolbar-to-a-universal-windows-platform-uwp-app"></a>Hinzufügen von InkToolbar zu einer App für die universelle Windows-Plattform (UWP)
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 
@@ -31,7 +33,7 @@ Als vollständig transparente Überlagerung bietet InkCanvas keine integrierte B
 
   Die InkPresenter-APIs unterstützen die umfassende Anpassung der Freihandfunktionen. Weitere Informationen finden Sie unter [Zeichen- und Eingabestiftinteraktionen in UWP-Apps](pen-and-stylus-interactions.md).
 
-- Binden Sie [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx) an InkCanvas. InkToolbar bietet standardmäßig eine grundlegende Benutzeroberfläche zum Aktivieren von Freihandfunktionen und zum Festlegen von Freihandeigenschaften wie Strichgröße, Freihandfarbe und Form der Stiftspitze.
+- Binden Sie [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx) an InkCanvas. InkToolbar bietet standardmäßig eine anpassbare und erweiterbare Sammlung von Schaltflächen zum Aktivieren von Freihandfunktionen wie Strichgröße, Freihandfarbe und Form der Stiftspitze.
 
   InkToolbar wird in diesem Thema erläutert.
 
@@ -47,16 +49,18 @@ Als vollständig transparente Überlagerung bietet InkCanvas keine integrierte B
 
 ## <a name="default-inktoolbar"></a>Standard-InkToolbar
 
-Das InkToolbar-Steuerelement enthält standardmäßig Schaltflächen zum Zeichnen, Löschen, Hervorheben sowie zum Anzeigen eines Lineals. Abhängig vom Feature werden in einem Flyout weitere Einstellungen und Befehle bereitgestellt, beispielsweise für Freihandfarbe, Strichstärke und das Löschen aller Freihandeingaben.
+Das [**InkToolbar-Steuerelement**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) enthält standardmäßig Schaltflächen zum Zeichnen, Löschen, Hervorheben sowie zum Anzeigen einer Schablone(Lineal oder Winkelmesser). Abhängig vom Feature werden in einem Flyout weitere Einstellungen und Befehle bereitgestellt, beispielsweise für Freihandfarbe, Strichstärke und das Löschen aller Freihandeingaben.
 
 ![InkToolbar](.\images\ink\ink-tools-invoked-toolbar-small.png)  
 *Standardmäßige Windows Ink-Symbolleiste*
 
-So fügen Sie eine einfache Standard-InkToolbar hinzu:
+Um eine standardmäßige [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) zu einer App für die Freihandeingabe hinzuzufügen, platzieren Sie sie einfach auf derselben Seite wie Ihr [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas), und verbinden Sie die beiden Steuerelemente.
+
 1. Deklarieren Sie in „MainPage.xaml“ ein Containerobjekt (in diesem Beispiel verwenden wir ein Grid-Steuerelement) für die Freihand-Oberfläche.
 2. Deklarieren Sie ein InkCanvas-Objekt als untergeordnetes Element des Containers. (Die InkCanvas-Größe wird vom Container geerbt.)
 3. Deklarieren Sie eine InkToolbar, und verwenden Sie das TargetInkCanvas-Attribut zum Binden an InkCanvas.
-  Stellen Sie sicher, dass die InkToolbar nach InkCanvas deklariert wird. Andernfalls verhindert die InkCanvas-Überlagerung den Zugriff auf die InkToolbar.
+    > [!NOTE]  
+    > Stellen Sie sicher, dass die InkToolbar nach InkCanvas deklariert wird. Andernfalls verhindert die InkCanvas-Überlagerung den Zugriff auf die InkToolbar.
 
 ```xaml
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -808,6 +812,10 @@ Weitere Informationen zum benutzerdefinierten Trocknen finden Sie unter [Stiftin
 * [Zeichen- und Eingabestiftinteraktionen](pen-and-stylus-interactions.md)
 
 **Beispiele**
-* [Freihandbeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620308)
-* [Einfaches Freihandbeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620312)
-* [Komplexes Freihandbeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [Einfaches Freihandbeispiel (C#/C++)](http://go.microsoft.com/fwlink/p/?LinkID=620312)
+* [Komplexes Freihandbeispiel (C++)](http://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [Freihandbeispiel (JavaScript)](http://go.microsoft.com/fwlink/p/?LinkID=620308)
+* [Lernprogramm „Erste Schritte:” Unterstützen von Freihandeingaben in Ihrer UWP-App](https://aka.ms/appsample-ink)
+* [Malbuchbeispiel](https://aka.ms/cpubsample-coloringbook)
+* [Familiennotizbeispiel](https://aka.ms/cpubsample-familynotessample)
+

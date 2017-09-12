@@ -6,14 +6,18 @@ ms.assetid: 3ba7176f-ac47-498c-80ed-4448edade8ad
 template: detail.hbs
 extraBodyClass: style-color
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: 0d4266d1335198cffb74900b0d1eb2bb48cd1879
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+design-contact: rybick
+doc-status: Published
+ms.openlocfilehash: fd37d69c2e9b20b46c34e6071f302bd55bbbba26
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="color"></a>Farben
 
@@ -132,13 +136,47 @@ Benutzer können eine einzelne Farbe, die sogenannte Akzentfarbe, auswählen: *E
       </tr>
   </table>
 
+Verwenden Sie keine Akzentfarbe als Hintergrund, insbesondere bei Texten und Symbolen. Da sich die Akzentfarbe ändern kann, ist bei ihrer Verwendung als Hintergrundfarbe einige zusätzliche Arbeit erforderlich, um sicherzustellen, dass Vordergrundtext leicht lesbar ist. Zum Beispiel wird Ihr Text nur schwer erkennbar sein, wenn die Schriftfarbe Weiß und die Akzentfarbe Hellgrau ist, da zwischen Weiß und Hellgrau nur ein geringes Kontrastverhältnis besteht. Sie können das Problem umgehen, indem Sie die Akzentfarbe testen, um zu ermitteln, ob es sich um eine dunkle Farbe handelt:  
 
-<div class="microsoft-internal-note">
-Faustregel: Wenn die Akzentfarbe als Hintergrund verwendet wird, muss im Vordergrund immer weißer Text angezeigt werden. Die Standard-Akzentfarbe, die im Lieferumfang von Windows enthalten ist, bietet bei weißem Text ein tolles Kontrastverhältnis. Ein Benutzer kann bei Bedarf eine Akzentfarbe auswählen, die ein schlechtes Kontrastverhältnis zu Weiß hat. Das ist in Ordnung. Wenn Text schlecht lesbar ist, kann jederzeit eine dunklere Akzentfarbe ausgewählt werden.
-</div>
+Verwenden Sie den folgenden Algorithmus, um zu ermitteln, ob eine Hintergrundfarbe hell oder dunkel ist.
+
+```C#
+void accentColorUpdated(FrameworkElement elementWithText)
+{
+    var uiSettings = new Windows.UI.ViewManagement.UISettings();
+    Windows.UI.Color c = uiSettings.GetColorValue(UIColorType.Accent);
+
+    bool colorIsDark = (5 * c.G + 2 * c.R + c.B) <= 8 * 128;
+    if (colorIsDark)
+    {
+        elementWithText.RequestedTheme = ElementTheme.Light;
+    }
+    else
+    {
+        elementWithText.RequestedTheme = ElementTheme.Dark;
+    }
+}
+```
 
 
-Wenn der Benutzer eine Akzentfarbe auswählt, wird sie Teil des Systemdesigns. Davon sind dann Startseite, Taskleiste, Fensterchrom, bestimmte Interaktionszustände und Links mit [allgemeinen Steuerelementen](../controls-and-patterns/index.md) betroffen. Bei Apps besteht zudem die Möglichkeit, die Akzentfarbe in die Typografie, Hintergründe und Interaktionen zu integrieren – oder sie zu ignorieren, um das Branding der jeweiligen App nicht zu verändern.
+```JS
+function accentColorUpdated(elementWithText)
+{
+    var uiSettings = new Windows.UI.ViewManagement.UISettings();
+    Windows.UI.Color c = uiSettings.GetColorValue(UIColorType.Accent);
+    var colorIsDark (5 * c.g + 2 * c.r + c.b) <= 8 * 128;
+    if (colorIsDark)
+    {
+        elementWithText.RequestedTheme = ElementTheme.Light;
+    }
+    else
+    {
+        elementWithText.RequestedTheme = ElementTheme.Dark;
+    }     
+}
+```
+
+Wenn Sie ermittelt haben, ob die Akzentfarbe hell oder dunkel ist, können Sie eine entsprechende Vordergrundfarbe auswählen. Es wird empfohlen, den SystemControlForegroundBaseHighBrush aus dem hellen Design für dunkle Hintergründe und die Versionen mit dem dunklen Design für helle Hintergründe zu verwenden.
 
 ## <a name="color-palette-building-blocks"></a>Farbpaletten-Bausteine
 
@@ -228,7 +266,7 @@ Sie können Designs einfach ändern, indem Sie die **RequestedTheme**-Eigenschaf
 </Application>
 ```
 
-Das Entfernen von **RequestedTheme** bedeutet, dass Ihre Anwendung die App-Moduseinstellungen des Benutzers berücksichtigt. Dieser kann festlegen, dass die App im dunklen oder hellen Design angezeigt wird. 
+Das Entfernen von **RequestedTheme** bedeutet, dass Ihre Anwendung die App-Moduseinstellungen des Benutzers berücksichtigt. Dieser kann festlegen, dass die App im dunklen oder hellen Design angezeigt wird.
 
 Berücksichtigen Sie beim Erstellen Ihrer App unbedingt das Design, da dieses einen großen Einfluss auf das Erscheinungsbild des App hat.
 

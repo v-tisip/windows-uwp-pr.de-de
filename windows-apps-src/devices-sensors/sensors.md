@@ -1,17 +1,19 @@
 ---
-author: DBirtolo
+author: mukin
 ms.assetid: 415F4107-0612-4235-9722-0F5E4E26F957
 title: Sensoren
 description: "Mithilfe von Sensoren können Apps die Beziehung zwischen einem Gerät und der physischen Umgebung ermitteln. Sensoren können für die App die Richtung, Ausrichtung und Bewegung des Geräts erfassen."
-ms.author: dbirtolo
-ms.date: 02/08/2017
+ms.author: mukin
+ms.date: 06/06/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: af862471fcac7ee7f0ab8ad61f57c485d995bae2
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: eee6bb0c70c39a6676639f5b6da0f5465811dbad
+ms.sourcegitcommit: ca060f051e696da2c1e26e9dd4d2da3fa030103d
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/03/2017
 ---
 # <a name="sensors"></a>Sensoren
 
@@ -65,17 +67,25 @@ Die folgenden Diagramme veranschaulichen Folgendes:
 
 Zu den Apps, für die der Beschleunigungsmessersensor verwendet werden kann, zählt beispielsweise ein Spiel, bei dem Sie durch Kippen des Geräts eine Murmel bewegen (Schwerkraftvektor). Die Funktionalität entspricht in etwa der [**Inclinometer**](https://msdn.microsoft.com/library/windows/apps/BR225766)-Funktionalität und kann auch mit dem Sensor mithilfe einer Kombination aus Nick- und Rollwinkel erzielt werden. Die Nutzung des Schwerkraftvektors eines Beschleunigungsmessers vereinfacht dies, da ein Vektor für das Kippen des Geräts vorhanden ist, der auf einfache Weise mathematisch manipuliert werden kann. Ein anderes Beispiel ist eine App, die das Geräusch eines Peitschenschlags generiert, wenn der Benutzer das Gerät schnell durch die Luft bewegt (linearer Beschleunigungsvektor).
 
+Eine Beispiel für eine Implementierung finden Sie unter [Beispiel für einen Beschleunigungsmesser](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Accelerometer).
+
 ## <a name="activity-sensor"></a>Aktivitätssensor
 
 Der [**Activity**](https://msdn.microsoft.com/library/windows/apps/Dn785096)-Sensor ermittelt den aktuellen Status des an den Sensor angeschlossenen Geräts. Dieser Sensor wird häufig in Fitness-Apps verwendet, um zu verfolgen, wenn ein Benutzer mit einem Gerät läuft oder geht. Eine Liste der möglichen Aktivitäten, die von dieser Sensor-API erkannt werden kann, finden Sie unter [**ActivityType**](https://msdn.microsoft.com/library/windows/apps/Dn785128).
+
+Eine Beispiel für eine Implementierung finden Sie unter [Beispiel für einen Aktivitätssensor](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ActivitySensor).
 
 ## <a name="altimeter"></a>Höhenmesser
 
 Mit dem [**Höhenmesser**](https://msdn.microsoft.com/library/windows/apps/Dn858893) -Sensor gibt einen Wert zurück, der die Höhe des Sensors angibt. Dadurch können Sie Änderungen der Höhe in Metern über dem Meeresspiegel nachverfolgen. Ein Beispiel für eine App, die dies nutzen kann, ist eine Lauf-App, die Höhenänderungen verfolgt, um den Kalorienverbrauch zu berechnen. In diesem Fall können diese Sensordaten mit dem [**Activity**](https://msdn.microsoft.com/library/windows/apps/Dn785096)-Sensor kombiniert werden, um genauere Informationen bereitzustellen.
 
+Eine Beispiel für eine Implementierung finden Sie unter [Beispiel für einen Höhenmesser](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Altimeter).
+
 ## <a name="barometer"></a>Barometer
 
 Mit dem [**Barometer**](https://msdn.microsoft.com/library/windows/apps/Dn872405) -Sensor ermöglicht einer Anwendung das Abrufen barometrischer Messwerte. Eine Wetter-App kann diese Informationen verwenden, um den aktuellen Luftdruck anzugeben. Dies kann zur Bereitstellung ausführlicher Informationen und zur Vorhersage potenzieller Wetteränderungen genutzt werden.
+
+Eine Beispiel für eine Implementierung finden Sie unter [Beispiel für ein Barometer](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Barometer).
 
 ## <a name="compass"></a>Kompass
 
@@ -85,6 +95,8 @@ Mit dem [**Kompass**](https://msdn.microsoft.com/library/windows/apps/BR225705) 
 
 Für Apps, in denen eine Kompassrose angezeigt oder nach einer Karte navigiert werden soll, wird dafür in der Regel der Kompasssensor eingesetzt.
 
+Eine Beispiel für eine Implementierung finden Sie unter [Beispiel für einen Kompass](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Compass).
+
 ## <a name="gyrometer"></a>Gyrometer
 
 Mit dem [**Gyrometer**](https://msdn.microsoft.com/library/windows/apps/BR225718) -Sensor misst Winkelgeschwindigkeiten entlang der X-, Y- und Z-Achse. Dies ist sehr nützlich bei einfachen bewegungsabhängigen Apps, bei denen es nicht um die Ausrichtung des Geräts geht, sondern darum, mit welchen unterschiedlichen Geschwindigkeiten sich das Gerät dreht. Die Leistung von Gyrometern kann durch ein Rauschen in den Daten oder einen systematischen Fehler entlang einer oder mehrerer Achsen beeinträchtigt werden. Sie sollten den Beschleunigungsmesser abfragen, um zu überprüfen, ob sich das Gerät bewegt. So können Sie ermitteln, ob für das Gyrometer ein Fehler vorliegt, und dies in der App dann entsprechend berücksichtigen.
@@ -92,6 +104,8 @@ Mit dem [**Gyrometer**](https://msdn.microsoft.com/library/windows/apps/BR225718
 ![Gyrometer mit Neigen, Rollen und Schwenken](images/gyrometer.png)
 
 Ein Beispiel für eine App, in der der Gyrometersensor verwendet werden kann, ist ein Spiel, bei dem ein Rouletterad der Drehbewegung des Geräts entsprechend schnell gedreht wird.
+
+Eine Beispiel für eine Implementierung finden Sie unter [Beispiel für ein Gyrometer](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Gyrometer).
 
 ## <a name="inclinometer"></a>Neigungssensor
 
@@ -101,25 +115,35 @@ Mit dem [**Neigungssensor**](https://msdn.microsoft.com/library/windows/apps/BR2
 
 Für Apps, bei denen die Ansicht der Ausrichtung des Geräts entsprechend geändert werden soll, kann der Neigungssensor verwendet werden. Eine App, bei der Nick-, Gier- und Rollwinkel eines Flugzeugs angezeigt werden, würde ebenfalls Neigungsmesserdaten verwenden.
 
+Ein Beispiel für die Implementierung eines Neigungssensors finden Sie unter [https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Inclinometer](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Inclinometer).
+
 ## <a name="light-sensor"></a>Belichtungssensor
 
 Der [**Light**](https://msdn.microsoft.com/library/windows/apps/BR225790)-Sensor kann das Umgebungslicht bestimmen, in dem sich der Sensor befindet. Dadurch kann die App ermitteln, wann sich die Einstellung des Umgebunglichts des Geräts geändert hat. Angenommen, ein Benutzer mit einem Slate-Gerät geht an einem sonnigen Tag aus einem geschlossenen Raum nach draußen. Eine intelligente Anwendung könnte diesen Wert verwenden, um den Kontrast zwischen dem Hintergrund und der dargestellten Schriftart zu erhöhen. Dadurch wäre der Inhalt auch in der helleren Umgebung draußen noch lesbar.
 
+Eine Beispiel für eine Implementierung finden Sie unter [Beispiel für einen Belichtungssensor](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LightSensor).
+
 ## <a name="orientation-sensor"></a>Ausrichtungssensor
 
-Die Geräteausrichtung wird durch die Quaternionen- und Drehungsmatrizes ausgedrückt. Der [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371) bietet einen hohen Genauigkeitsgrad bei der Bestimmung der Position des Geräts im dreidimensionalen Raum unter Berücksichtigung der absoluten Richtung. Die **OrientationSensor**-Daten werden vom Beschleunigungsmesser, Gyrometer und Magnetometer abgeleitet. Auch die Neigungsmesser- und die Kompasssensorendaten können von den Quaternionenwerten abgeleitet werden. Quaternion- und Rotationsmatrizes sind für erweiterte mathematische Manipulationen geeignet und werden oft bei der grafischen Programmierung verwendet. Für Apps, die komplexe Manipulation verwenden, sollten die Ausrichtungssensoren verwendet werden, da viele Transformationen auf Quaternion- und Rotationsmatrizes beruhen.
+Die Geräteausrichtung wird durch die Quaternionen- und Drehungsmatrizen ausgedrückt. Der [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371) bietet einen hohen Genauigkeitsgrad bei der Bestimmung der Position des Geräts im dreidimensionalen Raum unter Berücksichtigung der absoluten Richtung. Die **OrientationSensor**-Daten werden vom Beschleunigungsmesser, Gyrometer und Magnetometer abgeleitet. Auch die Neigungsmesser- und die Kompasssensorendaten können von den Quaternionenwerten abgeleitet werden. Quaternion- und Rotationsmatrizes sind für erweiterte mathematische Manipulationen geeignet und werden oft bei der grafischen Programmierung verwendet. Für Apps, die komplexe Manipulation verwenden, sollten die Ausrichtungssensoren verwendet werden, da viele Transformationen auf Quaternion- und Rotationsmatrizes beruhen.
 
 ![Ausrichtungssensordaten](images/orientation-sensor.png)
 
 Der Ausrichtungssensor wird häufig in Augmented Reality-Apps verwendet, in denen auf Grundlage der Ausrichtung der Geräterückseite das Bild der Umgebung mit einer Grafik überlagert wird.
 
+Eine Beispiel für eine Implementierung finden Sie unter [Beispiel für einen Ausrichtungssensor](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/OrientationSensor).
+
 ## <a name="pedometer"></a>Schrittzähler
 
 Mit dem [**Schrittzähler**](https://msdn.microsoft.com/library/windows/apps/Dn878203) -Sensor verfolgt die Anzahl der Schritte des Benutzers, der das verbundene Gerät trägt. Der Sensor ist so konfiguriert, dass die Anzahl der Schritte über einen bestimmten Zeitraum hinweg verfolgt wird. Einige Fitness-Apps verfolgen die Anzahl der ausgeführten Schritte, um dem Benutzer das Festlegen und Erreichen verschiedener Ziele zu erleichtern. Diese Informationen können dann erfasst und gespeichert werden, um den Fortschritt über einen Zeitraum anzuzeigen.
 
+Eine Beispiel für eine Implementierung finden Sie unter [Beispiel für einen Schrittzähler](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Pedometer).
+
 ## <a name="proximity-sensor"></a>Näherungssensor
 
 Der [**Proximity**](https://msdn.microsoft.com/library/windows/apps/Dn872427)-Sensor kann verwendet werden, um anzugeben, ob Objekte vom Sensor erkannt werden. Neben der Bestimmung, ob sich ein Objekt innerhalb des Erkennungsbereichs des Geräts befindet, kann der Näherungssensor auch den Abstand zum erkannten Objekt ermitteln. Ein Verwendungsbeispiel wäre eine Anwendung, die aus einem Standbyzustand aktiviert werden soll, wenn sich ein Benutzer bis zu einer bestimmten Entfernung nähert. Das Gerät könnte sich in einem Ruhezustand befinden, bis der Näherungssensor ein Objekt erkennt, woraufhin es in einen aktiveren Zustand versetzt wird.
+
+Eine Beispiel für eine Implementierung finden Sie unter [Beispiel für einen Näherungssensor](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ProximitySensor).
 
 ## <a name="simple-orientation"></a>Einfache Ausrichtung
 
@@ -127,7 +151,4 @@ Der [**SimpleOrientationSensor**](https://msdn.microsoft.com/library/windows/app
 
 Eine Reader-App, bei der die Anzeige abhängig von der Ausrichtung des Geräts in Relation zum Boden geändert wird, würde die Ausrichtung des Geräts anhand von SimpleOrientationSensor-Werten bestimmen.
 
-## <a name="samples"></a>Beispiele
-
-Einige Beispiele zur Verwendung verschiedener Sensoren finden Sie unter [Beispiele für Windows-Sensor](http://go.microsoft.com/fwlink/?LinkID=616041).
-
+Eine Beispiel für eine Implementierung finden Sie unter [Beispiel für einen einfachen Ausrichtungssensor](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleOrientationSensor).

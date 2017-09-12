@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: 2492d8c50b6f2e35a137eae6e1a002af0f46afd1
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 1974c90b89a34f3252face47b9f18786b638adf8
+ms.sourcegitcommit: 7540962003b38811e6336451bb03d46538b35671
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/26/2017
 ---
 # <a name="create-and-register-an-out-of-process-background-task"></a>Erstellen und Registrieren einer Hintergrundaufgabe außerhalb des Prozesses
 
@@ -26,7 +28,7 @@ translationtype: HT
 Erstellen Sie eine Hintergrundaufgabenklasse, und registrieren Sie diese für die Ausführung, wenn sich die App nicht im Vordergrund befindet. In diesem Thema wird gezeigt, wie Sie eine Hintergrundaufgabe erstellen und registrieren, die in einem vom App-Prozess getrennten Prozess ausgeführt wird. Informationen zum Ausführen von Hintergrundarbeiten direkt in der Vordergrundanwendung finden Sie unter [Erstellen und Registrieren einer In-Process-Hintergrundaufgabe](create-and-register-an-inproc-background-task.md).
 
 > [!Note]
-> Wenn Sie eine Hintergrundaufgabe zur Medienwiedergabe im Hintergrund verwenden, finden Sie unter [Wiedergeben von Medien im Hintergrund](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/background-audio) Informationen zu Verbesserungen in Windows10, Version1607, die dies wesentlich erleichtern.
+> Wenn Sie eine Hintergrundaufgabe zur Medienwiedergabe im Hintergrund verwenden, finden Sie unter [Wiedergeben von Medien im Hintergrund](https://msdn.microsoft.com/windows/uwp/audio-video-camera/background-audio) Informationen zu Verbesserungen in Windows10, Version1607, die dies wesentlich erleichtern.
 
 ## <a name="create-the-background-task-class"></a>Erstellen einer Hintergrundaufgabenklasse
 
@@ -238,7 +240,7 @@ Die folgenden Schritte werden in einer Ihrer App-Klassen durchgeführt (beispiel
     > [!div class="tabbedCodeSnippets"]
     > ```cs
     >     BackgroundTaskRegistration task = builder.Register();
-    >     ```
+    > ```
     > ```cpp
     >     BackgroundTaskRegistration^ task = builder->Register();
     > ```

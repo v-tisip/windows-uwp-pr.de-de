@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: jwmsft
 ms.assetid: DE5B084C-DAC1-430B-A15B-5B3D5FB698F7
 title: Optimieren von Animationen, Medien und Bildern
 description: "Erstellen Sie UWP-Apps (Universelle Windows-Plattform) mit flüssigen Animationen, hoher Bildfrequenz und leistungsstarker Medienaufzeichnung und -wiedergabe."
-ms.author: markl
+ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 29383c65d36b7bc9e5946e4c55298ac0e04107c6
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 74f8b5a47a0ebee123ccad13bee2177870630a27
+ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/14/2017
 ---
 # <a name="optimize-animations-media-and-images"></a>Optimieren von Animationen, Medien und Bildern
 
@@ -37,6 +39,7 @@ Alle diese Animationsarten sind garantiert unabhängig:
 -   Animationen der folgenden [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911)-Eigenschaften, wenn auf untergeordneten Eigenschaften dieser Rückgabewerttypen abgezielt wird:
 
     -   [**RenderTransform**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.rendertransform)
+    -   [**Transform3D**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.transform3d)
     -   [**Projection**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.projection)
     -   [**Clip**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.clip)
 
@@ -195,7 +198,7 @@ Wenn Sie keine explizite Decodierungsgröße festlegen, versucht XAML, möglich 
 
 In den oben genannten Szenarien ist das Festlegen einer expliziten Decodierungsgröße die einzige Möglichkeit, um Arbeitsspeichereinsparungen zu erzielen.
 
-Fügen Sie stets ein [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/BR243235)-Objekt an die Live-Struktur an, bevor Sie die Quelle festlegen. Dies erfolgt jedes Mal automatisch, wenn ein Bildelement oder ein Pinsel in Markup angegeben wird. Beispiele finden Sie weiter unten im Abschnitt „Live-Struktur-Beispiele“. Vermeiden Sie beim Festlegen einer Datenstromquelle stets die Verwendung von [**SetSource**](https://msdn.microsoft.com/library/windows/apps/BR243255), und verwenden Sie stattdessen [**SetSourceAsync**](https://msdn.microsoft.com/library/windows/apps/JJ191522). Zudem ist es sinnvoll, das Ausblenden von Bildinhalten (entweder durch eine Deckkraft von null oder die Sichtbarkeitseinstellung „collapsed“) zu vermeiden, während Sie darauf warten, dass das [**ImageOpened**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.bitmapimage.imageopened.aspx)-Ereignis ausgelöst wird. Wägen Sie Ihre Entscheidung ab. Sie können in diesem Fall die Vorteile der automatischen Decodierung in der richtigen Größe nicht nutzen. Wenn Ihre App Bilder anfänglich ausblenden muss, sollte nach Möglichkeit auch die Decodierungsgröße explizit festgelegt werden.
+Fügen Sie stets ein [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/BR243235)-Objekt an die Live-Struktur an, bevor Sie die Quelle festlegen. Dies erfolgt jedes Mal automatisch, wenn ein Bildelement oder ein Pinsel in Markup angegeben wird. Beispiele finden Sie weiter unten im Abschnitt „Live-Struktur-Beispiele“. Vermeiden Sie beim Festlegen einer Datenstromquelle stets die Verwendung von [**SetSource**](https://msdn.microsoft.com/library/windows/apps/BR243255), und verwenden Sie stattdessen [**SetSourceAsync**](https://msdn.microsoft.com/library/windows/apps/JJ191522). Zudem ist es sinnvoll, das Ausblenden von Bildinhalten (entweder durch eine Deckkraft von null oder die Sichtbarkeitseinstellung „Collapsed“) zu vermeiden, während Sie darauf warten, dass das [**ImageOpened**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.bitmapimage.imageopened.aspx)-Ereignis ausgelöst wird. Wägen Sie Ihre Entscheidung ab. Sie können in diesem Fall die Vorteile der automatischen Decodierung in der richtigen Größe nicht nutzen. Wenn Ihre App Bilder anfänglich ausblenden muss, sollte nach Möglichkeit auch die Decodierungsgröße explizit festgelegt werden.
 
 **Live-Struktur-Beispiele**
 

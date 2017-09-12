@@ -9,15 +9,18 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows10, UWP, Anzeigen, Werbung, Richtlinien, bewährte Methoden"
-ms.openlocfilehash: 75a68977e5edb996a5e2fc1ae9265d11b7492ad9
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 8dc9c00bdeb47b5f07af0b9b27ef843e2afd4456
+ms.sourcegitcommit: 9d1ca16a7edcbbcae03fad50a4a10183a319c63a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/09/2017
 ---
 # <a name="ui-and-user-experience-guidelines-for-ads"></a>Richtlinien für die Benutzeroberfläche und Benutzerumgebung für Anzeigen
 
 Dieser Artikel enthält Richtlinien für die Bereitstellung hervorragender Umgebungen mit Banneranzeigen und Interstitialanzeigen in Ihren Apps. Allgemeine Informationen zur Gestaltung des Erscheinungsbilds für Apps finden Sie unter [Design und UI](https://developer.microsoft.com/windows/apps/design).
 
->**Wichtig**&nbsp;&nbsp;Jegliche Verwendung von Werbung in Ihrer App muss ohne Einschränkung den Windows Store-Richtlinien entsprechen, einschließlich [Richtlinie 10.10](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_10) (Werbung – Verhaltensregeln und Inhalt). Insbesondere die Implementierung von Banneranzeigen oder Interstitialanzeigen in Ihrer App muss die Anforderungen in der Windows Store-Richtlinie [Richtlinie 10.10.1](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_10) erfüllen. Dieser Artikel enthält Beispiele für Implementierungen, die gegen diese Richtlinie verstoßen würden. Diese Beispiele dienen lediglich zu Informationszwecken und zum besseren Verständnis der Richtlinie. Diese Beispiele sind nicht umfassend, und möglicherweise gibt es viele weitere Arten, gegen die Windows Store-Richtlinien zu verstoßen, die nicht in diesem Artikel aufgeführt sind.
+> [!IMPORTANT]
+> Jegliche Verwendung von Werbung in Ihrer App muss ohne Einschränkung den Windows Store-Richtlinien entsprechen, einschließlich [Richtlinie 10.10](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_10) (Werbung – Verhaltensregeln und Inhalt). Insbesondere die Implementierung von Banneranzeigen oder Interstitialanzeigen in Ihrer App muss die Anforderungen in der Windows Store-Richtlinie [Richtlinie 10.10.1](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_10) erfüllen. Dieser Artikel enthält Beispiele für Implementierungen, die gegen diese Richtlinie verstoßen würden. Diese Beispiele dienen lediglich zu Informationszwecken und zum besseren Verständnis der Richtlinie. Diese Beispiele sind nicht umfassend, und möglicherweise gibt es viele weitere Arten, gegen die Windows Store-Richtlinien zu verstoßen, die nicht in diesem Artikel aufgeführt sind.
 
 ## <a name="guidelines-for-banner-ads"></a>Richtlinien für Banneranzeigen
 

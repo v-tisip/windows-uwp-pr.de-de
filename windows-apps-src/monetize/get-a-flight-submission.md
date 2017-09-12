@@ -4,14 +4,16 @@ ms.assetid: A0DFF26B-FE06-459B-ABDC-3EA4FEB7A21E
 description: "Verwenden Sie diese Methode der Windows Store-Übermittlungs-API, um Daten für eine vorhandene Flight-Paket-Übermittlung abzurufen."
 title: "Abrufen einer Flight-Paket-Übermittlung"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows10, UWP, Windows Store-Übermittlungs-API, Flight-Übermittlung"
-ms.openlocfilehash: 2571bb25ce407a9c44ed40aae0a865708e6154d5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 3187c91b0ddd17bee73755273bc1b0531ddddb8e
+ms.sourcegitcommit: a8e7dc247196eee79b67aaae2b2a4496c54ce253
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/04/2017
 ---
 # <a name="get-a-package-flight-submission"></a>Abrufen einer Flight-Paket-Übermittlung
 
@@ -27,8 +29,6 @@ Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 * Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](create-and-manage-submissions-using-windows-store-services.md#prerequisites) für die Windows Store-Übermittlungs-API.
 * [Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60 Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
 * Erstellen Sie eine Flight-Paketübermittlung für eine App im Dev Center-Konto. Sie können dies im Dev Center-Dashboard oder unter Verwendung der Methode [Erstellen einer Flight-Paketübermittlung](create-a-flight-submission.md) erreichen.
-
->**Hinweis**&nbsp;&nbsp;Diese Methode kann nur für Windows Dev Center-Konten verwendet werden, die eine Berechtigung zur Verwendung der Windows Store-Übermittlungs-API erhalten haben. Diese Berechtigung ist nicht für alle Konten aktiviert.
 
 ## <a name="request"></a>Anforderung
 
@@ -54,7 +54,7 @@ Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie V
 | Name        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | applicationId | String | Erforderlich. Die Store-ID der App mit der abzurufenden Flight-Paketübermittlung. Weitere Informationen zur Store-ID finden Sie unter [Anzeigen von Details zur App-Identität](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
-| flightId | String | Erforderlich. Die ID des Flight-Pakets mit der abzurufenden Übermittlung. Diese ID ist im Dev Center-Dashboard verfügbar und in den Antwortdaten für Anforderungen zum [Erstellen eines Flight-Pakets](create-a-flight.md) und zum [Abrufen von Flight-Paketen für eine App](get-flights-for-an-app.md) enthalten.  |
+| flightId | String | Erforderlich. Die ID des Flight-Pakets mit der abzurufenden Übermittlung. Diese ID ist in den Antwortdaten für Anforderungen zum [Erstellen eines Flight-Pakets](create-a-flight.md) und zum [Abrufen von Flight-Paketen für eine App](get-flights-for-an-app.md) enthalten.  |
 | submissionId | String | Erforderlich. Die ID der abzurufenden Übermittlung. Diese ID ist im Dev Center-Dashboard verfügbar und in den Antwortdaten für Anforderungen zum [Erstellen einer Flight-Paketübermittlung](create-a-flight-submission.md) enthalten.  |
 
 <span/>

@@ -11,9 +11,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: a5a0a20ffa8ca27c123d139f25f636587db07aba
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 73fe48744346b2fd784b36d1fa29bd419c0fea02
+ms.sourcegitcommit: f6dd9568eafa10ee5cb2b849c0d82d84a1c5fb93
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/02/2017
 ---
 # <a name="accessibility-testing"></a>Barrierefreiheitstests  
 
@@ -84,15 +86,18 @@ Verwenden Sie die App mit einem Design mit hohem Kontrast, um sicherzustellen, d
 <span id="verify_your_app_with_make_everything_on_your_screen_bigger"/>
 <span id="VERIFY_YOUR_APP_WITH_MAKE_EVERYTHING_ON_YOUR_SCREEN_BIGGER"/>
 ## <a name="verify-your-app-with-display-settings"></a>Überprüfen der App mit Anzeigeeinstellungen  
+
 Verwenden Sie die Systemanzeigeoptionen, die den DPI-Wert der Anzeige anpassen, und stellen Sie sicher, dass Ihre App-UI bei einer Änderung des DPI-Werts richtig skaliert wird. (Einige Benutzer ändern DPI-Werte als Barrierefreiheitsoption; sie ist wie auch Anzeigeeigenschaften unter **Erleichterte Bedienung** verfügbar.) Falls Sie Probleme feststellen, befolgen Sie die [Richtlinien zur Layoutskalierung](https://msdn.microsoft.com/library/windows/apps/Dn611863), und stellen Sie zusätzliche Ressourcen für unterschiedliche Skalierungsfaktoren bereit.
 
 <span id="verify_main_app_scenarios_by_using_narrator"/>
 <span id="VERIFY_MAIN_APP_SCENARIOS_BY_USING_NARRATOR"/>
 ## <a name="verify-main-app-scenarios-by-using-narrator"></a>Überprüfen der wichtigsten App-Szenarien mit der Sprachausgabe  
-Verwenden Sie die Sprachausgabe, um deren Qualität für Ihre App einschätzen zu können, indem Sie die folgenden Schritte durchführen:
+Verwenden Sie die Sprachausgabe, um die Qualität der Bildschirmtexterkennung für Ihre App einzuschätzen.
+
+<iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-Narrator-and-Dev-Mode/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
 
 **Gehen Sie wie folgt vor, um Ihre App mithilfe der Sprachausgabe unter Verwendung von Maus und Tastatur zu testen:**
-1.  Starten Sie die Sprachausgabe, indem Sie _Windows-Logo+EINGABE_ drücken.
+1.  Starten Sie die Sprachausgabe, indem Sie _Windows-Logo-Taste+STRG+EINGABETASTE_ drücken. In Versionen vor der Version 1607 von Windows10 verwenden Sie _Windows-Logo-Taste + EINGABETASTE_ zum Starten der Sprachausgabe.
 2.  Bedienen Sie Ihre App über die Tastatur mit der _TAB_-TASTE, den PFEILTASTEN und _FESTSTELLTASTE+PFEILTASTEN_.
 3.  Hören Sie sich an, wie die Sprachausgabe Elemente der Benutzeroberfläche vorliest, während Sie die App bedienen, und achten Sie auf Folgendes:
     * Achten Sie bei allen Steuerelementen darauf, dass die Sprachausgabe korrekt für alle sichtbaren Inhalte erfolgt. Stellen Sie zudem sicher, dass die Sprachausgabe jeweils den Namen, alle relevanten Zustände (aktiviert, ausgewählt usw.) und den Typ des Steuerelements (Schaltfläche, Kontrollkästchen, Listenelement usw.) vorliest.
@@ -147,4 +152,5 @@ Außerdem können Sie testen, ob in der Elementansicht der Benutzeroberflächena
 * [Barrierefreiheit](accessibility.md)
 * [Nicht empfehlenswerte Methoden](practices-to-avoid.md)
 * [Benutzeroberflächenautomatisierung](https://msdn.microsoft.com/library/windows/desktop/Ee684009)
-* [Barrierefreiheit unter Windows](http://go.microsoft.com/fwlink/p/?LinkId=320802) 
+* [Barrierefreiheit unter Windows](http://go.microsoft.com/fwlink/p/?LinkId=320802)
+* [Erste Schritte mit der Sprachausgabe](https://support.microsoft.com/help/22798/windows-10-narrator-get-started)

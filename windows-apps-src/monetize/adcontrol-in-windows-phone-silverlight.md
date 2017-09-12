@@ -4,20 +4,30 @@ ms.assetid: c0450f7b-5c81-4d8c-92ef-2b1190d18af7
 description: "Hier erfahren Sie, wie Sie die AdControl-Klasse nutzen können, um Werbebanner in einer Silverlight-App für Windows Phone 8.1 oder Windows Phone 8.0 anzuzeigen."
 title: "„AdControl“ in Windows Phone Silverlight"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 07/20/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Anzeigen, Werbung, AdControl, Silverlight, Windows Phone
-ms.openlocfilehash: 743b9faccaa120f1904b592fc09a965dc7878e03
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: f1582639757abfb6de156bf88ce8af71ba3eaacd
+ms.sourcegitcommit: a9e4be98688b3a6125fd5dd126190fcfcd764f95
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/21/2017
 ---
 # <a name="adcontrol-in-windows-phone-silverlight"></a>„AdControl“ in Windows Phone Silverlight
 
 In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie die [AdControl](https://msdn.microsoft.com/library/windows/apps/hh524191.aspx)-Klasse nutzen können, um Werbebanner in einer Silverlight-App für Windows Phone8.1 oder Windows Phone8.0 anzuzeigen.
 
-> **Hinweis für Windows Phone Silverlight 8.0**&nbsp;&nbsp;Werbebanner werden weiterhin für vorhandene Windows Phone8.0 Silverlight-Apps unterstützt, die ein **AdControl**-Element einer früheren Version des Universal Ad Client SDK oder Microsoft Advertising SDK verwenden und im Store bereits verfügbar sind. In neuen Windows Phone8.0 Silverlight-Projekten werden Werbebanner aber nicht mehr unterstützt. Außerdem gelten für einige Debug- und Testszenarien in Windows Phone8.x Silverlight-Projekten Einschränkungen. Weitere Informationen finden Sie unter [Anzeigen von Werbung in Ihrer App](display-ads-in-your-app.md#silverlight_support).
+<span id="silverlight_support"/>
+## <a name="advertising-support-for-windows-phone-8x-silverlight-projects"></a>Anzeigenunterstützung für Windows Phone8.x Silverlight-Projekte
+
+Einige Entwicklerszenarien werden für Windows Phone8.x Silverlight-Projekte nicht mehr unterstützt. Weitere Informationen finden Sie in der folgenden Tabelle.
+
+|  Plattformversion  |  Vorhandene Projekte    |   Neue Projekte  |
+|-----------------|----------------|--------------|
+| Windows Phone8.0 Silverlight     |  Wenn Sie über ein vorhandenes Windows Phone8.0 Silverlight-Projekt verfügen, das bereits eine **AdControl** bzw. **AdMediatorControl** einer früheren Version des Universal Ad Client SDK oder Microsoft Advertising SDK verwendet, und die App bereits im Windows Store veröffentlicht wurde, können Sie das Projekt bearbeiten und neu erstellen. Zudem können Sie Ihre Änderungen auf einem Gerät debuggen oder testen. Das Debuggen und Testen des Projekts im Emulator wird nicht unterstützt.  |  Nicht unterstützt  |
+| Windows Phone8.1 Silverlight    |  Wenn Sie über ein vorhandenes Windows Phone8.1 Silverlight-Projekt verfügen, das ein **AdControl** oder **AdMediatorControl** einer früheren SDK verwendet, können Sie es ändern und neu erstellen. Zum Debuggen oder Testen der App müssen Sie die App jedoch im Emulator ausführen und für die Anwendungs- und Anzeigeneinheits-ID die [Testmoduswerte](test-mode-values.md) verwenden. Das Debuggen oder Testen der App auf einem Gerät wird nicht unterstützt.  |   Sie können ein **AdControl** oder **AdMediatorControl** zu einem neuen Windows Phone8.1 Silverlight-Projekt hinzufügen. Zum Debuggen oder Testen der App müssen Sie die App jedoch im Emulator ausführen und für die Anwendungs- und Anzeigeneinheits-ID die [Testmoduswerte](test-mode-values.md) verwenden. Das Debuggen oder Testen der App auf einem Gerät wird nicht unterstützt. |
 
 ## <a name="add-the-advertising-assemblies-to-your-project"></a>Hinzufügen der Advertising-Assemblys zum Projekt
 
@@ -31,14 +41,12 @@ Laden Sie zuerst das NuGet-Paket mit den Microsoft Advertising-Assemblys für Wi
 
   * Geben Sie diesen Befehl ein, wenn Ihr Projekt für Windows Phone8.0 bestimmt ist.
 
-      > [!div class="tabbedCodeSnippets"]
       ```syntax
       Install-Package Microsoft.Advertising.WindowsPhone.SL80 -Version 6.2.40501.1
       ```
 
   * Geben Sie diesen Befehl ein, wenn Ihr Projekt für Windows Phone8.1 bestimmt ist.
 
-      > [!div class="tabbedCodeSnippets"]
       ```syntax
       Install-Package Microsoft.Advertising.WindowsPhone.SL81 -Version 8.1.50112
       ```
@@ -50,7 +58,6 @@ Laden Sie zuerst das NuGet-Paket mit den Microsoft Advertising-Assemblys für Wi
 
 1.  Füge Sie in Ihrer Datei „WMAppManifest.xml“ dem Knoten **Funktionen** die folgenden Funktionen hinzu.
 
-  > [!div class="tabbedCodeSnippets"]
   ``` syntax
   <Capability Name="ID_CAP_IDENTITY_USER"/>
   <Capability Name="ID_CAP_MEDIALIB_PHOTO"/>
@@ -59,7 +66,6 @@ Laden Sie zuerst das NuGet-Paket mit den Microsoft Advertising-Assemblys für Wi
 
   In diesem Beispiel sieht Ihr Knoten **Funktionen** wie folgt aus:
 
-  > [!div class="tabbedCodeSnippets"]
   ``` syntax
   <Capabilities>
       <Capability Name="ID_CAP_NETWORKING"/>
@@ -85,14 +91,12 @@ Laden Sie zuerst das NuGet-Paket mit den Microsoft Advertising-Assemblys für Wi
 
 5.  Ändern Sie das Silverlight-Markup in der Datei „MainPage.xaml“, sodass es den **Microsoft.Advertising.Mobile.UI**- Namespace enthält.
 
-  > [!div class="tabbedCodeSnippets"]
   ``` xml
   xmlns:UI="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI"
   ```
 
   Die Kopfzeile Ihrer Seite enthält den folgenden Code:
 
-  > [!div class="tabbedCodeSnippets"]
   ``` xml
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
   xmlns:UI="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI"
@@ -103,7 +107,6 @@ Laden Sie zuerst das NuGet-Paket mit den Microsoft Advertising-Assemblys für Wi
 
   > **Hinweis**&nbsp;&nbsp;Sie ersetzen die Testwerte **ApplicationId** und **AdUnitId** durch Livewerte, bevor Sie Ihre App übermitteln.
 
-  > [!div class="tabbedCodeSnippets"]
   ``` xml
   <Grid x:Name="ContentPanel" Grid.Row="1">
       <UI:AdControl
@@ -122,7 +125,7 @@ Laden Sie zuerst das NuGet-Paket mit den Microsoft Advertising-Assemblys für Wi
 
 ## <a name="release-your-app-with-live-ads-using-dev-center"></a>Veröffentlichen der App mit Live-Werbung mithilfe von Dev Center
 
-1.  Rufen Sie für Ihre App im Dev Center-Dashboard die Seite **Monetarisierung** &gt; **Gewinnbringende Nutzung mit Anzeigen** auf, und [erstellen Sie eine eigenständige Microsoft Advertising-Einheit](../publish/monetize-with-ads.md). Geben Sie als Einheitentyp **Banner** an. Notieren Sie sich die Anzeigeeinheits-ID und die Anwendungs-ID.
+1.  Rufen Sie für Ihre App im Dev Center-Dashboard die Seite **Monetarisierung** &gt; **Gewinnbringende Nutzung mit Anzeigen** auf, und [erstellen Sie eine eigenständige Anzeigeneinheit](../publish/monetize-with-ads.md). Geben Sie als Einheitentyp **Banner** an. Notieren Sie sich die Anzeigeeinheits-ID und die Anwendungs-ID.
 
 2.  Ersetzen Sie in Ihrem Code die Testwerte der Anzeigenheit (**applicationId** und **adUnitId**) mit den Live-Werten, die Sie in Dev Center generiert haben.
 

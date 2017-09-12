@@ -4,60 +4,71 @@ ms.assetid: C2415466-EC59-416E-B6AE-7DA5ED82DCE6
 title: "Kontotypen, Standorte und Gebühren"
 description: "Wir bieten individuelle Konten für Entwickler und Unternehmenskonten für Entwickler in vielen Ländern und Regionen."
 ms.author: wdg-dev-content
-ms.date: 03/07/2017
+ms.date: 08/17/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: 9f6cdace7d619ede77956fb081756e0bc5682e16
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 25ae63638a76df2d064dbbc6334d5793cdadbedf
+ms.sourcegitcommit: de6bc8acec2cd5ebc36bb21b2ce1a9980c3e78b2
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/17/2017
 ---
 # <a name="account-types-locations-and-fees"></a>Kontotypen, Standorte und Gebühren
 
 Wir bieten zwei Entwicklerkontotypen an: individuelle Konten und Unternehmenskonten. Entwicklerkonten werden in vielen [Ländern und Regionen](#developer-account-and-app-submission-markets) angeboten. Mit beiden Kontotypen können Sie Apps im Store veröffentlichen und an weiteren Microsoft-Entwicklerprogrammen teilnehmen.
 
-> **Hinweis**  Mit dem Entwicklerkonto kann immer nur ein einzelnes Microsoft-Konto verknüpft werden – unabhängig davon, ob Sie ein Konto für ein Unternehmen oder für eine Einzelperson erstellen. Stellen Sie beim Registrieren für ein Konto sicher, dass Sie sich mit dem Microsoft-Konto anmelden, das Sie für Ihr Entwicklerkonto verwenden möchten.
+> [!NOTE]
+> Stellen Sie beim Registrieren für ein Konto sicher, dass Sie sich mit dem Microsoft-Konto anmelden, das Sie für Ihr Entwicklerkonto verwenden möchten. Sie haben die Möglichkeit, auch später noch [weitere Benutzer zum Konto hinzuzufügen](manage-account-users.md).
 
-Zu [Beginn des Registrierungsprozesses](http://go.microsoft.com/fwlink/p/?LinkId=615100) müssen Sie entscheiden, ob Sie ein individuelles Konto oder ein Unternehmenskonto erstellen möchten. Beide Arten von Konten ermöglichen die Übermittlung von Apps, Add-Ins und Diensten. Individuelle Konten sind für einzelne Entwickler vorgesehen, die alleine arbeiten. Unternehmenskonten sind für Organisationen und Unternehmen vorgesehen und ermöglichen den Zugriff auf einige zusätzliche App-Funktionen. Unternehmenskonten müssen zusätzlich [geprüft werden](#account-verification), um sicherzustellen, dass Sie für die Einrichtung des Kontos für Ihr Unternehmen autorisiert sind. 
+Zu [Beginn des Registrierungsprozesses](http://go.microsoft.com/fwlink/p/?LinkId=615100) müssen Sie entscheiden, ob Sie ein individuelles Konto oder ein Unternehmenskonto erstellen möchten. Beide Arten von Konten ermöglichen die Übermittlung von Apps, Spielen, Add-Ins und Diensten.
 
-> **Wichtig**  Sie können den Kontotyp nicht mehr ändern, nachdem Sie Ihre Wahl getroffen haben. Achten Sie also darauf, dass Sie den richtigen Typ auswählen.
+Unternehmenskonten sind für Organisationen und Unternehmen vorgesehen und ermöglichen den Zugriff auf einige zusätzliche App-Funktionen. Unternehmenskonten müssen zusätzlich [geprüft werden](#account-verification), um sicherzustellen, dass Sie für die Einrichtung des Kontos für Ihr Unternehmen autorisiert sind. Individuelle Konten sind in der Regel für einzelne Entwickler geeignet, die alleine arbeiten, auch wenn Sie die Option haben, weitere Benutzer den verschiedenen Kontotypen hinzuzufügen.
+
+> [!IMPORTANT]
+> Sie können den Kontotyp nicht mehr ändern, nachdem Sie Ihre Wahl getroffen haben. Achten Sie also darauf, dass Sie den richtigen Typ auswählen.
 
 Im Folgenden sind die grundlegenden Unterschiede zwischen den beiden Kontotypen aufgeführt:
 
 | Einzelkonto | Unternehmenskonto |
 |--------------------|-----------------|
-| <ul><li>Einschränkungen bei der Verwendung bestimmter App-Funktionen</li><li>Kostet ca. 19 US-Dollar (einmalige Registrierungsgebühr; der exakte Betrag variiert je nach Land bzw. Region)</li></ul> | <ul><li>Erfordert die Überprüfung durch Symantec oder Dun & Bradstreet</li><li>Umfassenderer Zugriff auf App-Funktionen</li><li>Erfordert, dass Ihr Unternehmen als solches im Land oder in der Region seiner Niederlassung anerkannt ist</li><li>Kostet ca. 99 US-Dollar (einmalige Registrierungsgebühr; der exakte Betrag variiert je nach Land bzw. Region)</li></ul> |
+| <ul><li>Einschränkungen bei der Verwendung bestimmter App-Funktionen</li><li>Kostet ca. 19 US-Dollar (einmalige Registrierungsgebühr; der exakte Betrag variiert je nach Land bzw. Region)</li></ul> | <ul><li>Erfordert eine bessere Überprüfung des Kontos</li><li>Umfassenderer Zugriff auf App-Funktionen</li><li>Erfordert, dass Ihr Unternehmen als solches im Land oder in der Region seiner Niederlassung anerkannt ist</li><li>Kostet ca. 99 US-Dollar (einmalige Registrierungsgebühr; der exakte Betrag variiert je nach Land bzw. Region)</li></ul> |
 
-Unternehmenskonten sind etwas teurer. Das liegt hauptsächlich daran, dass wir durch einige zusätzliche Schritte sicherstellen, dass Sie von Ihrem Unternehmen autorisiert wurden und zum Einrichten des Kontos berechtigt sind. Unternehmenskonten können auch Apps übermitteln, die zusätzliche [Deklarationen der App-Funktionen](https://msdn.microsoft.com/library/windows/apps/Mt270968) deklarieren.
+Unternehmenskonten sind etwas teurer. Das liegt hauptsächlich daran, dass wir durch einige zusätzliche Schritte sicherstellen, dass Sie von Ihrem Unternehmen autorisiert wurden und zum Einrichten des Kontos berechtigt sind. Unternehmenskonten können auch Apps übermitteln, die zusätzliche [Deklarationen der App-Funktionen](../packaging/app-capability-declarations.md) deklarieren.
 
 Vor allem müssen Sie ein Unternehmenskonto besitzen, um Apps veröffentlichen zu können, in denen die folgenden drei Funktionen verwendet werden:
 
 -   **enterpriseAuthentication**: Verwendet Windows-Anmeldeinformationen für den Zugriff auf ein Unternehmensintranet. Diese Funktion wird normalerweise für Branchen-Apps verwendet, die Verbindungen mit Servern in einem Unternehmen herstellen. (Für die allgemeine Kommunikation über das Internet wird diese Funktion nicht benötigt.)
 -   **sharedUserCertificates**: Ermöglicht einer App den Zugriff auf Software- und Hardwarezertifikate, z.B. auf einer Smartcard gespeicherte Zertifikate. Diese Funktion wird normalerweise für Finanz- und Unternehmens-Apps verwendet, die für die Authentifizierung eine Smartcard erfordern.
--   **documentsLibrary**: Ermöglicht den programmgesteuerten Zugriff auf die Dokumentbibliothek des Benutzers – eingeschränkt auf die im Paketmanifest deklarierten Dateitypzuordnungen. (Diese Funktion muss nicht deklariert werden, um mit der [Dateiauswahl](https://msdn.microsoft.com/library/windows/apps/Hh465174) auf die Dokumente eines Benutzers zugreifen zu können.) Beachten Sie, dass Apps für Windows Phone 8.1 oder eine ältere Version die documentsLibrary-Funktion nicht verwenden können.
+-   **documentsLibrary**: Ermöglicht den programmgesteuerten Zugriff auf die Dokumentbibliothek des Benutzers – eingeschränkt auf die im Paketmanifest deklarierten Dateitypzuordnungen. (Diese Funktion muss nicht deklariert werden, um mit der [Dateiauswahl](../files/quickstart-using-file-and-folder-pickers.md) auf die Dokumente eines Benutzers zugreifen zu können.) Beachten Sie, dass Apps für Windows Phone 8.1 oder eine ältere Version die documentsLibrary-Funktion nicht verwenden können.
 
-> **Hinweis**  Außerdem müssen Sie beim Support eine Genehmigung einholen, um Apps, die die Funktion **documentsLibrary** deklarieren, übermitteln zu können.
+> [!NOTE]
+> Außerdem müssen Sie beim Support eine Genehmigung einholen, um Apps, die die Funktion **documentsLibrary** deklarieren, einreichen zu können.
 
-Ein Unternehmenskonto garantiert nicht, dass Apps, die diese Funktionen nutzen, die Zertifizierung bestehen. Die Funktionen dienen für sehr spezifische Szenarien und sollten für die meisten Apps nicht deklariert werden. Weitere Informationen finden Sie unter [Deklaration der App-Funktionen](https://msdn.microsoft.com/library/windows/apps/Mt270968).
+Ein Unternehmenskonto garantiert nicht, dass Apps, die diese Funktionen nutzen, die Zertifizierung bestehen. Die Funktionen dienen für sehr spezifische Szenarien und sollten für die meisten Apps nicht deklariert werden. Weitere Informationen finden Sie unter [Deklaration der App-Funktionen](../packaging/app-capability-declarations.md).
+
 
 ## <a name="account-verification"></a>Kontobenachrichtigung
 
-Nach Abschluss der Registrierung durchläuft Ihr Konto den Überprüfungsprozess. Bei individuellen Konten wird sichergestellt, dass der Anzeigename für den Herausgeber nicht bereits von einem anderen Unternehmen verwendet wird. Bei Unternehmenskonten überprüfen wir über Symantec oder Dun & Bradstreet, dass Sie zum Erstellen eines Kontos für Ihr Unternehmen autorisiert sind. Dieser Vorgang kann zwischen wenigen Tagen und mehreren Wochen dauern. Häufig erhält Ihr Unternehmen im Rahmen dieses Prozesses einen Telefonanruf. Stellen Sie daher sicher, dass alle Ihre Kontaktinformationen in den Registrierungsformularen aktuell sind. Sie können über ein Unternehmenskonto erst dann Apps einreichen, wenn das Konto überprüft wurde. In der Zwischenzeit können Sie aber [App-Namen reservieren](create-your-app-by-reserving-a-name.md), auf Ihr Windows Dev Center-Dashboard zugreifen und mit dem Erstellen und Testen Ihrer App fortfahren.
+Nach Abschluss der Registrierung durchläuft Ihr Konto den Überprüfungsprozess. Bei individuellen Konten wird sichergestellt, dass der Anzeigename für den Herausgeber nicht bereits von einem anderen Unternehmen verwendet wird. Bei Unternehmenskonten bestätigen unsere Partner Dun & Bradstreet, dass Sie zum Erstellen eines Kontos für Ihr Unternehmen autorisiert sind. Dieser Vorgang kann zwischen wenigen Tagen und mehreren Wochen dauern. Häufig erhält Ihr Unternehmen im Rahmen dieses Prozesses einen Telefonanruf. Stellen Sie daher sicher, dass alle Ihre Kontaktinformationen in den Registrierungsformularen aktuell sind. Sie können über ein Unternehmenskonto erst dann Apps einreichen, wenn das Konto überprüft wurde. In der Zwischenzeit können Sie aber [App-Namen reservieren](create-your-app-by-reserving-a-name.md), auf Ihr Windows Dev Center-Dashboard zugreifen und mit dem Erstellen und Testen Ihrer App fortfahren.
 
 Sie können den Überprüfungsstatus auf der Seite **Kontoeinstellungen** überprüfen. 
+
 
 ## <a name="developer-account-and-app-submission-markets"></a>Märkte für das Entwicklerkonto und die App-Einreichung
 
 Sie können sich für ein Entwicklerkonto registrieren und Apps einreichen, wenn Sie in einem bzw. einer der im Folgenden aufgeführten Länder oder Regionen leben oder geschäftlich tätig sind.
 
-In der folgenden Tabelle entspricht die **Registrierungsgebühr** den aktuellen Kosten für die Registrierung Ihres Entwicklerkontos. Preisänderungen vorbehalten.
+In der folgenden Tabelle entspricht die **Registrierungsgebühr** den aktuellen Kosten für die Registrierung Ihres Entwicklerkontos. Hierbei handelt es sich um eine einmalige Gebühr, es ist keine Verlängerung erforderlich. Beachten Sie, dass die Preise Änderungen unterliegen.
 
-> **Hinweis**  Bei der Registrierung werden sämtliche anwendbaren Steuern und Gebühren zur Registrierungsgebühr addiert. Darüber hinaus erhebt Ihre Bank bei Auszahlungen unter Umständen Gebühren für den Zahlungseingang.
+> [!NOTE]
+> Bei der Anmeldung werden sämtliche anwendbare Steuern und Gebühren zur Registrierungsgebühr addiert. Darüber hinaus erhebt Ihre Bank bei Auszahlungen unter Umständen Gebühren für den Zahlungseingang.
 
 In der Spalte **Auszahlung** wird angegeben, auf welchem Weg Sie das mit Ihren Apps verdiente [Geld von uns erhalten](getting-paid-apps.md). Sie können ein [Auszahlungskonto](setting-up-your-payout-account-and-tax-forms.md) auswählen, auf das wir dieses Geld überweisen.
 
-> **Hinweis**  Für einige Märkte werden kostenpflichtige Apps (**Auszahlung**) nicht unterstützt. In diesen Märkten können nur kostenlose Apps eingereicht werden.
+> [!NOTE]
+> Einige Märkte unterstützen kostenpflichtige Apps (**Auszahlung**) nicht. In diesen Märkten können nur kostenlose Apps eingereicht werden.
 
 In der Spalte **PayPal** wird angegeben, ob PayPal als Zahlungsmethode für Ihr [Auszahlungskonto](setting-up-your-payout-account-and-tax-forms.md) und (und, sofern nichts anderes angegeben, für Ihre Entwicklerkonto-Registrierungsgebühr) unterstützt wird.
 

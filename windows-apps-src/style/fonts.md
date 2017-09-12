@@ -6,14 +6,16 @@ ms.assetid: 1B8B90AD-CDC4-4997-ACDE-871C1E94A929
 label: Fonts
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: 7d72d5251000e16349efa8d4f7716e12d22764d6
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 08f6a712d73c58d3719c0555cda6688b5aa138ab
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="fonts-for-uwp-apps"></a>Schriftarten für UWP-Apps
 
@@ -279,12 +281,12 @@ Obwohl viele dieser Schriftarten auch lateinische Zeichen anbieten.
 </tr>
 <tr class="odd">
 <td align="left" style="font-family: Yu Gothic;">Yu Gothic</td>
-<td align="left">Mittel</td>
-<td align="left"></td>
+<td align="left">Light, normal, Medium, fett</td>
+<td align="left">Verwenden Sie Yu Gothic Medium für Textkörper und ähnlichen Inhalt.</td>
 </tr>
 <tr class="even">
 <td align="left" style="font-family: Yu Gothic UI;">Yu Gothic UI</td>
-<td align="left">Regular</td>
+<td align="left">Light, Semilight, normal, Semibold, fett</td>
 <td align="left">Benutzeroberflächen-Schriftart für Japanisch.</td>
 </tr>
 </tbody>

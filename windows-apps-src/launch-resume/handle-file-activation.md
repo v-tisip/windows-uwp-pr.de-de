@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: b35b8a9dcd6ea23b734de1041d829f620103fa6e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: e05cc939d4a836e2f385a20f63d6ffb2242696db
+ms.sourcegitcommit: 7f03e200ef34f7f24b6f8b6489ecb44aa2b870bc
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/01/2017
 ---
 # <a name="handle-file-activation"></a>Behandeln der Dateiaktivierung
 
@@ -75,13 +77,12 @@ Die obigen Schritte fügen dem Paketmanifest ein [**Extension**](https://msdn.mi
 
 Die Symbole von Apps, die für einen Dateityp zum Standard werden, werden an verschiedenen Stellen innerhalb des Systems angezeigt. Diese Symbole werden z.B. an folgenden Stellen angezeigt:
 
--   ItemsView von Windows Explorer, Kontextmenüs, Menüband
+-   Anzeige der Elemente, Kontextmenüs, Menüband in Windows Explorer
 -   Standardprogramme in der Systemsteuerung
 -   Dateiauswahl
 -   Suchergebnisse auf dem Startbildschirm
 
-Stimmen Sie das Erscheinungsbild des Logos der App-Kachel ab, und verwenden Sie die Hintergrundfarbe der App, anstatt das Symbol transparent darzustellen. Erweitern Sie das Logo bis zum Rand, ohne eine Auffüllung vorzunehmen. Testen Sie Ihre Symbole auf weißem Hintergrund. Beispielsymbole finden Sie unter [Beispiel für Assoziationsstart](http://go.microsoft.com/fwlink/p/?LinkID=620490).
-![Der Projektmappen-Explorer mit einer Ansicht der Dateien im Bildordner. Es gibt Versionen mit 16, 32, 48 und 256 Pixeln für „icon.targetsize“ und „smalltile-sdk“](images/seviewofimages.png)
+Fügen Sie ein 44 x 44-Symbol in das Projekt ein, damit Ihr Logo an diesen Positionen angezeigt werden kann. Stimmen Sie das Erscheinungsbild des Logos der App-Kachel ab, und verwenden Sie die Hintergrundfarbe der App, anstatt das Symbol transparent darzustellen. Erweitern Sie das Logo bis zum Rand, ohne eine Auffüllung vorzunehmen. Testen Sie Ihre Symbole auf weißem Hintergrund. Weitere Einzelheiten zu den Symbolen finden Sie unter [Richtlinien für Kacheln und Symbole](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets).
 
 ## <a name="step-3-handle-the-activated-event"></a>Schritt 3: Behandeln des activated-Ereignisses
 

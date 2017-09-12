@@ -7,14 +7,16 @@ label: Layout panels
 template: detail.hbs
 op-migration-status: ready
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 45c7c541ab278da1f00899a16636337dcdc20d3f
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 55b7c431482b171e56e670cd5d2ce0fc9148a5f9
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="layout-panels"></a>Layoutpanels
 
@@ -91,7 +93,7 @@ Dieser XAML-Code zeigt das Anordnen von Elementen in einem „RelativePanel“.
                RelativePanel.Below="RedRect" 
                RelativePanel.AlignLeftWith="RedRect" 
                RelativePanel.AlignRightWith="BlueRect"/>
-    <Rectangle Fill="Yellow"
+    <Rectangle Fill="Orange"
                RelativePanel.Below="GreenRect" 
                RelativePanel.AlignLeftWith="BlueRect" 
                RelativePanel.AlignRightWithPanel="True"
@@ -106,7 +108,7 @@ Das Ergebnis sieht wie folgt aus.
 Die folgenden Aspekte müssen in Bezug auf das Ändern der Rechtecksgrößen beachtet werden.
 - Das rote Rechteck erhält eine explizite Größe von 44 x 44. Es wird in der oberen linken Ecke des Panels platziert; dies ist die Standardposition.
 - Das grüne Rechteck erhält eine explizite Höhe von 44. Die linke Seite dieses Rechtecks wird auf das rote Rechteck ausgerichtet und die rechte Seite auf das blaue Rechteck, das die Breite bestimmt.
-- Das gelbe Rechteck erhält keine explizite Größe. Seine linke Seite wird auf das blaue Rechteck ausgerichtet. Die rechte und untere Kante werden auf die Kante des Panels ausgerichtet. Die Größe wird durch diese Ausrichtungen bestimmt und ändert sich zusammen mit dem Panel.
+- Das orangefarbene Rechteck erhält keine explizite Größe. Seine linke Seite wird auf das blaue Rechteck ausgerichtet. Die rechte und untere Kante werden auf die Kante des Panels ausgerichtet. Die Größe wird durch diese Ausrichtungen bestimmt und ändert sich zusammen mit dem Panel.
 
 ## <a name="stackpanel"></a>StackPanel
 
@@ -121,7 +123,7 @@ Der folgende XAML-Code veranschaulicht das Erstellen eines vertikalen StackPanel
     <Rectangle Fill="Red" Height="44"/>
     <Rectangle Fill="Blue" Height="44"/>
     <Rectangle Fill="Green" Height="44"/>
-    <Rectangle Fill="Yellow" Height="44"/>
+    <Rectangle Fill="Orange" Height="44"/>
 </StackPanel>
 ```
 
@@ -155,7 +157,7 @@ In diesem XAML-Beispiel wird veranschaulicht, wie Sie ein Rasterelement mit zwei
     <Rectangle Fill="Red" Width="44"/>
     <Rectangle Fill="Blue" Grid.Row="1"/>
     <Rectangle Fill="Green" Grid.Column="1"/>
-    <Rectangle Fill="Yellow" Grid.Row="1" Grid.Column="1"/>
+    <Rectangle Fill="Orange" Grid.Row="1" Grid.Column="1"/>
 </Grid>
 ```
 
@@ -188,7 +190,7 @@ Hier sehen Sie die Verwendung eines VariableSizedWrapGrid-Elements in XAML.
                VariableSizedWrapGrid.RowSpan="2"/>
     <Rectangle Fill="Green" 
                VariableSizedWrapGrid.ColumnSpan="2"/>
-    <Rectangle Fill="Yellow" 
+    <Rectangle Fill="Orange" 
                VariableSizedWrapGrid.RowSpan="2" 
                VariableSizedWrapGrid.ColumnSpan="2"/>
 </VariableSizedWrapGrid>
@@ -216,7 +218,7 @@ Im Folgenden finden Sie ein Beispiel für ein Canvas-Element in XAML.
     <Rectangle Fill="Red" Height="44" Width="44"/>
     <Rectangle Fill="Blue" Height="44" Width="44" Canvas.Left="20" Canvas.Top="20"/>
     <Rectangle Fill="Green" Height="44" Width="44" Canvas.Left="40" Canvas.Top="40"/>
-    <Rectangle Fill="Yellow" Height="44" Width="44" Canvas.Left="60" Canvas.Top="60"/>
+    <Rectangle Fill="Orange" Height="44" Width="44" Canvas.Left="60" Canvas.Top="60"/>
 </Canvas>
 ```
 

@@ -4,30 +4,37 @@ Description: "Bei der Übermittlung eines Add-Ons werden die im Schritt „Store
 title: "Erstellen von Store-Einträgen für Add-Ons"
 ms.assetid: 07178278-A18A-4F73-A660-0047DAAE49B5
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 06/26/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: d27afd09d5805604a09aba91f57b20625df4d95b
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 873e20039d6bd994f5ee3f42822f18c18ded0537
+ms.sourcegitcommit: 8c4d50ef819ed1a2f8cac4eebefb5ccdaf3fa898
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/27/2017
 ---
 # <a name="create-add-on-store-listings"></a>Erstellen von Store-Einträgen für Add-Ons
 
 
 Bei der Übermittlung eines Add-Ons werden die im Schritt **Store-Einträge** angegebenen Informationen den Kunden angezeigt, wenn sie die Option zum Erwerben Ihres Add-Ons sehen. Verfassen Sie die Informationen zu den Store-Einträgen mit besonderer Sorgfalt, um den Kunden das Add-On in ansprechender Weise zu präsentieren. Sie können angepasste Store-Einträge für verschiedene Sprachen bereitstellen.
 
-## <a name="languages"></a>Sprachen
+> [!TIP]
+> Sie können ebenfalls für Ihr Add-Ons [Store-Einträge importieren oder exportieren](import-and-export-store-listings.md), wenn Sie Ihre Eintragsinformationen offline in eine CSV-Datei eingeben möchten, anstatt diese Informationen direkt im Dashboard anzugeben. Dies kann besonders dann hilfreich sein, wenn Sie Einträge in viele Sprachen erstellen.
 
 
-Bevor Sie Informationen zu den Store-Einträgen eingeben können, müssen Sie mindestens eine [Sprache](supported-languages.md) angeben. Es wird empfohlen, für jede von der App unterstützte Sprache Store-Einträge anzugeben.
+## <a name="store-listing-languages"></a>Sprachen für Store-Einträge
 
-Klicken Sie im Abschnitt **Store-Eintrag** der Add-On-Übermittlung auf **Manage Store listing languages**, und klicken Sie auf der nächsten Seite auf **Manage languages**. Aktivieren Sie die Kontrollkästchen für die Sprachen, die Sie hinzufügen möchten, und klicken Sie dann auf **Aktualisieren**. Die ausgewählten Sprachen werden im Abschnitt **Store listing languages** der Seite angezeigt. Klicken Sie zum Entfernen einer oder mehrerer dieser Sprachen auf **Entfernen** (oder klicken Sie auf **Manage languages**, und deaktivieren Sie die Kontrollkästchen für die Sprachen, die Sie entfernen möchten). Klicken Sie auf **Speichern**, wenn Sie mit der Liste der Sprachen zufrieden sind.
+Bevor Sie Informationen zu den Store-Einträgen eingeben können, müssen Sie mindestens eine [Sprache](supported-languages.md) angeben. Sie müssen die Seite **Store-Eintrag** für mindestens eine Sprache ausfüllen. Es wird empfohlen, für jede von der App unterstützte Sprache Store-Einträge anzugeben.
 
-> **Tipp** Klicken Sie zum Hinzufügen und Entfernen zusätzlicher Sprachen in der Add-On-Übermittlungsübersicht auf**Manage Store listing languages**.
+Klicken Sie im Abschnitt **Store-Eintrag** der Add-On-Übermittlung auf **Sprachen hinzufügen/entfernen**, und klicken Sie auf der nächsten Seite auf **Manage languages**. Aktivieren Sie die Kontrollkästchen für die Sprachen, die Sie hinzufügen möchten, und klicken Sie dann auf **Aktualisieren**. Die ausgewählten Sprachen werden im Abschnitt **Store listing languages** der Seite angezeigt.
 
-Klicken Sie zum Bearbeiten eines Store-Eintrags auf den Namen der Sprache in der Add-On-Übermittlungsübersicht. Die Informationen, die Sie für jede Sprache eingeben können, werden im Folgenden beschrieben.
+Klicken Sie zum Entfernen einer Sprache auf **Entfernen** (oder klicken Sie auf **Manage languages**, und deaktivieren Sie die Kontrollkästchen für die Sprachen, die Sie entfernen möchten). 
+
+Wenn Sie Ihre Auswahl getroffen haben, klicken Sie auf **Speichern**, um zur Übermittlungsübersicht zurückzukehren.
+
+Klicken Sie zum Bearbeiten eines Store-Eintrags auf den Namen der Sprache in der Add-On-Übermittlungsübersichtsseite. Die Informationen, die Sie für jede Sprache eingeben können, werden im Folgenden beschrieben.
 
 ## <a name="title"></a>Titel
 

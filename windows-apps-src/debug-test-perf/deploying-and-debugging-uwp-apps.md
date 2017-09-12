@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: PatrickFarley
 ms.assetid: 9322B3A3-8F06-4329-AFCB-BE0C260C332C
 description: "Dieser Artikel führt Sie Schritt für Schritt durch die Ausrichtung Ihrer Apps auf verschiedene Bereitstellungs- und Debugziele."
 title: Bereitstellen und Debuggen von UWP (Universelle Windows-Plattform)-Apps
-ms.author: markl
+ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows10, uwp, debuggen, testen, leistung
-ms.openlocfilehash: 6f399136be121288dcff4b482f9e022fc0323181
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 2d4f49b0b9756162a22adf5c52910102d4a37281
+ms.sourcegitcommit: e8cc657d85566768a6efb7cd972ebf64c25e0628
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/26/2017
 ---
 # <a name="deploying-and-debugging-uwp-apps"></a>Bereitstellen und Debuggen von UWP-Apps
 
@@ -70,7 +72,7 @@ Um zu diesem Dialogfeld zurückzukehren, können Sie die Projekteigenschaften ö
 
 ![Registerkarte „Debuggen“](images/debug-remote-machine-config.png)
 
-Wenn Sie eine App auf einem Remote-PC bereitstellen, müssen Sie auch die Visual Studio-Remotetools auf den Ziel-PC herunterladen und dort installieren. Eine vollständige Anleitung finden Sie unter [Anweisungen zu Remote-PCs](#remote-pc-instructions).
+Wenn Sie eine App auf einem Remote-PC bereitstellen möchten, der noch nicht das Creators-Update enthält, müssen Sie auch die Visual Studio-Remotetools auf den Ziel-PC herunterladen und dort installieren. Eine vollständige Anleitung finden Sie unter [Anweisungen zu Remote-PCs](#remote-pc-instructions).  Ab dem Creators Update unterstützt ein PC auch Remotebereitstellung.  
 
 ### <a name="c-and-javascript"></a>C++ und JavaScript
 
@@ -86,7 +88,10 @@ Nachdem der Computer angegeben wurde, können Sie in der Dropdownliste mit Debug
 
 ### <a name="remote-pc-instructions"></a>Anweisungen für Remote-PCs
 
-Für die Bereitstellung auf einem Remote-PC müssen auf dem Ziel-PC die Visual Studio-Remotetools installiert sein. Außerdem muss auf dem Remote-PC eine Version von Windows ausgeführt werden, die höher oder gleich der Version ist, die in der Eigenschaft **Mindestversion der Zielplattform** Ihrer App festgelegt wurde. Nachdem Sie die Remotetools installiert haben, müssen Sie den Remotedebugger auf dem Ziel-PC starten.
+> [!NOTE]
+> Diese Anleitung ist nur für ältere Versionen von Windows10 erforderlich.  Ab dem Creators-Update kann ein PC wie eine Xbox behandelt werden.  Dazu müssen Sie die Geräteerkennung im PC-Entwicklermodusmenü aktivieren und die universelle Authentifizierung für PIN-Kopplung und Verbindung mit dem PC verwenden. 
+
+Für die Bereitstellung auf einem Remote-PC, der noch nicht das Creators-Update enthält, müssen auf dem Ziel-PC die Remotetools für Visual Studio installiert sein. Außerdem muss auf dem Remote-PC eine Version von Windows ausgeführt werden, die höher oder gleich der Version ist, die in der Eigenschaft **Mindestversion der Zielplattform** Ihrer App festgelegt wurde. Nachdem Sie die Remotetools installiert haben, müssen Sie den Remotedebugger auf dem Ziel-PC starten.
 
 Suchen Sie dazu im Menü **Start** nach **Remotedebugger**, öffnen Sie den Debugger, und erlauben Sie ihm die Konfiguration Ihrer Firewalleinstellungen, wenn Sie dazu aufgefordert werden. Standardmäßig wird der Debugger mit Windows-Authentifizierung gestartet. Somit werden die Benutzeranmeldeinformationen benötigt, falls der angemeldete Benutzer nicht auf beiden PCs identisch ist.
 
@@ -94,13 +99,31 @@ Um die Einstellung in **Keine Authentifizierung** zu ändern, wechseln Sie unter
 
 Weitere Informationen finden Sie im [Visual Studio Download Center](https://www.visualstudio.com/downloads/).
 
+## <a name="passing-command-line-debug-arguments"></a>Übergeben von Debugargumenten in der Befehlszeile 
+In Visual Studio2017 können Sie beim Starten des Debuggens von UWP-Anwendungen Debugargumente in der Befehlszeile übergeben. Sie können auf die Debugargumente für die Befehlszeile mit dem *Args*-Parameter in der **OnLaunched**-Methode der [**Application**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.application)-Klasse zugreifen. Öffnen Sie die Projekteigenschaften, und navigieren Sie zur Registerkarte **Debuggen**, um Debugargumente für die Befehlszeile anzugeben. 
+
+> [!NOTE]
+> Diese Registerkarte ist in Visual Studio2017 (Version 15.1) für C#, VB und C++ verfügbar. JavaScript ist in neueren Versionen von Visual Studio2017 verfügbar. Debugargumente in der Befehlszeile sind für alle Bereitstellungstypen mit Ausnahme des Simulators verfügbar.
+
+Für C#- und VB-UWP-Projekte wird das Feld **Befehlszeilenargumente:** unter **Startoptionen** angezeigt. 
+
+![Befehlszeilenargumente](images/command-line-arguments.png)
+
+Für C++- und JS-UWP-Projekte wird das Feld **Befehlszeilenargumente** in den **Debugeigenschaften** angezeigt.
+
+![C++- und JS-Befehlszeilenargumente](images/command-line-arguments-cpp.png)
+
+Nach dem Festlegen der Befehlszeilenargumente können Sie auf den Wert des Arguments in der **OnLaunched**-Methode der App zugreifen. Die *Args* des [**LaunchActivatedEventArgs**](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs)-Objekts enthalten die **Arguments**-Eigenschaft, deren Wert auf den Text im Feld **Befehlszeilenargumente** festgelegt ist. 
+
+![C++- und JS-Befehlszeilenargumente](images/command-line-arguments-debugging.png)
+
 ## <a name="authentication-modes"></a>Authentifizierungsmodi
 
 Für die Bereitstellung auf Remotecomputern gibt es drei Authentifizierungsmodi:
 
-- **Universell (unverschlüsseltes Protokoll)**: Verwenden Sie diesen Authentifizierungsmodus bei der Bereitstellung auf einem Remotegerät, sofern es sich dabei nicht um einen Windows-PC (Desktop oder Laptop) handelt. Derzeit können dies IoT-, Xbox- oder HoloLens Geräte sein. „Universell (unverschlüsseltes Protokoll)“ sollte nur in vertrauenswürdigen Netzwerken verwendet werden. Die Debuggingverbindung ist anfällig für böswillige Benutzer, die zwischen dem Entwicklungs- und dem Remotecomputer übertragene Daten abfangen und manipulieren könnten.
-- **Windows**: Dieser Authentifizierungsmodus sollte nur für die Bereitstellung auf Remote-PCs (Desktop oder Laptop) verwendet werden. Verwenden Sie diesen Authentifizierungsmodus, wenn Sie Zugriff auf die Anmeldeinformationen des beim Zielcomputer angemeldeten Benutzers haben. Dies ist der sicherste Kanal für die Remotebereitstellung.
-- **Keine**: Dieser Authentifizierungsmodus sollte nur für die Bereitstellung auf Remote-PCs (Desktop oder Laptop) verwendet werden. Verwenden Sie diese Authentifizierungsmoduseinstellung, wenn Sie einen Testcomputer in einer Umgebung eingerichtet haben, bei der die Anmeldung über ein Testkonto erfolgte und keine Anmeldeinformationen eingegeben werden können. Die Remotedebuggereinstellungen müssen so festgelegt sein, dass sie den Modus „Keine Authentifizierung“ akzeptieren.
+- **Universell (unverschlüsseltes Protokoll)**: Verwenden Sie diesen Authentifizierungsmodus bei der Bereitstellung auf einem Remotegerät. Derzeit können dies IoT-, Xbox- und HoloLens-Geräte sein oder PCs mit Creators-Update (oder neuer). „Universell (unverschlüsseltes Protokoll)“ sollte nur in vertrauenswürdigen Netzwerken verwendet werden. Die Debuggingverbindung ist anfällig für böswillige Benutzer, die zwischen dem Entwicklungs- und dem Remotecomputer übertragene Daten abfangen und manipulieren könnten.
+- **Windows**: Dieser Authentifizierungsmodus sollte nur für die Bereitstellung auf Remote-PCs (Desktop oder Laptop) verwendet werden, auf denen die Remotetools für Visual Studio ausgeführt werden. Verwenden Sie diesen Authentifizierungsmodus, wenn Sie Zugriff auf die Anmeldeinformationen des beim Zielcomputer angemeldeten Benutzers haben. Dies ist der sicherste Kanal für die Remotebereitstellung.
+- **Ohne**: Dieser Authentifizierungsmodus sollte nur für die Bereitstellung auf Remote-PCs (Desktop oder Laptop) verwendet werden, auf denen die Remotetools für Visual Studio ausgeführt werden. Verwenden Sie diese Authentifizierungsmoduseinstellung, wenn Sie einen Testcomputer in einer Umgebung eingerichtet haben, bei der die Anmeldung über ein Testkonto erfolgte und keine Anmeldeinformationen eingegeben werden können. Die Remotedebuggereinstellungen müssen so festgelegt sein, dass sie den Modus „Keine Authentifizierung“ akzeptieren.
 
 ## <a name="advanced-remote-deployment-options"></a>Erweiterte Remotebereitstellungsoptionen
 Mit der Veröffentlichung von Visual Studio2015 Update3 und Windows10 Anniversary Update sind neue erweiterte Remotebereitstellungsoptionen für bestimmte Windows 10-Geräte verfügbar. Die erweiterten Optionen für Remotebereitstellung finden Sie im Menü **Debuggen** für die Projekteigenschaften.
@@ -113,8 +136,8 @@ Zu den neuen Eigenschaften zählen:
 ### <a name="requirements"></a>Anforderungen
 Um die erweiterten Remotebereitstellungsoptionen verwenden zu können, müssen folgende Anforderungen erfüllt sein:
 * Visual Studio2015 Update3 muss mit Windows10 Tools1.4.1 (einschließlich des Windows10 Anniversary Update-SDKs) installiert sein.
-* Ziel muss ein Windows10 Anniversary Update-Xbox-Remotegerät sein
-* Verwenden des universellen Authentifizierungsmodus
+* Ziel ist ein Xbox-Remotegerät mit Windows10 Anniversary Update oder ein PC mit Windows10 Creators Update. 
+* Der universelle Authentifizierungsmodus muss verwendet werden.
 
 ### <a name="properties-pages"></a>Eigenschaftenseiten
 Bei einer C#- oder Visual Basic-UWP-App wird die Eigenschaftenseite wie folgt aussehen.
@@ -131,10 +154,10 @@ Mit **Dateien auf Gerät kopieren** werden die Dateien über das Netzwerk physis
 Der beim **Kopieren von Dateien auf das Gerät** angegebene **Paketregistrierungspfad** ist der physische Speicherort auf dem Remotegerät, auf das die Dateien kopiert werden. Dieser Pfad kann als beliebiger relativer Pfad angegeben werden. Der Speicherort, an dem die Dateien bereitgestellt werden, ist relativ zum Stammverzeichnis der Entwicklungsdateien und daher je nach Zielgerät unterschiedlich. Es ist sinnvoll, diesen Pfad anzugeben, wenn mehrere Entwickler ein Gerät verwenden und an Paketen mit identischer Build-Abweichung arbeiten.
 
 > [!NOTE]
-> **Dateien auf Gerät kopieren** wird derzeit für Xbox unter Windows10 Anniversary Update unterstützt.
+> **Dateien auf Gerät kopieren** wird derzeit für Xbox mit Windows10 Anniversary Update und PCs mit Windows 10 Creators Update unterstützt.
 
-Auf dem Remotegerät wird das Layout je nach Gerätefamilie an folgenden Standardspeicherort kopiert:
-  `Xbox: \\MY-DEVKIT\DevelopmentFiles\PACKAGE-REGISTRATION-PATH`
+Auf dem Remotegerät wird das Layout an folgenden Standardspeicherort kopiert:
+  `\\MY-DEVKIT\DevelopmentFiles\PACKAGE-REGISTRATION-PATH`
 
 ### <a name="register-layout-from-network"></a>Registrieren des Layouts über das Netzwerk
 Wenn Sie das Layout über das Netzwerk registrieren möchten, können Sie ein Paketlayout für eine Netzwerkfreigabe erstellen, um anschließend das Layout auf dem Remotegerät direkt über das Netzwerk zu registrieren. Hierzu müssen Sie einen Ordnerpfad für das Layout (eine Netzwerkfreigabe) angeben, auf den vom Remotegerät aus zugegriffen werden kann. Die Eigenschaft **Layout Ordnerpfad** ist der relative Pfad zum Visual Studio-PC, während es sich bei der Eigenschaft **Paketregistrierungspfad** um denselben Pfad handelt, der jedoch relativ zum Remotegerät angegeben wurde.
@@ -156,10 +179,10 @@ Wenn Sie das Layout zunächst über das Netzwerk registrieren, werden Ihre Anmel
 Beim Registrieren des Geräts über das Netzwerk können Sie **Alle Dateien auf dem Gerät beibehalten** nicht auswählen, da keine Dateien physisch auf das Remotegerät kopiert werden.
 
 > [!NOTE]
-> **Layout über das Netzwerk registrieren** wird derzeit für Xbox unter Windows10 Anniversary Update unterstützt.
+> **Registrieren des Layouts über das Netzwerk** wird derzeit für Xbox mit Windows10 Anniversary Update und PCs mit Windows 10 Creators Update unterstützt.
 
-Auf dem Remotegerät wird das Layout je nach Gerätefamilie an folgendem Standardspeicherort registriert:
-  `Xbox: \\MY-DEVKIT\DevelopmentFiles\XrfsFiles`
+Auf dem Remotegerät wird das Layout je nach Gerätefamilie am folgenden Standardspeicherort registriert:   `Xbox: \\MY-DEVKIT\DevelopmentFiles\XrfsFiles` -– Hierbei handelt es sich um einen symbolischen Link zum **Paketregistrierungspfad**
+  PC verwendet keinen symbolischen Link, sondern registriert den **Paketregistrierungspfad** direkt
 
 
 ## <a name="debugging-options"></a>Debugoptionen

@@ -1,22 +1,25 @@
 ---
 author: jnHs
-Description: "Im Folgenden finden Sie wichtige Informationen, mit deren Hilfe Sie sicherstellen können, dass Sie für Ihre Apps, Ihre In-App-Produkte (IAPs) und Ihren Microsoft Advertising-Verdienst bezahlt werden"
+Description: "Im Folgenden finden Sie wichtige Informationen, mit deren Hilfe Sie sicherstellen können, dass Sie für Ihre Apps, Ihre In-App-Produkte (IAPs) und Ihre Einnahmen aus Werbung bezahlt werden."
 title: Bezahlung
 ms.assetid: 37D1EF45-C4A8-4849-8819-3D4A4898215C
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 06/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: c27e06491b66fea4f451b70309a9a8c3802aff18
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: eae4c71366da0aa4b2be3ce722bfd0e3273ccf0a
+ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/21/2017
 ---
 # <a name="getting-paid"></a>Bezahlung
-Im Folgenden finden Sie wichtige Informationen, mit deren Hilfe Sie sicherstellen können, dass Sie für Ihre Apps, Add-Ons und Ihren Microsoft Advertising-Verdienst bezahlt werden.
+Im Folgenden finden Sie wichtige Informationen, mit deren Hilfe Sie sicherstellen können, dass Sie für Ihre Apps, Add-Ons und Ihren Advertising-Verdienst bezahlt werden.
 
-> **Wichtig**  Bevor Sie Geld aus App-Verkäufen im WindowsStore erhalten können, müssen Sie [Ihr Auszahlungskonto einrichten und die erforderlichen Steuerformulare ausfüllen](setting-up-your-payout-account-and-tax-forms.md).
+> [!IMPORTANT]
+> Bevor Sie Geld aus App-Verkäufen im WindowsStore erhalten können, müssen Sie [Ihr Auszahlungskonto einrichten und die erforderlichen Steuerformulare ausfüllen](setting-up-your-payout-account-and-tax-forms.md).
 
 ## <a name="store-fee"></a>Store-Gebühr
 
@@ -28,11 +31,14 @@ Die WindowsStore-Gebühr gilt für alle vom WindowsStore erfassten App-Verkäufe
 
 ## <a name="price-tiers"></a>Preisniveaus
 
-Das Preisniveau bestimmt den Verkaufspreis in allen Ländern, in denen Sie Ihre App vertreiben möchten. Sie können die App kostenlos anbieten oder einen Preis auswählen, den Kunden zahlen müssen, um die App zu erwerben. Das Preisniveau beginnt bei 0,99USD und steigen schrittweise (1,29USD, 1,49USD, 1,99USD usw.). Die Schritte zwischen den Preisniveaus werden mit der Höhe des Preises größer.
+Das Preisniveau bestimmt den [Verkaufspreis](set-and-schedule-app-pricing.md#base-price) in allen Ländern, in denen Sie Ihre App vertreiben möchten. Sie können auch zusätzliche Preis-Features verwenden, wie z.B. [um in verschiedenen Märkten unterschiedliche Preise zu verlangen](set-and-schedule-app-pricing.md#customize-pricing-for-specific-markets) oder [Ihre App zum Erwerb anbieten](put-apps-and-add-ons-on-sale.md).
 
-> **Hinweis**  Diese Preisniveaus gelten auch für alle Add-Ons, die Sie in der App anbieten.
+Sie können die App kostenlos anbieten oder einen Preis auswählen, den Kunden zahlen müssen, um die App zu erwerben. Das Preisniveau beginnt bei 0,99USD und steigen schrittweise (1,09USD, 1,19USD, usw.). Die Schritte zwischen den Preisniveaus werden mit der Höhe des Preises größer.
 
-Jedes Preisniveau hat einen entsprechenden Wert in jeder der über 60vom Store angebotenen Währungen. Diese Werte sollten Ihnen helfen, Ihre Apps weltweit zu vergleichbaren Preisen zu verkaufen. Aufgrund von Wechselkursschwankungen kann der genaue Verkaufsbetrag von Währung zu Währung jedoch geringfügig abweichen.
+> [!NOTE] 
+> Diese Preisniveaus gelten auch für alle Add-Ons, die Sie in der App anbieten.
+
+Jedes Preisniveau hat einen entsprechenden Wert in jeder vom Store angebotenen Währungen. Diese Werte sollten Ihnen helfen, Ihre Apps weltweit zu vergleichbaren Preisen zu verkaufen. Aufgrund von Wechselkursschwankungen kann der genaue Verkaufsbetrag von Währung zu Währung jedoch geringfügig abweichen.
 
 Beachten Sie, dass das von Ihnen ausgewählte Preisniveau u. U. eine Verkaufs- oder Mehrwertsteuer enthält, die Kunden bezahlen müssen. Weitere Informationen finden Sie unter [Steuerinformationen zu kostenpflichtigen Apps](tax-details-for-paid-apps.md).
 
@@ -52,7 +58,8 @@ Um Ihre Zahlungen zu sperren, wechseln Sie zu **Kontoeinstellungen**. Setzen Sie
 
 Nachdem Sie die Auszahlungssperre auf **Ein** festgelegt haben, werden alle Auszahlungen gesperrt, bis Sie den Schieberegler wieder auf **Aus** setzen. Dann werden Sie im nächsten monatlichen Auszahlungszyklus berücksichtigt (vorausgesetzt, der entsprechende Zahlungsschwellenwert wurde erreicht). Wenn Sie zum Beispiel Ihre Auszahlungen gesperrt haben, aber eine Auszahlung im Juni generieren möchten, sollten Sie die Auszahlungssperre noch vor Ende Mai auf **Aus** setzen.
 
-> **Wichtig** Die festgelegte Option für **Auszahlungssperre** gilt für **alle** Umsatzquellen, die über Windows Dev Center (Windows Store, Microsoft Advertising, Azure Marketplace usw.) bezahlt werden. Es ist nicht möglich, für jede Umsatzquelle eine separate Option für die Auszahlungssperre festzulegen.
+> [!NOTE]
+> Die festgelegte Option für **Auszahlungssperre** gilt für **alle** Umsatzquellen, die über Windows Dev Center (Windows Store, Microsoft Advertising, Azure Marketplace usw.) bezahlt werden. Es ist nicht möglich, für jede Umsatzquelle eine separate Option für die Auszahlungssperre festzulegen.
 
 
  

@@ -11,14 +11,19 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 81d3a37103f1dcea6b68850d163fa5cc9aded5bc
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 52a8a309758a02db072de5f8050b4e7183ff629d
+ms.sourcegitcommit: c519e3d34bef37f87bb44f02b295187849bb5eea
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/25/2017
 ---
 # <a name="store-and-retrieve-windows-ink-stroke-data"></a>Speichern und Abrufen der Daten zu Windows Ink-Strichen
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 UWP-Apps, die Windows Ink unterstützen, können Freihandstriche in eine serialisierte Freihandformatdatei (Ink Serialized Format-Datei, ISF-Datei) serialisieren und aus dieser deserialisieren. Die ISF-Datei ist eine GIF-Bild mit zusätzlichen Metadaten für alle Eigenschaften und Verhaltensweisen von Freihandstrichen. Apps ohne Unterstützung der Freihandeingabe können das statische GIF-Bild, einschließlich Alphakanal-Hintergrundtransparenz, anzeigen.
+
+> [!NOTE]
+> Bei ISF handelt es sich um die kompakteste permanente Freihanddarstellung. Sie kann in ein binäres Dokumentformat, z.B. in eine GIF-Datei, eingebettet oder direkt in der Zwischenablage platziert werden.
 
 <div class="important-apis" >
 <b>Wichtige APIs</b><br/>
@@ -28,9 +33,6 @@ UWP-Apps, die Windows Ink unterstützen, können Freihandstriche in eine seriali
 </ul>
 </div>
 
-
-> [!NOTE]
-> Bei ISF handelt es sich um die kompakteste permanente Freihanddarstellung. Sie kann in ein binäres Dokumentformat, z.B. in eine GIF-Datei, eingebettet oder direkt in der Zwischenablage platziert werden.
 
  
 
@@ -149,7 +151,7 @@ public MainPage()
                 }
                 else
                 {
-                    // File couldn&#39;t be saved.
+                    // File couldn't be saved.
                 }
             }
             // User selects Cancel and picker returns null.
@@ -437,15 +439,12 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
 * [Zeichen- und Eingabestiftinteraktionen](pen-and-stylus-interactions.md)
 
 **Beispiele**
-* [Freihandbeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620308)
-* [Einfaches Freihandbeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620312)
-* [Komplexes Freihandbeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [Einfaches Freihandbeispiel (C#/C++)](http://go.microsoft.com/fwlink/p/?LinkID=620312)
+* [Komplexes Freihandbeispiel (C++)](http://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [Freihandbeispiel (JavaScript)](http://go.microsoft.com/fwlink/p/?LinkID=620308)
+* [Lernprogramm „Erste Schritte:” Unterstützen von Freihandeingaben in Ihrer UWP-App](https://aka.ms/appsample-ink)
 * [Malbuchbeispiel](https://aka.ms/cpubsample-coloringbook)
 * [Familiennotizbeispiel](https://aka.ms/cpubsample-familynotessample)
-
-
- 
-
 
 
 

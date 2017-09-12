@@ -8,15 +8,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.assetid: 0cfa8e22-7345-47b7-b132-880bbc050d44
-ms.openlocfilehash: c7bf5db6eb7a624766438c60067c311b9e137138
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: fb896ed67b79e97b504be0253081a4c29ee5fcc9
+ms.sourcegitcommit: de6bc8acec2cd5ebc36bb21b2ce1a9980c3e78b2
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/17/2017
 ---
 # <a name="xbox-best-practices"></a>Bewährte Methoden für Xbox
 Standardmäßig können UWP-Apps auf Xbox One ohne zusätzlichen Aufwand von Ihrer Seite ausgeführt werden. Wenn Sie Ihre Kunden allerdings mit Ihrer App beeindrucken möchten und mit den besten Apps auf Xbox konkurrieren möchten, sollten Sie die folgenden bewährten Methoden anwenden.
   > [!NOTE]
   > Bevor Sie beginnen, sehen Sie sich die Entwurfsrichtlinien in [Entwerfen für Xbox und Fernsehgeräte](../input-and-devices/designing-for-tv.md) an.   
+
 
 ## <a name="to-build-the-best-experiences-for-xbox-one"></a>So erzielen Sie optimale Ergebnisse für Xbox One
 
@@ -26,7 +28,7 @@ Xbox-Benutzer lieben ihren Controller. Deaktivieren Sie zur Optimierung der Cont
 ### <a name="do-draw-a-focus-rectangle-that-is-appropriate-for-a-10-foot-experience"></a>*Empfohlen:* Ziehen Sie ein Fokusrechteck, das für einen Abstand von 3m geeignet ist
 Die meisten Xbox-Nutzer sitzen im Wohnzimmer am Fernseher. Denken Sie also daran, dass das Standard-Fokusrechteck aus 3m Entfernung schwer zu erkennen ist. Um sicherzustellen, dass das UI-Element mit dem Eingabefokus jederzeit deutlich für die Nutzer sichtbar ist, befolgen Sie die Richtlinien zur [Fokusanzeige](../input-and-devices/designing-for-tv.md#focus-visual). In XAML erhalten Sie dieses Verhalten automatisch, wenn Ihre App auf Xbox ausgeführt wird, aber für HTML-Apps ist eine benutzerdefinierte CSS-Formatvorlage erforderlich.
 
-###    <a name="do-integrate-with-the-systemmediatransportcontrols-class"></a>*Empfohlen:* Integration in die SystemMediaTransportControls-Klasse 
+### <a name="do-integrate-with-the-systemmediatransportcontrols-class"></a>*Empfohlen:* Integration in die SystemMediaTransportControls-Klasse 
 Xbox-Benutzer möchten Medien-Apps mit der Xbox-Medienfernbedienung Cortana (insbesondere mit den Sprachbefehlen „Wiedergabe“ und „Anhalten“) und mit Xbox SmartGlass steuern. Diese Features erhalten Sie automatisch, wenn in Ihren Apps die [SystemMediaTransportControls](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.systemmediatransportcontrols.aspx)-Klasse verwendet wird, die automatisch in den Xbox-Mediensteuerelementen enthalten ist. Wenn in Ihrer App benutzerdefinierte Mediensteuerelemente verwendet werden, stellen Sie sicher, dass diese in die **SystemMediaTransportControls**-Klasse integriert werden, damit diese Features für Ihre Nutzer bereitstehen. Wenn Sie eine App mit Hintergrundmusik erstellen, integrieren Sie die **SystemMediaTransportControls**-Klasse, um sicherzustellen, dass die Hintergrundmusik-Steuerelemente in der Xbox-Multitasking-Registerkarte richtig funktionieren.
 
 ### <a name="do-use-adaptive-ui-to-account-for-snapped-apps"></a>*Empfohlen:* Berücksichtigung von angedockten Apps durch Verwendung einer adaptiven Benutzeroberfläche
@@ -37,11 +39,18 @@ Viele Fernseher schneiden das Bild an den Bildschirmrändern ab. Daher sollte de
 > [!IMPORTANT]
   > Wenn Sie Overscan deaktivieren, müssen Sie selbst sicherstellen, dass interaktive Elemente und Text innerhalb des fernsehsicheren Bereichs bleiben. 
 
-###    <a name="consider-use-tv-safe-colors"></a>*Beachten:* Verwenden von fernsehsicheren Farben 
+### <a name="consider-use-tv-safe-colors"></a>*Beachten:* Verwenden von fernsehsicheren Farben 
 Fernsehgeräte gehen mit hohen Farbintensitäten nicht so gut wie Computermonitore um. Vermeiden Sie in Ihren Apps Farben mit hoher Intensität, damit die Benutzer keine merkwürdigen Bandeffekte und keine verwaschenen Bilder sehen. Beachten Sie auch, dass Unterschiede zwischen Fernsehern dazu führen können, dass Farben, die auf *Ihrem* Fernseher gut aussehen, für Ihre Benutzer völlig anders aussehen können. Lesen Sie [TV-Farben](../input-and-devices/designing-for-tv.md#colors), um zu erfahren, wie Ihre App für alle toll aussieht.
 
 ### <a name="remember-you-can-disable-scaling"></a>*Denken Sie daran:* Die Skalierung kann deaktiviert werden.
 UWP-Apps werden automatisch skaliert, um sicherzustellen, dass Elemente der Benutzeroberfläche wie Steuerelemente und Schriftarten auf allen Geräten lesbar sind. XAML-Apps werden auf 200%, skaliert, während HTML-Apps auf 150% skaliert werden. Wenn Sie eine bessere Kontrolle über das Aussehen Ihrer App auf der Xbox möchten, deaktivieren Sie den Standardskalierungsfaktor und verwenden Sie die tatsächliche Pixelanzahl eines HDTV-Geräts (1920 x 1080). Sehen Sie sich [So wird's gemacht: Deaktivieren der Skalierung](disable-scaling.md) und [Effektive Pixel und Skalierung](../layout/design-and-ui-intro.md#effective-pixels-and-scaling) an, um Informationen zum Anpassen Ihrer App für die Xbox zu erhalten.
+
+
+Wenn Sie erfahren möchten, wie diese Methoden auf eine UWP-App angewendet werden, sollten Sie sich dieses Video ansehen!
+</br>
+</br>
+<iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Tailoring-your-UWP-app-for-Xbox/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
+
 
 ## <a name="channel-9"></a>Channel9
 Die folgenden Gespräche auf [Channel 9](https://channel9.msdn.com/) sind eine hervorragende Informationsquelle für beeindruckende Apps auf Xbox:

@@ -5,21 +5,29 @@ title: Aktualisieren durch Ziehen
 label: Pull-to-refresh
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
 ms.assetid: aaeb1e74-b795-4015-bf41-02cb1d6f467e
-ms.openlocfilehash: 0d10a0c7f269cc6c7d0b2e9476a926226fe94f82
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: predavid
+design-contact: kimsea
+dev-contact: stpete
+doc-status: Published
+ms.openlocfilehash: 51a8c9a2e4618e054374308918a74cf2095119ef
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="pull-to-refresh"></a>Aktualisierung durch Ziehen
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Dank des Musters „Aktualisierung durch Ziehen“ können Benutzer aktuelle Daten in einer Liste durch das Ausführen einer Ziehbewegung von oben nach unten auf der Liste abrufen. Die Aktualisierung durch Ziehen wird häufig in mobilen Apps verwendet, eignet sich jedoch für alle Geräte mit Touchscreen. Durch die Behandlung von [Manipulationsereignissen](../input-and-devices/touch-interactions.md#manipulation-events) können Sie die Aktualisierung durch Ziehen in eine App implementieren.
+
+> **Wichtige APIs**: [ListView-Klasse](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx), [GridView-Klasse](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx)
 
 Im [Beispiel für die Aktualisierung durch Ziehen](http://go.microsoft.com/fwlink/p/?LinkId=620635) wird die Erweiterung eines [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx)-Steuerelements zur Unterstützung dieses Musters dargestellt. In diesem Artikel werden mithilfe dieses Beispiels die wichtigsten Aspekte der Implementierung des „Aktualisierung durch Ziehen“-Musters erläutert.
 
@@ -39,7 +47,7 @@ RefreshableListView verfügt über einen automatischen Aktualisierungsmodus, mit
 - Deaktiviert: Eine Aktualisierung wird nur dann angefordert, wenn die Liste bei Überschreitung von `PullThreshold` losgelassen wird. Wenn der Benutzer den Scroller loslässt, wird die Anzeige ausgeblendet. Die Statusleisten-Anzeige wird bei Verfügbarkeit angezeigt (gilt für Smartphone).
 - Aktiviert: Die Aktualisierung wird, unabhängig vom Loslassen, bei Überschreitung von `PullThreshold` angefordert. Die Anzeige wird erst nach abgeschlossenem Abruf der Daten ausgeblendet. Zur Benachrichtigung der App über den abgeschlossenen Abruf der Daten wird eine **Verzögerung** eingesetzt.
 
-> **Hinweis**&nbsp;&nbsp;Der im Beispiel dargestellte Code lässt sich auch auf [**GridView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx) anwenden. Zum Ändern von GridView leiten Sie die benutzerdefinierte Klasse von GridView anstelle von ListView ab und nehmen Änderungen an der GridView-Standardvorlage vor.
+> **Hinweis**&nbsp;&nbsp;Der im Beispiel dargestellte Code lässt sich auch auf [GridView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx) anwenden. Zum Ändern von GridView leiten Sie die benutzerdefinierte Klasse von GridView anstelle von ListView ab und nehmen Änderungen an der GridView-Standardvorlage vor.
 
 ## <a name="add-a-refresh-indicator"></a>Hinzufügen einer Aktualisierungsanzeige
 
@@ -51,7 +59,7 @@ Im Folgenden finden Sie empfohlene Richtlinien für die Aktualisierungsanzeige.
 
 **Ändern der Vorlage für die Listenansicht**
 
-Im Beispiel für die Aktualisierung durch Ziehen erweitert die `RefreshableListView`-Steuerelementvorlage die standardmäßige **ListView**-Vorlage um eine Aktualisierungsanzeige. Die Aktualisierungsanzeige befindet sich in einem [**Raster**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx) oberhalb des [**ItemsPresenter**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemspresenter.aspx), der die Listenelemente anzeigt.
+Im Beispiel für die Aktualisierung durch Ziehen erweitert die `RefreshableListView`-Steuerelementvorlage die standardmäßige **ListView**-Vorlage um eine Aktualisierungsanzeige. Die Aktualisierungsanzeige befindet sich in einem [Raster](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx) oberhalb des [ItemsPresenter](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemspresenter.aspx), der die Listenelemente anzeigt.
 
 > **Hinweis**&nbsp;&nbsp;Das `DefaultRefreshIndicatorContent`-Textfeld stellt eine Standardtextanzeige bereit, die nur bei fehlender Festlegung der `RefreshIndicatorContent` -Eigenschaft angezeigt wird.
 
@@ -123,7 +131,7 @@ Der Inhalt der Aktualisierungsanzeige wird in der XAML für Ihre Listenansicht f
 
 **Animieren des Drehfelds**
 
-Wird die Liste nach unten gezogen, wird das `PullProgressChanged` -Ereignis von RefreshableListView ausgelöst. Sie können dieses Ereignis in Ihrer App behandeln, um die Aktualisierungsanzeige zu steuern. Im Beispiel wird durch dieses Storyboard das [**RotateTransform**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.rotatetransform.aspx) -Element animiert und die Aktualisierungsanzeige gedreht. 
+Wird die Liste nach unten gezogen, wird das `PullProgressChanged` -Ereignis von RefreshableListView ausgelöst. Sie können dieses Ereignis in Ihrer App behandeln, um die Aktualisierungsanzeige zu steuern. Im Beispiel wird durch dieses Storyboard das [RotateTransform](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.rotatetransform.aspx)-Element animiert und die Aktualisierungsanzeige gedreht. 
 
 **XAML**
 ```xaml
@@ -142,13 +150,13 @@ Wird die Liste nach unten gezogen, wird das `PullProgressChanged` -Ereignis von 
 
 ## <a name="handle-scroll-viewer-manipulation-events"></a>Behandeln von Manipulationsereignissen der Bildlaufanzeige
 
-Die Steuerelementvorlage der Listenansicht enthält einen integrierten [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx), mit dem der Benutzer durch die Listenelemente scrollen kann. Zum Implementieren der Aktualisierung durch Ziehen müssen sowohl die Manipulationsereignisse in der integrierten Bildlaufanzeige als auch mehrere verwandte Ereignisse behandelt werden. Weitere Informationen zu Manipulationsereignissen finden Sie unter [Toucheingabe-Interaktionen](../input-and-devices/touch-interactions.md).
+Die Steuerelementvorlage der Listenansicht enthält einen integrierten [ScrollViewer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx), mit dem der Benutzer durch die Listenelemente scrollen kann. Zum Implementieren der Aktualisierung durch Ziehen müssen sowohl die Manipulationsereignisse in der integrierten Bildlaufanzeige als auch mehrere verwandte Ereignisse behandelt werden. Weitere Informationen zu Manipulationsereignissen finden Sie unter [Toucheingabe-Interaktionen](../input-and-devices/touch-interactions.md).
 
 ** OnApplyTemplate**
 
-Um auf die Bildlaufanzeige und andere Bereiche der Vorlage zuzugreifen sowie Ereignishandler hinzufügen und später im Code aufrufen zu können, müssen Sie die [**OnApplyTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.onapplytemplate.aspx)-Methode überschreiben. In OnApplyTemplate rufen Sie [**GetTemplateChild**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.gettemplatechild.aspx) auf, um einen Verweis auf einen benannten Teil der Steuerelementvorlage zu erhalten, den Sie speichern und später im Code verwenden können.
+Um auf die Bildlaufanzeige und andere Bereiche der Vorlage zuzugreifen sowie Ereignishandler hinzufügen und später im Code aufrufen zu können, müssen Sie die [OnApplyTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.onapplytemplate.aspx)-Methode überschreiben. In OnApplyTemplate rufen Sie [GetTemplateChild](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.gettemplatechild.aspx) auf, um einen Verweis auf einen benannten Teil der Steuerelementvorlage zu erhalten, den Sie speichern und später im Code verwenden können.
 
-Im Beispiel werden die zum Speichern der Vorlagenteile verwendeten Variablen im Bereich „Private Variables“ deklariert. Nachdem sie in der OnApplyTemplate-Methode abgerufen wurden, werden Handler für die Ereignisse [**DirectManipulationStarted**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.directmanipulationstarted.aspx), [**DirectManipulationCompleted**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.directmanipulationcompleted.aspx), [**ViewChanged**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.viewchanged.aspx), und [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx) hinzugefügt.
+Im Beispiel werden die zum Speichern der Vorlagenteile verwendeten Variablen im Bereich „Private Variables“ deklariert. Nachdem sie in der OnApplyTemplate-Methode abgerufen wurden, werden Handler für die Ereignisse [DirectManipulationStarted](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.directmanipulationstarted.aspx), [DirectManipulationCompleted](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.directmanipulationcompleted.aspx), [ViewChanged](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.viewchanged.aspx) und [PointerPressed](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx) hinzugefügt.
 
 **DirectManipulationStarted**
 
@@ -162,7 +170,7 @@ Sobald der Benutzer das Ziehen der Liste nach unten beendet, prüft der Code die
 
 Die Ereignishandler für Animationen werden ebenfalls entfernt.
 
-Basierend auf dem Wert der `AutoRefresh` -Eigenschaft kann die Liste per Animation entweder sofort oder erst nach abgeschlossener Aktualisierung an ihren Anfang zurückgeblättert werden. Zur Kennzeichnung der abgeschlossenen Aktualisierung wird ein [**Verzögerungs**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.aspx)-Objekt verwendet. An diesem Punkt ist die Aktualisierungsanzeige ausgeblendet.
+Basierend auf dem Wert der `AutoRefresh` -Eigenschaft kann die Liste per Animation entweder sofort oder erst nach abgeschlossener Aktualisierung an ihren Anfang zurückgeblättert werden. Zur Kennzeichnung der abgeschlossenen Aktualisierung wird ein [Verzögerungs](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.aspx)-Objekt verwendet. An diesem Punkt ist die Aktualisierungsanzeige ausgeblendet.
 
 Dieser Teil des „DirectManipulationCompleted“-Ereignishandlers löst das `RefreshRequested`-Ereignis aus und ruft bei Bedarf die Verzögerung ab.
 
@@ -232,7 +240,7 @@ In diesem Beispiel werden Inhalte für die Aktualisierungsanzeige bereitgestellt
 
 ## <a name="composition-animations"></a>Kompositionsanimationen
 
-Standardmäßig wird die Scrollbewegung des Inhalts in einer Bildlaufanzeige beim Erreichen des oberen Endes der Scrollleiste beendet. Um dem Benutzer das Herunterziehen der Liste zu ermöglichen, muss auf die visuelle Ebene zugegriffen und der Listeninhalt animiert werden. Im Beispiel werden hierfür [Kompositionsanimationen](https://msdn.microsoft.com/windows/uwp/graphics/composition-animation), genauer [Ausdrucksanimationen](https://msdn.microsoft.com/windows/uwp/graphics/composition-animation#expression-animations), verwendet.
+Standardmäßig wird die Scrollbewegung des Inhalts in einer Bildlaufanzeige beim Erreichen des oberen Endes der Scrollleiste beendet. Um dem Benutzer das Herunterziehen der Liste zu ermöglichen, muss auf die visuelle Ebene zugegriffen und der Listeninhalt animiert werden. Im Beispiel werden hierfür [Kompositionsanimationen](https://msdn.microsoft.com/windows/uwp/composition/composition-animation), genauer [Ausdrucksanimationen](https://msdn.microsoft.com/windows/uwp/composition/composition-animation#expression-animations), verwendet.
 
 Diese Vorgänge werden im Beispiel hauptsächlich mit dem `CompositionTarget_Rendering` -Ereignishandler und der `UpdateCompositionAnimations` -Methode ausgeführt.
 
@@ -242,4 +250,4 @@ Diese Vorgänge werden im Beispiel hauptsächlich mit dem `CompositionTarget_Ren
 - [Toucheingabe-Interaktionen](../input-and-devices/touch-interactions.md)
 - [Listenansicht und Rasteransicht](listview-and-gridview.md)
 - [Vorlagen für Listenansichtselemente](listview-item-templates.md)
-- [Ausdrucksanimationen](https://msdn.microsoft.com/windows/uwp/graphics/composition-animation#expression-animations)
+- [Ausdrucksanimationen](https://msdn.microsoft.com/windows/uwp/composition/composition-animation#expression-animations)

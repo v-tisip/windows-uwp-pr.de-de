@@ -1,17 +1,19 @@
 ---
-author: shawjohn
+author: JnHs
 Description: "Auf dem DevCenter-Dashboard können Sie eine Anzeigenkampagne erstellen, um Ihre App zu bewerben und ihre Benutzerbasis zu erweitern."
-title: "Erstellen einer Anzeigenkampagne für Ihre App – Entwicklung von UWP-Apps"
+title: "Erstellen einer Anzeigenkampagne für Ihre App"
 ms.assetid: 10D94929-92C4-4379-AA5F-6FEF879F2463
-ms.author: johnshaw
-ms.date: 02/08/2017
+ms.author: wdg-dev-content
+ms.date: 06/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Anzeige, Kampagne, bewerben
-ms.openlocfilehash: c23dd0769807a323a82c5da8fa3ed9c340a8aadb
-ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
-translationtype: HT
+ms.openlocfilehash: 04074261b7efd38f0309f08910e4ee1350302e4c
+ms.sourcegitcommit: 5ece992c31870df4c089360ef47501bd4ce14fa9
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/22/2017
 ---
 # <a name="create-an-ad-campaign-for-your-app"></a>Erstellen einer Anzeigenkampagne für Ihre App
 
@@ -24,90 +26,83 @@ Sie können Anzeigenkampagnen nur für Apps erstellen, die die letzte Veröffent
 
 ## <a name="instructions"></a>Anweisungen
 
-So erstellen Sie eine Anzeigenkampagne zum Bewerben Ihrer App:
+So erstellen Sie eine Anzeigenkampagne zum Bewerben einer App.
 
-1.  Klicken Sie im DevCenter-Dashboard im linken Navigationsmenü der App-Seite auf **Monetarisierung** &gt; **Bewerben Ihrer App**.
-2.  Führen Sie einen der folgenden Schritte aus:
-
-    -   Wenn Sie noch keine Anzeigenkampagne für diese App erstellt haben, werden auf der Seite **Bewerben Ihrer App** Informationen zu den Vorteilen von Anzeigenkampagnen angezeigt. Klicken Sie auf **Erste Schritte** oder **Erstellen einer Anzeigenkampagne**.
-    -   Wenn Sie bereits eine Anzeigenkampagne für diese App erstellt haben, werden auf der Seite **Bewerben Ihrer App** Ihre vorhandenen Anzeigenkampagnen aufgeführt. Klicken Sie auf **Neue Kampagne**.
-3.  Wählen Sie auf der Seite **Neue Kampagne** im Abschnitt **Kampagnenziel** eine der folgenden Optionen aus:
+1.  Erweitern Sie im linken Navigationsmenü des Dashboards **Bewerben**, und wählen Sie dann **Anzeigenkampagnen** aus.
+2.  Wählen Sie **Erstellen einer Anzeigenkampagne** (oder wenn Sie bereits Kampagnen erstellt haben, wählen Sie **Neue Kampagne**) aus.
+3.  Wählen Sie auf der nächsten Seite im Abschnitt **Objekttyp** eine der folgenden Optionen aus:
     -   **Mehr Installationen für Ihre App**. Wählen Sie diese Option, wenn Ihre Anzeigenkampagne darauf abzielt, dass Kunden Ihre App installieren.
     -   **Mehr Interaktion in Ihrer App**. Wählen Sie diese Option aus, wenn Ihre Anzeigenkampagne Ihre Kunden dazu bringen soll, Ihre App häufiger zu verwenden. Wenn Sie diese Option auswählen, können Sie Ihre Anzeigenkampagne auf bestimmte, von Ihnen definierte [Kundensegmente](create-customer-segments.md) ausrichten.
 
-4.  Definieren Sie im Abschnitt **Kampagnendetails** die allgemeinen Einstellungen für Ihre Kampagne.
-    -   Geben Sie Ihrer Anzeigenkampagne im Feld **Kampagnenname** einen Namen.
-    -   Wählen Sie unter **Kampagnentyp** eine der folgenden Optionen aus:
-        -   **Kostenpflichtig**: Diese Anzeigen werden in jeder App angezeigt, die dem Zielgerät und der Zielkategorie der App entspricht. Neue, nach dem 9.Januar2017 erstellte Kampagnen, zeigen Ihre Anzeigen auch in MSN.com, Outlook.com, Skype und anderen Microsoft-Premium-Eigenschaften an. Werbekampagnen für Apps, deren Ziel Apps und Microsoft-Premium-Eigenschaften sind, werden als *universelle* Kampagnen bezeichnet.
-        -   **Community (kostenlos)**: Diese Anzeigen werden in Apps ausgeführt, die von anderen Entwicklern veröffentlicht wurden, die ebenfalls Community-Anzeigenkampagnen erstellen. Bevor Sie diese Option auswählen können, müssen Sie auf dem Dashboard auf der Seite **Gewinnbringende Nutzung mit Anzeigen** das Kontrollkästchen **Show community ads in my app** aktivieren. Weitere Informationen finden Sie unter [Über Community-Anzeigen](about-community-ads.md).
-        -   **Eigenwerbung (kostenlos)**: Diese Anzeigen werden nur in Ihren Apps angezeigt (die dem Zielgerät der beworbenen App entsprechen). Eigenwerbung ist kostenlos. Weitere Informationen finden Sie unter [Über Eigenwerbung](about-house-ads.md).
-    -   Wählen Sie unter **Kampagnendauer** eine der folgenden Optionen aus:
-        - **Benutzerdefiniert**. Wenn Sie diese Option auswählen, wird Ihr Kampagnenbudget innerhalb des angegebenen Datums- und Uhrzeitbereichs ausgegeben. Diese Option ist nur für Entwickler verfügbar, die über ein Premiumkonto verfügen. Weitere Informationen zu Premienkonten finden Sie unter [Allgemeine Fragen zu Anzeigenkampagnen](common-questions.md#how-can-i-increase-the-maximum-monthly-budget-amount-allowed-for-my-ad-campaign).
-        - **Monatlich**. Wenn Sie diese Option auswählen, wird Ihr Kampagnenbudget regelmäßig monatlich ausgegeben, bis Sie die Kampagne beenden.
+4.  Wählen Sie die App aus, die Sie mit dieser Kampagne bewerben möchten. Beachten Sie, dass die App im Store bereits vorhanden sein muss.
+5.  Überprüfen Sie den Namen für Ihre Kampagne im Feld **Kampagnennamen** und ändern Sie ihn wenn notwendig.
+6.  Wählen Sie unter **Kampagnentyp** eine der folgenden Optionen aus:
+        -   **Kostenpflichtige Anzeige:** Diese Anzeigen werden in jeder App angezeigt, die dem Zielgerät und der Zielkategorie der App entspricht. Neue, nach dem 9.Januar2017 erstellte Kampagnen, zeigen Ihre Anzeigen auch in MSN.com, Outlook.com, Skype und anderen Microsoft-Premium-Eigenschaften an. Werbekampagnen für Apps, deren Ziel Apps und Microsoft-Premium-Eigenschaften sind, werden als *universelle* Kampagnen bezeichnet.
+        -   **Kostenlose Community-Anzeigen:** Diese Anzeigen werden in Apps ausgeführt, die von anderen Entwicklern veröffentlicht wurden, die ebenfalls Community-Anzeigenkampagnen erstellen. Bevor Sie diese Option auswählen können, müssen Sie auf der Seite **Gewinnbringende Nutzung mit Anzeigen** dem Anzeigen von Community-Anzeigen in Ihrer App zugestimmt haben. Weitere Informationen finden Sie unter [Über Community-Anzeigen](about-community-ads.md).
+        -   **Kostenlose Eigenwerbung:** Diese Anzeigen werden nur in Ihren Apps angezeigt (die dem Gerätetyp der beworbenen App entsprechen). Eigenwerbung ist kostenlos. Weitere Informationen finden Sie unter [Über Eigenwerbung](about-house-ads.md).
 
-    > [!NOTE]
-    > Wenn Ihre App noch nicht veröffentlicht wurde, wird eine Fehlermeldung auf der Seite **Neue Kampagne** angezeigt. Sie müssen warten, bis Ihre App veröffentlicht wurde, bevor Sie dafür eine Anzeigenkampagne erstellen können.
+7.  Bei kostenpflichtigen Anzeigenkampagnen müssen Sie die die **Kampagnendauer** bestätigen (die Zeitspanne, auf die Ihr Kampagnenbudget angewendet wird). Die Standardoption ist **Monatlich**, wobei Ihr Kampagnenbudget regelmäßig monatlich ausgegeben wird, bis Sie die Kampagne beenden. Wenn Sie über ein Premiumkonto verfügen, können Sie optional **Benutzerdefiniert** auswählen, um einen benutzerdefinierten Datums- und Uhrzeitbereich auszuwählen, der während Ihres Kampagnenbudgets angewendet werden soll. Weitere Informationen zu Premienkonten finden Sie unter [Allgemeine Fragen zu Anzeigenkampagnen](common-questions.md#how-can-i-increase-the-maximum-monthly-budget-amount-allowed-for-my-ad-campaign).
 
-5.  Wenn Sie **Mehr Installationen für Ihre App** als Ziel Ihrer Kampagne ausgewählt haben, wählen wir die Zielgruppe für Ihre App auf der Grundlage der Einstellungen, die Sie bei der Erstellung der App im Dev Center-Dashboard ausgewählt haben. Wenn Sie die Zielgruppe für Ihre Anzeigen selbst bestimmen möchten, wählen Sie **Manuell** aus, um den Abschnitt **Zielgruppe** zu erweitern. Wenn Sie zur Standard-Zielgruppenauswahl zurückkehren möchten, wählen Sie **Automatisch** aus.
+8.  Bestätigen Sie Ihr Budget und die Zahlungsinformationen. (Wenn Sie eine Kampagne für Eigenwerbung oder Community-Anzeigen erstellen, werden diese Optionen nicht angezeigt, da diese Kampagnen kostenlos sind).
 
-    Wenn Sie die Option **Manuell** auswählen, können Sie die folgenden Informationen für die Zielgruppenauswahl bearbeiten:
+    -   Legen Sie mithilfe des Schiebereglers unter **Budget**den Betrag fest, den Sie monatlich für diese Anzeige aufwenden möchten (oder das gesamte Budget, wenn Sie eine benutzerdefinierte Kampagnendauer ausgewählt haben).
 
-    -   Wählen Sie die Länder oder Regionen aus, in denen diese Anzeigen erscheinen sollen. Sie können bis zu 5 auswählen. Eine Liste der unterstützten Länder oder Regionen finden Sie unter [Häufig gestellte Fragen zu Anzeigenkampagnen](common-questions.md#where-will-my-ad-appear).
-    -   Wählen Sie die Gerätetypen aus, auf denen diese Anzeigen erscheinen sollen. Es werden nur die von der App unterstützten Gerätetypen angezeigt.
-    -   Wählen Sie die Oberflächen aus, auf denen diese Anzeigen erscheinen sollen. Wenn Sie **Universell** wählen, wird Ihre Anzeige auch in MSN.com, Outlook.com, Skype und anderen Microsoft-Premium-Eigenschaften angezeigt.
-    -   Wählen Sie das Betriebssystem aus. Es werden nur die von der App unterstützten Betriebssysteme angezeigt.
-    -   Wählen Sie Geschlecht und Altersbereich der gewünschten Zielgruppe aus.
+        Das monatliche Budget wird für den Monat, in dem die Anzeigenkampagne erstellt wird, anteilig berechnet. Wenn Sie also eine Anzeigenkampagne in der Mitte des Monats erstellen, zahlen Sie für den betreffenden Monat die Hälfte des Monatsbudgets.
+
+    -   Legen Sie eine Zahlungsmethode für Ihre Anzeigenkampagne fest, indem Sie auf **Neue Zahlungsmethode hinzufügen** klicken und Ihre Kontodaten eingeben. Wenn Sie bereits ein Zahlungsmittel angegeben haben, können Sie **Eine andere Zahlungsmethode auswählen**, wenn Sie sie aktualisieren müssen. Das Land/die Region der Rechnungsadresse Ihrer Zahlungsmethode muss mit dem Land/der Region übereinstimmen, das bzw. die Ihrem Dev Center-Konto zugeordnet ist.
+
+    -   Wenn Sie von Microsoft einen Gutschein für eine Anzeigenkampagne erhalten haben, klicken Sie auf **Use a coupon**, geben Sie den Gutscheincode ein, und klicken Sie auf **Übernehmen**, um den Gutschein für die Kampagne zu übernehmen.
+
+ Klicken Sie anschließend auf **Speichern und Weiter**, um zum Schritt **Zielgruppe** zu gelangen. (Dieser Schritt ist nicht für Eigenwerbungskampagnen verfügbar, da diese nur in Ihren eigenen Apps ausgeführt werden.)
+
+9.  Auf der Seite **Zielgruppe** zeigen wir die Einstellungen für die Zielgruppe an, die für Ihre Kampagne empfohlen wird. Optional können Sie diese Informationen anpassen:
+
+    -   **Länder/Regionen**: Wählen Sie bis zu 5 Länder oder Regionen, in denen die Anzeige angezeigt werden soll. Eine Liste der unterstützten Länder oder Regionen finden Sie unter [Häufig gestellte Fragen zu Anzeigenkampagnen](common-questions.md#where-will-my-ad-appear).
+    -   **Geräte**: Wählen Sie die Gerätetypen aus, auf denen diese Anzeigen erscheinen sollen. Es werden nur die von der App unterstützten Gerätetypen angezeigt.
+    -   **Oberfläche**: Wenn Sie **Universell** wählen, wird Ihre Anzeige auch in MSN.com, Outlook.com, Skype und anderen Microsoft-Premium-Eigenschaften angezeigt. Wählen Sie **App**, wenn die Anzeige nur in Apps angezeigt werden soll.
+    -   **Betriebssystem**: Wählen Sie die Betriebssysteme, auf denen die Werbung angezeigt werden soll. Es werden nur die von der App unterstützten Betriebssysteme angezeigt.
+    -   **Geschlecht**: Wählen Sie aus, ob Sie die Zielgruppe für Ihre Anzeige auf das Geschlecht beschränken.
+    -   **Altersbereich**:Wählen Sie den Altersbereich der gewünschten Zielgruppe aus.
 
     In diesem Abschnitt wird auch das Diagramm **Geschätzte Reichweite** angezeigt. Das Diagramm zeigt die Zielgruppe, die Sie mit Ihrer aktuellen Auswahl für die Adressierung erreichen, als Prozentsatz aller Benutzer von Windows-Apps mit Anzeigenunterstützung in den ausgewählten Märkten an.
 
-6.  Wenn Sie **Mehr Interaktion in Ihrer App** als Ziel Ihrer Kampagne ausgewählt haben, können Sie eines Ihrer Kundensegmente als Zielgruppe auswählen.
+9.  Wenn Sie **Mehr Interaktion in Ihrer App** als Ziel Ihrer Kampagne ausgewählt haben, können Sie eines Ihrer Kundensegmente als Zielgruppe auswählen.
 
     > [!NOTE]
     > Mit dieser Kampagne erstellte Anzeigen werden nur den Kunden angezeigt, die zum jeweiligen Segment gehören. Pro Anzeigenkampagne kann nur ein Segment ausgewählt werden. Informationen zu Kundensegmenten finden Sie unter [Erstellen von Kundensegmenten](create-customer-segments.md).
 
-7.  Wählen Sie im Abschnitt **Anzeigenentwurf** eine der folgenden Optionen aus:
-    -   **Benutzerdefiniert**. Wählen Sie diese Option aus, um Ihren eigenen Anzeigenentwurf zu verwenden. Beachten Sie, dass Sie bei Auswahl eines Kundensegments in Schritt6 benutzerdefinierte Werbemittel verwenden müssen. Sie können verschiedene Dateien für jede der verfügbaren Anzeigengrößen hochladen. Die Dateien müssen folgenden Anforderungen und Richtlinien entsprechen:
-        -   Jede Datei muss eine PNG- oder JPG-Datei mit höchstens 40KB sein.
-        -   Ihre Anzeigenentwürfe müssen die in der [Microsoft Creative Acceptance Policy](http://go.microsoft.com/fwlink?LinkId=532595) dargelegten Anforderungen erfüllen.
-        -   Der Inhalt in Ihren Anzeigenentwürfen muss für die beworbene App relevant sein. Anzeigenentwürfe, die nicht mit der App zusammenhängen, werden nicht in anderen Apps verteilt.
-        -   Alle Inhalte in Ihren Anzeigenentwürfen sollten deutlich lesbar sein. Beispielsweise sollten Inhalte nicht verschwommen, verpixelt oder gestreckt sein.
-    -   **Automatisch generiert**. Wählen Sie diese Option aus, um Anzeigen aus einer Liste von Standardvorlagen zu verwenden. Mit den folgenden Optionen können Sie den Inhalt der Anzeigen anpassen. Während Sie Ihre Auswahl treffen, wird die Vorschau der Anzeigen automatisch aktualisiert.
-        -   Wählen Sie im Dropdownmenü **Sprache** die Sprache der Anzeigen aus. Der Text für den WindowsStore-Badge und Ihren benutzerdefinierten Slogan-Text (sofern angegeben) werden in der von Ihnen ausgewählten Sprache angezeigt.
+ Klicken Sie anschließend auf **Speichern und Weiter**, um zum Schritt **Anzeigenentwurf** zu gelangen. (Dieser Schritt ist nicht für Eigenwerbungskampagnen verfügbar, da diese nur in Ihren eigenen Apps ausgeführt werden.)
+
+10.  Wählen Sie auf der Seite **Anzeigenentwurf** eine der folgenden Optionen aus:
+    -   **Automatisch generiert**. Dies ist die Standardoption, wodurch Sie eine Anzeige mit unseren Standardvorlagen erstellen können. Sie können die Inhalte Ihrer Anzeigen durch Auswahlen anpassen. Wir sehen uns eine Vorschau Ihrer Anzeige basierend auf den Auswahlmöglichkeiten an (dies wird automatisch aktualisiert, wenn Sie eine Auswahl treffen).
+        -   Wählen Sie im Dropdownmenü **Sprache** die Sprache der Anzeigen aus. Der Text für das Windows Store-Signal wird in der Sprache angezeigt, die Sie auswählen.
         -   Um Ihrer Anzeige eine zusätzliche Textzeile hinzuzufügen, geben Sie den Text im Feld **Benutzerdefinierter Slogan** ein.
             > [!NOTE]
             > Der von Ihnen eingegebene Text muss in die ausgewählte Sprache lokalisiert werden. Der benutzerdefinierte Slogan wird zurückgewiesen, wenn der Text nicht mit den [Bing Ads-Richtlinien](http://go.microsoft.com/fwlink?LinkId=398341) konform ist. Auf dieser Seite finden Sie Informationen zum Stil und zu nicht zulässigen Inhalten.
 
         -   Um die Anzeige weiter anzupassen, erweitern Sie **Anzeigendesign anpassen/Alle Größen anzeigen** und wählen eine der folgenden Optionen aus:
             - **Hintergrundfarbe**. Treffen Sie Ihre Auswahl aus den verfügbaren Optionen.
-            - **Bilder** Es sind die Bilder verfügbar, die Sie Ihrer App im Store zugewiesen haben.
+            - **Bilder** Wählen Sie eine der verfügbaren Bilder aus (aus der Store-Eintrag Ihrer App).
             - **Bewertung meiner App anzeigen**. Aktivieren Sie dieses Kontrollkästchen, wenn die Bewertung der App angezeigt werden soll.
             - **Anzeigen, dass meine App kostenlos ist**. Wenn Ihre App in allen ausgewählten Märkten kostenlos ist, können Sie dieses Kontrollkästchen aktivieren.
             - **Handlungsaufforderung**. Wenn **Mehr Interaktion in Ihrer App** als Ziel für Ihre Kampagne wählen, können Sie die Schaltfläche für die Handlungsaufforderung in Ihrer App auf **Öffnen**, **Spielen**, **Lesen**, **Hören** oder **Kaufen** festlegen.  
+    -   **Benutzerdefiniert**. Wählen Sie diese Option aus, um Ihren eigenen Anzeigenentwurf zu verwenden. Beachten Sie, dass Sie bei Auswahl eines Kundensegments in Schritt9 benutzerdefinierte Werbemittel verwenden müssen. Sie können verschiedene Dateien für jede der verfügbaren Anzeigengrößen hochladen. Die Dateien müssen folgenden Anforderungen und Richtlinien entsprechen:
+        -   Jede Datei muss eine PNG- oder JPG-Datei mit höchstens 40KB sein.
+        -   Ihre Anzeigenentwürfe müssen die in der [Microsoft Creative Acceptance Policy](http://go.microsoft.com/fwlink?LinkId=532595) dargelegten Anforderungen erfüllen.
+        -   Der Inhalt in Ihren Anzeigenentwürfen muss für die beworbene App relevant sein. Anzeigenentwürfe, die nicht mit der App zusammenhängen, werden nicht in anderen Apps verteilt.
+        -   Alle Inhalte in Ihren Anzeigenentwürfen sollten deutlich lesbar sein. Beispielsweise sollten Inhalte nicht verschwommen, verpixelt oder gestreckt sein.
 
-8.  Wenn Sie ein [Premiumkonto](common-questions.md#how-can-i-increase-the-maximum-monthly-budget-amount-allowed-for-my-ad-campaign) besitzen, können Sie mithilfe des Kontrollkästchens **Ziel-URL** steuern, was geschieht, wenn ein Kunde auf Ihre Anzeige klickt.
+11.  Wenn Sie ein [Premiumkonto](common-questions.md#how-can-i-increase-the-maximum-monthly-budget-amount-allowed-for-my-ad-campaign) besitzen, können Sie mithilfe des Kontrollkästchens **Ziel-URL** steuern, was geschieht, wenn ein Kunde auf Ihre Anzeige klickt.
     - Wenn Sie das Kontrollkästchen nicht aktivieren, wird der Store-Eintrag Ihrer App angezeigt, wenn ein Kunde auf Ihre Anzeige klickt.
     - Wenn Sie Kochava oder Tune verwenden, um die Installationsdaten für Ihre App zu messen, geben Sie die Installationsverfolgungs-URL von Kochava oder Tune ein. Beim Speichern der Kampagne wird die Verfolgungs-URL überprüft, um sicherzustellen, dass sie zur Eintragsseite für Ihre App im Windows Store aufgelöst wird. Weitere Informationen zur Installationsverfolgung mit Kochava und Tune finden Sie in der [Kochava](http://support.kochava.com/)- und [Tune](https://help.tune.com/)-Dokumentation.
     - Wenn Sie **Mehr Interaktion in Ihrer App** als Kampagnenziel wählen, können Sie einen [Deep-Link-URI](../launch-resume/handle-uri-activation.md) angeben, um Kunden aus den ausgewählten Segment zu einer bestimmten Seite in Ihrer App umzuleiten.
     - Wenn Sie ein Ziel angeben, bei dem es sich nicht um die Beschreibungsseite Ihrer App oder eine Seite innerhalb Ihrer App handelt, wird Ihre Kampagne automatisch angehalten.
 
-9.  Wählen Sie nun die Zahlungseinstellungen Ihrer Anzeigenkampagne im Abschnitt **Budget und Bezahlung** aus.
-    > [!NOTE]
-    > Wenn Sie eine Kampagne für Eigenwerbung oder Community-Anzeigen erstellen, wird der Abschnitt **Budget und Bezahlung** nicht angezeigt, da diese Kampagnen kostenlos sind.
-
-    -   Legen Sie mithilfe des Schiebereglers unter **Budget** den Betrag fest, den Sie monatlich für diese Anzeige aufwenden möchten.
-
-        Das monatliche Budget wird für den Monat, in dem die Anzeigenkampagne erstellt wird, anteilig berechnet. Wenn Sie also eine Anzeigenkampagne in der Mitte des Monats erstellen, zahlen Sie für den betreffenden Monat die Hälfte des Monatsbudgets.
-
-    -   Legen Sie ein Zahlungsmittel für Ihre Anzeigenkampagne fest, indem Sie auf **Neues Zahlungsinstrument hinzufügen** klicken und Ihre Kontodaten eingeben.
-        > [!NOTE]
-        > Das Land/die Region der Rechnungsadresse Ihres Zahlungsmittels muss mit dem Land/der Region übereinstimmen, das bzw. die Ihrem Dev Center-Konto zugeordnet ist.
-    -   Wenn Sie von Microsoft einen Gutschein für eine Anzeigenkampagne erhalten haben, klicken Sie auf **Use a coupon**, geben Sie den Gutscheincode ein, und klicken Sie auf **Übernehmen**, um den Gutschein für die Kampagne zu übernehmen.
-
-10.  Klicken Sie abschließend auf **Überprüfen**, um die Einstellungen der Anzeigenkampagne – und falls es sich um eine kostenpflichtige Kampagne handelt – das Budget und die Zahlungsinformationen zu bestätigen. Klicken Sie auf **Bestätigen**. Ihre Anzeigen werden in der Regel nach wenigen Stunden angezeigt.
+13.  Klicken Sie abschließend auf **Überprüfen**, um die Einstellungen der Anzeigenkampagne – und falls es sich um eine kostenpflichtige Kampagne handelt – das Budget und die Zahlungsinformationen zu bestätigen. Klicken Sie auf **Bestätigen**. Ihre Anzeigen werden in der Regel nach wenigen Stunden angezeigt.
 
 ## <a name="review-ad-campaign-performance"></a>Überprüfen der Leistung einer Anzeigenkampagne
 
-Wählen Sie im Navigationsmenü auf der höchsten Ebene im Dashboard **Werbeaktionen** aus, um die Leistung Ihrer Kampagnen anzuzeigen. Wählen Sie **Abschnittfilter** aus, um festzulegen, was im Bericht nach **Datum**, **Kampagnenziel**, **App-Name**, **Kampagnentyp** oder **Status** enthalten sein soll. Zusätzlich zum Anzeigen von Informationen zu den **Aufrufen**, **Klicks**, **Konvertierungen** und **Ausgaben** für Ihre Kampagne können Sie den Bericht zum **Anhalten** oder **Fortsetzen** einer Kampagne verwenden.
+Gehen Sie auf die Seite **Anzeigenkampagnen** zurück, um die Leistung Ihrer Kampagnen anzuzeigen. Wählen Sie **Abschnittfilter** aus, um festzulegen, was im Bericht nach **Datum**, **Kampagnenziel**, **App-Name**, **Kampagnentyp** oder **Status** enthalten sein soll. Zusätzlich zum Anzeigen von Informationen zu den **Aufrufen**, **Klicks**, **Konvertierungen** und **Ausgaben** für Ihre Kampagne können Sie den Bericht zum **Anhalten** oder **Fortsetzen** einer Kampagne verwenden. Weitere Informationen finden Sie unter [Bericht „Anzeigenkampagne“](promote-your-app-report.md).
 
 Um eine Kampagne zu bearbeiten, wählen Sie ihren Namen in der Liste aus.
 

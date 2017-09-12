@@ -4,20 +4,20 @@ Description: "Auf der Seite App-Eigenschaften des App-Übermittlungsprozesses k�
 title: Eingeben von App-Eigenschaften
 ms.assetid: CDE4AF96-95A0-4635-9D07-A27B810CAE26
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: 31385fe3edb9d9f38a4f444c84ef189faed49985
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: e4d391d551cf4e41853a1aac0e4b5be8bf0b0c3f
+ms.sourcegitcommit: 968187e803a866b60cda0528718a3d31f07dc54c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="enter-app-properties"></a>Eingeben von App-Eigenschaften
 
-Auf der Seite **App-Eigenschaften** des [App-Übermittlungsprozesses](app-submissions.md) können Sie die Kategorie Ihrer App festlegen sowie Hardwareeinstellungen und weitere Deklarationen angeben. Wir stellen Ihnen hier die auf dieser Seite verfügbaren Optionen vor und informieren Sie darüber, was Sie bei der Eingabe dieser Informationen beachten sollten.
-
-> **Hinweis**  Altersfreigaben erhalten jetzt eine separate Seite im Übermittlungsprozess. Weitere Informationen finden Sie unter [Altersfreigaben](age-ratings.md).
+Auf der Seite **Eigenschaften** des [App-Übermittlungsprozesses](app-submissions.md) können Sie die Kategorie Ihrer App festlegen sowie Hardwareeinstellungen und weitere Deklarationen angeben. Wir stellen Ihnen hier die auf dieser Seite verfügbaren Optionen vor und informieren Sie darüber, was Sie bei der Eingabe dieser Informationen beachten sollten.
 
 ## <a name="category-and-subcategory"></a>Kategorie und Unterkategorie
 
@@ -25,11 +25,20 @@ In diesem Abschnitt geben Sie die Kategorie (und ggf. eine Unterkategorie) an, d
 
 Weitere Informationen finden Sie unter [Kategorie- und Unterkategorietabelle](category-and-subcategory-table.md).
 
+## <a name="game-settings"></a>Einstellungen für Spiele
+
+Dieser Abschnittwird nur angezeigt, wenn Sie als Kategorie des Produkts **Spiele** ausgewählt haben. Hier können Sie angeben, welche Features von Ihrem Spiel unterstützt werden. Alle Informationen, die Sie in diesem Abschnitt angeben, werden im Store-Eintrag des Produkts angezeigt.
+
+Wenn Ihr Spiel eine Multiplayer-Option unterstützt, müssen Sie die minimale und maximale Anzahl der Spieler für eine Sitzung angeben. Sie können nicht mehr als 1.000 minimale oder maximale Spieler eingeben.
+
+Die **Plattformübergreifende Multiplayer-Option** bedeutet, dass das Spiel Multiplayer-Sitzungen zwischen Spielern auf Windows10-PCs und Xbox unterstützt.
+
+
 ## <a name="product-declarations"></a>Produktdeklarationen
 
 Über die Kontrollkästchen in diesem Abschnitt geben Sie an, ob Deklarationen auf Ihre App zutreffen. Dies kann sich darauf auswirken, wie Ihre App angezeigt wird, ob sie bestimmten Kunden angeboten wird und wie sie von Kunden genutzt werden kann.
 
-Weitere Informationen finden Sie unter [App-Deklarationen](app-declarations.md).
+Weitere Informationen finden Sie unter [Produktdeklarationen](app-declarations.md).
 
 ## <a name="system-requirements"></a>Systemanforderungen
 
@@ -52,6 +61,7 @@ Das Verhalten für Kunden variiert abhängig von den spezifischen Anforderungen 
 
 Zusätzlich wird empfohlen, der App Laufzeitprüfungen für die angegebene Hardware hinzuzufügen, da vom Store nicht immer erkannt werden kann, ob ein Kundengerät über das ausgewählte Feature verfügt, sodass Kunden die App trotz der Warnung herunterladen können.
 
-> **Tipp**  Wenn Sie verhindern möchten, dass Ihre UWP-App auf ein Gerät heruntergeladen wird, das die Mindestanforderungen für die Arbeitsspeicherkapazität oder DirectX-Ebene nicht erfüllt, können Sie die Mindestanforderungen in der Datei „StoreManifest.xml“ festlegen. Weitere Informationen finden Sie unter [StoreManifest-Schema (Windows 10)](https://msdn.microsoft.com/library/windows/apps/mt617335).
+> [!TIP]
+> Wenn Sie verhindern möchten, dass Ihre UWP-App auf ein Gerät heruntergeladen wird, das die Mindestanforderungen für die Arbeitsspeicherkapazität oder DirectX-Ebene nicht erfüllt, können Sie die Mindestanforderungen in der Datei „StoreManifest.xml“ festlegen. Weitere Informationen finden Sie unter [StoreManifest-Schema (Windows 10)](https://msdn.microsoft.com/library/windows/apps/mt617335).
 
 

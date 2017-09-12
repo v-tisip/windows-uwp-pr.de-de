@@ -6,14 +6,19 @@ ms.assetid: B5C21FE7-BA83-4940-9CC1-96F6A2DC28C7
 label: Semantic zoom
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: c5a34805941d72981f84a5d515e01d404fb30650
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: predavid
+design-contact: kimsea
+doc-status: Published
+ms.openlocfilehash: 8b901f6077b3f2eb765b53caf9bba188eae5ff0e
+ms.sourcegitcommit: 10f8dcf69d37cdb61562fc9f4d268ccb499c368f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/07/2017
 ---
 # <a name="semantic-zoom"></a>Semantischer Zoom
 
@@ -26,14 +31,7 @@ Mit dem semantischen Zoom können Benutzer zwischen zwei unterschiedlichen Ansic
 
 Bei der Anzeige eines Adressbuchs kann der Benutzer beispielsweise schnell zum Buchstaben „W” springen und diesen vergrößern, um die zu dem betreffenden Buchstaben gehörenden Namen anzuzeigen. 
 
-<div class="important-apis" >
-<b>Wichtige APIs</b><br/>
-<ul>
-<li>[**SemanticZoom-Klasse**](https://msdn.microsoft.com/library/windows/apps/hh702601)</li>
-<li>[**ListView-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listview.aspx)</li>
-<li>[**GridView-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridview.aspx)</li>
-</ul>
-</div>
+> **Wichtige APIs**: [SemanticZoom-Klasse](https://msdn.microsoft.com/library/windows/apps/hh702601), [ListView-Klasse](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listview.aspx), [GridView-Klasse](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridview.aspx)
 
 **Features**:
 
@@ -45,7 +43,7 @@ Bei der Anzeige eines Adressbuchs kann der Benutzer beispielsweise schnell zum B
 
 Verwenden Sie das Steuerelement **SemanticZoom**, wenn Sie einen gruppierten Datensatz anzeigen müssen, der so groß ist, dass er auf einer oder zwei Seiten nicht ganz angezeigt werden kann.
 
-Der semantische Zoom ist nicht mit dem optischen Zoom zu verwechseln. Sie zeigen zwar das gleiche Interaktions- und Grundverhalten (d.h. sie zeigen je nach Zoomfaktor mehr oder weniger Details an), der optische Zoom betrifft jedoch die Größenanpassung für einen Inhaltsbereich oder ein Objekt wie etwa ein Foto. Informationen zu einem Steuerelement, das optisches Zooming durchführt, finden Sie im Artikel über das Steuerelement [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx).
+Der semantische Zoom ist nicht mit dem optischen Zoom zu verwechseln. Sie zeigen zwar das gleiche Interaktions- und Grundverhalten (d.h. sie zeigen je nach Zoomfaktor mehr oder weniger Details an), der optische Zoom betrifft jedoch die Größenanpassung für einen Inhaltsbereich oder ein Objekt wie etwa ein Foto. Informationen zu einem Steuerelement, das optisches Zooming durchführt, finden Sie im Artikel über das Steuerelement [ScrollViewer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx).
 
 ## <a name="examples"></a>Beispiele
 
@@ -63,7 +61,7 @@ Ein Adressbuch ist ein weiteres Beispiel für einen Datensatz, der sich mit eine
 
 ## <a name="create-a-semantic-zoom"></a>Erstellen eines semantischen Zooms
 
-Das Steuerelement **SemanticZoom** verfügt über keine visuelle Darstellung. Es handelt sich um ein Hoststeuerelement, das den Übergang zwischen zwei anderen Steuerelementen steuert, die die Ansichten für Ihre Inhalte bereitstellen, in der Regel die Steuerelemente **ListView** oder **GridView**.  Sie legen die Ansicht-Steuerelemente auf die [**ZoomedInView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.semanticzoom.zoomedinview.aspx)- und [**ZoomedOutView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.semanticzoom.zoomedoutview.aspx)-Eigenschaften von SemanticZoom fest.
+Das Steuerelement **SemanticZoom** verfügt über keine visuelle Darstellung. Es handelt sich um ein Hoststeuerelement, das den Übergang zwischen zwei anderen Steuerelementen steuert, die die Ansichten für Ihre Inhalte bereitstellen, in der Regel die Steuerelemente **ListView** oder **GridView**.  Sie legen die Ansicht-Steuerelemente auf die [ZoomedInView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.semanticzoom.zoomedinview.aspx)- und [ZoomedOutView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.semanticzoom.zoomedoutview.aspx)-Eigenschaften von SemanticZoom fest.
 
 Sie benötigen für einen semantischen Zoom folgende drei Elemente:
 - Eine gruppierte Datenquelle
@@ -72,19 +70,18 @@ Sie benötigen für einen semantischen Zoom folgende drei Elemente:
 
 Bevor Sie einen semantischen Zoom verwenden, sollten Sie wissen, wie Sie eine Listenansicht mit gruppierten Daten verwenden. Weitere Informationen finden Sie unter [Listenansicht und Rasteransicht](listview-and-gridview.md) und [Gruppieren von Elementen in einer Liste](). 
 
-> **Hinweis**:&nbsp;&nbsp;Um die vergrößerte und verkleinerte Ansicht des SemanticZoom-Steuerelements zu definieren, können Sie zwei beliebige Steuerelemente verwenden, die die Benutzeroberfläche [**ISemanticZoomInformation**]() implementieren. Das XAML-Framework bietet drei Steuerelemente, die diese Schnittstelle implementieren: ListView, GridView und Hub.
+> **Hinweis**:&nbsp;&nbsp;Um die vergrößerte und verkleinerte Ansicht des SemanticZoom-Steuerelements zu definieren, können Sie zwei beliebige Steuerelemente verwenden, die die Benutzeroberfläche [ISemanticZoomInformation](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.isemanticzoominformation.aspx) implementieren. Das XAML-Framework bietet drei Steuerelemente, die diese Schnittstelle implementieren: ListView, GridView und Hub.
  
  Dieser XAML-Code zeigt die Struktur des SemanticZoom-Steuerelements. Sie weisen weitere Steuerelemente den Eigenschaften „ZoomedInView” und „ZoomedOutView” zu.
  
- **XAML**
  ```xaml
 <SemanticZoom>
     <SemanticZoom.ZoomedInView>
-        <!-- Put the GridView for the zoomed out view here. -->   
+        <!-- Put the GridView for the zoomed in view here. -->   
     </SemanticZoom.ZoomedInView>
 
     <SemanticZoom.ZoomedOutView>
-        <!-- Put the ListView for the zoomed in view here. -->       
+        <!-- Put the ListView for the zoomed out view here. -->       
     </SemanticZoom.ZoomedOutView>
 </SemanticZoom>
  ```
@@ -95,7 +92,6 @@ Die folgenden Beispiele stammen von der Seite „SemanticZoom” des [Beispiels 
 
 Hier sehen Sie das GridView-Steuerelement für die vergrößerte Ansicht. Die vergrößerte Ansicht sollte die einzelnen Datenelemente in Gruppen anzeigen. Dieses Beispiel zeigt, wie die Elemente in einem Raster mit einem Bild und Text angezeigt werden sollten. 
 
-**XAML**
 ```xaml
 <SemanticZoom.ZoomedInView>
     <GridView ItemsSource="{x:Bind cvsGroups.View}" 
@@ -111,7 +107,6 @@ Hier sehen Sie das GridView-Steuerelement für die vergrößerte Ansicht. Die ve
  
 Die Darstellung der Gruppenkopfzeilen wird in der Ressource `ZoomedInGroupHeaderTemplate` definiert. Die Darstellung der Elemente wird in der Ressource `ZoomedInTemplate` definiert. 
 
-**XAML**   
 ```xaml
 <DataTemplate x:Key="" x:DataType="data:ControlInfoDataGroup">
     <TextBlock Text="{x:Bind Title}" 
@@ -137,7 +132,6 @@ Die Darstellung der Gruppenkopfzeilen wird in der Ressource `ZoomedInGroupHeader
 
 Dieser XAML-Code definiert ein ListView-Steuerelement für die verkleinerte Ansicht. Dieses Beispiel zeigt, wie die Gruppenkopfzeilen als Text in einer Liste angezeigt werden sollten.
 
-**XAML**
 ```xaml
 <SemanticZoom.ZoomedOutView>
     <ListView ItemsSource="{x:Bind cvsGroups.View.CollectionGroups}" 
@@ -148,7 +142,6 @@ Dieser XAML-Code definiert ein ListView-Steuerelement für die verkleinerte Ansi
 
  Die Darstellung wird in der Ressource `ZoomedOutTemplate` definiert.
  
- **XAML**   
 ```xaml    
 <DataTemplate x:Key="ZoomedOutTemplate" x:DataType="wuxdata:ICollectionViewGroup">
     <TextBlock Text="{x:Bind Group.(data:ControlInfoDataGroup.Title)}" 
@@ -158,18 +151,16 @@ Dieser XAML-Code definiert ein ListView-Steuerelement für die verkleinerte Ansi
 
 **Synchronisieren der Ansichten**
 
-Die vergrößerte und verkleinerte Ansicht sollten synchronisiert werden, sodass für den Fall, dass ein Benutzer eine Gruppe in der verkleinerten Ansicht auswählt, die Details dieser Gruppe in der vergrößerten Ansicht angezeigt werden. Sie können eine [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.data.collectionviewsource.aspx) verwenden oder Code hinzufügen, um die Ansichten zu synchronisieren.
+Die vergrößerte und verkleinerte Ansicht sollten synchronisiert werden, sodass für den Fall, dass ein Benutzer eine Gruppe in der verkleinerten Ansicht auswählt, die Details dieser Gruppe in der vergrößerten Ansicht angezeigt werden. Sie können eine [CollectionViewSource](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.data.collectionviewsource.aspx) verwenden oder Code hinzufügen, um die Ansichten zu synchronisieren.
 
-Alle Steuerelemente, die Sie an die gleiche CollectionViewSource binden, verfügen immer über das gleiche aktuelle Element. Wenn beide Ansichten die gleiche CollectionViewSource als Datenquelle verwenden, synchronisiert die CollectionViewSource die Ansichten automatisch. Weitere Informationen finden Sie unter [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.data.collectionviewsource.aspx).
+Alle Steuerelemente, die Sie an die gleiche CollectionViewSource binden, verfügen immer über das gleiche aktuelle Element. Wenn beide Ansichten die gleiche CollectionViewSource als Datenquelle verwenden, synchronisiert die CollectionViewSource die Ansichten automatisch. Weitere Informationen finden Sie unter [CollectionViewSource](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.data.collectionviewsource.aspx).
 
-Wenn Sie keine CollectionViewSource verwenden, um die Ansichten zu synchronisieren, sollten Sie das [**ViewChangeStarted**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.semanticzoom.viewchangestarted.aspx)-Ereignis behandeln und die Elemente wie hier gezeigt im Ereignishandler synchronisieren.
+Wenn Sie keine CollectionViewSource verwenden, um die Ansichten zu synchronisieren, sollten Sie das [ViewChangeStarted](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.semanticzoom.viewchangestarted.aspx)-Ereignis behandeln und die Elemente wie hier gezeigt im Ereignishandler synchronisieren.
 
-**XAML**
 ```xaml
 <SemanticZoom x:Name="semanticZoom" ViewChangeStarted="SemanticZoom_ViewChangeStarted">
 ```
 
-**C#**
 ```csharp
 private void SemanticZoom_ViewChangeStarted(object sender, SemanticZoomViewChangedEventArgs e)
 {

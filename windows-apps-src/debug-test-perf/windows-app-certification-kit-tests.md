@@ -1,19 +1,21 @@
 ---
-author: mcleblanc
+author: PatrickFarley
 ms.assetid: 1526FF4B-9E68-458A-B002-0A5F3A9A81FD
 title: "Tests im Zertifizierungskit für Windows-Apps"
 description: "Das Zertifizierungskit für Windows-Apps enthält eine Reihe von Tests, mit denen Sie sicherstellen können, dass eine App für die Veröffentlichung im Windows Store bereit ist."
-ms.author: markl
+ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows10, UWP
-ms.openlocfilehash: 2dab2719eae86487b93b9030b430b84aea7b2737
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 5e3ae74ba4392b5021159f9fcb825009137701d3
+ms.sourcegitcommit: e8cc657d85566768a6efb7cd972ebf64c25e0628
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/26/2017
 ---
-## <a name="windows-app-certification-kit-tests"></a>Tests im Zertifizierungskit für Windows-Apps
+# <a name="windows-app-certification-kit-tests"></a>Tests im Zertifizierungskit für Windows-Apps
 
 \[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
@@ -668,8 +670,8 @@ Aktualisieren Sie den JavaScript-Hintergrundcode so, dass „Close()” richtig 
 
 > **Hinweis**  Dieser Artikel ist für Windows10-Entwickler gedacht, die UWP-Apps schreiben. Wenn Sie für Windows8.x oder Windows Phone8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
- 
+## <a name="related-topics"></a>Verwandte Themen
 
- 
-
+* [Tests für Windows Desktop-Brücke-Apps](windows-desktop-bridge-app-tests.md)
+* [WindowsStore-Richtlinien](https://msdn.microsoft.com/library/windows/apps/Dn764944)
  

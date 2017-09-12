@@ -8,20 +8,24 @@ label: History and backwards navigation
 template: detail.hbs
 op-migration-status: ready
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: c2037c4b313b45309162ea4c0874418fe9463d17
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: cd3184ebe5e94c410d55a725129a38907aa6a01e
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/22/2017
 ---
 #  <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>Navigationsverlauf und Rückwärtsnavigation für UWP-Apps
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Im Internet stellen die einzelnen Websites eigene Navigationssysteme bereit, beispielsweise Inhaltsverzeichnis, Schaltflächen, Menüs, einfache Listen mit Links usw. Die Navigationsfunktionalität kann je nach Website stark variieren. Es gibt jedoch eine konsistente Navigationsfunktion: Zurück. Die meisten Browser bieten eine Zurück-Schaltfläche, die unabhängig von der Website das gleiche Verhalten aufweist.
+
+> **Wichtige APIs**: [SystemNavigationManager-Klasse](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Core.SystemNavigationManager), [BackRequested-Ereignis](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Core.SystemNavigationManager#Windows_UI_Core_SystemNavigationManager_BackRequested), [OnNavigatedTo](https://msdn.microsoft.com/library/windows/apps/br227508)
 
 Ähnlichen Gründen enthält die universelle Windows-Plattform (UWP) ein einheitliches System zur Rückwärtsnavigation, mit dem der Navigationsverlauf des Benutzers innerhalb einer App und je nach Gerät von App zu App durchlaufen werden kann.
 
@@ -111,7 +115,7 @@ Windows.UI.Core.SystemNavigationManager.GetForCurrentView().BackRequested +=
 Windows::UI::Core::SystemNavigationManager::GetForCurrentView()->
     BackRequested += ref new Windows::Foundation::EventHandler<
     Windows::UI::Core::BackRequestedEventArgs^>(
-        this, &amp;App::App_BackRequested);
+        this, &App::App_BackRequested);
 ```
 
 Das ist der entsprechende [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596)-Ereignishandler, der [**GoBack**](https://msdn.microsoft.com/library/windows/apps/dn996568) im Stammframe der App aufruft.
@@ -129,7 +133,7 @@ Dieser Handler wird für ein globales Zurück-Ereignis aufgerufen. Wenn der In-A
 >
 >    // Navigate back if possible, and if the event has not 
 >    // already been handled .
->    if (rootFrame.CanGoBack &amp;&amp; e.Handled == false)
+>    if (rootFrame.CanGoBack && e.Handled == false)
 >    {
 >        e.Handled = true;
 >        rootFrame.GoBack();

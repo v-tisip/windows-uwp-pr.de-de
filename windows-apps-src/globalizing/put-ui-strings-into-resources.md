@@ -11,9 +11,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: 9f4ebe843b30d5bc408a705cfc9dda5d6731d4d1
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: a3e224fc51245a5f91c29da2d745a3740029cda9
+ms.sourcegitcommit: 11664964e548a2af30d6e176c515cdbf330934ac
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/28/2017
 ---
 # <a name="put-ui-strings-into-resources"></a>Aufnehmen von UI-Zeichenfolgen in Ressourcen
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
@@ -65,10 +67,10 @@ Sie müssen alle Steuerelemente, deren Texte lokalisiert werden müssen, mit der
 
 Für den Ressourcennamen geben Sie den **Uid**-Attributwert und die Eigenschaft an, die die übersetzte Zeichenfolge erhält (in diesem Fall die Eigenschaft „Text“). Sie können andere Eigenschaften/Werte für verschiedene Sprachen festlegen, z.B. "Greeting.Width". Sie sollten mit solchen layoutbezogenen Eigenschaften jedoch vorsichtig umgehen. Versuchen Sie stets, ein dynamisches Layout auf Grundlage des Gerätebildschirms für die Steuerelemente zu verwenden.
 
-Beachten Sie weiterhin, dass die verknüpften Eigenschaften unterschiedlich in RESW-Dateien behandelt werden, z.B. "AutomationPeer.Name". Sie müssen den Namespace explizit wie folgt ausschreiben:
+Beachten Sie weiterhin, dass die verknüpften Eigenschaften unterschiedlich in RESW-Dateien behandelt werden, z.B. "AutomationProperties.Name". Sie müssen den Namespace explizit wie folgt ausschreiben:
 
 ```XML
-MediumButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name</code></pre></td>
+MediumButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name
 ```
 
 ## <a name="add-string-resource-identifiers-to-code-and-markup"></a>Fügen Sie Code und Markup Zeichenfolgenressourcen-Bezeichner hinzu.
@@ -101,7 +103,9 @@ auto str = loader->GetString("Farewell");
 
 3.  Erstellen Sie einen weiteren Ordner mit dem Namen „fr-FR“ für Französisch (Frankreich). Erstellen Sie eine neue Ressourcendatei, und fügen Sie Folgendes hinzu:
 
-    strings/fr-FR/Resources.resw ![Ressource hinzufügen, Französisch,](images/addresource-fr-fr.png)
+    strings/fr-FR/Resources.resw
+    
+    ![Ressource hinzufügen, Französisch](images/addresource-fr-fr.png)
 
 ## <a name="build-and-run-the-app"></a>Erstellen Sie die App, und führen Sie sie aus.
 

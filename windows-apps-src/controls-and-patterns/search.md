@@ -6,14 +6,19 @@ ms.assetid: C328FAA3-F6AE-4970-8372-B413F1290C39
 label: Search
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: b85d14b037fc65f10a6a24ed6c1a04b4be3ff6d5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: miguelrb
+design-contact: ksulliv
+doc-status: Published
+ms.openlocfilehash: 9a12e7490cc1cf7bd1aa65b694a3aeb345ba1128
+ms.sourcegitcommit: 45490bd85e6f8d247a041841d547ecac2ff48250
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/23/2017
 ---
 # <a name="search-and-find-in-page"></a>Suche und „Auf Seite suchen“
 
@@ -21,14 +26,9 @@ translationtype: HT
 
 Die Suche ist eine der besten Möglichkeiten, um Inhalte in Ihrer App zu finden. In diesem Artikel werden Elemente der Suche sowie Suchbereiche, die Implementierung und Beispiele für die Suche im Kontext behandelt.
 
-<div class="important-apis" >
-<b>Wichtige APIs</b><br/>
-<ul>
-<li>[**AutoSuggestBox-Klasse (XAML)**](https://msdn.microsoft.com/library/windows/apps/dn633874)</li>
-</ul>
-</div>
+> **Wichtige APIs**: [AutoSuggestBox-Klasse](https://msdn.microsoft.com/library/windows/apps/dn633874)
 
-## <a name="elements-of-the-search-experience"></a>Elemente der Suche
+## <a name="elements-of-the-search-experience"></a>Elemente der Suchfunktionalität
 
 
 **Eingabe.**  Die Texteingabe ist der am häufigsten verwendete Suchmodus und steht daher bei diesem Leitfaden im Mittelpunkt. Andere gängige Eingabemodi sind Spracheingabe und Kamera. Für diese sind jedoch in der Regel eine Verknüpfung mit der Gerätehardware sowie ggf. zusätzliche Steuerelemente oder benutzerdefinierte UI-Elemente in der App erforderlich.
@@ -207,25 +207,14 @@ Wenn eine Textübereinstimmung in der Suche vorliegt, sollte der erste Begriff i
 -   Bei Dokumentviewern, Lesern und Browsern handelt es sich um die wahrscheinlichsten App-Typen für die Bereitstellung von „Auf Seite suchen“, was Benutzern eine vollständige Bildschirmanzeige-/-leseerfahrung ermöglicht.
 -   Die Funktion „Auf Seite suchen“ ist sekundär und sollte auf einer Befehlsleiste platziert werden.
 
-Weitere Informationen zum Hinzufügen von Befehlen zur Befehlsleiste finden Sie unter [Befehlsleiste](app-bars.md).
+Weitere Informationen zum Hinzufügen von Befehlen zur Befehlsleiste finden Sie unter [Command bar](app-bars.md) (Befehlsleiste).
 
-<div class="microsoft-internal-note">
-## Prüfliste für Globalisierung und Lokalisierung
-
-<table>
-<tr>
-<th>Vertikaler Abstand</th><td>Verwenden Sie für den vertikalen Abstand Zeichen aus anderen Schriften als der Lateinschrift, um sicherzustellen, dass andere Schriften als die Lateinschrift richtig angezeigt werden, einschließlich Zahlen.</td>
-</tr>
-<tr>
-<th>Überlegungen hinsichtlich der Bidirektionalität</th><td>Das Lupensymbol sollte in Bidi nicht gespiegelt angezeigt werden.</td>
-</tr>
-</table>
-</div>
+ 
 
 
 ## <a name="related-articles"></a>Verwandte Artikel
 
-* [**Feld mit automatischen Vorschlägen**](auto-suggest-box.md)
+* [Feld mit automatischen Vorschlägen](auto-suggest-box.md)
 
 
  

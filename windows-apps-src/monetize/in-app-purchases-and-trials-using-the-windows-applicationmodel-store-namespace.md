@@ -1,7 +1,7 @@
 ---
 author: mcleanbyron
 ms.assetid: 32572890-26E3-4FBB-985B-47D61FF7F387
-description: "Erfahren Sie, wie Sie In-App-Käufe und Testversionen in UWP-Apps aktivieren, die für Versionen vor Windows 10, Version 1607 bestimmt sind."
+description: "Erfahren Sie, wie Sie In-App-Käufe und Testversionen in UWP-Apps aktivieren, die für Versionen vor Windows10, Version 1607 bestimmt sind."
 title: "In-App-Käufe und Testversionen mit dem Windows.ApplicationModel.Store-Namespace"
 ms.author: mcleans
 ms.date: 02/08/2017
@@ -9,13 +9,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "uwp, in-app-käufe, IAPs, add-ons, testversionen, Windows.ApplicationModel.Store"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 787007b870675749d96afa59a6e9cb5f3be68991
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 06ee6eba5e4dc2f13b1ca8f8555b0e29770d1ec8
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/09/2017
 ---
-
 # <a name="in-app-purchases-and-trials-using-the-windowsapplicationmodelstore-namespace"></a>In-App-Käufe und Testversionen mit dem Windows.ApplicationModel.Store-Namespace
 
 Sie können Mitglieder des [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) verwenden, um Ihrer Universal Windows Platform (UWP)-App In-App-Käufe und Testfunktionen hinzuzufügen und die Monetarisierung Ihrer App zu unterstützen. Diese APIs ermöglichen auch den Zugriff auf die Lizenzinformationen für Ihre App.
@@ -24,15 +23,15 @@ Die Artikel in diesem Abschnitt enthalten ausführliche Anleitungen und Codebeis
 
 Ein vollständiges Beispiel, das zeigt, wie Sie Testversionen und In-App-Käufe mithilfe des **Windows.ApplicationModel.Store**-Namespace implementieren, finden Sie im [Store-Beispiel](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store).
 
->**Hinweise**&nbsp;&nbsp;
->
-> * Wenn Ihre App auf Windows 10 ab Version 1607 ausgerichtet ist, wird empfohlen, den [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace anstelle des **Windows.ApplicationModel.Store**-Namespace zu verwenden. Der **Windows.Services.Store**-Namespace unterstützt die neuesten Add-On-Typen, wie Store-verwaltete Endverbraucher-Add-Ons, und ist so gestaltet, dass er mit zukünftigen Arten von Produkten und Features kompatibel ist, die von Windows Dev Center und dem Store unterstützt werden. Der **Windows.Services.Store**-Namespace wurde darüber hinaus für eine bessere Leistung entworfen. Weitere Informationen finden Sie unter [In-App-Käufe und Testversionen](in-app-purchases-and-trials.md).
-<br/><br/>
-> * Der **Windows.ApplicationModel.Store**-Namespace wird von Windows-Desktopanwendungen nicht unterstützt, die die [Desktop-Brücke](https://developer.microsoft.com/windows/bridges/desktop) verwenden. Diese Anwendungen müssen zum Implementieren von In-App-Käufen und Testversionen den **Windows.Services.Store**-Namespace verwenden.
+> [!NOTE]
+> Wenn Ihre App auf Windows10 ab Version1607 ausgerichtet ist, wird empfohlen, den [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace anstelle des **Windows.ApplicationModel.Store**-Namespace zu verwenden. Der **Windows.Services.Store**-Namespace unterstützt die neuesten Add-On-Typen, wie Store-verwaltete Endverbraucher-Add-Ons, und ist so gestaltet, dass er mit zukünftigen Arten von Produkten und Features kompatibel ist, die von Windows Dev Center und dem Store unterstützt werden. Der **Windows.Services.Store**-Namespace wurde darüber hinaus für eine bessere Leistung entworfen. Weitere Informationen finden Sie unter [In-App-Käufe und Testversionen](in-app-purchases-and-trials.md).
 
-## <a name="get-started-with-the-currentapp-and-currentappsimulator-classes"></a>Erste Schritte mit den Klassen CurrentApp und CurrentAppSimulator
+> [!NOTE]
+> Der **Windows.ApplicationModel.Store**-Namespace wird von Windows-Desktopanwendungen nicht unterstützt, die die [Desktop-Brücke](https://developer.microsoft.com/windows/bridges/desktop) verwenden. Diese Anwendungen müssen zum Implementieren von In-App-Käufen und Testversionen den **Windows.Services.Store**-Namespace verwenden.
 
-Den Haupteinstiegspunkt in den **Windows.ApplicationModel.Store**-Namespace stellt die Klasse [CurrentApp](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentapp.aspx) dar. Diese Klasse stellt statische Eigenschaften und Methoden bereit, mit denen Sie Informationen für die aktuelle App und die verfügbaren Add-Ons (auch als In-App-Produkte oder IAPs bezeichnet) abrufen, Lizenzinformationen für die aktuelle App oder die Add-Ons abrufen, eine App oder ein Add-On für den aktuellen Benutzer kaufen und weitere Aufgaben ausführen können.
+## <a name="get-started-with-the-currentapp-and-currentappsimulator-classes"></a>Erste Schrittemit den Klassen CurrentApp und CurrentAppSimulator
+
+Den Haupteinstiegspunkt in den **Windows.ApplicationModel.Store**-Namespace stellt die Klasse [CurrentApp](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentapp.aspx) dar. Diese Klasse stellt statische Eigenschaften und Methoden bereit, mit denen Sie Informationen für die aktuelle App und die verfügbaren Add-Ons abrufen, eine App oder ein Add-On für den aktuellen Benutzer kaufen, Lizenzinformationen für die aktuelle App oder die Add-Ons abrufen und weitere Aufgaben durchführen können.
 
 Die Klasse [CurrentApp](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentapp.aspx) erhält ihre Daten aus dem Windows Store. Daher benötigen Sie ein Entwicklerkonto, und die App muss im Store veröffentlicht werden, bevor Sie diese Klasse erfolgreich in Ihrer App verwenden können. Vor dem Übermitteln Ihrer App an den Store können Sie den Code mit einer simulierten Version dieser Klasse mit dem Namen [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentappsimulator.aspx) testen. Nachdem Sie Ihre App getestet haben, und bevor Sie diese an den Windows Store übermitteln, müssen Sie die Instanzen von **CurrentAppSimulator** durch **CurrentApp** ersetzen. Ihre App wird nicht zertifiziert, wenn sie **CurrentAppSimulator** verwendet.
 
@@ -44,9 +43,9 @@ Weitere Informationen zu den allgemeinen Aufgaben, die Sie mit **CurrentApp** un
 |----------------------------|-----------------------------|
 | [Ausschließen oder Einschränken von Features in einer Testversion](exclude-or-limit-features-in-a-trial-version-of-your-app.md) | Durch einen kostenlose, zeitlich begrenzte Testversion Ihrer App mit eingeschränkten Features können Sie Ihre Kunden motivieren, auf die Vollversion Ihrer App zu aktualisieren. |
 | [Unterstützen des Kaufs von In-App-Produkten](enable-in-app-product-purchases.md)      |  Sie können unabhängig davon, ob Ihre App kostenlos oder kostenpflichtig ist, Inhalte, andere Apps oder neue App-Funktionen (wie das Freischalten des nächsten Levels eines Spiels) direkt in der App verkaufen. Hier zeigen wir Ihnen, wie Sie diese Produkte in Ihrer App aktivieren können.  |
-| [Unterstützen von Endverbraucher-Add-On-Käufen](enable-consumable-in-app-product-purchases.md)      | Sie können In-App-Käufe von Endverbraucherprodukten – Artikel, die gekauft, verwendet und wieder gekauft werden können – über die Store-Handelsplattform anbieten, um Kunden beim Kauf Stabilität und Zuverlässigkeit zu bieten. Dies ist besonders nützlich für Dinge wie spielinterne Währungen (Gold, Münzen usw.), die gekauft und dann zum Erwerben bestimmter Power-Ups verwendet werden können. |
+| [Unterstützen von Endverbraucher-Add-On-Käufen](enable-consumable-in-app-product-purchases.md)      | Sie können In-App-Käufe von konsumierbaren Produkten – Artikel, die gekauft, verwendet und wieder gekauft werden können – über die Store-Handelsplattform anbieten, um den Kunden beim Kauf Stabilität und Zuverlässigkeit zu bieten. Dies ist besonders nützlich für Dinge wie spielinterne Währungen (Gold, Münzen usw.), die gekauft und dann zum Erwerben bestimmter Power-Ups verwendet werden können. |
 | [Verwalten eines großen Katalogs von In-App-Produkten](manage-a-large-catalog-of-in-app-products.md)      |   Wenn Ihre App einen großen In-App-Produktkatalog enthält, können Sie optional das in diesem Thema beschriebene Verfahren zum Verwalten des Katalogs ausführen.    |
-| [Überprüfen von Produktkäufen anhand von Belegen](use-receipts-to-verify-product-purchases.md)      |   Jede Windows Store-Transaktion, die zu einem erfolgreichen Produktkauf führt, kann optional einen Transaktionsbeleg zurückgeben, der dem Kunden Informationen zum aufgelisteten Produkt und zu den Kosten bereitstellt. Der Zugriff auf diese Informationen unterstützt Szenarien, in denen Ihre App überprüfen muss, ob ein Benutzer Ihre App erworben oder im Windows Store In-App-Produkte gekauft hat. |
+| [Überprüfen von Produktkäufen anhand von Belegen](use-receipts-to-verify-product-purchases.md)      |   Jede Windows Store-Transaktion, die zu einem erfolgreichen Produktkauf führt, kann optional einen Transaktionsbeleg zurückgeben, der dem Kunden Informationen zum aufgelisteten Produkt und zu den Kosten bereitstellt. Der Zugriff auf diese Informationen unterstützt Szenarien, in denen Ihre App überprüfen muss, ob ein Benutzer Ihre App erworben oder im WindowsStore In-App-Produkte gekauft hat. |
 
 <span id="proxy" />
 ## <a name="using-the-windowsstoreproxyxml-file-with-currentappsimulator"></a>Verwenden der Datei „WindowsStoreProxy.xml“ mit CurrentAppSimulator
@@ -57,13 +56,14 @@ Standardmäßig wird eine WindowsStoreProxy.xml-Datei unter folgendem Pfad erste
 
 Auch wenn Sie die Werte in dieser Datei ändern können, wird empfohlen, dass Sie eine eigene WindowsStoreProxy.xml-Datei (in einem Datenordner des Visual Studio-Projekts) zur Verwendung durch **CurrentAppSimulator** erstellen. Rufen Sie [ReloadSimulatorAsync](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentappsimulator.reloadsimulatorasync.aspx) auf, um Ihre Datei zu laden, wenn Sie die Transaktion simulieren. Wenn Sie **ReloadSimulatorAsync** nicht aufrufen, um Ihre eigene WindowsStoreProxy.xml-Datei zu laden, erstellt/lädt **CurrentAppSimulator** die standardmäßige WindowsStoreProxy.xml-Datei (überschreibt sie jedoch nicht).
 
->**Hinweis:**&nbsp;&nbsp;Beachten Sie, dass **CurrentAppSimulator** nicht vollständig initialisiert ist, bis **ReloadSimulatorAsync** abgeschlossen ist. Und da **ReloadSimulatorAsync** eine asynchrone Methode ist, müssen Sie darauf achten, eine Racebedingung zu vermeiden, in der **CurrentAppSimulator** in einem Thread abgefragt und gleichzeitig in einem anderen Thread initialisiert wird. Eine Möglichkeit besteht darin, ein Flag verwenden, um anzugeben, dass die Initialisierung abgeschlossen ist. Eine App, die aus dem Windows Store installiert wird, muss **CurrentApp** anstelle von **CurrentAppSimulator** verwenden. In diesem Fall wird **ReloadSimulatorAsync** nicht aufgerufen, und die eben erwähnte Racebedingung tritt nicht ein. Aus diesem Grund sollten Sie Ihren Code so entwerfen, dass er in beiden Fällen funktioniert, asynchron und synchron.
+> [!NOTE]
+> Beachten Sie, dass **CurrentAppSimulator** nicht vollständig initialisiert ist, bis **ReloadSimulatorAsync** abgeschlossen ist. Und da **ReloadSimulatorAsync** eine asynchrone Methode ist, müssen Sie darauf achten, eine Racebedingung zu vermeiden, in der **CurrentAppSimulator** in einem Thread abgefragt und gleichzeitig in einem anderen Thread initialisiert wird. Eine Möglichkeit besteht darin, ein Flag verwenden, um anzugeben, dass die Initialisierung abgeschlossen ist. Eine App, die aus dem Windows Store installiert wird, muss **CurrentApp** anstelle von **CurrentAppSimulator** verwenden. In diesem Fall wird **ReloadSimulatorAsync** nicht aufgerufen, und die eben erwähnte Racebedingung tritt nicht ein. Aus diesem Grund sollten Sie Ihren Code so entwerfen, dass er in beiden Fällen funktioniert, asynchron und synchron.
 
 
 <span id="proxy-examples" />
 ### <a name="examples"></a>Beispiele
 
-In diesem Beispiel wird eine WindowsStoreProxy.xml-Datei (UTF-16-codiert) gezeigt, die eine App mit einem Testmodus beschreibt, der am 19. Januar 2015 um 05:00 Uhr (UTC) abläuft.
+In diesem Beispiel wird eine WindowsStoreProxy.xml-Datei (UTF-16-codiert) gezeigt, die eine App mit einem Testmodus beschreibt, der am 19.Januar2015 um 05:00 Uhr (UTC) abläuft.
 
 > [!div class="tabbedCodeSnippets"]
 ```xml
@@ -96,7 +96,7 @@ In diesem Beispiel wird eine WindowsStoreProxy.xml-Datei (UTF-16-codiert) gezeig
 </CurrentApp>
 ```
 
-Im nächsten Beispiel wird eine WindowsStoreProxy.xml-Datei (UTF-16-codiert) gezeigt, die eine App beschreibt, die gekauft wurde, ein Feature besitzt, das am 19. Januar 2015 um 05:00 (UTC) abläuft und über einen konsumierbaren In-App-Kauf verfügt.
+Im nächsten Beispiel wird eine WindowsStoreProxy.xml-Datei (UTF-16-codiert) gezeigt, die eine App beschreibt, die gekauft wurde, ein Feature besitzt, das am 19.Januar2015 um 05:00 (UTC) abläuft und über einen konsumierbaren In-App-Kauf verfügt.
 
 > [!div class="tabbedCodeSnippets"]
 ```xml
@@ -150,7 +150,7 @@ Im nächsten Beispiel wird eine WindowsStoreProxy.xml-Datei (UTF-16-codiert) gez
 <span id="proxy-schema" />
 ### <a name="schema"></a>Schema
 
-In diesem Abschnitt wird die XSD-Datei aufgelistet, die die Struktur der WindowsStoreProxy.xml-Datei definiert. Um dieses Schema beim Arbeiten mit Ihrer WindowsStoreProxy.xml-Datei auf den XML-Editor in Visual Studio anzuwenden, führen Sie folgende Schritte aus:
+In diesem Abschnitt wird die XSD-Datei aufgelistet, die die Struktur der WindowsStoreProxy.xml-Datei definiert. Um dieses Schema beim Arbeiten mit Ihrer WindowsStoreProxy.xml-Datei auf den XML-Editor in Visual Studio anzuwenden, führen Sie folgende Schritteaus:
 
 1. Öffnen Sie die WindowsStoreProxy.xml-Datei in Microsoft Visual Studio.
 2. Klicken Sie im Menü **XML** auf **Schema erstellen**. Hierdurch wird eine temporäre WindowsStoreProxy.xsd-Datei auf Grundlage des Inhalts der XML-Datei erstellt.
@@ -467,8 +467,8 @@ Die folgende Tabelle zeigt, wie Sie einige häufige Bedingungen simulieren, inde
 |  Zu simulierende Bedingung  |  IsActive  |  IsTrial  | ExpirationDate   |
 |-------------|------------|--------|--------|
 |  Vollständig lizenziert  |    true   |  false  |    Nicht vorhanden. Es kann vorhanden sein und ein späteres Datum angeben. Es wird jedoch empfohlen, das Element nicht in die XML-Datei einzuschließen. Wenn es vorhanden ist und ein Datum in der Vergangenheit angibt, wird **IsActive** ignoriert und als „false“ bewertet.          |
-|  Im Testzeitraum  |    true  |  true   |      &lt;Datum/Uhrzeit in der Zukunft&gt; Dieses Element muss vorhanden sein, da **IsTrial** „true“ ist. Sie können eine Website aufrufen, die die aktuelle koordinierte Weltzeit (UTC) anzeigt, um festzustellen, auf wie weit in der Zukunft dies festgelegt werden muss, um den gewünschten verbleibenden Testzeitraum zu erhalten.         |
-|  Abgelaufene Testversion  |    false  |  true   |      &lt;Datum/Uhrzeit in der Vergangenheit&gt; Dieses Element muss vorhanden sein, da **IsTrial** „true“ ist. Sie können eine Website aufrufen, die die aktuelle koordinierte Weltzeit (UTC) anzeigt, um festzustellen, was in UTC Vergangenheit ist.         |
+|  Im Testzeitraum  |    true  |  true   |      &lt;Datum/Uhrzeit in der Zukunft&gt; Dieses Element muss vorhanden sein, da **IsTrial** Wahr ist. Sie können eine Website aufrufen, die die aktuelle koordinierte Weltzeit (UTC) anzeigt, um festzustellen, auf wie weit in der Zukunft dies festgelegt werden muss, um den gewünschten verbleibenden Testzeitraum zu erhalten.         |
+|  Abgelaufene Testversion  |    false  |  true   |      &lt;Datum/Uhrzeit in der Vergangenheit&gt; Dieses Element muss vorhanden sein, da **IsTrial** Wahr ist. Sie können eine Website aufrufen, die die aktuelle koordinierte Weltzeit (UTC) anzeigt, um festzustellen, was in UTC Vergangenheit ist.         |
 |  Ungültig  |    false  | false       |     &lt;Jeder Wert oder ausgelassen&gt;          |  |
 
 <span id="app-child-of-licenseinformation"/>
@@ -482,7 +482,7 @@ Dieses Element beschreibt die App-Lizenz. **App** ist ein erforderliches unterge
 |-------------|------------|--------|--------|
 |  **IsActive**  |    Ja   |  1   |    Beschreibt den aktuellen Lizenzstatus der App. Der Wert **true** gibt an, dass die Lizenz gültig ist. Der Wert **false** gibt an, dass die Lizenz ungültig ist. Normalerweise lautet dieser Wert **true**, unabhängig davon, ob die App einen Testmodus hat oder nicht.  Legen Sie diesen Wert auf **false** fest, um zu testen, wie sich Ihre App verhält, wenn die Lizenz ungültig ist.           |
 |  **IsTrial**  |    Ja  |  1   |      Beschreibt den aktuellen Testversionsstatus der App. Der Wert **true** gibt an, dass die App während des Testzeitraums verwendet wird. Der Wert **false** gibt an, dass die App keine Testversion ist, entweder weil die App gekauft wurde oder weil der Testzeitraum abgelaufen ist.         |
-|  **ExpirationDate**  |    Nein  |  0 oder 1       |     Das Datum, an dem der Testzeitraum für diese App abläuft, angegeben in der koordinierten Weltzeit (UTC). Das Datum muss ausgedrückt werden als: yyyy-mm-ddThh:mm:ss.ssZ. Beispielsweise würde 05:00 Uhr am 19. Januar 2015 als 2015-01-19T05:00:00.00Z angegeben. Dieses Element ist erforderlich, wenn **IsTrial** **true** ist. Andernfalls ist es nicht erforderlich.          |  |
+|  **ExpirationDate**  |    Nein  |  0 oder 1       |     Das Datum, an dem der Testzeitraum für diese App abläuft, angegeben in der koordinierten Weltzeit (UTC). Das Datum muss ausgedrückt werden als: yyyy-mm-ddThh:mm:ss.ssZ. Beispielsweise würde 05:00Uhr am 19.Januar2015 als 2015-01-19T05:00:00.00Z angegeben. Dieses Element ist erforderlich, wenn **IsTrial** **true** ist. Andernfalls ist es nicht erforderlich.          |  |
 
 <span id="product-child-of-licenseinformation"/>
 #### <a name="product-element-child-of-licenseinformation"></a>Product-Element (untergeordnetes Element von LicenseInformation.)
@@ -494,7 +494,7 @@ Dieses Element beschreibt den Lizenzstatus eines dauerhaften Add-Ons in der App.
 |  Element  |  Erforderlich  |  Menge  | Beschreibung   |
 |-------------|------------|--------|--------|
 |  **IsActive**  |    Ja   |  1     |    Beschreibt den aktuellen Lizenzstatus des Add-Ons. Der Wert **true** gibt an, dass das Add-On verwendet werden kann. Der Wert **false** gibt an, dass das Add-On nicht verwendet werden kann oder nicht gekauft wurde.           |
-|  **ExpirationDate**  |    Nein   |  0 oder 1     |     Das Datum, an dem das Add-On abläuft, angegeben in der koordinierten Weltzeit (UTC). Das Datum muss ausgedrückt werden als: yyyy-mm-ddThh:mm:ss.ssZ. Beispielsweise würde 05:00 Uhr am 19. Januar 2015 als 2015-01-19T05:00:00.00Z angegeben. Wenn dieses Element vorhanden ist, hat das Add-On ein Ablaufdatum. Wenn es nicht vorhanden ist, läuft das Add-On nicht ab.  |  
+|  **ExpirationDate**  |    Nein   |  0 oder 1     |     Das Datum, an dem das Add-On abläuft, angegeben in der koordinierten Weltzeit (UTC). Das Datum muss ausgedrückt werden als: yyyy-mm-ddThh:mm:ss.ssZ. Beispielsweise würde 05:00Uhr am 19.Januar2015 als 2015-01-19T05:00:00.00Z angegeben. Wenn dieses Element vorhanden ist, hat das Add-On ein Ablaufdatum. Wenn es nicht vorhanden ist, läuft das Add-On nicht ab.  |  
 
 **Product** hat die folgenden Attribute.
 
@@ -544,4 +544,3 @@ Dieses Element beschreibt ein konsumierbares Add-On. **Product** ist ein optiona
 |  **TransactionId**  |     Ja       |   Enthält eine GUID (als Zeichenfolge), die von der App verwendet wird, um die Kauftransaktion für ein konsumierbares Add-On während der Ausführung nachzuverfolgen. Weitere Informationen finden Sie unter [Käufe von konsumierbaren In-App-Produkten aktivieren](enable-consumable-in-app-product-purchases.md).            |
 |  **Status**  |      Ja      |  Enthält die Zeichenfolge, die von der App verwendet wird, um den Ausführungsstatus eines konsumierbaren Add-Ons anzugeben. Werte können **Active**, **PurchaseReverted**, **PurchasePending** oder **ServerError** sein.             |
 |  **OfferId**  |     Nein       |    Enthält die Zeichenfolge, die von der App zur Identifizierung der Kategorie verwendet wird, zu der das konsumierbare Add-On gehört. Dies stellt Unterstützung für große Artikelkataloge bereit, wie unter [Verwalten eines großen Katalogs mit In-App-Produkten](manage-a-large-catalog-of-in-app-products.md) beschrieben.           |
-

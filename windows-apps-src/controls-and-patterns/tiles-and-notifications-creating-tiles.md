@@ -6,14 +6,16 @@ ms.assetid: 09C7E1B1-F78D-4659-8086-2E428E797653
 label: Tiles
 template: detail.hbs
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows10, UWP
-ms.openlocfilehash: e0fccee6ede019b6bb8d8792956d2dca791bf63b
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 8907b57bce9c39c1c508b97536485a08e8e1bf83
+ms.sourcegitcommit: 9a1310468970c8d1ade0fb200126dff56ea8c9e1
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/14/2017
 ---
 # <a name="tiles-for-uwp-apps"></a>Kacheln für UWP-Apps
 
@@ -26,6 +28,8 @@ Eine *Kachel* ist die Darstellung einer App im Startmenü. Jede App verfügt üb
 
 Wenn Sie ein neues Projekt in Visual Studio erstellen, wird eine einfache Standardkachel erstellt, die den Namen und das Logo Ihrer App anzeigt.
 
+Um die Kachel zu bearbeiten, doppelklicken Sie auf die Datei **Package.appxmanifest** in Ihrem Haupt-UWP-Projekt, öffnen Sie den Designer (oder klicken Sie mit der rechten Maustaste auf die Datei, und wählen Sie „Code anzeigen” aus).
+
 ```XML
   <Applications>
     <Application Id="App"
@@ -33,8 +37,8 @@ Wenn Sie ein neues Projekt in Visual Studio erstellen, wird eine einfache Standa
       EntryPoint="ExampleApp.App">
       <uap:VisualElements
         DisplayName="ExampleApp"
-        Square150x150Logo="Assets\Logo.png"
-        Square44x44Logo="Assets\SmallLogo.png"
+        Square150x150Logo="Assets\Square150x150Logo.png"
+        Square44x44Logo="Assets\Square44x44Logo.png"
         Description="ExampleApp"
         BackgroundColor="#464646">
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
@@ -49,15 +53,15 @@ Aktualisieren Sie die folgenden Elemente:
 -   ShortName: Da der Platz für Ihren Anzeigenamen auf Kacheln begrenzt ist, empfehlen wir, auch einen ShortName (Kurznamen) anzugeben, um sicherzustellen, dass der Name Ihrer App nicht abgeschnitten wird.
 -   Logobilder:
 
-    Ersetzen Sie diese Bilder durch eigene. Sie können Bilder für verschiedene visuelle Skalierungen bereitstellen, Sie müssen aber nicht alle bereitstellen. Um sicherzustellen, dass die App auf vielen Geräten gut aussieht, wird empfohlen, skalierte Versionen der Bilder mit jeweils 100 %, 200 % und 400 % bereitzustellen.
+    Ersetzen Sie diese Bilder durch eigene. Sie können Bilder für verschiedene visuelle Skalierungen bereitstellen, Sie müssen aber nicht alle bereitstellen. Um sicherzustellen, dass die App auf vielen Geräten gut aussieht, wird empfohlen, skalierte Versionen der Bilder mit jeweils 100 %, 200 % und 400 % bereitzustellen. Weitere Informationen zum Erstellen dieser Ressourcen finden Sie unter [Ressourcen für Kacheln und Symbole](tiles-and-notifications-app-assets.md).
 
-    Skalierte Bilder haben die folgende Benennungskonvention: Test
+    Skalierte Bilder haben die folgende Benennungskonvention:
     
     *&lt;Bildname&gt;*.scale-*&lt;Skalierungsfaktor&gt;*.*&lt;Bilddateierweiterung&gt;* 
 
-    Beispiel: SmallLogo.scale-100.png
+    Beispiel: SplashScreen.scale-100.png
 
-    Wenn Sie auf das Bild verweisen, verweisen Sie auf *&lt;Bildname&gt;*.*&lt;Bilddateierweiterung&gt;* („SmallLogo.png“ in diesem Beispiel). Das System wählt aus den bereitgestellten Bildern automatisch das entsprechend skalierte Bild für das Gerät aus.
+    Wenn Sie auf das Bild verweisen, verweisen Sie auf *&lt;Bildname&gt;*.*&lt;Bilddateierweiterung&gt;* („SplashScreen.png“ in diesem Beispiel). Das System wählt aus den bereitgestellten Bildern automatisch das entsprechend skalierte Bild für das Gerät aus.
 
 -   Es wird ausdrücklich empfohlen, Logos für breite und große Kacheln bereitzustellen, damit der Benutzer die Größe der Kachel Ihrer App entsprechend anpassen kann. Erstellen Sie zum Bereitstellen dieser zusätzlichen Bilder ein `DefaultTile`-Element, und verwenden Sie die `Wide310x150Logo`- und `Square310x310Logo`-Attribute, um zusätzliche Bilder anzugeben:
 ```    XML
@@ -67,13 +71,13 @@ Aktualisieren Sie die folgenden Elemente:
           EntryPoint="ExampleApp.App">
           <uap:VisualElements
             DisplayName="ExampleApp"
-            Square150x150Logo="Assets\Logo.png"
-            Square44x44Logo="Assets\SmallLogo.png"
+            Square150x150Logo="Assets\Square150x150Logo.png"
+            Square44x44Logo="Assets\Square44x44Logo.png"
             Description="ExampleApp"
             BackgroundColor="#464646">
             <uap:DefaultTile
-              Wide310x150Logo="Assets\WideLogo.png"
-              Square310x310Logo="Assets\LargeLogo.png">
+              Wide310x150Logo="Assets\Wide310x150Logo.png"
+              Square310x310Logo="Assets\Square310x310Logo.png">
             </uap:DefaultTile>
             <uap:SplashScreen Image="Assets\SplashScreen.png" />
           </uap:VisualElements>
@@ -84,25 +88,6 @@ Aktualisieren Sie die folgenden Elemente:
 ## <a name="use-notifications-to-customize-your-tile"></a>Verwenden von Benachrichtigungen zum Anpassen der Kachel
 
 
-Nachdem Ihre App installiert wurde, können Sie die Kachel mit Benachrichtigungen anpassen. Dies kann entweder beim ersten Start der App oder als Reaktion auf ein bestimmtes Ereignis wie eine Pushbenachrichtigung geschehen.
+Nachdem Ihre App installiert wurde, können Sie die Kachel mit Benachrichtigungen anpassen. Dies kann entweder beim ersten Start der App oder als Reaktion auf ein Ereignis wie eine Pushbenachrichtigung geschehen.
 
-1.  Erstellen Sie eine XML-Nutzlast (in Form von [**Windows.Data.Xml.Dom.XmlDocument**](https://msdn.microsoft.com/library/windows/apps/br206173)), die die Kachel beschreibt.
-
-    -   In Windows10 wird ein neues adaptives Kachelschema eingeführt, das Sie verwenden können. Eine Anleitung hierzu finden Sie unter [Adaptive Kacheln](tiles-and-notifications-create-adaptive-tiles.md). Informationen zum Schema finden Sie unter [Adaptives Kachelschema](tiles-and-notifications-adaptive-tiles-schema.md). 
-
-    -   Mit den Windows 8.1-Kachelvorlagen können Sie Ihre Kachel definieren. Weitere Informationen finden Sie unter [Erstellen von Kacheln und Signalen (Windows 8.1)](https://msdn.microsoft.com/library/windows/apps/xaml/hh868260).
-
-2.  Erstellen Sie ein Kachelbenachrichtigungsobjekt, und übergeben Sie es an das erstellte [**XmlDocument**](https://msdn.microsoft.com/library/windows/apps/br206173) Es gibt verschiedene Arten von Benachrichtigungsobjekten:
-    -   Ein [**Windows.UI.NotificationsTileNotification**](https://msdn.microsoft.com/library/windows/apps/br208616)-Objekt zum sofortigen Aktualisieren der Kachel
-    -   Ein [**Windows.UI.Notifications.ScheduledTileNotification**](https://msdn.microsoft.com/library/windows/apps/hh701637)-Objekt zum Aktualisieren der Kachel zu einem bestimmten Zeitpunkt
-
-3.  Verwenden Sie [**Windows.UI.Notifications.TileUpdateManager.CreateTileUpdaterForApplication**](https://msdn.microsoft.com/library/windows/apps/br208623), um ein [**TileUpdater**](https://msdn.microsoft.com/library/windows/apps/br208628)-Objekt zu erstellen.
-4.  Rufen Sie die [**TileUpdater.Update**](https://msdn.microsoft.com/library/windows/apps/br208632)-Methode auf, und übergeben Sie sie an das in Schritt2 erstellte Kachelbenachrichtigungsobjekt.
-
- 
-
- 
-
-
-
-
+Informationen über das Senden von Kachelbenachrichtigungen finden Sie unter [Senden einer lokalen Kachelbenachrichtigung ](tiles-and-notifications-sending-a-local-tile-notification.md).

@@ -4,20 +4,20 @@ ms.assetid: 8D4AE532-22EF-4743-9555-A828B24B8F16
 description: "Verwenden Sie diese Methoden der Windows Store-Übermittlungs-API, um Daten für Apps abzurufen, die in Ihrem Windows Dev Center-Konto registriert wurden."
 title: Abrufen von App-Daten
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows10, UWP, Windows Store-Übermittlungs-API, App-Daten"
-ms.openlocfilehash: dc0aa91aa417689866aa6bd666f0446c0eb2e242
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 0bb01250756c464113570ece433afe11506a5399
+ms.sourcegitcommit: a8e7dc247196eee79b67aaae2b2a4496c54ce253
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/04/2017
 ---
 # <a name="get-app-data"></a>Abrufen von App-Daten
 
 Verwenden Sie die folgenden Methoden in der Windows Store-Übermittlungs-API, um Daten für vorhandene Apps abzurufen, die in Ihrem Windows Dev Center-Konto registriert wurden. Eine Einführung in die Windows Store-Übermittlungs-API einschließlich der Voraussetzungen für die Verwendung der API finden Sie unter [Erstellen und Verwalten von Übermittlungen mit WindowsStore-Diensten](create-and-manage-submissions-using-windows-store-services.md).
-
->**Hinweis**&nbsp;&nbsp;Diese Methoden können nur für Windows Dev Center-Konten verwendet werden, die zur Verwendung der Windows Store-Übermittlungs-API berechtigt sind. Diese Berechtigung wird für Entwicklerkonten phasenweise aktiviert, und die Berechtigung ist zu diesem Zeitpunkt nicht für alle Konten aktiviert. Um früheren Zugriff anfordern, melden Sie sich beim Dev Center-Dashboard an, klicken Sie am unteren Rand des Dashboards auf **Feedback**, wählen Sie **Übermittlungs-API** für den Feedback-Bereich, und übermitteln Sie Ihre Anforderung. Sie erhalten eine E-Mail, wenn diese Berechtigung für Ihr Konto aktiviert ist.
 
 Bevor Sie diese Methoden verwenden können, muss die App in Ihrem Dev Center-Konto bereits vorhanden sein. Informationen zum Erstellen oder Verwalten von Übermittlungen für Apps finden Sie unter den Methoden in [Verwalten von App-Übermittlungen](manage-app-submissions.md).
 
@@ -88,7 +88,8 @@ Diese Ressource steht für eine App, die in Ihrem Konto registriert ist.
   "pendingApplicationSubmission": {
     "id": "1152921504621243487",
     "resourceLocation": "applications/9NBLGGH4R315/submissions/1152921504621243487"
-  }
+  },
+  "hasAdvancedListingPermission": false
 }
 ```
 
@@ -97,13 +98,14 @@ Diese Ressource hat die folgenden Werte.
 | Wert           | Typ    | Beschreibung       |
 |-----------------|---------|---------------------|
 | id            | String  | Die Store-ID der App. Weitere Informationen zur Store-ID finden Sie unter [Anzeigen von Details zur App-Identität](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).   |
-| primaryName   | string  | Der Primärname der App.      |
+| primaryName   | String  | Der Primärname der App.      |
 | packageFamilyName | string  | Der Paketfamilienname der App.      |
 | packageIdentityName          | string  | Die Paketidentität der App.                       |
 | publisherName       | string  | Die Windows-Herausgeber-ID, die mit der App verknüpft ist. Diese entspricht dem **Package/Identity/Publisher**-Wert, der auf der Seite [App-Identität](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details) für die App im WindowsDevCenter-Dashboard angezeigt wird.       |
 | firstPublishedDate      | string  | Das Datum, an dem die App erstmals im Format ISO 8601 veröffentlicht wurde.   |
 | lastPublishedApplicationSubmission       | object | Eine [Übermittlungsressource](#submission_object) mit Informationen über die letzte veröffentlichte Übermittlung für die App.    |
-| pendingApplicationSubmission        | object  |  Eine [Übermittlungsressource](#submission_object) mit Informationen über die aktuelle ausstehende Übermittlung für die App.   |   |
+| pendingApplicationSubmission        | object  |  Eine [Übermittlungsressource](#submission_object) mit Informationen über die aktuelle ausstehende Übermittlung für die App.   |   
+| hasAdvancedListingPermission        | Objekt  |  Gibt an, ob Sie die [gamingOptions](manage-app-submissions.md#gaming-options-object) oder [trailers](manage-app-submissions.md#trailer-object) für Übermittlungen für die App konfigurieren können. Weitere Informationen finden Sie in [diesem Abschnitt](manage-app-submissions.md#advanced-listings). |  |
 
 
 <span id="add-on-object" />

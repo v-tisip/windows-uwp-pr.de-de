@@ -1,25 +1,24 @@
 ---
 author: TylerMSFT
 title: Deklarieren von Hintergrundaufgaben im Anwendungsmanifest
-description: "Sie können die Verwendung von Hintergrundaufgaben aktivieren, indem Sie diese im App-Manifest als Erweiterungen deklarieren."
+description: Aktivieren Sie die Verwendung von Hintergrundaufgaben, indem Sie diese im Anwendungsmanifest als Erweiterungen deklarieren.
 ms.assetid: 6B4DD3F8-3C24-4692-9084-40999A37A200
 ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 364edc93c52d3c7c8cbe5f1a85c8ca751eb44b35
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows 10, UWP
+ms.openlocfilehash: 65ee6cd32e1fdb6900c859725b8deb6b5031d297
+ms.sourcegitcommit: ba0d20f6fad75ce98c25ceead78aab6661250571
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/24/2017
 ---
-
 # <a name="declare-background-tasks-in-the-application-manifest"></a>Deklarieren von Hintergrundaufgaben im Anwendungsmanifest
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **Wichtige APIs**
@@ -32,7 +31,7 @@ Sie können die Verwendung von Hintergrundaufgaben aktivieren, indem Sie diese i
 > [!Important]
 >  Dieser Artikel befasst sich speziell mit Out-of-Process-Hintergrundaufgaben. In-Process-Hintergrundaufgaben werden nicht im Manifest deklariert.
 
-Out-of-Process-Hintergrundaufgaben müssen im App-Manifest deklariert sein, da sie ansonsten nicht von der App registriert werden können (eine Ausnahme wird ausgelöst). Zudem müssen Out-of-Process-Hintergrundaufgaben im Anwendungsmanifest deklariert werden, um zertifiziert werden zu können.
+Out-of-Process-Hintergrundaufgaben müssen im Anwendungsmanifest deklariert sein, da Ihre App diese ansonsten nicht registrieren kann (eine Ausnahme wird ausgelöst). Zudem müssen Out-of-Process-Hintergrundaufgaben im Anwendungsmanifest deklariert werden, um zertifiziert werden zu können.
 
 In diesem Thema wird davon ausgegangen, dass Sie eine oder mehrere Hintergrundaufgabenklassen erstellt haben und dass Ihre App die Hintergrundaufgabe so registriert, dass sie als Reaktion auf mindestens einen Auslöser ausgeführt wird.
 
@@ -62,8 +61,7 @@ Der folgende Ausschnitt stammt aus dem [Hintergrundaufgabenbeispiel](http://go.m
  </Application>
 ```
 
-## <a name="add-a-background-task-extension"></a>Hinzufügen einer Erweiterung für eine Hintergrundaufgabe
-
+## <a name="add-a-background-task-extension"></a>Hinzufügen einer Erweiterung für eine Hintergrundaufgabe  
 
 Deklarieren Sie Ihre erste Hintergrundaufgabe.
 
@@ -97,7 +95,7 @@ Kopieren Sie diesen Code in das "Extensions"-Element (Attribute werden in den fo
 
     **Hinweis** Listen Sie alle verwendeten Triggertypen auf, da die Hintergrundaufgabe ansonsten die nicht deklarierten Triggertypen nicht registriert (bei der [**Register**](https://msdn.microsoft.com/library/windows/apps/br224772)-Methode tritt ein Fehler auf, und eine Ausnahme wird ausgelöst).
 
-    Dieses Beispiel für einen Codeausschnitt gibt die Verwendung von Systemereignistriggern und Pushbenachrichtigungen an:
+    Dieses Beispiel veranschaulicht die Verwendung von Systemereignistriggern und Pushbenachrichtigungen:
 
 ```xml
 <Extension Category="windows.backgroundTasks" EntryPoint="Tasks.BackgroundTaskClass">
@@ -108,8 +106,7 @@ Kopieren Sie diesen Code in das "Extensions"-Element (Attribute werden in den fo
 </Extension>
 ```
 
-
-## <a name="add-additional-background-task-extensions"></a>Hinzufügen von weiteren Hintergrundaufgabenerweiterungen
+### <a name="add-multiple-background-task-extensions"></a>Hinzufügen von weiteren Hintergrundaufgabenerweiterungen
 
 Wiederholen Sie Schritt 2 für alle weiteren, von Ihrer App registrierten Hintergrundaufgabenklassen.
 
@@ -154,17 +151,22 @@ Das folgende Beispiel zeigt das vollständige "Application"-Element aus dem [Hin
 </Applications>
 ```
 
-## <a name="declare-your-background-task-to-run-in-a-different-process"></a>Deklarieren der Hintergrundaufgabe für die Ausführung in einem separaten Prozess
+## <a name="declare-where-your-background-task-will-run"></a>Deklarieren Sie die Position, an der Ihre Hintergrundaufgabe ausgeführt wird
 
-Eine neue Funktion in Windows 10 Version 1507 ermöglicht das Ausführen von Hintergrundaufgaben in einem anderen Prozess als „BackgroundTaskHost.exe“ (der Prozess, in dem Hintergrundaufgaben standardmäßig ausgeführt werden).  Es gibt zwei Optionen: Ausführen im selben Prozess wie die Vordergrundanwendung; Ausführen in einer Instanz von „BackgroundTaskHost.exe“, die von den anderen Hintergrundaufgabeninstanzen derselben Anwendung getrennt ist.  
+Sie können angeben, wo Ihre Hintergrundaufgaben ausführt werden sollen:
 
-### <a name="run-in-the-foreground-application"></a>Ausführen in der Vordergrundanwendung
+* Standardmäßig werden sie im Prozess „BackgroundTaskHost.exe“ ausgeführt.
+* Im gleichen Prozess wie Ihre Anwendung im Vordergrund.
+* Verwenden Sie `ResourceGroup`, um mehrere Hintergrundaufgaben im gleichen Hostprozess einzufügen, oder diese in verschiedene Prozesse aufzuspalten.
+* Verwenden Sie `SupportsMultipleInstances`, um den Hintergrundprozess in einem neuen Prozess auszuführen, der, jedes Mal, wenn ein neuer Trigger ausgelöst wird, eigene Ressourcenbeschränkungen (Arbeitsspeicher, CPU) erhält.
 
-Hier finden Sie ein XML-Beispiel, mit dem eine Hintergrundaufgabe deklariert wird, die im gleichen Prozess wie die Anwendung im Vordergrund ausgeführt wird. Beachten Sie das Attribut `Executable`:
+### <a name="run-in-the-same-process-as-your-foreground-application"></a>Die Ausführung erfolgt im gleichen Prozess wie Ihre Anwendung im Vordergrund.
+
+In diesem XML-Beispiel wird eine Hintergrundaufgabe deklariert, die im gleichen Prozess wie die Anwendung im Vordergrund ausgeführt wird.
 
 ```xml
 <Extensions>
-    <Extension Category="windows.backgroundTasks" EntryPoint="ExecModelTestBackgroundTasks.ApplicationTriggerTask" Executable="$targetnametoken$.exe">
+    <Extension Category="windows.backgroundTasks" EntryPoint="ExecModelTestBackgroundTasks.ApplicationTriggerTask">
         <BackgroundTasks>
             <Task Type="systemEvent" />
         </BackgroundTasks>
@@ -172,10 +174,9 @@ Hier finden Sie ein XML-Beispiel, mit dem eine Hintergrundaufgabe deklariert wir
 </Extensions>
 ```
 
-> [!Note]
-> Verwenden Sie das Executable-Element nur bei Hintergrundaufgaben, für die es unbedingt erforderlich ist, z. B. [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).  
+Wenn Sie den **Einsprungpunkt** festlegen, erhält Ihre Anwendung einen Rückruf an die angegebene Methode, sobald der Trigger ausgelöst wird. Wenn Sie den **Einsprungpunkt** nicht festlegen, erhält Ihre Anwendung den Rückruf über  [OnBackgroundActivated()](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx).  Weitere Informationen finden Sie unter [Erstellen und Registrieren einer In-Process-Hintergrundaufgabe](create-and-register-an-inproc-background-task.md).
 
-### <a name="run-in-a-different-background-host-process"></a>Ausführen in einem anderen Hintergrund-Hostprozess
+### <a name="specify-where-your-background-task-runs-with-the-resourcegroup-attribute"></a>Legen Sie fest, wo Ihre Hintergrundaufgabe mit dem Attribut „ResourceGroup“ ausgeführt werden soll.
 
 Hier finden Sie ein XML-Beispiel, mit dem eine Hintergrundaufgabe deklariert wird, die zwar in einem „BackgroundTaskHost.exe“-Prozess ausgeführt wird, der jedoch von anderen Hintergrundaufgabeninstanzen derselben App getrennt ist. Beachten Sie das Attribut `ResourceGroup`, das festlegt, welche Hintergrundaufgaben gemeinsam ausgeführt werden.
 
@@ -209,11 +210,33 @@ Hier finden Sie ein XML-Beispiel, mit dem eine Hintergrundaufgabe deklariert wir
 </Extensions>
 ```
 
+### <a name="run-in-a-new-process-each-time-a-trigger-fires-with-the-supportsmultipleinstances-attribute"></a>Ausführen in einem neuen Prozess, jedes Mal, wenn ein Trigger mit dem Attribut „SupportsMultipleInstances“ ausgelöst wird
+
+In diesem Beispiel wird eine Hintergrundaufgabe deklariert, die in einem neuen Prozess ausgeführt wird, der, jedes Mal, wenn ein neuer Trigger ausgelöst wird, eigene Ressourcenbeschränkungen (Arbeitsspeicher und CPU) erhält. Beachten Sie die Verwendung von `SupportsMultipleInstances`, zur Aktivierung dieses Verhalten. Um dieses Attribut zu verwenden, müssen Sie als Ziel die SDK-Version "10.0.15063" (Windows 10 Creators Update) oder höher verwenden.
+
+```xml
+<Package
+    xmlns:uap4="http://schemas.microsoft.com/appx/manifest/uap/windows10/4"
+    ...
+    <Applications>
+        <Application ...>
+            ...
+            <Extensions>
+                <Extension Category="windows.backgroundTasks" EntryPoint="BackgroundTasks.TimerTriggerTask">
+                    <BackgroundTasks uap4:SupportsMultipleInstances=“True”>
+                        <Task Type="timer" />
+                    </BackgroundTasks>
+                </Extension>
+            </Extensions>
+        </Application>
+    </Applications>
+```
+
+> [!NOTE]
+> `ResourceGroup` oder `ServerName` können in Verbindung mit `SupportsMultipleInstances` nicht festgelegt werden.
 
 ## <a name="related-topics"></a>Verwandte Themen
-
 
 * [Debuggen einer Hintergrundaufgabe](debug-a-background-task.md)
 * [Registrieren einer Hintergrundaufgabe](register-a-background-task.md)
 * [Richtlinien für Hintergrundaufgaben](guidelines-for-background-tasks.md)
-

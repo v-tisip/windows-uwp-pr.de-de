@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: normesta
 ms.assetid: BC7E8130-A28A-443C-8D7E-353E7DA33AE3
 description: "Entity Framework (EF) ist eine objektrelationale Zuordnung, die Ihnen über domänenspezifische Objekte die Verwendung relationaler Daten ermöglicht."
 title: "Entity Framework Core mit SQLite für C#-Apps"
-ms.author: markl
+ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, SQLite-, C#-, EF, Entity Framework
-ms.openlocfilehash: 015030774c7d148d3a9be757c80de827987347a9
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 9d447b8a197ed7eaea0f991749064912dffb66d7
+ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="entity-framework-core-with-sqlite-for-c-apps"></a>Entity Framework Core mit SQLite für C#-Apps
 

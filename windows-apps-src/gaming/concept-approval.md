@@ -4,20 +4,26 @@ title: Konzeptgenehmigung
 description: "Hier erfahren Sie, wie Sie Ihr Produkt zur Konzeptgenehmigung übermitteln, die Sie benötigen, wenn das Produkt auf der Xbox ausgeführt wird oder Xbox Live verwendet."
 ms.assetid: 850ec988-761b-49d8-9508-da8a83108de3
 ms.author: elcowle
-ms.date: 02/08/2017
+ms.date: 06/23/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Konzeptgenehmigung
-ms.openlocfilehash: f05789d87f3260aa02d1e0dd33490b248efb42a7
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: f49e27ad5753a8f4074ca3b55bd7cde47a7e6600
+ms.sourcegitcommit: e8cc657d85566768a6efb7cd972ebf64c25e0628
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/26/2017
 ---
 # <a name="concept-approval"></a>Konzeptgenehmigung
 
-Wenn Sie ein Spiel erstellen, das auf der Xbox ausgeführt wird, müssen Sie vor der Veröffentlichung an Microsoft einen Vorschlag für das Spiel zur *Konzeptgenehmigung* übermitteln. Diese allgemeine Übermittlung im Vorfeld bietet Microsoft und Ihnen Vorteile, indem zu Beginn des Prozesses wahrscheinliche Probleme oder Nachteile bei der Gesamtplanung für das Spiel erkannt werden. Stellen Sie sicher, dass der Content nicht übermäßig vulgär, beleidigend oder anstößig und für die Zielplattform geeignet ist. Nachdem Sie den Vorschlag übermittelt haben, wird er von Microsoft geprüft, und Sie werden dann über das Ergebnis informiert.
+Konzeptgenehmigung ist der Prozess der Übermittlung eines Vorschlags für ein Spiel an Microsoft. Diese allgemeine Übermittlung im Vorfeld bietet Microsoft und Ihnen Vorteile, indem zu Beginn des Prozesses wahrscheinliche Probleme oder Nachteile bei der Gesamtplanung für das Spiel erkannt werden. Stellen Sie sicher, dass der Content nicht übermäßig vulgär, beleidigend oder anstößig und für die Zielplattform geeignet ist. Nachdem Sie den Vorschlag übermittelt haben, wird er von Microsoft geprüft, und Sie werden dann über das Ergebnis informiert.
 
-Wenn Sie ein Spiel für die universelle Windows-Plattform (UWP) entwickeln, benötigen Sie die Konzeptgenehmigung nur dann, wenn Sie Kunden die Möglichkeit bieten möchten, das Spiel auf Xbox-Geräte herunterzuladen, oder wenn Sie Xbox Live-Features aktivieren möchten. Wenn Sie Ihr UWP-Spiel nur für Windows-Desktopgeräte oder -Mobilgeräte verfügbar machen möchten (oder wenn Sie eine UWP-App veröffentlichen, die *kein* für alle Geräte bestimmtes Spiel ist) und Xbox Live nicht verwenden, benötigen Sie lediglich ein [Entwicklerkonto](https://go.microsoft.com/fwlink/?LinkId=817223). Sie können dann die App frei konfigurieren und über das Dashboard an den Store übermitteln.
+## <a name="who-needs-concept-approval"></a>Wer benötigt eine Konzeptgenehmigung?
+
+Dieser Vorgang ist nur dann erforderlich, wenn Sie ein Spiel auf Xbox durch [ID@Xbox](http://www.xbox.com/Developers/id) oder als verwaltete Partner veröffentlichen. Sie müssen diese Schritte nicht ausführen, wenn Sie dem [Xbox Live Creators-Programm](https://developer.microsoft.com/games/xbox/xboxlive/creator) beitreten und ein Universal Windows Platform (UWP)-Spiel entwickeln, das Sie anschließend selbst an Xbox veröffentlichen. Spiele, die über dieses Programm entwickelt werden, werden jedoch in einem separaten Abschnitt des Store angeboten. Wenn Ihr Spiel zusammen mit großen AAA-Spielen angeboten werden soll oder wenn Sie ein umfassenderes Spiel mit dem Xbox Development Kit (XDK) entwickeln möchten, benötigen Sie eine Konzeptgenehmigung.
+
+Sie benötigen ebenfalls keine Konzeptgenehmigung, wenn Sie ein UWP-Spiel für Windows-Desktopgeräte oder -Mobilgeräte entwickeln(oder wenn Sie eine UWP-App für alle Geräte veröffentlichen, die *kein* Spiel ist). Sie benötigen lediglich ein [Entwicklerkonto](https://go.microsoft.com/fwlink/?LinkId=817223) und Sie können Ihre App ungezwungen konfigurieren und über das Dashboard an den Store übermitteln.
 
 ## <a name="submit-your-concept-for-approval"></a>Übermitteln des Konzepts zur Genehmigung
 

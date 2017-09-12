@@ -6,34 +6,37 @@ ms.assetid: BAF9956F-FAAF-47FB-A7DB-8557D2548D88
 label: Show multiple views for an app
 template: detail.hbs
 op-migration-status: ready
-ms.author: jimwalk
-ms.date: 02/08/2017
+ms.author: mijacobs
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 87f3d5e75b361d1ba9d2c304e58542803da66cd4
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 629e6b4bc2b192f5e81bf49e2cc4c18fbd9a0d54
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="show-multiple-views-for-an-app"></a>Anzeigen mehrerer Ansichten für eine App
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Sie können die Produktivität der Benutzer steigern, indem Sie ihnen ermöglichen, unabhängige Teile der App in separaten Fenstern anzuzeigen. Ein typisches Beispiel ist eine E-Mail-App, bei der auf der Hauptbenutzeroberfläche die Liste der E-Mails und eine Vorschau der ausgewählten E-Mail angezeigt werden. Benutzer können die Nachrichten jedoch auch in separaten Fenstern öffnen und nebeneinander anzeigen lassen.
+Sie können Ihren Benutzern zu mehr Produktivität verhelfen, indem Sie ihnen ermöglichen, unabhängige Teile der App in separaten Fenstern anzuzeigen. Wenn Sie für eine App mehrere Fenster erstellen, verhält sich jedes Fenster anders. Auf der Taskleiste wird jedes Fenster separat angezeigt. Die Benutzer können App-Fenster unabhängig voneinander verschieben, deren Größe ändern, Fenster anzeigen und ausblenden und zwischen App-Fenstern wechseln, als würde es sich um separate Apps handeln. Jedes Fenster agiert in seinem eigenen Thread.
 
-<div class="important-apis" >
-<b>Wichtige APIs</b><br/>
-<ul>
-<li>[**ApplicationViewSwitcher**](https://msdn.microsoft.com/library/windows/apps/dn281094)</li>
-<li>[**CreateNewView**](https://msdn.microsoft.com/library/windows/apps/dn297278)</li>
-</ul>
-</div> 
+![Drahtmodell, das eine App mit mehreren Fenstern zeigt.](images/multi-view.png)
 
-Wenn Sie für eine App mehrere Fenster erstellen, verhält sich jedes Fenster anders. Auf der Taskleiste wird jedes Fenster separat angezeigt. Die Benutzer können App-Fenster unabhängig voneinander verschieben, deren Größe ändern, Fenster anzeigen und ausblenden und zwischen App-Fenstern wechseln, als würde es sich um separate Apps handeln. Jedes Fenster agiert in seinem eigenen Thread.
+> **Wichtige APIs**: [**ApplicationViewSwitcher**](https://msdn.microsoft.com/library/windows/apps/dn281094), [**CreateNewView**](https://msdn.microsoft.com/library/windows/apps/dn297278)
+
+## <a name="when-should-an-app-use-multiple-views"></a>Wann sollte eine App mehrere Ansichten verwenden?
+Es gibt eine Reihe von Szenarien, die von mehreren Ansichten profitieren können. Hier finden Sie einige Beispiele:
+ - Eine E-Mail-App, die Benutzern beim Verfassen einer neuen E-Mail eine Liste der empfangenen Nachrichten anzeigt.
+ - Eine Adressbuch-App, mit der Benutzer Kontaktinformationen für mehrere Personen nebeneinander vergleichen können.
+ - Eine Musikplayer-App, mit der Benutzer beim Durchsuchen einer Liste anderer verfügbarer Musiktitel sehen können, was wiedergegeben wird.
+ - Eine Notizen-App, mit der Benutzer Informationen von einer Seite in eine andere kopieren können.
+ - Eine Lese-App, mit der Benutzer mehrere Artikel für das spätere Lesen öffnen können, um zunächst alle wichtigen Schlagzeilen zu durchsuchen.
 
 ## <a name="what-is-a-view"></a>Was ist eine Ansicht?
-
 
 Eine App-Ansicht ist die 1:1-Zuordnung eines Threads und eines Fensters, das die App zur Anzeige von Inhalten verwendet. Sie wird durch ein [**Windows.ApplicationModel.Core.CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017)-Objekt dargestellt.
 
@@ -45,8 +48,9 @@ Entsprechend umschließt das XAML-Framework das [**CoreWindow**](https://msdn.mi
 
 ## <a name="show-a-new-view"></a>Anzeigen einer neuen Ansicht
 
+Während jedes App-Layout einzigartig ist, empfehlen wir Ihnen, eine Schaltfläche für ein „Neues Fenster” an einem geeigneten Ort zu platzieren, wie etwa die obere rechte Ecke des Inhalts, der in einem neuen Fenster geöffnet werden kann. Erwägen Sie außerdem, die Kontextmenüoption „In einem neuen Fenster öffnen” einzufügen.
 
-Bevor wir fortfahren, lernen Sie die Schritte zum Erstellen einer neuen Ansicht kennen. Die neue Ansicht wird hier als Reaktion auf das Anklicken einer Schaltfläche gestartet.
+Sehen wir uns die Schrittezum Erstellen einer neuen Ansicht an. Die neue Ansicht wird hier als Reaktion auf das Anklicken einer Schaltfläche gestartet.
 
 ```csharp
 private async void Button_Click(object sender, RoutedEventArgs e)
@@ -131,7 +135,7 @@ Andere Ansichten sind sekundäre Ansichten. Dies schließt auch Ansichten ein, d
 
 ## <a name="switch-from-one-view-to-another"></a>Wechseln zwischen Ansichten
 
-Sie müssen den Benutzern eine Möglichkeit zur Navigation von einem sekundären Fenster zurück zum Hauptfenster bieten. Verwenden Sie dazu die [**ApplicationViewSwitcher.SwitchAsync**](https://msdn.microsoft.com/library/windows/apps/dn281097)-Methode. Sie rufen diese Methode über den Thread des Fensters auf, von dem aus Sie wechseln, und übergeben die Ansichts-ID des Fensters, zu dem Sie wechseln.
+Erwägen Sie, den Benutzern eine Möglichkeit zur Navigation von einem sekundären Fenster zurück zum Hauptfenster anzubieten. Verwenden Sie dazu die [**ApplicationViewSwitcher.SwitchAsync**](https://msdn.microsoft.com/library/windows/apps/dn281097)-Methode. Sie rufen diese Methode über den Thread des Fensters auf, von dem aus Sie wechseln, und übergeben die Ansichts-ID des Fensters, zu dem Sie wechseln.
 
 ```csharp
 await ApplicationViewSwitcher.SwitchAsync(viewIdToShow);
@@ -139,10 +143,16 @@ await ApplicationViewSwitcher.SwitchAsync(viewIdToShow);
 
 Wenn Sie [**SwitchAsync**](https://msdn.microsoft.com/library/windows/apps/dn281097) verwenden, können Sie auswählen, ob das erste Fenster geschlossen und aus der Taskleiste entfernt werden soll, indem Sie den Wert von [**ApplicationViewSwitchingOptions**](https://msdn.microsoft.com/library/windows/apps/dn281105) angeben.
 
- 
+## <a name="dos-and-donts"></a>Empfohlene und nicht empfohlene Vorgehensweisen
+
+* Bieten Sie einen klaren Einstiegspunkt zur sekundären Ansicht anhand des Symbols „Neues Fenster öffnen” an.
+* Übermitteln Sie den Benutzern den Zweck der sekundäre Ansicht.
+* Stellen Sie sicher, dass Ihre App in einer Ansicht voll funktionsfähig ist und dass Benutzer nur aus praktischen Gründen eine sekundäre Ansicht öffnen.
+* Verlassen Sie sich nicht auf die sekundäre Ansicht, um Benachrichtigungen oder andere vorübergehende visuelle Elemente anzubieten.
+
+## <a name="related-topics"></a>Verwandte Themen
+
+* [ApplicationViewSwitcher](https://msdn.microsoft.com/library/windows/apps/dn281094)
+* [CreateNewView](https://msdn.microsoft.com/library/windows/apps/dn297278)
 
  
-
-
-
-

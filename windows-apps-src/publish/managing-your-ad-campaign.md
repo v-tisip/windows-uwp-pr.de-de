@@ -1,22 +1,24 @@
 ---
 author: jnHs
-Description: "Um Anzeigenkampagnen für Ihre App zu verwalten, klicken Sie auf der App-Seite im Windows Dev Center-Dashboard auf Monetisierung &gt; Bewerben Ihrer App."
+Description: "Verwalten von Anzeigenkampagnen für Ihre Apps im Windows Dev Center-Dashboard."
 title: Verwalten Ihrer Anzeigenkampagne
 ms.assetid: 42A9457E-15BD-4A61-B828-1C51D0FC9DA0
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 06/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: 642049a5356ec276b5cf629a7ca1c431e5c00476
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 40d82d9b3ed1b450972d69e04df511496de31f67
+ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/21/2017
 ---
-# <a name="managing-your-ad-campaign"></a>Verwalten Ihrer Anzeigenkampagne
+# <a name="manage-your-ad-campaign"></a>Verwalten Ihrer Anzeigenkampagne
 
 
-Um Anzeigenkampagnen für Ihre App zu verwalten, klicken Sie auf der App-Seite im Windows Dev Center-Dashboard auf **Monetarisierung** &gt; **Bewerben Ihrer App**. Die Seite **Bewerben Ihrer App** enthält eine Liste aller Ihrer App zugeordneten Anzeigenkampagnen und zeigt für jede Anzeigenkampagne die Aufrufe, Klicks und Installationen an. Weitere Informationen zu Aufrufen, Klicks und Installationen finden Sie unter den Definitionen dieser Begriffe im [Bericht „Anzeigen für die App-Installation“](app-install-ads-reports.md).
+Erweitern Sie zum Verwalten von Anzeigenkampagnen für Ihre App **Bewerben** im linken Navigationsmenü und wählen Sie dann aus dem Dashboard **Anzeigenkampagnen** aus. Sie sehen aller Ihrer App zugeordneten Anzeigenkampagnen und für jede Anzeigenkampagne die Aufrufe, Klicks und Installationen. Weitere Informationen zu Aufrufen, Klicks und Installationen finden Sie unter den Definitionen dieser Begriffe im [Bericht „Anzeigenkampagne“](promote-your-app-report.md).
 
 Zum Filtern der Anzeigenkampagnenliste klicken Sie auf die Dropdownliste **Abschnittsfilter** und treffen eine Auswahl aus den folgenden Filtern:
 
@@ -28,15 +30,16 @@ Zum Filtern der Anzeigenkampagnenliste klicken Sie auf die Dropdownliste **Absch
     -   **Eingreifen erforderlich**: Gibt an, dass bei der Anzeigenkampagne Probleme aufgetreten sind, die Ihre Aufmerksamkeit erfordern, z.B. ein Abrechnungsfehler oder ein benutzerdefinierter Anzeigenentwurf, der die Überprüfung nicht bestanden hat. Zum Beheben der Probleme klicken Sie auf den Text in der Spalte **Aktion** der Anzeigenkampagnentabelle.
 -   **Kampagnentyp**: Gibt an, ob Kampagnen für kostenpflichtige Anzeigen oder [Eigenwerbung](about-house-ads.md) angezeigt werden.
 
-## <a name="report"></a>Bericht
+## <a name="reporting"></a>Berichterstellung
 
 
-Zum Anzeigen der Leistung Ihrer Anzeigenkampagnen klicken Sie im Navigationsbereich des Dashboards auf **Analyse** &gt; **Anzeigen für die App-Installation**. Weitere Informationen zu diesem Bericht finden Sie unter [Bericht „Anzeigen für die App-Installation“](app-install-ads-reports.md).
+Auf dieser Seite werden die Details des Berichts angezeigt. Weitere Informationen finden Sie unter [Bericht „Anzeigenkampagne“](promote-your-app-report.md).
+
 
 ## <a name="edit-an-ad-campaign"></a>Bearbeiten einer Anzeigenkampagne
 
-
 Zum Vornehmen von Änderungen an einer Anzeigenkampagne klicken Sie auf deren Namen, um die Detailseite für die Anzeigenkampagne aufzurufen. Nachdem Sie die Änderungen vorgenommen haben, klicken Sie auf **Überprüfen**, lesen Sie die Details, und klicken Sie dann auf **Bestätigen**.
+
 
 ## <a name="related-topics"></a>Verwandte Themen
 

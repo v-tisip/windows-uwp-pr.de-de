@@ -1,17 +1,19 @@
 ---
-author: Xansky
+author: normesta
 description: "Mit dem Windows.ApplicationModel.Contacts-Namespace verfügen Sie über mehrere Optionen zum Auswählen von Kontakten."
 title: "Auswählen von Kontakten"
 ms.assetid: 35FEDEE6-2B0E-4391-84BA-5E9191D4E442
 keywords: "Kontakte, auswählen, einzelnen Kontakt auswählen, mehrere Kontakte auswählen, Kontakte, mehrere auswählen; bestimmten Kontakt auswählen, Kontaktdaten, bestimmte auswählen, Kontaktdaten, bestimmte Felder auswählen"
-ms.author: mhopkins
+ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 5a375851f5b9be63c9780b806dd45721b0f8291f
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 861d3d7a68596cbec289050391775d665ac6979d
+ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="select-contacts"></a>Auswählen von Kontakten
 

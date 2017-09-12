@@ -1,7 +1,7 @@
 ---
 author: jwmsft
 title: Versionsadaptiver Code
-description: "Erfahren Sie, wie Sie neue APIs nutzen und gleichzeitig die Kompatibilität mit früheren Versionen gewährleisten."
+description: "Mithilfe der neuen ApiInformation-Klasse können Sie neue APIs nutzen und gleichzeitig die Kompatibilität mit früheren Versionen gewährleisten."
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
@@ -9,55 +9,23 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
 ms.assetid: 3293e91e-6888-4cc3-bad3-61e5a7a7ab4e
-ms.openlocfilehash: 4076bd9edf26108e896e3a7734c2108a00577cd0
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: d5b9a3b02c5acbb2ad7bcd00b9af4f7d6edd91de
+ms.sourcegitcommit: 73ea31d42a9b352af38b5eb5d3c06504b50f6754
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/27/2017
 ---
-# <a name="version-adaptive-code-use-new-apis-while-maintaining-compatibility-with-previous-versions"></a>Versionsadaptiver Code: Verwenden neuer APIs bei gleichzeitiger Gewährleistung der Kompatibilität mit früheren Versionen
+# <a name="version-adaptive-code"></a>Versionsadaptiver Code
 
-Mit jeder Version des Windows10SDKs kommen spannende neue Funktionen hinzu, die Sie nicht ungenutzt lassen sollten. Da allerdings nicht alle Kunden ihre Geräte gleichzeitig auf die neueste Version von Windows10 aktualisieren, müssen Sie sicherstellen, dass Ihre App auf einem möglichst breiten Gerätespektrum verwendet werden kann. Hier zeigen wir Ihnen, wie Sie Ihre App so gestalten, dass sie unter früheren Versionen von Windows10 ausgeführt werden kann, aber auch neue Features nutzt, wenn sie auf einem Gerät ausgeführt wird, auf dem das neueste Update installiert ist.
+Das Schreiben von adaptivem Code ist vergleichbar mit dem [Erstellen einer adaptiven Benutzeroberfläche](https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml). Dabei können Sie etwa Ihre grundlegende Benutzeroberfläche für den kleinsten Bildschirm entwerfen und anschließend Elemente verschieben oder hinzufügen, wenn erkannt wird, dass die App auf einem größeren Bildschirm ausgeführt wird. Bei adaptivem Code schreiben Sie Ihren Basiscode für die niedrigste Betriebssystemversion und können anschließend ausgewählte Features hinzufügen, wenn erkannt wird, dass Ihre App unter einer höheren Version ausgeführt wird, die über das neue Feature verfügt.
 
-Mit den beiden folgenden Schritten können Sie sicherstellen, dass Ihre App auf einem möglichst breiten Spektrum von Windows10-Geräten verwendet werden kann: Erstens: Konfigurieren Sie Ihr VisualStudio-Projekt mit den neuesten APIs. Dies beeinflusst die Kompilierung der App. Zweitens: Führen Sie Laufzeitprüfungen durch, um sicherzustellen, dass nur APIs aufgerufen werden, die auf dem Gerät vorhanden sind, auf dem die App ausgeführt wird.
-
-## <a name="configure-your-visual-studio-project"></a>Konfigurieren des VisualStudio-Projekts
-
-Im ersten Schritt zur Unterstützung mehrerer Versionen von Windows10 müssen im VisualStudio-Projekt die unterstützten *Ziel*- und *Mindestversionen* des Betriebssystems/SDKs angegeben werden.
-- *Ziel*: Die SDK-Version, für die Visual Studio den App-Code kompiliert und alle Tools ausführt. Alle APIs und Ressourcen in dieser SDK-Version stehen zur Kompilierzeit im App-Code zur Verfügung.
-- *Minimum*: Die SDK-Version, die die niedrigste Betriebssystemversion unterstützt, unter der Ihre App ausgeführt werden kann (und vom Store bereitgestellt wird), und die Version, für die Visual Studio den Markupcode der App kompiliert. 
-
-Zur Laufzeit wird Ihre App für die Betriebssystemversion ausgeführt, für die sie bereitgestellt wurde. Wenn Sie also Ressourcen verwenden oder APIs aufrufen, die in dieser Version nicht zur Verfügung stehen, löst Ihre App Ausnahmen aus. Weiter unten in diesem Artikel erfahren Sie, wie Sie mithilfe von Laufzeitprüfungen die passenden APIs aufrufen.
-
-Die Einstellungen für Ziel- und Mindestversion geben jeweils das Ende eines Bereichs von Betriebssystem-/SDK-Versionen an. Wenn Sie Ihre App allerdings unter der Mindestversion testen, können Sie sicher sein, dass sie unter jeder beliebigen Version zwischen der Mindest- und Zielversion verwendet werden kann.
-
-> [!TIP]
-> Visual Studio gibt im Zusammenhang mit der API-Kompatibilität keine Warnungen aus. Daher müssen Sie selbst testen und sicherstellen, dass Ihre App unter allen Betriebssystemversionen zwischen Mindest- und Zielversion (jeweils einschließlich) erwartungsgemäß funktioniert.
-
-Wenn Sie ein neues Projekt in Visual Studio2015 (Update2 oder höher) erstellen, werden Sie aufgefordert, die von Ihrer App unterstützte Ziel- und Mindestversion festzulegen. Die Zielversion ist standardmäßig die höchste installierte SDK-Version, die Mindestversion die niedrigste installierte SDK-Version. Als Ziel- und Mindestversion stehen nur SDK-Versionen zur Auswahl, die auf Ihrem Computer installiert sind. 
-
-![Festlegen des Ziel-SDKs in Visual Studio](images/vs-target-sdk-1.png)
-
-In der Regel empfiehlt es sich, die Standardeinstellungen beizubehalten. Falls Sie jedoch eine Vorschauversion des SDKs installiert haben und Produktionscode schreiben, empfiehlt es sich, die Zielversion zu ändern und auf die neueste offizielle SDK-Version festzulegen. 
-
-Navigieren Sie zum Ändern der Mindest- und Zielversion für ein bereits in Visual Studio erstelltes Projekt zu „Projekt“> „Eigenschaften“> Registerkarte „Anwendung“> „Ziel“.
-
-![Ändern des Ziel-SDKs in Visual Studio](images/vs-target-sdk-2.png) 
-
-Im Anschluss finden Sie die Buildnummern für die einzelnen SDKs:
-- Windows10-Version1506: SDK-Version10240
-- Windows10-Version1511 (November-Updates): SDK-Version10586
-- Windows 10, Version 1607 (Anniversary Update): SDK Version 14393.
-
-Sie können jede beliebige veröffentlichte Version des SDKs aus dem [WindowsSDK- und Emulator-Archiv](https://developer.microsoft.com/downloads/sdk-archive) herunterladen. Das neueste Windows Insider Preview SDK können Sie im Entwicklerabschnitt der [Windows Insider-Website](https://insider.windows.com/) herunterladen.
-
-## <a name="write-adaptive-code"></a>Schreiben von adaptivem Code
-
-Das Schreiben von adaptivem Code ist vergleichbar mit dem [Erstellen einer adaptiven UI](https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml). Dabei können Sie etwa Ihre grundlegende Benutzeroberfläche für den kleinsten Bildschirm entwerfen und anschließend Elemente verschieben oder hinzufügen, wenn erkannt wird, dass die App auf einem größeren Bildschirm ausgeführt wird. Bei adaptivem Code schreiben Sie Ihren Basiscode für die niedrigste Betriebssystemversion und können anschließend ausgewählte Features hinzufügen, wenn erkannt wird, dass Ihre App unter einer höheren Version ausgeführt wird, die über das neue Feature verfügt.
+Wichtige Hintergrundinformationen über ApiInformation, API-Verträge und das Konfigurieren von Visual Studio finden Sie unter [Versionsadaptive Apps](version-adaptive-apps.md).
 
 ### <a name="runtime-api-checks"></a>API-Laufzeitprüfungen
 
 Verwenden Sie die [Windows.Foundation.Metadata.ApiInformation](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.aspx)-Klasse in einer Bedingung in Ihrem Code, um zu testen, ob die aufzurufende API vorhanden ist. Diese Bedingung wird immer ausgewertet – ganz gleich, wo Ihre App ausgeführt wird. Das Ergebnis ist aber nur dann **True**, wenn sie auf einem Gerät ausgeführt wird, auf dem die API vorhanden ist und somit aufgerufen werden kann. So können Sie Apps mit versionsadaptivem Code erstellen, die APIs verwenden, welche nur unter bestimmten Betriebssystemversionen verfügbar sind.
 
-Hier gehen wir anhand von spezifischen Beispielen auf die Nutzung neuer Features in Windows Insider Preview ein. Eine allgemeine Übersicht über die Verwendung von **ApiInformation** finden Sie in der [Anleitung für UWP-Apps](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide) sowie im Blogbeitrag [Dynamically detecting features with API contracts](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/) (Dynamisches Erkennen von Features mithilfe von API-Verträgen).
+Hier gehen wir anhand von spezifischen Beispielen auf die Nutzung neuer Features der Windows Insider Preview ein. Eine allgemeine Übersicht über die Verwendung von **ApiInformation** finden Sie in der [Anleitung für UWP-Apps](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide) sowie im Blogbeitrag [Dynamically detecting features with API contracts](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/) (Dynamisches Erkennen von Features mithilfe von API-Verträgen).
 
 > [!TIP]
 > Eine hohe Anzahl von API-Laufzeitprüfungen kann die Leistung Ihrer App beeinträchtigen. Die Prüfungen werden in diesen Beispielen inline veranschaulicht. In Produktionscode empfiehlt es sich, die Prüfung nur einmal durchzuführen, das Ergebnis zwischenzuspeichern und es anschließend in der gesamten App zu verwenden. 
@@ -303,7 +271,7 @@ namespace MediaApp
 
 **Initialisieren eines Steuerelements auf der Grundlage von „IsTypePresent“**
 
-Rufen Sie zur Laufzeit **ApiInformation.IsTypePresent** auf, um zu prüfen, ob „MediaPlayerElement“ vorhanden ist. Falls ja, wird `MediaPlayerUserControl` geladen. Andernfalls wird `MediaElementUserControl` geladen.
+Rufen Sie zur Laufzeit **ApiInformation.IsTypePresent** auf, um zu prüfen, ob „MediaPlayerElement“ vorhanden ist. Wenn vorhanden, laden Sie `MediaPlayerUserControl`, andernfalls laden Sie `MediaElementUserControl`.
 
 **C#**
 ```csharp
@@ -476,6 +444,7 @@ class IsEnumPresentTrigger : StateTriggerBase
     </VisualStateManager.VisualStateGroups>
 </Grid>
 ```
+
 ## <a name="related-articles"></a>Verwandte Artikel
 
 - [Anleitung für UWP-Apps](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)

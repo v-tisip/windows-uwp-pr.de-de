@@ -7,35 +7,30 @@ label: Peer-to-peer navigation between two pages
 template: detail.hbs
 op-migration-status: ready
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: 7e1529d641920c93ce7914c39d38001c2cbdfd78
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: e5d0b0303218415d529b60e2dcaf28a21a28e430
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/22/2017
 ---
-# <a name="peer-to-peer-navigation-between-two-pages"></a>Peer-zu-Peer-Navigation zwischen zwei Seiten
+# <a name="implement-navigation-between-two-pages"></a>Implementieren der Navigation zwischen zwei Seiten
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Hier erfahren Sie, wie Sie in einer einfachen Peer-zu-Peer-App für die Universelle Windows-Plattform (UWP) mit zwei Seiten navigieren.
+Hier erfahren Sie, wie Sie einen Rahmen und Seiten verwenden, um eine grundlegende Navigation in Ihrer App zu ermöglichen. 
+<p></p>
+<table>
+    <tr>
+        <td>Wichtige APIs:</td><td>[**Windows.UI.Xaml.Controls.Frame**](https://msdn.microsoft.com/library/windows/apps/br242682)-Klasse, [**Windows.UI.Xaml.Controls.Page**](https://msdn.microsoft.com/library/windows/apps/br227503)-Klasse, [**Windows.UI.Xaml.Navigation**](https://msdn.microsoft.com/library/windows/apps/br243300)-Namespace</td>
+    </tr>
+</table>
 
-![Beispiel für Peer-zu-Peer-Navigation zwischen zwei Seiten](images/nav-peertopeer-2page.png)
-
-<div class="important-apis" >
-<b>Wichtige APIs</b><br/>
-<ul>
-<li>[**Windows.UI.Xaml.Controls.Frame**](https://msdn.microsoft.com/library/windows/apps/br242682)</li>
-<li>[**Windows.UI.Xaml.Controls.Page**](https://msdn.microsoft.com/library/windows/apps/br227503)</li>
-<li>[**Windows.UI.Xaml.Navigation**](https://msdn.microsoft.com/library/windows/apps/br243300)</li>
-</ul>
-</div>
-
-
-
-## <a name="create-the-blank-app"></a>Erstellen der leeren App
+## <a name="1-create-a-blank-app"></a>1. Erstellen einer leeren App
 
 
 1.  Klicken Sie im Microsoft Visual Studio-Menü auf **Datei &gt; Neues Projekt**.
@@ -51,7 +46,7 @@ Hier erfahren Sie, wie Sie in einer einfachen Peer-zu-Peer-App für die Universe
 
 6.  Drücken Sie UMSCHALT+F5, um das Debuggen zu beenden und zu Visual Studio zurückzukehren.
 
-## <a name="add-basic-pages"></a>Hinzufügen von Standardseiten
+## <a name="2-add-basic-pages"></a>2. Hinzufügen von Standardseiten
 
 Fügen Sie im nächsten Schritt zwei Inhaltsseiten zum Projekt hinzu.
 
@@ -195,7 +190,7 @@ Hier geben wir `Page1` im Aufruf von [**Frame.Navigate**](https://msdn.microsoft
 > 
 >     if (rootFrame.Content == null)
 >     {
->         // When the navigation stack isn&#39;t restored navigate to the first page,
+>         // When the navigation stack isn't restored navigate to the first page,
 >         // configuring the new page by passing required information as a navigation
 >         // parameter
 >         rootFrame.Navigate(typeof(Page1), e.Arguments);
@@ -219,7 +214,7 @@ Hier geben wir `Page1` im Aufruf von [**Frame.Navigate**](https://msdn.microsoft
 > 
 >         rootFrame->NavigationFailed += 
 >             ref new Windows::UI::Xaml::Navigation::NavigationFailedEventHandler(
->                 this, &amp;App::OnNavigationFailed);
+>                 this, &App::OnNavigationFailed);
 > 
 >         if (e->PreviousExecutionState == ApplicationExecutionState::Terminated)
 >         {
@@ -232,7 +227,7 @@ Hier geben wir `Page1` im Aufruf von [**Frame.Navigate**](https://msdn.microsoft
 > 
 >     if (rootFrame->Content == nullptr)
 >     {
->         // When the navigation stack isn&#39;t restored navigate to the first page,
+>         // When the navigation stack isn't restored navigate to the first page,
 >         // configuring the new page by passing required information as a navigation
 >         // parameter
 >         rootFrame->Navigate(Windows::UI::Xaml::Interop::TypeName(Page1::typeid), e->Arguments);
@@ -247,7 +242,7 @@ Hier geben wir `Page1` im Aufruf von [**Frame.Navigate**](https://msdn.microsoft
 
 Erstellen Sie nun die App, und führen Sie sie aus. Klicken Sie auf den Link „Click to go to page 2“. Die zweite Seite mit der Bezeichnung „Seite 2“ wird geladen und im Frame angezeigt.
 
-## <a name="frame-and-page-classes"></a>Frame- und Page-Klassen
+## <a name="about-the-frame-and-page-classes"></a>Über die Rahmen- und Seitenklassen
 
 Bevor wir der App weitere Funktionen hinzufügen, betrachten wir zunächst, inwiefern die hinzugefügten Seiten Navigationsunterstützung für die App bereitstellen.
 
@@ -263,7 +258,7 @@ In unserem Beispiel wird `Page1` an die [**Navigate**](https://msdn.microsoft.co
 
 Wenn eine Seite in den Frame geladen wird, wird diese Seite als [**PageStackEntry**](https://msdn.microsoft.com/library/windows/apps/dn298572)-Klasse der [**BackStack**](https://msdn.microsoft.com/library/windows/apps/dn279543)- oder [**ForwardStack**](https://msdn.microsoft.com/library/windows/apps/dn279547)-Eigenschaft der [**Frame**](https://msdn.microsoft.com/library/windows/apps/br227504)-Klasse hinzugefügt.
 
-## <a name="pass-information-between-pages"></a>Übergeben von Informationen zwischen Seiten
+## <a name="3-pass-information-between-pages"></a>3. Übergeben von Informationen zwischen Seiten
 
 Unsere App navigiert zwischen zwei Seiten, sie bietet jedoch noch keine interessanten Funktionen. Bei vielen Apps mit mehreren Seiten müssen die Seiten Informationen freigeben. Übergeben wir also einige Informationen der ersten Seite an die zweite Seite.
 
@@ -297,15 +292,28 @@ void Page1::HyperlinkButton_Click(Platform::Object^ sender, RoutedEventArgs^ e)
 }
 ```
 
+Ersetzen Sie in „Page2.xaml“ das zuvor hinzugefügte [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739)-Element mit der folgenden [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635)-Klasse.
+
+Hier fügen wir einen [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) für das Anzeigen einer von Seite 1 übergebenen Textzeichenfolge hinzu.
+
+```xaml
+<StackPanel>
+    <TextBlock HorizontalAlignment="Center" Name="greeting"/>
+    <HyperlinkButton Content="Click to go to page 1" 
+                     Click="HyperlinkButton_Click"
+                     HorizontalAlignment="Center"/>
+</StackPanel>
+```
+
 Überschreiben Sie in der CodeBehind-Datei „Page2.xaml“ die `OnNavigatedTo`-Methode durch Folgendes:
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
 protected override void OnNavigatedTo(NavigationEventArgs e)
 {
-    if (e.Parameter is string)
+    if (e.Parameter is string && !string.IsNullOrWhiteSpace((string)e.Parameter))
     {
-        greeting.Text = "Hi, " + e.Parameter.ToString();
+        greeting.Text = $"Hi, {e.Parameter.ToString()}";
     }
     else
     {
@@ -329,9 +337,9 @@ void Page2::OnNavigatedTo(NavigationEventArgs^ e)
 }
 ```
 
-Führen Sie die App aus, geben Sie Ihren Namen in das Textfeld ein, und klicken Sie auf den Link **Click to go to page 2**. Beim Aufruf von `this.Frame.Navigate(typeof(Page2), tb1.Text)` im [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737)-Ereignis des [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739)-Elements wird die `name.Text`-Eigenschaft an `Page2` übergeben. Der Wert der Ereignisdaten wird zum Anzeigen der Nachricht auf der Seite verwendet.
+Führen Sie die App aus, geben Sie Ihren Namen in das Textfeld ein, und klicken Sie auf den Link **Click to go to page 2**. Beim Aufruf von `this.Frame.Navigate(typeof(Page2), name.Text)` im [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737)-Ereignis des [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739)-Elements wird die `name.Text`-Eigenschaft an `Page2` übergeben. Der Wert der Ereignisdaten wird zum Anzeigen der Nachricht auf der Seite verwendet.
 
-## <a name="cache-a-page"></a>Zwischenspeichern einer Seite
+## <a name="4-cache-a-page"></a>4. Zwischenspeichern einer Seite
 
 Inhalt und Zustand einer Seite werden nicht standardmäßig zwischengespeichert, sondern müssen auf jeder Seite der App aktiviert werden.
 

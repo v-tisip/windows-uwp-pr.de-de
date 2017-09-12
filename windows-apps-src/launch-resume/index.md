@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 412876d0b05b2e703482f8cc79a1f07268ac200f
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 6eed2ecb5766edea8678ea2af10c02332d5a5928
+ms.sourcegitcommit: a61e9fc06f74dc54c36abf7acb85eeb606e475b8
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/15/2017
 ---
 # <a name="launching-resuming-and-background-tasks"></a>Starten, Fortsetzen und Hintergrundaufgaben
 
@@ -24,6 +26,7 @@ Dieser Abschnittenthält Informationen zu folgenden Themen:
 - Verwenden von App-Diensten, mit denen Ihre App für die Universelle Windows-Plattform (UWP) Daten und Funktionen mit anderen Apps teilen kann
 - Verwenden von Hintergrundaufgaben, mit denen eine UWP-App auch funktioniert, wenn die App nicht im Vordergrund ausgeführt wird
 - Erkennen verbundener Geräte, Starten einer App auf einem anderen Gerät und Kommunizieren mit einem App-Dienst auf einem Remotegerät, sodass Sie geräteübergreifende Benutzeroberflächen erstellen können
+- Auswählen der richtigen Technologie, um Ihre App zu erweitern und aufzuschlüsseln.
 - Hinzufügen und Konfigurieren eines Begrüßungsbildschirms für Ihre App
 
 ## <a name="the-app-lifecycle"></a>Der App-Lebenszyklus
@@ -68,7 +71,7 @@ Weitere Informationen finden Sie unten in den Themen im Zusammenhang mit dem Sta
 | Thema | Beschreibung |
 |-------|-------------|
 | [Reservierte Datei- und URI-Schemanamen](reserved-uri-scheme-names.md) | Dieses Thema listet die reservierten Datei- und URI-Schemanamen auf, die für Ihre App nicht verfügbar sind. |
-| [Automatisches Starten mit automatischer Wiedergabe](auto-launching-with-autoplay.md) | Sie können die automatische Wiedergabe verwenden, um Ihre App als Option bereitzustellen, wenn ein Benutzer ein Gerät an seinen PC anschließt. Hierzu zählen andere Geräte als Volumegeräte, wie Kameras oder Medienplayer, oder Volumegeräte wie USB-Sticks, SD-Karten oder DVDs. |
+| [Automatisches Starten mit automatischer Wiedergabe](auto-launching-with-autoplay.md) | Sie können die automatische Wiedergabe verwenden, um Ihre App als Option bereitzustellen, wenn ein Benutzer ein Gerät an seinen PC anschließt. Hierzu zählen Nicht-Volumegeräte wie Kameras oder Media Player und Volumegeräte wie USB-Sticks, SD-Karten oder DVDs. |
 
 ## <a name="app-services"></a>App-Dienste
 
@@ -78,6 +81,7 @@ Im Abschnitt [App-Dienste](app-services.md) wird die Integration von App-Dienste
 |-------|-------------|
 | [Erstellen und Verwenden eines App-Diensts](how-to-create-and-consume-an-app-service.md) | Hier erfahren Sie, wie Sie eine App für die Universelle Windows-Plattform (UWP) erstellen, die Dienste für andere UWP-Apps bereitstellen kann, und wie Sie diese Dienste nutzen. |
 | [Umwandeln eines App-Diensts für die Ausführung im gleichen Prozess wie die Host-App](convert-app-service-in-process.md) | Konvertieren Sie App-Dienstcode, der in einem separaten Hintergrundvorgang auf Code gestoßen ist, der im selben Prozess wie Ihr App-Dienstanbieter ausgeführt wird. |
+| [Bauen Sie Ihre App mit Diensten, Erweiterungen und Paketen aus](extend-your-app-with-services-extensions-packages.md) | In Windows 10 stehen Ihnen verschiedene Technologien zur Verfügung, um Ihre App zu erweitern und aufzuschlüsseln. In diesem Kapitel erfahren Sie, welche Technologie Sie verwenden sollten und erhalten zudem eine kurze Übersicht zu den einzelnen Technologien. |
 
 ## <a name="background-tasks"></a>Hintergrundaufgaben
 
@@ -85,26 +89,30 @@ Im Abschnitt [Hintergrundaufgaben](support-your-app-with-background-tasks.md) er
 
 | Thema | Beschreibung |
 |-------|-------------|
-| [Zugreifen auf Sensoren und Geräte von einer Hintergrundaufgabe aus](access-sensors-and-devices-from-a-background-task.md)       | [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) ermöglicht Ihrer universellen Windows-App, im Hintergrund auf Sensoren und Peripheriegeräte zuzugreifen. Dies ist selbst dann möglich, wenn die Vordergrund-App angehalten wird. |
-| [Richtlinien für Hintergrundaufgaben](guidelines-for-background-tasks.md)                                           | Stellen Sie sicher, dass Ihre App die Anforderungen für die Ausführung von Hintergrundaufgaben erfüllt.                                                                                                                          |
-| [Erstellen und Registrieren einer Out-of-Process-Hintergrundaufgabe](create-and-register-a-background-task.md)                               | Erstellen und registrieren Sie eine Hintergrundaufgabe, die in einem von Ihrer App getrennten Prozess ausgeführt wird, und registrieren Sie sie für die Ausführung, wenn sich die App nicht im Vordergrund befindet.                                                                                                 |
-| [Erstellen und Registrieren einer In-Process-Hintergrundaufgabe](create-and-register-an-inproc-background-task.md)                               | Erstellen und registrieren Sie eine Hintergrundaufgabe, die im gleichen Prozess wie die Vordergrund-App ausgeführt wird.                                                                                                 |
-| [Konvertieren einer Out-of-Process-Hintergrundaufgabe in eine In-Process-Hintergrundaufgabe](convert-out-of-process-background-task.md)                               | Erfahren Sie, wie Sie eine Out-of-Process-Hintergrundaufgabe in eine In-Process-Hintergrundaufgabe konvertieren, die im gleichen Prozess wie die Vordergrund-App ausgeführt wird.
-| [Debuggen einer Hintergrundaufgabe](debug-a-background-task.md)                                                           | Erfahren Sie, wie Sie eine Hintergrundaufgabe (einschließlich Hintergrundaufgabenaktivierung und Debugablaufverfolgung) im Windows-Ereignisprotokoll debuggen.                                                                        |
-| [Deklarieren von Hintergrundaufgaben im Anwendungsmanifest](declare-background-tasks-in-the-application-manifest.md) | Sie können die Verwendung von Hintergrundaufgaben aktivieren, indem Sie diese im App-Manifest als Erweiterungen deklarieren.                                                                                                       |
-| [Behandeln einer abgebrochenen Hintergrundaufgabe](handle-a-cancelled-background-task.md)                                     | Hier erfahren Sie, wie Sie eine Hintergrundaufgabe erstellen, die Abbruchanforderungen erkennt, die Ausführung beendet und den Abbruch mithilfe des beständigen Speichers an die App meldet.                                     |
-| [Überwachen des Status und Abschlusses von Hintergrundaufgaben](monitor-background-task-progress-and-completion.md)           | Erfahren Sie, wie Ihre App den Status und Abschluss einer Hintergrundaufgabe erkennt.                                                                                                                     |
-| [Registrieren einer Hintergrundaufgabe](register-a-background-task.md)                                                     | Hier erfahren Sie, wie eine Funktion erstellt wird, die zum sicheren Registrieren der meisten Hintergrundaufgaben wiederverwendet werden kann.                                                                                                  |
-| [Reagieren auf Systemereignisse mit Hintergrundaufgaben](respond-to-system-events-with-background-tasks.md)             | Hier erfahren Sie, wie Sie eine Hintergrundaufgabe erstellen können, die auf [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839)-Ereignisse reagiert.                                                                         |
-| [Ausführen einer Hintergrundaufgabe für einen Timer](run-a-background-task-on-a-timer-.md)                                        | Hier erfahren Sie, wie Sie eine einmalige Hintergrundaufgabe planen oder eine regelmäßige Hintergrundaufgabe ausführen.                                                                                                          |
-| [Festlegen von Bedingungen zum Ausführen einer Hintergrundaufgabe](set-conditions-for-running-a-background-task.md)                 | Erfahren Sie, wie Bedingungen festgelegt werden, die steuern, wann die Hintergrundaufgabe ausgeführt wird.                                                                                                                  |
-| [Übertragen von Daten im Hintergrund](https://msdn.microsoft.com/library/windows/apps/mt280377)                                           | Verwenden Sie die API für Hintergrundübertragungen zum Kopieren von Dateien im Hintergrund.                                                                                                                              |
-| [Aktualisieren einer Live-Kachel über eine Hintergrundaufgabe](update-a-live-tile-from-a-background-task.md)                       | Verwenden Sie eine Hintergrundaufgabe, um die Live-Kachel Ihrer App mit neuen Inhalten zu aktualisieren.                                                                                                                      |
-| [Verwenden eines Wartungsauslösers](use-a-maintenance-trigger.md)                                                       | Erfahren Sie, wie Sie die [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517)-Klasse zum Ausführen von einfachem Code im Hintergrund verwenden, während das Gerät angeschlossen ist.                             |
+| [Richtlinien für Hintergrundaufgaben](guidelines-for-background-tasks.md)                                       | Stellen Sie sicher, dass Ihre App die Anforderungen für die Ausführung von Hintergrundaufgaben erfüllt. |
+| [Erstellen und Registrieren einer In-Process-Hintergrundaufgabe](create-and-register-an-inproc-background-task.md)       | Erstellen und registrieren Sie eine Hintergrundaufgabe, die im gleichen Prozess wie die Vordergrund-App ausgeführt wird. |
+| [Erstellen und Registrieren einer Out-of-Process-Hintergrundaufgabe](create-and-register-a-background-task.md)           | Erstellen und registrieren Sie eine Hintergrundaufgabe, die in einem von Ihrer App getrennten Prozess ausgeführt wird, und registrieren Sie sie für die Ausführung, wenn sich die App nicht im Vordergrund befindet. |
+| [Konvertieren einer Out-of-Process-Hintergrundaufgabe in eine In-Process-Hintergrundaufgabe](convert-out-of-process-background-task.md) | Erfahren Sie, wie Sie eine Out-of-Process-Hintergrundaufgabe in eine In-Process-Hintergrundaufgabe konvertieren, die im gleichen Prozess wie die Vordergrund-App ausgeführt wird.|
+| [Debuggen einer Hintergrundaufgabe](debug-a-background-task.md)                                                       | Erfahren Sie, wie Sie eine Hintergrundaufgabe (einschließlich Hintergrundaufgabenaktivierung und Debugablaufverfolgung) im Windows-Ereignisprotokoll debuggen. |
+| [Deklarieren von Hintergrundaufgaben im Anwendungsmanifest](declare-background-tasks-in-the-application-manifest.md) | Sie können die Verwendung von Hintergrundaufgaben aktivieren, indem Sie diese im App-Manifest als Erweiterungen deklarieren. |
+| [Registrieren von Gruppen-Hintergrundaufgaben](group-background-tasks.md)                                             | Isolieren der Registrierung von Hintergrundaufgaben mit Gruppen. |
+| [Handhabung einer abgebrochenen Hintergrundaufgabe](handle-a-cancelled-background-task.md)                                 | Hier erfahren Sie, wie Sie eine Hintergrundaufgabe erstellen, die Abbruchanforderungen erkennt, die Ausführung beendet und den Abbruch mithilfe des beständigen Speichers an die App meldet. |
+| [Überwachen des Status und Abschlusses von Hintergrundaufgaben](monitor-background-task-progress-and-completion.md)       | Erfahren Sie, wie Ihre App den Status und Abschluss einer Hintergrundaufgabe erkennt. |
+| [Registrieren einer Hintergrundaufgabe](register-a-background-task.md)                                                 | Hier erfahren Sie, wie eine Funktion erstellt wird, die zum sicheren Registrieren der meisten Hintergrundaufgaben wiederverwendet werden kann. |
+| [Reagieren auf Systemereignisse mit Hintergrundaufgaben](respond-to-system-events-with-background-tasks.md)         | Hier erfahren Sie, wie Sie eine Hintergrundaufgabe erstellen können, die auf [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839)-Ereignisse reagiert. |
+| [Ausführen einer Hintergrundaufgabe für einen Timer](run-a-background-task-on-a-timer-.md)                                    | Hier erfahren Sie, wie Sie eine einmalige Hintergrundaufgabe planen oder eine regelmäßige Hintergrundaufgabe ausführen. |
+| [Auslösen einer Hintergrundaufgabe in Ihrer App](trigger-background-task-from-app.md) | Hier erfahren Sie, wie Sie die [ApplicationTrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.ApplicationTrigger) dazu verwenden, eine Hintergrundaufgabe in Ihrer App zu aktivieren.|
+| [Zugreifen auf Sensoren und Geräte mittels einer Hintergrundaufgabe](access-sensors-and-devices-from-a-background-task.md)   | [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) ermöglicht Ihrer universellen Windows-App, im Hintergrund auf Sensoren und Peripheriegeräte zuzugreifen, selbst dann, wenn die Vordergrund-App angehalten wurde. |
+| [Festlegen von Bedingungen zum Ausführen einer Hintergrundaufgabe](set-conditions-for-running-a-background-task.md)             | Erfahren Sie, wie Bedingungen festgelegt werden, die steuern, wann die Hintergrundaufgabe ausgeführt wird. |
+| [Übertragen von Daten im Hintergrund](https://msdn.microsoft.com/library/windows/apps/mt280377)                 | Verwenden Sie die API für Hintergrundübertragungen zum Kopieren von Dateien im Hintergrund. |
+| [Aktualisieren einer Live-Kachel über eine Hintergrundaufgabe](update-a-live-tile-from-a-background-task.md)                   | Verwenden Sie eine Hintergrundaufgabe, um die Live-Kachel Ihrer App mit neuen Inhalten zu aktualisieren. |
+| [Verwenden eines Wartungsauslösers](use-a-maintenance-trigger.md)                                                   | Erfahren Sie, wie Sie die [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517)-Klasse zum Ausführen von einfachem Code im Hintergrund verwenden, während das Gerät angeschlossen ist. |
+### <a name="see-also"></a>Weitere Informationen:
+* [Optimieren von Hintergrundaktivitäten](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity) – Erfahren Sie, wie Sie die Energie im Hintergrund reduzieren und mit Benutzereinstellungen für Hintergrundaktivitäten interagieren können.
 
 ## <a name="remote-systems"></a>Remotesysteme
 
-Im Abschnitt [Verbundene Apps und Geräte (Project Rome)](connected-apps-and-devices.md) wird beschrieben, wie Sie die Remote Systems-Plattform verwenden, um Remotegeräte zu ermitteln, eine App auf einem Remotegerät zu starten und mit einem App-Dienst auf einem Remotegerät zu kommunizieren.
+Im Abschnitt [Verbundene Apps und Geräte (Projekt Rome)](connected-apps-and-devices.md) wird beschrieben, wie Sie die Remote Systems-Plattform verwenden, um Remotegeräte zu entdecken, eine App auf einem Remotegerät zu starten und mit einem App-Dienst auf einem Remotegerät zu kommunizieren.
 
 | Thema | Beschreibung |
 |-------|-------------|

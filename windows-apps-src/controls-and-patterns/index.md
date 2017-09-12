@@ -6,19 +6,23 @@ keywords: "UWP-Steuerelemente, Benutzeroberfläche, App-Steuerelemente"
 label: Controls & patterns
 template: detail.hbs
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 09/09/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.assetid: ce2e611c-c419-4a14-9095-b88ac711d1b8
-ms.openlocfilehash: 7b525267c8f4d24af95f6d41d46d33a3adf10f8f
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 0946a32df990f08f00f07ad0094125709b45dcaf
+ms.sourcegitcommit: 0d5b3daddb3ae74f91178c58e35cbab33854cb7f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="controls-and-patterns-for-uwp-apps"></a>Steuerelemente und Muster für UWP-Apps
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-In der UWP-App-Entwicklung ist ein <i>Steuerelement</i> ein UI-Element, das Inhalte anzeigt oder Interaktionen ermöglicht. Steuerelemente sind die Bausteine der Benutzeroberfläche. Wir stellen Ihnen mehr als 45Steuerelemente bereit, angefangen bei einfachen Schaltflächen bis hin zu leistungsstarken Datensteuerelementen wie der Rasteransicht. Ein <i>Muster</i> ist eine Anleitung zum Kombinieren verschiedener Steuerelemente, um etwas Neues zu erstellen.
+In der UWP-App-Entwicklung ist ein <i>Steuerelement</i> ein UI-Element, das Inhalte anzeigt oder Interaktionen ermöglicht. Steuerelemente sind die Bausteine der Benutzeroberfläche. Ein <i>Muster</i> ist eine Anleitung zum Kombinieren verschiedener Steuerelemente, um etwas Neues zu erstellen.
+
+Wir stellen Ihnen mehr als 45Steuerelemente bereit, angefangen bei einfachen Schaltflächen bis hin zu leistungsstarken Datensteuerelementen wie der Rasteransicht.  Diese Steuerelemente sind Teil des Fluent Design-Systems und können Ihnen bei der Erstellung einer ansprechenden, skalierbaren UI helfen, die auf allen Geräten und Bildschirmgrößen großartig aussieht. 
 
 Die Artikel in diesem Abschnitt enthalten Designrichtlinien und Codierungsanweisungen für das Hinzufügen von Steuerelementen und Mustern zu Ihrer UWP-App. 
 
@@ -43,141 +47,83 @@ Das XAML-Framework bietet zahlreiche Anpassungsmöglichkeiten für die App-Darst
 
 ## <a name="alphabetical-index"></a>Alphabetischer Index 
 
-Detaillierte Informationen zu bestimmten Steuerelementen und Mustern.
+Detaillierte Informationen zu bestimmten Steuerelementen und Mustern. (Eine nach Funktionen sortierte Liste finden Sie unter [Index der Steuerelemente nach Funktion](controls-by-function.md).)
 
-(Eine nach Funktionen sortierte Liste finden Sie unter [Index der Steuerelemente nach Funktion](controls-by-function.md).)
+<div style="column-count: 2; column-gap: 40px; margin-top: 40px;" >
+<ul style="margin-top: 0px; padding-top: 0px; list-style-type: none;">
+<li style="list-style-type: none;">[Feld mit automatischen Vorschlägen](auto-suggest-box.md)</li>
 
-<div class="uwpd-list-of-links">
-<ul>
+<li style="list-style-type: none;">[Balken](app-bars.md)</li>
 
-<li>[Feld mit automatischen Vorschlägen](auto-suggest-box.md)</li>
+<li style="list-style-type: none;">[Schaltflächen](buttons.md)</li>
 
-<li>[Balken](app-bars.md)</li>
+<li style="list-style-type: none;">[Kontrollkästchen ](checkbox.md)</li>
 
-<li>[Schaltflächen](buttons.md)</li>
+<li style="list-style-type: none;">[Farbauswahl](color-picker.md)</li>
 
-<li>[Kontrollkästchen ](checkbox.md)</li>
-
-<li>[Steuerelemente für Datum und Uhrzeit](date-and-time.md)
-<ul>
-
-<li>[Kalenderdatumsauswahl](calendar-date-picker.md)</li>
-
-<li>[Kalenderansicht](calendar-view.md)</li>
-
-<li>[Datumsauswahl](date-picker.md)</li>
-
-<li>[Zeitauswahl](time-picker.md)</li>
-</ul>
-</li>
+<li style="list-style-type: none;">[Datums- und Uhrzeitsteuerelemente](date-and-time.md)</li>
 
 
-<li>[Dialogfelder und Flyouts](dialogs.md)</li>
+<li style="list-style-type: none;">[Dialogfelder und Flyouts](dialogs.md)</li>
 
-<li>[Flip-Ansicht](flipview.md)</li>
+<li style="list-style-type: none;">[Flip-Ansicht](flipview.md)</li>
 
-<li>[Hub](hub.md)</li>
+<li style="list-style-type: none;">[Hub](hub.md)</li>
 
-<li>[Hyperlinks](hyperlinks.md)</li>
+<li style="list-style-type: none;">[Hyperlinks](hyperlinks.md)</li>
 
-<li>[Bilder und Bildpinsel](images-imagebrushes.md)</li>
+<li style="list-style-type: none;">[Bilder und Bildpinsel](images-imagebrushes.md)</li>
 
-<li>[Listen](lists.md)</li>
+<li style="list-style-type: none;">[Steuerelemente für Freihandeingaben](inking-controls.md)</li>
 
-<li>[Kartensteuerelement](../maps-and-location/controls-map.md)</li>
+<li style="list-style-type: none;">[Listen](lists.md)</li>
 
-<li>[Master/Details](master-details.md)</li>
+<li style="list-style-type: none;">[Kartensteuerelement](../maps-and-location/controls-map.md)</li>
 
-<li>[Medienwiedergabe](media-playback.md)
-<ul>
-<li>[Benutzerdefinierte Transportsteuerelemente](custom-transport-controls.md)</li>
-</ul>
-</li>
+<li style="list-style-type: none;">[Master/Details](master-details.md)</li>
 
-<li>[Menüs und Kontextmenüs](menus.md)</li>
+<li style="list-style-type: none;">[Medienwiedergabe](media-playback.md)</li>
 
-<li>[Navigationsbereich](nav-pane.md)</li>
+<li style="list-style-type: none;">[Menüs und Kontextmenüs](menus.md)</li>
 
-<li>[Statussteuerelemente](progress-controls.md)</li>
+<li style="list-style-type: none;">[Navigationsansicht](navigationview.md)</li>
 
-<li>[Optionsfeld](radio-button.md)</li>
+<li style="list-style-type: none;">[Bild der Person](person-picture.md)</li>
 
-<li>[Steuerelemente für Bildlauf und Schwenken](scroll-controls.md)</li>
+<li style="list-style-type: none;">[Statussteuerelemente](progress-controls.md)</li>
 
-<li>[Suche](search.md)</li>
+<li style="list-style-type: none;">[Optionsschaltfläche](radio-button.md)</li>
 
-<li>[Semantischer Zoom](semantic-zoom.md)</li>
+<li style="list-style-type: none;">[Bewertungssteuerelement](rating.md)</li>
 
-<li>[Schieberegler](slider.md)</li>
+<li style="list-style-type: none;">[Steuerelemente für Bildlauf und Schwenken](scroll-controls.md)</li>
 
-<li>[Geteilte Ansicht](split-view.md)</li>
+<li style="list-style-type: none;">[Suche](search.md)</li>
 
-<li>[Registerkarten und Pivots](tabs-pivot.md)</li>
+<li style="list-style-type: none;">[Semantischer Zoom](semantic-zoom.md)</li>
 
-<li>[Textsteuerelemente](text-controls.md)
-<ul>
+<li style="list-style-type: none;">[Schieberegler](slider.md)</li>
 
-<li>[Beschriftungen](labels.md)</li>
+<li style="list-style-type: none;">[Geteilte Ansicht](split-view.md)</li>
 
-<li>[Kennwortfelder](password-box.md)</li>
+<li style="list-style-type: none;">[Registerkarten und Pivots](tabs-pivot.md)</li>
 
-<li>[Rich-Edit-Felder](rich-edit-box.md)</li>
+<li style="list-style-type: none;">[Textsteuerelemente](text-controls.md)</li>
 
-<li>[Rich-Text-Blöcke](rich-text-block.md)</li>
-
-<li>[Rechtschreibprüfung und Vorhersage](spell-checking-and-prediction.md)</li>
-
-<li>[Textblock](text-block.md)</li>
-
-<li>[Textfeld](text-box.md)</li>
-</ul>
-</li>
+<li style="list-style-type: none;">[Kacheln, Signale und Benachrichtigungen](tiles-badges-notifications.md)</li>
 
 
+<li style="list-style-type: none;">[Umschalten](toggles.md)</li>
+<li style="list-style-type: none;">[QuickInfos](tooltips.md)</li>
 
-<li>[Kacheln, Signale und Benachrichtigungen](tiles-badges-notifications.md)
-<ul>
+<li style="list-style-type: none;">[Strukturansicht](tree-view.md)</li>
 
-<li>[Kacheln](tiles-and-notifications-creating-tiles.md)</li>
-
-<li>[Adaptive Kacheln](tiles-and-notifications-create-adaptive-tiles.md)</li>
-
-<li>[Adaptives Kachelschema](tiles-and-notifications-adaptive-tiles-schema.md)</li>
-
-<li>[Objektrichtlinien](tiles-and-notifications-app-assets.md)</li>
-
-<li>[Spezielle Kachelvorlagen](tiles-and-notifications-special-tile-templates-catalog.md)</li>
-
-<li>[Adaptive und interaktive Popupbenachrichtigungen](tiles-and-notifications-adaptive-interactive-toasts.md)</li>
-
-<li>[Signalbenachrichtigungen](tiles-and-notifications-badges.md)</li>
-
-<li>[Notifications Visualizer](tiles-and-notifications-notifications-visualizer.md)</li>
-
-<li>[Methoden für die Benachrichtigungsübermittlung](tiles-and-notifications-choosing-a-notification-delivery-method.md)</li>
-
-<li>[Lokale Kachelbenachrichtigungen](tiles-and-notifications-sending-a-local-tile-notification.md)</li>
-
-<li>[Periodische Benachrichtigungen](tiles-and-notifications-periodic-notification-overview.md)</li>
-
-<li>[WNS](tiles-and-notifications-windows-push-notification-services--wns--overview.md)</li>
-
-<li>[Unformatierte Benachrichtigungen](tiles-and-notifications-raw-notification-overview.md)</li>
-</ul>
-</li>
-
-
-<li>[Ein-/Ausschalten](toggles.md)</li>
-<li>[QuickInfos](tooltips.md)</li>
-
-<li>[Webansicht](web-view.md)</li>
+<li style="list-style-type: none;">[Webansicht](web-view.md)</li>
 </ul>
 </div>
 
-## <a name="additional-controls-options"></a>Zusätzliche Steueroptionen
+## <a name="additional-controls"></a>Zusätzliche Steuerelemente
 
 Zusätzliche Steuerelemente für die UWP-Entwicklung werden von Unternehmen wie [Telerik](http://www.telerik.com/), [SyncFusion](https://www.syncfusion.com/products/uwp), [DevExpress](https://www.devexpress.com/Products/NET/Controls/Win10Apps/), [Infragistics](http://www.infragistics.com/products/universal-windows-platform), [ComponentOne](https://www.componentone.com/Studio/Platform/UWP) und [ActiPro](http://www.actiprosoftware.com/products/controls/universal) bereitgestellt. Diese Steuerelemente bieten zusätzliche Unterstützung für Unternehmen und .NET-Entwickler, indem sie die Steuerelemente des Standardsystem mit benutzerdefinierten Steuerelementen und Diensten erweitern.  
 
 Wenn Sie mehr über diese Steuerelemente erfahren möchten, sehen Sie sich das Beispiel [Customer Orders Database](https://github.com/Microsoft/Windows-appsample-customers-orders-database) in GitHub an. In diesem Beispiel werden die Steuerelemente Datenrasten und Dateneingabe von Telerik verwendet, die Teil der UI für die UWP-Suite sind. Die UI für die UWP-Suite besteht aus einer Sammlung von über 20 Steuerelementen, die als Open Source-Projekt über die .NET-Foundation verfügbar sind.
-
-![Image der Customer Orders Database](images/customerOrdersDataGrid.png)

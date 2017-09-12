@@ -2,7 +2,7 @@
 author: GrantMeStrength
 Description: Vergleichen Sie Plattformfunktionen zwischen iOS, Android und Windows 10.
 Search.Product: eADQiWindows 10XVcnh
-title: "Windows-Konzepte für Android- und iOS-Entwickler"
+title: "Windows-Apps-Konzeptzuordnung für Android- und iOS-Entwickler"
 ms.author: jken
 ms.date: 02/08/2017
 ms.topic: article
@@ -10,11 +10,13 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows10, UWP
 ms.assetid: 082736c8-2ac3-41b3-b246-e705edc23f34
-ms.openlocfilehash: ce32bd7ebaca20827a637c456b2dbe82811817cb
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 72bb41939b0676dab7c212770cc9eddaef538c3f
+ms.sourcegitcommit: d2ec178103f49b198da2ee486f1681e38dcc8e7b
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/28/2017
 ---
-#<a name="windows-concepts-for-android-and-ios-developers"></a>Windows-Konzepte für Android- und iOS-Entwickler
+#<a name="windows-apps-concept-mapping-for-android-and-ios-developers"></a>Windows-Apps-Konzeptzuordnung für Android- und iOS-Entwickler
 
 Wenn Sie Entwickler mit Android- oder iOS-Kenntnissen sind und/oder über den entsprechenden Code verfügen und zu Windows 10 und zur universellen Windows-Plattform (UWP) wechseln möchten, bietet Ihnen dieser Artikel alle Informationen, die Sie für die Zuordnung der Plattformfeatures –und Ihrer Kenntnisse –zwischen den drei Plattformen benötigen.
 
@@ -128,13 +130,13 @@ Siehe auch die Portierungsinformationen in [Wechsel von iOS zu UWP](ios-to-uwp-r
 <td align="left"><strong>Peernavigation.</strong> <br><br>Bereitstellen von Methoden für den Benutzer, um zwischen Seiten auf der gleichen Hierarchieebene zu navigieren.</td>
 <td align="left"><strong>Tabs</strong>, <strong>Wischbewegungen</strong> und <strong>Navigation Drawers</strong> stellen <strong>laterale Navigation</strong> bereit.</td>
 <td align="left"><strong>Registerkartenleisten-Controller</strong>, <strong>Controller für geteilte Ansicht</strong> und <strong>Controller für Seitenansicht</strong> ermöglichen die Navigation zwischen Ansichten auf gleicher Hierarchieebene.</td>
-<td align="left">Sie können eine dauerhafte Liste von Links/Registerkarten über dem Inhalt mit <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997788.aspx">Registerkarten/Pivots</a></strong> anzeigen. Mit <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997787.aspx">Navigationsbereich/geteilter Ansicht</a></strong> können Sie neben dem Inhalt eine Liste von Links anzeigen.<br/><br/><a href="https://msdn.microsoft.com/en-us/windows/uwp/layout/navigation-basics">Navigation</a><br/><br/><a href="https://msdn.microsoft.com/en-us/windows/uwp/layout/navigate-between-two-pages">Navigieren zwischen zwei Seiten</a></td>
+<td align="left">Sie können eine dauerhafte Liste von Links/Registerkarten über dem Inhalt mit <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997788.aspx">Registerkarten/Pivots</a></strong> anzeigen. Mit <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997787.aspx">Navigationsbereich/geteilter Ansicht</a></strong> können Sie neben dem Inhalt eine Liste von Links anzeigen.<br/><br/><a href="https://msdn.microsoft.com/windows/uwp/layout/navigation-basics">Navigation</a><br/><br/><a href="https://msdn.microsoft.com/windows/uwp/layout/navigate-between-two-pages">Navigieren zwischen zwei Seiten</a></td>
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>Hierarchische Navigation.</strong> <br><br>Navigieren zwischen über- und untergeordneten Seiten einer Hierarchie.</td>
 <td align="left"><strong>Listen</strong> und <strong>Rasterlisten</strong>, <strong>Schaltflächen</strong> und weitere Steuerelemente bieten eine <strong>absteigende Navigation</strong>, wenn Sie mit <strong>Intents</strong> zum Laden weiterer <strong>Aktivitäten</strong> verwendet werden.</td>
 <td align="left"><strong>Navigation Controller</strong> ermöglichen Benutzern die Navigation zwischen den Ebenen einer Hierarchie.</td>
-<td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/dn449149.aspx">Hubs</a></strong> zeigen dem Benutzer eine Vorschau von Inhalten an, die ausgewählt werden können, um zwischen untergeordneten Seiten zu navigieren. <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997765.aspx">Master/Details</a></strong> ermöglicht dem Benutzer die Auswahl aus einer Liste mit Elementübersichten, die neben dem entsprechenden Detailabschnitt angezeigt werden.<br/><br/><a href="https://msdn.microsoft.com/en-us/windows/uwp/layout/navigation-basics">Navigation</a><br/><br/><a href="https://msdn.microsoft.com/en-us/windows/uwp/layout/navigate-between-two-pages">Navigieren zwischen zwei Seiten</a></td>
+<td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/dn449149.aspx">Hubs</a></strong> zeigen dem Benutzer eine Vorschau von Inhalten an, die ausgewählt werden können, um zwischen untergeordneten Seiten zu navigieren. <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997765.aspx">Master/Details</a></strong> ermöglicht dem Benutzer die Auswahl aus einer Liste mit Elementübersichten, die neben dem entsprechenden Detailabschnitt angezeigt werden.<br/><br/><a href="https://msdn.microsoft.com/windows/uwp/layout/navigation-basics">Navigation</a><br/><br/><a href="https://msdn.microsoft.com/windows/uwp/layout/navigate-between-two-pages">Navigieren zwischen zwei Seiten</a></td>
 </tr>
 <tr class="even">
 <td align="left"><strong>Navigation per Schaltfläche „Zurück“.</strong> <br><br>Rückwärtsnavigation in einer Anwendung.</td>
@@ -170,7 +172,7 @@ Siehe auch die Portierungsinformationen in [Wechsel von iOS zu UWP](ios-to-uwp-r
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>Spracheingabe.</strong> <br><br>Spracherkennung für die Spracheingabe und zusätzliche Sprachfunktionen.</td>
 <td align="left">Die Spracheingabe kann durch jede App bereitgestellt werden, die einen <strong>RecognizerIntent</strong> implementiert, z. B. die <strong>Google-Sprachsuche</strong>. Die <strong>SpeechRecognizer</strong>-Klasse ermöglicht Apps die Verwendung der Spracherkennungs-API von Google.</td>
-<td align="left">Es ist keine integrierte Spracherkennungs- oder Spracheingabe-API vorhanden.</td>
+<td align="left">Apps können die <strong>SFSpeechRecognizer</strong>-Klasse verwenden, um die Eingabe- und Spracherkennung implementieren.</td>
 <td align="left">Sie können für die Interaktion mit der App im Vordergrund die <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt185615.aspx">Spracherkennungs</a></strong>-API verwenden. Mithilfe von sprachbasierten <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt185598.aspx">Cortana-Interaktionen</a></strong> können Sie Apps im Vordergrund oder Hintergrund starten und mit Hintergrund-Apps interagieren.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt185614.aspx">Spracherkennungsinteraktionen</a></td>
 </tr>
 <tr class="even">

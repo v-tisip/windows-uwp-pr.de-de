@@ -1,17 +1,19 @@
 ---
-author: DBirtolo
+author: mukin
 ms.assetid: 16AD53CA-1252-456C-8567-2263D3EC95F3
 title: Verwenden des Neigungsmessers
 description: "Hier erfahren Sie, wie Sie mithilfe des Neigungsmessers Werte für Stampf-, Roll- und Gierwinkel ermitteln."
-ms.author: dbirtolo
-ms.date: 02/08/2017
+ms.author: mukin
+ms.date: 06/06/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: 6544d4a598edb12d8d114bb27fac84831ce31d14
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: b0fcc9e45d1a9e1921e77ce8b59817a5ca1c0dd2
+ms.sourcegitcommit: ca060f051e696da2c1e26e9dd4d2da3fa030103d
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/03/2017
 ---
 # <a name="use-the-inclinometer"></a>Verwenden des Neigungsmessers
 
@@ -22,7 +24,11 @@ translationtype: HT
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**Neigungsmesser**](https://msdn.microsoft.com/library/windows/apps/BR225766)
 
-Hier erfahren Sie, wie Sie mithilfe des Neigungsmessers Werte für Nick-, Roll- und Gierwinkel ermitteln.
+**Beispiel**
+
+-   Eine umfassendere Implementierung finden Sie unter [Beispiel für einen Neigungsmesser](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Inclinometer).
+
+Hier erfahren Sie, wie Sie mithilfe des Neigungsmessers Werte für Gier-, Roll- und Nickwinkel ermitteln.
 
 Bei einigen 3D-Spielen wird ein Neigungsmesser als Eingabegerät benötigt. Ein gängiges Beispiel hierfür ist ein Flugsimulator, der die drei Achsen des Neigungsmessers (X, Y und Z) dem Höhenleitwerk sowie dem Quer- und Seitenruder eines Flugzeugs zuordnet.
 
@@ -175,6 +181,3 @@ Die neuen Werte werden in die TextBlock-Elemente des XAML-Projektcodes geschrieb
  <TextBlock x:Name="txtYaw" HorizontalAlignment="Left" Height="19" Margin="55,56,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="54" Foreground="#FFF6F2F2"/>
 ```
 
- ## <a name="related-topics"></a>Verwandte Themen
-
-* [Neigungsmesserbeispiel](http://go.microsoft.com/fwlink/p/?linkid=241380)

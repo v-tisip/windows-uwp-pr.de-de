@@ -1,387 +1,328 @@
 ---
-author: Karl-Bridge-Microsoft
-Description: "Aktivieren Sie den Tastaturzugriff mit TAB-Navigation und Zugriffstasten, um Benutzern das Navigieren durch UI-Elemente mithilfe der Tastatur zu ermöglichen."
-title: Zugriffstasten
-ms.assetid: C2F3F3CE-737F-4652-98B7-5278A462F9D3
-label: Access keys
+author: kbridge
+Description: "Erfahren Sie, wie Sie Benutzerfreundlichkeit und Barrierefreiheit Ihrer UWP-App verbessern, indem Sie Benutzern eine intuitive Möglichkeit bereitstellen, schnell in der sichtbaren UI einer App über eine Tastatur statt per Eingabe mit dem Finger oder der Maus zu navigieren und zu interagieren."
+title: "Zugriffstasten – Designrichtlinien"
+label: Access keys design guidelines
+keywords: Tastatur, Zugriffstaste, Zugriffstasteninfo, Barrierefreiheit, Navigation, Fokus, Text, Eingabe, Benutzerinteraktion
 template: detail.hbs
-keywords: Zugriffstasten, Tastatur, Barrierefreiheit, Benutzerinteraktionen, Eingabe
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 8d62135680e13f866654c168364bb3393651bd2d
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: miguelrb
+design-contact: kimsea
+dev-contact: niallm
+doc-status: Published
+ms.openlocfilehash: ae8bd60311bc7ead44ee3c9a137a233888be55f3
+ms.sourcegitcommit: 0fa9ae00117e8e6b04ed38956e605bb74c1261c6
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="access-keys"></a>Zugriffstasten
 
-Benutzer, die beispielsweise aufgrund motorischer Einschränkungen Schwierigkeiten haben, eine Maus zu verwenden, greifen häufig auf die Tastatur zurück, um in einer App zu navigieren und mit dieser zu interagieren.  Das XAML-Framework bietet Ihnen die Möglichkeit, den Zugriff auf UI-Elemente mithilfe der TAB-Navigation und Zugriffstasten über die Tastatur zu ermöglichen.
-
-- Die TAB-Navigation ist ein grundlegendes tastaturgestütztes Angebot für Barrierefreiheit (und standardmäßig aktiviert). Dabei können Benutzer den Fokus zwischen UI-Elementen mithilfe der TAB-TASTE und der Pfeiltasten auf der Tastatur verschieben.
-- Zugriffstasten stellen ein ergänzendes Angebot für Barrierefreiheit dar (das Sie in Ihrer App implementieren). Sie ermöglichen über eine Kombination aus Tastaturmodifizierer (ALT-TASTE) und mindestens einer alphanumerischen Taste (normalerweise einem Buchstaben, der dem Befehl zugeordnet ist) den schnellen Zugriff auf App-Befehle. Häufige Zugriffstasten sind _ALT+F_ zum Öffnen des Menüs „Datei“ und _ALT+AL_ zum linksbündigen ausrichten.  
-
-Weitere Informationen zur Tastaturnavigation und Barrierefreiheit finden Sie unter [Tastaturinteraktionen](https://msdn.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions) und [Barrierefreiheit der Tastaturnavigation](https://msdn.microsoft.com/windows/uwp/accessibility/keyboard-accessibility). In diesem Artikel wird davon ausgegangen, dass Sie mit den in diesen Artikeln erörterten Konzepten vertraut sind.
-
-## <a name="access-key-overview"></a>Übersicht über Zugriffstasten
-
-Mithilfe von Zugriffstasten können Benutzer Schaltflächen direkt aufrufen oder den Fokus mithilfe der Tastatur festlegen, ohne wiederholt die Pfeiltasten und die TAB-TASTE zu drücken. Zugriffstasten sollten leicht erkennbar sein und daher direkt in der Benutzeroberfläche dokumentiert werden, beispielsweise durch ein unverankertes Badge über dem Steuerelement mit der Zugriffstaste.
-
-![Beispiel für Zugriffstasten und zugehörige Zugriffstasteninfos in Microsoft Word](images/keyboard/accesskeys-keytips.png)
-
-_Abbildung 1: Beispiel für Zugriffstasten und zugehörige Zugriffstasteninfos in Microsoft Word_
-
-Eine Zugriffstaste entspricht mindestens einem alphanumerischen Zeichen, das einem UI-Element zugeordnet ist. In Microsoft Word wird beispielsweise _H_ für die Registerkarte „Start“, _2_ für die Schaltfläche „Rückgängig“ oder _JI_ für die Registerkarte „Zeichnen“ verwendet.
-
-**Zugriffstastenbereich**
-
-Eine Zugriffstaste gehört zu einem bestimmten Bereich. In Abbildung 1 gehören _F_, _H_, _N_ und _JI_ beispielsweise zum Bereich der Seite.  Wenn der Benutzer _H_ drückt, ändert sich der Bereich in den Bereich der Registerkarte „Start“. Daraufhin werden deren Zugriffstasten angezeigt, wie in Abbildung 2 dargestellt. Die Zugriffstasten _V_, _FP_, _FF_ und _FS_ gehören zum Bereich der Registerkarte „Start“.
-
-![Beispiel für Zugriffstasten und zugehörige Zugriffstasteninfos für den Bereich der Registerkarte „Start“ in Microsoft Word](images/keyboard/accesskeys-keytips-hometab.png)
-
-_Abbildung 2: Beispiel für Zugriffstasten und zugehörige Zugriffstasteninfos für den Bereich der Registerkarte „Start“ in Microsoft Word_
-
-Zwei Elemente können über die gleichen Zugriffstasten verfügen, wenn die Elemente zu verschiedenen Bereichen gehören. Beispielsweise ist _2_ im Bereich der Seite die Zugriffstaste für „Rückgängig“ (Abbildung 1) und im Bereich der Registerkarte „Start“ auch die Zugriffstaste für „Kursiv“ (Abbildung 2). Solange kein anderer Bereich angegeben ist, gehören alle Zugriffstasten zum Standardbereich.
-
-**Zugriffstastenabfolge**
-
-Bei einer Kombination von Zugriffstasten wird in der Regel eine Taste nach der anderen gedrückt, um eine Aktion zu erzielen, anstatt die Tasten gleichzeitig zu drücken. (Eine Ausnahme von dieser Regel wird im nächsten Abschnitt erörtert.) Die Abfolge von Tastenanschlägen, die zum Ausführen der Aktion erforderlich sind, wird als _Zugriffstastenabfolge_ bezeichnet. Der Benutzer drückt die ALT-TASTE, um die Zugriffstastenabfolge zu initiieren. Eine Zugriffstaste wird aufgerufen, wenn der Benutzer die letzte Taste in einer Zugriffstastenabfolge drückt. Um z. B. die Registerkarte „Ansicht“ in Word zu öffnen, würde der Benutzer die Zugriffstastenabfolge _ALT, W_ drücken.
-
-Ein Benutzer kann mehrere Zugriffstasten in einer Zugriffstastenabfolge aufrufen. Beispiel: Um „Format übertragen“ in einem Word-Dokument zu öffnen, drückt der Benutzer ALT, um die Abfolge zu starten, dann _H_, um zum Abschnitt „Start“ zu navigieren und den Bereich der Zugriffstaste zu ändern, dann _F_ und zuletzt _P_. _H_ und _FP_ sind die Zugriffstasten für die Registerkarte „Start“ bzw. die Schaltfläche „Format übertragen“.
-
-Durch einige Elemente (wie die Schaltfläche „Format übertragen“) wird eine Zugriffstastenabfolge abgeschlossen, nachdem sie aufgerufen wurden, bei anderen (wie der Registerkarte „Start“) nicht. Das Aufrufen einer Zugriffstaste kann bewirken, dass ein Befehl ausgeführt, der Fokus verschoben, der Zugriffstastenbereich geändert oder eine andere zugeordnete Aktion ausgeführt wird.
-
-## <a name="access-key-user-interaction"></a>Benutzerinteraktion mit Zugriffstasten
-
-Um die Zugriffstasten-APIs zu verstehen, müssen Sie sich zunächst das Benutzerinteraktionsmodell vergegenwärtigen. Im Folgenden finden Sie eine Übersicht über das Modell für die Benutzerinteraktion mit Zugriffstasten:
-
-- Wenn der Benutzer die ALT-TASTE drückt, wird die Zugriffstastenabfolge selbst dann gestartet, wenn sich der Fokus auf einem Eingabesteuerelement befindet. Anschließend kann der Benutzer die Zugriffstaste drücken, um die zugeordnete Aktion aufzurufen. Diese Benutzerinteraktion erfordert, dass Sie die verfügbaren Zugriffstasten innerhalb der Benutzeroberfläche visuell dokumentieren, beispielsweise durch unverankerte Badges, die eingeblendet werden, wenn die ALT-TASTE gedrückt wird.
-- Wenn der Benutzer die ALT-TASTE und die Zugriffstaste gleichzeitig drückt, wird die Zugriffstaste sofort aufgerufen. Dies ist vergleichbar mit einer durch ALT+_Zugriffstaste_ definierten Tastenkombination. In diesem Fall werden keine visuellen Angebote für die Zugriffstaste eingeblendet. Durch das Aufrufen einer Zugriffstaste kann jedoch auch der Zugriffstastenbereich geändert werden. In diesem Fall wird eine Zugriffstastenabfolge initiiert, und gleichzeitig werden visuelle Angebote für den neuen Bereich eingeblendet.
-    > [!NOTE]
-    > Diese Benutzerinteraktion wird nur von Zugriffstasten mit einem Zeichen unterstützt. Die Kombination aus ALT+_Zugriffstaste_ wird für Zugriffstasten mit mehr als einem Zeichen nicht unterstützt.    
-- Wenn Zugriffstasten, die aus mehreren Zeichen bestehen, teilweise dieselben Zeichen verwenden und der Benutzer eines dieser mehrfach verwendeten Zeichen drückt, werden die Zugriffstasten gefiltert. Angenommen, die drei Zugriffstasten _A1_, _A2_ und _C_ werden angezeigt. Wenn der Benutzer _A_ drückt, werden nur die Zugriffstasten _A1_ und _A2_ angezeigt, während das visuelle Angebot für „C“ ausgeblendet wird.
-- Durch die ESC-TASTE wird eine Filterebene entfernt. Beispiel: Wenn die Zugriffstasten _B_, _ABC_, _ACD_ und _ABD_ verfügbar sind und der Benutzer _A_ drückt, werden nur _ABC_, _ACD_ und _ABD_ angezeigt. Wenn der Benutzer dann _B_ drückt, werden nur _ABC_ und _ABD_ angezeigt. Wenn der Benutzer ESC drückt, wird eine Filterebene entfernt, und die Zugriffstasten _ABC_, _ACD_ und _ABD_ werden angezeigt. Wenn der Benutzer noch einmal ESC drückt, wird eine weitere Filterebene entfernt, sodass alle Zugriffstasten – _B_, _ABC_, _ACD_ und _ABD_ – aktiviert sind und die zugehörigen visuellen Angebote angezeigt werden.
-- Mit der ESC-TASTE navigieren Sie zurück zum vorherigen Bereich. Zugriffstasten können verschiedenen Bereichen angehören, um das Navigieren in Apps zu vereinfachen, die über zahlreiche Befehle verfügen. Die Zugriffstastenabfolge beginnt immer im Hauptbereich. Alle Zugriffstasten gehören zum Hauptbereich. Zugriffstasten, für die ein bestimmtes UI-Element als „Bereichsbesitzer“ angegeben ist, sind hiervon ausgenommen. Wenn der Benutzer die Zugriffstaste eines Elements aufruft, das einen Bereichsbesitzer darstellt, legt das XAML-Framework den Bereich automatisch auf das Element fest und fügt es einem internen Navigationsstapel für Zugriffstasten hinzu. Durch die ESC-TASTE können Sie im Navigationsstapel für Zugriffstasten zurückgehen.
-- Es gibt verschiedene Möglichkeiten, die Zugriffstastenabfolge zu schließen:
-    - Der Benutzer kann ALT drücken, um eine Zugriffstastenabfolge, die gerade aktiv ist, zu schließen. Denken Sie daran, dass die Zugriffstastenabfolge durch Drücken von ALT auch initiiert wird.
-    - Durch die ESC-TASTE wird die Zugriffstastenabfolge geschlossen, wenn sie dem Hauptbereich angehört und nicht gefiltert ist.
-        > [!NOTE]
-        > Der Anschlag der ESC-TASTE wird an die UI-Ebene übergeben und auch dort verarbeitet.
-    - Mit der TAB-TASTE schließen Sie die Zugriffstastenabfolge und kehren zur TAB-Navigation zurück.
-    - Durch die EINGABETASTE wird die Zugriffstastenabfolge geschlossen, und der Tastenanschlag wird an das Element gesendet, das den Fokus hat.
-    - Durch die Pfeiltasten wird die Zugriffstastenabfolge geschlossen, und der Tastenanschlag wird an das Element gesendet, das den Fokus hat.
-    - Durch ein Zeiger-nach-unten-Ereignis – z. B. ein Mausklick oder eine Toucheingabe – wird die Zugriffstastenabfolge geschlossen.
-    - Wenn eine Zugriffstaste aufgerufen wird, wird die Zugriffstastenabfolge standardmäßig geschlossen.  Sie können dieses Verhalten jedoch überschreiben, indem Sie die [ExitDisplayModeOnAccessKeyInvoked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.exitdisplaymodeonaccesskeyinvoked.aspx)-Eigenschaft auf **false** festlegen.
-- Zugriffstastenkonflikte treten auf, wenn kein DEA (deterministischer endlicher Automat) möglich ist. Zugriffstastenkonflikte lassen sich nicht immer vermeiden und können bei einer großen Anzahl von Befehlen oder Lokalisierungsproblemen auftreten oder dann, wenn Zugriffstasten während der Laufzeit generiert werden.
-
- Es gibt zwei Fälle, in denen Konflikte auftreten:
- - Wenn zwei UI-Elemente über denselben Zugriffstastenwert verfügen und demselben Zugriffstastenbereich angehören. Beispiel: Zugriffstaste _A1_ für `button1` und Zugriffstaste _A1_ für `button2`, die dem Standardbereich angehört. In diesem Fall löst das System den Konflikt auf, indem die Zugriffstaste des ersten Elements verarbeitet wird, das der visuellen Struktur hinzugefügt wurde. Der Rest wird ignoriert.
- - Wenn derselbe Zugriffstastenbereich mehrere Berechnungsoptionen umfasst. Beispielsweise _A_ und _A1_. Wenn der Benutzer _A_ drückt, hat das System zwei Möglichkeiten: Zugriffstaste _A_ aufrufen oder das Zeichen A als ersten Teil der Zugriffstaste _A1_ interpretieren und warten. In diesem Fall verarbeitet das System nur den ersten vom Automaten erreichten Zugriffstastenaufruf. Im Beispiel mit _A_ und _A1_ ruft das System nur die Zugriffstaste _A_ auf.
--     Wenn der Benutzer in einer Zugriffstastenabfolge einen ungültigen Zugriffstastenwert drückt, passiert nichts. Zwei Kategorien von Zugriffstasten werden in einer Zugriffstastenabfolge als gültig angesehen:
- - Sondertasten zum Beenden der Zugriffstastenabfolge: ESC, ALT, EINGABE, TAB und die Pfeiltasten.
- - Die den Zugriffstasten zugewiesenen alphanumerischen Zeichen.
-
-## <a name="access-key-apis"></a>Zugriffstasten-APIs
-
-Das XAML-Framework bietet die hier beschriebenen APIs, um die Benutzerinteraktion mit Zugriffstasten zu unterstützen.
-
-**AccessKeyManager**
-
-[AccessKeyManager](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeymanager.aspx) ist eine Hilfsklasse, mit der Sie die Benutzeroberfläche verwalten können, wenn Zugriffstasten angezeigt oder ausgeblendet werden. Das [IsDisplayModeEnabledChanged](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeymanager.isdisplaymodeenabledchanged.aspx)-Ereignis wird jedes Mal ausgelöst, wenn die Zugriffstastenabfolge in der App initiiert und beendet wird. Sie können die [IsDisplayModeEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeymanager.isdisplaymodeenabled.aspx)-Eigenschaft abfragen, um zu bestimmen, ob visuelle Angebote ein- oder ausgeblendet werden.  Sie können auch [ExitDisplayMode](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeymanager.exitdisplaymode.aspx) aufrufen, um das Schließen einer Zugriffstastenabfolge zu erzwingen.
+Zugriffstasten können die Benutzerfreundlichkeit und Barrierefreiheit Ihrer Windows-App verbessern, indem sie Benutzern eine intuitive Möglichkeit bereitstellen, schnell in der sichtbaren UI einer App über eine Tastatur statt per Eingabe mit dem Finger oder der Maus zu navigieren und zu interagieren.
 
 > [!NOTE]
-> Es gibt keine integrierte Implementierung visueller Elemente für Zugriffstasten. Diese müssen von Ihnen bereitgestellt werden.  
+> Eine Tastatur ist unentbehrlich für Benutzer mit bestimmten körperlichen Einschränkungen (siehe [Barrierefreiheit der Tastaturnavigation](https://docs.microsoft.com/windows/uwp/accessibility/keyboard-accessibility)) und auch ein wichtiges Tool für Benutzer, die effizienter mit einer App interagieren möchten.
 
-**AccessKey**
+Die Universelle Windows-Plattform (UWP) bietet integrierte Unterstützung für Plattformsteuerelemente für tastaturbasierte Zugriffstasten und zugehöriges UI-Feedback über optische Hinweise namens Zugriffstasteninfos.
 
-Mit der [AccessKey](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskey.aspx)-Eigenschaft können Sie eine Zugriffstaste für UIElement oder [TextElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.textelement.accesskey.aspx) angeben. Wenn zwei Elemente über dieselbe Zugriffstaste und denselben Bereich verfügen, wird nur das erste Element verarbeitet, das der visuellen Struktur hinzugefügt wurde.
+## <a name="overview"></a>Übersicht
 
-Um sicherzustellen, dass die Zugriffstasten vom XAML-Framework verarbeitet werden, müssen die UI-Elemente in der visuellen Struktur erkannt werden. Wenn die visuelle Struktur keine Elemente mit einer Zugriffstaste enthält, werden keine Zugriffstastenereignisse ausgelöst.
+Eine Zugriffstaste ist eine Kombination aus der Alt-Taste und einer oder mehreren alphanumerischen Tasten (manchmal als *mnemonisches Zeichen* bezeichnet). Die Tasten werden in der Regel nacheinander und nicht gleichzeitig gedrückt.
 
-Zugriffstasten-APIs unterstützen keine Zeichen, die mit zwei Tastenanschlägen erzeugt werden müssen. Ein einzelnes Zeichen muss einer Taste im systemeigenen Tastaturlayout der jeweiligen Sprache entsprechen.  
-
-**AccessKeyDisplayRequested/Dismissed**
-
-Das [AccessKeyDisplayRequested](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskeydisplayrequested.aspx)-Ereignis und das[AccessKeyDisplayDismissed](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskeydisplaydismissed.aspx)-Ereignis werden ausgelöst, wenn ein visuelles Angebot für eine Zugriffstaste angezeigt oder geschlossen werden soll. Für Elemente, deren [Visibility](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.visibility.aspx)-Eigenschaft auf **Collapsed** festgelegt ist, werden diese Ereignisse nicht ausgelöst. Das AccessKeyDisplayRequested-Ereignis wird während einer Zugriffstastenabfolge jedes Mal ausgelöst, wenn der Benutzer ein von der Zugriffstaste verwendetes Zeichen drückt. Beispiel: Wenn eine Zugriffstaste auf _AB_ festgelegt ist, wird dieses Ereignis einmal ausgelöst, wenn der Benutzer ALT drückt, und ein zweites Mal, wenn er _A_ drückt. Wenn der Benutzer _B_ drückt, wird das AccessKeyDisplayDismissed-Ereignis ausgelöst.
-
-**AccessKeyInvoked**
-
-Das [AccessKeyInvoked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskeyinvoked.aspx)-Ereignis wird ausgelöst, wenn ein Benutzer das letzte Zeichen einer Zugriffstaste erreicht. Eine Zugriffstaste kann ein oder mehrere Zeichen umfassen. Beispiel: Für die Zugriffstasten _A_ und _BC_ wird das Ereignis ausgelöst, wenn ein Benutzer _ALT, A_ oder _ALT, B, C_ drückt. Wenn der Benutzer nur _ALT, B_ drückt, wird es jedoch nicht ausgelöst. Dieses Ereignis wird ausgelöst, wenn die Taste gedrückt und nicht, wenn sie losgelassen wird.
-
-**IsAccessKeyScope**
-
-Mit der [IsAccessKeyScope](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.isaccesskeyscope.aspx)-Eigenschaft können Sie angeben, dass ein UIElement das Stammelement eines Zugriffstastenbereichs ist. Das AccessKeyDisplayRequested-Ereignis wird für dieses Element, aber nicht für seine untergeordneten Elemente ausgelöst. Wenn ein Benutzer dieses Element aufruft, ändert das XAML-Framework automatisch den Bereich und löst das AccessKeyDisplayRequested-Ereignis für die untergeordneten Elemente und das AccessKeyDisplayDismissed-Ereignis für andere UI-Elemente (einschließlich des übergeordneten Elements) aus.  Die Zugriffstastenabfolge wird bei einer Änderung des Bereichs nicht beendet.
-
-**AccessKeyScopeOwner**
-
-Wenn ein Element dem Bereich eines anderen Elements (Quelle) angehören soll, das ihm in der visuellen Struktur nicht übergeordnet ist, können Sie die [AccessKeyScopeOwner](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskeyscopeowner.aspx)-Eigenschaft festlegen. Bei dem an die AccessKeyScopeOwner-Eigenschaft gebundenen Element muss IsAccessKeyScope auf **true** festgelegt sein. Andernfalls wird eine Ausnahme ausgelöst.
-
-**ExitDisplayModeOnAccessKeyInvoked**
-
-Wenn eine Zugriffstaste aufgerufen wird und das Element kein Bereichsbesitzer ist, wird standardmäßig die Zugriffstastenabfolge abgeschlossen, und das [AccessKeyManager.IsDisplayModeEnabledChanged](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeymanager.isdisplaymodeenabledchanged.aspx)-Ereignis wird ausgelöst. Sie können die [ExitDisplayModeOnAccessKeyInvoked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.exitdisplaymodeonaccesskeyinvoked.aspx)-Eigenschaft auf **false** festlegen, um dieses Verhalten zu überschreiben und zu verhindern, dass die Zugriffstastenabfolge nach dem Aufrufen beendet wird. (Diese Eigenschaft gilt sowohl für [UIElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.exitdisplaymodeonaccesskeyinvoked.aspx) als auch für [TextElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.textelement.exitdisplaymodeonaccesskeyinvoked.aspx).)
+Zugriffstasteninfos sind Signale, die neben den Steuerelementen angezeigt werden, die Zugriffstasten unterstützen, wenn der Benutzer die Alt-Taste drückt. Jede Zugriffstasteninfo enthält die alphanumerischen Tasten, die das zugeordnete Steuerelement aktivieren.
 
 > [!NOTE]
-> Wenn das Element ein Bereichsbesitzer (`IsAccessKeyScope="True"`) ist, wechselt die App in einen neuen Zugriffstastenbereich, und das IsDisplayModeEnabledChanged-Ereignis wird nicht ausgelöst.
+> Tastenkombinationen werden für Zugriffstasten mit einem einzelnen alphanumerischen Zeichen automatisch unterstützt. Durch gleichzeitiges Drücken von Alt+F in Word wird z.B. das Menü „Datei“ ohne Zugriffstasteninfos angezeigt.
 
-**Lokalisierung**
+Durch Drücken der Alt-Taste wird die Zugrifftastenfunktionalität initialisiert. Zudem werden alle derzeit verfügbaren Tastenkombinationen in Zugriffstasteninfos angezeigt. Nachfolgende Tastaturanschläge werden durch das Zugriffstasten-Framework verarbeitet, das ungültige Tasten ablehnt, bis eine gültige Zugriffstaste oder die Eingabetaste, Esc-Taste, Tabulatortaste oder Pfeiltaste gedrückt wird, um Zugriffstasten zu deaktivieren und die Behandlung von Tastaturanschlägen an die App zurückzugeben.
 
-Zugriffstasten können in mehrere Sprachen lokalisiert und zur Laufzeit mit den [ResourceLoader](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.resources.resourceloader.aspx)-APIs geladen werden.
+Microsoft Office-Apps bieten umfassende Unterstützung für Zugriffstasten. Die folgende Abbildungzeigt die Registerkarte „Start“ von Word mit aktivierten Zugriffstasten. (Beachten Sie die Unterstützung für Zahlen und mehrere Tastaturanschläge.)
 
-## <a name="control-patterns-used-when-an-access-key-is-invoked"></a>Beim Aufrufen einer Zugriffstaste verwendete Steuerungsmuster
+![Zugriffstasteninfo-Signale für Zugriffstasten in Microsoft Word](images/accesskeys/keytip-badges-word.png)
 
-Steuerungsmuster sind Schnittstellenimplementierungen, die allgemeine Steuerungsfunktionen verfügbar machen. Schaltflächen implementieren z. B. das **Invoke**-Steuerungsmuster, das das **Click**-Ereignis auslöst. Wenn eine Zugriffstaste aufgerufen wird, überprüft das XAML-Framework, ob das aufgerufene Element ein Steuerungsmuster implementiert, und führt es ggf. aus. Wenn das Element mehrere Steuerungsmuster aufweist, wird nur eins aufgerufen, und die übrigen werden ignoriert. Steuerungsmuster werden in der folgenden Reihenfolge gesucht:
+_Zugriffstasteninfo-Signale für Zugriffstasten in Microsoft Word_
 
-1.    „Invoke“. Beispielsweise eine Schaltfläche.
-2.    „Toggle“. Beispielsweise ein Kontrollkästchen.
-3.    „Selection“. Beispielsweise RadioButton.
-4.    „Expand/Collapse“. Beispielsweise ComboBox.
+Um eine Zugriffstaste zu einem Steuerelement hinzuzufügen, verwenden Sie die **AccessKey-Eigenschaft**. Der Wert dieser Eigenschaft gibt die Zugriffstastensequenz, die Verknüpfung (bei einem einzelnen alphanumerischen Zeichen) und die Zugriffstasteninfo an.
 
-Falls ein Steuerungsmuster nicht gefunden wird, wird der Zugriffstastenaufruf als „No-Op“ angegeben. Außerdem wird eine mit der folgenden vergleichbare Debugmeldung aufgezeichnet, um Sie beim Debuggen des Problems zu unterstützen: „Es wurden keine Automatisierungsmuster für diese Komponente gefunden. Implementieren Sie das gewünschte Verhalten im Ereignishandler für AccessKeyInvoked. Wenn Sie „Handled“ im Ereignishandler auf „true“ festlegen, wird diese Meldung unterdrückt.“
+``` xaml
+<Button Content="Accept" AccessKey="A" Click="AcceptButtonClick" />
+```
 
-> [!NOTE]
-> Der Anwendungsprozesstyp des Debuggers muss in den Debugeinstellungen von Visual Studio _Gemischt (verwaltet und systemeigen)_ oder _Systemeigen_ lauten, damit diese Meldung angezeigt wird.
+## <a name="when-to-use-access-keys"></a>Verwenden von Zugriffstasten
 
-Wenn eine Zugriffstaste nicht ihr standardmäßiges Steuerungsmuster ausführen soll oder wenn das Element kein Steuerungsmuster aufweist, sollten Sie das [AccessKeyInvoked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskeyinvoked.aspx)-Ereignis behandeln und das gewünschte Verhalten implementieren.
-```csharp
-private void OnAccessKeyInvoked(UIElement sender, AccessKeyInvokedEventArgs args)
+Es wird empfohlen, dass Sie Zugriffstasten überall in Ihrer UI angegeben, wo dies sinnvoll ist, und Zugriffstasten für alle benutzerdefinierten Steuerelemente unterstützen.
+
+1.  **Zugriffstasten erleichtern den Zugriff auf Ihre App** für Benutzer mit motorischen Einschränkungen, einschließlich der Benutzer, die jeweils nur eine Taste drücken können oder Probleme bei der Verwendung einer Maus haben.
+
+    Eine gut durchdachte Tastatur-UI ist ein wichtiger Aspekt für die Barrierefreiheit von Software. Sie ermöglicht es Benutzern mit einer Sehbeeinträchtigung oder mit bestimmten motorischen Einschränkungen, in einer App zu navigieren und mit deren Features zu interagieren. Diese Benutzer können u.U. keine Maus bedienen und sind auf verschiedene Hilfstechnologien wie etwa Tastaturerweiterungstools, Bildschirmtastaturen, Bildschirmlupen, Bildschirmleseprogramme oder die Möglichkeit der Spracheingabe angewiesen. Für diese Benutzer ist eine vollständige Befehlsabdeckung entscheidend.
+
+2.  **Zugriffstasten machen Ihre App benutzerfreundlicher** für erfahrene Benutzer, die über die Tastatur interagieren möchten.
+
+    Erfahrene Benutzer haben oftmals eine starke Vorliebe für die Verwendung der Tastatur, da tastaturbasierte Befehle viel schneller eingegeben werden können. Zudem ist es dafür nicht erforderlich, die Hände von der Tastatur wegzubewegen. Für diese Benutzer sind Effizienz und Konsistenz entscheidend. Die Vollständigkeit hingegen ist nur für die am häufigsten verwendeten Befehle wichtig.
+
+## <a name="set-access-key-scope"></a>Festlegen des Zugriffstastenbereichs
+
+Wenn viele Elemente auf dem Bildschirm vorhanden sind, die Zugriffstasten unterstützen, empfehlen wir die Bereichsdefinition für Zugriffstasten, um den Benutzer **kognitiv zu entlasten**. Dies reduziert die Anzahl der Zugriffstasten auf dem Bildschirm, wodurch sie leichter zu finden sind, und verbessert die Effizienz und Produktivität.
+
+Microsoft Word bietet beispielsweise zwei Zugriffstastenbereiche: einen primären Bereich für die Menüband-Registerkarten und einen sekundären Bereich für Befehle auf der ausgewählten Registerkarte.
+
+Die folgenden Abbildungen zeigen die zwei Zugriffstastenbereiche in Word. Das erste Beispiel zeigt die primären Zugriffstasten, mit denen ein Benutzer eine Registerkarte und andere Befehle auf oberster Ebene auswählen kann. Das zweite zeigt die sekundären Zugriffstasten für die Registerkarte „Start“.
+
+![Primäre Zugriffstasten in Microsoft Word](images/accesskeys/primary-access-keys-word.png)
+
+_Primäre Zugriffstasten in Microsoft Word_
+
+![Sekundäre Zugriffstasten in Microsoft Word](images/accesskeys/secondary-access-keys-word.png)
+
+Sekundäre Zugriffstasten in Microsoft Word
+
+Zugriffstasten können für Elemente in verschiedenen Bereichen dupliziert werden. Im obigen Beispiel ist „2“ die Zugriffstaste für „Rückgängig“ im primären Bereich und „Kursiv“ im sekundären Bereich.
+
+Einige Steuerelemente, z.B. die Befehlsleiste, unterstützen integrierte Zugriffstastenbereiche noch nicht. Daher müssen Sie die Implementierung selbst vornehmen. Im folgenden Beispiel wird veranschaulicht, wie Sie die sekundären Befehle der Befehlsleiste mit Zugriffstasten unterstützen, die verfügbar sind, sobald ein übergeordneter Befehl aufgerufen wird (vergleichbar mit dem Menüband in Word).
+
+``` C#
+public class CommandBarHack : CommandBar
 {
-    args.Handled = true;
-    //Do something
+    CommandBarOverflowPresenter secondaryItemsControl;
+    Popup overflowPopup;
+
+    public CommandBarHack()
+    {
+        this.ExitDisplayModeOnAccessKeyInvoked = false;
+        AccessKeyInvoked += OnAccessKeyInvoked;
+    }
+
+    protected override void OnApplyTemplate()
+    {
+        base.OnApplyTemplate();
+
+        Button moreButton = GetTemplateChild("MoreButton") as Button;
+        moreButton.SetValue(Control.IsTemplateKeyTipTargetProperty, true);
+        moreButton.IsAccessKeyScope = true;
+
+        // SecondaryItemsControl changes
+        secondaryItemsControl = GetTemplateChild("SecondaryItemsControl") as CommandBarOverflowPresenter;
+        secondaryItemsControl.AccessKeyScopeOwner = moreButton;
+
+        overflowPopup = GetTemplateChild("OverflowPopup") as Popup;
+
+    }
+    private void OnAccessKeyInvoked(UIElement sender, AccessKeyInvokedEventArgs args)
+    {
+
+        if (overflowPopup != null)
+        {
+            overflowPopup.Opened += SecondaryMenuOpened;
+        }
+    }
+
+    private void SecondaryMenuOpened(object sender, object e)
+    {
+        //This is not neccesay given we are automatically pushing the scope.
+        var item = secondaryItemsControl.Items.First();
+        if (item != null && item is Control)
+        {
+            (item as Control).Focus(FocusState.Keyboard);
+        }
+        overflowPopup.Opened -= SecondaryMenuOpened;
+    }
 }
 ```
 
-Weitere Informationen über Steuerungsmuster finden Sie unter [Übersicht über Steuerungsmuster der Benutzeroberflächenautomatisierung](https://msdn.microsoft.com/library/windows/desktop/ee671194.aspx).
+
+``` xaml
+<local:CommandBarHack x:Name="MainCommandBar" AccessKey="M" >
+    <AppBarButton AccessKey="G" Icon="Globe" Label="Go"/>
+    <AppBarButton AccessKey="S" Icon="Stop" Label="Stop"/>
+    <AppBarSeparator/>
+    <AppBarButton AccessKey="R" Icon="Refresh" Label="Refresh" IsAccessKeyScope="True">
+        <AppBarButton.Flyout>
+            <MenuFlyout>
+                <MenuFlyoutItem AccessKey="A" Icon="Globe" Text="Refresh A" />
+                <MenuFlyoutItem AccessKey="B" Icon="Globe" Text="Refresh B" />
+                <MenuFlyoutItem AccessKey="C" Icon="Globe" Text="Refresh C" />
+                <MenuFlyoutItem AccessKey="D" Icon="Globe" Text="Refresh D" />
+            </MenuFlyout>
+        </AppBarButton.Flyout>
+    </AppBarButton>
+    <AppBarButton AccessKey="B" Icon="Back" Label="Back"/>
+    <AppBarButton AccessKey="F" Icon="Forward" Label="Forward"/>
+    <AppBarSeparator/>
+    <AppBarToggleButton AccessKey="V" Icon="Favorite" Label="Favorite"/>
+    <CommandBar.SecondaryCommands>
+        <AppBarToggleButton Icon="Like" AccessKey="L" Label="Like"/>
+        <AppBarButton Icon="Setting" AccessKey="T" Label="Settings" />
+    </CommandBar.SecondaryCommands>
+</local:CommandBarHack>
+```
+
+![Primäre Zugriffstasten für Befehlsleiste](images/accesskeys/primary-access-keys-commandbar.png)
+
+_Primärer Bereich der Befehlsleiste und unterstützte Zugriffstasten_
+
+![Sekundäre Zugriffstasten für Befehlsleiste](images/accesskeys/secondary-access-keys-commandbar.png)
+
+_Sekundärer Bereich der Befehlsleiste und unterstützte Zugriffstasten_
+
+## <a name="avoid-access-key-collisions"></a>Vermeiden von Zugriffstastenkonflikten
+
+Zugriffstastenkonflikte treten auf, wenn zwei oder mehr Elemente im selben Bereich duplizierte Zugriffstasten aufweisen oder mit denselben alphanumerischen Zeichen beginnen.
+
+Das System löst duplizierte Zugriffstasten auf, indem die Zugriffstaste des ersten zur visuellen Struktur hinzugefügten Elements verarbeitet wird und alle anderen ignoriert werden.
+
+Wenn mehrere Zugriffstasten mit demselben Zeichen (z.B. „A“, „A1“ und „AB“) beginnen, verarbeitet das System die Zugriffstaste mit einem einzelnen Zeichen und ignoriert alle anderen.
+
+Vermeiden Sie Konflikte durch die Verwendung eindeutiger Zugriffstasten oder die Bereichsdefinition für Befehle.
+
+## <a name="choose-access-keys"></a>Wählen von Zugriffstasten
+
+Berücksichtigen Sie Folgendes, wenn Sie Zugriffstasten wählen:
+
+-   Verwenden Sie ein einzelnes Zeichen zur Minimierung von Tastaturanschlägen und unterstützen Sie standardmäßig Tastenkombinationen (Alt + Zugriffstaste).
+-   Vermeiden Sie die Verwendung von mehr als zwei Zeichen.
+-   Vermeiden Sie Zugriffstastenkonflikte.
+-   Vermeiden Sie Zeichen, die nur schwer von anderen Zeichen zu unterscheiden sind, z.B. den Buchstaben „I“ und die Zahl „1“ oder den Buchstaben „O“ und die Zahl „0“.
+-   Verwenden Sie bekannte Vorgänger anderer beliebter Apps wie Word („D“ für „Datei“, „S“ für „Startseite“ usw.).
+-   Verwenden Sie das erste Zeichen des Befehlsnamens oder ein Zeichen mit einer engen Assoziation zum Befehl, das man sich gut merken kann.
+    -   Wenn der erste Buchstaben bereits zugewiesen ist, verwenden Sie einen Buchstaben, der dem ersten Buchstaben des Befehlsnamens so nah wie möglich ist („I“ für Einfügen).
+    -   Verwenden Sie einen markanten Konsonant aus dem Befehlsnamen („X“ für Extras).
+    -   Verwenden Sie einen Vokal aus dem Befehlsnamen.
+
+## <a name="localize-access-keys"></a>Lokalisieren von Zugriffstasten
+
+Wenn Ihre App in mehrere Sprachen lokalisiert wird, sollten Sie auch **die Lokalisierung der Zugriffstasten in Betracht ziehen**. Beispielsweise „H“ für „Home“ in en-US und „I“ für „Inicio“ in es-ES.
+
+Verwenden Sie die x:Uid-Erweiterung im Markup, um lokalisierte Ressourcen wie hier gezeigt anzuwenden:
+
+``` xaml
+<Button Content="Home" AccessKey="H" x:Uid="HomeButton" />
+```
+Ressourcen für die einzelnen Sprachen werden in entsprechenden Zeichenfolgenordnern im Projekt hinzugefügt:
+
+![Ressourcen-Zeichenfolgenordner für Englisch und Spanisch](images/accesskeys/resource-string-folders.png)
+
+_Ressourcen-Zeichenfolgenordner für Englisch und Spanisch_
+
+Lokalisierte Zugriffstasten werden in der Datei projects resources.resw angegeben:
+
+![Geben Sie die AccessKey-Eigenschaft an, die in der Datei resources.resw angegeben ist.](images/accesskeys/resource-resw-file.png)
+
+_Geben Sie die AccessKey-Eigenschaft an, die in der Datei resources.resw angegeben ist._
+
+Weitere Informationen finden Sie unter [Übersetzen von UI-Ressourcen ](https://msdn.microsoft.com/library/windows/apps/xaml/Hh965329(v=win.10).aspx).
+
+## <a name="position-key-tips"></a>Positionieren von Zugriffstasteninfos
+
+Zugriffstasteninfos werden als Gleitkommawertsignale relativ zu ihrem entsprechenden UI-Element angezeigt. Dabei wird das Vorhandensein anderer UI-Elemente, anderer Zugriffstasteninfos und des Bildschirmrands berücksichtigt.
+
+In der Regel ist die Standardposition der Zugriffstasteninfo ausreichend und bietet integrierte Unterstützung für die adaptive UI.
+
+![Beispiel für die automatische Platzierung der Zugriffstasteninfo](images/accesskeys/auto-keytip-position.png)
+
+_Beispiel für die automatische Platzierung der Zugriffstasteninfo_
+
+Falls Sie jedoch mehr Kontrolle über die Positionierung der Zugriffstasteninfo benötigen, empfehlen wir Folgendes:
+
+1.  **Offensichtliches Zuordnungsprinzip**: Der Benutzer kann das Steuerelement einfach der Zugriffstasteninfo zuordnen.
+
+    a.  Die Zugriffstasteninfo sollte sich **in der Nähe** des Elements mit der Zugriffstaste befinden (Besitzer).  
+    b.  Die Zugriffstasteninfo sollte **aktivierte Elemente nicht verdecken**, die Zugriffstasten aufweisen.   
+    c.  Wenn eine Zugriffstasteninfo nicht in der Nähe des Besitzers platziert werden kann, sollte sie mit dem Besitzer überlappen. 
+
+2.  **Auffindbarkeit**: Der Benutzer kann das Steuerelement mit der Zugriffstasteninfo schnell auffinden.
+
+    a.  Die Zugriffstasteninfo **überlappt** nie mit anderen Zugriffstasteninfos.  
+
+3.  **Lesbarkeit:** Der Benutzer kann die Zugriffstasteninfos einfach überfliegen.
+
+    a.  Zugriffstasteninfos sollten aneinander und am UI-Element **ausgerichtet** sein.
+    b.  Zugriffstasteninfos sollten so umfassend wie möglich **gruppiert** sein. 
+
+### <a name="relative-position"></a>Relative Position
+
+Verwenden Sie die **KeyTipPlacementMode**-Eigenschaft, um die Platzierung der Zugriffstasteninfo auf Element- oder Gruppenbasis anzupassen.
+
+Die Platzierungsmodi sind: Top, Bottom, Right, Left, Hidden, Center und Auto.
+
+![Platzierungsmodi für Zugriffstasteninfo](images/accesskeys/keytip-postion-modes.png)
+
+_Platzierungsmodi für Zugriffstasteninfo_
+
+Die Mittellinie des Steuerelements wird verwendet, um die vertikale und horizontale Ausrichtung der Zugriffstasteninfo zu berechnen.
+
+Das folgende Beispiel zeigt, wie Sie die Zugriffstasteninfo-Platzierung einer Gruppe von Steuerelementen mit der KeyTipPlacementMode-Eigenschaft eines StackPanel-Containers festlegen.
+
+``` xaml
+<StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" KeyTipPlacementMode="Top">
+  <Button Content="File" AccessKey="F" />
+  <Button Content="Home" AccessKey="H" />
+  <Button Content="Insert" AccessKey="N" />
+</StackPanel>
+```
+
+### <a name="offsets"></a>Offsets
+
+Verwenden Sie die Eigenschaften KeyTipHorizontalOffset und KeyTipVerticalOffset eines Elements für eine noch genauere Kontrolle der Zugriffstasteninfo-Position.
+
+> [!NOTE]
+> Offsets können nicht festgelegt werden, wenn KeyTipPlacementMode auf Auto festgelegt ist.
+
+Die KeyTipHorizontalOffset-Eigenschaft gibt an, wie weit die Zugriffstasteninfo nach links oder rechts verschoben werden soll. Das Beispiel veranschaulicht, wie die Offsets der Zugriffstasteninfo für eine Schaltfläche festgelegt werden.
+
+![Platzierungsmodi für Zugriffstasteninfo](images/accesskeys/keytip-offsets.png)
+
+_Festlegen der vertikalen und horizontalen Offsets für eine Zugriffstasteninfo_
+
+``` xaml
+<Button
+  Content="File"
+  AccessKey="F"
+  KeyTipPlacementMode="Bottom"
+  KeyTipHorizontalOffset="20"
+  KeyTipVerticalOffset="-8" />
+```
+
+### <a name="screen-edge-alignment-screen-edge-alignment-listparagraph"></a>Ausrichtung des Bildschirmrands {#screen-edge-alignment .ListParagraph}
+
+Die Position einer Zugriffstasteninfo wird automatisch am Bildschirmrand ausgerichtet, um sicherzustellen, dass die Zugriffstasteninfo vollständig sichtbar ist. In diesem Fall kann der Abstand zwischen dem Steuerelement und dem Zugriffstasten-Ausrichtungspunkt von den Werten für die horizontalen und vertikalen Offsets abweichen.
+
+![Platzierungsmodi für Zugriffstasteninfo](images/accesskeys/keytips-screen-edge.png)
+
+_Der Bildschirmrand bewirkt, dass sich die Zugriffstasteninfo automatisch selbst neu positioniert._
+
+## <a name="style-key-tips"></a>Zugriffstasteninfos – Stil
+
+Wir empfehlen die Verwendung der integrierten Zugriffstasteninfo-Unterstützung für Plattformdesigns, einschließlich hoher Kontrast.
+
+Wenn Sie Ihre eigenen Stile für Zugriffstasteninfos angeben müssen, verwenden Sie Anwendungsressourcen wie KeyTipFontSize (Schriftgröße), KeyTipFontFamily (Schriftfamilie), KeyTipBackground (Hintergrund), KeyTipForeground (Vordergrund), KeyTipPadding (Abstand), KeyTipBorderBrush (Rahmenfarbe) und KeyTipBorderThemeThickness (Rahmendicke).
+
+![Platzierungsmodi für Zugriffstasteninfo](images/accesskeys/keytip-customization.png)
+
+_Zugriffstasteninfo – Anpassungsoptionen_
+
+In diesem Beispiel wird veranschaulicht, wie Sie diese Anwendungsressourcen ändern:
+
+ ```xaml  
+<Application.Resources>
+  <SolidColorBrush Color="DarkGray" x:Key="MyBackgroundColor" />
+  <SolidColorBrush Color="White" x:Key="MyForegroundColor" />
+  <SolidColorBrush Color="Black" x:Key="MyBorderColor" />
+  <StaticResource x:Key="KeyTipBackground" ResourceKey="MyBackgroundColor" />
+  <StaticResource x:Key="KeyTipForeground" ResourceKey="MyForegroundColor" />
+  <StaticResource x:Key="KeyTipBorderBrush" ResourceKey="MyBorderColor"/>
+  <FontFamily x:Key="KeyTipFontFamily">Consolas</FontFamily>
+  <x:Double x:Key="KeyTipContentThemeFontSize">18</x:Double>
+  <Thickness x:Key="KeyTipBorderThemeThickness">2</Thickness>
+  <Thickness x:Key="KeyTipThemePadding">4,4,4,4</Thickness>
+</Application.Resources>
+```
 
 ## <a name="access-keys-and-narrator"></a>Zugriffstasten und Sprachausgabe
 
-Windows-Runtime verfügt über Benutzeroberflächenautomatisierungs-Anbieter, die Eigenschaften in Microsoft-Benutzeroberflächenautomatisierungs-Elementen verfügbar machen. Mithilfe dieser Eigenschaften können Benutzeroberflächenautomatisierungs-Clientanwendungen Informationen zu Teilen der Benutzeroberfläche ermitteln. Mithilfe der [AutomationProperties.AccessKey](https://msdn.microsoft.com/library/windows/apps/hh759763)-Eigenschaft können Clients wie die Sprachausgabe die einem Element zugeordnete Zugriffstaste ermitteln. Die Sprachausgabe liest diese Eigenschaft jedes Mal, wenn ein Element den Fokus erhält. Wenn AutomationProperties.AccessKey keinen Wert aufweist, gibt das XAML-Framework den [AccessKey](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskey.aspx)-Eigenschaftswert von UIElement oder TextElement zurück. Sie müssen AutomationProperties.AccessKey nicht einrichten, wenn die AccessKey-Eigenschaft bereits über einen Wert verfügt.
+Das XAML-Framework stellt Automatisierungseigenschaften bereit, mit denen UI-Automatisierungsclients Informationen zu Elementen in der Benutzeroberfläche ermitteln können.
 
-## <a name="example-access-key-for-button"></a>Beispiel: Zugriffstaste für eine Schaltfläche
-
-Dieses Beispiel veranschaulicht, wie Sie eine Zugriffstaste für eine Schaltfläche erstellen. Dabei werden QuickInfos als visuelle Angebote verwendet, um ein unverankertes Badge zu implementieren, das die Zugriffstaste enthält.
-
-> [!NOTE]
-> Der Einfachheit halber werden QuickInfos verwendet, es wird jedoch empfohlen, z. B. mit [Popup](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.popup.aspx) ein eigenes Steuerelement für die Anzeige zu erstellen.
-
-Da der Handler für das Click-Ereignis automatisch vom XAML-Framework aufgerufen wird, müssen Sie das AccessKeyInvoked-Ereignis nicht behandeln. Im Beispiel werden mit der [AccessKeyDisplayRequestedEventArgs.PressedKeys](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeydisplayrequestedeventargs.pressedkeys.aspx)-Eigenschaft visuelle Angebote nur für die Zeichen bereitgestellt, die zum Aufrufen der Zugriffstaste noch gedrückt werden müssen. Wenn beispielsweise die drei Zugriffstasten _A1_, _A2_ und _C_ angezeigt werden und der Benutzer _A_ drückt, werden nur die Zugriffstasten _A1_ und _A2_ nicht herausgefiltert und als _1_ und _2_ anstatt als _A1_ und _A2_ angezeigt.
-
-```xaml
-<StackPanel
-        VerticalAlignment="Center"
-        HorizontalAlignment="Center"
-        Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button Content="Press"
-                AccessKey="PB"
-                AccessKeyDisplayDismissed="OnAccessKeyDisplayDismissed"
-                AccessKeyDisplayRequested="OnAccessKeyDisplayRequested"
-                Click="DoSomething" />
-        <TextBlock Text="" x:Name="textBlock" />
-    </StackPanel>
-```
-
-```csharp
- public sealed partial class ButtonSample : Page
-    {
-        public ButtonSample()
-        {
-            this.InitializeComponent();
-        }
-
-        private void DoSomething(object sender, RoutedEventArgs args)
-        {
-            textBlock.Text = "Access Key is working!";
-        }
-
-        private void OnAccessKeyDisplayRequested(UIElement sender, AccessKeyDisplayRequestedEventArgs args)
-        {
-            var tooltip = ToolTipService.GetToolTip(sender) as ToolTip;
-
-            if (tooltip == null)
-            {
-                tooltip = new ToolTip();
-                tooltip.Background = new SolidColorBrush(Windows.UI.Colors.Black);
-                tooltip.Foreground = new SolidColorBrush(Windows.UI.Colors.White);
-                tooltip.Padding = new Thickness(4, 4, 4, 4);
-                tooltip.VerticalOffset = -20;
-                tooltip.Placement = PlacementMode.Bottom;
-                ToolTipService.SetToolTip(sender, tooltip);
-            }
-
-            if (string.IsNullOrEmpty(args.PressedKeys))
-            {
-                tooltip.Content = sender.AccessKey;
-            }
-            else
-            {
-                tooltip.Content = sender.AccessKey.Remove(0, args.PressedKeys.Length);
-            }
-
-            tooltip.IsOpen = true;
-        }
-        private void OnAccessKeyDisplayDismissed(UIElement sender, AccessKeyDisplayDismissedEventArgs args)
-        {
-            var tooltip = ToolTipService.GetToolTip(sender) as ToolTip;
-            if (tooltip != null)
-            {
-                tooltip.IsOpen = false;
-                //Fix to avoid show tooltip with mouse
-                ToolTipService.SetToolTip(sender, null);
-            }
-        }
-    }
-```
-
-## <a name="example-scoped-access-keys"></a>Beispiel: Bereichsbezogene Zugriffstasten
-
-Dieses Beispiel veranschaulicht das Erstellen bereichsbezogener Zugriffstasten. Die IsAccessKeyScope-Eigenschaft von PivotItem verhindert, dass die Zugriffstasten der untergeordneten Elemente von PivotItem angezeigt werden, wenn der Benutzer die ALT-TASTE drückt. Diese Zugriffstasten werden nur angezeigt, wenn der Benutzer PivotItem aufruft, da der Bereich automatisch vom XAML-Framework gewechselt wird. Das Framework blendet auch die Zugriffstasten der anderen Bereiche aus.
-
-Dieses Beispiel veranschaulicht auch, wie das AccessKeyInvoked-Ereignis behandelt wird. Da PivotItem kein Steuerungsmuster implementiert, ruft das XAML-Framework standardmäßig keine Aktion auf. Diese Implementierung zeigt, wie das mit der Zugriffstaste aufgerufene PivotItem ausgewählt wird.
-
-Abschließend wird im Beispiel das IsDisplayModeChanged-Ereignis gezeigt, in dem Sie eine Aktion ausführen können, wenn sich der Anzeigemodus ändert. In diesem Beispiel wird das Pivot-Steuerelement reduziert, bis der Benutzer ALT drückt. Wenn der Benutzer seine Interaktion mit dem Pivot-Steuerelement beendet hat, wird es wieder reduziert. Mit IsDisplayModeEnabled können Sie überprüfen, ob der Anzeigemodus für Zugriffstasten aktiviert oder deaktiviert ist.
-
-```xaml   
-<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Pivot x:Name="MyPivot" VerticalAlignment="Center" HorizontalAlignment="Center" >
-            <Pivot.Items>
-                <PivotItem
-                    x:Name="PivotItem1"
-                    AccessKey="A"
-                    AccessKeyInvoked="OnAccessKeyInvoked"
-                    AccessKeyDisplayDismissed="OnAccessKeyDisplayDismissed"
-                    AccessKeyDisplayRequested="OnAccessKeyDisplayRequested"
-                    IsAccessKeyScope="True">
-                    <PivotItem.Header>
-                        <TextBlock Text="A Options"/>
-                    </PivotItem.Header>
-                    <StackPanel Orientation="Horizontal" >
-                        <Button Content="ButtonAA" AccessKey="A"
-                                AccessKeyDisplayDismissed="OnAccessKeyDisplayDismissed"
-                                AccessKeyDisplayRequested="OnAccessKeyDisplayRequested" />
-                        <Button Content="ButtonAD1" AccessKey="D1"
-                                AccessKeyDisplayDismissed="OnAccessKeyDisplayDismissed"
-                                AccessKeyDisplayRequested="OnAccessKeyDisplayRequested"  />
-                        <Button Content="ButtonAD2" AccessKey="D2"
-                                AccessKeyDisplayDismissed="OnAccessKeyDisplayDismissed"
-                                AccessKeyDisplayRequested="OnAccessKeyDisplayRequested"/>
-                    </StackPanel>
-                </PivotItem>
-                <PivotItem
-                    x:Name="PivotItem2"
-                    AccessKeyInvoked="OnAccessKeyInvoked"
-                    AccessKeyDisplayDismissed="OnAccessKeyDisplayDismissed"
-                    AccessKeyDisplayRequested="OnAccessKeyDisplayRequested"
-                    AccessKey="B"
-                    IsAccessKeyScope="true">
-                    <PivotItem.Header>
-                        <TextBlock Text="B Options"/>
-                    </PivotItem.Header>
-                    <StackPanel Orientation="Horizontal">
-                        <Button AccessKey="B" Content="ButtonBB"
-                                AccessKeyDisplayDismissed="OnAccessKeyDisplayDismissed"
-                                AccessKeyDisplayRequested="OnAccessKeyDisplayRequested"  />
-                        <Button AccessKey="F1" Content="ButtonBF1"
-                                AccessKeyDisplayDismissed="OnAccessKeyDisplayDismissed"
-                                AccessKeyDisplayRequested="OnAccessKeyDisplayRequested"  />
-                        <Button AccessKey="F2" Content="ButtonBF2"  
-                                AccessKeyDisplayDismissed="OnAccessKeyDisplayDismissed"
-                                AccessKeyDisplayRequested="OnAccessKeyDisplayRequested"/>
-                    </StackPanel>
-                </PivotItem>
-            </Pivot.Items>
-        </Pivot>
-    </Grid>
-```
-
-```csharp
-public sealed partial class ScopedAccessKeys : Page
-    {
-        public ScopedAccessKeys()
-        {
-            this.InitializeComponent();
-            AccessKeyManager.IsDisplayModeEnabledChanged += OnDisplayModeEnabledChanged;
-            this.Loaded += OnLoaded;
-        }
-
-        void OnLoaded(object sender, object e)
-        {
-            //To let the framework discover the access keys, the elements should be realized
-            //on the visual tree. If there are no elements in the visual
-            //tree with access key, the framework won't raise the events.
-            //In this sample, if you define the Pivot as collapsed on the constructor, the Pivot
-            //will have a lazy loading and the access keys won't be enabled.
-            //For this reason, we make it visible when creating the object
-            //and we collapse it when we load the page.
-            MyPivot.Visibility = Visibility.Collapsed;
-        }
-
-        void OnAccessKeyInvoked(UIElement sender, AccessKeyInvokedEventArgs args)
-        {
-            args.Handled = true;
-            MyPivot.SelectedItem = sender as PivotItem;
-        }
-        void OnDisplayModeEnabledChanged(object sender, object e)
-        {
-            if (AccessKeyManager.IsDisplayModeEnabled)
-            {
-                MyPivot.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                MyPivot.Visibility = Visibility.Collapsed;
-
-            }
-        }
-
-        DependencyObject AdjustTarget(UIElement sender)
-        {
-            DependencyObject target = sender;
-            if (sender is PivotItem)
-            {
-                PivotItem pivotItem = target as PivotItem;
-                target = (sender as PivotItem).Header as TextBlock;
-            }
-            return target;
-        }
-
-        void OnAccessKeyDisplayRequested(UIElement sender, AccessKeyDisplayRequestedEventArgs args)
-        {
-            DependencyObject target = AdjustTarget(sender);
-            var tooltip = ToolTipService.GetToolTip(target) as ToolTip;
-
-            if (tooltip == null)
-            {
-                tooltip = new ToolTip();
-                tooltip.Background = new SolidColorBrush(Windows.UI.Colors.Black);
-                tooltip.Foreground = new SolidColorBrush(Windows.UI.Colors.White);
-                tooltip.Padding = new Thickness(4, 4, 4, 4);
-                tooltip.VerticalOffset = -20;
-                tooltip.Placement = PlacementMode.Bottom;
-                ToolTipService.SetToolTip(target, tooltip);
-            }
-
-            if (string.IsNullOrEmpty(args.PressedKeys))
-            {
-                tooltip.Content = sender.AccessKey;
-            }
-            else
-            {
-                tooltip.Content = sender.AccessKey.Remove(0, args.PressedKeys.Length);
-            }
-
-            tooltip.IsOpen = true;
-        }
-        void OnAccessKeyDisplayDismissed(UIElement sender, AccessKeyDisplayDismissedEventArgs args)
-        {
-            DependencyObject target = AdjustTarget(sender);
-
-            var tooltip = ToolTipService.GetToolTip(target) as ToolTip;
-            if (tooltip != null)
-            {
-                tooltip.IsOpen = false;
-                //Fix to avoid show tooltip with mouse
-                ToolTipService.SetToolTip(target, null);
-            }
-        }
-    }
-```
+Wenn Sie die AccessKey-Eigenschaft für ein UIElement- oder TextElement-Steuerelement angeben, können Sie mithilfe der [AutomationProperties.AccessKey](https://msdn.microsoft.com/library/windows/apps/hh759763)-Eigenschaft diesen Wert abrufen. Barrierefreiheitclients, z.B. die Sprachausgabe, lesen den Wert dieser Eigenschaft jedes Mal, wenn ein Element den Fokus erhält.

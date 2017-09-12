@@ -6,14 +6,20 @@ ms.assetid: 6231A806-287D-43EE-BD8D-39D2FF761914
 label: Check boxes
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: 7e00ac2aa08033292ba8d3ce1cebe836fdc3808c
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: kisai
+design-contact: kimsea
+dev-contact: mitra
+doc-status: Published
+ms.openlocfilehash: 13ca87313835541abffe6190d8a3bc07e67b40f8
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="check-boxes"></a>Kontrollkästchen
 
@@ -21,16 +27,9 @@ translationtype: HT
 
 Ein Kontrollkästchen dient zum Aktivieren oder Deaktivieren von Aktionselementen. Es kann für einzelne oder mehrere Listenelemente verwendet werden, die dem Benutzer zur Auswahl stehen. Das Steuerelement verfügt über drei Auswahlzustände: „Deaktiviert“, „Aktiviert“ und „Unbestimmt“. Verwenden Sie den unbestimmten Zustand, wenn für eine Sammlung von Unteroptionen eine Mischung aus deaktivierten als aktivierten Zuständen vorliegt.
 
-![Bespiel für Kontrollkästchenzustände](images/templates-checkbox-states-default.png)
+> **Wichtige APIs:** [Klasse „CheckBox“](https://msdn.microsoft.com/library/windows/apps/br209316), [Ereignis „Checked“](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx), [Eigenschaft „IsChecked“](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx)
 
-<div class="important-apis" >
-<b>Wichtige APIs</b><br/>
-<ul>
-<li>[**CheckBox-Klasse**](https://msdn.microsoft.com/library/windows/apps/br209316)</li>
-<li>[**Checked-Ereignis**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx)</li>
-<li>[**IsChecked-Eigenschaft**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx) </li>
-</ul>
-</div>
+![Beispiel für Kontrollkästchenzustände](images/templates-checkbox-states-default.png)
 
 
 ## <a name="is-this-the-right-control"></a>Ist dies das richtige Steuerelement?
@@ -39,7 +38,7 @@ Verwenden Sie ein **einzelnes Kontrollkästchen** für eine binäre Ja/Nein-Ausw
 
 ![Ein einzelnes Kontrollkästchen für eine einzelne Auswahl](images/checkbox1.png)
 
-Bei einer binären Auswahl besteht der Hauptunterschied zwischen einem **Kontrollkästchen** und einem [**Umschalter**](toggles.md) darin, dass das Kontrollkästchen für einen Zustand und der Umschalter für eine Aktion verwendet wird. Sie können das Commit einer Kontrollkästcheninteraktion (etwa im Rahmen der Übermittlung eines Formulars) verzögern, während für die Interaktion eines Umschalters sofort ein Commit ausgeführt werden muss. Eine Mehrfachauswahl ist nur mit Kontrollkästchen möglich.
+Bei einer binären Auswahl besteht der Hauptunterschied zwischen einem **Kontrollkästchen** und einem [Umschalter](toggles.md) darin, dass das Kontrollkästchen für einen Zustand und der Umschalter für eine Aktion verwendet wird. Sie können das Commit einer Kontrollkästcheninteraktion (etwa im Rahmen der Übermittlung eines Formulars) verzögern, während für die Interaktion eines Umschalters sofort ein Commit ausgeführt werden muss. Eine Mehrfachauswahl ist nur mit Kontrollkästchen möglich.
 
 Verwenden Sie **mehrere Kontrollkästchen** für Mehrfachauswahlszenarien, in denen der Benutzer einzelne oder mehrere Elemente aus einer Gruppe von Optionen auswählt, die sich nicht gegenseitig ausschließen.
 
@@ -51,21 +50,12 @@ Bei gruppierbaren Optionen kann die gesamte Gruppe durch ein unbestimmtes Kontro
 
 ![Kontrollkästchen für die Anzeige einer gemischten Auswahl](images/checkbox3.png)
 
-Benutzer können sowohl über **Kontrollkästchen** als auch über **Optionsfelder** eine Auswahl in einer Liste von Optionen treffen. Mit Kontrollkästchen können Benutzer eine Kombination von Optionen auswählen. Bei Optionsfeldern kann der Benutzer dagegen nur eine der (sich gegenseitig ausschließenden) Optionen auswählen. Wenn mehrere Optionen verfügbar sind, aber nur eine ausgewählt werden kann, verwenden Sie ein Optionsfeld.
+Benutzer können sowohl über **Kontrollkästchen** als auch über **Optionsfelder** eine Auswahl in einer Liste von Optionen treffen. Mit Kontrollkästchen können Benutzer eine Kombination von Optionen auswählen. Bei Optionsfeldern kann der Benutzer dagegen nur eine der (sich gegenseitig ausschließenden) Optionen auswählen. Wenn mehrere Optionen verfügbar sind, aber nur eine ausgewählt werden kann, sollten Sie ein Optionsfeld verwenden.
 
-## <a name="examples"></a>Beispiele
-
-Ein Kontrollkästchen in einem Dialogfeld im MicrosoftEdge-Browser:
-
-![Kontrollkästchen in einem Dialogfeld im MicrosoftEdge-Browser](images/control-examples/check-box-edge.png)
-
-Kontrollkästchen in der Alarm&Uhr-App in Windows:
-
-![Kontrollkästchen in der Alarm&Uhr-App in Windows](images/control-examples/check-box-alarm.png)
 
 ## <a name="create-a-checkbox"></a>Erstellen eines Kontrollkästchens
 
-Um dem Kontrollkästchen eine Beschriftung zuzuweisen, legen Sie die [**Content**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentcontrol.content.aspx)-Eigenschaft fest. Die Beschriftung wird neben dem Kontrollkästchen angezeigt.
+Legen Sie einen Wert für die Eigenschaft [Content](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentcontrol.content.aspx) fest, um dem Kontrollkästchen eine Beschriftung zuzuweisen. Die Beschriftung wird neben dem Kontrollkästchen angezeigt.
 
 Der folgende XAML-Code erstellt ein einzelnes Kontrollkästchen, mit dem vor dem Übermitteln eines Formulars den Servicebedingungen zugestimmt werden muss: 
 
@@ -83,9 +73,9 @@ checkBox1.Content = "I agree to the terms of service.";
 
 ### <a name="bind-to-ischecked"></a>Binden an „IsChecked“
 
-Mit der [**IsChecked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx)-Eigenschaft können Sie den Aktivierungszustand des Kontrollkästchens ermitteln. Der Wert der IsChecked-Eigenschaft kann an einen anderen binären Wert gebunden werden. Da es sich bei „IsChecked“ aber um einen booleschen Wert vom Typ [Nullable](https://msdn.microsoft.com/library/windows/apps/b3h38hb0.aspx) handelt, müssen Sie einen Wertkonverter verwenden, um sie an einen booleschen Wert zu binden.
+Über die Eigenschaft [IsChecked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx) können Sie den Aktivierungszustand des Kontrollkästchens ermitteln. Der Wert der IsChecked-Eigenschaft kann an einen anderen binären Wert gebunden werden. Da es sich bei „IsChecked“ aber um einen booleschen Wert vom Typ [Nullable](https://msdn.microsoft.com/library/windows/apps/b3h38hb0.aspx) handelt, müssen Sie einen Wertkonverter verwenden, um sie an einen booleschen Wert zu binden.
 
-In diesem Beispiel wird die **IsChecked**-Eigenschaft des Kontrollkästchens zum Akzeptieren der Servicebedingungen an die [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.isenabled.aspx)-Eigenschaft der Schaltfläche zum Absenden gebunden. Die Schaltfläche zum Absenden wird nur aktiviert, wenn die Vertragsbedingungen akzeptiert werden.
+In diesem Beispiel wird die **IsChecked**-Eigenschaft des Kontrollkästchens zum Akzeptieren der Servicebedingungen an die [IsEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.isenabled.aspx)-Eigenschaft der Schaltfläche zum Absenden gebunden. Die Schaltfläche zum Absenden wird nur aktiviert, wenn die Vertragsbedingungen akzeptiert werden.
 
 > Hinweis&nbsp;&nbsp;Wir zeigen hier nur den relevanten Code. Weitere Informationen zu Datenbindungen und Wertkonvertern finden Sie unter [Übersicht "Datenbindung"](../data-binding/data-binding-quickstart.md).
 
@@ -128,7 +118,7 @@ public class NullableBooleanToBooleanConverter : IValueConverter
 
 ### <a name="handle-click-and-checked-events"></a>Behandeln von Click- und Checked-Ereignissen
 
-Wenn bei einer Änderung des Kontrollkästchenzustands eine Aktion ausgeführt werden soll, behandeln Sie das [**Click**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx)-Ereignis oder die Ereignisse [**Checked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx) und [**deaktiviert**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.unchecked.aspx). 
+Damit bei einer Änderung des Kontrollkästchenzustands eine Aktion ausgeführt wird, können Sie entweder das Ereignis [Click](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx) behandeln oder die Ereignisse [Checked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx) und [Unchecked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.unchecked.aspx). 
 
 Das **Click**-Ereignis tritt bei jeder Änderung des Aktivierungszustands auf. Verwenden Sie beim Behandeln des Click-Ereignisses die **IsChecked**-Eigenschaft, um den Zustand des Kontrollkästchens zu ermitteln.
 
@@ -189,7 +179,7 @@ Aktiviert | IsChecked | **true**
 Deaktiviert | IsChecked | **false** 
 Unbestimmt | IsChecked | **NULL** 
 
-Damit das Kontrollkästchen einen unbestimmten Zustand meldet, müssen Sie die [**IsThreeState**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.isthreestate.aspx)-Eigenschaft auf **true** festlegen. 
+Damit das Kontrollkästchen einen unbestimmten Zustand meldet, müssen Sie die Eigenschaft [IsThreeState](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.isthreestate.aspx) auf **true** setzen. 
 
 Bei gruppierbaren Optionen kann die gesamte Gruppe durch ein unbestimmtes Kontrollkästchen dargestellt werden. Verwenden Sie den unbestimmten Zustand des Kontrollkästchens, wenn ein Benutzer nur einige untergeordneten Elemente der Gruppe aktiviert.
 
@@ -299,7 +289,7 @@ private void SetCheckedState()
 
 ## <a name="related-articles"></a>Verwandte Artikel
 
--   [**CheckBox-Klasse**](https://msdn.microsoft.com/library/windows/apps/br209316) 
+-   [CheckBox-Klasse](https://msdn.microsoft.com/library/windows/apps/br209316) 
 -   [Optionsfelder](radio-button.md)
 -   [Umschalter](toggles.md)
 

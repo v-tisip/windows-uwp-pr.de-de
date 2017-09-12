@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: jwmsft
 ms.assetid: FA25562A-FE62-4DFC-9084-6BD6EAD73636
 title: "Aufrechterhalten der Reaktionsfähigkeit des UI-Threads"
 description: "Benutzer erwarten, dass eine App beim Durchführen einer Berechnung reaktionsfähig bleibt, unabhängig vom jeweiligen Computertyp."
-ms.author: markl
+ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 921af1b7f408bed5f846af631592755d48a37dd4
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: d5be2a8ea14f35d048b4402f2cfb1018d5998c3d
+ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/14/2017
 ---
 # <a name="keep-the-ui-thread-responsive"></a>Aufrechterhalten der Reaktionsfähigkeit des UI-Threads
 
@@ -29,7 +31,7 @@ Sie müssen den UI-Thread verwenden, um fast alle Änderungen am UI-Thread vorzu
 
 Einige der langsamsten Phasen in einer App können der Start und das Wechseln zwischen Ansichten sein. Machen Sie sich nicht mehr Arbeit als nötig, um die Benutzeroberfläche anzuzeigen, die dem Benutzer zuerst angezeigt wird. Erstellen Sie beispielsweise nicht die Benutzeroberfläche für die schrittweise offengelegte Benutzeroberfläche und den Inhalt von Popups.
 
--   Verwenden Sie [x:DeferLoadStrategy](https://msdn.microsoft.com/library/windows/apps/Mt204785) zum Verzögern instanziierter Elemente.
+-   Verwenden Sie [x:Load attribute](../xaml-platform/x-load-attribute.md) oder [x:DeferLoadStrategy](https://msdn.microsoft.com/library/windows/apps/Mt204785), um Elemente verzögert zu instanziieren.
 -   Fügen Sie programmgesteuerte Elemente nach Bedarf in der Struktur ein.
 
 [**CoreDispatcher.RunIdleAsync**](https://msdn.microsoft.com/library/windows/apps/Hh967918)-Warteschlangen eignen sich für die Verarbeitung des UI-Threads, wenn er nicht aktiv ist.
@@ -107,4 +109,3 @@ In diesem Beispiel wird der `NextMove-Click`-Handler bei **await** zurückgegebe
 ## <a name="related-topics"></a>Verwandte Themen
 
 * [Benutzerdefinierte Benutzerinteraktionen](https://msdn.microsoft.com/library/windows/apps/Mt185599)
-

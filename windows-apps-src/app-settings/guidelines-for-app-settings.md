@@ -11,9 +11,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: 493e491bd16b7346046394d66587788caf06db4f
-ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
-translationtype: HT
+ms.openlocfilehash: 67714d0b7a95e1034486d39853c91c9a7590bfa5
+ms.sourcegitcommit: 45490bd85e6f8d247a041841d547ecac2ff48250
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/23/2017
 ---
 # <a name="guidelines-for-app-settings"></a>Richtlinien für App-Einstellungen
 
@@ -97,9 +99,11 @@ Wir empfehlen außerdem, einen Link zur Seite „Farben“ der Windows-App „Ei
 
 ![Abschnitt für die Modusauswahl](images/appsettings_mode.png)
 
-<div class=”microsoft-internal-note”>
-Detaillierte Beispiele mit bevorzugten Zeichenfolgen für den Abschnitt zur Modusauswahl finden Sie unter [UNI](http://uni/DesignDepot.FrontEnd/#/ProductNav/2543/0/dv/?t=Windows%7CControls%7CColorMode&f=RS2).
+<!--
+<div class="microsoft-internal-note">
+Detailed redlines showing preferred text strings for the "Choose a mode" section are available on [UNI](http://uni/DesignDepot.FrontEnd/#/ProductNav/2543/0/dv/?t=Windows%7CControls%7CColorMode&f=RS2).
 </div>
+-->
 
 ## <a name="about-section-and-give-feedback-button"></a>Abschnitt „Info“ und Schaltfläche „Feedback“
 

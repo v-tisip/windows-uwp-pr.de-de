@@ -7,14 +7,16 @@ label: Command design basics
 template: detail.hbs
 op-migration-status: ready
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: a9e7cda7794b3463ffa567bcf36ebec2d2d02687
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 868221cce04688ea2f7ab50e3062579932fbbd80
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/22/2017
 ---
 #  <a name="command-design-basics-for-uwp-apps"></a>Befehlsdesigngrundlagen für UWP-Apps
 
@@ -22,8 +24,9 @@ translationtype: HT
 
 Bei den *Befehlselementen* in einer Universellen Windows-Plattform (UWP)-App handelt es sich um die interaktiven Benutzeroberflächenelemente, mit denen der Benutzer Aktionen durchführen kann, um beispielsweise eine E-Mail zu senden, ein Element zu löschen oder ein Formular zu übermitteln. Dieser Artikel beschreibt Befehlselemente wie Schaltflächen und Kontrollkästchen, die unterstützten Interaktionen sowie die Befehlsoberflächen (wie etwa Befehlsleisten und Kontextmenüs), auf denen sie sich befinden können.
 
-## <a name="provide-the-right-type-of-interactions"></a>Bereitstellen geeigneter Interaktionen
+> **Wichtige APIs**: [ICommand-Schnittstelle](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Input.ICommand), [Schaltflächen-Klasse](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.Button), [CommandBar-Klasse](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.commandbar), [MenuFlyout-Klasse](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.MenuFlyout)
 
+## <a name="provide-the-right-type-of-interactions"></a>Bereitstellen geeigneter Interaktionen
 
 Die wichtigste Entscheidung bei der Gestaltung einer Befehlsschnittstelle ist die Wahl der möglichen Benutzeraktionen. Wenn Sie beispielsweise eine Foto-App entwickeln, benötigen die Benutzer Werkzeuge für die Fotobearbeitung. Beim Erstellen einer App für soziale Medien, mit der auch Fotos angezeigt werden können, stellt das Bearbeiten von Bildern möglicherweise keine Priorität dar. Daher können Bearbeitungstools weggelassen werden, um Platz zu sparen. Überlegen Sie, welche Aktionen der Benutzer ausführen soll, und stellen Sie die entsprechenden Tools bereit.
 

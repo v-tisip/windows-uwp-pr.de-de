@@ -1,39 +1,46 @@
 ---
-author: msatranjr
+author: normesta
 title: Anzeigen von Karten mit 2D-, 3D- und Streetside-Ansichten
 description: "Sie können mit der MapControl-Klasse anpassbare Karten in Ihrer App anzeigen. In diesem Thema werden auch 3D-Luftbilder und Streetside-Ansichten behandelt."
 ms.assetid: 3839E00B-2C1E-4627-A45F-6DDA98D7077F
-ms.author: misatran
-ms.date: 02/08/2017
+ms.author: normesta
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, karten, standort, kartensteuerelement, kartenansichten"
-translationtype: Human Translation
-ms.sourcegitcommit: 32b5230d62f23430393fc51c73f80fa46bd525fa
-ms.openlocfilehash: 7a1687ceb188fdd28943f807b877b28e93ae6937
-ms.lasthandoff: 02/07/2017
-
+keywords: windows10, uwp, karten, standort, kartensteuerelement, kartenansichten
+ms.openlocfilehash: a926188912cf0cd36e1bc787e7c0cbc32f8ae95b
+ms.sourcegitcommit: 0ebc8dca2fd9149ea163b7db9daa14520fc41db4
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/08/2017
 ---
-
 # <a name="display-maps-with-2d-3d-and-streetside-views"></a>Anzeigen von Karten mit 2D-, 3D- und Streetside-Ansichten
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
+Sie können mit der [MapControl](https://msdn.microsoft.com/library/windows/apps/dn637004)-Klasse anpassbare Karten in Ihrer App anzeigen. In diesem Thema werden auch 3D-Luftbilder und Streetside-Ansichten behandelt.
 
-Sie können mit der [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)-Klasse anpassbare Karten in Ihrer App anzeigen. In diesem Thema werden auch 3D-Luftbilder und Streetside-Ansichten behandelt.
+> [!NOTE]
+> Laden Sie das [Beispiel für Universelle Windows-Plattform (UWP)-Karten](http://go.microsoft.com/fwlink/p/?LinkId=619977) herunter, um mehr über die Verwendung von Karten in Ihrer App zu erfahren.
 
-**Tipp** Um mehr über das Verwenden von Karten in Ihrer App zu erfahren, laden Sie das folgende Beispiel aus dem [Repository Beispiele für Universelle Windows-Plattform](http://go.microsoft.com/fwlink/p/?LinkId=619979) auf GitHub herunter.
+<span id="map-control" />
+## <a name="the-map-control"></a>Das Kartensteuerelement
 
--   [Kartenbeispiel für die Universelle Windows-Plattform (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+Mithilfe des Kartensteuerelements können Straßenkarten, Luftbilder, 3D-Ansichten, Wegbeschreibungen, Suchergebnisse und Verkehrsinformationen angezeigt werden. In einer Karte können Sie die Position des Benutzers, Wegbeschreibungen und interessante Orte anzeigen. Zudem kann eine Karte 3D-Luftbilder, Streetside-Ansichten, Verkehrsinformationen, öffentliche Verkehrsmittel und lokale Unternehmen enthalten.
+
+Verwenden Sie ein Kartensteuerelement, wenn Sie in Ihrer App eine Karte benötigen, auf der Benutzer App-spezifische oder allgemeine geografische Informationen anzeigen können. Wenn die App ein Kartensteuerelement enthält, müssen Benutzer die App nicht verlassen, um diese Informationen zu erhalten.
+
+> [!NOTE]
+>Wenn es Ihnen nichts ausmacht, dass Benutzer dafür die App verlassen, können Sie diese Informationen auch mit der Windows-Karten-App bereitstellen. Ihre App kann die Windows-Karten-App starten, um bestimmte Karten, Wegbeschreibungen und Suchergebnisse anzuzeigen. Weitere Informationen finden Sie unter [Starten der Windows-Karten-App](https://msdn.microsoft.com/library/windows/apps/mt228341).
 
 ## <a name="add-the-map-control-to-your-app"></a>Hinzufügen des Kartensteuerelements zur App
 
 
 Zeigen Sie eine Karte auf einer XAML-Seite durch Hinzufügen eines [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) an. Um **MapControl** zu verwenden, müssen Sie den Namespace [**Windows.UI.Xaml.Controls.Maps**](https://msdn.microsoft.com/library/windows/apps/dn610751) in der XAML-Seite oder im Code deklarieren. Wenn Sie das Steuerelement der Toolbox entnehmen, wird die Namespacedeklaration automatisch hinzugefügt. Wenn Sie **MapControl** manuell zur XAML-Seite hinzufügen, müssen Sie die Namespacedeklaration oben auf der Seite manuell hinzufügen.
 
-Das folgende Beispiel zeigt ein einfaches Kartensteuerelement. Außerdem wird die Karte so konfiguriert, dass Toucheingaben möglich sind und gleichzeitig die Steuerelemente für Zoom und Neigung angezeigt werden. Weitere Informationen zum Anpassen der Darstellung der Karte finden Sie unter [Konfigurieren der Karte](#configure-the-map).
+Das folgende Beispiel zeigt ein einfaches Kartensteuerelement. Außerdem wird die Karte so konfiguriert, dass Toucheingaben möglich sind und gleichzeitig die Steuerelemente für Zoom und Neigung angezeigt werden. Weitere Informationen zum Anpassen der Darstellung der Karte finden Sie unter [Konfigurieren der Karte](#mapconfig).
 
 ```xml
 <Page
@@ -82,10 +89,10 @@ Bevor Sie [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637
 
 Legen Sie die Position fest, die auf der Karte angezeigt werden soll, indem Sie die [**Center**](https://msdn.microsoft.com/library/windows/apps/dn637005)-Eigenschaft von [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) im Code angeben oder die Eigenschaft im XAML-Markup binden. Im folgenden Beispiel wird eine Karte mit Seattle in der Mitte angezeigt.
 
-**Tipp** Da eine Zeichenfolge nicht in einen [**Geopoint**](https://msdn.microsoft.com/library/windows/apps/dn263675) konvertiert werden kann, können Sie nur dann einen Wert für die [**Center**](https://msdn.microsoft.com/library/windows/apps/dn637005)-Eigenschaft im XAML-Markup eingeben, wenn Sie die Datenbindung verwenden. (Diese Einschränkung gilt auch für die angefügte Eigenschaft [**MapControl.Location**](https://msdn.microsoft.com/library/windows/apps/dn653264).
+> [!NOTE]
+> Da eine Zeichenfolge nicht in einen [**Geopoint**](https://msdn.microsoft.com/library/windows/apps/dn263675) konvertiert werden kann, können Sie nur dann einen Wert für die [**Center**](https://msdn.microsoft.com/library/windows/apps/dn637005)-Eigenschaft im XAML-Markup festlegen, wenn Sie die Datenbindung verwenden. (Diese Einschränkung gilt auch für die angefügte Eigenschaft [**MapControl.Location**](https://msdn.microsoft.com/library/windows/apps/dn653264).
 
  
-
 ```csharp
 protected override void OnNavigatedTo(NavigationEventArgs e)
 {
@@ -103,7 +110,6 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 ![Beispiel für das Kartensteuerelement](images/displaymapsexample1.png)
 
 ## <a name="set-the-current-location-of-the-map"></a>Festlegen der aktuellen Kartenposition
-
 
 Bevor die App auf die Position des Benutzers zugreifen kann, muss die App die [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152)-Methode aufrufen. Zu diesem Zeitpunkt muss sich Ihre App im Vordergrund befinden, und **RequestAccessAsync** muss vom UI-Thread aufgerufen werden. Solange der Benutzer Ihrer App keinen Zugriff auf seine Position gewährt, kann Ihre App nicht auf Positionsdaten zugreifen.
 
@@ -141,31 +147,92 @@ Beim Anzeigen der Geräteposition auf einer Karte sollten Sie für das Anzeigen 
 
 ## <a name="change-the-location-of-the-map"></a>Ändern der Kartenposition
 
-
 Rufen Sie zum Ändern der Position, die in einer 2D-Karte angezeigt wird, eine der Überladungen der [**TrySetViewAsync**](https://msdn.microsoft.com/library/windows/apps/dn637060)-Methode auf. Verwenden Sie diese Methode, um neue Werte für [**Center**](https://msdn.microsoft.com/library/windows/apps/dn637005), [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637068), [**Heading**](https://msdn.microsoft.com/library/windows/apps/dn637019) und [**Pitch**](https://msdn.microsoft.com/library/windows/apps/dn637044) anzugeben. Darüber hinaus können Sie eine optionale Animation angeben, die beim Ändern der Ansicht angezeigt werden soll, indem Sie eine Konstante aus der Enumeration [**MapAnimationKind**](https://msdn.microsoft.com/library/windows/apps/dn637002) angeben.
 
-Verwenden Sie zum Ändern des Standorts einer 3D-Karte stattdessen die [**TrySetSceneAsync**](https://msdn.microsoft.com/library/windows/apps/dn974296)-Methode. Weitere Informationen finden Sie unter [Anzeigen von 3D-Ansichten](#display-aerial-3d-views).
+Verwenden Sie zum Ändern des Standorts einer 3D-Karte stattdessen die [**TrySetSceneAsync**](https://msdn.microsoft.com/library/windows/apps/dn974296)-Methode. Weitere Informationen finden Sie unter [Anzeigen von 3D-Ansichten](#display3d).
 
 Rufen Sie die [**TrySetViewBoundsAsync**](https://msdn.microsoft.com/library/windows/apps/dn637065)-Methode zum Anzeigen der Inhalte eines [**GeoboundingBox**](https://msdn.microsoft.com/library/windows/apps/dn607949) auf der Karte auf. Diese Methode verwenden Sie beispielsweise, um eine Route oder einen Abschnitt einer Route auf der Karte anzuzeigen. Weitere Informationen finden Sie unter [Anzeigen von Routen und Wegbeschreibungen auf einer Karte](routes-and-directions.md).
 
-## <a name="configure-the-map"></a>Konfigurieren der Karte
+## <a name="customize-the-appearance-of-the-map"></a>Hier können Sie das Aussehen der Karte anpassen.
 
+Um das Aussehen und Verhalten der Karte anzupassen, legen Sie die [**StyleSheet**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol#Windows_UI_Xaml_Controls_Maps_MapControl_StyleSheet)-Eigenschaft des Kartensteuerelements auf eines der vorhandenen [**MapStyleSheet**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapstylesheet) Objekte fest.
 
-Konfigurieren Sie die Karte und ihre Darstellung, indem Sie die Werte der folgenden Eigenschaften von [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) festlegen.
+```csharp
+myMap.StyleSheet = MapStyleSheet.RoadDark();
+```
 
-**Karteneinstellungen**
+![Karte im dunklen Stil](images/style-dark.png)
+
+Sie können auch JSON verwenden, um benutzerdefinierte Stile zu definieren und dann JSON zum Erstellen eines [**MapStyleSheet**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapstylesheet) Objekt nutzen.
+
+```csharp
+myMap.StyleSheet = MapStyleSheet.ParseFromJson(@"
+    {
+        ""version"": ""1.0"",
+        ""settings"": {
+            ""landColor"": ""#FFFFFF"",
+            ""spaceColor"": ""#000000""
+        },
+        ""elements"": {
+            ""mapElement"": {
+                ""labelColor"": ""#000000"",
+                ""labelOutlineColor"": ""#FFFFFF""
+            },
+            ""water"": {
+                ""fillColor"": ""#DDDDDD""
+            },
+            ""area"": {
+                ""fillColor"": ""#EEEEEE""
+            },
+            ""political"": {
+                ""borderStrokeColor"": ""#CCCCCC"",
+                ""borderOutlineColor"": ""#00000000""
+            }
+        }
+    }
+");
+```
+
+![Karte im benutzerdefinierten Stil](images/style-custom.png)
+
+Die vollständige JSON-Referenz finden Sie unter [Karten-Stylesheet-Referenz](elements-of-map-style-sheet.md).
+
+Können Sie mit einem vorhandenen Sheet beginnen und dann JSON verwenden, um alle gewünschten Elemente zu überschreiben. Dieses Beispiel beginnt mit einem vorhandenen Stil und verwendet JSON, um nur die Farbe der Wasserbereiche zu ändern.
+
+```csharp
+MapStyleSheet customSheet = MapStyleSheet.ParseFromJson(@"
+    {
+        ""version"": ""1.0"",
+        ""elements"": {
+            ""water"": {
+                ""fillColor"": ""#DDDDDD""
+            }
+        }
+    }
+");
+
+MapStyleSheet builtInSheet = MapStyleSheet.RoadDark();
+
+myMap.StyleSheet = MapStyleSheet.Combine(new List<MapStyleSheet> { builtInSheet, customSheet });
+```
+
+![Kombinierter Kartenstil](images/style-combined.png)
+
+>[!NOTE]
+>Stile, die Sie in einem zweiten Stylesheet definieren, überschreiben die Stile in der ersten.
+
+## <a name="change-the-orientation-and-perspective-of-the-map"></a>Ändern der Ausrichtung und Perspektive der Karte
+
+Vergrößern, verkleinern, drehen Sie und kippen Sie der Kamera der Karte, um den passen Winkel für den gewünschten Effekt zu erhalten. Versuchen Sie diese Eigenschaften:
 
 -   Legen Sie das **Zentrum** der Karte auf einen geografischen Punkt fest, indem Sie die Eigenschaft [**Center**](https://msdn.microsoft.com/library/windows/apps/dn637005) festlegen.
 -   Legen Sie die **Zoomstufe** der Karte fest, indem Sie die Eigenschaft [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637068) auf einen Wert zwischen 1 und 20 Grad festlegen.
 -   Legen Sie die **Rotation** der Karte fest, indem Sie die Eigenschaft [**Heading**](https://msdn.microsoft.com/library/windows/apps/dn637019) festlegen, wobei 0 oder 360 Grad = Nord, 90 = Ost, 180 = Süd und 270 =West ist.
 -   Legen Sie die **Neigung** der Karte fest, indem Sie die Eigenschaft [**DesiredPitch**](https://msdn.microsoft.com/library/windows/apps/dn637012) auf einen Wert zwischen 0 und 65 Grad festlegen.
 
-**Darstellung der Karte**
+## <a name="show-and-hide-map-features"></a>Ein- und Ausblenden von Kartefeatures
 
--   Geben Sie den **Typ** der Karte an – z. B. Straßenkarte oder Luftbildansicht, indem Sie die Eigenschaft [**Style**](https://msdn.microsoft.com/library/windows/apps/dn637051) auf eine der [**MapStyle**](https://msdn.microsoft.com/library/windows/apps/dn637127)-Konstanten festlegen.
--   Legen Sie das **Farbschema** der Karte als hell oder dunkel fest, indem Sie die Eigenschaft [**ColorScheme**](https://msdn.microsoft.com/library/windows/apps/dn637010) auf eine der [**MapColorScheme**](https://msdn.microsoft.com/library/windows/apps/dn637003)-Konstanten festlegen.
-
-Zeigen Sie Informationen auf der Karte an, indem Sie die Werte der folgenden Eigenschaften von [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) festlegen.
+Ausblenden und Anzeigen von Features wie Straßen und Orten, indem Sie die Werte der folgenden Eigenschaften von [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) festlegen.
 
 -   Zeigen Sie **Gebäude und Sehenswürdigkeiten** auf der Karte an, indem Sie die Eigenschaft [**LandmarksVisible**](https://msdn.microsoft.com/library/windows/apps/dn637023) aktivieren oder deaktivieren.
 -   Zeigen Sie **Features für Fußgänger** auf der Karte an, wie öffentliche Treppen, indem Sie die Eigenschaft [**PedestrianFeaturesVisible**](https://msdn.microsoft.com/library/windows/apps/dn637042) aktivieren oder deaktivieren.
@@ -182,7 +249,7 @@ Bei einer Streetside-Ansicht handelt es sich um die Straßenansicht eines Stando
 
 ![Beispiel für eine Streetside-Ansicht des Kartensteuerelements](images/onlystreetside-730width.png)
 
-Betrachten Sie die Vorgänge „innerhalb“ der Streetside-Ansicht getrennt von der ursprünglich im Kartensteuerelement angezeigten Karte. Wenn z. B. der Standort in der Streetside-Ansicht geändert wird, führt dies nicht zu einer Änderung der Position oder der Darstellung der Karte "unter" der Streetside-Ansicht. Nach dem Schließen der Streetside-Ansicht (durch Klicken auf **X** oben rechts im Steuerelement) bleibt die ursprüngliche Karte unverändert.
+Betrachten Sie die Vorgänge „innerhalb“ der Streetside-Ansicht getrennt von der ursprünglich im Kartensteuerelement angezeigten Karte. Wenn z.B. der Standort in der Streetside-Ansicht geändert wird, führt dies nicht zu einer Änderung der Position oder der Darstellung der Karte "unter" der Streetside-Ansicht. Nach dem Schließen der Streetside-Ansicht (durch Klicken auf **X** oben rechts im Steuerelement) bleibt die ursprüngliche Karte unverändert.
 
 So zeigen Sie eine Streetside-Ansicht an
 
@@ -246,7 +313,7 @@ So zeigen Sie eine 3D-Ansicht an
 
 1.  Überprüfen Sie mittels [**Is3DSupported**](https://msdn.microsoft.com/library/windows/apps/dn974265), ob 3D-Ansichten auf dem Gerät unterstützt werden.
 2.  Wenn 3D-Ansichten unterstützt werden, legen Sie die [**Style**](https://msdn.microsoft.com/library/windows/apps/dn637051)-Eigenschaft des Kartensteuerelements auf [**MapStyle.Aerial3DWithRoads**](https://msdn.microsoft.com/library/windows/apps/dn637127) fest.
-3.  Erstellen Sie ein [**MapScene**](https://msdn.microsoft.com/library/windows/apps/dn974329)-Objekt mithilfe einer der zahlreichen **CreateFrom**-Methoden, z. B. [**CreateFromLocationAndRadius**](https://msdn.microsoft.com/library/windows/apps/dn974336) und [**CreateFromCamera**](https://msdn.microsoft.com/library/windows/apps/dn974334).
+3.  Erstellen Sie ein [**MapScene**](https://msdn.microsoft.com/library/windows/apps/dn974329)-Objekt mithilfe einer der zahlreichen **CreateFrom**-Methoden, z.B. [**CreateFromLocationAndRadius**](https://msdn.microsoft.com/library/windows/apps/dn974336) und [**CreateFromCamera**](https://msdn.microsoft.com/library/windows/apps/dn974334).
 4.  Rufen Sie [**TrySetSceneAsync**](https://msdn.microsoft.com/library/windows/apps/dn974296) auf, um die 3D-Ansicht anzuzeigen. Darüber hinaus können Sie eine optionale Animation angeben, die beim Ändern der Ansicht angezeigt werden soll, indem Sie eine Konstante aus der Enumeration [**MapAnimationKind**](https://msdn.microsoft.com/library/windows/apps/dn637002) angeben.
 
 In diesem Beispiel wird das Anzeigen einer 3D-Ansicht gezeigt.
@@ -260,7 +327,7 @@ private async void display3DLocation()
       MapControl1.Style = MapStyle.Aerial3DWithRoads;
 
       // Specify the location.
-      BasicGeoposition hwGeoposition = new BasicGeoposition() { Latitude = 34.134, Longitude = -118.3216};
+      BasicGeoposition hwGeoposition = new BasicGeoposition() { Latitude = 43.773251, Longitude = 11.255474};
       Geopoint hwPoint = new Geopoint(hwGeoposition);
 
       // Create the map scene.
@@ -313,6 +380,14 @@ Sie behandeln Änderungen, die durch Ändern der Karteneinstellungen durch den B
 -   [**PitchChanged**](https://msdn.microsoft.com/library/windows/apps/dn637045)
 -   [**ZoomLevelChanged**](https://msdn.microsoft.com/library/windows/apps/dn637069)
 
+## <a name="best-practice-recommendations"></a>Bewährte Methoden und Empfehlungen
+
+-   Verwenden Sie für die Anzeige der Karte ausreichend Platz auf dem Bildschirm (oder den gesamten Bildschirm), sodass Benutzer beim Anzeigen geografischer Informationen keine übermäßigen Verschiebungen oder Zoomvorgänge ausführen müssen.
+
+-   Wenn die Karte nur zum Anzeigen einer statischen, informativen Ansicht dient, ist möglicherweise eine kleinere Karte ausreichend. Wenn Sie eine kleinere, statische Karte verwenden, orientieren Sie sich für die Größe an der Benutzerfreundlichkeit. Die Karte sollte klein genug sein, um genügend Platz auf dem Bildschirm zu lassen, aber groß genug, um lesbar zu bleiben.
+
+-   Betten Sie die interessanten Orte mithilfe von [**map elements**](https://msdn.microsoft.com/library/windows/apps/dn637034) in die Kartenszene ein. Zusätzliche Informationen können als vorübergehende, die Kartenszene überlagernde Benutzeroberfläche angezeigt werden.
+
 ## <a name="related-topics"></a>Verwandte Themen
 
 * [Bing Maps Developer Center](https://www.bingmapsportal.com/)
@@ -323,4 +398,3 @@ Sie behandeln Änderungen, die durch Ändern der Karteneinstellungen durch den B
 * [Build 2015-Video: Nutzen von Karten und Ortung über Telefon, Tablet und PC in Ihren Windows-Apps](https://channel9.msdn.com/Events/Build/2015/2-757)
 * [Beispiel für eine UWP-App mit Verkehrsinformationen](http://go.microsoft.com/fwlink/p/?LinkId=619982)
 * [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)
-

@@ -1,21 +1,26 @@
 ---
 author: Jwmsft
+redirect_url: https://msdn.microsoft.com/windows/uwp/controls-and-patterns/navigationview
 Description: Stellt die Navigation auf oberster Ebene bereit und spart gleichzeitig Platz auf dem Bildschirm.
 title: "Richtlinien für Navigationsbereiche"
 ms.assetid: 8FB52F5E-8E72-4604-9222-0B0EC6A97541
 label: Nav pane
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: 2d48a92d5af75f8543f7b69ac59865e51bd334ee
-ms.sourcegitcommit: d1d53f5100edffe3f3ee57b853dc8cd1568fe7a2
-translationtype: HT
+ms.openlocfilehash: d5c838675eb8cb568f0dabd1c6b776a8a53d3bf4
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="nav-panes"></a>Navigationsbereiche
+
+Dieser Artikel wurde hierher verschoben: [Navigationsansicht](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/navigationview).
 
 Ein Navigationsbereich ist ein Muster, das trotz Einsparung des Bildschirmbereichs viele Navigationselemente auf oberster Ebene ermöglicht. Der Navigationsbereich wird häufig für mobile Apps verwendet, eignet sich aber auch gut für größere Bildschirme. Wenn der Bereich als eine Überlagerung verwendet wird, bleibt er reduziert und damit im Hintergrund, bis der Benutzer die Schaltfläche drückt; dies eignet sich gut für kleinere Bildschirme. Wenn der Bereich im angedockten Modus verwendet wird, bleibt er geöffnet. Dadurch kann er bei ausreichend vorhandenem Platz auf dem Bildschirm besser genutzt werden.
 
@@ -24,7 +29,7 @@ Ein Navigationsbereich ist ein Muster, das trotz Einsparung des Bildschirmbereic
 
 **Wichtige APIs**
 
-* [**SplitView-Klasse**](https://msdn.microsoft.com/library/windows/apps/dn864360)
+* [SplitView-Klasse](https://msdn.microsoft.com/library/windows/apps/dn864360)
 
 ## <a name="is-this-the-right-pattern"></a>Ist dies das richtige Muster?
 
@@ -114,6 +119,3 @@ Um die [10-Fuß-Erfahrung](http://go.microsoft.com/fwlink/?LinkId=760736) Ihrer 
 * [Steuerelement für geteilte Ansicht](split-view.md)
 * [Master/Details](master-details.md)
 * [Navigationsgrundlagen](https://msdn.microsoft.com/library/windows/apps/dn958438)
- 
-
- 

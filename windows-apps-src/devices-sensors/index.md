@@ -1,17 +1,19 @@
 ---
-author: DBirtolo
+author: mukin
 ms.assetid: 0b891f63-02fa-4c30-b307-9fbcccac5caa
 title: "Geräte, Sensoren und Leistung"
 description: "Damit Ihren Benutzern umfangreiche Einsatzmöglichkeiten geboten werden können, ist es möglicherweise erforderlich, externe Geräte oder Sensoren in die App zu integrieren."
-ms.author: dbirtolo
+ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 7915f626d5e86aed0c47f4d2f1efc61348385ba8
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: a15ed83ccb7571b772ce77669646e58894e71842
+ms.sourcegitcommit: a2908889b3566882c7494dc81fa9ece7d1d19580
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/31/2017
 ---
 # <a name="devices-sensors-and-power"></a>Geräte, Sensoren und Leistung
 
@@ -27,7 +29,7 @@ Damit Ihren Benutzern umfangreiche Einsatzmöglichkeiten geboten werden können,
 |-------|-------------|
 | [Aktivieren von Gerätefunktionen](enable-device-capabilities.md) | In diesem Lernprogramm wird beschrieben, wie Gerätefunktionen in Microsoft Visual Studio deklariert werden. Diese Funktionen ermöglichen Ihrer App die Verwendung von Kameras, Mikrofonen, Positionssensoren und anderen Geräten. | 
 | [Aktivieren des Benutzermoduszugriffs für Windows IoT](enable-usermode-access.md) | In diesem Lernprogramm wird der Benutzermoduszugriff auf GPIO, I2C, SPI und UART auf Windows10 IoT Core beschrieben. |
-| [Auflisten von Geräten](enumerate-devices.md) | Der Namespace enumeration ermöglicht die Suche nach Geräten, die intern mit dem System verbunden, extern verbunden oder über Drahtlos- oder Netzwerkprotokolle erkannt werden können. |
+| [Auflisten von Geräten](enumerate-devices.md) | Der Enumeration-Namespace ermöglicht die Suche nach Geräten, die intern mit dem System verbunden, extern verbunden oder über Drahtlos- oder Netzwerkprotokolle erkannt werden können. |
 | [Koppeln von Geräten](pair-devices.md) | Einige Geräte müssen gekoppelt werden, bevor sie verwendet werden können. Der [<strong>Windows.Devices.Enumeration</strong>](https://msdn.microsoft.com/library/windows/apps/BR225459)-Namespace unterstützt drei verschiedene Verfahren zum Koppeln von Geräten: |
 | [Out-of-Band-Kopplung](out-of-band-pairing.md) | In diesem Abschnitt wird beschrieben, wie Sie mit der Out-of-Band-Kopplung eine Verbindung zwischen Apps und bestimmten Geräten herstellen können, ohne eine Erkennung zu erfordern. | 
 | [Sensoren](sensors.md) | Mithilfe von Sensoren können Apps die Beziehung zwischen einem Gerät und der physischen Umgebung ermitteln. Sensoren können für die App die Richtung, Ausrichtung und Bewegung des Geräts erfassen. |

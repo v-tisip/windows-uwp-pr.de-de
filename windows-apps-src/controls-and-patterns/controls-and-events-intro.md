@@ -6,14 +6,16 @@ ms.assetid: 64740BF2-CAA1-419E-85D1-42EE7E15F1A5
 label: Intro to controls and patterns
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: 14186f0623f16426a98b5184020736bd4321857d
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 566f43b83f410ccd690abca95b9de2323fd2631d
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="intro-to-controls-and-patterns"></a>Einführung in Steuerelemente und Muster
 
@@ -21,7 +23,9 @@ translationtype: HT
 
 In der UWP-App-Entwicklung ist ein *Steuerelement* ein UI-Element, das Inhalte anzeigt oder Interaktionen ermöglicht. Sie erstellen die Benutzeroberfläche für Ihre App mit Steuerelementen wie Schaltflächen, Textfeldern und Kombinationsfeldern, um Daten anzuzeigen und Benutzereingaben zu erhalten.
 
-Ein *Muster* ist eine Anleitung zum Ändern eines Steuerelements oder zum Kombinieren verschiedener Steuerelemente, um etwas Neues zu erstellen. Das [Navigationsbereichsmuster](nav-pane.md) ist z.B. eine Möglichkeit, mit der Sie ein [SplitView](split-view.md)-Steuerelement zur App-Navigation verwenden können. Ebenso können Sie die Vorlage eines [Pivot](tabs-pivot.md)-Steuerelements zum Implementieren des Registerkartenmusters anpassen.
+> **Wichtige APIs:** [Namespace „Windows.UI.Xaml.Controls“](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.aspx)
+
+Ein *Muster* ist eine Anleitung zum Ändern eines Steuerelements oder zum Kombinieren verschiedener Steuerelemente, um etwas Neues zu erstellen. Das [Navigationsbereichsmuster](navigationview.md) ist z.B. eine Möglichkeit, mit der Sie ein [SplitView](split-view.md)-Steuerelement zur App-Navigation verwenden können. Ebenso können Sie die Vorlage eines [Pivot](tabs-pivot.md)-Steuerelements zum Implementieren des Registerkartenmusters anpassen.
 
 In vielen Fällen können Sie ein Steuerelement unverändert verwenden. XAML-Steuerelemente trennen jedoch die Funktion von der Struktur und Darstellung, sodass Sie diese über verschiedene Änderungsebenen an Ihre Bedürfnisse anpassen können. Im Abschnitt [Stil](../style/index.md) erfahren Sie, wie Sie mithilfe von [XAML-Formatvorlagen](xaml-styles.md) und [Steuerelementvorlagen](control-templates.md) Steuerelemente ändern.
 

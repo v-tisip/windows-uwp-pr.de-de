@@ -4,23 +4,27 @@ Description: Informationen zu steuerlichen Aspekten bei der Preisfestlegung, zu 
 title: Steuerinformationen zu kostenpflichtigen Apps
 ms.assetid: 97F77EBA-EBA1-4308-8F64-F40988BCBB2C
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 9c660e480402c584fad2b0f6444d7051d1cd234b
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 99b370c5bfc6d06e9ab05f56d2d0698b4669842a
+ms.sourcegitcommit: 23cda44f10059bcaef38ae73fd1d7c8b8330c95e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/19/2017
 ---
 # <a name="tax-details-for-paid-apps"></a>Steuerinformationen zu kostenpflichtigen Apps
 
 
 Informationen zu steuerlichen Aspekten bei der Preisfestlegung, zu Auswirkungen auf Auszahlungen sowie zu Steuerpflichten finden Sie in der folgenden Tabelle unter dem Land bzw. der Region der Verteilung.
 
-> **Hinweis**  Die Regulierung zur Markterweiterung (Commerce Expansion Adjustment) hat in einigen wenigen Ländern/Regionen möglicherweise Auswirkungen auf die Auszahlung. Weitere Informationen über die Regulierung zur Markterweiterung (Commerce Expansion Adjustment) und die entsprechenden Märkte finden Sie in der [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058) und in der Liste der [betreffenden Länder/Regionen](define-pricing-and-market-selection.md#price-considerations-for-specific-markets).
+> [!NOTE]
+> Die Regulierung zur Markterweiterung (Commerce Expansion Adjustment) hat in einigen wenigen Ländern/Regionen möglicherweise Auswirkungen auf die Auszahlung. Weitere Informationen über die Regulierung zur Markterweiterung (Commerce Expansion Adjustment) und die entsprechenden Märkte finden Sie in der [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058) und in der Liste der [betreffenden Länder/Regionen](define-pricing-and-market-selection.md#price-considerations-for-specific-markets).
 
-> **Hinweis**  Steuersätze können sich jederzeit ändern. Microsoft kann nicht garantieren, dass die Steuersätze in den folgenden Tabellen immer exakt stimmen.
+> [!IMPORTANT]
+> Steuersätze können jederzeit geändert werden. Microsoft kann nicht garantieren, dass die Steuersätze in den folgenden Tabellen immer exakt stimmen.
 
  
 
@@ -32,9 +36,9 @@ Informationen zu steuerlichen Aspekten bei der Preisfestlegung, zu Auswirkungen 
 | Andorra                          | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Angola                           | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Antigua und Barbuda              | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
-| Argentinien                        | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. [Informieren Sie sich ausführlicher über die steuerlichen Aspekte für dieses Land/diese Region.](#mixed-remittance-countriesregions) | 70% des festgelegten Preises  | Entwickler          |
+| Argentinien                        | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.  | 70% des festgelegten Preises  | Entwickler          |
 | Armenien                          | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
-| Australien                        | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
+| Australien                        | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises abzgl. 10% Steuer                 | Microsoft          |
 | Österreich                          | Der festgelegte Preis ist der endgültige Verkaufspreis und beinhaltet alle jeweils gültigen Steuern. Steuern werden vor der Auszahlung vom Preis abgezogen.       | 70% des festgelegten Preises abzgl. 20% Steuer     | Microsoft          |
 | Aserbeidschan                       | Der festgelegte Preis ist der endgültige Verkaufspreis und beinhaltet alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Bahamas                      | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
@@ -49,7 +53,7 @@ Informationen zu steuerlichen Aspekten bei der Preisfestlegung, zu Auswirkungen 
 | Bolivien                          | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Bosnien und Herzegowina           | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Botsuana                         | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
-| Brasilien                           | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. [Informieren Sie sich ausführlicher über die steuerlichen Aspekte für dieses Land/diese Region.](#mixed-remittance-countriesregions) | 70% des festgelegten Preises                 | Entwickler          |
+| Brasilien                           | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.  | 70% des festgelegten Preises                 | Entwickler          |
 | Brunei                           | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Bulgarien                         | Der festgelegte Preis ist der endgültige Verkaufspreis und beinhaltet alle jeweils gültigen Steuern. Steuern werden vor der Auszahlung vom Preis abgezogen.       | 70% des festgelegten Preises abzgl. 20% Steuer   | Microsoft          |
 | Burkina Faso                     | Der festgelegte Preis ist der endgültige Verkaufspreis und beinhaltet alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
@@ -60,13 +64,13 @@ Informationen zu steuerlichen Aspekten bei der Preisfestlegung, zu Auswirkungen 
 | Kanada                           | Steuern werden auf den festgelegten Preis aufgeschlagen.                                                                                                      | 70% des festgelegten Preises                 | Microsoft          |
 | Zentralafrikanische Republik         | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Tschad                             | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
-| Chile                            | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. [Informieren Sie sich ausführlicher über die steuerlichen Aspekte für dieses Land/diese Region.](#mixed-remittance-countriesregions) | 70% des festgelegten Preises                 | Entwickler          |
-| China                            | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. [Informieren Sie sich ausführlicher über die steuerlichen Aspekte für dieses Land/diese Region.](#mixed-remittance-countriesregions) | 70% des festgelegten Preises                 | Entwickler          |
-| Kolumbien                         | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. [Informieren Sie sich ausführlicher über die steuerlichen Aspekte für dieses Land/diese Region.](#mixed-remittance-countriesregions) | 70% des festgelegten Preises                 | Entwickler          |
+| Chile                            | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.  | 70% des festgelegten Preises                 | Entwickler          |
+| China                            | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.  | 70% des festgelegten Preises                 | Entwickler          |
+| Kolumbien                         | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.  | 70% des festgelegten Preises                 | Entwickler          |
 | Komoren                          | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Kongo                            | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Kongo (DRK)                      | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
-| Costa Rica                       | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. [Informieren Sie sich ausführlicher über die steuerlichen Aspekte für dieses Land/diese Region.](#mixed-remittance-countriesregions) | 70% des festgelegten Preises                 | Entwickler          |
+| Costa Rica                       | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.  | 70% des festgelegten Preises                 | Entwickler          |
 | Côte d’Ivoire                    | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Kroatien                          | Der festgelegte Preis ist der endgültige Verkaufspreis und beinhaltet alle jeweils gültigen Steuern. Steuern werden vor der Auszahlung vom Preis abgezogen.       | 70% des festgelegten Preises abzgl. 25% Steuer   | Microsoft          |
 | Zypern                           | Der festgelegte Preis ist der endgültige Verkaufspreis und beinhaltet alle jeweils gültigen Steuern. Steuern werden vor der Auszahlung vom Preis abgezogen.       | 70% des festgelegten Preises abzgl. 19% Steuer   | Microsoft          |
@@ -75,8 +79,8 @@ Informationen zu steuerlichen Aspekten bei der Preisfestlegung, zu Auswirkungen 
 | Dschibuti                         | Der festgelegte Preis ist der endgültige Verkaufspreis und beinhaltet alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Dominica                         | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Dominikanische Republik               | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
-| Ecuador                          | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. [Informieren Sie sich ausführlicher über die steuerlichen Aspekte für dieses Land/diese Region.](#mixed-remittance-countriesregions) | 70% des festgelegten Preises                 | Entwickler          |
-| Ägypten                            | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. [Informieren Sie sich ausführlicher über die steuerlichen Aspekte für dieses Land/diese Region.](#mixed-remittance-countriesregions) | 70% des festgelegten Preises                 | Entwickler          |
+| Ecuador                          | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.  | 70% des festgelegten Preises                 | Entwickler          |
+| Ägypten                            | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.  | 70% des festgelegten Preises                 | Entwickler          |
 | El Salvador                      | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Eritrea                          | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Estland                          | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. Steuern werden vor der Auszahlung vom Preis abgezogen.              | 70% des festgelegten Preises abzgl. 20% Steuer | Microsoft          |
@@ -94,7 +98,7 @@ Informationen zu steuerlichen Aspekten bei der Preisfestlegung, zu Auswirkungen 
 | Griechenland                           | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. Steuern werden vor der Auszahlung vom Preis abgezogen.              | 70% des festgelegten Preises abzgl. 24% Steuer | Microsoft          |
 | Grönland                        | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Grenada                          | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
-| Guatemala                        | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. [Informieren Sie sich ausführlicher über die steuerlichen Aspekte für dieses Land/diese Region.](#mixed-remittance-countriesregions) | 70% des festgelegten Preises                 | Entwickler          |
+| Guatemala                        | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.  | 70% des festgelegten Preises                 | Entwickler          |
 | Guinea                           | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Guinea-Bissau                    | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Guyana                           | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
@@ -103,17 +107,17 @@ Informationen zu steuerlichen Aspekten bei der Preisfestlegung, zu Auswirkungen 
 | Hongkong SAR                    | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Ungarn                          | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. Steuern werden vor der Auszahlung vom Preis abgezogen.              | 70% des festgelegten Preises abzgl. 27% Steuer | Microsoft          |
 | Island                          | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
-| Indien                            | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. [Informieren Sie sich ausführlicher über die steuerlichen Aspekte für dieses Land/diese Region.](#tax-reporting-for-india-developers)    | 70% des festgelegten Preises                 | Entwickler          |
-| Indonesien                        | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. [Informieren Sie sich ausführlicher über die steuerlichen Aspekte für dieses Land/diese Region.](#mixed-remittance-countriesregions) | 70% des festgelegten Preises                 | Entwickler          |
+| Indien                            | Steuern werden auf den festgelegten Preis aufgeschlagen.                                                                                                      | 70% des festgelegten Preises                 | Microsoft          |
+| Indonesien                        | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.  | 70% des festgelegten Preises                 | Entwickler          |
 | Irak                             | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Irland                          | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. Steuern werden vor der Auszahlung vom Preis abgezogen.              | 70% des festgelegten Preises abzgl. 23% Steuer | Microsoft          |
 | Israel                           | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Italien                            | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. Steuern werden vor der Auszahlung vom Preis abgezogen.              | 70% des festgelegten Preises abzgl. 22% Steuer | Microsoft          |
 | Jamaika                          | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Japan                            | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
-| Jordanien                           | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. [Informieren Sie sich ausführlicher über die steuerlichen Aspekte für dieses Land/diese Region.](#mixed-remittance-countriesregions) | 70% des festgelegten Preises                 | Entwickler          |
+| Jordanien                           | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.  | 70% des festgelegten Preises                 | Entwickler          |
 | Kasachstan                       | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
-| Kenia                            | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. [Informieren Sie sich ausführlicher über die steuerlichen Aspekte für dieses Land/diese Region.](#mixed-remittance-countriesregions) | 70% des festgelegten Preises                 | Entwickler          |
+| Kenia                            | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.  | 70% des festgelegten Preises                 | Entwickler          |
 | Kiribati                         | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Korea                            | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. Steuern werden vor der Auszahlung vom Preis abgezogen.              | 70% des festgelegten Preises abzgl. 10% Steuer | Microsoft          |
 | Kuwait                           | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
@@ -138,7 +142,7 @@ Informationen zu steuerlichen Aspekten bei der Preisfestlegung, zu Auswirkungen 
 | Marshallinseln                 | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Mauretanien                       | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Mauritius                        | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
-| Mexiko                           | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. [Informieren Sie sich ausführlicher über die steuerlichen Aspekte für dieses Land/diese Region.](#mixed-remittance-countriesregions) | 70% des festgelegten Preises                 | Entwickler          |
+| Mexiko                           | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.  | 70% des festgelegten Preises                 | Entwickler          |
 | Mikronesien                       | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Monaco                           | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. Steuern werden vor der Auszahlung vom Preis abgezogen.              | 70% des festgelegten Preises abzgl. 20% Steuer | Microsoft          |
 | Mongolei                         | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
@@ -161,11 +165,10 @@ Informationen zu steuerlichen Aspekten bei der Preisfestlegung, zu Auswirkungen 
 | Panama                           | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Papua-Neuguinea                 | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Paraguay                         | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
-| Peru                             | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. [Informieren Sie sich ausführlicher über die steuerlichen Aspekte für dieses Land/diese Region.](#mixed-remittance-countriesregions)                                                                  | 70% des festgelegten Preises            | Entwickler          |
-| Philippinen                      | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. [Informieren Sie sich ausführlicher über die steuerlichen Aspekte für dieses Land/diese Region.](#mixed-remittance-countriesregions)                                                                  | 70% des festgelegten Preises                 | Entwickler          |
+| Peru                             | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises            | Entwickler          |
+| Philippinen                      | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Polen                           | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. Steuern werden vor der Auszahlung vom Preis abgezogen.              | 70% des festgelegten Preises abzgl. 23% Steuer | Microsoft          |
 | Portugal                         | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. Steuern werden vor der Auszahlung vom Preis abgezogen.              | 70% des festgelegten Preises abzgl. 23% Steuer | Microsoft          |
-| Puerto Rico                      | Steuern werden auf den festgelegten Preis aufgeschlagen. [Informieren Sie sich ausführlicher über die steuerlichen Aspekte für dieses Land/diese Region.](#mixed-remittance-countriesregions)                                                                                                     | 70% des festgelegten Preises                 | Microsoft          |
 | Katar                            | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Rumänien                          | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. Steuern werden vor der Auszahlung vom Preis abgezogen.              | 70% des festgelegten Preises abzgl. 19% Steuer | Microsoft          |
 | Russland                           | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. Steuern werden vor der Auszahlung vom Preis abgezogen.              | 70% des festgelegten Preises abzgl. 18% Steuer | Microsoft          |
@@ -178,7 +181,7 @@ Informationen zu steuerlichen Aspekten bei der Preisfestlegung, zu Auswirkungen 
 | São Tomé und Príncipe            | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Saudi-Arabien                     | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Senegal                          | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
-| Serbien                           | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
+| Serbien                           | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. Steuern werden vor der Auszahlung vom Preis abgezogen.              | 70% des festgelegten Preises abzgl. 20% Steuer | Microsoft          |
 | Seychellen                       | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Sierra Leone                     | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Singapur                        | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
@@ -209,7 +212,7 @@ Informationen zu steuerlichen Aspekten bei der Preisfestlegung, zu Auswirkungen 
 | Ukraine                          | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Vereinigte Arabische Emirate             | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Vereinigtes Königreich                   | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. Steuern werden vor der Auszahlung vom Preis abgezogen.              | 70% des festgelegten Preises abzgl. 20% Steuer | Microsoft          |
-| USA                    | Steuern werden auf den festgelegten Preis aufgeschlagen.                                                                                                      | 70% des festgelegten Preises                 | Microsoft          |
+| Vereinigte Staaten (einschließlich Puerto Rico)  | Steuern werden auf den festgelegten Preis aufgeschlagen.                                                                                                      | 70% des festgelegten Preises                 | Microsoft          |
 | Uruguay                          | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Usbekistan                       | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Vanuatu                          | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
@@ -228,22 +231,6 @@ Bestimmte Abrechnungspartner von Microsoft können den Einzug und die Überweisu
 
 | Länder/Regionen mit gemischter Überweisung |
 |------------------------------------|
-| Argentinien                          |
-| Brasilien                             |
-| Chile                              |
-| China                              |
-| Kolumbien                           |
-| Costa Rica                         |
-| Ecuador                            |
-| Ägypten                              |
-| Guatemala                          |
-| Indien                              |
-| Indonesien                          |
-| Jordanien                             |
-| Kenia                              |
-| Mexiko                             |
-| Peru                               |
-| Philippinen                        |
 | Südafrika                       |
 | Vietnam                            |
 
@@ -261,22 +248,7 @@ In bestimmten Ländern/Regionen fungiert Microsoft bei der Bereitstellung Ihrer 
 
  
 
-## <a name="tax-reporting-for-india-developers"></a>Steuererklärung für Entwickler in Indien
 
-
-Erstellen Sie einen Transaktionsbericht, um Informationen zum Überweisen von Steuern für Ihre Store-Transaktionen in Indien zu erhalten. Sie sind für die Prüfung der Meldungen sowie für die Ermittlung und die Einhaltung Ihrer vorhandenen Pflichten hinsichtlich Registrierung, Einzug und Überweisung von Steuern in Verbindung mit Transaktionen, die Ihre Apps oder In-App-Produkte betreffen, verantwortlich.
- 
-**So erstellen Sie einen Bericht**
-
-1.  Wechseln Sie zu [https://commerce.microsoft.com/PaymentHub/TaxReport](http://go.microsoft.com/fwlink/p/?LinkID=264239).
-2.  Melden Sie sich mit dem Microsoft-Konto an, das Sie für den Zugriff auf Ihr Dev Center-Entwicklerkonto verwenden.
-3.  Wählen Sie die entsprechende Datumsangaben aus.
-4.  Wählen Sie unter **An Land/Region verkauft** den Eintrag **Indien** aus.
-5.  Klicken Sie auf **Suchen**.
-
-Die einzelnen Zeilen des Berichts enthalten das Datum und die Uhrzeit der Transaktion und ggf. den indischen Staat, in dem die Transaktion durchgeführt wurde.
-
- 
 
  
 

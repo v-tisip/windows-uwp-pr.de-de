@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: 8238076131d932900e8edfb53ab963de8c98402c
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 8b55968a93f09dae396353e73d72566feb188a89
+ms.sourcegitcommit: 77bbd060f9253f2b03f0b9d74954c187bceb4a30
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/11/2017
 ---
 # <a name="background-transfers"></a>Hintergrundübertragungen
 
@@ -36,6 +38,10 @@ Wenn Sie kleine Ressourcen herunterladen, deren Download in der Regel schnell ab
 ### <a name="how-does-the-background-transfer-feature-work"></a>Wie funktioniert das Feature für die Hintergrundübertragung?
 
 Wenn eine App die Hintergrundübertragung verwendet, um eine Übertragung zu initiieren, wird die Anforderung mithilfe des Klassenobjekts [**BackgroundDownloader**](https://msdn.microsoft.com/library/windows/apps/br207126) oder [**BackgroundUploader**](https://msdn.microsoft.com/library/windows/apps/br207140) konfiguriert und initialisiert. Alle Übertragungsvorgänge werden vom System einzeln und getrennt von der aufrufenden App behandelt. Statusinformationen sind verfügbar, falls Sie den Benutzer in der Benutzeroberfläche Ihrer App über den Status informieren möchten. Zudem kann Ihre App während der Übertragung angehalten, fortgesetzt und abgebrochen werden oder sogar die Daten lesen. Die Behandlung von Übertragungen durch das System unterstützt den intelligenten Stromverbrauch und verhindert Probleme, die entstehen können, wenn bei einer verbundenen App Ereignisse wie das Anhalten der App, das Beenden der App oder plötzliche Änderungen des Netzwerkstatus auftreten.
+
+Darüber hinaus verwendet die Hintergrundübertragung System Event Broker-Ereignisse. Daher ist die Anzahl der Downloads durch die Anzahl der Ereignisse, die auf dem System verfügbare sind, begrenzt. Standardmäßig ist dies 500 Ereignisse, aber diese Ereignisse gelten für alle Prozesse. Daher sollte eine einzelne Anwendung nicht mehr als 100 Hintergrundübertragungen zu einem Zeitpunkt erstellen.
+
+Wenn eine Anwendung eine Hintergrundübertragung startet, muss die Anwendung [**AttachAsync**](https://docs.microsoft.com/en-us/uwp/api/Windows.Networking.BackgroundTransfer.DownloadOperation#methods_) für alle vorhandenen [**DownloadOperation**](https://docs.microsoft.com/en-us/uwp/api/Windows.Networking.BackgroundTransfer.DownloadOperation) Objekte aufrufen. Dies nicht zu tun kann zu einem Verlust der Ereignisse, und somit zur Nutzlosigkeit der Hintergrundübertragungsfunktion führen.
 
 ### <a name="performing-authenticated-file-requests-with-background-transfer"></a>Durchführen authentifizierter Dateianforderungen mit Hintergrundübertragung
 
@@ -182,6 +188,8 @@ Bei der Hintergrundübertragung erfolgt jeder Download als [**DownloadOperation*
 
 Wenn Sie kleine Ressourcen herunterladen, deren Download in der Regel schnell abgeschlossen ist, sollten Sie anstelle der Hintergrundübertragung [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639)-APIs verwenden.
 
+Aufgrund von Ressourcenbeschränkungen pro App sollte eine App nicht mehr als 200 Übertragungen (DownloadOperations + UploadOperations) zu einem bestimmten Zeitpunkt verfügen. Dieses Limit zu überschreiten kann die App-Übertragungswarteschlange in einen nicht wiederherstellbaren Zustand lassen.
+
 In den folgenden Beispielen werden die Erstellung und Initialisierung eines einfachen Downloads sowie das Aufzählen und Fortsetzen von in einer vorherigen App-Sitzung gespeicherten Vorgängen erläutert.
 
 ### <a name="configure-and-start-a-background-transfer-file-download"></a>Konfigurieren und Starten eines Dateidownloads mit Hintergrundübertragung
@@ -228,7 +236,7 @@ Für die Nachbearbeitung wird als neue Klasse [**BackgroundTransferCompletionGro
 
 Initiieren Sie wie folgt eine Hintergrundübertragung mit Nachbearbeitung.
 
-1.  Erstellen Sie ein [**BackgroundTransferCompletionGroup**](https://msdn.microsoft.com/library/windows/apps/dn804209)-Objekt. Erstellen Sie dann ein [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)-Objekt. Legen Sie die **Trigger**-Eigenschaft des Generator-Objekts auf das Abschlussgruppenobjekt und die **TaskEngtyPoint**-Eigenschaft des Generators auf den Einstiegspunkt der Hintergrundaufgabe fest, die nach Abschluss der Übertragung ausgeführt werden soll. Rufen Sie schließlich die [**BackgroundTaskBuilder.Register**](https://msdn.microsoft.com/library/windows/apps/br224772)-Methode auf, um die Hintergrundaufgabe zu registrieren. Beachten Sie, dass viele Abschlussgruppen einen Einstiegspunkt für die Hintergrundaufgabe gemeinsam verwenden können, Sie jedoch nur über eine Abschlussgruppe pro Registrierung einer Hintergrundaufgabe verfügen dürfen.
+1.  Erstellen Sie ein [**BackgroundTransferCompletionGroup**](https://msdn.microsoft.com/library/windows/apps/dn804209)-Objekt. Erstellen Sie dann ein [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)-Objekt. Legen Sie die **Trigger**-Eigenschaft des Generator-Objekts auf das Abschlussgruppenobjekt und die **TaskEntryPoint**-Eigenschaft des Generators auf den Einstiegspunkt der Hintergrundaufgabe fest, die nach Abschluss der Übertragung ausgeführt werden soll. Rufen Sie schließlich die [**BackgroundTaskBuilder.Register**](https://msdn.microsoft.com/library/windows/apps/br224772)-Methode auf, um die Hintergrundaufgabe zu registrieren. Beachten Sie, dass viele Abschlussgruppen einen Einstiegspunkt für die Hintergrundaufgabe gemeinsam verwenden können, Sie jedoch nur über eine Abschlussgruppe pro Registrierung einer Hintergrundaufgabe verfügen dürfen.
 
    ```csharp
     var completionGroup = new BackgroundTransferCompletionGroup();
@@ -306,7 +314,7 @@ Umgehen Sie dieses Problem, indem Sie alle Versionen der App vollständig deinst
 
 Eine Ausnahme wird ausgelöst, wenn eine ungültige Zeichenfolge für einen Uniform Resource Identifier (URI) an den Konstruktor für das [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998)-Objekt übergeben wird.
 
-**NET: **Der [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998)-Typ wird in C# und VB als [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) angezeigt.
+**.NET: **Der Typ [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) wird in C# und VB als [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) angezeigt.
 
 In C# und Visual Basic kann dieser Fehler vermieden werden, indem die [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx)-Klasse in .NET 4.5 und eine der [**System.Uri.TryCreate**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.trycreate.aspx)-Methoden zum Testen der vom App-Benutzer erhaltenen Zeichenfolge verwendet wird, bevor der URI erstellt wird.
 

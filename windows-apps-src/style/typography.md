@@ -5,14 +5,16 @@ title: Typografie
 ms.assetid: ca35f78a-e4da-423d-9f5b-75896e0b8f82
 template: detail.hbs
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: 92fd3ee66768fcf1c98d9760ecb44811c9b0f9b3
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 0609622053d0ae25b5039766137db1b195c0d69d
+ms.sourcegitcommit: 5ece992c31870df4c089360ef47501bd4ce14fa9
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/22/2017
 ---
 # <a name="typography"></a>Typografie
 
@@ -50,7 +52,7 @@ Im XAML-Code wird dies durch Stapeln zweier [TextBlock](https://msdn.microsoft.c
          puts the baseline of the body text exactly 24px
          below the baseline of the header. 24px is the
          recommended line height for a 20px font size,
-         which is what's set in SubtitleTextBlockStyle.
+         which is what’s set in SubtitleTextBlockStyle.
          The bottom margin will be different for
          different font size pairings. -->
     <TextBlock
@@ -150,7 +152,7 @@ Sobald die Höhe des Texts die Höhe des Symbols übersteigt, muss die erste Tex
 ![Mehrere Kombinationen aus Symbol und Text](images/hanging-text-alignment.png)
 
 >[!NOTE]
->Die XAML-Eigenschaft [TextBlock.TextLineBounds](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.textlinebounds.aspx) stellt den Zugriff auf die Höhe von Großbuchstaben und die Basisschriftartmetrik bereit. Sie kann verwendet werden, um visuell vertikal zu zentrieren oder oben ausgerichtet einzugeben.
+>Die XAML-Eigenschaft [TextBlock.TextLineBounds](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.textlinebounds.aspx) ermöglicht den Zugriff auf die Höhe von Großbuchstaben und die Metrik der Basisschriftart. Sie kann verwendet werden, um visuell vertikal zu zentrieren oder oben ausgerichtet einzugeben.
 
 ## <a name="clipping-and-ellipses"></a>Beschnitt und Ellipsen
 
@@ -172,9 +174,11 @@ Die Typhierarchie stellt eine wichtige gestalterische Beziehung zwischen Übersc
 >Die meisten Ebenen der Typhierarchie sind in XAML als [statische Ressourcen](https://msdn.microsoft.com/en-us/library/windows/apps/Mt187274.aspx#the_xaml_type_ramp) verfügbar, die der `*TextBlockStyle`-Benennungskonvention folgen (z.B.: `HeaderTextBlockStyle`).
 
 
+<!--
 <div class="microsoft-internal-note">
-SubtitleAlt, BaseAlt und CaptionAlt sind derzeit nicht enthalten. Sie können die Formatvorlagen in Ihrer eigenen App nach den Codeausschnitten im oben genannten Link erstellen. Beachten Sie zudem, dass XAML derzeit die Zeilenhöhe nicht exakt angleichen kann.
+SubtitleAlt, BaseAlt, and CaptionAlt are not currently included. You can create the styles in your own app following the code snippets in the above link. Also note that XAML does not currently match the line height exactly.
 </div>
+-->
 
 
 ## <a name="primary-and-secondary-text"></a>Primärer und sekundärer Text

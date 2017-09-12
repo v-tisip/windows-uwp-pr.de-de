@@ -3,21 +3,24 @@ title: Reagieren auf Kundenfeedback
 description: "Sie können direkt auf Feedback reagieren, das Ihre Kunden im Feedback-Hub hinterlassen."
 author: JnHs
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 06/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
 ms.assetid: 04983b80-2a18-4ace-93d3-e8c33c04bfb9
-ms.openlocfilehash: 8ce325c212b9f5aba11ab35f3cfcfeea9a44bcbe
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 6b562064cbdbc1a539a2a65a33a6e11027923b21
+ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/21/2017
 ---
 # <a name="respond-to-customer-feedback"></a>Reagieren auf Kundenfeedback
 
 Sie können den [Feedbackbericht](feedback-report.md) verwenden, um das Feedback zu prüfen, das Ihre Windows10-Kunden zu Ihrer App im Feedback-Hub hinterlassen haben, und dann direkt auf dieses Feedback antworten. Sie können Ihre Antworten im Feedback-Hub für alle Benutzer veröffentlichen (entweder als einzelne Kommentare oder durch Aktualisieren des Status eines Feedbacks und Hinzufügen einer Beschreibung), um die Kunden über neue Funktionen und Fehlerkorrekturen zu informieren oder um detaillierteres Feedback zur Verbesserung Ihrer App zu bitten. Sie können Ihre Antwort auch per E-Mail direkt an den Kunden senden, der das Feedback abgegeben hat.
 
-> **Tipp** Über die Feedback-API im [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) können Sie es Kunden ermöglichen, Feedback zu geben. Dabei wird ein Steuerelement hinzugefügt, über das Kunden direkt [den Feedback-Hub von Ihrer UWP-App starten können](../monetize/launch-feedback-hub-from-your-app.md). Bedenken Sie, dass jeder Kunde, der Ihre App auf einem Windows10-Gerät heruntergeladen hat, das den Feedback-Hub unterstützt, mithilfe der Feedback-Hub-App ein Feedback abgeben kann. Aus diesem Grund wird in diesem Bericht möglicherweise Feedback von Kunden angezeigt, auch wenn Sie in Ihrer App nicht explizit um Feedback gebeten haben.
+> [!TIP]
+> Über die Feedback-API im [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) können Sie es Kunden ermöglichen, Feedback zu geben. Dabei wird ein Steuerelement hinzugefügt, über das Kunden direkt [den Feedback-Hub von Ihrer UWP-App starten können](../monetize/launch-feedback-hub-from-your-app.md). Bedenken Sie, dass jeder Kunde, der Ihre App auf einem Windows10-Gerät heruntergeladen hat, das den Feedback-Hub unterstützt, mithilfe der Feedback-Hub-App ein Feedback abgeben kann. Aus diesem Grund wird in diesem Bericht möglicherweise Feedback von Kunden angezeigt, auch wenn Sie in Ihrer App nicht explizit um Feedback gebeten haben.
 
 Um zu einem Feedback eine Antwort zu geben, klicken Sie auf den Link **Feedback beantworten**, der neben dem Feedback in Ihrem **Feedbackbericht** angezeigt wird.
 
@@ -29,11 +32,13 @@ Standardmäßig ist das Optionsfeld für **Kommentar** ausgewählt, wenn Sie auf
 
 Der eingegebene Kommentar wird als Kommentar im Feedback-Hub angezeigt, zusammen mit den Kommentaren, die von anderen Kunden übermittelt wurden. Ihr Herausgebername und der Name der App werden mit dem Kommentar angezeigt, um Sie als den Entwickler der App zu identifizieren. Es gibt keine Beschränkung für die Anzahl der Kommentare, die Sie für ein Feedback schreiben können. Beachten Sie jedoch, dass Kommentare nicht mehr bearbeitet oder gelöscht werden können, nachdem sie übermittelt wurden. Die fünf neuesten Kommentare zu einem Feedback werden in Ihrem **Feedbackbericht** angezeigt (ebenso wie im Feedback-Hub). Wenn mehr als fünf Kommentare vorhanden sind, können Sie auf **Alle Kommentare anzeigen** klicken, um alle Kommentare im Feedback-Hub anzuzeigen.
 
+
 ## <a name="private-responses-via-email"></a>Private Antworten per E-Mail
 
 Wenn Sie es bevorzugen, keine öffentliche Antwort zu posten, aktivieren Sie das Kontrollkästchen **Kommentar als E-Mail senden**, um eine private Antwort direkt an den Kunden zu senden (sofern dieser eine E-Mail-Adresse angegeben und sich für den Empfang von Antworten per E-Mail entschieden hat). In diesem Fall sendet Microsoft in Ihrem Auftrag eine E-Mail an den Kunden. Die E-Mail enthält das ursprüngliche Feedback sowie Ihre Antwort darauf.
 
 Nachdem Sie das Kontrollkästchen **Kommentar als E-Mail senden** aktiviert haben, geben Sie den Kommentar ein, und klicken Sie dann auf **Senden**. Beachten Sie, dass Sie im Feld **E-Mail Support-Kontakt** eine E-Mail-Adresse angeben müssen, wenn Sie diese Option verwenden. Standardmäßig verwenden wir die E-Mail-Adresse, die Sie in den Kontaktinformationen für Ihr Konto bereitgestellt haben. Wenn Sie eine andere E-Mail-Adresse verwenden möchten, können Sie die **E-Mail Support-Kontakt** ändern. Der Kunde, der Ihre Antwort erhält, kann direkt an diese E-Mail-Adresse antworten.
+
 
 ## <a name="public-status-updates-and-descriptions-in-feedback-hub"></a>Öffentliche Statusaktualisierungen und Beschreibungen im Feedback-Hub
 
@@ -49,7 +54,9 @@ Neben dem Aktualisieren des Status können Sie auch einen Kommentar eingeben, um
 
 Mit der Option **Status aktualisieren** können Sie den Status jederzeit ändern (und aktualisierte Beschreibungen für jede Statusänderung hinzufügen). Wenn Sie den Status eines Feedbacks ändern, wird der Status auch im Feedback-Hub aktualisiert, damit den Kunden, die Ihre Antwort lesen, der aktuelle Status angezeigt wird.
 
+
 ## <a name="guidelines-for-responses"></a>Richtlinien für Antworten
+
 Unabhängig davon, welche Methode Sie verwenden, um auf das Feedback der Kunden zu reagieren, müssen Sie folgende Richtlinien für alle Antworten befolgen.
 - Antworten dürfen maximal 1.000Zeichen umfassen.
 - Sie dürfen Benutzern für ihre öffentlichen Kommentare keine Gegenleistungen, einschließlich digitaler Apps, anbieten.
@@ -58,6 +65,7 @@ Unabhängig davon, welche Methode Sie verwenden, um auf das Feedback der Kunden 
 - Ihre Antwort muss sich direkt auf die jeweilige App und das damit verbundene Feedback beziehen.
 - Ihre Antwort sollte keine profanen, aggressiven, persönlichen oder bösartigen Inhalte enthalten. Bleiben Sie stets höflich und denken Sie daran, dass zufriedene Kunden die wahrscheinlich beste Werbung für Ihre App sind.
 
-> **Hinweis:** Kunden können eine unangemessene Antwort, mit der ein Entwickler auf ein Feedback reagiert, an Microsoft melden. Sie können auch entscheiden, keine Antworten auf Feedback per E-Mail zu erhalten.
+> [!NOTE]
+> Kunden können eine unangemessene Antwort, mit der ein Entwickler auf ein Feedback reagiert, an Microsoft melden. Sie können auch entscheiden, keine Antworten auf Feedback per E-Mail zu erhalten.
 
 Sie alleine sind für die Kommunikation mit Ihren Kunden verantwortlich. Microsoft beteiligt sich nicht an Meinungsverschiedenheiten zwischen Entwicklern und Kunden. Wenn Sie jedoch der Meinung sind, dass der Inhalt eines Feedbacks für Ihr Produkt unangebracht ist, reichen Sie bitte ein [Supportticket](http://go.microsoft.com/fwlink/p/?LinkID=401178) ein.

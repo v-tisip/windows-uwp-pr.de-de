@@ -1,22 +1,21 @@
 ---
 author: TylerMSFT
-title: "Verbundene Apps und Geräte (Projekt „Rome”)"
+title: "Verbundene Apps und Geräte (Project Rome)"
 description: "In diesem Abschnitt wird beschrieben, wie Sie mithilfe der Remote Systems-Plattform Remotegeräte entdecken, eine App auf einem Remotegerät starten und mit einem App-Dienst auf einem Remotegerät kommunizieren."
 ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
+keywords: Windows10, UWP
 ms.assetid: 7f39d080-1fff-478c-8c51-526472c1326a
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 357cf459fffc46e5d77f316af881e1a6e8bd8867
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 29b7db48f2dbd699f9c4f674a8870fe8f8ca446d
+ms.sourcegitcommit: 73c61e8e409b071365a2f6ebd89bd8a769b2a7c1
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/25/2017
 ---
-
-# <a name="connected-apps-and-devices-project-rome"></a>Verbundene Apps und Geräte (Projekt „Rome”)
+# <a name="connected-apps-and-devices-project-rome"></a>Verbundene Apps und Geräte (Project Rome)
 
 In diesem Abschnitt wird beschrieben, wie Apps mithilfe von Project „Rome“ geräte- und plattformübergreifend verbunden werden. Erfahren Sie, wie Sie Remotegeräte entdecken, eine App auf einem Remotegerät starten und mit einem App-Dienst auf einem Remotegerät kommunizieren.
 
@@ -34,5 +33,4 @@ Unter [Beispiel für Remotesysteme](https://github.com/Microsoft/Windows-univers
 |-------|-------------|
 | [Entdecken von Remotegeräten](discover-remote-devices.md)  | Erfahren Sie, wie Sie Geräte entdecken, zu denen Sie eine Verbindung herstellen können. |
 | [Starten einer App auf einem Remotegerät](launch-a-remote-app.md) | Erfahren Sie, wie Sie eine App auf einem Remotegerät starten.  |
-| [Kommunikation mit einem App-Remotedienst](communicate-with-a-remote-app-service.md) | Erfahren Sie, wie Sie mit einer App auf einem Remotegerät interagieren. |
-
+| [Kommunizieren mit einem App-Remotedienst](communicate-with-a-remote-app-service.md) | Erfahren Sie, wie Sie mit einer App auf einem Remotegerät interagieren. |

@@ -5,20 +5,22 @@ description: Erfahren Sie, wie Sie den Windows.Services.Store-Namespace verwende
 title: "Unterstützen von Käufen konsumierbarer Add-Ons"
 keywords: "windows10, uwp, verbrauchbar, add-ons, in-app-käufe, IAPs, Windows.Services.Store"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 06/26/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 534c03287d39916d5fa357307b7479f895240b02
-ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
-translationtype: HT
+ms.openlocfilehash: 6fe73068f3a4a0588e3d7959054879a92ff23c0f
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="enable-consumable-add-on-purchases"></a>Unterstützen von Käufen konsumierbarer Add-Ons
 
-Apps für Windows 10, Version 1607 oder höher, können Methoden der [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Klasse im [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace verwenden, um die Erfüllung des Benutzers von Endverbraucher-Add-Ons in Ihren UWP-Apps zu verwalten (Add-Ons werden auch als In-App-Produkte oder IAPs bezeichnet). Verwenden Sie Endverbraucher-Add-ons für Artikel, die gekauft, verwendet und erneut gekauft werden können. Dies ist besonders nützlich für Dinge wie spielinterne Währungen (Gold, Münzen usw.), die gekauft und dann zum Erwerben bestimmter Power-Ups verwendet werden können.
+Apps für Windows 10, Version 1607 oder höher, können Methoden der [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Klasse im [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace verwenden, um die Erfüllung des Benutzers von Endverbraucher-Add-Ons in Ihren UWP-Apps zu verwalten. Verwenden Sie Endverbraucher-Add-ons für Artikel, die gekauft, verwendet und erneut gekauft werden können. Dies ist besonders nützlich für Dinge wie spielinterne Währungen (Gold, Münzen usw.), die gekauft und dann zum Erwerben bestimmter Power-Ups verwendet werden können.
 
 > [!NOTE]
-> Dieser Artikel bezieht sich auf Apps für Windows10, Version 1607 oder höher. Wenn Ihre App für eine frühere Version von Windows 10 geeignet ist, müssen Sie den [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)-Namespace anstelle des **Windows.Services.Store**-Namespace verwenden. Weitere Informationen finden Sie unter [In-App-Einkäufe und Testversionen mit dem Windows.ApplicationModel.Store-Namespace](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
+> Dieser Artikel bezieht sich auf Apps für Windows10, Version 1607 oder höher. Wenn Ihre App für eine frühere Version von Windows 10 geeignet ist, müssen Sie den [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)-Namespace anstelle des **Windows.Services.Store**-Namespace verwenden. Weitere Informationen finden Sie in [diesem Artikel](enable-consumable-in-app-product-purchases.md).
 
 ## <a name="overview-of-consumable-add-ons"></a>Übersicht über Endverbraucher-Add-ons
 
@@ -32,9 +34,6 @@ Apps für Windows 10, Version 1607 oder höher, können zwei Arten von Endverbra
 
   Wenn das Add-On beispielsweise eine anfängliche Menge von 100 Münzen in einem Spiel darstellt und der Benutzer 10 Münzen nutzt, meldet die App dem Store, dass 10 Einheiten des Add-Ons erfüllt wurden, und der Store aktualisiert den Restbetrag. Nachdem der Benutzer alle 100 Münzen genutzt hat, kann er das Add-On für 100 Münzen erneut kaufen.
 
-  > [!NOTE]
-  > Vom Store verwaltete Endverbraucher-Add-Ons sind ab Windows10, Version1607 verfügbar. Die Möglichkeit zum Erstellen eines vom Store verwalteten Verbrauchsartikels im Windows Dev Center-Dashboard ist in Kürze verfügbar.
-
 Um einem Benutzer ein Endverbraucher-Add-on anzubieten, befolgen Sie dieses allgemeine Verfahren:
 
 1. Ermöglichen Sie Benutzern den [Erwerb des Add-ons](enable-in-app-purchases-of-apps-and-add-ons.md) in Ihrer App.
@@ -45,8 +44,9 @@ Auch das [Abrufen des Restbetrags](enable-consumable-add-on-purchases.md#get_bal
 ## <a name="prerequisites"></a>Voraussetzungen
 
 Für diese Beispiele gelten die folgenden Voraussetzungen:
-* Ein Visual Studio-Projekt für eine UWP (Universelle Windows-Plattform)-App, die für Windows 10, Version 1607 oder höher, geeignet ist.
-* Sie haben im Windows Dev Center-Dashboard eine App mit Endverbraucher-Add-ons (auch als App-Produkte oder IAPs bezeichnet) erstellt, und diese Anwendung wird veröffentlicht und ist im Store verfügbar. Dies kann eine App sein, die Sie für Kunden freigeben möchten, oder es kann eine einfache App sein, die den Mindestanforderungen gemäß dem [Zertifizierungskit für Windows-Apps](https://developer.microsoft.com/windows/develop/app-certification-kit) entspricht und nur zu Testzwecken verwendet wird. Weitere Informationen finden Sie unter [Hinweise für Tests](in-app-purchases-and-trials.md#testing).
+* Ein Visual Studio-Projekt für eine App für die universelle Windows-Plattform (UWP), die für Windows10, Version1607 oder höher, geeignet ist.
+* Sie haben eine [App-Übermittlung](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) im Windows Dev Center-Dashboard erstellt. Diese App wird veröffentlicht und ist im Store verfügbar. Sie können Ihre App optional so konfigurieren, dass Sie während der Tests im Store ausgeblendet ist. Weitere Informationen finden Sie unter [Hinweise für Tests](in-app-purchases-and-trials.md#testing).
+* Sie haben [ein konsumierbares Add-On für die App](../publish/add-on-submissions.md) im Dev Center-Dashboard erstellt.
 
 Der Code in diesen Beispielen geht von Folgendem aus:
 * Die Ausführung des Codes erfolgt im Kontext einer [Seite](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx), die einen [ProgressRing](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressring.aspx) mit dem Namen ```workingProgressRing``` und einen [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) mit dem Namen ```textBlock``` enthält. Diese Objekte werden verwendet, um anzugeben, dass ein asynchroner Vorgang ausgeführt wird, bzw. um Ausgabemeldungen anzuzeigen.

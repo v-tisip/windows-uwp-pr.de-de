@@ -5,15 +5,17 @@ MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: "Entwicklerhandbuch für Windows Information Protection (WIP)"
 ms.author: normesta
-ms.date: 02/24/2017
+ms.date: 06/21/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, WIP, Windows Information Protection, Unternehmensdaten, Unternehmensdatenschutz, edp, optimierte Apps
 ms.assetid: 913ac957-ea49-43b0-91b3-e0f6ca01ef2c
-ms.openlocfilehash: a2888b804e66e2630e4ae93b0be31974740d9f99
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 23604e4ca549bbb11885e681500f4f41531c2b6f
+ms.sourcegitcommit: 5ece992c31870df4c089360ef47501bd4ce14fa9
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/22/2017
 ---
 # <a name="windows-information-protection-wip-developer-guide"></a>Entwicklerhandbuch für Windows Information Protection (WIP)
 
@@ -72,10 +74,9 @@ Allgemeine Informationen zur Verwendung dieses Tools finden Sie im Abschnitt „
 
     ![UWP-Erweiterungen hinzufügen](images/extensions.png)
 
-3. Fügen Sie diese Funktionen der Paketmanifestdatei hinzu:
+3. Fügen Sie diese Funktion der Paketmanifestdatei hinzu:
 
     ```xml
-       <Capability Name="privateNetworkClientServer" />
        <rescap:Capability Name="enterpriseDataPolicy"/>
     ```
    >*Optionale Info*: Das Präfix „Rescap“ bedeutet *eingeschränkte Funktion*. Siehe [Spezielle und eingeschränkte Funktionen](https://msdn.microsoft.com/windows/uwp/packaging/app-capability-declarations).

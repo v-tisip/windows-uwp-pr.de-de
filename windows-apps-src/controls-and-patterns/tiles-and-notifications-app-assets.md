@@ -6,14 +6,16 @@ ms.assetid: D6CE21E5-2CFA-404F-8679-36AA522206C7
 label: Tile and icon assets
 template: detail.hbs
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows10, UWP
-ms.openlocfilehash: 0d3b58b8ea03c3ba836078e507495beeebe74fb8
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 54ad78d5799a96ddcec7b060704ee198e0bf8db5
+ms.sourcegitcommit: 9a1310468970c8d1ade0fb200126dff56ea8c9e1
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/14/2017
 ---
 # <a name="guidelines-for-tile-and-icon-assets"></a>Richtlinien für die Ressourcen für Kacheln und Symbole
 
@@ -123,7 +125,7 @@ Beschränken Sie bei breiten Kacheln die Symbolbreite auf 66% und die Höhe auf 
 
 ![Verhältnisse bei breiten Kacheln](images/assetguidance11.png)
 
-Beschränken Sie bei großen Kacheln die Breite und Höhe auf 50% der Kachelgröße:
+Beschränken Sie bei großen Kacheln die Symbolbreite auf 66% und die Höhe auf 50% der Kachelgröße:
 
 ![Verhältnisse bei großen Kacheln](images/assetguidance12.png)
 
@@ -181,24 +183,6 @@ Nachfolgend finden Sie die Größenempfehlungen für zielbasierte Ressourcen mit
 
 ![Zielbasierte Ressourcengröße bei einer Skalierung von 100%](images/assetguidance23.png)
 
-**App-Ressourcen für Iconic-Vorlage**
-
-Mit der Iconic-Vorlage (auch als „IconWithBadge“-Vorlage bezeichnet) können Sie ein kleines Bild in der Mitte der Kachel anzeigen. Windows 10 unterstützt die Vorlage auf Telefonen sowie auf Tablets/Desktops. (Weitere Informationen zum Erstellen von Iconic-Kacheln finden Sie im [Artikel zu speziellen Kachelvorlagen](tiles-and-notifications-special-tile-templates-catalog.md).)
-
-Apps, die die Iconic-Vorlage verwenden, z. B. Nachrichten, Telefon und Store, weisen zielbasierte Elemente auf, die über ein Signal (mit dem Live-Zähler) verfügen können. Wie bei anderen zielbasierten Ressourcen ist kein Abstand erforderlich. Iconic-Ressourcen sind nicht Teil des App-Manifests, gehören aber zur Nutzlast einer Live-Kachel. Ressourcen sind so skaliert, dass sie in einen Container mit 3:2-Verhältnis passen und zentriert sind.
-
-![Größen für Ressourcen mit und ohne Signal](images/assetguidance24.png)
-
-Für quadratische Ressourcen erfolgt eine automatische Zentrierung innerhalb des Containers:
-
-![Größe einer quadratischen Ressource, mit und ohne Signal](images/assetguidance25.png)
-
-Bei nicht quadratischen Ressourcen erfolgt eine automatische horizontale/vertikale Zentrierung und ein Andocken an die Breite bzw. Höhe des Containers:
-
-![Größe einer nicht quadratischen Ressource, mit und ohne Signal](images/assetguidance26a.png)
-
-![Größe einer nicht quadratischen Ressource, mit und ohne Signal](images/assetguidance26b.png)
-
 ## <a name="splash-screen-assets"></a>Ressourcen für den Begrüßungsbildschirm
 
 
@@ -233,38 +217,217 @@ Wenn Sie Ressourcen mit hohem Kontrast bereitstellen möchten, müssen Sie beide
 
 Es wird dringend empfohlen, dass Sie mindestens Ressourcen für die Skalierungsfaktoren 100, 200 und 400 Skalierungsfaktoren bereitstellen. Wenn Sie Ressourcen für alle Skalierungsfaktoren bereitstellen, liefert dies eine optimale Benutzererfahrung.
 
-**Skalierungsbasierte Ressourcen**
+<br/>
 
-| Kategorie             | Elementname      | Bei einer Skalierung von 100 % | Bei einer Skalierung von 125 % | Bei einer Skalierung von 150 % | Bei einer Skalierung von 200 % | Bei einer Skalierung von 400 % |
-|----------------------|-------------------|---------------|---------------|---------------|---------------|---------------|
-| Klein                | Square71x71Logo   | 71 x 71         | 89 x 89         | 107 x 107       | 142 x 142       | 284x284       |
-| Mittel               | Square150x150Logo | 150x150       | 188 x 188       | 225 x 225       | 300 x 300       | 600 x 600       |
-| Breit                 | Square310x150Logo | 310x150       | 388 x 188       | 465 x 225       | 620 x 300       | 1240 x 600      |
-| Groß (nur Desktop) | Square310x310Logo | 310x310       | 388 x 388       | 465 x 465       | 620 x 620       | 1240 x 1240     |
-| App-Liste (Symbol)      | Square44x44Logo   | 44 x 44         | 55 x 55         | 66 x 66         | 88 x 88         | 176 x 176       |
+<table>
+<thead>
+<tr><th colspan="3">Kleine Kachel (Square71x71Logo)</th></tr>
+</thead>
+<tbody>
+<tr>
+    <td width="20%">Skalierung von 100 %</td>
+    <td width="20%">71 x 71</td>
+    <td>Square71x71Logo.scale-100.png</td>
+</tr>
+<tr>
+    <td>Skalierung von 125 %</td>
+    <td>89 x 89</td>
+    <td>Square71x71Logo.scale-125.png</td>
+</tr>
+<tr>
+    <td>Skalierung von 150 %</td>
+    <td>107 x 107</td>
+    <td>Square71x71Logo.scale-150.png</td>
+</tr>
+<tr>
+    <td>Skalierung von 200 %</td>
+    <td>142 x 142</td>
+    <td>Square71x71Logo.scale-200.png</td>
+</tr>
+<tr>
+    <td>Skalierung von 400 %</td>
+    <td>284x284</td>
+    <td>Square71x71Logo.scale-400.png</td>
+</tr>
+</tbody>
+</table>
 
- 
+<br/>
 
-**Dateinamenbeispiele für skalierungsbasierte Ressourcen**
+<table>
+<thead>
+<tr><th colspan="3">Mittelgroße Kachel (Square150x150Logo)</th></tr>
+</thead>
+<tbody>
+<tr>
+    <td width="20%">Skalierung von 100 %</td>
+    <td width="20%">150x150</td>
+    <td>Square150x150Logo.scale-100.png</td>
+</tr>
+<tr>
+    <td>Skalierung von 125 %</td>
+    <td>188 x 188</td>
+    <td>Square150x150Logo.scale-125.png</td>
+</tr>
+<tr>
+    <td>Skalierung von 150 %</td>
+    <td>225 x 225</td>
+    <td>Square150x150Logo.scale-150.png</td>
+</tr>
+<tr>
+    <td>Skalierung von 200 %</td>
+    <td>300 x 300</td>
+    <td>Square150x150Logo.scale-200.png</td>
+</tr>
+<tr>
+    <td>Skalierung von 400 %</td>
+    <td>600 x 600</td>
+    <td>Square150x150Logo.scale-400.png</td>
+</tr>
+</tbody>
+</table>
 
-| Kategorie             | Elementname      | Bei einer Skalierung von 100 %                  | Bei einer Skalierung von 125 %                  | Bei einer Skalierung von 150 %                  |
-|----------------------|-------------------|--------------------------------|--------------------------------|--------------------------------|
-| Klein                | Square71x71Logo   | AppNameSmallTile.scale-100.png | AppNameSmallTile.scale-125.png | AppNameSmallTile.scale-150.png |
-| Medium               | Square150x150Logo | AppNameMedTile.scale-100.png   | AppNameMedTile.scale-125.png   | AppNameMedTile.scale-150.png   |
-| Breit                 | Square310x150Logo | AppNameWideTile.scale-100.png  | AppNameWideTile.scale-125.png  | AppNameWideTile.scale-150.png  |
-| Groß (nur Desktop) | Square310x310Logo | AppNameLargeTile.scale-100.png | AppNameLargeTile.scale-125.png | AppNameLargeTile.scale-150.png |
-| App-Liste (Symbol)      | Square44x44Logo   | AppNameLargeTile.scale-100.png | AppNameLargeTile.scale-125.png | AppNameLargeTile.scale-150.png |
+<br/>
 
- 
+<table>
+<thead>
+<tr><th colspan="3">Breite Kachel (Wide310x150Logo)</th></tr>
+</thead>
+<tbody>
+<tr>
+    <td width="20%">Skalierung von 100 %</td>
+    <td width="20%">310x150</td>
+    <td>Wide310x150Logo.scale-100.png</td>
+</tr>
+<tr>
+    <td>Skalierung von 125 %</td>
+    <td>388 x 188</td>
+    <td>Wide310x150Logo.scale-125.png</td>
+</tr>
+<tr>
+    <td>Skalierung von 150 %</td>
+    <td>465 x 225</td>
+    <td>Wide310x150Logo.scale-150.png</td>
+</tr>
+<tr>
+    <td>Skalierung von 200 %</td>
+    <td>620 x 300</td>
+    <td>Wide310x150Logo.scale-200.png</td>
+</tr>
+<tr>
+    <td>Skalierung von 400 %</td>
+    <td>1240 x 600</td>
+    <td>Wide310x150Logo.scale-400.png</td>
+</tr>
+</tbody>
+</table>
 
-| Kategorie             | Elementname      | Bei einer Skalierung von 200 %                  | Bei einer Skalierung von 400 %                  |
-|----------------------|-------------------|--------------------------------|--------------------------------|
-| Klein                | Square71x71Logo   | AppNameSmallTile.scale-200.png | AppNameSmallTile.scale-400.png |
-| Medium               | Square150x150Logo | AppNameMedTile.scale-200.png   | AppNameMedTile.scale-400.png   |
-| Breit                 | Square310x150Logo | AppNameWideTile.scale-200.png  | AppNameWideTile.scale-400.png  |
-| Groß (nur Desktop) | Square310x310Logo | AppNameLargeTile.scale-200.png | AppNameLargeTile.scale-400.png |
-| App-Liste (Symbol)      | Square44x44Logo   | AppNameLargeTile.scale-200.png | AppNameLargeTile.scale-400.png |
+<br/>
 
+<table>
+<thead>
+<tr><th colspan="3">Große Kachel (Square310x310Logo)</th></tr>
+</thead>
+<tbody>
+<tr>
+    <td width="20%">Skalierung von 100 %</td>
+    <td width="20%">310x310</td>
+    <td>Square310x310Logo.scale-100.png</td>
+</tr>
+<tr>
+    <td>Skalierung von 125 %</td>
+    <td>388 x 388</td>
+    <td>Square310x310Logo.scale-125.png</td>
+</tr>
+<tr>
+    <td>Skalierung von 150 %</td>
+    <td>465 x 465</td>
+    <td>Square310x310Logo.scale-150.png</td>
+</tr>
+<tr>
+    <td>Skalierung von 200 %</td>
+    <td>620 x 620</td>
+    <td>Square310x310Logo.scale-200.png</td>
+</tr>
+<tr>
+    <td>Skalierung von 400 %</td>
+    <td>1240 x 1240</td>
+    <td>Square310x310Logo.scale-400.png</td>
+</tr>
+</tbody>
+</table>
+
+<br/>
+
+<table>
+<thead>
+<tr><th colspan="3">App-Listensymbol (Square44x44Logo)</th></tr>
+</thead>
+<tbody>
+<tr>
+    <td width="20%">Skalierung von 100 %</td>
+    <td width="20%">44 x 44</td>
+    <td>Square44x44Logo.scale-100.png</td>
+</tr>
+<tr>
+    <td>Skalierung von 125 %</td>
+    <td>55 x 55</td>
+    <td>Square44x44Logo.scale-125.png</td>
+</tr>
+<tr>
+    <td>Skalierung von 150 %</td>
+    <td>66 x 66</td>
+    <td>Square44x44Logo.scale-150.png</td>
+</tr>
+<tr>
+    <td>Skalierung von 200 %</td>
+    <td>88 x 88</td>
+    <td>Square44x44Logo.scale-200.png</td>
+</tr>
+<tr>
+    <td>Skalierung von 400 %</td>
+    <td>176 x 176</td>
+    <td>Square44x44Logo.scale-400.png</td>
+</tr>
+</tbody>
+</table>
+
+<br/>
+
+<table>
+<thead>
+<tr><th colspan="3">Begrüßungsbildschirm (SplashScreen)</th></tr>
+</thead>
+<tbody>
+<tr>
+    <td width="20%">Skalierung von 100 %</td>
+    <td width="20%">620 x 300</td>
+    <td>SplashScreen.scale-100.png</td>
+</tr>
+<tr>
+    <td>Skalierung von 125 %</td>
+    <td>775 x 375</td>
+    <td>SplashScreen.scale-125.png</td>
+</tr>
+<tr>
+    <td>Skalierung von 150 %</td>
+    <td>930 x 450</td>
+    <td>SplashScreen.scale-150.png</td>
+</tr>
+<tr>
+    <td>Skalierung von 200 %</td>
+    <td>1240 x 600</td>
+    <td>SplashScreen.scale-200.png</td>
+</tr>
+<tr>
+    <td>Skalierung von 400 %</td>
+    <td>2480 x 1200</td>
+    <td>SplashScreen.scale-400.png</td>
+</tr>
+</tbody>
+</table>
+
+<br/>
  
 
 **Zielbasierte Ressourcen**
@@ -275,22 +438,22 @@ Zielbasierte Ressourcen werden über mehrere Skalierungsfaktoren hinweg verwende
 
 Die folgende Tabelle enthält alle zielbasierten Ressourcengrößen und die entsprechenden Dateinamenbeispiele:
 
-| Ressourcengröße | Dateinamenbeispiel                 |
-|------------|-----------------------------------|
-| 16 x 16\*    | AppNameAppList.targetsize-16.png  |
-| 24 x 24\*    | AppNameAppList.targetsize-24.png  |
-| 32 x 32\*    | AppNameAppList.targetsize-32.png  |
-| 48 x 48\*    | AppNameAppList.targetsize-48.png  |
-| 256 x 256\*  | AppNameAppList.targetsize-256.png |
-| 20 x 20      | AppNameAppList.targetsize-20.png  |
-| 30x30      | AppNameAppList.targetsize-30.png  |
-| 36 x 36      | AppNameAppList.targetsize-36.png  |
-| 40 x 40      | AppNameAppList.targetsize-40.png  |
-| 60 x 60      | AppNameAppList.targetsize-60.png  |
-| 64 x 64      | AppNameAppList.targetsize-64.png  |
-| 72 x 72      | AppNameAppList.targetsize-72.png  |
-| 80 x 80      | AppNameAppList.targetsize-80.png  |
-| 96 x 96      | AppNameAppList.targetsize-96.png  |
+| Ressourcengröße | Dateinamenbeispiel                  |
+|------------|------------------------------------|
+| 16 x 16\*    | Square44x44Logo.targetsize-16.png  |
+| 24 x 24\*    | Square44x44Logo.targetsize-24.png  |
+| 32 x 32\*    | Square44x44Logo.targetsize-32.png  |
+| 48 x 48\*    | Square44x44Logo.targetsize-48.png  |
+| 256 x 256\*  | Square44x44Logo.targetsize-256.png |
+| 20 x 20      | Square44x44Logo.targetsize-20.png  |
+| 30x30      | Square44x44Logo.targetsize-30.png  |
+| 36 x 36      | Square44x44Logo.targetsize-36.png  |
+| 40 x 40      | Square44x44Logo.targetsize-40.png  |
+| 60 x 60      | Square44x44Logo.targetsize-60.png  |
+| 64 x 64      | Square44x44Logo.targetsize-64.png  |
+| 72 x 72      | Square44x44Logo.targetsize-72.png  |
+| 80 x 80      | Square44x44Logo.targetsize-80.png  |
+| 96 x 96      | Square44x44Logo.targetsize-96.png  |
 
  
 
@@ -304,7 +467,7 @@ Nachfolgend sind alle Ressourcentypen, ihre Anwendungsmöglichkeiten sowie die e
 **Kachelressourcen**
 
 -   Zentrierte Ressourcen werden in der Regel auf der Startseite zum Präsentieren Ihrer App verwendet.
--   Dateinamenformat: \*Tile.scale-\*.PNG
+-   Dateinamenformat: [Square\Wide]\*x\*Logo.scale-\*.png
 -   Betroffene Apps: Jede UWP-App
 -   Anwendungsmöglichkeiten:
     -   Standard-Startkacheln (Desktop und mobil)
@@ -317,7 +480,7 @@ Nachfolgend sind alle Ressourcentypen, ihre Anwendungsmöglichkeiten sowie die e
 **Skalierbare Listeressourcen mit Anpassung**
 
 -   Diese Ressourcen werden auf Flächen verwendet, die Skalierungsfaktoren erfordern. Diese Ressourcen werden vom System angepasst oder weisen ihre eigene Hintergrundfarbe auf, wenn die App diese enthält.
--   Dateinamenformat: \*AppList.scale-\*.PNG
+-   Dateinamenformat: Square44x44Logo.scale-\*.png
 -   Betroffene Apps: Jede UWP-App
 -   Anwendungsmöglichkeiten:
     -   Starten der Liste aller Apps (Desktop)
@@ -330,7 +493,7 @@ Nachfolgend sind alle Ressourcentypen, ihre Anwendungsmöglichkeiten sowie die e
 **Zielgröße-Listenressourcen mit Anpassung**
 
 -   Dies sind feste Größen, die nicht skaliert werden. Sie werden meistens für ältere Umgebungen verwendet. Ressourcen werden vom System überprüft.
--   Dateinamenformat: \*AppList.targetsize-\*.PNG
+-   Dateinamenformat: Square44x44Logo.targetsize-\*.png
 -   Betroffene Apps: Jede UWP-App
 -   Anwendungsmöglichkeiten:
     -   Starten der Sprungliste (Desktop)
@@ -341,7 +504,7 @@ Nachfolgend sind alle Ressourcentypen, ihre Anwendungsmöglichkeiten sowie die e
 **Zielgröße-Listenressourcen ohne Anpassung**
 
 -   Dies sind Objekte, die nicht vom System angepasst oder skaliert werden.
--   Dateinamenformat: \*AppList.targetsize-\*\_altform-unplated.PNG
+-   Dateinamenformat: Square44x44Logo.targetsize-\*\_altform-unplated.png
 -   Betroffene Apps: Jede UWP-App
 -   Anwendungsmöglichkeiten:
     -   Taskleiste und Miniaturansicht der Taskleiste (Desktop)
@@ -352,7 +515,7 @@ Nachfolgend sind alle Ressourcentypen, ihre Anwendungsmöglichkeiten sowie die e
 **Dateierweiterungsressourcen**
 
 -   Hierbei handelt es sich um spezielle Ressourcen für Dateierweiterungen. Sie werden neben Win32-Dateizuordnungssymbolen im Datei-Explorer angezeigt und müssen designunabhängig sein. Die Größe ist auf Desktops und mobilen Plattformen unterschiedlich.
--   Dateinamenformat: \*LogoExtensions.targetsize-\*.PNG
+-   Dateinamenformat: \*LogoExtensions.targetsize-\*.png
 -   Betroffene Apps: Musik, Video, Fotos, Microsoft Edge, Microsoft Office
 -   Anwendungsmöglichkeiten:
     -   Datei-Explorer
@@ -362,30 +525,7 @@ Nachfolgend sind alle Ressourcentypen, ihre Anwendungsmöglichkeiten sowie die e
 **Begrüßungsbildschirm**
 
 -   Die Ressource, die auf dem Begrüßungsbildschirm Ihrer App angezeigt wird. Automatische Skalierung auf Desktops und mobilen Plattformen.
--   Dateinamenformat: \*SplashScreen.screen-100.PNG
+-   Dateinamenformat: SplashScreen.scale-*.png
 -   Betroffene Apps: Jede UWP-App
 -   Anwendungsmöglichkeiten:
     -   Begrüßungsbildschirm der App
-
-**Ressourcen für Iconic-Kachel**
-
--   Dies sind Ressourcen für Apps, die die Iconic-Vorlage verwenden.
--   Dateinamenformat: nicht zutreffend
--   Betroffene Apps: Nachrichten, Telefon, Store usw.
--   Anwendungsmöglichkeiten:
-    -   Ikonische Kachel
-
-
-
-## <a name="related-topics"></a>Verwandte Themen
-
-
-
-* [Spezielle Kachelvorlagen](tiles-and-notifications-special-tile-templates-catalog.md)
- 
-
- 
-
-
-
-

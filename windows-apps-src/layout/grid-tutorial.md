@@ -2,20 +2,25 @@
 author: mukin
 Description: "In diesem Artikel im Stile eines Lernprogramms wird der Leser durch die Schrittezum Erstellen einer grundlegenden Anwendungsbenutzeroberfläche geführt. Es erläutert und veranschaulicht die Verwendung von Grid und StackPanel, zwei der häufigsten XAML-Elemente."
 title: Erstellen einer einfachen Wetter-App mithilfe von Grid und StackPanel
-ms.author: wdg-dev-content
-ms.date: 02/08/2017
+template: detail.hbs
+ms.author: mukin
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
 ms.assetid: 9794a04d-e67f-472c-8ba8-8ebe442f6ef2
-ms.openlocfilehash: 094cabc642884f57af2dbeb5125a2a8b81365824
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 12a48ec9e907a65abbbd9ec1e9f9c60c3519fa20
+ms.sourcegitcommit: 2de58584a42e580dbc0d19bdecee12bfee7fd7e7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/23/2017
 ---
 # <a name="create-a-simple-weather-app-by-using-grid-and-stackpanel"></a>Erstellen einer einfachen Wetter-App mithilfe von Grid und StackPanel
 
 Verwenden Sie zum Erstellen des Layouts für eine einfache Wetter-App mit XAML die Elemente **Grid** und **StackPanel**. Mit diesen Tools können Sie hervorragend aussehende Apps erstellen, die auf jedem Gerät mit Windows10 funktionieren. Dieses Lernprogramm dauert 10 bis 20Minuten.
+
+> **Wichtige APIs**: [Grid-Klasse](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.grid), [StackPanel-Klasse](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.stackpanel)
 
 ## <a name="prerequisites"></a>Voraussetzungen
 - Windows10 und Microsoft Visual Studio2015 [Klicken Sie hier, um zu erfahren, wie Sie Visual Studio einrichten](../get-started/get-set-up.md).
@@ -46,7 +51,7 @@ Um mit dem Erstellen eines Layouts zu beginnen, öffnen Sie **MainPage.xaml** mi
 </Grid>
 ```
 
-Das neue **Raster** erstellt eine Reihe von zwei Zeilen und Spalten, die das Layout der App-Oberfläche definieren. Die erste Spalte hat eine **Breite** von "3\*", während die zweite Spalte eine Breite von "5\*" hat. Der horizontale Abstand zwischen den beiden Spalten wird hierdurch im Verhältnis 3:5 geteilt. Auf die gleiche Weise haben die beiden Zeilen eine **Höhe** von "3\*" bzw. "\*", damit **Grid** der ersten Zeile drei Mal so viel Platz zuteilt wie der zweiten Zeile ("\*" bedeutet "1\*"). Diese Seitenverhältnisse werden bewahrt, auch wenn die Fenstergröße oder das Gerät geändert werden.
+Das neue **Raster** erstellt eine Reihe von zwei Zeilen und Spalten, die das Layout der App-Oberfläche definieren. Die erste Spalte hat eine **Breite** von "3\*", während die zweite Spalte eine Breite von "5\*" hat. Der horizontale Abstand zwischen den beiden Spalten wird hierdurch im Verhältnis 3:5 geteilt. Auf die gleiche Weise haben die beiden Zeilen eine **Höhe** von "2\*" bzw. "\*", damit **Grid** der ersten Zeile zwei Mal so viel Platz zuteilt wie der zweiten Zeile ("\*" bedeutet "1\*"). Diese Seitenverhältnisse werden bewahrt, auch wenn die Fenstergröße oder das Gerät geändert werden.
 
 Informationen zu weiteren Methoden für die Größeneinstellung von Zeilen und Spalten finden Sie unter [Definieren von Layouts mit XAML](https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml#layout-properties).
 

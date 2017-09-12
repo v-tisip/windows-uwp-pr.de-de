@@ -1,3 +1,19 @@
+---
+author: jwmsft
+title: App-Analyse
+description: Untersuchen Sie Leistungsprobleme der App
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows10, UWP
+ms.openlocfilehash: bedd4ce683622935488f9cc210d71f568a167f51
+ms.sourcegitcommit: 63c815f8c6665872987b5410cabf324f2b7e3c7c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/10/2017
+---
 # <a name="app-analysis-overview"></a>App-Analyse – Übersicht
 
 Die App-Analyse ist ein Tool, mit dem Entwickler Vorab-Benachrichtigungen zu Leistungsproblemen erhalten. Bei der App-Analyse wird Ihr App-Code basierend auf Leistungsrichtlinien und bewährten Methoden ausgeführt.
@@ -105,7 +121,7 @@ Legen Sie eine explizite Decodierungsgröße fest, um eine Version des Bilds mit
 
 ## <a name="collapsed-elements-at-load-time"></a>Reduzierte Elemente zur Ladezeit
 
-Eine häufiges Muster bei Apps ist das anfängliche Ausblenden von Elementen in der UI und das spätere Anzeigen. In den meisten Fällen sollten diese Elemente mit „x:DeferLoadStrategy“ zurückgestellt werden, um die Kosten für die Erstellung des Elements zur Ladezeit zu vermeiden.
+Eine häufiges Muster bei Apps ist, UI-Elemente anfänglich auszublenden und erst später anzuzeigen. In den meisten Fällen sollten diese Elemente mit „x:Load“ oder „x:DeferLoadStrategy“ zurückgestellt werden, um den Aufwand für die Erstellung des Elements zur Ladezeit zu vermeiden.
 
 Hierzu gehören Fälle, in denen ein Konverter für die Konvertierung eines booleschen Operanden in einen Sichtbarkeitszustand genutzt wird, um Elemente bis zu einem späteren Zeitpunkt auszublenden.
 
@@ -119,9 +135,9 @@ Diese Regel wurde ausgelöst, weil ein Element zur Ladezeit reduziert wurde. Das
 
 ### <a name="solution"></a>Lösung
 
-Mit „x:DeferLoadStrategy“ können Sie das Laden eines UI-Bestandteils verschieben und ihn später laden, wenn er benötigt wird. Dies ist eine gute Möglichkeit, die Verarbeitung der UI zu verzögern, die im ersten Frame nicht sichtbar ist. Sie können angeben, ob das Element bei Bedarf oder im Rahmen eines Satzes mit verzögerter Logik geladen werden soll. Rufen Sie zum Auslösen des Ladens „findName“ für das Element auf, das geladen werden soll.
+Mit [x:Load](../xaml-platform/x-load-attribute.md) oder [x:DeferLoadStrategy](https://msdn.microsoft.com/library/windows/apps/Mt204785) können Sie das Laden eines UI-Elements verschieben und es erst dann laden, wenn es benötigt wird. Dies ist eine gute Möglichkeit, die Verarbeitung der UI zu verzögern, die im ersten Frame nicht sichtbar ist. Sie können angeben, ob das Element bei Bedarf oder im Rahmen eines Satzes mit verzögerter Logik geladen werden soll. Rufen Sie zum Auslösen des Ladens „findName“ für das Element auf, das geladen werden soll. „x:Load“ erweitert die Funktionen von „x:DeferLoadStrategy“ und ermöglicht, dass Elemente entladen und beim Laden über „x:Bind“ gesteuert werden.
 
-In einigen Fällen ist die Verwendung von „findName“ zum Anzeigen eines Teils der UI ggf. nicht die Lösung. Dies gilt, wenn Sie Folgendes erwarten: Ein erheblicher Teil der UI soll nach dem Klicken auf eine Schaltfläche und mit sehr geringer Latenz realisiert werden. In diesem Fall sollten Sie „x:DeferLoadStrategy“ verwenden und die Sichtbarkeit (Visibility) für das zu realisierende Element auf „Collapsed“ (Reduziert) festlegen. Nachdem die Seite geladen wurde und der UI-Thread frei ist, können Sie „findName“ je nach Bedarf zum Laden der Elemente aufrufen. Die Elemente sind für den Benutzer erst sichtbar, nachdem Sie die Sichtbarkeit des Elements auf „Visible“ (Sichtbar) festgelegt haben.
+In einigen Fällen ist die Verwendung von „findName“ zum Anzeigen eines UI-Elements eventuell nicht die Lösung. Dies gilt, wenn Sie Folgendes erwarten: Ein erheblicher Teil der UI soll nach dem Klicken auf eine Schaltfläche und mit sehr geringer Latenz realisiert werden. In diesem Fall sollten Sie eine geringere UI-Latenz auf Kosten des zusätzlichen Speichers in Kauf nehmen und „x: DeferLoadStrategy“ verwenden sowie die „Sichtbarkeit“ des Elements, das Sie realisieren möchten, auf „Reduziert“ festlegen. Nachdem die Seite geladen wurde und der UI-Thread frei ist, können Sie „findName“ je nach Bedarf zum Laden der Elemente aufrufen. Die Elemente sind für den Benutzer erst sichtbar, nachdem Sie die Sichtbarkeit des Elements auf „Visible“ (Sichtbar) festgelegt haben.
 
 ## <a name="listview-is-not-virtualized"></a>ListView ist nicht virtualisiert
 

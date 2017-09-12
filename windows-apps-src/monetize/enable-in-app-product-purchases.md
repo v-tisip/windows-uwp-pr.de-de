@@ -3,26 +3,27 @@ author: mcleanbyron
 Description: "Sie können unabhängig davon, ob Ihre App kostenlos oder kostenpflichtig ist, Inhalte, andere Apps oder neue App-Funktionen (wie das Freischalten des nächsten Levels eines Spiels) direkt in der App verkaufen. Hier zeigen wir Ihnen, wie Sie diese Produkte in Ihrer App aktivieren können."
 title: "Unterstützen des Kaufs von In-App-Produkten"
 ms.assetid: D158E9EB-1907-4173-9889-66507957BD6B
-keywords: "uwp, add-ons, in-app-käufe, IAPs Windows.ApplicationModel.Store"
+keywords: "UWP, Add-Ons, In-App-Käufe, IAPs Windows.ApplicationModel.Store"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 06/26/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b7cd3f5d2c566958aaf83b8f633418ce444a2eaa
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1f7d4c60d077e3c556f0d369cc41d2e50ab9092b
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/09/2017
 ---
+# <a name="enable-in-app-product-purchases"></a>Unterstützen von In-App-Produktkäufen
 
-# <a name="enable-in-app-product-purchases"></a>Unterstützen des Kaufs von In-App-Produkten
-
->**Hinweis**&nbsp;&nbsp;In diesem Artikel wird die Verwendung von Mitgliedern des [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)-Namespace erläutert. Wenn Ihre App für Windows 10, Version 1607 oder höher, vorgesehen ist, empfehlen wir die Verwendung von Mitgliedern des [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace zum Verwalten von Add-Ons (auch als In-App-Produkte oder IAPs bezeichnet), anstelle des **Windows.ApplicationModel.Store**-Namespace. Weitere Informationen finden Sie unter [In-App-Käufe und Testversionen](in-app-purchases-and-trials.md).
+> [!NOTE]
+> Dieser Artikel beschreibt, wie Sie Mitglieder des [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)-Namespace verwenden, um In-App-Produktkäufe zu ermöglichen. Wenn Ihre App auf Windows10 ab Version1607 ausgerichtet ist, wird empfohlen, den [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace anstelle des **Windows.ApplicationModel.Store**-Namespace zu verwenden. Weitere Informationen finden Sie in [diesem Artikel](enable-in-app-purchases-of-apps-and-add-ons.md).
 
 Sie können unabhängig davon, ob Ihre App kostenlos oder kostenpflichtig ist, Inhalte, andere Apps oder neue App-Funktionen (wie das Freischalten des nächsten Levels eines Spiels) direkt in der App verkaufen. Hier zeigen wir Ihnen, wie Sie diese Produkte in Ihrer App aktivieren können.
 
-> **Hinweis**&nbsp;&nbsp;In-App-Produkte können nicht in der Testversion einer App angeboten werden. Kunden, die eine Testversion Ihrer App verwenden, können nur dann In-App-Produkte kaufen, wenn sie eine Vollversion der App kaufen.
+> [!NOTE]
+> In-App-Produkte können nicht in einer Testversion einer App angeboten werden. Kunden, die eine Testversion Ihrer App verwenden, können nur dann In-App-Produkte kaufen, wenn sie eine Vollversion der App kaufen.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -41,17 +42,19 @@ Rufen Sie bei der Initialisierung Ihrer App das [LicenseInformation](https://msd
 
 Erstellen Sie für jedes Feature, das über ein In-App-Produkt zur Verfügung stehen soll, ein Angebot in der App, und fügen Sie es Ihrer App hinzu.
 
-> **Wichtig**&nbsp;&nbsp;Sie müssen Ihrer App alle In-App-Produkte hinzufügen, die Sie Ihren Kunden zur Verfügung stellen möchten, bevor Sie diese an den Store übermitteln. Wenn Sie zu einem späteren Zeitpunkt neue In-App-Produkte hinzufügen möchten, müssen Sie die App aktualisieren und eine neue Version übermitteln.
+> [!IMPORTANT]
+> Sie müssen Ihrer App alle In-App-Produkte hinzufügen, die Sie Ihren Kunden zur Verfügung stellen möchten, bevor Sie sie an den Store übermitteln. Wenn Sie zu einem späteren Zeitpunkt neue In-App-Produkte hinzufügen möchten, müssen Sie die App aktualisieren und eine neue Version übermitteln.
 
 1.  **Erstellen Sie ein Token für In-App-Angebote**
 
     Sie identifizieren die einzelnen In-App-Produkte Ihrer App durch Token. Bei diesem Token handelt es sich um eine Zeichenfolge, die Sie festlegen und in Ihrer App und im Store verwenden, um ein bestimmtes In-App-Produkt zu identifizieren. Geben Sie ihm einen (für Ihre App) eindeutigen und aussagekräftigen Namen, sodass Sie beim Schreiben des Codes schnell das richtige Feature ermitteln können, für das es steht. Im Folgenden finden Sie einige Beispiele für Namen:
 
-    -   "SpaceMissionLevel4"
+    * "SpaceMissionLevel4"
+    * "ContosoCloudSave"
+    * „RainbowThemePack“
 
-    -   "ContosoCloudSave"
-
-    -   "RainbowThemePack"
+  > [!NOTE]
+  > Das In-App-Angebotstoken, das Sie in Ihrem Code verwenden, muss mit dem [Produkt-ID](../publish/set-your-add-on-product-id.md#product-id) Wert übereinstimmen, den Sie angeben, wenn Sie [das entsprechende Add-On für Ihre App im Dev Center-Dashboard definieren](../publish/add-on-submissions.md).
 
 2.  **Schreiben Sie den Code für das Feature in einem Bedingungsblock.**
 
@@ -66,7 +69,7 @@ Erstellen Sie für jedes Feature, das über ein In-App-Produkt zur Verfügung st
 
     Ihre App muss den Kunden außerdem die Möglichkeit bieten, das über das In-App-Produkt angebotene Produkt oder Feature zu kaufen. Das Feature oder Produkt kann nicht auf die gleiche Weise wie die gesamte App im Store erworben werden.
 
-    Hier finden Sie ein Beispiel dafür, wie Sie testen, ob der Kunde bereits ein In-App-Produkt besitzt. Es veranschaulicht außerdem, wie das Kaufdialogfeld angezeigt wird, sodass der Kunde es ggf. erwerben kann. Ersetzen Sie den Kommentar „show the purchase dialog“ durch den benutzerdefinierten Code für das Kaufdialogfeld (z. B. ein Fenster mit der Schaltfläche „Diese App kaufen“) .
+    Hier finden Sie ein Beispiel dafür, wie Sie testen, ob der Kunde bereits ein In-App-Produkt besitzt. Es veranschaulicht außerdem, wie das Kaufdialogfeld angezeigt wird, sodass der Kunde es ggf. erwerben kann. Ersetzen Sie den Kommentar „show the purchase dialog“ durch den benutzerdefinierten Code für das Kaufdialogfeld (z.B. ein Fenster mit der Schaltfläche „Diese App kaufen“) .
 
     > [!div class="tabbedCodeSnippets"]
     [!code-cs[EnableInAppPurchases](./code/InAppPurchasesAndLicenses/cs/EnableInAppPurchases.cs#BuyFeature)]
@@ -77,7 +80,10 @@ Dies ist ein einfacher Schritt: Ändern Sie im Code Ihrer App alle Verweise auf 
 
 ## <a name="step-4-configure-the-in-app-product-offer-in-the-store"></a>Schritt 4: Konfigurieren des In-App-Produktangebots im Store
 
-Definieren Sie im Dev Center-Dashboard die Produkt-ID, den Typ, den Preis und andere Eigenschaften für das In-App-Produkt. Die Konfiguration muss genau mit der Konfiguration in der Datei WindowsStoreProxy.xml übereinstimmen, die Sie beim Testen festlegen. Weitere Informationen finden Sie unter [IAP-Einreichungen](https://msdn.microsoft.com/library/windows/apps/mt148551).
+Navigieren Sie im Dev Center-Dashboard zu Ihrer App und [Erstellen Sie ein Add-On](../publish/add-on-submissions.md) das Ihrem In-App-Produktangebot entspricht. Definieren Sie Produkt-ID, Typ, Preis und andere Eigenschaften für das Add-On. Die Konfiguration muss genau mit der Konfiguration in der Datei WindowsStoreProxy.xml übereinstimmen, die Sie beim Testen festlegen.
+
+  > [!NOTE]
+  > Das In-App-Angebotstoken, das Sie in Ihrem Code verwenden, muss mit dem [Produkt-ID](../publish/set-your-add-on-product-id.md#product-id) Wert übereinstimmen, den Sie für das entsprechende Add-On für Ihre App im Dev Center-Dashboard definieren.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -92,4 +98,3 @@ Wenn Sie anhand von Belegen überprüfen möchten, ob ein Kunde einen In-App-Ein
 * [Verwalten eines großen Katalogs mit In-App-Produkten](manage-a-large-catalog-of-in-app-products.md)
 * [Überprüfen von Produktkäufen anhand von Belegen](use-receipts-to-verify-product-purchases.md)
 * [Store-Beispiel (zeigt Testversionen und In-App-Einkäufe)](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)
-

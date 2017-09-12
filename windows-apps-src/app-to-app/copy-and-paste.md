@@ -2,16 +2,18 @@
 description: "In diesem Artikel wird erläutert, wie in Apps für die universelle Windows-Plattform (UWP) das Kopieren und Einfügen über die Zwischenablage unterstützt wird."
 title: "Kopieren und Einfügen"
 ms.assetid: E882DC15-E12D-4420-B49D-F495BB484BEE
-author: awkoren
-ms.author: alkoren
+author: msatranjr
+ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: bb99a8ccdfb37039407e32634e5ce95d92878ecb
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: f49a417e87199a625a023f7aa867f855cbd5d3c9
+ms.sourcegitcommit: 23cda44f10059bcaef38ae73fd1d7c8b8330c95e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/19/2017
 ---
 #<a name="copy-and-paste"></a>Kopieren und Einfügen
 
@@ -63,12 +65,15 @@ Clipboard.SetContent(dataPackage);
 Rufen Sie zum Abrufen des Inhalts der Zwischenablage die statische [**GetContent**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.Clipboard.GetContent)-Methode auf. Die Methode gibt eine [**DataPackageView**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackageView) mit dem Inhalt zurück. Dieses Objekt ist mit dem [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage)-Objekt nahezu identisch, der Inhalt ist allerdings schreibgeschützt. Anhand dieses Objekts können Sie dann entweder mit der [**AvailableFormats**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackageView.AvailableFormats)-Methode oder mit der [**Contains**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackageView.Contains(System.String))-Methode ermitteln, welche Formate verfügbar sind. Rufen Sie anschließend die entsprechende [**DataPackageView**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackageView)-Methode auf, um die Daten zu erhalten.
 
 ```cs
-DataPackageView dataPackageView = Clipboard.GetContent();
-if (dataPackageView.Contains(StandardDataFormats.Text))
+async void OutputClipboardText()
 {
-    string text = await dataPackageView.GetTextAsync();
-    // To output the text from this example, you need a TextBlock control
-    TextOutput.Text = "Clipboard now contains: " + text;
+    DataPackageView dataPackageView = Clipboard.GetContent();
+    if (dataPackageView.Contains(StandardDataFormats.Text))
+    {
+        string text = await dataPackageView.GetTextAsync();
+        // To output the text from this example, you need a TextBlock control
+        TextOutput.Text = "Clipboard now contains: " + text;
+    }
 }
 ```
 
@@ -77,7 +82,7 @@ if (dataPackageView.Contains(StandardDataFormats.Text))
 Zusätzlich zu den Befehlen zum Kopieren und Einfügen empfiehlt es sich unter Umständen, auch Änderungen an der Zwischenablage nachzuverfolgen. Behandeln Sie dafür das [**ContentChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.Clipboard.ContentChanged)-Ereignis der Zwischenablage.
 
 ```cs
-Clipboard.ContentChanged += (s, e) => 
+Clipboard.ContentChanged += async (s, e) => 
 {
     DataPackageView dataPackageView = Clipboard.GetContent();
     if (dataPackageView.Contains(StandardDataFormats.Text))

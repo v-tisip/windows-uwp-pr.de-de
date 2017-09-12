@@ -3,15 +3,17 @@ author: jnHs
 Description: "Die geschätzte Zeit bis zum Übertragen von Zahlungen, geltende Zahlungsschwellenwerte und Microsoft-Marketplaces, von denen Sie Zahlungen erhalten können, sind von Land/Region und Zahlungskontotyp abhängig."
 title: "Zahlungsschwellenwerte, Methoden und Zeiträume"
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 06/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: d82276d8-f094-4d60-90f6-f836ce90e823
-ms.openlocfilehash: 2d2f586a1125f12c1034e002e2245e0fe155c1b4
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 0d0e421108de5daecb552c606b3f2c00b722fb89
+ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/21/2017
 ---
 # <a name="payment-thresholds-methods-and-timeframes"></a>Zahlungsschwellenwerte, Methoden und Zeiträume
 
@@ -23,22 +25,24 @@ Für alle angegebenen Länder/Regionen werden ACH/SEPA oder Überweisungen verwe
 
 In der Regel senden wir Zahlungen, die in einem bestimmten Monat fällig sind, bis zum 15.Tag dieses Monats. Möglicherweise dauert es jedoch länger, bis die Zahlung Ihr Konto erreicht. Die Anzahl der Tage ist von der Zahlungsmethode abhängig, die wir für Ihr Konto verwenden, wie nachfolgend beschrieben. 
 
-> **Hinweis** Die unten angegebene Anzahl von Tagen ist ungefähr. Eine Zahlung kann mehr oder weniger Zeit benötigen.
+> [!NOTE]
+> Die unten angegebene Anzahl von Tagen ist ungefähr. Eine Zahlung kann mehr oder weniger Zeit benötigen.
 
 
-| Zahlungsmethode | Anzahl von Tagen, um das Zahlungskonto zu erreichen |
+| Zahlungsmethode     | Anzahl von Tagen, um das Zahlungskonto zu erreichen     |
 |--------------------|--------------------------------------------|
-| PayPal | 1 Werktag |    
-| ACH/SEPA |2 bis 3 Werktage |
-| Überweisung | 7 bis 10 Werktage |
+| PayPal             | 1 Werktag                             | 
+| ACH/SEPA           | 2 bis 3 Werktage                          |
+| Überweisung      | 7 bis 10 Werktage                         |
 
 &nbsp;
 
-Die Länder/Regionen, in denen diese Zahlungsmethoden für die einzelnen Marketplaces verwendet werden, finden Sie in den folgenden Tabellen.
+Die Länder/Regionen, in denen diese Zahlungsmethoden für die einzelnen Märkte verwendet werden, finden Sie in den folgenden Tabellen.
 
 ## <a name="payment-thresholds-and-methods"></a>Zahlungsschwellenwerte und Zahlungsmethoden
 
-> **Hinweis** Die Zahlungsschwellenwerte werden in USD angegeben. In einigen Märkten wird das Äquivalent in der lokalen Währung verwendet. 
+> [!NOTE]
+> Die hier angezeigten Zahlungsschwellenwerte werden in USD angegeben. In einigen Märkten wird das Äquivalent in der lokalen Währung verwendet. 
 
 - [Windows Store](#windows-store)
 - [Microsoft Advertising](#microsoft-advertising)

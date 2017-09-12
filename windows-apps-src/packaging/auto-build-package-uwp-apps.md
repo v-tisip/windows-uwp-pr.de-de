@@ -1,17 +1,19 @@
 ---
-author: rmpablos
+author: laurenhughes
 title: "Einrichten automatisierter Builds für UWP-Apps"
 description: "Erfahren Sie, wie Sie automatisierte Builds konfigurieren, um Pakete zum Querladen oder zum Übermitteln an den Store zu erzeugen."
-ms.author: wdg-dev-content
-ms.date: 02/15/2017
+ms.author: lahugh
+ms.date: 08/09/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
-ms.openlocfilehash: f4c68af97e5d5b11a0c5320c9fa6040b9ab94e5a
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: c8c1765e2983484ddc57e47a995867aa3b401ad4
+ms.sourcegitcommit: 63c815f8c6665872987b5410cabf324f2b7e3c7c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/10/2017
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Einrichten automatisierter Builds für UWP-Apps
 
@@ -39,7 +41,7 @@ Wenn Sie einen benutzerdefinierten Build-Agent erstellen möchten, benötigen Si
 
 Weitere Informationen finden Sie unter [Bereitstellen eines Agents unter Windows](https://www.visualstudio.com/docs/build/admin/agents/v2-windows). 
 
-Zum Ausführen von UWP-Komponententests müssen Sie folgende Schritte ausführen: •    Bereitstellen und Starten der App. •    Ausführen des VSTS-Agents im interaktiven Modus. •    Konfigurieren des Agents für die automatische Anmeldung nach einem Neustart.
+Zum Ausführen von UWP-Komponententests müssen Sie folgende Schritte ausführen: •   Bereitstellen und Starten der App. •   Ausführen des VSTS-Agents im interaktiven Modus. •   Konfigurieren des Agents für die automatische Anmeldung nach einem Neustart.
 
 Wir beschreiben jetzt, wie ein automatisierter Build eingerichtet wird.
 
@@ -104,11 +106,11 @@ Die mit der $()-Syntax definierten Parameter sind Variablen, die in der Builddef
 Unter [Verwenden von Buildvariablen](https://www.visualstudio.com/docs/build/define/variables) sind alle vordefinierten Variablen aufgeführt.
 
 #### <a name="configure-the-publish-artifact-build-task"></a>Konfigurieren der Buildaufgabe „Artefakt veröffentlichen“ 
-Mit dieser Aufgabe werden die generierten Artefakte in VSTS gespeichert. Sie werden auf der Registerkarte „Artefakte“ auf der Seite mit den Buildergebnissen angezeigt. VSTS verwendet den zuvor definierten Ordner `$Build.ArtifactStagingDirectory)\AppxPackages`.
+Mit dieser Aufgabe werden die generierten Artefakte in VSTS gespeichert. Sie werden auf der Registerkarte „Artefakte“ auf der Seite mit den Buildergebnissen angezeigt. VSTS verwendet den zuvor definierten Ordner `$(Build.ArtifactStagingDirectory)\AppxPackages`.
 
 ![Artefakte](images/building-screen6.png)
 
-Da wir die `UapAppxPackageBuildMode`-Eigenschaft auf `StoreUpload` festgelegt haben, enthält der Artefaktordner das Paket, das Sie in den Store hochladen („appxupload“), und die Pakete, die das Querladen ermöglichen („appxbundle“).
+Da wir die `UapAppxPackageBuildMode`-Eigenschaft auf `StoreUpload` festlegen, enthält der Artefaktordner das Paket, das für die Übermittlung an den Store empfohlen ist (.appxupload). Beachten Sie, dass Sie auch ein normales App-Paket (.appx) oder ein App-Bundle (.appxbundle) an den Store übermitteln können. Für die Zwecke dieses Artikels verwenden wir die appxupload-Datei.
 
 
 >Hinweis: Der VSTS-Agent behält standardmäßig die letzten generierten APPX-Pakete bei. Wenn Sie nur die Artefakte des aktuellen Builds speichern möchten, konfigurieren Sie den Build so, dass das Verzeichnis mit Binärdateien bereinigt wird. Fügen Sie dazu eine Variable namens `Build.Clean` hinzu, und legen Sie sie auf den Wert `all` fest. Weitere Informationen finden Sie unter [Angeben des Repositorys](https://www.visualstudio.com/docs/build/define/repository#how-can-i-clean-the-repository-in-a-different-way).
@@ -172,10 +174,10 @@ In VSTS werden auf der Seite „Buildzusammenfassung“ Testergebnisse für jede
 Wenn Sie Ihren CI-Build nur verwenden möchten, um die Qualität der Eincheckvorgänge zu überwachen, können Sie Ihre Buildzeiten verringern.
 
 #### <a name="to-improve-the-speed-of-a-ci-build"></a>So verbessern Sie die Geschwindigkeit eines CI-Builds
-1.    Erstellen Sie den Build nur für eine Plattform.
-2.    Bearbeiten Sie die BuildPlatform-Variable, um nur x86 zu verwenden. ![CI-Konfiguration](images/building-screen10.png) 
-3.    Fügen Sie im Buildschritt „/p:AppxBundle=Never“ zur Eigenschaft „MSBuild-Argumente“ hinzu, und legen Sie die Eigenschaft „Plattform“ fest. ![Konfigurieren der Plattform](images/building-screen11.png)
-4.    Deaktivieren Sie im Komponententestprojekt .NET Native. 
+1.  Erstellen Sie den Build nur für eine Plattform.
+2.  Bearbeiten Sie die BuildPlatform-Variable, um nur x86 zu verwenden. ![CI-Konfiguration](images/building-screen10.png) 
+3.  Fügen Sie im Buildschritt „/p:AppxBundle=Never“ zur Eigenschaft „MSBuild-Argumente“ hinzu, und legen Sie die Eigenschaft „Plattform“ fest. ![Konfigurieren der Plattform](images/building-screen11.png)
+4.  Deaktivieren Sie im Komponententestprojekt .NET Native. 
 
 Öffnen Sie dazu die Projektdatei, und legen Sie die `UseDotNetNativeToolchain`-Eigenschaft in den Projekteigenschaften auf `false` fest.
 
@@ -279,7 +281,7 @@ Dadurch wird die APPXUPLOAD-Datei generiert, die an den Store übermittelt werde
 
 #### <a name="configure-automatic-store-submission"></a>Konfigurieren der automatischen Übermittlung an den Store
 
-Verwenden Sie für die Integration in die Store-API die Visual Studio Team Services-Erweiterung für den Windows Store, und senden Sie das APPXUPLOAD-Paket an den Store.
+Verwenden Sie für die Integration in die Store-API die Visual Studio Team Services-Erweiterung für den Windows Store, und senden Sie das App-Paket an den Store.
 
 Sie müssen Ihr Dev Center-Konto mit Azure Active Directory (AD) verbinden und dann eine App in AD erstellen, um die Anforderungen zu authentifizieren. Befolgen Sie dazu die Anweisungen auf der Seite der Erweiterung. 
 
@@ -317,7 +319,7 @@ Wenn Sie Ihre APPX-Pakete von einer Website wie VSTS oder HockeyApp verteilen m�
 
 <span id="certificates-best-practices"/>
 ### <a name="best-practices-for-signing-certificates"></a>Bewährte Methoden für das Signieren von Zertifikaten 
-Visual Studio generiert ein Zertifikat für jedes Projekt. Dadurch wird es schwierig, eine geordnete Liste gültiger Zertifikate zu führen. Wenn Sie mehrere Apps erstellen möchten, können Sie ein einzelnes Zertifikat zum Signieren aller Apps erstellen. Danach kann jedes Gerät, für das das Zertifikat als vertrauenswürdig gilt, alle Ihre Apps querladen, ohne dass ein weiteres Zertifikat installiert werden muss. Weitere Informationen finden Sie unter [Erstellen eines Signaturzertifikats für ein App-Paket](https://msdn.microsoft.com/library/windows/desktop/jj835832(v=vs.85).aspx).
+Visual Studio generiert ein Zertifikat für jedes Projekt. Dadurch wird es schwierig, eine geordnete Liste gültiger Zertifikate zu führen. Wenn Sie mehrere Apps erstellen möchten, können Sie ein einzelnes Zertifikat zum Signieren aller Apps erstellen. Danach kann jedes Gerät, für das das Zertifikat als vertrauenswürdig gilt, alle Ihre Apps querladen, ohne dass ein weiteres Zertifikat installiert werden muss. Weitere Informationen finden Sie unter [Erstellen eines Zertifikats zur Paketsignierung](https://docs.microsoft.com/windows/uwp/packaging/create-certificate-package-signing).
 
 
 #### <a name="create-a-signing-certificate"></a>Erstellen eines Signaturzertifikats
@@ -360,4 +362,4 @@ Die einfachste Möglichkeit zum Registrieren des Zertifikats besteht darin, in d
 * [Erstellen einer .NET-App für Windows](https://www.visualstudio.com/docs/build/get-started/dot-net) 
 * [Verpacken von UWP-Apps](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps)
 * [Querladen von branchenspezifischen Apps in Windows10](https://technet.microsoft.com/itpro/windows/deploy/sideload-apps-in-windows-10)
-* [Erstellen eines Signaturzertifikats für ein App-Paket](https://msdn.microsoft.com/library/windows/desktop/jj835832(v=vs.85).aspx)
+* [Erstellen eines Paketsignaturzertifikats](https://docs.microsoft.com/windows/uwp/packaging/create-certificate-package-signing)

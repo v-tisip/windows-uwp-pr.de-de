@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: jwmsft
 ms.assetid: A37ADD4A-2187-4767-9C7D-EDE8A90AA215
 title: Planen der Leistung
 description: "Benutzer erwarten, dass ihre Apps zuverlässig und reibungslos funktionieren und den Akku nicht übermäßig beanspruchen."
-ms.author: markl
+ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: d80ff77c380d8c4f03cb2ef415126cba46d77062
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: d25620c0fc86f76b8c0d4de6e606250186b9ce37
+ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/14/2017
 ---
 # <a name="planning-for-performance"></a>Planen der Leistung
 
@@ -85,7 +87,7 @@ Sie können jetzt die Leistungsziele verwenden, um den Entwurf Ihrer App zu beei
 -   Optimieren Sie die zum Analysieren und Laden erforderliche Zeit sowie die Effizienz für jede Seite der Benutzeroberfläche Ihrer App (insbesondere die Ausgangsseite), indem Sie das [XAML-Markup optimieren](optimize-xaml-loading.md). Stellen Sie kurz gesagt das Laden der Benutzeroberfläche und des Codes zurück, bis dies erforderlich ist.
 -   Weisen Sie allen [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)- und [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705)-Elementen dieselbe Größe zu, und verwenden Sie möglichst viele [ListView- und GridView-Optimierungsverfahren](optimize-gridview-and-listview.md).
 -   Deklarieren Sie die Benutzeroberfläche in Form von Markup, das vom Framework geladen und in Blöcken wiederverwendet werden kann, anstatt sie zwingend in Code zu erstellen.
--   Reduzieren Sie UI-Elemente, bis sie vom Benutzer benötigt werden. Weitere Informationen finden Sie unter der [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR208992)-Eigenschaft.
+-   Erstellen Sie UI-Elemente mit Verzögerung, bis der Benutzer sie benötigt. Siehe unter [**x:Load**](../xaml-platform/x-load-attribute.md)-Attribut.
 -   Bevorzugen Sie Designübergänge und -animationen vor Storyboardanimationen. Weitere Informationen finden Sie unter [Übersicht über Animationen](https://msdn.microsoft.com/library/windows/apps/Mt187350). Bedenken Sie, dass Storyboardanimationen kontinuierliche Aktualisierungen auf dem Bildschirm erfordern und die CPU und Grafikpipeline auslasten. Führen Sie keine Animationen aus, wenn der Benutzer nicht mit der App interagiert, um den Stromverbrauch zu verringern.
 -   Von Ihnen geladene Bilder sollten dabei eine Größe aufweisen, die für die jeweilige Ansicht geeignet ist. Verwenden Sie deshalb die [**GetThumbnailAsync**](https://msdn.microsoft.com/library/windows/apps/BR227210)-Methode.
 
@@ -195,4 +197,3 @@ Wenn Änderungen erforderlich sind, nehmen Sie diese vor, und kehren Sie dann zu
 ## <a name="optimizing"></a>Optimieren
 
 Optimieren Sie nur die leistungskritischen Codepfade in Ihrer App. Dies sind die Codepfade, für die Sie die meiste Zeit aufgewendet haben. Die Profilerstellung wird Ihnen mitteilen, welche dies sind. Häufig ist ein Kompromiss nötig zwischen dem Erstellen einer Software, die auf guten Deisgnmethoden basiert, und dem Schreiben von Code, der die höchste Optimierung sicherstellt. In den Bereichen, in denen die Leistung keine wesentliche Rolle spielt, ist es im Allgemeinen besser, mehr Gewicht auf Entwicklerproduktivität und gutes Softwaredesign zu legen.
-

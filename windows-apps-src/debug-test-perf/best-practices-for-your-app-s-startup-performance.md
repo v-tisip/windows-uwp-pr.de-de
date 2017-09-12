@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: jwmsft
 ms.assetid: 00ECF6C7-0970-4D5F-8055-47EA49F92C12
 title: "Bewährte Methoden für die Leistung Ihrer App beim Starten"
 description: Erstellen Sie UWP-Apps (Universelle Windows-Plattform) mit optimalen Startzeiten, indem Sie die Vorgehensweise bei Start und Aktivierung optimieren.
-ms.author: markl
+ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: 9ab3eeeffbab26f5d26d28160a750c50d53b7e96
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: e36103953ad3fb04ee5beef7e263fc326f817c0b
+ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/14/2017
 ---
 # <a name="best-practices-for-your-apps-startup-performance"></a>Bewährte Methoden für die Leistung Ihrer App beim Starten
 
@@ -55,7 +57,7 @@ Wenn Sie Ihre App erneut kompilieren, wird das systemeigene Bild nicht mehr verw
 
 ### <a name="defer-work-as-long-as-possible"></a>Verzögern Sie die Arbeit möglichst lange
 
-Wenn Sie die Startzeit Ihrer App beschleunigen möchten, führen Sie nur die Arbeit aus, die unbedingt erforderlich ist, damit der Benutzer mit dem Interagieren mit der App beginnen kann. Dies kann besonders hilfreich sein, wenn Sie das Laden zusätzlicher Assemblys verzögern können. Die Common Language Runtime (CLR) lädt eine Assembly, wenn sie das erste Mal verwendet wird. Wenn Sie die Anzahl der geladenen Assemblys minimieren können, können Sie möglicherweise die Startzeit Ihrer App beschleunigen und ihren Speicherverbrauch optimieren.
+Um die Startzeit Ihrer App zu verbessern, führen Sie nur die Arbeit aus, die unbedingt erforderlich ist, damit der Benutzer die Interaktion mit der App beginnen kann. Dies kann besonders hilfreich sein, wenn Sie das Laden zusätzlicher Assemblys verzögern können. Die Common Language Runtime (CLR) lädt eine Assembly, wenn sie das erste Mal verwendet wird. Wenn Sie die Anzahl der geladenen Assemblys minimieren können, können Sie möglicherweise die Startzeit Ihrer App beschleunigen und ihren Speicherverbrauch optimieren.
 
 ### <a name="do-long-running-work-independently"></a>Separates Erledigen langer Abläufe
 
@@ -108,7 +110,7 @@ Im Fenster mit der [Visuellen Live-Struktur von Visual Studio](http://blogs.msdn
 
 ![Visuelle Live-Struktur:](images/live-visual-tree.png)
 
-**Verwenden Sie x:DeferLoadStrategy**. Das Reduzieren eines Elements oder das Festlegen der Deckkraft auf0 verhindert nicht, dass das Element erstellt wird. Mit „x:DeferLoadStrategy“ können Sie das Laden eines UI-Bestandteils verschieben und ihn später laden, wenn er benötigt wird. Dies ist eine gute Möglichkeit, um die Verarbeitung von UI-Elementen aufzuschieben, die auf dem Startbildschirm nicht sichtbar sind. Sie können sie dann bei Bedarf oder im Rahmen einer Verzögerungslogik laden. Um das Laden auszulösen, müssen Sie für das Element nur FindName aufrufen. Ein Beispiel und weitere Informationen finden Sie unter [x:DeferLoadStrategy-Attribut](https://msdn.microsoft.com/library/windows/apps/Mt204785).
+**Verzögerung verwenden**. Das Reduzieren eines Elements oder das Festlegen der Deckkraft auf0 verhindert nicht, dass das Element erstellt wird. Mit „x:Load” oder „x:DeferLoadStrategy“ können Sie das Laden eines UI-Elements verschieben und es erst dann laden, wenn es benötigt wird. Dies ist eine gute Möglichkeit, um die Verarbeitung von UI-Elementen aufzuschieben, die auf dem Startbildschirm nicht sichtbar sind. Sie können sie dann bei Bedarf oder im Rahmen einer Verzögerungslogik laden. Um das Laden auszulösen, müssen Sie für das Element nur FindName aufrufen. Ein Beispiel und weitere Informationen finden Sie unter [x:Load-Attribut](../xaml-platform/x-load-attribute.md) und [x:DeferLoadStrategy-Attribut](https://msdn.microsoft.com/library/windows/apps/Mt204785).
 
 **Virtualisierung**. Falls Ihre Benutzeroberfläche Listen- oder Wiederholungsinhalte enthält, empfehlen wir Ihnen dringend, die UI-Virtualisierung zu nutzen. Wenn die Listen-UI nicht virtualisiert ist, werden alle Elemente vorher erstellt, und dies kann den Startvorgang verlängern. Weitere Informationen finden Sie unter [Optimieren der ListView- und GridView-Benutzeroberfläche](optimize-gridview-and-listview.md).
 
@@ -364,5 +366,4 @@ Daher ist es ratsam, die Navigationsparameter klein zu halten und die Größe de
 
 Das Zwischenspeichern kann zu einer Verbesserung der Leistung beitragen, indem Instanziierungen vermieden werden. So wird die gesamte Navigationsleistung verbessert. Das Zwischenspeichern kann sich auch negativ auf die Leistung auswirken, indem zu viel zwischengespeichert und dadurch der Arbeitssatz beeinträchtigt wird.
 
-Aus diesem Grund ist es zu empfehlen, das Zwischenspeichern von Seiten so einzusetzen, wie es für Ihre Anwendung am besten geeignet ist. Stellen Sie sich beispielsweise vor, dass Sie über eine App verfügen, bei der eine Liste mit Elementen in einem Frame angezeigt wird. Wenn Sie auf ein Element tippen, wird für den Frame die Navigation auf eine Detailseite des Elements durchgeführt. Für die Seite mit der Liste empfiehlt sich normalerweise eine Zwischenspeicherung. Falls die Detailseite für alle Elemente gleich ist, kann sie auch zwischengespeichert werden. Wenn die Detailseite eher abwechslungsreich gestaltet ist, kann es besser sein, sie nicht zwischenzuspeichern.
-
+Aus diesem Grund ist sollten Sie das Zwischenspeichern von Seiten so einzusetzen, wie es für Ihre Anwendung am besten geeignet ist. Stellen Sie sich beispielsweise vor, dass Sie über eine App verfügen, bei der eine Liste mit Elementen in einem Frame angezeigt wird. Wenn Sie auf ein Element tippen, wird für den Frame die Navigation auf eine Detailseite des Elements durchgeführt. Für die Seite mit der Liste empfiehlt sich normalerweise eine Zwischenspeicherung. Falls die Detailseite für alle Elemente gleich ist, kann sie auch zwischengespeichert werden. Wenn die Detailseite eher abwechslungsreich gestaltet ist, kann es besser sein, sie nicht zwischenzuspeichern.

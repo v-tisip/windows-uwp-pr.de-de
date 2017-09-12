@@ -6,14 +6,16 @@ ms.assetid: 45C9FE8B-ECA6-44BF-8DDE-7D12ED34A7F7
 label: Master/details
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: d5933eec7b2f34b2c5939bb083113dfd3a1f965d
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 49a586aac0c846cdad02f8448532238bd3eb8551
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="masterdetails-pattern"></a>Master/Details-Muster
 
@@ -21,7 +23,9 @@ translationtype: HT
 
 Das Master/Details-Muster verfügt über einen Masterbereich (in der Regel mit einer [Listenansicht](lists.md)) und einen Detailbereich für Inhalte. Wenn ein Element in der Masterliste ausgewählt wird, wird der Detailbereich aktualisiert. Dieses Muster wird häufig für E-Mails und Adressbücher verwendet.
 
-![Beispiel für das Master/Details-Muster](images/HIGSecOne_MasterDetail.png)
+> **Wichtige APIs**: [ListView-Klasse](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView), [SplitView-Klasse](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.splitview)
+
+![Beispiel für das Master/Detail-Muster](images/HIGSecOne_MasterDetail.png)
 
 ## <a name="is-this-the-right-pattern"></a>Ist dies das richtige Muster?
 
@@ -71,20 +75,14 @@ Für die Liste im Masterbereich wird eine visuelle Auswahlmethode genutzt, um da
 
 Für den Masterbereich eignet sich ein [Listenansicht](lists.md)-Steuerelement gut für die Darstellung von Listen, die Bilder und Text enthalten können.
 
-Verwenden Sie für den Detailbereich das am besten geeignete Inhaltselement. Wenn viele separate Felder vorhanden sind, erwägen Sie die Verwendung eines Rasterlayouts zum Anordnen der Elemente in einem Formular.
+Verwenden Sie für den Detailbereich das am besten geeignete Inhaltselement. Sind mehrere separate Felder vorhanden, sollten Sie die Verwendung eines Rasterlayouts erwägen, um die Elemente als Formular anzuordnen.
 
-## <a name="examples"></a>Beispiele
+## <a name="get-the-code-samples"></a>Beispielcode herunterladen
 
-In diesem Entwurf einer App zur Verfolgung der Börse wird ein Master/Details-Muster verwendet. In diesem Beispiel für die Anzeige der App auf Smartphones befindet sich der Masterbereich/die Masterliste auf der linken Seite und der Detailbereich auf der rechten Seite.
+Beispielcode, der das Master/Detail-Muster veranschaulicht, finden Sie hier: 
 
-![Beispiel für eine App mit dem Master/Details-Muster, auf einem Smartphone](images/uap-finance-phone-masterdetails-600.png)
-
-In diesem Entwurf einer App zur Verfolgung der Börse wird ein Master/Details-Muster verwendet. In diesem Beispiel für die Anzeige der App auf dem Desktop sind sowohl der Masterbereich/die Masterliste als auch der Detailbereich sichtbar und werden im Vollbildmodus angezeigt. Der Masterbereich bietet ein Suchfeld oben und eine Befehlsleiste im unteren Bereich.
-
-![Beispiel für eine App mit dem Master/Details-Muster, auf dem Desktop](images/uap-finance-desktop700.png)
-
-Beispielcode, der Master/Details-Muster veranschaulicht, finden Sie unter
-- [ListView- und GridView-Beispiel](http://go.microsoft.com/fwlink/p/?LinkId=619900)
+- [Beispieldatenbank Kundenbestellung](https://github.com/Microsoft/Windows-appsample-customers-orders-database) 
+- [Beispiele für Raster- und Listenansicht](http://go.microsoft.com/fwlink/p/?LinkId=619900)
 - [RSS-Reader-Beispiel](https://github.com/Microsoft/Windows-appsample-rssreader)
 
 ## <a name="related-articles"></a>Verwandte Artikel
@@ -92,4 +90,4 @@ Beispielcode, der Master/Details-Muster veranschaulicht, finden Sie unter
 - [Listen](lists.md)
 - [Suche](search.md)
 - [App- und Befehlsleisten](app-bars.md)
-- [**ListView-Klasse (XAML)**](https://msdn.microsoft.com/library/windows/apps/br242878)
+- [Listenansichtsklasse](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView)

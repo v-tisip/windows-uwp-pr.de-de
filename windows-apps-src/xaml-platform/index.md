@@ -1,17 +1,19 @@
 ---
 author: jwmsft
 ms.assetid: b632a6cc-3503-4ab8-bfd1-dde731bd89ab
-description: "Dieser Abschnitt enthält Themen, in denen Programmierkonzepte erläutert werden, die generell für alle von Ihnen geschriebenen Apps gelten."
+description: "Dieser Abschnitt enthält Themen, in denen das XAML-Framework für Universelle Windows-Plattform (UWP)-Apps erläutert wird."
 title: XAML-Plattform
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
-ms.openlocfilehash: 3a5a638a2b8caf63cc3353d7bd6a43068ec61119
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: Windows10, UWP
+ms.openlocfilehash: 82ef0c06fa706837f5cbd35d3975c464e14315fa
+ms.sourcegitcommit: a9e4be98688b3a6125fd5dd126190fcfcd764f95
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/21/2017
 ---
 # <a name="xaml-platform"></a>XAML-Plattform
 

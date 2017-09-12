@@ -4,20 +4,22 @@ ms.assetid: 252C44DF-A2B8-4F4F-9D47-33E423F48584
 description: "Mittels dieser Methode in der Windows Store-Analyse-API können Sie gesammelte Fehlerberichtsdaten für einen bestimmten Zeitraum und andere optionale Filter abrufen."
 title: "Abrufen von Fehlerberichtsdaten für Ihre App"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 06/16/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienst, Windows Store-Analyse-API, Fehler
-ms.openlocfilehash: dc5c4092368c0b395e42be122a9e0e7feec8f03e
-ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
-translationtype: HT
+ms.openlocfilehash: 68e54c955d865669907c68d7cf1ef5a0f8986d8d
+ms.sourcegitcommit: 7aabd2e59d45bbc5512dd4ddd9110ae62b79d552
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/19/2017
 ---
 # <a name="get-error-reporting-data-for-your-app"></a>Abrufen von Fehlerberichtsdaten für Ihre App
 
 Mittels dieser Methode in der Windows Store-Analyse-API können Sie aggregierte Fehlerberichtsdaten für Ihre App (im JSON-Format) für einen bestimmten Zeitraum und andere optionale Filter abrufen. Diese Informationen sind auch im Abschnitt **Fehler** des [Integritätsberichts](../publish/health-report.md) im Windows Dev Center-Dashboard verfügbar.
 
-Sie können zusätzliche Fehlerinformationen abrufen, indem Sie die Methoden für das [Abrufen von Details zu einem Fehler in Ihrer App](get-details-for-an-error-in-your-app.md) und das [Abrufen der Stapelüberwachung für einen Fehler in Ihrer App](get-the-stack-trace-for-an-error-in-your-app.md) verwenden.
+Sie können zusätzliche Fehlerinformationen abrufen, indem Sie die Methoden [get error details](get-details-for-an-error-in-your-app.md), [get stack trace](get-the-stack-trace-for-an-error-in-your-app.md) und [download CAB file](download-the-cab-file-for-an-error-in-your-app.md) verwenden.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -168,6 +170,7 @@ Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese 
 * [Integritätsbericht](../publish/health-report.md)
 * [Abrufen von Details zu einem Fehler in Ihrer App](get-details-for-an-error-in-your-app.md)
 * [Abrufen der Stapelüberwachung für einen Fehler in Ihrer App](get-the-stack-trace-for-an-error-in-your-app.md)
+* [Herunterladen der CAB-Datei bei einem Fehler in Ihrer App](download-the-cab-file-for-an-error-in-your-app.md)
 * [Zugreifen auf Analysedaten mit WindowsStore-Diensten](access-analytics-data-using-windows-store-services.md)
 * [Abrufen von App-Käufen](get-app-acquisitions.md)
 * [Abrufen von Add-On-Käufen](get-in-app-acquisitions.md)

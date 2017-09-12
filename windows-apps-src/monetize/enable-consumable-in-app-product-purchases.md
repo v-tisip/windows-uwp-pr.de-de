@@ -9,15 +9,17 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: e2ecaf364c581e82406c76831dd3e33c82594601
-ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
-translationtype: HT
+ms.openlocfilehash: 9190000a2c5a35a0b7125429a19e4743b388d503
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="enable-consumable-in-app-product-purchases"></a>Unterstützen von Käufen konsumierbarer In-App-Produkte
 
 
 > [!NOTE]
-> In diesem Artikel wird veranschaulicht, wie Mitglieder des [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)-Namespace verwendet werden. Wenn Ihre App für Windows10, Version 1607 oder höher, vorgesehen ist, empfehlen wir die Verwendung von Mitgliedern des [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace zum Verwalten von Add-Ons (auch als In-App-Produkte oder IAPs bezeichnet) anstelle des **Windows.ApplicationModel.Store**-Namespace. Weitere Informationen finden Sie unter [In-App-Käufe und Testversionen](in-app-purchases-and-trials.md).
+> In diesem Artikel wird veranschaulicht, wie Mitglieder des [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)-Namespace verwendet werden. Wenn Ihre App für Windows10, Version 1607, oder höher entwickelt wurde, empfehlen wir Ihnen, Member des [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace und nicht des **Windows.ApplicationModel.Store**-Namespace zur Verwaltung von Add-Ons zu verwenden. Weitere Informationen finden Sie in [diesem Artikel](enable-consumable-add-on-purchases.md).
 
 Sie können In-App-Käufe von konsumierbaren Produkten – Artikel, die gekauft, verwendet und wieder gekauft werden können – über die Store-Handelsplattform anbieten, um den Kunden beim Kauf Stabilität und Zuverlässigkeit zu bieten. Dies ist besonders nützlich für Dinge wie spielinterne Währungen (Gold, Münzen usw.), die gekauft und dann zum Erwerben bestimmter Power-Ups verwendet werden können.
 

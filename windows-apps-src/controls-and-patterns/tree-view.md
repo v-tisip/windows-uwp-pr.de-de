@@ -4,16 +4,14 @@ Description: Verwenden Sie den Beispielcode zur Strukturansicht, um eine ausklap
 title: Strukturansicht
 label: Tree view
 template: detail.hbs
-ms.openlocfilehash: 88e3e79b7ebdf06c200f3525095d7685f7e3e6dc
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: c7ad99d20fe30ea4b94ad62de45b3832aae3805e
+ms.sourcegitcommit: b42d14c775efbf449a544ddb881abd1c65c1ee86
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/20/2017
 ---
 # <a name="hierarchical-layout-with-treeview"></a>Hierarchisches Layout mit Strukturansicht
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
-
-<div class="microsoft-internal-note">
-Redlines für die Strukturansicht finden Sie im Designdepot sind: http://designdepotweb1/DesignDepot.FrontEnd/#/Dashboard/856
-</div>
 
 Eine Strukturansicht ist eine Hierarchieauflistung mit Knoten, die das Aus- und Einblenden von geschachtelten Elementen erlauben. Geschachtelte Elemente können zusätzliche Knoten oder reguläre Listenelemente sein. Sie können eine [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx) zum Erstellen einer Strukturansicht benutzen, um eine Ordnerstruktur oder geschachtelte Beziehungen zwischen Elementen in der UI zu veranschaulichen.
 

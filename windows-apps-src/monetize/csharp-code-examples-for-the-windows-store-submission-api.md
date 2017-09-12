@@ -2,27 +2,27 @@
 author: mcleanbyron
 ms.assetid: FABA802F-9CB2-4894-9848-9BB040F9851F
 description: "Verwenden Sie die C#-Codebeispiele in diesem Abschnitt, um mehr über die Verwendung der Windows Store-Übermittlungs-API zu erfahren."
-title: "C#-Codebeispiele für die Übermittlungs-API"
+title: "C#-Beispiel: Übermittlungen für Apps, Add-Ons und Flights"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows10, UWP, Windows Store-Übermittlungs-API, Codebeispiele"
-ms.openlocfilehash: 59b9c0b2cc503a56e0a1c9a75ce5ef471983c699
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: "Windows10, UWP, Windows Store-Übermittlungs-API, Codebeispiele, C#"
+ms.openlocfilehash: 77c0f2ddbe0e76ede2580129d7d0a0ae118b3554
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/09/2017
 ---
-# <a name="c-code-examples-for-the-submission-api"></a>C\#-Codebeispiele für die Übermittlungs-API
+# <a name="c-sample-submissions-for-apps-add-ons-and-flights"></a>C\#-Beispiel: Übermittlungen für Apps, Add-Ons und Flights
 
-Dieser Artikel enthält C#-Codebeispiele für das Verwenden der *Windows Store-Übermittlungs-API*. Weitere Informationen über diese API finden Sie unter [Erstellen und Verwalten von Übermittlungen mit WindowsStore-Diensten](create-and-manage-submissions-using-windows-store-services.md).
+Dieser Artikel enthält C#-Codebeispiele zeigt das Verwenden der [Windows Store-Übermittlungs-API](create-and-manage-submissions-using-windows-store-services.md) für diese Aufgaben:
 
-Diese Codebeispiele veranschaulichen die folgenden Aufgaben:
-
-* [Aktualisieren einer App-Übermittlung](#update-app-submission)
-* [Erstellen einer neuen Add-On-Übermittlung](#create-add-on-submission)
+* [Erstellen einer App-Übermittlung](#create-app-submission)
+* [Erstellen einer Add-On-Übermittlung](#create-add-on-submission)
 * [Aktualisieren einer Add-On-Übermittlung](#update-add-on-submission)
-* [Aktualisieren einer Flight-Paket-Übermittlung](#update-flight-submission)
+* [Erstellen einer Flight-Paket-Übermittlung](#create-flight-submission)
 
 Sie können die einzelnen Beispiele prüfen, um mehr über die jeweilige Aufgabe zu erfahren. Zudem können Sie alle Codebeispiele in diesem Artikel in eine Konsolenanwendung einbinden. Um die Beispiele zu übernehmen, erstellen Sie in Visual Studio eine C#-Konsolenanwendung mit dem Namen **DeveloperApiCSharpSample**, kopieren Sie die einzelnen Beispiele in separate Codedateien des Projekts, und erstellen Sie das Projekt.
 
@@ -31,13 +31,13 @@ Sie können die einzelnen Beispiele prüfen, um mehr über die jeweilige Aufgabe
 Für diese Beispiele werden die folgenden Bibliotheken verwendet:
 
 * Microsoft.WindowsAzure.Storage.dll. Diese Bibliothek ist im [Azure SDK für.NET](https://azure.microsoft.com/downloads/) verfügbar. Sie können jedoch auch das [WindowsAzure.Storage NuGet-Paket](https://www.nuget.org/packages/WindowsAzure.Storage) installieren.
-* [Json.NET](http://www.newtonsoft.com/json) von Newtonsoft.
+* [Newtonsoft.Json](http://www.newtonsoft.com/json) NuGet-Paket von Newtonsoft.
 
 ## <a name="main-program"></a>Hauptprogramm
 
 Mit dem folgenden Beispiel wird ein Befehlszeilenprogramm implementiert, das die anderen Beispielmethoden in diesem Artikel aufruft, um die verschiedenen Verwendungsmethoden der Windows Store-Übermittlungs-API aufzuzeigen. So passen Sie dieses Programm für eigene Zwecke an:
 
-* Weisen Sie die Eigenschaften ```ApplicationId```, ```InAppProductId``` und ```FlightId``` der ID der App, des Add-Ons (Add-Ons werden auch als In-App-Produkte bzw. IAPs bezeichnet) und des Flight-Pakets zu, die bzw. das Sie verwalten möchten. Diese IDs stehen auf dem Dev Center-Dashboard zur Verfügung.
+* Weisen Sie die Eigenschaften ```ApplicationId```, ```InAppProductId``` und ```FlightId``` der ID der App, des Add-Ons und des Flight-Pakets zu, die bzw. das Sie verwalten möchten.
 * Weisen Sie die Eigenschaften ```ClientId``` und ```ClientSecret``` der Client-ID und dem Schlüssel für Ihre App zu, und ersetzen Sie die *tenantid*-Zeichenfolge in der ```TokenEndpoint```-URL durch die Mandanten-ID für Ihre App. Weitere Informationen finden Sie unter [Zuordnen einer Azure AD-Anwendung zu Ihrem Windows Dev Center-Konto](create-and-manage-submissions-using-windows-store-services.md#how-to-associate-an-azure-ad-application-with-your-windows-dev-center-account).
 
 > [!div class="tabbedCodeSnippets"]
@@ -51,8 +51,8 @@ Die Beispiel-App verwendet die ```ClientConfiguration```-Hilfsklasse zum Überge
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[SubmissionApi](./code/StoreServicesExamples_Submission/cs/ClientConfiguration.cs#ClientConfiguration)]
 
-<span id="update-app-submission" />
-## <a name="update-an-app-submission"></a>Aktualisieren einer App-Übermittlung
+<span id="create-app-submission" />
+## <a name="create-an-app-submission"></a>Erstellen einer App-Übermittlung
 
 Das folgende Beispiel implementiert eine Klasse, die mehrere Methoden in der WindowsStore-Übermittlungs-API verwendet, um eine App-Übermittlung zu aktualisieren. Die ```RunAppSubmissionUpdateSample```-Methode in der Klasse erstellt eine neue Übermittlung als Klon der letzten veröffentlichten Übermittlung, aktualisiert sie und sendet die geklonte Übermittlung an Windows Dev Center. Genauer gesagt führt die ```RunAppSubmissionUpdateSample```-Methode diese Aufgaben aus:
 
@@ -67,7 +67,7 @@ Das folgende Beispiel implementiert eine Klasse, die mehrere Methoden in der Win
 [!code-cs[SubmissionApi](./code/StoreServicesExamples_Submission/cs/AppSubmissionUpdateSample.cs#AppSubmissionUpdateSample)]
 
 <span id="create-add-on-submission" />
-## <a name="create-a-new-add-on-submission"></a>Erstellen einer neuen Add-On-Übermittlung
+## <a name="create-an-add-on-submission"></a>Erstellen einer Add-On-Übermittlung
 
 Das folgende Beispiel implementiert eine Klasse, die mehrere Methoden in der WindowsStore-Übermittlungs-API verwendet, um eine neue Add-On-Übermittlung zu erstellen. Die ```RunInAppProductSubmissionCreateSample```-Methode in der Klasse führt diese Aufgaben aus:
 
@@ -94,8 +94,8 @@ Das folgende Beispiel implementiert eine Klasse, die mehrere Methoden in der Win
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[SubmissionApi](./code/StoreServicesExamples_Submission/cs/InAppProductSubmissionUpdateSample.cs#InAppProductSubmissionUpdateSample)]
 
-<span id="update-flight-submission" />
-## <a name="update-a-package-flight-submission"></a>Aktualisieren einer Flight-Paket-Übermittlung
+<span id="create-flight-submission" />
+## <a name="create-a-package-flight-submission"></a>Erstellen einer Flight-Paket-Übermittlung
 
 Das folgende Beispiel implementiert eine Klasse, die mehrere Methoden in der WindowsStore-Übermittlungs-API verwendet, um eine Flight-Paketübermittlung zu aktualisieren. Die ```RunFlightSubmissionUpdateSample```-Methode in der Klasse erstellt eine neue Übermittlung als Klon der letzten veröffentlichten Übermittlung, aktualisiert sie und sendet die geklonte Übermittlung an Windows Dev Center. Genauer gesagt führt die ```RunFlightSubmissionUpdateSample```-Methode diese Aufgaben aus:
 
@@ -123,4 +123,4 @@ Die ```IngestionClient```-Klasse stellt Hilfsmethoden bereit, die von anderen Me
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [Erstellen und Verwalten von Übermittlungen mit WindowsStore-Diensten](create-and-manage-submissions-using-windows-store-services.md)
+* [Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten](create-and-manage-submissions-using-windows-store-services.md)

@@ -1,147 +1,162 @@
 ---
 author: normesta
-Description: "Bereitstellen und Debuggen einer UWP-App (Universelle Windows-Plattform), die mit der Desktop-zu-UWP-Brücke von einer Windows-Desktopanwendung (Win32, WPF und Windows Forms) konvertiert wurde"
+Description: "Führen Sie Ihre verpackte App aus und prüfen Sie, wie sie aussieht, ohne sie zu signieren. Legen Sie anschließend Haltepunkte fest und lassen Sie den Code schrittweise durchlaufen. Wenn Sie bereit sind, Ihre App in einer Produktionsumgebung zu testen, signieren Sie Ihre App und installieren Sie sie."
 Search.Product: eADQiWindows 10XVcnh
-title: "Debuggen der Desktop-zu-UWP-Brücke"
+title: "Ausführen, Debuggen und Testen eine verpackten Desktop-App (Desktop-Brücke)"
 ms.author: normesta
-ms.date: 03/09/2017
+ms.date: 06/20/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows10, UWP
 ms.assetid: f45d8b14-02d1-42e1-98df-6c03ce397fd3
-ms.openlocfilehash: d1ce3054df19b0b51c8203e7fa7296efde848c41
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: c160fecc530a6366de48f4f2ecc24df2463c0469
+ms.sourcegitcommit: 77bbd060f9253f2b03f0b9d74954c187bceb4a30
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/11/2017
 ---
-# <a name="desktop-to-uwp-bridge-debug"></a>Debuggen der Desktop-zu-UWP-Brücke
+# <a name="run-debug-and-test-a-packaged-desktop-app-desktop-bridge"></a>Ausführen, Debuggen und Testen eine verpackten Desktop-App (Desktop-Brücke)
 
-Dieses Thema enthält Informationen, die Sie beim erfolgreichen Debuggen der App nach der Konvertierung mit der Desktop-zu-UWP-Brücke unterstützen. Sie haben mehrere Optionen zum Debuggen der konvertierten App.
+Führen Sie Ihre verpackte App aus und prüfen Sie, wie sie aussieht, ohne sie zu signieren. Legen Sie anschließend Haltepunkte fest und lassen Sie den Code schrittweise durchlaufen. Wenn Sie bereit sind, Ihre App in einer Produktionsumgebung zu testen, signieren Sie Ihre App und installieren Sie sie. In diesem Thema erfahren Sie, wie Sie diese einzelnen Schritte ausführen.
 
-## <a name="attach-to-process"></a>Anhängen an den Prozess
+<span id="run-app" />
+## <a name="run-your-app"></a>Ausführen der App
 
-Wenn Sie Microsoft Visual Studio als Administrator ausführen, funktionieren die Befehle *Debuggen starten* und *Start Without* für das konvertierte App-Projekt, doch die gestartete App wird auf einer [Ebene mittlerer Integrität](https://msdn.microsoft.com/library/bb625963) ausgeführt (d.h. ohne erhöhte Rechte). Wenn Sie der gestarteten App Administratorrechte gewähren möchten, müssen Sie sie zunächst über eine Verknüpfung oder eine Kachel „als Administrator“ starten. Wenn die App ausgeführt wird, rufen Sie von einer Microsoft Visual Studio-Instanz, die als Administrator ausgeführt wird, __An Prozess anhängen__ auf, und wählen Sie im Dialogfeld den Prozess der App.
+Sie können Ihre App lokal testen, ohne dass Sie ein Zertifikat benötigen und es signieren müssen.
 
-## <a name="f5-debug"></a>Debugging mit F5
+Wenn Sie Ihr Paket mit einem UWP-Projekt in Visual Studio erstellt haben, legen Sie das Verpackungsprojekt als Startprojekt fest und drücken Sie dann STRG+F5, um Ihre App zu starten.
 
-Visual Studio unterstützt jetzt ein neues Paketprojekt. Das neue Projekt ermöglicht beim Erstellen der Anwendung das automatische Kopieren von Updates in das Windows-App-Paket, das vom Konverter für den Installer Ihrer Anwendung erstellt wurde. Nach der Konfiguration des Paketprojekts können Sie F5 verwenden, um das Debuggen direkt im Windows-App-Paket durchzuführen.
+Wenn Sie den Desktop App Converter verwendet oder Ihre App manuell verpackt haben, öffnen Sie eine Windows PowerShell-Befehlsaufforderung, und führen Sie dieses Cmdlet vom **PacakgeFiles**-Unterordner des Ausgabeordners aus:
 
->Hinweis: Sie können auch die Option zum Debuggen eines vorhandenen Windows-App-Pakets verwenden, indem Sie Debuggen -> Andere Debugziele -> Installiertes App-Paket debuggen auswählen.
+```
+Add-AppxPackage –Register AppxManifest.xml
+```
+Finden Sie Ihre App im Windows-Startmenü, um sie auszuführen.
 
-Dies sind die ersten Schritte:
+![Verpackte App im Startmenü.](images/desktop-to-uwp/converted-app-installed.png)
 
-1. Stellen Sie zunächst sicher, dass Desktop App Converter verwendet werden kann. Eine Anleitung hierzu finden Sie unter [Desktop App Converter](desktop-to-uwp-run-desktop-app-converter.md).
+> [!NOTE]
+> Eine verpackte App wird immer als ein interaktiver Benutzer ausgeführt, und jedes Laufwerk, auf das Sie die verpackte App installieren, muss auf das NTFS-Format formatiert sein.
 
-2. Führen Sie den Konverter und dann den Installer für die Win32-Anwendung aus. Der Konverter erfasst das Layout und alle an der Registrierung vorgenommenen Änderungen und gibt ein Windows-App-Paket mit einem Manifest und die Datei „Registry.dat“ aus, um die Registrierung zu virtualisieren:
+## <a name="debug-your-app"></a>Debuggen Sie Ihre App
 
-![alt](images/desktop-to-uwp/debug-1.png)
+Wählen Sie Ihr Paket in einem Dialogfeld bei jedem Debuggen Ihrer App oder Installieren einer Erweiterung aus und Debuggen Sie Ihre App ohne jedes Mal Ihr Paket auszuwählen.
 
-3. Installieren und starten Sie [Visual Studio2017 RC](https://www.visualstudio.com/downloads/#visual-studio-community-2017-rc).
+### <a name="debug-your-app-by-selecting-the-package"></a>Debuggen Sie Ihre App, indem Sie das Paket auswählen
 
-4. Installieren Sie das VSIX-Projekt „Desktop to UWP Packaging“ aus der [Visual Studio Gallery](http://go.microsoft.com/fwlink/?LinkId=797871).
+Diese Option hat die kürzeste Einrichtungszeit, aber Sie müssen bei der Ausführung jeder Debugsitzung einen zusätzlichen Schritt durchführen.
 
-5. Öffnen Sie die entsprechende Win32-Lösung, die in Visual Studio konvertiert wurde.
 
-6. Fügen Sie der Projektmappe das neue Paketprojekt hinzu, indem Sie mit der rechten Maustaste auf die Projektmappe klicken und „Neues Projekt hinzufügen“ wählen. Wählen Sie dann unter „Setup und Bereitstellung“ das Paketprojekt „Desktop to UWP Packaging Project“:
+1. Stellen Sie sicher, dass Sie Ihr App-Paket mindestens ein Mal starten, damit es auf dem lokalen Computer installiert ist.
+
+   Informationen hierzu finden Sie im Abschnitt [Ausführen Ihrer App](#run-app) weiter oben.
+
+2. Starten Sie Visual Studio.
+
+   Wenn Sie Ihre App mit erhöhten Berechtigungen debuggen möchten, starten Sie Visual Studio anhand der Option **als Administrator ausführen**.
+
+3. Wählen Sie in Visual Studio **Debuggen**->**Andere Debugziele**->**Installiertes App-Paket debuggen**.
+
+4. In der **installierte App-Pakete** Liste, wählen Sie das App-Paket, und wählen Sie dann die **Anhängen** Schaltfläche.
+
+
+### <a name="debug-your-app-without-having-to-select-the-package"></a>Debuggen Sie Ihre App ohne das Paket auswählen zu müssen
+
+Diese Option hat die längste Einrichtungszeit, jedoch werden Sie nicht das installiere Paket jedes Mal beim Starten Ihrer App auswählen müssen. Sie müssen [Visual Studio2017](https://www.visualstudio.com/vs/whatsnew/) installieren, um diese Option nutzen zu können.
+
+1. Installieren Sie zunächst die [Desktop-Brücke Debugging Project](http://go.microsoft.com/fwlink/?LinkId=797871).
+
+2. Starten Sie Visual Studio, und öffnen Sie das Projekt für die Desktop-Anwendung.
+
+6. Hinzufügen eines **Debuggen von Desktop-Brücke**-Projekts zur Projektmappe.
+
+   Sie finden die Projektvorlage in der Gruppe **Andere Projekttypen** der installierten Vorlagen.
 
     ![alt](images/desktop-to-uwp/debug-2.png)
 
-    Das resultierende Projekt wird der Projektmappe hinzugefügt:
+    Das **Debuggen von Desktop-Brücke**-Projekt wird in der Projektmappe angezeigt.
 
     ![alt](images/desktop-to-uwp/debug-3.png)
 
-    Im Paketprojekt stellt die AppXFileList eine Zuordnung von Dateien im Windows-App-Layout bereit. Verweise sind zunächst leer, sollten jedoch manuell auf die .exe-Projektdatei für die Buildreihenfolge festgelegt werden.
+7. Öffnen Sie die Eigenschaftenseiten des **Debuggen von Desktop-Brücke**-Projekts.
 
-7. Das DesktopToUWPPackaging-Projekt verfügt über eine Eigenschaftenseite, auf der Sie den Windows-App-Paketstamm konfigurieren und die auszuführende Kachel festlegen können:
+8. Legen Sie das **Paketlayout**-Feld auf den Speicherort Ihres Manifestdateienpakets (AppxManifest.xml) fest, und wählen Sie die ausführbare Datei Ihrer App aus der Dropdown-Liste **Kachel starten**.
 
-    ![alt](images/desktop-to-uwp/debug-4.png)
+     ![alt](images/desktop-to-uwp/debug-4.png)
 
-    Legen Sie PackageLayout auf das Stammverzeichnis des Windows-App-Projekts fest, das vom Konverter (siehe oben) erstellt wurde. Wählen Sie die Kachel, die Sie ausführen möchten.
+8. Öffnen Sie die Datei AppXPackageFileList.xml im Code-Editor.
 
-8.    Öffnen und bearbeiten Sie die Datei „AppXFileList.xml“. Diese Datei definiert, wie die Ausgabe des Win32-Debugbuilds in das vom Konverter erstellte Windows-App-Layout kopiert wird. Standardmäßig enthält die Datei einen Platzhalter mit einem Beispieltag und einem Kommentar:
+9. Entfernen Sie Kommentare aus dem XML-Block, und geben Sie die Werte für diese Elemente ein:
 
-    ```XML
-    <?xml version="1.0" encoding="utf-8"?>
-    <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-      <ItemGroup>
-    <!— Use the following syntax to copy debug output to the AppX layout
-       <AppxPackagedFile Include="$(outdir)\App.exe">
-          <PackagePath>App.exe</PackagePath>
-        </AppxPackagedFile>
-        See http://etc...
-    -->
-      </ItemGroup>
-    </Project>
-    ```
+   **MyProjectOutputPath**: Der relative Pfad zum Ordner „Debug” von Ihrer Desktop-Anwendung.
 
-    Im Folgenden finden Sie ein Beispiel für das Erstellen der Zuordnung. In diesem Fall werden die EXE- und DLL-Dateien vom Win32-Buildspeicherort in den Speicherort des Paketlayouts kopiert.
+   **LayoutFile**: Die ausführbare Datei, die im Ordner „Debug” von Ihrer Desktop-Anwendung ist.
+
+   **PackagePath**: Der vollqualifizierte Name für die ausführbare Datei Ihrer Desktop-Anwendung, die zu Ihrem Windows-App-Paketordner während der Konvertierung kopiert wurde.
+
+    Beispiel:
 
     ```XML
-    <?xml version="1.0" encoding=utf-8"?>
-    <Project ToolsVersion=14.0" xmlns="http://scehmas.microsoft.com/developer/msbuild/2003">
-        <PropertyGroup>
-            <MyProjectOutputPath>{relativepath}</MyProjectOutputPath>
-        </PropertyGroup>
-        <ItemGroup>
-            <LayoutFile Include="$(MyProjectOutputPath)\ProjectTracker.exe">
-                <PackagePath>$(PackageLayout)\VFS\Program Files (x86)\Contoso Software\Project Tracker\ProjectTracker.exe</PackagePath>
-            </LayoutFile>
-            <LayoutFile Include="$(MyProjectOutputPath)\ProjectTracker.Models.dll">
-                <PackagePath>$(PackageLayout)\VFS\Program Files (x86)\Contoso Software\Project Tracker\ProjectTracker.Models.dll</PackagePath>
-            </LayoutFile>
-        </ItemGroup>
-    </Project>
+  <?xml version="1.0" encoding="utf-8"?>
+  <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+     <MyProjectOutputPath>..\MyDesktopApp\bin\Debug</MyProjectOutputPath>
+    </PropertyGroup>
+    <ItemGroup>
+      <LayoutFile Include="$(MyProjectOutputPath)\MyDesktopApp.exe">
+        <PackagePath>$(PackageLayout)\MyDesktopApp.exe</PackagePath>
+      </LayoutFile>
+    </ItemGroup>
+  </Project>
     ```
 
-    Die Datei wird wie folgt definiert:
+  Wenn Ihre App DLL-Dateien nutzt, die von anderen Projekten in Ihrer Projektmappe generiert werden, und Sie den Code ändern wollen, der in diesen DLL-Dateien enthalten ist, dann fügen Sie für diese DLL-Dateien ein **LayoutFile**-Element ein.
 
-    Zunächst wird *MyProjectOutputPath* so definiert, dass es auf den Speicherort zeigt, wo das Win32-Projekt erstellt wird:
+  ```XML
+  ...
+      <LayoutFile Include="$(MyProjectOutputPath)\MyDesktopApp.Models.dll">
+      <PackagePath>$(PackageLayout)\MyDesktopApp.Models.dll</PackagePath>
+      </LayoutFile>
+  ...
+  ```
 
-    ```XML
-    <?xml version="1.0" encoding="utf-8"?>
-    <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-        <PropertyGroup>
-            <MyProjectOutputPath>..\ProjectTracker\bin\DesktopUWP</MyProjectOutputPath>
-        </PropertyGroup>
-    ```
-
-    Anschließend gibt jede *LayoutFile* eine Datei an, die aus dem Win32-Buildspeicherort in das Windows-App-Paketlayout kopiert wird. In diesem Fall werden erst eine EXE-Datei und dann eine DLL-Datei kopiert.
-
-    ```XML
-        <ItemGroup>
-            <LayoutFile Include="$(MyProjectOutputPath)\ProjectTracker.exe">
-                <PackagePath>$(PackageLayout)\VFS\Program Files (x86)\Contoso Software\Project Tracker\ProjectTracker.exe</PackagePath>
-            </LayoutFile>
-            <LayoutFile Include="$(MyProjectOutputPath)\ProjectTracker.Models.dll">
-                <PackagePath>$(PackageLayout)\VFS\Program Files (x86)\Contoso Software\Project Tracker\ProjectTracker.Models.dll</PackagePath>
-            </LayoutFile>
-        </ItemGroup>
-    </Project>
-    ```
-
-9. Legen Sie das Paketprojekt als Startprojekt fest. Hierdurch werden die Win32-Dateien in das Windows-App-Paket kopiert und der Debugger gestartet, wenn das Projekt erstellt und ausgeführt wird.  
+10. Legen Sie das Paketprojekt als Startprojekt fest.  
 
     ![alt](images/desktop-to-uwp/debug-5.png)
 
-10.    Schließlich können Sie einen Haltepunkt im Win32-Code festlegen und F5 drücken, um den Debugger zu starten. Alle an der Win32-Anwendung vorgenommenen Änderungen im Windows-App-Paket werden kopiert. Sie können das Debugging direkt in Visual Studio durchführen.
+11. Legen Sie Haltepunkte im Code Ihrer Desktop-Anwendung fest, und starten Sie den Debugger.
 
-11.    Wenn Sie Ihre Anwendung aktualisieren, müssen Sie MakeAppX verwenden, um erneut ein App-Paket zu erstellen. Weitere Informationen finden Sie unter [App-Objekt-Manager (MakeAppx.exe)](https://msdn.microsoft.com/library/windows/desktop/hh446767(v=vs.85).aspx).
+  ![Debug-Schaltfläche](images/desktop-to-uwp/debugger-button.png)
 
-Wenn Sie über mehrere Buildkonfigurationen verfügen (z. B. für Version und fürs Debuggen), können Sie der Datei „AppXFileList.xml“ Folgendes hinzufügen, um den Win32-Build aus verschiedenen Speicherorten zu kopieren:
+  Visual Studio kopiert die ausführbaren und DLL-Dateien, die Sie in der XML-Datei für Ihr Windows-App-Paket angegeben haben, und startet dann den Debugger.
+
+#### <a name="handle-multiple-build-configurations"></a>Mehrere Buildkonfigurationen steuern
+
+Wenn Sie mehrere Buildkonfigurationen definiert haben (z.B.: Veröffentlichen und Debuggen), können Sie die Datei AppXPackageFileList.xml ändern, um nur die Dateien zu kopieren, die der Buildkonfiguration entspricht, die Sie in Visual Studio beim Starten des Debuggers gewählt haben.
+
+Beispiel:
 
 ```XML
 <PropertyGroup>
-    <MyProjectOutputPath Condition="$(Configuration) == 'DesktopUWP'">C:\Users\peterfar\Desktop\ProjectTracker\ProjectTracker\bin\DesktopUWP>
-    </MyProjectOutputPath>
-    <MyProjectOutputPath Condition="$(Configuration) == 'ReleaseDesktopUWP'"> C:\Users\peterfar\Desktop\ProjectTracker\ProjectTracker\bin\ReleaseDesktopUWP</MyProjectOutputPath>
+    <MyProjectOutputPath Condition="$(Configuration) == 'Debug'">..\MyDesktopApp\bin\Debug</MyProjectOutputPath>
+    <MyProjectOutputPath Condition="$(Configuration) == 'Release'"> ..\MyDesktopApp\bin\Release</MyProjectOutputPath>
 </PropertyGroup>
 ```
 
-Sie können auch die bedingte Kompilierung zum Aktivieren bestimmter Codepfade verwenden, wenn Sie Ihre Anwendung für UWP aktualisieren, diese jedoch weiterhin für Win32 erstellen möchten.
+#### <a name="debug-uwp-enhancements-to-your-app"></a>Debuggen von UWP-Erweiterungen für Ihre App
 
-1.    Im folgenden Beispiel werden nur der Code für DesktopUWP kompiliert und eine Kachel mit der WinRT-API dargestellt.
+Sie möchten vielleicht Ihre App mit modernen Funktionen wie Live-Kacheln optimieren. Wenn das der Fall ist, können Sie bedingte Kompilierung verwenden, um Codepfade mit bestimmten Buildkonfigurationen zu aktivieren.
 
-    ```C#
+1. Definieren Sie zunächst in Visual Studio eine Buildkonfiguration und geben Sie ihr einen Namen wie „DesktopUWP”.
+
+2. Fügen Sie in der Registerkarte **Build** der Projekteigenschaften Ihres Projekts den Namen im Feld **Symbole für bedingte Kompilierung** hinzu.
+
+     ![alt](images/desktop-to-uwp/debug-8.png)
+
+3. Fügen Sie bedingte Codeblöcke hinzu. Dieser Code wird nur für die **DesktopUWP**-Buildkonfiguration kompiliert.
+
+    ```csharp
     [Conditional("DesktopUWP")]
     private void showtile()
     {
@@ -153,25 +168,50 @@ Sie können auch die bedingte Kompilierung zum Aktivieren bestimmter Codepfade v
     }
     ```
 
-2.    Sie können den Konfigurations-Manager zum Hinzufügen neuer Buildkonfiguration verwenden:
+### <a name="debug-the-entire-app-lifecycle"></a>Debuggen des gesamten App-Lebenszyklus
 
-    ![alt](images/desktop-to-uwp/debug-6.png)
+In einigen Fällen empfiehlt sich eine differenziertere Steuerung des Debugging-Vorgangs, wenn z.B. das Debuggen erfolgen soll, bevor die App gestartet wird.
 
-    ![alt](images/desktop-to-uwp/debug-7.png)
+Sie können [PLMDebug](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx) verwenden, um volle Kontrolle über den App-Lebenszyklus zu erhalten, einschließlich über das Anhalten, Fortsetzen und Beenden.
 
-3.    Fügen Sie dann in den Projekteigenschaften Unterstützung für Symbole für die bedingte Kompilierung hinzu:
+[PLMDebug](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx) ist im Windows SDK enthalten.
 
-    ![alt](images/desktop-to-uwp/debug-8.png)
 
-4.    Sie können jetzt das Buildziel zu DesktopUWP ändern, wenn Sie für die hinzugefügte UWP-API erstellen möchten.
+### <a name="modify-your-app-in-between-debug-sessions"></a>Ändern Sie Ihre App zwischen Debugsitzungen
 
-## <a name="plmdebug"></a>PLMDebug
+Wenn Sie an Ihrer App Änderungen vornehmen, um Fehlern zu beheben, wechseln Sie sie anhand des MakeAppx-Tools aus. Informationen hierzu finden Sie unter [Ausführen des MakeAppx-Tools](desktop-to-uwp-manual-conversion.md#make-appx).
 
-In Visual Studio können Sie mit der Taste F5 sowie mithilfe der Option „An den Prozess anhängen“ Ihre App debuggen, während sie ausgeführt wird. In einigen Fällen empfiehlt sich jedoch eine differenziertere Steuerung des Debugging-Vorgangs, wenn z.B. das Debuggen erfolgen soll, bevor die App gestartet wird. Verwenden Sie in diesen komplexeren Szenarien [**PLMDebug**](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx). Mit diesem Tool können Sie die konvertierte App mit dem Windows-Debugger debuggen. Zudem verfügen Sie über die vollständige Steuerung des App-Lebenszyklus, einschließlich Anhalten, Fortsetzen und Beenden.
+## <a name="test-your-app"></a>Testen der App
 
-PLMDebug ist im Windows SDK enthalten. Weitere Informationen finden Sie unter [**PLMDebug**](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx).
+Um Ihre App vor der Verteilung in einer realistischen Umgebung zu testen, empfiehlt es sich, Ihre App zu signieren und sie anschließend zu installieren.
 
-## <a name="run-another-process-inside-the-full-trust-container"></a>Ausführen eines anderen Prozesses im vollständig vertrauenswürdigen Container
+Wenn Sie Ihre App anhand Visual Studio verpackt haben, können Sie ein Skript zum Signieren Ihrer App ausführen und sie anschließend installieren. Weitere Informationen finden Sie unter [Querladen des App-Pakets](../packaging/packaging-uwp-apps.md#sideload-your-app-package).
+
+Wenn Sie Ihre App mithilfe des Desktop App Converters verpackt haben, können Sie die ``sign``-Parameter verwenden, um Ihre App automatisch mit einem generierten Zertifikat zu signieren. Sie müssen das Zertifikat und anschließend die App installieren. Weitere Informationen finden Sie unter [Ausführung der verpackten App](desktop-to-uwp-run-desktop-app-converter.md#run-app).   
+
+Sie können Ihre App auch manuell signieren. So geht’s
+
+1. Erstellen eines Zertifikats. Weitere Informationen finden Sie unter [Erstellen eines Zertifikats](../packaging/create-certificate-package-signing.md).
+
+2. Installieren Sie das Zertifikat im Zertifikatsspeicher **Vertrauenswürdiger Stamm** oder **Vertrauenswürdige Personen** auf Ihrem System.
+
+3. Signieren Sie Ihre App anhand des Zertifikats. Weiter Informationen finden Sie unter [Signieren eines App-Pakets mit SignTool](../packaging/sign-app-package-using-signtool.md).
+
+  > [!IMPORTANT]
+  > Stellen Sie sicher, dass der Name des Herausgebers auf dem Zertifikat dem Namen des Herausgebers Ihrer App entspricht.
+
+### <a name="related-sample"></a>Verwandte Beispiele
+
+[SigningCerts](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/SigningCerts)
+
+
+### <a name="test-your-app-for-windows-10-s"></a>Testen Sie Ihre App für Windows 10 S.
+
+Bevor Sie Ihre App veröffentlichen, stellen Sie sicher, dass sie korrekt auf Geräten unter Windows10 S ausgeführt wird. Wenn Sie Ihre App im Windows Store veröffentlichen möchten, müssen Sie dies tun, da es eine Anforderung des Stores ist. Apps, die auf Geräten unter Windows10 S nicht ordnungsgemäß funktionieren, werden nicht zertifiziert. 
+
+Weitere Informationen finden Sie unter [Testen Ihrer Windows-App für Windows10 S](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-test-windows-s).
+
+### <a name="run-another-process-inside-the-full-trust-container"></a>Ausführen eines anderen Prozesses im vollständig vertrauenswürdigen Container
 
 Sie können benutzerdefinierte Prozesse im Container eines angegebenen App-Pakets aufrufen. Dies kann nützlich sein, um Szenarien zu testen (z.B. wenn Sie über eine benutzerdefinierte Testumgebung verfügen und die Ausgabe der App testen möchten). Verwenden Sie hierzu das PowerShell-Cmdlet ```Invoke-CommandInDesktopPackage```:
 
@@ -179,3 +219,13 @@ Sie können benutzerdefinierte Prozesse im Container eines angegebenen App-Paket
 Invoke-CommandInDesktopPackage [-PackageFamilyName] <string> [-AppId] <string> [-Command] <string> [[-Args]
     <string>]  [<CommonParameters>]
 ```
+
+## <a name="next-steps"></a>Nächste Schritte
+
+**Antworten auf bestimmte Fragen finden**
+
+Unser Team überwacht diese [StackOverflow-Tags](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge).
+
+**Geben Sie Feedback zu diesem Artikel**
+
+Verwenden Sie den Kommentarabschnitt weiter unten.

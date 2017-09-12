@@ -4,19 +4,20 @@ Description: "Nachdem Sie die App-Einreichung fertig gestellt haben und auf „A
 title: Der App-Zertifizierungsprozess
 ms.assetid: 0DCB4344-224D-4E5A-899F-FF7A89F23DBC
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 04/13/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 87fc6e35a2a9818478aca4119850ae20165d2a64
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: f075dc6e112a526d7aee71f0f9aa7d4da570d649
+ms.sourcegitcommit: cd9b4bdc9c3a0b537a6e910a15df8541b49abf9c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/21/2017
 ---
 # <a name="the-app-certification-process"></a>Der App-Zertifizierungsprozess
 
-
-Nachdem Sie die App-Einreichung fertig gestellt haben und auf **An Store übermitteln** klicken, tritt die App in die Zertifizierungsphase ein. Dieser Vorgang ist in der Regel innerhalb weniger Stunden abgeschlossen, kann in Einzelfällen aber bis zu drei Arbeitstage dauern. Nach der Zertifizierung der Übermittlung kann es bis zu 16Stunden dauern, bis der App-Eintrag (oder ein Update für eine bereits veröffentlichte App) für Kunden im Store sichtbar wird. Eine Benachrichtigung wird angezeigt, wenn Ihre Übermittlung veröffentlicht wurde und für Kunden verfügbar ist, und der App-Status im Dashboard lautet **Im Store**.
+Nachdem Sie die App-Einreichung fertig gestellt haben und auf **An Store übermitteln** klicken, tritt die App in die Zertifizierungsphase ein. Dieser Vorgang ist in der Regel innerhalb weniger Stunden abgeschlossen, kann in Einzelfällen aber bis zu drei Arbeitstage dauern. Nach der Zertifizierung der Übermittlung kann es bis zu 24Stunden dauern, bis der App-Eintrag (oder ein Update für eine bereits veröffentlichte App) für Kunden im Store sichtbar wird. Eine Benachrichtigung wird angezeigt, wenn Ihre Übermittlung veröffentlicht wurde und für Kunden verfügbar ist, und der App-Status im Dashboard lautet **Im Store**.
 
 ## <a name="preprocessing"></a>Vorverarbeitung
 
@@ -40,11 +41,11 @@ Nachdem Ihre App zertifiziert wurde, kann sie in den **Veröffentlichungsprozess
 
 Die Pakete Ihrer App werden digital signiert, damit sie nach ihrer Veröffentlichung nicht manipuliert werden können. Nach Beginn dieser Phase ist ein Abbruch der Einreichung oder eine Änderung des Veröffentlichungsdatums nicht mehr möglich.
 
-Während sich Ihre App in der Veröffentlichungsphase befindet, erfahren Sie über den Link **Details anzeigen** in der Statusspalte für die App-Übermittlung, wann Ihre neuen Pakete und die Details des Store-Eintrags auf jedem der unterstützten Betriebssystemversionen für Kunden zur Verfügung stehen. Ihre App bleibt in der Veröffentlichungsphase, bis die neuen Pakete und Details des Eintrags für alle potenziellen Kunden der App verfügbar sind. Dies kann bis zu 16Stunden dauern. 
+Während sich Ihre App in der Veröffentlichungsphase befindet, erfahren Sie über den Link **Details anzeigen** in der Statusspalte für die App-Übermittlung, wann Ihre neuen Pakete und die Details des Store-Eintrags auf jedem der unterstützten Betriebssystemversionen für Kunden zur Verfügung stehen. Ihre App bleibt in der Veröffentlichungsphase, bis die neuen Pakete und Details des Eintrags für alle potenziellen Kunden der App verfügbar sind. Dies kann bis zu 24Stunden dauern. 
 
 ## <a name="in-the-store"></a>Im Store 
 
-Nach erfolgreicher Absolvierung der obigen Schritte ändert sich der Status der Übermittlung von **Veröffentlichung** in **Im Store**. Ihre Übermittlung steht den Kunden nun im Windows Store zum Download zur Verfügung (sofern Sie unter [Verteilung und Sichtbarkeit](set-app-pricing-and-availability.md#distribution-and-visibility) keine andere Option ausgewählt haben). 
+Nach erfolgreicher Absolvierung der obigen Schritte ändert sich der Status der Übermittlung von **Veröffentlichung** in **Im Store**. Ihre Übermittlung steht den Kunden nun im Windows Store zum Download zur Verfügung (sofern Sie unter [Sichtbarkeit](set-app-pricing-and-availability.md#visibility) keine andere Option ausgewählt haben). 
 
 **Hinweis**  Außerdem führen wir Stichprobenkontrollen für bereits veröffentlichte Apps durch, um potenzielle Probleme zu ermitteln und sicherzustellen, dass Ihre App alle [Windows Store-Richtlinien](https://msdn.microsoft.com/library/windows/apps/dn764944) erfüllt. Falls Probleme gefunden werden, werden Sie benachrichtigt, dass ein Problem aufgetreten ist und wie Sie es ggf. beheben können, oder dass die App aus dem Store entfernt wurde.
 

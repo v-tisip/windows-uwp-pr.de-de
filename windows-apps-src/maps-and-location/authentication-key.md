@@ -1,17 +1,19 @@
 ---
-author: msatranjr
+author: normesta
 title: "Anfordern eines Kartenauthentifizierungsschlüssels"
 description: Ihre universelle Windows-App muss authentifiziert werden, bevor sie die MapControl-Klasse und Kartendienste im Windows.Services.Maps-Namespace verwenden kann.
 ms.assetid: 13B400D7-E13F-4F07-ACC3-9C34087F0F73
-ms.author: misatran
+ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows10, UWP, Kartenauthentifizierungsschlüssel, Kartensteuerelement"
-ms.openlocfilehash: 42078becbc5853787ca057dcbfb58b8d8de7967d
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 7b964c19933db460b8f6b0cc7791165ad86adb6c
+ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="request-a-maps-authentication-key"></a>Anfordern eines Kartenauthentifizierungsschlüssels
 
@@ -40,9 +42,9 @@ So erstellen Sie einen neuen Schlüssel
 
 4.  Wenn Sie noch kein Bing Karten-Konto besitzen, erstellen Sie ein neues Bing Karten-Konto. Geben Sie **Kontoname**, **Kontaktname**, **Firmenname**, **E-Mail-Adresse** und **Telefonnummer** ein. Akzeptieren Sie die Nutzungsbedingungen, und klicken Sie auf **Erstellen**.
 
-5.  Klicken Sie unter dem Menü **Mein Konto** auf **Create or view keys** (Schlüssel erstellen oder anzeigen).
+5.  Klicken Sie im Menü **Mein Konto** auf **Eigene Schlüssel**.
 
-6.  Klicken Sie auf den Link zum **Erstellen eines neuen Schlüssels**.
+6.  Wenn Sie bereits einen Schlüssel erstellt haben, klicken Sie auf den Link, um einen neuen Schlüssel zu erstellen. “Andernfalls fahren Sie mit dem Formular „Schlüssel erstellen” fort.
 
 7.  Füllen Sie das Formular **Schlüssel erstellen** aus, und klicken Sie dann auf **Erstellen**.
 

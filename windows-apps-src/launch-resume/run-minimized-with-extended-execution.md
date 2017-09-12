@@ -1,27 +1,29 @@
 ---
 author: TylerMSFT
 description: "Erfahren Sie, wie Sie die erweiterte Ausführung verwenden, damit Ihre App auch bei Minimierung weiter ausgeführt wird."
-title: "Ausführen während der Minimierung mithilfe der erweiterten Ausführung"
+title: "Verschieben der angehaltenen App mithilfe der erweiterten Ausführung"
 ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
+keywords: "windows10, UWP, erweiterte Ausführung, minimiert, ExtendedExecutionSession, Hintergrundaufgabe, Anwendungslebenszyklus, Sperrbildschirm"
 ms.assetid: e6a6a433-5550-4a19-83be-bbc6168fe03a
-ms.openlocfilehash: bd9ccaa4cb87a24906c531996d4fc3f88875b060
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: f82fa37ade38d6a92fa1fec427079f75057a1a4a
+ms.sourcegitcommit: e7e8de39e963b73ba95cb34d8049e35e8d5eca61
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/16/2017
 ---
-# <a name="run-while-minimized-with-extended-execution"></a>Ausführen während der Minimierung mithilfe der erweiterten Ausführung
+# <a name="postpone-app-suspension-with-extended-execution"></a>Verschieben der angehaltenen App mithilfe der erweiterten Ausführung
 
-In diesem Artikel wird gezeigt, wie Sie mithilfe der erweiterten Ausführung das Anhalten Ihrer App verschieben können, damit sie auch bei Minimierung weiter ausgeführt wird.
+In diesem Artikel wird gezeigt, wie Sie mithilfe der erweiterten Ausführung das Anhalten Ihrer App verschieben können, damit sie auch bei Minimierung oder beim Sperrbildschirm weiter ausgeführt wird.
 
 Wenn der Benutzer eine App minimiert oder sie verlässt, wird sie in einen angehaltenen Zustand versetzt.  Der Arbeitsspeicher wird nicht gelöscht, der App-Code wird jedoch nicht ausgeführt. Dies gilt für alle Betriebssystemeditionen mit einer grafischen Benutzeroberfläche. Weitere Informationen zum Anhalten von Apps finden Sie unter [Anwendungslebenszyklus](app-lifecycle.md).
 
-Es gibt Fälle, in denen eine App bei einer Minimierung möglicherweise weiter ausgeführt werden muss, statt angehalten zu werden. Wenn eine App weiter ausgeführt muss, kann sie entweder vom Betriebssystem weiter ausgeführt werden, oder sie kann die weitere Ausführung anfordern. Wenn beispielsweise im Hintergrund Audioinhalte wiedergegeben werden, kann das Betriebssystem eine App weiter ausführen, wenn Sie diese Schritte für [Medienwiedergabe im Hintergrund](../audio-video-camera/background-audio.md) ausführen. Andernfalls müssen Sie manuell mehr Zeit anfordern.
+Es gibt Fälle, in denen eine App bei einer Minimierung möglicherweise weiter ausgeführt werden muss, statt angehalten zu werden. Wenn eine App weiter ausgeführt muss, kann sie entweder vom Betriebssystem weiter ausgeführt werden, oder sie kann die weitere Ausführung anfordern. Wenn beispielsweise im Hintergrund Audioinhalte wiedergegeben werden, kann das Betriebssystem eine App weiter ausführen, wenn Sie diese Schritte für [Medienwiedergabe im Hintergrund](../audio-video-camera/background-audio.md) ausführen. Andernfalls müssen Sie manuell mehr Zeit anfordern. Sie erhalten möglicherweise mehrere Minuten Zeit für die Ausführung im Hintergrund, aber Sie müssen jederzeit auf die Verarbeitung der widerrufenen Sitzung vorbereitet sein.
 
-Um mehr Zeit für das Ausführen eines Vorgangs im Hintergrund anzufordern, erstellen Sie eine [ExtendedExecutionSession](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.extendedexecution.extendedexecutionsession.aspx). Die Art der von Ihnen erstellten **ExtendedExecutionSession** wird durch den [ExtendedExecutionReason](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.extendedexecution.extendedexecutionreason.aspx) festgelegt, den Sie während des Erstellens angeben. Es gibt drei Enumerationswerte für **ExtendedExecutionReason**: **Unspecified, LocationTracking** und **SavingData**.
+Um mehr Zeit für das Ausführen eines Vorgangs im Hintergrund anzufordern, erstellen Sie eine [ExtendedExecutionSession](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.extendedexecution.extendedexecutionsession.aspx). Die Art der von Ihnen erstellten **ExtendedExecutionSession** wird durch den [ExtendedExecutionReason](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.extendedexecution.extendedexecutionreason.aspx) festgelegt, den Sie während des Erstellens angeben. Es gibt drei Enumerationswerte für **ExtendedExecutionReason**: **Unspecified, LocationTracking** und **SavingData**. Es kann nur eine **ExtendedExecutionSession** zu einem beliebigen Zeitpunkt angefordert werden. Wenn Sie versuchen, eine andere Sitzung zu erstellen, während eine derzeit aktiv ist, wird eine Ausnahme des **ExtendedExecutionSession**-Konstruktors hervorgerufen. Verwenden Sie [ExtendedExecutionForegroundSession](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundsession.aspx) und [ExtendedExecutionForegroundReason](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundreason.aspx) nicht. Sie erfordern eingeschränkte Funktionen und sind nicht zur Verwendung in Store-Anwendungen verfügbar.
 
 ## <a name="run-while-minimized"></a>Ausführen bei Minimierung
 
@@ -35,7 +37,7 @@ Diese Art der erweiterten Ausführung wird auf allen Betriebssystemeditionen bee
 
 Geben Sie beim Erstellen einer **ExtendedExecutionSession** **ExtendedExecutionReason.LocationTracking** an, wenn Ihre App regelmäßig den Standort aus [GeoLocator](https://msdn.microsoft.com/library/windows/apps/windows.devices.geolocation.geolocator.aspx) protokollieren muss. Apps für Fitnessnachverfolgung und Navigation, die regelmäßig den Standort des Benutzers überwachen müssen, sollten diesen Grund verwenden.
 
-Eine erweiterte Ausführung für die Standortnachverfolgung kann solange wie notwendig ausgeführt werden. Pro Gerät kann jedoch nur eine solche Sitzung ausgeführt werden. Eine erweiterte Ausführung zur Standortnachverfolgung kann nur im Vordergrund angefordert werden, und die App muss sich im Zustand **Ausgeführt** befinden. Dadurch wird sichergestellt, dass der Benutzer weiß, dass die App die erweiterte Ausführung zur Standortnachverfolgung initiiert hat. GeoLocator kann mittels einer Hintergrundaufgabe oder eines App-Diensts während der Ausführung der App im Hintergrund weiter verwendet werden, ohne dass eine erweiterte Ausführung zur Standortnachverfolgung angefordert wird.
+Eine erweiterte Ausführungssitzung der Standortnachverfolgung kann bei Bedarf auch ausgeführt werden, während der Bildschirm auf einem mobilen Gerät gesperrt ist. Pro Gerät kann jedoch nur eine solche Sitzung ausgeführt werden. Eine erweiterte Ausführung zur Standortnachverfolgung kann nur im Vordergrund angefordert werden, und die App muss sich im Zustand **Ausgeführt** befinden. Dadurch wird sichergestellt, dass der Benutzer weiß, dass die App die erweiterte Ausführung zur Standortnachverfolgung initiiert hat. GeoLocator kann mittels einer Hintergrundaufgabe oder eines App-Diensts während der Ausführung der App im Hintergrund weiter verwendet werden, ohne dass eine erweiterte Ausführung zur Standortnachverfolgung angefordert wird.
 
 ## <a name="save-critical-data-locally"></a>Lokales Speichern wichtiger Daten
 
@@ -43,7 +45,7 @@ Geben Sie beim Erstellen einer **ExtendedExecutionSession** **ExtendedExecutionR
 
 Verwenden Sie diese Art von Sitzung nicht, um den Lebenszyklus einer App zum Zweck des Hoch- oder Herunterladens von Daten zu verlängern. Fordern Sie eine [Hintergrundübertragung](https://msdn.microsoft.com/windows/uwp/networking/background-transfers) an, wenn Sie Daten hochladen müssen, oder registrieren Sie einen **MaintenanceTrigger**, um die Übertragung zu verarbeiten, wenn die Stromversorgung verfügbar ist. Eine erweiterte Ausführungssitzung mit dem Grund **ExtendedExecutionReason.SavingData** kann angefordert werden, wenn sich die App im Vordergrund und im Zustand **Ausgeführt** befindet oder wenn sie sich im Hintergrund und im Zustand **Angehalten** befindet.
 
-Der Zustand **Angehalten** ist die letzte Phase während des App-Lebenszyklus, in der die App Aufgaben ausführen kann, bevor sie beendet wird. Das Anfordern einer erweiterten Ausführungssitzung mit dem Grund **ExtendedExecutionReason.SavingData**, während sich die App im Zustand **Angehalten** befindet, kann ein Problem verursachen, das Sie beachten sollten. Wenn im Zustand **Suspending** eine erweiterte Ausführungssitzung angefordert wird, und der Benutzer das erneute Starten der App anfordert, benötigt sie zum Starten scheinbar eine lange Zeit. Der Grund hierfür ist, dass die erweiterte Ausführungssitzung abgeschlossen werden muss, bevor die alte Instanz der App geschlossen und eine neue Instanz der App gestartet werden kann. Es wird auf Leistung beim Starten verzichtet, um sicherzustellen, dass der Benutzerstatus nicht verloren geht.
+Der Zustand **Angehalten** ist die letzte Phase während des App-Lebenszyklus, in der die App Aufgaben ausführen kann, bevor sie beendet wird. **ExtendedExecutionReason.SavingData** ist die einzige Art von **ExtendedExecutionSession**, die im **Suspending**-Zustand angefordert werden kann. Das Anfordern einer erweiterten Ausführungssitzung mit dem Grund **ExtendedExecutionReason.SavingData**, während sich die App im Zustand **Angehalten** befindet, kann ein Problem verursachen, das Sie beachten sollten. Wenn im Zustand **Suspending** eine erweiterte Ausführungssitzung angefordert wird, und der Benutzer das erneute Starten der App anfordert, benötigt sie zum Starten scheinbar eine lange Zeit. Der Grund hierfür ist, dass die erweiterte Ausführungssitzung abgeschlossen werden muss, bevor die alte Instanz der App geschlossen und eine neue Instanz der App gestartet werden kann. Es wird auf Leistung beim Starten verzichtet, um sicherzustellen, dass der Benutzerstatus nicht verloren geht.
 
 ## <a name="request-disposal-and-revocation"></a>Anfordern, Löschen und Sperren
 
@@ -54,7 +56,6 @@ Es gibt drei grundsätzliche Interaktionen mit erweiterten Ausführungssitzungen
 ```csharp
 var newSession = new ExtendedExecutionSession();
 newSession.Reason = ExtendedExecutionReason.Unspecified;
-newSession.Description = "Raising periodic toasts";
 newSession.Revoked += SessionRevoked;
 ExtendedExecutionResult result = await newSession.RequestExtensionAsync();
 
@@ -163,7 +164,6 @@ static class ExtendedExecutionHelper
 
         var newSession = new ExtendedExecutionSession();
         newSession.Reason = ExtendedExecutionReason.Unspecified;
-        newSession.Description = "Running multiple tasks";
         newSession.Revoked += SessionRevoked;
 
         if(revoked != null)

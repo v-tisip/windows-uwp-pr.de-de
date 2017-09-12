@@ -1,24 +1,27 @@
 ---
 author: mcleanbyron
 ms.assetid: cc24ba75-a185-4488-b70c-fd4078bc4206
-description: "Hier erfahren Sie, wie Sie die AdScheduler-Klasse verwenden, um Videoinhalten Werbeanzeigen hinzuzufügen."
-title: "Hinzufügen von Werbeanzeigen zu Videoinhalten"
+description: Hier erfahren Sie, wie Sie die AdScheduler-Klasse verwenden, um Anzeigen in Videoinhalten anzuzeigen.
+title: Anzeigen von Werbung in Videoinhalten
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Anzeigen, Werbung, Video, Planer, JavaScript
-ms.openlocfilehash: 88e0bb4ceb9cba12d1eb5857761f5b59afaa15f2
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 834547db2d58291e3bbf75a738d9775e25fbb8e5
+ms.sourcegitcommit: 9d1ca16a7edcbbcae03fad50a4a10183a319c63a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/09/2017
 ---
-# <a name="add-advertisements-to-video-content"></a>Hinzufügen von Werbeanzeigen zu Videoinhalten
+# <a name="show-ads-in-video-content"></a>Anzeigen von Werbung in Videoinhalten
 
 
-In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie die [AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx)-Klasse zum Hinzufügen von Werbung zu Videoinhalten in einer App für die universelle Windows-Plattform (UWP) verwenden, die mit JavaScript und HTML geschrieben wurde.
+In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie die [AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx)-Klasse zum Anzeigen von Videoinhalten in einer App für die universelle Windows-Plattform (UWP) verwenden, die mit JavaScript und HTML geschrieben wurde.
 
->**Hinweis**&nbsp;&nbsp;Diese Funktion wird derzeit nur für UWP-Apps unterstützt, die mit JavaScript und HTML geschrieben wurden.
+> [!NOTE]
+> Diese Funktion wird derzeit nur für UWP-Apps unterstützt, die mit JavaScript und HTML geschrieben werden.
 
 [AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx) funktioniert mit progressiven Medien und Streamingmedien und nutzt Video Ad Serving Template (VAST) 2.0/3.0 nach IAB-Standard und VMAP-Nutzlastformate. Durch die Verwendung von Standards ist [AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx) agnostisch gegenüber dem Anzeigendienst, mit dem die Interaktion erfolgt.
 
@@ -26,13 +29,12 @@ Werbung für Videoinhalte variiert in Abhängigkeit davon, ob das Programm kürz
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-* Installieren Sie das [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) mit Visual Studio2015.
+* Installieren Sie das [Microsoft Advertising-SDK](http://aka.ms/ads-sdk-uwp) mit Visual Studio2015 oder einer neueren Version.
 
 * In Ihrem Projekt muss das [MediaPlayer](https://github.com/Microsoft/TVHelpers/wiki/MediaPlayer-Overview)-Steuerelement verwendet werden, um die Videoinhalte bereitstellen zu können, für die die Anzeigen eingeplant werden. Dieses Steuerelement ist in der Bibliotheksammlung [TVHelpers](https://github.com/Microsoft/TVHelpers) von Microsoft auf GitHub verfügbar.
 
   Das folgende Beispiel zeigt, wie Sie einen [MediaPlayer](https://github.com/Microsoft/TVHelpers/wiki/MediaPlayer-Overview) im HTML-Markup deklarieren. Dieser Markupcode gehört normalerweise in den Abschnitt `<body>` in der Datei „index.html“ (oder einer anderen HTML-Datei, je nach Eignung für Ihr Projekt).
 
-  > [!div class="tabbedCodeSnippets"]
   ``` html
   <div id="MediaPlayerDiv" data-win-control="TVJS.MediaPlayer">
     <video src="URL to your content">
@@ -42,7 +44,6 @@ Werbung für Videoinhalte variiert in Abhängigkeit davon, ob das Programm kürz
 
   Im folgenden Beispiel wird veranschaulicht, wie Sie einen [MediaPlayer](https://github.com/Microsoft/TVHelpers/wiki/MediaPlayer-Overview) in JavaScript-Code einrichten.
 
-  > [!div class="tabbedCodeSnippets"]
   [!code-javascript[TrialVersion](./code/AdvertisingSamples/AdSchedulerSamples/js/js/main.js#Snippet1)]
 
 ## <a name="how-to-use-the-adscheduler-class-in-your-code"></a>Verwenden der AdScheduler-Klasse im Code
@@ -67,7 +68,6 @@ Werbung für Videoinhalte variiert in Abhängigkeit davon, ob das Programm kürz
 
 5.  Öffnen Sie die Datei „index.html“ (oder je nach Projekt eine andere HTML-Datei). Fügen Sie im Abschnitt `<head>` nach den JavaScript-Verweisen auf „default.css“ und „main.js“ des Projekts den Verweis auf „ad.js“ und „adscheduler.js“ hinzu.
 
-  > [!div class="tabbedCodeSnippets"]
   ``` html
   <script src="//Microsoft.Advertising.JavaScript/ad.js"></script>
   <script src="/js/adscheduler.js"></script>
@@ -78,19 +78,16 @@ Werbung für Videoinhalte variiert in Abhängigkeit davon, ob das Programm kürz
 
 6.  Fügen Sie der Datei „main.js“ des Projekts Code hinzu, mit dem ein neues [AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx)-Objekt erstellt wird. Übergeben Sie den **MediaPlayer**, mit dem Ihre Videoinhalte gehostet werden. Der Code muss so angeordnet werden, dass er nach [WinJS.UI.processAll](https://msdn.microsoft.com/library/windows/apps/hh440975.aspx) ausgeführt wird.
 
-  > [!div class="tabbedCodeSnippets"]
   [!code-javascript[TrialVersion](./code/AdvertisingSamples/AdSchedulerSamples/js/js/main.js#Snippet2)]
 
 7.  Verwenden Sie die Methode [requestSchedule](https://msdn.microsoft.com/library/windows/apps/mt732208.aspx) oder [requestScheduleByUrl](https://msdn.microsoft.com/library/windows/apps/mt732210.aspx), um einen Anzeigenzeitplan vom Server anzufordern und in die **MediaPlayer**-Zeitachse einzufügen. Anschließend werden die Videomedien wiedergegeben.
 
   * Wenn Sie Microsoft-Partner sind und eine Berechtigung zum Anfordern eines Anzeigenzeitplans vom Microsoft-Anzeigenserver erhalten haben, können Sie [requestSchedule](https://msdn.microsoft.com/library/windows/apps/mt732208.aspx) verwenden und die IDs für die Anwendung und die Anzeigeneinheit angeben, die von Ihrem Microsoft-Vertreter bereitgestellt wurden. Bei dieser Methode handelt es sich um eine **Zusage**. Dies ist ein asynchrones Konstrukt, bei dem zwei Funktionszeiger übergeben werden, um jeweils den Erfolgs- bzw. Fehlerfall zu verarbeiten. Weitere Informationen finden Sie unter [Asynchrone Muster in UWP mit JavaScript](https://msdn.microsoft.com/windows/uwp/threading-async/asynchronous-programming-universal-windows-platform-apps#asynchronous-patterns-in-uwp-using-javascript).
 
-      > [!div class="tabbedCodeSnippets"]
       [!code-javascript[TrialVersion](./code/AdvertisingSamples/AdSchedulerSamples/js/js/main.js#Snippet3)]
 
   * Verwenden Sie zum Anfordern eines Anzeigenzeitplans von einem anderen Server als dem Microsoft-Anzeigenserver [requestScheduleByUrl](https://msdn.microsoft.com/library/windows/apps/mt732210.aspx), und übergeben Sie die Server-URL. Diese Methode ist ebenfalls eine **Zusage**.
 
-      > [!div class="tabbedCodeSnippets"]
       [!code-javascript[TrialVersion](./code/AdvertisingSamples/AdSchedulerSamples/js/js/main.js#Snippet4)]
 
     <span/>
@@ -98,5 +95,4 @@ Werbung für Videoinhalte variiert in Abhängigkeit davon, ob das Programm kürz
 
 8.  Während der Wiedergabe können Sie zusätzliche Ereignisse verarbeiten, mit denen Ihre App den Status bzw. Fehler nachverfolgen kann, die nach dem ersten Anzeigenabgleich auftreten. Der folgende Code zeigt einige dieser Ereignisse, einschließlich [onPodStart](https://msdn.microsoft.com/library/windows/apps/mt732206.aspx), [onPodEnd](https://msdn.microsoft.com/library/windows/apps/mt732205.aspx), [onPodCountdown](https://msdn.microsoft.com/library/windows/apps/mt732204.aspx), [onAdProgress](https://msdn.microsoft.com/library/windows/apps/mt732201.aspx), [onAllComplete](https://msdn.microsoft.com/library/windows/apps/mt732202.aspx) und [onErrorOccurred](https://msdn.microsoft.com/library/windows/apps/mt732203.aspx).
 
-  > [!div class="tabbedCodeSnippets"]
   [!code-javascript[TrialVersion](./code/AdvertisingSamples/AdSchedulerSamples/js/js/main.js#Snippet5)]

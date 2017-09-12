@@ -7,14 +7,16 @@ label: Screen sizes and break points
 template: detail.hbs
 op-migration-status: ready
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: cd6ba1378aeddb44aa66c53088f32286aff8d29f
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: b56cdeeb9a3c3d3ca89e19d8057e3d93241e6c3c
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/22/2017
 ---
 #  <a name="screen-sizes-and-break-points-for-responsive-design"></a>Bildschirmgrößen und Haltepunkte für reaktionsfähiges Design
 
@@ -78,7 +80,7 @@ In dieser Tabelle werden die verschiedenen Größenklassen beschrieben und allge
 <li>Docken Sie [App-Leisten](../controls-and-patterns/app-bars.md) für bessere Erreichbarkeit am unteren Fensterrand an.</li>
 <li>Verwenden Sie jeweils eine Spalte/Region.</li>
 <li>Verwenden Sie ein Symbol zum Darstellen der Suche (kein Suchfeld anzeigen).</li>
-<li>Verwenden Sie den [Navigationsbereich](../controls-and-patterns/nav-pane.md) im Überlagerungsmodus, um Platz auf dem Bildschirm zu sparen.</li>
+<li>Verwenden Sie den [Navigationsbereich](../controls-and-patterns/navigationview.md) im Überlagerungsmodus, um Platz auf dem Bildschirm zu sparen.</li>
 <li>Verwenden Sie für das [Master/Details-Modell](../controls-and-patterns/master-details.md) den gestapelten Darstellungsmodus, um Platz auf dem Bildschirm zu sparen.</li>
 </ul></td>
 <td style="vertical-align:top;"><ul>
@@ -87,7 +89,7 @@ In dieser Tabelle werden die verschiedenen Größenklassen beschrieben und allge
 <li>Positionieren Sie Elemente wie [App-Leisten](../controls-and-patterns/app-bars.md) am oberen Rand des App-Fensters.</li>
 <li>Bis zu zwei Spalten/Regionen</li>
 <li>Zeigen Sie das Suchfeld an.</li>
-<li>Legen Sie für [Navigationsleiste](../controls-and-patterns/nav-pane.md) den Streifenmodus fest, sodass immer ein schmaler Streifen mit Symbolen angezeigt wird.</li>
+<li>Legen Sie für [Navigationsleiste](../controls-and-patterns/navigationview.md) den Streifenmodus fest, sodass immer ein schmaler Streifen mit Symbolen angezeigt wird.</li>
 <li>Ziehen Sie weitere Anpassungen für [TV-Umgebungen](http://go.microsoft.com/fwlink/?LinkId=760736) in Erwägung.</li>
 </ul></td>
 <td style="vertical-align:top;"><ul>
@@ -96,7 +98,7 @@ In dieser Tabelle werden die verschiedenen Größenklassen beschrieben und allge
 <li>Positionieren Sie Elemente wie [App-Leisten](../controls-and-patterns/app-bars.md) am oberen Rand des App-Fensters.</li>
 <li>Bis zu drei Spalten/Regionen</li>
 <li>Zeigen Sie das Suchfeld an.</li>
-<li>Platzieren Sie den [Navigationsbereich](../controls-and-patterns/nav-pane.md) im angedockten Modus so, dass er immer angezeigt wird.</li>
+<li>Platzieren Sie den [Navigationsbereich](../controls-and-patterns/navigationview.md) im angedockten Modus so, dass er immer angezeigt wird.</li>
 </ul></td>
 </tr>
 </tbody>

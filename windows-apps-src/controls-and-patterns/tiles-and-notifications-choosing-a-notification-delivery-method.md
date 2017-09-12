@@ -6,14 +6,16 @@ ms.assetid: FDB43EDE-C5F2-493F-952C-55401EC5172B
 label: Choose a notification delivery method
 template: detail.hbs
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows10, UWP
-ms.openlocfilehash: 39418d553eceb6b38d9b0cecc633c984f38465b9
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: ddbc04afd6571ac5692c2202fa292185d11e05b0
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="choose-a-notification-delivery-method"></a>Auswählen einer Methode für die Übermittlung von Benachrichtigungen
 
@@ -111,7 +113,7 @@ Standardmäßig laufen lokale Popupbenachrichtigungen in drei Tagen und lokale K
 Weitere Informationen finden Sie in folgenden Themen:
 
 -   [Senden einer lokalen Kachelbenachrichtigung](tiles-and-notifications-sending-a-local-tile-notification.md)
--   [Senden einer lokalen Popupbenachrichtigung](https://blogs.msdn.microsoft.com/tiles_and_toasts/2015/07/08/quickstart-sending-a-local-toast-notification-and-handling-activations-from-it-windows-10/)
+-   [Senden einer lokalen Popupbenachrichtigung](tiles-and-notifications-send-local-toast.md)
 -   [Codebeispiele für Benachrichtigungen für die Universelle Windows-Plattform (UWP-Benachrichtigungen)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
 ## <a name="scheduled-notifications"></a>Geplante Benachrichtigungen
@@ -161,7 +163,7 @@ Weitere Informationen finden Sie unter:
 
 
 * [Senden einer lokalen Kachelbenachrichtigung](tiles-and-notifications-sending-a-local-tile-notification.md)
-* [Senden einer lokalen Popupbenachrichtigung](https://blogs.msdn.microsoft.com/tiles_and_toasts/2015/07/08/quickstart-sending-a-local-toast-notification-and-handling-activations-from-it-windows-10/)
+* [Senden einer lokalen Popupbenachrichtigung](tiles-and-notifications-send-local-toast.md)
 * [Richtlinien für Pushbenachrichtigungen](https://msdn.microsoft.com/library/windows/apps/hh761462)
 * [Richtlinien für Popupbenachrichtigungen](https://msdn.microsoft.com/library/windows/apps/hh465391)
 * [Übersicht über regelmäßige Benachrichtigungen](tiles-and-notifications-periodic-notification-overview.md)

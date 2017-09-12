@@ -9,20 +9,23 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows10, UWP, Windows Store-Sammlungs-API, Windows Store-Einkaufs-API, Produkte anzeigen, Produkte gewähren"
-ms.openlocfilehash: 1f5930a9917933937a1a0103fe118a2ccdf2d47f
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 6ecc9d6014692cac52f5554f78a0773dfee3fb81
+ms.sourcegitcommit: e7e8de39e963b73ba95cb34d8049e35e8d5eca61
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/16/2017
 ---
 # <a name="manage-product-entitlements-from-a-service"></a>Verwalten von Produktansprüchen aus einem Dienst
 
-Wenn Sie über einen Katalog mit Apps und Add-ons (auch als In-App-Produkte oder IAPs bezeichnet) verfügen, können Sie mithilfe der *Windows Store-Sammlungs-API* und der *Windows Store-Einkaufs-API* Berechtigungsinformationen zu diesen Produkten aus Ihren Diensten abrufen. Eine *Berechtigung* ist das Recht des Kunden zur Nutzung einer über den Windows Store veröffentlichten App oder eines Add-ons.
+Wenn Sie über einen Katalog mit Apps und Add-Ons verfügen, können Sie mithilfe der *Windows Store-Sammlungs-API* und der *Windows Store-Einkaufs-API* Besitzerinformationen zu diesen Produkten aus Ihren Diensten abrufen. Eine *Berechtigung* ist das Recht des Kunden zur Nutzung einer über den Windows Store veröffentlichten App oder eines Add-ons.
 
 Diese APIs bestehen aus REST-Methoden, die für Entwickler mit Add-on-Katalogen konzipiert sind, die von plattformübergreifenden Diensten unterstützt werden. Diese APIs bieten folgende Möglichkeiten:
 
 -   Windows Store-Sammlungs-API: [Abfrage von Produkten, die einem Benutzer gehören](query-for-products.md) sowie [Meldung eines Verbrauchsprodukts als erfüllt](report-consumable-products-as-fulfilled.md).
--   Windows Store-Einkaufs-API: [Gewähren eines kostenlosen Produkts für einen Benutzer](grant-free-products.md).
+-   Windows Store-Einkaufs-API: [Einem Benutzer ein kostenloses Produkt gewähren](grant-free-products.md), [Abonnements für einen Benutzer abrufen](get-subscriptions-for-a-user.md) und [Abrechnungszustand eines Abonnements für einen Benutzer ändern](change-the-billing-state-of-a-subscription-for-a-user.md).
 
->**Hinweis**&nbsp;&nbsp;Die Windows Store-Sammlungs-API und -Einkaufs-API nutzen die Azure Active Directory (AzureAD)-Authentifizierung, um auf Eigentümerinformationen von Kunden zuzugreifen. Zur Verwendung dieser APIs müssen Sie (bzw. Ihre Organisation) über ein Azure AD-Verzeichnis und die Berechtigung [Globaler Administrator](http://go.microsoft.com/fwlink/?LinkId=746654) für das Verzeichnis verfügen. Wenn Sie bereits mit Office 365oder anderen Business Services von Microsoft arbeiten, verfügen Sie schon über ein Azure AD-Verzeichnis.
+> [!NOTE]
+> Die Windows Store-Sammlungs-API und -Einkaufs-API nutzen die Azure Active Directory (AzureAD)-Authentifizierung, um auf Besitzerinformationen von Kunden zuzugreifen. Zur Verwendung dieser APIs müssen Sie (bzw. Ihre Organisation) über ein Azure AD-Verzeichnis und die Berechtigung [Globaler Administrator](http://go.microsoft.com/fwlink/?LinkId=746654) für das Verzeichnis verfügen. Wenn Sie bereits mit Office 365oder anderen Business Services von Microsoft arbeiten, verfügen Sie schon über ein Azure AD-Verzeichnis.
 
 ## <a name="overview"></a>Übersicht
 
@@ -41,11 +44,12 @@ Die folgenden Abschnitte enthalten weitere Details zu den einzelnen Schritten.
 
 Bevor Sie die Windows Store-Sammlungs-API oder -Einkaufs-API verwenden können, müssen Sie eine Azure AD-Webanwendung erstellen, die Mandanten-ID und die Client-ID für die Anwendung abrufen und einen Schlüssel erzeugen. Die Azure AD-Anwendung ist die Anwendung oder der Dienst, aus denen Sie die Windows Store-Sammlungs- oder -Einkaufs-API aufrufen möchten. Sie benötigen die Mandanten-ID, die Client-ID und den Schlüssel zum Abrufen eines AzureAD-Zugriffstokens, das Sie an die API übergeben.
 
->**Hinweis:**&nbsp;&nbsp;Sie müssen die in diesem Abschnitt beschriebenen Vorgänge nur einmal durchführen. Nachdem Sie Ihr Azure AD-Anwendungsmanifest aktualisiert haben und über Ihre Mandanten-ID, die Client-ID und das Clientgeheimnis verfügen, können Sie diese Werte immer verwenden, wenn Sie ein neues Azure AD-Zugriffstoken erstellen müssen.
+> [!NOTE]
+> Sie müssen die in diesem Abschnitt beschriebenen Vorgänge nur einmal durchführen. Nachdem Sie Ihr Azure AD-Anwendungsmanifest aktualisiert haben und über Ihre Mandanten-ID, die Client-ID und das Clientgeheimnis verfügen, können Sie diese Werte immer verwenden, wenn Sie ein neues Azure AD-Zugriffstoken erstellen müssen.
 
 1.  Führen Sie die Schritte unter [Integrieren von Anwendungen in Azure Active Directory](http://go.microsoft.com/fwlink/?LinkId=722502) aus, um AzureAD eine Webanwendung hinzuzufügen.
-
-    > **Hinweis**&nbsp;&nbsp;Wählen Sie auf der Seite **Geben Sie uns Informationen zu Ihrer Anwendung** die Option **Webanwendung und/oder Web-API** aus. Dies ist erforderlich, damit Sie für Ihre Anwendung einen Schlüssel (auch *Clientgeheimnis* genannt) erhalten. Zum Aufrufen der Windows Store-Sammlungs-API oder -Einkaufs-API müssen Sie einen geheimen Clientschlüssel angeben, wenn Sie in einem späteren Schritt ein Zugriffstoken von AzureAD anfordern.
+    > [!NOTE]
+    > Wählen Sie auf der Seite **Erzählen Sie uns von Ihrer Anwendung** die Option **Webanwendung und/oder Web-API** aus. Dies ist erforderlich, damit Sie für Ihre Anwendung einen Schlüssel (auch *Clientgeheimnis* genannt) erhalten. Zum Aufrufen der Windows Store-Sammlungs-API oder -Einkaufs-API müssen Sie einen geheimen Clientschlüssel angeben, wenn Sie in einem späteren Schritt ein Zugriffstoken von AzureAD anfordern.
 
 2.  Navigieren Sie im [Azure-Verwaltungsportal](http://manage.windowsazure.com/) zu **Active Directory**. Wählen Sie Ihr Verzeichnis aus, klicken Sie oben auf die Registerkarte **Anwendungen**, und wählen Sie Ihre Anwendung aus.
 3.  Klicken Sie auf die Registerkarte **Konfigurieren**. Ermitteln Sie auf dieser Registerkarte die Client-ID für Ihre Anwendung, und fordern Sie einen Schlüssel an. Dieser Schlüssel wird in den weiteren Schritten als *geheimer Clientschlüssel* bezeichnet.
@@ -68,7 +72,8 @@ Bevor Sie die Windows Store-Sammlungs-API oder -Einkaufs-API verwenden können, 
 
 Bevor Sie mit der Windows Store-Sammlungs-API oder -Einkaufs-API eine Anwendung oder ein Add-On ausführen können, müssen Sie Ihre Azure AD-Client-ID der App (oder der App, die das Add-On enthält) im Dev Center-Dashboard zuordnen.
 
->**Hinweis**&nbsp;&nbsp;Sie müssen diesen Schritt nur einmal ausführen.
+> [!NOTE]
+> Sie müssen diesen Schritt nur einmal ausführen.
 
 1.  Melden Sie sich beim [DevCenter-Dashboard](https://dev.windows.com/overview) an, und wählen Sie Ihre App aus.
 2.  Geben Sie auf der Seite **Dienste** &gt; **Produktsammlungen und Einkäufe** Ihre AzureAD-Client-ID in eines der verfügbaren Felder ein.
@@ -78,18 +83,21 @@ Bevor Sie mit der Windows Store-Sammlungs-API oder -Einkaufs-API eine Anwendung 
 
 Bevor Sie einen WindowsStore-ID-Schlüssel abrufen oder die Windows Store-Sammlungs-API oder -Einkaufs-API aufrufen können, muss Ihr Dienst mehrere verschiedene Azure AD-Zugriffstokens erstellen, die Ihre Herausgeberidentität darstellen. Jedes Token wird mit einer anderen API verwendet. Jedes Token ist 60Minuten gültig und kann nach Ablauf aktualisiert werden.
 
+> [!IMPORTANT]
+> Erstellen Sie Azure AD-Zugriffstoken nur im Kontext Ihres Diensts und nicht in Ihrer App. Ihr Clientgeheimnis könnte gefährdet sein, wenn es an Ihre App gesendet wird.
+
 <span id="access-tokens" />
 ### <a name="understanding-the-different-tokens-and-audience-uris"></a>Grundlegendes zu den unterschiedlichen Tokens und Zielgruppen-URIs
 
 Je nach den Methoden, die Sie in der Windows Store-Sammlungs-API oder -Einkaufs-API aufrufen möchten, müssen Sie zwei oder drei unterschiedliche Tokens erstellen. Jedes Zugriffstoken ist einem anderen Zielgruppen-URI zugeordnet (Hierbei handelt es sich um die gleichen URIs, die Sie zuvor dem `"identifierUris"`-Abschnitt des Azure AD-Anwendungsmanifests hinzugefügt haben).
 
   * In allen Fällen müssen Sie ein Token mit dem `https://onestore.microsoft.com`-Zielgruppen-URI erstellen. In einem späteren Schritt übergeben Sie dieses Token an den **Autorisierung**-Kopf der Methoden in der Windows Store-Sammlungs- oder -Einkaufs-API.
-
-  > **Wichtig**&nbsp;&nbsp;Verwenden Sie die Zielgruppe `https://onestore.microsoft.com` nur mit Zugriffstokens, die sicher in Ihrem Dienst gespeichert sind. Durch das Verfügbarmachen von Zugriffstokens mit dieser Zielgruppe außerhalb Ihres Diensts kann dieser anfällig für Replay-Angriffe werden.
+      > [!IMPORTANT]
+      > Verwenden Sie die Zielgruppe `https://onestore.microsoft.com` nur mit Zugriffstoken, die sicher in Ihrem Dienst gespeichert sind. Durch das Verfügbarmachen von Zugriffstokens mit dieser Zielgruppe außerhalb Ihres Diensts kann dieser anfällig für Replay-Angriffe werden.
 
   * Wenn Sie eine Methode in der Windows Store-Sammlungs-API zur [Abfrage von Produkten, die einem Benutzer gehören](query-for-products.md) oder zum [Melden eines Verbrauchsprodukts als erfüllt](report-consumable-products-as-fulfilled.md) aufrufen möchten, müssen Sie auch ein Token mit dem `https://onestore.microsoft.com/b2b/keys/create/collections`-Zielgruppen-URI erstellen. In einem späteren Schritt übergeben Sie dieses Token an eine Client-Methode im Windows SDK zur Abfrage eines WindowsStore-ID-Schlüssels, den Sie mit der Windows Store-Sammlungs-API verwenden können.
 
-  * Wenn Sie eine Methode in der Windows Store-Einkaufs-API zum [Gewähren eines kostenlosen Produkts für einen Benutzer](grant-free-products.md) aufrufen möchten, müssen Sie auch ein Token mit dem `https://onestore.microsoft.com/b2b/keys/create/purchase`-Zielgruppen-URI erstellen. In einem späteren Schritt übergeben Sie dieses Token an eine Client-Methode im Windows SDK zur Abfrage eines WindowsStore-ID-Schlüssels, den Sie mit der Windows Store-Einkaufs-API verwenden können.
+  * Wenn Sie eine Methode in der Windows Store-Einkaufs-API aufrufen möchten, um [einem Benutzer ein kostenloses Produkt zu gewähren](grant-free-products.md), [Abonnements für einen Benutzer abzurufen](get-subscriptions-for-a-user.md) oder [den Abrechnungszustand eines Abonnements für einen Benutzer zu ändern](change-the-billing-state-of-a-subscription-for-a-user.md), müssen Sie auch ein Token mit dem `https://onestore.microsoft.com/b2b/keys/create/purchase`-Zielgruppen-URI erstellen. In einem späteren Schritt übergeben Sie dieses Token an eine Client-Methode im Windows SDK zur Abfrage eines WindowsStore-ID-Schlüssels, den Sie mit der Windows Store-Einkaufs-API verwenden können.
 
 <span />
 ### <a name="create-the-tokens"></a>Erstellen Sie Token
@@ -115,8 +123,6 @@ Geben Sie für jedes Token die folgenden Parameterdaten an:
 
 Nachdem das Zugriffstoken abgelaufen ist, können Sie es aktualisieren, indem Sie [diese Anleitung](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-code/#refreshing-the-access-tokens) befolgen. Weitere Informationen zur Struktur eines Zugriffstokens finden Sie unter [Unterstützte Token- und Anspruchstypen](http://go.microsoft.com/fwlink/?LinkId=722501).
 
-> **Wichtig:**&nbsp;&nbsp;Azure AD-Zugriffstoken sollten nur im Kontext Ihres Diensts und nicht in Ihrer App erstellt werden. Ihr Clientgeheimnis könnte gefährdet sein, wenn es an Ihre App gesendet wird.
-
 <span id="step-4"/>
 ## <a name="step-4-create-a-windows-store-id-key"></a>Schritt4: Erstellen eines Windows Store-ID-Schlüssels
 
@@ -124,7 +130,8 @@ Bevor Sie eine Methode in der Windows Store-Sammlungs- oder -Einkaufs-API aufruf
 
 Derzeit kann ein WindowsStore-ID-Schlüssel ausschließlich durch Aufrufen einer UWP-API im clientseitigen Code Ihrer App erstellt werden. Der generierte Schlüssel repräsentiert die Identität des Benutzers, der derzeit auf dem Gerät beim Windows Store angemeldet ist.
 
-> **Hinweis:**&nbsp;&nbsp;Jeder WindowsStore-ID-Schlüssel ist 90Tage gültig. Nach dem Ablauf eines Schlüssels können Sie [den Schlüssel verlängern](renew-a-windows-store-id-key.md). Wir empfehlen, Windows Store-ID-Schlüssel zu verlängern, anstatt neue zu erstellen.
+> [!NOTE]
+> Jeder WindowsStore-ID-Schlüssel ist 90Tage gültig. Nach dem Ablauf eines Schlüssels können Sie [den Schlüssel verlängern](renew-a-windows-store-id-key.md). Wir empfehlen, Windows Store-ID-Schlüssel zu verlängern, anstatt neue zu erstellen.
 
 <span />
 ### <a name="to-create-a-windows-store-id-key-for-the-windows-store-collection-api"></a>So erstellen Sie einen Windows Store-ID-Schlüssel für die Windows Store-Sammlungs-API:
@@ -139,14 +146,14 @@ Gehen Sie wie folgt vor, um einen Windows Store-ID-Schlüssel zu erstellen, den 
 
   * Wenn Ihre App die [CurrentApp](https://msdn.microsoft.com/library/windows/apps/hh779765) -Klasse im [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) -Namespace zur Verwaltung von In-App-Käufen verwendet, verwenden Sie die Methode [CurrentApp.GetCustomerCollectionsIdAsync](https://msdn.microsoft.com/library/windows/apps/mt608674).
 
-  Übergeben Sie Ihr AzureAD-Zugriffstoken an den *serviceTicket*-Parameter der Methode. Sie können optional eine ID an den *publisherUserId*-Parameter übergeben, der den aktuellen Benutzer im Kontext Ihrer Dienste identifiziert. Wenn Sie Benutzer-IDs für Ihre Dienste verwalten, können Sie diesen Parameter verwenden, um die Benutzer-IDs mit den Aufrufen an die Windows Store-Sammlungs-API zu korrelieren.
+    Übergeben Sie Ihr AzureAD-Zugriffstoken an den *serviceTicket*-Parameter der Methode. Sie können optional eine ID an den *publisherUserId*-Parameter übergeben, der den aktuellen Benutzer im Kontext Ihrer Dienste identifiziert. Wenn Sie Benutzer-IDs für Ihre Dienste verwalten, können Sie diesen Parameter verwenden, um die Benutzer-IDs mit den Aufrufen an die Windows Store-Sammlungs-API zu korrelieren.
 
 3.  Übergeben Sie den von Ihrer App erfolgreich erstellten WindowsStore-ID-Schlüssel zurück an Ihren Dienst.
 
 <span />
 ### <a name="to-create-a-windows-store-id-key-for-the-windows-store-purchase-api"></a>So erstellen Sie einen Windows Store-ID-Schlüssel für die Windows Store-Einkaufs-API:
 
-Befolgen Sie diese Schritte, um einen Windows Store-ID-Schlüssel zu erstellen, mit dem Sie mit der Windows Store-Einkaufs-API [einem Benutzer ein kostenloses Produkt gewähren](grant-free-products.md) können.
+Befolgen Sie diese Schritte zur Erstellung eines Windows Store-ID-Schlüssels, mit dem Sie– in Kombination mir der Windows Store-Einkaufs-API– [einem Benutzer ein kostenloses Produkt gewähren](grant-free-products.md), [Abonnements für einen Benutzer abrufen](get-subscriptions-for-a-user.md) oder [den Abrechnungszustand eines Abonnements für einen Benutzer ändern](change-the-billing-state-of-a-subscription-for-a-user.md) können.
 
 1.  Übergeben Sie das Azure AD-Zugriffstoken, das Sie mit dem `https://onestore.microsoft.com/b2b/keys/create/purchase`-Zielgruppen-URI erstellt haben, aus Ihrem Dienst an Ihre Client-App.
 
@@ -156,7 +163,7 @@ Befolgen Sie diese Schritte, um einen Windows Store-ID-Schlüssel zu erstellen, 
 
   * Wenn Ihre App die [CurrentApp](https://msdn.microsoft.com/library/windows/apps/hh779765) -Klasse im [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) -Namespace zur Verwaltung von In-App-Käufen verwendet, verwenden Sie die Methode [CurrentApp.GetCustomerPurchaseIdAsync](https://msdn.microsoft.com/library/windows/apps/mt608675).
 
-  Übergeben Sie Ihr AzureAD-Zugriffstoken an den *serviceTicket*-Parameter der Methode. Sie können optional eine ID an den *publisherUserId*-Parameter übergeben, der den aktuellen Benutzer im Kontext Ihrer Dienste identifiziert. Wenn Sie Benutzer-IDs für Ihre Dienste verwalten, können Sie diesen Parameter verwenden, um die Benutzer-IDs mit den Aufrufen an die Windows Store-Einkaufs-API zu korrelieren.
+    Übergeben Sie Ihr AzureAD-Zugriffstoken an den *serviceTicket*-Parameter der Methode. Sie können optional eine ID an den *publisherUserId*-Parameter übergeben, der den aktuellen Benutzer im Kontext Ihrer Dienste identifiziert. Wenn Sie Benutzer-IDs für Ihre Dienste verwalten, können Sie diesen Parameter verwenden, um die Benutzer-IDs mit den Aufrufen an die Windows Store-Einkaufs-API zu korrelieren.
 
 3.  Übergeben Sie den von Ihrer App erfolgreich erstellten WindowsStore-ID-Schlüssel zurück an Ihren Dienst.
 
@@ -168,6 +175,8 @@ Wenn Ihr Dienst über einen WindowsStore-ID-Schlüssel verfügt, der den Zugriff
 * [Produktabfrage](query-for-products.md)
 * [Melden von Verbrauchsprodukten als erfüllt](report-consumable-products-as-fulfilled.md)
 * [Gewähren kostenloser Produkte](grant-free-products.md)
+* [Abrufen von Abonnements für einen Benutzer](get-subscriptions-for-a-user.md)
+* [Ändern des Abrechnungszustands eines Abonnements für Benutzer](change-the-billing-state-of-a-subscription-for-a-user.md)
 
 Übergeben Sie bei jedem Szenario die folgenden Informationen an die API:
 
@@ -220,6 +229,8 @@ Hier ein Beispiel für einen decodierten Satz von Windows Store-ID-Schlüsselans
 * [Produktabfrage](query-for-products.md)
 * [Melden von Verbrauchsprodukten als erfüllt](report-consumable-products-as-fulfilled.md)
 * [Gewähren kostenloser Produkte](grant-free-products.md)
+* [Abrufen von Abonnements für einen Benutzer](get-subscriptions-for-a-user.md)
+* [Ändern des Abrechnungszustands eines Abonnements für einen Benutzer](change-the-billing-state-of-a-subscription-for-a-user.md)
 * [Verlängern eines Windows Store-ID-Schlüssels](renew-a-windows-store-id-key.md)
 * [Integrieren von Anwendungen in Azure Active Directory](http://go.microsoft.com/fwlink/?LinkId=722502)
 * [Grundlegendes zum AzureActiveDirectory-Anwendungsmanifest]( http://go.microsoft.com/fwlink/?LinkId=722500)

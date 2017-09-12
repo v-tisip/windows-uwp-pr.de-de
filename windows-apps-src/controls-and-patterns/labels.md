@@ -6,14 +6,19 @@ ms.assetid: CFACCCD4-749F-43FB-947E-2591AE673804
 label: Labels
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: b14c775896984095f580aed8cf41d010f408f67e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: miguelrb
+design-contact: ksulliv
+doc-status: Published
+ms.openlocfilehash: 2a3f3d6795276df6e3436c5ae6eff42551d03478
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="labels"></a>Label
 
@@ -21,22 +26,11 @@ translationtype: HT
 
 Ein Label ist der Name bzw. Titel eines Steuerelements oder einer Gruppe verwandter Steuerelemente.
 
-<div class="important-apis" >
-<b>Wichtige APIs</b><br/>
-<ul>
-<li>Header-Eigenschaft</li>
-<li>[**TextBlock-Klasse**](https://msdn.microsoft.com/library/windows/apps/br209652)</li>
-</ul>
-</div>
+> **Wichtige APIs**: Header-Eigenschaft, [TextBlock-Klasse](https://msdn.microsoft.com/library/windows/apps/br209652)
 
+In XAML verfügen zahlreiche Steuerelemente über eine integrierte Header-Eigenschaft, die Sie zum Anzeigen der Beschriftung verwenden. Für Steuerelemente ohne Header-Eigenschaft oder zum Beschriften von Steuerelementgruppen können Sie stattdessen ein [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652)-Element verwenden.
 
-In XAML verfügen zahlreiche Steuerelemente über eine integrierte Header-Eigenschaft, die Sie zum Anzeigen der Beschriftung verwenden. Für Steuerelemente ohne Header-Eigenschaft oder zum Beschriften von Steuerelementgruppen können Sie stattdessen ein [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)-Element verwenden.
-
-
-## <a name="example"></a>Beispiel
-
-
-![Screenshot mit einem standardmäßigen Beschriftungssteuerelement](images/label-standard.png)
+![Bildschirmfoto mit einem standardmäßigen Beschriftungssteuerelement](images/label-standard.png)
 
 ## <a name="recommendations"></a>Empfehlungen
 
@@ -51,17 +45,15 @@ In XAML verfügen zahlreiche Steuerelemente über eine integrierte Header-Eigens
 
 ## <a name="related-topics"></a>Verwandte Themen
 * [Textsteuerelemente](text-controls.md)
-
-**Für Entwickler**
-* [**Eigenschaft „TextBox.Header“**](https://msdn.microsoft.com/library/windows/apps/dn252861)
-* [**Eigenschaft „PasswordBox.Header“**](https://msdn.microsoft.com/library/windows/apps/dn299051)
-* [**Eigenschaft „ToggleSwitch.Header“**](https://msdn.microsoft.com/library/windows/apps/br209713)
-* [**Eigenschaft „DatePicker.Header“**](https://msdn.microsoft.com/library/windows/apps/dn279460)
-* [**Eigenschaft „TimePicker.Header“**](https://msdn.microsoft.com/library/windows/apps/dn299286)
-* [**Eigenschaft „Slider.Header“**](https://msdn.microsoft.com/library/windows/apps/dn252829)
-* [**Eigenschaft „ComboBox.Header“**](https://msdn.microsoft.com/library/windows/apps/dn279416)
-* [**Eigenschaft „RichEditBox.Header“**](https://msdn.microsoft.com/library/windows/apps/dn252726)
-* [**Klasse „TextBlock“**](https://msdn.microsoft.com/library/windows/apps/br209652)
+* [TextBox.Header-Eigenschaft](https://msdn.microsoft.com/library/windows/apps/dn252861)
+* [Eigenschaft „PasswordBox.Header“](https://msdn.microsoft.com/library/windows/apps/dn299051)
+* [Eigenschaft „ToggleSwitch.Header“](https://msdn.microsoft.com/library/windows/apps/br209713)
+* [Eigenschaft „DatePicker.Header“](https://msdn.microsoft.com/library/windows/apps/dn279460)
+* [Eigenschaft „TimePicker.Header“](https://msdn.microsoft.com/library/windows/apps/dn299286)
+* [Eigenschaft „Slider.Header“](https://msdn.microsoft.com/library/windows/apps/dn252829)
+* [Eigenschaft „ComboBox.Header“](https://msdn.microsoft.com/library/windows/apps/dn279416)
+* [Eigenschaft „RichEditBox.Header“](https://msdn.microsoft.com/library/windows/apps/dn252726)
+* [Klasse „TextBlock“](https://msdn.microsoft.com/library/windows/apps/br209652)
 
  
 

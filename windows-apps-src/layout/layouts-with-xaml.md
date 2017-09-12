@@ -7,14 +7,16 @@ label: Page layouts with XAML
 template: detail.hbs
 op-migration-status: ready
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 3862b008afece61648357c84a218ba210703727c
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: a491a13264a19c50affdbacded69c7ff73e99afa
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="define-page-layouts-with-xaml"></a>Definieren von Layouts mit XAML
 
@@ -25,7 +27,7 @@ XAML bietet Ihnen ein flexibles Layoutsystem, mit dem Sie die automatische Grö�
 Hier erörtern wir die Verwendung von XAML-Eigenschaften und Layoutpanels zur Erstellung einer reaktionsfähigen und adaptiven App. Wir bauen auf wichtigen Informationen zu Techniken des reaktionsfähigen UI-Designs unter [Einführung in das UWP-App-Design](../layout/design-and-ui-intro.md). Sie sollten wissen, was effektive Pixel sind, und die einzelnen Techniken für das reaktionsfähige Design verstehen: Ändern der Position, Ändern der Größe, dynamischer Umbruch, Einblenden, Ersetzen und Ändern der Architektur.
 
 > [!NOTE]
-> Das App-Layout beginnt mit dem von Ihnen ausgewählten Navigationsmodell, z. B., ob Sie [**Pivot**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.aspx) mit dem Modell [„Registerkarten und Pivot“](../controls-and-patterns/tabs-pivot.md) oder [**SplitView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.aspx) mit dem Modell [„Navigationsbereich“](../controls-and-patterns/nav-pane.md) verwenden. Weitere Informationen hierzu finden Sie unter [Navigationsdesigngrundlagen für UWP-Apps](../layout/navigation-basics.md). Hier sprechen wir über Techniken, wie das Layout einer einzelnen Seite oder Gruppe von Elementen reaktionsfähig gestaltet werden kann. Diese Informationen gelten unabhängig davon, welches Navigationsmodell Sie für Ihre App auswählen.
+> Das App-Layout beginnt mit dem von Ihnen ausgewählten Navigationsmodell, z. B., ob Sie [**Pivot**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.aspx) mit dem Modell [„Registerkarten und Pivot“](../controls-and-patterns/tabs-pivot.md) oder [**SplitView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.aspx) mit dem Modell [„Navigationsbereich“](../controls-and-patterns/navigationview.md) verwenden. Weitere Informationen hierzu finden Sie unter [Navigationsdesigngrundlagen für UWP-Apps](../layout/navigation-basics.md). Hier sprechen wir über Techniken, wie das Layout einer einzelnen Seite oder Gruppe von Elementen reaktionsfähig gestaltet werden kann. Diese Informationen gelten unabhängig davon, welches Navigationsmodell Sie für Ihre App auswählen.
 
 Das XAML-Framework bietet mehrere Ebenen der Optimierung, die Sie bei der Erstellung einer reaktionsfähigen Benutzeroberfläche verwenden können.
 - **Dynamisches Layout**

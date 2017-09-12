@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: f0cf9d2928c8d6a0494092643daa19d9b437d3eb
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 8679dfd073a3b756e37059a5b0bf35cc6b000e6a
+ms.sourcegitcommit: bfa61aae632cca0c68dbfb0168424d38fd607f84
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="create-edit-and-save-bitmap-images"></a>Erstellen, Bearbeiten und Speichern von Bitmapbildern
 
@@ -118,7 +120,7 @@ Die **SoftwareBitmap**-Klasse stellt die statische [**Convert**](https://msdn.mi
 
 ## <a name="transcode-an-image-file"></a>Transcodieren einer Bilddatei
 
-Sie können eine Bilddatei direkt von einem [**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/br226176) in ein [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206) transcodieren. Erstellen Sie eine [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241731)-Schnittstelle aus der Datei, die transcodiert werden soll. Erstellen Sie anhand des Eingabedatenstroms ein neues **BitmapDecoder**-Objekt. Erstellen Sie eine neue [**InMemoryRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241720)-Klasse für den Encoder zum Schreiben in und Aufrufen von [**BitmapEncoder.CreateForTranscodingAsync**](https://msdn.microsoft.com/library/windows/apps/br226214), indem Sie den In-Memory-Datenstrom und das Decoderobjekt übergeben. Legen Sie die gewünschten Codierungseigenschaften fest. Alle Eigenschaften in der Eingabebilddatei, die Sie nicht speziell für den Encoder festlegen, werden unverändert in die Ausgabedatei geschrieben. Rufen Sie die [**FlushAsync**](https://msdn.microsoft.com/library/windows/apps/br226216)-Methode auf, damit der Encoder den In-Memory-Datenstrom codiert. Navigieren Sie schließlich zum Anfang des Dateidatenstroms und des In-Memory-Datenstroms, und rufen Sie die [**CopyAsync**](https://msdn.microsoft.com/library/windows/apps/hh701827)-Methode auf, um den In-Memory-Datenstrom in den Dateidatenstrom zu schreiben.
+Sie können eine Bilddatei direkt von einem [**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/br226176) in ein [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206) transcodieren. Erstellen Sie eine [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241731)-Schnittstelle aus der Datei, die transcodiert werden soll. Erstellen Sie anhand des Eingabedatenstroms ein neues **BitmapDecoder**-Objekt. Erstellen Sie eine neue [**InMemoryRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241720)-Klasse für den Encoder zum Schreiben in und Aufrufen von [**BitmapEncoder.CreateForTranscodingAsync**](https://msdn.microsoft.com/library/windows/apps/br226214), indem Sie den In-Memory-Datenstrom und das Decoderobjekt übergeben. Codierungsoptionen werden beim Transcodieren nicht unterstützt. Verwenden Sie stattdessen [**CreateAsync**](https://docs.microsoft.com/en-us/uwp/api/windows.graphics.imaging.bitmapencoder#Windows_Graphics_Imaging_BitmapEncoder_CreateAsync_System_Guid_Windows_Storage_Streams_IRandomAccessStream_Windows_Foundation_Collections_IIterable_Windows_Foundation_Collections_IKeyValuePair_System_String_Windows_Graphics_Imaging_BitmapTypedValue___). Alle Eigenschaften in der Eingabebilddatei, die Sie nicht speziell für den Encoder festlegen, werden unverändert in die Ausgabedatei geschrieben. Rufen Sie die [**FlushAsync**](https://msdn.microsoft.com/library/windows/apps/br226216)-Methode auf, damit der Encoder den In-Memory-Datenstrom codiert. Navigieren Sie schließlich zum Anfang des Dateidatenstroms und des In-Memory-Datenstroms, und rufen Sie die [**CopyAsync**](https://msdn.microsoft.com/library/windows/apps/hh701827)-Methode auf, um den In-Memory-Datenstrom in den Dateidatenstrom zu schreiben.
 
 [!code-cs[TranscodeImageFile](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetTranscodeImageFile)]
 

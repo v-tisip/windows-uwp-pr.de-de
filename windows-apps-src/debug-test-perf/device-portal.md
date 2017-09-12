@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: PatrickFarley
 ms.assetid: 60fc48dd-91a9-4dd6-a116-9292a7c1f3be
 title: "Übersicht über das Windows Device Portal"
 description: "Hier erfahren Sie, wie Sie mit dem Windows Device Portal Ihr Gerät per Remotezugriff über ein Netzwerk oder eine USB-Verbindung konfigurieren und verwalten."
-ms.author: markl
+ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: e729236ae7d506eb59af1a38506931865eff4f14
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: f22600f2bbd5dc43996550c853c6defd04565ad4
+ms.sourcegitcommit: e8cc657d85566768a6efb7cd972ebf64c25e0628
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/26/2017
 ---
 # <a name="windows-device-portal-overview"></a>Übersicht über das Windows Device Portal
 
@@ -41,7 +43,7 @@ Telefon | Im Entwicklermodus aktivieren | 80| 443 | http://127.0.0.1:10080
 \ * Dies ist nicht stets der Fall, da Device Portal auf Desktops Ports in flüchtigen Bereich anfordert (> 50.000), um Konflikte mit vorhandenen Portanforderungen auf dem Gerät zu verhindern.  Weitere Informationen hierzu finden Sie im Abschnitt zu [Porteinstellungen](device-portal-desktop.md#setting-port-numbers) für den Desktop.  
 
 Gerätespezifische Anweisungen zum Einrichten finden Sie in folgenden Artikeln:
-- [Device Portal für HoloLens](https://dev.windows.com/holographic/using_the_windows_device_portal)
+- [Device Portal für HoloLens](https://docs.microsoft.com/en-us/windows/uwp/debug-test-perf/device-portal-hololens)
 - [Device Portal für IoT](https://go.microsoft.com/fwlink/?LinkID=616499)
 - [Device Portal für Mobilgeräte](device-portal-mobile.md)
 - [Device Portal für Xbox](device-portal-xbox.md)
@@ -71,28 +73,28 @@ Bietet Installations-/Deinstallations- und Verwaltungsfunktionen für AppX-Paket
 ![Geräteportal für mobile Geräte](images/device-portal/mob-device-portal-apps.png)
 
 - **Installierte Apps**: Hier können Sie Apps entfernen und starten.
-- **Ausgeführte Apps**: Listet Apps auf, die derzeit ausgeführt werden.
+- **Ausgeführte Apps**: Listet Apps auf, die derzeit ausgeführt werden, und bietet die Möglichkeit, diese zu schließen.
 - **App installieren**: Wählen Sie in einem Ordner auf dem Computer oder im Netzwerk App-Pakete für die Installation aus.
 - **Abhängigkeit**: Hier fügen Sie Abhängigkeiten für die zu installierende App hinzu.
 - **Bereitstellen**: Zum Bereitstellen der ausgewählten App und Abhängigkeiten auf Ihrem Gerät.
 
 **So installieren Sie eine App**
 
-1.    Wenn Sie [ein App-Paket erstellt haben](https://msdn.microsoft.com/library/windows/apps/xaml/hh454036(v=vs.140).aspx), können Sie es per Remotezugriff auf Ihrem Gerät installieren. Nachdem Sie es in Visual Studio erstellt haben, wird ein Ausgabeordner generiert.
+1.  Wenn Sie [ein App-Paket erstellt haben](https://msdn.microsoft.com/library/windows/apps/xaml/hh454036(v=vs.140).aspx), können Sie es per Remotezugriff auf Ihrem Gerät installieren. Nachdem Sie es in Visual Studio erstellt haben, wird ein Ausgabeordner generiert.
 
     ![App-Installation](images/device-portal/iot-installapp0.png)
-2.    Klicken Sie auf „Durchsuchen“, und suchen Sie das App-Paket („.appx“).
-3.    Klicken Sie auf „Durchsuchen“, und suchen Sie die Zertifikatdatei („.cer“). (Nicht auf allen Geräten erforderlich.)
-4.    Fügen Sie Abhängigkeiten hinzu. Wenn mehrere vorhanden sind, fügen Sie jede einzeln hinzu.     
-5.    Klicken Sie unter **Bereitstellen** auf **Los**. 
-6.    Wenn Sie eine weitere App installieren möchten, klicken Sie auf die Schaltfläche **Zurücksetzen**, um die Felder löschen.
+2.  Klicken Sie auf „Durchsuchen“, und suchen Sie das App-Paket („.appx“).
+3.  Klicken Sie auf „Durchsuchen“, und suchen Sie die Zertifikatdatei („.cer“). (Nicht auf allen Geräten erforderlich.)
+4.  Fügen Sie Abhängigkeiten hinzu. Wenn mehrere vorhanden sind, fügen Sie jede einzeln hinzu.     
+5.  Klicken Sie unter **Bereitstellen** auf **Los**. 
+6.  Wenn Sie eine weitere App installieren möchten, klicken Sie auf die Schaltfläche **Zurücksetzen**, um die Felder löschen.
 
 
 **So deinstallieren Sie eine App**
 
-1.    Stellen Sie sicher, dass die App nicht ausgeführt wird. 
-2.    Wenn sie ausgeführt wird, wechseln Sie zu „Running apps“, und schließen Sie sie. Wenn Sie versuchen, eine App zu deinstallieren, die gerade ausgeführt wird, verursacht dies Probleme beim erneuten Installieren der App. 
-3.    Sobald Sie bereit sind, klicken Sie auf **Deinstallieren**.
+1.  Stellen Sie sicher, dass die App nicht ausgeführt wird. 
+2.  Wenn sie ausgeführt wird, wechseln Sie zu „Running apps“, und schließen Sie sie. Wenn Sie versuchen, eine App zu deinstallieren, die gerade ausgeführt wird, verursacht dies Probleme beim erneuten Installieren der App. 
+3.  Sobald Sie bereit sind, klicken Sie auf **Deinstallieren**.
 
 ### <a name="processes"></a>Prozesse
 

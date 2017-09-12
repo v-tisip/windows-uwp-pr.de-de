@@ -1,32 +1,30 @@
 ---
 author: mcleanbyron
 ms.assetid: 9ca1f880-2ced-46b4-8ea7-aba43d2ff863
-description: "Erfahren Sie mehr über bekannte Probleme mit der aktuellen Version der Microsoft Advertising-Bibliotheken im Microsoft Store Services SDK."
+description: "Erfahren Sie mehr über bekannte Probleme mit der aktuellen Version der Microsoft Advertising-Bibliotheken."
 title: Bekannte Probleme mit den Advertising-Bibliotheken
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 07/20/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, Anzeigen, Werbung, Bekannte Probleme
-ms.openlocfilehash: 33bf3c2db5db7e8ec07df3f4d13cc0ad074e99a3
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: b18c4568770afb70bcca991c79d59a9912981705
+ms.sourcegitcommit: a9e4be98688b3a6125fd5dd126190fcfcd764f95
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/21/2017
 ---
 # <a name="known-issues-for-the-advertising-libraries"></a>Bekannte Probleme mit den Advertising-Bibliotheken
 
 
 
 
-Dieses Thema listet alle bekannten Probleme für die aktuelle Version der Microsoft Advertising-Bibliotheken im Microsoft Store-Services-SDK (für UWP-Apps) und im Microsoft Advertising-SDK für Windows und Windows Phone8.x (für Windows8.1- und Windows Phone8.x-Apps) auf.
-
-## <a name="installation-of-microsoft-store-services-sdk-requires-visual-studio-tools-for-universal-windows-apps"></a>Die Installation des Microsoft Store Services SDK erfordert Visual Studio-Tools für universelle Windows-Apps.
-
-Um den [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) mit Visual Studio2015 zu installieren, muss Version1.1 oder höher der Visual Studio-Tools für universelle Windows-Apps installiert sein. Weitere Informationen finden Sie in den [Versionshinweisen](http://go.microsoft.com/fwlink/?LinkID=624516) für Visual Studio.
+Dieses Thema listet alle bekannten Probleme für die aktuelle Version der Microsoft Advertising-Bibliotheken im Microsoft Advertising-SDK (für UWP-Apps) und im Microsoft Advertising-SDK für Windows und Windows Phone8.x (für Windows8.1- und Windows Phone8.x-Apps) auf.
 
 ## <a name="windows-phone-8x-silverlight-projects"></a>Windows Phone8.x Silverlight-Projekte
 
-Der Microsoft Advertising SDK for Windows and Windows Phone8.x verfügt nur über begrenzte Unterstützung für Windows Phone8.x Silverlight-Projekte. Weitere Informationen finden Sie unter [Anzeigen von Werbung in Ihrer App](display-ads-in-your-app.md#silverlight_support).
+Der Microsoft Advertising-SDK for Windows and Windows Phone8.x verfügt nur über begrenzte Unterstützung für Windows Phone8.x Silverlight-Projekte. Weitere Informationen finden Sie unter [Anzeigenunterstützung für Windows Phone8.x Silverlight-Projekte](adcontrol-in-windows-phone-silverlight.md#silverlight_support).
 
 Um die Microsoft Advertising-Assemblys für Windows Phone 8.x Silverlight-Projekte abzurufen, installieren Sie den [Microsoft Advertising SDK for Windows and Windows Phone 8.x](http://aka.ms/store-8-sdk), öffnen das Projekt in Visual Studio und wechseln dann zu **Projekt** > **Verbundenen Dienst hinzufügen** > **Ad Mediator**. Die Assemblys werden anschließend automatisch geladen. Im Anschluss daran können Sie die Ad Mediator-Referenzen aus Ihrem Projekt entfernen, wenn Sie Ad Mediator nicht verwenden möchten. Weitere Informationen finden Sie unter [AdControl in Windows Phone Silverlight](adcontrol-in-windows-phone-silverlight.md).
 
@@ -64,7 +62,7 @@ Sie können auch im [Forum](http://go.microsoft.com/fwlink/p/?LinkId=401266) ein
 
 Testanzeigen können angezeigt werden, auch wenn Sie Liveanzeigen erwarten. Dies kann in den folgenden Szenarien vorkommen:
 
-* Microsoft Advertising kann die Liveanwendungs-ID nicht überprüfen oder finden, die im App Store verwendet wird. Wenn eine Anzeigeneinheit von einem Benutzer erstellt wird, kann in diesem Fall der Status als live (Nicht-Test) beginnen, jedoch innerhalb von 6Stunden nach der ersten Anzeigenanforderung in den Teststatus wechseln. Er wechselt zurück zum Livestatus, wenn es 10Tage keine Anforderungen von Test-Apps gibt.
+* Unsere Werbeplattform kann die Liveanwendungs-ID nicht überprüfen oder finden, die im Store verwendet wird. Wenn eine Anzeigeneinheit von einem Benutzer erstellt wird, kann in diesem Fall der Status als live (Nicht-Test) beginnen, jedoch innerhalb von 6Stunden nach der ersten Anzeigenanforderung in den Teststatus wechseln. Er wechselt zurück zum Livestatus, wenn es 10Tage keine Anforderungen von Test-Apps gibt.
 
 * Quergeladene Apps oder im Emulator ausgeführte Apps zeigen keine Liveanzeigen an.
 

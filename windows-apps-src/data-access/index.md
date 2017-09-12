@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: normesta
 ms.assetid: 76776b0f-3163-48c9-835b-3f4213968079
 title: Datenzugriff
 description: "In diesem Abschnitt wird das Speichern von Daten auf dem Gerät in einer privaten Datenbank und die Verwendung der objektrelationalen Zuordnung in UWP-Apps (Universelle Windows-Plattform) erläutert."
-ms.author: markl
+ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, Daten, Datenbank, relational, Tabellen, sqlite
-ms.openlocfilehash: 9e5873e7c7c5af9b3d13dcd850e19ff3dfd91dc7
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 19690b6877fb4304b7740e6098711ca0b097d567
+ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="data-access"></a>Datenzugriff
 
@@ -24,4 +26,4 @@ SQLite ist im UWP-SDK enthalten. Entity FrameworkCore funktioniert mit SQLite in
 | Thema | Beschreibung|
 |-------|------------|
 | [Entity Framework Core mit SQLite für C#-Apps](entity-framework-7-with-sqlite-for-csharp-apps.md) | Entity Framework (EF) ist eine objektrelationale Zuordnung, die Ihnen über domänenspezifische Objekte die Verwendung relationaler Daten ermöglicht. In diesem Artikel wird erläutert, wie Sie Entity Framework Core mit einer SQLite-Datenbank in einer universellen Windows-App verwenden können. |
-| [SQLite-Datenbanken](sqlite-databases.md) | SQLite ist ein eingebettetes Datenbankmodul ohne Server. In diesem Artikel wird erläutert, wie die im SDK enthaltene SQLite-Bibliothek verwendet, Ihre eigene SQLite-Bibliothek in einer Universellen Windows-App verpackt oder aus der Quelle erstellt wird. |
+| [SQLite-Datenbanken](sqlite-databases.md) | SQLite ist ein eingebettetes Datenbankmodul ohne Server. In diesem Artikel wird erläutert, wie die im SDK enthaltene SQLite-Bibliothek verwendet wird und wie Ihre eigene SQLite-Bibliothek in einer universellen Windows-App verpackt oder aus der Quelle erstellt wird. |

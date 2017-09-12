@@ -3,15 +3,17 @@ author: jnHs
 Description: "Informationen zu den Steuerformularen, die von Microsoft ausgestellt werden, einschließlich ihres Empfängers und des Zeitpunkts der Verfügbarkeit."
 title: "Erläuterung der von Microsoft ausgestellten IRS-Steuerformulare"
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 06/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
-ms.openlocfilehash: 068a940a54048b10e8f66bd3267b3a22c42beb50
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: bffb666184f52e6e6491d8651414ecbc269352b8
+ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/21/2017
 ---
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Erläuterung der von Microsoft ausgestellten IRS-Steuerformulare
 
@@ -26,7 +28,8 @@ Nachfolgend erläutern wir diese Formulare eingehender, etwa, wer sie erhält un
 |1099-MISC, 1099-K | Im Zusammenhang mit Verkaufsaktivitäten und/oder Zahlungen an Sie für die Teilnahme am Microsoft Marketplace | Gedruckte Formulare werden mit elektronischen Siegeln mit spätestens dem **31.Januar** versehen, und die PDF-Kopien werden zur gleichen Zeit im Dev Center zur Verfügung stehen (**Dashboard > Kontoeinstellungen > Steuerprofil**) |
 |1042-S | Im Zusammenhang mit den Zahlungen an Sie, die der Quellensteuer der USA unterliegen. | Gedruckte Formulare werden mit elektronischen Siegeln mit spätestens dem **15.März** versehen, und die PDF-Kopien werden zur gleichen Zeit im Dev Center zur Verfügung stehen (**Dashboard > Kontoeinstellungen > Steuerprofil**) |
 
-> **Hinweis** Die Adresse auf den IRS.Steuerformularen entspricht der Adresse in Ihrem [Steuerprofil](setting-up-your-payout-account-and-tax-forms.md#tax-forms). Wenn sich Ihre Adresse geändert hat, aktualisieren Sie die Adresse auch in Ihrem **Steuerprofil**.
+> [!NOTE]
+> Die Adresse auf den IRS.Steuerformularen entspricht der Adresse in Ihrem [Steuerprofil](setting-up-your-payout-account-and-tax-forms.md#tax-forms).. Wenn sich Ihre Adresse geändert hat, aktualisieren Sie die Adresse auch in Ihrem **Steuerprofil**.
 
 ## <a name="for-developers-located-in-the-united-states"></a>Für Entwickler in den USA
 
@@ -68,7 +71,7 @@ EIN: \*\*\*\*\*4442<br>
      <th> Ich sollte dieses Formular erhalten</th>
   </tr>
   <tr> 
-     <td valign="top">Ich habe **mindestens 600 US-Dollar an Zahlungen** für Anzeigen in Apps (Microsoft Advertising) im entsprechenden Geschäftsjahr erhalten</td>
+     <td valign="top">Ich habe **mindestens 600 US-Dollar an Zahlungen** für Anzeigen in Apps im entsprechenden Geschäftsjahr erhalten.</td>
     <td valign="top">**1099-MISC**:<br>
 Zahlende Instanz: Microsoft Online Inc<br>
 EIN: \*\*\*\*\*0505<br>
@@ -76,7 +79,7 @@ EIN: \*\*\*\*\*0505<br>
 **Wichtig:** Bestimmte Unternehmenseinheiten erhalten keine 1099-MISC-Formulare, ungeachtet der erhaltenen Zahlungen von Microsoft.  Weitere Informationen erhalten Sie bei Ihrem Steuerberater.  </td>
   </tr>
   <tr> 
-     <td valign="top">Ich habe **weniger als 600 US-Dollar an Zahlungen** für Anzeigen in Apps (Microsoft Advertising) im entsprechenden Geschäftsjahr erhalten</td>
+     <td valign="top">Ich habe **weniger als 600 US-Dollar an Zahlungen** für Anzeigen in Apps entsprechenden Geschäftsjahr erhalten.</td>
      <td valign="top">Keine</td>
   </tr>
 </table>
@@ -123,4 +126,5 @@ EIN: \*\*\*\*\*0505<br>
 </table>
 
 
-> **Hinweis** Bei weiteren Fragen oder Anliegen im Zusammenhang mit **IRS-Steuerformularen** erstellen Sie ein [Supportticket](http://aka.ms/storesupport). Microsoft kann keine Fragen im Zusammenhang mit Ihren spezifischen Steuerumständen beantworten. Bei diesen Fragen wenden Sie sich an Ihre Steuerexperten.
+> [!NOTE]
+> Bei weiteren Fragen oder Anliegen im Zusammenhang mit **IRS-Steuerformularen** erstellen Sie ein [Supportticket](http://aka.ms/storesupport). Microsoft kann keine Fragen im Zusammenhang mit Ihren spezifischen Steuerumständen beantworten. Bei diesen Fragen wenden Sie sich an Ihre Steuerexperten.

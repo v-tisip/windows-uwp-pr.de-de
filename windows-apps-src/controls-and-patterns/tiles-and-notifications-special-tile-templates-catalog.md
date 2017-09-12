@@ -6,14 +6,16 @@ ms.assetid: 1322C9BA-D5B2-45E2-B813-865884A467FF
 label: TBD
 template: detail.hbs
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows10, UWP
-ms.openlocfilehash: 11c8fbdfd8653fe93ab712c865dc1d23e7a76581
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: ebeac8bb4d2787514c788ecfa0ab1381ff40820b
+ms.sourcegitcommit: 9a1310468970c8d1ade0fb200126dff56ea8c9e1
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/14/2017
 ---
 # <a name="special-tile-templates"></a>Spezielle Kachelvorlagen
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
@@ -35,13 +37,25 @@ In den folgenden Schritten wird alles erläutert, was Sie zum Erstellen einer Ic
 
 **Schritt 1: Erstellen Ihrer Bildressourcen im PNG-Format**
 
-Erstellen Sie die Symbolressourcen für die Kachel, und platzieren Sie diese mit den anderen Ressourcen in Ihren Projektressourcen. Erstellen Sie mindestens ein Symbol mit 200 x 200 Pixeln, das für kleine und mittelgroße Kacheln auf dem Telefon und dem Desktop funktioniert. Um die bestmögliche Benutzerfreundlichkeit bereitzustellen, erstellen Sie für jede Größe ein eigenes Symbol. Informationen zu den Größen finden Sie im Bild unten.
+Erstellen Sie die Symbolressourcen für die Kachel, und platzieren Sie diese mit den anderen Ressourcen in Ihren Projektressourcen. Erstellen Sie mindestens ein Symbol mit 200 x 200 Pixeln, das für kleine und mittelgroße Kacheln auf dem Telefon und dem Desktop funktioniert. Um die bestmögliche Benutzerfreundlichkeit bereitzustellen, erstellen Sie für jede Größe ein eigenes Symbol. Auf diese Ressourcen ist kein Abstand erforderlich. Informationen zu den Größen finden Sie im Bild unten.
 
 Speichern Sie Symbolressourcen im PNG-Format und mit Transparenz. Unter Windows Phone wird jedes nicht transparente Pixel weiß (RGB-Wert 255, 255, 255) angezeigt. Verwenden Sie aus Gründen der Konsistenz und Einfachheit weiß auch für Desktopsymbole.
 
 Windows 10 auf Tablet, Laptop und Desktop unterstützt nur quadratische Symbolressourcen. Windows Phone unterstützt quadratische Ressourcen und Ressourcen, die höher als breit sind, bis zu einem Breite-Höhe-Verhältnis von 2:3, was für Bilder, z.B. ein Telefonsymbol, nützlich ist.
 
 ![Symbolgrößen auf kleinen und mittelgroßen Kacheln auf Telefon und Desktop](images/iconic-template-sizing-info.png)
+
+![Größen für Ressourcen mit und ohne Signal](images/assetguidance24.png)
+
+Für quadratische Ressourcen erfolgt eine automatische Zentrierung innerhalb des Containers:
+
+![Größe einer quadratischen Ressource, mit und ohne Signal](images/assetguidance25.png)
+
+Bei nicht quadratischen Ressourcen erfolgt eine automatische horizontale/vertikale Zentrierung und ein Andocken an die Breite bzw. Höhe des Containers:
+
+![Größe einer nicht quadratischen Ressource, mit und ohne Signal](images/assetguidance26a.png)
+
+![Größe einer nicht quadratischen Ressource, mit und ohne Signal](images/assetguidance26b.png)
 
 **Schritt 2: Erstellen der Basiskachel**
 

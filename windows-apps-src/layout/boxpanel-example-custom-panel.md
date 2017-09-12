@@ -10,18 +10,17 @@ label: BoxPanel, an example custom panel
 template: detail.hbs
 op-migration-status: ready
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a46e26491e909d825ceaff04d008b8cb56c9aff3
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 4fbc5c2e7bea43c2f18cf9e247b0143795bdfc1a
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/22/2017
 ---
-
 # <a name="boxpanel-an-example-custom-panel"></a>BoxPanel, ein Beispiel für benutzerdefinierte Panels
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
@@ -51,7 +50,7 @@ Ein Layoutszenario wird durch folgende Aspekte ausgedrückt:
 -   Gelten für den eigenen Bereich des Panels Einschränkungen?
 -   Wie bestimmt die Logik des Panels alle Messwerte, Platzierungspositionen und Größenanpassungen, die letztlich zu einem gerenderten UI-Layout der untergeordneten Elemente führen?
 
-Unter Berücksichtigung dieser Aspekte ist das hier gezeigte `BoxPanel` für ein bestimmtes Szenario geeignet. Da in diesem Beispiel der Code im Vordergrund stehen soll, werden wir das Szenario noch nicht detailliert erläutern, sondern uns stattdessen auf die notwendigen Schritte und die Codierungsmuster konzentrieren. Wenn Sie sich zunächst detaillierter über das Szenario informieren möchten, lesen Sie unter [Szenario für `BoxPanel`](#scenario) weiter, und kehren Sie später zum Code zurück.
+Unter Berücksichtigung dieser Aspekte ist das hier gezeigte `BoxPanel` für ein bestimmtes Szenario geeignet. Da in diesem Beispiel der Code im Vordergrund stehen soll, werden wir das Szenario noch nicht detailliert erläutern, sondern uns stattdessen auf die notwendigen Schritte und die Codierungsmuster konzentrieren. Wenn Sie sich zunächst detaillierter über das Szenario informieren möchten, lesen Sie unter [Szenario für `BoxPanel`](#the-scenario-for-boxpanel) weiter, und kehren Sie später zum Code zurück.
 
 ## <a name="start-by-deriving-from-panel"></a>Erster Schritt: Ableiten von der **Panel**-Klasse
 
@@ -113,15 +112,15 @@ protected override Size MeasureOverride(Size availableSize)
     if (aspectratio > 1)
     {
         rowcount = maxrc;
-        colcount = (maxrc > 2 &amp;&amp; Children.Count < maxrc * (maxrc - 1)) ? maxrc - 1 : maxrc;
+        colcount = (maxrc > 2 && Children.Count < maxrc * (maxrc - 1)) ? maxrc - 1 : maxrc;
     } 
     else 
     {
-        rowcount = (maxrc > 2 &amp;&amp; Children.Count < maxrc * (maxrc - 1)) ? maxrc - 1 : maxrc;
+        rowcount = (maxrc > 2 && Children.Count < maxrc * (maxrc - 1)) ? maxrc - 1 : maxrc;
         colcount = maxrc;
     }
 
-    // Now that we have a column count, divide available horizontal, that&#39;s our cell width.
+    // Now that we have a column count, divide available horizontal, that's our cell width.
     cellwidth = (int)Math.Floor(availableSize.Width / colcount);
     // Next get a cell height, same logic of dividing available vertical by rowcount.
     cellheight = Double.IsInfinity(availableSize.Height) ? Double.PositiveInfinity : availableSize.Height / rowcount;
@@ -137,7 +136,7 @@ protected override Size MeasureOverride(Size availableSize)
 
 Das notwendige Muster einer [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730)-Implementierung ist die Schleife durch die einzelnen Elemente in [**Panel.Children**](https://msdn.microsoft.com/library/windows/apps/br227514). Rufen Sie für jedes dieser Elemente immer die [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952)-Methode auf. **Measure** hat einen Parameter vom Typ [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995). An dieser Stelle übergeben Sie die Größe, die dem Panel für das jeweilige untergeordnete Element zur Verfügung stehen soll. Bevor Sie also den Schleife ausführen und mit dem **Measure**-Aufruf beginnen können, müssen Sie wissen, wie viel Platz die einzelnen Zellen belegen können. Aus der **MeasureOverride**-Methode selbst stammt der *availableSize*-Wert. Dies ist die Größe, die vom übergeordneten Panel beim **Measure**-Aufruf verwendet wurde. Dies war in erster Linie der Auslöser für diesen **MeasureOverride**-Aufruf. Eine typische Logik besteht also darin, ein Schema zu entwerfen, in dem jedes untergeordnete Element den Raum des gesamten *availableSize*-Werts für das Panel teilt. Anschließend übergeben Sie die einzelnen Größenteilungen für jedes untergeordnete Element an **Measure**.
 
-Die Größe wird vom `BoxPanel` ziemlich einfach aufgeteilt: Es teilt den Platz in mehrere Felder, deren Anzahl größtenteils durch die Anzahl Elemente bestimmt wird. Die Größenanpassung der Felder basiert auf der Anzahl der Zeilen und Spalten und auf der verfügbaren Größe. Mitunter wird eine Zeile oder Spalte eines Quadrats nicht benötigt. Demzufolge wird es verworfen, und der Bereich ist bezüglich des Zeilen-/Spaltenverhältnisses kein Quadrat mehr, sondern wird zu einem Rechteck. Wenn Sie weitere Informationen dazu erhalten möchten, wie diese Logik erstellt wurde, lesen Sie unter [„Das Szenario für BoxPanel](#scenario)“ weiter.
+Die Größe wird vom `BoxPanel` ziemlich einfach aufgeteilt: Es teilt den Platz in mehrere Felder, deren Anzahl größtenteils durch die Anzahl Elemente bestimmt wird. Die Größenanpassung der Felder basiert auf der Anzahl der Zeilen und Spalten und auf der verfügbaren Größe. Mitunter wird eine Zeile oder Spalte eines Quadrats nicht benötigt. Demzufolge wird es verworfen, und der Bereich ist bezüglich des Zeilen-/Spaltenverhältnisses kein Quadrat mehr, sondern wird zu einem Rechteck. Wenn Sie weitere Informationen dazu erhalten möchten, wie diese Logik erstellt wurde, lesen Sie unter [„Das Szenario für BoxPanel](#the-scenario-for-boxpanel)“ weiter.
 
 Was geschieht also während des Messdurchlaufs? Dabei wird für jedes Element, bei dem [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) aufgerufen wurde, ein Wert für die schreibgeschützte [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921)-Eigenschaft festgelegt. Das Vorhandensein eines **DesiredSize**-Werts kann beim Erreichen des Anordnungsdurchlaufs von Bedeutung sein, weil **DesiredSize** Aufschluss darüber gibt, wie die Größe bei der Anordnung und in der finalen Darstellung lauten kann oder soll. Selbst wenn Sie **DesiredSize** in Ihrer eigenen Logik nicht verwenden, wird der Wert dennoch vom System benötigt.
 
@@ -186,7 +185,7 @@ protected override Size ArrangeOverride(Size finalSize)
 
 Das notwendige Muster einer [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711)-Implementierung ist die Schleife durch die einzelnen Elemente in [**Panel.Children**](https://msdn.microsoft.com/library/windows/apps/br227514). Rufen Sie für jedes dieser Elemente immer die [**Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914)-Methode auf.
 
-Beachten Sie, dass hier nicht so viele Berechnungen erfolgen wie in [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) – das ist typisch. Die Größe der untergeordneten Elemente ist bereits aus der eigenen **MeasureOverride**-Logik des Panels oder aus dem [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921)-Wert der einzelnen untergeordneten Elemente bekannt, der während des Messdurchlaufs festgelegt wird. Dennoch müssen wir die Position innerhalb des Panels festlegen, an der die einzelnen untergeordneten Elemente angezeigt werden. In einem typischen Panel sollte jedes untergeordnete Element an einer anderen Position gerendert werden. Ein Panel, das überlappende Elemente erzeugt, ist für gewöhnliche Szenarien nicht wünschenswert (obwohl Sie durchaus Panels mit zweckmäßigen Überlappungen erstellen können, wenn dies wirklich das beabsichtigte Szenario ist).
+Beachten Sie, dass hier nicht so viele Berechnungen erfolgen wie in [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730)– das ist typisch. Die Größe der untergeordneten Elemente ist bereits aus der eigenen **MeasureOverride**-Logik des Panels oder aus dem [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921)-Wert der einzelnen untergeordneten Elemente bekannt, der während des Messdurchlaufs festgelegt wird. Dennoch müssen wir die Position innerhalb des Panels festlegen, an der die einzelnen untergeordneten Elemente angezeigt werden. In einem typischen Panel sollte jedes untergeordnete Element an einer anderen Position gerendert werden. Ein Panel, das überlappende Elemente erzeugt, ist für gewöhnliche Szenarien nicht wünschenswert (obwohl Sie durchaus Panels mit zweckmäßigen Überlappungen erstellen können, wenn dies wirklich das beabsichtigte Szenario ist).
 
 Dieses Panel wird nach dem Konzept von Zeilen und Spalten angeordnet. Die Anzahl Zeilen und Spalten wurde bereits berechnet (dies war für die Messung nötig). Die Form der Zeilen und Spalten sowie die bekannten Größen der einzelnen Zellen sind also Teil der Definitionslogik einer Darstellungsposition (`anchorPoint`) für jedes Element, das in diesem Panel enthalten ist. Dieser [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870)-Wert und der bereits aus der Messung bekannte [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995)-Wert werden zusammen als die beiden Komponenten verwendet, aus denen eine [**Rect**](https://msdn.microsoft.com/library/windows/apps/br225994)-Struktur konstruiert wird. **Rect** ist der Eingabetyp für [**Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914).
 
@@ -198,7 +197,7 @@ Normalerweise sind der eingegebene Wert für *finalSize* und der Wert für [**Si
 
 ## <a name="a-refinement-controlling-the-row-vs-column-count"></a>Verfeinerung: Steuern der Anzahl der Zeilen und Spalten
 
-Sie könnten diesen Bereich nun in diesem Zustand kompilieren und verwenden. Wir fügen jedoch noch eine Verfeinerung hinzu. In dem gerade gezeigten Code positioniert die Logik die Extrazeile oder -spalte auf der Seite, die im Seitenverhältnis die längste ist. Aus Gründen der besseren Kontrolle über die Formen der Zellen kann es jedoch wünschenswert sein, eine 4-x-3-Zellenmenge anstatt 3 x 4 auszuwählen. Dies ist auch dann der Fall, wenn das eigene Seitenverhältnis des Panels „Hochformat“ lautet. Daher fügen wir eine optionale Abhängigkeitseigenschaft hinzu, die der Benutzer des Panels zum Steuern dieses Verhaltens festlegen kann. Hier finden Sie die sehr einfache Definition der Abhängigkeitseigenschaft:
+Sie könnten diesen Bereich nun in diesem Zustand kompilieren und verwenden. Wir fügen jedoch noch eine Verfeinerung hinzu. In dem gerade gezeigten Code positioniert die Logik die Extrazeile oder -spalte auf der Seite, die im Seitenverhältnis die längste ist. Aus Gründen der besseren Kontrolle über die Formen der Zellen kann es jedoch wünschenswert sein, eine 4-x-3-Zellenmenge anstatt 3x4 auszuwählen. Dies ist auch dann der Fall, wenn das eigene Seitenverhältnis des Panels „Hochformat“ lautet. Daher fügen wir eine optionale Abhängigkeitseigenschaft hinzu, die der Benutzer des Panels zum Steuern dieses Verhaltens festlegen kann. Hier finden Sie die sehr einfache Definition der Abhängigkeitseigenschaft:
 
 ```CSharp
 public static readonly DependencyProperty UseOppositeRCRatioProperty =
@@ -225,12 +224,12 @@ Wie verhält es sich jedoch, wenn die Anzahl untergeordneter Elemente dynamisch 
 
 Aber nicht alle App-Szenarien eignen sich für die Datenbindung. Manchmal müssen Sie zur Laufzeit neue UI-Elemente erstellen und sichtbar machen. `BoxPanel`  ist für dieses Szenario gedacht. Eine Änderung der Anzahl der untergeordneten Elemente ist kein Problem für `BoxPanel`, weil diese Anzahl in Berechnungen verwendet wird und sowohl die vorhandenen als auch die neuen untergeordneten Elemente in einem neuen Layout angepasst werden, sodass sie alle passen.
 
-Ein erweitertes Szenario für das Erweitern von `BoxPanel` (hier nicht gezeigt) könnte sowohl dynamische untergeordnete Elemente umfassen als auch den [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921)-Wert eines untergeordneten Elements als stärkeren Faktor für die Größenanpassung einzelner Zellen verwenden. In diesem Szenario könnten auch die Zeilen- oder Spaltengrößen oder Nichtrasterformen variieren, sodass weniger Platz „verschwendet“ wird. Dies erfordert eine Strategie für die Einpassung von mehreren Rechtecken mit verschiedenen Größen und Seitenverhältnissen in ein einschließendes Rechteck, um ästhetische Aspekte ebenso wie die kleinste Größe zu berücksichtigen. `BoxPanel`  verwendet solch eine Strategie nicht. Stattdessen wird der Platz mithilfe einer einfacheren Technik aufgeteilt. `BoxPanel`Die Technik besteht darin, die kleinste Quadratzahl zu bestimmen, die größer als die Anzahl der untergeordneten Elemente ist. Beispielsweise würden neun Elemente in ein Quadrat mit den Abmessungen 3 × 3 passen. Für zehn Elemente wird ein Quadrat mit den Abmessungen 4 × 4 benötigt. Oftmals können Sie aber Elemente zuordnen und trotzdem eine Zeile oder Spalte aus dem Ausgangsquadrat entfernen, um Platz zu sparen. Im Beispiel mit der Anzahl 10 würde das in ein Rechteck mit 4 x 3 oder 3 x 4 passen.
+Ein erweitertes Szenario für das Erweitern von `BoxPanel` (hier nicht gezeigt) könnte sowohl dynamische untergeordnete Elemente umfassen als auch den [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921)-Wert eines untergeordneten Elements als stärkeren Faktor für die Größenanpassung einzelner Zellen verwenden. In diesem Szenario könnten auch die Zeilen- oder Spaltengrößen oder Nichtrasterformen variieren, sodass weniger Platz „verschwendet“ wird. Dies erfordert eine Strategie für die Einpassung von mehreren Rechtecken mit verschiedenen Größen und Seitenverhältnissen in ein einschließendes Rechteck, um ästhetische Aspekte ebenso wie die kleinste Größe zu berücksichtigen. `BoxPanel`  verwendet solch eine Strategie nicht. Stattdessen wird der Platz mithilfe einer einfacheren Technik aufgeteilt. `BoxPanel`Die Technik besteht darin, die kleinste Quadratzahl zu bestimmen, die größer als die Anzahl der untergeordneten Elemente ist. Beispielsweise würden neun Elemente in ein Quadrat mit den Abmessungen 3×3 passen. Für zehn Elemente wird ein Quadrat mit den Abmessungen 4×4 benötigt. Oftmals können Sie aber Elemente zuordnen und trotzdem eine Zeile oder Spalte aus dem Ausgangsquadrat entfernen, um Platz zu sparen. Im Beispiel mit der Anzahl10 würde das in ein Rechteck mit 4x3 oder 3x4 passen.
 
-Möglicherweise fragen Sie sich, warum das Panel nicht stattdessen die Abmessung 5 x 2 für zehn Elemente auswählt, da die Elementanzahl dann genau passen würde. In der Praxis wird die Größe von Panels aber als Rechteck festgelegt, das nur selten ein fest ausgerichtetes Seitenverhältnis aufweist. Die Technik mit den kleinsten Quadraten ist eine Methode, um die Größenfestlegungslogik so zu beeinflussen, dass sie ordnungsgemäß mit den typischen Layoutformen funktioniert und um zu verhindern, dass durch die Größenfestlegung eigenartige Seitenverhältnisse der Zellenformen auftreten.
+Möglicherweise fragen Sie sich, warum das Panel nicht stattdessen die Abmessung 5x2 für zehn Elemente auswählt, da die Elementanzahl dann genau passen würde. In der Praxis wird die Größe von Panels aber als Rechteck festgelegt, das nur selten ein fest ausgerichtetes Seitenverhältnis aufweist. Die Technik mit den kleinsten Quadraten ist eine Methode, um die Größenfestlegungslogik so zu beeinflussen, dass sie ordnungsgemäß mit den typischen Layoutformen funktioniert und um zu verhindern, dass durch die Größenfestlegung eigenartige Seitenverhältnisse der Zellenformen auftreten.
 
 > [!NOTE]
-> Dieser Artikel ist für Windows 10-Entwickler bestimmt, die UWP-Apps (Universelle Windows-Plattform) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> Dieser Artikel ist für Windows10-Entwickler bestimmt, die UWP-Apps (Universelle Windows-Plattform) schreiben. Wenn Sie für Windows8.x oder Windows Phone8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
 ## <a name="related-topics"></a>Verwandte Themen
 
@@ -243,4 +242,3 @@ Möglicherweise fragen Sie sich, warum das Panel nicht stattdessen die Abmessung
 **Konzepte**
 
 * [Ausrichtung, Rand und Abstand](alignment-margin-padding.md)
-

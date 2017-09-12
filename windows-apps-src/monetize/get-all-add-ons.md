@@ -9,16 +9,18 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows10, UWP, Windows Store-Übermittlungs-API, Add-Ons, In-App-Produkte, IAPs"
-ms.openlocfilehash: bb31d8cbe60703aff179913648556f408ba65586
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 82d05e49f087dda903a0bc5c1010df98ae64c016
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="get-all-add-ons"></a>Abrufen aller Add-Ons
 
 
 
 
-Verwenden Sie diese Methode in der Windows Store-Übermittlungs-API zum Abrufen von Daten für alle Add-Ons (auch als In-App-Produkte oder IAPs bezeichnet) für alle Apps, die für Ihr Windows Dev Center-Konto registriert wurden.
+Verwenden Sie diese Methode in der Windows Store-Übermittlungs-API, um Daten für alle Add-Ons für Apps abzurufen, die für Ihr Windows Dev Center-Konto registriert wurden.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -26,8 +28,6 @@ Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
 * Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](create-and-manage-submissions-using-windows-store-services.md#prerequisites) für die Windows Store-Übermittlungs-API.
 * [Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60 Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
-
->**Hinweis**&nbsp;&nbsp;Diese Methode kann nur für Windows Dev Center-Konten verwendet werden, die eine Berechtigung zur Verwendung der Windows Store-Übermittlungs-API erhalten haben. Diese Berechtigung ist nicht für alle Konten aktiviert.
 
 ## <a name="request"></a>Anforderung
 

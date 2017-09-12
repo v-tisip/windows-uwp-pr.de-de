@@ -1,57 +1,45 @@
 ---
-author: shawjohn
-Description: "Sie können für Ihre Apps detaillierte Analysen im Windows Dev Center-Dashboard anzeigen."
-title: Analysen
+author: JnHs
+Description: "Sie können für Ihre Windows-Apps detaillierte Analysen im Windows Dev Center-Dashboard oder über andere Methoden anzeigen."
+title: Analysieren der App-Leistung
 ms.assetid: 3A3C6F10-0DB1-416D-B632-CD388EA66759
-ms.author: johnshaw
-ms.date: 02/08/2017
+ms.author: wdg-dev-content
+ms.date: 06/28/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Analysen, Berichte, Dashboard, Apps
-ms.openlocfilehash: 13a37a4ae2cea67fdce843ed4e6189797d85b93e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 57e4a30258fa25411bb461cac56aa18d2f74981d
+ms.sourcegitcommit: a93b1da07b386a682435de58a8129d7b4ee90c14
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/29/2017
 ---
-# <a name="analytics"></a>Analysen
+# <a name="analyze-app-performance"></a>Analysieren der App-Leistung
 
-Sie können für Ihre Apps detaillierte Analysen im Windows Dev Center-Dashboard anzeigen. Statistiken und Diagramme geben Aufschluss über den Erfolg Ihrer Apps, z.B. wie viele Kunden Sie erreichen, wie die Kunden Ihre App einsetzen und was die Kunden über die App denken. Außerdem finden Sie dort Informationen zur App-Integrität, Anzeigennutzung und vieles mehr. Zeigen Sie die Berichte im Dashboard an, oder [laden Sie die erforderlichen Berichte herunter](download-analytic-reports.md), um Ihre Daten offline zu analysieren. Wir stellen Ihnen auch verschiedene Möglichkeiten für den [Zugriff auf Analysedaten ohne das Dashboard](#no-dashboard) zur Verfügung.
+Sie können für Ihre Apps detaillierte Analysen im Windows Dev Center-Dashboard anzeigen. Statistiken und Diagramme geben Aufschluss über den Erfolg Ihrer Apps, z.B. wie viele Kunden Sie erreichen, wie die Kunden Ihre App einsetzen und was die Kunden über die App denken. Außerdem finden Sie dort Metriken zur App-Integrität, zur Anzeigennutzung und mehr.
 
-> [!NOTE]
-> Zusätzlich zu den Dashboardberichten können Sie auf einige Analysedaten auch programmgesteuert mithilfe der [Windows Store-Analyse-REST-API](../monetize/access-analytics-data-using-windows-store-services.md) zugreifen.
+Zeigen Sie die Analyseberichte im Dashboard an, oder [laden Sie die erforderlichen Berichte herunter](download-analytic-reports.md), um Ihre Daten offline zu analysieren. Wir stellen Ihnen auch verschiedene Möglichkeiten für den [Zugriff auf Analysedaten ohne das Dashboard](#no-dashboard) zur Verfügung.
 
-## <a name="analytics-for-all-your-apps"></a>Analysen für Ihre gesamten Apps
+## <a name="view-key-analytics-for-all-your-apps"></a>Zeigen Sie die wichtigsten Analysen für Ihre gesamten Apps an
 
-Um die wichtigsten Analysen zu den am häufigsten heruntergeladenen Apps anzuzeigen, wählen Sie im oberen Navigationsmenü **Analysen** > **Übersicht** aus. Auf der Seite **Analyseübersicht** werden standardmäßig Informationen zu den fünf während ihrer Lebensdauer am häufigsten gekauften Apps angezeigt. Um andere Apps auszuwählen und anzuzeigen, wählen Sie **Filter ändern** aus.
+Um die wichtigsten Analysen zu den am häufigsten heruntergeladenen Apps anzuzeigen, erweitern Sie **Analyse** und wählen Sie **Übersicht** aus. Auf der Seite **Analyseübersicht** werden standardmäßig Informationen zu den fünf während ihrer Lebensdauer am häufigsten gekauften Apps angezeigt. Um andere veröffentlichte Apps auszuwählen und anzuzeigen, wählen Sie **Filter** aus.
 
-## <a name="available-reports-for-each-app"></a>Verfügbare Berichte für die einzelnen Apps
+## <a name="view-individual-reports-for-each-app"></a>Zeigen Sie einzelne Berichte für die einzelnen Apps an
 
 In diesem Abschnitt erhalten Sie Details zu den Informationen, die in den folgenden Berichten enthalten sind:
 
 -   [Bericht „Käufe“](acquisitions-report.md)
 -   [Bericht zu Add-On-Käufen](add-on-acquisitions-report.md)
--   [Installationsbericht](installs-report.md)
 -   [Nutzungsbericht](usage-report.md)
 -   [Integritätsbericht](health-report.md)
--   [Bericht „Bewertungen“](ratings-report.md)
 -   [Bericht „Rezensionen“](reviews-report.md)
 -   [Feedbackbericht](feedback-report.md)
--   [Bericht zu Kanälen und Abschlüssen](channels-and-conversions-report.md)
--   [Bericht „Anzeigenvermittlung“](ad-mediation-report.md)
 -   [Bericht zur Anzeigen-Performance](advertising-performance-report.md)
--   [Bericht zur Partneranzeigen-Performance](affiliates-performance-report.md)
--   [Bewerben Ihres App-Berichts](promote-your-app-report.md)
+-   [Bericht „Anzeigenkampagne“](promote-your-app-report.md)
 
 > [!NOTE]
 > Abhängig von den spezifischen Features und der Implementierung Ihrer App enthalten einige dieser Berichte möglicherweise keine Daten.
-
-## <a name="page-and-section-filters"></a>Seitenfilter und Abschnittsfilter
-
-Jeder Bericht enthält Filter, mit denen Sie einen Drilldown auf Ihre Daten ausführen können. Am oberen Seitenrand sehen Sie **Filter anwenden**. Mithilfe dieser Filter können Sie den Umfang aller auf der Seite angezeigten Diagramme und Informationen einschränken oder erweitern.
-
-Innerhalb eines bestimmten Diagramms können auch einzelne Abschnittsfilter angezeigt werden. Durch diese werden die Daten eingeschränkt, die nur für dieses bestimmte Diagramm angezeigt werden.
-
-Die spezifischen Filter variieren je nach Bericht. Die Themen in diesem Abschnitt erläutern, welche Filter verfügbar sind, und beschreiben weitere Daten, die Sie auf der Seite finden.
 
 <span id="no-dashboard"/>
 ## <a name="access-analytics-data-without-using-the-dev-center-dashboard"></a>Zugreifen auf Analysedaten ohne das Dev Center-Dashboard
@@ -79,5 +67,3 @@ Verwenden Sie die folgenden Ressourcen, um mit Power BI auf Ihre Analysedaten zu
 
 Installieren Sie die [Dev Center](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws)-App, um schnell Details über den Zustand und die Leistung Ihrer Apps auf Windows 10-Geräten anzuzeigen.
 
-## <a name="related-topics"></a>Verwandte Themen
-- [Veröffentlichen von Windows-Apps](index.md)

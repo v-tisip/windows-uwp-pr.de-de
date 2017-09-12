@@ -5,13 +5,15 @@ title: "App-Übermittlungen"
 ms.assetid: 363BB9E4-4437-4238-A80F-ABDFC70D96E4
 keywords: "Prüfliste"
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 8d6764051a6f3d9d5c6d851f0ba15353da5f9d5e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: fdef30d07386a1c5ab7dc6bd62b9507ff5852194
+ms.sourcegitcommit: 968187e803a866b60cda0528718a3d31f07dc54c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="app-submissions"></a>App-Übermittlungen
 
@@ -20,12 +22,12 @@ Nachdem Sie Ihre [App durch die Reservierung eines Namens erstellt haben](create
 
 Sie beginnen mit der Einreichung, sobald Ihre App fertig und bereit für die Veröffentlichung ist. Sie können mit der Eingabe von Infos beginnen, noch bevor Sie eine einzige Codezeile programmiert haben. Die Einreichung wird in Ihrem Dashboard gespeichert, sodass Sie zu einem beliebigen Zeitpunkt damit arbeiten können.
 
-Nach der Veröffentlichung Ihrer App können Sie eine aktualisierte Version veröffentlichen, indem Sie eine weitere Einreichung im Dashboard erstellen. Durch die Erstellung einer neuen Einreichung können Sie alle erforderlichen Änderungen vornehmen und veröffentlichen – z. B. neue Pakete hochladen oder Preisdetails oder App-Kategorie ändern. Um eine neue Übermittlung für eine App zu erstellen, klicken Sie neben der aktuellen Übermittlung, die auf der App-Übersichtsseite angezeigt wird, auf **Aktualisieren**.
+Nach der Veröffentlichung Ihrer App können Sie eine aktualisierte Version veröffentlichen, indem Sie eine weitere Einreichung im Dashboard erstellen. Durch die Erstellung einer neuen Einreichung können Sie alle erforderlichen Änderungen vornehmen und veröffentlichen – z. B. neue Pakete hochladen oder Preisdetails oder App-Kategorie ändern. Um eine neue Übermittlung für eine veröffentlichte App zu erstellen, klicken Sie neben der aktuellen Übermittlung, die auf der App-Übersichtsseite angezeigt wird, auf **Aktualisieren**.
 
-> **Hinweis**&nbsp;&nbsp;In diesem Abschnitt der Dokumentation wird das Erstellen einer App-Übermittlung über das Dev Center-Dashboard beschrieben. Alternativ dazu können Sie auch die [Windows Store-Übermittlungs-API](../monetize/create-and-manage-submissions-using-windows-store-services.md) verwenden, um App-Übermittlungen zu automatisieren.
+> [!NOTE]
+> In diesem Abschnitt der Dokumentation wird das Erstellen einer App-Übermittlung über das Dev Center-Dashboard beschrieben. Alternativ dazu können Sie auch die [Windows Store-Übermittlungs-API](../monetize/create-and-manage-submissions-using-windows-store-services.md) verwenden, um App-Übermittlungen zu automatisieren.
 
 ## <a name="app-submission-checklist"></a>Prüfliste für die App-Übermittlung
-
 
 Hier finden Sie eine Liste mit den Informationen, die Sie beim Erstellen Ihrer App-Übermittlung angeben können, sowie Links zu weiteren Informationen.
 
@@ -34,23 +36,24 @@ Die erforderlichen Elemente sind im Folgenden aufgeführt. Einige Bereiche sind 
 ### <a name="pricing-and-availability-page"></a>Seite „Preise und Verfügbarkeit“
 | Feldname                    | Hinweise                                       | Weitere Informationen                                                             |
 |-------------------------------|---------------------------------------------|---------------------------------------------------------------------------|
-| **Grundpreis**                | Erforderlich                                    | [Grundpreis](set-app-pricing-and-availability.md#base-price)              |
-| **Kostenlose Testversion**                | Standard: Keine kostenlose Testversion                      | [Hinzufügen von Testversionen und In-App-Einkäufen](https://msdn.microsoft.com/library/windows/apps/jj193599)  |
-| **Märkte und angepasste Preise** | Standard: alle möglichen Märkte, keine angepassten Preise | [Festlegen des Preises und Auswählen der Märkte](define-pricing-and-market-selection.md)              |
-| **Sonderangebotsverkaufspreise**              | Optional                                    | [Anbieten vergünstigter Apps und Add-Ons](put-apps-and-add-ons-on-sale.md)                                       |
-| **Verteilung und Sichtbarkeit** | Standard: Diese App im Store verfügbar machen | [Verteilung und Sichtbarkeit](set-app-pricing-and-availability.md#distribution-and-visibility) |
-| **Organisationslizenzierung**    | Standard: Großvolumige Käufe durch Organisationen sind erlaubt. | [Optionen für die Organisationslizenzierung](organizational-licensing.md)                        |
+| **Märkte**                   | Standard: alle möglichen Märkte,  | [Festlegen des Preises und Auswählen der Märkte](define-pricing-and-market-selection.md)         |
+| **Sichtbarkeit**                | Standard: Diese App im Store verfügbar und sichtbar machen | [Sichtbarkeit](set-app-pricing-and-availability.md#visibility) |
+| **Zeitplan**                  | Standard: so schnell wie möglich veröffentlichen        | [Konfigurieren des genauen Veröffentlichungszeitplans](configure-precise-release-scheduling.md) |
+| **Grundpreis**                | Erforderlich                                    | [Festlegen und Planen von App-Preisen](set-and-schedule-app-pricing.md)              |
+| **Kostenlose Testversion**                | Standard: Keine kostenlose Testversion                      | [Kostenlose Testversion](set-app-pricing-and-availability.md#free-trial)              |
+| **Sonderpreise**              | Optional                                    | [Anbieten vergünstigter Apps und Add-Ons](put-apps-and-add-ons-on-sale.md)           |
+| **Organisationslizenzierung**    | Standard: Großvolumige Käufe durch Organisationen sind erlaubt. | [Optionen für die Organisationslizenzierung](organizational-licensing.md)        |
 | **Veröffentlichungsdatum**                | Standard: so schnell wie möglich veröffentlichen      | [Veröffentlichungsdatum](set-app-pricing-and-availability.md#publish-date)          |
 
 <span/>
 
-### <a name="app-properties-page"></a>Seite „App-Eigenschaften“
+### <a name="properties-page"></a>Seite „Eigenschaften“
 
 | Feldname                    | Hinweise                                       | Weitere Informationen                                                             |
 |-------------------------------|---------------------------------------------|---------------------------------------------------------------------------|
 | **Kategorie und Unterkategorie**  | Erforderlich                                    | [Kategorie- und Unterkategorietabelle](category-and-subcategory-table.md)       |
 | **Systemanforderungen**      | Optional                                    | [Systemanforderungen](enter-app-properties.md#system-requirements)      |
-| **App-Deklarationen**          | Standard: Kunden können diese App auf alternativen Laufwerken oder Wechselmedien installieren. Windows kann die Daten dieser App in automatische Sicherungen auf OneDrive einschließen. | [App-Deklarationen](app-declarations.md) |
+| **Produktdeklarationen**          | Standard: Kunden können diese App auf alternativen Laufwerken oder Wechselmedien installieren. Windows kann die Daten dieser App in automatische Sicherungen auf OneDrive einschließen. | [Produktdeklarationen](app-declarations.md) |
 
 <span/>
 
@@ -80,19 +83,22 @@ Sie benötigen alle erforderlichen Informationen für mindestens eine der von Ih
 | Feldname                    | Hinweise                                       | Weitere Informationen                                                     |
 |-------------------------------|---------------------------------------------|-------------------------------------------------------------------|
 | **Beschreibung**               | Erforderlich                                    | [Erstellen einer interessanten App-Beschreibung](write-a-great-app-description.md) |
-| **Versionshinweise**             | Optional                                    | [Versionshinweise](create-app-store-listings.md#release-notes)         |
-| **Screenshots**               | Erforderlich (mindestens ein Screenshot)          | [App-Screenshots und -Bilder](app-screenshots-and-images.md)       |
-| **Symbol für App-Kachel**             | Optional, jedoch dringend empfohlen für Windows Phone8.1 und frühere Versionen | [Symbol für App-Kachel](create-app-store-listings.md#app-tile-icon) |
-| **Werbebilder**       | Optional                                    | [App-Screenshots und -Bilder](app-screenshots-and-images.md)       |
-| **App-Features**              | Optional                                    | [Features](create-app-store-listings.md#app-features)               |
-| **Weitere Systemanforderungen**      | Optional                                    | [Weitere Systemanforderungen](create-app-store-listings.md#additional-system-requirements) |
-| **Schlüsselwörter**                  | Optional                                    | [Schlüsselwörter](create-app-store-listings.md#keywords)                   |
+| **Versionshinweise**             | Optional                                    | [Versionshinweise](create-app-store-listings.md#release-notes)       |
+| **Screenshots**               | Erforderlich (mindestens ein Screenshot)          | [Screenshots](app-screenshots-and-images.md#screenshots)          |
+| **Store-Logos**               | Optional, jedoch dringend empfohlen für Windows Phone8.1 und frühere Versionen | [Store-Logos](app-screenshots-and-images.md#store-logos)             |
+| **Werbebilder**        | Optional                                    | [Werbebilder](app-screenshots-and-images.md#promotional-images) |
+| **Xbox-Bilder**               | Optional                                    | [Xbox-Bilder](app-screenshots-and-images.md#xbox-images)              |
+| **Optionale Werbebilder**       | Optional                            | [Optionale Werbebilder](app-screenshots-and-images.md#optional-promotional-images)       |
+| **Trailer**                  | Optional                                    | [Trailer](app-screenshots-and-images.md#trailers)                | 
+| **App-Features**              | Optional                                    | [Features](create-app-store-listings.md#app-features)             |
+| **Weitere Systemanforderungen**      | Optional                                    | [Weitere Systemanforderungen](create-app-store-listings.md#additional-system-requirements) 
+| **Suchbegriffe**              | Optional                                    | [Suchbegriffe](create-app-store-listings.md#search-terms)         |
+| **Privacy policy (Datenschutzrichtlinie)**            | Für einige Apps erforderlich. Weitere Informationen finden Sie in der [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058) und den [WindowsStore-Richtlinien](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_5_1). | [Datenschutzrichtlinie](create-app-store-listings.md#privacy-policy)        |
 | **Urheberrecht- und Markeninformationen** | Optional                                 | [Urheberrecht- und Markeninformationen](create-app-store-listings.md#copyright-and-trademark-info) |
 | **Zusätzliche Lizenzbedingungen**  | Optional                                    | [Additional license terms (Zusätzliche Lizenzbedingungen)](create-app-store-listings.md#additional-license-terms) |
-| **Website**                   | Optional                                    | [Website](create-app-store-listings.md#website)                     |
-| **Support – Kontaktinfos**      | Optional                                    | [Support – Kontaktinfos](create-app-store-listings.md)                |
-| **Privacy policy (Datenschutzrichtlinie)**            | Für einige Apps erforderlich. Weitere Informationen finden Sie in der [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058) und den [WindowsStore-Richtlinien](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_5_1). | [Datenschutzrichtlinie](create-app-store-listings.md#privacy-policy) |
-| **Plattformspezifische Store-Einträge** | Optional                               | [Erstellen plattformspezifischer Store-Einträge](create-platform-specific-store-listings.md) |
+| **Website**                   | Optional                                    | [Website](create-app-store-listings.md#website)                   |
+| **Support – Kontaktinfos**      | Optional                                    | [Support – Kontaktinfos](create-app-store-listings.md)              |
+| **Plattformspezifische Store-Einträge** | Optional                               | [Erstellen plattformspezifischer Store-Einträge](create-platform-specific-store-listings.md)  |
 
 <span/>
 

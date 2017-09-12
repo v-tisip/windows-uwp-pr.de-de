@@ -1,73 +1,23 @@
 ---
-author: msatranjr
+author: normesta
 Description: "Mithilfe des Kartensteuerelements können Straßenkarten und Luftansichten, Wegbeschreibungen, Suchergebnisse und Verkehrsinformationen angezeigt werden."
 title: "Richtlinien für Karten"
 ms.assetid: 7B5B6BC9-D1EC-4978-8876-20B78EF44797
-ms.author: misatran
+ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Kartensteuerelement, Karten, Standort
-ms.openlocfilehash: fb1bf78d247ca291ee40405d4143cbb6bc85230f
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+redirect_url: https://docs.microsoft.com/windows/uwp/maps-and-location/display-maps#map-control
+ms.openlocfilehash: 30be6299a88ea8494cf69d3e09448318417e69e7
+ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="map-control"></a>Kartensteuerelement
 
-
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
-
-
-Mithilfe des Kartensteuerelements können Straßenkarten, Luftbilder, 3D-Ansichten, Wegbeschreibungen, Suchergebnisse und Verkehr angezeigt werden. In einer Karte können Sie die Position des Benutzers, Wegbeschreibungen und interessante Orte anzeigen. Zudem kann eine Karte 3D-Luftbilder, Streetside-Ansichten, den Verkehr, öffentliche Verkehrsmittel und lokale Unternehmen enthalten.
-
-![Beispiel für eine Karte, Basisansicht](./images/win10fa/controls-maps-basic.jpg)
-
-## <a name="is-this-the-right-control"></a>Ist dies das richtige Steuerelement?
-
-
-Verwenden Sie ein Kartensteuerelement, wenn Sie in Ihrer App eine Karte benötigen, auf der Benutzer App-spezifische oder allgemeine geografische Informationen anzeigen können. Wenn die App ein Kartensteuerelement enthält, müssen Benutzer die App für diese Informationen nicht verlassen.
-
-**Hinweis**  Wenn es Ihnen nichts ausmacht, dass Benutzer die App für diese Informationen verlassen, können Sie diese Informationen auch mit der Windows-Karten-App bereitstellen. Ihre App kann die Windows-Karten-App starten, um bestimmte Karten, Wegbeschreibungen und Suchergebnisse anzuzeigen. Weitere Informationen finden Sie unter [Starten der Windows-Karten-App](https://msdn.microsoft.com/library/windows/apps/mt228341).
-
-## <a name="examples"></a>Beispiele
-
-
-Dieses Beispiel zeigt eine Karte mit einer Streetside-Ansicht:
-
-![Beispiel für die Streetside-Ansicht des Kartensteuerelements](./images/win10fa/controls-maps-streetside.jpg)
-
- 
-
-Dieses Beispiel zeigt eine Karte mit einem 3D-Luftbild:
-
-![Beispiel für die 3D-Ansicht des Kartensteuerelements](./images/win10fa/controls-maps-3dview.jpg)
-
- 
-
-Dieses Beispiel zeigt eine App mit einem 3D-Luftbild und einer Streetside-Ansicht:
-
-![Beispiel einer 3D-Kartenansicht mit Streetside-Ansicht](./images/win10fa/controls-maps-3dstreetview.png)
-
-
-## <a name="recommendations"></a>Empfehlungen
-
-
--   Verwenden Sie für die Anzeige der Karte ausreichend Platz auf dem Bildschirm (oder den gesamten Bildschirm), sodass Benutzer beim Anzeigen geografischer Informationen keine übermäßigen Verschiebungen oder Zoomvorgänge ausführen müssen.
-
--   Wenn die Karte nur zum Anzeigen einer statischen, informativen Ansicht dient, ist möglicherweise eine kleinere Karte ausreichend. Wenn Sie eine kleinere, statische Karte verwenden, orientieren Sie sich für die Größe an der Benutzerfreundlichkeit. Die Karte sollte klein genug sein, um genügend Platz auf dem Bildschirm zu lassen, aber groß genug, um lesbar zu bleiben.
-
--   Betten Sie die interessanten Orte mithilfe von [**map elements**](https://msdn.microsoft.com/library/windows/apps/dn637034) in die Kartenszene ein. Zusätzliche Informationen können als vorübergehende, die Kartenszene überlagernde Benutzeroberfläche angezeigt werden.
-
-## <a name="related-topics"></a>Verwandte Themen
-
-
-* [Anzeigen von Karten mit 2D-, 3D- und Streetside-Ansichten](https://msdn.microsoft.com/library/windows/apps/mt219695)
-* [Anzeigen von interessanten Orten (POI) auf einer Karte](https://msdn.microsoft.com/library/windows/apps/mt219696)
-* [Bing Maps Developer Center](https://www.bingmapsportal.com/)
-* [Beispiel zu UWP-Karten](http://go.microsoft.com/fwlink/p/?LinkId=619977)
-* [//Build 2015-Video: Nutzen von Karten und Ortung über Telefon, Tablet und PC in Ihren Windows-Apps](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [Starten der Windows-Karten-App](https://msdn.microsoft.com/library/windows/apps/mt228341)
- 
+Diese Seite wurde umgeleitet zu [Testen der App](https://docs.microsoft.com/windows/uwp/maps-and-location/display-maps#map-control).
 
  

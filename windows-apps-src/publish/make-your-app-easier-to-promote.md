@@ -4,34 +4,36 @@ Description: "Machen Sie auf Ihre App aufmerksam! Neben einer möglichst ansprec
 title: Einfacheres Bewerben Ihrer App
 ms.assetid: 375A73EB-A010-4319-AEFF-3DC3E3691220
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 08/04/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: 9dee8e05dbf2384fc87c1974a732ff36459fa229
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 8976e616910246366048cffa3c971b93b974e09d
+ms.sourcegitcommit: a8e7dc247196eee79b67aaae2b2a4496c54ce253
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/04/2017
 ---
 # <a name="make-your-app-easier-to-promote"></a>Einfacheres Bewerben Ihrer App
 
 
 Machen Sie auf Ihre App aufmerksam! Neben einer möglichst ansprechenden Gestaltung Ihrer App bieten sich einige weitere Methoden an, die das Bewerben Ihrer App im Windows Store und auf anderen Websites erleichtern und dazu beitragen, dass die App mehr Aufmerksamkeit erhält.
 
-## <a name="windows-store-requirements-for-featured-apps"></a>WindowsStore-Anforderungen für Apps
 
+## <a name="windows-store-requirements-for-featured-apps"></a>WindowsStore-Anforderungen für Apps
 
 Im WindowsStore werden verschiedene Apps nach Kategorie oder Thema angezeigt. Es gibt viel zu viele Apps, um alle anzubieten, und es besteht keine Garantie, dass Ihre App ausgewählt wird. Sie haben jedoch einige Möglichkeiten, dafür zu sorgen, dass Ihre App im Store beworben wird.
 
 -   **Verwenden Sie ansprechende Screenshots und Werbebilder**
 
-    Bei der Präsentation von Apps können [App-Screenshots und -Bilder](app-screenshots-and-images.md) im Windows Store in verschiedenen Layouts angezeigt werden. Erstellen Sie ansprechende Screenshots, die Ihre App optimal darstellen, und stellen Sie sicher, dass der erste Screenshot besonders aussagekräftig und attraktiv ist.
+    Bei der Präsentation von Apps können [App-Screenshots und -Bilder](app-screenshots-and-images.md) im Windows Store in verschiedenen Layouts angezeigt werden. Erstellen Sie ansprechende Screenshots, die Ihre App optimal darstellen, und stellen Sie sicher, dass der erste Screenshot besonders aussagekräftig und attraktiv ist. Sie können verschiedene Gruppen von Bildschirmfotos anzeigen, um zu sehen, wie die App für jeden Gerätetyp aussieht, der sie unterstützt.
 
-    Um die Wahrscheinlichkeit zu erhöhen, dass Ihre App im Store präsentiert wird, müssen Sie mit Ihrer App mindestens ein Werbebild einreichen. Die Anforderung von 2.400 x 1.200 Pixeln ist dringend einzuhalten, da wir das Bild so auf verschiedene Weisen im Store für Windows10-Kunden verwenden können. Denken Sie daran, dass wir dieses Bild in einigen Layouts u.U. zuschneiden, d.h. die wichtigen visuellen Elemente und das Branding/Logo Ihrer App sollten sich in der Mitte des Bilds befinden. Außerdem sollten Sie zusätzliche Bildgrößen bereitstellen, wenn Ihre App in früheren Betriebssystemversionen ausgeführt wird. Weitere Informationen und Richtlinien finden Sie unter [Werbebilder](app-screenshots-and-images.md#promotional-artwork).
+    Um die Wahrscheinlichkeit zu erhöhen, dass Ihre App im Store präsentiert wird, sollten Sie mit Ihrer App ebenfalls Werbebilder einreichen. Weitere Informationen und Richtlinien finden Sie unter [Werbebilder](app-screenshots-and-images.md#promotional-images).
 
 -   **Erstellen Sie nur eine Version Ihrer App, nicht eine kostenlose Version und eine separate kostenpflichtige Version**
 
-    Anstatt separate kostenlose und kostenpflichtige Versionen derselben App zu veröffentlichen, bieten Sie eine kostenlose Testversion Ihrer kostenpflichtigen Version an. Alternativ können Sie anstatt einer kostenpflichtigen Version eine kostenlose Version mit In-App-Einkaufsmöglichkeiten zum Hinzufügen zusätzlicher Funktionen anbieten. Auf diese Weise kann ein einziger Eintrag zu Ihrer App für alle Benutzer zur Verfügung gestellt werden, unabhängig davon, ob diese sich nur für kostenlose Downloads interessieren oder zum Kauf einer App bereit sind.
+    Anstatt separate kostenlose und kostenpflichtige Versionen derselben App zu veröffentlichen, bieten Sie eine kostenlose Testversion Ihrer kostenpflichtigen Version an. Alternativ können Sie anstatt einer kostenpflichtigen Version eine kostenlose Version mit Add-Ons zum Hinzufügen zusätzlicher Funktionen anbieten. Auf diese Weise kann ein einziger Eintrag zu Ihrer App für alle Benutzer zur Verfügung gestellt werden, unabhängig davon, ob diese sich nur für kostenlose Downloads interessieren oder zum Kauf einer App bereit sind.
 
 -   **Aktivieren Sie Filter für Apps, deren Inhalt nur für eine Zielgruppe über 16 bzw. 18Jahren geeignet ist.**
 

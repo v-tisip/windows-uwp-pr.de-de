@@ -6,18 +6,25 @@ ms.assetid: C73125E8-3768-46A5-B078-FDDF42AB1077
 label: Lists
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 4c17bab575be207106abfac44104bb32bcffd6ac
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: predavid
+design-contact: kimsea
+dev-contact: ranjeshj
+doc-status: Published
+ms.openlocfilehash: 0249132942cbb15a009c85c929185bffcba23cd9
+ms.sourcegitcommit: 690320e6cbfc16ed9e935a136fecc44d68e95719
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="lists"></a>Listen
 
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
+
 
 Listen zeigen und ermöglichen die Interaktion mit sammlungsbasierten Inhalten. Zu den in diesem Artikel behandelten vier Listenmustern gehören:
 
@@ -26,16 +33,15 @@ Listen zeigen und ermöglichen die Interaktion mit sammlungsbasierten Inhalten. 
 -   Dropdownlisten, aus denen Benutzer ein Element aus einer erweiterten Liste auswählen können
 -   Listenfelder, in denen Benutzer ein einzelnes Element oder mehrere Elemente aus einem Feld auswählen können, in dem gescrollt werden kann
 
-Für jedes Listenmuster sind Entwurfsrichtlinien, Features und Beispiele aufgeführt. Am Ende des Artikels befinden sich Links zu verwandten Themen und APIs.
+Für jedes Listenmuster sind Entwurfsrichtlinien, Features und Beispiele aufgeführt.
 
-<div class="important-apis" >
-<b>Wichtige APIs</b><br/>
-<ul>
-<li>[**ListView-Klasse**](https://msdn.microsoft.com/library/windows/apps/br242878)</li>
-<li>[**GridView-Klasse**](https://msdn.microsoft.com/library/windows/apps/br242705)</li>
-<li>[**ComboBox-Klasse**](https://msdn.microsoft.com/library/windows/apps/br209348)</li>
-</ul>
-</div>
+> **Wichtige APIs**: [ListView-Klasse](https://msdn.microsoft.com/library/windows/apps/br242878), [GridView-Klasse](https://msdn.microsoft.com/library/windows/apps/br242705), [ComboBox-Klasse](https://msdn.microsoft.com/library/windows/apps/br209348)
+
+> <div id="main">
+> <strong><span class="uwpd-prelease">Vorabversion.</span> Fall Creators Update (Windows10 Insider Preview-Build 16215 und höher) - Abweichende Funktionsweise</strong>
+> </div>
+> Beim Schwenken/Bildlauf in der Liste der UWP-Apps wird jetzt standardmäßig anstelle des Ausführens der Auswahl ein aktiver Stifts verwendet (z.B. Toucheingabe, Touchpad und passiver Stift).
+> Wenn Ihre App vom vorherigen Verhalten abhängig ist, können Sie die Stift-Bildlaufaktionen außer Kraft setzen und auf das vorherige Verhalten zurückzusetzen. Weitere Details finden Sie im API-Referenzthema unter [ScrollViewer-Klasse] (https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer).
 
 ## <a name="list-views"></a>Listenansichten
 
@@ -179,11 +185,13 @@ Wenn die Liste in einem Kombinationsfeld lang genug ist, wird eine Bildlaufleist
 ### <a name="recommendations"></a>Empfehlungen
 
 -   Schränken Sie den Textinhalt von Kombinationsfeldelementen auf eine einzelne Zeile ein.
--   Sortieren Sie die Elemente in einem Kombinationsfeld in der logischsten Reihenfolge. Gruppieren Sie verwandte Optionen, und platzieren Sie die am häufigsten verwendeten Optionen oben in der Liste. Sortieren Sie Namen in alphabetischer Reihenfolge, Nummern in numerischer Reihenfolge und Datumsangaben in chronologischer Reihenfolge.
+-   Sortieren Sie die Elemente in einem Kombinationsfeld in der logischsten Reihenfolge. Gruppieren Sie verwandte Optionen, und platzieren Sie die am häufigsten verwendeten Optionen oben in der Liste. Sortieren Sie Namen in alphabetischer Reihenfolge, Zahlen in numerischer Reihenfolge und Datumsangaben in chronologischer Reihenfolge.
+-   Um ein Kombinationsfeld zu erstellen, das live aktualisiert wird, wenn der Benutzer die Pfeiltasten (z.B. eine Dropdown-Liste für die Schriftauswahl) verwendet, müssen Sie SelectionChangedTrigger auf „Immer“ einstellen.  
 
 ### <a name="text-search"></a>Textsuche
 
-Kombinationsfelder unterstützen automatisch die Suche in ihren Sammlungen. Wenn ein Benutzer über eine physische Tastatur Zeichen eingibt, während sich der Fokus auf einem geöffneten oder geschlossenen Kombinationsfeld befindet, werden Vorschläge angezeigt, die der vom Benutzer eingegebenen Zeichenfolge entsprechen. Diese Funktionalität ist besonders bei der Navigation durch eine lange Liste nützlich. Beispielsweise können Benutzer bei der Interaktion mit einer Dropdownliste, die eine Liste von Bundesstaaten enthält, die Taste „w“ drücken, um „Washington“ anzuzeigen und diesen Bundesstaat schnell auswählen zu können. 
+Kombinationsfelder unterstützen automatisch die Suche in ihren Sammlungen. Wenn ein Benutzer über eine physische Tastatur Zeichen eingibt, während sich der Fokus auf einem geöffneten oder geschlossenen Kombinationsfeld befindet, werden Vorschläge angezeigt, die der vom Benutzer eingegebenen Zeichenfolge entsprechen. Diese Funktionalität ist besonders bei der Navigation durch eine lange Liste nützlich. Beispielsweise können Benutzer bei der Interaktion mit einer Dropdownliste, die eine Liste von Bundesstaaten enthält, die Taste „w“ drücken, um „Washington“ anzuzeigen und diesen Bundesstaat schnell auswählen zu können.
+
 
 ## <a name="list-boxes"></a>Listenfelder
 
@@ -252,12 +260,12 @@ Empfehlungen für die Befehlsleiste finden Sie unter [Richtlinien für Befehlsle
 
 - [Hub](hub.md)
 - [Master/Details](master-details.md)
-- [Navigationsbereich](nav-pane.md)
+- [Navigationsbereich](navigationview.md)
 - [Semantischer Zoom](semantic-zoom.md)
 - [Drag & Drop](https://msdn.microsoft.com/windows/uwp/app-to-app/drag-and-drop)
 
 **Für Entwickler**
-- [**ListView-Klasse**](https://msdn.microsoft.com/library/windows/apps/br242878)
-- [**GridView-Klasse**](https://msdn.microsoft.com/library/windows/apps/br242705)
-- [**ComboBox-Klasse**](https://msdn.microsoft.com/library/windows/apps/br209348)
-- [**ListBox-Klasse**](https://msdn.microsoft.com/library/windows/apps/br242868)
+- [ListView-Klasse](https://msdn.microsoft.com/library/windows/apps/br242878)
+- [GridView-Klasse](https://msdn.microsoft.com/library/windows/apps/br242705)
+- [ComboBox-Klasse](https://msdn.microsoft.com/library/windows/apps/br209348)
+- [ListBox-Klasse](https://msdn.microsoft.com/library/windows/apps/br242868)

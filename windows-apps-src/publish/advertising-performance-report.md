@@ -4,99 +4,93 @@ Description: "Performance-Daten für die Anzeigeneinheiten in Ihren Apps können
 title: Bericht zur Anzeigenleistung
 ms.assetid: 32E555C3-C34D-4503-82BB-4C3F5CAE4500
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 07/05/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: e12cec828704a839092c1a6cb618ce8a46b83093
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: c46533c6762ddd2f47a4dbd40c253bc3d8f346d7
+ms.sourcegitcommit: 10f8dcf69d37cdb61562fc9f4d268ccb499c368f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/07/2017
 ---
 # <a name="advertising-performance-report"></a>Bericht zur Anzeigenleistung
 
 
-Zum Anzeigen von Performance-Daten für die Anzeigeneinheiten in Ihren Apps können Sie die folgenden Berichte im WindowsDevCenter-Dashboard verwenden:
+Der **Bericht zur Anzeigenleistung** zeigt die Leistung Ihrer [Anzeigeneinheiten](monetize-with-ads.md#available-ad-units) an, einschließlich der Community-Anzeigen und Partneranzeige. Dieser Bericht enthält Daten mehrerer Anzeigenanbieter in UWP-Apps, die die [Anzeigenvermittlung](monetize-with-ads.md#mediation) verwenden. 
 
--   [Bericht zur Anzeigen-Performance auf App-Ebene](advertising-performance-report.md#app-level-advertising-performance-report). Dieser Bericht enthält die Performance-Daten für die Microsoft-Anzeigeneinheiten in der aktuell im Dashboard ausgewählten App.
--   [Bericht zur Anzeigen-Performance auf Kontoebene](advertising-performance-report.md#account-level-advertising-performance-report). Dieser Bericht enthält die detaillierten Performance-Daten für Microsoft-Anzeigeneinheiten und Community-Anzeigen für alle Apps, die in Ihrem Entwicklerkonto registriert sind.
+Erweitern Sie zum Anzeigen dieses Berichts im linken Navigationsmenü **Analysieren** und wählen Sie dann **Anzeigenleistung** aus. 
 
-Standardmäßig werden die Berichte nach der Performance in den letzten 30Tagen auf allen Geräten gefiltert. Wählen Sie zum Ändern dieser Filter die Option **Filter anwenden** und anschließend einen anderen Zeitrahmen (entweder einen der vordefinierten Zeiträume oder einen benutzerdefinierten Datumsbereich) oder einen bestimmten Gerätetyp aus. 
+Um eine genauere Analyse der Daten durchzuführen, bieten wir den Link **Bericht herunterladen**, über den Sie eine CSV-Datei herunterladen können, die Sie in Microsoft Excel oder einem anderen Programm öffnen können. Sie können diese Daten auch programmgesteuert mit der Methode [get ad performance data](../monetize/get-ad-performance-data.md) der [Windows Store-Analyse-REST-API](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
 
-> [!TIP]
-> Falls Sie Ihre Daten ausführlicher analysieren möchten, wählen Sie **Bericht herunterladen** aus, und öffnen Sie die CSV-Datei anschließend in Microsoft Excel oder in einem ähnlichen Programm.
+Wenn Sie die Anzeigenvermittlungsberichte ansehen, ist es wichtig zu beachten, dass sich die Berichtsdaten für die letzten drei Tage sich unter Umständen ändern, wenn wir neue Daten aus verschiedenen Quellen erhalten und verarbeiten. Datenanpassungen können außerdem rückwirkend für bis zu 90Tage vorgenommen werden.
 
-Die folgenden Abschnitte enthalten weitere Details zu diesen Berichten.
 
-## <a name="app-level-advertising-performance-report"></a>Bericht zur Anzeigen-Performance auf App-Ebene
+## <a name="overall-performance"></a>Gesamtleistung
 
-Diese Seite enthält Performance-Daten in Diagramm-, Weltkarten- und Tabellenform für die Microsoft-Anzeigeneinheiten in der aktuell im Dashboard ausgewählten App. Wählen Sie zum Anzeigen dieses Berichts eine Ihrer Apps im Dashboard aus, und klicken Sie im Navigationsbereich auf **Analysen** &gt; **Anzeigen-Performance**.
+Oben im Bericht können Sie die folgenden Filter verwenden, um den Umfang der Daten, die im Bericht angezeigten werden, anzupassen:
 
-Die Daten werden aus den folgenden Leistungsmetriken abgerufen, die für die Anzeigen in Ihrer App nachverfolgt werden:
+* **Datum**: Filtern Sie den Bericht für einen festgelegten Zeitraum oder einen benutzerdefinierten Datumsbereich. Standardmäßig werden im Bericht Daten für die letzten 30Tage angezeigt.
+* **Aggregation**: Hier können Sie auswählen, wie diese Daten zusammengefasst werden und wie sie weitere gefiltert werden können. Standardmäßig zeigt der Bericht Daten aus allen Anzeigeeinheiten an, und Sie sehen ein Link **Anzeigeneinheiten auswählen** unten im Abschnitt, das Ihnen ermöglicht, bis zu sechs Anzeigeeinheiten zum Vergleich auszuwählen. Sie können optional **Aggregation** auf **Alle Apps** oder **Alle Ad-Anbieter** ändern. Dadurch wird die Verknüpfung in diesem Abschnitt entweder auf **Apps auswählen** oder **Ad-Anbieter auswählen** geändert, sodass Sie aus bis zu sechs Vergleichsdaten auswählen können. Sie können die Ergebnisse auch nach einer bestimmten App gruppieren, in der Sie die Werbung anzeigen.
+* **Anzeigenanbieter**: Filtern Sie den Bericht nach Performance-Daten für bestimmte Anzeigenanbieter. Weitere Informationen zu den verfügbaren Anzeigenanbietern finden Sie im Abschnitt [Anzeigenvermittlung](monetize-with-ads.md#mediation) unter [Monetarisierung durch Anzeigen](monetize-with-ads.md). In der Standardeinstellung zeigt der Bericht Daten von allen Ad-Anbietern an. Diese Option wird deaktiviert, wenn Sie **Alle Ad-Anbieter** aus der Dropdownliste **Aggregation** auswählen.
+* **Gerät**: Filtern Sie den Bericht nach Leistungsdaten für bestimmte Gerätetypen. In der Standardeinstellung zeigt der Bericht Daten für alle Gerätetypen an.
 
--   **Geschätzter Umsatz**: Die geschätzten Einnahmen, die Sie mit den Anzeigen in Ihrer App erzielen.
--   **eCPM**: Die effektiven Kosten pro tausend Anzeigenaufrufen.
--   **Anforderungen**: Die Anzahl der von Ihrer App gesendeten Anzeigenanforderungen.
--   **Aufrufe**: Gibt an, wie häufig eine Anzeige in Ihrer App angezeigt wurde.
--   **Füllrate**: Gibt den Prozentsatz der von Ihrer App gesendeten Anzeigenanforderungen an, bei denen eine Anzeige angezeigt wurde.
--   **Klicks**: Gibt an, wie häufig in Ihrer App auf eine Anzeige geklickt wurde.
--   **CTR** (Click-Through-Rate): Gibt an, wie häufig auf eine Anzeige geklickt wurde – geteilt durch die Anzahl von Anzeigenaufrufen.
 
-Weitere Informationen zu diesen Leistungsmetriken für die Anzeigeneinheiten in Ihrer App finden Sie in der Tabelle unter der Diagramm- und Kartenansicht.
+## <a name="report-views"></a>Berichtanzeigen
 
-Um die Daten für eine dieser Metriken in einer Diagramm- oder Weltkartenansicht zu analysieren, klicken Sie auf **Diagramm** oder **Karte**. Klicken Sie auf die Kopfzeilen oberhalb des Diagramms oder der Karte, um zwischen den verschiedenen Metriken zu wechseln. Standardmäßig werden in den Diagramm- und Kartenansichten Leistungsdaten für alle Anzeigeneinheiten in Ihrer App angezeigt. Sie können aber auf **Anzeigeneinheiten auswählen** klicken, um bis zu sechs einzelne Anzeigeneinheiten auszuwählen, die verglichen werden sollen.
+Unterhalb der Filter zeigt der Bericht Daten aus einer Vielzahl von Anzeigenleistungsmetriken in Diagramm-, Weltkarten- und Tabellenform für die Anzeigeneinheiten an, die in der aktuellen App verwendet werden.
+
+Klicken Sie auf **Diagramm** oder **Karte**, um die Daten für eine dieser Metriken in einer Diagramm- oder Weltkartenansicht zu analysieren. Standardmäßig werden in den Diagramm- und Kartenansichten Leistungsdaten für alle Anzeigeneinheiten, Apps oder Werbeanbieter in Ihrer App angezeigt (je nach Ihrer Auswahl aus der Dropdownliste **Aggregation**, Sie haben allerdings die Wahl bis zu sechs einzelne Anzeigeneinheiten, Apps oder Werbeanzeiger auszuwählen, die verglichen werden sollen).
 
 In der Kartenansicht stellen dunklere Schattierungen höhere Werte und hellere Schattierungen niedrigere Werte dar. Sie können mit der Maus auf ein bestimmtes Land oder eine Region auf der Karte zeigen, um den Wert der ausgewählten Metrik zu analysieren. Sie können auch einen beliebigen Bereich der Karte vergrößern, um Daten für kleinere Länder anzuzeigen.
 
-Falls Sie Ihre Daten ausführlicher analysieren möchten, wählen Sie **Bericht herunterladen** aus, und öffnen Sie die CSV-Datei anschließend in Microsoft Excel oder in einem ähnlichen Programm.
+Weitere Informationen zu den Leistungsmetriken für die Anzeigeneinheiten in Ihrer App finden Sie in der Tabelle unter der Diagramm- und Kartenansicht.
 
-## <a name="account-level-advertising-performance-report"></a>Bericht zur Anzeigen-Performance auf Kontoebene
+> [!NOTE]
+> Wenn Sie Anzeigeneinheiten für eine App mit Microsoft pubCenter erstellt haben, kann es vorkommen, dass nicht alle erfolgreich Ihren Apps in Dev Center zugeordnet wurden. In diesem Bericht werden diese Anzeigeeinheiten App-Namen zugeordnet, die Sie in pubCenter angegeben haben, wobei die Zeichenfolge **(pubCenter)** an den App-Namen angehängt wird.
 
-Diese Seite enthält die Performance-Daten für Microsoft-Anzeigeneinheiten und Community-Anzeigen in Apps, die in Ihrem Entwicklerkonto registriert sind. Navigieren Sie zum Anzeigen dieses Berichts zur Dashboardübersicht, und klicken Sie im Navigationsbereich auf **Anzeigen-Performance**.
 
-Diese Seite umfasst folgende Abschnitte:
+## <a name="performance-metrics"></a>Leistungsmetriken
 
-### <a name="microsoft-advertising"></a>Microsoft Advertising
+Dieser Bericht kann Daten für die folgenden Leistungsmetriken enthalten. Die Metriken, die im Bericht angezeigt werden, variieren je nach Anzeigenanbieter.
 
-Dieser Bericht enthält Performance-Daten für alle Microsoft-Anzeigeneinheiten, die in Ihren Apps verwendet werden. Darüber hinaus enthält er Performance-Daten für pubCenter-Anzeigeneinheiten ohne erfolgreiche Zuordnung zu Ihren DevCenter-Apps.
+|  Metrik  |  Beschreibung  |
+|----------|---------------|
+| Geschätzter Umsatz  |  Die geschätzten Einnahmen, die Sie mit den Anzeigen in Ihrer App erzielen. |
+| eCPM  |  Die effektiven Kosten pro tausend Anzeigenaufrufen. |
+| Anforderungen  | Die Anzahl der von Ihrer App gesendeten Anzeigenanforderungen.  |
+| Aufrufe  | Gibt an, wie häufig eine Anzeige in Ihrer App angezeigt wurde.  |
+| Füllrate  | Gibt den Prozentsatz der von Ihrer App gesendeten Anzeigenanforderungen an, bei denen eine Anzeige angezeigt wurde.  |
+| Klicks  |  Gibt an, wie häufig in Ihrer App auf eine Anzeige geklickt wurde. |
+| CTR  |  Gibt an, wie häufig auf eine Anzeige geklickt wurde – geteilt durch die Anzahl von Anzeigenaufrufen. |
+| Erworbenes Guthaben  | Bei [Community-Anzeigen](https://docs.microsoft.com/windows/uwp/publish/about-community-ads) gibt dies das Guthaben an, das Sie durch Anzeigen von Community-Anzeigen in Ihrer App für Werbefläche erworben haben.  |
+| Beanspruchtes Guthaben  | Bei [Community-Anzeigen](https://docs.microsoft.com/windows/uwp/publish/about-community-ads) gibt dies das für Ihre App beanspruchte Anzeigenguthaben an.  |
 
-Dieser Bericht enthält die gleichen sieben Leistungsmetriken und Ansichten (Diagramm, Weltkarte und Tabelle) wie der oben beschriebene Bericht zur Anzeigen-Performance auf App-Ebene. Sie können auf diesen Bericht die folgenden Filter anwenden:
 
--   **Alle Anzeigeeinheiten**. Wenn Sie diesen Filter auswählen, können Sie Daten aus allen Anzeigeeinheiten oder bis zu sechs bestimmten Anzeigeeinheiten anzeigen.
--   **Alle Apps**. Wenn Sie diesen Filter auswählen, können Sie Daten aus allen Apps oder bis zu sechs bestimmten Apps anzeigen.
--   **Einzelne App**. Wenn Sie eine App auswählen, können Sie Daten aus allen von der App verwendeten Anzeigeneinheiten oder aus bis zu sechs bestimmten Anzeigeneinheiten anzeigen, die von der App verwendet werden.
+## <a name="affiliates-performance"></a>Partneranzeigen-Performance
 
-Wenn Sie Anzeigeneinheiten für eine App mit Microsoft pubCenter erstellt haben, kann es vorkommen, dass nicht alle erfolgreich Ihren Apps in Dev Center zugeordnet wurden. In diesem Bericht werden diese Anzeigeeinheiten App-Namen zugeordnet, die Sie in pubCenter angegeben haben, wobei die Zeichenfolge **(pubCenter)** an den App-Namen angehängt wird.
+Wenn Sie beim [Microsoft-Partneranzeigenprogramm registriert sind](about-affiliate-ads.md) können Sie die Leistungsdaten für Partneranzeigen ansehen, die in Ihrer App angezeigt werden. Diese Informationen werden täglich aktualisiert. 
 
-Wenn Sie Anzeigeneinheiten für eine App mit pubCenter erstellt haben und auf keiner Berichtsseite Daten hierzu angezeigt werden, können Sie auf **pubCenter-Konto verknüpfen** klicken, um dieses Konto mit Ihrem Dev Center-Konto zu verknüpfen. Geben Sie die E-Mail-Adresse, die Sie diesem pubCenter-Konto zugeordnet haben, und Ihren Code für die Kontoverknüpfung ein. Sie erhalten den Code für die Kontoverknüpfung, indem Sie sich an diesem pubCenter-Konto anmelden und zur Seite **Meine Informationen** wechseln.
 
-Weitere Informationen zum Übertragen von pubCenter-Konten zu Dev Center finden Sie unter [pubCenter-DevCenter-Integration](pubcenter-dev-center-integration.md).
+Oben im Bericht können Sie die folgenden Filter verwenden, um den Umfang der Daten, die im Bericht angezeigten werden, anzupassen:
+- **Datum**: Filtern Sie den Bericht für einen festgelegten Zeitraum oder einen benutzerdefinierten Datumsbereich. Standardmäßig werden im Bericht Daten für die letzten 30Tage angezeigt.
+- **Gerät**: Filtern Sie den Bericht nach Leistungsdaten für bestimmte Gerätetypen. In der Standardeinstellung zeigt der Bericht Daten für alle Gerätetypen an.
 
-Falls Sie Ihre Daten ausführlicher analysieren möchten, wählen Sie **Bericht herunterladen** aus, und öffnen Sie die CSV-Datei anschließend in Microsoft Excel oder in einem ähnlichen Programm.
+Dieser Bericht enthält standardmäßig eine Zusammenfassung in Diagramm- und Tabellenform der Leistungsdaten für Partneranzeigen in allen Apps, die Sie beim Microsoft-Partneranzeigenprogramm registriert haben. Wählen Sie **Apps auswählen** aus, um bis zu sechs Apps zum Vergleichen auszuwählen.
 
-### <a name="microsoft-community-ads"></a>MicrosoftCommunity-Anzeigen
+Daten der Partneranzeigen-Performance werden aus den folgenden sieben Leistungsmetriken abgerufen, die für die Partneranzeige in Ihrer App nachverfolgt werden:
 
-Dieser Abschnitt enthält Performance-Daten in Diagramm- und Weltkartenform für Community-Anzeigen in der aktuell im Dashboard ausgewählten App. Weitere Informationen zu Community-Anzeigen finden Sie unter [Über Community-Anzeigen](about-community-ads.md).
+-   **Estimated earnings (approved)**: Die geschätzten Einnahmen, die Sie als Kommission für genehmigte Einkäufe von Benutzern erhalten haben, die in Ihrer App auf Partneranzeigen klicken.
+-   **Estimated earnings (pending approval)**: Der ungefähre Betrag, den Sie als Kommission für die Einkäufe, für die eine Genehmigung noch aussteht, erhalten können.
+-   **Aufrufe**: Gibt an, wie häufig eine Partneranzeige in Ihrer App angezeigt wurde.
+-   **Klicks**: Gibt an, wie oft in Ihrer App auf eine Partneranzeige geklickt wurde.
+-   **CTR** (Click-Through-Rate): Gibt an, wie oft auf eine Partneranzeige geklickt wurde (geteilt durch die Anzahl von Partneranzeigenaufrufen).
+-   **Purchases (approved)**: Die Anzahl genehmigter Einkäufe von Benutzern, die in Ihrer App auf Partneranzeigen klicken.
+-   **Purchases (pending approval)**: Die Anzahl von Einkäufen mit ausstehender Genehmigung, die von Benutzern getätigt wurden, die in Ihrer App auf Partneranzeigen klicken.
 
-Die Daten werden aus den folgenden Leistungsmetriken abgerufen, die für die Anzeigen in Ihrer App nachverfolgt werden:
+> [!NOTE]
+> Nachdem ein Benutzer ein Produkt im Store gekauft hat, gibt es eine Wartezeit von 45 Tagen, ehe der Kauf für das Partneranzeigenprogramm genehmigt werden kann. Aufgrund dieser Wartezeit können sich die Daten für **Estimated earnings (approved)**, **Estimated earnings (pending approval)**, **Purchases (approved)** und **Purchases (pending approval)** für einen bestimmten Tag ändern, nachdem die Einkäufe genehmigt oder abgelehnt wurden.
 
--   **Anforderungen**: Die Anzahl der von Ihrer App gesendeten Community-Anzeigenanforderungen.
--   **Füllrate**: Der Prozentsatz der von Ihrer App gesendeten Community-Anzeigenanforderungen, bei denen eine Anzeige angezeigt wurde.
--   **Klicks**: Gibt an, wie häufig in Ihrer App auf eine Community-Anzeige geklickt wurde.
--   **CTR** (Click-Through-Rate): Gibt an, wie oft auf eine Community-Anzeige geklickt wurde – geteilt durch die Anzahl von Anzeigenaufrufen.
--   **Erworbenes Guthaben**: Das für diese App erworbene Community-Anzeigenguthaben. Ausführlichere Informationen zum Erwerb von Guthaben finden Sie unter [Über Community Anzeigen](about-community-ads.md).
--   **Beanspruchtes Guthaben**: Das für diese App beanspruchte Community-Anzeigenguthaben. Ausführlichere Informationen zur Beanspruchung von Guthaben finden Sie unter [Über Community Anzeigen](about-community-ads.md).
-
-Klicken Sie auf **Diagramm** oder **Karte**, um die Daten für eine dieser Metriken in einer Diagramm- oder Weltkartenansicht zu analysieren. Klicken Sie auf die Kopfzeilen oberhalb des Diagramms oder der Karte, um zwischen den verschiedenen Metriken zu wechseln. In der Kartenansicht stellen dunklere Schattierungen höhere Werte und hellere Schattierungen niedrigere Werte dar. Sie können mit der Maus auf ein bestimmtes Land oder eine Region auf der Karte zeigen, um den Wert der ausgewählten Metrik zu analysieren. Sie können auch einen beliebigen Bereich der Karte vergrößern, um Daten für kleinere Länder anzuzeigen.
-
-## <a name="notes-about-the-reports"></a>Hinweise zu den Berichten
-
-Beachten Sie bei der Verwendung der Berichte zur Anzeigen-Performance Folgendes:
-
-- Es gibt möglicherweise Abweichungen zwischen Berichten zur Anzeigen-Performance in Dev Center und pubCenter. Im Gegensatz zur Aggregation von pubCenter-Berichten erfolgt die Aggregation von Daten zur Anzeigen-Performance in Dev Center auf der Grundlage von UTC und nicht auf der Grundlage Ihrer jeweiligen Zeitzone.
-- Die Berichtsdaten für die letzten drei Tage ändern sich unter Umständen, wenn wir neue Daten aus verschiedenen Quellen erhalten und verarbeiten.
-- Datenanpassungen können rückwirkend für bis zu 90Tage vorgenommen werden.
-
- 
 
  

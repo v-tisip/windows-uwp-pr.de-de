@@ -6,14 +6,20 @@ ms.assetid: 74302FF0-65FC-4820-B59A-718A765EF7F0
 label: Hyperlinks
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: e2c04ea39eee88c225bfef277037363c084e8eff
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: kisai
+design-contact: kimsea
+dev-contact: stpete
+doc-status: Published
+ms.openlocfilehash: 5079d1782188b6d2e49fc14741a23a5651995c67
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="hyperlinks"></a>Links
 
@@ -21,15 +27,9 @@ translationtype: HT
 
 Über Hyperlinks können Benutzer zu einem anderen Teil der App oder zu einer anderen App navigieren oder mit einer separaten Browser-App einen bestimmten URI (Uniform Resource Identifier) starten. Sie haben zwei Möglichkeiten, einer XAML-App einen Link hinzuzufügen: über das **Link**textelement oder das **HyperlinkButton**-Steuerelement.
 
-![Eine Linkschaltfläche](images/controls/hyperlink-button.png)
+> **Wichtige APIs**: [Linktextelement](https://msdn.microsoft.com/library/windows/apps/dn279356), [HyperlinkButton-Steuerelement](https://msdn.microsoft.com/library/windows/apps/br242739)
 
-<div class="important-apis" >
-<b>Wichtige APIs</b><br/>
-<ul>
-<li>[**Linktextelement**](https://msdn.microsoft.com/library/windows/apps/dn279356)</li>
-<li>[**HyperlinkButton-Steuerelement**](https://msdn.microsoft.com/library/windows/apps/br242739)</li>
-</ul>
-</div>
+![Eine Linkschaltfläche](images/controls/hyperlink-button.png)
 
 
 ## <a name="is-this-the-right-control"></a>Ist dies das richtige Steuerelement?
@@ -40,13 +40,7 @@ Wählen Sie den richtigen Linktyp basierend auf Ihren Anforderungen:
 
 -   Verwenden Sie innerhalb eines Textsteuerelements ein Inline-**Link**textelement. Ein Linkelement wird mit anderen Textelementen umgebrochen, und Sie können es in einem beliebigen InlineCollection-Element verwenden. Verwenden Sie einen Textlink, wenn Sie automatischen Textumbruch nutzen möchten und nicht unbedingt ein großes Tippziel benötigen. Der Linktext kann klein sein und sich nur schwer auswählen lassen, insbesondere bei der Toucheingabe.
 -   Verwenden Sie ein **HyperlinkButton**-Element für eigenständige Links. Ein HyperlinkButton-Element ist ein spezielles Schaltflächen-Steuerelement, das Sie überall dort verwenden können, wo Sie eine Schaltfläche verwenden würden.
--   Verwenden Sie ein **HyperlinkButton**-Element mit einem [Bild](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.image.aspx)als Inhalt, um ein klickbares Bild zu erstellen.
-
-## <a name="examples"></a>Beispiele
-
-Links in der Rechner-App.
-
-![Beispiel für einen Link in der Rechner-App](images/control-examples/hyperlinks-calculator.png)
+-   Verwenden Sie ein **HyperlinkButton**-Element mit einem [Image](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.image.aspx) als Inhalt, um ein klickbares Bild zu erstellen.
 
 ## <a name="create-a-hyperlink-text-element"></a>Erstellen eines Linktextelements
 
@@ -150,7 +144,7 @@ Die Standardfarbe des Links ist die Akzentfarbe des Systems. Dieses Verhalten k�
 ## <a name="recommendations"></a>Empfehlungen
 
 -   Verwenden Sie Links nur für die Navigation. Verwenden Sie sie nicht für andere Aktionen.
--   Verwenden Sie den Textstil aus dem Typenverlauf für textbasierte Links. Informieren Sie sich über [**Schriftarten und den Windows 10-Typenverlauf**](fonts.md).
+-   Verwenden Sie den Textstil aus dem Typenverlauf für textbasierte Links. Informieren Sie sich über [Schriftarten und den Windows 10-Typenverlauf](fonts.md).
 -   Separate Links sollten weit genug voneinander platziert werden, damit der Benutzer zwischen ihnen unterscheiden kann und sie mühelos einzeln auswählen kann.
 -   Fügen Sie Hyperlinks QuickInfos hinzu, die dem Benutzer anzeigen, wohin er umgeleitet wird. Wenn der Benutzer zu einer externen Website weitergeleitet werden soll, schließen Sie den Namen der Domäne der obersten Ebene in die QuickInfo ein und formatieren den Text mit einer zweiten Schriftfarbe.
 
@@ -160,5 +154,5 @@ Die Standardfarbe des Links ist die Akzentfarbe des Systems. Dieses Verhalten k�
 - [Richtlinien für QuickInfos](tooltips.md)
 
 **Für Entwickler (XAML)**
-- [**Windows.UI.Xaml.Documents.Hyperlink-Klasse**](https://msdn.microsoft.com/library/windows/apps/dn279356)
-- [**Windows.UI.Xaml.Controls.HyperlinkButton-Klasse**](https://msdn.microsoft.com/library/windows/apps/br242739)
+- [Windows.UI.Xaml.Documents.Hyperlink-Klasse](https://msdn.microsoft.com/library/windows/apps/dn279356)
+- [Windows.UI.Xaml.Controls.HyperlinkButton-Klasse](https://msdn.microsoft.com/library/windows/apps/br242739)

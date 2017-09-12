@@ -6,14 +6,20 @@ description: "Ein Steuerelement für die geteilte Ansicht verfügt über einen e
 label: Split view
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: b7488f19109925faa2c9e6b3be528cb2d19846e8
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: yulikl
+design-contact: kimsea
+dev-contact: tpaine
+doc-status: Published
+ms.openlocfilehash: 126fab3db9a0728626289788757f576648a43856
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="split-view-control"></a>Steuerelement für geteilte Ansicht
 
@@ -21,12 +27,7 @@ translationtype: HT
 
 Ein Steuerelement für die geteilte Darstellung verfügt über einen erweiterbaren/reduzierbaren Bereich und einen Inhaltsbereich.
 
-<div class="important-apis" >
-<b>Wichtige APIs</b><br/>
-<ul>
-<li>[**SplitView-Klasse**](https://msdn.microsoft.com/library/windows/apps/dn864360)</li>
-</ul>
-</div>
+> **Wichtige APIs**: [SplitView-Klasse](https://msdn.microsoft.com/library/windows/apps/dn864360)
 
 Dies ist ein Beispiel für die Verwendung von SplitView durch die Microsoft Edge-App, um den Hub anzuzeigen.
 
@@ -53,7 +54,7 @@ Dies ist ein Beispiel für die Verwendung von SplitView durch die Microsoft Edge
 
 ## <a name="is-this-the-right-control"></a>Ist dies das richtige Steuerelement?
 
-Das Steuerelement für die geteilte Darstellung kann zum Erstellen eines [Navigationsbereichs](nav-pane.md) verwendet werden. Zum Erstellen dieses Musters fügen Sie eine Schaltfläche zum Erweitern/Reduzieren (die „Hamburger“-Schaltfläche) sowie eine Listenansicht mit den Navigationselementen hinzu.
+Das Steuerelement für die geteilte Darstellung kann zum Erstellen eines [Navigationsbereichs](navigationview.md) verwendet werden. Zum Erstellen dieses Musters fügen Sie eine Schaltfläche zum Erweitern/Reduzieren (die „Hamburger“-Schaltfläche) sowie eine Listenansicht mit den Navigationselementen hinzu.
 
 Das Steuerelement für die geteilte Ansicht kann auch für eine Drawer-Ansicht verwendet werden, in der Benutzer den ergänzenden Bereich öffnen und schließen können.
 
@@ -83,7 +84,7 @@ Dies ist ein SplitView-Steuerelement mit einem offenen Bereich, der inline neben
 
 
 ## <a name="related-topics"></a>Verwandte Themen
-* [Navigationsbereichsmuster](nav-pane.md)
+* [Navigationsbereichsmuster](navigationview.md)
 * [Listenansicht](lists.md)
  
 
