@@ -1,0 +1,224 @@
+---
+author: stevewhims
+Description: "Ihre App kann Bild-Ressourcendateien mit Bildern laden, die speziell auf den Skalierungsfaktor für die Anzeige, das Design, den hohen Kontrast und anderen Laufzeitkontexte angepasst wurden."
+title: Laden Sie Bilder und Ressourcen, die der Skalierung, dem Design, dem hohen Kontrast und mehr angepasst wurden
+template: detail.hbs
+ms.author: stwhi
+ms.date: 10/10/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows10, UWP
+ms.openlocfilehash: 9387473bc829f3d2eaa12e5be25752d4b0091708
+ms.sourcegitcommit: 27f7829f6d86ad8e13de3d13bff72825c1dbab7f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
+---
+# <a name="load-images-and-assets-tailored-for-scale-theme-high-contrast-and-others"></a><span data-ttu-id="30daf-104">Laden Sie Bilder und Ressourcen, die der Skalierung, dem Design, dem hohen Kontrast und mehr angepasst wurden</span><span class="sxs-lookup"><span data-stu-id="30daf-104">Load images and assets tailored for scale, theme, high contrast, and others</span></span>
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
+
+<span data-ttu-id="30daf-105">Ihre App kann Bild-Ressourcendateien mit Bildern (und andere Ressourcendateien) laden, die speziell auf den [Skalierungsfaktor für die Anzeige](../layout/screen-sizes-and-breakpoints-for-responsive-design.md), das Design, den hohen Kontrast und anderen Laufzeitkontexte angepasst wurden</span><span class="sxs-lookup"><span data-stu-id="30daf-105">Your app can load image resource files (or other asset files) tailored for [display scale factor](../layout/screen-sizes-and-breakpoints-for-responsive-design.md), theme, high contrast, and other runtime contexts.</span></span> <span data-ttu-id="30daf-106">Auf diese Bilder kann im imperativen Code oder im XAML-Markup verwiesen werden, z.B. als **Quellen**-Eigenschaft eines **Bildes**.</span><span class="sxs-lookup"><span data-stu-id="30daf-106">These images can be referenced from imperative code or from XAML markup, for example as the **Source** property of an **Image**.</span></span> <span data-ttu-id="30daf-107">Sie können auch in Ihrem App-Paketmanifest erscheinen (in der `Package.appxmanifest`-Datei)&mdash;z. B. als Wert für das App-Symbol auf der Registerkarte „Visuelle Anlagen” des Manifest-Designer von Visual Studio&mdash;oder auf Ihren Kacheln und Popups.</span><span class="sxs-lookup"><span data-stu-id="30daf-107">They can also appear in your app package manifest (the `Package.appxmanifest` file)&mdash;for example, as the value for App Icon on the Visual Assets tab of the Visual Studio Manifest Designer&mdash;or on your tiles and toasts.</span></span> <span data-ttu-id="30daf-108">Mithilfe von Qualifizierern in den Dateinamen Ihrer Bilder und optional durch das dynamische Laden mithilfe des [**ResourceContext**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live), können Sie die am besten geeignete Bilddatei aufrufen, die den Laufzeiteinstellungen des Benutzers am besten für die Anzeige, das Design, den hohen Kontrast, die Sprache und anderen Kontexten entsprechen.</span><span class="sxs-lookup"><span data-stu-id="30daf-108">By using qualifiers in your images' file names, and optionally dynamically loading them with the help of a [**ResourceContext**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live), you can cause the most appropriate image file to be loaded that best matches the user's runtime settings for display scale, theme, high contrast, language, and other contexts.</span></span>
+
+<div class="important-apis" >
+<b><span data-ttu-id="30daf-109">Wichtige APIs</span><span class="sxs-lookup"><span data-stu-id="30daf-109">Important APIs</span></span></b><br/>
+<ul>
+<li>[**<span data-ttu-id="30daf-110">ResourceContext</span><span class="sxs-lookup"><span data-stu-id="30daf-110">ResourceContext</span></span>**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live)</li>
+<li>[**<span data-ttu-id="30daf-111">MapChanged</span><span class="sxs-lookup"><span data-stu-id="30daf-111">MapChanged</span></span>**](/uwp/api/windows.foundation.collections.iobservablemap_k_v_?branch=live#Windows_Foundation_Collections_IObservableMap_2_MapChanged)</li></ul>
+</div>
+
+<span data-ttu-id="30daf-112">Eine Bildressource ist in einer Bild-Ressourcendatei enthalten.</span><span class="sxs-lookup"><span data-stu-id="30daf-112">An image resource is contained in an image resource file.</span></span> <span data-ttu-id="30daf-113">Sie können Bilder auch als Ressource betrachten, und die Datei, die es enthält als Ressourcendatei. Diese Arten von Ressourcendateien finden Sie im Ordner des Projekts \Assets.</span><span class="sxs-lookup"><span data-stu-id="30daf-113">You can also think of the image as an asset, and the file that contains it as an asset file; and you can find these kinds of resource files in your project's \Assets folder.</span></span> <span data-ttu-id="30daf-114">Hintergrundinformationen zur Verwendung von Qualifizierern in den Namen der Bild-Ressourcendateien finden Sie unter [Passen Sie Ihrer Ressourcen der Sprache, Skalierung und anderen Qualifizierern an](how-to-name-resources-by-using-qualifiers.md).</span><span class="sxs-lookup"><span data-stu-id="30daf-114">For background on how to use qualifiers in the names of your image resource files, see [Tailor your resources for language, scale, and other qualifiers](how-to-name-resources-by-using-qualifiers.md).</span></span>
+
+<span data-ttu-id="30daf-115">Einige allgemeine Qualifizierer für Bilder sind [Skalierung](how-to-name-resources-by-using-qualifiers.md#scale), [Design](how-to-name-resources-by-using-qualifiers.md#theme), [Kontrast](how-to-name-resources-by-using-qualifiers.md#contrast) und [Zielgröße](how-to-name-resources-by-using-qualifiers.md#targetsize).</span><span class="sxs-lookup"><span data-stu-id="30daf-115">Some common qualifiers for images are [scale](how-to-name-resources-by-using-qualifiers.md#scale), [theme](how-to-name-resources-by-using-qualifiers.md#theme), [contrast](how-to-name-resources-by-using-qualifiers.md#contrast), and [targetsize](how-to-name-resources-by-using-qualifiers.md#targetsize).</span></span>
+
+## <a name="qualify-an-image-resource-for-scale-theme-and-contrast"></a><span data-ttu-id="30daf-116">Qualifizieren von Bildressourcen für Skalierung, Design und Kontrast</span><span class="sxs-lookup"><span data-stu-id="30daf-116">Qualify an image resource for scale, theme, and contrast</span></span>
+
+<span data-ttu-id="30daf-117">Der Standardwert für den `scale` Qualifizierer lautet `scale-100`.</span><span class="sxs-lookup"><span data-stu-id="30daf-117">The default value for the `scale` qualifier is `scale-100`.</span></span> <span data-ttu-id="30daf-118">Daher sind diese beiden Varianten gleichwertig (sie bieten ein Bild mit einer Skalierung von 100 oder einem Skalierungsfaktor von 1).</span><span class="sxs-lookup"><span data-stu-id="30daf-118">So, these two variants are equivalent (they both provide an image at scale 100, or scale factor 1).</span></span>
+
+```
+\Assets\Images\logo.png
+\Assets\Images\logo.scale-100.png
+```
+
+<span data-ttu-id="30daf-119">Sie können Qualifizierer in Ordnernamen anstelle von Dateinamen verwenden.</span><span class="sxs-lookup"><span data-stu-id="30daf-119">You can use qualifiers in folder names instead of file names.</span></span> <span data-ttu-id="30daf-120">Wenn Sie mehrere Ressourcendateien pro Qualifizierer haben, ist dies eine bessere Strategie.</span><span class="sxs-lookup"><span data-stu-id="30daf-120">That would be a better strategy if you have several asset files per qualifier.</span></span> <span data-ttu-id="30daf-121">Zu Demonstrationszwecken sind diese zwei Varianten mit den beiden obigen gleichwertig.</span><span class="sxs-lookup"><span data-stu-id="30daf-121">For purposes of illustration, these two variants are equivalent to the two above.</span></span>
+
+```
+\Assets\Images\logo.png
+\Assets\Images\scale-100\logo.png
+```
+
+<span data-ttu-id="30daf-122">Als Nächstes sehen Sie ein Beispiel zur Bereitstellung von Varianten in einer Bildressource&mdash;mit dem Namen `/Assets/Images/logo.png`&mdash;für unterschiedliche Einstellungen der Anzeige: Skalierung, Design, hoher Kontrast.</span><span class="sxs-lookup"><span data-stu-id="30daf-122">Next is an example of how you can provide variants of an image resource&mdash;named `/Assets/Images/logo.png`&mdash;for different settings of display scale, theme, and high contrast.</span></span> <span data-ttu-id="30daf-123">Dieses Beispiel verwendet die Ordnerbenennung.</span><span class="sxs-lookup"><span data-stu-id="30daf-123">This example uses folder naming.</span></span>
+
+```
+\Assets\Images\contrast-standard\theme-dark
+    \scale-100\logo.png
+    \scale-200\logo.png
+\Assets\Images\contrast-standard\theme-light
+    \scale-100\logo.png
+    \scale-200\logo.png
+\Assets\Images\contrast-high
+    \scale-100\logo.png
+    \scale-200\logo.png
+```
+
+## <a name="reference-an-image-or-other-asset-from-xaml-markup-and-code"></a><span data-ttu-id="30daf-124">Verweisen auf ein Bild oder eine Ressource aus XAML-Markup und Code</span><span class="sxs-lookup"><span data-stu-id="30daf-124">Reference an image or other asset from XAML markup and code</span></span>
+
+<span data-ttu-id="30daf-125">Der Name&mdash;oder Bezeichner&mdash;einer Bildressource ist der Pfad und Dateiname, aus dem alle Qualifizierer entfernt wurden.</span><span class="sxs-lookup"><span data-stu-id="30daf-125">The name&mdash;or identifier&mdash;of an image resource is its path and file name with any and all qualifiers removed.</span></span> <span data-ttu-id="30daf-126">Wenn Sie Ordner und/oder Dateien wie im obigen Beispiele des vorherigen Abschnitts benannt haben, erhalten Sie eine einzelne Bild-Ressource und der Anzeigename (als absoluter Pfad) lautet `/Assets/Images/logo.png`.</span><span class="sxs-lookup"><span data-stu-id="30daf-126">If you name folders and/or files as in any of the examples in the previous section, then you have a single image resource and its name (as an absolute path) is `/Assets/Images/logo.png`.</span></span> <span data-ttu-id="30daf-127">So verwenden Sie diesen Namen in XAML-Markups.</span><span class="sxs-lookup"><span data-stu-id="30daf-127">Here’s how you use that name in XAML markup.</span></span>
+
+**<span data-ttu-id="30daf-128">XAML</span><span class="sxs-lookup"><span data-stu-id="30daf-128">XAML</span></span>**
+```xml
+<Image x:Name="myXAMLImageElement" Source="ms-appx:///Assets/Images/logo.png"/>
+```
+
+<span data-ttu-id="30daf-129">Beachten Sie, dass Sie das `ms-appx`-URI-Schema verwenden, da Sie auf eine Datei verweisen, die von Ihrem App-Paket stammt.</span><span class="sxs-lookup"><span data-stu-id="30daf-129">Notice that you use the `ms-appx` URI scheme because you're referring to a file that comes from your app's package.</span></span> <span data-ttu-id="30daf-130">Weitere Informationen finden Sie unter [URI-Schemen](uri-schemes.md).</span><span class="sxs-lookup"><span data-stu-id="30daf-130">See [URI schemes](uri-schemes.md).</span></span> <span data-ttu-id="30daf-131">Hier erfahren Sie, wie Sie auf die gleiche Bildressource in imperativem Code verweisen.</span><span class="sxs-lookup"><span data-stu-id="30daf-131">And here’s how you refer to the same image resource in imperative code.</span></span>
+
+**<span data-ttu-id="30daf-132">C#</span><span class="sxs-lookup"><span data-stu-id="30daf-132">C#</span></span>**
+```csharp
+this.myXAMLImageElement.Source = new BitmapImage(new Uri("ms-appx:///Assets/Images/logo.png"));
+```
+
+<span data-ttu-id="30daf-133">Sie können mit `ms-appx` jede beliebige Datei aus Ihrem App-Paket laden.</span><span class="sxs-lookup"><span data-stu-id="30daf-133">You can use `ms-appx` to load any arbitrary file from your app package.</span></span>
+
+**<span data-ttu-id="30daf-134">C#</span><span class="sxs-lookup"><span data-stu-id="30daf-134">C#</span></span>**
+```csharp
+var uri = new System.Uri("ms-appx:///Assets/anyAsset.ext");
+var storagefile = await Windows.Storage.StorageFile.GetFileFromApplicationUriAsync(uri);
+```
+
+<span data-ttu-id="30daf-135">Das `ms-appx-web`-Schema greift auf die gleichen Dateien wie `ms-appx` zu, jedoch im Webdepot.</span><span class="sxs-lookup"><span data-stu-id="30daf-135">The `ms-appx-web` scheme accesses the same files as `ms-appx`, but in the web compartment.</span></span>
+
+**<span data-ttu-id="30daf-136">XAML</span><span class="sxs-lookup"><span data-stu-id="30daf-136">XAML</span></span>**
+```xml
+<WebView x:Name="myXAMLWebViewElement" Source="ms-appx-web:///Pages/default.html"/>
+```
+
+**<span data-ttu-id="30daf-137">C#</span><span class="sxs-lookup"><span data-stu-id="30daf-137">C#</span></span>**
+```csharp
+this.myXAMLWebViewElement.Source = new Uri("ms-appx-web:///Pages/default.html");
+```
+
+<span data-ttu-id="30daf-138">Für die in diesen Beispielen gezeigten Szenarien, verwenden Sie die [URI-Konstruktor](https://docs.microsoft.com/en-us/dotnet/api/system.uri.-ctor?view=netcore-2.0#System_Uri__ctor_System_String_)überladung, die [UriKind](https://docs.microsoft.com/en-us/dotnet/api/system.urikind) ableitet.</span><span class="sxs-lookup"><span data-stu-id="30daf-138">For any of the scenarios shown in these examples, use the [Uri constructor](https://docs.microsoft.com/en-us/dotnet/api/system.uri.-ctor?view=netcore-2.0#System_Uri__ctor_System_String_) overload that infers the [UriKind](https://docs.microsoft.com/en-us/dotnet/api/system.urikind).</span></span> <span data-ttu-id="30daf-139">Geben Sie einen gültigen absoluten URI einschließlich Schema und Autorität ein oder überlassen Sie die Autorität dem Standardwert des App-Pakets, wie im obigen Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="30daf-139">Specify a valid absolute URI including the scheme and authority, or just let the authority default to the app's package as in the example above.</span></span>
+
+<span data-ttu-id="30daf-140">Beachten Sie, wie auf die Beispielschemen-URIs ("`ms-appx` "oder" `ms-appx-web`") folgt, denen "`://`" folgt, das einem absoluten Pfad folgt.</span><span class="sxs-lookup"><span data-stu-id="30daf-140">Notice how in these example URIs the scheme ("`ms-appx`" or "`ms-appx-web`") is followed by "`://`" which is followed by an absolute path.</span></span> <span data-ttu-id="30daf-141">In einem absoluten Pfad, bewirkt das führende "`/`", das der Pfad aus dem Stammverzeichnis des Pakets interpretiert wird.</span><span class="sxs-lookup"><span data-stu-id="30daf-141">In an absolute path, the leading "`/`" causes the path to be interpreted from the root of the package.</span></span>
+
+<span data-ttu-id="30daf-142">**Hinweis:** Die `ms-resource` URI-Schemen (für [Zeichenfolgenressourcen](put-ui-strings-into-resources.md)) und `ms-appx(-web)` (für Bilder und andere Ressourcen) führen einen automatischen Qualifiziererabgleich aus, um die Ressource zu suchen, die für den aktuellen Kontext am besten geeignet ist.</span><span class="sxs-lookup"><span data-stu-id="30daf-142">**Note** The `ms-resource` (for [string resources](put-ui-strings-into-resources.md)) and `ms-appx(-web)` (for images and other assets) URI schemes perform automatic qualifier matching to find the resource that's most appropriate for the current context.</span></span> <span data-ttu-id="30daf-143">Das `ms-appdata`URI-Schema (das zum Laden von App-Daten verwendet wird) führt keinen automatischen Abgleich durch, Sie können allerdings auf den Inhalt des [ResourceContext.QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live#Windows_ApplicationModel_Resources_Core_ResourceContext_QualifierValues) reagieren und die entsprechenden Ressourcen explizit von App-Daten mit ihrem gesamten physischen Dateinamen in der URI verwenden.</span><span class="sxs-lookup"><span data-stu-id="30daf-143">The `ms-appdata` URI scheme (which is used to load app data) does not perform any such automatic matching, but you can respond to the contents of [ResourceContext.QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live#Windows_ApplicationModel_Resources_Core_ResourceContext_QualifierValues) and explicitly load the appropriate assets from app data using their full physical file name in the URI.</span></span> <span data-ttu-id="30daf-144">Weitere Informationen zu Anwendungsdaten finden Sie unter [Speichern und Abrufen von Einstellungen und anderen App-Daten](../app-settings/store-and-retrieve-app-data).</span><span class="sxs-lookup"><span data-stu-id="30daf-144">For info about app data, see [Store and retrieve settings and other app data](../app-settings/store-and-retrieve-app-data).</span></span> <span data-ttu-id="30daf-145">Web-URI-Schemen (z.B. `http`, `https`  und `ftp`) führen keinen automatischen Abgleich durch.</span><span class="sxs-lookup"><span data-stu-id="30daf-145">Web URI schemes (for example, `http`, `https`, and `ftp`) do not perform automatic matching, either.</span></span> <span data-ttu-id="30daf-146">Informationen darüber, was Sie in diesem Fall tun sollten, finden Sie unter [Hosting and loading images in the cloud](tile-toast-language-scale-contrast.md#hosting-and-loading-images-in-the-cloud).</span><span class="sxs-lookup"><span data-stu-id="30daf-146">For info about what to do in that case, see [Hosting and loading images in the cloud](tile-toast-language-scale-contrast.md#hosting-and-loading-images-in-the-cloud).</span></span>
+
+<span data-ttu-id="30daf-147">Absolute Pfade sind eine gute Wahl, wenn die Dateien dort bleiben, wo sie sich in der Projektstruktur befinden.</span><span class="sxs-lookup"><span data-stu-id="30daf-147">Absolute paths are a good choice if your image files remain where they are in the project structure.</span></span> <span data-ttu-id="30daf-148">Wenn Sie eine Bilddatei verschieben möchten, Sie allerdings sehr genau darauf achten möchten, dass sie in der gleichen Position relativ zu der verweisenden XAML-Markup-Datei bleibt, können Sie anstelle eines absoluten Pfads einen Pfad verwenden, der relativ zur enthaltenden Markup-Datei existiert.</span><span class="sxs-lookup"><span data-stu-id="30daf-148">If you want to be able to move an image file, but you're careful that it remains in the same location relative to its referencing XAML markup file, then instead of an absolute path you might want to use a path that's relative to the containing markup file.</span></span> <span data-ttu-id="30daf-149">Wenn Sie dies tun, brauchen Sie kein URI-Schema.</span><span class="sxs-lookup"><span data-stu-id="30daf-149">If you do that, then you needn't use a URI scheme.</span></span> <span data-ttu-id="30daf-150">Sie profitieren in diesem Fall auch weiterhin vom automatischen Qualifiziererabgleich, jedoch nur deshalb, da Sie den relativen Pfad im XAML-Markup verwenden.</span><span class="sxs-lookup"><span data-stu-id="30daf-150">You will still benefit from automatic qualifier matching in this case, but only because you are using the relative path in XAML markup.</span></span>
+
+**<span data-ttu-id="30daf-151">XAML</span><span class="sxs-lookup"><span data-stu-id="30daf-151">XAML</span></span>**
+```xml
+<Image Source="Assets/Images/logo.png"/>
+```
+
+<span data-ttu-id="30daf-152">Siehe ebenfalls [Kachel- und Popupunterstützung für die Sprache, den Skalierungsfaktor für die Anzeige, das Design und den hohen Kontrastsupport for language, scale, and high contrast](tile-toast-language-scale-contrast.md).</span><span class="sxs-lookup"><span data-stu-id="30daf-152">Also see [Tile and toast support for language, scale, and high contrast](tile-toast-language-scale-contrast.md).</span></span>
+
+## <a name="qualify-an-image-resource-for-targetsize"></a><span data-ttu-id="30daf-153">Qualifizieren einer Bildressource als Zielgröße</span><span class="sxs-lookup"><span data-stu-id="30daf-153">Qualify an image resource for targetsize</span></span>
+
+<span data-ttu-id="30daf-154">Sie können die `scale` und `targetsize`-Qualifizierer auf verschiedenen Varianten der gleichen Bildressource verwenden. Sie können diese allerdings nicht gleichzeitig auf einer einzelnen Variante einer Ressource verwenden.</span><span class="sxs-lookup"><span data-stu-id="30daf-154">You can use the `scale` and `targetsize` qualifiers on different variants of the same image resource; but you can't use them both on a single variant of a resource.</span></span> <span data-ttu-id="30daf-155">Es muss ebenfalls mindestens eine Variante ohne `TargetSize`-Qualifizierer definiert sein.</span><span class="sxs-lookup"><span data-stu-id="30daf-155">Also, you need to define at least one variant without a `TargetSize` qualifier.</span></span> <span data-ttu-id="30daf-156">Diese Variante muss entweder einen Wert für `scale` definieren oder ihn standardmäßig auf `scale-100` lassen.</span><span class="sxs-lookup"><span data-stu-id="30daf-156">That variant must either define a value for `scale`, or let it default to `scale-100`.</span></span> <span data-ttu-id="30daf-157">Diese beiden Varianten der `/Assets/Square44x44Logo.png`-Ressource sind ebenfalls gültig.</span><span class="sxs-lookup"><span data-stu-id="30daf-157">So, these two variants of the `/Assets/Square44x44Logo.png` resource are valid.</span></span>
+
+```
+\Assets\Square44x44Logo.scale-200.png
+\Assets\Square44x44Logo.targetsize-24.png
+```
+
+<span data-ttu-id="30daf-158">Und diese zwei Varianten sind gültig.</span><span class="sxs-lookup"><span data-stu-id="30daf-158">And these two variants are valid.</span></span> 
+
+```
+\Assets\Square44x44Logo.png // defaults to scale-100
+\Assets\Square44x44Logo.targetsize-24.png
+```
+
+<span data-ttu-id="30daf-159">Diese Variante ist allerdings nicht gültig.</span><span class="sxs-lookup"><span data-stu-id="30daf-159">But this variant is not valid.</span></span>
+
+```
+\Assets\Square44x44Logo.scale-200_targetsize-24.png
+```
+
+## <a name="refer-to-an-image-file-from-your-app-package-manifest"></a><span data-ttu-id="30daf-160">Verweisen auf eine Bilddatei aus Ihrem App-Paketmanifest</span><span class="sxs-lookup"><span data-stu-id="30daf-160">Refer to an image file from your app package manifest</span></span>
+
+<span data-ttu-id="30daf-161">Wenn Sie Ordner und/oder Dateien wie in einem der obigen Beispiele des vorherigen Abschnitts benannt haben, erhalten Sie eine einzelne Symbolbildressource und der Anzeigename (als relativer Pfad) lautet `Assets\Square44x44Logo.png`.</span><span class="sxs-lookup"><span data-stu-id="30daf-161">If you name folders and/or files as in either of the two valid examples in the previous section, then you have a single app icon image resource and its name (as a relative path) is `Assets\Square44x44Logo.png`.</span></span> <span data-ttu-id="30daf-162">Verweisen Sie in Ihrem App-Paketmanifest einfach auf die Ressource nach Namen.</span><span class="sxs-lookup"><span data-stu-id="30daf-162">In your app package manifest, simply refer to the resource by name.</span></span> <span data-ttu-id="30daf-163">Es ist kein URI-Schema notwendig.</span><span class="sxs-lookup"><span data-stu-id="30daf-163">There's no need to use any URI scheme.</span></span>
+
+![Ressource hinzufügen, Englisch](images/app-icon.png)
+
+<span data-ttu-id="30daf-165">Dies ist alles, was, die Sie tun müssen. Das Betriebssystem führt einen automatischen Qualifiziererabgleich aus, um die Ressource zu suchen, die für den aktuellen Kontext am besten geeignet ist.</span><span class="sxs-lookup"><span data-stu-id="30daf-165">That's all you need to do, and the OS will perform automatic qualifier matching to find the resource that's most appropriate for the current context.</span></span> <span data-ttu-id="30daf-166">Sie finden unter [Localizable Manifest Elemente](/uwp/schemas/appxpackage/uapmanifestschema/localizable-manifest-items-win10?branch=live) eine Liste aller Elemente im App-Paketmanifest, die Sie lokalisieren oder anderweitig auf diese Weise qualifizieren können.</span><span class="sxs-lookup"><span data-stu-id="30daf-166">For a list of all items in the app package manifest that you can localize or otherwise qualify in this way, see [Localizable manifest items](/uwp/schemas/appxpackage/uapmanifestschema/localizable-manifest-items-win10?branch=live).</span></span>
+
+## <a name="qualify-an-image-resource-for-layoutdirection"></a><span data-ttu-id="30daf-167">Qualifizieren einer Bildressource als Layoutrichtung</span><span class="sxs-lookup"><span data-stu-id="30daf-167">Qualify an image resource for layoutdirection</span></span>
+
+<span data-ttu-id="30daf-168">Weitere Informationen finden Sie unter [Spiegeln von Bildern](adjust-layout-and-fonts--and-support-rtl#mirroring-images).</span><span class="sxs-lookup"><span data-stu-id="30daf-168">See [Mirroring images](adjust-layout-and-fonts--and-support-rtl#mirroring-images).</span></span>
+
+## <a name="load-an-image-for-a-specific-language-or-other-context"></a><span data-ttu-id="30daf-169">Laden von Bildern für eine bestimmte Sprache oder anderen Kontext</span><span class="sxs-lookup"><span data-stu-id="30daf-169">Load an image for a specific language or other context</span></span>
+
+<span data-ttu-id="30daf-170">Der standardmäßige [**ResourceContext**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live) (aus [**ResourceContext.GetForCurrentView**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live#Windows_ApplicationModel_Resources_Core_ResourceContext_GetForCurrentView) erhalten) enthält einen Qualifiziererwert für jeden Qualifizierernamen, der den Standard-Laufzeitkontext darstellt (Anders ausgedrückt, die Einstellungen für den aktuellen Benutzer und Computer).</span><span class="sxs-lookup"><span data-stu-id="30daf-170">The default [**ResourceContext**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live) (obtained from [**ResourceContext.GetForCurrentView**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live#Windows_ApplicationModel_Resources_Core_ResourceContext_GetForCurrentView)) contains a qualifier value for each qualifier name, representing the default runtime context (in other words, the settings for the current user and machine).</span></span> <span data-ttu-id="30daf-171">Bilddateien werden abgeglichen&mdash;basierend auf den Qualifizierern in ihren Namen&mdash;und anhand der Qualifiziererwerte in diesem Laufzeitkontext.</span><span class="sxs-lookup"><span data-stu-id="30daf-171">Image files are matched&mdash;based on the qualifiers in their names&mdash;against the qualifier values in that runtime context.</span></span>
+
+<span data-ttu-id="30daf-172">Sie können die Systemeinstellungen Ihrer App außer Kraft setzen und explizit die Sprache, Skalierung oder andere Qualifiziererwerte festlegen, wenn ein übereinstimmendes Bild geladen werden soll.</span><span class="sxs-lookup"><span data-stu-id="30daf-172">But there might be times when you want your app to override the system settings and be explicit about the language, scale, or other qualifier value to use when looking for a matching image to load.</span></span> <span data-ttu-id="30daf-173">Sie können z.B. steuern, wann und welche Bilder mit hohem Kontrast geladen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="30daf-173">For example, you might want to control exactly when and which high contrast images are loaded.</span></span>
+
+<span data-ttu-id="30daf-174">Sie können hierzu einen neuen **ResourceContext** erstellen (anstelle des Standardmäßigen), die Werte überschreiben und das Kontextobjekt anschließend in Ihren Suchvorgängen verwenden.</span><span class="sxs-lookup"><span data-stu-id="30daf-174">You can do that by constructing a new **ResourceContext** (instead of using the default one), overriding its values, and then using that context object in your image lookups.</span></span>
+
+**<span data-ttu-id="30daf-175">C#</span><span class="sxs-lookup"><span data-stu-id="30daf-175">C#</span></span>**
+```csharp
+var resourceContext = new Windows.ApplicationModel.Resources.Core.ResourceContext(); // not using ResourceContext.GetForCurrentView 
+resourceContext.QualifierValues["Contrast"] = "high";
+var namedResource = Windows.ApplicationModel.Resources.Core.ResourceManager.Current.MainResourceMap[@"Files/Assets/Logo.png"];
+var resourceCandidate = namedResource.Resolve(resourceContext);
+var imageFileStream = resourceCandidate.GetValueAsStreamAsync().GetResults();
+var bitmapImage = new Windows.UI.Xaml.Media.Imaging.BitmapImage();
+bitmapImage.SetSourceAsync(imageFileStream);
+this.myXAMLImageElement.Source = bitmapImage;
+```
+
+<span data-ttu-id="30daf-176">Um den gleichen Effekt auf globaler Ebene zu erzielen, *können* Sie die Qualifiziererwerte im standardmäßigen **ResourceContext** außer Kraft setzen.</span><span class="sxs-lookup"><span data-stu-id="30daf-176">For the same effect at a global level, you *can* override the qualifier values in the default **ResourceContext**.</span></span> <span data-ttu-id="30daf-177">Wir empfehlen, stattdessen [**ResourceContext.SetGlobalQualifierValue**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live#Windows_ApplicationModel_Resources_Core_ResourceContext_SetGlobalQualifierValue_System_String_System_String_Windows_ApplicationModel_Resources_Core_ResourceQualifierPersistence_) aufzurufen.</span><span class="sxs-lookup"><span data-stu-id="30daf-177">But instead we advise you to call [**ResourceContext.SetGlobalQualifierValue**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live#Windows_ApplicationModel_Resources_Core_ResourceContext_SetGlobalQualifierValue_System_String_System_String_Windows_ApplicationModel_Resources_Core_ResourceQualifierPersistence_).</span></span> <span data-ttu-id="30daf-178">Sie legen die Werte nur einmal mit einem Aufruf von **SetGlobalQualifierValue** fest und diese Werte sind auf dem standardmäßigen **ResourceContext** jedes Mal gültig, wenn Sie ihn für Suchvorgänge verwenden.</span><span class="sxs-lookup"><span data-stu-id="30daf-178">You set values one time with a call to **SetGlobalQualifierValue** and then those values are in effect on the default **ResourceContext** each time you use it for lookups.</span></span> <span data-ttu-id="30daf-179">Standardmäßig verwendet die [**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live)-Klasse den standardmäßigen **ResourceContext**.</span><span class="sxs-lookup"><span data-stu-id="30daf-179">By default, the [**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live) class uses the default **ResourceContext**.</span></span>
+
+**<span data-ttu-id="30daf-180">C#</span><span class="sxs-lookup"><span data-stu-id="30daf-180">C#</span></span>**
+```csharp
+Windows.ApplicationModel.Resources.Core.ResourceContext.SetGlobalQualifierValue("Contrast", "high");
+var namedResource = Windows.ApplicationModel.Resources.Core.ResourceManager.Current.MainResourceMap[@"Files/Assets/Logo.png"];
+this.myXAMLImageElement.Source = new Windows.UI.Xaml.Media.Imaging.BitmapImage(namedResource.Uri);
+```
+
+## <a name="updating-images-in-response-to-qualifier-value-change-events"></a><span data-ttu-id="30daf-181">Aktualisieren von Bildern als Antwort auf Änderungsereignisse im Qualifiziererwert</span><span class="sxs-lookup"><span data-stu-id="30daf-181">Updating images in response to qualifier value change events</span></span>
+
+<span data-ttu-id="30daf-182">Die aktive App kann auf Änderungen in den Systemeinstellungen reagieren, die die Qualifiziererwerte im standardmäßigen Ressourcekontext betreffen.</span><span class="sxs-lookup"><span data-stu-id="30daf-182">Your running app can respond to changes in system settings that affect the qualifier values in the default resource context.</span></span> <span data-ttu-id="30daf-183">Die folgenden Systemeinstellungen rufen ein [**"MapChanged"**](/uwp/api/windows.foundation.collections.iobservablemap_k_v_?branch=live#Windows_Foundation_Collections_IObservableMap_2_MapChanged)-Ereignis auf [**ResourceContext.QualifierValues**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live#Windows_ApplicationModel_Resources_Core_ResourceContext_QualifierValues) auf.</span><span class="sxs-lookup"><span data-stu-id="30daf-183">Any of these system settings invokes the [**MapChanged**](/uwp/api/windows.foundation.collections.iobservablemap_k_v_?branch=live#Windows_Foundation_Collections_IObservableMap_2_MapChanged) event on [**ResourceContext.QualifierValues**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live#Windows_ApplicationModel_Resources_Core_ResourceContext_QualifierValues).</span></span>
+
+<span data-ttu-id="30daf-184">Als Reaktion auf dieses Ereignis können Sie Ihre Bilder mit Hilfe des standardmäßigen **ResourceContext** aktualisieren, den der [**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live) standardmäßig verwendet.</span><span class="sxs-lookup"><span data-stu-id="30daf-184">In response to this event, you can reload your images with the help of the default **ResourceContext**, which [**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live) uses by default.</span></span>
+
+**<span data-ttu-id="30daf-185">C#</span><span class="sxs-lookup"><span data-stu-id="30daf-185">C#</span></span>**
+```csharp
+public MainPage()
+{
+    this.InitializeComponent();
+
+    ...
+
+    // Subscribe to the event that's raised when a qualifier value changes.
+    var qualifierValues = Windows.ApplicationModel.Resources.Core.ResourceContext.GetForCurrentView().QualifierValues;
+    qualifierValues.MapChanged += new Windows.Foundation.Collections.MapChangedEventHandler<string, string>(QualifierValues_MapChanged);
+}
+
+private async void QualifierValues_MapChanged(IObservableMap<string, string> sender, IMapChangedEventArgs<string> @event)
+{
+    var dispatcher = this.myImageXAMLElement.Dispatcher;
+    if (dispatcher.HasThreadAccess)
+    {
+        this.RefreshUIImages();
+    }
+    else
+    {
+        await dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () => this.RefreshUIImages());
+    }
+}
+
+private void RefreshUIImages()
+{
+    var namedResource = Windows.ApplicationModel.Resources.Core.ResourceManager.Current.MainResourceMap[@"Files/Assets/Logo.png"];
+    this.myImageXAMLElement.Source = new Windows.UI.Xaml.Media.Imaging.BitmapImage(namedResource.Uri);
+}
+```
+
+## <a name="related-topics"></a><span data-ttu-id="30daf-186">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="30daf-186">Related topics</span></span>
+
+* [<span data-ttu-id="30daf-187">Passen Sie Ihrer Ressourcen der Sprache, Skalierung und anderen Qualifizierern an</span><span class="sxs-lookup"><span data-stu-id="30daf-187">Tailor your resources for language, scale, and other qualifiers</span></span>](how-to-name-resources-by-using-qualifiers.md)
+* [<span data-ttu-id="30daf-188">Lokalisieren der Zeichenfolge im Paketmanifest der Benutzeroberfläche und der App</span><span class="sxs-lookup"><span data-stu-id="30daf-188">Localize strings in your UI and app package manifest</span></span>](put-ui-strings-into-resources.md)
+* [<span data-ttu-id="30daf-189">Speichern und Abrufen von Einstellungen und anderen App-Daten</span><span class="sxs-lookup"><span data-stu-id="30daf-189">Store and retrieve settings and other app data</span></span>](../app-settings/store-and-retrieve-app-data)
+* [<span data-ttu-id="30daf-190">Kachel- und Popupunterstützung für die Sprache, den Skalierungsfaktor für die Anzeige, das Design und den hohen Kontrastsupport for language, scale, and high contrast</span><span class="sxs-lookup"><span data-stu-id="30daf-190">Tile and toast support for language, scale, and high contrast</span></span>](tile-toast-language-scale-contrast.md)
+* [<span data-ttu-id="30daf-191">Lokalisierbare Manifestelemente</span><span class="sxs-lookup"><span data-stu-id="30daf-191">Localizable manifest items</span></span>](/uwp/schemas/appxpackage/uapmanifestschema/localizable-manifest-items-win10?branch=live)
+* [<span data-ttu-id="30daf-192">Spiegeln von Bildern</span><span class="sxs-lookup"><span data-stu-id="30daf-192">Mirroring images</span></span>](adjust-layout-and-fonts--and-support-rtl#mirroring-images)
