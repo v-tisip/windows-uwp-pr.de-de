@@ -9,13 +9,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 07b8b769cbcaf86bfa70a562de568cab65c91a77
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: high
+ms.openlocfilehash: 62dc1cf81bd26ca5ba4adf181cc9f710e41565c2
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="download-and-install-package-updates-for-your-app"></a>Herunterladen und Installieren von Paketupdates für Ihre App
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
 Ab Windows10 (Version 1607) können Sie eine API im Namespace [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) verwenden, um programmgesteuert nach Paketupdates für die aktuelle App zu suchen und diese herunterzuladen und zu installieren. Sie können auch Abfragen für Pakete ausführen, die [im Windows Dev Center-Dashboard als obligatorisch gekennzeichnet](#mandatory-dashboard) wurden, und Funktionen in Ihrer App deaktivieren, bis das erforderliche Update installiert wurde.
 

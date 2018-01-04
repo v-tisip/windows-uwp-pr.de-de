@@ -9,13 +9,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, SD-Karte, Speicher
-ms.openlocfilehash: 89dfed0cbd8a4a87f432a747e4155cdef3bbc757
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 44354bbacd5ea775c8a973fe7f82aaf65b3f70db
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="access-the-sd-card"></a>Zugreifen auf die SD-Karte
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Sie können weniger wichtige Daten auf einer optionalen microSD-Karte speichern. Dies gilt besonders für Geräte, die nur über einen begrenzten Speicher und einen SD-Kartensteckplatz verfügen.
