@@ -8,48 +8,46 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Spiele, BasicReaderWriter"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+keywords: Windows10, UWP, Spiele, BasicReaderWriter
 ms.openlocfilehash: 1dc7ba0b25ceeb5b27bc718bed1db0e2db39b6c0
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.translationtype: HT
+ms.contentlocale: de-DE
 ---
-
-# <a name="complete-code-for-basicreaderwriter"></a>Vollständiger Code für "BasicReaderWriter"
-
-
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
-Vollständiger Code für eine Klasse und Methoden zum allgemeinen Lesen und Schreiben von Binärdatendateien. Wird von der [BasicLoader](complete-code-for-basicloader.md)-Klasse verwendet.
-
-Dieses Thema enthält die folgenden Abschnitte:
-
--   [Technologien](#technologies)
--   [Anforderungen](#requirements)
--   [Anzeigen des Codes (C++)](#view-the-code-c)
+# <a name="complete-code-for-basicreaderwriter"></a><span data-ttu-id="6e735-104">Vollständiger Code für "BasicReaderWriter"</span><span class="sxs-lookup"><span data-stu-id="6e735-104">Complete code for BasicReaderWriter</span></span>
 
 
-## <a name="download-location"></a>Downloadort
+<span data-ttu-id="6e735-105">\[ Aktualisiert für UWP-Apps unter Windows10.</span><span class="sxs-lookup"><span data-stu-id="6e735-105">\[ Updated for UWP apps on Windows 10.</span></span> <span data-ttu-id="6e735-106">Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span><span class="sxs-lookup"><span data-stu-id="6e735-106">For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span></span>
 
-Dieses Beispiel kann nicht heruntergeladen werden.
+<span data-ttu-id="6e735-107">Vollständiger Code für eine Klasse und Methoden zum allgemeinen Lesen und Schreiben von Binärdatendateien.</span><span class="sxs-lookup"><span data-stu-id="6e735-107">Complete code for a class and methods for reading and writing binary data files in general.</span></span> <span data-ttu-id="6e735-108">Wird von der [BasicLoader](complete-code-for-basicloader.md)-Klasse verwendet.</span><span class="sxs-lookup"><span data-stu-id="6e735-108">Used by the [BasicLoader](complete-code-for-basicloader.md) class.</span></span>
 
+<span data-ttu-id="6e735-109">Dieses Thema enthält die folgenden Abschnitte:</span><span class="sxs-lookup"><span data-stu-id="6e735-109">This topic contains these sections:</span></span>
 
-## <a name="technologies"></a>Technologien
-
-**Programmiersprachen** – C++  
-**Programmiermodelle** – Windows-Runtime
-
-
-## <a name="requirements"></a>Anforderungen
-
- **Unterstützte Mindestversion (Client)** – Windows 10       
- **Unterstützte Mindestversion (Server)** – Windows Server 2016 Technical Preview 
-
-## <a name="view-the-code-c"></a>Anzeigen des Codes (C++)
+-   [<span data-ttu-id="6e735-110">Technologien</span><span class="sxs-lookup"><span data-stu-id="6e735-110">Technologies</span></span>](#technologies)
+-   [<span data-ttu-id="6e735-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="6e735-111">Requirements</span></span>](#requirements)
+-   [<span data-ttu-id="6e735-112">Anzeigen des Codes (C++)</span><span class="sxs-lookup"><span data-stu-id="6e735-112">View the code (C++)</span></span>](#view-the-code-c)
 
 
-## <a name="basicreaderwriterh"></a>BasicReaderWriter.h
+## <a name="download-location"></a><span data-ttu-id="6e735-113">Downloadort</span><span class="sxs-lookup"><span data-stu-id="6e735-113">Download location</span></span>
+
+<span data-ttu-id="6e735-114">Dieses Beispiel kann nicht heruntergeladen werden.</span><span class="sxs-lookup"><span data-stu-id="6e735-114">This sample is not available for download.</span></span>
+
+
+## <a name="technologies"></a><span data-ttu-id="6e735-115">Technologien</span><span class="sxs-lookup"><span data-stu-id="6e735-115">Technologies</span></span>
+
+<span data-ttu-id="6e735-116">**Programmiersprachen** – C++</span><span class="sxs-lookup"><span data-stu-id="6e735-116">**Programming languages** -  C++</span></span>  
+<span data-ttu-id="6e735-117">**Programmiermodelle** – Windows-Runtime</span><span class="sxs-lookup"><span data-stu-id="6e735-117">**Programming models** - Windows Runtime</span></span>
+
+
+## <a name="requirements"></a><span data-ttu-id="6e735-118">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="6e735-118">Requirements</span></span>
+
+ <span data-ttu-id="6e735-119">**Unterstützte Mindestversion (Client)** – Windows 10</span><span class="sxs-lookup"><span data-stu-id="6e735-119">**Minimum supported client** - Windows 10</span></span>       
+<span data-ttu-id="6e735-120"> **Unterstützte Mindestversion (Server)** – Windows Server 2016 Technical Preview</span><span class="sxs-lookup"><span data-stu-id="6e735-120"> **Minimum supported server** - Windows Server 2016 Technical Preview</span></span> 
+
+## <a name="view-the-code-c"></a><span data-ttu-id="6e735-121">Anzeigen des Codes (C++)</span><span class="sxs-lookup"><span data-stu-id="6e735-121">View the code (C++)</span></span>
+
+
+## <a name="basicreaderwriterh"></a><span data-ttu-id="6e735-122">BasicReaderWriter.h</span><span class="sxs-lookup"><span data-stu-id="6e735-122">BasicReaderWriter.h</span></span>
 
 
 ```cpp
@@ -98,7 +96,7 @@ internal:
 };
 ```
 
-## <a name="basicreaderwritercpp"></a>BasicReaderWriter.cpp
+## <a name="basicreaderwritercpp"></a><span data-ttu-id="6e735-123">BasicReaderWriter.cpp</span><span class="sxs-lookup"><span data-stu-id="6e735-123">BasicReaderWriter.cpp</span></span>
 
 
 ```cpp
@@ -266,7 +264,6 @@ task<void> BasicReaderWriter::WriteDataAsync(
  
 
  
-
 
 
 

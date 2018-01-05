@@ -7,42 +7,40 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Spiele, Maus, Eingabe"
+keywords: Windows10, UWP, Spiele, Maus, Eingabe
 ms.assetid: 08c35e05-2822-4a01-85b8-44edb9b6898f
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: f207c1b7de4fd4a885c05c6988ecf685359d1d8b
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: dff08052af7f005366f9cb5154b307c13a316953
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.translationtype: HT
+ms.contentlocale: de-DE
 ---
+# <a name="relative-mouse-movement-and-corewindow"></a><span data-ttu-id="7d6e0-104">Relative Mausbewegung und CoreWindow</span><span class="sxs-lookup"><span data-stu-id="7d6e0-104">Relative mouse movement and CoreWindow</span></span>
 
-# <a name="relative-mouse-movement-and-corewindow"></a>Relative Mausbewegung und CoreWindow
+<span data-ttu-id="7d6e0-105">In Spielen ist die Maus eine gängige Steuerungsoption, mit der viele Spieler vertraut sind. Sie ist ebenso für viele Spielgenres unentbehrlich, einschließlich der First-Person- und Third-Person-Shooter sowie der Echtzeitstrategiespiele.</span><span class="sxs-lookup"><span data-stu-id="7d6e0-105">In games, the mouse is a common control option that is familiar to many players, and is likewise essential to many genres of games, including first- and third-person shooters, and real-time strategy games.</span></span> <span data-ttu-id="7d6e0-106">In diesem Thema wird die Implementierung relativer Maussteuerungen erläutert, die nicht den Systemcursor verwenden und keine absoluten Bildschirmkoordinaten zurückgeben, sondern stattdessen das Pixeldelta zwischen Mausbewegungen nachverfolgen.</span><span class="sxs-lookup"><span data-stu-id="7d6e0-106">Here we discuss the implementation of relative mouse controls, which don't use the system cursor and don't return absolute screen coordinates; instead, they track the pixel delta between mouse movements.</span></span>
 
-In Spielen ist die Maus eine gängige Steuerungsoption, mit der viele Spieler vertraut sind. Sie ist ebenso für viele Spielgenres unentbehrlich, einschließlich der First-Person- und Third-Person-Shooter sowie der Echtzeitstrategiespiele. In diesem Thema wird die Implementierung relativer Maussteuerungen erläutert, die nicht den Systemcursor verwenden und keine absoluten Bildschirmkoordinaten zurückgeben, sondern stattdessen das Pixeldelta zwischen Mausbewegungen nachverfolgen.
+<span data-ttu-id="7d6e0-107">Einige Apps, z.B. Spiele, verwenden die Maus als ein eher allgemeineres Eingabegerät.</span><span class="sxs-lookup"><span data-stu-id="7d6e0-107">Some apps, such as games, use the mouse as a more general input device.</span></span> <span data-ttu-id="7d6e0-108">In einem 3D-Modellierer kann die Mauseingabe zum Ausrichten eines 3D-Objekts verwendet werden, indem ein virtueller Trackball simuliert wird. Oder in einem Spiel kann mit der Maus die Richtung der Kamera über Bewegungs-/Blicksteuerungen geändert werden.</span><span class="sxs-lookup"><span data-stu-id="7d6e0-108">For example, a 3-D modeler might use mouse input to orient a 3-D object by simulating a virtual trackball; or a game might use the mouse to change the direction of the viewing camera via mouse-look controls.</span></span> 
 
-Einige Apps, z. B. Spiele, verwenden die Maus als ein eher allgemeineres Eingabegerät. In einem 3D-Modellierer kann die Mauseingabe zum Ausrichten eines 3D-Objekts verwendet werden, indem ein virtueller Trackball simuliert wird. Oder in einem Spiel kann mit der Maus die Richtung der Kamera über Bewegungs-/Blicksteuerungen geändert werden. 
+<span data-ttu-id="7d6e0-109">In diesen Szenarien benötigt die App relative Mausdaten.</span><span class="sxs-lookup"><span data-stu-id="7d6e0-109">In these scenarios, the app requires relative mouse data.</span></span> <span data-ttu-id="7d6e0-110">Relative Mauswerte geben an, welche Entfernung die Maus seit dem letzten Frame zurückgelegt hat, und stellen keine absoluten x- und y-Koordinaten in einem Fenster oder Bildschirm dar.</span><span class="sxs-lookup"><span data-stu-id="7d6e0-110">Relative mouse values represent how far the mouse moved since the last frame, rather than the absolute x-y coordinate values within a window or screen.</span></span> <span data-ttu-id="7d6e0-111">Zudem blenden Apps häufig den Mauszeiger aus, da die Position des Cursors in Bezug auf die Bildschirmkoordinaten beim Bearbeiten eines 3D-Objekts oder einer 3D-Szene nicht relevant ist.</span><span class="sxs-lookup"><span data-stu-id="7d6e0-111">Also, apps often hide the mouse cursor since the position of the cursor with respect to the screen coordinates is not relevant when manipulating a 3-D object or scene.</span></span> 
 
-In diesen Szenarien benötigt die App relative Mausdaten. Relative Mauswerte geben an, welche Entfernung die Maus seit dem letzten Frame zurückgelegt hat, und stellen keine absoluten x- und y-Koordinaten in einem Fenster oder Bildschirm dar. Zudem blenden Apps häufig den Mauszeiger aus, da die Position des Cursors in Bezug auf die Bildschirmkoordinaten beim Bearbeiten eines 3D-Objekts oder einer 3D-Szene nicht relevant ist. 
+<span data-ttu-id="7d6e0-112">Wenn der Benutzer eine Aktion durchführt, die die App in einen Bearbeitungsmodus für relative 3D-Objekte/-Szenen versetzt, muss die App folgende Aufgaben ausführen:</span><span class="sxs-lookup"><span data-stu-id="7d6e0-112">When the user takes an action that moves the app into a relative 3-D object/scene manipulation mode, the app must:</span></span> 
+- <span data-ttu-id="7d6e0-113">Ignorieren der standardmäßigen Mausbehandlung</span><span class="sxs-lookup"><span data-stu-id="7d6e0-113">Ignore default mouse handling.</span></span>
+- <span data-ttu-id="7d6e0-114">Aktivieren der relativen Mausbehandlung</span><span class="sxs-lookup"><span data-stu-id="7d6e0-114">Enable relative mouse handling.</span></span>
+- <span data-ttu-id="7d6e0-115">Ausblenden des Mauszeigers durch Festlegen eines NULL-Zeigers ("nullptr")</span><span class="sxs-lookup"><span data-stu-id="7d6e0-115">Hide the mouse cursor by setting it a null pointer (nullptr).</span></span> 
 
-Wenn der Benutzer eine Aktion durchführt, die die App in einen Bearbeitungsmodus für relative 3D-Objekte/-Szenen versetzt, muss die App folgende Aufgaben ausführen: 
-- Ignorieren der standardmäßigen Mausbehandlung
-- Aktivieren der relativen Mausbehandlung
-- Ausblenden des Mauszeigers durch Festlegen eines NULL-Zeigers ("nullptr") 
+<span data-ttu-id="7d6e0-116">Wenn der Benutzer eine Aktion durchführt, die den App-Bearbeitungsmodus für relative 3D-Objekte/-Szenen beendet, muss die App folgende Aufgaben ausführen:</span><span class="sxs-lookup"><span data-stu-id="7d6e0-116">When the user takes an action that moves the app out of a relative 3-D object/scene manipulation mode, the app must:</span></span> 
+- <span data-ttu-id="7d6e0-117">Aktivieren der standardmäßigen/absoluten Mausbehandlung</span><span class="sxs-lookup"><span data-stu-id="7d6e0-117">Enable default/absolute mouse handling.</span></span>
+- <span data-ttu-id="7d6e0-118">Deaktivieren der relativen Mausbehandlung</span><span class="sxs-lookup"><span data-stu-id="7d6e0-118">Turn off relative mouse handling.</span></span> 
+- <span data-ttu-id="7d6e0-119">Festlegen des Mauszeigers auf einen Wert ungleich NULL (so dass der Mauszeiger sichtbar wird)</span><span class="sxs-lookup"><span data-stu-id="7d6e0-119">Set the mouse cursor to a non-null value (which makes it visible).</span></span>
 
-Wenn der Benutzer eine Aktion durchführt, die den App-Bearbeitungsmodus für relative 3D-Objekte/-Szenen beendet, muss die App folgende Aufgaben ausführen: 
-- Aktivieren der standardmäßigen/absoluten Mausbehandlung
-- Deaktivieren der relativen Mausbehandlung 
-- Festlegen des Mauszeigers auf einen Wert ungleich NULL (so dass der Mauszeiger sichtbar wird)
-
-> **Hinweis**  
-Bei diesem Muster wird die Position des absoluten Mauszeigers beim Wechsel in den relativen Modus ohne Cursor beibehalten. Der Mauszeiger erscheint erneut an einer Position mit den gleichen Bildschirmkoordinaten wie vor der Aktivierung des Modus für die relative Mausbewegung.
+> **<span data-ttu-id="7d6e0-120">Hinweis</span><span class="sxs-lookup"><span data-stu-id="7d6e0-120">Note</span></span>**  
+<span data-ttu-id="7d6e0-121">Bei diesem Muster wird die Position des absoluten Mauszeigers beim Wechsel in den relativen Modus ohne Cursor beibehalten.</span><span class="sxs-lookup"><span data-stu-id="7d6e0-121">With this pattern, the location of the absolute mouse cursor is preserved on entering the cursorless relative mode.</span></span> <span data-ttu-id="7d6e0-122">Der Mauszeiger erscheint erneut an einer Position mit den gleichen Bildschirmkoordinaten wie vor der Aktivierung des Modus für die relative Mausbewegung.</span><span class="sxs-lookup"><span data-stu-id="7d6e0-122">The cursor re-appears in the same screen coordinate location as it was previous to enabling the relative mouse movement mode.</span></span>
 
  
 
-## <a name="handling-relative-mouse-movement"></a>Behandeln der relativen Mausbewegung
+## <a name="handling-relative-mouse-movement"></a><span data-ttu-id="7d6e0-123">Behandeln der relativen Mausbewegung</span><span class="sxs-lookup"><span data-stu-id="7d6e0-123">Handling relative mouse movement</span></span>
 
 
-Führen Sie die Registrierung für das [MouseDevice::MouseMoved](https://msdn.microsoft.com/library/windows/apps/xaml/windows.devices.input.mousedevice.mousemoved.aspx)-Ereignis aus, um auf die relativen Mausdeltawerte zuzugreifen, so wie hier gezeigt.
+<span data-ttu-id="7d6e0-124">Führen Sie die Registrierung für das [MouseDevice::MouseMoved](https://msdn.microsoft.com/library/windows/apps/xaml/windows.devices.input.mousedevice.mousemoved.aspx)-Ereignis aus, um auf die relativen Mausdeltawerte zuzugreifen, so wie hier gezeigt.</span><span class="sxs-lookup"><span data-stu-id="7d6e0-124">To access relative mouse delta values, register for the [MouseDevice::MouseMoved](https://msdn.microsoft.com/library/windows/apps/xaml/windows.devices.input.mousedevice.mousemoved.aspx) event as shown here.</span></span>
 
 
 ```cpp
@@ -88,18 +86,18 @@ void MoveLookController::OnMouseMoved(
 
 ```
 
-Der Ereignishandler in diesem Codebeispiel, **OnMouseMoved**, rendert die Ansicht basierend auf den Bewegungen der Maus. Die Position des Mauszeigers wird als [MouseEventArgs](https://msdn.microsoft.com/library/windows/apps/xaml/windows.devices.input.mouseeventargs.aspx)-Objekt an den Handler übergeben. 
+<span data-ttu-id="7d6e0-125">Der Ereignishandler in diesem Codebeispiel, **OnMouseMoved**, rendert die Ansicht basierend auf den Bewegungen der Maus.</span><span class="sxs-lookup"><span data-stu-id="7d6e0-125">The event handler in this code example, **OnMouseMoved**, renders the view based on the movements of the mouse.</span></span> <span data-ttu-id="7d6e0-126">Die Position des Mauszeigers wird als [MouseEventArgs](https://msdn.microsoft.com/library/windows/apps/xaml/windows.devices.input.mouseeventargs.aspx)-Objekt an den Handler übergeben.</span><span class="sxs-lookup"><span data-stu-id="7d6e0-126">The position of the mouse pointer is passed to the handler as a [MouseEventArgs](https://msdn.microsoft.com/library/windows/apps/xaml/windows.devices.input.mouseeventargs.aspx) object.</span></span> 
 
-Überspringen Sie die Verarbeitung der absoluten Mausdaten aus dem [CoreWindow::PointerMoved](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.core.corewindow.pointermoved.aspx)-Ereignis, wenn Ihre App in den Modus zur Behandlung relativer Mausbewegungswerte wechselt. Überspringen Sie diese Eingabe jedoch nur, wenn das **CoreWindow::PointerMoved**-Ereignis als Ergebnis einer Mauseingabe (und nicht einer Fingereingabe) aufgetreten ist. Der Cursor wird ausgeblendet, indem [CoreWindow::PointerCursor](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.core.corewindow.pointercursor.aspx) auf **nullptr** festgelegt wird. 
+<span data-ttu-id="7d6e0-127">Überspringen Sie die Verarbeitung der absoluten Mausdaten aus dem [CoreWindow::PointerMoved](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.core.corewindow.pointermoved.aspx)-Ereignis, wenn Ihre App in den Modus zur Behandlung relativer Mausbewegungswerte wechselt.</span><span class="sxs-lookup"><span data-stu-id="7d6e0-127">Skip over processing of absolute mouse data from the [CoreWindow::PointerMoved](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.core.corewindow.pointermoved.aspx) event when your app changes to handling relative mouse movement values.</span></span> <span data-ttu-id="7d6e0-128">Überspringen Sie diese Eingabe jedoch nur, wenn das **CoreWindow::PointerMoved**-Ereignis als Ergebnis einer Mauseingabe (und nicht einer Fingereingabe) aufgetreten ist.</span><span class="sxs-lookup"><span data-stu-id="7d6e0-128">However, only skip this input if the **CoreWindow::PointerMoved** event occurred as the result of mouse input (as opposed to touch input).</span></span> <span data-ttu-id="7d6e0-129">Der Cursor wird ausgeblendet, indem [CoreWindow::PointerCursor](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.core.corewindow.pointercursor.aspx) auf **nullptr** festgelegt wird.</span><span class="sxs-lookup"><span data-stu-id="7d6e0-129">The cursor is hidden by setting the [CoreWindow::PointerCursor](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.core.corewindow.pointercursor.aspx) to **nullptr**.</span></span> 
 
-## <a name="returning-to-absolute-mouse-movement"></a>Zurückkehren zur absoluten Mausbewegung
+## <a name="returning-to-absolute-mouse-movement"></a><span data-ttu-id="7d6e0-130">Zurückkehren zur absoluten Mausbewegung</span><span class="sxs-lookup"><span data-stu-id="7d6e0-130">Returning to absolute mouse movement</span></span>
 
-Wenn die App den Bearbeitungsmodus für 3D-Objekte/-Szenen verlässt und die relative Mausbewegung nicht mehr verwendet (wenn sie z. B. einen Menübildschirm anzeigt), sollte die App zur normalen Verarbeitung der absoluten Mausbewegung zurückkehren. Beenden Sie zu diesem Zeitpunkt das Lesen der relativen Mausdaten, starten Sie die Verarbeitung der standardmäßigen Maus- und Zeigerereignisse neu, und setzen Sie [CoreWindow::PointerCursor](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.core.corewindow.pointercursor.aspx) auf einen Wert ungleich NULL. 
+<span data-ttu-id="7d6e0-131">Wenn die App den Bearbeitungsmodus für 3D-Objekte/-Szenen verlässt und die relative Mausbewegung nicht mehr verwendet (wenn sie z.B. einen Menübildschirm anzeigt), sollte die App zur normalen Verarbeitung der absoluten Mausbewegung zurückkehren.</span><span class="sxs-lookup"><span data-stu-id="7d6e0-131">When the app exits the 3-D object or scene manipulation mode and no longer uses relative mouse movement (such as when it returns to a menu screen), return to normal processing of absolute mouse movement.</span></span> <span data-ttu-id="7d6e0-132">Beenden Sie zu diesem Zeitpunkt das Lesen der relativen Mausdaten, starten Sie die Verarbeitung der standardmäßigen Maus- und Zeigerereignisse neu, und setzen Sie [CoreWindow::PointerCursor](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.core.corewindow.pointercursor.aspx) auf einen Wert ungleich NULL.</span><span class="sxs-lookup"><span data-stu-id="7d6e0-132">At this time, stop reading relative mouse data, restart the processing of standard mouse (and pointer) events, and set [CoreWindow::PointerCursor](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.core.corewindow.pointercursor.aspx) to non-null value.</span></span> 
 
-> **Hinweis**  
-Wenn sich Ihre App im Bearbeitungsmodus für 3D-Objekte/-Szenen befindet, in dem relative Mausbewegungen bei deaktiviertem Cursor verarbeitet werden, kann die Maus keine UI am Bildschirmrand aufrufen, z. B. Charms, Stapel für die Rückwärtsnavigation oder App-Leiste. Daher ist es wichtig, einen Mechanismus bereitzustellen, um diesen besonderen Modus zu beenden, z. B. die allgemein verwendete **Esc**-Taste.
+> **<span data-ttu-id="7d6e0-133">Hinweis</span><span class="sxs-lookup"><span data-stu-id="7d6e0-133">Note</span></span>**  
+<span data-ttu-id="7d6e0-134">Wenn sich Ihre App im Bearbeitungsmodus für 3D-Objekte/-Szenen befindet, in dem relative Mausbewegungen bei deaktiviertem Cursor verarbeitet werden, kann die Maus keine UI am Bildschirmrand aufrufen, z.B. Charms, Stapel für die Rückwärtsnavigation oder App-Leiste.</span><span class="sxs-lookup"><span data-stu-id="7d6e0-134">When your app is in the 3-D object/scene manipulation mode (processing relative mouse movements with the cursor off), the mouse cannot invoke edge UI such as the charms, back stack, or app bar.</span></span> <span data-ttu-id="7d6e0-135">Daher ist es wichtig, einen Mechanismus bereitzustellen, um diesen besonderen Modus zu beenden, z.B. die allgemein verwendete **Esc**-Taste.</span><span class="sxs-lookup"><span data-stu-id="7d6e0-135">Therefore, it is important to provide a mechanism to exit this particular mode, such as the commonly used **Esc** key.</span></span>
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a><span data-ttu-id="7d6e0-136">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="7d6e0-136">Related topics</span></span>
 
-* [Bewegungs-/Blicksteuerungen für Spiele](tutorial--adding-move-look-controls-to-your-directx-game.md) 
-* [Toucheingabesteuerelemente für Spiele](tutorial--adding-touch-controls-to-your-directx-game.md)
+* [<span data-ttu-id="7d6e0-137">Bewegungs-/Blicksteuerungen für Spiele</span><span class="sxs-lookup"><span data-stu-id="7d6e0-137">Move-look controls for games</span></span>](tutorial--adding-move-look-controls-to-your-directx-game.md) 
+* [<span data-ttu-id="7d6e0-138">Toucheingabesteuerelemente für Spiele</span><span class="sxs-lookup"><span data-stu-id="7d6e0-138">Touch controls for games</span></span>](tutorial--adding-touch-controls-to-your-directx-game.md)

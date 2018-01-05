@@ -1,30 +1,30 @@
 ---
 title: Streamingressourcen
-description: "Streamingressourcen sind große logische Ressourcen, die wenig physischen Speicher belegen. Anstatt eine gesamte große Ressource zu übergeben, werden je nach Bedarf kleine Teile der Ressource gestreamt. Streamingressourcen wurden früher als unterteilte Ressourcen bezeichnet."
+description: "Streamingressourcen sind große logische Ressourcen, die wenig physischen Speicher belegen. Anstatt die gesamte große Ressource zu übergeben, werden nur kleine Teile der Ressource bei Bedarf gestreamt. Streamingressourcen wurden früher als unterteilte Ressourcen bezeichnet."
 ms.assetid: 04F0486E-4B71-4073-88DA-2AF505F4F0C1
 keywords:
 - Streamingressourcen
 - Ressourcen, Streaming
 - Ressourcen, unterteilte
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 7bb706c94d26b1d27e7b9bf94ca3cfa7a57b41a6
-ms.lasthandoff: 02/07/2017
-
+ms.localizationpriority: medium
+ms.openlocfilehash: 54441d62107f08abe18715a91920d5cb30c75470
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/22/2017
 ---
+# <a name="streaming-resources"></a><span data-ttu-id="ff5ae-108">Streamingressourcen</span><span class="sxs-lookup"><span data-stu-id="ff5ae-108">Streaming resources</span></span>
 
-# <a name="streaming-resources"></a>Streamingressourcen
 
+<span data-ttu-id="ff5ae-109">*Streamingressourcen* sind große logische Ressourcen, die wenig physischen Speicher belegen..</span><span class="sxs-lookup"><span data-stu-id="ff5ae-109">*Streaming resources* are large logical resources that use small amounts of physical memory.</span></span> <span data-ttu-id="ff5ae-110">Anstatt die gesamte große Ressource zu übergeben, werden nur kleine Teile der Ressource bei Bedarf gestreamt.</span><span class="sxs-lookup"><span data-stu-id="ff5ae-110">Instead of passing an entire large resource, small parts of the resource are streamed as needed.</span></span> <span data-ttu-id="ff5ae-111">Streamingressourcen wurden früher als *unterteilte Ressourcen* bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="ff5ae-111">Streaming resources were previously called *tiled resources*.</span></span>
 
-*Streamingressourcen* sind große logische Ressourcen, die wenig physischen Speicher belegen.. Anstatt eine gesamte große Ressource zu übergeben, werden je nach Bedarf kleine Teile der Ressource gestreamt. Streamingressourcen wurden früher als *unterteilte Ressourcen* bezeichnet.
-
-## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>Inhalt dieses Abschnitts
+## <a name="span-idin-this-sectionspanin-this-section"></a><span data-ttu-id="ff5ae-112"><span id="in-this-section"></span>Inhalt dieses Abschnitts</span><span class="sxs-lookup"><span data-stu-id="ff5ae-112"><span id="in-this-section"></span>In this section</span></span>
 
 
 <table>
@@ -34,43 +34,42 @@ ms.lasthandoff: 02/07/2017
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Thema</th>
-<th align="left">Beschreibung</th>
+<th align="left"><span data-ttu-id="ff5ae-113">Thema</span><span class="sxs-lookup"><span data-stu-id="ff5ae-113">Topic</span></span></th>
+<th align="left"><span data-ttu-id="ff5ae-114">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ff5ae-114">Description</span></span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Die Notwendigkeit für Streamingressourcen](the-need-for-streaming-resources.md)</p></td>
-<td align="left"><p>Streamingressourcen sind erforderlich, damit der GPU-Speicher nicht unnötig durch die Speicherung von Oberflächenbereichen belegt wird, auf die nicht zugegriffen wird, und um der Hardware mitzuteilen, wie angrenzende Kacheln gefiltert werden sollen.</p></td>
+<td align="left"><p>[<span data-ttu-id="ff5ae-115">Die Notwendigkeit für Streamingressourcen</span><span class="sxs-lookup"><span data-stu-id="ff5ae-115">The need for streaming resources</span></span>](the-need-for-streaming-resources.md)</p></td>
+<td align="left"><p><span data-ttu-id="ff5ae-116">Streamingressourcen sind erforderlich, damit der GPU-Speicher nicht unnötig durch die Speicherung von Oberflächenbereichen belegt wird, auf die nicht zugegriffen wird, und um der Hardware mitzuteilen, wie angrenzende Kacheln gefiltert werden sollen.</span><span class="sxs-lookup"><span data-stu-id="ff5ae-116">Streaming resources are needed so GPU memory isn't wasted storing regions of surfaces that won't be accessed, and to tell the hardware how to filter across adjacent tiles.</span></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Erstellen von Streamingressourcen](creating-streaming-resources.md)</p></td>
-<td align="left"><p>Streamingressourcen werden erstellt, indem Sie beim Erstellen einer Ressource ein Flag festlegen, das die Ressource als Streamingressource kennzeichnet.</p></td>
+<td align="left"><p>[<span data-ttu-id="ff5ae-117">Erstellen von Streamingressourcen</span><span class="sxs-lookup"><span data-stu-id="ff5ae-117">Creating streaming resources</span></span>](creating-streaming-resources.md)</p></td>
+<td align="left"><p><span data-ttu-id="ff5ae-118">Streamingressourcen werden erstellt, indem Sie beim Erstellen einer Ressource ein Flag festlegen, das die Ressource als Streamingressource kennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="ff5ae-118">Streaming resources are created by specifying a flag when you create a resource, indicating that the resource is a streaming resource.</span></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Pipelinezugriff auf Streamingressourcen](pipeline-access-to-streaming-resources.md)</p></td>
-<td align="left"><p>Streamingressourcen können in Shaderressourcenansichten (SRV), Renderzielansichten (RTV), Tiefenschablonenansichten (DSV) und in unsortierten Zugriffsansichten (UAV) sowie in bestimmten Bindungen ohne Ansichten, z. B. Vertex-Pufferbindungen, verwendet werden.</p></td>
+<td align="left"><p>[<span data-ttu-id="ff5ae-119">Pipelinezugriff auf Streamingressourcen</span><span class="sxs-lookup"><span data-stu-id="ff5ae-119">Pipeline access to streaming resources</span></span>](pipeline-access-to-streaming-resources.md)</p></td>
+<td align="left"><p><span data-ttu-id="ff5ae-120">Streamingressourcen können in Shaderressourcenansichten (SRV), Renderzielansichten (RTV), Tiefenschablonenansichten (DSV) und in unsortierten Zugriffsansichten (UAV) sowie in bestimmten Bindungen ohne Ansichten, z.B. Vertex-Pufferbindungen, verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="ff5ae-120">Streaming resources can be used in shader resource views (SRV), render target views (RTV), depth stencil views (DSV) and unordered access views (UAV), as well as some bind points where views aren't used, such as vertex buffer bindings.</span></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Ebenen der Features von Streamingressourcen](streaming-resources-features-tiers.md)</p></td>
-<td align="left"><p>Direct3D unterstützt Streamingressourcen in drei Funktionsebenen.</p></td>
+<td align="left"><p>[<span data-ttu-id="ff5ae-121">Ebenen der Features von Streamingressourcen</span><span class="sxs-lookup"><span data-stu-id="ff5ae-121">Streaming resources features tiers</span></span>](streaming-resources-features-tiers.md)</p></td>
+<td align="left"><p><span data-ttu-id="ff5ae-122">Direct3D unterstützt Streamingressourcen in drei Funktionsebenen.</span><span class="sxs-lookup"><span data-stu-id="ff5ae-122">Direct3D supports streaming resources in three tiers of capabilities.</span></span></p></td>
 </tr>
 </tbody>
 </table>
 
  
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Verwandte Themen
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="ff5ae-123"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="ff5ae-123"><span id="related-topics"></span>Related topics</span></span>
 
 
-[Lernanleitung für Direct3D-Grafiken](index.md)
+[<span data-ttu-id="ff5ae-124">Lernanleitung für Direct3D-Grafiken</span><span class="sxs-lookup"><span data-stu-id="ff5ae-124">Direct3D Graphics Learning Guide</span></span>](index.md)
 
-[Ressourcen](resources.md)
-
- 
+[<span data-ttu-id="ff5ae-125">Ressourcen</span><span class="sxs-lookup"><span data-stu-id="ff5ae-125">Resources</span></span>](resources.md)
 
  
 
+ 
 
 
 

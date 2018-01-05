@@ -2,31 +2,30 @@
 title: Scheitelpunkt- und Indexpuffer
 description: "Scheitelpunktpuffer sind Speicherpuffer, die Scheitelpunktdaten enthalten. Scheitelpunkte in einem Scheitelpunktpuffer werden verarbeitet, um Transformation, Beleuchtung und Zuschneiden auszuführen."
 ms.assetid: 8A39CD23-85FB-4424-9AC3-37919704CD68
-keywords:
-- Scheitelpunkt- und Indexpuffer
-author: PeterTurcan
-ms.author: pettur
+keywords: Scheitelpunkt- und Indexpuffer
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: cdf65da6504114029c4937ee7db531a1339ed4c2
-ms.lasthandoff: 02/07/2017
-
+ms.localizationpriority: medium
+ms.openlocfilehash: f7153696f135d8fa559933d4e7a7c6e925850565
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/22/2017
 ---
+# <a name="vertex-and-index-buffers"></a><span data-ttu-id="d4142-104">Scheitelpunkt- und Indexpuffer</span><span class="sxs-lookup"><span data-stu-id="d4142-104">Vertex and index buffers</span></span>
 
-# <a name="vertex-and-index-buffers"></a>Scheitelpunkt- und Indexpuffer
 
+<span data-ttu-id="d4142-105">*Scheitelpunktpuffer* sind Speicherpuffer, die Scheitelpunktdaten enthalten. Scheitelpunkte in einem Scheitelpunktpuffer werden verarbeitet, um Transformation, Beleuchtung und Zuschneiden auszuführen.</span><span class="sxs-lookup"><span data-stu-id="d4142-105">*Vertex buffers* are memory buffers that contain vertex data; vertices in a vertex buffer are processed to perform transformation, lighting, and clipping.</span></span> <span data-ttu-id="d4142-106">*Indexpuffer* sind Speicherpuffer mit Indexdaten, die Ganzzahl-Offsets in Scheitelpunktpuffern darstellen, und zum Rendern von Grundtypen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="d4142-106">*Index buffers* are memory buffers that contain index data, which are integer offsets into vertex buffers, used to render primitives.</span></span>
 
-*Scheitelpunktpuffer* sind Speicherpuffer, die Scheitelpunktdaten enthalten. Scheitelpunkte in einem Scheitelpunktpuffer werden verarbeitet, um Transformation, Beleuchtung und Zuschneiden auszuführen. *Indexpuffer* sind Speicherpuffer mit Indexdaten, die Ganzzahl-Offsets in Scheitelpunktpuffern darstellen, und zum Rendern von Grundtypen verwendet werden.
+<span data-ttu-id="d4142-107">Scheitelpunktpuffer können Scheitelpunkte beliebiger Art enthalten, die gerendert werden können – transformiert oder nicht transformiert, beleuchtet oder nicht beleuchtet.</span><span class="sxs-lookup"><span data-stu-id="d4142-107">Vertex buffers can contain any vertex type - transformed or untransformed, lit or unlit - that can be rendered.</span></span> <span data-ttu-id="d4142-108">Sie können die Scheitelpunkte in einem Scheitelpunktpuffer verarbeiten, um Vorgänge wie Transformation oder Beleuchtung durchzuführen, oder um Zuschneidemarkierungen zu generieren.</span><span class="sxs-lookup"><span data-stu-id="d4142-108">You can process the vertices in a vertex buffer to perform operations such as transformation, lighting, or generating clipping flags.</span></span> <span data-ttu-id="d4142-109">Die Transformation wird immer ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="d4142-109">Transformation is always performed.</span></span>
 
-Scheitelpunktpuffer können Scheitelpunkte beliebiger Art enthalten, die gerendert werden können – transformiert oder nicht transformiert, beleuchtet oder nicht beleuchtet. Sie können die Scheitelpunkte in einem Scheitelpunktpuffer verarbeiten, um Vorgänge wie Transformation oder Beleuchtung durchzuführen, oder um Zuschneidemarkierungen zu generieren. Die Transformation wird immer ausgeführt.
+<span data-ttu-id="d4142-110">Die Flexibilität der Scheitelpunktpuffer macht sie zu idealen Phasenpunkten für die Wiederverwendung einer transformierten Geometrie.</span><span class="sxs-lookup"><span data-stu-id="d4142-110">The flexibility of vertex buffers make them ideal staging points for reusing transformed geometry.</span></span> <span data-ttu-id="d4142-111">Sie können etwa einen einzelnen Scheitelpunktpuffer erstellen, die Scheitelpunkte darin transformieren, beleuchten und zuschneiden und dann das Modell in der Szene so oft wie nötig rendern, ohne es erneut zu transformieren, selbst mit überlappenden Renderingzustandsänderungen.</span><span class="sxs-lookup"><span data-stu-id="d4142-111">You could create a single vertex buffer, transform, light, and clip the vertices in it, and render the model in the scene as many times as needed without re-transforming it, even with interleaved render state changes.</span></span> <span data-ttu-id="d4142-112">Dies ist nützlich beim Rendern von Modellen, die mehrere Texturen verwenden: Die Geometrie wird nur einmal transformiert, und anschließend können Teile davon nach Bedarf gerendert werden, in Überlappung mit den erforderlichen Texturänderungen.</span><span class="sxs-lookup"><span data-stu-id="d4142-112">This is useful when rendering models that use multiple textures: the geometry is transformed only once, and then portions of it can be rendered as needed, interleaved with the required texture changes.</span></span> <span data-ttu-id="d4142-113">Renderingzustandsänderungen, die nach der Verarbeitung von Scheitelpunkten vorgenommen wurden, werden bei der nächsten Verarbeitung der Scheitelpunkte wirksam.</span><span class="sxs-lookup"><span data-stu-id="d4142-113">Render state changes made after vertices are processed take effect the next time the vertices are processed.</span></span>
 
-Die Flexibilität der Scheitelpunktpuffer macht sie zu idealen Phasenpunkten für die Wiederverwendung einer transformierten Geometrie. Sie können etwa einen einzelnen Scheitelpunktpuffer erstellen, die Scheitelpunkte darin transformieren, beleuchten und zuschneiden und dann das Modell in der Szene so oft wie nötig rendern, ohne es erneut zu transformieren, selbst mit überlappenden Renderingzustandsänderungen. Dies ist nützlich beim Rendern von Modellen, die mehrere Texturen verwenden: Die Geometrie wird nur einmal transformiert, und anschließend können Teile davon nach Bedarf gerendert werden, in Überlappung mit den erforderlichen Texturänderungen. Renderingzustandsänderungen, die nach der Verarbeitung von Scheitelpunkten vorgenommen wurden, werden bei der nächsten Verarbeitung der Scheitelpunkte wirksam.
-
-## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>In diesem Abschnitt
+## <a name="span-idin-this-sectionspanin-this-section"></a><span data-ttu-id="d4142-114"><span id="in-this-section"></span>In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="d4142-114"><span id="in-this-section"></span>In this section</span></span>
 
 
 <table>
@@ -36,33 +35,32 @@ Die Flexibilität der Scheitelpunktpuffer macht sie zu idealen Phasenpunkten fü
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Thema</th>
-<th align="left">Beschreibung</th>
+<th align="left"><span data-ttu-id="d4142-115">Thema</span><span class="sxs-lookup"><span data-stu-id="d4142-115">Topic</span></span></th>
+<th align="left"><span data-ttu-id="d4142-116">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d4142-116">Description</span></span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Einführung zu Puffern](introduction-to-buffers.md)</p></td>
-<td align="left"><p>Eine Pufferressource ist eine Sammlung vollständig typisierter Daten, die zu Elementen gruppiert werden. Puffer speichern Daten, wie z. B. Texturkoordinaten in einem <em>Scheitelpunktpuffer</em>, Indizes in einem <em>Indexpuffer</em>, Shader-Konstantendaten in einem <em>Konstantenpuffer</em>, Positionsvektoren, normale Vektoren oder den Gerätezustand.</p></td>
+<td align="left"><p>[<span data-ttu-id="d4142-117">Einführung zu Puffern</span><span class="sxs-lookup"><span data-stu-id="d4142-117">Introduction to buffers</span></span>](introduction-to-buffers.md)</p></td>
+<td align="left"><p><span data-ttu-id="d4142-118">Eine Pufferressource ist eine Sammlung vollständig typisierter Daten, die zu Elementen gruppiert werden.</span><span class="sxs-lookup"><span data-stu-id="d4142-118">A buffer resource is a collection of fully typed data, grouped into elements.</span></span> <span data-ttu-id="d4142-119">Puffer speichern Daten, wie z.B. Texturkoordinaten in einem <em>Scheitelpunktpuffer</em>, Indizes in einem <em>Indexpuffer</em>, Shader-Konstantendaten in einem <em>Konstantenpuffer</em>, Positionsvektoren, normale Vektoren oder den Gerätezustand.</span><span class="sxs-lookup"><span data-stu-id="d4142-119">Buffers store data, such as texture coordinates in a <em>vertex buffer</em>, indexes in an <em>index buffer</em>, shader constants data in a <em>constant buffer</em>, position vectors, normal vectors, or device state.</span></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Indexpuffer](index-buffers.md)</p></td>
-<td align="left"><p><em>Indexpuffer</em> sind Speicherpuffer mit Indexdaten, die Ganzzahl-Offsets in Scheitelpunktpuffern darstellen und zum Rendern von Grundtypen verwendet werden.</p></td>
+<td align="left"><p>[<span data-ttu-id="d4142-120">Indexpuffer</span><span class="sxs-lookup"><span data-stu-id="d4142-120">Index buffers</span></span>](index-buffers.md)</p></td>
+<td align="left"><p><span data-ttu-id="d4142-121"><em>Indexpuffer</em> sind Speicherpuffer mit Indexdaten, die Ganzzahl-Offsets in Vertexpuffer darstellen, und zum Rendern von Grundtypen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="d4142-121"><em>Index buffers</em> are memory buffers that contain index data, which are integer offsets into vertex buffers, used to render primitives.</span></span></p></td>
 </tr>
 </tbody>
 </table>
 
  
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Verwandte Themen
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="d4142-122"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="d4142-122"><span id="related-topics"></span>Related topics</span></span>
 
 
-[Lernanleitung für Direct3D-Grafiken](index.md)
-
- 
+[<span data-ttu-id="d4142-123">Lernanleitung für Direct3D-Grafiken</span><span class="sxs-lookup"><span data-stu-id="d4142-123">Direct3D Graphics Learning Guide</span></span>](index.md)
 
  
 
+ 
 
 
 

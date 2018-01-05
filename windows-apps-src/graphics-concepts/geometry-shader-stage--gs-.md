@@ -2,94 +2,92 @@
 title: Geometry-Shader-Stufe (GS-Stufe)
 description: "Die Geometry-Shader-Stufe (GS-Stufe) verarbeitet vollständige Grundformen (Dreiecke, Linien und Punkte) zusammen mit deren angrenzenden Vertices."
 ms.assetid: 8A1350DD-B006-488F-9DAF-14CD2483BA4E
-keywords:
-- Geometry-Shader-Stufe (GS-Stufe)
-author: PeterTurcan
-ms.author: pettur
+keywords: Geometry-Shader-Stufe (GS-Stufe)
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1a4c6ab45f53eb2156ae82f562d775682c1b79ed
-ms.lasthandoff: 02/07/2017
-
+ms.localizationpriority: medium
+ms.openlocfilehash: c04f07da60e6814703a8aff27eb038b43a2b5ad4
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/22/2017
 ---
-
-# <a name="geometry-shader-gs-stage"></a>Geometry-Shader-Stufe (GS-Stufe)
-
-
-Die Geometry-Shader-Stufe (GS-Stufe) verarbeitet vollständige Grundformen (Dreiecke, Linien und Punkte) zusammen mit deren angrenzenden Vertices. Sie ist nützlich für Algorithmen wie Point Sprite Expansion, Dynamic Particle Systems, und Shadow Volume Generation. Sie unterstützt Geometrieverstärkung und -abschwächung.
-
-## <a name="span-idpurposeandusesspanspan-idpurposeandusesspanspan-idpurposeandusesspanpurpose-and-uses"></a><span id="Purpose_and_uses"></span><span id="purpose_and_uses"></span><span id="PURPOSE_AND_USES"></span>Zweck und Verwendung
+# <a name="geometry-shader-gs-stage"></a><span data-ttu-id="dcfc5-104">Geometry-Shader-Stufe (GS-Stufe)</span><span class="sxs-lookup"><span data-stu-id="dcfc5-104">Geometry Shader (GS) stage</span></span>
 
 
-Die Geometry-Shader-Stufe verarbeitet vollständige Grundformen: Dreiecke (3 Vertices mit bis zu 3 angrenzenden Vertices), Linien (2 Vertices mit bis zu 2 angrenzenden Vertices) und Punkte (1 Vertex).
+<span data-ttu-id="dcfc5-105">Die Geometry-Shader-Stufe (GS-Stufe) verarbeitet vollständige Grundformen (Dreiecke, Linien und Punkte) zusammen mit deren angrenzenden Vertices.</span><span class="sxs-lookup"><span data-stu-id="dcfc5-105">The Geometry Shader (GS) stage processes entire primitives: triangles, lines, and points, along with their adjacent vertices.</span></span> <span data-ttu-id="dcfc5-106">Sie ist nützlich für Algorithmen wie Point Sprite Expansion, Dynamic Particle Systems, und Shadow Volume Generation.</span><span class="sxs-lookup"><span data-stu-id="dcfc5-106">It is useful for algorithms including Point Sprite Expansion, Dynamic Particle Systems, and Shadow Volume Generation.</span></span> <span data-ttu-id="dcfc5-107">Sie unterstützt Geometrieverstärkung und -abschwächung.</span><span class="sxs-lookup"><span data-stu-id="dcfc5-107">It supports geometry amplification and de-amplification.</span></span>
+
+## <a name="span-idpurposeandusesspanspan-idpurposeandusesspanspan-idpurposeandusesspanpurpose-and-uses"></a><span data-ttu-id="dcfc5-108"><span id="Purpose_and_uses"></span><span id="purpose_and_uses"></span><span id="PURPOSE_AND_USES"></span>Zweck und Verwendung</span><span class="sxs-lookup"><span data-stu-id="dcfc5-108"><span id="Purpose_and_uses"></span><span id="purpose_and_uses"></span><span id="PURPOSE_AND_USES"></span>Purpose and uses</span></span>
+
+
+<span data-ttu-id="dcfc5-109">Die Geometry-Shader-Stufe verarbeitet vollständige Grundformen: Dreiecke (3 Vertices mit bis zu 3 angrenzenden Vertices), Linien (2 Vertices mit bis zu 2 angrenzenden Vertices) und Punkte (1 Vertex).</span><span class="sxs-lookup"><span data-stu-id="dcfc5-109">The Geometry Shader stage processes entire primitives: triangles (3 vertices with up to 3 adjacent vertices), lines (2 vertices with up to 2 adjacent vertices), and points (1 vertex).</span></span>
 
 ![Illustration eines Dreiecks und einer Linie mit angrenzenden Vertices](images/d3d10-gs.png)
 
-Der Geometry-Shader unterstützt auch beschränkte Geometrieverstärkung und -abschwächung. Der Geometry-Shader kann eine eingegebene Grundform verwerfen oder daraus eine oder mehrere neue Grundformen generieren.
+<span data-ttu-id="dcfc5-111">Der Geometry-Shader unterstützt auch beschränkte Geometrieverstärkung und -abschwächung.</span><span class="sxs-lookup"><span data-stu-id="dcfc5-111">The Geometry Shader also supports limited geometry amplification and de-amplification.</span></span> <span data-ttu-id="dcfc5-112">Der Geometry-Shader kann eine eingegebene Grundform verwerfen oder daraus eine oder mehrere neue Grundformen generieren.</span><span class="sxs-lookup"><span data-stu-id="dcfc5-112">Given an input primitive, the Geometry Shader can discard the primitive, or emit one or more new primitives.</span></span>
 
-Die Geometry-Shader-Stufe (GS-Stufe) ist eine programmierbare Shaderstufe. Sie wird als abgerundeter Block im [Grafikpipeline](graphics-pipeline.md)-Diagramm angezeigt. Diese Shaderstufe stellt eine eigene, auf Shadermodellen basierende Funktionalität bereit (s. [Gemeinsamer Shaderkern](https://msdn.microsoft.com/library/windows/desktop/bb509580))
+<span data-ttu-id="dcfc5-113">Die Geometry-Shader-Stufe (GS-Stufe) ist eine programmierbare Shaderstufe. Sie wird als abgerundeter Block im [Grafikpipeline](graphics-pipeline.md)-Diagramm angezeigt.</span><span class="sxs-lookup"><span data-stu-id="dcfc5-113">The Geometry Shader (GS) stage is a programmable-shader stage; it is shown as a rounded block in the [graphics pipeline](graphics-pipeline.md) diagram.</span></span> <span data-ttu-id="dcfc5-114">Diese Shaderstufe stellt eine eigene, auf Shadermodellen basierende Funktionalität bereit (s. [Gemeinsamer Shaderkern](https://msdn.microsoft.com/library/windows/desktop/bb509580))</span><span class="sxs-lookup"><span data-stu-id="dcfc5-114">This shader stage exposes its own unique functionality, built on the shader models (see [common-shader core](https://msdn.microsoft.com/library/windows/desktop/bb509580)).</span></span>
 
-Die Geometry-Shader-Stufe ist besonders geeignet für folgende Algorithmen:
+<span data-ttu-id="dcfc5-115">Die Geometry-Shader-Stufe ist besonders geeignet für folgende Algorithmen:</span><span class="sxs-lookup"><span data-stu-id="dcfc5-115">The Geometry Shader stage is well-suited for algorithms including:</span></span>
 
--   Point Sprite Expansion
--   Dynamic Particle Systems
--   Fur/Fin Generation
--   Shadow Volume Generation
--   Single Pass Render-to-Cubemap
--   Per-Primitive Material Swapping
--   Per-Primitive Material Setup: Hierzu gehört das Erstellen baryzentrischer Koordinaten als Daten für Grundformen, sodass ein Pixel-Shader allgemeine Attribute interpolieren kann.
+-   <span data-ttu-id="dcfc5-116">Point Sprite Expansion</span><span class="sxs-lookup"><span data-stu-id="dcfc5-116">Point Sprite Expansion</span></span>
+-   <span data-ttu-id="dcfc5-117">Dynamic Particle Systems</span><span class="sxs-lookup"><span data-stu-id="dcfc5-117">Dynamic Particle Systems</span></span>
+-   <span data-ttu-id="dcfc5-118">Fur/Fin Generation</span><span class="sxs-lookup"><span data-stu-id="dcfc5-118">Fur/Fin Generation</span></span>
+-   <span data-ttu-id="dcfc5-119">Shadow Volume Generation</span><span class="sxs-lookup"><span data-stu-id="dcfc5-119">Shadow Volume Generation</span></span>
+-   <span data-ttu-id="dcfc5-120">Single Pass Render-to-Cubemap</span><span class="sxs-lookup"><span data-stu-id="dcfc5-120">Single Pass Render-to-Cubemap</span></span>
+-   <span data-ttu-id="dcfc5-121">Per-Primitive Material Swapping</span><span class="sxs-lookup"><span data-stu-id="dcfc5-121">Per-Primitive Material Swapping</span></span>
+-   <span data-ttu-id="dcfc5-122">Per-Primitive Material Setup: Hierzu gehört das Erstellen baryzentrischer Koordinaten als Daten für Grundformen, sodass ein Pixel-Shader allgemeine Attribute interpolieren kann.</span><span class="sxs-lookup"><span data-stu-id="dcfc5-122">Per-Primitive Material Setup - This capability includes generation of barycentric coordinates as primitive data so that a pixel shader can perform custom attribute interpolation.</span></span>
 
-## <a name="span-idinputspanspan-idinputspanspan-idinputspaninput"></a><span id="Input"></span><span id="input"></span><span id="INPUT"></span>Eingabe
+## <a name="span-idinputspanspan-idinputspanspan-idinputspaninput"></a><span data-ttu-id="dcfc5-123"><span id="Input"></span><span id="input"></span><span id="INPUT"></span>Eingabe</span><span class="sxs-lookup"><span data-stu-id="dcfc5-123"><span id="Input"></span><span id="input"></span><span id="INPUT"></span>Input</span></span>
 
 
-Die Geometry-Shader-Stufe führt anwendungsspezifischen Shadercode aus, mit vollständigen Grundformen als Eingabe und der Fähigkeit, Vertices als Ausgabe zu generieren. Im Gegensatz zu den Eingaben für einen Vertex-Shader, der einen einzelnen Vertex verarbeitet, sind die Eingaben für einen Geometry-Shader die Vertices vollständiger Grundformen (drei Vertices für ein Dreieck, zwei Vertices für eine Linie oder ein Vertex für einen Punkt). Geometry-Shader können auch die Vertexdaten für die am Rand anschließenden Grundformen als Eingabe übernehmen (drei zusätzliche Vertices für ein Dreieck, zwei zusätzliche Vertices für eine Line).
+<span data-ttu-id="dcfc5-124">Die Geometry-Shader-Stufe führt anwendungsspezifischen Shadercode aus, mit vollständigen Grundformen als Eingabe und der Fähigkeit, Vertices als Ausgabe zu generieren.</span><span class="sxs-lookup"><span data-stu-id="dcfc5-124">The Geometry Shader stage runs application-specified shader code with entire primitives as input and the ability to generate vertices on output.</span></span> <span data-ttu-id="dcfc5-125">Im Gegensatz zu den Eingaben für einen Vertex-Shader, der einen einzelnen Vertex verarbeitet, sind die Eingaben für einen Geometry-Shader die Vertices vollständiger Grundformen (drei Vertices für ein Dreieck, zwei Vertices für eine Linie oder ein Vertex für einen Punkt).</span><span class="sxs-lookup"><span data-stu-id="dcfc5-125">Unlike vertex shaders, which operate on a single vertex, the geometry shader's inputs are the vertices for a full primitive (three vertices for triangles, two vertices for lines, or single vertex for point).</span></span> <span data-ttu-id="dcfc5-126">Geometry-Shader können auch die Vertexdaten für die am Rand anschließenden Grundformen als Eingabe übernehmen (drei zusätzliche Vertices für ein Dreieck, zwei zusätzliche Vertices für eine Line).</span><span class="sxs-lookup"><span data-stu-id="dcfc5-126">Geometry shaders can also bring in the vertex data for the edge-adjacent primitives as input (an additional three for a triangle, an additional two vertices for a line).</span></span>
 
-Die Geometry-Shader-Stufe kann den systemgenerierten **SV\_PrimitiveID**-Wert übernehmen, der automatisch von der [Input-Assembler-Stufe (IA-Stufe)](input-assembler-stage--ia-.md) generiert wird. Damit können Grundformdaten abgerufen oder bei Bedarf verarbeitet werden.
+<span data-ttu-id="dcfc5-127">Die Geometry-Shader-Stufe kann den systemgenerierten **SV\_PrimitiveID**-Wert übernehmen, der automatisch von der [Input-Assembler-Stufe (IA-Stufe)](input-assembler-stage--ia-.md) generiert wird.</span><span class="sxs-lookup"><span data-stu-id="dcfc5-127">The Geometry Shader stage can consume the **SV\_PrimitiveID** system-generated value that is auto-generated by the [Input Assembler (IA) stage](input-assembler-stage--ia-.md).</span></span> <span data-ttu-id="dcfc5-128">Damit können Grundformdaten abgerufen oder bei Bedarf verarbeitet werden.</span><span class="sxs-lookup"><span data-stu-id="dcfc5-128">This allows per-primitive data to be fetched or computed if desired.</span></span>
 
-Wenn ein Geometry-Shader aktiv ist, wird er einmal für jede Grundform aufgerufen, die übergeben oder weiter oben in der Pipeline generiert wurde. Für jeden Aufruf des Geometry-Shaders dienen Daten der aufrufenden Grundform (ein einzelner Punkt, eine einzelne Line oder ein einzelnes Dreieck) als Eingabe. Ein Dreieckstrip von weiter oben in die Pipeline würde für jedes einzelne Dreieck im Strip zum Aufruf des Geometry-Shaders führen (so als würde der Strip in eine Dreiecksliste erweitert). Alle Eingabedaten für jeden Vertex in der einzelnen Grundform sind verfügbar ist (also 3 Vertices für ein Dreieck), dazu die Daten angrenzender Vertices (falls vorhanden und verfügbar).
+<span data-ttu-id="dcfc5-129">Wenn ein Geometry-Shader aktiv ist, wird er einmal für jede Grundform aufgerufen, die übergeben oder weiter oben in der Pipeline generiert wurde.</span><span class="sxs-lookup"><span data-stu-id="dcfc5-129">When a geometry shader is active, it is invoked once for every primitive passed down or generated earlier in the pipeline.</span></span> <span data-ttu-id="dcfc5-130">Für jeden Aufruf des Geometry-Shaders dienen Daten der aufrufenden Grundform (ein einzelner Punkt, eine einzelne Line oder ein einzelnes Dreieck) als Eingabe.</span><span class="sxs-lookup"><span data-stu-id="dcfc5-130">Each invocation of the geometry shader sees as input the data for the invoking primitive, whether that is a single point, a single line, or a single triangle.</span></span> <span data-ttu-id="dcfc5-131">Ein Dreieckstrip von weiter oben in die Pipeline würde für jedes einzelne Dreieck im Strip zum Aufruf des Geometry-Shaders führen (so als würde der Strip in eine Dreiecksliste erweitert).</span><span class="sxs-lookup"><span data-stu-id="dcfc5-131">A triangle strip from earlier in the pipeline would result in an invocation of the geometry shader for each individual triangle in the strip (as if the strip were expanded out into a triangle list).</span></span> <span data-ttu-id="dcfc5-132">Alle Eingabedaten für jeden Vertex in der einzelnen Grundform sind verfügbar ist (also 3 Vertices für ein Dreieck), dazu die Daten angrenzender Vertices (falls vorhanden und verfügbar).</span><span class="sxs-lookup"><span data-stu-id="dcfc5-132">All the input data for each vertex in the individual primitive is available (that is, 3 vertices for a triangle), plus adjacent vertex data if applicable and available.</span></span>
 
-Übliche Vertexabkürzungen:
+<span data-ttu-id="dcfc5-133">Übliche Vertexabkürzungen:</span><span class="sxs-lookup"><span data-stu-id="dcfc5-133">Common vertex abbreviations:</span></span>
 
 |     |                 |
 |-----|-----------------|
-| TV  | Triangle vertex (Dreiecksvertex) |
-| LV  | Line vertex (Linienvertex)     |
-| AV  | Adjacent vertex (angrenzender Vertex) |
+| <span data-ttu-id="dcfc5-134">TV</span><span class="sxs-lookup"><span data-stu-id="dcfc5-134">TV</span></span>  | <span data-ttu-id="dcfc5-135">Triangle vertex (Dreiecksvertex)</span><span class="sxs-lookup"><span data-stu-id="dcfc5-135">Triangle vertex</span></span> |
+| <span data-ttu-id="dcfc5-136">LV</span><span class="sxs-lookup"><span data-stu-id="dcfc5-136">LV</span></span>  | <span data-ttu-id="dcfc5-137">Line vertex (Linienvertex)</span><span class="sxs-lookup"><span data-stu-id="dcfc5-137">Line vertex</span></span>     |
+| <span data-ttu-id="dcfc5-138">AV</span><span class="sxs-lookup"><span data-stu-id="dcfc5-138">AV</span></span>  | <span data-ttu-id="dcfc5-139">Adjacent vertex (angrenzender Vertex)</span><span class="sxs-lookup"><span data-stu-id="dcfc5-139">Adjacent vertex</span></span> |
 
  
 
-## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Ausgabe
+## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span data-ttu-id="dcfc5-140"><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Ausgabe</span><span class="sxs-lookup"><span data-stu-id="dcfc5-140"><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Output</span></span>
 
 
-Die Geometry-Shader-Stufe (GS-Stufe) kann mehrere Vertices ausgeben, die eine einzelne ausgewählte Topologie darstellen. Ausgabetopologien des Geometry-Shaders sind **Tristrip**, **Linestrip** und **Pointlist**. Die Anzahl der ausgegebenen Grundformen kann mit jedem Aufruf des Geometry-Shaders variieren. Die maximale Anzahl auszugebender Vertices muss allerdings statisch deklariert werden. Die nach einem Geometry-Shader-Aufruf ausgegeben Strips können beliebig lang sein. Neue Strips können mit der HLSL-Funktion [RestartStrip](https://msdn.microsoft.com/library/windows/desktop/bb509660) erstellt werden.
+<span data-ttu-id="dcfc5-141">Die Geometry-Shader-Stufe (GS-Stufe) kann mehrere Vertices ausgeben, die eine einzelne ausgewählte Topologie darstellen.</span><span class="sxs-lookup"><span data-stu-id="dcfc5-141">The Geometry Shader (GS) stage is capable of outputting multiple vertices forming a single selected topology.</span></span> <span data-ttu-id="dcfc5-142">Ausgabetopologien des Geometry-Shaders sind **Tristrip**, **Linestrip** und **Pointlist**.</span><span class="sxs-lookup"><span data-stu-id="dcfc5-142">Available geometry shader output topologies are **tristrip**, **linestrip**, and **pointlist**.</span></span> <span data-ttu-id="dcfc5-143">Die Anzahl der ausgegebenen Grundformen kann mit jedem Aufruf des Geometry-Shaders variieren. Die maximale Anzahl auszugebender Vertices muss allerdings statisch deklariert werden muss.</span><span class="sxs-lookup"><span data-stu-id="dcfc5-143">The number of primitives emitted can vary freely within any invocation of the geometry shader, though the maximum number of vertices that could be emitted must be declared statically.</span></span> <span data-ttu-id="dcfc5-144">Die nach einem Geometry-Shader-Aufruf ausgegeben Strips können beliebig lang sein. Neue Strips können mit der HLSL-Funktion [RestartStrip](https://msdn.microsoft.com/library/windows/desktop/bb509660) erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="dcfc5-144">Strip lengths emitted from a geometry shader invocation can be arbitrary, and new strips can be created via the [RestartStrip](https://msdn.microsoft.com/library/windows/desktop/bb509660) HLSL function.</span></span>
 
-Die Ausführung einer Geometry-Shader-Instanz erfolgt unabhängig von anderen Aufrufen, nur die Daten werden den Streams seriell hinzugefügt. Die Ausgaben eines bestimmten Geometry-Shader-Aufrufs sind unabhängig von anderen Aufrufen (jedoch wird die Reihenfolge berücksichtigt). Ein Geometry-Shader, der Dreieckstrips generiert, beginnt nach jedem Aufruf mit einem neuen Strip.
+<span data-ttu-id="dcfc5-145">Die Ausführung einer Geometry-Shader-Instanz erfolgt unabhängig von anderen Aufrufen, nur die Daten werden den Streams seriell hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="dcfc5-145">Execution of a geometry shader instance is atomic from other invocations, except that data added to the streams is serial.</span></span> <span data-ttu-id="dcfc5-146">Die Ausgaben eines bestimmten Geometry-Shader-Aufrufs sind unabhängig von anderen Aufrufen (jedoch wird die Reihenfolge berücksichtigt).</span><span class="sxs-lookup"><span data-stu-id="dcfc5-146">The outputs of a given invocation of a geometry shader are independent of other invocations (though ordering is respected).</span></span> <span data-ttu-id="dcfc5-147">Ein Geometry-Shader, der Dreieckstrips generiert, beginnt nach jedem Aufruf mit einem neuen Strip.</span><span class="sxs-lookup"><span data-stu-id="dcfc5-147">A geometry shader generating triangle strips will start a new strip on every invocation.</span></span>
 
-Eine Geometry-Shader-Ausgabe kann über die Streamausgabestufe in eine Rasterizerstufe und/oder in einen Vertexpuffer im Speicher geleitet werden. In den Speicher geleitete Ausgaben werden in einzelne Punkt-, Zeilen- oder Dreieckslisten erweitert (genau so, als würden sie an den Rasterizer übergeben).
+<span data-ttu-id="dcfc5-148">Eine Geometry-Shader-Ausgabe kann über die Streamausgabestufe in eine Rasterizerstufe und/oder in einen Vertexpuffer im Speicher geleitet werden.</span><span class="sxs-lookup"><span data-stu-id="dcfc5-148">Geometry shader output may be fed to the rasterizer stage and/or to a vertex buffer in memory via the stream output stage.</span></span> <span data-ttu-id="dcfc5-149">In den Speicher geleitete Ausgaben werden in einzelne Punkt-, Zeilen- oder Dreieckslisten erweitert (genau so, als würden sie an den Rasterizer übergeben).</span><span class="sxs-lookup"><span data-stu-id="dcfc5-149">Output fed to memory is expanded to individual point/line/triangle lists (exactly as they would be passed to the rasterizer).</span></span>
 
-Ein Geometry-Shader gibt jeweils Daten für einen Vertex aus, der einem Ausgabestreamobjekt angefügt wird. Die Topologie der Streams wird durch eine Deklaration festgelegt, wobei ein **TriangleStream**, **LineStream** oder **PointStream** als Ausgabe einer GS-Stufe vorgegeben werden kann.
+<span data-ttu-id="dcfc5-150">Ein Geometry-Shader gibt jeweils Daten für einen Vertex aus, der einem Ausgabestreamobjekt angefügt wird.</span><span class="sxs-lookup"><span data-stu-id="dcfc5-150">A geometry shader outputs data one vertex at a time by appending vertices to an output stream object.</span></span> <span data-ttu-id="dcfc5-151">Die Topologie der Streams wird durch eine Deklaration festgelegt, wobei ein **TriangleStream**, **LineStream** oder **PointStream** als Ausgabe einer GS-Stufe vorgegeben werden kann.</span><span class="sxs-lookup"><span data-stu-id="dcfc5-151">The topology of the streams is determined by a fixed declaration, choosing a **TriangleStream**, **LineStream** and **PointStream** as the output for the GS stage.</span></span>
 
-Es gibt drei Arten von Streamobjekten: **TriangleStream**, **LineStream** und **PointStream**. Alle sind Vorlagenobjekte. Die Topologie der Ausgabe wird durch ihren jeweiligen Objekttyp bestimmt, während das Format der in den Datenstrom angefügten Vertices durch den Vorlagentyp bestimmt wird.
+<span data-ttu-id="dcfc5-152">Es gibt drei Arten von Streamobjekten: **TriangleStream**, **LineStream** und **PointStream**. Alle sind Vorlagenobjekte.</span><span class="sxs-lookup"><span data-stu-id="dcfc5-152">There are three types of stream objects available: **TriangleStream**, **LineStream** and **PointStream**, which are all templated objects.</span></span> <span data-ttu-id="dcfc5-153">Die Topologie der Ausgabe wird durch ihren jeweiligen Objekttyp bestimmt, während das Format der in den Datenstrom angefügten Vertices durch den Vorlagentyp bestimmt wird.</span><span class="sxs-lookup"><span data-stu-id="dcfc5-153">The topology of the output is determined by their respective object type, while the format of the vertices appended to the stream is determined by the template type.</span></span>
 
-Wenn eine Geometry-Shader-Ausgabe als System Interpreted Value festgelegt ist (beispielsweise **SV\_RenderTargetArrayIndex** oder **SV\_Position**), erkennt die Hardware diese Daten und führt, abhängig vom Wert, bestimmte Schritte aus, bevor die Daten selbst als Eingabe für die nächste Shaderstufe übergeben werden. Wenn solche Ausgabedaten des Geometry-Shaders für die Hardware eine grundformbezogene Bedeutung haben (z. B. **SV\_RenderTargetArrayIndex** oder **SV\_ViewportArrayIndex**) statt einer vertexbezogenen (z. B. **SV\_ClipDistance\[n\]** oder **SV\_Position**), werden die grundformbezogenen Daten dem führenden Vertex entnommen, der für die Grundform ausgegeben wird.
+<span data-ttu-id="dcfc5-154">Wenn eine Geometry-Shader-Ausgabe als System Interpreted Value festgelegt ist (beispielsweise **SV\_RenderTargetArrayIndex** oder **SV\_Position**), erkennt die Hardware diese Daten und führt, abhängig vom Wert, bestimmte Schritte aus, bevor die Daten selbst als Eingabe für die nächste Shaderstufe übergeben werden.</span><span class="sxs-lookup"><span data-stu-id="dcfc5-154">When a geometry shader output is identified as a System Interpreted Value (for example, **SV\_RenderTargetArrayIndex** or **SV\_Position**), hardware looks at this data and performs some behavior dependent on the value, in addition to being able to pass the data itself to the next shader stage for input.</span></span> <span data-ttu-id="dcfc5-155">Wenn solche Ausgabedaten des Geometry-Shaders für die Hardware eine grundformbezogene Bedeutung haben (z.B. **SV\_RenderTargetArrayIndex** oder **SV\_ViewportArrayIndex**) statt einer vertexbezogenen (z.B. **SV\_ClipDistance\[n\]** oder **SV\_Position**), werden die grundformbezogenen Daten dem führenden Vertex entnommen, der für die Grundform ausgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="dcfc5-155">When such data output from the geometry shader has meaning to the hardware on a per-primitive basis (such as **SV\_RenderTargetArrayIndex** or **SV\_ViewportArrayIndex**), rather than on a per-vertex basis (such as **SV\_ClipDistance\[n\]** or **SV\_Position**), the per-primitive data is taken from the leading vertex emitted for the primitive.</span></span>
 
-Vom Geometry-Shader können unvollständige Grundformen ausgegeben werden, wenn der Geometry-Shader beendet wird, bevor die Grundform fertig ist. Solche unvollständigen Grundformen werden ohne Rückmeldung verworfen. Das entspricht der Art und Weise, in der ein Input-Assembler (IA) unvollständige Grundformen behandelt.
+<span data-ttu-id="dcfc5-156">Vom Geometry-Shader können unvollständige Grundformen ausgegeben werden, wenn der Geometry-Shader beendet wird, bevor die Grundform fertig ist.</span><span class="sxs-lookup"><span data-stu-id="dcfc5-156">Partially completed primitives could be generated by the geometry shader if the geometry shader ends and the primitive is incomplete.</span></span> <span data-ttu-id="dcfc5-157">Solche unvollständigen Grundformen werden ohne Rückmeldung verworfen.</span><span class="sxs-lookup"><span data-stu-id="dcfc5-157">Incomplete primitives are silently discarded.</span></span> <span data-ttu-id="dcfc5-158">Das entspricht der Art und Weise, in der ein Input-Assembler (IA) unvollständige Grundformen behandelt.</span><span class="sxs-lookup"><span data-stu-id="dcfc5-158">This is similar to the way the IA treats partially completed primitives.</span></span>
 
-Die Geometry-Shader kann Lade- und Textur Sampling-Vorgänge ausführen, für die keine Screenspaceableitungen erforderlich sind (**Samplelevel**, **Samplecmplevelzero**, **Samplegrad**).
+<span data-ttu-id="dcfc5-159">Die Geometry-Shader kann Lade- und Textur Sampling-Vorgänge ausführen, für die keine Screenspaceableitungen erforderlich sind (**Samplelevel**, **Samplecmplevelzero**, **Samplegrad**).</span><span class="sxs-lookup"><span data-stu-id="dcfc5-159">The geometry shader can perform load and texture sampling operations where screen-space derivatives are not required (**samplelevel**, **samplecmplevelzero**, **samplegrad**).</span></span>
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Verwandte Themen
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="dcfc5-160"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="dcfc5-160"><span id="related-topics"></span>Related topics</span></span>
 
 
-[Grafikpipeline](graphics-pipeline.md)
-
- 
+[<span data-ttu-id="dcfc5-161">Grafikpipeline</span><span class="sxs-lookup"><span data-stu-id="dcfc5-161">Graphics pipeline</span></span>](graphics-pipeline.md)
 
  
 
+ 
 
 
 

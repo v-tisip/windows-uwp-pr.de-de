@@ -2,48 +2,46 @@
 title: Dreiecksinterpolation
 description: "Während des Renderns interpoliert die Pipeline Scheitelpunktdaten über jedes Dreieck hinweg."
 ms.assetid: 1A76DD78-CED7-42BE-BA81-B9050CD3AF9B
-keywords:
-- Dreiecksinterpolation
-author: PeterTurcan
-ms.author: pettur
+keywords: Dreiecksinterpolation
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1adaa39d89be0245771a08273573e2ca06fa4b85
-ms.lasthandoff: 02/07/2017
-
+ms.localizationpriority: medium
+ms.openlocfilehash: 26705e9481a96d54eff70d04c004bf62fe049091
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/22/2017
 ---
+# <a name="triangle-interpolation"></a><span data-ttu-id="78103-104">Dreiecksinterpolation</span><span class="sxs-lookup"><span data-stu-id="78103-104">Triangle interpolation</span></span>
 
-# <a name="triangle-interpolation"></a>Dreiecksinterpolation
 
+<span data-ttu-id="78103-105">Während des Renderns interpoliert die Pipeline Scheitelpunktdaten über jedes Dreieck hinweg.</span><span class="sxs-lookup"><span data-stu-id="78103-105">During rendering, the pipeline interpolates vertex data across each triangle.</span></span> <span data-ttu-id="78103-106">Die Scheitelpunktdaten können sehr unterschiedliche Daten sein; dazu können u.a. gehören: diffuse Farbe, Glanzfarbe, diffuser Alphawert (Dreiecksopazität), Glanz-Alphawert und ein Nebelfaktor.</span><span class="sxs-lookup"><span data-stu-id="78103-106">Vertex data can be a broad variety of data and can include (but is not limited to): diffuse color, specular color, diffuse alpha (triangle opacity), specular alpha, and a fog factor.</span></span> <span data-ttu-id="78103-107">Für die programmierbare Scheitelpunkt-Pipeline wird der Nebelfaktor aus dem Nebelregister übernommen.</span><span class="sxs-lookup"><span data-stu-id="78103-107">For the programmable vertex pipeline, the fog factor is taken from the fog register.</span></span> <span data-ttu-id="78103-108">Für die Scheitelpunkt-Pipeline mit fester Funktion wird der Nebelfaktor dem Glanz-Alphawert entnommen.</span><span class="sxs-lookup"><span data-stu-id="78103-108">For the fixed-function vertex pipeline, the fog factor is taken from specular alpha.</span></span>
 
-Während des Renderns interpoliert die Pipeline Scheitelpunktdaten über jedes Dreieck hinweg. Die Scheitelpunktdaten können sehr unterschiedliche Daten sein; dazu können u. a. gehören: diffuse Farbe, Glanzfarbe, diffuser Alphawert (Dreiecksopazität), Glanz-Alphawert und ein Nebelfaktor. Für die programmierbare Scheitelpunkt-Pipeline wird der Nebelfaktor aus dem Nebelregister übernommen. Für die Scheitelpunkt-Pipeline mit fester Funktion wird der Nebelfaktor dem Glanz-Alphawert entnommen.
+<span data-ttu-id="78103-109">Bei manchen Scheitelpunktdaten hängt die Interpolation wie folgt vom aktuellen Schattierungsmodus ab:</span><span class="sxs-lookup"><span data-stu-id="78103-109">For some vertex data, the interpolation is dependent on the current shading mode, as follows:</span></span>
 
-Bei manchen Scheitelpunktdaten hängt die Interpolation wie folgt vom aktuellen Schattierungsmodus ab:
-
-| Schattierungsmodus | Beschreibung                                                                                                                                                                 |
+| <span data-ttu-id="78103-110">Schattierungsmodus</span><span class="sxs-lookup"><span data-stu-id="78103-110">Shading mode</span></span> | <span data-ttu-id="78103-111">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="78103-111">Description</span></span>                                                                                                                                                                 |
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Flach         | Im Flach-Schattierungsmodus wird nur der Nebelfaktor interpoliert. Für alle anderen interpolierten Werte wird die Farbe des ersten Scheitelpunkts des Dreiecks über die gesamte Fläche angewendet. |
-| Gouraud      | Zwischen allen drei Scheitelpunkten wird eine lineare Interpolation durchgeführt.                                                                                                               |
+| <span data-ttu-id="78103-112">Flach</span><span class="sxs-lookup"><span data-stu-id="78103-112">Flat</span></span>         | <span data-ttu-id="78103-113">Im Flach-Schattierungsmodus wird nur der Nebelfaktor interpoliert.</span><span class="sxs-lookup"><span data-stu-id="78103-113">Only the fog factor is interpolated in flat shade mode.</span></span> <span data-ttu-id="78103-114">Für alle anderen interpolierten Werte wird die Farbe des ersten Scheitelpunkts des Dreiecks über die gesamte Fläche angewendet.</span><span class="sxs-lookup"><span data-stu-id="78103-114">For all other interpolated values, the color of the first vertex in the triangle is applied across the entire face.</span></span> |
+| <span data-ttu-id="78103-115">Gouraud</span><span class="sxs-lookup"><span data-stu-id="78103-115">Gouraud</span></span>      | <span data-ttu-id="78103-116">Zwischen allen drei Scheitelpunkten wird eine lineare Interpolation durchgeführt.</span><span class="sxs-lookup"><span data-stu-id="78103-116">Linear interpolation is performed between all three vertices.</span></span>                                                                                                               |
 
  
 
-Diffus- und Glanzfarbe werden je nach Farbmodell unterschiedlich behandelt. Im RGB-Farbmodell verwendet das System die Farbkomponenten Rot, Grün und Blau in der Interpolation.
+<span data-ttu-id="78103-117">Diffus- und Glanzfarbe werden je nach Farbmodell unterschiedlich behandelt.</span><span class="sxs-lookup"><span data-stu-id="78103-117">The diffuse color and specular color are treated differently, depending on the color model.</span></span> <span data-ttu-id="78103-118">Im RGB-Farbmodell verwendet das System die Farbkomponenten Rot, Grün und Blau in der Interpolation.</span><span class="sxs-lookup"><span data-stu-id="78103-118">In the RGB color model, the system uses the red, green, and blue color components in the interpolation.</span></span>
 
-Die Alpha-Komponente einer Farbe wird als separater interpolierter Wert behandelt, da Gerätetreiber Transparenz auf zwei unterschiedliche Weisen implementieren können: durch Strukturmischung oder durch Punktierung.
+<span data-ttu-id="78103-119">Die Alpha-Komponente einer Farbe wird als separater interpolierter Wert behandelt, da Gerätetreiber Transparenz auf zwei unterschiedliche Weisen implementieren können: durch Strukturmischung oder durch Punktierung.</span><span class="sxs-lookup"><span data-stu-id="78103-119">The alpha component of a color is treated as a separate interpolated value because device drivers can implement transparency in two different ways: by using texture blending or by using stippling.</span></span>
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Verwandte Themen
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="78103-120"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="78103-120"><span id="related-topics"></span>Related topics</span></span>
 
 
-[Koordinatensysteme und Geometrie](coordinate-systems-and-geometry.md)
-
- 
+[<span data-ttu-id="78103-121">Koordinatensysteme und Geometrie</span><span class="sxs-lookup"><span data-stu-id="78103-121">Coordinate systems and geometry</span></span>](coordinate-systems-and-geometry.md)
 
  
 
+ 
 
 
 

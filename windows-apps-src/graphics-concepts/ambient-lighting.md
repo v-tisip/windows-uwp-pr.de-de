@@ -2,65 +2,64 @@
 title: Umgebungslicht
 description: "Das Umgebungslicht bietet konstante Beleuchtung für eine Szene."
 ms.assetid: C34FA65A-3634-4A4B-B183-4CDA89F4DC95
-keywords:
-- Umgebungslicht
-author: PeterTurcan
-ms.author: pettur
+keywords: Umgebungslicht
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 77865a483f226fba912c03e2f9abe17eaa7fbee0
-ms.lasthandoff: 02/07/2017
-
+ms.localizationpriority: medium
+ms.openlocfilehash: 08b44ae8348e7b9d1d8dff0b98e5f1c553ec79b2
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/22/2017
 ---
+# <a name="ambient-lighting"></a><span data-ttu-id="2102c-104">Umgebungslicht</span><span class="sxs-lookup"><span data-stu-id="2102c-104">Ambient lighting</span></span>
 
-# <a name="ambient-lighting"></a>Umgebungslicht
 
+<span data-ttu-id="2102c-105">Das Umgebungslicht bietet konstante Beleuchtung für eine Szene.</span><span class="sxs-lookup"><span data-stu-id="2102c-105">Ambient lighting provides constant lighting for a scene.</span></span> <span data-ttu-id="2102c-106">Sie leuchtet alle Objekteckpunkte gleich aus, da sie nicht von anderen Beleuchtungsfaktoren abhängig ist, wie der Eckpunktnormalen, der Richtung des Lichts, der Position der Lichtquelle, der Reichweite oder Abschwächung des Lichts.</span><span class="sxs-lookup"><span data-stu-id="2102c-106">It lights all object vertices the same because it is not dependent on any other lighting factors such as vertex normals, light direction, light position, range, or attenuation.</span></span> <span data-ttu-id="2102c-107">Umgebungsbeleuchtung ist in alle Richtungen konstant und färbt alle Pixel eines Objekts identisch.</span><span class="sxs-lookup"><span data-stu-id="2102c-107">Ambient lighting is constant in all directions and it colors all pixels of an object the same.</span></span> <span data-ttu-id="2102c-108">Obwohl die Berechnung schnell ist, sehen die Objekte flach und unrealistisch aus.</span><span class="sxs-lookup"><span data-stu-id="2102c-108">It is fast to calculate but leaves objects looking flat and unrealistic.</span></span>
 
-Das Umgebungslicht bietet konstante Beleuchtung für eine Szene. Es erhellt die Scheitelpunkte aller Objekt gleichermaßen, da es nicht von anderen Beleuchtungsfaktoren wie vertexspezifischen Normalen, Lichteinfallsrichtung, Position der Lichtquelle, Reichweite oder Dämpfung abhängt. Das Umgebungslicht bleibt in alle Richtungen hin unverändert und es versieht alle Pixel eines Objekts mit der gleichen Farbe. Obwohl die Berechnung schnell ist, sehen die Objekte flach und unrealistisch aus.
+<span data-ttu-id="2102c-109">Das Umgebungslicht ist zwar der schnellste Beleuchtungstyp, es erzeugt allerdings die unrealistischsten Ergebnisse.</span><span class="sxs-lookup"><span data-stu-id="2102c-109">Ambient lighting is the fastest type of lighting but it produces the least realistic results.</span></span> <span data-ttu-id="2102c-110">Direct3D enthält eine einzige globale Umgebungslichteigenschaft, die Sie ohne Erstellen des Lichts verwenden können.</span><span class="sxs-lookup"><span data-stu-id="2102c-110">Direct3D contains a single global ambient light property that you can use without creating any light.</span></span> <span data-ttu-id="2102c-111">Alternativ können Sie jede Lichtquellen als Umgebungslicht festlegen.</span><span class="sxs-lookup"><span data-stu-id="2102c-111">Alternatively, you can set any light object to provide ambient lighting.</span></span>
 
-Das Umgebungslicht ist zwar der schnellste Beleuchtungstyp, es erzeugt allerdings die unrealistischsten Ergebnisse. Direct3D enthält eine einzige globale Umgebungslichteigenschaft, die Sie ohne Erstellen des Lichts verwenden können. Alternativ können Sie jede Lichtquellen als Umgebungslicht festlegen.
+<span data-ttu-id="2102c-112">Das Umgebungslicht für eine Szene wird durch die folgende Gleichung beschrieben.</span><span class="sxs-lookup"><span data-stu-id="2102c-112">The ambient lighting for a scene is described by the following equation.</span></span>
 
-Das Umgebungslicht für eine Szene wird durch die folgende Gleichung beschrieben.
+<span data-ttu-id="2102c-113">Umgebungslicht = Cₐ\*\[Gₐ + sum(Atten<sub>i</sub>\*Spot<sub>i</sub>\*L<sub>ai</sub>)\]</span><span class="sxs-lookup"><span data-stu-id="2102c-113">Ambient Lighting = Cₐ\*\[Gₐ + sum(Atten<sub>i</sub>\*Spot<sub>i</sub>\*L<sub>ai</sub>)\]</span></span>
 
-Umgebungslicht = Cₐ\*\[Gₐ + sum(Atten<sub>i</sub>\*Spot<sub>i</sub>\*L<sub>ai</sub>)\]
+<span data-ttu-id="2102c-114">Dabei gilt:</span><span class="sxs-lookup"><span data-stu-id="2102c-114">Where:</span></span>
 
-Dabei gilt:
-
-| Parameter         | Standardwert | Typ          | Beschreibung                                                                                                       |
+| <span data-ttu-id="2102c-115">Parameter</span><span class="sxs-lookup"><span data-stu-id="2102c-115">Parameter</span></span>         | <span data-ttu-id="2102c-116">Standardwert</span><span class="sxs-lookup"><span data-stu-id="2102c-116">Default value</span></span> | <span data-ttu-id="2102c-117">Typ</span><span class="sxs-lookup"><span data-stu-id="2102c-117">Type</span></span>          | <span data-ttu-id="2102c-118">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="2102c-118">Description</span></span>                                                                                                       |
 |-------------------|---------------|---------------|-------------------------------------------------------------------------------------------------------------------|
-| Cₐ                | (0,0,0,0)     | D3DCOLORVALUE | Materielle Umgebungsfarbe                                                                                            |
-| Gₐ                | (0,0,0,0)     | D3DCOLORVALUE | Globale Umgebungsfarbe                                                                                              |
-| Atten<sub>i</sub> | (0,0,0,0)     | D3DCOLORVALUE | Dämpfung der ith-Beleuchtung. Unter [Dämpfungs- und Spotlight-Faktor](attenuation-and-spotlight-factor.md). |
-| Spot<sub>i</sub>  | (0,0,0,0)     | D3DVECTOR     | Spotlight-Faktor der ith-Beleuchtung. Unter [Dämpfungs- und Spotlight-Faktor](attenuation-and-spotlight-factor.md).  |
-| Summe               | Nicht zutreffend           | Nicht zutreffend           | Summe des Umgebungslichts                                                                                          |
-| L<sub>ai</sub>    | (0,0,0,0)     | D3DVECTOR     | Helle Umgebungsfarbe der ith-Beleuchtung                                                                              |
+| <span data-ttu-id="2102c-119">Cₐ</span><span class="sxs-lookup"><span data-stu-id="2102c-119">Cₐ</span></span>                | <span data-ttu-id="2102c-120">(0,0,0,0)</span><span class="sxs-lookup"><span data-stu-id="2102c-120">(0,0,0,0)</span></span>     | <span data-ttu-id="2102c-121">D3DCOLORVALUE</span><span class="sxs-lookup"><span data-stu-id="2102c-121">D3DCOLORVALUE</span></span> | <span data-ttu-id="2102c-122">Materielle Umgebungsfarbe</span><span class="sxs-lookup"><span data-stu-id="2102c-122">Material ambient color</span></span>                                                                                            |
+| <span data-ttu-id="2102c-123">Gₐ</span><span class="sxs-lookup"><span data-stu-id="2102c-123">Gₐ</span></span>                | <span data-ttu-id="2102c-124">(0,0,0,0)</span><span class="sxs-lookup"><span data-stu-id="2102c-124">(0,0,0,0)</span></span>     | <span data-ttu-id="2102c-125">D3DCOLORVALUE</span><span class="sxs-lookup"><span data-stu-id="2102c-125">D3DCOLORVALUE</span></span> | <span data-ttu-id="2102c-126">Globale Umgebungsfarbe</span><span class="sxs-lookup"><span data-stu-id="2102c-126">Global ambient color</span></span>                                                                                              |
+| <span data-ttu-id="2102c-127">Atten<sub>i</sub></span><span class="sxs-lookup"><span data-stu-id="2102c-127">Atten<sub>i</sub></span></span> | <span data-ttu-id="2102c-128">(0,0,0,0)</span><span class="sxs-lookup"><span data-stu-id="2102c-128">(0,0,0,0)</span></span>     | <span data-ttu-id="2102c-129">D3DCOLORVALUE</span><span class="sxs-lookup"><span data-stu-id="2102c-129">D3DCOLORVALUE</span></span> | <span data-ttu-id="2102c-130">Dämpfung der ith-Beleuchtung.</span><span class="sxs-lookup"><span data-stu-id="2102c-130">Light attenuation of the ith light.</span></span> <span data-ttu-id="2102c-131">Unter [Dämpfungs- und Spotlight-Faktor](attenuation-and-spotlight-factor.md).</span><span class="sxs-lookup"><span data-stu-id="2102c-131">See [Attenuation and spotlight factor](attenuation-and-spotlight-factor.md).</span></span> |
+| <span data-ttu-id="2102c-132">Spot<sub>i</sub></span><span class="sxs-lookup"><span data-stu-id="2102c-132">Spot<sub>i</sub></span></span>  | <span data-ttu-id="2102c-133">(0,0,0,0)</span><span class="sxs-lookup"><span data-stu-id="2102c-133">(0,0,0,0)</span></span>     | <span data-ttu-id="2102c-134">D3DVECTOR</span><span class="sxs-lookup"><span data-stu-id="2102c-134">D3DVECTOR</span></span>     | <span data-ttu-id="2102c-135">Spotlight-Faktor der ith-Beleuchtung.</span><span class="sxs-lookup"><span data-stu-id="2102c-135">Spotlight factor of the ith light.</span></span> <span data-ttu-id="2102c-136">Unter [Dämpfungs- und Spotlight-Faktor](attenuation-and-spotlight-factor.md).</span><span class="sxs-lookup"><span data-stu-id="2102c-136">See [Attenuation and spotlight factor](attenuation-and-spotlight-factor.md).</span></span>  |
+| <span data-ttu-id="2102c-137">Summe</span><span class="sxs-lookup"><span data-stu-id="2102c-137">sum</span></span>               | <span data-ttu-id="2102c-138">Nicht zutreffend</span><span class="sxs-lookup"><span data-stu-id="2102c-138">N/A</span></span>           | <span data-ttu-id="2102c-139">Nicht zutreffend</span><span class="sxs-lookup"><span data-stu-id="2102c-139">N/A</span></span>           | <span data-ttu-id="2102c-140">Summe des Umgebungslichts</span><span class="sxs-lookup"><span data-stu-id="2102c-140">Sum of the ambient light</span></span>                                                                                          |
+| <span data-ttu-id="2102c-141">L<sub>ai</sub></span><span class="sxs-lookup"><span data-stu-id="2102c-141">L<sub>ai</sub></span></span>    | <span data-ttu-id="2102c-142">(0,0,0,0)</span><span class="sxs-lookup"><span data-stu-id="2102c-142">(0,0,0,0)</span></span>     | <span data-ttu-id="2102c-143">D3DVECTOR</span><span class="sxs-lookup"><span data-stu-id="2102c-143">D3DVECTOR</span></span>     | <span data-ttu-id="2102c-144">Helle Umgebungsfarbe der ith-Beleuchtung</span><span class="sxs-lookup"><span data-stu-id="2102c-144">Light ambient color of the ith light</span></span>                                                                              |
 
  
 
-Der Wert für Cₐ ist entweder:
+<span data-ttu-id="2102c-145">Der Wert für Cₐ ist entweder:</span><span class="sxs-lookup"><span data-stu-id="2102c-145">The value for Cₐ is either:</span></span>
 
--   Vertexfarbe1, wenn AMBIENTMATERIALSOURCE = D3DMCS\_FARBE1 und die erste Vertexfarbe in der Vertex-Deklaration angegeben wird.
--   Vertexfarbe2, wenn AMBIENTMATERIALSOURCE = D3DMCS\_FARBE2 und die zweite Vertexfarbe in der Vertex-Deklaration angegeben wird.
--   Materielle Umgebungsfarbe.
+-   <span data-ttu-id="2102c-146">Vertexfarbe1, wenn AMBIENTMATERIALSOURCE = D3DMCS\_FARBE1 und die erste Vertexfarbe in der Vertex-Deklaration angegeben wird.</span><span class="sxs-lookup"><span data-stu-id="2102c-146">vertex color1, if AMBIENTMATERIALSOURCE = D3DMCS\_COLOR1, and the first vertex color is supplied in the vertex declaration.</span></span>
+-   <span data-ttu-id="2102c-147">Vertexfarbe2, wenn AMBIENTMATERIALSOURCE = D3DMCS\_FARBE2 und die zweite Vertexfarbe in der Vertex-Deklaration angegeben wird.</span><span class="sxs-lookup"><span data-stu-id="2102c-147">vertex color2, if AMBIENTMATERIALSOURCE = D3DMCS\_COLOR2, and the second vertex color is supplied in vertex declaration.</span></span>
+-   <span data-ttu-id="2102c-148">Materielle Umgebungsfarbe.</span><span class="sxs-lookup"><span data-stu-id="2102c-148">material ambient color.</span></span>
 
-**Hinweis**   Wenn eine der beiden AMBIENTMATERIALSOURCE-Optionen verwendet wird und die Vertexfarbe nicht angegeben ist, wird die materielle Umgebungsfarbe verwendet.
+<span data-ttu-id="2102c-149">**Hinweis**   Wenn eine der beiden AMBIENTMATERIALSOURCE-Optionen verwendet wird und die Vertexfarbe nicht angegeben ist, wird die materielle Umgebungsfarbe verwendet.</span><span class="sxs-lookup"><span data-stu-id="2102c-149">**Note**   If either AMBIENTMATERIALSOURCE option is used, and the vertex color is not provided, then the material ambient color is used.</span></span>
 
  
 
-Um die materielle Umgebungsfarbe anzuwenden, verwenden Sie „SetMaterial” wie im folgenden Beispielcode dargestellt.
+<span data-ttu-id="2102c-150">Um die materielle Umgebungsfarbe anzuwenden, verwenden Sie „SetMaterial” wie im folgenden Beispielcode dargestellt.</span><span class="sxs-lookup"><span data-stu-id="2102c-150">To use the material ambient color, use SetMaterial as shown in the example code below.</span></span>
 
-Gₐ ist die globale Umgebungsfarbe. Sie wird mit „SetRenderState(D3DRS\_AMBIENT)” festgelegt. In einer Direct3D-Szene gibt es eine globale Umgebungsfarbe. Dieser Parameter ist keinem Direct3D-Lichtobjekt zugeordnet.
+<span data-ttu-id="2102c-151">Gₐ ist die globale Umgebungsfarbe.</span><span class="sxs-lookup"><span data-stu-id="2102c-151">Gₐ is the global ambient color.</span></span> <span data-ttu-id="2102c-152">Sie wird mit „SetRenderState(D3DRS\_AMBIENT)” festgelegt.</span><span class="sxs-lookup"><span data-stu-id="2102c-152">It is set using SetRenderState(D3DRS\_AMBIENT).</span></span> <span data-ttu-id="2102c-153">In einer Direct3D-Szene gibt es eine globale Umgebungsfarbe.</span><span class="sxs-lookup"><span data-stu-id="2102c-153">There is one global ambient color in a Direct3D scene.</span></span> <span data-ttu-id="2102c-154">Dieser Parameter ist keinem Direct3D-Lichtobjekt zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="2102c-154">This parameter is not associated with a Direct3D light object.</span></span>
 
-L<sub>ai</sub> ist die Umgebungsfarbe der ith-Beleuchtung in der Szene. Jedes Direct3D-Licht hat eine Reihe von Eigenschaften, von denen eine die Umgebungsfarbe ist. Der Begriff „Summe” (L<sub>Ai</sub>) beschreibt die Summe aller Umgebungsfarben in der Szene.
+<span data-ttu-id="2102c-155">L<sub>ai</sub> ist die Umgebungsfarbe der ith-Beleuchtung in der Szene.</span><span class="sxs-lookup"><span data-stu-id="2102c-155">L<sub>ai</sub> is the ambient color of the ith light in the scene.</span></span> <span data-ttu-id="2102c-156">Jedes Direct3D-Licht hat eine Reihe von Eigenschaften, von denen eine die Umgebungsfarbe ist.</span><span class="sxs-lookup"><span data-stu-id="2102c-156">Each Direct3D light has a set of properties, one of which is the ambient color.</span></span> <span data-ttu-id="2102c-157">Der Begriff „Summe” (L<sub>Ai</sub>) beschreibt die Summe aller Umgebungsfarben in der Szene.</span><span class="sxs-lookup"><span data-stu-id="2102c-157">The term, sum(L<sub>ai</sub>) is a sum of all the ambient colors in the scene.</span></span>
 
-## <a name="span-idexamplespanspan-idexamplespanspan-idexamplespanexample"></a><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Beispiel
+## <a name="span-idexamplespanspan-idexamplespanspan-idexamplespanexample"></a><span data-ttu-id="2102c-158"><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Beispiel</span><span class="sxs-lookup"><span data-stu-id="2102c-158"><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Example</span></span>
 
 
-In diesem Beispiel wird das Objekt durch die Farbe des Umgebungslichts der Szene und einer materiellen Umgebungsfarbe hervorgehoben.
+<span data-ttu-id="2102c-159">In diesem Beispiel wird das Objekt durch die Farbe des Umgebungslichts der Szene und einer materiellen Umgebungsfarbe hervorgehoben.</span><span class="sxs-lookup"><span data-stu-id="2102c-159">In this example, the object is colored using the scene ambient light and a material ambient color.</span></span>
 
 ```
 #define GRAY_COLOR  0x00bfbfbf
@@ -71,27 +70,26 @@ Ambient.b = 0.0f;
 Ambient.a = 0.0f;
 ```
 
-Gemäß der Gleichung ist die resultierende Farbe für die Objekt-Scheitelpunkte eine Kombination aus der materiellen Farbe und der Farbe des Lichts.
+<span data-ttu-id="2102c-160">Gemäß der Gleichung ist die resultierende Farbe für die Objekt-Scheitelpunkte eine Kombination aus der materiellen Farbe und der Farbe des Lichts.</span><span class="sxs-lookup"><span data-stu-id="2102c-160">According to the equation, the resulting color for the object vertices is a combination of the material color and the light color.</span></span>
 
-Die folgenden beiden Abbildungen zeigen die materielle Farbe (in Grau) und die Farbe des Lichts (hellrot).
+<span data-ttu-id="2102c-161">Die folgenden beiden Abbildungen zeigen die materielle Farbe (in Grau) und die Farbe des Lichts (hellrot).</span><span class="sxs-lookup"><span data-stu-id="2102c-161">The following two illustrations show the material color, which is gray, and the light color, which is bright red.</span></span>
 
 ![Abbildung einer grauen Kugel](images/amb1.jpg)![Abbildung einer roten Kugel](images/lightred.jpg)
 
-Die resultierende Szene wird in der folgenden Abbildung dargestellt. Das einzige Objekt in der Szene ist eine Kugel. Das Umgebungslicht beleuchtet alle Objekt-Schnittpunkte mit derselben Farbe. Es ist nicht von der Vertexnormale oder Lichteinfallsrichtung abhängig. Die Kugel sieht wie ein 2D-Kreis aus, da es keinen Unterschied in der Schattierung der Oberfläche des Objekts gibt.
+<span data-ttu-id="2102c-164">Die resultierende Szene wird in der folgenden Abbildung dargestellt.</span><span class="sxs-lookup"><span data-stu-id="2102c-164">The resulting scene is shown in the following illustration.</span></span> <span data-ttu-id="2102c-165">Das einzige Objekt in der Szene ist eine Kugel.</span><span class="sxs-lookup"><span data-stu-id="2102c-165">The only object in the scene is a sphere.</span></span> <span data-ttu-id="2102c-166">Das Umgebungslicht beleuchtet alle Objekt-Schnittpunkte mit derselben Farbe.</span><span class="sxs-lookup"><span data-stu-id="2102c-166">Ambient light lights all object vertices with the same color.</span></span> <span data-ttu-id="2102c-167">Es ist nicht von der Vertexnormale oder Lichteinfallsrichtung abhängig.</span><span class="sxs-lookup"><span data-stu-id="2102c-167">It is not dependent on the vertex normal or the light direction.</span></span> <span data-ttu-id="2102c-168">Die Kugel sieht wie ein 2D-Kreis aus, da es keinen Unterschied in der Schattierung der Oberfläche des Objekts gibt.</span><span class="sxs-lookup"><span data-stu-id="2102c-168">As a result, the sphere looks like a 2D circle because there is no difference in shading around the surface of the object.</span></span>
 
 ![Abbildung einer Kugel mit Umgebungslicht](images/lighta.jpg)
 
-Verwenden Sie neben dem Umgebungslicht diffuses oder Glanzlicht, um Objekten ein realistischeres Aussehen zu verleihen.
+<span data-ttu-id="2102c-170">Verwenden Sie neben dem Umgebungslicht diffuses oder Glanzlicht, um Objekten ein realistischeres Aussehen zu verleihen.</span><span class="sxs-lookup"><span data-stu-id="2102c-170">To give objects a more realistic look, apply diffuse or specular lighting in addition to ambient lighting.</span></span>
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Verwandte Themen
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="2102c-171"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="2102c-171"><span id="related-topics"></span>Related topics</span></span>
 
 
-[Beleuchtungsmathematik](mathematics-of-lighting.md)
-
- 
+[<span data-ttu-id="2102c-172">Beleuchtungsmathematik</span><span class="sxs-lookup"><span data-stu-id="2102c-172">Mathematics of lighting</span></span>](mathematics-of-lighting.md)
 
  
 
+ 
 
 
 

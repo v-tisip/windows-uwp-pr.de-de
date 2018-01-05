@@ -2,40 +2,39 @@
 title: Texturfilterung
 description: "Die Texturfilterung erzeugt eine Farbe für jedes Pixel im 2D-gerenderten Bild des Grundtyps, wenn dieser durch die Abbildung eines 3D-Grundtyps auf einem 2D-Bildschirm gerendert wird."
 ms.assetid: 1CCF4138-5D48-4B07-9490-996844F994D8
-keywords:
-- Texturfilterung
-author: PeterTurcan
-ms.author: pettur
+keywords: Texturfilterung
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 97b2dc04c518bfec4b09a50707c08767932f05c6
-ms.lasthandoff: 02/07/2017
-
+ms.localizationpriority: medium
+ms.openlocfilehash: 42d184b15de4fdeac18549b41447da81580d6b99
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/22/2017
 ---
-
-# <a name="texture-filtering"></a>Texturfilterung
-
-
-Die Texturfilterung erzeugt eine Farbe für jedes Pixel im 2D-gerenderten Bild des Grundtyps, wenn dieser durch die Abbildung eines 3D-Grundtyps auf einem 2D-Bildschirm gerendert wird.
-
-Wenn Direct3D einen Grundtyp rendert, bildet es einen 3D-Grundtyp auf einem 2D-Bildschirm ab. Wenn Grundtyp eine Textur hat, muss Direct3D diese Textur verwenden, um eine Farbe für jedes Pixel im gerenderten 2D-Bild des Grundtyps zu erzeugen. Für jeden Pixel im Bildschirmbild des Grundtyps muss ein Farbwert aus der Textur abgerufen werden. Dieser Prozess wird als *Texturfilterung* bezeichnet.
-
-Wenn ein Texturfilterungsvorgang durchgeführt wird, wird die verwendete Textur typischerweise auch vergrößert oder verkleinert. Anders ausgedrückt: Sie wird einem Grundtypenbild zugeordnet, das kleiner oder größer ist als sie selbst. Die Vergrößerung einer Textur kann dazu führen, dass viele Pixel einem Texel zugeordnet werden. Das Ergebnis kann dann eine ungleichmäßige Darstellung sein. Die Verkleinerung einer Textur bedeutet häufig, dass ein Pixel mehreren Texeln zugeordnet wird. Das resultierende Bild kann dann verschwommen aussehen. Um diese Probleme zu beheben, muss eine gewisse Mischung der Texelfarben durchgeführt werden, um zu einer Farbe für das Pixel zu kommen.
-
-Direct3D vereinfacht den komplexen Vorgang der Texturfilterung. Es bietet Ihnen drei Arten der Texturfilterung: lineare Filterung, anisotropische Filterung und Mipmap-Filterung. Wenn Sie sich für keine Texturfilterung entscheiden, verwendet Direct3D die als „Sampling am nächstgelegenen Punkt“ bezeichnete Technik.
-
-Jede Art der Texturfilterung hat Vor- und Nachteile. So kann die lineare Texturfilterung etwa zu gezackten Rändern oder einem ungleichmäßigen Erscheinungsbild des fertigen Biĺdes führen. Andererseits ist dies eine Texturfilterungsmethode, die nur geringe Rechenleistung erfordert. Die Filterung mit Mipmaps liefert gewöhnlich die besten Ergebnisse, besonders wenn dazu noch die anisotropische Filterung verwendet wird. Dies ist jedoch von allen Techniken, die Direct3D unterstützt, die mit dem größten Speicherbedarf.
-
-## <a name="span-idtypes-of-texture-filteringspanspan-idtypes-of-texture-filteringspanspan-idtypes-of-texture-filteringspantypes-of-texture-filtering"></a><span id="Types-of-texture-filtering"></span><span id="types-of-texture-filtering"></span><span id="TYPES-OF-TEXTURE-FILTERING"></span>Arten der Texturfilterung
+# <a name="texture-filtering"></a><span data-ttu-id="6d9b3-104">Texturfilterung</span><span class="sxs-lookup"><span data-stu-id="6d9b3-104">Texture filtering</span></span>
 
 
-Direct3D unterstützt die folgenden Verfahren für die Texturfilterung.
+<span data-ttu-id="6d9b3-105">Die Texturfilterung erzeugt eine Farbe für jedes Pixel im 2D-gerenderten Bild des Grundtyps, wenn dieser durch die Abbildung eines 3D-Grundtyps auf einem 2D-Bildschirm gerendert wird.</span><span class="sxs-lookup"><span data-stu-id="6d9b3-105">Texture filtering produces a color for each pixel in the primitive's 2D rendered image when a primitive is rendered by mapping a 3D primitive onto a 2D screen.</span></span>
 
-## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>In diesem Abschnitt
+<span data-ttu-id="6d9b3-106">Wenn Direct3D einen Grundtyp rendert, bildet es einen 3D-Grundtyp auf einem 2D-Bildschirm ab.</span><span class="sxs-lookup"><span data-stu-id="6d9b3-106">When Direct3D renders a primitive, it maps the 3D primitive onto a 2D screen.</span></span> <span data-ttu-id="6d9b3-107">Wenn Grundtyp eine Textur hat, muss Direct3D diese Textur verwenden, um eine Farbe für jedes Pixel im gerenderten 2D-Bild des Grundtyps zu erzeugen.</span><span class="sxs-lookup"><span data-stu-id="6d9b3-107">If the primitive has a texture, Direct3D must use that texture to produce a color for each pixel in the primitive's 2D rendered image.</span></span> <span data-ttu-id="6d9b3-108">Für jeden Pixel im Bildschirmbild des Grundtyps muss ein Farbwert aus der Textur abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="6d9b3-108">For every pixel in the primitive's on-screen image, it must obtain a color value from the texture.</span></span> <span data-ttu-id="6d9b3-109">Dieser Prozess wird als *Texturfilterung* bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="6d9b3-109">This process is called *texture filtering*.</span></span>
+
+<span data-ttu-id="6d9b3-110">Wenn ein Texturfilterungsvorgang durchgeführt wird, wird die verwendete Textur typischerweise auch vergrößert oder verkleinert.</span><span class="sxs-lookup"><span data-stu-id="6d9b3-110">When a texture filter operation is performed, the texture being used is typically also being magnified or minified.</span></span> <span data-ttu-id="6d9b3-111">Anders ausgedrückt: Sie wird einem Grundtypenbild zugeordnet, das kleiner oder größer ist als sie selbst.</span><span class="sxs-lookup"><span data-stu-id="6d9b3-111">In other words, it is being mapped into a primitive image that is larger or smaller than itself.</span></span> <span data-ttu-id="6d9b3-112">Die Vergrößerung einer Textur kann dazu führen, dass viele Pixel einem Texel zugeordnet werden.</span><span class="sxs-lookup"><span data-stu-id="6d9b3-112">Magnification of a texture can result in many pixels being mapped to one texel.</span></span> <span data-ttu-id="6d9b3-113">Das Ergebnis kann dann eine ungleichmäßige Darstellung sein.</span><span class="sxs-lookup"><span data-stu-id="6d9b3-113">The result can be a chunky appearance.</span></span> <span data-ttu-id="6d9b3-114">Die Verkleinerung einer Textur bedeutet häufig, dass ein Pixel mehreren Texeln zugeordnet wird.</span><span class="sxs-lookup"><span data-stu-id="6d9b3-114">Minification of a texture often means that a single pixel is mapped to many texels.</span></span> <span data-ttu-id="6d9b3-115">Das resultierende Bild kann dann verschwommen aussehen.</span><span class="sxs-lookup"><span data-stu-id="6d9b3-115">The resulting image can be blurry or aliased.</span></span> <span data-ttu-id="6d9b3-116">Um diese Probleme zu beheben, muss eine gewisse Mischung der Texelfarben durchgeführt werden, um zu einer Farbe für das Pixel zu kommen.</span><span class="sxs-lookup"><span data-stu-id="6d9b3-116">To resolve these problems, some blending of the texel colors must be performed to arrive at a color for the pixel.</span></span>
+
+<span data-ttu-id="6d9b3-117">Direct3D vereinfacht den komplexen Vorgang der Texturfilterung.</span><span class="sxs-lookup"><span data-stu-id="6d9b3-117">Direct3D simplifies the complex process of texture filtering.</span></span> <span data-ttu-id="6d9b3-118">Es bietet Ihnen drei Arten der Texturfilterung: lineare Filterung, anisotropische Filterung und Mipmap-Filterung.</span><span class="sxs-lookup"><span data-stu-id="6d9b3-118">It provides you with three types of texture filtering - linear filtering, anisotropic filtering, and mipmap filtering.</span></span> <span data-ttu-id="6d9b3-119">Wenn Sie sich für keine Texturfilterung entscheiden, verwendet Direct3D die als „Sampling am nächstgelegenen Punkt“ bezeichnete Technik.</span><span class="sxs-lookup"><span data-stu-id="6d9b3-119">If you select no texture filtering, Direct3D uses a technique called nearest-point sampling.</span></span>
+
+<span data-ttu-id="6d9b3-120">Jede Art der Texturfilterung hat Vor- und Nachteile.</span><span class="sxs-lookup"><span data-stu-id="6d9b3-120">Each type of texture filtering has advantages and disadvantages.</span></span> <span data-ttu-id="6d9b3-121">So kann die lineare Texturfilterung etwa zu gezackten Rändern oder einem ungleichmäßigen Erscheinungsbild des fertigen Biĺdes führen.</span><span class="sxs-lookup"><span data-stu-id="6d9b3-121">For instance, linear texture filtering can produce jagged edges or a chunky appearance in the final image.</span></span> <span data-ttu-id="6d9b3-122">Andererseits ist dies eine Texturfilterungsmethode, die nur geringe Rechenleistung erfordert.</span><span class="sxs-lookup"><span data-stu-id="6d9b3-122">However, it is a computationally low-overhead method of texture filtering.</span></span> <span data-ttu-id="6d9b3-123">Die Filterung mit Mipmaps liefert gewöhnlich die besten Ergebnisse, besonders wenn dazu noch die anisotropische Filterung verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="6d9b3-123">Filtering with mipmaps usually produces the best results, especially when combined with anisotropic filtering.</span></span> <span data-ttu-id="6d9b3-124">Dies ist jedoch von allen Techniken, die Direct3D unterstützt, die mit dem größten Speicherbedarf.</span><span class="sxs-lookup"><span data-stu-id="6d9b3-124">However, it requires the most memory of the techniques that Direct3D supports.</span></span>
+
+## <a name="span-idtypes-of-texture-filteringspanspan-idtypes-of-texture-filteringspanspan-idtypes-of-texture-filteringspantypes-of-texture-filtering"></a><span data-ttu-id="6d9b3-125"><span id="Types-of-texture-filtering"></span><span id="types-of-texture-filtering"></span><span id="TYPES-OF-TEXTURE-FILTERING"></span>Arten der Texturfilterung</span><span class="sxs-lookup"><span data-stu-id="6d9b3-125"><span id="Types-of-texture-filtering"></span><span id="types-of-texture-filtering"></span><span id="TYPES-OF-TEXTURE-FILTERING"></span>Types of texture filtering</span></span>
+
+
+<span data-ttu-id="6d9b3-126">Direct3D unterstützt die folgenden Verfahren für die Texturfilterung.</span><span class="sxs-lookup"><span data-stu-id="6d9b3-126">Direct3D supports the following texture filtering approaches.</span></span>
+
+## <a name="span-idin-this-sectionspanin-this-section"></a><span data-ttu-id="6d9b3-127"><span id="in-this-section"></span>In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="6d9b3-127"><span id="in-this-section"></span>In this section</span></span>
 
 
 <table>
@@ -45,41 +44,40 @@ Direct3D unterstützt die folgenden Verfahren für die Texturfilterung.
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Thema</th>
-<th align="left">Beschreibung</th>
+<th align="left"><span data-ttu-id="6d9b3-128">Thema</span><span class="sxs-lookup"><span data-stu-id="6d9b3-128">Topic</span></span></th>
+<th align="left"><span data-ttu-id="6d9b3-129">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="6d9b3-129">Description</span></span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Sampling am nächstgelegenen Punkt](nearest-point-sampling.md)</p></td>
-<td align="left"><p>Anwendungen müssen nicht die Texturfilterung verwenden. Direct3D kann so eingerichtet werden, dass es die Texeladresse berechnet, die häufig nicht auf ganze Zahlen geschätzt wird, und die Farbe des Texels mit der nächstgelegenen ganzzahligen Adresse kopiert. Dieser Prozess wird bezeichnet als <em>Sampling am nächstgelegenen Punkt</em>.</p></td>
+<td align="left"><p>[<span data-ttu-id="6d9b3-130">Sampling am nächstgelegenen Punkt</span><span class="sxs-lookup"><span data-stu-id="6d9b3-130">Nearest-point sampling</span></span>](nearest-point-sampling.md)</p></td>
+<td align="left"><p><span data-ttu-id="6d9b3-131">Anwendungen müssen nicht die Texturfilterung verwenden.</span><span class="sxs-lookup"><span data-stu-id="6d9b3-131">Applications are not required to use texture filtering.</span></span> <span data-ttu-id="6d9b3-132">Direct3D kann so eingerichtet werden, dass es die Texeladresse berechnet, die häufig nicht auf ganze Zahlen geschätzt wird, und die Farbe des Texels mit der nächstgelegenen ganzzahligen Adresse kopiert.</span><span class="sxs-lookup"><span data-stu-id="6d9b3-132">Direct3D can be set so that it computes the texel address, which often does not evaluate to integers, and copies the color of the texel with the closest integer address.</span></span> <span data-ttu-id="6d9b3-133">Dieser Prozess wird bezeichnet als <em>Sampling am nächstgelegenen Punkt</em>.</span><span class="sxs-lookup"><span data-stu-id="6d9b3-133">This process is called <em>nearest-point sampling</em>.</span></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Bilineare Texturfilterung](bilinear-texture-filtering.md)</p></td>
-<td align="left"><p><em>Die bilineare Filterung</em> berechnet den gewichteten Mittelwert der 4 Texel, die dem Samplingpunkt am nächsten liegen. Diese Filtermethode ist präziser und gängiger als das Filtern am nächstgelegenen Punkt. Dieser Ansatz ist effizient, da er in moderner Grafikhardware implementiert ist.</p></td>
+<td align="left"><p>[<span data-ttu-id="6d9b3-134">Bilineare Texturfilterung</span><span class="sxs-lookup"><span data-stu-id="6d9b3-134">Bilinear texture filtering</span></span>](bilinear-texture-filtering.md)</p></td>
+<td align="left"><p><span data-ttu-id="6d9b3-135">Die <em>bilineare Filterung</em> berechnet den gewichteten Durchschnitt der 4Texel, die dem Sampling-Punkt am nächsten liegen.</span><span class="sxs-lookup"><span data-stu-id="6d9b3-135"><em>Bilinear filtering</em> calculates the weighted average of the 4 texels closest to the sampling point.</span></span> <span data-ttu-id="6d9b3-136">Diese Filtermethode ist präziser und gängiger als das Filtern am nächstgelegenen Punkt.</span><span class="sxs-lookup"><span data-stu-id="6d9b3-136">This filtering approach is more accurate and common than nearest-point filtering.</span></span> <span data-ttu-id="6d9b3-137">Dieser Ansatz ist effizient, da er in moderner Grafikhardware implementiert ist.</span><span class="sxs-lookup"><span data-stu-id="6d9b3-137">This approach is efficient because it is implemented in modern graphics hardware.</span></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Anisotropische Texturfilterung](anisotropic-texture-filtering.md)</p></td>
-<td align="left"><p><em>Anisotropie</em> ist die sichtbare Verzerrung der Texel eines 3D-Objekts, dessen Oberfläche gegenüber der Bildschirmebene in einem Winkel ausgerichtet ist. Wenn ein Pixel eines anisotropischen Grundtyps einem Texel zugeordnet ist, wird die Form verzerrt.</p></td>
+<td align="left"><p>[<span data-ttu-id="6d9b3-138">Anisotropische Texturfilterung</span><span class="sxs-lookup"><span data-stu-id="6d9b3-138">Anisotropic texture filtering</span></span>](anisotropic-texture-filtering.md)</p></td>
+<td align="left"><p><span data-ttu-id="6d9b3-139"><em>Anisotropie</em> ist die sichtbare Verzerrung bei Texeln eines 3D-Objekts, dessen Oberfläche gegenüber der Bildschirmebene in einem Winkel ausgerichtet ist.</span><span class="sxs-lookup"><span data-stu-id="6d9b3-139"><em>Anisotropy</em> is the distortion visible in the texels of a 3D object whose surface is oriented at an angle with respect to the plane of the screen.</span></span> <span data-ttu-id="6d9b3-140">Wenn ein Pixel eines anisotropischen Grundtyps einem Texel zugeordnet ist, wird die Form verzerrt.</span><span class="sxs-lookup"><span data-stu-id="6d9b3-140">When a pixel from an anisotropic primitive is mapped to texels, its shape is distorted.</span></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Texturfilterung mit Mipmaps](texture-filtering-with-mipmaps.md)</p></td>
-<td align="left"><p>Ein <em>Mipmap</em> ist eine Sequenz von Texturen, von denen jede eine Darstellung desselben Bildes mit schrittweise niedrigerer Auflösung ist. Höhe und Breite der einzelnen Bilder bzw. Ebenen des Mipmaps sind jeweils um eine Zweierpotenz geringer als die der vorherigen Ebene.</p></td>
+<td align="left"><p>[<span data-ttu-id="6d9b3-141">Texturfilterung mit Mipmaps</span><span class="sxs-lookup"><span data-stu-id="6d9b3-141">Texture filtering with mipmaps</span></span>](texture-filtering-with-mipmaps.md)</p></td>
+<td align="left"><p><span data-ttu-id="6d9b3-142">Ein <em>Mipmap</em> ist eine Sequenz von Texturen, von denen jede eine Darstellung desselben Bildes mit schrittweise niedrigerer Auflösung ist.</span><span class="sxs-lookup"><span data-stu-id="6d9b3-142">A <em>mipmap</em> is a sequence of textures, each of which is a progressively lower resolution representation of the same image.</span></span> <span data-ttu-id="6d9b3-143">Höhe und Breite der einzelnen Bilder bzw. Ebenen des Mipmaps sind jeweils um eine Zweierpotenz geringer als die der vorherigen Ebene.</span><span class="sxs-lookup"><span data-stu-id="6d9b3-143">The height and width of each image, or level, in the mipmap is a power-of-two smaller than the previous level.</span></span></p></td>
 </tr>
 </tbody>
 </table>
 
  
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Verwandte Themen
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="6d9b3-144"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="6d9b3-144"><span id="related-topics"></span>Related topics</span></span>
 
 
-[Texturen](textures.md)
-
- 
+[<span data-ttu-id="6d9b3-145">Texturen</span><span class="sxs-lookup"><span data-stu-id="6d9b3-145">Textures</span></span>](textures.md)
 
  
 
+ 
 
 
 

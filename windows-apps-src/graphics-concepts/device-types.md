@@ -2,59 +2,57 @@
 title: "Gerätetypen"
 description: "Direct3D-Gerätetypen sind HAL-Gerät (Hardwareabstraktionsschicht) und den Referenz-Rasterizer."
 ms.assetid: 64084B23-10C0-4541-8E93-FB323385D2F0
-keywords:
-- "Gerätetypen"
-author: PeterTurcan
-ms.author: pettur
+keywords: "Gerätetypen"
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 883e40145b4d9667eee4fe2b945f555ccddc9895
-ms.lasthandoff: 02/07/2017
-
+ms.localizationpriority: medium
+ms.openlocfilehash: 1aff4fed2f69c455157b21b6cce93e37a1b48c39
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/22/2017
 ---
-
-# <a name="device-types"></a>Gerätetypen
-
-
-Direct3D-Gerätetypen sind HAL-Gerät (Hardwareabstraktionsschicht) und den Referenz-Rasterizer.
-
-## <a name="span-idhaldevicespanspan-idhaldevicespanspan-idhaldevicespanhal-device"></a><span id="HAL_Device"></span><span id="hal_device"></span><span id="HAL_DEVICE"></span>HAL-Gerät
+# <a name="device-types"></a><span data-ttu-id="dd8cb-104">Gerätetypen</span><span class="sxs-lookup"><span data-stu-id="dd8cb-104">Device types</span></span>
 
 
-Der primäre Gerätetyp ist das HAL-Gerät. Dieses unterstützt die hardwarebeschleunigt Rasterung und die Hardware- und Software-Vertex-Verarbeitung. Wenn der Computer, auf dem die Anwendung ausgeführt wird, mit einer Grafikkarte mit Direct3D-Unterstützung ausgestattet ist, muss die Anwendung Direct3D-Vorgänge verwenden. Direct3D-Hal Geräte implementieren alle oder Teile der Transformations-, Beleuchtungs- und Rasterungsvorgänge über die Hardware.
+<span data-ttu-id="dd8cb-105">Direct3D-Gerätetypen sind HAL-Gerät (Hardwareabstraktionsschicht) und den Referenz-Rasterizer.</span><span class="sxs-lookup"><span data-stu-id="dd8cb-105">Direct3D device types include Hardware Abstraction Layer (hal) devices and the reference rasterizer.</span></span>
 
-Anwendungen greifen nicht direkt auf Grafikadapter zu. Sie rufen Direct3D-Funktionen und -Methoden auf. Direct3D greift über die HAL auf die Hardware zu. Wenn der Computer, auf dem die Anwendung ausgeführt wird, die Hal unterstützt, erhalten Sie durch die Nutzung des HAL-Gerätes eine optimale Leistung.
-
-## <a name="span-idreferencedevicespanspan-idreferencedevicespanspan-idreferencedevicespanreference-device"></a><span id="Reference_Device"></span><span id="reference_device"></span><span id="REFERENCE_DEVICE"></span>Referenzgerät
+## <a name="span-idhaldevicespanspan-idhaldevicespanspan-idhaldevicespanhal-device"></a><span data-ttu-id="dd8cb-106"><span id="HAL_Device"></span><span id="hal_device"></span><span id="HAL_DEVICE"></span>HAL-Gerät</span><span class="sxs-lookup"><span data-stu-id="dd8cb-106"><span id="HAL_Device"></span><span id="hal_device"></span><span id="HAL_DEVICE"></span>HAL Device</span></span>
 
 
-Direct3D unterstützt ein zusätzliches Gerät – das Referenzgerät bzw. den Referen-Rasterizer. Im Gegensatz zu einem Softwaregerät unterstützt der Referenz-Rasterizer alle Direct3D-Funktionen. Dieses Gerät ist zum Debuggen gedacht und daher nur auf Computern verfügbar, auf denen das DirectX SDK installiert wurde. Da diese Funktionen mit dem Ziel einer möglichst hohen Genauigkeit statt für eine hohe Geschwindigkeit implementiert wurde, sind die Ergebnisse nicht besonders schnell. Der Referen-Rasterizer nutzt wenn möglich spezielle CPU-Anweisungen. Er ist jedoch nicht für den Einsatz in fertigen Anwendungen gedacht. Verwenden Sie die Referenz-Rasterizer nur für Featuretests oder zu Demonstrationszwecken.
+<span data-ttu-id="dd8cb-107">Der primäre Gerätetyp ist das HAL-Gerät. Dieses unterstützt die hardwarebeschleunigt Rasterung und die Hardware- und Software-Vertex-Verarbeitung.</span><span class="sxs-lookup"><span data-stu-id="dd8cb-107">The primary device type is the hal device, which supports hardware accelerated rasterization and both hardware and software vertex processing.</span></span> <span data-ttu-id="dd8cb-108">Wenn der Computer, auf dem die Anwendung ausgeführt wird, mit einer Grafikkarte mit Direct3D-Unterstützung ausgestattet ist, muss die Anwendung Direct3D-Vorgänge verwenden.</span><span class="sxs-lookup"><span data-stu-id="dd8cb-108">If the computer on which your application is running is equipped with a display adapter that supports Direct3D, your application should use it for Direct3D operations.</span></span> <span data-ttu-id="dd8cb-109">Direct3D-Hal Geräte implementieren alle oder Teile der Transformations-, Beleuchtungs- und Rasterungsvorgänge über die Hardware.</span><span class="sxs-lookup"><span data-stu-id="dd8cb-109">Direct3D hal devices implement all or part of the transformation, lighting, and rasterizing modules in hardware.</span></span>
 
-## <a name="span-idhalvsrefspanspan-idhalvsrefspanspan-idhalvsrefspanhal-vs-ref-devices"></a><span id="HAL_vs_REF"></span><span id="hal_vs_ref"></span><span id="HAL_VS_REF"></span>Vergleich von HAL- und REF-Geräten
+<span data-ttu-id="dd8cb-110">Anwendungen greifen nicht direkt auf Grafikadapter zu.</span><span class="sxs-lookup"><span data-stu-id="dd8cb-110">Applications do not access graphics adapters directly.</span></span> <span data-ttu-id="dd8cb-111">Sie rufen Direct3D-Funktionen und -Methoden auf.</span><span class="sxs-lookup"><span data-stu-id="dd8cb-111">They call Direct3D functions and methods.</span></span> <span data-ttu-id="dd8cb-112">Direct3D greift über die HAL auf die Hardware zu.</span><span class="sxs-lookup"><span data-stu-id="dd8cb-112">Direct3D accesses the hardware through the hal.</span></span> <span data-ttu-id="dd8cb-113">Wenn der Computer, auf dem die Anwendung ausgeführt wird, die Hal unterstützt, erhalten Sie durch die Nutzung des HAL-Gerätes eine optimale Leistung.</span><span class="sxs-lookup"><span data-stu-id="dd8cb-113">If the computer that your application is running on supports the hal, it will gain the best performance by using a hal device.</span></span>
 
-
-HAL-Geräte (Hardware Abstraction Layer, Hardwareabstraktionsschicht) und REF-Geräte (REFerence Rasterizer, Referenz-Rasterizer) stellen die beiden wichtigsten Typen von Direct3D-Geräten dar. HAL-Geräte arbeiten über Hardware und sind sehr schnell. Sie unterstützen jedoch möglicherweise nicht alle Elemente. REF-Geräte nutzen keine Hardwarebeschleunigung. Daher sind sie sehr langsam. Bei REF-Geräten ist jedoch sichergestellt, dass alle Direct3D-Funktionen korrekt unterstützt werden. In der Regel benötigen Sie nur HAL Geräte. Wenn Sie jedoch erweiterte Funktionen nutzen, die die Grafikkarte nicht unterstützt, dann müssen Sie unter Umständen auf ein REF-Gerät zurückgreifen.
-
-Ein REF-Gerät können Sie auch dann verwenden, wenn HAL-Gerät ungewöhnliche Ergebnissen liefert. So können Sie prüfen, ob Ihr Code überhaupt in Ordnung ist. Das REF-Gerät verhält sich immer ordnungsgemäß. Sie können Ihre Anwendung daher über das REF-Gerät testen und dabei überprüfen, ob das ungewöhnliche Verhalten weiterhin auftritt. Wenn dies nicht der Fall ist, nutzt die Anwendung (a) eine nicht von der Grafikkarte unterstützte Funktion, oder es handelt sich (b) um einen Treiberfehler. Wenn der Code auch mit dem REF-Gerät nicht funktioniert, handelt es sich um einen Anwendungsfehler.
-
-## <a name="span-idhardwarevssoftwarespanspan-idhardwarevssoftwarespanspan-idhardwarevssoftwarespanhardware-vs-software-vertex-processing"></a><span id="Hardware_vs_Software"></span><span id="hardware_vs_software"></span><span id="HARDWARE_VS_SOFTWARE"></span>Vergleich der Hardware- und Software-Vertex-Verarbeitung
+## <a name="span-idreferencedevicespanspan-idreferencedevicespanspan-idreferencedevicespanreference-device"></a><span data-ttu-id="dd8cb-114"><span id="Reference_Device"></span><span id="reference_device"></span><span id="REFERENCE_DEVICE"></span>Referenzgerät</span><span class="sxs-lookup"><span data-stu-id="dd8cb-114"><span id="Reference_Device"></span><span id="reference_device"></span><span id="REFERENCE_DEVICE"></span>Reference Device</span></span>
 
 
-Der Unterschied zwischen der Hardware- und Software-Vertex-Verarbeitung betrifft nur HAL-Geräte. Wenn Sie Vertizes in die Pipeline schieben, müssen diese transformiert (über die Welt-, View- und Projektionsmatrizen) und beleuchtet (über die integrierte Beleuchtung von D3D) werden. Dieser Verarbeitungsschritt heiß T&L (Transformation & Lighting). Die Hardware-Vertex-Verarbeitung wird von der Hardware durchgeführt (wenn die Hardware diese unterstützt). Die Software-Vertex-Verarbeitung wird durch die Software durchgeführt. Normalerweise wird zuerst ein Hardware-T&L-Gerät erstellt. Falls dieses fehlschlägt wird ein Mixed-Gerät verwendet. Schlägt auch dies fehl, wird ein Software-Gerät verwendet. (Fall das Software-Gerät fehlschlägt wird der Vorgang mit einem Fehler beeendet.)
+<span data-ttu-id="dd8cb-115">Direct3D unterstützt ein zusätzliches Gerät – das Referenzgerät bzw. den Referen-Rasterizer.</span><span class="sxs-lookup"><span data-stu-id="dd8cb-115">Direct3D supports an additional device type called a reference device or reference rasterizer.</span></span> <span data-ttu-id="dd8cb-116">Im Gegensatz zu einem Softwaregerät unterstützt der Referenz-Rasterizer alle Direct3D-Funktionen.</span><span class="sxs-lookup"><span data-stu-id="dd8cb-116">Unlike a software device, the reference rasterizer supports every Direct3D feature.</span></span> <span data-ttu-id="dd8cb-117">Dieses Gerät ist zum Debuggen gedacht und daher nur auf Computern verfügbar, auf denen das DirectX SDK installiert wurde.</span><span class="sxs-lookup"><span data-stu-id="dd8cb-117">This device is intended to be used for debugging purposes and is therefore only available on machines where the DirectX SDK has been installed.</span></span> <span data-ttu-id="dd8cb-118">Da diese Funktionen mit dem Ziel einer möglichst hohen Genauigkeit statt für eine hohe Geschwindigkeit implementiert wurde, sind die Ergebnisse nicht besonders schnell.</span><span class="sxs-lookup"><span data-stu-id="dd8cb-118">Because these features are implemented for accuracy rather than speed and are implemented in software, the results are not very fast.</span></span> <span data-ttu-id="dd8cb-119">Der Referen-Rasterizer nutzt wenn möglich spezielle CPU-Anweisungen. Er ist jedoch nicht für den Einsatz in fertigen Anwendungen gedacht.</span><span class="sxs-lookup"><span data-stu-id="dd8cb-119">The reference rasterizer does make use of special CPU instructions whenever it can, but it is not intended for retail applications.</span></span> <span data-ttu-id="dd8cb-120">Verwenden Sie die Referenz-Rasterizer nur für Featuretests oder zu Demonstrationszwecken.</span><span class="sxs-lookup"><span data-stu-id="dd8cb-120">Use the reference rasterizer only for feature testing or demonstration purposes.</span></span>
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Verwandte Themen
+## <a name="span-idhalvsrefspanspan-idhalvsrefspanspan-idhalvsrefspanhal-vs-ref-devices"></a><span data-ttu-id="dd8cb-121"><span id="HAL_vs_REF"></span><span id="hal_vs_ref"></span><span id="HAL_VS_REF"></span>Vergleich von HAL- und REF-Geräten</span><span class="sxs-lookup"><span data-stu-id="dd8cb-121"><span id="HAL_vs_REF"></span><span id="hal_vs_ref"></span><span id="HAL_VS_REF"></span>HAL vs. REF Devices</span></span>
 
 
-[Geräte](devices.md)
+<span data-ttu-id="dd8cb-122">HAL-Geräte (Hardware Abstraction Layer, Hardwareabstraktionsschicht) und REF-Geräte (REFerence Rasterizer, Referenz-Rasterizer) stellen die beiden wichtigsten Typen von Direct3D-Geräten dar. HAL-Geräte arbeiten über Hardware und sind sehr schnell. Sie unterstützen jedoch möglicherweise nicht alle Elemente. REF-Geräte nutzen keine Hardwarebeschleunigung. Daher sind sie sehr langsam. Bei REF-Geräten ist jedoch sichergestellt, dass alle Direct3D-Funktionen korrekt unterstützt werden.</span><span class="sxs-lookup"><span data-stu-id="dd8cb-122">HAL (Hardware Abstraction Layer) devices and REF (REFerence rasterizer) devices are the two main types of Direct3D device; the first is based around the hardware support, and is very fast but might not support everything; while the second uses no hardware acceleration, so is very slow, but is guaranteed to support the entire set of Direct3D features, in the correct way.</span></span> <span data-ttu-id="dd8cb-123">In der Regel benötigen Sie nur HAL Geräte. Wenn Sie jedoch erweiterte Funktionen nutzen, die die Grafikkarte nicht unterstützt, dann müssen Sie unter Umständen auf ein REF-Gerät zurückgreifen.</span><span class="sxs-lookup"><span data-stu-id="dd8cb-123">In general you'll only ever need to use HAL devices, but if you're using some advanced feature that your graphics card does not support then you might need to fall back to REF.</span></span>
 
- 
+<span data-ttu-id="dd8cb-124">Ein REF-Gerät können Sie auch dann verwenden, wenn HAL-Gerät ungewöhnliche Ergebnissen liefert. So können Sie prüfen, ob Ihr Code überhaupt in Ordnung ist.</span><span class="sxs-lookup"><span data-stu-id="dd8cb-124">The other time you might want to use REF is if the HAL device is producing strange results - that is, you're sure your code is correct, but the result is not what you're expecting.</span></span> <span data-ttu-id="dd8cb-125">Das REF-Gerät verhält sich immer ordnungsgemäß. Sie können Ihre Anwendung daher über das REF-Gerät testen und dabei überprüfen, ob das ungewöhnliche Verhalten weiterhin auftritt.</span><span class="sxs-lookup"><span data-stu-id="dd8cb-125">The REF device is guaranteed to behave correctly, so you may wish to test your application on the REF device and see if the strange behavior continues.</span></span> <span data-ttu-id="dd8cb-126">Wenn dies nicht der Fall ist, nutzt die Anwendung (a) eine nicht von der Grafikkarte unterstützte Funktion, oder es handelt sich (b) um einen Treiberfehler.</span><span class="sxs-lookup"><span data-stu-id="dd8cb-126">If it doesn't, it means that either (a) your application is assuming that the graphics card supports something that it doesn't, or (b) it's a driver bug.</span></span> <span data-ttu-id="dd8cb-127">Wenn der Code auch mit dem REF-Gerät nicht funktioniert, handelt es sich um einen Anwendungsfehler.</span><span class="sxs-lookup"><span data-stu-id="dd8cb-127">If it still doesn't work with the REF device, then it's an application bug.</span></span>
+
+## <a name="span-idhardwarevssoftwarespanspan-idhardwarevssoftwarespanspan-idhardwarevssoftwarespanhardware-vs-software-vertex-processing"></a><span data-ttu-id="dd8cb-128"><span id="Hardware_vs_Software"></span><span id="hardware_vs_software"></span><span id="HARDWARE_VS_SOFTWARE"></span>Vergleich der Hardware- und Software-Vertex-Verarbeitung</span><span class="sxs-lookup"><span data-stu-id="dd8cb-128"><span id="Hardware_vs_Software"></span><span id="hardware_vs_software"></span><span id="HARDWARE_VS_SOFTWARE"></span>Hardware vs. Software Vertex Processing</span></span>
+
+
+<span data-ttu-id="dd8cb-129">Der Unterschied zwischen der Hardware- und Software-Vertex-Verarbeitung betrifft nur HAL-Geräte.</span><span class="sxs-lookup"><span data-stu-id="dd8cb-129">Hardware versus Software vertex processing only really applies to HAL devices.</span></span> <span data-ttu-id="dd8cb-130">Wenn Sie Vertizes in die Pipeline schieben, müssen diese transformiert (über die Welt-, View- und Projektionsmatrizen) und beleuchtet (über die integrierte Beleuchtung von D3D) werden. Dieser Verarbeitungsschritt heiß T&L (Transformation & Lighting).</span><span class="sxs-lookup"><span data-stu-id="dd8cb-130">When you push vertices through the pipeline, they need to be transformed (by the world, view, and projection matrices in turn) and lit (by D3D's built-in lights) - this processing stage is known as T&L (for Transformation & Lighting).</span></span> <span data-ttu-id="dd8cb-131">Die Hardware-Vertex-Verarbeitung wird von der Hardware durchgeführt (wenn die Hardware diese unterstützt). Die Software-Vertex-Verarbeitung wird durch die Software durchgeführt.</span><span class="sxs-lookup"><span data-stu-id="dd8cb-131">Hardware vertex processing means this is done in hardware, if the hardware supports it; ergo, Software vertex processing is done is software.</span></span> <span data-ttu-id="dd8cb-132">Normalerweise wird zuerst ein Hardware-T&L-Gerät erstellt. Falls dieses fehlschlägt wird ein Mixed-Gerät verwendet. Schlägt auch dies fehl, wird ein Software-Gerät verwendet.</span><span class="sxs-lookup"><span data-stu-id="dd8cb-132">The general practice is to try creating a Hardware T&L device first, and if that fails try Mixed, and if that fails try Software.</span></span> <span data-ttu-id="dd8cb-133">(Fall das Software-Gerät fehlschlägt wird der Vorgang mit einem Fehler beeendet.)</span><span class="sxs-lookup"><span data-stu-id="dd8cb-133">(If software fails, give up and exit with an error.)</span></span>
+
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="dd8cb-134"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="dd8cb-134"><span id="related-topics"></span>Related topics</span></span>
+
+
+[<span data-ttu-id="dd8cb-135">Geräte</span><span class="sxs-lookup"><span data-stu-id="dd8cb-135">Devices</span></span>](devices.md)
 
  
 
+ 
 
 
 

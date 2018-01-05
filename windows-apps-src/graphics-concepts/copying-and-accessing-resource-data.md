@@ -2,84 +2,83 @@
 title: Kopieren und Zugreifen auf Ressourcendaten
 description: "Nutzungskennzeichen geben an, wie die Anwendung Ressourcendaten verwendet, um die Ressourcen im leistungsfähigsten Speicherbereich zu platzieren. Ressourcendaten werden von allen Ressourcen kopiert, damit CPU oder GPU ohne eine Beeinträchtigung der Leistung darauf zugreifen können."
 ms.assetid: 6A09702D-0FF2-4EA6-A353-0F95A3EE34E2
-keywords:
-- Kopieren und Zugreifen auf Ressourcendaten
-author: PeterTurcan
-ms.author: pettur
+keywords: Kopieren und Zugreifen auf Ressourcendaten
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1dc6853a5675b6e22300650a5c44519436c391d0
-ms.lasthandoff: 02/07/2017
-
+ms.localizationpriority: medium
+ms.openlocfilehash: 438b9608e9b15fd0c00def517a4c38491d486217
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/22/2017
 ---
-
-# <a name="copying-and-accessing-resource-data"></a>Kopieren und Zugreifen auf Ressourcendaten
-
-
-Nutzungskennzeichen geben an, wie die Anwendung Ressourcendaten verwendet, um die Ressourcen im leistungsfähigsten Speicherbereich zu platzieren. Ressourcendaten werden von allen Ressourcen kopiert, damit CPU oder GPU ohne eine Beeinträchtigung der Leistung darauf zugreifen können.
-
-Sie brauchen dabei weder zu berücksichtigen, ob die Ressourcen im Videospeicher oder im Systemspeicher erstellt werden, noch müssen Sie entscheiden, ob die Runtime den Speicher verwalten soll. Mit der Architektur von WDDM (Windows Display Driver Model) erstellen Apps Direct3D-Ressourcen mit verschiedenen Nutzungskennzeichen, um anzugeben, wie die Anwendung die Ressourcendaten verwendet. Das Treibermodell virtualisiert den von den Ressourcen verwendeten Speicher. Es liegt an der Verantwortung des Betriebssystem-/Treiber-/Speicher-Managers, die Ressourcen je nach erwarteter Verwendung in den leistungsfähigsten Speicherbereichen unterzubringen.
-
-In der Standardeinstellung stehen Ressourcen der GPU zur Verfügung. Es gibt Fälle, bei denen die Ressourcendaten für die CPU verfügbar sein müssen. Das Kopieren von Ressourcendaten, damit der entsprechende Prozessor ohne Leistungsbeeinträchtigung darauf zugreifen kann, erfordert Kenntnisse zur Funktionsweise der API-Methode.
-
-## <a name="span-idcopyingspanspan-idcopyingspanspan-idcopyingspancopying-resource-data"></a><span id="Copying"></span><span id="copying"></span><span id="COPYING"></span>Kopieren von Ressourcendaten
+# <a name="copying-and-accessing-resource-data"></a><span data-ttu-id="ddad6-105">Kopieren und Zugreifen auf Ressourcendaten</span><span class="sxs-lookup"><span data-stu-id="ddad6-105">Copying and accessing resource data</span></span>
 
 
-Ressourcen werden im Speicher erstellt, wenn Direct3D einen Aufruf zum Erstellen ausführt. Sie können im Videospeicher, Systemspeicher oder jeder anderen Art von Speicher erstellt werden. Da das WDDM-Treiber-Modell diesen Speicher virtualisiert, müssen Apps nicht mehr nachverfolgen, in welcher Art von Speicher die Ressourcen erstellt werden.
+<span data-ttu-id="ddad6-106">Nutzungskennzeichen geben an, wie die Anwendung Ressourcendaten verwendet, um die Ressourcen im leistungsfähigsten Speicherbereich zu platzieren.</span><span class="sxs-lookup"><span data-stu-id="ddad6-106">Usage flags indicate how the application intends to use the resource data, to place resources in the most performant area of memory possible.</span></span> <span data-ttu-id="ddad6-107">Ressourcendaten werden von allen Ressourcen kopiert, damit CPU oder GPU ohne eine Beeinträchtigung der Leistung darauf zugreifen können.</span><span class="sxs-lookup"><span data-stu-id="ddad6-107">Resource data is copied across resources so that the CPU or GPU can access it without impacting performance.</span></span>
 
-Im Idealfall würden alle Ressourcen im Videospeicher aufbewahrt, damit die GPU direkt darauf zugreifen kann. Manchmal ist es allerdings für die CPU erforderlich, die Ressourcendaten zu lesen oder für die GPU, auf die Ressourcendaten zuzugreifen, die die CPU geschrieben hat. Direct3D verarbeitet diese verschiedenen Szenarien, indem es von der Anwendung die Angaben über die Verwendung anfordert und anschließend bei Bedarf mehrere Methoden zum Kopieren der Ressourcendaten anbietet.
+<span data-ttu-id="ddad6-108">Sie brauchen dabei weder zu berücksichtigen, ob die Ressourcen im Videospeicher oder im Systemspeicher erstellt werden, noch müssen Sie entscheiden, ob die Runtime den Speicher verwalten soll.</span><span class="sxs-lookup"><span data-stu-id="ddad6-108">It isn't necessary to think about resources as being created in either video memory or system memory, or to decide whether or not the runtime should manage the memory.</span></span> <span data-ttu-id="ddad6-109">Mit der Architektur von WDDM (Windows Display Driver Model) erstellen Apps Direct3D-Ressourcen mit verschiedenen Nutzungskennzeichen, um anzugeben, wie die Anwendung die Ressourcendaten verwendet.</span><span class="sxs-lookup"><span data-stu-id="ddad6-109">With the architecture of the WDDM (Windows Display Driver Model), applications create Direct3D resources with different usage flags to indicate how the application intends to use the resource data.</span></span> <span data-ttu-id="ddad6-110">Das Treibermodell virtualisiert den von den Ressourcen verwendeten Speicher. Es liegt an der Verantwortung des Betriebssystem-/Treiber-/Speicher-Managers, die Ressourcen je nach erwarteter Verwendung in den leistungsfähigsten Speicherbereichen unterzubringen.</span><span class="sxs-lookup"><span data-stu-id="ddad6-110">This driver model virtualizes the memory used by resources; it is the responsibility of the operating system/driver/memory manager to place resources in the most performant area of memory possible, given the expected usage.</span></span>
 
-Je nachdem, wie die Ressource erstellt wurde, ist es nicht immer möglich, direkt auf die zugrunde liegenden Daten zuzugreifen. Dies kann bedeuten, dass die Ressourcendaten von der Quell-Ressource zu einer anderen Ressource kopiert werden müssen, auf die vom entsprechenden Prozessor zugegriffen werden kann. Bei Direct3D kann auf die Standardressourcen direkt über die GPU zugegriffen werden, während auf dynamische und Staging-Ressourcen direkt über die CPU zugegriffen werden kann.
+<span data-ttu-id="ddad6-111">In der Standardeinstellung stehen Ressourcen der GPU zur Verfügung.</span><span class="sxs-lookup"><span data-stu-id="ddad6-111">The default case is for resources to be available to the GPU.</span></span> <span data-ttu-id="ddad6-112">Es gibt Fälle, bei denen die Ressourcendaten für die CPU verfügbar sein müssen.</span><span class="sxs-lookup"><span data-stu-id="ddad6-112">There are times when the resource data needs to be available to the CPU.</span></span> <span data-ttu-id="ddad6-113">Das Kopieren von Ressourcendaten, damit der entsprechende Prozessor ohne Leistungsbeeinträchtigung darauf zugreifen kann, erfordert Kenntnisse zur Funktionsweise der API-Methode.</span><span class="sxs-lookup"><span data-stu-id="ddad6-113">Copying resource data around so that the appropriate processor can access it without impacting performance requires some knowledge of how the API methods work.</span></span>
 
-Nachdem eine Ressource erstellt wurde, kann dessen Verwendung nicht mehr geändert werden. Kopieren Sie stattdessen den Inhalt einer Ressource auf eine andere Ressource, die für eine andere Verwendung erstellt wurde. Ressourcendaten werden zwischen Ressourcen kopiert und Daten werden vom Speicher auf eine Ressource kopiert.
-
-Es gibt zwei Haupttypen von Ressourcen: zuordbare und nicht zuordbare Ressourcen. Ressourcen, die mit dynamischer oder Staging-Verwendung erstellt wurden sind zuordbar, während Ressourcen, die mit Standard- oder unveränderlicher Verwendungen erstellt wurden, nicht zuordbar sind.
-
-Das Kopieren von Daten auf nicht-zuordbare Ressourcen geht sehr schnell, da dies am häufigsten der Fall ist und optimiert wurde, um gute Ergebnisse zu liefern. Da die CPU nicht auf diese Ressourcen direkt zugreifen kann, werden diese optimiert, damit die GPU diese schnell ändern kann.
-
-Das Kopieren von Daten zwischen zuordbaren Ressourcen ist schwieriger, da die Leistung von der Verwendung abhängt, für die die Ressource erstellt wurde. Die GPU kann z. B. eine dynamische Ressource relativ schnell lesen, aber nicht darauf schreiben, während die GPU auf Staging-Ressourcen weder direkt schreiben noch diese lesen kann.
-
-Anwendungen, die Daten aus einer Ressource mit standardmäßiger Verwendung auf eine Ressource mit Staging-Verwendung kopieren möchten (damit die CPU die Daten lesen kann – ein sogenanntes GPU Readback Problem), müssen dabei vorsichtig sein. Weitere Informationen finden Sie unter [Zugreifen auf Ressourcendaten](#accessing) weiter unten.
-
-## <a name="span-idaccessingspanspan-idaccessingspanspan-idaccessingspanaccessing-resource-data"></a><span id="Accessing"></span><span id="accessing"></span><span id="ACCESSING"></span>Zugreifen auf Ressourcendaten
+## <a name="span-idcopyingspanspan-idcopyingspanspan-idcopyingspancopying-resource-data"></a><span data-ttu-id="ddad6-114"><span id="Copying"></span><span id="copying"></span><span id="COPYING"></span>Kopieren von Ressourcendaten</span><span class="sxs-lookup"><span data-stu-id="ddad6-114"><span id="Copying"></span><span id="copying"></span><span id="COPYING"></span>Copying resource data</span></span>
 
 
-Der Zugriff auf eine Ressource erfordert die Zuordnung der Ressource. „Zuordnen” bedeutet, dass die Anwendung der CPU Zugriff auf den Speicher gewähren möchte. Der Prozess des Zuordnens einer Ressource, damit die CPU auf den zugrunde liegenden Speicher zugreifen kann, kann zu Leistungsengpässen führen. Aus diesem Grunde muss bei der Ausführung der Aufgabe besondere Vorsicht walten.
+<span data-ttu-id="ddad6-115">Ressourcen werden im Speicher erstellt, wenn Direct3D einen Aufruf zum Erstellen ausführt.</span><span class="sxs-lookup"><span data-stu-id="ddad6-115">Resources are created in memory when Direct3D executes a Create call.</span></span> <span data-ttu-id="ddad6-116">Sie können im Videospeicher, Systemspeicher oder jeder anderen Art von Speicher erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="ddad6-116">They can be created in video memory, system memory, or any other kind of memory.</span></span> <span data-ttu-id="ddad6-117">Da das WDDM-Treiber-Modell diesen Speicher virtualisiert, müssen Apps nicht mehr nachverfolgen, in welcher Art von Speicher die Ressourcen erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="ddad6-117">Since WDDM driver model virtualizes this memory, applications no longer need to keep track of what kind of memory resources are created in.</span></span>
 
-Die Leistung kann zum Stillstand kommen, wenn die Anwendung versucht, eine Ressource zur falschen Zeit zuzuordnen. Wenn die Anwendung versucht, Zugriff auf die Ergebnisse eines Vorgangs zu erhalten, bevor der Vorgang abgeschlossen ist, wird die Pipeline zum Stillstand gebracht.
+<span data-ttu-id="ddad6-118">Im Idealfall würden alle Ressourcen im Videospeicher aufbewahrt, damit die GPU direkt darauf zugreifen kann.</span><span class="sxs-lookup"><span data-stu-id="ddad6-118">Ideally, all resources would be located in video memory so that the GPU can have immediate access to them.</span></span> <span data-ttu-id="ddad6-119">Manchmal ist es allerdings für die CPU erforderlich, die Ressourcendaten zu lesen oder für die GPU, auf die Ressourcendaten zuzugreifen, die die CPU geschrieben hat.</span><span class="sxs-lookup"><span data-stu-id="ddad6-119">However, it is sometimes necessary for the CPU to read the resource data or for the GPU to access resource data the CPU has written to.</span></span> <span data-ttu-id="ddad6-120">Direct3D verarbeitet diese verschiedenen Szenarien, indem es von der Anwendung die Angaben über die Verwendung anfordert und anschließend bei Bedarf mehrere Methoden zum Kopieren der Ressourcendaten anbietet.</span><span class="sxs-lookup"><span data-stu-id="ddad6-120">Direct3D handles these different scenarios by requesting the application specify a usage, and then offers several methods for copying resource data when necessary.</span></span>
 
-Das Ausführen einer Zuordnung zur falschen Zeit kann möglicherweise zu schwerwiegenden Leistungseinbußen führen, da die GPU und die CPU zur Synchronisierung gezwungen werden. Diese Synchronisierung erfolgt, wenn die Anwendung auf eine Ressource zugreift, bevor die GPU den Kopiervorgang in eine Ressource beendet hat, die der CPU zugeordnet werden kann.
+<span data-ttu-id="ddad6-121">Je nachdem, wie die Ressource erstellt wurde, ist es nicht immer möglich, direkt auf die zugrunde liegenden Daten zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="ddad6-121">Depending on how the resource was created, it is not always possible to directly access the underlying data.</span></span> <span data-ttu-id="ddad6-122">Dies kann bedeuten, dass die Ressourcendaten von der Quell-Ressource zu einer anderen Ressource kopiert werden müssen, auf die vom entsprechenden Prozessor zugegriffen werden kann.</span><span class="sxs-lookup"><span data-stu-id="ddad6-122">This may mean that the resource data must be copied from the source resource to another resource that is accessible by the appropriate processor.</span></span> <span data-ttu-id="ddad6-123">Bei Direct3D kann auf die Standardressourcen direkt über die GPU zugegriffen werden, während auf dynamische und Staging-Ressourcen direkt über die CPU zugegriffen werden kann.</span><span class="sxs-lookup"><span data-stu-id="ddad6-123">In terms of Direct3D, default resources can be accessed directly by the GPU, dynamic and staging resources can be directly accessed by the CPU.</span></span>
 
-### <a name="span-idperformanceconsiderationsspanspan-idperformanceconsiderationsspanspan-idperformanceconsiderationsspanperformance-considerations"></a><span id="Performance_Considerations"></span><span id="performance_considerations"></span><span id="PERFORMANCE_CONSIDERATIONS"></span>Leistungsaspekte
+<span data-ttu-id="ddad6-124">Nachdem eine Ressource erstellt wurde, kann dessen Verwendung nicht mehr geändert werden.</span><span class="sxs-lookup"><span data-stu-id="ddad6-124">Once a resource has been created, its usage cannot be changed.</span></span> <span data-ttu-id="ddad6-125">Kopieren Sie stattdessen den Inhalt einer Ressource auf eine andere Ressource, die für eine andere Verwendung erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="ddad6-125">Instead, copy the contents of one resource to another resource that was created with a different usage.</span></span> <span data-ttu-id="ddad6-126">Ressourcendaten werden zwischen Ressourcen kopiert und Daten werden vom Speicher auf eine Ressource kopiert.</span><span class="sxs-lookup"><span data-stu-id="ddad6-126">You copy resource data from one resource to another, or copy data from memory to a resource.</span></span>
 
-Sehen Sie den PC am besten als einen Computer, der eine parallele Architektur mit zwei Haupttypen von Prozessoren ausführt: eine oder mehrere CPUs und eine oder mehrere GPUs. Wie bei jeder parallelen Architektur wird die beste Leistung dann erzielt, wenn genügend Aufgaben für jeden Prozessor geplant sind, damit kein Leerlauf entsteht und wenn die Arbeit eines Prozessors nicht auf die Arbeit des anderen wartet.
+<span data-ttu-id="ddad6-127">Es gibt zwei Haupttypen von Ressourcen: zuordbare und nicht zuordbare Ressourcen.</span><span class="sxs-lookup"><span data-stu-id="ddad6-127">There are two main kinds of resources: mappable and non-mappable.</span></span> <span data-ttu-id="ddad6-128">Ressourcen, die mit dynamischer oder Staging-Verwendung erstellt wurden sind zuordbar, während Ressourcen, die mit Standard- oder unveränderlicher Verwendungen erstellt wurden, nicht zuordbar sind.</span><span class="sxs-lookup"><span data-stu-id="ddad6-128">Resources created with dynamic or staging usages are mappable, while resources created with default or immutable usages are non-mappable.</span></span>
 
-Beim GPU/CPU-Parallelismus wird schlimmstenfalls ein Prozessor gezwungen, auf die Ergebnisse der Arbeit eines anderen zu warten. Dies ist bei Direct3D nicht der Fall, da die Kopiermethode asynchron ausgeführt wird. Die Kopie muss nicht unbedingt zu dem Zeitpunkt ausgeführt werden, wenn die Methode zurückgegeben wird.
+<span data-ttu-id="ddad6-129">Das Kopieren von Daten auf nicht-zuordbare Ressourcen geht sehr schnell, da dies am häufigsten der Fall ist und optimiert wurde, um gute Ergebnisse zu liefern.</span><span class="sxs-lookup"><span data-stu-id="ddad6-129">Copying data among non-mappable resources is very fast because this is the most common case and has been optimized to perform well.</span></span> <span data-ttu-id="ddad6-130">Da die CPU nicht auf diese Ressourcen direkt zugreifen kann, werden diese optimiert, damit die GPU diese schnell ändern kann.</span><span class="sxs-lookup"><span data-stu-id="ddad6-130">Since these resources are not directly accessible by the CPU, they are optimized so that the GPU can manipulate them quickly.</span></span>
 
-Der Vorteil ist, dass die Anwendung erst dann Leistungseinbußen durch den eigentlichen Datenkopiervorgang erfährt, wenn die CPU beim tatsächlichen Zuordnungsaufruf auf die Daten zugreift. Wenn die Zuordnungsmethode nach dem eigentlichen Datenkopiervorgang aufgerufen wird, hat dies keine Leistungseinbußen zur Folge. Wenn die Zuordnungsmethode allerdings vor dem eigentlichen Datenkopiervorgang aufgerufen wird, wird die Pipeline zum Stillstand gebracht.
+<span data-ttu-id="ddad6-131">Das Kopieren von Daten zwischen zuordbaren Ressourcen ist schwieriger, da die Leistung von der Verwendung abhängt, für die die Ressource erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="ddad6-131">Copying data among mappable resources is more problematic because the performance will depend on the usage the resource was created with.</span></span> <span data-ttu-id="ddad6-132">Die GPU kann z.B. eine dynamische Ressource relativ schnell lesen, aber nicht darauf schreiben, während die GPU auf Staging-Ressourcen weder direkt schreiben noch diese lesen kann.</span><span class="sxs-lookup"><span data-stu-id="ddad6-132">For example, the GPU can read a dynamic resource fairly quickly but cannot write to them, and the GPU cannot read or write to staging resources directly.</span></span>
 
-Asynchrone Aufrufe in Direct3D (die den Großteil der Methoden ausmachen, insbesondere Rendering-Aufrufe) werden im sogenannten *Befehlspuffer* gespeichert. Dieser Puffer ist ein internes Element des Grafiktreibers und wird zur Verarbeitung von Aufrufen der zugrunde liegenden Hardware verwendet, damit der aufwendige Wechseln vom Benutzermodus zum Kernel-Modus in Microsoft so selten wie möglich auftritt.
+<span data-ttu-id="ddad6-133">Anwendungen, die Daten aus einer Ressource mit standardmäßiger Verwendung auf eine Ressource mit Staging-Verwendung kopieren möchten (damit die CPU die Daten lesen kann – ein sogenanntes GPU Readback Problem), müssen dabei vorsichtig sein.</span><span class="sxs-lookup"><span data-stu-id="ddad6-133">Applications that wish to copy data from a resource with default usage to a resource with staging usage (to allow the CPU to read the data -- that is, the GPU readback problem) must do so with care.</span></span> <span data-ttu-id="ddad6-134">Weitere Informationen finden Sie unter [Zugreifen auf Ressourcendaten](#accessing) weiter unten.</span><span class="sxs-lookup"><span data-stu-id="ddad6-134">See [Accessing resource data](#accessing), below.</span></span>
 
-Der Befehlspuffer wird geleert und verursacht so einen Benutzer/Kernel-Moduswechsel in einer der folgenden vier Situationen:
+## <a name="span-idaccessingspanspan-idaccessingspanspan-idaccessingspanaccessing-resource-data"></a><span data-ttu-id="ddad6-135"><span id="Accessing"></span><span id="accessing"></span><span id="ACCESSING"></span>Zugreifen auf Ressourcendaten</span><span class="sxs-lookup"><span data-stu-id="ddad6-135"><span id="Accessing"></span><span id="accessing"></span><span id="ACCESSING"></span>Accessing resource data</span></span>
 
-1.  „Gegenwärtig” wird aufgerufen.
-2.  „Leerung” wird aufgerufen.
-3.  Der Befehlspuffer ist voll, seine Größe ist dynamisch und wird durch das Betriebssystem und den Grafiktreiber festgelegt.
-4.  Die CPU erfordert Zugriff auf die Ergebnisse eines Befehls, der im Befehlspuffer auf seine Ausführung wartet.
 
-Von den oben genannten vier Situationen ist die letzte am kritischsten. Wenn die Anwendung einen Aufruf zum Kopieren einer Ressource oder Unterressource erteilt, wird der Aufruf im Befehlspuffer in die Warteschlange eingereiht.
+<span data-ttu-id="ddad6-136">Der Zugriff auf eine Ressource erfordert die Zuordnung der Ressource. „Zuordnen” bedeutet, dass die Anwendung der CPU Zugriff auf den Speicher gewähren möchte.</span><span class="sxs-lookup"><span data-stu-id="ddad6-136">Accessing a resource requires mapping the resource; mapping essentially means the application is trying to give the CPU access to memory.</span></span> <span data-ttu-id="ddad6-137">Der Prozess des Zuordnens einer Ressource, damit die CPU auf den zugrunde liegenden Speicher zugreifen kann, kann zu Leistungsengpässen führen. Aus diesem Grunde muss bei der Ausführung der Aufgabe besondere Vorsicht walten.</span><span class="sxs-lookup"><span data-stu-id="ddad6-137">The process of mapping a resource so that the CPU can access the underlying memory can cause some performance bottlenecks and for this reason, care must be taken as to how and when to perform this task.</span></span>
 
-Wenn die Anwendung dann versucht, die Staging-Ressource, die das Ziel des Kopieraufrufs war, vor dem Leeren des Befehlspuffers zuzuordnen, wird die Pipeline zum Stillstand gebracht, da nicht nur der Aufruf für die Kopiermethode ausgeführt werden muss, sondern alle anderen gepufferte Befehle im Befehlspuffer ebenfalls ausgeführt werden müssen. GPU und CPU werden dann synchronisiert, da die CPU darauf wartet, auf die Staging-Ressource zuzugreifen, während die GPU den Befehlspuffer leert und schließlich die Anforderungen der CPU-Ressourcen erfüllt. Nachdem die GPU den Kopiervorgang beendet, beginnt die CPU mit dem Zugriff auf die Staging-Ressourcen. Während dieser Zeit befindet sich die GPU allerdings im Leerlauf.
+<span data-ttu-id="ddad6-138">Die Leistung kann zum Stillstand kommen, wenn die Anwendung versucht, eine Ressource zur falschen Zeit zuzuordnen.</span><span class="sxs-lookup"><span data-stu-id="ddad6-138">Performance can grind to a halt if the application tries to map a resource at the wrong time.</span></span> <span data-ttu-id="ddad6-139">Wenn die Anwendung versucht, Zugriff auf die Ergebnisse eines Vorgangs zu erhalten, bevor der Vorgang abgeschlossen ist, wird die Pipeline zum Stillstand gebracht.</span><span class="sxs-lookup"><span data-stu-id="ddad6-139">If the application tries to access the results of an operation before that operation is finished, a pipeline stall will occur.</span></span>
 
-Wenn der Vorgang häufig während der Laufzeit ausgeführt wird, beeinträchtigt dies die Leistung erheblich. Aus diesem Grund sollte die Zuordnung von Ressourcen in Standardnutzung mit Vorsicht ausgeführt werden. Die Anwendung muss ausreichend lange warten, bis der Befehlspuffer geleert ist und daher alle Befehle abgeschlossen sind, bevor versucht wird, die entsprechenden Ressource zuzuordnen.
+<span data-ttu-id="ddad6-140">Das Ausführen einer Zuordnung zur falschen Zeit kann möglicherweise zu schwerwiegenden Leistungseinbußen führen, da die GPU und die CPU zur Synchronisierung gezwungen werden.</span><span class="sxs-lookup"><span data-stu-id="ddad6-140">Performing a map operation at the wrong time could potentially cause a severe drop in performance by forcing the GPU and the CPU to synchronize with each other.</span></span> <span data-ttu-id="ddad6-141">Diese Synchronisierung erfolgt, wenn die Anwendung auf eine Ressource zugreift, bevor die GPU den Kopiervorgang in eine Ressource beendet hat, die der CPU zugeordnet werden kann.</span><span class="sxs-lookup"><span data-stu-id="ddad6-141">This synchronization will occur if the application wants to access a resource before the GPU is finished copying it into a resource the CPU can map.</span></span>
 
-Wie lange sollte die Anwendung warten? Mindestens zwei Frames, da hierdurch der Parallelismus zwischen CPU und GPU maximal genutzt wird. So funktioniert die GPU: während die Anwendung Frame N durch die Übermittlung von Aufrufen an den Befehlspuffer verarbeitet, ist die GPU damit beschäftigt, Aufrufe aus dem vorherigen Frame, N-1, auszuführen.
+### <a name="span-idperformanceconsiderationsspanspan-idperformanceconsiderationsspanspan-idperformanceconsiderationsspanperformance-considerations"></a><span data-ttu-id="ddad6-142"><span id="Performance_Considerations"></span><span id="performance_considerations"></span><span id="PERFORMANCE_CONSIDERATIONS"></span>Leistungsaspekte</span><span class="sxs-lookup"><span data-stu-id="ddad6-142"><span id="Performance_Considerations"></span><span id="performance_considerations"></span><span id="PERFORMANCE_CONSIDERATIONS"></span>Performance considerations</span></span>
 
-Wenn eine Anwendung daher eine Ressource zuordnen möchte, die aus dem Videospeicher stammt und eine Ressource an Frame N kopiert, beginnt dieser Aufruf die Ausführung auf Frame N+1, wenn die Anwendung Aufrufe für den nächsten Frame übermittelt. Die Kopie sollten beendet werden, wenn die Anwendung Frame N+2 verarbeitet.
+<span data-ttu-id="ddad6-143">Sehen Sie den PC am besten als einen Computer, der eine parallele Architektur mit zwei Haupttypen von Prozessoren ausführt: eine oder mehrere CPUs und eine oder mehrere GPUs.</span><span class="sxs-lookup"><span data-stu-id="ddad6-143">It is best to think of a PC as a machine running as a parallel architecture with two main types of processors: one or more CPU's and one or more GPU's.</span></span> <span data-ttu-id="ddad6-144">Wie bei jeder parallelen Architektur wird die beste Leistung dann erzielt, wenn genügend Aufgaben für jeden Prozessor geplant sind, damit kein Leerlauf entsteht und wenn die Arbeit eines Prozessors nicht auf die Arbeit des anderen wartet.</span><span class="sxs-lookup"><span data-stu-id="ddad6-144">As in any parallel architecture, the best performance is achieved when each processor is scheduled with enough tasks to prevent it from going idle and when the work of one processor is not waiting on the work of another.</span></span>
+
+<span data-ttu-id="ddad6-145">Beim GPU/CPU-Parallelismus wird schlimmstenfalls ein Prozessor gezwungen, auf die Ergebnisse der Arbeit eines anderen zu warten.</span><span class="sxs-lookup"><span data-stu-id="ddad6-145">The worst-case scenario for GPU/CPU parallelism is the need to force one processor to wait for the results of work done by another.</span></span> <span data-ttu-id="ddad6-146">Dies ist bei Direct3D nicht der Fall, da die Kopiermethode asynchron ausgeführt wird. Die Kopie muss nicht unbedingt zu dem Zeitpunkt ausgeführt werden, wenn die Methode zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="ddad6-146">Direct3D removes this cost by making the copy methods asynchronous; the copy has not necessarily executed by the time the method returns.</span></span>
+
+<span data-ttu-id="ddad6-147">Der Vorteil ist, dass die Anwendung erst dann Leistungseinbußen durch den eigentlichen Datenkopiervorgang erfährt, wenn die CPU beim tatsächlichen Zuordnungsaufruf auf die Daten zugreift.</span><span class="sxs-lookup"><span data-stu-id="ddad6-147">The benefit of this is that the application does not pay the performance cost of actually copying the data until the CPU accesses the data, which is when Map is called.</span></span> <span data-ttu-id="ddad6-148">Wenn die Zuordnungsmethode nach dem eigentlichen Datenkopiervorgang aufgerufen wird, hat dies keine Leistungseinbußen zur Folge.</span><span class="sxs-lookup"><span data-stu-id="ddad6-148">If the Map method is called after the data has actually been copied, no performance loss occurs.</span></span> <span data-ttu-id="ddad6-149">Wenn die Zuordnungsmethode allerdings vor dem eigentlichen Datenkopiervorgang aufgerufen wird, wird die Pipeline zum Stillstand gebracht.</span><span class="sxs-lookup"><span data-stu-id="ddad6-149">On the other hand, if the Map method is called before the data has been copied, then a pipeline stall will occur.</span></span>
+
+<span data-ttu-id="ddad6-150">Asynchrone Aufrufe in Direct3D (die den Großteil der Methoden ausmachen, insbesondere Rendering-Aufrufe) werden im sogenannten *Befehlspuffer* gespeichert.</span><span class="sxs-lookup"><span data-stu-id="ddad6-150">Asynchronous calls in Direct3D (which are the vast majority of methods, and especially rendering calls) are stored in what is called a *command buffer*.</span></span> <span data-ttu-id="ddad6-151">Dieser Puffer ist ein internes Element des Grafiktreibers und wird zur Verarbeitung von Aufrufen der zugrunde liegenden Hardware verwendet, damit der aufwendige Wechseln vom Benutzermodus zum Kernel-Modus in Microsoft so selten wie möglich auftritt.</span><span class="sxs-lookup"><span data-stu-id="ddad6-151">This buffer is internal to the graphics driver and is used to batch calls to the underlying hardware so that the costly switch from user mode to kernel mode in Microsoft Windows occurs as rarely as possible.</span></span>
+
+<span data-ttu-id="ddad6-152">Der Befehlspuffer wird geleert und verursacht so einen Benutzer/Kernel-Moduswechsel in einer der folgenden vier Situationen:</span><span class="sxs-lookup"><span data-stu-id="ddad6-152">The command buffer is flushed, thus causing a user/kernel mode switch, in one of four situations, which are as follows.</span></span>
+
+1.  <span data-ttu-id="ddad6-153">„Gegenwärtig” wird aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="ddad6-153">Present is called.</span></span>
+2.  <span data-ttu-id="ddad6-154">„Leerung” wird aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="ddad6-154">Flush is called.</span></span>
+3.  <span data-ttu-id="ddad6-155">Der Befehlspuffer ist voll, seine Größe ist dynamisch und wird durch das Betriebssystem und den Grafiktreiber festgelegt.</span><span class="sxs-lookup"><span data-stu-id="ddad6-155">The command buffer is full; its size is dynamic and is controlled by the Operating System and the graphics driver.</span></span>
+4.  <span data-ttu-id="ddad6-156">Die CPU erfordert Zugriff auf die Ergebnisse eines Befehls, der im Befehlspuffer auf seine Ausführung wartet.</span><span class="sxs-lookup"><span data-stu-id="ddad6-156">The CPU requires access to the results of a command waiting to execute in the command buffer.</span></span>
+
+<span data-ttu-id="ddad6-157">Von den oben genannten vier Situationen ist die letzte am kritischsten.</span><span class="sxs-lookup"><span data-stu-id="ddad6-157">Of the four situations above, number four is the most critical to performance.</span></span> <span data-ttu-id="ddad6-158">Wenn die Anwendung einen Aufruf zum Kopieren einer Ressource oder Unterressource erteilt, wird der Aufruf im Befehlspuffer in die Warteschlange eingereiht.</span><span class="sxs-lookup"><span data-stu-id="ddad6-158">If the application issues a call to copy a resource, or subresource, this call is queued in the command buffer.</span></span>
+
+<span data-ttu-id="ddad6-159">Wenn die Anwendung dann versucht, die Staging-Ressource, die das Ziel des Kopieraufrufs war, vor dem Leeren des Befehlspuffers zuzuordnen, wird die Pipeline zum Stillstand gebracht, da nicht nur der Aufruf für die Kopiermethode ausgeführt werden muss, sondern alle anderen gepufferte Befehle im Befehlspuffer ebenfalls ausgeführt werden müssen.</span><span class="sxs-lookup"><span data-stu-id="ddad6-159">If the application then tries to map the staging resource that was the target of the copy call before the command buffer has been flushed, a pipeline stall will occur, because not only does the Copy method call need to execute, but all other buffered commands in the command buffer must execute as well.</span></span> <span data-ttu-id="ddad6-160">GPU und CPU werden dann synchronisiert, da die CPU darauf wartet, auf die Staging-Ressource zuzugreifen, während die GPU den Befehlspuffer leert und schließlich die Anforderungen der CPU-Ressourcen erfüllt.</span><span class="sxs-lookup"><span data-stu-id="ddad6-160">This will cause the GPU and CPU to synchronize because the CPU will be waiting to access the staging resource while the GPU is emptying the command buffer and finally filling the resource the CPU needs.</span></span> <span data-ttu-id="ddad6-161">Nachdem die GPU den Kopiervorgang beendet, beginnt die CPU mit dem Zugriff auf die Staging-Ressourcen. Während dieser Zeit befindet sich die GPU allerdings im Leerlauf.</span><span class="sxs-lookup"><span data-stu-id="ddad6-161">Once the GPU finishes the copy, the CPU will begin accessing the staging resource, but during this time, the GPU will be sitting idle.</span></span>
+
+<span data-ttu-id="ddad6-162">Wenn der Vorgang häufig während der Laufzeit ausgeführt wird, beeinträchtigt dies die Leistung erheblich.</span><span class="sxs-lookup"><span data-stu-id="ddad6-162">Doing this frequently at runtime will severely degrade performance.</span></span> <span data-ttu-id="ddad6-163">Aus diesem Grund sollte die Zuordnung von Ressourcen in Standardnutzung mit Vorsicht ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="ddad6-163">For that reason, mapping of resources created with default usage should be done with care.</span></span> <span data-ttu-id="ddad6-164">Die Anwendung muss ausreichend lange warten, bis der Befehlspuffer geleert ist und daher alle Befehle abgeschlossen sind, bevor versucht wird, die entsprechenden Ressource zuzuordnen.</span><span class="sxs-lookup"><span data-stu-id="ddad6-164">The application needs to wait long enough for the command buffer to be emptied and thus have all of those commands finish executing before it tries to map the corresponding staging resource.</span></span>
+
+<span data-ttu-id="ddad6-165">Wie lange sollte die Anwendung warten?</span><span class="sxs-lookup"><span data-stu-id="ddad6-165">How long should the application wait?</span></span> <span data-ttu-id="ddad6-166">Mindestens zwei Frames, da hierdurch der Parallelismus zwischen CPU und GPU maximal genutzt wird.</span><span class="sxs-lookup"><span data-stu-id="ddad6-166">At least two frames because this will enable parallelism between the CPU(s) and the GPU to be maximally leveraged.</span></span> <span data-ttu-id="ddad6-167">So funktioniert die GPU: während die Anwendung Frame N durch die Übermittlung von Aufrufen an den Befehlspuffer verarbeitet, ist die GPU damit beschäftigt, Aufrufe aus dem vorherigen Frame, N-1, auszuführen.</span><span class="sxs-lookup"><span data-stu-id="ddad6-167">The way the GPU works is that while the application is processing frame N by submitting calls to the command buffer, the GPU is busy executing the calls from the previous frame, N-1.</span></span>
+
+<span data-ttu-id="ddad6-168">Wenn eine Anwendung daher eine Ressource zuordnen möchte, die aus dem Videospeicher stammt und eine Ressource an Frame N kopiert, beginnt dieser Aufruf die Ausführung auf Frame N+1, wenn die Anwendung Aufrufe für den nächsten Frame übermittelt.</span><span class="sxs-lookup"><span data-stu-id="ddad6-168">So if an application wants to map a resource that originates in video memory and copies a resource at frame N, this call will actually begin to execute at frame N+1, when the application is submitting calls for the next frame.</span></span> <span data-ttu-id="ddad6-169">Die Kopie sollten beendet werden, wenn die Anwendung Frame N+2 verarbeitet.</span><span class="sxs-lookup"><span data-stu-id="ddad6-169">The copy should be finished when the application is processing frame N+2.</span></span>
 
 <table>
 <colgroup>
@@ -88,58 +87,57 @@ Wenn eine Anwendung daher eine Ressource zuordnen möchte, die aus dem Videospei
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Frame</th>
-<th align="left">GPU/CPU-Status</th>
+<th align="left"><span data-ttu-id="ddad6-170">Frame</span><span class="sxs-lookup"><span data-stu-id="ddad6-170">Frame</span></span></th>
+<th align="left"><span data-ttu-id="ddad6-171">GPU/CPU-Status</span><span class="sxs-lookup"><span data-stu-id="ddad6-171">GPU/CPU Status</span></span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">N</td>
+<td align="left"><span data-ttu-id="ddad6-172">N</span><span class="sxs-lookup"><span data-stu-id="ddad6-172">N</span></span></td>
 <td align="left"><ul>
-<li>CPU erteilt Render-Aufrufe für den aktuellen Frame.</li>
+<li><span data-ttu-id="ddad6-173">CPU erteilt Render-Aufrufe für den aktuellen Frame.</span><span class="sxs-lookup"><span data-stu-id="ddad6-173">CPU issues render calls for current frame.</span></span></li>
 </ul></td>
 </tr>
 <tr class="even">
-<td align="left">N+1</td>
+<td align="left"><span data-ttu-id="ddad6-174">N+1</span><span class="sxs-lookup"><span data-stu-id="ddad6-174">N+1</span></span></td>
 <td align="left"><ul>
-<li>GPU führt die von der CPU gesendete Aufrufe während Frame N aus.</li>
-<li>CPU erteilt Render-Aufrufe für den aktuellen Frame.</li>
+<li><span data-ttu-id="ddad6-175">GPU führt die von der CPU gesendete Aufrufe während Frame N aus.</span><span class="sxs-lookup"><span data-stu-id="ddad6-175">GPU executing calls sent from CPU during frame N.</span></span></li>
+<li><span data-ttu-id="ddad6-176">CPU erteilt Render-Aufrufe für den aktuellen Frame.</span><span class="sxs-lookup"><span data-stu-id="ddad6-176">CPU issues render calls for current frame.</span></span></li>
 </ul></td>
 </tr>
 <tr class="odd">
-<td align="left">N+2</td>
+<td align="left"><span data-ttu-id="ddad6-177">N+2</span><span class="sxs-lookup"><span data-stu-id="ddad6-177">N+2</span></span></td>
 <td align="left"><ul>
-<li>GPU beendet die Ausführung der von der CPU gesendeten Aufrufe während Frame N. Ergebnisse stehen bereit.</li>
-<li>GPU führt von der CPU gesendete Aufrufe während Frame N+1 aus.</li>
-<li>CPU erteilt Render-Aufrufe für den aktuellen Frame.</li>
+<li><span data-ttu-id="ddad6-178">GPU beendet die Ausführung der von der CPU gesendeten Aufrufe während Frame N. Ergebnisse stehen bereit.</span><span class="sxs-lookup"><span data-stu-id="ddad6-178">GPU finished executing calls sent from CPU during frame N. Results ready.</span></span></li>
+<li><span data-ttu-id="ddad6-179">GPU führt von der CPU gesendete Aufrufe während Frame N+1 aus.</span><span class="sxs-lookup"><span data-stu-id="ddad6-179">GPU executing calls sent from CPU during frame N+1.</span></span></li>
+<li><span data-ttu-id="ddad6-180">CPU erteilt Render-Aufrufe für den aktuellen Frame.</span><span class="sxs-lookup"><span data-stu-id="ddad6-180">CPU issues render calls for current frame.</span></span></li>
 </ul></td>
 </tr>
 <tr class="even">
-<td align="left">N+3</td>
+<td align="left"><span data-ttu-id="ddad6-181">N+3</span><span class="sxs-lookup"><span data-stu-id="ddad6-181">N+3</span></span></td>
 <td align="left"><ul>
-<li>GPU beendet die Ausführung der von der CPU gesendeten Aufrufe während Frame N+1. Ergebnisse stehen bereit.</li>
-<li>GPU führt von der CPU gesendete Aufrufe während Frame N+2 aus.</li>
-<li>CPU erteilt Render-Aufrufe für den aktuellen Frame.</li>
+<li><span data-ttu-id="ddad6-182">GPU beendet die Ausführung der von der CPU gesendeten Aufrufe während Frame N+1.</span><span class="sxs-lookup"><span data-stu-id="ddad6-182">GPU finished executing calls sent from CPU during frame N+1.</span></span> <span data-ttu-id="ddad6-183">Ergebnisse stehen bereit.</span><span class="sxs-lookup"><span data-stu-id="ddad6-183">Results ready.</span></span></li>
+<li><span data-ttu-id="ddad6-184">GPU führt von der CPU gesendete Aufrufe während Frame N+2 aus.</span><span class="sxs-lookup"><span data-stu-id="ddad6-184">GPU executing calls sent from CPU during frame N+2.</span></span></li>
+<li><span data-ttu-id="ddad6-185">CPU erteilt Render-Aufrufe für den aktuellen Frame.</span><span class="sxs-lookup"><span data-stu-id="ddad6-185">CPU issues render calls for current frame.</span></span></li>
 </ul></td>
 </tr>
 <tr class="odd">
-<td align="left">N+4</td>
-<td align="left">...</td>
+<td align="left"><span data-ttu-id="ddad6-186">N+4</span><span class="sxs-lookup"><span data-stu-id="ddad6-186">N+4</span></span></td>
+<td align="left"><span data-ttu-id="ddad6-187">...</span><span class="sxs-lookup"><span data-stu-id="ddad6-187">...</span></span></td>
 </tr>
 </tbody>
 </table>
 
  
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Verwandte Themen
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="ddad6-188"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="ddad6-188"><span id="related-topics"></span>Related topics</span></span>
 
 
-[Ressourcen](resources.md)
-
- 
+[<span data-ttu-id="ddad6-189">Ressourcen</span><span class="sxs-lookup"><span data-stu-id="ddad6-189">Resources</span></span>](resources.md)
 
  
 
+ 
 
 
 

@@ -2,134 +2,132 @@
 title: "Einführung zu Texturen"
 description: Eine Texturressource ist eine Datenstruktur zum Speichern von Texel, der die kleinste Einheit einer Textur darstellt, die gelesen oder geschrieben werden kann. Wird eine Textur von einem Shader gelesen, kann sie durch Textursampler gefiltert werden.
 ms.assetid: 6F3C76A8-F762-4296-AE02-BFBD6476A5A8
-keywords:
-- "Einführung zu Texturen"
-author: mtoepke
-ms.author: mtoepke
+keywords: "Einführung zu Texturen"
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ccdca1396673b0eed9ef74c5f0ce3a6f97e02b6d
-ms.lasthandoff: 02/07/2017
-
+ms.localizationpriority: medium
+ms.openlocfilehash: d2390568efc43e89da8aa8df73767bbd7b752538
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/22/2017
 ---
-
-# <a name="introduction-to-textures"></a>Einführung zu Texturen
-
-
-Eine Texturressource ist eine Datenstruktur zum Speichern von Texel, der die kleinste Einheit einer Textur darstellt, die gelesen oder geschrieben werden kann. Wird eine Textur von einem Shader gelesen, kann sie durch Textursampler gefiltert werden.
-
-Eine Texturressource ist eine strukturierte Datensammlung, die für das Speichern von Texel entwickelt wurde. Ein Texel repräsentiert die kleinste Einheit einer Textur, die von einer Pipeline gelesen oder geschrieben werden kann. Im Gegensatz zu Puffern können Texturen von Textursamplern gefiltert werden, da sie von Shader-Einheiten gelesen werden. Der Texturtyp hat Einfluss darauf, wie die Textur gefiltert wird. Jeder Texel enthält ein bis vier Komponenten, die in einem der DXGI-Formate angeordnet und durch die DXGI\_FORMAT-Enumeration definiert sind.
-
-Texturen werden als strukturierte Ressource mit einer bekannten Größe erstellt. Jedoch kann jede Textur zum Zeitpunkt des Erstellens von Ressourcen typisiert oder typenlos sein, solange der Typ unter Verwendung einer Ansicht vollständig angegeben ist, wenn die Textur an die Pipeline gebunden wird.
-
-## <a name="span-idtexturetypesspanspan-idtexturetypesspanspan-idtexturetypesspantexture-types"></a><span id="Texture_Types"></span><span id="texture_types"></span><span id="TEXTURE_TYPES"></span>Texturtypen
+# <a name="introduction-to-textures"></a><span data-ttu-id="a7508-105">Einführung zu Texturen</span><span class="sxs-lookup"><span data-stu-id="a7508-105">Introduction to textures</span></span>
 
 
-Direct3D unterstützt verschiedene Gleitkommadarstellungen. Alle Gleitkommaberechnungen arbeiten unter einer definierten Teilmenge von IEEE 754, 32-Bit-Gleitkommaregeln mit einfacher Genauigkeit.
+<span data-ttu-id="a7508-106">Eine Texturressource ist eine Datenstruktur zum Speichern von Texel, der die kleinste Einheit einer Textur darstellt, die gelesen oder geschrieben werden kann.</span><span class="sxs-lookup"><span data-stu-id="a7508-106">A texture resource is a data structure to store texels, which are the smallest unit of a texture that can be read or written to.</span></span> <span data-ttu-id="a7508-107">Wird eine Textur von einem Shader gelesen, kann sie durch Textursampler gefiltert werden.</span><span class="sxs-lookup"><span data-stu-id="a7508-107">When the texture is read by a shader, it can be filtered by texture samplers.</span></span>
 
-Es gibt verschiedene Texturarten: 1D, 2D und 3D, von denen jede mit oder ohne Mipmaps erstellt werden kann. Direct3D unterstützt auch Texturarrays und multi-gesampelte Texturen.
+<span data-ttu-id="a7508-108">Eine Texturressource ist eine strukturierte Datensammlung, die für das Speichern von Texel entwickelt wurde.</span><span class="sxs-lookup"><span data-stu-id="a7508-108">A texture resource is a structured collection of data designed to store texels.</span></span> <span data-ttu-id="a7508-109">Ein Texel repräsentiert die kleinste Einheit einer Textur, die von einer Pipeline gelesen oder geschrieben werden kann.</span><span class="sxs-lookup"><span data-stu-id="a7508-109">A texel represents the smallest unit of a texture that can be read or written to by the pipeline.</span></span> <span data-ttu-id="a7508-110">Im Gegensatz zu Puffern können Texturen von Textursamplern gefiltert werden, da sie von Shader-Einheiten gelesen werden.</span><span class="sxs-lookup"><span data-stu-id="a7508-110">Unlike buffers, textures can be filtered by texture samplers as they are read by shader units.</span></span> <span data-ttu-id="a7508-111">Der Texturtyp hat Einfluss darauf, wie die Textur gefiltert wird.</span><span class="sxs-lookup"><span data-stu-id="a7508-111">The type of texture impacts how the texture is filtered.</span></span> <span data-ttu-id="a7508-112">Jeder Texel enthält ein bis vier Komponenten, die in einem der DXGI-Formate angeordnet und durch die DXGI\_FORMAT-Enumeration definiert sind.</span><span class="sxs-lookup"><span data-stu-id="a7508-112">Each texel contains 1 to 4 components, arranged in one of the DXGI formats defined by the DXGI\_FORMAT enumeration.</span></span>
 
--   [1D-Texturen](#texture1d-resource)
--   [1D-Texturarrays](#texture1d-array-resource)
--   [2D-Texturen und 2D-Texturarrays](#texture2d-resource)
--   [3D-Texturen](#texture3d-resource)
+<span data-ttu-id="a7508-113">Texturen werden als strukturierte Ressource mit einer bekannten Größe erstellt.</span><span class="sxs-lookup"><span data-stu-id="a7508-113">Textures are created as a structured resource with a known size.</span></span> <span data-ttu-id="a7508-114">Jedoch kann jede Textur zum Zeitpunkt des Erstellens von Ressourcen typisiert oder typenlos sein, solange der Typ unter Verwendung einer Ansicht vollständig angegeben ist, wenn die Textur an die Pipeline gebunden wird.</span><span class="sxs-lookup"><span data-stu-id="a7508-114">However, each texture may be typed or typeless when the resource is created as long as the type is fully specified using a view when the texture is bound to the pipeline.</span></span>
 
-### <a name="span-idtexture1dresourcespanspan-idtexture1dresourcespanspan-idtexture1dresourcespanspan-idtexture1d-resourcespan1d-textures"></a><span id="Texture1D_Resource"></span><span id="texture1d_resource"></span><span id="TEXTURE1D_RESOURCE"></span><span id="texture1d-resource"></span>1D-Texturen
+## <a name="span-idtexturetypesspanspan-idtexturetypesspanspan-idtexturetypesspantexture-types"></a><span data-ttu-id="a7508-115"><span id="Texture_Types"></span><span id="texture_types"></span><span id="TEXTURE_TYPES"></span>Texturtypen</span><span class="sxs-lookup"><span data-stu-id="a7508-115"><span id="Texture_Types"></span><span id="texture_types"></span><span id="TEXTURE_TYPES"></span>Texture Types</span></span>
 
-In ihrer einfachsten Form enthält eine 1D-Textur die Texturdaten, die mit einer einzelnen Texturkoordinate behandelt werden können; sie können als Array von Texeln dargestellt werden, wie in der folgenden Abbildung dargestellt.
 
-Die folgende Abbildung zeigt eine 1D-Textur:
+<span data-ttu-id="a7508-116">Direct3D unterstützt verschiedene Gleitkommadarstellungen.</span><span class="sxs-lookup"><span data-stu-id="a7508-116">Direct3D supports several floating-point representations.</span></span> <span data-ttu-id="a7508-117">Alle Gleitkommaberechnungen arbeiten unter einer definierten Teilmenge von IEEE 754, 32-Bit-Gleitkommaregeln mit einfacher Genauigkeit.</span><span class="sxs-lookup"><span data-stu-id="a7508-117">All floating-point computations operate under a defined subset of the IEEE 754 32-bit single precision floating-point rules.</span></span>
+
+<span data-ttu-id="a7508-118">Es gibt verschiedene Texturarten: 1D, 2D und 3D, von denen jede mit oder ohne Mipmaps erstellt werden kann.</span><span class="sxs-lookup"><span data-stu-id="a7508-118">There are several types of textures: 1D, 2D, 3D, each of which can be created with or without mipmaps.</span></span> <span data-ttu-id="a7508-119">Direct3D unterstützt auch Texturarrays und multi-gesampelte Texturen.</span><span class="sxs-lookup"><span data-stu-id="a7508-119">Direct3D also supports texture arrays and multisampled textures.</span></span>
+
+-   [<span data-ttu-id="a7508-120">1D-Texturen</span><span class="sxs-lookup"><span data-stu-id="a7508-120">1D Textures</span></span>](#texture1d-resource)
+-   [<span data-ttu-id="a7508-121">1D-Texturarrays</span><span class="sxs-lookup"><span data-stu-id="a7508-121">1D Texture Arrays</span></span>](#texture1d-array-resource)
+-   [<span data-ttu-id="a7508-122">2D-Texturen und 2D-Texturarrays</span><span class="sxs-lookup"><span data-stu-id="a7508-122">2D Textures and 2D Texture Arrays</span></span>](#texture2d-resource)
+-   [<span data-ttu-id="a7508-123">3D-Texturen</span><span class="sxs-lookup"><span data-stu-id="a7508-123">3D Textures</span></span>](#texture3d-resource)
+
+### <a name="span-idtexture1dresourcespanspan-idtexture1dresourcespanspan-idtexture1dresourcespanspan-idtexture1d-resourcespan1d-textures"></a><span data-ttu-id="a7508-124"><span id="Texture1D_Resource"></span><span id="texture1d_resource"></span><span id="TEXTURE1D_RESOURCE"></span><span id="texture1d-resource"></span>1D-Texturen</span><span class="sxs-lookup"><span data-stu-id="a7508-124"><span id="Texture1D_Resource"></span><span id="texture1d_resource"></span><span id="TEXTURE1D_RESOURCE"></span><span id="texture1d-resource"></span>1D Textures</span></span>
+
+<span data-ttu-id="a7508-125">In ihrer einfachsten Form enthält eine 1D-Textur die Texturdaten, die mit einer einzelnen Texturkoordinate behandelt werden können; sie können als Array von Texeln dargestellt werden, wie in der folgenden Abbildungdargestellt.</span><span class="sxs-lookup"><span data-stu-id="a7508-125">A 1D texture in its simplest form contains texture data that can be addressed with a single texture coordinate; it can be visualized as an array of texels, as shown in the following illustration.</span></span>
+
+<span data-ttu-id="a7508-126">Die folgende Abbildung zeigt eine 1D-Textur:</span><span class="sxs-lookup"><span data-stu-id="a7508-126">The following illustration shows a 1D texture:</span></span>
 
 ![1D-Textur](images/d3d10-1d-texture.png)
 
-Jeder Texel enthält eine Reihe von Farbkomponenten, die vom Format der gespeicherten Daten abhängig sind. Um eine höhere Komplexität zu erreichen, können Sie eine 1D-Textur mit Mipmap-Ebenen erstellen, wie in der folgenden Abbildung dargestellt.
+<span data-ttu-id="a7508-128">Jeder Texel enthält eine Reihe von Farbkomponenten, die vom Format der gespeicherten Daten abhängig sind.</span><span class="sxs-lookup"><span data-stu-id="a7508-128">Each texel contains a number of color components depending on the format of the data stored.</span></span> <span data-ttu-id="a7508-129">Um eine höhere Komplexität zu erreichen, können Sie eine 1D-Textur mit Mipmap-Ebenen erstellen, wie in der folgenden Abbildungdargestellt.</span><span class="sxs-lookup"><span data-stu-id="a7508-129">Adding more complexity, you can create a 1D texture with mipmap levels, as shown in the following illustration.</span></span>
 
 ![1D-Textur mit Mipmap-Ebenen](images/d3d10-resource-texture1d.png)
 
-Eine Mipmap-Ebene ist eine Textur, die um die Zweierpotenz kleiner ist als die Ebene darüber. Die oberste Ebene enthält die meisten Details und jede nachfolgende Ebene ist kleiner. Bei einer 1D-Mipmap enthält die niedrigste Ebene ein Texel. Darüber hinaus reduzieren MIP-Ebenen immer auf 1:1 herunter.
+<span data-ttu-id="a7508-131">Eine Mipmap-Ebene ist eine Textur, die um die Zweierpotenz kleiner ist als die Ebene darüber.</span><span class="sxs-lookup"><span data-stu-id="a7508-131">A mipmap level is a texture that is a power-of-two smaller than the level above it.</span></span> <span data-ttu-id="a7508-132">Die oberste Ebene enthält die meisten Details und jede nachfolgende Ebene ist kleiner.</span><span class="sxs-lookup"><span data-stu-id="a7508-132">The topmost level contains the most detail, each subsequent level is smaller.</span></span> <span data-ttu-id="a7508-133">Bei einer 1D-Mipmap enthält die niedrigste Ebene ein Texel.</span><span class="sxs-lookup"><span data-stu-id="a7508-133">For a 1D mipmap, the smallest level contains one texel.</span></span> <span data-ttu-id="a7508-134">Darüber hinaus reduzieren MIP-Ebenen immer auf 1:1 herunter.</span><span class="sxs-lookup"><span data-stu-id="a7508-134">Furthermore, MIP levels always reduce down to 1:1.</span></span>
 
-Wenn Mipmaps für eine ungerade Anzahl Texturen erstellt werden, ist die nächst niedrigere Ebene immer eine gerade Zahl (ausgenommen die niedrigste Ebene erreicht 1). Das Diagramm stellt beispielsweise eine 5x1-Textur da, deren nächst kleinere Ebene eine 2x1-Textur bildet. Die nächst kleinere (und letzte) Mip-Ebene bildet eine Textur mit der Größe 1x1. Die unterschiedlichen Ebenen werden durch einen Index bezeichnet, der LOD (Detailstufe) genannt wird; Sie können die LOD verwenden, um auf eine kleinere Textur zuzugreifen, wenn Sie eine Geometrie berechnen und ausgeben, die nicht so nah bei der Kamera liegt.
+<span data-ttu-id="a7508-135">Wenn Mipmaps für eine ungerade Anzahl Texturen erstellt werden, ist die nächst niedrigere Ebene immer eine gerade Zahl (ausgenommen die niedrigste Ebene erreicht 1).</span><span class="sxs-lookup"><span data-stu-id="a7508-135">When mipmaps are generated for an odd sized texture, the next lower level is always even size (except when the lowest level reaches 1).</span></span> <span data-ttu-id="a7508-136">Das Diagramm stellt beispielsweise eine 5x1-Textur da, deren nächst kleinere Ebene eine 2x1-Textur bildet. Die nächst kleinere (und letzte) Mip-Ebene bildet eine Textur mit der Größe 1x1.</span><span class="sxs-lookup"><span data-stu-id="a7508-136">For example, the diagram illustrates a 5x1 texture whose next lowest level is a 2x1 texture, whose next (and last) mip level is a 1x1 sized texture.</span></span> <span data-ttu-id="a7508-137">Die unterschiedlichen Ebenen werden durch einen Index bezeichnet, der LOD (Detailstufe) genannt wird; Sie können die LOD verwenden, um auf eine kleinere Textur zuzugreifen, wenn Sie eine Geometrie berechnen und ausgeben, die nicht so nah bei der Kamera liegt.</span><span class="sxs-lookup"><span data-stu-id="a7508-137">The levels are identified by an index called a LOD (level-of-detail) which is used to access the smaller texture when rendering geometry that is not as close to the camera.</span></span>
 
-### <a name="span-idtexture1darrayresourcespanspan-idtexture1darrayresourcespanspan-idtexture1darrayresourcespanspan-idtexture1d-array-resourcespan1d-texture-arrays"></a><span id="Texture1D_Array_Resource"></span><span id="texture1d_array_resource"></span><span id="TEXTURE1D_ARRAY_RESOURCE"></span><span id="texture1d-array-resource"></span>1D-Texturarrays
+### <a name="span-idtexture1darrayresourcespanspan-idtexture1darrayresourcespanspan-idtexture1darrayresourcespanspan-idtexture1d-array-resourcespan1d-texture-arrays"></a><span data-ttu-id="a7508-138"><span id="Texture1D_Array_Resource"></span><span id="texture1d_array_resource"></span><span id="TEXTURE1D_ARRAY_RESOURCE"></span><span id="texture1d-array-resource"></span>1D-Texturarrays</span><span class="sxs-lookup"><span data-stu-id="a7508-138"><span id="Texture1D_Array_Resource"></span><span id="texture1d_array_resource"></span><span id="TEXTURE1D_ARRAY_RESOURCE"></span><span id="texture1d-array-resource"></span>1D Texture Arrays</span></span>
 
-Direct3D unterstützt auch Arrays mit Texturen. Ein 1D-Texturarray ähnelt vom Konzept her der folgenden Abbildung.
+<span data-ttu-id="a7508-139">Direct3D unterstützt auch Arrays mit Texturen.</span><span class="sxs-lookup"><span data-stu-id="a7508-139">Direct3D also supports arrays of textures.</span></span> <span data-ttu-id="a7508-140">Ein 1D-Texturarray ähnelt vom Konzept her der folgenden Abbildung.</span><span class="sxs-lookup"><span data-stu-id="a7508-140">An array of 1D textures looks conceptually like the following illustration.</span></span>
 
 ![Ein 1D-Texturarray](images/d3d10-resource-texture1darray.png)
 
-Dieses Texturarray enthält drei Texturen. Jede der drei Texturen verfügt über eine Texturbreite von 5 (bei der es sich um die Anzahl der Elemente in der ersten Ebene handelt). Jede Textur enthält auch eine Mipmap mit drei Ebenen.
+<span data-ttu-id="a7508-142">Dieses Texturarray enthält drei Texturen.</span><span class="sxs-lookup"><span data-stu-id="a7508-142">This texture array contains three textures.</span></span> <span data-ttu-id="a7508-143">Jede der drei Texturen verfügt über eine Texturbreite von 5 (bei der es sich um die Anzahl der Elemente in der ersten Ebene handelt).</span><span class="sxs-lookup"><span data-stu-id="a7508-143">Each of the three textures has a texture width of 5 (which is the number of elements in the first layer).</span></span> <span data-ttu-id="a7508-144">Jede Textur enthält auch eine Mipmap mit drei Ebenen.</span><span class="sxs-lookup"><span data-stu-id="a7508-144">Each texture also contains a 3 layer mipmap.</span></span>
 
-Alle Texturarrays in Direct3D sind ein homogenes Texturarray; das bedeutet, dass jede Textur in einem Texturarray dasselbe Datenformat und dieselbe Größe aufweisen muss (einschließlich der Texturbreite und der Anzahl der Mipmap-Ebenen). Sie können Texturarrays mit verschiedenen Größen erstellen, solange alle Texturen in jedem Array von der Größe her übereinstimmen.
+<span data-ttu-id="a7508-145">Alle Texturarrays in Direct3D sind ein homogenes Texturarray; das bedeutet, dass jede Textur in einem Texturarray dasselbe Datenformat und dieselbe Größe aufweisen muss (einschließlich der Texturbreite und der Anzahl der Mipmap-Ebenen).</span><span class="sxs-lookup"><span data-stu-id="a7508-145">All texture arrays in Direct3D are a homogeneous array of textures; this means that every texture in a texture array must have the same data format and size (including texture width and number of mipmap levels).</span></span> <span data-ttu-id="a7508-146">Sie können Texturarrays mit verschiedenen Größen erstellen, solange alle Texturen in jedem Array von der Größe her übereinstimmen.</span><span class="sxs-lookup"><span data-stu-id="a7508-146">You may create texture arrays of different sizes, as long as all the textures in each array match in size.</span></span>
 
-### <a name="span-idtexture2dresourcespanspan-idtexture2dresourcespanspan-idtexture2dresourcespanspan-idtexture2d-resourcespan2d-textures-and-2d-texture-arrays"></a><span id="Texture2D_Resource"></span><span id="texture2d_resource"></span><span id="TEXTURE2D_RESOURCE"></span><span id="texture2d-resource"></span>2D-Texturen und 2D-Texturarrays
+### <a name="span-idtexture2dresourcespanspan-idtexture2dresourcespanspan-idtexture2dresourcespanspan-idtexture2d-resourcespan2d-textures-and-2d-texture-arrays"></a><span data-ttu-id="a7508-147"><span id="Texture2D_Resource"></span><span id="texture2d_resource"></span><span id="TEXTURE2D_RESOURCE"></span><span id="texture2d-resource"></span>2D-Texturen und 2D-Texturarrays</span><span class="sxs-lookup"><span data-stu-id="a7508-147"><span id="Texture2D_Resource"></span><span id="texture2d_resource"></span><span id="TEXTURE2D_RESOURCE"></span><span id="texture2d-resource"></span>2D Textures and 2D Texture Arrays</span></span>
 
-Eine Texture2D-Ressource enthält ein Raster mit 2D-Texeln. Jedes Texel kann über einen u,v-Vektor angesprochen werden. Da es sich um eine Texturressource handelt, kann sie Mipmap-Ebenen und Unterressourcen enthalten. Eine vollständig ausgefüllte 2D-Texturressource entspricht der folgenden Abbildung.
+<span data-ttu-id="a7508-148">Eine Texture2D-Ressource enthält ein Raster mit 2D-Texeln.</span><span class="sxs-lookup"><span data-stu-id="a7508-148">A Texture2D resource contains a 2D grid of texels.</span></span> <span data-ttu-id="a7508-149">Jedes Texel kann über einen u,v-Vektor angesprochen werden.</span><span class="sxs-lookup"><span data-stu-id="a7508-149">Each texel is addressable by a u, v vector.</span></span> <span data-ttu-id="a7508-150">Da es sich um eine Texturressource handelt, kann sie Mipmap-Ebenen und Unterressourcen enthalten.</span><span class="sxs-lookup"><span data-stu-id="a7508-150">Since it is a texture resource, it may contain mipmap levels, and subresources.</span></span> <span data-ttu-id="a7508-151">Eine vollständig ausgefüllte 2D-Texturressource entspricht der folgenden Abbildung.</span><span class="sxs-lookup"><span data-stu-id="a7508-151">A fully populated 2D texture resource looks like the following illustration.</span></span>
 
 ![einer 2D-Texturressource](images/d3d10-resource-texture2d.png)
 
-Diese Texturressource enthält eine einzelne 3x5-Textur mit drei Mipmap-Ebenen.
+<span data-ttu-id="a7508-153">Diese Texturressource enthält eine einzelne 3x5-Textur mit drei Mipmap-Ebenen.</span><span class="sxs-lookup"><span data-stu-id="a7508-153">This texture resource contains a single 3x5 texture with three mipmap levels.</span></span>
 
-Eine 2D-Texturarray-Ressource ist ein homogenes 2D-Texturarray; das heißt, jede Textur hat dasselbe Datenformat und dieselben Dimensionen (z. B. Mipmap-Ebenen). Es verfügt über ein ähnliches Layout wie das 1D-Texturarray, mit der Ausnahme, dass die Texturen jetzt 2D-Daten enthalten, wie in der folgenden Abbildung dargestellt.
+<span data-ttu-id="a7508-154">Eine 2D-Texturarray-Ressource ist ein homogenes 2D-Texturarray; das heißt, jede Textur hat dasselbe Datenformat und dieselben Dimensionen (z. B. Mipmap-Ebenen).</span><span class="sxs-lookup"><span data-stu-id="a7508-154">A 2D texture array resource is a homogeneous array of 2D textures; that is, each texture has the same data format and dimensions (including mipmap levels).</span></span> <span data-ttu-id="a7508-155">Es verfügt über ein ähnliches Layout wie das 1D-Texturarray, mit der Ausnahme, dass die Texturen jetzt 2D-Daten enthalten, wie in der folgenden Abbildung dargestellt.</span><span class="sxs-lookup"><span data-stu-id="a7508-155">It has a similar layout as the 1D texture array except that the textures now contain 2D data, as shown in the following illustration.</span></span>
 
 ![ein 2D-Texturarray](images/d3d10-resource-texture2darray.png)
 
-Dieses Texturarray enthält drei Texturen; jede Textur ist 3x5 mit zwei Mipmap-Ebenen.
+<span data-ttu-id="a7508-157">Dieses Texturarray enthält drei Texturen; jede Textur ist 3x5 mit zwei Mipmap-Ebenen.</span><span class="sxs-lookup"><span data-stu-id="a7508-157">This texture array contains three textures; each texture is 3x5 with two mipmap levels.</span></span>
 
-### <a name="span-idtexture2darrayresourceasatexturecubespanspan-idtexture2darrayresourceasatexturecubespanspan-idtexture2darrayresourceasatexturecubespanusing-a-2d-texture-array-as-a-texture-cube"></a><span id="Texture2DArray_Resource_as_a_Texture_Cube"></span><span id="texture2darray_resource_as_a_texture_cube"></span><span id="TEXTURE2DARRAY_RESOURCE_AS_A_TEXTURE_CUBE"></span>Verwenden eines 2D-Texturarrays als Textur-Würfel
+### <a name="span-idtexture2darrayresourceasatexturecubespanspan-idtexture2darrayresourceasatexturecubespanspan-idtexture2darrayresourceasatexturecubespanusing-a-2d-texture-array-as-a-texture-cube"></a><span data-ttu-id="a7508-158"><span id="Texture2DArray_Resource_as_a_Texture_Cube"></span><span id="texture2darray_resource_as_a_texture_cube"></span><span id="TEXTURE2DARRAY_RESOURCE_AS_A_TEXTURE_CUBE"></span>Verwenden eines 2D-Texturarrays als Textur-Würfel</span><span class="sxs-lookup"><span data-stu-id="a7508-158"><span id="Texture2DArray_Resource_as_a_Texture_Cube"></span><span id="texture2darray_resource_as_a_texture_cube"></span><span id="TEXTURE2DARRAY_RESOURCE_AS_A_TEXTURE_CUBE"></span>Using a 2D Texture Array as a Texture Cube</span></span>
 
-Ein Textur-Würfel ist ein 2D-Texturarray, das sechs Texturen enthält, eine für jede Fläche des Würfels. Ein vollständig ausgefüllter Textur-Würfel entspricht der folgenden Abbildung.
+<span data-ttu-id="a7508-159">Ein Textur-Würfel ist ein 2D-Texturarray, das sechs Texturen enthält, eine für jede Fläche des Würfels.</span><span class="sxs-lookup"><span data-stu-id="a7508-159">A texture cube is a 2D texture array that contains 6 textures, one for each face of the cube.</span></span> <span data-ttu-id="a7508-160">Ein vollständig ausgefüllter Textur-Würfel entspricht der folgenden Abbildung.</span><span class="sxs-lookup"><span data-stu-id="a7508-160">A fully populated texture cube looks like the following illustration.</span></span>
 
 ![Ein Array an 2D-Texturressourcen, die einen Textur-Würfel darstellen](images/d3d10-resource-texturecube.png)
 
-Ein 2D-Texturarray mit sechs Texturen kann mit den der Würfelzuordnung innewohnenden Funktionen aus dem Inneren von Shadern gelesen werden, nachdem sie mit einer Würfel-Texturansicht an die Pipeline gebunden wurden. Textur-Würfel werden vom Shader aus mit einem 3D-Vektor angesprochen, der von der Mitte des Textur-Würfels nach außen weist.
+<span data-ttu-id="a7508-162">Ein 2D-Texturarray mit sechs Texturen kann mit den der Würfelzuordnung innewohnenden Funktionen aus dem Inneren von Shadern gelesen werden, nachdem sie mit einer Würfel-Texturansicht an die Pipeline gebunden wurden.</span><span class="sxs-lookup"><span data-stu-id="a7508-162">A 2D texture array that contains 6 textures may be read from within shaders with the cube map intrinsic functions, after they are bound to the pipeline with a cube-texture view.</span></span> <span data-ttu-id="a7508-163">Textur-Würfel werden vom Shader aus mit einem 3D-Vektor angesprochen, der von der Mitte des Textur-Würfels nach außen weist.</span><span class="sxs-lookup"><span data-stu-id="a7508-163">Texture cubes are addressed from the shader with a 3D vector pointing out from the center of the texture cube.</span></span>
 
-### <a name="span-idtexture3dresourcespanspan-idtexture3dresourcespanspan-idtexture3dresourcespanspan-idtexture3d-resourcespan3d-textures"></a><span id="Texture3D_Resource"></span><span id="texture3d_resource"></span><span id="TEXTURE3D_RESOURCE"></span><span id="texture3d-resource"></span>3D-Texturen
+### <a name="span-idtexture3dresourcespanspan-idtexture3dresourcespanspan-idtexture3dresourcespanspan-idtexture3d-resourcespan3d-textures"></a><span data-ttu-id="a7508-164"><span id="Texture3D_Resource"></span><span id="texture3d_resource"></span><span id="TEXTURE3D_RESOURCE"></span><span id="texture3d-resource"></span>3D-Texturen</span><span class="sxs-lookup"><span data-stu-id="a7508-164"><span id="Texture3D_Resource"></span><span id="texture3d_resource"></span><span id="TEXTURE3D_RESOURCE"></span><span id="texture3d-resource"></span>3D Textures</span></span>
 
-Eine 3D-Texturressource (auch bekannt als Volumentextur) enthält ein 3D-Volumen an Texeln. Da es sich um eine Texturressource handelt, kann sie Mipmap-Ebenen enthalten. Eine vollständig ausgefüllte 3D-Textur entspricht der folgenden Abbildung.
+<span data-ttu-id="a7508-165">Eine 3D-Texturressource (auch bekannt als Volumentextur) enthält ein 3D-Volumen an Texeln.</span><span class="sxs-lookup"><span data-stu-id="a7508-165">A 3D texture resource (also known as a volume texture) contains a 3D volume of texels.</span></span> <span data-ttu-id="a7508-166">Da es sich um eine Texturressource handelt, kann sie Mipmap-Ebenen enthalten.</span><span class="sxs-lookup"><span data-stu-id="a7508-166">Because it is a texture resource, it may contain mipmap levels.</span></span> <span data-ttu-id="a7508-167">Eine vollständig ausgefüllte 3D-Textur entspricht der folgenden Abbildung.</span><span class="sxs-lookup"><span data-stu-id="a7508-167">A fully populated 3D texture looks like the following illustration.</span></span>
 
 ![eine 3D-Texturressource](images/d3d10-resource-texture3d.png)
 
-Wenn ein 3D-Textur-Mipmap-Segment als Zielausgabe der Berechnung und der Ausgabe gebunden ist (mit einer Berechnen-Ziel-Ansicht), verhält sich die 3D-Textur analog zu einem 2D-Texturarray mit n Segmenten. Das konkrete Berechnungssegment wird aus der Geometrie-Shader-Phase ausgewählt.
+<span data-ttu-id="a7508-169">Wenn ein 3D-Textur-Mipmap-Segment als Zielausgabe der Berechnung und der Ausgabe gebunden ist (mit einer Berechnen-Ziel-Ansicht), verhält sich die 3D-Textur analog zu einem 2D-Texturarray mit n Segmenten.</span><span class="sxs-lookup"><span data-stu-id="a7508-169">When a 3D texture mipmap slice is bound as a render target output (with a render-target view), the 3D texture behaves identically to a 2D texture array with n slices.</span></span> <span data-ttu-id="a7508-170">Das konkrete Berechnungssegment wird aus der Geometrie-Shader-Phase ausgewählt.</span><span class="sxs-lookup"><span data-stu-id="a7508-170">The particular render slice is chosen from the geometry-shader stage.</span></span>
 
-Es gibt kein Konzept eines 3D-Texturarrays; dementsprechend ist eine 3D-Texturunterressource eine einzelne Mipmap-Ebene.
+<span data-ttu-id="a7508-171">Es gibt kein Konzept eines 3D-Texturarrays; dementsprechend ist eine 3D-Texturunterressource eine einzelne Mipmap-Ebene.</span><span class="sxs-lookup"><span data-stu-id="a7508-171">There is no concept of a 3D texture array; therefore a 3D texture subresource is a single mipmap level.</span></span>
 
-Koordinatensysteme für Direct3D sind für Pixel und Texel definiert.
+<span data-ttu-id="a7508-172">Koordinatensysteme für Direct3D sind für Pixel und Texel definiert.</span><span class="sxs-lookup"><span data-stu-id="a7508-172">Coordinate systems for Direct3D are defined for pixels and texels.</span></span>
 
-## <a name="span-idpixelspanspan-idpixelspanspan-idpixelspanpixel-coordinate-system"></a><span id="Pixel"></span><span id="pixel"></span><span id="PIXEL"></span>Pixel-Koordinatensystem
+## <a name="span-idpixelspanspan-idpixelspanspan-idpixelspanpixel-coordinate-system"></a><span data-ttu-id="a7508-173"><span id="Pixel"></span><span id="pixel"></span><span id="PIXEL"></span>Pixel-Koordinatensystem</span><span class="sxs-lookup"><span data-stu-id="a7508-173"><span id="Pixel"></span><span id="pixel"></span><span id="PIXEL"></span>Pixel Coordinate System</span></span>
 
 
-Das Pixel-Koordinatensystem in Direct3D definiert den Ursprung eines Renderziels an der oberen linken Ecke, wie im folgenden Diagramm dargestellt. Die Mittelpunkte der Pixel werden um (0,5f,0,5f) von Ihren Ganzzahlpositionen versetzt.
+<span data-ttu-id="a7508-174">Das Pixel-Koordinatensystem in Direct3D definiert den Ursprung eines Renderziels an der oberen linken Ecke, wie im folgenden Diagramm dargestellt.</span><span class="sxs-lookup"><span data-stu-id="a7508-174">The pixel coordinate system in Direct3D defines the origin of a render target at the upper-left corner, as shown in the following diagram.</span></span> <span data-ttu-id="a7508-175">Die Mittelpunkte der Pixel werden um (0,5f,0,5f) von Ihren Ganzzahlpositionen versetzt.</span><span class="sxs-lookup"><span data-stu-id="a7508-175">Pixel centers are offset by (0.5f,0.5f) from integer locations.</span></span>
 
 ![Diagramm eines Pixel-Koordinatensystems in Direct3D 10](images/d3d10-coordspix10.png)
 
-## <a name="span-idtexelspanspan-idtexelspanspan-idtexelspantexel-coordinate-system"></a><span id="Texel"></span><span id="texel"></span><span id="TEXEL"></span>Texel-Koordinatensystem
+## <a name="span-idtexelspanspan-idtexelspanspan-idtexelspantexel-coordinate-system"></a><span data-ttu-id="a7508-177"><span id="Texel"></span><span id="texel"></span><span id="TEXEL"></span>Texel-Koordinatensystem</span><span class="sxs-lookup"><span data-stu-id="a7508-177"><span id="Texel"></span><span id="texel"></span><span id="TEXEL"></span>Texel Coordinate System</span></span>
 
 
-Das Texel-Koordinatensystem hat seinen Ursprung in der oberen linken Ecke der Textur, wie im folgenden Diagramm dargestellt. Das vereinfacht das Rendern von am Bildschirm ausgerichteten Texturen erheblich, da das Pixel-Koordinatensystem mit dem Texel-Koordinatensystem ausgerichtet wird.
+<span data-ttu-id="a7508-178">Das Texel-Koordinatensystem hat seinen Ursprung in der oberen linken Ecke der Textur, wie im folgenden Diagramm dargestellt.</span><span class="sxs-lookup"><span data-stu-id="a7508-178">The texel coordinate system has its origin at the top-left corner of the texture, as shown in the following diagram.</span></span> <span data-ttu-id="a7508-179">Das vereinfacht das Rendern von am Bildschirm ausgerichteten Texturen erheblich, da das Pixel-Koordinatensystem mit dem Texel-Koordinatensystem ausgerichtet wird.</span><span class="sxs-lookup"><span data-stu-id="a7508-179">This makes rendering screen-aligned textures trivial, as the pixel coordinate system is aligned with the texel coordinate system.</span></span>
 
 ![Diagramm eines Texel-Koordinatensystems](images/d3d10-coordstex10.png)
 
-Texturkoordinaten werden entweder mit einer normalisierten oder skalierten Zahl dargestellt. Jede Texturkoordinate ist, wie nachfolgend dargestellt, einem bestimmten Texel geordnet:
+<span data-ttu-id="a7508-181">Texturkoordinaten werden entweder mit einer normalisierten oder skalierten Zahl dargestellt. Jede Texturkoordinate ist, wie nachfolgend dargestellt, einem bestimmten Texel geordnet:</span><span class="sxs-lookup"><span data-stu-id="a7508-181">Texture coordinates are represented with either a normalized or a scaled number; each texture coordinate is mapped to a specific texel as follows:</span></span>
 
-Für eine normalisierte Koordinate:
+<span data-ttu-id="a7508-182">Für eine normalisierte Koordinate:</span><span class="sxs-lookup"><span data-stu-id="a7508-182">For a normalized coordinate:</span></span>
 
--   Punkt-Sampling: Texel \# = floor(U \* Breite)
--   Lineares Sampling: Linkes Texel \# = floor(U \* Width), Rechtes Texel \# = Linkes Texel \# + 1
+-   <span data-ttu-id="a7508-183">Punkt-Sampling: Texel \# = floor(U \* Breite)</span><span class="sxs-lookup"><span data-stu-id="a7508-183">Point sampling: Texel \# = floor(U \* Width)</span></span>
+-   <span data-ttu-id="a7508-184">Lineares Sampling: Linkes Texel \# = floor(U \* Width), Rechtes Texel \# = Linkes Texel \# + 1</span><span class="sxs-lookup"><span data-stu-id="a7508-184">Linear sampling: Left Texel \# = floor(U \* Width), Right Texel \# = Left Texel \# + 1</span></span>
 
-Für eine skalierte Koordinate:
+<span data-ttu-id="a7508-185">Für eine skalierte Koordinate:</span><span class="sxs-lookup"><span data-stu-id="a7508-185">For a scaled coordinate:</span></span>
 
--   Punkt-Sampling: Texel \# = floor(U)
--   Lineares Sampling: Linkes Texel \# = floor(U - 0.5), Rechtes Texel \# = Linkes Texel \# + 1
+-   <span data-ttu-id="a7508-186">Punkt-Sampling: Texel \# = floor(U)</span><span class="sxs-lookup"><span data-stu-id="a7508-186">Point sampling: Texel \# = floor(U)</span></span>
+-   <span data-ttu-id="a7508-187">Lineares Sampling: Linkes Texel \# = floor(U - 0.5), Rechtes Texel \# = Linkes Texel \# + 1</span><span class="sxs-lookup"><span data-stu-id="a7508-187">Linear sampling: Left Texel \# = floor(U - 0.5), Right Texel \# = Left Texel \# + 1</span></span>
 
-Wobei die Breite die Texturbreite (in Texel) ist.
+<span data-ttu-id="a7508-188">Wobei die Breite die Texturbreite (in Texel) ist.</span><span class="sxs-lookup"><span data-stu-id="a7508-188">Where the width, is the width of the texture (in texels).</span></span>
 
-Das Adress-Wrapping der Textur findet nach dem Berechnen der Texelposition statt.
+<span data-ttu-id="a7508-189">Das Adress-Wrapping der Textur findet nach dem Berechnen der Texelposition statt.</span><span class="sxs-lookup"><span data-stu-id="a7508-189">Texture address wrapping occurs after the texel location is computed.</span></span>
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Verwandte Themen
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="a7508-190"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="a7508-190"><span id="related-topics"></span>Related topics</span></span>
 
 
-[Texturen](textures.md)
-
+[<span data-ttu-id="a7508-191">Texturen</span><span class="sxs-lookup"><span data-stu-id="a7508-191">Textures</span></span>](textures.md)

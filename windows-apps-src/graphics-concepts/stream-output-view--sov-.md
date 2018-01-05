@@ -2,35 +2,33 @@
 title: Streamausgabeansicht (SOV)
 description: "Streamausgabeansichten ermöglichen, dass die Vertexinformationen von den Vertex-, Tessellation- und Hüllen-Shadern zur weiteren Verwendung zurück in die Anwendung gestreamt werden."
 ms.assetid: F528A920-0EAD-4634-BA5F-CB34A8FAEFFA
-keywords:
-- Streamausgabeansicht (SOV)
-author: PeterTurcan
-ms.author: pettur
+keywords: Streamausgabeansicht (SOV)
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a69bafe725f333b105d207113e031e5be64a0176
-ms.lasthandoff: 02/07/2017
-
+ms.localizationpriority: medium
+ms.openlocfilehash: 8268a93eba804af1c16ffec5a9ef07a4c05e69ec
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/22/2017
 ---
-
-# <a name="stream-output-view-sov"></a>Streamausgabeansicht (SOV)
-
-
-Streamausgabeansichten ermöglichen, dass die Vertexinformationen von den Vertex-, Tessellation- und Hüllen-Shadern zur weiteren Verwendung zurück in die Anwendung gestreamt werden. Zum Beispiel könnte ein Objekt, das durch diese Shader verzerrt wurde, in die Anwendung zurückgeschrieben werden, um eine genauere Eingabe für eine Physik- oder eine andere Engine bereitzustellen. In der Praxis sind aber Streamausgabeansichten ein selten verwendetes Feature der Grafikpipeline.
-
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Verwandte Themen
+# <a name="stream-output-view-sov"></a><span data-ttu-id="2846c-104">Streamausgabeansicht (SOV)</span><span class="sxs-lookup"><span data-stu-id="2846c-104">Stream output view (SOV)</span></span>
 
 
-[Ansichten](views.md)
+<span data-ttu-id="2846c-105">Streamausgabeansichten ermöglichen, dass die Vertexinformationen von den Vertex-, Tessellation- und Hüllen-Shadern zur weiteren Verwendung zurück in die Anwendung gestreamt werden.</span><span class="sxs-lookup"><span data-stu-id="2846c-105">Stream output views enable the vertex information that the vertex, tessellation and geometry shaders have come up with to be streamed back out to the application for further use.</span></span> <span data-ttu-id="2846c-106">Zum Beispiel könnte ein Objekt, das durch diese Shader verzerrt wurde, in die Anwendung zurückgeschrieben werden, um eine genauere Eingabe für eine Physik- oder eine andere Engine bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="2846c-106">For example, an object that has been distorted by these shaders could be written back to the application to provide more accurate input to a physics or other engine.</span></span> <span data-ttu-id="2846c-107">In der Praxis sind aber Streamausgabeansichten ein selten verwendetes Feature der Grafikpipeline.</span><span class="sxs-lookup"><span data-stu-id="2846c-107">In practice though, stream output views are an infrequently used feature of the graphics pipeline.</span></span>
 
- 
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="2846c-108"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="2846c-108"><span id="related-topics"></span>Related topics</span></span>
+
+
+[<span data-ttu-id="2846c-109">Ansichten</span><span class="sxs-lookup"><span data-stu-id="2846c-109">Views</span></span>](views.md)
 
  
 
+ 
 
 
 

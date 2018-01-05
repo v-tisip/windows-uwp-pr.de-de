@@ -9,27 +9,25 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, Spiele, Schattenmaps, DirectX
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: e4cffcf1e9655d5bc5dacbfc17cb64b5671d7551
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.translationtype: HT
+ms.contentlocale: de-DE
 ---
-
-# <a name="support-shadow-maps-on-a-range-of-hardware"></a>Unterstützen von Schattenmaps für unterschiedliche Hardware
-
-
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+# <a name="support-shadow-maps-on-a-range-of-hardware"></a><span data-ttu-id="c217d-104">Unterstützen von Schattenmaps für unterschiedliche Hardware</span><span class="sxs-lookup"><span data-stu-id="c217d-104">Support shadow maps on a range of hardware</span></span>
 
 
-Rendern Sie Schatten in noch besserer Qualität auf schnelleren Geräten und schnellere Schatten auf weniger leistungsfähigen Geräten. Teil 4 von [Exemplarische Vorgehensweise: Implementieren von Schattenvolumes mithilfe von Tiefenpuffern in Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
-
-## <a name="comparison-filter-types"></a>Arten von Vergleichsfiltern
+<span data-ttu-id="c217d-105">\[ Aktualisiert für UWP-Apps unter Windows 10.</span><span class="sxs-lookup"><span data-stu-id="c217d-105">\[ Updated for UWP apps on Windows 10.</span></span> <span data-ttu-id="c217d-106">Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span><span class="sxs-lookup"><span data-stu-id="c217d-106">For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span></span>
 
 
-Verwenden Sie die lineare Filterung nur, wenn das Gerät die Leistungseinbußen verkraften kann. Im Allgemeinen verfügen Geräte mit Direct3D-Featureebene 9\_1 nicht über eine ausreichende Leistung, um einen Teil davon für die lineare Filterung von Schatten bereitstellen zu können. Nutzen Sie auf diesen Geräten stattdessen die Punktfilterung. Passen Sie beim Verwenden der linearen Filterung den Pixelshader so an, dass die Schattenkanten ineinander verlaufen.
+<span data-ttu-id="c217d-107">Rendern Sie Schatten in noch besserer Qualität auf schnelleren Geräten und schnellere Schatten auf weniger leistungsfähigen Geräten.</span><span class="sxs-lookup"><span data-stu-id="c217d-107">Render higher-fidelity shadows on faster devices and faster shadows on less powerful devices.</span></span> <span data-ttu-id="c217d-108">Teil4 von [Exemplarische Vorgehensweise: Implementieren von Schattenvolumes mithilfe von Tiefenpuffern in Direct3D11](implementing-depth-buffers-for-shadow-mapping.md).</span><span class="sxs-lookup"><span data-stu-id="c217d-108">Part 4 of [Walkthrough: Implement shadow volumes using depth buffers in Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).</span></span>
 
-Erstellen Sie den Vergleichssampler für die Punktfilterung:
+## <a name="comparison-filter-types"></a><span data-ttu-id="c217d-109">Arten von Vergleichsfiltern</span><span class="sxs-lookup"><span data-stu-id="c217d-109">Comparison filter types</span></span>
+
+
+<span data-ttu-id="c217d-110">Verwenden Sie die lineare Filterung nur, wenn das Gerät die Leistungseinbußen verkraften kann.</span><span class="sxs-lookup"><span data-stu-id="c217d-110">Only use linear filtering if the device can afford the performance penalty.</span></span> <span data-ttu-id="c217d-111">Im Allgemeinen verfügen Geräte mit Direct3D-Featureebene9\_1 nicht über eine ausreichende Leistung, um einen Teil davon für die lineare Filterung von Schatten bereitstellen zu können.</span><span class="sxs-lookup"><span data-stu-id="c217d-111">Generally, Direct3D feature level 9\_1 devices don't have enough power to spare for linear filtering on shadows.</span></span> <span data-ttu-id="c217d-112">Nutzen Sie auf diesen Geräten stattdessen die Punktfilterung.</span><span class="sxs-lookup"><span data-stu-id="c217d-112">Use point filtering instead on these devices.</span></span> <span data-ttu-id="c217d-113">Passen Sie beim Verwenden der linearen Filterung den Pixelshader so an, dass die Schattenkanten ineinander verlaufen.</span><span class="sxs-lookup"><span data-stu-id="c217d-113">When you use linear filtering, adjust the pixel shader so that it blends the shadow edges.</span></span>
+
+<span data-ttu-id="c217d-114">Erstellen Sie den Vergleichssampler für die Punktfilterung:</span><span class="sxs-lookup"><span data-stu-id="c217d-114">Create the comparison sampler for point filtering:</span></span>
 
 ```cpp
 D3D11_SAMPLER_DESC comparisonSamplerDesc;
@@ -61,7 +59,7 @@ DX::ThrowIfFailed(
     );
 ```
 
-Erstellen Sie anschließend einen Sampler für die lineare Filterung:
+<span data-ttu-id="c217d-115">Erstellen Sie anschließend einen Sampler für die lineare Filterung:</span><span class="sxs-lookup"><span data-stu-id="c217d-115">Then create a sampler for linear filtering:</span></span>
 
 ```cpp
 comparisonSamplerDesc.Filter = D3D11_FILTER_COMPARISON_MIN_MAG_MIP_LINEAR;
@@ -73,7 +71,7 @@ DX::ThrowIfFailed(
     );
 ```
 
-Wählen Sie einen Sampler aus:
+<span data-ttu-id="c217d-116">Wählen Sie einen Sampler aus:</span><span class="sxs-lookup"><span data-stu-id="c217d-116">Choose a sampler:</span></span>
 
 ```cpp
 ID3D11PixelShader* pixelShader;
@@ -100,7 +98,7 @@ context->PSSetSamplers(0, 1, comparisonSampler);
 context->PSSetShaderResources(0, 1, m_shadowResourceView.GetAddressOf());
 ```
 
-Schattenkanten mit linearer Filterung vermischen:
+<span data-ttu-id="c217d-117">Schattenkanten mit linearer Filterung vermischen:</span><span class="sxs-lookup"><span data-stu-id="c217d-117">Blend shadow edges with linear filtering:</span></span>
 
 ```cpp
 // Blends the shadow area into the lit area.
@@ -109,22 +107,22 @@ float3 shadow = (1.0f - lighting) * ambient;
 return float4(input.color * (light + shadow), 1.f);
 ```
 
-## <a name="shadow-buffer-size"></a>Schattenpuffergröße
+## <a name="shadow-buffer-size"></a><span data-ttu-id="c217d-118">Schattenpuffergröße</span><span class="sxs-lookup"><span data-stu-id="c217d-118">Shadow buffer size</span></span>
 
 
-Größere Schattenmaps sehen weniger "eckig" aus, aber sie nehmen mehr Speicherplatz im Grafikspeicher ein. Experimentieren Sie im Spiel mit unterschiedlichen Größen von Schattenmaps, und beobachten Sie, welche Ergebnisse Sie für unterschiedliche Arten von Geräten und unterschiedliche Anzeigegrößen erzielen. Erwägen Sie eine Optimierung, z. B. mithilfe von kaskadierenden Schattenmaps, um bessere Ergebnisse mit geringerem Grafikspeicheraufwand zu erhalten. Weitere Informationen finden Sie unter [Häufig verwendete Methoden zur Verbesserung von Tiefenmaps für Schatten](https://msdn.microsoft.com/library/windows/desktop/ee416324).
+<span data-ttu-id="c217d-119">Größere Schattenmaps sehen weniger "eckig" aus, aber sie nehmen mehr Speicherplatz im Grafikspeicher ein.</span><span class="sxs-lookup"><span data-stu-id="c217d-119">Larger shadow maps won't look as blocky but they take up more space in graphics memory.</span></span> <span data-ttu-id="c217d-120">Experimentieren Sie im Spiel mit unterschiedlichen Größen von Schattenmaps, und beobachten Sie, welche Ergebnisse Sie für unterschiedliche Arten von Geräten und unterschiedliche Anzeigegrößen erzielen.</span><span class="sxs-lookup"><span data-stu-id="c217d-120">Experiment with different shadow map sizes in your game and observe the results in different types of devices and different display sizes.</span></span> <span data-ttu-id="c217d-121">Erwägen Sie eine Optimierung, z.B. mithilfe von kaskadierenden Schattenmaps, um bessere Ergebnisse mit geringerem Grafikspeicheraufwand zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="c217d-121">Consider an optimization like cascaded shadow maps to get better results with less graphics memory.</span></span> <span data-ttu-id="c217d-122">Weitere Informationen finden Sie unter [Häufig verwendete Methoden zur Verbesserung von Tiefenmaps für Schatten](https://msdn.microsoft.com/library/windows/desktop/ee416324).</span><span class="sxs-lookup"><span data-stu-id="c217d-122">See [Common Techniques to Improve Shadow Depth Maps](https://msdn.microsoft.com/library/windows/desktop/ee416324).</span></span>
 
-## <a name="shadow-buffer-depth"></a>Schattenpuffertiefe
-
-
-Eine höhere Präzision im Schattenpuffer führt zu genaueren Ergebnissen bei Tiefentests. Dies trägt zur Verhinderung von Problemen bei, z. B. von Z-Bufferkonflikten. Wie bei größeren Schattenmaps auch wird bei einer höheren Präzision mehr Speicher belegt. Experimentieren Sie mit unterschiedlichen Arten von Tiefenpräzision (DXGI\_FORMAT\_R24G8\_TYPELESS im Gegensatz zu DXGI\_FORMAT\_R16\_TYPELESS), und beobachten Sie die Geschwindigkeit und Qualität auf unterschiedlichen Featureebenen.
-
-## <a name="optimizing-precompiled-shaders"></a>Optimieren vorkompilierter Shader
+## <a name="shadow-buffer-depth"></a><span data-ttu-id="c217d-123">Schattenpuffertiefe</span><span class="sxs-lookup"><span data-stu-id="c217d-123">Shadow buffer depth</span></span>
 
 
-UWP-Apps (Universelle Windows-Plattform) können eine dynamische Shaderkompilierung nutzen, die Verwendung einer dynamischen Shaderverknüpfung ist jedoch schneller. Sie können auch Compilerdirektiven und `#ifdef`-Blöcke verwenden, um unterschiedliche Versionen von Shadern zu laden. Dazu wird die Visual Studio-Projektdatei in einem Text-Editor geöffnet, und es werden mehrere `<FxcCompiler>`-Einträge für den HLSL-Code hinzugefügt (jeweils mit den passenden Präprozessordefinitionen). Beachten Sie, dass hierzu unterschiedliche Dateinamen erforderlich sind. In diesem Fall hängt Visual Studio an unterschiedliche Versionen des Shaders „\_point and \_linear“ an.
+<span data-ttu-id="c217d-124">Eine höhere Präzision im Schattenpuffer führt zu genaueren Ergebnissen bei Tiefentests. Dies trägt zur Verhinderung von Problemen bei, z.B. von Z-Bufferkonflikten.</span><span class="sxs-lookup"><span data-stu-id="c217d-124">Greater precision in the shadow buffer will give more accurate depth test results, which helps avoid issues like z-buffer fighting.</span></span> <span data-ttu-id="c217d-125">Wie bei größeren Schattenmaps auch wird bei einer höheren Präzision mehr Speicher belegt.</span><span class="sxs-lookup"><span data-stu-id="c217d-125">But like larger shadow maps, greater precision takes up more memory.</span></span> <span data-ttu-id="c217d-126">Experimentieren Sie mit unterschiedlichen Arten von Tiefenpräzision (DXGI\_FORMAT\_R24G8\_TYPELESS im Gegensatz zu DXGI\_FORMAT\_R16\_TYPELESS), und beobachten Sie die Geschwindigkeit und Qualität auf unterschiedlichen Featureebenen.</span><span class="sxs-lookup"><span data-stu-id="c217d-126">Experiment with different depth precision types in your game - DXGI\_FORMAT\_R24G8\_TYPELESS versus DXGI\_FORMAT\_R16\_TYPELESS - and observe the speed and quality on different feature levels.</span></span>
 
-Im Projektdateieintrag für die linear gefilterte Version des Shaders wird LINEAR definiert:
+## <a name="optimizing-precompiled-shaders"></a><span data-ttu-id="c217d-127">Optimieren vorkompilierter Shader</span><span class="sxs-lookup"><span data-stu-id="c217d-127">Optimizing precompiled shaders</span></span>
+
+
+<span data-ttu-id="c217d-128">UWP-Apps (Universelle Windows-Plattform) können eine dynamische Shaderkompilierung nutzen, die Verwendung einer dynamischen Shaderverknüpfung ist jedoch schneller.</span><span class="sxs-lookup"><span data-stu-id="c217d-128">Universal Windows Platform (UWP) apps can use dynamic shader compilation, but it's faster to use dynamic shader linking.</span></span> <span data-ttu-id="c217d-129">Sie können auch Compilerdirektiven und `#ifdef`-Blöcke verwenden, um unterschiedliche Versionen von Shadern zu laden.</span><span class="sxs-lookup"><span data-stu-id="c217d-129">You can also use compiler directives and `#ifdef` blocks to create different versions of shaders.</span></span> <span data-ttu-id="c217d-130">Dazu wird die VisualStudio-Projektdatei in einem Text-Editor geöffnet, und es werden mehrere `<FxcCompiler>`-Einträge für den HLSL-Code hinzugefügt (jeweils mit den passenden Präprozessordefinitionen).</span><span class="sxs-lookup"><span data-stu-id="c217d-130">This is done by opening the Visual Studio project file in a text editor and adding multiple `<FxcCompiler>` entries for the HLSL (each with the appropriate preprocessor definitions).</span></span> <span data-ttu-id="c217d-131">Beachten Sie, dass hierzu unterschiedliche Dateinamen erforderlich sind. In diesem Fall hängt Visual Studio an unterschiedliche Versionen des Shaders „\_point and \_linear“ an.</span><span class="sxs-lookup"><span data-stu-id="c217d-131">Note that this necessitates different filenames; in this case, Visual Studio appends \_point and \_linear to the different versions of the shader.</span></span>
+
+<span data-ttu-id="c217d-132">Im Projektdateieintrag für die linear gefilterte Version des Shaders wird LINEAR definiert:</span><span class="sxs-lookup"><span data-stu-id="c217d-132">The project file entry for the linear filtered version of the shader defines LINEAR:</span></span>
 
 ```xml
 <FxCompile Include="Content\ShadowPixelShader.hlsl">
@@ -153,7 +151,7 @@ Im Projektdateieintrag für die linear gefilterte Version des Shaders wird LINEA
 </FxCompile>
 ```
 
-Der Projektdateieintrag für die linear gefilterte Version des Shaders enthält keine Präprozessordefinitionen:
+<span data-ttu-id="c217d-133">Der Projektdateieintrag für die linear gefilterte Version des Shaders enthält keine Präprozessordefinitionen:</span><span class="sxs-lookup"><span data-stu-id="c217d-133">The project file entry for the linear filtered version of the shader does not include preprocessor definitions:</span></span>
 
 ```xml
 <FxCompile Include="Content\ShadowPixelShader.hlsl">
@@ -179,7 +177,6 @@ Der Projektdateieintrag für die linear gefilterte Version des Shaders enthält 
  
 
  
-
 
 
 

@@ -9,54 +9,51 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: e1a2c7f0-0040-4ce7-94de-17224736e20b
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 8c2251c5c78fed10959b89de0d81ff563d0fa3e3
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: d071a0ff6d228608d7f6c7acdcfd88df38f2c390
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.translationtype: HT
+ms.contentlocale: de-DE
 ---
+# <a name="upload-a-folder-to-the-development-directory"></a><span data-ttu-id="a661b-104">Hochladen eines Ordners in das Entwicklungsverzeichnis</span><span class="sxs-lookup"><span data-stu-id="a661b-104">Upload a folder to the development directory</span></span>
 
-# <a name="upload-a-folder-to-the-development-directory"></a>Hochladen eines Ordners in das Entwicklungsverzeichnis
+**<span data-ttu-id="a661b-105">Anforderung</span><span class="sxs-lookup"><span data-stu-id="a661b-105">Request</span></span>**
 
-**Anfordern**
+<span data-ttu-id="a661b-106">Sie können einen vollständigen Ordner unter der ID für bekannte Ordner in den Ordner „DevelopmentFiles“ (oder in einen Unterordner innerhalb dieses Ordners) auf einmal hochladen.</span><span class="sxs-lookup"><span data-stu-id="a661b-106">You can upload an entire folder at once to the Known Folder Id for the DevelopmentFiles (or to a subfolder within that folder).</span></span>
 
-Sie können einen vollständigen Ordner unter der ID für bekannte Ordner in den Ordner „DevelopmentFiles“ (oder in einen Unterordner innerhalb dieses Ordners) auf einmal hochladen.
-
-Methode      | Anforderungs-URI
+<span data-ttu-id="a661b-107">Methode</span><span class="sxs-lookup"><span data-stu-id="a661b-107">Method</span></span>      | <span data-ttu-id="a661b-108">Anforderungs-URI</span><span class="sxs-lookup"><span data-stu-id="a661b-108">Request URI</span></span>
 :------     | :------
-POST | /api/app/packagemanager/upload 
+<span data-ttu-id="a661b-109">POST</span><span class="sxs-lookup"><span data-stu-id="a661b-109">POST</span></span> | <span data-ttu-id="a661b-110">/api/app/packagemanager/upload</span><span class="sxs-lookup"><span data-stu-id="a661b-110">/api/app/packagemanager/upload</span></span> 
 <br />
-**URI-Parameter**
+**<span data-ttu-id="a661b-111">URI-Parameter</span><span class="sxs-lookup"><span data-stu-id="a661b-111">URI parameters</span></span>**
 
-Sie können im Anforderungs-URI die folgenden zusätzlichen Parameter angeben:
+<span data-ttu-id="a661b-112">Sie können im Anforderungs-URI die folgenden zusätzlichen Parameter angeben:</span><span class="sxs-lookup"><span data-stu-id="a661b-112">You can specify the following additional parameters on the request URI:</span></span>
 
-URI-Parameter      | Beschreibung
+<span data-ttu-id="a661b-113">URI-Parameter</span><span class="sxs-lookup"><span data-stu-id="a661b-113">URI Parameter</span></span>      | <span data-ttu-id="a661b-114">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="a661b-114">Description</span></span>
 :------     | :-----
-destinationFolder (erforderlich) | Der Name des Zielordners für den Ordner, der hochgeladen werden soll. Dieser Ordner wird unter „d:\developmentfiles\LooseApps“ auf der Konsole gespeichert. Der Ordnername muss base64-codiert sein, da er Pfadtrennzeichen enthalten kann, wenn der Ordner ein Unterordner unter „LooseApps“ ist.
+<span data-ttu-id="a661b-115">destinationFolder (erforderlich)</span><span class="sxs-lookup"><span data-stu-id="a661b-115">destinationFolder  (required)</span></span> | <span data-ttu-id="a661b-116">Der Name des Zielordners für den Ordner, der hochgeladen werden soll.</span><span class="sxs-lookup"><span data-stu-id="a661b-116">The destination folder name of the folder to be uploaded.</span></span> <span data-ttu-id="a661b-117">Dieser Ordner wird unter „d:\developmentfiles\LooseApps“ auf der Konsole gespeichert.</span><span class="sxs-lookup"><span data-stu-id="a661b-117">This folder will be placed under d:\developmentfiles\LooseApps on the console.</span></span> <span data-ttu-id="a661b-118">Der Ordnername muss base64-codiert sein, da er Pfadtrennzeichen enthalten kann, wenn der Ordner ein Unterordner unter „LooseApps“ ist.</span><span class="sxs-lookup"><span data-stu-id="a661b-118">This folder name should be base64 encoded as it may contain path separators if the folder is a subfolder under LooseApps.</span></span>
 <br />
 
-**Anforderungsheader**
+**<span data-ttu-id="a661b-119">Anforderungsheader</span><span class="sxs-lookup"><span data-stu-id="a661b-119">Request headers</span></span>**
 
-- Keine
+- <span data-ttu-id="a661b-120">Keine</span><span class="sxs-lookup"><span data-stu-id="a661b-120">None</span></span>
 
-**Anforderungstext**
+**<span data-ttu-id="a661b-121">Anforderungstext</span><span class="sxs-lookup"><span data-stu-id="a661b-121">Request body</span></span>**
 
-- Multipart-konformer HTTP-Text des Verzeichnisinhalts.
+- <span data-ttu-id="a661b-122">Multipart-konformer HTTP-Text des Verzeichnisinhalts.</span><span class="sxs-lookup"><span data-stu-id="a661b-122">multi-part conforming http body of the directory contents.</span></span>
 
-**Antwort**
+**<span data-ttu-id="a661b-123">Antwort</span><span class="sxs-lookup"><span data-stu-id="a661b-123">Response</span></span>**
 
-**Statuscode**
+**<span data-ttu-id="a661b-124">Statuscode</span><span class="sxs-lookup"><span data-stu-id="a661b-124">Status code</span></span>**
 
-Diese API hat die folgenden erwarteten Statuscodes:
+<span data-ttu-id="a661b-125">Diese API hat die folgenden erwarteten Statuscodes:</span><span class="sxs-lookup"><span data-stu-id="a661b-125">This API has the following expected status codes.</span></span>
 
-HTTP-Statuscode      | Beschreibung
+<span data-ttu-id="a661b-126">HTTP-Statuscode</span><span class="sxs-lookup"><span data-stu-id="a661b-126">HTTP status code</span></span>      | <span data-ttu-id="a661b-127">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="a661b-127">Description</span></span>
 :------     | :-----
-200 | Erfolg
-4XX | Fehlercodes
-5XX | Fehlercodes
+<span data-ttu-id="a661b-128">200</span><span class="sxs-lookup"><span data-stu-id="a661b-128">200</span></span> | <span data-ttu-id="a661b-129">Erfolg</span><span class="sxs-lookup"><span data-stu-id="a661b-129">Success</span></span>
+<span data-ttu-id="a661b-130">4XX</span><span class="sxs-lookup"><span data-stu-id="a661b-130">4XX</span></span> | <span data-ttu-id="a661b-131">Fehlercodes</span><span class="sxs-lookup"><span data-stu-id="a661b-131">Error codes</span></span>
+<span data-ttu-id="a661b-132">5XX</span><span class="sxs-lookup"><span data-stu-id="a661b-132">5XX</span></span> | <span data-ttu-id="a661b-133">Fehlercodes</span><span class="sxs-lookup"><span data-stu-id="a661b-133">Error codes</span></span>
 <br />
-**Verfügbare Gerätefamilien**
+**<span data-ttu-id="a661b-134">Verfügbare Gerätefamilien</span><span class="sxs-lookup"><span data-stu-id="a661b-134">Available device families</span></span>**
 
-* Windows Xbox
-
+* <span data-ttu-id="a661b-135">Windows Xbox</span><span class="sxs-lookup"><span data-stu-id="a661b-135">Windows Xbox</span></span>
 

@@ -2,92 +2,90 @@
 title: Lichttypen
 description: "Mit der Eigenschaft „Lichttyp“ legen Sie fest, welchen Lichtquellentyp Sie verwenden. In Direct3D gibt es drei Lichttypen: Punktlichter, Spotlights und gerichtetes Licht."
 ms.assetid: 57748CAF-6F08-4D1D-9ED6-8FAA8C5FE314
-keywords:
-- Lichttypen
-author: PeterTurcan
-ms.author: pettur
+keywords: Lichttypen
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 52edfb04924dcb35f71c638c173c319430c5d97e
-ms.lasthandoff: 02/07/2017
-
+ms.localizationpriority: medium
+ms.openlocfilehash: f3dd8397f92137bbd934b2f5835de703f05c2000
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/22/2017
 ---
-
-# <a name="light-types"></a>Lichttypen
-
-
-Mit der Eigenschaft „Lichttyp“ legen Sie fest, welchen Lichtquellentyp Sie verwenden. In Direct3D gibt es drei Lichttypen: Punktlichter, Spotlights und gerichtetes Licht. Mit variierendem Rechenaufwand beleuchtet jeder Lichttyp die Objekte in einer Szene unterschiedlich.
-
-## <a name="span-idpointlightspanspan-idpointlightspanspan-idpointlightspanpoint-light"></a><span id="Point_Light"></span><span id="point_light"></span><span id="POINT_LIGHT"></span>Punklichter
+# <a name="light-types"></a><span data-ttu-id="33838-105">Lichttypen</span><span class="sxs-lookup"><span data-stu-id="33838-105">Light types</span></span>
 
 
-Punktlichter haben in einer Szene Farben und Positionen, aber keine Richtung. Sie geben das Licht, wie in der folgenden Abbildung dargestellt, in alle Richtungen ab.
+<span data-ttu-id="33838-106">Mit der Eigenschaft „Lichttyp“ legen Sie fest, welchen Lichtquellentyp Sie verwenden.</span><span class="sxs-lookup"><span data-stu-id="33838-106">The light type property defines which type of light source you're using.</span></span> <span data-ttu-id="33838-107">In Direct3D gibt es drei Lichttypen: Punktlichter, Spotlights und gerichtetes Licht.</span><span class="sxs-lookup"><span data-stu-id="33838-107">There are three types of lights in Direct3D - point lights, spotlights, and directional lights.</span></span> <span data-ttu-id="33838-108">Mit variierendem Rechenaufwand beleuchtet jeder Lichttyp die Objekte in einer Szene unterschiedlich.</span><span class="sxs-lookup"><span data-stu-id="33838-108">Each type illuminates objects in a scene differently, with varying levels of computational overhead.</span></span>
+
+## <a name="span-idpointlightspanspan-idpointlightspanspan-idpointlightspanpoint-light"></a><span data-ttu-id="33838-109"><span id="Point_Light"></span><span id="point_light"></span><span id="POINT_LIGHT"></span>Punklichter</span><span class="sxs-lookup"><span data-stu-id="33838-109"><span id="Point_Light"></span><span id="point_light"></span><span id="POINT_LIGHT"></span>Point Light</span></span>
+
+
+<span data-ttu-id="33838-110">Punktlichter haben in einer Szene Farben und Positionen, aber keine Richtung.</span><span class="sxs-lookup"><span data-stu-id="33838-110">Point lights have color and position within a scene, but no single direction.</span></span> <span data-ttu-id="33838-111">Sie geben das Licht, wie in der folgenden Abbildung dargestellt, in alle Richtungen ab.</span><span class="sxs-lookup"><span data-stu-id="33838-111">They give off light equally in all directions, as shown in the following illustration.</span></span>
 
 ![Abbildung: Punktlichter](images/ptlight.png)
 
-Eine Glühbirne ist ein gutes Beispiel für ein Punktlicht. Punktlichter werden von Dämpfung und Reichweite beeinflusst, und erhellen auf einer Scheitelpunkt-zu-Scheitelpunkt-Basis ein Gitter. Während der Beleuchtung verwendet Direct3D die Position des Punktlichts im Weltraum und die Koordinaten der leuchtenden Eckpunkte, um einen Vektor für die Richtung des Lichts und der vom Licht zurückgelegten Entfernung herzuleiten. Beides wird zusammen mit der Scheitelpunktnormalen verwendet, um die Verteilung des Lichts zur Beleuchtung der Oberfläche zu berechnen.
+<span data-ttu-id="33838-113">Eine Glühbirne ist ein gutes Beispiel für ein Punktlicht.</span><span class="sxs-lookup"><span data-stu-id="33838-113">A light bulb is a good example of a point light.</span></span> <span data-ttu-id="33838-114">Punktlichter werden von Dämpfung und Reichweite beeinflusst, und erhellen auf einer Scheitelpunkt-zu-Scheitelpunkt-Basis ein Gitter.</span><span class="sxs-lookup"><span data-stu-id="33838-114">Point lights are affected by attenuation and range, and illuminate a mesh on a vertex-by-vertex basis.</span></span> <span data-ttu-id="33838-115">Während der Beleuchtung verwendet Direct3D die Position des Punktlichts im Weltraum und die Koordinaten der leuchtenden Eckpunkte, um einen Vektor für die Richtung des Lichts und der vom Licht zurückgelegten Entfernung herzuleiten.</span><span class="sxs-lookup"><span data-stu-id="33838-115">During lighting, Direct3D uses the point light's position in world space and the coordinates of the vertex being lit to derive a vector for the direction of the light, and the distance that the light has traveled.</span></span> <span data-ttu-id="33838-116">Beides wird zusammen mit der Scheitelpunktnormalen verwendet, um die Verteilung des Lichts zur Beleuchtung der Oberfläche zu berechnen.</span><span class="sxs-lookup"><span data-stu-id="33838-116">Both are used, along with the vertex normal, to calculate the contribution of the light to the illumination of the surface.</span></span>
 
-## <a name="span-iddirectionallightspanspan-iddirectionallightspanspan-iddirectionallightspandirectional-light"></a><span id="Directional_Light"></span><span id="directional_light"></span><span id="DIRECTIONAL_LIGHT"></span>Gerichtetes Licht
-
-
-Gerichtetes Licht hat zwar Farbe und Richtung, aber keine Position. Es strahlt paralleles Licht ab. Das bedeutet, dass die durch gerichtetes Licht erzeugte Beleuchtung sich in der gleichen Richtung durch eine Szene bewegt. Stellen Sie sich ein gerichtetes Licht als Lichtquelle in nahezu unendlich weiter Entfernung vor, beispielsweise die Sonne. Gerichtetes Licht wird nicht von Dämpfung und Reichweite beeinflusst, so dass die von Ihnen angegebene Richtung und Farbe die einzigen Faktoren bilden, die Direct3D bei der Berechnung der Scheitelpunktfarben berücksichtigt. Durch die geringe Anzahl von Beleuchtungsfaktoren handelt es sich hierbei um die Beleuchtung mit dem geringsten Rechenaufwand.
-
-## <a name="span-idspotlightspanspan-idspotlightspanspan-idspotlightspanspotlight"></a><span id="SpotLight"></span><span id="spotlight"></span><span id="SPOTLIGHT"></span>Spotlight
+## <a name="span-iddirectionallightspanspan-iddirectionallightspanspan-iddirectionallightspandirectional-light"></a><span data-ttu-id="33838-117"><span id="Directional_Light"></span><span id="directional_light"></span><span id="DIRECTIONAL_LIGHT"></span>Gerichtetes Licht</span><span class="sxs-lookup"><span data-stu-id="33838-117"><span id="Directional_Light"></span><span id="directional_light"></span><span id="DIRECTIONAL_LIGHT"></span>Directional Light</span></span>
 
 
-Spotlights haben Farbe, Position und Richtung, in der sie Licht abstrahlen. Das von einem Spotlight abgestrahlte Licht besteht aus einem hellen inneren Kegel und einem größeren äußeren Kegel, mit abnehmender Lichtintensität dazwischen, wie in der folgenden Abbildung dargestellt.
+<span data-ttu-id="33838-118">Gerichtetes Licht hat zwar Farbe und Richtung, aber keine Position.</span><span class="sxs-lookup"><span data-stu-id="33838-118">Directional lights have only color and direction, not position.</span></span> <span data-ttu-id="33838-119">Es strahlt paralleles Licht ab.</span><span class="sxs-lookup"><span data-stu-id="33838-119">They emit parallel light.</span></span> <span data-ttu-id="33838-120">Das bedeutet, dass die durch gerichtetes Licht erzeugte Beleuchtung sich in der gleichen Richtung durch eine Szene bewegt.</span><span class="sxs-lookup"><span data-stu-id="33838-120">This means that all light generated by directional lights travels through a scene in the same direction.</span></span> <span data-ttu-id="33838-121">Stellen Sie sich ein gerichtetes Licht als Lichtquelle in nahezu unendlich weiter Entfernung vor, beispielsweise die Sonne.</span><span class="sxs-lookup"><span data-stu-id="33838-121">Imagine a directional light as a light source at near infinite distance, such as the sun.</span></span> <span data-ttu-id="33838-122">Gerichtetes Licht wird nicht von Dämpfung und Reichweite beeinflusst, so dass die von Ihnen angegebene Richtung und Farbe die einzigen Faktoren bilden, die Direct3D bei der Berechnung der Scheitelpunktfarben berücksichtigt.</span><span class="sxs-lookup"><span data-stu-id="33838-122">Directional lights are not affected by attenuation or range, so the direction and color you specify are the only factors considered when Direct3D calculates vertex colors.</span></span> <span data-ttu-id="33838-123">Durch die geringe Anzahl von Beleuchtungsfaktoren handelt es sich hierbei um die Beleuchtung mit dem geringsten Rechenaufwand.</span><span class="sxs-lookup"><span data-stu-id="33838-123">Because of the small number of illumination factors, these are the least computationally intensive lights to use.</span></span>
+
+## <a name="span-idspotlightspanspan-idspotlightspanspan-idspotlightspanspotlight"></a><span data-ttu-id="33838-124"><span id="SpotLight"></span><span id="spotlight"></span><span id="SPOTLIGHT"></span>Spotlight</span><span class="sxs-lookup"><span data-stu-id="33838-124"><span id="SpotLight"></span><span id="spotlight"></span><span id="SPOTLIGHT"></span>SpotLight</span></span>
+
+
+<span data-ttu-id="33838-125">Spotlights haben Farbe, Position und Richtung, in der sie Licht abstrahlen.</span><span class="sxs-lookup"><span data-stu-id="33838-125">Spotlights have color, position, and direction in which they emit light.</span></span> <span data-ttu-id="33838-126">Das von einem Spotlight abgestrahlte Licht besteht aus einem hellen inneren Kegel und einem größeren äußeren Kegel, mit abnehmender Lichtintensität dazwischen, wie in der folgenden Abbildung dargestellt.</span><span class="sxs-lookup"><span data-stu-id="33838-126">Light emitted from a spotlight is made up of a bright inner cone and a larger outer cone, with the light intensity diminishing between the two, as shown in the following illustration.</span></span>
 
 ![Abbildung eines Spotlights mit einem inneren und einem äußeren Kegel](images/spotlt.png)
 
-Spotlights werden von Farbverlauf, Dämpfung und Reichweite beeinflusst. Diese Faktoren sowie die zurückgelegte Entfernung des Lichts zu jedem Scheitelpunkt werden bei der Berechnung von Beleuchtungseffekten für Objekte in einer Szene einbezogen. Die Berechnung dieser Effekte für jeden Scheitelpunkt macht Spotlights von allen Lichttypen in Direct3D zu demjenigen mit dem größten Rechenaufwand.
+<span data-ttu-id="33838-128">Spotlights werden von Farbverlauf, Dämpfung und Reichweite beeinflusst.</span><span class="sxs-lookup"><span data-stu-id="33838-128">Spotlights are affected by falloff, attenuation, and range.</span></span> <span data-ttu-id="33838-129">Diese Faktoren sowie die zurückgelegte Entfernung des Lichts zu jedem Scheitelpunkt werden bei der Berechnung von Beleuchtungseffekten für Objekte in einer Szene einbezogen.</span><span class="sxs-lookup"><span data-stu-id="33838-129">These factors, as well as the distance light travels to each vertex, are figured in when computing lighting effects for objects in a scene.</span></span> <span data-ttu-id="33838-130">Die Berechnung dieser Effekte für jeden Scheitelpunkt macht Spotlights von allen Lichttypen in Direct3D zu demjenigen mit dem größten Rechenaufwand.</span><span class="sxs-lookup"><span data-stu-id="33838-130">Computing these effects for each vertex makes spotlights the most computationally time-consuming of all lights in Direct3D.</span></span>
 
-Farbverlaufs-, Theta- und Phi-Werte werden nur von Spotlights verwendet. Diese Werte steuern, wie groß oder klein der innere und äußere Kegel des Spotlights für ein Objekt sein muss und wie das Licht zwischen beiden abnimmt.
+<span data-ttu-id="33838-131">Farbverlaufs-, Theta- und Phi-Werte werden nur von Spotlights verwendet.</span><span class="sxs-lookup"><span data-stu-id="33838-131">Falloff, Theta, and Phi values are used only by spotlights.</span></span> <span data-ttu-id="33838-132">Diese Werte steuern, wie groß oder klein der innere und äußere Kegel des Spotlights für ein Objekt sein muss und wie das Licht zwischen beiden abnimmt.</span><span class="sxs-lookup"><span data-stu-id="33838-132">These values control how large or small a spotlight object's inner and outer cones are, and how light decreases between them.</span></span>
 
-Theta ist der Radiantenwinkel des inneren Spotlight-Kegels, während der Phi-Wert den Winkel des äußeren Lichtkegels darstellt. Der Farbverlauf steuert, wie die Lichtintensität zwischen der äußeren Kante des inneren Kegels und der inneren Kante des äußeren Kegels abnimmt. Um einen gleichmäßigen Farbverlauf zwischen den Kegeln zu halten, setzen die meisten Anwendungen den Farbverlauf auf 1,0. Sie können bei Bedarf aber andere Werte einstellen.
+<span data-ttu-id="33838-133">Theta ist der Radiantenwinkel des inneren Spotlight-Kegels, während der Phi-Wert den Winkel des äußeren Lichtkegels darstellt.</span><span class="sxs-lookup"><span data-stu-id="33838-133">Theta is the radian angle of the spotlight's inner cone, and the Phi value is the angle for the outer cone of light.</span></span> <span data-ttu-id="33838-134">Der Farbverlauf steuert, wie die Lichtintensität zwischen der äußeren Kante des inneren Kegels und der inneren Kante des äußeren Kegels abnimmt.</span><span class="sxs-lookup"><span data-stu-id="33838-134">Falloff controls how light intensity decreases between the outer edge of the inner cone and the inner edge of the outer cone.</span></span> <span data-ttu-id="33838-135">Um einen gleichmäßigen Farbverlauf zwischen den Kegeln zu halten, setzen die meisten Anwendungen den Farbverlauf auf 1,0. Sie können bei Bedarf aber andere Werte einstellen.</span><span class="sxs-lookup"><span data-stu-id="33838-135">Most applications set Falloff to 1.0 to create falloff that occurs evenly between the two cones, but you can set other values as needed.</span></span>
 
-In der folgenden Abbildung wird das Verhältnis zwischen diesen Werten und wie sie sich auf den inneren und äußeren Lichtkegel auswirken dargestellt.
+<span data-ttu-id="33838-136">In der folgenden Abbildung wird das Verhältnis zwischen diesen Werten und wie sie sich auf den inneren und äußeren Lichtkegel auswirken dargestellt.</span><span class="sxs-lookup"><span data-stu-id="33838-136">The following illustration shows the relationship between these values and how they can affect a spotlight's inner and outer cones of light.</span></span>
 
 ![Abbildung der Auswirkung von Phi- und Theta-Werten auf die Spotlight-Kegel](images/spotlt2.png)
 
-Spotlights strahlen einen zweitteiligen Lichtkegel ab: einen hellen inneren Kegel und einen äußeren Kegel. Im inneren Kegel ist das Licht am hellsten, und außerhalb des äußeren Kegels ist es, mit abnehmender Lichtintensität zwischen den beiden Bereichen, nicht mehr vorhanden. Diese Art der Dämpfung wird auch als Farbverlauf bezeichnet.
+<span data-ttu-id="33838-138">Spotlights strahlen einen zweitteiligen Lichtkegel ab: einen hellen inneren Kegel und einen äußeren Kegel.</span><span class="sxs-lookup"><span data-stu-id="33838-138">Spotlights emit a cone of light that has two parts: a bright inner cone and an outer cone.</span></span> <span data-ttu-id="33838-139">Im inneren Kegel ist das Licht am hellsten, und außerhalb des äußeren Kegels ist es, mit abnehmender Lichtintensität zwischen den beiden Bereichen, nicht mehr vorhanden.</span><span class="sxs-lookup"><span data-stu-id="33838-139">Light is brightest in the inner cone and isn't present outside the outer cone, with light intensity attenuating between the two areas.</span></span> <span data-ttu-id="33838-140">Diese Art der Dämpfung wird auch als Farbverlauf bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="33838-140">This type of attenuation is commonly referred to as falloff.</span></span>
 
-Die Lichtmenge, die ein Scheitelpunkt erhält, basiert auf der Position des Scheitelpunkts in den inneren oder äußeren Kegeln. Direct3D berechnet das Skalarprodukt des Richtungsvektors (L) des Spotlights und des Vektors vom Licht zum Scheitelpunkt (D). Dieser Wert entspricht dem Kosinus des Winkels zwischen den beiden Vektoren und dient als Angabe der Position des Scheitelpunkts. Diese Position kann mit dem Kegelwinkel des Lichts verglichen werden, um zu bestimmen, wo der Scheitelpunkt im inneren oder äußeren Kegel liegt. Die folgende Abbildung stellt den Zusammenhang zwischen diesen beiden Vektoren graphisch dar.
+<span data-ttu-id="33838-141">Die Lichtmenge, die ein Scheitelpunkt erhält, basiert auf der Position des Scheitelpunkts in den inneren oder äußeren Kegeln.</span><span class="sxs-lookup"><span data-stu-id="33838-141">The amount of light a vertex receives is based on the vertex's location in the inner or outer cones.</span></span> <span data-ttu-id="33838-142">Direct3D berechnet das Skalarprodukt des Richtungsvektors (L) des Spotlights und des Vektors vom Licht zum Scheitelpunkt (D).</span><span class="sxs-lookup"><span data-stu-id="33838-142">Direct3D computes the dot product of the spotlight's direction vector (L) and the vector from the light to the vertex (D).</span></span> <span data-ttu-id="33838-143">Dieser Wert entspricht dem Kosinus des Winkels zwischen den beiden Vektoren und dient als Angabe der Position des Scheitelpunkts. Diese Position kann mit dem Kegelwinkel des Lichts verglichen werden, um zu bestimmen, wo der Scheitelpunkt im inneren oder äußeren Kegel liegt.</span><span class="sxs-lookup"><span data-stu-id="33838-143">This value is equal to the cosine of the angle between the two vectors, and serves as an indicator of the vertex's position that can be compared to the light's cone angles to determine where the vertex might lie in the inner or outer cones.</span></span> <span data-ttu-id="33838-144">Die folgende Abbildung stellt den Zusammenhang zwischen diesen beiden Vektoren graphisch dar.</span><span class="sxs-lookup"><span data-stu-id="33838-144">The following illustration provides a graphical representation of the association between these two vectors.</span></span>
 
 ![Abbildung des Spotlight-Richtungsvektors und des Vektors vom Scheitelpunkt zum Spotlight](images/spotalg1.png)
 
-Das System vergleicht diesen Wert mit dem Kosinus der inneren und äußeren Kegelwinkel des Spotlights. Die Theta- und Phi-Werte des Lichts stellen die Gesamtkegelwinkel für die inneren und äußeren Kegel dar. Da eine Dämpfung eintritt, je weiter sich der Scheitelpunkt von der Beleuchtungsmitte entfernt (als über den Gesamtkegelwinkel), werden diese Kegelwinkel zur Laufzeit durch zwei geteilt, bevor deren Kosinus berechnet wird.
+<span data-ttu-id="33838-146">Das System vergleicht diesen Wert mit dem Kosinus der inneren und äußeren Kegelwinkel des Spotlights.</span><span class="sxs-lookup"><span data-stu-id="33838-146">The system compares this value to the cosine of the spotlight's inner and outer cone angles.</span></span> <span data-ttu-id="33838-147">Die Theta- und Phi-Werte des Lichts stellen die Gesamtkegelwinkel für die inneren und äußeren Kegel dar.</span><span class="sxs-lookup"><span data-stu-id="33838-147">The light's Theta and Phi values represent the total cone angles for the inner and outer cones.</span></span> <span data-ttu-id="33838-148">Da eine Dämpfung eintritt, je weiter sich der Scheitelpunkt von der Beleuchtungsmitte entfernt (als über den Gesamtkegelwinkel), werden diese Kegelwinkel zur Laufzeit durch zwei geteilt, bevor deren Kosinus berechnet wird.</span><span class="sxs-lookup"><span data-stu-id="33838-148">Because the attenuation occurs as the vertex becomes more distant from the center of illumination (rather than across the total cone angle), the runtime divides these cone angles in half before calculating their cosines.</span></span>
 
-Wenn das Skalarprodukt der Vektoren L und D kleiner oder gleich dem Kosinus des äußeren Kegelwinkels ist, liegt der Scheitelpunkt außerhalb des äußeren Kegels und erhält kein Licht. Wenn das Skalarprodukt von L und D größer als der Kosinus des inneren Kegelwinkels ist, liegt der Scheitelpunkt im inneren Kegel und erhält die maximale Lichtmenge, jedoch unter Berücksichtigung der Dämpfung über die Entfernung. Befindet sich der Scheitelpunkt zwischen den beiden Regionen, wird der Farbverlauf mit folgender Gleichung berechnet.
+<span data-ttu-id="33838-149">Wenn das Skalarprodukt der Vektoren L und D kleiner oder gleich dem Kosinus des äußeren Kegelwinkels ist, liegt der Scheitelpunkt außerhalb des äußeren Kegels und erhält kein Licht.</span><span class="sxs-lookup"><span data-stu-id="33838-149">If the dot product of vectors L and D is less than or equal to the cosine of the outer cone angle, the vertex lies beyond the outer cone and receives no light.</span></span> <span data-ttu-id="33838-150">Wenn das Skalarprodukt von L und D größer als der Kosinus des inneren Kegelwinkels ist, liegt der Scheitelpunkt im inneren Kegel und erhält die maximale Lichtmenge, jedoch unter Berücksichtigung der Dämpfung über die Entfernung.</span><span class="sxs-lookup"><span data-stu-id="33838-150">If the dot product of L and D is greater than the cosine of the inner cone angle, then the vertex is within the inner cone and receives the maximum amount of light, still considering attenuation over distance.</span></span> <span data-ttu-id="33838-151">Befindet sich der Scheitelpunkt zwischen den beiden Regionen, wird der Farbverlauf mit folgender Gleichung berechnet.</span><span class="sxs-lookup"><span data-stu-id="33838-151">If the vertex is somewhere between the two regions, then falloff is calculated with the following equation.</span></span>
 
 ![Formel für Lichtintensität am Scheitelpunkt, nach Farbverlauf](images/falloff.png)
 
-wobei gilt:
+<span data-ttu-id="33838-153">wobei gilt:</span><span class="sxs-lookup"><span data-stu-id="33838-153">where:</span></span>
 
--   I<sub>f</sub> ist die Lichtintensität nach dem Farbverlauf
--   Alpha ist der Winkel zwischen den Vektoren L und D
--   Theta ist der innere Kegelwinkel
--   Phi ist der äußere Kegelwinkel
--   p ist der Farbverlauf
+-   <span data-ttu-id="33838-154">I<sub>f</sub> ist die Lichtintensität nach dem Farbverlauf</span><span class="sxs-lookup"><span data-stu-id="33838-154">I<sub>f</sub> is light intensity after falloff</span></span>
+-   <span data-ttu-id="33838-155">Alpha ist der Winkel zwischen den Vektoren L und D</span><span class="sxs-lookup"><span data-stu-id="33838-155">Alpha is the angle between vectors L and D</span></span>
+-   <span data-ttu-id="33838-156">Theta ist der innere Kegelwinkel</span><span class="sxs-lookup"><span data-stu-id="33838-156">Theta is the inner cone angle</span></span>
+-   <span data-ttu-id="33838-157">Phi ist der äußere Kegelwinkel</span><span class="sxs-lookup"><span data-stu-id="33838-157">Phi is the outer cone angle</span></span>
+-   <span data-ttu-id="33838-158">p ist der Farbverlauf</span><span class="sxs-lookup"><span data-stu-id="33838-158">p is the falloff</span></span>
 
-Diese Formel ergibt einen Wert zwischen 0,0 und 1,0, der die Lichtintensität am Scheitelpunkt unter Berücksichtigung des Farbverlaufs skaliert. Dämpfung wird als ein Faktor der Entfernung des Scheitelpunkts vom Licht angewendet. Die folgende Grafik zeigt, wie unterschiedlich sich Farbverlaufwerte auf die Farbverlaufkurve auswirken können.
+<span data-ttu-id="33838-159">Diese Formel ergibt einen Wert zwischen 0,0 und 1,0, der die Lichtintensität am Scheitelpunkt unter Berücksichtigung des Farbverlaufs skaliert.</span><span class="sxs-lookup"><span data-stu-id="33838-159">This formula generates a value between 0.0 and 1.0 that scales the light's intensity at the vertex to account for falloff.</span></span> <span data-ttu-id="33838-160">Dämpfung wird als ein Faktor der Entfernung des Scheitelpunkts vom Licht angewendet.</span><span class="sxs-lookup"><span data-stu-id="33838-160">Attenuation as a factor of the vertex's distance from the light is also applied.</span></span> <span data-ttu-id="33838-161">Die folgende Grafik zeigt, wie unterschiedlich sich Farbverlaufwerte auf die Farbverlaufkurve auswirken können.</span><span class="sxs-lookup"><span data-stu-id="33838-161">The following graph shows how different falloff values can affect the falloff curve.</span></span>
 
 ![Grafik der Lichtintensität gegenüber dem Abstand des Scheitelpunkts vom Licht](images/fallgraf.png)
 
-Die Auswirkung unterschiedlicher Farbverlaufwerte auf die tatsächliche Beleuchtung ist subtil. Durch das Formen der Farbverlaufkurve mit Farbverlaufwerten ungleich 1,0 entsteht eine kleine Leistungseinbuße. Aus diesem Grund wird dieser Wert in der Regel auf 1,0 gesetzt.
+<span data-ttu-id="33838-163">Die Auswirkung unterschiedlicher Farbverlaufwerte auf die tatsächliche Beleuchtung ist subtil. Durch das Formen der Farbverlaufkurve mit Farbverlaufwerten ungleich 1,0 entsteht eine kleine Leistungseinbuße.</span><span class="sxs-lookup"><span data-stu-id="33838-163">The effect of various falloff values on the actual lighting is subtle, and a small performance penalty is incurred by shaping the falloff curve with falloff values other than 1.0.</span></span> <span data-ttu-id="33838-164">Aus diesem Grund wird dieser Wert in der Regel auf 1,0 gesetzt.</span><span class="sxs-lookup"><span data-stu-id="33838-164">For these reasons, this value is typically set to 1.0.</span></span>
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Verwandte Themen
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="33838-165"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="33838-165"><span id="related-topics"></span>Related topics</span></span>
 
 
-[Lichter und Materialien](lights-and-materials.md)
-
- 
+[<span data-ttu-id="33838-166">Lichter und Materialien</span><span class="sxs-lookup"><span data-stu-id="33838-166">Lights and materials</span></span>](lights-and-materials.md)
 
  
 
+ 
 
 
 

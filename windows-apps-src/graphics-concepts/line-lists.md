@@ -2,39 +2,38 @@
 title: Zeilenlisten
 description: "Bei einer Zeilenliste handelt es sich um eine Liste isolierter Zeilensegmente. Zeilenlisten sind hilfreich für Aufgaben wie das Hinzufügen von Schneeregen oder Starkregen zu einer 3D-Szene. Anwendungen erstellen eine Zeilenliste, indem Sie eine Reihe von Vertizes ausfüllen."
 ms.assetid: 42BF32A1-3535-42A3-82C5-3945CB309F2C
-keywords:
-- Zeilenlisten
-author: PeterTurcan
-ms.author: pettur
+keywords: Zeilenlisten
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 64ab9106986cd3fe5109b47710a7057ad6869c8d
-ms.lasthandoff: 02/07/2017
-
+ms.localizationpriority: medium
+ms.openlocfilehash: 66e2c6a455e64ce7ac782c268045f4c14dadcf7b
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/22/2017
 ---
-
-# <a name="line-lists"></a>Zeilenlisten
-
-
-Bei einer Zeilenlisten handelt es sich um eine Liste isolierter Zeilensegmente. Zeilenlisten sind hilfreich für Aufgaben wie das Hinzufügen von Schneeregen oder Starkregen zu einer 3D-Szene. Anwendungen erstellen eine Zeilenliste, indem Sie eine Reihe von Vertizes ausfüllen. Beachten Sie, dass die Anzahl der Vertizes in einer Zeilenliste eine gerade Zahl größer oder gleich 2 sein muss.
-
--   [Beispiel](#example)
--   [Verwandte Themen](#related-topics)
-
-## <a name="span-idexamplespanspan-idexamplespanspan-idexamplespanexample"></a><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Beispiel
+# <a name="line-lists"></a><span data-ttu-id="2d07e-106">Zeilenlisten</span><span class="sxs-lookup"><span data-stu-id="2d07e-106">Line lists</span></span>
 
 
-Die folgende Abbildung zeigt eine gerenderte Zeilenliste.
+<span data-ttu-id="2d07e-107">Bei einer Zeilenlisten handelt es sich um eine Liste isolierter Zeilensegmente.</span><span class="sxs-lookup"><span data-stu-id="2d07e-107">A line list is a list of isolated, straight line segments.</span></span> <span data-ttu-id="2d07e-108">Zeilenlisten sind hilfreich für Aufgaben wie das Hinzufügen von Schneeregen oder Starkregen zu einer 3D-Szene.</span><span class="sxs-lookup"><span data-stu-id="2d07e-108">Line lists are useful for such tasks as adding sleet or heavy rain to a 3D scene.</span></span> <span data-ttu-id="2d07e-109">Anwendungen erstellen eine Zeilenliste, indem Sie eine Reihe von Vertizes ausfüllen.</span><span class="sxs-lookup"><span data-stu-id="2d07e-109">Applications create a line list by filling an array of vertices.</span></span> <span data-ttu-id="2d07e-110">Beachten Sie, dass die Anzahl der Vertizes in einer Zeilenliste eine gerade Zahl größer oder gleich 2 sein muss.</span><span class="sxs-lookup"><span data-stu-id="2d07e-110">Note that the number of vertices in a line list must be an even number greater than or equal to two.</span></span>
 
-![Abbildung einer Zeilenliste](images/linelst.png)
+-   [<span data-ttu-id="2d07e-111">Beispiel</span><span class="sxs-lookup"><span data-stu-id="2d07e-111">Example</span></span>](#example)
+-   [<span data-ttu-id="2d07e-112">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="2d07e-112">Related topics</span></span>](#related-topics)
 
-Sie können einer Zeilenliste Materialien und Texturen zuweisen. Die Farben des Materials oder der Textur erscheinen nur entlang der gezogenen Zeilen, nicht an einer beliebigen Stelle zwischen den Zeilen.
+## <a name="span-idexamplespanspan-idexamplespanspan-idexamplespanexample"></a><span data-ttu-id="2d07e-113"><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Beispiel</span><span class="sxs-lookup"><span data-stu-id="2d07e-113"><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Example</span></span>
 
-Der folgende Code zeigt, wie Vertizes für diese Zeilenliste erstellt werden.
+
+<span data-ttu-id="2d07e-114">Die folgende Abbildungzeigt eine gerenderte Zeilenliste.</span><span class="sxs-lookup"><span data-stu-id="2d07e-114">The following illustration shows a rendered line list.</span></span>
+
+![Abbildungeiner Zeilenliste](images/linelst.png)
+
+<span data-ttu-id="2d07e-116">Sie können einer Zeilenliste Materialien und Texturen zuweisen.</span><span class="sxs-lookup"><span data-stu-id="2d07e-116">You can apply materials and textures to a line list.</span></span> <span data-ttu-id="2d07e-117">Die Farben des Materials oder der Textur erscheinen nur entlang der gezogenen Zeilen, nicht an einer beliebigen Stelle zwischen den Zeilen.</span><span class="sxs-lookup"><span data-stu-id="2d07e-117">The colors in the material or texture appear only along the lines drawn, not at any point in between the lines.</span></span>
+
+<span data-ttu-id="2d07e-118">Der folgende Code zeigt, wie Vertizes für diese Zeilenliste erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="2d07e-118">The following code shows how to create vertices for this line list.</span></span>
 
 ```
 struct CUSTOMVERTEX
@@ -53,7 +52,7 @@ CUSTOMVERTEX Vertices[] =
 };
 ```
 
-Im folgenden Codebeispiel wird veranschaulicht, wie Sie eine Zeilenliste in Direct3D rendern.
+<span data-ttu-id="2d07e-119">Im folgenden Codebeispiel wird veranschaulicht, wie Sie eine Zeilenliste in Direct3D rendern.</span><span class="sxs-lookup"><span data-stu-id="2d07e-119">The code example below shows how to render a line list in Direct3D.</span></span>
 
 ```
 //
@@ -63,15 +62,14 @@ Im folgenden Codebeispiel wird veranschaulicht, wie Sie eine Zeilenliste in Dire
 d3dDevice->DrawPrimitive( D3DPT_LINELIST, 0, 3 );
 ```
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Verwandte Themen
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="2d07e-120"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="2d07e-120"><span id="related-topics"></span>Related topics</span></span>
 
 
-[Grundtypen](primitives.md)
-
- 
+[<span data-ttu-id="2d07e-121">Grundtypen</span><span class="sxs-lookup"><span data-stu-id="2d07e-121">Primitives</span></span>](primitives.md)
 
  
 
+ 
 
 
 

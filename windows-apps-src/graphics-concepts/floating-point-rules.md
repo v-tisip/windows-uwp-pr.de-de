@@ -2,165 +2,163 @@
 title: "Regeln für Gleitkommazahlen"
 description: "Direct3D unterstützt mehrere Darstellungen für Gleitkommazahlen. Alle Gleitkommaberechnungen erfolgen gemäß einer bestimmten Teilmenge der IEEE 754-Regeln für 32-Bit-Gleitkommazahlen einfacher Genauigkeit."
 ms.assetid: 3B0C95E2-1025-4F70-BF14-EBFF2BB53AFF
-keywords:
-- "Regeln für Gleitkommazahlen"
-author: PeterTurcan
-ms.author: pettur
+keywords: "Regeln für Gleitkommazahlen"
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c36ef44bf02e6bbfe7a201004b19b2e99c1c27ca
-ms.lasthandoff: 02/07/2017
-
+ms.localizationpriority: medium
+ms.openlocfilehash: 8706b10756eeec5d4b8a872c0d436a157ef74970
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/22/2017
 ---
-
-# <a name="span-iddirect3dconceptsfloating-pointrulesspanfloating-point-rules"></a><span id="direct3dconcepts.floating-point_rules"></span>Regeln für Gleitkommazahlen
-
-
-Direct3D unterstützt mehrere Darstellungen für Gleitkommazahlen. Alle Gleitkommaberechnungen erfolgen gemäß einer bestimmten Teilmenge der IEEE 754-Regeln für 32-Bit-Gleitkommazahlen einfacher Genauigkeit.
-
-## <a name="span-idalpha32bitspanspan-idalpha32bitspan32-bit-floating-point-rules"></a><span id="alpha_32_bit"></span><span id="ALPHA_32_BIT"></span>Regeln für 32-Bit-Gleitkommazahlen
+# <a name="span-iddirect3dconceptsfloating-pointrulesspanfloating-point-rules"></a><span data-ttu-id="ffccc-105"><span id="direct3dconcepts.floating-point_rules"></span>Regeln für Gleitkommazahlen</span><span class="sxs-lookup"><span data-stu-id="ffccc-105"><span id="direct3dconcepts.floating-point_rules"></span>Floating-point rules</span></span>
 
 
-Es gibt zwei Gruppen von Regeln – solche, die IEEE-754 entsprechen, und solche, die von diesem Standard abweichen.
+<span data-ttu-id="ffccc-106">Direct3D unterstützt mehrere Darstellungen für Gleitkommazahlen.</span><span class="sxs-lookup"><span data-stu-id="ffccc-106">Direct3D supports several floating-point representations.</span></span> <span data-ttu-id="ffccc-107">Alle Gleitkommaberechnungen erfolgen gemäß einer bestimmten Teilmenge der IEEE 754-Regeln für 32-Bit-Gleitkommazahlen einfacher Genauigkeit.</span><span class="sxs-lookup"><span data-stu-id="ffccc-107">All floating-point computations operate under a defined subset of the IEEE 754 32-bit single precision floating-point rules.</span></span>
 
-### <a name="span-idalpha754rulesspanspan-idalpha754rulesspanspan-idalpha754rulesspanhonored-ieee-754-rules"></a><span id="alpha_754_Rules"></span><span id="alpha_754_rules"></span><span id="ALPHA_754_RULES"></span>Regeln gemäß IEEE-754
+## <a name="span-idalpha32bitspanspan-idalpha32bitspan32-bit-floating-point-rules"></a><span data-ttu-id="ffccc-108"><span id="alpha_32_bit"></span><span id="ALPHA_32_BIT"></span>Regeln für 32-Bit-Gleitkommazahlen</span><span class="sxs-lookup"><span data-stu-id="ffccc-108"><span id="alpha_32_bit"></span><span id="ALPHA_32_BIT"></span>32-bit floating-point rules</span></span>
 
-Einige dieser Regeln entsprechen nur einer einzigen der von IEEE-754 angebotenen Optionen.
 
--   Die Division durch 0 ergibt +/-INF. Ausnahme: 0/0 ergibt NaN.
--   Die Berechnung des Logarithmus von (+/-) 0 ergibt -INF.
+<span data-ttu-id="ffccc-109">Es gibt zwei Gruppen von Regeln – solche, die IEEE-754 entsprechen, und solche, die von diesem Standard abweichen.</span><span class="sxs-lookup"><span data-stu-id="ffccc-109">There are two sets of rules: those that conform to IEEE-754, and those that deviate from the standard.</span></span>
+
+### <a name="span-idalpha754rulesspanspan-idalpha754rulesspanspan-idalpha754rulesspanhonored-ieee-754-rules"></a><span data-ttu-id="ffccc-110"><span id="alpha_754_Rules"></span><span id="alpha_754_rules"></span><span id="ALPHA_754_RULES"></span>Regeln gemäß IEEE-754</span><span class="sxs-lookup"><span data-stu-id="ffccc-110"><span id="alpha_754_Rules"></span><span id="alpha_754_rules"></span><span id="ALPHA_754_RULES"></span>Honored IEEE-754 rules</span></span>
+
+<span data-ttu-id="ffccc-111">Einige dieser Regeln entsprechen nur einer einzigen der von IEEE-754 angebotenen Optionen.</span><span class="sxs-lookup"><span data-stu-id="ffccc-111">Some of these rules are a single option where IEEE-754 offers choices.</span></span>
+
+-   <span data-ttu-id="ffccc-112">Die Division durch 0 ergibt +/-INF. Ausnahme: 0/0 ergibt NaN.</span><span class="sxs-lookup"><span data-stu-id="ffccc-112">Divide by 0 produces +/- INF, except 0/0 which results in NaN.</span></span>
+-   <span data-ttu-id="ffccc-113">Die Berechnung des Logarithmus von (+/-) 0 ergibt -INF.</span><span class="sxs-lookup"><span data-stu-id="ffccc-113">log of (+/-) 0 produces -INF.</span></span>
      
 
-    Die Berechnung des Logarithmus eines negativen Werts (außer -0) ergibt NaN.
--   Die Berechnung der reziproken Quadratwurzel (rsq) oder der Quadratwurzel (sqrt) einer negativen Zahl ergibt NaN.
+    <span data-ttu-id="ffccc-114">Die Berechnung des Logarithmus eines negativen Werts (außer -0) ergibt NaN.</span><span class="sxs-lookup"><span data-stu-id="ffccc-114">log of a negative value (other than -0) produces NaN.</span></span>
+-   <span data-ttu-id="ffccc-115">Die Berechnung der reziproken Quadratwurzel (rsq) oder der Quadratwurzel (sqrt) einer negativen Zahl ergibt NaN.</span><span class="sxs-lookup"><span data-stu-id="ffccc-115">Reciprocal square root (rsq) or square root (sqrt) of a negative number produces NaN.</span></span>
      
 
-    Die Ausnahme ist -0: sqrt(-0) ergibt -0, und rsq(-0) ergibt -INF.
--   INF - INF = NaN
--   (+/-)INF / (+/-)INF = NaN
--   (+/-)INF \* 0 = NaN
--   NaN (beliebiger Operand) beliebiger Wert = NaN
--   Die Vergleiche EQ, GT, GE, LT und LE liefern **FALSE**, wenn einer der Operanden der NaN-Wert ist oder beide diesen Wert besitzen.
--   Bei Vergleichen wird das Vorzeichen von 0 ignoriert (somit ist +0 gleich -0).
--   Der Vergleich NE ergibt **TRUE**, wenn einer der Operanden der NaN-Wert ist oder beide diesen Wert besitzen.
--   Vergleiche mit +/-INF ergeben für jeden Wert (außer NaN) das richtige Ergebnis.
+    <span data-ttu-id="ffccc-116">Die Ausnahme ist -0: sqrt(-0) ergibt -0, und rsq(-0) ergibt -INF.</span><span class="sxs-lookup"><span data-stu-id="ffccc-116">The exception is -0; sqrt(-0) produces -0, and rsq(-0) produces -INF.</span></span>
+-   <span data-ttu-id="ffccc-117">INF - INF = NaN</span><span class="sxs-lookup"><span data-stu-id="ffccc-117">INF - INF = NaN</span></span>
+-   <span data-ttu-id="ffccc-118">(+/-)INF / (+/-)INF = NaN</span><span class="sxs-lookup"><span data-stu-id="ffccc-118">(+/-)INF / (+/-)INF = NaN</span></span>
+-   <span data-ttu-id="ffccc-119">(+/-)INF \* 0 = NaN</span><span class="sxs-lookup"><span data-stu-id="ffccc-119">(+/-)INF \* 0 = NaN</span></span>
+-   <span data-ttu-id="ffccc-120">NaN (beliebiger Operand) beliebiger Wert = NaN</span><span class="sxs-lookup"><span data-stu-id="ffccc-120">NaN (any OP) any-value = NaN</span></span>
+-   <span data-ttu-id="ffccc-121">Die Vergleiche EQ, GT, GE, LT und LE liefern **FALSE**, wenn einer der Operanden der NaN-Wert ist oder beide diesen Wert besitzen.</span><span class="sxs-lookup"><span data-stu-id="ffccc-121">The comparisons EQ, GT, GE, LT, and LE, when either or both operands is NaN returns **FALSE**.</span></span>
+-   <span data-ttu-id="ffccc-122">Bei Vergleichen wird das Vorzeichen von 0 ignoriert (somit ist +0 gleich -0).</span><span class="sxs-lookup"><span data-stu-id="ffccc-122">Comparisons ignore the sign of 0 (so +0 equals -0).</span></span>
+-   <span data-ttu-id="ffccc-123">Der Vergleich NE ergibt **TRUE**, wenn einer der Operanden der NaN-Wert ist oder beide diesen Wert besitzen.</span><span class="sxs-lookup"><span data-stu-id="ffccc-123">The comparison NE, when either or both operands is NaN returns **TRUE**.</span></span>
+-   <span data-ttu-id="ffccc-124">Vergleiche mit +/-INF ergeben für jeden Wert (außer NaN) das richtige Ergebnis.</span><span class="sxs-lookup"><span data-stu-id="ffccc-124">Comparisons of any non-NaN value against +/- INF return the correct result.</span></span>
 
-### <a name="span-idalpha754deviationsspanspan-idalpha754deviationsspanspan-idalpha754deviationsspandeviations-or-additional-requirements-from-ieee-754-rules"></a><span id="alpha_754_Deviations"></span><span id="alpha_754_deviations"></span><span id="ALPHA_754_DEVIATIONS"></span>Abweichungen von IEEE-754-Regeln oder zusätzliche Voraussetzungen
+### <a name="span-idalpha754deviationsspanspan-idalpha754deviationsspanspan-idalpha754deviationsspandeviations-or-additional-requirements-from-ieee-754-rules"></a><span data-ttu-id="ffccc-125"><span id="alpha_754_Deviations"></span><span id="alpha_754_deviations"></span><span id="ALPHA_754_DEVIATIONS"></span>Abweichungen von IEEE-754-Regeln oder zusätzliche Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="ffccc-125"><span id="alpha_754_Deviations"></span><span id="alpha_754_deviations"></span><span id="ALPHA_754_DEVIATIONS"></span>Deviations or additional requirements from IEEE-754 rules</span></span>
 
--   Gemäß IEEE-754 muss ein Gleitkommavorgang als Ergebnis den einem unendlich genauen Ergebnis nächstliegenden darstellbaren Wert liefern (sog. mathematisches Runden).
+-   <span data-ttu-id="ffccc-126">Gemäß IEEE-754 muss ein Gleitkommavorgang als Ergebnis den einem unendlich genauen Ergebnis nächstliegenden darstellbaren Wert liefern (sog. mathematisches Runden).</span><span class="sxs-lookup"><span data-stu-id="ffccc-126">IEEE-754 requires floating-point operations to produce a result that is the nearest representable value to an infinitely-precise result, known as round-to-nearest-even.</span></span>
 
-    Direct3D 11 und höher definieren dieselben Anforderungen wie IEEE-754: 32-Bit-Gleitkommavorgänge müssen Resultate mit einer Genauigkeit von 0,5 ULP (Unit in Last Place) für unendlich genaue Ergebnisse liefern. Dies bedeutet beispielsweise, dass Hardware keine mathematische Rundung durchführen muss, sondern Ergebnisse nach 32 Bits abschneiden darf, da das zu einem Fehler von höchstens 0,5 ULP führen würde. Diese Regel gilt nur für Addition, Subtraktion und Multiplikation.
+    <span data-ttu-id="ffccc-127">Direct3D11 und höher definieren dieselben Anforderungen wie IEEE-754: 32-Bit-Gleitkommavorgänge müssen Resultate mit einer Genauigkeit von 0,5 ULP (Unit in Last Place) für unendlich genaue Ergebnisse liefern.</span><span class="sxs-lookup"><span data-stu-id="ffccc-127">Direct3D 11 and up define the same requirement as IEEE-754: 32-bit floating-point operations produce a result that is within 0.5 unit-last-place (ULP) of the infinitely-precise result.</span></span> <span data-ttu-id="ffccc-128">Dies bedeutet beispielsweise, dass Hardware keine mathematische Rundung durchführen muss, sondern Ergebnisse nach 32 Bits abschneiden darf, da das zu einem Fehler von höchstens 0,5 ULP führen würde.</span><span class="sxs-lookup"><span data-stu-id="ffccc-128">This means that, for example, hardware is allowed to truncate results to 32-bit rather than perform round-to-nearest-even, as that would result in error of at most 0.5 ULP.</span></span> <span data-ttu-id="ffccc-129">Diese Regel gilt nur für Addition, Subtraktion und Multiplikation.</span><span class="sxs-lookup"><span data-stu-id="ffccc-129">This rule applies only to addition, subtraction, and multiplication.</span></span>
 
-    Frühere Direct3D-Versionen definieren eine tolerantere Anforderung als IEEE-754: 32-Bit-Gleitkommavorgänge müssen Resultate mit einer Genauigkeit von 1 ULP (Unit in Last Place) für unendlich genaue Ergebnisse liefern. Dies bedeutet beispielsweise, dass Hardware keine mathematische Rundung durchführen muss, sondern Ergebnisse nach 32 Bits abschneiden darf, da das zu einem Fehler von höchstens 1 ULP führen würde.
+    <span data-ttu-id="ffccc-130">Frühere Direct3D-Versionen definieren eine tolerantere Anforderung als IEEE-754: 32-Bit-Gleitkommavorgänge müssen Resultate mit einer Genauigkeit von 1 ULP (Unit in Last Place) für unendlich genaue Ergebnisse liefern.</span><span class="sxs-lookup"><span data-stu-id="ffccc-130">Earlier versions of Direct3D define a looser requirement than IEEE-754: 32-bit floating-point operations produce a result that is within one unit-last-place (1 ULP) of the infinitely-precise result.</span></span> <span data-ttu-id="ffccc-131">Dies bedeutet beispielsweise, dass Hardware keine mathematische Rundung durchführen muss, sondern Ergebnisse nach 32 Bits abschneiden darf, da das zu einem Fehler von höchstens 1 ULP führen würde.</span><span class="sxs-lookup"><span data-stu-id="ffccc-131">This means that, for example, hardware is allowed to truncate results to 32-bit rather than perform round-to-nearest-even, as that would result in error of at most one ULP.</span></span>
 
--   Ausnahmen für Gleitkommaberechnungen, Statusbits oder Traps werden nicht unterstützt.
--   In allen mathematischen Gleitkommavorgängen werden Ein- oder Ausgabewerte, bei denen es sich um denormalisierte Werte (Denorms) handelt, auf Null gesetzt (Flush-To-Zero), wobei das Vorzeichen erhalten bleibt. Ausnahmen werden für alle E/A- oder Datenverschiebevorgänge gemacht, bei denen die Daten unverändert bleiben.
--   Zustände, die Gleitkommawerte enthalten, beispielsweise Werte für Viewport MinDepth/MaxDepth oder BorderColor, können als denormalisierte Werte bereitgestellt und möglicherweise auf Null gesetzt werden, bevor die Hardware sie verwendet.
--   Min- oder Max-Vorgänge setzen Denorms für den Vergleich auf Null, aber das Ergebnis muss nicht unbedingt ein solcher Denorm sein.
--   NaN als Eingabe für einen Vorgang ergibt immer NaN als Ausgabe. Jedoch muss das genaue Bitmuster des NaN-Werts dabei nicht erhalten bleiben (es sei denn, der Vorgang ist eine reine Verschiebeanweisung – eine solche ändert keine Daten).
--   Min- oder oder Max-Vorgänge, bei denen nur ein Operand der NaN-Wert ist, geben den anderen Operanden als Ergebnis zurück (im Gegensatz zu den weiter oben behandelten Vergleichsregeln). Dies ist eine IEEE 754R-Regel.
+-   <span data-ttu-id="ffccc-132">Ausnahmen für Gleitkommaberechnungen, Statusbits oder Traps werden nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="ffccc-132">There is no support for floating-point exceptions, status bits or traps.</span></span>
+-   <span data-ttu-id="ffccc-133">In allen mathematischen Gleitkommavorgängen werden Ein- oder Ausgabewerte, bei denen es sich um denormalisierte Werte (Denorms) handelt, auf Null gesetzt (Flush-To-Zero), wobei das Vorzeichen erhalten bleibt.</span><span class="sxs-lookup"><span data-stu-id="ffccc-133">Denorms are flushed to sign-preserved zero on input and output of any floating-point mathematical operation.</span></span> <span data-ttu-id="ffccc-134">Ausnahmen werden für alle E/A- oder Datenverschiebevorgänge gemacht, bei denen die Daten unverändert bleiben.</span><span class="sxs-lookup"><span data-stu-id="ffccc-134">Exceptions are made for any I/O or data movement operation that doesn't manipulate the data.</span></span>
+-   <span data-ttu-id="ffccc-135">Zustände, die Gleitkommawerte enthalten, beispielsweise Werte für Viewport MinDepth/MaxDepth oder BorderColor, können als denormalisierte Werte bereitgestellt und möglicherweise auf Null gesetzt werden, bevor die Hardware sie verwendet.</span><span class="sxs-lookup"><span data-stu-id="ffccc-135">States that contain floating-point values, such as Viewport MinDepth/MaxDepth or BorderColor values, may be provided as denorm values and may or may not be flushed before the hardware uses them.</span></span>
+-   <span data-ttu-id="ffccc-136">Min- oder Max-Vorgänge setzen Denorms für den Vergleich auf Null, aber das Ergebnis muss nicht unbedingt ein solcher Denorm sein.</span><span class="sxs-lookup"><span data-stu-id="ffccc-136">Min or max operations flush denorms for comparison, but the result may or may not be denorm flushed.</span></span>
+-   <span data-ttu-id="ffccc-137">NaN als Eingabe für einen Vorgang ergibt immer NaN als Ausgabe.</span><span class="sxs-lookup"><span data-stu-id="ffccc-137">NaN input to an operation always produces NaN on output.</span></span> <span data-ttu-id="ffccc-138">Jedoch muss das genaue Bitmuster des NaN-Werts dabei nicht erhalten bleiben (es sei denn, der Vorgang ist eine reine Verschiebeanweisung – eine solche ändert keine Daten).</span><span class="sxs-lookup"><span data-stu-id="ffccc-138">But the exact bit pattern of the NaN is not required to stay the same (unless the operation is a raw move instruction - which doesn't alter data.)</span></span>
+-   <span data-ttu-id="ffccc-139">Min- oder oder Max-Vorgänge, bei denen nur ein Operand der NaN-Wert ist, geben den anderen Operanden als Ergebnis zurück (im Gegensatz zu den weiter oben behandelten Vergleichsregeln).</span><span class="sxs-lookup"><span data-stu-id="ffccc-139">Min or max operations for which only one operand is NaN return the other operand as the result (contrary to comparison rules we looked at earlier).</span></span> <span data-ttu-id="ffccc-140">Dies ist eine IEEE 754R-Regel.</span><span class="sxs-lookup"><span data-stu-id="ffccc-140">This is an IEEE 754R rule.</span></span>
 
-    Die IEEE-754R-Spezifikation für Min- und Max-Vorgänge mit Gleitkommazahlen legt Folgendes fest: Ist eine der Eingaben ein QNaN-Wert (Quiet NaN), muss das Ergebnis des Vorgangs der andere Parameter sein. Beispiel:
+    <span data-ttu-id="ffccc-141">Die IEEE-754R-Spezifikation für Min- und Max-Vorgänge mit Gleitkommazahlen legt Folgendes fest: Ist eine der Eingaben ein QNaN-Wert (Quiet NaN), muss das Ergebnis des Vorgangs der andere Parameter sein.</span><span class="sxs-lookup"><span data-stu-id="ffccc-141">The IEEE-754R specification for floating point min and max operations states that if one of the inputs to min or max is a quiet QNaN value, the result of the operation is the other parameter.</span></span> <span data-ttu-id="ffccc-142">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="ffccc-142">For example:</span></span>
 
     ```ManagedCPlusPlus
     min(x,QNaN) == min(QNaN,x) == x (same for max)
     ```
 
-    Die überarbeitete Version der IEEE-754R-Spezifikation definiert ein anderes Verhalten für die Min- und Max-Vorgänge, wenn in der Eingabe ein QNaN-Wert durch einen SNaN-Wert (Signaling NaN) ersetzt wird:
+    <span data-ttu-id="ffccc-143">Die überarbeitete Version der IEEE-754R-Spezifikation definiert ein anderes Verhalten für die Min- und Max-Vorgänge, wenn in der Eingabe ein QNaN-Wert durch einen SNaN-Wert (Signaling NaN) ersetzt wird:</span><span class="sxs-lookup"><span data-stu-id="ffccc-143">A revision of the IEEE-754R specification adopted a different behavior for min and max when one input is a "signaling" SNaN value versus a QNaN value:</span></span>
 
     ```ManagedCPlusPlus
     min(x,SNaN) == min(SNaN,x) == QNaN (same for max)
      
     ```
 
-    In der Regel folgt Direct3D bezüglich der Arithmetik den Standards IEEE-754 und IEEE-754R. Aber in diesem Fall liegt eine Abweichung vor.
+    <span data-ttu-id="ffccc-144">In der Regel folgt Direct3D bezüglich der Arithmetik den Standards IEEE-754 und IEEE-754R.</span><span class="sxs-lookup"><span data-stu-id="ffccc-144">Generally, Direct3D follows the standards for arithmetic: IEEE-754 and IEEE-754R.</span></span> <span data-ttu-id="ffccc-145">Aber in diesem Fall liegt eine Abweichung vor.</span><span class="sxs-lookup"><span data-stu-id="ffccc-145">But in this case, we have a deviation.</span></span>
 
-    Die arithmetischen Regeln in Direct3D 10 und höher unterscheiden nicht zwischen Quiet NaN-Werten und Signaling NaN-Werten (QNaN statt SNaN). Alle NaN-Werte werden in gleicher Weise behandelt. In Min- und Max-Vorgängen verhält sich Direct3D für jeden NaN-Wert so, wie es die IEEE-754R-Definition für einen QNaN-Wert vorschreibt. (Der Vollständigkeit halber: Sind beide Eingaben NaN-Werte, wird irgendein NaN-Wert zurückgegeben.)
+    <span data-ttu-id="ffccc-146">Die arithmetischen Regeln in Direct3D 10 und höher unterscheiden nicht zwischen Quiet NaN-Werten und Signaling NaN-Werten (QNaN statt SNaN).</span><span class="sxs-lookup"><span data-stu-id="ffccc-146">The arithmetic rules in Direct3D 10 and later don't make any distinctions between quiet and signaling NaN values (QNaN versus SNaN).</span></span> <span data-ttu-id="ffccc-147">Alle NaN-Werte werden in gleicher Weise behandelt.</span><span class="sxs-lookup"><span data-stu-id="ffccc-147">All NaN values are handled the same way.</span></span> <span data-ttu-id="ffccc-148">In Min- und Max-Vorgängen verhält sich Direct3D für jeden NaN-Wert so, wie es die IEEE-754R-Definition für einen QNaN-Wert vorschreibt.</span><span class="sxs-lookup"><span data-stu-id="ffccc-148">In the case of min and max, the Direct3D behavior for any NaN value is like how QNaN is handled in the IEEE-754R definition.</span></span> <span data-ttu-id="ffccc-149">(Der Vollständigkeit halber: Sind beide Eingaben NaN-Werte, wird irgendein NaN-Wert zurückgegeben.)</span><span class="sxs-lookup"><span data-stu-id="ffccc-149">(For completeness - if both inputs are NaN, any NaN value is returned.)</span></span>
 
--   Eine andere IEEE 754R-Regel besagt: min(-0,+0) == min(+0,-0) == - 0 und max(-0,+0) == max(+0,-0) == +0. Es wird also das Vorzeichen berücksichtigt, im Gegensatz zu den weiter oben genannten Vergleichsregeln für eine vorzeichenbehaftete Null. Direct3D empfiehlt hier das IEEE 754R-Verhalten, erzwingt es jedoch nicht. Es ist zulässig, dass das Ergebnis eines Vergleichs von Nullen von der Reihenfolge der Parameter abhängig ist, wenn die Vergleichsmethode die Vorzeichen ignoriert.
--   x\*1.0f ergibt immer x (außer für auf Null gesetzte Denorms).
--   x/1.0f ergibt immer x (außer für auf Null gesetzte Denorms).
--   x +/- 0.0f ergibt immer x (außer für auf Null gesetzte Denorms). Es gilt aber -0 + 0 = +0.
--   Fused-Vorgänge (z. B. mad und dp3) liefern Ergebnisse, die nicht ungenauer sind als die denkbar schlechteste serielle Anordnung einer Auswertung der Unfused-Erweiterung des Vorgangs. Bezüglich der Toleranz ist die Definition der denkbar schlechtesten Anordnung keine feste Definition für einen bestimmten Fused-Vorgang, sondern sie ist von den jeweiligen Eingabewerten abhängig. Für jeden einzelnen Schritt in einer Unfused-Erweiterung ist eine Toleranz von 1 ULP zugelassen (oder für jede Anweisung, die Direct3D mit einer höheren Toleranz als 1 ULP aufruft, ist diese höhere Toleranz zulässig).
--   Für Fused-Vorgänge gelten dieselben NaN-Regeln wie für Unfused-Vorgänge.
--   Die Toleranz für sqrt und rcp beträgt 1 ULP. Für die Shader-Anweisungen [**rcp**](https://msdn.microsoft.com/library/windows/desktop/hh447205) zur Berechnung des Kehrwerts und [**rsq**](https://msdn.microsoft.com/library/windows/desktop/hh447221) zur Berechnung der reziproken Quadratwurzel gelten eigene, ebenfalls weniger strikte Genauigkeitsanforderungen.
--   Multiplizieren und Dividieren erfolgt jeweils auf der Genauigkeitsebene von 32-Bit-Gleitkommavorgängen (0,5 ULP Genauigkeit für das Multiplizieren und 1,0 ULP für reziproke Vorgänge). Wenn x/y direkt implementiert ist, muss die Genauigkeit der Ergebnisse größer oder gleich der Genauigkeit sein, die eine Methode mit zwei Schritten liefert.
+-   <span data-ttu-id="ffccc-150">Eine andere IEEE 754R-Regel besagt: min(-0,+0) == min(+0,-0) == - 0 und max(-0,+0) == max(+0,-0) == +0. Es wird also das Vorzeichen berücksichtigt, im Gegensatz zu den weiter oben genannten Vergleichsregeln für eine vorzeichenbehaftete Null.</span><span class="sxs-lookup"><span data-stu-id="ffccc-150">Another IEEE 754R rule is that min(-0,+0) == min(+0,-0) == -0, and max(-0,+0) == max(+0,-0) == +0, which honors the sign, in contrast to the comparison rules for signed zero (as we saw earlier).</span></span> <span data-ttu-id="ffccc-151">Direct3D empfiehlt hier das IEEE 754R-Verhalten, erzwingt es jedoch nicht. Es ist zulässig, dass das Ergebnis eines Vergleichs von Nullen von der Reihenfolge der Parameter abhängig ist, wenn die Vergleichsmethode die Vorzeichen ignoriert.</span><span class="sxs-lookup"><span data-stu-id="ffccc-151">Direct3D recommends the IEEE 754R behavior here, but doesn't enforce it; it is permissible for the result of comparing zeros to be dependent on the order of parameters, using a comparison that ignores the signs.</span></span>
+-   <span data-ttu-id="ffccc-152">x\*1.0f ergibt immer x (außer für auf Null gesetzte Denorms).</span><span class="sxs-lookup"><span data-stu-id="ffccc-152">x\*1.0f always results in x (except denorm flushed).</span></span>
+-   <span data-ttu-id="ffccc-153">x/1.0f ergibt immer x (außer für auf Null gesetzte Denorms).</span><span class="sxs-lookup"><span data-stu-id="ffccc-153">x/1.0f always results in x (except denorm flushed).</span></span>
+-   <span data-ttu-id="ffccc-154">x +/- 0.0f ergibt immer x (außer für auf Null gesetzte Denorms).</span><span class="sxs-lookup"><span data-stu-id="ffccc-154">x +/- 0.0f always results in x (except denorm flushed).</span></span> <span data-ttu-id="ffccc-155">Es gilt aber -0 + 0 = +0.</span><span class="sxs-lookup"><span data-stu-id="ffccc-155">But -0 + 0 = +0.</span></span>
+-   <span data-ttu-id="ffccc-156">Fused-Vorgänge (z.B. mad und dp3) liefern Ergebnisse, die nicht ungenauer sind als die denkbar schlechteste serielle Anordnung einer Auswertung der Unfused-Erweiterung des Vorgangs.</span><span class="sxs-lookup"><span data-stu-id="ffccc-156">Fused operations (such as mad, dp3) produce results that are no less accurate than the worst possible serial ordering of evaluation of the unfused expansion of the operation.</span></span> <span data-ttu-id="ffccc-157">Bezüglich der Toleranz ist die Definition der denkbar schlechtesten Anordnung keine feste Definition für einen bestimmten Fused-Vorgang, sondern sie ist von den jeweiligen Eingabewerten abhängig.</span><span class="sxs-lookup"><span data-stu-id="ffccc-157">The definition of the worst possible ordering, for the purpose of tolerance, is not a fixed definition for a given fused operation; it depends on the particular values of the inputs.</span></span> <span data-ttu-id="ffccc-158">Für jeden einzelnen Schritt in einer Unfused-Erweiterung ist eine Toleranz von 1 ULP zugelassen (oder für jede Anweisung, die Direct3D mit einer höheren Toleranz als 1 ULP aufruft, ist diese höhere Toleranz zulässig).</span><span class="sxs-lookup"><span data-stu-id="ffccc-158">The individual steps in the unfused expansion are each allowed 1 ULP tolerance (or for any instructions Direct3D calls out with a more lax tolerance than 1 ULP, the more lax tolerance is allowed).</span></span>
+-   <span data-ttu-id="ffccc-159">Für Fused-Vorgänge gelten dieselben NaN-Regeln wie für Unfused-Vorgänge.</span><span class="sxs-lookup"><span data-stu-id="ffccc-159">Fused operations adhere to the same NaN rules as non-fused operations.</span></span>
+-   <span data-ttu-id="ffccc-160">Die Toleranz für sqrt und rcp beträgt 1 ULP.</span><span class="sxs-lookup"><span data-stu-id="ffccc-160">sqrt and rcp have 1 ULP tolerance.</span></span> <span data-ttu-id="ffccc-161">Für die Shader-Anweisungen [**rcp**](https://msdn.microsoft.com/library/windows/desktop/hh447205) zur Berechnung des Kehrwerts und [**rsq**](https://msdn.microsoft.com/library/windows/desktop/hh447221) zur Berechnung der reziproken Quadratwurzel gelten eigene, ebenfalls weniger strikte Genauigkeitsanforderungen.</span><span class="sxs-lookup"><span data-stu-id="ffccc-161">The shader reciprocal and reciprocal square-root instructions, [**rcp**](https://msdn.microsoft.com/library/windows/desktop/hh447205) and [**rsq**](https://msdn.microsoft.com/library/windows/desktop/hh447221), have their own separate relaxed precision requirement.</span></span>
+-   <span data-ttu-id="ffccc-162">Multiplizieren und Dividieren erfolgt jeweils auf der Genauigkeitsebene von 32-Bit-Gleitkommavorgängen (0,5 ULP Genauigkeit für das Multiplizieren und 1,0 ULP für reziproke Vorgänge).</span><span class="sxs-lookup"><span data-stu-id="ffccc-162">Multiply and divide each operate at the 32-bit floating-point precision level (accuracy to 0.5 ULP for multiply, 1.0 ULP for reciprocal).</span></span> <span data-ttu-id="ffccc-163">Wenn x/y direkt implementiert ist, muss die Genauigkeit der Ergebnisse größer oder gleich der Genauigkeit sein, die eine Methode mit zwei Schritten liefert.</span><span class="sxs-lookup"><span data-stu-id="ffccc-163">If x/y is implemented directly, results must be of greater or equal accuracy than a two-step method.</span></span>
 
-## <a name="span-iddoubleprec64bitspanspan-iddoubleprec64bitspan64-bit-double-precision-floating-point-rules"></a><span id="double_prec_64_bit"></span><span id="DOUBLE_PREC_64_BIT"></span>Regeln für 64-Bit-Gleitkommazahlen (doppelte Genauigkeit)
-
-
-Hardware und Anzeigetreiber unterstützen optional Gleitkommazahlen doppelter Genauigkeit. Wenn Sie [**ID3D11Device::CheckFeatureSupport**](https://msdn.microsoft.com/library/windows/desktop/ff476497) mit [**D3D11\_FEATURE\_DOUBLES**](https://msdn.microsoft.com/library/windows/desktop/ff476124#d3d11-feature-doubles) aufrufen, setzt der Treiber **DoublePrecisionFloatShaderOps** in [**D3D11\_FEATURE\_DATA\_DOUBLES**](https://msdn.microsoft.com/library/windows/desktop/ff476127) auf TRUE, um anzugeben, dass die Unterstützung verfügbar ist. Treiber und Hardware müssen dann alle Gleitkommaanweisungen mit doppelter Genauigkeit unterstützen.
-
-Anweisungen mit doppelter Genauigkeit befolgen IEEE 754R-Verhaltensanforderungen.
-
-Für Daten mit doppelter Genauigkeit ist Unterstützung zum Generieren denormalisierter Werte erforderlich (kein Flush-To-Zero-Verhalten). Entsprechend lesen Anweisungen denormalisierte Daten nicht als vorzeichenbehaftete Nullen, sondern berücksichtigen die Denorm-Werte.
-
-## <a name="span-idalpha16bitspanspan-idalpha16bitspan16-bit-floating-point-rules"></a><span id="alpha_16_bit"></span><span id="ALPHA_16_BIT"></span>Regeln für 16-Bit-Gleitkommazahlen
+## <a name="span-iddoubleprec64bitspanspan-iddoubleprec64bitspan64-bit-double-precision-floating-point-rules"></a><span data-ttu-id="ffccc-164"><span id="double_prec_64_bit"></span><span id="DOUBLE_PREC_64_BIT"></span>Regeln für 64-Bit-Gleitkommazahlen (doppelte Genauigkeit)</span><span class="sxs-lookup"><span data-stu-id="ffccc-164"><span id="double_prec_64_bit"></span><span id="DOUBLE_PREC_64_BIT"></span>64-bit (double precision) floating point rules</span></span>
 
 
-Direct3D unterstützt auch 16-Bit-Darstellungen von Gleitkommazahlen.
+<span data-ttu-id="ffccc-165">Hardware und Anzeigetreiber unterstützen optional Gleitkommazahlen doppelter Genauigkeit.</span><span class="sxs-lookup"><span data-stu-id="ffccc-165">Hardware and display drivers optionally support double-precision floating-point.</span></span> <span data-ttu-id="ffccc-166">Wenn Sie [**ID3D11Device::CheckFeatureSupport**](https://msdn.microsoft.com/library/windows/desktop/ff476497) mit [**D3D11\_FEATURE\_DOUBLES**](https://msdn.microsoft.com/library/windows/desktop/ff476124#d3d11-feature-doubles) aufrufen, setzt der Treiber **DoublePrecisionFloatShaderOps** in [**D3D11\_FEATURE\_DATA\_DOUBLES**](https://msdn.microsoft.com/library/windows/desktop/ff476127) auf TRUE, um anzugeben, dass die Unterstützung verfügbar ist.</span><span class="sxs-lookup"><span data-stu-id="ffccc-166">To indicate support, when you call [**ID3D11Device::CheckFeatureSupport**](https://msdn.microsoft.com/library/windows/desktop/ff476497) with [**D3D11\_FEATURE\_DOUBLES**](https://msdn.microsoft.com/library/windows/desktop/ff476124#d3d11-feature-doubles), the driver sets **DoublePrecisionFloatShaderOps** of [**D3D11\_FEATURE\_DATA\_DOUBLES**](https://msdn.microsoft.com/library/windows/desktop/ff476127) to TRUE.</span></span> <span data-ttu-id="ffccc-167">Treiber und Hardware müssen dann alle Gleitkommaanweisungen mit doppelter Genauigkeit unterstützen.</span><span class="sxs-lookup"><span data-stu-id="ffccc-167">The driver and hardware must then support all double-precision floating-point instructions.</span></span>
 
-Format:
+<span data-ttu-id="ffccc-168">Anweisungen mit doppelter Genauigkeit befolgen IEEE 754R-Verhaltensanforderungen.</span><span class="sxs-lookup"><span data-stu-id="ffccc-168">Double-precision instructions follow IEEE 754R behavior requirements.</span></span>
 
--   1 Vorzeichenbit (s) an der MSB-Position
--   5 Bits für den Biased-Exponenten (e)
--   10 Fraktionsbits (f) mit einem zusätzliche Hidden-Bit
+<span data-ttu-id="ffccc-169">Für Daten mit doppelter Genauigkeit ist Unterstützung zum Generieren denormalisierter Werte erforderlich (kein Flush-To-Zero-Verhalten).</span><span class="sxs-lookup"><span data-stu-id="ffccc-169">Support for generation of denormalized values is required for double-precision data (no flush-to-zero behavior).</span></span> <span data-ttu-id="ffccc-170">Entsprechend lesen Anweisungen denormalisierte Daten nicht als vorzeichenbehaftete Nullen, sondern berücksichtigen die Denorm-Werte.</span><span class="sxs-lookup"><span data-stu-id="ffccc-170">Likewise, instructions don't read denormalized data as a signed zero, they honor the denorm value.</span></span>
 
-Für einen float16-Wert (v) gelten folgende Regeln:
-
--   Wenn e == 31 und f != 0, dann ist v unabhängig von s ein NaN-Wert.
--   Wenn e == 31 und f == 0, dann v = (-1)s\*Unendlich (vorzeichenbehaftetes Unendlich)
--   Wenn e zwischen 0 und 31 liegt, dann v = (-1)s\*2(e-15)\*(1.f)
--   Wenn e == 0 und f != 0, dann v = (-1)s\*2(e-14)\*(0.f) (denormalisierte Zahlen)
--   Wenn e == 0 und f == 0, dann v = (-1)s\*0 (vorzeichenbehaftete Null)
-
-Die Regeln für 32-Bit-Gleitkommazahlen gelten auch für 16-Bit-Gleitkommazahlen, die an das weiter oben beschriebene Bitlayout angepasst sind. Dabei gibt es folgende Ausnahmen:
-
--   Genauigkeit: Unfused-Vorgänge mit 16-Bit-Gleitkommazahlen liefern als Ergebnis den einem unendlich genauen Ergebnis nächstliegenden darstellbaren Wert (mathematisches Runden gemäß IEEE-754, angewendet auf 16-Bit-Werte). Für 32-Bit-Gleitkommazahlen gilt eine Toleranz von 1 ULP. Für 16-Bit-Gleitkommazahlen gilt ein Toleranz von 0,5 ULP bei Unfused-Vorgängen und von 0,6 ULP bei Fused-Vorgängen.
--   16-Bit-Gleitkommazahlen erhalten Denorms.
-
-## <a name="span-idalpha11bitspanspan-idalpha11bitspan11-bit-and-10-bit-floating-point-rules"></a><span id="alpha_11_bit"></span><span id="ALPHA_11_BIT"></span>Regeln für 11-Bit- und 10-Bit-Gleitkommazahlen
+## <a name="span-idalpha16bitspanspan-idalpha16bitspan16-bit-floating-point-rules"></a><span data-ttu-id="ffccc-171"><span id="alpha_16_bit"></span><span id="ALPHA_16_BIT"></span>Regeln für 16-Bit-Gleitkommazahlen</span><span class="sxs-lookup"><span data-stu-id="ffccc-171"><span id="alpha_16_bit"></span><span id="ALPHA_16_BIT"></span>16-bit floating-point rules</span></span>
 
 
-Direct3D unterstützt auch 11-Bit- und 10-Bit-Gleitkommazahlenformate.
+<span data-ttu-id="ffccc-172">Direct3D unterstützt auch 16-Bit-Darstellungen von Gleitkommazahlen.</span><span class="sxs-lookup"><span data-stu-id="ffccc-172">Direct3D also supports 16-bit representations of floating-point numbers.</span></span>
 
-Format:
+<span data-ttu-id="ffccc-173">Format:</span><span class="sxs-lookup"><span data-stu-id="ffccc-173">Format:</span></span>
 
--   Kein Vorzeichenbit
--   5 Bits für den Biased-Exponenten (e)
--   6 Fraktionsbits (f) für ein 11-Bit-Format, 5 Fraktionsbits (f) für ein 10-Bit-Format, dazu jeweils ein zusätzliches Hidden-Bit.
+-   <span data-ttu-id="ffccc-174">1 Vorzeichenbit (s) an der MSB-Position</span><span class="sxs-lookup"><span data-stu-id="ffccc-174">1 sign bit (s)in the MSB bit position</span></span>
+-   <span data-ttu-id="ffccc-175">5 Bits für den Biased-Exponenten (e)</span><span class="sxs-lookup"><span data-stu-id="ffccc-175">5 bits of biased exponent (e)</span></span>
+-   <span data-ttu-id="ffccc-176">10 Fraktionsbits (f) mit einem zusätzliche Hidden-Bit</span><span class="sxs-lookup"><span data-stu-id="ffccc-176">10 bits of fraction (f), with an additional hidden bit</span></span>
 
-Für einen float11/float10-Wert (v) gelten folgende Regeln:
+<span data-ttu-id="ffccc-177">Für einen float16-Wert (v) gelten folgende Regeln:</span><span class="sxs-lookup"><span data-stu-id="ffccc-177">A float16 value (v) follows these rules:</span></span>
 
--   Wenn e == 31 und f != 0, dann ist v ein NaN-Wert.
--   Wenn e == 31 und f == 0, dann v = +Unendlich
--   Wenn e zwischen 0 und 31 liegt, dann v = 2(e-15)\*(1.f)
--   Wenn e == 0 und f != 0, dann v = \*2(e-14)\*(0.f) (denormalisierte Zahlen)
--   Wenn e == 0 und f == 0, dann v = 0 (Null)
+-   <span data-ttu-id="ffccc-178">Wenn e == 31 und f != 0, dann ist v unabhängig von s ein NaN-Wert.</span><span class="sxs-lookup"><span data-stu-id="ffccc-178">if e == 31 and f != 0, then v is NaN regardless of s</span></span>
+-   <span data-ttu-id="ffccc-179">Wenn e == 31 und f == 0, dann v = (-1)s\*Unendlich (vorzeichenbehaftetes Unendlich)</span><span class="sxs-lookup"><span data-stu-id="ffccc-179">if e == 31 and f == 0, then v = (-1)s\*infinity (signed infinity)</span></span>
+-   <span data-ttu-id="ffccc-180">Wenn e zwischen 0 und 31 liegt, dann v = (-1)s\*2(e-15)\*(1.f)</span><span class="sxs-lookup"><span data-stu-id="ffccc-180">if e is between 0 and 31, then v = (-1)s\*2(e-15)\*(1.f)</span></span>
+-   <span data-ttu-id="ffccc-181">Wenn e == 0 und f != 0, dann v = (-1)s\*2(e-14)\*(0.f) (denormalisierte Zahlen)</span><span class="sxs-lookup"><span data-stu-id="ffccc-181">if e == 0 and f != 0, then v = (-1)s\*2(e-14)\*(0.f) (denormalized numbers)</span></span>
+-   <span data-ttu-id="ffccc-182">Wenn e == 0 und f == 0, dann v = (-1)s\*0 (vorzeichenbehaftete Null)</span><span class="sxs-lookup"><span data-stu-id="ffccc-182">if e == 0 and f == 0, then v = (-1)s\*0 (signed zero)</span></span>
 
-Die Regeln für 32-Bit-Gleitkommazahlen gelten auch für 11-Bit- und 10-Bit-Gleitkommazahlen, die an das weiter oben beschriebene Bitlayout angepasst sind. Dabei gibt es folgende Ausnahmen:
+<span data-ttu-id="ffccc-183">Die Regeln für 32-Bit-Gleitkommazahlen gelten auch für 16-Bit-Gleitkommazahlen, die an das weiter oben beschriebene Bitlayout angepasst sind.</span><span class="sxs-lookup"><span data-stu-id="ffccc-183">32-bit floating-point rules also hold for 16-bit floating-point numbers, adjusted for the bit layout described earlier.</span></span> <span data-ttu-id="ffccc-184">Dabei gibt es folgende Ausnahmen:</span><span class="sxs-lookup"><span data-stu-id="ffccc-184">Exceptions to this include:</span></span>
 
--   Genauigkeit: Regeln für 32-Bit-Gleitkommazahlen definieren eine Genauigkeit 0,5 ULP.
--   10/11-Bit-Gleitkommazahlen erhalten Denorms.
--   Bei jedem Vorgang, der zu einer Zahl kleiner als Null führen würde, wird das Ergebnis auf Null beschränkt.
+-   <span data-ttu-id="ffccc-185">Genauigkeit: Unfused-Vorgänge mit 16-Bit-Gleitkommazahlen liefern als Ergebnis den einem unendlich genauen Ergebnis nächstliegenden darstellbaren Wert (mathematisches Runden gemäß IEEE-754, angewendet auf 16-Bit-Werte).</span><span class="sxs-lookup"><span data-stu-id="ffccc-185">Precision: Unfused operations on 16-bit floating-point numbers produce a result that is the nearest representable value to an infinitely-precise result (round to nearest even, per IEEE-754, applied to 16-bit values).</span></span> <span data-ttu-id="ffccc-186">Für 32-Bit-Gleitkommazahlen gilt eine Toleranz von 1 ULP. Für 16-Bit-Gleitkommazahlen gilt ein Toleranz von 0,5 ULP bei Unfused-Vorgängen und von 0,6 ULP bei Fused-Vorgängen.</span><span class="sxs-lookup"><span data-stu-id="ffccc-186">32-bit floating-point rules adhere to 1 ULP tolerance, 16-bit floating-point rules adhere to 0.5 ULP for unfused operations, and 0.6 ULP for fused operations.</span></span>
+-   <span data-ttu-id="ffccc-187">16-Bit-Gleitkommazahlen erhalten Denorms.</span><span class="sxs-lookup"><span data-stu-id="ffccc-187">16-bit floating-point numbers preserve denorms.</span></span>
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Verwandte Themen
+## <a name="span-idalpha11bitspanspan-idalpha11bitspan11-bit-and-10-bit-floating-point-rules"></a><span data-ttu-id="ffccc-188"><span id="alpha_11_bit"></span><span id="ALPHA_11_BIT"></span>Regeln für 11-Bit- und 10-Bit-Gleitkommazahlen</span><span class="sxs-lookup"><span data-stu-id="ffccc-188"><span id="alpha_11_bit"></span><span id="ALPHA_11_BIT"></span>11-bit and 10-bit floating-point rules</span></span>
 
 
-[Anhänge](appendix.md)
+<span data-ttu-id="ffccc-189">Direct3D unterstützt auch 11-Bit- und 10-Bit-Gleitkommazahlenformate.</span><span class="sxs-lookup"><span data-stu-id="ffccc-189">Direct3D also supports 11-bit and 10-bit floating-point formats.</span></span>
 
-[Ressourcen](https://msdn.microsoft.com/library/windows/desktop/ff476894)
+<span data-ttu-id="ffccc-190">Format:</span><span class="sxs-lookup"><span data-stu-id="ffccc-190">Format:</span></span>
 
-[Texturen](https://msdn.microsoft.com/library/windows/desktop/ff476902)
+-   <span data-ttu-id="ffccc-191">Kein Vorzeichenbit</span><span class="sxs-lookup"><span data-stu-id="ffccc-191">No sign bit</span></span>
+-   <span data-ttu-id="ffccc-192">5 Bits für den Biased-Exponenten (e)</span><span class="sxs-lookup"><span data-stu-id="ffccc-192">5 bits of biased exponent (e)</span></span>
+-   <span data-ttu-id="ffccc-193">6 Fraktionsbits (f) für ein 11-Bit-Format, 5 Fraktionsbits (f) für ein 10-Bit-Format, dazu jeweils ein zusätzliches Hidden-Bit.</span><span class="sxs-lookup"><span data-stu-id="ffccc-193">6 bits of fraction (f) for an 11-bit format, 5 bits of fraction (f) for a 10-bit format, with an additional hidden bit in either case.</span></span>
 
- 
+<span data-ttu-id="ffccc-194">Für einen float11/float10-Wert (v) gelten folgende Regeln:</span><span class="sxs-lookup"><span data-stu-id="ffccc-194">A float11/float10 value (v) follows the following rules:</span></span>
+
+-   <span data-ttu-id="ffccc-195">Wenn e == 31 und f != 0, dann ist v ein NaN-Wert.</span><span class="sxs-lookup"><span data-stu-id="ffccc-195">if e == 31 and f != 0, then v is NaN</span></span>
+-   <span data-ttu-id="ffccc-196">Wenn e == 31 und f == 0, dann v = +Unendlich</span><span class="sxs-lookup"><span data-stu-id="ffccc-196">if e == 31 and f == 0, then v = +infinity</span></span>
+-   <span data-ttu-id="ffccc-197">Wenn e zwischen 0 und 31 liegt, dann v = 2(e-15)\*(1.f)</span><span class="sxs-lookup"><span data-stu-id="ffccc-197">if e is between 0 and 31, then v = 2(e-15)\*(1.f)</span></span>
+-   <span data-ttu-id="ffccc-198">Wenn e == 0 und f != 0, dann v = \*2(e-14)\*(0.f) (denormalisierte Zahlen)</span><span class="sxs-lookup"><span data-stu-id="ffccc-198">if e == 0 and f != 0, then v = \*2(e-14)\*(0.f) (denormalized numbers)</span></span>
+-   <span data-ttu-id="ffccc-199">Wenn e == 0 und f == 0, dann v = 0 (Null)</span><span class="sxs-lookup"><span data-stu-id="ffccc-199">if e == 0 and f == 0, then v = 0 (zero)</span></span>
+
+<span data-ttu-id="ffccc-200">Die Regeln für 32-Bit-Gleitkommazahlen gelten auch für 11-Bit- und 10-Bit-Gleitkommazahlen, die an das weiter oben beschriebene Bitlayout angepasst sind.</span><span class="sxs-lookup"><span data-stu-id="ffccc-200">32-bit floating-point rules also hold for 11-bit and 10-bit floating-point numbers, adjusted for the bit layout described earlier.</span></span> <span data-ttu-id="ffccc-201">Dabei gibt es folgende Ausnahmen:</span><span class="sxs-lookup"><span data-stu-id="ffccc-201">Exceptions include:</span></span>
+
+-   <span data-ttu-id="ffccc-202">Genauigkeit: Regeln für 32-Bit-Gleitkommazahlen definieren eine Genauigkeit 0,5 ULP.</span><span class="sxs-lookup"><span data-stu-id="ffccc-202">Precision: 32-bit floating-point rules adhere to 0.5 ULP.</span></span>
+-   <span data-ttu-id="ffccc-203">10/11-Bit-Gleitkommazahlen erhalten Denorms.</span><span class="sxs-lookup"><span data-stu-id="ffccc-203">10/11-bit floating-point numbers preserve denorms.</span></span>
+-   <span data-ttu-id="ffccc-204">Bei jedem Vorgang, der zu einer Zahl kleiner als Null führen würde, wird das Ergebnis auf Null beschränkt.</span><span class="sxs-lookup"><span data-stu-id="ffccc-204">Any operation that would result in a number less than zero is clamped to zero.</span></span>
+
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="ffccc-205"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="ffccc-205"><span id="related-topics"></span>Related topics</span></span>
+
+
+[<span data-ttu-id="ffccc-206">Anhänge</span><span class="sxs-lookup"><span data-stu-id="ffccc-206">Appendices</span></span>](appendix.md)
+
+[<span data-ttu-id="ffccc-207">Ressourcen</span><span class="sxs-lookup"><span data-stu-id="ffccc-207">Resources</span></span>](https://msdn.microsoft.com/library/windows/desktop/ff476894)
+
+[<span data-ttu-id="ffccc-208">Texturen</span><span class="sxs-lookup"><span data-stu-id="ffccc-208">Textures</span></span>](https://msdn.microsoft.com/library/windows/desktop/ff476902)
 
  
 
+ 
 
 
 

@@ -7,81 +7,78 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
+keywords: Windows10, UWP
 ms.assetid: 9c133c77-fe9d-4b81-b4b3-462936333aa3
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: c7ebd56205db2674df5da6d64ecc9332aa96230e
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: bbf916145107b465ddd2fe7e4805e6139f4597d3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.translationtype: HT
+ms.contentlocale: de-DE
 ---
+# <a name="how-to-use-fiddler-with-xbox-one-when-developing-for-uwp"></a><span data-ttu-id="5b081-104">Verwenden von Fiddler mit Xbox One bei der Entwicklung für UWP</span><span class="sxs-lookup"><span data-stu-id="5b081-104">How to use Fiddler with Xbox One when developing for UWP</span></span>
 
-# <a name="how-to-use-fiddler-with-xbox-one-when-developing-for-uwp"></a>Verwenden von Fiddler mit Xbox One bei der Entwicklung für UWP
+<span data-ttu-id="5b081-105">Fiddler ist ein Webdebuggingproxy, der den gesamten HTTP- und HTTPS-Datenverkehr zwischen Ihrem Xbox One Dev Kit und dem Internet protokolliert.</span><span class="sxs-lookup"><span data-stu-id="5b081-105">Fiddler is a web debugging proxy which logs all HTTP and HTTPS traffic between your Xbox One dev kit and the Internet.</span></span> <span data-ttu-id="5b081-106">Sie werden ihn, um sich anzumelden und den Datenverkehr zu und von den Xbox-Diensten und Diensten vertrauender Seiten zu prüfen und Webdienstaufrufe zu verstehen und zu debuggen.</span><span class="sxs-lookup"><span data-stu-id="5b081-106">You will use it to log and inspect traffic to and from the Xbox services and relying party web services, to understand and debug web service calls.</span></span> 
 
-Fiddler ist ein Webdebuggingproxy, der den gesamten HTTP- und HTTPS-Datenverkehr zwischen Ihrem Xbox One Dev Kit und dem Internet protokolliert. Sie werden ihn, um sich anzumelden und den Datenverkehr zu und von den Xbox-Diensten und Diensten vertrauender Seiten zu prüfen und Webdienstaufrufe zu verstehen und zu debuggen. 
+<span data-ttu-id="5b081-107">Im normalen Betrieb besteht das Risiko, dass die Kommunikation einer Konsole, die über einen Proxy kommuniziert, durch diesen verändert wird, sodass Spieler möglicherweise mogeln können.</span><span class="sxs-lookup"><span data-stu-id="5b081-107">In normal operation, a console that communicates through a proxy is at risk of having its communications modified by the proxy, possibly allowing players to cheat.</span></span> <span data-ttu-id="5b081-108">Daher werden Konsolen so programmiert, dass sie keine Kommunikation über einen Proxy zulassen.</span><span class="sxs-lookup"><span data-stu-id="5b081-108">Thus, consoles are designed to not allow communication through a proxy.</span></span> <span data-ttu-id="5b081-109">Wenn Sie Fiddler mit Ihrem Xbox One Dev Kit verwenden, müssen Sie einige spezielle Konfigurationsschritte für den Dev Kit ausführen, damit dieser den Fiddler-Proxy verwenden kann.</span><span class="sxs-lookup"><span data-stu-id="5b081-109">Using Fiddler with your Xbox One dev kit requires that you perform some special configuration steps on the dev kit to allow it to use the Fiddler proxy.</span></span> 
 
-Im normalen Betrieb besteht das Risiko, dass die Kommunikation einer Konsole, die über einen Proxy kommuniziert, durch diesen verändert wird, sodass Spieler möglicherweise mogeln können. Daher werden Konsolen so programmiert, dass sie keine Kommunikation über einen Proxy zulassen. Wenn Sie Fiddler mit Ihrem Xbox One Dev Kit verwenden, müssen Sie einige spezielle Konfigurationsschritte für den Dev Kit ausführen, damit dieser den Fiddler-Proxy verwenden kann. 
+<span data-ttu-id="5b081-110">Fiddler ist Freeware und kann von der [Fiddler-Website](http://www.fiddler2.com/fiddler2/) heruntergeladen werden.</span><span class="sxs-lookup"><span data-stu-id="5b081-110">Fiddler is freeware, and can be downloaded from the [Fiddler website](http://www.fiddler2.com/fiddler2/).</span></span> 
 
-Fiddler ist Freeware und kann von der [Fiddler-Website](http://www.fiddler2.com/fiddler2/) heruntergeladen werden. 
+<span data-ttu-id="5b081-111">Fiddler kann Auswirkungen auf den Netzwerkstatus haben, der von der Konsole gemeldet wird.</span><span class="sxs-lookup"><span data-stu-id="5b081-111">Fiddler can impact the network status reported by the console.</span></span> <span data-ttu-id="5b081-112">Wenn eine Upstreamverbindung auf dem Computer deaktiviert wird, auf dem Fiddler ausgeführt wird, erkennt die Konsole diese Trennung möglicherweise erst nach Ablauf der Authentifizierung der Konsole.</span><span class="sxs-lookup"><span data-stu-id="5b081-112">If an upstream connection is disabled from the machine running Fiddler, the console may not detect this disconnection until the authentication of the console has expired.</span></span> <span data-ttu-id="5b081-113">Wenn Sie Fiddler verwenden, müssen Sie die Verbindung zwischen der Konsole und dem Computer trennen, auf dem Fiddler ausgeführt wird, anstelle Fiddler zu verwenden, um eine Trennung zu simulieren</span><span class="sxs-lookup"><span data-stu-id="5b081-113">If you are using Fiddler, be sure to disconnect the connection between the console and the computer running Fiddler, rather than using Fiddler to simulate a disconnect.</span></span>
 
-Fiddler kann Auswirkungen auf den Netzwerkstatus haben, der von der Konsole gemeldet wird. Wenn eine Upstreamverbindung auf dem Computer deaktiviert wird, auf dem Fiddler ausgeführt wird, erkennt die Konsole diese Trennung möglicherweise erst nach Ablauf der Authentifizierung der Konsole. Wenn Sie Fiddler verwenden, müssen Sie die Verbindung zwischen der Konsole und dem Computer trennen, auf dem Fiddler ausgeführt wird, anstelle Fiddler zu verwenden, um eine Trennung zu simulieren
+### <a name="to-install-and-enable-fiddler-on-your-development-pc"></a><span data-ttu-id="5b081-114">So installieren und aktivieren Sie Fiddler auf Ihrem Entwicklungscomputer</span><span class="sxs-lookup"><span data-stu-id="5b081-114">To install and enable Fiddler on your development PC</span></span>
+<span data-ttu-id="5b081-115">Führen Sie diese Schritte zum Installieren und Aktivieren von Fiddler aus, um den Datenverkehr von Ihrem Dev Kit zu überwachen:</span><span class="sxs-lookup"><span data-stu-id="5b081-115">Follow these steps to install and enable Fiddler to monitor traffic from your dev kit:</span></span>
 
-### <a name="to-install-and-enable-fiddler-on-your-development-pc"></a>So installieren und aktivieren Sie Fiddler auf Ihrem Entwicklungscomputer
-Führen Sie diese Schritte zum Installieren und Aktivieren von Fiddler aus, um den Datenverkehr von Ihrem Dev Kit zu überwachen:
-
-1. Installieren Sie Fiddler auf Ihrem Entwicklungscomputer, indem Sie die Anweisungen auf der [Fiddler-Website](http://www.fiddler2.com/fiddler2/) befolgen. 
-2. Starten Sie Fiddler, und wählen Sie im Menü **Extras** **Fiddler-Optionen** aus. 
-3. Wählen Sie die Registerkarte **Verbindungen** aus, und stellen Sie sicher, dass **Remoteverbindungen für Remotecomputer zulassen** ausgewählt ist. 
-4. Klicken Sie auf **OK**, um die Änderung der Einstellungen zu akzeptieren. Ihnen wird nun ein Dialogfeld angezeigt, in dem Ihnen mitgeteilt wird, dass Fiddler neu gestartet werden muss, damit die Änderung wirksam wird, und Sie Ihre möglicherweise Ihre Firewall manuell konfigurieren müssen. Klicken Sie auf in diesem Dialogfeld auf **OK**, *starten Sie Fiddler jedoch noch nicht neu*.
-5. Konfigurieren Sie die erforderliche Firewallregel, um Remotecomputern das Herstellen von Verbindungen zu gestatten. Starten Sie das Windows-Firewall-Systemsteuerungsapplet. Klicken Sie auf **Erweiterte Einstellungen** und anschließend auf **Eingehende Regel**. Suchen Sie die Regel mit dem Namen „FiddlerProxy“, und führen Sie einen Bildlauf nach rechts durch. Überprüfen Sie dabei, ob jede Einstellung in der folgenden Tabelle für diese Regel angezeigt wird.
+1. <span data-ttu-id="5b081-116">Installieren Sie Fiddler auf Ihrem Entwicklungscomputer, indem Sie die Anweisungen auf der [Fiddler-Website](http://www.fiddler2.com/fiddler2/) befolgen.</span><span class="sxs-lookup"><span data-stu-id="5b081-116">Install Fiddler on your development PC, following the directions on the [Fiddler website](http://www.fiddler2.com/fiddler2/).</span></span> 
+2. <span data-ttu-id="5b081-117">Starten Sie Fiddler, und wählen Sie im Menü **Extras** **Fiddler-Optionen** aus.</span><span class="sxs-lookup"><span data-stu-id="5b081-117">Launch Fiddler and select **Fiddler Options** from the **Tools** menu.</span></span> 
+3. <span data-ttu-id="5b081-118">Wählen Sie die Registerkarte **Verbindungen** aus, und stellen Sie sicher, dass **Remoteverbindungen für Remotecomputer zulassen** ausgewählt ist.</span><span class="sxs-lookup"><span data-stu-id="5b081-118">Select the **Connections** tab and ensure that **Allow remote computers to connect** is selected.</span></span> 
+4. <span data-ttu-id="5b081-119">Klicken Sie auf **OK**, um die Änderung der Einstellungen zu akzeptieren.</span><span class="sxs-lookup"><span data-stu-id="5b081-119">Click **OK** to accept your change to the settings.</span></span> <span data-ttu-id="5b081-120">Ihnen wird nun ein Dialogfeld angezeigt, in dem Ihnen mitgeteilt wird, dass Fiddler neu gestartet werden muss, damit die Änderung wirksam wird, und Sie Ihre möglicherweise Ihre Firewall manuell konfigurieren müssen.</span><span class="sxs-lookup"><span data-stu-id="5b081-120">You will see a dialog box saying that Fiddler must be restarted for the change to take effect, and that you may need to configure your firewall manually.</span></span> <span data-ttu-id="5b081-121">Klicken Sie auf in diesem Dialogfeld auf **OK**, *starten Sie Fiddler jedoch noch nicht neu*.</span><span class="sxs-lookup"><span data-stu-id="5b081-121">Click **OK** on this dialog, but *do not restart Fiddler yet*.</span></span>
+5. <span data-ttu-id="5b081-122">Konfigurieren Sie die erforderliche Firewallregel, um Remotecomputern das Herstellen von Verbindungen zu gestatten.</span><span class="sxs-lookup"><span data-stu-id="5b081-122">Configure the necessary firewall rule to allow remote computers to connect.</span></span> <span data-ttu-id="5b081-123">Starten Sie das Windows-Firewall-Systemsteuerungsapplet.</span><span class="sxs-lookup"><span data-stu-id="5b081-123">Start the Windows Firewall Control Panel applet.</span></span> <span data-ttu-id="5b081-124">Klicken Sie auf **Erweiterte Einstellungen** und anschließend auf **Eingehende Regel**.</span><span class="sxs-lookup"><span data-stu-id="5b081-124">Click **Advanced Settings**, and then **Inbound Rule**.</span></span> <span data-ttu-id="5b081-125">Suchen Sie die Regel mit dem Namen „FiddlerProxy“, und führen Sie einen Bildlauf nach rechts durch. Überprüfen Sie dabei, ob jede Einstellung in der folgenden Tabelle für diese Regel angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="5b081-125">Find the rule named "FiddlerProxy" and scroll to the right, verifying that each of the settings in the following table appears for that rule.</span></span>
   
-  | Einstellung           | Bevorzugter Wert                |
+  | <span data-ttu-id="5b081-126">Einstellung</span><span class="sxs-lookup"><span data-stu-id="5b081-126">Setting</span></span>           | <span data-ttu-id="5b081-127">Bevorzugter Wert</span><span class="sxs-lookup"><span data-stu-id="5b081-127">Preferred Value</span></span>                |
   | ----              | ----                           |
-  | Name              | FiddlerProxy                   |
-  | Gruppe             | *Kein Wert* |
-  | Profil           | Alle                            |
-  | Aktiviert           | Ja                            |
-  | Aktion            | Zulassen                          |
-  | Überschreiben          | Nein                             |
-  | Programm           | *Pfad zu fiddler.exe*          |
-  | LocalAddress      | Beliebig                            |
-  | RemoteAddress     | Beliebig                            |
-  | Protokoll          | TCP                            |
-  | LocalPort         | Beliebig                            |
-  | RemotePort        | Beliebig                            |
-  | AllowedUsers      | Beliebig                            |
-  | AllowedComputers  | Beliebig                            |
+  | <span data-ttu-id="5b081-128">Name</span><span class="sxs-lookup"><span data-stu-id="5b081-128">Name</span></span>              | <span data-ttu-id="5b081-129">FiddlerProxy</span><span class="sxs-lookup"><span data-stu-id="5b081-129">FiddlerProxy</span></span>                   |
+  | <span data-ttu-id="5b081-130">Gruppe</span><span class="sxs-lookup"><span data-stu-id="5b081-130">Group</span></span>             | *<span data-ttu-id="5b081-131">Kein Wert</span><span class="sxs-lookup"><span data-stu-id="5b081-131">No value</span></span>* |
+  | <span data-ttu-id="5b081-132">Profil</span><span class="sxs-lookup"><span data-stu-id="5b081-132">Profile</span></span>           | <span data-ttu-id="5b081-133">Alle</span><span class="sxs-lookup"><span data-stu-id="5b081-133">All</span></span>                            |
+  | <span data-ttu-id="5b081-134">Aktiviert</span><span class="sxs-lookup"><span data-stu-id="5b081-134">Enabled</span></span>           | <span data-ttu-id="5b081-135">Ja</span><span class="sxs-lookup"><span data-stu-id="5b081-135">Yes</span></span>                            |
+  | <span data-ttu-id="5b081-136">Aktion</span><span class="sxs-lookup"><span data-stu-id="5b081-136">Action</span></span>            | <span data-ttu-id="5b081-137">Zulassen</span><span class="sxs-lookup"><span data-stu-id="5b081-137">Allow</span></span>                          |
+  | <span data-ttu-id="5b081-138">Überschreiben</span><span class="sxs-lookup"><span data-stu-id="5b081-138">Override</span></span>          | <span data-ttu-id="5b081-139">Nein</span><span class="sxs-lookup"><span data-stu-id="5b081-139">No</span></span>                             |
+  | <span data-ttu-id="5b081-140">Programm</span><span class="sxs-lookup"><span data-stu-id="5b081-140">Program</span></span>           | *<span data-ttu-id="5b081-141">Pfad zu fiddler.exe</span><span class="sxs-lookup"><span data-stu-id="5b081-141">Path to fiddler.exe</span></span>*          |
+  | <span data-ttu-id="5b081-142">LocalAddress</span><span class="sxs-lookup"><span data-stu-id="5b081-142">LocalAddress</span></span>      | <span data-ttu-id="5b081-143">Beliebig</span><span class="sxs-lookup"><span data-stu-id="5b081-143">Any</span></span>                            |
+  | <span data-ttu-id="5b081-144">RemoteAddress</span><span class="sxs-lookup"><span data-stu-id="5b081-144">RemoteAddress</span></span>     | <span data-ttu-id="5b081-145">Beliebig</span><span class="sxs-lookup"><span data-stu-id="5b081-145">Any</span></span>                            |
+  | <span data-ttu-id="5b081-146">Protokoll</span><span class="sxs-lookup"><span data-stu-id="5b081-146">Protocol</span></span>          | <span data-ttu-id="5b081-147">TCP</span><span class="sxs-lookup"><span data-stu-id="5b081-147">TCP</span></span>                            |
+  | <span data-ttu-id="5b081-148">LocalPort</span><span class="sxs-lookup"><span data-stu-id="5b081-148">LocalPort</span></span>         | <span data-ttu-id="5b081-149">Beliebig</span><span class="sxs-lookup"><span data-stu-id="5b081-149">Any</span></span>                            |
+  | <span data-ttu-id="5b081-150">RemotePort</span><span class="sxs-lookup"><span data-stu-id="5b081-150">RemotePort</span></span>        | <span data-ttu-id="5b081-151">Beliebig</span><span class="sxs-lookup"><span data-stu-id="5b081-151">Any</span></span>                            |
+  | <span data-ttu-id="5b081-152">AllowedUsers</span><span class="sxs-lookup"><span data-stu-id="5b081-152">AllowedUsers</span></span>      | <span data-ttu-id="5b081-153">Beliebig</span><span class="sxs-lookup"><span data-stu-id="5b081-153">Any</span></span>                            |
+  | <span data-ttu-id="5b081-154">AllowedComputers</span><span class="sxs-lookup"><span data-stu-id="5b081-154">AllowedComputers</span></span>  | <span data-ttu-id="5b081-155">Beliebig</span><span class="sxs-lookup"><span data-stu-id="5b081-155">Any</span></span>                            |
 
 
-6. Konfigurieren Sie Fiddler zum Aufzeichnen und Entschlüsseln von HTTPS-Datenverkehr wie folgt:
-  1. Um eine optimale Leistung zu erhalten, legen Sie Fiddler auf die Verwendung des Streamingmodus fest, indem Sie auf der Tastenleiste auf die Taste **Stream** klicken.
-  2. Wählen Sie im Menü **Extras** von Fiddler **Fiddler-Optionen** aus, und klicken Sie dann auf **HTTPS**.
-  3. Aktivieren Sie das Kontrollkästchen **HTTPS-Datenverkehr entschlüsseln**. Wenn Sie in einem Dialogfeld gefragt werden, ob Windows so konfiguriert werden soll, dass dem CA-Zertifikat vertraut wird, klicken Sie auf **Nein**.
-  4. Klicken Sie auf **Stammzertifikat zu Desktop exportieren**.
-7. Beenden Sie Fiddler, und starten Sie das Tool neu.
+6. <span data-ttu-id="5b081-156">Konfigurieren Sie Fiddler zum Aufzeichnen und Entschlüsseln von HTTPS-Datenverkehr wie folgt:</span><span class="sxs-lookup"><span data-stu-id="5b081-156">Configure Fiddler to capture and decrypt HTTPS traffic by doing the following:</span></span>
+  1. <span data-ttu-id="5b081-157">Um eine optimale Leistung zu erhalten, legen Sie Fiddler auf die Verwendung des Streamingmodus fest, indem Sie auf der Tastenleiste auf die Taste **Stream** klicken.</span><span class="sxs-lookup"><span data-stu-id="5b081-157">To enable best performance, set Fiddler to use Streaming Mode by clicking the **Stream** button on the button bar.</span></span>
+  2. <span data-ttu-id="5b081-158">Wählen Sie im Menü **Extras** von Fiddler **Fiddler-Optionen** aus, und klicken Sie dann auf **HTTPS**.</span><span class="sxs-lookup"><span data-stu-id="5b081-158">In the Fiddler **Tools** menu, select **Fiddler Options**, and then click **HTTPS**.</span></span>
+  3. <span data-ttu-id="5b081-159">Aktivieren Sie das Kontrollkästchen **HTTPS-Datenverkehr entschlüsseln**.</span><span class="sxs-lookup"><span data-stu-id="5b081-159">Select the **Decrypt HTTPS traffic** check box.</span></span> <span data-ttu-id="5b081-160">Wenn Sie in einem Dialogfeld gefragt werden, ob Windows so konfiguriert werden soll, dass dem CA-Zertifikat vertraut wird, klicken Sie auf **Nein**.</span><span class="sxs-lookup"><span data-stu-id="5b081-160">If a dialog box asks whether to configure Windows to trust the CA certificate, click **No**.</span></span>
+  4. <span data-ttu-id="5b081-161">Klicken Sie auf **Stammzertifikat zu Desktop exportieren**.</span><span class="sxs-lookup"><span data-stu-id="5b081-161">Click **Export Root Certificate to Desktop**.</span></span>
+7. <span data-ttu-id="5b081-162">Beenden Sie Fiddler, und starten Sie das Tool neu.</span><span class="sxs-lookup"><span data-stu-id="5b081-162">Exit and restart Fiddler.</span></span>
 
-### <a name="to-configure-a-dev-kit-to-use-fiddler-as-its-proxy-to-the-internet"></a>So konfigurieren Sie ein Dev Kit für die Verwendung von Fiddler als dessen Proxy für das Internet
+### <a name="to-configure-a-dev-kit-to-use-fiddler-as-its-proxy-to-the-internet"></a><span data-ttu-id="5b081-163">So konfigurieren Sie ein Dev Kit für die Verwendung von Fiddler als dessen Proxy für das Internet</span><span class="sxs-lookup"><span data-stu-id="5b081-163">To configure a dev kit to use Fiddler as its proxy to the Internet</span></span>
 
-1. Navigieren Sie in der Benutzeroberfläche des Xbox-Geräteportals zum **Netzwerk**-Tool.
-2. Suchen Sie nach dem Fiddler-Stammzertifikat, das Sie zum Desktop exportiert haben. 
-3. Geben Sie die IP-Adresse oder den Hostnamen des Entwicklungscomputers ein, auf dem Fiddler ausgeführt wird.
-4. Geben Sie die Portnummer ein, an der Fiddler zuhört (standardmäßig verwendet Fiddler den Port 8888). 
-5. Klicken Sie auf **Aktivieren**. Damit wird Ihr Dev Kit neu gestartet.
+1. <span data-ttu-id="5b081-164">Navigieren Sie in der Benutzeroberfläche des Xbox-Geräteportals zum **Netzwerk**-Tool.</span><span class="sxs-lookup"><span data-stu-id="5b081-164">Navigate to the **Network** tool in the Xbox Device Portal UI.</span></span>
+2. <span data-ttu-id="5b081-165">Suchen Sie nach dem Fiddler-Stammzertifikat, das Sie zum Desktop exportiert haben.</span><span class="sxs-lookup"><span data-stu-id="5b081-165">Browse for the Fiddler root certificate that you exported to the desktop.</span></span> 
+3. <span data-ttu-id="5b081-166">Geben Sie die IP-Adresse oder den Hostnamen des Entwicklungscomputers ein, auf dem Fiddler ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="5b081-166">Type the IP address or hostname of the development PC running Fiddler.</span></span>
+4. <span data-ttu-id="5b081-167">Geben Sie die Portnummer ein, an der Fiddler zuhört (standardmäßig verwendet Fiddler den Port 8888).</span><span class="sxs-lookup"><span data-stu-id="5b081-167">Type the port number where Fiddler is listening (by default, Fiddler uses port 8888).</span></span> 
+5. <span data-ttu-id="5b081-168">Klicken Sie auf **Aktivieren**.</span><span class="sxs-lookup"><span data-stu-id="5b081-168">Click **Enable**.</span></span> <span data-ttu-id="5b081-169">Damit wird Ihr Dev Kit neu gestartet.</span><span class="sxs-lookup"><span data-stu-id="5b081-169">This will restart your dev kit.</span></span>
 
-### <a name="to-stop-using-fiddler"></a>So beenden Sie die Verwendung von Fiddler
-Um die Verwendung von Fiddler als Proxy für das Internet zu beenden (und zu verhindern, dass Fiddler den gesamten Netzwerkdatenverkehr des Dev Kit protokolliert), führen Sie folgende Schritte aus:
+### <a name="to-stop-using-fiddler"></a><span data-ttu-id="5b081-170">So beenden Sie die Verwendung von Fiddler</span><span class="sxs-lookup"><span data-stu-id="5b081-170">To stop using Fiddler</span></span>
+<span data-ttu-id="5b081-171">Um die Verwendung von Fiddler als Proxy für das Internet zu beenden (und zu verhindern, dass Fiddler den gesamten Netzwerkdatenverkehr des Dev Kit protokolliert), führen Sie folgende Schritte aus:</span><span class="sxs-lookup"><span data-stu-id="5b081-171">To stop using Fiddler as a proxy to the Internet (and stop Fiddler from tracing all of the dev kit's network traffic), do the following:</span></span>
 
-1. Navigieren Sie in der Benutzeroberfläche des Xbox-Geräteportals zum **Netzwerk**-Tool.
-2. Klicken Sie auf **Deaktivieren**.
+1. <span data-ttu-id="5b081-172">Navigieren Sie in der Benutzeroberfläche des Xbox-Geräteportals zum **Netzwerk**-Tool.</span><span class="sxs-lookup"><span data-stu-id="5b081-172">Navigate to the **Network** tool in the Xbox Device Portal UI.</span></span>
+2. <span data-ttu-id="5b081-173">Klicken Sie auf **Deaktivieren**.</span><span class="sxs-lookup"><span data-stu-id="5b081-173">Click **Disable**.</span></span>
 
 > [!NOTE]
-> Jeder PC, auf dem Fiddler installiert ist, verwendet ein anderes Fiddler-Stammzertifikat. Wenn Sie mehrere PCs besitzen, die verwendet werden könnten, um Ihrem Dev Kit einen Fiddler-Proxy bereitzustellen, müssen Sie das neue Stammzertifikat auswählen, wenn Sie zwischen diesen wechseln. Wenn Sie nur einen PC verwenden, müssen Sie das Stammzertifikat nur bei der ersten Aktivierung von Fiddler auswählen. Sie müssen dennoch die IP-Adresse und den Port angeben.
+> <span data-ttu-id="5b081-174">Jeder PC, auf dem Fiddler installiert ist, verwendet ein anderes Fiddler-Stammzertifikat.</span><span class="sxs-lookup"><span data-stu-id="5b081-174">Each PC with Fiddler installed uses a different Fiddler root certificate.</span></span> <span data-ttu-id="5b081-175">Wenn Sie mehrere PCs besitzen, die verwendet werden könnten, um Ihrem Dev Kit einen Fiddler-Proxy bereitzustellen, müssen Sie das neue Stammzertifikat auswählen, wenn Sie zwischen diesen wechseln.</span><span class="sxs-lookup"><span data-stu-id="5b081-175">If you have more than one PC that might be used to provide a Fiddler proxy for your dev kit, you will need to select the new root certificate when switching between them.</span></span> <span data-ttu-id="5b081-176">Wenn Sie nur einen PC verwenden, müssen Sie das Stammzertifikat nur bei der ersten Aktivierung von Fiddler auswählen.</span><span class="sxs-lookup"><span data-stu-id="5b081-176">If you are using only one PC, you need to select the root certificate only the first time you enable Fiddler.</span></span> <span data-ttu-id="5b081-177">Sie müssen dennoch die IP-Adresse und den Port angeben.</span><span class="sxs-lookup"><span data-stu-id="5b081-177">You must still specify the IP address and port.</span></span>
 
-## <a name="see-also"></a>Weitere Informationen
-- [Fiddler-Einstellungen – API-Referenz](wdp-fiddler-api.md)
-- [Häufig gestellte Fragen](frequently-asked-questions.md)
-- [UWP auf Xbox One](index.md)
-
+## <a name="see-also"></a><span data-ttu-id="5b081-178">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="5b081-178">See also</span></span>
+- [<span data-ttu-id="5b081-179">Fiddler-Einstellungen – API-Referenz</span><span class="sxs-lookup"><span data-stu-id="5b081-179">Fiddler settings API reference</span></span>](wdp-fiddler-api.md)
+- [<span data-ttu-id="5b081-180">Häufig gestellte Fragen</span><span class="sxs-lookup"><span data-stu-id="5b081-180">Frequently asked questions</span></span>](frequently-asked-questions.md)
+- [<span data-ttu-id="5b081-181">UWP auf XboxOne</span><span class="sxs-lookup"><span data-stu-id="5b081-181">UWP on Xbox One</span></span>](index.md)
 
 
 

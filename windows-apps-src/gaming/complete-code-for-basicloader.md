@@ -8,47 +8,45 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Spiele, BasicLoader"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+keywords: Windows10, UWP, Spiele, BasicLoader
 ms.openlocfilehash: d6714030031a4986c8a5495fc02a5c68fb0aa4d8
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.translationtype: HT
+ms.contentlocale: de-DE
 ---
+# <a name="complete-code-for-basicloader"></a><span data-ttu-id="8d446-104">Vollständiger Code für "BasicLoader"</span><span class="sxs-lookup"><span data-stu-id="8d446-104">Complete code for BasicLoader</span></span>
 
-# <a name="complete-code-for-basicloader"></a>Vollständiger Code für "BasicLoader"
 
+<span data-ttu-id="8d446-105">\[ Aktualisiert für UWP-Apps unter Windows10.</span><span class="sxs-lookup"><span data-stu-id="8d446-105">\[ Updated for UWP apps on Windows 10.</span></span> <span data-ttu-id="8d446-106">Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span><span class="sxs-lookup"><span data-stu-id="8d446-106">For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span></span>
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+<span data-ttu-id="8d446-107">Vollständiger Code für eine Klasse und Methoden, die allgemeine Grafikressourcen wie Gitter, Texturen und verschiedene Shader-Objekte konvertieren und laden.</span><span class="sxs-lookup"><span data-stu-id="8d446-107">Complete code for a class and methods that convert and load common graphics resources, such as meshes, textures, and various shader objects.</span></span>
 
-Vollständiger Code für eine Klasse und Methoden, die allgemeine Grafikressourcen wie Gitter, Texturen und verschiedene Shader-Objekte konvertieren und laden.
+<span data-ttu-id="8d446-108">Dieses Thema enthält die folgenden Abschnitte:</span><span class="sxs-lookup"><span data-stu-id="8d446-108">This topic contains these sections:</span></span>
 
-Dieses Thema enthält die folgenden Abschnitte:
-
--   [Technologien](#technologies)
--   [Anforderungen](#requirements)
--   [Anzeigen des Codes (C++)](#view-the-code-c)
+-   [<span data-ttu-id="8d446-109">Technologien</span><span class="sxs-lookup"><span data-stu-id="8d446-109">Technologies</span></span>](#technologies)
+-   [<span data-ttu-id="8d446-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="8d446-110">Requirements</span></span>](#requirements)
+-   [<span data-ttu-id="8d446-111">Anzeigen des Codes (C++)</span><span class="sxs-lookup"><span data-stu-id="8d446-111">View the code (C++)</span></span>](#view-the-code-c)
 
 <span id="download_locations"></span>
-## <a name="download-location"></a>Downloadort
+## <a name="download-location"></a><span data-ttu-id="8d446-112">Downloadort</span><span class="sxs-lookup"><span data-stu-id="8d446-112">Download location</span></span>
 
 
-Dieses Beispiel kann nicht heruntergeladen werden.
+<span data-ttu-id="8d446-113">Dieses Beispiel kann nicht heruntergeladen werden.</span><span class="sxs-lookup"><span data-stu-id="8d446-113">This sample is not available for download.</span></span>
 
-## <a name="technologies"></a>Technologien
+## <a name="technologies"></a><span data-ttu-id="8d446-114">Technologien</span><span class="sxs-lookup"><span data-stu-id="8d446-114">Technologies</span></span>
 
-**Programmiersprachen** – C++  
-**Programmiermodelle** – Windows-Runtime
+<span data-ttu-id="8d446-115">**Programmiersprachen** – C++</span><span class="sxs-lookup"><span data-stu-id="8d446-115">**Programming languages** - C++</span></span>  
+<span data-ttu-id="8d446-116">**Programmiermodelle** – Windows-Runtime</span><span class="sxs-lookup"><span data-stu-id="8d446-116">**Programming models** - Windows Runtime</span></span>
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a><span data-ttu-id="8d446-117">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="8d446-117">Requirements</span></span>
 
-**Unterstützte Mindestversion (Client)** – Windows 10                              
-**Unterstützte Mindestversion (Server)** – Windows Server 2016 Technical Preview 
+<span data-ttu-id="8d446-118">**Unterstützte Mindestversion (Client)** – Windows 10</span><span class="sxs-lookup"><span data-stu-id="8d446-118">**Minimum supported client** - Windows 10</span></span>                              
+<span data-ttu-id="8d446-119">**Unterstützte Mindestversion (Server)** – Windows Server 2016 Technical Preview</span><span class="sxs-lookup"><span data-stu-id="8d446-119">**Minimum supported server** - Windows Server 2016 Technical Preview</span></span> 
 
 
-## <a name="view-the-code-c"></a>Anzeigen des Codes (C++)
+## <a name="view-the-code-c"></a><span data-ttu-id="8d446-120">Anzeigen des Codes (C++)</span><span class="sxs-lookup"><span data-stu-id="8d446-120">View the code (C++)</span></span>
 
-## <a name="basicloaderh"></a>BasicLoader.h
+## <a name="basicloaderh"></a><span data-ttu-id="8d446-121">BasicLoader.h</span><span class="sxs-lookup"><span data-stu-id="8d446-121">BasicLoader.h</span></span>
 
 ```cpp
 //// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF
@@ -229,7 +227,7 @@ private:
 };
 ```
 
-## <a name="basicloadercpp"></a>BasicLoader.cpp
+## <a name="basicloadercpp"></a><span data-ttu-id="8d446-122">BasicLoader.cpp</span><span class="sxs-lookup"><span data-stu-id="8d446-122">BasicLoader.cpp</span></span>
 
 
 ```cpp
@@ -1111,7 +1109,6 @@ task<void> BasicLoader::LoadMeshAsync(
  
 
  
-
 
 
 

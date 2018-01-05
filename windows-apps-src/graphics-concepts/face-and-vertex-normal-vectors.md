@@ -2,101 +2,99 @@
 title: "Normalvektoren für Flächen und Vertices"
 description: "Jede Fläche in einem Gittermodell besitzt einen senkrecht stehenden Einheitsnormalvektor. Der Richtung des Vektors ist festgelegt durch die Reihenfolge, in der die Vertices definiert sind, und durch die Händigkeit des Koordinatensystem (rechts- oder linkshändig)."
 ms.assetid: 02333579-9749-4612-B121-23F97898A3E0
-keywords:
-- "Normalvektoren für Flächen und Vertices"
-author: PeterTurcan
-ms.author: pettur
+keywords: "Normalvektoren für Flächen und Vertices"
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 48a87cc9766d7fb6d0e3ac42e7956b27264af0db
-ms.lasthandoff: 02/07/2017
-
+ms.localizationpriority: medium
+ms.openlocfilehash: 7f8a38eeca0516082a64f5b4d2778f74436bbdb7
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/22/2017
 ---
-
-# <a name="face-and-vertex-normal-vectors"></a>Normalvektoren für Flächen und Vertices
-
-
-Jede Fläche in einem Gittermodell besitzt einen senkrecht stehenden Einheitsnormalvektor. Der Richtung des Vektors ist festgelegt durch die Reihenfolge, in der die Vertices definiert sind, und durch die Händigkeit des Koordinatensystem (rechts- oder linkshändig).
-
-## <a name="span-idperpendicularunitnormalvectorforafrontfacespanspan-idperpendicularunitnormalvectorforafrontfacespanspan-idperpendicularunitnormalvectorforafrontfacespanperpendicular-unit-normal-vector-for-a-front-face"></a><span id="Perpendicular_unit_normal_vector_for_a_front_face"></span><span id="perpendicular_unit_normal_vector_for_a_front_face"></span><span id="PERPENDICULAR_UNIT_NORMAL_VECTOR_FOR_A_FRONT_FACE"></span>Senkrechter Einheitsnormalvektor für eine Vorderseite
+# <a name="face-and-vertex-normal-vectors"></a><span data-ttu-id="76667-105">Normalvektoren für Flächen und Vertices</span><span class="sxs-lookup"><span data-stu-id="76667-105">Face and vertex normal vectors</span></span>
 
 
-Jede Fläche in einem Gittermodell besitzt einen senkrecht stehenden Einheitsnormalvektor. Der Richtung des Vektors ist festgelegt durch die Reihenfolge, in der die Vertices definiert sind, und durch die Händigkeit des Koordinatensystem (rechts- oder linkshändig). Der Fußpunkt des Normalvektors einer Fläche liegt auf ihrer Vorderseite. In Direct3D ist nur die Vorderseite einer Fläche sichtbar. Eine Vorderseite ist dadurch gekennzeichnet, dass auf ihr die Vertices im Uhrzeigersinn definiert sind.
+<span data-ttu-id="76667-106">Jede Fläche in einem Gittermodell besitzt einen senkrecht stehenden Einheitsnormalvektor.</span><span class="sxs-lookup"><span data-stu-id="76667-106">Each face in a mesh has a perpendicular unit normal vector.</span></span> <span data-ttu-id="76667-107">Der Richtung des Vektors ist festgelegt durch die Reihenfolge, in der die Vertices definiert sind, und durch die Händigkeit des Koordinatensystem (rechts- oder linkshändig).</span><span class="sxs-lookup"><span data-stu-id="76667-107">The vector's direction is determined by the order in which the vertices are defined and by whether the coordinate system is right- or left-handed.</span></span>
 
-Die folgende Abbildung zeigt einen Normalvektor für eine Vorderseite:
+## <a name="span-idperpendicularunitnormalvectorforafrontfacespanspan-idperpendicularunitnormalvectorforafrontfacespanspan-idperpendicularunitnormalvectorforafrontfacespanperpendicular-unit-normal-vector-for-a-front-face"></a><span data-ttu-id="76667-108"><span id="Perpendicular_unit_normal_vector_for_a_front_face"></span><span id="perpendicular_unit_normal_vector_for_a_front_face"></span><span id="PERPENDICULAR_UNIT_NORMAL_VECTOR_FOR_A_FRONT_FACE"></span>Senkrechter Einheitsnormalvektor für eine Vorderseite</span><span class="sxs-lookup"><span data-stu-id="76667-108"><span id="Perpendicular_unit_normal_vector_for_a_front_face"></span><span id="perpendicular_unit_normal_vector_for_a_front_face"></span><span id="PERPENDICULAR_UNIT_NORMAL_VECTOR_FOR_A_FRONT_FACE"></span>Perpendicular unit normal vector for a front face</span></span>
+
+
+<span data-ttu-id="76667-109">Jede Fläche in einem Gittermodell besitzt einen senkrecht stehenden Einheitsnormalvektor.</span><span class="sxs-lookup"><span data-stu-id="76667-109">Each face in a mesh has a perpendicular unit normal vector.</span></span> <span data-ttu-id="76667-110">Der Richtung des Vektors ist festgelegt durch die Reihenfolge, in der die Vertices definiert sind, und durch die Händigkeit des Koordinatensystem (rechts- oder linkshändig).</span><span class="sxs-lookup"><span data-stu-id="76667-110">The vector's direction is determined by the order in which the vertices are defined and by whether the coordinate system is right- or left-handed.</span></span> <span data-ttu-id="76667-111">Der Fußpunkt des Normalvektors einer Fläche liegt auf ihrer Vorderseite.</span><span class="sxs-lookup"><span data-stu-id="76667-111">The face normal points away from the front side of the face.</span></span> <span data-ttu-id="76667-112">In Direct3D ist nur die Vorderseite einer Fläche sichtbar.</span><span class="sxs-lookup"><span data-stu-id="76667-112">In Direct3D, only the front of a face is visible.</span></span> <span data-ttu-id="76667-113">Eine Vorderseite ist dadurch gekennzeichnet, dass auf ihr die Vertices im Uhrzeigersinn definiert sind.</span><span class="sxs-lookup"><span data-stu-id="76667-113">A front face is one in which vertices are defined in clockwise order.</span></span>
+
+<span data-ttu-id="76667-114">Die folgende Abbildung zeigt einen Normalvektor für eine Vorderseite:</span><span class="sxs-lookup"><span data-stu-id="76667-114">The following illustration shows a normal vector for a front face:</span></span>
 
 ![ein Normalvektor für eine Vorderseite](images/nrmlvect.png)
 
-## <a name="span-idcullingbackfacesspanspan-idcullingbackfacesspanspan-idcullingbackfacesspanculling-back-faces"></a><span id="Culling_back_faces"></span><span id="culling_back_faces"></span><span id="CULLING_BACK_FACES"></span>Entfernen von Rückseiten (Backface Culling)
+## <a name="span-idcullingbackfacesspanspan-idcullingbackfacesspanspan-idcullingbackfacesspanculling-back-faces"></a><span data-ttu-id="76667-116"><span id="Culling_back_faces"></span><span id="culling_back_faces"></span><span id="CULLING_BACK_FACES"></span>Entfernen von Rückseiten (Backface Culling)</span><span class="sxs-lookup"><span data-stu-id="76667-116"><span id="Culling_back_faces"></span><span id="culling_back_faces"></span><span id="CULLING_BACK_FACES"></span>Culling back faces</span></span>
 
 
-Jede Fläche, die keine Vorderseite ist, ist eine Rückseite. Direct3D unterstützt Rückseitenentfernung, d.°h. Rückseiten werden nicht immer gerendert. Bei der Rückseitenentfernung werden die Rückseiten nicht gerendert. Sie können den Cullingmodus ändern, um Rückseiten doch zu rendern. Weitere Informationen finden Sie unter [Culling-Status](https://msdn.microsoft.com/library/windows/desktop/bb204882).
+<span data-ttu-id="76667-117">Jede Fläche, die keine Vorderseite ist, ist eine Rückseite.</span><span class="sxs-lookup"><span data-stu-id="76667-117">Any face that is not a front face is a back face.</span></span> <span data-ttu-id="76667-118">Direct3D unterstützt Rückseitenentfernung, d.°h. Rückseiten werden nicht immer gerendert.</span><span class="sxs-lookup"><span data-stu-id="76667-118">Direct3D does not always render back faces; back faces are said to be culled.</span></span> <span data-ttu-id="76667-119">Bei der Rückseitenentfernung werden die Rückseiten nicht gerendert.</span><span class="sxs-lookup"><span data-stu-id="76667-119">Back face culling means eliminating back faces from rendering.</span></span> <span data-ttu-id="76667-120">Sie können den Cullingmodus ändern, um Rückseiten doch zu rendern.</span><span class="sxs-lookup"><span data-stu-id="76667-120">You can change the culling mode to render back faces if you want.</span></span> <span data-ttu-id="76667-121">Weitere Informationen finden Sie unter [Culling-Status](https://msdn.microsoft.com/library/windows/desktop/bb204882).</span><span class="sxs-lookup"><span data-stu-id="76667-121">See [Culling State](https://msdn.microsoft.com/library/windows/desktop/bb204882) for more information.</span></span>
 
-## <a name="span-idvertexunitnormalsspanspan-idvertexunitnormalsspanspan-idvertexunitnormalsspanvertex-unit-normals"></a><span id="Vertex_unit_normals"></span><span id="vertex_unit_normals"></span><span id="VERTEX_UNIT_NORMALS"></span>Vertexeinheitsnormale
+## <a name="span-idvertexunitnormalsspanspan-idvertexunitnormalsspanspan-idvertexunitnormalsspanvertex-unit-normals"></a><span data-ttu-id="76667-122"><span id="Vertex_unit_normals"></span><span id="vertex_unit_normals"></span><span id="VERTEX_UNIT_NORMALS"></span>Vertexeinheitsnormale</span><span class="sxs-lookup"><span data-stu-id="76667-122"><span id="Vertex_unit_normals"></span><span id="vertex_unit_normals"></span><span id="VERTEX_UNIT_NORMALS"></span>Vertex unit normals</span></span>
 
 
-Direct3D verwendet die Vertexeinheitsnormalen für Gouraud-Schattierung, Beleuchtung und Textureffekte.
+<span data-ttu-id="76667-123">Direct3D verwendet die Vertexeinheitsnormalen für Gouraud-Schattierung, Beleuchtung und Textureffekte.</span><span class="sxs-lookup"><span data-stu-id="76667-123">Direct3D uses the vertex unit normals for Gouraud shading, lighting, and texturing effects.</span></span>
 
-Die folgende Abbildung zeigt die Vertexnormalen:
+<span data-ttu-id="76667-124">Die folgende Abbildung zeigt die Vertexnormalen:</span><span class="sxs-lookup"><span data-stu-id="76667-124">The following illustration shows vertex normals:</span></span>
 
 ![Vertexnormale](images/vertnrml.png)
 
-Beim Anwenden von Gouraud-Schattierung auf ein Polygon verwendet Direct3D die Vertexnormalen, um den Winkel zwischen Lichtquelle und Oberfläche zu berechnen. Die Farb- und Intensitätswerte für die Vertices werden berechnet und für jeden Punkt auf allen Grundformoberflächen interpoliert. Direct3D berechnet den Lichtintensitätswert mithilfe des Winkels. Je größer der Winkel, desto weniger fällt auf die Oberfläche.
+<span data-ttu-id="76667-126">Beim Anwenden von Gouraud-Schattierung auf ein Polygon verwendet Direct3D die Vertexnormalen, um den Winkel zwischen Lichtquelle und Oberfläche zu berechnen.</span><span class="sxs-lookup"><span data-stu-id="76667-126">When applying Gouraud shading to a polygon, Direct3D uses the vertex normals to calculate the angle between the light source and the surface.</span></span> <span data-ttu-id="76667-127">Die Farb- und Intensitätswerte für die Vertices werden berechnet und für jeden Punkt auf allen Grundformoberflächen interpoliert.</span><span class="sxs-lookup"><span data-stu-id="76667-127">It calculates the color and intensity values for the vertices and interpolates them for every point across all the primitive's surfaces.</span></span> <span data-ttu-id="76667-128">Direct3D berechnet den Lichtintensitätswert mithilfe des Winkels.</span><span class="sxs-lookup"><span data-stu-id="76667-128">Direct3D calculates the light intensity value by using the angle.</span></span> <span data-ttu-id="76667-129">Je größer der Winkel, desto weniger fällt auf die Oberfläche.</span><span class="sxs-lookup"><span data-stu-id="76667-129">The greater the angle, the less light is shining on the surface.</span></span>
 
-## <a name="span-idflatsurfacesspanspan-idflatsurfacesspanspan-idflatsurfacesspanflat-surfaces"></a><span id="Flat_surfaces"></span><span id="flat_surfaces"></span><span id="FLAT_SURFACES"></span>Flache Oberflächen
+## <a name="span-idflatsurfacesspanspan-idflatsurfacesspanspan-idflatsurfacesspanflat-surfaces"></a><span data-ttu-id="76667-130"><span id="Flat_surfaces"></span><span id="flat_surfaces"></span><span id="FLAT_SURFACES"></span>Flache Oberflächen</span><span class="sxs-lookup"><span data-stu-id="76667-130"><span id="Flat_surfaces"></span><span id="flat_surfaces"></span><span id="FLAT_SURFACES"></span>Flat surfaces</span></span>
 
 
-Wenn Sie ein flaches Objekt erstellen, legen Sie die Vertexnormalen so fest, das sie im rechten Winkel zur Oberfläche stehen.
+<span data-ttu-id="76667-131">Wenn Sie ein flaches Objekt erstellen, legen Sie die Vertexnormalen so fest, das sie im rechten Winkel zur Oberfläche stehen.</span><span class="sxs-lookup"><span data-stu-id="76667-131">If you are creating an object that is flat, set the vertex normals to point perpendicular to the surface.</span></span>
 
-Die folgende Abbildung zeigt eine flache Oberfläche, die aus zwei Dreiecken mit Vertexnormalen besteht:
+<span data-ttu-id="76667-132">Die folgende Abbildung zeigt eine flache Oberfläche, die aus zwei Dreiecken mit Vertexnormalen besteht:</span><span class="sxs-lookup"><span data-stu-id="76667-132">The following illustration shows a flat surface composed of two triangles with vertex normals:</span></span>
 
 ![Flache Oberfläche, bestehend aus zwei Dreiecken mit Vertexnormalen](images/flatvert.png)
 
-## <a name="span-idsmoothshadingonanon-flatobjectspanspan-idsmoothshadingonanon-flatobjectspanspan-idsmoothshadingonanon-flatobjectspansmooth-shading-on-a-non-flat-object"></a><span id="Smooth_shading_on_a_non-flat_object"></span><span id="smooth_shading_on_a_non-flat_object"></span><span id="SMOOTH_SHADING_ON_A_NON-FLAT_OBJECT"></span>Übergangslose Schattierung für ein nicht flaches Objekt
+## <a name="span-idsmoothshadingonanon-flatobjectspanspan-idsmoothshadingonanon-flatobjectspanspan-idsmoothshadingonanon-flatobjectspansmooth-shading-on-a-non-flat-object"></a><span data-ttu-id="76667-134"><span id="Smooth_shading_on_a_non-flat_object"></span><span id="smooth_shading_on_a_non-flat_object"></span><span id="SMOOTH_SHADING_ON_A_NON-FLAT_OBJECT"></span>Übergangslose Schattierung für ein nicht flaches Objekt</span><span class="sxs-lookup"><span data-stu-id="76667-134"><span id="Smooth_shading_on_a_non-flat_object"></span><span id="smooth_shading_on_a_non-flat_object"></span><span id="SMOOTH_SHADING_ON_A_NON-FLAT_OBJECT"></span>Smooth shading on a non-flat object</span></span>
 
 
-Wahrscheinlich ist Ihr Objekt jedoch nicht plan, sondern besteht aus Dreieckstrips, die nicht koplanar sind. Eine einfache Methode, um übergangslose Schattierung über alle Dreiecke im Strip zu erzielen, besteht darin, zuerst den Oberflächennormalvektor für jede polygonale Fläche zu berechnen, welcher der Vertex zugeordnet ist. Die Vertexnormale kann so festgelegt werden, dass sie mit jeder Oberflächennormalen den gleichen Winkel bildet. Diese Methode ist aber für komplexe Grundformen möglicherweise nicht effizient genug.
+<span data-ttu-id="76667-135">Wahrscheinlich ist Ihr Objekt jedoch nicht plan, sondern besteht aus Dreieckstrips, die nicht koplanar sind.</span><span class="sxs-lookup"><span data-stu-id="76667-135">Rather than flat object, it is more likely that your object is made up of triangle strips and the triangles are not coplanar.</span></span> <span data-ttu-id="76667-136">Eine einfache Methode, um übergangslose Schattierung über alle Dreiecke im Strip zu erzielen, besteht darin, zuerst den Oberflächennormalvektor für jede polygonale Fläche zu berechnen, welcher der Vertex zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="76667-136">One simple way to achieve smooth shading across all the triangles in the strip is to first calculate the surface normal vector for each polygonal face with which the vertex is associated.</span></span> <span data-ttu-id="76667-137">Die Vertexnormale kann so festgelegt werden, dass sie mit jeder Oberflächennormalen den gleichen Winkel bildet.</span><span class="sxs-lookup"><span data-stu-id="76667-137">The vertex normal can be set to make an equal angle with each surface normal.</span></span> <span data-ttu-id="76667-138">Diese Methode ist aber für komplexe Grundformen möglicherweise nicht effizient genug.</span><span class="sxs-lookup"><span data-stu-id="76667-138">However, this method might not be efficient enough for complex primitives.</span></span>
 
-Diese Methode wird im folgende Diagramm veranschaulicht, in dem zwei Oberflächen, S1 und S2, von oben gesehen dargestellt sind. Die Normalvektoren für S1 und S2 sind blau. Der Vertexnormalvektor ist rot. Der Winkel, den der Vertexnormalvektor mit der Oberflächenormalen von S1 bildet, ist identisch mit den Winkel zwischen der Vertexnormalen und der Flächenormalen von S2. Wenn diese beiden Oberflächen beleuchtet und mit einer Gouraud-Schattierung versehen werden, ergibt das einen übergangslos schattierten und abgerundeten Rand zwischen ihnen.
+<span data-ttu-id="76667-139">Diese Methode wird im folgende Diagramm veranschaulicht, in dem zwei Oberflächen, S1 und S2, von oben gesehen dargestellt sind.</span><span class="sxs-lookup"><span data-stu-id="76667-139">This method is illustrated by the following diagram, which shows two surfaces, S1 and S2 seen edge-on from above.</span></span> <span data-ttu-id="76667-140">Die Normalvektoren für S1 und S2 sind blau.</span><span class="sxs-lookup"><span data-stu-id="76667-140">The normal vectors for S1 and S2 are shown in blue.</span></span> <span data-ttu-id="76667-141">Der Vertexnormalvektor ist rot.</span><span class="sxs-lookup"><span data-stu-id="76667-141">The vertex normal vector is shown in red.</span></span> <span data-ttu-id="76667-142">Der Winkel, den der Vertexnormalvektor mit der Oberflächenormalen von S1 bildet, ist identisch mit den Winkel zwischen der Vertexnormalen und der Flächenormalen von S2.</span><span class="sxs-lookup"><span data-stu-id="76667-142">The angle that the vertex normal vector makes with the surface normal of S1 is the same as the angle between the vertex normal and the surface normal of S2.</span></span> <span data-ttu-id="76667-143">Wenn diese beiden Oberflächen beleuchtet und mit einer Gouraud-Schattierung versehen werden, ergibt das einen übergangslos schattierten und abgerundeten Rand zwischen ihnen.</span><span class="sxs-lookup"><span data-stu-id="76667-143">When these two surfaces are lit and shaded with Gouraud shading, the result is a smoothly shaded, smoothly rounded edge between them.</span></span>
 
-Die folgende Illustration zeigt zwei Oberflächen (S1 und S2) mit ihren Normalvektoren und Vertexnormalenvektoren:
+<span data-ttu-id="76667-144">Die folgende Illustration zeigt zwei Oberflächen (S1 und S2) mit ihren Normalvektoren und Vertexnormalenvektoren:</span><span class="sxs-lookup"><span data-stu-id="76667-144">The following illustration shows two surfaces (S1 and S2) and their normal vectors and vertex normal vector:</span></span>
 
 ![Zwei Oberflächen (s1 und s2) mit ihren Normalvektoren und Vertexnormalenvektoren](images/gvert.png)
 
-Wenn die Vertexnormale in Richtung einer der Flächen zeigt, der sie zugeordnet ist, wird die Lichtintensität für Punkte auf der Fläche erhöht oder vermindert, je nach dem mit der Lichtquelle gebildeten Winkel. In der folgenden Abbildung wird ein Beispiel gezeigt. Diese Ränder der Oberflächen liegen aneinander. Die Vertexnormale zeigt in Richtung S1, sodass sie mit der Lichtquelle einen Winkel bildet, der kleiner ist, als es die identischen Winkel mit den Oberflächennormalen wären.
+<span data-ttu-id="76667-146">Wenn die Vertexnormale in Richtung einer der Flächen zeigt, der sie zugeordnet ist, wird die Lichtintensität für Punkte auf der Fläche erhöht oder vermindert, je nach dem mit der Lichtquelle gebildeten Winkel.</span><span class="sxs-lookup"><span data-stu-id="76667-146">If the vertex normal leans toward one of the faces with which it is associated, it causes the light intensity to increase or decrease for points on that surface, depending on the angle it makes with the light source.</span></span> <span data-ttu-id="76667-147">In der folgenden Abbildung wird ein Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="76667-147">The following diagram shows an example.</span></span> <span data-ttu-id="76667-148">Diese Ränder der Oberflächen liegen aneinander.</span><span class="sxs-lookup"><span data-stu-id="76667-148">These surfaces are seen edge-on.</span></span> <span data-ttu-id="76667-149">Die Vertexnormale zeigt in Richtung S1, sodass sie mit der Lichtquelle einen Winkel bildet, der kleiner ist, als es die identischen Winkel mit den Oberflächennormalen wären.</span><span class="sxs-lookup"><span data-stu-id="76667-149">The vertex normal leans toward S1, causing it to have a smaller angle with the light source than if the vertex normal had equal angles with the surface normals.</span></span>
 
-Die folgende Abbildung zeigt zwei Oberflächen (S1 und S2) mit einem Vertexnormalvektor, der sich zu eine Fläche neigt:
+<span data-ttu-id="76667-150">Die folgende Abbildung zeigt zwei Oberflächen (S1 und S2) mit einem Vertexnormalvektor, der sich zu eine Fläche neigt:</span><span class="sxs-lookup"><span data-stu-id="76667-150">The following illustration shows two surfaces (S1 and S2) with a vertex normal vector that leans toward one face:</span></span>
 
 ![Zwei Oberflächen (s1 und s2) mit einem Vertexnormalvektor, der sich zu einer Fläche neigt](images/gvert2.png)
 
-## <a name="span-idsharpedgesspanspan-idsharpedgesspanspan-idsharpedgesspansharp-edges"></a><span id="Sharp_edges"></span><span id="sharp_edges"></span><span id="SHARP_EDGES"></span>Scharfe Kanten
+## <a name="span-idsharpedgesspanspan-idsharpedgesspanspan-idsharpedgesspansharp-edges"></a><span data-ttu-id="76667-152"><span id="Sharp_edges"></span><span id="sharp_edges"></span><span id="SHARP_EDGES"></span>Scharfe Kanten</span><span class="sxs-lookup"><span data-stu-id="76667-152"><span id="Sharp_edges"></span><span id="sharp_edges"></span><span id="SHARP_EDGES"></span>Sharp edges</span></span>
 
 
-Sie können Gouraud-Schattierung verwenden, um einige Objekte in einer 3D-Szene mit scharfe Kanten darzustellen. Duplizieren Sie hierzu die Vertexnormalvektoren für jede Flächenüberschneidung, an der eine scharfe Kante erforderlich ist.
+<span data-ttu-id="76667-153">Sie können Gouraud-Schattierung verwenden, um einige Objekte in einer 3D-Szene mit scharfe Kanten darzustellen.</span><span class="sxs-lookup"><span data-stu-id="76667-153">You can use Gouraud shading to display some objects in a 3D scene with sharp edges.</span></span> <span data-ttu-id="76667-154">Duplizieren Sie hierzu die Vertexnormalvektoren für jede Flächenüberschneidung, an der eine scharfe Kante erforderlich ist.</span><span class="sxs-lookup"><span data-stu-id="76667-154">To do so, duplicate the vertex normal vectors at any intersection of faces where a sharp edge is required.</span></span>
 
-Die folgende Illustration zeigt duplizierte Vertexnormalevektoren an scharfen Kanten:
+<span data-ttu-id="76667-155">Die folgende Illustration zeigt duplizierte Vertexnormalevektoren an scharfen Kanten:</span><span class="sxs-lookup"><span data-stu-id="76667-155">The following illustration shows duplicated vertex normal vectors at sharp edges:</span></span>
 
 ![Duplizierte Vertexnormalvektoren an scharfen Kanten](images/shade1.png)
 
-Wenn Sie die DrawPrimitive-Methoden zum Rendern der Szene verwenden, definieren Sie das Objekt mit den scharfen Kanten als Dreiecksliste und nicht als Dreiecksstrip. Wenn Sie ein Objekt als Dreiecksstrip definieren, behandelt Direct3D es als ein einziges Polygon, das aus mehreren dreieckigen Flächen besteht. Gouraud-Schattierung wird sowohl auf jeder Fläche des Polygons als auch zwischen benachbarten Flächen angewendet.
+<span data-ttu-id="76667-157">Wenn Sie die DrawPrimitive-Methoden zum Rendern der Szene verwenden, definieren Sie das Objekt mit den scharfen Kanten als Dreiecksliste und nicht als Dreiecksstrip.</span><span class="sxs-lookup"><span data-stu-id="76667-157">If you use the DrawPrimitive methods to render your scene, define the object with sharp edges as a triangle list, rather than a triangle strip.</span></span> <span data-ttu-id="76667-158">Wenn Sie ein Objekt als Dreiecksstrip definieren, behandelt Direct3D es als ein einziges Polygon, das aus mehreren dreieckigen Flächen besteht.</span><span class="sxs-lookup"><span data-stu-id="76667-158">When you define an object as a triangle strip, Direct3D treats it as a single polygon composed of multiple triangular faces.</span></span> <span data-ttu-id="76667-159">Gouraud-Schattierung wird sowohl auf jeder Fläche des Polygons als auch zwischen benachbarten Flächen angewendet.</span><span class="sxs-lookup"><span data-stu-id="76667-159">Gouraud shading is applied both across each face of the polygon and between adjacent faces.</span></span>
 
-Das Ergebnis ist stufenlos von Fläche zu Fläche schattiertes Objekt. Da eine Dreiecksliste ein Polygon ist, das aus einer Reihe unabhängiger dreieckiger Flächen besteht, wendet Direct3D die Gouraud-Schattierung auf jeder Fläche des Polygons an. Jedoch nicht flächenübergreifend. Wenn zwei oder mehr Dreiecke einer Liste nebeneinander liegen, wird eine scharfe Kante zwischen ihnen angezeigt.
+<span data-ttu-id="76667-160">Das Ergebnis ist stufenlos von Fläche zu Fläche schattiertes Objekt.</span><span class="sxs-lookup"><span data-stu-id="76667-160">The result is an object that is smoothly shaded from face to face.</span></span> <span data-ttu-id="76667-161">Da eine Dreiecksliste ein Polygon ist, das aus einer Reihe unabhängiger dreieckiger Flächen besteht, wendet Direct3D die Gouraud-Schattierung auf jeder Fläche des Polygons an.</span><span class="sxs-lookup"><span data-stu-id="76667-161">Because a triangle list is a polygon composed of a series of disjoint triangular faces, Direct3D applies Gouraud shading across each face of the polygon.</span></span> <span data-ttu-id="76667-162">Jedoch nicht flächenübergreifend.</span><span class="sxs-lookup"><span data-stu-id="76667-162">However, it is not applied from face to face.</span></span> <span data-ttu-id="76667-163">Wenn zwei oder mehr Dreiecke einer Liste nebeneinander liegen, wird eine scharfe Kante zwischen ihnen angezeigt.</span><span class="sxs-lookup"><span data-stu-id="76667-163">If two or more triangles of a triangle list are adjacent, they appear to have a sharp edge between them.</span></span>
 
-Eine weitere Alternative ist, flache Schattierung zum Rendern von Objekten mit scharfen Kanten zu verwenden. Dies ist rechnerisch die effizienteste Methode, kann aber dazu führen, dass solche Objekte in der Szene nicht so realistisch gerendert werden wie die Objekte mit der Gouraud-Schattierung.
+<span data-ttu-id="76667-164">Eine weitere Alternative ist, flache Schattierung zum Rendern von Objekten mit scharfen Kanten zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="76667-164">Another alternative is to change to flat shading when rendering objects with sharp edges.</span></span> <span data-ttu-id="76667-165">Dies ist rechnerisch die effizienteste Methode, kann aber dazu führen, dass solche Objekte in der Szene nicht so realistisch gerendert werden wie die Objekte mit der Gouraud-Schattierung.</span><span class="sxs-lookup"><span data-stu-id="76667-165">This is computationally the most efficient method, but it may result in objects in the scene that are not rendered as realistically as the objects that are Gouraud-shaded.</span></span>
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Verwandte Themen
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="76667-166"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="76667-166"><span id="related-topics"></span>Related topics</span></span>
 
 
-[Koordinatensysteme und Geometrie](coordinate-systems-and-geometry.md)
-
- 
+[<span data-ttu-id="76667-167">Koordinatensysteme und Geometrie</span><span class="sxs-lookup"><span data-stu-id="76667-167">Coordinate systems and geometry</span></span>](coordinate-systems-and-geometry.md)
 
  
 
+ 
 
 
 

@@ -9,18 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: c0426320e978c88bc2db67398e626c0ed3794edc
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.translationtype: HT
+ms.contentlocale: de-DE
 ---
+# <a name="launch-an-app-through-file-activation"></a><span data-ttu-id="f13e7-104">Starten einer App über Dateiaktivierung</span><span class="sxs-lookup"><span data-stu-id="f13e7-104">Launch an app through file activation</span></span>
 
-# <a name="launch-an-app-through-file-activation"></a>Starten einer App über Dateiaktivierung
+<span data-ttu-id="f13e7-105">In diesem Abschnitt wird gezeigt, wie Sie Ihre App so einrichten, dass sie beim Öffnen einer Datei eines bestimmten Typs gestartet wird.</span><span class="sxs-lookup"><span data-stu-id="f13e7-105">This section shows how to set up your app to launch when a file of a certain type is opened.</span></span>
 
-In diesem Abschnitt wird gezeigt, wie Sie Ihre App so einrichten, dass sie beim Öffnen einer Datei eines bestimmten Typs gestartet wird.
-
-| Thema | Beschreibung |
+| <span data-ttu-id="f13e7-106">Thema</span><span class="sxs-lookup"><span data-stu-id="f13e7-106">Topic</span></span> | <span data-ttu-id="f13e7-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f13e7-107">Description</span></span> |
 |-------|-------------|
-| [Starten der Standard-App für eine Datei](launch-the-default-app-for-a-file.md) | Erfahren Sie, wie Sie die Standard-App für eine Datei starten. |
-| [Behandeln der Dateiaktivierung](handle-file-activation.md) | Erfahren Sie, wie Sie Ihre App registrieren, damit sie zum Standardhandler für einen bestimmten Dateityp wird. |
+| [<span data-ttu-id="f13e7-108">Starten der Standard-App für eine Datei</span><span class="sxs-lookup"><span data-stu-id="f13e7-108">Launch the default app for a file</span></span>](launch-the-default-app-for-a-file.md) | <span data-ttu-id="f13e7-109">Erfahren Sie, wie Sie die Standard-App für eine Datei starten.</span><span class="sxs-lookup"><span data-stu-id="f13e7-109">Learn how to launch the default app for a file.</span></span> |
+| [<span data-ttu-id="f13e7-110">Behandeln der Dateiaktivierung</span><span class="sxs-lookup"><span data-stu-id="f13e7-110">Handle file activation</span></span>](handle-file-activation.md) | <span data-ttu-id="f13e7-111">Erfahren Sie, wie Sie Ihre App registrieren, damit sie zum Standardhandler für einen bestimmten Dateityp wird.</span><span class="sxs-lookup"><span data-stu-id="f13e7-111">Learn how to register your app to become the default handler for a certain file type.</span></span> |

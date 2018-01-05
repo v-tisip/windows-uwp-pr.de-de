@@ -9,30 +9,28 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 51add4631b807940e051a8f4cbaca92063e41d4a
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.translationtype: HT
+ms.contentlocale: de-DE
 ---
+# <a name="splash-screens"></a><span data-ttu-id="428a7-104">Begrüßungsbildschirme</span><span class="sxs-lookup"><span data-stu-id="428a7-104">Splash screens</span></span>
 
-# <a name="splash-screens"></a>Begrüßungsbildschirme
+<span data-ttu-id="428a7-105">Alle UWP-Apps müssen einen Begrüßungsbildschirm besitzen, der sich aus einem Bild und einer Hintergrundfarbe zusammensetzt. Beide Komponenten können angepasst werden.</span><span class="sxs-lookup"><span data-stu-id="428a7-105">All UWP apps must have a splash screen, which is a composite of an image and a background color, both of which can be customized.</span></span>
 
-Alle UWP-Apps müssen einen Begrüßungsbildschirm besitzen, der sich aus einem Bild und einer Hintergrundfarbe zusammensetzt. Beide Komponenten können angepasst werden.
+<span data-ttu-id="428a7-106">Ihr Begrüßungsbildschirm wird sofort angezeigt, wenn Benutzer die App starten.</span><span class="sxs-lookup"><span data-stu-id="428a7-106">Your splash screen is displayed immediately when the user launches your app.</span></span> <span data-ttu-id="428a7-107">Dadurch erhalten die Benutzer eine sofortige Rückmeldung, während die App-Ressourcen initialisiert werden.</span><span class="sxs-lookup"><span data-stu-id="428a7-107">This provides immediate feedback to users while app resources are initialized.</span></span> <span data-ttu-id="428a7-108">Sobald die App bereit für Interaktionen ist, wird der Begrüßungsbildschirm geschlossen.</span><span class="sxs-lookup"><span data-stu-id="428a7-108">As soon as your app is ready for interaction, the splash screen is dismissed.</span></span>
 
-Ihr Begrüßungsbildschirm wird sofort angezeigt, wenn Benutzer die App starten. Dadurch erhalten die Benutzer eine sofortige Rückmeldung, während die App-Ressourcen initialisiert werden. Sobald die App bereit für Interaktionen ist, wird der Begrüßungsbildschirm geschlossen.
+<span data-ttu-id="428a7-109">Durch einen gut gestalteten Begrüßungsbildschirm kann Ihre App einladender wirken.</span><span class="sxs-lookup"><span data-stu-id="428a7-109">A well-designed splash screen can make your app more inviting.</span></span> <span data-ttu-id="428a7-110">Hier ist ein einfacher unauffälliger Begrüßungsbildschirm:</span><span class="sxs-lookup"><span data-stu-id="428a7-110">Here's a simple, understated splash screen:</span></span>
 
-Durch einen gut gestalteten Begrüßungsbildschirm kann Ihre App einladender wirken. Hier ist ein einfacher unauffälliger Begrüßungsbildschirm:
+![Eine auf 75% skalierte Bildschirmaufnahme des Begrüßungsbildschirms aus dem Begrüßungsbildschirmbeispiel.](images/regularsplashscreen.png)
 
-![Eine auf 75 % skalierte Bildschirmaufnahme des Begrüßungsbildschirms aus dem Begrüßungsbildschirmbeispiel.](images/regularsplashscreen.png)
+<span data-ttu-id="428a7-112">Dieser Begrüßungsbildschirm wird durch Kombinieren eines grünen Hintergrunds mit einem transparenten Hintergrundbild im PNG-Format erstellt.</span><span class="sxs-lookup"><span data-stu-id="428a7-112">This splash screen is created by combining a green background color with a transparent-background PNG image.</span></span>
 
-Dieser Begrüßungsbildschirm wird durch Kombinieren eines grünen Hintergrunds mit einem transparenten Hintergrundbild im PNG-Format erstellt.
+<span data-ttu-id="428a7-113">Ein einfaches Bild mit einer Hintergrundfarbe sieht unabhängig von dem Gerät, auf dem Ihre App ausgeführt wird, gut aus.</span><span class="sxs-lookup"><span data-stu-id="428a7-113">A simple image with a background color looks good regardless of the device your app is running on.</span></span> <span data-ttu-id="428a7-114">Nur die Größe des Hintergrunds wird verändert, um verschiedene Bildschirmgrößen zu berücksichtigen.</span><span class="sxs-lookup"><span data-stu-id="428a7-114">Only the size of the background changes to compensate for a variety of screen sizes.</span></span> <span data-ttu-id="428a7-115">Ihr Bild bleibt stets unverändert.</span><span class="sxs-lookup"><span data-stu-id="428a7-115">Your image always remains intact.</span></span>
 
-Ein einfaches Bild mit einer Hintergrundfarbe sieht unabhängig von dem Gerät, auf dem Ihre App ausgeführt wird, gut aus. Nur die Größe des Hintergrunds wird verändert, um verschiedene Bildschirmgrößen zu berücksichtigen. Ihr Bild bleibt stets unverändert.
+<span data-ttu-id="428a7-116">Außerdem können Sie mit der [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763)-Klasse den Start Ihrer App anpassen.</span><span class="sxs-lookup"><span data-stu-id="428a7-116">Additionally, you can use the [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) class to customize your app's launch experience.</span></span> <span data-ttu-id="428a7-117">Sie können einen erweiterten, von Ihnen erstellten Begrüßungsbildschirm platzieren, damit Ihre App mehr Zeit für das Ausführen zusätzlicher Aufgaben, wie Vorbereiten der UI oder Abschließen von Netzwerkvorgängen, hat.</span><span class="sxs-lookup"><span data-stu-id="428a7-117">You can position an extended splash screen, which you create, to give your app more time to complete additional tasks like preparing app UI or completing networking operations.</span></span> <span data-ttu-id="428a7-118">Mit der **SplashScreen**-Klasse können Sie sich auch über das Schließen des Begrüßungsbildschirms benachrichtigen lassen, damit Sie Einführungsanimationen starten können.</span><span class="sxs-lookup"><span data-stu-id="428a7-118">You can also use the **SplashScreen** class to notify you when the splash screen is dismissed, so that you can begin entrance animations.</span></span>
 
-Außerdem können Sie mit der [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763)-Klasse den Start Ihrer App anpassen. Sie können einen erweiterten, von Ihnen erstellten Begrüßungsbildschirm platzieren, damit Ihre App mehr Zeit für das Ausführen zusätzlicher Aufgaben, wie Vorbereiten der UI oder Abschließen von Netzwerkvorgängen, hat. Mit der **SplashScreen**-Klasse können Sie sich auch über das Schließen des Begrüßungsbildschirms benachrichtigen lassen, damit Sie Einführungsanimationen starten können.
-
-| Thema | Beschreibung |
+| <span data-ttu-id="428a7-119">Thema</span><span class="sxs-lookup"><span data-stu-id="428a7-119">Topic</span></span> | <span data-ttu-id="428a7-120">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="428a7-120">Description</span></span> |
 |-------|-------------|
-| [Hinzufügen eines Begrüßungsbildschirms](add-a-splash-screen.md) | Legen Sie das Bild und die Hintergrundfarbe des Begrüßungsbildschirms Ihrer App fest. |
-| [Längere Anzeige des Begrüßungsbildschirms](create-a-customized-splash-screen.md) | Verlängern Sie die Anzeige eines Begrüßungsbildschirms, indem Sie für die App einen erweiterten Begrüßungsbildschirm erstellen. Mit diesem erweiterten Bildschirm wird der beim Starten der App angezeigte Begrüßungsbildschirm imitiert, der angepasst werden kann. |
+| [<span data-ttu-id="428a7-121">Hinzufügen eines Begrüßungsbildschirms</span><span class="sxs-lookup"><span data-stu-id="428a7-121">Add a splash screen</span></span>](add-a-splash-screen.md) | <span data-ttu-id="428a7-122">Legen Sie das Bild und die Hintergrundfarbe des Begrüßungsbildschirms Ihrer App fest.</span><span class="sxs-lookup"><span data-stu-id="428a7-122">Set your app's splash screen image and background color.</span></span> |
+| [<span data-ttu-id="428a7-123">Längere Anzeige des Begrüßungsbildschirms</span><span class="sxs-lookup"><span data-stu-id="428a7-123">Display a splash screen for more time</span></span>](create-a-customized-splash-screen.md) | <span data-ttu-id="428a7-124">Verlängern Sie die Anzeige eines Begrüßungsbildschirms, indem Sie für die App einen erweiterten Begrüßungsbildschirm erstellen.</span><span class="sxs-lookup"><span data-stu-id="428a7-124">Display a splash screen for more time by creating an extended splash screen for your app.</span></span> <span data-ttu-id="428a7-125">Mit diesem erweiterten Bildschirm wird der beim Starten der App angezeigte Begrüßungsbildschirm imitiert, der angepasst werden kann.</span><span class="sxs-lookup"><span data-stu-id="428a7-125">This extended screen imitates the splash screen shown when your app is launched, and can be customized.</span></span> |

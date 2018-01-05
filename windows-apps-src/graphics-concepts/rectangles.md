@@ -2,30 +2,29 @@
 title: Rechtecke
 description: In Direct3D und in der Windows-Programmierung werden Objekte auf dem Bildschirm in Bezug auf die umgebenden Rechtecke bezeichnet.
 ms.assetid: 3B78AE66-2C1A-4191-BDCA-D737E33460BA
-keywords:
-- Rechtecke
-author: PeterTurcan
-ms.author: pettur
+keywords: Rechtecke
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a532179df604a1b241564b0d134871e384c6b32d
-ms.lasthandoff: 02/07/2017
-
+ms.localizationpriority: medium
+ms.openlocfilehash: 3c493b6189cfc8c396568ca42faa4162e40501f5
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/22/2017
 ---
-
-# <a name="rectangles"></a>Rechtecke
-
-
-In Direct3D und in der Windows-Programmierung werden Objekte auf dem Bildschirm in Bezug auf die umgebenden Rechtecke bezeichnet. Die Seiten des umgebenden Rechtecks sind immer parallel zu den Seiten des Bildschirms. So kann das Rechteck mit zwei Punkten, nämlich der obere linke Ecke und der unteren rechten Ecke, beschrieben werden.
-
-## <a name="span-idboundingrectanglesspanspan-idboundingrectanglesspanspan-idboundingrectanglesspanbounding-rectangles"></a><span id="Bounding_rectangles"></span><span id="bounding_rectangles"></span><span id="BOUNDING_RECTANGLES"></span>Umgebende Rechtecke
+# <a name="rectangles"></a><span data-ttu-id="391d9-104">Rechtecke</span><span class="sxs-lookup"><span data-stu-id="391d9-104">Rectangles</span></span>
 
 
-Die meisten Anwendungen verwenden die [**RECT**](https://msdn.microsoft.com/library/windows/desktop/dd162897)-Struktur (oder ein Typedef-Alias) als Träger von Informationen über ein umgebendes Rechteck, die beim Blitten auf den Bildschirm oder bei der Trefferermittlung verwendet werden. In C++ die **RECT** Struktur hat folgende Definition.
+<span data-ttu-id="391d9-105">In Direct3D und in der Windows-Programmierung werden Objekte auf dem Bildschirm in Bezug auf die umgebenden Rechtecke bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="391d9-105">Throughout Direct3D and Windows programming, objects on the screen are referred to in terms of bounding rectangles.</span></span> <span data-ttu-id="391d9-106">Die Seiten des umgebenden Rechtecks sind immer parallel zu den Seiten des Bildschirms. So kann das Rechteck mit zwei Punkten, nämlich der obere linke Ecke und der unteren rechten Ecke, beschrieben werden.</span><span class="sxs-lookup"><span data-stu-id="391d9-106">The sides of a bounding rectangle are always parallel to the sides of the screen, so the rectangle can be described by two points, the upper-left corner and lower-right corner.</span></span>
+
+## <a name="span-idboundingrectanglesspanspan-idboundingrectanglesspanspan-idboundingrectanglesspanbounding-rectangles"></a><span data-ttu-id="391d9-107"><span id="Bounding_rectangles"></span><span id="bounding_rectangles"></span><span id="BOUNDING_RECTANGLES"></span>Umgebende Rechtecke</span><span class="sxs-lookup"><span data-stu-id="391d9-107"><span id="Bounding_rectangles"></span><span id="bounding_rectangles"></span><span id="BOUNDING_RECTANGLES"></span>Bounding rectangles</span></span>
+
+
+<span data-ttu-id="391d9-108">Die meisten Anwendungen verwenden die [**RECT**](https://msdn.microsoft.com/library/windows/desktop/dd162897)-Struktur (oder ein Typedef-Alias) als Träger von Informationen über ein umgebendes Rechteck, die beim Blitten auf den Bildschirm oder bei der Trefferermittlung verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="391d9-108">Most applications use the [**RECT**](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure (or a typedef'd alias for it) to carry information about a bounding rectangle to use when blitting to the screen or when performing hit detection.</span></span> <span data-ttu-id="391d9-109">In C++ die **RECT** Struktur hat folgende Definition.</span><span class="sxs-lookup"><span data-stu-id="391d9-109">In C++, the **RECT** structure has the following definition.</span></span>
 
 ```
 typedef struct tagRECT { 
@@ -36,23 +35,22 @@ typedef struct tagRECT {
 } RECT, *PRECT, NEAR *NPRECT, FAR *LPRECT; 
 ```
 
-In diesem Beispiel bilden die linken und oberen Elemente die x- und y-Koordinaten für die linke obere Ecke des umgebenden Rechtecks. Entsprechend bilden die rechten und unteren Elemente die Koordinaten der unteren rechten Ecke. Die folgende Abbildung zeigt, wie Sie diese Werte darstellen können.
+<span data-ttu-id="391d9-110">In diesem Beispiel bilden die linken und oberen Elemente die x- und y-Koordinaten für die linke obere Ecke des umgebenden Rechtecks.</span><span class="sxs-lookup"><span data-stu-id="391d9-110">In the preceding example, the left and top members are the x- and y-coordinates of a bounding rectangle's upper-left corner.</span></span> <span data-ttu-id="391d9-111">Entsprechend bilden die rechten und unteren Elemente die Koordinaten der unteren rechten Ecke.</span><span class="sxs-lookup"><span data-stu-id="391d9-111">Similarly, the right and bottom members make up the coordinates of the lower-right corner.</span></span> <span data-ttu-id="391d9-112">Die folgende Abbildungzeigt, wie Sie diese Werte darstellen können.</span><span class="sxs-lookup"><span data-stu-id="391d9-112">The following illustration shows how you can visualize these values.</span></span>
 
-![Abbildung des durch die linken, oberen, rechten und unteren Werte begrenzten umgebenden Rechtecks](images/rect.png)
+![Abbildungdes durch die linken, oberen, rechten und unteren Werte begrenzten umgebenden Rechtecks](images/rect.png)
 
-Die Pixelspalte am rechten Rand sowie die Pixelzeile am unteren Rand sind nicht im RECT enthalten. Das Sperren eines RECT mit den Elementen {10, 10, 138, 138} ergibt ein Objekt, das 128 Pixel breit und hoch ist.
+<span data-ttu-id="391d9-114">Die Pixelspalte am rechten Rand sowie die Pixelzeile am unteren Rand sind nicht im RECT enthalten.</span><span class="sxs-lookup"><span data-stu-id="391d9-114">The column of pixels at the right edge and the row of pixels at the bottom edge are not included in the RECT.</span></span> <span data-ttu-id="391d9-115">Das Sperren eines RECT mit den Elementen {10, 10, 138, 138} ergibt ein Objekt, das 128Pixel breit und hoch ist.</span><span class="sxs-lookup"><span data-stu-id="391d9-115">For example, locking a RECT with members {10, 10, 138, 138} results in an object 128 pixels in width and height.</span></span>
 
-Für erhöhte Effizienz, Konsistenz und Bedienerfreundlichkeit arbeiten alle Direct3D-Darstellungsfunktionen mit Rechtecken.
+<span data-ttu-id="391d9-116">Für erhöhte Effizienz, Konsistenz und Bedienerfreundlichkeit arbeiten alle Direct3D-Darstellungsfunktionen mit Rechtecken.</span><span class="sxs-lookup"><span data-stu-id="391d9-116">For efficiency, consistency, and ease of use, all Direct3D presentation functions work with rectangles.</span></span>
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Verwandte Themen
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="391d9-117"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="391d9-117"><span id="related-topics"></span>Related topics</span></span>
 
 
-[Koordinatensystem und Geometrie](coordinate-systems-and-geometry.md)
-
- 
+[<span data-ttu-id="391d9-118">Koordinatensystem und Geometrie</span><span class="sxs-lookup"><span data-stu-id="391d9-118">Coordinate systems and geometry</span></span>](coordinate-systems-and-geometry.md)
 
  
 
+ 
 
 
 

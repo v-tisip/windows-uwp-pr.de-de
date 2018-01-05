@@ -9,95 +9,92 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 9317ea8690d5696d4a9e55b3a88f1a2ff83d8bfd
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: ccacfc1257af529fcc2363285c6dd9e4ab2315ac
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.translationtype: HT
+ms.contentlocale: de-DE
 ---
+# <a name="selecting-an-approach-to-ios-and-uwp-app-development"></a><span data-ttu-id="01dcd-104">Auswählen eines Ansatzes für die Entwicklung von iOS- und UWP-Apps</span><span class="sxs-lookup"><span data-stu-id="01dcd-104">Selecting an approach to iOS and UWP app development</span></span>
 
-# <a name="selecting-an-approach-to-ios-and-uwp-app-development"></a>Auswählen eines Ansatzes für die Entwicklung von iOS- und UWP-Apps
+<span data-ttu-id="01dcd-105">\[ Aktualisiert für UWP-Apps unter Windows 10.</span><span class="sxs-lookup"><span data-stu-id="01dcd-105">\[ Updated for UWP apps on Windows 10.</span></span> <span data-ttu-id="01dcd-106">Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span><span class="sxs-lookup"><span data-stu-id="01dcd-106">For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span></span>
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+<span data-ttu-id="01dcd-107">Welche Optionen gibt es beim Entwickeln von plattformübergreifenden Apps?</span><span class="sxs-lookup"><span data-stu-id="01dcd-107">What are the choices when developing cross-platform apps?</span></span>
 
-Welche Optionen gibt es beim Entwickeln von plattformübergreifenden Apps?
+## <a name="whats-the-best-way-to-support-both-ios-and-windows"></a><span data-ttu-id="01dcd-108">Wie werden iOS und Windows am besten unterstützt?</span><span class="sxs-lookup"><span data-stu-id="01dcd-108">What's the best way to support both iOS and Windows?</span></span>
 
-## <a name="whats-the-best-way-to-support-both-ios-and-windows"></a>Wie werden iOS und Windows am besten unterstützt?
+<span data-ttu-id="01dcd-109">Windows und iOS sind anscheinend sehr unterschiedlich, es stehen jedoch immer mehr Tools und Methoden zur Verfügung, mit denen Sie Apps entwickeln können, die beide Plattformen (sowie Android) unterstützen.</span><span class="sxs-lookup"><span data-stu-id="01dcd-109">Windows and iOS may seem to be very different beasts, but a growing number of tools and techniques can greatly assist you if you need to write apps that support both platforms (and Android too).</span></span> <span data-ttu-id="01dcd-110">Die beste Lösung hängt vom Typ der App ab, die Sie entwickeln. Ausschlaggebend ist zudem auch, ob Sie die App von Grund auf neu erstellen oder ein vorhandenes Projekt portieren.</span><span class="sxs-lookup"><span data-stu-id="01dcd-110">The best solution depends on the type of app you are writing, and whether you are starting from scratch or porting an existing project.</span></span>
 
-Windows und iOS sind anscheinend sehr unterschiedlich, es stehen jedoch immer mehr Tools und Methoden zur Verfügung, mit denen Sie Apps entwickeln können, die beide Plattformen (sowie Android) unterstützen. Die beste Lösung hängt vom Typ der App ab, die Sie entwickeln. Ausschlaggebend ist zudem auch, ob Sie die App von Grund auf neu erstellen oder ein vorhandenes Projekt portieren.
+## <a name="writing-a-new-app"></a><span data-ttu-id="01dcd-111">Schreiben einer neuen App</span><span class="sxs-lookup"><span data-stu-id="01dcd-111">Writing a new app</span></span>
 
-## <a name="writing-a-new-app"></a>Schreiben einer neuen App
+<span data-ttu-id="01dcd-112">Wenn Sie eine neue App erstellen, stehen zahlreiche Optionen zur Verfügung, u.a.:</span><span class="sxs-lookup"><span data-stu-id="01dcd-112">With a clean slate, you have many options at your disposal, including:</span></span>
 
-Wenn Sie eine neue App erstellen, stehen zahlreiche Optionen zur Verfügung, u. a.:
+-   [<span data-ttu-id="01dcd-113">Xamarin</span><span class="sxs-lookup"><span data-stu-id="01dcd-113">Xamarin</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=320484)
 
--   [Xamarin](http://go.microsoft.com/fwlink/p/?LinkID=320484)
+    <span data-ttu-id="01dcd-114">Mit Xamarin können Sie Ihre App in C# schreiben, sie unter Windows ausführen und zudem systemeigene iOS-Apps entwickeln.</span><span class="sxs-lookup"><span data-stu-id="01dcd-114">With Xamarin, you can write your app in C#, have it run on Windows, and create native iOS apps too.</span></span> <span data-ttu-id="01dcd-115">Unterstützung für Xamarin ist in Visual Studio integriert. Wählen Sie einfach den richtigen Projekttyp aus.</span><span class="sxs-lookup"><span data-stu-id="01dcd-115">Support for Xamarin is built into Visual Studio; just select the correct project type.</span></span>
 
-    Mit Xamarin können Sie Ihre App in C# schreiben, sie unter Windows ausführen und zudem systemeigene iOS-Apps entwickeln. Unterstützung für Xamarin ist in Visual Studio integriert. Wählen Sie einfach den richtigen Projekttyp aus.
+-   [<span data-ttu-id="01dcd-116">Apache Cordova</span><span class="sxs-lookup"><span data-stu-id="01dcd-116">Apache Cordova</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=400439)
 
--   [Apache Cordova](http://go.microsoft.com/fwlink/p/?LinkID=400439)
+    <span data-ttu-id="01dcd-117">Falls Sie Javascript und HTML bevorzugen, unterstützt Sie Apache Cordova (auch als PhoneGap bezeichnet) beim Entwickeln plattformübergreifender Apps für iOS, Windows und Android.</span><span class="sxs-lookup"><span data-stu-id="01dcd-117">If Javascript and HTML is more your thing, Apache Cordova (aka PhoneGap) will help you create cross-platform apps for iOS, Windows, and Android.</span></span> <span data-ttu-id="01dcd-118">Dieser Projekttyp ist ebenfalls in Visual Studio integriert.</span><span class="sxs-lookup"><span data-stu-id="01dcd-118">This project type is also built into Visual Studio.</span></span>
 
-    Falls Sie Javascript und HTML bevorzugen, unterstützt Sie Apache Cordova (auch als PhoneGap bezeichnet) beim Entwickeln plattformübergreifender Apps für iOS, Windows und Android. Dieser Projekttyp ist ebenfalls in Visual Studio integriert.
+-   <span data-ttu-id="01dcd-119">Spielengines</span><span class="sxs-lookup"><span data-stu-id="01dcd-119">Game-engines</span></span>
 
--   Spielengines
+    <span data-ttu-id="01dcd-120">Mit Tools wie [Unity3D](http://go.microsoft.com/fwlink/p/?LinkID=320479) und [Unreal Engine](http://go.microsoft.com/fwlink/p/?LinkID=394062) können Sie Spiele in AAA-Qualität für Windows und zahlreiche andere Plattformen, einschließlich iOS, programmieren.</span><span class="sxs-lookup"><span data-stu-id="01dcd-120">With tools like [Unity3D](http://go.microsoft.com/fwlink/p/?LinkID=320479) and [Unreal Engine](http://go.microsoft.com/fwlink/p/?LinkID=394062) at your disposal, you can write AAA-quality games for Windows and many other platforms, including iOS.</span></span> <span data-ttu-id="01dcd-121">Unity unterstützt C#-Skripting, Unreal verwendet C++.</span><span class="sxs-lookup"><span data-stu-id="01dcd-121">Unity supports C# scripting; Unreal uses C++.</span></span>
 
-    Mit Tools wie [Unity3D](http://go.microsoft.com/fwlink/p/?LinkID=320479) und [Unreal Engine](http://go.microsoft.com/fwlink/p/?LinkID=394062) können Sie Spiele in AAA-Qualität für Windows und zahlreiche andere Plattformen, einschließlich iOS, programmieren. Unity unterstützt C#-Skripting, Unreal verwendet C++.
+-   [<span data-ttu-id="01dcd-122">MonoGame</span><span class="sxs-lookup"><span data-stu-id="01dcd-122">MonoGame</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=320483)
 
--   [MonoGame](http://go.microsoft.com/fwlink/p/?LinkID=320483)
+    <span data-ttu-id="01dcd-123">Der geistige Nachfolger von XNA.</span><span class="sxs-lookup"><span data-stu-id="01dcd-123">The spiritual successor to XNA.</span></span> <span data-ttu-id="01dcd-124">Nun handelt es sich dabei um ein plattformübergreifendes OpenSource-Framework. Das bedeutet, Sie können Apps in C# für zahlreiche Plattformen mit Unterstützung für Physik-Engines sowie 2D- und 3D-Grafiken schreiben.</span><span class="sxs-lookup"><span data-stu-id="01dcd-124">Now, it's an open-source cross-platform framework, which means you can write apps in C# for many platforms with support for physics engines, and 2D and 3D graphics.</span></span>
 
-    Der geistige Nachfolger von XNA. Nun handelt es sich dabei um ein plattformübergreifendes Open Source-Framework. Das bedeutet, Sie können Apps in C# für zahlreiche Plattformen mit Unterstützung für Physik-Engines sowie 2D- und 3D-Grafiken schreiben.
+## <a name="adapting-an-existing-app"></a><span data-ttu-id="01dcd-125">Anpassen einer vorhandenen App</span><span class="sxs-lookup"><span data-stu-id="01dcd-125">Adapting an existing app</span></span>
 
-## <a name="adapting-an-existing-app"></a>Anpassen einer vorhandenen App
+<span data-ttu-id="01dcd-126">Bei einer vorhandenen iOS-App stehen weniger Optionen zur Verfügung.</span><span class="sxs-lookup"><span data-stu-id="01dcd-126">With an existing iOS app, your options are a little more limited.</span></span> <span data-ttu-id="01dcd-127">Es ist jedoch nicht alles verloren.</span><span class="sxs-lookup"><span data-stu-id="01dcd-127">However, all is most certainly not lost.</span></span>
 
-Bei einer vorhandenen iOS-App stehen weniger Optionen zur Verfügung. Es ist jedoch nicht alles verloren.
+-   [<span data-ttu-id="01dcd-128">Windows-Brücke für iOS</span><span class="sxs-lookup"><span data-stu-id="01dcd-128">Windows Bridge for iOS</span></span>](https://go.microsoft.com/fwlink/p/?LinkId=619014)
 
--   [Windows-Brücke für iOS](https://go.microsoft.com/fwlink/p/?LinkId=619014)
+    <span data-ttu-id="01dcd-129">Dieses noch in der Entwicklung befindliche Tool ist auch unter dem Namen „Projekt Islandwood“ bekannt. Mit ihm können Xcode-Projekte direkt in Visual Studio importiert werden.</span><span class="sxs-lookup"><span data-stu-id="01dcd-129">Also known as Project Islandwood, this is a still-in-development tool that can import Xcode projects directly into Visual Studio.</span></span> <span data-ttu-id="01dcd-130">Die Erstellung und das Debugging von Objective-C-Code kann in Visual Studio ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="01dcd-130">Objective-C code can be built and debugged from within Visual Studio.</span></span> <span data-ttu-id="01dcd-131">Falls Ihr Projekt Bibliotheken verwendet, beispielsweise Cocos für Grafiken, ist dies möglicherweise eine praktische Möglichkeit zum schnellen Portieren Ihrer App.</span><span class="sxs-lookup"><span data-stu-id="01dcd-131">If your project makes use of libraries such as Cocos for graphics, you might find this a useful way to quickly port your app.</span></span>
 
-    Dieses noch in der Entwicklung befindliche Tool ist auch unter dem Namen „Projekt Islandwood“ bekannt. Mit ihm können Xcode-Projekte direkt in Visual Studio importiert werden. Die Erstellung und das Debugging von Objective-C-Code kann in Visual Studio ausgeführt werden. Falls Ihr Projekt Bibliotheken verwendet, beispielsweise Cocos für Grafiken, ist dies möglicherweise eine praktische Möglichkeit zum schnellen Portieren Ihrer App.
+-   <span data-ttu-id="01dcd-132">Sie können Ihren C++-Code wiederverwenden.</span><span class="sxs-lookup"><span data-stu-id="01dcd-132">Repurpose your C++ code.</span></span>
 
--   Sie können Ihren C++-Code wiederverwenden.
+    <span data-ttu-id="01dcd-133">Wenn die Kerngeschäftslogik nicht in Objective-C oder Swift, sondern in C++ geschrieben ist, können Sie diesen Code häufig mit geringfügigen Änderungen in Ihrem Projekt verwenden.</span><span class="sxs-lookup"><span data-stu-id="01dcd-133">If your core business logic is written in C++, rather than Objective-C or Swift, you can often use this code with only minor changes in your project.</span></span> <span data-ttu-id="01dcd-134">Anschließend können Sie wie bei anderen Windows-Apps mithilfe von XAML die Benutzeroberfläche definieren und den C++-Code bei Bedarf nutzen.</span><span class="sxs-lookup"><span data-stu-id="01dcd-134">You can then use XAML to define your UI, as with other Windows apps, and call into the C++ code when necessary.</span></span>
 
-    Wenn die Kerngeschäftslogik nicht in Objective-C oder Swift, sondern in C++ geschrieben ist, können Sie diesen Code häufig mit geringfügigen Änderungen in Ihrem Projekt verwenden. Anschließend können Sie wie bei anderen Windows-Apps mithilfe von XAML die Benutzeroberfläche definieren und den C++-Code bei Bedarf nutzen.
+-   [<span data-ttu-id="01dcd-135">Verwenden von ANGLE zum Ausführen von OpenGL ES unter Windows</span><span class="sxs-lookup"><span data-stu-id="01dcd-135">Use ANGLE to run OpenGL ES on Windows</span></span>](http://go.microsoft.com/fwlink/p/?linkid=618387)
 
--   [Verwenden von ANGLE zum Ausführen von OpenGL ES unter Windows](http://go.microsoft.com/fwlink/p/?linkid=618387)
+    <span data-ttu-id="01dcd-136">Ein Zwischenschritt zum Portieren Ihres OpenGL ES2.0-Projekts ist die Verwendung von ANGLE.</span><span class="sxs-lookup"><span data-stu-id="01dcd-136">An intermediate step to porting your OpenGL ES 2.0 project is to use ANGLE.</span></span> <span data-ttu-id="01dcd-137">Mit ANGLE können Sie OpenGL ES-Inhalte unter Windows ausführen, indem Sie OpenGL ES-API-Aufrufe in DirectX11-API-Aufrufe übersetzen.</span><span class="sxs-lookup"><span data-stu-id="01dcd-137">ANGLE allows you to run OpenGL ES content on Windows by translating OpenGL ES API calls to DirectX 11 API calls.</span></span>
 
-    Ein Zwischenschritt zum Portieren Ihres OpenGL ES 2.0-Projekts ist die Verwendung von ANGLE. Mit ANGLE können Sie OpenGL ES-Inhalte unter Windows ausführen, indem Sie OpenGL ES-API-Aufrufe in DirectX 11-API-Aufrufe übersetzen.
+## <a name="other-cross-platform-authoring-tools"></a><span data-ttu-id="01dcd-138">Andere plattformübergreifende Erstellungstools</span><span class="sxs-lookup"><span data-stu-id="01dcd-138">Other cross-platform authoring tools</span></span>
 
-## <a name="other-cross-platform-authoring-tools"></a>Andere plattformübergreifende Erstellungstools
+-   [<span data-ttu-id="01dcd-139">GameSalad</span><span class="sxs-lookup"><span data-stu-id="01dcd-139">GameSalad</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=320480)
 
--   [GameSalad](http://go.microsoft.com/fwlink/p/?LinkID=320480)
+    <span data-ttu-id="01dcd-140">Eine Spielerstellungsumgebung</span><span class="sxs-lookup"><span data-stu-id="01dcd-140">A game authoring environment.</span></span>
 
-    Eine Spielerstellungsumgebung
+-   [<span data-ttu-id="01dcd-141">Construct 2</span><span class="sxs-lookup"><span data-stu-id="01dcd-141">Construct 2</span></span>]( http://go.microsoft.com/fwlink/p/?LinkID=320481)
 
--   [Construct 2]( http://go.microsoft.com/fwlink/p/?LinkID=320481)
+    <span data-ttu-id="01dcd-142">Eine Spielerstellungsumgebung</span><span class="sxs-lookup"><span data-stu-id="01dcd-142">A game authoring environment.</span></span>
 
-    Eine Spielerstellungsumgebung
+-   [<span data-ttu-id="01dcd-143">Titanium Studio</span><span class="sxs-lookup"><span data-stu-id="01dcd-143">Titanium Studio</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=320482)
 
--   [Titanium Studio](http://go.microsoft.com/fwlink/p/?LinkID=320482)
+    <span data-ttu-id="01dcd-144">Eine plattformübergreifende Erstellungsumgebung</span><span class="sxs-lookup"><span data-stu-id="01dcd-144">A cross-platform authoring environment.</span></span>
 
-    Eine plattformübergreifende Erstellungsumgebung
+-   [<span data-ttu-id="01dcd-145">Cocos2D-x</span><span class="sxs-lookup"><span data-stu-id="01dcd-145">Cocos2D-x</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=320485)
 
--   [Cocos2D-x](http://go.microsoft.com/fwlink/p/?LinkID=320485)
+    <span data-ttu-id="01dcd-146">Eine plattformübergreifende Codebibliothek zur Spritebehandlung und Physikmodellierung</span><span class="sxs-lookup"><span data-stu-id="01dcd-146">A cross-platform code library for sprite handling and physics modeling.</span></span>
 
-    Eine plattformübergreifende Codebibliothek zur Spritebehandlung und Physikmodellierung
+-   [<span data-ttu-id="01dcd-147">Impact.js</span><span class="sxs-lookup"><span data-stu-id="01dcd-147">Impact.js</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=320486)
 
--   [Impact.js](http://go.microsoft.com/fwlink/p/?LinkID=320486)
+    <span data-ttu-id="01dcd-148">Eine HTML-basierte Spielbibliothek.</span><span class="sxs-lookup"><span data-stu-id="01dcd-148">An HTML based game library.</span></span>
 
-    Eine HTML-basierte Spielbibliothek.
+-   [<span data-ttu-id="01dcd-149">Marmalade</span><span class="sxs-lookup"><span data-stu-id="01dcd-149">Marmalade</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=320487)
 
--   [Marmalade](http://go.microsoft.com/fwlink/p/?LinkID=320487)
+    <span data-ttu-id="01dcd-150">Ein plattformübergreifendes SDK</span><span class="sxs-lookup"><span data-stu-id="01dcd-150">A cross-platform SDK.</span></span>
 
-    Ein plattformübergreifendes SDK
+-   [<span data-ttu-id="01dcd-151">OpenFL</span><span class="sxs-lookup"><span data-stu-id="01dcd-151">OpenFL</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=320488)
 
--   [OpenFL](http://go.microsoft.com/fwlink/p/?LinkID=320488)
+    <span data-ttu-id="01dcd-152">Ein plattformübergreifendes Entwicklungstool</span><span class="sxs-lookup"><span data-stu-id="01dcd-152">A cross-platform development tool.</span></span>
 
-    Ein plattformübergreifendes Entwicklungstool
+-   [<span data-ttu-id="01dcd-153">GameMaker</span><span class="sxs-lookup"><span data-stu-id="01dcd-153">GameMaker</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=320490)
 
--   [GameMaker](http://go.microsoft.com/fwlink/p/?LinkID=320490)
+    <span data-ttu-id="01dcd-154">Eine spezielle Entwicklungsumgebung für Spiele</span><span class="sxs-lookup"><span data-stu-id="01dcd-154">An authoring environment specifically for games.</span></span>
 
-    Eine spezielle Entwicklungsumgebung für Spiele
+-   [<span data-ttu-id="01dcd-155">PlayCanvas</span><span class="sxs-lookup"><span data-stu-id="01dcd-155">PlayCanvas</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=394061)
 
--   [PlayCanvas](http://go.microsoft.com/fwlink/p/?LinkID=394061)
-
-    Ein HTML-basiertes Tool für die Spielentwicklung
-
+    <span data-ttu-id="01dcd-156">Ein HTML-basiertes Tool für die Spielentwicklung</span><span class="sxs-lookup"><span data-stu-id="01dcd-156">An HTML based game development tool.</span></span>
 

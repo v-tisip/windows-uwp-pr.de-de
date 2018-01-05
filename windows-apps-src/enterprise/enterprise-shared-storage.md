@@ -8,34 +8,33 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 6a6ad55a134a45bf3feb7092cdad78d9f6ee196b
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 3f04d00da3fce4674f344129910917e9585e8723
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.translationtype: HT
+ms.contentlocale: de-DE
 ---
-# <a name="enterprise-shared-storage"></a>Im Unternehmen freigegebener Speicher
+# <a name="enterprise-shared-storage"></a><span data-ttu-id="5a2a7-104">Im Unternehmen freigegebener Speicher</span><span class="sxs-lookup"><span data-stu-id="5a2a7-104">Enterprise Shared Storage</span></span>
 
-Der freigegebene Speicher besteht aus zwei Speicherorten, auf die Apps mit der eingeschränkten Funktionalität  **enterpriseDeviceLockdown** und einem Unternehmenszertifikat vollständigen Lese- und Schreibzugriff haben. Die **enterpriseDeviceLockdown**-Funktion ermöglicht Apps die Verwendung der API zur Gerätesperrung und den Zugriff auf im Unternehmen freigegebene Speicherordner. Weitere Informationen zur API finden Sie unter dem [**Windows.Embedded.DeviceLockdown**](http://go.microsoft.com/fwlink/?LinkId=699331)-Namespace.  
+<span data-ttu-id="5a2a7-105">Der freigegebene Speicher besteht aus zwei Speicherorten, auf die Apps mit der eingeschränkten Funktionalität **enterpriseDeviceLockdown** und einem Unternehmenszertifikat vollständigen Lese- und Schreibzugriff haben.</span><span class="sxs-lookup"><span data-stu-id="5a2a7-105">The shared storage consists of two locations, where apps with the restricted capability  **enterpriseDeviceLockdown** and an Enterprise certificate have full read and write access.</span></span> <span data-ttu-id="5a2a7-106">Die **enterpriseDeviceLockdown**-Funktion ermöglicht Apps die Verwendung der API zur Gerätesperrung und den Zugriff auf im Unternehmen freigegebene Speicherordner.</span><span class="sxs-lookup"><span data-stu-id="5a2a7-106">Note that the **enterpriseDeviceLockdown** capability allows apps to use the device lock down API and access the enterprise shared storage folders.</span></span> <span data-ttu-id="5a2a7-107">Weitere Informationen zur API finden Sie unter dem [**Windows.Embedded.DeviceLockdown**](http://go.microsoft.com/fwlink/?LinkId=699331)-Namespace.</span><span class="sxs-lookup"><span data-stu-id="5a2a7-107">For more information about the API, see [**Windows.Embedded.DeviceLockdown**](http://go.microsoft.com/fwlink/?LinkId=699331) namespace.</span></span>  
 
-Diese Speicherorte werden auf dem lokalen Laufwerk festgelegt:
-- \Data\SharedData\Enterprise\Persistent
-- \Data\SharedData\Enterprise\Non-Persistent
+<span data-ttu-id="5a2a7-108">Diese Speicherorte werden auf dem lokalen Laufwerk festgelegt:</span><span class="sxs-lookup"><span data-stu-id="5a2a7-108">These locations are set on the local drive:</span></span>
+- <span data-ttu-id="5a2a7-109">\Data\SharedData\Enterprise\Persistent</span><span class="sxs-lookup"><span data-stu-id="5a2a7-109">\Data\SharedData\Enterprise\Persistent</span></span>
+- <span data-ttu-id="5a2a7-110">\Data\SharedData\Enterprise\Non-Persistent</span><span class="sxs-lookup"><span data-stu-id="5a2a7-110">\Data\SharedData\Enterprise\Non-Persistent</span></span>
 
-## <a name="scenarios"></a>Szenarien
+## <a name="scenarios"></a><span data-ttu-id="5a2a7-111">Szenarien</span><span class="sxs-lookup"><span data-stu-id="5a2a7-111">Scenarios</span></span>
 
-Im Unternehmen freigegebener Speicher unterstützt die folgenden Szenarien.
+<span data-ttu-id="5a2a7-112">Im Unternehmen freigegebener Speicher unterstützt die folgenden Szenarien.</span><span class="sxs-lookup"><span data-stu-id="5a2a7-112">Enterprise shared storage provides support for the following scenarios.</span></span>
 
-- Sie können Daten in einer Instanz einer App, zwischen Instanzen derselben App oder zwischen verschiedenen Apps freigeben, wenn beide über die entsprechenden Funktionen und Zertifikate verfügen.
-- Sie können Daten auf der lokalen Festplatte im Ordner „\Data\SharedData\Enterprise\Persistent“ speichern, und die Daten bleiben auch nach dem Zurücksetzen des Geräts erhalten.
-- Sie können Dateien über die mobile Geräteverwaltung (Mobile Device Management, MDM) auf einem Gerät bearbeiten (u. a. lesen, schreiben und löschen). Weitere Informationen zur Verwendung von im Unternehmen freigegebenem Speichern mit dem MDM-Dienst finden Sie unter [EnterpriseExtFileSystem-CSP](http://go.microsoft.com/fwlink/?LinkId=699333).
+- <span data-ttu-id="5a2a7-113">Sie können Daten in einer Instanz einer App, zwischen Instanzen derselben App oder zwischen verschiedenen Apps freigeben, wenn beide über die entsprechenden Funktionen und Zertifikate verfügen.</span><span class="sxs-lookup"><span data-stu-id="5a2a7-113">You can share data within an instance of an app, between instances of the same app, or even between apps assuming they both have the appropriate capability and certificate.</span></span>
+- <span data-ttu-id="5a2a7-114">Sie können Daten auf der lokalen Festplatte im Ordner „\Data\SharedData\Enterprise\Persistent“ speichern, und die Daten bleiben auch nach dem Zurücksetzen des Geräts erhalten.</span><span class="sxs-lookup"><span data-stu-id="5a2a7-114">You can store data on the local hard drive in the \Data\SharedData\Enterprise\Persistent folder and it persists even after the device has been reset.</span></span>
+- <span data-ttu-id="5a2a7-115">Sie können Dateien über die mobile Geräteverwaltung (Mobile Device Management, MDM) auf einem Gerät bearbeiten (u. a. lesen, schreiben und löschen).</span><span class="sxs-lookup"><span data-stu-id="5a2a7-115">Manipulate files, including read, write, and delete of files on a device via Mobile Device Management (MDM) service.</span></span> <span data-ttu-id="5a2a7-116">Weitere Informationen zur Verwendung von im Unternehmen freigegebenem Speichern mit dem MDM-Dienst finden Sie unter [EnterpriseExtFileSystem-CSP](http://go.microsoft.com/fwlink/?LinkId=699333).</span><span class="sxs-lookup"><span data-stu-id="5a2a7-116">For more information on how to use enterprise shared storage through the MDM service, see [EnterpriseExtFileSystem CSP](http://go.microsoft.com/fwlink/?LinkId=699333).</span></span>
 
-## <a name="access-enterprise-shared-storage"></a>Zugriff auf im Unternehmen freigegebenen Speicher
+## <a name="access-enterprise-shared-storage"></a><span data-ttu-id="5a2a7-117">Zugriff auf im Unternehmen freigegebenen Speicher</span><span class="sxs-lookup"><span data-stu-id="5a2a7-117">Access enterprise shared storage</span></span>
 
-Das folgende Beispiel zeigt, wie Sie die Funktion für den Zugriff auf im Unternehmen freigegebenen Speicher im Paketmanifest deklarieren und mit der Windows.Storage.StorageFolder-Klasse auf die Ordner für den freigegebenen Speicher zugreifen.
+<span data-ttu-id="5a2a7-118">Das folgende Beispiel zeigt, wie Sie die Funktion für den Zugriff auf im Unternehmen freigegebenen Speicher im Paketmanifest deklarieren und mit der Windows.Storage.StorageFolder-Klasse auf die Ordner für den freigegebenen Speicher zugreifen.</span><span class="sxs-lookup"><span data-stu-id="5a2a7-118">The following example shows how to declare the capability to access enterprise shared storage in the package manifest, and how to access the shared storage folders by using the Windows.Storage.StorageFolder class.</span></span>
 
-Schließen Sie in das App-Paketmanifest die folgende Funktion ein:
+<span data-ttu-id="5a2a7-119">Schließen Sie in das App-Paketmanifest die folgende Funktion ein:</span><span class="sxs-lookup"><span data-stu-id="5a2a7-119">In your app package manifest, include the following capability:</span></span>
 
 ```xml
 <Package
@@ -52,7 +51,7 @@ Schließen Sie in das App-Paketmanifest die folgende Funktion ein:
 </Capabilities>
 ```
 
-Für den Zugriff auf den freigegebenen Datenspeicherort verwendet die App den folgenden Code.
+<span data-ttu-id="5a2a7-120">Für den Zugriff auf den freigegebenen Datenspeicherort verwendet die App den folgenden Code.</span><span class="sxs-lookup"><span data-stu-id="5a2a7-120">To access the shared data location, your app would use the following code.</span></span>
 
 ```csharp
 using System;
@@ -77,5 +76,4 @@ IReadOnlyList<StorageFile> sortedItems =
 foreach (StorageFile file in sortedItems)
     Debug.WriteLine(file.Name + ", " + file.DateCreated);
 ```
-
 

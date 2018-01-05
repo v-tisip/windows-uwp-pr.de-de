@@ -1,50 +1,49 @@
 ---
 title: Bilineare Texturfilterung
-description: "Die bilineare Filterung berechnet den gewichteten Mittelwert der 4 Texel, die dem Sampling-Punkt am nächsten liegen."
+description: "Die bilineare Filterung berechnet den gewichteten Mittelwert der 4Texel, die dem Sampling-Punkt am nächsten liegen."
 ms.assetid: 0851AD28-8246-4547-A663-47884DDDFC3E
-keywords:
-- Bilineare Texturfilterung
-author: PeterTurcan
-ms.author: pettur
+keywords: Bilineare Texturfilterung
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 635ca5b2e09c32c8d9644b1f3196ef888ef5ebc2
-ms.lasthandoff: 02/07/2017
-
+ms.localizationpriority: medium
+ms.openlocfilehash: 8dcbd5b96dfb3e32ec2621df98cffd9e871ed8b3
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/22/2017
 ---
-
-# <a name="bilinear-texture-filtering"></a>Bilineare Texturfilterung
-
-
-Die *bilineare Filterung* berechnet den gewichteten Durchschnitt der 4 Texel, die dem Sampling-Punkt am nächsten liegen. Diese Filtermethode ist präziser und gängiger als das Filtern am nächstgelegenen Punkt. Dieser Ansatz ist effizient, da er in moderner Grafikhardware implementiert wird.
+# <a name="bilinear-texture-filtering"></a><span data-ttu-id="84c36-104">Bilineare Texturfilterung</span><span class="sxs-lookup"><span data-stu-id="84c36-104">Bilinear texture filtering</span></span>
 
 
-## <a name="span-idexamplespanspan-idexamplespanspan-idexamplespanexample"></a><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Beispiel
+<span data-ttu-id="84c36-105">Die *bilineare Filterung* berechnet den gewichteten Durchschnitt der 4Texel, die dem Sampling-Punkt am nächsten liegen.</span><span class="sxs-lookup"><span data-stu-id="84c36-105">*Bilinear filtering* calculates the weighted average of the 4 texels closest to the sampling point.</span></span> <span data-ttu-id="84c36-106">Diese Filtermethode ist präziser und gängiger als das Filtern am nächstgelegenen Punkt.</span><span class="sxs-lookup"><span data-stu-id="84c36-106">This filtering approach is more accurate and common than nearest-point filtering.</span></span> <span data-ttu-id="84c36-107">Dieser Ansatz ist effizient, da er in moderner Grafikhardware implementiert wird.</span><span class="sxs-lookup"><span data-stu-id="84c36-107">This approach is efficient because it is implemented in modern graphics hardware.</span></span>
 
 
-Texturen werden immer linear behandelt, von (0,0, 0,0) in der oberen linken Ecke bis (1,0, 1,0) in der unteren rechten Ecke. Die lineare Texturadressierung wird in der folgenden Abbildung dargestellt.
+## <a name="span-idexamplespanspan-idexamplespanspan-idexamplespanexample"></a><span data-ttu-id="84c36-108"><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Beispiel</span><span class="sxs-lookup"><span data-stu-id="84c36-108"><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Example</span></span>
 
-![Abbildung einer 4 x 4-Textur mit einfarbigen Farbblöcken](images/bilinear-fig7a.png)
 
-Texturen werden in der Regel als einfarbige Farbblöcke dargestellt, obwohl man sich Texturen genauso wie Rasteranzeige vorstellen sollte: jedes Texel wird genau in der Mitte einer Rasterzelle definiert, wie in der folgenden Abbildung dargestellt.
+<span data-ttu-id="84c36-109">Texturen werden immer linear behandelt, von (0,0, 0,0) in der oberen linken Ecke bis (1,0, 1,0) in der unteren rechten Ecke.</span><span class="sxs-lookup"><span data-stu-id="84c36-109">Textures are always linearly addressed from (0.0, 0.0) at the top-left corner to (1.0, 1.0) at the bottom-right corner.</span></span> <span data-ttu-id="84c36-110">Die lineare Texturadressierung wird in der folgenden Abbildung dargestellt.</span><span class="sxs-lookup"><span data-stu-id="84c36-110">Linear addressing of a texture is shown in the following illustration.</span></span>
 
-![Abbildung einer 4 × 4-Textur mit in der Mitte der Rasterzelle definierten Texels](images/bilinear-fig7b.png)
+![Abbildung einer 4x4-Textur mit einfarbigen Farbblöcken](images/bilinear-fig7a.png)
 
-Wenn Sie den Texturen-Sampler nach der Farbe dieser Textur in UV-Koordinaten fragen, (0,375, 0,375) erhalten Sie die Volltonfarbe Rot (255, 0, 0). Das ergibt daher Sinn, da die Mitte der roten Texel-Zelle bei UV (0,375, 0,375) liegt. Was aber, wenn Sie den Sampler nach der Texturfarbe auf UV (0,25, 0,25) fragen? Dies ist nicht einfach, da der Punkt auf UV (0,25, 0,25) genau an der Grenze von 4 Texeln liegt.
+<span data-ttu-id="84c36-112">Texturen werden in der Regel als einfarbige Farbblöcke dargestellt, obwohl man sich Texturen genauso wie Rasteranzeige vorstellen sollte: jedes Texel wird genau in der Mitte einer Rasterzelle definiert, wie in der folgenden Abbildung dargestellt.</span><span class="sxs-lookup"><span data-stu-id="84c36-112">Textures are usually represented as if they were composed of solid blocks of color, but it's actually more correct to think of textures the same way you should think of the raster display: Each texel is defined at the exact center of a grid cell, as shown in the following illustration.</span></span>
 
-Die einfachste Methode ist hier, dass der Sampler die Farbe des nächstliegenden Texel zurück gibt. Dies wird als Punktfilterung bezeichnet (Infos finden Sie unter [Sampling am nächstgelegenen Punkt](nearest-point-sampling.md)). Dies ist generell aufgrund von körnigen oder „eckigen” Ergebnisse unerwünscht. Beim Filtern am nächstgelegenen Punkt stellen Punktsamples der Textur bei UV (0,25, 0,25) ein ganz anderes Problem dar: es gibt vier Texel mit dem gleichen Abstand vom Samplingpunkt, daher gibt es kein einziges naheliegendes Texel. Eines dieser vier Texel wird als die zurückgegebene Farbe ausgewählt, doch die Auswahl hängt der Abrundung der Koordinate ab, was störende Artefakte einbringen kann (lesen Sie den Artikel „Sampling am nächstgelegenen Punkt” in SDK).
+![Abbildung einer 4×4-Textur mit in der Mitte der Rasterzelle definierten Texels](images/bilinear-fig7b.png)
 
-Eine etwas genauere und häufiger verwendete Filtermethode ist das Berechnen des gewichteten Mittelwerts der 4 Texel, die dem Samplingpunkt am nächsten liegen. Dies wird als *Bilineare Filterung* bezeichnet. Der zusätzliche Rechenaufwand für die bilineare Filterung ist in der Regel unerheblich, da diese Routine in moderner Grafikhardware verwendet wird. Hier sind die Farben, die wir an verschiedenen Sampling-Punkten mit bilinearer Filterung erhalten:
+<span data-ttu-id="84c36-114">Wenn Sie den Texturen-Sampler nach der Farbe dieser Textur in UV-Koordinaten fragen, (0,375, 0,375) erhalten Sie die Volltonfarbe Rot (255, 0, 0).</span><span class="sxs-lookup"><span data-stu-id="84c36-114">If you ask the texture sampler for this texture's color at UV coordinates (0.375, 0.375) you'll get solid red (255, 0, 0).</span></span> <span data-ttu-id="84c36-115">Das ergibt daher Sinn, da die Mitte der roten Texel-Zelle bei UV (0,375, 0,375) liegt.</span><span class="sxs-lookup"><span data-stu-id="84c36-115">That makes sense because the center of the red texel cell is at UV (0.375, 0.375).</span></span> <span data-ttu-id="84c36-116">Was aber, wenn Sie den Sampler nach der Texturfarbe auf UV (0,25, 0,25) fragen?</span><span class="sxs-lookup"><span data-stu-id="84c36-116">What if you ask the sampler for the texture's color at UV (0.25, 0.25)?</span></span> <span data-ttu-id="84c36-117">Dies ist nicht einfach, da der Punkt auf UV (0,25, 0,25) genau an der Grenze von 4 Texeln liegt.</span><span class="sxs-lookup"><span data-stu-id="84c36-117">That's not as easy, because the point at UV (0.25, 0.25) lies at the exact corner of 4 texels.</span></span>
+
+<span data-ttu-id="84c36-118">Die einfachste Methode ist hier, dass der Sampler die Farbe des nächstliegenden Texel zurück gibt. Dies wird als Punktfilterung bezeichnet (Infos finden Sie unter [Sampling am nächstgelegenen Punkt](nearest-point-sampling.md)). Dies ist generell aufgrund von körnigen oder „eckigen” Ergebnisse unerwünscht.</span><span class="sxs-lookup"><span data-stu-id="84c36-118">The simplest scheme is simply to have the sampler return the color of the closest texel; this is called Point filtering (see [Nearest-point sampling](nearest-point-sampling.md)), and is usually undesirable due to grainy or blocky results.</span></span> <span data-ttu-id="84c36-119">Beim Filtern am nächstgelegenen Punkt stellen Punktsamples der Textur bei UV (0,25, 0,25) ein ganz anderes Problem dar: es gibt vier Texel mit dem gleichen Abstand vom Samplingpunkt, daher gibt es kein einziges naheliegendes Texel.</span><span class="sxs-lookup"><span data-stu-id="84c36-119">Point-sampling our texture at UV (0.25, 0.25) shows another subtle problem with nearest-point filtering: there are four texels equidistant from the sampling point, so there's no single nearest texel.</span></span> <span data-ttu-id="84c36-120">Eines dieser vier Texel wird als die zurückgegebene Farbe ausgewählt, doch die Auswahl hängt der Abrundung der Koordinate ab, was störende Artefakte einbringen kann (lesen Sie den Artikel „Sampling am nächstgelegenen Punkt” in SDK).</span><span class="sxs-lookup"><span data-stu-id="84c36-120">One of those four texels will be chosen as the returned color, but the selection depends on how the coordinate is rounded, which may introduce tearing artifacts (see the Nearest-Point Sampling article in the SDK).</span></span>
+
+<span data-ttu-id="84c36-121">Eine etwas genauere und häufiger verwendete Filtermethode ist das Berechnen des gewichteten Mittelwerts der 4Texel, die dem Samplingpunkt am nächsten liegen. Dies wird als *Bilineare Filterung* bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="84c36-121">A slightly more accurate and more common filtering scheme is to calculate the weighted average of the 4 texels closest to the sampling point; this is called *Bilinear filtering*.</span></span> <span data-ttu-id="84c36-122">Der zusätzliche Rechenaufwand für die bilineare Filterung ist in der Regel unerheblich, da diese Routine in moderner Grafikhardware verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="84c36-122">The extra computational cost for Bilinear filtering is usually negligible because this routine is implemented in modern graphics hardware.</span></span> <span data-ttu-id="84c36-123">Hier sind die Farben, die wir an verschiedenen Sampling-Punkten mit bilinearer Filterung erhalten:</span><span class="sxs-lookup"><span data-stu-id="84c36-123">Here are the colors we get at a few different sample points using bilinear filtering:</span></span>
 
 ```
 UV: (0.5, 0.5)
 ```
 
-Dieser Punkt liegt genau an der Grenze zwischen roten, grünen, blauen und weißen Texel. Die vom Sampler zurückgegebene Farbe ist Grau:
+<span data-ttu-id="84c36-124">Dieser Punkt liegt genau an der Grenze zwischen roten, grünen, blauen und weißen Texel.</span><span class="sxs-lookup"><span data-stu-id="84c36-124">This point is at the exact border between red, green, blue, and white texels.</span></span> <span data-ttu-id="84c36-125">Die vom Sampler zurückgegebene Farbe ist Grau:</span><span class="sxs-lookup"><span data-stu-id="84c36-125">The color the sampler returns is gray:</span></span>
 
 ```
   0.25 * (255, 0, 0)
@@ -59,7 +58,7 @@ Dieser Punkt liegt genau an der Grenze zwischen roten, grünen, blauen und weiß
 UV: (0.5, 0.375)
 ```
 
-Dieser Punkt liegt im Mittelwert des Grenzpunkts zwischen roten und grünen Texel. Die vom Sampler zurückgegebene Farbe ist gelb-grau (beachten Sie, dass der blaue und weiße Texel auf 0 skaliert werden):
+<span data-ttu-id="84c36-126">Dieser Punkt liegt im Mittelwert des Grenzpunkts zwischen roten und grünen Texel.</span><span class="sxs-lookup"><span data-stu-id="84c36-126">This point is at the midpoint of the border between red and green texels.</span></span> <span data-ttu-id="84c36-127">Die vom Sampler zurückgegebene Farbe ist gelb-grau (beachten Sie, dass der blaue und weiße Texel auf 0 skaliert werden):</span><span class="sxs-lookup"><span data-stu-id="84c36-127">The color the sampler returns is yellow-gray (note that the contributions of the blue and white texels are scaled to 0):</span></span>
 
 ```
   0.5 * (255, 0, 0)
@@ -74,7 +73,7 @@ Dieser Punkt liegt im Mittelwert des Grenzpunkts zwischen roten und grünen Texe
 UV: (0.375, 0.375)
 ```
 
-Dies ist die Adresse des rote Texels in der zurückgegebene Farbe (alle anderen Texel in der Filterberechnung werden auf 0 angepasst):
+<span data-ttu-id="84c36-128">Dies ist die Adresse des rote Texels in der zurückgegebene Farbe (alle anderen Texel in der Filterberechnung werden auf 0 angepasst):</span><span class="sxs-lookup"><span data-stu-id="84c36-128">This is the address of the red texel, which is the returned color (all other texels in the filtering calculation are weighted to 0):</span></span>
 
 ```
   1.0 * (255, 0, 0)
@@ -85,19 +84,18 @@ Dies ist die Adresse des rote Texels in der zurückgegebene Farbe (alle anderen 
 = (255, 0, 0)
 ```
 
-Vergleichen Sie diese Berechnungen mit der folgenden Abbildung, auf der angezeigt wird, was geschieht, wenn die bilineare Filterberechnung bei jeder Textur auf der 4 x 4-Textur durchgeführt wird.
+<span data-ttu-id="84c36-129">Vergleichen Sie diese Berechnungen mit der folgenden Abbildung, auf der angezeigt wird, was geschieht, wenn die bilineare Filterberechnung bei jeder Textur auf der 4x4-Textur durchgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="84c36-129">Compare these calculations against the following illustration, which shows what happens if the bilinear filtering calculation is performed at every texture address across the 4x4 texture.</span></span>
 
-![Abbildung einer 4 x 4-Textur mit bilinearer Filterung, die bei jeder Textur-Adresse ausgeführt wird](images/bilinear-fig7c.jpg)
+![Abbildung einer 4x4-Textur mit bilinearer Filterung, die bei jeder Textur-Adresse ausgeführt wird](images/bilinear-fig7c.jpg)
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Verwandte Themen
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="84c36-131"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="84c36-131"><span id="related-topics"></span>Related topics</span></span>
 
 
-[Texturfilterung](texture-filtering.md)
-
- 
+[<span data-ttu-id="84c36-132">Texturfilterung</span><span class="sxs-lookup"><span data-stu-id="84c36-132">Texture filtering</span></span>](texture-filtering.md)
 
  
 
+ 
 
 
 
