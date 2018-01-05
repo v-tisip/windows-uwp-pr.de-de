@@ -3,15 +3,18 @@ title: Ansichten
 description: "Der Begriff \\ 0034;Ansicht \\ 0034; wird für \\ 0034;Daten im erforderlichen Format \\ 0034; verwendet. Eine Konstantenpufferansicht (CBV) ist beispielweise ein Satz ordnungsgemäß formatierter, konstanter Pufferdaten. Dieser Abschnitt beschreibt die gängigsten und hilfreichsten Ansichten."
 ms.assetid: 0C7FB99F-7391-472F-BA53-576888DFC171
 keywords: Ansichten
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 0091afb549c778f367e12726054cb908eb0c3eba
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 270fdafb0383b73eb6b47d721bae4d994b3ad393
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="views"></a>Ansichten
 

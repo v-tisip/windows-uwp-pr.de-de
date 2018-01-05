@@ -3,15 +3,18 @@ title: Scheitelpunkt-Shader- (VS) Phase
 description: "Die Scheitelpunkt-Shader- (VS) Phase verarbeitet Scheitelpunkte und führt dabei in der Regel Vorgänge wie Transformationen, das Anwenden von Skins und Beleuchtung durch. Ein Scheitelpunkt-Shader verarbeitet immer einen einzigen Eingabescheitelpunkt und erzeugt daraus einen einzigen Ausgabescheitelpunkt."
 ms.assetid: 5133C4BB-B4E6-4697-9276-F718AD44869C
 keywords: Scheitelpunkt-Shader- (VS) Phase
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 761296a9897ad99ec57527f073a1ad1c2d792966
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 521b3254fd8f3f86e8b55923627b8560d2991ae6
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="vertex-shader-vs-stage"></a>Scheitelpunkt-Shader- (VS) Phase
 

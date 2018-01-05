@@ -11,7 +11,8 @@ ms.technology: uwp
 keywords: Windows10, UWP, Spiele, OpenGL, Direct3D, Portieren
 ms.openlocfilehash: 1298f165444b31c75ca9d98f04eb82a58be46e5b
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: de-DE
 ---
 # <a name="map-opengl-es-20-to-direct3d-11"></a>Zuordnen von OpenGLES2.0 zu Direct3D11
 

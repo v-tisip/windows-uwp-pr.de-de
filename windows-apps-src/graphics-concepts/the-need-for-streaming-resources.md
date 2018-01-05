@@ -3,15 +3,18 @@ title: Die Notwendigkeit zur Verwendung von Streamingressourcen
 description: "Streamingressourcen sind erforderlich, damit der GPU-Speicher nicht unnötig durch die Speicherung von Oberflächenbereichen belegt wird, auf die nicht zugegriffen wird, und um der Hardware mitzuteilen, wie angrenzende Kacheln gefiltert werden sollen."
 ms.assetid: A88BE65B-104F-4176-9809-C12580A3684C
 keywords: Die Notwendigkeit zur Verwendung von Streamingressourcen
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 5060d0076d93f8bca7e1547c4d9fb05ad4b1a3f5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: f166fd4d645c5308ae5351503061fe3bfa1d7c4e
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="the-need-for-streaming-resources"></a>Die Notwendigkeit zur Verwendung von Streamingressourcen
 

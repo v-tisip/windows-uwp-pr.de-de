@@ -4,7 +4,8 @@ description: "Dieser Artikel enthält eine Übersicht über die CPUSets-API,die 
 author: hammondsp
 ms.openlocfilehash: 6065435dc3add0d9bde15dc6bdd355935b8f53cd
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: de-DE
 ---
 # <a name="cpusets-for-game-development"></a>CPUSets für die Entwicklung von Spielen
 

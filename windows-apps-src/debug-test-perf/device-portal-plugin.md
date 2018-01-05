@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 1eb756c794e23a17420c14af7e27ec315305f232
-ms.sourcegitcommit: c5c96ec4b6ccef57f69eb341b06e6280994c9767
+ms.localizationpriority: medium
+ms.openlocfilehash: 2aae0e634ea219ef602eafdb1516d1d42b9c7913
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="write-a-custom-plugin-for-device-portal"></a>Schreiben eines benutzerdefinierten Plug-Ins für das Device Portal
 
@@ -187,15 +188,15 @@ Wichtig: Bei Verwendung der HttpPost/DeleteExpect200-Methoden für webbRest erfo
 Um die Hintergrundaufgabe zu debuggen, müssen Sie die Art und Weise ändern, wie Visual Studio Ihren Code ausführt. Führen Sie die folgenden Schritte für das Debuggen einer App-Dienstverbindung aus, um zu überprüfen, wie Ihr Anbieter die HTTP-Anforderungen behandelt:
 
 1.  Wählen Sie im Debuggermenü die DevicePortalProvider-Eigenschaften aus. 
-1.  Aktivieren Sie auf der Registerkarte „Debuggen“ im Abschnitt „Startaktion“ das Kontrollkästchen „Eigenen Code zunächst nicht starten, sondern debuggen“.  
+2.  Aktivieren Sie auf der Registerkarte „Debuggen“ im Abschnitt „Startaktion“ das Kontrollkästchen „Eigenen Code zunächst nicht starten, sondern debuggen“.  
 ![Versetzen des Plug-Ins in den Debugmodus](images/device-portal/plugin-debug-mode.png)
-1.  Setzen Sie in der RequestReceived-Handlerfunktion einen Haltepunkt.
+3.  Setzen Sie in der RequestReceived-Handlerfunktion einen Haltepunkt.
 ![Haltepunkt beim requestreceived-Handler](images/device-portal/plugin-requestreceived-breakpoint.png)
-    > [!NOTE]
-    > Stellen Sie sicher, dass die Build-Architektur genau mit der Architektur des Ziels übereinstimmt.  Wenn Sie einen 64-Bit-PC verwenden, müssen Sie einen AMD64-Build bereitstellen.
-1.  Drücken Sie F5, um Ihre App bereitzustellen.
-1.  Deaktivieren Sie das Device Portal, und aktivieren Sie es wieder, damit es Ihre App findet (nur erforderlich, wenn Sie Ihr App-Manifest ändern – ansonsten können Sie einfach erneut bereitstellen und diesen Schritt überspringen). 
-1.  Öffnen Sie in Ihrem Browser den Namespace des Anbieters, und der Haltepunkt sollte erreicht werden.
+> [!NOTE] 
+> Stellen Sie sicher, dass die Build-Architektur genau mit der Architektur des Ziels übereinstimmt. Wenn Sie einen 64-Bit-PC verwenden, müssen Sie einen AMD64-Build bereitstellen. 
+4.  Drücken Sie F5, um Ihre App bereitzustellen.
+5.  Deaktivieren Sie das Device Portal, und aktivieren Sie es wieder, damit es Ihre App findet (nur erforderlich, wenn Sie Ihr App-Manifest ändern – ansonsten können Sie einfach erneut bereitstellen und diesen Schritt überspringen). 
+6.  Öffnen Sie in Ihrem Browser den Namespace des Anbieters, und der Haltepunkt sollte erreicht werden.
 
 ## <a name="related-topics"></a>Verwandte Themen
 * [Übersicht über das Windows Device Portal](device-portal.md)

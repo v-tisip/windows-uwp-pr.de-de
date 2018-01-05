@@ -3,15 +3,18 @@ title: "Vorgänge für Kachelpools"
 description: "Vorgänge für Kachelpools umfassen das Ändern der Größe eines Kachelpools, das Anbieten von Ressourcen (Gewinnen von vorübergehendem Speicherplatz für das System für den gesamten Kachelpool) und das Zurückfordern von Ressourcen."
 ms.assetid: 90347F7F-C991-4287-BD70-494533ECDC8A
 keywords: "Vorgänge für Kachelpools"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: e144b42782f8479bc55dc22f8505c7cfa4455713
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 3ae2c34a6df243914fdef6b2cbb990d8be94ec33
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="operations-available-on-tile-pools"></a>Vorgänge für Kachelpools
 

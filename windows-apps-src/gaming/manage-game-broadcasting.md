@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, Spiel, Übertragung"
-localizationpriority: medium
-ms.openlocfilehash: de1d91e86826109a4e8939df17e938123ad8eb34
-ms.sourcegitcommit: 44a24b580feea0f188c7eae36e72e4a4f412802b
+ms.localizationpriority: medium
+ms.openlocfilehash: 613dd69c00257ac5d750bc67b174d7ff010e0b59
+ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="manage-game-broadcasting"></a>Übertragen von Spielen verwalten
 In diesem Artikel wird erläutert, wie Sie die Übertragung von Spielen durch eine UWP-App verwalten. Benutzer müssen die Übertragung von Spielen mithilfe der Systembenutzeroberfläche initiieren, die in Windows integriert ist. Aber ab Version 1709 von Windows 10 können Apps die Übertragungsoberfläche des Systems starten und Benachrichtigungen empfangen, wenn die Übertragung gestartet oder beendet wird.

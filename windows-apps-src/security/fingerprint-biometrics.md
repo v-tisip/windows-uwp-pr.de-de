@@ -11,7 +11,8 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.openlocfilehash: f9168184e360661dd2e6e2808b193f1e4026c0f5
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: de-DE
 ---
 # <a name="fingerprint-biometrics"></a>Biometrischer Fingerabdruck
 

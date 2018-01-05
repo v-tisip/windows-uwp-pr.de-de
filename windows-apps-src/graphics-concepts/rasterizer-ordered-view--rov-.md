@@ -3,15 +3,18 @@ title: Rasterizergesteuerte Ansicht (ROV)
 description: "Mit rasterizergesteuerten Ansichten können einige der Einschränkungen von Tiefenpuffern behandelt werden, insbesondere wenn mehrere Texturen mit Transparenz alle für dieselben Pixel gelten."
 ms.assetid: BCB1EE0D-4C1D-4E17-BDB7-173F448E0A7B
 keywords: Rasterizergesteuerte Ansicht (ROV)
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 313b599a402ba00e220aca649834a217daf3eaaa
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: bb75d903bee3990b13e261393f3801b4089ec1b0
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="rasterizer-ordered-view-rov"></a>Rasterizergesteuerte Ansicht (ROV)
 

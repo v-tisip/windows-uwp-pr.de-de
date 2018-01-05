@@ -11,7 +11,8 @@ ms.technology: uwp
 keywords: Windows10, UWP, Spiele, Rendern, Szene, Tiefentest, Direct3D, Schatten
 ms.openlocfilehash: 538ebe9a604daaa5a444b0f7f1764770eec8ce7c
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: de-DE
 ---
 # <a name="render-the-scene-with-depth-testing"></a>Rendern der Szene mit Tiefentest
 

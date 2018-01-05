@@ -3,15 +3,18 @@ title: Mip-Map-Verpackung
 description: "Eine gewisse Anzahl an Mips (pro Array-Segment) kann in einer gewissen Anzahl von Kacheln verpackt sein, in Abhängigkeit von den Dimensionen der Streaming-Ressource, dem Format, der Anzahl der Mip-Maps und Array-Segmente."
 ms.assetid: 906C3CAC-4E84-4947-B508-06788551BE85
 keywords: Mip-Map-Verpackung
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 720e8ff5fd6dee2a67bd7a1bf7de02a8f5c34583
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 88c8c42dbf466b0e41125fd1b616e5eba950ba8f
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mipmap-packing"></a>Mip-Map-Verpackung
 

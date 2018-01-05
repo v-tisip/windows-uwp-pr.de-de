@@ -3,15 +3,18 @@ title: Zuordnungen erfolgen in einen Kachelpool
 description: "Beim Erstellen einer Ressource als Streaming-Ressource stammen die Kacheln, die die Ressource bilden, aus Speicherorten in einem Kachelpool. Ein Kachelpool ist ein Speicherpool (gesichert durch eine oder mehrere Zuordnungen im Hintergrund – nicht sichtbar für die Anwendung)."
 ms.assetid: 58B8DBD5-62F5-4B94-8DD1-C7D57A812185
 keywords: Zuordnungen erfolgen in einen Kachelpool
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: bc5787333c266491e432abbb3c5039f73bdeb1f2
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 91d16dbda474927bc36beaacb255362f6e1840dd
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mappings-are-into-a-tile-pool"></a>Zuordnungen erfolgen in einen Kachelpool
 

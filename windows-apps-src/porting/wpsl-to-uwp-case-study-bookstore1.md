@@ -11,7 +11,8 @@ ms.technology: uwp
 keywords: windows10, UWP
 ms.openlocfilehash: 0cd284b2cb0ed4170d587cb3b412bc1954496c93
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: de-DE
 ---
 # <a name="windows-phone-silverlight-to-uwp-case-study-bookstore1"></a>Windows Phone Silverlight zu UWP – Fallstudie, Bookstore1
 

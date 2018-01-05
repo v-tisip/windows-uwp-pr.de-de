@@ -3,15 +3,18 @@ title: Exposition von HLSL-Streamingressourcen
 description: "Zur Unterstützung von Streamingressourcen in Shader Model 5 ist eine spezielle Microsoft High Level Shader Language (HLSL)-Syntax erforderlich."
 ms.assetid: 00A40D82-0565-43DC-82AB-0675B7E772E3
 keywords: Exposition von HLSL-Streamingressourcen
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 143e2379e64b38cc30384bd0fb4c983eeacb7f37
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 49e199c06cd3d1e4bd1eb9596e392116d896f993
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hlsl-streaming-resources-exposure"></a>Exposition von HLSL-Streamingressourcen
 

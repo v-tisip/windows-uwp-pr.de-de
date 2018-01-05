@@ -3,15 +3,18 @@ title: Koordinatensysteme und Geometrie
 description: "Für das Programmieren von Direct3D-Anwendungen muss der Anwender mit geometrischen 3D-Prinzipien vertraut sein. In diesem Abschnitt werden die wichtigsten geometrischen Konzepte für das Erstellen von 3D-Szenen eingeführt."
 ms.assetid: E82EB0A9-0678-496B-96B3-8993BA580099
 keywords: Koordinatensysteme und Geometrie
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 01885f6e2014e1659b1e59cc13bc6ce275f1ad03
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 7be32042bc71e02984fcffbd10f2ad0b0e4482ef
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="coordinate-systems-and-geometry"></a>Koordinatensysteme und Geometrie
 

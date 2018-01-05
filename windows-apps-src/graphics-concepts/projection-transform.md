@@ -3,15 +3,18 @@ title: Projektionstransformation
 description: "Ein Projektionstransformation steuert die internen Elemente der Kamera, z.B. die Auswahl einer Linse für eine Kamera. Dies ist der komplizierteste der drei Transformationstypen."
 ms.assetid: 378F205D-3800-4477-9820-5EBE6528B14A
 keywords: Projektionstransformation
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: cb6704383bafe9ee3e5785701c78f92e84b90b3d
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: bbaa0a6e02529bad55e2d90c90510a2ec1b40dd5
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="projection-transform"></a>Projektionstransformation
 

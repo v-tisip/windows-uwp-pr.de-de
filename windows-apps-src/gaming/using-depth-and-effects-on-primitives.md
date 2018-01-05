@@ -11,7 +11,8 @@ ms.technology: uwp
 keywords: Windows10, UWP, Spiele, Tiefe, Effekte, Grundtypen; directx
 ms.openlocfilehash: 923bce3dd5f340b97fd6d4e7b31c4ed2e949ca94
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: de-DE
 ---
 # <a name="use-depth-and-effects-on-primitives"></a>Verwenden von Tiefen und Effekten in Grundtypen
 
