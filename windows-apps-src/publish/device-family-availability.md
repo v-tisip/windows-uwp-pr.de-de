@@ -1,6 +1,6 @@
 ---
 author: jnHs
-Description: "Nachdem Sie Ihre Pakete erfolgreich hochgeladen haben, sehen Sie eine Tabelle, in der angegeben wird, welche Pakete für bestimmte Windows10-Gerätefamilien angeboten werden (und ggf. für frühere Betriebssystemversionen)."
+Description: After your packages have been successfully uploaded, you'll see a table that indicates which packages will be offered to specific Windows 10 device families (and earlier OS versions, if applicable), in ranked order.
 title: "Verfügbarkeit von Gerätefamilien"
 ms.author: wdg-dev-content
 ms.date: 10/12/2017
@@ -8,12 +8,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows10, UWP, Pakete, hochladen, Verfügbarkeit von Gerätefamilien"
-localizationpriority: high
-ms.openlocfilehash: 4125d60c02dd70e1f04701f9364dc28245bc7a98
-ms.sourcegitcommit: 44a24b580feea0f188c7eae36e72e4a4f412802b
+ms.localizationpriority: high
+ms.openlocfilehash: a3ae23a08ec305285569de8b6d55e805beaa86ba
+ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="device-family-availability"></a>Verfügbarkeit von Gerätefamilien
 

@@ -1,19 +1,20 @@
 ---
 author: jnHs
-Description: "Bei der Übermittlung eines Add-Ons werden die im Schritt „Store-Einträge“ angegebenen Informationen den Kunden angezeigt."
+Description: When submitting an add-on, the info you provide in the Store listings step will be displayed to your customers.
 title: "Erstellen von Store-Einträgen für Add-Ons"
 ms.assetid: 07178278-A18A-4F73-A660-0047DAAE49B5
 ms.author: wdg-dev-content
-ms.date: 06/26/2017
+ms.date: 01/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: 873e20039d6bd994f5ee3f42822f18c18ded0537
-ms.sourcegitcommit: 8c4d50ef819ed1a2f8cac4eebefb5ccdaf3fa898
+ms.localizationpriority: high
+ms.openlocfilehash: 0bd24b7b155a7f0d293e49e34ca92f02d99ea787
+ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="create-add-on-store-listings"></a>Erstellen von Store-Einträgen für Add-Ons
 
@@ -21,7 +22,7 @@ ms.lasthandoff: 06/27/2017
 Bei der Übermittlung eines Add-Ons werden die im Schritt **Store-Einträge** angegebenen Informationen den Kunden angezeigt, wenn sie die Option zum Erwerben Ihres Add-Ons sehen. Verfassen Sie die Informationen zu den Store-Einträgen mit besonderer Sorgfalt, um den Kunden das Add-On in ansprechender Weise zu präsentieren. Sie können angepasste Store-Einträge für verschiedene Sprachen bereitstellen.
 
 > [!TIP]
-> Sie können ebenfalls für Ihr Add-Ons [Store-Einträge importieren oder exportieren](import-and-export-store-listings.md), wenn Sie Ihre Eintragsinformationen offline in eine CSV-Datei eingeben möchten, anstatt diese Informationen direkt im Dashboard anzugeben. Dies kann besonders dann hilfreich sein, wenn Sie Einträge in viele Sprachen erstellen.
+> Sie können ebenfalls für Ihr Add-Ons [Store-Einträge importieren oder exportieren](import-and-export-store-listings.md), wenn Sie Ihre Eintragsinformationen offline in eine CSV-Datei eingeben möchten, anstatt diese Informationen direkt im Dashboard anzugeben. Dies kann besonders dann hilfreich sein, wenn Sie Einträge in viele Sprachen erstellen. Sie können Ihre Informationen allerdings auch direkt in das Dashboard, anstatt mithilfe der Import/Export-Feature, eingeben.
 
 
 ## <a name="store-listing-languages"></a>Sprachen für Store-Einträge

@@ -1,19 +1,20 @@
 ---
 author: jnHs
-Description: "Legen Sie benutzerdefinierte Berechtigungen für Kontenbenutzer fest."
+Description: Set custom permissions for account users.
 title: "Festlegen benutzerdefinierter Berechtigungen für Kontenbenutzer"
 ms.assetid: 99f3aa18-98b4-4919-bd7b-d78356b0bf78
 ms.author: wdg-dev-content
-ms.date: 07/17/2017
+ms.date: 01/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
-ms.openlocfilehash: d45ae4001dbb14a11e2beeecc3f98fb72bbc8a86
-ms.sourcegitcommit: eaacc472317eef343b764d17e57ef24389dd1cc3
+keywords: "Windows10, UWP, Benutzerrollen, Benutzerberechtigung, benutzerdefinierte Rollen, Zugriff für Benutzer, Berechtigungen anpassen, Standardrollen"
+ms.localizationpriority: high
+ms.openlocfilehash: 1fdde4be606abae849ff3350d27afbbced157f75
+ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>Legen Sie Rollen oder benutzerdefinierte Berechtigungen für Kontenbenutzer fest
 
@@ -26,6 +27,9 @@ Beim Ermitteln der Rollen oder Berechtigungen sollten Sie folgendes bedenken:
 -   Benutzer (einschließlich von Gruppen und Azure AD-Anwendungen) können mit den Berechtigungen für ihre jeweils zugewiesene Rolle auf das gesamte Dev Center-Konto zugreifen, es sei denn, Sie möchten die [Berechtigungen anpassen](#custom) und ihnen [Berechtigungen auf Produktebene](#product-level-permissions) erteilen, damit Sie nur mit spezifischen Apps und/oder Add-ons arbeiten können.
 -   Sie können einem Benutzer, einer Gruppe oder einer Azure AD-Anwendung den Zugriff auf die Funktionen mehrerer Rollen gewähren, indem Sie mehrere Rollen auswählen oder indem Sie mithilfe benutzerdefinierter Berechtigungen den Zugriff gewähren, den Sie ihnen geben möchten.
 -   Ein Benutzer mit einer bestimmten Rolle (oder einer Reihe benutzerdefinierter Berechtigungen) kann auch Teil einer Gruppe mit einer anderen Rolle (oder einem anderen Satz von Berechtigungen) sein. In diesem Fall hat der Benutzer Zugriff auf alle Funktionen, die mit der Gruppe und dem individuellen Konto verbunden sind.
+
+> [!TIP]
+> Dieses Thema gilt nur für das Entwicklerprogramm für Windows-Apps. Weitere Informationen zu Benutzerrollen im Hardware-Entwicklerprogramm finden Sie unter [Verwalten von Benutzerrolleng](https://docs.microsoft.com/windows-hardware/drivers/dashboard/managing-user-roles).
 
 
 <span id="roles" />
@@ -41,7 +45,7 @@ Sofern Sie keine [benutzerdefinierten Berechtigungen](#custom) durch die Auswahl
 
 | Rolle                 | Beschreibung              |
 |----------------------|--------------------------|
-| Manager              | Verfügt über vollständigen Zugriff auf das Konto, kann jedoch keine Steuer- und Auszahlungseinstellungen ändern. Dies umfasst das Verwalten von Benutzern in Dev Center. Beachten Sie jedoch, dass die Fähigkeit zum Erstellen und Löschen von Benutzern von den Berechtigungen des Kontos in Azure AD abhängig ist. Das heißt, wenn einem Benutzer die Manager-Rolle zugewiesen ist, er jedoch nicht über Administratorberechtigungen im Azure AD der Organisation verfügt, kann er keine neuen Benutzer erstellen oder Benutzer aus dem Verzeichnis löschen (er kann jedoch die Dev Center-Rolle eines Benutzers ändern). |
+| Manager              | Verfügt über vollständigen Zugriff auf das Konto, kann jedoch keine Steuer- und Auszahlungseinstellungen ändern. Dies umfasst das Verwalten von Benutzern in Dev Center. Beachten Sie jedoch, dass die Fähigkeit zum Erstellen und Löschen von Benutzern im Azure AD-Mandanten von den Berechtigungen des Kontos in Azure AD abhängig ist. Das heißt, wenn einem Benutzer die Manager-Rolle zugewiesen ist, er jedoch nicht über globale Administratorberechtigungen im Azure AD der Organisation verfügt, kann er keine neuen Benutzer erstellen oder Benutzer aus dem Verzeichnis löschen (er kann jedoch die Dev Center-Rolle eines Benutzers ändern). <p> Hinweis: Wenn das Dev Center-Konto mit mehr als einem Azure AD-Mandanten verknüpft ist, kann der Manager nicht die vollständigen Details für einen Benutzer anzeigen (z.B. Vorname, Nachname, E-Mail-Kennwort-Wiederherstellung, und ob es sich um einen globalen Azure AD-Administrator handelt), es sei denn sie sind in dem gleichen Mandanten als der gleiche Benutzer mit einem Konto angemeldet, das über Berechtigungen als globaler Administrator für die Mandanten verfügt. Allerdings können sie Benutzer in jedem Mandanten hinzufügen und entfernen, die dem Dev Center-Konto zugeordnet sind. |
 | Entwickler            | Kann Pakete hochladen und Apps und Add-Ons einreichen sowie den [Nutzungsbericht](usage-report.md) für Telemetriedetails einsehen. Kann keine finanziellen Informationen oder Kontoeinstellungen anzeigen.   |
 | Mitwirkender im Geschäftsbereich | Kann [Integritäts](health-report.md)- und [Nutzungs](usage-report.md)-Berichte anzeigen. Kann keine Produkte erstellen oder übermitteln, Kontoeinstellungen ändern oder finanzielle Informationen anzeigen.                                         |
 | Mitwirkender im Finanzbereich  | Kann [Auszahlungsberichte](payout-summary.md), finanzielle Informationen und Erwerbsberichte anzeigen. Kann keine Änderungen an Apps, Add-Ons oder Kontoeinstellungen vornehmen.                                                                                                                                   |
@@ -99,19 +103,19 @@ Die Berechtigungen in diesem Abschnittkönnen nicht auf bestimmte Produkte besch
     </thead>
     <tbody>
 <tr><td align="left">    **Kontoeinstellungen**                    </td><td align="left">  Kann alle Seiten im Abschnitt **Kontoeinstellungen** anzeigen, einschließlich der [Kontaktinformationen](managing-your-profile.md).       </td><td align="left">  Kann alle Seiten im Abschnitt **Kontoeinstellungen** anzeigen. Kann Änderungen an [Kontaktinformationen](managing-your-profile.md) und anderen Seiten, nicht jedoch am Auszahlungskonto oder Steuerprofil vornehmen (es sei denn, diese Berechtigung wird separat erteilt).            </td></tr>
-<tr><td align="left">    **Kontenbenutzer**                       </td><td align="left">  Kann Benutzer anzeigen, die dem Konto im Abschnitt **Benutzer verwalten** hinzugefügt wurden.          </td><td align="left">  Kann dem Konto Benutzer hinzufügen und im Abschnitt **Benutzer verwalten** Änderungen an vorhandenen Benutzern vornehmen.             </td></tr>
+<tr><td align="left">    **Kontenbenutzer**                       </td><td align="left">  Kann Benutzer anzeigen, die dem Konto im Abschnitt **Benutzer** hinzugefügt wurden.          </td><td align="left">  Kann dem Konto Benutzer hinzufügen und im Abschnitt **Benutzer** Änderungen an vorhandenen Benutzern vornehmen.             </td></tr>
 <tr><td align="left">    **Bericht zur Anzeigenleistung auf Kontoebene** </td><td align="left">  Kann den [Bericht zur Anzeigenleistung auf Kontoebene](advertising-performance-report.md) anzeigen.      </td><td align="left">  n.a.   </td></tr>
 <tr><td align="left">    **Anzeigenkampagnen**                        </td><td align="left">  Kann im Konto erstellte [Anzeigenkampagnen](create-an-ad-campaign-for-your-app.md) anzeigen.      </td><td align="left">  Kann im Konto erstellte [Anzeigenkampagnen](create-an-ad-campaign-for-your-app.md) erstellen, verwalten und anzeigen.          </td></tr>
 <tr><td align="left">    **Anzeigenvermittlung**                        </td><td align="left">  Kann [Anzeigenvermittlungskonfigurationen](https://msdn.microsoft.com/library/windows/apps/xaml/mt149935.aspx) für alle Produkte des Kontos anzeigen.    </td><td align="left">  Kann [Anzeigenvermittlungskonfigurationen](https://msdn.microsoft.com/library/windows/apps/xaml/mt149935.aspx) für alle Produkte des Kontos anzeigen und ändern.        </td></tr>
-<tr><td align="left">    **Berichte zur Anzeigenvermittlung**                </td><td align="left">  Kann den [Bericht zur Anzeigenvermittlung](ad-mediation-report.md) für alle Produkte des Kontos anzeigen.    </td><td align="left">  Nicht verfügbar    </td></tr>
+<tr><td align="left">    **Berichte zur Anzeigenvermittlung**                </td><td align="left">  Kann den [Bericht zur Anzeigenvermittlung](ad-mediation-report.md) für alle Produkte des Kontos anzeigen.    </td><td align="left">  n.a.    </td></tr>
 <tr><td align="left">    **Berichte zur Anzeigenleistung**              </td><td align="left">  Kann [Berichte zur Anzeigenleistung](advertising-performance-report.md) für alle Produkte des Kontos anzeigen.       </td><td align="left">  n.a.         </td></tr>
-<tr><td align="left">    **Anzeigeneinheiten**                            </td><td align="left">  Kann die für das Konto erstellten [Anzeigeneinheiten](monetize-with-ads.md) anzeigen.    </td><td align="left">  Kann [Anzeigeneinheiten](monetize-with-ads.md) für das Konto erstellen, verwalten und anzeigen.             </td></tr>
+<tr><td align="left">    **Anzeigeneinheiten**                            </td><td align="left">  Kann die für das Konto erstellten [Anzeigeneinheiten](in-app-ads.md) anzeigen.    </td><td align="left">  Kann [Anzeigeneinheiten](in-app-ads.md) für das Konto erstellen, verwalten und anzeigen.             </td></tr>
 <tr><td align="left">    **Partneranzeigen**                       </td><td align="left">  Kann die Nutzung von [Partneranzeigen](about-affiliate-ads.md) für alle Produkte des Kontos anzeigen.    </td><td align="left">  Kann die Nutzung von [Partneranzeigen](about-affiliate-ads.md) für alle Produkte des Kontos verwalten und anzeigen.                </td></tr>
 <tr><td align="left">    **Berichte zur Partneranzeigenleistung**      </td><td align="left">  Kann den [Bericht zur Partneranzeigenleistung](affiliates-performance-report.md) für alle Produkte des Kontos anzeigen.   </td><td align="left">  Nicht verfügbar   </td></tr>
 <tr><td align="left">    **Berichte „Anzeigen für die App-Installation“**             </td><td align="left">  Können den [Bericht „Anzeigenkampagne“](promote-your-app-report.md) anzeigen.           </td><td align="left">  Nicht verfügbar   </td></tr>
 <tr><td align="left">    **Community-Anzeigen**                       </td><td align="left">  Kann die Nutzung kostenloser [Community-Anzeigen](about-community-ads.md) für alle Produkte des Kontos anzeigen.          </td><td align="left">  Kann die Nutzung kostenloser [Community-Anzeigen](about-community-ads.md) für alle Produkte des Kontos erstellen, verwalten und anzeigen.               </td></tr>
 <tr><td align="left">    **Kontaktinformationen**                        </td><td align="left">  Kann [Kontaktinformationen](managing-your-profile.md) im Abschnitt mit den Kontoeinstellungen anzeigen.        </td><td align="left">  Kann [Kontaktinformationen](managing-your-profile.md) im Abschnitt mit den Kontoeinstellungen anzeigen und bearbeiten.            </td></tr>
-<tr><td align="left">    **COPPA-Compliance**                    </td><td align="left">  Kann für alle Produkte des Kontos die Einstellungen für die [COPPA-Compliance](monetize-with-ads.md#coppa-compliance) anzeigen (die angeben, ob sich Produkte an Kinder unter 13Jahren richten).                                            </td><td align="left">  Kann für alle Produkte des Kontos die Einstellungen für die [COPPA-Compliance](monetize-with-ads.md#coppa-compliance) anzeigen und bearbeiten (die angeben, ob sich Produkte an Kinder unter 13Jahren richten).         </td></tr>
+<tr><td align="left">    **COPPA-Compliance**                    </td><td align="left">  Kann für alle Produkte des Kontos die Einstellungen für die [COPPA-Compliance](in-app-ads.md#coppa-compliance) anzeigen (die angeben, ob sich Produkte an Kinder unter 13Jahren richten).                                            </td><td align="left">  Kann für alle Produkte des Kontos die Einstellungen für die [COPPA-Compliance](in-app-ads.md#coppa-compliance) anzeigen und bearbeiten (die angeben, ob sich Produkte an Kinder unter 13Jahren richten).         </td></tr>
 <tr><td align="left">    **Kundengruppen**                     </td><td align="left">  Kann [Kundengruppen](create-customer-groups.md) (Segmente und Flight-Gruppen) im Abschnitt **Kunden** anzeigen.      </td><td align="left">  Kann [Kundengruppen](create-customer-groups.md) (Segmente und Flight-Gruppen) im Abschnitt **Kunden** erstellen, bearbeiten und anzeigen.       </td></tr>
 <tr><td align="left">    **Neue Apps**                            </td><td align="left">  Kann die Seite zum Erstellen neuer Apps anzeigen, jedoch keine neuen Apps im Konto erstellen.    </td><td align="left">  Kann im Konto [neue Apps erstellen](create-your-app-by-reserving-a-name.md), indem neue App-Namen reserviert werden. Zudem können Übermittlungen erstellt und Apps an den Store übermittelt werden.     </td></tr>
 <tr><td align="left">    **Neue Bündel**&nbsp;*                       </td><td align="left">  Kann die Seite zum Erstellen neuer Bündel anzeigen, jedoch keine neuen Bündel im Konto erstellen.     </td><td align="left">  Kann neue Produktbündel erstellen.          </td></tr>
@@ -162,11 +166,11 @@ Beachten Sie, dass einige Berechtigungen nicht für Add-Ons festgelegt werden k�
     </thead>
     <tbody>
     <tr><td align="left">    **Käufe**     </td><td>    Kann die Berichte [Käufe](acquisitions-report.md) und [Add-On-Käufe](add-on-acquisitions-report.md) für das Produkt anzeigen.        </td><td>    Nicht verfügbar    </td><td>    Nicht verfügbar (Einstellungen für das übergeordnete Produkt umfassen Berichte zu Add-On-Käufen)        </td><td>    Nicht verfügbar                         </td></tr>
-    <tr><td align="left">    **Nutzung** </td><td>    Kann den [Bericht „Nutzung“](usage-report.md) für das Produkt anzeigen.     </td><td>    Nicht verfügbar       </td><td>    N/V     </td><td>    Nicht verfügbar         </td></tr>
-    <tr><td align="left">    **Integrität** </td><td>    Kann den [Bericht „Integrität“](health-report.md) für das Produkt anzeigen.    </td><td>    Nicht verfügbar     </td><td>    N/V     </td><td>    Nicht verfügbar         </td></tr>
+    <tr><td align="left">    **Nutzung** </td><td>    Kann den [Bericht „Nutzung“](usage-report.md) für das Produkt anzeigen.     </td><td>    Nicht verfügbar       </td><td>    Nicht zutreffend     </td><td>    Nicht verfügbar         </td></tr>
+    <tr><td align="left">    **Integrität** </td><td>    Kann den [Bericht „Integrität“](health-report.md) für das Produkt anzeigen.    </td><td>    Nicht verfügbar     </td><td>    Nicht zutreffend     </td><td>    Nicht verfügbar         </td></tr>
     <tr><td align="left">    **Kundenfeedback**    </td><td>    Kann die Berichte [Rezensionen](reviews-report.md) und [Feedback](feedback-report.md) für das Produkt anzeigen.       </td><td>    Nicht verfügbar (Um auf Feedback oder Rezensionen reagieren zu können, muss die Berechtigung **Kunden kontaktieren** erteilt werden)   </td><td>    Nicht verfügbar     </td><td>    Nicht verfügbar         </td></tr>
-    <tr><td align="left">    **Xbox-Analyse** </td><td>    Kann den Xbox-Analysebericht für das Produkt anzeigen. (Hinweis: Dieser Bericht ist noch nicht verfügbar.)    </td><td>    Nicht verfügbar   </td><td>    N/V       </td><td>    Nicht verfügbar          </td></tr>
-    <tr><td align="left">    **Echtzeit**   </td><td>    Kann den Echtzeit-Bericht für das Produkt anzeigen. (Hinweis: Dieser Bericht ist zur Zeit nur über das [Dev Center-Insider-Programm](dev-center-insider-program.md) verfügbar.)      </td><td>    Nicht verfügbar   </td><td>    N/V     </td><td>    Nicht verfügbar                 </td></tr>
+    <tr><td align="left">    **Xbox-Analyse** </td><td>    Kann den Xbox-Analysebericht für das Produkt anzeigen. (Hinweis: Dieser Bericht ist noch nicht verfügbar.)    </td><td>    Nicht verfügbar   </td><td>    Nicht zutreffend       </td><td>    Nicht verfügbar          </td></tr>
+    <tr><td align="left">    **Echtzeit**   </td><td>    Kann den Echtzeit-Bericht für das Produkt anzeigen. (Hinweis: Dieser Bericht ist zur Zeit nur über das [Dev Center-Insider-Programm](dev-center-insider-program.md) verfügbar.)      </td><td>    Nicht verfügbar   </td><td>    Nicht zutreffend     </td><td>    Nicht verfügbar                 </td></tr>
     </tbody>
     </table>
 

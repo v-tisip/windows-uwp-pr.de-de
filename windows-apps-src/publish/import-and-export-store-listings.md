@@ -1,33 +1,35 @@
 ---
 author: jnHs
-Description: "Sie können Store-Einträge ohne das Dev Center-Dashboard für Ihre Apps erstellen, indem Sie Ihre Einträge in eine .csv-Datei exportieren und Ihre Info und Ressourcen angeben, bevor Sie die aktualisierte Datei importieren."
+Description: You can create Store listings for your apps without using the Dev Center dashboard by exporting your listings in a .csv file, entering your info and assets, and then importing the updated file.
 title: "Importieren und Exportieren von Store-Einträgen"
 ms.author: wdg-dev-content
-ms.date: 08/03/2017
+ms.date: 12/22/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows10, UWP
-ms.openlocfilehash: 691074727bab67e616541b393468eb70f0b20a05
-ms.sourcegitcommit: 968187e803a866b60cda0528718a3d31f07dc54c
+keywords: "Windows10, UWP, Store-Einträge importieren, Store-Einträge exportieren, Export importieren, Store-Einträge CSV"
+ms.localizationpriority: high
+ms.openlocfilehash: f003ab35fa968e7b4be8e6e0591d97baafaa8648
+ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="import-and-export-store-listings"></a>Importieren und Exportieren von Store-Einträgen
+Anstatt [Informationen über Store-Einträge direkt in das Dashboard einzugeben](create-app-store-listings.md), können Sie Ihre Einträge in eine .csv-Datei exportieren und Ihre Info und Ressourcen angeben, bevor Sie die aktualisierte Datei importieren. Sie können diese Methode verwenden, um Einträge von Grund auf neu zu erstellen oder Angebote zu aktualisieren, die Sie bereits erstellt haben.
 
-Sie können [Store-Einträge](create-app-store-listings.md) ohne das Dev Center-Dashboard für Ihre Apps erstellen, indem Sie Ihre Einträge in eine .csv-Datei exportieren und Ihre Info und Ressourcen angeben, bevor Sie die aktualisierte Datei importieren. Sie können diese Methode verwenden, um Einträge von Grund auf neu zu erstellen oder Angebote zu aktualisieren, die Sie bereits erstellt haben. 
-
-Beachten Sie, dass Sie diese Methode nicht verwenden können, wenn Sie [plattformspezifische Store-Einträge](create-platform-specific-store-listings.md) für Ihre App erstellen oder aktualisieren.
+Diese Option ist besonders nützlich, wenn Sie Store-Einträge für Ihr Produkt in mehreren Sprachen erstellen oder aktualisieren möchten, da Sie die Informationen in mehrere Felder kopieren/einfügen und problemlos alle Änderungen vornehmen können, die für bestimmte Sprachen gelten sollen. Beachten Sie jedoch, dass Sie diese Methode nicht verwenden können, wenn Sie [plattformspezifische Store-Einträge](create-platform-specific-store-listings.md) für Ihre App erstellen oder aktualisieren. 
 
 > [!TIP]
 > Sie können dieses Feature auch zum Importieren und Exportieren von Details für einen Store-Eintrag für ein Add-On anzeigen. Für Add-Ons ist der Prozess identisch, mit Ausnahme davon, dass [nur die Felder, die relevant für Add-Ons sind](#add-ons) enthalten sind.
+
+Beachten Sie, dass Sie trotzdem noch Einträge direkt im Dev Center-Dashboard erstellen oder aktualisieren können (auch wenn Sie zuvor die Import/Export-Methode verwendet haben). Das direkte Aktualisieren im Dashboard kann einfacher sein, wenn Sie nur eine einfache Änderung vornehmen, aber beide Methoden sind jederzeit möglich.
 
 ## <a name="export-listings"></a>Exportieren von Einträgen
 
 Klicken Sie auf der Übermittlungsübersicht für eine App auf **Eintrag exportieren** (im Abschnitt **Store-Einträge**), um eine im UTF-8 codierte CSV-Datei zu generieren. Speichern Sie diese Datei an einem Speicherort auf Ihrem Computer.
 
-Sie können Microsoft Excel oder einem anderen Editor zum Bearbeiten dieser Datei verwenden. Beachten Sie, dass Sie mit der Office365-Versionen von Excel die .csv-Datei als **UTF-8-CSV (Komma-getrennt) (*CSV)** speichert, andere Versionen werdenmöglicherweise jedoch nicht unterstützt. Nähere Informationen dazu, welche Versionen von Excel dieses Feature unterstützen finden Sie im [Excel 2016 New Features Bulletin](https://support.office.com/en-us/article/What-s-new-in-Excel-2016-for-Windows-5fdb9208-ff33-45b6-9e08-1f5cdb3a6c73) und Weitere Informationen zur Codierung als UTF-8 in verschiedenen Editoren finden Sie [hier](https://help.surveygizmo.com/help/encode-an-excel-file-to-utf-8-or-utf-16).
+Sie können Microsoft Excel oder einem anderen Editor zum Bearbeiten dieser Datei verwenden. Beachten Sie, dass Sie mit der Office365-Versionen von Excel die **.csv-Datei als UTF-8-CSV (Komma-getrennt) (CSV)** speichert, andere Versionen werden möglicherweise jedoch nicht unterstützt. Nähere Informationen dazu, welche Versionen von Excel dieses Feature unterstützen finden Sie im [Excel 2016 New Features Bulletin](https://support.office.com/en-us/article/What-s-new-in-Excel-2016-for-Windows-5fdb9208-ff33-45b6-9e08-1f5cdb3a6c73) und Weitere Informationen zur Codierung als UTF-8 in verschiedenen Editoren finden Sie [hier](https://help.surveygizmo.com/help/encode-an-excel-file-to-utf-8-or-utf-16).
       
 Wenn Sie bisher noch keine Einträge für Ihr Produkt erstellt haben, enthält die exportierte CSV-Datei keine benutzerdefinierten Daten. Sie sehen Spalten für **Feld**, **ID**, **Typ** und **Standard**, sowie Zeilen, die jedem Element entsprechen, das in einem Store-Eintrag angezeigt werden kann.
 
@@ -84,7 +86,7 @@ Wenn der Stammordner beispielsweise **My_folder** heißt und Sie ein Bild verwen
 
 ## <a name="import-listings"></a>Importieren von Einträgen
 
-Nachdem Sie alle Ihre Änderungen in der CSV-Datei eingegeben haben (und alle Objekte, die Sie hochladen möchten), müssen Sie die Datei speichern, bevor Sie sie hochladen. Wenn Sie eine Version von Microsoft Excel verwenden, die UTF-8 Codierung unterstützt, stellen Sie sicher, dass Sie **Speichern als** verwenden und das **CSV UTF-8 (Komma-getrennt) (*.csv)**-Format verwenden. Wenn Sie einen anderen Editor verwenden, um die CSV-Datei anzuzeigen und zu bearbeiten, stellen Sie sicher, dass die CSV-Datei vor dem Hochladen in UTF-8 codiert ist.
+Nachdem Sie alle Ihre Änderungen in der CSV-Datei eingegeben haben (und alle Objekte, die Sie hochladen möchten), müssen Sie die Datei speichern, bevor Sie sie hochladen. Wenn Sie eine Version von Microsoft Excel verwenden, die UTF-8 Codierung unterstützt, stellen Sie sicher, dass Sie **Speichern als** verwenden und das **CSV UTF-8 (Komma-getrennt) (.csv)**-Format verwenden. Wenn Sie einen anderen Editor verwenden, um die CSV-Datei anzuzeigen und zu bearbeiten, stellen Sie sicher, dass die CSV-Datei vor dem Hochladen in UTF-8 codiert ist.
 
 Wenn Sie die aktualisierte CSV-Datei hochladen möchten und die Daten des Eintrags importieren, wählen Sie in der Übermittlungsübersicht **Einträge importieren** aus. Wenn Sie nur eine CSV-Datei importieren, wählen Sie **CSV importieren**, navigieren Sie zur Datei, und klicken Sie auf **Öffnen**. Wenn Sie einen Ordner mit Bilddateien importieren, wählen Sie „Ordner importieren”, navigieren Sie zu dem Ordner, und klicken Sie auf **Ordner auswählen**. Stellen Sie sicher, dass sich nur eine CSV-Datei im Ordner befindet, sowie alle Objekte, die Sie hochladen. 
 

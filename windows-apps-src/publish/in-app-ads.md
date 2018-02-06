@@ -1,20 +1,20 @@
 ---
 author: jnHs
-Description: Wenn Ihre App Anzeigen mit Microsoft Advertising-SDK anzeigt, verwenden Sie die Seite In-App-Anzeige im Dev Center-Dashboard, um die Verwendung Ihrer Anzeigen zu verwalten.
+Description: If your app displays ads using the Microsoft Advertising SDK, use the In-app ads page of the Dev Center dashboard to manage your use of ads.
 title: In-App-Anzeigen
 ms.assetid: 09970DE3-461A-4E2A-88E3-68F2399BBCC8
 ms.author: wdg-dev-content
-ms.date: 10/26/2017
+ms.date: 12/04/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-localizationpriority: high
-ms.openlocfilehash: eb835269cd9df7385d8d03e032d8b41cb7f92a19
-ms.sourcegitcommit: 44a24b580feea0f188c7eae36e72e4a4f412802b
+ms.localizationpriority: high
+ms.openlocfilehash: f0faa69cef0f98171c4679d6a94b01199b215cb4
+ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="in-app-ads"></a>In-App-Anzeigen
 
@@ -120,10 +120,13 @@ Die folgende Tabelle enthält die kostenpflichtigen Netzwerke, die wir derzeit f
 | AOL and AppNexus |  Dies ist ein von Microsoft verwaltetes Anzeigennetzwerk, das Anzeigen über unsere Partnernetzwerke AOL und AppNexus bereitstellt.<p/>**Hinweis**: AOL und AppNexus haben in der Liste **Paid ad networks** für Banner-Anzeigeneinheiten stets an erster Stelle. Für diese Art von Anzeigen kann kein niedrigerer Rang festgelegt werden. | Banneranzeigen, Video-Interstitialanzeigen |
 | AppNexus (direkt) | Wählen Sie diese Option, um Video-Interstitialanzeigen von [AppNexus](https://www.appnexus.com) anzuzeigen. | Video-Interstitialanzeigen, native Anzeigen  |
 | Microsoft-Anzeigen für die App-Installation | Wählen Sie diese Option, um Anzeigen für die App-Installation oder das Wiedereinschalten von Anzeigen in Apps anzuzeigen, die von anderen Entwicklern im Windows-Ökosystem erstellt wurden, die [Werbeanzeigenkampagnen für ihre Apps erstellen](create-an-ad-campaign-for-your-app.md).  |  Banneranzeigen, Banner-Interstitialwerbung, native Anzeigen  |
+| Outbrain |  Wählen Sie diese Option zum Bereitstellen von Anzeigen von [Outbrain](https://www.outbrain.com/). |  Banner  |
+| Revcontent |  Wählen Sie diese Option zum Bereitstellen von Anzeigen von [Revcontent](http://www.revcontent.com/). |  Banner  |
 | Smaato |  Wählen Sie diese Option zum Bereitstellen von Anzeigen von [Smaato](https://www.smaato.com/). |  Banner  |
 | Smartclip |  Wählen Sie diese Option zum Bereitstellen von Anzeigen von [Smartclip](http://www.smartclip.com/). |  Video-Interstitialanzeigen  |
 | SpotX |  Wählen Sie diese Option zum Bereitstellen von Anzeigen von [SpotX](https://www.spotx.tv/). |  Video-Interstitialanzeigen  |
 | Taboola |  Wählen Sie diese Option zum Bereitstellen von Anzeigen von [Taboola](https://www.taboola.com/). |  Banner  |
+
 
 <span id="other-networks" />
 ### <a name="other-ad-networks"></a>Weitere Anzeigennetzwerke
@@ -143,12 +146,18 @@ Die verfügbaren Anzeigennetzwerke schalten Anzeigen in allen [unterstützten M�
 
 |  Anzeigennetzwerk  |  Unterstützte Märkte  |
 |--------------|---------------------|
+| Revcontent | Brasilien, Kanada, Frankreich, Deutschland, Italien, Japan, Spanien, Großbritannien, USA  |
 | Smaato | Brasilien, Kanada, Frankreich, Deutschland, Italien, Japan, Spanien, Großbritannien, USA |
 | smartclip | Österreich, Belgien, Dänemark, Finnland, Deutschland, Italien, Niederlande, Norwegen, Schweden, Schweiz  |
 
 <span id="coppa" />
 ## <a name="coppa-compliance"></a>COPPA-Compliance
 
-Um die Einhaltung der Richtlinien des Children's Online Privacy Protection Act („COPPA“) sicherzustellen, müssen Sie Microsoft benachrichtigen, wenn Ihre App an Kinder unter 13 Jahren gerichtet ist. Wenn unter Verwendung von Dev Center Microsoft mitteilen, dass Ihre App an Kinder unter 13 Jahren gerichtet ist, deaktiviert Microsoft die verhaltensorientierten Werbedienste bei der Übermittlung von Werbung an Ihre App. Wenn Ihre App an Kinder unter 13 Jahren gerichtet ist, ergeben sich aus COPPA bestimmte Verpflichtungen für Sie.
+Wenn Sie [eine Anzeigeneinheit erstellen](#create-ad-unit) oder [eine vorhandenen Anzeigeneinheit auswählen](#available-ad-units), wird der **COPPA-Compliance**-Abschnitt am unteren Rand der Seite "Dashboard" angezeigt, wenn die ausgewählte App für die Anzeigeneinheit mindestens eine Übermittlung besitzt, die den Schritt [im Store](../publish/the-app-certification-process.md#in-the-store) im App-Zertifizierungsprozess erreicht hat.
 
-Weitere Informationen über Ihre Verpflichtungen im Rahmen von COPPA finden Sie [auf dieser Seite](http://go.microsoft.com/fwlink/p/?linkid=536558).
+Im Rahmen des Children's Online Privacy Protection Act ("COPPA"), wählen Sie **Diese Anwendung richtet sich an Kinder unter 13 Jahren** in diesem Abschnitt aus, wenn Ihre App an Kinder unter 13Jahren gerichtet ist. Wenn Sie diese Option auswählen, wird Microsoft Maßnahmen ergreifen, um die verhaltensorientierten Werbedienste bei der Übermittlung von Werbung in Ihre App zu deaktivieren.
+
+Die **COPPA-Compliance**-Einstellung, die Sie auswählen, wird automatisch auf allen Anzeigeeinheiten für die ausgewählte App angewendet.
+
+> [!IMPORTANT]
+> Wenn Ihre App an Kinder unter 13 Jahren gerichtet ist, ergeben sich aus COPPA bestimmte Verpflichtungen für Sie. Weitere Informationen über Ihre Verpflichtungen finden Sie [auf dieser Seite](http://go.microsoft.com/fwlink/p/?linkid=536558).

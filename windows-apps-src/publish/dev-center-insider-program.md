@@ -3,17 +3,18 @@ title: Dev Center-Insider-Programm
 description: "Testen Sie die neuen Dev Center-Features, bevor sie für alle Entwickler verfügbar sind, und teilen Sie uns Ihre Meinung mit."
 author: JnHs
 ms.author: wdg-dev-content
-ms.date: 08/03/2017
+ms.date: 01/10/18
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: Windows10, UWP, Insider, Dev Center-Insider, Vorschaufeatures
 ms.assetid: 6fa470dd-e46e-4af1-b278-54bb501a69b0
-ms.openlocfilehash: 686486c80f0f857ddc0583c8ad467208be088ff9
-ms.sourcegitcommit: 968187e803a866b60cda0528718a3d31f07dc54c
+ms.localizationpriority: high
+ms.openlocfilehash: bb0d2ad33107de8e5e8c1711de6012b73e754cc0
+ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="dev-center-insider-program"></a>Dev Center-Insider-Programm
 
@@ -28,11 +29,11 @@ Hier sind einige der Features, die wir für exklusiv für Mitglieder des Dev Cen
 
 | Dev Center-Insider-Programm-Feature   | So können es Dev Center-Insider testen | Hinzugefügt am |
 |--------------------------------------|------------------------------------|------------|
-|**Mehr Flexibilität beim Zuordnen von Azure AD-Mandanten mit Ihrem Dev Center-Konto**: Ordnen Sie einem einzelnen Dev Center-Konto mehrere Azure AD-Mandanten hinzu oder ordnen Sie mehr als ein Dev Center-Konto einem einzelnen Azure AD-Mandanten zu.  | In **Kontoeinstellungen**, wechseln Sie zu **Mandanten verwalten**. Die Seite **Verwalten von Azure AD-Mandanten** wird angezeigt, auf der Sie Ihrem Konto zusätzliche Azure AD-Mandanten hinzufügen können.  | August 2017|
+|**Anpassen der Einstellungen für Benachrichtigungen**: Wählen Sie, welche Benachrichtigungen Sie über Ihr Dev Center-Konto erhalten möchten und geben Sie an, ob Sie diese sie per E-Mail, per Dashboard oder beides empfangen möchten. | Verwenden Sie das Symbol im oberen Bereich des Dashboards, um zum **Nachrichtencenter** zu gelangen und wählen Sie dann **Einstellungen** aus. Treffen Sie Ihre Auswahl im Abschnitt "Benachrichtigungseinstellungen". Sie können dort auch die Adresse zum Senden von E-Mail-Benachrichtigungen angeben.  | November2017 |
+|**Weitere Details finden Sie in der Übersicht**: Erfahren Sie mehr zu markierten Apps, ohne die Übersicht zu verlassen. | Suchen Sie auf der Übersicht die Felder, die wichtige Statistiken für Ihre Apps hervorheben. Klicken Sie auf die Felder, um Details zu dieser App anzuzeigen. | September2017 |
+|**Integritätsdaten fast in Echtzeit**: Der Bericht **Integrität** enthält Daten über Abstürze, Systemstillstand, Arbeitsspeicherausfälle und JavaScript-Ausnahmen nahezu in Echtzeit, wenn Sie die Seitenfilteroption **72H** verwenden.  | Wählen Sie im Bericht "Integrität" einer App die Option **72 Stunden** am oberen Rand der Seite aus. Beachten Sie, dass möglicherweise eine Diskrepanz in den Daten für den 72 Stunden-Zeitraum angezeigt wird, wenn die Filter **72 Stunden**und **30D** verglichen werden. Wir untersuchen das Problem und arbeiten daran, es zu lösen.  | September2017|
 |**Kohorte der aktiven Nutzungsanalyse**: Verfolgen Sie die wöchentliche Nutzung für Kohorten (Gruppen von aktiven Benutzer, die Ihre App in der gleichen Woche begonnen haben), um Einblicke in die Verwendungstrends zu erhalten.  | Zeigen Sie im Bericht **Nutzung** das Diagramm **Kohorten nach aktiver Nutzung** an.  |Juli 2017|
 |**Neue nutzungsbasierte Optionen für Kundensegmente**: Erstellen Sie Segmente Ihrer Kunden basierend auf der Nutzung Ihre App. | Wählen Sie im Abschnitt **Einbeziehen** **Kundengruppen** aus, um ein neues Segment zu erstellen. Wählen Sie im Abschnitt „Einschlusskriterien festlegen” **Nutzung** aus der ersten Dropdownliste aus, wählen Sie dann eine der neuen Optionen aus: **Verbundene Minuten**, **Benutzersitzungen**, **Datum der ersten Verwendung** oder **Datum der letzten Verwendung**. |Juli 2017|
 |**Optionen für die Änderungsumfang-Vorhersage für Kundensegmente**: Erstellen Sie ein Segment für Ihre Kunden basierend auf unserer Vorhersage, dass sie wahrscheinlich die Verwendung Ihrer App in nächster Zukunft beenden.  | Wählen Sie im Abschnitt **Einbeziehen** **Kundengruppen** aus, um ein neues Segment zu erstellen. Wählen Sie im Abschnitt Einschlusskriterien festlegen **Änderungsumfang-Vorhersage** aus der ersten Dropdownliste aus, und wählen Sie dann **Wahr** oder **Falsch**, um Ihr Segment zu definieren. |Mai 2017|
 |**E-Mail-Benachrichtigung bei Analysetrendänderungen**: Empfangen Sie Benachrichtigungen zu wichtigen Änderungen bei Käufen Ihrer App. | Wenn wir eine bedeutende Änderung in der Anzahl der App-Käufe im Vergleich zu den Verlaufsdaten erkennen, senden wir Ihnen automatisch eine E-Mail. |April2017|
-|**App-Trends auf der Übersichtsseite**: Sie erhalten einen kurzen Überblick darüber, wie sich Ihre App-Metriken geändert haben. | Suchen Sie auf der Übersichtsseite nach den Sparklines und Pfeilen neben den Nummernmetriken. Die Sparklines bieten Ihnen eine schnelle visuelle Darstellung der neuesten Trends. Anhand der Richtung des Pfeiles können Sie feststellen, ob die Zahlen in letzter Zeit erheblich gestiegen oder gesunken sind. Beachten Sie, dass Sie möglicherweise nicht neben jedem Sparkline Pfeile sehen. |Februar 2017|
-|**Werbekampagnen für universelle Apps**: Zusätzlich zu Apps sind Ihre Anzeigenkampagnen nun auf „MSN.com“, „Outlook.com“, Skype und andere Microsoft-Premiumprodukte ausgerichtet. | Um diese größere Anzahl potenzieller neuer Kunden zu erreichen, erstellen Sie einfach eine neue Anzeigenkampagne (**Werbeaktionen > Anzeigenkampagnen**). |Dezember 2016|
 |**Echtzeitanalyse**: Zeigen Sie Details über die aktuellen App-Verkäufe und Add-Ons an. Der neue Bericht wird in Echtzeit von Ihren Kunden mit Windows10 erfasst. | Wählen Sie im linken Menü unter **Analyse** die Option **Echtzeitbericht** aus. Wählen Sie den Zeitraum für die Datenprüfung aus. Dabei kann es sich um die letzten sieben Tage oder minutengenau um die letzte Stunde handeln. Beachten Sie, dass der Bericht nur Daten von Kunden mit Windows10 enthält.  |August 2016|

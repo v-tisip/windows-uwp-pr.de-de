@@ -1,27 +1,25 @@
 ---
 author: jnHs
-Description: "Beim Übermitteln eines Add-Ons bestimmen die Optionen auf der Seite „Preise und Verfügbarkeit“, zu welchem Preis und wie das Add-On Kunden angeboten werden soll."
+Description: When submitting an add-on, the options on the Pricing and availability page determine what to charge for your add-on and how it should be offered to customers.
 title: "Festlegen der Preise und Verfügbarkeit von Add-Ons"
 ms.assetid: B3D4B753-716B-460B-A3B1-ED5712ECD694
 ms.author: wdg-dev-content
-ms.date: 08/03/2017
+ms.date: 01/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
-ms.openlocfilehash: 09671148e670acbfdbc944558a2738712f848dd5
-ms.sourcegitcommit: de6bc8acec2cd5ebc36bb21b2ce1a9980c3e78b2
+keywords: Windows10, UWP, Add-Ons, IAP, Preis
+ms.localizationpriority: high
+ms.openlocfilehash: 8eb2321ec6d2bc8602438e2dc66ca1d96690a3f8
+ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="set-add-on-pricing-and-availability"></a>Festlegen der Preise und Verfügbarkeit von Add-Ons
 
 
 Beim Übermitteln eines Add-Ons bestimmen die Optionen auf der Seite **Preise und Verfügbarkeit**, zu welchem Preis und wie das Add-On Kunden angeboten werden soll.
-
-> [!NOTE]
-> Wir haben vor kurzem die verfügbaren Optionen auf dieser Seite aktualisiert. Wenn Sie laufende Übermittlungen hatten, bevor diese neueren Optionen verfügbar waren, zeigen diese Übermittlung immer noch die älteren Optionen an. Sie können diese Übermittlung löschen und dann eine neue erstellen, wenn Sie die neusten Optionen für diese App verwenden möchten. Andernfalls werden die neusten Optionen mit dem nächsten Update nach der Veröffentlichung der laufenden Übermittlung verfügbar.
 
 ## <a name="markets"></a>Märkte
 
@@ -78,7 +76,7 @@ Wenn Sie noch kein Veröffentlichungsdatum festlegen möchten und Ihre Übermitt
 Wählen Sie **Nicht vor \[Datum\]**, um sicherzustellen, dass die Übermittlung nicht vor einem bestimmten Datum veröffentlicht wird. Mit dieser Option wird Ihre Übermittlung möglichst zum oder nach dem angegebenen Datum veröffentlicht. Das Datum muss mindestens 24Stunden in der Zukunft liegen. Zusammen mit dem Datum können Sie auch die Uhrzeit angeben, zu der die Veröffentlichung der Übermittlung beginnen soll.
  
 > [!NOTE]
-> Aufgrund von Verzögerungen bei der Zertifizierung oder Veröffentlichung kann das gewünschte Veröffentlichungsdatum unter Umständen nicht eingehalten werden. Es kann nicht garantiert werden, dass Ihr Add-On (oder das Update) an einem bestimmten Datum im Windows Store zur Verfügung steht.  
+> Aufgrund von Verzögerungen bei der Zertifizierung oder Veröffentlichung kann das gewünschte Veröffentlichungsdatum unter Umständen nicht eingehalten werden. Es kann nicht garantiert werden, dass Ihr Add-On (oder das Update) an einem bestimmten Datum im Microsoft Store zur Verfügung steht.  
 
 
 

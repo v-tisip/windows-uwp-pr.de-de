@@ -1,19 +1,20 @@
 ---
 author: jnHs
-Description: "Beim Übermitteln eines Add-Ons sind die Optionen auf der Seite „Eigenschaften“ hilfreich, um das Verhalten Ihres Add-Ons festzulegen, wenn es Kunden angeboten wird."
+Description: When submitting an add-on, the options on the Properties page help determine the behavior of your add-on when offered to customers.
 title: Eingeben von Add-On-Eigenschaften
 ms.assetid: 26D2139F-66FD-479E-940B-7491238ADCAE
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 01/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: 253e008d3622094dcfe765531d71e5f37b7777b0
-ms.sourcegitcommit: de6bc8acec2cd5ebc36bb21b2ce1a9980c3e78b2
+keywords: Windows10, UWP, Add-Ons, Eigenschaften, Abonnementzeitraum, Produktlebensdauer, Inhaltstyp, IAP, In-App-Kauf, In-App-Produkt
+ms.localizationpriority: high
+ms.openlocfilehash: 63fc414c230e5a988013b1509280bfdb083a93c0
+ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="enter-add-on-properties"></a>Eingeben von Add-On-Eigenschaften
 
@@ -29,28 +30,31 @@ Beim ersten [Erstellen des Add-Ons](set-your-add-on-product-id.md) wird der Prod
 
 Die Felder, die Sie auf dieser Seite sehen, variieren je nach den Produkttyp Ihres Add-Ons.
 
-## <a name="product-lifetime"></a>Produktlebensdauer
 
+## <a name="product-lifetime"></a>Produktlebensdauer
 
 Wenn Sie als Produkttyp **Gebrauchsgut** ausgewählt haben, wird hier die **Produktlebenszeit** angezeigt. Die standardmäßige **Produktlebenszeit** dauerhafter Add-Ons ist **Unbegrenzt**. Das Add-On läuft also niemals ab. Sie können die **Produktlebenszeit** auch festlegen, sodass das Add-On nach einem festgelegten Zeitraum abläuft (mögliche Optionen: 1 bis 365Tage).
 
-## <a name="quantity"></a>Menge
 
+## <a name="quantity"></a>Menge
 
 Wenn Sie den Produkttyp **Vom Store verwalteter Verbrauchsartikel** ausgewählt haben, wird hier die **Menge** angezeigt. Sie müssen eine Zahl zwischen 1 und 1000000 eingeben. Diese Menge wird Kunden gewährt, wenn sie Ihr Add-On erwerben, und vom Store wird der Betrag nachverfolgt, wenn die App die Nutzung des Add-Ons durch Kunden meldet.
 
 
 ## <a name="subscription-period"></a>Abonnementdauer
 
-Wenn Sie als Produkttyp **Abonnement** ausgewählt haben, wird hier die **Abonnementdauer** angezeigt. Müssen Sie eine der verfügbaren Optionen auswählen (**Monatlich**, **3 Monate**, **6 Monate**, **Jährlich**, oder **24 Monate**), um anzugeben, wie häufig ein Kunde für das Abonnement in Rechnung gestellt wird. Beachten Sie, dass Sie nach der Veröffentlichung Ihres Add-Ons Ihre **Abonnementdauer** auswählen können.
+Wenn Sie als Produkttyp **Abonnement** ausgewählt haben, wird hier die **Abonnementdauer** angezeigt. Wählen Sie eine Option aus, um anzugeben, wie häufig der Kunde für das Abonnement in Rechnung gestellt wird. Die Standardoption ist **monatlich, aber Sie können auch **3 Monate**, **6 Monate**, **Jährlich** oder **24 Monate** auswählen 
 
-> [!NOTE]
-> Die Fähigkeit zum Erstellen von Abonnement-Add-Ons ist derzeit nur für eine Gruppe von Entwicklerkonten verfügbar, die am frühen Adoption-Programm teilnehmen. Wir stellen Abonnement-Add-Ons für alle Entwicklerkonten in Zukunft zur Verfügung und wir stellen Ihnen diese vorläufige Dokumentation jetzt zur Verfügung, um Entwicklern eine Vorschau dieser Funktion zu ermöglichen. Weitere Informationen finden Sie unter [Abonnement-Add-Ons für Ihre App aktivieren](../monetize/enable-subscription-add-ons-for-your-app.md).
+> [!IMPORTANT]
+> Sie können nach der Veröffentlichung Ihres Add-Ons Ihre **Abonnementdauer** auswählen.
 
 
 ## <a name="free-trial"></a>Kostenlose Testversion
 
-Für die Abonnement-Add-Ons wird hier ebenfalls eine **kostenlose Testversion** angezeigt. Sie müssen auswählen, ob Kunden das Add-On für einen festgelegten Zeitraum kostenlos verwenden können (entweder **1 Woche** oder **1 Monat**), oder ob Sie **keine kostenlose Testversion** anbieten. Beachten Sie, dass Sie nach der Veröffentlichung Ihres Add-Ons Ihre **Kostenlose Testversion** auswählen können.
+Wenn Sie als Produkttyp **Abonnement** ausgewählt haben, wird hier die **Kostenlos testen** angezeigt. Die Standardoption ist **Keine kostenlose Testversion.** Falls gewünscht, können Kunden das Add-On für einen festgelegten Zeitraum kostenlos verwenden (entweder **1 Woche** oder **1 Monat**). 
+
+> [!IMPORTANT]
+> Sie können nach der Veröffentlichung Ihres Add-Ons Ihre **Kostenlose Testversion** auswählen.
 
 
 ## <a name="content-type"></a>Inhaltstyp

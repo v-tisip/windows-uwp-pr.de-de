@@ -1,19 +1,20 @@
 ---
 author: jnHs
-Description: "Beim Erstellen eines neuen Add-Ons im WindowsDevCenter-Dashboard müssen Sie einen Produkttyp angeben und eine Produkt-ID zuweisen."
+Description: When you create a new add-on in the Windows Dev Center dashboard, you need to specify a product type and assign it a product ID.
 title: "Festlegen von Produkt-ID und Produkttyp für das Add-On"
 ms.assetid: 59497B0F-82F0-4CEE-B628-040EF9ED8D3D
 ms.author: wdg-dev-content
-ms.date: 06/28/2017
+ms.date: 01/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
-ms.openlocfilehash: 136077edcf4704f3ea71416719e7c37db43dafda
-ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+keywords: Windows10, UWP, Add-Ons, IAP, dauerhaft, konsumbierbar, Abonnement, Produkt, Typ, Produkt-ID, In-App-Kauf, In-App-Produkt
+ms.localizationpriority: high
+ms.openlocfilehash: 24731a378ddc0defada7a94282afd790dfb5b780
+ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="set-your-add-on-product-type-and-product-id"></a>Festlegen von Produkt-ID und Produkttyp für das Add-On
 
@@ -49,14 +50,11 @@ Es gibt zwei Arten konsumierbarer Add-Ons:
 
 Wenn Sie Ihre Kunden in regelmäßigen Abständen für Ihre Add-On in Rechnung stellen möchten, wählen Sie **Abonnement** aus.
 
-> [!NOTE]
-> Die Fähigkeit zum Erstellen von Abonnement-Add-Ons ist derzeit nur für eine Gruppe von Entwicklerkonten verfügbar, die am frühen Adoption-Programm teilnehmen. Wir stellen Abonnement-Add-Ons für alle Entwicklerkonten in Zukunft zur Verfügung und wir stellen Ihnen diese vorläufige Dokumentation jetzt zur Verfügung, um Entwicklern eine Vorschau dieser Funktion zu ermöglichen. Weitere Informationen finden Sie unter [Abonnement-Add-Ons für Ihre App aktivieren](../monetize/enable-subscription-add-ons-for-your-app.md).
-
 Nachdem ein abonniertes Add-On von einem Kunden erworben wurde, kann er auch weiterhin in regelmäßigen Abständen in Rechnung gestellt werden, um das Add-On weiter verwenden zu können. Der Kunde kann das Abonnement jederzeit kündigen, um weitere Gebühren zu vermeiden. Sie müssen im Schritt **Eigenschaften** der Übermittlung den Abonnementzeitraum festlegen und ob Sie eine kostenlose Testversion anbieten oder nicht.
 
 Abonnierte Add-Ons werden nur für Kunden mit Windows10, Version 1607 oder höher unterstützt. Um diese Option zu verwenden, muss das übergeordnete Produkt mit Windows10 SDK Version14393 oder höher kompiliert werden. Zudem muss statt der API im **Windows.ApplicationModel.Store**-Namespace die im **Windows.Services.Store**-Namespace verwendete In-App-Kauf-API verwendet werden. Weitere Informationen zu den Unterschieden zwischen diesen Namespaces finden Sie unter [In-App-Käufe und Testversionen](../monetize/in-app-purchases-and-trials.md).
 
-Sie müssen das übergeordnete Produkt übermitteln, bevor Sie das abonnierte Add-Ons im Store veröffentlichen können (es ist jedoch möglich, jederzeit die Übermittlung in Ihrem Dashboard zu erstellen und damit bereits zu arbeiten).
+Sie müssen das übergeordnete Produkt übermitteln, bevor Sie abonnierte Add-Ons im Store veröffentlichen können (es ist jedoch möglich, jederzeit die Übermittlung in Ihrem Dashboard zu erstellen und damit bereits zu arbeiten).
 
 ## <a name="product-id"></a>Produkt-ID
 
@@ -69,5 +67,5 @@ Folgende Dinge sollten bei der Wahl einer Produkt-ID beachtet werden:
 -   Eine Produkt-ID darf maximal 100 Zeichen umfassen.
 -   Folgende Zeichen dürfen nicht in der Produkt-ID enthalten sein: **&lt; &gt; \* % & : \\ ? + ,**
 -   Um das Add-On unter allen Betriebssystemversionen anzubieten, dürfen nur alphanumerische Zeichen, Punkte und/oder Unterstriche verwendet werden. Bei Verwendung anderer Zeichen kann das Add-On von Kunden mit Windows Phone8.1 oder früheren Versionen nicht erworben werden.
--   Eine Produkt-ID muss zwar nicht im Windows Store, aber für Ihr Entwicklerkonto eindeutig sein.
+-   Eine Produkt-ID muss zwar nicht im Microsoft Store, aber für Ihr Entwicklerkonto eindeutig sein.
  

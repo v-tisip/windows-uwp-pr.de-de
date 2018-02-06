@@ -1,19 +1,20 @@
 ---
 author: jnHs
-Description: "Sie können angeben, ob und wie Ihre App für Volume-Käufe über den Windows Store für Unternehmen und Microsoft Store für Bildungseinrichtungen angeboten wird, indem Sie die Einstellungen auf der Seite für Verfügbarkeit und Preise einer App-Übermittlung im Abschnitt Unternehmenslizenzierung festlegen."
+Description: You can indicate whether and how your app can be offered for volume purchases through the Microsoft Store for Business and Microsoft Store for Education in the Organizational licensing section of an app submission.
 title: "Lizenzierungsoptionen für Unternehmen"
 ms.assetid: 1EB139B0-67E7-4F66-AAEF-491B1E52E96F
 ms.author: wdg-dev-content
-ms.date: 06/14/2017
+ms.date: 01/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Store für Unternehmen, Store für Bildungseinrichtungen, Organisation, Volumenlizenzierung"
-ms.openlocfilehash: 8bb44a65f2ded280cfe8eda39663b64ef2edb3c8
-ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+keywords: "Windows10, UWP, Store für Unternehmen, Store für Bildungseinrichtungen, Organisationseinheit, Volumenlizenzierung, Enterprise, Education Store, Business Store, Volumeneinkäufe, Massen"
+localizationpriority: high
+ms.openlocfilehash: 7437b087c0966939bb5f5d8110d310f4dd5e73df
+ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="organizational-licensing-options"></a>Lizenzierungsoptionen für Unternehmen
 
@@ -22,10 +23,14 @@ Sie können angeben, ob und wie Ihre App für Volume-Käufe über den Windows St
 
 Über diese Einstellung können Sie Ihre App wahlweise für Organisationen (Unternehmen und Bildungseinrichtungen) verfügbar zu machen, die mehrere Lizenzen für ihre Benutzer erwerben und bereitstellen. Ihnen wird so die Möglichkeit gegeben, Ihre Reichweite auf Windows10-Geschäftskunden für verschiedene Gerätetypen einschließlich PCs, Tablets und Smartphones zu erweitern.
 
+Sie müssen zudem Organisationslizenzierung für jede [Branchen-Apps](distribute-lob-apps-to-enterprises.md) zulassen, die Sie direkt für Unternehmen veröffentlichen.
+
 > [!NOTE]
 > Die Auswahlmöglichkeiten für Ihre Apps werden unabhängig voneinander konfiguriert. Sie können Ihre Einstellungen für eine App jederzeit ändern, indem Sie eine neue Übermittlung erstellen, und die Änderungen werden wirksam, nachdem die Übermittlung den [Zertifizierungsprozess](the-app-certification-process.md) abgeschlossen hat.
 
-Sie müssen zudem Organisationslizenzierung für jede [Branchen-Apps](distribute-lob-apps-to-enterprises.md) zulassen, die Sie direkt für Unternehmen veröffentlichen.
+> [!IMPORTANT]
+> Übermittlungen, die die [Microsoft Store-Übermittlungs-API](../monetize/create-and-manage-submissions-using-windows-store-services.md) verwenden, werden nicht an Microsoft Store für Unternehmen und Microsoft Store für Bildungseinrichtungen zur Verfügung gestellt. Um Ihre App für Volumeneinkäufe von Organisationen zur Verfügung zu stellen, müssen Sie das Windows Dev Center-Dashboard verwenden, um Ihre Übermittlungen zu erstellen und übermitteln.
+
 
 ## <a name="allowing-your-app-to-be-offered-to-organizations"></a>Anbieten Ihrer App an Organisationen
 
@@ -57,7 +62,7 @@ Standardmäßig ist das Kontrollkästchen **deaktiviert**. Aktivieren Sie das Ko
 Zurzeit können Entwicklerkonten in bestimmten Märkten Volumenkäufe kostenpflichtiger Apps im Microsoft Store für Unternehmen anbieten. 
 
 > [!NOTE]
-> In einigen Märkten kann sich der Preis einer App im Windows Store für Unternehmen oder im Windows Store für Bildungseinrichtungen von dem Preis unterscheiden, der Einzelhandelskunden im Windows Store für das gleiche Preisniveau angezeigt wird. Die Auszahlung der Erlöse aus Unternehmenskäufen funktioniert genau wie die Auszahlung von Erlösen aus Verbraucherkäufen Ihrer App. Weitere Informationen finden Sie unter [Bezahlung](getting-paid-apps.md) und [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058). Eine Liste der Märkte, in denen Microsoft Store für Unternehmen und Microsoft Store für Bildungseinrichtungen verfügbar sind, finden Sie unter [Microsoft Store für Unternehmen und Microsoft Store für Bildungseinrichtungen – Übersicht](https://technet.microsoft.com/itpro/windows/manage/windows-store-for-business-overview#supported-markets).
+> In einigen Märkten kann sich der Preis einer App im Microsoft Store für Unternehmen oder im Microsoft Store für Bildungseinrichtungen von dem Preis unterscheiden, der Einzelhandelskunden im Microsoft Store für das gleiche Preisniveau angezeigt wird. Die Auszahlung der Erlöse aus Unternehmenskäufen funktioniert genau wie die Auszahlung von Erlösen aus Verbraucherkäufen Ihrer App. Weitere Informationen finden Sie unter [Bezahlung](getting-paid-apps.md) und [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058). Eine Liste der Märkte, in denen Microsoft Store für Unternehmen und Microsoft Store für Bildungseinrichtungen verfügbar sind, finden Sie unter [Microsoft Store für Unternehmen und Microsoft Store für Bildungseinrichtungen – Übersicht](https://technet.microsoft.com/itpro/windows/manage/windows-store-for-business-overview#supported-markets).
 
 Wenn Ihr Land oder Ihre Region unten nicht aufgeführt ist, werden Ihre kostenpflichtigen Apps zurzeit nicht im Microsoft Store für Unternehmen und Microsoft Store für Bildungseinrichtungen angeboten werden. Wenn dies der Fall ist, werden die Lizenzierungsoptionen für Unternehmen, die Sie für Ihre kostenpflichtigen Apps einrichten, möglicherweise zu einem späteren Zeitpunkt angewendet, da wir später Unterstützung für die Übermittlung aus zusätzlichen Entwicklerkontenmärkten hinzufügen.
 

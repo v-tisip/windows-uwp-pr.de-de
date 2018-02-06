@@ -1,19 +1,20 @@
 ---
 author: jnHs
-Description: "Add-Ons werden über das Windows Dev Center-Dashboard veröffentlicht."
+Description: Add-ons are published through the Windows Dev Center dashboard.
 title: "Add-On-Übermittlungen"
 ms.assetid: E175AF9E-A1D4-45DF-B353-5E24E573AE67
 ms.author: wdg-dev-content
-ms.date: 06/26/2017
+ms.date: 01/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows10, UWP
-ms.openlocfilehash: 85ad5e297eed8daa5205aedc1253191fcff5fd49
-ms.sourcegitcommit: 8c4d50ef819ed1a2f8cac4eebefb5ccdaf3fa898
+keywords: "Windows10, UWP, IAP, In-App-Kauf, In-App-Produkt, IAP-Übermittlung"
+ms.localizationpriority: high
+ms.openlocfilehash: 5591542370f8ed47be37c10e8e8b7afd9ac69d65
+ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="add-on-submissions"></a>Add-On-Übermittlungen
 
@@ -21,10 +22,10 @@ Add-Ons (auch als In-App-Produkte bezeichnet) sind ergänzende Elemente für Ihr
 
 Add-Ons werden über das Windows Dev Center-Dashboard veröffentlicht. Sie müssen die [Add-Ons außerdem im Code Ihrer App aktivieren](../monetize/in-app-purchases-and-trials.md).
 
-Der erste Schritt bei der Add-On-Übermittlung besteht darin, das Add-On im Dashboard zu erstellen, indem Sie den [Produkt-Typ und die Produkt-ID definieren](set-your-add-on-product-id.md). Danach können Sie eine Übermittlung erstellen, damit Ihr Add-On über den Windows Store erworben werden kann. Sie können ein Add-On gleichzeitig mit [Ihrer App einreichen](app-submissions.md) oder unabhängig vorgehen. Außerdem können Sie [Updates](#updating-an-add-on-after-publication) für Add-Ons ausführen, nachdem die App im Store eingetragen wurde, ohne dass die App erneut übermittelt werden muss.
+Der erste Schritt bei der Add-On-Übermittlung besteht darin, das Add-On im Dashboard zu erstellen, indem Sie den [Produkt-Typ und die Produkt-ID definieren](set-your-add-on-product-id.md). Danach können Sie eine Übermittlung erstellen, damit Ihr Add-On über den Microsoft Store erworben werden kann. Sie können ein Add-On gleichzeitig mit [Ihrer App einreichen](app-submissions.md) oder unabhängig vorgehen. Außerdem können Sie [Updates](#updating-an-add-on-after-publication) für Add-Ons ausführen, nachdem die App im Store eingetragen wurde, ohne dass die App erneut übermittelt werden muss.
 
 > [!NOTE]
-> In diesem Abschnitt der Dokumentation wird das Übermitteln von Add-Ons im Dev Center-Dashboard beschrieben. Alternativ dazu können Sie auch die [Windows Store-Übermittlungs-API](../monetize/create-and-manage-submissions-using-windows-store-services.md) verwenden, um Add-On-Übermittlungen zu automatisieren.
+> In diesem Abschnitt der Dokumentation wird das Übermitteln von Add-Ons im Dev Center-Dashboard beschrieben. Alternativ dazu können Sie auch die [Microsoft Store-Übermittlungs-API](../monetize/create-and-manage-submissions-using-windows-store-services.md) verwenden, um Add-On-Übermittlungen zu automatisieren.
 
 ## <a name="checklist-for-submitting-an-add-on"></a>Prüfliste für die Übermittlung eines Add-Ons
 
@@ -33,7 +34,7 @@ Hier finden Sie eine Liste mit den Informationen, die Sie beim Erstellen Ihrer A
 ### <a name="create-a-new-add-on-page"></a>Erstellen einer neuen Add-On-Seite
 | Feldname                    | Hinweise                            |
 |-------------------------------|----------------------------------|
-| [**Produkttyp**](set-your-add-on-product-id.md#product-type)      | Erforderlich. Bei **Gebrauchsgut** muss **Produktlebenszeit** angegeben werden. |  
+| [**Produkttyp**](set-your-add-on-product-id.md#product-type)      | Nötig |  
 | [**Produkt-ID**](set-your-add-on-product-id.md#product-id)          | Erforderlich |        
 
 <span/>
@@ -42,10 +43,12 @@ Hier finden Sie eine Liste mit den Informationen, die Sie beim Erstellen Ihrer A
 | Feldname                    | Hinweise                              |   
 |-------------------------------|------------------------------------|
 | [**Produktlebensdauer**](enter-add-on-properties.md#product-lifetime)  | Erforderlich, wenn der Produkttyp **Gebrauchsgut** lautet. Gilt nicht für andere Produkttypen. |
-| [**Menge**](enter-add-on-properties.md#quantity)  | Erforderlich, wenn der Produkttyp **Vom Store verwalteter Verbrauchsartikel** lautet. Gilt nicht für andere Produkttypen.
-| [**Inhaltstyp**](enter-add-on-properties.md#content-type)          | Erforderlich       |               
+| [**Menge**](enter-add-on-properties.md#quantity)  | Erforderlich, wenn der Produkttyp **Vom Store verwalteter Verbrauchsartikel** lautet. Gilt nicht für andere Produkttypen. |
+| [**Abonnementdauer**](enter-add-on-properties.md#subscription-period)          | Erforderlich, wenn der Produkttyp **Dauerauftrag** lautet. Gilt nicht für andere Produkttypen.       |  
+| [**Kostenlose Testversion**](enter-add-on-properties.md#free-trial)          | Erforderlich, wenn der Produkttyp **Dauerauftrag** lautet. Gilt nicht für andere Produkttypen.       |
+| [**Inhaltstyp**](enter-add-on-properties.md#content-type)          | Erforderlich    |               
 | [**Schlüsselwörter**](enter-add-on-properties.md#keywords)                  | Optional (bis zu zehnSchlüsselwörter mit jeweils maximal 30Zeichen) |
-| [**Benutzerdefinierte Entwicklerdaten**](enter-add-on-properties.md#custom-developer-data)                               | Optional (maximal 3.000Zeichen)             |
+| [**Benutzerdefinierte Entwicklerdaten**](enter-add-on-properties.md#custom-developer-data)   | Optional (maximal 3.000Zeichen)            |
 
 <span/>
 
@@ -66,9 +69,9 @@ Ein Store-Eintrag ist erforderlich. Es wird empfohlen, für jede von der App unt
 
 | Feldname                    | Hinweise                                       |
 |-------------------------------|---------------------------------------------|
-| [**Titel**](create-add-on-store-listings.md#title)                    | Erforderlich (max. 100 Zeichen)              |
-| [**Beschreibung**](create-add-on-store-listings.md#description)       | Optional (max. 200 Zeichen)              |
-| [**Symbol**](create-add-on-store-listings.md#icon)                    | Optional (PNG, 300x300 Pixel)             |
+| [**Titel**](create-add-on-store-listings.md#title)                    | Erforderlich (max. 100 Zeichen)           |
+| [**Beschreibung**](create-add-on-store-listings.md#description)       | Optional (max. 200 Zeichen)            |
+| [**Symbol**](create-add-on-store-listings.md#icon)                    | Optional (PNG, 300x300 Pixel)            |
 
 <span/>
 
@@ -87,4 +90,4 @@ Sie können ein veröffentlichtes Add-On jederzeit ändern. Add-On-Änderungen w
 
 Wechseln Sie zum Übermitteln von Updates im Dashboard zur Seite des Add-Ons, und klicken Sie auf **Aktualisieren**. Dadurch wird eine neue Übermittlung für das Add-On erstellt, wobei die Informationen aus der vorherigen Übermittlung als Ausgangspunkt verwendet werden. Ändern Sie die gewünschten Informationen, und klicken Sie dann auf **An Store übermitteln**.
 
-Wenn Sie ein zuvor angebotenes Add-On entfernen möchten, können Sie dies tun, indem Sie eine neue Übermittlung erstellen und die Option [Verteilung und Sichtbarkeit](set-add-on-pricing-and-availability.md) in **Nicht mehr zum Kauf erhältlich. Wird nicht im App-Eintrag angezeigt.** ändern. Achten Sie darauf, den App-Code entsprechend zu aktualisieren, um auch Verweise auf das Add-On zu entfernen.
+Wenn Sie ein zuvor angebotenes Add-On entfernen möchten, können Sie dies tun, indem Sie eine neue Übermittlung erstellen und die Option [Verteilung und Sichtbarkeit](set-add-on-pricing-and-availability.md) unter **Im Store ausgeblendet** in **Beenden des Erwerbs**. Achten Sie darauf, den App-Code entsprechend zu aktualisieren, um auch Verweise auf das Add-On zu entfernen (wenn Ihre App frühere Versionen von Windows8.1 unterstützt, gilt diese Sichtbarkeitseinstellung nicht für diese Kunden).

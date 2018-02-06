@@ -1,19 +1,20 @@
 ---
 author: jnHs
-Description: "Fügen Sie Ihrem Dev Center-Konto Benutzer hinzu, und weisen Sie diesen Rollen mit bestimmten Berechtigungen zu."
+Description: Add users to your Dev Center account and assign them roles with specific permissions.
 title: Verwalten von Kontobenutzern
 ms.assetid: 9245F0D0-7D8F-4741-AFB4-FBA5601D0A9B
 ms.author: wdg-dev-content
-ms.date: 07/17/2017
+ms.date: 01/10/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows10, UWP
-ms.openlocfilehash: bba67fd6f4db4464b02d1b351bbb75adbec1acdc
-ms.sourcegitcommit: eaacc472317eef343b764d17e57ef24389dd1cc3
+keywords: Windows10, UWP, Kontobenutzer, Verwalten von Benutzern, Azure AD, mehrere Benutzer
+ms.localizationpriority: high
+ms.openlocfilehash: e9a08225f0eac5018b3634df3bfb055d38ccb895
+ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="manage-account-users"></a>Verwalten von Kontobenutzern
 
@@ -21,12 +22,11 @@ Sie können mit Azure Active Directory Ihrem Dev Center-Konto Benutzer hinzufüg
 
 Zum Hinzufügen und Verwalten von Kontobenutzern müssen Sie zunächst dem Azure Active Directory Ihres Unternehmens Ihr Dev Center-Konto zuordnen. 
 
-Zum Verwalten von Kontobenutzern, wechseln Sie zu **Kontoeinstellungen** und wählen Sie **Benutzer verwalten** aus.
-
 In diesem Abschnitt werden die folgenden Schritte beschrieben:
 
 -   [Zuordnen Ihres Azure Active Directory zum Dev Center-Konto](associate-azure-ad-with-dev-center.md)
 -   [Hinzufügen von Benutzern, Gruppen und Azure AD-Apps zu Ihrem Dev Center-Konto](add-users-groups-and-azure-ad-applications.md)
 -   [Legen Sie Rollen und benutzerdefinierte Berechtigungen für Kontenbenutzer fest](set-custom-permissions-for-account-users.md)
 
-
+> [!TIP]
+> Dieser Abschnitt gilt speziell für das Entwicklerprogramm für Windows-Apps. Das Zuordnen eines Mandanten und das Verwalten von Benutzern für Konten im Windows-Hardware-Entwicklerprogramm verhält sich allerdings ähnlich. Weitere Informationen zur Benutzerverwaltung im Hardware-Entwicklerprogramm finden Sie unter [Dashboard-Verwaltung](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-administration).
