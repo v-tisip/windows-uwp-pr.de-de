@@ -14,96 +14,143 @@ design-contact: conrwi
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: high
-ms.openlocfilehash: 8ba0d9939d7ab1d9826ed2848e476499f09c628f
-ms.sourcegitcommit: 4b522af988273946414a04fbbd1d7fde40f8ba5e
+ms.openlocfilehash: 2ec95f757b041b74dda8bc0606ad8113881809d5
+ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="reveal-highlight"></a><span data-ttu-id="8e9f3-104">Reveal-highlight</span><span class="sxs-lookup"><span data-stu-id="8e9f3-104">Reveal highlight</span></span>
+# <a name="reveal-highlight"></a><span data-ttu-id="eb93b-104">Reveal-highlight</span><span class="sxs-lookup"><span data-stu-id="eb93b-104">Reveal highlight</span></span>
 
-<span data-ttu-id="8e9f3-105">Einblendungen sind neue Lichteffekte, welche die interaktiven Elemente in Ihrer App mit Tiefe und Fokus versehen kann.</span><span class="sxs-lookup"><span data-stu-id="8e9f3-105">Reveal is a lighting effect that helps bring depth and focus to your app's interactive elements.</span></span>
+<span data-ttu-id="eb93b-105">Reveal-highlight ist ein Lichteffekt, der interaktive Elemente hervorhebt wie z.B. Befehlsleisten, wenn der Benutzer den Zeiger in die Nähe bewegt.</span><span class="sxs-lookup"><span data-stu-id="eb93b-105">Reveal highlight is a lighting effect that highlights interactive elements, such as command bars, when the user moves the pointer near them.</span></span> 
 
-> <span data-ttu-id="8e9f3-106">**Wichtige APIs**: [RevealBrush-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush), [RevealBackgroundBrush-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbackgroundbrush), [RevealBorderBrush-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealborderbrush), [RevealBrushHelper-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrushhelper), [VisualState-Klasse](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.VisualState)</span><span class="sxs-lookup"><span data-stu-id="8e9f3-106">**Important APIs**: [RevealBrush class](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush), [RevealBackgroundBrush class](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbackgroundbrush), [RevealBorderBrush class](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealborderbrush), [RevealBrushHelper class](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrushhelper), [VisualState class](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.VisualState)</span></span>
+> <span data-ttu-id="eb93b-106">**Wichtige APIs**: [RevealBrush-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush), [RevealBackgroundBrush-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbackgroundbrush), [RevealBorderBrush-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealborderbrush), [RevealBrushHelper-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrushhelper), [VisualState-Klasse](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.VisualState)</span><span class="sxs-lookup"><span data-stu-id="eb93b-106">**Important APIs**: [RevealBrush class](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush), [RevealBackgroundBrush class](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbackgroundbrush), [RevealBorderBrush class](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealborderbrush), [RevealBrushHelper class](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrushhelper), [VisualState class](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.VisualState)</span></span>
 
-<span data-ttu-id="8e9f3-107">Das Verhalten von Einblendungen zeigt den klickbaren Inhalt des Containers an, wenn der Mauszeiger in der Nähe ist.</span><span class="sxs-lookup"><span data-stu-id="8e9f3-107">The Reveal behavior does this by revealing the clickable content’s container when the pointer is nearby.</span></span>
+## <a name="how-it-works"></a><span data-ttu-id="eb93b-107">Funktionsweise</span><span class="sxs-lookup"><span data-stu-id="eb93b-107">How it works</span></span>
+<span data-ttu-id="eb93b-108">Reveal-highlight hebt interaktive Elemente hervor, indem der Container des Elements hervorgehoben wird, wenn sich der Mauszeiger nähert, wie in der folgenden Abbildung dargestellt:</span><span class="sxs-lookup"><span data-stu-id="eb93b-108">Reveal highlight calls attention to interactive elements by revealing the element's container when the pointer is nearby, as shown in this illustration:</span></span>
 
 ![Reveal Visual](images/Nav_Reveal_Animation.gif)
 
-<span data-ttu-id="8e9f3-109">Da durch Einblendungen die ausgeblendeten Rahmen um Objekte herum angezeigt werden, entwickeln Benutzer ein besseres Verständnis von dem Raum, mit dem diese Objekte interagieren. Darüber hinaus erfahren sie dadurch, welche Aktionen verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="8e9f3-109">By exposing the hidden borders around objects, Reveal gives users a better understanding of the space that they are interacting with, and helps them understand the actions available.</span></span> <span data-ttu-id="8e9f3-110">Dies ist besonders bei Listensteuerelementen und Gruppen von Schaltflächen wichtig.</span><span class="sxs-lookup"><span data-stu-id="8e9f3-110">This is especially important in list controls and groupings of buttons.</span></span>
+<span data-ttu-id="eb93b-110">Da durch Einblendungen die ausgeblendeten Rahmen um Objekte herum angezeigt werden, entwickeln Benutzer ein besseres Verständnis von dem Raum, mit dem diese Objekte interagieren. Darüber hinaus erfahren sie dadurch, welche Aktionen verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="eb93b-110">By exposing the hidden borders around objects, Reveal gives users a better understanding of the space that they are interacting with, and helps them understand the actions available.</span></span> <span data-ttu-id="eb93b-111">Dies ist besonders bei Listensteuerelementen und Gruppen von Schaltflächen wichtig.</span><span class="sxs-lookup"><span data-stu-id="eb93b-111">This is especially important in list controls and groupings of buttons.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="8e9f3-111">Beispiele</span><span class="sxs-lookup"><span data-stu-id="8e9f3-111">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="eb93b-112">Beispiele</span><span class="sxs-lookup"><span data-stu-id="eb93b-112">Examples</span></span>
 
 <table>
-<th align="left"><span data-ttu-id="8e9f3-112">XAML-Steuerelementekatalog</span><span class="sxs-lookup"><span data-stu-id="8e9f3-112">XAML Controls Gallery</span></span><th>
+<th align="left"><span data-ttu-id="eb93b-113">XAML-Steuerelementekatalog</span><span class="sxs-lookup"><span data-stu-id="eb93b-113">XAML Controls Gallery</span></span><th>
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p><span data-ttu-id="8e9f3-113">Wenn Sie die App <strong style="font-weight: semi-bold">XAML-Steuerelementekatalog</strong> installiert haben, klicken Sie hier, um <a href="xamlcontrolsgallery:/item/Reveal">die App zu öffnen und Einblendungen in Aktion zu sehen</a>.</span><span class="sxs-lookup"><span data-stu-id="8e9f3-113">If you have the <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> app installed, click here to <a href="xamlcontrolsgallery:/item/Reveal">open the app and see Reveal in action</a>.</span></span></p>
+    <p><span data-ttu-id="eb93b-114">Wenn Sie die App <strong style="font-weight: semi-bold">XAML-Steuerelementekatalog</strong> installiert haben, klicken Sie hier, um <a href="xamlcontrolsgallery:/item/Reveal">die App zu öffnen und Einblendungen in Aktion zu sehen</a>.</span><span class="sxs-lookup"><span data-stu-id="eb93b-114">If you have the <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> app installed, click here to <a href="xamlcontrolsgallery:/item/Reveal">open the app and see Reveal in action</a>.</span></span></p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT"><span data-ttu-id="8e9f3-114">Erwerben Sie die XAML-Steuerelementekatalog-App (Microsoft Store)</span><span class="sxs-lookup"><span data-stu-id="8e9f3-114">Get the XAML Controls Gallery app (Microsoft Store)</span></span></a></li>
-    <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics"><span data-ttu-id="8e9f3-115">Erwerben Sie den Quellcode (GitHub)</span><span class="sxs-lookup"><span data-stu-id="8e9f3-115">Get the source code (GitHub)</span></span></a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT"><span data-ttu-id="eb93b-115">Erwerben Sie die XAML-Steuerelementekatalog-App (Microsoft Store)</span><span class="sxs-lookup"><span data-stu-id="eb93b-115">Get the XAML Controls Gallery app (Microsoft Store)</span></span></a></li>
+    <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics"><span data-ttu-id="eb93b-116">Erwerben Sie den Quellcode (GitHub)</span><span class="sxs-lookup"><span data-stu-id="eb93b-116">Get the source code (GitHub)</span></span></a></li>
     </ul>
 </td>
 </tr>
 </table>
 
-## <a name="video-summary"></a><span data-ttu-id="8e9f3-116">Video-Zusammenfassung</span><span class="sxs-lookup"><span data-stu-id="8e9f3-116">Video summary</span></span>
+## <a name="video-summary"></a><span data-ttu-id="eb93b-117">Video-Zusammenfassung</span><span class="sxs-lookup"><span data-stu-id="eb93b-117">Video summary</span></span>
 
 > [!VIDEO https://channel9.msdn.com/Events/Windows/Windows-Developer-Day-Fall-Creators-Update/WinDev013/player]
 
-## <a name="reveal-and-the-fluent-design-system"></a><span data-ttu-id="8e9f3-117">Einblendungen und das Fluent Design-System</span><span class="sxs-lookup"><span data-stu-id="8e9f3-117">Reveal and the Fluent Design System</span></span>
+## <a name="how-to-use-it"></a><span data-ttu-id="eb93b-118">Verwendung</span><span class="sxs-lookup"><span data-stu-id="eb93b-118">How to use it</span></span>
 
- <span data-ttu-id="8e9f3-118">Mit dem Fluent Design-System erstellen Sie moderne Oberflächen, die Licht, Tiefe, Bewegung, Material und Skalierungsmöglichkeiten beinhalten.</span><span class="sxs-lookup"><span data-stu-id="8e9f3-118">The Fluent Design System helps you create modern, bold UI that incorporates light, depth, motion, material, and scale.</span></span> <span data-ttu-id="8e9f3-119">„Einblendungen” ist eine Komponente des Fluent Design-Systems, die Lichteffekte in Ihrer App ermöglicht.</span><span class="sxs-lookup"><span data-stu-id="8e9f3-119">Reveal is a Fluent Design System component that adds light to your app.</span></span> <span data-ttu-id="8e9f3-120">Weitere Informationen finden Sie in der [Fluent Design für UWP-Übersicht](../fluent-design-system/index.md).</span><span class="sxs-lookup"><span data-stu-id="8e9f3-120">To learn more, see the [Fluent Design for UWP overview](../fluent-design-system/index.md).</span></span>
+<span data-ttu-id="eb93b-119">„Reveal” funktioniert automatisch bei einigen Steuerelementen.</span><span class="sxs-lookup"><span data-stu-id="eb93b-119">Reveal automatically works for some controls.</span></span> <span data-ttu-id="eb93b-120">Für andere Steuerelemente können Sie „Reveal” aktivieren, indem Sie dem Steuerelement einen speziellen Stil zuordnen, wie im Abschnitt [Aktivieren von „Reveal” für andere Steuerelemente](#enabling-reveal-on-other-controls) und [Aktivieren von „Reveal” für allgemeine Steuerelemente](#enabling-reveal-on-custom-controls) dieses Artikels aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="eb93b-120">For other controls, you can enable reveal by assigning a special style to the control, as described in the [Enabling Reveal on other controls](#enabling-reveal-on-other-controls) and [Enabling Reveal on custom controls](#enabling-reveal-on-custom-controls) sections of this article.</span></span>
 
-## <a name="how-to-use-it"></a><span data-ttu-id="8e9f3-121">Verwendung</span><span class="sxs-lookup"><span data-stu-id="8e9f3-121">How to use it</span></span>
+## <a name="controls-that-automatically-use-reveal"></a><span data-ttu-id="eb93b-121">Steuerelemente, die „Reveal” automatisch verwenden</span><span class="sxs-lookup"><span data-stu-id="eb93b-121">Controls that automatically use Reveal</span></span>
 
-<span data-ttu-id="8e9f3-122">Einblendungen funktionieren automatisch bei einigen Steuerelementen.</span><span class="sxs-lookup"><span data-stu-id="8e9f3-122">Reveal automatically works for some controls.</span></span> <span data-ttu-id="8e9f3-123">Für andere Steuerelemente können Sie Einblendungen aktivieren, indem Sie dem Steuerelement einen speziellen Stil zuweisen.</span><span class="sxs-lookup"><span data-stu-id="8e9f3-123">For other controls, you can enable reveal by assigning a special style to the control.</span></span>
+- [**<span data-ttu-id="eb93b-122">ListView</span><span class="sxs-lookup"><span data-stu-id="eb93b-122">ListView</span></span>**](../controls-and-patterns/lists.md)
+- [**<span data-ttu-id="eb93b-123">GridView</span><span class="sxs-lookup"><span data-stu-id="eb93b-123">GridView</span></span>**](../controls-and-patterns/lists.md)
+- [**<span data-ttu-id="eb93b-124">TreeView</span><span class="sxs-lookup"><span data-stu-id="eb93b-124">TreeView</span></span>**](../controls-and-patterns/tree-view.md)
+- [**<span data-ttu-id="eb93b-125">NavigationView</span><span class="sxs-lookup"><span data-stu-id="eb93b-125">NavigationView</span></span>**](../controls-and-patterns/navigationview.md)
+- [**<span data-ttu-id="eb93b-126">MediaTransportControl</span><span class="sxs-lookup"><span data-stu-id="eb93b-126">MediaTransportControl</span></span>**](../controls-and-patterns/media-playback.md)
+- [**<span data-ttu-id="eb93b-127">CommandBar</span><span class="sxs-lookup"><span data-stu-id="eb93b-127">CommandBar</span></span>**](../controls-and-patterns/app-bars.md)
 
-## <a name="controls-that-automatically-use-reveal"></a><span data-ttu-id="8e9f3-124">Steuerelemente, die Einblendungen automatisch verwenden</span><span class="sxs-lookup"><span data-stu-id="8e9f3-124">Controls that automatically use Reveal</span></span>
+<span data-ttu-id="eb93b-128">Die folgenden Abbildungen zeigen die Auswirkungen von „Reveal” auf verschiedene Steuerelemente:</span><span class="sxs-lookup"><span data-stu-id="eb93b-128">These illustrations show the reveal effect on several different controls:</span></span>
 
-- [**<span data-ttu-id="8e9f3-125">ListView</span><span class="sxs-lookup"><span data-stu-id="8e9f3-125">ListView</span></span>**](../controls-and-patterns/lists.md)
-- [**<span data-ttu-id="8e9f3-126">GridView</span><span class="sxs-lookup"><span data-stu-id="8e9f3-126">GridView</span></span>**](../controls-and-patterns/lists.md)
-- [**<span data-ttu-id="8e9f3-127">TreeView</span><span class="sxs-lookup"><span data-stu-id="8e9f3-127">TreeView</span></span>**](../controls-and-patterns/tree-view.md)
-- [**<span data-ttu-id="8e9f3-128">NavigationView</span><span class="sxs-lookup"><span data-stu-id="8e9f3-128">NavigationView</span></span>**](../controls-and-patterns/navigationview.md)
-- [**<span data-ttu-id="8e9f3-129">AutosuggestBox</span><span class="sxs-lookup"><span data-stu-id="8e9f3-129">AutosuggestBox</span></span>**](../controls-and-patterns/auto-suggest-box.md)
-- [**<span data-ttu-id="8e9f3-130">MediaTransportControl</span><span class="sxs-lookup"><span data-stu-id="8e9f3-130">MediaTransportControl</span></span>**](../controls-and-patterns/media-playback.md)
-- [**<span data-ttu-id="8e9f3-131">CommandBar</span><span class="sxs-lookup"><span data-stu-id="8e9f3-131">CommandBar</span></span>**](../controls-and-patterns/app-bars.md)
-- [**<span data-ttu-id="8e9f3-132">ComboBox</span><span class="sxs-lookup"><span data-stu-id="8e9f3-132">ComboBox</span></span>**](../controls-and-patterns/lists.md)
+![Beispiele für „Reveal”](images/RevealExamples_Collage.png)
 
-<span data-ttu-id="8e9f3-133">Die folgenden Abbildungen zeigen die Auswirkungen von Einblendungen auf verschiedene Steuerelemente:</span><span class="sxs-lookup"><span data-stu-id="8e9f3-133">These illustrations show the reveal effect on several different controls:</span></span>
 
-![Beispiele für Einblendungen](images/RevealExamples_Collage.png)
+## <a name="enabling-reveal-on-other-controls"></a><span data-ttu-id="eb93b-130">Aktivieren von „Reveal” für andere Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="eb93b-130">Enabling Reveal on other controls</span></span>
 
-## <a name="enabling-reveal-on-other-common-controls"></a><span data-ttu-id="8e9f3-135">Aktivieren von Einblendungen für andere allgemeine Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="8e9f3-135">Enabling Reveal on other common controls</span></span>
+<span data-ttu-id="eb93b-131">Für Szenarien, in denen Einblendungen angewendet werden sollten (diese Steuerelemente sind Hauptinhalt und/oder werden in einer Liste oder Auflistungsausrichtung verwendet), haben wir optionale Ressourcenformate bereitgestellt, mithilfe derer Sie Einblendungen für solche Situationen aktivieren können.</span><span class="sxs-lookup"><span data-stu-id="eb93b-131">If you have a scenario where Reveal should be applied (these controls are main content and/or are used in a list or collection orientation), we've provided opt-in resource styles that allow you to enable Reveal for those types of situations.</span></span>
 
-<span data-ttu-id="8e9f3-136">Für Szenarien, in denen Einblendungen angewendet werden sollten (diese Steuerelemente sind Hauptinhalt und/oder werden in einer Liste oder Auflistungsausrichtung verwendet), haben wir optionale Ressourcenformate bereitgestellt, mithilfe derer Sie Einblendungen für solche Situationen aktivieren können.</span><span class="sxs-lookup"><span data-stu-id="8e9f3-136">If you have a scenario where Reveal should be applied (these controls are main content and/or are used in a list or collection orientation), we've provided opt-in resource styles that allow you to enable Reveal for those types of situations.</span></span>
+<span data-ttu-id="eb93b-132">Diese Steuerelemente verfügen nicht standardmäßig über Einblendungen, da sie kleinere Steuerelemente sind, die in der Regel als Hilfssteuerelemente für die zentralen Punkte Ihrer Anwendung dienen. Alle Apps sind jedoch verschieden, und wenn diese Steuerelemente in Ihrer App am meisten verwendet werden, stehen Ihnen einige Formate als Hilfe zur Verfügung:</span><span class="sxs-lookup"><span data-stu-id="eb93b-132">These controls do not have Reveal by default as they are smaller controls that are usually helper controls to the main focal points of your application; but every app is different, and if these controls are used the most in your app, we've provided some styles to aid with that:</span></span>
 
-<span data-ttu-id="8e9f3-137">Diese Steuerelemente verfügen nicht standardmäßig über Einblendungen, da sie kleinere Steuerelemente sind, die in der Regel als Hilfssteuerelemente für die zentralen Punkte Ihrer Anwendung dienen. Alle Apps sind jedoch verschieden, und wenn diese Steuerelemente in Ihrer App am meisten verwendet werden, stehen Ihnen einige Formate als Hilfe zur Verfügung:</span><span class="sxs-lookup"><span data-stu-id="8e9f3-137">These controls do not have Reveal by default as they are smaller controls that are usually helper controls to the main focal points of your application; but every app is different, and if these controls are used the most in your app, we've provided some styles to aid with that:</span></span>
-
-| <span data-ttu-id="8e9f3-138">Name des Steuerelements</span><span class="sxs-lookup"><span data-stu-id="8e9f3-138">Control Name</span></span>   | <span data-ttu-id="8e9f3-139">Ressourcenname</span><span class="sxs-lookup"><span data-stu-id="8e9f3-139">Resource Name</span></span> |
+| <span data-ttu-id="eb93b-133">Name des Steuerelements</span><span class="sxs-lookup"><span data-stu-id="eb93b-133">Control Name</span></span>   | <span data-ttu-id="eb93b-134">Ressourcenname</span><span class="sxs-lookup"><span data-stu-id="eb93b-134">Resource Name</span></span> |
 |----------|:-------------:|
-| <span data-ttu-id="8e9f3-140">Button</span><span class="sxs-lookup"><span data-stu-id="8e9f3-140">Button</span></span> |  <span data-ttu-id="8e9f3-141">ButtonRevealStyle</span><span class="sxs-lookup"><span data-stu-id="8e9f3-141">ButtonRevealStyle</span></span> |
-| <span data-ttu-id="8e9f3-142">ToggleButton</span><span class="sxs-lookup"><span data-stu-id="8e9f3-142">ToggleButton</span></span> | <span data-ttu-id="8e9f3-143">ToggleButtonRevealStyle</span><span class="sxs-lookup"><span data-stu-id="8e9f3-143">ToggleButtonRevealStyle</span></span> |
-| <span data-ttu-id="8e9f3-144">RepeatButton</span><span class="sxs-lookup"><span data-stu-id="8e9f3-144">RepeatButton</span></span> | <span data-ttu-id="8e9f3-145">RepeatButtonRevealStyle</span><span class="sxs-lookup"><span data-stu-id="8e9f3-145">RepeatButtonRevealStyle</span></span> |
-| <span data-ttu-id="8e9f3-146">AppBarButton</span><span class="sxs-lookup"><span data-stu-id="8e9f3-146">AppBarButton</span></span> | <span data-ttu-id="8e9f3-147">AppBarButtonRevealStyle</span><span class="sxs-lookup"><span data-stu-id="8e9f3-147">AppBarButtonRevealStyle</span></span> |
-| <span data-ttu-id="8e9f3-148">SemanticZoom</span><span class="sxs-lookup"><span data-stu-id="8e9f3-148">SemanticZoom</span></span> | <span data-ttu-id="8e9f3-149">SemanticZoomRevealStyle</span><span class="sxs-lookup"><span data-stu-id="8e9f3-149">SemanticZoomRevealStyle</span></span> |
+| <span data-ttu-id="eb93b-135">Button</span><span class="sxs-lookup"><span data-stu-id="eb93b-135">Button</span></span> |  <span data-ttu-id="eb93b-136">ButtonRevealStyle</span><span class="sxs-lookup"><span data-stu-id="eb93b-136">ButtonRevealStyle</span></span> |
+| <span data-ttu-id="eb93b-137">ToggleButton</span><span class="sxs-lookup"><span data-stu-id="eb93b-137">ToggleButton</span></span> | <span data-ttu-id="eb93b-138">ToggleButtonRevealStyle</span><span class="sxs-lookup"><span data-stu-id="eb93b-138">ToggleButtonRevealStyle</span></span> |
+| <span data-ttu-id="eb93b-139">RepeatButton</span><span class="sxs-lookup"><span data-stu-id="eb93b-139">RepeatButton</span></span> | <span data-ttu-id="eb93b-140">RepeatButtonRevealStyle</span><span class="sxs-lookup"><span data-stu-id="eb93b-140">RepeatButtonRevealStyle</span></span> |
+| <span data-ttu-id="eb93b-141">AppBarButton</span><span class="sxs-lookup"><span data-stu-id="eb93b-141">AppBarButton</span></span> | <span data-ttu-id="eb93b-142">AppBarButtonRevealStyle</span><span class="sxs-lookup"><span data-stu-id="eb93b-142">AppBarButtonRevealStyle</span></span> |
+| <span data-ttu-id="eb93b-143">AppBarToggleButton</span><span class="sxs-lookup"><span data-stu-id="eb93b-143">AppBarToggleButton</span></span> | <span data-ttu-id="eb93b-144">AppBarToggleButtonRevealStyle</span><span class="sxs-lookup"><span data-stu-id="eb93b-144">AppBarToggleButtonRevealStyle</span></span> |
+| <span data-ttu-id="eb93b-145">GridViewItem (Anzeigen über dem Inhalt)</span><span class="sxs-lookup"><span data-stu-id="eb93b-145">GridViewItem (Reveal overtop of content)</span></span> | <span data-ttu-id="eb93b-146">GridViewItemRevealBackgroundShowsAboveContentStyle</span><span class="sxs-lookup"><span data-stu-id="eb93b-146">GridViewItemRevealBackgroundShowsAboveContentStyle</span></span> |
 
-<span data-ttu-id="8e9f3-150">Um diese Formate anzuwenden, aktualisieren Sie einfach folgendermaßen die Eigenschaft „Style”:</span><span class="sxs-lookup"><span data-stu-id="8e9f3-150">To apply these styles, simply update the Style property like so:</span></span>
+<span data-ttu-id="eb93b-147">Um diese Formate anzuwenden, legen Sie die Eigenschaft [Style](/uwp/api/Windows.UI.Xaml.Style) folgendermaßen fest:</span><span class="sxs-lookup"><span data-stu-id="eb93b-147">To apply these styles, simply set the control's [Style](/uwp/api/Windows.UI.Xaml.Style) property:</span></span>
 
-```XAML
+```xaml
 <Button Content="Button Content" Style="{StaticResource ButtonRevealStyle}"/>
 ```
 
-## <a name="enabling-reveal-on-custom-controls"></a><span data-ttu-id="8e9f3-151">Aktivieren von Einblendungen für benutzerdefinierte Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="8e9f3-151">Enabling Reveal on custom controls</span></span>
+### <a name="reveal-in-themes"></a><span data-ttu-id="eb93b-148">Einblenden in Designs</span><span class="sxs-lookup"><span data-stu-id="eb93b-148">Reveal in themes</span></span>
 
-<span data-ttu-id="8e9f3-152">Berücksichtigen Sie bei der Entscheidung, ob das benutzerdefinierte Steuerelement Einblendungen erhalten soll oder nicht, ob Sie eine Gruppierung von interaktiven Elementen benötigen, die sich alle auf eine übergeordnete Feature oder Aktion beziehen, die Sie in Ihrer App ausführen möchten.</span><span class="sxs-lookup"><span data-stu-id="8e9f3-152">The general rule to think about when deciding whether or not your custom control should get Reveal, is you must have a grouping of interactive elements that all relate to an overarching feature or action you wish to perform in your app.</span></span>
+<span data-ttu-id="eb93b-149">Einblenden ändert sich je nach angefordertem Design des Steuerelements, der App oder der Einstellung des Benutzers.</span><span class="sxs-lookup"><span data-stu-id="eb93b-149">Reveal changes slightly depending on the requested theme of the control, app or user setting.</span></span> <span data-ttu-id="eb93b-150">Im dunklen Design ist das Licht des Rahmens und der Anzeige weiß, währen in hellem Design nur der Rahmen hellgrau angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="eb93b-150">In Dark theme Reveal's Border and Hover light is white, but in Light theme just the Borders darken to a light gray.</span></span>
 
-<span data-ttu-id="8e9f3-153">Beispielsweise sind NavigationView-Elemente mit der Seitennavigation verknüpft.</span><span class="sxs-lookup"><span data-stu-id="8e9f3-153">For example, NavigationView's items are related to page navigation.</span></span> <span data-ttu-id="8e9f3-154">CommandBar-Schaltflächen beziehen sich auf Menüaktionen oder Feature-Aktionen.</span><span class="sxs-lookup"><span data-stu-id="8e9f3-154">CommandBar's buttons relate to menu actions or page feature actions.</span></span> <span data-ttu-id="8e9f3-155">Die MediaTransportControl-Schaltflächen unterhalb beziehen sich auf das Medium, das wiedergegeben wird.</span><span class="sxs-lookup"><span data-stu-id="8e9f3-155">MediaTransportControl's buttons beneath all relate to the media being played.</span></span>
+![helles und dunkles Einblenden](images/Dark_vs_LightReveal.png)
 
-<span data-ttu-id="8e9f3-156">Die Steuerelemente, die die Einblendung erhalten, müssen nicht miteinander verknüpft werden, sondern nur in einem HD-Bereich sein und einen größeren Zweck dienen.</span><span class="sxs-lookup"><span data-stu-id="8e9f3-156">The controls that get Reveal do not have to be related to each other, they just have to be in a high-density area, and serve a greater purpose.</span></span>
+<span data-ttu-id="eb93b-152">Um weiße Rahmen in einem hellen Design anzuzeigen, setzen Sie einfach das angeforderte Design für das Steuerelement auf dunkel fest.</span><span class="sxs-lookup"><span data-stu-id="eb93b-152">To enabled white borders while in light theme, simply set the requested theme on the control to Dark.</span></span>
 
-<span data-ttu-id="8e9f3-157">Rufen Sie zum Aktivieren von Einblendungen für benutzerdefinierte Steuerelemente oder Steuerelemente mit neuen Vorlagen das Format für dieses Steuerelement in den visuellen Zuständen der Vorlage für dieses Steuerelement auf, und legen Sie Einblendungen im Stammraster fest:</span><span class="sxs-lookup"><span data-stu-id="8e9f3-157">To enable Reveal on custom controls or re-templated controls, you can go into the style for that control in the Visual States of that control's template and specify Reveal on the root grid:</span></span>
+```xaml
+<Grid RequestedTheme="Dark">
+    <Button Content="Button" Click="Button_Click" Style="{ThemeResource ButtonRevealStyle}"/>
+</Grid>
+```
+
+<span data-ttu-id="eb93b-153">Oder ändern Sie das „TargetTheme” des „RevealBorderBrush” auf Dunkel.</span><span class="sxs-lookup"><span data-stu-id="eb93b-153">Or change the TargetTheme on the RevealBorderBrush to Dark.</span></span> <span data-ttu-id="eb93b-154">Beachten Sie Folgendes!</span><span class="sxs-lookup"><span data-stu-id="eb93b-154">Remember!</span></span> <span data-ttu-id="eb93b-155">Wenn „TargetTheme” auf dunkel festgelegt ist, wird Einblenden weiß angezeigt. Wenn es auf „Light” festgelegt ist, werden die Rahmen grau angezeigt.</span><span class="sxs-lookup"><span data-stu-id="eb93b-155">If the TargetTheme is set to Dark, then Reveal will be white, but if it's set to Light, Reveal's borders will be gray.</span></span>
+
+```xaml
+ <RevealBorderBrush x:Key="MyLightBorderBrush" TargetTheme="Dark" Color="{ThemeResource SystemAccentColor}" FallbackColor="{ThemeResource SystemAccentColor}" />
+```
+
+## <a name="enabling-reveal-on-custom-controls"></a><span data-ttu-id="eb93b-156">Aktivieren von „Reveal” für benutzerdefinierte Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="eb93b-156">Enabling Reveal on custom controls</span></span>
+
+<span data-ttu-id="eb93b-157">Sie können „Reveal” für benutzerdefinierte Steuerelemente hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="eb93b-157">You can add Reveal to custom controls.</span></span> <span data-ttu-id="eb93b-158">Bevor Sie dies tun, ist es hilfreich, etwas mehr über die Funktionsweise des Effekts von „Reveal” zu erfahren.</span><span class="sxs-lookup"><span data-stu-id="eb93b-158">Before you do, it's helpful to know a little more about about how the Reveal effect works.</span></span> <span data-ttu-id="eb93b-159">„Reveal” besteht aus zwei separaten Effekten: **Reveal border** (Rahmen) und **Reveal hover** (Draufzeigen).</span><span class="sxs-lookup"><span data-stu-id="eb93b-159">Reveal is made up of two separate effects: **Reveal border** and **Reveal hover**.</span></span>
+
+- <span data-ttu-id="eb93b-160">**Rahmen** zeigt die Rahmen der interaktiven Elemente an, wenn sich ein Zeiger nähert.</span><span class="sxs-lookup"><span data-stu-id="eb93b-160">**Border** shows the borders of interactive elements when a pointer is nearby by.</span></span> <span data-ttu-id="eb93b-161">Dadurch können Objekte in der Nähe ähnliche Aktionen wie das aktuell fokussierte Objekt durchführen.</span><span class="sxs-lookup"><span data-stu-id="eb93b-161">This effect shows you that those nearby objects can take actions similar to the one currently focused.</span></span>
+- <span data-ttu-id="eb93b-162">Durch **Draufzeigen** wird die angedeutete oder fokussierte Form mit einem leichten Schein umgeben und beim Anklicken wird eine gedrückte Animation angezeigt.</span><span class="sxs-lookup"><span data-stu-id="eb93b-162">**Hover**  applies a gentle halo shape around the hovered or focused item and plays a press animation on click.</span></span> 
+
+![Ebenen einblenden](images/RevealLayers.png)
+
+<!-- The Reveal recipe breakdown is:
+
+- Border reveal will be on top of all content but on the designated edges
+- Text and content will be displayed directly under Border Reveal
+- Hover reveal will be beneath content and text
+- The backplate (that turns on and enables Hover Reveal)
+- The background (background of control) -->
+
+
+<span data-ttu-id="eb93b-164">Diese Effekte werden durch zwei Pinselelemente definiert:</span><span class="sxs-lookup"><span data-stu-id="eb93b-164">These effects are defined by two brushes:</span></span> 
+* <span data-ttu-id="eb93b-165">„Reveal” für Rahmen wird mithilfe von **RevealBorderBrush** definiert</span><span class="sxs-lookup"><span data-stu-id="eb93b-165">Border reveal is defined by  **RevealBorderBrush**</span></span>
+* <span data-ttu-id="eb93b-166">„Reveal” für das Draufzeigen wird mithilfe von **RevealBackgroundBrush** definiert</span><span class="sxs-lookup"><span data-stu-id="eb93b-166">Hover reveal is defined by **RevealBackgroundBrush**</span></span>
+
+```xaml
+<RevealBorderBrush x:Key="MyRevealBorderBrush" TargetTheme="Light" Color="{ThemeResource SystemAccentColor}" FallbackColor="{ThemeResource SystemAccentColor}"/>
+<RevealBackgroundBrush x:Key="MyRevealBackgroundBrush" TargetTheme="Light" Color="{StaticResource SystemAccentColor}" FallbackColor="{StaticResource SystemAccentColor}" />
+```
+<span data-ttu-id="eb93b-167">In den meisten Fällen wird „Reveal” für bestimmte Steuerelemente von uns automatisch aktiviert.</span><span class="sxs-lookup"><span data-stu-id="eb93b-167">In most cases we handle the usage of both of them by turning Reveal on automatically for a certain controls.</span></span> <span data-ttu-id="eb93b-168">Andere Steuerelemente müssen jedoch über das Anwenden eines Stils oder das Ändern der Vorlagen direkt aktiviert.</span><span class="sxs-lookup"><span data-stu-id="eb93b-168">However, other controls will need to be enabled through applying a style, or changing their templates directly.</span></span>
+
+### <a name="when-to-add-reveal"></a><span data-ttu-id="eb93b-169">Wann sollte „Reveal” hinzugefügt werden</span><span class="sxs-lookup"><span data-stu-id="eb93b-169">When to add Reveal</span></span>
+<span data-ttu-id="eb93b-170">Sie können „Reveal” auf Ihre benutzerdefinierten Steuerelemente hinzufügen – es empfiehlt allerdings, den Typ des Steuerelements und sein Verhalten vorher festzulegen.</span><span class="sxs-lookup"><span data-stu-id="eb93b-170">You can add Reveal to your custom controls--but before you do, consider the type of control and how it behaves.</span></span> 
+* <span data-ttu-id="eb93b-171">Wenn Ihr benutzerdefiniertes Steuerelement ein interaktives Element ist und keine ähnlichen Steuerelemente auf der gleichen Oberfläche angezeigt werden (wie z.B. Menüelemente), benötigt das benutzerdefinierte Steuerelement wahrscheinlich keine Einblendung.</span><span class="sxs-lookup"><span data-stu-id="eb93b-171">If your custom control is a single interactive element and doesn't have similar controls sharing it's space (such as menu items in a menu), it's likely that your custom control doesn't need Reveal.</span></span>  
+* <span data-ttu-id="eb93b-172">Besitzen Sie eine Gruppe von verwandten interaktiven Inhalten oder Elementen, benötigen die Bereiche der App wahrscheinlich die Einblendung – dies wird häufig als [Steuerung](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/collection-commanding) der Oberfläche bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="eb93b-172">If you have a grouping of related interactive content or elements, then it's likely that that region of your app does need Reveal - this is commonly referred to as a [Commanding](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/collection-commanding) surface.</span></span>
+
+<span data-ttu-id="eb93b-173">Eine allein angezeigte Schaltfläche muss keine Einblendung verwenden, aber eine Reihe von Schaltflächen in einer Befehlsleiste sollte „Reveal” verwenden.</span><span class="sxs-lookup"><span data-stu-id="eb93b-173">For example, a button by itself shouldn't use reveal, but a set of buttons in a command bar should use Reveal.</span></span>
+
+<!-- For example, NavigationView's items are related to page navigation. CommandBar's buttons relate to menu actions or page feature actions. MediaTransportControl's buttons beneath all relate to the media being played. -->
+
+### <a name="using-the-control-template-to-add-reveal"></a><span data-ttu-id="eb93b-174">Hinzufügen von „Reveal” mithilfe der Steuerelementvorlage</span><span class="sxs-lookup"><span data-stu-id="eb93b-174">Using the control template to add Reveal</span></span> 
+<span data-ttu-id="eb93b-175">Um die Einblendung für benutzerdefinierte Steuerelemente oder Steuerelemente mit neuen Vorlagen zu aktivieren, ändern Sie die Steuerelementvorlage für das Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="eb93b-175">To enable Reveal on custom controls or re-templated controls, you modify the control's control template.</span></span> <span data-ttu-id="eb93b-176">Die meisten Steuerelementvorlagen besitzen ein Raster im Stammverzeichnis. Aktualisieren Sie [VisualState](/uwp/api/windows.ui.xaml.visualstate) des Stamm-Rasters, um die Einblendung zu verwenden:</span><span class="sxs-lookup"><span data-stu-id="eb93b-176">Most control templates have a grid at the root; update the [VisualState](/uwp/api/windows.ui.xaml.visualstate) of that root grid to use Reveal:</span></span>
 
 ```xaml
 <VisualState x:Name="PointerOver">
@@ -116,94 +163,17 @@ ms.lasthandoff: 01/08/2018
 </VisualState>
 ```
 
-<span data-ttu-id="8e9f3-158">Es ist wichtig zu beachten, dass zur Einblendung sowohl ein Pinsel als auch Setter in Visual State benötigt werden, um einwandfrei zu arbeiten.</span><span class="sxs-lookup"><span data-stu-id="8e9f3-158">It's important to note that Reveal needs both the brush and the setters in it's Visual State in order to work fully.</span></span> <span data-ttu-id="8e9f3-159">Das einfache Festlegen eines Steuerelements für Reveal-Pinselressourcen alleine aktivieren das Steuerelement nicht.</span><span class="sxs-lookup"><span data-stu-id="8e9f3-159">Simply setting a control's brush to one of our Reveal brush resources alone won't enable Reveal for that control.</span></span> <span data-ttu-id="8e9f3-160">Ziele oder Einstellungen zu verwenden ohne die Werte als Reveal-Pinsel festgelegt zu haben, aktiviert die Einblendung auch nicht.</span><span class="sxs-lookup"><span data-stu-id="8e9f3-160">Conversely, having only the targets or settings without the values being Reveal brushes will also not enable Reveal.</span></span>
+<span data-ttu-id="eb93b-177">Es ist wichtig zu beachten, dass zur Einblendung sowohl ein Pinsel als auch Setter in Visual State benötigt werden, um einwandfrei zu arbeiten.</span><span class="sxs-lookup"><span data-stu-id="eb93b-177">It's important to note that Reveal needs both the brush and the setters in it's Visual State to work correctly.</span></span> <span data-ttu-id="eb93b-178">Das einfache Festlegen eines Steuerelements für Reveal-Pinselressourcen alleine aktivieren das Steuerelement nicht.</span><span class="sxs-lookup"><span data-stu-id="eb93b-178">Simply setting a control's brush to one of our Reveal brush resources alone won't enable Reveal for that control.</span></span> <span data-ttu-id="eb93b-179">Ziele oder Einstellungen zu verwenden ohne die Werte als Reveal-Pinsel festgelegt zu haben, aktiviert die Einblendung auch nicht.</span><span class="sxs-lookup"><span data-stu-id="eb93b-179">Conversely, having only the targets or settings without the values being Reveal brushes will also not enable Reveal.</span></span>
 
-<span data-ttu-id="8e9f3-161">Wir haben eine Reihe von System-Reveal-Pinsels erstellt, mit denen Sie die Benutzeroberfläche anpassen können.</span><span class="sxs-lookup"><span data-stu-id="8e9f3-161">We've created a set of system Reveal brushes you can use to customize your UI.</span></span> <span data-ttu-id="8e9f3-162">Sie können z.B. den Pinsel **ButtonRevealBackground** zum Erstellen eines Hintergrunds für eine benutzerdefinierte Schaltfläche oder den Pinsel **ListViewItemRevealBackground** für benutzerdefinierte Listen und so weiter verwenden.</span><span class="sxs-lookup"><span data-stu-id="8e9f3-162">For example, you can use the **ButtonRevealBackground** brush to create a custom button background, or the **ListViewItemRevealBackground** brush for custom lists, and so on.</span></span>
+<span data-ttu-id="eb93b-180">Weitere Informationen zum Ändern von Steuerelementvorlagen finden Sie im Artikel [XAML-Steuerelementvorlagen](../controls-and-patterns/control-templates.md) Artikel.</span><span class="sxs-lookup"><span data-stu-id="eb93b-180">To learn more about modifying control templates, see the [XAML control templates](../controls-and-patterns/control-templates.md) article.</span></span>
 
-<span data-ttu-id="8e9f3-163">(Informationen zur Funktionsweise von Ressourcen in XAMl finden Sie im Artikel [Xaml-Ressourcenverzeichnis](../controls-and-patterns/resourcedictionary-and-xaml-resource-references.md).)</span><span class="sxs-lookup"><span data-stu-id="8e9f3-163">(To learn about how resources work in XAMl, check out the [Xaml Resource Dictionary](../controls-and-patterns/resourcedictionary-and-xaml-resource-references.md) article.)</span></span>
+<span data-ttu-id="eb93b-181">Wir haben eine Reihe von System-Reveal-Pinsels erstellt, mit denen Sie die Vorlagen anpassen können.</span><span class="sxs-lookup"><span data-stu-id="eb93b-181">We've created a set of system Reveal brushes you can use to customize your template.</span></span> <span data-ttu-id="eb93b-182">Sie können z.B. den Pinsel **ButtonRevealBackground** zum Erstellen eines Hintergrunds für eine benutzerdefinierte Schaltfläche oder den Pinsel **ListViewItemRevealBackground** für benutzerdefinierte Listen und so weiter verwenden.</span><span class="sxs-lookup"><span data-stu-id="eb93b-182">For example, you can use the **ButtonRevealBackground** brush to create a custom button background, or the **ListViewItemRevealBackground** brush for custom lists, and so on.</span></span> <span data-ttu-id="eb93b-183">(Informationen zur Funktionsweise von Ressourcen in XAMl finden Sie im Artikel [Xaml-Ressourcenverzeichnis](../controls-and-patterns/resourcedictionary-and-xaml-resource-references.md).)</span><span class="sxs-lookup"><span data-stu-id="eb93b-183">(To learn about how resources work in XAMl, check out the [Xaml Resource Dictionary](../controls-and-patterns/resourcedictionary-and-xaml-resource-references.md) article.)</span></span>
 
-### <a name="reveal-on-listview-controls-with-nested-buttons"></a><span data-ttu-id="8e9f3-164">Einblendung auf ListView-Steuerelementen mit geschachtelten Schaltflächen</span><span class="sxs-lookup"><span data-stu-id="8e9f3-164">Reveal on ListView controls with nested buttons</span></span>
+### <a name="full-template-example"></a><span data-ttu-id="eb93b-184">Vollständiges Vorlagenbeispiel</span><span class="sxs-lookup"><span data-stu-id="eb93b-184">Full template example</span></span>
 
-<span data-ttu-id="8e9f3-165">Besitzen Sie ein [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) und Schaltflächen oder aufgerufene Inhalte, die innerhalb eines [ListViewItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewitem)-Elements geschachtelt sind, sollten Sie die Einblendung für die geschachtelten Elemente aktivieren.</span><span class="sxs-lookup"><span data-stu-id="8e9f3-165">If you have a [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) and also have buttons or invokable content nested inside its [ListViewItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewitem) elements, you should enable Reveal for the nested items.</span></span>
+<span data-ttu-id="eb93b-185">Hier sehen Sie eine gesamte Vorlage und wie eine Schaltfläche zum Einblenden aussehen würde:</span><span class="sxs-lookup"><span data-stu-id="eb93b-185">Here's an entire template for what a Reveal Button would look like:</span></span>
 
-<span data-ttu-id="8e9f3-166">Falls Sie Schaltflächen oder Schaltflächen ähnliche Steuerelemente in einem ListViewItem haben, legen Sie einfach die [Stil](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement#Windows_UI_Xaml_FrameworkElement_Style)-Eigenschaft des Steuerelements auf die statische Ressource **ButtonRevealStyle** fest.</span><span class="sxs-lookup"><span data-stu-id="8e9f3-166">In the case of Buttons, or button-like controls in a ListViewItem, simply set the control's  [Style](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement#Windows_UI_Xaml_FrameworkElement_Style) property to the **ButtonRevealStyle** static resource.</span></span> 
-
-![Geschachtelte Einblendungen](images/NestedListContent.png)
-
-<span data-ttu-id="8e9f3-168">Dieses Beispiel ermöglicht Einblendungen auf mehrere Schaltflächen in einem ListViewItem.</span><span class="sxs-lookup"><span data-stu-id="8e9f3-168">This example enables Reveal on several buttons inside a ListViewItem.</span></span> 
-
-```XAML
-<ListViewItem>
-    <StackPanel Orientation="Horizontal">
-        <TextBlock Margin="5">Test Text: lorem ipsum.</TextBlock>
-        <StackPanel Orientation="Horizontal">
-            <Button Content="&#xE71B;" FontFamily="Segoe MDL2 Assets" Width="45" Height="45" Margin="5" Style="{StaticResource ButtonRevealStyle}"/>
-            <Button Content="&#xE728;" FontFamily="Segoe MDL2 Assets" Width="45" Height="45" Margin="5" Style="{StaticResource ButtonRevealStyle}"/>
-            <Button Content="&#xE74D;" FontFamily="Segoe MDL2 Assets" Width="45" Height="45" Margin="5" Style="{StaticResource ButtonRevealStyle}"/>
-         </StackPanel>
-    </StackPanel>
-</ListViewItem>
-```
-
-### <a name="listviewitempresenter-with-reveal"></a><span data-ttu-id="8e9f3-169">ListViewItemPresenter mit Einblendungen</span><span class="sxs-lookup"><span data-stu-id="8e9f3-169">ListViewItemPresenter with Reveal</span></span>
-
-<span data-ttu-id="8e9f3-170">Listen werden in XAML besonders behandelt, und bei Einblendungen müssen wir Visual State-Manager für Einblendungen nur innerhalb des ListViewItemPresenters definieren:</span><span class="sxs-lookup"><span data-stu-id="8e9f3-170">Lists are a bit special in XAML, and for Reveal's case we'll have to define the Visual State Manager for Reveal only inside the ListViewItemPresenter:</span></span>
-
-```XAML
-<ListViewItemPresenter>
-<!-- ContentTransitions, SelectedForeground, etc. properties -->
-RevealBackground="{ThemeResource ListViewItemRevealBackground}"
-RevealBorderThickness="{ThemeResource ListViewItemRevealBorderThemeThickness}"
-RevealBorderBrush="{ThemeResource ListViewItemRevealBorderBrush}">
-    <VisualStateManager.VisualStateGroups>
-        <VisualStateGroup x:Name="CommonStates">
-        <VisualState x:Name="Normal" />
-        <VisualState x:Name="Selected" />
-        <VisualState x:Name="PointerOver">
-            <VisualState.Setters>
-                <Setter Target="Root.(RevealBrush.State)" Value="PointerOver" />
-            </VisualState.Setters>
-            </VisualState>
-            <VisualState x:Name="PointerOverSelected">
-                <VisualState.Setters>
-                    <Setter Target="Root.(RevealBrush.State)" Value="PointerOver" />
-                </VisualState.Setters>
-            </VisualState>
-            <VisualState x:Name="PointerOverPressed">
-                <VisualState.Setters>
-                    <Setter Target="Root.(RevealBrush.State)" Value="Pressed" />
-                </VisualState.Setters>
-            </VisualState>
-            <VisualState x:Name="Pressed">
-                <VisualState.Setters>
-                    <Setter Target="Root.(RevealBrush.State)" Value="Pressed" />
-                </VisualState.Setters>
-            </VisualState>
-            <VisualState x:Name="PressedSelected">
-                <VisualState.Setters>
-                    <Setter Target="Root.(RevealBrush.State)" Value="Pressed" />
-                </VisualState.Setters>
-            </VisualState>
-            </VisualStateGroup>
-                <VisualStateGroup x:Name="EnabledGroup">
-                    <VisualState x:Name="Enabled" />
-                    <VisualState x:Name="Disabled">
-                        <VisualState.Setters>
-                             <Setter Target="Root.RevealBorderThickness" Value="0"/>
-                        </VisualState.Setters>
-                    </VisualState>
-                </VisualStateGroup>
-    </VisualStateManager.VisualStateGroups>
-</ListViewItemPresenter>
-```
-
-<span data-ttu-id="8e9f3-171">Dies bedeutet ein Anfügen an das Ende der Eigenschaftssammlung innerhalb von ListViewItemPresenter mit den bestimmten Setter des Visual States für eine Einblendung.</span><span class="sxs-lookup"><span data-stu-id="8e9f3-171">This means appending to the end of the property collection within the ListViewItemPresenter with the Reveal specific Visual State setters.</span></span>
-
-### <a name="full-template-example"></a><span data-ttu-id="8e9f3-172">Vollständiges Vorlagenbeispiel</span><span class="sxs-lookup"><span data-stu-id="8e9f3-172">Full Template Example</span></span>
-
-<span data-ttu-id="8e9f3-173">Hier sehen Sie eine gesamte Vorlage und wie eine Schaltfläche zum Einblenden aussehen würde:</span><span class="sxs-lookup"><span data-stu-id="8e9f3-173">Here's an entire template for what a Reveal Button would look like:</span></span>
-
-```XAML
+```xaml
 <Style TargetType="Button" x:Key="ButtonStyle1">
     <Setter Property="Background" Value="{ThemeResource ButtonRevealBackground}" />
     <Setter Property="Foreground" Value="{ThemeResource ButtonForeground}" />
@@ -284,48 +254,39 @@ RevealBorderBrush="{ThemeResource ListViewItemRevealBorderBrush}">
 </Style>
 ```
 
-## <a name="dos-and-donts"></a><span data-ttu-id="8e9f3-174">Empfohlene und nicht empfohlene Vorgehensweisen</span><span class="sxs-lookup"><span data-stu-id="8e9f3-174">Do's and don'ts</span></span>
-- <span data-ttu-id="8e9f3-175">Verwenden Sie die Einblendung für Elemente, in denen der Benutzer Aktionen (Schaltflächen, Auswahl) ausführt</span><span class="sxs-lookup"><span data-stu-id="8e9f3-175">Do use Reveal on elements where the user can take action (buttons, selections)</span></span>
-- <span data-ttu-id="8e9f3-176">Verwenden Sie Einblendungen bei der Gruppierung von interaktiven Elementen, die nicht standardmäßig visuelle Trennzeichen haben (Listen, Befehlsleisten)</span><span class="sxs-lookup"><span data-stu-id="8e9f3-176">Do use Reveal in groupings of interactive elements that do not have visual separators by default (lists, command bars)</span></span>
-- <span data-ttu-id="8e9f3-177">Verwenden Sie Einblendungen in Bereichen mit vielen interaktiven Elementen</span><span class="sxs-lookup"><span data-stu-id="8e9f3-177">Do use Reveal in areas with a high density of interactive elements</span></span>
-- <span data-ttu-id="8e9f3-178">Verwenden Sie Einblendungen nicht auf statischen Inhalten (Hintergrund, Text)</span><span class="sxs-lookup"><span data-stu-id="8e9f3-178">Don’t use Reveal on static content (backgrounds, text)</span></span>
-- <span data-ttu-id="8e9f3-179">Verwenden Sie Einblendungen nicht in einzelnen, isolierten Situationen</span><span class="sxs-lookup"><span data-stu-id="8e9f3-179">Don’t use Reveal in one-off, isolated situations</span></span>
-- <span data-ttu-id="8e9f3-180">Verwenden Sie Einblendungen nicht auf sehr großen Elementen (größer als 500epx)</span><span class="sxs-lookup"><span data-stu-id="8e9f3-180">Don’t use Reveal on very large items (greater than 500epx)</span></span>
-- <span data-ttu-id="8e9f3-181">Verwenden Sie Einblendungen nicht bei sicherheitsbezogenen Entscheidungen, da es die Aufmerksamkeit von der Nachricht, die Sie an die Benutzer übermitteln möchten, weglenken kann.</span><span class="sxs-lookup"><span data-stu-id="8e9f3-181">Don’t use Reveal in security decisions, as it may draw attention away from the message you need to deliver to your user</span></span>
+### <a name="fine-tuning-the-reveal-effect-on-a-custom-control"></a><span data-ttu-id="eb93b-186">Optimieren des Effekts von „Reveal” für ein benutzerdefiniertes Steuerelement</span><span class="sxs-lookup"><span data-stu-id="eb93b-186">Fine-tuning the Reveal effect on a custom control</span></span> 
 
-## <a name="how-we-designed-reveal"></a><span data-ttu-id="8e9f3-182">Unser Einblendungs-Entwurfsansatz</span><span class="sxs-lookup"><span data-stu-id="8e9f3-182">How we designed Reveal</span></span>
+<span data-ttu-id="eb93b-187">Wenn Sie „Reveal” für ein benutzerdefiniertes oder neues Steuerelement oder eine benutzerdefinierte Befehlsoberfläche aktivieren, können diese Tipps den Effekt optimieren:</span><span class="sxs-lookup"><span data-stu-id="eb93b-187">When you enable reveal on a custom or re-templated control or a custom commanding surface, these tips can help you optimize the effect:</span></span>
+ 
+* <span data-ttu-id="eb93b-188">Auf benachbarten Elementen mit einer Größe, die nicht in Höhe oder Breite (insbesondere in Listen) ausgerichtet ist: entfernen Sie das Verhalten des Rahmens und aktivieren Sie die Rahmen nur für das Draufzeigen.</span><span class="sxs-lookup"><span data-stu-id="eb93b-188">On adjacent items with sizes that do not align either in height or width (particularly in lists): Remove the border approach behavior and keep the borders shown on hover only.</span></span>
+* <span data-ttu-id="eb93b-189">Für Befehlselemente, die häufig aktiviert oder deaktiviert werden: platzieren Sie den Pinsel für den Rahmen auf die Backplates der Elemente sowie deren Rahmen, um ihren Zustand zu betonen.</span><span class="sxs-lookup"><span data-stu-id="eb93b-189">For commanding items that frequently go in and out of the disabled state: Place the border approach brush on the elements' backplates as well as their borders to emphasize their state.</span></span>
+* <span data-ttu-id="eb93b-190">Für benachbarte Steuerelemente, die sich fast berühren: Fügen Sie einen Rand von einem Pixel zwischen den beiden Elementen hinzu.</span><span class="sxs-lookup"><span data-stu-id="eb93b-190">For adjacent commanding elements that are so close they touch: Add a 1px margin between the two elements.</span></span> 
 
-<span data-ttu-id="8e9f3-183">Es gibt zwei visuelle Hauptkomponenten für Einblendungen: das Verhalten **Einblenden durch Daraufzeigen** und das Verhalten **Rahmen einblenden**.</span><span class="sxs-lookup"><span data-stu-id="8e9f3-183">There are two main visual components to Reveal: the **Hover Reveal** behavior, and the **Border Reveal** behavior.</span></span>
+## <a name="dos-and-donts"></a><span data-ttu-id="eb93b-191">Empfohlene und nicht empfohlene Vorgehensweisen</span><span class="sxs-lookup"><span data-stu-id="eb93b-191">Do's and don'ts</span></span>
+- <span data-ttu-id="eb93b-192">Verwenden Sie „Reveal” für Elemente, in denen der Benutzer viele Aktionen (CommandBars, Navigationsmenüs) ausführt</span><span class="sxs-lookup"><span data-stu-id="eb93b-192">Do use Reveal on elements where the user can take many actions (CommandBars, Navigation menus)</span></span>
+- <span data-ttu-id="eb93b-193">Verwenden Sie „Reveal” bei der Gruppierung von interaktiven Elementen, die nicht standardmäßig visuelle Trennzeichen haben (Listen, Menübänder)</span><span class="sxs-lookup"><span data-stu-id="eb93b-193">Do use Reveal in groupings of interactive elements that do not have visual separators by default (lists, ribbons)</span></span>
+- <span data-ttu-id="eb93b-194">Verwenden Sie „Reveal” in Bereichen mit vielen interaktiven Elementen (Befehlszenarios)</span><span class="sxs-lookup"><span data-stu-id="eb93b-194">Do use Reveal in areas with a high density of interactive elements (commanding scenarios)</span></span>
+- <span data-ttu-id="eb93b-195">Fügen Sie einen Rand von einem Pixel zwischen Einblendungselementen hinzu</span><span class="sxs-lookup"><span data-stu-id="eb93b-195">Do put 1px margin spaces between Reveal items</span></span>
+- <span data-ttu-id="eb93b-196">Verwenden Sie „Reveal” nicht auf statischen Inhalten (Hintergrund, Text)</span><span class="sxs-lookup"><span data-stu-id="eb93b-196">Don’t use Reveal on static content (backgrounds, text)</span></span>
+- <span data-ttu-id="eb93b-197">Verwenden Sie „Reveal” nicht auf Popups, Flyouts oder Dropdownlisten</span><span class="sxs-lookup"><span data-stu-id="eb93b-197">Don't use Reveal on popups, flyouts or dropdowns</span></span>
+- <span data-ttu-id="eb93b-198">Verwenden Sie „Reveal” nicht in einzelnen, isolierten Situationen</span><span class="sxs-lookup"><span data-stu-id="eb93b-198">Don’t use Reveal in one-off, isolated situations</span></span>
+- <span data-ttu-id="eb93b-199">Verwenden Sie Einblendungen nicht auf sehr großen Elementen (größer als 500epx)</span><span class="sxs-lookup"><span data-stu-id="eb93b-199">Don’t use Reveal on very large items (greater than 500epx)</span></span>
+- <span data-ttu-id="eb93b-200">Verwenden Sie „Reveal” nicht bei sicherheitsbezogenen Entscheidungen, da es die Aufmerksamkeit von der Nachricht, die Sie an die Benutzer übermitteln möchten, weglenken kann.</span><span class="sxs-lookup"><span data-stu-id="eb93b-200">Don’t use Reveal in security decisions, as it may draw attention away from the message you need to deliver to your user</span></span>
 
-![Ebenen einblenden](images/RevealLayers.png)
 
-<span data-ttu-id="8e9f3-185">Das Verhalten „Einblenden durch Daraufzeigen” ist direkt mit dem Inhalt verbunden, auf den gezeigt wird (mit Zeiger- oder Fokuseingaben). Dabei wird ein leichter Lichthof um das Element herum eingeblendet, auf das gezeigt oder das fokussiert wird, sodass Sie wissen, dass Sie damit interagieren können.</span><span class="sxs-lookup"><span data-stu-id="8e9f3-185">The Hover Reveal is tied directly to the content being hovered over (via pointer or focus input), and applies a gentle halo shape around the hovered or focused item, letting you know you can interact with it.</span></span>
+## <a name="get-the-sample-code"></a><span data-ttu-id="eb93b-201">Beispielcode herunterladen</span><span class="sxs-lookup"><span data-stu-id="eb93b-201">Get the sample code</span></span>
 
-<span data-ttu-id="8e9f3-186">Das Verhalten „Rahmen einblenden” wird auf das fokussierte Element und andere Elemente in dessen Nähe angewendet.</span><span class="sxs-lookup"><span data-stu-id="8e9f3-186">The Border Reveal is applied to the focused item and items nearby.</span></span> <span data-ttu-id="8e9f3-187">Dadurch erfahren Sie, dass diese Objekte in der Nähe ähnliche Aktionen wie das aktuell fokussierte Objekt durchführen können.</span><span class="sxs-lookup"><span data-stu-id="8e9f3-187">This shows you that those nearby objects can take actions similar to the one currently focused.</span></span>
+- <span data-ttu-id="eb93b-202">[Beispiel eines XAML-Steuerelementkatalogs](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) – Hier werden alle XAML-Steuerelemente in einem interaktiven Format dargestellt.</span><span class="sxs-lookup"><span data-stu-id="eb93b-202">[XAML Controls Gallery sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) - See all the XAML controls in an interactive format.</span></span>
 
-<span data-ttu-id="8e9f3-188">Die Aufschlüsselung der Anleitung für Einblendungen sieht folgendermaßen aus:</span><span class="sxs-lookup"><span data-stu-id="8e9f3-188">The Reveal recipe breakdown is:</span></span>
+## <a name="reveal-and-the-fluent-design-system"></a><span data-ttu-id="eb93b-203">„Reveal” und das Fluent Design-System</span><span class="sxs-lookup"><span data-stu-id="eb93b-203">Reveal and the Fluent Design System</span></span>
 
-- <span data-ttu-id="8e9f3-189">Das Verhalten „Rahmen einblenden” befindet sich über dem gesamten Inhalt, jedoch an den angegebenen Rändern.</span><span class="sxs-lookup"><span data-stu-id="8e9f3-189">Border Reveal will be on top of all content but on the designated edges</span></span>
-- <span data-ttu-id="8e9f3-190">Text und Inhalt werden direkt unter dem Verhalten „Rahmen einblenden” angezeigt.</span><span class="sxs-lookup"><span data-stu-id="8e9f3-190">Text and content will be displayed directly under Border Reveal</span></span>
-- <span data-ttu-id="8e9f3-191">Das Verhalten „Einblenden durch Daraufzeigen” befindet sich unterhalb von Inhalt und Text.</span><span class="sxs-lookup"><span data-stu-id="8e9f3-191">Hover Reveal will be beneath content and text</span></span>
-- <span data-ttu-id="8e9f3-192">Die Backplate (die das Verhalten „Rahmen einblenden” aktiviert)</span><span class="sxs-lookup"><span data-stu-id="8e9f3-192">The backplate (that turns on and enables Hover Reveal)</span></span>
-- <span data-ttu-id="8e9f3-193">Der Hintergrund (Hintergrund des Steuerelements)</span><span class="sxs-lookup"><span data-stu-id="8e9f3-193">The background (background of control)</span></span>
+ <span data-ttu-id="eb93b-204">Mit dem Fluent Design-System erstellen Sie moderne Oberflächen, die Licht, Tiefe, Bewegung, Material und Skalierungsmöglichkeiten beinhalten.</span><span class="sxs-lookup"><span data-stu-id="eb93b-204">The Fluent Design System helps you create modern, bold UI that incorporates light, depth, motion, material, and scale.</span></span> <span data-ttu-id="eb93b-205">„Einblendungen” ist eine Komponente des Fluent Design-Systems, die Lichteffekte in Ihrer App ermöglicht.</span><span class="sxs-lookup"><span data-stu-id="eb93b-205">Reveal is a Fluent Design System component that adds light to your app.</span></span> <span data-ttu-id="eb93b-206">Weitere Informationen finden Sie in der [Fluent Design für UWP-Übersicht](../fluent-design-system/index.md).</span><span class="sxs-lookup"><span data-stu-id="eb93b-206">To learn more, see the [Fluent Design for UWP overview](../fluent-design-system/index.md).</span></span>
 
-<!--
-<div class=”microsoft-internal-note”>
-To create your own Reveal lighting effect for static comps or prototype purposes, see the full [uni design guidance](http://uni/DesignDepot.FrontEnd/#/ProductNav/3020/1/dv/?t=Resources%7CToolkit%7CReveal&f=Neon) for this effect in illustrator.
-</div>
--->  
+## <a name="related-articles"></a><span data-ttu-id="eb93b-207">Verwandte Artikel</span><span class="sxs-lookup"><span data-stu-id="eb93b-207">Related articles</span></span>
 
-## <a name="get-the-sample-code"></a><span data-ttu-id="8e9f3-194">Beispielcode herunterladen</span><span class="sxs-lookup"><span data-stu-id="8e9f3-194">Get the sample code</span></span>
-
-- <span data-ttu-id="8e9f3-195">[Beispiel eines XAML-Steuerelementkatalogs](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) – Hier werden alle XAML-Steuerelemente in einem interaktiven Format dargestellt.</span><span class="sxs-lookup"><span data-stu-id="8e9f3-195">[XAML Controls Gallery sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) - See all the XAML controls in an interactive format.</span></span>
-
-## <a name="related-articles"></a><span data-ttu-id="8e9f3-196">Verwandte Artikel</span><span class="sxs-lookup"><span data-stu-id="8e9f3-196">Related articles</span></span>
-
-- [<span data-ttu-id="8e9f3-197">RevealBrush-Klasse</span><span class="sxs-lookup"><span data-stu-id="8e9f3-197">RevealBrush class</span></span>](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush)
-- [<span data-ttu-id="8e9f3-198">Acryl</span><span class="sxs-lookup"><span data-stu-id="8e9f3-198">Acrylic</span></span>](acrylic.md)
-- [<span data-ttu-id="8e9f3-199">Kompositionseffekte</span><span class="sxs-lookup"><span data-stu-id="8e9f3-199">Composition Effects</span></span>](https://msdn.microsoft.com/windows/uwp/graphics/composition-effects)
-- [<span data-ttu-id="8e9f3-200">Fluent Design für UWP</span><span class="sxs-lookup"><span data-stu-id="8e9f3-200">Fluent Design for UWP</span></span>](../fluent-design-system/index.md)
-- [<span data-ttu-id="8e9f3-201">Wissenschaft im System: Fluent Design und Tiefe</span><span class="sxs-lookup"><span data-stu-id="8e9f3-201">Science in the System: Fluent Design and Depth</span></span>](https://medium.com/microsoft-design/science-in-the-system-fluent-design-and-depth-fb6d0f23a53f)
-- [<span data-ttu-id="8e9f3-202">Wissenschaft im System: Fluent Design und Licht</span><span class="sxs-lookup"><span data-stu-id="8e9f3-202">Science in the System: Fluent Design and Light</span></span>](https://medium.com/microsoft-design/the-science-in-the-system-fluent-design-and-light-94a17e0b3a4f)
+- [<span data-ttu-id="eb93b-208">RevealBrush-Klasse</span><span class="sxs-lookup"><span data-stu-id="eb93b-208">RevealBrush class</span></span>](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush)
+- [<span data-ttu-id="eb93b-209">Acryl</span><span class="sxs-lookup"><span data-stu-id="eb93b-209">Acrylic</span></span>](acrylic.md)
+- [<span data-ttu-id="eb93b-210">Kompositionseffekte</span><span class="sxs-lookup"><span data-stu-id="eb93b-210">Composition Effects</span></span>](https://msdn.microsoft.com/windows/uwp/graphics/composition-effects)
+- [<span data-ttu-id="eb93b-211">Fluent Design für UWP</span><span class="sxs-lookup"><span data-stu-id="eb93b-211">Fluent Design for UWP</span></span>](../fluent-design-system/index.md)
+- [<span data-ttu-id="eb93b-212">Wissenschaft im System: Fluent Design und Tiefe</span><span class="sxs-lookup"><span data-stu-id="eb93b-212">Science in the System: Fluent Design and Depth</span></span>](https://medium.com/microsoft-design/science-in-the-system-fluent-design-and-depth-fb6d0f23a53f)
+- [<span data-ttu-id="eb93b-213">Wissenschaft im System: Fluent Design und Licht</span><span class="sxs-lookup"><span data-stu-id="eb93b-213">Science in the System: Fluent Design and Light</span></span>](https://medium.com/microsoft-design/the-science-in-the-system-fluent-design-and-light-94a17e0b3a4f)
