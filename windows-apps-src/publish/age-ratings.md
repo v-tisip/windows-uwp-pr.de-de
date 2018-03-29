@@ -1,19 +1,20 @@
 ---
 author: jnHs
-Description: "Auf der Seite „Altersfreigaben“ des App-Übermittlungsprozesses können Sie Informationen zu Ihrer App bereitstellen, damit sie die entsprechenden Altersfreigaben von der International Age Ratings Coalition (IARC) erhalten kann."
+Description: The Age ratings page of the app submission process lets you provide information about your app so it can receive the appropriate age ratings from the International Age Ratings Coalition (IARC).
 title: Altersfreigaben
 ms.assetid: B501A773-517B-4158-8364-C1BE630DC512
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 02/06/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows10, UWP
-ms.openlocfilehash: 4adac59c0508bcdd9c21180a1c6dcb70fc4532b3
-ms.sourcegitcommit: b42d14c775efbf449a544ddb881abd1c65c1ee86
+keywords: Windows10, UWP, Altersfreigabe, Spielfreigabe, IARC, Bewertung, Fragebogen, Bewertungsgremium, Inhaltsbewertung
+ms.localizationpriority: high
+ms.openlocfilehash: 0af2d316b0d0c4705c4669ef910f37845ca78aa8
+ms.sourcegitcommit: d780e3a087ab5240ea643346480a1427bea9e29b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="age-ratings"></a>Altersfreigaben
 
@@ -24,7 +25,7 @@ Auf der Seite **Altersfreigaben** des [App-Übermittlungsprozesses](app-submissi
 Bei der ersten Übermittlung einer App (oder bei der ersten Aktualisierung einer App, die mit dem alten Altersfreigabeprozess veröffentlicht wurde) werden Sie aufgefordert, einen Multiple-Choice-Fragebogen auszufüllen, um die Altersfreigabe für Ihre App zu ermitteln.
 
 > [!IMPORTANT]
-> Wenn Sie den Fragebogen für Ihre App bereits in einem anderen Geschäftszugang ausgefüllt haben und über eine Freigabe-ID der IARC verfügen, haben Sie die Option, diese Freigabe-ID bereitzustellen. Wir verwenden Ihre ID, um die vorhandenen Freigaben mit der App im Windows Store zu verknüpfen.
+> Wenn Sie den Fragebogen für Ihre App bereits in einem anderen Geschäftszugang ausgefüllt haben und über eine Freigabe-ID der IARC verfügen, haben Sie die Option, diese Freigabe-ID bereitzustellen. Wir verwenden Ihre ID, um die vorhandenen Freigaben mit der App im Microsoft Store zu verknüpfen.
 
 Hierbei ist es unbedingt erforderlich, dass Sie die Fragen wahrheitsgetreu beantworten. Im Rahmen dieses Prozesses geben wir Ihren Herausgeber-Anzeigenamen und Ihre E-Mail-Adresse an die IARC weiter. Nach dem Ausfüllen des Fragebogens werden vom IARC-Bewertungssystem basierend auf Ihren Antworten Informationen zur Altersfreigabe und Inhaltsbewertung bereitgestellt. Wir verwenden diese Bewertungsinformationen, wenn Ihre App Kunden in unterschiedlichen Märkten angezeigt wird. Außerdem erhalten Sie von der IARC eine E-Mail mit einer Bestätigung der App-Bewertung, nachdem die App veröffentlicht wurde.
 
@@ -37,7 +38,10 @@ Bei der nächsten Aktualisierung Ihrer App werden auf dieser Seite alle Freigabe
 <span id="boards" />
 
 > [!NOTE]
-> Das südkoreanische Recht erfordert, dass in Südkorea verfügbar gemachte Spiele durch das [Game Rating Board](http://go.microsoft.com/fwlink/p/?LinkId=228256) Südkoreas bewertet werden. Wenn Ihre App ein Spiel ist und Sie es in Südkorea anbieten möchten, müssen Sie diesen zusätzlichen Abschnitt ausfüllen und das Freigabezertifikat hochladen. Wenn Ihre App kein Spiel ist oder Sie es nicht in Südkorea anbieten möchten, können Sie diesen Abschnitt leer lassen.
+> Das südkoreanische Recht erfordert, dass in Südkorea verfügbar gemachte Spiele durch das [Game Rating Board](http://go.microsoft.com/fwlink/p/?LinkId=228256) Südkoreas bewertet werden. Wenn Sie ein Spiel einreichen und Sie es in Südkorea anbieten möchten, müssen Sie diesen zusätzlichen Abschnitt ausfüllen und das Freigabezertifikat hochladen. Wenn Ihre App kein Spiel ist oder Sie es nicht in Südkorea anbieten möchten, können Sie diesen Abschnitt leer lassen.
+
+> [!NOTE]
+> Wenn Sie ein Spiel anbieten möchten, das in Taiwan verfügbar ist, sind Sie gesetzlich verpflichtet, die bereitgestellte CSRR-Bewertung mit [diesem Formular](https://go.microsoft.com/fwlink/?linkid=867281) zu registrieren. 
 
 <span id="appeal" />
 ## <a name="appealing-ratings-or-refused-classifications"></a>Einlegen von Einspruch gegen Freigaben oder verweigerte Klassifizierungen
@@ -47,9 +51,9 @@ Falls Sie Fragen zu der erhaltenen Altersfreigabe für Ihre App haben oder Einsp
 In einigen Fällen kann es aufgrund der Freigabe der App vorkommen, dass sie für ein bestimmtes Land oder eine Region als ungeeignet eingestuft wird. Ihnen wird dann eine Meldung mit einem Hinweis zu den Märkten angezeigt, auf denen Ihre App nicht angeboten werden kann. Wenn Sie mit dieser Einstufung (oder einer anderen Einstufung) nicht einverstanden sind, können Sie dagegen Einspruch einlegen. Nutzen Sie hierfür den Link in der E-Mail mit dem Freigabezertifikat, die Sie von der IARC erhalten.
 
 
-## <a name="previous-windows-store-age-ratings"></a>Bisherige WindowsStore-Altersfreigaben
+## <a name="previous-microsoft-store-age-ratings"></a>Bisherige MicrosoftStore-Altersfreigaben
 
-Bisher haben Entwickler die Altersfreigabe für ihre App selbst angegeben, anstatt den Fragebogen auszufüllen. Im Folgenden finden Sie eine Übersicht über die vorherigen Windows Store-Altersfreigaben:
+Bisher haben Entwickler die Altersfreigabe für ihre App selbst angegeben, anstatt den Fragebogen auszufüllen. Im Folgenden finden Sie eine Übersicht über die vorherigen Microsoft Store-Altersfreigaben:
 
 | Altersfreigabe                           | Beschreibung                            |
 |--------------------------------------|----------------------------------------|

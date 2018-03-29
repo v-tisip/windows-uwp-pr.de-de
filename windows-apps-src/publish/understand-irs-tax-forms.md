@@ -1,21 +1,22 @@
 ---
 author: jnHs
-Description: "Informationen zu den Steuerformularen, die von Microsoft ausgestellt werden, einschließlich ihres Empfängers und des Zeitpunkts der Verfügbarkeit."
-title: "Erläuterung der von Microsoft ausgestellten IRS-Steuerformulare"
+Description: Learn about the tax forms issued by Microsoft, including who will receive them and when they are made available.
+title: Kennenlernen der von Microsoft ausgestellten IRS-Steuerformulare
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 03/08/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows10, UWP
+keywords: Windows10, UWP, Steuern, IRS, Bundessteuerbehörde der USA (IRS), Steuern, Einkommensteuer, 1099
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
-ms.openlocfilehash: bffb666184f52e6e6491d8651414ecbc269352b8
-ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+ms.localizationpriority: high
+ms.openlocfilehash: 0bdae8a8489ddf4f2ec7eb7a619631bd4fa26e9e
+ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2017
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Erläuterung der von Microsoft ausgestellten IRS-Steuerformulare
+# <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Kennenlernen der von Microsoft ausgestellten IRS-Steuerformulare
 
 Je nach Ihrem Standort und der Höhe des Umsatzes und/oder der Zahlungen, die Sie erhalten, erhalten Sie jedes Jahr mindestens ein Steuerformular von Microsoft. Microsoft muss diese Formulare ausstellen und bei der Bundessteuerbehörde der USA (IRS) einreichen.
 
@@ -26,7 +27,7 @@ Nachfolgend erläutern wir diese Formulare eingehender, etwa, wer sie erhält un
 | IRS-Steuerformular | Beschreibung | Verfügbarkeit |
 |--------------|-------------|--------------|
 |1099-MISC, 1099-K | Im Zusammenhang mit Verkaufsaktivitäten und/oder Zahlungen an Sie für die Teilnahme am Microsoft Marketplace | Gedruckte Formulare werden mit elektronischen Siegeln mit spätestens dem **31.Januar** versehen, und die PDF-Kopien werden zur gleichen Zeit im Dev Center zur Verfügung stehen (**Dashboard > Kontoeinstellungen > Steuerprofil**) |
-|1042-S | Im Zusammenhang mit den Zahlungen an Sie, die der Quellensteuer der USA unterliegen. | Gedruckte Formulare werden mit elektronischen Siegeln mit spätestens dem **15.März** versehen, und die PDF-Kopien werden zur gleichen Zeit im Dev Center zur Verfügung stehen (**Dashboard > Kontoeinstellungen > Steuerprofil**) |
+|1042-S | Im Zusammenhang mit den Zahlungen an Sie, die der Quellensteuer der USA unterliegen | Gedruckte Formulare werden mit elektronischen Siegeln mit spätestens dem **15.März** versehen, und die PDF-Kopien werden zur gleichen Zeit im Dev Center zur Verfügung stehen (**Dashboard > Kontoeinstellungen > Steuerprofil**) |
 
 > [!NOTE]
 > Die Adresse auf den IRS.Steuerformularen entspricht der Adresse in Ihrem [Steuerprofil](setting-up-your-payout-account-and-tax-forms.md#tax-forms).. Wenn sich Ihre Adresse geändert hat, aktualisieren Sie die Adresse auch in Ihrem **Steuerprofil**.
@@ -39,7 +40,7 @@ Nachfolgend erläutern wir diese Formulare eingehender, etwa, wer sie erhält un
      <th> Ich sollte dieses Formular erhalten</th>
   </tr>
   <tr> 
-     <td valign="top">Ich habe **mehr als 200 App-Verkäufe** mit einem Gesamtumsatz von **mehr als 20.000 US-Dollar** im entsprechenden Geschäftsjahr (Verkäufe über den Windows10-Store Brasilien und China werden **nicht** gezählt.) getätigt</td>
+     <td valign="top">Ich habe **mehr als 200 App-Verkäufe** mit einem Gesamtumsatz von **mehr als 20.000 US-Dollar** im entsprechenden Geschäftsjahr (Verkäufe über den Microsoft Store unter Windows 10 Brasilien und China werden **nicht** gezählt) getätigt</td>
     <td valign="top">**1099-K**:<br>
 Einreichende Instanz: Microsoft Corporation<br>
 EIN: \*\*\*\*\*4442<br>
@@ -47,7 +48,7 @@ EIN: \*\*\*\*\*4442<br>
 **Wichtig:** Formular 1099-K enthält **Bruttoeinkaufsbeträge**, keine an Sie erfolgten Zahlungen.</td>
   </tr>
   <tr> 
-     <td valign="top">Ich habe **mindestens 10 Dollar an Zahlungen** für App-Verkäufe in Brasilien und China über den Windows10-Store erhalten.<br>
+     <td valign="top">Ich habe **mindestens 10 Dollar an Zahlungen** für (i) App-Verkäufe in Brasilien und China über den Microsoft Store auf Windows10 oder (ii) Verkäufe über den Minecraft Marketplace erhalten.<br>
 <br>
 **ODER**<br>
 <br>

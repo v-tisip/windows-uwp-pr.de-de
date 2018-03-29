@@ -3,17 +3,17 @@ author: jnHs
 Description: The Xbox analytics report in the Windows Dev Center dashboard shows you statistics about how your customers are engaging with the Xbox features in your product.
 title: Bericht der Xbox Analyse
 ms.author: wdg-dev-content
-ms.date: 10/30/2017
+ms.date: 02/06/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Xbox Analyse, Xbox Live-Analyse, Xbox-Statistiken
 ms.localizationpriority: high
-ms.openlocfilehash: ad40d33d51287126cd1940eb830b1be0c5ba7812
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
+ms.openlocfilehash: 2b6ab5c15b4683456502ce1b94b1bf3ca74c239c
+ms.sourcegitcommit: d780e3a087ab5240ea643346480a1427bea9e29b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="xbox-analytics-report"></a>Xbox Analysebericht
 
@@ -55,7 +55,6 @@ In diesem Abschnitt wird die Gesamtanzahl der Kunden angezeigt, die im angegeben
 Dieser Abschnitt enthält Registerkarten, die Sie auswählen können, um unterschiedliche Daten über die Kunden Ihres Spiels anzuzeigen. Beachten Sie, dass die Statistiken in diesem Abschnitt auf die allgemeine Featureverwendung hinweisen und nicht auf Ihr bestimmtes Produkt.
 
 - Die Registerkarte **Social Usage** zeigt Daten im Zusammenhang über die sozialen Interaktionen Ihrer Kunden an.
-   - **Spielehub** zeigt den Prozentsatz Ihrer Kunden an, die mit Spielehubs interagieren. Diese Daten sind nur für Produkte auf Xbox verfügbar und beziehen sich darauf, wie viele Ihrer Kunden die Spielehubs generell verwenden und nicht speziell auf den Spielehub Ihres Produkts.
    - **Spieleinladungen** zeigt den Prozentsatz Ihrer Kunden an, denen Sie Einladungen (für ein Spiel) gesendet haben.
    - **Party-Chat** zeigt den Prozentsatz Ihrer Kunden an, die Party-Chat verwenden (für alle Spiele).
    - **SMS** zeigt den Prozentsatz Ihrer Kunden an, die Nachrichten über die Xbox-Shell senden (für ein Spiel).

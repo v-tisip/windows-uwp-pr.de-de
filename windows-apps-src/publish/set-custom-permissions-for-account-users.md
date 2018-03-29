@@ -1,20 +1,20 @@
 ---
 author: jnHs
-Description: Set custom permissions for account users.
-title: "Festlegen benutzerdefinierter Berechtigungen für Kontenbenutzer"
+Description: Set roles or custom permissions for account users.
+title: Legen Sie Rollen oder benutzerdefinierte Berechtigungen für Kontenbenutzer fest
 ms.assetid: 99f3aa18-98b4-4919-bd7b-d78356b0bf78
 ms.author: wdg-dev-content
-ms.date: 01/12/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows10, UWP, Benutzerrollen, Benutzerberechtigung, benutzerdefinierte Rollen, Zugriff für Benutzer, Berechtigungen anpassen, Standardrollen"
+keywords: Windows10, UWP, Benutzerrollen, Benutzerberechtigung, benutzerdefinierte Rollen, Zugriff für Benutzer, Berechtigungen anpassen, Standardrollen
 ms.localizationpriority: high
-ms.openlocfilehash: 1fdde4be606abae849ff3350d27afbbced157f75
-ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
+ms.openlocfilehash: 3c62ff8a028af62512936e51bd81d3f3e229bd24
+ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>Legen Sie Rollen oder benutzerdefinierte Berechtigungen für Kontenbenutzer fest
 
@@ -29,7 +29,7 @@ Beim Ermitteln der Rollen oder Berechtigungen sollten Sie folgendes bedenken:
 -   Ein Benutzer mit einer bestimmten Rolle (oder einer Reihe benutzerdefinierter Berechtigungen) kann auch Teil einer Gruppe mit einer anderen Rolle (oder einem anderen Satz von Berechtigungen) sein. In diesem Fall hat der Benutzer Zugriff auf alle Funktionen, die mit der Gruppe und dem individuellen Konto verbunden sind.
 
 > [!TIP]
-> Dieses Thema gilt nur für das Entwicklerprogramm für Windows-Apps. Weitere Informationen zu Benutzerrollen im Hardware-Entwicklerprogramm finden Sie unter [Verwalten von Benutzerrolleng](https://docs.microsoft.com/windows-hardware/drivers/dashboard/managing-user-roles).
+> Dieses Thema gilt nur für das Entwicklerprogramm für Windows-Apps. Weitere Informationen zu Benutzerrollen im Hardware-Entwicklerprogramm finden Sie unter [Verwalten von Benutzerrolleng](https://docs.microsoft.com/windows-hardware/drivers/dashboard/managing-user-roles). Weitere Informationen zu Benutzerrollen im Windows-Desktopanwendungsprogramm finden Sie unter [Windows Desktopanwendungsprogramm](https://msdn.microsoft.com/library/windows/desktop/mt826504#users).
 
 
 <span id="roles" />
@@ -86,7 +86,7 @@ Die Details der einzelnen Berechtigungen werden in den folgenden Tabellen beschr
 
 ## <a name="account-level-permissions"></a>Berechtigungen auf Kontoebene
 
-Die Berechtigungen in diesem Abschnittkönnen nicht auf bestimmte Produkte beschränkt werden. Wird dem Benutzer Zugriff auf diese Berechtigungen gewährt, gilt dies für das gesamte Konto.
+Die Berechtigungen in diesem Abschnittkönnen nicht auf bestimmte Produkte beschränkt werden. Wird dem Benutzer Zugriff auf eine dieser Berechtigungen gewährt, gilt dies für das gesamte Konto.
 
 <table>
     <colgroup>
@@ -117,6 +117,7 @@ Die Berechtigungen in diesem Abschnittkönnen nicht auf bestimmte Produkte besch
 <tr><td align="left">    **Kontaktinformationen**                        </td><td align="left">  Kann [Kontaktinformationen](managing-your-profile.md) im Abschnitt mit den Kontoeinstellungen anzeigen.        </td><td align="left">  Kann [Kontaktinformationen](managing-your-profile.md) im Abschnitt mit den Kontoeinstellungen anzeigen und bearbeiten.            </td></tr>
 <tr><td align="left">    **COPPA-Compliance**                    </td><td align="left">  Kann für alle Produkte des Kontos die Einstellungen für die [COPPA-Compliance](in-app-ads.md#coppa-compliance) anzeigen (die angeben, ob sich Produkte an Kinder unter 13Jahren richten).                                            </td><td align="left">  Kann für alle Produkte des Kontos die Einstellungen für die [COPPA-Compliance](in-app-ads.md#coppa-compliance) anzeigen und bearbeiten (die angeben, ob sich Produkte an Kinder unter 13Jahren richten).         </td></tr>
 <tr><td align="left">    **Kundengruppen**                     </td><td align="left">  Kann [Kundengruppen](create-customer-groups.md) (Segmente und Flight-Gruppen) im Abschnitt **Kunden** anzeigen.      </td><td align="left">  Kann [Kundengruppen](create-customer-groups.md) (Segmente und Flight-Gruppen) im Abschnitt **Kunden** erstellen, bearbeiten und anzeigen.       </td></tr>
+<tr><td align="left">    **Verwalten von Produktgruppen**&nbsp;\*                            </td><td align="left">  Kann die Seite zum Erstellen neuer Produktgruppen anzeigen, jedoch keine neuen Produktgruppen im Konto erstellen.    </td><td align="left">  Kann Produktgruppen erstellen und bearbeiten.     </td></tr>
 <tr><td align="left">    **Neue Apps**                            </td><td align="left">  Kann die Seite zum Erstellen neuer Apps anzeigen, jedoch keine neuen Apps im Konto erstellen.    </td><td align="left">  Kann im Konto [neue Apps erstellen](create-your-app-by-reserving-a-name.md), indem neue App-Namen reserviert werden. Zudem können Übermittlungen erstellt und Apps an den Store übermittelt werden.     </td></tr>
 <tr><td align="left">    **Neue Bündel**&nbsp;*                       </td><td align="left">  Kann die Seite zum Erstellen neuer Bündel anzeigen, jedoch keine neuen Bündel im Konto erstellen.     </td><td align="left">  Kann neue Produktbündel erstellen.          </td></tr>
 <tr><td align="left">    **Partnerdienste**&nbsp;*                  </td><td align="left">  Kann Zertifikate für das Installieren in Diensten zum Abrufen von XTokens anzeigen.     </td><td align="left">  Kann Zertifikate für das Installieren in Diensten zum Abrufen von XTokens verwalten und anzeigen.       </td></tr>
@@ -125,6 +126,7 @@ Die Berechtigungen in diesem Abschnittkönnen nicht auf bestimmte Produkte besch
 <tr><td align="left">    **Vertrauende Seiten**&nbsp;*                   </td><td align="left">  Kann vertrauende Seiten anzeigen, um XTokens abzurufen.    </td><td align="left">  Kann vertrauende Seiten verwalten und anzeigen, um XTokens abzurufen.     </td></tr>
 <tr><td align="left">    **Anfordern von CDs**&nbsp;*                   </td><td align="left">  Können Spiele-CD-Anfragen sehen.    </td><td align="left">  Können Spiele-CD-Anfragen erstellen und sehen.     </td></tr>
 <tr><td align="left">    **Sandboxes**&nbsp;*                         </td><td align="left">  Kann auf die Seite **Sandboxes** zugreifen und für das Konto die Sandboxes sowie alle gültigen Konfigurationen anzeigen. Kann nicht die Produkte und Übermittlungen für die jeweilige Sandbox anzeigen, sofern keine entsprechenden Berechtigungen auf Produktebene erteilt wurden. </td><td align="left">  Kann auf die Seite **Sandboxes** zugreifen und die Sandboxes im Konto anzeigen und verwalten, z.B. um Sandboxes zu erstellen und zu löschen oder deren Konfiguration zu verwalten. Kann nicht die Produkte und Übermittlungen für die jeweilige Sandbox anzeigen, sofern keine entsprechenden Berechtigungen auf Produktebene erteilt wurden.    </td></tr>
+<tr><td align="left">    **Store-Verkaufsereignisse**&nbsp;\*                            </td><td align="left">  n.a.    </td><td align="left">  Kann die Option konfigurieren, automatisch Produkte im Store in Verkaufsereignisse aufzunehmen.     </td></tr>
 <tr><td align="left">    **Steuerprofil**                         </td><td align="left">  Kann [Steuerprofildaten und -formulare](setting-up-your-payout-account-and-tax-forms.md#tax-forms) in den **Kontoeinstellungen** anzeigen.     </td><td align="left">  Kann Steuerformulare ausfüllen und [Steuerprofildaten](setting-up-your-payout-account-and-tax-forms.md#tax-forms) in den **Kontoeinstellungen** aktualisieren.     </td></tr>
 <tr><td align="left">    **Testkonten**&nbsp;*                     </td><td align="left">  Kann Konten zum Testen der Xbox Live-Konfiguration anzeigen.      </td><td align="left">  Kann Konten zum Testen der Xbox Live-Konfiguration erstellen, verwalten und anzeigen.      </td></tr>
 <tr><td align="left">    **Xbox-Geräte**                        </td><td align="left">  Kann im Abschnitt **Kontoeinstellungen** die für das Konto aktivierten Xbox-Entwicklungskonsolen anzeigen.       </td><td align="left">  Kann die für das Konto aktivierten Xbox-Entwicklungskonsolen im Abschnitt **Kontoeinstellungen** hinzufügen, entfernen und anzeigen.     </td></tr>
@@ -166,11 +168,11 @@ Beachten Sie, dass einige Berechtigungen nicht für Add-Ons festgelegt werden k�
     </thead>
     <tbody>
     <tr><td align="left">    **Käufe**     </td><td>    Kann die Berichte [Käufe](acquisitions-report.md) und [Add-On-Käufe](add-on-acquisitions-report.md) für das Produkt anzeigen.        </td><td>    Nicht verfügbar    </td><td>    Nicht verfügbar (Einstellungen für das übergeordnete Produkt umfassen Berichte zu Add-On-Käufen)        </td><td>    Nicht verfügbar                         </td></tr>
-    <tr><td align="left">    **Nutzung** </td><td>    Kann den [Bericht „Nutzung“](usage-report.md) für das Produkt anzeigen.     </td><td>    Nicht verfügbar       </td><td>    Nicht zutreffend     </td><td>    Nicht verfügbar         </td></tr>
-    <tr><td align="left">    **Integrität** </td><td>    Kann den [Bericht „Integrität“](health-report.md) für das Produkt anzeigen.    </td><td>    Nicht verfügbar     </td><td>    Nicht zutreffend     </td><td>    Nicht verfügbar         </td></tr>
+    <tr><td align="left">    **Nutzung** </td><td>    Kann den [Bericht „Nutzung“](usage-report.md) für das Produkt anzeigen.     </td><td>    Nicht verfügbar       </td><td>    n.a.     </td><td>    Nicht verfügbar         </td></tr>
+    <tr><td align="left">    **Integrität** </td><td>    Kann den [Bericht „Integrität“](health-report.md) für das Produkt anzeigen.    </td><td>    Nicht verfügbar     </td><td>    n.a.     </td><td>    Nicht verfügbar         </td></tr>
     <tr><td align="left">    **Kundenfeedback**    </td><td>    Kann die Berichte [Rezensionen](reviews-report.md) und [Feedback](feedback-report.md) für das Produkt anzeigen.       </td><td>    Nicht verfügbar (Um auf Feedback oder Rezensionen reagieren zu können, muss die Berechtigung **Kunden kontaktieren** erteilt werden)   </td><td>    Nicht verfügbar     </td><td>    Nicht verfügbar         </td></tr>
-    <tr><td align="left">    **Xbox-Analyse** </td><td>    Kann den Xbox-Analysebericht für das Produkt anzeigen. (Hinweis: Dieser Bericht ist noch nicht verfügbar.)    </td><td>    Nicht verfügbar   </td><td>    Nicht zutreffend       </td><td>    Nicht verfügbar          </td></tr>
-    <tr><td align="left">    **Echtzeit**   </td><td>    Kann den Echtzeit-Bericht für das Produkt anzeigen. (Hinweis: Dieser Bericht ist zur Zeit nur über das [Dev Center-Insider-Programm](dev-center-insider-program.md) verfügbar.)      </td><td>    Nicht verfügbar   </td><td>    Nicht zutreffend     </td><td>    Nicht verfügbar                 </td></tr>
+    <tr><td align="left">    **Xbox-Analyse** </td><td>    Kann den Xbox-Analysebericht für das Produkt anzeigen. (Hinweis: Dieser Bericht ist noch nicht verfügbar.)    </td><td>    Nicht zutreffend   </td><td>    Nicht verfügbar       </td><td>    Nicht verfügbar          </td></tr>
+    <tr><td align="left">    **Echtzeit**   </td><td>    Kann den Echtzeit-Bericht für das Produkt anzeigen. (Hinweis: Dieser Bericht ist zur Zeit nur über das [Dev Center-Insider-Programm](dev-center-insider-program.md) verfügbar.)      </td><td>    Nicht verfügbar   </td><td>    n.a.     </td><td>    Nicht verfügbar                 </td></tr>
     </tbody>
     </table>
 
@@ -188,14 +190,15 @@ Beachten Sie, dass einige Berechtigungen nicht für Add-Ons festgelegt werden k�
     </thead>
     <tbody>
     <tr><td align="left">    **Werbecodes**     </td><td>    Kann Aufträge und Nutzungsdaten für [Werbecodes](generate-promotional-codes.md) für das Produkt und dessen Add-Ons anzeigen.         </td><td>    Kann Aufträge und Nutzungsdaten für [Werbecodes](generate-promotional-codes.md) für das Produkt und dessen Add-Ons anzeigen, verwalten und erstellen.          </td><td>    Nicht verfügbar (Einstellungen für das übergeordnete Produkt gelten für alle Add-Ons)     </td><td>    Nicht verfügbar (Einstellungen für das übergeordnete Produkt gelten für alle Add-Ons)     </td></tr>
-    <tr><td align="left">    **Zielgerichtete Angebote**     </td><td>    Kann die [zielgerichteten Angebote](use-targeted-offers-to-maximize-engagement-and-conversions.md) für das Produkt sehen.         </td><td>    Kann [zielgerichtete Angebote](use-targeted-offers-to-maximize-engagement-and-conversions.md) für das Produkt erstellen, verwalten und anzeigen.          </td><td>    n.a.     </td><td>    n.a.      </td></tr>
+    <tr><td align="left">    **Zielgerichtete Angebote**     </td><td>    Kann die [zielgerichteten Angebote](use-targeted-offers-to-maximize-engagement-and-conversions.md) für das Produkt sehen.         </td><td>    Kann [zielgerichtete Angebote](use-targeted-offers-to-maximize-engagement-and-conversions.md) für das Produkt erstellen, verwalten und anzeigen.          </td><td>    Nicht verfügbar     </td><td>    Nicht verfügbar      </td></tr>
     <tr><td align="left">    **Kunden kontaktieren**  </td><td>    Kann [Reaktionen auf Kundenfeedback](respond-to-customer-feedback.md) und [Antworten auf Kundenrezensionen](respond-to-customer-reviews.md) anzeigen, sofern zudem die Berechtigung **Kundenfeedback** erteilt wurde. Kann zudem für das Produkt erstellte [benutzerorientierte Benachrichtigungen](send-push-notifications-to-your-apps-customers.md) anzeigen.    </td><td>    Kann [auf Kundenfeedback reagieren](respond-to-customer-feedback.md) und [auf Kundenrezensionen antworten](respond-to-customer-reviews.md), sofern die Berechtigung **Kundenfeedback** ebenfalls erteilt wurde. Kann zudem für das Produkt [benutzerorientierte Benachrichtigungen erstellen und senden](send-push-notifications-to-your-apps-customers.md).                   </td><td>    Nicht verfügbar         </td><td>    Nicht verfügbar                          </td></tr>
     <tr><td align="left">    **Experimentation**</td><td>    Kann [Experimente (A/B-Tests)](../monetize/run-app-experiments-with-a-b-testing.md) sowie Experimentdaten für das Produkt anzeigen.   </td><td>    Kann [Experimente (A/B-Tests)](../monetize/run-app-experiments-with-a-b-testing.md) für das Produkt erstellen, verwalten und anzeigen sowie Experimentdaten anzeigen.     </td><td>    Nicht verfügbar  </td><td>    n.a.                 </td></tr>
+    <tr><td align="left">    **Store-Verkaufsereignisse**&nbsp;\*</td><td>    Kann den Verkaufsereignisstatus für das Produkt anzeigen.   </td><td>    Kann das Produkt zu Verkaufsereignissen hinzufügen und Rabatte konfigurieren.      </td><td>    Kann den Verkaufsereignisstatus für das Produkt anzeigen.   </td><td>    Kann das Produkt zu Verkaufsereignissen hinzufügen und Rabatte konfigurieren.      </td></tr>
 
     </tbody>
     </table>
 
-### <a name="publishing"></a>Publishing 
+### <a name="publishing"></a>Veröffentlichung 
 
 <table>
     <thead>

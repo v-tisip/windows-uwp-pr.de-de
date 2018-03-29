@@ -1,26 +1,27 @@
 ---
 author: jnHs
-Description: "Im Bericht zu Add-On-Käufen im Windows Dev Center-Dashboard sehen Sie, wie viele Add-Ons Sie verkauft haben, und Sie können demografische und plattformspezifische Details einsehen."
-title: "Bericht zu Add-On-Käufen"
+Description: The Add-on acquisitions report in the Windows Dev Center dashboard lets you see how many add-ons you've sold, along with demographic and platform details.
+title: Bericht zu Add-On-Käufen
 ms.assetid: F2DF9188-0A98-4AC3-81C0-3E2C37B15582
 ms.author: wdg-dev-content
-ms.date: 08/04/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows10, UWP
-ms.openlocfilehash: 46d5ee3d0e0ac9c2a3599f51e17ea4d7425ab5af
-ms.sourcegitcommit: a8e7dc247196eee79b67aaae2b2a4496c54ce253
+keywords: Windows10, UWP, Add-On-Verkäufe, Add-On-Käufe, IAP-Verkauf, In-App-Produkte, IAPS, Add-Ons
+ms.localizationpriority: high
+ms.openlocfilehash: 5b8d0bb140206612a5096f48d87029b2285a0770
+ms.sourcegitcommit: 980e604c3767e7a73619d027bebd78cf4bfe9678
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="add-on-acquisitions-report"></a>Bericht zu Add-On-Käufen
 
 
-Im Bericht **Add-On-Käufe** im Windows Dev Center-Dashboard sehen Sie, wie viele Add-Ons Sie verkauft haben, und Sie können demografische und plattformspezifische Details einsehen. Außerdem können Sie die Konvertierungsinformationen für Kunden unter Windows10 erhalten.
+Im Bericht **Add-On-Käufe** im Windows Dev Center-Dashboard sehen Sie, wie viele Add-Ons Sie verkauft haben, und Sie können demografische und plattformspezifische Details einsehen. Außerdem können Sie die Konvertierungsinformationen für Kunden unter Windows10 (einschließlich Xbox) erhalten.
 
-Sie können diese Daten in Ihrem Dashboard anzeigen oder den [Bericht herunterladen](download-analytic-reports.md), um ihn offline anzuzeigen. Sie können diese Daten auch programmgesteuert mit der Methode [get add-on acquisitions](../monetize/get-in-app-acquisitions.md) der [Windows Store-Analyse-REST-API](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
+Sie können diese Daten in Ihrem Dashboard anzeigen oder den [Bericht herunterladen](download-analytic-reports.md), um ihn offline anzuzeigen. Sie können diese Daten auch programmgesteuert mit der Methode [get add-on acquisitions](../monetize/get-in-app-acquisitions.md) der [Microsoft Store-Analyse-REST-API](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
 
 In diesem Bericht bedeutet ein „Add-On-Kauf”, dass ein Kunde ein Add-On von Ihnen erworben hat (oder ohne dafür zu bezahlen, wenn Sie es kostenlos angeboten haben). Wenn ein Kunde mehrere Käufe desselben konsumierbaren Add-Ons getätigt hat, werden diese als separate Add-On-Käufe aufgeführt.
 
@@ -36,7 +37,7 @@ Sie können ebenfalls **Filter** erweitern, um alle Daten auf dieser Seite nach 
 
 -   **Add-On**: der Standardfilter lautet **Alle Add-Ons**, aber Sie können die Daten für ein oder mehrere Add-Ons der App begrenzen.
 -   **Markt**: der Standardfilter lautet **Alle Märkte**, aber Sie können die Daten für Verkäufe auf einen oder mehrere Märkte begrenzen.
--   **Gerätetyp**: Die Standardeinstellung ist **Alle Geräte**. Wenn Daten für Käufe nur für einen bestimmten Gerätetyp angezeigt werden sollen, können Sie hier einen bestimmten auswählen.
+-   **Gerätetyp**: Die Standardeinstellung ist **Alle Geräte**. Wenn Daten für Käufe nur für einen bestimmten Gerätetyp angezeigt werden sollen (beispielsweise PCs, Konsolen oder Tablets), können Sie hier einen bestimmten Typ auswählen.
 
 Die Informationen in allen unten angezeigten Diagrammen beziehen sich auf den ausgewählten Zeitraum und alle von Ihnen ausgewählten Filter. In einigen Abschnitten können Sie zusätzliche Filter anwenden.
 
@@ -67,7 +68,7 @@ Sie können diese Daten in einer visuellen **Karte** anzeigen, oder die Einstell
 
 ## <a name="add-on-page-views-and-conversions-by-campaign-id"></a>Add-On-Seitenaufrufe und -Konvertierungen nach Kampagnen-ID
 
-Das Diagramm **Add-On-Seitenaufrufe und Konvertierungen nach Kampagnen-ID** zeigt die Gesamtanzahl der Add-On-Konvertierungen (Käufe) pro Kampagnen-ID im ausgewählten Zeitraum an und hilft Ihnen, Konvertierungen und Ansichten von Kunden unter Windows10 für jede Seite der [benutzerdefinierte Werbekampagnen](create-a-custom-app-promotion-campaign.md) nachzuverfolgen. In diesem Diagramm werden nur die Add-On-Konvertierungen angezeigt.
+Das Diagramm **Add-On-Seitenaufrufe und Konvertierungen nach Kampagnen-ID** zeigt die Gesamtanzahl der Add-On-Konvertierungen (Käufe) pro Kampagnen-ID im ausgewählten Zeitraum an und hilft Ihnen, Konvertierungen und Ansichten von Kunden unter Windows10 (einschließlich Xbox) für jede Seite der [benutzerdefinierte Werbekampagnen](create-a-custom-app-promotion-campaign.md) nachzuverfolgen. In diesem Diagramm werden nur die Add-On-Konvertierungen angezeigt.
 
 > [!NOTE]
 > Der Kunden gelangt möglicherweise zu dem Eintrag Ihrer App durch Klicken auf eine nicht von Ihnen erstellte, benutzerdefinierte Kampagne. Wir zählen jeden Seitenaufruf innerhalb einer Sitzung mit der Kampagnen-ID, die der Kunde zuerst im Store eingibt. Wir fügen der Kampagnen-ID anschließend Konvertierungen für alle Käufe innerhalb von 24 Stunden hinzu. Aus diesem Grund sehen Sie möglicherweise eine höhere Anzahl an Gesamtkonvertierungen als die Konvertierungen für Ihre Kampagnen-ID anzeigt, und Sie haben möglicherweise Konvertierungen oder Add-On-Konvertierungen, die keine Seitenansichten haben. 

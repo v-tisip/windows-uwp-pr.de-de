@@ -2,7 +2,7 @@
 author: normesta
 Description: Create a modern Windows app package for your existing Windows Forms, WPF, or Win32 app or game. Add modern experiences for Windows 10 users and simplify deployment and monitization.
 Search.Product: eADQiWindows 10XVcnh
-title: "Desktop-Brücke"
+title: Desktop-Brücke
 ms.author: normesta
 ms.date: 08/30/2017
 ms.topic: article
@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.assetid: 74373c24-f948-43bb-aa85-01e2e8e87162
 ms.localizationpriority: high
-ms.openlocfilehash: b8a70a249a91f654354d27faeffdf5f605fd9c26
-ms.sourcegitcommit: 12cc05b59b2a249a7683a8692ed453da03a91b28
+ms.openlocfilehash: 3cbaa8a8e78ad14472a34e107521d9c966ba434f
+ms.sourcegitcommit: 884b79b4c6fd8014fab9953faca557e56bb8c400
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="desktop-bridge"></a>Desktop-Brücke
 
@@ -30,7 +30,7 @@ Dieses Paket gibt Ihrer App eine Identität. Mit dieser Identität hat Ihre Desk
 Abgesehen von den Code, mit denen Sie zur Verbesserung der Windows10-Umgebung nutzen, bleibt Ihre App unverändert und Sie können sie weiterhin für Ihre vorhandene Windows7-, Windows Vista- oder Windows XP-Benutzerbasis bereitstellen. Unter Windows10 wird Ihre App genau wie heute weiterhin im vertrauenswürdigen Benutzermodus ausgeführt.
 
 >[!IMPORTANT]
->Der Desktop-Brücke wurde in Windows10, Version 1607, eingeführt und kann nur in Projekten für die Windows10 Anniversary Edition (10.0; Build 14393) oder einer neueren Version in Visual Studio verwendet werden.
+>Der Desktop-Brücke wurde in Windows10, Version 1607, eingeführt und kann nur in Projekten für das Windows10 Anniversary Update (10.0; Build 14393) oder einer neueren Version in Visual Studio verwendet werden.
 
 > [!NOTE]
 > Sehen Sie sich <a href="https://mva.microsoft.com/en-US/training-courses/developers-guide-to-the-desktop-bridge-17373?l=oZG0B1WhD_8406218965/">diese Reihe</a> von kurzen Videos an, die von der Microsoft Virtual Academy veröffentlicht wurden. Diese Videos erläutern den gesamten Prozess der Integration Ihrer Desktop-Apps auf die Universelle Windows-Plattform (UWP).

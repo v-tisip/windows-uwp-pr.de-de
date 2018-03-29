@@ -1,24 +1,25 @@
 ---
 author: jnHs
-Description: "Im Bericht „Käufe“ im Windows Dev Center-Dashboards können Sie sehen, wer Ihre App erworben und installiert hat. Außerdem können Sie demografische und plattformspezifische Details einsehen."
-title: "Bericht „Käufe“"
+Description: The Acquisitions report in the Windows Dev Center dashboard lets you see who has acquired and installed your app, along with demographic and platform details.
+title: Bericht „Käufe“
 ms.assetid: 21126362-F3CD-4006-AD3F-82FC88E3B862
 ms.author: wdg-dev-content
-ms.date: 08/04/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows10, UWP
-ms.openlocfilehash: d6540db7a3d0a045fa6a2c8fec617f045f4a1bf4
-ms.sourcegitcommit: 2b436dc5e5681b8884e0531ee303f851a3e3ccf2
+keywords: Windows10, UWP, Käufe, App-Verkäufe, App-Downloads, Installationen, Trichter, Käufe, Konvertierungen, Kanal, App-Seitenaufrufe
+ms.localizationpriority: high
+ms.openlocfilehash: d1675b3a2ffe879585ea2fd3792b47e7bdc7a8af
+ms.sourcegitcommit: 980e604c3767e7a73619d027bebd78cf4bfe9678
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="acquisitions-report"></a>Bericht „Käufe“
 
 
-Im Bericht **Käufe** im Windows Dev Center-Dashboards können Sie sehen, wer Ihre App erworben und installiert hat. Außerdem können Sie demografische und plattformspezifische Details einsehen. Außerdem können Sie damit Informationen abrufen, wie Kunden unter Windows10 zum Eintrag Ihrer App gelangt sind.
+Im Bericht **Käufe** im Windows Dev Center-Dashboards können Sie sehen, wer Ihre App erworben und installiert hat. Außerdem können Sie demografische und plattformspezifische Details einsehen. Außerdem können Sie damit Informationen abrufen, wie Kunden unter Windows10 (einschließlich Xbox) zum Eintrag Ihrer App gelangt sind.
 
 Sie können diese Daten in Ihrem Dashboard anzeigen oder den [Bericht herunterladen](download-analytic-reports.md), um ihn offline anzuzeigen. Sie können diese Daten aber auch programmgesteuert mit unseren [REST-API für Analysen](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
 
@@ -37,7 +38,7 @@ Im oberen Bereich der Seite können Sie den Zeitraum auswählen, für den die Da
 Sie können ebenfalls **Filter** erweitern, um alle Daten auf dieser Seite nach Markt und/oder Gerätetyp zu filtern.
 
 -   **Markt**: der Standardfilter lautet **Alle Märkte**, aber Sie können die Daten für Verkäufe auf einen oder mehrere Märkte begrenzen.
--   **Gerätetyp**: Die Standardeinstellung ist **Alle Geräte**. Wenn Daten für Käufe nur für einen bestimmten Gerätetyp angezeigt werden sollen, können Sie hier einen bestimmten auswählen.
+-   **Gerätetyp**: Die Standardeinstellung ist **Alle Geräte**. Wenn Daten für Käufe nur für einen bestimmten Gerätetyp angezeigt werden sollen (beispielsweise PCs, Konsolen oder Tablets), können Sie hier einen bestimmten angeben.
 
 Die Informationen in allen unten angezeigten Diagrammen beziehen sich auf den ausgewählten Zeitraum und alle von Ihnen ausgewählten Filter. In einigen Abschnitten können Sie zusätzliche Filter anwenden.
 
@@ -55,10 +56,10 @@ Sie können optional die Ergebnisse danach filtern, ob die Übernahme vom Client
 
 ## <a name="installs"></a>Installiert
 
-Das Diagramm **Installiert** Diagramm zeigt, wie oft festgestellt wurde, dass ein Kunde Ihre App über den ausgewählten Zeitraum erfolgreich auf Windows10-Geräten installiert hat. Sie sehen die Gesamtanzahl, zusammen mit einem Diagramm, das die Installation pro Tag oder Woche anzeigt (abhängig von der Dauer, die Sie ausgewählt haben). Optional können Sie die Ergebnisse nach Paketversion filtern.
+Das Diagramm **Installiert** zeigt an, wie häufig festgestellt wurde, dass ein Kunde Ihre App über den ausgewählten Zeitraum erfolgreich auf Windows10-Geräten (einschließlich Xbox One Konsolen) installiert hat. Es wird die Gesamtanzahl zusammen mit einem Diagramm dargestellt, das die Installation pro Tag oder Woche anzeigt (abhängig von der Dauer, die Sie ausgewählt haben). Optional können Sie die Ergebnisse nach Paketversion filtern.
 
 Zur Gesamtübersicht der Installationen gehören:
--   **Installationen auf mehreren Windows 10-Geräten.** Wenn derselbe Kunde Ihre App beispielsweise aus zwei Windows 10-PCs und einem Windows 10-Smartphone installiert, werden drei Installationen gezählt.
+-   **Installationen auf mehreren Windows 10-Geräten.** Wenn derselbe Kunde Ihre App beispielsweise aus zwei Windows 10-PCs und einer Xbox One Konsole installiert, werden drei Installationen gezählt.
 -   **Erneute Installationen.** Wenn eine Kunde Ihre App beispielsweise heute installiert, morgen deinstalliert und im nächsten Monat erneut installiert, werden zwei Installationen gezählt.
 
 Von der Gesamtansicht der Installationen sind ausgenommen:
@@ -76,7 +77,7 @@ Von der Gesamtansicht der Installationen sind ausgenommen:
 Der **Erwerbstrichter** zeigt an, wie viele Kunden jeden Schrittdes Trichters ausgeführt hat, von der Store-Seite mit der App bis hin zur Anzeige des Wechselkurses. Diese Daten helfen Ihnen Bereiche zu identifizieren, in denen Sie mehr investieren möchten, um die Käufe, Installationen oder Nutzung zu erhöhen.
 
 > [!IMPORTANT]
-> Der **Erwerbstrichter** zeigt nur Daten für Kunden auf Windows 10 über die letzten 90 Tage an.
+> Der **Erwerbstrichter** zeigt nur Daten für Kunden auf Windows 10 (einschließlich Xbox) über die letzten 90 Tage an.
 
 Die Schritte im Trichter sehen folgendermaßen aus:
 

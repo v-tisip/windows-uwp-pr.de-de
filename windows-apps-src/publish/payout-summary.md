@@ -1,19 +1,20 @@
 ---
 author: jnHs
-Description: "Die Auszahlungsübersicht enthält Details zu den mit Ihren Apps und Add-Ons erzielten Erlösen. Sie werden auch darüber informiert, wann Sie Zahlungen erhalten und wie hoch diese Zahlungen sind."
-title: "Auszahlungsübersicht"
+Description: The Payout summary shows you details about the money you’ve earned with your apps and add-ons. It also lets you know when you’ll receive payments and how much you'll be paid.
+title: Auszahlungsübersicht
 ms.assetid: F0D070BE-8267-4CC9-B0D2-085EBA74AC98
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
-ms.openlocfilehash: d6a069bab6bc24c6f6388eec7ad63c0c79525fd9
-ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+keywords: Windows10 UWP, Auszahlungszusammenfassung, Anweisung, Zahlungen, Einnahmen, Auszahlung, Einnahmen
+ms.localizationpriority: high
+ms.openlocfilehash: 5be84a7fe6918a0ba272aead83ec26e68669c477
+ms.sourcegitcommit: 980e604c3767e7a73619d027bebd78cf4bfe9678
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="payout-summary"></a>Auszahlungsübersicht
 
@@ -29,6 +30,7 @@ Wenn Sie Produkte im Azure Marketplace verkaufen, werden Ihnen in der **Auszahlu
 >
 > Zahlungen erfolgen monatlich (vorausgesetzt, der entsprechenden Zahlungsschwellenwert wird erreicht). In der Regel senden wir Zahlungen, die in einem bestimmten Monat fällig sind, bis zum 15. Tag dieses Monats. Beachten Sie, dass Zahlungen in der Regel zwischen drei und zehn zusätzliche Werktage benötigen, um Ihr Konto zu erreichen. Weitere Informationen finden Sie unter [Auszahlungsschwellenwerte, Methoden und Zeiträume](payment-thresholds-methods-and-timeframes.md).
 
+Um Ihre **Auszahlungszusammenfassung** anzuzeigen, klicken Sie auf das Symbol **Auszahlung**, das in der oberen rechten Ecke im Dev Center angezeigt wird, und wählen Sie dann **Auszahlungszusammenfassung** aus.
 
 ## <a name="current-proceeds-and-payments"></a>Aktuelle Erlöse und Auszahlungen
 
@@ -56,7 +58,7 @@ Unter dem Abschnitt **Bis heute gezahlter Gesamtbetrag** werden standardmäßig 
 
 Oben in jeder Aufstellung ist der Gesamtbetrag der monatlichen Auszahlung angegeben. Direkt darunter unter **Erfolgte Zahlungen** sehen Sie eine Zusammenfassung der Berechnung des Auszahlungsbetrags.
 
-Darunter im Abschnitt **Aufschlüsselung der Erlöse** sind Details dazu aufgeführt, wie viel Geld Sie pro Markt und pro Einnahmequelle (z. B. Windows Phone Store, Windows Store 8, Windows Store usw.) nach App verdient haben. Sie sehen außerdem Details zu allen vorgenommenen [Anpassungen](#proceeds-by-app-and-adjustments), einschließlich Datum, Betrag und Grund für die Anpassung.
+Darunter im Abschnitt **Aufschlüsselung der Erlöse** sind Details dazu aufgeführt, wie viel Geld Sie pro Markt und pro Einnahmequelle (z. B. Microsoft Store, Microsoft Store 8, Windows Phone Store usw.) nach App verdient haben. Sie sehen außerdem Details zu allen vorgenommenen [Anpassungen](#proceeds-by-app-and-adjustments), einschließlich Datum, Betrag und Grund für die Anpassung.
 
 Beachten Sie, dass in den oben genannten Abschnitten nur Informationen zu Ihren Erlöse (und Anpassungen) aus App-Verkäufe angezeigt werden. Wenn Sie durch Werbung Geld verdient haben, sehen Sie einen separaten Microsoft Advertising-Abschnitt mit Details zu den Auszahlungen und zur Währungsumrechnung.
 
@@ -80,7 +82,7 @@ In der folgenden Tabelle werden die Felder der CSV-Datei erläutert. Beachten Si
 
 | Feldname              | Beschreibung                                                                                                                              |
 |-------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| Umsatzquelle          | Die Quelle der Umsätze, basierend auf dem Transaktionsort (z. B. Windows Store, Windows Phone Store, Windows Store 8, Werbung usw.). |
+| Umsatzquelle          | Die Quelle der Umsätze, basierend auf dem Transaktionsort (z. B. Microsoft Store, Windows Phone Store, Microsoft Store 8, Werbung usw.). |
 | Bestellnummer                |  Eindeutiger Bezeichner für die Bestellung. Anhand dieser ID können Sie kaufbezogene Transaktionen und die entsprechenden Transaktionen, die sich nicht auf Käufe beziehen (z.B. Erstattungen, Rückvergütungen usw.), ermitteln. Beide Arten von Transaktionen besitzen die gleiche Bestell-ID. Im Fall einer aufgeteilten Belastung, bei der mehrere Zahlungsmethoden für einen einzelnen Einkauf verwendet wurden, können Sie die kaufbezogenen Transaktionen verknüpfen.                                                                                                          |
 | Transaktions-ID          |       Eindeutige Transaktions-ID.  |
 | Datum/Uhrzeit der Transaktion   | Das Datum und die Uhrzeit der Transaktion (UTC).                                                                                        |
@@ -89,7 +91,7 @@ In der folgenden Tabelle werden die Felder der CSV-Datei erläutert. Beachten Si
 | Name des übergeordneten Produkts     | Name des übergeordneten Produkts. Hinweis: Wenn für die Transaktion kein übergeordnetes Produkt vorhanden ist, lautet der Name des übergeordneten Produkts „Produktname“.   |
 | Produktname            | Name des Produkts.                                                                                                                     |
 | Produkttyp            | Art des Produkts (z. B. App, Add-On, Spiel usw.)                                                                                        |
-| Menge                | Wenn die Umsatzquelle „Windows Store für Unternehmen“ ist, gibt die Menge die Anzahl der erworben Lizenzen an. Für alle anderen Umsatzquellen ist die Menge immer 1. Hinweis: Auch wenn eine Transaktion in zwei Positionen unterteilt wird, weil zwei verschiedene Zahlungsmethoden verwendet wurden, wird für jede Position die Menge 1 angezeigt.    |
+| Anzahl                | Wenn die Umsatzquelle „Microsoft Store für Unternehmen“ ist, gibt die Menge die Anzahl der erworben Lizenzen an. Für alle anderen Umsatzquellen ist die Menge immer 1. Hinweis: Auch wenn eine Transaktion in zwei Positionen unterteilt wird, weil zwei verschiedene Zahlungsmethoden verwendet wurden, wird für jede Position die Menge 1 angezeigt.    |
 | Transaktionstyp        | Art der Transaktion (z.B. Einkauf, Erstattung, Rückbuchung, Ausgleich usw.)                                                                |
 | Zahlungsmethode          | Kundenzahlungsmittel, das für die Transaktion verwendet wird (z.B. Kreditkarte, Mobilfunkanbieterrechnung, PayPal usw.)                                 |
 | Land/Region        | Land/Region, in dem die Transaktion durchgeführt wurde.                                                                                            |

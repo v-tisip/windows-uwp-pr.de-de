@@ -14,19 +14,20 @@ design-contact: conrwi
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: high
-ms.openlocfilehash: 8ba0d9939d7ab1d9826ed2848e476499f09c628f
-ms.sourcegitcommit: 4b522af988273946414a04fbbd1d7fde40f8ba5e
+ms.openlocfilehash: 2ec95f757b041b74dda8bc0606ad8113881809d5
+ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="reveal-highlight"></a>Reveal-highlight
 
-Einblendungen sind neue Lichteffekte, welche die interaktiven Elemente in Ihrer App mit Tiefe und Fokus versehen kann.
+Reveal-highlight ist ein Lichteffekt, der interaktive Elemente hervorhebt wie z.B. Befehlsleisten, wenn der Benutzer den Zeiger in die Nähe bewegt. 
 
 > **Wichtige APIs**: [RevealBrush-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush), [RevealBackgroundBrush-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbackgroundbrush), [RevealBorderBrush-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealborderbrush), [RevealBrushHelper-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrushhelper), [VisualState-Klasse](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.VisualState)
 
-Das Verhalten von Einblendungen zeigt den klickbaren Inhalt des Containers an, wenn der Mauszeiger in der Nähe ist.
+## <a name="how-it-works"></a>Funktionsweise
+Reveal-highlight hebt interaktive Elemente hervor, indem der Container des Elements hervorgehoben wird, wenn sich der Mauszeiger nähert, wie in der folgenden Abbildung dargestellt:
 
 ![Reveal Visual](images/Nav_Reveal_Animation.gif)
 
@@ -52,30 +53,25 @@ Da durch Einblendungen die ausgeblendeten Rahmen um Objekte herum angezeigt werd
 
 > [!VIDEO https://channel9.msdn.com/Events/Windows/Windows-Developer-Day-Fall-Creators-Update/WinDev013/player]
 
-## <a name="reveal-and-the-fluent-design-system"></a>Einblendungen und das Fluent Design-System
-
- Mit dem Fluent Design-System erstellen Sie moderne Oberflächen, die Licht, Tiefe, Bewegung, Material und Skalierungsmöglichkeiten beinhalten. „Einblendungen” ist eine Komponente des Fluent Design-Systems, die Lichteffekte in Ihrer App ermöglicht. Weitere Informationen finden Sie in der [Fluent Design für UWP-Übersicht](../fluent-design-system/index.md).
-
 ## <a name="how-to-use-it"></a>Verwendung
 
-Einblendungen funktionieren automatisch bei einigen Steuerelementen. Für andere Steuerelemente können Sie Einblendungen aktivieren, indem Sie dem Steuerelement einen speziellen Stil zuweisen.
+„Reveal” funktioniert automatisch bei einigen Steuerelementen. Für andere Steuerelemente können Sie „Reveal” aktivieren, indem Sie dem Steuerelement einen speziellen Stil zuordnen, wie im Abschnitt [Aktivieren von „Reveal” für andere Steuerelemente](#enabling-reveal-on-other-controls) und [Aktivieren von „Reveal” für allgemeine Steuerelemente](#enabling-reveal-on-custom-controls) dieses Artikels aufgeführt.
 
-## <a name="controls-that-automatically-use-reveal"></a>Steuerelemente, die Einblendungen automatisch verwenden
+## <a name="controls-that-automatically-use-reveal"></a>Steuerelemente, die „Reveal” automatisch verwenden
 
 - [**ListView**](../controls-and-patterns/lists.md)
 - [**GridView**](../controls-and-patterns/lists.md)
 - [**TreeView**](../controls-and-patterns/tree-view.md)
 - [**NavigationView**](../controls-and-patterns/navigationview.md)
-- [**AutosuggestBox**](../controls-and-patterns/auto-suggest-box.md)
 - [**MediaTransportControl**](../controls-and-patterns/media-playback.md)
 - [**CommandBar**](../controls-and-patterns/app-bars.md)
-- [**ComboBox**](../controls-and-patterns/lists.md)
 
-Die folgenden Abbildungen zeigen die Auswirkungen von Einblendungen auf verschiedene Steuerelemente:
+Die folgenden Abbildungen zeigen die Auswirkungen von „Reveal” auf verschiedene Steuerelemente:
 
-![Beispiele für Einblendungen](images/RevealExamples_Collage.png)
+![Beispiele für „Reveal”](images/RevealExamples_Collage.png)
 
-## <a name="enabling-reveal-on-other-common-controls"></a>Aktivieren von Einblendungen für andere allgemeine Steuerelemente
+
+## <a name="enabling-reveal-on-other-controls"></a>Aktivieren von „Reveal” für andere Steuerelemente
 
 Für Szenarien, in denen Einblendungen angewendet werden sollten (diese Steuerelemente sind Hauptinhalt und/oder werden in einer Liste oder Auflistungsausrichtung verwendet), haben wir optionale Ressourcenformate bereitgestellt, mithilfe derer Sie Einblendungen für solche Situationen aktivieren können.
 
@@ -87,23 +83,74 @@ Diese Steuerelemente verfügen nicht standardmäßig über Einblendungen, da sie
 | ToggleButton | ToggleButtonRevealStyle |
 | RepeatButton | RepeatButtonRevealStyle |
 | AppBarButton | AppBarButtonRevealStyle |
-| SemanticZoom | SemanticZoomRevealStyle |
+| AppBarToggleButton | AppBarToggleButtonRevealStyle |
+| GridViewItem (Anzeigen über dem Inhalt) | GridViewItemRevealBackgroundShowsAboveContentStyle |
 
-Um diese Formate anzuwenden, aktualisieren Sie einfach folgendermaßen die Eigenschaft „Style”:
+Um diese Formate anzuwenden, legen Sie die Eigenschaft [Style](/uwp/api/Windows.UI.Xaml.Style) folgendermaßen fest:
 
-```XAML
+```xaml
 <Button Content="Button Content" Style="{StaticResource ButtonRevealStyle}"/>
 ```
 
-## <a name="enabling-reveal-on-custom-controls"></a>Aktivieren von Einblendungen für benutzerdefinierte Steuerelemente
+### <a name="reveal-in-themes"></a>Einblenden in Designs
 
-Berücksichtigen Sie bei der Entscheidung, ob das benutzerdefinierte Steuerelement Einblendungen erhalten soll oder nicht, ob Sie eine Gruppierung von interaktiven Elementen benötigen, die sich alle auf eine übergeordnete Feature oder Aktion beziehen, die Sie in Ihrer App ausführen möchten.
+Einblenden ändert sich je nach angefordertem Design des Steuerelements, der App oder der Einstellung des Benutzers. Im dunklen Design ist das Licht des Rahmens und der Anzeige weiß, währen in hellem Design nur der Rahmen hellgrau angezeigt wird.
 
-Beispielsweise sind NavigationView-Elemente mit der Seitennavigation verknüpft. CommandBar-Schaltflächen beziehen sich auf Menüaktionen oder Feature-Aktionen. Die MediaTransportControl-Schaltflächen unterhalb beziehen sich auf das Medium, das wiedergegeben wird.
+![helles und dunkles Einblenden](images/Dark_vs_LightReveal.png)
 
-Die Steuerelemente, die die Einblendung erhalten, müssen nicht miteinander verknüpft werden, sondern nur in einem HD-Bereich sein und einen größeren Zweck dienen.
+Um weiße Rahmen in einem hellen Design anzuzeigen, setzen Sie einfach das angeforderte Design für das Steuerelement auf dunkel fest.
 
-Rufen Sie zum Aktivieren von Einblendungen für benutzerdefinierte Steuerelemente oder Steuerelemente mit neuen Vorlagen das Format für dieses Steuerelement in den visuellen Zuständen der Vorlage für dieses Steuerelement auf, und legen Sie Einblendungen im Stammraster fest:
+```xaml
+<Grid RequestedTheme="Dark">
+    <Button Content="Button" Click="Button_Click" Style="{ThemeResource ButtonRevealStyle}"/>
+</Grid>
+```
+
+Oder ändern Sie das „TargetTheme” des „RevealBorderBrush” auf Dunkel. Beachten Sie Folgendes! Wenn „TargetTheme” auf dunkel festgelegt ist, wird Einblenden weiß angezeigt. Wenn es auf „Light” festgelegt ist, werden die Rahmen grau angezeigt.
+
+```xaml
+ <RevealBorderBrush x:Key="MyLightBorderBrush" TargetTheme="Dark" Color="{ThemeResource SystemAccentColor}" FallbackColor="{ThemeResource SystemAccentColor}" />
+```
+
+## <a name="enabling-reveal-on-custom-controls"></a>Aktivieren von „Reveal” für benutzerdefinierte Steuerelemente
+
+Sie können „Reveal” für benutzerdefinierte Steuerelemente hinzufügen. Bevor Sie dies tun, ist es hilfreich, etwas mehr über die Funktionsweise des Effekts von „Reveal” zu erfahren. „Reveal” besteht aus zwei separaten Effekten: **Reveal border** (Rahmen) und **Reveal hover** (Draufzeigen).
+
+- **Rahmen** zeigt die Rahmen der interaktiven Elemente an, wenn sich ein Zeiger nähert. Dadurch können Objekte in der Nähe ähnliche Aktionen wie das aktuell fokussierte Objekt durchführen.
+- Durch **Draufzeigen** wird die angedeutete oder fokussierte Form mit einem leichten Schein umgeben und beim Anklicken wird eine gedrückte Animation angezeigt. 
+
+![Ebenen einblenden](images/RevealLayers.png)
+
+<!-- The Reveal recipe breakdown is:
+
+- Border reveal will be on top of all content but on the designated edges
+- Text and content will be displayed directly under Border Reveal
+- Hover reveal will be beneath content and text
+- The backplate (that turns on and enables Hover Reveal)
+- The background (background of control) -->
+
+
+Diese Effekte werden durch zwei Pinselelemente definiert: 
+* „Reveal” für Rahmen wird mithilfe von **RevealBorderBrush** definiert
+* „Reveal” für das Draufzeigen wird mithilfe von **RevealBackgroundBrush** definiert
+
+```xaml
+<RevealBorderBrush x:Key="MyRevealBorderBrush" TargetTheme="Light" Color="{ThemeResource SystemAccentColor}" FallbackColor="{ThemeResource SystemAccentColor}"/>
+<RevealBackgroundBrush x:Key="MyRevealBackgroundBrush" TargetTheme="Light" Color="{StaticResource SystemAccentColor}" FallbackColor="{StaticResource SystemAccentColor}" />
+```
+In den meisten Fällen wird „Reveal” für bestimmte Steuerelemente von uns automatisch aktiviert. Andere Steuerelemente müssen jedoch über das Anwenden eines Stils oder das Ändern der Vorlagen direkt aktiviert.
+
+### <a name="when-to-add-reveal"></a>Wann sollte „Reveal” hinzugefügt werden
+Sie können „Reveal” auf Ihre benutzerdefinierten Steuerelemente hinzufügen – es empfiehlt allerdings, den Typ des Steuerelements und sein Verhalten vorher festzulegen. 
+* Wenn Ihr benutzerdefiniertes Steuerelement ein interaktives Element ist und keine ähnlichen Steuerelemente auf der gleichen Oberfläche angezeigt werden (wie z.B. Menüelemente), benötigt das benutzerdefinierte Steuerelement wahrscheinlich keine Einblendung.  
+* Besitzen Sie eine Gruppe von verwandten interaktiven Inhalten oder Elementen, benötigen die Bereiche der App wahrscheinlich die Einblendung – dies wird häufig als [Steuerung](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/collection-commanding) der Oberfläche bezeichnet.
+
+Eine allein angezeigte Schaltfläche muss keine Einblendung verwenden, aber eine Reihe von Schaltflächen in einer Befehlsleiste sollte „Reveal” verwenden.
+
+<!-- For example, NavigationView's items are related to page navigation. CommandBar's buttons relate to menu actions or page feature actions. MediaTransportControl's buttons beneath all relate to the media being played. -->
+
+### <a name="using-the-control-template-to-add-reveal"></a>Hinzufügen von „Reveal” mithilfe der Steuerelementvorlage 
+Um die Einblendung für benutzerdefinierte Steuerelemente oder Steuerelemente mit neuen Vorlagen zu aktivieren, ändern Sie die Steuerelementvorlage für das Steuerelement. Die meisten Steuerelementvorlagen besitzen ein Raster im Stammverzeichnis. Aktualisieren Sie [VisualState](/uwp/api/windows.ui.xaml.visualstate) des Stamm-Rasters, um die Einblendung zu verwenden:
 
 ```xaml
 <VisualState x:Name="PointerOver">
@@ -118,92 +165,15 @@ Rufen Sie zum Aktivieren von Einblendungen für benutzerdefinierte Steuerelement
 
 Es ist wichtig zu beachten, dass zur Einblendung sowohl ein Pinsel als auch Setter in Visual State benötigt werden, um einwandfrei zu arbeiten. Das einfache Festlegen eines Steuerelements für Reveal-Pinselressourcen alleine aktivieren das Steuerelement nicht. Ziele oder Einstellungen zu verwenden ohne die Werte als Reveal-Pinsel festgelegt zu haben, aktiviert die Einblendung auch nicht.
 
-Wir haben eine Reihe von System-Reveal-Pinsels erstellt, mit denen Sie die Benutzeroberfläche anpassen können. Sie können z.B. den Pinsel **ButtonRevealBackground** zum Erstellen eines Hintergrunds für eine benutzerdefinierte Schaltfläche oder den Pinsel **ListViewItemRevealBackground** für benutzerdefinierte Listen und so weiter verwenden.
+Weitere Informationen zum Ändern von Steuerelementvorlagen finden Sie im Artikel [XAML-Steuerelementvorlagen](../controls-and-patterns/control-templates.md) Artikel.
 
-(Informationen zur Funktionsweise von Ressourcen in XAMl finden Sie im Artikel [Xaml-Ressourcenverzeichnis](../controls-and-patterns/resourcedictionary-and-xaml-resource-references.md).)
-
-### <a name="reveal-on-listview-controls-with-nested-buttons"></a>Einblendung auf ListView-Steuerelementen mit geschachtelten Schaltflächen
-
-Besitzen Sie ein [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) und Schaltflächen oder aufgerufene Inhalte, die innerhalb eines [ListViewItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewitem)-Elements geschachtelt sind, sollten Sie die Einblendung für die geschachtelten Elemente aktivieren.
-
-Falls Sie Schaltflächen oder Schaltflächen ähnliche Steuerelemente in einem ListViewItem haben, legen Sie einfach die [Stil](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement#Windows_UI_Xaml_FrameworkElement_Style)-Eigenschaft des Steuerelements auf die statische Ressource **ButtonRevealStyle** fest. 
-
-![Geschachtelte Einblendungen](images/NestedListContent.png)
-
-Dieses Beispiel ermöglicht Einblendungen auf mehrere Schaltflächen in einem ListViewItem. 
-
-```XAML
-<ListViewItem>
-    <StackPanel Orientation="Horizontal">
-        <TextBlock Margin="5">Test Text: lorem ipsum.</TextBlock>
-        <StackPanel Orientation="Horizontal">
-            <Button Content="&#xE71B;" FontFamily="Segoe MDL2 Assets" Width="45" Height="45" Margin="5" Style="{StaticResource ButtonRevealStyle}"/>
-            <Button Content="&#xE728;" FontFamily="Segoe MDL2 Assets" Width="45" Height="45" Margin="5" Style="{StaticResource ButtonRevealStyle}"/>
-            <Button Content="&#xE74D;" FontFamily="Segoe MDL2 Assets" Width="45" Height="45" Margin="5" Style="{StaticResource ButtonRevealStyle}"/>
-         </StackPanel>
-    </StackPanel>
-</ListViewItem>
-```
-
-### <a name="listviewitempresenter-with-reveal"></a>ListViewItemPresenter mit Einblendungen
-
-Listen werden in XAML besonders behandelt, und bei Einblendungen müssen wir Visual State-Manager für Einblendungen nur innerhalb des ListViewItemPresenters definieren:
-
-```XAML
-<ListViewItemPresenter>
-<!-- ContentTransitions, SelectedForeground, etc. properties -->
-RevealBackground="{ThemeResource ListViewItemRevealBackground}"
-RevealBorderThickness="{ThemeResource ListViewItemRevealBorderThemeThickness}"
-RevealBorderBrush="{ThemeResource ListViewItemRevealBorderBrush}">
-    <VisualStateManager.VisualStateGroups>
-        <VisualStateGroup x:Name="CommonStates">
-        <VisualState x:Name="Normal" />
-        <VisualState x:Name="Selected" />
-        <VisualState x:Name="PointerOver">
-            <VisualState.Setters>
-                <Setter Target="Root.(RevealBrush.State)" Value="PointerOver" />
-            </VisualState.Setters>
-            </VisualState>
-            <VisualState x:Name="PointerOverSelected">
-                <VisualState.Setters>
-                    <Setter Target="Root.(RevealBrush.State)" Value="PointerOver" />
-                </VisualState.Setters>
-            </VisualState>
-            <VisualState x:Name="PointerOverPressed">
-                <VisualState.Setters>
-                    <Setter Target="Root.(RevealBrush.State)" Value="Pressed" />
-                </VisualState.Setters>
-            </VisualState>
-            <VisualState x:Name="Pressed">
-                <VisualState.Setters>
-                    <Setter Target="Root.(RevealBrush.State)" Value="Pressed" />
-                </VisualState.Setters>
-            </VisualState>
-            <VisualState x:Name="PressedSelected">
-                <VisualState.Setters>
-                    <Setter Target="Root.(RevealBrush.State)" Value="Pressed" />
-                </VisualState.Setters>
-            </VisualState>
-            </VisualStateGroup>
-                <VisualStateGroup x:Name="EnabledGroup">
-                    <VisualState x:Name="Enabled" />
-                    <VisualState x:Name="Disabled">
-                        <VisualState.Setters>
-                             <Setter Target="Root.RevealBorderThickness" Value="0"/>
-                        </VisualState.Setters>
-                    </VisualState>
-                </VisualStateGroup>
-    </VisualStateManager.VisualStateGroups>
-</ListViewItemPresenter>
-```
-
-Dies bedeutet ein Anfügen an das Ende der Eigenschaftssammlung innerhalb von ListViewItemPresenter mit den bestimmten Setter des Visual States für eine Einblendung.
+Wir haben eine Reihe von System-Reveal-Pinsels erstellt, mit denen Sie die Vorlagen anpassen können. Sie können z.B. den Pinsel **ButtonRevealBackground** zum Erstellen eines Hintergrunds für eine benutzerdefinierte Schaltfläche oder den Pinsel **ListViewItemRevealBackground** für benutzerdefinierte Listen und so weiter verwenden. (Informationen zur Funktionsweise von Ressourcen in XAMl finden Sie im Artikel [Xaml-Ressourcenverzeichnis](../controls-and-patterns/resourcedictionary-and-xaml-resource-references.md).)
 
 ### <a name="full-template-example"></a>Vollständiges Vorlagenbeispiel
 
 Hier sehen Sie eine gesamte Vorlage und wie eine Schaltfläche zum Einblenden aussehen würde:
 
-```XAML
+```xaml
 <Style TargetType="Button" x:Key="ButtonStyle1">
     <Setter Property="Background" Value="{ThemeResource ButtonRevealBackground}" />
     <Setter Property="Foreground" Value="{ThemeResource ButtonForeground}" />
@@ -284,42 +254,33 @@ Hier sehen Sie eine gesamte Vorlage und wie eine Schaltfläche zum Einblenden au
 </Style>
 ```
 
+### <a name="fine-tuning-the-reveal-effect-on-a-custom-control"></a>Optimieren des Effekts von „Reveal” für ein benutzerdefiniertes Steuerelement 
+
+Wenn Sie „Reveal” für ein benutzerdefiniertes oder neues Steuerelement oder eine benutzerdefinierte Befehlsoberfläche aktivieren, können diese Tipps den Effekt optimieren:
+ 
+* Auf benachbarten Elementen mit einer Größe, die nicht in Höhe oder Breite (insbesondere in Listen) ausgerichtet ist: entfernen Sie das Verhalten des Rahmens und aktivieren Sie die Rahmen nur für das Draufzeigen.
+* Für Befehlselemente, die häufig aktiviert oder deaktiviert werden: platzieren Sie den Pinsel für den Rahmen auf die Backplates der Elemente sowie deren Rahmen, um ihren Zustand zu betonen.
+* Für benachbarte Steuerelemente, die sich fast berühren: Fügen Sie einen Rand von einem Pixel zwischen den beiden Elementen hinzu. 
+
 ## <a name="dos-and-donts"></a>Empfohlene und nicht empfohlene Vorgehensweisen
-- Verwenden Sie die Einblendung für Elemente, in denen der Benutzer Aktionen (Schaltflächen, Auswahl) ausführt
-- Verwenden Sie Einblendungen bei der Gruppierung von interaktiven Elementen, die nicht standardmäßig visuelle Trennzeichen haben (Listen, Befehlsleisten)
-- Verwenden Sie Einblendungen in Bereichen mit vielen interaktiven Elementen
-- Verwenden Sie Einblendungen nicht auf statischen Inhalten (Hintergrund, Text)
-- Verwenden Sie Einblendungen nicht in einzelnen, isolierten Situationen
+- Verwenden Sie „Reveal” für Elemente, in denen der Benutzer viele Aktionen (CommandBars, Navigationsmenüs) ausführt
+- Verwenden Sie „Reveal” bei der Gruppierung von interaktiven Elementen, die nicht standardmäßig visuelle Trennzeichen haben (Listen, Menübänder)
+- Verwenden Sie „Reveal” in Bereichen mit vielen interaktiven Elementen (Befehlszenarios)
+- Fügen Sie einen Rand von einem Pixel zwischen Einblendungselementen hinzu
+- Verwenden Sie „Reveal” nicht auf statischen Inhalten (Hintergrund, Text)
+- Verwenden Sie „Reveal” nicht auf Popups, Flyouts oder Dropdownlisten
+- Verwenden Sie „Reveal” nicht in einzelnen, isolierten Situationen
 - Verwenden Sie Einblendungen nicht auf sehr großen Elementen (größer als 500epx)
-- Verwenden Sie Einblendungen nicht bei sicherheitsbezogenen Entscheidungen, da es die Aufmerksamkeit von der Nachricht, die Sie an die Benutzer übermitteln möchten, weglenken kann.
+- Verwenden Sie „Reveal” nicht bei sicherheitsbezogenen Entscheidungen, da es die Aufmerksamkeit von der Nachricht, die Sie an die Benutzer übermitteln möchten, weglenken kann.
 
-## <a name="how-we-designed-reveal"></a>Unser Einblendungs-Entwurfsansatz
-
-Es gibt zwei visuelle Hauptkomponenten für Einblendungen: das Verhalten **Einblenden durch Daraufzeigen** und das Verhalten **Rahmen einblenden**.
-
-![Ebenen einblenden](images/RevealLayers.png)
-
-Das Verhalten „Einblenden durch Daraufzeigen” ist direkt mit dem Inhalt verbunden, auf den gezeigt wird (mit Zeiger- oder Fokuseingaben). Dabei wird ein leichter Lichthof um das Element herum eingeblendet, auf das gezeigt oder das fokussiert wird, sodass Sie wissen, dass Sie damit interagieren können.
-
-Das Verhalten „Rahmen einblenden” wird auf das fokussierte Element und andere Elemente in dessen Nähe angewendet. Dadurch erfahren Sie, dass diese Objekte in der Nähe ähnliche Aktionen wie das aktuell fokussierte Objekt durchführen können.
-
-Die Aufschlüsselung der Anleitung für Einblendungen sieht folgendermaßen aus:
-
-- Das Verhalten „Rahmen einblenden” befindet sich über dem gesamten Inhalt, jedoch an den angegebenen Rändern.
-- Text und Inhalt werden direkt unter dem Verhalten „Rahmen einblenden” angezeigt.
-- Das Verhalten „Einblenden durch Daraufzeigen” befindet sich unterhalb von Inhalt und Text.
-- Die Backplate (die das Verhalten „Rahmen einblenden” aktiviert)
-- Der Hintergrund (Hintergrund des Steuerelements)
-
-<!--
-<div class=”microsoft-internal-note”>
-To create your own Reveal lighting effect for static comps or prototype purposes, see the full [uni design guidance](http://uni/DesignDepot.FrontEnd/#/ProductNav/3020/1/dv/?t=Resources%7CToolkit%7CReveal&f=Neon) for this effect in illustrator.
-</div>
--->  
 
 ## <a name="get-the-sample-code"></a>Beispielcode herunterladen
 
 - [Beispiel eines XAML-Steuerelementkatalogs](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) – Hier werden alle XAML-Steuerelemente in einem interaktiven Format dargestellt.
+
+## <a name="reveal-and-the-fluent-design-system"></a>„Reveal” und das Fluent Design-System
+
+ Mit dem Fluent Design-System erstellen Sie moderne Oberflächen, die Licht, Tiefe, Bewegung, Material und Skalierungsmöglichkeiten beinhalten. „Einblendungen” ist eine Komponente des Fluent Design-Systems, die Lichteffekte in Ihrer App ermöglicht. Weitere Informationen finden Sie in der [Fluent Design für UWP-Übersicht](../fluent-design-system/index.md).
 
 ## <a name="related-articles"></a>Verwandte Artikel
 

@@ -3,17 +3,17 @@ author: jnHs
 Description: In order to add and manage account users, you must first associate your Dev Center account with your organization's Azure Active Directory.
 title: Zuordnen Ihres Azure Active Directory zum Dev Center-Konto
 ms.author: wdg-dev-content
-ms.date: 01/12/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Azure Ad, Azure-Mandant, AAD-Mandant, Azure AD-Mandant, Mandantenverwaltung, Mandanten
 ms.localizationpriority: high
-ms.openlocfilehash: ef53a8b339f7f6444373d7445721b641926f00a3
-ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
+ms.openlocfilehash: c430bb279d0b9da6126212a8af7400df8cd1693e
+ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="associate-azure-active-directory-with-your-dev-center-account"></a>Zuordnen Ihres Azure Active Directory zum Dev Center-Konto
 
@@ -22,7 +22,7 @@ Zum [Hinzufügen und Verwalten von Kontobenutzern](add-users-groups-and-azure-ad
 Windows Dev Center nutzt Azure AD zum Verwalten mehrerer Benutzer und zum Zugriff auf das Konto. Wenn in Ihrer Organisation bereits mit Office365 oder anderen Unternehmensdiensten von Microsoft gearbeitet wird, verfügen Sie bereits über Azure AD. Andernfalls können Sie innerhalb von Dev Center ohne zusätzliche Kosten einen neuen Azure AD-Mandanten erstellen.
 
 > [!TIP]
-> Dieses Thema gilt speziell für das Entwicklerprogramm für Windows-Apps. Das Zuordnen eines Mandanten und das Verwalten von Benutzern für Konten im Windows-Hardware-Entwicklerprogramm verhält sich allerdings ähnlich. In diesem Abschnitt gelten die Verweise auf die **Manager**-Rolle auch für Hardware-Konten mit einer **Administrator**-Rolle. Weitere Informationen zur Benutzerverwaltung im Hardware-Entwicklerprogramm finden Sie unter [Dashboard-Verwaltung](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-administration).
+> Dieses Thema gilt speziell für das Entwicklerprogramm für Windows-Apps. Das Zuordnen eines Mandanten und das Verwalten von Benutzern für Konten im Desktopanwendungsprogramm (siehe [Windows-Desktopanwendungsprogramm](https://msdn.microsoft.com/library/windows/desktop/mt826504#users), um weitere Informationen zu erhalten) und im Windows-Hardware-Entwicklerprogramm verhält sich allerdings ähnlich (Verweise auf die **Manager**rolle gelten dabei ebenfalls für die **Administrator**rolle. Weitere Informationen finden Sie unter [Dashboard-Verwaltung](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-administration)).
 
 Ebenso können mehrere Dev Center-Konten einem Azure AD-Mandant zugeordnet werden. Sie müssen nur einen Azure AD-Mandanten haben, der mit Ihrem Dev Center-Konto verknüpft ist, um mehrere Kontobenutzer hinzuzufügen, Sie haben allerdings auch die Möglichkeit, mehrere Azure AD-Mandanten einem einzelnen Dev Center-Konto hinzuzufügen. Jeder Benutzer mit einer **Manager**-Rolle im Dev Center-Konto hat die Möglichkeit zum Hinzufügen und Entfernen von Azure AD-Mandanten.
 
