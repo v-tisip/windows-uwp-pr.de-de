@@ -2,23 +2,26 @@
 author: jnHs
 ms.assetid: DA495F9D-49B8-45A6-BBE0-27F0C804D240
 title: Verwalten Ihrer Kontoeinstellungen und Profilinformationen
-description: "Ihre Entwicklerkontoeinstellungen und Profilinformationen können Sie im Abschnitt Kontoeinstellungen des einheitlichen Windows Dev Center-Dashboards anzeigen und aktualisieren."
+description: Ihre Entwicklerkontoeinstellungen und Profilinformationen können Sie im Abschnitt Kontoeinstellungen des einheitlichen Windows Dev Center-Dashboards anzeigen und aktualisieren.
 ms.author: wdg-dev-content
-ms.date: 01/08/2018
+ms.date: 03/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Dev Center, Kontoeinstellungen, Profil, Konto-Profil, Entwicklerkonto, Entwicklerkontoeinstellungen
 ms.localizationpriority: high
-ms.openlocfilehash: 840eb445eaf5cac05201a58140a7ea7f505d7e14
-ms.sourcegitcommit: 4b522af988273946414a04fbbd1d7fde40f8ba5e
+ms.openlocfilehash: 5bedc2bb91478d86af95f45d57369f5409e7cea1
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="manage-account-settings-and-profile-info"></a>Verwalten Ihrer Kontoeinstellungen und Profilinformationen
 
 Sie können Ihre Entwicklerkontoeinstellungen und Profilinformationen im Abschnitt **Kontoeinstellungen** des [Windows Dev Center-Dashboards](using-the-windows-dev-center-dashboard.md) anzeigen und aktualisieren. 
+
+> [!NOTE]
+> Benachrichtigungseinstellungen (z.B. welche Art von Benachrichtigungen Sie empfangen und erhalten) können im **Nachrichtencenter** verwaltet werden (Sie können darauf zugreifen, indem Sie das Nachrichtensymbol im oberen Bereich des Dashboards auswählen).
 
 ## <a name="account-settings"></a>Kontoeinstellungen
 

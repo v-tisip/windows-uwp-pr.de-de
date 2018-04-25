@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: high
-ms.openlocfilehash: 754fa7c1fe805b45b33be1d560d07c22646d497c
-ms.sourcegitcommit: 444eaccbdcd4be2f1a1e6d4ce5525ba57e363b56
+ms.openlocfilehash: 1810cf1568ab40621ccc981a6ec1f561d0e8a296
+ms.sourcegitcommit: 54c2cd58fde08af889093a0c85e7297e33e6a0eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="handle-uri-activation"></a>Behandeln der URI-Aktivierung
 
@@ -35,7 +35,7 @@ Die folgenden Schritte zeigen, wie Sie den benutzerdefinierten Schemanamen `alsd
 
 Die App empfängt nur für die im Paketmanifest angegebenen URI-Schemanamen Aktivierungsereignisse. Im Folgenden wird beschrieben, wie Sie festlegen, dass die App den URI-Schemanamen `alsdk` behandelt.
 
-1.  Doppelklicken Sie im **Projektmappen-Explorer** auf „package.appxmanifest“, um den Manifest-Designer zu öffnen. Wählen Sie die Registerkarte **Deklarationen** und in der Dropdownliste **Verfügbare Deklarationen** die Option **Protokoll** aus, und klicken Sie dann auf **Hinzufügen**.
+1. Doppelklicken Sie im **Projektmappen-Explorer** auf „package.appxmanifest“, um den Manifest-Designer zu öffnen. Wählen Sie die Registerkarte **Deklarationen** und in der Dropdownliste **Verfügbare Deklarationen** die Option **Protokoll** aus, und klicken Sie dann auf **Hinzufügen**.
 
     Es folgt eine kurze Beschreibung der einzelnen Felder, die Sie im Manifest-Designer für das Protokoll ausfüllen können (Einzelheiten finden Sie unter [**AppX Package Manifest**](https://msdn.microsoft.com/library/windows/apps/dn934791)):
 
@@ -50,11 +50,12 @@ Die App empfängt nur für die im Paketmanifest angegebenen URI-Schemanamen Akti
 | **Einstiegspunkt** | Gibt die Aufgabe an, die die Protokollerweiterung behandelt. Dies ist normalerweise der vollständig qualifizierte Namespacename eines Windows-Runtime-Typs. Wenn keine Angabe erfolgt, wird der Einstiegspunkt für die App verwendet. |
 | **Startseite** | Die Webseite, die den Erweiterungspunkt behandelt. |
 | **Ressourcengruppe** | Eine Markierung, die Sie zum Gruppieren von Erweiterungsaktivierungen zu Zwecken der Ressourcenverwaltung verwenden können. |
-| **Gewünschte Ansicht** (nur Windows) | Verwenden Sie das Feld **Gewünschte Ansicht**, um anzugeben, wie viel Platz für das Fenster der App benötigt wird, wenn sie für den URI-Schemanamen gestartet wird. Die möglichen Werte für **Gewünschte Ansicht** sind **Default**, **UseLess**, **UseHalf**, **UseMore** oder **UseMinimum**. <br/>**Hinweis**  Windows bestimmt die endgültige Fenstergröße einer Ziel-App anhand mehrerer Faktoren, z.B. der Einstellung der Quell-App, der Anzahl der Apps auf dem Bildschirm, der Bildschirmausrichtung usw. Das Festlegen von **Gewünschte Ansicht** ist keine Garantie, dass das Fenster für die Ziel-App auch wirklich so angezeigt wird.<br/> **Mobilgerätfamilie: Gewünschte Ansicht** wird für die Mobilgerätfamilie nicht unterstützt. |
-2.  Geben Sie `images\Icon.png` als **Logo** ein.
-3.  Geben Sie `SDK Sample URI Scheme` als **Anzeigenamen** ein.
-4.  Geben Sie `alsdk` in das Feld **Name** ein.
-5.  Drücken Sie STRG+S, um die an „package.appxmanifest“ vorgenommenen Änderungen zu speichern.
+| **Gewünschte Ansicht** (nur Windows) | Verwenden Sie das Feld **Gewünschte Ansicht**, um anzugeben, wie viel Platz für das Fenster der App benötigt wird, wenn sie für den URI-Schemanamen gestartet wird. Die möglichen Werte für **Gewünschte Ansicht** sind **Default**, **UseLess**, **UseHalf**, **UseMore** oder **UseMinimum**.<br/>**Hinweis**  Windows bestimmt die endgültige Fenstergröße einer Ziel-App anhand mehrerer Faktoren, z.B. der Einstellung der Quell-App, der Anzahl der Apps auf dem Bildschirm, der Bildschirmausrichtung usw. Das Festlegen von **Gewünschte Ansicht** ist keine Garantie, dass das Fenster für die Ziel-App auch wirklich so angezeigt wird.<br/>**Mobilgerätfamilie: Gewünschte Ansicht** wird für die Mobilgerätfamilie nicht unterstützt. |
+
+2. Geben Sie `images\Icon.png` als **Logo** ein.
+3. Geben Sie `SDK Sample URI Scheme` als **Anzeigenamen** ein.
+4. Geben Sie `alsdk` in das Feld **Name** ein.
+5. Drücken Sie STRG+S, um die an „package.appxmanifest“ vorgenommenen Änderungen zu speichern.
 
     Dadurch wird dem Paketmanifest ein [**Extension**](https://msdn.microsoft.com/library/windows/apps/br211400)-Element wie das unten dargestellte hinzugefügt. Die **windows.protocol**-Kategorie gibt an, dass die App den URI-Schemanamen `alsdk` behandelt.
 
@@ -142,7 +143,6 @@ Per Protokollaktivierung gestartete Apps sollten ggf. eine Benutzeroberfläche e
 Ihr URI-Schemaname kann von jeder App oder Website verwendet werden, auch von schädlichen. Alle im URI empfangenen Daten könnten daher von einer nicht vertrauenswürdigen Quelle stammen. Wir empfehlen, niemals eine endgültige Aktion auf Grundlage der Parameter auszuführen, die Sie im URI erhalten. URI-Parameter können z.B. zum Starten der App mit der Kontoseite eines Benutzers, aber nicht zum direkten Ändern des Kontos des Benutzers verwendet werden.
 
 > **Hinweis**  Wenn Sie für Ihre App einen neuen URI-Schemanamen erstellen, ist es wichtig, dass Sie die Anleitungen in [RFC 4395](http://go.microsoft.com/fwlink/p/?LinkID=266550) befolgen. Damit wird sichergestellt, dass der Name die Standards für URI-Schemas erfüllt.
-
 > **Hinweis**  Stellen Sie sicher, dass beim Start über einen Protokollvertrag der Benutzer über die Schaltfläche „Zurück“ zu dem Bildschirm zurückkehrt, von dem aus die App gestartet wurde, und nicht zu den vorherigen Inhalten der App.
 
 Apps sollten für jedes Aktivierungsereignis, durch das ein neues URI-Ziel geöffnet wird, einen neuen XAML-[**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) erstellen. So enthält der Navigationsbackstack für den neuen XAML-**Frame** keinen vorherigen Inhalt, der beim Anhalten der App im aktuellen Fenster angezeigt wurde.
@@ -153,28 +153,24 @@ Falls Ihre Apps für Start- und Protokollverträge einen einzelnen XAML-[**Frame
 
 **Vollständiges Beispiel**
 
-* [Beispiel für Assoziationsstart](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AssociationLaunching)
+- [Beispiel für Assoziationsstart](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AssociationLaunching)
 
 **Konzepte**
 
-* [Standardprogramme](https://msdn.microsoft.com/library/windows/desktop/cc144154)
-* [Dateityp- und URI-Zuordnungsmodell](https://msdn.microsoft.com/library/windows/desktop/hh848047)
+- [Standardprogramme](https://msdn.microsoft.com/library/windows/desktop/cc144154)
+- [Dateityp- und URI-Zuordnungsmodell](https://msdn.microsoft.com/library/windows/desktop/hh848047)
 
 **Aufgaben**
 
-* [Starten der Standard-App für einen URI](launch-default-app.md)
-* [Behandeln der Dateiaktivierung](handle-file-activation.md)
+- [Starten der Standard-App für einen URI](launch-default-app.md)
+- [Behandeln der Dateiaktivierung](handle-file-activation.md)
 
 **Richtlinien**
 
-* [Richtlinien für Dateitypen und URIs](https://msdn.microsoft.com/library/windows/apps/hh700321)
+- [Richtlinien für Dateitypen und URIs](https://msdn.microsoft.com/library/windows/apps/hh700321)
 
 **Referenz**
 
-* [AppX Package Manifest](https://msdn.microsoft.com/library/windows/apps/dn934791)
-* [Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs](https://msdn.microsoft.com/library/windows/apps/br224742)
-* [Windows.UI.Xaml.Application.OnActivated](https://msdn.microsoft.com/library/windows/apps/br242330)~~
-
- 
-
- 
+- [AppX Package Manifest](https://msdn.microsoft.com/library/windows/apps/dn934791)
+- [Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs](https://msdn.microsoft.com/library/windows/apps/br224742)
+- [Windows.UI.Xaml.Application.OnActivated](https://msdn.microsoft.com/library/windows/apps/br242330)

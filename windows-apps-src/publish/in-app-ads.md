@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: high
-ms.openlocfilehash: 66c0ae56c3722162ebef5a8660cc2322d69a278b
-ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
+ms.openlocfilehash: 04d4ca665a8f0dff495b144868767506d7a210f8
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="in-app-ads"></a>In-App-Anzeigen
 
@@ -26,6 +26,7 @@ Verwenden Sie die Seite **Monetarisieren** &gt; **In-App-Anzeige** im Dev Center
 Weitere Informationen dazu, wie Sie diese SDKs in Ihren Apps zu Werbezwecken integrieren, finden Sie unter [Anzeigen von Werbung in Ihrer App mit dem Microsoft Advertising-SDK](../monetize/display-ads-in-your-app.md).
 
 <span id="create-ad-unit" />
+
 ## <a name="create-ad-units"></a>Erstellen von Anzeigeneinheiten
 
 So erstellen Sie eine Anzeigeeinheit für eine [Banneranzeige](../monetize/banner-ads.md), [Interstitialwerbung](../monetize/interstitial-ads.md) oder [native Anzeige](../monetize/native-ads.md) in Ihrer App:
@@ -61,6 +62,7 @@ So erstellen Sie eine Anzeigeeinheit für eine [Banneranzeige](../monetize/banne
 Nachdem Sie die neue Anzeigeneinheit erstellen, wird diese in der Tabelle der verfügbaren Anzeigeneinheiten auf der Seite **Monetisierung** &gt; **In-App-Werbung** angezeigt.
 
 <span id="available-ad-units" />
+
 ## <a name="review-and-edit-ad-units"></a>Überprüfen und Bearbeiten von Anzeigeneinheiten
 
 Nach dem Erstellung von Anzeigeneinheiten für eine oder mehrere Apps auf Ihrem Konto , werden diese Anzeigeeinheiten in einer Tabelle am unteren Rand der Seite **Monetisierung** &gt; **In-App-Werbung** angezeigt. Diese Tabelle zeigt die **Anwendungs-ID** und **Anzeigeneinheits-ID** für jede Anzeigeneinheit zusammen mit anderen Informationen an. Zum Einblenden von Anzeigen in Ihrer App müssen Sie diese Werte in Ihrem Code verwenden. Weitere Informationen finden Sie unter [Einrichten von Anzeigeneinheiten in der App](../monetize/set-up-ad-units-in-your-app.md).
@@ -81,6 +83,7 @@ Um die [Vermittlungseinstellungen](#mediation) für eine UWP-Anzeigeneinheit ode
 Wenn eine Anzeigeneinheit keine Aktivität für die letzten sechs Monate anzeigt, wird sie als **inaktiv** bezeichnet, und schließlich aus Ihrem Dashboard entfernt. Sie können Filter verwenden, um nur **aktive** oder **inaktive** Anzeigeneinheiten anzuzeigen. Wenn Sie Anzeigeneinheiten sehen, für die Sie der Meinung sind, sie seien ungenau als **inaktiv** markiert, [wenden Sie sich an den Support](http://aka.ms/storesupport).
 
 <span id="mediation" />
+
 ## <a name="mediation-settings"></a>Einstellungen der Anzeigenvermittlung
 
 Wenn Sie [Eine neue UWP-Anzeigeneinheit erstellen](#create-ad-unit) oder [Eine vorhandene UWP-Anzeigeneinheit bearbeiten](#available-ad-units), verwenden Sie die Optionen in diesem Abschnitt zum Konfigurieren der Anzeigenvermittlung für die Anzeigeneinheit. Mit der Anzeigenvermittlung können Sie Ihre Anzeigenumsätze maximieren und Werbefunktionen optimal nutzen, indem Sie Anzeigen aus mehreren Anzeigennetzwerken anzeigen, einschließlich Anzeigen aus anderen kostenpflichtigen Anzeigennetzwerken und Anzeigen ohne Umsatzgenerierung zu Werbekampagnen für Microsoft-Apps. Wir kümmern uns um die Vermittlung von Banneranzeigenanforderungen von den gewählten Anzeigennetzwerken. Wenn Sie eine UWP-Anzeigeneinheit haben, die bereits mit einer Banner-, Interstitial oder nativen Anzeige in Ihrer App verbunden ist, erfordert das Aktivieren der Anzeigenvermittlung keine Codeänderungen in Ihrer App.
@@ -113,6 +116,7 @@ So konfigurieren Sie die Anzeigenvermittlung für eine UWP-Anzeigeneinheit in Ih
 10. Klicken Sie auf **Anzeigeneinheit erstellen** (wenn Sie eine neue Anzeigeneinheit erstellen) oder **Speichern** (wenn Sie eine vorhandene Anzeigeneinheit bearbeiten).
 
 <span id="paid-networks" />
+
 ### <a name="supported-paid-ad-networks"></a>Unterstützte Anzeigennetzwerke
 
 Die folgende Tabelle enthält die kostenpflichtigen Netzwerke, die wir derzeit für jeden Anzeigentyp unterstützen. Beachten Sie, dass einige dieser Netzwerke [nicht in allen Märkten verfügbar](#network-markets) sind.
@@ -131,6 +135,7 @@ Die folgende Tabelle enthält die kostenpflichtigen Netzwerke, die wir derzeit f
 
 
 <span id="other-networks" />
+
 ### <a name="other-ad-networks"></a>Weitere Anzeigennetzwerke
 
 Die folgende Tabelle enthält die anderen Netzwerke, die wir derzeit für jeden Anzeigentyp unterstützen.
@@ -142,6 +147,7 @@ Die folgende Tabelle enthält die anderen Netzwerke, die wir derzeit für jeden 
 
 
 <span id="network-markets" />
+
 ### <a name="supported-markets-for-ad-networks"></a>Unterstützte Märkte für Anzeigennetzwerke
 
 Die verfügbaren Anzeigennetzwerke schalten Anzeigen in allen [unterstützten Märkten](define-pricing-and-market-selection.md#microsoft-store-consumer-markets) mit den folgenden Ausnahmen.
@@ -153,6 +159,7 @@ Die verfügbaren Anzeigennetzwerke schalten Anzeigen in allen [unterstützten M�
 | smartclip | Österreich, Belgien, Dänemark, Finnland, Deutschland, Italien, Niederlande, Norwegen, Schweden, Schweiz  |
 
 <span id="coppa" />
+
 ## <a name="coppa-compliance"></a>COPPA-Compliance
 
 Wenn Sie [eine Anzeigeneinheit erstellen](#create-ad-unit) oder [eine vorhandenen Anzeigeneinheit auswählen](#available-ad-units), wird der **COPPA-Compliance**-Abschnitt am unteren Rand der Seite "Dashboard" angezeigt, wenn die ausgewählte App für die Anzeigeneinheit mindestens eine Übermittlung besitzt, die den Schritt [im Store](../publish/the-app-certification-process.md#in-the-store) im App-Zertifizierungsprozess erreicht hat.

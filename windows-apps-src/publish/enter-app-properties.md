@@ -4,17 +4,17 @@ Description: The App properties page of the app submission process lets you defi
 title: Eingeben von App-Eigenschaften
 ms.assetid: CDE4AF96-95A0-4635-9D07-A27B810CAE26
 ms.author: wdg-dev-content
-ms.date: 01/24/2018
+ms.date: 04/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows10, UWP, Spieleinstellungen, Anzeigemodus, Systemanforderungen, Hardwareanforderungen, Mindestanforderungen an die Hardware, empfohlene Hardware
+keywords: Windows10, UWP, Spieleinstellungen, Anzeigemodus, Systemanforderungen, Hardwareanforderungen, Mindestanforderungen an die Hardware, empfohlene Hardware, Datenschutzrichtlinie, Kontaktinformationen für den Support, App-Website, Supportinformationen
 ms.localizationpriority: high
-ms.openlocfilehash: 8ecdeb0dd4ebba83a387666ab87067ff419a9303
-ms.sourcegitcommit: 8d9d4f17e272b78e38b346f846b96260c922bbb2
+ms.openlocfilehash: 35d7be3aa88ca17219c2f2e4024bd2e692fb1abc
+ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="enter-app-properties"></a>Eingeben von App-Eigenschaften
 
@@ -26,6 +26,37 @@ Auf der Seite **Eigenschaften** des [App-Übermittlungsprozesses](app-submission
 Geben Sie hier die Kategorie (und ggf. eine Unterkategorie/Genre) an, die im Store zur Kategorisierung der App verwendet werden soll. Die Angabe einer Kategorie ist für die Einreichung Ihrer App erforderlich.
 
 Weitere Informationen finden Sie unter [Kategorie- und Unterkategorietabelle](category-and-subcategory-table.md).
+
+
+## <a name="support-info"></a>Supportinformationen
+
+In diesem Abschnitt erhalten Sie Informationen, wie Sie Ihren Kunden weitere Informationen zu Ihrer App übermitteln und wie Sie Support erhalten.
+
+### <a name="privacy-policy-url"></a>URL zu den Datenschutzrichtlinien
+
+Sie müssen sicherstellen, dass die geltenden Datenschutzgesetze eingehalten werden und müssen bei Bedarf hier eine gültige Datenschutzrichtlinien-URL bereitstellen.
+
+In diesem Abschnitt müssen Sie angeben, ob die App auf [persönliche Informationen](https://docs.microsoft.com/legal/windows/agreements/store-policies#105-personal-information) zugreift, diese erfasst oder überträgt . Wenn Sie diese Frage mit **Ja** beantworten, ist eine URL zur Datenschutzrichtlinie erforderlich. Andernfalls ist diese optional, (wenn wir feststellen, dass Ihre App eine Datenschutzrichtlinie benötigt und Sie diese noch nicht bereitgestellt haben, kann die Zertifizierung Ihre Übermittlung fehlschlagen).
+
+> [!NOTE]
+> Wenn wir feststellen, dass Ihre Pakete [Funktionen](../packaging/app-capability-declarations.md) deklarieren, die den Zugriff, die Übertragung oder die Sammlung persönlicher Informationen ermöglicht, markieren wir diese Frage mit **Ja**, und Sie müssen eine URL zur Datenschutzrichtlinie eingeben.
+
+Um festzustellen, ob Ihre App eine Datenschutzrichtlinie benötigt, lesen Sie die [Vereinbarung für App-Entwickler](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) und die [Microsoft Store-Richtlinien](https://docs.microsoft.com/legal/windows/agreements/store-policies#105-personal-information). 
+
+> [!NOTE]
+> Microsoft stellt keine standardmäßigen Datenschutzrichtlinien für Ihre App bereit. Außerdem ist Ihre App nicht durch Datenschutzrichtlinien von Microsoft abgedeckt. 
+
+
+### <a name="website"></a>Webseite
+
+Geben Sie die URL der Webseite für Ihre App ein. Diese URL muss auf eine Seite Ihrer eigenen Website verweisen, nicht auf den Webeintrag Ihrer App im Store. Dieses Feld ist optional. Ihre Verwendung wird jedoch empfohlen.
+
+### <a name="support-contact-info"></a>Support – Kontaktinfos
+
+Geben Sie die URL der Webseite ein, auf der Ihre Kunden Support für die App erhalten, oder eine E-Mail-Adresse, unter der Kunden den Support erreichen können. Wir empfehlen diese Informationen für alle Übermittlungen anzugeben, damit Ihre Kunden wissen, wie Sie Unterstützung erhalten, wenn sie diese benötigen. Microsoft bietet keinen App-Support für Ihre Kunden.
+
+> [!IMPORTANT]
+> Das Feld **Supportkontaktinformationen** ist erforderlich, wenn die App bzw. das Spiel auf Xbox verfügbar ist. Andernfalls ist dies optional (wird jedoch empfohlen).
 
 
 ## <a name="game-settings"></a>Einstellungen für Spiele

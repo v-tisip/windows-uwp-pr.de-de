@@ -3,18 +3,18 @@ title: Dev Center-Insider-Programm
 description: Testen Sie die neuen Dev Center-Features, bevor sie für alle Entwickler verfügbar sind, und teilen Sie uns Ihre Meinung mit.
 author: JnHs
 ms.author: wdg-dev-content
-ms.date: 01/31/2018
+ms.date: 03/28/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Insider, Dev Center-Insider, Vorschaufeatures
 ms.assetid: 6fa470dd-e46e-4af1-b278-54bb501a69b0
 ms.localizationpriority: high
-ms.openlocfilehash: bfebdf4985791916f5e91f728f53bd25ef375755
-ms.sourcegitcommit: 22fc8fb72fd0341d4a5c702175be8b42e713dee1
+ms.openlocfilehash: b1133fb65ad3b96bf371597a71ce0eb6bb889ed5
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="dev-center-insider-program"></a>Dev Center-Insider-Programm
 
@@ -29,13 +29,12 @@ Hier sind einige der Features, die wir für exklusiv für Mitglieder des Dev Cen
 
 | Dev Center-Insider-Programm-Feature   | So können es Dev Center-Insider testen | Hinzugefügt am |
 |--------------------------------------|------------------------------------|------------|
+|**Berichte**: Wenn wir eine Anomalie feststellen (eine bedeutende Änderung der Käufe, Integrität oder Nutzungsdaten) werden die Details in diesem Bericht angezeigt.  | Erweitern Sie im linken Navigationsmenü **Analysieren**, und wählen Sie dann **Einblicke** aus. | März 2018 |
 |**Churn prediction chart on Usage report**: Hier wird angezeigt, wie viele Benutzer Ihre App anhand der aktuellen Verwendung wahrscheinlich bald nicht mehr nutzen werden. | Der Bericht **Nutzung** zeigt das Diagramm **Änderungsumfang-Vorhersage** an. Hier sehen Sie die Vorhersage der Anzahl der Benutzer, die Ihre App in den nächsten 15 Tagen nicht mehr verwenden werden (oder diese weniger als 10Minuten nutzen). Nach jedem Zyklus zeigt das Diagramm an, wie viele Benutzer Ihre App nicht mehr verwenden, sowie die von uns erstellte Prognose. Diese Informationen wird zweimal pro Monat aktualisiert.  | Januar 2018 |
 |**Anomaly details at a glance**: Sie erhalten einen kurzen Überblick über die wichtigsten Änderungen Ihrer Käufe, der Nutzung sowie Integritätsdaten. | In den Berichten **Käufe**, **Nutzung** und **Integrität** wird ein markierter Kreis am Ende der Woche angezeigt, wenn wir Anomalien im Vergleich zur vorherigen Woche feststellen (erhebliche Erhöhung oder Verringerung). Zeigen Sie auf den Kreis, um die Details der Änderungen anzuzeigen. | Januar 2018 |
-|**Anpassen der Einstellungen für Benachrichtigungen**: Wählen Sie, welche Benachrichtigungen Sie über Ihr Dev Center-Konto erhalten möchten und geben Sie an, ob Sie diese sie per E-Mail, per Dashboard oder beides empfangen möchten. | Verwenden Sie das Symbol im oberen Bereich des Dashboards, um zum **Nachrichtencenter** zu gelangen und wählen Sie dann **Einstellungen** aus. Treffen Sie Ihre Auswahl im Abschnitt "Benachrichtigungseinstellungen". Sie können dort auch die Adresse zum Senden von E-Mail-Benachrichtigungen angeben.  | November2017 |
 |**Weitere Details finden Sie in der Übersicht**: Erfahren Sie mehr zu markierten Apps, ohne die Übersicht zu verlassen. | Suchen Sie auf der Übersicht die Felder, die wichtige Statistiken für Ihre Apps hervorheben. Klicken Sie auf die Felder, um Details zu dieser App anzuzeigen. | September2017 |
 |**Integritätsdaten fast in Echtzeit**: Der Bericht **Integrität** enthält Daten über Abstürze, Systemstillstand, Arbeitsspeicherausfälle und JavaScript-Ausnahmen nahezu in Echtzeit, wenn Sie die Seitenfilteroption **72H** verwenden.  | Wählen Sie im Bericht "Integrität" einer App die Option **72 Stunden** am oberen Rand der Seite aus. Beachten Sie, dass möglicherweise eine Diskrepanz in den Daten für den 72 Stunden-Zeitraum angezeigt wird, wenn die Filter **72 Stunden**und **30D** verglichen werden. Wir untersuchen das Problem und arbeiten daran, es zu lösen.  | September2017|
 |**Kohorte der aktiven Nutzungsanalyse**: Verfolgen Sie die wöchentliche Nutzung für Kohorten (Gruppen von aktiven Benutzer, die Ihre App in der gleichen Woche begonnen haben), um Einblicke in die Verwendungstrends zu erhalten.  | Zeigen Sie im Bericht **Nutzung** das Diagramm **Kohorten nach aktiver Nutzung** an.  |Juli 2017|
-|**Neue nutzungsbasierte Optionen für Kundensegmente**: Erstellen Sie Segmente Ihrer Kunden basierend auf der Nutzung Ihre App. | Wählen Sie im Abschnitt **Einbeziehen** **Kundengruppen** aus, um ein neues Segment zu erstellen. Wählen Sie im Abschnitt „Einschlusskriterien festlegen” **Nutzung** aus der ersten Dropdownliste aus, wählen Sie dann eine der neuen Optionen aus: **Verbundene Minuten**, **Benutzersitzungen**, **Datum der ersten Verwendung** oder **Datum der letzten Verwendung**. |Juli 2017|
 |**Optionen für die Änderungsumfang-Vorhersage für Kundensegmente**: Erstellen Sie ein Segment für Ihre Kunden basierend auf unserer Vorhersage, dass sie wahrscheinlich die Verwendung Ihrer App in nächster Zukunft beenden.  | Wählen Sie im Abschnitt **Einbeziehen** **Kundengruppen** aus, um ein neues Segment zu erstellen. Wählen Sie im Abschnitt Einschlusskriterien festlegen **Änderungsumfang-Vorhersage** aus der ersten Dropdownliste aus, und wählen Sie dann **Wahr** oder **Falsch**, um Ihr Segment zu definieren. |Mai 2017|
 |**E-Mail-Benachrichtigung bei Analysetrendänderungen**: Empfangen Sie Benachrichtigungen zu wichtigen Änderungen bei Käufen Ihrer App. | Wenn wir eine bedeutende Änderung in der Anzahl der App-Käufe im Vergleich zu den Verlaufsdaten erkennen, senden wir Ihnen automatisch eine E-Mail. |April2017|
 |**Echtzeitanalyse**: Zeigen Sie Details über die aktuellen App-Verkäufe und Add-Ons an. Der neue Bericht wird in Echtzeit von Ihren Kunden mit Windows10 erfasst. | Wählen Sie im linken Menü unter **Analyse** die Option **Echtzeitbericht** aus. Wählen Sie den Zeitraum für die Datenprüfung aus. Dabei kann es sich um die letzten sieben Tage oder minutengenau um die letzte Stunde handeln. Beachten Sie, dass der Bericht nur Daten von Kunden mit Windows10 enthält.  |August 2016|

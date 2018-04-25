@@ -4,17 +4,17 @@ Description: The Pricing and availability page of the app submission process let
 title: Festlegen der Preise und Verfügbarkeit von Apps
 ms.assetid: 37BE7C25-AA74-43CD-8969-CBA3BD481575
 ms.author: wdg-dev-content
-ms.date: 11/22/2017
+ms.date: 03/28/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
+keywords: Windows10, UWP, Preis, verfügbar, sichtbar, kostenlose Testversion, Testversionen, Testversion, Apps, Veröffentlichungsdatum
 ms.localizationpriority: high
-ms.openlocfilehash: 3e94aadefb418aa7cefa90b8f274868c80f3e480
-ms.sourcegitcommit: 11edca90aaf7856c762e68903483079d30ad3877
+ms.openlocfilehash: 58b70da6a1be4fc52d3f31f0ea7b25b96acfa860
+ms.sourcegitcommit: 9f059b37e45099b4314c96a0b604449e966d3c3c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="set-app-pricing-and-availability"></a>Festlegen der Preise und Verfügbarkeit von Apps
 
@@ -31,26 +31,14 @@ Weitere Informationen erhalten Sie unter [Festlegen der Marktauswahl](define-pri
 
 ## <a name="visibility"></a>Sichtbarkeit
 
-Im Abschnitt **Sichtbarkeit** können Sie Einschränkungen dafür festlegen, wie die App gefunden und erworben werden kann.
+Im Abschnitt **Sichtbarkeit** können Sie Einschränkungen festlegen, wie die App ermittelt und erworben werden kann, z.B., ob Benutzer Ihre App im Store oder im Store-Eintrag überhaupt finden können.
 
-Die Standardeinstellung ist **Make this product available and discoverable in the Store**. Das heißt, dass Ihre App im Store so eingetragen wird, dass sie von Kunden über den direkten Link zur App und/oder mit anderen Methoden wie z.B. Suchen, Browsen oder Einträgen in zusammengestellten Listen gefunden werden kann. 
-
-Wenn Sie Ihre App im Store ausblenden, sie aber dennoch für bestimmte Personen zur Verfügung stellen möchten, wählen Sie **Optionen anzeigen**, um den Abschnittzu erweitern, und wählen Sie dann **Make this product available but not discoverable in the Store**. Dies bedeutet, dass kein Kunde Ihre App durch Suchen oder Browsen im Store finden kann, unabhängig von seiner Version des Betriebssystems. Sie müssen auch eine der folgenden Versionen wählen, um zu bestimmen, wie Ihre App erworben werden kann.
-
->[!IMPORTANT]
-> Diese Optionen beschränken die Betriebssystemversionen, unter denen Kunden Ihre App erwerben können. Lesen Sie die Beschreibungen sorgfältig, um sicherzustellen, dass Sie wissen, welche Betriebssystemversionen unterstützt werden. Beachten Sie, dass Kunden mit Windows8 und Windows8.1 die App überhaupt nicht erhalten können, wenn Sie eine der Optionen unter **Make this product available but not discoverable in the Store** auswählen. 
-
-- **Direct link only: Any customer with a direct link to the product’s listing can download it, except on Windows 8.x.** Jeder Kunde, der zum Eintrag Ihrer App über einen direkten Link gelangt, kann sie auf Geräten unter Windows10 oder Windows Phone8.1 und früher herunterladen. Kunden unter Windows8.x können die App mit dieser Option überhaupt nicht herunterladen.
-- **Stop acquisition: Any customer with a direct link can see the product’s Store listing, but they can only download it if they owned the product before, or have a promotional code and are using a Windows 10 device.** Selbst wenn ein Kunde einen direkten Link besitzt, kann er die App nur herunterladen, wenn er einen [Werbecode](generate-promotional-codes.md) besitzt und ein Windows10-Gerät verwendet. Wenn Sie einem Kunden einen Code geben, kann er den Link und den Code verwenden, um Ihre App kostenlos (nur unter Windows10) zu erhalten, obwohl Sie sie nicht für andere Kunden anbieten. Abgesehen von der Verwendung eines Werbecodes gibt es keine Möglichkeit, Ihre App zu erhalten.
-- **Individuals on Windows Phone 8.x only: Only people you specify below can download this product on a Windows Phone 8.x device. Anyone with a direct link and a promotional code may download the product on a Windows 10 device.** Diese Option wird möglicherweise nicht für alle Übermittlungen angezeigt. Sie gilt nur, wenn Sie Pakete haben, die unter Windows Phone 8.x ausgeführt werden können. Nur Kunden, deren (mit dem jeweiligen Microsoft-Konto verknüpfte) E-Mail-Adresse Sie in das Feld eingegeben haben (getrennt durch Semikolons), können die App unter Windows Phone 8.x über einen direkten Link zum App-Eintrag herunterladen. Sie können auch Werbecodes generieren und diese an bestimmte Windows 10-Benutzer wie oben beschrieben verteilen. 
-
-> [!TIP]
-> Wenn Sie eine App überhaupt nicht mehr für neue Kunden anbieten möchten, klicken Sie in der Übersicht auf **Make app unavailable**. Nachdem Sie bestätigt haben, dass die App nicht mehr verfügbar sein soll, wird sie innerhalb weniger Stunden nicht mehr im Store angezeigt, und neue Kunden haben keine Möglichkeit, sie herunterzuladen (es sei denn, Sie verfügen über einen [Werbecode](generate-promotional-codes.md) und verfügen über ein Windows 10-Gerät). Diese Aktion überschreibt die Auswahl **Sichtbarkeit** in Ihrer Übermittlung. Falls Sie die App für neue Kunden wieder verfügbar machen möchten (über die Auswahl **Sichtbarkeit**), können Sie jederzeit in der App-Übersicht auf **Make app available** klicken. Weitere Informationen finden Sie unter [Entfernen einer App aus dem Store](guidance-for-app-package-management.md#removing-an-app-from-the-store).
+Weitere Informationen finden Sie unter [Sichtbarkeitsoptionen auswählen](choose-visibility-options.md).
 
 
 ## <a name="schedule"></a>Zeitplan
 
-Standardmäßig (es sei denn, Sie haben eine der Optionen für **Make this app available but not discoverable in the Store** im Abschnitt **Sichtbarkeit** ausgewählt) wird Ihre App für Kunden zur Verfügung gestellt, sobald sie die Zertifizierung bestanden und den Veröffentlichungsprozess abgeschlossen hat. Um ein anderes Datum auszuwählen, wählen Sie **Optionen anzeigen**, um diesen Abschnittzu erweitern. 
+Standardmäßig (es sei denn, Sie haben eine der Optionen für **Make this app available but not discoverable in the Store** im Abschnitt [Sichtbarkeit](choose-visibility-options.md#discoverability) ausgewählt) wird Ihre App für Kunden zur Verfügung gestellt, sobald sie die Zertifizierung bestanden und den Veröffentlichungsprozess abgeschlossen hat. Um ein anderes Datum auszuwählen, wählen Sie **Optionen anzeigen**, um diesen Abschnittzu erweitern. 
 
 Weitere Informationen finden Sie unter [Konfigurieren des genauen Veröffentlichungszeitplans](configure-precise-release-scheduling.md).
 
@@ -62,7 +50,7 @@ Standardmäßig ist das Veröffentlichungsdatum für Ihre App das Datum, an dem 
 
 ## <a name="pricing"></a>Preise
 
-Sie müssen einen Grundpreis für Ihre App auswählen (es sei denn, Sie haben eine der Optionen für **Make this app available but not discoverable in the Store** im Abschnitt [Sichtbarkeit](#visibility) ausgewählt) und entweder **Kostenlos** oder eines der verfügbaren Preisniveaus auswählen. Sie können auch Preisänderungen planen, um das Datum und die Uhrzeit anzugeben, an dem bzw. zu der sich der Preis Ihrer App ändern soll. Darüber hinaus haben Sie die Möglichkeit, diese Änderungen für bestimmte Märkte anzupassen. 
+Sie müssen einen Grundpreis für Ihre App auswählen (es sei denn, Sie haben die Option **Erwerb beenden** unter **Make this app available but not discoverable in the Store** im Abschnitt [Sichtbarkeit](choose-visibility-options.md#discoverability) ausgewählt) und entweder **Kostenlos** oder eines der verfügbaren Preisniveaus auswählen. Sie können auch Preisänderungen planen, um das Datum und die Uhrzeit anzugeben, an dem bzw. zu der sich der Preis Ihrer App ändern soll. Darüber hinaus haben Sie die Möglichkeit, diese Änderungen für bestimmte Märkte anzupassen. 
 
 Weitere Informationen finden Sie unter [Festlegen und Planen von App-Preisen](set-and-schedule-app-pricing.md).
 
@@ -96,7 +84,6 @@ Zum Festlegen des Datums für das Anbieten der Testversion für Kunden von Windo
 > Im Gegensatz zum Abschnitt [Zeitplan](configure-precise-release-scheduling.md) kann das Datum, das Sie für **Kostenlose Testversion** auswählen, nicht für bestimmte Märkte angepasst werden. 
 
 
-
 ## <a name="sale-pricing"></a>Sonderpreise
 
 Wenn Sie Ihre App zu einem reduzierten Preis für einen begrenzten Zeitraum anbieten möchten, können Sie ein Sonderangebot erstellen und planen.
@@ -113,16 +100,6 @@ Weitere Informationen finden Sie unter [Optionen für die Organisationslizenzier
 
 ## <a name="publish-date"></a>Veröffentlichungsdatum
 
-Standardmäßig beginnt Ihre Übermittlung den Veröffentlichungsprozess direkt nach der Zertifizierung, es sei denn, Sie haben Datumsangaben im [Abschnitt **Zeitplan**](#schedule) (oben beschrieben) konfiguriert. 
+Zuvor befand sich der Abschnitt **Veröffentlichungsdatum** auf dieser Seite. Diese Funktion befindet sich jetzt auf der Seite [Übermittlungsoptionen](manage-submission-options.md) im Abschnitt **Optionen zum Anhalten der Veröffentlichung**. (Wenn Sie entscheiden möchten, wann die App im Store veröffentlicht werden soll, empfehlen wir die Verwendung der Option [Zeitplan](configure-precise-release-scheduling.md) auf der Seite **Preise und Verfügbarkeit**.)
 
-Um zu steuern, wann Ihre App im Store veröffentlicht werden soll, verwenden Sie den Abschnitt **Zeitplan**. Für die meisten Übermittlungen sollten Sie diesen Abschnittverwenden, um die Veröffentlichung der App zu planen. Behalten Sie für den Abschnitt **Veröffentlichungsdatum** die Standardoption **Publish this submission as soon as it passes certification** bei. Dadurch wird die Übermittlung nicht vor dem Datum veröffentlicht, das Sie im Abschnitt **Zeitplan** festgelegt haben. Das Datum, das Sie im Abschnitt **Zeitplan** ausgewählt haben, bestimmt, wann Ihre App für Kunden im Store verfügbar gemacht wird.
-
-Wenn Sie noch kein Veröffentlichungsdatum festlegen möchten und Ihre Übermittlung unveröffentlicht bleiben soll, bis Sie manuell mit dem Veröffentlichungsprozess beginnen möchten, können Sie **Publish this submission manually** auswählen. Die Auswahl dieser Option bedeutet, dass Ihre Auswahl erst veröffentlicht wird, wenn Sie es angeben. Nachdem Ihre App die Zertifizierung bestanden hat, können Sie sie veröffentlichen, indem Sie auf der Seite mit dem Zertifizierungsstatus **Jetzt veröffentlichen** oder wie nachfolgend beschrieben ein bestimmtes Datum auswählen.
-
-Wählen Sie **Nicht vor \[Datum\]**, um sicherzustellen, dass die Übermittlung nicht vor einem bestimmten Datum veröffentlicht wird. Mit dieser Option wird Ihre Übermittlung möglichst zum oder nach dem angegebenen Datum veröffentlicht. Das Datum muss mindestens 24Stunden in der Zukunft liegen. Zusammen mit dem Datum können Sie auch die Uhrzeit angeben, zu der die Veröffentlichung der Übermittlung beginnen soll.
- 
-> [!NOTE]
-> Aufgrund von Verzögerungen bei der Zertifizierung oder Veröffentlichung kann das gewünschte Veröffentlichungsdatum unter Umständen nicht eingehalten werden. Es kann nicht garantiert werden, dass Ihre App (oder das Update) an einem bestimmten Datum im Microsoft Store zur Verfügung steht.  
-
-Sie können das Veröffentlichungsdatum auch nach dem Einreichen der App ändern, solange sie noch nicht in die Phase Veröffentlichen eingetreten ist. 
 

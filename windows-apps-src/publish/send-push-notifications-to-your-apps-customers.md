@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, zielgruppenorientierte Benachrichtigungen, Push-Benachrichtigungen, Popups, Kachel
 ms.assetid: 16386c81-702d-47cd-9f91-67659f5dca73
 ms.localizationpriority: high
-ms.openlocfilehash: f7b4558b6c5ea2cc9dbc30cb605f1cb06432504f
-ms.sourcegitcommit: d780e3a087ab5240ea643346480a1427bea9e29b
+ms.openlocfilehash: e41b6f10a41fa954c92a0de0a258ab6482ac8456
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="send-notifications-to-your-apps-customers"></a>Senden von Benachrichtigungen an die Kunden Ihrer App
 
@@ -50,16 +50,15 @@ Befolgen Sie diese Schritte, um eine Benachrichtigung im Dashboard zu erstellen 
 > [!NOTE]
 > Bevor die App von Dev Center Benachrichtigungen empfangen kann, müssen Sie zuerst die Methode [RegisterNotificationChannelAsync](https://msdn.microsoft.com/library/windows/apps/mt771190.aspx) in Ihrer App aufrufen, um Ihre App für den Empfang von Benachrichtigungen zu registrieren. Diese Methode ist im [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) verfügbar. Weitere Informationen zum Aufrufen dieser Methode, einschließlich eines Codebeispiels, finden Sie unter [Konfigurieren Ihrer App für benutzerorientierte Pushbenachrichtigungen](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
 
-1.  Erweitern Sie im [Windows Dev Center-Dashboard](https://developer.microsoft.com/dashboard/overview) den Abschnitt **Bewerten** und wählen Sie dann **Benachrichtigungen** aus.
-2.  Wählen Sie auf der Seite **Benachrichtigungen** die Option **Neue Benachrichtigung** aus.
-3.  Wählen Sie im Abschnitt **Vorlage auswählen** den zu sendenden Benachrichtigungstyp aus. Weitere Informationen finden Sie unter [Vorlagenbenachrichtigungstypen](#notification-template-types). <!-- ![Notification templates](images/push-notifications-template.png) -->
-4.      Wählen Sie auf der nächten Seite <!-- use the drop-down menu to choose either a **Single app** or **Multiple apps** for which you want to generate a notification. --> eine App aus <!-- or apps --> (deren Konfiguration für den Erhalt von Benachrichtigungen mithilfe des Microsoft Store Services SDK konfiguriert ist).
-5.  Wählen Sie im Abschnitt **Benachrichtigungseinstellungen** einen **Namen** für die Benachrichtigung aus, und wählen Sie (falls zutreffend) anschließend die **Kundengruppe** aus, an die die Benachrichtigung gesendet werden soll. <!-- (Notifications sent to multiple apps can only be sent to all customers of those apps.) --> Wenn Sie ein Segment verwenden möchten, das Sie noch nicht erstellt haben, wählen Sie **Neue Kundengruppe erstellen** aus. Beachten Sie, dass es 24Stunden dauert, bis ein neues Segmentfür Benachrichtigungen verfügbar ist. Weitere Informationen finden Sie unter [Erstellen von Kundensegmenten](create-customer-segments.md).
-6.  Wenn Sie das Senden der Benachrichtigung festlegen möchten, löschen Sie das Kontrollkästchen **Benachrichtigung sofort senden** und wählen Sie ein bestimmtes Datum und die Uhrzeit aus (in UTC für alle Kunden, es sei denn, Sie geben die lokale Zeitzone jedes Kunden an).
-7.  Wenn die Benachrichtigung zu einem bestimmten Zeitpunkt ablaufen soll, deaktivieren Sie das Kontrollkästchen **Notification never expires**, und wählen Sie ein bestimmtes Ablaufdatum und eine Uhrzeit aus (in UTC).
-8.  <!-- For notifications to a single app: --> If you want to filter the recipients so that your notification is only delivered to people who use certain languages or are in specific time zones, check the **Use filters** checkbox. You can then specify the language and/or time zone options you want to use.
-<!-- and don't forget to update numbers when this comes back... 9.      For notifications to multiple apps: Specify whether to send the notification only to the last active app on each device (per customer), or to all apps on each device. -->
-9.  Wählen Sie im Abschnitt der **Benachrichtigungsinhalt** im Menü **Sprache** die Sprachen aus, in denen die Benachrichtigung angezeigt werden soll. Weitere Informationen finden Sie unter [Übersetzen Ihrer Benachrichtigungen](#translate-your-notifications).
+1. Erweitern Sie im [Windows Dev Center-Dashboard](https://developer.microsoft.com/dashboard/overview) den Abschnitt **Bewerten** und wählen Sie dann **Benachrichtigungen** aus.
+2. Wählen Sie auf der Seite **Benachrichtigungen** die Option **Neue Benachrichtigung** aus.
+3. Wählen Sie im Abschnitt **Vorlage auswählen** den zu sendenden Benachrichtigungstyp aus. Weitere Informationen finden Sie unter [Vorlagenbenachrichtigungstypen](#notification-template-types).
+4. Wählen Sie auf der nächsten Seite eine App aus (deren Konfiguration für den Erhalt von Benachrichtigungen mithilfe des Microsoft Store Services SDK konfiguriert ist).
+5. Wählen Sie im Abschnitt **Benachrichtigungseinstellungen** einen **Namen** für die Benachrichtigung aus, und wählen Sie (falls zutreffend) anschließend die **Kundengruppe** aus, an die die Benachrichtigung gesendet werden soll. Wenn Sie ein Segment verwenden möchten, das Sie noch nicht erstellt haben, wählen Sie **Neue Kundengruppe erstellen** aus. Beachten Sie, dass es 24Stunden dauert, bis ein neues Segmentfür Benachrichtigungen verfügbar ist. Weitere Informationen finden Sie unter [Erstellen von Kundensegmenten](create-customer-segments.md).
+6. Wenn Sie das Senden der Benachrichtigung festlegen möchten, löschen Sie das Kontrollkästchen **Benachrichtigung sofort senden** und wählen Sie ein bestimmtes Datum und die Uhrzeit aus (in UTC für alle Kunden, es sei denn, Sie geben die lokale Zeitzone jedes Kunden an).
+7. Wenn die Benachrichtigung zu einem bestimmten Zeitpunkt ablaufen soll, deaktivieren Sie das Kontrollkästchen **Notification never expires**, und wählen Sie ein bestimmtes Ablaufdatum und eine Uhrzeit aus (in UTC).
+8. Wenn Sie die Empfänger filtern möchten, damit die Benachrichtigung nur an Personen übermittelt werden, die bestimmte Sprachen verwenden oder sich in bestimmten Zeitzonen befinden, aktivieren Sie das Kontrollkästchen **Filter verwenden**. Sie können anschließend die Sprache und/oder die Zeitzonenoptionen angeben, die Sie verwenden möchten.
+9. Wählen Sie im Abschnitt der **Benachrichtigungsinhalt** im Menü **Sprache** die Sprachen aus, in denen die Benachrichtigung angezeigt werden soll. Weitere Informationen finden Sie unter [Übersetzen Ihrer Benachrichtigungen](#translate-your-notifications).
 10. Geben Sie im Abschnitt **Optionen** Text ein, und konfigurieren Sie alle weiteren gewünschten Optionen. Wenn Sie mit einer Vorlage begonnen haben, sind einige Optionen standardmäßig ausgewählt, die Sie jedoch beliebig ändern können.
    Die verfügbaren Optionen variieren je nach Art der Benachrichtigung. Einige Optionen lauten:
    - **Aktivierungstyp** (interaktiver Popup-Typ). Sie können **Vordergrund**, **Hintergrund** oder **Protokoll** auswählen.
@@ -67,11 +66,11 @@ Befolgen Sie diese Schritte, um eine Benachrichtigung im Dashboard zu erstellen 
    - **Track app launch rate** (interaktiver Popup-Typ). Wenn Sie messen möchten, wie gut Sie Ihre Kunden mithilfe der einzelnen Benachrichtigungen erreichen, aktivieren Sie dieses Kontrollkästchen. Weitere Informationen finden Sie unter [Messen der Benachrichtigungsleistung](#measure-notification-performance).
    - **Dauer** (interaktiver Popup-Typ). Sie können **Kurz** oder **Lang** auswählen.
    - **Szenario** (interaktiver Popup-Typ). Sie können **Standard**, **Alarm**, **Erinnerung** oder **Eingehender Anruf** auswählen.
-   - **Basis-URI** (interaktiver Popup-Typ). Weitere Informationen finden Sie unter [BaseURI](https://msdn.microsoft.com/library/windows/apps/br208712).
-   - **Add image query** (interaktiver Popup-Typ). Weitere Informationen finden Sie unter [addImageQuery](https://msdn.microsoft.com/library/windows/apps/br230847).
-   - **Visuell**. Ein Bild, Video und Sound. Ausführlichere Informationen finden Sie unter [visual](https://msdn.microsoft.com/library/windows/apps/br230847).
+   - **Basis-URI** (interaktiver Popup-Typ). Weitere Informationen finden Sie unter [BaseURI](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.baseuri#Windows_UI_Xaml_FrameworkElement_BaseUri).
+   - **Add image query** (interaktiver Popup-Typ). Weitere Informationen finden Sie unter [addImageQuery](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-visual#attributes-and-elements).
+   - **Visuell**. Ein Bild, Video und Sound. Ausführlichere Informationen finden Sie unter [visual](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-visual).
    - **Eingabe**/**Aktion**/**Auswahl** (interaktiver Popup-Typ). Ermöglicht den Benutzern die Interaktion mit der Benachrichtigung. Weitere Informationen finden Sie unter [Adaptive und interaktive Popupbenachrichtigungen](../design/shell/tiles-and-notifications/adaptive-interactive-toasts.md).
-   - **Bindung** (interaktiver Kacheltyp). Die Popup-Vorlage. Ausführlichere Informationen finden Sie unter [binding](https://msdn.microsoft.com/library/windows/apps/br230843).
+   - **Bindung** (interaktiver Kacheltyp). Die Popup-Vorlage. Ausführlichere Informationen finden Sie unter [binding](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-binding).
 
    > [!TIP]
    > Versuchen Sie, mit der App [Notifications Visualizer](https://www.microsoft.com/store/apps/9nblggh5xsl1) adaptive Kacheln und interaktive Popupbenachrichtigungen zu entwerfen und zu testen.
@@ -106,17 +105,17 @@ Sie können aus einer Vielzahl von Benachrichtigungsvorlagen auswählen.
 Sie können ermitteln, wie gut Sie mit den einzelnen Benachrichtigungen Ihre Kunden erreichen.
 
 
-###<a name="to-measure-notification-performance"></a>So messen Sie die Benachrichtigungsleistung
+### <a name="to-measure-notification-performance"></a>So messen Sie die Benachrichtigungsleistung
 
 1.  Aktivieren Sie beim Erstellen einer Benachrichtigung im Abschnitt **Benachrichtigungsinhalt** das Kontrollkästchen **Track app launch rate**.
 2.  Rufen Sie in Ihrer App die [ParseArgumentsAndTrackAppLaunch](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch.aspx)-Methode auf, um Dev Center mitzuteilen, dass Ihre App als Reaktion auf eine benutzerorientierte Benachrichtigung gestartet wurde. Diese Methode wird vom Microsoft Store Services SDK bereitgestellt. Weitere Informationen zum Aufrufen dieser Methode finden Sie unter [Konfigurieren Ihrer App zum Empfangen von Dev Center-Benachrichtigungen](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
 
 
-###<a name="to-view-notification-performance"></a>So zeigen Sie die Benachrichtigungsleistung an
+### <a name="to-view-notification-performance"></a>So zeigen Sie die Benachrichtigungsleistung an
 
 Wenn Sie die Benachrichtigung und Ihre App wie oben beschrieben für das Messen der Benachrichtigungsleistung konfiguriert haben, können Sie auf dem Dashboard anzeigen, wie gut Ihre Benachrichtigungen ihren Zweck erfüllen.
 
-1.  Erweitern Sie im [Windows Dev Center-Dashboard](https://developer.microsoft.com/dashboard/overview) den Abschnitt **Bewerten** und wählen Sie dann **Benachrichtigungen** aus.
+1.  Erweitern Sie im Windows Dev Center-Dashboard den Abschnitt **Bewerten** und wählen Sie dann **Benachrichtigungen** aus.
 2.  Wählen Sie auf der Seite **Benutzerorientierte Pushbenachrichtigungen** die Option **In Bearbeitung** oder **Abgeschlossen** aus, und prüfen Sie die Spalten **Übermittlungsrate** und **App launch rate**, um die allgemeine Leistung der einzelnen Benachrichtigungen zu ermitteln.
 3.  Um detailliertere Leistungsdetails anzuzeigen, wählen Sie einen Benachrichtigungsnamen aus. Im Abschnitt **Lieferstatistik** sehen Sie Daten zu **Anzahl** und **Prozentsatz** für die folgenden **Status**-Typen der Benachrichtigung angezeigt:
  - **Fehlgeschlagen**: Die Benachrichtigung wurde aus einem bestimmten Grund nicht übermittelt. Dies kann z.B. bei einem Problem im Windows-Benachrichtigungsdienst der Fall sein.
@@ -129,7 +128,7 @@ Wenn Sie die Benachrichtigung und Ihre App wie oben beschrieben für das Messen 
 
 ## <a name="translate-your-notifications"></a>Übersetzen Ihrer Benachrichtigungen
 
-Um die Wirkung von Benachrichtigungen zu maximieren, sollten Sie sie in die von den Kunden bevorzugten Sprachen übersetzen. Dev Center erleichtert Ihnen die Übersetzung Ihrer Benachrichtigungen, denn dies erfolgt mithilfe des Diensts [Microsoft Translator](https://msdn.microsoft.com/library/dd576287.aspx) automatisch.
+Um die Wirkung von Benachrichtigungen zu maximieren, sollten Sie sie in die von den Kunden bevorzugten Sprachen übersetzen. Dev Center erleichtert Ihnen die Übersetzung Ihrer Benachrichtigungen, denn dies erfolgt mithilfe des Diensts [Microsoft Translator](https://www.microsoft.com/translator/home.aspx) automatisch.
 
 1.  Nachdem Sie die Benachrichtigung in der Standardsprache geschrieben haben, wählen Sie **Sprachen hinzufügen** aus (unterhalb des Menüs **Sprachen** im Abschnitt **Benachrichtigungsinhalt**).
 2.  Wählen Sie im Fenster **Sprachen hinzufügen** die weiteren Sprachen aus, in denen Ihre Benachrichtigungen angezeigt werden sollen, und wählen Sie anschließend **Aktualisieren** aus.
@@ -146,4 +145,3 @@ Beachten Sie im Zusammenhang mit Übersetzungen Folgendes:
 - [Übersicht über Windows-Pushbenachrichtigungsdienste (Windows Push Notification Services, WNS)](../design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview.md)
 - [App „Notifications Visualizer”](https://www.microsoft.com/store/apps/9nblggh5xsl1)
 - [StoreServicesEngagementManager.RegisterNotificationChannelAsync() | registerNotificationChannelAsync()-Methode](https://msdn.microsoft.com/library/windows/apps/mt771190.aspx)
-- [Kundensegmentierung und Pushbenachrichtigungen: Eine neue Funktion des Windows Dev Center-Insider-Programms (Blogbeitrag)](https://blogs.windows.com/buildingapps/2016/08/17/customer-segmentation-and-push-notifications-a-new-windows-dev-center-insider-program-feature/#XTuCqrG8G5IMgWew.97)

@@ -1,33 +1,33 @@
 ---
 author: JnHs
-Description: "Enthält Informationen zum Erstellen von bekannten Benutzergruppen für Flight-Pakete und vieles mehr."
+Description: Learn how to create known user groups to use for package flighting and more.
 title: Erstellen bekannter Benutzergruppen
 ms.author: wdg-dev-content
-ms.date: 08/08/2017
+ms.date: 03/28/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows10, UWP, Segment, Segmente, Zielgruppe, Kunden
-ms.openlocfilehash: fc3986520e55ae0c636eb2db731df065463002b5
-ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+keywords: Windows10, UWP, Zielgruppe, Kunden, Flight-Gruppe, Benutzergruppen, bekannte Benutzer
+ms.localizationpriority: high
+ms.openlocfilehash: 06922ba9cde98f4bdf678dc281d261dda3bce2b0
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="create-known-user-groups"></a>Erstellen bekannter Benutzergruppen
 
-Mit bekannten Benutzergruppen können Sie bestimmte Kontakte zu einer Gruppe hinzufügen, indem Sie die E-Mail-Adresse deren Microsoft-Kontos verwenden. Diese bekannten Benutzergruppen werden am häufigsten mit [Flight-Paketen](package-flights.md) verwendet, um bestimmte Pakete an eine ausgewählte Gruppe von Kontakte zu verteilen. Sie können dazu verwendet werden, [benutzerorientierte Benachrichtigungen](send-push-notifications-to-your-apps-customers.md) oder [benutzerorientierte Angebote](use-targeted-offers-to-maximize-engagement-and-conversions.md) an eine spezifische Gruppe von Kunden als Teil einer Interaktionskampagne zu senden.
+Mit bekannten Benutzergruppen können Sie bestimmte Kontakte zu einer Gruppe hinzufügen, indem Sie die E-Mail-Adresse deren Microsoft-Kontos verwenden. Diese bekannten Benutzergruppen werden oft verwendet, um spezifische Pakete an eine ausgewählte Benutzergruppe mit [Flight-Paketen](package-flights.md) zu verteilen, oder für die Verteilung einer Übermittlung an eine [private Zielgruppe](choose-visibility-options.md#audience). Sie können für Interaktionskampagne verwendet werden, um [benutzerorientierte Benachrichtigungen](send-push-notifications-to-your-apps-customers.md) zu senden oder [benutzerorientierte Angebote](use-targeted-offers-to-maximize-engagement-and-conversions.md) an eine spezifische Gruppe von Kunden zu senden.
 
-Um als Mitglied der Gruppe gezählt zu werden, muss jede Person mit dem Store mithilfe der E-Mail-Adresse des Microsoft-Kontos authentifiziert werden, die Sie bereitstellen. Für Flight-Pakete müssen sie [ein Windows10-Gerät verwenden, das Flight-Pakete unterstützt](package-flights.md), um die App herunterzuladen.
-
+Um als Mitglied der Gruppe gezählt zu werden, muss jede Person mit dem Store mithilfe der E-Mail-Adresse des Microsoft-Kontos authentifiziert werden, die Sie bereitstellen. Um die App mit dem Test-Flighting-Paket herunterzuladen, müssen Mitglieder eine Version von Windows10 verwenden, die Flight-Pakete unterstützt (Windows.Desktop Build 10586 oder höher, Windows.Mobile Build 10586.63 oder höher, oder Xbox One). Bei Übermittlungen an private Zielgruppen müssen Mitglieder Windows10, Version 1607 oder höher (einschließlich Xbox One) verwenden.
 
 ## <a name="to-create-a-known-user-group"></a>So erstellen Sie eine bekannte Benutzergruppe
 
-1.  Erweitern Sie im Windows Dev Center-Dashboard **Einbeziehen** im linken Navigationsmenü und wählen Sie dann **Kundengruppen** aus. 
-2.  Wählen Sie im Abschnitt **Meine Kundengruppen** die Option **Neue Gruppe erstellen**.
-3.  Wählen Sie auf der nächsten Seite das Optionsfeld **Neue Benutzergruppe**.
-4.  Geben Sie im Feld **Gruppennamen** einen Namen für die bekannte Benutzergruppe ein.
-5.  Geben Sie die E-Mail-Adressen der Kontakte an, die Sie der Gruppe hinzufügen möchten. Sie müssen mindestens eine E-Mail-Adresse mit maximal 10.000 Kontakten hinzufügen. Geben Sie E-Mail-Adressen direkt in das Feld ein (getrennt durch Leerzeichen, Kommas, Semikolons oder Zeilenumbrüche), oder klicken Sie auf den Link **CSV importieren**, um die Test-Flight-Gruppe aus einer Liste von E-Mail-Adressen in einer CSV-Datei zu erstellen.
+1. Erweitern Sie im Windows Dev Center-Dashboard **Einbeziehen** im linken Navigationsmenü und wählen Sie dann **Kundengruppen** aus. 
+2. Wählen Sie im Abschnitt **Meine Kundengruppen** die Option **Neue Gruppe erstellen**.
+3. Geben Sie auf der nächsten Seite im Feld **Gruppennamen** einen Namen für die bekannte Benutzergruppe ein.
+4. Stellen Sie sicher, dass das Optionsfeld **Neue Benutzergruppe** ausgewählt ist.
+5. Geben Sie die E-Mail-Adressen der Kontakte an, die Sie der Gruppe hinzufügen möchten. Sie müssen mindestens eine E-Mail-Adresse mit maximal 10.000 Kontakten hinzufügen. Geben Sie E-Mail-Adressen direkt in das Feld ein (getrennt durch Leerzeichen, Kommas, Semikolons oder Zeilenumbrüche), oder klicken Sie auf den Link **CSV importieren**, um die Test-Flight-Gruppe aus einer Liste von E-Mail-Adressen in einer CSV-Datei zu erstellen.
 6. Wählen Sie **Speichern**.
 
 Die Gruppe ist jetzt für die Verwendung verfügbar.
@@ -47,7 +47,7 @@ Nachdem Sie die Gruppe, die Sie bearbeiten möchten, ausgewählt haben, können 
 
 Wählen Sie für größere Änderungen **Export .csv** aus, um die Mitgliedschafts-Gruppeninformationen in einer CSV-Datei zu speichern. Nehmen Sie in dieser Datei Ihre Änderungen vor, und klicken Sie dann auf **CSV importieren**, um die Gruppenmitgliedschaft mit der neuen Version zu aktualisieren.
 
-Beachten Sie, dass es bis zu 30Minuten dauern kann, bis Änderungen an der Mitgliedschaft implementiert werden. Wenn Sie nach der Veröffentlichung des Flight-Pakets Kontakte zu einer bekannten Benutzergruppe hinzufügen, werden die Pakete für die neuen Kontakte automatisch bereitgestellt. Sie müssen keine neue Übermittlung für das Flight-Paket erstellen und veröffentlichen. 
+Beachten Sie, dass es bis zu 30Minuten dauern kann, bis Änderungen an der Mitgliedschaft implementiert werden. Sie müssen keine neue Übermittlung veröffentlichen, damit neue Mitglieder der Gruppe Zugriff auf Ihre Übermittlung über das Flight-Pakete oder über private Zielgruppen haben. Diese haben Zugriff, sobald die Änderungen implementiert sind. 
 
 
 

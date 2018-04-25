@@ -2,16 +2,19 @@
 author: GrantMeStrength
 ms.assetid: 7D5EED8A-0742-4E12-A806-40FBAEFE6ABF
 title: Vorbereitung
-description: "Das Durchführen der Vorbereitung ist einfacher, als Sie denken. Befolgen Sie diese Anweisungen, um mit dem Erstellen von Universellen Windows-Plattform (UWP)-Apps für Windows 10 zu beginnen."
+description: Das Durchführen der Vorbereitung ist einfacher, als Sie denken. Befolgen Sie diese Anweisungen, um mit dem Erstellen von Universellen Windows-Plattform (UWP)-Apps für Windows 10 zu beginnen.
 ms.author: jken
 ms.date: 03/06/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 202480cd8e9107e18c7fa8c84a17089177f91dcb
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: high
+ms.openlocfilehash: 85c949307183cf71f8b770d190d983db28b61a9f
+ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="get-set-up"></a>Vorbereiten
 
@@ -29,7 +32,6 @@ Zum Entwickeln von UWP-Apps benötigen Sie die aktuelle Windows-Version.
 Sind Sie MSDN-Abonnent? ISO-Dateien stehen hier zum Download zur Verfügung:
 
 -   Laden Sie Windows10 von [Downloads für MSDN-Abonnenten](http://go.microsoft.com/fwlink/p/?LinkId=266384) herunter.
-
 
 
 ## <a name="2-download-or-update-visual-studio"></a>2. Laden Sie Visual Studio herunter, oder aktualisieren Sie es.
@@ -65,7 +67,7 @@ Sie können jetzt mit der Entwicklung von Apps beginnen. Zum Übermitteln an den
 
 ## <a name="whats-next"></a>Nächste Schritte
 
-Nachdem Sie die Tools installiert und eine Entwicklerlizenz abgerufen bzw. ein Entwicklerkonto eingerichtet haben, können Sie unsere Lernprogramme zum Erstellen Ihrer ersten App nutzen:
+Nachdem Sie die Tools installiert Ihr Gerät für die Entwicklung aktiviert haben, können Sie unsere Lernprogramme zum Erstellen Ihrer ersten App nutzen:
 
 -   Lernprogramme zum Thema [Erstellen Ihrer ersten App](your-first-app.md)
 
@@ -77,8 +79,8 @@ Die vollständige Liste der Tools und Downloads finden Sie unter [Downloads](htt
 ## <a name="see-also"></a>Weitere Informationen
 
 * [Ihre erste App](your-first-app.md)
-* [Veröffentlichen Ihrer Windows Store-Apps](https://developer.microsoft.com/store/publish-apps).
+* [Veröffentlichen Sie Ihre UWP-App](https://developer.microsoft.com/store/publish-apps).
 * [Anleitungen zur Entwicklung von UWP-Apps](https://developer.microsoft.com/windows/apps/develop)
 * [Codebeispiele für UWP-Entwickler](https://developer.microsoft.com/windows/samples)
-* [Was ist eine universelle Windows-App?](whats-a-uwp.md)
+* [Was ist eine UWP-App?](universal-application-platform-guide.md)
 * [Für Windows-Konto anmelden](sign-up.md)

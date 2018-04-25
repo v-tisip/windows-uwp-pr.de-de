@@ -1,7 +1,7 @@
 ---
 author: jnHs
-Description: "Sie können Ihre Apps oder Add-Ons im Windows Store auch bewerben, indem Sie sie für einen begrenzten Zeitraum als Sonderangebot bereitstellen."
-title: "Anbieten vergünstigter Apps und Add-Ons"
+Description: You can promote your app or add-on in the Microsoft Store by putting it on sale for a limited time.
+title: Anbieten vergünstigter Apps und Add-Ons
 ms.assetid: 71ABA960-0CDC-4E35-A1C8-1D34B6673817
 ms.author: wdg-dev-content
 ms.date: 08/21/2017
@@ -9,15 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: d17394808232aeffbe81404427e668fb9c06e677
-ms.sourcegitcommit: cd9b4bdc9c3a0b537a6e910a15df8541b49abf9c
+ms.localizationpriority: high
+ms.openlocfilehash: 0cc26403c10e9300e983275d28a1a969af513dc3
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="put-apps-and-add-ons-on-sale"></a>Anbieten vergünstigter Apps und Add-Ons
 
-Sie können Ihre Apps oder Add-Ons im Windows Store auch bewerben, indem Sie sie für einen begrenzten Zeitraum als Sonderangebot bereitstellen. Sie können das Produkt auch auf einer niedrigeren Preisstufe oder mit einem prozentbasierten Rabatt anbieten.
+Sie können Ihre Apps oder Add-Ons im Microsoft Store auch bewerben, indem Sie sie für einen begrenzten Zeitraum als Sonderangebot bereitstellen. Sie können das Produkt auch auf einer niedrigeren Preisstufe oder mit einem prozentbasierten Rabatt anbieten.
 
 Bei der Verwendung des Abschnitts **Sonderpreise** der Seite **Preise und Verfügbarkeit** einer Übermittlung zur vorübergehenden Senkung des Preises Ihrer App oder Ihres Add-Ons sehen Kunden, die sich den Store-Eintrag ansehen, dass der Preis durchgestrichen wurde, d.h. gesenkt wurde (im Gegensatz zu einer [geplanten Preisänderung](set-and-schedule-app-pricing.md#schedule-price-changes), bei der der Preis gesenkt oder angehoben werden kann, ohne dass dies als Änderung im Store angezeigt wird). 
 
@@ -60,7 +61,7 @@ Sonderangebote werden im Rahmen der Übermittlung für Apps oder Add-Ons geplant
 
 > [!NOTE]
 > Es ist möglich, ein Preisniveau auszuwählen, das über dem Grundpreis der App liegt. Allerdings werden Sonderpreise nur für Kunden angezeigt, wenn der Verkaufspreis niedriger als der reguläre Preis der App auf diesem Markt ist.
-
+>
 > Einen Preis auszuwählen, der höher ist als Grundpreis für Ihrer App ist, kann als Sonderpreis angemessen sein, wenn Sie bereits angepasste Preise in bestimmten Märkten eingerichtet haben, die höher als der Grundpreis Ihrer App sind, und Sie vorübergehend den Preis in diesen Märkten senken möchten (der Sonderpreis ist jedoch weiterhin höher als der Grundpreis der App). Wenn die Auswahl des App-Preises in bestimmten Märkten zu einer Preiserhöhung führen würde, wird dieser (höhere) Preis den Kunden in diesem Markt nicht angezeigt; sie werden weiterhin den vorherigen (niedrigeren) Preis für die App sehen. Den Kunden wird auch dann der niedrigste verfügbare Preis angezeigt, wenn Sie einen Zeitplan für separate überlappende Sonderangebote mit unterschiedlichen Preisen festlegen.
 
 ## <a name="changing-or-canceling-a-scheduled-sale"></a>Ändern oder Abbrechen eines geplanten Sonderangebots

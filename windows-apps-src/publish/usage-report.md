@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, Uwp, Verwendung, benutzerdefiniertes Ereignis, Bericht, Telemetrie, Benutzersitzungen
 ms.localizationpriority: high
-ms.openlocfilehash: 35bc42e8a65441d9ee4387b65c60c3a51903142c
-ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
+ms.openlocfilehash: 68e9643093aa4f5b777f3e5c430edc394838766a
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="usage-report"></a>Nutzungsbericht
 
@@ -38,7 +38,7 @@ Die Informationen in allen unten angezeigten Diagrammen spiegelt den Zeitraum un
 > Dieser Bericht enthält nur Nutzungsdaten von Kunden unter Windows10 (inklusive Xbox), die die Bereitstellung von Telemetriedaten nicht deaktiviert haben. Die Nutzungsdaten für Xbox-Spiele werden unabhängig von der Anmeldung des Kunden bei Xbox Live angezeigt. 
 
 
-##<a name="usage"></a>Nutzung
+## <a name="usage"></a>Nutzung
 
 Das Diagramm **Nutzung** zeigt im Detail, wie Kunden Ihre App über den ausgewählten Zeitraum verwenden. In diesem Diagramm werden individuelle Benutzer Ihrer App oder Benutzersitzungen nicht einzeln nachverfolgt (d.h., ein Benutzer wird in diesem Diagramm unabhängig davon dargestellt, ob er Ihre App nur einmal oder mehrmals verwendet hat).
 

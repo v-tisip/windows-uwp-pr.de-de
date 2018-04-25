@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: high
-ms.openlocfilehash: 5d416ad13c2e689c5265164c0269244a387a6c7f
-ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
+ms.openlocfilehash: 518cc64fec2524bb3cc02daca72a990d016c8ce5
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="whats-new-in-windows-10-for-developers-sdk-preview-build-17110"></a>Neuigkeiten für Entwickler in Windows10, SDK-Vorabversion Build 17110
 
 Die Windows10 SDK Vorabversion 17110 bietet in Kombination mit Visual Studio2017 und dem aktualisierten SDK die Tools, Features und Umgebungen, um eine eindrucksvolle universelle Windows-Plattform-Apps zu entwickeln. Nach der [Installation der Tools und des SDKs](http://go.microsoft.com/fwlink/?LinkId=821431) unter Windows10 können Sie entweder [eine neue universelle Windows-App erstellen](../get-started/create-uwp-apps.md) oder sich mit der Verwendung von [vorhandenem App-Code unter Windows](../porting/index.md) vertraut machen.
 
-Dies ist eine Sammlung von neuen und verbesserten Features und Richtlinien, die in dieser SDK-Vorabversion für Windows-Entwickler interessant sind. Im Moment sind diese Features für Mitglieder des [Windows-Insider-Programms](https://insider.windows.com/en-us/) erhältlich. Diese werden im nächsten wichtigen Update von Windows10 öffentlich verfügbar gemacht werden. Eine vollständige Liste der neuen Namespaces, die dem Windows SDK hinzugefügt werden, finden Sie unter der [Windows 10 Build 17110 API-Änderungen](windows-10-build-17110-api-diff.md). Weitere Informationen zu den Highlights von Windows10 finden Sie unter [Die Highlights in Windows10](http://go.microsoft.com/fwlink/?LinkId=823181). Darüber hinaus finden Sie unter [Windows Developer Platform-Features](https://developer.microsoft.com/windows/platform/features) eine grobe Übersicht über die früheren und zukünftigen neuen Features der Windows-Plattform.
+Dies ist eine Sammlung von neuen und verbesserten Features und Richtlinien, die in dieser SDK-Vorabversion für Windows-Entwickler interessant sind. Im Moment sind diese Features für Mitglieder des [Windows-Insider-Programms](https://insider.windows.com/) erhältlich. Diese werden im nächsten wichtigen Update von Windows10 öffentlich verfügbar gemacht werden. Eine vollständige Liste der neuen Namespaces, die dem Windows SDK hinzugefügt werden, finden Sie unter der [Windows 10 Build 17110 API-Änderungen](windows-10-build-17110-api-diff.md). Weitere Informationen zu den Highlights von Windows10 finden Sie unter [Die Highlights in Windows10](http://go.microsoft.com/fwlink/?LinkId=823181). Darüber hinaus finden Sie unter [Windows Developer Platform-Features](https://developer.microsoft.com/windows/platform/features) eine grobe Übersicht über die früheren und zukünftigen neuen Features der Windows-Plattform.
 
 ## <a name="design--ui"></a>Design und UI
 
@@ -63,7 +63,7 @@ UWP-Apps mit mehreren Instanzen | Eine UWP-App kann abonniert werden, um mehrere
 PlayReady | Microsoft PlayReady umfasst eine Reihe von Technologien zum Schutz digitaler Inhalte vor unbefugtem Zugriff. PlayReady kann auf verschiedenen Geräten und Apps und auf allen Betriebssystemen ausgeführt werden. [Erfahren Sie, wie Sie PlayReady in Ihre App integrieren.](https://docs.microsoft.com/playready/)
 Bildschirmaufnahme | Der [Windows.Graphics.Capture-Namespace](https://docs.microsoft.com/uwp/api/windows.graphics.capture) enthält APIs zum Abrufen von Frames aus einer Anzeige oder einem Anwendungsfenster, um Videostreams zu erstellen oder gemeinsame und interaktive Benutzeroberflächen zu erstellen. Weitere Informationen finden Sie unter [Bildschirmaufnahme](../audio-video-camera/screen-capture.md).
 Systemtrigger | Mit dem [CustomSystemEventTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.customsystemeventtrigger) können Sie einen Systemtrigger definieren, wenn das Betriebssystem keinen Systemtrigger zur Verfügung steht, den Sie benötigen. Wenn beispielsweise der Hardwaretreiber und die UWP-App beide von Drittanbietern stammen und der Hardwaretreiber ein benutzerdefiniertes Ereignis auslösen soll, das die App behandeln muss. Zum Beispiel eine Soundkarte, die Benutzer darüber benachrichtigt, wenn eine Audiobuchse angeschlossen wird.
-Benutzeraktivitäten | Die **UserActivitySessionHistoryItem**-Klasse verfügt über neue Methoden, um Aktivitäten des aktuellen Benutzers abzurufen. Weitere Informationen dazu und über eine Überlastung finden Sie unter [GetRecentUserActivitiesAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivitychannel#Windows_ApplicationModel_UserActivities_UserActivityChannel_GetRecentUserActivitiesAsync_System_Int32_).
+Benutzeraktivitäten | Die **UserActivitySessionHistoryItem**-Klasse verfügt über neue Methoden, um Aktivitäten des aktuellen Benutzers abzurufen. Weitere Informationen dazu und über eine Überlastung finden Sie unter [GetRecentUserActivitiesAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivitychannel.getrecentuseractivitiesasync).
 Windows Mixed Reality | Um die wachsende Windows Mixed Reality-Plattform zu unterstützen, wurden neue APIs zu den [Windows.Graphic.Holographic](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic) und [Windows.UI.Input.Spatial](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Spatial)-Namespaces hinzugefügt.
 
 ## <a name="publish--monetize-windows-apps"></a>Veröffentlichen und Monetarisieren von Windows-Apps

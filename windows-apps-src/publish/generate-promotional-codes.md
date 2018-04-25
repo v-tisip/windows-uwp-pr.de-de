@@ -4,17 +4,17 @@ Description: You can generate promotional codes for an app or add-on that you ha
 title: Generieren von Werbecodes
 ms.assetid: 9B632266-64EC-4D62-A4C4-55B6643D8750
 ms.author: wdg-dev-content
-ms.date: 01/22/2018
+ms.date: 03/28/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Angebotscode, Angebotscodes, Token, Token
 ms.localizationpriority: high
-ms.openlocfilehash: 634c0857982924ca1b588519172d77d97dd74791
-ms.sourcegitcommit: b6915c7fa2c7292e9b4e3d3e9927dc8746ec1ffb
+ms.openlocfilehash: 7043b12dc3b9d6e7a9813fb1d7b81b836902f92f
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="generate-promotional-codes"></a>Generieren von Werbecodes
 
@@ -33,7 +33,7 @@ Auf dem Windows Dev Center-Dashboard können Sie folgende Aktionen ausführen:
 -   Überprüfen der Werbecodenutzung
 
 > [!NOTE]
-> Sie können Werbecodes generieren, auch wenn Sie für [Sichtbarkeit](set-app-pricing-and-availability.md#visibility) die Option **Stop acquisition: Any customer with a direct link can see the product’s Store listing, but they can only download it if they owned the product before, or have a promotional code and are using a Windows 10 device.** ausgewählt haben.
+> Sie können Werbecodes generieren, auch wenn Sie für **Make this product available but not discoverable in the Store** die Option **Stop acquisition: Any customer with a direct link can see the product’s Store listing, but they can only download it if they owned the product before, or have a promotional code and are using a Windows 10 device** im Abschnitt Übermittlung [Erkennbarkeit](choose-visibility-options.md#discoverability) ausgewählt haben.
 
 Hinweis: Ihre App muss die abschließende Veröffentlichungsphase des [App-Zertifizierungsprozesses](the-app-certification-process.md) bestehen, bevor Kunden einen Werbecode zur Installation einlösen können.
 
@@ -80,7 +80,7 @@ So laden Sie erfüllte Werbecodebestellungen herunter und verteilen die Codes an
     -   **Produktname**: Der Name der App oder des Add-Ons, dem der Code zugeordnet ist.
     -   **Bestellungsname**: Der Name der Bestellung, in der dieser Code erstellt wurde.
     -   **Werbecode**: Der Code selbst. Dies ist eine 5x5-Zeichenfolge von alphanumerischen Zeichen, die durch Bindestriche getrennt sind. Beispiel: DM3GY-M2GYM-6YMW6-4QHHT-23W2Z
-    -   **Einlösbare URL**: Die URL, mit der ein Kunde den Code einlösen und die App bzw. das Add-On installieren kann. Die URL hat das folgende Format: http://go.microsoft.com/fwlink/?LinkId=532540&mstoken=&lt;Werbecode>
+    -   **Einlösbare URL**: Die URL, mit der ein Kunde den Code einlösen und die App bzw. das Add-On installieren kann. Die URL weist das folgende Format auf: http://go.microsoft.com/fwlink/?LinkId=532540&mstoken=&lt;promotional_code>
     -   **Startdatum**: Das Datum, an dem dieser Code aktiv wurde.
     -   **Ablaufdatum**: Das Datum, an dem dieser Code abläuft.
     -   **Code-ID**: Eine eindeutige ID für diesen Code.
@@ -97,7 +97,7 @@ So laden Sie erfüllte Werbecodebestellungen herunter und verteilen die Codes an
 
 ## <a name="code-redemption-user-experience"></a>Benutzererfahrung bei Einlösung des Codes
 
-Nachdem Sie einen Werbecode (oder seine einlösbare URL) an Kunden verteilt haben, können sie diese URL verwenden, um das Produkt kostenlos zu erhalten. Durch Klicken auf die einlösbare URL wird eine authentifizierte Seite **Code einlösen** unter <https://account.microsoft.com/billing/redeem> geöffnet. Diese Seite enthält eine Beschreibung der App, für die der Benutzer den Code einlöst. Wenn der Kunde nicht mit seinem Microsoft-Konto angemeldet ist, kann er dazu aufgefordert werden. Der Kunde kann auch <https://account.microsoft.com/billing/redeem> aufrufen und den Code direkt eingeben.
+Nachdem Sie einen Werbecode (oder seine einlösbare URL) an Kunden verteilt haben, können sie diese URL verwenden, um das Produkt kostenlos zu erhalten. Durch das Klicken der einlösbaren URL wird eine authentifizierte Seite für die **Codeeinlösung** unter <https://account.microsoft.com/billing/redeem> geöffnet. Diese Seite enthält eine Beschreibung der App, für die der Benutzer den Code einlöst. Wenn der Kunde nicht mit seinem Microsoft-Konto angemeldet ist, kann er dazu aufgefordert werden. Ihre Kunden kann ebenfalls <https://account.microsoft.com/billing/redeem> besuchen und den Code direkt eingeben.
 
 > [!IMPORTANT]
 > Es wird empfohlen, dass Sie Werbecodes erst an Ihre Kunden verteilen, wenn Ihr Produkt den Veröffentlichungsprozess abgeschlossen hat (auch wenn Sie **Make this product available but not discoverable in the Store** ausgewählt haben). Kunden wird einen Fehler angezeigt, wenn sie versuchen, einen Werbecode für ein Produkt zu verwenden, das noch nicht veröffentlicht wurde.
@@ -111,12 +111,12 @@ Wenn der Kunde auf **Einlösen** klickt, wird die Übersicht der App im Microsof
 ## <a name="review-your-promotional-codes"></a>Überprüfen der Werbecodes
 
 Um eine ausführliche Zusammenfassung der Werbecodebestellungen für Ihre Apps und Add-Ons zu sehen, wechseln Sie zur Seite **Werbecodes** (erweitern Sie im linken Navigationsmenü im Dev Center-Dashboard **Bewerben** und wählen Sie **Angebotscodes** aus). Sie können die folgenden detaillierten Informationen für Ihre aktuellen und inaktiven Werbecodes überprüfen:
-    -   Bestellungsname
-    -   App oder Add-On
-    -   Startdatum
-    -   Ablaufdatum
-    -   Verfügbar
-    -   Eingelöst
+-   Bestellungsname
+-   App oder Add-On
+-   Startdatum
+-   Ablaufdatum
+-   Verfügbar
+-   Eingelöst
 
 Sie können auch eine Bestellung aus dieser Tabelle [herunterladen](#download-and-distribute-promotional-codes).
 

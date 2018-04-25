@@ -9,11 +9,11 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Xbox Analyse, Xbox Live-Analyse, Xbox-Statistiken
 ms.localizationpriority: high
-ms.openlocfilehash: 2b6ab5c15b4683456502ce1b94b1bf3ca74c239c
-ms.sourcegitcommit: d780e3a087ab5240ea643346480a1427bea9e29b
+ms.openlocfilehash: 4f00d400724d07a00970f0145326068e15ea9054
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="xbox-analytics-report"></a>Xbox Analysebericht
 
@@ -131,7 +131,7 @@ Die Tabelle **Clientfehler nach Endpunkt** zeigt die Anzahl der täglichen Clien
 Sie können auch nur Ratenbegrenzungsfehler anzeigen, indem Sie **Begrenzung der Übertragungsrate** auswählen. Zeigt die täglichen Fehler bei der Begrenzung der Übertragungsrate (429) und der Ratenbegrenzungsausnahmen (429E) bei Xbox Live-Diensten, Endpunkten und Statuscodes über den ausgewählten Zeitraum an.
 
 > [!NOTE]
-Ein Statuscode 429E wurde tatsächlich erfolgreich als Statuscode 200 zurückgegeben, wäre jedoch in der Rate begrenzt, wenn der Dienst ein hohes Volumen zu dem Zeitpunkt hatte, daher wird empfohlen, dass Sie es den Fehler genauso behandeln, als ob er erzwungen (429) wurde.
+> Ein Statuscode 429E wurde tatsächlich erfolgreich als Statuscode 200 zurückgegeben, wäre jedoch in der Rate begrenzt, wenn der Dienst ein hohes Volumen zu dem Zeitpunkt hatte, daher wird empfohlen, dass Sie es den Fehler genauso behandeln, als ob er erzwungen (429) wurde.
 
 
 

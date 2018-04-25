@@ -1,18 +1,19 @@
 ---
 author: jnHs
-Description: "Sie können das exakte Datum und die exakte Uhrzeit festlegen, an dem bzw. zu der Ihre App im Store verfügbar werden soll. Damit haben Sie mehr Flexibilität und die Möglichkeit, das Datum für verschiedene Märkte anzupassen."
-title: "Konfigurieren des genauen Veröffentlichungszeitplans"
+Description: You can set the precise date and time that your app should become available in the Store, giving you greater flexibility and the ability to customize dates for different markets.
+title: Konfigurieren des genauen Veröffentlichungszeitplans
 ms.author: wdg-dev-content
-ms.date: 08/03/2017
+ms.date: 03/28/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows10, UWP
-ms.openlocfilehash: 77e954e3d8b85c0cf517a154447957a2d81d5bcf
-ms.sourcegitcommit: 968187e803a866b60cda0528718a3d31f07dc54c
+keywords: Windows10, UWP, Zeitplan, Veröffentlichung, Datum, starten
+ms.localizationpriority: high
+ms.openlocfilehash: 7c6f39622c4b64e787a7d9a226121dac7dcefdfa
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="configure-precise-release-scheduling"></a>Konfigurieren des genauen Veröffentlichungszeitplans
 
@@ -23,14 +24,14 @@ Im Abschnitt **Zeitplan** auf der Seite [Preise und Verfügbarkeit](set-app-pric
 
 Sie können darüber hinaus ein Datum festlegen, ab dem das Produkt nicht mehr im Store verfügbar sein soll. Beachten Sie, dass dies bedeutet, dass das Produkt nicht mehr im Store durch Suchen oder beim Surfen gefunden werden kann. Aber alle Kunden mit einem direkten Link können den Store-Eintrag des Produkts anzeigen. Sie können es nur herunterladen, wenn sie das Produkt bereits besitzen oder einen [Werbecode](generate-promotional-codes.md) haben und ein Windows10-Gerät verwenden.
 
-Standardmäßig (es sei denn, Sie haben eine der Optionen für **Make this app available but not discoverable in the Store** im Abschnitt [Sichtbarkeit](set-app-pricing-and-availability.md#visibility) ausgewählt) wird Ihre App für Kunden zur Verfügung gestellt, sobald sie die Zertifizierung bestanden und den Veröffentlichungsprozess abgeschlossen hat. Um ein anderes Datum auszuwählen, wählen Sie **Optionen anzeigen**, um diesen Abschnittzu erweitern.
+Standardmäßig (es sei denn, Sie haben eine der Optionen für **Make this app available but not discoverable in the Store** im Abschnitt [Sichtbarkeit](choose-visibility-options.md#discoverability) ausgewählt) wird Ihre App für Kunden zur Verfügung gestellt, sobald sie die Zertifizierung bestanden und den Veröffentlichungsprozess abgeschlossen hat. Um ein anderes Datum auszuwählen, wählen Sie **Optionen anzeigen**, um diesen Abschnittzu erweitern.
 
-Beachten Sie, dass Sie Datumsangaben im Abschnitt **Zeitplan** nicht konfigurieren können, wenn Sie eine der Optionen für **Make this app available but not discoverable in the Store** im Abschnitt [Sichtbarkeit](set-app-pricing-and-availability.md#visibility) ausgewählt haben, da ihre App nicht für Kunden veröffentlicht wird. Daher muss kein Veröffentlichungsdatum konfiguriert werden.
+Beachten Sie, dass Sie Datumsangaben im Abschnitt **Zeitplan** nicht konfigurieren können, wenn Sie eine der Optionen für **Make this app available but not discoverable in the Store** im Abschnitt [Sichtbarkeit](choose-visibility-options.md#discoverability) ausgewählt haben, da ihre App nicht für Kunden veröffentlicht wird. Daher muss kein Veröffentlichungsdatum konfiguriert werden.
 
 > [!IMPORTANT]
 > Das im Abschnitt "Zeitplan" angegebene Datum gilt nur für Kunden unter Windows10.
 >
->Wenn Ihre App frühere Betriebssystemversionen unterstützt, sehen Kunden unter diesen Betriebssystemversionen den Eintrag Ihrer App, sobald sie die Zertifizierung bestanden und den Veröffentlichungsprozess abgeschlossen hat, auch wenn Sie ein späteres Veröffentlichungsdatum ausgewählt haben. Ein für **Stop acquisition** ausgewähltes Datum gilt nicht für diese Kunden. Sie können die App weiterhin erwerben (sofern Sie nicht ein Update mit einer neuen Auswahl im Abschnitt [Sichtbarkeit](set-app-pricing-and-availability.md#visibility) übermitteln, oder wenn Sie **Make app unavailable** auf der Seite **App-Übersicht** auswählen).
+>Wenn Ihre App frühere Betriebssystemversionen unterstützt, sehen Kunden unter diesen Betriebssystemversionen den Eintrag Ihrer App, sobald sie die Zertifizierung bestanden und den Veröffentlichungsprozess abgeschlossen hat, auch wenn Sie ein späteres Veröffentlichungsdatum ausgewählt haben. Ein für **Stop acquisition** ausgewähltes Datum gilt nicht für diese Kunden. Sie können die App weiterhin erwerben (sofern Sie nicht ein Update mit einer neuen Auswahl im Abschnitt [Sichtbarkeit](choose-visibility-options.md#discoverability) übermitteln, oder wenn Sie **Make app unavailable** auf der Seite **App-Übersicht** auswählen).
 
 
 ## <a name="base-schedule"></a>Basiszeitplan
@@ -39,7 +40,7 @@ Die für den Basiszeitplan getroffene Auswahl gilt für alle Märkte, in denen I
 
 Sie sehen hier zwei Optionen: **Release** und **Stop acquisition**. 
 
-### <a name="release"></a>Release
+## <a name="release"></a>Release
 
 In der Dropdownliste **Release** können Sie festlegen, wann Ihre App im Store verfügbar sein soll. Dies bedeutet, dass die App im Store durch Suchen oder beim Surfen gefunden werden kann und dass Kunden den Store-Eintrag anzeigen und die App erwerben können.
 
@@ -56,20 +57,20 @@ Hier sind die Optionen, die Sie für den **Releasezeitplan** eines Produkts konf
 > [!TIP]
 > Sie können optional auch [ein anderes Veröffentlichungsdatum eingeben](set-app-pricing-and-availability.md#display-release-date), das im Store-Eintrag Ihrer App angezeigt werden soll. 
 
-### <a name="stop-acquisition"></a>Beenden des Erwerbs
+## <a name="stop-acquisition"></a>Beenden des Erwerbs
 
 Im Dropdownmenü **Stop acquisition** können Sie ein Datum und eine Uhrzeit festlegen, an dem bzw. zu der neue Kunden die App nicht mehr im Store erwerben oder ihren Eintrag anzeigen dürfen. Dies kann nützlich sein, wenn Sie präzise steuern möchten, wann eine App neuen Kunden nicht mehr angeboten wird, z.B. wenn Sie die Verfügbarkeit zwischen mehr als einer Ihrer Apps koordinieren.
 
 Die Standardeinstellung für **Stop acquisition** ist "Never". Wählen Sie zum Ändern in der Dropdownliste **at** aus, und geben Sie wie oben beschrieben Datum und Uhrzeit ein. Am ausgewählten Datum und zur ausgewählten Uhrzeit können Kunden die App nicht mehr erwerben.
 
-Es ist wichtig zu verstehen, dass diese Option dieselbe Auswirkung hat wie die Auswahl von **Make this app discoverable but not available** im Abschnitt [Sichtbarkeit](set-app-pricing-and-availability.md#visibility) und **Stop acquisition: Any customer with a direct link can see the product’s Store listing, but they can only download it if they owned the product before or have a promotional code and are using a Windows 10 device.** Wenn Sie eine App überhaupt nicht mehr für Kunden anbieten möchten, klicken Sie in der App-Übersicht auf **Make app unavailable**. Weitere Informationen finden Sie unter [Entfernen einer App aus dem Store](guidance-for-app-package-management.md#removing-an-app-from-the-store).
+Es ist wichtig zu verstehen, dass diese Option dieselbe Auswirkung hat wie die Auswahl von **Make this app discoverable but not available** im Abschnitt [Sichtbarkeit](choose-visibility-options.md#discoverability) und **Stop acquisition: Any customer with a direct link can see the product’s Store listing, but they can only download it if they owned the product before or have a promotional code and are using a Windows 10 device.** Wenn Sie eine App überhaupt nicht mehr für Kunden anbieten möchten, klicken Sie in der App-Übersicht auf **Make app unavailable**. Weitere Informationen finden Sie unter [Entfernen einer App aus dem Store](guidance-for-app-package-management.md#removing-an-app-from-the-store).
 
 > [!TIP]
 > Wenn Sie ein Datum auswählen, um **den Erwerb zu beenden**, und später feststellen, dass Sie die App wieder verfügbar machen möchten, können Sie eine neue Übermittlung erstellen und für **Stop acquisition** wieder **Never** festlegen. Die App wird wieder verfügbar, nachdem Ihre aktualisierte Übermittlung veröffentlicht wurde.
 
-### <a name="customize-the-schedule-for-specific-markets"></a>Anpassen des Zeitplans für bestimmte Märkte 
+## <a name="customize-the-schedule-for-specific-markets"></a>Anpassen des Zeitplans für bestimmte Märkte 
 
-Die oben ausgewählten Optionen gelten standardmäßig für alle Märkte, in denen Ihre App angeboten wird. Wenn Sie den Preis für die einzelnen Märkte anpassen möchten, klicken Sie auf **Customize for specific markets**. Das Popupfenster **Market selection** wird mit allen Märkten angezeigt, in denen Sie Ihre App verfügbar machen möchten. Wenn Sie im Abschnitt [Märkte]((define-pricing-and-market-selection.md) Märkte ausgeschlossen haben, werden diese Märkte nicht angezeigt. 
+Die oben ausgewählten Optionen gelten standardmäßig für alle Märkte, in denen Ihre App angeboten wird. Wenn Sie den Preis für die einzelnen Märkte anpassen möchten, klicken Sie auf **Customize for specific markets**. Das Popupfenster **Market selection** wird mit allen Märkten angezeigt, in denen Sie Ihre App verfügbar machen möchten. Wenn Sie Märkte im Abschnitt [Märkte](define-pricing-and-market-selection.md) ausgeschlossen haben, werden diese Märkte hier nicht angezeigt. 
 
 Um einen Zeitplan für einen Markt hinzuzufügen, wählen Sie ihn aus, und klicken Sie auf **Speichern**. Sie sehen dann die gleichen Optionen **Release** und **Stop acquisition** wie oben beschrieben, aber die getroffene Auswahl wird nur auf diesen Markt angewendet.
 

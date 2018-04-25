@@ -1,21 +1,22 @@
 ---
 author: jnHs
 Description: You can create Store listings for your apps without using the Dev Center dashboard by exporting your listings in a .csv file, entering your info and assets, and then importing the updated file.
-title: "Importieren und Exportieren von Store-Einträgen"
+title: Importieren und Exportieren von Store-Einträgen
 ms.author: wdg-dev-content
-ms.date: 12/22/2017
+ms.date: 03/21/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows10, UWP, Store-Einträge importieren, Store-Einträge exportieren, Export importieren, Store-Einträge CSV"
+keywords: Windows10, UWP, Store-Einträge importieren, Store-Einträge exportieren, Export importieren, Store-Einträge CSV
 ms.localizationpriority: high
-ms.openlocfilehash: f003ab35fa968e7b4be8e6e0591d97baafaa8648
-ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
+ms.openlocfilehash: fb9a3e6fd93600392ef724226368d33ed1585c76
+ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="import-and-export-store-listings"></a>Importieren und Exportieren von Store-Einträgen
+
 Anstatt [Informationen über Store-Einträge direkt in das Dashboard einzugeben](create-app-store-listings.md), können Sie Ihre Einträge in eine .csv-Datei exportieren und Ihre Info und Ressourcen angeben, bevor Sie die aktualisierte Datei importieren. Sie können diese Methode verwenden, um Einträge von Grund auf neu zu erstellen oder Angebote zu aktualisieren, die Sie bereits erstellt haben.
 
 Diese Option ist besonders nützlich, wenn Sie Store-Einträge für Ihr Produkt in mehreren Sprachen erstellen oder aktualisieren möchten, da Sie die Informationen in mehrere Felder kopieren/einfügen und problemlos alle Änderungen vornehmen können, die für bestimmte Sprachen gelten sollen. Beachten Sie jedoch, dass Sie diese Methode nicht verwenden können, wenn Sie [plattformspezifische Store-Einträge](create-platform-specific-store-listings.md) für Ihre App erstellen oder aktualisieren. 

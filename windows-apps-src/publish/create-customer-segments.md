@@ -1,6 +1,6 @@
 ---
 author: JnHs
-Description: "Erfahren Sie, wie Sie Kundensegmente erstellen können, um sich für Werbungs- oder Interaktionszwecke an einen Teil Ihrer Kunden zu wenden."
+Description: Learn how to create customer segments so you can target a subset of your customer base for promotional or engagement purposes.
 title: Erstellen von Kundensegmenten
 ms.author: wdg-dev-content
 ms.date: 07/26/2017
@@ -9,17 +9,18 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Segment, Segmente, Zielgruppe, Kunden
 ms.assetid: 58185f6c-d61f-478b-ab24-753d8986cd5a
-ms.openlocfilehash: 7c55528a47fe00782e5997e60fedca920cfdeb48
-ms.sourcegitcommit: 73ea31d42a9b352af38b5eb5d3c06504b50f6754
+ms.localizationpriority: high
+ms.openlocfilehash: 9b3af4a04889a46c0ff2b2592eceafd2605f139a
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/27/2017
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="create-customer-segments"></a>Erstellen von Kundensegmenten
 
 Es gibt Situationen, in denen Sie sich für Werbungs- oder Interaktionszwecke an einen Teil Ihrer Kunden wenden möchten. Hierzu können Sie in Windows Dev Center eine Art von [Kundengruppe](create-customer-groups.md) erstellen, die als *Segment* bezeichnet wird und die Windows10-Kunden enthält, die den von Ihnen gewählten demografischen oder Umsatzkriterien entsprechen.
 
-So könnten Sie beispielsweise ein Segment erstellen, das nur Kunden ab einem Alter von 50Jahren enthält, oder eines mit Kunden, die im Windows Store mehr als 10€ ausgegeben haben. Sie könnten diese Kriterien auch miteinander kombinieren und so ein Segment mit allen Kunden über 50Jahren erstellen, die im Store mehr als 10Euro ausgegeben haben. 
+So könnten Sie beispielsweise ein Segment erstellen, das nur Kunden ab einem Alter von 50Jahren enthält, oder eines mit Kunden, die im Microsoft Store mehr als 10€ ausgegeben haben. Sie könnten diese Kriterien auch miteinander kombinieren und so ein Segment mit allen Kunden über 50Jahren erstellen, die im Store mehr als 10Euro ausgegeben haben. 
 
 Wir stellen Ihnen für den Anfang einige Segmentvorlagen zur Verfügung. Sie können die Kriterien jedoch ganz nach Ihren Wünschen definieren und miteinander kombinieren.
 
@@ -39,8 +40,8 @@ Wichtige Punkte zu Kundensegmenten:
 2.  Führen Sie auf der Seite **Kundengruppen** eine der folgenden Aktionen aus:
  - Wählen Sie im Abschnitt **Meine Kundengruppen** die Option **Neue Gruppe erstellen**, um ein neues Segment zu definieren. Wählen Sie auf der nächsten Seite das Optionsfeld **Segment**.
  - Wählen Sie im Abschnitt **Segmentvorlagen** die Option **Kopieren** neben dem vordefinierten Segment aus (um ein vordefiniertes Segment unverändert zu verwenden oder an Ihre Anforderungen anzupassen).
-4.  Geben Sie im Feld **Gruppennamen** einen Namen für Ihr Segment ein.
-3.  Wählen Sie in der Liste **Kunden von dieser App einschließen** eine Ihrer Apps als Ziel aus.
+3.  Geben Sie im Feld **Gruppennamen** einen Namen für Ihr Segment ein.
+4.  Wählen Sie in der Liste **Kunden von dieser App einschließen** eine Ihrer Apps als Ziel aus.
 5.  Wählen Sie im Abschnitt **Einschlusskriterien festlegen** die Filterkriterien für das Segment.
 
     Sie können aus einer Vielzahl von Filterkriterien wählen, einschließlich **Erwerb**, **Kaufquelle**, **Nutzung**, **Demografie**, **Bewertung**, **Änderungsumfang-Vorhersage**, **Store-Erwerb**, **Store-Käufe** und **Store-Ausgaben**.

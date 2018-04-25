@@ -1,23 +1,24 @@
 ---
 author: jnHs
 ms.assetid: 284EBA1F-BFB4-4CDA-9F05-4927CDACDAA7
-title: "Eröffnen eines Entwicklerkontos"
-description: "Diese Übersicht zur Registrierung eines Entwicklerkontos für Windows Store und andere Microsoft-Programme erleichtert Ihnen das Einrichten Ihres Kontos."
+title: Eröffnen eines Entwicklerkontos
+description: Diese Übersicht zur Registrierung eines Entwicklerkontos für Microsoft Store und andere Microsoft-Programme erleichtert Ihnen das Einrichten Ihres Kontos.
 ms.author: wdg-dev-content
 ms.date: 06/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: 726c2edebe5c12120c0f034414516b3076bf3795
-ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+ms.localizationpriority: high
+ms.openlocfilehash: 5a82afad1c56a5e06e3d82d6b6e6e381fa8934dd
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2017
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="opening-a-developer-account"></a>Eröffnen eines Entwicklerkontos
 
-Diese Übersicht zur Registrierung eines Entwicklerkontos für Windows Store und andere Microsoft-Programme erleichtert Ihnen das Einrichten Ihres Kontos.
+Diese Übersicht zur Registrierung eines Entwicklerkontos für Microsoft Store und andere Microsoft-Programme erleichtert Ihnen das Einrichten Ihres Kontos.
 
 > [!NOTE]
 > Wenn Sie sich für ein Entwicklerkonto registrieren, verwenden wir die E-Mail-Adresse in Ihren Kontaktinformationen, um Ihnen E-Mail-Nachrichten im Zusammenhang mit Ihrem Konto zu senden. Manchmal enthalten diese E-Mails Informationen über unsere Programme. Wenn Sie sich dafür entscheiden, diese Informations-E-Mails nicht zu erhalten, indem Sie das [Abonnement kündigen](http://go.microsoft.com/fwlink/p/?LinkId=533280), beachten Sie, dass wir Ihnen weiterhin Transaktions-E-Mails senden (z.B. um Sie zu informieren, dass Ihre App die Zertifizierung bestanden hat oder dass eine Zahlung unterwegs ist.) Diese E-Mails sind für Ihre Konto erforderlich. Sie erhalten solange Transaktions-E-Mails, bis Sie Ihr Konto schließen.
@@ -35,7 +36,8 @@ Diese Übersicht zur Registrierung eines Entwicklerkontos für Windows Store und
 
   > [!NOTE]
   > Stellen Sie sicher, dass sie zum Verwenden des hier eingegebenen Namens berechtigt sind. Wurde der von Ihnen gewählte Name bereits als Marke eingetragen oder urheberrechtlich geschützt, wird Ihr Konto unter Umständen geschlossen. Weitere Informationen finden Sie unter [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/Hh694058). Wenn eine andere Person einen Herausgeberanzeigenamen verwendet, den Sie markenrechtlich oder anderweitig geschützt haben, [wenden Sie sich an Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=233777).    
-6.  Geben Sie die Kontaktinformationen ein, die Sie für Ihr Entwicklerkonto verwenden möchten.
+
+  6.  Geben Sie die Kontaktinformationen ein, die Sie für Ihr Entwicklerkonto verwenden möchten.
 
   > [!NOTE]
   > Wir verwenden diese Information ausschließlich für die Kontaktaufnahme in kontobezogenen Angelegenheiten. Sie erhalten beispielsweise eine Bestätigungsnachricht per E-Mail nach erfolgter Registrierung. Danach senden wir Ihnen Nachrichten, wenn Sie Geld von uns erhalten oder wenn Korrekturen an Ihrem Konto erforderlich sind. Außerdem senden wir möglicherweise wie oben beschrieben Informations-E-Mails, sofern Sie den Empfang nicht transaktionsbezogener E-Mails nicht ablehnen.
@@ -59,7 +61,7 @@ Beachten Sie beim Erstellen eines Unternehmenskontos die folgenden Richtlinien, 
 > [!IMPORTANT]
 > Wenn mehrere Benutzer auf Ihr Dev Center-Konto zugreifen können, empfehlen wir, das Azure Active Directory zum Zuweisen von Rollen für einzelne Benutzer zu verwenden. Jeder Benutzer kann so auf das Dev Center-Konto zugreifen, indem er sich mit seinen individuellen Azure AD-Anmeldeinformationen anmeldet. Weitere Informationen finden Sie unter [Verwalten von Kontobenutzern](manage-account-users.md).
 
--   Erstellen Sie Ihr Microsoft-Konto mit einer E-Mail-Adresse, die nicht bereits Ihnen oder einer anderen Person gehört, z.B. MyCompany_DevCenter@outlook.com. Sie können keine E-Mail-Adresse in der Domäne Ihres Unternehmens verwenden, insbesondere wenn Ihr Unternehmen bereits Azure AD nutzt.
+-   Erstellen Sie Ihr Microsoft-Konto mit einer E-Mail-Adresse, die noch nicht zu Ihnen oder einer anderen Person gehört wie z.B. MyCompany_DevCenter@outlook.com. Sie können wahrscheinlich keine E-Mail-Adresse mit der Domäne Ihrer Firma verwenden, besonders dann nicht, wenn Ihr Unternehmen bereits Azure AD verwendet.
 -   Beschränken Sie den Zugriff auf dieses Microsoft-Konto auf so wenige Benutzer wie möglich.
 -   Richten Sie eine firmeninterne E-Mail-Verteilerliste ein, die alle Personen enthält, die Zugriff auf das Entwicklerkonto benötigen, und fügen Sie diese E-Mail-Adresse Ihren Sicherheitsinformationen hinzu. Dadurch können alle Mitarbeiter auf der Liste bei Bedarf Sicherheitscodes erhalten. Wenn die Einrichtung einer Verteilerliste nicht realisierbar ist, muss der Besitzer des jeweiligen E-Mail-Kontos verfügbar sein, um auf den Sicherheitscode zugreifen und diesen bei entsprechender Aufforderung freigeben zu können (z.B. wenn dem Konto neue Sicherheitsinformationen hinzugefügt werden, oder wenn von einem neuen Gerät darauf zugegriffen werden muss).
 -   Fügen Sie eine geschäftliche Telefonnummer hinzu, für die keine Durchwahl erforderlich ist, und auf die wichtige Teammitglieder zugreifen können.
@@ -83,7 +85,7 @@ Wir empfehlen, häufig verwendete PCs als vertrauenswürdige Geräte einzustufen
 
 Da Entwicklerkonten nicht ablaufen, müssen sie nicht erneuert werden, damit sie geöffnet bleiben. Wenn Sie sich entscheiden, Ihr Konto vollständig zu schließen, können Sie sich dazu an den Support wenden.
 
-Wenn Sie Ihr Konto schließen, sollten Sie wissen, was mit Ihren im Windows Store veröffentlichten Apps geschieht:
+Wenn Sie Ihr Konto schließen, sollten Sie wissen, was mit Ihren im Microsoft Store veröffentlichten Apps geschieht:
 
 -   Die aktuellen Kunden Ihrer App können die App weiterhin verwenden. In-App-Einkäufe sind jedoch nicht mehr möglich.
 -   Auch wenn die App weiterhin für Kunden verfügbar ist, die sie erworben haben, ist diese App im Store nicht mehr gelistet. Die App kann also nicht mehr von neuen Kunden erworben werden.

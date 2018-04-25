@@ -1,7 +1,7 @@
 ---
 author: mcleanbyron
-Description: "Sie können über das Windows Dev Center-Dashboard Experimente für Ihre UWP-Apps (Universelle Windows-Plattform) mit A/B-Tests durchführen."
-title: "Ausführen von App-Experimenten mit A/B-Tests"
+Description: You can use the Windows Dev Center dashboard to run experiments for your Universal Windows Platform (UWP) apps with A/B testing.
+title: Ausführen von App-Experimenten mit A/B-Tests
 ms.assetid: 790B4B37-C72D-4CEA-97AF-D226B2216DCC
 ms.author: mcleans
 ms.date: 02/08/2017
@@ -9,9 +9,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, Microsoft Store Services SDK, A/B-Tests, Experimente
-ms.openlocfilehash: d95f42d7a57c191e371f06b21427d52c5c51773e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: high
+ms.openlocfilehash: 0ed6fab97d5e4172601b3c2e549e8feab4f8db57
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="run-app-experiments-with-ab-testing"></a>Ausführen von App-Experimenten mit A/B-Tests
 
@@ -47,6 +50,7 @@ Um möglichst aussagekräftige Ergebnisse zu erzielen, sollten Sie beim Durchfü
 * Führen Sie die Experimente mindestens 2 bis 4Wochen lang durch, um ausreichend Daten zu erfassen, die statistisch signifikant und aussagekräftig sind.
 
 <span id="terms" />
+
 ## <a name="related-terms"></a>Verwandte Begriffe
 
 |  Begriff  |  Definition  |

@@ -1,17 +1,20 @@
 ---
 author: GrantMeStrength
 ms.assetid: 03A74239-D4B6-4E41-B2FA-6C04F225B844
-title: "Erstellen der App „Hello, world“ (XAML)"
-description: "In diesem Lernprogramm erfahren Sie, wie Sie XAML (Extensible Application Markup Language) mit C# zum Erstellen einer einfachen „Hello, World“-App verwenden, die auf die universelle Windows Plattform (UWP) unter Windows10 abzielt."
+title: Hier erfahren Sie, wie Sie eine „Hallo Welt“-App (XAML) erstellen
+description: Verwenden Sie XAML (Extensible Application Markup Language) mit C# zum Erstellen einer einfachen „Hallo Welt“-App, die auf die universelle Windows Plattform (UWP) unter Windows10 abzielt.
 ms.author: jken
 ms.date: 03/06/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows10, UWP
-ms.openlocfilehash: 95e447550705d606483c20ec34cca6c97b03785c
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: Windows10, UWP, erste App, Hallo Welt
+ms.localizationpriority: high
+ms.openlocfilehash: e6fb25572213947aa7c536cde552aca3c572f0cf
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="create-a-hello-world-app-xaml"></a>Erstellen der App „Hello, world“ (XAML)
 
@@ -27,8 +30,8 @@ Hier erfahren Sie Folgendes:
 
 ## <a name="before-you-start"></a>Vorbereitung
 
--   [Was ist eine universelle Windows-App](whats-a-uwp.md)?
--   Zum Durcharbeiten dieses Lernprogramms benötigen Sie Windows 10 und Visual Studio2017. [Vorbereiten](get-set-up.md).
+-   [Was ist eine universelle Windows-App?](universal-application-platform-guide.md)
+-   [Visual Studio 2017 (und Windows 10) herunterladen](https://developer.microsoft.com/windows/downloads). Hier erfahren Sie weitere Informationen über die [Vorbereitung](get-set-up.md).
 -   Außerdem wird davon ausgegangen, dass Sie das Standardfensterlayout in Visual Studio verwenden. Wenn Sie das Standardlayout ändern, können Sie es im Menü **Fenster** mit dem Befehl **Fensterlayout zurücksetzen** wiederherstellen.
 
 > [!NOTE]
@@ -97,7 +100,7 @@ Doppelklicken Sie zum Anzeigen und Bearbeiten einer Datei im Projekt im **Projek
 
 *Ein Satz mit Logobildern*
 -   „Assets/Square150x150Logo.scale-200.png“ stellt Ihre App im Startmenü dar.
--   „Assets/StoreLogo.png“ stellt Ihre App im Windows Store dar.
+-   „Assets/StoreLogo.png“ stellt Ihre App im Microsoft Store dar.
 -   „Assets/SplashScreen.scale-200.png“ ist der Begrüßungsbildschirm, der beim Start der App angezeigt wird.
 
 ## <a name="step-2-adding-a-button"></a>Schritt 2: Hinzufügen von Schaltflächen
@@ -188,7 +191,7 @@ Viel zu bieten hat die App zwar noch nicht, aber trotzdem: Herzlichen Glückwuns
 
    Schließen Sie das App-Fenster.
 
-## <a name="step-3-event-handlers"></a>Schritt3: Ereignishandler
+## <a name="step-4-event-handlers"></a>Schritt4: Ereignishandler
 
 „Ereignishandler“ klingt kompliziert, dies ist jedoch nur ein anderer Namen für den Code, der aufgerufen wird, wenn ein Ereignis auftritt (z.B. wenn der Benutzer auf die Schaltfläche klickt).
 
@@ -231,17 +234,15 @@ Wenn Sie die App ausführen und auf die Schaltfläche klicken, sagt Ihr Computer
 
 ## <a name="summary"></a>Zusammenfassung
 
-
 Herzlichen Glückwunsch, Sie haben Ihre erste App für Windows10 und die UWP erstellt!
 
-Informationen dazu, wie Sie XAML für die Gestaltung der Steuerelemente in Ihrer App verwenden, finden Sie im [Rasterlernprogramm](../layout/grid-tutorial.md). Sie können auch direkt mit den [nächsten Schritten](learn-more.md) fortfahren.
-
+Informationen dazu, wie Sie XAML für die Gestaltung der Steuerelemente in Ihrer App verwenden, finden Sie im [Rasterlernprogramm](../design/layout/grid-tutorial.md). Sie können auch direkt mit den [nächsten Schritten](learn-more.md) fortfahren.
 
 ## <a name="see-also"></a>Weitere Informationen
 
 * [Ihre erste App](your-first-app.md)
-* [Veröffentlichen Ihrer Windows Store-Apps](https://developer.microsoft.com/store/publish-apps).
+* [Veröffentlichen Sie Ihre UWP-App](https://developer.microsoft.com/store/publish-apps).
 * [Anleitungen zur Entwicklung von UWP-Apps](https://developer.microsoft.com/windows/apps/develop)
 * [Codebeispiele für UWP-Entwickler](https://developer.microsoft.com/windows/samples)
-* [Was ist eine universelle Windows-App?](whats-a-uwp.md)
+* [Was ist eine universelle Windows-App?](universal-application-platform-guide.md)
 * [Für Windows-Konto anmelden](sign-up.md)

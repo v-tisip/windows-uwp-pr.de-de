@@ -9,11 +9,11 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Azure Ad, Azure-Mandant, AAD-Mandant, Azure AD-Mandant, Mandantenverwaltung, Mandanten
 ms.localizationpriority: high
-ms.openlocfilehash: c430bb279d0b9da6126212a8af7400df8cd1693e
-ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
+ms.openlocfilehash: f488a72b916e2950a46a5b48e79be2795806a900
+ms.sourcegitcommit: b8c77ac8e40a27cf762328d730c121c28de5fbc4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="associate-azure-active-directory-with-your-dev-center-account"></a>Zuordnen Ihres Azure Active Directory zum Dev Center-Konto
 
@@ -51,9 +51,9 @@ Wenn Sie ein neues Azure AD einrichten müssen, um diesem Ihr Dev Center-Konto z
 1.  Wechseln Sie zu den **Kontoeinstellungen**, und klicken Sie auf **Mandanten**.
 2.  Wählen Sie **Neues Azure AD erstellen**.
 3.  Geben Sie die Verzeichnisinformationen für das neue Azure AD ein:
- - **Domänenname**: Der eindeutige Name, der für Ihre Azure AD-Domäne verwendet wird, zusammen mit „.onmicrosoft.com“. Wenn Sie beispielsweise „beispiel“ eingegeben haben, wäre Ihre Azure AD-Domäne „beispiel.onmicrosoft.com“.
- - **Kontakt-E-Mail-Adresse**: Eine E-Mail-Adresse, unter der wir Sie hinsichtlich Ihres Kontos erreichen können, wenn notwendig.
- - **Benutzerkontoinformationen für den globalen Administrator**: Vorname, Nachname, Benutzername und Kennwort, die Sie für das neue globale Administratorkonto verwenden möchten.
+    - **Domänenname**: Der eindeutige Name, der für Ihre Azure AD-Domäne verwendet wird, zusammen mit „.onmicrosoft.com“. Wenn Sie beispielsweise „beispiel“ eingegeben haben, wäre Ihre Azure AD-Domäne „beispiel.onmicrosoft.com“.
+    - **Kontakt-E-Mail-Adresse**: Eine E-Mail-Adresse, unter der wir Sie hinsichtlich Ihres Kontos erreichen können, wenn notwendig.
+    - **Benutzerkontoinformationen für den globalen Administrator**: Vorname, Nachname, Benutzername und Kennwort, die Sie für das neue globale Administratorkonto verwenden möchten.
 4.  Klicken Sie auf **Erstellen**, um die neue Domäne und die Kontoinformationen zu bestätigen.
 5.  Melden Sie sich mit dem neuen Azure AD-Benutzernamen und -Kennwort als globaler Administrator an, um [zusätzliche Kontobenutzer hinzuzufügen und zu verwalten](add-users-groups-and-azure-ad-applications.md).
 

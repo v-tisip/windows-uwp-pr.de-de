@@ -4,17 +4,17 @@ Description: You can publish line-of-business (LOB) apps directly to enterprises
 title: Verteilen von branchenspezifischen Apps an Unternehmen
 ms.assetid: 2050126E-CE49-4DE3-AC2B-A572AC895158
 ms.author: wdg-dev-content
-ms.date: 01/12/2018
+ms.date: 03/28/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, LOB, Branche, Unternehmens-Apps, Store für Unternehmen, Store für Bildungseinrichtungen, Enterprise"
+keywords: Windows 10, UWP, LOB, Branche, Unternehmens-Apps, Store für Unternehmen, Store für Bildungseinrichtungen, Enterprise
 ms.localizationpriority: high
-ms.openlocfilehash: 3857e8e6e494700233d41832fb9edce6c65b89bc
-ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
+ms.openlocfilehash: 97a56ec68e2aa51f0ee733c2eedaee18dc3cedb9
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="distribute-lob-apps-to-enterprises"></a>Verteilen von branchenspezifischen Apps an Unternehmen
 
@@ -22,7 +22,7 @@ ms.lasthandoff: 01/12/2018
 Über den Microsoft Store für Unternehmen oder den Microsoft Store für Bildungseinrichtungen können Sie branchenspezifische Apps (Line-of-Business-Apps, LOB-Apps) direkt für Unternehmen veröffentlichen, damit diese Volumenlizenzen erwerben können, ohne die Apps im Store allgemein zur Verfügung zu stellen.
 
 > [!NOTE]
-> Zurzeit können nur kostenlose Apps exklusiv über den Windows Store für Unternehmen oder den Microsoft Store für Bildungseinrichtungen verteilt werden. Wenn Sie eine kostenpflichtige App als LOB übermitteln, steht sie dem Unternehmen nicht zur Verfügung. 
+> Zurzeit können nur kostenlose Apps exklusiv über den Microsoft Store für Unternehmen oder den Microsoft Store für Bildungseinrichtungen verteilt werden. Wenn Sie eine kostenpflichtige App als LOB übermitteln, steht sie dem Unternehmen nicht zur Verfügung. 
 
 > [!IMPORTANT]
 > Sie können die [Microsoft Store-Übermittlungs-API](../monetize/create-and-manage-submissions-using-windows-store-services.md) nicht verwenden, um branchenspezifische Apps direkt an Unternehmen zu veröffentlichen. Alle Übermittlungen für branchenspezifische Apps müssen über das Windows Dev Center-Dashboard erfolgen.
@@ -54,6 +54,7 @@ Wenn **Branche – Distribution** aktiviert ist, werden die sonst angezeigten Op
 Sie müssen mindestens ein Unternehmen auswählen, um eine App als branchenspezifische App zu veröffentlichen.
 
 <span id="organizational" />
+
 ### <a name="organizational-licensing"></a>Organisationslizenzierung
 
 Standardmäßig ist das Kontrollkästchen **App für Organisationen mit vom Store verwalteter (Online-)Volumenlizenzierung verfügbar machen** aktiviert, wenn Sie eine App übermitteln. Bei der Veröffentlichung von branchenspezifischen Apps muss dieses Kontrollkästchen aktiviert sein, damit das Unternehmen Volumenlizenzen für die App erwerben kann. Hierdurch wird die App nicht für andere außerhalb der Unternehmen verfügbar gemacht, die Sie im Abschnitt **Verteilung und Sichtbarkeit** ausgewählt haben.
@@ -82,7 +83,7 @@ Weitere Informationen finden Sie unter [Arbeiten mit Branchen-Apps](http://go.mi
 
 Wenn Sie Updates für eine App veröffentlichen möchten, die bereits als branchenspezifische App veröffentlicht wurde, erstellen Sie einfach eine neue Übermittlung. Sie können neue Pakete hochladen oder andere Änderungen vornehmen. Klicken Sie dann auf **An Store übermitteln**, um die aktualisierte Version verfügbar zu machen. Achten Sie darauf, die Auswahl der Unternehmen unter **Sichtbarkeit** nicht zu ändern (es sei denn, Sie möchten bewusst Änderungen vornehmen und z.B. ein zusätzliches Unternehmen auswählen, das die App erwerben kann, oder eines der zuvor eingerichteten Unternehmen löschen).
 
-Wenn Sie eine App, die Sie zuvor als branchenspezifische App veröffentlicht haben, nicht mehr anbieten möchten und keine neuen Käufe möglich sein sollen, müssen Sie eine neue Übermittlung erstellen. Zunächst müssen Sie die Auswahl unter **Sichtbarkeit** von **Branche – Distribution** in **Einzelhandel – Distribution** ändern. Wählen Sie mit der Option **Beenden des Erwerbs** im Abschnitt **Sichtbarkeit** **Make this product available but not discoverable in the Store** aus.
+Wenn Sie eine App, die Sie zuvor als branchenspezifische App veröffentlicht haben, nicht mehr anbieten möchten und keine neuen Käufe möglich sein sollen, müssen Sie eine neue Übermittlung erstellen. Zunächst müssen Sie die Auswahl unter **Sichtbarkeit** von **Branche – Distribution** in **Einzelhandel – Distribution** ändern. Wählen Sie mit der Option **Beenden des Erwerbs** im Abschnitt [Erkennbarkeit](choose-visibility-options.md#discoverability) **Make this product available but not discoverable in the Store** aus.
 
 Nachdem die Übermittlung den Zertifizierungsprozess durchlaufen hat, kann die App nicht mehr neu erworben werden. Benutzer, die sie bereits erworben haben, können sie jedoch weiter verwenden.
 
@@ -94,7 +95,7 @@ Nachdem die Übermittlung den Zertifizierungsprozess durchlaufen hat, kann die A
 
 Wenn Apps über den Microsoft Store für Unternehmen oder den Microsoft Store für Bildungswesen für ein Unternehmen verfügbar gemacht werden, wird sichergestellt, dass die App vom Store signiert wurde und den Standardrichtlinien des Stores entspricht.
 
-In einigen Fällen möchten Unternehmen möglicherweise nicht, dass ihre branchenspezifischen Apps über das Windows Dev Center übermittelt werden (z.B. aus Compliance-Gründen oder für Apps, für die weitere Funktionen benötigt werden). In diesem Fall kann das Unternehmen Apps durch Querladen direkt auf Computern bereitstellen und müssen nicht den Windows Store für Unternehmen oder den Microsoft Store für Bildungseinrichtungen verwenden.
+In einigen Fällen möchten Unternehmen möglicherweise nicht, dass ihre branchenspezifischen Apps über das Windows Dev Center übermittelt werden (z.B. aus Compliance-Gründen oder für Apps, für die weitere Funktionen benötigt werden). In diesem Fall kann das Unternehmen Apps durch Querladen direkt auf Computern bereitstellen und müssen nicht den Microsoft Store für Unternehmen oder den Microsoft Store für Bildungseinrichtungen verwenden.
 
 Weitere Informationen finden Sie unter [Querladen von Branchen-Apps in Windows10](http://go.microsoft.com/fwlink/p/?LinkId=623433).
 

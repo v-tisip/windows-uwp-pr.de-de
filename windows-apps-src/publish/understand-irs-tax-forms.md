@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Steuern, IRS, Bundessteuerbehörde der USA (IRS), Steuern, Einkommensteuer, 1099
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
 ms.localizationpriority: high
-ms.openlocfilehash: 0bdae8a8489ddf4f2ec7eb7a619631bd4fa26e9e
-ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
+ms.openlocfilehash: 747d79bb3f271638bcf08bb06965c56340771b73
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Kennenlernen der von Microsoft ausgestellten IRS-Steuerformulare
 
@@ -40,20 +40,20 @@ Nachfolgend erläutern wir diese Formulare eingehender, etwa, wer sie erhält un
      <th> Ich sollte dieses Formular erhalten</th>
   </tr>
   <tr> 
-     <td valign="top">Ich habe **mehr als 200 App-Verkäufe** mit einem Gesamtumsatz von **mehr als 20.000 US-Dollar** im entsprechenden Geschäftsjahr (Verkäufe über den Microsoft Store unter Windows 10 Brasilien und China werden **nicht** gezählt) getätigt</td>
-    <td valign="top">**1099-K**:<br>
+     <td valign="top">Ich habe <b>mehr als 200 App-Verkäufe</b> mit einem Gesamtumsatz von <b>mehr als 20.000 US-Dollar</b> im entsprechenden Geschäftsjahr (Verkäufe über den Microsoft Store unter Windows 10 Brasilien und China werden <b>nicht</b> gezählt) getätigt</td>
+    <td valign="top"><b>1099-K</b>:<br>
 Einreichende Instanz: Microsoft Corporation<br>
 EIN: \*\*\*\*\*4442<br>
 <br>
 **Wichtig:** Formular 1099-K enthält **Bruttoeinkaufsbeträge**, keine an Sie erfolgten Zahlungen.</td>
   </tr>
   <tr> 
-     <td valign="top">Ich habe **mindestens 10 Dollar an Zahlungen** für (i) App-Verkäufe in Brasilien und China über den Microsoft Store auf Windows10 oder (ii) Verkäufe über den Minecraft Marketplace erhalten.<br>
+     <td valign="top">Ich habe <b>mindestens 10 Dollar an Zahlungen</b> für (i) App-Verkäufe in Brasilien und China über den Microsoft Store auf Windows10 oder (ii) Verkäufe über den Minecraft Marketplace erhalten.<br>
 <br>
 **ODER**<br>
 <br>
 Ich habe mindestens 600 US-Dollar an Zahlungen erhalten, die nicht im Zusammenhang mit App-Verkäufen von Microsoft im entsprechenden Geschäftsjahr stehen (z.B. Anreizzahlungen oder Zahlungen für einen Wettbewerb oder eine Werbeaktion)</td>
-    <td valign="top">**1099-MISC**:<br>
+    <td valign="top"><b>1099-MISC</b>:<br>
 Zahlende Instanz: Microsoft Corporation<br>
 EIN: \*\*\*\*\*4442<br>
 <br>
@@ -72,15 +72,15 @@ EIN: \*\*\*\*\*4442<br>
      <th> Ich sollte dieses Formular erhalten</th>
   </tr>
   <tr> 
-     <td valign="top">Ich habe **mindestens 600 US-Dollar an Zahlungen** für Anzeigen in Apps im entsprechenden Geschäftsjahr erhalten.</td>
-    <td valign="top">**1099-MISC**:<br>
+     <td valign="top">Ich habe <b>mindestens 600 US-Dollar an Zahlungen</b> für Anzeigen in Apps im entsprechenden Geschäftsjahr erhalten.</td>
+    <td valign="top"><b>1099-MISC</b>:<br>
 Zahlende Instanz: Microsoft Online Inc<br>
 EIN: \*\*\*\*\*0505<br>
 <br>
 **Wichtig:** Bestimmte Unternehmenseinheiten erhalten keine 1099-MISC-Formulare, ungeachtet der erhaltenen Zahlungen von Microsoft.  Weitere Informationen erhalten Sie bei Ihrem Steuerberater.  </td>
   </tr>
   <tr> 
-     <td valign="top">Ich habe **weniger als 600 US-Dollar an Zahlungen** für Anzeigen in Apps entsprechenden Geschäftsjahr erhalten.</td>
+     <td valign="top">Ich habe <b>weniger als 600 US-Dollar an Zahlungen</b> für Anzeigen in Apps entsprechenden Geschäftsjahr erhalten.</td>
      <td valign="top">Keine</td>
   </tr>
 </table>
@@ -90,15 +90,15 @@ EIN: \*\*\*\*\*0505<br>
 
 <table>
   <tr>
-    <td valign="top">**Ich habe ein Formular 1042-S von Microsoft erhalten. Wofür ist das?**</td>
+    <td valign="top"><b>Ich habe ein Formular 1042-S von Microsoft erhalten. Wofür ist das?</b></td>
     <td valign="top">Microsoft hat Ihnen mindestens ein Formular 1042-S bereitgestellt, da wir Ihnen Beträge bezahlt haben, die an die Steuerbehörde der USA gemeldet werden müssen und quellensteuerpflichtig sind.  Formular 1042-S wird für diese Meldeanforderung verwendet.</td>
   </tr>
   <tr>
-    <td valign="top">**Was muss ich mit den Formularen tun?**</td>
+    <td valign="top"><b>Was muss ich mit den Formularen tun?</b></td>
     <td valign="top">Im Allgemeinen ist keine spezifische Aktion Ihrerseits erforderlich. Das Formular 1042-S kann hilfreich sein, wenn Sie bei Ihren Steuerbehörden eine beliebige Form eines Steuerkredits beantragen möchten.  Bei Ihren Steuerberatern erhalten Sie weitere Informationen zu diesem Thema.</td>
   </tr>
   <tr>
-    <td valign="top">**Warum wurde Steuer auf meine Zahlungen einbehalten, als ich ein Formular W8 ausgefüllt habe?**</td>
+    <td valign="top"><b>Warum wurde Steuer auf meine Zahlungen einbehalten, als ich ein Formular W8 ausgefüllt habe?</b></td>
     <td valign="top">Steuern werden in einem der folgenden Fälle einbehalten:<br>
      1. Sie haben den Abschnittzum Steuerabkommen des W8 nicht ordnungsgemäß ausgefüllt oder<br>
      2. Sie wohnen in einem Land, das über kein Steuerabkommen mit den USA verfügt.
@@ -108,15 +108,15 @@ EIN: \*\*\*\*\*0505<br>
      **Note:** Not all income is subject to tax withholding.</td>
   </tr>
   <tr>
-    <td valign="top">**Ich habe ein aktualisiertes W8-Formular mit gültigen Informationen zum Abkommen übermittelt. Kann Microsoft mir die einbehaltene Steuer zurückerstatten?**</td>
+    <td valign="top"><b>Ich habe ein aktualisiertes W8-Formular mit gültigen Informationen zum Abkommen übermittelt. Kann Microsoft mir die einbehaltene Steuer zurückerstatten?</b></td>
     <td valign="top">Sobald die Steuer einbehalten wurde, kann diese nicht zurückerstattet werden. Besprechen Sie mit Ihren Steuerberatern, ob Sie eine lokale Gutschrift für diese Steuern beantragen können oder ob Sie eine Erstattung von IRS fordern möchten.</td>
   </tr>
   <tr>
-    <td valign="top">**Welche Umsätze werden im Formular 1042-S angegeben?**</td>
-    <td valign="top">Nur Verkäufe an **Käufer in den USA, die der Quellensteuer unterliegen,** müssen angegeben werden.  Alle anderen Verkäufe müssen nicht angegeben werden.</td>
+    <td valign="top"><b>Welche Umsätze werden im Formular 1042-S angegeben?</b></td>
+    <td valign="top">Nur Verkäufe an <b>Käufer in den USA, die der Quellensteuer unterliegen,</b> müssen angegeben werden.  Alle anderen Verkäufe müssen nicht angegeben werden.</td>
   </tr>
   <tr>
-    <td valign="top">**Warum habe ich 3 Kopien desselben Formulars 1042-S in einem Umschlag erhalten?**</td>
+    <td valign="top"><b>Warum habe ich 3 Kopien desselben Formulars 1042-S in einem Umschlag erhalten?</b></td>
     <td valign="top">Die IRS-Bestimmungen erfordern die Bereitstellung von drei Kopien des Formulars:
 <ul>
 <li>Eine für die Unterlagen des Empfängers</li>

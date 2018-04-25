@@ -1,19 +1,20 @@
 ---
 author: JnHs
-Description: "Sie können für Ihre Windows-Apps detaillierte Analysen im Windows Dev Center-Dashboard oder über andere Methoden anzeigen."
+Description: Get detailed analytics for your Windows apps, in the dashboard or via other methods.
 title: Analysieren der App-Leistung
 ms.assetid: 3A3C6F10-0DB1-416D-B632-CD388EA66759
 ms.author: wdg-dev-content
-ms.date: 06/28/2017
+ms.date: 10/13/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Analysen, Berichte, Dashboard, Apps
-ms.openlocfilehash: 57e4a30258fa25411bb461cac56aa18d2f74981d
-ms.sourcegitcommit: a93b1da07b386a682435de58a8129d7b4ee90c14
+ms.localizationpriority: high
+ms.openlocfilehash: 20e168b022ae8e9d35e0dfba39864d99e6ba22e8
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="analyze-app-performance"></a>Analysieren der App-Leistung
 
@@ -23,7 +24,7 @@ Zeigen Sie die Analyseberichte im Dashboard an, oder [laden Sie die erforderlich
 
 ## <a name="view-key-analytics-for-all-your-apps"></a>Zeigen Sie die wichtigsten Analysen für Ihre gesamten Apps an
 
-Um die wichtigsten Analysen zu den am häufigsten heruntergeladenen Apps anzuzeigen, erweitern Sie **Analyse** und wählen Sie **Übersicht** aus. Auf der Seite **Analyseübersicht** werden standardmäßig Informationen zu den fünf während ihrer Lebensdauer am häufigsten gekauften Apps angezeigt. Um andere veröffentlichte Apps auszuwählen und anzuzeigen, wählen Sie **Filter** aus.
+Um die wichtigsten Analysen zu den am häufigsten heruntergeladenen Apps anzuzeigen, erweitern Sie **Analyse** und wählen Sie **Übersicht** aus. Auf der Seite „Übersicht” werden standardmäßig Informationen zu den fünf während ihrer Lebensdauer am häufigsten gekauften Apps angezeigt. Um andere veröffentlichte Apps auszuwählen und anzuzeigen, wählen Sie **Filter** aus.
 
 ## <a name="view-individual-reports-for-each-app"></a>Zeigen Sie einzelne Berichte für die einzelnen Apps an
 
@@ -36,19 +37,21 @@ In diesem Abschnitt erhalten Sie Details zu den Informationen, die in den folgen
 -   [Bericht „Rezensionen“](reviews-report.md)
 -   [Feedbackbericht](feedback-report.md)
 -   [Bericht zur Anzeigen-Performance](advertising-performance-report.md)
--   [Bericht „Anzeigenkampagne“](promote-your-app-report.md)
+-   [Werbekampagnen-Bericht](promote-your-app-report.md)
+-   [Bericht der Xbox Analyse](xbox-analytics-report.md)
 
 > [!NOTE]
 > Abhängig von den spezifischen Features und der Implementierung Ihrer App enthalten einige dieser Berichte möglicherweise keine Daten.
 
 <span id="no-dashboard"/>
+
 ## <a name="access-analytics-data-without-using-the-dev-center-dashboard"></a>Zugreifen auf Analysedaten ohne das Dev Center-Dashboard
 
-Neben den Analyseberichten im Dashboard gibt es weitere Möglichkeiten für den Zugriff auf Analysedaten.
+Zusätzlich zur Anzeige der Berichte im Dashboard können Sie auf unterschiedliche Arten auf Ihre App-Analyse zugreifen.
 
-### <a name="windows-store-analytics-api"></a>Windows Store-Analyse-API
+### <a name="microsoft-store-analytics-api"></a>Microsoft Store-Analyse-API
 
-Verwenden Sie die [Windows Store-Analyse-API](../monetize/access-analytics-data-using-windows-store-services.md), um programmgesteuert Analysedaten für Ihre Apps abzurufen. Mit dieser REST-API können Sie Daten für App- und Add-On-Käufe, Fehler sowie App-Bewertungen und -Rezensionen abrufen. Diese API verwendet Azure Active Directory (Azure AD), um die Aufrufe von Ihrer App oder Ihrem Dienst zu authentifizieren.
+Verwenden Sie die [Store-Analyse-API](../monetize/access-analytics-data-using-windows-store-services.md), um programmgesteuert Analysedaten für Ihre Apps abzurufen. Mit dieser REST-API können Sie Daten für App- und Add-On-Käufe, Fehler sowie App-Bewertungen und -Rezensionen abrufen. Diese API verwendet Azure Active Directory (Azure AD), um die Aufrufe von Ihrer App oder Ihrem Dienst zu authentifizieren.
 
 ### <a name="windows-dev-center-content-pack-for-power-bi"></a>Windows Dev Center-Inhaltspaket für Power BI
 
@@ -61,7 +64,7 @@ Verwenden Sie die folgenden Ressourcen, um mit Power BI auf Ihre Analysedaten zu
 * [Informationen zum Einsetzen des Windows Dev Center-Inhaltspakets für Power BI, um eine Verbindung zu Ihren Analysedaten herzustellen](https://powerbi.microsoft.com/documentation/powerbi-content-pack-windows-dev-center/)
 
 > [!NOTE]
-> Für die Verbindung zum Windows Dev Center-Inhaltspaket für Power BI sollten Sie Anmeldeinformationen aus einem Azure AD-Verzeichnis angeben, das mit Ihrem Dev Center-Konto verknüpft ist. Wenn Sie die Anmeldeinformationen Ihres Microsoft-Kontos verwenden, werden Ihre Analysedaten in Power BI nicht automatisch aktualisiert. Für eine Aktualisierung müssen Sie sich dann in Power BI anmelden. Wenn in Ihrer Organisation bereits mit Office365 oder anderen Unternehmensdiensten von Microsoft gearbeitet wird, verfügen Sie bereits über Azure AD. Andernfalls können Sie es [kostenlos abrufen](http://go.microsoft.com/fwlink/p/?LinkId=703757). Weitere Informationen zur Verknüpfung Ihres Dev Center-Kontos mit Azure AD finden Sie unter [Kontobenutzer verwalten](manage-account-users.md).
+> Für die Verbindung zum Windows Dev Center-Inhaltspaket für Power BI sollten Sie Anmeldeinformationen aus einem Azure AD-Verzeichnis angeben, das mit Ihrem Dev Center-Konto verknüpft ist. Wenn Sie die Anmeldeinformationen Ihres Microsoft-Kontos verwenden, werden Ihre Analysedaten in Power BI nicht automatisch aktualisiert. Für eine Aktualisierung müssen Sie sich dann in Power BI anmelden. Wenn in Ihrer Organisation bereits mit Office365 oder anderen Unternehmensdiensten von Microsoft gearbeitet wird, verfügen Sie bereits über Azure AD. Andernfalls können Sie es [kostenlos abrufen](http://go.microsoft.com/fwlink/p/?LinkId=703757). Weitere Informationen zur Einrichtung der Zuordnung finden Sie unter [Zuordnen Ihres Azure Active Directory zum Dev Center-Konto](associate-azure-ad-with-dev-center.md).
 
 ### <a name="dev-center-app"></a>DevCenter-App
 

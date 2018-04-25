@@ -1,19 +1,19 @@
 ---
 author: jnHs
 Description: After your packages have been successfully uploaded, you'll see a table that indicates which packages will be offered to specific Windows 10 device families (and earlier OS versions, if applicable), in ranked order.
-title: "Verfügbarkeit von Gerätefamilien"
+title: Verfügbarkeit von Gerätefamilien
 ms.author: wdg-dev-content
-ms.date: 10/12/2017
+ms.date: 03/16/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows10, UWP, Pakete, hochladen, Verfügbarkeit von Gerätefamilien"
+keywords: Windows10, UWP, Pakete, hochladen, Verfügbarkeit von Gerätefamilien
 ms.localizationpriority: high
-ms.openlocfilehash: a3ae23a08ec305285569de8b6d55e805beaa86ba
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
+ms.openlocfilehash: 44c20c05457669edb31067b6d7ac8bc60f09e72e
+ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="device-family-availability"></a>Verfügbarkeit von Gerätefamilien
 
@@ -36,6 +36,7 @@ Sie können das Kontrollkästchen für eine Windows10-Gerätefamilie deaktiviere
 Wenn Ihre App dies unterstützt, empfehlen wir, diese Kontrollkästchen hier aktiviert zu lassen, es sei denn, Sie möchten aus einem bestimmten Grund die Windows 10-Gerätetypen einschränken, die Ihre App erwerben können. Wenn Sie beispielsweise wissen, dass Ihre App kein hohes Maß an Benutzerfreundlichkeit auf [Surface Hub](https://developer.microsoft.com/windows/surfacehub) und/oder [Microsoft HoloLens](http://dev.windows.com/holographic/development_overview) bietet, deaktivieren Sie das Kontrollkästchen **Windows10 Team** und/oder **Windows10 Holographic**. Dadurch wird verhindert, dass neuen Kunden die App auf diesen Geräten erwerben. Wenn Sie die App später für diese Kunden anbieten möchten, können Sie eine neue Übermittlung Erstellen, bei der die Kontrollkästchen aktiviert sind.
 
 <span id="xbox" />
+
 Ist die einzige Windows10-Gerätefamilie, die für Windows.Universal Pakete standardmäßig nicht aktiviert ist, ist **Windows10 Xbox**. Wenn Ihre App kein Spiel ist (oder wenn sie ein Spiel ist und Sie das [Xbox Live Creators-Programm](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) aktiviert haben oder die [Konzeptgenehmigung](../gaming/concept-approval.md) durchlaufen haben), und Ihre Übermittlung neutrale und/oder x64-UWP-Pakete enthält, die mit Windows10 SDK Version 14393 kompiliert wurden, können Sie das Kontrollkästchen Windows10 Xbox aktivieren, wenn Sie die App Kunden auf **Windows 10 Xbox** anbieten möchten.
 
 > [!IMPORTANT]
@@ -48,6 +49,8 @@ Ist die einzige Windows10-Gerätefamilie, die für Windows.Universal Pakete stan
 >   
 > Wenn Sie das Problem immer noch nicht beheben können, wenden Sie sich an den Support.
 
+Wenn Sie eine UWP-App für Windows10 IoT Core übermitteln, sollten Sie nach dem Hochladen der Pakete die Standardauswahl nicht ändern. Es gibt kein separates Kontrollkästchen für Windows10 IoT. Weitere Informationen zum Veröffentlichen von IoT Core-UWP-Apps finden Sie unter [Microsoft Store-Unterstützung für IoT Core UWP-Apps](https://docs.microsoft.com/windows/iot-core/commercialize-your-device/installingandservicing).
+
 Wenn Ihre Übermittlung Pakete enthält, die auf **Windows8/8.1** und **Windows Phone8.x oder früher**ausgeführt werden können, werden diese Pakete Kunden zur Verfügung gestellt, wie in der Tabelle dargestellt. Es gibt keine Kontrollkästchen für diese Betriebssystemversionen. Wenn Sie das Angebot der App für diese Kunden beenden möchten, entfernen Sie die entsprechenden Pakete aus Ihrer Übermittlung.
 
 > [!IMPORTANT]
@@ -57,8 +60,7 @@ Beachten Sie außerdem, dass die unter **Verfügbarkeit von Gerätefamilien** ge
 
 Beispiel: Wenn Sie eine App mit Windows Phone 8.1-Paketen veröffentlicht haben und später ein Windows 10 (UWP)-Paket für die gleiche App hinzufügen, das auf die universelle Gerätefamilie abzielt, wird Kunden mit Mobilgeräten unter Windows 10, die bereits über das Windows Phone 8.1-Paket verfügen, ein Update auf dieses Windows 10 (UWP)-Paket angeboten, selbst wenn Sie das Kontrollkästchen für **Windows 10 Mobile** deaktiviert haben (da dies kein neuer Verkauf ist, sondern ein Update). Wenn Sie kein Windows 10 (UWP)-Paket bereitstellen, das auf die universelle oder Mobilgerätefamilie abzielt, bleibt Kunden mit Mobilgeräten mit Windows 10 weiterhin das Windows Phone 8.1-Paket zur Verfügung.
 
-Weitere Informationen über Gerätefamilien finden Sie unter [Einführung in die Universelle Windows-Plattform](../get-started/universal-application-platform-guide.md) und [**TargetDeviceFamily**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily).
-
+Weitere Informationen über die Gerätefamilien finden Sie unter [**Übersicht über die Gerätefamilien**](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview).
 
 ## <a name="understanding-ranking"></a>Grundlegendes zur Bewertung
 

@@ -3,17 +3,17 @@ author: jnHs
 Description: Select the base price for an app and schedule price changes. You can also customize these options for specific markets.
 title: Festlegen und Planen von App-Preisen
 ms.author: wdg-dev-content
-ms.date: 02/05/2018
+ms.date: 03/28/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Preise, App-Preise, App-Preis, Apps verkaufen, Preis ändern, benutzerdefinierter Preis, Preis, Preise, Kosten, Grundpreise überschreiben, formfreier Preis, formfrei
 ms.localizationpriority: high
-ms.openlocfilehash: 2be7e664279cb19527a262ad3c170d04f8d026fb
-ms.sourcegitcommit: d780e3a087ab5240ea643346480a1427bea9e29b
+ms.openlocfilehash: 44ded7baf563d0253c2cca6b7937cb5c8fea74e3
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="set-and-schedule-app-pricing"></a>Festlegen und Planen von App-Preisen
 
@@ -37,6 +37,8 @@ Klicken Sie im Abschnitt **Preise** auf **Umrechnungstabelle anzeigen**, um die 
 
 Beachten Sie, dass das von Ihnen ausgewählte Preisniveau u. U. eine Verkaufs- oder Mehrwertsteuer enthält, die Kunden bezahlen müssen. Weitere Informationen über Ihre steuerlichen Verpflichtungen in ausgewählten Märkten finden Sie in den [Steuerinformationen zu kostenpflichtigen Apps](tax-details-for-paid-apps.md). Lesen Sie außerdem die [Überlegungen zu Preisen für die einzelnen Märkte](define-pricing-and-market-selection.md#price-considerations-for-specific-markets).
 
+> [!NOTE]
+> Wenn Sie die Option **Beenden des Erwerbs** unter **Make this product available but not discoverable in the Store** im Abschnitt [Sichtbarkeit](choose-visibility-options.md#discoverability) wählen), können Sie den Preis für Ihre Übermittlung nicht festlegen (da niemand die App kaufen kann, es sei denn, durch einen Werbecode, um die App umsonst zu erhalten).
 
 ## <a name="schedule-price-changes"></a>Planen von Preisänderungen
 
