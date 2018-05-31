@@ -1,60 +1,65 @@
 ---
-author: mtoepke
-title: "Hinzufügen von Steuerelementen"
-description: "Jetzt sehen wir uns an, wie im Beispiel-Spiel Bewegungs-/Blicksteuerelemente in einem 3D-Spiel implementiert und einfache Steuerelemente für Toucheingabe, Maus und Gamecontroller entwickelt werden."
+author: abbycar
+title: Hinzufügen von Steuerelementen
+description: In diesem Thema befassen wir uns damit, wie das Beispielspiel die Bewegungs-/Blicksteuerung in einem 3D-Spiel implementiert und wie einfache Steuerungen für Toucheingabe, Maus und Gamecontroller entwickelt werden.
 ms.assetid: f9666abb-151a-74b4-ae0b-ef88f1f252f8
-ms.author: mtoepke
-ms.date: 02/08/2017
+ms.author: abigailc
+ms.date: 10/24/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Spiele, Steuerelemente, Eingabe"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d70e9ef8efffd2a78f6c49596e716770a9162b5c
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP, Spiele, Steuerelemente, Eingabe
+ms.localizationpriority: medium
+ms.openlocfilehash: 84230759f03cb60b5b776d3407ac0f96e090d495
+ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/22/2018
+ms.locfileid: "1675297"
 ---
-
-# <a name="add-controls"></a>Hinzufügen von Steuerelementen
-
-
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
-
-In diesem Thema befassen wir uns damit, wie das Beispielspiel die Bewegungs-/Blicksteuerung in einem 3D-Spiel implementiert und wie einfache Steuerungen für Toucheingabe, Maus und Gamecontroller entwickelt werden.
-
-## <a name="objective"></a>Ziel
+# <a name="add-controls"></a><span data-ttu-id="1148f-104">Hinzufügen von Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="1148f-104">Add controls</span></span>
 
 
--   Implementieren von Maus-/Tastatur-, Toucheingabe- und Xbox-Controller-Steuerungen in einem Spiel für die universelle Windows-Plattform (UWP) mit DirectX
+<span data-ttu-id="1148f-105">\[ Aktualisiert für UWP-Apps unter Windows10.</span><span class="sxs-lookup"><span data-stu-id="1148f-105">\[ Updated for UWP apps on Windows 10.</span></span> <span data-ttu-id="1148f-106">Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].</span><span class="sxs-lookup"><span data-stu-id="1148f-106">For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span></span>
 
-## <a name="uwp-game-apps-and-controls"></a>UWP-Spiel-Apps und Steuerungen
+<span data-ttu-id="1148f-107">Ein gutes universelles WindowsPlattform (UWP)-Spiel unterstützt viele unterschiedliche Schnittstellen.</span><span class="sxs-lookup"><span data-stu-id="1148f-107">A good Universal Windows Platform (UWP) game supports a wide variety of interfaces.</span></span> <span data-ttu-id="1148f-108">Ein potenzieller Spieler kann Windows10 auf einem Tablet ohne physische Tasten, auf einem PC mit Xbox-Controller oder auf einem topmodernen Gaming-PC mit Hochleistungsmaus und Gaming-Tastatur verwenden.</span><span class="sxs-lookup"><span data-stu-id="1148f-108">A potential player might have Windows 10 on a tablet with no physical buttons, a PC with an Xbox controller attached, or the latest desktop gaming rig with a high-performance mouse and gaming keyboard.</span></span> <span data-ttu-id="1148f-109">In unserem Spiel werden die Steuerelemente in der [**MoveLookController**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp)-Klasse implementiert.</span><span class="sxs-lookup"><span data-stu-id="1148f-109">In our game the controls are implemented in the [**MoveLookController**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp) class.</span></span> <span data-ttu-id="1148f-110">Diese Klasse aggregiert alle drei Arten von Eingaben (Maus und Tastatur, Fingereingabe und Gamepad) in einem einzelnen Domänencontroller.</span><span class="sxs-lookup"><span data-stu-id="1148f-110">This class aggregates all three types of input (mouse and keyboard, touch, and gamepad) into a single controller.</span></span> <span data-ttu-id="1148f-111">Das Endergebnis ist ein First-Person-Shooter, der Standard-Bewegungs-/Blicksteuerungen des Genres verwendet, die mit mehreren Geräten funktionieren.</span><span class="sxs-lookup"><span data-stu-id="1148f-111">The end result is a first-person shooter that uses genre standard move-look controls that work with multiple devices.</span></span>
 
-
-Ein gutes UWP-Spiel unterstützt viele unterschiedliche Schnittstellen. Ein potenzieller Spieler kann Windows 10 auf einem Tablet ohne physische Tasten, auf einem Medien-PC mit Xbox-Controller oder auf einem topmodernen Gaming-PC mit Hochleistungsmaus und Gaming-Tastatur verwenden. Ihr Spiel sollte all diese Geräte unterstützen, sofern sein Entwurf es zulässt.
-
-In diesem Beispiel werden alle drei Geräte unterstützt. Es ist ein einfaches First-Person-Shooterspiel, und die für dieses Genre üblichen Bewegungs-/Blicksteuerungen lassen sich für alle drei Eingabetypen mühelos implementieren.
-
-Weitere Informationen zu Steuerungen und speziell zu Bewegungs-/Blicksteuerungen finden Sie unter [Bewegungs-/Blicksteuerungen für Spiele](tutorial--adding-move-look-controls-to-your-directx-game.md) sowie unter [Toucheingabesteuerelemente für Spiele](tutorial--adding-touch-controls-to-your-directx-game.md).
-
-## <a name="common-control-behaviors"></a>Allgemeine Steuerungsverhalten
+> [!NOTE]
+> <span data-ttu-id="1148f-112">Weitere Informationen zu Steuerelementen finden Sie unter [Bewegungs-/Blicksteuerungen für Spiele](tutorial--adding-move-look-controls-to-your-directx-game.md) und [Toucheingabesteuerelemente für Spiele](tutorial--adding-touch-controls-to-your-directx-game.md).</span><span class="sxs-lookup"><span data-stu-id="1148f-112">For more info about controls, see [Move-look controls for games](tutorial--adding-move-look-controls-to-your-directx-game.md) and [Touch controls for games](tutorial--adding-touch-controls-to-your-directx-game.md).</span></span>
 
 
-Die Implementierung von Fingereingabesteuerungen und Maus-/Tastatursteuerungen ist im Grunde sehr ähnlich. In einer UWP-App ist ein Zeiger einfach ein Punkt auf dem Bildschirm. Sie können ihn bewegen, indem Sie die Maus oder den Finger auf dem Touchscreen bewegen. Folglich können Sie einen einzelnen Satz von Ereignissen registrieren und müssen sich keine Gedanken darüber machen, ob der Spieler eine Maus oder einen Touchscreen zum Bewegen und Betätigen des Zeigers verwendet.
+## <a name="objective"></a><span data-ttu-id="1148f-113">Ziel</span><span class="sxs-lookup"><span data-stu-id="1148f-113">Objective</span></span>
 
-Beim Initialisieren der **MoveLookController**-Klasse im Beispielspiel werden vier zeigerspezifische Ereignisse und ein mausspezifisches Ereignis registriert:
+<span data-ttu-id="1148f-114">Wir haben jetzt ein Spiel, das gerendert wird, aber nicht den Spieler bewegt oder Ziele anvisiert.</span><span class="sxs-lookup"><span data-stu-id="1148f-114">At this point we have a game that renders, but we can't move our player around or shoot the targets.</span></span> <span data-ttu-id="1148f-115">Wir werden sehen, wie unser Spiel First-Person-Shooter Bewegungs-/Blicksteuerungen für die folgenden Arten von Eingaben in unserem UWP-DirectX -Spiel implementiert.</span><span class="sxs-lookup"><span data-stu-id="1148f-115">We'll take a look at how our game implements first person shooter move-look controls for the following types of input in our UWP DirectX game.</span></span>
+- <span data-ttu-id="1148f-116">Tastatur und Maus</span><span class="sxs-lookup"><span data-stu-id="1148f-116">Mouse and keyboard</span></span>
+- <span data-ttu-id="1148f-117">Touch</span><span class="sxs-lookup"><span data-stu-id="1148f-117">Touch</span></span>
+- <span data-ttu-id="1148f-118">Gamepad</span><span class="sxs-lookup"><span data-stu-id="1148f-118">Gamepad</span></span>
 
--   [**CoreWindow::PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278). Die linke oder rechte Maustaste wurde gedrückt (und gedrückt gehalten), oder der Touchscreen wurde berührt.
--   [**CoreWindow::PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276). Die Maus wurde bewegt, oder eine Zieh-Aktion wurde auf dem Touchscreen ausgeführt.
--   [**CoreWindow::PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279). Die linke Maustaste wurde losgelassen, oder das Objekt, das den Touchscreen berührt, wurde angehoben.
--   [**CoreWindow::PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208275). Der Zeiger wurde aus dem Hauptfenster bewegt.
--   [**Windows::Devices::Input::MouseMoved**](https://msdn.microsoft.com/library/windows/apps/hh758356). Die Maus wurde über eine bestimmte Distanz bewegt. Wir sind aber nur an Deltawerten der Mausbewegungen und nicht an der aktuellen x-y-Position interessiert.
+>[!Note]
+><span data-ttu-id="1148f-119">Wenn Sie den neuesten Code für dieses Beispiel noch nicht heruntergeladen haben, wechseln Sie zu [Direct3D-Spielbeispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX).</span><span class="sxs-lookup"><span data-stu-id="1148f-119">If you haven't downloaded the latest game code for this sample, go to [Direct3D game sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX).</span></span> <span data-ttu-id="1148f-120">Dieses Beispiel gehört zu einer großen Sammlung von UWP-Featurebeispielen.</span><span class="sxs-lookup"><span data-stu-id="1148f-120">This sample is part of a large collection of UWP feature samples.</span></span> <span data-ttu-id="1148f-121">Anweisungen zum Herunterladen des Beispiels finden Sie unter [Abrufen der UWP-Beispiele von GitHub](https://docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples).</span><span class="sxs-lookup"><span data-stu-id="1148f-121">For instructions on how to download the sample, see [Get the UWP samples from GitHub](https://docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples).</span></span>
 
+## <a name="common-control-behaviors"></a><span data-ttu-id="1148f-122">Allgemeine Steuerungsverhalten</span><span class="sxs-lookup"><span data-stu-id="1148f-122">Common control behaviors</span></span>
+
+
+<span data-ttu-id="1148f-123">Die Implementierung von Fingereingabesteuerungen und Maus-/Tastatursteuerungen ist im Grunde sehr ähnlich.</span><span class="sxs-lookup"><span data-stu-id="1148f-123">Touch controls and mouse/keyboard controls have a very similar core implementation.</span></span> <span data-ttu-id="1148f-124">In einer UWP-App ist ein Zeiger einfach ein Punkt auf dem Bildschirm.</span><span class="sxs-lookup"><span data-stu-id="1148f-124">In a UWP app, a pointer is simply a point on the screen.</span></span> <span data-ttu-id="1148f-125">Sie können ihn bewegen, indem Sie die Maus oder den Finger auf dem Touchscreen bewegen.</span><span class="sxs-lookup"><span data-stu-id="1148f-125">You can move it by sliding the mouse or sliding your finger on the touch screen.</span></span> <span data-ttu-id="1148f-126">Folglich können Sie einen einzelnen Satz von Ereignissen registrieren und müssen sich keine Gedanken darüber machen, ob der Spieler eine Maus oder einen Touchscreen zum Bewegen und Betätigen des Zeigers verwendet.</span><span class="sxs-lookup"><span data-stu-id="1148f-126">As a result, you can register for a single set of events, and not worry about whether the player is using a mouse or a touch screen to move and press the pointer.</span></span>
+
+<span data-ttu-id="1148f-127">Beim Initialisieren der **MoveLookController**-Klasse im Beispielspiel werden vier zeigerspezifische Ereignisse und ein mausspezifisches Ereignis registriert:</span><span class="sxs-lookup"><span data-stu-id="1148f-127">When the **MoveLookController** class in the game sample is initialized, it registers for four pointer-specific events and one mouse-specific event:</span></span>
+
+<span data-ttu-id="1148f-128">Ereignis</span><span class="sxs-lookup"><span data-stu-id="1148f-128">Event</span></span> | <span data-ttu-id="1148f-129">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="1148f-129">Description</span></span>
+:------ | :-------
+[**<span data-ttu-id="1148f-130">CoreWindow::PointerPressed</span><span class="sxs-lookup"><span data-stu-id="1148f-130">CoreWindow::PointerPressed</span></span>**](https://msdn.microsoft.com/library/windows/apps/br208278) | <span data-ttu-id="1148f-131">Die linke oder rechte Maustaste wurde gedrückt (und gedrückt gehalten), oder der Touchscreen wurde berührt.</span><span class="sxs-lookup"><span data-stu-id="1148f-131">The left or right mouse button was pressed (and held), or the touch surface was touched.</span></span>
+[**<span data-ttu-id="1148f-132">CoreWindow::PointerMoved</span><span class="sxs-lookup"><span data-stu-id="1148f-132">CoreWindow::PointerMoved</span></span>**](https://msdn.microsoft.com/library/windows/apps/br208276) |<span data-ttu-id="1148f-133">Die Maus wurde bewegt, oder eine Zieh-Aktion wurde auf dem Touchscreen ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="1148f-133">The mouse moved, or a drag action was made on the touch surface.</span></span>
+[**<span data-ttu-id="1148f-134">CoreWindow::PointerReleased</span><span class="sxs-lookup"><span data-stu-id="1148f-134">CoreWindow::PointerReleased</span></span>**](https://msdn.microsoft.com/library/windows/apps/br208279) |<span data-ttu-id="1148f-135">Die linke Maustaste wurde losgelassen, oder das Objekt, das den Touchscreen berührt, wurde angehoben.</span><span class="sxs-lookup"><span data-stu-id="1148f-135">The left mouse button was released, or the object contacting the touch surface was lifted.</span></span>
+[**<span data-ttu-id="1148f-136">CoreWindow::PointerExited</span><span class="sxs-lookup"><span data-stu-id="1148f-136">CoreWindow::PointerExited</span></span>**](https://msdn.microsoft.com/library/windows/apps/br208275) |<span data-ttu-id="1148f-137">Der Zeiger wurde aus dem Hauptfenster bewegt.</span><span class="sxs-lookup"><span data-stu-id="1148f-137">The pointer moved out of the main window.</span></span>
+[**<span data-ttu-id="1148f-138">Windows::Devices::Input::MouseMoved</span><span class="sxs-lookup"><span data-stu-id="1148f-138">Windows::Devices::Input::MouseMoved</span></span>**](https://msdn.microsoft.com/library/windows/apps/hh758356) | <span data-ttu-id="1148f-139">Die Maus wurde über eine bestimmte Distanz bewegt.</span><span class="sxs-lookup"><span data-stu-id="1148f-139">The mouse moved a certain distance.</span></span> <span data-ttu-id="1148f-140">Wir sind aber nur an Deltawerten der Mausbewegungen und nicht an der aktuellen x-y-Position interessiert.</span><span class="sxs-lookup"><span data-stu-id="1148f-140">Be aware that we are only interested in mouse movement delta values, and not the current X-Y position.</span></span>
+
+
+<span data-ttu-id="1148f-141">Diese Ereignishandler werden beim Starten der Überwachung für die Benutzereingabe festgelegt, sobald **MoveLookController** im Anwendungsfenster initialisiert wird.</span><span class="sxs-lookup"><span data-stu-id="1148f-141">These event handlers are set to start listening for user input as soon as the **MoveLookController** is initialized in the application window.</span></span>
 ```cpp
-void MoveLookController::Initialize(
-    _In_ CoreWindow^ window
-    )
+void MoveLookController::InitWindow(_In_ CoreWindow^ window)
 {
+    ResetState();
+
     window->PointerPressed +=
         ref new TypedEventHandler<CoreWindow^, PointerEventArgs^>(this, &MoveLookController::OnPointerPressed);
 
@@ -67,52 +72,679 @@ void MoveLookController::Initialize(
     window->PointerExited +=
         ref new TypedEventHandler<CoreWindow^, PointerEventArgs^>(this, &MoveLookController::OnPointerExited);
 
-    window->KeyDown +=
-        ref new TypedEventHandler<CoreWindow^, KeyEventArgs^>(this, &MoveLookController::OnKeyDown);
-
-    window->KeyUp +=
-        ref new TypedEventHandler<CoreWindow^, KeyEventArgs^>(this, &MoveLookController::OnKeyUp);
-
-    // A separate handler for mouse only relative mouse movement events.
-    Windows::Devices::Input::MouseDevice::GetForCurrentView()->MouseMoved +=
+    // There is a separate handler for mouse only relative mouse movement events.
+    MouseDevice::GetForCurrentView()->MouseMoved +=
         ref new TypedEventHandler<MouseDevice^, MouseEventArgs^>(this, &MoveLookController::OnMouseMoved);
-
-    ResetState();
-    m_state = MoveLookControllerState::None;
-
-    m_pitch = 0.0f;
-    m_yaw   = 0.0f;
+    //
+    // ...
+    //
 }
 ```
 
-Der Xbox-Controller wird separat mit den [XInput](https://msdn.microsoft.com/library/windows/desktop/hh405053)-APIs behandelt. Mit der Implementierung der Gamecontrollersteuerungen werden wir uns etwas später befassen.
+<span data-ttu-id="1148f-142">Der vollständige Code für [**InitWindow**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L68-L92) wird auf GitHub angezeigt.</span><span class="sxs-lookup"><span data-stu-id="1148f-142">Complete code for [**InitWindow**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L68-L92) can be seen on GitHub.</span></span>
 
-Im Beispielspiel werden für die **MoveLookController**-Klasse unabhängig vom Steuerungstyp drei controllerspezifische Zustände verwendet:
 
--   **None**. Dies ist der Initialisierungszustand für den Controller. Das Spiel erwartet keine Controllereingabe.
--   **WaitForInput**. Das Spiel wurde angehalten und wartet darauf, dass es vom Spieler fortgesetzt wird.
--   **Active**. Das Spiel wird ausgeführt und verarbeitet Eingaben des Spielers.
+<span data-ttu-id="1148f-143">Um festzulegen, ob das Spiel auf Eingabe warten soll, verfügt die **MoveLookController**-Klasse unabhängig vom Steuerungstyp über drei Controllerzustände:</span><span class="sxs-lookup"><span data-stu-id="1148f-143">To determine when the game should be listening for certain input, the **MoveLookController** class has three controller-specific states, regardless of the controller type:</span></span>
 
-Der Zustand **Active** liegt vor, wenn der Spieler das Spiel aktiv spielt. In diesem Zustand verarbeitet die **MoveLookController**-Instanz Eingabeereignisse von allen aktivierten Eingabegeräten und interpretiert die Absichten des Spielers auf der Grundlage der aggregierten Ereignisdaten. Dadurch aktualisiert sie die Geschwindigkeit und Blickrichtung (die Normale der Ansichtsebene) der Spieleransicht und gibt die aktualisierten Daten an das Spiel weiter, nachdem "Update" in der Spielschleife aufgerufen wurde.
+<span data-ttu-id="1148f-144">Status</span><span class="sxs-lookup"><span data-stu-id="1148f-144">State</span></span> | <span data-ttu-id="1148f-145">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="1148f-145">Description</span></span>
+:----- | :-------
+**<span data-ttu-id="1148f-146">Keins</span><span class="sxs-lookup"><span data-stu-id="1148f-146">None</span></span>** | <span data-ttu-id="1148f-147">Dies ist der Initialisierungszustand für den Controller.</span><span class="sxs-lookup"><span data-stu-id="1148f-147">This is the initialized state for the controller.</span></span> <span data-ttu-id="1148f-148">Das Spiel erwartet keine Controllereingabe und die Eingabe wird ignoriert.</span><span class="sxs-lookup"><span data-stu-id="1148f-148">All input is ignored since the game is not anticipating any controller input.</span></span>
+**<span data-ttu-id="1148f-149">WaitForInput</span><span class="sxs-lookup"><span data-stu-id="1148f-149">WaitForInput</span></span>** | <span data-ttu-id="1148f-150">Der Controller wartet auf die Bestätigung der Nachricht des Spielers über das Spiel, entweder mit einem Mausklick, einem Touchereignis oder der Menütaste auf einem Gamepad.</span><span class="sxs-lookup"><span data-stu-id="1148f-150">The controller is waiting for the player to acknowledge a message from the game by either using a left mouse click, a touch event, ot the menu button on a gamepad.</span></span>
+**<span data-ttu-id="1148f-151">Aktiv</span><span class="sxs-lookup"><span data-stu-id="1148f-151">Active</span></span>** | <span data-ttu-id="1148f-152">Der Controller ist im aktiven Spiel-Modus.</span><span class="sxs-lookup"><span data-stu-id="1148f-152">The controller is in active game play mode.</span></span>
 
-Beachten Sie, dass der Spieler mehrere Aktionen gleichzeitig ausführen kann. Er kann beispielsweise schießen und gleichzeitig die Kamera bewegen. Alle diese Eingaben werden im Zustand **Active** mit verschiedenen Zeiger-IDs für die unterschiedlichen Zeigeraktionen nachverfolgt. Dies ist notwendig, weil sich aus Sicht des Spielers ein Zeigerereignis im Schießrechteck von einem Zeigerereignis im Bewegungsrechteck oder auf dem restlichen Bildschirm unterscheidet.
 
-Wenn ein [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278)-Ereignis empfangen wird, ruft die **MoveLookController**-Instanz den vom Fenster erstellten Wert der Zeiger-ID ab. Die Zeiger-ID stellt einen bestimmten Eingabetyp dar. Bei einem Multitouchgerät sind etwa gleichzeitig mehrere unterschiedliche aktive Eingaben möglich. Die IDs werden verwendet, um den vom Spieler verwendeten Eingabetyp nachzuverfolgen. Wenn ein Ereignis im Bewegungsrechteck des Touchscreens stattfindet, wird eine Zeiger-ID zugewiesen, um alle Zeigerereignisse im Bewegungsrechteck nachzuverfolgen. Andere Zeigerereignisse im Schießrechteck werden separat mit einer anderen Zeiger-ID nachverfolgt. (Damit werden wir uns im Abschnitt zu Fingereingabesteuerungen ausführlicher beschäftigen.)
 
-Eingaben von der Maus haben noch eine andere ID und werden ebenfalls separat behandelt.
+### <a name="waitforinput-state-and-pausing-the-game"></a><span data-ttu-id="1148f-153">WaitForInput-Status und Anhalten des Spiels</span><span class="sxs-lookup"><span data-stu-id="1148f-153">WaitForInput state and pausing the game</span></span>
 
-Nachdem die Zeigerereignisse einer bestimmten Spielaktion zugeordnet wurden, müssen die Daten aktualisiert werden, die das **MoveLookController**-Objekt an die Hauptspielschleife weitergibt.
+<span data-ttu-id="1148f-154">Das Spiel wechselt in den **WaitForInput**-Zustand, wenn das Spiel angehalten wurde.</span><span class="sxs-lookup"><span data-stu-id="1148f-154">The game enters the **WaitForInput** state when the game has been paused.</span></span> <span data-ttu-id="1148f-155">Dies passiert, wenn der Spieler den Zeiger aus dem Hauptfenster des Spiels bewegt oder die Pause-Taste drückt (P-TASTE oder **Start**-Taste auf dem Gamepad), drückt.</span><span class="sxs-lookup"><span data-stu-id="1148f-155">This happens when the player moves the pointer outside the main window of the game, or presses the pause button (the P key or the gamepad **Start** button).</span></span> <span data-ttu-id="1148f-156">Die **MoveLookController-Instanz** registriert die Tastenbetätigung und informiert die Spielschleife, wenn sie die [**IsPauseRequested**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L107-L127)-Methode aufruft.</span><span class="sxs-lookup"><span data-stu-id="1148f-156">The **MoveLookController** registers the press, and informs the game loop when it calls the [**IsPauseRequested**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L107-L127) method.</span></span> <span data-ttu-id="1148f-157">Wenn **IsPauseRequested** jetzt **true** zurückgibt, ruft die Spielschleife **WaitForPress** für die **MoveLookController**-Instanz auf, um den Controller in den Zustand **WaitForInput** zu versetzen.</span><span class="sxs-lookup"><span data-stu-id="1148f-157">At that point if **IsPauseRequested** returns **true**, the game loop then calls **WaitForPress** on the **MoveLookController** to move the controller into the **WaitForInput** state.</span></span> 
 
-Wenn die **Update**-Methode im Beispielspiel aufgerufen wird, verarbeitet sie die Daten und aktualisiert die Geschwindigkeits- und Blickrichtungsvariablen (**m\_velocity** und **m\_lookdirection**), die dann von der Spielschleife durch Aufrufen der öffentlichen Methoden **Velocity** und **LookDirection** der **MoveLookController**-Instanz abgerufen werden.
+
+<span data-ttu-id="1148f-158">Im **WaitForInput**-Zustand beendet das Spiel die Verarbeitung von fast allen Eingabeereignissen, bis der Controller wieder in den **Active**-Zustand übergeht.</span><span class="sxs-lookup"><span data-stu-id="1148f-158">Once in the **WaitForInput** state, the game stops processing almost all gameplay input events until it returns to the **Active** state.</span></span> <span data-ttu-id="1148f-159">Eine Ausnahme ist die Pause-Taste, da durch Drücken der Taste das Spiel zum aktiven Zustand zurückkehret.</span><span class="sxs-lookup"><span data-stu-id="1148f-159">The exception is the pause button, with a press of this causing the game to go back to the active state.</span></span> <span data-ttu-id="1148f-160">Außer der Pause-Taste muss der Spieler keine andere Taste drücken, um wieder zum **aktiven** Zustand des Spieles für die Auswahl eines Menüelement zu gelangen.</span><span class="sxs-lookup"><span data-stu-id="1148f-160">Other than the pause button, in order for the game to go back to the the **Active** state the player needs to select a menu item.</span></span> 
+
+
+
+### <a name="the-active-state"></a><span data-ttu-id="1148f-161">Der aktive Zustand</span><span class="sxs-lookup"><span data-stu-id="1148f-161">The Active state</span></span>
+
+<span data-ttu-id="1148f-162">Im **aktiven** Zustand verarbeitet die **MoveLookController**-Instanz Eingabeereignisse von allen aktivierten Eingabegeräten und interpretiert die Absichten des Spielers.</span><span class="sxs-lookup"><span data-stu-id="1148f-162">During the **Active** state, the **MoveLookController** instance is processing events from all enabled input devices and interpreting the player's intentions.</span></span> <span data-ttu-id="1148f-163">Dadurch aktualisiert sie die Geschwindigkeit und Blickrichtung der Spieleransicht und gibt die aktualisierten Daten an das Spiel weiter, nachdem **Update** in der Spielschleife aufgerufen wurde.</span><span class="sxs-lookup"><span data-stu-id="1148f-163">As a result, it updates the velocity and look direction of the player's view and shares the updated data with the game after **Update** is called from the game loop.</span></span>
+
+
+<span data-ttu-id="1148f-164">Mauseingaben werden im Zustand **Active** mit verschiedenen Zeiger-IDs für die unterschiedlichen Zeigeraktionen nachverfolgt.</span><span class="sxs-lookup"><span data-stu-id="1148f-164">All pointer input is tracked in the **Active** state, with different pointer IDs corresponding to different pointer actions.</span></span>
+<span data-ttu-id="1148f-165">Wenn ein [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278)-Ereignis empfangen wird, ruft die **MoveLookController**-Instanz den vom Fenster erstellten Wert der Zeiger-ID ab.</span><span class="sxs-lookup"><span data-stu-id="1148f-165">When a [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278) event is received, the **MoveLookController** obtains the pointer ID value created by the window.</span></span> <span data-ttu-id="1148f-166">Die Zeiger-ID stellt einen bestimmten Eingabetyp dar.</span><span class="sxs-lookup"><span data-stu-id="1148f-166">The pointer ID represents a specific type of input.</span></span> <span data-ttu-id="1148f-167">Bei einem Multitouchgerät sind etwa gleichzeitig mehrere unterschiedliche aktive Eingaben möglich.</span><span class="sxs-lookup"><span data-stu-id="1148f-167">For example, on a multi-touch device, there may be several different active inputs at the same time.</span></span> <span data-ttu-id="1148f-168">Die IDs werden verwendet, um den vom Spieler verwendeten Eingabetyp nachzuverfolgen.</span><span class="sxs-lookup"><span data-stu-id="1148f-168">The IDs are used to keep track of which input the player is using.</span></span> <span data-ttu-id="1148f-169">Wenn ein Ereignis im Bewegungsrechteck des Touchscreens stattfindet, wird eine Zeiger-ID zugewiesen, um alle Zeigerereignisse im Bewegungsrechteck nachzuverfolgen.</span><span class="sxs-lookup"><span data-stu-id="1148f-169">If one event is in the move rectangle of the touch screen, a pointer ID is assigned to track any pointer events in the move rectangle.</span></span> <span data-ttu-id="1148f-170">Andere Zeigerereignisse im Schießrechteck werden separat mit einer anderen Zeiger-ID nachverfolgt.</span><span class="sxs-lookup"><span data-stu-id="1148f-170">Other pointer events in the fire rectangle are tracked separately, with a separate pointer ID.</span></span>
+
+
+> [!NOTE]
+> <span data-ttu-id="1148f-171">Eingaben von Maus und dem rechten Ministick auf einem Gamepad verfügen auch über die IDs, die separat behandelt werden.</span><span class="sxs-lookup"><span data-stu-id="1148f-171">Input from the mouse and right thumbstick of a gamepad also have IDs that are handled separately.</span></span>
+
+<span data-ttu-id="1148f-172">Nachdem die Zeigerereignisse einer bestimmten Spielaktion zugeordnet wurden, müssen die Daten aktualisiert werden, die das **MoveLookController**-Objekt an die Hauptspielschleife weitergibt.</span><span class="sxs-lookup"><span data-stu-id="1148f-172">After the pointer events have been mapped to a specific game action, it's time to update the data the **MoveLookController** object shares with the main game loop.</span></span>
+
+<span data-ttu-id="1148f-173">Wenn die [**Update**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L1005-L1096)-Methode im Beispielspiel aufgerufen wird, verarbeitet sie die Daten und aktualisiert die Geschwindigkeits- und Blickrichtungsvariablen (**m\_velocity** and **m\_lookdirection**), die dann von der Spielschleife durch Aufrufen der öffentlichen Methoden [**Velocity**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L906-L909) und [**LookDirection**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L913-L923)-Methode abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="1148f-173">When called, the [**Update**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L1005-L1096) method in the game sample processes the input and updates the velocity and look direction variables (**m\_velocity** and **m\_lookdirection**), which the game loop then retrieves by calling the public [**Velocity**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L906-L909) and [**LookDirection**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L913-L923) methods.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="1148f-174">Weitere Informationen zur [**Update**](#the-update-method)-Methode finden Sie später auf dieser Seite.</span><span class="sxs-lookup"><span data-stu-id="1148f-174">More details about the [**Update**](#the-update-method) method can be seen later on this page.</span></span>
+
+
+
+
+<span data-ttu-id="1148f-175">Die Spielschleife kann prüfen, ob der Spieler schießt, indem sie die **IsFiring**-Methode der **MoveLookController**-Instanz aufruft.</span><span class="sxs-lookup"><span data-stu-id="1148f-175">The game loop can test to see if the player is firing by calling the **IsFiring** method on the **MoveLookController** instance.</span></span> <span data-ttu-id="1148f-176">Die **MoveLookController**-Instanz überprüft, ob der Spieler über einen der drei Eingabetypen die Schießtaste betätigt hat.</span><span class="sxs-lookup"><span data-stu-id="1148f-176">The **MoveLookController** checks to see if the player has pressed the fire button on one of the three input types.</span></span>
+
+```cpp
+bool MoveLookController::IsFiring()
+{
+    if (m_state == MoveLookControllerState::Active)
+    {
+        if (m_autoFire)
+        {
+            return (m_fireInUse || (m_mouseInUse && m_mouseLeftInUse) || PollingFireInUse());
+        }
+        else
+        {
+            if (m_firePressed)
+            {
+                m_firePressed = false;
+                return true;
+            }
+        }
+    }
+    return false;
+}
+```
+
+
+
+
+
+
+
+
+
+<span data-ttu-id="1148f-177">Jetzt wollen wir uns etwas ausführlicher mit der Implementierung der drei Steuerungstypen beschäftigen.</span><span class="sxs-lookup"><span data-stu-id="1148f-177">Now, let's look at the implementation of each of the three control types in a little more detail.</span></span>
+
+## <a name="adding-relative-mouse-controls"></a><span data-ttu-id="1148f-178">Hinzufügen relativer Maussteuerungen</span><span class="sxs-lookup"><span data-stu-id="1148f-178">Adding relative mouse controls</span></span>
+
+
+<span data-ttu-id="1148f-179">Wenn Mausbewegungen erkannt werden, sollen diese Bewegungen zum Ermitteln des neuen Neigungs- und Schwenkwinkels der Kamera verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="1148f-179">If mouse movement is detected, we want to use that movement to determine the new pitch and yaw of the camera.</span></span> <span data-ttu-id="1148f-180">Hierzu implementieren wir relative Maussteuerungen, bei denen nicht die absoluten x-y-Pixelkoordinaten der Bewegung aufgezeichnet werden, sondern die relative Distanz der Mausbewegung (also das Delta zwischen Start und Ende der Bewegung) erfasst wird.</span><span class="sxs-lookup"><span data-stu-id="1148f-180">We do that by implementing relative mouse controls, where we handle the relative distance the mouse has moved—the delta between the start of the movement and the stop—as opposed to recording the absolute x-y pixel coordinates of the motion.</span></span>
+
+<span data-ttu-id="1148f-181">Dazu ermitteln wir die Änderung der X-Koordinate (horizontale Bewegung) und der Y-Koordinate (vertikale Bewegung), indem wir die Felder [**MouseDelta::X**](https://msdn.microsoft.com/library/windows/apps/hh758353) und **MouseDelta::Y** für das vom [**MouseMoved**](https://msdn.microsoft.com/library/windows/apps/hh758356)-Ereignis zurückgegebene [**Windows::Device::Input::MouseEventArgs::MouseDelta**](https://msdn.microsoft.com/library/windows/apps/hh758358)-Argumentobjekt überprüfen.</span><span class="sxs-lookup"><span data-stu-id="1148f-181">To do that, we obtain the changes in the X (the horizontal motion) and the Y (the vertical motion) coordinates by examining the [**MouseDelta::X**](https://msdn.microsoft.com/library/windows/apps/hh758353) and **MouseDelta::Y** fields on the [**Windows::Device::Input::MouseEventArgs::MouseDelta**](https://msdn.microsoft.com/library/windows/apps/hh758358) argument object returned by the [**MouseMoved**](https://msdn.microsoft.com/library/windows/apps/hh758356) event.</span></span>
+
+```cpp
+void MoveLookController::OnMouseMoved(
+    _In_ MouseDevice^ /* mouseDevice */,
+    _In_ MouseEventArgs^ args
+    )
+{
+    // Handle Mouse Input via dedicated relative movement handler.
+
+    switch (m_state)
+    {
+    case MoveLookControllerState::Active:
+        XMFLOAT2 mouseDelta;
+        mouseDelta.x = static_cast<float>(args->MouseDelta.X);
+        mouseDelta.y = static_cast<float>(args->MouseDelta.Y);
+
+        XMFLOAT2 rotationDelta;
+        rotationDelta.x  = mouseDelta.x * MoveLookConstants::RotationGain;   // scale for control sensitivity
+        rotationDelta.y  = mouseDelta.y * MoveLookConstants::RotationGain;
+
+        // Update our orientation based on the command.
+        m_pitch -= rotationDelta.y;
+        m_yaw   += rotationDelta.x;
+
+        // Limit pitch to straight up or straight down.
+        float limit = XM_PI / 2.0f - 0.01f;
+        m_pitch = __max(-limit, m_pitch);
+        m_pitch = __min(+limit, m_pitch);
+
+        // Keep longitude in same range by wrapping.
+        if (m_yaw >  XM_PI)
+        {
+            m_yaw -= XM_PI * 2.0f;
+        }
+        else if (m_yaw < -XM_PI)
+        {
+            m_yaw += XM_PI * 2.0f;
+        }
+        break;
+    }
+}
+```
+
+## <a name="adding-touch-support"></a><span data-ttu-id="1148f-182">Hinzufügen der Toucheingabeunterstützung</span><span class="sxs-lookup"><span data-stu-id="1148f-182">Adding touch support</span></span>
+
+<span data-ttu-id="1148f-183">Toucheingabesteuerungen sind ideal für Benutzer mit Tablets.</span><span class="sxs-lookup"><span data-stu-id="1148f-183">Touch controls are great for supporting users with tablets.</span></span> <span data-ttu-id="1148f-184">Dieses Spiel sammelt Toucheingaben durch die Zonenzuweisung bestimmter Bereiche des Bildschirms mit jeder Ausrichtung für bestimmte in-Spieleaktionen.</span><span class="sxs-lookup"><span data-stu-id="1148f-184">This game gathers touch input by zoning off certain areas of the screen with each aligning to specific in-game actions.</span></span>
+<span data-ttu-id="1148f-185">Die Toucheingabe des Spiels verwendet drei Zonen.</span><span class="sxs-lookup"><span data-stu-id="1148f-185">This game's touch input uses three zones.</span></span>
+
+![Bewegung Ansicht Toucheingabe - Layout](images/simple-dx-game-controls-touchzones.png)
+
+<span data-ttu-id="1148f-187">Die folgenden Befehle fassen unser Verhalten für die Toucheingabesteuerelement zusammen.</span><span class="sxs-lookup"><span data-stu-id="1148f-187">The following commands summarize our touch control behavior.</span></span>
+<span data-ttu-id="1148f-188">Benutzereingabe</span><span class="sxs-lookup"><span data-stu-id="1148f-188">User input</span></span> | <span data-ttu-id="1148f-189">Aktion</span><span class="sxs-lookup"><span data-stu-id="1148f-189">Action</span></span>
+:------- | :--------
+<span data-ttu-id="1148f-190">Bewegungsrechteck</span><span class="sxs-lookup"><span data-stu-id="1148f-190">Move rectangle</span></span> | <span data-ttu-id="1148f-191">Die Toucheingabe wird in einen virtuellen Joystick konvertiert, in dem die vertikale Bewegung in die Bewegung zur Vorwärts- und Rückwärtsbewegung übersetzt wird und die horizontale Bewegung in Bewegungen nach links/rechts übersetzt werden.</span><span class="sxs-lookup"><span data-stu-id="1148f-191">Touch input is converted into a virtual joystick where the vertical motion will be translated into forward/backward position motion and horizontal motion will be translated into left/right position motion.</span></span>
+<span data-ttu-id="1148f-192">Schießrechtecke</span><span class="sxs-lookup"><span data-stu-id="1148f-192">Fire rectangle</span></span> | <span data-ttu-id="1148f-193">Mit der Maustaste schießen</span><span class="sxs-lookup"><span data-stu-id="1148f-193">Fire a sphere.</span></span>
+<span data-ttu-id="1148f-194">Touch außerhalb der Bewegungs- und Schießrechtecke</span><span class="sxs-lookup"><span data-stu-id="1148f-194">Touch outside of move and fire rectangle</span></span> | <span data-ttu-id="1148f-195">Ändern Sie die Drehung (Neigungs- und Schwenkwinkel) der Kameraansicht.</span><span class="sxs-lookup"><span data-stu-id="1148f-195">Change the rotation (the pitch and yaw) of the camera view.</span></span>
+
+<span data-ttu-id="1148f-196">Die **MoveLookController**-Instanz überprüft anhand der Zeiger-ID, wo das Ereignis aufgetreten ist, und führt eine der folgenden Aktionen aus:</span><span class="sxs-lookup"><span data-stu-id="1148f-196">The **MoveLookController** checks the pointer ID to determine where the event occurred, and takes one of the following actions:</span></span>
+
+-   <span data-ttu-id="1148f-197">Wenn das [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276)-Ereignis im Bewegungs- oder Schießrechteck aufgetreten ist, wird die Zeigerposition für den Controller aktualisiert.</span><span class="sxs-lookup"><span data-stu-id="1148f-197">If the [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276) event occurred in the move or fire rectangle, update the pointer position for the controller.</span></span>
+-   <span data-ttu-id="1148f-198">Wenn das [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276)-Ereignis an einer anderen Stelle des Bildschirms (definiert als Blicksteuerung) aufgetreten ist, werden die Änderungen des Nick- und Gierwinkels des Blickrichtungsvektors berechnet.</span><span class="sxs-lookup"><span data-stu-id="1148f-198">If the [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276) event occurred somewhere in the rest of the screen (defined as the look controls), calculate the change in pitch and yaw of the look direction vector.</span></span>
+
+
+<span data-ttu-id="1148f-199">Nachdem wir unsere Toucheingabesteuerungen implementiert haben, werden die Rechtecke, die wir zuvor mithilfe von Direct2D gezeichnet haben dem Spieler anzeigen, wo er sich in den Bereichen bewegen, schießen und hinsehen soll.</span><span class="sxs-lookup"><span data-stu-id="1148f-199">Once we've implemented our touch controls, the rectangles we drew earlier using Direct2D will indicate to players where the move, fire, and look zones are.</span></span>
+
+
+![Toucheingabesteuerungen](images/simple-dx-game-controls-showzones.png)
+
+
+<span data-ttu-id="1148f-201">Sehen wir uns an, wie jedes Steuerelement implementiert wird.</span><span class="sxs-lookup"><span data-stu-id="1148f-201">Now let's take a look at how we implement each control.</span></span>
+
+
+### <a name="move-and-fire-controller"></a><span data-ttu-id="1148f-202">Bewegungs- und Schieß-Controller</span><span class="sxs-lookup"><span data-stu-id="1148f-202">Move and fire controller</span></span>
+<span data-ttu-id="1148f-203">Das Bewegungsrechteck des Controllers im unteren linken Quadranten des Bildschirms wird als Steuerkreuz verwendet.</span><span class="sxs-lookup"><span data-stu-id="1148f-203">The move controller rectangle in the lower left quadrant of the screen is used as a directional pad.</span></span> <span data-ttu-id="1148f-204">Wenn Sie den Daumen nach links und rechts auf dieser Fläche bewegen, wird der Spieler nach links und rechts bewegt, und eine Bewegung nach oben oder unten bewegt die Kamera vorwärts und rückwärts.</span><span class="sxs-lookup"><span data-stu-id="1148f-204">Sliding your thumb left and right within this space moves the player left and right, while up and down moves the camera forward and backward.</span></span>
+<span data-ttu-id="1148f-205">Nach dem Einrichten wird durch das Tippen auf den Schieß-Controller im unteren rechten Quadrant des Bildschirms geschossen.</span><span class="sxs-lookup"><span data-stu-id="1148f-205">After setting this up, tapping the fire controller in the lower right quadrant of the screen fires a sphere.</span></span>
+
+<span data-ttu-id="1148f-206">Mit den [**SetMoveRect**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L843-L853) und [**SetFireRect**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L857-L867)-Methoden werden die Eingaberechtecke mit zwei Methoden erstellt, indem zwei 2D-Vektoren an jedem Rechtecke oben links und unten rechts unten auf dem Bildschirm positioniert werden.</span><span class="sxs-lookup"><span data-stu-id="1148f-206">The [**SetMoveRect**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L843-L853) and [**SetFireRect**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L857-L867) methods create our input rectangles, taking two, 2D vectors to specify each rectangles' upper left and lower right corner positions on the screen.</span></span> 
+
+
+<span data-ttu-id="1148f-207">Die Parameter werden dann auf **m\_fireUpperLeft** und **m\_fireLowerRight** zugewiesen, was uns hilft, zu bestimmen, ob der Benutzer innerhalb der Rechtecke ist.</span><span class="sxs-lookup"><span data-stu-id="1148f-207">The parameters are then assigned to **m\_fireUpperLeft** and **m\_fireLowerRight** that will help us determine if the user is touching within on of the rectangles.</span></span> 
+```cpp
+m_fireUpperLeft  = upperLeft;
+m_fireLowerRight = lowerRight;
+```
+
+<span data-ttu-id="1148f-208">Wenn die Bildschirmgröße geändert wird, werden die Rechtecke neu auf die Größe angepasst.</span><span class="sxs-lookup"><span data-stu-id="1148f-208">If the screen is resized, these rectangles are redrawn to the approperiate size.</span></span>
+
+
+<span data-ttu-id="1148f-209">Nun, da wir unsere Steuerelemente in Zonen haben, ist es Zeit zu bestimmen, ob ein Benutzer diese tatsächlich verwendet.</span><span class="sxs-lookup"><span data-stu-id="1148f-209">Now that we've zoned off our controls, it's time to determine when a user is actually using them.</span></span>
+<span data-ttu-id="1148f-210">Hierzu legen wir einige Ereignishandler in der **MoveLookController::InitWindow**-Methode fest, wenn der Benutzer den Mauszeiger drückt, verschiebt oder freigibt.</span><span class="sxs-lookup"><span data-stu-id="1148f-210">To do this, we set up some event handlers in the **MoveLookController::InitWindow** method for when the user presses, moves, or releases their pointer.</span></span>
+
+```cpp
+window->PointerPressed +=
+    ref new TypedEventHandler<CoreWindow^, PointerEventArgs^>(this, &MoveLookController::OnPointerPressed);
+
+window->PointerMoved +=
+    ref new TypedEventHandler<CoreWindow^, PointerEventArgs^>(this, &MoveLookController::OnPointerMoved);
+
+window->PointerReleased +=
+    ref new TypedEventHandler<CoreWindow^, PointerEventArgs^>(this, &MoveLookController::OnPointerReleased);
+```
+
+
+<span data-ttu-id="1148f-211">Wir ermitteln, was geschieht, wenn der Benutzer zunächst auf die Bewegungs- oder Schießrechtecke drückt, mithilfe der [**OnPointerPressed**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L179-L313)-Methode.</span><span class="sxs-lookup"><span data-stu-id="1148f-211">We'll first determine what happens when the user first presses within the move or fire rectangles using the [**OnPointerPressed**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L179-L313) method.</span></span>
+<span data-ttu-id="1148f-212">Hier überprüfen wir, wo ein Steuerelement berührt wird und ob ein Zeiger bereits in diesem Controller vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="1148f-212">Here we check where they're touching a control and if a pointer is already in that controller.</span></span> <span data-ttu-id="1148f-213">Wenn dies der erste Finger ist. der das spezifische Steuerelement berührt, gehen wir wie folgt vor.</span><span class="sxs-lookup"><span data-stu-id="1148f-213">If this is the first finger to touch the specific control, we do the following.</span></span>
+- <span data-ttu-id="1148f-214">Speichern Sie den Ort des Bereichs in **m\_moveFirstDown** oder **m\_fireFirstDown** als 2D-Vektor.</span><span class="sxs-lookup"><span data-stu-id="1148f-214">Store the location of the touchdown in **m\_moveFirstDown** or **m\_fireFirstDown** as a 2D vector.</span></span>
+- <span data-ttu-id="1148f-215">Weisen Sie die Zeiger-ID **m\_movePointerID** oder **m\_firePointerID**.</span><span class="sxs-lookup"><span data-stu-id="1148f-215">Assign the pointer ID to **m\_movePointerID** or **m\_firePointerID**.</span></span>
+- <span data-ttu-id="1148f-216">Legen Sie das richtige **InUse**-Kennzeichen (**m\_moveInUse** oder **m\_fireInUse**) auf `true` fest, da wir nun einen aktiven Zeiger für das Steuerelement haben.</span><span class="sxs-lookup"><span data-stu-id="1148f-216">Set the proper **InUse** flag (**m\_moveInUse** or **m\_fireInUse**) to `true` since we now have an active pointer for that control.</span></span>
+
+
+```cpp
+    PointerPoint^ point = args->CurrentPoint;
+    uint32 pointerID = point->PointerId;
+    Point pointerPosition = point->Position;
+    PointerPointProperties^ pointProperties = point->Properties;
+    auto pointerDevice = point->PointerDevice;
+    auto pointerDeviceType = pointerDevice->PointerDeviceType;
+
+    XMFLOAT2 position = XMFLOAT2(pointerPosition.X, pointerPosition.Y);
+
+    case MoveLookControllerState::Active:
+        switch (pointerDeviceType)
+        {
+        case Windows::Devices::Input::PointerDeviceType::Touch:
+            // Check to see if this pointer is in the move control.
+            if (position.x > m_moveUpperLeft.x &&
+                position.x < m_moveLowerRight.x &&
+                position.y > m_moveUpperLeft.y &&
+                position.y < m_moveLowerRight.y)
+            {
+                if (!m_moveInUse)         // If no pointer is in this control yet:
+                {
+                    // Process a DPad touch down event.
+                    m_moveFirstDown = position;                 // Save the location of the initial contact
+                    m_movePointerID = pointerID;                // Store the pointer using this control
+                    m_moveInUse = true;                         // Set InUse flag to signal there is an active move pointer
+                }
+            }
+            // Check to see if this pointer is in the fire control.
+            else if (position.x > m_fireUpperLeft.x &&
+                position.x < m_fireLowerRight.x &&
+                position.y > m_fireUpperLeft.y &&
+                position.y < m_fireLowerRight.y)
+            {
+                if (!m_fireInUse)
+                {
+                    m_fireLastPoint = position;     // Save the location of the initial contact
+                    m_firePointerID = pointerID;    // Store the pointer using this control
+                    m_fireInUse = true;             // Set InUse flag to signal there is an active fire pointer
+                }
+            }
+            ...
+```
+
+
+<span data-ttu-id="1148f-217">Nachdem wir ermittelt haben, ob der Benutzer ein Steuerelement verschiebt oder schießt, sehen wir, ob der Spieler alle Bewegungen mit dem Finger macht.</span><span class="sxs-lookup"><span data-stu-id="1148f-217">Now that we've determined whether the user is touching a move or fire control, we see if the player is making any movements with their pressed finger.</span></span>
+<span data-ttu-id="1148f-218">Mithilfe der [**MoveLookController::OnPointerMoved**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L317-L395)-Methode überprüfen wir, welche Zeiger verschoben wurden, und speichern dann die neue Position als 2D-Vektor.</span><span class="sxs-lookup"><span data-stu-id="1148f-218">Using the [**MoveLookController::OnPointerMoved**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L317-L395) method, we check what pointer has moved and then store its new position as a 2D vector.</span></span>  
+
+
+```cpp
+    PointerPoint^ point = args->CurrentPoint;
+    uint32 pointerID = point->PointerId;
+    Point pointerPosition = point->Position;
+    PointerPointProperties^ pointProperties = point->Properties;
+    auto pointerDevice = point->PointerDevice;
+
+    XMFLOAT2 position = XMFLOAT2(pointerPosition.X, pointerPosition.Y);     // convert to allow math
+    
+    switch (m_state)
+    {
+    case MoveLookControllerState::Active:
+        // Decide which control this pointer is operating.
+        
+        // Move control
+        if (pointerID == m_movePointerID)
+        {
+            m_movePointerPosition = position;       // Save the current position.
+        }
+        // Look control
+        else if (pointerID == m_lookPointerID)
+        {
+            // ...
+        }
+        // Fire control
+        else if (pointerID == m_firePointerID)
+        {
+            m_fireLastPoint = position;
+        }
+```
+
+
+<span data-ttu-id="1148f-219">Nachdem der Benutzer seine Gesten in den Steuerelementen vorgenommen hat, lassen sie den Zeiger los.</span><span class="sxs-lookup"><span data-stu-id="1148f-219">Once the user has made their gestures within the controls, they'll release the pointer.</span></span> <span data-ttu-id="1148f-220">Mithilfe der [**MoveLookController::OnPointerReleased**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L441-L500)-Methode ermitteln wir, welche Zeiger freigegeben wurden und führen eine Reihe von Zurücksetzungen durch.</span><span class="sxs-lookup"><span data-stu-id="1148f-220">Using the [**MoveLookController::OnPointerReleased**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L441-L500) method, we determine which pointer has been released and do a series of resets.</span></span>
+
+
+<span data-ttu-id="1148f-221">Wenn das Steuerelement freigegeben wurde, gehen wir wie folgt vor.</span><span class="sxs-lookup"><span data-stu-id="1148f-221">If the move control has been released, we do the following.</span></span>
+- <span data-ttu-id="1148f-222">Legen Sie die Geschwindigkeit des Players auf `0` in alle Richtungen fest, um zu verhindern, dass Sie im Spiel verschoben werden.</span><span class="sxs-lookup"><span data-stu-id="1148f-222">Set the velocity of the player to `0` in all directions to prevent them from moving in the game.</span></span>
+- <span data-ttu-id="1148f-223">Legen Sie **m\_moveInUse** auf `false` fest, da der Benutzer den Bewegungscontrollers nicht mehr berührt.</span><span class="sxs-lookup"><span data-stu-id="1148f-223">Switch **m\_moveInUse** to `false` since the user is no longer touching the move controller.</span></span>
+- <span data-ttu-id="1148f-224">Legen Sie die Bewegungszeiger-ID auf `0` fest, da der Bewegungscontroller keinen Zeiger mehr hat.</span><span class="sxs-lookup"><span data-stu-id="1148f-224">Set the move pointer ID to `0` since there's no longer a pointer in the move controller.</span></span>
+
+```cpp
+       if (pointerID == m_movePointerID)
+        {
+            m_velocity = XMFLOAT3(0, 0, 0);      // Stop on release.
+            m_moveInUse = false;
+            m_movePointerID = 0;
+        }
+```
+
+
+<span data-ttu-id="1148f-225">Wenn das Schießsteuerelement ausgelöst wird, legen wir lediglich die **M_fireInUse**-Kennzeichnung auf `false` fest und die Schießzeiger-ID auf `0`, da im Schießsteuerelement kein Zeiger mehr vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="1148f-225">For the fire control, if it has been released all we do is switch the **m_fireInUse** flag to `false` and the fire pointer ID to `0` since there's no longer a pointer in the fire control.</span></span>
+```cpp
+        else if (pointerID == m_firePointerID)
+        {
+            m_fireInUse = false;
+            m_firePointerID = 0;
+        }
+```
+
+### <a name="look-controller"></a><span data-ttu-id="1148f-226">Blickrichtungscontroller</span><span class="sxs-lookup"><span data-stu-id="1148f-226">Look controller</span></span>
+<span data-ttu-id="1148f-227">Zeigerereignisse von Fingereingabegeräten für die offene Bildschirmbereiche werden als Blickrichtungscontroller behandelt.</span><span class="sxs-lookup"><span data-stu-id="1148f-227">We treat touch device pointer events for the unused regions of the screen as the look controller.</span></span> <span data-ttu-id="1148f-228">Das Bewegen Ihrer Finger über diese Zone ändert den Neigungswinkel und Schwenkwinkel (Drehung) der Spieler-Kamera.</span><span class="sxs-lookup"><span data-stu-id="1148f-228">Sliding your finger around this zone changes the pitch and yaw (rotation) of the player camera.</span></span>
+
+
+<span data-ttu-id="1148f-229">Wird in einem dieser Bereiche ein **MoveLookController::OnPointerPressed**-Ereignis von einem Toucheingabegerät ausgelöst, während sich das Spiel im Zustand **Active** befindet, wird ihm wie zuvor erläutert eine Zeiger-ID zugewiesen.</span><span class="sxs-lookup"><span data-stu-id="1148f-229">If the **MoveLookController::OnPointerPressed** event is raised on a touch device in this region and the game state is set to **Active**, it's assigned a pointer ID.</span></span>
+
+```cpp
+    if (!m_lookInUse)   // If no pointer is in this control yet:
+    {
+        m_lookLastPoint = position;                   // Save the pointer for a later move.
+        m_lookPointerID = pointerID;                  // Store the pointer using this control.
+        m_lookLastDelta.x = m_lookLastDelta.y = 0;    // These are for smoothing.
+        m_lookInUse = true;
+    }
+```
+<span data-ttu-id="1148f-230">Sehen Sie den vollständigen Code für die **MoveLookController::OnPointerPressed**-Methode auf [GitHub](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L252-L259).</span><span class="sxs-lookup"><span data-stu-id="1148f-230">You can see the complete code for the **MoveLookController::OnPointerPressed** method on [GitHub](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L252-L259).</span></span>
+
+
+
+
+<span data-ttu-id="1148f-231">Hier weist **MoveLookController** die Zeiger-ID für den Zeiger zu, der das Ereignis für eine bestimmte Variable ausgelöst hat, die dem Blickbereich entspricht.</span><span class="sxs-lookup"><span data-stu-id="1148f-231">Here the **MoveLookController** assigns the pointer ID for the pointer that fired the event to a specific variable that corresponds to the look region.</span></span> <span data-ttu-id="1148f-232">Bei einem Touchereignis im Blickwinkelbereich wird z.B. die **m\_lookPointerID**-Variable auf die Zeiger-ID festgelegt, von der das Ereignis ausgelöst wurde.</span><span class="sxs-lookup"><span data-stu-id="1148f-232">In the case of a touch occuring in the look region, the **m\_lookPointerID** variable is set to the pointer ID that fired the event.</span></span> <span data-ttu-id="1148f-233">Außerdem wird die boolesche Verwendungsvariable **m\_lookInUse** festgelegt, um anzugeben, dass die Steuerung noch nicht freigegeben wurde.</span><span class="sxs-lookup"><span data-stu-id="1148f-233">A boolean variable, **m\_lookInUse**, is also set to indicate that the control has not yet been released.</span></span>
+
+<span data-ttu-id="1148f-234">Im nächsten Schritt erfahren Sie, wie das Beispielspiel das [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276)-Touchscreenereignis behandelt.</span><span class="sxs-lookup"><span data-stu-id="1148f-234">Now, let's look at how the game sample handles the [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276) touch screen event.</span></span>
+
+
+<span data-ttu-id="1148f-235">In der **MoveLookController::OnPointerMoved**-Methode überprüfen wir, welche Art von Zeiger-ID dem Ereignis zugewiesen wurde.</span><span class="sxs-lookup"><span data-stu-id="1148f-235">Within the **MoveLookController::OnPointerMoved** method, we check to see what kind of pointer ID has been assigned to the event.</span></span> <span data-ttu-id="1148f-236">Ist es **m_lookPointerID**, berechnen wir die Änderung an der Position des Zeigers.</span><span class="sxs-lookup"><span data-stu-id="1148f-236">If it's **m_lookPointerID**, we calculate the change in position of the pointer.</span></span>
+<span data-ttu-id="1148f-237">Wir verwenden dann Deltas, um zu berechnen, wie die Drehung geändert werden muss.</span><span class="sxs-lookup"><span data-stu-id="1148f-237">We then use this delta to calculate how much the rotation should change.</span></span> <span data-ttu-id="1148f-238">Schließlich können wir **m\_pitch** und **m\_yaw** im Spiel aktualisieren, um im Spiel die Player-Drehung zu ändern.</span><span class="sxs-lookup"><span data-stu-id="1148f-238">Finally we're at a point where we can update the **m\_pitch** and **m\_yaw** to be used in the game to change the player rotation.</span></span> 
+
+```cpp
+    else if (pointerID == m_lookPointerID)     // This is the look pointer.
+    {
+        // Look control
+        XMFLOAT2 pointerDelta;
+        pointerDelta.x = position.x - m_lookLastPoint.x;        // How far did the pointer move.
+        pointerDelta.y = position.y - m_lookLastPoint.y;
+
+        XMFLOAT2 rotationDelta;
+        rotationDelta.x = pointerDelta.x * MoveLookConstants::RotationGain;       // Scale for control sensitivity.
+        rotationDelta.y = pointerDelta.y * MoveLookConstants::RotationGain;
+        m_lookLastPoint = position;                             // Save for the next time through.
+
+        // Update our orientation based on the command.
+        m_pitch -= rotationDelta.y;
+        m_yaw   += rotationDelta.x;
+
+        // Limit pitch to straight up or straight down.
+        float limit = XM_PI / 2.0f - 0.01f;
+        m_pitch = __max(-limit, m_pitch);
+        m_pitch = __min(+limit, m_pitch);M_PI / 2.0f, m_pitch);
+        }
+```
+
+
+
+
+
+<span data-ttu-id="1148f-239">Zum Schluss sehen wir uns an, wie das Beispielspiel das [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279)-Touchscreenereignis behandelt.</span><span class="sxs-lookup"><span data-stu-id="1148f-239">The last piece we'll look at is how the game sample handles the [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279) touch screen event.</span></span>
+<span data-ttu-id="1148f-240">Nachdem der Benutzer die Geste abgeschlossen und den Finger vom Bildschirm entfernt hat, wird [**MoveLookController::OnPointerReleased**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L441-L500) initiiert.</span><span class="sxs-lookup"><span data-stu-id="1148f-240">Once the user has finished the touch gesture and removed their finger from the screen, [**MoveLookController::OnPointerReleased**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L441-L500) is initiated.</span></span>
+<span data-ttu-id="1148f-241">Wenn die ID des Zeigers, von dem das [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279)-Ereignis ausgelöst wurde, die ID des zuvor erfassten Mauszeigers ist, legt die **MoveLookController**-Instanz die Geschwindigkeit auf `0` fest, da der Spieler den Blickbereich nicht mehr berührt.</span><span class="sxs-lookup"><span data-stu-id="1148f-241">If the ID of the pointer that fired the [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279) event is the ID of the previously recorded move pointer, the **MoveLookController** sets the velocity to `0` because the player has stopped touching the look area.</span></span>
+
+```cpp
+    else if (pointerID == m_lookPointerID)
+    {
+        m_lookInUse = false;
+        m_lookPointerID = 0;
+    }
+```
+
+
+
+
+
+## <a name="adding-mouse-and-keyboard-support"></a><span data-ttu-id="1148f-242">Hinzufügen von Tastatur- und Mausunterstützung</span><span class="sxs-lookup"><span data-stu-id="1148f-242">Adding mouse and keyboard support</span></span>
+
+
+<span data-ttu-id="1148f-243">Dieses Spiel hat das folgende Steuerelementlayout für Tastatur und Maus.</span><span class="sxs-lookup"><span data-stu-id="1148f-243">This game has the following control layout for keyboard and mouse.</span></span>
+
+<span data-ttu-id="1148f-244">Benutzereingabe</span><span class="sxs-lookup"><span data-stu-id="1148f-244">User input</span></span> | <span data-ttu-id="1148f-245">Aktion</span><span class="sxs-lookup"><span data-stu-id="1148f-245">Action</span></span>
+:------- | :--------
+<span data-ttu-id="1148f-246">W</span><span class="sxs-lookup"><span data-stu-id="1148f-246">W</span></span> | <span data-ttu-id="1148f-247">Spieler vorwärts</span><span class="sxs-lookup"><span data-stu-id="1148f-247">Move player forward</span></span>
+<span data-ttu-id="1148f-248">A</span><span class="sxs-lookup"><span data-stu-id="1148f-248">A</span></span> | <span data-ttu-id="1148f-249">Spieler nach links</span><span class="sxs-lookup"><span data-stu-id="1148f-249">Move player left</span></span>
+<span data-ttu-id="1148f-250">S</span><span class="sxs-lookup"><span data-stu-id="1148f-250">S</span></span> | <span data-ttu-id="1148f-251">Spieler rückwärts</span><span class="sxs-lookup"><span data-stu-id="1148f-251">Move player backward</span></span>
+<span data-ttu-id="1148f-252">D</span><span class="sxs-lookup"><span data-stu-id="1148f-252">D</span></span> | <span data-ttu-id="1148f-253">Spieler nach rechts</span><span class="sxs-lookup"><span data-stu-id="1148f-253">Move player right</span></span>
+<span data-ttu-id="1148f-254">X</span><span class="sxs-lookup"><span data-stu-id="1148f-254">X</span></span> | <span data-ttu-id="1148f-255">Ansicht nach oben</span><span class="sxs-lookup"><span data-stu-id="1148f-255">Move view up</span></span>
+<span data-ttu-id="1148f-256">Leertaste</span><span class="sxs-lookup"><span data-stu-id="1148f-256">Space bar</span></span> | <span data-ttu-id="1148f-257">Ansicht nach unten</span><span class="sxs-lookup"><span data-stu-id="1148f-257">Move view down</span></span>
+<span data-ttu-id="1148f-258">P</span><span class="sxs-lookup"><span data-stu-id="1148f-258">P</span></span> | <span data-ttu-id="1148f-259">Hält das Spiel an</span><span class="sxs-lookup"><span data-stu-id="1148f-259">Pause the game</span></span>
+<span data-ttu-id="1148f-260">Mausbewegung</span><span class="sxs-lookup"><span data-stu-id="1148f-260">Mouse movement</span></span> | <span data-ttu-id="1148f-261">Ändern Sie die Drehung (Neigungs- und Schwenkwinkel) der Kameraansicht</span><span class="sxs-lookup"><span data-stu-id="1148f-261">Change the rotation (the pitch and yaw) of the camera view</span></span>
+<span data-ttu-id="1148f-262">Linke Maustaste</span><span class="sxs-lookup"><span data-stu-id="1148f-262">Left mouse button</span></span> | <span data-ttu-id="1148f-263">Mit der Maustaste schießen</span><span class="sxs-lookup"><span data-stu-id="1148f-263">Fire a sphere</span></span>
+
+
+<span data-ttu-id="1148f-264">Um die Tastatur zu verwenden, registriert das Beispielspiel zwei neue Ereignisse, [**CoreWindow: KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208271) und [**CoreWindow:: KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208270) in der [**MoveLookController::InitWindow**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L84-L88)-Methode.</span><span class="sxs-lookup"><span data-stu-id="1148f-264">To use the keyboard, the game sample registers two new events, [**CoreWindow::KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208271) and [**CoreWindow::KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208270), within the [**MoveLookController::InitWindow**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L84-L88) method.</span></span> <span data-ttu-id="1148f-265">Diese Ereignisse behandeln das Drücken und Loslassen einer Taste.</span><span class="sxs-lookup"><span data-stu-id="1148f-265">These events handle the press and release of a key.</span></span>
+
+```cpp
+window->KeyDown +=
+        ref new TypedEventHandler<CoreWindow^, KeyEventArgs^>(this, &MoveLookController::OnKeyDown);
+
+window->KeyUp +=
+        ref new TypedEventHandler<CoreWindow^, KeyEventArgs^>(this, &MoveLookController::OnKeyUp);
+```
+
+<span data-ttu-id="1148f-266">Die Behandlung der Maus unterscheidet sich etwas von der der Fingereingabesteuerung, obwohl sie einen Zeiger verwendet.</span><span class="sxs-lookup"><span data-stu-id="1148f-266">The mouse is treated a little differently from the touch controls even though it uses a pointer.</span></span> <span data-ttu-id="1148f-267">Um unsere Steuerelementlayout anzupassen, dreht der **MoveLookController** die Kamera, wenn die Maus bewegt wird, und schießt, wenn die linke Maustaste gedrückt wird.</span><span class="sxs-lookup"><span data-stu-id="1148f-267">To align with our control layout, the **MoveLookController** rotates the camera whenever the mouse is moved, and fires when the left mouse button is pressed.</span></span>
+
+
+<span data-ttu-id="1148f-268">Dies erfolgt in der [**OnPointerPressed**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L179-L313)-Methode des **MoveLookController**.</span><span class="sxs-lookup"><span data-stu-id="1148f-268">This is handled in the [**OnPointerPressed**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L179-L313) method of the **MoveLookController**.</span></span>
+
+<span data-ttu-id="1148f-269">In dieser Methode überprüfen wir, welche Art von Zeigegerät verwendet wird durch Verwendung der [`Windows::Devices::Input::PointerDeviceType`](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Input.PointerDeviceType)-Enumeration.</span><span class="sxs-lookup"><span data-stu-id="1148f-269">In this method we check to see what type of pointer device is being used with the [`Windows::Devices::Input::PointerDeviceType`](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Input.PointerDeviceType) enum.</span></span> <span data-ttu-id="1148f-270">Wenn das Spiel **aktiv** ist und **PointerDeviceType** nicht **Touch** ist, ist dies die Mauseingabe.</span><span class="sxs-lookup"><span data-stu-id="1148f-270">If the game is **Active** and the **PointerDeviceType** isn't **Touch**, we assume it's mouse input.</span></span>
+
+```cpp
+    case MoveLookControllerState::Active:
+        switch (pointerDeviceType)
+        {
+        case Windows::Devices::Input::PointerDeviceType::Touch:
+            // Behavior for touch controls
+        
+        default:
+        // Behavior for mouse controls
+            bool rightButton = pointProperties->IsRightButtonPressed;
+            bool leftButton = pointProperties->IsLeftButtonPressed;
+
+            if (!m_autoFire && (!m_mouseLeftInUse && leftButton))
+            {
+                m_firePressed = true;
+            }
+
+            if (!m_mouseInUse)
+            {
+                m_mouseInUse = true;
+                m_mouseLastPoint = position;
+                m_mousePointerID = pointerID;
+                m_mouseLeftInUse = leftButton;
+                m_mouseRightInUse = rightButton;
+                m_lookLastDelta.x = m_lookLastDelta.y = 0;          // These are for smoothing.
+            }
+            break;
+        }
+```
+
+<span data-ttu-id="1148f-271">Wenn der Spieler aufhört, eine der Maustasten zu drücken, wird das [CoreWindow::PointerReleased](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow.PointerReleased)-Mausereignis aufgerufen, indem die [MoveLookController::OnPointerReleased](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L441-L500)-Methode aufgerufen wird. Die Eingabe ist dann abgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="1148f-271">When the player stops pressing one of the mouse buttons, the [CoreWindow::PointerReleased](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow.PointerReleased) mouse event is raised, calling the [MoveLookController::OnPointerReleased](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L441-L500) method, and the input is complete.</span></span> <span data-ttu-id="1148f-272">An diesem Punkt werden keine Kugeln mehr ausgelöst, wenn die linke Maustaste gedrückt und freigegeben wird.</span><span class="sxs-lookup"><span data-stu-id="1148f-272">At this point, spheres will stop firing if the left mouse button was being pressed and is now released.</span></span> <span data-ttu-id="1148f-273">Da die Blicksteuerung immer aktiviert ist, verwendet das Spiel weiter den gleichen Mauszeiger, um die Blickereignisse nachzuverfolgen.</span><span class="sxs-lookup"><span data-stu-id="1148f-273">Because look is always enabled, the game continues to use the same mouse pointer to track the ongoing look events.</span></span>
+
+```cpp
+    case MoveLookControllerState::Active:
+        // Touch points
+        if (pointerID == m_movePointerID)
+        {
+            // Stop movement
+        }
+        else if (pointerID == m_lookPointerID)
+        {
+            // Stop look rotation
+        }
+        // Fire button has been released
+        else if (pointerID == m_firePointerID)
+        {
+            // Stop firing
+        }
+        // Mouse point
+        else if (pointerID == m_mousePointerID)
+        {
+            bool rightButton = pointProperties->IsRightButtonPressed;
+            bool leftButton = pointProperties->IsLeftButtonPressed;
+
+            // Mouse no longer in use so stop firing
+            m_mouseInUse = false;
+
+            // Don't clear the mouse pointer ID so that Move events still result in Look changes.
+            // m_mousePointerID = 0;
+            m_mouseLeftInUse = leftButton;
+            m_mouseRightInUse = rightButton;
+        }
+        break;
+    }
+}
+```
+
+
+
+<span data-ttu-id="1148f-274">Jetzt sehen wir uns den letzten unterstützen Steuerelementtyp an: Gamepads.</span><span class="sxs-lookup"><span data-stu-id="1148f-274">Now let's look at the last control type we'll be supporting: gamepads.</span></span> <span data-ttu-id="1148f-275">Gamepads werden getrennt von den Fingereingabe- und Maussteuerungen behandelt, da sie kein Zeigerobjekt verwenden.</span><span class="sxs-lookup"><span data-stu-id="1148f-275">Gamepads are handled separately from the touch and mouse controls since they doesn't use the pointer object.</span></span> <span data-ttu-id="1148f-276">Aus diesem Grund müssen ein paar neue Ereignishandler und Methoden hinzugefügt werden.</span><span class="sxs-lookup"><span data-stu-id="1148f-276">Because of this, a few new event handlers and methods will need to be added.</span></span>
+
+## <a name="adding-gamepad-support"></a><span data-ttu-id="1148f-277">Hinzufügen von Gamepad-Unterstützung</span><span class="sxs-lookup"><span data-stu-id="1148f-277">Adding gamepad support</span></span>
+
+
+<span data-ttu-id="1148f-278">Für dieses Spiel wird die Gamepad-Unterstützung durch Aufrufen der [Windows.Gaming.Input](https://docs.microsoft.com/uwp/api/windows.gaming.input)-APIs hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="1148f-278">For this game, gamepad support is added by calls to the [Windows.Gaming.Input](https://docs.microsoft.com/uwp/api/windows.gaming.input) APIs.</span></span> <span data-ttu-id="1148f-279">Dieser Satz von APIs bietet Zugriff auf Gamecontrollereingaben, wie Rennlenkräder und Flight-Sticks.</span><span class="sxs-lookup"><span data-stu-id="1148f-279">This set of APIs provides access to game controller inputs like racing wheels and flight sticks.</span></span> 
+
+
+<span data-ttu-id="1148f-280">Hier sind unsere Gamepad-Steuerelemente.</span><span class="sxs-lookup"><span data-stu-id="1148f-280">The following will be our gamepad controls.</span></span>
+
+<span data-ttu-id="1148f-281">Benutzereingabe</span><span class="sxs-lookup"><span data-stu-id="1148f-281">User input</span></span> | <span data-ttu-id="1148f-282">Aktion</span><span class="sxs-lookup"><span data-stu-id="1148f-282">Action</span></span>
+:------- | :--------
+<span data-ttu-id="1148f-283">Linker Joystick</span><span class="sxs-lookup"><span data-stu-id="1148f-283">Left analog stick</span></span> | <span data-ttu-id="1148f-284">Spieler bewegen</span><span class="sxs-lookup"><span data-stu-id="1148f-284">Move player</span></span>
+<span data-ttu-id="1148f-285">Rechter Joystick</span><span class="sxs-lookup"><span data-stu-id="1148f-285">Right analog stick</span></span> | <span data-ttu-id="1148f-286">Ändern Sie die Drehung (Neigungs- und Schwenkwinkel) der Kameraansicht</span><span class="sxs-lookup"><span data-stu-id="1148f-286">Change the rotation (the pitch and yaw) of the camera view</span></span>
+<span data-ttu-id="1148f-287">Rechter Trigger</span><span class="sxs-lookup"><span data-stu-id="1148f-287">Right trigger</span></span> | <span data-ttu-id="1148f-288">Mit der Maustaste schießen</span><span class="sxs-lookup"><span data-stu-id="1148f-288">Fire a sphere</span></span>
+<span data-ttu-id="1148f-289">Ein-/Aus-Menütaste</span><span class="sxs-lookup"><span data-stu-id="1148f-289">Start/Menu button</span></span> | <span data-ttu-id="1148f-290">Anhalten oder Fortsetzen des Spiels</span><span class="sxs-lookup"><span data-stu-id="1148f-290">Pause or resume the game</span></span>
+
+
+
+
+<span data-ttu-id="1148f-291">In der [**InitWindow**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L68-L103)-Methode fügen wir zwei neue Ereignisse hinzu, um festzustellen, ob ein Gamepad [hinzugefügt](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L1100-L1105) oder [entfernt](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L1109-L1114) wurde.</span><span class="sxs-lookup"><span data-stu-id="1148f-291">In the [**InitWindow**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L68-L103) method, we add two new events to determine if a gamepad has been [added](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L1100-L1105) or [removed](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L1109-L1114).</span></span> <span data-ttu-id="1148f-292">Diese Ereignisse aktualisieren die **m_gamepadsChanged**-Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="1148f-292">These events update the **m_gamepadsChanged** property.</span></span> <span data-ttu-id="1148f-293">Dies wird in der **UpdatePollingDevices**-Methode verwendet, um zu überprüfen, ob die Liste der bekannten Gamepads geändert wurde.</span><span class="sxs-lookup"><span data-stu-id="1148f-293">This is used in the **UpdatePollingDevices** method to check if the the list of known gamepads has changed.</span></span> 
+
+```cpp
+    // Detect gamepad connection and disconnection events.
+    Gamepad::GamepadAdded +=
+        ref new EventHandler<Gamepad^>(this, &MoveLookController::OnGamepadAdded);
+
+    Gamepad::GamepadRemoved +=
+        ref new EventHandler<Gamepad^>(this, &MoveLookController::OnGamepadRemoved);
+```
+
+### <a name="the-updatepollingdevices-method"></a><span data-ttu-id="1148f-294">Die UpdatePollingDevices-Methode</span><span class="sxs-lookup"><span data-stu-id="1148f-294">The UpdatePollingDevices method</span></span>
+
+<span data-ttu-id="1148f-295">Die [**UpdatePollingDevices**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L654-L782)-Methode der **MoveLookController**-Instanz sofort überprüft, ob ein Gamepad verbunden ist.</span><span class="sxs-lookup"><span data-stu-id="1148f-295">The [**UpdatePollingDevices**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L654-L782) method of the **MoveLookController** instance immediately checks to see if a gamepad is connected.</span></span> <span data-ttu-id="1148f-296">Wenn ja, beginnen wir den Zustand mit [**Gamepad.GetCurrentReading**](https://docs.microsoft.com/uwp/api/windows.gaming.input.gamepad.GetCurrentReading) zu lesen.</span><span class="sxs-lookup"><span data-stu-id="1148f-296">If one is, we'll start reading its state with [**Gamepad.GetCurrentReading**](https://docs.microsoft.com/uwp/api/windows.gaming.input.gamepad.GetCurrentReading).</span></span> <span data-ttu-id="1148f-297">Dies gibt die [**GamepadReading**](https://docs.microsoft.com/uwp/api/Windows.Gaming.Input.GamepadReading)-Struktur zurück, um zu überprüfen, welche Schaltflächen aktiviert oder Ministicks verschoben wurden.</span><span class="sxs-lookup"><span data-stu-id="1148f-297">This returns the [**GamepadReading**](https://docs.microsoft.com/uwp/api/Windows.Gaming.Input.GamepadReading) struct, allowing us to check what buttons have been clicked or thumbsticks moved.</span></span>
+
+
+<span data-ttu-id="1148f-298">Wenn der Zustand des Spiels **WaitForInput** ist, warten wir auf die Ein-/Aus-Menütaste des Controllers, damit das Spiel fortgesetzt werden kann.</span><span class="sxs-lookup"><span data-stu-id="1148f-298">If the state of the game is **WaitForInput**, we only listen for the Start/Menu button of the controller so that the game can be resumed.</span></span>
+
+
+<span data-ttu-id="1148f-299">Ist es **aktiv**, überprüfen wir die Eingabe des Benutzers und bestimmen, welche Aktion im Spiel erfolgen muss.</span><span class="sxs-lookup"><span data-stu-id="1148f-299">If it's **Active**, we check the user's input and determine what in-game action needs to happen.</span></span>
+<span data-ttu-id="1148f-300">Wenn der Benutzer den linken Joystick in eine bestimmte Richtung verschiebt, weiß das Spiel z.B., dass wir den Spieler in die Richtung zu verschieben müssen, in die der Stick verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="1148f-300">For instance, if the user moved the left analog stick in a specific direction, this lets the game know we need to move the player in the direction the stick is being moved.</span></span> <span data-ttu-id="1148f-301">Die Bewegung des Sticks in eine Richtung muss aber größer sein als der Radius des **inaktiven Bereichs**. Andernfalls passiert nichts.</span><span class="sxs-lookup"><span data-stu-id="1148f-301">The movement of the stick in a specific direction must register as larger than the radius of the **dead zone**; otherwise, nothing will happen.</span></span> <span data-ttu-id="1148f-302">Dieser Radius des inaktiven Bereichs ist erforderlich, um "Drifting" zu vermeiden, d.h. vom Controller erkannte winzige Bewegungen des Daumens, wenn dieser auf dem Stick liegt.</span><span class="sxs-lookup"><span data-stu-id="1148f-302">This dead zone radius is necessary to prevent "drifting," which is when the controller picks up small movements from the player's thumb as it rests on the stick.</span></span> <span data-ttu-id="1148f-303">Ohne inaktive Zonen können die Steuerelemente für den Benutzer zu sensibel sein.</span><span class="sxs-lookup"><span data-stu-id="1148f-303">Without dead zones, the controls can appear too sensitive to the user.</span></span>
+
+
+<span data-ttu-id="1148f-304">Ministick-Eingabe ist zwischen-1 und 1 für die x- und y-Achse.</span><span class="sxs-lookup"><span data-stu-id="1148f-304">Thumbstick input is between -1 and 1 for both the x and y axis.</span></span> <span data-ttu-id="1148f-305">Die folgenden Konstanten geben den Radius des inaktiven Ministicks an.</span><span class="sxs-lookup"><span data-stu-id="1148f-305">The following consant specifies the radius of the thumbstick dead zone.</span></span>
+
+```cpp
+#define THUMBSTICK_DEADZONE 0.25f
+```
+
+<span data-ttu-id="1148f-306">Mit dem Verwenden dieser Variable werden wir dann mit der Verarbeitung der Eingaben des relevanten Ministicks beginnen.</span><span class="sxs-lookup"><span data-stu-id="1148f-306">Using this variable, we'll then begin processing actionable thumbstick input.</span></span> <span data-ttu-id="1148f-307">Die Bewegung tritt bei einem Wert von [-1, 0,26] oder [0,26, 1] auf jeder Achse auf.</span><span class="sxs-lookup"><span data-stu-id="1148f-307">Movement would occur with a value from [-1, -.26] or [.26, 1] on either axis.</span></span>
+
+![Inaktive Zonen für Ministicks](images/simple-dx-game-controls-deadzone.png)
+
+<span data-ttu-id="1148f-309">Dieser Teil der **UpdatePollingDevices**-Methode behandelt den linken und rechten Ministick.</span><span class="sxs-lookup"><span data-stu-id="1148f-309">This piece of the **UpdatePollingDevices** method handles the left and right thumbsticks.</span></span>
+<span data-ttu-id="1148f-310">Jede X- und Y-Wert des Sticks wird überprüft, um festzustellen, ob er außerhalb des inaktiven Bereichs ist.</span><span class="sxs-lookup"><span data-stu-id="1148f-310">Each stick's X and Y values are checked to see if they are outside of the dead zone.</span></span> <span data-ttu-id="1148f-311">Wenn einer oder beide inaktiv sind, aktualisieren wir die entsprechende Komponente.</span><span class="sxs-lookup"><span data-stu-id="1148f-311">If one or both are, we'll update the corresponding component.</span></span>
+<span data-ttu-id="1148f-312">Wenn beispielsweise der linke Ministick nach links entlang der x-Achse verschoben wird, wird -1 der **x**-Komponente des **m_moveCommand**-Vektors hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="1148f-312">For example, if the left thumbstick is being moved left along the X axis, we'll add -1 to the **x** component of the **m_moveCommand** vector.</span></span> <span data-ttu-id="1148f-313">Dieser Vektor wird verwendet, um alle Eingänge auf allen Geräten zu aggregieren und wird später verwendet, um zu berechnen, wo der Spieler sich hin bewegen soll.</span><span class="sxs-lookup"><span data-stu-id="1148f-313">This vector is what will be used to aggregate all movements across all devices and will later be used to calculate where the player should move.</span></span> 
+
+
+```cpp
+        // Use the left thumbstick to control the eye point position (position of the player)
+
+        // Check if left thumbstick is outside of dead zone on x axis
+        if (reading.LeftThumbstickX > THUMBSTICK_DEADZONE ||
+            reading.LeftThumbstickX < -THUMBSTICK_DEADZONE)
+        {
+            // Get value of left thumbstick's position on x axis
+            float x = static_cast<float>(reading.LeftThumbstickX);
+            // Set the x of the move vector to 1 if the stick is being moved right.
+            // Set to -1 if moved left. 
+            m_moveCommand.x -= (x > 0) ? 1 : -1;
+        }
+
+        // Check if left thumbstick is outside of dead zone on y axis
+        if (reading.LeftThumbstickY > THUMBSTICK_DEADZONE ||
+            reading.LeftThumbstickY < -THUMBSTICK_DEADZONE)
+        {
+            // Get value of left thumbstick's position on y axis
+            float y = static_cast<float>(reading.LeftThumbstickY);
+            // Set the y of the move vector to 1 if the stick is being moved forward.
+            // Set to -1 if moved backwards. 
+            m_moveCommand.y += (y > 0) ? 1 : -1;
+        }
+
+```
+
+<span data-ttu-id="1148f-314">Ähnlich wie der linke Stick, der die Bewegung kontrolliert, steuert der rechte Stick die Drehung der Kamera.</span><span class="sxs-lookup"><span data-stu-id="1148f-314">Similar to how the left stick controls movement, the right stick controls the rotation of the camera.</span></span>
+
+
+<span data-ttu-id="1148f-315">Das Verhalten des rechten Sticks wird dem Verhalten der Mausbewegung im Steuerelement-Setup von Maus und Tastatur ausgerichtet.</span><span class="sxs-lookup"><span data-stu-id="1148f-315">The right thumb stick behavior aligns with the behavior of mouse movement in our mouse and keyboard control setup.</span></span>
+<span data-ttu-id="1148f-316">Wenn der Stick außerhalb des inaktiven Bereichs ist, berechnen wir die Differenz zwischen der aktuellen Zeigerposition und der Blickposition des Benutzers.</span><span class="sxs-lookup"><span data-stu-id="1148f-316">If the stick is outside of the dead zone, we calculate the difference between the current pointer position and where the user is now trying to look.</span></span>
+<span data-ttu-id="1148f-317">Diese Änderung der Zeigerposition (**PointerDelta**) wird zum Upgrade des Neigungs- und Schwenkwinkels der Kameradrehung verwendet, die zu einem späteren Zeitpunkt auf die **aktualisierte** Methode angewendet wird.</span><span class="sxs-lookup"><span data-stu-id="1148f-317">This change in pointer position (**pointerDelta**) is then used to update the pitch and yaw of the camera rotation that later get applied in our **Update** method.</span></span>
+<span data-ttu-id="1148f-318">Der **PointerDelta**-Vektor sieht vertraut aus, da er auch in der [MoveLookController::OnPointerMoved](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L318-L395)-Methode zum Nachverfolgen verwendet wird, um Änderung der Zeigerposition für unsere Maus und Toucheingaben nachzuverfolgen.</span><span class="sxs-lookup"><span data-stu-id="1148f-318">The **pointerDelta** vector may look familiar because it's also used in the [MoveLookController::OnPointerMoved](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L318-L395) method to keep track of change in pointer position for our mouse and touch inputs.</span></span>
+
+
+```cpp
+        // Use the right thumbstick to control the look at position
+
+        XMFLOAT2 pointerDelta;
+
+        // Check if right thumbstick is outside of deadzone on x axis
+        if (reading.RightThumbstickX > THUMBSTICK_DEADZONE ||
+            reading.RightThumbstickX < -THUMBSTICK_DEADZONE)
+        {
+            float x = static_cast<float>(reading.RightThumbstickX);
+            // Register the change in the pointer along the x axis
+            pointerDelta.x = x * x * x; 
+        }
+        // No actionable thumbstick movement. Register no change in pointer.
+        else
+        {
+            pointerDelta.x = 0.0f;
+        }
+        // Check if right thumbstick is outside of deadzone on y axis
+        if (reading.RightThumbstickY > THUMBSTICK_DEADZONE ||
+            reading.RightThumbstickY < -THUMBSTICK_DEADZONE)
+        {
+            float y = static_cast<float>(reading.RightThumbstickY);
+            // Register the change in the pointer along the y axis
+            pointerDelta.y = y * y * y;
+        }
+        else
+        {
+            pointerDelta.y = 0.0f;
+        }
+
+        XMFLOAT2 rotationDelta;
+        rotationDelta.x = pointerDelta.x *  0.08f;       // Scale for control sensitivity.
+        rotationDelta.y = pointerDelta.y *  0.08f;
+
+        // Update our orientation based on the command.
+        m_pitch += rotationDelta.y;
+        m_yaw += rotationDelta.x;
+
+        // Limit pitch to straight up or straight down.
+        m_pitch = __max(-XM_PI / 2.0f, m_pitch);
+        m_pitch = __min(+XM_PI / 2.0f, m_pitch);
+```
+
+<span data-ttu-id="1148f-319">Das Steuerelemente des Spiels wären nicht ohne die Möglichkeit zu Schießen abgeschlossen!</span><span class="sxs-lookup"><span data-stu-id="1148f-319">The game's controls wouldn't be complete without the ability to fire spheres!</span></span>
+
+
+<span data-ttu-id="1148f-320">Diese **UpdatePollingDevices**-Methode überprüft auch, ob der rechte Trigger gedrückt wird.</span><span class="sxs-lookup"><span data-stu-id="1148f-320">This **UpdatePollingDevices** method also checks if the right trigger is being pressed.</span></span> <span data-ttu-id="1148f-321">Wenn dies der Fall ist, wird unsere **m_firePressed**-Eigenschaft auf "Wahr" festgelegt, um dem Spiel anzuzeigen, dass Kugeln ausgelöst werden sollen.</span><span class="sxs-lookup"><span data-stu-id="1148f-321">If it is, our **m_firePressed** property is flipped to true, signaling to the game that spheres should start firing.</span></span>
+```cpp
+    if (reading.RightTrigger > TRIGGER_DEADZONE)
+    {
+        if (!m_autoFire && !m_gamepadTriggerInUse)
+        {
+            m_firePressed = true;
+        }
+
+        m_gamepadTriggerInUse = true;
+    }
+    else
+    {
+        m_gamepadTriggerInUse = false;
+    }
+```
+
+
+## <a name="the-update-method"></a><span data-ttu-id="1148f-322">Die Update-Methode</span><span class="sxs-lookup"><span data-stu-id="1148f-322">The Update method</span></span>
+
+<span data-ttu-id="1148f-323">Zum Abschluss befassen wir uns tiefer mit der [**Update**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L1005-L1096)-Methode.</span><span class="sxs-lookup"><span data-stu-id="1148f-323">To wrap things up, let's dig deeper into the [**Update**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L1005-L1096) method.</span></span>
+<span data-ttu-id="1148f-324">Diese Methode führt alle Bewegungen oder Drehungen aus, die der Spieler bei allen unterstützten Eingaben ausführt, um den Geschwindigkeitsvektor zu generieren und unsere Schusshöhe zu aktualisieren, und Werte für den Zugriff auf die Spielschleife vorzunehmen.</span><span class="sxs-lookup"><span data-stu-id="1148f-324">This method merges any movements or rotations that the player made with any supported input to generate a velocity vector and update our pitch and yaw values for our game loop to access.</span></span>
+
+
+<span data-ttu-id="1148f-325">Die **Update**-Methode startet Elemente durch Aufrufen von [**UpdatePollingDevices**](#the-updatepollingdevices-method), um den Status des Controllers zu aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="1148f-325">The **Update** method kicks things off by calling [**UpdatePollingDevices**](#the-updatepollingdevices-method) to update the state of the controller.</span></span> <span data-ttu-id="1148f-326">Diese Methode sammelt auch alle Eingaben von einem Gamepad und fügt die Bewegungen dem **m_moveCommand**-Vektor hinzu.</span><span class="sxs-lookup"><span data-stu-id="1148f-326">This method also gathers any input from a gamepad and adds its movements to the **m_moveCommand** vector.</span></span> 
+
+<span data-ttu-id="1148f-327">In unserer **Update**-Methode überprüfen wir dann die folgende Eingabe.</span><span class="sxs-lookup"><span data-stu-id="1148f-327">In our **Update** method we then perform the following input checks.</span></span>
+- <span data-ttu-id="1148f-328">Wenn der Spieler das Bewegungsrechteck des Controllers verwendet, wird die Änderung der Zeigerposition ermittelt und wir verwenden diese, um zu berechnen, ob der Benutzer den Mauszeiger aus dem inaktiven Bereich des Controller entfernt hat.</span><span class="sxs-lookup"><span data-stu-id="1148f-328">If the player is using the move controller rectangle, we'll then determine the change in pointer position and use that to calculate if the user has moved the pointer out of the controller's dead zone.</span></span> <span data-ttu-id="1148f-329">Wenn sich der Mauszeiger außerhalb des inaktiven Bereichs befindet, wird die **m_moveCommand**-Vektoreigenschaft mit dem virtuellen Joystick-Wert aktualisiert.</span><span class="sxs-lookup"><span data-stu-id="1148f-329">If outside of the dead zone, the **m_moveCommand** vector property is then updated with the virtual joystick value.</span></span>
+- <span data-ttu-id="1148f-330">Wenn eine der Bewegungstastatureingaben gedrückt werden, wird ein Wert von `1.0f`oder `-1.0f` der entsprechenden Komponente des **m_moveCommand**-Vektors &mdash; hinzugefügt, `1.0f` für Vorwärts, und `-1.0f` für Rückwärts.</span><span class="sxs-lookup"><span data-stu-id="1148f-330">If any of the movement keyboard inputs are pressed, a value of `1.0f` or `-1.0f` are added in the corresponding component of the **m_moveCommand** vector &mdash; `1.0f` for forward, and `-1.0f` for backward.</span></span>
+
+
+<span data-ttu-id="1148f-331">Nachdem alle Bewegungseingaben berücksichtigt wurden, führen wird den **m_moveCommand**-Vektor über einige Berechnungen aus, um einen neuen Vektor zu generieren, der die Richtung des Spielers in der Spielwelt darstellt.</span><span class="sxs-lookup"><span data-stu-id="1148f-331">Once all movement input has been taken into account, we then run the **m_moveCommand** vector through some calculations to generate a new vector that represents the direction of the player with regards to the game world.</span></span>
+<span data-ttu-id="1148f-332">Wir berechnen unsere Bewegungen in Bezug auf die ganze Welt und wenden sie auf den Spieler als Geschwindigkeit in die entsprechende Richtung an.</span><span class="sxs-lookup"><span data-stu-id="1148f-332">We then take our movements in relation to the world and apply them to the player as velocity in that direction.</span></span>
+<span data-ttu-id="1148f-333">Schließlich setzen wir den **m_moveCommand**-Vektor auf `(0.0f, 0.0f, 0.0f)` zurück, damit alles für den nächsten Frame des Spiels bereit ist.</span><span class="sxs-lookup"><span data-stu-id="1148f-333">Finally we reset the **m_moveCommand** vector to `(0.0f, 0.0f, 0.0f)` so that everything is ready for the next game frame.</span></span>
+
 
 ```cpp
 void MoveLookController::Update()
 {
-    UpdateGameController();
+    // Get any gamepad input and update state
+    UpdatePollingDevices();
 
+    // Get change in 
     if (m_moveInUse)
     {
-        // Move control.
         XMFLOAT2 pointerDelta;
 
         pointerDelta.x = m_movePointerPosition.x - m_moveFirstDown.x;
@@ -168,1759 +800,26 @@ void MoveLookController::Update()
     wCommand.z =  m_moveCommand.z;
 
     // Scale for sensitivity adjustment.
-    // Our velocity is based on the command, y is up.
-    m_velocity.x = -wCommand.x * MOVEMENT_GAIN;
-    m_velocity.z =  wCommand.y * MOVEMENT_GAIN;
-    m_velocity.y =  wCommand.z * MOVEMENT_GAIN;
+    // Our velocity is based on the command. Y is up.
+    m_velocity.x = -wCommand.x * MoveLookConstants::MovementGain;
+    m_velocity.z =  wCommand.y * MoveLookConstants::MovementGain;
+    m_velocity.y =  wCommand.z * MoveLookConstants::MovementGain;
 
     // Clear movement input accumulator for use during next frame.
     m_moveCommand = XMFLOAT3(0.0f, 0.0f, 0.0f);
 }
 ```
 
-Die Spielschleife kann prüfen, ob der Spieler schießt, indem sie die **IsFiring**-Methode der **MoveLookController**-Instanz aufruft. Die **MoveLookController**-Instanz überprüft, ob der Spieler über einen der drei Eingabetypen die Schießtaste betätigt hat.
 
-```cpp
-bool MoveLookController::IsFiring()
-{
-    if (m_state == MoveLookControllerState::Active)
-    {
-        if (m_autoFire)
-        {
-            return (m_fireInUse || (m_mouseInUse && m_mouseLeftInUse) || m_xinputTriggerInUse);
-        }
-        else
-        {
-            if (m_firePressed)
-            {
-                m_firePressed = false;
-                return true;
-            }
-        }
-    }
-    return false;
-}
-```
+## <a name="next-steps"></a><span data-ttu-id="1148f-334">Nächste Schritte</span><span class="sxs-lookup"><span data-stu-id="1148f-334">Next steps</span></span>
 
-Wenn der Spieler den Zeiger aus dem Hauptfenster des Spiels bewegt oder die Pause-Taste drückt (P-TASTE oder Start-Taste des Xbox-Controllers), muss das Spiel angehalten werden. Die **MoveLookController**-Instanz registriert die Tastenbetätigung und informiert die Spielschleife, wenn sie die **IsPauseRequested**-Methode aufruft. Wenn **IsPauseRequested** jetzt **true** zurückgibt, ruft die Spielschleife **WaitForPress** für die **MoveLookController**-Instanz auf, um den Controller in den Zustand **WaitForInput** zu versetzen. Anschließend wartet die **MoveLookController**-Instanz darauf, dass der Spieler eine der Menüoptionen zum Laden, Fortsetzen oder Beenden des Spiels auswählt, und hält die Verarbeitung der Eingabeereignisse des Spiels an, bis sich der Controller wieder im Zustand **Active** befindet.
-
-Weitere Informationen finden Sie im [vollständigen Codebeispiel für diesen Abschnitt](#complete-sample-code-for-this-section).
-
-Jetzt wollen wir uns etwas ausführlicher mit der Implementierung der drei Steuerungstypen beschäftigen.
-
-## <a name="implementing-relative-mouse-controls"></a>Implementieren relativer Maussteuerungen
-
-
-Wenn Mausbewegungen erkannt werden, sollen diese Bewegungen zum Ermitteln des neuen Neigungs- und Schwenkwinkels der Kamera verwendet werden. Hierzu implementieren wir relative Maussteuerungen, bei denen nicht die absoluten x-y-Pixelkoordinaten der Bewegung aufgezeichnet werden, sondern die relative Distanz der Mausbewegung (also das Delta zwischen Start und Ende der Bewegung) erfasst wird.
-
-Dazu ermitteln wir die Änderung der X-Koordinate (horizontale Bewegung) und der Y-Koordinate (vertikale Bewegung), indem wir die Felder [**MouseDelta::X**](https://msdn.microsoft.com/library/windows/apps/hh758353) und **MouseDelta::Y** für das vom [**MouseMoved**](https://msdn.microsoft.com/library/windows/apps/hh758356)-Ereignis zurückgegebene [**Windows::Device::Input::MouseEventArgs::MouseDelta**](https://msdn.microsoft.com/library/windows/apps/hh758358)-Argumentobjekt überprüfen.
-
-```cpp
-void MoveLookController::OnMouseMoved(
-    _In_ MouseDevice^ /* mouseDevice */,
-    _In_ MouseEventArgs^ args
-    )
-{
-    // Handle Mouse Input via dedicated relative movement handler.
-
-    switch (m_state)
-    {
-    case MoveLookControllerState::Active:
-        XMFLOAT2 mouseDelta;
-        mouseDelta.x = static_cast<float>(args->MouseDelta.X);
-        mouseDelta.y = static_cast<float>(args->MouseDelta.Y);
-
-        XMFLOAT2 rotationDelta;
-        rotationDelta.x  = mouseDelta.x * ROTATION_GAIN;   // scale for control sensitivity
-        rotationDelta.y  = mouseDelta.y * ROTATION_GAIN;
-
-        // Update our orientation based on the command.
-        m_pitch -= rotationDelta.y;
-        m_yaw   += rotationDelta.x;
-
-        // Limit pitch to straight up or straight down.
-        float limit = XM_PI / 2.0f - 0.01f;
-        m_pitch = __max(-limit, m_pitch);
-        m_pitch = __min(+limit, m_pitch);
-
-        // Keep longitude in same range by wrapping.
-        if (m_yaw >  XM_PI)
-        {
-            m_yaw -= XM_PI * 2.0f;
-        }
-        else if (m_yaw < -XM_PI)
-        {
-            m_yaw += XM_PI * 2.0f;
-        }
-        break;
-    }
-}
-```
-
-## <a name="implementing-touch-controls"></a>Implementieren von Toucheingabesteuerungen
-
-
-Toucheingabesteuerungen sind aufgrund ihrer Komplexität besonders knifflig und erfordern ein hohes Maß an Feinabstimmung. Im Beispielspiel wird ein Rechteck im unteren linken Quadranten des Bildschirms als Steuerkreuz verwendet. Wenn Sie den Daumen in diesem Bereich nach links und rechts bewegen, gleitet die Kamera nach links bzw. rechts, und wenn Sie den Daumen nach oben und unten bewegen, gleitet die Kamera vor bzw. zurück. Ein Rechteck im unteren rechten Quadrant des Bildschirms dient zum Schießen. Zum Zielen (Nick- und Gierwinkel) bewegen Sie den Finger auf den Teilen des Bildschirms, die nicht für das Bewegen und Schießen vorgesehen sind. Wenn Sie den Finger bewegen, bewegt sich die Kamera (mit festem Fadenkreuz) entsprechend.
-
-Die Bewegungs- und Schießrechtecke werden im Beispielcode von zwei Methoden erstellt:
-
-```cpp
-void SetMoveRect(
-        _In_ DirectX::XMFLOAT2 upperLeft,
-        _In_ DirectX::XMFLOAT2 lowerRight
-        );
- void SetFireRect(
-        _In_ DirectX::XMFLOAT2 upperLeft,
-        _In_ DirectX::XMFLOAT2 lowerRight
-        );
-```
-
-Zeigerereignisse von Fingereingabegeräten für die anderen Bildschirmbereiche werden als Blickbefehle behandelt. Wenn die Bildschirmgröße geändert wird, müssen die Rechtecke erneut berechnet (und gezeichnet) werden.
-
-Wird in einem dieser Bereiche ein Zeigerereignis von einem Toucheingabegerät ausgelöst, während sich das Spiel im Zustand **Active** befindet, wird ihm wie zuvor erläutert eine Zeiger-ID zugewiesen.
-
-```cpp
-void MoveLookController::OnPointerPressed(
-    _In_ CoreWindow^ sender,
-    _In_ PointerEventArgs^ args
-    )
-{
-    PointerPoint^ point = args->CurrentPoint;
-    UINT32 pointerID = point->PointerId;
-    Point pointerPosition = point->Position;
-    PointerPointProperties^ pointProperties = point->Properties;
-    auto pointerDevice = point->PointerDevice;
-    auto pointerDeviceType = pointerDevice->PointerDeviceType;
-
-    XMFLOAT2 position = XMFLOAT2(pointerPosition.X, pointerPosition.Y);     // convert to allow math
-
-    switch (m_state)
-    {
-    case MoveLookControllerState::WaitForInput:
-        // ...
-        // Game is paused, wait for click inside the game window.
-        // ...
-        break;
-
-    case MoveLookControllerState::Active:
-        switch (pointerDeviceType)
-        {
-        case Windows::Devices::Input::PointerDeviceType::Touch:
-            // Check to see if this pointer is in the move control.
-            if (position.x > m_moveUpperLeft.x &&
-                position.x < m_moveLowerRight.x &&
-                position.y > m_moveUpperLeft.y &&
-                position.y < m_moveLowerRight.y)
-            {
-                if (!m_moveInUse)         // If no pointer is in this control yet:
-                {
-                    // Process a DPad touch down event.
-                    m_moveFirstDown = position;                 // Save the location of the initial contact.
-                    m_movePointerID = pointerID;                // Store the pointer using this control.
-                    m_moveInUse = true;
-                }
-            }
-            // Check to see if this pointer is in the fire control.
-            else if (position.x > m_fireUpperLeft.x &&
-                position.x < m_fireLowerRight.x &&
-                position.y > m_fireUpperLeft.y &&
-                position.y < m_fireLowerRight.y)
-            {
-                if (!m_fireInUse)
-                {
-                    m_fireLastPoint = position;
-                    m_firePointerID = pointerID;
-                    m_fireInUse = true;
-                }
-            }
-            else
-            {
-                if (!m_lookInUse)   // If no pointer is in this control yet:
-                {
-                    m_lookLastPoint = position;                   // Save the pointer for a later move.
-                    m_lookPointerID = pointerID;                  // Store the pointer using this control.
-                    m_lookLastDelta.x = m_lookLastDelta.y = 0;    // These are for smoothing.
-                    m_lookInUse = true;
-                }
-            }
-            break;
-
-        default:
-            // ...
-            // Handle mouse input here.
-                                                // ...
-            break;
-        }
-        break;
-    }
-    return;
-}
-```
-
-Falls in einem der drei Steuerungsbereiche (Bewegungsrechteck, Schießrechteck und übriger Bildschirm) ein [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278)-Ereignis aufgetreten ist, weist die **MoveLookController**-Instanz die Zeiger-ID für den Zeiger, von dem das Ereignis ausgelöst wurde, einer spezifischen, dem jeweiligen Bildschirmbereich entsprechenden Variable zu. Bei einem Ereignis im Bewegungsrechteck wird z. B. die **m\_movePointerID**-Variable auf die Zeiger-ID festgelegt, von der das Ereignis ausgelöst wurde. Außerdem wird eine boolesche Verwendungsvariable (in diesem Beispiel: **m\_lookInUse**) festgelegt, um anzugeben, dass die Steuerung noch nicht freigegeben wurde.
-
-Im nächsten Schritt erfahren Sie, wie das Beispielspiel das [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276)-Touchscreenereignis behandelt.
-
-```cpp
-void MoveLookController::OnPointerMoved(
-    _In_ CoreWindow^ sender,
-    _In_ PointerEventArgs^ args
-    )
-{
-    PointerPoint^ point = args->CurrentPoint;
-    UINT32 pointerID = point->PointerId;
-    Point pointerPosition = point->Position;
-    PointerPointProperties^ pointProperties = point->Properties;
-    auto pointerDevice = point->PointerDevice;
-    auto pointerDeviceType = pointerDevice->PointerDeviceType;
-
-    XMFLOAT2 position = XMFLOAT2(pointerPosition.X, pointerPosition.Y);     // Convert to allow math.
-
-    switch (m_state)
-    {
-    case MoveLookControllerState::Active:
-        // Decide which control this pointer is operating.
-        if (pointerID == m_movePointerID)     // This is the move pointer.
-        {
-            m_movePointerPosition = position;       // Save the current position.
-        }
-        else if (pointerID == m_lookPointerID)     // This is the look pointer.
-        {
-            // Look control
-            XMFLOAT2 pointerDelta;
-            pointerDelta.x = position.x - m_lookLastPoint.x;        // How far did the pointer move.
-            pointerDelta.y = position.y - m_lookLastPoint.y;
-
-            XMFLOAT2 rotationDelta;
-            rotationDelta.x = pointerDelta.x * ROTATION_GAIN;       // Scale for control sensitivity.
-            rotationDelta.y = pointerDelta.y * ROTATION_GAIN;
-            m_lookLastPoint = position;                             // Save for the next time through.
-
-            // Update our orientation based on the command.
-            m_pitch -= rotationDelta.y;
-            m_yaw   += rotationDelta.x;
-
-            // Limit pitch to straight up or straight down.
-            m_pitch = __max(-XM_PI / 2.0f, m_pitch);
-            m_pitch = __min(+XM_PI / 2.0f, m_pitch);
-        }
-        else if (pointerID == m_firePointerID)
-        {
-            m_fireLastPoint = position;
-        }
-        else if (pointerID == m_mousePointerID)
-        {
-            // ...
-        }
-        break;
-    }
-}
-```
-
-Die **MoveLookController**-Instanz überprüft anhand der Zeiger-ID, wo das Ereignis aufgetreten ist, und führt eine der folgenden Aktionen aus:
-
--   Wenn das [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276)-Ereignis im Bewegungs- oder Schießrechteck aufgetreten ist, wird die Zeigerposition für den Controller aktualisiert.
--   Wenn das [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276)-Ereignis an einer anderen Stelle des Bildschirms (definiert als Blicksteuerung) aufgetreten ist, werden die Änderungen des Nick- und Gierwinkels des Blickrichtungsvektors berechnet.
-
-Zum Schluss sehen wir uns an, wie das Beispielspiel das [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279)-Touchscreenereignis behandelt.
-
-```cpp
-void MoveLookController::OnPointerReleased(
-    _In_ CoreWindow^ sender,
-    _In_ PointerEventArgs^ args
-    )
-{
-    PointerPoint^ point = args->CurrentPoint;
-    UINT32 pointerID = point->PointerId;
-    Point pointerPosition = point->Position;
-    PointerPointProperties^ pointProperties = point->Properties;
-
-    XMFLOAT2 position = XMFLOAT2(pointerPosition.X, pointerPosition.Y);     // Convert to allow math.
-    switch (m_state)
-    {
-    case MoveLookControllerState::WaitForInput:
-        if (m_buttonInUse && (pointerID == m_buttonPointerID))
-        {
-            m_buttonInUse = false;
-            m_buttonPressed = true;
-        }
-        break;
-
-    case MoveLookControllerState::Active:
-        if (pointerID == m_movePointerID)
-        {
-            m_velocity = XMFLOAT3(0, 0, 0);      // Stop on release.
-            m_moveInUse = false;
-            m_movePointerID = 0;
-        }
-        else if (pointerID == m_lookPointerID)
-        {
-            m_lookInUse = false;
-            m_lookPointerID = 0;
-        }
-        else if (pointerID == m_firePointerID)
-        {
-            m_fireInUse = false;
-            m_firePointerID = 0;
-        }
-        else if (pointerID == m_mousePointerID)
-        {
-            // ...
-        }
-        break;
-    }
-}
-```
-
-Wenn die ID des Zeigers, von dem das [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279)-Ereignis ausgelöst wurde, die ID des zuvor erfassten Mauszeigers ist, legt die **MoveLookController**-Instanz die Geschwindigkeit auf Null fest, da der Spieler das Bewegungsrechteck nicht mehr berührt. Würde die Geschwindigkeit nicht auf 0 festgelegt, würde der Spieler den Zeiger weiter bewegen. Wenn Sie eine Art Trägheit implementieren möchten, fügen Sie hier die Methode hinzu, mit der die Geschwindigkeit im Laufe zukünftiger **Update**-Aufrufe der Spielschleife nach und nach auf Null reduziert wird.
-
-Andernfalls setzt die **MoveLookController**-Instanz die jeweiligen Zeiger-IDs zurück, wenn das [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279)-Ereignis im Schießrechteck oder Blickbereich ausgelöst wurde.
-
-Dies sind die Grundlagen für die Implementierung der Touchscreensteuerungen im Beispielspiel. Fahren wir nun mit den Maus- und Tastatursteuerungen fort.
-
-## <a name="implementing-mouse-and-keyboard-controls"></a>Implementieren von Maus- und Tastatursteuerungen
-
-
-Im Beispielspiel werden die folgenden Maus- und Tastatursteuerungen implementiert:
-
--   Mit den Tasten W, S, A und D bewegt sich der Spieler vorwärts, rückwärts, nach links bzw. nach rechts. Mit der X-Taste und der LEERTASTE wird die Ansicht nach unten bzw. oben bewegt.
--   Die P-Taste hält das Spiel an.
--   Durch Bewegen der Maus kann der Spieler die Drehung (Neigungs- und Schwenkwinkel) der Kameraansicht steuern.
--   Mit der linken Maustaste wird geschossen.
-
-Zur Verwendung der Tastatur registriert das Beispielspiel zwei zusätzliche Ereignisse: [**CoreWindow::KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208271) und [**CoreWindow::KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208270) für das Drücken bzw. Loslassen einer Taste.
-
-```cpp
-window->KeyDown +=
-        ref new TypedEventHandler<CoreWindow^, KeyEventArgs^>(this, &MoveLookController::OnKeyDown);
-
-window->KeyUp +=
-        ref new TypedEventHandler<CoreWindow^, KeyEventArgs^>(this, &MoveLookController::OnKeyUp);
-```
-
-Die Behandlung der Maus unterscheidet sich etwas von der der Fingereingabesteuerung, obwohl sie einen Zeiger verwendet. Das Bewegungs- und das Schießrechteck werden selbstverständlich nicht verwendet, da dies für den Spieler sehr mühsam wäre: Wie sollte er gleichzeitig die Bewegungs- und die Schießsteuerung bedienen? Wie bereits erwähnt, aktiviert der **MoveLookController**-Controller die Blicksteuerungen bei jeder Bewegung der Maus und die Schießsteuerungen beim Drücken der linken Maustaste:
-
-```cpp
-void MoveLookController::OnPointerPressed(
-    _In_ CoreWindow^ /* sender */,
-    _In_ PointerEventArgs^ args
-    )
-{
-    PointerPoint^ point = args->CurrentPoint;
-    uint32 pointerID = point->PointerId;
-    Point pointerPosition = point->Position;
-    PointerPointProperties^ pointProperties = point->Properties;
-    auto pointerDevice = point->PointerDevice;
-    auto pointerDeviceType = pointerDevice->PointerDeviceType;
-
-    XMFLOAT2 position = XMFLOAT2(pointerPosition.X, pointerPosition.Y);     // convert to allow math
-
-    switch (m_state)
-    {
-    case MoveLookControllerState::WaitForInput:
-        if (position.x > m_buttonUpperLeft.x &&
-            position.x < m_buttonLowerRight.x &&
-            position.y > m_buttonUpperLeft.y &&
-            position.y < m_buttonLowerRight.y)
-        {
-            // Wait until the button is released before setting the variable.
-            m_buttonPointerID = pointerID;
-            m_buttonInUse = true;
-
-        }
-        break;
-
-    case MoveLookControllerState::Active:
-        switch (pointerDeviceType)
-        {
-        case Windows::Devices::Input::PointerDeviceType::Touch:
-            // Check to see if this pointer is in the move control.
-            if (position.x > m_moveUpperLeft.x &&
-                position.x < m_moveLowerRight.x &&
-                position.y > m_moveUpperLeft.y &&
-                position.y < m_moveLowerRight.y)
-            {
-                if (!m_moveInUse)         // If no pointer is in this control yet:
-                {
-                    // Process a DPad touch down event.
-                    m_moveFirstDown = position;                 // Save the location of the initial contact.
-                    m_movePointerID = pointerID;                // Store the pointer using this control.
-                    m_moveInUse = true;
-                }
-            }
-            // Check to see if this pointer is in the fire control.
-            else if (position.x > m_fireUpperLeft.x &&
-                position.x < m_fireLowerRight.x &&
-                position.y > m_fireUpperLeft.y &&
-                position.y < m_fireLowerRight.y)
-            {
-                if (!m_fireInUse)
-                {
-                    m_fireLastPoint = position;
-                    m_firePointerID = pointerID;
-                    m_fireInUse = true;
-                    if (!m_autoFire)
-                    {
-                        m_firePressed = true;
-                    }
-                }
-            }
-            else
-            {
-                if (!m_lookInUse)   // If no pointer is in this control yet:
-                {
-                    m_lookLastPoint = position;                   // Save the pointer for a later move.
-                    m_lookPointerID = pointerID;                  // Store the pointer using this control.
-                    m_lookLastDelta.x = m_lookLastDelta.y = 0;    // These are for smoothing.
-                    m_lookInUse = true;
-                }
-            }
-            break;
-
-        default:
-            bool rightButton = pointProperties->IsRightButtonPressed;
-            bool leftButton = pointProperties->IsLeftButtonPressed;
-
-            if (!m_autoFire && (!m_mouseLeftInUse && leftButton))
-            {
-                m_firePressed = true;
-            }
-
-            if (!m_mouseInUse)
-            {
-                m_mouseInUse = true;
-                m_mouseLastPoint = position;
-                m_mousePointerID = pointerID;
-                m_mouseLeftInUse = leftButton;
-                m_mouseRightInUse = rightButton;
-                m_lookLastDelta.x = m_lookLastDelta.y = 0;          // These are for smoothing.
-            }
-            else
-            {
-
-            }
-            break;
-        }
-
-        break;
-    }
-
-    return;
-}
-```
-
-Jetzt sehen wir uns an, wie das Beispielspiel das [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279)-Mausereignis behandelt.
-
-```cpp
-void MoveLookController::OnPointerReleased(
-    _In_ CoreWindow^ /* sender */,
-    _In_ PointerEventArgs^ args
-    )
-{
-    PointerPoint^ point = args->CurrentPoint;
-    uint32 pointerID = point->PointerId;
-    Point pointerPosition = point->Position;
-    PointerPointProperties^ pointProperties = point->Properties;
-
-    XMFLOAT2 position = XMFLOAT2(pointerPosition.X, pointerPosition.Y);     // Convert to allow math.
-    switch (m_state)
-    {
-    case MoveLookControllerState::WaitForInput:
-        if (m_buttonInUse && (pointerID == m_buttonPointerID))
-        {
-            m_buttonInUse = false;
-            m_buttonPressed = true;
-        }
-        break;
-
-    case MoveLookControllerState::Active:
-        if (pointerID == m_movePointerID)
-        {
-            m_velocity = XMFLOAT3(0, 0, 0);      // Stop on release.
-            m_moveInUse = false;
-            m_movePointerID = 0;
-        }
-        else if (pointerID == m_lookPointerID)
-        {
-            m_lookInUse = false;
-            m_lookPointerID = 0;
-        }
-        else if (pointerID == m_firePointerID)
-        {
-            m_fireInUse = false;
-            m_firePointerID = 0;
-        }
-        else if (pointerID == m_mousePointerID)
-        {
-            bool rightButton = pointProperties->IsRightButtonPressed;
-            bool leftButton = pointProperties->IsLeftButtonPressed;
-
-            m_mouseInUse = false;
-
-            // Don't clear the mouse pointer ID so that Move events still result in Look changes.
-            // m_mousePointerID = 0;
-            m_mouseLeftInUse = leftButton;
-            m_mouseRightInUse = rightButton;
-        }
-        break;
-    }
-}
-```
-
-Wenn der Spieler aufhört, eine der Maustasten zu drücken, ist die Eingabe abgeschlossen: Es wird nicht mehr geschossen. Da die Blicksteuerung aber immer aktiviert ist, verwendet das Spiel weiter den gleichen Mauszeiger, um die Blickereignisse nachzuverfolgen.
-
-Jetzt werden wir und mit dem letzten Steuerungstyp befassen – dem Xbox-Controller. Er wird getrennt von den Fingereingabe- und Maussteuerungen behandelt, da er kein Zeigerobjekt verwendet.
-
-## <a name="implementing-xbox-controller-controls"></a>Implementieren von Xbox-Controller-Steuerungen
-
-
-Im Beispielspiel wird die Unterstützung für den Xbox-Controller durch Aufrufe der [XInput](https://msdn.microsoft.com/library/windows/desktop/hh405053)-APIs hinzugefügt. Hierbei handelt es sich um einen Satz von APIs zum Vereinfachen der Programmierung für Gamecontroller. Im Beispielspiel wird der linke Analogstick des Xbox-Controllers für die Bewegung des Spielers, der rechte Analogstick für die Blicksteuerung und der rechte Auslöser zum Schießen verwendet. Zum Anhalten und Fortsetzen des Spiels wird die Start-Taste verwendet.
-
-Die **Update**-Methode der **MoveLookController**-Instanz überprüft sofort, ob ein Gamecontroller angeschlossen ist, und ermittelt dann den Controllerzustand.
-
-```cpp
-void MoveLookController::UpdateGameController()
-{
-    if (!m_isControllerConnected)
-    {
-        // Check for controller connection by trying to get the capabilties.
-        DWORD capsResult = XInputGetCapabilities(0, XINPUT_FLAG_GAMEPAD, &m_xinputCaps);
-        if (capsResult != ERROR_SUCCESS)
-        {
-            return;
-        }
-        // Device is connected.
-        m_isControllerConnected = true;
-        m_xinputStartButtonInUse = false;
-        m_xinputTriggerInUse = false;
-    }
-
-    DWORD stateResult = XInputGetState(0, &m_xinputState);
-    if (stateResult != ERROR_SUCCESS)
-    {
-        // Device is no longer connected.
-        m_isControllerConnected = false;
-    }
-
-    switch (m_state)
-    {
-    case MoveLookControllerState::WaitForInput:
-        if (m_xinputState.Gamepad.wButtons & XINPUT_GAMEPAD_START)
-        {
-            m_xinputStartButtonInUse = true;
-        }
-        else if (m_xinputStartButtonInUse)
-        {
-            // Trigger one time only on button release.
-            m_xinputStartButtonInUse = false;
-            m_buttonPressed = true;
-        }
-        break;
-
-    case MoveLookControllerState::Active:
-        if (m_xinputState.Gamepad.wButtons & XINPUT_GAMEPAD_START)
-        {
-            m_xinputStartButtonInUse = true;
-        }
-        else if (m_xinputStartButtonInUse)
-        {
-            // Trigger one time only on button release.
-            m_xinputStartButtonInUse = false;
-            m_pausePressed = true;
-        }
-        // Use the Right Thumb joystick on the XBox controller to control
-        // the eye point position control.
-        // The controller input goes from -32767 to 32767.   We will normalize
-        // this from -1 to 1 and keep a dead spot in the middle to avoid drift.
-
-        if (m_xinputState.Gamepad.sThumbLX > XINPUT_GAMEPAD_LEFT_THUMB_DEADZONE ||
-            m_xinputState.Gamepad.sThumbLX < -XINPUT_GAMEPAD_LEFT_THUMB_DEADZONE)
-        {
-            float x = (float)m_xinputState.Gamepad.sThumbLX/32767.0f;
-            m_moveCommand.x -= x / fabsf(x);
-        }
-
-        if (m_xinputState.Gamepad.sThumbLY > XINPUT_GAMEPAD_LEFT_THUMB_DEADZONE ||
-            m_xinputState.Gamepad.sThumbLY < -XINPUT_GAMEPAD_LEFT_THUMB_DEADZONE)
-        {
-            float y = (float)m_xinputState.Gamepad.sThumbLY/32767.0f;
-            m_moveCommand.y += y / fabsf(y);
-        }
-
-        // Use the Left Thumb Joystick on the XBox controller to control
-        // the look at control.
-        // The controller input goes from -32767 to 32767.   We will normalize
-        // this from -1 to 1 and keep a dead spot in the middle to avoid drift.
-        XMFLOAT2 pointerDelta;
-        if (m_xinputState.Gamepad.sThumbRX > XINPUT_GAMEPAD_RIGHT_THUMB_DEADZONE ||
-            m_xinputState.Gamepad.sThumbRX < -XINPUT_GAMEPAD_RIGHT_THUMB_DEADZONE)
-        {
-            pointerDelta.x = (float)m_xinputState.Gamepad.sThumbRX/32767.0f;
-            pointerDelta.x = pointerDelta.x * pointerDelta.x * pointerDelta.x;
-        }
-        else
-        {
-            pointerDelta.x = 0.0f;
-        }
-        if (m_xinputState.Gamepad.sThumbRY > XINPUT_GAMEPAD_RIGHT_THUMB_DEADZONE ||
-            m_xinputState.Gamepad.sThumbRY < -XINPUT_GAMEPAD_RIGHT_THUMB_DEADZONE)
-        {
-            pointerDelta.y = (float)m_xinputState.Gamepad.sThumbRY/32767.0f;
-            pointerDelta.y = pointerDelta.y * pointerDelta.y * pointerDelta.y;
-        }
-        else
-        {
-            pointerDelta.y = 0.0f;
-        }
-
-        XMFLOAT2 rotationDelta;
-        rotationDelta.x = pointerDelta.x *  0.08f;       // Scale for control sensitivity.
-        rotationDelta.y = pointerDelta.y *  0.08f;
-
-        // Update our orientation based on the command.
-        m_pitch += rotationDelta.y;
-        m_yaw   += rotationDelta.x;
-
-        // Limit pitch to straight up or straight down.
-        m_pitch = __max(-XM_PI / 2.0f, m_pitch);
-        m_pitch = __min(+XM_PI / 2.0f, m_pitch);
-
-        // Check the state of the A button.  This is used to indicate fire control.
-
-        if (m_xinputState.Gamepad.bRightTrigger > XINPUT_GAMEPAD_TRIGGER_THRESHOLD)
-        {
-            if (!m_autoFire && !m_xinputTriggerInUse)
-            {
-                m_firePressed = true;
-            }
-            m_xinputTriggerInUse = true;
-        }
-        else
-        {
-            m_xinputTriggerInUse = false;
-        }
-        break;
-    }
-}
-```
-
-Befindet sich der Gamecontroller im Zustand **Active**, überprüft die Methode, ob ein Benutzer den linken Analogstick in eine bestimmte Richtung bewegt hat. Die registrierte Bewegung des Sticks in eine Richtung muss aber größer sein als der Radius des inaktiven Bereichs. Andernfalls passiert nichts. Dieser Radius des inaktiven Bereichs ist erforderlich, um "Drifting" darzustellen, d. h. vom Controller erkannte winzige Bewegungen des Daumens, wenn dieser auf dem Stick liegt. Ohne den inaktiven Bereich kann der Spieler schnell die Geduld verlieren, da sich die Steuerung sehr unruhig anfühlt.
-
-Die Methode **Update** führt die gleiche Prüfung dann auf dem rechten Stick aus, um festzustellen, ob der Spieler die Richtung der Kamera geändert hat, solange die Bewegung auf dem Stick länger ist als irgendein anderer Totzonenradius.
-
-**Update** berechnet den neuen Nick- und Gierwinkel und überprüft anschließend, ob der Spieler den rechten Analogauslöser, unsere Schießtaste, gedrückt hat.
-
-Jetzt wissen Sie, wie in diesem Beispiel ein kompletter Satz von Steuerungsoptionen implementiert wird. Denken Sie daran, dass eine gute UWP-App immer unterschiedliche Steuerungsoptionen unterstützt, damit Spieler mit den von ihnen bevorzugten Formfaktoren und Geräten spielen können.
-
-## <a name="next-steps"></a>Nächste Schritte
-
-
-Bis auf eine haben wir nun jede Hauptkomponente eines UWP-DirectX-Spiels kennengelernt. Was noch fehlt, ist Audio. Musik und Soundeffekte sind bei jedem Spiel wichtig. Befassen wir uns also mit dem [Hinzufügen von Sound](tutorial--adding-sound.md).
-
-## <a name="complete-sample-code-for-this-section"></a>Vollständiger Beispielcode für diesen Abschnitt
-
-
-MoveLookController.h
-
-```cpp
-//// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF
-//// ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO
-//// THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
-//// PARTICULAR PURPOSE.
-////
-//// Copyright (c) Microsoft Corporation. All rights reserved
-
-#pragma once
-
-// Uncomment to print debug tracing.
-// #define MOVELOOKCONTROLLER_TRACE 1
-
-enum class MoveLookControllerState
-{
-    None,
-    WaitForInput,
-    Active,
-};
-
-ref class MoveLookController
-{
-internal:
-    MoveLookController();
-
-    void Initialize(
-        _In_ Windows::UI::Core::CoreWindow^ window
-        );
-    void SetMoveRect(
-        _In_ DirectX::XMFLOAT2 upperLeft,
-        _In_ DirectX::XMFLOAT2 lowerRight
-        );
-    void SetFireRect(
-        _In_ DirectX::XMFLOAT2 upperLeft,
-        _In_ DirectX::XMFLOAT2 lowerRight
-        );
-    void WaitForPress(
-        _In_ DirectX::XMFLOAT2 UpperLeft,
-        _In_ DirectX::XMFLOAT2 LowerRight
-        );
-    void WaitForPress();
-
-    void Update();
-    bool IsFiring();
-    bool IsPressComplete();
-    bool IsPauseRequested();
-
-    DirectX::XMFLOAT3 Velocity();
-    DirectX::XMFLOAT3 LookDirection();
-    float Pitch();
-    void  Pitch(_In_ float pitch);
-    float Yaw();
-    void  Yaw(_In_ float yaw);
-    bool  Active();
-    void  Active(_In_ bool active);
-
-    bool AutoFire();
-    void AutoFire(_In_ bool AutoFire);
-
-protected:
-    void OnPointerPressed(
-        _In_ Windows::UI::Core::CoreWindow^ sender,
-        _In_ Windows::UI::Core::PointerEventArgs^ args
-        );
-    void OnPointerMoved(
-        _In_ Windows::UI::Core::CoreWindow^ sender,
-        _In_ Windows::UI::Core::PointerEventArgs^ args
-        );
-    void OnPointerReleased(
-        _In_ Windows::UI::Core::CoreWindow^ sender,
-        _In_ Windows::UI::Core::PointerEventArgs^ args
-        );
-    void OnPointerExited(
-        _In_ Windows::UI::Core::CoreWindow^ sender,
-        _In_ Windows::UI::Core::PointerEventArgs^ args
-        );
-    void OnKeyDown(
-        _In_ Windows::UI::Core::CoreWindow^ sender,
-        _In_ Windows::UI::Core::KeyEventArgs^ args
-        );
-    void OnKeyUp(
-        _In_ Windows::UI::Core::CoreWindow^ sender,
-        _In_ Windows::UI::Core::KeyEventArgs^ args
-        );
-
-    void OnMouseMoved(
-        _In_ Windows::Devices::Input::MouseDevice^ mouseDevice,
-        _In_ Windows::Devices::Input::MouseEventArgs^ args
-        );
-
-#ifdef MOVELOOKCONTROLLER_TRACE
-    void DebugTrace(const wchar_t *format, ...);
-#endif
-
-private:
-    // Properties of the controller object
-    MoveLookControllerState     m_state;
-    DirectX::XMFLOAT3           m_velocity;             // How far we move it this frame
-    float                       m_pitch;
-    float                       m_yaw;                  // Orientation euler angles in radians
-
-    // Properties of the Move control
-    DirectX::XMFLOAT2           m_moveUpperLeft;        // Bounding box where this control will activate
-    DirectX::XMFLOAT2           m_moveLowerRight;
-    bool                        m_moveInUse;            // The move control is in use.
-    uint32                      m_movePointerID;        // The id of the pointer in this control.
-    DirectX::XMFLOAT2           m_moveFirstDown;        // The point where the initial contact occurred.
-    DirectX::XMFLOAT2           m_movePointerPosition;  // The point where the move pointer is currently located.
-    DirectX::XMFLOAT3           m_moveCommand;          // The net command from the move control.
-
-    // Properties of the Look control
-    bool                        m_lookInUse;            // The look control is in use.
-    uint32                      m_lookPointerID;        // The id of the pointer in this control.
-    DirectX::XMFLOAT2           m_lookLastPoint;        // The last point (from last frame)
-    DirectX::XMFLOAT2           m_lookLastDelta;        // for smoothing.
-
-    // Properties of the Fire control
-    bool                        m_autoFire;
-    bool                        m_firePressed;
-    DirectX::XMFLOAT2           m_fireUpperLeft;        // The bounding box where this control will activate.
-    DirectX::XMFLOAT2           m_fireLowerRight;
-    bool                        m_fireInUse;            // The fire control is in use.
-    UINT32                      m_firePointerID;        // The id of the pointer in this control.
-    DirectX::XMFLOAT2           m_fireLastPoint;        // The last fire position.
-
-    // Properties of the Mouse control. This is a combination of Look and Fire.
-    bool                        m_mouseInUse;
-    uint32                      m_mousePointerID;
-    DirectX::XMFLOAT2           m_mouseLastPoint;
-    bool                        m_mouseLeftInUse;
-    bool                        m_mouseRightInUse;
-
-    bool                        m_buttonInUse;
-    uint32                      m_buttonPointerID;
-    DirectX::XMFLOAT2           m_buttonUpperLeft;
-    DirectX::XMFLOAT2           m_buttonLowerRight;
-    bool                        m_buttonPressed;
-    bool                        m_pausePressed;
-
-    // XBox Input related members
-    bool                        m_isControllerConnected;  // Do we have a controller connected?
-    XINPUT_CAPABILITIES         m_xinputCaps;             // The capabilites of the controller.
-    XINPUT_STATE                m_xinputState;            // The current state of the controller.
-    bool                        m_xinputStartButtonInUse;
-    bool                        m_xinputTriggerInUse;
-
-    // Input states for Keyboard
-    bool                        m_forward;
-    bool                        m_back;                    // States for movement
-    bool                        m_left;
-    bool                        m_right;
-    bool                        m_up;
-    bool                        m_down;
-    bool                        m_pause;
-
-private:
-    void     ResetState();
-    void     UpdateGameController();
-};
-```
-
-MoveLookController.cpp
-
-```cpp
-//// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF
-//// ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO
-//// THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
-//// PARTICULAR PURPOSE.
-////
-//// Copyright (c) Microsoft Corporation. All rights reserved
-
-#include "pch.h"
-#include "MoveLookController.h"
-#include "DirectXSample.h"
-
-using namespace Windows::UI::Core;
-using namespace Windows::UI::Input;
-using namespace Windows::UI;
-using namespace Windows::Foundation;
-using namespace Microsoft::WRL;
-using namespace DirectX;
-using namespace Windows::Devices::Input;
-using namespace Windows::System;
-
-#define ROTATION_GAIN 0.008f        // The sensitivity adjustment for the look controller.
-#define MOVEMENT_GAIN 2.f           // The sensitivity adjustment for the move controller.
-
-// A basic Move/Look Controller class such as in an FPS
-// horizontal (x-z-plane) movement on left virtual joystick
-// also supports WASD keyboard input
-// steering and orientation via left mouse down or touch drag.
-
-//----------------------------------------------------------------------
-
-MoveLookController::MoveLookController():
-    m_autoFire(true),
-    m_isControllerConnected(false)
-{
-}
-
-//----------------------------------------------------------------------
-// Set up the controls supported by this controller.
-
-void MoveLookController::Initialize(
-    _In_ CoreWindow^ window
-    )
-{
-    window->PointerPressed +=
-        ref new TypedEventHandler<CoreWindow^, PointerEventArgs^>(this, &MoveLookController::OnPointerPressed);
-
-    window->PointerMoved +=
-        ref new TypedEventHandler<CoreWindow^, PointerEventArgs^>(this, &MoveLookController::OnPointerMoved);
-
-    window->PointerReleased +=
-        ref new TypedEventHandler<CoreWindow^, PointerEventArgs^>(this, &MoveLookController::OnPointerReleased);
-
-    window->PointerExited +=
-        ref new TypedEventHandler<CoreWindow^, PointerEventArgs^>(this, &MoveLookController::OnPointerExited);
-
-    window->KeyDown +=
-        ref new TypedEventHandler<CoreWindow^, KeyEventArgs^>(this, &MoveLookController::OnKeyDown);
-
-    window->KeyUp +=
-        ref new TypedEventHandler<CoreWindow^, KeyEventArgs^>(this, &MoveLookController::OnKeyUp);
-
-    // A separate handler for mouse only relative mouse movement events.
-    Windows::Devices::Input::MouseDevice::GetForCurrentView()->MouseMoved +=
-        ref new TypedEventHandler<MouseDevice^, MouseEventArgs^>(this, &MoveLookController::OnMouseMoved);
-
-    ResetState();
-    m_state = MoveLookControllerState::None;
-
-    m_pitch = 0.0f;
-    m_yaw   = 0.0f;
-}
-
-//----------------------------------------------------------------------
-
-bool MoveLookController::IsPauseRequested()
-{
-    switch (m_state)
-    {
-    case MoveLookControllerState::Active:
-        UpdateGameController();
-        if (m_pausePressed)
-        {
-
-            m_pausePressed = false;
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
-    return false;
-}
-
-//----------------------------------------------------------------------
-
-bool MoveLookController::IsFiring()
-{
-    if (m_state == MoveLookControllerState::Active)
-    {
-        if (m_autoFire)
-        {
-            return (m_fireInUse || (m_mouseInUse && m_mouseLeftInUse) || m_xinputTriggerInUse);
-        }
-        else
-        {
-            if (m_firePressed)
-            {
-                m_firePressed = false;
-                return true;
-            }
-        }
-    }
-    return false;
-}
-
-//----------------------------------------------------------------------
-
-bool MoveLookController::IsPressComplete()
-{
-    switch (m_state)
-    {
-    case MoveLookControllerState::WaitForInput:
-        UpdateGameController();
-        if (m_buttonPressed)
-        {
-
-            m_buttonPressed = false;
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-        break;
-    }
-
-    return false;
-}
-
-//----------------------------------------------------------------------
-
-void MoveLookController::OnPointerPressed(
-    _In_ CoreWindow^ /* sender */,
-    _In_ PointerEventArgs^ args
-    )
-{
-    PointerPoint^ point = args->CurrentPoint;
-    uint32 pointerID = point->PointerId;
-    Point pointerPosition = point->Position;
-    PointerPointProperties^ pointProperties = point->Properties;
-    auto pointerDevice = point->PointerDevice;
-    auto pointerDeviceType = pointerDevice->PointerDeviceType;
-
-    XMFLOAT2 position = XMFLOAT2(pointerPosition.X, pointerPosition.Y);     // Convert to allow math.
-
-    switch (m_state)
-    {
-    case MoveLookControllerState::WaitForInput:
-        if (position.x > m_buttonUpperLeft.x &&
-            position.x < m_buttonLowerRight.x &&
-            position.y > m_buttonUpperLeft.y &&
-            position.y < m_buttonLowerRight.y)
-        {
-            // Wait until button released before setting variable.
-            m_buttonPointerID = pointerID;
-            m_buttonInUse = true;
-
-        }
-        break;
-
-    case MoveLookControllerState::Active:
-        switch (pointerDeviceType)
-        {
-        case Windows::Devices::Input::PointerDeviceType::Touch:
-            // Check to see if this pointer is in the move control.
-            if (position.x > m_moveUpperLeft.x &&
-                position.x < m_moveLowerRight.x &&
-                position.y > m_moveUpperLeft.y &&
-                position.y < m_moveLowerRight.y)
-            {
-                if (!m_moveInUse)         // If no pointer is in this control yet:
-                {
-                    // Process a DPad touch down event.
-                    m_moveFirstDown = position;                 // Save the location of the initial contact.
-                    m_movePointerID = pointerID;                // Store the pointer using this control.
-                    m_moveInUse = true;
-                }
-            }
-            // Check to see if this pointer is in the fire control.
-            else if (position.x > m_fireUpperLeft.x &&
-                position.x < m_fireLowerRight.x &&
-                position.y > m_fireUpperLeft.y &&
-                position.y < m_fireLowerRight.y)
-            {
-                if (!m_fireInUse)
-                {
-                    m_fireLastPoint = position;
-                    m_firePointerID = pointerID;
-                    m_fireInUse = true;
-                    if (!m_autoFire)
-                    {
-                        m_firePressed = true;
-                    }
-                }
-            }
-            else
-            {
-                if (!m_lookInUse)   // If no pointer is in this control yet:
-                {
-                    m_lookLastPoint = position;                   // Save the point for a later move.
-                    m_lookPointerID = pointerID;                  // Store the pointer using this control.
-                    m_lookLastDelta.x = m_lookLastDelta.y = 0;    // These are for smoothing.
-                    m_lookInUse = true;
-                }
-            }
-            break;
-
-        default:
-            bool rightButton = pointProperties->IsRightButtonPressed;
-            bool leftButton = pointProperties->IsLeftButtonPressed;
-
-            if (!m_autoFire && (!m_mouseLeftInUse && leftButton))
-            {
-                m_firePressed = true;
-            }
-
-            if (!m_mouseInUse)
-            {
-                m_mouseInUse = true;
-                m_mouseLastPoint = position;
-                m_mousePointerID = pointerID;
-                m_mouseLeftInUse = leftButton;
-                m_mouseRightInUse = rightButton;
-                m_lookLastDelta.x = m_lookLastDelta.y = 0;          // These are for smoothing.
-            }
-            else
-            {
-
-            }
-            break;
-        }
-
-        break;
-    }
-
-    return;
-}
-
-//----------------------------------------------------------------------
-
-void MoveLookController::OnPointerMoved(
-    _In_ CoreWindow^ /* sender */,
-    _In_ PointerEventArgs^ args
-    )
-{
-    PointerPoint^ point = args->CurrentPoint;
-    uint32 pointerID = point->PointerId;
-    Point pointerPosition = point->Position;
-    PointerPointProperties^ pointProperties = point->Properties;
-    auto pointerDevice = point->PointerDevice;
-
-    XMFLOAT2 position = XMFLOAT2(pointerPosition.X, pointerPosition.Y);     // Convert to allow math.
-
-    switch (m_state)
-    {
-    case MoveLookControllerState::Active:
-        // Decide which control this pointer is operating.
-        if (pointerID == m_movePointerID)     // This is the move pointer.
-        {
-            m_movePointerPosition = position;       // Save the current position.
-        }
-        else if (pointerID == m_lookPointerID)     // This is the look pointer.
-        {
-            // Look control
-            XMFLOAT2 pointerDelta;
-            pointerDelta.x = position.x - m_lookLastPoint.x;        // How far did the pointer move?
-            pointerDelta.y = position.y - m_lookLastPoint.y;
-
-            XMFLOAT2 rotationDelta;
-            rotationDelta.x = pointerDelta.x * ROTATION_GAIN;       // Scale for control sensitivity.
-            rotationDelta.y = pointerDelta.y * ROTATION_GAIN;
-            m_lookLastPoint = position;                             // Save for the next time through.
-
-            // Update our orientation based on the command.
-            m_pitch -= rotationDelta.y;
-            m_yaw   += rotationDelta.x;
-
-            // Limit pitch to straight up or straight down.
-            float limit = XM_PI / 2.0f - 0.01f;
-            m_pitch = __max(-limit, m_pitch);
-            m_pitch = __min(+limit, m_pitch);
-
-            // Keep longitude in the same range by wrapping.
-            if (m_yaw >  XM_PI)
-            {
-                m_yaw -= XM_PI * 2.0f;
-            }
-            else if (m_yaw < -XM_PI)
-            {
-                m_yaw += XM_PI * 2.0f;
-            }
-        }
-        else if (pointerID == m_firePointerID)
-        {
-            m_fireLastPoint = position;
-        }
-        else if (pointerID == m_mousePointerID)
-        {
-            m_mouseLeftInUse  = pointProperties->IsLeftButtonPressed;
-            m_mouseRightInUse = pointProperties->IsRightButtonPressed;;
-            m_mouseLastPoint = position;                            // save for next time through
-
-            // Handle mouse movement via a separate relative mouse movement handler (OnMouseMoved).
-        }
-        break;
-    }
-}
-
-//----------------------------------------------------------------------
-
-void MoveLookController::OnMouseMoved(
-    _In_ MouseDevice^ /* mouseDevice */,
-    _In_ MouseEventArgs^ args
-    )
-{
-    // Handle Mouse Input via dedicated relative movement handler.
-
-    switch (m_state)
-    {
-    case MoveLookControllerState::Active:
-        XMFLOAT2 mouseDelta;
-        mouseDelta.x = static_cast<float>(args->MouseDelta.X);
-        mouseDelta.y = static_cast<float>(args->MouseDelta.Y);
-
-        XMFLOAT2 rotationDelta;
-        rotationDelta.x  = mouseDelta.x * ROTATION_GAIN;   // Scale for control sensitivity.
-        rotationDelta.y  = mouseDelta.y * ROTATION_GAIN;
-
-        // Update our orientation based on the command.
-        m_pitch -= rotationDelta.y;
-        m_yaw   += rotationDelta.x;
-
-        // Limit pitch to straight up or straight down.
-        float limit = XM_PI / 2.0f - 0.01f;
-        m_pitch = __max(-limit, m_pitch);
-        m_pitch = __min(+limit, m_pitch);
-
-        // Keep longitude in same range by wrapping.
-        if (m_yaw >  XM_PI)
-        {
-            m_yaw -= XM_PI * 2.0f;
-        }
-        else if (m_yaw < -XM_PI)
-        {
-            m_yaw += XM_PI * 2.0f;
-        }
-        break;
-    }
-}
-
-//----------------------------------------------------------------------
-
-void MoveLookController::OnPointerReleased(
-    _In_ CoreWindow^ /* sender */,
-    _In_ PointerEventArgs^ args
-    )
-{
-    PointerPoint^ point = args->CurrentPoint;
-    uint32 pointerID = point->PointerId;
-    Point pointerPosition = point->Position;
-    PointerPointProperties^ pointProperties = point->Properties;
-
-    XMFLOAT2 position = XMFLOAT2(pointerPosition.X, pointerPosition.Y);     // Convert to allow math.
-    switch (m_state)
-    {
-    case MoveLookControllerState::WaitForInput:
-        if (m_buttonInUse && (pointerID == m_buttonPointerID))
-        {
-            m_buttonInUse = false;
-            m_buttonPressed = true;
-        }
-        break;
-
-    case MoveLookControllerState::Active:
-        if (pointerID == m_movePointerID)
-        {
-            m_velocity = XMFLOAT3(0, 0, 0);      // Stop on release.
-            m_moveInUse = false;
-            m_movePointerID = 0;
-        }
-        else if (pointerID == m_lookPointerID)
-        {
-            m_lookInUse = false;
-            m_lookPointerID = 0;
-        }
-        else if (pointerID == m_firePointerID)
-        {
-            m_fireInUse = false;
-            m_firePointerID = 0;
-        }
-        else if (pointerID == m_mousePointerID)
-        {
-            bool rightButton = pointProperties->IsRightButtonPressed;
-            bool leftButton = pointProperties->IsLeftButtonPressed;
-
-            m_mouseInUse = false;
-
-            // Don't clear the mouse pointer ID so that Move events still result in Look changes.
-            // m_mousePointerID = 0;
-            m_mouseLeftInUse = leftButton;
-            m_mouseRightInUse = rightButton;
-        }
-        break;
-    }
-}
-
-//----------------------------------------------------------------------
-
-void MoveLookController::OnPointerExited(
-    _In_ CoreWindow^ /* sender */,
-    _In_ PointerEventArgs^ args
-    )
-{
-    PointerPoint^ point = args->CurrentPoint;
-    uint32 pointerID = point->PointerId;
-    Point pointerPosition = point->Position;
-    PointerPointProperties^ pointProperties = point->Properties;
-
-    XMFLOAT2 position  = XMFLOAT2(pointerPosition.X, pointerPosition.Y);        // Convert to allow math.
-
-    switch (m_state)
-    {
-    case MoveLookControllerState::WaitForInput:
-        if (m_buttonInUse && (pointerID == m_buttonPointerID))
-        {
-            m_buttonInUse = false;
-            m_buttonPressed = false;
-        }
-        break;
-
-    case MoveLookControllerState::Active:
-        if (pointerID == m_movePointerID)
-        {
-            m_velocity = XMFLOAT3(0, 0, 0);      // Stop on release.
-            m_moveInUse = false;
-            m_movePointerID = 0;
-        }
-        else if (pointerID == m_lookPointerID)
-        {
-            m_lookInUse = false;
-            m_lookPointerID = 0;
-        }
-        else if (pointerID == m_firePointerID)
-        {
-            m_fireInUse = false;
-            m_firePointerID = 0;
-        }
-        else if (pointerID == m_mousePointerID)
-        {
-            m_mouseInUse = false;
-            m_mousePointerID = 0;
-            m_mouseLeftInUse = false;
-            m_mouseRightInUse = false;
-        }
-        break;
-    }
-}
-
-//----------------------------------------------------------------------
-
-void MoveLookController::OnKeyDown(
-    _In_ CoreWindow^ /* sender */,
-    _In_ KeyEventArgs^ args
-    )
-{
-    Windows::System::VirtualKey Key;
-    Key = args->VirtualKey;
-
-    // Figure out the command from the keyboard.
-    if (Key == VirtualKey::W)       // forward
-        m_forward = true;
-    if (Key == VirtualKey::S)       // back
-        m_back = true;
-    if (Key == VirtualKey::A)       // left
-        m_left = true;
-    if (Key == VirtualKey::D)       // right
-        m_right = true;
-    if (Key == VirtualKey::Space)   // up
-        m_up = true;
-    if (Key == VirtualKey::X)       // down
-        m_down = true;
-    if (Key == VirtualKey::P)       // Pause
-        m_pause = true;
-}
-
-//----------------------------------------------------------------------
-
-void MoveLookController::OnKeyUp(
-    _In_ CoreWindow^ /* sender */,
-    _In_ KeyEventArgs^ args
-    )
-{
-    Windows::System::VirtualKey Key;
-    Key = args->VirtualKey;
-
-    // Figure out the command from the keyboard.
-    if (Key == VirtualKey::W)       // Forward
-        m_forward = false;
-    if (Key == VirtualKey::S)       // Back
-        m_back = false;
-    if (Key == VirtualKey::A)       // Left
-        m_left = false;
-    if (Key == VirtualKey::D)       // Right
-        m_right = false;
-    if (Key == VirtualKey::Space)   // Up
-        m_up = false;
-    if (Key == VirtualKey::X)       // Down
-        m_down = false;
-    if (Key == VirtualKey::P)
-    {
-        if (m_pause)
-        {
-            // Trigger pause only one time on button release.
-            m_pausePressed = true;
-            m_pause = false;
-        }
-    }
-}
-
-//----------------------------------------------------------------------
-
-void MoveLookController::ResetState()
-{
-    // Reset the state of the controller.
-    // Disable any active pointer IDs to stop all interaction.
-    m_buttonPressed = false;
-    m_pausePressed = false;
-    m_buttonInUse = false;
-    m_moveInUse = false;
-    m_lookInUse = false;
-    m_fireInUse = false;
-    m_mouseInUse = false;
-    m_mouseLeftInUse = false;
-    m_mouseRightInUse = false;
-    m_movePointerID = 0;
-    m_lookPointerID = 0;
-    m_firePointerID = 0;
-    m_mousePointerID = 0;
-    m_velocity = XMFLOAT3(0.0f, 0.0f, 0.0f);
-
-    m_xinputStartButtonInUse = false;
-    m_xinputTriggerInUse = false;
-
-    m_moveCommand = XMFLOAT3(0.0f, 0.0f, 0.0f);
-    m_forward = false;
-    m_back = false;
-    m_left = false;
-    m_right = false;
-    m_up = false;
-    m_down = false;
-    m_pause = false;
-}
-
-//----------------------------------------------------------------------
-
-void MoveLookController::SetMoveRect (
-    _In_ XMFLOAT2 upperLeft,
-    _In_ XMFLOAT2 lowerRight
-    )
-{
-    m_moveUpperLeft  = upperLeft;
-    m_moveLowerRight = lowerRight;
-}
-
-//----------------------------------------------------------------------
-
-void MoveLookController::SetFireRect (
-    _In_ XMFLOAT2 upperLeft,
-    _In_ XMFLOAT2 lowerRight
-    )
-{
-    m_fireUpperLeft  = upperLeft;
-    m_fireLowerRight = lowerRight;
-}
-
-//----------------------------------------------------------------------
-
-void MoveLookController::WaitForPress(
-    _In_ XMFLOAT2 upperLeft,
-    _In_ XMFLOAT2 lowerRight
-    )
-{
-
-    ResetState();
-    m_state = MoveLookControllerState::WaitForInput;
-    m_buttonUpperLeft  = upperLeft;
-    m_buttonLowerRight = lowerRight;
-
-    // Turn on the mouse cursor.
-    CoreWindow::GetForCurrentThread()->PointerCursor = ref new CoreCursor(CoreCursorType::Arrow, 0);
-}
-
-//----------------------------------------------------------------------
-
-void MoveLookController::WaitForPress()
-{
-    ResetState();
-    m_state = MoveLookControllerState::WaitForInput;
-    m_buttonUpperLeft.x = 0.0f;
-    m_buttonUpperLeft.y = 0.0f;
-    m_buttonLowerRight.x = 0.0f;
-    m_buttonLowerRight.y = 0.0f;
-
-    // Turn on the mouse cursor.
-    CoreWindow::GetForCurrentThread()->PointerCursor = ref new CoreCursor(CoreCursorType::Arrow, 0);
-}
-
-//----------------------------------------------------------------------
-
-XMFLOAT3 MoveLookController::Velocity()
-{
-    return m_velocity;
-}
-
-//----------------------------------------------------------------------
-
-XMFLOAT3 MoveLookController::LookDirection()
-{
-    XMFLOAT3 lookDirection;
-
-    float r = cosf(m_pitch);              // In the plane
-    lookDirection.y = sinf(m_pitch);      // Vertical
-    lookDirection.z = r * cosf(m_yaw);    // Fwd-back
-    lookDirection.x = r * sinf(m_yaw);    // Left-right
-
-    return lookDirection;
-}
-
-//----------------------------------------------------------------------
-
-float MoveLookController::Pitch()
-{
-    return m_pitch;
-}
-
-//----------------------------------------------------------------------
-
-void MoveLookController::Pitch(_In_ float pitch)
-{
-    m_pitch = pitch;
-}
-
-//----------------------------------------------------------------------
-
-float MoveLookController::Yaw()
-{
-    return m_yaw;
-}
-
-//----------------------------------------------------------------------
-
-void MoveLookController::Yaw(_In_ float yaw)
-{
-    m_yaw = yaw;
-}
-
-//----------------------------------------------------------------------
-
-void MoveLookController::Active(_In_ bool active)
-{
-    ResetState();
-
-    if (active)
-    {
-        m_state = MoveLookControllerState::Active;
-        // Turn the mouse cursor off (hidden).
-        CoreWindow::GetForCurrentThread()->PointerCursor = nullptr;
-    }
-    else
-    {
-        m_state = MoveLookControllerState::None;
-        // Turn the mouse cursor on.
-        auto window = CoreWindow::GetForCurrentThread();
-        if (window)
-        {
-            // Protect case where there isn't a window associated with the current thread.
-            // This happens on initialization.
-            window->PointerCursor = ref new CoreCursor(CoreCursorType::Arrow, 0);
-        }
-    }
-}
-
-//----------------------------------------------------------------------
-
-bool MoveLookController::Active()
-{
-    if (m_state == MoveLookControllerState::Active)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
-}
-
-//----------------------------------------------------------------------
-
-void MoveLookController::AutoFire(_In_ bool autoFire)
-{
-    m_autoFire = autoFire;
-}
-
-//----------------------------------------------------------------------
-
-bool MoveLookController::AutoFire()
-{
-    return m_autoFire;
-}
-
-//----------------------------------------------------------------------
-
-void MoveLookController::Update()
-{
-    UpdateGameController();
-
-    if (m_moveInUse)
-    {
-        // Move control.
-        XMFLOAT2 pointerDelta;
-
-        pointerDelta.x = m_movePointerPosition.x - m_moveFirstDown.x;
-        pointerDelta.y = m_movePointerPosition.y - m_moveFirstDown.y;
-
-        // Figure out the command from the virtual joystick.
-        XMFLOAT3 commandDirection = XMFLOAT3(0.0f, 0.0f, 0.0f);
-        if (fabsf(pointerDelta.x) > 16.0f)         // leave 32 pixel-wide dead spot for being still
-            m_moveCommand.x -= pointerDelta.x/fabsf(pointerDelta.x);
-
-        if (fabsf(pointerDelta.y) > 16.0f)
-            m_moveCommand.y -= pointerDelta.y/fabsf(pointerDelta.y);
-    }
-
-    // Poll our state bits set by the keyboard input events.
-    if (m_forward)
-    {
-        m_moveCommand.y += 1.0f;
-    }
-    if (m_back)
-    {
-        m_moveCommand.y -= 1.0f;
-    }
-    if (m_left)
-    {
-        m_moveCommand.x += 1.0f;
-    }
-    if (m_right)
-    {
-        m_moveCommand.x -= 1.0f;
-    }
-    if (m_up)
-    {
-        m_moveCommand.z += 1.0f;
-    }
-    if (m_down)
-    {
-        m_moveCommand.z -= 1.0f;
-    }
-
-    // Make sure that 45 deg cases are not faster.
-    if (fabsf(m_moveCommand.x) > 0.1f ||
-        fabsf(m_moveCommand.y) > 0.1f ||
-        fabsf(m_moveCommand.z) > 0.1f)
-    {
-        XMStoreFloat3(&m_moveCommand, XMVector3Normalize(XMLoadFloat3(&m_moveCommand)));
-    }
-
-    // Rotate command to align with our direction (world coordinates).
-    XMFLOAT3 wCommand;
-    wCommand.x =  m_moveCommand.x * cosf(m_yaw) - m_moveCommand.y * sinf(m_yaw);
-    wCommand.y =  m_moveCommand.x * sinf(m_yaw) + m_moveCommand.y * cosf(m_yaw);
-    wCommand.z =  m_moveCommand.z;
-
-    // Scale for sensitivity adjustment.
-    // Our velocity is based on the command, y is up.
-    m_velocity.x = -wCommand.x * MOVEMENT_GAIN;
-    m_velocity.z =  wCommand.y * MOVEMENT_GAIN;
-    m_velocity.y =  wCommand.z * MOVEMENT_GAIN;
-
-    // Clear the movement input accumulator for use during next frame.
-    m_moveCommand = XMFLOAT3(0.0f, 0.0f, 0.0f);
-}
-
-//----------------------------------------------------------------------
-
-void MoveLookController::UpdateGameController()
-{
-    if (!m_isControllerConnected)
-    {
-        // Check for controller connection by trying to get the capabilties.
-        DWORD capsResult = XInputGetCapabilities(0, XINPUT_FLAG_GAMEPAD, &m_xinputCaps);
-        if (capsResult != ERROR_SUCCESS)
-        {
-            return;
-        }
-        // The device is connected.
-        m_isControllerConnected = true;
-        m_xinputStartButtonInUse = false;
-        m_xinputTriggerInUse = false;
-    }
-
-    DWORD stateResult = XInputGetState(0, &m_xinputState);
-    if (stateResult != ERROR_SUCCESS)
-    {
-        // The device is no longer connected.
-        m_isControllerConnected = false;
-    }
-
-    switch (m_state)
-    {
-    case MoveLookControllerState::WaitForInput:
-        if (m_xinputState.Gamepad.wButtons & XINPUT_GAMEPAD_START)
-        {
-            m_xinputStartButtonInUse = true;
-        }
-        else if (m_xinputStartButtonInUse)
-        {
-            // Trigger one time only on button release.
-            m_xinputStartButtonInUse = false;
-            m_buttonPressed = true;
-        }
-        break;
-
-    case MoveLookControllerState::Active:
-        if (m_xinputState.Gamepad.wButtons & XINPUT_GAMEPAD_START)
-        {
-            m_xinputStartButtonInUse = true;
-        }
-        else if (m_xinputStartButtonInUse)
-        {
-            // Trigger one time only on button release.
-            m_xinputStartButtonInUse = false;
-            m_pausePressed = true;
-        }
-        // Use the Right Thumb joystick on the XBox controller to control
-        // the eye point position control.
-        // The controller input goes from -32767 to 32767.   We will normalize
-        // this from -1 to 1 and keep a dead spot in the middle to avoid drift.
-
-        if (m_xinputState.Gamepad.sThumbLX > XINPUT_GAMEPAD_LEFT_THUMB_DEADZONE ||
-            m_xinputState.Gamepad.sThumbLX < -XINPUT_GAMEPAD_LEFT_THUMB_DEADZONE)
-        {
-            float x = (float)m_xinputState.Gamepad.sThumbLX/32767.0f;
-            m_moveCommand.x -= x / fabsf(x);
-        }
-
-        if (m_xinputState.Gamepad.sThumbLY > XINPUT_GAMEPAD_LEFT_THUMB_DEADZONE ||
-            m_xinputState.Gamepad.sThumbLY < -XINPUT_GAMEPAD_LEFT_THUMB_DEADZONE)
-        {
-            float y = (float)m_xinputState.Gamepad.sThumbLY/32767.0f;
-            m_moveCommand.y += y / fabsf(y);
-        }
-
-        // Use the Left Thumb Joystick on the XBox controller to control
-        // the look at control.
-        // The controller input goes from -32767 to 32767.   We will normalize
-        // this from -1 to 1 and keep a dead spot in the middle to avoid drift.
-        XMFLOAT2 pointerDelta;
-        if (m_xinputState.Gamepad.sThumbRX > XINPUT_GAMEPAD_RIGHT_THUMB_DEADZONE ||
-            m_xinputState.Gamepad.sThumbRX < -XINPUT_GAMEPAD_RIGHT_THUMB_DEADZONE)
-        {
-            pointerDelta.x = (float)m_xinputState.Gamepad.sThumbRX/32767.0f;
-            pointerDelta.x = pointerDelta.x * pointerDelta.x * pointerDelta.x;
-        }
-        else
-        {
-            pointerDelta.x = 0.0f;
-        }
-        if (m_xinputState.Gamepad.sThumbRY > XINPUT_GAMEPAD_RIGHT_THUMB_DEADZONE ||
-            m_xinputState.Gamepad.sThumbRY < -XINPUT_GAMEPAD_RIGHT_THUMB_DEADZONE)
-        {
-            pointerDelta.y = (float)m_xinputState.Gamepad.sThumbRY/32767.0f;
-            pointerDelta.y = pointerDelta.y * pointerDelta.y * pointerDelta.y;
-        }
-        else
-        {
-            pointerDelta.y = 0.0f;
-        }
-
-        XMFLOAT2 rotationDelta;
-        rotationDelta.x = pointerDelta.x *  0.08f;       // scale for control sensitivity
-        rotationDelta.y = pointerDelta.y *  0.08f;
-
-        // Update our orientation based on the command.
-        m_pitch += rotationDelta.y;
-        m_yaw   += rotationDelta.x;
-
-        // Limit pitch to straight up or straight down.
-        m_pitch = __max(-XM_PI / 2.0f, m_pitch);
-        m_pitch = __min(+XM_PI / 2.0f, m_pitch);
-
-        // Check the state of the A button.  This is used to indicate fire control.
-
-        if (m_xinputState.Gamepad.bRightTrigger > XINPUT_GAMEPAD_TRIGGER_THRESHOLD)
-        {
-            if (!m_autoFire && !m_xinputTriggerInUse)
-            {
-                m_firePressed = true;
-            }
-            m_xinputTriggerInUse = true;
-        }
-        else
-        {
-            m_xinputTriggerInUse = false;
-        }
-        break;
-    }
-}
-```
-
-> **Hinweis**  
-Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
-
- 
-
-## <a name="related-topics"></a>Verwandte Themen
-
-
-[Erstellen eines einfachen UWP-Spiels mit DirectX](tutorial--create-your-first-metro-style-directx-game.md)
-
+<span data-ttu-id="1148f-335">Nachdem wir unsere Steuerelemente hinzugefügt haben, gibt es eine weitere Funktion, die wir hinzufügen müssen, um ein immersives Spiel zu erstellen: Sound!</span><span class="sxs-lookup"><span data-stu-id="1148f-335">Now that we have added our controls, there's another feature we need to add to create an immersive game: sound!</span></span>
+<span data-ttu-id="1148f-336">Musik und Soundeffekte sind bei jedem Spiel wichtig. Befassen wir uns also mit dem [Hinzufügen von Sound](tutorial--adding-sound.md).</span><span class="sxs-lookup"><span data-stu-id="1148f-336">Music and sound effects are important to any game, so let's discuss [adding sound](tutorial--adding-sound.md) next.</span></span>
  
 
  
 
+ 
 
 
 

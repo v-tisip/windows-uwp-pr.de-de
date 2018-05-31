@@ -1,0 +1,76 @@
+---
+author: Xansky
+Description: Provides a checklist to help you ensure that your Universal Windows Platform (UWP) app is accessible.
+ms.assetid: BB8399E2-7013-4F77-AF2C-C1A0E5412856
+title: Prüfliste für die Barrierefreiheit
+label: Accessibility checklist
+template: detail.hbs
+ms.author: mhopkins
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows10, UWP
+ms.localizationpriority: medium
+ms.openlocfilehash: 658b93aa72efbaacaf4e8bb1ec98bd2adb5cfa9a
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1653789"
+---
+# <a name="accessibility-checklist"></a><span data-ttu-id="842ad-103">Prüfliste für die Barrierefreiheit</span><span class="sxs-lookup"><span data-stu-id="842ad-103">Accessibility checklist</span></span>
+
+
+
+<span data-ttu-id="842ad-104">Bietet eine Prüfliste, mit der Sie sicherstellen können, dass Ihre App für die Universelle Windows-Plattform (UWP) barrierefrei ist.</span><span class="sxs-lookup"><span data-stu-id="842ad-104">Provides a checklist to help you ensure that your Universal Windows Platform (UWP) app is accessible .</span></span>
+
+<span data-ttu-id="842ad-105">Hier finden Sie eine Prüfliste, die Sie verwenden können, um den Zugriff auf Ihre App sicherzustellen.</span><span class="sxs-lookup"><span data-stu-id="842ad-105">Here we provide a checklist you can use to ensure that your app is accessible.</span></span>
+
+1.  <span data-ttu-id="842ad-106">Legen Sie den Namen (erforderlich) und die Beschreibung (optional) zur Verwendung durch Bildschirmleseprogramme für den Inhalt und die interaktiven UI-Elemente Ihrer App fest.</span><span class="sxs-lookup"><span data-stu-id="842ad-106">Set the accessible name (required) and description (optional) for content and interactive UI elements in your app.</span></span>
+
+    <span data-ttu-id="842ad-107">Ein barrierefreier Name ist eine kurze, beschreibende Textzeichenfolge, mit der die Sprachausgabe ein UI-Element ansagt.</span><span class="sxs-lookup"><span data-stu-id="842ad-107">An accessible name is a short, descriptive text string that a screen reader uses to announce a UI element.</span></span> <span data-ttu-id="842ad-108">Einige UI-Elemente wie [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) und [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) unterstützen ihren Textinhalt als standardmäßigen Namen für Bildschirmleseprogramme (siehe [Grundlegende Informationen zur Barrierefreiheit](basic-accessibility-information.md#name_from_inner_text)).</span><span class="sxs-lookup"><span data-stu-id="842ad-108">Some UI elements such as [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) and [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) promote their text content as the default accessible name; see [Basic accessibility information](basic-accessibility-information.md#name_from_inner_text).</span></span>
+
+    <span data-ttu-id="842ad-109">Für Bilder oder andere Steuerelemente, bei denen der innere Text nicht als impliziter Name für Bildschirmleseprogramme verwendet werden kann, muss der Name explizit festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="842ad-109">You should set the accessible name explicitly for images or other controls that do not promote inner text content as an implicit accessible name.</span></span> <span data-ttu-id="842ad-110">Verwenden Sie Bezeichnungen für Formularelemente, damit der Bezeichnungstext als [**LabeledBy**](https://msdn.microsoft.com/library/windows/apps/Hh759769)-Ziel im Microsoft-Benutzeroberflächenautomatisierungs-Modell zum Korrelieren von Bezeichnungen und Eingaben verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="842ad-110">You should use labels for form elements so that the label text can be used as a [**LabeledBy**](https://msdn.microsoft.com/library/windows/apps/Hh759769) target in the Microsoft UI Automation model for correlating labels and inputs.</span></span> <span data-ttu-id="842ad-111">Wenn Sie mehr Informationen und Anweisungen zur Benutzeroberfläche für Benutzer bereitstellen möchten als normalerweise im Namen für Bildschirmleseprogramme enthalten sind, können Sie Beschreibungen und QuickInfos für Bildschirmleseprogramme implementieren.</span><span class="sxs-lookup"><span data-stu-id="842ad-111">If you want to provide more UI guidance for users than is typically included in the accessible name, accessible descriptions and tooltips help users understand the UI.</span></span>
+
+    <span data-ttu-id="842ad-112">Weitere Informationen finden Sie unter [Name zur Verwendung durch Bildschirmleseprogramme](basic-accessibility-information.md#accessible_name) und [Beschreibung zur Verwendung durch Bildschirmleseprogramme](basic-accessibility-information.md).</span><span class="sxs-lookup"><span data-stu-id="842ad-112">For more info, see [Accessible name](basic-accessibility-information.md#accessible_name) and [Accessible description](basic-accessibility-information.md).</span></span>
+
+2.  <span data-ttu-id="842ad-113">Implementieren Sie Barrierefreiheit für den Tastaturzugriff:</span><span class="sxs-lookup"><span data-stu-id="842ad-113">Implement keyboard accessibility:</span></span>
+
+    * <span data-ttu-id="842ad-114">Testen Sie die standardmäßige Aktivierreihenfolge (Tabindex) für eine Benutzeroberfläche.</span><span class="sxs-lookup"><span data-stu-id="842ad-114">Test the default tab index order for a UI.</span></span> <span data-ttu-id="842ad-115">Passen Sie die Aktivierreihenfolge ggf. an. Dazu müssen Sie möglicherweise bestimmte Steuerelemente aktivieren oder deaktivieren oder die Standardwerte von [**TabIndex**](https://msdn.microsoft.com/library/windows/apps/BR209461) für einige UI-Elemente ändern.</span><span class="sxs-lookup"><span data-stu-id="842ad-115">Adjust the tab index order if necessary, which may require enabling or disabling certain controls, or changing the default values of [**TabIndex**](https://msdn.microsoft.com/library/windows/apps/BR209461) on some of the UI elements.</span></span>
+    * <span data-ttu-id="842ad-116">Verwenden Sie Steuerelemente, die eine Navigation mit Pfeiltasten für zusammengesetzte Elemente unterstützen.</span><span class="sxs-lookup"><span data-stu-id="842ad-116">Use controls that support arrow-key navigation for composite elements.</span></span> <span data-ttu-id="842ad-117">Für standardmäßige Steuerelemente ist die Navigation mit Pfeiltasten normalerweise bereits implementiert.</span><span class="sxs-lookup"><span data-stu-id="842ad-117">For default controls, the arrow-key navigation is typically already implemented.</span></span>
+    * <span data-ttu-id="842ad-118">Verwenden Sie Steuerelemente, die die Tastaturaktivierung unterstützen.</span><span class="sxs-lookup"><span data-stu-id="842ad-118">Use controls that support keyboard activation.</span></span> <span data-ttu-id="842ad-119">Für standardmäßige Steuerelemente (insbesondere diejenigen, die das [**Invoke**](https://msdn.microsoft.com/library/windows/apps/BR242582)-Muster der Benutzeroberflächenautomatisierung unterstützen) ist die Tastaturaktivierung normalerweise verfügbar. Hinweise dazu finden Sie in der Dokumentation der jeweiligen Steuerelemente.</span><span class="sxs-lookup"><span data-stu-id="842ad-119">For default controls, particularly those that support the UI Automation [**Invoke**](https://msdn.microsoft.com/library/windows/apps/BR242582) pattern, keyboard activation is typically available; check the documentation for that control.</span></span>
+    * <span data-ttu-id="842ad-120">Implementieren Sie Tastenkombinationen für bestimmte Teile der Benutzeroberfläche, die Interaktion unterstützen.</span><span class="sxs-lookup"><span data-stu-id="842ad-120">Set access keys or implement accelerator keys for specific parts of the UI that support interaction.</span></span>
+    * <span data-ttu-id="842ad-121">Überprüfen Sie für alle benutzerdefinierten Steuerelemente der Benutzeroberfläche, ob Sie sie mit der entsprechenden [**AutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR209185)-Unterstützung für die Aktivierung implementiert haben. Stellen Sie auch sicher, dass Sie die notwendigen Überschreibungen für die Tastenbehandlung definiert haben, um Aktivieren, Durchlaufen und Auswählen oder Tastenkombinationen zu unterstützen.</span><span class="sxs-lookup"><span data-stu-id="842ad-121">For any custom controls that you use in your UI, verify that you have implemented these controls with correct [**AutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR209185) support for activation, and defined overrides for key handling as needed to support activation, traversal and access or accelerator keys.</span></span>
+
+    <span data-ttu-id="842ad-122">Weitere Informationen finden Sie unter [Tastaturinteraktionen](https://msdn.microsoft.com/library/windows/apps/Mt185607).</span><span class="sxs-lookup"><span data-stu-id="842ad-122">For more info, see [Keyboard interactions](https://msdn.microsoft.com/library/windows/apps/Mt185607).</span></span>
+
+3.  <span data-ttu-id="842ad-123">Schauen Sie sich die Benutzeroberfläche an, um sicherzustellen, dass der Textkontrast ausreicht, Elemente in Designs mit hohem Kontrast richtig dargestellt werden und Farben korrekt verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="842ad-123">Visually verify your UI to ensure that the text contrast is adequate, elements render correctly in the high-contrast themes, and colors are used correctly.</span></span>
+
+    * <span data-ttu-id="842ad-124">Verwenden Sie die Systemanzeigeoptionen, die den DPI-Wert der Anzeige anpassen, und stellen Sie sicher, dass Ihre App-UI bei einer Änderung des DPI-Werts richtig skaliert wird.</span><span class="sxs-lookup"><span data-stu-id="842ad-124">Use the system display options that adjust the display's dots per inch (dpi) value, and ensure that your app UI scales correctly when the dpi value changes.</span></span> <span data-ttu-id="842ad-125">(Einige Benutzer ändern DPI-Werte als Barrierefreiheitsoption; diese ist unter **Erleichterte Bedienung** verfügbar.)</span><span class="sxs-lookup"><span data-stu-id="842ad-125">(Some users change dpi values as an accessibility option, it's available from **Ease of Access**.)</span></span>
+    * <span data-ttu-id="842ad-126">Stellen Sie mithilfe eines Farbanalysetools sicher, dass das Textkontrastverhältnis mindestens 4,5:1 beträgt.</span><span class="sxs-lookup"><span data-stu-id="842ad-126">Use a color analyzer tool to verify that the visual text contrast ratio is at least 4.5:1.</span></span>
+    * <span data-ttu-id="842ad-127">Wechseln Sie zu einem Design mit hohem Kontrast, und überprüfen Sie, ob die Benutzeroberfläche Ihrer App leserlich ist und verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="842ad-127">Switch to a high contrast theme and verify that the UI for your app is readable and usable.</span></span>
+    * <span data-ttu-id="842ad-128">Stellen Sie sicher, dass die Benutzeroberfläche Informationen nicht nur mithilfe von Farben vermittelt.</span><span class="sxs-lookup"><span data-stu-id="842ad-128">Ensure that your UI doesn’t use color as the only way to convey information.</span></span>
+
+    <span data-ttu-id="842ad-129">Weitere Informationen finden Sie unter [Designs mit hohem Kontrast](high-contrast-themes.md) und [Anforderungen für barrierefreien Text](accessible-text-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="842ad-129">For more info, see [High-contrast themes](high-contrast-themes.md) and [Accessible text requirements](accessible-text-requirements.md).</span></span>
+
+4.  <span data-ttu-id="842ad-130">Führen Sie Tools zum Testen der Barrierefreiheit aus. Behandeln Sie gemeldete Probleme, und überprüfen Sie die Qualität der Sprachausgabe.</span><span class="sxs-lookup"><span data-stu-id="842ad-130">Run accessibility tools, address reported issues, and verify the screen reading experience.</span></span>
+
+    <span data-ttu-id="842ad-131">Überprüfen Sie mithilfe von Tools wie [**Inspect**](https://msdn.microsoft.com/library/windows/desktop/Dd318521) den programmgesteuerten Zugriff, führen Sie Diagnosetools wie [**AccChecker**](https://msdn.microsoft.com/library/windows/desktop/Hh920985) aus, um allgemeine Fehler zu ermitteln, und überprüfen Sie die Qualität der Sprachausgabe.</span><span class="sxs-lookup"><span data-stu-id="842ad-131">Use tools such as [**Inspect**](https://msdn.microsoft.com/library/windows/desktop/Dd318521) to verify programmatic access, run diagnostic tools such as [**AccChecker**](https://msdn.microsoft.com/library/windows/desktop/Hh920985) to discover common errors, and verify the screen reading experience with Narrator.</span></span>
+
+    <span data-ttu-id="842ad-132">Weitere Informationen finden Sie unter [Barrierefreiheitstests](accessibility-testing.md).</span><span class="sxs-lookup"><span data-stu-id="842ad-132">For more info, see [Accessibility testing](accessibility-testing.md).</span></span>
+
+5.  <span data-ttu-id="842ad-133">Stellen Sie sicher, dass die App-Manifesteinstellungen den Richtlinien für Barrierefreiheit entsprechen.</span><span class="sxs-lookup"><span data-stu-id="842ad-133">Make sure your app manifest settings follow accessibility guidelines.</span></span>
+
+6.  <span data-ttu-id="842ad-134">Deklarieren Sie Ihre App im Microsoft Store als barrierefrei.</span><span class="sxs-lookup"><span data-stu-id="842ad-134">Declare your app as accessible in the Microsoft Store.</span></span>
+
+    <span data-ttu-id="842ad-135">Wenn Sie die grundlegende Unterstützung für Barrierefreiheit implementiert haben, können Sie durch das Kennzeichnen Ihrer App im Microsoft Store mehr Kunden erreichen und zusätzliche gute Bewertungen erhalten.</span><span class="sxs-lookup"><span data-stu-id="842ad-135">If you implemented the baseline accessibility support, declaring your app as accessible in the Microsoft Store can help reach more customers and get some additional good ratings.</span></span>
+
+    <span data-ttu-id="842ad-136">Weitere Informationen finden Sie unter [Barrierefreiheit im Store](accessibility-in-the-store.md).</span><span class="sxs-lookup"><span data-stu-id="842ad-136">For more info, see [Accessibility in the Store](accessibility-in-the-store.md).</span></span>
+
+<span id="related_topics"/>
+
+## <a name="related-topics"></a><span data-ttu-id="842ad-137">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="842ad-137">Related topics</span></span>  
+* [<span data-ttu-id="842ad-138">Barrierefreiheit</span><span class="sxs-lookup"><span data-stu-id="842ad-138">Accessibility</span></span>](accessibility.md)
+* [<span data-ttu-id="842ad-139">Entwerfen für Barrierefreiheit</span><span class="sxs-lookup"><span data-stu-id="842ad-139">Design for accessibility</span></span>](https://msdn.microsoft.com/library/windows/apps/Hh700407)
+* [<span data-ttu-id="842ad-140">Nicht empfehlenswerte Methoden</span><span class="sxs-lookup"><span data-stu-id="842ad-140">Practices to avoid</span></span>](practices-to-avoid.md) 

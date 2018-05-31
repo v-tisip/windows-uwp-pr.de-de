@@ -1,139 +1,65 @@
 ---
-author: Mtoepke
-title: "Einführung in Xbox One-Tools"
+author: eliotcowley
+title: Einführung in Xbox One-Tools
 description: Xbox One-spezifisches Tool Dev Home (unter Verwendung des Windows Device Portal).
-ms.author: mtoepke
-ms.date: 02/08/2017
+ms.author: elcowle
+ms.date: 10/04/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
+keywords: Windows 10, UWP, Xbox One, Tools
 ms.assetid: 6eaf376f-0d7c-49de-ad78-38e689b43658
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 6f2744a571e7a601eca058957cbe181a14143b68
-ms.lasthandoff: 02/08/2017
-
+ms.localizationpriority: medium
+ms.openlocfilehash: f39759b91993bdb641dca9d3029a620ada2ab59c
+ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/03/2018
+ms.locfileid: "1701106"
 ---
+# <a name="introduction-to-xbox-one-tools"></a><span data-ttu-id="507ca-104">Einführung in Xbox One-Tools</span><span class="sxs-lookup"><span data-stu-id="507ca-104">Introduction to Xbox One tools</span></span>
 
-# <a name="introduction-to-xbox-one-tools"></a>Einführung in Xbox One-Tools
+<span data-ttu-id="507ca-105">In diesem Abschnitt wird erläutert, wie Sie auf das Xbox-Geräteportal über die Dev Home-App zugreifen.</span><span class="sxs-lookup"><span data-stu-id="507ca-105">This section covers how to access the Xbox Device Portal through the Dev Home app.</span></span>
 
-In diesem Abschnitt wird das Xbox One-spezifische Tool _Dev Home_ unter Verwendung des Windows Device Portal behandelt.
+## <a name="dev-home"></a><span data-ttu-id="507ca-106">Dev Home</span><span class="sxs-lookup"><span data-stu-id="507ca-106">Dev Home</span></span>
 
-## <a name="dev-home"></a>Dev Home
+<span data-ttu-id="507ca-107">Dev Home ist ein Tool im Xbox One Development Kit, das die Produktivität von Entwicklern unterstützen soll.</span><span class="sxs-lookup"><span data-stu-id="507ca-107">Dev Home is a tools experience on the Xbox One Development Kit designed to aid developer productivity.</span></span> <span data-ttu-id="507ca-108">Dev Home bietet Funktionen zum Verwalten und Konfigurieren Ihres Dev Kit.</span><span class="sxs-lookup"><span data-stu-id="507ca-108">Dev Home offers functionality to manage and configure your dev kit.</span></span>
 
-_Dev Home_ ist ein Tool im Xbox One Development Kit, das die Produktivität von Entwicklern unterstützen soll. Dev Home bietet Funktionen zum Verwalten und Konfigurieren Ihres Dev Kit.
+<span data-ttu-id="507ca-109">Dev Home ist die Standard-App, die geöffnet wird, wenn Ihre Konsole im Entwicklermodus gestartet wird.</span><span class="sxs-lookup"><span data-stu-id="507ca-109">Dev Home is the default app that is opened when your console in Developer Mode boots up.</span></span> <span data-ttu-id="507ca-110">Sie können Dev Home auch über die Kachel **Dev Home** auf dem Startbildschirm öffnen.</span><span class="sxs-lookup"><span data-stu-id="507ca-110">You can also open Dev Home by selecting the **Dev Home** tile on the home screen.</span></span> <span data-ttu-id="507ca-111">Ist keine Kachel vorhanden, befindet sich die Konsole nicht im Entwicklermodus.</span><span class="sxs-lookup"><span data-stu-id="507ca-111">If there is no tile present, the console is not in Developer Mode.</span></span>
 
-Wählen Sie zum Öffnen von Dev Home die Kachel **Dev Home** im Startbildschirm. Ist keine Kachel vorhanden, befindet sich die Konsole nicht im Entwicklermodus.
+<span data-ttu-id="507ca-112">Weitere Informationen zu Dev Home finden Sie unter [Entwickler-Startbildschirm auf der Konsole (Dev Home)](dev-home.md).</span><span class="sxs-lookup"><span data-stu-id="507ca-112">For more information about Dev Home, see [Developer Home on the Console (Dev Home)](dev-home.md).</span></span>
 
-  ![Windows Device Portal](images/windowsdeviceportal_1.png)
+## <a name="xbox-device-portal"></a><span data-ttu-id="507ca-113">Geräteportal für Xbox</span><span class="sxs-lookup"><span data-stu-id="507ca-113">Xbox Device Portal</span></span>
+<span data-ttu-id="507ca-114">Das Geräteportal für Xbox ist ein browserbasiertes Geräteverwaltungstool, mit dem Sie Spiele und Apps hinzufügen, Xbox Live-Test-Konten hinzufügen, Sandkastenumgebungen ändern und viele andere Aktionen durchführen können.</span><span class="sxs-lookup"><span data-stu-id="507ca-114">The Xbox Device Portal is a browser-based device management tool that allows you to add games and apps, add Xbox Live test accounts, change sandboxes, and much more.</span></span>
 
-### <a name="user-interface"></a>Benutzeroberfläche
-Die Dev Home-Benutzeroberfläche ist in die in den folgenden Abschnitten beschriebenen Bereiche unterteilt. Beachten Sie, dass die Konsolen-IP-Adresse und der Anzeigenamen hier angezeigt werden.
+<span data-ttu-id="507ca-115">So aktivieren Sie das Xbox-Geräteportal auf Ihrer Xbox One Konsole</span><span class="sxs-lookup"><span data-stu-id="507ca-115">To enable the Xbox Device Portal on your Xbox One console:</span></span>
 
-  ![DevHome-UI](images/devhome_ui.png)
+1. <span data-ttu-id="507ca-116">Wählen Sie die Kachel **Dev Home** auf dem Startbildschirm aus.</span><span class="sxs-lookup"><span data-stu-id="507ca-116">Select the **Dev Home** tile on the home screen.</span></span>
 
-#### <a name="header"></a>Header
-Der Header enthält wichtige globale Informationen über das Dev Kit „auf einen Blick“. Dazu gehören der Konsolenname, die IP-Adresse, die entsprechende Xbox Live-Sandbox und die Version des ausgeführten Betriebssystems. Auf der rechten Seite des Header werden die aktuelle Uhrzeit und das aktuelle Datum des Systems angezeigt.
+  ![Auswählen der Kachel „Dev Home“](images/introduction-to-xbox-one-tools-1.png)
 
-#### <a name="tool-windows"></a>Tool-Fenster
-Unter dem Header befindet sich der Bereich der App, der eine Reihe von konfigurierbaren Tool-Fenstern enthält. Diese sollen Entwicklern die Anpassung der App ermöglichen, um Zugriff auf verschiedene Tools und Informationsgruppen zu bieten. Weitere Informationen zu den Tools finden Sie in den folgenden Beschreibungen der einzelnen Tools. Informationen zum Konfigurieren von Layout und Darstellung der Tool-Fenster finden Sie im Abschnitt [Anpassen von Dev Home](#customizing-dev-home) später auf dieser Seite.
+2. <span data-ttu-id="507ca-118">Navigieren Sie in Dev Home zur Registerkarte **Home**, und wählen Sie im Abschnitt **Remotezugriff** die Option **Remotezugriffseinstellungen** aus.</span><span class="sxs-lookup"><span data-stu-id="507ca-118">Within Dev Home, navigate to the **Home** tab, and in the **Remote Access** section, select **Remote Access Settings**.</span></span>
 
-#### <a name="main-menu"></a>Hauptmenü
-Durch Drücken auf die Schaltfläche **Menü** auf Ihrem Controller oder durch Navigieren zur Menüschaltfläche („Hamburger“) oben links im Bildschirm können Sie auf das Hauptmenü zugreifen, das Ihnen die Konfiguration der Designfarbe und des Hintergrundbilds für den App-Workspace ermöglicht, und Feedback zur App geben.
+  ![Tool „Remoteverwaltung"](images/introduction-to-xbox-one-tools-2.png)
 
-  ![Hauptmenü](images/devhome_mainmenu.png)
+3. <span data-ttu-id="507ca-120">Aktivieren Sie das Kontrollkästchen **Xbox-Geräteportal aktivieren**.</span><span class="sxs-lookup"><span data-stu-id="507ca-120">Select the **Enable Xbox Device Portal** checkbox.</span></span>
 
-#### <a name="snap-mode"></a>Andockmodus
-Tools in Dev Home können auf der Seite angedockt werden, während Sie den Titel ausführen. Auf diese Weise haben Sie einfachen Zugriff auf Tools beim Testen.
+4. <span data-ttu-id="507ca-121">Aktivieren Sie unter **Authentifizierung** das Kontrollkästchen **Authentifizierung für Remotezugriff auf diese Konsole über das Web oder PC-Tools anfordern**.</span><span class="sxs-lookup"><span data-stu-id="507ca-121">Under **Authentication**, select the **Require authentication to remotely access this console from the web or PC tools** checkbox.</span></span>
 
-Um den Modus **Andocken** zu verwenden, wählen Sie den Titel des entsprechenden Tools, drücken Sie die Schaltfläche **Anzeigen** auf Ihrem Controller, und wählen Sie im Kontextmenü **Andocken**.
+5. <span data-ttu-id="507ca-122">Geben Sie **Benutzername** und __Kennwort__ ein, und wählen Sie **Speichern** aus.</span><span class="sxs-lookup"><span data-stu-id="507ca-122">Enter a **User name** and __Password__, and select **Save**.</span></span> <span data-ttu-id="507ca-123">Diese Benutzeranmeldeinformationen werden zum Authentifizieren des Zugriffs auf Ihr Dev Kit über einen Browser verwendet.</span><span class="sxs-lookup"><span data-stu-id="507ca-123">These credentials are used to authenticate access to your dev kit from a browser.</span></span>
 
-  ![Andockmodus](images/devhome_snapmode.png)
+6. <span data-ttu-id="507ca-124">Wählen Sie **Schließen** aus, und notieren Sie sich auf der Registerkarte **Home** die im Tool **Remoteverwaltung** aufgelistete URL.</span><span class="sxs-lookup"><span data-stu-id="507ca-124">Select **Close**, and on the **Home** tab, note the URL listed in the **Remote Access** tool.</span></span>
 
-Dev Home wird rechts angedockt. Sie können den Kontext umschalten, indem Sie wie gewohnt auf die Schaltfläche **Nexus** doppeltippen.
+7. <span data-ttu-id="507ca-125">Geben Sie die URL in Ihrem Browser ein.</span><span class="sxs-lookup"><span data-stu-id="507ca-125">Enter the URL in your browser.</span></span> <span data-ttu-id="507ca-126">Sie erhalten eine Warnung zum Zertifikat, das bereitgestellt wurde, ähnlich wie folgender Screenshot, dass das von Ihrer Xbox One Konsole signierte Sicherheitszertifikat nicht als bekannter vertrauenswürdiger Herausgeber betrachtet wird.</span><span class="sxs-lookup"><span data-stu-id="507ca-126">You will receive a warning about the certificate that was provided, similar to the following screenshot, because the security certificate signed by your Xbox One console is not considered a well-known, trusted publisher.</span></span> <span data-ttu-id="507ca-127">Klicken Sie in Edge auf **Details** und auf **Weiter zur Webseite**, um auf das Xbox-Geräteportal zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="507ca-127">On Edge, click **Details** and then **Go on to the webpage** to access the Xbox Device Portal.</span></span>
 
-  ![Nexus](images/devhome_nexus.png)
+    ![Sicherheitszertifikatwarnung](images/introduction-to-xbox-one-tools-3.png)
 
-#### <a name="tool-descriptions"></a>Tool-Beschreibungen
-| Tool    | Funktionen |
-|-------|--------------|
-| Spiele und Apps    | Listet die Titel und Anwendungen, die im Dev Kit installiert sind, sowie die Möglichkeit auf, sie schnell zu öffnen. Sie können auch den Status der Prozesslebensdauerverwaltung (PLM) von Spielen und Apps anzeigen und den PLM-Status in einem Kontextmenü ändern. |
-| Benutzer    | Listet die derzeit in der Konsole registrierten Benutzer auf. Ermöglicht das An- und Abmelden mit einem Mausklick, das Hinzufügen von Benutzern und Gästen und das Anzeigen von Informationen zu Benutzern und Gästen. |
-| [Konsoleneinstellungen](#console-settings) | Stellt eine Übersicht und Bearbeitungsoptionen der Konsoleneinstellungen und Informationen bereit. |
-| Visual Studio | Ermöglicht es Ihnen, die Konsole mit einer Instanz von Visual Studio zu koppeln, um die Bereitstellung zuzulassen. Deaktivieren Sie ggf. alle vorhandenen gekoppelten VS-Instanzen, um die UWP-App-Bereitstellung für ein Kit zu verhindern. |
-| [Windows Device Portal](#windows-device-portal) |    Ermöglicht WDP (browserbasiertes Tool zur Geräteverwaltung) im Kit. |
-| Xbox Live-Status | Enthält den aktuellen Status des Xbox Live-Diensts. |
-<br/>
-### <a name="managing-the-size-of-the-developer-storage-allocation"></a>Verwalten der Größe der Entwicklerspeicherzuteilung
+8. <span data-ttu-id="507ca-129">Melden Sie sich mit den Anmeldeinformationen an, die Sie konfiguriert haben.</span><span class="sxs-lookup"><span data-stu-id="507ca-129">Sign in with the credentials you configured.</span></span>
 
-Um den Festplattenplatz zu vergrößern oder zu verkleinern, der für den Entwicklerspeicher verwendet wird, wählen Sie im Hauptmenü **Dev-Speicher verwalten** aus. Ändern Sie den Wert der Leiste **Dev-Speicher**, und wählen Sie dann **Speichern und neu starten** aus, um die Konsole neu zu starten.
+## <a name="xbox-dev-mode-companion"></a><span data-ttu-id="507ca-130">Begleitung für den Xbox-Entwicklermodus</span><span class="sxs-lookup"><span data-stu-id="507ca-130">Xbox Dev Mode Companion</span></span>
+<span data-ttu-id="507ca-131">Die Begleitung für den Xbox-Entwicklermodus ist ein Tool, mit dessen Hilfe Sie auf der Konsole arbeiten können, ohne den PC verlassen zu müssen.</span><span class="sxs-lookup"><span data-stu-id="507ca-131">Xbox Dev Mode Companion is a tool that allows you to work on your console without leaving your PC.</span></span> <span data-ttu-id="507ca-132">Die App ermöglicht Ihnen die Anzeige des Konsolenbildschirms und das Senden von Eingaben an diesen.</span><span class="sxs-lookup"><span data-stu-id="507ca-132">The app allows you to view the console screen and send input to it.</span></span> <span data-ttu-id="507ca-133">Weitere Informationen finden Sie unter [Begleitung für den Xbox-Entwicklermodus](xbox-dev-mode-companion.md).</span><span class="sxs-lookup"><span data-stu-id="507ca-133">For more information, see [Xbox Dev Mode Companion](xbox-dev-mode-companion.md).</span></span>
 
-  ![Verwalten der Entwicklerspeicherzuteilung](images/devhome_storage.png)
-
-### <a name="customizing-dev-home"></a>Anpassen von Dev Home
-
-Dev Home kann angepasst und personalisiert werden. Sie können ein Hintergrundbild und eine Designfarbe wählen, um Dev Home zu personalisieren. Diese Optionen finden Sie im Hauptmenü.
-
-#### <a name="resizing-and-reordering-tools"></a>Ändern der Größe und Neuanordnen von Tools
-Um die Größe oder Position eines Tools zu ändern, verwenden Sie die Kontextmenüschaltfläche (Schaltfläche **Anzeigen** auf dem Controller), während der Titel im Fokus steht. Wählen Sie im Kontextmenü **Verschieben** oder **Größe ändern**.
-
-  ![Verschieben oder Größe ändern](images/devhome_move.png)
-
-#### <a name="changing-theme-color-and-background-image"></a>Ändern der Designfarbe und des Hintergrundbilds
-Sie können im Hauptmenü **Designfarbe ändern** auswählen. Um die Designfarbe zum Hervorheben des Fokus zu aktualisieren, wählen Sie eine neue Farbe, und klicken Sie dann auf **Speichern**.
-
-  ![Ändern der Designfarbe](images/devhome_colors.png)
-
-### <a name="providing-feedback"></a>Bereitstellen von Feedback
-Wählen Sie zum Bereitstellen von Feedback zu Dev Home oder einem beliebigen Tool-Prozess die Option **Feedback bereitstellen** im Hauptmenü.
-
-  ![Feedback bereitstellen](images/devhome_feedback.png)
-
-## <a name="console-settings"></a>Konsoleneinstellungen
-Das Tool für Konsoleneinstellungen bietet schnellen Zugriff auf die Einstellungen des Dev Kit.
-
-### <a name="setting-a-hostname-for-the-console"></a>Festlegen eines Hostnamens für die Konsole
-Bei der Kommunikation mit der Konsole von Ihrem Entwicklungs-PC können Sie einen Anzeigenamen (_Hostname_) für das Xbox One Dev Kit als Alternative für die Konsolen-IP-Adresse festlegen. Ihr Entwicklungs-PC und das Dev Kit müssen sich für Hostnamen-Konnektivität im selben Subnetz befinden.  
-
-Um einen Hostnamen für einen Dev Kit zu definieren, navigieren Sie zum Tool für die Konsoleneinstellungen und geben im Feld __Hostname__ den Hostnamen ein.  
-
-> [!NOTE]
-> Die Eindeutigkeit des Namens wird beim Erstellen des Hostnamens nicht erzwungen. Vermeiden Sie doppelte Namen. Eine Möglichkeit ist, den Hostnamen vom Namen Ihres Entwicklungscomputers abzuleiten, der in der Regel eindeutig in einer Organisation ist.
-
-## <a name="windows-device-portal"></a>Windows Device Portal
-Das Windows Device Portal (WDP) ist ein OneCore-Tool zur Geräteverwaltung, das eine browserbasierte Geräteverwaltung ermöglicht.
-
-> [!NOTE]
-> Weitere Informationen zu WDP finden Sie unter [Übersicht über das Windows Device Portal](../debug-test-perf/device-portal.md).
-
-So aktivieren Sie WDP auf Ihrer Xbox One-Konsole
-
-1. Wählen Sie die Kachel „Dev Home“ auf dem Startbildschirm aus.
-
-  ![Auswählen der Kachel „Dev Home“](images/windowsdeviceportal_1.png)
-
-2. Navigieren Sie in Dev Home zum Tool **Remoteverwaltung**.
-
-  ![Tool „Remoteverwaltung"](images/windowsdeviceportal_2.png)
-
-3. Wählen Sie __Windows Device Portal verwalten__, und drücken Sie __A__.
-4. Aktivieren Sie das Kontrollkästchen __Windows Device Portal aktivieren__.
-5. Geben Sie __Benutzername__ und __Kennwort__ ein, und speichern Sie. Diese werden zum Authentifizieren des Zugriffs auf Ihr Dev Kit über einen Browser verwendet.
-6. Schließen Sie die Seite __Einstellungen__, und notieren Sie sich die URL, die im Tool _Remoteverwaltung_ zum Verbinden aufgelistet ist.
-7. Geben Sie die URL in Ihrem Browser ein, und melden Sie sich mit den Anmeldeinformationen an, die Sie konfiguriert haben.
-8. Sie erhalten eine Warnung zum Zertifikat, das bereitgestellt wurde, ähnlich wie folgender Screenshot, dass das von Ihrer Xbox One-Konsole signierte Sicherheitszertifikat nicht als bekannter vertrauenswürdiger Herausgeber betrachtet wird. Klicken Sie auf **Laden dieser Website fortsetzen**, um auf das Windows Device Portal zuzugreifen.
-
-  ![Sicherheitszertifikatwarnung](images/security_cert_warning.jpg)
-
-## <a name="xbox-dev-mode-companion"></a>Begleitung für den Xbox-Entwicklermodus
-Die Begleitung für den Xbox-Entwicklermodus ist ein Tool, mit dessen Hilfe Sie auf der Konsole arbeiten können, ohne den PC verlassen zu müssen. Die App ermöglicht Ihnen die Anzeige des Konsolenbildschirms und das Senden von Eingaben an diesen. Weitere Informationen finden Sie unter [Begleitung für den Xbox-Entwicklermodus](xbox-dev-mode-companion.md).
-
-## <a name="see-also"></a>Siehe auch
-- [Verwenden von Fiddler mit Xbox One bei der Entwicklung für UWP](uwp-fiddler.md)
-- [Übersicht über das Windows Device Portal](../debug-test-perf/device-portal.md)
-- [UWP auf Xbox One](index.md)
-
-
-----
-
+## <a name="see-also"></a><span data-ttu-id="507ca-134">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="507ca-134">See also</span></span>
+- [<span data-ttu-id="507ca-135">Verwenden von Fiddler mit Xbox One bei der Entwicklung für UWP</span><span class="sxs-lookup"><span data-stu-id="507ca-135">How to use Fiddler with Xbox One when developing for UWP</span></span>](uwp-fiddler.md)
+- [<span data-ttu-id="507ca-136">Übersicht über das Windows Device Portal</span><span class="sxs-lookup"><span data-stu-id="507ca-136">Windows Device Portal overview</span></span>](../debug-test-perf/device-portal.md)
+- [<span data-ttu-id="507ca-137">UWP auf XboxOne</span><span class="sxs-lookup"><span data-stu-id="507ca-137">UWP on Xbox One</span></span>](index.md)

@@ -1,35 +1,33 @@
 ---
-author: DelfCo
+author: stevewhims
 ms.assetid: 7bb9fd81-8ab5-4f8d-a854-ce285b0669a4
-description: "Technologien für den Zugriff auf Netzwerke und Webdienste."
-title: Netzwerk und Webdienste
-ms.author: bobdel
-ms.date: 02/08/2017
+description: Methoden für den Zugriff auf Netzwerke und Webdienste.
+title: Netzwerk- und Webdienste
+ms.author: stwhi
+ms.date: 11/26/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1bb0e25e9368a6e2f7568ac51620c7a064a01ce3
-ms.lasthandoff: 02/07/2017
-
+keywords: windows 10, uwp
+ms.localizationpriority: medium
+ms.openlocfilehash: 0d5cd5c94ceae9a64088ece35679a9cea291ac03
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1689666"
 ---
+# <a name="networking-and-web-services"></a><span data-ttu-id="dc037-104">Netzwerk- und Webdienste</span><span class="sxs-lookup"><span data-stu-id="dc037-104">Networking and web services</span></span>
 
-# <a name="networking-and-web-services"></a>Netzwerk und Webdienste
+<span data-ttu-id="dc037-105">Die folgenden Netzwerk- und Webdiensttechnologien sind für Entwickler von UWP (Universelle Windows-Plattform)-Apps verfügbar.</span><span class="sxs-lookup"><span data-stu-id="dc037-105">The following networking and web services technologies are available for Universal Windows Platform (UWP) developers.</span></span>
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
-Die folgenden Netzwerk- und Webdiensttechnologien sind für Entwickler von UWP (Universelle Windows-Plattform)-Apps verfügbar.
-
-| Thema                                                                                   | Beschreibung                                                                      |
-|-----------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
-| [Grundlagen zum Netzwerk](networking-basics.md)                                               | Aktionen, die Sie für eine netzwerkfähige App ausführen müssen.                     |
-| [Welche Netzwerktechnologie?](which-networking-technology.md)                          | Eine kurze Übersicht über die Netzwerktechnologien, die für UWP-Entwickler zur Verfügung stehen, mit Vorschlägen zum Auswählen der Technologien, die für Ihre App geeignet sind.               |
-| [Netzwerkkommunikation im Hintergrund](network-communications-in-the-background.md) | Apps verwenden Hintergrundaufgaben und zwei Hauptmechanismen, um die Kommunikation aufrechtzuerhalten, während sie nicht im Vordergrund ausgeführt werden: den Socketbroker und Steuerkanaltrigger.                  |
-| [Sockets](sockets.md)                                                                   | Sie können als UWP-App-Entwickler [Windows.Networking.Sockets](https://msdn.microsoft.com/library/windows/apps/xaml/windows.networking.sockets.aspx) und [Winsock](https://msdn.microsoft.com/library/windows/desktop/ms737523) zur Kommunikation mit anderen Geräten verwenden. In diesem Thema finden Sie umfassende Anleitungen zur Verwendung des Windows.Networking.Sockets-Namespace, um Netzwerkvorgänge durchzuführen. |
-| [WebSockets](websockets.md)                                                             | WebSockets stellt einen Mechanismus für die schnelle und sichere bidirektionale Kommunikation zwischen einem Client und einem Server über das Web mithilfe von HTTP(S) bereit.                 |
-| [HttpClient](httpclient.md)                                                             | Verwenden Sie die [Windows.Web.Http](https://msdn.microsoft.com/library/windows/apps/dn279692)-Namespace-API zum Senden und Empfangen von Informationen über das HTTP-Protokoll 1.1 und 2.0.             |
-| [RSS/Atom-Feeds](web-feeds.md)                                                          | Mithilfe von Fremdanbieterfeeds, die entsprechend den RSS- und Atom-Standards mit Features im [Windows.Web.Syndication](https://msdn.microsoft.com/library/windows/apps/br243632)-Namespace generiert werden, können Sie die aktuellsten und beliebtesten Webinhalte abrufen oder erstellen.                   |
-| [Hintergrundübertragungen](background-transfers.md)                                         | Verwenden Sie die Hintergrundübertragungs-API zum zuverlässigen Kopieren von Dateien im Netzwerk.           |
-
+| <span data-ttu-id="dc037-106">Thema</span><span class="sxs-lookup"><span data-stu-id="dc037-106">Topic</span></span> | <span data-ttu-id="dc037-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="dc037-107">Description</span></span> |
+| - | - |
+| [<span data-ttu-id="dc037-108">Grundlagen zum Netzwerk</span><span class="sxs-lookup"><span data-stu-id="dc037-108">Networking basics</span></span>](networking-basics.md) | <span data-ttu-id="dc037-109">Aktionen, die Sie für eine netzwerkfähige App ausführen müssen.</span><span class="sxs-lookup"><span data-stu-id="dc037-109">Things you must do for any network-enabled app.</span></span> |
+| [<span data-ttu-id="dc037-110">Welche Netzwerktechnologie?</span><span class="sxs-lookup"><span data-stu-id="dc037-110">Which networking technology?</span></span>](which-networking-technology.md) | <span data-ttu-id="dc037-111">Eine kurze Übersicht über die Netzwerktechnologien, die für UWP-Entwickler zur Verfügung stehen, mit Vorschlägen zum Auswählen der Technologien, die für Ihre App geeignet sind.</span><span class="sxs-lookup"><span data-stu-id="dc037-111">A quick overview of the networking technologies available for a UWP developer, with suggestions on how to choose the technologies that are right for your app.</span></span> |
+| [<span data-ttu-id="dc037-112">Netzwerkkommunikation im Hintergrund</span><span class="sxs-lookup"><span data-stu-id="dc037-112">Network communications in the background</span></span>](network-communications-in-the-background.md) | <span data-ttu-id="dc037-113">Um die Netzwerkkommunikation fortzusetzen, während sie sich nicht im Vordergrund befindet, kann eine App Hintergrundaufgaben und entweder Socketbroker- oder Steuerkanaltrigger verwenden.</span><span class="sxs-lookup"><span data-stu-id="dc037-113">To continue network communication while it's not in the background, an app can use background tasks and either socket broker or control channel triggers.</span></span> |
+| [<span data-ttu-id="dc037-114">Sockets</span><span class="sxs-lookup"><span data-stu-id="dc037-114">Sockets</span></span>](sockets.md) | <span data-ttu-id="dc037-115">Sockets sind eine einfache Datenübertragungstechnologie, auf der viele Netzwerkprotokolle implementiert sind.</span><span class="sxs-lookup"><span data-stu-id="dc037-115">Sockets are a low-level data transfer technology on top of which many networking protocols are implemented.</span></span> <span data-ttu-id="dc037-116">UWP bietet TCP- und UDP-Socketklassen für Client-Server oder Peer-to-Peer-Anwendungen, unabhängig davon, ob Verbindungen langlebig sind oder keine bestehende Verbindung erforderlich ist.</span><span class="sxs-lookup"><span data-stu-id="dc037-116">UWP offers TCP and UDP socket classes for client-server or peer-to-peer applications, whether connections are long-lived or an established connection is not required.</span></span> |
+| [<span data-ttu-id="dc037-117">WebSockets</span><span class="sxs-lookup"><span data-stu-id="dc037-117">WebSockets</span></span>](websockets.md) | <span data-ttu-id="dc037-118">WebSockets stellt einen Mechanismus für die schnelle und sichere bidirektionale Kommunikation zwischen einem Client und einem Server über das Web mithilfe von HTTP(S) bereit und unterstützt sowohl UTF-8- als auch binäre Nachrichten.</span><span class="sxs-lookup"><span data-stu-id="dc037-118">WebSockets provide a mechanism for fast, secure, two-way communication between a client and a server over the web using HTTP(S), and supporting both UTF-8 and binary messages.</span></span> |
+| [<span data-ttu-id="dc037-119">HttpClient</span><span class="sxs-lookup"><span data-stu-id="dc037-119">HttpClient</span></span>](httpclient.md) | <span data-ttu-id="dc037-120">Verwenden Sie die [Windows.Web.Http](https://msdn.microsoft.com/library/windows/apps/dn279692)-Namespace-API zum Senden und Empfangen von Informationen über das HTTP-Protokoll 1.1 und 2.0.</span><span class="sxs-lookup"><span data-stu-id="dc037-120">Use [Windows.Web.Http](https://msdn.microsoft.com/library/windows/apps/dn279692) namespace API to send and receive information using the HTTP 2.0 and HTTP 1.1 protocols.</span></span> |
+| [<span data-ttu-id="dc037-121">RSS/Atom-Feeds</span><span class="sxs-lookup"><span data-stu-id="dc037-121">RSS/Atom feeds</span></span>](web-feeds.md) | <span data-ttu-id="dc037-122">Mithilfe von Fremdanbieterfeeds, die entsprechend den RSS- und Atom-Standards mit Features im [Windows.Web.Syndication](https://msdn.microsoft.com/library/windows/apps/br243632)-Namespace generiert werden, können Sie die aktuellsten und beliebtesten Webinhalte abrufen oder erstellen.</span><span class="sxs-lookup"><span data-stu-id="dc037-122">Retrieve or create the most current and popular Web content using syndicated feeds generated according to the RSS and Atom standards using features in the [Windows.Web.Syndication](https://msdn.microsoft.com/library/windows/apps/br243632) namespace.</span></span> |
+| [<span data-ttu-id="dc037-123">Hintergrundübertragungen</span><span class="sxs-lookup"><span data-stu-id="dc037-123">Background transfers</span></span>](background-transfers.md) | <span data-ttu-id="dc037-124">Verwenden Sie die Hintergrundübertragungs-API zum zuverlässigen Kopieren von Dateien im Netzwerk.</span><span class="sxs-lookup"><span data-stu-id="dc037-124">Use the background transfer API to copy files reliably over the network.</span></span> |
