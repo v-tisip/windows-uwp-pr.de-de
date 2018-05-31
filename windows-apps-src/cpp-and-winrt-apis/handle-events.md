@@ -1,0 +1,265 @@
+---
+author: stevewhims
+description: Dieses Thema zeigt, wie man Event-Handling-Delegaten mit C++/WinRT registriert und widerruft.
+title: Verarbeiten von Ereignissen über Delegaten in C++/WinRT
+ms.author: stwhi
+ms.date: 04/23/2018
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, standard, c++, cpp, winrt, projiziert, projizierung, varbeiten, ereignis, delegat
+ms.localizationpriority: medium
+ms.openlocfilehash: 44eb49e0e9797ec363c160ef701e19b58f8227a1
+ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/03/2018
+ms.locfileid: "1832014"
+---
+# <a name="handle-events-by-using-delegates-in-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a><span data-ttu-id="0583c-104">Verarbeiten von Ereignissen über Delegaten in [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)</span><span class="sxs-lookup"><span data-stu-id="0583c-104">Handle events by using delegates in [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)</span></span>
+> [!NOTE]
+> **<span data-ttu-id="0583c-105">Einige Informationen beziehen sich auf die Vorabversion, die vor der kommerziellen Freigabe möglicherweise wesentlichen Änderungen unterliegt.</span><span class="sxs-lookup"><span data-stu-id="0583c-105">Some information relates to pre-released product which may be substantially modified before it’s commercially released.</span></span> <span data-ttu-id="0583c-106">Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.</span><span class="sxs-lookup"><span data-stu-id="0583c-106">Microsoft makes no warranties, express or implied, with respect to the information provided here.</span></span>**
+
+<span data-ttu-id="0583c-107">Dieses Thema zeigt, wie man Event-Handling-Delegaten mit C++/WinRT registriert und widerruft.</span><span class="sxs-lookup"><span data-stu-id="0583c-107">This topic shows how to register and revoke event-handling delegates using C++/WinRT.</span></span> <span data-ttu-id="0583c-108">Sie können ein Ereignis mit jedem Objekt verarbeiten, das einer normalen C++ Funktion entspricht.</span><span class="sxs-lookup"><span data-stu-id="0583c-108">You can handle an event using any standard C++ function-like object.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="0583c-109">Informationen über die aktuelle Verfügbarkeit der C++/WinRT Visual Studio Extension (VSIX) (die Projektvorlagenunterstützung sowie C++/WinRT MSBuild-Eigenschaften und -Ziele bietet) finden Sie unter [Visual Studio-Unterstützung für C++/WinRT und VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).</span><span class="sxs-lookup"><span data-stu-id="0583c-109">For info about the current availability of the C++/WinRT Visual Studio Extension (VSIX) (which provides project template support, as well as C++/WinRT MSBuild properties and targets) see [Visual Studio support for C++/WinRT, and the VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).</span></span>
+
+## <a name="register-a-delegate-to-handle-an-event"></a><span data-ttu-id="0583c-110">Einen Delegaten für die Verarbeitung eines Ereignisses registrieren</span><span class="sxs-lookup"><span data-stu-id="0583c-110">Register a delegate to handle an event</span></span>
+<span data-ttu-id="0583c-111">Ein einfaches Beispiel ist die Verarbeitung des Klickereignisses einer Schaltfläche.</span><span class="sxs-lookup"><span data-stu-id="0583c-111">A simple example is handling a button's click event.</span></span> <span data-ttu-id="0583c-112">Es ist typisch, XAML-Markup zu verwenden, um eine Member-Funktion zu registrieren, um das Ereignis wie folgt zu verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="0583c-112">It's typical to use XAML markup to register a member function to handle the event, like this.</span></span>
+
+```xaml
+// MainPage.xaml
+<Button x:Name="Button" Click="ClickHandler">Click Me</Button>
+```
+
+```cppwinrt
+// MainPage.cpp
+void MainPage::ClickHandler(IInspectable const&, RoutedEventArgs const&)
+{
+    Button().Content(box_value(L"Clicked"));
+}
+```
+
+<span data-ttu-id="0583c-113">Anstatt dies im Markup zu deklarieren, können Sie explizit eine Member-Funktion registrieren, um ein Ereignis zu verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="0583c-113">Instead of doing it declaratively in markup, you can imperatively register a member function to handle an event.</span></span> <span data-ttu-id="0583c-114">Es mag nicht offensichtlich sein, aber das Argument für den [**ButtonBase::Click**](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click)-Aufruf ist eine Instanz des [**RoutedEventHandler**](/uwp/api/windows.ui.xaml.routedeventhandler)-Delegaten.</span><span class="sxs-lookup"><span data-stu-id="0583c-114">It may not be obvious from the code example below, but the argument to the [**ButtonBase::Click**](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) call is an instance of the [**RoutedEventHandler**](/uwp/api/windows.ui.xaml.routedeventhandler) delegate.</span></span> <span data-ttu-id="0583c-115">In diesem Fall verwenden wir die Überladung des **RoutedEventHandler**-Konstruktors, die ein Objekt und eine Pointer-to-Member-Funktion benötigt.</span><span class="sxs-lookup"><span data-stu-id="0583c-115">In this case, we're using the **RoutedEventHandler** constructor overload that takes an object and a pointer-to-member-function.</span></span>
+
+```cppwinrt
+// MainPage.cpp
+MainPage::MainPage()
+{
+    InitializeComponent();
+
+    Button().Click({ this, &MainPage::ClickHandler });
+}
+```
+
+<span data-ttu-id="0583c-116">Es gibt andere Möglichkeiten, ein **RoutedEventHandler** zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="0583c-116">There are other ways to construct a **RoutedEventHandler**.</span></span> <span data-ttu-id="0583c-117">Unten finden Sie den Syntaxblock aus dem Dokumentationsthema für [**RoutedEventHandler**](/uwp/api/windows.ui.xaml.routedeventhandler) (wählen Sie *C++/WinRT* im Dropdown-Menü **Sprache** auf der Seite aus).</span><span class="sxs-lookup"><span data-stu-id="0583c-117">Below is the syntax block taken from the documentation topic for [**RoutedEventHandler**](/uwp/api/windows.ui.xaml.routedeventhandler) (choose *C++/WinRT* from the **Language** drop-down on the page).</span></span> <span data-ttu-id="0583c-118">Beachten Sie die verschiedenen Konstruktoren: Einer nimmt ein Lambda entgegen (ein anderer eine freie Funktion) und ein weiterer (der oben verwendete) nimmt ein Objekt und eine Pointer-to-Member-Funktion entgegen.</span><span class="sxs-lookup"><span data-stu-id="0583c-118">Notice the various constructors: one takes a lambda; another a free function; and another (the one we used above) takes an object and a pointer-to-member-function.</span></span>
+
+```cppwinrt
+struct RoutedEventHandler : winrt::Windows::Foundation::IUnknown
+{
+    RoutedEventHandler(std::nullptr_t = nullptr) noexcept;
+    template <typename L> RoutedEventHandler(L lambda);
+    template <typename F> RoutedEventHandler(F* function);
+    template <typename O, typename M> RoutedEventHandler(O* object, M method);
+    void operator()(winrt::Windows::Foundation::IInspectable const& sender,
+        winrt::Windows::UI::Xaml::RoutedEventArgs const& e) const;
+};
+```
+
+<span data-ttu-id="0583c-119">Die Syntax des Funktionsaufrufoperators ist ebenfalls hilfreich.</span><span class="sxs-lookup"><span data-stu-id="0583c-119">The syntax of the function call operator is also helpful to see.</span></span> <span data-ttu-id="0583c-120">Sie sagt Ihnen, welche Parameter Ihr Delegat haben muss.</span><span class="sxs-lookup"><span data-stu-id="0583c-120">It tells you what your delegate's parameters need to be.</span></span> <span data-ttu-id="0583c-121">Wie Sie sehen, entspricht in diesem Fall die Syntax des Funktionsaufrufoperators den Parametern unseres **MainPage::ClickHandler**.</span><span class="sxs-lookup"><span data-stu-id="0583c-121">As you can see, in this case the function call operator syntax matches the parameters of our **MainPage::ClickHandler**.</span></span>
+
+<span data-ttu-id="0583c-122">Wenn Sie nicht viel in Ihrem Ereignis-Handler erledigen, dann können Sie eine Lambda-Funktion anstelle einer Mitgliedsfunktion verwenden.</span><span class="sxs-lookup"><span data-stu-id="0583c-122">If you're not doing much work in your event handler, then you can use a lambda function instead of a member function.</span></span> <span data-ttu-id="0583c-123">Auch hier ist es vielleicht nicht offensichtlich, aber ein **RoutedEventHandler**-Delegat wird aus einer Lambda-Funktion erstellt, die wiederum der Syntax des Funktionsaufrufoperators entsprechen muss.</span><span class="sxs-lookup"><span data-stu-id="0583c-123">Again, it may not be obvious from the code example below, but a **RoutedEventHandler** delegate is being constructed from a lambda function which, again, needs to match the syntax of the function call operator.</span></span>
+
+```cppwinrt
+MainPage::MainPage()
+{
+    InitializeComponent();
+
+    Button().Click([this](IInspectable const&, RoutedEventArgs const&)
+    {
+        Button().Content(box_value(L"Clicked"));
+    });
+}
+```
+
+<span data-ttu-id="0583c-124">Sie können sich dafür entscheiden, etwas konkreter zu werden, wenn Sie Ihren Delegaten konstruieren.</span><span class="sxs-lookup"><span data-stu-id="0583c-124">You can choose to be a little more explicit when you construct your delegate.</span></span> <span data-ttu-id="0583c-125">Beispielsweise bei der Weitergabe oder der mehrfachen Verwendung.</span><span class="sxs-lookup"><span data-stu-id="0583c-125">For example, if you want to pass it around, or use it more than once.</span></span>
+
+```cppwinrt
+MainPage::MainPage()
+{
+    InitializeComponent();
+
+    auto click_handler = [](IInspectable const& sender, RoutedEventArgs const&)
+    {
+        sender.as<winrt::Windows::UI::Xaml::Controls::Button>().Content(box_value(L"Clicked"));
+    };
+    Button().Click(click_handler);
+    AnotherButton().Click(click_handler);
+}
+```
+
+## <a name="revoke-a-registered-delegate"></a><span data-ttu-id="0583c-126">Einen registrierten Delgaten widerrufen</span><span class="sxs-lookup"><span data-stu-id="0583c-126">Revoke a registered delegate</span></span>
+<span data-ttu-id="0583c-127">Wenn Sie einen Deleganten registrieren, wird Ihnen in der Regel ein Token zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="0583c-127">When you register a delegate, typically a token is returned to you.</span></span> <span data-ttu-id="0583c-128">Mit diesem Token können Sie anschließend Ihren Delegaten widerrufen, d. h. die Registrierung des Delegaten für das Ereignis wird aufgehoben. Er wird nicht mehr aufgerufen, wenn das Ereignis erneut ausgelöst wird.</span><span class="sxs-lookup"><span data-stu-id="0583c-128">You can subsequently use that token to revoke your delegate; meaning that the delegate is unregistered from the event, and won't be called should the event be raised again.</span></span> <span data-ttu-id="0583c-129">Der Einfachheit halber hat keines der obigen Codebeispiele gezeigt, wie das geht.</span><span class="sxs-lookup"><span data-stu-id="0583c-129">For the sake of simplicity, none of the code examples above showed how to do that.</span></span> <span data-ttu-id="0583c-130">Das nächste Codebeispiel speichert das Token jedoch im privaten Datenelement der Struktur und widerruft seinen Handler im Destruktor.</span><span class="sxs-lookup"><span data-stu-id="0583c-130">But this next code example stores the token in the struct's private data member, and revokes its handler in the destructor.</span></span>
+
+```cppwinrt
+struct Example : ExampleT<Example>
+{
+    Example(winrt::Windows::UI::Xaml::Controls::Button const& button) : m_button(button)
+    {
+        m_token = m_button.Click([this](IInspectable const&, RoutedEventArgs const&)
+        {
+            ...
+        });
+    }
+    ~Example()
+    {
+        m_button.Click(m_token);
+    }
+
+private:
+    winrt::Windows::UI::Xaml::Controls::Button m_button;
+    winrt::event_token m_token;
+};
+```
+
+<span data-ttu-id="0583c-131">Alternativ können Sie bei der Registrierung eines Delegaten **winrt::auto_revoke** angeben (ein Wert vom Typ [**winrt::auto_revoke_t**](/uwp/cpp-ref-for-winrt/auto-revoke-t)), um einen Event-Revoker anzufordern.</span><span class="sxs-lookup"><span data-stu-id="0583c-131">Alternatively, when you register a delegate, you can specify **winrt::auto_revoke** (which is a value of type [**winrt::auto_revoke_t**](/uwp/cpp-ref-for-winrt/auto-revoke-t)) to request an event revoker.</span></span> <span data-ttu-id="0583c-132">Wenn der Gültigkeitsbereich des Revokers aufgelöst wird, wird Ihr Delegat automatisch widerrufen.</span><span class="sxs-lookup"><span data-stu-id="0583c-132">When that revoker goes out of scope, it automatically revokes your delegate.</span></span> <span data-ttu-id="0583c-133">In diesem Beispiel gibt es keine Notwendigkeit, die Ereignisquelle zu speichern und daher auch keinen Bedarf für einen Destruktor.</span><span class="sxs-lookup"><span data-stu-id="0583c-133">In this example, there's no need to store the event source, and no need for a destructor.</span></span>
+
+```cppwinrt
+struct Example : ExampleT<Example>
+{
+    Example(winrt::Windows::UI::Xaml::Controls::Button button)
+    {
+        m_event_revoker = button.Click(winrt::auto_revoke, [this](IInspectable const&, RoutedEventArgs const&)
+        {
+            ...
+        });
+    }
+
+private:
+    winrt::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IButtonBase> m_event_revoker;
+};
+```
+
+<span data-ttu-id="0583c-134">Unten ist der Syntaxblock aus dem Dokumentationsthema für das [**ButtonBase::Click**](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click)-Ereignis zu sehen.</span><span class="sxs-lookup"><span data-stu-id="0583c-134">Below is the syntax block taken from the documentation topic for the [**ButtonBase::Click**](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) event.</span></span> <span data-ttu-id="0583c-135">Es zeigt die drei verschiedenen Registrierungs- und Widerrufsfunktionen.</span><span class="sxs-lookup"><span data-stu-id="0583c-135">It shows the three different registration and revoking functions.</span></span> <span data-ttu-id="0583c-136">Sie können genau sehen, welche Art von Event-Revoker Sie für die dritten Überladung deklarieren müssen.</span><span class="sxs-lookup"><span data-stu-id="0583c-136">You can see exactly what type of event revoker you need to declare from the third overload.</span></span>
+
+```cppwinrt
+// Register
+winrt::event_token Click(winrt::Windows::UI::Xaml::RoutedEventHandler const& handler) const;
+
+// Revoke with event_token
+void Click(winrt::event_token const& token) const;
+
+// Revoke with event_revoker
+event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IButtonBase> Click(winrt::auto_revoke_t,
+    winrt::Windows::UI::Xaml::RoutedEventHandler const& handler) const;
+```
+
+<span data-ttu-id="0583c-137">Ein ähnliches Muster gilt für alle C++/WinRT-Ereignisse.</span><span class="sxs-lookup"><span data-stu-id="0583c-137">A similar pattern applies to all C++/WinRT events.</span></span>
+
+<span data-ttu-id="0583c-138">In einem Seitennavigationsszenario kann es sinnvoll sein, Handler zu widerrufen.</span><span class="sxs-lookup"><span data-stu-id="0583c-138">You might consider revoking handlers in a page-navigation scenario.</span></span> <span data-ttu-id="0583c-139">Wenn Sie wiederholt auf eine Seite navigieren und diese dann wieder verlassen, können Sie alle Handler widerrufen, wenn Sie von der Seite weg navigieren.</span><span class="sxs-lookup"><span data-stu-id="0583c-139">If you're repeatedly navigating into a page and then back out, then you could revoke any handlers when you navigate away from the page.</span></span> <span data-ttu-id="0583c-140">Wenn Sie dieselbe Seiteninstanz wiederverwenden, dann überprüfen Sie alternativ den Wert Ihres Tokens und registrieren Sie sich nur, wenn er noch nicht festgelegt ist (`if (!m_token){ ... }`).</span><span class="sxs-lookup"><span data-stu-id="0583c-140">Alternatively, if you're re-using the same page instance, then check the value of your token and only register if it's not yet been set (`if (!m_token){ ... }`).</span></span> <span data-ttu-id="0583c-141">Eine dritte Möglichkeit besteht darin, einen Event-Revoker als Datenelement der Seite zu speichern.</span><span class="sxs-lookup"><span data-stu-id="0583c-141">A third option is to store an event revoker in the page as a data member.</span></span> <span data-ttu-id="0583c-142">Und eine vierte Möglichkeit (wird später in diesem Thema beschrieben) besteht darin, eine starke oder schwache Referenz auf das *this*-Objekt in Ihrer Lambda-Funktion zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="0583c-142">And a fourth option, as described later in this topic, is to capture a strong or a weak reference to the *this* object in your lambda function.</span></span>
+
+## <a name="delegate-types-for-asynchronous-actions-and-operations"></a><span data-ttu-id="0583c-143">Delegattypen für asynchrone Aktionen und Vorgänge</span><span class="sxs-lookup"><span data-stu-id="0583c-143">Delegate types for asynchronous actions and operations</span></span>
+<span data-ttu-id="0583c-144">Die obigen Beispiele verwenden den Delegattyp **RoutedEventHandler**, aber es gibt natürlich auch viele andere Delegattypen.</span><span class="sxs-lookup"><span data-stu-id="0583c-144">The examples above use the **RoutedEventHandler** delegate type, but there are of course many other delegate types.</span></span> <span data-ttu-id="0583c-145">Beispielsweise haben asynchrone Aktionen und Vorgänge (mit und ohne Fortschritt) Completed- und/oder Progress-Ereignisse, die Delegaten des entsprechenden Typs erwarten.</span><span class="sxs-lookup"><span data-stu-id="0583c-145">For example, asynchronous actions and operations (with and without progress) have completed and/or progress events that expect delegates of the corresponding type.</span></span> <span data-ttu-id="0583c-146">Beispielsweise erfordert das Progress-Ereignis eines asynchronen Vorgangs mit Fortschritt (betrifft alles, das [**IAsyncOperationWithProgress**](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_) implementiert) einen Delegaten vom Typ [**AsyncOperationProgressHandler**](/uwp/api/windows.foundation.asyncoperationprogresshandler).</span><span class="sxs-lookup"><span data-stu-id="0583c-146">For example, the progress event of an asynchronous operation with progress (which is anything that implements [**IAsyncOperationWithProgress**](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_)) requires a delegate of type [**AsyncOperationProgressHandler**](/uwp/api/windows.foundation.asyncoperationprogresshandler).</span></span> <span data-ttu-id="0583c-147">Hier ist ein Codebeispiel für die Erstellung eines solchen Delegaten mit einer Lambda-Funktion.</span><span class="sxs-lookup"><span data-stu-id="0583c-147">Here's a code example of authoring a delegate of that type using a lambda function.</span></span> <span data-ttu-id="0583c-148">Das Beispiel zeigt auch, wie man einen [**AsyncOperationWithProgressCompletedHandler**](/uwp/api/windows.foundation.asyncoperationwithprogresscompletedhandler)-Delegaten erstellt.</span><span class="sxs-lookup"><span data-stu-id="0583c-148">The example also shows how to author an [**AsyncOperationWithProgressCompletedHandler**](/uwp/api/windows.foundation.asyncoperationwithprogresscompletedhandler) delegate.</span></span>
+
+```cppwinrt
+using namespace winrt;
+using namespace Windows::Foundation;
+using namespace Windows::Web::Syndication;
+
+void ProcessFeedAsync()
+{
+    Uri rssFeedUri{ L"https://blogs.windows.com/feed" };
+    SyndicationClient syndicationClient;
+
+    auto async_op_with_progress = syndicationClient.RetrieveFeedAsync(rssFeedUri);
+
+    async_op_with_progress.Progress(
+        [](IAsyncOperationWithProgress<SyndicationFeed, RetrievalProgress> const&, RetrievalProgress const& args)
+    {
+        uint32_t bytes_retrieved = args.BytesRetrieved;
+        // use bytes_retrieved;
+    });
+
+    async_op_with_progress.Completed(
+        [](IAsyncOperationWithProgress<SyndicationFeed, RetrievalProgress> const& sender, AsyncStatus const)
+    {
+        SyndicationFeed syndicationFeed = sender.GetResults();
+        // use syndicationFeed;
+    });
+    
+    // or (but this function must then return IAsyncAction)
+    // SyndicationFeed syndicationFeed = co_await async_op_with_progress;
+}
+```
+
+<span data-ttu-id="0583c-149">Wie aus dem obigen Kommentar hervorgeht, werden Sie es wahrscheinlich natürlicher finden, Coroutinen zu verwenden, anstatt einen Delegaten für die Completed-Ereignisse asynchroner Aktionen und Vorgänge zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="0583c-149">As the comment above suggests, instead of using a delegate with the completed events of asynchronous actions and operations, you'll probably find it more natural to use coroutines.</span></span> <span data-ttu-id="0583c-150">Details und Codebeispiele finden Sie unter [Parallelität und asynchrone Vorgänge mit C++/WinRT](concurrency.md).</span><span class="sxs-lookup"><span data-stu-id="0583c-150">For details, and code examples, see [Concurrency and asynchronous operations with C++/WinRT](concurrency.md).</span></span>
+
+## <a name="delegate-types-that-return-a-value"></a><span data-ttu-id="0583c-151">Delegattypen, die einen Wert zurückgeben</span><span class="sxs-lookup"><span data-stu-id="0583c-151">Delegate types that return a value</span></span>
+<span data-ttu-id="0583c-152">Einige Delegattypen müssen selbst einen Wert zurückgeben.</span><span class="sxs-lookup"><span data-stu-id="0583c-152">Some delegate types must themselves return a value.</span></span> <span data-ttu-id="0583c-153">Ein Beispiel ist [**ListViewItemToKeyHandler**](/uwp/api/windows.ui.xaml.controls.listviewitemtokeyhandler), der einen String zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="0583c-153">An example is [**ListViewItemToKeyHandler**](/uwp/api/windows.ui.xaml.controls.listviewitemtokeyhandler), which returns a string.</span></span> <span data-ttu-id="0583c-154">Hier ist ein Beispiel für die Erstellung eines solchen Delegaten (beachten Sie, dass die Lambda-Funktion einen Wert zurückgibt).</span><span class="sxs-lookup"><span data-stu-id="0583c-154">Here's an example of authoring a delegate of that type (note that the lambda function returns a value).</span></span>
+
+```cppwinrt
+using namespace winrt::Windows::UI::Xaml::Controls;
+
+winrt::hstring f(ListView listview)
+{
+    return ListViewPersistenceHelper::GetRelativeScrollPosition(listview, [](IInspectable const& item)
+    {
+        return L"key for item goes here";
+    });
+}
+```
+
+## <a name="using-the-this-object-in-an-event-handler"></a><span data-ttu-id="0583c-155">Verwendung des *this*-Objekts in einem Ereignis-Handler</span><span class="sxs-lookup"><span data-stu-id="0583c-155">Using the *this* object in an event handler</span></span>
+<span data-ttu-id="0583c-156">Wenn Sie ein Ereignis innerhalb einer Lambda-Funktion innerhalb der Mitgliedsfunktion eines Objekts verarbeiten, dann müssen Sie über die relative Lebensdauer des Ereignisempfängers (das Objekt, das das Ereignis verarbeitet) und der Ereignisquelle (das Objekt, das das Ereignis auslöst) nachdenken.</span><span class="sxs-lookup"><span data-stu-id="0583c-156">If you handle an event from within a lambda function inside an object's member function, then you need to think about the relative lifetimes of the event recipient (the object handling the event) and the event source (the object raising the event).</span></span>
+
+<span data-ttu-id="0583c-157">In vielen Fällen überlebt ein Empfänger alle Abhängigkeiten seines *this*-Zeigers innerhalb einer gegebenen Lambda-Funktion.</span><span class="sxs-lookup"><span data-stu-id="0583c-157">In many cases, a recipient outlives all dependencies on its *this* pointer from within a given lambda function.</span></span> <span data-ttu-id="0583c-158">Einige dieser Fälle sind offensichtlich, z. B. wenn eine UI-Seite ein Ereignis verarbeitet, das von einem Steuerelement ausgelöst wird, das sich auf der Seite befindet.</span><span class="sxs-lookup"><span data-stu-id="0583c-158">Some of these cases are obvious, such as when a UI page handles an event raised by a control that's on the page.</span></span> <span data-ttu-id="0583c-159">Die Schaltfläche überlebt die Seite nicht, ebenso wenig wie der Handler.</span><span class="sxs-lookup"><span data-stu-id="0583c-159">The button doesn't outlive the page, so neither does the handler.</span></span> <span data-ttu-id="0583c-160">Dies gilt immer dann, wenn der Empfänger die Quelle besitzt (z. B. als Datenelement), oder wenn der Empfänger und die Quelle gleichgeordnet sind und sich direkt im Besitz eines anderen Objekts befinden.</span><span class="sxs-lookup"><span data-stu-id="0583c-160">This holds true any time the recipient owns the source (as a data member, for example), or any time the recipient and the source are siblings and directly owned by some other object.</span></span> <span data-ttu-id="0583c-161">Wenn Sie sicher sind, dass Sie einen Fall haben, in dem der Handler das *this*-Objekt nicht überleben wird, können Sie *this*normal verwenden, ohne Rücksicht auf eine starke oder schwache Lebensdauer zu nehmen.</span><span class="sxs-lookup"><span data-stu-id="0583c-161">If you're sure you have a case where the handler won't outlive the *this* that it depends on, then you can capture *this* normally, without consideration for strong or weak lifetime.</span></span>
+
+<span data-ttu-id="0583c-162">Aber es gibt immer noch Fälle, in denen *this* seine Verwendung in einem Handler nicht überlebt (einschließlich Handlern für Completion- und Progress-Ereignisse, die durch asynchrone Aktionen und Vorgänge ausgelöst werden).</span><span class="sxs-lookup"><span data-stu-id="0583c-162">But there are still cases where *this* doesn't outlive its use in a handler (including handlers for completion and progress events raised by asynchronous actions and operations).</span></span>
+
+- <span data-ttu-id="0583c-163">Wenn Sie eine Coroutine erstellen, um eine asynchrone Methode zu implementieren, dann ist dies möglich.</span><span class="sxs-lookup"><span data-stu-id="0583c-163">If you're authoring a coroutine to implement an asynchronous method, then it's possible.</span></span>
+- <span data-ttu-id="0583c-164">In seltenen Fällen mit bestimmten XAML-UI-Framework-Objekten (z. B. [**SwapChainPanel**](/uwp/api/windows.ui.xaml.controls.swapchainpanel)) ist dies möglich wenn der Empfänger finalisiert wird, ohne die Registrierung für die Ereignisquelle aufzuheben.</span><span class="sxs-lookup"><span data-stu-id="0583c-164">In rare cases with certain XAML UI framework objects ([**SwapChainPanel**](/uwp/api/windows.ui.xaml.controls.swapchainpanel), for example), then it's possible, if the recipient is finalized without unregistering from the event source.</span></span>
+
+<span data-ttu-id="0583c-165">In diesen Fällen kommt es zu einer Zugriffsverletzung durch Code in einem Handler oder in der Fortsetzung einer Coroutine, die versucht, das ungültige *this*-Objekt zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="0583c-165">In these cases, an access violation results from code in a handler or in a coroutine's continuation attempting to use the invalid *this* object.</span></span>
+
+> [!IMPORTANT]
+> <span data-ttu-id="0583c-166">Wenn Sie auf eine dieser Situationen stoßen, dann müssen Sie über die Lebensdauer des *this*-Objekts nachdenken. Sie müssen feststellen, ob das verwendete *this*-Objekt überlebt oder nicht.</span><span class="sxs-lookup"><span data-stu-id="0583c-166">If you encounter one of these situations, then you'll need to think about the lifetime of the *this* object; and whether or not the captured *this* object outlives the capture.</span></span> <span data-ttu-id="0583c-167">Wenn nicht, dann verwenden Sie es mit einer starken oder schwachen Referenz (je nach Bedarf).</span><span class="sxs-lookup"><span data-stu-id="0583c-167">If it doesn't, then capture it with a strong or a weak reference, as appropriate.</span></span> <span data-ttu-id="0583c-168">Weitere Informationen finden Sie unter [**implements::get_strong**](/uwp/cpp-ref-for-winrt/implements#implementsgetstrong-function) und [**implements::get_weak**](/uwp/cpp-ref-for-winrt/implements#implementsgetweak-function).</span><span class="sxs-lookup"><span data-stu-id="0583c-168">See [**implements::get_strong**](/uwp/cpp-ref-for-winrt/implements#implementsgetstrong-function), and [**implements::get_weak**](/uwp/cpp-ref-for-winrt/implements#implementsgetweak-function).</span></span>
+> <span data-ttu-id="0583c-169">Wenn es in Ihrem Szenario sinnvoll ist und wenn Threading-Überlegungen dies zulassen, dann besteht eine andere Möglichkeit darin, den Handler zu widerrufen, nachdem der Empfänger mit dem Ereignis fertig ist, bzw im Destruktor des Empfängers.</span><span class="sxs-lookup"><span data-stu-id="0583c-169">Or&mdash;if it makes sense for your scenario and if threading considerations make it even possible&mdash;then another option is to revoke the handler after the recipient is done with the event, or in the recipient's destructor.</span></span>
+
+<span data-ttu-id="0583c-170">Dieses Codebeispiel verwendet das Ereignis [**SwapChainPanel.CompositionScaleChanged**](/uwp/api/windows.ui.xaml.controls.swapchainpanel.compositionscalechanged) als Beispiel.</span><span class="sxs-lookup"><span data-stu-id="0583c-170">This code example uses the [**SwapChainPanel.CompositionScaleChanged**](/uwp/api/windows.ui.xaml.controls.swapchainpanel.compositionscalechanged) event as an illustration.</span></span> <span data-ttu-id="0583c-171">Es registriert einen Ereignis-Handler mit einem Lambda und einer schwachen Referenz auf den Empfänger.</span><span class="sxs-lookup"><span data-stu-id="0583c-171">It registers an event handler using a lambda that captures a weak reference to the recipient.</span></span> <span data-ttu-id="0583c-172">Weitere Informationen über schwache Referenzen finden Sie unter [Schwache Referenzen in C++/WinRT](weak-references.md).</span><span class="sxs-lookup"><span data-stu-id="0583c-172">For more info about weak references, see [Weak references in C++/WinRT](weak-references.md).</span></span> 
+
+```cppwinrt
+winrt::Windows::UI::Xaml::Controls::SwapChainPanel m_swapChainPanel;
+winrt::event_token m_compositionScaleChangedEventToken;
+
+void RegisterEventHandler()
+{
+    m_compositionScaleChangedEventToken = m_swapChainPanel.CompositionScaleChanged([weakReferenceToThis{ get_weak() }]
+        (Windows::UI::Xaml::Controls::SwapChainPanel const& sender,
+        Windows::Foundation::IInspectable const& object)
+    {
+        if (auto strongReferenceToThis = weakReferenceToThis.get())
+        {
+            strongReferenceToThis->OnCompositionScaleChanged(sender, object);
+        }
+    });
+}
+
+void OnCompositionScaleChanged(Windows::UI::Xaml::Controls::SwapChainPanel const& sender,
+    Windows::Foundation::IInspectable const& object)
+{
+    // Here, we know that the "this" object is valid.
+}
+```
+
+<span data-ttu-id="0583c-173">In der Lamba-Bedingung wird eine temporäre Variable erzeugt, die eine schwache Referenz auf *this* darstellt.</span><span class="sxs-lookup"><span data-stu-id="0583c-173">In the lamba capture clause, a temporary variable is created, representing a weak reference to *this*.</span></span> <span data-ttu-id="0583c-174">In der Lambda wird die Funktion **OnCompositionScaleChanged** aufgerufen, wenn eine starke Referenz auf *this* abgerufen werden kann.</span><span class="sxs-lookup"><span data-stu-id="0583c-174">In the body of the lambda, if a strong reference to *this* can be obtained, then the **OnCompositionScaleChanged** function is called.</span></span> <span data-ttu-id="0583c-175">Auf diese Weise kann *this* innerhalb von **OnCompositionScaleChanged** sicher verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="0583c-175">That way, inside **OnCompositionScaleChanged**, *this* can safely be used.</span></span>
+
+## <a name="important-apis"></a><span data-ttu-id="0583c-176">Wichtige APIs</span><span class="sxs-lookup"><span data-stu-id="0583c-176">Important APIs</span></span>
+* [<span data-ttu-id="0583c-177">winrt::auto_revoke_t</span><span class="sxs-lookup"><span data-stu-id="0583c-177">winrt::auto_revoke_t</span></span>](/uwp/cpp-ref-for-winrt/auto-revoke-t)
+* [<span data-ttu-id="0583c-178">winrt::implements::get_weak-Funktion</span><span class="sxs-lookup"><span data-stu-id="0583c-178">winrt::implements::get_weak function</span></span>](/uwp/cpp-ref-for-winrt/implements#implementsgetweak-function)
+* [<span data-ttu-id="0583c-179">winrt::implements::get_strong-Funktion</span><span class="sxs-lookup"><span data-stu-id="0583c-179">winrt::implements::get_strong function</span></span>](/uwp/cpp-ref-for-winrt/implements#implementsgetstrong-function)
+
+## <a name="related-topics"></a><span data-ttu-id="0583c-180">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="0583c-180">Related topics</span></span>
+* [<span data-ttu-id="0583c-181">Erstellen von Ereignissen mit C++/WinRT</span><span class="sxs-lookup"><span data-stu-id="0583c-181">Author events in C++/WinRT</span></span>](author-events.md)
+* [<span data-ttu-id="0583c-182">Schwache Referenzen in C++/WinRT</span><span class="sxs-lookup"><span data-stu-id="0583c-182">Weak references in C++/WinRT</span></span>](weak-references.md)
+

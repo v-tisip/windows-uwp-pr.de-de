@@ -14,6 +14,7 @@ ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/12/2017
+ms.locfileid: "1394379"
 ---
 # <a name="pull-to-refresh-with-source-modifiers"></a><span data-ttu-id="dbdf3-104">Pull-to-Refresh mit Source-Modifiern</span><span class="sxs-lookup"><span data-stu-id="dbdf3-104">Pull-to-refresh with source modifiers</span></span>
 
