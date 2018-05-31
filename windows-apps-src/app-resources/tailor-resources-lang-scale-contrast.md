@@ -1,7 +1,7 @@
 ---
 author: stevewhims
-Description: "In diesem Thema wird das allgemeine Konzept der Qualifizierer erläutert, wie sie verwendet werden und wofür die einzelnen Qualifizierernamen dienen."
-title: "Anpassen von Ressourcen mit Qualifizierern für Sprache, Skalierung, hohen Kontrast und anderen Qualifizierern"
+Description: This topic explains the general concept of qualifiers, how to use them, and the purpose of each of the qualifier names.
+title: Anpassen von Ressourcen mit Qualifizierern für Sprache, Skalierung, hohen Kontrast und anderen Qualifizierern
 template: detail.hbs
 ms.author: stwhi
 ms.date: 10/10/2017
@@ -9,22 +9,21 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
-localizationpriority: medium
-ms.openlocfilehash: 930a49ab3d9bab034f771a323b17484ae6aa0e16
-ms.sourcegitcommit: d0c93d734639bd31f264424ae5b6fead903a951d
+ms.localizationpriority: medium
+ms.openlocfilehash: 5309b33e0f65a1a06e1a3c0060a84e4c4a88ef9d
+ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 04/03/2018
+ms.locfileid: "1700796"
 ---
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
-
 # <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>Anpassen von Ressourcen mit Qualifizierern für Sprache, Skalierung, hohen Kontrast und anderen Qualifizierern
 
-In diesem Thema wird das allgemeine Konzept der Ressourcenqualifizierer erläutert, wie sie verwendet werden und wofür die einzelnen Qualifizierernamen dienen. Unter [ResourceContext.QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live#Windows_ApplicationModel_Resources_Core_ResourceContext_QualifierValues) finden Sie eine Referenztabelle für alle Qualifiziererwerte.
+In diesem Thema wird das allgemeine Konzept der Ressourcenqualifizierer erläutert, wie sie verwendet werden und wofür die einzelnen Qualifizierernamen dienen. Eine Referenztabelle für die verschiedenen Qualifiziererwerte finden Sie unter [**ResourceContext.QualifierValues**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues).
 
-Ihre App kann Assets und Ressourcen laden, die für Laufzeitkontexte wie Anzeigesprache, hoher Kontrast, [Skalierungsfaktor des Displays](../layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor) und andere zugeschnitten sind. Das erreichen Sie unter anderem durch das Benennen des Ressourcen-Ordners oder der Dateien mit dem Namen des Qualifizierers und den Qualifiziererwerten, die diesen Kontexten entsprechen. Beispielsweise können Sie für Ihre App einen anderen Satz von Bildressourcen laden, wenn sie in einem Modus mit hohem Kontrast ausgeführt wird.
+Ihre App kann Assets und Ressourcen laden, die für Runtime-Kontexte wie Anzeigesprache, hoher Kontrast [Skalierungsfaktor des Displays](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor) und mehr zugeschnitten sind. Das erreichen Sie unter anderem durch das Benennen des Ressourcen-Ordners oder der Dateien mit dem Namen des Qualifizierers und den Qualifiziererwerten, die diesen Kontexten entsprechen. Beispielsweise können Sie für Ihre App einen anderen Satz von Bildressourcen laden, wenn sie in einem Modus mit hohem Kontrast ausgeführt wird.
 
-Weitere Informationen zu einer Werterhöhung Ihrer App durch Lokalisierung finden Sie unter [Globalisierung und Lokalisierung](../globalizing/globalizing-portal.md).
+Weitere Informationen zu einer Werterhöhung Ihrer App durch Lokalisierung finden Sie unter [Globalisierung und Lokalisierung](../design/globalizing/globalizing-portal.md).
 
 ## <a name="qualifier-name-qualifier-value-and-qualifier"></a>Qualifizierernamen Qualifiziererwerte und Qualifizierer
 
@@ -89,7 +88,7 @@ Wenn Sie nur einen Satz von Ressourcen für hohen Kontrast brauchen und einen Sa
 \Assets\Images\<logo.png, and other images to load when high contrast theme is None>
 ```
 
-Weitere Informationen zur Funktionsweise der Übereinstimmung für Qualifizierer finden Sie unter [Ressourcenverwaltungssystem](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj552947).
+Weitere Informationen zur Funktionsweise der Übereinstimmung für Qualifizierer finden Sie unter [Ressourcenverwaltungssystem](resource-management-system.md).
 
 ## <a name="multiple-qualifiers"></a>Mehrere Qualifizierer
 
@@ -137,7 +136,6 @@ Der `contrast`-Qualifizierer wird verwendet, um Ressourcen anzubieten, die den E
 
 Ihre App kann einen Wert für den `custom`-Qualifizierer festlegen, wobei Ressourcen geladen werden, die am besten diesem Wert entsprechen. Möglicherweise möchten Sie Ressourcen basierend auf der App-Lizenz laden. Wenn die App startet, wird die Lizenz überprüft und als Wert für den `custom`-Qualifizierer durch Aufrufen von [SetGlobalQualifierValue](/uwp/api/windows.applicationmodel.resources.core.resourcecontext#Windows_ApplicationModel_Resources_Core_ResourceContext_SetGlobalQualifierValue_System_String_System_String_Windows_ApplicationModel_Resources_Core_ResourceQualifierPersistence_) verwendet, wie im Codebeispiel dargestellt.
 
-**C#**
 ```csharp
 public void SetLicenseLevel(BrandID brand)
 {
@@ -160,7 +158,7 @@ In diesem Fall würden Sie Ihren Ressourcen Namen geben, die den Qualifizierer `
 
 ## <a name="devicefamily"></a>Gerätefamilie
 
-Es ist unwahrscheinlich, dass Sie den `devicefamily` Qualifizierernamen benötigen. Sie können und sollten die Verwendung wann immer möglich vermeiden, da es viele praktische und zuverlässige Verfahren gibt, die Sie stattdessen verwenden können. Diese Techniken werden unter [Erkennen der Plattform, auf der Ihre App ausgeführt wird](../porting/wpsl-to-uwp-input-and-sensors.md#detecting-the-platform-your-app-is-running-on) und [Schreiben von Code](../get-started/universal-application-platform-guide.md#writing-code) beschrieben.
+Es ist unwahrscheinlich, dass Sie den `devicefamily` Qualifizierernamen benötigen. Sie können und sollten die Verwendung wann immer möglich vermeiden, da es viele praktische und zuverlässige Verfahren gibt, die Sie stattdessen verwenden können. Diese Techniken werden unter [Erkennen der Plattform, auf der Ihre App ausgeführt wird](../porting/wpsl-to-uwp-input-and-sensors.md#detecting-the-platform-your-app-is-running-on) und [Versionsadaptiver Code](https://docs.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code) beschrieben.
 
 Als letztes Mittel ist es jedoch möglich, Gerätefamilien-Qualifizierer zum Benennen von Ordnern zu verwenden, die Ihre XAML-Ansichten enthalten (eine XAML-Ansicht ist eine XAML-Datei, die UI-Layout und Steuerelemente enthält).
 
@@ -230,11 +228,11 @@ Unter [Lokalisieren Ihrer UI-Zeichenfolgen](localize-strings-ui-manifest.md) fin
 
 ## <a name="layoutdirection"></a>LayoutDirection
 
-Ein `layoutdirection`-Qualifizierer entspricht der Layoutrichtung der Einstellung für die Anzeigesprache. Beispielsweise muss ein Bild für eine Rechts-nach-links-Sprache wie Arabisch oder Hebräisch unter Umständen gespiegelt werden. Layoutpanels und Bilder in Ihrer Benutzeroberfläche reagieren der Layoutrichtung entsprechend, wenn Sie deren [FlowDirection](/uwp/api/Windows.UI.Xaml.FrameworkElement?branch=live#Windows_UI_Xaml_FrameworkElement_FlowDirection)-Eigenschaft festlegen (Informationen hierzu finden Sie unter [Anpassen von Layout und Schriftarten und Unterstützen von „Von rechts nach links“](../globalizing/adjust-layout-and-fonts--and-support-rtl.md)). Allerdings ist der Qualifizierer `layoutdirection` für Fälle gedacht, in denen ein einfaches Kippen nicht ausreicht, denn Sie können damit ganz allgemein auf bestimmter Leserichtungen und Textausrichtungen reagieren.
+Ein `layoutdirection`-Qualifizierer entspricht der Layoutrichtung der Einstellung für die Anzeigesprache. Beispielsweise muss ein Bild für eine Rechts-nach-links-Sprache wie Arabisch oder Hebräisch unter Umständen gespiegelt werden. Layoutpanels und Bilder in Ihrer Benutzeroberfläche reagieren der Layoutrichtung entsprechend, wenn Sie deren [FlowDirection](/uwp/api/Windows.UI.Xaml.FrameworkElement.FlowDirection)-Eigenschaft festlegen (Informationen hierzu finden Sie unter [Anpassen von Layout und Schriftarten und Unterstützen von „Von rechts nach links“](../design/globalizing/adjust-layout-and-fonts--and-support-rtl.md)). Allerdings ist der `layoutdirection`-Qualifizierer nur für Fälle, in denen ein einfaches Kippen nicht ausreicht. Sie können auf die Ausrichtung bestimmter Leserichtungen und Textausrichtungen auf allgemeine Weise reagieren.
 
 ## <a name="scale"></a>Skalieren
 
-Windows wählt automatisch einen Skalierungsfaktor für jede Anzeige aus, basierend auf dem DPI-Wert (Punkte pro Zoll) und dem Betrachtungsabstand des Geräts. Weitere Informationen finden Sie unter [Effektive Pixel und Skalierungsfaktor](../layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor). Sie sollten Ihre Bilder in mehreren empfohlenen Größen (mindestens 100, 200 und 400) erstellen, damit Windows entweder die passende Größe auswählen oder die nächstgelegene Größe verwenden und dann skalieren kann. Damit Windows erkennen kann, welche physische Datei die richtige Bildgröße für den Anzeigeskalierungsfaktor enthält, verwenden Sie einen `scale`-Qualifizierer. Die Skalierung einer Ressource entspricht dem Wert von [DisplayInformation.ResolutionScale](/uwp/api/windows.graphics.display.displayinformation?branch=live#Windows_Graphics_Display_DisplayInformation_ResolutionScale) oder der Ressource mit der nächstgrößeren Skalierung.
+Windows wählt automatisch einen Skalierungsfaktor für jede Anzeige aus, basierend auf dem DPI-Wert (Punkte pro Zoll) und dem Betrachtungsabstand des Geräts. Weitere Informationen finden Sie unter [Effektive Pixel und Skalierungsfaktor](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor). Sie sollten Ihre Bilder in mehreren empfohlenen Größen (mindestens 100, 200 und 400) erstellen, damit Windows entweder die passende Größe auswählen oder die nächstgelegene Größe verwenden und dann skalieren kann. Damit Windows erkennen kann, welche physische Datei die richtige Bildgröße für den Anzeigeskalierungsfaktor enthält, verwenden Sie einen `scale`-Qualifizierer. Die Skalierung einer Ressource entspricht dem Wert von [DisplayInformation.ResolutionScale](/uwp/api/windows.graphics.display.displayinformation.ResolutionScale) oder der Ressource mit der nächstgrößeren Skalierung.
 
 Hier ist ein Beispiel, wie Sie den Qualifizierer auf Ordnerebene festlegen.
 
@@ -264,21 +262,22 @@ Weitere Informationen zum Qualifizieren einer Ressource für `scale` und `target
 
 ## <a name="theme"></a>Design
 
-Der Qualifizierer `theme` wird verwendet, um Ressourcen bereitzustellen, die am besten mit der Standardeinstellung für den App-Modus übereinstimmen oder mit der Überschreibung durch [Application.RequestedTheme](/uwp/api/windows.ui.xaml.application?branch=master#Windows_UI_Xaml_Application_RequestedTheme).
+Der Qualifizierer `theme` wird verwendet, um Ressourcen bereitzustellen, die am besten mit der Standardeinstellung für den App-Modus übereinstimmen oder mit der Überschreibung durch [Application.RequestedTheme](/uwp/api/windows.ui.xaml.application?branch=master.RequestedTheme).
 
 ## <a name="important-apis"></a>Wichtige APIs
 
+* [ResourceContext.QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues)
 * [SetGlobalQualifierValue](/uwp/api/windows.applicationmodel.resources.core.resourcecontext#Windows_ApplicationModel_Resources_Core_ResourceContext_SetGlobalQualifierValue_System_String_System_String_Windows_ApplicationModel_Resources_Core_ResourceQualifierPersistence_)
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [Effektive Pixel und Skalierungsfaktor](../layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor)
-* [Ressourcenverwaltungssystem](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj552947)
+* [Effektive Pixel und Skalierungsfaktor](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor)
+* [Ressourcenverwaltungssystem](resource-management-system.md)
 * [So wird's gemacht: Vorbereiten für die Lokalisierung](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh967762)
 * [Erkennen der Plattform, auf der Ihre App ausgeführt wird](../porting/wpsl-to-uwp-input-and-sensors.md#detecting-the-platform-your-app-is-running-on)
-* [Schreiben von Code](../get-started/universal-application-platform-guide.md#writing-code)
+* [Übersicht über die Gerätefamilien](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview)
 * [Lokalisieren der Zeichenfolgen Ihrer Benutzeroberfläche](localize-strings-ui-manifest.md)
 * [BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302)
 * [Zusammenstellung von Regionscodes der Statistikabteilung der Vereinten Nationen (M49)](http://go.microsoft.com/fwlink/p/?linkid=247929)
 * [IANA Language Subtag Registry](http://go.microsoft.com/fwlink/p/?linkid=227303)
-* [Anpassen von Layout und Schriftarten und Unterstützen von „Von rechts nach links“](../globalizing/adjust-layout-and-fonts--and-support-rtl.md)
+* [Anpassen von Layout und Schriftarten und Unterstützen von „Von rechts nach links“](../design/globalizing/adjust-layout-and-fonts--and-support-rtl.md)

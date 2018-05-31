@@ -1,7 +1,7 @@
 ---
 author: drewbatgit
 ms.assetid: b7333924-d641-4ba5-92a2-65925b44ccaa
-description: "In diesem Artikel wird erläutert, wie die Medienwiedergabe erfolgt, während die App im Hintergrund ausgeführt wird."
+description: In diesem Artikel wird erläutert, wie die Medienwiedergabe erfolgt, während die App im Hintergrund ausgeführt wird.
 title: Wiedergeben von Medien im Hintergrund
 ms.author: drewbat
 ms.date: 02/08/2017
@@ -9,9 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: 148bb77f9386864a1b127341aa875beb7123bae9
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: f8fdc99355ef5a024757cc2e415b1d259965c1ce
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1690496"
 ---
 # <a name="play-media-in-the-background"></a>Wiedergeben von Medien im Hintergrund
 In diesem Artikel wird beschrieben, wie Sie Ihre App so konfigurieren, dass die Medienwiedergabe fortgesetzt wird, wenn die App vom Vordergrund in den Hintergrund wechselt. Dies bedeutet, dass die App weiterhin Audio wiedergeben kann, auch nachdem der Benutzer die App minimiert hat, zur Startseite zurückgekehrt ist oder die App auf andere Weise verlassen hat. 
@@ -65,7 +69,7 @@ Als Nächstes fügen Sie dem **Capabilities**-Element die *backgroundMediaPlayba
 </Capabilities>
 ```
 
-##<a name="handle-transitioning-between-foreground-and-background"></a>Verarbeiten der Übergänge zwischen Vordergrund und Hintergrund
+## <a name="handle-transitioning-between-foreground-and-background"></a>Verarbeiten der Übergänge zwischen Vordergrund und Hintergrund
 Wenn Ihre App vom Vordergrund in den Hintergrund wechselt, wird das [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground)-Ereignis ausgelöst. Wechselt die App dann wieder in den Vordergrund, wird das [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground)-Ereignis ausgelöst. Da es sich dabei um App-Lebenszyklusereignisse handelt, sollten Sie bei der App-Erstellung Handler für diese Ereignisse registrieren. In der Standardprojektvorlage wird der Handler dem **App**-Klassenkonstruktor in „App.xaml.cs“ hinzugefügt. 
 
 [!code-cs[RegisterEvents](./code/BackgroundAudio_RS1/cs/App.xaml.cs#SnippetRegisterEvents)]
@@ -88,7 +92,7 @@ Den wichtigsten Teil beim Übergang zwischen Vorder- und Hintergrund stellt die 
 ## <a name="network-availability-for-background-media-apps"></a>Netzwerkverfügbarkeit für im Hintergrund ausgeführte Medien-Apps
 Alle netzwerkfähigen Medienquellen, die nicht auf der Basis eines Datenstroms oder einer Datei erstellt wurden, behalten beim Abrufen von Remoteinhalten eine aktive Netzwerkverbindung bei. Andernfalls wird die Verbindung nicht beibehalten. [Insbesondere bei **MediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaStreamSource) kommt es darauf an, dass die Anwendung den richtigen Pufferbereich mithilfe von [**SetBufferedRange**](https://msdn.microsoft.com/library/windows/apps/dn282762) an die Plattform übergibt. Nachdem der gesamte Inhalt vollständig gepuffert wurde, wird die Netzwerkverbindung nicht mehr für die App reserviert.
 
-Wenn Sie Netzwerkaufrufe senden müssen, die im Hintergrund ausgeführt werden, wenn kein Mediendownload stattfindet, müssen Sie diese mit einer entsprechenden Aufgabe wie [**ApplicationTrigger**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Background.ApplicationTrigger), [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Background.MaintenanceTrigger) oder [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Background.TimeTrigger) umschließen. Weitere Informationen finden Sie unter [Unterstützen der App mit Hintergrundaufgaben](https://msdn.microsoft.com/windows/uwp/launch-resume/support-your-app-with-background-tasks).
+Beim Durchführen von Netzwerkaufrufen, die im Hintergrund ausgeführt werden, wenn kein Mediendownload stattfindet, müssen Sie diese in eine entsprechende Aufgabe, wie [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Background.MaintenanceTrigger) oder [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Background.TimeTrigger), einschließen. Weitere Informationen finden Sie unter [Unterstützen der App mit Hintergrundaufgaben](https://msdn.microsoft.com/windows/uwp/launch-resume/support-your-app-with-background-tasks).
 
 ## <a name="related-topics"></a>Verwandte Themen
 * [Medienwiedergabe](media-playback.md)

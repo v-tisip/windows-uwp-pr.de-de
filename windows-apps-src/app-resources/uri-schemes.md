@@ -1,7 +1,7 @@
 ---
 author: stevewhims
-Description: "Es gibt mehrere URI (Uniform Resource Identifier)-Schemas, die Sie verwenden können, um auf Dateien aus Ihrem App Paket, dem App-Ordner oder der Cloud zu verweisen. Sie können auch ein URI-Schema verwenden, um auf Zeichenfolgen, die von den App-Ressourcendateien (.resw) geladen wurden, zu verweisen."
-title: URI-Schemas
+Description: There are several URI (Uniform Resource Identifier) schemes that you can use to refer to files that come from your app's package, your app's data folders, or the cloud. You can also use a URI scheme to refer to strings loaded from your app's Resources Files (.resw).
+title: URI-Schemen
 template: detail.hbs
 ms.author: stwhi
 ms.date: 10/16/2017
@@ -9,18 +9,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
-localizationpriority: medium
-ms.openlocfilehash: 7cbd4a6fea3ca7d179eae9857c6e98010d11439e
-ms.sourcegitcommit: d0c93d734639bd31f264424ae5b6fead903a951d
+ms.localizationpriority: medium
+ms.openlocfilehash: 445f053b0243f1b9c2e54e6e9fcfa332d49cbec5
+ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 03/22/2018
+ms.locfileid: "1674517"
 ---
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
+# <a name="uri-schemes"></a>URI-Schemen
 
-# <a name="uri-schemes"></a>URI-Schemas
-
-Es gibt mehrere URI (Uniform Resource Identifier)-Schemas, die Sie verwenden können, um auf Dateien aus Ihrem App Paket, dem App-Ordner oder der Cloud zu verweisen. Sie können ebenfalls ein URI-Schema verwenden, um auf Zeichenfolgen, die von der App-Ressourcendateien (.resw) geladen wurden, zu verweisen. Sie können diese URI-Schemen in Ihrem Code, im XAML-Markup, in Ihrem App-Paketmanifest oder in der Kachel und Popupbenachrichtigungsvorlage verwenden.
+Es gibt mehrere URI (Uniform Resource Identifier)-Schemen, die Sie verwenden können, um auf Dateien aus Ihrem App Paket, dem App-Ordner oder der Cloud zu verweisen. Sie können ebenfalls ein URI-Schema verwenden, um auf Zeichenfolgen, die von der App-Ressourcendateien (.resw) geladen wurden, zu verweisen. Sie können diese URI-Schemen in Ihrem Code, im XAML-Markup, in Ihrem App-Paketmanifest oder in der Kachel und Popupbenachrichtigungsvorlage verwenden.
 
 ## <a name="common-features-of-the-uri-schemes"></a>Allgemeine Features der URI-Schemen
 
@@ -28,7 +27,7 @@ Alle in diesem Thema beschriebenen Schemen folgen den typischen URI-Schema-Regel
 
 Bei allen URI-Schemen wird der hierarchische Teil gemäß [RFC 3986](http://go.microsoft.com/fwlink/p/?LinkId=263444) als die Autoritäts- und Pfadkomponenten des URI definiert:
 
-```
+```syntax
 URI         = scheme ":" hier-part [ "?" query ] [ "#" fragment ]
 hier-part   = "//" authority path-abempty
             / path-absolute
@@ -109,8 +108,7 @@ Die oben genannte URI kann tatsächlich eine Datei im aktuellen App-Paket mit fo
 
 Sie können natürlich auch die gleiche physische Datei abrufen, indem Sie direkt mit dem vollständigen Namen darauf verweisen.
 
-**XAML**
-```xml
+```xaml
 <Image Source="ms-appx:///images/fr-FR/logo.scale-100_contrast-white.png"/>
 ```
 
@@ -128,9 +126,9 @@ Abfrageparameter werden während des Abrufens von Ressourcen ignoriert. Bei der 
 
 ## <a name="ms-appdata"></a>ms-appdata
 
-Verweisen Sie mithilfe des `ms-appdata`-URI Schemas auf App-Dateien, die aus den lokalen und temporären Datenordnern sowie Roamingdatenordnern stammen. Weitere Informationen zu diesen App-Datendateien finden Sie unter [Speichern und Abrufen von Einstellungen und anderen App-Daten](../app-settings/store-and-retrieve-app-data.md).
+Verweisen Sie mithilfe des `ms-appdata`-URI Schemas auf App-Dateien, die aus den lokalen und temporären Datenordnern sowie Roamingdatenordnern stammen. Weitere Informationen zu diesen App-Datendateien finden Sie unter [Speichern und Abrufen von Einstellungen und anderen App-Daten](../design/app-settings/store-and-retrieve-app-data.md).
 
-Das `ms-appdata`-URI-Schema führt keine Laufzeit mittels Inhaltsaushandlung durch, die [ms-appx and ms-appx-web](#ms-appx-and-ms-appx-web) durchführen. Sie können allerdings auf den Inhalt des [ResourceContext.QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live#Windows_ApplicationModel_Resources_Core_ResourceContext_QualifierValues) reagieren und die richtigen Ressourcen über den gesamten physischen Dateiname im URI in App-Daten laden.
+Das `ms-appdata`-URI-Schema führt keine Laufzeit mittels Inhaltsaushandlung durch, die [ms-appx and ms-appx-web](#ms-appx-and-ms-appx-web) durchführen. Sie können allerdings auf den Inhalt des [ResourceContext.QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues) reagieren und die richtigen Ressourcen über den gesamten physischen Dateiname im URI in App-Daten laden.
 
 ### <a name="scheme-name-ms-appdata"></a>Schemaname (ms-appdata)
 
@@ -253,9 +251,9 @@ ms-resource://john:password@contoso.myapp:8080/Resources/String1
 
 ### <a name="path-ms-resource"></a>Pfad (ms-resource)
 
-Der Pfad gibt den hierarchischen Ort der [ResourceMap](/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceMap?branch=live)-Unterstruktur (siehe [Resource Management System](https://msdn.microsoft.com/library/windows/apps/jj552947)) und das darin enthaltene [NamedResource](/uwp/api/Windows.ApplicationModel.Resources.Core.NamedResourcebranch=live)-Element an. Dies entspricht in der Regel dem Dateinamen (ohne Erweiterung) der Ressourcendatei (.resw) und dem Bezeichner der darin enthaltenen Zeichenfolgenressource.
+Der Pfad gibt den hierarchischen Ort der [ResourceMap](/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceMap?branch=live)-Unterstruktur (siehe [Resource Management System](https://msdn.microsoft.com/library/windows/apps/jj552947)) und das darin enthaltene [NamedResource](/uwp/api/Windows.ApplicationModel.Resources.Core.NamedResource?branch=live)-Element an. Dies entspricht in der Regel dem Dateinamen (ohne Erweiterung) der Ressourcendatei (.resw) und dem Bezeichner der darin enthaltenen Zeichenfolgenressource.
 
-Beispiele und weitere Informationen finden Sie unter [Lokalisieren der Zeichenfolge im Paketmanifest der Benutzeroberfläche und der App](localize-strings-ui-manifest.md) und [Unterstützte Kachel- und Popupbenachrichtigungen für Sprache, Skalierungsfaktor und hohen Kontrast](tile-toast-language-scale-contrast.md).
+Beispiele und weitere Informationen finden Sie unter [Lokalisieren der Zeichenfolge im Paketmanifest der Benutzeroberfläche und der App](localize-strings-ui-manifest.md) und [Unterstützte Kachel- und Popupbenachrichtigungen für Sprache, Skalierungsfaktor und hohen Kontrast](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md).
 
 Bei der Pfadkomponente von `ms-resource` muss wie bei generischen URIs die Groß-/Kleinschreibung beachtet werden. Wenn der zugrunde liegende Abruf eine [CompareStringOrdinal](https://msdn.microsoft.com/library/windows/apps/br224628) mit *IgnoreCase* ist, wird `true` festgelegt.
 
@@ -276,7 +274,7 @@ Entwickler bestimmter Komponenten, die sich in Ebenen über dieser URI-Analyse b
 * [Uniform Resource Identifier (URI): Allgemeine Syntax](http://go.microsoft.com/fwlink/p/?LinkId=263444)
 * [Verpacken von Apps](../packaging/index.md)
 * [Verweisen auf ein Bild oder eine Ressource aus XAML-Markup und Code](images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code)
-* [Speichern und Abrufen von Einstellungen und anderen App-Daten](../app-settings/store-and-retrieve-app-data.md)
+* [Speichern und Abrufen von Einstellungen und anderen App-Daten](../design/app-settings/store-and-retrieve-app-data.md)
 * [Lokalisieren von Zeichenfolgen im Paketmanifest der Benutzeroberfläche und der App](localize-strings-ui-manifest.md)
 * [Ressourcenverwaltungssystem](https://msdn.microsoft.com/library/windows/apps/jj552947)
-* [Unterstützte Kachel- und Popupbenachrichtigungen für die Sprache, den Skalierungsfaktor für die Anzeige, das Design und den hohen Kontrast](tile-toast-language-scale-contrast.md)
+* [Unterstützte Kachel- und Popupbenachrichtigungen für die Sprache, den Skalierungsfaktor für die Anzeige, das Design und den hohen Kontrast](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md)

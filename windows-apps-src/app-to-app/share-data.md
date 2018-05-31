@@ -1,5 +1,5 @@
 ---
-description: "In diesem Artikel wird erläutert, wie der Freigabe-Vertrag in einer UWP-App (Universelle Windows-Plattform) unterstützt wird."
+description: In diesem Artikel wird erläutert, wie der Freigabe-Vertrag in einer UWP-App (Universelle Windows-Plattform) unterstützt wird.
 title: Freigeben von Daten
 ms.assetid: 32287F5E-EB86-4B98-97FF-8F6228D06782
 author: msatranjr
@@ -9,15 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: fe6da350fbfe006b55e90aee8c12da90967f5711
-ms.sourcegitcommit: 23cda44f10059bcaef38ae73fd1d7c8b8330c95e
+ms.localizationpriority: medium
+ms.openlocfilehash: d283ce0211b28f9d41e4689c978e8731c677698d
+ms.sourcegitcommit: c11e7163010cb7547aeaca96e9b90a3c3a8ef31e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 01/25/2018
+ms.locfileid: "1541113"
 ---
 # <a name="share-data"></a>Freigeben von Daten
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 In diesem Artikel wird erläutert, wie der Freigabe-Vertrag in einer UWP-App (Universelle Windows-Plattform) unterstützt wird. Der Freigabe-Vertrag ist eine einfache Möglichkeit, Daten wie z.B. Text, Links, Fotos und Videos schnell für andere Apps freizugeben. Ein Benutzer möchte beispielsweise mit einer App für ein soziales Netzwerk eine Webseite mit seinen Freunden teilen, oder er möchte in einer Notiz-App einen Link für später speichern.
 
@@ -40,7 +41,6 @@ Sie können verschiedene Arten von Daten freigeben, einschließlich:
 -   HTML
 -   Formatierter Text
 -   Bitmaps
--   Nur-Text
 -   Dateien
 -   Vom Entwickler definierte Daten
 

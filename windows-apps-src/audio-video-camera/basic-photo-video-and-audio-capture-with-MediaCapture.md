@@ -2,20 +2,23 @@
 author: drewbatgit
 ms.assetid: 66d0c3dc-81f6-4d9a-904b-281f8a334dd0
 description: In diesem Artikel wird beschrieben, wie Sie Fotos und Videos mit der MediaCapture-Klasse am einfachsten aufnehmen.
-title: "Allgemeine Foto-, Video- und Audioaufnahme mit „MediaCapture“"
+title: Allgemeine Foto-, Video- und Audioaufnahme mit „MediaCapture“
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: dbdc65fb842c6f8d6439f0041a33d991e27bd6b6
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: d6e5d69c2f86c0d57c0c1be938799d5e81bb8f00
+ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/03/2018
+ms.locfileid: "1832274"
 ---
 # <a name="basic-photo-video-and-audio-capture-with-mediacapture"></a>Allgemeine Foto-, Video- und Audioaufnahme mit „MediaCapture“
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
 In diesem Artikel wird beschrieben, wie Sie Fotos und Videos mit der [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCapture)-Klasse am einfachsten aufnehmen. Die **MediaCapture**-Klasse stellt einen leistungsfähigen Satz von APIs bereit, der eine Steuerung der Aufnahmepipeline auf unterster Ebene sowie fortgeschrittene Aufnahmeszenarien ermöglicht. Dieser Artikel soll Ihnen jedoch helfen, Ihre App schnell und einfach durch grundlegende Medienaufnahmefunktionen zu erweitern. Informationen zu den von **MediaCapture** bereitgestellten Features finden Sie unter [**Kamera**](camera.md).
 
@@ -54,7 +57,13 @@ Sie können auch mehrere Fotos erfassen, indem Sie **CaptureAsync** wiederholt a
 
 [!code-cs[CaptureToSoftwareBitmap](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetCaptureToSoftwareBitmap)]
 
-Weitere Informationen zum Arbeiten mit dem **SoftwareBitmap**-Objekt, z. B. wie Sie ein Objekt in einer XAML-Seite anzeigen, finden Sie unter [**Erstellen, Bearbeiten und Speichern von Bitmapbildern**](imaging.md).
+Beginnend mit Windows, Version 1803, können Sie auf die [**BitmapProperties**](https://docs.microsoft.com/uwp/api/windows.media.capture.capturedframe.bitmapproperties)-Eigenschaft der **CapturedFrame** -Klasse zugreifen, die von **CaptureAsync** zum Abrufen von Metadaten zu den erfassten Fotos zurückgegeben wird. Sie können diese Daten an einen **BitmapEncoder** übergeben, um die Metadaten in einer Datei zu speichern. Früher gab es keine Möglichkeit, auf diese Daten für nicht komprimierte Bildformate zugreifen. Sie können auch auf die [**ControlValues**](https://docs.microsoft.com/uwp/api/windows.media.capture.capturedframe.controlvalues)-Eigenschaft zum Abrufen eines [**CapturedFrameControlValues**](https://docs.microsoft.com/uwp/api/windows.media.capture.capturedframecontrolvalues)-Objekts zugreifen, das das Steuerelement wie z.B. die Belichtung und den Weißabgleich der aufgenommenen Frame beschreibt.
+
+Weitere Informationen zum Arbeiten mit dem **BitmapEncoder** und dem **SoftwareBitmap**-Objekt, z. B. wie Sie ein Objekt in einer XAML-Seite anzeigen, finden Sie unter [**Erstellen, Bearbeiten und Speichern von Bitmapbildern**](imaging.md). 
+
+Weitere Informationen zum Festlegen der Steurelementwerte des Aufnahmegeräts finden Sie unter [Steuerelemente des Aufnahmegeräts für Foto- und Videoaufnahmen](capture-device-controls-for-photo-and-video.md).
+
+Ab Windows10, Version 1803, erhalten Sie die Metadaten wie z.B. EXIF-Informationen für Fotos, die nicht komprimiert erfasst wurden, durch den Zugriff auf die [**BitmapProperties**](https://docs.microsoft.com/uwp/api/windows.media.capture.capturedframe.bitmapproperties)-Eigenschaft von der **CapturedFrame**, die von **MediaCapture** zurückgegeben wird. In früheren Versionen waren diese Daten nur in der Kopfzeile des Fotos in einem komprimierten Dateiformat erhältlich. Sie können diese Daten für den [**BitmapEncoder**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapencoder) bereitstellen, wenn Sie sie manuell in eine Bilddatei schreiben. Weitere Informationen zur Kodierung von Bitmaps finden Sie im Artikel [Erstellen, Bearbeiten und Speichern von Bitmapbildern.](imaging.md).  Sie können auch auf die Werte des Frame-Steuerelements zugreifen, z.B. die Belichtung und Flash-Einstellungen, die verwendet wurden, als das Image erfasst wurde, indem Sie auf die [**ControlValues**](https://docs.microsoft.com/en-us/uwp/api/windows.media.capture.capturedframe.controlvalues)-Eigenschaft zugreifen. Weitere Informationen finden Sie unter [Steuerelemente des Aufnahmegeräts für Foto- und Videoaufnahmen](capture-device-controls-for-photo-and-video-capture.md).
 
 ## <a name="capture-a-photo-to-a-file"></a>Aufnehmen eines Fotos in einer Datei
 Bei einer normalen Foto-App wird ein aufgenommenes Foto auf einem Datenträger oder in der Cloud gespeichert. Dabei müssen der Datei Metadaten hinzugefügt werden, z. B. die Ausrichtung des Fotos. Das folgende Beispiel zeigt, wie Sie ein Foto in einer Datei aufnehmen. Sie können später immer noch ein **SoftwareBitmap**-Objekt aus der Bilddatei erstellen. 
@@ -96,6 +105,11 @@ Bei der Videoaufnahme sollten Sie einen Handler für das [**RecordLimitationExce
 
 [!code-cs[RecordLimitationExceededHandler](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetRecordLimitationExceededHandler)]
 
+### <a name="play-and-edit-captured-video-files"></a>Wiedergeben und Bearbeiten von aufgenommenen Videodateien
+Nachdem Sie ein Video in einer Datei aufgezeichnet haben, empfiehlt es sich, die Datei hochzuladen und in der Benutzeroberfläche Ihrer App wiederzugeben. Sie können dazu das **[MediaPlayerElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaPlayerElement)** XAML-Steuerelement und einen zugeordneten **[MediaPlayer ](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer)** verwenden. Weitere Informationen zur Wiedergabe von Medien in einer XAML-Seite finden Sie unter [Wiedergeben von Audio- und Videoinhalten mit MediaPlayer.](play-audio-and-video-with-mediaplayer.md)
+
+Sie können auch ein **[MediaClip](https://docs.microsoft.com/uwp/api/windows.media.editing.mediaclip)**-Objekt aus einer Videodatei durch Aufrufen von **[Mediaclip ](https://docs.microsoft.com/uwp/api/windows.media.editing.mediaclip.createfromfileasync)** erstellen.  Die **[MediaComposition](https://docs.microsoft.com/uwp/api/windows.media.editing.mediacomposition)** bietet grundlegende Videobearbeitungs-Funktionen wie das Anordnen der **MediaClip**-Objekte, Zuschneiden von Videos, Erstellen von Ebenen, Hinzufügen von Musik im Hintergrund und Anwenden von Videoeffekten. Weitere Informationen zu Medienkompositionen finden Sie unter [Medienkompositionen und -bearbeitung](media-compositions-and-editing.md).
+
 ## <a name="pause-and-resume-video-recording"></a>Anhalten und Fortsetzen der Videoaufnahme
 Sie können eine Videoaufnahme anhalten und dann ohne Erstellung einer separaten Ausgabedatei fortsetzen, indem Sie [**PauseAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.LowLagMediaRecording.PauseAsync) und dann [**ResumeAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.LowLagMediaRecording.ResumeAsync) aufrufen.
 
@@ -124,15 +138,34 @@ Sie können Ihrer App schnell eine Audioaufnahme hinzufügen, indem Sie die oben
 
 Rufen Sie [**StopAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.LowLagPhotoSequenceCapture.StopAsync) auf, um die Audioaufnahme zu beenden.
 
+## <a name="related-topics"></a>Verwandte Themen
+
+* [Kamera](camera.md)
 [!code-cs[StopRecording](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetStopRecording)]
 
 Sie können **StartAsync** und **StopAsync** mehrfach aufrufen, um mehrere Audiodateien aufzuzeichnen. Nachdem die Audioaufnahme abgeschlossen ist, rufen Sie [**FinishAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.LowLagMediaRecording.FinishAsync) auf, um die Aufzeichnungssitzung zu löschen und die zugehörigen Ressourcen zu bereinigen. Nach diesem Aufruf müssen Sie **PrepareLowLagRecordToStorageFileAsync** erneut aufrufen, um die Aufzeichnungssitzung vor dem Aufrufen von **StartAsync** erneut zu initialisieren.
 
 [!code-cs[FinishAsync](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetFinishAsync)]
 
-## <a name="related-topics"></a>Verwandte Themen
 
-* [Kamera](camera.md)
+## <a name="detect-and-respond-to-audio-level-changes-by-the-system"></a>Erkennen und Reagieren auf Änderungen der Audioebene vom System
+Ab Windows10, Version 1803, erkennt Ihre App, wenn das System die Lautstärke der Audioaufnahme Ihrer App oder die Audiowiedergabe reduziert oder stummschaltet. Beispielsweise kann das System das Streamen der App stumm schalten, wenn es in den Hintergrund wechselt. Mit der [**AudioStateMonitor**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiostatemonitor)-Klasse können Sie sich registrieren, um ein Ereignis zu erhalten, wenn das System die Lautstärke eines Audiodatenstroms ändert. Rufen Sie eine Instanz des **AudioStateMonitor** für die Überwachung des Audio-Datenstroms durch [**CreateForCaptureMonitoring**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiostatemonitor.createforcapturemonitoring#Windows_Media_Audio_AudioStateMonitor_CreateForCaptureMonitoring) auf. Rufen Sie eine Instanz für die Überwachung von Audiowiedergabestreams durch [**CreateForRenderMonitoring**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiostatemonitor.createforrendermonitoring) auf. Registrieren Sie einen Handler für das [**SoundLevelChanged**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiostatemonitor.soundlevelchanged)-Ereignis jedes Monitors, um benachrichtigt zu werden, wenn die Audiowiedergabe für die entsprechende Streamkategorie vom System geändert wird.
+
+[!code-cs[AudioStateMonitorUsing](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetAudioStateMonitorUsing)]
+
+[!code-cs[AudioStateVars](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetAudioStateVars)]
+
+[!code-cs[RegisterAudioStateMonitor](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetRegisterAudioStateMonitor)]
+
+Im **SoundLevelChanged** Handler für den Aufnahmedatenstrom, können Sie die [**SoundLevel**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiostatemonitor.soundlevel)-Eigenschaft des **AudioStateMonitor**-Senders überprüfen, um die neue Soundebene zu bestimmen. Beachten Sie, dass ein Aufnahmedatenstrom sollte nie vom System gesenkt oder "gedämpft" werden sollte. Es sollte immer nur stummgeschaltet oder auf volle Lautstärke gewechselt werden. Wenn der Audiodatenstrom stumm geschaltet ist, können Sie eine Aufzeichnung in Bearbeitung beenden. Wenn der Audiodatenstrom auf die volle Lautstärke wiederhergestellt wird, können Sie beginnen, erneut aufzuzeichnen. Das folgende Beispiel verwendet einige Variablen der booleschen Klasse, um nachzuverfolgen, ob die App derzeit Audio aufnimmt und ob die Aufnahme aufgrund der Änderung der Audiostatus beendet wurde. Diese Variablen werden verwendet, um zu bestimmen, wann ist es angemessen ist, die Audio-Aufnahme programmgesteuert zu beenden oder zu starten.
+
+[!code-cs[CaptureSoundLevelChanged](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetCaptureSoundLevelChanged)]
+
+Im folgenden Codebeispiel wird eine Implementierung des **SoundLevelChanged** Handlers für die Wiedergabe von Audio veranschaulicht. Je nach App-Szenario, und der Art der Inhalte, die Sie abspielen, sollte die Audiowiedergabe angehalten werden, wenn die Lautstärke gedämpft ist. Weitere Informationen zum Behandeln von Soundänderungen auf Systemebene für die Wiedergabe von Medien finden Sie unter [Wiedergeben von Audio- und Videoinhalten mit MediaPlayer](play-audio-and-video-with-mediaplayer.md).
+
+[!code-cs[RenderSoundLevelChanged](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetRenderSoundLevelChanged)]
+
+
 * [Aufnehmen von Fotos und Videos mit der in Windows integrierten Kamera-UI](capture-photos-and-video-with-cameracaptureui.md)
 * [Handhaben der Geräte- und Bildschirmausrichtung mit „MediaCapture“](handle-device-orientation-with-mediacapture.md)
 * [Erstellen, Bearbeiten und Speichern von Bitmapbildern](imaging.md)
