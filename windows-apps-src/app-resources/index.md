@@ -1,6 +1,6 @@
 ---
 author: stevewhims
-Description: In diesem Abschnitt erfahren Sie, wie Sie Zeichenketten-, Bild- und Dateiressourcen Ihrer App erstellen, verpacken und verwenden.
+Description: This section shows you how to author, package, and consume your app's string, image, and file resources.
 title: App-Ressourcen und das Ressourcenverwaltungssystem
 label: Intro
 template: detail.hbs
@@ -10,15 +10,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, uwp, Ressourcen, Bild, Element, MRT, Qualifizierer
-localizationpriority: medium
-ms.openlocfilehash: 38a131704bacbffdf89636aa70b405aa30861d27
-ms.sourcegitcommit: d0c93d734639bd31f264424ae5b6fead903a951d
+ms.localizationpriority: medium
+ms.openlocfilehash: a024badd16aa019f63cd68ef1cc357c6f241e7c3
+ms.sourcegitcommit: 12cc283e821cbf978debf24914490982f076b4b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 03/16/2018
+ms.locfileid: "1657893"
 ---
 # <a name="app-resources-and-the-resource-management-system"></a>App-Ressourcen und das Ressourcenverwaltungssystem
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
+
 
 In diesem Abschnitt erfahren Sie, wie Sie Zeichenketten-, Bild- und Dateiressourcen Ihrer App erstellen, verpacken und verwenden. Zum Beispiel könnten Sie eine Datei zusammen mit Ihrem Lieblingsspiel verpacken, die eine Definition der Spielebenen enthält, und die Datei zur Laufzeit laden. Außerdem zeigen wir Ihnen, wie Sie Ihre Ressourcen unabhängig von der Logik der App verwalten können. Dadurch wird es einfacher, die App für verschiedene Gebietsschemata, Geräteanzeigen, Eingabehilfeneinstellungen und andere Benutzer- und Maschinenkontexte zu lokalisieren und anzupassen. Ressourcen wie Zeichenketten und Bilder müssen in der Regel in mehreren Sprachen, Skalierungen und Kontrastvarianten vorhanden sein. Bei der Handhabung solcher Ressourcen unterstützt Sie das [Ressourcenverwaltungssystem](resource-management-system.md).
 
@@ -26,7 +27,7 @@ Es gibt zwei Arten von App-Ressourcen:
 - Eine Dateiressource ist eine Ressource, die als Datei auf einem Datenträger gespeichert ist. Bei einer Dateiressource kann es sich um ein Bitmap-Bild, XAML, XML, HTML oder beliebige andere Daten handeln.
 - Eine eingebettete Ressource ist eine Ressource, die in eine Ressourcendatei eingebettet ist. Das häufigste Beispiel ist eine Zeichenfolgenressource, die in eine Ressourcendatei (.resw oder .resjson) eingebettet ist.
 
-Weitere Informationen zum Wertversprechen durch Lokalisierung Ihrer App finden Sie unter [Globalisierung und Lokalisierung](../globalizing/globalizing-portal.md).
+Weitere Informationen zum Wertversprechen durch Lokalisierung Ihrer App finden Sie unter [Globalisierung und Lokalisierung](../design/globalizing/globalizing-portal.md).
 
 | Artikel | Beschreibung |
 |---------|-------------|
@@ -35,16 +36,12 @@ Weitere Informationen zum Wertversprechen durch Lokalisierung Ihrer App finden S
 | [Wie das Ressourcenverwaltungssystem Sprachtags zuordnet](how-rms-matches-lang-tags.md) | Im vorherigen Thema ([Wie das Ressourcenverwaltungssystem Ressourcen zuordnet und auswählt](how-rms-matches-and-chooses-resources.md)) wird die Zuordnung von Qualifizierern im Allgemeinen behandelt. Dieses Thema konzentriert sich ausführlicher auf den Vergleich von Sprachtags. |
 | [Anpassen von Ressourcen mit Qualifizierern für Sprache, Skalierung, hohen Kontrast und anderen Qualifizierern](tailor-resources-lang-scale-contrast.md) | In diesem Thema werden das allgemeine Konzept der Ressourcenqualifizierer, ihre Verwendung und der Zweck jedes Qualifizierernamens erläutert. |
 | [Lokalisieren von Zeichenfolgen in Benutzeroberfläche und App-Paketmanifest](localize-strings-ui-manifest.md) | Wenn Sie möchten, dass Ihre App verschiedene Anzeigesprachen unterstützt und Ihr Code oder XAML-Markup- oder App-Paketmanifest Zeichenfolgenliterale enthält, verschieben Sie diese Zeichenfolgen in eine Ressourcendatei (.resw). Sie können dann eine übersetzte Kopie dieser Ressourcendatei für jede Sprache erstellen, die Ihre App unterstützt. |
-| [Laden von Bilder und Ressourcen mit Anpassung an Skalierung, Design, hohen Kontrast und anders](images-tailored-for-scale-theme-contrast.md) | Ihre App kann Bildressourcendateien laden, die Bilder enthalten, die auf den Skalierungsfaktor des Bildschirms, das Design, einen hohen Kontrast und andere Laufzeitkontexte zugeschnitten sind. |
-| [Kachel- und Toast-Mitteilungsunterstützung für Sprache, Skalierung und hohen Kontrast](tile-toast-language-scale-contrast.md) | Ihre Kacheln und Toasts können Zeichenfolgen und Bilder laden, die auf die
-Anzeigesprache, den Skalierungsfaktor des Bildschirms, einen hohen Kontrast und andere Laufzeitkontexte zugeschnitten sind. |
-| [URI-Schemas](uri-schemes.md) | Sie können mehrere Uniform Resource Identifier (URI)-Schemas verwenden, um auf Dateien im App-Paket, in Datenordnern der App oder in der Cloud zu verweisen. Sie können ebenfalls ein URI-Schema verwenden, um auf Zeichenfolgen zu verweisen, die aus den Ressourcendateien (.resw) der App geladen werden. |
+| [Laden von Bilder und Ressourcen mit Anpassung an Skalierung, Design, hohen Kontrast und anders](images-tailored-for-scale-theme-contrast.md) | Ihre App kann Bild-Ressourcendateien mit Bildern laden, die speziell auf den Skalierungsfaktor für die Anzeige, das Design, den hohen Kontrast und andere Laufzeitkontexte angepasst wurden. |
+| [URI-Schemen](uri-schemes.md) | Es gibt mehrere URI (Uniform Resource Identifier)-Schemen, die Sie verwenden können, um auf Dateien aus Ihrem App Paket, dem App-Ordner oder der Cloud zu verweisen. Sie können auch ein URI-Schema verwenden, um auf Zeichenfolgen zu verweisen, die von den App-Ressourcendateien (.resw) geladen wurden. |
+| [Angeben der von der App verwendeten Standardressourcen](specify-default-resources-installed.md) | Wenn Ihre App über keine Ressourcen verfügt, die den speziellen Einstellungen eines Kundengeräts entsprechen, werden die Standardressourcen der App verwendet. In diesem Thema wird erläutert, wie Sie diese Standardressourcen festlegen. |
+| [Integrieren von Ressourcen im App-Paket und nicht in einem Ressourcenpaket](build-resources-into-app-package.md) | Einige Arten von Apps (mehrsprachige Wörterbücher, Übersetzungstools usw.) müssen das Standardverhalten von einem App Bundle überschreiben und Ressourcen im App-Paket und nicht in separaten Ressourcenpaketen integrieren. In diesem Thema wird erläutert, wie das geht. |
+| [APIs zur Paketressourcenindizierung (PRI) und benutzerdefinierte Buildsysteme](pri-apis-custom-build-systems.md) | Mit den [APIs zur Paketressourcenindizierung (PRI)](https://msdn.microsoft.com/library/windows/desktop/mt845690) können Sie ein benutzerdefiniertes Buildsystem für die Ressourcen Ihrer UWP-App entwickeln. Das Buildsystem kann Paketressourcenindexdateien (PRI) erstellen, versionieren und per Dump sichern (als XML), und zwar für jedes Maß an Komplexität, das Ihre UWP-App benötigt. |
 | [Manuelles Kompilieren von Ressourcen mit MakePri.exe](compile-resources-manually-with-makepri.md) | MakePri.exe ist ein Befehlszeilentool, mit dem Sie PRI-Dateien erstellen und dumpen können Es ist über MSBuild in Microsoft Visual Studio integriert, kann aber auch für Entwickler von Nutzen sein, die Pakete manuell oder mithilfe benutzerdefinierter Buildsysteme erstellen. |
-| [Befehlszeilenoptionen für MakePRI.exe](makepri-exe-command-options.md) | MakePri.exe akzeptiert die Befehle `createconfig`, `dump`, `new`, `resourcepack`, und `versioned`. In diesem Thema werden die Befehlszeilenoptionen für deren Verwendung erläutert. |
-| [Konfigurationsdatei für MakePRI.exe](makepri-exe-configuration.md) | In diesem Thema wird das Schema der XML-Konfigurationsdatei für MakePri.exe beschrieben. |
-| [Formatspezifische Indexer für MakePri.exe](makepri-exe-format-specific-indexers.md) | In diesem Thema werden die formatspezifischen Indexer beschrieben, die das Tool MakePri.exe verwendet, um seinen Ressourcenindex zu generieren. |
 | [Verwenden des Ressourcenverwaltungssystem für Windows 10 in älteren Apps oder Spielen](using-mrt-for-converted-desktop-apps-and-games.md) | Indem Sie Ihre .NET- oder Win32-App oder Ihr Spiel als AppX-Paket verpacken, können Sie das Ressourcenverwaltungssystem nutzen, um App-Ressourcen zu laden, die auf den Laufzeitkontext zugeschnitten sind. In diesem Thema werden die erforderlichen Techniken detailliert beschrieben. |
 
-Weitere Informationen finden Sie in der ursprünglich für Windows8.x erstellten Dokumentation, die auch für Universelle Windows-Plattform (UWP)-Apps und Windows10 gilt.
-
--   [App-Ressourcen und Lokalisierung](https://msdn.microsoft.com/library/windows/apps/xaml/hh710212.aspx)
+Siehe ebenfalls [Unterstützte Kachel- und Popupbenachrichtigungen für Sprache, Skalierungsfaktor und hohen Kontrast](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md).
