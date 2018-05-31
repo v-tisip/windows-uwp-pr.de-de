@@ -1,197 +1,86 @@
 ---
 author: Mtoepke
 title: Bekannte Probleme mit UWP im Zusammenhang mit dem Xbox One-Entwicklerprogramm
-description: 
-ms.author: mtoepke
-ms.date: 02/08/2017
+description: Beschreibt die bekannten Probleme für UWP im Xbox Developer-Programm.
+ms.author: mstahl
+ms.date: 03/29/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
+keywords: windows10, UWP
 ms.assetid: a7b82570-1f99-4bc3-ac78-412f6360e936
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 4b13b9bbbc75de47ed69112680894d5e3f34d8a1
-ms.lasthandoff: 02/08/2017
-
+ms.localizationpriority: medium
+ms.openlocfilehash: b93da1603056a75c746e0e5c2a8ebe1d4044a1e5
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1690396"
 ---
+# <a name="known-issues-with-uwp-on-xbox-developer-program"></a><span data-ttu-id="5c1c7-104">Bekannte Probleme mit UWP im Zusammenhang mit dem Xbox One-Entwicklerprogramm</span><span class="sxs-lookup"><span data-stu-id="5c1c7-104">Known issues with UWP on Xbox Developer Program</span></span>
 
-# <a name="known-issues-with-uwp-on-xbox-developer-program"></a>Bekannte Probleme mit UWP im Zusammenhang mit dem Xbox One-Entwicklerprogramm
+<span data-ttu-id="5c1c7-105">Dieses Thema beschreibt bekannte Probleme im Zusammenhang mit dem Xbox One-Entwicklerprogramm.</span><span class="sxs-lookup"><span data-stu-id="5c1c7-105">This topic describes known issues with the UWP on Xbox One Developer Program.</span></span> <span data-ttu-id="5c1c7-106">Weitere Informationen zu diesem Programm finden Sie unter [UWP auf Xbox](index.md).</span><span class="sxs-lookup"><span data-stu-id="5c1c7-106">For more information about this program, see [UWP on Xbox](index.md).</span></span> 
 
-Dieses Thema beschreibt bekannte Probleme im Zusammenhang mit dem Xbox One-Entwicklerprogramm. Weitere Informationen zu diesem Programm finden Sie unter [UWP auf Xbox](index.md). 
+<span data-ttu-id="5c1c7-107">\[Wenn Sie über einen Link in einem API-Referenzthema hierher gelangten und nach Informationen zu APIs für die Universal-Gerätefamilie suchen, lesen Sie bitte [UWP-Funktionen, die noch nicht auf Xbox One unterstützt werden](http://go.microsoft.com/fwlink/?LinkID=760755).\]</span><span class="sxs-lookup"><span data-stu-id="5c1c7-107">\[If you came here from a link in an API reference topic, and are looking for Universal device family API information, please see [UWP features that aren't yet supported on Xbox](http://go.microsoft.com/fwlink/?LinkID=760755).\]</span></span>
 
-\[Wenn Sie über einen Link in einem API-Referenzthema hierher gelangten und nach Informationen zu APIs für die Universal-Gerätefamilie suchen, lesen Sie bitte [UWP-Funktionen, die noch nicht auf Xbox One unterstützt werden](http://go.microsoft.com/fwlink/?LinkID=760755).\]
+<span data-ttu-id="5c1c7-108">In der folgenden Liste werden einige bekannte Probleme aufgelistet, die auftreten können. Diese Liste ist jedoch nicht vollständig.</span><span class="sxs-lookup"><span data-stu-id="5c1c7-108">The following list highlights some known issues that you may encounter, but this list is not exhaustive.</span></span> 
 
-In der folgenden Liste werden einige bekannte Probleme aufgelistet, die auftreten können. Diese Liste ist jedoch nicht vollständig. 
+<span data-ttu-id="5c1c7-109">**Wir möchten gerne Ihr Feedback erhalten.** Melden Sie daher alle festgestellten Probleme im Forum für das [Entwickeln von Apps für die Universelle Windows-Plattform (UWP)](https://social.msdn.microsoft.com/forums/windowsapps/home?forum=wpdevelop).</span><span class="sxs-lookup"><span data-stu-id="5c1c7-109">**We want to get your feedback**, so please report any issues that you find on the [Developing Universal Windows Platform apps](https://social.msdn.microsoft.com/forums/windowsapps/home?forum=wpdevelop) forum.</span></span> 
 
-**Wir möchten gerne Ihr Feedback erhalten.** Melden Sie daher alle festgestellten Probleme im Forum für das [Entwickeln von Apps für die Universelle Windows-Plattform (UWP)](https://social.msdn.microsoft.com/forums/windowsapps/home?forum=wpdevelop). 
+<span data-ttu-id="5c1c7-110">Wenn Sie Probleme haben, lesen Sie die Informationen in diesem Thema, informieren Sie sich in den [häufig gestellten Fragen](frequently-asked-questions.md), und nutzen Sie die Foren, um Hilfe zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="5c1c7-110">If you get stuck, read the information in this topic, see [Frequently asked questions](frequently-asked-questions.md), and use the forums to ask for help.</span></span>
 
-Wenn Sie Probleme haben, lesen Sie die Informationen in diesem Thema, informieren Sie sich in den [häufig gestellten Fragen](frequently-asked-questions.md), und nutzen Sie die Foren, um Hilfe zu erhalten.
-
-
-<!--## Developing games-->
-
-## <a name="issue-when-leaving-dev-mode"></a>Problem beim Verlassen des Entwicklermodus
-Es kann vorkommen, dass Sie den Entwicklermodus nicht verlassen können – weder über DevHome noch über die Entwicklereinstellungen.
-Für diesen Fall gibt es zwei mögliche Problemumgehungen: 
-1. Deaktivieren Sie beim Verlassen des Entwicklermodus das Kontrollkästchen zum **Löschen quergeladener Spiele und Apps**.
-2. Wechseln Sie zu „Meine Spiele und Apps“, und deinstallieren Sie alle Entwickler-Apps, die Sie auf Ihrer Konsole installiert haben.
  
-<!--## Memory limits for background apps are partially enforced
+## <a name="deploying-from-vs-fails-with-parental-controls-turned-on"></a><span data-ttu-id="5c1c7-111">Fehler bei der Bereitstellung aus VS bei aktiviertem Jugendschutz</span><span class="sxs-lookup"><span data-stu-id="5c1c7-111">Deploying from VS fails with Parental Controls turned on</span></span>
+
+<span data-ttu-id="5c1c7-112">Beim Starten Ihrer App in VS tritt ein Fehler auf, wenn in den Einstellungen der Konsole der Jugendschutz aktiviert ist.</span><span class="sxs-lookup"><span data-stu-id="5c1c7-112">Launching your app from VS will fail if the console has Parental Controls turned on in Settings.</span></span>
+
+<span data-ttu-id="5c1c7-113">Um dieses Problem zu umgehen, deaktivieren Sie vorübergehend den Jugendschutz. Alternative:</span><span class="sxs-lookup"><span data-stu-id="5c1c7-113">To work around this issue, either temporarily disable Parental Controls, or:</span></span>
+1. <span data-ttu-id="5c1c7-114">Stellen Sie Ihre App in der Konsole mit deaktiviertem Jugendschutz bereit.</span><span class="sxs-lookup"><span data-stu-id="5c1c7-114">Deploy your app to the console with Parental Controls turned off.</span></span>
+2. <span data-ttu-id="5c1c7-115">Aktivieren Sie den Jugendschutz.</span><span class="sxs-lookup"><span data-stu-id="5c1c7-115">Turn on Parental Controls.</span></span>
+3. <span data-ttu-id="5c1c7-116">Starten Sie die App von der Konsole.</span><span class="sxs-lookup"><span data-stu-id="5c1c7-116">Launch your app from the console.</span></span>
+4. <span data-ttu-id="5c1c7-117">Geben Sie eine PIN oder ein Kennwort ein, um das Starten der App zuzulassen.</span><span class="sxs-lookup"><span data-stu-id="5c1c7-117">Enter a PIN or password to allow the app to launch.</span></span>
+5. <span data-ttu-id="5c1c7-118">Die App wird gestartet.</span><span class="sxs-lookup"><span data-stu-id="5c1c7-118">App will launch.</span></span>
+6. <span data-ttu-id="5c1c7-119">Schließen Sie die App.</span><span class="sxs-lookup"><span data-stu-id="5c1c7-119">Close the app.</span></span>
+7. <span data-ttu-id="5c1c7-120">Starten Sie die App in VS mithilfe von F5. Sie wird ohne Benutzeraufforderung gestartet.</span><span class="sxs-lookup"><span data-stu-id="5c1c7-120">Launch from VS using F5, and the app will launch with no prompting.</span></span>
+
+<span data-ttu-id="5c1c7-121">Zu diesem Zeitpunkt bleibt die Berechtigung so lange _bestehen_, bis Sie den Benutzer abmelden, auch wenn Sie die App deinstallieren und neu installieren.</span><span class="sxs-lookup"><span data-stu-id="5c1c7-121">At this point the permission is _sticky_ until you sign the user out, even if you uninstall and reinstall the app.</span></span>
  
-The maximum memory footprint for apps running in the background is 128 megabytes. In the current version of UWP on Xbox One, your app will be suspended if it is above this limit when it is moved to the background. This limit is not currently enforced if your app exceeds the limit while it is already running in the background—this means that if your app exceeds 128 MB while running in the background, it will still be able to allocate memory.
+<span data-ttu-id="5c1c7-122">Es gibt eine weitere Ausnahme, die nur für Kinderkonten verfügbar ist.</span><span class="sxs-lookup"><span data-stu-id="5c1c7-122">There is another type of exemption that is only available for child accounts.</span></span> <span data-ttu-id="5c1c7-123">Bei einem Kinderkonto muss sich ein Elternteil anmelden, um die Berechtigung zu erteilen. In diesem Fall kann der Elternteil die Option **Immer** auswählen, um dem Kind das Starten der App zu erlauben.</span><span class="sxs-lookup"><span data-stu-id="5c1c7-123">A child account requires a parent to sign in to grant permission, but when they do, the parent has the option of choosing to **Always** allow the child to launch the app.</span></span> <span data-ttu-id="5c1c7-124">Diese Ausnahme wird in der Cloud gespeichert und bleibt bestehen, auch wenn sich das Kind abmeldet und wieder anmeldet.</span><span class="sxs-lookup"><span data-stu-id="5c1c7-124">That exemption is stored in the cloud and will persist even if the child signs out and signs back in.</span></span>
+
+## <a name="storagefilecopyasync-fails-to-copy-encrypted-files-to-unencrypted-destination"></a><span data-ttu-id="5c1c7-125">StorageFile.CopyAsync kopiert verschlüsselte Dateien nicht an ein unverschlüsseltes Ziel.</span><span class="sxs-lookup"><span data-stu-id="5c1c7-125">StorageFile.CopyAsync fails to copy encrypted files to unencrypted destination</span></span> 
+
+<span data-ttu-id="5c1c7-126">Wenn StorageFile.CopyAsync verwendet wird, um eine verschlüsselte Datei an ein Ziel zu kopieren, das nicht verschlüsselt ist, schlägt der Aufruf mit folgender Ausnahme fehl:</span><span class="sxs-lookup"><span data-stu-id="5c1c7-126">When StorageFile.CopyAsync is used to copy a file that is encrypted to a destination that is not encrypted, the call will fail with the following exception:</span></span>
+
+```
+System.UnauthorizedAccessException: Access is denied. (Excep_FromHResult 0x80070005)
+```
+
+<span data-ttu-id="5c1c7-127">Dies kann sich auf Xbox-Entwickler auswirken, die Dateien kopieren möchten, die als Teil ihres App-Pakets an einem anderen Speicherort bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="5c1c7-127">This can affect Xbox developers who want to copy files that are deployed as part of their app package to another location.</span></span> <span data-ttu-id="5c1c7-128">Der Grund hierfür ist, dass der Inhalt des Pakets auf einer Xbox im Einzelhandelsmodus verschlüsselt ist, aber im Entwicklermodus nicht.</span><span class="sxs-lookup"><span data-stu-id="5c1c7-128">The reason for this is that the package contents are encrypted on an Xbox in retail mode, but not in Dev Mode.</span></span> <span data-ttu-id="5c1c7-129">Daher kann die App während der Entwicklungs- und Testphase scheinbar wie erwartet funktionieren, aber dann Fehler aufweisen, sobald sie veröffentlicht und auf einer Einzelhandels-Xbox installiert wurde.</span><span class="sxs-lookup"><span data-stu-id="5c1c7-129">As a result, the app may appear to work as expected during development and testing, but then fail once it has been published and then installed to a retail Xbox.</span></span>
  
-There is currently no workaround for this issue. Apps should govern their memory usage accordingly and continue to stay under the 128 MB limit while running in the background.-->
- 
-## <a name="deploying-from-vs-fails-with-parental-controls-turned-on"></a>Fehler bei der Bereitstellung aus VS bei aktiviertem Jugendschutz
 
-Beim Starten Ihrer App in VS tritt ein Fehler auf, wenn in den Einstellungen der Konsole der Jugendschutz aktiviert ist.
+## <a name="blocked-networking-ports-on-xbox-one"></a><span data-ttu-id="5c1c7-130">Gesperrte Netzwerkports auf Xbox One</span><span class="sxs-lookup"><span data-stu-id="5c1c7-130">Blocked networking ports on Xbox One</span></span>
 
-Um dieses Problem zu umgehen, deaktivieren Sie vorübergehend den Jugendschutz. Alternative:
-1. Stellen Sie Ihre App in der Konsole mit deaktiviertem Jugendschutz bereit.
-2. Aktivieren Sie den Jugendschutz.
-3. Starten Sie die App von der Konsole.
-4. Geben Sie eine PIN oder ein Kennwort ein, um das Starten der App zuzulassen.
-5. Die App wird gestartet.
-6. Schließen Sie die App.
-7. Starten Sie die App in VS mithilfe von F5. Sie wird ohne Benutzeraufforderung gestartet.
+<span data-ttu-id="5c1c7-131">Bindungen an Ports im Bereich [57344, 65535] (einschließlich) sind für Apps für die universelle Windows-Plattform (UWP) auf Xbox One-Geräten nicht möglich.</span><span class="sxs-lookup"><span data-stu-id="5c1c7-131">Universal Windows Platform (UWP) apps on Xbox One devices are restricted from binding to ports in the range [57344, 65535], inclusive.</span></span> <span data-ttu-id="5c1c7-132">Obwohl die Bindung an diese Ports während der Laufzeit erfolgreich zu sein scheint, kann Netzwerkdatenverkehr im Hintergrund gelöscht werden, bevor er Ihre App erreicht.</span><span class="sxs-lookup"><span data-stu-id="5c1c7-132">Although binding to these ports might appear to succeed at run-time, network traffic can be silently dropped before reaching your app.</span></span> <span data-ttu-id="5c1c7-133">Ihre App sollte an den Port0 gebunden werden, wann immer möglich. Dieser ermöglicht dem System die Auswahl des lokalen Ports.</span><span class="sxs-lookup"><span data-stu-id="5c1c7-133">Your app should bind to port 0 wherever possible, which allows the system to select the local port.</span></span> <span data-ttu-id="5c1c7-134">Wenn Sie einen bestimmten Port verwenden müssen, muss sich die Portnummer im Bereich [1025, 49151] befinden, und Sie sollten Konflikte mit der IANA-Registrierung überprüfen und vermeiden.</span><span class="sxs-lookup"><span data-stu-id="5c1c7-134">If you need to use a specific port, the port number must be in the range [1025, 49151], and you should check and avoid conflicts with the IANA registry.</span></span> <span data-ttu-id="5c1c7-135">Weitere Informationen finden Sie in [Dienstname und Transportprotokoll-Portnummer-Registrierung](http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml).</span><span class="sxs-lookup"><span data-stu-id="5c1c7-135">For more information, see the [Service Name and Transport Protocol Port Number Registry](http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml).</span></span>
 
-Zu diesem Zeitpunkt bleibt die Berechtigung so lange _bestehen_, bis Sie den Benutzer abmelden, auch wenn Sie die App deinstallieren und neu installieren.
- 
-Es gibt eine weitere Ausnahme, die nur für Kinderkonten verfügbar ist. Bei einem Kinderkonto muss sich ein Elternteil anmelden, um die Berechtigung zu erteilen. In diesem Fall kann der Elternteil die Option **Immer** auswählen, um dem Kind das Starten der App zu erlauben. Diese Ausnahme wird in der Cloud gespeichert und bleibt bestehen, auch wenn sich das Kind abmeldet und wieder anmeldet.   
+## <a name="uwp-api-coverage"></a><span data-ttu-id="5c1c7-136">UWP-API-Abdeckung</span><span class="sxs-lookup"><span data-stu-id="5c1c7-136">UWP API coverage</span></span>
 
-<!--### x86 vs. x64
-
-By the time we release later this year, we will have great support for both x86 and x64, and we do support x86 in this preview. 
-However, x64 has had much more testing to date (the Xbox shell and all of the apps running on the console today are x64), and so we recommend using x64 for your projects. 
-This is particularly true for games.
-
-If you decide to use x86, please report any issues you see on the forum.
-
-Also see [Switching build flavors can cause deployment failures](known-issues.md#switching-build-flavors-can-cause-deployment-failures) later on this page.-->
-
-<!--### Game engines
-
-We have tested some popular game engines, but not all of them, and our test coverage for this preview has not been comprehensive. 
-Your mileage may vary. 
-
-The following game engines have been confirmed to work:
-* [Construct 2](https://www.scirra.com/)
-
-There are likely others that are working too. We would love to get your feedback on what you find. 
-Please use the forum to report any issues you see.-->
-
-## <a name="directx-12-support"></a>DirectX 12-Unterstützung
-
-UWP auf Xbox One unterstützt die DirectX 11-Featureebene 10. DirectX 12 wird derzeit nicht unterstützt. 
-
-Xbox One ist wie alle herkömmlichen Spielekonsolen ein spezielles Hardwaregerät, das ein spezielles SDK erfordert, um das Potenzial vollständig nutzen zu können. Wenn Sie an einem Spiel arbeiten, das Zugriff auf das maximale Potenzial der Xbox One-Hardware benötigt, können Sie sich beim [ID@XBOX](http://www.xbox.com/Developers/id)-Programm registrieren, um Zugriff auf das SDK zu erhalten, das DirectX 12-Unterstützung enthält.
-
-<!-- ### Xbox One Developer Preview disables game streaming to Windows 10
-
-Activating the Xbox One Developer Preview on your console will prevent you from streaming games from your Xbox One to the Xbox app on Windows 10, even if your console is set to retail mode. 
-To restore the game streaming feature, you must leave the developer preview. -->
-
-<!--## System resources for UWP apps and games on Xbox One
-
-UWP apps and games running on Xbox One share resources with the system and other apps, and so the system governs the resources that are available to any one game or app. 
-If you are running into memory or performance issues, this may be why. 
-For more details, see [System resources for UWP apps and games on Xbox One](system-resource-allocation.md).-->
-
-<!--
-## Networking using traditional sockets
-
-In this developer preview, inbound and outbound network access from the console that uses traditional TCP/UDP sockets (WinSock, Windows.Networking.Sockets) is not available. 
-Developers can still use HTTP and WebSockets.
---> 
-
-## <a name="blocked-networking-ports-on-xbox-one"></a>Gesperrte Netzwerkports auf Xbox One
-
-Bindungen an Ports im Bereich [57344, 65535] (einschließlich) sind für Apps für die universelle Windows-Plattform (UWP) auf Xbox One-Geräten nicht möglich. Obwohl die Bindung an diese Ports während der Laufzeit erfolgreich zu sein scheint, kann Netzwerkdatenverkehr im Hintergrund gelöscht werden, bevor er Ihre App erreicht. Ihre App sollte an den Port 0 gebunden werden, wann immer möglich. Dieser ermöglicht dem System die Auswahl des lokalen Ports. Wenn Sie einen bestimmten Port verwenden müssen, muss sich die Portnummer im Bereich [1025, 49151] befinden, und Sie sollten Konflikte mit der IANA-Registrierung überprüfen und vermeiden. Weitere Informationen finden Sie in [Dienstname und Transportprotokoll-Portnummer-Registrierung](http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml).
-
-## <a name="uwp-api-coverage"></a>UWP-API-Abdeckung
-
-Nicht alle UWP-APIs werden auf Xbox unterstützt. Die Liste der APIs, von denen bekannt ist, dass sie nicht funktionieren, finden Sie in [UWP-Funktionen, die noch nicht auf Xbox One unterstützt werden](http://go.microsoft.com/fwlink/p/?LinkId=760755). Wenn Sie Probleme mit anderen APIs feststellen, melden Sie dies bitte in den Foren. 
-
-<!--## XAML controls do not look like or behave like the controls in the Xbox One shell
-
-In this developer preview, the XAML controls are not in their final form. In particular:
-* Gamepad X-Y navigation does not work reliably for all controls.
-* Controls do not look like controls in the Xbox shell. This includes the control focus rectangle.
-* Navigating between controls does not automatically make “navigation sounds.”
-
-These issues will be addressed in a future developer preview.-->
-
-<!--## Visual Studio and deployment issues
-
-### Switching build flavors can cause deployment failures
-
-Switching between Debug and Release builds, or between x86 and x64, or between Managed and .Net Native builds, can cause deployment failures. 
-
-The simplest way to avoid these issues for this preview is to stick to Debug and one architecture. 
-
-If you do hit this issue, uninstalling your app in the Collections app on your Xbox One will typically resolve it.
-
-> ****&nbsp;&nbsp;Uninstalling your app from Windows Device Portal (WDP) will not resolve the issue.
-
-If your issues persist, uninstall your app or game in the Collections app, leave Developer Mode, restart to Retail Mode and then switch back to Developer Mode.
-You may also need to restart Visual Studio and clean your solution.
-
-For more information, see the “Fixing deployment failures” section in [Frequently asked questions](frequently-asked-questions.md).
-
-### Uninstalling an app while you are debugging it in Visual Studio will cause it to fail silently
-
-Attempting to uninstall an app that is running under the debugger via the WDP “Installed Apps” tool will cause it to silently fail. 
-The workaround is to stop debugging the app in Visual Studio before attempting to remove it via WDP.
-
-### Visual Studio/Xbox PIN pairing failures
-
-It is possible to get into a state where the PIN pairing between Visual Studio and your Xbox One gets out of sync. 
-If PIN pairing fails, use the “Remove all pairings” button in Dev Home, restart Xbox One, restart your development PC, and then try again.--> 
+<span data-ttu-id="5c1c7-137">Nicht alle UWP-APIs werden auf Xbox unterstützt.</span><span class="sxs-lookup"><span data-stu-id="5c1c7-137">Not all UWP APIs are supported on Xbox.</span></span> <span data-ttu-id="5c1c7-138">Die Liste der APIs, von denen bekannt ist, dass sie nicht funktionieren, finden Sie in [UWP-Funktionen, die noch nicht auf Xbox One unterstützt werden](http://go.microsoft.com/fwlink/p/?LinkId=760755).</span><span class="sxs-lookup"><span data-stu-id="5c1c7-138">For the list of APIs that we know don’t work, see [UWP features that aren't yet supported on Xbox](http://go.microsoft.com/fwlink/p/?LinkId=760755).</span></span> <span data-ttu-id="5c1c7-139">Wenn Sie Probleme mit anderen APIs feststellen, melden Sie dies bitte in den Foren.</span><span class="sxs-lookup"><span data-stu-id="5c1c7-139">If you find issues with other APIs, please report them on the forums.</span></span> 
 
 
-<!--## Windows Device Portal (WDP) preview-->
+## <a name="navigating-to-wdp-causes-a-certificate-warning"></a><span data-ttu-id="5c1c7-140">Navigieren zu WDP führt zu einer Zertifikatwarnung</span><span class="sxs-lookup"><span data-stu-id="5c1c7-140">Navigating to WDP causes a certificate warning</span></span>
 
-<!--### Starting WDP from Dev Home crashes Dev Home
-
-When you start WDP in Dev Home, it will cause Dev Home to crash after you have entered your user name and password and selected **Save**. 
-The credentials are saved but WDP is not started. 
-You can start WDP by restarting Xbox One.--> 
-
-<!--### Disabling WDP in Dev Home does not work
-
-If you disable WDP in Dev Home, it will be turned off. 
-However, when you restart your Xbox One, WDP will be started again. 
-You can work around this issue by using **Reset and keep my games & apps** to delete any stored state on your Xbox One. 
-Go to Settings > System > Console info & updates > Reset console, and then select the **Reset and keep my games & apps** button.
-
-> **Caution**&nbsp;&nbsp;Doing this will delete all saved settings on your Xbox One including wireless settings, user accounts and any game progress that has not been saved to cloud storage.
-
-> **Caution**&nbsp;&nbsp;DO NOT select the **Reset and remove everything** button.
-This will delete all of your games, apps, settings and content, deactivate Developer Mode, and remove you console from the Developer Preview group.
-
-### The columns in the “Running Apps” table do not update predictably. 
-
-Sometimes this is resolved by sorting a column on the table.-->
-
-## <a name="navigating-to-wdp-causes-a-certificate-warning"></a>Navigieren zu WDP führt zu einer Zertifikatwarnung
-
-Sie erhalten eine Warnung zum Zertifikat, das bereitgestellt wurde, ähnlich wie folgender Screenshot, dass das von Ihrer Xbox One-Konsole signierte Sicherheitszertifikat nicht als bekannter vertrauenswürdiger Herausgeber betrachtet wird. Klicken Sie auf **Laden dieser Website fortsetzen**, um auf das Windows Device Portal zuzugreifen.
+<span data-ttu-id="5c1c7-141">Sie erhalten eine Warnung zum Zertifikat, das bereitgestellt wurde, ähnlich wie folgender Screenshot, dass das von Ihrer Xbox One-Konsole signierte Sicherheitszertifikat nicht als bekannter vertrauenswürdiger Herausgeber betrachtet wird.</span><span class="sxs-lookup"><span data-stu-id="5c1c7-141">You will receive a warning about the certificate that was provided, similar to the following screenshot, because the security certificate signed by your Xbox One console is not considered a well-known trusted publisher.</span></span> <span data-ttu-id="5c1c7-142">Klicken Sie auf **Laden dieser Website fortsetzen**, um auf das Windows Device Portal zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="5c1c7-142">To access the Windows Device Portal, click **Continue to this website**.</span></span>
 
 ![Warnung zum Sicherheitszertifikat der Website](images/security_cert_warning.jpg)
 
-<!--## Dev Home
 
-Occasionally, selecting the “Manage Windows Device Portal” option in Dev Home will cause Dev Home to silently exit to the Home screen. 
-This is caused by a failure in the WDP infrastructure on the console and can be resolved by restarting the console.-->
+## <a name="knownfoldersmediaserverdevices-caveat-on-xbox"></a><span data-ttu-id="5c1c7-144">KnownFolders.MediaServerDevices Einschränkung auf Xbox</span><span class="sxs-lookup"><span data-stu-id="5c1c7-144">KnownFolders.MediaServerDevices caveat on Xbox</span></span>
 
-## <a name="knownfoldersmediaserverdevices-caveat-on-xbox"></a>KnownFolders.MediaServerDevices Einschränkung auf Xbox
+<span data-ttu-id="5c1c7-145">Auf dem Desktop sind Medienserver mit dem PC „gekoppelt“, und der Gerätezuordnungsdienst (Device Association Service) verfolgt ständig, welcher der Server aktuell online ist. Mit einer Erstabfrage des Dateisystems kann sofort eine Liste der verbundenen Server zurückgegeben werden, die derzeit online sind.</span><span class="sxs-lookup"><span data-stu-id="5c1c7-145">On Desktop, media servers are “paired” with the PC, and the Device Association Service is constantly tracking which of the servers are currently on-line, so an initial file system query can immediately return a list of the paired servers that are currently online.</span></span>
 
-Auf dem Desktop sind Medienserver mit dem PC „gekoppelt“, und der Gerätezuordnungsdienst (Device Association Service) verfolgt ständig, welcher der Server aktuell online ist. Mit einer Erstabfrage des Dateisystems kann sofort eine Liste der verbundenen Server zurückgegeben werden, die derzeit online sind.
+<span data-ttu-id="5c1c7-146">Auf der Xbox gibt es keine UI, um Server hinzuzufügen oder zu löschen. Deshalb wird die Erstabfrage auf das Dateisystem immer leer sein.</span><span class="sxs-lookup"><span data-stu-id="5c1c7-146">On Xbox, there is no UI to add or remove servers, so the initial file system query will always return empty.</span></span> <span data-ttu-id="5c1c7-147">Sie müssen eine Abfrage erstellen, das ContentsChanged-Ereignis abonnieren, und die Abfrage bei jeder Benachrichtigung aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="5c1c7-147">You must create a query and subscribe to the ContentsChanged event and refresh the query each time you get a notification.</span></span> <span data-ttu-id="5c1c7-148">Die Server werden durchgelassen, und die meisten innerhalb von drei Sekunden erkannt.</span><span class="sxs-lookup"><span data-stu-id="5c1c7-148">Servers will trickle in and most will have been discovered within 3 seconds.</span></span>
 
-Auf der Xbox gibt es keine UI, um Server hinzuzufügen oder zu löschen. Deshalb wird die Erstabfrage auf das Dateisystem immer leer sein. Sie müssen eine Abfrage erstellen, das ContentsChanged-Ereignis abonnieren, und die Abfrage bei jeder Benachrichtigung aktualisieren. Die Server werden durchgelassen, und die meisten innerhalb von drei Sekunden erkannt.
-
-Einfacher Beispielcode:
+<span data-ttu-id="5c1c7-149">Einfacher Beispielcode:</span><span class="sxs-lookup"><span data-stu-id="5c1c7-149">Simple example code:</span></span>
 
 ```
 namespace TestDNLA {
@@ -230,7 +119,6 @@ namespace TestDNLA {
 }
 ```
 
-## <a name="see-also"></a>Siehe auch
-- [Häufig gestellte Fragen](frequently-asked-questions.md)
-- [UWP auf Xbox One](index.md)
-
+## <a name="see-also"></a><span data-ttu-id="5c1c7-150">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5c1c7-150">See also</span></span>
+- [<span data-ttu-id="5c1c7-151">Häufig gestellte Fragen</span><span class="sxs-lookup"><span data-stu-id="5c1c7-151">Frequently asked questions</span></span>](frequently-asked-questions.md)
+- [<span data-ttu-id="5c1c7-152">UWP auf XboxOne</span><span class="sxs-lookup"><span data-stu-id="5c1c7-152">UWP on Xbox One</span></span>](index.md)

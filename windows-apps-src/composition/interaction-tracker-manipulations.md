@@ -1,7 +1,7 @@
 ---
 author: jwmsft
 title: Angepasste Manipulation mit InteractionTracker
-description: "In diesem Artikel zeigen wir Ihnen, wie Sie mit InteractionTracker benutzerdefinierte Manipulationserlebnisse erstellen können."
+description: In diesem Artikel zeigen wir Ihnen, wie Sie mit InteractionTracker benutzerdefinierte Manipulationserlebnisse erstellen können.
 ms.author: jimwalk
 ms.date: 10/10/2017
 ms.topic: article
@@ -14,6 +14,7 @@ ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/12/2017
+ms.locfileid: "1393199"
 ---
 # <a name="custom-manipulation-experiences-with-interactiontracker"></a><span data-ttu-id="37eb8-104">Angepasste Manipulation mit InteractionTracker</span><span class="sxs-lookup"><span data-stu-id="37eb8-104">Custom manipulation experiences with InteractionTracker</span></span>
 

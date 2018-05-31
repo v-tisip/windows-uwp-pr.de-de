@@ -1,86 +1,83 @@
 ---
 author: mcleanbyron
 ms.assetid: fb6bb856-7a1b-4312-a602-f500646a3119
-description: "Verwenden Sie diese Methode der Windows Store-API für Rezensionen, um zu bestimmen, ob Sie auf eine bestimmte Rezension für eine bestimmte App oder auf alle Rezensionen für diese App antworten können."
-title: "Antwortinformationen für App-Rezensionen abrufen"
+description: Verwenden Sie diese Methode der Microsoft Store-API für Rezensionen, um zu bestimmen, ob Sie auf eine bestimmte Rezension für eine bestimmte App oder auf alle Rezensionen für diese App antworten können.
+title: Antwortinformationen für Rezensionen abrufen
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Store-Dienste, Windows Store-API für Rezensionen, Antwortinformationen"
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 88e6158bfc5df23e5c2056624e353b38b39c7331
-ms.lasthandoff: 02/08/2017
-
+keywords: Windows10, UWP, Store-Dienste, Microsoft Store-API für Rezensionen, Antwortinformationen
+ms.localizationpriority: medium
+ms.openlocfilehash: 4cc3bae99aebaf26074ba4f8b8a38e1a6e0ac428
+ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/03/2018
+ms.locfileid: "1701086"
 ---
+# <a name="get-response-info-for-reviews"></a><span data-ttu-id="8b87d-104">Antwortinformationen für Rezensionen abrufen</span><span class="sxs-lookup"><span data-stu-id="8b87d-104">Get response info for reviews</span></span>
 
-# <a name="get-response-info-for-app-reviews"></a>Antwortinformationen für App-Rezensionen abrufen
-
-Wenn Sie programmgesteuert auf die Rezension eines Kunden Ihrer App antworten möchten, verwenden Sie diese Methode der Windows Store-API für Rezensionen, um zunächst zu ermitteln, ob Sie berechtigt sind, auf die Rezension zu antworten. Sie können nicht auf Rezensionen von Kunden antworten, die keine Antwort auf ihre Rezension erhalten möchten. Nachdem sichergestellt ist, dass Sie auf eine Rezension antworten können, verwenden Sie die Methode [Antworten auf App-Rezensionen senden](submit-responses-to-app-reviews.md), um programmgesteuert zu antworten.
-
-
-## <a name="prerequisites"></a>Voraussetzungen
-
-Zur Verwendung dieser Methode sind zunächst folgende Schritte erforderlich:
-
-* Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](respond-to-reviews-using-windows-store-services.md#prerequisites) für die Windows Store-Analyse-API.
-* [Rufen Sie ein Azure AD-Zugriffstoken ab](respond-to-reviews-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nach Erhalt eines Zugriffstokens können Sie es 60 Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
-* Rufen Sie die ID der Rezension ab, für die Sie überprüfen möchten, ob Sie darauf antworten können. Rezensions-IDs finden Sie in den Antwortdaten der Methode [Abrufen von App-Rezensionen](get-app-reviews.md) der Windows Store-Analyse-API und unter [Offlinedownload](../publish/download-analytic-reports.md) im Bericht [Rezensionen](../publish/reviews-report.md).
-
-## <a name="request"></a>Anforderung
+<span data-ttu-id="8b87d-105">Wenn Sie programmgesteuert auf eine Kundenrezension zu Ihrer App antworten möchten, verwenden Sie diese Methode der Microsoft Store-API für Rezensionen, um zunächst zu ermitteln, ob Sie berechtigt sind, auf die Rezension zu antworten.</span><span class="sxs-lookup"><span data-stu-id="8b87d-105">If you want to programmatically respond to a customer review of your app, you can use this method in the Microsoft Store reviews API to first determine whether you have permission to respond to the review.</span></span> <span data-ttu-id="8b87d-106">Sie können nicht auf Rezensionen von Kunden antworten, die keine Antwort auf ihre Rezension erhalten möchten.</span><span class="sxs-lookup"><span data-stu-id="8b87d-106">You cannot respond to reviews submitted by customers who have chosen not to receive review responses.</span></span> <span data-ttu-id="8b87d-107">Nachdem sichergestellt ist, dass Sie auf eine Rezension antworten können, verwenden Sie die Methode [Antworten auf App-Rezensionen senden](submit-responses-to-app-reviews.md), um programmgesteuert zu antworten.</span><span class="sxs-lookup"><span data-stu-id="8b87d-107">After you confirm that you can respond to the review, you can then use the [submit responses to app reviews](submit-responses-to-app-reviews.md) method to programmatically respond to it.</span></span>
 
 
-### <a name="request-syntax"></a>Anforderungssyntax
+## <a name="prerequisites"></a><span data-ttu-id="8b87d-108">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="8b87d-108">Prerequisites</span></span>
 
-| Methode | Anforderungs-URI                                                      |
+<span data-ttu-id="8b87d-109">Zur Verwendung dieser Methode sind folgende Schritte erforderlich:</span><span class="sxs-lookup"><span data-stu-id="8b87d-109">To use this method, you need to first do the following:</span></span>
+
+* <span data-ttu-id="8b87d-110">Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](respond-to-reviews-using-windows-store-services.md#prerequisites) für die Microsoft Store-Analyse-API.</span><span class="sxs-lookup"><span data-stu-id="8b87d-110">If you have not done so already, complete all the [prerequisites](respond-to-reviews-using-windows-store-services.md#prerequisites) for the Microsoft Store analytics API.</span></span>
+* <span data-ttu-id="8b87d-111">[Rufen Sie ein Azure AD-Zugriffstoken ab](respond-to-reviews-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="8b87d-111">[Obtain an Azure AD access token](respond-to-reviews-using-windows-store-services.md#obtain-an-azure-ad-access-token) to use in the request header for this method.</span></span> <span data-ttu-id="8b87d-112">Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60 Minuten lang verwenden, bevor es abläuft.</span><span class="sxs-lookup"><span data-stu-id="8b87d-112">After you obtain an access token, you have 60 minutes to use it before it expires.</span></span> <span data-ttu-id="8b87d-113">Wenn das Token abgelaufen ist, können Sie ein neues abrufen.</span><span class="sxs-lookup"><span data-stu-id="8b87d-113">After the token expires, you can obtain a new one.</span></span>
+* <span data-ttu-id="8b87d-114">Rufen Sie die ID der Rezension ab, für die Sie überprüfen möchten, ob Sie darauf antworten können.</span><span class="sxs-lookup"><span data-stu-id="8b87d-114">Get the ID of the review you want to check to determine whether you can respond to it.</span></span> <span data-ttu-id="8b87d-115">Rezensions-IDs finden Sie in den Antwortdaten der Methode [Abrufen von App-Rezensionen](get-app-reviews.md) der Microsoft Store-Analyse-API und unter [Offlinedownload](../publish/download-analytic-reports.md) im Bericht [Rezensionen](../publish/reviews-report.md).</span><span class="sxs-lookup"><span data-stu-id="8b87d-115">Review IDs are available in the response data of the [get app reviews](get-app-reviews.md) method in the Microsoft Store analytics API and in the [offline download](../publish/download-analytic-reports.md) of the [Reviews report](../publish/reviews-report.md).</span></span>
+
+## <a name="request"></a><span data-ttu-id="8b87d-116">Anforderung</span><span class="sxs-lookup"><span data-stu-id="8b87d-116">Request</span></span>
+
+
+### <a name="request-syntax"></a><span data-ttu-id="8b87d-117">Anforderungssyntax</span><span class="sxs-lookup"><span data-stu-id="8b87d-117">Request syntax</span></span>
+
+| <span data-ttu-id="8b87d-118">Methode</span><span class="sxs-lookup"><span data-stu-id="8b87d-118">Method</span></span> | <span data-ttu-id="8b87d-119">Anforderungs-URI</span><span class="sxs-lookup"><span data-stu-id="8b87d-119">Request URI</span></span>                                                      |
 |--------|------------------------------------------------------------------|
-| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/reviews/{reviewId}/apps/{applicationId}/responses/info``` |
+| <span data-ttu-id="8b87d-120">GET</span><span class="sxs-lookup"><span data-stu-id="8b87d-120">GET</span></span>    | ```https://manage.devcenter.microsoft.com/v1.0/my/reviews/{reviewId}/apps/{applicationId}/responses/info``` |
 
-<span/> 
 
-### <a name="request-header"></a>Anforderungsheader
+### <a name="request-header"></a><span data-ttu-id="8b87d-121">Anforderungsheader</span><span class="sxs-lookup"><span data-stu-id="8b87d-121">Request header</span></span>
 
-| Header        | Typ   | Beschreibung                                                                 |
+| <span data-ttu-id="8b87d-122">Header</span><span class="sxs-lookup"><span data-stu-id="8b87d-122">Header</span></span>        | <span data-ttu-id="8b87d-123">Typ</span><span class="sxs-lookup"><span data-stu-id="8b87d-123">Type</span></span>   | <span data-ttu-id="8b87d-124">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="8b87d-124">Description</span></span>                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorisierung | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;. |
+| <span data-ttu-id="8b87d-125">Autorisierung</span><span class="sxs-lookup"><span data-stu-id="8b87d-125">Authorization</span></span> | <span data-ttu-id="8b87d-126">String</span><span class="sxs-lookup"><span data-stu-id="8b87d-126">string</span></span> | <span data-ttu-id="8b87d-127">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="8b87d-127">Required.</span></span> <span data-ttu-id="8b87d-128">Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;.</span><span class="sxs-lookup"><span data-stu-id="8b87d-128">The Azure AD access token in the form **Bearer** &lt;*token*&gt;.</span></span> |
 
-<span/> 
 
-### <a name="request-parameters"></a>Anforderungsparameter
+### <a name="request-parameters"></a><span data-ttu-id="8b87d-129">Anforderungsparameter</span><span class="sxs-lookup"><span data-stu-id="8b87d-129">Request parameters</span></span>
 
-| Parameter        | Typ   | Beschreibung                                     |  Erforderlich  |
+| <span data-ttu-id="8b87d-130">Parameter</span><span class="sxs-lookup"><span data-stu-id="8b87d-130">Parameter</span></span>        | <span data-ttu-id="8b87d-131">Typ</span><span class="sxs-lookup"><span data-stu-id="8b87d-131">Type</span></span>   | <span data-ttu-id="8b87d-132">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="8b87d-132">Description</span></span>                                     |  <span data-ttu-id="8b87d-133">Erforderlich</span><span class="sxs-lookup"><span data-stu-id="8b87d-133">Required</span></span>  |
 |---------------|--------|--------------------------------------------------|--------------|
-| applicationId | string | Die Store-ID der App, welche die Rezension enthält, für die Sie bestimmen möchten, ob Sie antworten können. Die Store-ID ist auf der [Seite mit der App-Identität](../publish/view-app-identity-details.md) des Dev Center-Dashboards verfügbar. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8. |  Ja  |
-| reviewId | string | Die ID der Rezension, auf die Sie antworten möchten (dies ist eine GUID). Rezensions-IDs finden Sie in den Antwortdaten der Methode [Abrufen von App-Rezensionen](get-app-reviews.md) der Windows Store-Analyse-API und unter [Offlinedownload](../publish/download-analytic-reports.md) im Bericht [Rezensionen](../publish/reviews-report.md). <br/>Wenn Sie diesen Parameter nicht angeben, wird im Antworttext für diese Methode stehen, ob Sie über Berechtigungen zum Beantworten von Rezensionen für die angegebene App verfügen. |  Nein  |
+| <span data-ttu-id="8b87d-134">applicationId</span><span class="sxs-lookup"><span data-stu-id="8b87d-134">applicationId</span></span> | <span data-ttu-id="8b87d-135">string</span><span class="sxs-lookup"><span data-stu-id="8b87d-135">string</span></span> | <span data-ttu-id="8b87d-136">Die Store-ID der App, welche die Rezension enthält, für die Sie bestimmen möchten, ob Sie antworten können.</span><span class="sxs-lookup"><span data-stu-id="8b87d-136">The Store ID of the app that contains the review for which you want to determine whether you can respond to.</span></span> <span data-ttu-id="8b87d-137">Die Store-ID ist auf der [Seite mit der App-Identität](../publish/view-app-identity-details.md) des DevCenter-Dashboards verfügbar.</span><span class="sxs-lookup"><span data-stu-id="8b87d-137">The Store ID is available on the [App identity page](../publish/view-app-identity-details.md) of the Dev Center dashboard.</span></span> <span data-ttu-id="8b87d-138">Beispiel für eine Store-ID: 9WZDNCRFJ3Q8.</span><span class="sxs-lookup"><span data-stu-id="8b87d-138">An example Store ID is 9WZDNCRFJ3Q8.</span></span> |  <span data-ttu-id="8b87d-139">Ja</span><span class="sxs-lookup"><span data-stu-id="8b87d-139">Yes</span></span>  |
+| <span data-ttu-id="8b87d-140">reviewId</span><span class="sxs-lookup"><span data-stu-id="8b87d-140">reviewId</span></span> | <span data-ttu-id="8b87d-141">string</span><span class="sxs-lookup"><span data-stu-id="8b87d-141">string</span></span> | <span data-ttu-id="8b87d-142">Die ID der Rezension, auf die Sie antworten möchten (dies ist eine GUID).</span><span class="sxs-lookup"><span data-stu-id="8b87d-142">The ID of the review you want to respond to (this is a GUID).</span></span> <span data-ttu-id="8b87d-143">Rezensions-IDs finden Sie in den Antwortdaten der Methode [Abrufen von App-Rezensionen](get-app-reviews.md) der Microsoft Store-Analyse-API und unter [Offlinedownload](../publish/download-analytic-reports.md) im Bericht [Rezensionen](../publish/reviews-report.md).</span><span class="sxs-lookup"><span data-stu-id="8b87d-143">Review IDs are available in the response data of the [get app reviews](get-app-reviews.md) method in the Microsoft Store analytics API and in the [offline download](../publish/download-analytic-reports.md) of the [Reviews report](../publish/reviews-report.md).</span></span> <br/><span data-ttu-id="8b87d-144">Wenn Sie diesen Parameter nicht angeben, wird im Antworttext für diese Methode stehen, ob Sie über Berechtigungen zum Beantworten von Rezensionen für die angegebene App verfügen.</span><span class="sxs-lookup"><span data-stu-id="8b87d-144">If you omit this parameter, the response body for this method will indicate whether you have permissions to respond to any reviews for the specified app.</span></span> |  <span data-ttu-id="8b87d-145">Nein</span><span class="sxs-lookup"><span data-stu-id="8b87d-145">No</span></span>  |
 
-<span/>
 
-### <a name="request-example"></a>Anforderungsbeispiel
+### <a name="request-example"></a><span data-ttu-id="8b87d-146">Anforderungsbeispiel</span><span class="sxs-lookup"><span data-stu-id="8b87d-146">Request example</span></span>
 
-Das folgende Beispiel zeigt, wie Sie diese Methode verwenden, um festzustellen, ob auf eine bestimmte Rezension antworten können.
+<span data-ttu-id="8b87d-147">Das folgende Beispiel zeigt, wie Sie diese Methode verwenden, um festzustellen, ob auf eine bestimmte Rezension antworten können.</span><span class="sxs-lookup"><span data-stu-id="8b87d-147">The following examples how to use this method to determine whether you can respond to a given review.</span></span>
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/reviews/6be543ff-1c9c-4534-aced-af8b4fbe0316/apps/9WZDNCRFJ3Q8/responses/info HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-## <a name="response"></a>Antwort
+## <a name="response"></a><span data-ttu-id="8b87d-148">Antwort</span><span class="sxs-lookup"><span data-stu-id="8b87d-148">Response</span></span>
 
 
-### <a name="response-body"></a>Antworttext
+### <a name="response-body"></a><span data-ttu-id="8b87d-149">Antworttext</span><span class="sxs-lookup"><span data-stu-id="8b87d-149">Response body</span></span>
 
-| Wert      | Typ   | Beschreibung    |  
+| <span data-ttu-id="8b87d-150">Wert</span><span class="sxs-lookup"><span data-stu-id="8b87d-150">Value</span></span>      | <span data-ttu-id="8b87d-151">Typ</span><span class="sxs-lookup"><span data-stu-id="8b87d-151">Type</span></span>   | <span data-ttu-id="8b87d-152">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="8b87d-152">Description</span></span>    |  
 |------------|--------|-----------------------|
-| CanRespond      | Boolean  | Der Wert **true** gibt an, dass Sie auf die angegebene Rezension antworten können oder dass Sie berechtigt sind, auf eine beliebige Rezensionen für die angegebene App zu antworten. Andernfalls ist dieser Wert **false**.       |
-| DefaultSupportEmail  | string |  Die von Ihrer App [unterstütze E-Mail-Adresse](../publish/create-app-store-listings.md#support-contact-info) finden Sie im Store-Eintrag Ihrer App. Wenn Sie keine unterstützte E-Mail-Adresse angegeben haben, ist dieses Feld leer.    |
+| <span data-ttu-id="8b87d-153">CanRespond</span><span class="sxs-lookup"><span data-stu-id="8b87d-153">CanRespond</span></span>      | <span data-ttu-id="8b87d-154">Boolean</span><span class="sxs-lookup"><span data-stu-id="8b87d-154">Boolean</span></span>  | <span data-ttu-id="8b87d-155">Der Wert **true** gibt an, dass Sie auf die angegebene Rezension antworten können oder dass Sie berechtigt sind, auf eine beliebige Rezensionen für die angegebene App zu antworten.</span><span class="sxs-lookup"><span data-stu-id="8b87d-155">The value **true** indicates that you can respond to the specified review, or that you have permissions to respond to any review for the specified app.</span></span> <span data-ttu-id="8b87d-156">Andernfalls ist dieser Wert **false**.</span><span class="sxs-lookup"><span data-stu-id="8b87d-156">Otherwise, this value is **false**.</span></span>       |
+| <span data-ttu-id="8b87d-157">DefaultSupportEmail</span><span class="sxs-lookup"><span data-stu-id="8b87d-157">DefaultSupportEmail</span></span>  | <span data-ttu-id="8b87d-158">string</span><span class="sxs-lookup"><span data-stu-id="8b87d-158">string</span></span> |  <span data-ttu-id="8b87d-159">Die von Ihrer App [unterstütze E-Mail-Adresse](../publish/enter-app-properties.md#support-contact-info) finden Sie im Store-Eintrag Ihrer App.</span><span class="sxs-lookup"><span data-stu-id="8b87d-159">Your app's [support email address](../publish/enter-app-properties.md#support-contact-info) as specified in your app's Store listing.</span></span> <span data-ttu-id="8b87d-160">Wenn Sie keine unterstützte E-Mail-Adresse angegeben haben, ist dieses Feld leer.</span><span class="sxs-lookup"><span data-stu-id="8b87d-160">If you did not specify a support email address, this field is empty.</span></span>    |
 
-<span/>
  
-### <a name="response-example"></a>Antwortbeispiel
+### <a name="response-example"></a><span data-ttu-id="8b87d-161">Antwortbeispiel</span><span class="sxs-lookup"><span data-stu-id="8b87d-161">Response example</span></span>
 
-Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese Anforderung.
+<span data-ttu-id="8b87d-162">Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese Anforderung.</span><span class="sxs-lookup"><span data-stu-id="8b87d-162">The following example demonstrates an example JSON response body for this request.</span></span>
 
 ```json
 {
@@ -89,10 +86,9 @@ Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese 
 }
 ```
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a><span data-ttu-id="8b87d-163">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="8b87d-163">Related topics</span></span>
 
-* [Übermitteln von Antworten auf Rezensionen mithilfe der Windows Store-Analyse-API](submit-responses-to-app-reviews.md)
-* [Reagieren Sie auf Kundenrezensionen über das Dev Center-Dashboard](../publish/respond-to-customer-reviews.md)
-* [Antworten auf Rezensionen mithilfe von Windows Store-Diensten](respond-to-reviews-using-windows-store-services.md)
-* [Abrufen von App-Rezensionen](get-app-reviews.md)
-
+* [<span data-ttu-id="8b87d-164">Übermitteln von Antworten auf Rezensionen mithilfe der Microsoft Store-Analyse-API</span><span class="sxs-lookup"><span data-stu-id="8b87d-164">Submit responses to reviews using the Microsoft Store analytics API</span></span>](submit-responses-to-app-reviews.md)
+* [<span data-ttu-id="8b87d-165">Reagieren Sie auf Kundenrezensionen über das Dev Center-Dashboard</span><span class="sxs-lookup"><span data-stu-id="8b87d-165">Respond to customer reviews using the Dev Center dashboard</span></span>](../publish/respond-to-customer-reviews.md)
+* [<span data-ttu-id="8b87d-166">Antworten auf Rezensionen mit Microsoft Store-Diensten</span><span class="sxs-lookup"><span data-stu-id="8b87d-166">Respond to reviews using Microsoft Store services</span></span>](respond-to-reviews-using-windows-store-services.md)
+* [<span data-ttu-id="8b87d-167">Abrufen von App-Rezensionen</span><span class="sxs-lookup"><span data-stu-id="8b87d-167">Get app reviews</span></span>](get-app-reviews.md)

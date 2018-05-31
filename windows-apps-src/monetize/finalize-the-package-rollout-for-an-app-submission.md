@@ -1,107 +1,99 @@
 ---
 author: mcleanbyron
-description: "Verwenden Sie diese Methode der Windows Store-Übermittlungs-API, um den Paketrollout für eine App-Übermittlung fertig zu stellen."
-title: "Fertigstellen des Paketrollouts für eine App-Übermittlung mithilfe der Windows Store-Übermittlungs-API"
+description: Verwenden Sie diese Methode der Microsoft Store-Übermittlungs-API, um den Paketrollout für eine App-Übermittlung fertigzustellen.
+title: Abschließen des Rollouts einer App-Übermittlung
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 04/17/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Windows Store-Übermittlungs-API, Paketrollout, App-Übermittlung, fertigstellen"
+keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Paketrollout, App-Übermittlung, fertigstellen
 ms.assetid: c7dd39e6-5162-455a-b03b-1ed76bffcf6e
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 6c7fa8fc509faf2c662732e7e6b998d355fcbd66
-ms.lasthandoff: 02/08/2017
-
+ms.localizationpriority: medium
+ms.openlocfilehash: 2a95f5ec792ca24e282c8708b8b622e8b3fdbca2
+ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/30/2018
+ms.locfileid: "1815845"
 ---
+# <a name="finalize-the-rollout-for-an-app-submission"></a><span data-ttu-id="9d0b9-104">Abschließen des Rollouts einer App-Übermittlung</span><span class="sxs-lookup"><span data-stu-id="9d0b9-104">Finalize the rollout for an app submission</span></span>
 
-# <a name="finalize-the-package-rollout-for-an-app-submission-using-the-windows-store-submission-api"></a>Fertigstellen des Paketrollouts für eine App-Übermittlung mithilfe der Windows Store-Übermittlungs-API
 
+<span data-ttu-id="9d0b9-105">Verwenden Sie diese Methode der Microsoft Store-Übermittlungs-API zur [Fertigstellung des Paketrollouts](../publish/gradual-package-rollout.md#completing-the-rollout) für eine App-Übermittlung.</span><span class="sxs-lookup"><span data-stu-id="9d0b9-105">Use this method in the Microsoft Store submission API to [finalize the package rollout](../publish/gradual-package-rollout.md#completing-the-rollout) for an app submission.</span></span> <span data-ttu-id="9d0b9-106">Weitere Informationen zum Erstellungsprozess einer App-Übermittlung mithilfe der Microsoft Store-Übermittlungs-API finden Sie unter [Verwalten von App-Übermittlungen](manage-app-submissions.md).</span><span class="sxs-lookup"><span data-stu-id="9d0b9-106">For more information about the process of process of creating an app submission by using the Microsoft Store submission API, see [Manage app submissions](manage-app-submissions.md).</span></span>
 
-Verwenden Sie diese Methode der Windows Store-Übermittlungs-API, um den [Paketrollout für eine App-Übermittlung fertig zu stellen](../publish/gradual-package-rollout.md#completing-the-rollout). Weitere Informationen zum Erstellungsprozess einer App-Übermittlung mithilfe der Windows Store-Übermittlungs-API finden Sie unter [Verwalten von App-Übermittlungen](manage-app-submissions.md).
+## <a name="prerequisites"></a><span data-ttu-id="9d0b9-107">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="9d0b9-107">Prerequisites</span></span>
 
-## <a name="prerequisites"></a>Voraussetzungen
+<span data-ttu-id="9d0b9-108">Zur Verwendung dieser Methode sind folgende Schritte erforderlich:</span><span class="sxs-lookup"><span data-stu-id="9d0b9-108">To use this method, you need to first do the following:</span></span>
 
-Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
+* <span data-ttu-id="9d0b9-109">Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](create-and-manage-submissions-using-windows-store-services.md#prerequisites) für die Microsoft Store-Übermittlungs-API.</span><span class="sxs-lookup"><span data-stu-id="9d0b9-109">If you have not done so already, complete all the [prerequisites](create-and-manage-submissions-using-windows-store-services.md#prerequisites) for the Microsoft Store submission API.</span></span>
+* <span data-ttu-id="9d0b9-110">[Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="9d0b9-110">[Obtain an Azure AD access token](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) to use in the request header for this method.</span></span> <span data-ttu-id="9d0b9-111">Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60 Minuten lang verwenden, bevor es abläuft.</span><span class="sxs-lookup"><span data-stu-id="9d0b9-111">After you obtain an access token, you have 60 minutes to use it before it expires.</span></span> <span data-ttu-id="9d0b9-112">Wenn das Token abgelaufen ist, können Sie ein neues abrufen.</span><span class="sxs-lookup"><span data-stu-id="9d0b9-112">After the token expires, you can obtain a new one.</span></span>
+* <span data-ttu-id="9d0b9-113">Erstellen Sie Übermittlung für eine App im Dev Center-Konto.</span><span class="sxs-lookup"><span data-stu-id="9d0b9-113">Create a submission for an app in your Dev Center account.</span></span> <span data-ttu-id="9d0b9-114">Sie können dies im Dev Center-Dashboard oder durch Verwenden der Methode [Erstellen einer App-Übermittlung](create-an-app-submission.md) erreichen.</span><span class="sxs-lookup"><span data-stu-id="9d0b9-114">You can do this in the Dev Center dashboard, or you can do this by using the [create an app submission](create-an-app-submission.md) method.</span></span>
+* <span data-ttu-id="9d0b9-115">Ermöglichen Sie einen schrittweisen Paketrollout für die Übermittlung.</span><span class="sxs-lookup"><span data-stu-id="9d0b9-115">Enable a gradual package rollout for the submission.</span></span> <span data-ttu-id="9d0b9-116">Sie können dies im [Dev Center-Dashboard](../publish/gradual-package-rollout.md) oder durch [Verwenden der Microsoft Store-Übermittlungs-API](manage-app-submissions.md#manage-gradual-package-rollout) durchführen.</span><span class="sxs-lookup"><span data-stu-id="9d0b9-116">You can do this in the [Dev Center dashboard](../publish/gradual-package-rollout.md), or you can do this by [using the Microsoft Store submission API](manage-app-submissions.md#manage-gradual-package-rollout).</span></span>
 
-* Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](create-and-manage-submissions-using-windows-store-services.md#prerequisites) für die Windows Store-Übermittlungs-API.
-* [Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60 Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
-* Erstellen Sie Übermittlung für eine App im Dev Center-Konto. Sie können dies im Dev Center-Dashboard oder durch Verwenden der Methode [Erstellen einer App-Übermittlung](create-an-app-submission.md) erreichen.
-* Ermöglichen Sie einen schrittweisen Paketrollout für die Übermittlung. Sie können dies im [Dev Center-Dashboard](../publish/gradual-package-rollout.md) oder durch [Verwenden der Windows Store-Übermittlungs-API](manage-app-submissions.md#manage-gradual-package-rollout) durchführen.
+## <a name="request"></a><span data-ttu-id="9d0b9-117">Anforderung</span><span class="sxs-lookup"><span data-stu-id="9d0b9-117">Request</span></span>
 
->**Hinweis**&nbsp;&nbsp;Diese Methode kann nur für Windows Dev Center-Konten verwendet werden, die eine Berechtigung zur Verwendung der Windows Store-Übermittlungs-API erhalten haben. Diese Berechtigung ist nicht für alle Konten aktiviert.
+<span data-ttu-id="9d0b9-118">Diese Methode hat die folgende Syntax.</span><span class="sxs-lookup"><span data-stu-id="9d0b9-118">This method has the following syntax.</span></span> <span data-ttu-id="9d0b9-119">In den folgenden Abschnitten finden Sie Verwendungsbeispiele und Beschreibungen des Headers und der Anforderungsparameter.</span><span class="sxs-lookup"><span data-stu-id="9d0b9-119">See the following sections for usage examples and descriptions of the header and request parameters.</span></span>
 
-## <a name="request"></a>Anforderung
-
-Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie Verwendungsbeispiele und Beschreibungen des Headers und der Anforderungsparameter.
-
-| Methode | Anforderungs-URI                                                      |
+| <span data-ttu-id="9d0b9-120">Methode</span><span class="sxs-lookup"><span data-stu-id="9d0b9-120">Method</span></span> | <span data-ttu-id="9d0b9-121">Anforderungs-URI</span><span class="sxs-lookup"><span data-stu-id="9d0b9-121">Request URI</span></span>                                                      |
 |--------|------------------------------------------------------------------|
-| POST   | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/finalizepackagerollout``` |
+| <span data-ttu-id="9d0b9-122">POST</span><span class="sxs-lookup"><span data-stu-id="9d0b9-122">POST</span></span>   | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/finalizepackagerollout``` |
 
-<span/>
- 
 
-### <a name="request-header"></a>Anforderungsheader
+### <a name="request-header"></a><span data-ttu-id="9d0b9-123">Anforderungsheader</span><span class="sxs-lookup"><span data-stu-id="9d0b9-123">Request header</span></span>
 
-| Header        | Typ   | Beschreibung                                                                 |
+| <span data-ttu-id="9d0b9-124">Header</span><span class="sxs-lookup"><span data-stu-id="9d0b9-124">Header</span></span>        | <span data-ttu-id="9d0b9-125">Typ</span><span class="sxs-lookup"><span data-stu-id="9d0b9-125">Type</span></span>   | <span data-ttu-id="9d0b9-126">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="9d0b9-126">Description</span></span>                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorisierung | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;. |
+| <span data-ttu-id="9d0b9-127">Autorisierung</span><span class="sxs-lookup"><span data-stu-id="9d0b9-127">Authorization</span></span> | <span data-ttu-id="9d0b9-128">String</span><span class="sxs-lookup"><span data-stu-id="9d0b9-128">string</span></span> | <span data-ttu-id="9d0b9-129">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="9d0b9-129">Required.</span></span> <span data-ttu-id="9d0b9-130">Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;.</span><span class="sxs-lookup"><span data-stu-id="9d0b9-130">The Azure AD access token in the form **Bearer** &lt;*token*&gt;.</span></span> |
 
-<span/>
 
-### <a name="request-parameters"></a>Anforderungsparameter
+### <a name="request-parameters"></a><span data-ttu-id="9d0b9-131">Anforderungsparameter</span><span class="sxs-lookup"><span data-stu-id="9d0b9-131">Request parameters</span></span>
 
-| Name        | Typ   | Beschreibung                                                                 |
+| <span data-ttu-id="9d0b9-132">Name</span><span class="sxs-lookup"><span data-stu-id="9d0b9-132">Name</span></span>        | <span data-ttu-id="9d0b9-133">Typ</span><span class="sxs-lookup"><span data-stu-id="9d0b9-133">Type</span></span>   | <span data-ttu-id="9d0b9-134">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="9d0b9-134">Description</span></span>                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | string | Erforderlich. Die Store-ID der App mit der Übermittlung, deren Paketrollout fertig gestellt werden soll. Weitere Informationen zur Store-ID finden Sie unter [Anzeigen von Details zur App-Identität](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
-| submissionId | string | Erforderlich. Die ID der Übermittlung mit dem Paketrollout, der fertig gestellt werden soll. Diese ID ist im Dev Center-Dashboard verfügbar und in den Antwortdaten für Anforderungen zum [Erstellen einer App-Übermittlung](create-an-app-submission.md) enthalten.  |
+| <span data-ttu-id="9d0b9-135">applicationId</span><span class="sxs-lookup"><span data-stu-id="9d0b9-135">applicationId</span></span> | <span data-ttu-id="9d0b9-136">String</span><span class="sxs-lookup"><span data-stu-id="9d0b9-136">string</span></span> | <span data-ttu-id="9d0b9-137">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="9d0b9-137">Required.</span></span> <span data-ttu-id="9d0b9-138">Die Store-ID der App mit der Übermittlung, deren Paketrollout fertig gestellt werden soll.</span><span class="sxs-lookup"><span data-stu-id="9d0b9-138">The Store ID of the app that contains the submission with the package rollout you want to finalize.</span></span> <span data-ttu-id="9d0b9-139">Weitere Informationen zur Store-ID finden Sie unter [Anzeigen von Details zur App-Identität](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).</span><span class="sxs-lookup"><span data-stu-id="9d0b9-139">For more information about the Store ID, see [View app identity details](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).</span></span>  |
+| <span data-ttu-id="9d0b9-140">submissionId</span><span class="sxs-lookup"><span data-stu-id="9d0b9-140">submissionId</span></span> | <span data-ttu-id="9d0b9-141">String</span><span class="sxs-lookup"><span data-stu-id="9d0b9-141">string</span></span> | <span data-ttu-id="9d0b9-142">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="9d0b9-142">Required.</span></span> <span data-ttu-id="9d0b9-143">Die ID der Übermittlung mit dem Paketrollout, der fertig gestellt werden soll.</span><span class="sxs-lookup"><span data-stu-id="9d0b9-143">The ID of the submission with the package rollout you want to finalize.</span></span> <span data-ttu-id="9d0b9-144">Diese ID ist in den Antwortdaten für Anforderungen zum [Erstellen einer App-Übermittlung](create-an-app-submission.md) verfügbar.</span><span class="sxs-lookup"><span data-stu-id="9d0b9-144">This ID is available in the response data for requests to [create an app submission](create-an-app-submission.md).</span></span> <span data-ttu-id="9d0b9-145">Für eine Übermittlung, die im Dev Center-Dashboard erstellt wurde, ist diese ID auch in der URL für die Übermittlungsseite im Dashboard verfügbar.</span><span class="sxs-lookup"><span data-stu-id="9d0b9-145">For a submission that was created in the Dev Center dashboard, this ID is also available in the URL for the submission page in the dashboard.</span></span>  |
 
-<span/>
 
-### <a name="request-body"></a>Anforderungstext
+### <a name="request-body"></a><span data-ttu-id="9d0b9-146">Anforderungstext</span><span class="sxs-lookup"><span data-stu-id="9d0b9-146">Request body</span></span>
 
-Stellen Sie keinen Anforderungstext für diese Methode bereit.
+<span data-ttu-id="9d0b9-147">Stellen Sie keinen Anforderungstext für diese Methode bereit.</span><span class="sxs-lookup"><span data-stu-id="9d0b9-147">Do not provide a request body for this method.</span></span>
 
-### <a name="request-example"></a>Anforderungsbeispiel
+### <a name="request-example"></a><span data-ttu-id="9d0b9-148">Anforderungsbeispiel</span><span class="sxs-lookup"><span data-stu-id="9d0b9-148">Request example</span></span>
 
-Im folgenden Beispiel wird die Fertigstellung des Paketrollouts für eine Flight-Paket-Übermittlung veranschaulicht.
+<span data-ttu-id="9d0b9-149">Im folgenden Beispiel wird die Fertigstellung des Paketrollouts für eine Flight-Paket-Übermittlung veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="9d0b9-149">The following example demonstrates how to finalize the package rollout for a package flight submission.</span></span>
 
 ```
 POST https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/submissions/1152921504621243680/finalizepackagerollout HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-## <a name="response"></a>Antwort
+## <a name="response"></a><span data-ttu-id="9d0b9-150">Antwort</span><span class="sxs-lookup"><span data-stu-id="9d0b9-150">Response</span></span>
 
-Das folgende Beispiel veranschaulicht den JSON-Antworttext für einen erfolgreichen Aufruf dieser Methode. Weitere Informationen zu den Werten im Antworttext finden Sie unter der [Ressource zum Paketrollout](manage-app-submissions.md#package-rollout-object).
+<span data-ttu-id="9d0b9-151">Das folgende Beispiel veranschaulicht den JSON-Antworttext für einen erfolgreichen Aufruf dieser Methode.</span><span class="sxs-lookup"><span data-stu-id="9d0b9-151">The following example demonstrates the JSON response body for a successful call to this method.</span></span> <span data-ttu-id="9d0b9-152">Weitere Informationen zu den Werten im Antworttext finden Sie unter der [Ressource zum Paketrollout](manage-app-submissions.md#package-rollout-object).</span><span class="sxs-lookup"><span data-stu-id="9d0b9-152">For more details about the values in the response body, see [Package rollout resource](manage-app-submissions.md#package-rollout-object).</span></span>
 
 ```json
 {
     "isPackageRollout": true,
-    "packageRolloutPercentage": 100,
+    "packageRolloutPercentage": 100.0,
     "packageRolloutStatus": "PackageRolloutComplete",
     "fallbackSubmissionId": "1212922684621243058"
 }
 ```
 
 
-## <a name="error-codes"></a>Fehlercodes
+## <a name="error-codes"></a><span data-ttu-id="9d0b9-153">Fehlercodes</span><span class="sxs-lookup"><span data-stu-id="9d0b9-153">Error codes</span></span>
 
-Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die Antwort einen der folgenden HTTP-Fehlercodes.
+<span data-ttu-id="9d0b9-154">Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die Antwort einen der folgenden HTTP-Fehlercodes.</span><span class="sxs-lookup"><span data-stu-id="9d0b9-154">If the request cannot be successfully completed, the response will contain one of the following HTTP error codes.</span></span>
 
-| Fehlercode |  Beschreibung   |
+| <span data-ttu-id="9d0b9-155">Fehlercode</span><span class="sxs-lookup"><span data-stu-id="9d0b9-155">Error code</span></span> |  <span data-ttu-id="9d0b9-156">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="9d0b9-156">Description</span></span>   |
 |--------|------------------|
-| 404  | Die Übermittlung konnte nicht gefunden werden. |
-| 407  | Dieser Code weist auf einen der folgenden Fehler hin:<br/><br/><ul><li>Die Übermittlung befindet sich nicht in einem gültigen Status für den schrittweisen Rollout (vor dem Aufrufen dieser Methode muss die Übermittlung veröffentlicht und der Wert für [PackageRolloutStatus](manage-app-submissions.md#package-rollout-object) auf **PackageRolloutInProgress** festgelegt werden).</li><li>Die Übermittlung gehört nicht zur angegebenen App.</li><li>Die App verwendet eine Dev Center-Dashboard-Funktion, die [derzeit nicht von der Windows Store-Übermittlungs-API unterstützt wird](create-and-manage-submissions-using-windows-store-services.md#not_supported).</li></ul> |   
-
-<span/>
+| <span data-ttu-id="9d0b9-157">404</span><span class="sxs-lookup"><span data-stu-id="9d0b9-157">404</span></span>  | <span data-ttu-id="9d0b9-158">Die Übermittlung konnte nicht gefunden werden.</span><span class="sxs-lookup"><span data-stu-id="9d0b9-158">The submission could not be found.</span></span> |
+| <span data-ttu-id="9d0b9-159">407</span><span class="sxs-lookup"><span data-stu-id="9d0b9-159">409</span></span>  | <span data-ttu-id="9d0b9-160">Dieser Code weist auf einen der folgenden Fehler hin:</span><span class="sxs-lookup"><span data-stu-id="9d0b9-160">This code indicates one of the following errors:</span></span><br/><br/><ul><li><span data-ttu-id="9d0b9-161">Die Übermittlung befindet sich nicht in einem gültigen Status für den schrittweisen Rollout (vor dem Aufrufen dieser Methode muss die Übermittlung veröffentlicht und der Wert für [PackageRolloutStatus](manage-app-submissions.md#package-rollout-object) auf **PackageRolloutInProgress** festgelegt werden).</span><span class="sxs-lookup"><span data-stu-id="9d0b9-161">The submission is not in a valid state for the gradual rollout operation (before calling this method, the submission must be published and the [packageRolloutStatus](manage-app-submissions.md#package-rollout-object) value must be set to **PackageRolloutInProgress**).</span></span></li><li><span data-ttu-id="9d0b9-162">Die Übermittlung gehört nicht zur angegebenen App.</span><span class="sxs-lookup"><span data-stu-id="9d0b9-162">The submission does not belong to the specified app.</span></span></li><li><span data-ttu-id="9d0b9-163">Die App verwendet eine Dev Center-Dashboard-Funktion, die [derzeit nicht von der Microsoft Store-Übermittlungs-API unterstützt wird](create-and-manage-submissions-using-windows-store-services.md#not_supported).</span><span class="sxs-lookup"><span data-stu-id="9d0b9-163">The app uses a Dev Center dashboard feature that is [currently not supported by the Microsoft Store submission API](create-and-manage-submissions-using-windows-store-services.md#not_supported).</span></span></li></ul> |   
 
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a><span data-ttu-id="9d0b9-164">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="9d0b9-164">Related topics</span></span>
 
-* [Schrittweiser Paketrollout](../publish/gradual-package-rollout.md)
-* [Verwalten von App-Übermittlungen mithilfe der Windows Store-Übermittlungs-API](manage-app-submissions.md)
-* [Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten](create-and-manage-submissions-using-windows-store-services.md)
-
+* [<span data-ttu-id="9d0b9-165">Schrittweiser Paketrollout</span><span class="sxs-lookup"><span data-stu-id="9d0b9-165">Gradual package rollout</span></span>](../publish/gradual-package-rollout.md)
+* [<span data-ttu-id="9d0b9-166">Verwalten von App-Übermittlungen mithilfe der Microsoft Store-Übermittlungs-API</span><span class="sxs-lookup"><span data-stu-id="9d0b9-166">Manage app submissions using the Microsoft Store submission API</span></span>](manage-app-submissions.md)
+* [<span data-ttu-id="9d0b9-167">Erstellen und Verwalten von Übermittlungen mit Microsoft Store-Diensten</span><span class="sxs-lookup"><span data-stu-id="9d0b9-167">Create and manage submissions using Microsoft Store services</span></span>](create-and-manage-submissions-using-windows-store-services.md)

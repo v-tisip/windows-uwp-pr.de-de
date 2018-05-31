@@ -1,28 +1,29 @@
 ---
-title: "Lernanleitung für Direct3D-Grafiken"
+title: Direct3D-Grafikkonzepte
 description: Beschreibt das Grafikkonzept, auf dem Microsoft Direct3D aufgebaut ist.
 ms.assetid: c3850a92-4d05-4f72-bf0f-6a0c79e841eb
 keywords:
-- "Lernanleitung für Direct3D-Grafiken"
-author: PeterTurcan
-ms.author: pettur
+- Direct3D-Grafik – Lernanleitung
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e62f9cfde35580dd384ef69fe6e5658d927ce3d8
-ms.lasthandoff: 02/07/2017
-
+ms.localizationpriority: medium
+ms.openlocfilehash: 3e1fed9eaf3003bc67a86a5282fccbb923019a36
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1653019"
 ---
+# <a name="direct3d-graphics-concepts"></a><span data-ttu-id="8fce8-104">Direct3D-Grafikkonzepte</span><span class="sxs-lookup"><span data-stu-id="8fce8-104">Direct3D graphics concepts</span></span>
 
-# <a name="direct3d-graphics-learning-guide"></a>Lernanleitung für Direct3D-Grafiken
 
+<span data-ttu-id="8fce8-105">Beschreibt Microsoft Direct3D-Grafikkonzepte.</span><span class="sxs-lookup"><span data-stu-id="8fce8-105">Describes Microsoft Direct3D graphics concepts.</span></span> <span data-ttu-id="8fce8-106">Dieses Handbuch erklärt die allgemeinen Direct3D-Computer-Grafikkonzepte, die in der Direct3D-Spiele- und App-Entwicklung verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="8fce8-106">This guide explains general 3D computer graphics concepts that are used in Direct3D game and app development.</span></span>
 
-Beschreibt das Grafikkonzept, auf dem Microsoft Direct3D aufgebaut ist. Dieser Dokumentationssatz ist weitgehend unabhängig von der Direct3D-Version. Er wurde für Grafik-Entwickler erstellt, die mehr Hintergrundinformationen benötigen, als in der versionsspezifischen API-Dokumentation bereit gestellt wird.
-
-## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>In diesem Abschnitt
+## <a name="span-idin-this-sectionspanin-this-section"></a><span data-ttu-id="8fce8-107"><span id="in-this-section"></span>In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="8fce8-107"><span id="in-this-section"></span>In this section</span></span>
 
 
 <table>
@@ -32,58 +33,58 @@ Beschreibt das Grafikkonzept, auf dem Microsoft Direct3D aufgebaut ist. Dieser D
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Thema</th>
-<th align="left">Beschreibung</th>
+<th align="left"><span data-ttu-id="8fce8-108">Thema</span><span class="sxs-lookup"><span data-stu-id="8fce8-108">Topic</span></span></th>
+<th align="left"><span data-ttu-id="8fce8-109">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="8fce8-109">Description</span></span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Koordinatensystem und Geometrie](coordinate-systems-and-geometry.md)</p></td>
-<td align="left"><p>Das Programmieren von Direct3D-Anwendungen setzt Kenntnisse von geometrischen 3D-Prinzipien voraus. Dieser Abschnitt stellt die wichtigsten geometrischen Konzepte zum Erstellen von 3D-Szenen vor.</p></td>
+<td align="left"><p><a href="coordinate-systems-and-geometry.md"><span data-ttu-id="8fce8-110">Koordinatensystem und Geometrie</span><span class="sxs-lookup"><span data-stu-id="8fce8-110">Coordinate systems and geometry</span></span></a></p></td>
+<td align="left"><p><span data-ttu-id="8fce8-111">Für das Programmieren von Direct3D-Anwendungen muss der Anwender mit geometrischen 3D-Prinzipien vertraut sein.</span><span class="sxs-lookup"><span data-stu-id="8fce8-111">Programming Direct3D applications requires a working familiarity with 3D geometric principles.</span></span> <span data-ttu-id="8fce8-112">Dieser Abschnitt stellt die wichtigsten geometrischen Konzepte zum Erstellen von 3D-Szenen vor.</span><span class="sxs-lookup"><span data-stu-id="8fce8-112">This section introduces the most important geometric concepts for creating 3D scenes.</span></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Vertex- und Indexpuffer](vertex-and-index-buffers.md)</p></td>
-<td align="left"><p><em>Vertexpuffer</em> sind Speicherpuffer, die Vertexdaten enthalten. Scheitelpunkte (Vertices) in einem Vertexpuffer werden verarbeitet, um Transformation, Beleuchtung und Zuschneiden auszuführen. <em>Indexpuffer</em> sind Speicherpuffer mit Indexdaten, die Ganzzahl-Offsets in Vertexpuffer darstellen und zum Rendern von Grundtypen verwendet werden.</p></td>
+<td align="left"><p><a href="vertex-and-index-buffers.md"><span data-ttu-id="8fce8-113">Vertex- und Indexpuffer</span><span class="sxs-lookup"><span data-stu-id="8fce8-113">Vertex and index buffers</span></span></a></p></td>
+<td align="left"><p><span data-ttu-id="8fce8-114"><em>Scheitelpunktpuffer</em> sind Speicherpuffer, die Scheitelpunktdaten enthalten. Scheitelpunkte in einem Scheitelpunktpuffer werden verarbeitet, um Transformation, Beleuchtung und Zuschneiden auszuführen.</span><span class="sxs-lookup"><span data-stu-id="8fce8-114"><em>Vertex buffers</em> are memory buffers that contain vertex data; vertices in a vertex buffer are processed to perform transformation, lighting, and clipping.</span></span> <span data-ttu-id="8fce8-115"><em>Indexpuffer</em> sind Speicherpuffer mit Indexdaten, die Ganzzahl-Offsets in Vertexpuffer darstellen, und zum Rendern von Grundtypen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="8fce8-115"><em>Index buffers</em> are memory buffers that contain index data, which are integer offsets into vertex buffers, used to render primitives.</span></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Geräte](devices.md)</p></td>
-<td align="left"><p>Ein Direct3D-Gerät stellt die Rendering-Komponente von Direct3D dar. Ein Gerät kapselt und speichert den Renderstatus, führt Transformationen und Beleuchtungsvorgänge aus, und rastert ein Bild zu einer Oberfläche.</p></td>
+<td align="left"><p><a href="devices.md"><span data-ttu-id="8fce8-116">Geräte</span><span class="sxs-lookup"><span data-stu-id="8fce8-116">Devices</span></span></a></p></td>
+<td align="left"><p><span data-ttu-id="8fce8-117">Ein Direct3D-Gerät ist die Komponente zum Rendern von Direct3D.</span><span class="sxs-lookup"><span data-stu-id="8fce8-117">A Direct3D device is the rendering component of Direct3D.</span></span> <span data-ttu-id="8fce8-118">Ein Gerät kapselt und speichert den Renderstatus, führt Transformationen und Beleuchtungsvorgänge aus, und rastert ein Bild zu einer Oberfläche.</span><span class="sxs-lookup"><span data-stu-id="8fce8-118">A device encapsulates and stores the rendering state, performs transformations and lighting operations, and rasterizes an image to a surface.</span></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Beleuchtung](lights-and-materials.md)</p></td>
-<td align="left"><p>Licht wird zum Beleuchten von Objekten in einer Szene verwendet. Die Farbe jedes Objektscheitelpunkts basiert auf der aktuellen Texturzuordnung, Scheitelpunktfarben und Lichtquellen.</p></td>
+<td align="left"><p><a href="lights-and-materials.md"><span data-ttu-id="8fce8-119">Beleuchtung</span><span class="sxs-lookup"><span data-stu-id="8fce8-119">Lighting</span></span></a></p></td>
+<td align="left"><p><span data-ttu-id="8fce8-120">Lichter werden verwendet, um Objekte in einer Szene zu beleuchten.</span><span class="sxs-lookup"><span data-stu-id="8fce8-120">Lights are used to illuminate objects in a scene.</span></span> <span data-ttu-id="8fce8-121">Die Farbe jedes Objektscheitelpunkts basiert auf der aktuellen Texturzuordnung, Scheitelpunktfarben und Lichtquellen.</span><span class="sxs-lookup"><span data-stu-id="8fce8-121">The color of each object vertex is based on the current texture map, vertex colors, and light sources.</span></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Tiefen- und Schablonenpuffer](depth-and-stencil-buffers.md)</p></td>
-<td align="left"><p>Ein <em>Tiefenpuffer</em> speichert Tiefeninformationen, um zu steuern, welche Bereiche eines Polygons gerendert oder verborgen werden. Ein <em>Schablonenpuffer</em> wird verwendet, um Pixel in einem Bild zu maskieren und um Spezialeffekte, wie Zusammensetzung, Auflösungen, Rasterungen, Ein- und Ausblenden und Streifbewegungen, Umrisse und Silhouetten sowie das Feature „zweitseitige Schablone“ zu erzeugen.</p></td>
+<td align="left"><p><a href="depth-and-stencil-buffers.md"><span data-ttu-id="8fce8-122">Tiefen- und Schablonenpuffer</span><span class="sxs-lookup"><span data-stu-id="8fce8-122">Depth and stencil buffers</span></span></a></p></td>
+<td align="left"><p><span data-ttu-id="8fce8-123">Ein <em>Tiefenpuffer</em> speichert Tiefeninformationen. Diese steuern, welche Bereiche von Polygonen dargestellt werden.</span><span class="sxs-lookup"><span data-stu-id="8fce8-123">A <em>depth buffer</em> stores depth information to control which areas of polygons are rendered rather than hidden from view.</span></span> <span data-ttu-id="8fce8-124">Ein <em>Schablonenpuffer</em> wird Maskieren von Pixeln in einem Bild verwendet. So können Spezialeffekte erstellt werden (z. B. Stanzeffekte; Decaling; Transparenzen, Ausblenden und Verwischen; Außenlinien und Silhouetten und zweiseitige Schablonen).</span><span class="sxs-lookup"><span data-stu-id="8fce8-124">A <em>stencil buffer</em> is used to mask pixels in an image, to produce special effects, including compositing; decaling; dissolves, fades, and swipes; outlines and silhouettes; and two-sided stencil.</span></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Texturen](textures.md)</p></td>
-<td align="left"><p>Texturen sind ein mächtiges Tool, um mit dem Computer realistische 3D-Bilder zu erzeugen. Direct3D unterstützt einen umfangreichen Texturfunktionssatz, und ermöglicht Entwicklern einfach auf erweiterte Texturtechniken zuzugreifen.</p></td>
+<td align="left"><p><a href="textures.md"><span data-ttu-id="8fce8-125">Texturen</span><span class="sxs-lookup"><span data-stu-id="8fce8-125">Textures</span></span></a></p></td>
+<td align="left"><p><span data-ttu-id="8fce8-126">Texturen sind ein leistungsstarkes Tool, um mit dem Computer realistische 3D-Bilder zu erzeugen.</span><span class="sxs-lookup"><span data-stu-id="8fce8-126">Textures are a powerful tool in creating realism in computer-generated 3D images.</span></span> <span data-ttu-id="8fce8-127">Direct3D unterstützt einen umfangreichen Texturfunktionssatz, und ermöglicht Entwicklern einfach auf erweiterte Texturtechniken zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="8fce8-127">Direct3D supports an extensive texturing feature set, providing developers with easy access to advanced texturing techniques.</span></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Grafik-Pipeline](graphics-pipeline.md)</p></td>
-<td align="left"><p>Die Direct3D-Grafik-Pipeline wurde entwickelt, um Grafiken für Gaming-Anwendungen in Echtzeit zu generieren. Datenflüsse vom Eingang zum Ausgang durch jede konfigurierbare oder programmierbare Phase</p></td>
+<td align="left"><p><a href="graphics-pipeline.md"><span data-ttu-id="8fce8-128">Grafik-Pipeline</span><span class="sxs-lookup"><span data-stu-id="8fce8-128">Graphics pipeline</span></span></a></p></td>
+<td align="left"><p><span data-ttu-id="8fce8-129">Die Direct3D-Grafikpipeline dient zum Generieren von Grafiken für Echtzeitspiele.</span><span class="sxs-lookup"><span data-stu-id="8fce8-129">The Direct3D graphics pipeline is designed for generating graphics for realtime gaming applications.</span></span> <span data-ttu-id="8fce8-130">Datenflüsse vom Eingang zum Ausgang durch jede konfigurierbare oder programmierbare Phase</span><span class="sxs-lookup"><span data-stu-id="8fce8-130">Data flows from input to output through each of the configurable or programmable stages.</span></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Ansichten](views.md)</p></td>
-<td align="left"><p>Der Begriff &quot;Ansicht&quot; wird für &quot;Daten im erforderlichen Format&quot; verwendet. Eine Konstantenpufferansicht (CBV) beispielweise, sind ordnungsgemäß formatierte, konstante Pufferdaten. Dieser Abschnitt beschreibt die gängigsten und hilfreichsten Ansichten.</p></td>
+<td align="left"><p><a href="views.md"><span data-ttu-id="8fce8-131">Ansichten</span><span class="sxs-lookup"><span data-stu-id="8fce8-131">Views</span></span></a></p></td>
+<td align="left"><p><span data-ttu-id="8fce8-132">Der Begriff &quot;Ansicht&quot; wird für &quot;Daten im erforderlichen Format&quot; verwendet.</span><span class="sxs-lookup"><span data-stu-id="8fce8-132">The term &quot;view&quot; is used to mean &quot;data in the required format&quot;.</span></span> <span data-ttu-id="8fce8-133">Eine Konstantenpufferansicht (CBV) beispielweise, sind ordnungsgemäß formatierte, konstante Pufferdaten.</span><span class="sxs-lookup"><span data-stu-id="8fce8-133">For example, a Constant Buffer View (CBV) would be constant buffer data correctly formatted.</span></span> <span data-ttu-id="8fce8-134">Dieser Abschnitt beschreibt die gängigsten und hilfreichsten Ansichten.</span><span class="sxs-lookup"><span data-stu-id="8fce8-134">This section describes the most common and useful views.</span></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Berechnungs-Pipeline](compute-pipeline.md)</p></td>
-<td align="left"><p>Die Direct3D-Berechnungs-Pipeline wurde entwickelt, um Berechnungen zu erledigen, die meist parallel mit der Grafik-Pipeline ausgeführt werden können.</p></td>
+<td align="left"><p><a href="compute-pipeline.md"><span data-ttu-id="8fce8-135">Berechnungs-Pipeline</span><span class="sxs-lookup"><span data-stu-id="8fce8-135">Compute pipeline</span></span></a></p></td>
+<td align="left"><p><span data-ttu-id="8fce8-136">Die Direct3D-Berechnungs-Pipeline wurde entwickelt, um Berechnungen zu erledigen, die meist parallel mit der Grafik-Pipeline ausgeführt werden können.</span><span class="sxs-lookup"><span data-stu-id="8fce8-136">The Direct3D compute pipeline is designed to handle calculations that can be done mostly in parallel with the graphics pipeline.</span></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Ressourcen](resources.md)</p></td>
-<td align="left"><p>Eine Ressource ist ein Bereich im Speicher, auf den die Direct3D-Pipeline zugreifen kann. Damit die Pipeline effizient auf den Speicher zugreifen kann, müssen für die Pipeline bereitgestellte Daten (wie z. B. Input-Geometrie, Shader-Ressourcen und Texturen) in einer Ressource gespeichert werden. Es gibt zwei Arten von Ressourcen, aus denen alle Direct3D-Ressourcen abgeleitet sind: ein Puffer oder eine Textur. Bis zu 128 Ressourcen können für jede Pipeline-Phase aktiv sein.</p></td>
+<td align="left"><p><a href="resources.md"><span data-ttu-id="8fce8-137">Ressourcen</span><span class="sxs-lookup"><span data-stu-id="8fce8-137">Resources</span></span></a></p></td>
+<td align="left"><p><span data-ttu-id="8fce8-138">Eine Ressource ist ein Bereich im Speicher, auf den die Direct3D-Pipeline zugreifen kann.</span><span class="sxs-lookup"><span data-stu-id="8fce8-138">A resource is an area in memory that can be accessed by the Direct3D pipeline.</span></span> <span data-ttu-id="8fce8-139">Damit die Pipeline effizient auf den Speicher zugreifen kann, müssen für die Pipeline bereitgestellte Daten (wie z.B. Input-Geometrie, Shader-Ressourcen und Texturen) in einer Ressource gespeichert werden.</span><span class="sxs-lookup"><span data-stu-id="8fce8-139">In order for the pipeline to access memory efficiently, data that is provided to the pipeline (such as input geometry, shader resources, and textures) must be stored in a resource.</span></span> <span data-ttu-id="8fce8-140">Es gibt zwei Arten von Ressourcen, aus denen alle Direct3D-Ressourcen abgeleitet sind: ein Puffer oder eine Textur.</span><span class="sxs-lookup"><span data-stu-id="8fce8-140">There are two types of resources from which all Direct3D resources derive: a buffer or a texture.</span></span> <span data-ttu-id="8fce8-141">Bis zu 128 Ressourcen können für jede Pipeline-Phase aktiv sein.</span><span class="sxs-lookup"><span data-stu-id="8fce8-141">Up to 128 resources can be active for each pipeline stage.</span></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Streaming-Ressourcen](streaming-resources.md)</p></td>
-<td align="left"><p><em>Streaming-Ressourcen</em> sind große logische Ressourcen, die kleine Mengen des physischen Speichers verwenden. Anstatt die gesamte große Ressource zu übergeben, werden nur kleine Teile der Ressource bei Bedarf gestreamt. Streaming-Ressourcen wurden vorher als <em>unterteilte Ressourcen</em> bezeichnet.</p></td>
+<td align="left"><p><a href="streaming-resources.md"><span data-ttu-id="8fce8-142">Streaming-Ressourcen</span><span class="sxs-lookup"><span data-stu-id="8fce8-142">Streaming resources</span></span></a></p></td>
+<td align="left"><p><span data-ttu-id="8fce8-143"><em>Streamingressourcen</em> sind große logische Ressourcen, die wenig physischen Speicher belegen..</span><span class="sxs-lookup"><span data-stu-id="8fce8-143"><em>Streaming resources</em> are large logical resources that use small amounts of physical memory.</span></span> <span data-ttu-id="8fce8-144">Anstatt die gesamte große Ressource zu übergeben, werden nur kleine Teile der Ressource bei Bedarf gestreamt.</span><span class="sxs-lookup"><span data-stu-id="8fce8-144">Instead of passing an entire large resource, small parts of the resource are streamed as needed.</span></span> <span data-ttu-id="8fce8-145">Streaming-Ressourcen wurden vorher als <em>unterteilte Ressourcen</em> bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="8fce8-145">Streaming resources were previously called <em>tiled resources</em>.</span></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Anhänge](appendix.md)</p></td>
-<td align="left"><p>Diese Abschnitte enthalten tiefergehende technische Details.</p></td>
+<td align="left"><p><a href="appendix.md"><span data-ttu-id="8fce8-146">Anhänge</span><span class="sxs-lookup"><span data-stu-id="8fce8-146">Appendices</span></span></a></p></td>
+<td align="left"><p><span data-ttu-id="8fce8-147">Diese Abschnitte enthalten tiefergehende technische Details.</span><span class="sxs-lookup"><span data-stu-id="8fce8-147">These sections provide in-depth technical details.</span></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -93,4 +94,3 @@ Beschreibt das Grafikkonzept, auf dem Microsoft Direct3D aufgebaut ist. Dieser D
  
 
  
-

@@ -1,67 +1,65 @@
 ---
 author: mcleanbyron
 ms.assetid: 3569C505-8D8C-4D85-B383-4839F13B2466
-description: "Verwenden Sie diese Methode zum Verlängern eines Windows Store-Schlüssels."
-title: "Verlängern eines Windows Store-ID-Schlüssels"
+description: Verwenden Sie diese Microsoft zum Verlängern eines Microsoft Store-Schlüssels.
+title: Verlängern eines Microsoft Store-ID-Schlüssels
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 03/16/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Windows Store-Sammlungs-API, Windows Store-Einkaufs-API, Windows Store-ID-Schlüssel, verlängern"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b740cf431607f1748a8513a02746a70560d09da2
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP, Microsoft Store-Sammlungs-API, Microsoft Store-Einkaufs-API, Microsoft Store-ID-Schlüssel, verlängern
+ms.localizationpriority: medium
+ms.openlocfilehash: 430eaaa040e731e429eba15d58f554e41349a959
+ms.sourcegitcommit: 54c2cd58fde08af889093a0c85e7297e33e6a0eb
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/19/2018
+ms.locfileid: "1664823"
 ---
-
-# <a name="renew-a-windows-store-id-key"></a>Verlängern eines Windows Store-ID-Schlüssels
-
-
-Verwenden Sie diese Methode zum Verlängern eines Windows Store-Schlüssels. Wenn Sie einen [Windows Store-ID-Schlüssel generieren](view-and-grant-products-from-a-service.md#step-4), ist dieser 90 Tage lang gültig. Nach Ablauf des Schlüssels können Sie anhand des abgelaufenen Schlüssels einen neuen Schlüssel aushandeln, indem Sie diese Methode anwenden.
-
-## <a name="prerequisites"></a>Voraussetzungen
+# <a name="renew-a-microsoft-store-id-key"></a><span data-ttu-id="f4645-104">Verlängern eines Microsoft Store-ID-Schlüssels</span><span class="sxs-lookup"><span data-stu-id="f4645-104">Renew a Microsoft Store ID key</span></span>
 
 
-Zur Verwendung dieser Methode benötigen Sie:
+<span data-ttu-id="f4645-105">Verwenden Sie diese Microsoft zum Verlängern eines Microsoft Store-Schlüssels.</span><span class="sxs-lookup"><span data-stu-id="f4645-105">Use this method to renew a Microsoft Store key.</span></span> <span data-ttu-id="f4645-106">Wenn Sie einen [Microsoft Store-ID-Schlüssel generieren](view-and-grant-products-from-a-service.md#step-4), ist dieser 90Tage lang gültig.</span><span class="sxs-lookup"><span data-stu-id="f4645-106">When you [generate a Microsoft Store ID key](view-and-grant-products-from-a-service.md#step-4), the key is valid for 90 days.</span></span> <span data-ttu-id="f4645-107">Nach Ablauf des Schlüssels können Sie anhand des abgelaufenen Schlüssels einen neuen Schlüssel aushandeln, indem Sie diese Methode anwenden.</span><span class="sxs-lookup"><span data-stu-id="f4645-107">After the key expires, you can use the expired key to renegotiate a new key by using this method.</span></span>
 
-* Ein Azure AD-Zugriffstoken, das mit dem Zielgruppen-URI `https://onestore.microsoft.com` erstellt wurde.
-* Ein abgelaufener Windows Store-ID-Schlüssel, der [aus clientseitigem Code in Ihrer App generiert wurde](view-and-grant-products-from-a-service.md#step-4).
+## <a name="prerequisites"></a><span data-ttu-id="f4645-108">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="f4645-108">Prerequisites</span></span>
 
-Weitere Informationen finden Sie unter [Verwalten von Produktansprüchen aus einem Dienst](view-and-grant-products-from-a-service.md).
 
-## <a name="request"></a>Anfordern
+<span data-ttu-id="f4645-109">Zur Verwendung dieser Methode benötigen Sie:</span><span class="sxs-lookup"><span data-stu-id="f4645-109">To use this method, you will need:</span></span>
 
-### <a name="request-syntax"></a>Anforderungssyntax
+* <span data-ttu-id="f4645-110">Ein AzureAD-Zugriffstoken, das mit dem Zielgruppen-URI `https://onestore.microsoft.com` erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="f4645-110">An Azure AD access token that has the audience URI value `https://onestore.microsoft.com`.</span></span>
+* <span data-ttu-id="f4645-111">Ein abgelaufener MicrosoftStore-ID-Schlüssel, der [aus clientseitigem Code in Ihrer App generiert wurde](view-and-grant-products-from-a-service.md#step-4).</span><span class="sxs-lookup"><span data-stu-id="f4645-111">An expired Microsoft Store ID key that was [generated from client-side code in your app](view-and-grant-products-from-a-service.md#step-4).</span></span>
 
-| Schlüsseltyp    | Methode | Anforderungs-URI                                              |
+<span data-ttu-id="f4645-112">Weitere Informationen finden Sie unter [Verwalten von Produktansprüchen aus einem Dienst](view-and-grant-products-from-a-service.md).</span><span class="sxs-lookup"><span data-stu-id="f4645-112">For more information, see [Manage product entitlements from a service](view-and-grant-products-from-a-service.md).</span></span>
+
+## <a name="request"></a><span data-ttu-id="f4645-113">Anfordern</span><span class="sxs-lookup"><span data-stu-id="f4645-113">Request</span></span>
+
+### <a name="request-syntax"></a><span data-ttu-id="f4645-114">Anforderungssyntax</span><span class="sxs-lookup"><span data-stu-id="f4645-114">Request syntax</span></span>
+
+| <span data-ttu-id="f4645-115">Schlüsseltyp</span><span class="sxs-lookup"><span data-stu-id="f4645-115">Key type</span></span>    | <span data-ttu-id="f4645-116">Methode</span><span class="sxs-lookup"><span data-stu-id="f4645-116">Method</span></span> | <span data-ttu-id="f4645-117">Anforderungs-URI</span><span class="sxs-lookup"><span data-stu-id="f4645-117">Request URI</span></span>                                              |
 |-------------|--------|----------------------------------------------------------|
-| Sammlungen | POST   | ```https://collections.mp.microsoft.com/v6.0/b2b/keys/renew``` |
-| Einkauf    | POST   | ```https://purchase.mp.microsoft.com/v6.0/b2b/keys/renew```    |
+| <span data-ttu-id="f4645-118">Sammlungen</span><span class="sxs-lookup"><span data-stu-id="f4645-118">Collections</span></span> | <span data-ttu-id="f4645-119">POST</span><span class="sxs-lookup"><span data-stu-id="f4645-119">POST</span></span>   | ```https://collections.mp.microsoft.com/v6.0/b2b/keys/renew``` |
+| <span data-ttu-id="f4645-120">Einkauf</span><span class="sxs-lookup"><span data-stu-id="f4645-120">Purchase</span></span>    | <span data-ttu-id="f4645-121">POST</span><span class="sxs-lookup"><span data-stu-id="f4645-121">POST</span></span>   | ```https://purchase.mp.microsoft.com/v6.0/b2b/keys/renew```    |
 
-<span/>
 
-### <a name="request-header"></a>Anforderungsheader
+### <a name="request-header"></a><span data-ttu-id="f4645-122">Anforderungsheader</span><span class="sxs-lookup"><span data-stu-id="f4645-122">Request header</span></span>
 
-| Header         | Typ   | Beschreibung                                                                                           |
+| <span data-ttu-id="f4645-123">Header</span><span class="sxs-lookup"><span data-stu-id="f4645-123">Header</span></span>         | <span data-ttu-id="f4645-124">Typ</span><span class="sxs-lookup"><span data-stu-id="f4645-124">Type</span></span>   | <span data-ttu-id="f4645-125">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f4645-125">Description</span></span>                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| Host           | string | Muss auf den Wert **collections.mp.microsoft.com** oder **purchase.mp.microsoft.com** festgelegt werden.           |
-| Content-Length | number | Die Länge des Anforderungstexts.                                                                       |
-| Inhaltstyp   | string | Gibt den Anforderungs- und Antworttyp an. Derzeit wird als einziger Wert **application/json** unterstützt. |
+| <span data-ttu-id="f4645-126">Host</span><span class="sxs-lookup"><span data-stu-id="f4645-126">Host</span></span>           | <span data-ttu-id="f4645-127">string</span><span class="sxs-lookup"><span data-stu-id="f4645-127">string</span></span> | <span data-ttu-id="f4645-128">Muss auf den Wert **collections.mp.microsoft.com** oder **purchase.mp.microsoft.com** festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="f4645-128">Must be set to the value **collections.mp.microsoft.com** or **purchase.mp.microsoft.com**.</span></span>           |
+| <span data-ttu-id="f4645-129">Content-Length</span><span class="sxs-lookup"><span data-stu-id="f4645-129">Content-Length</span></span> | <span data-ttu-id="f4645-130">number</span><span class="sxs-lookup"><span data-stu-id="f4645-130">number</span></span> | <span data-ttu-id="f4645-131">Die Länge des Anforderungstexts.</span><span class="sxs-lookup"><span data-stu-id="f4645-131">The length of the request body.</span></span>                                                                       |
+| <span data-ttu-id="f4645-132">Inhaltstyp</span><span class="sxs-lookup"><span data-stu-id="f4645-132">Content-Type</span></span>   | <span data-ttu-id="f4645-133">string</span><span class="sxs-lookup"><span data-stu-id="f4645-133">string</span></span> | <span data-ttu-id="f4645-134">Gibt den Anforderungs- und Antworttyp an.</span><span class="sxs-lookup"><span data-stu-id="f4645-134">Specifies the request and response type.</span></span> <span data-ttu-id="f4645-135">Derzeit wird als einziger Wert **application/json** unterstützt.</span><span class="sxs-lookup"><span data-stu-id="f4645-135">Currently, the only supported value is **application/json**.</span></span> |
 
-<span/>
 
-### <a name="request-body"></a>Anforderungstext
+### <a name="request-body"></a><span data-ttu-id="f4645-136">Anforderungstext</span><span class="sxs-lookup"><span data-stu-id="f4645-136">Request body</span></span>
 
-| Parameter     | Typ   | Beschreibung                       | Erforderlich |
+| <span data-ttu-id="f4645-137">Parameter</span><span class="sxs-lookup"><span data-stu-id="f4645-137">Parameter</span></span>     | <span data-ttu-id="f4645-138">Typ</span><span class="sxs-lookup"><span data-stu-id="f4645-138">Type</span></span>   | <span data-ttu-id="f4645-139">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f4645-139">Description</span></span>                       | <span data-ttu-id="f4645-140">Erforderlich</span><span class="sxs-lookup"><span data-stu-id="f4645-140">Required</span></span> |
 |---------------|--------|-----------------------------------|----------|
-| serviceTicket | string | Das Azure AD-Zugriffstoken.        | Ja      |
-| key           | string | Der abgelaufene Windows Store-ID-Schlüssel. | Nein       |
+| <span data-ttu-id="f4645-141">serviceTicket</span><span class="sxs-lookup"><span data-stu-id="f4645-141">serviceTicket</span></span> | <span data-ttu-id="f4645-142">string</span><span class="sxs-lookup"><span data-stu-id="f4645-142">string</span></span> | <span data-ttu-id="f4645-143">Das Azure AD-Zugriffstoken.</span><span class="sxs-lookup"><span data-stu-id="f4645-143">The Azure AD access token.</span></span>        | <span data-ttu-id="f4645-144">Ja</span><span class="sxs-lookup"><span data-stu-id="f4645-144">Yes</span></span>      |
+| <span data-ttu-id="f4645-145">key</span><span class="sxs-lookup"><span data-stu-id="f4645-145">key</span></span>           | <span data-ttu-id="f4645-146">string</span><span class="sxs-lookup"><span data-stu-id="f4645-146">string</span></span> | <span data-ttu-id="f4645-147">Der abgelaufene Microsoft Store-ID-Schlüssel.</span><span class="sxs-lookup"><span data-stu-id="f4645-147">The expired Microsoft Store ID key.</span></span> | <span data-ttu-id="f4645-148">Nein</span><span class="sxs-lookup"><span data-stu-id="f4645-148">No</span></span>       |
 
-<span/> 
 
-### <a name="request-example"></a>Anforderungsbeispiel
+### <a name="request-example"></a><span data-ttu-id="f4645-149">Anforderungsbeispiel</span><span class="sxs-lookup"><span data-stu-id="f4645-149">Request example</span></span>
 
 ```syntax
 POST https://collections.mp.microsoft.com/v6.0/b2b/keys/renew HTTP/1.1
@@ -75,18 +73,17 @@ Host: collections.mp.microsoft.com
 }
 ```
 
-## <a name="response"></a>Antwort
+## <a name="response"></a><span data-ttu-id="f4645-150">Antwort</span><span class="sxs-lookup"><span data-stu-id="f4645-150">Response</span></span>
 
 
-### <a name="response-body"></a>Antworttext
+### <a name="response-body"></a><span data-ttu-id="f4645-151">Antworttext</span><span class="sxs-lookup"><span data-stu-id="f4645-151">Response body</span></span>
 
-| Parameter | Typ   | Beschreibung                                                                                                            | Erforderlich |
+| <span data-ttu-id="f4645-152">Parameter</span><span class="sxs-lookup"><span data-stu-id="f4645-152">Parameter</span></span> | <span data-ttu-id="f4645-153">Typ</span><span class="sxs-lookup"><span data-stu-id="f4645-153">Type</span></span>   | <span data-ttu-id="f4645-154">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f4645-154">Description</span></span>                                                                                                            | <span data-ttu-id="f4645-155">Erforderlich</span><span class="sxs-lookup"><span data-stu-id="f4645-155">Required</span></span> |
 |-----------|--------|------------------------------------------------------------------------------------------------------------------------|----------|
-| key       | string | Der aktualisierte Windows Store-Schlüssel kann dann für zukünftige Aufrufe der Sammlungs- oder Einkaufs-API von Windows Store verwendet werden. | Nein       |
+| <span data-ttu-id="f4645-156">key</span><span class="sxs-lookup"><span data-stu-id="f4645-156">key</span></span>       | <span data-ttu-id="f4645-157">string</span><span class="sxs-lookup"><span data-stu-id="f4645-157">string</span></span> | <span data-ttu-id="f4645-158">Der aktualisierte Microsoft Store-Schlüssel kann dann für zukünftige Aufrufe der Sammlungs- oder Einkaufs-API von Microsoft Store verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="f4645-158">The refreshed Microsoft Store key that can be used in future calls to the Microsoft Store collections API or purchase API.</span></span> | <span data-ttu-id="f4645-159">Nein</span><span class="sxs-lookup"><span data-stu-id="f4645-159">No</span></span>       |
 
-<span/>
 
-### <a name="response-example"></a>Antwortbeispiel
+### <a name="response-example"></a><span data-ttu-id="f4645-160">Antwortbeispiel</span><span class="sxs-lookup"><span data-stu-id="f4645-160">Response example</span></span>
 
 ```syntax
 HTTP/1.1 200 OK
@@ -103,21 +100,19 @@ Date: Tue, 13 Sep 2015 07:31:12 GMT
 }
 ```
 
-## <a name="error-codes"></a>Fehlercodes
+## <a name="error-codes"></a><span data-ttu-id="f4645-161">Fehlercodes</span><span class="sxs-lookup"><span data-stu-id="f4645-161">Error codes</span></span>
 
 
-| Code | Fehler        | Interner Fehlercode           | Beschreibung                                                                                                                                                                           |
+| <span data-ttu-id="f4645-162">Code</span><span class="sxs-lookup"><span data-stu-id="f4645-162">Code</span></span> | <span data-ttu-id="f4645-163">Fehler</span><span class="sxs-lookup"><span data-stu-id="f4645-163">Error</span></span>        | <span data-ttu-id="f4645-164">Interner Fehlercode</span><span class="sxs-lookup"><span data-stu-id="f4645-164">Inner error code</span></span>           | <span data-ttu-id="f4645-165">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f4645-165">Description</span></span>                                                                                                                                                                           |
 |------|--------------|----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 401  | Nicht autorisiert | AuthenticationTokenInvalid | Das Azure AD-Zugriffstoken ist ungültig. In einigen Fällen enthalten die Details zu ServiceError weitere Informationen, z. B. wenn das Token abgelaufen ist oder der *appid*-Anspruch fehlt. |
-| 401  | Nicht autorisiert | InconsistentClientId       | Der *clientId*-Anspruch im Windows Store-ID-Schlüssel und der *appid*-Anspruch im Azure AD-Zugriffstoken stimmen nicht überein.                                                                     |
-
-<span/>
-
-## <a name="related-topics"></a>Verwandte Themen
+| <span data-ttu-id="f4645-166">401</span><span class="sxs-lookup"><span data-stu-id="f4645-166">401</span></span>  | <span data-ttu-id="f4645-167">Nicht autorisiert</span><span class="sxs-lookup"><span data-stu-id="f4645-167">Unauthorized</span></span> | <span data-ttu-id="f4645-168">AuthenticationTokenInvalid</span><span class="sxs-lookup"><span data-stu-id="f4645-168">AuthenticationTokenInvalid</span></span> | <span data-ttu-id="f4645-169">Das Azure AD-Zugriffstoken ist ungültig.</span><span class="sxs-lookup"><span data-stu-id="f4645-169">The Azure AD access token is invalid.</span></span> <span data-ttu-id="f4645-170">In einigen Fällen enthalten die Details zu ServiceError weitere Informationen, z. B. wenn das Token abgelaufen ist oder der *appid*-Anspruch fehlt.</span><span class="sxs-lookup"><span data-stu-id="f4645-170">In some cases the details of the ServiceError will contain more information, such as when the token is expired or the *appid* claim is missing.</span></span> |
+| <span data-ttu-id="f4645-171">401</span><span class="sxs-lookup"><span data-stu-id="f4645-171">401</span></span>  | <span data-ttu-id="f4645-172">Nicht autorisiert</span><span class="sxs-lookup"><span data-stu-id="f4645-172">Unauthorized</span></span> | <span data-ttu-id="f4645-173">InconsistentClientId</span><span class="sxs-lookup"><span data-stu-id="f4645-173">InconsistentClientId</span></span>       | <span data-ttu-id="f4645-174">Der *clientId*-Anspruch im Microsoft Store-ID-Schlüssel und der *appid*-Anspruch im Azure AD-Zugriffstoken stimmen nicht überein.</span><span class="sxs-lookup"><span data-stu-id="f4645-174">The *clientId* claim in the Microsoft Store ID key and the *appid* claim in the Azure AD access token do not match.</span></span>                                                                     |
 
 
-* [Verwalten von Produktansprüchen aus einem Dienst](view-and-grant-products-from-a-service.md)
-* [Produktabfrage](query-for-products.md)
-* [Melden von Verbrauchsprodukten als erfüllt](report-consumable-products-as-fulfilled.md)
-* [Gewähren kostenloser Produkte](grant-free-products.md)
+## <a name="related-topics"></a><span data-ttu-id="f4645-175">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="f4645-175">Related topics</span></span>
 
+
+* [<span data-ttu-id="f4645-176">Verwalten von Produktansprüchen aus einem Dienst</span><span class="sxs-lookup"><span data-stu-id="f4645-176">Manage product entitlements from a service</span></span>](view-and-grant-products-from-a-service.md)
+* [<span data-ttu-id="f4645-177">Produktabfrage</span><span class="sxs-lookup"><span data-stu-id="f4645-177">Query for products</span></span>](query-for-products.md)
+* [<span data-ttu-id="f4645-178">Melden von Verbrauchsprodukten als erfüllt</span><span class="sxs-lookup"><span data-stu-id="f4645-178">Report consumable products as fulfilled</span></span>](report-consumable-products-as-fulfilled.md)
+* [<span data-ttu-id="f4645-179">Gewähren kostenloser Produkte</span><span class="sxs-lookup"><span data-stu-id="f4645-179">Grant free products</span></span>](grant-free-products.md)

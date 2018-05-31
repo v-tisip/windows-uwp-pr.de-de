@@ -1,99 +1,88 @@
 ---
 author: mcleanbyron
 ms.assetid: 16D4C3B9-FC9B-46ED-9F87-1517E1B549FA
-description: "Verwenden Sie diese Methode in der Windows Store-Übermittlungs-API zum Löschen eines Add-Ons für eine App, die für Ihr Windows Dev Center-Konto registriert ist."
-title: "Löschen eines Add-Ons mit der Windows Store-Übermittlungs-API"
+description: Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API zum Löschen eines Add-Ons für eine App, die für Ihr Windows Dev Center-Konto registriert ist.
+title: Löschen eines Add-Ons
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, Windows Store-übermittlungs-API, add-on, löschen, in-app-produkt, IAP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 56ae310a13401b733eadf08f2f1992bfe0130884
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Add-on, löschen, In-App-Produkt, IAP
+ms.localizationpriority: medium
+ms.openlocfilehash: 95743f600b2f688a09f3fe96bd7e58acc93da5d2
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/17/2018
+ms.locfileid: "1661990"
 ---
+# <a name="delete-an-add-on"></a><span data-ttu-id="0e906-104">Löschen eines Add-Ons</span><span class="sxs-lookup"><span data-stu-id="0e906-104">Delete an add-on</span></span>
 
-# <a name="delete-an-add-on-using-the-windows-store-submission-api"></a>Löschen eines Add-Ons mit der Windows Store-Übermittlungs-API
+<span data-ttu-id="0e906-105">Verwenden Sie diese Methode der Microsoft Store-Übermittlungs-API, um ein Add-On (auch als In-App-Produkt oder IAP bezeichnet) für eine App zu löschen, die in Ihrem Windows Dev Center-Konto registriert wurde.</span><span class="sxs-lookup"><span data-stu-id="0e906-105">Use this method in the Microsoft Store submission API to delete an add-on (also known as in-app product or IAP) for an app that is registered to your Windows Dev Center account.</span></span>
 
+## <a name="prerequisites"></a><span data-ttu-id="0e906-106">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="0e906-106">Prerequisites</span></span>
 
+<span data-ttu-id="0e906-107">Zur Verwendung dieser Methode sind folgende Schritte erforderlich:</span><span class="sxs-lookup"><span data-stu-id="0e906-107">To use this method, you need to first do the following:</span></span>
 
+* <span data-ttu-id="0e906-108">Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](create-and-manage-submissions-using-windows-store-services.md#prerequisites) für die Microsoft Store-Übermittlungs-API.</span><span class="sxs-lookup"><span data-stu-id="0e906-108">If you have not done so already, complete all the [prerequisites](create-and-manage-submissions-using-windows-store-services.md#prerequisites) for the Microsoft Store submission API.</span></span>
+* <span data-ttu-id="0e906-109">[Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="0e906-109">[Obtain an Azure AD access token](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) to use in the request header for this method.</span></span> <span data-ttu-id="0e906-110">Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60 Minuten lang verwenden, bevor es abläuft.</span><span class="sxs-lookup"><span data-stu-id="0e906-110">After you obtain an access token, you have 60 minutes to use it before it expires.</span></span> <span data-ttu-id="0e906-111">Wenn das Token abgelaufen ist, können Sie ein neues abrufen.</span><span class="sxs-lookup"><span data-stu-id="0e906-111">After the token expires, you can obtain a new one.</span></span>
 
-Verwenden Sie diese Methode der Windows Store-Übermittlungs-API, um ein Add-On (auch als In-App-Produkt oder IAP bezeichnet) für eine App zu löschen, die in Ihrem Windows Dev Center-Konto registriert wurde.
+## <a name="request"></a><span data-ttu-id="0e906-112">Anforderung</span><span class="sxs-lookup"><span data-stu-id="0e906-112">Request</span></span>
 
-## <a name="prerequisites"></a>Voraussetzungen
+<span data-ttu-id="0e906-113">Diese Methode hat die folgende Syntax.</span><span class="sxs-lookup"><span data-stu-id="0e906-113">This method has the following syntax.</span></span> <span data-ttu-id="0e906-114">In den folgenden Abschnitten finden Sie Verwendungsbeispiele und Beschreibungen des Header und Anforderungstexts.</span><span class="sxs-lookup"><span data-stu-id="0e906-114">See the following sections for usage examples and descriptions of the header and request body.</span></span>
 
-Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
-
-* Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](create-and-manage-submissions-using-windows-store-services.md#prerequisites) für die Windows Store-Übermittlungs-API.
-* [Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken erhalten haben, haben Sie 60 Minuten Zeit, das Token zu verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
-
->**Hinweis**&nbsp;&nbsp;Diese Methode kann nur für Windows Dev Center-Konten verwendet werden, die eine Berechtigung zur Verwendung der Windows Store-Übermittlungs-API erhalten haben. Diese Berechtigung ist nicht für alle Konten aktiviert.
-
-## <a name="request"></a>Anforderung
-
-Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie Verwendungsbeispiele und Beschreibungen des Header und Anforderungstexts.
-
-| Methode | Anforderungs-URI                                                      |
+| <span data-ttu-id="0e906-115">Methode</span><span class="sxs-lookup"><span data-stu-id="0e906-115">Method</span></span> | <span data-ttu-id="0e906-116">Anforderungs-URI</span><span class="sxs-lookup"><span data-stu-id="0e906-116">Request URI</span></span>                                                      |
 |--------|------------------------------------------------------------------|
-| DELETE    | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{inAppProductId}``` |
+| <span data-ttu-id="0e906-117">DELETE</span><span class="sxs-lookup"><span data-stu-id="0e906-117">DELETE</span></span>    | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{inAppProductId}``` |
 
-<span/>
- 
 
-### <a name="request-header"></a>Anforderungsheader
+### <a name="request-header"></a><span data-ttu-id="0e906-118">Anforderungsheader</span><span class="sxs-lookup"><span data-stu-id="0e906-118">Request header</span></span>
 
-| Header        | Typ   | Beschreibung                                                                 |
+| <span data-ttu-id="0e906-119">Header</span><span class="sxs-lookup"><span data-stu-id="0e906-119">Header</span></span>        | <span data-ttu-id="0e906-120">Typ</span><span class="sxs-lookup"><span data-stu-id="0e906-120">Type</span></span>   | <span data-ttu-id="0e906-121">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="0e906-121">Description</span></span>                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorisierung | String | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;. |
+| <span data-ttu-id="0e906-122">Autorisierung</span><span class="sxs-lookup"><span data-stu-id="0e906-122">Authorization</span></span> | <span data-ttu-id="0e906-123">String</span><span class="sxs-lookup"><span data-stu-id="0e906-123">string</span></span> | <span data-ttu-id="0e906-124">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="0e906-124">Required.</span></span> <span data-ttu-id="0e906-125">Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;.</span><span class="sxs-lookup"><span data-stu-id="0e906-125">The Azure AD access token in the form **Bearer** &lt;*token*&gt;.</span></span> |
 
-<span/>
 
-### <a name="request-parameters"></a>Anforderungsparameter
+### <a name="request-parameters"></a><span data-ttu-id="0e906-126">Anforderungsparameter</span><span class="sxs-lookup"><span data-stu-id="0e906-126">Request parameters</span></span>
 
-| Name        | Typ   | Beschreibung                                                                 |
+| <span data-ttu-id="0e906-127">Name</span><span class="sxs-lookup"><span data-stu-id="0e906-127">Name</span></span>        | <span data-ttu-id="0e906-128">Typ</span><span class="sxs-lookup"><span data-stu-id="0e906-128">Type</span></span>   | <span data-ttu-id="0e906-129">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="0e906-129">Description</span></span>                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| id | String | Erforderlich. Die Store-ID des zu löschenden Add-Ons. Die Store-ID ist im Dev Center-Dashboard verfügbar.  |
+| <span data-ttu-id="0e906-130">id</span><span class="sxs-lookup"><span data-stu-id="0e906-130">id</span></span> | <span data-ttu-id="0e906-131">String</span><span class="sxs-lookup"><span data-stu-id="0e906-131">string</span></span> | <span data-ttu-id="0e906-132">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="0e906-132">Required.</span></span> <span data-ttu-id="0e906-133">Die Store-ID des zu löschenden Add-Ons.</span><span class="sxs-lookup"><span data-stu-id="0e906-133">The Store ID of the add-on to delete.</span></span> <span data-ttu-id="0e906-134">Die Store-ID ist im Dev Center-Dashboard verfügbar.</span><span class="sxs-lookup"><span data-stu-id="0e906-134">The Store ID is available on the Dev Center dashboard.</span></span>  |
 
-<span/>
 
-### <a name="request-body"></a>Anforderungstext
+### <a name="request-body"></a><span data-ttu-id="0e906-135">Anforderungstext</span><span class="sxs-lookup"><span data-stu-id="0e906-135">Request body</span></span>
 
-Stellen Sie keinen Anforderungstext für diese Methode bereit.
+<span data-ttu-id="0e906-136">Stellen Sie keinen Anforderungstext für diese Methode bereit.</span><span class="sxs-lookup"><span data-stu-id="0e906-136">Do not provide a request body for this method.</span></span>
 
-<span/>
 
-### <a name="request-example"></a>Anforderungsbeispiel
+### <a name="request-example"></a><span data-ttu-id="0e906-137">Anforderungsbeispiel</span><span class="sxs-lookup"><span data-stu-id="0e906-137">Request example</span></span>
 
-Im folgenden Beispiel wird das Löschen eines Add-Ons veranschaulicht.
+<span data-ttu-id="0e906-138">Im folgenden Beispiel wird das Löschen eines Add-Ons veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="0e906-138">The following example demonstrates how to delete an add-on.</span></span>
 
 ```
 DELETE https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/9NBLGGH4TNMP HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-## <a name="response"></a>Antwort
+## <a name="response"></a><span data-ttu-id="0e906-139">Antwort</span><span class="sxs-lookup"><span data-stu-id="0e906-139">Response</span></span>
 
-Wenn dies erfolgreich war, gibt die Methode einen leeren Antworttext zurück.
+<span data-ttu-id="0e906-140">Wenn dies erfolgreich war, gibt die Methode einen leeren Antworttext zurück.</span><span class="sxs-lookup"><span data-stu-id="0e906-140">If successful, this method returns an empty response body.</span></span>
 
-## <a name="error-codes"></a>Fehlercodes
+## <a name="error-codes"></a><span data-ttu-id="0e906-141">Fehlercodes</span><span class="sxs-lookup"><span data-stu-id="0e906-141">Error codes</span></span>
 
-Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die Antwort einen der folgenden HTTP-Fehlercodes.
+<span data-ttu-id="0e906-142">Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die Antwort einen der folgenden HTTP-Fehlercodes.</span><span class="sxs-lookup"><span data-stu-id="0e906-142">If the request cannot be successfully completed, the response will contain one of the following HTTP error codes.</span></span>
 
-| Fehlercode |  Beschreibung                                                                                                                                                                           |
+| <span data-ttu-id="0e906-143">Fehlercode</span><span class="sxs-lookup"><span data-stu-id="0e906-143">Error code</span></span> |  <span data-ttu-id="0e906-144">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="0e906-144">Description</span></span>                                                                                                                                                                           |
 |--------|------------------|
-| 400  | Die Anforderung ist ungültig. |
-| 404  | Das angegebene Add-On konnte nicht gefunden werden.  |
-| 409  | Das angegebene Add-On wurde gefunden, konnte jedoch nicht im aktuellen Zustand gelöscht werden. Oder das Add-On verwendet ein Dev Center-Dashboard-Feature, das [derzeit nicht von der Windows Store-Übermittlungs-API unterstützt wird](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| <span data-ttu-id="0e906-145">400</span><span class="sxs-lookup"><span data-stu-id="0e906-145">400</span></span>  | <span data-ttu-id="0e906-146">Die Anforderung ist ungültig.</span><span class="sxs-lookup"><span data-stu-id="0e906-146">The request is invalid.</span></span> |
+| <span data-ttu-id="0e906-147">404</span><span class="sxs-lookup"><span data-stu-id="0e906-147">404</span></span>  | <span data-ttu-id="0e906-148">Das angegebene Add-On konnte nicht gefunden werden.</span><span class="sxs-lookup"><span data-stu-id="0e906-148">The specified add-on could not be found.</span></span>  |
+| <span data-ttu-id="0e906-149">409</span><span class="sxs-lookup"><span data-stu-id="0e906-149">409</span></span>  | <span data-ttu-id="0e906-150">Das angegebene Add-On wurde gefunden, konnte jedoch nicht im aktuellen Zustand gelöscht werden. Oder das Add-On verwendet ein Dev Center-Dashboard-Feature, das [derzeit nicht von der Microsoft Store-Übermittlungs-API unterstützt wird](create-and-manage-submissions-using-windows-store-services.md#not_supported).</span><span class="sxs-lookup"><span data-stu-id="0e906-150">The specified add-on was found but it could not be deleted in its current state, or the add-on uses a Dev Center dashboard feature that is [currently not supported by the Microsoft Store submission API](create-and-manage-submissions-using-windows-store-services.md#not_supported).</span></span> |   
 
-<span/>
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a><span data-ttu-id="0e906-151">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="0e906-151">Related topics</span></span>
 
-* [Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten](create-and-manage-submissions-using-windows-store-services.md)
-* [Abrufen aller Add-Ons](get-all-add-ons.md)
-* [Abrufen eines Add-Ons](get-an-add-on.md)
-* [Erstellen eines Add-Ons](create-an-add-on.md)
-
+* [<span data-ttu-id="0e906-152">Erstellen und Verwalten von Übermittlungen mit Microsoft Store-Diensten</span><span class="sxs-lookup"><span data-stu-id="0e906-152">Create and manage submissions using Microsoft Store services</span></span>](create-and-manage-submissions-using-windows-store-services.md)
+* [<span data-ttu-id="0e906-153">Abrufen aller Add-Ons</span><span class="sxs-lookup"><span data-stu-id="0e906-153">Get all add-ons</span></span>](get-all-add-ons.md)
+* [<span data-ttu-id="0e906-154">Abrufen eines Add-Ons</span><span class="sxs-lookup"><span data-stu-id="0e906-154">Get an add-on</span></span>](get-an-add-on.md)
+* [<span data-ttu-id="0e906-155">Erstellen eines Add-Ons</span><span class="sxs-lookup"><span data-stu-id="0e906-155">Create an add-on</span></span>](create-an-add-on.md)

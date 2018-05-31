@@ -1,40 +1,43 @@
 ---
 author: mcleanbyron
 ms.assetid: E322DFFE-8EEC-499D-87BC-EDA5CFC27551
-description: "Jede Windows Store-Transaktion, die zu einem erfolgreichen Produktkauf führt, kann optional einen Transaktionsbeleg zurückgeben."
-title: "Überprüfen von Produktkäufen anhand von Belegen"
+description: Jede Microsoft Store-Transaktion, die zu einem erfolgreichen Produktkauf führt, kann optional einen Transaktionsbeleg zurückgeben.
+title: Überprüfen von Produktkäufen anhand von Belegen
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 04/16/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, In-App-Einkäufe, IAPs, Belege, Windows.ApplicationModel.Store"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 2ada9038f9bd355bb4ab9f81967ebb2d47701cd8
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP, In-App-Einkäufe, IAPs, Belege, Windows.ApplicationModel.Store
+ms.localizationpriority: medium
+ms.openlocfilehash: c0437d63153f4a765474cf893a8773cd6992ea35
+ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/30/2018
+ms.locfileid: "1816235"
 ---
+# <a name="use-receipts-to-verify-product-purchases"></a><span data-ttu-id="a1bb4-104">Überprüfen von Produktkäufen anhand von Belegen</span><span class="sxs-lookup"><span data-stu-id="a1bb4-104">Use receipts to verify product purchases</span></span>
 
-# <a name="use-receipts-to-verify-product-purchases"></a>Überprüfen von Produktkäufen anhand von Belegen
+<span data-ttu-id="a1bb4-105">Jede Microsoft Store-Transaktion, die zu einem erfolgreichen Produktkauf führt, kann optional einen Transaktionsbeleg zurückgeben.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-105">Each Microsoft Store transaction that results in a successful product purchase can optionally return a transaction receipt.</span></span> <span data-ttu-id="a1bb4-106">Dieser Beleg enthalten Informationen zum gelisteten Produkt und zu den Kosten für den Kunden.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-106">This receipt provides information about the listed product and monetary cost to the customer.</span></span>
 
+<span data-ttu-id="a1bb4-107">Der Zugriff auf diese Informationen unterstützt Szenarien, in denen Ihre App überprüfen muss, ob ein Benutzer Ihre App oder ein Add-On (auch als In-App-Produkt oder IAP bezeichnet) im MicrosoftStore gekauft hat.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-107">Having access to this information supports scenarios where your app needs to verify that a user purchased your app, or has made add-on (also called in-app product or IAP) purchases from the Microsoft Store.</span></span> <span data-ttu-id="a1bb4-108">Das kann zum Beispiel bei einem Spiel der Fall sein, für das Inhalte heruntergeladen werden können.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-108">For example, imagine a game that offers downloaded content.</span></span> <span data-ttu-id="a1bb4-109">Wenn der Benutzer, der die Spielinhalte gekauft hat, das Spiel auf einem anderen Gerät spielen möchte, müssen Sie überprüfen, ob der Benutzer die Inhalte bereits besitzt.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-109">If the user who purchased the game content wants to play it on a different device, you need to verify that the user already owns the content.</span></span> <span data-ttu-id="a1bb4-110">Gehen Sie dazu wie folgt vor.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-110">Here's how.</span></span>
 
->**Hinweis**&nbsp;&nbsp;Dieser Artikel beschreibt, wie Sie Mitglieder des [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)-Namespace verwenden, um einen Beleg für einen In-App-Kauf abzurufen und zu überprüfen. Wenn Sie den alternativen [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace für In-App-Käufe verwenden (eingeführt in Windows 10, Version 1607), müssen Sie beachten, dass dieser Namespace keine API zum Abrufen von Kaufbelegen für In-App-Einkäufe enthält. Sie können jedoch eine REST-Methode in der Windows Store-Sammlungs-API verwenden, um Daten für eine Kauftransaktion abzurufen. Weitere Informationen finden Sie unter [Belege für In-App-Käufe](in-app-purchases-and-trials.md#receipts).
+> [!IMPORTANT]
+> <span data-ttu-id="a1bb4-111">Dieser Artikel beschreibt, wie Sie Mitglieder des [Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store)-Namespace verwenden, um einen Beleg für einen In-App-Kauf abzurufen und zu überprüfen.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-111">This article shows how to use members of the [Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store) namespace to get and validate a receipt for an in-app purchase.</span></span> <span data-ttu-id="a1bb4-112">Wenn Sie den [Windows.Services.Store](https://docs.microsoft.com/uwp/api/Windows.Services.Store)-Namespace für In-App-Käufe verwenden (eingeführt in Windows 10, Version 1607, und für Projekte verfügbar, die die **Windows 10 Anniversary Edition (10.0; Build 14393)** oder eine spätere Freigabe in Visual Studio verwenden), müssen Sie beachten, dass dieser Namespace keine API zum Abrufen von Kaufbelegen für In-App-Käufen enthält.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-112">If you are using the [Windows.Services.Store](https://docs.microsoft.com/uwp/api/Windows.Services.Store) namespace for in-app purchases (introduced in Windows 10, version 1607, and available to projects that target **Windows 10 Anniversary Edition (10.0; Build 14393)** or a later release in Visual Studio), this namespace does not provide an API for getting purchase receipts for in-app purchases.</span></span> <span data-ttu-id="a1bb4-113">Sie können jedoch eine REST-Methode in der Microsoft Store-Sammlungs-API verwenden, um Daten für eine Kauftransaktion abzurufen.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-113">However, you can use a REST method in the Microsoft Store collection API to get data for a purchase transaction.</span></span> <span data-ttu-id="a1bb4-114">Weitere Informationen finden Sie unter [Belege für In-App-Käufe](in-app-purchases-and-trials.md#receipts).</span><span class="sxs-lookup"><span data-stu-id="a1bb4-114">For more information, see [Receipts for in-app purchases](in-app-purchases-and-trials.md#receipts).</span></span>
 
-
-Jede Windows Store-Transaktion, die zu einem erfolgreichen Produktkauf führt, kann optional einen Transaktionsbeleg zurückgeben. Dieser Beleg enthalten Informationen zum gelisteten Produkt und zu den Kosten für den Kunden.
-
-Der Zugriff auf diese Informationen unterstützt Szenarien, in denen Ihre App überprüfen muss, ob ein Benutzer Ihre App oder ein Add-On (auch als In-App-Produkt oder IAP bezeichnet) im Windows Store gekauft hat. Das kann zum Beispiel bei einem Spiel der Fall sein, für das Inhalte heruntergeladen werden können. Wenn der Benutzer, der die Spielinhalte gekauft hat, das Spiel auf einem anderen Gerät spielen möchte, müssen Sie überprüfen, ob der Benutzer die Inhalte bereits besitzt. Gehen Sie dazu wie folgt vor:
-
-## <a name="requesting-a-receipt"></a>Anfordern eines Belegs
+## <a name="requesting-a-receipt"></a><span data-ttu-id="a1bb4-115">Anfordern eines Belegs</span><span class="sxs-lookup"><span data-stu-id="a1bb4-115">Requesting a receipt</span></span>
 
 
-Der **Windows.ApplicationModel.Store**-Namespace unterstützt verschiedene Möglichkeiten für das Abrufen eines Belegs:
+<span data-ttu-id="a1bb4-116">Der **Windows.ApplicationModel.Store**-Namespace unterstützt verschiedene Möglichkeiten für das Abrufen eines Belegs:</span><span class="sxs-lookup"><span data-stu-id="a1bb4-116">The **Windows.ApplicationModel.Store** namespace supports several ways to get a receipt:</span></span>
 
-* Wenn Sie mithilfe von [CurrentApp.RequestAppPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/hh967813) oder [CurrentApp.RequestProductPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/hh779780.aspx) (oder eine andere Überladung dieser Methode) einen Kauf durchführen, enthält der Rückgabewert den Beleg.
-* Sie können die Methode [CurrentApp.GetAppReceiptAsync](https://msdn.microsoft.com/library/windows/apps/hh967811) aufrufen, um die aktuellen Beleginformationen für Ihre App und alle Add-Ons in Ihrer App abzurufen.
+* <span data-ttu-id="a1bb4-117">Wenn Sie mithilfe von [CurrentApp.RequestAppPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestapppurchaseasync) oder [CurrentApp.RequestProductPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync) (oder eine andere Überladung dieser Methode) einen Kauf durchführen, enthält der Rückgabewert den Beleg.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-117">When you make a purchase by using [CurrentApp.RequestAppPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestapppurchaseasync) or [CurrentApp.RequestProductPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync) (or one of the other overloads of this method), the return value contains the receipt.</span></span>
+* <span data-ttu-id="a1bb4-118">Sie können die Methode [CurrentApp.GetAppReceiptAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.getappreceiptasync) aufrufen, um die aktuellen Beleginformationen für Ihre App und alle Add-Ons in Ihrer App abzurufen.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-118">You can call the [CurrentApp.GetAppReceiptAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.getappreceiptasync) method to retrieve the current receipt info for your app and any add-ons in your app.</span></span>
 
-Ein App-Beleg sieht ungefähr wie folgt aus.
+<span data-ttu-id="a1bb4-119">Ein App-Beleg sieht ungefähr wie folgt aus.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-119">An app receipt looks something like this.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="a1bb4-120">Dieses Beispiel ist formatiert, damit das XML lesbar ist.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-120">This example is formatted to help make the XML readable.</span></span> <span data-ttu-id="a1bb4-121">Echte App-Belege enthalten keine Leerzeichen zwischen Elementen.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-121">Real app receipts do not include whitespace between elements.</span></span>
 
 > [!div class="tabbedCodeSnippets"]
 ```xml
@@ -58,7 +61,10 @@ Ein App-Beleg sieht ungefähr wie folgt aus.
 </Receipt>
 ```
 
-Ein Produktbeleg sieht wie folgt aus.
+<span data-ttu-id="a1bb4-122">Ein Produktbeleg sieht wie folgt aus.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-122">A product receipt looks like this.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="a1bb4-123">Dieses Beispiel ist formatiert, damit das XML lesbar ist.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-123">This example is formatted to help make the XML readable.</span></span> <span data-ttu-id="a1bb4-124">Echte Produkt-Belege enthalten keine Leerzeichen zwischen Elementen.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-124">Real product receipts do not include whitespace between elements.</span></span>
 
 > [!div class="tabbedCodeSnippets"]
 ```xml
@@ -81,71 +87,73 @@ Ein Produktbeleg sieht wie folgt aus.
 </Receipt>
 ```
 
-Sie können beide Belegbeispiele verwenden, um den Überprüfungscode zu testen. Weitere Informationen zum Inhalt des Belegs finden Sie unter [Beschreibungen von Elementen und Attributen](#receipt-descriptions).
+<span data-ttu-id="a1bb4-125">Sie können beide Belegbeispiele verwenden, um den Überprüfungscode zu testen.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-125">You can use either of these receipt examples to test your validation code.</span></span> <span data-ttu-id="a1bb4-126">Weitere Informationen zum Inhalt des Belegs finden Sie unter [Beschreibungen von Elementen und Attributen](#receipt-descriptions).</span><span class="sxs-lookup"><span data-stu-id="a1bb4-126">For more information about the contents of the receipt, see the [element and attribute descriptions](#receipt-descriptions).</span></span>
 
-## <a name="validating-a-receipt"></a>Überprüfen eines Belegs
+## <a name="validating-a-receipt"></a><span data-ttu-id="a1bb4-127">Überprüfen eines Belegs</span><span class="sxs-lookup"><span data-stu-id="a1bb4-127">Validating a receipt</span></span>
 
-Um die Authentizität eines Belegs zu überprüfen, muss das Back-End-System (ein Webdienst oder ähnlich) die Belegsignatur mithilfe des öffentlichen Zertifikats überprüfen. Um dieses Zertifikat abzurufen, verwenden Sie die URL ```https://go.microsoft.com/fwlink/p/?linkid=246509&cid=CertificateId```, wobei ```CertificateId``` der **CertificateId**-Wert im Beleg ist.
+<span data-ttu-id="a1bb4-128">Um die Authentizität eines Belegs zu überprüfen, muss das Back-End-System (ein Webdienst oder ähnlich) die Belegsignatur mithilfe des öffentlichen Zertifikats überprüfen.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-128">To validate a receipt's authenticity, you need your back-end system (a web service or something similar) to check the receipt's signature using the public certificate.</span></span> <span data-ttu-id="a1bb4-129">Um dieses Zertifikat abzurufen, verwenden Sie die URL ```https://go.microsoft.com/fwlink/p/?linkid=246509&cid=CertificateId```, wobei ```CertificateId``` der **CertificateId**-Wert im Beleg ist.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-129">To get this certificate, use the URL ```https://go.microsoft.com/fwlink/p/?linkid=246509&cid=CertificateId```, where ```CertificateId``` is the **CertificateId** value in the receipt.</span></span>
 
-Im Folgenden sehen Sie ein Beispiel für diesen Überprüfungsvorgang. Dieser Code wird in einer .NET Framework-Konsolenanwendung ausgeführt, die einen Verweis auf die **System.Security**-Assembly enthält.
+<span data-ttu-id="a1bb4-130">Im Folgenden sehen Sie ein Beispiel für diesen Überprüfungsvorgang.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-130">Here's an example of that validation process.</span></span> <span data-ttu-id="a1bb4-131">Dieser Code wird in einer .NET Framework-Konsolenanwendung ausgeführt, die einen Verweis auf die **System.Security**-Assembly enthält.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-131">This code runs in a .NET Framework console application that includes a reference to the **System.Security** assembly.</span></span>
 
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[ReceiptVerificationSample](./code/ReceiptVerificationSample/cs/Program.cs#ReceiptVerificationSample)]
 
 <span id="receipt-descriptions" />
-## <a name="element-and-attribute-descriptions-for-a-receipt"></a>Beschreibungen von Elementen und Attributen eines Belegs
 
-In diesem Abschnitt werden die Elemente und Attribute in einen Beleg beschrieben.
+## <a name="element-and-attribute-descriptions-for-a-receipt"></a><span data-ttu-id="a1bb4-132">Beschreibungen von Elementen und Attributen eines Belegs</span><span class="sxs-lookup"><span data-stu-id="a1bb4-132">Element and attribute descriptions for a receipt</span></span>
 
-### <a name="receipt-element"></a>Element „Receipt“
+<span data-ttu-id="a1bb4-133">In diesem Abschnitt werden die Elemente und Attribute in einen Beleg beschrieben.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-133">This section describes the elements and attributes in a receipt.</span></span>
 
-Das Stammelement dieser Datei ist das Element **Receipt**, das Informationen zu App- und In-App-Käufen enthält. Dieses Element enthält die folgenden untergeordneten Elemente.
+### <a name="receipt-element"></a><span data-ttu-id="a1bb4-134">Element „Receipt“</span><span class="sxs-lookup"><span data-stu-id="a1bb4-134">Receipt element</span></span>
 
-|  Element  |  Erforderlich  |  Menge  |  Beschreibung   |
+<span data-ttu-id="a1bb4-135">Das Stammelement dieser Datei ist das Element **Receipt**, das Informationen zu App- und In-App-Käufen enthält.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-135">The root element of this file is the **Receipt** element, which contains information about app and in-app purchases.</span></span> <span data-ttu-id="a1bb4-136">Dieses Element enthält die folgenden untergeordneten Elemente.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-136">This element contains the following child elements.</span></span>
+
+|  <span data-ttu-id="a1bb4-137">Element</span><span class="sxs-lookup"><span data-stu-id="a1bb4-137">Element</span></span>  |  <span data-ttu-id="a1bb4-138">Erforderlich</span><span class="sxs-lookup"><span data-stu-id="a1bb4-138">Required</span></span>  |  <span data-ttu-id="a1bb4-139">Menge</span><span class="sxs-lookup"><span data-stu-id="a1bb4-139">Quantity</span></span>  |  <span data-ttu-id="a1bb4-140">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="a1bb4-140">Description</span></span>   |
 |-------------|------------|--------|--------|
-|  [AppReceipt](#appreceipt)  |    Nein        |  0 oder 1  |  Enthält Kaufinformationen für die aktuelle App.            |
-|  [ProductReceipt](#productreceipt)  |     Nein       |  0 oder mehr    |   Enthält Informationen zu einem In-App-Kauf für die aktuelle App.     |
-|  Signature  |      Ja      |  1   |   Dieses Element ist ein standardmäßiges [XML-DSIG-Konstrukt](http://go.microsoft.com/fwlink/p/?linkid=251093). Es enthält ein **SignatureValue**-Element, das die Signatur enthält, die Sie für die Überprüfung des Belegs verwenden können, und ein **SignedInfo**-Element.      |
+|  [<span data-ttu-id="a1bb4-141">AppReceipt</span><span class="sxs-lookup"><span data-stu-id="a1bb4-141">AppReceipt</span></span>](#appreceipt)  |    <span data-ttu-id="a1bb4-142">Nein</span><span class="sxs-lookup"><span data-stu-id="a1bb4-142">No</span></span>        |  <span data-ttu-id="a1bb4-143">0 oder 1</span><span class="sxs-lookup"><span data-stu-id="a1bb4-143">0 or 1</span></span>  |  <span data-ttu-id="a1bb4-144">Enthält Kaufinformationen für die aktuelle App.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-144">Contains purchase information for the current app.</span></span>            |
+|  [<span data-ttu-id="a1bb4-145">ProductReceipt</span><span class="sxs-lookup"><span data-stu-id="a1bb4-145">ProductReceipt</span></span>](#productreceipt)  |     <span data-ttu-id="a1bb4-146">Nein</span><span class="sxs-lookup"><span data-stu-id="a1bb4-146">No</span></span>       |  <span data-ttu-id="a1bb4-147">0 oder mehr</span><span class="sxs-lookup"><span data-stu-id="a1bb4-147">0 or more</span></span>    |   <span data-ttu-id="a1bb4-148">Enthält Informationen zu einem In-App-Kauf für die aktuelle App.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-148">Contains information about an in-app purchase for the current app.</span></span>     |
+|  <span data-ttu-id="a1bb4-149">Signature</span><span class="sxs-lookup"><span data-stu-id="a1bb4-149">Signature</span></span>  |      <span data-ttu-id="a1bb4-150">Ja</span><span class="sxs-lookup"><span data-stu-id="a1bb4-150">Yes</span></span>      |  <span data-ttu-id="a1bb4-151">1</span><span class="sxs-lookup"><span data-stu-id="a1bb4-151">1</span></span>   |   <span data-ttu-id="a1bb4-152">Dieses Element ist ein standardmäßiges [XML-DSIG-Konstrukt](http://go.microsoft.com/fwlink/p/?linkid=251093).</span><span class="sxs-lookup"><span data-stu-id="a1bb4-152">This element is a standard [XML-DSIG construct](http://go.microsoft.com/fwlink/p/?linkid=251093).</span></span> <span data-ttu-id="a1bb4-153">Es enthält ein **SignatureValue**-Element, das die Signatur enthält, die Sie für die Überprüfung des Belegs verwenden können, und ein **SignedInfo**-Element.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-153">It contains a **SignatureValue** element, which contains the signature you can use to validate the receipt, and a **SignedInfo** element.</span></span>      |
 
-**Receipt** hat die folgenden Attribute.
+<span data-ttu-id="a1bb4-154">**Receipt** hat die folgenden Attribute.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-154">**Receipt** has the following attributes.</span></span>
 
-|  Attribut  |  Beschreibung   |
+|  <span data-ttu-id="a1bb4-155">Attribut</span><span class="sxs-lookup"><span data-stu-id="a1bb4-155">Attribute</span></span>  |  <span data-ttu-id="a1bb4-156">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="a1bb4-156">Description</span></span>   |
 |-------------|-------------------|
-|  **Version**  |    Die Versionsnummer des Belegs.            |
-|  **CertificateId**  |     Der Fingerabdruck des Zertifikats, der für die Signierung des Belegs verwendet wurde.          |
-|  **ReceiptDate**  |    Das Datum, an dem der Beleg signiert und heruntergeladen wurde.           |  
-|  **ReceiptDeviceId**  |   Identifiziert das Gerät, das für die Anforderung dieses Belegs verwendet wurde.         |  |
+|  **<span data-ttu-id="a1bb4-157">Version</span><span class="sxs-lookup"><span data-stu-id="a1bb4-157">Version</span></span>**  |    <span data-ttu-id="a1bb4-158">Die Versionsnummer des Belegs.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-158">The version number of the receipt.</span></span>            |
+|  **<span data-ttu-id="a1bb4-159">CertificateId</span><span class="sxs-lookup"><span data-stu-id="a1bb4-159">CertificateId</span></span>**  |     <span data-ttu-id="a1bb4-160">Der Fingerabdruck des Zertifikats, der für die Signierung des Belegs verwendet wurde.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-160">The certificate thumbprint used to sign the receipt.</span></span>          |
+|  **<span data-ttu-id="a1bb4-161">ReceiptDate</span><span class="sxs-lookup"><span data-stu-id="a1bb4-161">ReceiptDate</span></span>**  |    <span data-ttu-id="a1bb4-162">Das Datum, an dem der Beleg signiert und heruntergeladen wurde.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-162">Date the receipt was signed and downloaded.</span></span>           |  
+|  **<span data-ttu-id="a1bb4-163">ReceiptDeviceId</span><span class="sxs-lookup"><span data-stu-id="a1bb4-163">ReceiptDeviceId</span></span>**  |   <span data-ttu-id="a1bb4-164">Identifiziert das Gerät, das für die Anforderung dieses Belegs verwendet wurde.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-164">Identifies the device used to request this receipt.</span></span>         |  |
 
 <span id="appreceipt" />
-### <a name="appreceipt-element"></a>Element „AppReceipt“
 
-Dieses Element enthält Kaufinformationen für die aktuelle App.
+### <a name="appreceipt-element"></a><span data-ttu-id="a1bb4-165">Element „AppReceipt“</span><span class="sxs-lookup"><span data-stu-id="a1bb4-165">AppReceipt element</span></span>
 
-**AppReceipt** hat die folgenden Attribute.
+<span data-ttu-id="a1bb4-166">Dieses Element enthält Kaufinformationen für die aktuelle App.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-166">This element contains purchase information for the current app.</span></span>
 
-|  Attribut  |  Beschreibung   |
+<span data-ttu-id="a1bb4-167">**AppReceipt** hat die folgenden Attribute.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-167">**AppReceipt** has the following attributes.</span></span>
+
+|  <span data-ttu-id="a1bb4-168">Attribut</span><span class="sxs-lookup"><span data-stu-id="a1bb4-168">Attribute</span></span>  |  <span data-ttu-id="a1bb4-169">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="a1bb4-169">Description</span></span>   |
 |-------------|-------------------|
-|  **Id**  |    Identifiziert den Kauf.           |
-|  **AppId**  |     Der Paketfamilienname-Wert, den das Betriebssystem für die App verwendet.           |
-|  **LicenseType**  |    **Full**, wenn der Benutzer die Vollversion der App gekauft hat. **Trial**, wenn der Benutzer eine Testversion der App heruntergeladen hat.           |  
-|  **PurchaseDate**  |    Das Datum, an dem die App gekauft wurde.          |  |
+|  **<span data-ttu-id="a1bb4-170">Id</span><span class="sxs-lookup"><span data-stu-id="a1bb4-170">Id</span></span>**  |    <span data-ttu-id="a1bb4-171">Identifiziert den Kauf.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-171">Identifies the purchase.</span></span>           |
+|  **<span data-ttu-id="a1bb4-172">AppId</span><span class="sxs-lookup"><span data-stu-id="a1bb4-172">AppId</span></span>**  |     <span data-ttu-id="a1bb4-173">Der Paketfamilienname-Wert, den das Betriebssystem für die App verwendet.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-173">The Package Family Name value that the OS uses for the app.</span></span>           |
+|  **<span data-ttu-id="a1bb4-174">LicenseType</span><span class="sxs-lookup"><span data-stu-id="a1bb4-174">LicenseType</span></span>**  |    <span data-ttu-id="a1bb4-175">**Full**, wenn der Benutzer die Vollversion der App gekauft hat.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-175">**Full**, if the user purchased the full version of the app.</span></span> <span data-ttu-id="a1bb4-176">**Trial**, wenn der Benutzer eine Testversion der App heruntergeladen hat.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-176">**Trial**, if the user downloaded a trial version of the app.</span></span>           |  
+|  **<span data-ttu-id="a1bb4-177">PurchaseDate</span><span class="sxs-lookup"><span data-stu-id="a1bb4-177">PurchaseDate</span></span>**  |    <span data-ttu-id="a1bb4-178">Das Datum, an dem die App gekauft wurde.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-178">Date when the app was acquired.</span></span>          |  |
 
 <span id="productreceipt" />
-### <a name="productreceipt-element"></a>Element „ProductReceipt“
 
-Dieses Element enthält Informationen zu einem In-App-Kauf für die aktuelle App.
+### <a name="productreceipt-element"></a><span data-ttu-id="a1bb4-179">Element „ProductReceipt“</span><span class="sxs-lookup"><span data-stu-id="a1bb4-179">ProductReceipt element</span></span>
 
-**ProductReceipt** hat die folgenden Attribute.
+<span data-ttu-id="a1bb4-180">Dieses Element enthält Informationen zu einem In-App-Kauf für die aktuelle App.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-180">This element contains information about an in-app purchase for the current app.</span></span>
 
-|  Attribut  |  Beschreibung   |
+<span data-ttu-id="a1bb4-181">**ProductReceipt** hat die folgenden Attribute.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-181">**ProductReceipt** has the following attributes.</span></span>
+
+|  <span data-ttu-id="a1bb4-182">Attribut</span><span class="sxs-lookup"><span data-stu-id="a1bb4-182">Attribute</span></span>  |  <span data-ttu-id="a1bb4-183">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="a1bb4-183">Description</span></span>   |
 |-------------|-------------------|
-|  **Id**  |    Identifiziert den Kauf.           |
-|  **AppId**  |     Identifiziert die App, über die der Benutzer den Kauf durchgeführt hat.           |
-|  **ProductId**  |     Identifiziert das gekaufte Produkt.           |
-|  **ProductType**  |    Legt den Produkttyp fest. Zurzeit wird nur der Wert **Durable** unterstützt.          |  
-|  **PurchaseDate**  |    Das Datum, an dem der Kauf erfolgte.          |  |
+|  **<span data-ttu-id="a1bb4-184">Id</span><span class="sxs-lookup"><span data-stu-id="a1bb4-184">Id</span></span>**  |    <span data-ttu-id="a1bb4-185">Identifiziert den Kauf.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-185">Identifies the purchase.</span></span>           |
+|  **<span data-ttu-id="a1bb4-186">AppId</span><span class="sxs-lookup"><span data-stu-id="a1bb4-186">AppId</span></span>**  |     <span data-ttu-id="a1bb4-187">Identifiziert die App, über die der Benutzer den Kauf durchgeführt hat.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-187">Identifies the app through which the user made the purchase.</span></span>           |
+|  **<span data-ttu-id="a1bb4-188">ProductId</span><span class="sxs-lookup"><span data-stu-id="a1bb4-188">ProductId</span></span>**  |     <span data-ttu-id="a1bb4-189">Identifiziert das gekaufte Produkt.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-189">Identifies the product purchased.</span></span>           |
+|  **<span data-ttu-id="a1bb4-190">ProductType</span><span class="sxs-lookup"><span data-stu-id="a1bb4-190">ProductType</span></span>**  |    <span data-ttu-id="a1bb4-191">Legt den Produkttyp fest.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-191">Determines the product type.</span></span> <span data-ttu-id="a1bb4-192">Zurzeit wird nur der Wert **Durable** unterstützt.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-192">Currently only supports a value of **Durable**.</span></span>          |  
+|  **<span data-ttu-id="a1bb4-193">PurchaseDate</span><span class="sxs-lookup"><span data-stu-id="a1bb4-193">PurchaseDate</span></span>**  |    <span data-ttu-id="a1bb4-194">Das Datum, an dem der Kauf erfolgte.</span><span class="sxs-lookup"><span data-stu-id="a1bb4-194">Date when the purchase occurred.</span></span>          |  |
 
  
 
  
-

@@ -1,0 +1,111 @@
+---
+author: mcleanbyron
+Description: Learn about several ways you can programmatically enable customers to rate and review your app.
+title: Anfordern von Bewertungen und Prüfungen für Ihre App
+ms.author: mcleans
+ms.date: 03/22/2018
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows10, UWP, Bewertungen, Rezensionen
+ms.localizationpriority: medium
+ms.openlocfilehash: 8f897eeaee835c1c1bcd96e9bd843ed8f6a85612
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1690376"
+---
+# <a name="request-ratings-and-reviews-for-your-app"></a><span data-ttu-id="d8a9b-103">Anfordern von Bewertungen und Prüfungen für Ihre App</span><span class="sxs-lookup"><span data-stu-id="d8a9b-103">Request ratings and reviews for your app</span></span>
+
+<span data-ttu-id="d8a9b-104">Sie können Code zu Ihrer Universellen Windows-Plattform (UWP)-App hinzufügen, um Ihre Kunden programmgesteuert aufzufordern, Ihre App zu bewerten oder zu rezensieren.</span><span class="sxs-lookup"><span data-stu-id="d8a9b-104">You can add code to your Universal Windows Platform (UWP) app to programmatically prompt your customers to rate or review your app.</span></span> <span data-ttu-id="d8a9b-105">Hierfür stehen Ihnen mehrere Möglichkeiten zur Verfügung:</span><span class="sxs-lookup"><span data-stu-id="d8a9b-105">There are several ways you can do this:</span></span>
+* <span data-ttu-id="d8a9b-106">Sie können ein Bewertungs- und Rezensionsdialogfeld direkt im Kontext Ihrer App anzeigen.</span><span class="sxs-lookup"><span data-stu-id="d8a9b-106">You can show a rating and review dialog directly in the context of your app.</span></span>
+* <span data-ttu-id="d8a9b-107">Sie können programmgesteuert die Bewertungs- und Rezensionsseite für Ihre App im Microsoft Store öffnen.</span><span class="sxs-lookup"><span data-stu-id="d8a9b-107">You can programmatically open the rating and review page for your app in the Microsoft Store.</span></span>
+
+<span data-ttu-id="d8a9b-108">Wenn Sie Ihre Bewertungs- und Rezensionsdaten analysieren möchten, können Sie die Daten im Windows Dev Center-Dashboard einsehen oder die Microsoft Store-Analyse-API zum programmgesteuerten Abrufen dieser Daten verwenden.</span><span class="sxs-lookup"><span data-stu-id="d8a9b-108">When you are ready to analyze your ratings and reviews data, you can view the data in the Windows Dev Center dashboard or use the Microsoft Store analytics API to retrieve this data programmatically.</span></span>
+
+## <a name="show-a-rating-and-review-dialog-in-your-app"></a><span data-ttu-id="d8a9b-109">Ein Bewertungs- und Rezensionsdialogfeld in Ihrer App anzeigen</span><span class="sxs-lookup"><span data-stu-id="d8a9b-109">Show a rating and review dialog in your app</span></span>
+
+<span data-ttu-id="d8a9b-110">Wenn Sie programmgesteuert ein Dialogfeld von Ihrer App aus anzeigen möchten, das Ihre Kunden auffordert, die App zu bewerten und eine Rezension zu senden, rufen Sie die [SendRequestAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storerequesthelper.sendrequestasync)-Methode im [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store)-Namespace auf.</span><span class="sxs-lookup"><span data-stu-id="d8a9b-110">To programmatically show a dialog from your app that asks your customer to rate your app and submit a review, call the [SendRequestAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storerequesthelper.sendrequestasync) method in the [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) namespace.</span></span> <span data-ttu-id="d8a9b-111">Übergeben Sie die ganze Zahl 16 an den *requestKind*-Parameter und eine leere Zeichenfolge an den *parametersAsJson*-Parameter wie in diesem Codebeispiel dargestellt.</span><span class="sxs-lookup"><span data-stu-id="d8a9b-111">Pass the integer 16 to the *requestKind* parameter and an empty string to the *parametersAsJson* parameter as shown in this code example.</span></span> <span data-ttu-id="d8a9b-112">Dieses Beispiel erfordert die [Json.NET](http://www.newtonsoft.com/json)-Bibliothek von Newtonsoft sowie die Verwendung von using-Anweisungen für die **Windows.Services.Store**-, **System.Threading.Tasks**- und **Newtonsoft.Json.Linq **-Namespaces.</span><span class="sxs-lookup"><span data-stu-id="d8a9b-112">This example requires the [Json.NET](http://www.newtonsoft.com/json) library from Newtonsoft, and it requires using statements for the **Windows.Services.Store**, **System.Threading.Tasks**, and **Newtonsoft.Json.Linq** namespaces.</span></span>
+
+> [!IMPORTANT]
+> <span data-ttu-id="d8a9b-113">Die Anforderung zum Anzeigen des Bewertungs- und Rezensionsdialogfelds muss im UI-Thread in Ihrer App aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="d8a9b-113">The request to show the rating and review dialog must be called on the UI thread in your app.</span></span>
+
+```csharp
+public async Task<bool> ShowRatingReviewDialog()
+{
+    StoreSendRequestResult result = await StoreRequestHelper.SendRequestAsync(
+        StoreContext.GetDefault(), 16, String.Empty);
+
+    if (result.ExtendedError == null)
+    {
+        JObject jsonObject = JObject.Parse(result.Response);
+        if (jsonObject.SelectToken("status").ToString() == "success")
+        {
+            // The customer rated or reviewed the app.
+            return true;
+        }
+    }
+
+    // There was an error with the request, or the customer chose not to
+    // rate or review the app.
+    return false;
+}
+```
+
+<span data-ttu-id="d8a9b-114">Die **SendRequestAsync**-Methode verwendet ein einfaches ganzzahlig-basiertes Anforderungssystem und JSON-basierte-Datenparameter, um verschiedene Store-Vorgänge den Apps zur Verfügung zu stellen.</span><span class="sxs-lookup"><span data-stu-id="d8a9b-114">The **SendRequestAsync** method uses a simple integer-based request system and JSON-based data parameters to expose miscellaneous Store operations to apps.</span></span> <span data-ttu-id="d8a9b-115">Wenn Sie die ganze Zahl 16 an den *requestKind*-Parameter übergeben, stellen Sie eine Anforderung zum Anzeigen des Bewertungs- und Rezensionsdialogfeldes aus und senden die zugehörigen Daten an den Store.</span><span class="sxs-lookup"><span data-stu-id="d8a9b-115">When you pass the integer 16 to the *requestKind* parameter, you issue a request to show the rating and review dialog and send the related data to the Store.</span></span> <span data-ttu-id="d8a9b-116">Diese Methode wurde in Windows10, Version 1607, eingeführt und kann nur in Projekten für die **Windows 10 Anniversary Edition (10.0; Build 14393)** oder einer neueren Version in Visual Studio verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="d8a9b-116">This method was introduced in Windows 10, version 1607, and it can only be used in projects that target **Windows 10 Anniversary Edition (10.0; Build 14393)** or a later release in Visual Studio.</span></span> <span data-ttu-id="d8a9b-117">Eine allgemeine Übersicht über diese Methode finden Sie unter [Anforderungen an den Store senden](send-requests-to-the-store.md).</span><span class="sxs-lookup"><span data-stu-id="d8a9b-117">For a general overview of this method, see [Send requests to the Store](send-requests-to-the-store.md).</span></span>
+
+### <a name="response-data-for-the-rating-and-review-request"></a><span data-ttu-id="d8a9b-118">Antwortdaten für die Bewertungs- und Rezensionsanforderung</span><span class="sxs-lookup"><span data-stu-id="d8a9b-118">Response data for the rating and review request</span></span>
+
+<span data-ttu-id="d8a9b-119">Nach Übermittlung der Anforderung zum Anzeigen eines Bewertungs- und Rezensionsdialogfeldes gibt die [Response](https://docs.microsoft.com/uwp/api/windows.services.store.storesendrequestresult.Response)-Eigenschaft des [StoreSendRequestResult](https://docs.microsoft.com/uwp/api/windows.services.store.storesendrequestresult)-Rückgabewerts eine Zeichenfolge im JSON-Format zurück, die anzeigt, ob die Anforderung erfolgreich war.</span><span class="sxs-lookup"><span data-stu-id="d8a9b-119">After you submit the request to display the rating and review dialog, the [Response](https://docs.microsoft.com/uwp/api/windows.services.store.storesendrequestresult.Response) property of the [StoreSendRequestResult](https://docs.microsoft.com/uwp/api/windows.services.store.storesendrequestresult) return value contains a JSON-formatted string that indicates whether the request was successful.</span></span>
+
+<span data-ttu-id="d8a9b-120">Das folgende Beispiel veranschaulicht den Rückgabewert für diese Anforderung, nachdem der Kunde erfolgreich eine Bewertung oder Rezension übermittelt hat.</span><span class="sxs-lookup"><span data-stu-id="d8a9b-120">The following example demonstrates the return value for this request after the customer successfully submits a rating or review.</span></span>
+
+```json
+{ 
+  "status": "success", 
+  "data": {
+    "updated": false
+  },
+  "errorDetails": "Success"
+}
+```
+
+<span data-ttu-id="d8a9b-121">Das folgende Beispiel veranschaulicht den Rückgabewert für diese Anforderung, nachdem der Kunde gewählt hat, keine Bewertung oder Rezension zu übermitteln.</span><span class="sxs-lookup"><span data-stu-id="d8a9b-121">The following example demonstrates the return value for this request after the customer chooses not to submit a rating or review.</span></span>
+
+```json
+{ 
+  "status": "aborted", 
+  "errorDetails": "Navigation was unsuccessful"
+}
+```
+
+<span data-ttu-id="d8a9b-122">In der folgenden Tabelle werden die Felder in der Zeichenfolge im JSON-Format erläutert.</span><span class="sxs-lookup"><span data-stu-id="d8a9b-122">The following table describes the fields in the JSON-formatted data string.</span></span>
+
+|  <span data-ttu-id="d8a9b-123">Feld</span><span class="sxs-lookup"><span data-stu-id="d8a9b-123">Field</span></span>  |  <span data-ttu-id="d8a9b-124">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d8a9b-124">Description</span></span>  |
+|----------------------|---------------|
+|  *<span data-ttu-id="d8a9b-125">status</span><span class="sxs-lookup"><span data-stu-id="d8a9b-125">status</span></span>*                   |  <span data-ttu-id="d8a9b-126">Eine Zeichenfolge, die angibt, ob der Kunde eine Bewertung oder Rezension erfolgreich gesendet hat.</span><span class="sxs-lookup"><span data-stu-id="d8a9b-126">A string that indicates whether the customer successfully submitted a rating or review.</span></span> <span data-ttu-id="d8a9b-127">Die unterstützten Werte sind **success** und **aborted**.</span><span class="sxs-lookup"><span data-stu-id="d8a9b-127">The supported values are **success** and **aborted**.</span></span>   |
+|  *<span data-ttu-id="d8a9b-128">data</span><span class="sxs-lookup"><span data-stu-id="d8a9b-128">data</span></span>*                   |  <span data-ttu-id="d8a9b-129">Ein Objekt, das nur einen booleschen Wert mit dem Namen *aktualisiert* enthält.</span><span class="sxs-lookup"><span data-stu-id="d8a9b-129">An object that contains a single Boolean value named *updated*.</span></span> <span data-ttu-id="d8a9b-130">Dieser Wert gibt an, ob der Kunde eine vorhandene Bewertung oder Rezension aktualisiert hat.</span><span class="sxs-lookup"><span data-stu-id="d8a9b-130">This value indicates whether the customer updated an existing rating or review.</span></span> <span data-ttu-id="d8a9b-131">Das *data*-Objekt ist nur in den Erfolgsantworten enthalten.</span><span class="sxs-lookup"><span data-stu-id="d8a9b-131">The *data* object is included in success responses only.</span></span>   |
+|  *<span data-ttu-id="d8a9b-132">errorDetails</span><span class="sxs-lookup"><span data-stu-id="d8a9b-132">errorDetails</span></span>*                   |  <span data-ttu-id="d8a9b-133">Eine Zeichenfolge, die Fehlerdetails für die Anforderung enthält.</span><span class="sxs-lookup"><span data-stu-id="d8a9b-133">A string that contains the error details for the request.</span></span> |
+
+## <a name="launch-the-rating-and-review-page-for-your-app-in-the-store"></a><span data-ttu-id="d8a9b-134">Die Bewertungs- und Rezensionsseite für Ihre App im Store starten</span><span class="sxs-lookup"><span data-stu-id="d8a9b-134">Launch the rating and review page for your app in the Store</span></span>
+
+<span data-ttu-id="d8a9b-135">Wenn Sie programmgesteuert eine Bewertungs- und Rezensionsseite für Ihre App im Store öffnen möchten, können Sie die [LaunchUriAsync](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync)-Methode mit dem ```ms-windows-store://review```-URI-Schema verwenden, wie in diesem Codebeispiel gezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="d8a9b-135">If you want to programmatically open the rating and review page for your app in the Store, you can use the [LaunchUriAsync](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync) method with the ```ms-windows-store://review``` URI scheme as demonstrated in this code example.</span></span>
+
+```csharp
+bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-store://review/?ProductId=9WZDNCRFHVJL"));
+```
+
+<span data-ttu-id="d8a9b-136">Weitere Informationen finden Sie unter [Die Microsoft Store App starten](../launch-resume/launch-store-app.md).</span><span class="sxs-lookup"><span data-stu-id="d8a9b-136">For more information, see [Launch the Microsoft Store app](../launch-resume/launch-store-app.md).</span></span>
+
+## <a name="analyze-your-ratings-and-reviews-data"></a><span data-ttu-id="d8a9b-137">Ihre Bewertungs- und Rezensionsdaten analysieren</span><span class="sxs-lookup"><span data-stu-id="d8a9b-137">Analyze your ratings and reviews data</span></span>
+
+<span data-ttu-id="d8a9b-138">Sie haben mehrere Optionen, um die Bewertungs- und Rezensionsdaten von Ihren Kunden zu analysieren:</span><span class="sxs-lookup"><span data-stu-id="d8a9b-138">To analyze the ratings and reviews data from your customers, you have several options:</span></span>
+* <span data-ttu-id="d8a9b-139">Sie können den [Rezensionsbericht](../publish/reviews-report.md) im Windows Dev Center-Dashboard verwenden, um die Bewertungen und Prüfungen von Ihren Kunden zu sehen.</span><span class="sxs-lookup"><span data-stu-id="d8a9b-139">You can use the [Reviews](../publish/reviews-report.md) report in the Windows Dev Center dashboard to see the ratings and reviews from your customers.</span></span> <span data-ttu-id="d8a9b-140">Sie können diesen Bericht auch herunterladen, um ihn offline zu sehen.</span><span class="sxs-lookup"><span data-stu-id="d8a9b-140">You can also download this report to view it offline.</span></span>
+* <span data-ttu-id="d8a9b-141">Sie können die [Abrufen von App-Bewertungen](get-app-ratings.md)- und [Abrufen von App-Rezensionen](get-app-reviews.md)-Methoden in der Store-Analyse-API zum programmgesteuerten Abrufen der Bewertungen und Prüfungen von Ihren Kunden im JSON-Format verwenden.</span><span class="sxs-lookup"><span data-stu-id="d8a9b-141">You can use the [Get app ratings](get-app-ratings.md) and [Get app reviews](get-app-reviews.md) methods in the Store analytics API to programmatically retrieve the ratings and reviews from your customers in JSON format.</span></span>
+
+## <a name="related-topics"></a><span data-ttu-id="d8a9b-142">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="d8a9b-142">Related topics</span></span>
+
+* [<span data-ttu-id="d8a9b-143">Senden von Anfragen an den Store</span><span class="sxs-lookup"><span data-stu-id="d8a9b-143">Send requests to the Store</span></span>](send-requests-to-the-store.md)
+* [<span data-ttu-id="d8a9b-144">Starten der Microsoft Store-App</span><span class="sxs-lookup"><span data-stu-id="d8a9b-144">Launch the Microsoft Store app</span></span>](../launch-resume/launch-store-app.md)
+* [<span data-ttu-id="d8a9b-145">Rezensionsbericht</span><span class="sxs-lookup"><span data-stu-id="d8a9b-145">Reviews report</span></span>](../publish/reviews-report.md)

@@ -1,83 +1,84 @@
 ---
 author: mcleanbyron
 ms.assetid: 038903d6-efab-4da6-96b5-046c7431e6e7
-description: Verwenden Sie diese Methode in der Windows Store-Rezensions-API zum Senden von Antworten auf Rezensionen Ihrer App.
-title: Senden von Antworten auf App-Rezensionen
+description: Verwenden Sie diese Methode in der Microsoft Store-Rezensions-API zum Senden von Antworten auf Rezensionen Ihrer App.
+title: Antworten auf Rezensionen übermitteln
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Store-Dienste, Windows Store-Rezensions-API, Add-On-Käufe"
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 1531059831b4c20d11661eb87fceda7b8dcb7f02
-ms.lasthandoff: 02/08/2017
-
+keywords: Windows 10, UWP, Store-Dienste, Microsoft Store-Rezensions-API, Add-On-Käufe
+ms.localizationpriority: medium
+ms.openlocfilehash: 6a757743bec947a5e8b0edf8c7a0d02e7c00942d
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/17/2018
+ms.locfileid: "1662600"
 ---
+# <a name="submit-responses-to-reviews"></a><span data-ttu-id="43537-104">Antworten auf Rezensionen übermitteln</span><span class="sxs-lookup"><span data-stu-id="43537-104">Submit responses to reviews</span></span>
 
-# <a name="submit-responses-to-app-reviews"></a>Senden von Antworten auf App-Rezensionen
 
+<span data-ttu-id="43537-105">Verwenden Sie diese Methode in der Microsoft Store-Rezensions-API, um Antworten auf Rezensionen Ihrer App zu senden.</span><span class="sxs-lookup"><span data-stu-id="43537-105">Use this method in the Microsoft Store reviews API to programmatically respond to reviews of your app.</span></span> <span data-ttu-id="43537-106">Wenn Sie diese Methode aufrufen, müssen Sie die IDs der Rezensionen angeben, auf die Sie antworten möchten.</span><span class="sxs-lookup"><span data-stu-id="43537-106">When you call this method, you must specify the IDs of the reviews you want to respond to.</span></span> <span data-ttu-id="43537-107">Rezensions-IDs finden Sie in den Antwortdaten der Methode [Abrufen von App-Rezensionen](get-app-reviews.md) der Microsoft Store-Analyse-API und unter [Offlinedownload](../publish/download-analytic-reports.md) im Bericht [Rezensionen](../publish/reviews-report.md).</span><span class="sxs-lookup"><span data-stu-id="43537-107">Review IDs are available in the response data of the [get app reviews](get-app-reviews.md) method in the Microsoft Store analytics API and in the [offline download](../publish/download-analytic-reports.md) of the [Reviews report](../publish/reviews-report.md).</span></span>
 
-Verwenden Sie diese Methode in der Windows Store-Rezensions-API, um Antworten auf Rezensionen Ihrer App zu senden. Wenn Sie diese Methode aufrufen, müssen Sie die IDs der Rezensionen angeben, auf die Sie antworten möchten. Rezensions-IDs sind in den Antwortdaten der Methode [Abrufen von App-Rezensionen](get-app-reviews.md) in der Windows Store-Analyse-API und im [Offline-Download](../publish/download-analytic-reports.md) des [Berichts „Rezensionen“](../publish/reviews-report.md) verfügbar.
+<span data-ttu-id="43537-108">Beim Übermitteln von Rezensionen können Kunden festlegen, dass sie keine Antworten auf ihre Rezension erhalten möchten.</span><span class="sxs-lookup"><span data-stu-id="43537-108">When a customer submits a review, they can choose not to receive responses to their review.</span></span> <span data-ttu-id="43537-109">Wenn Sie versuchen, auf eine Rezension zu antworten, für die der Kunde ausgewählt hat, keine Antworten zu erhalten, wird im Antworttext dieser Methode angegeben, dass der Antwortversuch fehlgeschlagen ist.</span><span class="sxs-lookup"><span data-stu-id="43537-109">If you try to respond to a review for which the customer chose not to receive responses, the response body of this method will indicate that the response attempt was unsuccessful.</span></span> <span data-ttu-id="43537-110">Vor dem Aufrufen dieser Methode können Sie mit der Methode [Antwortinformationen für App-Rezensionen abrufen](get-response-info-for-app-reviews.md) ermitteln, ob Sie auf eine bestimmte Rezension antworten dürfen.</span><span class="sxs-lookup"><span data-stu-id="43537-110">Before calling this method, you can optionally determine whether you are allowed to respond to a given review by using the [get response info for app reviews](get-response-info-for-app-reviews.md) method.</span></span>
 
-Beim Übermitteln von Rezensionen können Kunden festlegen, dass sie keine Antworten auf ihre Rezension erhalten möchten. Wenn Sie versuchen, auf eine Rezension zu antworten, für die der Kunde ausgewählt hat, keine Antworten zu erhalten, wird im Antworttext dieser Methode angegeben, dass der Antwortversuch fehlgeschlagen ist. Vor dem Aufrufen dieser Methode können Sie mit der Methode [Antwortinformationen für App-Rezensionen abrufen](get-response-info-for-app-reviews.md) ermitteln, ob Sie auf eine bestimmte Rezension antworten dürfen.
+> [!NOTE]
+> <span data-ttu-id="43537-111">Zusätzlich zur Verwendung dieser Methode, um programmgesteuert auf Rezensionen zu antworten, können Sie auf Rezensionen auch [im Windows Dev Center-Dashboard](../publish/respond-to-customer-reviews.md) antworten.</span><span class="sxs-lookup"><span data-stu-id="43537-111">In addition to using this method to programmatically respond to reviews, you can alternatively respond to reviews [using the Windows Dev Center dashboard](../publish/respond-to-customer-reviews.md).</span></span>
 
->**Hinweis**&nbsp;&nbsp;Zusätzlich zur Verwendung dieser Methode, um programmgesteuert auf Rezensionen zu antworten, können Sie auf Rezensionen auch [im Windows Dev Center-Dashboard](../publish/respond-to-customer-reviews.md) antworten.
+## <a name="prerequisites"></a><span data-ttu-id="43537-112">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="43537-112">Prerequisites</span></span>
 
-## <a name="prerequisites"></a>Voraussetzungen
+<span data-ttu-id="43537-113">Um diese Methode zu verwenden, sind die folgenden Schritte erforderlich:</span><span class="sxs-lookup"><span data-stu-id="43537-113">To use this method, you need to first do the following:</span></span>
 
-Um diese Methode zu verwenden, sind die folgenden Schritte erforderlich:
+* <span data-ttu-id="43537-114">Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](respond-to-reviews-using-windows-store-services.md#prerequisites) für die Microsoft Store-Rezensions-API.</span><span class="sxs-lookup"><span data-stu-id="43537-114">If you have not done so already, complete all the [prerequisites](respond-to-reviews-using-windows-store-services.md#prerequisites) for the Microsoft Store reviews API.</span></span>
+* <span data-ttu-id="43537-115">[Rufen Sie ein AzureAD-Zugriffstoken ab](respond-to-reviews-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="43537-115">[Obtain an Azure AD access token](respond-to-reviews-using-windows-store-services.md#obtain-an-azure-ad-access-token) to use in the request header for this method.</span></span> <span data-ttu-id="43537-116">Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60 Minuten lang verwenden, bevor es abläuft.</span><span class="sxs-lookup"><span data-stu-id="43537-116">After you obtain an access token, you have 60 minutes to use it before it expires.</span></span> <span data-ttu-id="43537-117">Wenn das Token abgelaufen ist, können Sie ein neues abrufen.</span><span class="sxs-lookup"><span data-stu-id="43537-117">After the token expires, you can obtain a new one.</span></span>
+* <span data-ttu-id="43537-118">Rufen Sie die IDs der Rezensionen ab, auf die Sie antworten möchten.</span><span class="sxs-lookup"><span data-stu-id="43537-118">Get the IDs of the reviews you want to respond to.</span></span> <span data-ttu-id="43537-119">Rezensions-IDs finden Sie in den Antwortdaten der Methode [Abrufen von App-Rezensionen](get-app-reviews.md) der Microsoft Store-Analyse-API und unter [Offlinedownload](../publish/download-analytic-reports.md) im Bericht [Rezensionen](../publish/reviews-report.md).</span><span class="sxs-lookup"><span data-stu-id="43537-119">Review IDs are available in the response data of the [get app reviews](get-app-reviews.md) method in the Microsoft Store analytics API and in the [offline download](../publish/download-analytic-reports.md) of the [Reviews report](../publish/reviews-report.md).</span></span>
 
-* Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](respond-to-reviews-using-windows-store-services.md#prerequisites) für die Windows Store-Rezensions-API.
-* [Rufen Sie ein Azure AD-Zugriffstoken ab](respond-to-reviews-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nach Erhalt eines Zugriffstokens können Sie es 60 Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
-* Rufen Sie die IDs der Rezensionen ab, auf die Sie antworten möchten. Rezensions-IDs sind in den Antwortdaten der Methode [Abrufen von App-Rezensionen](get-app-reviews.md) in der Windows Store-Analyse-API und im [Offline-Download](../publish/download-analytic-reports.md) des [Berichts „Rezensionen“](../publish/reviews-report.md) verfügbar.
+## <a name="request"></a><span data-ttu-id="43537-120">Anforderung</span><span class="sxs-lookup"><span data-stu-id="43537-120">Request</span></span>
 
-## <a name="request"></a>Anforderung
+### <a name="request-syntax"></a><span data-ttu-id="43537-121">Anforderungssyntax</span><span class="sxs-lookup"><span data-stu-id="43537-121">Request syntax</span></span>
 
-### <a name="request-syntax"></a>Anforderungssyntax
-
-| Methode | Anforderungs-URI                                                      |
+| <span data-ttu-id="43537-122">Methode</span><span class="sxs-lookup"><span data-stu-id="43537-122">Method</span></span> | <span data-ttu-id="43537-123">Anforderungs-URI</span><span class="sxs-lookup"><span data-stu-id="43537-123">Request URI</span></span>                                                      |
 |--------|------------------------------------------------------------------|
-| POST    | ```https://manage.devcenter.microsoft.com/v1.0/my/reviews/responses``` |
+| <span data-ttu-id="43537-124">POST</span><span class="sxs-lookup"><span data-stu-id="43537-124">POST</span></span>    | ```https://manage.devcenter.microsoft.com/v1.0/my/reviews/responses``` |
 
-<span/> 
 
-### <a name="request-header"></a>Anforderungsheader
+### <a name="request-header"></a><span data-ttu-id="43537-125">Anforderungsheader</span><span class="sxs-lookup"><span data-stu-id="43537-125">Request header</span></span>
 
-| Header        | Typ   | Beschreibung                                                                 |
+| <span data-ttu-id="43537-126">Header</span><span class="sxs-lookup"><span data-stu-id="43537-126">Header</span></span>        | <span data-ttu-id="43537-127">Typ</span><span class="sxs-lookup"><span data-stu-id="43537-127">Type</span></span>   | <span data-ttu-id="43537-128">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="43537-128">Description</span></span>                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorisierung | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Inhaber** &lt;*Token*&gt;. |
+| <span data-ttu-id="43537-129">Autorisierung</span><span class="sxs-lookup"><span data-stu-id="43537-129">Authorization</span></span> | <span data-ttu-id="43537-130">String</span><span class="sxs-lookup"><span data-stu-id="43537-130">string</span></span> | <span data-ttu-id="43537-131">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="43537-131">Required.</span></span> <span data-ttu-id="43537-132">Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;.</span><span class="sxs-lookup"><span data-stu-id="43537-132">The Azure AD access token in the form **Bearer** &lt;*token*&gt;.</span></span> |
 
-<span/> 
 
-### <a name="request-parameters"></a>Anforderungsparameter
+### <a name="request-parameters"></a><span data-ttu-id="43537-133">Anforderungsparameter</span><span class="sxs-lookup"><span data-stu-id="43537-133">Request parameters</span></span>
 
-Diese Methode hat keine Anforderungsparameter.
+<span data-ttu-id="43537-134">Diese Methode hat keine Anforderungsparameter.</span><span class="sxs-lookup"><span data-stu-id="43537-134">This method has no request parameters.</span></span>
 
-<span/> 
 
-### <a name="request-body"></a>Anforderungstext
+### <a name="request-body"></a><span data-ttu-id="43537-135">Anforderungstext</span><span class="sxs-lookup"><span data-stu-id="43537-135">Request body</span></span>
 
-Der Anforderungstext hat folgende Werte:
+<span data-ttu-id="43537-136">Der Anforderungstext hat folgende Werte:</span><span class="sxs-lookup"><span data-stu-id="43537-136">The request body has the following values.</span></span>
 
-| Wert        | Typ   | Beschreibung                                                                 |
+| <span data-ttu-id="43537-137">Wert</span><span class="sxs-lookup"><span data-stu-id="43537-137">Value</span></span>        | <span data-ttu-id="43537-138">Typ</span><span class="sxs-lookup"><span data-stu-id="43537-138">Type</span></span>   | <span data-ttu-id="43537-139">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="43537-139">Description</span></span>                                                                 |
 |---------------|--------|-----------------------------------------|
-| Responses | Array | Ein Array von Objekten, die die Antwortdaten enthalten, die Sie senden möchten. Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie in der folgenden Tabelle. |
+| <span data-ttu-id="43537-140">Responses</span><span class="sxs-lookup"><span data-stu-id="43537-140">Responses</span></span> | <span data-ttu-id="43537-141">Array</span><span class="sxs-lookup"><span data-stu-id="43537-141">array</span></span> | <span data-ttu-id="43537-142">Ein Array von Objekten, die die Antwortdaten enthalten, die Sie senden möchten.</span><span class="sxs-lookup"><span data-stu-id="43537-142">An array of objects that contain the response data you want to submit.</span></span> <span data-ttu-id="43537-143">Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie in der folgenden Tabelle.</span><span class="sxs-lookup"><span data-stu-id="43537-143">For more information about the data in each object, see the following table.</span></span> |
 
-Jedes Objekt im *Responses*-Array enthält die folgenden Werte:
 
-| Wert        | Typ   | Beschreibung           |  Erforderlich  |
+<span data-ttu-id="43537-144">Jedes Objekt im *Responses*-Array enthält die folgenden Werte:</span><span class="sxs-lookup"><span data-stu-id="43537-144">Each object in the *Responses* array contains the following values.</span></span>
+
+| <span data-ttu-id="43537-145">Wert</span><span class="sxs-lookup"><span data-stu-id="43537-145">Value</span></span>        | <span data-ttu-id="43537-146">Typ</span><span class="sxs-lookup"><span data-stu-id="43537-146">Type</span></span>   | <span data-ttu-id="43537-147">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="43537-147">Description</span></span>           |  <span data-ttu-id="43537-148">Erforderlich</span><span class="sxs-lookup"><span data-stu-id="43537-148">Required</span></span>  |
 |---------------|--------|-----------------------------|-----|
-| ApplicationId | String |  Die Store-ID der App, auf deren Rezension Sie antworten möchten. Die Store-ID ist auf der [Seite mit der App-Identität](../publish/view-app-identity-details.md) des Dev Center-Dashboards verfügbar. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8.   |  Ja  |
-| ReviewId | String |  Die ID der Rezension, auf die Sie antworten möchten (dies ist eine GUID). Rezensions-IDs sind in den Antwortdaten der Methode [Abrufen von App-Rezensionen](get-app-reviews.md) in der Windows Store-Analyse-API und im [Offline-Download](../publish/download-analytic-reports.md) des [Berichts „Rezensionen“](../publish/reviews-report.md) verfügbar.   |  Ja  |
-| ResponseText | String | Die Antwort, die Sie senden möchten. Ihre Antwort muss [diesen Richtlinien](../publish/respond-to-customer-reviews.md#guidelines-for-responses) entsprechen.   |  Ja  |
-| SupportEmail | String | Die Support-E-Mail-Adresse Ihrer App, über die der Kunde Sie direkt kontaktieren kann. Dies muss eine gültige E-Mail-Adresse sein.     |  Ja  |
-| IsPublic | Boolean |  Der Wert **true** gibt an, dass Ihre Antwort im Store-Eintrag Ihrer App direkt unter der Rezension des Kunden angezeigt wird und für alle Kunden sichtbar ist. Der Wert **false** gibt an, dass Ihre Antwort dem Kunden per E-Mail gesendet wird und nicht im Store-Eintrag Ihrer App für andere Kunden sichtbar angezeigt wird.     |  Ja  |
+| <span data-ttu-id="43537-149">ApplicationId</span><span class="sxs-lookup"><span data-stu-id="43537-149">ApplicationId</span></span> | <span data-ttu-id="43537-150">String</span><span class="sxs-lookup"><span data-stu-id="43537-150">string</span></span> |  <span data-ttu-id="43537-151">Die Store-ID der App, auf deren Rezension Sie antworten möchten.</span><span class="sxs-lookup"><span data-stu-id="43537-151">The Store ID of the app with the review you want to respond to.</span></span> <span data-ttu-id="43537-152">Die Store-ID ist auf der [Seite mit der App-Identität](../publish/view-app-identity-details.md) des DevCenter-Dashboards verfügbar.</span><span class="sxs-lookup"><span data-stu-id="43537-152">The Store ID is available on the [App identity page](../publish/view-app-identity-details.md) of the Dev Center dashboard.</span></span> <span data-ttu-id="43537-153">Beispiel für eine Store-ID: 9WZDNCRFJ3Q8.</span><span class="sxs-lookup"><span data-stu-id="43537-153">An example Store ID is 9WZDNCRFJ3Q8.</span></span>   |  <span data-ttu-id="43537-154">Ja</span><span class="sxs-lookup"><span data-stu-id="43537-154">Yes</span></span>  |
+| <span data-ttu-id="43537-155">ReviewId</span><span class="sxs-lookup"><span data-stu-id="43537-155">ReviewId</span></span> | <span data-ttu-id="43537-156">String</span><span class="sxs-lookup"><span data-stu-id="43537-156">string</span></span> |  <span data-ttu-id="43537-157">Die ID der Rezension, auf die Sie antworten möchten (dies ist eine GUID).</span><span class="sxs-lookup"><span data-stu-id="43537-157">The ID of the review you want to respond to (this is a GUID).</span></span> <span data-ttu-id="43537-158">Rezensions-IDs finden Sie in den Antwortdaten der Methode [Abrufen von App-Rezensionen](get-app-reviews.md) der Microsoft Store-Analyse-API und unter [Offlinedownload](../publish/download-analytic-reports.md) im Bericht [Rezensionen](../publish/reviews-report.md).</span><span class="sxs-lookup"><span data-stu-id="43537-158">Review IDs are available in the response data of the [get app reviews](get-app-reviews.md) method in the Microsoft Store analytics API and in the [offline download](../publish/download-analytic-reports.md) of the [Reviews report](../publish/reviews-report.md).</span></span>   |  <span data-ttu-id="43537-159">Ja</span><span class="sxs-lookup"><span data-stu-id="43537-159">Yes</span></span>  |
+| <span data-ttu-id="43537-160">ResponseText</span><span class="sxs-lookup"><span data-stu-id="43537-160">ResponseText</span></span> | <span data-ttu-id="43537-161">String</span><span class="sxs-lookup"><span data-stu-id="43537-161">string</span></span> | <span data-ttu-id="43537-162">Die Antwort, die Sie senden möchten.</span><span class="sxs-lookup"><span data-stu-id="43537-162">The response you want to submit.</span></span> <span data-ttu-id="43537-163">Ihre Antwort muss [diesen Richtlinien](../publish/respond-to-customer-reviews.md#guidelines-for-responses) entsprechen.</span><span class="sxs-lookup"><span data-stu-id="43537-163">Your response must follow [these guidelines](../publish/respond-to-customer-reviews.md#guidelines-for-responses).</span></span>   |  <span data-ttu-id="43537-164">Ja</span><span class="sxs-lookup"><span data-stu-id="43537-164">Yes</span></span>  |
+| <span data-ttu-id="43537-165">SupportEmail</span><span class="sxs-lookup"><span data-stu-id="43537-165">SupportEmail</span></span> | <span data-ttu-id="43537-166">String</span><span class="sxs-lookup"><span data-stu-id="43537-166">string</span></span> | <span data-ttu-id="43537-167">Die Support-E-Mail-Adresse Ihrer App, über die der Kunde Sie direkt kontaktieren kann.</span><span class="sxs-lookup"><span data-stu-id="43537-167">Your app's support email address, which the customer can use to contact you directly.</span></span> <span data-ttu-id="43537-168">Dies muss eine gültige E-Mail-Adresse sein.</span><span class="sxs-lookup"><span data-stu-id="43537-168">This must be a valid email address.</span></span>     |  <span data-ttu-id="43537-169">Ja</span><span class="sxs-lookup"><span data-stu-id="43537-169">Yes</span></span>  |
+| <span data-ttu-id="43537-170">IsPublic</span><span class="sxs-lookup"><span data-stu-id="43537-170">IsPublic</span></span> | <span data-ttu-id="43537-171">Boolean</span><span class="sxs-lookup"><span data-stu-id="43537-171">Boolean</span></span> |  <span data-ttu-id="43537-172">Der Wert **true** gibt an, dass Ihre Antwort im Store-Eintrag Ihrer App direkt unter der Rezension des Kunden angezeigt wird und für alle Kunden sichtbar ist.</span><span class="sxs-lookup"><span data-stu-id="43537-172">The value **true** indicates that your response will be displayed in your app's Store listing, directly below the customer's review, and will be visible to all customers.</span></span> <span data-ttu-id="43537-173">Der Wert **false** gibt an, dass Ihre Antwort dem Kunden per E-Mail gesendet wird und nicht im Store-Eintrag Ihrer App für andere Kunden sichtbar angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="43537-173">The value **false** indicates that your response will be sent to the customer via email, and will not be visible to other customers in your app's Store listing.</span></span>     |  <span data-ttu-id="43537-174">Ja</span><span class="sxs-lookup"><span data-stu-id="43537-174">Yes</span></span>  |
 
-### <a name="request-example"></a>Anforderungsbeispiel
 
-Im folgenden Beispiel wird gezeigt, wie diese Methode verwendet wird, um Antworten auf mehrere Rezensionen zu senden.
+### <a name="request-example"></a><span data-ttu-id="43537-175">Anforderungsbeispiel</span><span class="sxs-lookup"><span data-stu-id="43537-175">Request example</span></span>
+
+<span data-ttu-id="43537-176">Im folgenden Beispiel wird gezeigt, wie diese Methode verwendet wird, um Antworten auf mehrere Rezensionen zu senden.</span><span class="sxs-lookup"><span data-stu-id="43537-176">The following example demonstrates how to use this method to submit responses to several reviews.</span></span>
 
 ```json
 POST https://manage.devcenter.microsoft.com/v1.0/my/reviews/responses HTTP/1.1
@@ -103,26 +104,28 @@ Content-Type: application/json
 }
 ```
 
-## <a name="response"></a>Antwort
+## <a name="response"></a><span data-ttu-id="43537-177">Antwort</span><span class="sxs-lookup"><span data-stu-id="43537-177">Response</span></span>
 
-### <a name="response-body"></a>Antworttext
+### <a name="response-body"></a><span data-ttu-id="43537-178">Antworttext</span><span class="sxs-lookup"><span data-stu-id="43537-178">Response body</span></span>
 
-| Wert        | Typ   | Beschreibung            |
+| <span data-ttu-id="43537-179">Wert</span><span class="sxs-lookup"><span data-stu-id="43537-179">Value</span></span>        | <span data-ttu-id="43537-180">Typ</span><span class="sxs-lookup"><span data-stu-id="43537-180">Type</span></span>   | <span data-ttu-id="43537-181">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="43537-181">Description</span></span>            |
 |---------------|--------|---------------------|
-| Result | Array | Ein Array von Objekten, die Daten über jede Antwort enthalten, die Sie gesendet haben. Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie in der folgenden Tabelle.  |
+| <span data-ttu-id="43537-182">Result</span><span class="sxs-lookup"><span data-stu-id="43537-182">Result</span></span> | <span data-ttu-id="43537-183">Array</span><span class="sxs-lookup"><span data-stu-id="43537-183">array</span></span> | <span data-ttu-id="43537-184">Ein Array von Objekten, die Daten über jede Antwort enthalten, die Sie gesendet haben.</span><span class="sxs-lookup"><span data-stu-id="43537-184">An array of objects that contain data about each response you submitted.</span></span> <span data-ttu-id="43537-185">Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie in der folgenden Tabelle.</span><span class="sxs-lookup"><span data-stu-id="43537-185">For more information about the data in each object, see the following table.</span></span>  |
 
-Jedes Objekt im *Result*-Array enthält die folgenden Werte:
 
-| Wert        | Typ   | Beschreibung                                                                 |
+<span data-ttu-id="43537-186">Jedes Objekt im *Result*-Array enthält die folgenden Werte:</span><span class="sxs-lookup"><span data-stu-id="43537-186">Each object in the *Result* array contains the following values.</span></span>
+
+| <span data-ttu-id="43537-187">Wert</span><span class="sxs-lookup"><span data-stu-id="43537-187">Value</span></span>        | <span data-ttu-id="43537-188">Typ</span><span class="sxs-lookup"><span data-stu-id="43537-188">Type</span></span>   | <span data-ttu-id="43537-189">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="43537-189">Description</span></span>                                                                 |
 |---------------|--------|-----------------------------------------------|
-| ApplicationId | String |  Die Store-ID der App, auf deren Rezension Sie geantwortet haben. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8.   |
-| ReviewId | String |  Die ID der Rezension, auf die Sie geantwortet haben. Dies ist eine GUID.   |
-| Successful | String | Der Wert **true** gibt an, dass Ihre Antwort erfolgreich gesendet wurde. Der Wert **false** gibt an, dass Ihre Antwort nicht erfolgreich war.    |
-| FailureReason | String | Wenn **Successful** **false** ist, dann enthält dieser Wert einen Grund für den Fehler. Wenn **Successful** **true** ist, dann ist dieser Wert leer.      |
+| <span data-ttu-id="43537-190">ApplicationId</span><span class="sxs-lookup"><span data-stu-id="43537-190">ApplicationId</span></span> | <span data-ttu-id="43537-191">String</span><span class="sxs-lookup"><span data-stu-id="43537-191">string</span></span> |  <span data-ttu-id="43537-192">Die Store-ID der App, auf deren Rezension Sie geantwortet haben.</span><span class="sxs-lookup"><span data-stu-id="43537-192">The Store ID of the app with the review you responded to.</span></span> <span data-ttu-id="43537-193">Beispiel für eine Store-ID: 9WZDNCRFJ3Q8.</span><span class="sxs-lookup"><span data-stu-id="43537-193">An example Store ID is 9WZDNCRFJ3Q8.</span></span>   |
+| <span data-ttu-id="43537-194">ReviewId</span><span class="sxs-lookup"><span data-stu-id="43537-194">ReviewId</span></span> | <span data-ttu-id="43537-195">String</span><span class="sxs-lookup"><span data-stu-id="43537-195">string</span></span> |  <span data-ttu-id="43537-196">Die ID der Rezension, auf die Sie geantwortet haben.</span><span class="sxs-lookup"><span data-stu-id="43537-196">The ID of the review you responded to.</span></span> <span data-ttu-id="43537-197">Dies ist eine GUID.</span><span class="sxs-lookup"><span data-stu-id="43537-197">This is a GUID.</span></span>   |
+| <span data-ttu-id="43537-198">Successful</span><span class="sxs-lookup"><span data-stu-id="43537-198">Successful</span></span> | <span data-ttu-id="43537-199">String</span><span class="sxs-lookup"><span data-stu-id="43537-199">string</span></span> | <span data-ttu-id="43537-200">Der Wert **true** gibt an, dass Ihre Antwort erfolgreich gesendet wurde.</span><span class="sxs-lookup"><span data-stu-id="43537-200">The value **true** indicates that your response was sent successfully.</span></span> <span data-ttu-id="43537-201">Der Wert **false** gibt an, dass Ihre Antwort nicht erfolgreich war.</span><span class="sxs-lookup"><span data-stu-id="43537-201">The value **false** indicates that your response was unsuccessful.</span></span>    |
+| <span data-ttu-id="43537-202">FailureReason</span><span class="sxs-lookup"><span data-stu-id="43537-202">FailureReason</span></span> | <span data-ttu-id="43537-203">String</span><span class="sxs-lookup"><span data-stu-id="43537-203">string</span></span> | <span data-ttu-id="43537-204">Wenn **Successful** **false** ist, dann enthält dieser Wert einen Grund für den Fehler.</span><span class="sxs-lookup"><span data-stu-id="43537-204">If **Successful** is **false**, this value contains a reason for the failure.</span></span> <span data-ttu-id="43537-205">Wenn **Successful** **true** ist, dann ist dieser Wert leer.</span><span class="sxs-lookup"><span data-stu-id="43537-205">If **Successful** is **true**, this value is empty.</span></span>      |
 
-### <a name="response-example"></a>Antwortbeispiel
 
-Das folgende Beispiel enthält einen JSON-Antworttext für diese Anforderung.
+### <a name="response-example"></a><span data-ttu-id="43537-206">Antwortbeispiel</span><span class="sxs-lookup"><span data-stu-id="43537-206">Response example</span></span>
+
+<span data-ttu-id="43537-207">Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese Anforderung.</span><span class="sxs-lookup"><span data-stu-id="43537-207">The following example demonstrates an example JSON response body for this request.</span></span>
 
 ```json
 {
@@ -143,10 +146,9 @@ Das folgende Beispiel enthält einen JSON-Antworttext für diese Anforderung.
 }
 ```
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a><span data-ttu-id="43537-208">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="43537-208">Related topics</span></span>
 
-* [Antworten auf Kundenrezensionen mit dem Dev Center-Dashboard](../publish/respond-to-customer-reviews.md)
-* [Antworten auf Rezensionen mit Windows Store-Diensten](respond-to-reviews-using-windows-store-services.md)
-* [Abrufen von Antwortinformationen für App-Rezensionen](get-response-info-for-app-reviews.md)
-* [Abrufen von App-Rezensionen](get-app-reviews.md)
-
+* [<span data-ttu-id="43537-209">Antworten auf Kundenrezensionen mit dem Dev Center-Dashboard</span><span class="sxs-lookup"><span data-stu-id="43537-209">Respond to customer reviews using the Dev Center dashboard</span></span>](../publish/respond-to-customer-reviews.md)
+* [<span data-ttu-id="43537-210">Antworten auf Rezensionen mit Microsoft Store-Diensten</span><span class="sxs-lookup"><span data-stu-id="43537-210">Respond to reviews using Microsoft Store services</span></span>](respond-to-reviews-using-windows-store-services.md)
+* [<span data-ttu-id="43537-211">Abrufen von Antwortinformationen für App-Rezensionen</span><span class="sxs-lookup"><span data-stu-id="43537-211">Get response info for app reviews</span></span>](get-response-info-for-app-reviews.md)
+* [<span data-ttu-id="43537-212">Abrufen von App-Rezensionen</span><span class="sxs-lookup"><span data-stu-id="43537-212">Get app reviews</span></span>](get-app-reviews.md)

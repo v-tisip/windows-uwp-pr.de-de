@@ -1,7 +1,7 @@
 ---
 author: drewbatgit
-title: "Übertragen und Aufzeichnen von Spielen"
-description: "Dieser Abschnitt enthält Informationen darüber, wie Sie einer UWP-App Funktionen zum Übertragen und Aufzeichnen von Spielen hinzufügen können."
+title: Übertragen und Aufzeichnen von Spielen
+description: Dieser Abschnitt enthält Informationen darüber, wie Sie einer UWP-App Funktionen zum Übertragen und Aufzeichnen von Spielen hinzufügen können.
 ms.assetid: 2DD0B384-8776-4599-9E52-4FC0AA682735
 ms.author: drewbat
 ms.date: 02/08/2017
@@ -15,6 +15,7 @@ ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/12/2017
+ms.locfileid: "1392629"
 ---
 # <a name="game-broadcast-and-capture"></a><span data-ttu-id="4a084-104">Übertragen und Aufzeichnen von Spielen</span><span class="sxs-lookup"><span data-stu-id="4a084-104">Game broadcast and capture</span></span>
 

@@ -1,58 +1,53 @@
 ---
 author: TylerMSFT
-title: "Aktualisieren einer Live-Kachel über eine Hintergrundaufgabe"
+title: Aktualisieren einer Live-Kachel über eine Hintergrundaufgabe
 description: Verwenden Sie eine Hintergrundaufgabe, um die Live-Kachel Ihrer App mit neuen Inhalten zu aktualisieren.
 Search.SourceType: Video
 ms.assetid: 9237A5BD-F9DE-4B8C-B689-601201BA8B9A
 ms.author: twhitney
-ms.date: 02/08/2017
+ms.date: 01/11/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 76521772e4f93ee143ad698ad798f4b88ebcf3a7
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.localizationpriority: medium
+ms.openlocfilehash: e4dcfce2e3eba0875968ad52c7c3195c190fcccf
+ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/12/2018
+ms.locfileid: "1509177"
 ---
+# <a name="update-a-live-tile-from-a-background-task"></a><span data-ttu-id="a7121-104">Aktualisieren einer Live-Kachel über eine Hintergrundaufgabe</span><span class="sxs-lookup"><span data-stu-id="a7121-104">Update a live tile from a background task</span></span>
+
+**<span data-ttu-id="a7121-105">Wichtige APIs</span><span class="sxs-lookup"><span data-stu-id="a7121-105">Important APIs</span></span>**
+
+-   [**<span data-ttu-id="a7121-106">IBackgroundTask</span><span class="sxs-lookup"><span data-stu-id="a7121-106">IBackgroundTask</span></span>**](https://msdn.microsoft.com/library/windows/apps/br224794)
+-   [**<span data-ttu-id="a7121-107">BackgroundTaskBuilder</span><span class="sxs-lookup"><span data-stu-id="a7121-107">BackgroundTaskBuilder</span></span>**](https://msdn.microsoft.com/library/windows/apps/br224768)
+
+<span data-ttu-id="a7121-108">Verwenden Sie eine Hintergrundaufgabe, um die Live-Kachel Ihrer App mit neuen Inhalten zu aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="a7121-108">Use a background task to update your app's live tile with fresh content.</span></span>
+
+<span data-ttu-id="a7121-109">Das folgende Video zeigt, wie Sie Ihren Apps Live-Kacheln hinzufügen:</span><span class="sxs-lookup"><span data-stu-id="a7121-109">Here's a video that shows how to add live tiles to your apps.</span></span>
+
+<iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Updating-a-live-tile-from-a-background-task/player" width="720" height="405" allowFullScreen="true" frameBorder="0"></iframe>
+
+## <a name="create-the-background-task-project"></a><span data-ttu-id="a7121-110">Erstellen des Hintergrundaufgabenprojekts</span><span class="sxs-lookup"><span data-stu-id="a7121-110">Create the background task project</span></span>  
+
+<span data-ttu-id="a7121-111">Fügen Sie der Projektmappe zum Aktivieren einer Live-Kachel für Ihre App ein neues Projekt mit Komponenten für Windows-Runtime hinzu.</span><span class="sxs-lookup"><span data-stu-id="a7121-111">To enable a live tile for your app, add a new Windows Runtime Component project to your solution.</span></span> <span data-ttu-id="a7121-112">Dies ist eine separate Assembly, die vom BS im Hintergrund geladen und ausgeführt wird, wenn Benutzer die App installieren.</span><span class="sxs-lookup"><span data-stu-id="a7121-112">This is a separate assembly that the OS loads and runs in the background when a user installs your app.</span></span>
+
+1.  <span data-ttu-id="a7121-113">Klicken Sie im Projektmappen-Explorer auf die Projektmappe, klicken Sie auf **Hinzufügen**, und klicken Sie dann auf **Neues Projekt**.</span><span class="sxs-lookup"><span data-stu-id="a7121-113">In Solution Explorer, right-click the solution, click **Add**, and then click **New Project**.</span></span>
+2.  <span data-ttu-id="a7121-114">Wählen Sie im Dialogfeld **Neues Projekt hinzufügen** im Abschnitt **Installiert &gt; Andere Sprachen &gt; Visual C# &gt; Windows Universal** die Vorlage **Komponente für Windows-Runtime** aus.</span><span class="sxs-lookup"><span data-stu-id="a7121-114">In the **Add New Project** dialog, select the **Windows Runtime Component** template in the **Installed &gt; Other Languages &gt; Visual C# &gt; Windows Universal** section.</span></span>
+3.  <span data-ttu-id="a7121-115">Geben Sie dem Projekt den Namen „BackgroundTasks“, und klicken oder tippen Sie auf **OK**.</span><span class="sxs-lookup"><span data-stu-id="a7121-115">Name the project BackgroundTasks and click or tap **OK**.</span></span> <span data-ttu-id="a7121-116">In Microsoft Visual Studio wird das neue Projekt der Projektmappe hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="a7121-116">Microsoft Visual Studio adds the new project to the solution.</span></span>
+4.  <span data-ttu-id="a7121-117">Fügen Sie im Hauptprojekt einen Verweis auf das Projekt „BackgroundTasks“ hinzu.</span><span class="sxs-lookup"><span data-stu-id="a7121-117">In the main project, add a reference to the BackgroundTasks project.</span></span>
+
+## <a name="implement-the-background-task"></a><span data-ttu-id="a7121-118">Implementieren der Hintergrundaufgabe</span><span class="sxs-lookup"><span data-stu-id="a7121-118">Implement the background task</span></span>
 
 
-# <a name="update-a-live-tile-from-a-background-task"></a>Aktualisieren einer Live-Kachel über eine Hintergrundaufgabe
+<span data-ttu-id="a7121-119">Implementieren Sie die [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794)-Schnittstelle, um eine Klasse zu erstellen, mit der die Live-Kachel Ihrer App aktualisiert wird.</span><span class="sxs-lookup"><span data-stu-id="a7121-119">Implement the [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794) interface to create a class that updates your app's live tile.</span></span> <span data-ttu-id="a7121-120">Ihre Hintergrundarbeit bezieht sich auf die Run-Methode.</span><span class="sxs-lookup"><span data-stu-id="a7121-120">Your background work goes in the Run method.</span></span> <span data-ttu-id="a7121-121">In diesem Fall erhält die Aufgabe einen Veröffentlichungsfeed für die MSDN-Blogs.</span><span class="sxs-lookup"><span data-stu-id="a7121-121">In this case, the task gets a syndication feed for the MSDN blogs.</span></span> <span data-ttu-id="a7121-122">Richten Sie eine Verzögerung ein, um das zu frühe Schließen der Aufgabe zu verhindern, während noch asynchroner Code ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="a7121-122">To prevent the task from closing prematurely while asynchronous code is still running, get a deferral.</span></span>
 
-
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
-
-
-**Wichtige APIs**
-
--   [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794)
--   [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)
-
-Verwenden Sie eine Hintergrundaufgabe, um die Live-Kachel Ihrer App mit neuen Inhalten zu aktualisieren.
-
-Das folgende Video zeigt, wie Sie Ihren Apps Live-Kacheln hinzufügen:
-
-<iframe src="https://hubs-video.ssl.catalog.video.msn.com/embed/afb47cc5-edd3-4262-ae45-8f0e3ae664ac/IA?csid=ux-en-us&MsnPlayerLeadsWith=html&PlaybackMode=Inline&MsnPlayerDisplayShareBar=false&MsnPlayerDisplayInfoButton=false&iframe=true&QualityOverride=HD" width="720" height="405" allowFullScreen="true" frameBorder="0" scrolling="no">One Dev Minute – Aktualisieren einer Live-Kachel über eine Hintergrundaufgabe</iframe>
-
-## <a name="create-the-background-task-project"></a>Erstellen des Hintergrundaufgabenprojekts
-
-
-Fügen Sie der Projektmappe zum Aktivieren einer Live-Kachel für Ihre App ein neues Projekt mit Komponenten für Windows-Runtime hinzu. Dies ist eine separate Assembly, die vom BS im Hintergrund geladen und ausgeführt wird, wenn Benutzer die App installieren.
-
-1.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf die Projektmappe, zeigen Sie auf **Hinzufügen**, und klicken oder tippen Sie auf **Neues Projekt**.
-2.  Wählen Sie im Dialogfeld **Neues Projekt hinzufügen** im Abschnitt **Visual C# &gt; Windows Store** die Vorlage **Komponente für Windows-Runtime** aus.
-3.  Geben Sie dem Projekt den Namen „BackgroundTasks“, und klicken oder tippen Sie auf **OK**. In Microsoft Visual Studio wird das neue Projekt der Projektmappe hinzugefügt.
-4.  Fügen Sie im Hauptprojekt einen Verweis auf das Projekt „BackgroundTasks“ hinzu.
-
-## <a name="implement-the-background-task"></a>Implementieren der Hintergrundaufgabe
-
-
-Implementieren Sie die [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794)-Schnittstelle, um eine Klasse zu erstellen, mit der die Live-Kachel Ihrer App aktualisiert wird. Ihre Hintergrundarbeit bezieht sich auf die Run-Methode. In diesem Fall erhält die Aufgabe einen Veröffentlichungsfeed für die MSDN-Blogs. Richten Sie eine Verzögerung ein, um das zu frühe Schließen der Aufgabe zu verhindern, während noch asynchroner Code ausgeführt wird.
-
-1.  Benennen Sie im Projektmappen-Explorer die automatisch generierte Datei „Class1.cs“ in „BlogFeedBackgroundTask.cs“ um.
-2.  Ersetzen Sie in „BlogFeedBackgroundTask.cs“ den automatisch generierten Code durch den Stub-Code für die **BlogFeedBackgroundTask**-Klasse.
-3.  Fügen Sie in der Implementierung der Run-Methode Code für die Methoden **GetMSDNBlogFeed** und **UpdateTile** hinzu.
+1.  <span data-ttu-id="a7121-123">Benennen Sie im Projektmappen-Explorer die automatisch generierte Datei „Class1.cs“ in „BlogFeedBackgroundTask.cs“ um.</span><span class="sxs-lookup"><span data-stu-id="a7121-123">In Solution Explorer, rename the automatically generated file, Class1.cs, to BlogFeedBackgroundTask.cs.</span></span>
+2.  <span data-ttu-id="a7121-124">Ersetzen Sie in „BlogFeedBackgroundTask.cs“ den automatisch generierten Code durch den Stub-Code für die **BlogFeedBackgroundTask**-Klasse.</span><span class="sxs-lookup"><span data-stu-id="a7121-124">In BlogFeedBackgroundTask.cs, replace the automatically generated code with the stub code for the **BlogFeedBackgroundTask** class.</span></span>
+3.  <span data-ttu-id="a7121-125">Fügen Sie in der Implementierung der Run-Methode Code für die Methoden **GetMSDNBlogFeed** und **UpdateTile** hinzu.</span><span class="sxs-lookup"><span data-stu-id="a7121-125">In the Run method implementation, add code for the **GetMSDNBlogFeed** and **UpdateTile** methods.</span></span>
 
 ```cs
 using System;
@@ -148,32 +143,32 @@ namespace BackgroundTasks
 }
 ```
 
-## <a name="set-up-the-package-manifest"></a>Einrichten des Paketmanifests
+## <a name="set-up-the-package-manifest"></a><span data-ttu-id="a7121-126">Einrichten des Paketmanifests</span><span class="sxs-lookup"><span data-stu-id="a7121-126">Set up the package manifest</span></span>
 
 
-Öffnen Sie das Paketmanifest, um es einzurichten, und fügen Sie eine Deklaration einer neuen Hintergrundaufgabe hinzu. Legen Sie den Einstiegspunkt für die Aufgabe auf den Klassennamen fest, und fügen Sie auch den Namespace ein.
+<span data-ttu-id="a7121-127">Öffnen Sie das Paketmanifest, um es einzurichten, und fügen Sie eine Deklaration einer neuen Hintergrundaufgabe hinzu.</span><span class="sxs-lookup"><span data-stu-id="a7121-127">To set up the package manifest, open it and add a new background task declaration.</span></span> <span data-ttu-id="a7121-128">Legen Sie den Einstiegspunkt für die Aufgabe auf den Klassennamen fest, und fügen Sie auch den Namespace ein.</span><span class="sxs-lookup"><span data-stu-id="a7121-128">Set the entry point for the task to the class name, including its namespace.</span></span>
 
-1.  Öffnen Sie im Projektmappen-Explorer die Datei „Package.appxmanifest“.
-2.  Klicken oder tippen Sie auf die Registerkarte **Deklarationen**.
-3.  Wählen Sie unter **Verfügbare Deklarationen**die Option **BackgroundTasks** aus, und klicken Sie auf **Hinzufügen**. In Visual Studio wird **BackgroundTasks** unter **Unterstützte Deklarationen** hinzugefügt.
-4.  Stellen Sie unter **Unterstützte Aufgabentypen** sicher, dass **Timer** aktiviert ist.
-5.  Legen Sie unter **App-Einstellungen** den Einstiegspunkt auf **BackgroundTasks.BlogFeedBackgroundTask** fest.
-6.  Klicken oder tippen Sie auf die Registerkarte **Anwendungsbenutzeroberfläche**.
-7.  Legen Sie die Option **Benachrichtigungen bei gesperrtem Bildschirm** auf **Text für Infoanzeiger und Kachel**fest.
-8.  Legen Sie im Feld **Infoanzeigerlogo** einen Pfad zu einem Symbol mit einer Größe von 24 x 24 Pixel fest.
-    **Wichtig**  Für dieses Symbol dürfen nur einfarbige und transparente Pixel verwendet werden.
-9.  Legen Sie im Feld **Kleines Logo** einen Pfad zu einem Symbol der Größe 30 x 30 Pixel fest.
-10. Legen Sie im Feld **Breites Logo** einen Pfad zu einem Symbol mit einer Größe von 310 x 150 Pixel fest.
+1.  <span data-ttu-id="a7121-129">Öffnen Sie im Projektmappen-Explorer die Datei „Package.appxmanifest“.</span><span class="sxs-lookup"><span data-stu-id="a7121-129">In Solution Explorer, open Package.appxmanifest.</span></span>
+2.  <span data-ttu-id="a7121-130">Klicken oder tippen Sie auf die Registerkarte **Deklarationen**.</span><span class="sxs-lookup"><span data-stu-id="a7121-130">Click or tap the **Declarations** tab.</span></span>
+3.  <span data-ttu-id="a7121-131">Wählen Sie unter **Verfügbare Deklarationen**die Option **BackgroundTasks** aus, und klicken Sie auf **Hinzufügen**.</span><span class="sxs-lookup"><span data-stu-id="a7121-131">Under **Available Declarations**, select **BackgroundTasks** and click **Add**.</span></span> <span data-ttu-id="a7121-132">In Visual Studio wird **BackgroundTasks** unter **Unterstützte Deklarationen** hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="a7121-132">Visual Studio adds **BackgroundTasks** under **Supported Declarations**.</span></span>
+4.  <span data-ttu-id="a7121-133">Stellen Sie unter **Unterstützte Aufgabentypen** sicher, dass **Timer** aktiviert ist.</span><span class="sxs-lookup"><span data-stu-id="a7121-133">Under **Supported task types**, ensure that **Timer** is checked.</span></span>
+5.  <span data-ttu-id="a7121-134">Legen Sie unter **App-Einstellungen** den Einstiegspunkt auf **BackgroundTasks.BlogFeedBackgroundTask** fest.</span><span class="sxs-lookup"><span data-stu-id="a7121-134">Under **App settings**, set the entry point to **BackgroundTasks.BlogFeedBackgroundTask**.</span></span>
+6.  <span data-ttu-id="a7121-135">Klicken oder tippen Sie auf die Registerkarte **Anwendungsbenutzeroberfläche**.</span><span class="sxs-lookup"><span data-stu-id="a7121-135">Click or tap the **Application UI** tab.</span></span>
+7.  <span data-ttu-id="a7121-136">Legen Sie die Option **Benachrichtigungen bei gesperrtem Bildschirm** auf **Text für Infoanzeiger und Kachel**fest.</span><span class="sxs-lookup"><span data-stu-id="a7121-136">Set **Lock screen notifications** to **Badge and Tile Text**.</span></span>
+8.  <span data-ttu-id="a7121-137">Legen Sie im Feld **Infoanzeigerlogo** einen Pfad zu einem Symbol mit einer Größe von 24x24Pixel fest.</span><span class="sxs-lookup"><span data-stu-id="a7121-137">Set a path to a 24x24 pixel icon in the **Badge logo** field.</span></span>
+    <span data-ttu-id="a7121-138">**Wichtig**  Für dieses Symbol dürfen nur einfarbige und transparente Pixel verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="a7121-138">**Important**  This icon must use monochrome and transparent pixels only.</span></span>
+9.  <span data-ttu-id="a7121-139">Legen Sie im Feld **Kleines Logo** einen Pfad zu einem Symbol der Größe 30x30 Pixel fest.</span><span class="sxs-lookup"><span data-stu-id="a7121-139">In the **Small logo** field, set a path to a 30x30 pixel icon.</span></span>
+10. <span data-ttu-id="a7121-140">Legen Sie im Feld **Breites Logo** einen Pfad zu einem Symbol mit einer Größe von 310x150Pixel fest.</span><span class="sxs-lookup"><span data-stu-id="a7121-140">In the **Wide logo** field, set a path to a 310x150 pixel icon.</span></span>
 
-## <a name="register-the-background-task"></a>Registrieren der Hintergrundaufgabe
+## <a name="register-the-background-task"></a><span data-ttu-id="a7121-141">Registrieren der Hintergrundaufgabe</span><span class="sxs-lookup"><span data-stu-id="a7121-141">Register the background task</span></span>
 
 
-Erstellen Sie zum Registrieren Ihrer Aufgabe ein [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)-Objekt.
+<span data-ttu-id="a7121-142">Erstellen Sie zum Registrieren Ihrer Aufgabe ein [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)-Objekt.</span><span class="sxs-lookup"><span data-stu-id="a7121-142">Create a [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) to register your task.</span></span>
 
-> **Hinweis**  Ab Windows 8.1 werden Parameter für die Registrierung von Hintergrundaufgaben zum Zeitpunkt der Registrierung überprüft. Bei ungültigen Registrierungsparametern wird ein Fehler zurückgegeben. Ihre App muss Szenarien mit nicht erfolgreicher Registrierung von Hintergrundaufgaben problemlos verarbeiten können. Verwenden Sie beispielsweise eine Bedingungsanweisung, um die App auf Registrierungsfehler zu prüfen, und wiederholen Sie die nicht erfolgreiche Registrierung mit anderen Parameterwerten.
+> <span data-ttu-id="a7121-143">**Hinweis**  Ab Windows8.1 werden Parameter für die Registrierung von Hintergrundaufgaben zum Zeitpunkt der Registrierung überprüft.</span><span class="sxs-lookup"><span data-stu-id="a7121-143">**Note**  Starting in Windows 8.1, background task registration parameters are validated at the time of registration.</span></span> <span data-ttu-id="a7121-144">Bei ungültigen Registrierungsparametern wird ein Fehler zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="a7121-144">An error is returned if any of the registration parameters are invalid.</span></span> <span data-ttu-id="a7121-145">Ihre App muss Szenarien mit nicht erfolgreicher Registrierung von Hintergrundaufgaben problemlos verarbeiten können. Verwenden Sie beispielsweise eine Bedingungsanweisung, um die App auf Registrierungsfehler zu prüfen, und wiederholen Sie die nicht erfolgreiche Registrierung mit anderen Parameterwerten.</span><span class="sxs-lookup"><span data-stu-id="a7121-145">Your app must be able to handle scenarios where background task registration fails - for example, use a conditional statement to check for registration errors and then retry failed registration using different parameter values.</span></span>
  
 
-Fügen Sie auf der Hauptseite der App die **RegisterBackgroundTask**-Methode hinzu, und rufen Sie sie im **OnNavigatedTo**-Ereignishandler auf.
+<span data-ttu-id="a7121-146">Fügen Sie auf der Hauptseite der App die **RegisterBackgroundTask**-Methode hinzu, und rufen Sie sie im **OnNavigatedTo**-Ereignishandler auf.</span><span class="sxs-lookup"><span data-stu-id="a7121-146">In your app's main page, add the **RegisterBackgroundTask** method and call it in the **OnNavigatedTo** event handler.</span></span>
 
 ```cs
 using System;
@@ -247,31 +242,30 @@ namespace ContosoApp
 }
 ```
 
-## <a name="debug-the-background-task"></a>Debuggen der Hintergrundaufgabe
+## <a name="debug-the-background-task"></a><span data-ttu-id="a7121-147">Debuggen der Hintergrundaufgabe</span><span class="sxs-lookup"><span data-stu-id="a7121-147">Debug the background task</span></span>
 
 
-Legen Sie zum Debuggen der Hintergrundaufgabe in der Run-Methode der Aufgabe einen Haltepunkt fest. Wählen Sie die Hintergrundaufgabe auf der Symbolleiste **Debugspeicherort** aus. Das System ruft dann sofort die Run-Methode auf.
+<span data-ttu-id="a7121-148">Legen Sie zum Debuggen der Hintergrundaufgabe in der Run-Methode der Aufgabe einen Haltepunkt fest.</span><span class="sxs-lookup"><span data-stu-id="a7121-148">To debug the background task, set a breakpoint in the task’s Run method.</span></span> <span data-ttu-id="a7121-149">Wählen Sie die Hintergrundaufgabe auf der Symbolleiste **Debugspeicherort** aus.</span><span class="sxs-lookup"><span data-stu-id="a7121-149">In the **Debug Location** toolbar, select your background task.</span></span> <span data-ttu-id="a7121-150">Das System ruft dann sofort die Run-Methode auf.</span><span class="sxs-lookup"><span data-stu-id="a7121-150">This causes the system to call the Run method immediately.</span></span>
 
-1.  Legen Sie in der Run-Methode der Aufgabe einen Haltepunkt fest.
-2.  Drücken Sie F5 oder tippen Sie auf **Debuggen &gt; Debugging starten**, um die App bereitzustellen und auszuführen.
-3.  Wechseln Sie nach dem Start der App zurück zu Visual Studio.
-4.  Stellen Sie sicher, dass die Symbolleiste **Debugspeicherort** sichtbar ist. Sie befindet sich im Menü **Ansicht &gt; Symbolleisten**.
-5.  Klicken Sie in der Symbolleiste **Debugspeicherort** auf die Dropdownliste **Anhalten**, und wählen Sie **BlogFeedBackgroundTask**aus.
-6.  Visual Studio hält die Ausführung am Haltepunkt an.
-7.  Drücken Sie F5 oder tippen Sie auf **Debuggen &gt; Fortsetzen**, um die Ausführung der App fortzusetzen.
-8.  Drücken Sie UMSCHALT+F5 oder tippen Sie auf **Debuggen &gt; Debugging** beenden, um das Debuggen zu beenden.
-9.  Kehren Sie zur Kachel der App auf dem Startbildschirm zurück. Nach einigen Sekunden werden in der Kachel der App Kachelbenachrichtigungen angezeigt.
+1.  <span data-ttu-id="a7121-151">Legen Sie in der Run-Methode der Aufgabe einen Haltepunkt fest.</span><span class="sxs-lookup"><span data-stu-id="a7121-151">Set a breakpoint in the task’s Run method.</span></span>
+2.  <span data-ttu-id="a7121-152">Drücken Sie F5 oder tippen Sie auf **Debuggen &gt; Debugging starten**, um die App bereitzustellen und auszuführen.</span><span class="sxs-lookup"><span data-stu-id="a7121-152">Press F5 or tap **Debug &gt; Start Debugging** to deploy and run the app.</span></span>
+3.  <span data-ttu-id="a7121-153">Wechseln Sie nach dem Start der App zurück zu Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="a7121-153">After the app launches, switch back to Visual Studio.</span></span>
+4.  <span data-ttu-id="a7121-154">Stellen Sie sicher, dass die Symbolleiste **Debugspeicherort** sichtbar ist.</span><span class="sxs-lookup"><span data-stu-id="a7121-154">Ensure that the **Debug Location** toolbar is visible.</span></span> <span data-ttu-id="a7121-155">Sie befindet sich im Menü **Ansicht &gt; Symbolleisten**.</span><span class="sxs-lookup"><span data-stu-id="a7121-155">It's on the **View &gt; Toolbars** menu.</span></span>
+5.  <span data-ttu-id="a7121-156">Klicken Sie in der Symbolleiste **Debugspeicherort** auf die Dropdownliste **Anhalten**, und wählen Sie **BlogFeedBackgroundTask**aus.</span><span class="sxs-lookup"><span data-stu-id="a7121-156">On the **Debug Location** toolbar, click the **Suspend** dropdown and select **BlogFeedBackgroundTask**.</span></span>
+6.  <span data-ttu-id="a7121-157">Visual Studio hält die Ausführung am Haltepunkt an.</span><span class="sxs-lookup"><span data-stu-id="a7121-157">Visual Studio suspends execution at the breakpoint.</span></span>
+7.  <span data-ttu-id="a7121-158">Drücken Sie F5 oder tippen Sie auf **Debuggen &gt; Fortsetzen**, um die Ausführung der App fortzusetzen.</span><span class="sxs-lookup"><span data-stu-id="a7121-158">Press F5 or tap **Debug &gt; Continue** to continue running the app.</span></span>
+8.  <span data-ttu-id="a7121-159">Drücken Sie UMSCHALT+F5 oder tippen Sie auf **Debuggen &gt; Debugging** beenden, um das Debuggen zu beenden.</span><span class="sxs-lookup"><span data-stu-id="a7121-159">Press Shift+F5 or tap **Debug &gt; Stop Debugging** to stop debugging.</span></span>
+9.  <span data-ttu-id="a7121-160">Kehren Sie zur Kachel der App auf dem Startbildschirm zurück.</span><span class="sxs-lookup"><span data-stu-id="a7121-160">Return to the app's tile on the Start screen.</span></span> <span data-ttu-id="a7121-161">Nach einigen Sekunden werden in der Kachel der App Kachelbenachrichtigungen angezeigt.</span><span class="sxs-lookup"><span data-stu-id="a7121-161">After a few seconds, tile notifications appear on your app's tile.</span></span>
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a><span data-ttu-id="a7121-162">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="a7121-162">Related topics</span></span>
 
 
-* [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)
-* [**TileUpdateManager**](https://msdn.microsoft.com/library/windows/apps/br208622)
-* [**TileNotification**](https://msdn.microsoft.com/library/windows/apps/br208616)
-* [Unterstützen Ihrer App mit Hintergrundaufgaben](support-your-app-with-background-tasks.md)
-* [Richtlinien und Prüfliste für Kacheln und Signale](https://msdn.microsoft.com/library/windows/apps/hh465403)
-
- 
+* [**<span data-ttu-id="a7121-163">BackgroundTaskBuilder</span><span class="sxs-lookup"><span data-stu-id="a7121-163">BackgroundTaskBuilder</span></span>**](https://msdn.microsoft.com/library/windows/apps/br224768)
+* [**<span data-ttu-id="a7121-164">TileUpdateManager</span><span class="sxs-lookup"><span data-stu-id="a7121-164">TileUpdateManager</span></span>**](https://msdn.microsoft.com/library/windows/apps/br208622)
+* [**<span data-ttu-id="a7121-165">TileNotification</span><span class="sxs-lookup"><span data-stu-id="a7121-165">TileNotification</span></span>**](https://msdn.microsoft.com/library/windows/apps/br208616)
+* [<span data-ttu-id="a7121-166">Unterstützen Ihrer App mit Hintergrundaufgaben</span><span class="sxs-lookup"><span data-stu-id="a7121-166">Support your app with background tasks</span></span>](support-your-app-with-background-tasks.md)
+* [<span data-ttu-id="a7121-167">Richtlinien und Prüfliste für Kacheln und Signale</span><span class="sxs-lookup"><span data-stu-id="a7121-167">Guidelines and checklist for tiles and badges</span></span>](https://msdn.microsoft.com/library/windows/apps/hh465403)
 
  
 
+ 

@@ -1,159 +1,166 @@
 ---
 author: laurenhughes
 ms.assetid: 6AA037C0-35ED-4B9C-80A3-5E144D7EE94B
-title: "Installieren von Apps mit dem Tool „WinAppDeployCmd.exe“"
-description: "Die Windows-Anwendungsbereitstellung (WinAppDeployCmd.exe) ist ein Befehlszeilentool, mit dem Sie eine UWP-App von einem Windows 10-Computer auf beliebigen Windows 10 Mobile-Geräten bereitstellen können."
+title: Installieren von Apps mit dem Tool „WinAppDeployCmd.exe“
+description: Die Windows-Anwendungsbereitstellung (WinAppDeployCmd.exe) ist ein Befehlszeilentool, mit dem Sie eine App für die Universelle Windows-Plattform (UWP) App von einem Windows10-Computer auf jedem Windows10-Gerät bereitstellen können.
 ms.author: lahugh
-ms.date: 02/08/2017
+ms.date: 03/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 9148a26b813d99ca04ae2e5a050bbc9b590d5f6e
-ms.lasthandoff: 02/07/2017
-
+ms.localizationpriority: medium
+ms.openlocfilehash: 664b2e92c40fa619150a2c3fd527194e8e983039
+ms.sourcegitcommit: b8c77ac8e40a27cf762328d730c121c28de5fbc4
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/21/2018
+ms.locfileid: "1673007"
 ---
-# <a name="install-apps-with-the-winappdeploycmdexe-tool"></a>Installieren von Apps mit dem Tool „WinAppDeployCmd.exe“
+# <a name="install-apps-with-the-winappdeploycmdexe-tool"></a><span data-ttu-id="42d60-104">Installieren von Apps mit dem Tool „WinAppDeployCmd.exe“</span><span class="sxs-lookup"><span data-stu-id="42d60-104">Install apps with the WinAppDeployCmd.exe tool</span></span>
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Die Windows-Anwendungsbereitstellung (WinAppDeployCmd.exe) ist ein Befehlszeilentool, mit dem Sie eine App für die Universelle Windows-Plattform (UWP) App von einem Windows 10-Computer auf jedem Windows 10-Gerät bereitstellen können. Dieses Tool ermöglicht Ihnen die Bereitstellung eines APPX-Pakets, wenn das Windows 10-Gerät über USB verbunden ist oder im gleichen Subnetz verfügbar ist, ohne dass Microsoft Visual Studio oder die Projektmappe für diese App erforderlich sind. Sie können die App auch bereitstellen, ohne sie zuerst zu einem Remote-PC oder zu Xbox One zu verpacken. Dieser Artikel beschreibt, wie UWP-Apps mit diesem Tool installiert werden.
+<span data-ttu-id="42d60-105">Die Windows-Anwendungsbereitstellung (WinAppDeployCmd.exe) ist ein Befehlszeilentool, mit dem Sie eine App für die Universelle Windows-Plattform (UWP) App von einem Windows10-Computer auf jedem Windows10-Gerät bereitstellen können.</span><span class="sxs-lookup"><span data-stu-id="42d60-105">Windows Application Deployment (WinAppDeployCmd.exe) is a command line tool that can use to deploy a Universal Windows Platform (UWP) app from a Windows 10 PC to any Windows 10 device.</span></span> <span data-ttu-id="42d60-106">Dieses Tool ermöglicht Ihnen die Bereitstellung eines APPX-Pakets, wenn das Windows10-Gerät über USB verbunden ist oder im gleichen Subnetz verfügbar ist, ohne dass Microsoft Visual Studio oder die Projektmappe für diese App erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="42d60-106">You can use this tool to deploy an .appx package when the Windows 10 device is connected by USB or available on the same subnet without needing Microsoft Visual Studio or the solution for that app.</span></span> <span data-ttu-id="42d60-107">Sie können die App auch bereitstellen, ohne sie zuerst zu einem Remote-PC oder zu Xbox One zu verpacken.</span><span class="sxs-lookup"><span data-stu-id="42d60-107">You can also deploy the app without packaging first to a remote PC or Xbox One.</span></span> <span data-ttu-id="42d60-108">Dieser Artikel beschreibt, wie UWP-Apps mit diesem Tool installiert werden.</span><span class="sxs-lookup"><span data-stu-id="42d60-108">This article describes how to install UWP apps using this tool.</span></span>
 
-Um das Tool WinAppDeployCmd über eine Eingabeaufforderung oder Skriptdatei auszuführen, muss lediglich das Windows 10 SDK installiert sein. Wenn Sie eine App mit „WinAppDeployCmd.exe“ installieren, werden die APPX-Datei oder AppxManifest (für lose Dateien) verwendet, um Ihre App auf ein Windows 10-Gerät querzuladen. Mit diesem Befehl wird nicht das für Ihre App erforderliche Zertifikat installiert. Zum Ausführen der App muss sich das Windows 10-Gerät im Entwicklermodus befinden oder bereits über das Zertifikat verfügen.
+<span data-ttu-id="42d60-109">Um das Tool WinAppDeployCmd über eine Eingabeaufforderung oder Skriptdatei auszuführen, muss lediglich das Windows 10 SDK installiert sein.</span><span class="sxs-lookup"><span data-stu-id="42d60-109">You just need the Windows 10 SDK installed to run the WinAppDeployCmd tool from a command prompt or a script file.</span></span> <span data-ttu-id="42d60-110">Wenn Sie eine App mit „WinAppDeployCmd.exe“ installieren, werden die APPX-Datei oder AppxManifest (für lose Dateien) verwendet, um Ihre App auf ein Windows10-Gerät querzuladen.</span><span class="sxs-lookup"><span data-stu-id="42d60-110">When you install an app with WinAppDeployCmd.exe, this uses the .appx file or AppxManifest(for loose files) to side-load your app onto a Windows 10 device.</span></span> <span data-ttu-id="42d60-111">Mit diesem Befehl wird nicht das für Ihre App erforderliche Zertifikat installiert.</span><span class="sxs-lookup"><span data-stu-id="42d60-111">This command does not install the certificate required for your app.</span></span> <span data-ttu-id="42d60-112">Zum Ausführen der App muss sich das Windows10-Gerät im Entwicklermodus befinden oder bereits über das Zertifikat verfügen.</span><span class="sxs-lookup"><span data-stu-id="42d60-112">To run the app, the Windows 10 device must be in developer mode or already have the certificate installed.</span></span>
 
-Um eine Bereitstellung auf mobilen Geräten auszuführen, müssen Sie zunächst ein Paket erstellen. Weitere Informationen finden Sie [hier](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps).
+<span data-ttu-id="42d60-113">Um eine Bereitstellung auf mobilen Geräten auszuführen, müssen Sie zunächst ein Paket erstellen.</span><span class="sxs-lookup"><span data-stu-id="42d60-113">To deploy to mobile devices, you must first create a package.</span></span> <span data-ttu-id="42d60-114">Weitere Informationen finden Sie [hier](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps).</span><span class="sxs-lookup"><span data-stu-id="42d60-114">For more information, see [here](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps).</span></span>
 
-Das Tool **WinAppDeployCmd.exe** befindet sich unter folgendem Pfad auf Ihrem Windows 10-Computer: **C:\\Programme (x86)\\Windows Kits\\10\\bin\\x86\\WinAppDeployCmd.exe** (abhängig vom Installationspfad für das SDK). Verbinden Sie zunächst das Windows 10-Gerät mit dem gleichen Subnetz oder direkt mit Ihrem Windows 10-Computer über eine USB-Verbindung. Verwenden Sie anschließend die folgende Syntax und die Beispiele zu diesem Befehl weiter unten in diesem Artikel, um die UWP-App bereitzustellen:
+<span data-ttu-id="42d60-115">Das Tool **WinAppDeployCmd.exe** befindet sich unter folgendem Pfad auf Ihrem Windows10-Computer: **C:\\Program Files (x86)\\Windows Kits\\10\\bin\\<SDK Version>\\x86\\WinAppDeployCmd.exe** (abhängig vom Installationspfad für das SDK).</span><span class="sxs-lookup"><span data-stu-id="42d60-115">The **WinAppDeployCmd.exe** tool is located here on your Windows 10 PC: **C:\\Program Files (x86)\\Windows Kits\\10\\bin\\<SDK Version>\\x86\\WinAppDeployCmd.exe** (based on your installation path for the SDK).</span></span> 
+> [!NOTE]
+> <span data-ttu-id="42d60-116">In Version 15063 und höher des SDK ist das SDK nebeneinander in versionsspezifischen Ordnern installiert.</span><span class="sxs-lookup"><span data-stu-id="42d60-116">In version 15063 and later of the SDK, the SDK is installed side by side within version-specific folders.</span></span>  <span data-ttu-id="42d60-117">Frühere SDKs (vor und einschließlich 14393) werden direkt in den übergeordneten Ordner geschrieben.</span><span class="sxs-lookup"><span data-stu-id="42d60-117">Previous SDKs (prior to and including 14393) are written directly to the parent folder.</span></span>
 
-## <a name="winappdeploycmd-syntax-and-options"></a>Syntax und Optionen für WinAppDeployCmd
+<span data-ttu-id="42d60-118">Verbinden Sie zunächst das Windows10-Gerät mit dem gleichen Subnetz oder direkt mit Ihrem Windows 10-Computer über eine USB-Verbindung.</span><span class="sxs-lookup"><span data-stu-id="42d60-118">First, connect your Windows 10 device to the same subnet or connect it directly to your Windows 10 machine with a USB connection.</span></span> <span data-ttu-id="42d60-119">Verwenden Sie anschließend die folgende Syntax und die Beispiele zu diesem Befehl weiter unten in diesem Artikel, um die UWP-App bereitzustellen:</span><span class="sxs-lookup"><span data-stu-id="42d60-119">Then use the following syntax and examples of this command later in this article to deploy your UWP app:</span></span>
 
-Dies ist die mögliche Syntax, die Sie für **WinAppDeployCmd.exe** verwenden können:
+## <a name="winappdeploycmd-syntax-and-options"></a><span data-ttu-id="42d60-120">Syntax und Optionen für WinAppDeployCmd</span><span class="sxs-lookup"><span data-stu-id="42d60-120">WinAppDeployCmd syntax and options</span></span>
 
-``` syntax
-WinAppDeployCmd command -option <argument> ...
-    WinAppDeployCmd devices
-    WinAppDeployCmd devices <x>
-    WinAppDeployCmd install -file <path> -ip <address>
-    WinAppDeployCmd install -file <path> -guid <address> -pin <p>
-    WinAppDeployCmd install -file <path> -ip <address> -dependency <a> <b> ...
-    WinAppDeployCmd install -file <path> -guid <address> -dependency <a> <b> ...
-    WinAppDeployCmd uninstall -file <path>
-    WinAppDeployCmd uninstall -package <name>
-    WinAppDeployCmd update -file <path>
-    WinAppDeployCmd list -ip <address>
-    WinAppDeployCmd list -guid <address>
-    WinAppDeployCmd deployfiles -file <path> -remotedeploydir <remoterelativepath> -ip <address>
-    WinAppDeployCmd registerfiles -remotedeploydir <remoterelativepath> -ip <address>
-    WinAppDeployCmd addcreds -credserver <server> -credusername <username> -credpassword <password> -ip <address>
-    WinAppDeployCmd getcreds -credserver <server> -ip <address>
-    WinAppDeployCmd deletecreds -credserver <server> -ip <address>
-
+<span data-ttu-id="42d60-121">Dies ist die allgemeine, für **WinAppDeployCmd.exe** verwendete Syntax:</span><span class="sxs-lookup"><span data-stu-id="42d60-121">This is the general syntax used for **WinAppDeployCmd.exe**:</span></span>
+```syntax
+WinAppDeployCmd command -option <argument>
 ```
 
-Sie können eine App auf dem Zielgerät installieren oder deinstallieren oder eine bereits installierte App aktualisieren. Um die Daten oder Einstellungen beizubehalten, die von einer bereits installierten App gespeichert wurden, verwenden Sie die **update**-Optionen anstelle der **install**-Optionen.
+<span data-ttu-id="42d60-122">Hier finden Sie einige zusätzliche Syntaxbeispiele für die Verwendung verschiedener Befehle:</span><span class="sxs-lookup"><span data-stu-id="42d60-122">Here are some additional syntax examples for using various commands:</span></span>
+```syntax
+WinAppDeployCmd devices
+WinAppDeployCmd devices <x>
+WinAppDeployCmd install -file <path> -ip <address>
+WinAppDeployCmd install -file <path> -guid <address> -pin <p>
+WinAppDeployCmd install -file <path> -ip <address> -dependency <a> <b> 
+WinAppDeployCmd install -file <path> -guid <address> -dependency <a> <b>
+WinAppDeployCmd uninstall -file <path>
+WinAppDeployCmd uninstall -package <name>
+WinAppDeployCmd update -file <path>
+WinAppDeployCmd list -ip <address>
+WinAppDeployCmd list -guid <address>
+WinAppDeployCmd deployfiles -file <path> -remotedeploydir <remoterelativepath> -ip <address>
+WinAppDeployCmd registerfiles -remotedeploydir <remoterelativepath> -ip <address>
+WinAppDeployCmd addcreds -credserver <server> -credusername <username> -credpassword <password> -ip <address>
+WinAppDeployCmd getcreds -credserver <server> -ip <address>
+WinAppDeployCmd deletecreds -credserver <server> -ip <address>
+```
 
-Die folgende Tabelle enthält die Befehle für **WinAppDeployCmd.exe**.
+<span data-ttu-id="42d60-123">Sie können eine App auf dem Zielgerät installieren oder deinstallieren oder eine bereits installierte App aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="42d60-123">You can install or uninstall an app on the target device, or you can update an app that's already installed.</span></span> <span data-ttu-id="42d60-124">Um die Daten oder Einstellungen beizubehalten, die von einer bereits installierten App gespeichert wurden, verwenden Sie die **update**-Optionen anstelle der **install**-Optionen.</span><span class="sxs-lookup"><span data-stu-id="42d60-124">To keep data or settings saved by an app that's already installed, use the **update** options instead of the **install** options.</span></span>
+
+<span data-ttu-id="42d60-125">Die folgende Tabelle enthält die Befehle für **WinAppDeployCmd.exe**.</span><span class="sxs-lookup"><span data-stu-id="42d60-125">The following table describes the commands for **WinAppDeployCmd.exe**.</span></span>
 
 
-| **Befehl**  | **Beschreibung**                                                     |
+| **<span data-ttu-id="42d60-126">Befehl</span><span class="sxs-lookup"><span data-stu-id="42d60-126">Command</span></span>**  | **<span data-ttu-id="42d60-127">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="42d60-127">Description</span></span>**                                                     |
 |--------------|---------------------------------------------------------------------|
-| Geräte      | Zeigt die Liste verfügbarer Netzwerkgeräte an.                         |
-| install      | Installiert ein UWP-App-Paket auf dem Zielgerät.                     |
-| update       | Aktualisiert eine UWP-App, die bereits auf dem Zielgerät installiert ist.    |
-| list         | Zeigt die Liste der auf dem angegebenen Zielgerät installierten UWP-Apps an. |
-| uninstall    | Deinstalliert das angegebene App-Paket vom Zielgerät.         |
-| deployfiles  | Kopiert die App mit loser Datei am Zielpfad zum relativen Remotepfad auf dem Gerät.|
-| registerfiles| Registriert die App mit loser Datei am Remotebereitstellungsverzeichnis.         |
-| addcreds     | Fügt einer Xbox Anmeldeinformationen hinzu, um auf einen Netzwerkspeicherort für die App-Registrierung zuzugreifen.|
-| getcreds     | Ruft Netzwerkanmeldeinformationen ab, die das Ziel beim Ausführen einer Anwendung von einer Netzwerkfreigabe verwendet.|
-| deletecreds  | Löscht Netzwerkanmeldeinformationen, die das Ziel beim Ausführen einer Anwendung von einer Netzwerkfreigabe verwendet.|
+| <span data-ttu-id="42d60-128">Geräte</span><span class="sxs-lookup"><span data-stu-id="42d60-128">devices</span></span>      | <span data-ttu-id="42d60-129">Zeigt die Liste verfügbarer Netzwerkgeräte an.</span><span class="sxs-lookup"><span data-stu-id="42d60-129">Show the list of available network devices.</span></span>                         |
+| <span data-ttu-id="42d60-130">install</span><span class="sxs-lookup"><span data-stu-id="42d60-130">install</span></span>      | <span data-ttu-id="42d60-131">Installiert ein UWP-App-Paket auf dem Zielgerät.</span><span class="sxs-lookup"><span data-stu-id="42d60-131">Install a UWP app package to the target device.</span></span>                     |
+| <span data-ttu-id="42d60-132">update</span><span class="sxs-lookup"><span data-stu-id="42d60-132">update</span></span>       | <span data-ttu-id="42d60-133">Aktualisiert eine UWP-App, die bereits auf dem Zielgerät installiert ist.</span><span class="sxs-lookup"><span data-stu-id="42d60-133">Update a UWP app that is already installed on the target device.</span></span>    |
+| <span data-ttu-id="42d60-134">list</span><span class="sxs-lookup"><span data-stu-id="42d60-134">list</span></span>         | <span data-ttu-id="42d60-135">Zeigt die Liste der auf dem angegebenen Zielgerät installierten UWP-Apps an.</span><span class="sxs-lookup"><span data-stu-id="42d60-135">Show the list of UWP apps installed on the specified target device.</span></span> |
+| <span data-ttu-id="42d60-136">uninstall</span><span class="sxs-lookup"><span data-stu-id="42d60-136">uninstall</span></span>    | <span data-ttu-id="42d60-137">Deinstalliert das angegebene App-Paket vom Zielgerät.</span><span class="sxs-lookup"><span data-stu-id="42d60-137">Uninstall the specified app package from the target device.</span></span>         |
+| <span data-ttu-id="42d60-138">deployfiles</span><span class="sxs-lookup"><span data-stu-id="42d60-138">deployfiles</span></span>  | <span data-ttu-id="42d60-139">Kopiert die App mit loser Datei am Zielpfad zum relativen Remotepfad auf dem Gerät.</span><span class="sxs-lookup"><span data-stu-id="42d60-139">Copy over loose file app at the target path to the remote relative path on the device.</span></span>|
+| <span data-ttu-id="42d60-140">registerfiles</span><span class="sxs-lookup"><span data-stu-id="42d60-140">registerfiles</span></span>| <span data-ttu-id="42d60-141">Registriert die App mit loser Datei am Remotebereitstellungsverzeichnis.</span><span class="sxs-lookup"><span data-stu-id="42d60-141">Register the loose file app at the remote deploy directory.</span></span>         |
+| <span data-ttu-id="42d60-142">addcreds</span><span class="sxs-lookup"><span data-stu-id="42d60-142">addcreds</span></span>     | <span data-ttu-id="42d60-143">Fügt einer Xbox Anmeldeinformationen hinzu, um auf einen Netzwerkspeicherort für die App-Registrierung zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="42d60-143">Add credentials to an Xbox to allow it to access a network location for app registration.</span></span>|
+| <span data-ttu-id="42d60-144">getcreds</span><span class="sxs-lookup"><span data-stu-id="42d60-144">getcreds</span></span>     | <span data-ttu-id="42d60-145">Ruft Netzwerkanmeldeinformationen ab, die das Ziel beim Ausführen einer Anwendung von einer Netzwerkfreigabe verwendet.</span><span class="sxs-lookup"><span data-stu-id="42d60-145">Get network credentials for the target uses when running an application from a network share.</span></span>|
+| <span data-ttu-id="42d60-146">deletecreds</span><span class="sxs-lookup"><span data-stu-id="42d60-146">deletecreds</span></span>  | <span data-ttu-id="42d60-147">Löscht Netzwerkanmeldeinformationen, die das Ziel beim Ausführen einer Anwendung von einer Netzwerkfreigabe verwendet.</span><span class="sxs-lookup"><span data-stu-id="42d60-147">Delete network credentials the target uses when running an application from a network share.</span></span>|
 
- 
-Die folgende Tabelle enthält die Optionen für **WinAppDeployCmd.exe**.
 
-| **Befehl**  | **Beschreibung**                                                     |
-|--------------|---------------------------------------------------------------------|
-| -h (-help)       | Zeigt die Befehle, Optionen und Argumente an.|
-| -ip              | Die IP-Adresse des Zielgeräts.|
-| -g (-guid)       | Der eindeutige Bezeichner des Zielgeräts.|
-| -d (-dependency) | (Optional) Gibt den Abhängigkeitspfad für jede Paketabhängigkeit an. <br />Wenn kein Pfad angegeben ist, sucht das Tool Abhängigkeiten im Stammverzeichnis des App-Pakets und in den SDK-Verzeichnissen.|
-| -f (-file)       | Der Dateipfad für das App-Paket, das installiert, aktualisiert oder deinstalliert werden soll.|
-| -p (-package)    | Der vollständige Paketname für das zu deinstallierende App-Paket. <br />(Mit dem list-Befehl können Sie den vollständigen Namen von Paketen suchen, die bereits auf dem Gerät installiert sind.)|
-| -pin             | Eine PIN, falls zum Herstellen einer Verbindung mit dem Zielgerät erforderlich. <br />(Wenn eine Authentifizierung erforderlich ist, werden Sie aufgefordert, den Versuch mit der Option -pin zu wiederholen.)|
-| -credserver      | Der Servername der Netzwerkanmeldeinformationen für die Verwendung durch das Ziel.|
-| -credusername    | Der Benutzername der Netzwerkanmeldeinformationen für die Verwendung durch das Ziel.|
-| -credpassword    | Das Kennwort der Netzwerkanmeldeinformationen für die Verwendung durch das Ziel.|
-| -connecttimeout  | Die Zeitüberschreiung in Sekunden, die bei der Herstellung der Verbindung mit dem Gerät verwendet wird.|
-| -remotedeploydir | Der relative Pfad/Name des Verzeichnisses, in das Dateien auf dem Remotegerät kopiert werden sollen. <br />Dies ist ein bekannter, automatisch festgelegter Remotebereitstellungsordner.|
-| -deleteextrafile | Wechselt, um anzugeben, ob vorhandene Dateien im Remoteverzeichnis gelöscht werden sollen, um mit dem Quellverzeichnis übereinzustimmen.|
- 
+<span data-ttu-id="42d60-148">Die folgende Tabelle enthält die Optionen für **WinAppDeployCmd.exe**.</span><span class="sxs-lookup"><span data-stu-id="42d60-148">The following table describes the options for **WinAppDeployCmd.exe**.</span></span>
 
-Die folgende Tabelle enthält die Optionen für **WinAppDeployCmd.exe**.
 
-| **Argument**           | **Beschreibung**                                                              |
+| **<span data-ttu-id="42d60-149">Befehl</span><span class="sxs-lookup"><span data-stu-id="42d60-149">Command</span></span>**  | **<span data-ttu-id="42d60-150">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="42d60-150">Description</span></span>**  |
+|--------------|------------------|
+| <span data-ttu-id="42d60-151">-h (-help)</span><span class="sxs-lookup"><span data-stu-id="42d60-151">-h (-help)</span></span>       | <span data-ttu-id="42d60-152">Zeigt die Befehle, Optionen und Argumente an.</span><span class="sxs-lookup"><span data-stu-id="42d60-152">Show the commands, options and arguments.</span></span> |
+| <span data-ttu-id="42d60-153">-ip</span><span class="sxs-lookup"><span data-stu-id="42d60-153">-ip</span></span>              | <span data-ttu-id="42d60-154">Die IP-Adresse des Zielgeräts.</span><span class="sxs-lookup"><span data-stu-id="42d60-154">IP address of the target device.</span></span> |
+| <span data-ttu-id="42d60-155">-g (-guid)</span><span class="sxs-lookup"><span data-stu-id="42d60-155">-g (-guid)</span></span>       | <span data-ttu-id="42d60-156">Der eindeutige Bezeichner des Zielgeräts.</span><span class="sxs-lookup"><span data-stu-id="42d60-156">Unique identifier of the target device.</span></span>|
+| <span data-ttu-id="42d60-157">-d (-dependency)</span><span class="sxs-lookup"><span data-stu-id="42d60-157">-d (-dependency)</span></span> | <span data-ttu-id="42d60-158">(Optional) Gibt den Abhängigkeitspfad für jede Paketabhängigkeit an.</span><span class="sxs-lookup"><span data-stu-id="42d60-158">(Optional) Specifies the dependency path for each of the package dependencies.</span></span> <span data-ttu-id="42d60-159">Wenn kein Pfad angegeben ist, sucht das Tool Abhängigkeiten im Stammverzeichnis des App-Pakets und in den SDK-Verzeichnissen.</span><span class="sxs-lookup"><span data-stu-id="42d60-159">If no path is specified, the tool searches for dependencies in the root directory for the app package and the SDK directories.</span></span>|
+| <span data-ttu-id="42d60-160">-f (-file)</span><span class="sxs-lookup"><span data-stu-id="42d60-160">-f (-file)</span></span>       | <span data-ttu-id="42d60-161">Der Dateipfad für das App-Paket, das installiert, aktualisiert oder deinstalliert werden soll.</span><span class="sxs-lookup"><span data-stu-id="42d60-161">File path for the app package to install, update or uninstall.</span></span>|
+| <span data-ttu-id="42d60-162">-p (-package)</span><span class="sxs-lookup"><span data-stu-id="42d60-162">-p (-package)</span></span>    | <span data-ttu-id="42d60-163">Der vollständige Paketname für das zu deinstallierende App-Paket.</span><span class="sxs-lookup"><span data-stu-id="42d60-163">The full package name for the app package to uninstall.</span></span> <span data-ttu-id="42d60-164">(Mit dem „list”-Befehl können Sie den vollständigen Namen von Paketen suchen, die bereits auf dem Gerät installiert sind)</span><span class="sxs-lookup"><span data-stu-id="42d60-164">(You can use the list command to find the full names for packages already installed on the device)</span></span> |
+| <span data-ttu-id="42d60-165">-pin</span><span class="sxs-lookup"><span data-stu-id="42d60-165">-pin</span></span>             | <span data-ttu-id="42d60-166">Eine PIN, falls zum Herstellen einer Verbindung mit dem Zielgerät erforderlich.</span><span class="sxs-lookup"><span data-stu-id="42d60-166">A pin if it is required to establish a connection with the target device.</span></span> <span data-ttu-id="42d60-167">(Wenn eine Authentifizierung erforderlich ist, werden Sie aufgefordert, den Versuch mit der Option „-pin” zu wiederholen)</span><span class="sxs-lookup"><span data-stu-id="42d60-167">(You will be prompted to retry with the -pin option if authentication is required)</span></span> |
+| <span data-ttu-id="42d60-168">-credserver</span><span class="sxs-lookup"><span data-stu-id="42d60-168">-credserver</span></span>      | <span data-ttu-id="42d60-169">Der Servername der Netzwerkanmeldeinformationen für die Verwendung durch das Ziel.</span><span class="sxs-lookup"><span data-stu-id="42d60-169">The server name of the network credentials for use by the target.</span></span> |
+| <span data-ttu-id="42d60-170">-credusername</span><span class="sxs-lookup"><span data-stu-id="42d60-170">-credusername</span></span>    | <span data-ttu-id="42d60-171">Der Benutzername der Netzwerkanmeldeinformationen für die Verwendung durch das Ziel.</span><span class="sxs-lookup"><span data-stu-id="42d60-171">The user name of the network credentials for use by the target.</span></span> |
+| <span data-ttu-id="42d60-172">-credpassword</span><span class="sxs-lookup"><span data-stu-id="42d60-172">-credpassword</span></span>    | <span data-ttu-id="42d60-173">Das Kennwort der Netzwerkanmeldeinformationen für die Verwendung durch das Ziel.</span><span class="sxs-lookup"><span data-stu-id="42d60-173">The password of the network credentials for use by the target.</span></span> |
+| <span data-ttu-id="42d60-174">-connecttimeout</span><span class="sxs-lookup"><span data-stu-id="42d60-174">-connecttimeout</span></span>  | <span data-ttu-id="42d60-175">Die Zeitüberschreiung in Sekunden, die bei der Herstellung der Verbindung mit dem Gerät verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="42d60-175">The timeout in seconds used when connecting to the device.</span></span> |
+| <span data-ttu-id="42d60-176">-remotedeploydir</span><span class="sxs-lookup"><span data-stu-id="42d60-176">-remotedeploydir</span></span> | <span data-ttu-id="42d60-177">Relativer Verzeichnispfad/Name zum Kopieren von Dateien auf das Remote-Gerät. Dies ist ein bekannter, automatisch bestimmter Remotebereitstellungsordner.</span><span class="sxs-lookup"><span data-stu-id="42d60-177">Relative directory path/name to copy files over to on the remote device; This will be a well-known, automatically determined remote deployment folder.</span></span> |
+| <span data-ttu-id="42d60-178">-deleteextrafile</span><span class="sxs-lookup"><span data-stu-id="42d60-178">-deleteextrafile</span></span> | <span data-ttu-id="42d60-179">Wechselt, um anzugeben, ob vorhandene Dateien im Remoteverzeichnis gelöscht werden sollen, um mit dem Quellverzeichnis übereinzustimmen.</span><span class="sxs-lookup"><span data-stu-id="42d60-179">Switch to indicate whether existing files in the remote directory should be purged to match the source directory.</span></span> |
+
+
+<span data-ttu-id="42d60-180">Die folgende Tabelle enthält die Optionen für **WinAppDeployCmd.exe**.</span><span class="sxs-lookup"><span data-stu-id="42d60-180">The following table describes the options for **WinAppDeployCmd.exe**.</span></span>
+
+| **<span data-ttu-id="42d60-181">Argument</span><span class="sxs-lookup"><span data-stu-id="42d60-181">Argument</span></span>**           | **<span data-ttu-id="42d60-182">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="42d60-182">Description</span></span>**                                                              |
 |------------------------|------------------------------------------------------------------------------|
-| &lt;x&gt;              | Zeitüberschreitung in Sekunden. (Der Standardwert ist 10.)                                          |
-| &lt;address&gt;        | Die IP-Adresse oder der eindeutige Bezeichner des Zielgeräts.                        |
-| &lt;a&gt;&lt;b&gt; ... | Der Abhängigkeitspfad für die einzelnen App-Paket-Abhängigkeiten.                    |
-| &lt;p&gt;              | Eine alphanumerische PIN, die in den Geräteeinstellungen angezeigt und zum Herstellen einer Verbindung verwendet wird. |
-| &lt;path&gt;           | Dateisystempfad.                                                            |
-| &lt;name&gt;           | Vollständiger Paketname für das zu deinstallierende App-Paket.                          |
-| &lt;server&gt;         | Server im Dateinetzwerk.                                                  |
-| &lt;username&gt;       | Benutzer für die Anmeldeinformationen mit Zugriff auf den Server im Dateinetzwerk.      |
-| &lt;password&gt;       | Kennwort für die Anmeldeinformationen mit Zugriff auf den Server im Dateinetzwerk. |
-| &lt;remotedeploydir&gt;| Verzeichnis auf dem Gerät relativ zum Bereitstellungsspeicherort.                      |
+| <span data-ttu-id="42d60-183">&lt;x&gt;</span><span class="sxs-lookup"><span data-stu-id="42d60-183">&lt;x&gt;</span></span>              | <span data-ttu-id="42d60-184">Zeitüberschreitung in Sekunden.</span><span class="sxs-lookup"><span data-stu-id="42d60-184">Timeout in seconds.</span></span> <span data-ttu-id="42d60-185">(Der Standardwert ist 10.)</span><span class="sxs-lookup"><span data-stu-id="42d60-185">(Default is 10)</span></span>                                          |
+| <span data-ttu-id="42d60-186">&lt;address&gt;</span><span class="sxs-lookup"><span data-stu-id="42d60-186">&lt;address&gt;</span></span>        | <span data-ttu-id="42d60-187">Die IP-Adresse oder der eindeutige Bezeichner des Zielgeräts.</span><span class="sxs-lookup"><span data-stu-id="42d60-187">IP address or unique identifier of the target device.</span></span>                        |
+| <span data-ttu-id="42d60-188">&lt;a&gt;&lt;b&gt; ...</span><span class="sxs-lookup"><span data-stu-id="42d60-188">&lt;a&gt;&lt;b&gt; ...</span></span> | <span data-ttu-id="42d60-189">Der Abhängigkeitspfad für die einzelnen App-Paket-Abhängigkeiten.</span><span class="sxs-lookup"><span data-stu-id="42d60-189">Dependency path for each of the app package dependencies.</span></span>                    |
+| <span data-ttu-id="42d60-190">&lt;p&gt;</span><span class="sxs-lookup"><span data-stu-id="42d60-190">&lt;p&gt;</span></span>              | <span data-ttu-id="42d60-191">Eine alphanumerische PIN, die in den Geräteeinstellungen angezeigt und zum Herstellen einer Verbindung verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="42d60-191">An alpha-numeric pin shown in the device settings to establish a connection.</span></span> |
+| <span data-ttu-id="42d60-192">&lt;path&gt;</span><span class="sxs-lookup"><span data-stu-id="42d60-192">&lt;path&gt;</span></span>           | <span data-ttu-id="42d60-193">Dateisystempfad.</span><span class="sxs-lookup"><span data-stu-id="42d60-193">File system path.</span></span>                                                            |
+| <span data-ttu-id="42d60-194">&lt;name&gt;</span><span class="sxs-lookup"><span data-stu-id="42d60-194">&lt;name&gt;</span></span>           | <span data-ttu-id="42d60-195">Vollständiger Paketname für das zu deinstallierende App-Paket.</span><span class="sxs-lookup"><span data-stu-id="42d60-195">Full package name for the app package to uninstall.</span></span>                          |
+| <span data-ttu-id="42d60-196">&lt;server&gt;</span><span class="sxs-lookup"><span data-stu-id="42d60-196">&lt;server&gt;</span></span>         | <span data-ttu-id="42d60-197">Server im Dateinetzwerk.</span><span class="sxs-lookup"><span data-stu-id="42d60-197">Server on the file network.</span></span>                                                  |
+| <span data-ttu-id="42d60-198">&lt;username&gt;</span><span class="sxs-lookup"><span data-stu-id="42d60-198">&lt;username&gt;</span></span>       | <span data-ttu-id="42d60-199">Benutzer für die Anmeldeinformationen mit Zugriff auf den Server im Dateinetzwerk.</span><span class="sxs-lookup"><span data-stu-id="42d60-199">User for the credentials with access to the server on the file network.</span></span>      |
+| <span data-ttu-id="42d60-200">&lt;password&gt;</span><span class="sxs-lookup"><span data-stu-id="42d60-200">&lt;password&gt;</span></span>       | <span data-ttu-id="42d60-201">Kennwort für die Anmeldeinformationen mit Zugriff auf den Server im Dateinetzwerk.</span><span class="sxs-lookup"><span data-stu-id="42d60-201">Password for the credentials with access to the server on the files network.</span></span> |
+| <span data-ttu-id="42d60-202">&lt;remotedeploydir&gt;</span><span class="sxs-lookup"><span data-stu-id="42d60-202">&lt;remotedeploydir&gt;</span></span>| <span data-ttu-id="42d60-203">Verzeichnis auf dem Gerät relativ zum Bereitstellungsspeicherort.</span><span class="sxs-lookup"><span data-stu-id="42d60-203">Directory on device relative to the deployment location</span></span>                      |
 
  
-## <a name="winappdeploycmdexe-examples"></a>Beispiele für „WinAppDeployCmd.exe“
+## <a name="winappdeploycmdexe-examples"></a><span data-ttu-id="42d60-204">Beispiele für „WinAppDeployCmd.exe“</span><span class="sxs-lookup"><span data-stu-id="42d60-204">WinAppDeployCmd.exe examples</span></span>
 
-Im Folgenden finden Sie einige Beispiele dazu, wie Sie mithilfe der Syntax für **WinAppDeployCmd.exe** eine Bereitstellung über die Befehlszeile ausführen.
+<span data-ttu-id="42d60-205">Im Folgenden finden Sie einige Beispiele dazu, wie Sie mithilfe der Syntax für **WinAppDeployCmd.exe** eine Bereitstellung über die Befehlszeile ausführen.</span><span class="sxs-lookup"><span data-stu-id="42d60-205">Here are some examples of how to deploy from the command-line using the sytax for **WinAppDeployCmd.exe**.</span></span>
 
-Zeigt die für die Bereitstellung verfügbaren Geräte an. Der Befehl verursacht in drei Sekunden ein Timeout.
+<span data-ttu-id="42d60-206">Zeigt die für die Bereitstellung verfügbaren Geräte an.</span><span class="sxs-lookup"><span data-stu-id="42d60-206">Shows the devices that are available for deployment.</span></span> <span data-ttu-id="42d60-207">Der Befehl verursacht in drei Sekunden ein Timeout.</span><span class="sxs-lookup"><span data-stu-id="42d60-207">The command times out in 3 seconds.</span></span>
 
 ``` syntax
 WinAppDeployCmd devices 3
 ```
 
-Installiert die App aus dem Paket „MyApp.appx“, das sich im Downloadverzeichnis Ihres PCs befindet, auf ein Windows 10-Gerät mit der IP-Adresse 192.168.0.1 und der PIN A1B2C3, um eine Verbindung mit dem Gerät herzustellen.
+<span data-ttu-id="42d60-208">Installiert die App aus dem Paket „MyApp.appx“, das sich im Downloadverzeichnis Ihres PCs befindet, auf ein Windows10-Gerät mit der IP-Adresse 192.168.0.1 und der PIN A1B2C3, um eine Verbindung mit dem Gerät herzustellen.</span><span class="sxs-lookup"><span data-stu-id="42d60-208">Installs the app from MyApp.appx package that is in your PC's Downloads directory to a Windows 10 device with an IP address of 192.168.0.1 with a PIN of A1B2C3 to establish a connection with the device</span></span>
 
 ``` syntax
 WinAppDeployCmd install -file "Downloads\MyApp.appx" -ip 192.168.0.1 -pin A1B2C3
 ```
 
-Deinstalliert das angegebene Paket (unter Verwendung des vollständigen Namens) von einem Windows 10-Gerät mit der IP-Adresse 192.168.0.1. Mit dem list-Befehl können Sie die vollständigen Namen aller Pakete anzeigen, die auf einem Gerät installiert sind.
+<span data-ttu-id="42d60-209">Deinstalliert das angegebene Paket (unter Verwendung des vollständigen Namens) von einem Windows10-Gerät mit der IP-Adresse 192.168.0.1.</span><span class="sxs-lookup"><span data-stu-id="42d60-209">Uninstalls the specified package (based on its full name) from a Windows 10 device with an IP address of 192.168.0.1.</span></span> <span data-ttu-id="42d60-210">Mit dem list-Befehl können Sie die vollständigen Namen aller Pakete anzeigen, die auf einem Gerät installiert sind.</span><span class="sxs-lookup"><span data-stu-id="42d60-210">You can use the list command to see the full names of any packages that are installed on a device.</span></span>
 
 ``` syntax
 WinAppDeployCmd uninstall -package Company.MyApp_1.0.0.1_x64__qwertyuiop -ip 192.168.0.1
 ```
 
-Aktualisiert die bereits auf dem Windows 10-Gerät mit der IP-Adresse 192.168.0.1 installierte App unter Verwendung des angegebenen APPX-Pakets.
+<span data-ttu-id="42d60-211">Aktualisiert die bereits auf dem Windows10-Gerät mit der IP-Adresse 192.168.0.1 installierte App unter Verwendung des angegebenen APPX-Pakets.</span><span class="sxs-lookup"><span data-stu-id="42d60-211">Updates the app that is already installed on the Windows 10 device with an IP address of 192.168.0.1 using the specified .appx package.</span></span>
 
 ``` syntax
 WinAppDeployCmd update -file "Downloads\MyApp.appx" -ip 192.168.0.1
 ```
 
-Stellt die Dateien einer App auf einem PC oder auf Xbox mit der IP-Adresse 192.168.0.1 im gleichen Ordner wie das AppxManifest im Verzeichnis app1_F5 am Bereitstellungspfad des Geräts bereit.
+<span data-ttu-id="42d60-212">Stellt die Dateien einer App auf einem PC oder auf Xbox mit der IP-Adresse 192.168.0.1 im gleichen Ordner wie das AppxManifest im Verzeichnis app1_F5 am Bereitstellungspfad des Geräts bereit.</span><span class="sxs-lookup"><span data-stu-id="42d60-212">Deploys the files of an app to a PC or Xbox with an IP address of 192.168.0.1 in the same folder as the AppxManifest to the app1_F5 directory under the deployment path of the device.</span></span>
 
 ``` syntax
 WinAppDeployCmd deployfiles -file "C:\apps\App1\AppxManifest.xml" -remotedeploydir app1_F5 -ip 192.168.0.1
 ```
 
-Registriert die App im Verzeichnis app1_F5 am Bereitstellungspfad des PCs oder der Xbox mit 192.168.0.1.
+<span data-ttu-id="42d60-213">Registriert die App im Verzeichnis app1_F5 am Bereitstellungspfad des PCs oder der Xbox mit 192.168.0.1.</span><span class="sxs-lookup"><span data-stu-id="42d60-213">Registers the app at the app1_F5 directory under the deployment path of the PC or Xbox at 192.168.0.1.</span></span>
 
 ``` syntax
 WinAppDeployCmd registerfiles -file app1_F5 -ip 192.168.0.1
 ```
 
-## <a name="using-winappdeploycmd-to-set-up-run-from-pc-deployment-on-xbox-one"></a>Verwenden von WinAppDeployCmd für die Einrichtung von über einen PC ausgeführten Bereitstellungen auf Xbox One
+## <a name="using-winappdeploycmd-to-set-up-run-from-pc-deployment-on-xbox-one"></a><span data-ttu-id="42d60-214">Verwenden von WinAppDeployCmd für die Einrichtung von über einen PC ausgeführten Bereitstellungen auf Xbox One</span><span class="sxs-lookup"><span data-stu-id="42d60-214">Using WinAppDeployCmd to set up Run from PC deployment on Xbox One</span></span>
 
-Das Ausführen über einen PC ermöglicht Ihnen die Bereitstellung einer UWP-Anwendung auf einer Xbox One, ohne die Binärdateien zu kopieren. Die Binärdateien werden stattdessen in einer Netzwerkfreigabe im selben Netzwerk wie die Xbox gehostet.  Dazu benötigen Sie eine für Entwickler entsperrte Xbox One und eine UWP-Anwendung mit loser Datei in einem Netzlaufwerk, das auf die Xbox zugreifen kann.
+<span data-ttu-id="42d60-215">Das Ausführen über einen PC ermöglicht Ihnen die Bereitstellung einer UWP-Anwendung auf einer Xbox One, ohne die Binärdateien zu kopieren. Die Binärdateien werden stattdessen in einer Netzwerkfreigabe im selben Netzwerk wie die Xbox gehostet.</span><span class="sxs-lookup"><span data-stu-id="42d60-215">Run from PC allows you to deploy a UWP application to an Xbox One without copying the binaries over, instead the binaries are hosted on a network share on the same network as the Xbox.</span></span>  <span data-ttu-id="42d60-216">Dazu benötigen Sie eine für Entwickler entsperrte Xbox One und eine UWP-Anwendung mit loser Datei in einem Netzlaufwerk, das auf die Xbox zugreifen kann.</span><span class="sxs-lookup"><span data-stu-id="42d60-216">In order to do this, you need a developer unlocked Xbox One, and a loose file UWP application on a network drive that the Xbox can access.</span></span>
 
-Führen Sie Folgendes aus, um die App zu registrieren:
+<span data-ttu-id="42d60-217">Führen Sie Folgendes aus, um die App zu registrieren:</span><span class="sxs-lookup"><span data-stu-id="42d60-217">Run this to register the app:</span></span>
 ``` syntax
 WinAppDeployCmd registerfiles -ip <Xbox One IP> -remotedeploydir <location of app> -username <user for network> -password <password for user>
 
 ex. WinAppDeployCmd register files -ip 192.168.0.1 -remotedeploydir \\driveA\myAppLocation -username admin -password A1B2C3
 ```
-

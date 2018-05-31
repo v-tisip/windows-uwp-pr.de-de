@@ -1,262 +1,93 @@
 ---
 author: mcleanbyron
-description: "Hier erfahren Sie, wie Sie Ihre App aktualisieren, damit Sie die neuesten unterstützten Microsoft Advertising-Bibliotheken verwenden können und Ihre App weiterhin Banneranzeigen erhält."
-title: Aktualisieren Ihrer App auf die aktuellen Microsoft Advertising-Bibliotheken
+description: Hier erfahren Sie, wie Sie Ihre App aktualisieren, damit Sie die neuesten unterstützten Microsoft Advertising-Bibliotheken verwenden können und Ihre App weiterhin Banneranzeigen erhält.
+title: Aktualisieren Ihrer App auf die neuesten Advertising-Bibliotheken für Banneranzeigen
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Anzeigen, Werbung, AdControl, AdMediatorControl, Migrieren"
+keywords: Windows10, UWP, Anzeigen, Werbung, AdControl, AdMediatorControl, Migrieren
 ms.assetid: f8d5b2ad-fcdb-4891-bd68-39eeabdf799c
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 3cdb1f41fda7bd4e4af1ce9e5f8fb4396da53f63
-ms.lasthandoff: 02/08/2017
-
+ms.localizationpriority: medium
+ms.openlocfilehash: 76581de948a4bb62597443e389122298f69c561d
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1654809"
 ---
+# <a name="update-your-app-to-the-latest-advertising-libraries-for-banner-ads"></a><span data-ttu-id="86de6-104">Aktualisieren Ihrer App auf die neuesten Advertising-Bibliotheken für Banneranzeigen</span><span class="sxs-lookup"><span data-stu-id="86de6-104">Update your app to the latest advertising libraries for banner ads</span></span>
 
-# <a name="update-your-app-to-the-latest-microsoft-advertising-libraries"></a>Aktualisieren Ihrer App auf die aktuellen Microsoft Advertising-Bibliotheken
+<span data-ttu-id="86de6-105">Am dem 1.April2017 werden Banneranzeigen nicht mehr für Apps bereitgestellt, die nicht unterstützte Advertising-SDK-Versionen verwenden.</span><span class="sxs-lookup"><span data-stu-id="86de6-105">As of April 1, 2017, we no longer serve banner ads to apps that use an unsupported advertising SDK release.</span></span> <span data-ttu-id="86de6-106">Bei Verwendung von **AdControl** zum Anzeigen von Banneranzeigen in Ihrer universellen Windows-Plattform-App (UWP), verwenden Sie die Informationen in diesem Artikel, um herauszufinden, ob Sie eine nicht unterstützte Advertising-SDK verwenden und migrieren Sie Ihre App zu einem unterstützten SDK.</span><span class="sxs-lookup"><span data-stu-id="86de6-106">If you use **AdControl** to display banner ads in your Universal Windows Platform (UWP) app, use the information in this article to determine whether you are using an unsupported advertising SDK and migrate your app to a supported SDK.</span></span>
 
-Nur die folgenden SDKs werden zum Anzeigen von Werbebannern aus Microsoft Advertising in Ihren Apps mithilfe von **AdControl** oder **AdMediatorControl** unterstützt:
+## <a name="overview"></a><span data-ttu-id="86de6-107">Übersicht</span><span class="sxs-lookup"><span data-stu-id="86de6-107">Overview</span></span>
 
-* [Microsoft Store Services SDK](http://aka.ms/store-services-sdk) (für UWP-Apps)
-* [Microsoft Advertising SDK für Windows und Windows Phone 8.x](http://aka.ms/store-8-sdk) (für Windows 8.1- und Windows Phone 8.x-Apps)
+<span data-ttu-id="86de6-108">UWP-Apps, die Banneranzeige verwenden, müssen **AdControl** aus der Advertising-Bibliotheken verwenden, die in [Microsoft Advertising-SDK](http://aka.ms/ads-sdk-uwp) verteilt werden.</span><span class="sxs-lookup"><span data-stu-id="86de6-108">UWP apps that show banner ads must use **AdControl** from the advertising libraries that are distributed in the [Microsoft Advertising SDK](http://aka.ms/ads-sdk-uwp).</span></span> <span data-ttu-id="86de6-109">Diese SDK-Version unterstützt einen mindestens erforderlichen Satz von Funktionen. Dies umfasst auch die Möglichkeit, HTML5-Rich-Media über die [Mobile Rich Media Ad Interface Definitions (MRAID) 1.0-Spezifikation](http://www.iab.com/wp-content/uploads/2015/08/IAB_MRAID_VersionOne.pdf) vom Interactive Advertising Bureau (IAB) zu verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="86de6-109">This SDK supports a minimum set of advertising capabilities, including the ability to serve HTML5 rich media via the [Mobile Rich-media Ad Interface Definitions (MRAID) 1.0 specification](http://www.iab.com/wp-content/uploads/2015/08/IAB_MRAID_VersionOne.pdf) from the Interactive Advertising Bureau (IAB).</span></span> <span data-ttu-id="86de6-110">Viele unserer Werbekunden wünschen sich diese Funktionen und wir setzen voraus, dass App-Entwickler eine dieser SDK-Versionen verwenden, damit unser App-Ökosystem für Werbekunden attraktiver wird und Ihr Umsatz wächst.</span><span class="sxs-lookup"><span data-stu-id="86de6-110">Many of our advertisers seek these capabilities, and we require app developers to use one of these SDK releases to help make our app ecosystem more attractive to advertisers and ultimately drive more revenue to you.</span></span>
 
-Bevor diese SDKs verfügbar waren, haben wir verschiedene ältere Advertising SDK-Versionen für Windows- und Windows Phone-Apps freigegeben. Diese älteren Advertising SDK-Versionen werden nicht mehr unterstützt. Für die Zukunft planen wir, die Bereitstellung von Banner-Anzeigen für Apps, die diese älteren SDKs unterstützen, einzustellen.
+<span data-ttu-id="86de6-111">Vor der Freigabe dieses SDK wurde die **AdControl**-Klasse in mehreren älteren Advertising-SDK-Versionen angeboten.</span><span class="sxs-lookup"><span data-stu-id="86de6-111">Before this SDK was released, we previously provided the **AdControl** class in several older advertising SDK releases.</span></span> <span data-ttu-id="86de6-112">Diese älteren Advertising-SDK-Versionen werden nicht mehr unterstützt, da sie den oben beschriebenen mindestens erforderlichen Satz von Funktionen nicht unterstützen.</span><span class="sxs-lookup"><span data-stu-id="86de6-112">These older advertising SDK releases are no longer supported because they do not support the minimum advertising capabilities described above.</span></span> <span data-ttu-id="86de6-113">Am dem 1.April2017 werden Banneranzeigen nicht mehr für Apps bereitgestellt, die nicht unterstützte Advertising-SDK-Versionen verwenden.</span><span class="sxs-lookup"><span data-stu-id="86de6-113">As of April 1, 2017, we no longer serve banner ads to apps that use an unsupported advertising SDK release.</span></span> <span data-ttu-id="86de6-114">Wenn Sie eine App besitzen, die weiterhin eine nicht unterstützte Advertising-SDK-Version verwendet, geschieht Folgendes:</span><span class="sxs-lookup"><span data-stu-id="86de6-114">If you have an app that still uses an unsupported advertising SDK release, you will see the following behavior:</span></span>
 
-Wenn Sie bereits über eine App verfügen (die im Store verfügbar ist oder sich noch in Entwicklung befindet), die Banneranzeigen mithilfe von **AdControl** oder **AdMediatorControl** anzeigt, müssen Sie Ihre App unter Umständen auf das aktuelle Advertising SDK für Ihre Zielplattform aktualisieren, damit sie künftig weiterhin Banneranzeigen erhält. Befolgen Sie die Anweisungen in diesem Artikel, um festzustellen, ob Ihre App von dieser Veränderung betroffen ist, und um zu erfahren, wie Sie diese ggf. aktualisieren können.
+* <span data-ttu-id="86de6-115">Banneranzeigen werden nicht mehr für **AdControl** in Ihrer App bereitgestellt, und Sie erhalten keinen Anzeigenumsatz mehr aus diesen Steuerelementen.</span><span class="sxs-lookup"><span data-stu-id="86de6-115">Banner ads will no longer be served to any **AdControl** in your app, and you will no longer earn advertising revenue from those controls.</span></span>
 
-Wenn Ihre App von dieser Änderung betroffen ist und Sie Ihre App nicht so aktualisieren, dass sie die neueste Advertising SDK verwendet, werden Sie das folgende Verhalten sehen, wenn wir die Bereitstellung von Banner-Anzeigen für Apps, die nicht unterstützte Advertising SDK-Versionen verwenden, einstellen.
+* <span data-ttu-id="86de6-116">Wenn **AdControl** in Ihrer App eine neue Anzeige anfordert, wird ein **ErrorOccurred**-Ereignis des Steuerelements ausgegeben, und die **ErrorCode**-Eigenschaft der Ereignisargumente hat den Wert **NoAdAvailable**.</span><span class="sxs-lookup"><span data-stu-id="86de6-116">When the **AdControl** in your app requests a new ad, the **ErrorOccurred** event of the control will be raised and the **ErrorCode** property of the event args will have the value **NoAdAvailable**.</span></span>
 
-* Banneranzeigen werden nicht mehr für **AdControl**- oder **AdMediatorControl**-Steuerelemente in Ihrer App bereitgestellt, und Sie erhalten keinen Anzeigenumsatz mehr aus diesen Steuerelementen.
+* <span data-ttu-id="86de6-117">Alle Anzeigeneinheiten, die Ihrer App zugeordnet sind, werden deaktiviert.</span><span class="sxs-lookup"><span data-stu-id="86de6-117">Any ad units that are associated with your app will be deactivated.</span></span> <span data-ttu-id="86de6-118">Sie können diese deaktivierten Anzeigeeinheiten nicht aus Ihrem Dev Center-Konto entfernen.</span><span class="sxs-lookup"><span data-stu-id="86de6-118">You cannot remove these deactivated ad units from your Dev Center account.</span></span> <span data-ttu-id="86de6-119">Wenn Sie Ihre App aktualisieren, damit Sie ein unterstütztes [Microsoft Advertising-SDK](http://aka.ms/ads-sdk-uwp) nutzen können, ignorieren Sie diese Anzeigeneinheiten und erstellen Sie neue.</span><span class="sxs-lookup"><span data-stu-id="86de6-119">If you update your app to use the [Microsoft Advertising SDK](http://aka.ms/ads-sdk-uwp), ignore these ad units and create new ones.</span></span>
 
-* Wenn **AdControl** oder **AdMediatorControl** in Ihrer App eine neue Anzeige anfordert, wird ein **ErrorOccurred**-Ereignis des Steuerelements ausgegeben, und die **ErrorCode**-Eigenschaft der Ereignisargumente hat den Wert **NoAdAvailable**.
+* <span data-ttu-id="86de6-120">Banneranzeigen werden nicht mehr für Anzeigeneinheiten bereitgestellt, die in mehreren Apps verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="86de6-120">Banner ads will also no longer be served for any ad unit that is used in more than one app.</span></span> <span data-ttu-id="86de6-121">Stellen Sie sicher, dass Ihre Anzeigeneinheiten jeweils nur in einer App verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="86de6-121">Make sure that your ad units are each used in only one app.</span></span>
 
-Beachten Sie außerdem, dass wir ältere Advertising SDK-Versionen nicht weiter unterstützen, die nicht einen mindestens erforderlichen Satz von Funktionen unterstützen. Dies umfasst auch die Möglichkeit, HTML5-Rich-Media über die [Mobile Rich Media Ad Interface Definitions (MRAID) 1.0-Spezifikation](http://www.iab.com/wp-content/uploads/2015/08/IAB_MRAID_VersionOne.pdf) vom Interactive Advertising Bureau (IAB) zu verarbeiten. Viele unserer Werbekunden wünschen sich diese Funktionen, und wir nehmen diese Änderungen vor, damit unser App-Ökosystem für Werbekunden attraktiver wird und Ihr Umsatz wächst.
+<span data-ttu-id="86de6-122">Wenn Sie über eine App verfügen (bereits im Store oder noch in Entwicklung), die Banneranzeigen mithilfe von **AdControl** anzeigt, und Sie nicht sicher sind, welches Advertising-SDK von Ihrer App verwendet wird, ermitteln Sie anhand der Anweisungen in diesem Artikel, ob Sie Ihre App auf ein unterstütztes SDK aktualisieren müssen.</span><span class="sxs-lookup"><span data-stu-id="86de6-122">If you have an existing app (already in the Store or still under development) that displays banner ads using **AdControl** and you aren't sure which advertising SDK is being used by your app, follow the instructions in this article to determine whether you need to update your app to a supported SDK.</span></span> <span data-ttu-id="86de6-123">Wenn Schwierigkeiten auftreten oder Sie Hilfe benötigen, [wenden Sie sich an den Support](http://go.microsoft.com/fwlink/?LinkId=393643).</span><span class="sxs-lookup"><span data-stu-id="86de6-123">If you encounter any issues or you need assistance, please [contact support](http://go.microsoft.com/fwlink/?LinkId=393643).</span></span>
 
-Wenn Schwierigkeiten auftreten oder Sie Hilfe benötigen, [wenden Sie sich an den Support](http://go.microsoft.com/fwlink/?LinkId=393643).
+> [!NOTE]
+> <span data-ttu-id="86de6-124">Wenn Ihre App bereits [Microsoft Advertising-SDK](http://aka.ms/ads-sdk-uwp) (für UWP-Apps) verwendet müssen für Ihre App keine weiteren Änderungen vorgenommen werden.</span><span class="sxs-lookup"><span data-stu-id="86de6-124">If your app already uses the [Microsoft Advertising SDK](http://aka.ms/ads-sdk-uwp) (for UWP apps), you do not need to make any further changes to your app.</span></span>
 
->**Hinweis**&nbsp;&nbsp;Wenn Ihre App bereits das [Microsoft Store Services SDK](http://aka.ms/store-services-sdk) (für UWP-Apps) oder das [Microsoft Advertising SDK für Windows und Windows Phone 8.x](http://aka.ms/store-8-sdk) (für Windows 8.1- und Windows Phone 8.x-Apps) verwendet, oder Sie Ihre App bereits zur Nutzung eines dieser SDKs aktualisiert haben, verwendet diese bereits das neueste verfügbare Advertising SDK, und Sie müssen an Ihrer App keine weiteren Änderungen vornehmen.
+## <a name="prerequisites"></a><span data-ttu-id="86de6-125">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="86de6-125">Prerequisites</span></span>
 
-## <a name="prerequisites"></a>Voraussetzungen
+* <span data-ttu-id="86de6-126">Der komplette Quellcode und Visual Studio-Projektdateien für Ihre App, die **AdControl** verwendet.</span><span class="sxs-lookup"><span data-stu-id="86de6-126">The complete source code and Visual Studio project files for your app that uses **AdControl**.</span></span>
+* <span data-ttu-id="86de6-127">Das APPX-Paket für Ihre App.</span><span class="sxs-lookup"><span data-stu-id="86de6-127">The .appx package for your app.</span></span>
 
-* Der komplette Quellcode und Visual Studio-Projektdateien für Ihre App, die **AdControl** oder **AdMediatorControl** verwendet.
-
-* Das APPX- oder XAP-Paket für Ihre App.
-
-  >**Hinweis**&nbsp;&nbsp;Wenn Sie über das APPX- oder XAP-Paket für Ihre App nicht mehr verfügen, Ihnen aber noch immer ein Entwicklungscomputer mit der Version von Visual Studio und dem Advertising SDK, das für die App-Erstellung eingesetzt wurde, zur Verfügung steht, können Sie das APPX- oder XAP-Paket in Visual Studio neu generieren.
+> [!NOTE]
+> <span data-ttu-id="86de6-128">Wenn Sie über das APPX-Paket für Ihre App nicht mehr verfügen, Ihnen aber noch immer ein Entwicklungscomputer mit der Version von Visual Studio und dem Advertising-SDK, das für die App-Erstellung eingesetzt wurde, zur Verfügung steht, können Sie das APPX- Paket in Visual Studio neu generieren.</span><span class="sxs-lookup"><span data-stu-id="86de6-128">If you no longer have the .appx package for your app but you do still have a development computer with the version of Visual Studio and the advertising SDK that was used to build your app, you can regenerate the .appx package in Visual Studio.</span></span>
 
 <span id="part-1" />
-## <a name="part-1-determine-whether-you-need-to-update-your-app"></a>Teil 1: Ermitteln, ob Ihre App aktualisiert werden muss
 
-Befolgen Sie die Anweisungen in den folgenden Abschnitten, um festzustellen, ob Sie Ihre App aktualisieren müssen.
+## <a name="part-1-determine-whether-you-need-to-update-your-uwp-app"></a><span data-ttu-id="86de6-129">Teil 1: Ermitteln, ob Ihre UWP-App aktualisiert werden muss</span><span class="sxs-lookup"><span data-stu-id="86de6-129">Part 1: Determine whether you need to update your UWP app</span></span>
 
-### <a name="your-app-uses-adcontrol"></a>Ihre App verwendet AdControl
+<span data-ttu-id="86de6-130">Befolgen Sie die Anweisungen in den folgenden Abschnitten, um festzustellen, ob Sie Ihre App aktualisieren müssen.</span><span class="sxs-lookup"><span data-stu-id="86de6-130">Follow the instructions in the following sections to determine if you need to update your app.</span></span>
 
-Wenn Ihre App **AdControl** zum Anzeigen von Banneranzeigen verwendet, gehen Sie wie folgt vor.
+1. <span data-ttu-id="86de6-131">Erstellen Sie eine Kopie des APPX-Pakets für Ihre App, damit das Original nicht beeinträchtigt wird, benennen Sie die Kopie um, sodass sie die Erweiterung „.zip“ erhält, und extrahieren Sie den Inhalt der Datei.</span><span class="sxs-lookup"><span data-stu-id="86de6-131">Create a copy of the .appx package for your app so you do not disturb the original, rename the copy so it has a .zip extension, and extract the contents of the file.</span></span>
 
-**UWP-Apps für Windows 10**
+2. <span data-ttu-id="86de6-132">Überprüfen Sie den extrahierten Inhalt Ihres App-Pakets:</span><span class="sxs-lookup"><span data-stu-id="86de6-132">Check the extracted contents of your app package:</span></span>
+  * <span data-ttu-id="86de6-133">Wenn die Datei „Microsoft.Advertising.dll“ vorhanden ist, verwendet Ihre App ein altes SDK, und Sie müssen Ihr Projekt aktualisieren, indem Sie die Anweisungen in den folgenden Abschnitten ausführen.</span><span class="sxs-lookup"><span data-stu-id="86de6-133">If you see a Microsoft.Advertising.dll file, your app uses an old SDK and you must update your project by following the instructions in the sections below.</span></span> <span data-ttu-id="86de6-134">Fahren Sie mit [Teil 2](update-your-app-to-the-latest-advertising-libraries.md#part-2) fort.</span><span class="sxs-lookup"><span data-stu-id="86de6-134">Proceed to [Part 2](update-your-app-to-the-latest-advertising-libraries.md#part-2).</span></span>
+  * <span data-ttu-id="86de6-135">Wenn die Datei „Microsoft.Advertising.dll“ nicht vorhanden ist, verwendet Ihre UWP-App bereits das neueste verfügbare Advertising SDK, und Sie müssen keine Änderungen an Ihrem Projekt vornehmen.</span><span class="sxs-lookup"><span data-stu-id="86de6-135">If you do not see a Microsoft.Advertising.dll file, your UWP app already uses the latest available advertising SDK and you do not need to make any changes to your project.</span></span>
 
-1. Erstellen Sie eine Kopie des APPX-Pakets für Ihre App, damit das Original nicht beeinträchtigt wird, benennen Sie die Kopie um, sodass sie die Erweiterung „.zip“ erhält, und extrahieren Sie den Inhalt der Datei.
-
-2. Überprüfen Sie den extrahierten Inhalt Ihres App-Pakets:
-
-  * Wenn die Datei „Microsoft.Advertising.dll“ vorhanden ist, verwendet Ihre App ein altes SDK, und Sie müssen Ihr Projekt aktualisieren, indem Sie die Anweisungen in den folgenden Abschnitten ausführen. Fahren Sie mit [Teil 2](update-your-app-to-the-latest-advertising-libraries.md#part-2) fort.
-
-  * Wenn die Datei „Microsoft.Advertising.dll“ nicht vorhanden ist, verwendet Ihre UWP-App bereits das neueste verfügbare Advertising SDK, und Sie müssen keine Änderungen an Ihrem Projekt vornehmen.
-
-<span/>
-
-**Windows 8.1- oder Windows Phone 8.x-Apps**
-
-1. Erstellen Sie eine Kopie des APPX- oder XAP-Pakets für Ihre App, damit das Original nicht beeinträchtigt wird, benennen Sie die Kopie um, sodass sie die Erweiterung „.zip“ erhält, und extrahieren Sie den Inhalt der Datei.
-
-2. Im Fall von XAML- oder JavaScript/HTML-Apps prüfen Sie den extrahierten Inhalt Ihres App-Pakets:
-
-  * Wenn die Datei „Microsoft.Advertising.winmd“ vorhanden ist, die Datei „UniversalXamlAdControl.\*.dll“ (für XAML-Apps) oder „UniversalSharedLibrary.Windows.dll“ (für JavaScript/HTML-Apps) jedoch nicht, verwendet Ihre App ein altes SDK, und Sie müssen Ihr Projekt aktualisieren, indem Sie die Anweisungen in den folgenden Abschnitten ausführen. Fahren Sie mit [Teil 2](update-your-app-to-the-latest-advertising-libraries.md#part-2) fort.
-
-  * Andernfalls fahren Sie bitte mit dem folgenden Schritt fort.
-
-2. Öffnen Sie Windows PowerShell, geben Sie den folgenden Befehl ein, und weisen Sie das Argument ```-Path``` dem vollständigen Pfad zum extrahierten Inhalt des App-Pakets zu. Dieser Befehl zeigt alle Advertising-Bibliotheken an, auf die Ihr Projekt verweist, sowie die Version der einzelnen Bibliotheken.
-
-  > [!div class="tabbedCodeSnippets"]
-  ```syntax
-  get-childitem -Path "<path to your extracted package>" * -Recurse -include *advert*.dll,*admediator*.dll,*xamladcontrol*.dll,*universalsharedlibrary*.dll | where-object {$_.Name -notlike "*resources*" -and $_.Name -notlike "*design*" } | foreach-object { "{0}`t{1}" -f $_.FullName, [System.Diagnostics.FileVersionInfo]::GetVersionInfo($_).FileVersion }
-  ```
-
-2. Suchen Sie die Datei in der folgenden Tabelle für die Zielplattform Ihrer App, und vergleichen Sie die Versionen der Datei mit der in der Tabelle aufgeführten Version.
-
-  <table>
-    <colgroup>
-      <col width="33%" />
-      <col width="33%" />
-      <col width="33%" />
-    </colgroup>
-    <thead>
-      <tr class="header">
-        <th align="left">Zielplattform</th>
-        <th align="left">Dateien</th>
-        <th align="left">Version</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class="odd">
-        <td align="left"><p>Windows 8.1 XAML</p></td>
-        <td align="left"><p>UniversalXamlAdControl.Windows.dll</p></td>
-        <td align="left"><p>8.5.1601.07018</p></td>
-      </tr>
-      <tr class="odd">
-        <td align="left"><p>Windows Phone 8.1 XAML</p></td>
-        <td align="left"><p>UniversalXamlAdControl.WindowsPhone.dll</p></td>
-        <td align="left"><p>8.5.1601.07018</p></td>
-      </tr>
-      <tr class="odd">
-        <td align="left"><p>Windows 8.1 JavaScript/HTML<br/>Windows Phone 8.1 JavaScript/HTML</p></td>
-        <td align="left"><p>UniversalSharedLibrary.Windows.dll</p></td>
-        <td align="left"><p>8.5.1601.07018</p></td>
-      </tr>
-      <tr class="odd">
-        <td align="left"><p>Windows Phone 8.1 Silverlight</p></td>
-        <td align="left"><p>Microsoft.Advertising.\*.dll</p></td>
-        <td align="left"><p>8.1.50112.0</p></td>
-      </tr>
-      <tr class="odd">
-        <td align="left"><p>Windows Phone 8.0 Silverlight</p></td>
-        <td align="left"><p>Microsoft.Advertising.\*.dll</p></td>
-        <td align="left"><p>6.2.40501.0</p></td>
-      </tr>
-    </tbody>
-  </table>
-
-3. Wenn die Version der Datei mindestens genauso hoch ist wie die in der obigen Tabelle aufgeführte Version, müssen Sie keine Änderungen an Ihrem Projekt vornehmen.
-
-  Wenn die Datei eine niedrigere Versionsnummer aufweist, müssen Sie Ihr Projekt aktualisieren, ‌indem Sie die Anweisungen in den folgenden Abschnitten ausführen. Fahren Sie mit [Teil 2](update-your-app-to-the-latest-advertising-libraries.md#part-2) fort.
-
-<span/>
-
-**Windows 8.0-Apps**
-
-* Für Apps, die für Windows 8.0 entwickelt wurden, werden künftig möglicherweise keine Banneranzeigen mehr bereitgestellt. Damit keine Aufrufe verloren gehen, empfehlen wir Ihnen, Ihr Projekt in eine UWP-App für Windows 10 umzuwandeln. Der Großteil des Windows 8.0-App-Datenverkehrs läuft nun auf Windows 10-Geräten.
-
-<span/>
-
-**Windows Phone 7.x-Apps**
-
-* Für Apps, die für Windows Phone 7.x entwickelt wurden, werden künftig möglicherweise keine Banneranzeigen mehr bereitgestellt. Damit keine Aufrufe verloren gehen, empfehlen wir Ihnen, Ihr Projekt in eine Windows Phone 8.1- oder UWP-App für Windows 10 umzuwandeln. Der Großteil des Windows 7.x-App-Datenverkehrs läuft nun auf Windows Phone 8.1- oder Windows 10-Geräten.
-
-<span/>
-
-### <a name="your-app-uses-admediatorcontrol"></a>Ihre App verwendet AdMediatorControl.
-
-Wenn Ihre App **AdMediatorControl** zum Anzeigen von Banneranzeigen verwendet, befolgen Sie diese Anweisungen, um festzustellen, ob Ihre App aktualisiert werden muss.
-
-**UWP-Apps für Windows 10**
-
-* **AdMediatorControl** wird für UWP-Apps nicht mehr unterstützt. Führen Sie die Anweisungen in den folgenden Abschnitten aus, um zur Verwendung von **AdControl** zu migrieren. Fahren Sie mit [Teil 2](update-your-app-to-the-latest-advertising-libraries.md#part-2) fort.
-
-<span/>
-
-**Windows 8.1- oder Windows Phone 8.1-Apps**
-
-1. Erstellen Sie eine Kopie des APPX- oder XAP-Pakets für Ihre App, damit das Original nicht beeinträchtigt wird, benennen Sie die Kopie um, sodass sie die Erweiterung „.zip“ erhält, und extrahieren Sie den Inhalt der Datei.
-
-2. Öffnen Sie Windows PowerShell, geben Sie den folgenden Befehl ein, und weisen Sie das Argument ```-Path``` dem vollständigen Pfad zum extrahierten Inhalt des App-Pakets zu. Dieser Befehl zeigt alle Advertising-Bibliotheken an, auf die Ihr Projekt verweist, sowie die Version der einzelnen Bibliotheken.
-
-  > [!div class="tabbedCodeSnippets"]
-  ```syntax
-  get-childitem -Path "<path to your extracted package>" * -Recurse -include *advert*.dll,*admediator*.dll,*xamladcontrol*.dll,*universalsharedlibrary*.dll | where-object {$_.Name -notlike "*resources*" -and $_.Name -notlike "*design*" } | foreach-object { "{0}`t{1}" -f $_.FullName, [System.Diagnostics.FileVersionInfo]::GetVersionInfo($_).FileVersion }
-  ```
-
-2. Wenn die Version der „Microsoft.AdMediator.\*.dll“-Dateien, die in der Ausgabe aufgelistet sind, Version 2.0.1603.18005 oder höher entsprechen, müssen Sie keine Änderungen an Ihrem Projekt vornehmen.
-
-  Wenn die Dateien eine niedrigere Versionsnummer aufweisen, müssen Sie Ihr Projekt aktualisieren, ‌indem Sie die Anweisungen in den folgenden Abschnitten ausführen. Fahren Sie mit [Teil 2](update-your-app-to-the-latest-advertising-libraries.md#part-2) fort.
 
 <span id="part-2" />
-## <a name="part-2-install-the-latest-sdk"></a>Teil 2: Installieren der aktuellen SDK-Version
 
-Wenn Ihre App eine alte SDK-Version verwendet, führen Sie diese Anweisungen aus, um sicherzustellen, dass Sie das aktuelle SDK auf Ihrem Entwicklungscomputer verwenden.
+## <a name="part-2-install-the-latest-sdk"></a><span data-ttu-id="86de6-136">Teil 2: Installieren der aktuellen SDK-Version</span><span class="sxs-lookup"><span data-stu-id="86de6-136">Part 2: Install the latest SDK</span></span>
 
-1. Auf Ihrem Entwicklungscomputer muss Visual Studio 2015 (für UWP-, Windows 8.1- oder Windows Phone 8.x-Projekte) oder Visual Studio 2013 (für Windows 8.1- oder Windows Phone 8.x-Projekte) installiert sein.
+<span data-ttu-id="86de6-137">Wenn Ihre App eine alte SDK-Version verwendet, führen Sie diese Anweisungen aus, um sicherzustellen, dass Sie das aktuelle SDK auf Ihrem Entwicklungscomputer verwenden.</span><span class="sxs-lookup"><span data-stu-id="86de6-137">If your app uses an old SDK release, follow these instructions to make sure you have the latest SDK on your development computer.</span></span>
 
-  >**Hinweis:**&nbsp;&nbsp;Wenn Visual Studio auf Ihrem Entwicklungscomputer geöffnet ist, schließen Sie es, bevor Sie die folgenden Schritte ausführen.
+1. <span data-ttu-id="86de6-138">Stellen Sie sicher, dass auf Ihrem Entwicklungscomputer Visual Studio2015 oder eine spätere Version installiert ist.</span><span class="sxs-lookup"><span data-stu-id="86de6-138">Make sure your development computer has Visual Studio 2015 or a later release installed.</span></span>
+    > [!NOTE]
+    > <span data-ttu-id="86de6-139">Wenn Visual Studio auf Ihrem Entwicklungscomputer geöffnet ist, schließen Sie es, bevor Sie die folgenden Schritte ausführen.</span><span class="sxs-lookup"><span data-stu-id="86de6-139">If Visual Studio is open on your development computer, close it before you perform the following steps.</span></span>
 
-1.    Deinstallieren Sie alle früheren Versionen des Microsoft Advertising SDK und Ad Mediator SDK auf Ihrem Entwicklungscomputer.
+1.  <span data-ttu-id="86de6-140">Deinstallieren Sie alle früheren Versionen des Microsoft Advertising SDK und Ad Mediator SDK auf Ihrem Entwicklungscomputer.</span><span class="sxs-lookup"><span data-stu-id="86de6-140">Uninstall all prior versions of the Microsoft Advertising SDK and Ad Mediator SDK from your development computer.</span></span>
 
-2.    Öffnen Sie ein **Eingabeaufforderungsfenster**, und führen Sie diese Befehle aus, um alle SDK-Versionen zu löschen, die möglicherweise mit Visual Studio installiert wurden und nicht in der Liste der installierten Programme auf Ihrem Computer angezeigt werden:
+2.  <span data-ttu-id="86de6-141">Öffnen Sie ein **Eingabeaufforderungsfenster**, und führen Sie diese Befehle aus, um alle SDK-Versionen zu löschen, die möglicherweise mit Visual Studio installiert wurden und nicht in der Liste der installierten Programme auf Ihrem Computer angezeigt werden:</span><span class="sxs-lookup"><span data-stu-id="86de6-141">Open a **Command Prompt** window and run these commands to clean out any SDK versions that may have been installed with Visual Studio, but which may not appear in the list of installed programs on your computer:</span></span>
+    ```syntax
+    MsiExec.exe /x{5C87A4DB-31C7-465E-9356-71B485B69EC8}
+    MsiExec.exe /x{6AB13C21-C3EC-46E1-8009-6FD5EBEE515B}
+    MsiExec.exe /x{6AC81125-8485-463D-9352-3F35A2508C11}
+    ```
 
-  > [!div class="tabbedCodeSnippets"]
-  ```syntax
-  MsiExec.exe /x{5C87A4DB-31C7-465E-9356-71B485B69EC8}
-  MsiExec.exe /x{6AB13C21-C3EC-46E1-8009-6FD5EBEE515B}
-  MsiExec.exe /x{6AC81125-8485-463D-9352-3F35A2508C11}
-  ```
+3.  <span data-ttu-id="86de6-142">Installieren des [Microsoft Advertising-SDK](http://aka.ms/ads-sdk-uwp).</span><span class="sxs-lookup"><span data-stu-id="86de6-142">Install the [Microsoft Advertising SDK](http://aka.ms/ads-sdk-uwp).</span></span>
 
-3.    Installieren Sie das neueste SDK für Ihre App:
-  * Installieren Sie für UWP-Apps unter Windows 10 das [Microsoft Store Services SDK](http://aka.ms/store-services-sdk).
-  * Installieren Sie für Apps, die für eine frühere Betriebssystemversion erstellt wurden, das [Microsoft Advertising SDK für Windows und Windows Phone 8.x](http://aka.ms/store-8-sdk).
+## <a name="part-3-update-your-project"></a><span data-ttu-id="86de6-143">Teil 3: Aktualisieren Ihres Projekts</span><span class="sxs-lookup"><span data-stu-id="86de6-143">Part 3: Update your project</span></span>
 
-## <a name="part-3-update-your-project"></a>Teil 3: Aktualisieren Ihres Projekts
+<span data-ttu-id="86de6-144">Entfernen Sie alle vorhandenen Verweise auf Microsoft Advertising-Bibliotheken aus dem Projekt, und führen Sie zum Hinzufügen der erforderlichen Verweise [diese Anweisungen](install-the-microsoft-advertising-libraries.md#reference) aus.</span><span class="sxs-lookup"><span data-stu-id="86de6-144">Remove all existing references to the Microsoft advertising libraries from the project and follow [these instructions](install-the-microsoft-advertising-libraries.md#reference) to add the required references.</span></span> <span data-ttu-id="86de6-145">Dadurch wird sichergestellt, dass Ihr Projekt die richtigen Bibliotheken verwendet.</span><span class="sxs-lookup"><span data-stu-id="86de6-145">This will ensure that your project uses the correct libraries.</span></span> <span data-ttu-id="86de6-146">Sie können Ihr vorhandenes Markup und den Code beibehalten.</span><span class="sxs-lookup"><span data-stu-id="86de6-146">You can preserve your existing markup and code.</span></span>
 
-Befolgen Sie diese Anweisungen, um Ihr Projekt zu aktualisieren.
+## <a name="part-4-test-and-republish-your-app"></a><span data-ttu-id="86de6-147">Teil 4: Testen und erneutes Veröffentlichen Ihrer App</span><span class="sxs-lookup"><span data-stu-id="86de6-147">Part 4: Test and republish your app</span></span>
 
-### <a name="uwp-projects-for-windows-10"></a>UWP-Projekte für Windows 10
+<span data-ttu-id="86de6-148">Testen Sie Ihre App, um sicherzustellen, dass sie Banneranzeigen korrekt anzeigt.</span><span class="sxs-lookup"><span data-stu-id="86de6-148">Test your app to make sure it displays banner ads as expected.</span></span>
 
-<span/>
-
-Wenn Ihre App **AdMediatorControl** verwendet, [ändern Sie sie so, dass sie stattdessen AdControl nutzt](migrate-from-admediatorcontrol-to-adcontrol.md). **AdMediatorControl** wird für UWP-Apps nicht mehr unterstützt.
-
-Wenn Ihre App **AdControl** verwendet, entfernen Sie alle vorhandenen Verweise auf Microsoft Advertising-Bibliotheken aus dem Projekt, und führen Sie zum Hinzufügen der erforderlichen Verweise die Anweisungen [AdControl in XAML](adcontrol-in-xaml-and--net.md) oder [AdControl in HTML](adcontrol-in-html-5-and-javascript.md) aus. Dadurch wird sichergestellt, dass Ihr Projekt die richtigen Bibliotheken verwendet. Sie können Ihr vorhandenes XAML-Markup und den Code beibehalten.
-
-<span/>
-
-### <a name="windows-81-or-windows-phone-81-xaml-or-javascripthtml-projects"></a>Windows 8.1 oder Windows Phone 8.1-Projekte (XAML oder JavaScript/HTML)
-
-<span/>
-
-1. Entfernen Sie alle „Microsoft.Advertising.\*“- und „Microsoft.AdMediator.\*“-Verweise aus Ihrem Projekt. Wenn Sie die Projektvorlage „Universal“ verwendet haben, verfügen Sie möglicherweise über zwei Verweise (eine für Windows und eine für Windows Phone).
-
-2. Wenn Ihre App **AdMediatorControl** verwendet, fügen Sie die Bibliotheksverweise wieder ein, indem Sie die Anweisungen unter [Hinzufügen und Verwenden des Steuerelements für die Anzeigenvermittlung](https://msdn.microsoft.com/library/windows/apps/xaml/dn864355.aspx) ausführen. Wenn Ihre App **AdControl** verwendet, fügen Sie die Bibliotheksverweise wieder ein, indem Sie die Anweisungen unter [AdControl in XAML](adcontrol-in-xaml-and--net.md) oder [AdControl in HTML](adcontrol-in-html-5-and-javascript.md) ausführen.
-
-<span/>
-
-Hinweis:
-
-* Wenn Ihre App zuvor bereits zur **Any CPU**-Plattform kompiliert wurde, müssen Sie Ihr Projekt für eine architekturspezifische Plattform neu kompilieren (x86, x64 oder ARM).
-
-* Wenn Sie über eine Windows Phone 8.x XAML-App verfügen, die zuvor eine SDK-Version verwendet hat, in der die Klasse **AdControl** im Namespace **Microsoft.Advertising.Mobile.UI** definiert wurde, müssen Sie Ihren Code so aktualisieren, dass er auf die Klasse **AdControl** im Namespace **Microsoft.Advertising.WinRT.UI** verweist (diese Klasse hat Namespaces in die neueren SDK-Versionen verschoben).
-
-* Im Gegensatz zum zuvor beschriebenen Thema können Sie Ihr vorhandenes XAML-Markup und den Code jedoch beibehalten.
-
-<span/>
-
-### <a name="windows-phone-8x-silverlight-projects"></a>Windows Phone 8.x Silverlight-Projekte
-
-<span/>
-
-1. Entfernen Sie alle „Microsoft.Advertising.\*“- und „Microsoft.AdMediator.\*“-Verweise aus Ihrem Projekt.
-
-2. Wenn Ihre App **AdMediatorControl** verwendet, fügen Sie die Bibliotheksverweise wieder ein, indem Sie die Anweisungen unter [Hinzufügen und Verwenden des Steuerelements für die Anzeigenvermittlung](https://msdn.microsoft.com/library/windows/apps/xaml/dn864355.aspx) ausführen. Wenn Ihre App **AdControl** verwendet, fügen Sie die Bibliotheksverweise wieder ein, indem Sie die Anweisungen unter [AdControl in Windows Phone Silverlight](adcontrol-in-windows-phone-silverlight.md) ausführen.
-
-<span/>
-
-Hinweis:
-
-* Sie können Ihr vorhandenes XAML-Markup und den Code beibehalten.
-
-* Prüfen Sie im **Projektmappen-Explorer** die Eigenschaften für den Verweis **Microsoft.Advertising.Mobile.UI** in Ihrem Projekt. Wenn Ihre App für Windows Phone 8.0 entwickelt wurde, ist 6.2.40501.0 die korrekte Version; wenn die App für Windows Phone 8.1 entwickelt wurde, sollte die Version 8.1.50112.0 lauten.
-
-* Für Windows Phone 8.x Silverlight-Apps wird das Testen von Produktionseinheiten auf einem Emulator nicht unterstützt. Daher wird das Testen auf einem Gerät empfohlen.
-
-## <a name="part-4-test-and-republish-your-app"></a>Teil 4: Testen und erneutes Veröffentlichen Ihrer App
-
-Testen Sie Ihre App, um sicherzustellen, dass sie Banneranzeigen korrekt anzeigt.
-
-Wenn die vorherige Version Ihrer App bereits im Store verfügbar ist, erstellen Sie im Windows Dev Center-Dashboard [eine neue Übermittlung](../publish/app-submissions.md) für Ihre aktualisierte App, um diese erneut zu veröffentlichen.
-
-
-
-
-
- 
-
+<span data-ttu-id="86de6-149">Wenn die vorherige Version Ihrer App bereits im Store verfügbar ist, erstellen Sie im Dev Center-Dashboard [eine neue Übermittlung](../publish/app-submissions.md) für Ihre aktualisierte App, um diese erneut zu veröffentlichen.</span><span class="sxs-lookup"><span data-stu-id="86de6-149">If the previous version of your app is already available in the Store, [create a new submission](../publish/app-submissions.md) for your updated app in the Dev Center dashboard to republish your app.</span></span>
