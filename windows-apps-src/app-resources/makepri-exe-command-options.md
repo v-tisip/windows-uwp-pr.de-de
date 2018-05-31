@@ -1,23 +1,22 @@
 ---
 author: stevewhims
-Description: "MakePri.exe akzeptiert die Befehle createconfig, dump, new, resourcepack und versioned. In diesem Thema wird die Anwendung der Befehle erläutert."
-title: "Befehlszeilenoptionen für MakePRI.exe"
+Description: MakePri.exe has the set of commands createconfig, dump, new, resourcepack, and versioned. This topic details their use.
+title: Befehlszeilenoptionen für MakePri.exe
 template: detail.hbs
 ms.author: stwhi
-ms.date: 10/18/2017
+ms.date: 04/10/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
-localizationpriority: medium
-ms.openlocfilehash: e269984134c7313b6ea6464cd04a3ef60254d537
-ms.sourcegitcommit: 44a24b580feea0f188c7eae36e72e4a4f412802b
+ms.localizationpriority: medium
+ms.openlocfilehash: fbfb5f6626f799878c294b0a4e21efb673147a50
+ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 04/30/2018
+ms.locfileid: "1817541"
 ---
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
-
 # <a name="makepriexe-command-line-options"></a>Befehlszeilenoptionen für MakePRI.exe
 
 [MakePri.exe](compile-resources-manually-with-makepri.md) akzeptiert die Befehle `createconfig`, `dump`, `new`, `resourcepack` und `versioned`. In diesem Thema werden die Befehlszeilenoptionen für diese Befehle erläutert.
@@ -113,6 +112,9 @@ Help:
 ## <a name="dump-command"></a>Dump-Befehl
 
 Der Befehl `dump` gibt den Dump einer XML-Datei aus, die eine Liste aller Ressourcen in einer angegebenen PRI-Datei enthält. Führen Sie `MakePri.exe dump /?` aus, um detaillierte Hilfe für diesen Befehl anzuzeigen.
+
+> [!NOTE]
+> Ein schemafreies Ressourcenpaket ist ein Ressourcenpaket, das mit dem Schalter *omitSchemaFromResourcePacks* in der PRI-Konfigurationsdatei erstellt wurde. Um ein schemafreies Ressourcenpaket zu sichern, verwenden Sie den Schalter `/es <main_package_PRI_file>`. Wenn Sie die Hauptdatei nicht angeben, wird eine Fehlermeldung angezeigt, die in etwa wie folgt lautet: „*Die resources.pri im Paket wurde beschädigt, sodass die Verschlüsselung fehlgeschlagen ist (Fehler PRI222: 0xdef0000f - Unbestimmter Fehler aufgetreten)*“.
 
 ```
 C:\>makepri dump /?

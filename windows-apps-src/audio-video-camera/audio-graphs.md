@@ -1,7 +1,7 @@
 ---
 author: drewbatgit
 ms.assetid: CB924E17-C726-48E7-A445-364781F4CCA1
-description: "In diesem Artikel wird gezeigt, wie die APIs im Windows.Media.Audio-Namespace zum Erstellen von Audiodiagrammen für Audiorouting sowie Misch- und Verarbeitungsszenarien verwendet werden."
+description: In diesem Artikel wird gezeigt, wie die APIs im Windows.Media.Audio-Namespace zum Erstellen von Audiodiagrammen für Audiorouting sowie Misch- und Verarbeitungsszenarien verwendet werden.
 title: Audiodiagramme
 ms.author: drewbat
 ms.date: 02/08/2017
@@ -9,13 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: 1b286a9fcfd71bb2dc219fb3c03a363a41d24346
-ms.sourcegitcommit: bccf9bcc39f0c4ee8801d90e2d7fcae3ad6e3b3e
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 26b9f49c8f21c7c60fb99fd8eaf24156a8aed3d9
+ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/03/2018
+ms.locfileid: "1832501"
 ---
 # <a name="audio-graphs"></a>Audiodiagramme
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 In diesem Artikel wird gezeigt, wie die APIs im [**Windows.Media.Audio**](https://msdn.microsoft.com/library/windows/apps/dn914341)-Namespace zum Erstellen von Audiodiagrammen für Audiorouting sowie Misch- und Verarbeitungsszenarien verwendet werden.
@@ -32,7 +35,7 @@ Nachdem alle Knoten erstellt und die Verbindungen zwischen ihnen eingerichtet wu
 
 Weitere Szenarien werden durch das Hinzufügen von Audioeffekten zum Audiodiagramm ermöglicht. Jeder Knoten in einem Audiodiagramm kann mit null oder mehr Audioeffekten gefüllt werden, die die Audioverarbeitung für die Audiodaten durchführen, die den Knoten durchlaufen. Es gibt verschiedene integrierte Effekte wie Echo, Equalizer, Begrenzungen und Halleffekt, die mit nur wenigen Codezeilen an einen Audioknoten angefügt werden können. Sie können auch eigene benutzerdefinierte Audioeffekte erstellen, die genau wie die integrierten Effekte funktionieren.
 
-> [!NOTE]  
+> [!NOTE]
 > Im [UWP-Beispiel für AudioGraph](http://go.microsoft.com/fwlink/?LinkId=619481) wird der in dieser Übersicht erläuterte Code implementiert. Sie können das Beispiel herunterladen, um den Code im Kontext anzuzeigen oder ihn als Ausgangspunkt für Ihre eigene App zu verwenden.
 
 ## <a name="choosing-windows-runtime-audiograph-or-xaudio2"></a>Auswählen von Windows-Runtime-AudioGraph oder -XAudio2
@@ -64,6 +67,7 @@ Die [**AudioGraph**](https://msdn.microsoft.com/library/windows/apps/dn914176)-K
 -   Wenn Sie das Audiodiagramm nur mit Dateien verwenden möchten und keine Ausgabe an ein Audiogerät planen, wird empfohlen, dass Sie die Standard-Quantumgröße verwenden, indem Sie die [**DesiredSamplesPerQuantum**](https://msdn.microsoft.com/library/windows/apps/dn914205)-Eigenschaft nicht festlegen.
 -   Die [**DesiredRenderDeviceAudioProcessing**](https://msdn.microsoft.com/library/windows/apps/dn958522)-Eigenschaft bestimmt Verarbeitungsleistung, die das primäre Darstellungsgerät für die Ausgabe des Audiodiagramms durchführt. Über die **Default**-Einstellung kann das System die Standardaudioverarbeitung für die angegebene Audiowiedergabekategorie verwenden. Durch diese Verarbeitung kann der Sound der Audiodaten auf einigen Geräten wesentlich verbessert werden, insbesondere auf mobilen Geräten mit kleinen Lautsprechern. Durch die **Raw**-Einstellung kann die Leistung durch Minimieren der Signalverarbeitungsleistung verbessert werden. Dies kann jedoch zu einer schlechteren Tonqualität auf einigen Geräten führen.
 -   Wenn die [**QuantumSizeSelectionMode**](https://msdn.microsoft.com/library/windows/apps/dn914208)-Eigenschaft auf **LowestLatency** festgelegt wird, verwendet das Audiodiagramm für [**DesiredRenderDeviceAudioProcessing**](https://msdn.microsoft.com/library/windows/apps/dn958522) automatisch **Raw**.
+- Ab Windows 10, Version 1803, können Sie die Eigenschaft [**AudioGraphSettings.MaxPlaybackSpeedFactor**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiographsettings.maxplaybackspeedfactor) auf einen Maximalwert für [**AudioFileInputNode.PlaybackSpeedFactor**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiofileinputnode.playbackspeedfactor), [**AudioFrameInputNode.PlaybackSpeedFactor**](https://docs.microsoft.com/uwp/api/windows.media.audio.audioframeinputnode.playbackspeedfactor) und [**MediaSourceInputNode.PlaybackSpeedFactor**](https://docs.microsoft.com/uwp/api/windows.media.audio.mediasourceinputnode.playbackspeedfactor) festlegen. Wenn ein Audiodiagramm einen Wiedergabegeschwindigkeitsfaktor höher als 1 unterstützt, muss ihm das System zusätzlichen Speicher zuweisen, um einen ausreichenden Puffer der Audiodaten zu gewährleisten. Daher minimiert das Festlegen der Einstellung **MaxPlaybackSpeedFactor** auf den niedrigsten Wert, der von der App erforderlich ist, den Speicherbedarf Ihrer App. Wenn Ihre App nur Inhalte in normaler Geschwindigkeit wiedergibt, empfiehlt es sich, dass Sie MaxPlaybackSpeedFactor auf 1 festgelegt.
 -   Die [**EncodingProperties**](https://msdn.microsoft.com/library/windows/apps/dn958523)-Eigenschaft bestimmt das vom Diagramm verwendete Audioformat. Es werden nur 32-Bit-Float-Formate unterstützt.
 -   Die [**PrimaryRenderDevice**](https://msdn.microsoft.com/library/windows/apps/dn958524)-Eigenschaft legt das primäre Darstellungsgerät für das Audiodiagramm fest. Wenn Sie diese Eigenschaft nicht festlegen, wird das Standardsystemgerät verwendet. Das primäre Darstellungsgerät wird zur Berechnung der Quantumgrößen für andere Knoten im Diagramm verwendet. Wenn in dem System keine Audiowiedergabegeräte vorhanden sind, tritt bei der Erstellung des Audiodiagramms ein Fehler auf.
 
@@ -107,6 +111,26 @@ Mit einem Dateieingabeknoten können Sie Daten aus einer Audiodatei in das Diagr
 -   Aktivieren Sie Schleifen für die Audiodatei, indem Sie die [**LoopCount**](https://msdn.microsoft.com/library/windows/apps/dn914120)-Eigenschaft festlegen. Wenn diese nicht Null ist, gibt dieser Wert die Anzahl der Wiederholungen der Datei nach der ersten Wiedergabe an. Wenn Sie **LoopCount** beispielsweise auf1 festlegen, wird die Datei insgesamt zweimal wiedergegeben. Wenn Sie den Wert auf5 festlegen, wird die Datei insgesamt sechs Mal wiedergegeben. Indem Sie **LoopCount** auf Null setzen, wird die Datei in einer Schleife unbegrenzt wiedergegeben. Um die Schleife zu beenden, setzen Sie den Wert auf0 fest.
 -   Legen Sie zum Anpassen der Geschwindigkeit, mit der die Audiodatei wiedergegeben wird, die [**PlaybackSpeedFactor**](https://msdn.microsoft.com/library/windows/apps/dn914123)-Eigenschaft fest. Der Wert1 zeigt die ursprüngliche Geschwindigkeit der Datei an. Der Wert0,5 legt die halbe Geschwindigkeit und der Wert2 ist die doppelte Geschwindigkeit fest.
 
+##  <a name="mediasource-input-node"></a>MediaSource-Eingabeknoten
+
+Die [**MediaSource**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.MediaSource)-Klasse, die allgemein zum Verweisen auf Medien aus verschiedenen Quellen sowie zum Wiedergeben dieser Medien verwendet wird bietet ein gemeinsames Modell für den Mediendatenzugriff – unabhängig vom zugrunde liegenden Medienformat, was eine Datei auf einem Datenträger, einem Stream oder einer streamenden Netzwerkquelle sein kann. Mit dem [**MediaSourceAudioInputNode](https://docs.microsoft.com/uwp/api/windows.media.audio.mediasourceaudioinputnode)-Knoten können Sie die **MediaSource**-Daten in ein Audiodiagramm umleiten. Erstellen Sie **MediaSourceAudioInputNode** durch Aufrufen von [**CreateMediaSourceAudioInputNodeAsync**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.createmediasourceaudioinputnodeasync#Windows_Media_Audio_AudioGraph_CreateMediaSourceAudioInputNodeAsync_Windows_Media_Core_MediaSource_), und übergeben Sie ein **MediaSource**-Objekt, das die Inhalte, die Sie abspielen möchten, darstellt. Ein [** CreateMediaSourceAudioInputNodeResult](https://docs.microsoft.com/uwp/api/windows.media.audio.createmediasourceaudioinputnoderesult) wird zurückgegeben, das Sie verwenden können, um den Status des Vorgangs durch Überprüfen der Eigenschaft [**Status**](https://docs.microsoft.com/uwp/api/windows.media.audio.createmediasourceaudioinputnoderesult.status) zu verwenden. Wenn der Status **Erfolg** ist, erhalten Sie das erstellte **MediaSourceAudioInputNode** durch den Zugriff auf die [**Knoten**](https://docs.microsoft.com/uwp/api/windows.media.audio.createmediasourceaudioinputnoderesult.node)-Eigenschaft. Das folgende Beispiel zeigt die Erstellung eines Knotens aus einem AdaptiveMediaSource-Objekt, das das Streaming von Inhalten über das Netzwerk darstellt. Weitere Informationen zur Verwendung der **MediaSource** finden Sie unter [Medienelemente, Wiedergabelisten und Titel](media-playback-with-mediasource.md). Weitere Informationen zum Streamen von Media-Inhalten über das Internet finden Sie unter [adaptives Streaming](adaptive-streaming.md).
+
+[!code-cs[DeclareMediaSourceInputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetDeclareMediaSourceInputNode)]
+
+[!code-cs[CreateMediaSourceInputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetCreateMediaSourceInputNode)]
+
+Um eine Benachrichtigung zu erhalten, wenn die Wiedergabe das Ende des **MediaSource**-Inhalts erreicht hat, registrieren Sie einen Handler für das [**MediaSourceCompleted**](https://docs.microsoft.com/uwp/api/windows.media.audio.mediasourceaudioinputnode.mediasourcecompleted)-Ereignis. 
+
+[!code-cs[RegisterMediaSourceCompleted](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetRegisterMediaSourceCompleted)]
+
+[!code-cs[MediaSourceCompleted](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetMediaSourceCompleted)]
+
+Während eine Datei aus Diskis wahrscheinlich immer erfolgreich abgespielt werden kann, kann das Streamen von Medien von einer Netzwerkquelle während der Wiedergabe aufgrund einer Änderung der Netzwerkverbindung oder anderer Probleme fehlschlagen, die außerhalb der Kontrolle des Audiodiagramms liegen. Wenn eine **MediaSource** während der Wiedergabe fehlschlägt, löst das Audiodiagramm ein [**UnrecoverableErrorOccurred**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.unrecoverableerroroccurred)-Ereignis aus. Sie können für dieses Ereignis den Handler verwenden, um das Audiodiagramm zu beenden und zu löschen und und das Diagramm erneut zu initialisieren. 
+
+[!code-cs[RegisterUnrecoverableError](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetRegisterUnrecoverableError)]
+
+[!code-cs[UnrecoverableError](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetUnrecoverableError)]
+
 ##  <a name="file-output-node"></a>Dateiausgabeknoten
 
 Mit einem Dateiausgabeknoten können Sie die Audiodaten aus dem Diagramm in eine Audiodatei umleiten. Erstellen Sie eine [**AudioFileOutputNode**](https://msdn.microsoft.com/library/windows/apps/dn914133)-Klasse, indem Sie die [**CreateFileOutputNodeAsync**](https://msdn.microsoft.com/library/windows/apps/dn914227)-Methode aufrufen.
@@ -134,6 +158,7 @@ Das [**FrameInputNode.QuantumStarted**](https://msdn.microsoft.com/library/windo
 
 -   Durch das an den **QuantumStarted**-Ereignishandler übergebene [**FrameInputNodeQuantumStartedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn958533)-Objekt wird die [**RequiredSamples**](https://msdn.microsoft.com/library/windows/apps/dn958534)-Eigenschaft verfügbar, die angibt, wie viele Sample das Audiodiagramm füllen muss, damit das Quantum verarbeitet wird.
 -   Rufen Sie die [**AudioFrameInputNode.AddFrame**](https://msdn.microsoft.com/library/windows/apps/dn914148)-Methode auf, um ein mit Audiodaten gefülltes [**AudioFrame**](https://msdn.microsoft.com/library/windows/apps/dn930871)-Objekt an das Diagramm zu übergeben.
+- Es wurde ein neuer Satz von APIs für die Verwendung von **MediaFrameReader** mit Audiodaten in Windows10, Version 1803 eingeführt. Diese APIs ermöglichen es Ihnen, **AudioFrame**-Objekte von einer Medieframenquelle zu erhalten, die an ein **FrameInputNode** mithilfe der **AddFrame** Methode übergeben werden kann. Weitere Informationen finden Sie unter [Verarbeiten von Audioframes mit MediaFrameReader](process-audio-frames-with-mediaframereader.md).
 -   Nachfolgend sehen Sie ein Beispiel einer Implementierung der **GenerateAudioData**-Hilfsmethode.
 
 Zum Auffüllen eines [**AudioFrame**](https://msdn.microsoft.com/library/windows/apps/dn930871)-Objekts mit Audiodaten benötigen Sie Zugriff auf den zugrunde liegenden Speicherpuffer des Audioframes. Initialisieren Sie zu diesem Zweck die **IMemoryBufferByteAccess**-COM-Schnittstelle, indem Sie dem Namespace den folgenden Code hinzufügen.
@@ -159,10 +184,10 @@ Mit einem Audioframe-Ausgabeknoten können Sie eine Audiodatenausgabe aus dem Au
 
 [!code-cs[CreateFrameOutputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetCreateFrameOutputNode)]
 
-Das [**AudioGraph.QuantumStarted**](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.Audio.AudioGraph#Windows_Media_Audio_AudioGraph_QuantumStarted)-Ereignis wird ausgelöst, wenn das Audiodiagramm mit der Verarbeitung eines Quantums von Audiodaten beginnt. Sie können innerhalb des Handlers für dieses Ereignis auf die Audiodaten zugreifen. 
+Das [**AudioGraph.QuantumStarted**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioGraph.QuantumStarted)-Ereignis wird ausgelöst, wenn das Audiodiagramm mit der Verarbeitung eines Quantums von Audiodaten beginnt. Sie können innerhalb des Handlers für dieses Ereignis auf die Audiodaten zugreifen. 
 
-> [!NOTE]  
-> Wenn Sie Audioframes regelmäßig (mit dem Audiodiagramm synchronisiert) abrufen möchten, rufen Sie [AudioFrameOutputNode.GetFrame](https://docs.microsoft.com/en-us/uwp/api/windows.media.audio.audioframeoutputnode#Windows_Media_Audio_AudioFrameOutputNode_GetFrame) von innerhalb des synchronen **QuantumStarted**-Ereignishandlers auf. Das **QuantumProcessed**-Ereignis wird nach der Audioverarbeitung durch das Audiomodul asynchron ausgelöst, was bedeutet, dass der Rhythmus möglicherweise unregelmäßig ist. Aus diesem Grund sollten Sie das **QuantumProcessed**-Ereignis nicht für die synchronisierte Verarbeitung von Audioframedaten verwenden.
+> [!NOTE]
+> Wenn Sie Audioframes regelmäßig (mit dem Audiodiagramm synchronisiert) abrufen möchten, rufen Sie [AudioFrameOutputNode.GetFrame](https://docs.microsoft.com/uwp/api/windows.media.audio.audioframeoutputnode.GetFrame) von innerhalb des synchronen **QuantumStarted**-Ereignishandlers auf. Das **QuantumProcessed**-Ereignis wird nach der Audioverarbeitung durch das Audiomodul asynchron ausgelöst, was bedeutet, dass der Rhythmus möglicherweise unregelmäßig ist. Aus diesem Grund sollten Sie das **QuantumProcessed**-Ereignis nicht für die synchronisierte Verarbeitung von Audioframedaten verwenden.
 
 [!code-cs[SnippetQuantumStartedFrameOutput](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetQuantumStartedFrameOutput)]
 
@@ -220,9 +245,9 @@ Mit der Audiodiagramm-API können Sie Audioeffekte zu jedem Knotentyp in einem D
 ## <a name="spatial-audio"></a>Räumliche Audiowiedergabe
 Ab Windows 10, Version 1607, unterstützt **AudioGraph** die räumliche Audiowiedergabe. Dabei können Sie eine Position im dreidimensionalen Raum angeben, an der Audiodaten von einem Eingabe- oder Submixknoten ausgegeben werden. Sie können auch eine Form und Richtung für die Audioausgabe angeben, eine Geschwindigkeit festlegen, die für die Dopplerverschiebung der Audiodaten des Knotens verwendet wird, und ein Abklingmodell definieren, das beschreibt, wie Klang mit zunehmender Entfernung gedämpft wird. 
 
-Um einen Emitter zu erstellen, können Sie zunächst eine Form definieren, in der der Sound vom Emitter projiziert wird. Die Klangausbreitung kann kegel- oder kugelförmig sein. Die [**AudioNodeEmitterShape**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioNodeEmitterShape)-Klasse bietet statische Methoden zum Erstellen dieser Formen. Als Nächstes erstellen Sie ein Abklingmodell. Es definiert, wie die Lautstärke des vom Emitter ausgegebenen Sounds mit zunehmender Entfernung vom Listener (Zuhörer) abnimmt. Mit der [**CreateNatural**](https://msdn.microsoft.com/library/windows/apps/mt711740)-Methode wird ein Abklingmodell erstellt. Es emuliert das natürliche Abklingen von Sound anhand eines auf einem Abstandsquadrat basierten Abnahmemodells. Erstellen Sie zuletzt ein [**AudioNodeEmitterSettings**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioNodeEmitterSettings)-Objekt. Dieses Objekt wird derzeit nur zum Aktivieren und Deaktivieren der geschwindigkeitsbasierten Dopplerdämpfung der vom Emitter ausgegebenen Audiodaten verwendet. Rufen Sie den [**AudioNodeEmitter**](https://msdn.microsoft.com/en-us/library/windows/apps/mt694324.aspx)-Konstruktor auf, und übergeben Sie die gerade erstellten Initialisierungsobjekte. Der Emitter wird standardmäßig am Ursprung positioniert, Sie können seine Position aber auch mit der [**Position**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioNodeEmitter.Position)-Eigenschaft festlegen.
+Um einen Emitter zu erstellen, können Sie zunächst eine Form definieren, in der der Sound vom Emitter projiziert wird. Die Klangausbreitung kann kegel- oder kugelförmig sein. Die [**AudioNodeEmitterShape**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioNodeEmitterShape)-Klasse bietet statische Methoden zum Erstellen dieser Formen. Als Nächstes erstellen Sie ein Abklingmodell. Es definiert, wie die Lautstärke des vom Emitter ausgegebenen Sounds mit zunehmender Entfernung vom Listener (Zuhörer) abnimmt. Mit der [**CreateNatural**](https://msdn.microsoft.com/library/windows/apps/mt711740)-Methode wird ein Abklingmodell erstellt. Es emuliert das natürliche Abklingen von Sound anhand eines auf einem Abstandsquadrat basierten Abnahmemodells. Erstellen Sie zuletzt ein [**AudioNodeEmitterSettings**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioNodeEmitterSettings)-Objekt. Dieses Objekt wird derzeit nur zum Aktivieren und Deaktivieren der geschwindigkeitsbasierten Dopplerdämpfung der vom Emitter ausgegebenen Audiodaten verwendet. Rufen Sie den [**AudioNodeEmitter**](https://msdn.microsoft.com/library/windows/apps/mt694324.aspx)-Konstruktor auf, und übergeben Sie die gerade erstellten Initialisierungsobjekte. Der Emitter wird standardmäßig am Ursprung positioniert, Sie können seine Position aber auch mit der [**Position**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioNodeEmitter.Position)-Eigenschaft festlegen.
 
-> [!NOTE] 
+> [!NOTE]
 > Audioknotenemitter können nur Monoaudiodaten mit einer Abtastrate von 48 kHz verarbeiten. Die Verwendung von Stereoaudiodaten oder Audio mit einer anderen Abtastrate führt zu einer Ausnahme.
 
 Sie weisen den Emitter beim Erstellen einem Audioknoten zu, indem Sie die überladene Erstellungsmethode für den gewünschten Knotentyp verwenden. In diesem Beispiel wird [**CreateFileInputNodeAsync**](https://msdn.microsoft.com/library/windows/apps/dn914225) verwendet, um einen Dateieingabeknoten aus einer angegebenen Datei und das [**AudioNodeEmitter**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioNodeEmitter)-Objekt zu erstellen, das Sie dem Knoten zuordnen möchten.

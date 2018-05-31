@@ -1,7 +1,7 @@
 ---
 author: stevewhims
-Description: "In diesem Thema wird das Schema der XML-Konfigurationsdatei für MakePri.exe beschrieben."
-title: "Konfigurationsdatei für MakePRI.exe"
+Description: This topic describes the schema of the MakePri.exe XML configuration file.
+title: Konfigurationsdatei für MakePri.exe
 template: detail.hbs
 ms.author: stwhi
 ms.date: 10/18/2017
@@ -9,15 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
-localizationpriority: medium
-ms.openlocfilehash: 7d19d1d778b434abd25d0d087159ea79521642e8
-ms.sourcegitcommit: 44a24b580feea0f188c7eae36e72e4a4f412802b
+ms.localizationpriority: medium
+ms.openlocfilehash: 24ba76549053ef0f88612249eb903278d8554167
+ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
+ms.locfileid: "1393519"
 ---
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
-
 # <a name="makepriexe-configuration-file"></a>Konfigurationsdatei für MakePRI.exe
 
 In diesem Thema wird das Schema der XML-Konfigurationsdatei (auch PRI-Konfigurationsdatei genannt) für [MakePri.exe](compile-resources-manually-with-makepri.md) beschrieben. Das Tool MakePri.exe verfügt über den Befehl [createconfig](makepri-exe-command-options.md#createconfig-command), der eine neue, initialisierte PRI-Konfigurationsdatei erstellt.
@@ -186,7 +185,6 @@ Die Erzeugung von PRI-Ressourcendateien für eine spezifische Dimension wird von
 
 MakePri.exe analysiert das Element `packaging` nach allen Knoten `index`-Knoten, um alle Standardqualifizierer aufzufüllen. MakePri.exe sammelt die gewonnenen Informationen in diesen Datenstrukturen:
 
-**C#**
 ```csharp
 enum ResourcePackageMode
 {
