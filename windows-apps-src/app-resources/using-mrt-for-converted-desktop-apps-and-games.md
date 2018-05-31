@@ -1,7 +1,7 @@
 ---
 author: ptorr-msft
-title: "Verwenden von MRT für konvertierte Desktop-Apps und -Spiele"
-description: "Indem Sie Ihre .NET- oder Win32-App oder Ihr Spiel als AppX-Paket verpacken, können Sie das Ressourcenverwaltungssystem nutzen, um App-Ressourcen zu laden, die auf den Laufzeitkontext zugeschnitten sind. In diesem Thema werden die erforderlichen Techniken detailliert beschrieben."
+title: Verwenden von MRT für konvertierte Desktop-Apps und -Spiele
+description: Indem Sie Ihre .NET- oder Win32-App oder Ihr Spiel als AppX-Paket verpacken, können Sie das Ressourcenverwaltungssystem nutzen, um App-Ressourcen zu laden, die auf den Laufzeitkontext zugeschnitten sind. In diesem Thema werden die erforderlichen Techniken detailliert beschrieben.
 ms.author: ptorr
 ms.date: 10/25/2017
 ms.topic: article
@@ -14,6 +14,7 @@ ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/12/2017
+ms.locfileid: "1396479"
 ---
 # <a name="use-the-windows-10-resource-management-system-in-a-legacy-app-or-game"></a>Verwenden des Ressourcenverwaltungssystem für Windows 10 in älteren Apps oder Spielen
 
@@ -649,7 +650,7 @@ void EnableMrtResourceLookup()
 
 Die .NET-Laufzeit löst das Ereignis `AssemblyResolve` aus, wenn die Ressourcen-DLLs nicht gefunden werden kann. An diesem Punkt sucht der bereitgestellten Ereignishandler die gewünschte Datei über MRT und gibt die Assembly zurück.
 
-**Hinweis:**Wenn Ihre App bereits einen `AssemblyResolve`-Handler für andere Zwecke besitzt, müssen Sie den ressourcenauflösenden Code in den vorhandenen Code integrieren.
+**Hinweis:** Wenn Ihre App bereits einen `AssemblyResolve`-Handler für andere Zwecke besitzt, müssen Sie den ressourcenauflösenden Code in den vorhandenen Code integrieren.
 
 **Laden von Win32-MUI-Ressourcen**
 

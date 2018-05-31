@@ -1,6 +1,6 @@
 ---
 author: stevewhims
-Description: "Zum Buildzeitpunkt erstellt das Ressourcenverwaltungssystem einen Index aller verschiedenen Varianten der Ressourcen, die mit Ihrer App gepackt sind. Zur Laufzeit erkennt das System die momentan geltenden Benutzer- und Computereinstellungen und lädt die Ressourcen, die für diese Einstellungen am besten geeignet sind."
+Description: At build time, the Resource Management System creates an index of all the different variants of the resources that are packaged up with your app. At run-time, the system detects the user and machine settings that are in effect and loads the resources that are the best match for those settings.
 title: Ressourcenverwaltungssystem
 template: detail.hbs
 ms.author: stwhi
@@ -9,21 +9,18 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
-localizationpriority: medium
-ms.openlocfilehash: 8ad0d8a22271e21d146809df7199f3f211fedbee
-ms.sourcegitcommit: 44a24b580feea0f188c7eae36e72e4a4f412802b
+ms.localizationpriority: medium
+ms.openlocfilehash: 5616a78cdc7822bc924924f2335ad1b27ee747ec
+ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 04/05/2018
+ms.locfileid: "1706895"
 ---
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
-
 # <a name="resource-management-system"></a>Ressourcenverwaltungssystem
-
 Das Ressourcenverwaltungssystem verfügt sowohl über Buildzeit- als auch über Laufzeitfeatures. Während der Buildzeit erstellt das System einen Index aller verschiedenen Varianten der Ressourcen, die mit Ihrer App gepackt sind. Dieser ebenfalls im App-Paket enthaltene Index ist der Package Resource Index oder kurz PRI. Zur Laufzeit erkennt das System die momentan geltenden Benutzer- und Computereinstellungen, fragt die Informationen im PRI ab und lädt automatisch die Ressourcen, die für diese Einstellungen am besten geeignet sind.
 
 ## <a name="package-resource-index-pri-file"></a>Package Resource Index (PRI)-Datei
-
 Jedes App-Paket muss einen binären Index der App-Ressourcen enthalten. Dieser Index wird zur Buildzeit erstellt und ist in einer oder mehreren Package Resource Index (PRI)-Dateien enthalten.
 
 - Eine PRI-Datei enthält Zeichenfolgenressourcen und einen indizierten Satz von Dateipfaden, die auf die verschiedenen Dateien im Paket verweisen.
@@ -33,26 +30,24 @@ Jedes App-Paket muss einen binären Index der App-Ressourcen enthalten. Dieser I
 - Für typische App-Entwicklungen benötigen Sie MakePRI.exe nicht, da es bereits in den Visual Studio-Kompilierungsworkflow integriert ist. Und Visual Studio unterstützt das Bearbeiten von PRI-Dateien in einer dedizierten Benutzeroberfläche. Ihre Lokalisierer und die von ihnen verwendeten Tools sind jedoch möglicherweise auf MakePRI.exe angewiesen.
 - Jede PRI-Datei enthält eine benannte Sammlung von Ressourcen, die als Ressourcenzuordnung bezeichnet wird. Wenn eine PRI-Datei aus einem Paket geladen wird, wird der Name der Ressourcenzuordnung darauf überprüft, ob sich eine Übereinstimmung mit dem Namen der Paketidentität ergibt.
 - PRI-Dateien sind reine Datendateien, die das Portable Executable (PE)-Format nicht verwenden. Sie wurden als Ressourcenformat für Windows speziell als reine Datendateien konzipiert. Sie ersetzen Ressourcen, die im Win32-App-Modell in DLLs enthalten waren.
+- Die maximale Größe für eine PRI-Datei beträgt 64KB.
 
 ## <a name="uwp-api-access-to-app-resources"></a>UWP-API-Zugriff auf App-Ressourcen
 
 ### <a name="basic-functionality-resourceloader"></a>Grundlegende Funktionalität (ResourceLoader)
-
 Die einfachste Möglichkeit, programmgesteuert auf Ihre App-Ressourcen zuzugreifen, ist die Verwendung des Namespace [**Windows.ApplicationModel.Resources**](/uwp/api/windows.applicationmodel.resources?branch=live) und der Klasse [**ResourceLoader**](/uwp/api/windows.applicationmodel.resources.resourceloader?branch=live). **ResourceLoader** ermöglicht einen allgemeinen Zugriff auf Zeichenfolgenressourcen aus einer Reihe von Ressourcendateien, referenzierten Bibliotheken und anderen Paketen.
 
 ### <a name="advanced-functionality-resourcemanager"></a>Erweiterte Funktionalität (ResourceManager)
-
 Die Klasse [**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live) (aus dem Namespace [**Windows.ApplicationModel.Resources.Core**](/uwp/api/windows.applicationmodel.resources.core?branch=live) ) stellt zusätzliche Inspektionsmöglichkeiten und Informationen zu Ressourcen bereit, z.B. Enumerationen. Solche Daten kann die Klasse **ResourceLoader** nicht liefern.
 
 Ein [**NamedResource**](/uwp/api/windows.applicationmodel.resources.core.namedresource?branch=live)-Objekt ist eine einzelne logische Ressource mit mehreren Sprachvarianten oder sonstigen qualifizierten Varianten. Es beschreibt die logische Ansicht des Elements oder der Ressource mit einem Bezeichner für Zeichenfolgenressourcen wie `Header1` oder einem Ressourcendateinamen wie `logo.jpg`.
 
 Ein [**ResourceCandidate**](/uwp/api/windows.applicationmodel.resources.core.resourcecandidate?branch=live)-Objekt stellt einen einzelnen konkreten Ressourcenwert und seine Qualifizierer dar, z.B. die Zeichenfolge „Hello World” für Englisch oder „logo.scale-100.jpg” als eine qualifizierte Bildressource mit der spezifischen Auflösung **scale-100**.
 
-Die für eine App verfügbaren Ressourcen werden in hierarchischen Sammlungen gespeichert, auf die Sie mit einem [**ResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemap?branch=live)-Objekt zugreifen können. Die Klasse **ResourceManager** ermöglicht den Zugriff auf die verschiedenen von der App verwendeten **ResourceMap**-Instanzen oberster Ebene, die den unterschiedlichen Paketen für die App entsprechen. Der [**MainResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager#windows_applicationmodel_resources_core_resourcemanager_mainresourcemap?branch=live)-Wert entspricht der Ressourcenzuordnung für das aktuelle App-Paket. Alle referenzierten Frameworkpakete sind ausgeschlossen. Jede **ResourceMap** wird nach dem Paketnamen benannt, der im Paketmanifest angegeben ist. Eine **ResourceMap** umfasst Unterstrukturen (siehe [**ResourceMap.GetSubtree**](/uwp/api/windows.applicationmodel.resources.core.resourcemap?branch=live#windows_applicationmodel_resources_core_resourcemap_getsubtree_system_string_)), die weitere **NamedResource**-Objekte enthalten. Die Unterstrukturen entsprechen üblicherweise den Ressourcendateien, in denen die Ressource enthalten ist. Weitere Informationen finden Sie unter [Lokalisieren von Zeichenfolgen in Benutzeroberfläche und App-Paketmanifest](localize-strings-ui-manifest.md) und [Laden von Bilder und Ressourcen mit Anpassung an Skalierung, Design, hohen Kontrast und anders](images-tailored-for-scale-theme-contrast.md).
+Die für eine App verfügbaren Ressourcen werden in hierarchischen Sammlungen gespeichert, auf die Sie mit einem [**ResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemap?branch=live)-Objekt zugreifen können. Die Klasse **ResourceManager** ermöglicht den Zugriff auf die verschiedenen von der App verwendeten **ResourceMap**-Instanzen oberster Ebene, die den unterschiedlichen Paketen für die App entsprechen. Der [**MainResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager.MainResourceMap)-Wert entspricht der Ressourcenzuordnung für das aktuelle App-Paket. Alle referenzierten Frameworkpakete sind ausgeschlossen. Jede **ResourceMap** wird nach dem Paketnamen benannt, der im Paketmanifest angegeben ist. Eine **ResourceMap** umfasst Unterstrukturen (siehe [**ResourceMap.GetSubtree**](/uwp/api/windows.applicationmodel.resources.core.resourcemap.getsubtree?branch=live)), die weitere **NamedResource**-Objekte enthalten. Die Unterstrukturen entsprechen üblicherweise den Ressourcendateien, in denen die Ressource enthalten ist. Weitere Informationen finden Sie unter [Lokalisieren von Zeichenfolgen in Benutzeroberfläche und App-Paketmanifest](localize-strings-ui-manifest.md) und [Laden von Bilder und Ressourcen mit Anpassung an Skalierung, Design, hohen Kontrast und anders](images-tailored-for-scale-theme-contrast.md).
 
 Beispiel:
 
-**C#**
 ```csharp
 // using Windows.ApplicationModel.Resources.Core;
 ResourceMap resourceMap =  ResourceManager.Current.MainResourceMap.GetSubtree("Resources");
@@ -67,16 +62,13 @@ Der **ResourceManager** unterstützt nicht nur den Zugriff auf die Zeichenfolgen
 Die [**StorageFile**](/uwp/api/Windows.Storage.StorageFile?branch=live)-APIs behandeln Verweise auf Dateien transparent als Ressourcen und eignen sich für die üblichen Verwendungsszenarien. Der **ResourceManager** sollte nur für erweiterte Szenarien verwendet werden, z.B. wenn der aktuellen Kontext überschrieben werden soll.
 
 ### <a name="resourcecontext"></a>ResourceContext
-
-Ressourcenkandidaten werden anhand eines bestimmten [**ResourceContext**](/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceContext?branch=live)-Elements ausgewählt. Dabei handelt es sich um eine Sammlung von Ressourcenqualifiziererwerten (für Sprache, Skalierung, Kontrast usw.). Sofern keine Überschreibung erfolgt, wird von einem Standardkontext die aktuelle App-Konfiguration für die einzelnen Qualifiziererwerte verwendet. Zum Beispiel können Ressourcen in Bezug auf die Skalierung qualifiziert werden, die von einem Monitor zum anderen und somit auch von einer Anwendungsansicht zur anderen variieren kann. Aus diesem Grund verfügt jede Anwendungsansicht über einen eigenen Standardkontext. Der Standardkontext für eine bestimmte Ansicht kann mithilfe von [**ResourceContext.GetForCurrentView**](/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceContext.md#Windows_ApplicationModel_Resources_Core_ResourceContext_GetForCurrentView) abgerufen werden. Beim Abrufen eines Ressourcenkandidaten sollte eine **ResourceContext**-Instanz übergeben werden, um für die jeweilige Ansicht den am besten passenden Wert zu erhalten.
+Ressourcenkandidaten werden anhand eines bestimmten [**ResourceContext**](/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceContext?branch=live)-Elements ausgewählt. Dabei handelt es sich um eine Sammlung von Ressourcenqualifiziererwerten (für Sprache, Skalierung, Kontrast usw.). Sofern keine Überschreibung erfolgt, wird von einem Standardkontext die aktuelle App-Konfiguration für die einzelnen Qualifiziererwerte verwendet. Zum Beispiel können Ressourcen in Bezug auf die Skalierung qualifiziert werden, die von einem Monitor zum anderen und somit auch von einer Anwendungsansicht zur anderen variieren kann. Aus diesem Grund verfügt jede Anwendungsansicht über einen eigenen Standardkontext. Der Standardkontext für eine bestimmte Ansicht kann mithilfe von [**ResourceContext.GetForCurrentView**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.GetForCurrentView) abgerufen werden. Beim Abrufen eines Ressourcenkandidaten sollte eine **ResourceContext**-Instanz übergeben werden, um für die jeweilige Ansicht den am besten passenden Wert zu erhalten.
 
 ## <a name="important-apis"></a>Wichtige APIs
-
 * [ResourceLoader](/uwp/api/windows.applicationmodel.resources.resourceloader?branch=live)
 * [ResourceManager](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live)
 * [ResourceContext](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live)
 
 ## <a name="related-topics"></a>Verwandte Themen
-
 * [Lokalisieren von Zeichenfolgen in der Benutzeroberfläche und im App-Paketmanifest](localize-strings-ui-manifest.md)
 * [Laden von Bilder und Ressourcen mit Anpassung an Skalierung, Design, hohen Kontrast und anders](images-tailored-for-scale-theme-contrast.md)

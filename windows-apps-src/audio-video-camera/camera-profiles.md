@@ -1,21 +1,24 @@
 ---
 author: drewbatgit
 ms.assetid: 42A06423-670F-4CCC-88B7-3DCEEDDEBA57
-description: "Dieser Artikel beschreibt, wie Sie Kameraprofile verwenden, um die Funktionen verschiedener Videoaufzeichnungsgeräte zu ermitteln und zu verwalten. Dazu gehören Aufgaben, z.B. das Auswählen von Profilen, die bestimmte Auflösungen oder Bildfrequenzen unterstützen, von Profilen, die gleichzeitigen Zugriff auf mehrere Kameras unterstützen, sowie von Profilen, die HDR unterstützen."
-title: "Entdecken und Auswählen von Kamerafunktionen mit Kameraprofilen"
+description: Dieser Artikel beschreibt, wie Sie Kameraprofile verwenden, um die Funktionen verschiedener Videoaufzeichnungsgeräte zu ermitteln und zu verwalten. Dazu gehören Aufgaben, z.B. das Auswählen von Profilen, die bestimmte Auflösungen oder Bildfrequenzen unterstützen, von Profilen, die gleichzeitigen Zugriff auf mehrere Kameras unterstützen, sowie von Profilen, die HDR unterstützen.
+title: Entdecken und Auswählen von Kamerafunktionen mit Kameraprofilen
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: f45fea396c775a7d9e783be1d0a821ff68716279
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: f842b10ce056d02d1c30c2fe285a87d5fe20dca8
+ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/03/2018
+ms.locfileid: "1832254"
 ---
 # <a name="discover-and-select-camera-capabilities-with-camera-profiles"></a>Entdecken und Auswählen von Kamerafunktionen mit Kameraprofilen
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
 
 Dieser Artikel beschreibt, wie Sie Kameraprofile verwenden, um die Funktionen verschiedener Videoaufzeichnungsgeräte zu ermitteln und zu verwalten. Dazu gehören Aufgaben, z.B. das Auswählen von Profilen, die bestimmte Auflösungen oder Bildfrequenzen unterstützen, von Profilen, die gleichzeitigen Zugriff auf mehrere Kameras unterstützen, sowie von Profilen, die HDR unterstützen.
@@ -61,21 +64,18 @@ Nachdem Sie das **MediaCaptureInitializationSettings**-Objekt mit dem gewünscht
 
 [!code-cs[InitCaptureWithProfile](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetInitCaptureWithProfile)]
 
-## <a name="select-a-profile-that-supports-concurrence"></a>Auswählen eines Profils, das mehrere Kameras gleichzeitig unterstützt
+## <a name="use-media-frame-source-groups-to-get-profiles"></a>Verwenden von Framequellgruppen von Medien, um Profile abzurufen
 
-Sie können Kameraprofile verwenden, um zu ermitteln, ob ein Gerät Videoaufnahmen von mehreren Kameras gleichzeitig unterstützt. Für dieses Szenario benötigen Sie zwei Sätze von Aufnahmeobjekten, eines für die Kamera auf der Vorderseite und eines für die Kamera auf der Rückseite. Erstellen Sie für jede Kamera ein **MediaCapture**-Objekt, ein **MediaCaptureInitializationSettings**-Objekt und eine Zeichenfolge für die Aufnahmegeräte-ID. Fügen Sie außerdem eine boolesche Variable hinzu, die aufzeichnet, ob eine gleichzeitige Verwendung mehrerer Kameras unterstützt wird.
+Ab Windows10, Version 1803, können Sie die [**MediaFrameSourceGroup**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup)-Klasse verwenden, um Kameraprofile mit spezifischen Funktionen vor dem Initialisieren des **MediaCapture** Objekts zu verwenden. Framequellgruppen ermöglichen Geräteherstellern das Darstellen der Gruppen von Sensoren oder das Erfassen von Funktionen als ein einziges virtuelles Gerät. Dies ermöglicht Computerphotographieszenarien wie z.B. die gemeinsame Verwendung von Tiefen- und Farbkameras. Es kann jedoch auch verwendet werden, um Kameraprofile für einfache Aufnahmeszenarien auszuwählen. Weitere Informationen zur Verwendung von **MediaFrameSourceGroup** finden Sie unter [Verarbeiten von Medienframes mit "MediaFrameReader"](process-media-frames-with-mediaframereader.md).
 
-[!code-cs[ConcurrencySetup](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetConcurrencySetup)]
+Die folgende Beispielmethode zeigt, wie Sie **MediaFrameSourceGroup**-Objekte verwenden, um ein Kameraprofil zu suchen, das ein bekanntes Videoprofil verwendet wie z.B. ein Profil, das HDR oder variable Fotosequenz unterstützt. Erhalten Sie die Liste der verfügbaren Framequellgruppen von Medien auf dem Gerät durch Aufrufen von [**MediaFrameSourceGroup.FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.FindAllAsync). Durchlaufen Sie die einzelnen Gruppe, und rufen Sie [**MediaCapture.FindKnownVideoProfiles**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.findknownvideoprofiles) für eine Liste aller Video-Profile für die aktuelle Quellgruppe auf, die das angegebene Profil unterstützen, in diesem Fall HDR mit WCG Foto. Wenn ein Profil, das den Kriterien entspricht, gefunden wird, erstellen Sie ein neues **MediaCaptureInitializationSettings**-Objekt, und legen Sie das **VideoProfile** auf das ausgewählte Profil fest und **VideoDeviceId** auf die **ID**-Eigenschaft der aktuellen Framequellgruppe von Medien. Sie können z. B. den Wert **KnownVideoProfile.HdrWithWcgVideo** in dieser Methode übergeben, um Medien Capture-Einstellungen zu erhalten, die HDR-Videos unterstützen. Übergeben Sie **KnownVideoProfile.VariablePhotoSequence** zum Abrufen von Einstellungen, die die variable Fotosequenz unterstützen.
 
-Die statische Methode [**MediaCapture.FindConcurrentProfiles**](https://msdn.microsoft.com/library/windows/apps/dn926709) gibt eine Liste von Kameraprofilen zurück, die vom angegebenen Aufnahmegerät unterstützt werden, das auch die gleichzeitige Verwendung mehrerer Kameras unterstützt. Verwenden Sie eine Linq-Abfrage, um ein Profil zu suchen, das die gleichzeitige Verwendung mehrerer Kameras unterstützt und das sowohl von der Kamera auf der Vorder- als auch auf der Rückseite unterstützt wird. Wenn ein Profil gefunden wird, das diese Anforderungen erfüllt, legen Sie das Profil in jedem **MediaCaptureInitializationSettings**-Objekt fest. Setzen Sie zudem die boolesche Variable für die Unterstützung mehrerer Kameras auf „true“.
+ [!code-cs[FindKnownVideoProfile](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetFindKnownVideoProfile)]
 
-[!code-cs[FindConcurrencyDevices](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetFindConcurrencyDevices)]
+## <a name="use-known-profiles-to-find-a-profile-that-supports-hdr-video-legacy-technique"></a>Verwenden bekannter Profile zum Suchen eines Profils, das HDR-Video unterstützt (Ältere Technik)
 
-Rufen Sie **MediaCapture.InitializeAsync** für die primäre Kamera für Ihr App-Szenario auf. Wenn die gleichzeitige Verwendung mehrerer Kameras unterstützt wird, initialisieren Sie auch die zweite Kamera.
-
-[!code-cs[InitConcurrentMediaCaptures](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetInitConcurrentMediaCaptures)]
-
-## <a name="use-known-profiles-to-find-a-profile-that-supports-hdr-video"></a>Verwenden bekannter Profile zum Suchen eines Profils, das HDR-Video unterstützt
+> [!NOTE] 
+> Die in diesem Abschnittbeschriebenen APIs sind ab Windows10, Version 1803 veraltet. Lesen Sie den vorherigen Abschnitt **Verwenden von Framequellgruppen von Medien, um Profile abzurufen**.
 
 Das Auswählen eines Profils, das HDR unterstützt, beginnt wie die anderen Szenarien. Erstellen Sie ein **MediaCaptureInitializationSettings**-Objekt und eine Zeichenfolge für die Aufnahmegerät-ID. Fügen Sie eine boolesche Variable hinzu, die aufzeichnet, ob HDR-Video unterstützt wird.
 

@@ -1,6 +1,6 @@
 ---
 author: stevewhims
-Description: "Im vorherigen Thema (Wie das Ressourcenverwaltungssystem Ressourcen zuordnet und auswählt) wird die Zuordnung von Qualifizierern im Allgemeinen behandelt. Dieses Thema konzentriert sich ausführlicher auf den Vergleich von Sprachtags."
+Description: The previous topic (How the Resource Management System matches and chooses resources) looks at qualifier-matching in general. This topic focuses on language-tag-matching in more detail.
 title: Wie das Ressourcenverwaltungssystem Sprachtags zuordnet
 template: detail.hbs
 ms.author: stwhi
@@ -9,22 +9,23 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, uwp, Ressourcen, Bild, Element, MRT, Qualifizierer
-localizationpriority: medium
-ms.openlocfilehash: ae1c4a3093e978cc054934d991d37c31264f128d
-ms.sourcegitcommit: d0c93d734639bd31f264424ae5b6fead903a951d
+ms.localizationpriority: medium
+ms.openlocfilehash: 6c01b3efe77f1933c8d9a8620a60757e14d94bd5
+ms.sourcegitcommit: dd1a2e22eadd2304afee0912fd21772a9d2d8fda
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 12/13/2017
+ms.locfileid: "1437741"
 ---
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
-
 # <a name="how-the-resource-management-system-matches-language-tags"></a>Wie das Ressourcenverwaltungssystem Sprachtags zuordnet
 
 Im vorherigen Thema ([Wie das Ressourcenverwaltungssystem Ressourcen zuordnet und auswählt](how-rms-matches-and-chooses-resources.md)) wird die Zuordnung von Qualifizierern im Allgemeinen behandelt. Dieses Thema konzentriert sich ausführlicher auf den Vergleich von Sprachtags.
 
 ## <a name="introduction"></a>Einführung
 
-Ressourcen mit Sprachtagqualifizierern werden basierend auf der priorisierten Liste bevorzugter Sprachen des Endbenutzers verglichen und bewertet. Der Bewertungsmechanismus verwendet Daten aus dem [BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302)-Register und aus andere Datenquellen. Dies ermöglicht einen Bewertungsgradienten mit unterschiedlichen Übereinstimmungsqualitäten. Sind mehrere Kandidaten verfügbar, wird der Kandidat mit der besten Übereinstimmungsbewertung ausgewählt.
+Ressourcen mit Sprachtagqualifizierern werden basierend auf der Sprachenliste für die App-Laufzeit verglichen und bewertet. Definitionen der verschiedenen Sprachlisten finden Sie unter [Benutzerprofilsprachen und App-Manifest-Sprachen verstehen](../design/globalizing/manage-language-and-region.md). Zuerst wird die erste Sprache in einer Liste abgeglichen und dann die zweite Sprache in der Liste (auch bei anderen regionalen Varianten). Eine Ressource für „en-GB“ wird z.B. vor einer „fr-CA“-Ressource ausgewählt, wenn „en-US“ die Sprache der App-Laufzeit ist. Nur dann, wenn keine Ressourcen für eine Form von „en“ vorhanden sind, wird eine Ressource für „fr-CA“ gewählt. (Beachten Sie, dass in diesem Fall die Standardsprache der App nicht auf eine beliebige Form von „en“ festgelegt werden kann).
+
+Der Bewertungsmechanismus verwendet Daten aus der Subtag Registry [BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302) und aus andere Datenquellen. Dies ermöglicht einen Bewertungsgradienten mit unterschiedlichen Übereinstimmungsqualitäten. Sind mehrere Kandidaten verfügbar, wird der Kandidat mit der besten Übereinstimmungsbewertung ausgewählt.
 
 Dadurch können Sie Sprachinhalten allgemeine Tags hinzufügen, bei Bedarf aber dennoch bestimmte Inhalte angeben. Beispielsweise könnte Ihre App über viele englische Zeichenfolgen verfügen, die sowohl in den USA als auch in Großbritannien und anderen Regionen üblich sind. Werden diese Zeichenfolgen mit dem Tag „en” (Englisch) versehen, kann dadurch Platz gespart und der Lokalisierungsaufwand reduziert werden. Wenn eine Unterscheidung erforderlich ist, z.B. in einer Zeichenfolge mit dem Wort „color” oder „colour”, können für die US-amerikanische und die englische Version jeweils die Tags „en-US” und „en-GB” verwendet werden.
 
@@ -41,7 +42,7 @@ Zusätzliche Subtag-Elemente können vorhanden sein, wirken sich jedoch nur uner
 
 ## <a name="matching-two-languages"></a>Vergleichen zweier Sprachen
 
-Wenn Windows zwei Sprachen vergleicht, geschieht dies in der Regel im Kontext eines umfangreicheren Prozesses. Möglicherweise wird der Vorgang im Kontext der Bewertung mehrerer Sprachen durchgeführt, z.B. wenn Windows die Anwendungssprachenliste generiert (siehe [Verwalten von Sprache und Region](../globalizing/manage-language-and-region.md)). Windows gleicht dazu mehrere Sprachen aus den Benutzereinstellungen mit den im App-Manifest angegebenen Sprachen ab. Der Vergleich kann auch im Rahmen der Bewertung von Sprachen und anderen Qualifizierern für eine bestimmte Ressource erfolgen. Ein Beispiel hierfür ist, wenn unter Windows eine bestimmte Dateiressource in einen bestimmten Ressourcenkontext aufgelöst wird und der Wohnort des Benutzers oder die aktuelle Skalierung des Geräts oder der DPI-Wert neben der Sprache als weitere Faktoren (neben der Sprache) verwendet werden, die in die Ressourcenauswahl eingehen.
+Wenn Windows zwei Sprachen vergleicht, geschieht dies in der Regel im Kontext eines umfangreicheren Prozesses. Möglicherweise wird der Vorgang im Kontext der Bewertung mehrerer Sprachen durchgeführt, z.B. wenn Windows die Anwendungssprachenliste generiert (siehe [Benutzerprofilsprachen und App-Manifest-Sprachen verstehen](../design/globalizing/manage-language-and-region.md)). Windows gleicht dazu mehrere Sprachen aus den Benutzereinstellungen mit den im App-Manifest angegebenen Sprachen ab. Der Vergleich kann auch im Rahmen der Bewertung von Sprachen und anderen Qualifizierern für eine bestimmte Ressource erfolgen. Ein Beispiel hierfür ist, wenn unter Windows eine bestimmte Dateiressource in einen bestimmten Ressourcenkontext aufgelöst wird und der Wohnort des Benutzers oder die aktuelle Skalierung des Geräts oder der DPI-Wert neben der Sprache als weitere Faktoren (neben der Sprache) verwendet werden, die in die Ressourcenauswahl eingehen.
 
 Beim Vergleich von zwei Sprachtags wird dem Vergleich basierend auf der Höhe der Übereinstimmung eine Bewertung zugewiesen.
 
@@ -61,7 +62,7 @@ Beim Vergleich von zwei Sprachtags wird dem Vergleich basierend auf der Höhe de
 
 ### <a name="exact-match"></a>Genaue Übereinstimmung
 
-Die Tags sind genau gleich (alle Subtag-Elemente stimmen überein). Ein Vergleich wird von einer Übereinstimmung der Variante oder Region möglicherweise auf diesen Übereinstimmungstyp heraufgestuft.
+Die Tags sind genau gleich (alle Subtag-Elemente stimmen überein). Ein Vergleich wird von einer Übereinstimmung der Variante oder Region möglicherweise auf diesen Übereinstimmungstyp heraufgestuft. Zum Beispiel stimmt „en-US“ mit „en-US“ überein.
 
 ### <a name="variant-match"></a>Übereinstimmung der Variante
 
@@ -69,11 +70,11 @@ Die Tags stimmen in Bezug auf die Subtags für Sprachen, Skripte, Regionen und V
 
 ### <a name="region-match"></a>Übereinstimmung der Region
 
-Die Tags stimmen in Bezug auf die Subtags für Sprachen, Skripte und Regionen überein, unterscheiden sich jedoch in anderer Hinsicht.
+Die Tags stimmen in Bezug auf die Subtags für Sprachen, Skripte und Regionen überein, unterscheiden sich jedoch in anderer Hinsicht. Zum Beispiel stimmt „de-DE-1996“ mit „de-DE“ und „en-US-x-Pirate“ mit „en-US“ überein.
 
 ### <a name="partial-matches"></a>Teilweise Übereinstimmungen
 
-Die Tags stimmen in Bezug auf die Subtags für Sprachen und Skripte überein, unterscheiden sich jedoch der Region oder einigen anderen Subtags.
+Die Tags stimmen in Bezug auf die Subtags für Sprachen und Skripte überein, unterscheiden sich jedoch in der Region oder einigen anderen Subtags. Zum Beispiel stimmt „en-US“ mit „en“ oder „en-US“ mit „en-\*“ überein.
 
 #### <a name="macro-region-match"></a>Vergleichen von Makroregion
 
@@ -93,7 +94,7 @@ Die Tags stimmen in den Sprachen- und Skripte-Subtags überein, und die Regionen
 
 #### <a name="preferred-region-match"></a>Übereinstimmung der bevorzugten Region
 
-Die Tags stimmen in den Sprachen- und Skripte-Subtags überein, und eines der Regionen-Subtags ist das standardmäßige Regionen-Subtag für die Sprache. Beispiel: „fr-FR” ist die Standardregion für das Subtag „fr”. Dies basiert auf in Windows vorgehaltenen Daten, die eine Standardregion für jede Sprache definieren, in die Windows lokalisiert wurde.
+Die Tags stimmen in den Sprachen- und Skripte-Subtags überein, und eines der Regionen-Subtags ist das standardmäßige Regionen-Subtag für die Sprache. Beispiel: „fr-FR” ist die Standardregion für das Subtag „fr”. „fr-FR“ passt z.B. besser zu „fr-BE“ als zu „fr-CA“. Dies basiert auf in Windows vorgehaltenen Daten, die eine Standardregion für jede Sprache definieren, in die Windows lokalisiert wurde.
 
 #### <a name="sibling-match"></a>Übereinstimmung gleichgeordneter Elemente
 
@@ -109,21 +110,21 @@ Wenn die Tags nur im Tag für die primäre Sprache, aber nicht im Skripttag übe
 
 ### <a name="no-match"></a>Keine Übereinstimmung
 
-Nicht übereinstimmende untergeordnete Tags für die primäre Sprache erhalten einen Wert für eine Stufe unterhalb einer gültigen Übereinstimmung.
+Nicht übereinstimmende untergeordnete Tags für die primäre Sprache erhalten einen Wert für eine Stufe unterhalb einer gültigen Übereinstimmung. Zum Beispiel stimmt „zh-Hant“ nicht mit „zh-Hans“ überein.
 
 ## <a name="examples"></a>Beispiele
 
 Die Benutzersprache „zh-Hans-CN” (vereinfachtes Chinesisch (China)) stimmt mit den folgenden Ressourcen in der angegebenen Prioritätsreihenfolge überein. Ein X steht für eine Nichtübereinstimmung.
 
-[!Übereinstimmung für vereinfachtes Chinesisch (China)](/images/language_matching_1.png)
+![Übereinstimmung für vereinfachtes Chinesisch (China)](images/language_matching_1.png)
 
-1. Genaue Übereinstimmung; 2: und 3: Übereinstimmung der Region; 4. Übereinstimmung des übergeordneten Elements; 5. Übereinstimmung der gleichgeordneten Elemente
+1. Genaue Übereinstimmung; 2. und 3: Übereinstimmung der Region; 4. Übereinstimmung des übergeordneten Elements; 5. Übereinstimmung der gleichgeordneten Elemente
 
-Wenn für ein untergeordnetes Sprachtag in der BCP-47-Registrierung für untergeordnete Tags ein Wert zum Unterdrücken von Skripts definiert ist, wird ein entsprechender Abgleich ausgeführt. Dabei wird der Wert des unterdrückten Skriptcodes übernommen. Im folgenden Beispiel ist die Benutzersprache „en-AU” (Englisch (Australien)).
+Wenn für ein untergeordnetes Sprachtag in der BCP-47-Registrierung für untergeordnete Tags ein Wert zum Unterdrücken von Skripts definiert ist, wird ein entsprechender Abgleich ausgeführt. Dabei wird der Wert des unterdrückten Skriptcodes übernommen. „en-Latn-US“ passt z.B. zu „en-US“. Im folgenden Beispiel ist die Benutzersprache „en-AU” (Englisch (Australien)).
 
-[!Übereinstimmung für Englisch (Australien)](/images/language_matching_2.png)
+![Übereinstimmung für Englisch (Australien)](images/language_matching_2.png)
 
-1. Genaue Übereinstimmung; 2: Übereinstimmung der Makroregion; 3: Regionsneutrale Übereinstimmung; 4: Übereinstimmung der orthographischen Affinität; 5. Übereinstimmung der bevorzugten Region; 6. Übereinstimmung der gleichgeordneten Elemente
+1. Genaue Übereinstimmung; 2. Übereinstimmung der Makroregion; 3: Regionsneutrale Übereinstimmung; 4: Übereinstimmung der orthographischen Affinität; 5. Übereinstimmung der bevorzugten Region; 6. Übereinstimmung der gleichgeordneten Elemente
 
 ## <a name="matching-a-language-to-a-language-list"></a>Abgleichen einer Sprache mit einer Sprachenliste
 
@@ -193,5 +194,5 @@ Englisch erfordert hierbei besondere Beachtung. Wenn für eine App die Lokalisie
 
 * [Wie das Ressourcenverwaltungssystem Ressourcen zuordnet und auswählt](how-rms-matches-and-chooses-resources.md)
 * [BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302)
-* [Verwalten von Sprache und Region](../globalizing/manage-language-and-region.md)
+* [Benutzerprofilsprachen und App-Manifest-Sprachen verstehen](../design/globalizing/manage-language-and-region.md)
 * [Zusammensetzung von makrogeografischen (kontinentalen) Regionen, geografischen Unterregionen und ausgewählten wirtschaftlichen und anderen Gruppierungen](http://go.microsoft.com/fwlink/p/?LinkId=247929)

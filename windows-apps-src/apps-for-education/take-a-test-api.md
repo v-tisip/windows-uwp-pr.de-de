@@ -1,319 +1,313 @@
 ---
-author: TylerMSFT
-Description: "Mit der JavaScript-API für die App „Prüfung“ von Microsoft können Sie zuverlässige Bewertungen durchführen. „Prüfung“ stellt einen sicheren Browser bereit, der die Lernenden daran hindert, während eines Tests andere Computer- oder Internet-Ressourcen zu verwenden."
-title: "JavaScript-API „Prüfung”."
-ms.author: twhitney
-ms.date: 02/08/2017
+Description: The JavaScript API for the Microsoft Take a Test app allows you to do secure assessments. Take a Test provides a secure browser that prevents students from using other computer or internet resources during a test.
+title: JavaScript-API „Prüfung”
+author: PatrickFarley
+ms.author: pafarley
+ms.assetid: 9bff6318-504c-4d0e-ba80-1a5ea45743da
+ms.date: 10/06/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-ms.assetid: 9bff6318-504c-4d0e-ba80-1a5ea45743da
-ms.openlocfilehash: e308280fcecf825061ddf503ce91f8607fcece72
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 43edadfba169ddae85818f8ef1dbd1e7f4adba64
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1691359"
 ---
 # <a name="take-a-test-javascript-api"></a>JavaScript-API „Prüfung”
 
-Bei [Prüfung](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) handelt es sich um eine browserbasierte App, die gesperrte Onlinebewertungen für wichtige Prüfungen rendert. Es werden API-Standards des SBAC-Browsers für wichtige Tests nach dem Common-Core-Bildungsplan unterstützt. Sie können sich auf den Inhalt der Bewertung anstatt auf das Sperren von Windows konzentrieren.
+[Prüfung](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) ist eine browserbasierte App, die gesperrte Online-Prüfungen rendert. So können sich Lehrer/Dozenten auf den Prüfungsinhalt konzentrieren, anstatt sich um die Bereitstellung einer sicheren Testumgebung kümmern zu müssen. Um dies zu erreichen, wird eine JavaScript-API verwendet, die von jeder Web-Anwendung genutzt werden kann. Die API „Prüfung“ unterstützt den [Browser-API-Standard SBAC](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf) zur Durchführung wichtiger allgemeiner Kernprüfungen.
 
-Prüfung wird vom Microsoft-Browser Edge unterstützt und bietet eine JavaScript-API, mit der Webanwendungen Geräte für Prüfungen sperren können.
-
-Die API (basierend auf der [Common Core SBAC API](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf)) stellt Text-zu-Sprache und die Möglichkeit von diversen Abfragen bereit (z.B. ob das Gerät gesperrt ist, wer der ausführende Benutzer ist oder welche Prozesse auf dem System ausgeführt werden).
-
-Weitere Informationen zur App selbst finden Sie unter [Technische Referenz zur App „Prüfung“](https://technet.microsoft.com/edu/windows/take-a-test-app-technical).
-
-> [!Important]
-> Diese APIs funktionieren nicht in Remotesitzungen.  
+Weitere Informationen zur App selbst finden Sie unter [Technische Referenz zur App „Prüfung“](https://technet.microsoft.com/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396).
 
 Hilfe zur Problembehandlung finden Sie unter [Problembehandlung bei Microsoft Prüfung mithilfe der Ereignisanzeige](troubleshooting.md).
 
 ## <a name="reference-documentation"></a>Referenzdokumentation
-Die Prüfungs-API umfasst die folgenden Namespaces. 
+Die Prüfungs-APIs gibt es in den folgenden Namespaces. Beachten Sie, dass alle APIs von einem globalen `SecureBrowser`-Objekt abhängen.
 
 | Namespace | Beschreibung |
 |-----------|-------------|
-|[Sicherheitsnamespace](#security-namespace)|Ermöglicht das Sperren des Geräts|
-|[TTS-Namespace](#tts-namespace)|Text-zu-Sprache-Funktion|
+|[Sicherheitsnamespace](#security-namespace)|Enthält APIs, mit denen Sie das Gerät zu Testzwecken sperren und eine Testumgebung erzwingen können. |
 
+> [!NOTE]
+> Der Namespace Text-zu-Sprache (TTS) wurde ab Windows10 Version 1709 entfernt. Die [Microsoft Edge Speech Synthesis API](https://blogs.windows.com/msedgedev/2016/06/01/introducing-speech-synthesis-api/), eine Implementierung der [W3C-Sprach-API](https://dvcs.w3.org/hg/speech-api/raw-file/tip/webspeechapi.html), ist nun die empfohlene Lösung für die Text-zu-Sprache-Implementierung.
 
- ### <a name="security-namespace"></a>Sicherheitsnamespace
+### <a name="security-namespace"></a>Sicherheitsnamespace
 
 Der Sicherheitsnamespace ermöglicht das Sperren des Geräts, das Überprüfen der Liste der Benutzer- und Systemprozesse, das Abrufen von MAC- und IP-Adressen und das Löschen von zwischengespeicherten Webressourcen.
 
 | Methode | Beschreibung   |
 |--------|---------------|
-|[clearCache](#clearCache) | Löscht zwischengespeicherte Webressourcen |
-|[close](#close) | Schließt den Browser und entsperrt das Gerät |
-|[enableLockDown](#enableLockDown) | Sperrt das Gerät. Wird auch zum Entsperren des Geräts verwendet |
-|[getIPAddressList](#getIPAddressList) | Ruft die Liste der IP-Adressen für das Gerät ab |
-|[getMACAddress](#getMACAddress)|Ruft die Liste der MAC-Adressen für das Gerät ab|
-|[getProcessList](#getProcessList)|Ruft die Liste der ausgeführten Benutzer- und Systemprozesse ab|
-|[isEnvironmentSecure](#isEnvironmentSecure)|Stellt fest, ob auf das Gerät noch der Sperrmodus-Kontext angewendet wird|  
+|[lockDown](#lockDown) | Sperrt das Gerät für Testzwecke. |
+|[isEnvironmentSecure](#isEnvironmentSecure) | Stellt fest, ob auf das Gerät noch der Sperrmodus-Kontext angewendet wird. |
+|[getDeviceInfo](#getDeviceInfo) | Ruft Details zur Plattform ab, auf der die Testanwendung ausgeführt wird. |
+|[examineProcessList](#examineProcessList)|Ruft die Liste der ausgeführten Benutzer- und Systemprozesse ab.|
+|[close](#close) | Schließt den Browser und entsperrt das Gerät. |
+|[getPermissiveMode](#getPermissiveMode)|Überprüft, ob der eingeschränkte Modus aktiviert oder deaktiviert ist.|
+|[setPermissiveMode](#setPermissiveMode)|Schaltet den eingeschränkten Modus ein oder aus.|
+|[emptyClipBoard](#emptyClipBoard)|Löscht die Zwischenablage des Systems.|
+|[getMACAddress](#getMACAddress)|Ruft die Liste der MAC-Adressen für das Gerät ab.|
+|[getStartTime](#getStartTime) | Ruft die Zeit ab, zu der die Test-App gestartet wurde. |
+|[getCapability](#getCapability) | Fragt ab, ob eine Funktion aktiviert oder deaktiviert ist. |
+|[setCapability](#setCapability)|Aktiviert oder deaktiviert die angegebene Funktion.| 
+|[isRemoteSession](#isRemoteSession) | Überprüft, ob die aktuelle Sitzung remote angemeldet ist. |
+|[isVMSession](#isVMSession) | Überprüft, ob die aktuelle Sitzung auf einem virtuellen Computer ausgeführt wird. |
 
 ---
-<span id="clearCache"/>
-### <a name="void-clearcache"></a>void clearCache()
-Löscht zwischengespeicherte Webressourcen.
+
+<span id="lockDown"/>
+
+### <a name="lockdown"></a>lockDown
+Sperrt das Gerät. Wird auch zum Entsperren des Geräts verwendet. Die Test-Webanwendung führt diesen Aufruf aus, bevor Studenten mit dem Testen beginnen dürfen. Der Implementierer ist erforderlich, um alle notwendigen Aktionen zum Schutz der Testumgebung durchzuführen. Die Schritte zum Schutz der Umgebung sind gerätespezifisch und beinhalten Aspekte wie z.B. das Deaktivieren von Bildschirmaufnahmen, das Deaktivieren des Sprachchats im sicheren Modus, das Löschen der Zwischenablage des Systems, das Wechseln zu einem Kioskmodus, das Deaktivieren von Leerzeichen in OSX10.7+-Geräten usw. Die Testanwendung aktiviert den Sperrmodus, bevor eine Prüfung beginnt, und deaktiviert den Sperrmodus wieder, wenn der Student die Prüfung abgeschlossen und den sicheren Test verlassen hat.
 
 **Syntax**  
-`browser.security.clearCache();`
+`void SecureBrowser.security.lockDown(Boolean enable, Function onSuccess, Function onError);`
 
 **Parameter**  
-`None`
-
-**Rückgabewert**  
-`None`
+* `enable` - **true**, wenn die App „Prüfung“ über dem Sperrbildschirm ausgeführt werden soll und die in diesem [Dokument](https://technet.microsoft.com/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396) behandelten Richtlinien angewendet werden sollen. **false** hält die Ausführung von „Prüfung“ über dem Sperrbildschirm an und beendet sie. Wirkungslos, wenn die App nicht gesperrt ist.  
+* `onSuccess` - [optional] Die Funktion, die aufgerufen wird, nachdem der Sperrmodus erfolgreich aktiviert oder deaktiviert wurde. Sie muss im Format `Function(Boolean currentlockdownstate)` vorliegen.  
+* `onError` - [optional] Die Funktion, die aufgerufen wird, wenn der Sperrvorgang fehlgeschlagen ist. Sie muss im Format `Function(Boolean currentlockdownstate)` vorliegen.  
 
 **Anforderungen**  
-Windows10, Version1607
-
----
-
-<span id="close"/>
-### <a name="closeboolean-restart"></a>close(boolean restart)
-Schließt den Browser und entsperrt das Gerät.
-
-**Syntax**  
-`browser.security.close(false);`
-
-**Parameter**  
-`restart` - Dieser Parameter wird ignoriert, muss aber angegeben werden.
-
-**Rückgabewert**  
-`None`
-
-**Anforderungen**  
-Windows10, Version1607
-
----
-
-<span id="enableLockDown"/>
-### <a name="enablelockdownboolean-lockdown"></a>enableLockdown(boolean lockdown)
-Sperrt das Gerät. Wird auch zum Entsperren des Geräts verwendet.
-
-**Syntax**  
-`browser.security.enableLockDown(true|false);`
-
-**Parameter**  
-`lockdown` - `true` wenn die App „Prüfung“ auf dem Sperrbildschirm ausgeführt werden soll und die in dem folgenden[Dokument](https://technet.microsoft.com/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396) behandelten Richtlinien angewendet werden sollen. `False` hält die Ausführung von „Prüfung“ auf dem Sperrbildschirm an und beendet sie. Wirkungslos, wenn die App nicht gesperrt ist.
-
-**Rückgabewert**  
-`None`
-
-**Anforderungen**  
-Windows10, Version1607
-
----
-
-<span id="getIPAddressList"/>
-### <a name="string-getipaddresslist"></a>string[] getIPAddressList()
-Ruft die Liste der IP-Adressen für das Gerät ab.
-
-**Syntax**  
-`browser.security.getIPAddressList();`
-
-**Parameter**  
-`None`
-
-**Rückgabewert**  
-`An array of IP addresses.`
-
----
-
-<span id="getMACAddress" />
-### <a name="string-getmacaddress"></a>string[] getMACAddress()
-Ruft die Liste der MAC-Adressen für das Gerät ab.
-
-**Syntax**  
-`browser.security.getMACAddress();`
-
-**Parameter**  
-`None`
-
-**Rückgabewert**  
-`An array of MAC addresses.`
-
-**Anforderungen**  
-Windows10, Version1607
-
----
-
-<span id="getProcessList" />
-### <a name="string-getprocesslist"></a>string[] getProcessList()
-Ruft die Liste der ausgeführten Benutzerprozesse ab.
-
-**Syntax**  
-`browser.security.getProcessList();`
-
-**Parameter**  
-`None`
-
-**Rückgabewert**  
-`An array of running process names.`
-
-**Anmerkung** Diese Liste enthält keine Systemprozesse.
-
-**Anforderungen**  
-Windows10, Version1607
+Windows10, Version1709
 
 ---
 
 <span id="isEnvironmentSecure" />
-### <a name="boolean-isenvironmentsecure"></a>boolean isEnvironmentSecure()
-Stellt fest, ob auf das Gerät noch der Sperrmodus-Kontext angewendet wird.
+
+### <a name="isenvironmentsecure"></a>isEnvironmentSecure
+Stellt fest, ob auf das Gerät noch der Sperrmodus-Kontext angewendet wird. Die Test-Webanwendung ruft diese Funktion auf, bevor Studenten mit dem Testen beginnen dürfen, sowie in regelmäßigen Abständen während des Tests.
 
 **Syntax**  
-`browser.security.isEnvironmentSecure();`
+`void SecureBrowser.security.isEnvironmentSecure(Function callback);`
 
 **Parameter**  
-`None`
+* `callback` - Die Funktion, die aufgerufen wird, wenn diese Funktion abgeschlossen wurde. Sie muss im Format `Function(String state)` vorliegen, wobei `state` eine JSON-Zeichenfolge ist, die zwei Felder enthält. Das erste Feld ist `secure`. Dieses Feld zeigt nur dann `true` an, wenn alle erforderlichen Sperren aktiviert (oder Features deaktiviert) wurden, um eine sichere Testumgebung zu ermöglichen, und wenn nichts beschädigt wurde, seitdem die App in den Sperrmodus gewechselt ist. Das andere Feld, `messageKey`, enthält weitere anbieterspezifische Details. Hier können Hersteller zusätzliche Informationen hinterlegen, die das boolesche Kennzeichen `secure` erweitern:
 
-**Rückgabewert**  
-`True indicates that the lockdown context is applied to the device; otherwise false.`
-
-**Anforderungen**  
-Windows10, Version1607
-
----
-
-### <a name="tts-namespace"></a>TTS-Namespace
-
-Der TTS-Namespace behandelt die Text-zu-Sprache-Funktion der App.
-
-| Methode | Beschreibung |
-|--------|-------------|
-|[getStatus](#getStatus) | Ruft den Status der Sprachwiedergabe ab|
-|[getVoices](#getVoices) | Ruft eine Liste der verfügbaren Sprachbefehlpakete ab|
-|[pause](#pause)|Hält die Sprachsynthese an|
-|[resume](#resume)|Setzt die angehaltene Sprachsynthese fort|
-|[speak](#speak)|Clientseitige Text-zu-Sprache-Synthese|
-|[stop](#stop)|Beendet die Sprachsynthese|
-
-> [!Tip]
-> Die [Microsoft Edge Speech Synthesis API](https://blogs.windows.com/msedgedev/2016/06/01/introducing-speech-synthesis-api/) ist eine Implementierung der [W3C-Sprach-API](https://dvcs.w3.org/hg/speech-api/raw-file/tip/webspeechapi.html). Entwicklern wird empfohlen, diese API nach Möglichkeit zu verwenden.
-
----
-
-<span id="getStatus" />
-### <a name="string-getstatus"></a>string getStatus()
-Ruft den Status der Sprachwiedergabe ab.
-
-**Syntax**  
-`browser.tts.getStatus();`
-
-**Parameter**  
-`None`
-
-**Rückgabewert**  
-`The speech playback status. Possible values are: “available”, “idle”, “paused”, and “speaking”.`
-
-**Anforderungen**  
-Windows10, Version1607
-
----
-
-<span id="getVoices" />
-### <a name="string-getvoices"></a>string[] getVoices()
-Ruft eine Liste der verfügbaren Sprachbefehlpakete ab.
-
-**Syntax**  
-`browser.tts.getVoices();`
-
-**Parameter**  
-`None`
-
-**Rückgabewert**  
-`The available voice packs. For example: “Microsoft Zira Mobile”, “Microsoft Mark Mobile”`
-
-**Anforderungen**  
-Windows10, Version1607
-
----
-
-<span id="pause" />
-### <a name="void-pause"></a>void pause()
-
-Hält die Sprachsynthese an.
-
-**Syntax**  
-`browser.tts.pause();`
-
-**Parameter**
-
-`None`
-
-**Rückgabewert**
-
-`None`
-
-**Anforderungen**  
-Windows10, Version1607
-
----
-
-<span id="resume" />
-### <a name="void-resume"></a>void resume()
-Setzt die angehaltene Sprachsynthese fort.
-
-**Syntax**  
-`browser.tts.resume();`
-
-**Parameter**
-`None`
-
-**Rückgabewert**
-`None`
-
-**Anforderungen**  
-Windows10, Version1607
-
----
-
-<span id="speak" />
-### <a name="void-speakstring-text-object-options-function-callback"></a>void speak(string text, object options, function callback)
-Startet die clientseitige Text-zu-Sprache-Synthese.
-
-**Syntax**  
-`void browser.tts.speak(“Hello world”, options, callback);`
-
-**Parameter**  
-`Speech options such as gender, pitch, rate, volume. For example:`  
-```
-var options = {
-   'gender': this.currentGender,
-   'language': this.currentLanguage,
-   'pitch': 1,
-   'rate': 1,
-   'voice': this.currentVoice,
-   'volume': 1
-};
+```JSON
+{
+    'secure' : "true/false",
+    'messageKey' : "some message"
+}
 ```
 
-**Rückgabewert**  
-`None`
-
-**Anmerkung** Optionsvariablen müssen mit Kleinbuchstaben geschrieben werden. Die Parameter „gender“, „language“ und „voice“ müssen als Zeichenfolgen angegeben werden.
-Das Markup für Lautstärke und Tonhöhe muss innerhalb der SSML-Datei (Speech Synthesis Markup Language) und nicht innerhalb des options-Objekts erfolgen.
-Beim options-Objekt müssen Reihenfolge, Bezeichnung und Groß-/Kleinschreibung dem obigen Beispiel entsprechen.
-
 **Anforderungen**  
-Windows10, Version1607
+Windows10, Version1709
 
 ---
 
-<span id="stop" />
-### <a name="void-stop"></a>void stop()
-Beendet die Sprachsynthese.
+<span id="getDeviceInfo" />
+
+### <a name="getdeviceinfo"></a>getDeviceInfo
+Ruft Details zur Plattform ab, auf der die Testanwendung ausgeführt wird. Wird verwendet, um die Informationen anzureichern, die vom Benutzer-Agent erkennbar waren.
 
 **Syntax**  
-`void browser.tts.speak(“Hello world”, options, callback);`
+`void SecureBrowser.security.getDeviceInfo(Function callback);`
 
 **Parameter**  
-`None`
-
-**Rückgabewert**  
-`None`
+* `callback` - Die Funktion, die aufgerufen wird, wenn diese Funktion abgeschlossen wurde. Sie muss im Format `Function(String infoObj)` vorliegen, wobei `infoObj` eine JSON-Zeichenfolge ist, die mehrere Felder enthält. Die folgenden Felder müssen unterstützt werden:
+    * `os` steht für den Typ des Betriebssystems (z.B. Windows, MacOS, Linux, iOS, Android usw.)
+    * `name` steht für den Namen der Betriebssystemversion, sofern vorhanden (z.B. Sierra, Ubuntu).
+    * `version` steht für die Version des Betriebssystems (z.B. 10.1, 10 Pro usw.).
+    * `brand` steht für das sichere Browser-Branding (z.B. OAKS, CA, SmarterApp usw.).
+    * `model` gibt nur das Gerätemodell für mobile Geräte an; null/nicht verwendet bei Desktopbrowsern.
 
 **Anforderungen**  
-Windows10, Version1607
+Windows10, Version1709
+
+---
+
+<span id="examineProcessList" />
+
+### <a name="examineprocesslist"></a>examineProcessList
+Ruft die Liste aller Prozesse ab, die auf dem Clientcomputer im Besitz des Benutzers ausgeführt werden. Die Testanwendung ruft diese Funktion auf, um die Liste zu überprüfen und mit einer Liste der Prozesse zu vergleichen, die während der Testphase auf die Blacklist gesetzt wurden. Dieser Aufruf sollte sowohl zu Beginn einer Prüfung sowie in regelmäßigen Abständen während der Prüfung ausgeführt werden. Wenn ein Prozess auf der Blacklist erkannt wird, sollte die Prüfung beendet werden, um die Integrität des Tests zu wahren.
+
+**Syntax**  
+`void SecureBrowser.security.examineProcessList(String[] blacklistedProcessList, Function callback);`
+
+**Parameter**  
+* `blacklistedProcessList` - Die Liste der Prozesse, die von der Testanwendung auf die Blacklist gesetzt wurden.  
+`callback` - Die Funktion, die aufgerufen wird, sobald die aktiven Prozesse gefunden wurden. Sie muss im Format `Function(String foundBlacklistedProcesses)` vorliegen, wobei `foundBlacklistedProcesses` das Format `"['process1.exe','process2.exe','processEtc.exe']"` hat. Sie ist leer, wenn keine Prozesse auf der Blacklist gefunden wurden. Wenn sie null ist, bedeutet dies, dass im ursprünglichen Funktionsaufruf ein Fehler aufgetreten ist.
+
+**Hinweise** Diese Liste enthält keine Systemprozesse.
+
+**Anforderungen**  
+Windows10, Version1709
+
+---
+
+<span id="close"/>
+
+### <a name="close"></a>close
+Schließt den Browser und entsperrt das Gerät. Die Testanwendung sollte diese Funktion aufrufen, wenn der Benutzer beschließt, den Browser zu beenden.
+
+**Syntax**  
+`void SecureBrowser.security.close(restart);`
+
+**Parameter**  
+* `restart` - Dieser Parameter wird ignoriert, muss aber angegeben werden.
+
+**Hinweise** In Windows10, Version 1607, muss das Gerät zunächst gesperrt werden. In späteren Versionen schließt diese Methode den Browser unabhängig davon, ob das Gerät gesperrt ist.
+
+**Anforderungen**  
+Windows10, Version1709
+
+---
+
+<span id="getPermissiveMode" />
+
+### <a name="getpermissivemode"></a>getPermissiveMode
+Die Testanwendung sollte diese Funktion aufrufen, um zu bestimmen, ob der eingeschränkte Modus aktiviert oder deaktiviert ist. Im eingeschränkten Modus lockert ein Browser erwartungsgemäß einige seiner strengen Sicherheitregeln, damit Hilfstechnologien mit dem sicheren Browser funktionieren. Browser, die die Benutzeroberflächen anderer Anwendungen strikt daran hindern, über diesen angezeigt zu werden, könnten dieses Verhalten im eingeschränkten Modus lockern. 
+
+**Syntax**  
+`void SecureBrowser.security.getPermissiveMode(Function callback)`
+
+**Parameter**  
+* `callback` - Die Funktion, die aufgerufen wird, wenn dieser Aufruf abgeschlossen wurde. Sie muss im Format `Function(Boolean permissiveMode)` vorliegen, wobei `permissiveMode` angibt, ob für den Browser aktuell der eingeschränkte Modus aktiviert ist. Wenn sie nicht definiert oder null ist, ist beim GET-Vorgang ein Fehler aufgetreten.
+
+**Anforderungen**  
+Windows10, Version1709
+
+---
+
+<span id="setPermissiveMode" />
+
+### <a name="setpermissivemode"></a>setPermissiveMode
+Die Testanwendung sollte diese Funktion aufrufen, um den eingeschränkten Modus zu aktivieren oder zu deaktivieren. Im eingeschränkten Modus lockert ein Browser erwartungsgemäß einige seiner strengen Sicherheitregeln, damit Hilfstechnologien mit dem sicheren Browser funktionieren. Browser, die die Benutzeroberflächen anderer Anwendungen strikt daran hindern, über diesen angezeigt zu werden, könnten dieses Verhalten im eingeschränkten Modus lockern. 
+
+**Syntax**  
+`void SecureBrowser.security.setPermissiveMode(Boolean enable, Function callback)`
+
+**Parameter**  
+* `enable` – Der boolesche Wert, der den Status des vorgesehenen eingeschränkten Modus angibt.  
+* `callback` - Die Funktion, die aufgerufen wird, wenn dieser Aufruf abgeschlossen wurde. Sie muss im Format `Function(Boolean permissiveMode)` vorliegen, wobei `permissiveMode` angibt, ob für den Browser aktuell der eingeschränkte Modus aktiviert ist. Wenn sie nicht definiert oder null ist, ist beim SET-Vorgang ein Fehler aufgetreten.
+
+**Anforderungen**  
+Windows10, Version1709
+
+---
+
+<span id="emptyClipBoard"/>
+
+### <a name="emptyclipboard"></a>emptyClipBoard
+Löscht die Zwischenablage des Systems. Die Testanwendung sollte diese Funktion aufrufen, um zu erzwingen, dass alle Daten gelöscht werden, die unter Umständen in der Zwischenablage des Systems gespeichert sind. Dieser Vorgang wird auch von der Funktion **[lockDown](#lockDown)** ausgeführt.
+
+**Syntax**  
+`void SecureBrowser.security.emptyClipBoard();`
+
+**Anforderungen**  
+Windows10, Version1709
+
+---
+
+<span id="getMACAddress" />
+
+### <a name="getmacaddress"></a>getMACAddress
+Ruft die Liste der MAC-Adressen für das Gerät ab. Die Testanwendung sollte diese Funktion aufrufen, um Unterstützung bei der Diagnose zu bieten. 
+
+**Syntax**  
+`void SecureBrowser.security.getMACAddress(Function callback);`
+
+**Parameter**  
+* `callback` - Die Funktion, die aufgerufen wird, wenn dieser Aufruf abgeschlossen wurde. Sie muss im Format `Function(String addressArray)` vorliegen, wobei `addressArray` das Format `"['00:11:22:33:44:55','etc']"` hat.
+
+**Hinweise**  
+Es ist schwierig, sich bei der Unterscheidung zwischen den Endnutzercomputern innerhalb der Testserver auf die Quell-IP-Adressen zu verlassen, da in Schulen für gewöhnlich Firewalls/NATs/Proxys verwendet werden. Anhand der MAC-Adressen kann die App für Diagnosezwecke zwischen den Endbenutzercomputern hinter einer gängigen Firewall unterscheiden.
+
+**Anforderungen**  
+Windows10, Version1709
+
+---
+
+<span id="getStartTime" />
+
+### <a name="getstarttime"></a>getStartTime
+Ruft die Zeit ab, zu der die Test-App gestartet wurde.
+
+**Syntax**  
+`DateTime SecureBrowser.settings.getStartTime();`
+
+**Rückgabe**  
+Ein DateTime-Objekt, das den Zeitpunkt angibt, zu dem die Test-App gestartet wurde.
+
+**Anforderungen**  
+Windows10, Version1709
+
+---
+
+<span id="getCapability"/>
+
+### <a name="getcapability"></a>getCapability
+Fragt ab, ob eine Funktion aktiviert oder deaktiviert ist. 
+
+**Syntax**  
+`Object SecureBrowser.security.getCapability(String feature)`
+
+**Parameter**  
+`feature` - Die Zeichenfolge, die festlegt, welche Funktion abgefragt werden soll. Gültige Funktionszeichenfolgen sind „screenMonitoring“, „printing“ und „textSuggestions“ (Groß-/Kleinschreibung spielt keine Rolle).
+
+**Rückgabewert**  
+Diese Funktion gibt ein JavaScript-Objekt oder Literalzeichen im folgenden Format zurück: `{<feature>:true|false}`. **true**, wenn die abgefragte Funktion aktiviert ist, **false**, wenn die Funktion nicht aktiviert oder die Funktionszeichenfolge ungültig ist.
+
+**Anforderungen** Windows10, Version 1703
+
+---
+
+<span id="setCapability"/>
+
+### <a name="setcapability"></a>setCapability
+Aktiviert oder deaktiviert eine bestimmte Funktion des Browsers.
+
+**Syntax**  
+`void SecureBrowser.security.setCapability(String feature, String value, Function onSuccess, Function onError)`
+
+**Parameter**  
+* `feature` - Die Zeichenfolge, mit der bestimmt wird, welche Funktion festgelegt wird. Gültige Funktionszeichenfolgen sind `"screenMonitoring"`, `"printing"` und `"textSuggestions"` (Groß-/Kleinschreibung spielt keine Rolle).  
+* `value` – Die gewünschte Einstellung für das Feature. Muss entweder `"true"` oder `"false"` sein.  
+* `onSuccess` - [optional] Die Funktion, die aufgerufen wird, nachdem der SET-Vorgang erfolgreich abgeschlossen wurde. Sie muss im Format `Function(String jsonValue)` vorliegen, wobei *jsonValue* das Format `{<feature>:true|false|undefined}` hat.  
+* `onError` - [optional] Die Funktion, die aufgerufen wird, wenn der SET-Vorgang fehlgeschlagen ist. Sie muss im Format `Function(String jsonValue)` vorliegen, wobei *jsonValue* das Format `{<feature>:true|false|undefined}` hat.
+
+**Hinweise**  
+Wenn die Zielfunktion dem Browser nicht bekannt ist, übergibt diese Funktion den Wert `undefined` an die Rückruffunktion.
+
+**Anforderungen** Windows10, Version 1703
+
+---
+
+<span id="isRemoteSession"/>
+
+### <a name="isremotesession"></a>isRemoteSession
+Überprüft, ob die aktuelle Sitzung remote angemeldet ist.
+
+**Syntax**  
+`Boolean SecureBrowser.security.isRemoteSession();`
+
+**Rückgabewert**  
+**true**, wenn es sich bei der aktuellen Sitzung um eine Remotesitzung handelt, andernfalls **false**.
+
+**Anforderungen**  
+Windows10, Version1709
+
+---
+
+<span id="isVMSession"/>
+
+### <a name="isvmsession"></a>isVMSession
+Überprüft, ob die aktuelle Sitzung auf einem virtuellen Computer ausgeführt wird.
+
+**Syntax**  
+`Boolean SecureBrowser.security.isVMSession();`
+
+**Rückgabewert**  
+**true**, wenn die aktuelle Sitzung auf einem virtuellen Computer ausgeführt wird, andernfalls **false**.
+
+**Hinweise**  
+Diese API-Prüfung erkennt nur VM Sitzungen, die in bestimmten Hypervisoren ausgeführt werden, die die entsprechenden APIs implementieren.
+
+**Anforderungen**  
+Windows10, Version1709
+
+---

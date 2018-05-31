@@ -1,6 +1,6 @@
 ---
 author: stevewhims
-Description: "MakePri.exe ist ein Befehlszeilentool, mit dem Sie PRI-Dateien erstellen und dumpen können Es ist über MSBuild in Microsoft Visual Studio integriert, kann aber auch für Entwickler von Nutzen sein, die Pakete manuell oder mithilfe benutzerdefinierter Buildsysteme erstellen."
+Description: MakePri.exe is a command line tool that you can use to create and dump PRI files. It is integrated as part of MSBuild within Microsoft Visual Studio, but it could be useful to you for creating packages manually or with a custom build system.
 title: Manuelles Kompilieren von Ressourcen mit MakePri.exe
 template: detail.hbs
 ms.author: stwhi
@@ -9,20 +9,28 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, uwp, Ressourcen, Bild, Element, MRT, Qualifizierer
-localizationpriority: medium
-ms.openlocfilehash: 16d2a270a69497bc66f7b17109bc28b062f14b5e
-ms.sourcegitcommit: d0c93d734639bd31f264424ae5b6fead903a951d
+ms.localizationpriority: medium
+ms.openlocfilehash: 261a2b747d25284351bb6f4e51f108158b6e2bc5
+ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 04/05/2018
+ms.locfileid: "1707025"
 ---
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
-
 # <a name="compile-resources-manually-with-makepriexe"></a>Manuelles Kompilieren von Ressourcen mit MakePri.exe
 
 MakePri.exe ist ein Befehlszeilentool, mit dem Sie PRI-Dateien erstellen und dumpen können Es ist über MSBuild in Microsoft Visual Studio integriert, kann aber auch für Entwickler von Nutzen sein, die Pakete manuell oder mithilfe benutzerdefinierter Buildsysteme erstellen.
 
-## <a name="makepriexe-command-line-options"></a>Befehlszeilenoptionen für MakePRI.exe
+Die maximale Größe für eine PRI-Datei beträgt 64KB.
+
+## <a name="in-this-section"></a>In diesem Abschnitt
+|Thema|Beschreibung|
+|-|-|
+| [Befehlszeilenoptionen für MakePri.exe](makepri-exe-command-options.md) | MakePri.exe akzeptiert die Befehle `createconfig`, `dump`, `new`, `resourcepack`, und `versioned`. In diesem Thema werden die Befehlszeilenoptionen für deren Verwendung erläutert. |
+| [Konfigurationsdatei für MakePRI.exe](makepri-exe-configuration.md) | In diesem Thema wird das Schema der XML-Konfigurationsdatei für MakePri.exe beschrieben. |
+| [Formatspezifische Indexer für MakePri.exe](makepri-exe-format-specific-indexers.md) | In diesem Thema werden die formatspezifischen Indexer beschrieben, die das Tool MakePri.exe verwendet, um seinen Ressourcenindex zu generieren. |
+
+## <a name="makepriexe-command-line-options"></a>Befehlszeilenoptionen für MakePri.exe
 
 MakePri.exe akzeptiert die Befehle `createconfig`, `dump`, `new`, `resourcepack`, und `versioned`. Details zur Verwendung dieser Befehle finden Sie unter [Befehlszeilenoptionen für MakePRI.exe](makepri-exe-command-options.md).
 
@@ -59,7 +67,6 @@ Buildsysteme können außerdem den formatspezifischen PRI-Indexer verwenden, um 
 Beim Erstellen von PRI-Dateien für andere Komponenten, Klassenbibliotheken, Assemblys, DLLs und SDKs muss die **initialPath** -Konfiguration verwendet werden, damit für die Komponentenressourcen eigene untergeordnete Ressourcenzuordnungen vorhanden sind, die nicht mit der sie enthaltenden App in Konflikt geraten.
 
 ## <a name="related-topics"></a>Verwandte Themen
-
 * [Befehlszeilenoptionen für MakePRI.exe](makepri-exe-command-options.md)
 * [Konfigurieren von MakePRI.exe](makepri-exe-configuration.md)
 * [Formatspezifische Indexer für MakePri.exe](makepri-exe-format-specific-indexers.md)

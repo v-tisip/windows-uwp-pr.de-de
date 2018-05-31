@@ -1,21 +1,24 @@
 ---
 author: drewbatgit
 ms.assetid: 708170E1-777A-4E4A-9F77-5AB28B88B107
-description: "In diesem Artikel wird beschrieben, wie Sie manuelle Gerätesteuerelemente verwenden, um erweiterte Videoaufnahmeszenarien, z.B. HDR-Video und Belichtungspriorität, zu ermöglichen."
-title: "Manuelle Kamerasteuerelemente für die Videoaufnahme"
+description: In diesem Artikel wird beschrieben, wie Sie manuelle Gerätesteuerelemente verwenden, um erweiterte Videoaufnahmeszenarien, z.B. HDR-Video und Belichtungspriorität, zu ermöglichen.
+title: Manuelle Kamerasteuerelemente für die Videoaufnahme
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: cd2adcffa233b76563e47f93f298cf954154adef
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: e4bad8d38676c8298026e66be31e2493ae7d4117
+ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/30/2018
+ms.locfileid: "1816035"
 ---
 # <a name="manual-camera-controls-for-video-capture"></a>Manuelle Kamerasteuerelemente für die Videoaufnahme
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
 
 In diesem Artikel wird beschrieben, wie Sie manuelle Gerätesteuerelemente verwenden, um erweiterte Videoaufnahmeszenarien, z.B. HDR-Video und Belichtungspriorität, zu ermöglichen.
@@ -49,12 +52,48 @@ Aktivieren oder deaktivieren Sie das Steuerelement für die Belichtungsprioritä
 
 [!code-cs[EnableExposurePriority](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetEnableExposurePriority)]
 
+## <a name="temporal-denoising"></a>Temporäre Entstörung
+Ab Windows10, Version 1803, können Sie die temporäre Entstörung für Videos auf Geräten verwenden, die dies unterstützen. Dieses Feature fixiert die Bilddaten aus mehreren benachbarten Frames in Echtzeit, und produziert Video-Frames mit weniger visuellen Störungen.
+
+Mit [**VideoTemporalDenoisingControl**](https://docs.microsoft.com/uwp/api/windows.media.devices.videotemporaldenoisingcontrol) kann Ihre App bestimmen, ob die temporäre Entstörung auf dem aktuellen Gerät unterstützt wird und wenn Ja, welche temporäre Entstörungsmodi unterstützt werden. Die verfügbaren Entstörungsmodi sind [**Aus**](https://docs.microsoft.com/uwp/api/windows.media.devices.videotemporaldenoisingmode), [**Ein**](https://docs.microsoft.com/uwp/api/windows.media.devices.videotemporaldenoisingmode), [**Auto**](https://docs.microsoft.com/uwp/api/windows.media.devices.videotemporaldenoisingmode). Ein Gerät unterstützt möglicherweise nicht alle Modi, aber auf allen Geräten muss entweder **Auto** oder **Ein** und **Aus** vorhanden sein.
+
+Das folgende Beispiel verwendet eine einfache Benutzeroberfläche für Optionsfelder, damit der Benutzer zwischen den Entstörungsmodi wechseln kann.
+
+[!code-cs[SnippetDenoiseXAML](./code/BasicMediaCaptureWin10/cs/MainPage.xaml#SnippetDenoiseXAML)]
+
+In der folgenden Methode ist die Eigenschaft [**VideoTemporalDenoisingControl.Supported**](https://docs.microsoft.com/uwp/api/windows.media.devices.videotemporaldenoisingcontrol.supported) festgelegt, um festzustellen, ob die temporäre Entstörung überhaupt auf dem aktuellen Gerät unterstützt wird. Wenn Ja, überprüfen Sie, dass **Aus** und **Auto** oder **Ein** unterstützt werden. In diesem Fall machen wir unsere Optionsfelder sichtbar. Als Nächstes werden die Schaltflächen **Auto** und **Ein** eingeblendet, wenn diese Methoden unterstützt werden.
+
+[!code-cs[SnippetUpdateDenoiseCapabilities](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetUpdateDenoiseCapabilities)]
+
+Im **Checked**-Ereignishandler für die Optionsfelder ist der Namen der Schaltfläche aktiviert und der entsprechende Modus festgelegt, indem die [**VideoTemporalDenoisingControl.Mode**](https://docs.microsoft.com/uwp/api/windows.media.devices.videotemporaldenoisingcontrol.mode)-Eigenschaft festgelegt wird.
+
+[!code-cs[SnippetDenoiseButtonChecked](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetDenoiseButtonChecked)]
+
+### <a name="disabling-temporal-denoising-while-processing-frames"></a>Deaktivieren der temporären Entstörung bei der Verarbeitung von Frames
+Video, das mit der temporären Entstörung verarbeitet wurde, kann für das menschliche Auge ansprechender wirken. Da die temporäre Entstörung sich auf die Konsistenz der Bilder auswirken kann und die Details der Frame verringern kann, können Apps, die Bildverarbeitung der Frames durchführen wie z.B. die Registrierung oder optische Zeichenerkennung, die Entstörung programmgesteuert deaktivieren, wenn die Bildverarbeitung aktiviert ist.
+
+Im folgenden Beispiel wird bestimmt, welche Entstörungsmodi unterstützt werden. Diese Informationen werden in einigen Klassenvariablen gespeichert.
+
+[!code-cs[SnippetDenoiseFrameReaderVars](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetDenoiseFrameReaderVars)]
+
+[!code-cs[SnippetDenoiseCapabilitiesForFrameProcessing](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetDenoiseCapabilitiesForFrameProcessing)]
+
+Wenn die App die Frameverarbeitung aktiviert, wird der Entstörungsmodus auf **Aus** festgelegt, wenn dieser Modus unterstützt wird, damit die Frameverarbeitung unformatierte Frames ohne Entstörungsmodus verwenden kann.
+
+[!code-cs[SnippetEnableFrameProcessing](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetEnableFrameProcessing)]
+
+Wenn die App die Bildverarbeitung deaktiviert, wird der Entstörungsmodus auf **Ein** oder **Auto** festgelegt, je nachdem, welcher Modus unterstützt wird.
+
+[!code-cs[SnippetDisableFrameProcessing](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetDisableFrameProcessing)]
+
+Weitere Informationen über das Abrufen von Videoframes für die Bildverarbeitung finden Sie unter [Verarbeiten von Medienframes mit "MediaFrameReader"](process-media-frames-with-mediaframereader.md).
+
 ## <a name="related-topics"></a>Verwandte Themen
 
 * [Kamera](camera.md)
-* [Allgemeine Foto-, Video- und Audioaufnahme mit „MediaCapture“](basic-photo-video-and-audio-capture-with-MediaCapture.md)
- 
-
+* [Allgemeine Foto-, Video- und Audioaufnahme mit MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Verarbeiten von Medienframes mit „MediaFrameReader“](process-media-frames-with-mediaframereader.md)
+*  [**VideoTemporalDenoisingControl**](https://docs.microsoft.com/uwp/api/windows.media.devices.videotemporaldenoisingcontrol)
  
 
 
