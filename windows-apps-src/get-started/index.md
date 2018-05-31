@@ -10,11 +10,12 @@ ms.topic: article
 keywords: Erste Schritte, Windows 10, UWP, XAML, c#
 ms.technology: uwp
 ms.localizationpriority: high
-ms.openlocfilehash: a6a7fd3b16316c7ee0a5d162fc1d0aff5813a81f
-ms.sourcegitcommit: 1d479842a5410f8ba3f286b972504f57bbc97ed1
+ms.openlocfilehash: 9e2cd95cfc74273f4c9f6c949a5a618542b99acf
+ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2018
+ms.lasthandoff: 04/30/2018
+ms.locfileid: "1815745"
 ---
 # <a name="get-started-with-windows-10-apps"></a>Erste Schritte mit Windows 10-Apps 
  
@@ -54,8 +55,7 @@ Entwickeln von Apps, die auf allen Windows10-Geräten funktionieren, oder Ihre v
                     <h3>Vorbereiten</h3>
                     <p>Mit Visual Studio Community und Windows 10 SDK erhalten Sie alles, was Sie zum Entwickeln herausragender Apps benötigen – kostenlos!</p>
                     <ul>
-                        <li><a href="//developer.microsoft.com/windows/downloads">Herunterladen der Tools und SDK</a></li>
-                        <li><a href="//docs.microsoft.com/windows/uwp/get-started/get-set-up">Benötigen Sie Hilfe?</a></li>
+                        <li><a href="//docs.microsoft.com/windows/uwp/get-started/get-set-up">Herunterladen der Tools und SDK</a></li>
                     </ul>
                   </div>
                 </div>

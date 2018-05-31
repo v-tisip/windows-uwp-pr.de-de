@@ -1,176 +1,101 @@
 ---
 author: normesta
-Description: "In diesem Handbuch wird erläutert, wie Sie Ihre Visual Studio-Lösung zum Bearbeiten, Debuggen und Packen Ihrer konvertierten Desktop-App für die Desktop-Brücke konfigurieren."
+Description: This guide explains how to configure your Visual Studio Solution to edit, debug, and package desktop app for the Desktop Bridge.
 Search.Product: eADQiWindows 10XVcnh
-title: "Verpacken einer App mit Visual Studio (Desktop-Brücke)"
+title: Verpacken einer App mit Visual Studio (Desktop-Brücke)
 ms.author: normesta
-ms.date: 07/20/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows10, UWP
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
-ms.openlocfilehash: d8919448b965f18ff7f8fdaeda325889e495ef85
-ms.sourcegitcommit: f6dd9568eafa10ee5cb2b849c0d82d84a1c5fb93
+ms.localizationpriority: medium
+ms.openlocfilehash: d7ae77c499cb8398aa5557f0d422899fbe8b252d
+ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 04/30/2018
+ms.locfileid: "1816255"
 ---
-# <a name="package-an-app-by-using-visual-studio-desktop-bridge"></a><span data-ttu-id="e57a9-104">Verpacken einer App mit Visual Studio (Desktop-Brücke)</span><span class="sxs-lookup"><span data-stu-id="e57a9-104">Package an app by using Visual Studio (Desktop Bridge)</span></span>
+# <a name="package-an-app-by-using-visual-studio-desktop-bridge"></a><span data-ttu-id="7adca-103">Verpacken einer App mit Visual Studio (Desktop-Brücke)</span><span class="sxs-lookup"><span data-stu-id="7adca-103">Package an app by using Visual Studio (Desktop Bridge)</span></span>
 
-<span data-ttu-id="e57a9-105">Sie können Visual Studio verwenden, um ein Paket für Ihre Desktop-App zu generieren.</span><span class="sxs-lookup"><span data-stu-id="e57a9-105">You can use Visual Studio to generate a package for your desktop app.</span></span> <span data-ttu-id="e57a9-106">Anschließend können Sie das Paket im Windows Store veröffentlichen oder es auf einem oder mehreren PCs querladen.</span><span class="sxs-lookup"><span data-stu-id="e57a9-106">Then, you can publish that package to the Windows store or sideload it onto one or more PCs.</span></span>
+<span data-ttu-id="7adca-104">Sie können Visual Studio verwenden, um ein Paket für Ihre Desktop-App zu generieren.</span><span class="sxs-lookup"><span data-stu-id="7adca-104">You can use Visual Studio to generate a package for your desktop app.</span></span> <span data-ttu-id="7adca-105">Anschließend können Sie das Paket im Windows Store veröffentlichen oder es auf einem oder mehreren PCs querladen.</span><span class="sxs-lookup"><span data-stu-id="7adca-105">Then, you can publish that package to the Windows store or sideload it onto one or more PCs.</span></span>
 
-<span data-ttu-id="e57a9-107">Dieser Anleitung zeigt, wie Sie Ihre Lösung einrichten und ein Paket für Ihre Desktopanwendung generieren.</span><span class="sxs-lookup"><span data-stu-id="e57a9-107">This guide shows you how to set up your solution and then generate a package for your desktop application.</span></span>
+<span data-ttu-id="7adca-106">Die aktuelle Version von Visual Studio bietet ein neue Version des Paketprojekts, um manuelle Schritte zu eliminieren, die beim Verpacken Ihrer App erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="7adca-106">The latest version of Visual Studio provides a new version of the packaging project that eliminates all of the manual steps that used to be necessary to package your app.</span></span> <span data-ttu-id="7adca-107">Sie müssen nur Ihr Paketprojekt hinzufügen, auf das Desktopprojekt verweisen und F5 drücken, um Ihre App zu debuggen.</span><span class="sxs-lookup"><span data-stu-id="7adca-107">Just add a packaging project, reference your desktop project, and then press F5 to debug your app.</span></span> <span data-ttu-id="7adca-108">Es sind keine manuellen Optimierungsmethoden mehr erforderlich.</span><span class="sxs-lookup"><span data-stu-id="7adca-108">No manual tweaks necessary.</span></span> <span data-ttu-id="7adca-109">Das neue optimierte Design ist eine enorme Verbesserung über die Benutzeroberfläche, die in der vorherigen Version von Visual Studio verfügbar war.</span><span class="sxs-lookup"><span data-stu-id="7adca-109">This new streamlined experience is a vast improvement over the experience that was available in the previous version of Visual Studio.</span></span>
 
-## <a name="first-consider-how-youll-distribute-your-app"></a><span data-ttu-id="e57a9-108">Überlegen Sie zunächst, wie Sie Ihre App verteilen möchten.</span><span class="sxs-lookup"><span data-stu-id="e57a9-108">First, consider how you'll distribute your app</span></span>
+>[!IMPORTANT]
+><span data-ttu-id="7adca-110">Der Desktop-Brücke wurde in Windows10, Version 1607, eingeführt und kann nur in Projekten für das Windows10 Anniversary Update (10.0; Build 14393) oder einer neueren Version in Visual Studio verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="7adca-110">The Desktop Bridge was introduced in Windows 10, version 1607, and it can only be used in projects that target Windows 10 Anniversary Update (10.0; Build 14393) or a later release in Visual Studio.</span></span>
 
-<span data-ttu-id="e57a9-109">Wenn Sie Ihre App im [Windows Store-](https://www.microsoft.com/store/apps) veröffentlichen möchten, beginnen Sie mit dem Ausfüllen [dieses Formulars](https://developer.microsoft.com/windows/projects/campaigns/desktop-bridge).</span><span class="sxs-lookup"><span data-stu-id="e57a9-109">If you plan to publish your app to the [Windows Store](https://www.microsoft.com/store/apps), start by filling out [this form](https://developer.microsoft.com/windows/projects/campaigns/desktop-bridge).</span></span> <span data-ttu-id="e57a9-110">Microsoft nimmt mit Ihnen Kontakt auf und beginnt den Onboardingprozess.</span><span class="sxs-lookup"><span data-stu-id="e57a9-110">Microsoft will contact you to start the onboarding process.</span></span> <span data-ttu-id="e57a9-111">Im Rahmen dieses Prozesses reservieren Sie einen Namen im Store und erhalten Informationen, die Sie benötigen, um Ihre App zu verpacken.</span><span class="sxs-lookup"><span data-stu-id="e57a9-111">As part of this process, you'll reserve a name in the store, and obtain information that you'll need to package your app.</span></span>
+## <a name="first-consider-how-youll-distribute-your-app"></a><span data-ttu-id="7adca-111">Überlegen Sie zunächst, wie Sie Ihre App verteilen möchten.</span><span class="sxs-lookup"><span data-stu-id="7adca-111">First, consider how you'll distribute your app</span></span>
 
-## <a name="add-a-packaging-project-to-your-solution"></a><span data-ttu-id="e57a9-112">Hinzufügen eines Verpackungsprojekts zur Lösung</span><span class="sxs-lookup"><span data-stu-id="e57a9-112">Add a packaging project to your solution</span></span>
+<span data-ttu-id="7adca-112">Wenn Sie Ihre App im [Microsoft Store](https://www.microsoft.com/store/apps) veröffentlichen möchten, beginnen Sie mit dem Ausfüllen [dieses Formulars](https://developer.microsoft.com/windows/projects/campaigns/desktop-bridge).</span><span class="sxs-lookup"><span data-stu-id="7adca-112">If you plan to publish your app to the [Microsoft Store](https://www.microsoft.com/store/apps), start by filling out [this form](https://developer.microsoft.com/windows/projects/campaigns/desktop-bridge).</span></span> <span data-ttu-id="7adca-113">Microsoft nimmt mit Ihnen Kontakt auf und beginnt den Onboardingprozess.</span><span class="sxs-lookup"><span data-stu-id="7adca-113">Microsoft will contact you to start the onboarding process.</span></span> <span data-ttu-id="7adca-114">Im Rahmen dieses Prozesses reservieren Sie einen Namen im Store und erhalten Informationen, die Sie benötigen, um Ihre App zu verpacken.</span><span class="sxs-lookup"><span data-stu-id="7adca-114">As part of this process, you'll reserve a name in the store, and obtain information that you'll need to package your app.</span></span>
 
-1. <span data-ttu-id="e57a9-113">Öffnen Sie in Visual Studio die Lösung mit Ihrem Desktopanwendungsprojekt.</span><span class="sxs-lookup"><span data-stu-id="e57a9-113">In Visual Studio, open the solution that contains your desktop application project.</span></span>
+<span data-ttu-id="7adca-115">Lesen Sie außerdem unbedingt dieses Handbuch lesen, bevor Sie mit der Paketerstellung für Ihre Anwendung beginnen: [Vorbereiten der Verpackung einer App (Desktop-Brücke)](desktop-to-uwp-prepare.md).</span><span class="sxs-lookup"><span data-stu-id="7adca-115">Also, make sure to review this guide before you begin creating a package for your application: [Prepare to package an app (Desktop Bridge)](desktop-to-uwp-prepare.md).</span></span>
 
-2. <span data-ttu-id="e57a9-114">Fügen Sie der Projektmappe eine JavaScript **Leere App (Universal Windows)**-Projekt hinzu.</span><span class="sxs-lookup"><span data-stu-id="e57a9-114">Add a JavaScript **Blank App (Universal Windows)** project to your solution.</span></span>
+<a id="new-packaging-project"/>
 
-   <span data-ttu-id="e57a9-115">Sie müssen keinen Code hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="e57a9-115">You won't have to add any code to it.</span></span> <span data-ttu-id="e57a9-116">Es dient nur, um ein Paket zu generieren.</span><span class="sxs-lookup"><span data-stu-id="e57a9-116">It's just there to generate a package for you.</span></span> <span data-ttu-id="e57a9-117">Wir nennen das Projekt „packaging project“.</span><span class="sxs-lookup"><span data-stu-id="e57a9-117">We'll refer to this project as the "packaging project".</span></span>
+## <a name="create-a-package"></a><span data-ttu-id="7adca-116">Erstellen eines Pakets</span><span class="sxs-lookup"><span data-stu-id="7adca-116">Create a package</span></span>
 
-   ![JavaScript-UWP-Projekt](images/desktop-to-uwp/javascript-uwp-project.png)
+1. <span data-ttu-id="7adca-117">Öffnen Sie in Visual Studio die Lösung mit Ihrem Desktopanwendungsprojekt.</span><span class="sxs-lookup"><span data-stu-id="7adca-117">In Visual Studio, open the solution that contains your desktop application project.</span></span>
 
-   >[!IMPORTANT]
-   ><span data-ttu-id="e57a9-119">Im Allgemeinen sollten Sie die JavaScript-Version des Projekts verwenden.</span><span class="sxs-lookup"><span data-stu-id="e57a9-119">In general, you should use the JavaScript version of this project.</span></span>  <span data-ttu-id="e57a9-120">Die C#-, VB.NET- und C++ Versionen haben einige Probleme. Wenn Sie diese verwenden wollen, lesen Sie vorher [Bekannte Probleme](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-known-issues#known-issues-anchor).</span><span class="sxs-lookup"><span data-stu-id="e57a9-120">The C#, VB.NET, and C++ versions have a few issues but if you want to use of those, see the [Known Issues](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-known-issues#known-issues-anchor) guide before you do.</span></span>
+2. <span data-ttu-id="7adca-118">Fügen Sie der Projektmappe ein Projekt **Paketerstellungsprojekt für Windows-Anwendungen** hinzu.</span><span class="sxs-lookup"><span data-stu-id="7adca-118">Add a **Windows Application Packaging Project** project to your solution.</span></span>
 
-## <a name="add-the-desktop-application-binaries-to-the-packaging-project"></a><span data-ttu-id="e57a9-121">Hinzufügen von Desktopanwendungs-Binärdateien zum Verpackungsprojekt</span><span class="sxs-lookup"><span data-stu-id="e57a9-121">Add the desktop application binaries to the packaging project</span></span>
+   <span data-ttu-id="7adca-119">Sie müssen keinen Code hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="7adca-119">You won't have to add any code to it.</span></span> <span data-ttu-id="7adca-120">Es dient nur, um ein Paket zu generieren.</span><span class="sxs-lookup"><span data-stu-id="7adca-120">It's just there to generate a package for you.</span></span> <span data-ttu-id="7adca-121">Wir nennen das Projekt „Paketprojekt“.</span><span class="sxs-lookup"><span data-stu-id="7adca-121">We'll refer to this project as the "packaging project".</span></span>
 
-<span data-ttu-id="e57a9-122">Hinzufügen von Binärdateien direkt zum Verpackungsprojekt.</span><span class="sxs-lookup"><span data-stu-id="e57a9-122">Add the binaries directly to the packaging project.</span></span>
+   ![Paketprojekt](images/desktop-to-uwp/packaging-project.png)
 
-1. <span data-ttu-id="e57a9-123">In **Projektmappen-Explorer** erweitern Sie den Verpacken-Projektordner, erstellen einen Unterordner und benennen ihn beliebig (z.B.: **win32**).</span><span class="sxs-lookup"><span data-stu-id="e57a9-123">In **Solution Explorer**, expand the packaging project folder, create a subfolder, and name it whatever you want (For example: **win32**).</span></span>
+   >[!NOTE]
+   ><span data-ttu-id="7adca-123">Dieses Projekt wird nur in Visual Studio2017 ab Version 15.5 oder höher angezeigt.</span><span class="sxs-lookup"><span data-stu-id="7adca-123">This project appears only in Visual Studio 2017 version 15.5 or higher.</span></span>
 
-2. <span data-ttu-id="e57a9-124">Klicken Sie jetzt mit der rechten Maustaste auf den Unterordner und wählen Sie **Vorhandenes Elemente hinzufügen** aus.</span><span class="sxs-lookup"><span data-stu-id="e57a9-124">Right-click the subfolder, and then choose **Add Existing Item**.</span></span>
+3. <span data-ttu-id="7adca-124">Legen Sie die **Zielversion** des Projekts auf eine beliebige Version fest, stellen Sie jedoch sicher, dass die **Mindestens erforderliche Version** auf **Windows10 Anniversary Update** eingestellt ist.</span><span class="sxs-lookup"><span data-stu-id="7adca-124">Set the **Target Version** of this project to any version that you want, but make sure to set the **Minimum Version** to **Windows 10 Anniversary Update**.</span></span>
 
-3. <span data-ttu-id="e57a9-125">Im **Vorhandenes Element hinzufügen** Dialogfeld suchen Sie die Dateien aus Ihrem Desktopanwendung-Ausgabeordner und fügen diese hinzu.</span><span class="sxs-lookup"><span data-stu-id="e57a9-125">In the **Add Existing Item** dialog box, locate and then add the files from your desktop application's output folder.</span></span> <span data-ttu-id="e57a9-126">Dazu umfasst nicht nur die ausführbaren Dateien, sondern auch alle DLLs oder config-Dateien, die sich in diesem Ordner befinden.</span><span class="sxs-lookup"><span data-stu-id="e57a9-126">This includes not just the executable files, but any dlls or .config files that are located in that folder.</span></span>
+   ![Das Dialogfeld zur Auswahl der Paketversion](images/desktop-to-uwp/packaging-version.png)
 
-   ![Ausführbare Referenzdatei](images/desktop-to-uwp/cpp-exe-reference.png)
+4. <span data-ttu-id="7adca-126">Klicken sie im Paketprojekt mit der rechten Maustaste auf den Ordner **Anwendungen**, und wählen Sie dann **Verweis hinzufügen** aus.</span><span class="sxs-lookup"><span data-stu-id="7adca-126">In the packaging project, right-click the **Applications** folder, and then choose **Add Reference**.</span></span>
 
-   <span data-ttu-id="e57a9-128">Jedes Mal, wenn Sie an Ihrem Desktopanwendung-Projekt Änderungen vornehmen, müssen Sie eine neue Version dieser Dateien in das Verpacken-Projekt kopieren.</span><span class="sxs-lookup"><span data-stu-id="e57a9-128">Every time you make a change to your desktop application project, you'll have to copy a new version of those files to the packaging project.</span></span> <span data-ttu-id="e57a9-129">Sie können dies automatisieren, indem Sie der Projektdatei des Verpackung-Projekts ein Postbuildereignis hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="e57a9-129">You can automate this by adding a post-build event to the project file of the packaging project.</span></span> <span data-ttu-id="e57a9-130">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="e57a9-130">Here's an example.</span></span>
+   ![Hinzufügen des Projektverweises](images/desktop-to-uwp/add-project-reference.png)
 
-   ```XML
-   <Target Name="PostBuildEvent">
-     <Copy SourceFiles="..\MyWindowsFormsApplication\bin\Debug\MyWindowsFormsApplication.exe"
-       DestinationFolder="win32" />
-     <Copy SourceFiles="..\MyWindowsFormsApplication\bin\Debug\MyWindowsFormsApplication.exe.config"
-       DestinationFolder="win32" />
-     <Copy SourceFiles="..\MyWindowsFormsApplication\bin\Debug\MyWindowsFormsApplication.pdb"
-       DestinationFolder="win32" />
-     <Copy SourceFiles="..\MyWindowsFormsApplication\bin\Debug\MyBusinessLogicLibrary.dll"
-       DestinationFolder="win32" />
-     <Copy SourceFiles="..\MyWindowsFormsApplication\bin\Debug\MyBusinessLogicLibrary.pdb"
-       DestinationFolder="win32" />
-   </Target>
-   ```
+5. <span data-ttu-id="7adca-128">Wählen Sie Ihr Desktopanwendungsprojekt aus, und klicken Sie dann auf die Schaltfläche **OK**.</span><span class="sxs-lookup"><span data-stu-id="7adca-128">Choose your desktop application project, and then choose the **OK** button.</span></span>
 
-## <a name="modify-the-package-manifest"></a><span data-ttu-id="e57a9-131">Bearbeiten des Paketmanifests</span><span class="sxs-lookup"><span data-stu-id="e57a9-131">Modify the package manifest</span></span>
+   ![Desktopprojekt](images/desktop-to-uwp/reference-project.png)
 
-<span data-ttu-id="e57a9-132">Das Paketprojekt enthält eine Datei, die die Einstellungen des Pakets beschreibt.</span><span class="sxs-lookup"><span data-stu-id="e57a9-132">The packaging project contains a file that describes the settings of your package.</span></span> <span data-ttu-id="e57a9-133">Standardmäßig beschreibt diese Datei eine UWP-App. Sie müssen sie so anpassen, dass das System weiß, dass das Paket eine Desktopanwendung enthält, die in voller Vertrauenswürdigkeit ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="e57a9-133">By default, this file describes a UWP app, so you'll have to modify it so that the system understands that your package includes a desktop application that runs in full trust.</span></span>  
+   <span data-ttu-id="7adca-130">Sie können mehrere Desktopanwendungen im Paket miteinbeziehen, aber nur eines kann gestartet werden, wenn Benutzer Ihre App-Kachel auswählen.</span><span class="sxs-lookup"><span data-stu-id="7adca-130">You can include multiple desktop applications in your package, but only one of them can start when users choose your app tile.</span></span> <span data-ttu-id="7adca-131">Klicken Sie mit der rechten Maustaste im Knoten **Anwendungen** auf die Anwendung, die die Benutzer starten sollen, wenn sie die App-Kachel auswählen, und wählen Sie dann **Als Einstiegspunkt festlegen** aus.</span><span class="sxs-lookup"><span data-stu-id="7adca-131">In the **Applications** node, right-click the application that you want users to start when they choose the app's tile, and then choose **Set as Entry Point**.</span></span>
 
-1. <span data-ttu-id="e57a9-134">Erweitern Sie im **Lösungs-Explorer** das Verpacken-Projekt, klicken Sie mit Rechts auf die **package.appxmanifest** Datei und wählen Sie **Code anzeigen** aus.</span><span class="sxs-lookup"><span data-stu-id="e57a9-134">In **Solution Explorer**, expand the packaging project, right-click the **package.appxmanifest** file, and then choose **View Code**.</span></span>
+   ![Als Einstiegspunkt festlegen](images/desktop-to-uwp/entry-point-set.png)
 
-   ![Referenz-Dotnet-Projekt](images/desktop-to-uwp/reference-dotnet-project.png)
+6. <span data-ttu-id="7adca-133">Erstellen Sie das Paketprojekt, um sicherzustellen, dass keine Fehler angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="7adca-133">Build the packaging project to ensure that no errors appear.</span></span>
 
-2. <span data-ttu-id="e57a9-136">Fügen Sie diesen Namespace am Anfang der Datei hinzu und fügen Sie das Namespacepräfix zu Liste der ``IgnorableNamespaces`` hinzu.</span><span class="sxs-lookup"><span data-stu-id="e57a9-136">Add this namespace to the top of the file, and add the namespace prefix to the list of ``IgnorableNamespaces``.</span></span>
+7. <span data-ttu-id="7adca-134">Verwenden Sie den Assistenten [App-Pakete erstellen](../packaging/packaging-uwp-apps.md), um eine appxupload-Datei zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="7adca-134">Use the [Create App Packages](../packaging/packaging-uwp-apps.md) wizard to generate an appxupload file.</span></span>
 
-   ```XML
-   xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
-   ```
-   <span data-ttu-id="e57a9-137">Wenn Sie fertig sind, sehen die Namespacedeklarationen wie folgt aus:</span><span class="sxs-lookup"><span data-stu-id="e57a9-137">When you're done, your namespace declarations will look something like this:</span></span>
+   <span data-ttu-id="7adca-135">Sie können diese Datei direkt in den Store hochladen.</span><span class="sxs-lookup"><span data-stu-id="7adca-135">You can upload that file directly to the store.</span></span>
 
-   ```XML
-   <Package
-     xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
-     xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
-     xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
-     xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
-     IgnorableNamespaces="uap mp rescap">
-   ```
+**<span data-ttu-id="7adca-136">Video</span><span class="sxs-lookup"><span data-stu-id="7adca-136">Video</span></span>**
 
-3. <span data-ttu-id="e57a9-138">Suchen Sie das ``TargetDeviceFamily``-Element und legen das ``Name``-Attribut auf **Windows.Desktop**, das ``MinVersion``-Attribut auf die Mindestversion des Paketprojekts und das ``MaxVersionTested`` auf die Zielversion des Projekts fest.</span><span class="sxs-lookup"><span data-stu-id="e57a9-138">Find the ``TargetDeviceFamily`` element, and set the ``Name`` attribute to **Windows.Desktop**, the ``MinVersion`` attribute to the minimum version of the packaging project, and the ``MaxVersionTested`` to the target version of the packaging project.</span></span>
+<iframe src="https://www.youtube.com/embed/fJkbYPyd08w" width="636" height="480" allowFullScreen frameBorder="0"></iframe>
 
-   ```XML
-   <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.10586.0" MaxVersionTested="10.0.15063.0" />
-   ```
+## <a name="next-steps"></a><span data-ttu-id="7adca-137">Nächste Schritte</span><span class="sxs-lookup"><span data-stu-id="7adca-137">Next steps</span></span>
 
-   <span data-ttu-id="e57a9-139">Sie finden die Mindestversion und die Zielversion auf den Eigenschaftenseiten des Verpackung-Projekts.</span><span class="sxs-lookup"><span data-stu-id="e57a9-139">You can find the minimum version and target version in the property pages of the packaging project.</span></span>
+**<span data-ttu-id="7adca-138">Finden Sie Antworten auf Ihre Fragen</span><span class="sxs-lookup"><span data-stu-id="7adca-138">Find answers to your questions</span></span>**
 
-   ![Einstellungen für Mindest- und Zielversion](images/desktop-to-uwp/min-target-version-settings.png)
+<span data-ttu-id="7adca-139">Haben Sie Fragen?</span><span class="sxs-lookup"><span data-stu-id="7adca-139">Have questions?</span></span> <span data-ttu-id="7adca-140">Fragen Sie uns auf Stack Overflow.</span><span class="sxs-lookup"><span data-stu-id="7adca-140">Ask us on Stack Overflow.</span></span> <span data-ttu-id="7adca-141">Unser Team überwacht diese [Tags](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge).</span><span class="sxs-lookup"><span data-stu-id="7adca-141">Our team monitors these [tags](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge).</span></span> <span data-ttu-id="7adca-142">Fragen Sie uns [hier](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).</span><span class="sxs-lookup"><span data-stu-id="7adca-142">You can also ask us [here](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).</span></span>
 
+**<span data-ttu-id="7adca-143">Geben Sie Feedback oder Verbesserungsvorschläge</span><span class="sxs-lookup"><span data-stu-id="7adca-143">Give feedback or make feature suggestions</span></span>**
 
-4. <span data-ttu-id="e57a9-141">Entfernen Sie das ``StartPage``-Attribut aus dem ``Application``-Element.</span><span class="sxs-lookup"><span data-stu-id="e57a9-141">Remove the ``StartPage`` attribute from the ``Application`` element.</span></span> <span data-ttu-id="e57a9-142">Fügen Sie dann die ``Executable``- und ``EntryPoint``-Attribute hinzu.</span><span class="sxs-lookup"><span data-stu-id="e57a9-142">Then, add the``Executable`` and ``EntryPoint`` attributes.</span></span>
+<span data-ttu-id="7adca-144">Weitere Informationen finden Sie unter [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial).</span><span class="sxs-lookup"><span data-stu-id="7adca-144">See [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial).</span></span>
 
-   <span data-ttu-id="e57a9-143">Das ``Application``-Ergebnis sieht wie folgt aus.</span><span class="sxs-lookup"><span data-stu-id="e57a9-143">The ``Application`` element will look like this.</span></span>
+**<span data-ttu-id="7adca-145">Ausführen, Debuggen oder Testen der App</span><span class="sxs-lookup"><span data-stu-id="7adca-145">Run, debug or test your app</span></span>**
 
-   ```XML
-   <Application Id="App"  Executable=" " EntryPoint=" ">
-   ```
+<span data-ttu-id="7adca-146">Siehe [Ausführen, Debuggen und Testen eine verpackten Desktop-App (Desktop-Brücke)](desktop-to-uwp-debug.md)</span><span class="sxs-lookup"><span data-stu-id="7adca-146">See [Run, debug, and test a packaged desktop app (Desktop Bridge)](desktop-to-uwp-debug.md)</span></span>
 
-5. <span data-ttu-id="e57a9-144">Legen Sie das ``Executable`` Attribut auf den Namen der ausführbaren Datei für Ihre Desktopanwendung fest.</span><span class="sxs-lookup"><span data-stu-id="e57a9-144">Set the ``Executable`` attribute to the name of your desktop application's executable file.</span></span> <span data-ttu-id="e57a9-145">Legen Sie anschließend das ``EntryPoint``-Attribut auf **Windows.FullTrustApplication** fest.</span><span class="sxs-lookup"><span data-stu-id="e57a9-145">Then, set the ``EntryPoint`` attribute to **Windows.FullTrustApplication**.</span></span>
+**<span data-ttu-id="7adca-147">Verbessern Sie Ihre Desktop-App durch Hinzufügen von UWP-APIs</span><span class="sxs-lookup"><span data-stu-id="7adca-147">Enhance your desktop app by adding UWP APIs</span></span>**
 
-   <span data-ttu-id="e57a9-146">Das ``Application``-Element sieht etwa wie folgt aus.</span><span class="sxs-lookup"><span data-stu-id="e57a9-146">The ``Application`` element will look similar to this.</span></span>
+<span data-ttu-id="7adca-148">Siehe [Verbessern Sie Ihre Desktopanwendung für Windows10](desktop-to-uwp-enhance.md)</span><span class="sxs-lookup"><span data-stu-id="7adca-148">See [Enhance your desktop application for Windows 10](desktop-to-uwp-enhance.md)</span></span>
 
-   ```XML
-   <Application Id="App"  Executable="win32\MyWindowsFormsApplication.exe" EntryPoint="Windows.FullTrustApplication">
-   ```
-6. <span data-ttu-id="e57a9-147">Fügen Sie die ``runFullTrust``-Funktion zum ``Capabilities`` Element hinzu.</span><span class="sxs-lookup"><span data-stu-id="e57a9-147">Add the ``runFullTrust`` capability to the ``Capabilities`` element.</span></span>
+**<span data-ttu-id="7adca-149">Erweitern der Desktop-App durch Hinzufügen von UWP-Projekten und Komponenten für Windows-Runtime</span><span class="sxs-lookup"><span data-stu-id="7adca-149">Extend your desktop app by adding UWP projects and Windows Runtime Components</span></span>**
 
-   ```XML
-     <rescap:Capability Name="runFullTrust"/>
-   ```
-   <span data-ttu-id="e57a9-148">Blaue Wellenlinien werden möglicherweise unter dieser Deklaration angezeigt, doch sie können problemlos ignoriert werden.</span><span class="sxs-lookup"><span data-stu-id="e57a9-148">Blue squiggly marks might appear beneath this declaration, but you can safely ignore them.</span></span>
+<span data-ttu-id="7adca-150">Weitere Informationen finden Sie unter [Erweitern Ihrer Desktopanwendung mit modernen UWP-Komponenten](desktop-to-uwp-extend.md).</span><span class="sxs-lookup"><span data-stu-id="7adca-150">See [Extend your desktop application with modern UWP components](desktop-to-uwp-extend.md).</span></span>
 
-   >[!IMPORTANT]
-   <span data-ttu-id="e57a9-149">Wenn Sie ein Pakets für eine C++-Desktopanwendung erstellen, müssen Sie einige zusätzliche Daten in der Manifestdatei ändern, damit Sie die Visual C++-Laufzeitbibliotheken zusammen mit Ihrer App bereitstellen können.</span><span class="sxs-lookup"><span data-stu-id="e57a9-149">If your creating a package for a C++ desktop application, you'll have to make a few extra changes to your manifest file so that you can deploy the Visual C++ runtimes along with your app.</span></span> <span data-ttu-id="e57a9-150">Weitere Informationen finden Sie unter [Visual C++-Laufzeiten in einem Projekt für die Desktop-Brücke nutzen](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project/).</span><span class="sxs-lookup"><span data-stu-id="e57a9-150">See [Using Visual C++ runtimes in a desktop bridge project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project/).</span></span>
+**<span data-ttu-id="7adca-151">Verteilen Ihrer App</span><span class="sxs-lookup"><span data-stu-id="7adca-151">Distribute your app</span></span>**
 
-7. <span data-ttu-id="e57a9-151">Erstellen Sie das Verpacken-Projekt, um sicherzustellen, dass keine Fehler angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="e57a9-151">Build the packaging project to ensure that no errors appear.</span></span>
-
-8. <span data-ttu-id="e57a9-152">Wenn Sie das Paket testen möchten, lesen Sie [Ausführen, Debuggen und Testen eine verpackten Desktop-App (Desktop-Brücke)](desktop-to-uwp-debug.md).</span><span class="sxs-lookup"><span data-stu-id="e57a9-152">If you want to test your package, see [Run, debug, and test a packaged desktop app (Desktop Bridge)](desktop-to-uwp-debug.md).</span></span>
-
-   <span data-ttu-id="e57a9-153">Lesen Sie dann den nächsten Abschnitt, um Ihr Paket zu generieren.</span><span class="sxs-lookup"><span data-stu-id="e57a9-153">Then, return to this guide, and see the next section to generate your package.</span></span>
-
-## <a name="generate-a-package"></a><span data-ttu-id="e57a9-154">Generieren eines Pakets</span><span class="sxs-lookup"><span data-stu-id="e57a9-154">Generate a package</span></span>
-
-<span data-ttu-id="e57a9-155">Um ein Paket für Ihre App zu generieren, befolgen Sie die Anleitung im Thema [Verpacken von UWP-Apps](..\packaging\packaging-uwp-apps.md).</span><span class="sxs-lookup"><span data-stu-id="e57a9-155">To generate a package your app, follow the guidance described in this topic: [Packaging UWP Apps](..\packaging\packaging-uwp-apps.md).</span></span>
-
-<span data-ttu-id="e57a9-156">Wenn Sie die Seite **Auswählen und Konfigurieren von Paketen** erreichen, nehmen Sie sich einen Moment Zeit und überlegen Sie, welche Arten von Binärdateien Sie in Ihrem Paket haben möchten.</span><span class="sxs-lookup"><span data-stu-id="e57a9-156">When you reach the **Select and Configure Packages** screen, Take a moment to consider what sorts of binaries you're including in your package before you select any of the checkboxes.</span></span>
-
-* <span data-ttu-id="e57a9-157">Wenn Sie die Desktopanwendung [erweiterten](desktop-to-uwp-extend.md), indem Sie ein C#-, C++ oder VB.NET-basiertes Universellen Windows-Plattform-Projekt der Projektmappe hinzufügen, wählen die **x86**- und **x64**-Kontrollkästchen.</span><span class="sxs-lookup"><span data-stu-id="e57a9-157">If you've [extended](desktop-to-uwp-extend.md) your desktop application by adding a adding a C#, C++, or VB.NET-based Universal Windows Platform project to your solution, select the **x86** and **x64** checkboxes.</span></span>  
-
-* <span data-ttu-id="e57a9-158">Wählen Sie andernfalls das **Neutral**-Kontrollkästchen.</span><span class="sxs-lookup"><span data-stu-id="e57a9-158">Otherwise, choose the **Neutral** checkbox.</span></span>
-
->[!NOTE]
-<span data-ttu-id="e57a9-159">Der Grund für das Auswählen jeder unterstützten Plattform ist, das eine Lösung, die Sie erweitert haben, zwei Arten von Binärdateien enthält. Eine für das UWP-Projekt und eine für das Desktop-Projekt.</span><span class="sxs-lookup"><span data-stu-id="e57a9-159">The reason that you'd have to explicitly choose each supported platform is because an solution that you've extended contains two types of binaries; one for the UWP project and one for the desktop project.</span></span> <span data-ttu-id="e57a9-160">Da diese Arten von Binärdateien unterschiedlich sind, muss .NET Native explizit systemeigene Binärdateien für jede Plattform erstellen.</span><span class="sxs-lookup"><span data-stu-id="e57a9-160">Because these are different types of binaries, .NET Native needs to explicitly produce native binaries for each platform.</span></span>
-
-<span data-ttu-id="e57a9-161">Wenn Fehler auftreten, wenn Sie versuchen, das Paket zu generieren, finden Sie unter der [Bekannte Probleme](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-known-issues#known-issues-anchor) Hilfen. Wenn Ihr Problem in dieser Liste nicht angezeigt wird, teilen Sie uns das Problem [hier](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge) mit.</span><span class="sxs-lookup"><span data-stu-id="e57a9-161">If you receive errors when you attempt to generate your package, see the [Known Issues](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-known-issues#known-issues-anchor) guide and if your issue does not appear in that list, please share the issue with us [here](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge).</span></span>
-
-## <a name="next-steps"></a><span data-ttu-id="e57a9-162">Nächste Schritte</span><span class="sxs-lookup"><span data-stu-id="e57a9-162">Next steps</span></span>
-
-**<span data-ttu-id="e57a9-163">Ausführer Ihrer App/Suchen und Beheben von Problemen</span><span class="sxs-lookup"><span data-stu-id="e57a9-163">Run your app / find and fix issues</span></span>**
-
-<span data-ttu-id="e57a9-164">Siehe [Ausführen, Debuggen und Testen eine verpackten Desktop-App (Desktop-Brücke)](desktop-to-uwp-debug.md)</span><span class="sxs-lookup"><span data-stu-id="e57a9-164">See [Run, debug, and test a packaged desktop app (Desktop Bridge)](desktop-to-uwp-debug.md)</span></span>
-
-**<span data-ttu-id="e57a9-165">Verbessern Sie Ihre Desktop-App durch Hinzufügen von UWP-APIs</span><span class="sxs-lookup"><span data-stu-id="e57a9-165">Enhance your desktop app by adding UWP APIs</span></span>**
-
-<span data-ttu-id="e57a9-166">Siehe [Verbessern Sie Ihre Desktopanwendung für Windows10](desktop-to-uwp-enhance.md)</span><span class="sxs-lookup"><span data-stu-id="e57a9-166">See [Enhance your desktop application for Windows 10](desktop-to-uwp-enhance.md)</span></span>
-
-**<span data-ttu-id="e57a9-167">Erweitern Sie Ihre Desktop-App durch Hinzufügen von UWP-Komponenten</span><span class="sxs-lookup"><span data-stu-id="e57a9-167">Extend your desktop app by adding UWP components</span></span>**
-
-<span data-ttu-id="e57a9-168">Siehe [Erweitern Sie Ihre Desktopanwendung mit modernen Windows-UWP-Komponenten](desktop-to-uwp-extend.md)</span><span class="sxs-lookup"><span data-stu-id="e57a9-168">See [Extend your desktop application with modern UWP components](desktop-to-uwp-extend.md).</span></span>
-
-**<span data-ttu-id="e57a9-169">Verteilen Ihrer App</span><span class="sxs-lookup"><span data-stu-id="e57a9-169">Distribute your app</span></span>**
-
-<span data-ttu-id="e57a9-170">Weitere Informationen finden Sie in [Verteilen einer verpackten Desktop-App (Desktop-Brücke)](desktop-to-uwp-distribute.md)</span><span class="sxs-lookup"><span data-stu-id="e57a9-170">See [Distribute a packaged desktop app (Desktop Bridge)](desktop-to-uwp-distribute.md)</span></span>
-
-**<span data-ttu-id="e57a9-171">Antworten auf bestimmte Fragen finden</span><span class="sxs-lookup"><span data-stu-id="e57a9-171">Find answers to specific questions</span></span>**
-
-<span data-ttu-id="e57a9-172">Unser Team überwacht diese [StackOverflow-Tags](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge).</span><span class="sxs-lookup"><span data-stu-id="e57a9-172">Our team monitors these [StackOverflow tags](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge).</span></span>
-
-**<span data-ttu-id="e57a9-173">Geben Sie Feedback zu diesem Artikel</span><span class="sxs-lookup"><span data-stu-id="e57a9-173">Give feedback about this article</span></span>**
-
-<span data-ttu-id="e57a9-174">Verwenden Sie den Kommentarabschnitt weiter unten.</span><span class="sxs-lookup"><span data-stu-id="e57a9-174">Use the comments section below.</span></span>
+<span data-ttu-id="7adca-152">Weitere Informationen finden Sie in [Verteilen einer verpackten Desktop-App (Desktop-Brücke)](desktop-to-uwp-distribute.md)</span><span class="sxs-lookup"><span data-stu-id="7adca-152">See [Distribute a packaged desktop app (Desktop Bridge)](desktop-to-uwp-distribute.md)</span></span>

@@ -1,61 +1,55 @@
 ---
 author: mcleanbyron
 ms.assetid: ca92bed1-ad9e-4947-ad91-87d12de727c0
-description: "Überprüfen Sie die Versionshinweise für die Microsoft Advertising-Bibliotheken im Microsoft Store Services SDK."
-title: "Versionshinweise für die Microsoft Advertising-Bibliotheken"
+description: Überprüfen Sie die Versionshinweise für die Microsoft Advertising-Bibliotheken.
+title: Versionshinweise für die Advertising-Bibliotheken
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Anzeigen, Werbung, Versionshinweise"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 666071bccd562f2f95e8ae69f50797fdc464548b
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP, Anzeigen, Werbung, Versionshinweise
+ms.localizationpriority: medium
+ms.openlocfilehash: 41966827b02f95b8c34b4c13158c542e04b0c09f
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1690226"
 ---
-
-# <a name="release-notes-for-the-microsoft-advertising-libraries"></a>Versionshinweise für die Microsoft Advertising-Bibliotheken
-
+# <a name="release-notes-for-the-advertising-libraries"></a><span data-ttu-id="20203-104">Versionshinweise für die Advertising-Bibliotheken</span><span class="sxs-lookup"><span data-stu-id="20203-104">Release notes for the advertising libraries</span></span>
 
 
 
-Dieser Abschnitt enthält Versionshinweise für die aktuelle Version der Microsoft Advertising-Bibliotheken im Microsoft Store Services SDK (für UWP-Apps) und im Microsoft Advertising SDK für Windows und Windows Phone 8.x (für Windows 8.1- und Windows Phone 8.x-Apps). Diese Bibliotheken unterstützt XAML- und JavaScript/HTML-Apps für Windows 10, Windows 8.1, Windows Phone 8.1 und Windows Phone 8.
 
-## <a name="installation"></a>Installation
+<span data-ttu-id="20203-105">Dieser Abschnittenthält Versionshinweise für die aktuelle Version der Microsoft Advertising-Bibliotheken.</span><span class="sxs-lookup"><span data-stu-id="20203-105">This section provides release notes for the current release of the Microsoft advertising libraries.</span></span> <span data-ttu-id="20203-106">Diese Bibliotheken unterstützt XAML- und JavaScript/HTML-Apps für Windows 10, Windows 8.1, Windows Phone 8.1 und Windows Phone 8.</span><span class="sxs-lookup"><span data-stu-id="20203-106">These libraries support XAML and JavaScript/HTML apps for Windows 10, Windows 8.1, Windows Phone 8.1 and Windows Phone 8.</span></span>
 
-
-Die Microsoft Advertising-Bibliotheken stehen als Teil der [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) (für UWP-Apps) und die [Microsoft Advertising SDK für Windows und Windows Phone 8.x](http://aka.ms/store-8-sdk) (für Windows 8.1 und Windows Phone 8.x-Apps) zur Verfügung. Weitere Informationen zum Installieren des SDKs und der darin enthaltenen Bibliotheken finden Sie unter [Installieren der Microsoft Advertising-Bibliotheken](install-the-microsoft-advertising-libraries.md).
-
-Um die Microsoft Advertising-Assemblys für Windows Phone 8.x Silverlight-Projekte abzurufen, installieren Sie den [Microsoft Advertising SDK for Windows and Windows Phone 8.x](http://aka.ms/store-8-sdk), öffnen das Projekt in Visual Studio und wechseln dann zu **Projekt** > **Verbundenen Dienst hinzufügen** > **Ad Mediator**. Die Assemblys werden anschließend automatisch geladen. Im Anschluss daran können Sie die Ad Mediator-Referenzen aus Ihrem Projekt entfernen, wenn Sie Ad Mediator nicht verwenden möchten. Weitere Informationen finden Sie unter [AdControl in Windows Phone Silverlight](adcontrol-in-windows-phone-silverlight.md).
+## <a name="installation"></a><span data-ttu-id="20203-107">Installation</span><span class="sxs-lookup"><span data-stu-id="20203-107">Installation</span></span>
 
 
-## <a name="uninstall-previous-versions"></a>Deinstallieren früherer Versionen
+<span data-ttu-id="20203-108">Diese Microsoft Advertising-Bibliotheken stehen als Teil von [Microsoft Advertising-SDK](http://aka.ms/ads-sdk-uwp) zur Verfügung.</span><span class="sxs-lookup"><span data-stu-id="20203-108">The Microsoft advertising libraries are available as part of the [Microsoft Advertising SDK](http://aka.ms/ads-sdk-uwp).</span></span> <span data-ttu-id="20203-109">Weitere Informationen zur SDK-Installation finden Sie unter [Installieren von Microsoft Advertising-SDK](install-the-microsoft-advertising-libraries.md).</span><span class="sxs-lookup"><span data-stu-id="20203-109">For more information about installing the SDK, see [Install the Microsoft Advertising SDK](install-the-microsoft-advertising-libraries.md).</span></span>
 
-Vor der Installation der Microsoft Store-Services-SDK (für UWP-Apps) oder der Microsoft Advertising SDK für Windows und Windows Phone 8.x (für Windows 8.1 und Windows Phone 8.x-Apps) wird dringend empfohlen, alle vorherigen Instanzen der Microsoft Universal Ad Client SDK oder der Microsoft Advertising SDK zu deinstallieren.
+## <a name="uninstall-previous-versions"></a><span data-ttu-id="20203-110">Deinstallieren früherer Versionen</span><span class="sxs-lookup"><span data-stu-id="20203-110">Uninstall previous versions</span></span>
 
-## <a name="target-architecture-specific-build-outputs"></a>Zielarchitekturspezifische Buildausgabe
+<span data-ttu-id="20203-111">Vor der Installation der neuesten Microsoft Advertising-SDK wird dringend empfohlen, alle vorherigen Instanzen von SDK zu deinstallieren.</span><span class="sxs-lookup"><span data-stu-id="20203-111">Before you install the latest Microsoft Advertising SDK, it is highly recommended that you uninstall all prior instances of the SDK.</span></span> <span data-ttu-id="20203-112">Weitere Informationen finden Sie unter [Installieren von Microsoft Advertising-SDK](install-the-microsoft-advertising-libraries.md).</span><span class="sxs-lookup"><span data-stu-id="20203-112">For more information, see [Install the Microsoft Advertising SDK](install-the-microsoft-advertising-libraries.md).</span></span>
 
-Wenn Sie die Microsoft Advertising-Bibliotheken verwenden, können Sie in Ihrem Projekt nicht das Ziel **Any CPU** angeben. Sollte in Ihrem Projekt die Zielplattform **Any CPU** definiert sein, wird in Ihrem Projekt eine Warnung ausgegeben, sobald Sie einen Verweis auf die Microsoft Advertising-Bibliotheken hinzufügen. Um diese Warnung zu entfernen, müssen Sie eine architekturspezifische Buildausgabe verwenden (beispielsweise **x86**) und das Projekt entsprechend aktualisieren. Weitere Informationen finden Sie unter [Bekannte Probleme](known-issues-for-the-advertising-libraries.md).
+## <a name="target-architecture-specific-build-outputs"></a><span data-ttu-id="20203-113">Zielarchitekturspezifische Buildausgabe</span><span class="sxs-lookup"><span data-stu-id="20203-113">Target architecture-specific build outputs</span></span>
 
-## <a name="c-support"></a>C++-Unterstützung
+<span data-ttu-id="20203-114">Wenn Sie die Microsoft Advertising-Bibliotheken verwenden, können Sie in Ihrem Projekt nicht das Ziel **Any CPU** angeben.</span><span class="sxs-lookup"><span data-stu-id="20203-114">When using the Microsoft advertising libraries, you cannot target **Any CPU** in your project.</span></span> <span data-ttu-id="20203-115">Sollte in Ihrem Projekt die Zielplattform **Any CPU** definiert sein, wird in Ihrem Projekt eine Warnung ausgegeben, sobald Sie einen Verweis auf die Microsoft Advertising-Bibliotheken hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="20203-115">If your project targets the **Any CPU** platform, you may see a warning in your project after you add a reference to the Microsoft advertising libraries.</span></span> <span data-ttu-id="20203-116">Um diese Warnung zu entfernen, müssen Sie eine architekturspezifische Buildausgabe verwenden (beispielsweise **x86**) und das Projekt entsprechend aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="20203-116">To remove this warning, update your project to use an architecture-specific build output (for example, **x86**).</span></span> <span data-ttu-id="20203-117">Weitere Informationen finden Sie unter [Bekannte Probleme](known-issues-for-the-advertising-libraries.md).</span><span class="sxs-lookup"><span data-stu-id="20203-117">For more information, see [Known issues](known-issues-for-the-advertising-libraries.md).</span></span>
 
-Die Microsoft Advertising-Bibliotheken (in den die Klassen **AdControl** und **InterstitialAd** enthalten sind) unterstützen in C++ geschriebene Apps sowie DirectX mit Windows-Runtime-Interoperabilität (*interop*). Weitere Informationen und Beispiele zum Programmieren mit XAML und C++ finden Sie unter [Typsystem](https://msdn.microsoft.com/library/windows/apps/xaml/hh755822.aspx).
+## <a name="c-support"></a><span data-ttu-id="20203-118">C++-Unterstützung</span><span class="sxs-lookup"><span data-stu-id="20203-118">C++ Support</span></span>
 
-## <a name="no-toolbox-control"></a>Kein Toolbox-Steuerelement
+<span data-ttu-id="20203-119">Die Microsoft Advertising-Bibliotheken (in den die Klassen **AdControl** und **InterstitialAd** enthalten sind) unterstützen in C++ geschriebene Apps sowie DirectX mit Windows-Runtime-Interoperabilität (*interop*).</span><span class="sxs-lookup"><span data-stu-id="20203-119">The Microsoft advertising libraries (which include the **AdControl** and **InterstitialAd** classes) support apps written in C++ and DirectX using Windows Runtime Interoperability (*interop*).</span></span> <span data-ttu-id="20203-120">Weitere Informationen und Beispiele zum Programmieren mit XAML und C++ finden Sie unter [Typsystem](https://docs.microsoft.com/cpp/cppcx/type-system-c-cx).</span><span class="sxs-lookup"><span data-stu-id="20203-120">For more information and examples about programming using XAML and C++, see [Type System](https://docs.microsoft.com/cpp/cppcx/type-system-c-cx).</span></span>
 
-In der aktuellen Version der Microsoft Advertising-Bibliotheken in der Microsoft Store-Services SDK oder der Microsoft Advertising SDK für Windows und Windows Phone 8.x gibt es kein Toolbox-Steuerelement zum Ziehen einer **AdControl** oder **InterstitialAd** auf eine Entwurfsoberfläche in Ihrer App. Informationen zum Hinzufügen dieser Steuerelemente in Ihrem Markup und Code finden Sie in der [Exemplarische Vorgehensweisen für Entwickler](developer-walkthroughs.md).
+## <a name="no-toolbox-control"></a><span data-ttu-id="20203-121">Kein Toolbox-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="20203-121">No toolbox control</span></span>
 
-## <a name="latitude-and-longitude-properties-no-longer-available"></a>Eigenschaften Latitude und Longitude nicht mehr verfügbar
+<span data-ttu-id="20203-122">In der aktuellen Version der Microsoft Advertising-Bibliotheken im [Microsoft Advertising-SDK](http://aka.ms/ads-sdk-uwp) gibt es kein Toolbox-Steuerelement zum Ziehen eines **AdControl** oder **InterstitialAd** in die Entwurfsoberfläche Ihrer App.</span><span class="sxs-lookup"><span data-stu-id="20203-122">In the current release of the Microsoft advertising libraries in the [Microsoft Advertising SDK](http://aka.ms/ads-sdk-uwp), there is no toolbox control for dragging an **AdControl** or **InterstitialAd** to a design surface in your app.</span></span> <span data-ttu-id="20203-123">Informationen zum Hinzufügen dieser Steuerelemente in Ihrem Markup und Code finden Sie in der [Exemplarische Vorgehensweisen für Entwickler](developer-walkthroughs.md).</span><span class="sxs-lookup"><span data-stu-id="20203-123">For instructions about adding these controls in your markup and code, see the [developer walkthroughs](developer-walkthroughs.md).</span></span>
 
-Die **AdControl**-Klasse verfügt nicht mehr über die Eigenschaften **Latitude** und **Longitude** für UWP-Apps. Stattdessen erkennt der Code im Anzeigensteuerelement diese Werte und sendet sie für die App an die Anzeigenserver.
+## <a name="latitude-and-longitude-properties-no-longer-available"></a><span data-ttu-id="20203-124">Eigenschaften Latitude und Longitude nicht mehr verfügbar</span><span class="sxs-lookup"><span data-stu-id="20203-124">Latitude and longitude properties no longer available</span></span>
 
-## <a name="important-notice"></a>Wichtiger Hinweis
+<span data-ttu-id="20203-125">Die **AdControl**-Klasse verfügt nicht mehr über die Eigenschaften **Latitude** und **Longitude** für UWP-Apps.</span><span class="sxs-lookup"><span data-stu-id="20203-125">The **AdControl** class no longer has **Latitude** and **Longitude** properties for UWP apps.</span></span> <span data-ttu-id="20203-126">Stattdessen erkennt der Code im Anzeigensteuerelement diese Werte und sendet sie für die App an die Anzeigenserver.</span><span class="sxs-lookup"><span data-stu-id="20203-126">Instead, code built into the ad control will detect and send these values to the ad servers on the app’s behalf.</span></span>
 
-Lesen Sie die Endbenutzer-Lizenzbedingungen vollständig durch. Weitere Informationen finden Sie im Thema [Wichtiger Hinweis zu den Endbenutzer-Lizenzbedingungen](important-notice-eula.md).
 
  
 
  
-

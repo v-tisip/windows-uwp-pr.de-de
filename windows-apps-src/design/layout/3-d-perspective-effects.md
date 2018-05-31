@@ -1,8 +1,8 @@
 ---
 author: Jwmsft
 ms.assetid: 90F07341-01F4-4205-8161-92DD2EB49860
-title: "3D-Perspektiveneffekte für XAML-UI"
-description: "Mithilfe der perspektivischen Transformation können Sie 3D-Effekte auf Inhalte in Ihren Windows-Runtime-Apps anwenden. Sie können z. B. die Illusion schaffen, dass sich ein Objekt auf Sie zu oder von Ihnen wegbewegt, wie hier gezeigt wird."
+title: 3D-Perspektiveneffekte für XAML-UI
+description: Mithilfe der perspektivischen Transformation können Sie 3D-Effekte auf Inhalte in Ihren Windows-Runtime-Apps anwenden. Sie können z. B. die Illusion schaffen, dass sich ein Objekt auf Sie zu oder von Ihnen wegbewegt, wie hier gezeigt wird.
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
@@ -15,6 +15,7 @@ ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/12/2017
+ms.locfileid: "1396499"
 ---
 # <a name="3-d-perspective-effects-for-xaml-ui"></a><span data-ttu-id="dc45d-105">3D-Perspektiveneffekte für XAML-UI</span><span class="sxs-lookup"><span data-stu-id="dc45d-105">3-D perspective effects for XAML UI</span></span>
 

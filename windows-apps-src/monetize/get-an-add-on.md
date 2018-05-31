@@ -1,82 +1,73 @@
 ---
 author: mcleanbyron
 ms.assetid: 78278741-09A4-4406-A112-9AF3C73F5C16
-description: "Verwenden Sie diese Methode der Windows Store-Übermittlungs-API, um Informationen über ein Add-On für eine App abzurufen, die für Ihr Windows Dev Center-Konto registriert wurde."
-title: "Abrufen eines Add-Ons mithilfe der Windows Store-Übermittlungs-API"
+description: Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API, um Informationen über ein Add-On für eine App abzurufen, die für Ihr Windows Dev Center-Konto registriert wurde.
+title: Abrufen eines Add-Ons
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Windows Store-Übermittlungs-API, Add-On-Übermittlung, In-App-Produkt, IAP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e000c435b8a271085872bfb1ce42dd09352847c5
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Add-On-Übermittlung, In-App-Produkt, IAP
+ms.localizationpriority: medium
+ms.openlocfilehash: ace256fa10035f79cb050e431d5ffc71344f2ff3
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/17/2018
+ms.locfileid: "1664360"
 ---
+# <a name="get-an-add-on"></a><span data-ttu-id="c6ef0-104">Abrufen eines Add-Ons</span><span class="sxs-lookup"><span data-stu-id="c6ef0-104">Get an add-on</span></span>
 
-# <a name="get-an-add-on-using-the-windows-store-submission-api"></a>Abrufen eines Add-Ons mithilfe der Windows Store-Übermittlungs-API
+<span data-ttu-id="c6ef0-105">Verwenden Sie diese Methode der Microsoft Store-Übermittlungs-API, um Informationen über ein Add-On (auch als In-App-Produkt oder IAP bezeichnet) für eine App abzurufen, die für Ihr Windows Dev Center-Konto registriert wurde.</span><span class="sxs-lookup"><span data-stu-id="c6ef0-105">Use this method in the Microsoft Store submission API to retrieve information about an add-on (also known as in-app product or IAP) for an app that is registered to your Windows Dev Center account.</span></span>
 
+## <a name="prerequisites"></a><span data-ttu-id="c6ef0-106">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="c6ef0-106">Prerequisites</span></span>
 
+<span data-ttu-id="c6ef0-107">Zur Verwendung dieser Methode sind folgende Schritte erforderlich:</span><span class="sxs-lookup"><span data-stu-id="c6ef0-107">To use this method, you need to first do the following:</span></span>
 
+* <span data-ttu-id="c6ef0-108">Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](create-and-manage-submissions-using-windows-store-services.md#prerequisites) für die Microsoft Store-Übermittlungs-API.</span><span class="sxs-lookup"><span data-stu-id="c6ef0-108">If you have not done so already, complete all the [prerequisites](create-and-manage-submissions-using-windows-store-services.md#prerequisites) for the Microsoft Store submission API.</span></span>
+* <span data-ttu-id="c6ef0-109">[Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="c6ef0-109">[Obtain an Azure AD access token](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) to use in the request header for this method.</span></span> <span data-ttu-id="c6ef0-110">Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60 Minuten lang verwenden, bevor es abläuft.</span><span class="sxs-lookup"><span data-stu-id="c6ef0-110">After you obtain an access token, you have 60 minutes to use it before it expires.</span></span> <span data-ttu-id="c6ef0-111">Wenn das Token abgelaufen ist, können Sie ein neues abrufen.</span><span class="sxs-lookup"><span data-stu-id="c6ef0-111">After the token expires, you can obtain a new one.</span></span>
 
-Verwenden Sie diese Methode der Windows Store-Übermittlungs-API, um Informationen über ein Add-On (auch als In-App-Produkt oder IAP bezeichnet) für eine App abzurufen, die für Ihr Windows Dev Center-Konto registriert wurde.
+## <a name="request"></a><span data-ttu-id="c6ef0-112">Anforderung</span><span class="sxs-lookup"><span data-stu-id="c6ef0-112">Request</span></span>
 
-## <a name="prerequisites"></a>Voraussetzungen
+<span data-ttu-id="c6ef0-113">Diese Methode hat die folgende Syntax.</span><span class="sxs-lookup"><span data-stu-id="c6ef0-113">This method has the following syntax.</span></span> <span data-ttu-id="c6ef0-114">In den folgenden Abschnitten finden Sie Verwendungsbeispiele und Beschreibungen des Header und Anforderungstexts.</span><span class="sxs-lookup"><span data-stu-id="c6ef0-114">See the following sections for usage examples and descriptions of the header and request body.</span></span>
 
-Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
-
-* Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](create-and-manage-submissions-using-windows-store-services.md#prerequisites) für die Windows Store-Übermittlungs-API.
-* [Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken erhalten haben, haben Sie 60 Minuten Zeit, das Token zu verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
-
->**Hinweis**&nbsp;&nbsp;Diese Methode kann nur für Windows Dev Center-Konten verwendet werden, die eine Berechtigung zur Verwendung der Windows Store-Übermittlungs-API erhalten haben. Diese Berechtigung ist nicht für alle Konten aktiviert.
-
-## <a name="request"></a>Anforderung
-
-Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie Verwendungsbeispiele und Beschreibungen des Header und Anforderungstexts.
-
-| Methode | Anforderungs-URI                                                      |
+| <span data-ttu-id="c6ef0-115">Methode</span><span class="sxs-lookup"><span data-stu-id="c6ef0-115">Method</span></span> | <span data-ttu-id="c6ef0-116">Anforderungs-URI</span><span class="sxs-lookup"><span data-stu-id="c6ef0-116">Request URI</span></span>                                                      |
 |--------|------------------------------------------------------------------|
-| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{inAppProductId}``` |
+| <span data-ttu-id="c6ef0-117">GET</span><span class="sxs-lookup"><span data-stu-id="c6ef0-117">GET</span></span>    | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{inAppProductId}``` |
 
-<span/>
- 
 
-### <a name="request-header"></a>Anforderungsheader
+### <a name="request-header"></a><span data-ttu-id="c6ef0-118">Anforderungsheader</span><span class="sxs-lookup"><span data-stu-id="c6ef0-118">Request header</span></span>
 
-| Header        | Typ   | Beschreibung                                                                 |
+| <span data-ttu-id="c6ef0-119">Header</span><span class="sxs-lookup"><span data-stu-id="c6ef0-119">Header</span></span>        | <span data-ttu-id="c6ef0-120">Typ</span><span class="sxs-lookup"><span data-stu-id="c6ef0-120">Type</span></span>   | <span data-ttu-id="c6ef0-121">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c6ef0-121">Description</span></span>                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorisierung | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;. |
+| <span data-ttu-id="c6ef0-122">Autorisierung</span><span class="sxs-lookup"><span data-stu-id="c6ef0-122">Authorization</span></span> | <span data-ttu-id="c6ef0-123">String</span><span class="sxs-lookup"><span data-stu-id="c6ef0-123">string</span></span> | <span data-ttu-id="c6ef0-124">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="c6ef0-124">Required.</span></span> <span data-ttu-id="c6ef0-125">Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;.</span><span class="sxs-lookup"><span data-stu-id="c6ef0-125">The Azure AD access token in the form **Bearer** &lt;*token*&gt;.</span></span> |
 
-<span/>
 
-### <a name="request-parameters"></a>Anforderungsparameter
+### <a name="request-parameters"></a><span data-ttu-id="c6ef0-126">Anforderungsparameter</span><span class="sxs-lookup"><span data-stu-id="c6ef0-126">Request parameters</span></span>
 
-| Name        | Typ   | Beschreibung                                                                 |
+| <span data-ttu-id="c6ef0-127">Name</span><span class="sxs-lookup"><span data-stu-id="c6ef0-127">Name</span></span>        | <span data-ttu-id="c6ef0-128">Typ</span><span class="sxs-lookup"><span data-stu-id="c6ef0-128">Type</span></span>   | <span data-ttu-id="c6ef0-129">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c6ef0-129">Description</span></span>                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| id | string | Erforderlich. Die Store-ID des abzurufenden Add-Ons. Die Store-ID ist im Dev Center-Dashboard verfügbar.  |
+| <span data-ttu-id="c6ef0-130">id</span><span class="sxs-lookup"><span data-stu-id="c6ef0-130">id</span></span> | <span data-ttu-id="c6ef0-131">String</span><span class="sxs-lookup"><span data-stu-id="c6ef0-131">string</span></span> | <span data-ttu-id="c6ef0-132">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="c6ef0-132">Required.</span></span> <span data-ttu-id="c6ef0-133">Die Store-ID des abzurufenden Add-Ons.</span><span class="sxs-lookup"><span data-stu-id="c6ef0-133">The Store ID of the add-on to retrieve.</span></span> <span data-ttu-id="c6ef0-134">Die Store-ID ist im Dev Center-Dashboard verfügbar.</span><span class="sxs-lookup"><span data-stu-id="c6ef0-134">The Store ID is available on the Dev Center dashboard.</span></span>  |
 
-<span/>
 
-### <a name="request-body"></a>Anforderungstext
+### <a name="request-body"></a><span data-ttu-id="c6ef0-135">Anforderungstext</span><span class="sxs-lookup"><span data-stu-id="c6ef0-135">Request body</span></span>
 
-Stellen Sie keinen Anforderungstext für diese Methode bereit.
+<span data-ttu-id="c6ef0-136">Stellen Sie keinen Anforderungstext für diese Methode bereit.</span><span class="sxs-lookup"><span data-stu-id="c6ef0-136">Do not provide a request body for this method.</span></span>
 
-<span/>
 
-### <a name="request-example"></a>Anforderungsbeispiel
+### <a name="request-example"></a><span data-ttu-id="c6ef0-137">Anforderungsbeispiel</span><span class="sxs-lookup"><span data-stu-id="c6ef0-137">Request example</span></span>
 
-Im folgenden Beispiel wird veranschaulicht, wie Informationen über ein Add-On abgerufen werden können.
+<span data-ttu-id="c6ef0-138">Im folgenden Beispiel wird veranschaulicht, wie Informationen über ein Add-On abgerufen werden können.</span><span class="sxs-lookup"><span data-stu-id="c6ef0-138">The following example demonstrates how to retrieve information about an add-on.</span></span>
 
 ```
 GET https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/9NBLGGH4TNMP HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-## <a name="response"></a>Antwort
+## <a name="response"></a><span data-ttu-id="c6ef0-139">Antwort</span><span class="sxs-lookup"><span data-stu-id="c6ef0-139">Response</span></span>
 
-Das folgende Beispiel veranschaulicht den JSON-Antworttext für einen erfolgreichen Aufruf dieser Methode. Weitere Informationen zu den Werten im Antworttext finden Sie unter [Add-On-Ressource](manage-add-ons.md#add-on-object).
+<span data-ttu-id="c6ef0-140">Das folgende Beispiel veranschaulicht den JSON-Antworttext für einen erfolgreichen Aufruf dieser Methode.</span><span class="sxs-lookup"><span data-stu-id="c6ef0-140">The following example demonstrates the JSON response body for a successful call to this method.</span></span> <span data-ttu-id="c6ef0-141">Weitere Informationen zu den Werten im Antworttext finden Sie unter [Add-On-Übermittlungsressource](manage-add-ons.md#add-on-object).</span><span class="sxs-lookup"><span data-stu-id="c6ef0-141">For more details about the values in the response body, see [add-on resource](manage-add-ons.md#add-on-object).</span></span>
 
 ```json
 {
@@ -103,22 +94,20 @@ Das folgende Beispiel veranschaulicht den JSON-Antworttext für einen erfolgreic
 }
 ```
 
-## <a name="error-codes"></a>Fehlercodes
+## <a name="error-codes"></a><span data-ttu-id="c6ef0-142">Fehlercodes</span><span class="sxs-lookup"><span data-stu-id="c6ef0-142">Error codes</span></span>
 
-Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die Antwort einen der folgenden HTTP-Fehlercodes.
+<span data-ttu-id="c6ef0-143">Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die Antwort einen der folgenden HTTP-Fehlercodes.</span><span class="sxs-lookup"><span data-stu-id="c6ef0-143">If the request cannot be successfully completed, the response will contain one of the following HTTP error codes.</span></span>
 
-| Fehlercode |  Beschreibung   |
+| <span data-ttu-id="c6ef0-144">Fehlercode</span><span class="sxs-lookup"><span data-stu-id="c6ef0-144">Error code</span></span> |  <span data-ttu-id="c6ef0-145">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c6ef0-145">Description</span></span>   |
 |--------|------------------|
-| 404  | Das angegebene Add-On konnte nicht gefunden werden. |
-| 409  | Das Add-On verwendet eine Dev Center-Dashboard-Funktion, die [derzeit nicht von der Windows Store-Übermittlungs-API unterstützt wird](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
+| <span data-ttu-id="c6ef0-146">404</span><span class="sxs-lookup"><span data-stu-id="c6ef0-146">404</span></span>  | <span data-ttu-id="c6ef0-147">Das angegebene Add-On konnte nicht gefunden werden.</span><span class="sxs-lookup"><span data-stu-id="c6ef0-147">The specified add-on could not be found.</span></span> |
+| <span data-ttu-id="c6ef0-148">409</span><span class="sxs-lookup"><span data-stu-id="c6ef0-148">409</span></span>  | <span data-ttu-id="c6ef0-149">Das Add-On verwendet eine Dev Center-Dashboard-Funktion, die [derzeit nicht von der Microsoft Store-Übermittlungs-API unterstützt wird](create-and-manage-submissions-using-windows-store-services.md#not_supported).</span><span class="sxs-lookup"><span data-stu-id="c6ef0-149">The add-on uses a Dev Center dashboard feature that is [currently not supported by the Microsoft Store submission API](create-and-manage-submissions-using-windows-store-services.md#not_supported).</span></span>  |
 
-<span/>
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a><span data-ttu-id="c6ef0-150">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="c6ef0-150">Related topics</span></span>
 
-* [Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten](create-and-manage-submissions-using-windows-store-services.md)
-* [Verwalten von Add-On-Übermittlungen](manage-add-on-submissions.md)
-* [Abrufen aller Add-Ons](get-all-add-ons.md)
-* [Erstellen eines Add-Ons](create-an-add-on.md)
-* [Löschen eines Add-Ons](delete-an-add-on.md)
-
+* [<span data-ttu-id="c6ef0-151">Erstellen und Verwalten von Übermittlungen mit Microsoft Store-Diensten</span><span class="sxs-lookup"><span data-stu-id="c6ef0-151">Create and manage submissions using Microsoft Store services</span></span>](create-and-manage-submissions-using-windows-store-services.md)
+* [<span data-ttu-id="c6ef0-152">Verwalten von Add-On-Übermittlungen</span><span class="sxs-lookup"><span data-stu-id="c6ef0-152">Manage add-on submissions</span></span>](manage-add-on-submissions.md)
+* [<span data-ttu-id="c6ef0-153">Abrufen aller Add-Ons</span><span class="sxs-lookup"><span data-stu-id="c6ef0-153">Get all add-ons</span></span>](get-all-add-ons.md)
+* [<span data-ttu-id="c6ef0-154">Erstellen eines Add-Ons</span><span class="sxs-lookup"><span data-stu-id="c6ef0-154">Create an add-on</span></span>](create-an-add-on.md)
+* [<span data-ttu-id="c6ef0-155">Löschen eines Add-Ons</span><span class="sxs-lookup"><span data-stu-id="c6ef0-155">Delete an add-on</span></span>](delete-an-add-on.md)

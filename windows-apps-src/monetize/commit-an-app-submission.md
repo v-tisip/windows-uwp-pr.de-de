@@ -1,82 +1,77 @@
 ---
 author: mcleanbyron
 ms.assetid: 934F2DBF-2C7E-4B77-997D-17B9B0535D51
-description: "Verwenden Sie diese Methode in der Windows Store-Übermittlungs-API, um eine neue oder aktualisierte App-Übermittlung in Windows Dev Center zu übernehmen."
-title: "Übernehmen einer App-Übermittlung mit der Windows Store-Übermittlungs-API"
+description: Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API, um eine neue oder aktualisierte App-Übermittlung in Windows Dev Center zu übernehmen.
+title: Ausführen eines Commit für eine App-Übermittlung
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 04/17/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Windows Store-Übermittlungs-API, Übernehmen einer App-Übermittlung"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b22143dc9f64e1f1075b0f9a2851699ca4208673
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Übernehmen einer App-Übermittlung
+ms.localizationpriority: medium
+ms.openlocfilehash: 4512ac4c7e108b6cadab6a7e85a10e244cab3193
+ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/30/2018
+ms.locfileid: "1816075"
 ---
+# <a name="commit-an-app-submission"></a><span data-ttu-id="74622-104">Ausführen eines Commit für eine App-Übermittlung</span><span class="sxs-lookup"><span data-stu-id="74622-104">Commit an app submission</span></span>
 
-# <a name="commit-an-app-submission-using-the-windows-store-submission-api"></a>Übernehmen einer App-Übermittlung mit der Windows Store-Übermittlungs-API
 
+<span data-ttu-id="74622-105">Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API, um eine neue oder aktualisierte App-Übermittlung in Windows Dev Center zu übernehmen.</span><span class="sxs-lookup"><span data-stu-id="74622-105">Use this method in the Microsoft Store submission API to commit a new or updated app submission to Windows Dev Center.</span></span> <span data-ttu-id="74622-106">Durch die Übernahmeaktion wird Dev Center darüber benachrichtigt, dass die Übermittlungsdaten (darunter alle zugehörigen Pakete und Bilder) hochgeladen wurden.</span><span class="sxs-lookup"><span data-stu-id="74622-106">The commit action alerts Dev Center that the submission data has been uploaded (including any related packages and images).</span></span> <span data-ttu-id="74622-107">Als Reaktion übernimmt Dev Center die Änderungen der Übermittlungsdaten zur Aufnahme und Veröffentlichung.</span><span class="sxs-lookup"><span data-stu-id="74622-107">In response, Dev Center commits the changes to the submission data for ingestion and publishing.</span></span> <span data-ttu-id="74622-108">Nachdem der Übernahmevorgang erfolgreich ausgeführt wurde, werden die Änderungen der Übermittlung im Dev Center-Dashboard angezeigt.</span><span class="sxs-lookup"><span data-stu-id="74622-108">After the commit operation succeeds, the changes to the submission are shown in the Dev Center dashboard.</span></span>
 
-Verwenden Sie diese Methode in der Windows Store-Übermittlungs-API, um eine neue oder aktualisierte App-Übermittlung in Windows Dev Center zu übernehmen. Durch die Übernahmeaktion wird Dev Center darüber benachrichtigt, dass die Übermittlungsdaten (darunter alle zugehörigen Pakete und Bilder) hochgeladen wurden. Als Reaktion übernimmt Dev Center die Änderungen der Übermittlungsdaten zur Aufnahme und Veröffentlichung. Nachdem der Übernahmevorgang erfolgreich ausgeführt wurde, werden die Änderungen der Übermittlung im Dev Center-Dashboard angezeigt.
+<span data-ttu-id="74622-109">Weitere Informationen dazu, wie der Übernahmevorgang in den Prozess zur Übermittlung einer App mit der Microsoft Store-Übermittlungs-API passt, finden Sie unter [Verwalten von App-Übermittlungen](manage-app-submissions.md).</span><span class="sxs-lookup"><span data-stu-id="74622-109">For more information about how the commit operation fits into the process of submitting an app by using the Microsoft Store submission API, see [Manage app submissions](manage-app-submissions.md).</span></span>
 
-Weitere Informationen dazu, wie der Übernahmevorgang in den Prozess zur Übermittlung einer App mit der Windows Store-Übermittlungs-API passt, finden Sie unter [Verwalten von App-Übermittlungen](manage-app-submissions.md).
+## <a name="prerequisites"></a><span data-ttu-id="74622-110">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="74622-110">Prerequisites</span></span>
 
-## <a name="prerequisites"></a>Voraussetzungen
+<span data-ttu-id="74622-111">Zur Verwendung dieser Methode sind folgende Schritte erforderlich:</span><span class="sxs-lookup"><span data-stu-id="74622-111">To use this method, you need to first do the following:</span></span>
 
-Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
+* <span data-ttu-id="74622-112">Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](create-and-manage-submissions-using-windows-store-services.md#prerequisites) für die Microsoft Store-Übermittlungs-API.</span><span class="sxs-lookup"><span data-stu-id="74622-112">If you have not done so already, complete all the [prerequisites](create-and-manage-submissions-using-windows-store-services.md#prerequisites) for the Microsoft Store submission API.</span></span>
+* <span data-ttu-id="74622-113">[Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="74622-113">[Obtain an Azure AD access token](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) to use in the request header for this method.</span></span> <span data-ttu-id="74622-114">Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60 Minuten lang verwenden, bevor es abläuft.</span><span class="sxs-lookup"><span data-stu-id="74622-114">After you obtain an access token, you have 60 minutes to use it before it expires.</span></span> <span data-ttu-id="74622-115">Wenn das Token abgelaufen ist, können Sie ein neues abrufen.</span><span class="sxs-lookup"><span data-stu-id="74622-115">After the token expires, you can obtain a new one.</span></span>
+* <span data-ttu-id="74622-116">[Erstellen Sie eine App-Übermittlung](create-an-app-submission.md), und [aktualisieren Sie die Übermittlung](update-an-app-submission.md) mit allen erforderlichen Änderungen der Übermittlungsdaten.</span><span class="sxs-lookup"><span data-stu-id="74622-116">[Create an app submission](create-an-app-submission.md) and then [update the submission](update-an-app-submission.md) with any necessary changes to the submission data.</span></span>
 
-* Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](create-and-manage-submissions-using-windows-store-services.md#prerequisites) für die Windows Store-Übermittlungs-API.
-* [Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60 Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
-* [Erstellen Sie eine App-Übermittlung](create-an-app-submission.md), und [aktualisieren Sie die Übermittlung](update-an-app-submission.md) mit allen erforderlichen Änderungen der Übermittlungsdaten.
+## <a name="request"></a><span data-ttu-id="74622-117">Anforderung</span><span class="sxs-lookup"><span data-stu-id="74622-117">Request</span></span>
 
->**Hinweis**&nbsp;&nbsp;Diese Methode kann nur für Windows Dev Center-Konten verwendet werden, die eine Berechtigung zur Verwendung der Windows Store-Übermittlungs-API erhalten haben. Diese Berechtigung ist nicht für alle Konten aktiviert.
+<span data-ttu-id="74622-118">Diese Methode hat die folgende Syntax.</span><span class="sxs-lookup"><span data-stu-id="74622-118">This method has the following syntax.</span></span> <span data-ttu-id="74622-119">In den folgenden Abschnitten finden Sie Verwendungsbeispiele und Beschreibungen des Header und Anforderungstexts.</span><span class="sxs-lookup"><span data-stu-id="74622-119">See the following sections for usage examples and descriptions of the header and request body.</span></span>
 
-## <a name="request"></a>Anforderung
-
-Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie Verwendungsbeispiele und Beschreibungen des Header und Anforderungstexts.
-
-| Methode | Anforderungs-URI                                                      |
+| <span data-ttu-id="74622-120">Methode</span><span class="sxs-lookup"><span data-stu-id="74622-120">Method</span></span> | <span data-ttu-id="74622-121">Anforderungs-URI</span><span class="sxs-lookup"><span data-stu-id="74622-121">Request URI</span></span>                                                      |
 |--------|------------------------------------------------------------------|
-| POST    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/commit``` |
+| <span data-ttu-id="74622-122">POST</span><span class="sxs-lookup"><span data-stu-id="74622-122">POST</span></span>    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/commit``` |
 
-<span/>
- 
 
-### <a name="request-header"></a>Anforderungsheader
+### <a name="request-header"></a><span data-ttu-id="74622-123">Anforderungsheader</span><span class="sxs-lookup"><span data-stu-id="74622-123">Request header</span></span>
 
-| Header        | Typ   | Beschreibung                                                                 |
+| <span data-ttu-id="74622-124">Header</span><span class="sxs-lookup"><span data-stu-id="74622-124">Header</span></span>        | <span data-ttu-id="74622-125">Typ</span><span class="sxs-lookup"><span data-stu-id="74622-125">Type</span></span>   | <span data-ttu-id="74622-126">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="74622-126">Description</span></span>                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorisierung | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;. |
+| <span data-ttu-id="74622-127">Autorisierung</span><span class="sxs-lookup"><span data-stu-id="74622-127">Authorization</span></span> | <span data-ttu-id="74622-128">String</span><span class="sxs-lookup"><span data-stu-id="74622-128">string</span></span> | <span data-ttu-id="74622-129">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="74622-129">Required.</span></span> <span data-ttu-id="74622-130">Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;.</span><span class="sxs-lookup"><span data-stu-id="74622-130">The Azure AD access token in the form **Bearer** &lt;*token*&gt;.</span></span> |
 
-<span/>
 
-### <a name="request-parameters"></a>Anforderungsparameter
+### <a name="request-parameters"></a><span data-ttu-id="74622-131">Anforderungsparameter</span><span class="sxs-lookup"><span data-stu-id="74622-131">Request parameters</span></span>
 
-| Name        | Typ   | Beschreibung                                                                 |
+| <span data-ttu-id="74622-132">Name</span><span class="sxs-lookup"><span data-stu-id="74622-132">Name</span></span>        | <span data-ttu-id="74622-133">Typ</span><span class="sxs-lookup"><span data-stu-id="74622-133">Type</span></span>   | <span data-ttu-id="74622-134">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="74622-134">Description</span></span>                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | string | Erforderlich. Die Store-ID der App, die die Übermittlung enthält, die Sie übernehmen möchten. Weitere Informationen zur Store-ID finden Sie unter [Anzeigen von Details zur App-Identität](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
-| submissionId | string | Erforderlich. Die ID der Übermittlung, die Sie übernehmen möchten. Diese ID ist im Dev Center-Dashboard verfügbar und in den Antwortdaten für Anforderungen zum [Erstellen einer App-Übermittlung](create-an-app-submission.md) enthalten.  |
+| <span data-ttu-id="74622-135">applicationId</span><span class="sxs-lookup"><span data-stu-id="74622-135">applicationId</span></span> | <span data-ttu-id="74622-136">String</span><span class="sxs-lookup"><span data-stu-id="74622-136">string</span></span> | <span data-ttu-id="74622-137">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="74622-137">Required.</span></span> <span data-ttu-id="74622-138">Die Store-ID der App, die die Übermittlung enthält, die Sie übernehmen möchten.</span><span class="sxs-lookup"><span data-stu-id="74622-138">The Store ID of the app that contains the submission you want to commit.</span></span> <span data-ttu-id="74622-139">Weitere Informationen zur Store-ID finden Sie unter [Anzeigen von Details zur App-Identität](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).</span><span class="sxs-lookup"><span data-stu-id="74622-139">For more information about the Store ID, see [View app identity details](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).</span></span>  |
+| <span data-ttu-id="74622-140">submissionId</span><span class="sxs-lookup"><span data-stu-id="74622-140">submissionId</span></span> | <span data-ttu-id="74622-141">String</span><span class="sxs-lookup"><span data-stu-id="74622-141">string</span></span> | <span data-ttu-id="74622-142">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="74622-142">Required.</span></span> <span data-ttu-id="74622-143">Die ID der Übermittlung, die Sie übernehmen möchten.</span><span class="sxs-lookup"><span data-stu-id="74622-143">The ID of the submission you want to commit.</span></span> <span data-ttu-id="74622-144">Diese ID ist in den Antwortdaten für Anforderungen zum [Erstellen einer App-Übermittlung](create-an-app-submission.md) verfügbar.</span><span class="sxs-lookup"><span data-stu-id="74622-144">This ID is available in the response data for requests to [create an app submission](create-an-app-submission.md).</span></span> <span data-ttu-id="74622-145">Für eine Übermittlung, die im Dev Center-Dashboard erstellt wurde, ist diese ID auch in der URL für die Übermittlungsseite im Dashboard verfügbar.</span><span class="sxs-lookup"><span data-stu-id="74622-145">For a submission that was created in the Dev Center dashboard, this ID is also available in the URL for the submission page in the dashboard.</span></span>  |
 
-<span/>
 
-### <a name="request-body"></a>Anforderungstext
+### <a name="request-body"></a><span data-ttu-id="74622-146">Anforderungstext</span><span class="sxs-lookup"><span data-stu-id="74622-146">Request body</span></span>
 
-Stellen Sie keinen Anforderungstext für diese Methode bereit.
+<span data-ttu-id="74622-147">Stellen Sie keinen Anforderungstext für diese Methode bereit.</span><span class="sxs-lookup"><span data-stu-id="74622-147">Do not provide a request body for this method.</span></span>
 
-### <a name="request-example"></a>Anforderungsbeispiel
+### <a name="request-example"></a><span data-ttu-id="74622-148">Anforderungsbeispiel</span><span class="sxs-lookup"><span data-stu-id="74622-148">Request example</span></span>
 
-Im folgenden Beispiel wird veranschaulicht, wie eine App-Übermittlung übernommen wird.
+<span data-ttu-id="74622-149">Im folgenden Beispiel wird veranschaulicht, wie eine App-Übermittlung übernommen wird.</span><span class="sxs-lookup"><span data-stu-id="74622-149">The following example demonstrates how to commit an app submission.</span></span>
 
 ```
 POST https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/submissions/1152921504621243610/commit HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-## <a name="response"></a>Antwort
+## <a name="response"></a><span data-ttu-id="74622-150">Antwort</span><span class="sxs-lookup"><span data-stu-id="74622-150">Response</span></span>
 
-Das folgende Beispiel veranschaulicht den JSON-Antworttext für einen erfolgreichen Aufruf dieser Methode. Weitere Informationen zu den Werten im Antworttext finden Sie in den folgenden Abschnitten.
+<span data-ttu-id="74622-151">Das folgende Beispiel veranschaulicht den JSON-Antworttext für einen erfolgreichen Aufruf dieser Methode.</span><span class="sxs-lookup"><span data-stu-id="74622-151">The following example demonstrates the JSON response body for a successful call to this method.</span></span> <span data-ttu-id="74622-152">Weitere Informationen zu den Werten im Antworttext finden Sie in den folgenden Abschnitten.</span><span class="sxs-lookup"><span data-stu-id="74622-152">For more details about the values in the response body, see the following sections.</span></span>
 
 ```json
 {
@@ -84,33 +79,29 @@ Das folgende Beispiel veranschaulicht den JSON-Antworttext für einen erfolgreic
 }
 ```
 
-### <a name="response-body"></a>Antworttext
+### <a name="response-body"></a><span data-ttu-id="74622-153">Antworttext</span><span class="sxs-lookup"><span data-stu-id="74622-153">Response body</span></span>
 
-| Wert      | Typ   | Beschreibung                                                                                                                                                                                                                                                                         |
+| <span data-ttu-id="74622-154">Wert</span><span class="sxs-lookup"><span data-stu-id="74622-154">Value</span></span>      | <span data-ttu-id="74622-155">Typ</span><span class="sxs-lookup"><span data-stu-id="74622-155">Type</span></span>   | <span data-ttu-id="74622-156">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="74622-156">Description</span></span>                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| status           | string  | Der Status der Übermittlung. Folgende Werte sind möglich: <ul><li>None</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>Release</li><li>ReleaseFailed</li></ul>  |
+| <span data-ttu-id="74622-157">status</span><span class="sxs-lookup"><span data-stu-id="74622-157">status</span></span>           | <span data-ttu-id="74622-158">string</span><span class="sxs-lookup"><span data-stu-id="74622-158">string</span></span>  | <span data-ttu-id="74622-159">Der Status der Übermittlung.</span><span class="sxs-lookup"><span data-stu-id="74622-159">The status of the submission.</span></span> <span data-ttu-id="74622-160">Folgende Werte sind möglich:</span><span class="sxs-lookup"><span data-stu-id="74622-160">This can be one of the following values:</span></span> <ul><li><span data-ttu-id="74622-161">None</span><span class="sxs-lookup"><span data-stu-id="74622-161">None</span></span></li><li><span data-ttu-id="74622-162">Canceled</span><span class="sxs-lookup"><span data-stu-id="74622-162">Canceled</span></span></li><li><span data-ttu-id="74622-163">PendingCommit</span><span class="sxs-lookup"><span data-stu-id="74622-163">PendingCommit</span></span></li><li><span data-ttu-id="74622-164">CommitStarted</span><span class="sxs-lookup"><span data-stu-id="74622-164">CommitStarted</span></span></li><li><span data-ttu-id="74622-165">CommitFailed</span><span class="sxs-lookup"><span data-stu-id="74622-165">CommitFailed</span></span></li><li><span data-ttu-id="74622-166">PendingPublication</span><span class="sxs-lookup"><span data-stu-id="74622-166">PendingPublication</span></span></li><li><span data-ttu-id="74622-167">Publishing</span><span class="sxs-lookup"><span data-stu-id="74622-167">Publishing</span></span></li><li><span data-ttu-id="74622-168">Published</span><span class="sxs-lookup"><span data-stu-id="74622-168">Published</span></span></li><li><span data-ttu-id="74622-169">PublishFailed</span><span class="sxs-lookup"><span data-stu-id="74622-169">PublishFailed</span></span></li><li><span data-ttu-id="74622-170">PreProcessing</span><span class="sxs-lookup"><span data-stu-id="74622-170">PreProcessing</span></span></li><li><span data-ttu-id="74622-171">PreProcessingFailed</span><span class="sxs-lookup"><span data-stu-id="74622-171">PreProcessingFailed</span></span></li><li><span data-ttu-id="74622-172">Certification</span><span class="sxs-lookup"><span data-stu-id="74622-172">Certification</span></span></li><li><span data-ttu-id="74622-173">CertificationFailed</span><span class="sxs-lookup"><span data-stu-id="74622-173">CertificationFailed</span></span></li><li><span data-ttu-id="74622-174">Release</span><span class="sxs-lookup"><span data-stu-id="74622-174">Release</span></span></li><li><span data-ttu-id="74622-175">ReleaseFailed</span><span class="sxs-lookup"><span data-stu-id="74622-175">ReleaseFailed</span></span></li></ul>  |
 
-<span/>
 
-## <a name="error-codes"></a>Fehlercodes
+## <a name="error-codes"></a><span data-ttu-id="74622-176">Fehlercodes</span><span class="sxs-lookup"><span data-stu-id="74622-176">Error codes</span></span>
 
-Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die Antwort einen der folgenden HTTP-Fehlercodes.
+<span data-ttu-id="74622-177">Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die Antwort einen der folgenden HTTP-Fehlercodes.</span><span class="sxs-lookup"><span data-stu-id="74622-177">If the request cannot be successfully completed, the response will contain one of the following HTTP error codes.</span></span>
 
-| Fehlercode |  Beschreibung   |
+| <span data-ttu-id="74622-178">Fehlercode</span><span class="sxs-lookup"><span data-stu-id="74622-178">Error code</span></span> |  <span data-ttu-id="74622-179">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="74622-179">Description</span></span>   |
 |--------|------------------|
-| 400  | Die Anforderungsparameter sind ungültig. |
-| 404  | Die angegebene Übermittlung konnte nicht gefunden werden. |
-| 409  | Die angegebene Übermittlung wurde gefunden, konnte jedoch nicht in ihrem aktuellen Zustand übernommen werden. Oder die App verwendet ein Dev Center-Dashboard-Feature, das [derzeit nicht von der Windows Store-Übermittlungs-API unterstützt wird](create-and-manage-submissions-using-windows-store-services.md#not_supported). |
-
-<span/>
+| <span data-ttu-id="74622-180">400</span><span class="sxs-lookup"><span data-stu-id="74622-180">400</span></span>  | <span data-ttu-id="74622-181">Die Anforderungsparameter sind ungültig.</span><span class="sxs-lookup"><span data-stu-id="74622-181">The request parameters are invalid.</span></span> |
+| <span data-ttu-id="74622-182">404</span><span class="sxs-lookup"><span data-stu-id="74622-182">404</span></span>  | <span data-ttu-id="74622-183">Die angegebene Übermittlung konnte nicht gefunden werden.</span><span class="sxs-lookup"><span data-stu-id="74622-183">The specified submission could not be found.</span></span> |
+| <span data-ttu-id="74622-184">409</span><span class="sxs-lookup"><span data-stu-id="74622-184">409</span></span>  | <span data-ttu-id="74622-185">Die angegebene Übermittlung wurde gefunden, konnte jedoch nicht in ihrem aktuellen Zustand übernommen werden. Oder die App verwendet ein Dev Center-Dashboard-Feature, das [derzeit nicht von der Microsoft Store-Übermittlungs-API unterstützt wird](create-and-manage-submissions-using-windows-store-services.md#not_supported).</span><span class="sxs-lookup"><span data-stu-id="74622-185">The specified submission was found but it could not be committed in its current state, or the app uses a Dev Center dashboard feature that is [currently not supported by the Microsoft Store submission API](create-and-manage-submissions-using-windows-store-services.md#not_supported).</span></span> |
 
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a><span data-ttu-id="74622-186">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="74622-186">Related topics</span></span>
 
-* [Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten](create-and-manage-submissions-using-windows-store-services.md)
-* [Abrufen einer App-Übermittlung](get-an-app-submission.md)
-* [Erstellen einer App-Übermittlung](create-an-app-submission.md)
-* [Aktualisieren einer App-Übermittlung](update-an-app-submission.md)
-* [Löschen einer App-Übermittlung](delete-an-app-submission.md)
-* [Abrufen des Status einer App-Übermittlung](get-status-for-an-app-submission.md)
-
+* [<span data-ttu-id="74622-187">Erstellen und Verwalten von Übermittlungen mit Microsoft Store-Diensten</span><span class="sxs-lookup"><span data-stu-id="74622-187">Create and manage submissions using Microsoft Store services</span></span>](create-and-manage-submissions-using-windows-store-services.md)
+* [<span data-ttu-id="74622-188">Abrufen einer App-Übermittlung</span><span class="sxs-lookup"><span data-stu-id="74622-188">Get an app submission</span></span>](get-an-app-submission.md)
+* [<span data-ttu-id="74622-189">Erstellen einer App-Übermittlung</span><span class="sxs-lookup"><span data-stu-id="74622-189">Create an app submission</span></span>](create-an-app-submission.md)
+* [<span data-ttu-id="74622-190">Aktualisieren einer App-Übermittlung</span><span class="sxs-lookup"><span data-stu-id="74622-190">Update an app submission</span></span>](update-an-app-submission.md)
+* [<span data-ttu-id="74622-191">Löschen einer App-Übermittlung</span><span class="sxs-lookup"><span data-stu-id="74622-191">Delete an app submission</span></span>](delete-an-app-submission.md)
+* [<span data-ttu-id="74622-192">Abrufen des Status einer App-Übermittlung</span><span class="sxs-lookup"><span data-stu-id="74622-192">Get the status of an app submission</span></span>](get-status-for-an-app-submission.md)

@@ -1,54 +1,66 @@
 ---
-author: mtoepke
+author: joannaleecy
 title: Einrichten des Spieleprojekts
-description: "Im ersten Schritt für die Erstellung Ihres Spiels richten Sie ein Projekt in Microsoft Visual Studio so ein, dass Sie möglichst wenig Aufwand mit der Bearbeitung der Codeinfrastruktur haben."
+description: Im ersten Schritt für die Erstellung Ihres Spiels richten Sie ein Projekt in Microsoft Visual Studio so ein, dass Sie möglichst wenig Aufwand mit der Bearbeitung der Codeinfrastruktur haben.
 ms.assetid: 9fde90b3-bf79-bcb3-03b6-d38ab85803f2
-ms.author: mtoepke
-ms.date: 02/08/2017
+ms.author: joanlee
+ms.date: 10/24/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Spiele, Einrichtung, directx"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 3bf9e6f70f71dc0b70a2f8af148c44acc1a329fb
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP, Spiele, Einrichtung, directx
+ms.localizationpriority: medium
+ms.openlocfilehash: 6b1a993f16d2d9403f16c1f4cc15805b0c5f36a9
+ms.sourcegitcommit: 842ddba19fa3c028ea43e7922011515dbeb34e9c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/05/2018
+ms.locfileid: "1488914"
 ---
+# <a name="set-up-the-game-project"></a><span data-ttu-id="79e61-104">Einrichten des Spieleprojekts</span><span class="sxs-lookup"><span data-stu-id="79e61-104">Set up the game project</span></span>
 
-# <a name="set-up-the-game-project"></a>Einrichten des Spieleprojekts
+<span data-ttu-id="79e61-105">Dieses Thema erläutert das Einrichten eines einfachen UWP-DirectX-Spiels mit den Vorlagen in Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="79e61-105">This topic goes through how to setup a simple UWP DirectX game using the templates in Visual Studio.</span></span> <span data-ttu-id="79e61-106">Im ersten Schritt für die Erstellung Ihres Spiels richten Sie ein Projekt in Microsoft Visual Studio so ein, dass Sie möglichst wenig Aufwand mit der Bearbeitung der Codeinfrastruktur haben.</span><span class="sxs-lookup"><span data-stu-id="79e61-106">The first step in assembling your game is to set up a project in Microsoft Visual Studio in such a way that you minimize the amount of code infrastructure work you need to do.</span></span> <span data-ttu-id="79e61-107">Lernen Sie, sich eine Menge Zeit und Arbeit ersparen, wenn Sie die richtige Vorlage verwenden und das Projekt speziell für die Spieleentwicklung konfigurieren.</span><span class="sxs-lookup"><span data-stu-id="79e61-107">Learn to save set up time when you use the right template and configure the project specifically for game development.</span></span>
 
+## <a name="objectives"></a><span data-ttu-id="79e61-108">Ziele</span><span class="sxs-lookup"><span data-stu-id="79e61-108">Objectives</span></span>
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+* <span data-ttu-id="79e61-109">Richten Sie ein Direct3D-Spieleprojekt in Visual Studio mit einer Vorlage ein.</span><span class="sxs-lookup"><span data-stu-id="79e61-109">Set up a Direct3D game project in Visual Studio using a template</span></span>
+* <span data-ttu-id="79e61-110">Verstehen Sie den Haupteinstiegspunkt des Spiels durch Untersuchen der **App**-Quelldateien</span><span class="sxs-lookup"><span data-stu-id="79e61-110">Understand the game's main entry point by examining the **App** source files</span></span>
+* <span data-ttu-id="79e61-111">Prüfen Sie die Datei **package.appxmanifest**</span><span class="sxs-lookup"><span data-stu-id="79e61-111">Review the project's **package.appxmanifest** file</span></span>
+* <span data-ttu-id="79e61-112">Erfahren Sie, welche Spieleentwicklungstools und Support im Projekt enthalten sind.</span><span class="sxs-lookup"><span data-stu-id="79e61-112">Find out what game dev tools and support are included with the project</span></span>
 
-Im ersten Schritt für die Erstellung Ihres Spiels richten Sie ein Projekt in Microsoft Visual Studio so ein, dass Sie möglichst wenig Aufwand mit der Bearbeitung der Codeinfrastruktur haben. Sie können sich eine Menge Zeit und Arbeit ersparen, wenn Sie die richtige Vorlage verwenden und das Projekt speziell für die Spieleentwicklung konfigurieren. Im Anschluss finden Sie die erforderlichen Einrichtungs- und Konfigurationsschritte für ein einfaches Spieleprojekt.
+## <a name="how-to-set-up-the-game-project"></a><span data-ttu-id="79e61-113">Einrichten des Spieleprojekts</span><span class="sxs-lookup"><span data-stu-id="79e61-113">How to set up the game project</span></span>
 
-## <a name="objective"></a>Ziel
+<span data-ttu-id="79e61-114">Wenn Sie Erfahrung mit der Entwicklung von UWP haben, empfehlen wir die Verwendung von Vorlagen in Visual Studio, um die grundlegende Codestruktur einzurichten.</span><span class="sxs-lookup"><span data-stu-id="79e61-114">If you're new to Universal Windows Platform (UWP) development, we recommend the use of templates in Visual Studio to set up the basic code structure.</span></span>
 
+>[!Note]
+><span data-ttu-id="79e61-115">Dieser Artikel ist Teil einer Lernprogrammreihe basierend auf einem Beispiel für ein Spiel.</span><span class="sxs-lookup"><span data-stu-id="79e61-115">This article is part of a tutorial series based on a game sample.</span></span> <span data-ttu-id="79e61-116">Sie erhalten den neuesten Code unter [Direct3D-Spielbeispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX).</span><span class="sxs-lookup"><span data-stu-id="79e61-116">You can get the latest code at [Direct3D game sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX).</span></span> <span data-ttu-id="79e61-117">Dieses Beispiel gehört zu einer großen Sammlung von UWP-Featurebeispielen.</span><span class="sxs-lookup"><span data-stu-id="79e61-117">This sample is part of a large collection of UWP feature samples.</span></span> <span data-ttu-id="79e61-118">Anweisungen zum Herunterladen des Beispiels finden Sie unter [Abrufen der UWP-Beispiele von GitHub](https://docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples).</span><span class="sxs-lookup"><span data-stu-id="79e61-118">For instructions on how to download the sample, see [Get the UWP samples from GitHub](https://docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples).</span></span>
 
--   Hier lernen Sie, wie Sie ein Direct3D-Spieleprojekt in Visual Studio einrichten.
+### <a name="use-directx-template-to-create-a-project"></a><span data-ttu-id="79e61-119">Verwenden Sie DirectX-Vorlagen, um ein Projekt zu erstellen</span><span class="sxs-lookup"><span data-stu-id="79e61-119">Use DirectX template to create a project</span></span>
 
-## <a name="setting-up-the-game-project"></a>Einrichten des Spieleprojekts
+<span data-ttu-id="79e61-120">Eine Visual Studio-Vorlage ist eine Sammlung von Einstellungen und Codedateien, die abhängig von der bevorzugten Sprache und Technologie auf eine bestimmte Art von App ausgerichtet sind.</span><span class="sxs-lookup"><span data-stu-id="79e61-120">A Visual Studio template is a collection of settings and code files that target a specific type of app based on the preferred language and technology.</span></span> <span data-ttu-id="79e61-121">In Microsoft Visual Studio2017 stehen einige Vorlagen zur Verfügung, die die Entwicklung des Spiels und der Grafik deutlich vereinfachen können.</span><span class="sxs-lookup"><span data-stu-id="79e61-121">In Microsoft Visual Studio 2017, you'll find a number of templates that can dramatically ease game and graphics app development.</span></span> <span data-ttu-id="79e61-122">Ohne Verwendung einer Vorlage müssen Sie einen Großteil des grundlegenden Rendering- und Anzeigeframeworks für die Grafik selbst entwickeln, was insbesondere für neue Spieleentwickler recht mühsam sein kann.</span><span class="sxs-lookup"><span data-stu-id="79e61-122">If you don't use a template, you must develop much of the basic graphics rendering and display framework yourself, which can be a bit of a chore to a new game developer.</span></span>
 
+<span data-ttu-id="79e61-123">Die richtige Vorlage für dieses Tutorial ist die Vorlage **DirectX 11 App (Universal Windows)**.</span><span class="sxs-lookup"><span data-stu-id="79e61-123">The template used for this tutorial is titled **DirectX 11 App (Universal Windows)**.</span></span> 
 
-Sie können ein Spiel natürlich von Grund auf neu entwickeln. Dafür brauchen Sie eigentlich nur einen praktischen Text-Editor, ein paar Beispiele und eine ganze Menge Kreativität. Das ist allerdings nicht unbedingt die effektivste Vorgehensweise. Viel besser wäre es doch, wenn Sie als Neueinsteiger ohne Erfahrung mit der Entwicklung für die universelle Windows-Plattform (UWP) einige dieser Aufgaben an Visual Studio abtreten könnten. Hier erfahren Sie, wie Sie Ihrem Projekt zu einem guten Start verhelfen.
+<span data-ttu-id="79e61-124">Schritte zum Erstellen eines DirectX 11-Spieleprojekts in Visual Studio11:</span><span class="sxs-lookup"><span data-stu-id="79e61-124">Steps to create a DirectX 11 game project in Visual Studio:</span></span>
+1.  <span data-ttu-id="79e61-125">Wählen Sie **Datei...** &gt; **Neu**  &gt; **Projekt...**</span><span class="sxs-lookup"><span data-stu-id="79e61-125">Select **File...** &gt; **New**  &gt; **Project...**</span></span>
+2.  <span data-ttu-id="79e61-126">Wählen Sie im linken Bereich **installiert**&gt; **Vorlagen** &gt; **Visual C++** &gt; **universelle Windows-Apps**</span><span class="sxs-lookup"><span data-stu-id="79e61-126">In the left pane, select **Installed** &gt; **Templates** &gt; **Visual C++** &gt; **Windows Universal**</span></span>
+3.  <span data-ttu-id="79e61-127">Wählen Sie im mittleren Bereich **DirectX11-App (universelle Windows-App)** aus</span><span class="sxs-lookup"><span data-stu-id="79e61-127">In the center pane, select **DirectX 11 App (Universal Windows)**</span></span>
+4.  <span data-ttu-id="79e61-128">Geben Sie Ihrem Spieleprojekt einen Namen, und klicken Sie auf **OK**.</span><span class="sxs-lookup"><span data-stu-id="79e61-128">Give your game project a name, and click **OK**.</span></span>
 
-## <a name="1-pick-the-right-template"></a>1. Auswählen der richtigen Vorlage
+![Bildschirmfoto, das zeigt, wie die DirectX11-Vorlage zum Erstellen eines neuen Spieleprojekts ausgewählt wird](images/simple-dx-game-setup-new-project.png)
 
+<span data-ttu-id="79e61-130">Diese Vorlage enthält das grundlegende Framework für eine UWP-App, für die DirectX mit C++ verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="79e61-130">This template provides you with the basic framework for a UWP app using DirectX with C++.</span></span> <span data-ttu-id="79e61-131">Drücken Sie F5, um die App zu erstellen und auszuführen.</span><span class="sxs-lookup"><span data-stu-id="79e61-131">Click F5 to build and run it.</span></span> <span data-ttu-id="79e61-132">Ist das nicht ein hübscher blauer Bildschirm?</span><span class="sxs-lookup"><span data-stu-id="79e61-132">Check out that powder blue screen.</span></span> <span data-ttu-id="79e61-133">Mit der Vorlage werden mehrere Codedateien erstellt, die die grundlegenden Funktionen für eine UWP-App mit DirectX und C++ enthalten.</span><span class="sxs-lookup"><span data-stu-id="79e61-133">The template creates multiple code files containing the basic functionality for a UWP app using DirectX with C++.</span></span>
 
-Eine Visual Studio-Vorlage ist eine Sammlung von Einstellungen und Codedateien, die abhängig von der bevorzugten Sprache und Technologie auf eine bestimmte Art von App ausgerichtet sind. In Microsoft Visual Studio 2015 stehen einige Vorlagen zur Verfügung, die die Entwicklung des Spiels und der Grafik deutlich vereinfachen können. Ohne Verwendung einer Vorlage müssen Sie einen Großteil des grundlegenden Rendering- und Anzeigeframeworks für die Grafik selbst entwickeln, was insbesondere für neue Spieleentwickler recht mühsam sein kann.
+## <a name="review-the-apps-main-entry-point-by-understanding-iframeworkview"></a><span data-ttu-id="79e61-134">Überprüfen Sie den Haupteinstiegspunkt der App, indem Sie IFrameworkView verstehen</span><span class="sxs-lookup"><span data-stu-id="79e61-134">Review the app's main entry point by understanding IFrameworkView</span></span>
 
-Die richtige Vorlage für dieses Tutorial ist die Vorlage „DirectX 11-App (Universelle Windows-App)“. Klicken Sie in Visual Studio 2015 auf **Datei...** &gt; **Neues Projekt**, und gehen Sie anschließend wie folgt vor:
+<span data-ttu-id="79e61-135">Die **App**-Klasse beerbt die **IFrameworkView**-Klasse.</span><span class="sxs-lookup"><span data-stu-id="79e61-135">The **App** class inherits from the **IFrameworkView** class.</span></span>
 
-1.  Navigieren Sie unter **Vorlagen** zu **Visual C++** > **Windows** > **Universell**.
-2.  Wählen Sie im mittleren Bereich **DirectX 11-App (universelle Windows-App)**aus.
-3.  Geben Sie Ihrem Spieleprojekt einen Namen, und klicken Sie auf **OK**.
+### <a name="inspect-apph"></a><span data-ttu-id="79e61-136">Überprüfen Sie **App.h**.</span><span class="sxs-lookup"><span data-stu-id="79e61-136">Inspect **App.h**.</span></span>
 
-![Auswählen der Vorlage „Direct3D-Anwendung“](images/simple-dx-game-vs-new-proj.png)
-
-Diese Vorlage enthält das grundlegende Framework für eine UWP-App, für die DirectX mit C++ verwendet wird. Drücken Sie am besten gleich F5, um es zu erstellen und auszuführen. Ist das nicht ein hübscher blauer Bildschirm? Nehmen Sie sich einen Moment Zeit, und sehen Sie sich den von der Vorlage bereitgestellten Code an. Mit der Vorlage werden mehrere Codedateien erstellt, die die grundlegenden Funktionen für eine UWP-App mit DirectX und C++ enthalten. Auf die anderen Codedateien gehen wir in [Schritt 3](#3-review-the-included-libraries-and-headers) ein. Jetzt widmen wir uns erst einmal **App.h**.
+<span data-ttu-id="79e61-137">erstellen Sie die folgenden fünf Methoden in **App.h** &mdash; [**Initialize**](https://msdn.microsoft.com/library/windows/apps/hh700495), [**SetWindow**](https://msdn.microsoft.com/library/windows/apps/hh700509), [**Load**](https://msdn.microsoft.com/library/windows/apps/hh700501), [**Run**](https://msdn.microsoft.com/library/windows/apps/hh700505), and [**Uninitialize**](https://msdn.microsoft.com/library/windows/apps/hh700523) bei der Implementierung der [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700469)-Schnittstelle, die den Ansichtsanbieter definiert.</span><span class="sxs-lookup"><span data-stu-id="79e61-137">Let's quickly look at the 5 methods in **App.h** &mdash; [**Initialize**](https://msdn.microsoft.com/library/windows/apps/hh700495), [**SetWindow**](https://msdn.microsoft.com/library/windows/apps/hh700509), [**Load**](https://msdn.microsoft.com/library/windows/apps/hh700501), [**Run**](https://msdn.microsoft.com/library/windows/apps/hh700505), and [**Uninitialize**](https://msdn.microsoft.com/library/windows/apps/hh700523) when implementing the [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700469) interface that defines a view provider.</span></span> <span data-ttu-id="79e61-138">Diese Methoden werden vom App-Singleton ausgeführt, der beim Spielstart erstellt wird. Sie laden alle vom Spiel benötigten Ressourcen und stellen eine Verbindung zwischen den entsprechenden Ereignishandlern her.</span><span class="sxs-lookup"><span data-stu-id="79e61-138">These methods are run by the app singleton that is created when your game is launched, and load all your app's resources as well as connect the appropriate event handlers.</span></span>
 
 ```cpp
+    // Main entry point for our app. Connects the app with the Windows shell and handle application lifecycle events.
     ref class App sealed : public Windows::ApplicationModel::Core::IFrameworkView
     {
     public:
@@ -62,34 +74,16 @@ Diese Vorlage enthält das grundlegende Framework für eine UWP-App, für die Di
         virtual void Uninitialize();
 
     protected:
-        // Application lifecycle event handlers.
-        void OnActivated(Windows::ApplicationModel::Core::CoreApplicationView^ applicationView, Windows::ApplicationModel::Activation::IActivatedEventArgs^ args);
-        void OnSuspending(Platform::Object^ sender, Windows::ApplicationModel::SuspendingEventArgs^ args);
-        void OnResuming(Platform::Object^ sender, Platform::Object^ args);
-
-        // Window event handlers.
-        void OnWindowSizeChanged(Windows::UI::Core::CoreWindow^ sender, Windows::UI::Core::WindowSizeChangedEventArgs^ args);
-        void OnVisibilityChanged(Windows::UI::Core::CoreWindow^ sender, Windows::UI::Core::VisibilityChangedEventArgs^ args);
-        void OnWindowClosed(Windows::UI::Core::CoreWindow^ sender, Windows::UI::Core::CoreWindowEventArgs^ args);
-
-        // DisplayInformation event handlers.
-        void OnDpiChanged(Windows::Graphics::Display::DisplayInformation^ sender, Platform::Object^ args);
-        void OnOrientationChanged(Windows::Graphics::Display::DisplayInformation^ sender, Platform::Object^ args);
-        void OnDisplayContentsInvalidated(Windows::Graphics::Display::DisplayInformation^ sender, Platform::Object^ args);
-
-    private:
-        std::shared_ptr<DX::DeviceResources> m_deviceResources;
-        std::unique_ptr<MyAwesomeGameMain> m_main;
-        bool m_windowClosed;
-        bool m_windowVisible;
+        ...
     };
 ```
 
-Bei der Implementierung der [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700469)-Schnittstelle (zum Definieren eines Ansichtsanbieters) erstellen Sie die folgenden fünf Methoden: [**Initialize**](https://msdn.microsoft.com/library/windows/apps/hh700495), [**SetWindow**](https://msdn.microsoft.com/library/windows/apps/hh700509), [**Load**](https://msdn.microsoft.com/library/windows/apps/hh700501), [**Run**](https://msdn.microsoft.com/library/windows/apps/hh700505) und [**Uninitialize**](https://msdn.microsoft.com/library/windows/apps/hh700523). Diese Methoden werden vom App-Singleton ausgeführt, der beim Spielstart erstellt wird. Sie laden alle vom Spiel benötigten Ressourcen und stellen eine Verbindung zwischen den entsprechenden Ereignishandlern her.
+### <a name="inspect-appcpp"></a><span data-ttu-id="79e61-139">Überprüfen Sie **App.cpp**.</span><span class="sxs-lookup"><span data-stu-id="79e61-139">Inspect **App.cpp**</span></span>
 
-Die **main**-Methode befindet sich in der Quelldatei **App.cpp**. Sie sieht ungefähr so aus:
+<span data-ttu-id="79e61-140">Die **main**-Methode befindet sich in der Quelldatei **App.cpp**:</span><span class="sxs-lookup"><span data-stu-id="79e61-140">Here's the **main** method in the **App.cpp** source file:</span></span>
 
 ```cpp
+//The main function is only used to initialize our IFrameworkView class.
 [Platform::MTAThread]
 int main(Platform::Array<Platform::String^>^)
 {
@@ -99,9 +93,12 @@ int main(Platform::Array<Platform::String^>^)
 }
 ```
 
-Im vorliegenden Zustand erstellt sie eine Instanz des Direct3D-Ansichtsanbieters aus der Ansichtsanbieterfactory (**Direct3DApplicationSource**, definiert in **App.h**) und übergibt sie zur Ausführung an das App-Singleton ([**CoreApplication::Run**](https://msdn.microsoft.com/library/windows/apps/hh700469)). Das bedeutet, dass sich der Ausgangspunkt für Ihr Spiel im Implementierungscode der [**IFrameworkView::Run**](https://msdn.microsoft.com/library/windows/apps/hh700505)-Methode (in diesem Fall: **App::Run**) befindet. Hier ist der Code:
+<span data-ttu-id="79e61-141">Die Methode erstellt eine Instanz des Direct3D-Ansichtsanbieters aus der Ansichtsanbieterfactory (**Direct3DApplicationSource**, definiert in **App.h**) und übergibt sie zur Ausführung an das App-Singleton ([**CoreApplication::Run**](https://msdn.microsoft.com/library/windows/apps/hh700469)).</span><span class="sxs-lookup"><span data-stu-id="79e61-141">In this method, it creates an instance of the Direct3D view provider from the view provider factory (**Direct3DApplicationSource**, defined in **App.h**), and passes it to the app singleton by calling ([**CoreApplication::Run**](https://msdn.microsoft.com/library/windows/apps/hh700469)).</span></span> <span data-ttu-id="79e61-142">Das bedeutet, dass sich der Ausgangspunkt für Ihr Spiel im Implementierungscode der [**IFrameworkView::Run**](https://msdn.microsoft.com/library/windows/apps/hh700505)-Methode (in diesem Fall: **App::Run**) befindet.</span><span class="sxs-lookup"><span data-stu-id="79e61-142">This means that the starting point for your game lives in the body of the implementation of the [**IFrameworkView::Run**](https://msdn.microsoft.com/library/windows/apps/hh700505) method, and in this case, it's the **App::Run**.</span></span> 
+
+<span data-ttu-id="79e61-143">Suchen Sie die **App::Run**-Methode in **App.cpp**.</span><span class="sxs-lookup"><span data-stu-id="79e61-143">Scroll to find the **App::Run** method in **App.cpp**.</span></span> <span data-ttu-id="79e61-144">Hier ist der Code:</span><span class="sxs-lookup"><span data-stu-id="79e61-144">Here's the code:</span></span>
 
 ```cpp
+//This method is called after the window becomes active.
 void App::Run()
 {
     while (!m_windowClosed)
@@ -125,51 +122,50 @@ void App::Run()
 }
 ```
 
-Wenn das Fenster Ihres Spiels nicht geschlossen wird, werden hiermit alle Ereignisse gesendet, der Timer wird aktualisiert, und die Ergebnisse der Grafikpipeline werden gerendert und angezeigt. Auf diesen Punkt gehen wir später in [Definieren des UWP-Frameworks für das Spiel](tutorial--building-the-games-metro-style-app-framework.md) und in [Zusammensetzen der Renderingpipeline](tutorial--assembling-the-rendering-pipeline.md)näher ein. Damit dürften Sie ein gewisses Gespür für die grundlegende Codestruktur eines UWP-DirectX-Spiels entwickelt haben.
+<span data-ttu-id="79e61-145">So funktioniert die Methode: Wenn das Fenster Ihres Spiels nicht geschlossen wird, werden hiermit alle Ereignisse gesendet, der Timer wird aktualisiert, und die Ergebnisse der Grafikpipeline werden gerendert und angezeigt.</span><span class="sxs-lookup"><span data-stu-id="79e61-145">What this method does: If the window for your game isn't closed, it dispatches all events, updates the timer, then renders and presents the results of your graphics pipeline.</span></span> <span data-ttu-id="79e61-146">Wir befassen uns ausführlicher damit unter [Definieren der UWP-App-Framework](tutorial--building-the-games-uwp-app-framework.md), [Rendering-Framework I: Einführung in das Rendering](tutorial--assembling-the-rendering-pipeline.md), und [Rendering-Framework II: Spiel-Rendering](tutorial-game-rendering.md).</span><span class="sxs-lookup"><span data-stu-id="79e61-146">We'll talk about this in greater detail in [Define the UWP app framework](tutorial--building-the-games-uwp-app-framework.md), [Rendering framework I: Intro to rendering](tutorial--assembling-the-rendering-pipeline.md), and  [Rendering framework II: Game rendering](tutorial-game-rendering.md).</span></span> <span data-ttu-id="79e61-147">Damit dürften Sie ein gewisses Gespür für die grundlegende Codestruktur eines UWP-DirectX-Spiels entwickelt haben.</span><span class="sxs-lookup"><span data-stu-id="79e61-147">At this point, you should have a sense of the basic code structure of a UWP DirectX game.</span></span>
 
-## <a name="2-review-and-update-the-packageappxmanifest-file"></a>2. Prüfen und Aktualisieren der Datei „package.appxmanifest“
-
-
-Die Vorlage hat aber noch mehr zu bieten als nur Codedateien. Die Datei **package.appxmanifest** enthält Metadaten für Ihr Projekt. Diese werden zum Packen und Starten des Spiels sowie zum Übermitteln des Spiels an den Windows Store verwendet. Darüber hinaus enthält sie wichtige Infos, mit deren Hilfe das System des Spielers den Zugriff auf die zum Ausführen des Spiels benötigten Systemressourcen ermöglicht.
-
-Starten Sie den Manifest-Designer****. Doppelklicken Sie hierzu im Projektmappen-Explorer**** auf die Datei **package.appxmanifest**. Sie sehen die folgende Ansicht:
-
-![Manifest-Editor „package.appx“](images/simple-dx-game-vs-app-manifest.png)
-
-Weitere Informationen zur Datei **package.appxmanifest** und zum Packen finden Sie unter [Manifest-Designer](https://msdn.microsoft.com/library/windows/apps/br230259.aspx). Nun widmen wir uns aber erst einmal der Registerkarte **Funktionen** und den dort zur Verfügung stehenden Optionen.
-
-![Standardfunktionen einer Direct3D-App](images/simple-dx-game-vs-capabilities.png)
-
-Wenn Sie die von Ihrem Spiel genutzten Funktionen (etwa den Zugriff auf das Internet**** für eine globale Bestenliste) nicht auswählen, können Sie nicht auf die entsprechenden Ressourcen oder Features zugreifen. Achten Sie beim Erstellen eines neuen Spiels darauf, die Funktionen auszuwählen, die Ihr Spiel für die Ausführung benötigt.
-
-Kommen wir nun zu den restlichen Dateien der Vorlage **DirectX 11-App (Universelle Windows-App)**.
-
-## <a name="3-review-the-included-libraries-and-headers"></a>3. Anzeigen der enthaltenen Bibliotheken und Header
+## <a name="review-and-update-the-packageappxmanifest-file"></a><span data-ttu-id="79e61-148">Prüfen und Aktualisieren der Datei „package.appxmanifest“</span><span class="sxs-lookup"><span data-stu-id="79e61-148">Review and update the package.appxmanifest file</span></span>
 
 
-Ein paar Dateien haben wir uns für den Schluss aufgehoben. Diese Dateien bieten zusätzliche Tools und Unterstützung für die Entwicklung von Direct3D-Spielen.
+<span data-ttu-id="79e61-149">Die Vorlage hat aber noch mehr zu bieten als nur Codedateien.</span><span class="sxs-lookup"><span data-stu-id="79e61-149">The code files aren't all there is to the template.</span></span> <span data-ttu-id="79e61-150">Die Datei **package.appxmanifest** enthält Metadaten für Ihr Projekt. Diese werden zum Packen und Starten des Spiels sowie zum Übermitteln des Spiels an den Microsoft Store verwendet.</span><span class="sxs-lookup"><span data-stu-id="79e61-150">The **Package.appxmanifest** file contains metadata about your project that are used for packaging and launching your game and for submission to the Microsoft Store.</span></span> <span data-ttu-id="79e61-151">Darüber hinaus enthält sie wichtige Infos, mit deren Hilfe das System des Spielers den Zugriff auf die zum Ausführen des Spiels benötigten Systemressourcen ermöglicht.</span><span class="sxs-lookup"><span data-stu-id="79e61-151">It also contains important info the player's system uses to provide access to the system resources the game needs to run.</span></span>
 
-| Quelldatei der Vorlage         | Beschreibung                                                                                                                                                                                                            |
-|------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| StepTimer.h                  | Definiert einen Timer mit hoher Auflösung, der sich besonders für Spiele oder Apps mit interaktivem Rendering eignet.                                                                                                                                       |
-| Sample3DSceneRenderer.h/.cpp | Definiert eine einfache Renderimplementierung, die eine Direct3D-Swapchain und einen Grafikadapter mit Ihrem UWP-DirectX-Spiel verbindet.                                                                                            |
-| DirectXHelper.h              | Implementiert eine einzelne Methode (**DX::ThrowIfFailed**). Mit dieser Methode werden die von DirectX-APIs zurückgegebenen HRESULT-Fehlerwerte in Ausnahmen der Windows-Runtime konvertiert. Verwenden Sie diese Methode, um einen Haltepunkt zum Debuggen von DirectX-Fehlern zu setzen. |
-| pch.h/.cpp                   | Enthält alles, was das Windows-System für die von einer Direct3D-App genutzten APIs (einschließlich DirectX 11-APIs) enthält.                                                                                                           |
-| SamplePixelShader.hlsl       | Enthält den Code der High-Level-Shader-Language (HLSL) für einen sehr einfachen Pixel-Shader.                                                                                                                                     |
-| SampleVertexShader.hlsl      | Enthält den Code der High-Level Shader Language (HLSL) für einen sehr einfachen Vertex-Shader.                                                                                                                                    |
+<span data-ttu-id="79e61-152">Starten Sie den **Manifest-Designer**. Doppelklicken Sie hierzu im **Projektmappen-Explorer** auf die Datei **package.appxmanifest**.</span><span class="sxs-lookup"><span data-stu-id="79e61-152">Launch the **manifest designer** by double-clicking the **Package.appxmanifest** file in **Solution Explorer**.</span></span>
 
- 
+![Screenshot des Manifest-Editor „package.appx“](images/simple-dx-game-setup-app-manifest.png)
 
-### <a name="next-steps"></a>Nächste Schritte
+<span data-ttu-id="79e61-154">Weitere Informationen zur Datei **package.appxmanifest** und zum Packen finden Sie unter [Manifest-Designer](https://msdn.microsoft.com/library/windows/apps/br230259.aspx).</span><span class="sxs-lookup"><span data-stu-id="79e61-154">For more info about the **package.appxmanifest** file and packaging, see [Manifest Designer](https://msdn.microsoft.com/library/windows/apps/br230259.aspx).</span></span> <span data-ttu-id="79e61-155">Nun widmen wir uns aber erst einmal der Registerkarte **Funktionen** und den dort zur Verfügung stehenden Optionen.</span><span class="sxs-lookup"><span data-stu-id="79e61-155">For now, take a look at the **Capabilities** tab and look at the options provided.</span></span>
 
-Sie können nun ein Spieleprojekt unter Verwendung von UWP mit DirectX erstellen und kennen die Komponenten und Dateien der Vorlage "DirectX 11-App (Universelle Windows-App)".
+![Screenshot der Standardfunktionen einer Direct3D-App](images/simple-dx-game-setup-capabilities.png)
 
-Im nächsten Lernprogramm, [Definieren des UWP-App-Frameworks für das Spiel](tutorial--building-the-games-metro-style-app-framework.md), untersuchen wir anhand eines fertigen Spiels die Verwendung und Erweiterung vieler der Konzepte und Komponenten aus dieser Vorlage.
+<span data-ttu-id="79e61-157">Wenn Sie die von Ihrem Spiel genutzten Funktionen (etwa den Zugriff auf das Internet**** für eine globale Bestenliste) nicht auswählen, können Sie nicht auf die entsprechenden Ressourcen oder Features zugreifen.</span><span class="sxs-lookup"><span data-stu-id="79e61-157">If you don't select the capabilities that your game uses, such as access to the **Internet** for global high score board, you won't be able to access the corresponding resources or features.</span></span> <span data-ttu-id="79e61-158">Achten Sie beim Erstellen eines neuen Spiels darauf, die Funktionen auszuwählen, die Ihr Spiel für die Ausführung benötigt.</span><span class="sxs-lookup"><span data-stu-id="79e61-158">When you create a new game, make sure that you select the capabilities that your game needs to run!</span></span>
 
- 
+<span data-ttu-id="79e61-159">Kommen wir nun zu den restlichen Dateien der Vorlage **DirectX 11-App (Universelle Windows-App)**.</span><span class="sxs-lookup"><span data-stu-id="79e61-159">Now, let's look at the rest of the files that come with the **DirectX 11 App (Universal Windows)** template.</span></span>
+
+## <a name="review-the-included-libraries-and-headers"></a><span data-ttu-id="79e61-160">Anzeigen der enthaltenen Bibliotheken und Header</span><span class="sxs-lookup"><span data-stu-id="79e61-160">Review the included libraries and headers</span></span>
+
+<span data-ttu-id="79e61-161">Ein paar Dateien haben wir uns für den Schluss aufgehoben.</span><span class="sxs-lookup"><span data-stu-id="79e61-161">There are a few files we haven't looked at yet.</span></span> <span data-ttu-id="79e61-162">Diese Dateien bieten zusätzliche Tools und Unterstützung für die Entwicklung von Direct3D-Spielen.</span><span class="sxs-lookup"><span data-stu-id="79e61-162">These files provide additional tools and support common to Direct3D game development scenarios.</span></span> <span data-ttu-id="79e61-163">Die vollständige Liste der Dateien, die im grundlegenden DirectX-Spieleprojekts enthalten ist, finden Sie unter [DirectX-Spielprojektvorlagen](user-interface.md#template-structure).</span><span class="sxs-lookup"><span data-stu-id="79e61-163">For the full list of files that comes with the basic DirectX game project, see [DirectX game project templates](user-interface.md#template-structure).</span></span>
+
+| <span data-ttu-id="79e61-164">Quelldatei der Vorlage</span><span class="sxs-lookup"><span data-stu-id="79e61-164">Template Source File</span></span>         | <span data-ttu-id="79e61-165">Dateiordner</span><span class="sxs-lookup"><span data-stu-id="79e61-165">File folder</span></span>            | <span data-ttu-id="79e61-166">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="79e61-166">Description</span></span> |
+|------------------------------|------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <span data-ttu-id="79e61-167">DeviceResources.h/.cpp</span><span class="sxs-lookup"><span data-stu-id="79e61-167">DeviceResources.h/.cpp</span></span>       | <span data-ttu-id="79e61-168">Allgemein</span><span class="sxs-lookup"><span data-stu-id="79e61-168">Common</span></span>                 | <span data-ttu-id="79e61-169">Definiert ein Klassenobjekt, das [Geräteressourcen](tutorial--assembling-the-rendering-pipeline.md#resource) von DirectX steuert.</span><span class="sxs-lookup"><span data-stu-id="79e61-169">Defines a class object that controls all DirectX [device resources](tutorial--assembling-the-rendering-pipeline.md#resource).</span></span> <span data-ttu-id="79e61-170">Darüber hinaus enthält es eine Schnittstelle für die Anwendung, die DeviceResources besitzt, um benachrichtigt zu werden, wenn das Gerät verloren geht oder erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="79e61-170">It also includes an interface for your application that owns DeviceResources to be notified  when the device is lost or created.</span></span>                                                |
+| <span data-ttu-id="79e61-171">DirectXHelper.h</span><span class="sxs-lookup"><span data-stu-id="79e61-171">DirectXHelper.h</span></span>              | <span data-ttu-id="79e61-172">Allgemein</span><span class="sxs-lookup"><span data-stu-id="79e61-172">Common</span></span>                 | <span data-ttu-id="79e61-173">Implementiert Methoden wie z.B. **DX::ThrowIfFailed**, **ReadDataAsync**, und ** ConvertDipsToPixels.</span><span class="sxs-lookup"><span data-stu-id="79e61-173">Implements methods including **DX::ThrowIfFailed**, **ReadDataAsync**, and **ConvertDipsToPixels.</span></span> <span data-ttu-id="79e61-174">**DX::ThrowIfFailed**konvertiert die von DirectX Win32-APIs zurückgegebenen HRESULT-Fehlerwerte in Ausnahmen der Windows-Runtime konvertiert.</span><span class="sxs-lookup"><span data-stu-id="79e61-174">**DX::ThrowIfFailed** converts the error HRESULT values returned by DirectX Win32 APIs into Windows Runtime exceptions.</span></span> <span data-ttu-id="79e61-175">Verwenden Sie diese Methode, um einen Haltepunkt zum Debuggen von DirectX-Fehlern zu setzen.</span><span class="sxs-lookup"><span data-stu-id="79e61-175">Use this method to put a break point for debugging DirectX errors.</span></span> <span data-ttu-id="79e61-176">Weitere Informationen finden Sie unter [ThrowIfFailed](https://github.com/Microsoft/DirectXTK/wiki/ThrowIfFailed).</span><span class="sxs-lookup"><span data-stu-id="79e61-176">For more information, see [ThrowIfFailed](https://github.com/Microsoft/DirectXTK/wiki/ThrowIfFailed).</span></span> <span data-ttu-id="79e61-177">**ReadDataAsync** liest asynchron aus einer binären Datei.</span><span class="sxs-lookup"><span data-stu-id="79e61-177">**ReadDataAsync** reads from a binary file asynchronously.</span></span> <span data-ttu-id="79e61-178">**ConvertDipsToPixels** konvertiert eine Länge in geräteunabhängige Pixel (DIPs) auf eine Länge in physische Pixel.</span><span class="sxs-lookup"><span data-stu-id="79e61-178">**ConvertDipsToPixels** converts a length in device-independent pixels (DIPs) to a length in physical pixels.</span></span> |
+| <span data-ttu-id="79e61-179">StepTimer.h</span><span class="sxs-lookup"><span data-stu-id="79e61-179">StepTimer.h</span></span>                  | <span data-ttu-id="79e61-180">Allgemein</span><span class="sxs-lookup"><span data-stu-id="79e61-180">Common</span></span>                 | <span data-ttu-id="79e61-181">Definiert einen Timer mit hoher Auflösung, der sich besonders für Spiele oder Apps mit interaktivem Rendering eignet.</span><span class="sxs-lookup"><span data-stu-id="79e61-181">Defines a high-resolution timer useful for gaming or interactive rendering apps.</span></span>   |
+| <span data-ttu-id="79e61-182">Sample3DSceneRenderer.h/.cpp</span><span class="sxs-lookup"><span data-stu-id="79e61-182">Sample3DSceneRenderer.h/.cpp</span></span> | <span data-ttu-id="79e61-183">Inhalt</span><span class="sxs-lookup"><span data-stu-id="79e61-183">Content</span></span>                | <span data-ttu-id="79e61-184">Definiert ein Klassenobjekt, um eine grundlegende Renderingpipeline zu instanziieren.</span><span class="sxs-lookup"><span data-stu-id="79e61-184">Defines a class object to instantiate a basic rendering pipeline.</span></span> <span data-ttu-id="79e61-185">Erstellt eine einfache Renderimplementierung, die eine Direct3D-Swapchain und einen Grafikadapter mit Ihrem UWP-DirectX-Spiel verbindet.</span><span class="sxs-lookup"><span data-stu-id="79e61-185">It creates a basic renderer implementation that connects a Direct3D swap chain and graphics adapter to your UWP using DirectX.</span></span>   |
+| <span data-ttu-id="79e61-186">SampleFPSTextRenderer.h/.cpp</span><span class="sxs-lookup"><span data-stu-id="79e61-186">SampleFPSTextRenderer.h/.cpp</span></span> | <span data-ttu-id="79e61-187">Inhalt</span><span class="sxs-lookup"><span data-stu-id="79e61-187">Content</span></span>                | <span data-ttu-id="79e61-188">Definiert ein Klassenobjekt, das den aktuellen FPS-Wert mit Direct2D und DirectWrite rechts unten auf dem Bildschirm rendert.</span><span class="sxs-lookup"><span data-stu-id="79e61-188">Defines a class object to render the current frames per second (FPS) value in the bottom right corner of the screen using Direct2D and DirectWrite.</span></span>  |
+| <span data-ttu-id="79e61-189">SamplePixelShader.hlsl</span><span class="sxs-lookup"><span data-stu-id="79e61-189">SamplePixelShader.hlsl</span></span>       | <span data-ttu-id="79e61-190">Inhalt</span><span class="sxs-lookup"><span data-stu-id="79e61-190">Content</span></span>                | <span data-ttu-id="79e61-191">Enthält den Code der High-Level-Shader-Language (HLSL) für einen sehr einfachen Pixel-Shader.</span><span class="sxs-lookup"><span data-stu-id="79e61-191">Contains the high-level shader language (HLSL) code for a very basic pixel shader.</span></span>                                            |
+| <span data-ttu-id="79e61-192">SampleVertexShader.hlsl</span><span class="sxs-lookup"><span data-stu-id="79e61-192">SampleVertexShader.hlsl</span></span>      | <span data-ttu-id="79e61-193">Inhalt</span><span class="sxs-lookup"><span data-stu-id="79e61-193">Content</span></span>                | <span data-ttu-id="79e61-194">Enthält den Code der High-Level Shader Language (HLSL) für einen sehr einfachen Vertex-Shader.</span><span class="sxs-lookup"><span data-stu-id="79e61-194">Contains the high-level shader language (HLSL) code for a very basic vertex shader.</span></span>                                           |
+| <span data-ttu-id="79e61-195">ShaderStructures.h</span><span class="sxs-lookup"><span data-stu-id="79e61-195">ShaderStructures.h</span></span>           | <span data-ttu-id="79e61-196">Inhalt</span><span class="sxs-lookup"><span data-stu-id="79e61-196">Content</span></span>                | <span data-ttu-id="79e61-197">Enthält die Shader-Strukturen, die zum Senden von MVP-Matrizen und Vertex-Daten an den Vertexshader verwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="79e61-197">Contains shader structures that can be used to send MVP matrices and per-vertex data to the vertex shader.</span></span>  |
+| <span data-ttu-id="79e61-198">pch.h/.cpp</span><span class="sxs-lookup"><span data-stu-id="79e61-198">pch.h/.cpp</span></span>                   | <span data-ttu-id="79e61-199">Main</span><span class="sxs-lookup"><span data-stu-id="79e61-199">Main</span></span>                   | <span data-ttu-id="79e61-200">Enthält alles, was das Windows-System für die von einer Direct3D-App genutzten APIs (einschließlich DirectX11-APIs) enthält.</span><span class="sxs-lookup"><span data-stu-id="79e61-200">Contains all the Windows system includes for the APIs used by a Direct3D app, including the DirectX 11 APIs.</span></span>| 
+
+### <a name="next-steps"></a><span data-ttu-id="79e61-201">Nächste Schritte</span><span class="sxs-lookup"><span data-stu-id="79e61-201">Next steps</span></span>
+
+<span data-ttu-id="79e61-202">Hier haben Sie gelernt, wie Sie ein UWP-DirectX-Spieleprojekts mithilfe der **DirectX11-App (Universal Windows)**-Vorlage erstellen und haben einige Komponenten und Dateien eingeführt, die von diesem Projekt bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="79e61-202">At this point, you've learnt how to create a UWP DirectX game project using the **DirectX 11 App (Universal Windows)** template and have been introduced to a few components and files provided by this project.</span></span>
+
+<span data-ttu-id="79e61-203">Der nächste Abschnittist [Definieren des UWP-App-Frameworks für das Spiel](tutorial--building-the-games-uwp-app-framework.md).</span><span class="sxs-lookup"><span data-stu-id="79e61-203">The next section is [Defining the game's UWP framework](tutorial--building-the-games-uwp-app-framework.md).</span></span> <span data-ttu-id="79e61-204">Wir untersuchen, wie dieses Spiel viele der Konzepte und Komponenten verwendet und erweitert, die die Vorlage bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="79e61-204">We'll examine how this game uses and extends many of the concepts and components that the template provides.</span></span>
 
  
 
+ 
 
 
 

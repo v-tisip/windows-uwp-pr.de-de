@@ -1,220 +1,313 @@
 ---
 author: mijacobs
-description: "Typografie muss übersichtlich sein, da sie zur visuellen Darstellung von Sprache dient. Ihr Stil darf diesem Ziel nie im Wege stehen. Typografie spielt jedoch auch als Layoutkomponente eine wichtige Rolle und wirkt sich maßgeblich auf die Dichte und Komplexität des Designs und damit auf die Benutzerfreundlichkeit des Designs aus."
-title: Typografie
-ms.assetid: ca35f78a-e4da-423d-9f5b-75896e0b8f82
-template: detail.hbs
+description: Erfahren Sie, wie Sie die Typografie in Ihrer App verwenden, um Benutzern Inhalte leicht verständlich zu machen.
+title: Typografie in UWP-Apps
 ms.author: mijacobs
-ms.date: 05/19/2017
+ms.date: 04/06/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: bec416694e347a1432892f9dc591afdfe8548e61
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
+ms.openlocfilehash: 3dd5e6f3dbddca2f6a944ee18e32463afe029f89
+ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/30/2018
+ms.locfileid: "1816775"
 ---
-# <a name="typography"></a><span data-ttu-id="2df67-106">Typografie</span><span class="sxs-lookup"><span data-stu-id="2df67-106">Typography</span></span>
+# <a name="typography"></a><span data-ttu-id="a8813-104">Typografie</span><span class="sxs-lookup"><span data-stu-id="a8813-104">Typography</span></span>
 
-<span data-ttu-id="2df67-107">Typografie muss übersichtlich sein, da sie zur visuellen Darstellung von Sprache dient.</span><span class="sxs-lookup"><span data-stu-id="2df67-107">As the visual representation of language, typography’s main task is to be clear.</span></span> <span data-ttu-id="2df67-108">Ihr Stil darf diesem Ziel nie im Wege stehen.</span><span class="sxs-lookup"><span data-stu-id="2df67-108">Its style should never get in the way of that goal.</span></span> <span data-ttu-id="2df67-109">Typografie spielt jedoch auch als Layoutkomponente eine wichtige Rolle und wirkt sich maßgeblich auf die Dichte und Komplexität des Designs und damit auf die Benutzerfreundlichkeit des Designs aus.</span><span class="sxs-lookup"><span data-stu-id="2df67-109">But typography also has an important role as a layout component—with a powerful effect on the density and complexity of the design—and on the user’s experience of that design.</span></span>
+![Headerbild für die Typografie](images/type/header-typography.svg)
 
-## <a name="typeface"></a><span data-ttu-id="2df67-110">Schriftart</span><span class="sxs-lookup"><span data-stu-id="2df67-110">Typeface</span></span>
+<span data-ttu-id="a8813-106">Typografie muss übersichtlich sein, da sie zur visuellen Darstellung von Sprache dient, um Informationen zu kommunizieren.</span><span class="sxs-lookup"><span data-stu-id="a8813-106">As the visual representation of language, typography’s main task is to communicate information.</span></span> <span data-ttu-id="a8813-107">Ihr Stil darf diesem Ziel nie im Wege stehen.</span><span class="sxs-lookup"><span data-stu-id="a8813-107">Its style should never get in the way of that goal.</span></span> <span data-ttu-id="a8813-108">In diesem Artikel erläutern wir, wie Sie die Typografie in Ihre UWP-App formatieren, damit Benutzer Inhalte schnell und effizient verstehen.</span><span class="sxs-lookup"><span data-stu-id="a8813-108">In this article, we'll discuss how to style typography in your UWP app to help users understand content easily and efficiently.</span></span>
 
-<span data-ttu-id="2df67-111">Wir haben uns dafür entschieden, für alle digitalen Microsoft-Designs „SegoeUI“ zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="2df67-111">We’ve selected Segoe UI for use on all Microsoft digital designs.</span></span> <span data-ttu-id="2df67-112">„SegoeUI“ bietet eine breite Palette von Zeichen und zeichnet sich durch optimale Lesbarkeit bei unterschiedlichsten Größen und Pixeldichten aus.</span><span class="sxs-lookup"><span data-stu-id="2df67-112">Segoe UI provides a wide range of characters and is designed to maintain optimal legibility across sizes and pixel densities.</span></span> <span data-ttu-id="2df67-113">Die klare, ansprechende und offene Ästhetik passt perfekt zum Inhalt des Systems.</span><span class="sxs-lookup"><span data-stu-id="2df67-113">It offers a clean, light, and open aesthetic that complements the content of the system.</span></span>
+## <a name="font"></a><span data-ttu-id="a8813-109">Font</span><span class="sxs-lookup"><span data-stu-id="a8813-109">Font</span></span>
 
-![Beispieltext für die Schriftart „SegoeUI“](images/segoe-sample.png)
+<span data-ttu-id="a8813-110">Verwenden Sie eine Schriftart in der gesamten Benutzeroberfläche Ihrer App. Es wird empfohlen, wenn möglich, die Standardschriftart für UWP-Apps **Segoe UI** zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="a8813-110">You should use one font throughout your app's UI, and we recommend sticking with the default font for UWP apps, **Segoe UI**.</span></span> <span data-ttu-id="a8813-111">Sie wurde entwickelt, um eine optimale Lesbarkeit für Größe und Pixeldichte zu wahren und bietet eine klare, ansprechende und offene Ästhetik, die den Inhalt des Systems ergänzt.</span><span class="sxs-lookup"><span data-stu-id="a8813-111">It's designed to maintain optimal legibility across sizes and pixel densities and offers a clean, light, and open aesthetic that complements the content of the system.</span></span>
 
-## <a name="weights"></a><span data-ttu-id="2df67-115">Breiten</span><span class="sxs-lookup"><span data-stu-id="2df67-115">Weights</span></span>
+![Beispieltext für die Schriftart „SegoeUI“](images/type/segoe-sample.svg)
 
-<span data-ttu-id="2df67-116">Bei der Typografie legen wir unter anderem Wert auf Schlichtheit und Effizienz.</span><span class="sxs-lookup"><span data-stu-id="2df67-116">We approach typography with an eye to simplicity and efficiency.</span></span> <span data-ttu-id="2df67-117">Wir verwenden eine einzelne Schriftart, eine geringe Anzahl von Schriftbreiten und -graden sowie eine klare Hierarchie.</span><span class="sxs-lookup"><span data-stu-id="2df67-117">We choose to use one typeface, a minimum of weights and sizes, and a clear hierarchy.</span></span> <span data-ttu-id="2df67-118">Positionierung und Ausrichtung basieren auf dem Standardstil für die jeweilige Sprache.</span><span class="sxs-lookup"><span data-stu-id="2df67-118">Positioning and alignment follow the default style for the given language.</span></span> <span data-ttu-id="2df67-119">Im Deutschen wird Text von links nach rechts und von oben nach unten verwendet.</span><span class="sxs-lookup"><span data-stu-id="2df67-119">In English the sequence runs left to right, top to bottom.</span></span> <span data-ttu-id="2df67-120">Beziehungen zwischen Text und Bildern sind klar und einfach.</span><span class="sxs-lookup"><span data-stu-id="2df67-120">Relationships between text and images are clear and straightforward.</span></span>
+<span data-ttu-id="a8813-113">Weitere Informationen zum Anzeigen anderer Sprachen als Englisch oder um eine andere Schriftart für Ihre App auszuwählen finden Sie unter [Sprachen](#Languages) und [Schriftarten](#Fonts) für unsere empfohlenen Schriftarten für UWP-Apps.</span><span class="sxs-lookup"><span data-stu-id="a8813-113">To display non-English languages or to select a different font for your app, please see [Languages](#Languages) and [Fonts](#Fonts) for our recommended fonts for UWP apps.</span></span>
 
-![Unterstützte Schriftbreiten:](images/weights.png)
+<span data-ttu-id="a8813-114">:::row::: :::column::: ![Ja](images/do.svg) Wählen Sie eine Schriftart für Ihre Benutzeroberfläche aus.</span><span class="sxs-lookup"><span data-stu-id="a8813-114">:::row::: :::column::: ![do](images/do.svg) Pick one font for your UI.</span></span>
+<span data-ttu-id="a8813-115">:::column-end::: :::column::: ![Nein](images/dont.svg) Mischen Sie nicht mehrere Schriftarten.</span><span class="sxs-lookup"><span data-stu-id="a8813-115">:::column-end::: :::column::: ![don't](images/dont.svg) Don't mix multiple fonts.</span></span>
+<span data-ttu-id="a8813-116">:::column-end::: :::row-end:::</span><span class="sxs-lookup"><span data-stu-id="a8813-116">:::column-end::: :::row-end:::</span></span>
 
-## <a name="line-spacing"></a><span data-ttu-id="2df67-123">Zeilenabstand</span><span class="sxs-lookup"><span data-stu-id="2df67-123">Line spacing</span></span>
+## <a name="size-and-scaling"></a><span data-ttu-id="a8813-117">Größe und Skalierung</span><span class="sxs-lookup"><span data-stu-id="a8813-117">Size and scaling</span></span>
 
-![Beispiel für einen Zeilenabstand von 125Prozent](images/line-spacing.png)
+<span data-ttu-id="a8813-118">Schriftgrade in UWP-Apps werden automatisch auf allen Geräten skaliert.</span><span class="sxs-lookup"><span data-stu-id="a8813-118">Font sizes in UWP apps automatically scale on all devices.</span></span> <span data-ttu-id="a8813-119">Mit dem Skalierungsalgorithmus wird sichergestellt, dass der Schriftgrad 24 Pixel auf einem 3 Meter entfernten Surface Hub genauso lesbar ist wie der Schriftgrad 24 Pixel auf einem 5-Zoll-Smartphone, das nur einige Zentimeter entfernt ist.</span><span class="sxs-lookup"><span data-stu-id="a8813-119">The scaling algorithm ensures that a 24 px font on Surface Hub 10 feet away is just as legible as a 24 px font on 5" phone that's a few inches away.</span></span>
 
-<span data-ttu-id="2df67-125">Der Zeilenabstand muss mit 125Prozent des Schriftgrads berechnet und bei Bedarf auf das nächste Vielfache von Vier gerundet werden.</span><span class="sxs-lookup"><span data-stu-id="2df67-125">Line spacing should be calculated at 125% of the font size, rounding to the closest multiple of four when necessary.</span></span> <span data-ttu-id="2df67-126">Bei SegoeUI mit 15px wären 125Prozent beispielsweise 18,75px.</span><span class="sxs-lookup"><span data-stu-id="2df67-126">For example with 15px Segoe UI, 125% of 15px is 18.75px.</span></span> <span data-ttu-id="2df67-127">Wir empfehlen, den Wert aufzurunden und den Zeilenabstand auf 20px festzulegen, um dem 4px-Raster zu entsprechen.</span><span class="sxs-lookup"><span data-stu-id="2df67-127">We recommend rounding up and setting line height to 20px to stay on the 4px grid.</span></span> <span data-ttu-id="2df67-128">Dadurch wird eine gute Lesbarkeit gewährleistet, und es steht ausreichend Platz für diakritische Zeichen zur Verfügung.</span><span class="sxs-lookup"><span data-stu-id="2df67-128">This ensures a good reading experience and adequate space for diacritical marks.</span></span> <span data-ttu-id="2df67-129">Spezifische Beispiele finden Sie weiter unten im Abschnitt „Typhierarchie“.</span><span class="sxs-lookup"><span data-stu-id="2df67-129">See the Type ramp section below for specific examples.</span></span>
+![Sichtabstände für verschiedene Geräte](images/type/scaling-chart.svg)
 
-<span data-ttu-id="2df67-130">Wird sich größere Schrift über kleinerer Schrift befindet, muss der Abstand zwischen der letzten Grundlinie der größeren Schrift und der ersten Grundlinie der kleineren Schrift dem Zeilenabstand der größeren Schrift entsprechen.</span><span class="sxs-lookup"><span data-stu-id="2df67-130">When stacking larger type on top of smaller type, the distance from the last baseline of the larger type to the first baseline of the smaller type should be equal to the larger type’s line height.</span></span>
+<span data-ttu-id="a8813-121">Aufgrund der Funktionsweise der Skalierung, entwerfen Sie in effektiven Pixeln, nicht in den tatsächlichen physischen Pixeln, und Sie müssen den Schriftgrad für unterschiedliche Bildschirmgrößen und Auflösungen nicht ändern.</span><span class="sxs-lookup"><span data-stu-id="a8813-121">Because of how the scaling system works, you're designing in effective pixels, not actual physical pixels, and you shouldn't have to alter font sizes for different screens sizes or resolutions.</span></span>
 
-![Große Schrift über kleinerer Schrift](images/line-height-stacking.png)
+<span data-ttu-id="a8813-122">::: Zeile:::::: Spalte::: ![Ja](images/do.svg) Folgen Sie der UWP-[Typhierarchie](#type-ramp)-Größe.</span><span class="sxs-lookup"><span data-stu-id="a8813-122">:::row::: :::column::: ![do](images/do.svg) Follow the UWP [type ramp](#type-ramp) sizing.</span></span>
+<span data-ttu-id="a8813-123">::: Spalte End:::::: Spalte::: ![Nein](images/dont.svg) Verwenden Sie einen Schriftgrad, der kleiner als 12 Pixel ist.</span><span class="sxs-lookup"><span data-stu-id="a8813-123">:::column-end::: :::column::: ![don't](images/dont.svg) Use a font size smaller than 12 px.</span></span>
+<span data-ttu-id="a8813-124">:::column-end::: :::row-end:::</span><span class="sxs-lookup"><span data-stu-id="a8813-124">:::column-end::: :::row-end:::</span></span>
 
-<span data-ttu-id="2df67-132">Im XAML-Code wird dies durch Stapeln zweier [TextBlock](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.aspx)-Elemente sowie durch Festlegen des entsprechenden Rands erreicht.</span><span class="sxs-lookup"><span data-stu-id="2df67-132">In XAML, this is accomplished by stacking two [TextBlocks](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) and setting the appropriate margin.</span></span>
+## <a name="hierarchy"></a><span data-ttu-id="a8813-125">Hierarchie</span><span class="sxs-lookup"><span data-stu-id="a8813-125">Hierarchy</span></span>
 
-```xaml
-<StackPanel Width="200">
-    <!-- Setting a bottom margin of 3px on the header
-         puts the baseline of the body text exactly 24px
-         below the baseline of the header. 24px is the
-         recommended line height for a 20px font size,
-         which is what’s set in SubtitleTextBlockStyle.
-         The bottom margin will be different for
-         different font size pairings. -->
-    <TextBlock
-        Style="{StaticResource SubtitleTextBlockStyle}"
-        Margin="0,0,0,3"
-        Text="Header text" />
-    <TextBlock
-        Style="{StaticResource BodyTextBlockStyle}"
-        TextWrapping="Wrap"
-        Text="This line of text should be positioned where the above header would have wrapped." />
-</StackPanel>
+<span data-ttu-id="a8813-126">:::row::: :::column::: Benutzer verlassen Sie sich auf die visuelle Hierarchie beim Scannen eines Seitenabschnitts: Header fassen Inhalte zusammen und Textkörper enthalten weitere Details.</span><span class="sxs-lookup"><span data-stu-id="a8813-126">:::row::: :::column::: Users rely on visual hierarchy when scanning a page: headers summarize content, and body text provides more detail.</span></span> <span data-ttu-id="a8813-127">Um eine klare visuelle Hierarchie in Ihrer App zu erstellen, folgen Sie der UWP-Typhierarchie.</span><span class="sxs-lookup"><span data-stu-id="a8813-127">To create a clear visual hierarchy in your app, follow the UWP type ramp.</span></span>
+<span data-ttu-id="a8813-128">:::column-end::: :::column::: ![Textblock-Stile](images/type/type-hierarchy.svg) :::column-end::: :::row-end:::</span><span class="sxs-lookup"><span data-stu-id="a8813-128">:::column-end::: :::column::: ![text block styles](images/type/type-hierarchy.svg) :::column-end::: :::row-end:::</span></span>
+
+### <a name="type-ramp"></a><span data-ttu-id="a8813-129">Typhierarchie</span><span class="sxs-lookup"><span data-stu-id="a8813-129">Type ramp</span></span>
+
+<span data-ttu-id="a8813-130">Die UWP-Typhierarchie stellt wichtige Beziehungen zwischen den Schriftschnitte auf einer Seite her, damit der Benutzer den Inhalt einfach lesen kann.</span><span class="sxs-lookup"><span data-stu-id="a8813-130">The UWP type ramp establishes crucial relationships between the type styles on a page, helping users read content easily.</span></span> <span data-ttu-id="a8813-131">Alle Größen werden in effektiven Pixeln angegeben und sind für UWP-Apps optimiert, die auf allen Geräten ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="a8813-131">All sizes are in effective pixels and are optimized for UWP apps running on all devices.</span></span>
+
+![Typhierarchie](images/type/type-ramp.svg)
+
+### <a name="using-the-type-ramp"></a><span data-ttu-id="a8813-133">Die Typhierarchie verwenden</span><span class="sxs-lookup"><span data-stu-id="a8813-133">Using the type ramp</span></span>
+
+<span data-ttu-id="a8813-134">:::row::: :::column::: Sie können Ebenen der Typhierarchie als [statische Ressourcen](../controls-and-patterns/xaml-theme-resources.md#the-xaml-type-ramp) für XAML erreichen.</span><span class="sxs-lookup"><span data-stu-id="a8813-134">:::row::: :::column::: You can access levels of the type ramp as XAML [static resources](../controls-and-patterns/xaml-theme-resources.md#the-xaml-type-ramp).</span></span> <span data-ttu-id="a8813-135">Stile folgen der `*TextBlockStyle` Namenskonvention</span><span class="sxs-lookup"><span data-stu-id="a8813-135">The styles follow the `*TextBlockStyle` naming convention.</span></span>
+<span data-ttu-id="a8813-136">:::column-end::: :::column::: ![Textblock-Stile](images/type/text-block-type-ramp.svg) :::column-end::: :::row-end:::</span><span class="sxs-lookup"><span data-stu-id="a8813-136">:::column-end::: :::column::: ![text block styles](images/type/text-block-type-ramp.svg) :::column-end::: :::row-end:::</span></span>
+
+```XAML
+<TextBlock Text="Header" Style="{StaticResource HeaderTextBlockStyle}"/>
+<TextBlock Text="SubHeader" Style="{StaticResource SubheaderTextBlockStyle}"/>
+<TextBlock Text="Title" Style="{StaticResource TitleTextBlockStyle}"/>
+<TextBlock Text="SubTitle" Style="{StaticResource SubtitleTextBlockStyle}"/>
+<TextBlock Text="Base" Style="{StaticResource BaseTextBlockStyle}"/>
+<TextBlock Text="Body" Style="{StaticResource BodyTextBlockStyle}"/>
+<TextBlock Text="Caption" Style="{StaticResource CaptionTextBlockStyle}"/>
 ```
 
+<span data-ttu-id="a8813-137">:::row::: :::column::: ![Ja](images/do.svg) Verwenden Sie den "Inhalt" für den meisten Text.</span><span class="sxs-lookup"><span data-stu-id="a8813-137">:::row::: :::column::: ![do](images/do.svg) Use "Body" for most text.</span></span>
 
-<div class="side-by-side">
-<div class="side-by-side-content">
-  <div class="side-by-side-content-left">
-<h2><span data-ttu-id="2df67-133">Kerning und Laufweite</span><span class="sxs-lookup"><span data-stu-id="2df67-133">Kerning and tracking</span></span></h2>
+        Use "Base" for titles when space is constrained.
+    :::column-end:::
+    :::column:::
+        ![don't](images/dont.svg)
+        Use "Caption" for primary action or any long strings.
 
-<span data-ttu-id="2df67-134">Segoe ist eine humanistische Schriftart mit weicher, ansprechender Optik und organischen, offenen Formen, die von handschriftlichen Texten inspiriert sind.</span><span class="sxs-lookup"><span data-stu-id="2df67-134">Segoe is a humanist typeface, with a soft, friendly appearance, it has organic, open forms based on handwritten text.</span></span> <span data-ttu-id="2df67-135">Um eine optimale Lesbarkeit zu gewährleisten und den humanistischen Charakter zu bewahren, müssen für Kerning und Laufweite bestimmte Werte verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="2df67-135">To ensure optimum legibility and maintain its humanist integrity, the kerning and tracking settings must have specific values.</span></span>
+        Use "Header" or "Subheader" if text needs to wrap.
+    :::column-end:::
+<span data-ttu-id="a8813-138">:::row-end:::</span><span class="sxs-lookup"><span data-stu-id="a8813-138">:::row-end:::</span></span>
 
-<span data-ttu-id="2df67-136">Kerning muss auf „Metrik“ und die Laufweite auf„0“ festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="2df67-136">Kerning should be set to “metrics” and tracking should be set to “0”.</span></span>
-  </div>
-  <div class="side-by-side-content-right">
-<h2><span data-ttu-id="2df67-137">Wort- und Zeichenabstand</span><span class="sxs-lookup"><span data-stu-id="2df67-137">Word and letter spacing</span></span></h2>
+## <a name="alignment"></a><span data-ttu-id="a8813-139">Ausrichtung</span><span class="sxs-lookup"><span data-stu-id="a8813-139">Alignment</span></span>
 
-<span data-ttu-id="2df67-138">Ähnlich wie bei Kerning und Laufweite werden auch beim Wort- und Zeichenabstand bestimmte Einstellungen verwendet, um eine optimale Lesbarkeit und die Wahrung des humanistischen Charakters zu gewährleisten.</span><span class="sxs-lookup"><span data-stu-id="2df67-138">Similar to kerning and tracking, word spacing and letter spacing use specific settings to ensure optimum legibility and humanist integrity.</span></span>
+<span data-ttu-id="a8813-140">Standardmäßig ist das [TextAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.textalignment) links. In den meisten Fällen sorgt das Konzept „links bündig, rechts mit Flatterrand“ für eine konsistente Verankerung des Inhalts und für ein einheitliches Layout.</span><span class="sxs-lookup"><span data-stu-id="a8813-140">The default [TextAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.textalignment) is Left, and in most instances, flush-left and ragged right provides consistent anchoring of the content and a uniform layout.</span></span> <span data-ttu-id="a8813-141">Weitere Informationen für RTL-Sprachen finden Sie unter [Anpassen von Layout und Schriftarten zur Globalisierungsunterstützung](../globalizing/adjust-layout-and-fonts--and-support-rtl.md).</span><span class="sxs-lookup"><span data-stu-id="a8813-141">For RTL languages, see [Adjusting layout and fonts to support globalization](../globalizing/adjust-layout-and-fonts--and-support-rtl.md).</span></span>
 
-<span data-ttu-id="2df67-139">Der Wortabstand beträgt standardmäßig immer 100Prozent. Der Zeichenabstand muss auf„0“ festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="2df67-139">Word spacing by default is always 100% and letter spacing should be set to “0”.</span></span>
-  </div>
-</div>
-</div>
-<div class="side-by-side">
-<div class="side-by-side-content">
-  <div class="side-by-side-content-left">
-![Der Unterschied zwischen Kerning und Laufweite](images/kerning-tracking.png)  
-  </div>
-  <div class="side-by-side-content-right">
-![Der Unterschied zwischen Wort- und Zeichenabstand.](images/word-letter.png) 
-  </div>
-</div>
-</div>
+![Zeigt linksbündigen Text.](images/type/alignment.svg)
 
+```xaml
+<TextBlock TextAlignment="Left">
+```
 
->[!NOTE]
-><span data-ttu-id="2df67-142">Verwenden Sie in einem XAML-Textsteuerelement [Typogrphy.Kerning](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.typography.kerning.aspx), um das Kerning zu steuern, und [FontStretch](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_FontStretch). um die Nachverfolgung zu steuern.</span><span class="sxs-lookup"><span data-stu-id="2df67-142">In a XAML text control use [Typogrphy.Kerning](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.typography.kerning.aspx) to control kerning and [FontStretch](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_FontStretch) to control tracking.</span></span> <span data-ttu-id="2df67-143">Typography.Kerning ist standardmäßig auf „true“ und FontStretch ist standardmäßig auf „Normal“ festgelegt. Dies sind die empfohlenen Werte.</span><span class="sxs-lookup"><span data-stu-id="2df67-143">By default Typography.Kerning is set to “true” and FontStretch is set to “Normal”, which are the recommended values.</span></span>
+## <a name="character-count"></a><span data-ttu-id="a8813-143">Zeichenanzahl</span><span class="sxs-lookup"><span data-stu-id="a8813-143">Character count</span></span>
 
-<div class="side-by-side">
-<div class="side-by-side-content">
-  <div class="side-by-side-content-left">
-<h2><span data-ttu-id="2df67-144">Ausrichtung</span><span class="sxs-lookup"><span data-stu-id="2df67-144">Alignment</span></span></h2>
+<span data-ttu-id="a8813-144">:::row::: :::column::: ![Ja](images/do.svg) Bleiben Sie bei 50 bis 60 Wörtern pro Zeile zur besseren Lesbarkeit.</span><span class="sxs-lookup"><span data-stu-id="a8813-144">:::row::: :::column::: ![do](images/do.svg) Keep to 50–60 letters per line for ease of reading.</span></span>
+<span data-ttu-id="a8813-145">:::column-end::: :::column::: ![Nein](images/dont.svg) Weniger als 20 Zeichen oder mehr als 60 Zeichen pro Zeile lassen sich schwer lesen.</span><span class="sxs-lookup"><span data-stu-id="a8813-145">:::column-end::: :::column::: ![don't](images/dont.svg) Less than 20 characters or more than 60 characters per line is difficult to read.</span></span>
+<span data-ttu-id="a8813-146">:::column-end::: :::row-end:::</span><span class="sxs-lookup"><span data-stu-id="a8813-146">:::column-end::: :::row-end:::</span></span>
 
-<span data-ttu-id="2df67-145">Im Allgemeinen wird die linksbündige Ausrichtung visueller Elemente und Spalten mit Schrift empfohlen.</span><span class="sxs-lookup"><span data-stu-id="2df67-145">Generally, we recommend that visual elements and columns of type be left-aligned.</span></span> <span data-ttu-id="2df67-146">In den meisten Fällen sorgt das Konzept „links bündig, rechts mit Flatterrand“ für eine konsistente Verankerung des Inhalts und für ein einheitliches Layout.</span><span class="sxs-lookup"><span data-stu-id="2df67-146">In most instances, this flush-left and ragged-right approach provides consistent anchoring of the content and a uniform layout.</span></span> 
-  </div>
-  <div class="side-by-side-content-right">
-<h2><span data-ttu-id="2df67-147">Zeilenenden</span><span class="sxs-lookup"><span data-stu-id="2df67-147">Line endings</span></span></h2>
+## <a name="clipping-and-ellipses"></a><span data-ttu-id="a8813-147">Beschnitt und Ellipsen</span><span class="sxs-lookup"><span data-stu-id="a8813-147">Clipping and ellipses</span></span>
 
-<span data-ttu-id="2df67-148">Wenn Typografie nicht linksbündig mit rechtem Flatterrand positioniert wird, versuchen Sie, gleichmäßige Zeilenenden zu erreichen, und vermeiden Sie die Verwendung von Silbentrennung.</span><span class="sxs-lookup"><span data-stu-id="2df67-148">When typography is not positioned as flush left and ragged right, try to ensure even line endings and avoid hyphenation.</span></span>
-  </div>
-</div>
-</div>
+<span data-ttu-id="a8813-148">Wenn die Textmenge den verfügbaren Speicherplatz überschreitet, wird empfohlen, den Text zuzuschneiden, was das Standardverhalten der meisten [UWP-Textsteuerelemente](../controls-and-patterns/text-controls.md)ist.</span><span class="sxs-lookup"><span data-stu-id="a8813-148">When the amount of text extends beyond the space available, we recommend clipping text, which is the default behavior of most [UWP text controls](../controls-and-patterns/text-controls.md).</span></span>
 
-<div class="side-by-side">
-<div class="side-by-side-content">
-  <div class="side-by-side-content-left">
-![Zeigt linksbündigen Text.](images/alignment.png)  
-  </div>
-  <div class="side-by-side-content-right">
-![Zeigt gleichmäßige Zeilenenden.](images/line-endings.png) 
-  </div>
-</div>
-</div>
+![Gerät mit abgeschnittenem Text](images/type/clipping.svg)
 
+```xaml
+<TextBlock TextWrapping="WrapWholeWords" TextTrimming="Clip"/>
+```
 
-## <a name="paragraphs"></a><span data-ttu-id="2df67-151">Absätze</span><span class="sxs-lookup"><span data-stu-id="2df67-151">Paragraphs</span></span>
+<span data-ttu-id="a8813-150">:::row::: :::column::: ![Ja](images/do.svg) Text zuschneiden und umbrechen, wenn mehrere Zeilen vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="a8813-150">:::row::: :::column::: ![do](images/do.svg) Clip text, and wrap if multiple lines are enabled.</span></span>
+<span data-ttu-id="a8813-151">:::column-end::: :::column::: ![Nein](images/dont.svg) Verwenden Sie Ellipsen für mehr Übersichtlichkeit.</span><span class="sxs-lookup"><span data-stu-id="a8813-151">:::column-end::: :::column::: ![don't](images/dont.svg) Use ellipses to avoid visual clutter.</span></span>
+<span data-ttu-id="a8813-152">:::column-end::: :::row-end:::</span><span class="sxs-lookup"><span data-stu-id="a8813-152">:::column-end::: :::row-end:::</span></span>
 
-<span data-ttu-id="2df67-152">Absätze müssen als übersprungene Zeile ohne Einzug dargestellt werden, um aufeinander abgestimmte Spaltenränder zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="2df67-152">To provide aligned column edges, paragraphs should be indicated by skipping a line without indentation.</span></span>
+<span data-ttu-id="a8813-153">**Hinweis**: Bei Containern, die nicht klar definiert sind (also sich etwa nicht durch eine andere Hintergrundfarbe abheben) oder wenn ein Link zu mehr Text existiert, kann eine Ellipse verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="a8813-153">**Note**: If containers are not well-defined (e.g. no differentiating background color), or when there is a link to see more text, then use ellipses.</span></span>
 
-![Vollständige Leerzeile zwischen Absätzen](images/paragraphs.png)
+## <a name="languages"></a><span data-ttu-id="a8813-154">Sprachen</span><span class="sxs-lookup"><span data-stu-id="a8813-154">Languages</span></span> 
 
-## <a name="character-count"></a><span data-ttu-id="2df67-154">Zeichenanzahl</span><span class="sxs-lookup"><span data-stu-id="2df67-154">Character count</span></span>
+<span data-ttu-id="a8813-155">Segoe UI ist unsere Schriftart für Englisch, für europäische Sprachen, Griechisch, Hebräisch, Armenisch, Georgisch und Arabisch.</span><span class="sxs-lookup"><span data-stu-id="a8813-155">Segoe UI is our font for English, European languages, Greek, Hebrew, Armenian, Georgian, and Arabic.</span></span> <span data-ttu-id="a8813-156">Lesen Sie die folgenden Empfehlungen für andere Sprachen.</span><span class="sxs-lookup"><span data-stu-id="a8813-156">For other languages, see the following recommendations.</span></span>
 
-<span data-ttu-id="2df67-155">Ist eine Zeile zu kurz, muss das Auge zu oft hin und her bewegt werden, was den Lesefluss stört.</span><span class="sxs-lookup"><span data-stu-id="2df67-155">If a line is too short, the eye will have to travel left and right too often, breaking the reader’s rhythm.</span></span> <span data-ttu-id="2df67-156">Verwenden Sie daher möglichst50 bis 60Wörter pro Zeile. Dies bietet den höchsten Lesekomfort.</span><span class="sxs-lookup"><span data-stu-id="2df67-156">If possible, 50–60 letters per line is best for ease of reading.</span></span>
+### <a name="globalizinglocalizing-fonts"></a><span data-ttu-id="a8813-157">Globalisierung/Lokalisierung von Schriftarten</span><span class="sxs-lookup"><span data-stu-id="a8813-157">Globalizing/localizing fonts</span></span>
 
-<span data-ttu-id="2df67-157">Segoe bietet eine breite Palette von Zeichen und zeichnet sich durch optimale Lesbarkeit bei unterschiedlichen Größen und Pixeldichten aus.</span><span class="sxs-lookup"><span data-stu-id="2df67-157">Segoe provides a wide range of characters and is designed to maintain optimal legibility in both small and large sizes as well as low and high pixel densities.</span></span> <span data-ttu-id="2df67-158">Eine optimale Anzahl von Buchstaben in einer Textspaltenzeile erhöht den Lesekomfort in einer Anwendung.</span><span class="sxs-lookup"><span data-stu-id="2df67-158">Using the optimal number of letters in a text column line ensures good legibility in an application.</span></span>
+<span data-ttu-id="a8813-158">Verwenden Sie die [LanguageFont-Schriftartenersetzungs-APIs](https://docs.microsoft.com/uwp/api/Windows.Globalization.Fonts.LanguageFont) für den programmgesteuerten Zugriff auf die Empfohlenen Einstellungen für Familie, Grad, Breite und Schnitt der Schriftart für eine spezielle Sprache.</span><span class="sxs-lookup"><span data-stu-id="a8813-158">Use the [LanguageFont font-mapping APIs](https://docs.microsoft.com/uwp/api/Windows.Globalization.Fonts.LanguageFont) for programmatic access to the recommended font family, size, weight, and style for a particular language.</span></span> <span data-ttu-id="a8813-159">Das LanguageFont-Objekt ermöglicht den Zugriff auf die richtigen Schriftartinformationen für verschiedene Inhaltskategorien: UI-Kopfzeilen, Benachrichtigungen, Textkörper und Schriftarten für den Textkörper, die vom Benutzer bearbeitet werden können.</span><span class="sxs-lookup"><span data-stu-id="a8813-159">The LanguageFont object provides access to the correct font info for various categories of content including UI headers, notifications, body text, and user-editable document body fonts.</span></span> <span data-ttu-id="a8813-160">Weitere Informationen finden Sie unter [Anpassen von Layout und Schriftarten zur Globalisierungsunterstützung](../globalizing/adjust-layout-and-fonts--and-support-rtl.md).</span><span class="sxs-lookup"><span data-stu-id="a8813-160">For more info, see [Adjusting layout and fonts to support globalization](../globalizing/adjust-layout-and-fonts--and-support-rtl.md).</span></span>
 
-<span data-ttu-id="2df67-159">Zu lange Zeilen können für den Benutzer anstrengend und verwirrend sein.</span><span class="sxs-lookup"><span data-stu-id="2df67-159">Lines that are too long will strain the eye and may disorient the user.</span></span> <span data-ttu-id="2df67-160">Bei zu kurzen Zeilen muss das Auge zu viel hin und her bewegt werden, was sich als ermüdend erweisen kann.</span><span class="sxs-lookup"><span data-stu-id="2df67-160">Lines that are too short force the reader’s eye to travel too much and can cause fatigue.</span></span>
+### <a name="fonts-for-non-latin-languages"></a><span data-ttu-id="a8813-161">Schriftarten für nicht lateinische Sprachen</span><span class="sxs-lookup"><span data-stu-id="a8813-161">Fonts for non-Latin languages</span></span>
 
-![Drei Absätze mit unterschiedlichen Zeilenlängen](images/character-count.png)
+<table>
+<thead>
+<tr class="header">
+<th align="left"><span data-ttu-id="a8813-162">Schriftfamilie</span><span class="sxs-lookup"><span data-stu-id="a8813-162">Font-family</span></span></th>
+<th align="left"><span data-ttu-id="a8813-163">Stile</span><span class="sxs-lookup"><span data-stu-id="a8813-163">Styles</span></span></th>
+<th align="left"><span data-ttu-id="a8813-164">Hinweise</span><span class="sxs-lookup"><span data-stu-id="a8813-164">Notes</span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="font-family: Embrima;"><span data-ttu-id="a8813-165">Ebrima</span><span class="sxs-lookup"><span data-stu-id="a8813-165">Ebrima</span></span></td>
+<td align="left"><span data-ttu-id="a8813-166">Normal, fett</span><span class="sxs-lookup"><span data-stu-id="a8813-166">Regular, Bold</span></span></td>
+<td align="left"><span data-ttu-id="a8813-167">Benutzeroberflächen-Schriftart für afrikanische Schriften (Äthiopisch, N'Ko, Osmanya, Tifinagh, Vai).</span><span class="sxs-lookup"><span data-stu-id="a8813-167">User-interface font for African scripts (Ethiopic, N'Ko, Osmanya, Tifinagh, Vai).</span></span></td>
+</tr>
+<tr class="even">
+<td style="font-family: Gadugi;"><span data-ttu-id="a8813-168">Gadugi</span><span class="sxs-lookup"><span data-stu-id="a8813-168">Gadugi</span></span></td>
+<td align="left"><span data-ttu-id="a8813-169">Normal, fett</span><span class="sxs-lookup"><span data-stu-id="a8813-169">Regular, Bold</span></span></td>
+<td align="left"><span data-ttu-id="a8813-170">Benutzeroberflächen-Schriftart für nordamerikanische Schriften (Kanadische Silbenschrift, Cherokee).</span><span class="sxs-lookup"><span data-stu-id="a8813-170">User-interface font for North American scripts (Canadian Syllabics, Cherokee).</span></span></td>
+</tr>
+<tr class="odd">
+<td align="left" style="font-family: Leelawadee UI;"><span data-ttu-id="a8813-171">LeelawadeeUI</span><span class="sxs-lookup"><span data-stu-id="a8813-171">Leelawadee UI</span></span></td>
+<td align="left"><span data-ttu-id="a8813-172">Normal, Semilight, fett</span><span class="sxs-lookup"><span data-stu-id="a8813-172">Regular, Semilight, Bold</span></span></td>
+<td align="left"><span data-ttu-id="a8813-173">Benutzeroberflächen-Schriftart für südostasiatische Schriften (Buginesisch, Laotisch, Khmer, Thailändisch).</span><span class="sxs-lookup"><span data-stu-id="a8813-173">User-interface font for Southeast Asian scripts (Buginese, Lao, Khmer, Thai).</span></span></td>
+</tr>
+<tr class="odd">
+<td align="left" style="font-family: Malgun Gothic;"><span data-ttu-id="a8813-174">Malgun Gothic</span><span class="sxs-lookup"><span data-stu-id="a8813-174">Malgun Gothic</span></span></td>
+<td align="left"><span data-ttu-id="a8813-175">Regular</span><span class="sxs-lookup"><span data-stu-id="a8813-175">Regular</span></span></td>
+<td align="left"><span data-ttu-id="a8813-176">Benutzeroberflächen-Schriftart für Koreanisch.</span><span class="sxs-lookup"><span data-stu-id="a8813-176">User-interface font for Korean.</span></span></td>
+</tr>
+<tr class="even">
+<td align="left" style="font-family: Microsoft JhengHei UI;"><span data-ttu-id="a8813-177">Microsoft JhengHei UI</span><span class="sxs-lookup"><span data-stu-id="a8813-177">Microsoft JhengHei UI</span></span></td>
+<td align="left"><span data-ttu-id="a8813-178">Normal, fett, Light</span><span class="sxs-lookup"><span data-stu-id="a8813-178">Regular, Bold, Light</span></span></td>
+<td align="left"><span data-ttu-id="a8813-179">Benutzeroberflächen-Schriftart für Chinesisch (traditionell).</span><span class="sxs-lookup"><span data-stu-id="a8813-179">User-interface font for Traditional Chinese.</span></span></td>
+</tr>
+<tr class="odd">
+<td align="left" style="font-family: Microsoft YaHei UI;"><span data-ttu-id="a8813-180">Microsoft YaHei UI</span><span class="sxs-lookup"><span data-stu-id="a8813-180">Microsoft YaHei UI</span></span></td>
+<td align="left"><span data-ttu-id="a8813-181">Normal, fett, Light</span><span class="sxs-lookup"><span data-stu-id="a8813-181">Regular, Bold, Light</span></span></td>
+<td align="left"><span data-ttu-id="a8813-182">Benutzeroberflächen-Schriftart für Chinesisch (vereinfacht).</span><span class="sxs-lookup"><span data-stu-id="a8813-182">User-interface font for Simplified Chinese.</span></span></td>
+</tr>
+<tr class="odd">
+<td align="left" style="font-family: Myanmar Text;"><span data-ttu-id="a8813-183">Myanmar Text</span><span class="sxs-lookup"><span data-stu-id="a8813-183">Myanmar Text</span></span></td>
+<td align="left"><span data-ttu-id="a8813-184">Regular</span><span class="sxs-lookup"><span data-stu-id="a8813-184">Regular</span></span></td>
+<td align="left"><span data-ttu-id="a8813-185">Fallbackschriftart für die Myanmar-Schrift.</span><span class="sxs-lookup"><span data-stu-id="a8813-185">Fallback font for Myanmar script.</span></span></td>
+</tr>
+<tr class="even">
+<td align="left" style="font-family: Nirmala UI;"><span data-ttu-id="a8813-186">Nirmala UI</span><span class="sxs-lookup"><span data-stu-id="a8813-186">Nirmala UI</span></span></td>
+<td align="left"><span data-ttu-id="a8813-187">Normal, Semilight, fett</span><span class="sxs-lookup"><span data-stu-id="a8813-187">Regular, Semilight, Bold</span></span></td>
+<td align="left"><span data-ttu-id="a8813-188">Benutzeroberflächen-Schriftart für südasiatische Schriften (Bangla, Devanagari, Gujarati, Gurmukhi, Kannada, Malayalam, Odia, Ol Chiki, Singhalesisch, Sora Sompeng, Tamil, Telugu)</span><span class="sxs-lookup"><span data-stu-id="a8813-188">User-interface font for South Asian scripts (Bangla, Devanagari, Gujarati, Gurmukhi, Kannada, Malayalam, Odia, Ol Chiki, Sinhala, Sora Sompeng, Tamil, Telugu)</span></span></td>
+</tr>
+<tr class="odd">
+<td align="left" style="font-family: SimSun;"><span data-ttu-id="a8813-189">SimSun</span><span class="sxs-lookup"><span data-stu-id="a8813-189">SimSun</span></span></td>
+<td align="left"><span data-ttu-id="a8813-190">Regular</span><span class="sxs-lookup"><span data-stu-id="a8813-190">Regular</span></span></td>
+<td align="left"><span data-ttu-id="a8813-191">Eine ältere chinesische UI-Schriftart.</span><span class="sxs-lookup"><span data-stu-id="a8813-191">A legacy Chinese UI font.</span></span> </td>
+</tr>
+<tr class="even">
+<td align="left" style="font-family: Yu Gothic UI;"><span data-ttu-id="a8813-192">Yu Gothic UI</span><span class="sxs-lookup"><span data-stu-id="a8813-192">Yu Gothic UI</span></span></td>
+<td align="left"><span data-ttu-id="a8813-193">Light, Semilight, normal, Semibold, fett</span><span class="sxs-lookup"><span data-stu-id="a8813-193">Light, Semilight, Regular, Semibold, Bold</span></span></td>
+<td align="left"><span data-ttu-id="a8813-194">Benutzeroberflächen-Schriftart für Japanisch.</span><span class="sxs-lookup"><span data-stu-id="a8813-194">User-interface font for Japanese.</span></span></td>
+</tr>
+</tbody>
+</table>
 
-## <a name="hanging-text-alignment"></a><span data-ttu-id="2df67-162">Ausrichtung von hängendem Text</span><span class="sxs-lookup"><span data-stu-id="2df67-162">Hanging text alignment</span></span>
+## <a name="fonts"></a><span data-ttu-id="a8813-195">Schriftarten</span><span class="sxs-lookup"><span data-stu-id="a8813-195">Fonts</span></span>
 
-<span data-ttu-id="2df67-163">Die horizontale Ausrichtung von Symbolen mit Text kann je nach Symbolgröße und Textmenge auf unterschiedliche Arten gehandhabt werden.</span><span class="sxs-lookup"><span data-stu-id="2df67-163">The horizontal alignment of icons with text can be handled in a number of ways depending on the size of the icon and the amount of text.</span></span> <span data-ttu-id="2df67-164">Wenn der Text (einzelne Zeile oder mehrere Zeilen) die Höhe des Symbols nicht übersteigt, muss der Text vertikal zentriert werden.</span><span class="sxs-lookup"><span data-stu-id="2df67-164">When the text, either single or multiple lines, fits within the height of the icon, the text should be vertically centered.</span></span>
+### <a name="sans-serif-fonts"></a><span data-ttu-id="a8813-196">Serifenlose Schriftarten</span><span class="sxs-lookup"><span data-stu-id="a8813-196">Sans-serif fonts</span></span>
 
-<span data-ttu-id="2df67-165">Sobald die Höhe des Texts die Höhe des Symbols übersteigt, muss die erste Textzeile vertikal ausgerichtet werden, und der weitere Text muss dem natürlichen Textfluss folgen.</span><span class="sxs-lookup"><span data-stu-id="2df67-165">Once the height of the text extends beyond the height of the icon, the first line of text should align vertically and the additional text should flow on naturally below.</span></span> <span data-ttu-id="2df67-166">Für höhere Großbuchstaben bzw. Zeichen mit höherer Ober- und Unterlänge gelten die gleichen Ausrichtungsrichtlinien.</span><span class="sxs-lookup"><span data-stu-id="2df67-166">When using characters with larger cap, ascender and descender heights, care should be taken to observe the same alignment guidance.</span></span>
+<span data-ttu-id="a8813-197">Serifenlose Schriftarten eignen sich für Überschriften und UI-Elemente.</span><span class="sxs-lookup"><span data-stu-id="a8813-197">Sans-serif fonts are a great choice for headings and UI elements.</span></span> 
 
-![Mehrere Kombinationen aus Symbol und Text](images/hanging-text-alignment.png)
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"><span data-ttu-id="a8813-198">Schriftfamilie</span><span class="sxs-lookup"><span data-stu-id="a8813-198">Font-family</span></span></th>
+<th align="left"><span data-ttu-id="a8813-199">Stile</span><span class="sxs-lookup"><span data-stu-id="a8813-199">Styles</span></span></th>
+<th align="left"><span data-ttu-id="a8813-200">Hinweise</span><span class="sxs-lookup"><span data-stu-id="a8813-200">Notes</span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left" style="font-family: Arial;"><span data-ttu-id="a8813-201">Arial</span><span class="sxs-lookup"><span data-stu-id="a8813-201">Arial</span></span></td>
+<td align="left"><span data-ttu-id="a8813-202">Normal, kursiv, fett, fett kursiv, schwarz</span><span class="sxs-lookup"><span data-stu-id="a8813-202">Regular, Italic, Bold, Bold Italic, Black</span></span></td>
+<td align="left"><span data-ttu-id="a8813-203">Unterstützung für europäische und nahöstliche Schriften (Lateinisch, Griechisch, Kyrillisch, Arabisch, Armenisch und Hebräisch). Die Schriftbreite „Black“ unterstützt nur europäische Schriften.</span><span class="sxs-lookup"><span data-stu-id="a8813-203">Supports European and Middle Eastern scripts (Latin, Greek, Cyrillic, Arabic, Armenian, and Hebrew) Black weight supports European scripts only.</span></span></td>
+</tr>
+<tr class="even">
+<td align="left" style="font-family: Calibri;"><span data-ttu-id="a8813-204">Calibri</span><span class="sxs-lookup"><span data-stu-id="a8813-204">Calibri</span></span></td>
+<td align="left"><span data-ttu-id="a8813-205">Normal, kursiv, fett, fett kursiv, dünn, dünn kursiv</span><span class="sxs-lookup"><span data-stu-id="a8813-205">Regular, Italic, Bold, Bold Italic, Light, Light Italic</span></span></td>
+<td align="left"><span data-ttu-id="a8813-206">Unterstützung für europäische und nahöstliche Schriften (Lateinisch, Griechisch, Kyrillisch, Arabisch und Hebräisch).</span><span class="sxs-lookup"><span data-stu-id="a8813-206">Supports European and Middle Eastern scripts (Latin, Greek, Cyrillic, Arabic and Hebrew).</span></span> <span data-ttu-id="a8813-207">Arabisch nur in gerader Schrift verfügbar.</span><span class="sxs-lookup"><span data-stu-id="a8813-207">Arabic available in the uprights only.</span></span></td>
+</tr>
+<td style="font-family: Consolas;"><span data-ttu-id="a8813-208">Consolas</span><span class="sxs-lookup"><span data-stu-id="a8813-208">Consolas</span></span></td>
+<td><span data-ttu-id="a8813-209">Normal, kursiv, fett, fett kursiv</span><span class="sxs-lookup"><span data-stu-id="a8813-209">Regular, Italic, Bold, Bold Italic</span></span></td>
+<td><span data-ttu-id="a8813-210">Schriftart mit fester Breite mit Unterstützung für europäische Schriften (Lateinisch, Griechisch und Kyrillisch).</span><span class="sxs-lookup"><span data-stu-id="a8813-210">Fixed width font that supports European scripts (Latin, Greek and Cyrillic).</span></span></td>
+</tr>
 
->[!NOTE]
-><span data-ttu-id="2df67-168">Die XAML-Eigenschaft [TextBlock.TextLineBounds](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.textlinebounds.aspx) ermöglicht den Zugriff auf die Höhe von Großbuchstaben und die Metrik der Basisschriftart.</span><span class="sxs-lookup"><span data-stu-id="2df67-168">XAML’s [TextBlock.TextLineBounds](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.textlinebounds.aspx) property provides access to the cap height and baseline font metrics.</span></span> <span data-ttu-id="2df67-169">Sie kann verwendet werden, um visuell vertikal zu zentrieren oder oben ausgerichtet einzugeben.</span><span class="sxs-lookup"><span data-stu-id="2df67-169">It can be used to visually vertically center or top-align type.</span></span>
+<tr>
+<td style="font-family: Segoe UI;"><span data-ttu-id="a8813-211">Segoe UI</span><span class="sxs-lookup"><span data-stu-id="a8813-211">Segoe UI</span></span></td>
+<td><span data-ttu-id="a8813-212">Normal, kursiv, Light kursiv, Black kursiv, fett, fett kursiv, Light, Semilight, Semibold, Black</span><span class="sxs-lookup"><span data-stu-id="a8813-212">Regular, Italic, Light Italic, Black Italic, Bold, Bold Italic, Light, Semilight, Semibold, Black</span></span></td>
+<td><span data-ttu-id="a8813-213">Benutzeroberflächen-Schriftart für europäische und nahöstliche Schriften (Arabisch, Armenisch, Kyrillisch, Georgisch, Griechisch, Hebräisch, Lateinisch) und auch Lisu-Schrift.</span><span class="sxs-lookup"><span data-stu-id="a8813-213">User-interface font for European and Middle East scripts (Arabic, Armenian, Cyrillic, Georgian, Greek, Hebrew, Latin), and also Lisu script.</span></span></td>
+</tr>
 
-## <a name="clipping-and-ellipses"></a><span data-ttu-id="2df67-170">Beschnitt und Ellipsen</span><span class="sxs-lookup"><span data-stu-id="2df67-170">Clipping and ellipses</span></span>
+<tr class="even">
+<td style="font-family: Selawik;"><span data-ttu-id="a8813-214">Selawik</span><span class="sxs-lookup"><span data-stu-id="a8813-214">Selawik</span></span></td>
+<td align="left"><span data-ttu-id="a8813-215">Normal, Semilight, Light, fett, Semibold</span><span class="sxs-lookup"><span data-stu-id="a8813-215">Regular, Semilight, Light, Bold, Semibold</span></span></td>
+<td align="left"><span data-ttu-id="a8813-216">Open-Source-Schriftart, die metrisch kompatibel mit SegoeUI ist. Vorgesehen für Apps auf anderen Plattformen, auf denen SegoeUI nicht verfügbar ist.</span><span class="sxs-lookup"><span data-stu-id="a8813-216">An open-source font that's metrically compatible with Segoe UI, intended for apps on other platforms that don’t want to bundle Segoe UI.</span></span> <a href="https://github.com/Microsoft/Selawik"><span data-ttu-id="a8813-217">Laden Sie Selawik über GitHub herunter.</span><span class="sxs-lookup"><span data-stu-id="a8813-217">Get Selawik on GitHub.</span></span></a></td>
+</tr>
 
-<span data-ttu-id="2df67-171">Nutzen Sie standardmäßig das Beschnittkonzept, und gehen Sie davon aus, dass der Text umgebrochen wird – es sei denn, es ist etwas anderes angegeben.</span><span class="sxs-lookup"><span data-stu-id="2df67-171">Clip by default—assume that text will wrap unless the redline specifies otherwise.</span></span> <span data-ttu-id="2df67-172">Bei Verwendung von nicht umgebrochenem Text empfiehlt es sich, anstelle von Ellipsen den Beschnitt zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="2df67-172">When using non-wrapping text, we recommend clipping rather than using ellipses.</span></span> <span data-ttu-id="2df67-173">Der Beschnitt kann am Rand des Containers, am Rand des Geräts, am Rand der Bildlaufleiste usw. erfolgen.</span><span class="sxs-lookup"><span data-stu-id="2df67-173">Clipping can occur at the edge of the container, at the edge of the device, at the edge of a scrollbar, etc.</span></span>
+</tbody>
+</table>
 
-<span data-ttu-id="2df67-174">Ausnahme: Bei Containern, die nicht klar definiert sind (also sich etwa nicht durch eine andere Hintergrundfarbe abheben), kann eine Ellipse(...) verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="2df67-174">Exceptions—for containers which are not well-defined (e.g. no differentiating background color), then non-wrapping text can be redlined to use the ellipse ”…”.</span></span>
+### <a name="serif-fonts"></a><span data-ttu-id="a8813-218">Serifenschriftarten</span><span class="sxs-lookup"><span data-stu-id="a8813-218">Serif fonts</span></span>
 
-![Gerät mit abgeschnittenem Text](images/clipping.png)
+<span data-ttu-id="a8813-219">Mit Serifenschriftarten lassen sich größere Textmengen gut darstellen.</span><span class="sxs-lookup"><span data-stu-id="a8813-219">Serif fonts are good for presenting large amounts of text.</span></span> 
 
-## <a name="type-ramp"></a><span data-ttu-id="2df67-176">Typhierarchie</span><span class="sxs-lookup"><span data-stu-id="2df67-176">Type ramp</span></span>
-<span data-ttu-id="2df67-177">Die Typhierarchie stellt eine wichtige gestalterische Beziehung zwischen Überschrift und Textkörper her und schafft damit eine klare und verständliche Hierarchie zwischen den verschiedenen Ebenen.</span><span class="sxs-lookup"><span data-stu-id="2df67-177">The type ramp establishes a crucial design relationship from headlines to body text and ensures a clear and understandable hierarchy between the different levels.</span></span> <span data-ttu-id="2df67-178">Diese Hierarchie bildet eine Struktur, die Benutzern die Navigation durch schriftliche Kommunikation erleichtert.</span><span class="sxs-lookup"><span data-stu-id="2df67-178">This hierarchy builds a structure which enables users to easily navigate through written communication.</span></span>
+<table>
+<thead>
+<tr class="header">
+<th align="left"><span data-ttu-id="a8813-220">Schriftfamilie</span><span class="sxs-lookup"><span data-stu-id="a8813-220">Font-family</span></span></th>
+<th align="left"><span data-ttu-id="a8813-221">Stile</span><span class="sxs-lookup"><span data-stu-id="a8813-221">Styles</span></span></th>
+<th align="left"><span data-ttu-id="a8813-222">Hinweise</span><span class="sxs-lookup"><span data-stu-id="a8813-222">Notes</span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="font-family: Cambria;"><span data-ttu-id="a8813-223">Cambria</span><span class="sxs-lookup"><span data-stu-id="a8813-223">Cambria</span></span></td>
+<td align="left"><span data-ttu-id="a8813-224">Regular</span><span class="sxs-lookup"><span data-stu-id="a8813-224">Regular</span></span></td>
+<td align="left"><span data-ttu-id="a8813-225">Serifenschriftart mit Unterstützung für europäischen Schriften (Lateinisch, Griechisch, Kyrillisch).</span><span class="sxs-lookup"><span data-stu-id="a8813-225">Serif font that supports European scripts (Latin, Greek, Cyrillic).</span></span></td>
+</tr>
+<tr class="even">
+<td style="font-family: Courier New;"><span data-ttu-id="a8813-226">Courier New</span><span class="sxs-lookup"><span data-stu-id="a8813-226">Courier New</span></span></td>
+<td align="left"><span data-ttu-id="a8813-227">Normal, kursiv, fett, fett kursiv</span><span class="sxs-lookup"><span data-stu-id="a8813-227">Regular, Italic, Bold, Bold Italic</span></span></td>
+<td align="left"><span data-ttu-id="a8813-228">Serifenschriftart mit fester Breite und Unterstützung für europäische und nahöstliche Schriften (Lateinisch, Griechisch, Kyrillisch, Arabisch, Armenisch und Hebräisch).</span><span class="sxs-lookup"><span data-stu-id="a8813-228">Serif fixed width font supports European and Middle Eastern scripts (Latin, Greek, Cyrillic, Arabic, Armenian, and Hebrew).</span></span></td>
+</tr>
+<tr class="odd">
+<td style="font-family: Georgia;"><span data-ttu-id="a8813-229">Georgia</span><span class="sxs-lookup"><span data-stu-id="a8813-229">Georgia</span></span></td>
+<td align="left"><span data-ttu-id="a8813-230">Normal, kursiv, fett, fett kursiv</span><span class="sxs-lookup"><span data-stu-id="a8813-230">Regular, Italic, Bold, Bold Italic</span></span></td>
+<td align="left"><span data-ttu-id="a8813-231">Unterstützung für europäische Schriften (Lateinisch, Griechisch und Kyrillisch).</span><span class="sxs-lookup"><span data-stu-id="a8813-231">Supports European scripts (Latin, Greek and Cyrillic).</span></span></td>
+</tr>
 
-<div class="uwpd-image-with-caption">
-    <img src="images/type-ramp.png" alt="Shows the type ramp" />
-    <div><span data-ttu-id="2df67-179">Die Größe wird jeweils in effektiven Pixeln angegeben.</span><span class="sxs-lookup"><span data-stu-id="2df67-179">All sizes are in effective pixels.</span></span> <span data-ttu-id="2df67-180">Weitere Informationen finden Sie unter [Einführung in das UWP-App-Design](../basics/design-and-ui-intro.md).</span><span class="sxs-lookup"><span data-stu-id="2df67-180">For more details, see [Intro to UWP app design](../basics/design-and-ui-intro.md).</span></span></div>
-</div>
+<tr class="even">
+<td style="font-family: Times New Roman;"><span data-ttu-id="a8813-232">Times New Roman</span><span class="sxs-lookup"><span data-stu-id="a8813-232">Times New Roman</span></span></td>
+<td align="left"><span data-ttu-id="a8813-233">Normal, kursiv, fett, fett kursiv</span><span class="sxs-lookup"><span data-stu-id="a8813-233">Regular, Italic, Bold, Bold Italic</span></span></td>
+<td align="left"><span data-ttu-id="a8813-234">Ältere Schriftart mit Unterstützung für europäische Schriften (Lateinisch, Griechisch, Kyrillisch, Arabisch, Armenisch, Hebräisch).</span><span class="sxs-lookup"><span data-stu-id="a8813-234">Legacy font that supports European scripts (Latin, Greek, Cyrillic, Arabic, Armenian, Hebrew).</span></span></td>
+</tr>
 
->[!NOTE]
-><span data-ttu-id="2df67-181">Die meisten Ebenen der Typhierarchie sind in XAML als [statische Ressourcen](https://msdn.microsoft.com/en-us/library/windows/apps/Mt187274.aspx#the_xaml_type_ramp) verfügbar, die der `*TextBlockStyle`-Benennungskonvention folgen (z.B.: `HeaderTextBlockStyle`).</span><span class="sxs-lookup"><span data-stu-id="2df67-181">Most levels of the ramp are available as XAML [static resources](https://msdn.microsoft.com/en-us/library/windows/apps/Mt187274.aspx#the_xaml_type_ramp) that follow the `*TextBlockStyle` naming convention (ex: `HeaderTextBlockStyle`).</span></span>
+</tbody>
+</table>
 
+### <a name="symbols-and-icons"></a><span data-ttu-id="a8813-235">Symbole</span><span class="sxs-lookup"><span data-stu-id="a8813-235">Symbols and icons</span></span>
 
-<!--
-<div class="microsoft-internal-note">
-SubtitleAlt, BaseAlt, and CaptionAlt are not currently included. You can create the styles in your own app following the code snippets in the above link. Also note that XAML does not currently match the line height exactly.
-</div>
--->
+<table>
+<thead>
+<tr class="header">
+<th align="left"><span data-ttu-id="a8813-236">Schriftfamilie</span><span class="sxs-lookup"><span data-stu-id="a8813-236">Font-family</span></span></th>
+<th align="left"><span data-ttu-id="a8813-237">Stile</span><span class="sxs-lookup"><span data-stu-id="a8813-237">Styles</span></span></th>
+<th align="left"><span data-ttu-id="a8813-238">Hinweise</span><span class="sxs-lookup"><span data-stu-id="a8813-238">Notes</span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><span data-ttu-id="a8813-239">Segoe MDL2-Ressourcen</span><span class="sxs-lookup"><span data-stu-id="a8813-239">Segoe MDL2 Assets</span></span></td>
+<td align="left"><span data-ttu-id="a8813-240">Regular</span><span class="sxs-lookup"><span data-stu-id="a8813-240">Regular</span></span></td>
+<td align="left"><span data-ttu-id="a8813-241">Benutzeroberflächen-Schriftart für App-Symbole.</span><span class="sxs-lookup"><span data-stu-id="a8813-241">User-interface font for app icons.</span></span> <span data-ttu-id="a8813-242">Weitere Informationen finden Sie im Artikel <a href="segoe-ui-symbol-font.md">Segoe MDL2 Assets</a>.</span><span class="sxs-lookup"><span data-stu-id="a8813-242">For more info, see the <a href="segoe-ui-symbol-font.md">Segoe MDL2 assets article</a>.</span></span></td>
+</tr>
+<tr class="even">
+<td align="left"><span data-ttu-id="a8813-243">Segoe UI-Emoji</span><span class="sxs-lookup"><span data-stu-id="a8813-243">Segoe UI Emoji</span></span></td>
+<td align="left"><span data-ttu-id="a8813-244">Regular</span><span class="sxs-lookup"><span data-stu-id="a8813-244">Regular</span></span></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left"><span data-ttu-id="a8813-245">Segoe UI Symbol</span><span class="sxs-lookup"><span data-stu-id="a8813-245">Segoe UI Symbol</span></span></td>
+<td align="left"><span data-ttu-id="a8813-246">Regular</span><span class="sxs-lookup"><span data-stu-id="a8813-246">Regular</span></span></td>
+<td align="left"><span data-ttu-id="a8813-247">Fallbackschriftart für Symbole</span><span class="sxs-lookup"><span data-stu-id="a8813-247">Fallback font for symbols</span></span></td>
+</tr>
+</tbody>
+</table>
 
+## <a name="related-articles"></a><span data-ttu-id="a8813-248">Verwandte Artikel</span><span class="sxs-lookup"><span data-stu-id="a8813-248">Related articles</span></span>
 
-## <a name="primary-and-secondary-text"></a><span data-ttu-id="2df67-182">Primärer und sekundärer Text</span><span class="sxs-lookup"><span data-stu-id="2df67-182">Primary and secondary text</span></span>
-
-<span data-ttu-id="2df67-183">Zur Erweiterung der Typhierarchie kann die Deckkraft des sekundären Texts auf 60Prozent festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="2df67-183">To create additional hierarchy beyond the type ramp, set secondary text to 60% opacity.</span></span> <span data-ttu-id="2df67-184">In der [Farbschemapalette](color.md#themes) wird dafür „BaseMedium“ verwendet.</span><span class="sxs-lookup"><span data-stu-id="2df67-184">In the [theming color palette](color.md#themes), you would use BaseMedium.</span></span> <span data-ttu-id="2df67-185">Der primäre Text muss immer eine Deckkraft von 100Prozent (BaseHigh) besitzen.</span><span class="sxs-lookup"><span data-stu-id="2df67-185">Primary text should always be at 100% opacity, or BaseHigh.</span></span>
-
-<!-- Need new images
-![Two phone apps using SubtitleAlt](images/type-ramp-example-2.png)
-Recommended use of SubtitleAlt. Also note the primary and secondary text usage in list items.
-
-![Two phone apps using CaptionAlt](images/type-ramp-example-1.png)
-Recommended use of CaptionAlt.
--->
-
-## <a name="all-caps-titles"></a><span data-ttu-id="2df67-186">Titel in Großbuchstaben</span><span class="sxs-lookup"><span data-stu-id="2df67-186">All caps titles</span></span>
-
-<span data-ttu-id="2df67-187">Bestimmte Seitentitel sollten in GROSSBUCHSTABEN angegeben werden, um die Hierarchie um eine weitere Dimension zu erweitern.</span><span class="sxs-lookup"><span data-stu-id="2df67-187">Certain page titles should be in ALL CAPS to add yet another dimension of hierarchy.</span></span> <span data-ttu-id="2df67-188">Diese Titel müssen „BaseAlt“ und einen Zeichenabstand von 0,075em verwenden.</span><span class="sxs-lookup"><span data-stu-id="2df67-188">These titles should use BaseAlt with the character spacing set to 75 thousandths of an em.</span></span> <span data-ttu-id="2df67-189">Dies kann auch bei der App-Navigation hilfreich sein.</span><span class="sxs-lookup"><span data-stu-id="2df67-189">This treatment may also be used to help with app navigation.</span></span>
-
-<span data-ttu-id="2df67-190">In bestimmten Sprachen ändert sich durch eine Großschreibung jedoch die Bedeutung von Eigennamen. Daher dürfen auf Namen oder Benutzereingaben basierende Seitentitel *nicht* in Großbuchstaben umgewandelt werden.</span><span class="sxs-lookup"><span data-stu-id="2df67-190">However, proper names change their meaning when capitalized in certain languages, so any page titles based on names or user input should *not* be converted to all caps.</span></span>
-
-
-<!-- Need new images
-![Shows several apps where they should and should not use all caps](images/all-caps.png)
-Green shows where all caps should be used. Red shows where it should not.
--->
-
-## <a name="dos-and-donts"></a><span data-ttu-id="2df67-191">Empfohlene und nicht empfohlene Vorgehensweisen</span><span class="sxs-lookup"><span data-stu-id="2df67-191">Do’s and don’ts</span></span>
-* <span data-ttu-id="2df67-192">Verwenden Sie „Body“ für die meisten Texte.</span><span class="sxs-lookup"><span data-stu-id="2df67-192">Use Body for most text</span></span>
-* <span data-ttu-id="2df67-193">Verwenden Sie „Base“ für Titel mit begrenztem Platz.</span><span class="sxs-lookup"><span data-stu-id="2df67-193">Use Base for titles when space is constrained</span></span>
-* <span data-ttu-id="2df67-194">Integrieren Sie „SubtitleAlt“, um durch Hervorhebung des übergeordneten Inhalts einen Kontrast und eine Hierarchie zu schaffen.</span><span class="sxs-lookup"><span data-stu-id="2df67-194">Incorporate SubtitleAlt to create contrast and hierarchy by emphasizing top level content</span></span>
-* <span data-ttu-id="2df67-195">Verwenden Sie „Caption“ nicht für lange Zeichenfolgen oder Hauptaktionen.</span><span class="sxs-lookup"><span data-stu-id="2df67-195">Don’t use Caption for long strings or any primary action</span></span>
-* <span data-ttu-id="2df67-196">Verwenden Sie „Header“ oder „Subheader“ nicht, wenn der Text umgebrochen werden muss.</span><span class="sxs-lookup"><span data-stu-id="2df67-196">Don’t use Header or Subheader if text needs to wrap</span></span>
-* <span data-ttu-id="2df67-197">Verwenden Sie „Subtitle“ und „SubtitleAlt“ nicht auf der gleichen Seite.</span><span class="sxs-lookup"><span data-stu-id="2df67-197">Don’t combine Subtitle and SubtitleAlt on the same page</span></span>
-
-
-## <a name="related-articles"></a><span data-ttu-id="2df67-198">Verwandte Artikel</span><span class="sxs-lookup"><span data-stu-id="2df67-198">Related articles</span></span>
-
-* [<span data-ttu-id="2df67-199">Textsteuerelemente</span><span class="sxs-lookup"><span data-stu-id="2df67-199">Text controls</span></span>](../controls-and-patterns/text-controls.md)
-* [<span data-ttu-id="2df67-200">Schriftarten</span><span class="sxs-lookup"><span data-stu-id="2df67-200">Fonts</span></span>](../style/fonts.md)
-* [<span data-ttu-id="2df67-201">Segoe MDL2-Symbole</span><span class="sxs-lookup"><span data-stu-id="2df67-201">Segoe MDL2 icons</span></span>](segoe-ui-symbol-font.md)
+* [<span data-ttu-id="a8813-249">Textsteuerelemente</span><span class="sxs-lookup"><span data-stu-id="a8813-249">Text controls</span></span>](../controls-and-patterns/text-controls.md)
+* [<span data-ttu-id="a8813-250">XAML-Designressourcen</span><span class="sxs-lookup"><span data-stu-id="a8813-250">XAML theme resources</span></span>](../controls-and-patterns/xaml-theme-resources.md#the-xaml-type-ramp)
+* [<span data-ttu-id="a8813-251">XAML-Formatvorlagen</span><span class="sxs-lookup"><span data-stu-id="a8813-251">XAML styles</span></span>](../controls-and-patterns/xaml-styles.md)
+* [<span data-ttu-id="a8813-252">Microsoft Typografie</span><span class="sxs-lookup"><span data-stu-id="a8813-252">Microsoft Typography</span></span>](https://docs.microsoft.com/typography/)

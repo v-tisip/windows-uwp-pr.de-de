@@ -1,27 +1,27 @@
 ---
 author: mtoepke
-title: Exemplarische Vorgehensweise Portieren einer einfachen Direct3D 9-App zu DirectX 11 und zur universellen Windows-Plattform (UWP)
-description: "In dieser Portierungsübung wird veranschaulicht, wie Sie ein einfaches Renderingframework von Direct3D 9 auf Direct3D 11 und die universelle Windows-Plattform (UWP) umstellen."
+title: Exemplarische Vorgehensweise -- Portieren von Direct3D9 zu DirectX11 und UWP
+description: In dieser Portierungsübung wird veranschaulicht, wie Sie ein einfaches Renderingframework von Direct3D9 auf Direct3D11 und die universelle Windows-Plattform (UWP) umstellen.
 ms.assetid: d4467e1f-929b-a4b8-b233-e142a8714c96
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Spiele, Directx, Port, direct3d 9, direct3d 11"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1e3f9b7fbfaa110661ebb111c60d0089757dc885
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP, Spiele, Directx, Port, direct3d 9, direct3d 11
+ms.localizationpriority: medium
+ms.openlocfilehash: 97cb8341497ad72ab6b4b4f50a7cfbd7bdb4afb7
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1653099"
 ---
+# <a name="walkthrough-port-a-simple-direct3d-9-app-to-directx-11-and-universal-windows-platform-uwp"></a><span data-ttu-id="b3127-104">Exemplarische Vorgehensweise Portieren einer einfachen Direct3D 9-App zu DirectX 11 und zur universellen Windows-Plattform (UWP)</span><span class="sxs-lookup"><span data-stu-id="b3127-104">Walkthrough: Port a simple Direct3D 9 app to DirectX 11 and Universal Windows Platform (UWP)</span></span>
 
-# <a name="walkthrough-port-a-simple-direct3d-9-app-to-directx-11-and-universal-windows-platform-uwp"></a>Exemplarische Vorgehensweise Portieren einer einfachen Direct3D 9-App zu DirectX 11 und zur universellen Windows-Plattform (UWP)
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
-
-In dieser Portierungsübung wird veranschaulicht, wie Sie ein einfaches Renderingframework von Direct3D 9 auf Direct3D 11 und die universelle Windows-Plattform (UWP) umstellen.
+<span data-ttu-id="b3127-105">In dieser Portierungsübung wird veranschaulicht, wie Sie ein einfaches Renderingframework von Direct3D9 auf Direct3D11 und die universelle Windows-Plattform (UWP) umstellen.</span><span class="sxs-lookup"><span data-stu-id="b3127-105">This porting exercise shows how to bring a simple rendering framework from Direct3D 9 to Direct3D 11 and Universal Windows Platform (UWP).</span></span>
 ## 
 <table>
 <colgroup>
@@ -30,62 +30,61 @@ In dieser Portierungsübung wird veranschaulicht, wie Sie ein einfaches Renderin
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Thema</th>
-<th align="left">Beschreibung</th>
+<th align="left"><span data-ttu-id="b3127-106">Thema</span><span class="sxs-lookup"><span data-stu-id="b3127-106">Topic</span></span></th>
+<th align="left"><span data-ttu-id="b3127-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="b3127-107">Description</span></span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Initialisieren von Direct3D 11](simple-port-from-direct3d-9-to-11-1-part-1--initializing-direct3d.md)</p></td>
-<td align="left"><p>Hier wird veranschaulicht, wie Sie Direct3D 9-Initialisierungscode in Direct3D 11 konvertieren, und Sie erfahren, wie Sie Handles zum Direct3D-Gerät und zum Gerätekontext abrufen und DXGI zum Einrichten einer Swapchain verwenden.</p></td>
+<td align="left"><p><a href="simple-port-from-direct3d-9-to-11-1-part-1--initializing-direct3d.md"><span data-ttu-id="b3127-108">Initialisieren von Direct3D11</span><span class="sxs-lookup"><span data-stu-id="b3127-108">Initialize Direct3D 11</span></span></a></p></td>
+<td align="left"><p><span data-ttu-id="b3127-109">Hier wird veranschaulicht, wie Sie Direct3D 9-Initialisierungscode in Direct3D 11 konvertieren, und Sie erfahren, wie Sie Handles zum Direct3D-Gerät und zum Gerätekontext abrufen und DXGI zum Einrichten einer Swapchain verwenden.</span><span class="sxs-lookup"><span data-stu-id="b3127-109">Shows how to convert Direct3D 9 initialization code to Direct3D 11, including how to get handles to the Direct3D device and the device context and how to use DXGI to set up a swap chain.</span></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Konvertieren des Renderingframeworks](simple-port-from-direct3d-9-to-11-1-part-2--rendering.md)</p></td>
-<td align="left"><p>Hier wird veranschaulicht, wie Sie ein einfaches Renderingframework von Direct3D 9 in Direct3D 11 konvertieren. Sie erfahren, wie Sie Geometriepuffer portieren, HLSL-Shaderprogramme kompilieren und laden und die Renderkette in Direct3D 11 implementieren.</p></td>
+<td align="left"><p><a href="simple-port-from-direct3d-9-to-11-1-part-2--rendering.md"><span data-ttu-id="b3127-110">Konvertieren des Renderingframeworks</span><span class="sxs-lookup"><span data-stu-id="b3127-110">Convert the rendering framework</span></span></a></p></td>
+<td align="left"><p><span data-ttu-id="b3127-111">Hier wird veranschaulicht, wie Sie ein einfaches Renderingframework von Direct3D9 in Direct3D11 konvertieren. Sie erfahren, wie Sie Geometriepuffer portieren, HLSL-Shaderprogramme kompilieren und laden und die Renderkette in Direct3D11 implementieren.</span><span class="sxs-lookup"><span data-stu-id="b3127-111">Shows how to convert a simple rendering framework from Direct3D 9 to Direct3D 11, including how to port geometry buffers, how to compile and load HLSL shader programs, and how to implement the rendering chain in Direct3D 11.</span></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Portieren der Spielschleife](simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md)</p></td>
-<td align="left"><p>In diesem Thema wird veranschaulicht, wie Sie ein Fenster für ein UWP-Spiel (Universelle Windows-Plattform) implementieren und die Spielschleife übertragen. Außerdem wird die Erstellung von [<strong>IFrameworkView</strong>] (https://msdn.microsoft.com/library/windows/apps/hh700478) zum Steuern der [<strong>CoreWindow</strong>]-Vollbildansicht (https://msdn.microsoft.com/library/windows/apps/br208225) erläutert.</p></td>
+<td align="left"><p><a href="simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md"><span data-ttu-id="b3127-112">Portieren der Spielschleife</span><span class="sxs-lookup"><span data-stu-id="b3127-112">Port the game loop</span></span></a></p></td>
+<td align="left"><p><span data-ttu-id="b3127-113">In diesem Thema wird veranschaulicht, wie Sie ein Fenster für ein UWP-Spiel (Universelle Windows-Plattform) implementieren und die Spielschleife übertragen. Außerdem wird die Erstellung eines <a href="https://msdn.microsoft.com/library/windows/apps/hh700478"><strong>IFrameworkView</strong></a>-Elements zum Steuern eines <a href="https://msdn.microsoft.com/library/windows/apps/br208225"><strong>CoreWindow</strong></a>-Vollbilds erläutert.</span><span class="sxs-lookup"><span data-stu-id="b3127-113">Shows how to implement a window for a UWP game and how to bring over the game loop, including how to build an <a href="https://msdn.microsoft.com/library/windows/apps/hh700478"><strong>IFrameworkView</strong></a> to control a full-screen <a href="https://msdn.microsoft.com/library/windows/apps/br208225"><strong>CoreWindow</strong></a>.</span></span></p></td>
 </tr>
 </tbody>
 </table>
 
  
 
-Es werden zwei Codepfade durchgegangen, mit denen jeweils die gleiche grundlegende Grafikaufgabe durchgeführt wird: das Anzeigen eines sich drehenden Würfels mit Vertexschattierung. In beiden Fällen wird mit dem Code der folgende Prozess abgedeckt:
+<span data-ttu-id="b3127-114">Es werden zwei Codepfade durchgegangen, mit denen jeweils die gleiche grundlegende Grafikaufgabe durchgeführt wird: das Anzeigen eines sich drehenden Würfels mit Vertexschattierung.</span><span class="sxs-lookup"><span data-stu-id="b3127-114">This topic walks through two code paths that perform the same basic graphics task: display a rotating vertex-shaded cube.</span></span> <span data-ttu-id="b3127-115">In beiden Fällen wird mit dem Code der folgende Prozess abgedeckt:</span><span class="sxs-lookup"><span data-stu-id="b3127-115">In both cases, the code covers the following process:</span></span>
 
-1.  Erstellen eines Direct3D-Geräts und einer Swapchain
-2.  Erstellen eines Vertexpuffers und eines Indexpuffers zum Darstellen eines farbigen Würfelgitters
-3.  Erstellen eines Vertexshaders, mit dem Vertizes in Bildschirmbereiche umgewandelt werden, eines Pixelshaders, mit dem Farbwerte vermischt werden, Kompilieren der Shader und Laden der Shader als Direct3D-Ressourcen
-4.  Implementieren der Renderkette und Darstellen des gezeichneten Würfels auf dem Bildschirm
-5.  Erstellen eines Fensters, Starten einer Hauptschleife und Durchführen der Verarbeitung von Bildschirmmeldungen
+1.  <span data-ttu-id="b3127-116">Erstellen eines Direct3D-Geräts und einer Swapchain</span><span class="sxs-lookup"><span data-stu-id="b3127-116">Creating a Direct3D device and a swap chain.</span></span>
+2.  <span data-ttu-id="b3127-117">Erstellen eines Vertexpuffers und eines Indexpuffers zum Darstellen eines farbigen Würfelgitters</span><span class="sxs-lookup"><span data-stu-id="b3127-117">Creating a vertex buffer, and an index buffer, to represent a colorful cube mesh.</span></span>
+3.  <span data-ttu-id="b3127-118">Erstellen eines Vertexshaders, mit dem Vertizes in Bildschirmbereiche umgewandelt werden, eines Pixelshaders, mit dem Farbwerte vermischt werden, Kompilieren der Shader und Laden der Shader als Direct3D-Ressourcen</span><span class="sxs-lookup"><span data-stu-id="b3127-118">Creating a vertex shader that transforms vertices to screen space, a pixel shader that blends color values, compiling the shaders, and loading the shaders as Direct3D resources.</span></span>
+4.  <span data-ttu-id="b3127-119">Implementieren der Renderkette und Darstellen des gezeichneten Würfels auf dem Bildschirm</span><span class="sxs-lookup"><span data-stu-id="b3127-119">Implementing the rendering chain and presenting the drawn cube to the screen.</span></span>
+5.  <span data-ttu-id="b3127-120">Erstellen eines Fensters, Starten einer Hauptschleife und Durchführen der Verarbeitung von Bildschirmmeldungen</span><span class="sxs-lookup"><span data-stu-id="b3127-120">Creating a window, starting a main loop, and taking care of window message processing.</span></span>
 
-Nach der Durcharbeitung dieser exemplarischen Vorgehensweise sollten Ihnen die folgenden grundlegenden Unterschiede zwischen Direct3D 9 und Direct3D 11 bekannt sein:
+<span data-ttu-id="b3127-121">Nach der Durcharbeitung dieser exemplarischen Vorgehensweise sollten Ihnen die folgenden grundlegenden Unterschiede zwischen Direct3D9 und Direct3D11 bekannt sein:</span><span class="sxs-lookup"><span data-stu-id="b3127-121">Upon completing this walkthrough, you should be familiar with the following basic differences between Direct3D 9 and Direct3D 11:</span></span>
 
--   Trennung von Gerät, Gerätekontext und Grafikinfrastruktur
--   Kompilierungsprozess für Shader und Laden von Shaderbytecode zur Laufzeit
--   Konfigurieren von Daten pro Vertex für den Eingabeassemblerzustand
--   Verwenden eines [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)-Elements zum Erstellen einer CoreWindow-Ansicht
+-   <span data-ttu-id="b3127-122">Trennung von Gerät, Gerätekontext und Grafikinfrastruktur</span><span class="sxs-lookup"><span data-stu-id="b3127-122">The separation of device, device context, and graphics infrastructure.</span></span>
+-   <span data-ttu-id="b3127-123">Kompilierungsprozess für Shader und Laden von Shaderbytecode zur Laufzeit</span><span class="sxs-lookup"><span data-stu-id="b3127-123">The process of compiling shaders, and loading shader bytecode at runtime.</span></span>
+-   <span data-ttu-id="b3127-124">Konfigurieren von Daten pro Vertex für den Eingabeassemblerzustand</span><span class="sxs-lookup"><span data-stu-id="b3127-124">How to configure per-vertex data for the Input Assembler (IA) stage.</span></span>
+-   <span data-ttu-id="b3127-125">Verwenden eines [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)-Elements zum Erstellen einer CoreWindow-Ansicht</span><span class="sxs-lookup"><span data-stu-id="b3127-125">How to use an [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478) to create a CoreWindow view.</span></span>
 
-Beachten Sie, dass in dieser exemplarischen Vorgehensweise der Einfachheit halber [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) verwendet wird. Die XAML-Interoperabilität wird nicht behandelt.
+<span data-ttu-id="b3127-126">Beachten Sie, dass in dieser exemplarischen Vorgehensweise der Einfachheit halber [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) verwendet wird. Die XAML-Interoperabilität wird nicht behandelt.</span><span class="sxs-lookup"><span data-stu-id="b3127-126">Note that this walkthrough uses [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) for simplicity, and does not cover XAML interop.</span></span>
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a><span data-ttu-id="b3127-127">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="b3127-127">Prerequisites</span></span>
 
 
-Führen Sie die Schritte unter [Vorbereiten der Entwicklungsumgebung für die Entwicklung von UWP-DirectX-Spielen](prepare-your-dev-environment-for-windows-store-directx-game-development.md) aus. Sie müssen noch keine Vorlage laden, aber Sie benötigen Microsoft Visual Studio 2015, um die Codebeispiele für diese exemplarische Vorgehensweise zu laden.
+<span data-ttu-id="b3127-128">Führen Sie die Schritte unter [Vorbereiten der Entwicklungsumgebung für die Entwicklung von UWP-DirectX-Spielen](prepare-your-dev-environment-for-windows-store-directx-game-development.md) aus.</span><span class="sxs-lookup"><span data-stu-id="b3127-128">You should [Prepare your dev environment for UWP DirectX game development](prepare-your-dev-environment-for-windows-store-directx-game-development.md).</span></span> <span data-ttu-id="b3127-129">Sie müssen noch keine Vorlage laden, aber Sie benötigen Microsoft Visual Studio 2015, um die Codebeispiele für diese exemplarische Vorgehensweise zu laden.</span><span class="sxs-lookup"><span data-stu-id="b3127-129">You don't need a template yet, but you'll need Microsoft Visual Studio 2015 to load the code samples for this walkthrough.</span></span>
 
-Lesen Sie sich die Informationen unter [Konzepte und Aspekte der Portierung](porting-considerations.md) durch, um ein besseres Verständnis der in dieser exemplarischen Vorgehensweise verwendeten Programmierkonzepte für DirectX 11 und UWP zu entwickeln.
+<span data-ttu-id="b3127-130">Lesen Sie sich die Informationen unter [Konzepte und Aspekte der Portierung](porting-considerations.md) durch, um ein besseres Verständnis der in dieser exemplarischen Vorgehensweise verwendeten Programmierkonzepte für DirectX11 und UWP zu entwickeln.</span><span class="sxs-lookup"><span data-stu-id="b3127-130">Visit [Porting concepts and considerations](porting-considerations.md) to gain a better understanding of the DirectX 11 and UWP programming concepts shown in this walkthrough.</span></span>
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a><span data-ttu-id="b3127-131">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="b3127-131">Related topics</span></span>
 
-**Direct3D**
+**<span data-ttu-id="b3127-132">Direct3D</span><span class="sxs-lookup"><span data-stu-id="b3127-132">Direct3D</span></span>**
 
-* [Schreiben von HLSL-Shadern in Direct3D 9](https://msdn.microsoft.com/library/windows/desktop/bb944006)
-* [DirectX-Spielprojektvorlagen](user-interface.md)
+* [<span data-ttu-id="b3127-133">Schreiben von HLSL-Shadern in Direct3D9</span><span class="sxs-lookup"><span data-stu-id="b3127-133">Writing HLSL Shaders in Direct3D 9</span></span>](https://msdn.microsoft.com/library/windows/desktop/bb944006)
+* [<span data-ttu-id="b3127-134">DirectX-Spielprojektvorlagen</span><span class="sxs-lookup"><span data-stu-id="b3127-134">DirectX game project templates</span></span>](user-interface.md)
 
-**Windows Store**
+**<span data-ttu-id="b3127-135">Microsoft Store</span><span class="sxs-lookup"><span data-stu-id="b3127-135">Microsoft Store</span></span>**
 
-* [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)
-* [**Handle to Object Operator (^)**](https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx)
-
+* [**<span data-ttu-id="b3127-136">Microsoft::WRL::ComPtr</span><span class="sxs-lookup"><span data-stu-id="b3127-136">Microsoft::WRL::ComPtr</span></span>**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)
+* [**<span data-ttu-id="b3127-137">Handle to Object Operator (^)</span><span class="sxs-lookup"><span data-stu-id="b3127-137">Handle to Object Operator (^)</span></span>**](https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx)
 

@@ -1,0 +1,120 @@
+---
+author: mcleanbyron
+description: Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um Xbox Live gleichzeitige Nutzungsdaten abzurufen.
+title: Abrufen von Xbox Live gleichzeitigen Nutzungsdaten
+ms.author: mcleans
+ms.date: 04/16/2018
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows10, Uwp, Store-Diensten, Microsoft Store-Analyse-API, Xbox Live-Analyse, gleichzeitige Nutzung
+ms.localizationpriority: medium
+ms.openlocfilehash: b739c9ac3ce9fe4501ecaa1071df4fd3901484ab
+ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/30/2018
+ms.locfileid: "1816245"
+---
+# <a name="get-xbox-live-concurrent-usage-data"></a><span data-ttu-id="340cd-104">Abrufen von Xbox Live gleichzeitigen Nutzungsdaten</span><span class="sxs-lookup"><span data-stu-id="340cd-104">Get Xbox Live concurrent usage data</span></span>
+
+
+<span data-ttu-id="340cd-105">Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um fast in Echtzeit die Nutzungsdaten (mit 5-15-Minuten-Latenz) über die durchschnittliche Anzahl der Kunden abzurufen, die Ihr [Xbox Live-fähiges Spiel](../xbox-live/index.md) jede Minute, Stunde oder Tag während eines angegebenen Zeitraums spielen.</span><span class="sxs-lookup"><span data-stu-id="340cd-105">Use this method in the Microsoft Store analytics API to get near real-time usage data (with 5-15 minutes latency) about the average number of customers playing your [Xbox Live-enabled game](../xbox-live/index.md) every minute, hour, or day during a specified time range.</span></span> <span data-ttu-id="340cd-106">Diese Informationen sind auch im [Xbox Analysebericht](../publish/xbox-analytics-report.md) im Windows Dev Center-Dashboard verfügbar.</span><span class="sxs-lookup"><span data-stu-id="340cd-106">This information is also available in the [Xbox analytics report](../publish/xbox-analytics-report.md) in the Windows Dev Center dashboard.</span></span>
+
+> [!IMPORTANT]
+> <span data-ttu-id="340cd-107">Diese Methode unterstützt derzeit nur Xbox Live-fähige Spiele, die von [Microsoft Partnern](../xbox-live/developer-program-overview.md#microsoft-partners) veröffentlicht werden oder die mithilfe des [ID@Xbox Programms](../xbox-live/developer-program-overview.md#id) eingereicht wurden.</span><span class="sxs-lookup"><span data-stu-id="340cd-107">This method currently only supports Xbox Live-enabled games that are published by [Microsoft partners](../xbox-live/developer-program-overview.md#microsoft-partners) or that are submitted via the [ID@Xbox program](../xbox-live/developer-program-overview.md#id).</span></span> <span data-ttu-id="340cd-108">Es gibt keine Daten für Spiele zurück, die mithilfe des [Xbox Live Creators-Programms](../xbox-live/developer-program-overview.md#xbox-live-creators-program) eingereicht wurden.</span><span class="sxs-lookup"><span data-stu-id="340cd-108">It does not return data for games that were submitted via the [Xbox Live Creators Program](../xbox-live/developer-program-overview.md#xbox-live-creators-program).</span></span>
+
+## <a name="prerequisites"></a><span data-ttu-id="340cd-109">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="340cd-109">Prerequisites</span></span>
+
+<span data-ttu-id="340cd-110">Um diese Methode zu verwenden, sind die folgenden Schritte erforderlich:</span><span class="sxs-lookup"><span data-stu-id="340cd-110">To use this method, you need to first do the following:</span></span>
+
+* <span data-ttu-id="340cd-111">Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](access-analytics-data-using-windows-store-services.md#prerequisites) für die Microsoft Store-Analyse-API.</span><span class="sxs-lookup"><span data-stu-id="340cd-111">If you have not done so already, complete all the [prerequisites](access-analytics-data-using-windows-store-services.md#prerequisites) for the Microsoft Store analytics API.</span></span>
+* <span data-ttu-id="340cd-112">[Rufen Sie ein Azure AD-Zugriffstoken ab](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="340cd-112">[Obtain an Azure AD access token](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) to use in the request header for this method.</span></span> <span data-ttu-id="340cd-113">Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60 Minuten lang verwenden, bevor es abläuft.</span><span class="sxs-lookup"><span data-stu-id="340cd-113">After you obtain an access token, you have 60 minutes to use it before it expires.</span></span> <span data-ttu-id="340cd-114">Wenn das Token abgelaufen ist, können Sie ein neues abrufen.</span><span class="sxs-lookup"><span data-stu-id="340cd-114">After the token expires, you can obtain a new one.</span></span>
+
+## <a name="request"></a><span data-ttu-id="340cd-115">Anforderung</span><span class="sxs-lookup"><span data-stu-id="340cd-115">Request</span></span>
+
+
+### <a name="request-syntax"></a><span data-ttu-id="340cd-116">Anforderungssyntax</span><span class="sxs-lookup"><span data-stu-id="340cd-116">Request syntax</span></span>
+
+| <span data-ttu-id="340cd-117">Methode</span><span class="sxs-lookup"><span data-stu-id="340cd-117">Method</span></span> | <span data-ttu-id="340cd-118">Anforderungs-URI</span><span class="sxs-lookup"><span data-stu-id="340cd-118">Request URI</span></span>       |
+|--------|----------------------|
+| <span data-ttu-id="340cd-119">GET</span><span class="sxs-lookup"><span data-stu-id="340cd-119">GET</span></span>    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/gameanalytics``` |
+
+
+### <a name="request-header"></a><span data-ttu-id="340cd-120">Anforderungsheader</span><span class="sxs-lookup"><span data-stu-id="340cd-120">Request header</span></span>
+
+| <span data-ttu-id="340cd-121">Header</span><span class="sxs-lookup"><span data-stu-id="340cd-121">Header</span></span>        | <span data-ttu-id="340cd-122">Typ</span><span class="sxs-lookup"><span data-stu-id="340cd-122">Type</span></span>   | <span data-ttu-id="340cd-123">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="340cd-123">Description</span></span>                                                                 |
+|---------------|--------|-----------------------------------------------------------------------------|
+| <span data-ttu-id="340cd-124">Autorisierung</span><span class="sxs-lookup"><span data-stu-id="340cd-124">Authorization</span></span> | <span data-ttu-id="340cd-125">String</span><span class="sxs-lookup"><span data-stu-id="340cd-125">string</span></span> | <span data-ttu-id="340cd-126">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="340cd-126">Required.</span></span> <span data-ttu-id="340cd-127">Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;.</span><span class="sxs-lookup"><span data-stu-id="340cd-127">The Azure AD access token in the form **Bearer** &lt;*token*&gt;.</span></span> |
+
+
+### <a name="request-parameters"></a><span data-ttu-id="340cd-128">Anforderungsparameter</span><span class="sxs-lookup"><span data-stu-id="340cd-128">Request parameters</span></span>
+
+
+| <span data-ttu-id="340cd-129">Parameter</span><span class="sxs-lookup"><span data-stu-id="340cd-129">Parameter</span></span>        | <span data-ttu-id="340cd-130">Typ</span><span class="sxs-lookup"><span data-stu-id="340cd-130">Type</span></span>   |  <span data-ttu-id="340cd-131">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="340cd-131">Description</span></span>      |  <span data-ttu-id="340cd-132">Erforderlich</span><span class="sxs-lookup"><span data-stu-id="340cd-132">Required</span></span>  
+|---------------|--------|---------------|------|
+| <span data-ttu-id="340cd-133">applicationId</span><span class="sxs-lookup"><span data-stu-id="340cd-133">applicationId</span></span> | <span data-ttu-id="340cd-134">String</span><span class="sxs-lookup"><span data-stu-id="340cd-134">string</span></span> | <span data-ttu-id="340cd-135">Die [Store-ID](in-app-purchases-and-trials.md#store-ids) des Spiels, für das Sie die Xbox Live gleichzeitigen Nutzungsdaten abrufen möchten.</span><span class="sxs-lookup"><span data-stu-id="340cd-135">The [Store ID](in-app-purchases-and-trials.md#store-ids) of the game for which you want to retrieve Xbox Live concurrent usage data.</span></span>  |  <span data-ttu-id="340cd-136">Ja</span><span class="sxs-lookup"><span data-stu-id="340cd-136">Yes</span></span>  |
+| <span data-ttu-id="340cd-137">metricType</span><span class="sxs-lookup"><span data-stu-id="340cd-137">metricType</span></span> | <span data-ttu-id="340cd-138">String</span><span class="sxs-lookup"><span data-stu-id="340cd-138">string</span></span> | <span data-ttu-id="340cd-139">Eine Zeichenfolge, die den Typ der abzurufenden Xbox Live Analysedaten angibt.</span><span class="sxs-lookup"><span data-stu-id="340cd-139">A string that specifies the type of Xbox Live analytics data to retrieve.</span></span> <span data-ttu-id="340cd-140">Geben Sie für diese Methode den Wert **concurrency** an.</span><span class="sxs-lookup"><span data-stu-id="340cd-140">For this method, specify the value **concurrency**.</span></span>  |  <span data-ttu-id="340cd-141">Ja</span><span class="sxs-lookup"><span data-stu-id="340cd-141">Yes</span></span>  |
+| <span data-ttu-id="340cd-142">startDate</span><span class="sxs-lookup"><span data-stu-id="340cd-142">startDate</span></span> | <span data-ttu-id="340cd-143">date</span><span class="sxs-lookup"><span data-stu-id="340cd-143">date</span></span> | <span data-ttu-id="340cd-144">Das Startdatum im Datumsbereich der gleichzeitigen Nutzungsdaten, die abgerufen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="340cd-144">The start date in the date range of concurrent usage data to retrieve.</span></span> <span data-ttu-id="340cd-145">Weitere Informationen finden Sie unter der *aggregationLevel*-Beschreibung für das Standardverhalten.</span><span class="sxs-lookup"><span data-stu-id="340cd-145">See the *aggregationLevel* description for default behavior.</span></span> |  <span data-ttu-id="340cd-146">Nein</span><span class="sxs-lookup"><span data-stu-id="340cd-146">No</span></span>  |
+| <span data-ttu-id="340cd-147">endDate</span><span class="sxs-lookup"><span data-stu-id="340cd-147">endDate</span></span> | <span data-ttu-id="340cd-148">date</span><span class="sxs-lookup"><span data-stu-id="340cd-148">date</span></span> | <span data-ttu-id="340cd-149">Das Enddatum im Datumsbereich der gleichzeitigen Nutzungsdaten, die abgerufen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="340cd-149">The end date in the date range of concurrent usage data to retrieve.</span></span> <span data-ttu-id="340cd-150">Weitere Informationen finden Sie unter der *aggregationLevel*-Beschreibung für das Standardverhalten.</span><span class="sxs-lookup"><span data-stu-id="340cd-150">See the *aggregationLevel* description for default behavior.</span></span> |  <span data-ttu-id="340cd-151">Nein</span><span class="sxs-lookup"><span data-stu-id="340cd-151">No</span></span>  |
+| <span data-ttu-id="340cd-152">aggregationLevel</span><span class="sxs-lookup"><span data-stu-id="340cd-152">aggregationLevel</span></span> | <span data-ttu-id="340cd-153">string</span><span class="sxs-lookup"><span data-stu-id="340cd-153">string</span></span> | <span data-ttu-id="340cd-154">Gibt den Zeitraum an, für den aggregierte Daten abgerufen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="340cd-154">Specifies the time range for which to retrieve aggregate data.</span></span> <span data-ttu-id="340cd-155">Dies kann eine der folgenden Zeichenfolgen sein: **minute**, **hour** oder **day**.</span><span class="sxs-lookup"><span data-stu-id="340cd-155">Can be one of the following strings: **minute**, **hour**, or **day**.</span></span> <span data-ttu-id="340cd-156">Wenn keine Angabe erfolgt, lautet der Standardwert **day**.</span><span class="sxs-lookup"><span data-stu-id="340cd-156">If unspecified, the default is **day**.</span></span> <p/><p/><span data-ttu-id="340cd-157">Wenn Sie kein *startDate* oder *endDate* angeben, ist der Antworttext standardmäßig wie folgt:</span><span class="sxs-lookup"><span data-stu-id="340cd-157">If you do not specify *startDate* or *endDate*, the response body defaults to the following:</span></span> <ul><li><span data-ttu-id="340cd-158">**minute**: Die letzten 60 Einträge an verfügbaren Daten.</span><span class="sxs-lookup"><span data-stu-id="340cd-158">**minute**: The last 60 records of available data.</span></span></li><li><span data-ttu-id="340cd-159">**hour**: Die letzten 24 Einträge an verfügbaren Daten.</span><span class="sxs-lookup"><span data-stu-id="340cd-159">**hour**: The last 24 records of available data.</span></span></li><li><span data-ttu-id="340cd-160">**day**: Die letzten 7 Einträge an verfügbaren Daten.</span><span class="sxs-lookup"><span data-stu-id="340cd-160">**day**: The last 7 records of available data.</span></span></li></ul><p/><span data-ttu-id="340cd-161">Die folgenden Aggregationsebenen haben Größenbegrenzungen hinsichtlich der Anzahl von Datensätzen, die zurückgegeben werden können.</span><span class="sxs-lookup"><span data-stu-id="340cd-161">The following aggregation levels have size limits on the number of records that can be returned.</span></span> <span data-ttu-id="340cd-162">Die Datensätze werden abgeschnitten, wenn die angeforderte Zeitspanne zu groß ist.</span><span class="sxs-lookup"><span data-stu-id="340cd-162">The records will be truncated if the requested time span is too large.</span></span> <ul><li><span data-ttu-id="340cd-163">**minute**: Bis zu 1440 Datensätze (24 Stunden an Daten).</span><span class="sxs-lookup"><span data-stu-id="340cd-163">**minute**: Up to 1440 records (24 hours of data).</span></span></li><li><span data-ttu-id="340cd-164">**hour**: Bis zu 720 Datensätze (30 Tage an Daten).</span><span class="sxs-lookup"><span data-stu-id="340cd-164">**hour**: Up to 720 records (30 days of data).</span></span></li><li><span data-ttu-id="340cd-165">**day**: Bis zu 60 Datensätze (60 Tage an Daten).</span><span class="sxs-lookup"><span data-stu-id="340cd-165">**day**: Up to 60 records (60 days of data).</span></span></li></ul>  |  <span data-ttu-id="340cd-166">Nein</span><span class="sxs-lookup"><span data-stu-id="340cd-166">No</span></span>  |
+
+
+### <a name="request-example"></a><span data-ttu-id="340cd-167">Anforderungsbeispiel</span><span class="sxs-lookup"><span data-stu-id="340cd-167">Request example</span></span>
+
+<span data-ttu-id="340cd-168">Das folgende Beispiel zeigt eine Anforderung zum Abrufen von gleichzeitigen Nutzungsdaten für Ihr Xbox Live-fähiges Spiel an.</span><span class="sxs-lookup"><span data-stu-id="340cd-168">The following example demonstrates a request for getting concurrent usage data for your Xbox Live-enabled game.</span></span> <span data-ttu-id="340cd-169">Diese Anforderung ruft Daten für jede Minute zwischen dem 1. Februar 2018 und 2. Februar 2018 ab.</span><span class="sxs-lookup"><span data-stu-id="340cd-169">This request retrieves data for every minute between February 1 2018 and February 2 2018.</span></span> <span data-ttu-id="340cd-170">Ersetzen Sie den *applicationId*-Wert durch die Store-ID Ihres Spiels.</span><span class="sxs-lookup"><span data-stu-id="340cd-170">Replace the *applicationId* value with the Store ID for your game.</span></span>
+
+```syntax
+GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/gameanalytics?applicationId=9NBLGGGZ5QDR&metrictype=concurrency&aggregationLevel=hour&startDate=2018-02-01&endData=2018-02-02 HTTP/1.1
+Authorization: Bearer <your access token>
+```
+
+## <a name="response"></a><span data-ttu-id="340cd-171">Antwort</span><span class="sxs-lookup"><span data-stu-id="340cd-171">Response</span></span>
+
+<span data-ttu-id="340cd-172">Der Antworttext enthält ein Array von Objekten, die jeweils einen Satz von gleichzeitigen Nutzungsdaten für eine angegebene Minute, Stunde oder Tag enthalten.</span><span class="sxs-lookup"><span data-stu-id="340cd-172">The response body contains an array of objects that each contain one set of concurrent usage data for a specified minute, hour, or day.</span></span> <span data-ttu-id="340cd-173">Jedes Objekt enthält die folgenden Werte.</span><span class="sxs-lookup"><span data-stu-id="340cd-173">Each object contains the following values.</span></span>
+
+| <span data-ttu-id="340cd-174">Wert</span><span class="sxs-lookup"><span data-stu-id="340cd-174">Value</span></span>      | <span data-ttu-id="340cd-175">Typ</span><span class="sxs-lookup"><span data-stu-id="340cd-175">Type</span></span>   | <span data-ttu-id="340cd-176">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="340cd-176">Description</span></span>                  |
+|------------|--------|-------------------------------------------------------|
+| <span data-ttu-id="340cd-177">Anzahl</span><span class="sxs-lookup"><span data-stu-id="340cd-177">Count</span></span>      | <span data-ttu-id="340cd-178">number</span><span class="sxs-lookup"><span data-stu-id="340cd-178">number</span></span>  | <span data-ttu-id="340cd-179">Die durchschnittliche Anzahl der Kunden, die Ihr Xbox Live-fähiges Spiel für die angegebene Minute, Stunde oder Tag spielen.</span><span class="sxs-lookup"><span data-stu-id="340cd-179">The average number of customers playing your Xbox Live-enabled for the specified minute, hour, or day.</span></span> <p/><p/><span data-ttu-id="340cd-180">**Hinweis:**&nbsp;&nbsp;Ein Wert von 0 gibt an, dass entweder keine gleichzeitigen Benutzer während des angegebenen Intervalls spielten, oder dass beim Sammeln von gleichzeitigen Benutzerdaten für das Spiel während des angegebenen Intervalls ein Fehler aufgetreten ist.</span><span class="sxs-lookup"><span data-stu-id="340cd-180">**Note**&nbsp;&nbsp;A value of 0 indicates either that there were no concurrent users during the specified interval, or that there was a failure while collecting concurrent user data for the game during the specified interval.</span></span> |
+| <span data-ttu-id="340cd-181">Date</span><span class="sxs-lookup"><span data-stu-id="340cd-181">Date</span></span>  | <span data-ttu-id="340cd-182">String</span><span class="sxs-lookup"><span data-stu-id="340cd-182">string</span></span> | <span data-ttu-id="340cd-183">Das Datum und Uhrzeit, die die Minute, Stunde oder Tag angeben, während dessen die gleichzeitigen Nutzungsdaten auftraten.</span><span class="sxs-lookup"><span data-stu-id="340cd-183">The date and time that specifies the minute, hour or day during which the concurrent usage data occurred.</span></span>  |
+| <span data-ttu-id="340cd-184">SeriesName</span><span class="sxs-lookup"><span data-stu-id="340cd-184">SeriesName</span></span> | <span data-ttu-id="340cd-185">String</span><span class="sxs-lookup"><span data-stu-id="340cd-185">string</span></span>    | <span data-ttu-id="340cd-186">Dies hat immer den Wert **UserConcurrency**.</span><span class="sxs-lookup"><span data-stu-id="340cd-186">This always has the value **UserConcurrency**.</span></span> |
+
+
+### <a name="response-example"></a><span data-ttu-id="340cd-187">Antwortbeispiel</span><span class="sxs-lookup"><span data-stu-id="340cd-187">Response example</span></span>
+
+<span data-ttu-id="340cd-188">Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese Anforderung mit Datenaggregation pro Minute.</span><span class="sxs-lookup"><span data-stu-id="340cd-188">The following example demonstrates an example JSON response body for this request with data aggregation by minute.</span></span>
+
+```json
+[   {
+        "Count": 418.0,
+        "Date": "2018-02-02T04:42:13.65Z",
+        "SeriesName": "UserConcurrency"
+    }, {
+        "Count": 418.0,
+        "Date": "2018-02-02T04:43:13.65Z",
+        "SeriesName": "UserConcurrency"
+    }, {
+        "Count": 415.0,
+        "Date": "2018-02-02T04:44:13.65Z",
+        "SeriesName": "UserConcurrency"
+    }, {
+        "Count": 412.0,
+        "Date": "2018-02-02T04:45:13.65Z",
+        "SeriesName": "UserConcurrency"
+    }, {
+        "Count": 414.0,
+        "Date": "2018-02-02T04:46:13.65Z",
+        "SeriesName": "UserConcurrency"
+    }
+]
+```
+
+## <a name="related-topics"></a><span data-ttu-id="340cd-189">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="340cd-189">Related topics</span></span>
+
+* [<span data-ttu-id="340cd-190">Zugreifen auf Analysedaten mit MicrosoftStore-Diensten</span><span class="sxs-lookup"><span data-stu-id="340cd-190">Access analytics data using Microsoft Store services</span></span>](access-analytics-data-using-windows-store-services.md)
+* [<span data-ttu-id="340cd-191">Abrufen von Xbox Live Analysedaten</span><span class="sxs-lookup"><span data-stu-id="340cd-191">Get Xbox Live analytics data</span></span>](get-xbox-live-analytics.md)
+* [<span data-ttu-id="340cd-192">Abrufen von Xbox Live Erfolgsdaten</span><span class="sxs-lookup"><span data-stu-id="340cd-192">Get Xbox Live achievements data</span></span>](get-xbox-live-achievements-data.md)
+* [<span data-ttu-id="340cd-193">Abrufen von Xbox Live Integritätsdaten</span><span class="sxs-lookup"><span data-stu-id="340cd-193">Get Xbox Live health data</span></span>](get-xbox-live-health-data.md)
+* [<span data-ttu-id="340cd-194">Abrufen von Xbox Live Spielehubdaten</span><span class="sxs-lookup"><span data-stu-id="340cd-194">Get Xbox Live game hub data</span></span>](get-xbox-live-game-hub-data.md)
+* [<span data-ttu-id="340cd-195">Abrufen von Xbox Live Clubdaten</span><span class="sxs-lookup"><span data-stu-id="340cd-195">Get Xbox Live club data</span></span>](get-xbox-live-club-data.md)
+* [<span data-ttu-id="340cd-196">Abrufen von Xbox Live Multiplayerdaten</span><span class="sxs-lookup"><span data-stu-id="340cd-196">Get Xbox Live multiplayer data</span></span>](get-xbox-live-multiplayer-data.md)

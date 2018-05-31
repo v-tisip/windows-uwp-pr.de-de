@@ -1,6 +1,6 @@
 ---
 author: mijacobs
-description: "Tipps zum Erstellen von konsistenten, benutzerfreundlichen Apps, die auch Originalität und Kreativität zum Ausdruck bringen"
+description: Tipps zum Erstellen von konsistenten, benutzerfreundlichen Apps, die auch Originalität und Kreativität zum Ausdruck bringen
 title: Stil und Konsistenz im Gleichgewicht (UWP-App-Design)
 template: detail.hbs
 ms.author: mijacobs
@@ -15,6 +15,7 @@ ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/12/2017
+ms.locfileid: "1394199"
 ---
 # <a name="balancing-style-and-consistency"></a><span data-ttu-id="c8c9f-104">Stil und Konsistenz im Gleichgewicht</span><span class="sxs-lookup"><span data-stu-id="c8c9f-104">Balancing style and consistency</span></span>
 

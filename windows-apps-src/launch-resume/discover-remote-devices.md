@@ -1,58 +1,103 @@
 ---
 author: PatrickFarley
-title: "Ermitteln von Remotegeräten"
-description: "Erfahren Sie, wie Sie Remotegeräte über Ihre App mit Project &quot;Rome&quot; ermitteln können."
+title: Ermitteln von Remotegeräten
+description: Erfahren Sie, wie Sie Remotegeräte über Ihre App mit Project Rome ermitteln können.
 ms.assetid: 5b4231c0-5060-49e2-a577-b747e20cf633
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c655ebf4d02f0de6e07d70ac0d81e33f20388741
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.localizationpriority: medium
+ms.openlocfilehash: e5b30e9fe2fb4f3bfbec81366a920cd74a19dcec
+ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/22/2018
+ms.locfileid: "1673877"
 ---
-
-# <a name="discover-remote-devices"></a>Ermitteln von Remotegeräten
-Ihre App kann das WLAN, Bluetooth und eine Cloudverbindung verwenden, um Windows-Geräte zu ermitteln, die mit demselben Microsoft-Konto wie das ermittelnde Gerät angemeldet sind. Kommunale Geräte, die anonyme Verbindungen akzeptieren können, wie z. B. Surface Hub und Xbox One, können ebenfalls ermittelt werden. Auf den Remotegeräten muss keine spezielle Software installiert sein, damit sie erkennbar sind.
-
-> [!NOTE]
-> In diesem Handbuch wird davon ausgegangen, dass Ihnen bereits Zugriff auf das Remotesysteme-Feature gewährt wurde, indem Sie die Schritte in [Starten einer Remote-App](launch-a-remote-app.md) befolgt haben.
-
-## <a name="filter-the-set-of-discoverable-devices"></a>Filtern der Gruppe von erkennbaren Geräten
-Die Gruppe erkennbarer Geräte kann mithilfe von [**RemoteSystemWatcher**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystemWatcher) mit Filtern eingegrenzt werden. Filter können den Ermittlungstyp (lokales Netzwerk gegenüber Cloud-Verbindung), Gerätetyp (Desktop, mobiles Gerät, Xbox, Hub und Hologramm) und den Verfügbarkeitsstatus (den Status der Verfügbarkeit eines Geräts für die Verwendung von Remotesystem-Features) erkennen.
-
-Filter-Objekte müssen erstellt werden, bevor das **RemoteSystemWatcher**-Objekt initialisiert wird, da sie als Parameter an den Konstruktor übergeben werden. Der folgende Code erstellt einen Filter von jedem verfügbaren Typ und fügt sie anschließend einer Liste hinzu.
+# <a name="discover-remote-devices"></a><span data-ttu-id="6ecc8-104">Ermitteln von Remotegeräten</span><span class="sxs-lookup"><span data-stu-id="6ecc8-104">Discover remote devices</span></span>
+<span data-ttu-id="6ecc8-105">Ihre App kann die WLAN-, Bluetooth- und Cloud-Verbindung nutzen, um Windows-Geräte zu ermitteln, die mit demselben Microsoft-Konto wie das ermittelnde Gerät angemeldet sind.</span><span class="sxs-lookup"><span data-stu-id="6ecc8-105">Your app can use the wireless network, Bluetooth, and cloud connection to discover Windows devices that are signed on with the same Microsoft account as the discovering device.</span></span> <span data-ttu-id="6ecc8-106">Auf den Remotegeräten muss keine spezielle Software installiert sein, damit sie erkennbar sind.</span><span class="sxs-lookup"><span data-stu-id="6ecc8-106">The remote devices do not need to have any special software installed in order to be discoverable.</span></span>
 
 > [!NOTE]
-> Der Code in diesen Beispielen setzt voraus, dass Sie über eine `using Windows.System.RemoteSystems`-Anweisung in Ihrer Datei verfügen.
+> <span data-ttu-id="6ecc8-107">In diesem Handbuch wird davon ausgegangen, dass Ihnen bereits Zugriff auf das Remotesysteme-Feature gewährt wurde, indem Sie die Schritte in [Starten einer Remote-App](launch-a-remote-app.md) befolgt haben.</span><span class="sxs-lookup"><span data-stu-id="6ecc8-107">This guide assumes you have already been granted access to the Remote Systems feature by following the steps in [Launch a remote app](launch-a-remote-app.md).</span></span>
+
+## <a name="filter-the-set-of-discoverable-devices"></a><span data-ttu-id="6ecc8-108">Filtern der Gruppe von erkennbaren Geräten</span><span class="sxs-lookup"><span data-stu-id="6ecc8-108">Filter the set of discoverable devices</span></span>
+<span data-ttu-id="6ecc8-109">Die Gruppe der erkennbaren Geräte kann mithilfe von [**RemoteSystemWatcher**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystemWatcher) mit Filtern eingegrenzt werden.</span><span class="sxs-lookup"><span data-stu-id="6ecc8-109">You can narrow the set of discoverable devices by using a [**RemoteSystemWatcher**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystemWatcher) with filters.</span></span> <span data-ttu-id="6ecc8-110">Filter können den Ermittlungstyp (proximales gegenüber lokales Netzwerk gegenüber Cloud-Verbindung), Gerätetyp (Desktop, Mobilgerät, Xbox, Hub und Hologramm) und den Verfügbarkeitsstatus (den Status der Verfügbarkeit eines Geräts für die Verwendung von Remotesystem-Eigenschaften) erkennen.</span><span class="sxs-lookup"><span data-stu-id="6ecc8-110">Filters can detect the discovery type (proximal vs. local network vs. cloud connection), device type (desktop, mobile device, Xbox, Hub, and Holographic), and availability status (the status of a device's availability to use Remote System features).</span></span>
+
+<span data-ttu-id="6ecc8-111">Filter-Objekte müssen erstellt werden, bevor oder während das **RemoteSystemWatcher**-Objekt initialisiert wird, da sie als Parameter an den Konstruktor übergeben werden.</span><span class="sxs-lookup"><span data-stu-id="6ecc8-111">Filter objects must be constructed before or while the **RemoteSystemWatcher** object is initialized, because they are passed as a parameter into its constructor.</span></span> <span data-ttu-id="6ecc8-112">Der folgende Code erstellt einen Filter von jedem verfügbaren Typ und fügt diese anschließend einer Liste hinzu.</span><span class="sxs-lookup"><span data-stu-id="6ecc8-112">The following code creates a filter of each type available and then adds them to a list.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="6ecc8-113">Der Code in diesen Beispielen setzt voraus, dass Sie in Ihrer Datei über eine `using Windows.System.RemoteSystems`-Anweisung verfügen.</span><span class="sxs-lookup"><span data-stu-id="6ecc8-113">The code in these examples requires that you have a `using Windows.System.RemoteSystems` statement in your file.</span></span>
 
 [!code-cs[Main](./code/DiscoverDevices/MainPage.xaml.cs#SnippetMakeFilterList)]
 
-Sobald eine Liste mit [**IRemoteSystemFilter**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.IRemoteSystemFilter)-Objekten erstellt wurde, kann sie an den Konstruktor eines **RemoteSystemWatcher**übergeben werden.
+> [!TIP]
+> <span data-ttu-id="6ecc8-114">Der Filterwert „proximal“ garantiert den Grad der physischen Näherung nicht.</span><span class="sxs-lookup"><span data-stu-id="6ecc8-114">The "proximal" filter value does not guarantee the degree of physical proximity.</span></span> <span data-ttu-id="6ecc8-115">Verwenden Sie für Szenarien, für die eine zuverlässige physische Näherung erforderlich ist, den Wert [**RemoteSystemDiscoveryType.SpatiallyProximal**](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemdiscoverytype) in Ihrem Filter.</span><span class="sxs-lookup"><span data-stu-id="6ecc8-115">For scenarios that require reliable physical proximity, use the value [**RemoteSystemDiscoveryType.SpatiallyProximal**](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemdiscoverytype) in your filter.</span></span> <span data-ttu-id="6ecc8-116">Derzeit erlaubt dieser Filter nur Geräte, die von Bluetooth erkannt werden können.</span><span class="sxs-lookup"><span data-stu-id="6ecc8-116">Currently, this filter only allows devices that are discovered by Bluetooth.</span></span> <span data-ttu-id="6ecc8-117">Neue Erkennungsmethoden, die eine physische Näherung garantieren können, werden hier ebenfalls berücksichtigt, sobald diese unterstützt werden.</span><span class="sxs-lookup"><span data-stu-id="6ecc8-117">As new discovery mechanisms and protocols which guarantee physical proximity are supported, they will be included here as well.</span></span>  
+<span data-ttu-id="6ecc8-118">Zudem ist in der [**RemoteSystem**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystem)-Klasse eine Eigenschaft enthalten, die angibt, ob sich ein erkanntes Gerät tatsächlich physisch in der Nähe befindet: [**RemoteSystem.IsAvailableBySpatialProximity**](https://docs.microsoft.com/uwp/api/Windows.System.RemoteSystems.RemoteSystem.IsAvailableByProximity).</span><span class="sxs-lookup"><span data-stu-id="6ecc8-118">There is also a property in the [**RemoteSystem**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystem) class that indicates whether a discovered device is in fact within physical proximity: [**RemoteSystem.IsAvailableBySpatialProximity**](https://docs.microsoft.com/uwp/api/Windows.System.RemoteSystems.RemoteSystem.IsAvailableByProximity).</span></span>
+
+<span data-ttu-id="6ecc8-119">Sobald eine Liste mit [**IRemoteSystemFilter**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.IRemoteSystemFilter)-Objekten erstellt wurde, kann diese an den Konstruktor eines **RemoteSystemWatcher**übergeben werden.</span><span class="sxs-lookup"><span data-stu-id="6ecc8-119">Once a list of [**IRemoteSystemFilter**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.IRemoteSystemFilter) objects is created, it can be passed into the constructor of a **RemoteSystemWatcher**.</span></span>
 
 [!code-cs[Main](./code/DiscoverDevices/MainPage.xaml.cs#SnippetCreateWatcher)]
 
-Wenn die [**Start**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystemWatcher.Start)-Methode dieses Überwachungselements aufgerufen wird, wird das [**RemoteSystemAdded**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystemWatcher.RemoteSystemAdded)-Ereignis nur dann ausgelöst, wenn ein Gerät erkannt wird, das alle der folgenden Kriterien erfüllt:
-* Es kann von einer proximalen Verbindung erkannt werden
-* Es ist ein Desktop oder ein Telefon
-* Es wird als verfügbar klassifiziert
+<span data-ttu-id="6ecc8-120">Wenn die [**Start**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystemWatcher.Start)-Methode dieses Überwachungselements aufgerufen wird, wird das [**RemoteSystemAdded**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystemWatcher.RemoteSystemAdded)-Ereignis nur dann ausgelöst, wenn ein Gerät erkannt wird, das alle der folgenden Kriterien erfüllt:</span><span class="sxs-lookup"><span data-stu-id="6ecc8-120">When this watcher's [**Start**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystemWatcher.Start) method is called, it will raise the [**RemoteSystemAdded**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystemWatcher.RemoteSystemAdded) event only if a device is detected that meets all of the following criteria:</span></span>
+* <span data-ttu-id="6ecc8-121">Es kann von einer proximalen Verbindung erkannt werden</span><span class="sxs-lookup"><span data-stu-id="6ecc8-121">It is discoverable by proximal connection</span></span>
+* <span data-ttu-id="6ecc8-122">Es ist ein Desktop oder ein Telefon</span><span class="sxs-lookup"><span data-stu-id="6ecc8-122">It is a desktop or phone</span></span>
+* <span data-ttu-id="6ecc8-123">Es wird als verfügbar klassifiziert</span><span class="sxs-lookup"><span data-stu-id="6ecc8-123">It is classified as available</span></span>
 
-Ab diesem Punkt ist die Vorgehensweise zum Behandeln von Ereignissen, Abrufen von [**RemoteSystem**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystem)-Objekten und Herstellen einer Verbindung mit Remotegeräten die gleiche wie in [Starten einer Remote-App](launch-a-remote-app.md). Kurz: Die **RemoteSystem**-Objekte werden als Eigenschaften von [**RemoteSystemAddedEventArgs**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystemAddedEventArgs)-Objekten gespeichert, die Parameter von jedem **RemoteSystemAdded**-Ereignis sind.
+<span data-ttu-id="6ecc8-124">Ab diesem Punkt ist die Vorgehensweise zum Behandeln von Ereignissen, Abrufen von [**RemoteSystem**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystem)-Objekten und Herstellen einer Verbindung mit Remotegeräten die gleiche wie in [Starten einer Remote-App](launch-a-remote-app.md).</span><span class="sxs-lookup"><span data-stu-id="6ecc8-124">From there, the procedure for handling events, retrieving [**RemoteSystem**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystem) objects, and connecting to remote devices is exactly the same as in [Launch a remote app](launch-a-remote-app.md).</span></span> <span data-ttu-id="6ecc8-125">Kurz gesagt: Die **RemoteSystem**-Objekte werden als Eigenschaften von [**RemoteSystemAddedEventArgs**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystemAddedEventArgs)-Objekten gespeichert, die mit jedem **RemoteSystemAdded**-Ereignis übergeben werden.</span><span class="sxs-lookup"><span data-stu-id="6ecc8-125">In short, the **RemoteSystem** objects are stored as properties of [**RemoteSystemAddedEventArgs**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystemAddedEventArgs) objects, which are passed in with each **RemoteSystemAdded** event.</span></span>
 
-## <a name="discover-devices-by-address-input"></a>Ermitteln von Geräten durch Adresseingabe
-Einige Geräte sind möglicherweise nicht mit einem Benutzer verknüpft oder durch eine Überprüfung erkennbar. Sie können jedoch trotzdem erreicht werden, wenn die ermittelnde App eine direkte Adresse verwendet. Die [**HostName**](https://msdn.microsoft.com/library/windows/apps/windows.networking.hostname.aspx)-Klasse wird verwendet, um die Adresse eines Remotegeräts darzustellen. Dies wird häufig in Form einer IP-Adresse gespeichert, jedoch sind auch verschiedene andere Formate zulässig (weitere Informationen finden Sie unter [**HostName-Konstruktor**](https://msdn.microsoft.com/library/windows/apps/br207118.aspx).
+## <a name="discover-devices-by-address-input"></a><span data-ttu-id="6ecc8-126">Ermitteln von Geräten durch Adresseingabe</span><span class="sxs-lookup"><span data-stu-id="6ecc8-126">Discover devices by address input</span></span>
+<span data-ttu-id="6ecc8-127">Einige Geräte sind möglicherweise nicht mit einem Benutzer verknüpft oder durch eine Überprüfung erkennbar. Sie können jedoch trotzdem erreicht werden, wenn die ermittelnde App eine direkte Adresse verwendet.</span><span class="sxs-lookup"><span data-stu-id="6ecc8-127">Some devices may not be associated with a user or discoverable with a scan, but they can still be reached if the discovering app uses a direct address.</span></span> <span data-ttu-id="6ecc8-128">Die [**HostName**](https://msdn.microsoft.com/library/windows/apps/windows.networking.hostname.aspx)-Klasse wird verwendet, um die Adresse eines Remotegeräts darzustellen.</span><span class="sxs-lookup"><span data-stu-id="6ecc8-128">The [**HostName**](https://msdn.microsoft.com/library/windows/apps/windows.networking.hostname.aspx) class is used to represent the address of a remote device.</span></span> <span data-ttu-id="6ecc8-129">Dies wird häufig in Form einer IP-Adresse gespeichert, jedoch sind auch verschiedene andere Formate zulässig (weitere Informationen finden Sie unter [**HostName-Konstruktor**](https://msdn.microsoft.com/library/windows/apps/br207118.aspx).</span><span class="sxs-lookup"><span data-stu-id="6ecc8-129">This is often stored in the form of an IP address, but several other formats are allowed (see the [**HostName constructor**](https://msdn.microsoft.com/library/windows/apps/br207118.aspx) for details).</span></span>
 
-Ein **RemoteSystem**-Objekt wird abgerufen, wenn ein gültiges **HostName**-Objekt bereitgestellt wird. Wenn die Adressdaten ungültig sind, wird ein `null`-Objektverweis zurückgegeben.
+<span data-ttu-id="6ecc8-130">Ein **RemoteSystem**-Objekt wird abgerufen, wenn ein gültiges **HostName**-Objekt bereitgestellt wird.</span><span class="sxs-lookup"><span data-stu-id="6ecc8-130">A **RemoteSystem** object is retrieved if a valid **HostName** object is provided.</span></span> <span data-ttu-id="6ecc8-131">Wenn die Adressdaten ungültig sind, wird ein `null`-Objektverweis zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="6ecc8-131">If the address data is invalid, a `null` object reference is returned.</span></span>
 
 [!code-cs[Main](./code/DiscoverDevices/MainPage.xaml.cs#SnippetFindByHostName)]
 
-## <a name="related-topics"></a>Verwandte Themen
-[Verbundene Apps und Geräte (Project "Rome")](connected-apps-and-devices.md)  
-[Starten einer Remote-App](launch-a-remote-app.md)  
-[API-Referenz für Remotesysteme](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)  
-Das [Beispiel für Remotesysteme](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/RemoteSystems ) veranschaulicht die Vorgehensweise zum Erkennen eines Remotesystems, Starten einer App auf einem Remotesystem und Verwenden von App-Diensten zum Senden von Nachrichten zwischen Apps, die auf zwei Systemen ausgeführt werden.
+## <a name="querying-a-capability-on-a-remote-system"></a><span data-ttu-id="6ecc8-132">Abfragen einer Funktion auf einem Remotesystem</span><span class="sxs-lookup"><span data-stu-id="6ecc8-132">Querying a capability on a remote system</span></span>
 
+<span data-ttu-id="6ecc8-133">Auch wenn das Abfragen von Gerätefunktionen unabhängig von der Erkennungsfilterung ist, kann es dennoch wichtiger Teil des Erkennungsvorgangs sein.</span><span class="sxs-lookup"><span data-stu-id="6ecc8-133">Although separate from discovery filtering, querying device capabilities can be an important part of the discovery process.</span></span> <span data-ttu-id="6ecc8-134">Mit der [**RemoteSystem.GetCapabilitySupportedAsync**](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystem#Windows_System_RemoteSystems_RemoteSystem_GetCapabilitySupportedAsync_System_String_)-Methode, können Sie erkannte Remotesysteme abfragen, zur Unterstützung bestimmter Funktionen wie der Konnektivität von Remotesitzungen oder dem Teilen räumlicher Instanzen (holografisch).</span><span class="sxs-lookup"><span data-stu-id="6ecc8-134">Using the [**RemoteSystem.GetCapabilitySupportedAsync**](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystem#Windows_System_RemoteSystems_RemoteSystem_GetCapabilitySupportedAsync_System_String_) method, you can query discovered remote systems for support of certain capabilities such as remote session connectivity or spatial entity (holographic) sharing.</span></span> <span data-ttu-id="6ecc8-135">Eine Liste der abfragbaren Funktionen finden Sie unter der [**KnownRemoteSystemCapabilities**](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.knownremotesystemcapabilities)-Klasse.</span><span class="sxs-lookup"><span data-stu-id="6ecc8-135">See the [**KnownRemoteSystemCapabilities**](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.knownremotesystemcapabilities) class for the list of queryable capabilities.</span></span>
+
+```csharp
+// Check to see if the given remote system can accept LaunchUri requests
+bool isRemoteSystemLaunchUriCapable = remoteSystem.GetCapabilitySupportedAsync(KnownRemoteSystemCapabilities.LaunchUri);
+```
+
+## <a name="cross-user-discovery"></a><span data-ttu-id="6ecc8-136">Erkennung von Cross-Benutzern</span><span class="sxs-lookup"><span data-stu-id="6ecc8-136">Cross-user discovery</span></span>
+
+> [!WARNING]
+> <span data-ttu-id="6ecc8-137">Die Funktionen in diesem Abschnittstehen Entwicklern derzeit nicht zur Verfügung.</span><span class="sxs-lookup"><span data-stu-id="6ecc8-137">The features in this section are not currently available to developers.</span></span>
+
+<span data-ttu-id="6ecc8-138">Entwickler können festlegen, dass _alle_ Geräte, die sich in der Nähe des Client-Geräts befinden, erkannt werden und nicht nur diejenigen Geräte, die auf denselben Benutzer registriert sind.</span><span class="sxs-lookup"><span data-stu-id="6ecc8-138">Developers can specify the discovery of _all_ devices in proximity to the client device, not just devices registered to the same user.</span></span> <span data-ttu-id="6ecc8-139">Dies wird implementiert durch einen speziellen **IRemoteSystemFilter**, [**RemoteSystemAuthorizationKindFilter**](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemauthorizationkindfilter).</span><span class="sxs-lookup"><span data-stu-id="6ecc8-139">This is implemented through a special **IRemoteSystemFilter**, [**RemoteSystemAuthorizationKindFilter**](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemauthorizationkindfilter).</span></span> <span data-ttu-id="6ecc8-140">Die Implementierung erfolgt auf die gleiche Weise, wie für andere Filtertypen:</span><span class="sxs-lookup"><span data-stu-id="6ecc8-140">It is implemented like the other filter types:</span></span>
+
+```csharp
+// Construct a user type filter that includes anonymous devices
+RemoteSystemAuthorizationKindFilter authorizationKindFilter = new RemoteSystemAuthorizationKindFilter(RemoteSystemAuthorizationKind.Anonymous);
+// then add this filter to the RemoteSystemWatcher
+```
+
+* <span data-ttu-id="6ecc8-141">Ist der [**RemoteSystemAuthorizationKind**](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemauthorizationkind)-Wert auf **Anonym** eingestellt, erlaubt dieser die Erkennung aller proximalen Geräte, auch derjenigen, von nicht vertrauenswürdigen Benutzern.</span><span class="sxs-lookup"><span data-stu-id="6ecc8-141">A [**RemoteSystemAuthorizationKind**](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemauthorizationkind) value of **Anonymous** will allow the discovery of all proximal devices, even those from non-trusted users.</span></span>
+* <span data-ttu-id="6ecc8-142">Der Wert **SameUser** filtert die Erkennung so, dass nur Geräte erkannt werden, die auf denselben Benutzer registriert sind wie das Client-Gerät.</span><span class="sxs-lookup"><span data-stu-id="6ecc8-142">A value of **SameUser** filters the discovery to only devices registered to the same user as the client device.</span></span> <span data-ttu-id="6ecc8-143">Hierbei handelt es sich um das standardmäßige Verhalten.</span><span class="sxs-lookup"><span data-stu-id="6ecc8-143">This is the default behavior.</span></span>
+
+### <a name="checking-the-cross-user-sharing-settings"></a><span data-ttu-id="6ecc8-144">Überprüfen der Einstellungen für Cross-Benutzer-Sharing</span><span class="sxs-lookup"><span data-stu-id="6ecc8-144">Checking the Cross-User Sharing settings</span></span>
+
+<span data-ttu-id="6ecc8-145">Zusätzlich dazu, dass der oben genannte Filter spezifisch in Ihrer Erkennungs-App enthalten ist, muss das Client-Gerät selbst so konfiguriert sein, dass geteilte Umgebungen von Geräten, die über andere Benutzer angemeldet sind, zugelassen werden.</span><span class="sxs-lookup"><span data-stu-id="6ecc8-145">In addition to the above filter being specified in your discovery app, the client device itself must also be configured to allow shared experiences from devices signed in with other users.</span></span> <span data-ttu-id="6ecc8-146">Dies ist eine Systemeinstellung, die über eine statische Methode in der **RemoteSystem**-Klasse abgefragt werden kann:</span><span class="sxs-lookup"><span data-stu-id="6ecc8-146">This is a system setting that can be queried with a static method in the **RemoteSystem** class:</span></span>
+
+```csharp
+if (!RemoteSystem.IsAuthorizationKindEnabled(RemoteSystemAuthorizationKind.Anonymous)) {
+    // The system is not authorized to connect to cross-user devices. 
+    // Inform the user that they can discover more devices if they
+    // update the setting to "Anonymous".
+}
+```
+
+<span data-ttu-id="6ecc8-147">Um diese Einstellung zu ändern, muss der Benutzer die Anwendung **Einstellungen** öffnen.</span><span class="sxs-lookup"><span data-stu-id="6ecc8-147">To change this setting, the user must open the **Settings** app.</span></span> <span data-ttu-id="6ecc8-148">Im Menü **System** > **Geteilte Umgebungen** > **Auf Geräten freigeben** befindet sich ein Dropdown-Feld, in dem der Benutzer angeben kann, mit welchen Geräten sein System teilen kann.</span><span class="sxs-lookup"><span data-stu-id="6ecc8-148">In the **System** > **Shared experiences** > **Share across devices** menu, there is a drop-down box where the user can specify which devices their system can share with.</span></span>
+
+![Einstellungsseite geteilter Umgebungen](images/shared-experiences-settings.png)
+
+## <a name="related-topics"></a><span data-ttu-id="6ecc8-150">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="6ecc8-150">Related topics</span></span>
+* [<span data-ttu-id="6ecc8-151">Verbundene Apps und Geräte (Project Rome)</span><span class="sxs-lookup"><span data-stu-id="6ecc8-151">Connected apps and devices (Project Rome)</span></span>](connected-apps-and-devices.md)
+* [<span data-ttu-id="6ecc8-152">Starten einer Remote-App</span><span class="sxs-lookup"><span data-stu-id="6ecc8-152">Launch a remote app</span></span>](launch-a-remote-app.md)
+* [<span data-ttu-id="6ecc8-153">API-Referenz für Remotesysteme</span><span class="sxs-lookup"><span data-stu-id="6ecc8-153">Remote Systems API reference</span></span>](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)
+* [<span data-ttu-id="6ecc8-154">Beispiel für Remotesysteme</span><span class="sxs-lookup"><span data-stu-id="6ecc8-154">Remote Systems sample</span></span>](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/RemoteSystems)

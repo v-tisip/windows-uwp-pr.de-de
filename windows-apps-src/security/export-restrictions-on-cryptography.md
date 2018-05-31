@@ -1,67 +1,66 @@
 ---
-title: "Exportbeschränkungen hinsichtlich Kryptografie"
-description: "Anhand der Informationen in diesem Abschnitt können Sie ermitteln, ob Ihre App Kryptografiefunktionen in einer Weise verwendet, die unter Umständen dazu führt, dass die App im Windows Store nicht angezeigt wird."
+title: Exportbeschränkungen hinsichtlich Kryptografie
+description: Anhand der Informationen in diesem Abschnitt können Sie ermitteln, ob Ihre App Kryptografiefunktionen in einer Weise verwendet, die unter Umständen dazu führt, dass sie im Microsoft Store nicht angezeigt wird.
 ms.assetid: 204C7D1D-6F08-4AEE-A333-434D715E7617
-author: awkoren
-ms.author: alkoren
+author: msatranjr
+ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 265f0f0d9db1a8ae53a8d6561e289f8e303e08b1
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.localizationpriority: medium
+ms.openlocfilehash: 38d5bddf2883667954f17b927ae328f70c7507b7
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1690176"
 ---
+# <a name="export-restrictions-on-cryptography"></a><span data-ttu-id="6c146-104">Exportbeschränkungen hinsichtlich Kryptografie</span><span class="sxs-lookup"><span data-stu-id="6c146-104">Export restrictions on cryptography</span></span>
 
-# <a name="export-restrictions-on-cryptography"></a>Exportbeschränkungen hinsichtlich Kryptografie
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+<span data-ttu-id="6c146-105">Anhand der Informationen in diesem Abschnitt können Sie ermitteln, ob Ihre App Kryptografiefunktionen in einer Weise verwendet, die unter Umständen dazu führt, dass sie im Microsoft Store nicht angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="6c146-105">Use this info to determine if your app uses cryptography in a way that might prevent it from being listed in the Microsoft Store.</span></span>
 
-Anhand der Informationen in diesem Abschnitt können Sie ermitteln, ob Ihre App Kryptografiefunktionen in einer Weise verwendet, die unter Umständen dazu führt, dass sie im Windows Store nicht angezeigt wird.
+<span data-ttu-id="6c146-106">Das Bureau of Industry and Security (BIS) im United States Department of Commerce kontrolliert den Export von Technologie, die bestimmte Arten von Verschlüsselung verwendet.</span><span class="sxs-lookup"><span data-stu-id="6c146-106">The Bureau of Industry and Security in the United States Department of Commerce regulates the export of technology that uses certain types of encryption.</span></span> <span data-ttu-id="6c146-107">Bei allen im Microsoft Store aufgelisteten Apps müssen diese Gesetze und Bestimmungen beachtet werden, da die App-Dateien in den USA gespeichert werden können.</span><span class="sxs-lookup"><span data-stu-id="6c146-107">All apps listed in the Microsoft Store must comply with these laws and regulations because the app files can be stored in the United States.</span></span> <span data-ttu-id="6c146-108">Sogar bei Apps, die von App-Entwicklern aus anderen Ländern zur Verteilung außerhalb der USA hochgeladen werden, müssen diese Bestimmungen befolgt werden.</span><span class="sxs-lookup"><span data-stu-id="6c146-108">Even apps that are uploaded by app developers from other countries for distribution outside of the United States must comply with these regulations.</span></span> <span data-ttu-id="6c146-109">Daher müssen alle App-Entwickler beim Übermitteln einer App an den Microsoft Store bestätigen, dass ihre Apps keine Technologien enthalten, die gemäß diesen Bestimmungen eingeschränkt sind.</span><span class="sxs-lookup"><span data-stu-id="6c146-109">Consequently, when submitting an app to the Microsoft Store, all app developers must make sure that their apps don't contain any technology that is restricted by these regulations.</span></span>
 
-Das Bureau of Industry and Security (BIS) im United States Department of Commerce kontrolliert den Export von Technologie, die bestimmte Arten von Verschlüsselung verwendet. Bei allen im Windows Store aufgelisteten Apps müssen diese Gesetze und Bestimmungen beachtet werden, da die App-Dateien in den USA gespeichert werden können. Sogar bei Apps, die von App-Entwicklern aus anderen Ländern zur Verteilung außerhalb der USA hochgeladen werden, müssen diese Bestimmungen befolgt werden. Daher müssen alle App-Entwickler beim Übermitteln einer App an den Windows Store bestätigen, dass ihre Apps keine Technologien enthalten, die gemäß diesen Bestimmungen eingeschränkt sind.
-
-> **Hinweis**  In den hier bereitgestellten Informationen finden Sie einige Richtlinien. Sie sind jedoch als App-Entwickler, der Apps im Windows Store veröffentlicht, für die Einhaltung aller geltenden Gesetze und Bestimmungen verantwortlich.
+> <span data-ttu-id="6c146-110">**Hinweis**  In den hier bereitgestellten Informationen finden Sie einige Richtlinien. Sie sind jedoch als App-Entwickler, der Apps im Microsoft Store veröffentlicht, für die Einhaltung aller geltenden Gesetze und Bestimmungen verantwortlich.</span><span class="sxs-lookup"><span data-stu-id="6c146-110">**Note**  The information provided here provides some guidance, but it is your responsibility as the app developer who is publishing apps in the Microsoft Store to make sure that your app complies with all applicable laws and regulations.</span></span>
 
  
 
-Weitere Informationen zum United States Department of Commerce und dem BIS finden Sie unter [Informationen zum Bureau of Industry and Security](http://go.microsoft.com/fwlink/p/?LinkID=245644).
+<span data-ttu-id="6c146-111">Weitere Informationen zum United States Department of Commerce und dem BIS finden Sie unter [Informationen zum Bureau of Industry and Security](http://go.microsoft.com/fwlink/p/?LinkID=245644).</span><span class="sxs-lookup"><span data-stu-id="6c146-111">For more info about the U.S. Department of Commerce and the Bureau of Industry and Security, see [About the Bureau of Industry and Security](http://go.microsoft.com/fwlink/p/?LinkID=245644).</span></span>
 
-Informationen zu den Export Administration Regulations (EAR), die den Export von Technologien regeln, die Verschlüsselung enthalten, finden Sie unter [EAR-Bestimmungen für Waren, die Verschlüsselung nutzen](http://go.microsoft.com/fwlink/p/?LinkID=245645).
+<span data-ttu-id="6c146-112">Informationen zu den Export Administration Regulations (EAR), die den Export von Technologien regeln, die Verschlüsselung enthalten, finden Sie unter [EAR-Bestimmungen für Waren, die Verschlüsselung nutzen](http://go.microsoft.com/fwlink/p/?LinkID=245645).</span><span class="sxs-lookup"><span data-stu-id="6c146-112">For info about the Export Administration Regulations (EAR) that govern the export of technology that includes encryption, see [EAR Controls for Items That Use Encryption](http://go.microsoft.com/fwlink/p/?LinkID=245645).</span></span>
 
-## <a name="governed-uses"></a>Eingeschränkte Verwendungsarten
+## <a name="governed-uses"></a><span data-ttu-id="6c146-113">Eingeschränkte Verwendungsarten</span><span class="sxs-lookup"><span data-stu-id="6c146-113">Governed uses</span></span>
 
-Ermitteln Sie zunächst, ob Ihre App eine Art von Kryptografie verwendet, die durch die Export Administration Regulations geregelt wird. Die Frage enthält die in der Liste enthaltenen Beispiele. Diese Liste enthält jedoch nicht alle möglichen Anwendungsmöglichkeiten von Kryptografie.
+<span data-ttu-id="6c146-114">Ermitteln Sie zunächst, ob Ihre App eine Art von Kryptografie verwendet, die durch die Export Administration Regulations geregelt wird.</span><span class="sxs-lookup"><span data-stu-id="6c146-114">First, determine if your app uses a type of cryptography that is governed by the Export Administration Regulations.</span></span> <span data-ttu-id="6c146-115">Die Frage enthält die in der Liste enthaltenen Beispiele. Diese Liste enthält jedoch nicht alle möglichen Anwendungsmöglichkeiten von Kryptografie.</span><span class="sxs-lookup"><span data-stu-id="6c146-115">The question includes the examples shown in the list here; but remember that this list doesn't include every possible application of cryptography.</span></span>
 
-> **Wichtig**  Berücksichtigen Sie hierbei nicht nur den Code, den Sie für die App geschrieben haben, sondern auch alle Softwarebibliotheken, Hilfsprogramme und Betriebssystemkomponenten, die Ihre App enthält oder mit denen sie verknüpft ist.
+> <span data-ttu-id="6c146-116">**Wichtig**  Berücksichtigen Sie hierbei nicht nur den Code, den Sie für die App geschrieben haben, sondern auch alle Softwarebibliotheken, Hilfsprogramme und Betriebssystemkomponenten, die Ihre App enthält oder mit denen sie verknüpft ist.</span><span class="sxs-lookup"><span data-stu-id="6c146-116">**Important**  Consider not only the code you wrote for your app, but also all the software libraries, utilities and operating system components that your app includes or links to.</span></span>
 
--   Jede Verwendung einer digitalen Signatur, z. B. Authentifizierung oder Integritätsprüfung
--   Verschlüsselung von Daten oder Dateien, die die App verwendet oder auf die sie zugreift
--   Schlüsselverwaltung, Zertifikatverwaltung oder Vorgänge, die mit einer Public Key-Infrastruktur interagieren
--   Verwendung eines sicheren Kommunikationskanals, z. B. NTLM, Kerberos, Secure Sockets Layer (SSL) oder Transport Layer Security (TLS)
--   Verschlüsselung von Kennwörtern oder andere Arten der Datensicherheit
--   Kopierschutz oder Verwaltung digitaler Rechte (Digital Rights Management, DRM)
--   Virenschutz
+-   <span data-ttu-id="6c146-117">Jede Verwendung einer digitalen Signatur, z.B. Authentifizierung oder Integritätsprüfung</span><span class="sxs-lookup"><span data-stu-id="6c146-117">Any use of a digital signature, such as authentication or integrity checking</span></span>
+-   <span data-ttu-id="6c146-118">Verschlüsselung von Daten oder Dateien, die die App verwendet oder auf die sie zugreift</span><span class="sxs-lookup"><span data-stu-id="6c146-118">Encryption of any data or files that your app uses or accesses</span></span>
+-   <span data-ttu-id="6c146-119">Schlüsselverwaltung, Zertifikatverwaltung oder Vorgänge, die mit einer Public Key-Infrastruktur interagieren</span><span class="sxs-lookup"><span data-stu-id="6c146-119">Key management, certificate management, or anything that interacts with a public key infrastructure</span></span>
+-   <span data-ttu-id="6c146-120">Verwendung eines sicheren Kommunikationskanals, z.B. NTLM, Kerberos, Secure Sockets Layer (SSL) oder Transport Layer Security (TLS)</span><span class="sxs-lookup"><span data-stu-id="6c146-120">Using a secure communication channel such as NTLM, Kerberos, Secure Sockets Layer (SSL), or Transport Layer Security (TLS)</span></span>
+-   <span data-ttu-id="6c146-121">Verschlüsselung von Kennwörtern oder andere Arten der Datensicherheit</span><span class="sxs-lookup"><span data-stu-id="6c146-121">Encrypting passwords or other forms of information security</span></span>
+-   <span data-ttu-id="6c146-122">Kopierschutz oder Verwaltung digitaler Rechte (Digital Rights Management, DRM)</span><span class="sxs-lookup"><span data-stu-id="6c146-122">Copy protection or digital rights management (DRM)</span></span>
+-   <span data-ttu-id="6c146-123">Virenschutz</span><span class="sxs-lookup"><span data-stu-id="6c146-123">Antivirus protection</span></span>
 
-Eine vollständige und aktuelle Liste kryptografischer Anwendungen finden Sie unter [EAR-Bestimmungen für Waren, die Verschlüsselung nutzen](http://go.microsoft.com/fwlink/p/?LinkID=245645).
+<span data-ttu-id="6c146-124">Eine vollständige und aktuelle Liste kryptografischer Anwendungen finden Sie unter [EAR-Bestimmungen für Waren, die Verschlüsselung nutzen](http://go.microsoft.com/fwlink/p/?LinkID=245645).</span><span class="sxs-lookup"><span data-stu-id="6c146-124">For the complete and current list of cryptographic applications, see [EAR Controls for Items That Use Encryption](http://go.microsoft.com/fwlink/p/?LinkID=245645).</span></span>
 
-## <a name="non-restricted-uses"></a>Nicht eingeschränkte Verwendungsarten
+## <a name="non-restricted-uses"></a><span data-ttu-id="6c146-125">Nicht eingeschränkte Verwendungsarten</span><span class="sxs-lookup"><span data-stu-id="6c146-125">Non-restricted uses</span></span>
 
-Beachten Sie, dass einige Verwendungsarten von Kryptografie nicht eingeschränkt sind. Hier ein Überblick über die unbeschränkten Aufgaben:
+<span data-ttu-id="6c146-126">Beachten Sie, dass einige Verwendungsarten von Kryptografie nicht eingeschränkt sind.</span><span class="sxs-lookup"><span data-stu-id="6c146-126">Note that some of the applications of cryptography are not restricted.</span></span> <span data-ttu-id="6c146-127">Hier ein Überblick über die unbeschränkten Aufgaben:</span><span class="sxs-lookup"><span data-stu-id="6c146-127">Here are the unrestricted tasks:</span></span>
 
--   Kennwortverschlüsselung
--   Kopierschutz
--   Authentifizierung
--   Verwaltung digitaler Rechte (DRM)
--   Verwendung digitaler Signaturen
+-   <span data-ttu-id="6c146-128">Kennwortverschlüsselung</span><span class="sxs-lookup"><span data-stu-id="6c146-128">Password encryption</span></span>
+-   <span data-ttu-id="6c146-129">Kopierschutz</span><span class="sxs-lookup"><span data-stu-id="6c146-129">Copy protection</span></span>
+-   <span data-ttu-id="6c146-130">Authentifizierung</span><span class="sxs-lookup"><span data-stu-id="6c146-130">Authentication</span></span>
+-   <span data-ttu-id="6c146-131">Verwaltung digitaler Rechte (DRM)</span><span class="sxs-lookup"><span data-stu-id="6c146-131">Digital rights management</span></span>
+-   <span data-ttu-id="6c146-132">Verwendung digitaler Signaturen</span><span class="sxs-lookup"><span data-stu-id="6c146-132">Using digital signatures</span></span>
 
-Eine vollständige und aktuelle Liste kryptografischer Anwendungen finden Sie unter [EAR-Bestimmungen für Waren, die Verschlüsselung nutzen](http://go.microsoft.com/fwlink/p/?LinkID=245645).
+<span data-ttu-id="6c146-133">Eine vollständige und aktuelle Liste kryptografischer Anwendungen finden Sie unter [EAR-Bestimmungen für Waren, die Verschlüsselung nutzen](http://go.microsoft.com/fwlink/p/?LinkID=245645).</span><span class="sxs-lookup"><span data-stu-id="6c146-133">For the complete and current list of cryptographic applications, see [EAR Controls for Items That Use Encryption](http://go.microsoft.com/fwlink/p/?LinkID=245645).</span></span>
 
-Wenn Ihre App Kryptografie- oder Verschlüsselungsfunktionen für eine Aufgabe aufruft, unterstützt, enthält oder verwendet, die nicht in dieser Liste enthalten ist, ist für die App eine ECCN (Export Commodity Classification Number) erforderlich.
+<span data-ttu-id="6c146-134">Wenn Ihre App Kryptografie- oder Verschlüsselungsfunktionen für eine Aufgabe aufruft, unterstützt, enthält oder verwendet, die nicht in dieser Liste enthalten ist, ist für die App eine ECCN (Export Commodity Classification Number) erforderlich.</span><span class="sxs-lookup"><span data-stu-id="6c146-134">If your app calls, supports, contains, or uses cryptography or encryption for any task that is not in this list, it needs an Export Commodity Classification Number (ECCN).</span></span>
 
-Wenn Sie keine ECCN besitzen, informieren Sie sich unter [Fragen und Antworten zur ECCN](http://go.microsoft.com/fwlink/p/?LinkID=245646).
-
+<span data-ttu-id="6c146-135">Wenn Sie keine ECCN besitzen, informieren Sie sich unter [Fragen und Antworten zur ECCN](http://go.microsoft.com/fwlink/p/?LinkID=245646).</span><span class="sxs-lookup"><span data-stu-id="6c146-135">If you don't have an ECCN, see [ECCN Questions and Answers](http://go.microsoft.com/fwlink/p/?LinkID=245646).</span></span>

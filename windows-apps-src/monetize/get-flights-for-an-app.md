@@ -1,88 +1,81 @@
 ---
 author: mcleanbyron
 ms.assetid: B0AD0B8E-867E-4403-9CF6-43C81F3C30CA
-description: "Verwenden Sie diese Methode der Windows Store-Übermittlungs-API, um Informationen zu einem Flight-Paket für eine App abzurufen, die für Ihr Windows Dev Center-Konto registriert ist."
-title: "Abrufen von Flight-Paketen für eine App mithilfe der Windows Store-Übermittlungs-API"
+description: Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API, um Informationen zu einem Flight-Paket für eine App abzurufen, die für Ihr Windows Dev Center-Konto registriert ist.
+title: Abrufen von Flight-Paketen für eine App
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Windows Store-Übermittlungs-API, Flight, Flight-Pakete"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ee49b494f3b0dd88229e3f40fd2c5cedb57ffe7c
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Flight, Flight-Pakete
+ms.localizationpriority: medium
+ms.openlocfilehash: aa9bbac25316fcebc630edd55aabd333e43e3e49
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/17/2018
+ms.locfileid: "1661980"
 ---
+# <a name="get-package-flights-for-an-app"></a><span data-ttu-id="677d4-104">Abrufen von Flight-Paketen für eine App</span><span class="sxs-lookup"><span data-stu-id="677d4-104">Get package flights for an app</span></span>
 
-# <a name="get-package-flights-for-an-app-using-the-windows-store-submission-api"></a>Abrufen von Flight-Paketen für eine App mithilfe der Windows Store-Übermittlungs-API
+<span data-ttu-id="677d4-105">Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API zum Auflisten der Flight-Pakete für eine App, die für Ihr Windows Dev Center-Konto registriert ist.</span><span class="sxs-lookup"><span data-stu-id="677d4-105">Use this method in the Microsoft Store submission API to list the package flights for an app that is registered to your Windows Dev Center account.</span></span> <span data-ttu-id="677d4-106">Weitere Informationen zu Flight-Paketen finden Sie unter [Flight-Pakete](https://msdn.microsoft.com/windows/uwp/publish/package-flights).</span><span class="sxs-lookup"><span data-stu-id="677d4-106">For more information about package flights, see [Package flights](https://msdn.microsoft.com/windows/uwp/publish/package-flights).</span></span>
 
+## <a name="prerequisites"></a><span data-ttu-id="677d4-107">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="677d4-107">Prerequisites</span></span>
 
+<span data-ttu-id="677d4-108">Zur Verwendung dieser Methode sind folgende Schritte erforderlich:</span><span class="sxs-lookup"><span data-stu-id="677d4-108">To use this method, you need to first do the following:</span></span>
 
+* <span data-ttu-id="677d4-109">Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](create-and-manage-submissions-using-windows-store-services.md#prerequisites) für die Microsoft Store-Übermittlungs-API.</span><span class="sxs-lookup"><span data-stu-id="677d4-109">If you have not done so already, complete all the [prerequisites](create-and-manage-submissions-using-windows-store-services.md#prerequisites) for the Microsoft Store submission API.</span></span>
+* <span data-ttu-id="677d4-110">[Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="677d4-110">[Obtain an Azure AD access token](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) to use in the request header for this method.</span></span> <span data-ttu-id="677d4-111">Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60 Minuten lang verwenden, bevor es abläuft.</span><span class="sxs-lookup"><span data-stu-id="677d4-111">After you obtain an access token, you have 60 minutes to use it before it expires.</span></span> <span data-ttu-id="677d4-112">Wenn das Token abgelaufen ist, können Sie ein neues abrufen.</span><span class="sxs-lookup"><span data-stu-id="677d4-112">After the token expires, you can obtain a new one.</span></span>
 
-Verwenden Sie diese Methode der Windows Store-Übermittlungs-API zum Auflisten der Flight-Pakete für eine App, die für Ihr Windows Dev Center-Konto registriert ist. Weitere Informationen zu Flight-Paketen finden Sie unter [Flight-Pakete](https://msdn.microsoft.com/windows/uwp/publish/package-flights).
+## <a name="request"></a><span data-ttu-id="677d4-113">Anforderung</span><span class="sxs-lookup"><span data-stu-id="677d4-113">Request</span></span>
 
-## <a name="prerequisites"></a>Voraussetzungen
+<span data-ttu-id="677d4-114">Diese Methode hat die folgende Syntax.</span><span class="sxs-lookup"><span data-stu-id="677d4-114">This method has the following syntax.</span></span> <span data-ttu-id="677d4-115">In den folgenden Abschnitten finden Sie Verwendungsbeispiele und Beschreibungen des Header und Anforderungstexts.</span><span class="sxs-lookup"><span data-stu-id="677d4-115">See the following sections for usage examples and descriptions of the header and request body.</span></span>
 
-Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
-
-* Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](create-and-manage-submissions-using-windows-store-services.md#prerequisites) für die Windows Store-Übermittlungs-API.
-* [Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken erhalten haben, haben Sie 60 Minuten Zeit, das Token zu verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
-
->**Hinweis**&nbsp;&nbsp;Diese Methode kann nur für Windows Dev Center-Konten verwendet werden, die eine Berechtigung zur Verwendung der Windows Store-Übermittlungs-API erhalten haben. Diese Berechtigung ist nicht für alle Konten aktiviert.
-
-## <a name="request"></a>Anforderung
-
-Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie Verwendungsbeispiele und Beschreibungen des Header und Anforderungstexts.
-
-| Methode | Anforderungs-URI                                                      |
+| <span data-ttu-id="677d4-116">Methode</span><span class="sxs-lookup"><span data-stu-id="677d4-116">Method</span></span> | <span data-ttu-id="677d4-117">Anforderungs-URI</span><span class="sxs-lookup"><span data-stu-id="677d4-117">Request URI</span></span>                                                      |
 |--------|------------------------------------------------------------------|
-| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listflights``` |
+| <span data-ttu-id="677d4-118">GET</span><span class="sxs-lookup"><span data-stu-id="677d4-118">GET</span></span>    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listflights``` |
 
-<span/>
- 
-### <a name="request-header"></a>Anforderungsheader
 
-| Header        | Typ   | Beschreibung                                                                 |
+### <a name="request-header"></a><span data-ttu-id="677d4-119">Anforderungsheader</span><span class="sxs-lookup"><span data-stu-id="677d4-119">Request header</span></span>
+
+| <span data-ttu-id="677d4-120">Header</span><span class="sxs-lookup"><span data-stu-id="677d4-120">Header</span></span>        | <span data-ttu-id="677d4-121">Typ</span><span class="sxs-lookup"><span data-stu-id="677d4-121">Type</span></span>   | <span data-ttu-id="677d4-122">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="677d4-122">Description</span></span>                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorisierung | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;. |
+| <span data-ttu-id="677d4-123">Autorisierung</span><span class="sxs-lookup"><span data-stu-id="677d4-123">Authorization</span></span> | <span data-ttu-id="677d4-124">String</span><span class="sxs-lookup"><span data-stu-id="677d4-124">string</span></span> | <span data-ttu-id="677d4-125">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="677d4-125">Required.</span></span> <span data-ttu-id="677d4-126">Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;.</span><span class="sxs-lookup"><span data-stu-id="677d4-126">The Azure AD access token in the form **Bearer** &lt;*token*&gt;.</span></span> |
 
-<span/>
 
-### <a name="request-parameters"></a>Anforderungsparameter
+### <a name="request-parameters"></a><span data-ttu-id="677d4-127">Anforderungsparameter</span><span class="sxs-lookup"><span data-stu-id="677d4-127">Request parameters</span></span>
 
-|  Name  |  Typ  |  Beschreibung  |  Erforderlich  |
+|  <span data-ttu-id="677d4-128">Name</span><span class="sxs-lookup"><span data-stu-id="677d4-128">Name</span></span>  |  <span data-ttu-id="677d4-129">Typ</span><span class="sxs-lookup"><span data-stu-id="677d4-129">Type</span></span>  |  <span data-ttu-id="677d4-130">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="677d4-130">Description</span></span>  |  <span data-ttu-id="677d4-131">Erforderlich</span><span class="sxs-lookup"><span data-stu-id="677d4-131">Required</span></span>  |
 |------|------|------|------|
-|  applicationId  |  string  |  Die Store-ID der App, für die Flight-Pakete abgerufen werden sollen. Weitere Informationen zur Store-ID finden Sie unter [Anzeigen von Details zur App-Identität](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |  Ja  |
-|  top  |  int  |  Die Anzahl von Elementen, die in der Anforderung zurückgegeben werden sollen (d. h. die Anzahl der zurückzugebenden Flight-Pakete). Wenn Ihr Konto über mehr Flight-Pakete als der Wert verfügt, den Sie in der Abfrage festlegen, enthält der Antworttext einen relativen URI-Pfad, den Sie an die URI der Methode anfügen können, um die nächste Seite mit Daten anzufordern.  |  Nein  |
-|  skip  |  int  |  Die Anzahl der Elemente, die in der Abfrage umgangen werden sollen, bevor die verbleibenden Elemente zurückgegeben werden. Verwenden Sie diesen Parameter, um große Datensätze durchzublättern. Zum Beispiel werden bei top=10 und skip=0 die Elemente 1 bis 10 abgerufen, bei top=10 und skip=10 die Elemente 11 bis 20 und so weiter.  |  Nein  |
+|  <span data-ttu-id="677d4-132">applicationId</span><span class="sxs-lookup"><span data-stu-id="677d4-132">applicationId</span></span>  |  <span data-ttu-id="677d4-133">string</span><span class="sxs-lookup"><span data-stu-id="677d4-133">string</span></span>  |  <span data-ttu-id="677d4-134">Die Store-ID der App, für die Flight-Pakete abgerufen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="677d4-134">The Store ID of the app for which you want to retrieve the package flights.</span></span> <span data-ttu-id="677d4-135">Weitere Informationen zur Store-ID finden Sie unter [Anzeigen von Details zur App-Identität](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).</span><span class="sxs-lookup"><span data-stu-id="677d4-135">For more information about the Store ID, see [View app identity details](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).</span></span>  |  <span data-ttu-id="677d4-136">Ja</span><span class="sxs-lookup"><span data-stu-id="677d4-136">Yes</span></span>  |
+|  <span data-ttu-id="677d4-137">top</span><span class="sxs-lookup"><span data-stu-id="677d4-137">top</span></span>  |  <span data-ttu-id="677d4-138">int</span><span class="sxs-lookup"><span data-stu-id="677d4-138">int</span></span>  |  <span data-ttu-id="677d4-139">Die Anzahl von Elementen, die in der Anforderung zurückgegeben werden sollen (d.h. die Anzahl der zurückzugebenden Flight-Pakete).</span><span class="sxs-lookup"><span data-stu-id="677d4-139">The number of items to return in the request (that is, the number of package flights to return).</span></span> <span data-ttu-id="677d4-140">Wenn Ihr Konto über mehr Flight-Pakete als der Wert verfügt, den Sie in der Abfrage festlegen, enthält der Antworttext einen relativen URI-Pfad, den Sie an die URI der Methode anfügen können, um die nächste Seite mit Daten anzufordern.</span><span class="sxs-lookup"><span data-stu-id="677d4-140">If your account has more package flights than the value you specify in the query, the response body includes a relative URI path that you can append to the method URI to request the next page of data.</span></span>  |  <span data-ttu-id="677d4-141">Nein</span><span class="sxs-lookup"><span data-stu-id="677d4-141">No</span></span>  |
+|  <span data-ttu-id="677d4-142">skip</span><span class="sxs-lookup"><span data-stu-id="677d4-142">skip</span></span>  |  <span data-ttu-id="677d4-143">int</span><span class="sxs-lookup"><span data-stu-id="677d4-143">int</span></span>  |  <span data-ttu-id="677d4-144">Die Anzahl der Elemente, die in der Abfrage umgangen werden sollen, bevor die verbleibenden Elemente zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="677d4-144">The number of items to bypass in the query before returning the remaining items.</span></span> <span data-ttu-id="677d4-145">Verwenden Sie diesen Parameter, um große Datensätze durchzublättern.</span><span class="sxs-lookup"><span data-stu-id="677d4-145">Use this parameter to page through data sets.</span></span> <span data-ttu-id="677d4-146">Zum Beispiel werden bei top=10 und skip=0 die Elemente 1 bis 10 abgerufen, bei top=10 und skip=10 die Elemente 11 bis 20 und so weiter.</span><span class="sxs-lookup"><span data-stu-id="677d4-146">For example, top=10 and skip=0 retrieves items 1 through 10, top=10 and skip=10 retrieves items 11 through 20, and so on.</span></span>  |  <span data-ttu-id="677d4-147">Nein</span><span class="sxs-lookup"><span data-stu-id="677d4-147">No</span></span>  |
 
-<span/>
 
-### <a name="request-body"></a>Anforderungstext
+### <a name="request-body"></a><span data-ttu-id="677d4-148">Anforderungstext</span><span class="sxs-lookup"><span data-stu-id="677d4-148">Request body</span></span>
 
-Stellen Sie keinen Anforderungstext für diese Methode bereit.
+<span data-ttu-id="677d4-149">Stellen Sie keinen Anforderungstext für diese Methode bereit.</span><span class="sxs-lookup"><span data-stu-id="677d4-149">Do not provide a request body for this method.</span></span>
 
-### <a name="request-examples"></a>Anforderungsbeispiele
+### <a name="request-examples"></a><span data-ttu-id="677d4-150">Anforderungsbeispiele</span><span class="sxs-lookup"><span data-stu-id="677d4-150">Request examples</span></span>
 
-Im folgenden Beispiel wird veranschaulicht, wie alle Flight-Pakete für eine App aufgelistet werden können.
+<span data-ttu-id="677d4-151">Im folgenden Beispiel wird veranschaulicht, wie alle Flight-Pakete für eine App aufgelistet werden können.</span><span class="sxs-lookup"><span data-stu-id="677d4-151">The following example demonstrates how to list all the package flights for an app.</span></span>
 
 ```
 GET https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/listflights HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-Im folgenden Beispiel wird veranschaulicht, wie das erste Flight-Paket für eine App aufgelistet wird.
+<span data-ttu-id="677d4-152">Im folgenden Beispiel wird veranschaulicht, wie das erste Flight-Paket für eine App aufgelistet wird.</span><span class="sxs-lookup"><span data-stu-id="677d4-152">The following example demonstrates how to list the first package flight for an app.</span></span>
 
 ```
 GET https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/listflights?top=1 HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-## <a name="response"></a>Antwort
+## <a name="response"></a><span data-ttu-id="677d4-153">Antwort</span><span class="sxs-lookup"><span data-stu-id="677d4-153">Response</span></span>
 
-Das folgende Beispiel zeigt einen JSON-Antworttext, der von einer erfolgreichen Anforderung für das erste Flight-Paket für eine App mit insgesamt drei Flight-Paketen zurückgegeben wird. Weitere Informationen zu den Werten im Antworttext finden Sie im folgenden Abschnitt.
+<span data-ttu-id="677d4-154">Das folgende Beispiel zeigt einen JSON-Antworttext, der von einer erfolgreichen Anforderung für das erste Flight-Paket für eine App mit insgesamt drei Flight-Paketen zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="677d4-154">The following example demonstrates the JSON response body returned by a successful request for the first package flight for an app with three total package flights.</span></span> <span data-ttu-id="677d4-155">Weitere Informationen zu den Werten im Antworttext finden Sie im folgenden Abschnitt.</span><span class="sxs-lookup"><span data-stu-id="677d4-155">For more details about the values in the response body, see the following section.</span></span>
 
 ```json
 {
@@ -108,31 +101,28 @@ Das folgende Beispiel zeigt einen JSON-Antworttext, der von einer erfolgreichen 
 }
 ```
 
-### <a name="response-body"></a>Antworttext
+### <a name="response-body"></a><span data-ttu-id="677d4-156">Antworttext</span><span class="sxs-lookup"><span data-stu-id="677d4-156">Response body</span></span>
 
-| Wert      | Typ   | Beschreibung                                                                                                                                                                                                                                                                         |
-|------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| @nextLink  | string | Wenn weitere Datenseiten vorhanden sind, enthält diese Zeichenfolge einen relativen Pfad, den Sie an den Basisanforderungs-URI ```https://manage.devcenter.microsoft.com/v1.0/my/``` zum Anfordern der nächsten Datenseite anfügen können. Wenn beispielsweise der Parameter *top* des anfänglichen Anforderungstexts auf 2 festgelegt ist, für die App jedoch 4 Flight-Pakete vorhanden sind, enthält der Antworttext den @nextLink-Wert ```applications/{applicationid}/listflights/?skip=2&top=2```, der angibt, dass Sie ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationid}/listflights/?skip=2&top=2``` aufrufen können, um die nächsten 2 Flight-Pakete anzufordern. |
-| value      | array  | Ein Array von Objekten, die Informationen zu Flight-Paketen für die angegebene App bereitstellen. Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie unter [Flight-Ressource](get-app-data.md#flight-object).                                                                                                                           |
-| totalCount | int    | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage (d. h. die Gesamtanzahl der Flight-Pakete für die angegebene App).                                                                                                                                                                                                                             |
+| <span data-ttu-id="677d4-157">Wert</span><span class="sxs-lookup"><span data-stu-id="677d4-157">Value</span></span>      | <span data-ttu-id="677d4-158">Typ</span><span class="sxs-lookup"><span data-stu-id="677d4-158">Type</span></span>   | <span data-ttu-id="677d4-159">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="677d4-159">Description</span></span>       |
+|------------|--------|---------------------|
+| @nextLink  | <span data-ttu-id="677d4-160">String</span><span class="sxs-lookup"><span data-stu-id="677d4-160">string</span></span> | <span data-ttu-id="677d4-161">Wenn weitere Datenseiten vorhanden sind, enthält diese Zeichenfolge einen relativen Pfad, den Sie an den Basisanforderungs-URI ```https://manage.devcenter.microsoft.com/v1.0/my/``` zum Anfordern der nächsten Datenseite anfügen können.</span><span class="sxs-lookup"><span data-stu-id="677d4-161">If there are additional pages of data, this string contains a relative path that you can append to the base ```https://manage.devcenter.microsoft.com/v1.0/my/``` request URI to request the next page of data.</span></span> <span data-ttu-id="677d4-162">Wenn beispielsweise der Parameter *top* des anfänglichen Anforderungstexts auf 2festgelegt ist, für die App jedoch 4Flight-Pakete vorhanden sind, enthält der Antworttext den @nextLink-Wert ```applications/{applicationid}/listflights/?skip=2&top=2```, der angibt, dass Sie ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationid}/listflights/?skip=2&top=2``` aufrufen können, um die nächsten 2Flight-Pakete anzufordern.</span><span class="sxs-lookup"><span data-stu-id="677d4-162">For example, if the *top* parameter of the initial request body is set to 2 but there are 4 package flights for the app, the response body will include a @nextLink value of ```applications/{applicationid}/listflights/?skip=2&top=2```, which indicates that you can call ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationid}/listflights/?skip=2&top=2``` to request the next 2 package flights.</span></span> |
+| <span data-ttu-id="677d4-163">value</span><span class="sxs-lookup"><span data-stu-id="677d4-163">value</span></span>      | <span data-ttu-id="677d4-164">array</span><span class="sxs-lookup"><span data-stu-id="677d4-164">array</span></span>  | <span data-ttu-id="677d4-165">Ein Array von Objekten, die Informationen zu Flight-Paketen für die angegebene App bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="677d4-165">An array of objects that provide information about package flights for the specified app.</span></span> <span data-ttu-id="677d4-166">Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie unter [Flight-Ressource](get-app-data.md#flight-object).</span><span class="sxs-lookup"><span data-stu-id="677d4-166">For more information about the data in each object, see [Flight resource](get-app-data.md#flight-object).</span></span>               |
+| <span data-ttu-id="677d4-167">totalCount</span><span class="sxs-lookup"><span data-stu-id="677d4-167">totalCount</span></span> | <span data-ttu-id="677d4-168">int</span><span class="sxs-lookup"><span data-stu-id="677d4-168">int</span></span>    | <span data-ttu-id="677d4-169">Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage (d.h. die Gesamtanzahl der Flight-Pakete für die angegebene App).</span><span class="sxs-lookup"><span data-stu-id="677d4-169">The total number of rows in the data result for the query (that is, the total number of package flights for the specified app).</span></span>   |
 
-<span/>
 
-## <a name="error-codes"></a>Fehlercodes
+## <a name="error-codes"></a><span data-ttu-id="677d4-170">Fehlercodes</span><span class="sxs-lookup"><span data-stu-id="677d4-170">Error codes</span></span>
 
-Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die Antwort einen der folgenden HTTP-Fehlercodes.
+<span data-ttu-id="677d4-171">Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die Antwort einen der folgenden HTTP-Fehlercodes.</span><span class="sxs-lookup"><span data-stu-id="677d4-171">If the request cannot be successfully completed, the response will contain one of the following HTTP error codes.</span></span>
 
-| Fehlercode |  Beschreibung   |
+| <span data-ttu-id="677d4-172">Fehlercode</span><span class="sxs-lookup"><span data-stu-id="677d4-172">Error code</span></span> |  <span data-ttu-id="677d4-173">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="677d4-173">Description</span></span>   |
 |--------|------------------|
-| 404  | Es wurden keine Flight-Pakete gefunden. |
-| 409  | Die App verwendet eine Dev Center-Dashboard-Funktion, die [derzeit nicht von der Windows Store-Übermittlungs-API unterstützt wird](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
+| <span data-ttu-id="677d4-174">404</span><span class="sxs-lookup"><span data-stu-id="677d4-174">404</span></span>  | <span data-ttu-id="677d4-175">Es wurden keine Flight-Pakete gefunden.</span><span class="sxs-lookup"><span data-stu-id="677d4-175">No package flights were found.</span></span> |
+| <span data-ttu-id="677d4-176">409</span><span class="sxs-lookup"><span data-stu-id="677d4-176">409</span></span>  | <span data-ttu-id="677d4-177">Die App verwendet eine Dev Center-Dashboard-Funktion, die [derzeit nicht von der Microsoft Store-Übermittlungs-API unterstützt wird](create-and-manage-submissions-using-windows-store-services.md#not_supported).</span><span class="sxs-lookup"><span data-stu-id="677d4-177">The app uses a Dev Center dashboard feature that is [currently not supported by the Microsoft Store submission API](create-and-manage-submissions-using-windows-store-services.md#not_supported).</span></span>  |
 
-<span/>
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a><span data-ttu-id="677d4-178">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="677d4-178">Related topics</span></span>
 
-* [Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten](create-and-manage-submissions-using-windows-store-services.md)
-* [Abrufen aller Apps](get-all-apps.md)
-* [Abrufen einer App](get-an-app.md)
-* [Abrufen von Add-Ons für eine App](get-add-ons-for-an-app.md)
-
+* [<span data-ttu-id="677d4-179">Erstellen und Verwalten von Übermittlungen mit Microsoft Store-Diensten</span><span class="sxs-lookup"><span data-stu-id="677d4-179">Create and manage submissions using Microsoft Store services</span></span>](create-and-manage-submissions-using-windows-store-services.md)
+* [<span data-ttu-id="677d4-180">Abrufen aller Apps</span><span class="sxs-lookup"><span data-stu-id="677d4-180">Get all apps</span></span>](get-all-apps.md)
+* [<span data-ttu-id="677d4-181">Abrufen einer App</span><span class="sxs-lookup"><span data-stu-id="677d4-181">Get an app</span></span>](get-an-app.md)
+* [<span data-ttu-id="677d4-182">Abrufen von Add-Ons für eine App</span><span class="sxs-lookup"><span data-stu-id="677d4-182">Get add-ons for an app</span></span>](get-add-ons-for-an-app.md)

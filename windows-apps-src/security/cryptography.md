@@ -1,155 +1,155 @@
 ---
 title: Kryptografie
-description: "Der Artikel enthält eine Übersicht über die für universelle Windows-Plattform (UWP)-Apps verfügbaren Kryptografiefeatures. Ausführliche Informationen zu bestimmten Aufgaben finden Sie in der Tabelle am Ende dieses Artikels."
+description: Der Artikel enthält eine Übersicht über die für universelle Windows-Plattform (UWP)-Apps verfügbaren Kryptografiefeatures. Ausführliche Informationen zu bestimmten Aufgaben finden Sie in der Tabelle am Ende dieses Artikels.
 ms.assetid: 9C213036-47FD-4AA4-99E0-84006BE63F47
-author: awkoren
-ms.author: alkoren
+author: msatranjr
+ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 3329a873b0e86a606d6e8899dcaca62c2e127c29
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.localizationpriority: medium
+ms.openlocfilehash: 0b102d84a428555b05d475368ef08bb4999fa392
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1689916"
 ---
-
-# <a name="cryptography"></a>Kryptografie
-
-
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+# <a name="cryptography"></a><span data-ttu-id="8ebef-105">Kryptografie</span><span class="sxs-lookup"><span data-stu-id="8ebef-105">Cryptography</span></span>
 
 
-Der Artikel enthält eine Übersicht über die für universelle Windows-Plattform (UWP)-Apps verfügbaren Kryptografiefeatures. Ausführliche Informationen zu bestimmten Aufgaben finden Sie in der Tabelle am Ende dieses Artikels.
-
-## <a name="terminology"></a>Terminologie
 
 
-Die folgende Terminologie wird bei der Kryptografie und bei Public Key-Infrastrukturen (PKI) häufig verwendet.
+<span data-ttu-id="8ebef-106">Der Artikel enthält eine Übersicht über die für universelle Windows-Plattform (UWP)-Apps verfügbaren Kryptografiefeatures.</span><span class="sxs-lookup"><span data-stu-id="8ebef-106">The article provides an overview of the cryptography features available to Universal Windows Platform (UWP) apps.</span></span> <span data-ttu-id="8ebef-107">Ausführliche Informationen zu bestimmten Aufgaben finden Sie in der Tabelle am Ende dieses Artikels.</span><span class="sxs-lookup"><span data-stu-id="8ebef-107">For detailed information on particular tasks, see the table at the end of this article.</span></span>
 
-| Begriff                        | Beschreibung                                                                                                                                                                                           |
+## <a name="terminology"></a><span data-ttu-id="8ebef-108">Terminologie</span><span class="sxs-lookup"><span data-stu-id="8ebef-108">Terminology</span></span>
+
+
+<span data-ttu-id="8ebef-109">Die folgende Terminologie wird bei der Kryptografie und bei Public Key-Infrastrukturen (PKI) häufig verwendet.</span><span class="sxs-lookup"><span data-stu-id="8ebef-109">The following terminology is commonly used in cryptography and public key infrastructure (PKI).</span></span>
+
+| <span data-ttu-id="8ebef-110">Begriff</span><span class="sxs-lookup"><span data-stu-id="8ebef-110">Term</span></span>                        | <span data-ttu-id="8ebef-111">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="8ebef-111">Description</span></span>                                                                                                                                                                                           |
 |-----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Verschlüsselung                  | Das Verfahren zum Transformieren von Daten mithilfe von Kryptografiealgorithmus und -schlüssel. Die transformierten Daten können nur mithilfe desselben Algorithmus und desselben (symmetrischen) oder zugehörigen (öffentlichen) Schlüssels wiederhergestellt werden. |
-| Entschlüsselung                  | Das Verfahren zur Rückführung verschlüsselter Daten in ihre ursprüngliche Form.                                                                                                                                         |
-| Klartext                   | Bezog sich ursprünglich auf eine nicht verschlüsselte Textnachricht. Wird heute für jegliche Form unverschlüsselter Daten verwendet.                                                                                                         |
-| Chiffretext                  | Bezog sich ursprünglich auf eine verschlüsselte und daher nicht lesbare Textnachricht. Wird heute für jegliche Form verschlüsselter Daten verwendet.                                                                                  |
-| Hashing                     | Das Verfahren zum Umwandeln von Daten mit variabler Länge in einen Wert mit einer bestimmten Länge, der in der Regel kleiner ist. Indem Sie Hashes vergleichen, können Sie sich mit hoher Zuverlässigkeit versichern, dass zwei oder mehr Daten übereinstimmen.            |
-| Signatur                   | Verschlüsselter Hash digitaler Daten, der in der Regel zur Authentifizierung des Absenders von Daten oder zur Sicherstellung genutzt wird, dass die Daten während der Übertragung nicht manipuliert wurden.                                               |
-| Algorithmus                   | Eine schrittweise Prozedur zur Verschlüsselung von Daten.                                                                                                                                                         |
-| Schlüssel                         | Eine zufällige oder Pseudozufallszahl, die als Eingabe für einen Kryptografiealgorithmus zur Verschlüsselung und Entschlüsselung von Daten verwendet wird.                                                                                               |
-| Kryptografie mit symmetrischem Schlüssel  | Kryptografie, bei der zur Ver- und Entschlüsselung derselbe Schlüssel verwendet wird. Auch bekannt als Kryptografie mit geheimem Schlüssel.                                                                                      |
-| Kryptografie mit asymmetrischem Schlüssel | Kryptografie, bei der zur Ver- und Entschlüsselung verschiedene, mathematisch jedoch in Beziehung stehende Schlüssel verwendet werden. Auch bekannt als Kryptografie mit öffentlichem Schlüssel.                                                          |
-| Codierung                    | Das Verfahren zur Codierung von digitalen Nachrichten, einschließlich Zertifikaten, für die Übertragung über ein Netzwerk.                                                                                                     |
-| Algorithmusanbieter          | Eine DLL-Datei, die einen Kryptografiealgorithmus implementiert.                                                                                                                                                      |
-| Schlüsselspeicheranbieter        | Ein Container zum Speichern von Schlüsselmaterial. Derzeit können Schlüssel in Software, Smartcards und dem Trusted Platform Module (TPM) gespeichert werden.                                                                   |
-| X.509-Zertifikat           | Ein digitales Dokument, das in der Regel von einer Zertifizierungsstelle ausgegeben wird, um die Identität einer Person, eines Systems oder einer Entität für andere interessierte Parteien zu überprüfen.                                            |
+| <span data-ttu-id="8ebef-112">Verschlüsselung</span><span class="sxs-lookup"><span data-stu-id="8ebef-112">Encryption</span></span>                  | <span data-ttu-id="8ebef-113">Das Verfahren zum Transformieren von Daten mithilfe von Kryptografiealgorithmus und -schlüssel.</span><span class="sxs-lookup"><span data-stu-id="8ebef-113">The process of transforming data by using a cryptographic algorithm and key.</span></span> <span data-ttu-id="8ebef-114">Die transformierten Daten können nur mithilfe desselben Algorithmus und desselben (symmetrischen) oder zugehörigen (öffentlichen) Schlüssels wiederhergestellt werden.</span><span class="sxs-lookup"><span data-stu-id="8ebef-114">The transformed data can be recovered only by using the same algorithm and the same (symmetric) or related (public) key.</span></span> |
+| <span data-ttu-id="8ebef-115">Entschlüsselung</span><span class="sxs-lookup"><span data-stu-id="8ebef-115">Decryption</span></span>                  | <span data-ttu-id="8ebef-116">Das Verfahren zur Rückführung verschlüsselter Daten in ihre ursprüngliche Form.</span><span class="sxs-lookup"><span data-stu-id="8ebef-116">The process of returning encrypted data to its original form.</span></span>                                                                                                                                         |
+| <span data-ttu-id="8ebef-117">Klartext</span><span class="sxs-lookup"><span data-stu-id="8ebef-117">Plaintext</span></span>                   | <span data-ttu-id="8ebef-118">Bezog sich ursprünglich auf eine nicht verschlüsselte Textnachricht.</span><span class="sxs-lookup"><span data-stu-id="8ebef-118">Originally referred to an unencrypted text message.</span></span> <span data-ttu-id="8ebef-119">Wird heute für jegliche Form unverschlüsselter Daten verwendet.</span><span class="sxs-lookup"><span data-stu-id="8ebef-119">Currently refers to any unencrypted data.</span></span>                                                                                                         |
+| <span data-ttu-id="8ebef-120">Chiffretext</span><span class="sxs-lookup"><span data-stu-id="8ebef-120">Ciphertext</span></span>                  | <span data-ttu-id="8ebef-121">Bezog sich ursprünglich auf eine verschlüsselte und daher nicht lesbare Textnachricht.</span><span class="sxs-lookup"><span data-stu-id="8ebef-121">Originally referred to an encrypted, and therefore unreadable, text message.</span></span> <span data-ttu-id="8ebef-122">Wird heute für jegliche Form verschlüsselter Daten verwendet.</span><span class="sxs-lookup"><span data-stu-id="8ebef-122">Currently refers to any encrypted data.</span></span>                                                                                  |
+| <span data-ttu-id="8ebef-123">Hashing</span><span class="sxs-lookup"><span data-stu-id="8ebef-123">Hashing</span></span>                     | <span data-ttu-id="8ebef-124">Das Verfahren zum Umwandeln von Daten mit variabler Länge in einen Wert mit einer bestimmten Länge, der in der Regel kleiner ist.</span><span class="sxs-lookup"><span data-stu-id="8ebef-124">The process of converting variable length data into a fixed length, typically smaller, value.</span></span> <span data-ttu-id="8ebef-125">Indem Sie Hashes vergleichen, können Sie sich mit hoher Zuverlässigkeit versichern, dass zwei oder mehr Daten übereinstimmen.</span><span class="sxs-lookup"><span data-stu-id="8ebef-125">By comparing hashes, you can obtain reasonable assurance that two or more data are the same.</span></span>            |
+| <span data-ttu-id="8ebef-126">Signatur</span><span class="sxs-lookup"><span data-stu-id="8ebef-126">Signature</span></span>                   | <span data-ttu-id="8ebef-127">Verschlüsselter Hash digitaler Daten, der in der Regel zur Authentifizierung des Absenders von Daten oder zur Sicherstellung genutzt wird, dass die Daten während der Übertragung nicht manipuliert wurden.</span><span class="sxs-lookup"><span data-stu-id="8ebef-127">Encrypted hash of digital data typically used to authenticate the sender of the data or verify that the data was not tampered with during transmission.</span></span>                                               |
+| <span data-ttu-id="8ebef-128">Algorithmus</span><span class="sxs-lookup"><span data-stu-id="8ebef-128">Algorithm</span></span>                   | <span data-ttu-id="8ebef-129">Eine schrittweise Prozedur zur Verschlüsselung von Daten.</span><span class="sxs-lookup"><span data-stu-id="8ebef-129">A step-by-step procedure for encrypting data.</span></span>                                                                                                                                                         |
+| <span data-ttu-id="8ebef-130">Schlüssel</span><span class="sxs-lookup"><span data-stu-id="8ebef-130">Key</span></span>                         | <span data-ttu-id="8ebef-131">Eine zufällige oder Pseudozufallszahl, die als Eingabe für einen Kryptografiealgorithmus zur Verschlüsselung und Entschlüsselung von Daten verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="8ebef-131">A random or pseudorandom number used as input to a cryptographic algorithm to encrypt and decrypt data.</span></span>                                                                                               |
+| <span data-ttu-id="8ebef-132">Kryptografie mit symmetrischem Schlüssel</span><span class="sxs-lookup"><span data-stu-id="8ebef-132">Symmetric Key Cryptography</span></span>  | <span data-ttu-id="8ebef-133">Kryptografie, bei der zur Ver- und Entschlüsselung derselbe Schlüssel verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="8ebef-133">Cryptography in which encryption and decryption use the same key.</span></span> <span data-ttu-id="8ebef-134">Auch bekannt als Kryptografie mit geheimem Schlüssel.</span><span class="sxs-lookup"><span data-stu-id="8ebef-134">This is also known as secret key cryptography.</span></span>                                                                                      |
+| <span data-ttu-id="8ebef-135">Kryptografie mit asymmetrischem Schlüssel</span><span class="sxs-lookup"><span data-stu-id="8ebef-135">Asymmetric Key Cryptography</span></span> | <span data-ttu-id="8ebef-136">Kryptografie, bei der zur Ver- und Entschlüsselung verschiedene, mathematisch jedoch in Beziehung stehende Schlüssel verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="8ebef-136">Cryptography in which encryption and decryption use a different but mathematically related key.</span></span> <span data-ttu-id="8ebef-137">Auch bekannt als Kryptografie mit öffentlichem Schlüssel.</span><span class="sxs-lookup"><span data-stu-id="8ebef-137">This is also called public key cryptography.</span></span>                                                          |
+| <span data-ttu-id="8ebef-138">Codierung</span><span class="sxs-lookup"><span data-stu-id="8ebef-138">Encoding</span></span>                    | <span data-ttu-id="8ebef-139">Das Verfahren zur Codierung von digitalen Nachrichten, einschließlich Zertifikaten, für die Übertragung über ein Netzwerk.</span><span class="sxs-lookup"><span data-stu-id="8ebef-139">The process of encoding digital messages, including certificates, for transport across a network.</span></span>                                                                                                     |
+| <span data-ttu-id="8ebef-140">Algorithmusanbieter</span><span class="sxs-lookup"><span data-stu-id="8ebef-140">Algorithm Provider</span></span>          | <span data-ttu-id="8ebef-141">Eine DLL-Datei, die einen Kryptografiealgorithmus implementiert.</span><span class="sxs-lookup"><span data-stu-id="8ebef-141">A DLL that implements a cryptographic algorithm.</span></span>                                                                                                                                                      |
+| <span data-ttu-id="8ebef-142">Schlüsselspeicheranbieter</span><span class="sxs-lookup"><span data-stu-id="8ebef-142">Key Storage Provider</span></span>        | <span data-ttu-id="8ebef-143">Ein Container zum Speichern von Schlüsselmaterial.</span><span class="sxs-lookup"><span data-stu-id="8ebef-143">A container for storing key material.</span></span> <span data-ttu-id="8ebef-144">Derzeit können Schlüssel in Software, Smartcards und dem Trusted Platform Module (TPM) gespeichert werden.</span><span class="sxs-lookup"><span data-stu-id="8ebef-144">Currently, keys can be stored in software, smart cards, or the trusted platform module (TPM).</span></span>                                                                   |
+| <span data-ttu-id="8ebef-145">X.509-Zertifikat</span><span class="sxs-lookup"><span data-stu-id="8ebef-145">X.509 Certificate</span></span>           | <span data-ttu-id="8ebef-146">Ein digitales Dokument, das in der Regel von einer Zertifizierungsstelle ausgegeben wird, um die Identität einer Person, eines Systems oder einer Entität für andere interessierte Parteien zu überprüfen.</span><span class="sxs-lookup"><span data-stu-id="8ebef-146">A digital document, typically issued by a certification authority, to verify the identity of an individual, system, or entity to other interested parties.</span></span>                                            |
 
  
-## <a name="namespaces"></a>Namespaces
+## <a name="namespaces"></a><span data-ttu-id="8ebef-147">Namespaces</span><span class="sxs-lookup"><span data-stu-id="8ebef-147">Namespaces</span></span>
 
-Die folgenden Namespaces stehen für die Verwendung in einer App zur Verfügung:
+<span data-ttu-id="8ebef-148">Die folgenden Namespaces stehen für die Verwendung in einer App zur Verfügung:</span><span class="sxs-lookup"><span data-stu-id="8ebef-148">The following namespaces are available for use in apps.</span></span>
 
-### <a name="windowssecuritycryptography"></a>Windows.Security.Cryptography
+### <a name="windowssecuritycryptography"></a><span data-ttu-id="8ebef-149">Windows.Security.Cryptography</span><span class="sxs-lookup"><span data-stu-id="8ebef-149">Windows.Security.Cryptography</span></span>
 
-Enthält die Klasse "CryptographicBuffer" und statische Methoden, die Ihnen Folgendes ermöglichen:
+<span data-ttu-id="8ebef-150">Enthält die Klasse "CryptographicBuffer" und statische Methoden, die Ihnen Folgendes ermöglichen:</span><span class="sxs-lookup"><span data-stu-id="8ebef-150">Contains the CryptographicBuffer class and static methods that enable you to:</span></span>
 
--   Konvertieren von Daten in und aus Zeichenfolgen
--   Konvertieren von Daten in und aus Bytearrays
--   Codieren von Nachrichten zur Netzwerkübertragung
--   Codieren von Nachrichten nach der Übertragung
+-   <span data-ttu-id="8ebef-151">Konvertieren von Daten in und aus Zeichenfolgen</span><span class="sxs-lookup"><span data-stu-id="8ebef-151">Convert data to and from strings</span></span>
+-   <span data-ttu-id="8ebef-152">Konvertieren von Daten in und aus Bytearrays</span><span class="sxs-lookup"><span data-stu-id="8ebef-152">Convert data to and from byte arrays</span></span>
+-   <span data-ttu-id="8ebef-153">Codieren von Nachrichten zur Netzwerkübertragung</span><span class="sxs-lookup"><span data-stu-id="8ebef-153">Encode messages for network transport</span></span>
+-   <span data-ttu-id="8ebef-154">Codieren von Nachrichten nach der Übertragung</span><span class="sxs-lookup"><span data-stu-id="8ebef-154">Decode messages after transport</span></span>
 
-### <a name="windowssecuritycryptographycertificates"></a>Windows.Security.Cryptography.Certificates
+### <a name="windowssecuritycryptographycertificates"></a><span data-ttu-id="8ebef-155">Windows.Security.Cryptography.Certificates</span><span class="sxs-lookup"><span data-stu-id="8ebef-155">Windows.Security.Cryptography.Certificates</span></span>
 
-Enthält Klassen, Schnittstellen und Enumerationstypen, die Ihnen Folgendes ermöglichen:
+<span data-ttu-id="8ebef-156">Enthält Klassen, Schnittstellen und Enumerationstypen, die Ihnen Folgendes ermöglichen:</span><span class="sxs-lookup"><span data-stu-id="8ebef-156">Contains classes, interfaces, and enumeration types that enable you to:</span></span>
 
--   Erstellen einer Zertifikatanforderung
--   Installieren einer Zertifikatantwort
--   Importieren eines Zertifikats in einer PFX-Datei
--   Angeben und Abrufen von Zertifikatanforderungseigenschaften
+-   <span data-ttu-id="8ebef-157">Erstellen einer Zertifikatanforderung</span><span class="sxs-lookup"><span data-stu-id="8ebef-157">Create a certificate request</span></span>
+-   <span data-ttu-id="8ebef-158">Installieren einer Zertifikatantwort</span><span class="sxs-lookup"><span data-stu-id="8ebef-158">Install a certificate response</span></span>
+-   <span data-ttu-id="8ebef-159">Importieren eines Zertifikats in einer PFX-Datei</span><span class="sxs-lookup"><span data-stu-id="8ebef-159">Import a certificate in a PFX file</span></span>
+-   <span data-ttu-id="8ebef-160">Angeben und Abrufen von Zertifikatanforderungseigenschaften</span><span class="sxs-lookup"><span data-stu-id="8ebef-160">Specify and retrieve certificate request properties</span></span>
 
-### <a name="windowssecuritycryptographycore"></a>Windows.Security.Cryptography.Core
+### <a name="windowssecuritycryptographycore"></a><span data-ttu-id="8ebef-161">Windows.Security.Cryptography.Core</span><span class="sxs-lookup"><span data-stu-id="8ebef-161">Windows.Security.Cryptography.Core</span></span>
 
-Enthält Klassen und Enumerationstypen, die Ihnen Folgendes ermöglichen:
+<span data-ttu-id="8ebef-162">Enthält Klassen und Enumerationstypen, die Ihnen Folgendes ermöglichen:</span><span class="sxs-lookup"><span data-stu-id="8ebef-162">Contains classes and enumeration types that enable you to:</span></span>
 
--   Verschlüsseln und Entschlüsseln von Daten
--   Hashing von Daten
--   Signieren von Daten und Überprüfen von Signaturen
--   Erstellen, Importieren und Exportieren von Schlüsseln
--   Arbeit mit Anbietern von Algorithmen asymmetrischer Schlüssel
--   Arbeit mit Anbietern von Algorithmen symmetrischer Schlüssel
--   Arbeit mit Anbietern von Hashalgorithmen
--   Arbeit mit MAC (Machine Authentication Code)-Algorithmusanbietern
--   Arbeit mit Anbietern von Schlüsselableitungsalgorithmen
+-   <span data-ttu-id="8ebef-163">Verschlüsseln und Entschlüsseln von Daten</span><span class="sxs-lookup"><span data-stu-id="8ebef-163">Encrypt and decrypt data</span></span>
+-   <span data-ttu-id="8ebef-164">Hashing von Daten</span><span class="sxs-lookup"><span data-stu-id="8ebef-164">Hash data</span></span>
+-   <span data-ttu-id="8ebef-165">Signieren von Daten und Überprüfen von Signaturen</span><span class="sxs-lookup"><span data-stu-id="8ebef-165">Sign data and verify signatures</span></span>
+-   <span data-ttu-id="8ebef-166">Erstellen, Importieren und Exportieren von Schlüsseln</span><span class="sxs-lookup"><span data-stu-id="8ebef-166">Create, import, and export keys</span></span>
+-   <span data-ttu-id="8ebef-167">Arbeit mit Anbietern von Algorithmen asymmetrischer Schlüssel</span><span class="sxs-lookup"><span data-stu-id="8ebef-167">Work with asymmetric key algorithm providers</span></span>
+-   <span data-ttu-id="8ebef-168">Arbeit mit Anbietern von Algorithmen symmetrischer Schlüssel</span><span class="sxs-lookup"><span data-stu-id="8ebef-168">Work with symmetric key algorithm providers</span></span>
+-   <span data-ttu-id="8ebef-169">Arbeit mit Anbietern von Hashalgorithmen</span><span class="sxs-lookup"><span data-stu-id="8ebef-169">Work with hash algorithm providers</span></span>
+-   <span data-ttu-id="8ebef-170">Arbeit mit MAC (Machine Authentication Code)-Algorithmusanbietern</span><span class="sxs-lookup"><span data-stu-id="8ebef-170">Work with machine authentication code (MAC) algorithm providers</span></span>
+-   <span data-ttu-id="8ebef-171">Arbeit mit Anbietern von Schlüsselableitungsalgorithmen</span><span class="sxs-lookup"><span data-stu-id="8ebef-171">Work with key derivation algorithm providers</span></span>
 
-### <a name="windowssecuritycryptographydataprotection"></a>Windows.Security.Cryptography.DataProtection
+### <a name="windowssecuritycryptographydataprotection"></a><span data-ttu-id="8ebef-172">Windows.Security.Cryptography.DataProtection</span><span class="sxs-lookup"><span data-stu-id="8ebef-172">Windows.Security.Cryptography.DataProtection</span></span>
 
-Enthält Klassen, die Ihnen Folgendes ermöglichen:
+<span data-ttu-id="8ebef-173">Enthält Klassen, die Ihnen Folgendes ermöglichen:</span><span class="sxs-lookup"><span data-stu-id="8ebef-173">Contains classes that enable you to:</span></span>
 
--   Asynchrone Verschlüsselung und Entschlüsselung statischer Daten
--   Asynchrone Verschlüsselung und Entschlüsselung von Datenströmen
+-   <span data-ttu-id="8ebef-174">Asynchrone Verschlüsselung und Entschlüsselung statischer Daten</span><span class="sxs-lookup"><span data-stu-id="8ebef-174">Asynchronously encrypt and decrypt static data</span></span>
+-   <span data-ttu-id="8ebef-175">Asynchrone Verschlüsselung und Entschlüsselung von Datenströmen</span><span class="sxs-lookup"><span data-stu-id="8ebef-175">Asynchronously encrypt and decrypt data streams</span></span>
 
-## <a name="crypto-and-pki-application-capabilities"></a>Krypto- und PKI-Anwendungsfunktionen
-
-
-Die vereinfachte Schnittstelle für die Anwendungsprogrammierung, die für Apps verfügbar ist, bietet folgende Kryptografie- und PKI-Funktionen (Public Key Interface):
-
-### <a name="cryptography-support"></a>Kryptografieunterstützung
-
-Sie können folgende Kryptografieaufgaben ausführen. Weitere Informationen finden Sie im [**Windows.Security.Cryptography.Core**](https://msdn.microsoft.com/library/windows/apps/br241547) -Namespace.
-
--   Erstellen symmetrischer Schlüssel
--   Ausführen der symmetrischen Verschlüsselung
--   Erstellen asymmetrischer Schlüssel
--   Ausführen der asymmetrischen Verschlüsselung
--   Ableiten kennwortbasierter Schlüssel
--   Erstellen von Nachrichtenauthentifizierungscodes (MACs)
--   Hashinhalt
--   Digitales Signieren von Inhalt
-
-Das SDK enthält außerdem eine vereinfachte Schnittstelle für kennwortbasierten Datenschutz. Diese können Sie für folgende Aufgaben verwenden. Weitere Informationen finden Sie im [**Windows.Security.Cryptography.DataProtection**](https://msdn.microsoft.com/library/windows/apps/br241585) -Namespace.
-
--   Asynchroner Schutz statischer Daten
--   Asynchroner Schutz eines statischen Datenstroms
-
-### <a name="encoding-support"></a>Codierungsunterstützung
-
-Eine App kann kryptografische Daten für die Übertragung in einem Netzwerk codieren und Daten decodieren, die aus einer Netzwerkquelle empfangen wurden. Weitere Informationen finden Sie unter den statischen Methoden, die im [**Windows.Security.Cryptography**](https://msdn.microsoft.com/library/windows/apps/br241404) -Namespace verfügbar sind.
-
-### <a name="pki-support"></a>PKI-Unterstützung
-
-Apps können folgende PKI-Aufgaben ausführen. Weitere Informationen finden Sie im [**Windows.Security.Cryptography.Certificates**](https://msdn.microsoft.com/library/windows/apps/br241476) -Namespace.
-
--   Erstellen eines Zertifikats
--   Erstellen eines selbstsignierten Zertifikats
--   Installieren einer Zertifikatantwort
--   Importieren eines Zertifikats im PFX-Format
--   Verwenden von Smartcardzertifikaten und -schlüsseln (sharedUserCertificates-Funktion ist festgelegt)
--   Verwenden von Zertifikaten aus dem MY-Speicher des Benutzers (sharedUserCertificates-Funktion ist festgelegt)
-
-Sie können das Manifest außerdem für folgende Aktionen verwenden:
-
--   Angeben von anwendungsspezifisch vertrauenswürdigen Stammzertifikaten
--   Angeben von anwendungsspezifisch für Peers vertrauenswürdigen Zertifikaten
--   Explizites Deaktivieren der Vererbung von der Systemvertrauensstellung
--   Angeben von Kriterien für die Zertifikatauswahl
-    -   Nur Hardwarezertifikate
-    -   Mit einem angegebenen Satz an Ausstellern verkettete Zertifikate
-    -   Automatisches Auswählen eines Zertifikats aus dem Anwendungsspeicher
-
-## <a name="detailed-articles"></a>Detaillierte Artikel
+## <a name="crypto-and-pki-application-capabilities"></a><span data-ttu-id="8ebef-176">Krypto- und PKI-Anwendungsfunktionen</span><span class="sxs-lookup"><span data-stu-id="8ebef-176">Crypto and PKI application capabilities</span></span>
 
 
-Die folgenden Artikel enthalten weitere Informationen zu Sicherheitsszenarien:
+<span data-ttu-id="8ebef-177">Die vereinfachte Schnittstelle für die Anwendungsprogrammierung, die für Apps verfügbar ist, bietet folgende Kryptografie- und PKI-Funktionen (Public Key Interface):</span><span class="sxs-lookup"><span data-stu-id="8ebef-177">The simplified application programming interface available for apps enables the following cryptographic and public key infrastructure (PKI) capabilities.</span></span>
 
-| Thema                                                                         | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+### <a name="cryptography-support"></a><span data-ttu-id="8ebef-178">Kryptografieunterstützung</span><span class="sxs-lookup"><span data-stu-id="8ebef-178">Cryptography support</span></span>
+
+<span data-ttu-id="8ebef-179">Sie können folgende Kryptografieaufgaben ausführen.</span><span class="sxs-lookup"><span data-stu-id="8ebef-179">You can perform the following cryptographic tasks.</span></span> <span data-ttu-id="8ebef-180">Weitere Informationen finden Sie im [**Windows.Security.Cryptography.Core**](https://msdn.microsoft.com/library/windows/apps/br241547) -Namespace.</span><span class="sxs-lookup"><span data-stu-id="8ebef-180">For more information, see the [**Windows.Security.Cryptography.Core**](https://msdn.microsoft.com/library/windows/apps/br241547) namespace.</span></span>
+
+-   <span data-ttu-id="8ebef-181">Erstellen symmetrischer Schlüssel</span><span class="sxs-lookup"><span data-stu-id="8ebef-181">Create symmetric keys</span></span>
+-   <span data-ttu-id="8ebef-182">Ausführen der symmetrischen Verschlüsselung</span><span class="sxs-lookup"><span data-stu-id="8ebef-182">Perform symmetric encryption</span></span>
+-   <span data-ttu-id="8ebef-183">Erstellen asymmetrischer Schlüssel</span><span class="sxs-lookup"><span data-stu-id="8ebef-183">Create asymmetric keys</span></span>
+-   <span data-ttu-id="8ebef-184">Ausführen der asymmetrischen Verschlüsselung</span><span class="sxs-lookup"><span data-stu-id="8ebef-184">Perform asymmetric encryption</span></span>
+-   <span data-ttu-id="8ebef-185">Ableiten kennwortbasierter Schlüssel</span><span class="sxs-lookup"><span data-stu-id="8ebef-185">Derive password based keys</span></span>
+-   <span data-ttu-id="8ebef-186">Erstellen von Nachrichtenauthentifizierungscodes (MACs)</span><span class="sxs-lookup"><span data-stu-id="8ebef-186">Create message authentication codes (MACs)</span></span>
+-   <span data-ttu-id="8ebef-187">Hashinhalt</span><span class="sxs-lookup"><span data-stu-id="8ebef-187">Hash content</span></span>
+-   <span data-ttu-id="8ebef-188">Digitales Signieren von Inhalt</span><span class="sxs-lookup"><span data-stu-id="8ebef-188">Digitally sign content</span></span>
+
+<span data-ttu-id="8ebef-189">Das SDK enthält außerdem eine vereinfachte Schnittstelle für kennwortbasierten Datenschutz.</span><span class="sxs-lookup"><span data-stu-id="8ebef-189">The SDK also provides a simplified interface for password-based data protection.</span></span> <span data-ttu-id="8ebef-190">Diese können Sie für folgende Aufgaben verwenden.</span><span class="sxs-lookup"><span data-stu-id="8ebef-190">You can use this to perform the following tasks.</span></span> <span data-ttu-id="8ebef-191">Weitere Informationen finden Sie im [**Windows.Security.Cryptography.DataProtection**](https://msdn.microsoft.com/library/windows/apps/br241585) -Namespace.</span><span class="sxs-lookup"><span data-stu-id="8ebef-191">For more information, see the [**Windows.Security.Cryptography.DataProtection**](https://msdn.microsoft.com/library/windows/apps/br241585) namespace.</span></span>
+
+-   <span data-ttu-id="8ebef-192">Asynchroner Schutz statischer Daten</span><span class="sxs-lookup"><span data-stu-id="8ebef-192">Asynchronous protection of static data</span></span>
+-   <span data-ttu-id="8ebef-193">Asynchroner Schutz eines statischen Datenstroms</span><span class="sxs-lookup"><span data-stu-id="8ebef-193">Asynchronous protection of a data stream</span></span>
+
+### <a name="encoding-support"></a><span data-ttu-id="8ebef-194">Codierungsunterstützung</span><span class="sxs-lookup"><span data-stu-id="8ebef-194">Encoding support</span></span>
+
+<span data-ttu-id="8ebef-195">Eine App kann kryptografische Daten für die Übertragung in einem Netzwerk codieren und Daten decodieren, die aus einer Netzwerkquelle empfangen wurden.</span><span class="sxs-lookup"><span data-stu-id="8ebef-195">An app can encode cryptographic data for transmission across a network and decode data received from a network source.</span></span> <span data-ttu-id="8ebef-196">Weitere Informationen finden Sie unter den statischen Methoden, die im [**Windows.Security.Cryptography**](https://msdn.microsoft.com/library/windows/apps/br241404) -Namespace verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="8ebef-196">For more information, see the static methods available in the [**Windows.Security.Cryptography**](https://msdn.microsoft.com/library/windows/apps/br241404) namespace.</span></span>
+
+### <a name="pki-support"></a><span data-ttu-id="8ebef-197">PKI-Unterstützung</span><span class="sxs-lookup"><span data-stu-id="8ebef-197">PKI support</span></span>
+
+<span data-ttu-id="8ebef-198">Apps können folgende PKI-Aufgaben ausführen.</span><span class="sxs-lookup"><span data-stu-id="8ebef-198">Apps can perform the following PKI tasks.</span></span> <span data-ttu-id="8ebef-199">Weitere Informationen finden Sie im [**Windows.Security.Cryptography.Certificates**](https://msdn.microsoft.com/library/windows/apps/br241476) -Namespace.</span><span class="sxs-lookup"><span data-stu-id="8ebef-199">For more information, see the [**Windows.Security.Cryptography.Certificates**](https://msdn.microsoft.com/library/windows/apps/br241476) namespace.</span></span>
+
+-   <span data-ttu-id="8ebef-200">Erstellen eines Zertifikats</span><span class="sxs-lookup"><span data-stu-id="8ebef-200">Create a certificate</span></span>
+-   <span data-ttu-id="8ebef-201">Erstellen eines selbstsignierten Zertifikats</span><span class="sxs-lookup"><span data-stu-id="8ebef-201">Create a self-signed certificate</span></span>
+-   <span data-ttu-id="8ebef-202">Installieren einer Zertifikatantwort</span><span class="sxs-lookup"><span data-stu-id="8ebef-202">Install a certificate response</span></span>
+-   <span data-ttu-id="8ebef-203">Importieren eines Zertifikats im PFX-Format</span><span class="sxs-lookup"><span data-stu-id="8ebef-203">Import a certificate in PFX format</span></span>
+-   <span data-ttu-id="8ebef-204">Verwenden von Smartcardzertifikaten und -schlüsseln (sharedUserCertificates-Funktion ist festgelegt)</span><span class="sxs-lookup"><span data-stu-id="8ebef-204">Use smart card certificates and keys (sharedUserCertificates capabilities set)</span></span>
+-   <span data-ttu-id="8ebef-205">Verwenden von Zertifikaten aus dem MY-Speicher des Benutzers (sharedUserCertificates-Funktion ist festgelegt)</span><span class="sxs-lookup"><span data-stu-id="8ebef-205">Use certificates from the user MY store (sharedUserCertificates capabilities set)</span></span>
+
+<span data-ttu-id="8ebef-206">Sie können das Manifest außerdem für folgende Aktionen verwenden:</span><span class="sxs-lookup"><span data-stu-id="8ebef-206">Additionally, you can use the manifest to perform the following actions:</span></span>
+
+-   <span data-ttu-id="8ebef-207">Angeben von anwendungsspezifisch vertrauenswürdigen Stammzertifikaten</span><span class="sxs-lookup"><span data-stu-id="8ebef-207">Specify per application trusted root certificates</span></span>
+-   <span data-ttu-id="8ebef-208">Angeben von anwendungsspezifisch für Peers vertrauenswürdigen Zertifikaten</span><span class="sxs-lookup"><span data-stu-id="8ebef-208">Specify per application peer trusted certificates</span></span>
+-   <span data-ttu-id="8ebef-209">Explizites Deaktivieren der Vererbung von der Systemvertrauensstellung</span><span class="sxs-lookup"><span data-stu-id="8ebef-209">Explicitly disable inheritance from system trust</span></span>
+-   <span data-ttu-id="8ebef-210">Angeben von Kriterien für die Zertifikatauswahl</span><span class="sxs-lookup"><span data-stu-id="8ebef-210">Specify the certificate selection criteria</span></span>
+    -   <span data-ttu-id="8ebef-211">Nur Hardwarezertifikate</span><span class="sxs-lookup"><span data-stu-id="8ebef-211">Hardware certificates only</span></span>
+    -   <span data-ttu-id="8ebef-212">Mit einem angegebenen Satz an Ausstellern verkettete Zertifikate</span><span class="sxs-lookup"><span data-stu-id="8ebef-212">Certificates that chain through a specified set of issuers</span></span>
+    -   <span data-ttu-id="8ebef-213">Automatisches Auswählen eines Zertifikats aus dem Anwendungsspeicher</span><span class="sxs-lookup"><span data-stu-id="8ebef-213">Automatically select a certificate from the application store</span></span>
+
+## <a name="detailed-articles"></a><span data-ttu-id="8ebef-214">Detaillierte Artikel</span><span class="sxs-lookup"><span data-stu-id="8ebef-214">Detailed articles</span></span>
+
+
+<span data-ttu-id="8ebef-215">Die folgenden Artikel enthalten weitere Informationen zu Sicherheitsszenarien:</span><span class="sxs-lookup"><span data-stu-id="8ebef-215">The following articles provide more detail on security scenarios:</span></span>
+
+| <span data-ttu-id="8ebef-216">Thema</span><span class="sxs-lookup"><span data-stu-id="8ebef-216">Topic</span></span>                                                                         | <span data-ttu-id="8ebef-217">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="8ebef-217">Description</span></span>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 |-------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Zertifikate](certificates.md)                                               | In diesem Artikel wird die Verwendung von Zertifikaten in UWP-Apps beschrieben. Mit digitalen Zertifikaten wird in der Kryptografie für öffentliche Schlüssel ein öffentlicher Schlüssel an eine Person, einen Computer oder eine Organisation gebunden. Die gebundenen Identitäten werden meist dazu verwendet, eine Entität für die andere zu authentifizieren. Zertifikate werden z. B. häufig dazu verwendet, einen Webserver für einen Benutzer und einen Benutzer für einen Webserver zu authentifizieren. Sie können Zertifikatanforderungen erstellen und ausgestellte Zertifikate installieren oder importieren. Außerdem können Sie ein Zertifikat in einer Zertifikathierarchie registrieren. |
-| [Kryptografische Schlüssel](cryptographic-keys.md)                                   | In diesem Artikel wird erläutert, wie Sie mithilfe standardmäßiger Schlüsselableitungsfunktionen Schlüssel ableiten und wie Sie Inhalte mithilfe symmetrischer und asymmetrischer Schlüssel verschlüsseln können.                                                                                                                                                                                                                                                                                                                                                                             |
-| [Datenschutz](data-protection.md)                                         | In diesem Artikel wird erläutert, wie Sie mithilfe der [DataProtectionProvider](https://msdn.microsoft.com/library/windows/apps/br241559)-Klasse im [Windows.Security.Cryptography.DataProtection](https://msdn.microsoft.com/library/windows/apps/br241585)-Namespace digitale Daten in einer UWP-App verschlüsseln und entschlüsseln können.                                                                                                                                                                                                                  |
-| [MACs, Hashes und Signaturen](macs-hashes-and-signatures.md)               | In diesem Artikel wird erläutert, wie Nachrichtenmanipulationen mithilfe von Nachrichtenauthentifizierungscodes (Message Authentication Codes, MACs), Hashes und Signaturen in UWP-Apps erkannt werden können.                                                                                                                                                                                                                                                                                                                                                                                |
-| [Exporteinschränkungen hinsichtlich Kryptografie](export-restrictions-on-cryptography.md) | Anhand der Informationen in diesem Abschnitt können Sie ermitteln, ob Ihre App Kryptografiefunktionen in einer Weise verwendet, die unter Umständen dazu führt, dass sie im Windows Store nicht angezeigt wird.                                                                                                                                                                                                                                                                                                                                                                                            |
-| [Allgemeine Kryptografieaufgaben](common-cryptography-tasks.md)                     | Die folgenden Artikel enthalten Beispielcode für allgemeine UWP-Kryptografieaufgaben, z. B. Erstellen zufälliger Zahlen, Vergleichen von Puffern, Konvertieren zwischen Zeichenfolgen und binären Daten, Kopieren in und aus Bytearrays sowie Codieren und Decodieren von Daten.                                                                                                                                                                                                                                                                                    |
+| [<span data-ttu-id="8ebef-218">Zertifikate</span><span class="sxs-lookup"><span data-stu-id="8ebef-218">Certificates</span></span>](certificates.md)                                               | <span data-ttu-id="8ebef-219">In diesem Artikel wird die Verwendung von Zertifikaten in UWP-Apps beschrieben.</span><span class="sxs-lookup"><span data-stu-id="8ebef-219">This article discusses the use of certificates in UWP apps.</span></span> <span data-ttu-id="8ebef-220">Mit digitalen Zertifikaten wird in der Kryptografie für öffentliche Schlüssel ein öffentlicher Schlüssel an eine Person, einen Computer oder eine Organisation gebunden.</span><span class="sxs-lookup"><span data-stu-id="8ebef-220">Digital certificates are used in public key cryptography to bind a public key to a person, computer, or organization.</span></span> <span data-ttu-id="8ebef-221">Die gebundenen Identitäten werden meist dazu verwendet, eine Entität für die andere zu authentifizieren.</span><span class="sxs-lookup"><span data-stu-id="8ebef-221">The bound identities are most often used to authenticate one entity to another.</span></span> <span data-ttu-id="8ebef-222">Zertifikate werden z. B. häufig dazu verwendet, einen Webserver für einen Benutzer und einen Benutzer für einen Webserver zu authentifizieren.</span><span class="sxs-lookup"><span data-stu-id="8ebef-222">For example, certificates are often used to authenticate a web server to a user and a user to a web server.</span></span> <span data-ttu-id="8ebef-223">Sie können Zertifikatanforderungen erstellen und ausgestellte Zertifikate installieren oder importieren.</span><span class="sxs-lookup"><span data-stu-id="8ebef-223">You can create certificate requests and install or import issued certificates.</span></span> <span data-ttu-id="8ebef-224">Außerdem können Sie ein Zertifikat in einer Zertifikathierarchie registrieren.</span><span class="sxs-lookup"><span data-stu-id="8ebef-224">You can also enroll a certificate in a certificate hierarchy.</span></span> |
+| [<span data-ttu-id="8ebef-225">Kryptografische Schlüssel</span><span class="sxs-lookup"><span data-stu-id="8ebef-225">Cryptographic keys</span></span>](cryptographic-keys.md)                                   | <span data-ttu-id="8ebef-226">In diesem Artikel wird erläutert, wie Sie mithilfe standardmäßiger Schlüsselableitungsfunktionen Schlüssel ableiten und wie Sie Inhalte mithilfe symmetrischer und asymmetrischer Schlüssel verschlüsseln können.</span><span class="sxs-lookup"><span data-stu-id="8ebef-226">This article shows how to use standard key derivation functions to derive keys and how to encrypt content using symmetric and asymmetric keys.</span></span>                                                                                                                                                                                                                                                                                                                                                                             |
+| [<span data-ttu-id="8ebef-227">Datenschutz</span><span class="sxs-lookup"><span data-stu-id="8ebef-227">Data protection</span></span>](data-protection.md)                                         | <span data-ttu-id="8ebef-228">In diesem Artikel wird erläutert, wie Sie mithilfe der [DataProtectionProvider](https://msdn.microsoft.com/library/windows/apps/br241559)-Klasse im [Windows.Security.Cryptography.DataProtection](https://msdn.microsoft.com/library/windows/apps/br241585)-Namespace digitale Daten in einer UWP-App verschlüsseln und entschlüsseln können.</span><span class="sxs-lookup"><span data-stu-id="8ebef-228">This article explains how to use the [DataProtectionProvider](https://msdn.microsoft.com/library/windows/apps/br241559) class in the [Windows.Security.Cryptography.DataProtection](https://msdn.microsoft.com/library/windows/apps/br241585) namespace to encrypt and decrypt digital data in a UWP app.</span></span>                                                                                                                                                                                                                  |
+| [<span data-ttu-id="8ebef-229">MACs, Hashes und Signaturen</span><span class="sxs-lookup"><span data-stu-id="8ebef-229">MACs, hashes, and signatures</span></span>](macs-hashes-and-signatures.md)               | <span data-ttu-id="8ebef-230">In diesem Artikel wird erläutert, wie Nachrichtenmanipulationen mithilfe von Nachrichtenauthentifizierungscodes (Message Authentication Codes, MACs), Hashes und Signaturen in UWP-Apps erkannt werden können.</span><span class="sxs-lookup"><span data-stu-id="8ebef-230">This article discusses how message authentication codes (MACs), hashes, and signatures can be used in UWP apps to detect message tampering.</span></span>                                                                                                                                                                                                                                                                                                                                                                                |
+| [<span data-ttu-id="8ebef-231">Exporteinschränkungen hinsichtlich Kryptografie</span><span class="sxs-lookup"><span data-stu-id="8ebef-231">Export restrictions on cryptography</span></span>](export-restrictions-on-cryptography.md) | <span data-ttu-id="8ebef-232">Anhand der Informationen in diesem Abschnitt können Sie ermitteln, ob Ihre App Kryptografiefunktionen in einer Weise verwendet, die unter Umständen dazu führt, dass sie im Microsoft Store nicht angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="8ebef-232">Use this info to determine if your app uses cryptography in a way that might prevent it from being listed in the Microsoft Store.</span></span>                                                                                                                                                                                                                                                                                                                                                                                            |
+| [<span data-ttu-id="8ebef-233">Allgemeine Kryptografieaufgaben</span><span class="sxs-lookup"><span data-stu-id="8ebef-233">Common cryptography tasks</span></span>](common-cryptography-tasks.md)                     | <span data-ttu-id="8ebef-234">Die folgenden Artikel enthalten Beispielcode für allgemeine UWP-Kryptografieaufgaben, z.B. Erstellen zufälliger Zahlen, Vergleichen von Puffern, Konvertieren zwischen Zeichenfolgen und binären Daten, Kopieren in und aus Bytearrays sowie Codieren und Decodieren von Daten.</span><span class="sxs-lookup"><span data-stu-id="8ebef-234">These articles provide example code for common UWP cryptography tasks, such as creating random numbers, comparing buffers, converting between strings and binary data, copying to and from byte arrays, and encoding and decoding data.</span></span>                                                                                                                                                                                                                                                                                    |
 
  
