@@ -3,18 +3,18 @@ author: mcleanbyron
 description: Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um Xbox Live Spielehubdaten abzurufen.
 title: Abrufen von Xbox Live Spielehubdaten
 ms.author: mcleans
-ms.date: 04/16/2018
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, Uwp, Store-Diensten, Microsoft Store-Analyse-API, Xbox Live Analyse, Spielehubs
 ms.localizationpriority: medium
-ms.openlocfilehash: 0d34c95e615a10131b3e7f3ffe9ceb246b652727
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: 70a76f82c37a4cfba6e0a562c8a6295da38976db
+ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1815785"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "1976195"
 ---
 # <a name="get-xbox-live-game-hub-data"></a>Abrufen von Xbox Live Spielehubdaten
 
@@ -22,11 +22,11 @@ ms.locfileid: "1815785"
 Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um Spielehubdaten für Ihr [Xbox Live-fähiges Spiel](../xbox-live/index.md) abzurufen. Diese Informationen sind auch im [Xbox Analyse-Bericht](../publish/xbox-analytics-report.md) im Windows Dev Center-Dashboard verfügbar.
 
 > [!IMPORTANT]
-> Diese Methode unterstützt derzeit nur Xbox Live-fähige Spiele, die von [Microsoft Partnern](../xbox-live/developer-program-overview.md#microsoft-partners) veröffentlicht werden oder die mithilfe des [ID@Xbox Programms](../xbox-live/developer-program-overview.md#id) eingereicht wurden. Es gibt keine Daten für Spiele zurück, die mithilfe des [Xbox Live Creators-Programms](../xbox-live/developer-program-overview.md#xbox-live-creators-program) eingereicht wurden.
+> Diese Methode unterstützt nur Spiele für Xbox oder Spiele, die Xbox Live-Dienste verwenden. Diese Spiele müssen den [Konzeptgenehmigungsprozess](../gaming/concept-approval.md) durchlaufen, der Spiele umfasst, die von [Microsoft-Partnern](../xbox-live/developer-program-overview.md#microsoft-partners) veröffentlicht wurden, sowie Spiele, die über das [ID@Xbox-Programm](../xbox-live/developer-program-overview.md#id) übermittelt wurden. Diese Methode unterstützt derzeit keine Spiele, die über das [Xbox Live Creators-Programm](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) eingereicht wurden.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Um diese Methode zu verwenden, sind die folgenden Schritte erforderlich:
+Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
 * Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](access-analytics-data-using-windows-store-services.md#prerequisites) für die Microsoft Store-Analyse-API.
 * [Rufen Sie ein Azure AD-Zugriffstoken ab](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60 Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
@@ -87,7 +87,8 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 | applicationId       | String | Die Store-ID des Spiels, für das Sie Spielehubdaten abrufen.     |
 | gameHubLikeCount     | number |   Die Anzahl der Vorlieben, die zur Spielehubseite an dem angegebenen Datum hinzugefügt wurden.   |
 | gameHubCommentCount          | number |  Die Anzahl der Kommentare, die zur Spielehubseite für Ihre App an dem angegebenen Datum hinzugefügt wurden.  |
-| gameHubShareCount           | number | Die Anzahl der Male, die die Spielehubseite für Ihre App von Kunden dem angegebenen Datum geteilt wurden.   |
+| gameHubShareCount           | number | Die Anzahl der Male, die die Spielehubseite für Ihre App von Kunden am angegebenen Datum geteilt wurden.   |
+| gameHubFollowerCount          | number | Die Anzahl der Follower der ganzen Zeit für die Spielehubseite für Ihre App.   |
 
 
 ### <a name="response-example"></a>Antwortbeispiel
@@ -102,14 +103,16 @@ Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese 
       "applicationId": "9NBLGGGZ5QDR",
       "gameHubLikeCount": 10,
       "gameHubCommentCount": 1,
-      "gameHubShareCount": 0
+      "gameHubShareCount": 0,
+      "gameHubFollowerCount": 15924
     },
     {
       "date": "2018-01-05",
       "applicationId": "9NBLGGGZ5QDR",
       "gameHubLikeCount": 12,
       "gameHubCommentCount": 1,
-      "gameHubShareCount": 0
+      "gameHubShareCount": 0,
+      "gameHubFollowerCount": 15931
     }
   ],
   "@nextLink": null,

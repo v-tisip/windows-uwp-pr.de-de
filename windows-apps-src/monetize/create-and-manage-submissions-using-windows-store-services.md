@@ -4,18 +4,18 @@ ms.assetid: 7CC11888-8DC6-4FEE-ACED-9FA476B2125E
 description: Verwenden Sie die Microsoft Store-Übermittlungs-API, um Übermittlungen für Apps programmgesteuert zu erstellen und zu verwalten, die für Ihr Windows Dev Center-Konto registriert sind.
 title: Erstellen und Verwalten von Übermittlungen
 ms.author: mcleans
-ms.date: 02/28/2018
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API
 ms.localizationpriority: medium
-ms.openlocfilehash: 037f76e9d0c7c9751786ba501478057687bfa910
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: 9bd8d2f800969102d6957cafa92e04f482323611
+ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663680"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "1976465"
 ---
 # <a name="create-and-manage-submissions"></a>Erstellen und Verwalten von Übermittlungen
 
@@ -34,7 +34,7 @@ Die folgenden Schritte beschreiben den gesamten Prozess der Verwendung der Micro
 > Wenn Sie diese API zum Erstellen einer Übermittlung von Apps, Flight-Paketen oder Add-Ons verwenden, achten Sie darauf, weitere Änderungen an der Übermittlung nur mithilfe der API, anstatt des Dev Center-Dashboards vorzunehmen. Wenn Sie das Dashboard zum Ändern einer Übermittlung verwenden, die ursprünglich mit der API erstellt wurde, können Sie die Übermittlung nicht länger mithilfe der API ändern oder übermitteln. In einigen Fällen kann der Fehlerstatus der Übermittlung belassen werden, mit dem die Übermittlung nicht fortgesetzt werden kann. In diesem Fall müssen Sie die Übermittlung löschen und eine neue Übermittlung erstellen.
 
 > [!IMPORTANT]
-> Sie können mit dieser API weder Übermittlungen für [Volumeneinkäufe über den Microsoft Store für Unternehmen und Microsoft Store für Bildungseinrichtungen](../publish/organizational-licensing.md) veröffentlichen noch Übermittlungen für [Branchenanwendugen](../publish/distribute-lob-apps-to-enterprises.md) direkt an Unternehmen. In beiden Fällen müssen Sie das Windows Dev Center-Dashboard verwenden, um die Übermittlung zu veröffentlichen.
+> Sie können mit dieser API weder Übermittlungen für [Volumeneinkäufe über den Microsoft Store für Unternehmen und Microsoft Store für Bildungseinrichtungen](../publish/organizational-licensing.md) veröffentlichen noch Übermittlungen für [Branchenanwendungen](../publish/distribute-lob-apps-to-enterprises.md) direkt an Unternehmen. In beiden Fällen müssen Sie das Windows Dev Center-Dashboard verwenden, um die Übermittlung zu veröffentlichen.
 
 > [!NOTE]
 > Diese API kann nicht mit Apps oder Add-Ons verwendet werden, die obligatorische App-Updates und über den Store verwaltete Add-Ons verwenden. Bei Verwendung der Microsoft Store-Übermittlungs-API mit einer App oder einem Add-On, das eines dieser Features verwendet, gibt die API den Fehlercode409 zurück. In diesem Fall müssen Sie das Dashboard verwenden, um die Übermittlungen für die App bzw. das Add-On zu verwalten.
@@ -68,13 +68,13 @@ Stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllt haben, bevor
 Vor der Verwendung der Microsoft Store-Übermittlungs-API müssen Sie Ihrem Dev Center-Konto eine Azure AD-Anwendung zuordnen, die Mandanten-ID und Client-ID für die Anwendung abrufen und einen Schlüssel generieren. Die Azure AD-Anwendung stellt die App oder den Dienst dar, aus denen Sie die Microsoft Store-Übermittlungs-API aufrufen möchten. Sie benötigen die Mandanten-ID, die Client-ID und den Schlüssel zum Abrufen eines Azure AD-Zugriffstokens, das Sie an die API übergeben.
 
 > [!NOTE]
-> Sie müssen diesen Schritt nur einmal ausführen. Sobald Sie über die Mandanten-ID, Client-ID und den Schlüssel verfügen, können Sie diese Daten jederzeit wiederverwenden, um ein neues Azure AD-Zugriffstoken zu erstellen.
+> Sie müssen diesen Schritt nur einmal ausführen. Wenn Sie im Besitz der Mandanten-ID, der Client-ID und des Schlüssel sind, können Sie diese Daten jederzeit wiederverwenden, um ein neues Azure AD-Zugriffstoken zu erstellen.
 
-1.  Rufen Sie in Dev Center die **Kontoeinstellungen** auf, klicken Sie auf **Benutzer verwalten**, und [ordnen Sie das Dev Center-Konto Ihrer Organisation dem Azure AD-Verzeichnis Ihrer Organisation zu](../publish/associate-azure-ad-with-dev-center.md).
+1.  [Weisen Sie in Dev Center das Dev Center-Konto Ihrer Organisation dem AzureAD-Verzeichnis Ihrer Organisation zu](../publish/associate-azure-ad-with-dev-center.md).
 
-2.  Klicken Sie auf der Seite **Benutzer verwalten** auf **Azure AD-Apps hinzufügen**, und fügen Sie die AzureAD-Anwendung hinzu, die die App oder den Dienst darstellt, mit dem Sie auf Übermittlungen für Ihr Dev Center-Konto zugreifen. Weisen Sie ihr anschließend die Rolle **Manager** zu. Wenn diese Anwendung bereits in Ihrem AzureAD-Verzeichnis vorhanden ist, können Sie sie auf der Seite **Azure AD-Apps hinzufügen** auswählen, um sie Ihrem Dev Center-Konto hinzuzufügen. Andernfalls können Sie eine neue Azure AD-Anwendung auf der Seite **Azure AD-Apps hinzufügen** erstellen. Weitere Informationen finden Sie unter [Hinzufügen von Azure AD-Anwendungen zu Ihrem Dev Center-Konto](../publish/add-users-groups-and-azure-ad-applications.md#azure-ad-applications).
+2.  Fügen Sie als Nächstes auf der Seite **Benutzer** in den **Kontoeinstellungen** von Dev Center [die AzureAD-Anwendung hinzu](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-dev-center-account), die die App oder den Dienst darstellt, mit der bzw. dem Sie auf Übermittlungen für Ihr Dev Center-Konto zugreifen. Weisen Sie dieser Anwendung die Rolle **Verwalter** zu. Wenn die Anwendung in Ihrem AzureAD-Verzeichnis noch nicht vorhanden ist, können Sie [eine neue AzureAD-Anwendung im Dev Center erstellen](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-dev-center-account).  
 
-3.  Wechseln Sie zurück zur Seite **Benutzer verwalten**, klicken Sie auf den Namen Ihrer Azure AD-Anwendung, um die Anwendungseinstellungen aufzurufen, und kopieren Sie die Werte unter **Mandanten-ID** und **Client-ID**.
+3.  Wechseln Sie zurück zur Seite **Benutzer**, klicken Sie auf den Namen der Azure AD-Anwendung, um die Anwendungseinstellungen aufzurufen, und kopieren Sie die Werte unter **Mandanten-ID** und **Client-ID**.
 
 4. Klicken Sie auf **Neuen Schlüssel hinzufügen**. Kopieren Sie auf dem folgenden Bildschirm den Wert unter **Schlüssel**. Nach dem Verlassen der Seite können Sie nicht mehr auf diese Informationen zugreifen. Weitere Informationen finden Sie unter [Verwalten von Schlüsseln für eine Azure AD-App](../publish/add-users-groups-and-azure-ad-applications.md#manage-keys).
 

@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, Point Of Service, POS
 ms.localizationpriority: medium
-ms.openlocfilehash: 7bbb26fb3c977917732a079f28d274f7f2bfba41
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 861233de6967a6199bae5d81c1a3938bf8645246
+ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1833183"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "1976032"
 ---
 # <a name="getting-started-with-a-camera-barcode-scanner"></a>Erste Schrittemit dem Kamera-Strichcodescanner
 ## <a name="step-1-add-capability-declarations-to-your-app-manifest"></a>Schritt 1: Hinzufügen von Funktionsdeklarationen zum App-Manifest
@@ -84,7 +84,7 @@ Wenn Ihre Kamera im Gehäuse des Computers integriert ist, kann der Name sich zw
 Verwenden Sie [BarcodeScanner.ClaimScannerAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescanner.claimscannerasync#Windows_Devices_PointOfService_BarcodeScanner_ClaimScannerAsync), um eine exklusive Verwendung des Kamera-Strichcodescanners zu erhalten.
 
 ## <a name="step-7-system-provided-preview"></a>Schritt7: Vom System bereitgestellte Vorschau
-Eine Kameravorschau ist für den Benutzer notwendig, um die Kamera auf Barcodes zu richten.  Windows bietet eine einfache Kameravorschau, die ein Dialogfeld startet, das die einfache Steuerung des Kamera-Strichcodescanners ermöglicht.  Rufen Sie einfach [ClaimedBarcodeScanner.ShowideoPreview](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.showvideopreviewasync)auf, um das Dialogfeld zu öffnen und [ClaimedBarcodeScanner.HideVideoPreview](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.hidevideopreview) zu schließen, wenn Sie fertig sind.
+Eine Kameravorschau ist für den Benutzer notwendig, um die Kamera auf Barcodes zu richten.  Windows bietet eine einfache Kameravorschau, die ein Dialogfeld startet, das die einfache Steuerung des Kamera-Strichcodescanners ermöglicht.  Rufen Sie einfach [ClaimedBarcodeScanner.ShowVideoPreview](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.showvideopreviewasync) auf, um das Dialogfeld zu öffnen und [ClaimedBarcodeScanner.HideVideoPreview](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.hidevideopreview) zu schließen, wenn Sie fertig sind.
 
 > [!TIP]
 > Unter See [Hosting-Vorschau](pos-camerabarcode-hosting-preview.md) erfahren Sie, wie Sie die Vorschau für Kamera-Strichcodescanner in Ihrer Anwendung hosten.

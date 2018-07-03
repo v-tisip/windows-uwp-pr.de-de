@@ -10,12 +10,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: cac6caf7f8feab86103e27d7947209bb3fd5c0a8
-ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
+ms.openlocfilehash: 68624288ea223d0882ef0b8c33b174f000081411
+ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "1707095"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "1983386"
 ---
 # <a name="tutorial-support-ink-in-your-uwp-app"></a>Lernprogramm: Unterstützen von Freihandeingaben in Ihrer UWP-App
 
@@ -41,10 +41,10 @@ Mit Windows Ink können Sie Ihren Kunden fast alle erdenklichen schriftlichen Er
 
 * Einen Computer (oder einen virtuellen Computer) mit der aktuellen Version von Windows10.
 * [Visual Studio2017 und die RS2 SDK](https://developer.microsoft.com/windows/downloads)
-* [Windows 10 SDK (10.0.15063.0)](https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk)
+* [Windows 10 SDK (10.0.15063.0)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
 * Wenn Sie noch keine Erfahrung mit der App-Entwicklung in der Universellen Windows-Plattform (UWP) mit Visual Studio haben, werfen Sie einen Blick in diese Themen, bevor Sie dieses Lernprogramm starten:  
-    * [Vorbereiten](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up)
-    * [Erstellen der App „Hello, world“ (XAML)](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
+    * [Vorbereiten](https://docs.microsoft.com/windows/uwp/get-started/get-set-up)
+    * [Erstellen der App „Hello, world“ (XAML)](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
 * **[OPTIONAL]** Ein digitaler Stift und ein Computer mit einer Anzeige, die die Eingaben eines digitalen Stifts unterstützt.
 
 > [!NOTE] 
@@ -70,7 +70,7 @@ Diese Objekte bieten den Großteil der Freihandfunktionen für UWP-Apps.
 | Komponente | Beschreibung |
 | --- | --- |
 | [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) | Ein XAML-UI-Plattformsteuerelement, das standardmäßig alle Eingaben von einem Stift als Freihandstriche oder Löschen von Freihandstrichen empfängt und anzeigt. |
-| [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) | Ein CodeBehind-Objekt, das zusammen mit einem [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement instanziiert wird (über die [**InkCanvas.InkPresenter**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.inkcanvas.InkPresenter)-Eigenschaft verfügbar gemacht). Dieses Objekt stellt alle Standardfreihandfunktionen bereit, die vom [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas)-Steuerelement zur Verfügung gestellt werden, sowie einen umfassenden Satz von APIs für zusätzliche Anpassung und Personalisierung. |
+| [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) | Ein CodeBehind-Objekt, das zusammen mit einem [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement instanziiert wird (über die [**InkCanvas.InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.InkPresenter)-Eigenschaft verfügbar gemacht). Dieses Objekt stellt alle Standardfreihandfunktionen bereit, die vom [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas)-Steuerelement zur Verfügung gestellt werden, sowie einen umfassenden Satz von APIs für zusätzliche Anpassung und Personalisierung. |
 | [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx) | Ein XAML-UI-Plattformsteuerelement enthält eine anpassbare und erweiterbare Sammlung von Schaltflächen, die Features für Freihandeingaben in einem verknüpften [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas)-Steuerelement aktivieren. |
 | [**IInkD2DRenderer**](https://msdn.microsoft.com/library/mt147263)<br/>Diese Funktionalität wird von uns hier nicht erläutert. Weitere Informationen finden Sie unter [Komplexes Freihandbeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620314). | Ermöglicht das Rendern von Freihandstrichen im angegebenen Direct2D-Gerätekontext einer universellen Windows-App statt im standardmäßigen [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement. |
 
@@ -134,12 +134,12 @@ Sie werden feststellen, dass Freihandeingaben standardmäßig nur für Stifteing
 
 Um das zu beheben, müssen Sie eine zweite Codezeile hinzufügen. Dieses Mal befindet sie sich im CodeBehind für die XAML-Datei, in der Sie Ihren [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) deklariert haben. 
 
-In diesem Schritt führen wir das [**InkPresenter**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.inkpresenter) -Objekt ein, das eine differenziertere Verwaltung der Eingabe, Verarbeitung und Rendering der Freihandeingabe (standard und verändert) auf Ihrem [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) bietet.
+In diesem Schritt führen wir das [**InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter) -Objekt ein, das eine differenziertere Verwaltung der Eingabe, Verarbeitung und Rendering der Freihandeingabe (standard und verändert) auf Ihrem [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) bietet.
 
 > [!NOTE]
 > Standardmäßige Freihandeingabe (Stiftspitze oder Radiererspitze/-schaltfläche) wird mit einem sekundären Hardware-Angebot nicht geändert, wie z.B. eine Zeichenstift-Drucktaste, rechte Maustaste oder einem ähnlichen Mechanismus. 
 
-Legen Sie zum Aktivieren der Maus- und Touch-Freihandeingabe die [**InputDeviceTypes**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter.InputDeviceTypes)-Eigenschaft des [**InkPresenter**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.inkpresenter) auf die Kombination aus den gewünschten [**CoreInputDeviceTypes**](https://docs.microsoft.com/uwp/api/windows.ui.core.coreinputdevicetypes)-Werten fest.
+Legen Sie zum Aktivieren der Maus- und Touch-Freihandeingabe die [**InputDeviceTypes**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter.InputDeviceTypes)-Eigenschaft des [**InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter) auf die Kombination aus den gewünschten [**CoreInputDeviceTypes**](https://docs.microsoft.com/uwp/api/windows.ui.core.coreinputdevicetypes)-Werten fest.
 
 ### <a name="in-the-sample"></a>Im Beispiel:
 1. Öffnen Sie die Datei „MainPage.xaml.cs“.
@@ -196,11 +196,11 @@ Führen Sie jetzt die App erneut aus, um die [**InkToolbar**](https://docs.micro
 </td>
 <td>
 
-Hier ist ein Beispiel für eine benutzerdefinierte <strong><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar">InkToolbar</a></strong> (von Skizzenblock im Windows Ink-Arbeitsbereich).
+Hier ist ein Beispiel für eine benutzerdefinierte **[InkToolbar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar)** (von Skizzenblock im Windows Ink-Arbeitsbereich).
 
 ![InkToolbar aus dem Skizzenblock im Ink-Arbeitsbereich](images/ink/ink-inktoolbar-sketchpad-small.png)
 
-Weitere Informationen zur Anpassung einer [InkToolbar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) finden Sie unter [Hinzufügen einer InkToolbar zu einer App für die Universelle Windows-Plattform (UWP) für die Freihandeingabe](https://docs.microsoft.com/en-us/windows/uwp/input/ink-toolbar).
+Weitere Informationen zur Anpassung einer [InkToolbar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) finden Sie unter [Hinzufügen einer InkToolbar zu einer App für die Universelle Windows-Plattform (UWP) für die Freihandeingabe](ink-toolbar.md).
 
 </td>
 </tr>
@@ -294,11 +294,11 @@ In diesem Schritt verwenden wir die Handschrifterkennungsfunktionen von Windows 
 </td>
 <td>
 
-<p>Windows Ink unterstützt Texterkennung für viele der von Windows unterstützten Sprachen. Jedes Sprachpaket enthält ein Schrifterkennungsmodul, das mit dem Language Pack installiert werden kann.</p>
+Windows Ink unterstützt Texterkennung für viele der von Windows unterstützten Sprachen. Jedes Sprachpaket enthält ein Schrifterkennungsmodul, das mit dem Language Pack installiert werden kann.
 
-<p>Zielen Sie auf eine bestimmte Sprache ab, indem Sie die installierten Handschrifterkennungsmodule abfragen.</p>
+Zielen Sie auf eine bestimmte Sprache ab, indem Sie die installierten Handschrifterkennungsmodule abfragen.
 
-<p>Weitere Informationen zur internationalen Handschrifterkennung finden Sie unter <a href="https://docs.microsoft.com/windows/uwp/input/convert-ink-to-text">Windows Ink-Striche als Text erkennen</a>.</p>
+Weitere Informationen zur internationalen Handschrifterkennung finden Sie unter [Windows Ink-Striche als Text erkennen](convert-ink-to-text.md).
 
 </td>
 </tr>
@@ -314,9 +314,9 @@ In diesem Schritt verwenden wir die Handschrifterkennungsfunktionen von Windows 
 </td>
 <td>
 
-<p>Für dieses Lernprogramm muss eine Schaltfläche zum Initiieren der Erkennung gedrückt werden. Sie können auch dynamische Erkennung mithilfe einer einfachen Timing-Funktion ausführen.</p>
+Für dieses Lernprogramm muss eine Schaltfläche zum Initiieren der Erkennung gedrückt werden. Sie können auch dynamische Erkennung mithilfe einer einfachen Timing-Funktion ausführen.
 
-<p>Weitere Informationen zur dynamischen Handschrifterkennung finden Sie unter <a href="https://docs.microsoft.com/windows/uwp/input/convert-ink-to-text">Windows Ink-Striche als Text erkennen</a>.</p>
+Weitere Informationen zur dynamischen Handschrifterkennung finden Sie unter [Windows Ink-Striche als Text erkennen](convert-ink-to-text.md).
 
 </td>
 </tr>
@@ -327,6 +327,7 @@ In diesem Schritt verwenden wir die Handschrifterkennungsfunktionen von Windows 
 OK, nun können Sie also Ihre handschriftlichen Notizen in etwas umwandeln, das etwas lesbarer ist. Aber was ist mit diesem verwackelten Gekritzel aus Ihrem Meeting?
 
 Anhand einer Freihandeingabenanalyse kann Ihre App auch eine Reihe von Kernformen erkenne, einschließlich:
+
 - Kreis
 - Diamant
 - Zeichnung
@@ -452,9 +453,9 @@ In diesem Schritt verknüpfen wir die Schaltflächen **Speichern** und **Laden**
 
 <td>
 
-<p>Windows-Freihandeingabe unterstützt auch das Kopieren und Einfügen von Freihandstrichen zur und aus der Zwischenablage.</p>
+Windows-Freihandeingabe unterstützt auch das Kopieren und Einfügen von Freihandstrichen zur und aus der Zwischenablage.
 
-<p>Weitere Informationen zur Verwendung der Zwischenablage mit Freihandeingabe finden Sie unter <a href="https://docs.microsoft.com/en-us/windows/uwp/input/save-and-load-ink">Speichern und Abrufen von Windows Ink</a>.</p>
+Weitere Informationen zur Verwendung der Zwischenablage mit Freihandeingabe finden Sie unter [Speichern und Abrufen von Windows Ink](save-and-load-ink.md).
 
 </td>
 </tr>
@@ -466,9 +467,16 @@ Herzlichen Glückwunsch, Sie haben das Lernprogramm **Eingaben: Unterstützen vo
 
 ## <a name="related-articles"></a>Verwandte Artikel
 
-* [Stiftinteraktionen und Windows Ink in UWP-Apps](https://docs.microsoft.com/windows/uwp/input/pen-and-stylus-interactions)
+* [Stiftinteraktionen und Windows Ink in UWP-Apps](pen-and-stylus-interactions.md)
 
-**Beispiele**
+### <a name="samples"></a>Beispiele
+
+* [Freihandeingabenanalyse (einfach) (C#)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-analysis-basic.zip)
+* [Beispiel für Freihandschrifterkennung (C#)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-handwriting-reco.zip)
+* [Speichern und Laden von Freihandstrichen aus einer ISF-Datei (Ink Serialized Format)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store.zip)
+* [Speichern und Laden von Freihandstrichen aus der Zwischenablage](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store-clipboard.zip)
+* [Beispiel für Position und Ausrichtung der Freihandsymbolleiste (einfach)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-toolbar-handedness.zip)
+* [Beispiel für Position und Ausrichtung der Freihandsymbolleiste (dynamisch)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-toolbar-handedness-dynamic.zip)
 * [Einfaches Freihandbeispiel (C#/C++)](http://go.microsoft.com/fwlink/p/?LinkID=620312)
 * [Komplexes Freihandbeispiel (C++)](http://go.microsoft.com/fwlink/p/?LinkID=620314)
 * [Freihandbeispiel (JavaScript)](http://go.microsoft.com/fwlink/p/?LinkID=620308)

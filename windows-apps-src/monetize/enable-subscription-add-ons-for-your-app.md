@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 59a85512eacf880b61b3245726f4d15bb359a7ad
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
+ms.openlocfilehash: f0bed75a8201b9875f79419c0a77c8a35918b77e
+ms.sourcegitcommit: 4b6c197e1567d86e19af3ab5da516c022f1b6dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1674887"
+ms.lasthandoff: 05/11/2018
+ms.locfileid: "1877152"
 ---
 # <a name="enable-subscription-add-ons-for-your-app"></a>Aktivieren von Abonnements für Add-Ons für Ihre App
 
@@ -39,23 +39,24 @@ Gehen Sie folgendermaßen vor, um den Kauf von Abonnement-Add-Ons in Ihrer App z
 
 1. [Erstellen Sie eine Add-On-Übermittlung](../publish/add-on-submissions.md) für Ihr Abonnement im Dev Center-Dashboard und veröffentlichen Sie die Übermittlung. Beachten Sie im Rahmen des Add-On-Übermittlungsprozesses die folgenden Eigenschaften:
 
-  * [Produkttyp](../publish/set-your-add-on-product-id.md#product-type): Stellen Sie sicher, dass Sie **Abonnement** ausgewählt haben.
+    * [Produkttyp](../publish/set-your-add-on-product-id.md#product-type): Stellen Sie sicher, dass Sie **Abonnement** ausgewählt haben.
 
-  * [Abonnementzeitraum](../publish/enter-add-on-properties.md#subscription-period): Wählen Sie den wiederholte Abrechnungszeitraum für Ihr Abonnement aus. Der können den Abonnementszeitraum nach der Veröffentlichung des Add-Ons nicht mehr ändern.
+    * [Abonnementzeitraum](../publish/enter-add-on-properties.md#subscription-period): Wählen Sie den wiederholte Abrechnungszeitraum für Ihr Abonnement aus. Der können den Abonnementszeitraum nach der Veröffentlichung des Add-Ons nicht mehr ändern.
 
-    Jedes Abonnement-Add-On unterstützt einen einzelnen Abonnementzeitraum und einen Testzeitraum. Sie müssen ein anderes Abonnement-Add-On für jedes Abonnement erstellen, das Sie in Ihrer App anbieten möchten. Wenn Sie z. B. ein monatliches Abonnement ohne Teste, ein monatliches Abonnement mit einmonatigem Test, ein Jahresabonnement ohne Test und ein Jahresabonnement mit einem einmonatigen Test anbieten möchten, benötigen Sie vier Abonnement-Add-Ons.
+        Jedes Abonnement-Add-On unterstützt einen einzelnen Abonnementzeitraum und einen Testzeitraum. Sie müssen ein anderes Abonnement-Add-On für jedes Abonnement erstellen, das Sie in Ihrer App anbieten möchten. Wenn Sie z. B. ein monatliches Abonnement ohne Teste, ein monatliches Abonnement mit einmonatigem Test, ein Jahresabonnement ohne Test und ein Jahresabonnement mit einem einmonatigen Test anbieten möchten, benötigen Sie vier Abonnement-Add-Ons.
 
-  * [Testzeitraum](../publish/enter-add-on-properties.md#free-trial): Wählen Sie einen 1 Woche oder 1Monat Testzeitraum für Ihr Abonnement, damit Benutzer Ihre Abonnement testen können, bevor sie dieses kaufen. Der können den Abonnementszeitraum und den Testzeitraum nach der Veröffentlichung des Abonnement-Add-Ons nicht mehr ändern.
+    * [Testzeitraum](../publish/enter-add-on-properties.md#free-trial): Wählen Sie einen 1 Woche oder 1Monat Testzeitraum für Ihr Abonnement, damit Benutzer Ihre Abonnement testen können, bevor sie dieses kaufen. Der können den Abonnementszeitraum und den Testzeitraum nach der Veröffentlichung des Abonnement-Add-Ons nicht mehr ändern.
 
-    Um eine kostenlose Testversion Ihres Abonnements zu erwerben, muss der Benutzer Ihr Abonnement über den Standard-In-App-Einkauf-(inkl. gültiger Zahlungsmethode) erwerben. Während der Testphase wird nichts in Rechnung gestellt. Am Ende des Testzeitraums wandelt sich das Abonnement automatisch in ein vollständiges Abonnement um und die Zahlungsmittel des Benutzers werden für den ersten kostenpflichtigen Zeitraum des Abonnements belastet. Wenn der Benutzer das Abonnement während des Testzeitraums abbricht, bleibt das Abonnement bis zum Ende des Testzeitraums aktiv. Einige Testzeiträume sind nicht für alle Abonnements verfügbar.
+        Um eine kostenlose Testversion Ihres Abonnements zu erwerben, muss der Benutzer Ihr Abonnement über den Standard-In-App-Einkauf-(inkl. gültiger Zahlungsmethode) erwerben. Während der Testphase wird nichts in Rechnung gestellt. Am Ende des Testzeitraums wandelt sich das Abonnement automatisch in ein vollständiges Abonnement um und die Zahlungsmittel des Benutzers werden für den ersten kostenpflichtigen Zeitraum des Abonnements belastet. Wenn der Benutzer das Abonnement während des Testzeitraums abbricht, bleibt das Abonnement bis zum Ende des Testzeitraums aktiv. Einige Testzeiträume sind nicht für alle Abonnements verfügbar.
+
         > [!NOTE]
-        > Each customer can acquire a free trial for a subscription add-on only one time. After a customer acquires a free trial for a subscription, the Store prevents the same customer from ever acquiring the same free trial subscription again.
+        > Jeder Kunde kann nur einmal eine kostenlose Testversion für ein Abonnement-Add-On erwerben. Nachdem ein Kunde eine kostenlose Testversion für ein Abonnement erworben hat, verhindert der Store, dass derselbe Kunde das gleiche kostenlose Testabonnement erneut erhält.
 
-  * [Sichtbarkeit](../publish/set-add-on-pricing-and-availability.md#visibility): Wenn Sie ein Test-Add-On erstellen, das Sie nur verwenden, um die In-App-Einkaufserfahrung für Ihre Abonnement zu testen, empfehlen wir, eine der **Im Store ausgeblendet**-Optionen zu verwenden. Andernfalls können Sie die beste Sichtbarkeitsoption für Ihr Szenario auswählen.
+    * [Sichtbarkeit](../publish/set-add-on-pricing-and-availability.md#visibility): Wenn Sie ein Test-Add-On erstellen, das Sie nur verwenden, um die In-App-Einkaufserfahrung für Ihre Abonnement zu testen, empfehlen wir, eine der **Im Store ausgeblendet**-Optionen zu verwenden. Andernfalls können Sie die beste Sichtbarkeitsoption für Ihr Szenario auswählen.
 
-  * [Preise](../publish/set-add-on-pricing-and-availability.md?#pricing): Wählen Sie in diesem Abschnitt den Preis für Ihr Abonnement aus. Der können den Abonnementszeitraum nach der Veröffentlichung des Add-Ons nicht mehr erhöhen. Sie können den Preis jedoch später senken.
-      > [!IMPORTANT]
-      > Standardmäßig wird der Preis bei der Erstellung des Add-Ons auf **Kostenlos** festgelegt. Da Sie den Preis nach Abschluss der Add-On-Übermittlung nicht anheben können, stellen Sie sicher, dass Sie hier den gewünschten Preis für Ihr Abonnement auswählen.
+    * [Preise](../publish/set-add-on-pricing-and-availability.md?#pricing): Wählen Sie in diesem Abschnitt den Preis für Ihr Abonnement aus. Der können den Abonnementszeitraum nach der Veröffentlichung des Add-Ons nicht mehr erhöhen. Sie können den Preis jedoch später senken.
+        > [!IMPORTANT]
+        > Standardmäßig wird der Preis bei der Erstellung des Add-Ons auf **Kostenlos** festgelegt. Da Sie den Preis nach Abschluss der Add-On-Übermittlung nicht anheben können, stellen Sie sicher, dass Sie hier den gewünschten Preis für Ihr Abonnement auswählen.
 
 2. Verwenden Sie in Ihrer App die APIs im Namespace [**Windows.Services.Store**](https://docs.microsoft.com/uwp/api/windows.services.store), um zu ermitteln, ob der aktuelle Benutzer bereits Ihr Abonnement-Add-On erworben hat, und um es als In-App-Kauf anzubieten. In den [Codebeispielen](#code-examples) in diesem Artikel erhalten Sie weitere Informationen.
 

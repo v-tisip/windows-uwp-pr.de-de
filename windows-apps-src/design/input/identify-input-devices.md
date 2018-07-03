@@ -12,12 +12,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8c61de6dbeb8b1c455c1312cc993d0eee7b1bba7
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.openlocfilehash: 40abeae4048784599deadd9a1a62a995447159be
+ms.sourcegitcommit: 03a3c02c7b3b0b0a3d1b14705cc1fd73788ac034
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653989"
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "1903194"
 ---
 # <a name="identify-input-devices"></a>Identifizieren von Eingabegeräten
 
@@ -90,8 +90,6 @@ private void GetTouchProperties()
 Der [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)-Namespace enthält die [**PointerDevice**](https://msdn.microsoft.com/library/windows/apps/br225633)-Klasse, mit der Sie abrufen können, ob eines der erkannten Geräte Zeigereingaben (Toucheingabe, Stift oder Maus) unterstützt. Erstellen Sie einfach ein neues **PointerDevice**-Objekt, und rufen Sie die benötigten Eigenschaften ab.
 
 **Hinweis**  Die von den hier beschriebenen Eigenschaften zurückgegebenen Werte basieren auf allen ermittelten Zeigegeräten: Boolesche Eigenschaften geben Werte ungleich 0 zurück, wenn mindestens ein Zeigegerät eine bestimmte Funktion unterstützt, während numerische Eigenschaften den größten Wert eines der Zeigegeräte zurückgeben.
-
- 
 
 Der folgende Code zeigt in einer Tabelle die Eigenschaften und Werte der einzelnen Zeigergeräte an.
 

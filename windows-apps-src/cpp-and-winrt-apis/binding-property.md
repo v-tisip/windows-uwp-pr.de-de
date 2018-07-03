@@ -3,24 +3,21 @@ author: stevewhims
 description: Eine Eigenschaft, die effektiv an ein XAML-Steuerelement gebunden werden kann, wird als *Observable*-Eigenschaft bezeichnet. Dieses Thema zeigt, wie man eine Observable-Eigenschaft implementiert und nutzt und wie man ein XAML-Steuerelement daran bindet.
 title: XAML-Steuerelemente; Binden an eine C++/WinRT-Eigenschaft
 ms.author: stwhi
-ms.date: 03/07/2018
+ms.date: 05/07/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, XAML, steuerelement, binden, eigenschaft
 ms.localizationpriority: medium
-ms.openlocfilehash: b54f0dd60a90cd13e5b3586a956b09e30f6d9755
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 25ea4c4caf5135b13b88eeea6f43bb36bd691c11
+ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832284"
+ms.lasthandoff: 05/09/2018
+ms.locfileid: "1863216"
 ---
 # <a name="xaml-controls-bind-to-a-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-property"></a>XAML-Steuerelemente; Binden an eine [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)-Eigenschaft
-> [!NOTE]
-> **Einige Informationen beziehen sich auf die Vorabversion, die vor der kommerziellen Freigabe möglicherweise wesentlichen Änderungen unterliegt. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.**
-
-Eine Eigenschaft, die effektiv an ein XAML-Steuerelement gebunden werden kann, wird als *Observable*-Eigenschaft bezeichnet. Dieses Konzept basiert auf dem Software-Design-Muster, das als *Observer-Pattern* bekannt ist. Dieses Thema zeigt, wie man Observable-Eigenschaften in C++/WinRT implementiert und wie man XAML-Steuerelemente an diese bindet.
+Eine Eigenschaft, die effektiv an ein XAML-Steuerelement gebunden werden kann, wird als *observable*-Eigenschaft bezeichnet. Dieses Konzept basiert auf dem Software-Design-Muster, das als *Observer-Pattern* bekannt ist. Dieses Thema zeigt, wie man Observable-Eigenschaften in C++/WinRT implementiert und wie man XAML-Steuerelemente an diese bindet.
 
 > [!IMPORTANT]
 > Wichtige Konzepte und Begriffe, die Ihr Verständnis für die Verwendung von Laufzeitklassen mit C++/WinRT unterstützen, finden Sie unter [Verwenden von APIs mit C++/WinRT](consume-apis.md) und [Erstellen von APIs mit C++/WinRT](author-apis.md).
@@ -31,7 +28,7 @@ Angenommen, eine Laufzeitklasse namens **BookSku** hat eine Eigenschaft namens *
 Ein XAML-Textelement oder -Steuerelement kann sich an diese Ereignisse binden und sie verarbeiten, indem es den/die aktualisierten Wert(e) abruft und dann eine Aktualisierung durchführt, um den neuen Wert anzuzeigen.
 
 > [!NOTE]
-> Informationen über die aktuelle Verfügbarkeit der C++/WinRT Visual Studio Extension (VSIX) (die Projektvorlagenunterstützung sowie C++/WinRT MSBuild-Eigenschaften und -Ziele bietet) finden Sie unter [Visual Studio-Unterstützung für C++/WinRT und VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
+> Informationen zur Installation und Verwendung der C++/WinRT Visual Studio Extension (VSIX) (die Projektvorlagenunterstützung sowie C++/WinRT MSBuild-Eigenschaften und -Ziele bietet) finden Sie unter [Visual Studio-Unterstützung für C++/WinRT und VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
 
 ## <a name="create-a-blank-app-bookstore"></a>Erstellen einer leeren App (Bookstore)
 Erstellen Sie zunächst ein neues Projekt in Microsoft Visual Studio. Erstellen Sie ein **Visual C++ Blank App (C++/WinRT)**-Projekt und nennen Sie es *Bookstore*.
@@ -211,7 +208,7 @@ namespace BookstoreCPPWinRT
 
 Erstellen Sie das Projekt neu, um die Quellcodedateien, in denen die **MainPage**-Laufzeitklasse implementiert ist (`\Bookstore\Bookstore\Generated Files\sources\MainPage.h` und `MainPage.cpp`), neu zu generieren. Kopieren Sie die Zugriffs-Stubs für die ViewModel-Eigenschaft aus den generierten Dateien in `\Bookstore\Bookstore\MainPage.h` und `MainPage.cpp`.
 
-Fügen Sie zu `\Bookstore\Bookstore\MainPage.h` ein privates Mitglied hinzu, um das Ansichtsmodell zu speichern. Beachten Sie, dass die Zugriffsfunktion für die Eigenschaft (und das Mitglied m_mainViewModel) als **Bookstore::BookstoreViewModel** (dem projizierten Typ) implementiert ist. Der Implementierungstyp befindet sich im selben Projekt (Kompilierungseinheit), so dass wir m_mainViewModel über die Konstruktorüberladung mit `nullptr` konstruieren.
+Fügen Sie zu `\Bookstore\Bookstore\MainPage.h` ein privates Mitglied hinzu, um das Ansichtsmodell zu speichern. Beachten Sie, dass die Zugriffsfunktion für die Eigenschaft (und das Mitglied m_mainViewModel) als **Bookstore::BookstoreViewModel** (dem projizierten Typ) implementiert ist. Der Implementierungstyp befindet sich im selben Projekt (Kompilierungseinheit), so dass wir m_mainViewModel über die Konstruktorüberladung mit `nullptr_t` konstruieren.
 
 ```cppwinrt
 // MainPage.h

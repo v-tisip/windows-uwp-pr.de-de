@@ -10,18 +10,18 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Spiele, DirectX, Laden von Ressourcen
 ms.localizationpriority: medium
-ms.openlocfilehash: 7cd2ca426f5a73a6cf8953ab599f8a7332be43a4
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.openlocfilehash: 12dd2fd39ff0b39e747488952779cfeb180f06fa
+ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1655612"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "1983553"
 ---
 # <a name="load-resources-in-your-directx-game"></a>Laden von Ressourcen im DirectX-Spiel
 
 
 
-In den meisten Spielen werden Ressourcen und Objekte (wie Shader, Texturen, vordefinierte Gitter oder andere Grafikdaten) an bestimmten Stellen aus dem lokalen Speicher oder über einen anderen Datenstrom geladen. Dieser Abschnitt enthält eine allgemeine Übersicht über die Aspekte, die beim Laden dieser Dateien zur Verwendung in Ihrem UWP-Spiel zu berücksichtigen sind.
+In den meisten Spielen werden Ressourcen und Objekte (wie Shader, Texturen, vordefinierte Gitter oder andere Grafikdaten) an bestimmten Stellen aus dem lokalen Speicher oder über einen anderen Datenstrom geladen. Dieser Abschnitt enthält eine allgemeine Übersicht über die Aspekte, die beim Laden dieser Dateien zur Verwendung in Ihrem DirectX-C/C++-UWP-Spiel (Universelle Windows-Plattform) zu berücksichtigen sind.
 
 Es kann beispielsweise sein, dass die Gitter für polygonale Objekte im Spiel mit einem anderen Tool erstellt und in einem bestimmten Format exportiert wurden. Die kann auch besonders für Texturen der Fall sein: Während eine flache, unkomprimierte Bitmapgrafik in der Regel von den meisten Tools geschrieben und von den meisten Grafik-APIs verarbeitet werden kann, ist dieses Format zur Verwendung im Spiel möglicherweise sehr ineffizient. Sie werden durch die grundlegenden Schritte des Ladens von drei unterschiedlichen Arten von Grafikressourcen geführt, die in Verbindung mit Direct3D verwendet werden: Gitter (Modelle), Texturen (Bitmaps) und kompilierte Shaderobjekte.
 

@@ -4,18 +4,18 @@ ms.assetid: 2F30E68B-B643-4387-9430-793D08AAF0E7
 description: Mittels dieser Methode in der Microsoft Store-Analyse-API können Sie gesammelte Fehlerberichtsdaten für Windows7- und Windows8.x-Treiber für einen bestimmten Zeitraum und andere optionale Filter abrufen. Diese Methode ist nur für IHVs bestimmt.
 title: Abrufen von Fehlerberichtsdaten für Windows7- und Windows8.x-Treiber
 ms.author: mcleans
-ms.date: 01/18/2018
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienst, Microsoft Store-Analyse-API, Fehler
 ms.localizationpriority: medium
-ms.openlocfilehash: 71a816f9665cdaa5673adad1a4de5e976c0cd0c1
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: 75a1b16e8882e961ccd0a10e99e94038948f59fd
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663370"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989594"
 ---
 # <a name="get-error-reporting-data-for-windows-7-and-windows-8x-drivers"></a>Abrufen von Fehlerberichtsdaten für Windows7- und Windows8.x-Treiber
 
@@ -83,7 +83,7 @@ Authorization: Bearer <your access token>
 |------------|---------|--------------|
 | Wert      | array   | Ein Array von Objekten, die gesammelte Fehlerberichtsdaten enthalten. Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie in der folgenden Tabelle.     |
 | @nextLink  | String  | Wenn weitere Seiten mit Daten vorhanden sind, enthält diese Zeichenfolge einen URI, mit dem Sie die nächste Seite mit Daten anfordern können. Beispielsweise wird dieser Wert zurückgegeben, wenn der Parameter **top** der Anforderung auf 10000 festgelegt ist, es jedoch mehr als 10.000 Zeilen mit Fehlern für die Abfrage gibt. |
-| TotalCount | inumber | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.     |
+| TotalCount | Ganzzahl | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.     |
 
 
 Elemente im Array *Value* enthalten die folgenden Werte.
@@ -106,7 +106,7 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 | oemName | String | Der Name des OEM für das Gerät, auf dem der Fehler aufgetreten ist. |
 | oemModel | String | Der Name des Gerätemodells, auf dem der Fehler aufgetreten ist. |
 | flightRing | String | Der Name des Test-Flights des Betriebssystems, auf dem der Fehler aufgetreten ist. |
-| eventCount      | inumber | Die Anzahl der Ereignisse, die diesem Fehler für die angegebene Aggregationsebene zugeordnet werden.      |
+| eventCount      | Ganzzahl | Die Anzahl der Ereignisse, die diesem Fehler für die angegebene Aggregationsebene zugeordnet werden.      |
 
 
 ### <a name="response-example"></a>Antwortbeispiel

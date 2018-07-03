@@ -11,12 +11,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, Desktop-Brücke, sekundäre Kacheln, anheften, Anheften, Schnellstart, Codebeispiel, Beispiel, Sekundärkachel, Desktopanwendung, Win32, Winforms, WPF
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b0015a74750e08d575cad9d0ae78f8c864b7c09
-ms.sourcegitcommit: d780e3a087ab5240ea643346480a1427bea9e29b
+ms.openlocfilehash: 4fcce21608bf8711a97f9272a800d73c0476cdcb
+ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
-ms.locfileid: "1573207"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "1976608"
 ---
 # <a name="pin-secondary-tiles-from-desktop-application"></a>Sekundäre Kacheln von der Desktopanwendung anheften
 
@@ -26,12 +26,9 @@ Dank der [Desktop-Brück](https://developer.microsoft.com/windows/bridges/deskto
 ![Screenshot von sekundären Kacheln](images/secondarytiles.png)
 
 > [!IMPORTANT]
-> **Erfordert das Fall Creators Update**: Sie müssen als Ziel Insider SDK 16299 angeben und Build 16299 oder höher ausführen, um sekundäre Kacheln von Desktop-Brücke-Apps anzuheften.
+> **Erfordert das Fall Creators Update**: Sie müssen als Ziel das SDK 16299 angeben und Build 16299 oder höher ausführen, um sekundäre Kacheln von Desktop-Brücke-Apps anzuheften.
 
-Das Hinzufügen einer sekundären Kachel von WPF oder WinForms ähnelt einer reinen UWP-App. Der einzige Unterschied besteht darin, dass Sie das Hauptfenster-Handle (HWND) angeben müssen. Der Grund dafür ist, dass Windows beim Anheften einer Kachel ein modales Dialogfeld anzeigt, das den Benutzer auffordert zu bestätigen, dass er die Kachel anheften möchte. Wenn die Desktop-Anwendung das SecondaryTile-Objekt nicht mit dem Besitzerfenster konfigurieren, kann Windows nicht feststellen, wo das Dialogfeld gezeichnet werden soll und der Vorgang schlägt fehl.
-
-> [!IMPORTANT]
-> Kachelbenachrichtigungen werden auf sekundäre Kacheln, die über die Desktop-Brücke erstellt wurden, nicht unterstützt. Wir arbeiten daran, um dieses Feature zu aktivieren. 
+Das Hinzufügen einer sekundären Kachel aus Ihrer WPF- oder WinForms-Anwendung ist einer reinen UWP-App sehr ähnlich. Der einzige Unterschied besteht darin, dass Sie das Hauptfenster-Handle (HWND) angeben müssen. Der Grund dafür ist, dass Windows beim Anheften einer Kachel ein modales Dialogfeld anzeigt, das den Benutzer auffordert zu bestätigen, dass er die Kachel anheften möchte. Wenn die Desktop-Anwendung das SecondaryTile-Objekt nicht mit dem Besitzerfenster konfigurieren, kann Windows nicht feststellen, wo das Dialogfeld gezeichnet werden soll und der Vorgang schlägt fehl.
 
 
 ## <a name="package-your-app-with-desktop-bridge"></a>Packen Sie Ihre App mit der Desktop-Brücke
@@ -96,7 +93,10 @@ bool isPinned = await tile.RequestCreateAsync();
 
 ## <a name="send-tile-notifications"></a>Senden von Kachelbenachrichtigungen
 
-Kachelbenachrichtigungen auf sekundäre Kacheln, die über die Desktop-Brücke erstellt wurden, werden nicht unterstützt. Wenn Sie versuchen, eine Kachelbenachrichtigung an eine sekundäre Kachel zu senden, erhalten Sie eine Ausnahme *Element wurde nicht gefunden* mit HResult 0 x 80070490. Wir arbeiten daran, um dieses Feature zu aktivieren.
+> [!IMPORTANT]
+> **Erfordert April2018 Version 17134.81 oder höher**: Sie müssen Build 17134.81 oder höher ausführen, um Kachel- oder Signalbenachrichtigungen für sekundäre Kacheln von Desktop-Brücke-Apps zu senden. Vor diesem x.81-Wartungsupdate würde beim Senden von Kachel- oder Signalbenachrichtigungen für sekundäre Kacheln von Desktop-Brücke-Apps die Ausnahme 0x80070490 *Element nicht gefunden* auftreten.
+
+Das Senden von Kachel- oder Signalbenachrichtigungen ist identisch wie bei UWP-Apps. Weitere Informationen finden Sie unter [Senden einer lokalen Kachelbenachrichtigung](sending-a-local-tile-notification.md).
 
 
 ## <a name="resources"></a>Ressourcen

@@ -4,18 +4,18 @@ ms.assetid: 8425F704-8A03-493F-A3D2-8442E85FD835
 description: Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um detaillierte Daten zu einem spezifischen Hardwarefehler zu erhalten. Diese Methode ist nur für OEMs bestimmt.
 title: Abrufen von Informationen zu einem OEM-Hardwarefehler
 ms.author: mcleans
-ms.date: 01/18/2018
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Fehler, Details
 ms.localizationpriority: medium
-ms.openlocfilehash: 429ebc5237ce35baa6f9c3f31a25d480410d9c86
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: c4ac647559b71b7c8cf2724940e857fd99c557f5
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663210"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989554"
 ---
 # <a name="get-details-for-an-oem-hardware-error"></a>Abrufen von Informationen zu einem OEM-Hardwarefehler
 
@@ -84,7 +84,7 @@ Authorization: Bearer <your access token>
 |------------|---------|------------|
 | Wert      | array   | Ein Array von Objekten, die detaillierte Fehlerdaten enthalten. Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie in der folgenden Tabelle.          |
 | @nextLink  | String  | Wenn weitere Seiten mit Daten vorhanden sind, enthält diese Zeichenfolge einen URI, mit dem Sie die nächste Seite mit Daten anfordern können. Beispielsweise wird dieser Wert zurückgegeben, wenn der Parameter **top** der Anforderung auf 10 festgelegt ist, es jedoch mehr als 10 Zeilen mit Fehlern für die Abfrage gibt. |
-| TotalCount | inumber | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.        |
+| TotalCount | Ganzzahl | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.        |
 
 
 Elemente im Array *Value* enthalten die folgenden Werte.

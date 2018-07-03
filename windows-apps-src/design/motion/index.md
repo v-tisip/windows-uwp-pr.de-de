@@ -15,107 +15,65 @@ pm-contact: stmoy
 design-contact: jeffarn
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 1423aeff139758c780dcecb079141744931cdd7b
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: ffe26e949be254e85d28dde4a98a1730baa84a3e
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816535"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1843483"
 ---
 # <a name="motion-for-uwp-apps"></a>Bewegung für UWP-Apps
 
-Gut gestaltete Bewegungen machen Apps lebhaft und lassen sie realistisch und perfekt erscheinen. Bewegung hilft Benutzern dabei, Kontextänderungen zu verstehen, und sie zeigt Benutzern auch an, wo diese sich in der App befinden. Interaktionen werden mit visuellen Übergängen verbunden. Bewegung fügt der Oberfläche Geschwindigkeit und Mehrdimensionalität hinzu.
+![Favoritenbild](images/header-motion2.svg)
 
-## <a name="benefits-of-motion"></a>Vorteile von Bewegung
+In einer App sind fließende Bewegungen wichtig. Sie geben intelligentes Feedback basierend auf dem Verhalten des Benutzers, halten ein lebendiges Gefühl für die Benutzeroberfläche aufrecht und leiten die Navigation durch die App. Fließende Bewegung bewirkt eine emotionale Verbindung zwischen dem Benutzer und seiner digitalen Erfahrung. Wir gehen von grundlegenden natürlichen Bewegungen aus, die der Benutzer bereits aus der physischen Welt kennt, und wir erweitern unser System von dort aus.
 
-Bewegung bedeutet mehr, als nur Dinge beweglich zu machen. Bewegung ist ein Tool zum Erstellen eines physischen Ökosystems, das Benutzer mithilfe verschiedener Eingabetypen wie Maus, Tastatur, Toucheingabe und Stift aktiv bearbeiten können. Die Qualität der Erfahrung hängt davon ab, wie gut die App auf den Benutzer reagiert und welche Art von Persönlichkeit die Benutzeroberfläche vermittelt.
+## <a name="fluent-motion-principles"></a>Prinzipien fließender Bewegungen
 
-Stellen Sie sicher, dass die Bewegung einem Zweck in Ihrer App dient. Die besten UWP-Apps (Universelle Windows-Plattform) verwenden Bewegung, um die Benutzeroberfläche zum Leben zu erwecken. Bewegung sollte:
+### <a name="physical"></a>Physisch
 
-- Feedback basierend auf dem Verhalten des Benutzers geben.
-- Dem Benutzer beibringen, wie er mit der Benutzeroberfläche interagieren kann.
-- Angeben, wie zu vorherigen oder folgenden Ansichten navigiert werden kann.
+Bewegte Objekte verhalten sich wie Objekte in der realen Welt. Durch fließende, reaktionsfähige Bewegungen wirken Benutzeroberflächen natürlich, und sie sorgen dafür, dass emotionale Verbindungen mit der Oberfläche entstehen.
 
-Wenn ein Benutzer mehr Zeit in Ihrer App verbringt oder Aufgaben in Ihrer App komplexer werden, wird qualitativ hochwertige Bewegung immer wichtiger: Mit Bewegung kann die Art und Weise verändert werden, wie der Benutzer die kognitive Belastung und die Benutzerfreundlichkeit Ihrer App wahrnimmt. Bewegung bringt viele weitere direkte Vorteile mit sich:
+![UI-Beispiel für fließende Bewegung](images/Physical.gif)
+> Wenn Sie per Toucheingabe mit der UI interagieren, entspricht die Bewegung auf der Benutzeroberfläche direkt der Geschwindigkeit der Interaktion. Und weil die Toucheingabe eine direkte Manipulation ist, wirkt sich das Objekt, mit dem Sie interagieren, auf die umgebenden Objekte aus.
 
-- **Bewegung unterstützt die Interaktion und trägt dazu bei, dass sich Benutzer zurechtfinden.**
+### <a name="functional"></a>Funktionell
 
-    Bewegung ist direktional: Sie bewegt sich vor und zurück, in den Inhalt hinein und aus ihm hinaus und hinterlässt gleichzeitig mentale „Brotkrümel“-Hinweise, wie der Benutzer zur aktuellen Ansicht gelangt ist. Übergänge können Benutzern beim Erlernen der Bedienung neuer Apps helfen, indem Analogien mit Aufgaben hergestellt werden, mit denen der Benutzer bereits vertraut ist.
+Bewegung dient einem Zweck und muss überzeugend sein. Sie führt den Benutzer durch die Komplexität und hilft beim Aufbau der Hierarchie. Bewegung vermittelt den Eindruck verbesserter Leistung und optimiert das Benutzererlebnis, da keine Latenz wahrgenommen wird.
 
-- **Bewegung kann den Eindruck verbesserter Leistung vermitteln.**
+![UI-Beispiel für funktionelle Bewegung](images/functional.gif)
+> Seitenübergänge sind bewusst gestaltet. Sie geben Hinweise darauf, wie Seiten miteinander in Beziehung stehen sind. Sie verschieben Seiten in einer Weise, die selbst dann als schnell empfunden wird, wenn die Leistung nicht optimal ist.
 
-    Wenn die Netzwerkgeschwindigkeit langsamer wird oder das System nicht reagiert, können Animationen dem Benutzer die Wartezeit kürzer erscheinen lassen. Durch Animationen kann dem Benutzer mitgeteilt werden, dass die App noch mit der Verarbeitung beschäftigt und nicht eingefroren ist, und es können passiv neue Informationen angezeigt werden, die den Benutzer möglicherweise interessieren.
+### <a name="continuous"></a>Kontinuierlich
 
-- **Bewegung schafft Persönlichkeit.**
+Eine fließende Bewegung von Punkt zu Punkt zieht auf natürliche Weise den Blick auf sich und führt den Benutzer. Sie fügt die Aufgabe eines Benutzers elegant zusammen, so dass sie sich konsumierbarer und freundlicher anfühlt.
 
-    Bewegung ist häufig der allgemeine Thread, der die Persönlichkeit der Apps abbildet, wenn Benutzer durch eine Oberfläche navigieren.
+![UI-Beispiel für kontinuierliche Bewegung](images/continuous3.gif)
+> Objekte können von Szene zu Szene wandern oder in einer Szene morphen, um Kontinuität zu schaffen und dem Benutzer dabei zu helfen, den Kontext zu erhalten.
 
-- **Bewegung schafft Eleganz.**
+### <a name="contextual"></a>Kontextbezogen
 
-    Durch fließende, reaktionsfähige Bewegungen wirken Benutzeroberflächen natürlich, und sie sorgen dafür, dass emotionale Verbindungen mit der Oberfläche entstehen.
+Intelligente Bewegung liefert dem Benutzer eine Rückmeldung in einer Weise, die sich danach richtet, wie der Benutzer die Benutzeroberfläche manipuliert hat. Interaktion ist um den Benutzer herum zentriert. Bewegung muss dem Formfaktor angemessen und dem Szenario entsprechend gestaltet sein. Sie sollte für jeden Benutzer vertraut sein.
 
-## <a name="examples-of-motion"></a>Beispiele für Bewegung
+![UI-Beispiel für kontextuelle Bewegung](images/Contextual.gif)
+> Eine Animation sollte mit der Benutzerinteraktion verknüpft sein. Ein Kontextmenü wird an dem Punkt bereitgestellt, an dem es der Benutzer aktiviert. 
 
-Im Folgenden finden Sie einige Beispiele für Bewegung in einer App.
+## <a name="motion-articles"></a>Artikel zu Bewegungen
 
-Hier verwendet eine App eine verbundene Animation, um ein Elementbild zu animieren, wenn es als Teil der Überschrift der nächsten Seite weiterbesteht. Dieser Effekt trägt dazu bei, Benutzerkontext beim Übergang beizubehalten.
-
-![Verbundene Animation](images/connected-animations/example.gif)
-
-Hier werden bei einem Bildlauf oder Schwenken der UI verschiedene Objekte mithilfe eines Parallax-Effekts unterschiedlich schnell verschoben. Dadurch entsteht ein Gefühl von Tiefe, Perspektive und Bewegung.
-
-![Beispiel für Parallax mit einer Liste und einem Hintergrundbild](images/_Parallax_v2.gif)
-
-
-## <a name="types-of-motion"></a>Arten von Bewegung
-
-<table>
-    <tr>
-        <th align="left">Bewegungsart</th>
-        <th align="left">Beschreibung</th>
-    </tr>
-    <tr>
-        <td><a href="motion-list.md">Hinzufügen und Löschen</a>
-        </td>
-        <td>Mit Listenanimationen können Sie einzelne oder mehrere Elemente in einer Sammlung wie z. B. einem Fotoalbum oder einer Liste mit Suchergebnissen einfügen oder entfernen.
-        </td>
-    </tr>
-    <tr>
-        <td><a href="connected-animation.md">Verbundene Animation</a>
-        </td>
-        <td>Mit verbundenen Animationen können Sie eine dynamische und ansprechende Navigationsfunktionalität erstellen, indem Sie den Übergang eines Elements zwischen zwei verschiedenen Ansichten animieren. So können Benutzer den Kontext beibehalten, und es entsteht Kontinuität zwischen den Ansichten. In einer verbundenen Animation scheint ein Element zwischen zwei Ansichten weiterzubestehen, während sich der UI-Inhalt ändert. Dabei fliegt das Element von seinem Standort in der Quellansicht über den Bildschirm zu seinem Ziel in der neuen Ansicht herüber. Dadurch wird der gemeinsame Inhalt zwischen den beiden Ansichten unterstrichen, und es entsteht ein schöner, dynamischer Effekt als Teil eines Übergangs. 
-        </td>
-    </tr>
-    <tr>
-        <td><a href="content-transition-animations.md">Inhaltsübergang</a>
-        </td>
-        <td>Mithilfe von Inhaltsübergangsanimationen können Sie den Inhalt eines Bildschirmbereichs ändern und gleichzeitig den Container oder Hintergrund unverändert lassen. Neuer Inhalt wird eingeblendet. Muss vorhandener Inhalt ersetzt werden, wird dieser Inhalt ausgeblendet. </td>
-    </tr>
-    <tr>
-        <td><a href="motion-fade.md">Ein- und Ausblenden</a>
-        </td>
-        <td>Verwenden Sie Ein- und Ausblendungsanimationen, um Elemente anzuzeigen oder nicht anzuzeigen. Die beiden üblichen Animationen dieser Art sind das Einblenden und das Ausblenden. </td>
-    </tr>
-    <tr>
-        <td><a href="page-transitions.md">Seitenübergang</a>
-        </td>
-        <td>Seitenübergänge sind Animationen, die abgespielt werden, wenn Benutzer zwischen Seiten in einer App navigieren und Feedback als Beziehung zwischen Seiten liefern.
-        </td>
-    </tr>
-    <tr>
-        <td><a href="parallax.md">Parallax</a>
-        </td>
-        <td>Ein visueller Parallax-Effekt hilft dabei, ein Gefühl von Tiefe, Perspektive und Bewegung zu erzeugen. Dieser Effekt wird erzielt, indem bei einem Bildlauf oder Schwenken der UI verschiedene Objekte unterschiedlich schnell verschoben werden.
-        </td>
-    </tr> 
-    <tr>
-        <td><a href="motion-pointer.md">Feedback durch Drücken</a>
-        </td>
-        <td>Zeigerdruckanimationen stellen visuelles Feedback für Benutzer bereit, wenn diese auf ein Element tippen. Bei der Animation für „Zeiger nach unten“ wird das gedrückte Element leicht verkleinert und geneigt. Sie wird wiedergegeben, wenn erstmalig auf ein Element getippt wird. Die Animation für „Zeiger nach oben“, mit der der ursprüngliche Zustand des Elements wiederhergestellt wird, wird beim Loslassen des Zeigers wiedergegeben.
-        </td>
-    </tr>
-</table>
-
-## <a name="animations-in-xaml"></a>Animationen in XAML
-
-Weitere Informationen zur Verwendung von integrierten Animationen in XAML oder zur Erstellung Ihrer eigenen finden Sie unter [Animationen in XAML](xaml-animation.md). 
+:::row::: :::column:::
+        ### [Timing and easing](timing-and-easing.md)
+        Timing and easing are important elements that make motion feel natural for objects entering, exiting, or moving within the UI.
+    :::column-end:::
+    :::column:::
+        ### [Directionality and gravity](directionality-and-gravity.md)
+        Directional signals help provide a solid mental model of the journey a user takes across experiences. Directional movement is subject to forces like gravity, which reinforces the natural feel of the movement.
+    :::column-end:::
+:::row-end::: :::row::: :::column:::
+        ### [Page transitions](page-transitions.md)
+        Page transitions navigate users between pages in an app, providing feedback about the relationship between pages. They help users understand where they are in the navigation hierarchy.
+    :::column-end:::
+    :::column:::
+        ### [Connected animation](connected-animation.md)
+        Connected animations let you create a dynamic and compelling navigation experience by animating the transition of an element between two different views.
+    :::column-end:::
+:::row-end:::

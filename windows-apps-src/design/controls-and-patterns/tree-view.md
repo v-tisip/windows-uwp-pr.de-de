@@ -10,19 +10,19 @@ pm-contact: predavid
 design-contact: ksulliv
 dev-contact: joyate
 doc-status: Published
-ms.openlocfilehash: c92d0c6517456f180dcc84b60cbc6ca3a53ea282
-ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
+dev_langs:
+- csharp
+- vb
+ms.openlocfilehash: 41e17d299e9bac34e58f3c8ffdffecff19ddac18
+ms.sourcegitcommit: e020e9a4d947368a68e4eeba1eea65e9b3a725af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "1707145"
+ms.lasthandoff: 05/28/2018
+ms.locfileid: "1924393"
 ---
 # <a name="treeview"></a>TreeView
 
-> [!IMPORTANT]
-> In diesem Artikel werden Funktionen beschrieben, die noch nicht veröffentlicht wurden und vor der kommerziellen Freigabe evtl. geändert werden. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.
-
-Das Steuerelement „XAML-Strukturansicht“ ermöglicht eine Hierarchieauflistung mit Knoten, die das Aus- und Einblenden von geschachtelten Elementen erlauben. Es kann verwendet werden, um eine Ordnerstruktur oder geschachtelte Beziehungen zwischen Elementen in der Benutzeroberfläche zu veranschaulichen.
+Das XAML-Steuerelement TreeView ermöglicht eine Hierarchieauflistung mit Knoten, die das Aus- und Einblenden von geschachtelten Elementen erlauben. Es kann verwendet werden, um eine Ordnerstruktur oder geschachtelte Beziehungen zwischen Elementen in der Benutzeroberfläche zu veranschaulichen.
 
 > **Wichtige APIs**: [TreeView-Klasse](/uwp/api/windows.ui.xaml.controls.treeview), [TreeViewNode-Klasse](/uwp/api/windows.ui.xaml.controls.treeviewnode)
 
@@ -89,6 +89,18 @@ private void InitializeTreeView()
 }
 ```
 
+```vb
+Private Sub InitializeTreeView()
+    Dim rootNode As New TreeViewNode With {.Content = "Flavors", .IsExpanded = True}
+    With rootNode.Children
+        .Add(New TreeViewNode With {.Content = "Vanilla"})
+        .Add(New TreeViewNode With {.Content = "Strawberry"})
+        .Add(New TreeViewNode With {.Content = "Chocolate"})
+    End With
+    sampleTreeView.RootNodes.Add(rootNode)
+End Sub
+```
+
 Diese APIs sind für die Verwaltung der Datenhierarchie der Strukturansicht verfügbar.
 
 | **[TreeView](/uwp/api/windows.ui.xaml.controls.treeview)** | |
@@ -115,6 +127,11 @@ Im vorherigen Beispielen war der Inhalt ein einfachen Zeichenfolgenwert. Hier st
 StorageFolder picturesFolder = KnownFolders.PicturesLibrary;
 TreeViewNode pictureNode = new TreeViewNode();
 pictureNode.Content = picturesFolder;
+```
+
+```vb
+Dim picturesFolder As StorageFolder = KnownFolders.PicturesLibrary
+Dim pictureNode As New TreeViewNode With {.Content = picturesFolder}
 ```
 
 Sie können eine [DataTemplate](/uwp/api/windows.ui.xaml.datatemplate) angeben, um festzulegen, wie das Datenelement in der Strukturansicht angezeigt wird.
@@ -160,6 +177,14 @@ private void SampleTreeView_Expanding(TreeView sender, TreeViewExpandingEventArg
 }
 ```
 
+```vb
+Private Sub SampleTreeView_Expanding(sender As TreeView, args As TreeViewExpandingEventArgs)
+    If args.Node.HasUnrealizedChildren Then
+        FillTreeNode(args.Node)
+    End If
+End Sub
+```
+
 Es ist nicht erforderlich, Sie können jedoch auch das [Reduziert](/uwp/api/windows.ui.xaml.controls.treeview.collapsed)-Ereignis behandeln und die untergeordneten Knoten entfernen, wenn der übergeordnete Knoten geschlossen wird. Dies kann wichtig sein, wenn die Strukturansicht viele Knoten aufweist oder die Knotendaten viele Ressourcen nutzen. Berücksichtigen Sie potenzielle Leistungseinbußen durch das Ausfüllen eines Knotens bei jedem Öffnen im Vergleich zur Beibehaltung der untergeordneten Elemente an einem geschlossenen Knoten. Welche Option jeweils geeignet ist, hängt von Ihrer App ab.
 
 Nachfolgend finden Sie ein Beispiel für einen Handler für das Reduziert-Ereignis.
@@ -170,6 +195,13 @@ private void SampleTreeView_Collapsed(TreeView sender, TreeViewCollapsedEventArg
     args.Node.Children.Clear();
     args.Node.HasUnrealizedChildren = true;
 }
+```
+
+```vb
+Private Sub SampleTreeView_Collapsed(sender As TreeView, args As TreeViewCollapsedEventArgs)
+    args.Node.Children.Clear()
+    args.Node.HasUnrealizedChildren = True
+End Sub
 ```
 
 ### <a name="invoking-an-item"></a>Aufrufen eines Elements
@@ -201,6 +233,21 @@ private void SampleTreeView_ItemInvoked(TreeView sender, TreeViewItemInvokedEven
         }
     }
 }
+```
+
+```vb
+Private Sub SampleTreeView_ItemInvoked(sender As TreeView, args As TreeViewItemInvokedEventArgs)
+    Dim node = TryCast(args.InvokedItem, TreeViewNode)
+    Dim item = TryCast(node.Content, IStorageItem)
+    If item IsNot Nothing Then
+        FileNameTextBlock.Text = item.Name
+        FilePathTextBlock.Text = item.Path
+        TreeDepthTextBlock.Text = node.Depth.ToString()
+        If TypeOf node.Content Is StorageFolder Then
+            node.IsExpanded = Not node.IsExpanded
+        End If
+    End If
+End Sub
 ```
 
 ### <a name="item-selection"></a>Elementauswahl
@@ -311,6 +358,26 @@ private void SelectAllButton_Click(object sender, RoutedEventArgs e)
         DessertTree.SelectAll();
     }
 }
+```
+
+```vb
+Private Sub OrderButton_Click(sender As Object, e As RoutedEventArgs)
+    FlavorList.Text = String.Empty
+    ToppingList.Text = String.Empty
+    For Each node As TreeViewNode In DessertTree.SelectedNodes
+        If node.Parent.Content?.ToString() = "Flavors" Then
+            FlavorList.Text += node.Content & "; "
+        ElseIf node.HasChildren = False Then
+            ToppingList.Text += node.Content & "; "
+        End If
+    Next
+End Sub
+
+Private Sub SelectAllButton_Click(sender As Object, e As RoutedEventArgs)
+    If DessertTree.SelectionMode = TreeViewSelectionMode.Multiple Then
+        DessertTree.SelectAll()
+    End If
+End Sub
 ```
 
 ### <a name="pictures-and-music-library-tree-view"></a>Baumstruktur für Bild- und Musikbibliotheken
@@ -512,6 +579,104 @@ private void RefreshButton_Click(object sender, RoutedEventArgs e)
     sampleTreeView.RootNodes.Clear();
     InitializeTreeView();
 }
+```
+
+```vb
+Public Sub New()
+    InitializeComponent()
+    InitializeTreeView()
+End Sub
+
+Private Sub InitializeTreeView()
+    ' A TreeView can have more than 1 root node. The Pictures library
+    ' and the Music library will each be a root node in the tree.
+    ' Get Pictures library.
+    Dim picturesFolder As StorageFolder = KnownFolders.PicturesLibrary
+    Dim pictureNode As New TreeViewNode With {
+        .Content = picturesFolder,
+        .IsExpanded = True,
+        .HasUnrealizedChildren = True
+    }
+    sampleTreeView.RootNodes.Add(pictureNode)
+    FillTreeNode(pictureNode)
+
+    ' Get Music library.
+    Dim musicFolder As StorageFolder = KnownFolders.MusicLibrary
+    Dim musicNode As New TreeViewNode With {
+        .Content = musicFolder,
+        .IsExpanded = True,
+        .HasUnrealizedChildren = True
+    }
+    sampleTreeView.RootNodes.Add(musicNode)
+    FillTreeNode(musicNode)
+End Sub
+
+Private Async Sub FillTreeNode(node As TreeViewNode)
+    ' Get the contents of the folder represented by the current tree node.
+    ' Add each item as a new child node of the node that's being expanded.
+
+    ' Only process the node if it's a folder and has unrealized children.
+    Dim folder As StorageFolder = Nothing
+    If TypeOf node.Content Is StorageFolder AndAlso node.HasUnrealizedChildren Then
+        folder = TryCast(node.Content, StorageFolder)
+    Else
+        ' The node isn't a folder, or it's already been filled.
+        Return
+    End If
+
+    Dim itemsList As IReadOnlyList(Of IStorageItem) = Await folder.GetItemsAsync()
+    If itemsList.Count = 0 Then
+        ' The item is a folder, but it's empty. Leave HasUnrealizedChildren = true so
+        ' that the chevron appears, but don't try to process children that aren't there.
+        Return
+    End If
+
+    For Each item In itemsList
+        Dim newNode As New TreeViewNode With {
+            .Content = item
+        }
+        If TypeOf item Is StorageFolder Then
+            ' If the item is a folder, set HasUnrealizedChildren to True.
+            ' This makes the collapsed chevron show up.
+            newNode.HasUnrealizedChildren = True
+        Else
+            ' Item is StorageFile. No processing needed for this scenario.
+        End If
+        node.Children.Add(newNode)
+    Next
+
+    ' Children were just added to this node, so set HasUnrealizedChildren to False.
+    node.HasUnrealizedChildren = False
+End Sub
+
+Private Sub SampleTreeView_Expanding(sender As TreeView, args As TreeViewExpandingEventArgs)
+    If args.Node.HasUnrealizedChildren Then
+        FillTreeNode(args.Node)
+    End If
+End Sub
+
+Private Sub SampleTreeView_Collapsed(sender As TreeView, args As TreeViewCollapsedEventArgs)
+    args.Node.Children.Clear()
+    args.Node.HasUnrealizedChildren = True
+End Sub
+
+Private Sub SampleTreeView_ItemInvoked(sender As TreeView, args As TreeViewItemInvokedEventArgs)
+    Dim node = TryCast(args.InvokedItem, TreeViewNode)
+    Dim item = TryCast(node.Content, IStorageItem)
+    If item IsNot Nothing Then
+        FileNameTextBlock.Text = item.Name
+        FilePathTextBlock.Text = item.Path
+        TreeDepthTextBlock.Text = node.Depth.ToString()
+        If TypeOf node.Content Is StorageFolder Then
+            node.IsExpanded = Not node.IsExpanded
+        End If
+    End If
+End Sub
+
+Private Sub RefreshButton_Click(sender As Object, e As RoutedEventArgs)
+    sampleTreeView.RootNodes.Clear()
+    InitializeTreeView()
+End Sub
 ```
 
 ## <a name="related-articles"></a>Verwandte Artikel

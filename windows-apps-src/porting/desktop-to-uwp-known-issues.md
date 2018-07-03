@@ -4,19 +4,19 @@ Description: This article contains known issues with the Desktop Bridge.
 Search.Product: eADQiWindows 10XVcnh
 title: Bekannte Probleme (Desktop-Brücke)
 ms.author: normesta
-ms.date: 07/18/2017
+ms.date: 05/18/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows10, UWP
 ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
 ms.localizationpriority: medium
-ms.openlocfilehash: 78e5ffddfa1c5005bb640baeafed7023ebdd74a3
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: 76ff4fb4b7933c54e5137507e7996eefa7b46d5a
+ms.sourcegitcommit: c0f58410c4ff5b907176b1ffa275e2c202f099d4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1662850"
+ms.lasthandoff: 05/21/2018
+ms.locfileid: "1905381"
 ---
 # <a name="known-issues-desktop-bridge"></a>Bekannte Probleme (Desktop-Brücke)
 
@@ -95,7 +95,7 @@ Am 27.10.2016 wurde ein [Windows-Update (Version 14393.351 - KB3197954)](https:/
 
 Falls das Problem durch das Update nicht behoben werden kann oder Sie nicht sicher sind, wie Sie die Wiederherstellung für den PC ausführen, wenden Sie sich an den [Microsoft-Support](https://support.microsoft.com/contactus/).
 
-Wenn Sie Entwickler sind, möchten Sie die Installation der Desktop-Brücken-Apps unter Versionen von Windows vielleicht verhindern, die dieses Update nicht enthalten. Beachten Sie, dass Ihre App dadurch nicht für Kunden verfügbar ist, die das Update noch nicht installiert haben. Um die Verfügbarkeit Ihrer App auf Benutzer zu beschränken, die dieses Update installiert haben, ändern Sie die Datei „AppxManifest.xml“ wie folgt:
+Wenn Sie Entwickler sind, möchten Sie die Installation Ihres Anwendungspakets unter Versionen von Windows vielleicht verhindern, die dieses Update nicht enthalten. Beachten Sie, dass Ihre App dadurch nicht für Kunden verfügbar ist, die das Update noch nicht installiert haben. Um die Verfügbarkeit Ihrer App auf Benutzer zu beschränken, die dieses Update installiert haben, ändern Sie die Datei „AppxManifest.xml“ wie folgt:
 
 ```<TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.14393.351" MaxVersionTested="10.0.14393.351"/>```
 

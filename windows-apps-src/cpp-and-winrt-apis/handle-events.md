@@ -3,27 +3,24 @@ author: stevewhims
 description: Dieses Thema zeigt, wie man Event-Handling-Delegaten mit C++/WinRT registriert und widerruft.
 title: Verarbeiten von Ereignissen über Delegaten in C++/WinRT
 ms.author: stwhi
-ms.date: 04/23/2018
+ms.date: 05/07/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projiziert, projizierung, varbeiten, ereignis, delegat
 ms.localizationpriority: medium
-ms.openlocfilehash: 44eb49e0e9797ec363c160ef701e19b58f8227a1
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 1cf3c87411bb6d8eb5886e7205f96c466d707220
+ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832014"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "1976488"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Verarbeiten von Ereignissen über Delegaten in [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
-> [!NOTE]
-> **Einige Informationen beziehen sich auf die Vorabversion, die vor der kommerziellen Freigabe möglicherweise wesentlichen Änderungen unterliegt. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.**
-
 Dieses Thema zeigt, wie man Event-Handling-Delegaten mit C++/WinRT registriert und widerruft. Sie können ein Ereignis mit jedem Objekt verarbeiten, das einer normalen C++ Funktion entspricht.
 
 > [!NOTE]
-> Informationen über die aktuelle Verfügbarkeit der C++/WinRT Visual Studio Extension (VSIX) (die Projektvorlagenunterstützung sowie C++/WinRT MSBuild-Eigenschaften und -Ziele bietet) finden Sie unter [Visual Studio-Unterstützung für C++/WinRT und VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
+> Informationen zur Installation und Verwendung der C++/WinRT Visual Studio Extension (VSIX) (die Projektvorlagenunterstützung sowie C++/WinRT MSBuild-Eigenschaften und -Ziele bietet) finden Sie unter [Visual Studio-Unterstützung für C++/WinRT und VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
 
 ## <a name="register-a-delegate-to-handle-an-event"></a>Einen Delegaten für die Verarbeitung eines Ereignisses registrieren
 Ein einfaches Beispiel ist die Verarbeitung des Klickereignisses einer Schaltfläche. Es ist typisch, XAML-Markup zu verwenden, um eine Member-Funktion zu registrieren, um das Ereignis wie folgt zu verarbeiten.
@@ -123,7 +120,9 @@ private:
 };
 ```
 
-Alternativ können Sie bei der Registrierung eines Delegaten **winrt::auto_revoke** angeben (ein Wert vom Typ [**winrt::auto_revoke_t**](/uwp/cpp-ref-for-winrt/auto-revoke-t)), um einen Event-Revoker anzufordern. Wenn der Gültigkeitsbereich des Revokers aufgelöst wird, wird Ihr Delegat automatisch widerrufen. In diesem Beispiel gibt es keine Notwendigkeit, die Ereignisquelle zu speichern und daher auch keinen Bedarf für einen Destruktor.
+Anstatt eines starken Verweises wie im obigen Beispiel können Sie einen schwachen Verweis auf die Schaltfläche speichern (siehe [Schwache Referenzen in C++/WinRT](weak-references.md)).
+
+Alternativ können Sie bei der Registrierung eines Delegaten **winrt::auto_revoke** angeben (ein Wert vom Typ [**winrt::auto_revoke_t**](/uwp/cpp-ref-for-winrt/auto-revoke-t)), um einen Event-Revoker (vom Typ **winrt::event_revoker**) anzufordern. Der Event-Revoker enthält einen schwachen Verweis auf die Ereignisquelle (das Objekt, welches das Ereignis auslöst). Sie können manuell widerrufen, indem Sie die Mitgliedsfunktion **event_revoker::revoke** aufrufen; der Event-Revoker ruft diese Funktion aber selbst automatisch auf, wenn sie ihren Gültigkeitsbereich verlässt. Die **revoke**-Funktion überprüft, ob die Ereignisquelle noch vorhanden ist, und widerruft in diesem Fall den Delegaten. In diesem Beispiel gibt es keine Notwendigkeit, die Ereignisquelle zu speichern, und daher auch keinen Bedarf für einen Destruktor.
 
 ```cppwinrt
 struct Example : ExampleT<Example>
@@ -151,7 +150,7 @@ winrt::event_token Click(winrt::Windows::UI::Xaml::RoutedEventHandler const& han
 void Click(winrt::event_token const& token) const;
 
 // Revoke with event_revoker
-event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IButtonBase> Click(winrt::auto_revoke_t,
+winrt::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IButtonBase> Click(winrt::auto_revoke_t,
     winrt::Windows::UI::Xaml::RoutedEventHandler const& handler) const;
 ```
 
@@ -188,12 +187,22 @@ void ProcessFeedAsync()
         // use syndicationFeed;
     });
     
-    // or (but this function must then return IAsyncAction)
+    // or (but this function must then be a coroutine and return IAsyncAction)
     // SyndicationFeed syndicationFeed = co_await async_op_with_progress;
 }
 ```
 
-Wie aus dem obigen Kommentar hervorgeht, werden Sie es wahrscheinlich natürlicher finden, Coroutinen zu verwenden, anstatt einen Delegaten für die Completed-Ereignisse asynchroner Aktionen und Vorgänge zu verwenden. Details und Codebeispiele finden Sie unter [Parallelität und asynchrone Vorgänge mit C++/WinRT](concurrency.md).
+Wie aus dem obigen „coroutine“-Kommentar hervorgeht, werden Sie es wahrscheinlich natürlicher finden, Coroutinen zu verwenden, anstatt einen Delegaten für die Completed-Ereignisse asynchroner Aktionen und Vorgänge zu verwenden. Details und Codebeispiele finden Sie unter [Parallelität und asynchrone Vorgänge mit C++/WinRT](concurrency.md).
+
+Wenn Sie an Delegaten festhalten wollen, können Sie eine einfachere Syntax verwenden.
+
+```cppwinrt
+async_op_with_progress.Completed(
+    [](auto&& /*sender*/, AsyncStatus const)
+{
+    ....
+});
+```
 
 ## <a name="delegate-types-that-return-a-value"></a>Delegattypen, die einen Wert zurückgeben
 Einige Delegattypen müssen selbst einen Wert zurückgeben. Ein Beispiel ist [**ListViewItemToKeyHandler**](/uwp/api/windows.ui.xaml.controls.listviewitemtokeyhandler), der einen String zurückgibt. Hier ist ein Beispiel für die Erstellung eines solchen Delegaten (beachten Sie, dass die Lambda-Funktion einen Wert zurückgibt).
@@ -261,5 +270,5 @@ In der Lamba-Bedingung wird eine temporäre Variable erzeugt, die eine schwache 
 
 ## <a name="related-topics"></a>Verwandte Themen
 * [Erstellen von Ereignissen mit C++/WinRT](author-events.md)
+* [Parallelität und asynchrone Vorgänge mit C++/WinRT](concurrency.md)
 * [Schwache Referenzen in C++/WinRT](weak-references.md)
-

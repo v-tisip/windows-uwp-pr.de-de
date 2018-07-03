@@ -4,23 +4,23 @@ ms.assetid: FAD033C7-F887-4217-A385-089F09242827
 description: Verwenden Sie diese Methode der Microsoft Store-Analyse-API, um die aggregierten Installationsdaten für eine Anwendung während eines bestimmten Zeitraums und andere optionale Filter abzurufen.
 title: Abrufen von App-Installationen
 ms.author: mcleans
-ms.date: 03/17/2017
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, App-Installationen
 ms.localizationpriority: medium
-ms.openlocfilehash: 162678fef3b431483a36d1de89c7adf2811b8d9f
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: fe2e9a012a094a5eeb5bc60510fc8fb115c57fb0
+ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663330"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "1975972"
 ---
 # <a name="get-app-installs"></a>Abrufen von App-Installationen
 
 
-Verwenden Sie diese Methode der Microsoft Store-Analyse-API, um die aggregierten Installationsdaten (im JSON-Format) für eine Anwendung während eines bestimmten Zeitraums und andere optionale Filter abzurufen. Diese Informationen sind auch im [Installationsbericht](../publish/installs-report.md) im Windows Dev Center-Dashboard verfügbar.
+Verwenden Sie diese Methode der Microsoft Store-Analyse-API, um die aggregierten Installationsdaten (im JSON-Format) für eine Anwendung während eines bestimmten Zeitraums und andere optionale Filter abzurufen. Diese Informationen sind auch im [Bericht „Käufe“](../publish/acquisitions-report.md) im Windows Dev Center-Dashboard verfügbar.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -93,7 +93,7 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 | date                | String | Das erste Datum im Datumsbereich für die Installationsdaten. Wenn die Anforderung einen einzelnen Tag angibt, ist dieses Datum dieser Wert. Wenn die Anforderung eine Woche, einen Monat oder einen anderen Datumsbereich angibt, ist dieser Wert das erste Datum in diesem Datumsbereich. |
 | applicationId       | String | Die Store-ID der App, für die Sie Installationsdaten abrufen.     |
 | applicationName     | String | Der Anzeigename der App.     |
-| deviceType          | string | Eine der folgenden Zeichenfolgen, die den Typ des Geräts angibt, über das die Installation vorgenommen wurde:<p/><ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>Unbekannt</strong></li></ul>  |
+| deviceType          | String | Eine der folgenden Zeichenfolgen, die den Typ des Geräts angibt, über das die Installation vorgenommen wurde:<p/><ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>Unbekannt</strong></li></ul>  |
 | packageVersion           | String | Die Version des Pakets, das installiert wurde.  |
 | osVersion           | String | Eine der folgenden Zeichenfolgen, die die Version des Betriebssystems angibt, auf dem die Installation vorgenommen wurde:<p/><ul><li><strong>Windows Phone7.5</strong></li><li><strong>Windows Phone 8</strong></li><li><strong>Windows Phone 8.1</strong></li><li><strong>Windows Phone 10</strong></li><li><strong>Windows8</strong></li><li><strong>Windows8.1</strong></li><li><strong>Windows 10</strong></li><li><strong>Unknown</strong></li></ul>   |
 | market              | String | Die ISO 3166-Ländercode des Markts, in dem die Installation erfolgte.    |

@@ -3,18 +3,18 @@ author: stevewhims
 description: Eine Collection, die effektiv an ein XAML-Items-Steuerelement gebunden werden kann, wird als *Observable*-Collection bezeichnet. Dieses Thema zeigt, wie man eine Observable-Collection implementiert und nutzt und wie man ein XAML-Items-Steuerelement daran bindet.
 title: XAML-Items-Steuerelemente; Binden an eine C++/WinRT-Collection
 ms.author: stwhi
-ms.date: 03/07/2018
+ms.date: 05/07/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, XAML, steuerelement, binden, collection
 ms.localizationpriority: medium
-ms.openlocfilehash: 2384dd385208574276dc0b6d03a56f838aad7b84
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 3d9f74e6d0c755e0a247a65751bdab65964ac1f7
+ms.sourcegitcommit: 929fa4b3273862dcdc76b083bf6c3b2c872dd590
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832304"
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "1935726"
 ---
 # <a name="xaml-items-controls-bind-to-a-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-collection"></a>XAML-Items-Steuerelemente; Binden an eine [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)-Collection
 > [!NOTE]
@@ -33,10 +33,13 @@ Wenn eine Laufzeitklasse, die eine Collection repräsentiert, das Ereignis [**IO
 Ein XAML-Items-Steuerelement kann sich an diese Ereignisse binden und sie verarbeiten, indem es die aktualisierte Collection abruft und sich dann aktualisiert, um die aktuellen Elemente anzuzeigen.
 
 > [!NOTE]
-> Informationen über die aktuelle Verfügbarkeit der C++/WinRT Visual Studio Extension (VSIX) (die Projektvorlagenunterstützung sowie C++/WinRT MSBuild-Eigenschaften und -Ziele bietet) finden Sie unter [Visual Studio-Unterstützung für C++/WinRT und VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
+> Informationen zur Installation und Verwendung der C++/WinRT Visual Studio Extension (VSIX) (die Projektvorlagenunterstützung sowie C++/WinRT MSBuild-Eigenschaften und -Ziele bietet) finden Sie unter [Visual Studio-Unterstützung für C++/WinRT und VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
 
 ## <a name="implement-singlethreadedobservablevectorlttgt"></a>Implementieren von **single_threaded_observable_vector&lt;T&gt;**
-Es ist hilfreich, eine Observable-Vektor-Vorlage zu haben, die als nützliche, universell einsetzbare Implementierung von [**IObservableVector&lt;T&gt;**](/uwp/api/windows.foundation.collections.iobservablevector_t_) dient. Hier ist eine Klasse namens **single_threaded_observable_vector&lt;T&gt;**. Wenn dies in Zukunft ein C++/WinRT-Typ wird, wird es einfach sein, auf die offizielle Version umzusteigen.
+Es ist hilfreich, eine Observable-Vektor-Vorlage zu haben, die als nützliche, universell einsetzbare Implementierung von [**IObservableVector&lt;T&gt;**](/uwp/api/windows.foundation.collections.iobservablevector_t_) dient. Hier ist eine Klasse namens **single_threaded_observable_vector\<T\>**.
+
+> [!NOTE]
+> Wenn Sie das [Windows10 SDK Preview Build 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK) oder höher installiert haben, können Sie direkt den Typ **Winrt::single_threaded_observable_vector\<T\>** anstelle der unten stehenden Codeauflistung verwenden. Wenn Sie diese Version des SDK noch nicht installiert haben, können Sie einfach von der Codeauflistungsversion zum Typ **winrt** wechseln.
 
 ```cppwinrt
 // single_threaded_observable_vector.h

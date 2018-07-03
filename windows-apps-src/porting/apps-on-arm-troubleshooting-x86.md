@@ -2,26 +2,29 @@
 title: Problembehandlung bei x86-Desktop-Apps
 description: Häufig auftretende Probleme mit x86-Apps bei der Ausführung auf ARM, und wie diese Probleme behoben werden können.
 ms.author: misatran
-ms.date: 02/15/2018
+ms.date: 05/09/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows10 s, always connected, x86-emulation auf ARM, problembehandlung
 ms.localizationpriority: medium
-ms.openlocfilehash: 55737790db00adb3104d12ae44df0ea07679d699
-ms.sourcegitcommit: 14c37e23b8966468e8c28a3b34d21aaa4e6b571b
+ms.openlocfilehash: 0a6ec4429ee2d0e95cac8373a5aa00a79f87d51c
+ms.sourcegitcommit: 4b6c197e1567d86e19af3ab5da516c022f1b6dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
-ms.locfileid: "1614206"
+ms.lasthandoff: 05/11/2018
+ms.locfileid: "1877112"
 ---
 # <a name="troubleshooting-x86-desktop-apps"></a>Problembehandlung bei x86-Desktop-Apps
-Wenn eine x86-Desktop-App nicht wie auf einem x86-Computer funktioniert, finden Sie hier einige Anleitungen, die Ihnen bei der Problembehandlung helfen können.
+>[!IMPORTANT]
+> Das ARM64-SDK ist jetzt als Teil von Visual Studio15.8 Preview 1 verfügbar. Wir empfehlen, die App für ARM64 erneut zu kompilieren, damit sie mit der höchstmöglichen systemeigenen Geschwindigkeit ausgeführt wird. Weitere Informationen finden Sie im Blogbeitrag [Early preview of Visual Studio support for Windows 10 on ARM development](https://blogs.windows.com/buildingapps/2018/05/08/visual-studio-support-for-windows-10-on-arm-development/).
+
+Für den Fall, dass eine x86-Desktop-App nicht wie auf einem x86-Computer funktioniert, finden Sie hier einige Anleitungen, die Ihnen bei der Problembehandlung helfen können.
 
 |Problem|Lösung|
 |-----|--------|
 | Ihre App verwendet einen Treiber, der nicht für ARM entwickelt wurde. | Kompilieren Sie Ihren x86-Treiber neu zu ARM64. Siehe [Entwickeln von ARM64-Treibern mit WDK](https://docs.microsoft.com/en-us/windows-hardware/drivers/develop/building-arm64-drivers). |
-| Ihre App ist nur für x64 verfügbar. | Wenn Sie für den Microsoft Store entwickeln, übermitteln Sie eine ARM-Version Ihrer App. Weitere Informationen finden Sie unter [App-Paket-Architekturen](../packaging/device-architecture.md). Wenn Sie ein Win32-Entwickler sind, verteilen Sie eine x86-Version Ihrer App. |
+| Ihre App ist nur für x64 verfügbar. | Wenn Sie für den Microsoft Store entwickeln, übermitteln Sie eine ARM-Version Ihrer App. Weitere Informationen finden Sie unter [App-Paketarchitekturen](../packaging/device-architecture.md). Wenn Sie ein Win32-Entwickler sind, empfehlen wie, dass Sie Ihre App für ARM64 neu kompilieren. Weitere Informationen finden Sie unter [Early preview of Visual Studio support for Windows 10 on ARM development](https://blogs.windows.com/buildingapps/2018/05/08/visual-studio-support-for-windows-10-on-arm-development/). |
 | Ihre App verwendet eine Version von OpenGL höher als 1.1 oder erfordert hardwarebeschleunigte OpenGL. | Verwenden Sie den DirectX-Modus der App, wenn er verfügbar ist. x86 Apps mit DirectX9, DirectX10, DirectX11 und DirectX12 funktionieren auf ARM. Weitere Informationen finden Sie unter [DirectX-Grafiken und -Spiele](https://msdn.microsoft.com/en-us/library/windows/desktop/ee663274(v=vs.85).aspx). |
 | Ihre x86-App funktioniert nicht wie erwartet. | Versuchen Sie es mit der Problembehandlung für die Programmkompatibilität, indem Sie die Schritte unter [Problembehandlung für die Programmkompatibilität auf ARM](apps-on-arm-program-compat-troubleshooter.md) befolgen. Weitere Schrittezur Problembehandlung finden Sie im Artikel [Problembehandlung bei x86 Apps auf ARM](apps-on-arm-troubleshooting-x86.md). |
 
@@ -40,12 +43,10 @@ Eine App kann Registrierungsschlüssel unter der nativen Registrierungsansicht p
 Alle Kernelmodustreiber, [User-Mode Driver Framework (UMDF)](https://docs.microsoft.com/windows-hardware/drivers/wdf/overview-of-the-umdf)-Treiber und Druckertreiber müssen entsprechend der Architektur des Betriebssystems kompiliert werden. Wenn eine x86-Anwendung über einen Treiber verfügt, muss dieser Treiber für ARM64 neu kompiliert werden. Die x86-App funktioniert möglicherweise problemlos unter Emulation, ihr Treiber muss jedoch für ARM64 neu kompiliert werden, und App-Funktionen, die von diesem Treiber abhängen, stehen nicht zur Verfügung. Weitere Informationen zum Kompilieren des Treibers für ARM64 finden Sie unter [Entwickeln von ARM64-Treibern mit WDK](https://docs.microsoft.com/windows-hardware/drivers/develop/building-arm64-drivers).
 
 ## <a name="shell-extensions"></a>-Shell-Erweiterungen 
-Apps, die versuchen, Windows-Komponenten zu verknüpfen oder ihre DLLs in Windows-Prozesse zu laden, müssen diese DLLs neu kompilieren, damit sie der Architektur des Systems entsprechen, d.h. ARM64. In der Regel werden diese von Eingabemethoden-Editoren (IMEs), Hilfstechnologien und Shell-Erweiterungs-Apps verwendet (z. B. um Cloud-Speichersymbole in Explorer oder einem Kontextmenü anzuzeigen). 
-
-Unterstützung für ARM64 Win32-SDK wird in Kürze verfügbar sein. Siehe auch [Entwickeln von ARM64-Treibern mit WDK](https://docs.microsoft.com/windows-hardware/drivers/develop/building-arm64-drivers).
+Apps, die versuchen, Windows-Komponenten zu verknüpfen oder ihre DLLs in Windows-Prozesse zu laden, müssen diese DLLs neu kompilieren, damit sie der Architektur des Systems entsprechen, d.h. ARM64. In der Regel werden diese von Eingabemethoden-Editoren (IMEs), Hilfstechnologien und Shell-Erweiterungs-Apps verwendet (z. B. um Cloud-Speichersymbole in Explorer oder einem Kontextmenü anzuzeigen). Weitere Informationen zum Neukompilieren von Apps oder DLLs für ARM64 finden Sie im Blogbeitrag der [Early preview of Visual Studio support for Windows 10 on ARM development](https://blogs.windows.com/buildingapps/2018/05/08/visual-studio-support-for-windows-10-on-arm-development/). 
 
 ## <a name="debugging"></a>Debuggen
-Um das Verhalten Ihrer App genauer zu untersuchen, lesen Sie [Debuggen auf ARM](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugging-arm64), um mehr über Tools und Strategien zum Debuggen auf ARM zu erfahren.
+Wenn Sie das Verhalten Ihrer App genauer untersuchen möchten, lesen Sie den Artikel [Debugging on ARM](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugging-arm64). Darin erfahren Sie Details über Tools und Strategien zum Debuggen unter ARM.
 
 ## <a name="virtual-machines"></a>Virtuelle Computer
 Die Windows-Hypervisor-Plattform wird auf der Qualcomm Snapdragon 835 Mobile PC-Plattform nicht unterstützt. Daher funktioniert das Ausführen von virtuellen Computern mit Hyper-V nicht. Wir investieren weiterhin in diese Technologien auf zukünftigen Qualcomm-Chipsätzen. 

@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 0d84530c1a7c3795c566495c1eae121691b0766a
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.openlocfilehash: 0c61b4076ed2529fddfcec53264c95c8290297a0
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1688936"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1843030"
 ---
 #  <a name="screen-sizes-and-breakpoints"></a>Bildschirmgrößen und Breakpoints
 
@@ -29,14 +29,14 @@ UWP-Apps können auf jedem Gerät mit Windows 10 ausgeführt werden – z. B. Te
 ## <a name="breakpoints"></a>Breakpoints
 Diese Tabelle beschreibt die verschiedenen Größenklassen und Breakpoints.
 
-![Reaktionsfähige Design-Breakpoints](images/rsp-design/rspd-breakpoints.png)
+![Reaktionsfähige Designbreakpoints](images/breakpoints/size-classes.svg)
 
 <table>
 <thead>
 <tr class="header">
 <th align="left">Größenklasse</th>
 <th align="left">Breakpoints</th>
-<th align="left">Bildschirmgröße (diagonal)</th>
+<th align="left">Typische Bildschirmgröße (diagonal)</th>
 <th align="left">Geräte</th>
 <th align="left">Fenstergrößen</th>
 </tr>
@@ -45,26 +45,37 @@ Diese Tabelle beschreibt die verschiedenen Größenklassen und Breakpoints.
 <tr class="even">
 <td style="vertical-align:top;">Klein</td>
 <td style="vertical-align:top;">640 Pixel oder weniger</td>
-<td style="vertical-align:top;">4&quot; bis 6&quot;</td>
-<td style="vertical-align:top;">Smartphones</td>
+<td style="vertical-align:top;">4&quot; bis 6&quot;; 20&quot; bis 65&quot;</td>
+<td style="vertical-align:top;">Smartphones, TV-Geräte</td>
 <td style="vertical-align:top;">320 x 569, 360 x 640, 480 x 854</td>
 </tr>
 <tr class="odd">
 <td style="vertical-align:top;">Mittel</td>
 <td style="vertical-align:top;">641 Pixel bis 1007 Pixel</td>
 <td style="vertical-align:top;">7&quot; bis 12&quot;</td>
-<td style="vertical-align:top;">Phablets, Tablets, TV-Geräte</td>
+<td style="vertical-align:top;">Phablets, Tablets</td>
 <td style="vertical-align:top;">960 x 540</td>
 </tr>
 <tr class="even">
 <td style="vertical-align:top;">Groß</td>
-<td style="vertical-align:top;">1008 Pixel oder größer</td>
+<td style="vertical-align:top;">1008 Pixel oder mehr</td>
 <td style="vertical-align:top;">13&quot; und größer</td>
 <td style="vertical-align:top;">PCs, Laptops, Surface Hubs</td>
 <td style="vertical-align:top;">1024 x 640, 1366 x 768, 1920 x 1080</td>
 </tr>
 </tbody>
 </table>
+
+## <a name="why-are-tvs-considered-small"></a>Warum stehen TV-Geräte unter „klein”? 
+
+Obwohl die meisten TV-Geräte physisch ziemlich groß sind (40 bis 65 Zoll sind üblich) und hohe Auflösungen haben (HD oder 4k), unterscheidet sich das Entwerfen für ein 1080P-TV-Gerät, das Sie aus 3 Meter Abstand betrachten, vom Entwerfen für einem 1080p-Monitor auf Ihrem Schreibtisch. Wenn Sie den Abstand berücksichtigen, entsprechen die 1080-Pixel des TV-Geräts eher einem 540-Pixel-Monitor, der viel näher steht.
+
+Das UWP-System effektiver Pixel berücksichtigt den Betrachtungsabstand automatisch. Wenn Sie eine Größe für ein Steuerelement oder einen Breakpointbereich angeben, verwenden Sie dabei automatisch „effektive” Pixel. Wenn Sie beispielsweise einen reaktionsfähigen Code für 1080 Pixel und mehr erstellen, wird ein 1080-Monitor diesen Code verwenden, ein 1080p-Fernsehgerät jedoch nicht, denn obwohl ein 1080p-Fernsehgerät 1080 physische Pixel besitzt, hat es nur 540 effektive Pixel. Dadurch entspricht das Entwerfen für ein Fernsehgerät dem Entwerfen für ein Smartphone.
+
+## <a name="effective-pixels-and-scale-factor"></a>Effektive Pixel und Skalierungsfaktor
+
+UWP-Apps skalieren Ihre Benutzeroberfläche automatisch, um sicherzustellen, dass Ihre Anwendung auf allen Windows 10-Geräten lesbar ist. Windows wählt automatisch einen Skalierungsfaktor für jede Anzeige aus, basierend auf dem DPI-Wert (Punkte pro Zoll) und dem Betrachtungsabstand des Geräts. Benutzer können den Standardwert überschreiben, indem Sie auf **Einstellungen** > **Anzeige** > **Skalierung und Layout**-Einstellungsseite wechseln. 
+
 
 ## <a name="general-recommendations"></a>Allgemeine Empfehlungen
 
@@ -94,6 +105,4 @@ Diese Tabelle beschreibt die verschiedenen Größenklassen und Breakpoints.
 >[!TIP] 
 > Mit [**Continuum for Phones**](http://go.microsoft.com/fwlink/p/?LinkID=699431), können Anwender sich mit kompatiblen Windows 10-Mobilgeräten mit einem Bildschirm, einer Maus und einer Tastatur verbinden und damit ihr Gerät wie einen Laptop nutzen. Berücksichtigen Sie diese neue Funktion beim Entwerfen für bestimmte Breakpoints – ein Mobiltelefon bleibt nicht immer in einer Klasse mit geringer Größe.
 
-## <a name="effective-pixels-and-scale-factor"></a>Effektive Pixel und Skalierungsfaktor
 
-UWP-Apps skalieren Ihre Benutzeroberfläche automatisch, um sicherzustellen, dass Ihre Anwendung auf allen Windows 10-Geräten lesbar ist. Windows wählt automatisch einen Skalierungsfaktor für jede Anzeige aus, basierend auf dem DPI-Wert (Punkte pro Zoll) und dem Betrachtungsabstand des Geräts. Benutzer können den Standardwert überschreiben, indem Sie auf **Einstellungen** > **Anzeige** > **Skalierung und Layout**-Einstellungsseite wechseln. 

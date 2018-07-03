@@ -3,18 +3,18 @@ author: stevewhims
 description: In diesem Thema werden zwei Hilfsfunktionen gezeigt, die verwendet werden können, um zwischen C++ / CX- und C++ / WinRT-Objekten zu konvertieren.
 title: Interoperabilität zwischen C++/WinRT und C++/CX
 ms.author: stwhi
-ms.date: 04/10/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, portieren, migrieren, interoperabilität, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: 616bd9ea8c4b89599e703ef9467206b028fd596b
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 5e1e939f6df9bd35e3717b9cc0ce810e97275494
+ms.sourcegitcommit: f9690c33bb85f84466560efac6f23cca2daf5a02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1831784"
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "1912918"
 ---
 # <a name="interop-between-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-and-ccx"></a>Interoperabilität zwischen [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) und C++/CX
 In diesem Thema werden zwei Hilfsfunktionen gezeigt, die verwendet werden können, um zwischen [C++ / CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live)- und C++ / WinRT-Objekten zu konvertieren. Sie können diese verwenden, um zwischen Code zu interagieren, der die beiden Sprachprojektionen verwendet, oder Sie können die Funktionen verwenden, während Sie Ihren Code schrittweise von C++/CX nach C++/WinRT verschieben.
@@ -27,11 +27,11 @@ template <typename T>
 T from_cx(Platform::Object^ from)
 {
     T to{ nullptr };
- 
+
     winrt::check_hresult(reinterpret_cast<::IUnknown*>(from)
         ->QueryInterface(winrt::guid_of<T>(),
-                         reinterpret_cast<void**>(winrt::put_abi(to))));
- 
+            reinterpret_cast<void**>(winrt::put_abi(to))));
+
     return to;
 }
 ```
@@ -47,7 +47,7 @@ T^ to_cx(winrt::Windows::Foundation::IUnknown const& from)
 ```
 
 ## <a name="code-example"></a>Codebeispiel
-Hier ist ein Codebeispiel (basierend auf der C++/CX **Blank App**-Projektvorlage), das die beiden verwendeten Hilfsfunktionen zeigt. Es zeigt auch, wie Sie mit Namespace-Kollisionen über die beiden Projektionen hinweg umgehen können.
+Hier ist ein Codebeispiel (basierend auf der C++/CX **Blank App**-Projektvorlage), das die beiden verwendeten Hilfsfunktionen zeigt. Es wird außerdem veranschaulicht, wie Namespace-Aliase für die verschiedenen Inseln verwendet werden können, um mit sonstigen potenziellen Namespacekonflikten zwischen der C++/WinRT-Projektion und der C++/CX-Projektion umzugehen.
 
 ```cppwinrt
 // MainPage.xaml.cpp

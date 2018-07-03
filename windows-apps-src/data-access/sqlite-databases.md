@@ -3,18 +3,18 @@ author: normesta
 title: Verwenden einer SQLite-Datenbank in einer UWP-App
 description: Verwenden Sie eine SQLite-Datenbank in einer UWP-App.
 ms.author: normesta
-ms.date: 11/08/2017
+ms.date: 06/08/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, SQLite, Datenbank
 ms.localizationpriority: medium
-ms.openlocfilehash: d10347bb1bd2eb33bfc58a7bc09b6eb5d1ac7a58
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: 01cac3c1b8c18e968c35acb01b3d3918d9efe60d
+ms.sourcegitcommit: ee77826642fe8fd9cfd9858d61bc05a96ff1bad7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663620"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "2018596"
 ---
 # <a name="use-a-sqlite-database-in-a-uwp-app"></a>Verwenden einer SQLite-Datenbank in einer UWP-App
 Sie können SQLite verwenden, um Daten in einer einfachen Datenbank auf dem Gerät des Benutzers zu speichern und abzurufen. Dieser Leitfaden zeigt Ihnen wie.
@@ -145,13 +145,13 @@ Fügen Sie aus Ihrem UWP-Projekt einen Verweis auf das **DataAccessLibrary**-Pro
 
 ![Datenzugriffsklassenbibliothek](images/ref-class-library.png)
 
-Fügen Sie die folgende ``using``-Anweisung zu den Dateien **App.xaml.cs** und **MainPage.xaml** in Ihrem UWP-Projekt hinzu.
+Fügen Sie die folgende ``using``-Anweisung zu den Dateien **App.xaml.cs** und **MainPage.xaml.cs** in Ihrem UWP-Projekt hinzu.
 
 ```csharp
 using DataAccessLibrary;
 ```
 
-Öffnen Sie die **DataAccess**-Klasse in Ihrer **DataAccessLibrary**-Lösung deklarieren Sie diese Klasse als statisch.
+Öffnen Sie die **DataAccess**-Klasse in Ihrer **DataAccessLibrary**-Lösung, und deklarieren Sie diese Klasse als statisch.
 
 >[!NOTE]
 >Unser Beispiel platziert den Datenzugriffscode in einer statischen Klasse. Dies ist jedoch nur eine Designentscheidung und völlig optional.
@@ -188,7 +188,7 @@ public static void InitializeDatabase()
         db.Open();
 
         String tableCommand = "CREATE TABLE IF NOT " +
-            "EXISTS MyTable (Primary_Key INTEGER PRIMARY KEY AUTOINCREMENT, " +
+            "EXISTS MyTable (Primary_Key INTEGER PRIMARY KEY, " +
             "Text_Entry NVARCHAR(2048) NULL)";
 
         SqliteCommand createTable = new SqliteCommand(tableCommand, db);

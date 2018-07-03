@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: d6e5d69c2f86c0d57c0c1be938799d5e81bb8f00
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 81205dc7122c75345b686240f79200d8304704b7
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832274"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1843420"
 ---
 # <a name="basic-photo-video-and-audio-capture-with-mediacapture"></a>Allgemeine Foto-, Video- und Audioaufnahme mit „MediaCapture“
 
@@ -61,7 +61,7 @@ Beginnend mit Windows, Version 1803, können Sie auf die [**BitmapProperties**](
 
 Weitere Informationen zum Arbeiten mit dem **BitmapEncoder** und dem **SoftwareBitmap**-Objekt, z. B. wie Sie ein Objekt in einer XAML-Seite anzeigen, finden Sie unter [**Erstellen, Bearbeiten und Speichern von Bitmapbildern**](imaging.md). 
 
-Weitere Informationen zum Festlegen der Steurelementwerte des Aufnahmegeräts finden Sie unter [Steuerelemente des Aufnahmegeräts für Foto- und Videoaufnahmen](capture-device-controls-for-photo-and-video.md).
+Weitere Informationen zum Festlegen der Steurelementwerte des Aufnahmegeräts finden Sie unter [Steuerelemente des Aufnahmegeräts für Foto- und Videoaufnahmen](capture-device-controls-for-photo-and-video-capture.md).
 
 Ab Windows10, Version 1803, erhalten Sie die Metadaten wie z.B. EXIF-Informationen für Fotos, die nicht komprimiert erfasst wurden, durch den Zugriff auf die [**BitmapProperties**](https://docs.microsoft.com/uwp/api/windows.media.capture.capturedframe.bitmapproperties)-Eigenschaft von der **CapturedFrame**, die von **MediaCapture** zurückgegeben wird. In früheren Versionen waren diese Daten nur in der Kopfzeile des Fotos in einem komprimierten Dateiformat erhältlich. Sie können diese Daten für den [**BitmapEncoder**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapencoder) bereitstellen, wenn Sie sie manuell in eine Bilddatei schreiben. Weitere Informationen zur Kodierung von Bitmaps finden Sie im Artikel [Erstellen, Bearbeiten und Speichern von Bitmapbildern.](imaging.md).  Sie können auch auf die Werte des Frame-Steuerelements zugreifen, z.B. die Belichtung und Flash-Einstellungen, die verwendet wurden, als das Image erfasst wurde, indem Sie auf die [**ControlValues**](https://docs.microsoft.com/en-us/uwp/api/windows.media.capture.capturedframe.controlvalues)-Eigenschaft zugreifen. Weitere Informationen finden Sie unter [Steuerelemente des Aufnahmegeräts für Foto- und Videoaufnahmen](capture-device-controls-for-photo-and-video-capture.md).
 

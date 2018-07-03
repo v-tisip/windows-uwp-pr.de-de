@@ -9,18 +9,18 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: c54f3569d6add5e3e2bd2784f2a9e8907b5b2cea
-ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
+ms.openlocfilehash: 5bda75f71b1230974ecb4d136e5b40e85b7e5259
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "1707391"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1843410"
 ---
 # <a name="show-multiple-views-for-an-app"></a>Anzeigen mehrerer Ansichten für eine App
 
-Sie können Ihren Benutzern zu mehr Produktivität verhelfen, indem Sie ihnen ermöglichen, unabhängige Teile der App in separaten Fenstern anzuzeigen. Wenn Sie für eine App mehrere Fenster erstellen, verhält sich jedes Fenster anders. Auf der Taskleiste wird jedes Fenster separat angezeigt. Die Benutzer können App-Fenster unabhängig voneinander verschieben, deren Größe ändern, Fenster anzeigen und ausblenden und zwischen App-Fenstern wechseln, als würde es sich um separate Apps handeln. Jedes Fenster agiert in seinem eigenen Thread.
+![Drahtmodell einer App mit mehreren Fenstern](images/multi-view.gif)
 
-![Drahtmodell, das eine App mit mehreren Fenstern zeigt.](images/multi-view.png)
+Sie können Ihren Benutzern zu mehr Produktivität verhelfen, indem Sie ihnen ermöglichen, unabhängige Teile der App in separaten Fenstern anzuzeigen. Wenn Sie für eine App mehrere Fenster erstellen, verhält sich jedes Fenster anders. Auf der Taskleiste wird jedes Fenster separat angezeigt. Die Benutzer können App-Fenster unabhängig voneinander verschieben, deren Größe ändern, Fenster anzeigen und ausblenden und zwischen App-Fenstern wechseln, als würde es sich um separate Apps handeln. Jedes Fenster agiert in seinem eigenen Thread.
 
 > **Wichtige APIs**: [**ApplicationViewSwitcher**](https://msdn.microsoft.com/library/windows/apps/dn281094), [**CreateNewView**](https://msdn.microsoft.com/library/windows/apps/dn297278)
 

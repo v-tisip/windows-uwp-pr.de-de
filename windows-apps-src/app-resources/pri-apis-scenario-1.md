@@ -4,24 +4,21 @@ Description: In this scenario, we'll make a new app to represent our custom buil
 title: 'Szenario 1: Generieren einer PRI-Datei aus Zeichenfolgenressourcen und Ressourcendateien'
 template: detail.hbs
 ms.author: stwhi
-ms.date: 02/20/2018
+ms.date: 05/07/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
-ms.openlocfilehash: 7071c6e6eea3e4484f1ce416654d30d90d905325
-ms.sourcegitcommit: 12cc283e821cbf978debf24914490982f076b4b4
+ms.openlocfilehash: 22a648d9366a3abcedd9fd75328cf0f504a9f84c
+ms.sourcegitcommit: 618741673a26bd718962d4b8f859e632879f9d61
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2018
-ms.locfileid: "1658175"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "1992076"
 ---
 # <a name="scenario-1-generate-a-pri-file-from-string-resources-and-asset-files"></a>Szenario 1: Generieren einer PRI-Datei aus Zeichenfolgenressourcen und Ressourcendateien
-> [!NOTE]
-> **Einige Informationen beziehen sich auf die Vorabversion, die vor der kommerziellen Freigabe möglicherweise wesentlichen Änderungen unterliegt. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.**
-
-In diesem Fall verwenden wir die [APIs zur Paketressourcenindizierung (PRI)](https://msdn.microsoft.com/library/windows/desktop/mt845690), um eine neue App zur Darstellung unseres benutzerdefinierten Buildsystems zu erstellen. Denken Sie daran: Der Zweck dieses benutzerdefinierten Buildsystems besteht darin, PRI-Dateien für eine Ziel-UWP-App zu erstellen. Im Rahmen dieser exemplarischen Vorgehensweise erstellen wir also einige Beispielressourcendateien (mit Zeichenfolgen und anderen Arten von Ressourcen), um die Ressourcen dieser Ziel-UWP-App abzubilden.
+In diesem Szenario verwenden wir die [APIs zur Paketressourcenindizierung (PRI)](https://msdn.microsoft.com/library/windows/desktop/mt845690), um eine neue App zur Darstellung unseres benutzerdefinierten Buildsystems zu erstellen. Denken Sie daran: Der Zweck dieses benutzerdefinierten Buildsystems besteht darin, PRI-Dateien für eine Ziel-UWP-App zu erstellen. Im Rahmen dieser exemplarischen Vorgehensweise erstellen wir also einige Beispielressourcendateien (mit Zeichenfolgen und anderen Arten von Ressourcen), um die Ressourcen dieser Ziel-UWP-App abzubilden.
 
 ## <a name="new-project"></a>Neues Projekt
 Erstellen Sie zunächst ein neues Projekt in Microsoft Visual Studio. Erstellen Sie ein Anwendungsprojekt der **Visual C++-Windows-Konsole**, und nennen Sie es *CBSConsoleApp*.
@@ -31,7 +28,7 @@ Wählen Sie *x64* aus der Dropdownliste **Lösungsplattformen**.
 ## <a name="headers-static-library-and-dll"></a>Header, statische Bibliothek und DLL
 Die PRI-APIs werden in der Headerdatei „MrmResourceIndexer.h“ deklariert (diese wird unter `%ProgramFiles(x86)%\Windows Kits\10\Include\<WindowsTargetPlatformVersion>\um\` installiert). Öffnen Sie die Datei `CBSConsoleApp.cpp`, und fügen Sie den Header sowie einige andere Header hinzu, die Sie benötigen.
 
-```cpp
+```cppwinrt
 #include <string>
 #include <windows.h>
 #include <MrmResourceIndexer.h>
@@ -43,7 +40,7 @@ Erstellen Sie die Projektmappe, und kopieren Sie `MrmSupport.dll` von `C:\Progra
 
 Fügen Sie die folgende Hilfsfunktion `CBSConsoleApp.cpp` hinzu, da wir diese benötigen.
 
-```cpp
+```cppwinrt
 inline void ThrowIfFailed(HRESULT hr)
 {
     if (FAILED(hr))
@@ -56,7 +53,7 @@ inline void ThrowIfFailed(HRESULT hr)
 
 Fügen Sie in der `main()`-Funktion Aufrufe zur Initialisierung und Aufhebung der Initialisierung von COM hinzu.
 
-```cpp
+```cppwinrt
 int main()
 {
     ::ThrowIfFailed(::CoInitializeEx(nullptr, COINIT_MULTITHREADED));
@@ -117,7 +114,7 @@ Diese Datei kann ein beliebiges PNG-Bild enthalten.
 ## <a name="index-the-resources-and-create-a-pri-file"></a>Indizieren der Ressourcen und Erstellen einer PRI-Datei
 Deklarieren Sie in der `main()`-Funktion vor dem Aufruf zur COM-Initialisierung einige Zeichenfolgen, die wir benötigen, und erstellen Sie auch den Ausgabeordner, in dem wir die PRI-Datei generieren.
 
-```cpp
+```cppwinrt
 std::wstring projectRootFolderUWPApp{ L"UWPAppProjectRootFolder" };
 std::wstring generatedPRIsFolder{ projectRootFolderUWPApp + L"\\Generated PRIs" };
 std::wstring filePathPRI{ generatedPRIsFolder + L"\\resources.pri" };
@@ -128,7 +125,7 @@ std::wstring filePathPRIDumpBasic{ generatedPRIsFolder + L"\\resources-pri-dump-
 
 Deklarieren Sie unmittelbar nach dem Aufruf zur COM-Initialisierung einen Ressourcenindexer-Handle, und rufen Sie dann [**MrmCreateResourceIndexer**]() auf, um einen Ressourcenindexer zu erstellen.
 
-```cpp
+```cppwinrt
 MrmResourceIndexerHandle indexer;
 ::ThrowIfFailed(::MrmCreateResourceIndexer(
     L"OurUWPApp",
@@ -148,7 +145,7 @@ Hier werden die Argumente erläutert, die an **MrmCreateResourceIndexer** überg
 
 Im nächsten Schritt fügen wir unsere Ressourcen dem Ressourcenindexer hinzu, den wir gerade erstellt haben. `resources.resw` ist eine Ressourcendatei (.resw), die die neutralen Zeichenfolgen für die Ziel-UWP-App enthält. Führen Sie (in diesem Thema) einen Bildlauf nach oben durch, wenn Sie den Inhalt dieser Datei anzeigen möchten. `de-DE\resources.resw` enthält unsere deutschen Zeichenfolgen und `en-US\resources.resw` enthält unsere englischen Zeichenfolgen. Zum Hinzufügen der Zeichenfolgenressourcen innerhalb einer Ressourcendatei zu einem Ressourcenindexer rufen Sie [**MrmIndexResourceContainerAutoQualifiers**]() auf. Als Drittes rufen wir die [**MrmIndexFile**]()-Funktion zu einer Datei auf, die eine neutrale Bildressource für den Ressourcenindexer enthält.
 
-```cpp
+```cppwinrt
 ::ThrowIfFailed(::MrmIndexResourceContainerAutoQualifiers(indexer, L"resources.resw"));
 ::ThrowIfFailed(::MrmIndexResourceContainerAutoQualifiers(indexer, L"de-DE\\resources.resw"));
 ::ThrowIfFailed(::MrmIndexResourceContainerAutoQualifiers(indexer, L"en-US\\resources.resw"));
@@ -159,19 +156,19 @@ Im Aufruf an **MrmIndexFile** ist der Wert „ms-resource:///Files/sample-image.
 
 Nachdem wir den Ressourcenindexer über unsere Ressourcendateien informiert haben, ist es an der Zeit, dass dieser uns eine PRI-Datei auf dem Datenträger generiert, und zwar durch Aufrufen der [**MrmCreateResourceFile**]()-Funktion.
 
-```cpp
+```cppwinrt
 ::ThrowIfFailed(::MrmCreateResourceFile(indexer, MrmPackagingModeStandaloneFile, MrmPackagingOptionsNone, generatedPRIsFolder.c_str()));
 ```
 
 Zu diesem Zeitpunkt wurde eine PRI-Datei mit dem Namen `resources.pri` in einem Ordner namens `Generated PRIs` erstellt. Nun, da wir mit dem Ressourcenindexer fertig sind, rufen wir [**MrmDestroyIndexerAndMessages**]() auf, um den Handle zu löschen und alle ihm zugewiesenen Computerressourcen freizugeben.
 
-```cpp
+```cppwinrt
 ::ThrowIfFailed(::MrmDestroyIndexerAndMessages(indexer));
 ```
 
 Da eine PRI-Datei ein binäres Format hat, können wir das soeben Generierte leichter anzeigen, wenn wir die binäre PRI-Datei in ihr XML-Äquivalent sichern. Dies erreichen wir durch Aufrufen von [**MrmDumpPriFile**]().
 
-```cpp
+```cppwinrt
 ::ThrowIfFailed(::MrmDumpPriFile(filePathPRI.c_str(), nullptr, MrmDumpType::MrmDumpType_Basic, filePathPRIDumpBasic.c_str()));
 ```
 

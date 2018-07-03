@@ -4,18 +4,18 @@ ms.assetid: 2FBA0B73-17C6-4F25-A79D-63F2F262491A
 description: Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um detaillierte Daten zu einem Windows7- oder Windows8.x-Treiberfehler abzurufen. Diese Methode ist nur für IHVs bestimmt.
 title: Abrufen von Informationen zu einem Windows7- oder Windows8.x-Treiberfehler
 ms.author: mcleans
-ms.date: 01/18/2018
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Fehler, Details
 ms.localizationpriority: medium
-ms.openlocfilehash: 84ea23f5989f9b8c6a28b9c355175e28cae7695c
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: aa3eaf0915ba7e26d2b27b4f21df95fae8a5c0e1
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663920"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989484"
 ---
 # <a name="get-details-for-a-windows-7-or-windows-8x-driver-error"></a>Abrufen von Informationen zu einem Windows7- oder Windows8.x-Treiberfehler
 
@@ -84,7 +84,7 @@ Authorization: Bearer <your access token>
 |------------|---------|------------|
 | Wert      | array   | Ein Array von Objekten, die detaillierte Fehlerdaten enthalten. Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie in der folgenden Tabelle.          |
 | @nextLink  | String  | Wenn weitere Seiten mit Daten vorhanden sind, enthält diese Zeichenfolge einen URI, mit dem Sie die nächste Seite mit Daten anfordern können. Beispielsweise wird dieser Wert zurückgegeben, wenn der Parameter **top** der Anforderung auf 10 festgelegt ist, es jedoch mehr als 10 Zeilen mit Fehlern für die Abfrage gibt. |
-| TotalCount | inumber | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.        |
+| TotalCount | Ganzzahl | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.        |
 
 
 Elemente im Array *Value* enthalten die folgenden Werte.

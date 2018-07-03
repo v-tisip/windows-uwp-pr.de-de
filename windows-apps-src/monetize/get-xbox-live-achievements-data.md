@@ -3,29 +3,29 @@ author: mcleanbyron
 description: Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um Xbox Live Erfolgsdaten abzurufen.
 title: Abrufen von Xbox Live Erfolgsdaten
 ms.author: mcleans
-ms.date: 04/16/2018
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, Uwp, Store-Diensten, Microsoft Store-Analyse-API, Xbox Live-Analyse, Erfolge
 ms.localizationpriority: medium
-ms.openlocfilehash: 76cbe9abf3b6d668bb157e40f3e61aff885e3cbb
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: 09800229b45b9eb1a0a456e8e421412ca1a88f8d
+ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816015"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "1976052"
 ---
 # <a name="get-xbox-live-achievements-data"></a>Abrufen von Xbox Live Erfolgsdaten
 
-Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um die Anzahl der Kunden zu erhalten, die jeden Erfolg für Ihr [Xbox Live-fähiges Spiel](../xbox-live/index.md) freigeschaltet haben, und zwar während des letzten Tages, für den Erfolgsdaten verfügbar sind, für die vorherigen 30Tage vor diesem Tag und über die gesamte Lebensdauer des Spiels bis zu diesem Tag. Diese Informationen sind auch im [Xbox Analysenbericht](../publish/xbox-analytics-report.md) im Windows Dev Center-Dashboard verfügbar.
+Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um die Anzahl der Kunden zu erhalten, die jeden Erfolg für Ihr [Xbox Live-fähiges Spiel](../xbox-live/index.md) freigeschaltet haben, und zwar während des letzten Tages, für den Erfolgsdaten verfügbar sind, für die vorherigen 30Tage vor diesem Tag und über die gesamte Lebensdauer des Spiels bis zu diesem Tag. Diese Informationen sind auch im [Xbox Analyse-Bericht](../publish/xbox-analytics-report.md) im Windows Dev Center-Dashboard verfügbar.
 
 > [!IMPORTANT]
-> Diese Methode unterstützt derzeit nur Xbox Live-fähige Spiele, die von [Microsoft Partnern](../xbox-live/developer-program-overview.md#microsoft-partners) veröffentlicht werden oder die mithilfe des [ID@Xbox Programms](../xbox-live/developer-program-overview.md#id) eingereicht wurden. Es gibt keine Daten für Spiele zurück, die mithilfe des [Xbox Live Creators-Programms](../xbox-live/developer-program-overview.md#xbox-live-creators-program) eingereicht wurden.
+> Diese Methode unterstützt nur Spiele für Xbox oder Spiele, die Xbox Live-Dienste verwenden. Diese Spiele müssen den [Konzeptgenehmigungsprozess](../gaming/concept-approval.md) durchlaufen, der Spiele umfasst, die von [Microsoft-Partnern](../xbox-live/developer-program-overview.md#microsoft-partners) veröffentlicht wurden, sowie Spiele, die über das [ID@Xbox-Programm](../xbox-live/developer-program-overview.md#id) übermittelt wurden. Diese Methode unterstützt derzeit keine Spiele, die über das [Xbox Live Creators-Programm](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) eingereicht wurden.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Um diese Methode zu verwenden, sind die folgenden Schritte erforderlich:
+Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
 * Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](access-analytics-data-using-windows-store-services.md#prerequisites) für die Microsoft Store-Analyse-API.
 * [Rufen Sie ein Azure AD-Zugriffstoken ab](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60 Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
@@ -139,6 +139,6 @@ Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese 
 * [Zugreifen auf Analysedaten mit MicrosoftStore-Diensten](access-analytics-data-using-windows-store-services.md)
 * [Abrufen von Xbox Live Analysedaten](get-xbox-live-analytics.md)
 * [Abrufen von Xbox Live Integritätsdaten](get-xbox-live-health-data.md)
-* [Abrufen von Xbox Live Spielehub-Daten](get-xbox-live-game-hub-data.md)
-* [Abrufen von Xbox Live Clubdaten](get-xbox-live-club-data.md)
-* [Abrufen von Xbox Live Multiplayer-Daten](get-xbox-live-multiplayer-data.md)
+* [Abrufen von Xbox Live Spielehubdaten](get-xbox-live-game-hub-data.md)
+* [Abrufen von Xbox Live-Clubdaten](get-xbox-live-club-data.md)
+* [Abrufen von Xbox Live Multiplayerdaten](get-xbox-live-multiplayer-data.md)

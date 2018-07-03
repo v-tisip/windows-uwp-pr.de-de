@@ -3,18 +3,18 @@ author: mcleanbyron
 description: Mittels dieser Methode in der Microsoft Store-Analyse-API können Sie gesammelte Fehlerberichtsdaten für eine Desktopanwendung für einen bestimmten Zeitraum und andere optionale Filter abrufen.
 title: Abrufen von Fehlerberichtsdaten für Ihre Desktopanwendung
 ms.author: mcleans
-ms.date: 03/06/2018
+ms.date: 06/05/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Fehler, Desktopanwendung
 ms.localizationpriority: medium
-ms.openlocfilehash: 28fa9e8d6efec6fb6c4930d9c74917d4275fa29c
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: 422a570635fd6788b8e8b5656060a309d628b7bf
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663770"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989394"
 ---
 # <a name="get-error-reporting-data-for-your-desktop-application"></a>Abrufen von Fehlerberichtsdaten für Ihre Desktopanwendung
 
@@ -22,7 +22,7 @@ Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um gesammelte Fe
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Um diese Methode zu verwenden, sind die folgenden Schritte erforderlich:
+Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
 * Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](access-analytics-data-using-windows-store-services.md#prerequisites) für die Microsoft Store-Analyse-API.
 * [Rufen Sie ein Azure AD-Zugriffstoken ab](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60 Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
@@ -80,7 +80,7 @@ Authorization: Bearer <your access token>
 |------------|---------|--------------|
 | Wert      | array   | Ein Array von Objekten, die gesammelte Fehlerberichtsdaten enthalten. Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie unten im Abschnitt [Fehlerwerte](#error-values).     |
 | @nextLink  | String  | Wenn weitere Seiten mit Daten vorhanden sind, enthält diese Zeichenfolge einen URI, mit dem Sie die nächste Seite mit Daten anfordern können. Beispielsweise wird dieser Wert zurückgegeben, wenn der Parameter **top** der Anforderung auf 10000 festgelegt ist, es jedoch mehr als 10.000 Zeilen mit Fehlern für die Abfrage gibt. |
-| TotalCount | inumber | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.     |
+| TotalCount | Ganzzahl | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.     |
 
 
 ### <a name="error-values"></a>Fehlerwerte
@@ -94,17 +94,17 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 | productName | string  | Der Anzeigename der Desktopanwendung, der aus den Metadaten der zugehörigen ausführbaren Datei(en) abgeleitet wurde.   |
 | appName | string  |  TBD  |
 | fileName | string  | Der Name der ausführbaren Datei für die Desktopanwendung.   |
-| failureName     | string  | Der Name des Fehlers, der aus vier Teilen besteht: eine oder mehrere Problemklassen, ein Ausnahme/Fehlerprüfcode, der Name des Image, in dem der Fehler aufgetreten ist, und der zugehörige Funktionsname.  |
+| failureName     | String  | Der Name des Fehlers, der aus vier Teilen besteht: eine oder mehrere Problemklassen, ein Ausnahme/Fehlerprüfcode, der Name des Image, in dem der Fehler aufgetreten ist, und der zugehörige Funktionsname.  |
 | failureHash     | string  | Der eindeutige Bezeichner des Fehlers.   |
 | symbol          | string  | Das diesem Fehler zugewiesene Symbol. |
 | osBuild       | string  | Die vierteilige Buildnummer des Betriebssystems, auf dem der Fehler aufgetreten ist.  |
-| osVersion       | string  | Eine der folgenden Zeichenfolgen, die die Version des Betriebssystems angibt, auf dem die Desktopanwendung installiert wurde:<p/><ul><li><strong>Windows 7</strong></li><li><strong>Windows8.1</strong></li><li><strong>Windows 10</strong></li><li><strong>Windows Server 2016</strong></li><li><strong>Windows Server 1709</strong></li><li><strong>Unbekannt</strong></li></ul>   |   
-| osRelease | string  | Einer der folgenden Zeichenfolgen, die die Betriebssystemversion oder Verteilungsring (als ein Subpopulation innerhalb der Betriebssystemversion) angibt, auf dem die Desktopanwendung installiert ist.<p/><p>Für Windows10:</p><ul><li><strong>Version1507</strong></li><li><strong>Version1511</strong></li><li><strong>Version1607</strong></li><li><strong>Version1703</strong></li><li><strong>Version1709</strong></li><li><strong>Release Preview</strong></li><li><strong>Insider Fast</strong></li><li><strong>Insider Slow</strong></li></ul><p/><p>Für Windows Server 1709:</p><ul><li><strong>RTM</strong></li></ul><p>Für Windows Server 2016:</p><ul><li><strong>Version1607</strong></li></ul><p>Für Windows8.1:</p><ul><li><strong>Update 1</strong></li></ul><p>Für Windows7:</p><ul><li><strong>Service Pack 1</strong></li></ul><p>Wenn die Betriebssystemversion oder Verteilungsring unbekannt ist, hat dieses Feld den Wert <strong>Unknown</strong>.</p> |
+| osVersion       | string  | Eine der folgenden Zeichenfolgen, die die Version des Betriebssystems angibt, auf dem die Desktopanwendung installiert wurde:<p/><ul><li><strong>Windows 7</strong></li><li><strong>Windows8.1</strong></li><li><strong>Windows 10</strong></li><li><strong>Windows Server 2016</strong></li><li><strong>Windows Server 1709</strong></li><li><strong>Unknown</strong></li></ul>   |   
+| osRelease | string  | Eine der folgenden Zeichenfolgen, die die Betriebssystemversion oder den Verteilungsring (als eine Subpopulation innerhalb der Betriebssystemversion) angibt, in der bzw. dem der Fehler aufgetreten ist.<p/><p>Für Windows10:</p><ul><li><strong>Version1507</strong></li><li><strong>Version1511</strong></li><li><strong>Version1607</strong></li><li><strong>Version1703</strong></li><li><strong>Version1709</strong></li><li><strong>Version1803</strong></li><li><strong>Release Preview</strong></li><li><strong>Insider Fast</strong></li><li><strong>Insider Slow</strong></li></ul><p/><p>Für Windows Server 1709:</p><ul><li><strong>RTM</strong></li></ul><p>Für Windows Server 2016:</p><ul><li><strong>Version1607</strong></li></ul><p>Für Windows8.1:</p><ul><li><strong>Update 1</strong></li></ul><p>Für Windows7:</p><ul><li><strong>Service Pack 1</strong></li></ul><p>Wenn die Betriebssystemversion oder Verteilungsring unbekannt ist, hat dieses Feld den Wert <strong>Unknown</strong>.</p> |
 | eventType       | string  | Eine der folgenden Zeichenfolgen, die den Typ des Fehlerereignisses angibt:<ul><li>**crash**</li><li>**hang**</li><li>**memory**</li><li>**jse**</li></ul>       |
 | market          | string  | Der ISO3166-Ländercode des Gerätemarkts.   |
 | deviceType      | String  | Eine der folgenden Zeichenfolgen, die den Typ des Geräts angibt, auf dem der Fehler aufgetreten ist:<p/><ul><li><strong>PC</strong></li><li><strong>Server</strong></li><li><strong>Tablet</strong></li><li><strong>Unknown</strong></li></ul>    |
 | applicationVersion     | string  |   Die Version der ausführbaren Datei der Anwendung, in der der Fehler aufgetreten ist.    |
-| eventCount      | inumber | Die Anzahl der Ereignisse, die diesem Fehler für die angegebene Aggregationsebene zugeordnet werden.      |
+| eventCount      | Ganzzahl | Die Anzahl der Ereignisse, die diesem Fehler für die angegebene Aggregationsebene zugeordnet werden.      |
 
 
 ### <a name="response-example"></a>Antwortbeispiel

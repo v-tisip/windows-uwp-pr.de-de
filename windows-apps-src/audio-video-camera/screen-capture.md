@@ -4,18 +4,18 @@ title: Bildschirmaufnahme
 description: Der Windows.Graphics.Capture-Namespace enthält APIs zum Abrufen von Frames aus einer Anzeige oder einem Anwendungsfenster, um Videostreams zu erstellen oder gemeinsame und interaktive Benutzeroberflächen zu erstellen.
 ms.assetid: 349C959D-9C74-44E7-B5F6-EBDB5CA87B9F
 ms.author: elcowle
-ms.date: 3/1/2018
+ms.date: 5/21/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Bildschirmaufnahme
 ms.localizationpriority: medium
-ms.openlocfilehash: 2b7883acd351c721b4539141cd46e3c199a8d8a1
-ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
+ms.openlocfilehash: e407842711d1bfcac0a54fdf484a38d39bc2b237
+ms.sourcegitcommit: f9690c33bb85f84466560efac6f23cca2daf5a02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2018
-ms.locfileid: "1639809"
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "1912908"
 ---
 # <a name="screen-capture"></a>Bildschirmaufnahme
 
@@ -23,9 +23,12 @@ Ab Windows 10,Version 1803, enthält der [Windows.Graphics.Capture](https://docs
 
 Mit der Bildschirmaufnahme können Entwickler sichere System-UIs für Endbenutzer aufrufen, um das Fenster für die Anzeige oder die Anwendung für die Aufzeichnung auszuwählen. Es wird ein gelber Rahmen mit einer Benachrichtigung vom System um das aktiv erfasste Element herum gezeichnet. Im Fall von mehreren gleichzeitigen Aufnahmesitzungen wird ein gelber Rahmen um jedes erfasste Element gezeichnet.
 
+> [!NOTE]
+> Für Bildschirmaufnahme-APIs muss Windows10 Pro oder Enterprise ausgeführt werden.
+
 ## <a name="add-the-screen-capture-capability"></a>Hinzufügen der Bildschirmaufnahmefunktion
 
-Die APIs unter dem **Windows.Graphics.Capture**-Namespace erfordern eine allgemeine Funktion, um in Ihrem App-Manifest deklariert werden zu können. Diese müssen der Datei direkt hinzugefügt werden:
+Die APIs unter dem **Windows.Graphics.Capture**-Namespace erfordern eine allgemeine Funktion, um in Ihrem Anwendungsmanifest deklariert werden zu können. Diese müssen der Datei direkt hinzugefügt werden:
     
 1. Klicken Sie mit der rechten Maustaste auf **Solution Explorer** auf die Datei **appxmanifest**. 
 2. Wählen Sie **Öffnen mit** aus 
@@ -158,23 +161,24 @@ Wenn **Recreate** aufgerufen wird, werden alle vorhandenen Frames verworfen. Dad
 Der folgende Codeausschnitt ist ein End-to-End-Beispiel für die Implementierung einer Bildschirmaufnahme in einer UWP-Anwendung:
 
 ```cs
-using Microsoft.Graphics.Canvas; 
-using System; 
-using System.Threading.Tasks; 
-using Windows.Graphics.Capture; 
-using Windows.Graphics.DirectX; 
-using Windows.UI.Composition; 
- 
+using Microsoft.Graphics.Canvas;
+using System;
+using System.Threading.Tasks;
+using Windows.Graphics;
+using Windows.Graphics.Capture;
+using Windows.Graphics.DirectX;
+using Windows.UI.Composition;
+
 namespace CaptureSamples 
-{ 
+{
     class Sample
     {
         // Capture API objects.
-        private Vector2 _lastSize; 
+        private SizeInt32 _lastSize; 
         private GraphicsCaptureItem _item; 
         private Direct3D11CaptureFramePool _framePool; 
         private GraphicsCaptureSession _session; 
- 
+
         // Non-API related members.
         private CanvasDevice _canvasDevice; 
         private CompositionDrawingSurface _surface; 
@@ -252,7 +256,8 @@ namespace CaptureSamples
             bool needsReset = false; 
             bool recreateDevice = false; 
  
-            if (frame.ContentSize != _lastSize) 
+            if ((frame.ContentSize.Width != _lastSize.Width) || 
+                (frame.ContentSize.Height != _lastSize.Height)) 
             { 
                 needsReset = true; 
                 _lastSize = frame.ContentSize; 

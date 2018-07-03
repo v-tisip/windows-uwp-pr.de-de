@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Windows Machine Learning
 ms.localizationpriority: medium
-ms.openlocfilehash: 2ef6ea1a4e1dab23f5ff6a09aec9b8c49c135f5e
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: a2470cff6b5c7f07c720a38d0bff00486e4c6b27
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817661"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1842870"
 ---
 # <a name="windows-ml-overview"></a>Übersicht über Windows ML
 
@@ -54,7 +54,7 @@ Hier sind einige Highlights von Windows ML:
 
 ### <a name="system-requirements"></a>Systemanforderungen
 
-Um Anwendungen zu erstellen, die Windows ML verwenden, benötigen Sie das [Windows SDK – Build 17110 oder höher](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewSDK).
+Um Anwendungen zu erstellen, die Windows ML verwenden, benötigen Sie den [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk)-Build 17110 oder höher.
 
 ### <a name="onnx-models"></a>ONNX-Modelle
 
@@ -76,6 +76,8 @@ Sie können auch [WinMLTools](https://pypi.org/project/winmltools/) verwenden, u
 - LibSVM
 
 Weitere Informationen zum Installieren und Verwenden von WinMLTools finden Sie unter [Konvertieren eines Modells](conversion-samples.md).
+
+Mit der Erweiterung „Visual Studio Tools for AI” können Sie auch WinMLTools in der Visual Studio-IDE verwenden. Damit erhalten Sie eine benutzerfreundlichere Click-Through-Funktionalität zum Konvertieren Ihrer Modelle in das ONNX-Format. Weitere Informationen finden Sie unter [VS-Tools für AI](https://github.com/Microsoft/vs-tools-for-ai/).
 
 ### <a name="onnx-operators"></a>ONNX-Operatoren
 
@@ -104,9 +106,9 @@ Windows ML unterstützt alle in der Dokumentation zu ONNX v1. 0 definierten Oper
 
 ### <a name="automatic-interface-code-generation"></a>Automatische Generierung von Schnittstellencode
 
-Mit einer ONNX-Modelldatei erstellt der Code-Generator von Windows ML eine Schnittstelle für die Interaktion mit dem Modell in Ihrer App. Die generierte Schnittstelle enthält die Wrapper-Klassen, die das Modell, Eingaben und Ausgaben darstellen. Der generierte Code ruft die [Windows ML-API](/uwp/api/windows.ai.machinelearning.preview) automatisch ab, sodass Sie das Modell in Ihrem Projekt einfach laden, binden und auswerten können. Der Code-Generator unterstützt derzeit C# und C++/CX.
+Mit einer ONNX-Modelldatei erstellt der Codegenerator von Windows ML eine Schnittstelle für die Interaktion mit dem Modell in Ihrer App. Die generierte Schnittstelle enthält die Wrapper-Klassen, die das Modell, Eingaben und Ausgaben darstellen. Der generierte Code ruft die [Windows ML-API](/uwp/api/windows.ai.machinelearning.preview) automatisch ab, sodass Sie das Modell in Ihrem Projekt einfach laden, binden und auswerten können. Der Codegenerator unterstützt derzeit C# und C++/CX.
 
-Für UWP-Entwickler ist der automatische Code-Generator von Windows ML systemintern in [Visual Studio (Version 15.7 – Preview 1)](https://www.visualstudio.com/vs/preview/) integriert. (**Hinweis**: In Visual Studio Installer müssen Sie das optionale Windows10 Insider Preview SDK, Build 17110, deaktivieren.) Im Visual Studio-Projekt fügen Sie Ihre ONNX-Datei einfach als vorhandenes Element hinzu, sodass VS Wrapper-Klassen von Windows ML in einer neuen Benutzeroberflächendatei generiert.
+Für UWP-Entwickler: Der automatische Codegenerator von Windows ML ist in [Visual Studio](https://developer.microsoft.com/windows/downloads) integriert. Fügen Sie innerhalb Ihres Visual Studio-Projekts einfach Ihre ONNX-Datei als vorhandenes Element hinzu, und VS generiert Windows ML-Wrapperklassen in einer neuen Schnittstellendatei.
 
 Sie können auch das im Windows SDK enthaltene Befehlszeilentool `mlgen.exe` verwenden, um Wrapper-Klassen von Windows ML zu generieren. Das Tool befindet sich unter `(SDK_root)\bin\<version>\x64` oder `(SDK_root)\bin\<version>\x86`, wobei SDK_root das SDK-Installationsverzeichnis ist. Verwenden Sie zum Ausführen des Tools den nachstehenden Befehl.
 

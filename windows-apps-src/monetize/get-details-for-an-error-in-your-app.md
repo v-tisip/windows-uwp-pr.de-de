@@ -4,18 +4,18 @@ ms.assetid: f0c0325e-ad61-4238-a096-c37802db3d3b
 description: Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um detaillierte Daten zu einem spezifischen Fehler für Ihre App zu erhalten.
 title: Abrufen von Details zu einem Fehler in Ihrer App
 ms.author: mcleans
-ms.date: 03/06/2018
+ms.date: 06/05/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Fehler, Details
 ms.localizationpriority: medium
-ms.openlocfilehash: 5a553b811f130833f449063c68f63a71e4562f06
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: e44d11b9c97f049f25a6b3e57907c39bf2507bac
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663280"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989604"
 ---
 # <a name="get-details-for-an-error-in-your-app"></a>Abrufen von Details zu einem Fehler in Ihrer App
 
@@ -84,7 +84,7 @@ Authorization: Bearer <your access token>
 |------------|---------|------------|
 | Wert      | array   | Ein Array von Objekten, die detaillierte Fehlerdaten enthalten. Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie unten im Abschnitt [Fehlerdetailwerte](#error-detail-values).          |
 | @nextLink  | String  | Wenn weitere Seiten mit Daten vorhanden sind, enthält diese Zeichenfolge einen URI, mit dem Sie die nächste Seite mit Daten anfordern können. Beispielsweise wird dieser Wert zurückgegeben, wenn der Parameter **top** der Anforderung auf 10 festgelegt ist, es jedoch mehr als 10 Zeilen mit Fehlern für die Abfrage gibt. |
-| TotalCount | inumber | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.        |
+| TotalCount | Ganzzahl | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.        |
 
 
 <span id="error-detail-values"/>
@@ -97,7 +97,7 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 |-----------------|---------|----------------------------|
 | applicationId   | string  | Die Store-ID der App, für die detaillierte Fehlerdaten abgerufen wurden.      |
 | failureHash     | string  | Der eindeutige Bezeichner des Fehlers.     |
-| failureName     | string  | Der Name des Fehlers, der aus vier Teilen besteht: eine oder mehrere Problemklassen, ein Ausnahme/Fehlerprüfcode, der Name des Image, in dem der Fehler aufgetreten ist, und der zugehörige Funktionsname.           |
+| failureName     | String  | Der Name des Fehlers, der aus vier Teilen besteht: eine oder mehrere Problemklassen, ein Ausnahme/Fehlerprüfcode, der Name des Image, in dem der Fehler aufgetreten ist, und der zugehörige Funktionsname.           |
 | date            | string  | Das erste Datum im Datumsbereich für die Fehlerdaten. Wenn die Anforderung einen einzelnen Tag angibt, ist dieses Datum dieser Wert. Wenn die Anforderung eine Woche, einen Monat oder einen anderen Datumsbereich angibt, ist dieser Wert das erste Datum in diesem Datumsbereich. |
 | cabId           | string  | Die eindeutige ID der CAB-Datei, die mit diesem Fehler verknüpft ist.   |
 | cabExpirationTime  | string  | Datum und Uhrzeit im Format ISO 8601, an dem/der die CAB-Datei abgelaufen ist und nicht mehr heruntergeladen werden kann.   |
@@ -106,7 +106,7 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 | packageVersion  | string  | Die Version des App-Pakets, das mit diesem Fehler verknüpft ist.    |
 | deviceModel           | string  | Eine Zeichenfolge, die das Modell des Geräts angibt, auf dem die App ausgeführt wurde, als der Fehler aufgetreten ist.   |
 | osVersion       | string  | Eine der folgenden Zeichenfolgen, die die Version des Betriebssystems angibt, auf dem der Fehler aufgetreten ist:<ul><li><strong>Windows Phone7.5</strong></li><li><strong>Windows Phone 8</strong></li><li><strong>Windows Phone 8.1</strong></li><li><strong>Windows Phone 10</strong></li><li><strong>Windows8</strong></li><li><strong>Windows8.1</strong></li><li><strong>Windows 10</strong></li><li><strong>Unknown</strong></li></ul>    |
-| osRelease       | string  |  Einer der folgenden Zeichenfolgen, die die Betriebssystemversion oder Verteilungsring (als ein Subpopulation innerhalb der Betriebssystemversion) angibt, auf dem die Desktopanwendung installiert ist.<p/><p>Für Windows10:</p><ul><li><strong>Version1507</strong></li><li><strong>Version1511</strong></li><li><strong>Version1607</strong></li><li><strong>Version1703</strong></li><li><strong>Version1709</strong></li><li><strong>Release Preview</strong></li><li><strong>Insider Fast</strong></li><li><strong>Insider Slow</strong></li></ul><p/><p>Für Windows Server 1709:</p><ul><li><strong>RTM</strong></li></ul><p>Für Windows Server 2016:</p><ul><li><strong>Version1607</strong></li></ul><p>Für Windows8.1:</p><ul><li><strong>Update 1</strong></li></ul><p>Für Windows7:</p><ul><li><strong>Service Pack 1</strong></li></ul><p>Wenn die Betriebssystemversion oder Verteilungsring unbekannt ist, hat dieses Feld den Wert <strong>Unknown</strong>.</p>    |
+| osRelease       | String  |  Eine der folgenden Zeichenfolgen, die die Betriebssystemversion oder den Verteilungsring (als eine Subpopulation innerhalb der Betriebssystemversion) angibt, in der bzw. dem der Fehler aufgetreten ist.<p/><p>Für Windows10:</p><ul><li><strong>Version1507</strong></li><li><strong>Version1511</strong></li><li><strong>Version1607</strong></li><li><strong>Version1703</strong></li><li><strong>Version1709</strong></li><li><strong>Version1803</strong></li><li><strong>Release Preview</strong></li><li><strong>Insider Fast</strong></li><li><strong>Insider Slow</strong></li></ul><p/><p>Für Windows Server 1709:</p><ul><li><strong>RTM</strong></li></ul><p>Für Windows Server 2016:</p><ul><li><strong>Version1607</strong></li></ul><p>Für Windows8.1:</p><ul><li><strong>Update 1</strong></li></ul><p>Für Windows7:</p><ul><li><strong>Service Pack 1</strong></li></ul><p>Wenn die Betriebssystemversion oder Verteilungsring unbekannt ist, hat dieses Feld den Wert <strong>Unknown</strong>.</p>    |
 | deviceType      | string  | Eine der folgenden Zeichenfolgen, die den Typ des Geräts angibt, auf dem die App ausgeführt wurde, als der Fehler aufgetreten ist:<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>Unknown</strong></li></ul>     |
 | cabDownloadable           | Boolean  | Gibt an, ob die CAB-Datei durch den Benutzer heruntergeladen werden kann.   |
 

@@ -3,30 +3,32 @@ author: stevewhims
 description: Dieses Thema zeigt, wie man zwischen Application Binary Interface (ABI) und C++/WinRT-Objekten konvertiert.
 title: Interoperabilität zwischen C++/WinRT und der ABI
 ms.author: stwhi
-ms.date: 05/01/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, portieren, migrieren, interoperabilität, ABI
 ms.localizationpriority: medium
-ms.openlocfilehash: 84f9f557134e69c396ed63ace3474325856c6cd0
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: af9c14043fdfcc10828f87e8c954430f8f587412
+ms.sourcegitcommit: f9690c33bb85f84466560efac6f23cca2daf5a02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832044"
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "1912898"
 ---
 # <a name="interop-between-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-and-the-abi"></a>Interoperabilität zwischen [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) und der ABI
-Dieses Thema zeigt, wie man zwischen Application Binary Interface (ABI) und C++/WinRT-Objekten konvertiert. Sie können diese Techniken verwenden, um zwischen Code, der diese beiden Möglichkeiten der Programmierung mit Windows-Runtime verwendet, zu interagieren. Sie können sie außerdem verwenden, wenn Sie Ihren Code schrittweise von der ABI nach C++/WinRT verschieben.
+Dieses Thema zeigt, wie man zwischen SDK Application Binary Interface (ABI) und C++/WinRT-Objekten konvertiert. Sie können diese Techniken verwenden, um zwischen Code, der diese beiden Möglichkeiten der Programmierung mit Windows-Runtime verwendet, zu interagieren. Sie können sie außerdem verwenden, wenn Sie Ihren Code schrittweise von der ABI nach C++/WinRT verschieben.
 
-## <a name="what-are-windows-runtime-abi-types"></a>Was sind Windows-Runtime-ABI-Typen?
+## <a name="what-is-the-windows-runtime-abi-and-what-are-abi-types"></a>Was ist die Windows-Runtime-ABI, und welche Arten von ABI gibt es?
+Eine Windows-Runtime-Klasse (Laufzeitklasse) ist eigentlich eine Abstraktion. Diese Abstraktion definiert eine binäre Schnittstelle (Application Binary Interface oder ABI), die es verschiedenen Programmiersprachen ermöglicht, mit einem Objekt zu interagieren. Unabhängig von der Programmiersprache erfolgt die Client-Code-Interaktion bei einem Windows-Runtime-Objekt auf der untersten Ebene, wobei die Client-Sprachkonstrukte in Aufrufe im ABI des Objekts übersetzt werden.
+
 Die Windows SDK-Header im Ordner „%WindowsSdkDir%Include\10.0.17134.0\winrt” (passen Sie ggf. die SDK-Versionsnummer an) sind die Windows-Runtime-ABI-Header-Dateien. Sie wurden vom MIDL-Compiler erstellt. Hier ist ein Beispiel für die Verwendung eines dieser Header.
 
 ```
 #include <windows.foundation.h>
 ```
 
-Und hier ist ein vereinfachtes Beispiel für einen der ABI-Typen, die Sie in diesem speziellen Header finden.
+Und hier ist ein vereinfachtes Beispiel für einen der ABI-Typen, die Sie in diesem speziellen SDK-Header finden. Beachten Sie den **ABI**-Namespace: **Windows::Foundation** und alle anderen Windows-Namespaces werden von den SDK-Headern innerhalb des **ABI**-Namespace deklariert.
 
 ```
 namespace ABI::Windows::Foundation
@@ -65,8 +67,10 @@ namespace winrt::Windows::Foundation
 
 Die Schnittstelle ist modernes Standard C++. Es beseitigt **HRESULT**-Elemente (C++/WinRT löst bei Bedarf Ausnahmen aus). Und die Zugriffsfunktion gibt ein einfaches String-Objekt zurück, das am Ende seines Gültigkeitsbereichs bereinigt wird.
 
+Dieses Thema ist für Fälle relevant, in den Sie Interoperabilität mit Code gewährleisten oder Code portieren möchten, der auf der Application Binary Interface (ABI)-Ebene funktioniert.
+
 ## <a name="converting-to-and-from-abi-types-in-code"></a>Konvertierung von und zu ABI-Typen im Code
-Zur Sicherheit und Einfachheit können Sie für Konvertierungen in beide Richtungen einfach [**winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr), [**com_ptr::as**](/uwp/cpp-ref-for-winrt/com-ptr#comptras-function) und [**winrt::Windows::Foundation::IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) verwenden. Hier ist ein Codebeispiel (basierend auf der Projektvorlage **Console App**), das auch zeigt, wie Sie mit Namespacekollisionen zwischen der Projektion und der ABI umgehen können.
+Zur Sicherheit und Einfachheit können Sie für Konvertierungen in beide Richtungen einfach [**winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr), [**com_ptr::as**](/uwp/cpp-ref-for-winrt/com-ptr#comptras-function) und [**winrt::Windows::Foundation::IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) verwenden. Hier ist ein Codebeispiel (basierend auf der Projektvorlage **Console App**), das auch zeigt, wie Sie Namespace-Aliase für die verschiedenen Inseln verwenden können, um mit anderweitigen potenziellen Namespacekonflikten zwischen der C++/WinRT-Projektion und der ABI umzugehen.
 
 ```cppwinrt
 // main.cpp
@@ -88,7 +92,7 @@ namespace abi
 int main()
 {
     winrt::init_apartment();
-    
+
     winrt::Uri uri(L"http://aka.ms/cppwinrt");
 
     // Convert to an ABI type.
@@ -124,11 +128,11 @@ Hier sind andere ähnliche Low-Level-Konvertierungstechniken. Diese verwenden je
 
 ```cppwinrt
     ...
-    
+
     // Copy to an owning raw ABI pointer with copy_to_abi.
     abi::IStringable* owning = nullptr;
     winrt::copy_to_abi(uri, *reinterpret_cast<void**>(&owning));
-    
+
     // Copy from a raw ABI pointer.
     uri = nullptr;
     winrt::copy_from_abi(uri, owning);
@@ -139,13 +143,13 @@ Für die größtmöglichen Low-Level-Konvertierungen, die nur Adressen kopieren,
 
 ```cppwinrt
     ...
-    
+
     // Lowest-level conversions that only copy addresses
-    
+
     // Convert to a non-owning ABI object with get_abi.
     abi::IStringable* non_owning = static_cast<abi::IStringable*>(winrt::get_abi(uri));
     WINRT_ASSERT(non_owning);
-    
+
     // Avoid interlocks this way.
     owning = static_cast<abi::IStringable*>(winrt::detach_abi(uri));
     WINRT_ASSERT(!uri);

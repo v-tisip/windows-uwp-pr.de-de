@@ -11,12 +11,12 @@ ms.technology: uwp
 keywords: Windows10, UWP, Titelleiste
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 556234eb4047418b0798a432d917268fb3634996
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.openlocfilehash: d7c620d5e6a45d48442a2761285f8509db91961d
+ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691006"
+ms.lasthandoff: 05/09/2018
+ms.locfileid: "1863166"
 ---
 # <a name="title-bar-customization"></a>Anpassen der Titelleiste
 
@@ -68,10 +68,10 @@ titleBar.ButtonInactiveBackgroundColor = Windows.UI.Colors.SeaGreen;
 ```
 
 > [!NOTE]
-> Dieser Code kann in die [OnLaunched](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onlaunched)-Methode Ihre App eingefügt werden (_App.xaml.cs_), nach dem Aufruf von [Window.Activate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.Activate), oder auf der ersten Seite Ihrer App.
+> Dieser Code kann in die [OnLaunched](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onlaunched)-Methode Ihre App eingefügt werden (_App.xaml.cs_) – nach dem Aufruf von [Window.Activate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.Activate) oder auf der ersten Seite Ihrer App.
 
 > [!TIP]
-> Der UWP Community-Toolkit enthält Erweiterungen, mit denen Sie diese Farbeigenschaften in XAML festlegen können. Weitere Informationen finden Sie in der [UWP Community-Toolkit-Dokumentation](https://docs.microsoft.com/windows/uwpcommunitytoolkit/extensions/viewextensions).
+> Das Windows Community Toolkit enthält Erweiterungen, mit denen Sie diese Farbeigenschaften in XAML festlegen können. Weitere Informationen finden Sie in der [Windows Community Toolkit-Dokumentation](https://docs.microsoft.com/windows/uwpcommunitytoolkit/extensions/viewextensions).
 
 Es gibt einige Dinge, die beim Festlegen von Farben für Titelleisten beachtet werden müssen:
 

@@ -12,12 +12,12 @@ ms.prod: windows
 ms.technology: uwp
 ms.assetid: e7deb1d6-feeb-471e-9a83-26386d1aaf37
 ms.localizationpriority: medium
-ms.openlocfilehash: 61711098d07d830d4f6a1a6cdabed1a31217d2ea
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
+ms.openlocfilehash: a443dd7505ce399d82cbd33c5691ec9b35a18b93
+ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1396709"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "1983697"
 ---
 # <a name="surface-dial-interactions"></a>Surface Dial-Interaktionen
 
@@ -29,11 +29,11 @@ ms.locfileid: "1396709"
 Windows Wheel-Geräte wie das Surface Dial bilden eine neue Kategorie von Eingabegeräten, die eine Vielzahl attraktiver, innovativer Benutzerinteraktionen für Windows und Windows-Apps unterstützen. 
 
 > [!IMPORTANT]
-> In diesem Thema gehen wir speziell auf Interaktionen mit dem Surface Dial ein, die Informationen treffen jedoch auf alle Windows Wheel-Geräte zu.
+> In diesem Thema gehen wir speziell auf Interaktionen mit dem Surface Dial ein, die Informationen treffen jedoch auf alle Windows Wheel-Geräte zu. 
 
 | Videos |   |
 | --- | --- |
-| <iframe width="300" height="200" src="https://www.youtube.com/embed/WMklcdzcNcU" frameborder="0" allowfullscreen></iframe> | <iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Programming-the-Microsoft-Surface-Dial/player" width="300" height="200" allowFullScreen frameBorder="0"></iframe> |
+| <iframe src="https://www.youtube-nocookie.com/embed/WMklcdzcNcU" width="300" height="200" allowFullScreen="true" frameBorder="0"></iframe> | <iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Programming-the-Microsoft-Surface-Dial/player" width="300" height="200" allowFullScreen="true" frameBorder="0"></iframe> |
 | *App-Partner für Surface Dial* | *Surface Dial für Entwickler* |
 
 Der Formfaktor des Surface Dial entspricht einer *Dreh*-Aktion (oder -Geste). Das Surface Dial soll als sekundäres, multimodales Eingabegerät genutzt werden, das Eingaben über ein primäres Gerät ergänzt. In den meisten Fällen wird das Gerät von einem Benutzer mit der nicht dominanten Hand bedient, während er mit seiner dominanten Hand eine Aufgabe ausführt (z.B. Freihandzeichnen mit einem Stift). Es wurde nicht für präzise Zeigereingaben konzipiert (wie Touch-, Stift- oder Mauseingaben). 

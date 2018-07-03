@@ -10,16 +10,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 564f59dfd7b27e3ece1aa6811ac667cd438aae68
-ms.sourcegitcommit: 842ddba19fa3c028ea43e7922011515dbeb34e9c
+ms.openlocfilehash: c043b20cb00873bf115ff2d65306bc727d23a02a
+ms.sourcegitcommit: 4b6c197e1567d86e19af3ab5da516c022f1b6dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2018
-ms.locfileid: "1488964"
+ms.lasthandoff: 05/11/2018
+ms.locfileid: "1877222"
 ---
 # <a name="create-a-simple-universal-windows-platform-uwp-game-with-directx"></a>Erstellen eines einfachen Spiels für die Universelle Windows-Plattform (UWP) mit DirectX
 
-In diesen Tutorials lernen Sie, wie Sie ein einfaches Spiel für die universelle Windows-Plattform (UWP) mit DirectX und C++ erstellen. Wir befassen uns mit allen wichtigen Teilen eines Spiels. Hierzu zählen die Prozesse zum Laden von Ressourcen wie Grafiken und Gittern, das Erstellen einer Hauptschleife für das Spiel, das Implementieren einer einfachen Renderingpipeline sowie das Hinzufügen von Soundeffekten und Steuerelementen.
+In diesen Tutorials lernen Sie, wie Sie ein einfaches Spiel für die universelle Windows-Plattform (UWP) mit DirectX und C++ erstellen. Wir befassen uns mit allen wichtigen Teilen eines Spiels. Hierzu zählen die Prozesse zum Laden von Ressourcen wie Grafiken und Gittern, das Erstellen einer Hauptschleife für das Spiel, das Implementieren einer einfachen Rendering-Pipeline sowie das Hinzufügen von Soundeffekten und Steuerelementen.
 
 Wir machen Sie mit den Techniken und Überlegungen für die Entwicklung von UWP-Spielen vertraut. Sie bekommen von uns allerdings kein vollständiges Spiel geliefert. Stattdessen konzentrieren wir uns auf wichtige Konzepte für die Entwicklung von UWP-DirectX-Spielen und weisen auf Windows-Runtime-spezifische Aspekte im Zusammenhang mit diesen Konzepten hin.
 
@@ -55,10 +55,9 @@ Das Beispiel veranschaulicht folgende Spielkonzepte:
 
 ![Das Spielbeispiel in Aktion](images/simple-dx-game-overview.png)
 
-
 | Thema | Beschreibung |
-|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Einrichten des Spieleprojekts](tutorial--setting-up-the-games-infrastructure.md) | Im ersten Schritt für die Erstellung Ihres Spiels richten Sie ein Projekt in Microsoft Visual Studio so ein, dass Sie möglichst wenig Aufwand mit der Bearbeitung der Codeinfrastruktur haben. Sie können sich eine Menge Zeit und Arbeit ersparen, wenn Sie die richtige Vorlage verwenden und das Projekt speziell für die Spieleentwicklung konfigurieren. Im Anschluss finden Sie die erforderlichen Einrichtungs- und Konfigurationsschritte für ein einfaches Spieleprojekt. |
+|-------|-------------|
+|[Einrichten des Spieleprojekts](tutorial--setting-up-the-games-infrastructure.md) | Im ersten Schritt für die Erstellung Ihres Spiels richten Sie ein Projekt in Microsoft Visual Studio so ein, dass Sie möglichst wenig Aufwand mit der Bearbeitung der Codeinfrastruktur haben. Sie können sich eine Menge Zeit und Arbeit ersparen, wenn Sie die richtige Vorlage verwenden und das Projekt speziell für die Spieleentwicklung konfigurieren. Im Anschluss finden Sie die erforderlichen Einrichtungs- und Konfigurationsschritte für ein einfaches Spieleprojekt. |
 | [Definieren des UWP-App-Frameworks für das Spiel](tutorial--building-the-games-uwp-app-framework.md) | Erstellen Sie ein Framework, das die Interaktion eines UWP-DirectX-Spielobjekts mit Windows ermöglicht. Dazu gehören Windows-Runtime-Eigenschaften wie die Behandlung von Anhalte-/Fortsetzungsereignissen, Fensterfokus und Andocken.  |
 | [Spielablaufverwaltung](tutorial-game-flow-management.md) | Definieren Sie den übergeordneten Zustandsautomat, um Spieler- und System-Interaktion zu ermöglichen. Hier erfahren Sie, wie UI mit dem Zustandsautomaten für das gesamte Spiel interagiert und wie Sie Ereignishandler für UWP-Spiele erstellen. |
 | [Definieren des Hauptobjekts für das Spiel](tutorial--defining-the-main-game-loop.md) | Definieren Sie, wie das Spiel gespielt wird, indem Sie Regeln erstellen. |
@@ -68,12 +67,3 @@ Das Beispiel veranschaulicht folgende Spielkonzepte:
 | [Hinzufügen von Steuerelementen](tutorial--adding-controls.md) | Fügen Sie dem Spiel Bewegungs-/Blicksteuerungen hinzu &mdash; grundlegende Fingereingabe, Maus und Gamecontroller-Steuerelemente. |
 | [Hinzufügen von Sound](tutorial--adding-sound.md) | Enthält Informationen zum Erstellen von Sounds für das Spiel mit [XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813) APIs. |
 | [Erweitern des Spielbeispiels](tutorial-resources.md) | Ressourcen, um Ihre Kenntnisse der DirectX-Spieleentwicklung weiter zu vertiefen, einschließlich die Verwendung von XAML zum Erstellen von Überlagerungen. |
- 
-
- 
-
- 
-
-
-
-

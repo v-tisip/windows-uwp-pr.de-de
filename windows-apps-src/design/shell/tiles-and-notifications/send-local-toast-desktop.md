@@ -12,12 +12,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, win32, Desktop, Popupbenachrichtigungen, Popup senden, lokale Popupbenachrichtigungen senden, Desktop Bridge, C#, C-Sharp
 ms.localizationpriority: medium
-ms.openlocfilehash: e869ebb4fad7be55ef4f31c1c7e544ce8c290e4a
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: 44457221d7b108563e7df030125a909da6609cbe
+ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816665"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "1983456"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-apps"></a>Senden von Popupbenachrichtigungen über C#-Apps
 
@@ -100,8 +100,8 @@ Bei Verwendung der Desktop-Brücke (oder wenn Sie beide Modi unterstützen), fü
 
 1. Deklaration für **Xmlns:com**
 2. Deklaration für **xmlns:desktop**
-3. Im **IgnorableNamespaces**-Attribut **com** und **Desktop**
-4. **com:Extension** für den COM-Server mithilfe der GUID aus Schritt 4. Stellen Sie sicher, dass `Arguments="-ToastActivated"` hinzugefügt wurde, damit Sie wissen, dass der Start über ein Popup ausgeführt wurde
+3. Im **IgnorableNamespaces**-Attribut **com** und **desktop**
+4. **com:Extension** für den COM-Aktivator mithilfe der GUID aus Schritt 4. Stellen Sie sicher, dass `Arguments="-ToastActivated"` hinzugefügt wurde, damit Sie wissen, dass der Start über ein Popup ausgeführt wurde.
 5. **desktop:Extension** für **windows.toastNotificationActivation**, um den Popup-Aktivator CLSID zu deklarieren (der GUID aus Schritt #4).
 
 **Package.appxmanifest**
@@ -203,7 +203,7 @@ Das Senden einer Benachrichtigung ist für UWP-Apps identisch, außer dass Sie d
 Stellen Sie sicher, dass Sie den unten angezeigten **ToastContent** verwenden (oder die Vorlage „ToastGeneric”, wenn Sie XML selbst erstellen), da ältere Vorlagen der Windows8.1 Popupbenachrichtigungen nicht den COM-Benachrichtigungs-Aktivator aktivieren, den Sie in Schritt4 # erstellt haben.
 
 > [!IMPORTANT]
-> HTTP-Bilder werden nur in Desktop-Brücken-Apps unterstützt, die die Internetfunktion im Manifest haben. Klassische Win32-Apps unterstützen keine HTTP-Bilder. Sie müssen das Bild auf die lokale App-Daten herunterladen und lokal verweisen.
+> HTTP-Bilder werden nur in Desktop-Brücken-Apps unterstützt, die die Internetfunktion im Manifest haben. Klassische Win32-Apps unterstützen keine HTTP-Bilder. Sie müssen das Bild in die lokalen App-Daten herunterladen und lokal darauf verweisen.
 
 ```csharp
 // Construct the visuals of the toast (using Notifications library)
@@ -238,6 +238,9 @@ var toast = new ToastNotification(doc);
 DesktopNotificationManagerCompat.CreateToastNotifier().Show(toast);
 ```
 
+> [!IMPORTANT]
+> Klassische Win32-Apps können keine älteren Popupvorlagen (z.B. ToastText02) verwenden. Die Aktivierung älterer Vorlagen schlägt fehl, wenn die COM-CLSID angegeben wird. Wie oben erwähnt, müssen Sie die Windows10 ToastGeneric-Vorlagen verwenden.
+
 
 ## <a name="step-8-handling-activation"></a>Schritt 8: Behandeln der Aktivierung
 
@@ -260,7 +263,7 @@ public class MyNotificationActivator : NotificationActivator
         Application.Current.Dispatcher.Invoke(delegate
         {
             // Tapping on the top-level header launches with empty args
-            if (arguments.Length = 0)
+            if (arguments.Length == 0)
             {
                 // Perform a normal launch
                 OpenWindowIfNeeded();
@@ -406,4 +409,6 @@ Wenn Sie sowohl Ihre Desktop-Brücke und die klassische Win32-App installiert ha
 ## <a name="resources"></a>Ressourcen
 
 * [Vollständiges Codebeispiel auf GitHub](https://github.com/WindowsNotifications/desktop-toasts)
+* [Popupbenachrichtigungen über Desktop-Apps](toast-desktop-apps.md)
 * [Dokumentation zu Popupinhalt](adaptive-interactive-toasts.md)
+

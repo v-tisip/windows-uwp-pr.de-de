@@ -7,18 +7,18 @@ ms.date: 04/06/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows10, UWP
+keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3dd5e6f3dbddca2f6a944ee18e32463afe029f89
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: 505167775b61908be7f47068dbf3221c293f6112
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816775"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1843370"
 ---
 # <a name="typography"></a>Typografie
 
-![Headerbild für die Typografie](images/type/header-typography.svg)
+![Favoritenbild](images/header-typography.svg)
 
 Typografie muss übersichtlich sein, da sie zur visuellen Darstellung von Sprache dient, um Informationen zu kommunizieren. Ihr Stil darf diesem Ziel nie im Wege stehen. In diesem Artikel erläutern wir, wie Sie die Typografie in Ihre UWP-App formatieren, damit Benutzer Inhalte schnell und effizient verstehen.
 

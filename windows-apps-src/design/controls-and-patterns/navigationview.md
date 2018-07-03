@@ -16,12 +16,12 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 7fc365a7dbc69819ce88a22db2490b327412c8b4
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
+ms.openlocfilehash: c7817bf7ff60a52ea48c988bdebd6d4d2eeacdb7
+ms.sourcegitcommit: 618741673a26bd718962d4b8f859e632879f9d61
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1675367"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "1992149"
 ---
 # <a name="navigation-view"></a>Navigationsansicht
 
@@ -151,9 +151,9 @@ In der Standardeinstellung wählt das System je nach Größe des Bildschirmberei
 
 NavigationView ändert je nach verfügbarem Platz auf dem Bildschirm automatisch den Anzeigemodus.
 
-> [!NOTE] 
-NavigationView sollte als der Stammcontainer Ihrer App dienen, da dieses Steuerelement darauf ausgelegt ist, die volle Breite und Höhe des App-Fensters einzunehmen.
-Sie können die Breite der angezeigten Anzeigemodi in der Navigationsansicht mit den Eigenschaften [CompactModeThresholdWidth](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.CompactModeThresholdWidth) und [ExpandedModeThresholdWidth](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.ExpandedModeThresholdWidth) überschreiben. 
+> [!NOTE]
+> NavigationView sollte als der Stammcontainer Ihrer App dienen, da dieses Steuerelement darauf ausgelegt ist, die volle Breite und Höhe des App-Fensters einzunehmen.
+Sie können die Breite der angezeigten Anzeigemodi in der Navigationsansicht mit den Eigenschaften [CompactModeThresholdWidth](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.CompactModeThresholdWidth) und [ExpandedModeThresholdWidth](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.ExpandedModeThresholdWidth) überschreiben.
 
 Berücksichtigen Sie die folgenden Szenarien, die veranschaulichen, wann Sie das Anzeigemodusverhalten ggf. anpassen sollten.
 
@@ -448,13 +448,13 @@ Das Zeichnen in die Titelleiste hat den Nebeneffekt, dass der App-Titel ausgeble
 
 ```xaml
 <Grid>
-
-    <TextBlock x:Name="AppTitle" 
+    <TextBlock x:Name="AppTitle"
         xmlns:appmodel="using:Windows.ApplicationModel"
-        Text="{x:Bind appmodel:Package.Current.DisplayName}" 
-        Style="{StaticResource CaptionTextBlockStyle}" 
-        IsHitTestVisible="False" 
+        Text="{x:Bind appmodel:Package.Current.DisplayName}"
+        Style="{StaticResource CaptionTextBlockStyle}"
+        IsHitTestVisible="False"
         Canvas.ZIndex="1"/>
+    
 
     <NavigationView Canvas.ZIndex="0" ... />
 
@@ -464,6 +464,10 @@ Das Zeichnen in die Titelleiste hat den Nebeneffekt, dass der App-Titel ausgeble
 Je nach Sichtbarkeit der Schaltfläche „Zurück“ müssen Sie auch die AppTitle-Ränder anpassen. Und wenn sich die App im FullScreenMode befindet, müssen Sie den Abstand für die Zurück-Pfeil auch dann entfernen, wenn die TitleBar Platz für sie reserviert.
 
 ```csharp
+var coreTitleBar = CoreApplication.GetCurrentView().TitleBar;
+Window.Current.SetTitleBar(AppTitle);
+coreTitleBar.ExtendViewIntoTitleBar = true;
+
 void UpdateAppTitle()
 {
     var full = (ApplicationView.GetForCurrentView().IsFullScreenMode);

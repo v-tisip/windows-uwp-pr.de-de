@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, SQL Server, datenbank
 ms.localizationpriority: medium
-ms.openlocfilehash: 461e3578aad11dea0d9afcd7c93dfda9a246bb10
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: 31a173efbe30cffed85336a302ced504a4cad50d
+ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1662180"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "1983491"
 ---
 # <a name="use-a-sql-server-database-in-a-uwp-app"></a>Verwenden einer SQL Server-Datenbank in einer UWP-App
 Ihre App kann sich direkt mit einer SQL Server-Datenbank verbinden und dann Daten über Klassen im Namespace [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx) speichern und abrufen.
@@ -68,7 +68,7 @@ sealed partial class App : Application
     private string connectionString =
         @"Data Source=YourServerName\SQLEXPRESS;Initial Catalog=NORTHWIND;Integrated Security=SSPI";
 
-    public string ConnectionString { get => connectionString; set => connectionString = value;  
+    public string ConnectionString { get => connectionString; set => connectionString = value; }
 
     ...
 }
@@ -222,6 +222,16 @@ Starten Sie das Projekt und sehen Sie sich die Produkte aus der Northwind-Beispi
 ![Northwind-Produkte](images/products-northwind.png)
 
 Erkunden Sie den [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)-Namespace, um zu sehen, was Sie mit Daten in Ihrer SQL Server-Datenbank noch alles machen können.
+
+## <a name="trouble-connecting-to-your-database"></a>Probleme beim Herstellen einer Verbindung mit der Datenbank?
+
+In den meisten Fällen muss ein Aspekt der SQL Server-Konfiguration geändert werden. Wenn Sie mit einem anderen Typ von Desktopanwendung wie einer Windows Forms- oder WPF-Anwendung eine Verbindung mit der Datenbank herstellen können, stellen Sie sicher, dass Sie TCP/IP für SQL Server aktiviert haben. Dies können über die Konsole **Computerverwaltung** durchführen.
+
+![Computerverwaltung](images/computer-management.png)
+
+Stellen Sie dann sicher, dass Ihr SQL Server-Browser-Dienst ausgeführt wird.
+
+![SQL Server-Browser-Dienst](images/sql-browser-service.png)
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -13,12 +13,12 @@ design-contact: tbd
 dev-contact: tbd
 doc-status: not-published
 ms.localizationpriority: medium
-ms.openlocfilehash: 434229c7d66ccd4c1a16750750d592c5bc4a89e6
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
+ms.openlocfilehash: 9ed520c8ad71203a2f2f9888f775d7ca51d0089f
+ms.sourcegitcommit: dc3389ef2e2c94b324872a086877314d6f963358
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1673677"
+ms.lasthandoff: 05/11/2018
+ms.locfileid: "1874338"
 ---
 # <a name="contact-card"></a>Visitenkarte
 
@@ -70,7 +70,7 @@ Verwenden Sie die Visitenkarte, wenn Kontaktinformationen zu einem Kontakt angez
 1. Eine Visitenkarte wird in der Regel angezeigt, da der Benutzer auf ein Element geklickt hat: eine Schaltfläche oder vielleicht das [Personenbild-Steuerelement](person-picture.md). Wir möchten das Element nicht ausblenden. Um zu vermeiden, dass es ausgeblendet wird, müssen wir ein [Rect](/uwp/api/windows.foundation.rect) erstellen, das die Position und Größe des Elements beschreibt. 
 
     Wir erstellen eine Hilfsfunktion, die dies automatisch ausführt (diese wird später verwendet).
-    ``` C#
+    ```csharp
     // Gets the rectangle of the element 
     public static Rect GetElementRectHelper(FrameworkElement element) 
     { 
@@ -83,7 +83,7 @@ Verwenden Sie die Visitenkarte, wenn Kontaktinformationen zu einem Kontakt angez
     ```
 
 2. Ermitteln Sie, ob Sie die Visitenkarte anzeigen können, indem Sie die [ContactManager.IsShowContactCardSupported](/uwp/api/windows.applicationmodel.contacts.contactmanager.IsShowContactCardSupported)-Methode aufrufen. Wenn sie nicht unterstützt wird, wird eine Fehlermeldung angezeigt. (In diesem Beispiel wird davon ausgegangen, dass Sie die Visitenkarte als Reaktion auf ein Click-Ereignis anzeigen.)
-    ``` C#
+    ```csharp
     // Contact and Contact Managers are existing classes 
     private void OnUserClickShowContactCard(object sender, RoutedEventArgs e) 
     { 
@@ -94,13 +94,13 @@ Verwenden Sie die Visitenkarte, wenn Kontaktinformationen zu einem Kontakt angez
 
 3. Verwenden Sie die in Schritt1 erstellte Hilfsfunktion, um die Grenzen des Steuerelements abzurufen, von dem das Ereignis ausgelöst wurde (damit es nicht von der Visitenkarte verdeckt wird).
 
-    ``` C#
+    ```csharp
             Rect selectionRect = GetElementRect((FrameworkElement)sender); 
     ```
 
 4. Rufen Sie das [Kontakt](//docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact)-Objekt auf, das angezeigt werden soll. In diesem Beispiel wird lediglich ein einfacher Kontakt erstellt, Ihr Code sollte jedoch einen tatsächlichen Kontakt abrufen. 
 
-    ``` C#
+    ```csharp
                 // Retrieve the contact to display
                 var contact = new Contact(); 
                 var email = new ContactEmail(); 
@@ -109,7 +109,7 @@ Verwenden Sie die Visitenkarte, wenn Kontaktinformationen zu einem Kontakt angez
     ```
 5. Zeigen Sie die Visitenkarte durch Aufrufen der [ShowContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowFullContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_Foundation_Rect_)-Methode an. 
 
-    ``` C#
+    ```csharp
             ContactManager.ShowFullContactCard(
                 contact, selectionRect, Placement.Default); 
         } 
@@ -118,7 +118,7 @@ Verwenden Sie die Visitenkarte, wenn Kontaktinformationen zu einem Kontakt angez
 
 Hier sehen sie den vollständigen Beispielcode:
 
-``` C#
+```csharp
 // Gets the rectangle of the element 
 public static Rect GetElementRect(FrameworkElement element) 
 { 
@@ -152,7 +152,7 @@ private void OnUserClickShowContactCard(object sender, RoutedEventArgs e)
 
 Rufen Sie zum Anzeigen der vollständigen Visitenkarte die [ShowFullContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_ApplicationModel_Contacts_FullContactCardOptions_)-Methode anstelle der [ShowContactCard ](/uwp/api/windows.applicationmodel.contacts.contactmanager#Windows_ApplicationModel_Contacts_ContactManager_ShowFullContactCard_Windows_ApplicationModel_Contacts_Contact_Windows_Foundation_Rect_)-Methode auf.
 
-``` C#
+```csharp
 private void onUserClickShowContactCard() 
 { 
    

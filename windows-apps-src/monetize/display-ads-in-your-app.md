@@ -4,18 +4,18 @@ ms.assetid: 63A9EDCF-A418-476C-8677-D8770B45D1D7
 description: Mit dem Microsoft Advertising-SDK haben Sie mehrere Möglichkeiten zur Monetarisierung Ihrer App mit Anzeigen.
 title: Zeigt Werbung mithilfe der Microsoft Advertising-SDK in Ihrer App an
 ms.author: mcleans
-ms.date: 04/16/2018
+ms.date: 05/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Anzeigen, Werbung, banner, Anzeigensteuerelement,Interstitial
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b5e8181dbf9cc661600a0ad15f5eb713621c5b3
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: 601f3fe67d6ed44403c65427af75042456bdfddb
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816085"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1843020"
 ---
 # <a name="display-ads-in-your-app-with-the-microsoft-advertising-sdk"></a>Zeigt Werbung mithilfe der Microsoft Advertising-SDK in Ihrer App an
 
@@ -96,7 +96,7 @@ Anweisungen und Codebeispiele finden Sie in [diesem Artikel](native-ads.md).
 
 Nachdem Sie Ihre App getestet haben und Sie sie an den Store übermitteln können, erstellen Sie eine Anzeigeneinheit auf der Seite [In-App-Anzeigen](../publish/in-app-ads.md) Seite im Windows Dev Center-Dashboard. Aktualisieren Sie anschließend Ihren App-Code, um diese Anzeigeneinheit zu verwenden, damit Ihre App Live-Anzeigen empfängt. Weitere Informationen finden Sie unter [Einrichten von Anzeigeneinheiten in der App](set-up-ad-units-in-your-app.md#live-ad-units).
 
-Standardmäßig zeigt Ihre App Werbung der Microsoft Netzwerke für kostenpflichtige Werbeanzeigen an. Um Ihren Anzeigenumsatz zu maximieren, können Sie für Ihre Anzeigeneinheit die Anzeigenvermittlung aktivieren, um kostenpflichtige Anzeigen von weiteren Anzeigennetzwerken anzuzeigen (z. B. Taboola und Smaato). Sie können Ihrer App-Werbung auch steigern, indem Sie Anzeigen aus Microsoft App-Werbekampagnen darstellen.
+Standardmäßig zeigt Ihre App Werbung der Microsoft Netzwerke für kostenpflichtige Werbeanzeigen an. Zur Maximierung Ihres Anzeigenumsatzes können Sie für Ihre Anzeigeneinheit die [Anzeigenvermittlung](ad-mediation-service.md) aktivieren, um kostenpflichtige Anzeigen von weiteren Anzeigennetzwerken anzuzeigen (z. B. Taboola und Smaato). Sie können Ihrer App-Werbung auch steigern, indem Sie Anzeigen aus Microsoft App-Werbekampagnen darstellen.
 
 Zum Starten der Anzeigenvermittlung in Ihrer UWP-App [Konfigurieren Sie die Anzeigenvermittlungseinstellungen](../publish/in-app-ads.md#mediation-settings) für Ihre Anzeigeneinheit. Standardmäßig werden die Einstellungen für die Anzeigenvermittlung automatisch mithilfe von Machine Learning-Algorithmen konfiguriert, die ihnen bei der Optimierung der Anzeigenumsätze in den verschiedenen Märkten helfen, die Ihre App unterstützt. Sie haben jedoch auch die Möglichkeit, die gewünschten Netzwerke manuell auszuwählen. In beiden Fällen werden die Einstellungen für die Anzeigenvermittlung vollständig auf unseren Servern konfiguriert; Sie müssen keine Codes in Ihrer App ändern.    
 

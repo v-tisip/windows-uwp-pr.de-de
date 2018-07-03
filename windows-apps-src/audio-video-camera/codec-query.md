@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, Uwp, Codecs, Encoder, Decoder, Abfrage
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e6a44bda55fc6c01e75940d9d4446160e708627
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1692471"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1842347"
 ---
 # <a name="query-for-codecs-installed-on-a-device"></a>Abfrage installierter Codecs auf einem Gerät
 Mit der **[CodecQuery](https://docs.microsoft.com/uwp/api/windows.media.core.codecquery)**-Klasse können Sie auf dem aktuellen Gerät installierte Codecs abfragen. Die Liste der Codecs, die in Windows10 für andere Gerätefamilien enthalten sind, finden Sie im Artikel [Unterstützte Codecs](supported-codecs.md). Da aber Benutzer und Apps zusätzliche Codecs auf einem Gerät installieren können, sollten Sie zur Laufzeit die Codec-Unterstützung abfragen, um festzustellen, welche Codecs auf dem aktuellen Gerät verfügbar sind.

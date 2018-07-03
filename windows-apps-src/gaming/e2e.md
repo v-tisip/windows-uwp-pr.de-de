@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, Uwp, Spiele, Entwickeln von Spielen
 ms.localizationpriority: medium
-ms.openlocfilehash: de899d95e25489fa815f099d696752389cc3f94e
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: b351b5072c6bba228d81a65b51656a81bd564daf
+ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817451"
+ms.lasthandoff: 05/09/2018
+ms.locfileid: "1862259"
 ---
 # <a name="windows-10-game-development-guide"></a>Handbuch zur Entwicklung von Spielen unter Windows10
 
@@ -93,12 +93,12 @@ In diesem Handbuch finden Sie immer wieder direkte Links zu relevanten Dokumenta
         <td><a href="../xbox-live/index.md">Xbox Live – Entwicklerhandbuch</a></td>
     </tr>
     <tr>
-        <td>Xbox One-Entwicklerdokumentation (GDN)</td>
-        <td><a href="https://developer.xboxlive.com/en-us/platform/development/documentation/Pages/home.aspx">XboxOneXDK-Dokumentation</a></td>
+        <td>Xbox One – Entwicklerdokumentation (XGD)</td>
+        <td><a href="https://developer.microsoft.com/games/xbox/partner/development-home">Xbox One – Entwicklung</a></td>
     </tr>
     <tr>
-        <td>XboxOne-Whitepapers für Entwickler (GDN)</td>
-        <td><a href="https://developer.xboxlive.com/en-us/platform/development/education/Pages/WhitePapers.aspx">Whitepapers</a></td>
+        <td>Xbox One – Whitepapers für Entwickler (XGD)</td>
+        <td><a href="https://developer.microsoft.com/games/xbox/partner/development-education-whitepapers">Whitepapers</a></td>
     </tr>
     <tr>
         <td>Interaktive Mixer-Dokumentation</td>
@@ -224,11 +224,11 @@ Für Windows 10-Spiele und -Apps stehen zahlreiche Beispiele zur Verfügung, die
     </tr>
     <tr>
         <td>Xbox Live-Beispiele</td>
-        <td><a href="https://github.com/Microsoft/xbox-live-samples">xbox-live-Beispiele</a></td>
+        <td><a href="https://github.com/Microsoft/xbox-live-samples">xbox-live-samples</a></td>
     </tr>
     <tr>
-        <td>Beispiele für XboxOne-Spiele (GDN)</td>
-        <td><a href="https://developer.xboxlive.com/en-us/platform/development/education/Pages/Samples.aspx">Beispiele</a></td>
+        <td>Beispiele für XboxOne-Spiele (XGD)</td>
+        <td><a href="https://developer.microsoft.com/games/xbox/partner/development-education-samples">Beispiele</a></td>
     </tr>
     <tr>
         <td>Beispiele für Windows-Spiele (MSDN Code Gallery)</td>
@@ -1512,7 +1512,7 @@ Erstellen Sie Spieleinhalt, der die vollständigen Farbfunktionen von HDR verwen
 
 ### <a name="globalization-and-localization"></a>Globalisierung und Lokalisierung
 
-Entwickeln Sie Windows-Spiele für den weltweiten Markt, und erfahren Sie mehr über die internationalen Features, die in die fühRendern Produkte von Microsoft integriert sind.
+Entwickeln Sie Windows-Spiele für den weltweiten Markt, und erfahren Sie mehr über die internationalen Features, die in die führenden Produkte von Microsoft integriert sind.
 
 <table>
     <colgroup>

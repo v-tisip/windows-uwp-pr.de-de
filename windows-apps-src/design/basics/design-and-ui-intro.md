@@ -1,168 +1,166 @@
 ---
 author: serenaz
 Description: An overview of the universal design features that are included in every UWP app to help you build apps that scale beautifully across a range of devices.
-title: Einführung in das UWP-App-Design (Universelle Windows-Plattform) (Windows-Apps)
+title: Einführung in das App-Design (Windows-Apps) für die Universelle Windows-Plattform (UWP)
 ms.assetid: 50A5605E-3A91-41DB-800A-9180717C1E86
 ms.author: sezhen
-ms.date: 12/13/2017
+ms.date: 05/05/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d0527866777c7b5dbbc10697bb313d664f4555fa
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: e6f5d17a9fbdc044c3e1c0fcd152e6bafe2705a7
+ms.sourcegitcommit: 4b6c197e1567d86e19af3ab5da516c022f1b6dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817278"
+ms.lasthandoff: 05/11/2018
+ms.locfileid: "1877272"
 ---
-#  <a name="introduction-to-uwp-app-design"></a>Einführung in das UWP-App-Design
+# <a name="introduction-to-uwp-app-design"></a>Einführung in das UWP-App-Design
 
-Der universelle Windows-Plattform (UWP)-Designleitfaden ist eine Ressource, um ansprechende, optimierte Apps zu entwerfen und erstellen.
+![Beispiel für eine Beleuchtungs-App](images/introUWP-header.jpg)
+
+Der Designleitfaden für die Universelle Windows-Plattform (UWP) ist eine Ressource, um ansprechende, optimierte Apps zu entwerfen und erstellen.
 
 Es ist keine Liste von Vorschriften, sondern ein lebendiges Dokument, das entwickelt wurde, um sich entsprechend unseres [Fluent Design-Systems](../fluent-design-system/index.md) sowie der Bedürfnisse unserer App-Entwicklungs-Community zu entwickeln.
 
 Diese Einführung bietet einen Überblick über die universellen Designfunktionen, die in jeder UWP-Apps enthalten sind. Es hilft Ihnen, Benutzeroberflächen (UIs) zu erstellen, die sich über eine Vielzahl von Geräten wunderbar skalieren lassen.
 
-## <a name="video-summary"></a>Video-Zusammenfassung
-
-> [!VIDEO https://channel9.msdn.com/Blogs/One-Dev-Minute/Designing-Universal-Windows-Platform-apps/player]
-
 ## <a name="effective-pixels-and-scaling"></a>Effektive Pixel und Skalierung
 
-UWP-Apps passen automatisch die Größe von Steuerelementen, Schriftarten und anderer UI-Elemente an, damit sie auf [allen Geräten mit UWP-App-Unterstützung](../devices/index.md) lesbar sind und die Interaktion erleichtern.
+UWP-Apps funktionieren auf allen [Windows 10-Geräten](../devices/index.md), seien es TV-Geräte, Tablets oder PCs. Was bedeutet das für die Benutzeroberfläche Ihrer App?
+
+![Dieselbe App auf verschiedenen Geräten](images/universal-image-1.jpg)
+
+UWP-Apps passen die Größe der UI-Elemente automatisch so an, dass sie auf allen Geräten und Bildschirmgrößen lesbar und leicht zu handhaben sind!
 
 Wenn Ihre App auf einem Gerät ausgeführt wird, verwendet das System einen Algorithmus, um die Art der Anzeige der UI-Elemente auf dem Bildschirm zu normalisieren. Dieser Skalierungsalgorithmus berücksichtigt den Abstand zum Bildschirm und die Bildschirmdichte (Pixel pro Zoll), um die wahrgenommene Größe (anstelle der physischen Größe) zu optimieren. Mit dem Skalierungsalgorithmus wird sichergestellt, dass der Schriftgrad 24 Pixel auf einem 3 Meter entfernten Surface Hub genauso für den Benutzer lesbar ist wie der Schriftgrad 24 Pixel auf einem 5-Zoll-Smartphone, das nur einige Zentimeter entfernt ist.
 
-![Sichtabstände für verschiedene Geräte](images/1910808-hig-uap-toolkit-03.png)
+![Sichtabstände für verschiedene Geräte](images/scaling-chart.png)
 
 Aufgrund der Funktionsweise des Skalierungssystems beim Entwerfen Ihrer UWP-App, verwenden Sie effektive Pixeln, und nicht die tatsächlichen physischen Pixel. Effektive Pixel (epx) sind eine virtuelle Maßeinheit und werden verwendet, um Layoutabmessungen und -abstände unabhängig von der Pixeldichte auszudrücken. (In unseren Richtlinien werden epx, ep und px austauschbar verwendet.)
 
 Sie können die Pixeldichte und die tatsächliche Bildschirmauflösung beim Entwerfen ignorieren. Entwerfen Sie stattdessen für die effektive Auflösung (die Auflösung in effektiven Pixeln) für eine Größenklasse (Details finden Sie im Artikel [Bildschirmgrößen und Haltepunkte](../layout/screen-sizes-and-breakpoints-for-responsive-design.md)).
 
 > [!TIP]
-> Legen Sie beim Erstellen von Bildschirmmodellen in Bildbearbeitungsprogrammen die DPI auf 72 und die Bildgröße auf effektive Auflösung für die Zielgrößenklasse fest. Eine Liste der Größenklassen und effektiven Auflösungen finden Sie unter dem [Artikel Bildschirmgrößen und Breakpoints](../layout/screen-sizes-and-breakpoints-for-responsive-design.md).
+> Legen Sie beim Erstellen von Bildschirmmodellen in Bildbearbeitungsprogrammen die DPI auf 72 und die Bildgröße auf effektive Auflösung für die Zielgrößenklasse fest. Eine Liste der Größenklassen und effektiven Auflösungen finden Sie in dem Artikel [Bildschirmgrößen und Breakpoints](../layout/screen-sizes-and-breakpoints-for-responsive-design.md).
 
+### <a name="multiples-of-four"></a>Vielfache von vier
+
+:::row::: :::column span::: Wenn das System die Benutzeroberfläche skaliert, erfolgt dies durch Vielfache von 4.
+
+        As a result, the sizes, margins, and positions of **UI elements should always be in multiples of 4 epx**. This results in the best rendering by aligning with whole pixels. It also ensures that UI elements have crisp, sharp edges. (Note that text doesn't have this requirement; text can have any size and position.)
+    :::column-end:::
+    :::column:::
+        ![grid](images/4epx.svg)
+    :::column-end:::
+:::row-end:::
 
 ## <a name="layout"></a>Layout
 
-### <a name="margins-spacing-and-positioning"></a>Ränder, Abstände und Positionierung 
-![Raster](images/4epx.png)
+Da UWP-Apps automatisch für alle Geräte skaliert werden, folgt das Entwerfen einer UWP-App für jedes Gerät derselben Struktur. Beginnen wir mit den Grundlagen der Benutzeroberfläche einer UWP-App.
 
-Wenn das System die Benutzeroberfläche skaliert, erfolgt dies durch die Multiplikation mit vier.
+### <a name="windows-frames-and-pages"></a>Fenster, Rahmen und Seiten
 
-Daher sollten die Größen, Ränder und Positionen der **UI-Elemente immer ein Vielfaches von 4 epx betragen**. Das Ergebnis ist ein optimales Rendering durch Ausrichtung auf ganze Pixel. Es sorgt auch dafür, dass UI-Elemente scharfe und deutliche Kanten haben. 
+::: Zeile:::::: Spalte::: Wenn eine UWP-App auf einem Windows10-Gerät gestartet wird, startet sie in einem [Window](/uwp/api/Windows.UI.Xaml.Controls.Window) mit einem [Frame](/uwp/api/Windows.UI.Xaml.Controls.Frame), der zwischen [Page](/uwp/api/Windows.UI.Xaml.Controls.Page)-Instanzen navigieren kann.
+:::column-end::: :::column::: ![Frame](images/frame.svg) :::column-end::: :::row-end:::
 
-Beachten Sie, dass Text diese Anforderung nicht hat. Der Text kann eine beliebige Größe und Position haben. Hinweise zum Ausrichten von Text an anderen UI-Elementen finden Sie im [UWP-Typografieleitfaden](../style/typography.md).
+::: Zeile:::::: Spalte::: Sie können die UI Ihrer App als eine Sammlung von Seiten ansehen. Es liegt an Ihnen, was auf jeder Seite angezeigt wird und welche Beziehungen zwischen den Seiten bestehen sollen.
 
-![Skalierung auf dem Raster](images/epx-4pixelgood.png)
+        To learn how you can organize your pages, see [Navigation basics](navigation-basics.md).
+    :::column-end:::
+    :::column:::
+        ![Frame](images/collection-pages.svg)
+    :::column-end:::
+:::row-end:::
 
-### <a name="layout-patterns"></a>Layoutmuster
+### <a name="page-layout"></a>Seitenlayout
 
-![Ein gemeinsames Layoutmuster](images/page-components.png)
+Wie sollten diese Seiten aussehen? Meistens besitzen die Seiten eine gemeinsame Struktur, um Konsistenz bereitzustellen, sodass Benutzer problemlos zwischen und auf App-Seiten navigieren können. Seiten enthalten in der Regel drei Arten von UI-Elementen:
 
-Die Benutzeroberfläche besteht aus drei Arten von Elementen: 
-1. Mithilfe von **Navigationselementen** können Benutzer die Inhalte auswählen, die sie anzeigen möchten. Weitere Infos unter [Navigationsgrundlagen](navigation-basics.md).
-2. **Befehlselemente** initiieren Aktionen wie etwa das Bearbeiten, Speichern oder Freigeben von Inhalten. Weitere Infos unter [Befehlsgrundlagen](commanding-basics.md).
-3. Die **Inhaltselemente** zeigen die Inhalte der App an. Weitere Infos unter [Inhaltsgrundlagen](content-basics.md).
+- [Navigationselemente](navigation-basics.md) ermöglichen dem Benutzer, die Inhalte auszuwählen, die er anzeigen möchten.
+- [Befehlselemente](commanding-basics.md) initiieren Aktionen wie etwa das Bearbeiten, Speichern oder Freigeben von Inhalten.
+- [Inhaltselemente](content-basics.md) zeigen die Inhalte der App an.
 
-### <a name="adaptive-behavior"></a>Adaptives Verhalten
-![Adaptives Verhalten für Smartphones und Desktops](../controls-and-patterns/images/patterns_masterdetail.png)
+![Ein allgemeines Layoutmuster](../layout/images/page-components.svg)
 
-Zwar ist die Benutzeroberfläche Ihrer App auf allen Windows-basierten Geräten lesbar und verwendbar, doch Sie sollten sie für bestimmte Geräte und Bildschirmgrößen anpassen. Weitere Informationen finden Sie unter [Bildschirmgrößen und Breakpoints](../layout/screen-sizes-and-breakpoints-for-responsive-design.md) und [Reaktionsfähige Designtechniken](../layout/responsive-design.md).
+Weitere Informationen zum Implementieren allgemeiner UWP-App Muster finden Sie im [Seitenlayout](../layout/page-layout.md).
 
-## <a name="type"></a>Schriftart
-
-Standardmäßig verwenden UWP-Anwendungen die **Segoe UI**-Schriftart. Die UWP-Typhierarchie umfassen sieben Typografie-Klassen, die den effizientesten Ansatz für alle Displaygrößen anstreben. 
-
-![Typhierarchie](images/type-ramp.png)
-
-Einzelheiten zur Typhierarchie finden Sie im [UWP-Typografieleitfaden](../style/typography.md). Um zu erfahren, wie Sie die verschiedenen Ebenen der UWP-Typhierarchie in Ihrer App verwenden können, lesen Sie die den Abschnitt [Designressourcen](../controls-and-patterns/xaml-theme-resources.md#the-xaml-type-ramp).
-
-## <a name="color"></a>Farben
-
-Farben bietet eine intuitive Möglichkeit, Informationen an die Benutzer zu kommunizieren. Sie können verwendet werden, um Interaktivität zu signalisieren, Feedback zu Benutzeraktionen zu geben, Zustandsinformationen zu übermitteln und Ihrer Benutzeroberfläche ein Gefühl der visuellen Kontinuität zu geben. 
-
-Windows 10 bietet eine gemeinsame, universelle Farbpalette von 48 Farben, die auf die Shell und UWP-Apps angewendet wird. 
-
-![Universelle Windows-Farbpalette](images/colors.png)
-
-Das System wendet automatisch Farben auf Ihre UWP-Apps mit der Systemakzentfarbe an. Wenn Benutzer eine Akzentfarbe aus der Farbpalette in ihren Einstellungen auswählen, wird die Farbe als Teil ihres Systemdesigns angezeigt. Abhängig von den Benutzereinstellungen kann die Systemakzentfarbe auch auf das Startmenü, Kacheln, Taskleiste und Titelleisten angewendet werden. 
-
-![Akzentfarbe in den Einstellungen wählen](images/selectcolor.png)
-
-Innerhalb Ihrer UWP-App spiegeln Hyperlinks und ausgewählte Zustände innerhalb gemeinsamer Steuerelemente die Akzentfarbe des Systems wider.
-
-![Systemakzentfarbe auf den Steuerelementen](images/accentcolor.png)
-
-UWP-Apps können die Systemakzentfarbe bei der Anzeige in Steuerelementen überschreiben, indem sie eine [einfache Formatierung](../controls-and-patterns/xaml-styles.md#lightweight-styling) verwenden oder [benutzerdefinierte Steuerelemente](../controls-and-patterns/control-templates.md) erstellen.
-
-Weitere Informationen zur Verwendung von Farben in Ihrer UWP-App finden Sie im Artikel [Farbe](../style/color.md).
-
-### <a name="themes"></a>Designs
-
-Der Benutzer kann zwischen einem hellen, dunklen oder kontrastreichen Design wählen. Sie können das Aussehen Ihrer App je nach Design des Benutzers ändern oder dieses ignorieren.
-
-Das helle Design eignet sich am besten für Produktivitätsaufgaben und das Lesen.
-
-Das dunkle Design ermöglicht mehr sichtbare Kontraste in medienzentrierten Anwendungen und Szenarien, die eine Fülle von Videos oder Bildern enthalten. In diesen Szenarien ist die Hauptaufgabe eher das Beobachten von Filmen als das Lesen bei schlechten Lichtverhältnissen.
-
-![Rechner im hellen und dunklen Design](images/light-dark.png)
-
-Designs mit hohem Kontrast verwenden eine kleine Palette von Farbkombinationen mit hohem Farbkontrast, durch die die Benutzeroberfläche leichter zu erkennen ist.
-![Rechner im hellen Design und im Design „Hoher Kontrast (Schwarz)”](../accessibility/images/high-contrast-calculators.png)
-
-
-Weitere Informationen zur Verwendung von Design und der UWP-Farbhistorie in Ihrer App finden Sie unter [Design-Ressourcen](../controls-and-patterns/xaml-theme-resources.md).
-
-## <a name="icons"></a>Symbole
-![Symbole](images/icons.png)
-
-Symbole sind eine Art Bildsprache, die sich in unseren Alltag eingeprägt hat. Sie lassen uns Konzepte und Handlungen visuell überzeugend ausdrücken, sparen Platz auf dem Bildschirm und dienen der Navigation in unserem digitalen Leben. 
-
-Alle UWP-App haben Zugriff auf die Symbole der Schriftart [Segoe MDL2](../style/segoe-ui-symbol-font.md). Diese Symbole beruhen auf etablierten Formen, die jedem bekannt und leicht zu identifizieren sind, aber sie wurden auch modernisiert, damit sie sich anfühlen, als wären sie von einer Hand gezeichnet worden.
-
-Wenn Sie Ihre eigenen Symbole erstellen möchten, finden Sie weitere Infos unter [Symbole für UWP-Apps](../style/icons.md).
-
-## <a name="tiles"></a>Kacheln
-![Kacheln im Startmenü](images/tiles.png)
-
-Kacheln werden im Startmenü angezeigt und geben einen Einblick in das Geschehen in Ihrer App. Ihr Mehrwert basiert auf dem zugrunde liegenden Inhalt und ihrem Design. 
-
-UWP-App haben vier Kachelgrößen (klein, mittel, breit und groß), die mit dem Symbol und der Identität der App angepasst werden können. Hinweise zur Gestaltung von Kacheln für Ihre UWP-Apps finden Sie unter [Richtlinien für Kachel- und Symbolelemente](../shell/tiles-and-notifications/app-assets.md).
+Sie können auch das [Windows Template Studio](https://github.com/Microsoft/WindowsTemplateStudio/tree/master) in Visual Studio verwenden, um mit einem Layout für Ihre App zu beginnen.
 
 ## <a name="controls"></a>Steuerelemente
-![Schaltflächen-Steuerelement](images/1910808-hig-uap-toolkit-01.png)
 
-UWP bietet einen Satz von universellen Steuerelementen, die garantiert gut auf allen Windows-Geräten funktionieren. Diese Steuerelemente reichen von einfachen Steuerelementen wie Schaltflächen und Textelementen bis hin zu ausgeklügelten Steuerelementen, die Listen aus einem Datensatz und einer Vorlage erzeugen können.
+Die UWP-Designplattform bietet eine Reihe von allgemeinen Steuerelementen, die auf allen Windows-Geräten funktionieren und den Prinzipien für unser [Fluent Design-System](../fluent-design-system/index.md) entsprechen. Diese Steuerelemente reichen von einfachen Steuerelementen wie Schaltflächen und Textelementen bis hin zu ausgeklügelten Steuerelementen, die Listen aus einem Datensatz und einer Vorlage erzeugen können.
 
-UWP-Steuerelemente wählen automatisch das Systemdesign und die Akzentfarbe aus, arbeiten mit allen Eingabetypen und skalieren auf allen Geräten. Und sie sind außerdem sehr anpassbar. Sie können die Vordergrundfarbe eines Steuerelements ändern oder sein Aussehen komplett anpassen. 
+![UWP-Steuerelemente](../style/images/color/windows-controls.svg)
 
 Eine vollständige Liste der UWP-Steuerelemente und der -Muster, die Sie aus ihnen erstellen können, finden Sie im Abschnitt [Steuerelemente und Muster](../controls-and-patterns/index.md).
 
-## <a name="input"></a>Eingabe
-![Eingabe](../input/images/input-interactions/icons-inputdevices03.png)
+## <a name="style"></a>Stil
 
-UWP-Apps basieren auf intelligenten Interaktionen. Dies bedeutet, dass Sie um eine Klick-Interaktion herum entwerfen können, ohne zu wissen oder festzulegen, ob der Klick von einem echten Mausklick oder einem Fingertipp stammt. Sie können Ihre Apps aber auch für bestimmte [Eingabemodi und Geräte gestalten](../input/input-primer.md).
+Die allgemeinen Steuerelemente übernehmen automatisch das Systemdesign und die Akzentfarbe, arbeiten mit allen Eingabetypen und skalieren auf allen Geräten. Auf diese Weise spiegeln sie das Fluent Design System wider – sie sind anpassungsfähig, einfühlsam und schön. Allgemeine Steuerelemente verwenden Licht, Bewegung und Tiefe in ihren Standarddesigns. Durch die Verwendung dieser Steuerelemente integrieren Sie also unser Fluent Design-System in Ihre App.
 
-## <a name="accessibility"></a>Bedienungshilfen
-![Benutzer des inklusiven Designs](images/inclusive.png)
+Allgemeine Steuerelemente sind zudem sehr anpassbar. Sie können die Vordergrundfarbe eines Steuerelements ändern oder sein Aussehen komplett anpassen. Um die standardmäßigen Stile in Steuerelementen zu überschreiben, verwenden Sie [einfache Formatierung](../controls-and-patterns/xaml-styles.md#lightweight-styling) oder erstellen [benutzerdefinierte Steuerelemente](../controls-and-patterns/control-templates.md) in XAML.
 
-Letztendlich geht es bei der Barrierefreiheit darum, das Erlebnis Ihrer App allen Nutzern zugänglich zu machen. Es ist für alle relevant, nicht nur für Menschen mit Einschränkungen. Jeder kann von einer wirklich umfassenden Benutzererfahrung profitieren. In [Benutzerfreundlichkeit von UWP-Apps](../usability/index.md) erfahren Sie, wie Sie Ihre App für jedermann benutzerfreundlich gestalten können. Vielleicht möchten Sie auch [Barrierefreiheitsfunktionen](../accessibility/accessibility-overview.md) für Benutzer mit eingeschränkter Seh-, Hör- und Bewegungsfreiheit in Betracht ziehen. 
+![Akzentfarben-Gif](images/intro-style.gif)
 
-Wenn die Barrierefreiheit von Anfang an in Ihr Design integriert ist, sollte die [Umsetzung der Barrierefeiheit](../accessibility/accessibility-in-the-store.md) Ihrer App nur sehr wenig Zeit und Mühe in Anspruch nehmen.
+## <a name="shell"></a>Shell
+
+:::row::: :::column::: UWP-Apps interagieren mit der allgemeinen Windows-Umgebung mit Kacheln und Benachrichtigungen in der [Windows-Shell](../shell/tiles-and-notifications/creating-tiles.md).
+
+        Tiles are displayed in the Start menu and when your app launches, and they provide a glimpse of what's going on in your app. Their power comes from the content behind them, and the intelligence and craft with which they're offered up.
+
+        UWP apps have four tile sizes (small, medium, wide, and large) that can be customized with the app's icon and identity. For guidance on designing tiles for your UWP app, see [Guidelines for tile and icon assets](../shell/tiles-and-notifications/app-assets.md).
+    :::column-end:::
+    :::column:::
+        ![tiles on start menu](images/shell.svg)
+    :::column-end:::
+:::row-end:::
+
+## <a name="inputs"></a>Eingabemöglichkeiten
+
+:::row::: :::column::: UWP-Apps basieren auf intelligenten Interaktionen. Sie können um eine Klick-Interaktion herum entwerfen, ohne zu wissen oder zu definieren, ob der Klick von einer Maus, einem Stift oder einem Fingertipp stammt. Sie können Ihre Apps aber auch für bestimmte [Eingabemodi](../input/input-primer.md) gestalten.
+:::column-end::: :::column::: ![Eingaben](images/inputs.svg) :::column-end::: :::row-end:::
+
+## <a name="devices"></a>Geräte
+
+![Geräte](../layout/images/size-classes.svg)
+
+Obwohl UWP Ihre App automatisch auf verschiedene Geräte skaliert, können Sie Ihre [UWP-App trotzdem für bestimmte Geräte optimieren](../devices/index.md).
+
+## <a name="usability"></a>Benutzerfreundlichkeit
+
+<img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REYaAb?ver=727c">
+
+Bei der Benutzerfreundlichkeit geht es darum, die App für alle Benutzer zugänglich zu machen. Jeder kann von einer wirklich umfassenden Benutzererfahrung profitieren. In [Benutzerfreundlichkeit von UWP-Apps](../usability/index.md) erfahren Sie, wie Sie Ihre App für jedermann benutzerfreundlich gestalten können.
+
+Wenn Sie für ein internationales Publikum entwerfen, sollten Sie sich mit [Globalisierung und Lokalisierung](../globalizing/globalizing-portal.md) vertraut machen.
+
+Und Sie sollten [Features für Bedienungshilfen](../accessibility/accessibility-overview.md) für Benutzer mit eingeschränkter Seh-, Hör- und Bewegungsfreiheit in Betracht ziehen. Wenn die Barrierefreiheit von Anfang an in Ihr Design integriert ist, sollte die [Umsetzung der Barrierefeiheit](../accessibility/accessibility-in-the-store.md) Ihrer App nur sehr wenig Zeit und Mühe in Anspruch nehmen.
 
 ## <a name="tools-and-design-toolkits"></a>Tools und Design-Toolkits
+
 Da Sie nun über die grundlegenden Designfunktionen Bescheid wissen, sollten Sie die ersten Schritte beim Design Ihrer UWP-App unternehmen.
 
 Wir bieten eine Vielzahl von Werkzeugen zur Unterstützung Ihres Designprozesses:
 
-* Weitere Informationen für XD, Illustrator, Photoshop, Framer und Sketch-Toolkits sowie zusätzliche Entwicklungstools und Downloads für Schriftarten finden Sie auf der [Design-Toolkits-Seite](../downloads/index.md). 
+- Weitere Informationen für XD, Illustrator, Photoshop, Framer und Sketch-Toolkits sowie zusätzliche Entwicklungstools und Downloads für Schriftarten finden Sie auf der [Design-Toolkits-Seite](../downloads/index.md).
 
-* Um Ihren Computer so einzurichten, dass er das Codieren von UWP-Apps ermöglicht, lesen Sie den Artikel [Erste Schritte &gt;Vorbereiten](../../get-started/get-set-up.md). 
+- Um Ihren Computer so einzurichten, dass er das Codieren von UWP-Apps ermöglicht, lesen Sie den Artikel [Erste Schritte &gt;Vorbereiten](../../get-started/get-set-up.md).
 
-* Für Anregungen zur Implementierung von Benutzeroberflächen für UWP werfen Sie einen Blick auf unsere umfassenden [UWP-Beispiel-Apps](https://developer.microsoft.com/windows/samples).
+- Für Anregungen zur Implementierung von Benutzeroberflächen für die UWP werfen Sie einen Blick auf unsere umfassenden [UWP-Beispiel-Apps](https://developer.microsoft.com/windows/samples).
+
+## <a name="video-summary"></a>Video-Zusammenfassung
+
+> [!VIDEO https://channel9.msdn.com/Blogs/One-Dev-Minute/Designing-Universal-Windows-Platform-apps/player]
 
 ## <a name="next-fluent-design-system"></a>Nächstes Thema: Fluent Design-System
+
 Wenn Sie weitere Informationen zu der Prinzipien hinter Fluent Design (das Design-System von Microsoft) und weitere Features für Ihre UWP-App kennenlernen möchten, fahren Sie mit dem Artikel [Fluent Design-System](../fluent-design-system/index.md) fort.
+
+## <a name="related-articles"></a>Verwandte Artikel
+
+- [Was ist eine UWP-App?](../../get-started/universal-application-platform-guide.md)
+- [Fluent Design-System](../fluent-design-system/index.md)
+- [XAML-Plattformübersicht](../../xaml-platform/index.md)

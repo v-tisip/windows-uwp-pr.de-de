@@ -4,18 +4,18 @@ ms.assetid: BAC79A64-445D-4702-8E96-7727FF180245
 description: Mittels dieser Methode in der Microsoft Store-Analyse-API können Sie gesammelte Fehlerberichtsdaten für Windows10-Treiber für einen bestimmten Zeitraum und andere optionale Filter abrufen. Diese Methode ist nur für IHVs bestimmt.
 title: Abrufen von Fehlerberichtsdaten für Windows10-Treiber
 ms.author: mcleans
-ms.date: 01/18/2018
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienst, Microsoft Store-Analyse-API, Fehler
 ms.localizationpriority: medium
-ms.openlocfilehash: 9590c307cbbb45c4f177704d1cd4cd3d22e03c7d
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: e87a836c08f29e1e7279c19566ead8a8d7e36453
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663390"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989404"
 ---
 # <a name="get-error-reporting-data-for-windows-10-drivers"></a>Abrufen von Fehlerberichtsdaten für Windows10-Treiber
 
@@ -84,7 +84,7 @@ Authorization: Bearer <your access token>
 |------------|---------|--------------|
 | Wert      | array   | Ein Array von Objekten, die gesammelte Fehlerberichtsdaten enthalten. Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie in der folgenden Tabelle.     |
 | @nextLink  | String  | Wenn weitere Seiten mit Daten vorhanden sind, enthält diese Zeichenfolge einen URI, mit dem Sie die nächste Seite mit Daten anfordern können. Beispielsweise wird dieser Wert zurückgegeben, wenn der Parameter **top** der Anforderung auf 10000 festgelegt ist, es jedoch mehr als 10.000 Zeilen mit Fehlern für die Abfrage gibt. |
-| TotalCount | inumber | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.     |
+| TotalCount | Ganzzahl | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.     |
 
 
 Elemente im Array *Value* enthalten die folgenden Werte.
@@ -94,7 +94,7 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 | date            | string  | Das erste Datum im Datumsbereich für die Fehlerdaten. Wenn die Anforderung einen einzelnen Tag angibt, ist dieses Datum dieser Wert. Wenn die Anforderung eine Woche, einen Monat oder einen anderen Datumsbereich angibt, ist dieser Wert das erste Datum in diesem Datumsbereich. |
 | applicationId   | String  | Der Produkt-ID-Wert des Treibers, für den Fehlerdaten abgerufen wurden. |
 | submissionId   | String  | Die ID der Einreichung, die dem Treiber zugeordnet ist. |
-| failureName     | string  | Der Name des Fehlers, der aus vier Teilen besteht: eine oder mehrere Problemklassen, ein Ausnahme/Fehlerprüfcode, der Name des Treibers, in dem der Fehler aufgetreten ist, und der zugehörige Funktionsname.  |
+| failureName     | String  | Der Name des Fehlers, der aus vier Teilen besteht: eine oder mehrere Problemklassen, ein Ausnahme/Fehlerprüfcode, der Name des Treibers, in dem der Fehler aufgetreten ist, und der zugehörige Funktionsname.  |
 | failureHash     | string  | Der eindeutige Bezeichner des Fehlers.   |
 | symbol          | string  | Das diesem Fehler zugewiesene Symbol. |
 | osVersion       | String  | Die vierteilige Buildversion des Betriebssystems, auf dem der Fehler aufgetreten ist.  |
@@ -108,7 +108,7 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 | oemName | String | Der Name des OEM für das Gerät, auf dem der Fehler aufgetreten ist. |
 | oemModel | String | Der Name des Gerätemodells, auf dem der Fehler aufgetreten ist. |
 | flightRing | String | Der Name des Test-Flights des Betriebssystems, auf dem der Fehler aufgetreten ist. |
-| eventCount      | inumber | Die Anzahl der Ereignisse, die diesem Fehler für die angegebene Aggregationsebene zugeordnet werden.      |
+| eventCount      | Ganzzahl | Die Anzahl der Ereignisse, die diesem Fehler für die angegebene Aggregationsebene zugeordnet werden.      |
 
 
 ### <a name="response-example"></a>Antwortbeispiel

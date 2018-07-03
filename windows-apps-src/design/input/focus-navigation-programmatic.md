@@ -14,14 +14,16 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 68767e564055eb26d0ab7f6232082a6f7387c3d8
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: 0a2892e6f4382f231299e8ef2307c70cdbebb46c
+ms.sourcegitcommit: 03a3c02c7b3b0b0a3d1b14705cc1fd73788ac034
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817348"
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "1903164"
 ---
 # <a name="programmatic-focus-navigation"></a>Programmgesteuerte Fokusnavigation
+
+![Tastatur, Fernbedienung und Steuerkreuz](images/dpad-remote/dpad-remote-keyboard.png)
 
 Verwenden Sie die [FocusManager.TryMoveFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_TryMoveFocus_Windows_UI_Xaml_Input_FocusNavigationDirection_)-Methode oder die [FindNextElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_FindNextElement_Windows_UI_Xaml_Input_FocusNavigationDirection_)-Methode, um den Fokus in Ihrer UWP-Anwendung programmgesteuert zu verlagern.
 
@@ -244,11 +246,11 @@ private void OnGettingFocus(UIElement sender, GettingFocusEventArgs args)
             FocusState.Keyboard && 
             args.NewFocusedElement != selectedContainer)
         {
-            args.NewFocusedElement = 
-                MyListView.ContainerFromItem(MyListView.SelectedItem);
+            args.TryRedirect(
+                MyListView.ContainerFromItem(MyListView.SelectedItem));
             args.Handled = true;
         }
-    }        
+    }
 }
 ```
 
@@ -274,8 +276,10 @@ private void OnLosingFocus(UIElement sender, LosingFocusEventArgs args)
     if (MyCommandBar.IsOpen == true && 
         IsNotAChildOf(MyCommandBar, args.NewFocusedElement))
     {
-        args.Cancel = true;
-        args.Handled = true;
+        if (args.TryCancel())
+        {
+            args.Handled = true;
+        }
     }
 }
 ```
@@ -324,9 +328,9 @@ private void OnLosingFocus(UIElement sender, LosingFocusEventArgs args)
     }
 }
 ```
+
 ## <a name="related-articles"></a>Verwandte Artikel
 
 - [Fokusnavigation für Tastatur, Gamepad, Fernbedienung und Bedienungshilfen](focus-navigation.md)
 - [Tastaturinteraktionen](keyboard-interactions.md)
-- [Barrierefreiheit der Tastaturnavigation](../accessibility/keyboard-accessibility.md) 
-
+- [Barrierefreiheit der Tastaturnavigation](../accessibility/keyboard-accessibility.md)

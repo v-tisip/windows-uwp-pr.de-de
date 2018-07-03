@@ -4,18 +4,18 @@ ms.assetid: 4BF9EF21-E9F0-49DB-81E4-062D6E68C8B1
 description: Verwenden Sie zum programmgesteuerten Abrufen von Analysedaten für Apps, die für Ihr WindowsDevCenter-Konto oder für das Konto Ihrer Organisation registriert sind, die Microsoft Store-Analyse-API.
 title: Zugreifen auf Analysedaten mit Store-Diensten
 ms.author: mcleans
-ms.date: 03/23/2018
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste Microsoft Store-Analyse-API
 ms.localizationpriority: medium
-ms.openlocfilehash: 0a8523acb06a0bda48f85221f384d8a3d554c7dc
-ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
+ms.openlocfilehash: f7ca3c23179d97816fc54fdbacb951915aecf71f
+ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "1707155"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "1976395"
 ---
 # <a name="access-analytics-data-using-store-services"></a>Zugreifen auf Analysedaten mit Store-Diensten
 
@@ -41,11 +41,11 @@ Stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllt haben, bevor
 
 Gehen Sie wie folgt vor, um Ihrem Dev Center-Konto eine Azure AD-Anwendung zuzuordnen und die erforderlichen Werte abzurufen:
 
-1.  Rufen Sie in Dev Center die **Kontoeinstellungen** auf, klicken Sie auf **Benutzer verwalten**, und [ordnen Sie das Dev Center-Konto Ihrer Organisation dem Azure AD-Verzeichnis Ihrer Organisation zu](../publish/associate-azure-ad-with-dev-center.md).
+1.  [Weisen Sie in Dev Center das Dev Center-Konto Ihrer Organisation dem AzureAD-Verzeichnis Ihrer Organisation zu](../publish/associate-azure-ad-with-dev-center.md).
 
-2.  Klicken Sie auf der Seite **Benutzer verwalten** auf **Azure AD-Apps hinzufügen**, und fügen Sie die AzureAD-Anwendung hinzu, die die App oder den Dienst darstellt, mit dem Sie auf Analysedaten für Ihr Dev Center-Konto zugreifen. Weisen Sie ihr anschließend die Rolle **Manager** zu. Wenn diese Anwendung bereits in Ihrem AzureAD-Verzeichnis vorhanden ist, können Sie sie auf der Seite **Azure AD-Apps hinzufügen** auswählen, um sie Ihrem Dev Center-Konto hinzuzufügen. Andernfalls können Sie eine neue Azure AD-Anwendung auf der Seite **Azure AD-Apps hinzufügen** erstellen. Weitere Informationen finden Sie unter [Hinzufügen von Azure AD-Anwendungen zu Ihrem Dev Center-Konto](../publish/add-users-groups-and-azure-ad-applications.md#azure-ad-applications).
+2.  Fügen Sie als Nächstes auf der Seite **Benutzer** in den **Kontoeinstellungen** von Dev Center [die AzureAD-Anwendung hinzu](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-dev-center-account), die die App oder den Dienst darstellt, mit der bzw. dem Sie auf Analysedaten für Ihr Dev Center-Konto zugreifen. Weisen Sie dieser Anwendung die Rolle **Verwalter** zu. Wenn die Anwendung in Ihrem AzureAD-Verzeichnis noch nicht vorhanden ist, können Sie [eine neue AzureAD-Anwendung im Dev Center erstellen](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-dev-center-account).
 
-3.  Wechseln Sie zurück zur Seite **Benutzer verwalten**, klicken Sie auf den Namen Ihrer Azure AD-Anwendung, um die Anwendungseinstellungen aufzurufen, und kopieren Sie die Werte unter **Mandanten-ID** und **Client-ID**.
+3.  Wechseln Sie zurück zur Seite **Benutzer**, klicken Sie auf den Namen der Azure AD-Anwendung, um die Anwendungseinstellungen aufzurufen, und kopieren Sie die Werte unter **Mandanten-ID** und **Client-ID**.
 
 4. Klicken Sie auf **Neuen Schlüssel hinzufügen**. Kopieren Sie auf dem folgenden Bildschirm den Wert unter **Schlüssel**. Nach dem Verlassen der Seite können Sie nicht mehr auf diese Informationen zugreifen. Weitere Informationen finden Sie unter [Verwalten von Schlüsseln für eine Azure AD-App](../publish/add-users-groups-and-azure-ad-applications.md#manage-keys).
 
@@ -98,16 +98,6 @@ Die folgenden Analysemethoden stehen für die Verwendung durch Entwicklerkonten 
 | Installiert |  <ul><li>[Abrufen von Desktopanwendungsinstallationen](get-desktop-app-installs.md)</li></ul> |
 | Anwendungsfehler |  <ul><li>[Abrufen von Fehlerberichtsdaten für Ihre Desktopanwendung](get-desktop-application-error-reporting-data.md)</li><li>[Abrufen von Details zu einem Fehler in Ihrer Desktopanwendung](get-details-for-an-error-in-your-desktop-application.md)</li><li>[Abrufen der Stapelüberwachung für einen Fehler in Ihrer Desktopanwendung](get-the-stack-trace-for-an-error-in-your-desktop-application.md)</li><li>[Herunterladen der CAB-Datei bei einem Fehler in Ihrer Desktopanwendung](download-the-cab-file-for-an-error-in-your-desktop-application.md)</li></ul> |
 
-### <a name="methods-for-hardware-and-drivers"></a>Methoden für Hardware und Treiber
-
-Die folgenden Analysemethoden stehen für die Verwendung durch Entwicklerkonten zur Verfügung, die zum [Windows Hardware Dev Center-Programm](https://msdn.microsoft.com/windows/hardware/drivers/dashboard/get-started-with-the-hardware-dashboard) gehören.
-
-| Szenario       | Methoden      |
-|---------------|--------------------|
-| Fehler in Windows10-Treibern (für IHVs) |  <ul><li>[Abrufen von Fehlerberichtsdaten für Windows10-Treiber](get-error-reporting-data-for-windows-10-drivers.md)</li><li>[Abrufen von Informationen zu einem Windows10-Treiberfehler](get-details-for-a-windows-10-driver-error.md)</li><li>[Herunterladen der CAB-Datei für einen Windows10-Treiberfehler](download-the-cab-file-for-a-windows-10-driver-error.md)</li></ul> |
-| Fehler in Windows7-/Windows8.x-Treibern (für IHVs) |  <ul><li>[Abrufen von Fehlerberichtsdaten für Windows7- und Windows8.x-Treiber](get-error-reporting-data-for-windows-7-and-windows-8.x-drivers.md)</li><li>[Abrufen von Informationen zu einem Windows7- oder Windows8.x-Treiberfehler](get-details-for-a-windows-7-or-windows-8.x-driver-error.md)</li><li>[Herunterladen der CAB-Datei für einen Windows7- oder Windows8.x-Treiberfehler](download-the-cab-file-for-a-windows-7-or-windows-8.x-driver-error.md)</li></ul> |
-| Hardwarefehler (für OEMs) |  <ul><li>[Abrufen von Fehlerberichtsdaten für OEM-Hardware](get-oem-hardware-error-reporting-data.md)</li><li>[Abrufen von Informationen zu einem OEM-Hardwarefehler](get-details-for-an-oem-hardware-error.md)</li><li>[Herunterladen der CAB-Datei für einen OEM-Hardwarefehler](download-the-cab-file-for-an-oem-hardware-error.md)</li></ul> |
-
 ### <a name="methods-for-xbox-live-services"></a>Methoden für Xbox Live-Dienste
 
 Die folgenden zusätzlichen Methoden stehen für Entwicklerkonten mit Spielen zur Verfügung, die [Xbox Live-Dienste](../xbox-live/developer-program-overview.md) verwenden.
@@ -124,7 +114,17 @@ Die folgenden zusätzlichen Methoden stehen für Entwicklerkonten mit Xbox One-S
 
 | Szenario       | Methoden      |
 |---------------|--------------------|
-| Käufe |  <ul><li>[Abrufen von Xbox One-Spielekäufen](get-xbox-one-game-acquisitions.md)</li></ul> |
+| Käufe |  <ul><li>[Abrufen von Xbox One Spielekäufen](get-xbox-one-game-acquisitions.md)</li></ul> |
+
+### <a name="methods-for-hardware-and-drivers"></a>Methoden für Hardware und Treiber
+
+Die folgenden Analysemethoden stehen für die Verwendung durch Entwicklerkonten zur Verfügung, die zum [Windows Hardware Dev Center-Programm](https://msdn.microsoft.com/windows/hardware/drivers/dashboard/get-started-with-the-hardware-dashboard) gehören.
+
+| Szenario       | Methoden      |
+|---------------|--------------------|
+| Fehler in Windows10-Treibern (für IHVs) |  <ul><li>[Abrufen von Fehlerberichtsdaten für Windows10-Treiber](get-error-reporting-data-for-windows-10-drivers.md)</li><li>[Abrufen von Informationen zu einem Windows10-Treiberfehler](get-details-for-a-windows-10-driver-error.md)</li><li>[Herunterladen der CAB-Datei für einen Windows10-Treiberfehler](download-the-cab-file-for-a-windows-10-driver-error.md)</li></ul> |
+| Fehler in Windows7-/Windows8.x-Treibern (für IHVs) |  <ul><li>[Abrufen von Fehlerberichtsdaten für Windows7- und Windows8.x-Treiber](get-error-reporting-data-for-windows-7-and-windows-8.x-drivers.md)</li><li>[Abrufen von Informationen zu einem Windows7- oder Windows8.x-Treiberfehler](get-details-for-a-windows-7-or-windows-8.x-driver-error.md)</li><li>[Herunterladen der CAB-Datei für einen Windows7- oder Windows8.x-Treiberfehler](download-the-cab-file-for-a-windows-7-or-windows-8.x-driver-error.md)</li></ul> |
+| Hardwarefehler (für OEMs) |  <ul><li>[Abrufen von Fehlerberichtsdaten für OEM-Hardware](get-oem-hardware-error-reporting-data.md)</li><li>[Abrufen von Informationen zu einem OEM-Hardwarefehler](get-details-for-an-oem-hardware-error.md)</li><li>[Herunterladen der CAB-Datei für einen OEM-Hardwarefehler](download-the-cab-file-for-an-oem-hardware-error.md)</li></ul> |
 
 ## <a name="code-example"></a>Codebeispiel
 

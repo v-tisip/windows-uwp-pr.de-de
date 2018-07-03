@@ -4,18 +4,18 @@ ms.assetid: b556a245-6359-4ddc-a4bd-76f9873ab694
 description: Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um die Stapelüberwachung für einen Fehler in Ihrer App abzurufen.
 title: Abrufen der Stapelüberwachung für einen Fehler in Ihrer App
 ms.author: mcleans
-ms.date: 06/16/2017
+ms.date: 06/05/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Stapelüberwachung, Fehler
 ms.localizationpriority: medium
-ms.openlocfilehash: d29237bfc36c745933c5c40bba9c584d2e705947
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: 902bf87f1650cc5b9f4aeabd8539da4a774dce75
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1662780"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989534"
 ---
 # <a name="get-the-stack-trace-for-an-error-in-your-app"></a>Abrufen der Stapelüberwachung für einen Fehler in Ihrer App
 
@@ -75,7 +75,7 @@ Authorization: Bearer <your access token>
 |------------|---------|--------------------------------|
 | Wert      | array   | Ein Array von Objekten, die jeweils einen einzelnen Frame der Stapelüberwachungsdaten enthalten. Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie unten im Abschnitt [Stapelüberwachungswerte](#stack-trace-values). |
 | @nextLink  | String  | Wenn weitere Seiten mit Daten vorhanden sind, enthält diese Zeichenfolge einen URI, mit dem Sie die nächste Seite mit Daten anfordern können. Beispielsweise wird dieser Wert zurückgegeben, wenn der Parameter **top** der Anforderung auf 10 festgelegt ist, es jedoch mehr als 10 Zeilen mit Fehlern für die Abfrage gibt. |
-| TotalCount | inumber | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.          |
+| TotalCount | Ganzzahl | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.          |
 
 
 ### <a name="stack-trace-values"></a>Stapelüberwachungswerte

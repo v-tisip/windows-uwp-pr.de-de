@@ -10,12 +10,12 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: ade80769-17ae-46e9-9c2f-bf08ae5a51ee
 ms.localizationpriority: medium
-ms.openlocfilehash: 7cce355ab6f571f932d9dc10a1b185821118266c
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.openlocfilehash: a6442857f8d7914ab423c0981ae97598084f0068
+ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1690316"
+ms.lasthandoff: 05/09/2018
+ms.locfileid: "1862842"
 ---
 # <a name="xbox-one-developer-mode-activation"></a>Aktivierung des Xbox One-Entwicklermodus
 
@@ -59,11 +59,11 @@ Der Entwicklermodus kann auf jeder Xbox One-Konsole aktiviert werden. Nach dem A
     ![Aktivierungsschritt 12](images/activation-step-12.png)   
 
 ## <a name="switch-between-retail-and-developer-mode"></a>Wechseln zwischen Einzelhandels- und Entwicklermodus
-Nachdem der Entwicklermodus auf der Konsole aktiviert wurde, können Sie mithilfe von **Dev Home** zwischen Einzelhandelsmodus und Entwicklermodus wechseln. Weitere Informationen zum Starten und Verwenden von Dev Home, finden Sie unter [Einführung in Xbox One-Tools](introduction-to-xbox-tools.md).
+Nachdem der Entwicklermodus auf der Konsole aktiviert wurde, können Sie mithilfe von **Dev Home** zwischen Einzelhandelsmodus und Entwicklermodus wechseln. Weitere Informationen zum Starten und Verwenden von Dev Home finden Sie unter [Einführung in Xbox One-Tools](introduction-to-xbox-tools.md).
 
-* Um in den Einzelhandelsmodus zu wechseln, öffnen Sie **Dev Home** und navigieren zur Registerkarte **Einstellungen**. Unter **Konsoleneinstellungen** wählen Sie die Option **Entwicklermodus beenden** aus. Dadurch wird die Konsole im Einzelhandelsmodus neu gestartet.    
+* Um in den Einzelhandelsmodus wechseln, öffnen Sie **Dev Home**. Wählen Sie unter **Schnelle Aktionen** die Option **Entwicklermodus verlassen**. Dadurch wird die Konsole im Einzelhandelsmodus neu gestartet.    
 
-  ![Aktivierungsschritt 13](images/activation-step-13-rs2.png)  
+  ![Aktivierungsschritt 13](images/activation-step-13-rs4.png)  
   
 * Um zum Entwicklermodus zu wechseln, verwenden Sie die DevMode-Aktivierungsapp. Öffnen Sie die App, und wählen Sie **Wechseln und neu starten**. Dadurch wird die Konsole im Entwicklermodus neu gestartet.  
 

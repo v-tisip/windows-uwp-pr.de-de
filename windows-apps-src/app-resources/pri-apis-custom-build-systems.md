@@ -4,23 +4,20 @@ Description: With the package resource indexing (PRI) APIs, you can develop a cu
 title: APIs zur Paketressourcenindizierung (PRI) und benutzerdefinierte Buildsysteme
 template: detail.hbs
 ms.author: stwhi
-ms.date: 02/20/2018
+ms.date: 05/07/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
-ms.openlocfilehash: 8947f9305829e5045a418ac2fdd2d6c327acb2a1
-ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
+ms.openlocfilehash: 58473101f0972040fe80c7f7f582ad33eafeb009
+ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "1707351"
+ms.lasthandoff: 05/09/2018
+ms.locfileid: "1862499"
 ---
 # <a name="package-resource-indexing-pri-apis-and-custom-build-systems"></a>APIs zur Paketressourcenindizierung (PRI) und benutzerdefinierte Buildsysteme
-> [!NOTE]
-> **Einige Informationen beziehen sich auf die Vorabversion, die vor der kommerziellen Freigabe möglicherweise wesentlichen Änderungen unterliegt. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.**
-
 Mit den [APIs zur Paketressourcenindizierung (PRI)](https://msdn.microsoft.com/library/windows/desktop/mt845690) können Sie ein benutzerdefiniertes Buildsystem für die Ressourcen Ihrer UWP-App entwickeln. Das Buildsystem kann Paketressourcenindexdateien (PRI) erstellen, versionieren und sichern (als XML), und zwar für jedes Maß an Komplexität, das Ihre UWP-App benötigt. Wenn Sie ein benutzerdefiniertes Buildsystem besitzen, das derzeit das Befehlszeilentool MakePri.exe verwendet (siehe [Manuelles Kompilieren von Ressourcen mit MakePri.exe](makepri-exe-command-options.md)), empfiehlt es sich zur Erzielung einer höheren Leistung und für mehr Steuerungsmöglichkeiten, die PRI-APIs anstelle von MakePri.exe aufzurufen.
 
 Die PRI-APIs wurden mit dem Windows SDK für Windows10, Version 1803, eingeführt. Die APIs weisen die Form von Win32-Windows-APIs auf, was bedeutet, dass Ihnen mehrere Optionen für deren Aufruf zur Verfügung stehen. Sie können sie direkt von einer Win32-App oder über [Plattformaufrufe](/dotnet/framework/interop/consuming-unmanaged-dll-functions?branch=live) von einer .NET-App oder auch von einer UWP-App aus aufrufen.

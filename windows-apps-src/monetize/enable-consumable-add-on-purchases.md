@@ -5,17 +5,17 @@ description: Erfahren Sie, wie Sie den Windows.Services.Store-Namespace verwende
 title: Unterstützen von Käufen konsumierbarer Add-Ons
 keywords: windows10, uwp, verbrauchbar, add-ons, in-app-käufe, IAPs, Windows.Services.Store
 ms.author: mcleans
-ms.date: 08/25/2017
+ms.date: 05/09/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4b327327448b47416e3ba113a65aa8a7b755f1f0
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.openlocfilehash: c7c36abe2d1332e5b6c94cbb936ad00769314d07
+ms.sourcegitcommit: dc3389ef2e2c94b324872a086877314d6f963358
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1689306"
+ms.lasthandoff: 05/11/2018
+ms.locfileid: "1874418"
 ---
 # <a name="enable-consumable-add-on-purchases"></a>Unterstützen von Käufen konsumierbarer Add-Ons
 
@@ -32,9 +32,9 @@ Apps können zwei Arten von Endverbraucher-Add-Ons anbieten, die sich auf die Ar
 
   Wenn beispielsweise das Add-On 100 Münzen in einem Spiel darstellt und der Benutzer 10 Münzen nutzt, muss die App oder der Dienst den neuen Restbetrag von 90 Münzen für den Benutzer verwalten. Nachdem der Benutzer alle 100 Münzen genutzt hat, muss die App das Add-On als erfüllt melden, und danach kann der Benutzer das Add-On für 100 Münzen erneut kaufen.
 
-* **Vom Store verwalteter Verbrauchsartikel**. Bei dieser Art von Verbrauchsartikel verfolgt der Store das Guthaben des Benutzers an Elementen, die das Add-On darstellt. Wenn der Benutzer Elemente nutzt, sind Sie verantwortlich dafür, diese Elemente dem Store als erfüllt zu melden, und der Store aktualisiert das Guthaben des Benutzers. Ihre App kann das aktuelle Guthaben für den Benutzer jederzeit abfragen. Nachdem der Benutzer alle Elemente genutzt hat, kann er das Add-On erneut kaufen.
+* **Vom Store verwalteter Verbrauchsartikel**. Bei dieser Art von Verbrauchsartikel verfolgt der Store das Guthaben des Benutzers an Elementen, die das Add-On darstellt. Wenn der Benutzer Elemente nutzt, sind Sie verantwortlich dafür, diese Elemente dem Store als erfüllt zu melden, und der Store aktualisiert das Guthaben des Benutzers. Der Benutzer kann das Add-On beliebig oft kaufen (er muss die Elemente nicht zuerst verwenden). Ihre App kann das aktuelle Guthaben für den Benutzer jederzeit im Store abfragen.
 
-  Wenn das Add-On beispielsweise eine anfängliche Menge von 100 Münzen in einem Spiel darstellt und der Benutzer 10 Münzen nutzt, meldet die App dem Store, dass 10 Einheiten des Add-Ons erfüllt wurden, und der Store aktualisiert den Restbetrag. Nachdem der Benutzer alle 100 Münzen genutzt hat, kann er das Add-On für 100 Münzen erneut kaufen.
+  Wenn das Add-On beispielsweise eine anfängliche Menge von 100 Münzen in einem Spiel darstellt und der Benutzer 50 Münzen nutzt, meldet die App dem Store, dass 50 Einheiten des Add-Ons erfüllt wurden, und der Store aktualisiert den Restbetrag. Wenn der Benutzer dann Ihr Add-on erneut kauft, um 100 weitere Münzen zu erhalten, hat er jetzt 150 Münzen insgesamt.
     > [!NOTE]
     > Vom Store verwaltete Endverbraucher-Add-Ons sind in Windows10, Version1607 verfügbar.
 

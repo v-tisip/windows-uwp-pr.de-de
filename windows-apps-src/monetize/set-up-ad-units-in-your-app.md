@@ -4,26 +4,32 @@ ms.assetid: bb105fbe-bbbd-4d78-899b-345af2757720
 description: Erfahren Sie, wie Sie Ihrer App die Anwendungs-ID und die Anzeigeneinheits-ID aus dem Windows Dev Center-Dashboard hinzufügen, bevor Sie die App an den Store übermitteln.
 title: Einrichten von Anzeigeneinheiten in der App
 ms.author: mcleans
-ms.date: 10/04/2017
+ms.date: 05/11/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, Anzeigen, Werbung, Anzeigeeinheiten, Test
 ms.localizationpriority: medium
-ms.openlocfilehash: 6473d571ed44f60f8001b8a565d70c58d43407d1
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.openlocfilehash: 978f0599ec783b5dcfade82b97c92d1dec9fb541
+ms.sourcegitcommit: 834992ec14a8a34320c96e2e9b887a2be5477a53
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1654659"
+ms.lasthandoff: 05/14/2018
+ms.locfileid: "1880951"
 ---
 # <a name="set-up-ad-units-in-your-app"></a>Einrichten von Anzeigeneinheiten in der App
 
-Jedes Steuerelement für eine universelle Windows Platform (UWP) in Ihrer App verfügt über eine entsprechende *Anzeigeneinheit*. Diese wird von unseren Diensten verwendet, um Werbung auf das Steuerelement zu leiten. Jede Anzeigeneinheit besteht aus einer *Anzeigeneinheits-ID* und *Anwendungs-ID*, die Sie [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx), [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx), oder [NativeAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.nativead.aspx) in Ihrer App zuweisen müssen.
+Jedes Steuerelement für eine universelle Windows Platform (UWP) in Ihrer App verfügt über eine entsprechende *Anzeigeneinheit*. Diese wird von unseren Diensten verwendet, um Werbung auf das Steuerelement zu leiten. Jede Anzeigeneinheit besteht aus einer *Anzeigeneinheits-ID* und *Anwendungs-ID*, die Sie Code in Ihrer App zuweisen müssen.
 
 Wir bieten [Testanzeigen-Einheitenwerte](#test-ad-units), die Sie während der Testphase verwenden können, um sicherzustellen, dass Ihre App Testanzeigen anzeigt. Diese Testwerte können nur in einer Testversion Ihrer App verwendet werden. Wenn Sie Testwerte in einer veröffentlichten App verwenden, wird die App keine Livewerbung empfangen.
 
-Nachdem Sie Ihre UWP-App getestet und die Übermittlung an Windows Dev Center vorbereitet haben, müssen Sie eine [Liveanzeigeneinheit erstellen](#live-ad-units) von der Seite [In-App-Anzeigen](../publish/in-app-ads.md) im Windows Dev Center-Dashboard abrufen und anschließend Ihren App-Code mit den Werten für die Anwendungs-ID und die Anzeigeneinheits-ID aktualisieren.
+Nachdem Sie Ihre UWP-App getestet und die Übermittlung an Windows Dev Center vorbereitet haben, müssen Sie auf der Seite [In-App-Anzeigen](../publish/in-app-ads.md) im Windows Dev Center-Dashboard eine [Liveanzeigeneinheit erstellen](#live-ad-units) und anschließend Ihren App-Code mit den Werten für die Anwendungs-ID und die Anzeigeneinheits-ID aktualisieren.
+
+Weitere Informationen zum Zuweisen der Anwendungs-ID- und Anzeigeneinheits-ID-Werte in Ihrem App-Code finden Sie in den folgenden Artikeln:
+* [AdControl in XAML und .NET](adcontrol-in-xaml-and--net.md)
+* [AdControl in HTML 5 und Javascript](adcontrol-in-html-5-and-javascript.md)
+* [Interstitialwerbung](../monetize/interstitial-ads.md)
+* [Native Anzeigen](../monetize/native-ads.md)
 
 <span id="test-ad-units" />
 
@@ -58,13 +64,11 @@ So rufen Sie Live-Anzeigeneinheiten vom Dev Center-Dashboard ab und verwenden es
     > [!NOTE]
     > Die Anwendungs-IDs für Test-Anzeigeneinheiten und Live-UWP-Anzeigeneinheiten besitzen unterschiedliche Formate. Testanwendungs-ID sind GUIDs. Wenn Sie eine Live-UWP-Anzeigeneinheit im Dashboard erstellen, entspricht die Anwendungs-ID für die Anzeigeneinheit immer der Store-ID Ihrer App (ein Beispiel für einen Store-ID-Wert ist 9NBLGGH4R315).
 
-3.  Weisen Sie die **Anwendungs-ID**- und **Anzeigeneinheits-ID**-Werte in Ihrem App Code hinzu:
-
-    * Wenn Ihre App Werbebanner anzeigt, weisen Sie diese Werte den Eigenschaften [ApplicationId](https://msdn.microsoft.com/library/mt313174.aspx) und [AdUnitId](https://msdn.microsoft.com/library/mt313171.aspx) Ihres [AdControl](https://msdn.microsoft.com/library/mt313154.aspx)-Objekts hinzu. Weitere Informationen finden Sie unter [AdControl in XAML und .NET](../monetize/adcontrol-in-xaml-and--net.md) und [AdControl in HTML5 und JavaScript](../monetize/adcontrol-in-html-5-and-javascript.md).
-
-    * Wenn Ihre App Interstitialanzeigen anzeigt, übergeben Sie diese Werte an die [RequestAd](https://msdn.microsoft.com/library/mt313192.aspx)-Methode Ihres [InterstitialAd](https://msdn.microsoft.com/library/mt313189.aspx)-Objekts. Weitere Informationen finden Sie unter [Interstitialwerbungen](../monetize/interstitial-ads.md).
-
-    * Wenn Ihre App native Anzeigen anzeigt, weisen Sie diese Werte die Parameter *applicationId* und *adUnitId* des [NativeAdsManager](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.nativeadsmanager.nativeadsmanager.aspx)-Konstruktors zu. Weitere Informationen finden Sie unter [Native Anzeigen](../monetize/native-ads.md).
+3.  Weisen Sie die Anwendungs-ID- und Anzeigeneinheits-ID-Werte in Ihrem App Code zu. Weitere Informationen finden Sie in den folgenden Artikeln:
+    * [AdControl in XAML und .NET](adcontrol-in-xaml-and--net.md)
+    * [AdControl in HTML 5 und Javascript](adcontrol-in-html-5-and-javascript.md)
+    * [Interstitialwerbung](../monetize/interstitial-ads.md)
+    * [Native Anzeigen](../monetize/native-ads.md)
 
 <span id="manage" />
 

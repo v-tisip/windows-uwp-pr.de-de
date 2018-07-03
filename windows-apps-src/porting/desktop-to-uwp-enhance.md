@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 21dc29758a4622f810a02e7e5bb0ec117e4dbc2a
-ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
+ms.openlocfilehash: aafe2d09fc27a2693ccf2c4c9d8f189aa0164a3c
+ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2018
-ms.locfileid: "1638554"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "1976508"
 ---
 # <a name="enhance-your-desktop-application-for-windows-10"></a>Verbessern Sie Ihre Desktopanwendung für Windows10
 
@@ -54,18 +54,16 @@ Legen Sie im Dialogfeld **Eigenschaften** die **lokale Kopie** jeder *winmd*-Dat
 
 Legen Sie in den **Allgemeinen** Einstellungen der **C/C++** Einstellungsgruppe das Feld **Windows-Runtime-Erweiterung verwenden** auf **Ja(/ZW)** fest.
 
-   ![Windows-Runtime-Erweiterung verwenden](images/desktop-to-uwp/enable-winrt-objects.png)
+   ![Windows-Runtime-Erweiterung verwenden](images/desktop-to-uwp/consume-runtime-extensions.png)
 
-Öffnen Sie das **Zusätzliche #using-Verzeichnisse** Dialogfeld und fügen Sie diese Verzeichnisse hinzu.
+Öffnen Sie das Dialogfeld **Zusätzliche #using-Verzeichnisse**, und fügen Sie diese Verzeichnisse hinzu.
 
-* C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcpackages
-* C:\Program Files (x86)\Windows Kits\10\UnionMetadata
+* %VSInstallDir%\Common7\IDE\VC\vcpackages
+* C:\Programme (x86)\Windows Kits\10\UnionMetadata
 * C:\Program Files (x86)\Windows Kits\10\References\Windows.Foundation.UniversalApiContract\<*latest version*>
 * C:\Program Files (x86)\Windows Kits\10\References\Windows.Foundation.FoundationContract\<*latest version*>
 
-![Zusätzliche Using-Verzeichnisse](images/desktop-to-uwp/additional-using.png)
-
-Öffnen Sie das **Zusätzliche Include-Verzeichnisse**-Dialogfeld und fügen Sie dieses Verzeichnis hinzu: „C:\Program Files“ (x86) \Windows Kits\10\Include\ <*neueste Version*> \um
+Öffnen Sie das Dialogfeld **Additional Include Directories**, und fügen Sie dieses Verzeichnis hinzu: C:\Program Files (x86)\Windows Kits\10\Include\<*latest version*>\um
 
 ![Zusätzliche Include-Verzeichnisse](images/desktop-to-uwp/additional-include.png)
 

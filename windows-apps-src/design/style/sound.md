@@ -16,16 +16,16 @@ design-contact: mattben
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: dbe59b422a83ad31727928c406a1f4a6dd550301
-ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
+ms.openlocfilehash: c6e85bcbf131755af6909fd0ae7ee42bc36544b8
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2018
-ms.locfileid: "1638394"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1842800"
 ---
 # <a name="sound"></a>Sound
 
- 
+![Favoritenbild](images/header-sound.svg)
 
 Es gibt viele Möglichkeiten, Ihre App mit Sound zu verbessern. Sie können Sound zur Ergänzung von Benutzeroberflächenelementen einsetzen, um Benutzer akustisch auf Ereignisse aufmerksam zu machen. Sound ist beispielsweise für Menschen mit Sehbehinderungen ein hilfreiches Benutzeroberflächenelement. Mit Sound können Sie den Benutzer in das Geschehen einbeziehen, beispielsweise, wenn Sie ein Puzzlespiel mit einer beruhigenden Hintergrundmelodie und ein Horror-/Survivalspiel mit bedrohlichen Soundeffekten unterlegen.
 

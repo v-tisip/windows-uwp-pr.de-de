@@ -4,34 +4,34 @@ Description: Distribute a packaged desktop app (Desktop Bridge)
 Search.Product: eADQiWindows 10XVcnh
 title: Veröffentlichen Sie Ihre verpackte Desktop-App auf einem Windows Store oder laden Sie es auf einem oder mehreren Geräten quer.
 ms.author: normesta
-ms.date: 05/25/2017
+ms.date: 05/18/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows10, UWP
 ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.localizationpriority: medium
-ms.openlocfilehash: 8aff2635094064c0758f9d0d2ca56b7aa73cfda1
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: 682d7dfcef1ea8037b113499362f0664c388d987
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816835"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989624"
 ---
 # <a name="distribute-a-packaged-desktop-app-desktop-bridge"></a>Verteilen einer verpackten Desktop-App (Desktop-Brücke)
 
 Veröffentlichen Sie Ihre verpackte Desktop-App auf einem Windows Store oder laden Sie es auf einem oder mehreren Geräten quer.  
 
 > [!NOTE]
-> Haben Sie einen Plan, wie Sie für Benutzer den Übergang auf Ihre verpackte App ermöglichen können? Schauen Sie sich den Abschnitt [Übergang von Benutzern für Ihre Desktop-Brücke App](#transition-users) dieses Handbuchs an, um eine Vorstellung davon zu bekommen, bevor Sie Ihre App verteilen.
+> Haben Sie einen Plan, wie Sie für Benutzer den Übergang auf Ihre verpackte App ermöglichen können? Schauen Sie sich den Abschnitt [Umstellung von Benutzern auf Ihre verpackte App](#transition-users) dieses Handbuchs an, um eine Vorstellung davon zu bekommen, bevor Sie Ihre App verteilen.
 
-## <a name="distribute-your-app-by-publishing-it-to-the-microsoft-store"></a>Verteilen Sie Ihre App, indem Sie sie im Microsoft Store veröffentlichen.
+## <a name="distribute-your-app-by-publishing-it-to-the-microsoft-store"></a>Verteilen Ihrer App durch Veröffentlichung im Microsoft Store
 
 Der [Microsoft Store](https://www.microsoft.com/store/apps) ist eine bequeme Möglichkeit für Kunden, Ihre App zu beziehen.
 
-Veröffentlichen Sie Ihre App auf diesen Store, um die größtmögliche Zielgruppe zu erreichen. Darüber hinaus können Unternehmenskunden Ihre App erwerben und sie intern in ihren Organisationen durch den [Microsoft Store für Unternehmen](https://www.microsoft.com/business-store) verteilen.
+Veröffentlichen Sie Ihre App in diesem Store, um die größtmögliche Zielgruppe zu erreichen. Außerdem können Unternehmenskunden Ihre App erwerben und sie intern in ihren Organisationen über den [Microsoft Store für Unternehmen](https://www.microsoft.com/business-store) verteilen.
 
-Wenn Sie Ihre App auf dem Microsoft Store veröffentlichen möchten und Sie uns noch nicht kontaktiert haben, füllen Sie [dieses Formular](https://developer.microsoft.com/windows/projects/campaigns/desktop-bridge) aus, und Microsoft wird sich bei Ihnen melden, um die Aufnahme zu starten.
+Wenn Sie eine Veröffentlichung im Microsoft Store planen, werden Ihnen als Teil des Übermittlungsprozesses einige zusätzliche Fragen gestellt. Der Grund dafür ist, dass Ihr Paketmanifest eine eingeschränkte Funktion mit dem Namen **runFullTrust** deklariert und wir die Verwendung dieser Funktion durch Ihre Anwendung genehmigen müssen. Weitere Informationen zu dieser Anforderung finden Sie hier: [Eingeschränkte Funktionen](https://docs.microsoft.com/en-us/windows/uwp/packaging/app-capability-declarations#restricted-capabilities.html).
 
 Sie müssen Ihre App nicht signieren, bevor Sie sie an den Store übermitteln.
 
@@ -63,26 +63,26 @@ Weitere Informationen zum Querladen Ihrer App auf anderen Geräten finden Sie un
 
 **Videos**
 
-|Veröffentlichen Ihrer App im MicrosoftStore |Verteilen Sie eine Unternehmens-App  |
+|Veröffentlichen Ihrer App im MicrosoftStore |Verteilen einer Unternehmens-App  |
 |---|---|
 |<iframe src="https://mva.microsoft.com/en-US/training-courses-embed/developers-guide-to-the-desktop-bridge-17373/Demo-Windows-Store-Publication-3cWyG5WhD_5506218965"      width="426" height="472" allowFullScreen frameBorder="0"></iframe>|<iframe src="https://mva.microsoft.com/en-US/training-courses-embed/developers-guide-to-the-desktop-bridge-17373/Video-Distribution-for-Enterprise-Apps-XJ5Hd5WhD_1106218965" width="426" height="472" allowFullScreen frameBorder="0"></iframe>|
 
 <a id="transition-users" />
 
-## <a name="transition-users-to-your-desktop-bridge-app"></a>Den Übergang für Benutzer auf Ihre App für die Desktop-Brücke bereitstellen
+## <a name="transition-users-to-your-packaged-app"></a>Umstellung von Benutzern auf Ihre verpackte App
 
-Bevor Sie Ihre App verteilen, sollten Sie, Ihr Paketmanifest, erhalten mit der Brücke für Desktop-App besteht darin, Benutzern zu helfen einige Erweiterungen hinzufügen. Hier sind einige Dinge, die Sie tun können.
+Bevor Sie Ihre App verteilen, sollten Sie das Hinzufügen einiger Erweiterungen zu Ihrem Paketmanifest in Betracht ziehen, damit sich Benutzer daran gewöhnen, Ihre verpackte App zu verwenden. Hier sind einige Dinge, die Sie tun können.
 
-* Mit vorhandenen Start-Kacheln und Schaltflächen der Taskleiste auf Ihre Desktop-Brücke-App weisen.
-* Ihre verpackte App einer Gruppe von Dateitypen zuordnen.
-* Einstellen, dass Ihre Desktop-Brücke-App bestimmte Arten von Dateien standardmäßig öffnet.
+* Verweisen Sie mit vorhandenen Startkacheln und Taskleistenschaltflächen auf Ihre verpackte App.
+* Ordnen Sie Ihre verpackte App einer Gruppe von Dateitypen zu.
+* Sorgen Sie dafür, dass Ihre verpackte App bestimmte Dateitypen standardmäßig öffnet.
 
-Eine vollständige Liste der Erweiterungen und die Richtlinien für deren Verwendung finden Sie unter [Übergang für Ihre Benutzer zu Ihrer App](desktop-to-uwp-extensions.md#transition-users-to-your-app).
+Eine vollständige Liste der Erweiterungen und die Richtlinien für deren Verwendung finden Sie unter [Umstellung von Benutzern auf Ihre App](desktop-to-uwp-extensions.md#transition-users-to-your-app).
 
-Erwägen Sie außerdem das Hinzufügen von Code zu Ihrer Desktop-Brücke-App, der diese Aufgaben erledigt:
+Erwägen Sie außerdem das Hinzufügen von Code zu Ihrer verpackten App, der die folgenden Aufgaben erledigt:
 
-* Migriert Benutzerdaten, die Ihrer Desktop-App zugeordnet sind, zu den entsprechenden Ordnerspeicherorten Ihrer Desktop-Brücke App.
-* Gibt Benutzern die Möglichkeit, die Desktop-Version Ihrer App zu deinstallieren.
+* Migration von Benutzerdaten, die Ihrer Desktop-App zugeordnet sind, zu den entsprechenden Ordnerspeicherorten Ihrer verpackten App
+* Bereitstellung der Option für Benutzer, die Desktopversion Ihrer App zu deinstallieren
 
 Erfahren wir mehr über diese einzelnen Aufgaben. Wir beginnen mit der Migration von Benutzerdaten.
 
@@ -90,7 +90,7 @@ Erfahren wir mehr über diese einzelnen Aufgaben. Wir beginnen mit der Migration
 
 Wenn Sie Code hinzufügen, durch den Benutzerdaten migriert werden, empfiehlt es sich, diesen Code nur dann auszuführen, wenn die App das erste Mal gestartet wird. Bevor Sie die Benutzerdaten migrieren, zeigen Sie dem Benutzer ein Dialogfeld an, das erläutert, was passiert, warum es empfohlen wird und was mit den vorhandenen Daten geschehen wird.
 
-Hier ist ein Beispiel, wie Sie dies in einer NET-basierten Desktop-Brücke-App erreichen können.
+Hier ist ein Beispiel, wie Sie dies in einer NET-basierten verpackten App erreichen können.
 
 ```csharp
 private void MigrateUserData()
@@ -100,11 +100,9 @@ private void MigrateUserData()
 
     if (sourceDir != null)
     {
-        String migrateMessage =
-            "Would you like to migrate your data from the previous version of this app?";
-
         DialogResult migrateResult = MessageBox.Show
-            (migrateMessage, "Data Migration", MessageBoxButtons.YesNo);
+            ("Would you like to migrate your data from the previous version of this app?",
+             "Data Migration", MessageBoxButtons.YesNo);
 
         if (migrateResult.Equals(DialogResult.Yes))
         {
@@ -127,13 +125,13 @@ private void MigrateUserData()
 }
 ```
 
-### <a name="uninstall-the-desktop-version-of-your-app"></a>Deinstallieren Sie die Desktop-Version Ihrer App
+### <a name="uninstall-the-desktop-version-of-your-app"></a>Deinstallieren Sie die Desktopversion Ihrer App.
 
 Die Desktop-App des Benutzers sollte nicht deinstalliert werden, ohne nach der Berechtigung zu fragen. Zeigen Sie ein Dialogfeld an, das den Benutzer nach dieser Berechtigung fragt. Benutzer möchten gegebenenfalls die Desktop-Version Ihrer App nicht deinstallieren. In diesem Fall müssen Sie entscheiden, ob Sie die Nutzung der Desktop-App blockieren oder die parallele Nutzung beider Apps unterstützen wollen.
 
-Hier ist ein Beispiel, wie Sie dies in einer NET-basierten Desktop-Brücke-App erreichen können.
+Hier ist ein Beispiel, wie Sie dies in einer NET-basierten verpackten App erreichen können.
 
-Den vollständigen Kontext dieses Codestücks finden Sie in der **MainWindow.cs** Datei des Beispiels [WPF-Bildanzeige Übergang/Migration/Deinstallation](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/DesktopAppTransition).
+Den vollständigen Kontext dieses Codeausschnitts finden Sie in der **MainWindow.cs**-Datei des Beispiels [WPF-Bildanzeige mit Übergang/Migration/Deinstallation](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/DesktopAppTransition).
 
 ```csharp
 private void RemoveDesktopApp()
@@ -146,11 +144,10 @@ private void RemoveDesktopApp()
     //Detect if the previous version of the Desktop App is installed.
     if (uninstallString != null)
     {
-        String uninstallMessage = "To have the best experience, consider uninstalling the "
-            +" previous version of this app. Would you like to do that now?";
-
         DialogResult uninstallResult = MessageBox.Show
-            (uninstallMessage, "Uninstall the previous version", MessageBoxButtons.YesNo);
+            ("To have the best experience, consider uninstalling the "
+              + " previous version of this app. Would you like to do that now?",
+              "Uninstall the previous version", MessageBoxButtons.YesNo);
 
         if (uninstallResult.Equals(DialogResult.Yes))
         {

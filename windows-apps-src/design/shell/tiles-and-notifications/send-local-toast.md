@@ -12,12 +12,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Senden von Popupbenachrichtigungen, Benachrichtigungen, Benachrichtigungen senden, Popupbenachrichtigungen, Vorgehensweise, Schnellstart, erste Schritte, Codebeispiel, exemplarische Vorgehensweise
 ms.localizationpriority: medium
-ms.openlocfilehash: e59c90bae19116f725b58fc6ec9fdbb41e5dccb3
-ms.sourcegitcommit: 0ee9c6848cb9d624f15cdab1d0c5991ca7245e70
+ms.openlocfilehash: 4f76bc94c80a5191cf7bad86b43230f0d03e81b1
+ms.sourcegitcommit: f91aa1e402f1bc093b48a03fbae583318fc7e05d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2018
-ms.locfileid: "1641690"
+ms.lasthandoff: 05/24/2018
+ms.locfileid: "1917709"
 ---
 # <a name="send-a-local-toast-notification"></a>Senden einer lokalen Popupbenachrichtigung
 
@@ -25,7 +25,7 @@ ms.locfileid: "1641690"
 Eine Popupbenachrichtigung ist eine Nachricht, die eine App erstellen und an den Benutzer übermitteln kann, während diese(r) Ihre App aktuell nicht verwendet. Diese Schnellstartanleitung führt Sie durch die Schritteder Erstellung, Übermittlung und Anzeige einer Windows10-Popupbenachrichtigung mit den neuen adaptiven Vorlagen und interaktiven Aktionen. Diese Aktionen werden mit einer lokalen Benachrichtigung demonstriert– der einfachsten Benachrichtigung, die Sie implementieren können.
 
 > [!IMPORTANT]
-> Desktop-Apps (Desktop-Brücken und klassische Win32) haben verschiedene Schritte zum Senden von Benachrichtigungen und Behandeln der Aktivierung. Weitere Informationen über das Implementieren von Popups finden Sie in der [Desktop c#](send-local-toast-desktop.md) und [Desktop C++ WRL](send-local-toast-desktop-cpp-wrl.md)-Dokumentation.
+> Desktopanwendungen (Desktop-Brücke- und klassische Win32-Apps) haben verschiedene Schritte zum Senden von Benachrichtigungen und Behandeln der Aktivierung. Weitere Informationen zum Implementieren von Popups finden Sie in der Dokumentation zu [Desktop-Apps](toast-desktop-apps.md).
 
 Wir werden die folgenden Schrittedurchlaufen:
 
@@ -382,7 +382,7 @@ BackgroundAccessStatus status = await BackgroundExecutionManager.RequestAccessAs
 // Create the background task
 BackgroundTaskBuilder builder = new BackgroundTaskBuilder()
 {
-    Name = "MyToastNotificationActionTrigger",
+    Name = taskName
 };
 
 // Assign the toast action trigger

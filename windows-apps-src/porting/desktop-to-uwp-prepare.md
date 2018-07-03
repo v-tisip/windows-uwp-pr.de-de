@@ -4,19 +4,19 @@ Description: This article lists things you need to know before packaging your ap
 Search.Product: eADQiWindows 10XVcnh
 title: Vorbereiten der Verpackung einer App (Desktop-Brücke)
 ms.author: normesta
-ms.date: 02/21/2018
+ms.date: 05/18/20188
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows10, UWP
 ms.assetid: 71a57ca2-ca00-471d-8ad9-52f285f3022e
 ms.localizationpriority: medium
-ms.openlocfilehash: 1a4836992675f65773e9b5c890aca243e2a9e172
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 46e71812acdad92a5d017cee44490e7d8cc0de32
+ms.sourcegitcommit: c0f58410c4ff5b907176b1ffa275e2c202f099d4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832544"
+ms.lasthandoff: 05/21/2018
+ms.locfileid: "1905391"
 ---
 # <a name="prepare-to-package-an-app-desktop-bridge"></a>Vorbereiten der Verpackung einer App (Desktop-Brücke)
 
@@ -105,7 +105,7 @@ Die Abhängigkeiten werden nicht installiert, wenn die App durch Querladen insta
 
 + __Ihre App startet ein Hilfsprogramm zum Ausführen von Aufgaben__. Vermeiden Sie das Starten von Befehlshilfsprogrammen wie PowerShell und Cmd.exe. Wenn Benutzer Ihre App auf einem System mit Windows10 S installieren, wird Ihre App nicht in der Lage sein, sie alle zu starten. Die kann die Übermittlung Ihre App an den MicrosoftStore blockieren, da alle Übermittlung an den MicrosoftStore mit Windows10 S kompatibel sein müssen.
 
-Das Starten eines Hilfsprogramms kann oft eine bequeme Methode für das Abrufen von Informationen aus dem Betriebssystem, Zugreifen auf die Registrierung oder das Zugreifen auf Systemfunktionen bereitstellen. Sie können jedoch stattdessen UWP-APIs verwenden, um diese Aufgaben auszuführen. Diese APIs sind leistungsstärker, da sie für die Ausführung keine separate ausführliche Datei benötigen. Darüber hinaus hindern sie eine Ausführung der App außerhalb des Pakets. Das Design der App bleibt im Einklang mit der Netzwerkisolation, Vertrauensstellung und Sicherheit, die zu einer Desktop-Brücke-App gehören, und Ihre App verhält sich erwartungsgemäß auf Systemen mit Windows10 S.
+Das Starten eines Hilfsprogramms kann oft eine bequeme Methode für das Abrufen von Informationen aus dem Betriebssystem, Zugreifen auf die Registrierung oder das Zugreifen auf Systemfunktionen bereitstellen. Sie können jedoch stattdessen UWP-APIs verwenden, um diese Aufgaben auszuführen. Diese APIs sind leistungsstärker, da sie für die Ausführung keine separate ausführliche Datei benötigen. Darüber hinaus hindern sie eine Ausführung der App außerhalb des Pakets. Das Design der App bleibt im Einklang mit der Netzwerkisolation, Vertrauensstellung und Sicherheit, die zu einer mit der Desktop-Brücke verpackten Anwendung gehören, und Ihre App verhält sich erwartungsgemäß auf Systemen mit Windows10 S.
 
 + __Ihre App hostet Add-ins, -Plug-Ins oder Erweiterungen__.   In vielen Fällen werden Erweiterungen im COM-Stil wahrscheinlich weiterhin funktionieren, sofern die Erweiterung nicht verpackt wurde und sie als vertrauenswürdig installiert wurde. Grund dafür ist, dass die Installationsprogramme ihre vertrauenswürdigen Funktionen verwenden können, um die Registrierung zu bearbeiten und Erweiterungsdateien an beliebigen Stellen zu platzieren, damit die Host-App sie findet.
 

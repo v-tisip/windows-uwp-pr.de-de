@@ -4,18 +4,18 @@ ms.assetid: 252C44DF-A2B8-4F4F-9D47-33E423F48584
 description: Mittels dieser Methode in der Microsoft Store-Analyse-API können Sie gesammelte Fehlerberichtsdaten für einen bestimmten Zeitraum und andere optionale Filter abrufen.
 title: Abrufen von Fehlerberichtsdaten für Ihre App
 ms.author: mcleans
-ms.date: 03/06/2018
+ms.date: 06/05/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienst, Microsoft Store-Analyse-API, Fehler
 ms.localizationpriority: medium
-ms.openlocfilehash: 42f6926e8252f761ed54d30c410ffabe135e9c4a
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: 2937d0d9ebfc8c9450692a01e77e57e68c896dba
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1664090"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989474"
 ---
 # <a name="get-error-reporting-data-for-your-app"></a>Abrufen von Fehlerberichtsdaten für Ihre App
 
@@ -84,7 +84,7 @@ Authorization: Bearer <your access token>
 |------------|---------|--------------|
 | Wert      | array   | Ein Array von Objekten, die gesammelte Fehlerberichtsdaten enthalten. Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie unten im Abschnitt [Fehlerwerte](#error-values).     |
 | @nextLink  | String  | Wenn weitere Seiten mit Daten vorhanden sind, enthält diese Zeichenfolge einen URI, mit dem Sie die nächste Seite mit Daten anfordern können. Beispielsweise wird dieser Wert zurückgegeben, wenn der Parameter **top** der Anforderung auf 10000 festgelegt ist, es jedoch mehr als 10.000 Zeilen mit Fehlern für die Abfrage gibt. |
-| TotalCount | inumber | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.     |
+| TotalCount | Ganzzahl | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.     |
 
 
 ### <a name="error-values"></a>Fehlerwerte
@@ -95,19 +95,19 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 |-----------------|---------|---------------------|
 | date            | string  | Das erste Datum im Datumsbereich für die Fehlerdaten im Format ```yyyy-mm-dd```. Wenn die Anforderung einen einzelnen Tag angibt, ist dieses Datum dieser Wert. Wenn die Anforderung einen längeren Datumsbereich angibt, ist dieser Wert das erste Datum in diesem Datumsbereich. Für Anforderungen, die einen *aggregationLevel*-Wert von **hour** angeben, enthält dieser Wert auch einen Zeitwert im Format ```hh:mm:ss```.  |
 | applicationId   | string  | Die Store-ID der App, für die Fehlerdaten abgerufen werden sollen.   |
-| applicationName | string  | Der Anzeigename der App.   |
+| applicationName | String  | Der Anzeigename der App.   |
 | failureName     | String  | Der Name des Fehlers, der aus vier Teilen besteht: eine oder mehrere Problemklassen, ein Ausnahme/Fehlerprüfcode, der Name des Image, in dem der Fehler aufgetreten ist, und der zugehörige Funktionsname.  |
 | failureHash     | string  | Der eindeutige Bezeichner des Fehlers.   |
 | symbol          | string  | Das diesem Fehler zugewiesene Symbol. |
 | osVersion       | String  | Eine der folgenden Zeichenfolgen, die die Version des Betriebssystems angibt, auf dem der Fehler aufgetreten ist:<ul><li>**Windows Phone7.5**</li><li>**Windows Phone 8**</li><li>**Windows Phone 8.1**</li><li>**Windows Phone 10**</li><li>**Windows8**</li><li>**Windows8.1**</li><li>**Windows 10**</li><li>**Unknown**</li></ul>  |
-| osRelease       | String  |  Einer der folgenden Zeichenfolgen, die die Betriebssystemversion oder Verteilungsring (als ein Subpopulation innerhalb der Betriebssystemversion) angibt, auf dem die Desktopanwendung installiert ist.<p/><p>Für Windows10:</p><ul><li><strong>Version1507</strong></li><li><strong>Version1511</strong></li><li><strong>Version1607</strong></li><li><strong>Version1703</strong></li><li><strong>Version1709</strong></li><li><strong>Release Preview</strong></li><li><strong>Insider Fast</strong></li><li><strong>Insider Slow</strong></li></ul><p/><p>Für Windows Server 1709:</p><ul><li><strong>RTM</strong></li></ul><p>Für Windows Server 2016:</p><ul><li><strong>Version1607</strong></li></ul><p>Für Windows8.1:</p><ul><li><strong>Update 1</strong></li></ul><p>Für Windows7:</p><ul><li><strong>Service Pack 1</strong></li></ul><p>Wenn die Betriebssystemversion oder Verteilungsring unbekannt ist, hat dieses Feld den Wert <strong>Unknown</strong>.</p>    |
+| osRelease       | String  |  Eine der folgenden Zeichenfolgen, die die Betriebssystemversion oder den Verteilungsring (als eine Subpopulation innerhalb der Betriebssystemversion) angibt, in der bzw. dem der Fehler aufgetreten ist.<p/><p>Für Windows10:</p><ul><li><strong>Version1507</strong></li><li><strong>Version1511</strong></li><li><strong>Version1607</strong></li><li><strong>Version1703</strong></li><li><strong>Version1709</strong></li><li><strong>Version1803</strong></li><li><strong>Release Preview</strong></li><li><strong>Insider Fast</strong></li><li><strong>Insider Slow</strong></li></ul><p/><p>Für Windows Server 1709:</p><ul><li><strong>RTM</strong></li></ul><p>Für Windows Server 2016:</p><ul><li><strong>Version1607</strong></li></ul><p>Für Windows8.1:</p><ul><li><strong>Update 1</strong></li></ul><p>Für Windows7:</p><ul><li><strong>Service Pack 1</strong></li></ul><p>Wenn die Betriebssystemversion oder Verteilungsring unbekannt ist, hat dieses Feld den Wert <strong>Unknown</strong>.</p>    |
 | eventType       | string  | Eine der folgenden Zeichenfolgen:<ul><li>**crash**</li><li>**hang**</li><li>**memory**</li><li>**jse**</li></ul>      |
 | market          | string  | Der ISO3166-Ländercode des Gerätemarkts.   |
 | deviceType      | string  | Eine der folgenden Zeichenfolgen, die den Typ des Geräts anzeigt, auf dem der Fehler aufgetreten ist:<ul><li>**PC**</li><li>**Phone**</li><li>**Console**</li><li>**IoT**</li><li>**Holographic**</li><li>**Unknown**</li></ul>    |
 | packageName     | string  | Der eindeutige Name des App-Pakets, das mit diesem Fehler verknüpft ist.      |
 | packageVersion  | string  | Die Version des App-Pakets, das mit diesem Fehler verknüpft ist.   |
-| deviceCount     | inumber | Die Anzahl der eindeutigen Geräte, die diesem Fehler für die angegebene Aggregationsebene entsprechen.  |
-| eventCount      | inumber | Die Anzahl der Ereignisse, die diesem Fehler für die angegebene Aggregationsebene zugeordnet werden.      |
+| deviceCount     | Ganzzahl | Die Anzahl der eindeutigen Geräte, die diesem Fehler für die angegebene Aggregationsebene entsprechen.  |
+| eventCount      | Ganzzahl | Die Anzahl der Ereignisse, die diesem Fehler für die angegebene Aggregationsebene zugeordnet werden.      |
 
 
 ### <a name="response-example"></a>Antwortbeispiel
@@ -148,7 +148,7 @@ Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese 
 * [Abrufen der Stapelüberwachung für einen Fehler in Ihrer App](get-the-stack-trace-for-an-error-in-your-app.md)
 * [Herunterladen der CAB-Datei bei einem Fehler in Ihrer App](download-the-cab-file-for-an-error-in-your-app.md)
 * [Zugreifen auf Analysedaten mit MicrosoftStore-Diensten](access-analytics-data-using-windows-store-services.md)
-* [Abrufen von App-Erwerbungen](get-app-acquisitions.md)
+* [Abrufen von App-Käufen](get-app-acquisitions.md)
 * [Abrufen von Add-On-Käufen](get-in-app-acquisitions.md)
 * [Abrufen von App-Bewertungen](get-app-ratings.md)
 * [Abrufen von App-Rezensionen](get-app-reviews.md)

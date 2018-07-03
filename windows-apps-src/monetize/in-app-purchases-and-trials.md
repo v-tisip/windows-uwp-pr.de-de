@@ -4,18 +4,18 @@ ms.assetid: F45E6F35-BC18-45C8-A8A5-193D528E2A4E
 description: Erfahren Sie, wie Sie In-App-Käufe und Testversionen in UWP-Apps aktivieren.
 title: In-App-Käufe und Testversionen
 ms.author: mcleans
-ms.date: 08/25/2017
+ms.date: 05/09/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows10, uwp, In-app-käufe, IAPs-add-ons, Testversionen, verbrauchbar, dauerhaft, abonnement
 ms.localizationpriority: medium
-ms.openlocfilehash: 28e28c5db19d9a2b397a04cc326867605d796aac
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.openlocfilehash: 7b5b889dfd1dae69cbe4234bf0606127c1190522
+ms.sourcegitcommit: dc3389ef2e2c94b324872a086877314d6f963358
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691239"
+ms.lasthandoff: 05/11/2018
+ms.locfileid: "1874298"
 ---
 # <a name="in-app-purchases-and-trials"></a>In-App-Käufe und Testversionen
 
@@ -55,9 +55,9 @@ Für UWP-Apps können die folgenden Arten von Add-Ons angeboten werden.
 | Add-On-Typ |  Beschreibung  |
 |---------|-------------------|
 | Gebrauchsgut  |  Ein Add-On, das für die Lebensdauer beibehalten wird, die Sie im [Windows Dev Center-Dashboard](../publish/enter-iap-properties.md) angeben. <p/><p/>Standardmäßig laufen Gebrauchsgut-Add-Ons nie ab, in diesem Fall können sie nur einmal gekauft werden. Wenn Sie eine bestimmte Dauer für das Add-On angeben, kann der Benutzer das Add-On erneut kaufen, nachdem es abgelaufen ist. |
-| Von Entwicklern verwaltetes Endverbraucher-Add-On  |  Ein Add-On, das gekauft, verwendet und erneut gekauft werden kann. Diese Art von Add-On wird häufig als In-App-Währung verwendet. <p/><p/>Bei dieser Art von vom Store verwalteten Endverbraucher-Add-Ons sind Sie dafür verantwortlich, das Guthaben des Benutzers an den Elementen zu verfolgen, die dem Add-On entsprechen. Zudem müssen Sie den Kauf des Add-Ons im Store als abgeschlossen melden, nachdem der Benutzer alle Elemente genutzt hat. Der Benutzer kann das Add-On erst dann erneut kaufen, nachdem Ihre App den vorherigen Kauf des Add-Ons als erfüllt gemeldet hat. <p/><p/>Wenn beispielsweise das Add-On 100 Münzen in einem Spiel darstellt und der Benutzer 10 Münzen nutzt, muss die App oder der Dienst den neuen Restbetrag von 90 Münzen für den Benutzer verwalten. Nachdem der Benutzer alle 100 Münzen genutzt hat, muss die App das Add-On als erfüllt melden, und danach kann der Benutzer das Add-On für 100 Münzen erneut kaufen.    |
-| Vom Store verwaltetes Endverbraucher-Add-On  |  Ein Add-On, das gekauft, verwendet und erneut gekauft werden kann. Diese Art von Add-On wird häufig als In-App-Währung verwendet.<p/><p/>Bei dieser Art von Verbrauchsartikel verfolgt der Store das Guthaben des Benutzers an Elementen, die das Add-On darstellt. Wenn der Benutzer Elemente nutzt, sind Sie verantwortlich dafür, diese Elemente dem Store als erfüllt zu melden, und der Store aktualisiert das Guthaben des Benutzers. Ihre App kann das aktuelle Guthaben für den Benutzer jederzeit abfragen. Nachdem der Benutzer alle Elemente genutzt hat, kann er das Add-On erneut kaufen.  <p/><p/> Wenn das Add-On beispielsweise eine anfängliche Menge von 100 Münzen in einem Spiel darstellt und der Benutzer 10 Münzen nutzt, meldet die App dem Store, dass 10 Einheiten des Add-Ons erfüllt wurden, und der Store aktualisiert den Restbetrag. Nachdem der Benutzer alle 100 Münzen genutzt hat, kann er das Add-On für 100 Münzen erneut kaufen. <p/><p/>**Hinweis**&nbsp;&nbsp;Um vom Store verwaltete Endverbraucher-Add-Ons verwenden zu können, muss Ihre App für **Windows 10 Anniversary Edition (10.0; Build 14393)** oder höher in Visual Studio ausgerichtet sein. Zudem muss der **Windows.Services.Store**-Namespace anstatt von **Windows.ApplicationModel.Store**-Namespace verwendet werden.  |
-| Abonnement | Ein dauerhaftes Add-On, das dem Kunden in regelmäßigen Abständen in Rechnung gestellt wird, damit das Add-On weiterhin verwendet werden kann. Der Kunde kann das Abonnement jederzeit kündigen, um weitere Gebühren zu vermeiden. <p/><p/>**Hinweis**&nbsp;&nbsp;Abonnement-Add-Ons stehen derzeit nur für eine Gruppe von Entwicklern zur Verfügung, die am frühen Adoption-Programm teilnehmen. Um Abonnement-Add-Ons verwenden zu können, muss Ihre App für **Windows 10 Anniversary Edition (10.0; Build 14393)** oder höher in Visual Studio ausgerichtet sein. Zudem muss der **Windows.Services.Store**-Namespace anstatt von **Windows.ApplicationModel.Store**-Namespace verwendet werden.  |
+| Vom Entwickler verwaltetes Endverbraucher-Add-On  |  Ein Add-On, das erworben, verwendet (konsumiert) und anschließend erneut gekauft werden kann. Sie sind dafür verantwortlich, das Guthaben des Benutzers an Elementen, die das Add-On darstellen, nachzuverfolgen.<p/><p/>Wenn der Benutzer Elemente verwendet, die mit dem Add-On verknüpft sind, sind Sie dafür verantwortlich, das Guthaben des Benutzers zu verwalten und den Kauf des Add-Ons als erfüllt an den Store zu melden, nachdem der Benutzer alle Elemente verwendet hat. Der Benutzer kann das Add-On erst dann erneut kaufen, nachdem Ihre App den vorherigen Kauf des Add-Ons als erfüllt gemeldet hat. <p/><p/>Wenn beispielsweise das Add-On 100 Münzen in einem Spiel darstellt und der Benutzer 10 Münzen nutzt, muss die App oder der Dienst den neuen Restbetrag von 90 Münzen für den Benutzer verwalten. Nachdem der Benutzer alle 100 Münzen genutzt hat, muss die App das Add-On als erfüllt melden, und danach kann der Benutzer das Add-On für 100 Münzen erneut kaufen.    |
+| Vom Store verwaltetes Endverbraucher-Add-On  |  Ein Add-On, das gekauft, verwendet und jederzeit erneut gekauft werden kann. Der Store verfolgt das Guthaben des Benutzers an Elementen, die das Add-On darstellen.<p/><p/>Wenn der Benutzer Elemente verwendet, die mit dem Add-On verknüpft sind, sind Sie dafür verantwortlich, diese Elemente als erfüllt an den Store zu melden, und der Store aktualisiert das Konto des Benutzers. Der Benutzer kann das Add-On beliebig oft kaufen (er muss die Elemente nicht zuerst verwenden). Ihre App kann das aktuelle Guthaben für den Benutzer jederzeit abfragen. <p/><p/> Wenn das Add-On beispielsweise eine anfängliche Menge von 100 Münzen in einem Spiel darstellt und der Benutzer 50 Münzen nutzt, meldet die App dem Store, dass 50 Einheiten des Add-Ons verwendet wurden, und der Store aktualisiert den Restbetrag. Wenn der Benutzer dann Ihr Add-on erneut kauft, um 100 weitere Münzen zu erhalten, hat er jetzt 150 Münzen insgesamt. <p/><p/>**Hinweis**&nbsp;&nbsp;Um vom Store verwaltete Endverbraucher-Add-Ons verwenden zu können, muss Ihre App für **Windows 10 Anniversary Edition (10.0; Build 14393)** oder höher in Visual Studio ausgerichtet sein. Zudem muss der **Windows.Services.Store**-Namespace anstatt von **Windows.ApplicationModel.Store**-Namespace verwendet werden.  |
+| Abonnement | Ein dauerhaftes Add-On, das dem Kunden in regelmäßigen Abständen in Rechnung gestellt wird, damit das Add-On weiterhin verwendet werden kann. Der Kunde kann das Abonnement jederzeit kündigen, um weitere Gebühren zu vermeiden. <p/><p/>**Hinweis**&nbsp;&nbsp;Um Abonnement-Add-Ons verwenden zu können, muss Ihre App in Visual Studio für **Windows 10 Anniversary Edition (10.0; Build 14393)** oder höher entwickelt worden sein. Zudem muss der Namespace **Windows.Services.Store** statt dem Namespace **Windows.ApplicationModel.Store** verwendet werden.  |
 
 <span />
 
@@ -97,7 +97,7 @@ Im folgenden Video wird eine Übersicht über das Implementieren von In-App-Käu
 
 Der Haupteinstiegspunkt in den **Windows.Services.Store**-Namespace ist die [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Klasse. Diese Klasse stellt Methoden bereit, mit denen Sie Informationen für die aktuelle App und die verfügbaren Add-Ons abrufen, eine App oder ein Add-On für den aktuellen Benutzer kaufen, Lizenzinformationen für die aktuelle App oder die Add-Ons abrufen und weitere Aufgaben durchführen können. Gehen Sie zum Abrufen eines [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Objekts wie folgt vor:
 
-* Rufen Sie in einer Einzelbenutzer-App (einer App, die nur im Kontext des Benutzers ausgeführt wird, der die App gestartet hat) mit der statischen [GetDefault](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.getdefault)-Methode ein **StoreContext**-Objekt ab, mit dem Sie auf Microsoft Store-bezogene Daten für den Benutzer zugreifen können. Die meisten Apps für die Universelle Windows-Plattform (UWP) sind Einzelbenutzer-Apps.
+* Rufen Sie in einer Einzelbenutzer-App (einer App, die nur im Kontext des Benutzers ausgeführt wird, der die App gestartet hat) mit der statischen [GetDefault](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.getdefault)-Methode ein **StoreContext**-Objekt ab, mit dem Sie auf Microsoft Store-bezogene Daten für den Benutzer zugreifen können. Die meisten Apps für die universelle Windows-Plattform (UWP) sind Einzelbenutzer-Apps.
 
   ```csharp
   Windows.Services.Store.StoreContext context = StoreContext.GetDefault();

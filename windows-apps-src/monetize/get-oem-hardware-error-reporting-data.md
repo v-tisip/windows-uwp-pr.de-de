@@ -4,18 +4,18 @@ ms.assetid: AE3E003F-BDEC-438B-A80A-3CE1675B369C
 description: Mittels dieser Methode der Microsoft Store-Analyse-API können Sie gesammelte Fehlerberichtsdaten für Hardware für einen bestimmten Zeitraum und andere optionale Filter abrufen. Diese Methode ist nur für OEMs bestimmt.
 title: Abrufen von Fehlerberichtsdaten für OEM-Hardware
 ms.author: mcleans
-ms.date: 01/18/2018
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienst, Microsoft Store-Analyse-API, Fehler
 ms.localizationpriority: medium
-ms.openlocfilehash: 4e1e7d83b8094a79cb87a6611e2e6d8b8f05159e
-ms.sourcegitcommit: b7032f083bcbb71f5a7dd1a200dcc81dba496a81
+ms.openlocfilehash: f8d7a85a37272eb7046ca1e7f64476f94d9556e2
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
-ms.locfileid: "1527338"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989454"
 ---
 # <a name="get-oem-hardware-error-reporting-data"></a>Abrufen von Fehlerberichtsdaten für OEM-Hardware
 
@@ -87,7 +87,7 @@ Authorization: Bearer <your access token>
 |------------|---------|--------------|
 | Wert      | array   | Ein Array von Objekten, die gesammelte Fehlerberichtsdaten enthalten. Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie in der folgenden Tabelle.     |
 | @nextLink  | String  | Wenn weitere Seiten mit Daten vorhanden sind, enthält diese Zeichenfolge einen URI, mit dem Sie die nächste Seite mit Daten anfordern können. Beispielsweise wird dieser Wert zurückgegeben, wenn der Parameter **top** der Anforderung auf 10000 festgelegt ist, es jedoch mehr als 10.000 Zeilen mit Fehlern für die Abfrage gibt. |
-| TotalCount | inumber | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.     |
+| TotalCount | Ganzzahl | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.     |
 
 <span/>
 
@@ -112,7 +112,7 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 | modelFamily | String | Der Name der Familie des Gerätemodells, auf dem der Fehler aufgetreten ist. |
 | flightRing | String | Der Name des Test-Flights des Betriebssystems, auf dem der Fehler aufgetreten ist. |
 | mode | String | Dieser Wert ist immer *kernel*. |
-| eventCount      | inumber | Die Anzahl der Ereignisse, die diesem Fehler für die angegebene Aggregationsebene zugeordnet werden.      |
+| eventCount      | Ganzzahl | Die Anzahl der Ereignisse, die diesem Fehler für die angegebene Aggregationsebene zugeordnet werden.      |
 
 <span/> 
 

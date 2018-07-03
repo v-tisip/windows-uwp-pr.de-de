@@ -6,7 +6,7 @@ label: Access keys design guidelines
 keywords: Tastatur, Zugriffstaste, Zugriffstasteninfo, Info zu Zugriffstasten, Barrierefreiheit, Navigation, Fokus, Text, Eingabe, Benutzerinteraktion
 template: detail.hbs
 ms.author: kbridge
-ms.date: 02/08/2017
+ms.date: 06/08/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
@@ -15,12 +15,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: b335068762dd3999e07526962b0d6629825ad68d
-ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
+ms.openlocfilehash: a336109e9464052a33f5a0d8548e13b260b387a3
+ms.sourcegitcommit: ee77826642fe8fd9cfd9858d61bc05a96ff1bad7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "1707055"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "2018514"
 ---
 # <a name="access-keys"></a>Zugriffstasten
 
@@ -77,12 +77,10 @@ Microsoft Word bietet beispielsweise zwei Zugriffstastenbereiche: einen primäre
 Die folgenden Abbildungen zeigen die zwei Zugriffstastenbereiche in Word. Das erste Beispiel zeigt die primären Zugriffstasten, mit denen ein Benutzer eine Registerkarte und andere Befehle auf oberster Ebene auswählen kann. Das zweite zeigt die sekundären Zugriffstasten für die Registerkarte „Start“.
 
 ![Primäre Zugriffstasten in Microsoft Word](images/accesskeys/primary-access-keys-word.png)
-
 _Primäre Zugriffstasten in Microsoft Word_
 
 ![Sekundäre Zugriffstasten in Microsoft Word](images/accesskeys/secondary-access-keys-word.png)
-
-Sekundäre Zugriffstasten in Microsoft Word
+_Sekundäre Zugriffstasten in Microsoft Word_
 
 Zugriffstasten können für Elemente in verschiedenen Bereichen dupliziert werden. Im obigen Beispiel ist „2“ die Zugriffstaste für „Rückgängig“ im primären Bereich und „Kursiv“ im sekundären Bereich.
 
@@ -122,10 +120,11 @@ _Primärer Bereich der Befehlsleiste und unterstützte Zugriffstasten_
 
 _Sekundärer Bereich der Befehlsleiste und unterstützte Zugriffstasten_
 
-> [!NOTE]
-> Vor dem Windows10 Fall Creators Update boten einige Steuerelemente wie die Befehlsleiste keine Unterstützung für integrierte Zugriffstastenbereiche. In diesem Fall müssen Sie Zugriffstastenbereiche wie im folgenden Beispiel gezeigt implementieren.   
->
-> Hier wird gezeigt, wie Sie die sekundären Befehle der Befehlsleiste mit Zugriffstasten unterstützen, die verfügbar sind, sobald ein übergeordneter Befehl aufgerufen wird (vergleichbar mit dem Menüband in Word).
+### <a name="windows-10-creators-update-and-older"></a>Windows 10 Creators Update oder älter
+
+Vor dem Windows10 Fall Creators Update boten einige Steuerelemente wie die Befehlsleiste keine Unterstützung für integrierte Zugriffstastenbereiche.
+
+Im folgenden Beispiel ist gezeigt, wie Sie die sekundären Befehle der Befehlsleiste mit Zugriffstasten unterstützen, die verfügbar sind, sobald ein übergeordneter Befehl aufgerufen wird (vergleichbar mit dem Menüband in Word).
 
 ```xaml
 <local:CommandBarHack x:Name="MainCommandBar" AccessKey="M" >
@@ -178,11 +177,10 @@ public class CommandBarHack : CommandBar
         secondaryItemsControl.AccessKeyScopeOwner = moreButton;
 
         overflowPopup = GetTemplateChild("OverflowPopup") as Popup;
-
     }
+
     private void OnAccessKeyInvoked(UIElement sender, AccessKeyInvokedEventArgs args)
     {
-
         if (overflowPopup != null)
         {
             overflowPopup.Opened += SecondaryMenuOpened;

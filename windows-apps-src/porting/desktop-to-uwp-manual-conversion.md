@@ -4,19 +4,19 @@ Description: Shows how to manually package a Windows desktop application (like W
 Search.Product: eADQiWindows 10XVcnh
 title: Manuelles Verpacken einer App (Desktop-Brücke)
 ms.author: normesta
-ms.date: 05/25/2017
+ms.date: 05/18/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows10, UWP
 ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.localizationpriority: medium
-ms.openlocfilehash: 81d5b9b0b52ef0f7529b277215e7fe0b95683f0a
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.openlocfilehash: eeadd41debcfcf5cfde23948c52bdfe1ce32e9df
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1689766"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989644"
 ---
 # <a name="package-an-app-manually-desktop-bridge"></a>Verpacken Sie eine App manuell (Desktop-Brücke)
 
@@ -31,10 +31,11 @@ Wenn Sie sich nicht darüber sicher sind, welche Änderungen an das System durch
 >[!IMPORTANT]
 >Der Desktop-Brücke wurde in Windows10, Version 1607, eingeführt und kann nur in Projekten für das Windows10 Anniversary Update (10.0; Build 14393) oder einer neueren Version in Visual Studio verwendet werden.
 
-## <a name="first-consider-how-youll-distribute-your-app"></a>Überlegen Sie zunächst, wie Sie Ihre App verteilen möchten.
-Wenn Sie Ihre App im [Microsoft Store](https://www.microsoft.com/store/apps) veröffentlichen möchten, beginnen Sie mit dem Ausfüllen [dieses Formulars](https://developer.microsoft.com/windows/projects/campaigns/desktop-bridge). Microsoft nimmt mit Ihnen Kontakt auf und beginnt den Onboardingprozess. Im Rahmen dieses Prozesses reservieren Sie einen Namen im Store und erhalten Informationen, die Sie benötigen, um Ihre App zu verpacken.
+## <a name="first-prepare-your-application"></a>Vorbereiten Ihrer Anwendung
 
-## <a name="create-a-package-manifest"></a>Erstellen eines Paketmanifests.
+Lesen Sie dieses Handbuch, bevor Sie mit der Paketerstellung für Ihre Anwendung beginnen: [Vorbereiten der Verpackung einer App (Desktop-Brücke)](desktop-to-uwp-prepare.md).
+
+## <a name="create-a-package-manifest"></a>Erstellen eines Paketmanifests
 
 Erstellen Sie eine Datei, nennen Sie sie **appxmanifest.xml**, und fügen Sie diese XML-Datei hinzu.
 
@@ -111,7 +112,7 @@ Hier ist ein Beispiel für einen [Ressourcen](https://docs.microsoft.com/uwp/sch
 ```
 ### <a name="dependencies"></a>Abhängigkeiten
 
-Legen Sie für Desktop-Brücke-Apps die ``Name`` Attribute immer auf ``Windows.Desktop``.
+Für Desktop-Apps, die Sie mithilfe der Desktop-Brücke verpacken, legen Sie das Attribut ``Name`` immer auf ``Windows.Desktop`` fest.
 
 ```XML
 <Dependencies>
@@ -120,20 +121,20 @@ Legen Sie für Desktop-Brücke-Apps die ``Name`` Attribute immer auf ``Windows.D
 ```
 
 ### <a name="capabilities"></a>Funktionen
-Für Desktop-Brücke-Apps müssen Sie die ``runFullTrust``-Funktion hinzufügen.
+Für Desktop-Apps, die Sie mithilfe der Desktop-Brücke verpacken, müssen Sie die Funktion ``runFullTrust`` hinzufügen.
 
 ```XML
 <Capabilities>
   <rescap:Capability Name="runFullTrust"/>
 </Capabilities>
 ```
-## <a name="fill-in-the-application-level-elements"></a>Füllen Sie die Elemente auf Anwendungsebene aus.
+## <a name="fill-in-the-application-level-elements"></a>Ausfüllen der Elemente auf Anwendungsebene
 
 Geben Sie in diese Vorlage Informationen ein, die Ihre App beschreiben.
 
 ### <a name="application-element"></a>Anwendungselemente
 
-Für Desktop-Brücke-Apps sind die ``EntryPoint``-Attribute des Anwendungselements immer ``Windows.FullTrustApplication``.
+Für Desktop-Apps, die Sie mithilfe der Desktop-Brücke verpacken, ist das Attribut ``EntryPoint`` des Anwendungselement immer ``Windows.FullTrustApplication``.
 
 ```XML
 <Applications>

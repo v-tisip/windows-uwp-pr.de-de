@@ -10,18 +10,18 @@ ms.technology: uwp
 keywords: Windows10, UWP
 design-contact: karenmui
 ms.localizationpriority: medium
-ms.openlocfilehash: 6ab0d375971bc006cd477341fc51f3e6d6d91f78
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: fc348dc4f4733feae86a94e0ada1693326a201d8
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816725"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1843190"
 ---
 # <a name="color"></a>Farben
 
-![Headerbild](images/color/header-color.svg)
+![Favoritenbild](images/header-color.svg)
 
-Farbe ist die Weitergabe von Informationen für Benutzer in Ihrer App auf intuitive Weise: es kann Interaktivität anzuzeigen, Feedback auf Benutzeraktionen geben und Ihrer Benutzeroberfläche ein Gefühl von visueller Kontinuität vermitteln. 
+Farbe bietet eine intuitive Möglichkeit, Informationen an Benutzer in Ihrer App zu übermitteln – sie kann Interaktivität anzuzeigen, Feedback auf Benutzeraktionen geben und Ihrer Benutzeroberfläche ein Gefühl von visueller Kontinuität vermitteln. 
 
 In UWP-Apps werden die Farben in erster Linie durch Akzentfarbe und Design bestimmt. In diesem Artikel erläutern wir, wie Sie die Farbe in Ihrer App verwenden können, und wie Sie Akzentfarben und Designressourcen verwenden, um Ihre UWP-App in jedem beliebigen Design-Kontext verwendet zu können. 
 

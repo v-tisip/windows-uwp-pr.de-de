@@ -3,18 +3,18 @@ author: mcleanbyron
 description: Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um die Stapelüberwachung für einen Fehler in Ihrer Desktopanwendung abzurufen.
 title: Abrufen der Stapelüberwachung für einen Fehler in Ihrer Desktopanwendung
 ms.author: mcleans
-ms.date: 03/06/2018
+ms.date: 06/05/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Stapelüberwachung, Fehler, Desktopanwendung
 ms.localizationpriority: medium
-ms.openlocfilehash: 64413600d1e7cb91ce3e8c90d1b64f921cfc21a2
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: dfe496c771c4e69bc51b562c476469e8fef53c92
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663080"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989324"
 ---
 # <a name="get-the-stack-trace-for-an-error-in-your-desktop-application"></a>Abrufen der Stapelüberwachung für einen Fehler in Ihrer Desktopanwendung
 
@@ -74,7 +74,7 @@ Authorization: Bearer <your access token>
 |------------|---------|--------------------------------|
 | Wert      | array   | Ein Array von Objekten, die jeweils einen einzelnen Frame der Stapelüberwachungsdaten enthalten. Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie unten im Abschnitt [Stapelüberwachungswerte](#stack-trace-values). |
 | @nextLink  | String  | Wenn weitere Seiten mit Daten vorhanden sind, enthält diese Zeichenfolge einen URI, mit dem Sie die nächste Seite mit Daten anfordern können. Beispielsweise wird dieser Wert zurückgegeben, wenn der Parameter **top** der Anforderung auf 10 festgelegt ist, es jedoch mehr als 10 Zeilen mit Fehlern für die Abfrage gibt. |
-| TotalCount | inumber | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.          |
+| TotalCount | Ganzzahl | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.          |
 
 
 ### <a name="stack-trace-values"></a>Stapelüberwachungswerte

@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: ec676446562d5d97ff2a7020fc494f248323450b
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
+ms.openlocfilehash: e0931440977c33642a3154cfa1b0adca42032df0
+ms.sourcegitcommit: ee77826642fe8fd9cfd9858d61bc05a96ff1bad7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691939"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "2018626"
 ---
 # <a name="share-code-between-a-desktop-app-and-a-uwp-app"></a>Teilen von Code zwischen einer Desktop-App und einer UWP-App
 
@@ -26,8 +26,8 @@ Sie können den Code in .NET Standardbibliotheken übertragen und so eine univer
 Platzieren Sie so viel Code wie möglich in die standardmäßigen Klassenbibliotheken für .NET Standard 2.0.  Solange Ihr Code-APIs verwendet, die standardmäßig definiert sind, können Sie diesen in einer UWP-App wiederverwenden. Es ist einfacher denn je, Code in den Bibliotheken für .NET Standard zu teilen, da viele andere APIs in .NET Standard 2.0 enthalten sind.
 
 In diesem großartigen Video finden Sie weitere Informationen.
-<br><br>
-<iframe src="https://www.youtube.com/embed/YI4MurjfMn8?list=PLRAdsfhKI4OWx321A_pr-7HhRNk7wOLLY&amp;ecver=1" width="636" height="480" allowFullScreen frameBorder="0"></iframe>
+&nbsp;
+> [!VIDEO https://www.youtube.com/embed/YI4MurjfMn8]
 
 ### <a name="add-net-standard-libraries"></a>Hinzufügen von Bibliotheken für .NET Standard
 
@@ -56,10 +56,10 @@ Wir beginnen mit NuGet-Paketen und anderen DLL-Dateien, die Sie von einem Dritta
 Wenn Ihre Anwendung diese verwendet, bestimmen Sie, ob sie mit .NET Standard 2.0 kompatibel sind. Sie können dazu eine Visual Studio-Erweiterung oder ein Befehlszeilendienstprogramm verwenden.
 
 Verwenden Sie die gleichen Tools, um Ihren Code zu analysieren. Laden Sie die Tools hier herunter ([dotnet-apiport](https://github.com/Microsoft/dotnet-apiport/releases)). Schauen Sie sich dieses Video an, um zu erfahren, wie Sie diese verwenden können.
-<br><br>
-<iframe src="https://www.youtube.com/embed/rzs_FGPyAlY?list=PLRAdsfhKI4OWx321A_pr-7HhRNk7wOLLY&amp;ecver=2" width="636" height="480" allowFullScreen frameBorder="0"></iframe>
+&nbsp;
+> [!VIDEO https://www.youtube.com/embed/rzs_FGPyAlY]
 
- Wenn Ihr Code nicht mit dem Standard kompatibel ist, ziehen Sie weitere Möglichkeiten in Betracht, um diesen Code zu implementieren. Öffnen Sie dazu den [.NET API-Browser](https://docs.microsoft.com/dotnet/api/?view=netstandard-2.0). Sie können diesen Browsers verwenden, um die APIs zu überprüfen, die in .NET Standard 2.0 verfügbar sind. Beschränken Sie die Liste unbedingt auf den .NET Standard 2.0.
+Wenn Ihr Code nicht mit dem Standard kompatibel ist, ziehen Sie weitere Möglichkeiten in Betracht, um diesen Code zu implementieren. Öffnen Sie dazu den [.NET API-Browser](https://docs.microsoft.com/dotnet/api/?view=netstandard-2.0). Sie können diesen Browsers verwenden, um die APIs zu überprüfen, die in .NET Standard 2.0 verfügbar sind. Beschränken Sie die Liste unbedingt auf den .NET Standard 2.0.
 
 ![Dot-Net-Option](images/desktop-to-uwp/dot-net-option.png)
 
@@ -101,7 +101,7 @@ public static ArrayList GetCustomerNames()
 }
 
 ```
-Der [.NET API-Browser](https://docs.microsoft.com/dotnet/api/?view=netstandard-2.0) zeigt uns allerdings eine Alternative. Wir können die ``DbConnection``, ``DbCommand``, und ``DbDataReader``-Klassen verwenden, da diese Klassen in .NET Standard 2.0 verfügbar sind.  
+Wir können jedoch den [.NET API-Browser](https://docs.microsoft.com/dotnet/api/?view=netstandard-2.0) verwenden, um eine Alternative zu finden. Die Klassen ``DbConnection``, ``DbCommand``, und ``DbDataReader`` sind alle in .NET Standard 2.0 verfügbar, sodass wir diese stattdessen verwenden können.  
 
 Die überarbeitete Version verwendet diese Klassen, um eine Liste der Kunden zu erhalten. Zum Erstellen einer ``DbConnection``-Klasse müssen wir allerdings ein Factoryobjekt übergeben, das wir in der Clientanwendung erstellen.
 
@@ -158,9 +158,9 @@ public partial class Customers : Form
 ## <a name="reach-all-windows-devices"></a>Erreichen aller Windows-Geräte
 
 Jetzt können Sie der Lösung eine UWP-App hinzuzufügen.
-<div style="float: left; padding: 10px">
-    ![Abbildung der Desktop-zu-UWP-Brücke](images/desktop-to-uwp/adaptive-ui.png)
-</div>
+
+![Abbildung der Desktop-zu-UWP-Brücke](images/desktop-to-uwp/adaptive-ui.png)
+
 Sie müssen allerdings noch die Seiten der Benutzeroberfläche in XAML erstellen und den für jedes Gerät oder jede Plattform spezifischen Code schreiben. Wenn Sie damit fertig sind, können Sie den gesamten Umfang der Windows10-Geräte erreichen und Ihre App-Seiten werden modern dargestellt und eignen sich so gut für unterschiedliche Bildschirmgrößen und -Auflösungen.
 
 Ihre App reagiert auf andere Eingabemechanismen als nur Tastatur und Maus, und die Funktionen und Einstellungen sind auf allen Geräten intuitiv. Dies bedeutet, dass Benutzer lernen, Aufgaben nur einmal durchzuführen. Dies funktioniert in vertrauter Art und Weise und ist vom Gerät unabhängig.
@@ -211,9 +211,8 @@ Erste Schritte mit UWP finden Sie unter [Was ist eine UWP-App](https://docs.micr
 ## <a name="reach-ios-and-android-devices"></a>Erreichen von iOS- und Android-Geräten
 
 Durch das Hinzufügen von Xamarin-Projekten können Sie Android und iOS-Geräten erreichen.  
-<div style="float: left; padding: 10px">
-    ![Xamarin-Apps](images/desktop-to-uwp/xamarin-apps.png)
-</div>
+
+![Xamarin-Apps](images/desktop-to-uwp/xamarin-apps.png)
 
 Diese Projekte ermöglichen die Verwendung von C# zur Entwicklung von Android- und iOS-Apps mit Vollzugriff auf plattformspezifische und gerätespezifische APIs. Diese Apps nutzen die plattformspezifische Hardwarebeschleunigung und wurden für die native Leistung kompiliert.
 

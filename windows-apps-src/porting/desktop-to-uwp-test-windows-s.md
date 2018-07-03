@@ -1,8 +1,8 @@
 ---
 author: normesta
-Description: Test your app for Windows 10 S without having to install Windows 10 S.
+Description: Test your app for Windows 10 in S mode.
 Search.Product: eADQiWindows 10XVcnh
-title: Testen Ihrer Windows-App für Windows10 S
+title: Testen Ihrer Windows-App für Windows 10 S
 ms.author: normesta
 ms.date: 05/11/2017
 ms.topic: article
@@ -10,16 +10,16 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10 S, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: a5810789ab2457ed14964a61bf278c84e7deb416
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: 69cceb86710cea0e9066454fba4ef4e1746633d1
+ms.sourcegitcommit: dc3389ef2e2c94b324872a086877314d6f963358
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1662710"
+ms.lasthandoff: 05/11/2018
+ms.locfileid: "1874318"
 ---
-# <a name="test-your-windows-app-for-windows-10-s"></a>Testen Ihrer Windows-App für Windows10 S
+# <a name="test-your-windows-app-for-windows-10-in-s-mode"></a>Testen Ihrer Windows-App für Windows 10 im S Modus
 
-Bevor Sie Ihre App testen, stellen Sie sicher, dass sie korrekt auf Geräten unter Windows10 S ausgeführt wird. Wenn Sie Ihre App im Microsoft Store veröffentlichen möchten, müssen Sie dies tun, da es eine Anforderung des Stores ist. Um Ihre App zu testen, können Sie eine Richtlinie für Device Guard-Codeintegrität auf einem Gerät anwenden, auf dem Windows10 Pro ausgeführt wird.
+Sie können Ihre Windows-App testen, um sicherzustellen, dass sie auf Geräten, auf denen Windows 10 im S Modus ausgeführt wird, ordnungsgemäß funktioniert. Sie müssen diesen Test sogar vornehmen, wenn Sie Ihre App im Microsoft Store veröffentlichen möchten, da dies eine Store-Anforderung ist. Um Ihre App zu testen, können Sie eine Richtlinie für Device Guard-Codeintegrität auf einem Gerät anwenden, auf dem Windows10 Pro ausgeführt wird.
 
 > [!NOTE]
 > Auf dem Gerät, auf das Sie die Device Guard-Codeintegritätsrichtlinie anwenden, muss Windows10 Creators Edition (10.0; Build 15063) oder höher ausgeführt werden.
@@ -80,7 +80,7 @@ Es wird empfohlen, diese Richtlinien auf einem virtuellen Computer anzuwenden, d
 
 Wenn Sie diese Richtlinien auf Ihrem lokalen Computer anwenden möchten, empfiehlt es sich, mit der Richtlinie für den Überwachungsmodus zu beginnen. Mit dieser Richtlinie können Sie die Ereignisprotokolle zur Codeintegrität überprüfen, um sicherzustellen, dass keine wichtigen Elemente in einer erzwungenen Richtlinie blockiert werden würden.
 
-Wenn Sie eine Richtlinie anwenden möchten, suchen Sie die Datei „.P7B” für die gewählte Richtlinie, benennen Sie sie in **SIPolicy.P7B** um, und speichern Sie diese Datei unter folgendem Speicherort auf Ihrem System: **C:\Windows\System32\CodeIntegrity\**.
+Wenn Sie eine Richtlinie anwenden möchten, suchen Sie die Datei „.P7B” für die gewählte Richtlinie, benennen Sie die Datei in **SIPolicy.P7B** um, und speichern Sie diese Datei an folgendem Speicherort auf Ihrem System: **C:\Windows\System32\CodeIntegrity\\**.
 
 Starten Sie das System anschließend neu.
 
@@ -99,8 +99,8 @@ Weitere Informationen finden Sie unter [UserVoice](https://wpdev.uservoice.com/f
 
 **Lesen Sie einen detaillierten Blogartikel, der von unserer App-Team bereitgestellt wurde**
 
-Weitere Informationen finden Sie unter [Portieren und Testen Ihrer klassischen Desktop-Apps zu Windows10 S mit der Desktop-Brücke](https://blogs.msdn.microsoft.com/appconsult/2017/06/15/porting-and-testing-your-classic-desktop-applications-on-windows-10-s-with-the-desktop-bridge/).
+Weitere Informationen finden Sie unter [Portieren und Testen Ihrer klassischen Desktopanwendungen auf Windows10 S mit der Desktop-Brücke](https://blogs.msdn.microsoft.com/appconsult/2017/06/15/porting-and-testing-your-classic-desktop-applications-on-windows-10-s-with-the-desktop-bridge/).
 
-**Informationen Sie zu Tools, die Tests für Windows S vereinfachen**
+**Erfahren Sie mehr über Tools, die den Test für den S Modus von Windows erleichtern**
 
 Weitere Informationen finden Sie unter [Entpacken, Ändern, neu Packen und Signieren eines APPX](https://blogs.msdn.microsoft.com/appconsult/2017/08/07/unpack-modify-repack-sign-appx/).

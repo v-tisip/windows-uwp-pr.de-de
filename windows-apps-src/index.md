@@ -10,12 +10,12 @@ ms.date: 08/4/2017
 ms.technology: uwp
 keywords: Windows UWP, Universelle Windows-Plattform, Windows-Runtime-APIs, Windows-API, Windows-API-Referenz, Winrt-API, Windows-API-Referenz, UWP-API, UWP-API-Referenz, UWP entwickeln, Entwerfen von UWP, UWP veröffentlichen
 ms.localizationpriority: medium
-ms.openlocfilehash: 48faa2eb29e29dd95028d8404190a7add2536352
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
+ms.openlocfilehash: 48c5dc7352a44e3e07b78e78ae0b5e099660ec4f
+ms.sourcegitcommit: e4627686138ec8c885696c4c511f2f05195cf8ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1692335"
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "1893865"
 ---
 # <a name="universal-windows-platform-documentation"></a>Dokumentation für die universelle Windows-Plattform
 Mit der Universellen Windows-Plattform (UWP) können Sie Apps für beliebige Windows-Geräte entwickeln – z.B. PCs, Smartphones, Xbox One, HoloLens und mehr – und im Microsoft Store veröffentlichen.
@@ -120,13 +120,13 @@ Mit der Universellen Windows-Plattform (UWP) können Sie Apps für beliebige Win
                             <a href="packaging/index.md">Verpacken von Apps</a>
                         </p>
                         <p>
-                            <a href="//docs.microsoft.com/windows/uwpcommunitytoolkit/">UWP Community Toolkit</a>
+                            <a href="//docs.microsoft.com/windows/uwpcommunitytoolkit/">Windows-Community-Toolkit</a>
                         </p>
                         <p>
                             <a href="porting/index.md">Portieren von Apps auf Windows 10</a>
                         </p>
                         <p>
-                            <a href="winrt-components/index.md">Komponente für Windows-Runtime</a>
+                            <a href="winrt-components/index.md">Komponenten für Windows-Runtime</a>
                         </p>
                         <p>
                             <a href="apps-for-education/index.md">Bildungs-Apps</a>

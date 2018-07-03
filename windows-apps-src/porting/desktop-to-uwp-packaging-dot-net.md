@@ -11,12 +11,12 @@ ms.technology: uwp
 keywords: windows10, UWP
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
 ms.localizationpriority: medium
-ms.openlocfilehash: d7ae77c499cb8398aa5557f0d422899fbe8b252d
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: 5e3dce1950de907462b62967291d456fb062bd9c
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816255"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989268"
 ---
 # <a name="package-an-app-by-using-visual-studio-desktop-bridge"></a>Verpacken einer App mit Visual Studio (Desktop-Brücke)
 
@@ -27,11 +27,9 @@ Die aktuelle Version von Visual Studio bietet ein neue Version des Paketprojekts
 >[!IMPORTANT]
 >Der Desktop-Brücke wurde in Windows10, Version 1607, eingeführt und kann nur in Projekten für das Windows10 Anniversary Update (10.0; Build 14393) oder einer neueren Version in Visual Studio verwendet werden.
 
-## <a name="first-consider-how-youll-distribute-your-app"></a>Überlegen Sie zunächst, wie Sie Ihre App verteilen möchten.
+## <a name="first-prepare-your-application"></a>Vorbereiten Ihrer Anwendung
 
-Wenn Sie Ihre App im [Microsoft Store](https://www.microsoft.com/store/apps) veröffentlichen möchten, beginnen Sie mit dem Ausfüllen [dieses Formulars](https://developer.microsoft.com/windows/projects/campaigns/desktop-bridge). Microsoft nimmt mit Ihnen Kontakt auf und beginnt den Onboardingprozess. Im Rahmen dieses Prozesses reservieren Sie einen Namen im Store und erhalten Informationen, die Sie benötigen, um Ihre App zu verpacken.
-
-Lesen Sie außerdem unbedingt dieses Handbuch lesen, bevor Sie mit der Paketerstellung für Ihre Anwendung beginnen: [Vorbereiten der Verpackung einer App (Desktop-Brücke)](desktop-to-uwp-prepare.md).
+Lesen Sie dieses Handbuch, bevor Sie mit der Paketerstellung für Ihre Anwendung beginnen: [Vorbereiten der Verpackung einer App (Desktop-Brücke)](desktop-to-uwp-prepare.md).
 
 <a id="new-packaging-project"/>
 
@@ -72,7 +70,8 @@ Lesen Sie außerdem unbedingt dieses Handbuch lesen, bevor Sie mit der Paketerst
 
 **Video**
 
-<iframe src="https://www.youtube.com/embed/fJkbYPyd08w" width="636" height="480" allowFullScreen frameBorder="0"></iframe>
+&nbsp;
+> [!VIDEO https://www.youtube.com/embed/fJkbYPyd08w]
 
 ## <a name="next-steps"></a>Nächste Schritte
 

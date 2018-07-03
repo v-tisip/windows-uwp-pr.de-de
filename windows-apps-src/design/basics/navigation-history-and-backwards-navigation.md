@@ -14,12 +14,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: cefcefc9df85b512456c5fb2e556ad95e56d4999
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 824f0e83408893bf95d856067282b1fea1313876
+ms.sourcegitcommit: 588171ea8cb629d2dd6aa2080e742dc8ce8584e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1831984"
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "1895407"
 ---
 #  <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>Navigationsverlauf und Rückwärtsnavigation für UWP-Apps
 
@@ -190,16 +190,16 @@ Wenn Sie Ihre eigene Zurück-Stapelnavigation bereitstellen möchten, sollte die
 </tr>
 <tr class="even">
 <td style="vertical-align:top;"><strong>Seite zu Seite, gleiche Peer-Gruppe, kein Bildschirmnavigationselement</strong>
-<p>Der Benutzer navigiert von einer Seite zu einer anderen mit derselben Peer-Gruppe. Es gibt kein Navigationselement, das immer vorhanden ist (wie Registerkarten/Pivots oder ein angedockter Navigationsbereich) und das eine direkte Navigation zu beiden Seiten ermöglicht.</p></td>
+<p>Der Benutzer navigiert von einer Seite zu einer anderen mit derselben Peer-Gruppe. Es gibt kein Navigationselement, das immer vorhanden ist (wie ein oberer Navigationsbereich oder ein angedockter Navigationsbereich) und das eine direkte Navigation zu beiden Seiten ermöglicht.</p></td>
 <td style="vertical-align:top;"><strong>Ja</strong>
-<p>In der folgenden Abbildung navigiert der Benutzer zwischen zwei Seiten in derselben Peer-Gruppe. Die Seiten verwenden keine Registerkarten oder angedockten Navigationsbereich, sodass die Navigation dem Navigationsverlauf hinzugefügt wird.</p>
+<p>In der folgenden Abbildung navigiert der Benutzer zwischen zwei Seiten in derselben Peer-Gruppe. Die Seiten verwenden keinen oberen oder angedockten Navigationsbereich, sodass die Navigation dem Navigationsverlauf hinzugefügt wird.</p>
 <p><img src="images/back-nav/nav-pagetopage-samepeer-noosnavelement.png" alt="Navigation within a peer group" /></p></td>
 </tr>
 <tr class="odd">
 <td style="vertical-align:top;"><strong>Seite zu Seite, gleiche Peer-Gruppe, mit einem Bildschirmnavigationselement</strong>
-<p>Der Benutzer navigiert von einer Seite zu einer anderen in derselben Peer-Gruppe. Beide Seiten werden im gleichen Navigationselement angezeigt. Beide Seiten verwenden beispielsweise das gleiche Registerkarten/Pivots-Element, oder beide Seiten werden in einem angedockten Navigationsbereich angezeigt.</p></td>
-<td style="vertical-align:top;"><strong>Nein</strong>
-<p>Wenn der Benutzer die Zurück-Schaltfläche drückt, wird wieder die letzte Seite aufgerufen, die geöffnet war, bevor der Benutzer zur aktuellen Peer-Gruppe navigierte.</p>
+<p>Der Benutzer navigiert von einer Seite zu einer anderen in derselben Peer-Gruppe. Beide Seiten werden im gleichen Navigationselement angezeigt. Beide Seiten verwenden beispielsweise das gleiche Element für den oberen Bereich, oder beide Seiten werden in einem angedockten linken Navigationsbereich angezeigt.</p></td>
+<td style="vertical-align:top;"><strong>Das kommt darauf an.</strong>
+<p>Ja, fügen Sie es dem Navigationsverlauf hinzu, jedoch mit zwei Ausnahmen. Wenn Sie davon ausgehen, dass Benutzer Ihrer App häufig zwischen Seiten in der Peer-Gruppe wechseln, oder wenn Sie den Navigationszustand/-verlauf innerhalb einer Seite einer Peer-Gruppe beibehalten möchten, dann fügen Sie es dem Navigationsverlauf nicht hinzu. Wenn der Benutzer in diesem Fall die Zurück-Schaltfläche drückt, wird wieder die letzte Seite aufgerufen, die geöffnet war, bevor der Benutzer zur aktuellen Peer-Gruppe navigierte. </p>
 <p><img src="images/back-nav/nav-pagetopage-samepeer-yesosnavelement.png" alt="Navigation across peer groups when a navigation element is present" /></p></td>
 </tr>
 <tr class="even">

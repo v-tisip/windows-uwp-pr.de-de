@@ -4,18 +4,18 @@ ms.assetid: 79DC7C99-70F1-499A-856B-D2A83FC6F867
 description: Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um detaillierte Daten zu einem Windows10-Treiberfehler zu erhalten. Diese Methode ist nur für IHVs bestimmt.
 title: Abrufen von Informationen zu einem Windows10-Treiberfehler
 ms.author: mcleans
-ms.date: 01/18/2018
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Fehler, Details
 ms.localizationpriority: medium
-ms.openlocfilehash: 93a8ee084bae4862beebe0c7998f440f279862a8
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: 66729d94f4ea8c6db42b3e573e0e9407d6295e91
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663670"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989374"
 ---
 # <a name="get-details-for-a-windows-10-driver-error"></a>Abrufen von Informationen zu einem Windows10-Treiberfehler
 
@@ -85,7 +85,7 @@ Authorization: Bearer <your access token>
 |------------|---------|------------|
 | Wert      | array   | Ein Array von Objekten, die detaillierte Fehlerdaten enthalten. Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie in der folgenden Tabelle.          |
 | @nextLink  | String  | Wenn weitere Seiten mit Daten vorhanden sind, enthält diese Zeichenfolge einen URI, mit dem Sie die nächste Seite mit Daten anfordern können. Beispielsweise wird dieser Wert zurückgegeben, wenn der Parameter **top** der Anforderung auf 10 festgelegt ist, es jedoch mehr als 10 Zeilen mit Fehlern für die Abfrage gibt. |
-| TotalCount | inumber | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.        |
+| TotalCount | Ganzzahl | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.        |
 
 
 Elemente im Array *Value* enthalten die folgenden Werte.
@@ -95,7 +95,7 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 | date            | string  | Das erste Datum im Datumsbereich für die Fehlerdaten. Wenn die Anforderung einen einzelnen Tag angibt, ist dieses Datum dieser Wert. Wenn die Anforderung eine Woche, einen Monat oder einen anderen Datumsbereich angibt, ist dieser Wert das erste Datum in diesem Datumsbereich. |
 | applicationId   | String  | Der Produkt-ID-Wert des Treibers, für den Fehlerdaten abgerufen wurden. |
 | submissionId   | String  | Die ID der Einreichung, die dem Treiber zugeordnet ist. |
-| failureName     | string  |Der Name des Fehlers, der aus vier Teilen besteht: eine oder mehrere Problemklassen, ein Ausnahme/Fehlerprüfcode, der Name des Treibers, in dem der Fehler aufgetreten ist, und der zugehörige Funktionsname.             |
+| failureName     | String  |Der Name des Fehlers, der aus vier Teilen besteht: eine oder mehrere Problemklassen, ein Ausnahme/Fehlerprüfcode, der Name des Treibers, in dem der Fehler aufgetreten ist, und der zugehörige Funktionsname.             |
 | failureHash     | string  | Der eindeutige Bezeichner des Fehlers.     |
 | symbol     | string  | Das diesem Fehler zugewiesene Symbol.     |
 | osVersion       | String  | Die vierteilige Buildversion des Betriebssystems, auf dem der Fehler aufgetreten ist.    |

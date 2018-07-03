@@ -12,26 +12,28 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0a986d6de680a3024ae252ba640871f9c5d22141
-ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
+ms.openlocfilehash: 4653e07d6d81f884ee6519206e75350aa47945f8
+ms.sourcegitcommit: f91aa1e402f1bc093b48a03fbae583318fc7e05d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "1707045"
+ms.lasthandoff: 05/24/2018
+ms.locfileid: "1917585"
 ---
 # <a name="guidelines-for-visual-feedback"></a>Richtlinien für visuelles Feedback
 
-
 Zeigen Sie Benutzern durch visuelles Feedback, wenn ihre Interaktionen ermittelt, interpretiert und behandelt werden. Visuelles Feedback ist hilfreich für Benutzer und kann sie zur Interaktion ermutigen. Es weist auf erfolgreiche Interaktionen hin, was für den Benutzer das Gefühl der Kontrolle verstärkt. Darüber hinaus informiert es über den Systemstatus und verringert die Fehlerzahl.
 
-> **Wichtige APIs**:  [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648), [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084), [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383)
+> **Wichtige APIs**: [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648), [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084), [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383)
 
 ## <a name="recommendations"></a>Empfehlungen
 
--   Versuchen Sie, so eng wie möglich an der ursprünglichen Steuerelementvorlage zu bleiben, um eine optimale Steuerung und Leistung der Anwendung sicherzustellen.
--   Verwenden Sie keine Toucheingabevisualisierungen in Situationen, in denen diese die Verwendung der App beeinträchtigen könnten. Weitere Informationen finden Sie unter [**ShowGestureFeedback**](https://msdn.microsoft.com/library/windows/apps/br241969).
--   Zeigen Sie nur dann Feedback an, wenn dies absolut notwendig ist. Sorgen Sie dafür, dass die Benutzeroberfläche übersichtlich bleibt. Zeigen Sie nur dann visuelles Feedback an, wenn die darin enthaltenen Informationen sonst nirgends verfügbar sind.
--   Versuchen Sie, die Verhaltensweisen der integrierten Windows-Gesten für visuelles Feedback nicht in erheblichem Umfang anzupassen, da dies eine inkonsistente und verwirrende Benutzerumgebung zur Folge haben kann.
+- Versuchen Sie, Änderungen an einer Steuerelementvorlage auf ein Minimum zu beschränken, die direkt im Zusammenhang mit Ihrem Designziel stehen, da sich umfangreiche Änderungen auf die Leistung und Zugänglichkeit des Steuerelements und der Anwendung auswirken können. 
+    - Unter [XAML-Formatvorlagen](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/xaml-styles) finden Sie weitere Informationen zum Anpassen der Eigenschaften eines Steuerelements, einschließlich der visuellen Zustandseigenschaften.
+    - Unter [UserControl-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.usercontrol) finden Sie weitere Informationen zu Änderungen an einer Steuerelementvorlage.
+    - Erwägen Sie, eine eigene benutzerdefinierte Steuerelementvorlage zu erstellen, wenn Sie umfangreiche Änderungen an einer Steuerelementvorlage vornehmen müssen. Ein Beispiel für eine benutzerdefinierte Steuerelementvorlage finden Sie unter [Beispiel für ein benutzerdefiniertes Bearbeitungssteuerelement](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CustomEditControl).
+- Verwenden Sie keine Toucheingabevisualisierungen in Situationen, in denen diese die Verwendung der App beeinträchtigen könnten. Weitere Informationen finden Sie unter [**ShowGestureFeedback**](https://msdn.microsoft.com/library/windows/apps/br241969).
+- Zeigen Sie nur dann Feedback an, wenn dies absolut notwendig ist. Sorgen Sie dafür, dass die Benutzeroberfläche übersichtlich bleibt. Zeigen Sie nur dann visuelles Feedback an, wenn die darin enthaltenen Informationen sonst nirgends verfügbar sind.
+- Versuchen Sie, die Verhaltensweisen der integrierten Windows-Gesten für visuelles Feedback nicht in erheblichem Umfang anzupassen, da dies eine inkonsistente und verwirrende Benutzerumgebung zur Folge haben kann.
 
 ## <a name="additional-usage-guidance"></a>Weitere Hinweise zur Verwendung
 
@@ -39,8 +41,8 @@ Kontaktvisualisierungen sind besonders für Touchinteraktionen wichtig, bei dene
 
 Durch die Verwendung der Standardsteuerelemente für die XAML-Plattform stellen Sie sicher, dass Ihre App auf allen Geräten und in allen Eingabesituationen ordnungsgemäß funktioniert. Wenn Ihre App benutzerdefinierte Interaktionen enthält, die angepasstes Feedback erfordern, müssen Sie sicherstellen, dass sich das Feedback für die jeweiligen Zwecke eignet, für alle unterstützten Eingabegeräte verfügbar ist und den Benutzer nicht von seiner eigentlichen Arbeit ablenkt. Dies kann insbesondere bei Spiel- oder Zeichnungs-Apps ein Problem sein, bei denen das visuelle Feedback mit wichtigen UI-Elementen kollidieren oder diese verdecken kann.
 
-> [!Important] 
-> Das Interaktionsverhalten der integrierten Gesten sollte nicht geändert werden. 
+> [!Important]
+> Das Interaktionsverhalten der integrierten Gesten sollte nicht geändert werden.
 
 **Feedback auf allen Geräten**
 
@@ -59,6 +61,8 @@ Im Folgenden finden Sie einige Beispiele für integrierte Kontaktvisualisierunge
 ## <a name="high-visibility-focus-visuals"></a>Visuelle Fokuselemente mit hoher Sichtbarkeit
 
 Alle Windows-Apps zeigen ein stärker definiertes visuelles Fokuselement um interaktive Steuerelemente innerhalb der Anwendung herum. Diese neuen visuellen Fokuselemente können vollständig angepasst und auch gelöscht werden, wenn nötig.
+
+Für das **10-Fuß-TV-Erlebnis**, das typisch für die Xbox und TV-Nutzung ist, unterstützt Windows **Einblendungen mit Fokus**, einen Lichteffekt, der den Rahmen fokussierbarer Elemente wie z.B. eine Schaltfläche animiert, wenn sie über Gamepads oder Tastatureingaben anfokussiert werden. Weitere Informationen finden Sie unter [Entwerfen für Xbox und Fernsehgeräte](https://docs.microsoft.com/windows/uwp/design/devices/designing-for-tv#reveal-focus).
 
 ## <a name="color-branding--customizing"></a>Farbbranding und -anpassung
 

@@ -1,9 +1,8 @@
 ---
-description: Erfahren Sie, wie Sie Farbe, Typografie und Bewegung verwenden, um den Charakter Ihrer UWP-App mithilfe der Windows Dev Center-Formatanleitungen für UWP zu definieren.
+description: Erfahren Sie, wie Sie mithilfe der UWP-Formatvorlage Farbe, Typografie und Symbole verwenden können, um Ihrer UWP-App einen eigenen Charakter zu geben.
 keywords: UWP-Formatanleitungen, Designanleitungen, Typografie, Bewegung, Ton, Bewegung, App-Entwicklung
-title: UWP-Entwurfsrichtlinien
+title: Stile für UWP-Apps
 author: mijacobs
-layout: LandingPage
 ms.author: mijacobs
 ms.date: 08/10/2017
 ms.topic: article
@@ -11,134 +10,67 @@ ms.prod: windows
 ms.technology: uwp
 ms.assetid: 4df395d2-f10e-4e0e-9bf2-660f82b8a9fa
 ms.localizationpriority: medium
-ms.openlocfilehash: bc703dd76827ada708f9861b5772b2fce552e5bb
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.openlocfilehash: d1b9620907c3d5852db35d62f3d971031f3122c4
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652939"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1842407"
 ---
-# <a name="style-for-uwp-apps"></a>Style für UWP-Apps
+# <a name="style-for-uwp-apps"></a>Stile für UWP-Apps
 
-Durch den Stil fällt Ihre App auf. Es geht um ästhetische Auswahlmöglichkeiten, mutige Auswahlmöglichkeiten und Feinheiten. Sie möchten etwas ansprechender gestalten. 
+![Favoritenbild](images/header-style.svg)
 
-## <a name="style-and-the-fluent-design-system"></a>Stil und das Fluent Design-System
+Durch einen besonderen Stil können Sie Ihre App auszeichnen. Die Gestaltungsrichtlinien in diesem Abschnitt unterstützen Sie beim Erstellen eines Fluent Design durch Farbe, Typografie und neue Funktionen wie Acrylmaterial und Glanzlicht.
 
-<p>Mit dem Fluent Design-System können Sie moderne, klare Benutzeroberflächen erstellen, die Licht, Tiefe, Bewegung, Material und Skalierung enthalten. Mithilfe der Stil-Richtlinien in diesem Abschnitt erstellen Sie eine Fluent Design mit Farben, Typografie und neue Features wie z.B. <a href="../style/acrylic.md">Acryl-Material</a> und <a href="../style/reveal.md">Einblendungen</a>. 
-</p>
+:::row::: :::column::: ![Favoritenbild](images/header-color.svg)
+        ### [Color](color.md)
+        Color provides intuitive wayfinding through an app's various levels of information and serves as a crucial tool for reinforcing the interaction model.
+    :::column-end:::
+    :::column:::
+        ![hero image](images/header-typography.svg)
+        ### [Typography](typography.md)
+       As the visual representation of language, typography’s main task is to be clear. Its style should never get in the way of that goal. The following guidelines focus on how to use typography to help users understand content easily. 
+    :::column-end:::
+:::row-end:::
 
-## <a name="style-articles"></a>Stilelemente
+:::row::: :::column::: ![Favoritenbild](images/header-icons.svg)
+        ### [Icons](icons.md)
+        Good icons harmonize with typography and with the rest of the design language. They don’t mix metaphors, and they communicate only what’s needed, as speedily and simply as possible.
+    :::column-end:::
+    :::column:::
+        ![hero image](images/header-acrylic.svg)
+        ### [Acrylic](acrylic.md)
+        Create a sense of depth with acrylic, a brush that creates stunning, translucent surfaces.
+    :::column-end:::
+:::row-end:::
 
-<ul class="panelContent cardsH" style="margin-left: 1px">
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardText">
-                        <h3><a href="acrylic.md">Acryl-Material</a></h3>
-                        <p>Erzeugen Sie Tiefenwirkung mit Acryl, einem Pinsel, der für durchsichtige Oberflächen sorgt.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardText">
-                        <h3><a href="color.md">Farben</a></h3>
-                        <p>Farben tragen dazu bei, dass sich Benutzer intuitiv in einer App zurechtfinden, und spielen eine wichtige Rolle für das Interaktionsmodell.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardText">
-                        <h3><a href="icons.md">Symbole</a></h3>
-                        <p>Gute Symbole harmonieren mit der Typografie und der übrigen Designsprache. Sie verwenden keine Metaphern und geben einfach und schnell nur die erforderlichen Informationen weiter.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardText">
-                        <h3><a href="reveal.md">Reveal-highlight</a></h3>
-                        <p>Verwenden Sie Licht, um wichtige Elemente hervorzuheben. </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-     <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardText">
-                        <h3><a href="reveal-focus.md">Einblendungen mit Fokus</a></h3>
-                        <p>Verwenden Sie Licht, um das aktuell fokussierte Element hervorzuheben. </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardText">
-                        <h3><a href="sound.md">Sound</a></h3>
-                        <p>Sound vervollständigt die Benutzerumgebung einer Anwendung und trägt zur Vermittlung des Windows-Feelings auf allen Plattformen bei.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>  
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardText">
-                        <h3><a href="typography.md">Typografie</a></h3>
-                        <p>Typografie muss übersichtlich sein, da sie zur visuellen Darstellung von Sprache dient. Ihr Stil darf diesem Ziel nie im Wege stehen. Typografie spielt jedoch auch als Layoutkomponente eine wichtige Rolle und wirkt sich maßgeblich auf die Dichte und Komplexität des Designs und damit auf die Benutzerfreundlichkeit des Designs aus.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardText">
-                        <h3><a href="writing-style.md">Schreibstil</a></h3>
-                        <p>Die richtigen Worte können einen großen Einfluss auf die Benutzererfahrung haben.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>     
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardText">
-                        <h3><a href="../controls-and-patterns/xaml-styles.md">Formatieren von Steuerelementen</a></h3>
-                        <p>Das XAML-Framework bietet zahlreiche Anpassungsmöglichkeiten für die App-Darstellung. Sie können mit Formaten die Steuerelementeigenschaften festlegen und diese Einstellungen dann für andere Steuerelemente wiederverwenden, um ein einheitliches Erscheinungsbild zu erzielen.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>                     
-</ul>
+:::row::: :::column::: ![Favoritenbild](images/header-reveal-highlight.svg)
+        ### [Reveal highlight](reveal.md)
+        Use light to illuminate important elements.
+    :::column-end:::
+    :::column:::
+        ![hero image](images/header-reveal-focus.svg)
+        ### [Reveal focus](reveal-focus.md)
+        Reveal focus is a lighting effect for 10 foot experiences, such as Xbox One and television screens, and animates the border of focusable elements.
+    :::column-end:::
+:::row-end:::
 
+:::row::: :::column::: ![Favoritenbild](images/header-sound.svg)
+        ### [Sound](sound.md)
+        Sound helps complete an application's user experience, and gives them that extra audio edge they need to match the feel of Windows across all platforms.
+    :::column-end:::
+    :::column:::
+        ![hero image](images/header-writing-style.gif)
+        ### [Writing style](writing-style.md)
+        Writing style can make a big difference between an awful user experience and a better one.
+    :::column-end:::
+:::row-end:::
 
-
+:::row::: :::column:::
+        ### [XAML styles](../controls-and-patterns/xaml-styles.md)
+        You can customize the appearance of your apps in many ways by using the XAML framework. Styles let you set control properties and reuse those settings for a consistent appearance across multiple controls.
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::

@@ -1,21 +1,21 @@
 ---
-author: GrantMeStrength
+author: QuinnRadich
 ms.assetid: 7D5EED8A-0742-4E12-A806-40FBAEFE6ABF
 title: Vorbereitung
 description: Das Durchführen der Vorbereitung ist einfacher, als Sie denken. Befolgen Sie diese Anweisungen, um mit dem Erstellen von Universellen Windows-Plattform (UWP)-Apps für Windows 10 zu beginnen.
-ms.author: jken
-ms.date: 03/06/2017
+ms.author: quradic
+ms.date: 05/07/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: high
-ms.openlocfilehash: ac918fac5d2733a39f3f5d9a469105c61328a676
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: 86603443aefe08ddf684e4dc8a2df8541074e0b4
+ms.sourcegitcommit: 929fa4b3273862dcdc76b083bf6c3b2c872dd590
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817671"
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "1935660"
 ---
 # <a name="get-set-up"></a>Vorbereiten
 
@@ -56,20 +56,22 @@ Sie können jetzt mit der Entwicklung von Apps beginnen. Zum Übermitteln an den
 
 ## <a name="whats-next"></a>Nächste Schritte
 
-Nachdem Sie die Tools installiert Ihr Gerät für die Entwicklung aktiviert haben, können Sie unsere Lernprogramme zum Erstellen Ihrer ersten App nutzen:
+Nachdem Sie die Tools installiert und Ihr Gerät für die Entwicklung aktiviert haben, schauen Sie sich unsere Anleitungen mit den ersten Schritten zum Erstellen von Windows10-Apps an.
 
--   Lernprogramme zum Thema [Erstellen Ihrer ersten App](your-first-app.md)
+-   [Beginnen Sie mit der Codierung](create-uwp-apps.md)
+
+## <a name="windows-development-setup-scripts"></a>Setupskripts für die Windows-Entwicklung
+
+Wenn Sie Ihr Gerät anpassen und andere Funktionen oder Pakete installieren möchten, schauen Sie sich dieses Projekt für Systemsetupskripts an.
+
+- [Setupskripts für Entwickler](https://github.com/Microsoft/windows-dev-box-setup-scripts)
 
 ## <a name="want-more-tools-and-downloads"></a>Benötigen Sie mehr Tools und Downloads?
 
 Die vollständige Liste der Tools und Downloads finden Sie unter [Downloads](http://go.microsoft.com/fwlink/p/?linkid=285935).
 
-
 ## <a name="see-also"></a>Siehe auch
 
-* [Erstellen von UWP-Apps](create-uwp-apps.md)
-* [Veröffentlichen Sie Ihre UWP-App](https://developer.microsoft.com/store/publish-apps).
-* [Anleitungen zur Entwicklung von UWP-Apps](https://developer.microsoft.com/windows/apps/develop)
 * [Codebeispiele für UWP-Entwickler](https://developer.microsoft.com/windows/samples)
 * [Was ist eine UWP-App?](universal-application-platform-guide.md)
 * [Für Windows-Konto anmelden](sign-up.md)

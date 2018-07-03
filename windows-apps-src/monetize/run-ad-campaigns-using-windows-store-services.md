@@ -4,18 +4,18 @@ ms.assetid: 8e6c3d3d-0120-40f4-9f90-0b0518188a1a
 description: Mit der Werbungs-API des Microsoft Store verwalten Sie programmgesteuert Werbeanzeigenkampagnen für Apps, die für Ihr Windows Dev Center-Konto oder das Ihrer Organisation registriert sind.
 title: Durchführen von Anzeigenkampagnen mit Store-Diensten
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store Werbungs-API, Anzeigenkampagnen
 ms.localizationpriority: medium
-ms.openlocfilehash: dd90b970a126495d7a1035256f4bdd219aee9ee5
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.openlocfilehash: 45869b96d17fa51fbdf22e417c7e7f43a8c90a9b
+ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1655282"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "1976225"
 ---
 # <a name="run-ad-campaigns-using-store-services"></a>Durchführen von Anzeigenkampagnen mit Store-Diensten
 
@@ -48,11 +48,11 @@ Stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllt haben, bevor
 
 Gehen Sie wie folgt vor, um Ihrem Dev Center-Konto eine Azure AD-Anwendung zuzuordnen und die erforderlichen Werte abzurufen:
 
-1.  Rufen Sie in Dev Center die **Kontoeinstellungen** auf, klicken Sie auf **Benutzer verwalten**, und [ordnen Sie das Dev Center-Konto Ihrer Organisation dem Azure AD-Verzeichnis Ihrer Organisation zu](../publish/associate-azure-ad-with-dev-center.md).
+1.  [Weisen Sie in Dev Center das Dev Center-Konto Ihrer Organisation dem AzureAD-Verzeichnis Ihrer Organisation zu](../publish/associate-azure-ad-with-dev-center.md).
 
-2.  Klicken Sie auf der Seite **Benutzer verwalten** auf **AzureAD-Apps hinzufügen**, und fügen Sie die AzureAD-Anwendung hinzu, die die App oder den Dienst darstellt, mit denen Sie Werbekampagnen für Ihr Dev Center-Konto verwalten. Weisen Sie ihr anschließend die Rolle **Manager** zu. Wenn diese Anwendung bereits in Ihrem AzureAD-Verzeichnis vorhanden ist, können Sie sie auf der Seite **Azure AD-Apps hinzufügen** auswählen, um sie Ihrem Dev Center-Konto hinzuzufügen. Andernfalls können Sie eine neue Azure AD-Anwendung auf der Seite **Azure AD-Apps hinzufügen** erstellen. Weitere Informationen finden Sie unter [Hinzufügen von Azure AD-Anwendungen zu Ihrem Dev Center-Konto](../publish/add-users-groups-and-azure-ad-applications.md#azure-ad-applications).
+2.  Fügen Sie als Nächstes auf der Seite **Benutzer** im Abschnitt **Kontoeinstellungen** in Dev Center [die AzureAD-Anwendung hinzu](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-dev-center-account), die die App oder den Dienst darstellt, mit der/dem Sie Werbekampagnen für Ihr Dev Center-Konto verwalten. Weisen Sie dieser Anwendung anschließend die Rolle **Verwalter** zu. Wenn die Anwendung in Ihrem AzureAD-Verzeichnis noch nicht vorhanden ist, können Sie [eine neue AzureAD-Anwendung im Dev Center erstellen](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-dev-center-account). 
 
-3.  Wechseln Sie zurück zur Seite **Benutzer verwalten**, klicken Sie auf den Namen Ihrer Azure AD-Anwendung, um die Anwendungseinstellungen aufzurufen, und kopieren Sie die Werte unter **Mandanten-ID** und **Client-ID**.
+3.  Wechseln Sie zurück zur Seite **Benutzer**, klicken Sie auf den Namen der Azure AD-Anwendung, um die Anwendungseinstellungen aufzurufen, und kopieren Sie die Werte unter **Mandanten-ID** und **Client-ID**.
 
 4. Klicken Sie auf **Neuen Schlüssel hinzufügen**. Kopieren Sie auf dem folgenden Bildschirm den Wert unter **Schlüssel**. Nach dem Verlassen der Seite können Sie nicht mehr auf diese Informationen zugreifen. Weitere Informationen finden Sie unter [Verwalten von Schlüsseln für eine Azure AD-App](../publish/add-users-groups-and-azure-ad-applications.md#manage-keys).
 

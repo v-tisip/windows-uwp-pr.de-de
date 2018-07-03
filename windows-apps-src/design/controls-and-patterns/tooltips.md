@@ -16,22 +16,20 @@ design-contact: kimsea
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: b60b06d9dbe8c0eb6216c2c909cc5184855056d5
-ms.sourcegitcommit: 4b522af988273946414a04fbbd1d7fde40f8ba5e
+ms.openlocfilehash: dfd702f9ba6e28e1902ea8e595287ba10b46f4bb
+ms.sourcegitcommit: 588171ea8cb629d2dd6aa2080e742dc8ce8584e5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
-ms.locfileid: "1493607"
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "1895282"
 ---
 # <a name="tooltips"></a>QuickInfos
- 
 
 Eine QuickInfo ist eine kurze Beschreibung, die mit einem anderen Steuerelement oder Objekt verknüpft ist. QuickInfos erläutern Benutzern unbekannte Objekte, die in der Benutzeroberfläche nicht direkt beschrieben werden. Sie wird automatisch angezeigt, wenn der Benutzer den Fokus auf ein Steuerelement verschiebt, es gedrückt hält oder mit dem Mauszeiger darauf zeigt. Sie wird nach einigen Sekunden wieder ausgeblendet, wenn der Benutzer den Finger, den Mauszeiger oder den Tastatur-/Gamepad-Fokus bewegt.
 
 ![Eine QuickInfo](images/controls/tool-tip.png)
 
-> **Wichtige APIs**: [ToolTip-Klasse](https://msdn.microsoft.com/library/windows/apps/br227608), [ToolTipService-Klasse](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.tooltipservice)
-
+> **Wichtige APIs**: [ToolTip-Klasse](/uwp/api/Windows.UI.Xaml.Controls.ToolTip), [ToolTipService-Klasse](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.tooltipservice)
 
 ## <a name="is-this-the-right-control"></a>Ist dies das richtige Steuerelement?
 
@@ -39,25 +37,25 @@ Verwenden Sie eine QuickInfo, damit der Benutzer weitere Informationen über ein
 
 Wann sollten Sie eine QuickInfo verwenden? Orientieren Sie sich an folgenden Fragen:
 
--   **Sollen die Informationen beim Daraufzeigen sichtbar werden?**
+- **Sollen die Informationen beim Daraufzeigen sichtbar werden?**
     Wenn dies nicht erwünscht ist, verwenden Sie ein anderes Steuerelement. QuickInfos sollte niemals ohne vorhergehende Aktion angezeigt werden, sondern immer als Ergebnis einer Benutzerinteraktion.
 
--   **Ist das Steuerelement mit Text beschriftet?**
+- **Ist das Steuerelement mit Text beschriftet?**
     Wenn dies nicht der Fall ist, fügen Sie die Beschriftung als QuickInfo hinzu. Beim UX-Entwurf empfiehlt es sich, die meisten Steuerelemente inline zu beschriften, sodass QuickInfos dafür nicht erforderlich sind. Steuerelemente in Symbolleisten sowie nur Symbole zeignde Befehlsschaltflächen müssen dagegen mit QuickInfos versehen werden.
 
--   **Wären eine Beschreibung oder zusätzliche Informationen zu einem Objekt hilfreich?**
+- **Wären eine Beschreibung oder zusätzliche Informationen zu einem Objekt hilfreich?**
     Verwenden Sie in diesem Fall eine QuickInfo. Der Text ist aber nur als Ergänzung gedacht – wichtige Informationen für die Hauptaufgaben dürfen nicht nur als QuickInfo vorhanden sein. Fügen Sie wichtige Informationen direkt in die Benutzeroberfläche ein, damit Benutzer nicht erst danach suchen müssen.
 
--   **Handelt es sich bei den ergänzenden Informationen um Fehler-, Warn- oder Statusmeldungen?**
+- **Handelt es sich bei den ergänzenden Informationen um Fehler-, Warn- oder Statusmeldungen?**
     Verwenden Sie in diesem Fall ein anderes Benutzeroberflächenelement, beispielsweise ein Flyout.
 
--   **Müssen die Benutzer mit den Informationen interagieren?**
+- **Müssen die Benutzer mit den Informationen interagieren?**
     Verwenden Sie in diesem Fall ein anderes Steuerelement. Eine Benutzerinteraktion mit QuickInfo ist nicht möglich, da die Informationen beim Bewegen der Maus ausgeblendet werden.
 
--   **Müssen die Benutzer die ergänzenden Informationen drucken?**
+- **Müssen die Benutzer die ergänzenden Informationen drucken?**
     Verwenden Sie in diesem Fall ein anderes Steuerelement.
 
--   **Ist anzunehmen, dass sich die Benutzer durch QuickInfo gestört oder abgelenkt fühlen?**
+- **Ist anzunehmen, dass sich die Benutzer durch QuickInfo gestört oder abgelenkt fühlen?**
     Ziehen Sie in diesem Fall eine andere Lösung in Betracht. Möglicherweise können Sie ganz auf die zusätzlichen Informationen verzichten. Wenn Sie QuickInfos verwenden, obwohl dies die Benutzer möglicherweise irritiert, geben Sie den Benutzern die Möglichkeit, die QuickInfos zu deaktivieren.
 
 ## <a name="example"></a>Beispiel
@@ -76,9 +74,59 @@ Wann sollten Sie eine QuickInfo verwenden? Orientieren Sie sich an folgenden Fra
 </tr>
 </table>
 
-Eine QuickInfo in der Bing-Karten-App.
+Eine QuickInfo in der App „Bing Karten”.
 
-![Eine QuickInfo in der Bing-Karten-App](images/control-examples/tool-tip-maps.png)
+![Eine QuickInfo in der App „Bing Karten”](images/control-examples/tool-tip-maps.png)
+
+## <a name="create-a-tooltip"></a>Erstellen einer QuickInfo
+
+Eine [QuickInfo](/uwp/api/Windows.UI.Xaml.Controls.ToolTip) muss einem anderen Benutzeroberflächenelement zugewiesen werden, das deren Eigentümer ist. Die [ToolTipService](/uwp/api/windows.ui.xaml.controls.tooltipservice)-Klasse bietet statische Methoden zum Anzeigen einer QuickInfo.
+
+Verwenden Sie in XAML die angefügte **ToolTipService.Tooltip**-Eigenschaft, um die QuickInfo einem Eigentümer zuzuweisen.
+
+```xaml
+<Button Content="Submit" ToolTipService.ToolTip="Click to submit"/>
+```
+
+Verwenden Sie im Code die Methode [ToolTipService.SetToolTip](/uwp/api/windows.ui.xaml.controls.tooltipservice.settooltip), um die QuickInfo einem Eigentümer zuzuweisen.
+
+```xaml
+<Button x:Name="submitButton" Content="Submit"/>
+```
+
+```csharp
+ToolTip toolTip = new ToolTip();
+toolTip.Content = "Click to submit";
+ToolTipService.SetToolTip(submitButton, toolTip);
+```
+
+### <a name="content"></a>Inhalt
+
+Sie können jedes beliebige Objekt als [Inhalt](/uwp/api/windows.ui.xaml.controls.contentcontrol.content) einer QuickInfo verwenden. Hier ist ein Beispiel für die Verwendung eines [Bilds](/uwp/api/windows.ui.xaml.controls.image) in einer QuickInfo.
+
+```xaml
+<TextBlock Text="store logo">
+    <ToolTipService.ToolTip>
+        <Image Source="Assets/StoreLogo.png"/>
+    </ToolTipService.ToolTip>
+</TextBlock>
+```
+
+### <a name="placement"></a>Platzierung
+
+Standardmäßig wird eine QuickInfo über dem Zeiger zentriert angezeigt. Die Platzierung wird nicht durch das App-Fenster eingeschränkt, sodass die QuickInfo möglicherweise teilweise oder komplett außerhalb der Grenzen des App-Fensters angezeigt wird.
+
+Wenn eine QuickInfo die Inhalte verdeckt, auf die sie sich bezieht, können Sie ihre Position anpassen. Verwenden Sie die Eigenschaft [Placement](/uwp/api/windows.ui.xaml.controls.tooltip.placement) oder die angefügte **ToolTipService.Placement**-Eigenschaft, um die QuickInfo über, unter, links oder rechts neben dem Zeiger zu platzieren. Sie können die Eigenschaften [VerticalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.verticaloffset) und [HorizontalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.horizontaloffset) so festlegen, dass der Abstand zwischen dem Zeiger und der QuickInfo geändert wird.
+
+```xaml
+<!-- A TextBlock with an offset ToolTip. -->
+<TextBlock Text="TextBlock with an offset ToolTip.">
+    <ToolTipService.ToolTip>
+        <ToolTip Content="Offset ToolTip."
+                 HorizontalOffset="20" VerticalOffset="30"/>
+    </ToolTipService.ToolTip>
+</TextBlock>
+```
 
 ## <a name="recommendations"></a>Empfehlungen
 

@@ -9,27 +9,20 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: f588bdcf659c7a19cccd002d6068412c771b120c
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: c01ff601dad0298aef6fa033032b5f08055cfb9b
+ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1831774"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "1975982"
 ---
 # <a name="point-of-service"></a>Point of Service
-Dieser Abschnittenthält Artikel zur Verwendung von [Windows.Devices.PointOfService](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice), um mit Peripheriegeräten über universelle Windows-Anwendungen in Einzelhandel und Gastronomie-Umgebungen zu interagieren.
+Dieser Abschnitt enthält Artikel zur Verwendung von [Windows.Devices.PointOfService](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice), um mit Peripheriegeräten über Universelle Windows-Anwendungen in Einzelhandel- und Gastronomie-Umgebungen zu interagieren.
 
-## <a name="fundamentals"></a>Grundlagen
 |Thema |Beschreibung |
 |------|------------|
-| [Erste Schritte](pos-get-started.md) | Dieser Artikel unterstützt Sie bei den ersten Schritten mit Point Of Service-UWP-APIs. |
+| [Grundlagen](pos-basics.md) | Dieser Artikel unterstützt Sie bei den ersten Schritten mit Point Of Service-UWP-APIs. |
 | [Hardwaresupport](pos-device-support.md) | Liste der bekannten kompatiblen Geräten mit [Windows.Devices.PointOfService](https://aka.ms/pointofservice-api) UWP-APIs |
-|
-
-## <a name="device-index"></a>Geräteindex
-Informationen über bestimmte Funktionen je nach Gerät finden Sie in den Themen weiter unten
-|Thema |Beschreibung |
-|------|------------|
 | [Strichcodescanner](pos-barcodescanner.md) | Index der Artikeln zu Strichcodescannern |
 | [POSPrinter](pos-printer.md) | Index zu Artikeln über POSPrinter |
 |

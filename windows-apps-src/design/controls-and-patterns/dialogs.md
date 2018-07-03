@@ -16,12 +16,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 9ceb698bfbe95693ff9d5785b4bea94f1ec3070c
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
+ms.openlocfilehash: 7b263fda1de798473f581e2191d3fa01385060e6
+ms.sourcegitcommit: e4627686138ec8c885696c4c511f2f05195cf8ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1675377"
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "1893845"
 ---
 # <a name="dialogs-and-flyouts"></a>Dialogfelder und Flyouts
 
@@ -255,8 +255,7 @@ Ein typisches Bestätigungsdialogfeld verfügt über zwei Schaltflächen: eine S
 <ul>
     <li>
         <p>Die Bestätigungsschaltfläche sollte sich im Allgemeinen auf der linken Seite (die primäre Schaltfläche) und die Abbruchschaltfläche (die sekundäre Schaltfläche) auf der rechten Seite befinden.</p>
-         ![Dialogfeld zum Bestätigen/Abbrechen einer Aktion](images/dialogs/dialog_RS2_delete_file.png)
-
+        <img alt="An OK/cancel dialog" src="images/dialogs/dialog_RS2_delete_file.png" />
     </li>
     <li>Wie in den allgemeinen Empfehlungen erwähnt, sollten Sie Schaltflächen mit Text verwenden, der konkrete Antworten auf die Hauptanweisung bzw. den Hauptinhalt bietet.
     </li>

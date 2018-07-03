@@ -10,28 +10,28 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bd24bb951619e086a69a5bb0dd7752bfa3fe41dc
-ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
+ms.openlocfilehash: e08208b7086023654b0b2404cccc8664e123d9ec
+ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "1707115"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "1983615"
 ---
 # <a name="tutorial-support-the-surface-dial-and-other-wheel-devices-in-your-uwp-app"></a>Lernprogramm: Unterstützen von Surface Dial (und anderen Radgeräten) in Ihrer UWP-App
 
 ![Abbildung: Surface Dial mit Surface Studio](images/radialcontroller/dial-pen-studio-600px.png)  
 *Surface Dial mit Surface Studio und Surface-Stift* (im [Microsoft Store](https://aka.ms/purchasesurfacedial) käuflich erhältlich).
 
-In diesem Lernprogramm erfahren Sie, wie Sie die von Radgeräten wie Surface Dial unterstützte Benutzerinteraktionen anpassen. Wie verwenden Codeausschnitte aus einer Beispiel-App, die Sie von GitHub herunterladen können (Siehe [Beispielcode](#sample-code)), um die verschiedenen Features und zugehörigen [**RadialController**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.radialcontroller)-APIs zu veranschaulichen, die in den einzelnen Schrittenbeschrieben werden.
+In diesem Lernprogramm erfahren Sie, wie Sie die von Radgeräten wie Surface Dial unterstützte Benutzerinteraktionen anpassen. Wie verwenden Codeausschnitte aus einer Beispiel-App, die Sie von GitHub herunterladen können (Siehe [Beispielcode](#sample-code)), um die verschiedenen Features und zugehörigen [**RadialController**](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller)-APIs zu veranschaulichen, die in den einzelnen Schrittenbeschrieben werden.
 
 Wir konzentrieren uns auf Folgendes:
-* Angeben, welche integrierten Tools in dem [**RadialController**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.radialcontroller)-Menü angezeigt werden.
+* Angeben, welche integrierten Tools in dem [**RadialController**](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller)-Menü angezeigt werden.
 * Hinzufügen eines benutzerdefinierten Tools zum Menü
 * Steuern des haptischen Feedbacks
 * Anpassen der Klick-Interaktionen
 * Anpassen der Drehinteraktionen
 
-Weitere Informationen zur Implementierung dieser und anderer Features finden Sie unter [Surface Dial-Interaktionen in UWP-Apps](https://docs.microsoft.com/en-us/windows/uwp/input/windows-wheel-interactions).
+Weitere Informationen zur Implementierung dieser und anderer Features finden Sie unter [Surface Dial-Interaktionen in UWP-Apps](windows-wheel-interactions.md).
 
 ## <a name="introduction"></a>Einführung
 
@@ -46,11 +46,11 @@ Das Dial unterstützt drei grundlegende Gesten:
 
 * Ein Computer (oder ein virtueller Computer) mit Windows 10 Creators Update oder höher
 * [Visual Studio 2017 (10.0.15063.0)](https://developer.microsoft.com/windows/downloads)
-* [Windows 10 SDK (10.0.15063.0)](https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk)
+* [Windows 10 SDK (10.0.15063.0)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
 * Ein Radgerät (aktuell nur die [Surface Dial](https://aka.ms/purchasesurfacedial))
 * Wenn Sie noch keine Erfahrung mit der App-Entwicklung in der Universellen Windows-Plattform (UWP) mit Visual Studio haben, werfen Sie einen Blick in diese Themen, bevor Sie dieses Lernprogramm starten:  
-    * [Vorbereiten](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up)
-    * [Erstellen der App „Hello, world“ (XAML)](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
+    * [Vorbereiten](https://docs.microsoft.com/windows/uwp/get-started/get-set-up)
+    * [Erstellen der App „Hello, world“ (XAML)](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
 
 ## <a name="set-up-your-devices"></a>Einrichten Ihrer Geräte
 
@@ -67,7 +67,7 @@ Das Dial unterstützt drei grundlegende Gesten:
 > [!NOTE]
 > Wheel-Geräte können in den **Rad**-Einstellungen angepasst werden:
 > 1. Wählen Sie im **Startmenü** **Einstellungen**.
-> Wählen Sie **Geräte** > **Rad**.    
+> 2. Wählen Sie **Geräte** > **Rad**.    
 > ![Bildschirm „Radeinstellungen”](images/radialcontroller/wheel-settings.png)
 
 Jetzt können Sie dieses Lernprogramm starten. 
@@ -177,7 +177,7 @@ Fügen wir nun den für den **RadialController**-Zugriff auf unsere Steuerelemen
         using Windows.UI.Input;
         ```
 
-    - Diese globalen Objekte ([RadialController](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller), [RadialControllerConfiguration](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontrollerconfiguration), [RadialControllerMenuItem](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.radialcontrollermenuitem)) werden in der App verwendet.
+    - Diese globalen Objekte ([RadialController](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller), [RadialControllerConfiguration](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontrollerconfiguration), [RadialControllerMenuItem](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontrollermenuitem)) werden in der App verwendet.
     
         ```csharp
         private RadialController radialController;
@@ -192,7 +192,7 @@ Fügen wir nun den für den **RadialController**-Zugriff auf unsere Steuerelemen
         { InitializeSample(sender, args); };
         ``` 
 
-    - Als Nächstes initialisieren wir unser [RadialController](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller)-Objekt, und richten Ereignishandler für die [RotationChanged](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.radialcontroller.RotationChanged) und [ButtonClicked](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.radialcontroller.ButtonClicked)-Ereignisse ein.
+    - Als Nächstes initialisieren wir unser [RadialController](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller)-Objekt, und richten Ereignishandler für die [RotationChanged](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller.RotationChanged) und [ButtonClicked](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller.ButtonClicked)-Ereignisse ein.
 
         ```csharp
         // Set up the app UI and RadialController.
@@ -210,7 +210,7 @@ Fügen wir nun den für den **RadialController**-Zugriff auf unsere Steuerelemen
         }
         ```
 
-    - Hier initialisieren wir unser benutzerdefiniertes RadialController-Menüelement. Wir verwenden [CreateForCurrentView](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller.CreateForCurrentView), um einen Verweis auf unser [RadialController](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller)-Objekt zu erhalten, wir legen die Drehempfindlichkeit mit der [RotationResolutionInDegrees](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller.RotationResolutionInDegrees)-Eigenschaft auf „1” fest, anschließend erstellen wir unser [RadialControllerMenuItem](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.radialcontrollermenuitem) mit [CreateFromFontGlyph](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.radialcontrollermenuitem.CreateFromFontGlyph), wir fügen das Menüelement zu der Sammlung von **RadialController**-Menüelementen und schließlich verwenden wir [SetDefaultMenuItems](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.radialcontrollerconfiguration.setdefaultmenuitems), um die Standard-Menüelemente zu löschen und lassen nur die benutzerdefinierten Tools bestehen. 
+    - Hier initialisieren wir unser benutzerdefiniertes RadialController-Menüelement. Wir verwenden [CreateForCurrentView](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller.CreateForCurrentView), um einen Verweis auf unser [RadialController](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller)-Objekt zu erhalten, wir legen die Drehempfindlichkeit mit der [RotationResolutionInDegrees](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller.RotationResolutionInDegrees)-Eigenschaft auf „1” fest, anschließend erstellen wir unser [RadialControllerMenuItem](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontrollermenuitem) mit [CreateFromFontGlyph](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontrollermenuitem.CreateFromFontGlyph), wir fügen das Menüelement zu der Sammlung von **RadialController**-Menüelementen und schließlich verwenden wir [SetDefaultMenuItems](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontrollerconfiguration.setdefaultmenuitems), um die Standard-Menüelemente zu löschen und lassen nur die benutzerdefinierten Tools bestehen. 
 
         ```csharp
         // Configure RadialController menu and custom tool.
@@ -444,14 +444,14 @@ In diesem Schritt wird gezeigt, wie Sie das haptische Feedback anpassen können,
         using Windows.Devices.Haptics;
         ```
 
-    - Hier geben wir den Handler für das [ControlAcquired](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.radialcontroller.ControlAcquired)-Ereignis an, das ausgelöst wird, wenn das benutzerdefinierte **RadialController**-Menüelement ausgewählt ist.
+    - Hier geben wir den Handler für das [ControlAcquired](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller.ControlAcquired)-Ereignis an, das ausgelöst wird, wenn das benutzerdefinierte **RadialController**-Menüelement ausgewählt ist.
 
         ```csharp
         radialController.ControlAcquired += (rc_sender, args) =>
         { RadialController_ControlAcquired(rc_sender, args); };
         ``` 
 
-    - Als Nächstes definieren wir den [ControlAcquired](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.radialcontroller.ControlAcquired)-Handler, in dem wir das standardmäßige Haptik-Feedback deaktivieren und unserer Haptik-UI initialisieren.
+    - Als Nächstes definieren wir den [ControlAcquired](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller.ControlAcquired)-Handler, in dem wir das standardmäßige Haptik-Feedback deaktivieren und unserer Haptik-UI initialisieren.
 
         ```csharp
         private void RadialController_ControlAcquired(
@@ -520,7 +520,7 @@ In diesem Schritt wird gezeigt, wie Sie das haptische Feedback anpassen können,
         }
         ```
 
-    - In unseren [RotationChanged](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.radialcontroller.RotationChanged) und [ButtonClicked](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.radialcontroller.ButtonClicked)-Ereignishandlern verknüpfen wir die entsprechenden Schieberegler und Ein-/Aus-Steuerelemente mit unserer benutzerdefinierten Haptik. 
+    - In unseren [RotationChanged](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller.RotationChanged) und [ButtonClicked](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller.ButtonClicked)-Ereignishandlern verknüpfen wir die entsprechenden Schieberegler und Ein-/Aus-Steuerelemente mit unserer benutzerdefinierten Haptik. 
 
         ```csharp
         // Connect wheel device rotation to slider control.

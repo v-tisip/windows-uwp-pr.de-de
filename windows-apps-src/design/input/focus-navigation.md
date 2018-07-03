@@ -15,14 +15,16 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 1737408386628ea7ecf1bb42256976c5fd28cb77
-ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
+ms.openlocfilehash: 73b1c73fdd971eb4448aea62bc8c64ceac17a2b4
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "1707241"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1843350"
 ---
 # <a name="focus-navigation-for-keyboard-gamepad-remote-control-and-accessibility-tools"></a>Fokusnavigation für Tastatur, Gamepad, Fernbedienung und Bedienungshilfen
+
+![Tastatur, Fernbedienung und Steuerkreuz](images/dpad-remote/dpad-remote-keyboard.png)
 
 Verwenden Sie die Fokusnavigation, um umfassende und einheitliche Interaktionserfahrungen in Ihren UWP-Apps, benutzerdefinierte Steuerelemente für erfahrene Tastaturbenutzer und Personen mit Einschränkungen und anderen Anforderungen an die Barrierefreiheit sowie die 3-Meter-Erfahrung von Fernsehbildschirmen und der Xbox One bereitzustellen.
 

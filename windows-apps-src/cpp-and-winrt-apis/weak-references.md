@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, schwache, referenz
 ms.localizationpriority: medium
-ms.openlocfilehash: 63ffad19c0ae8a52737ae13a54e5657df875d0b5
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 69294115af93ec464abfe908df948c8ff5504efc
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832604"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1842454"
 ---
 # <a name="weak-references-in-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Schwache Referenzen in [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 Sie sollten in der Lage sein, Ihre eigenen C++/WinRT-APIs so zu gestalten, dass zyklische Referenzen und schwache Referenzen vermieden werden. Bei der nativen Implementierung des XAML-basierten UI-Frameworks ist der schwache Referenzmechanismus aufgrund des historischen Designs des Frameworks in C++/WinRT jedoch notwendig, um zyklische Referenzen zu verarbeiten. Außerhalb von XAML ist es unwahrscheinlich, dass Sie schwache Referenzen verwenden müssen (obwohl es theoretisch nichts XAML-spezifisches an ihnen gibt).

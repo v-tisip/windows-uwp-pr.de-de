@@ -6,18 +6,18 @@ title: Barrierefreiheitstests
 label: Accessibility testing
 template: detail.hbs
 ms.author: mhopkins
-ms.date: 02/08/2017
+ms.date: 05/18/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b059a3088f3f8f9491cb3cccfdddee0a3eeb707
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.openlocfilehash: 02ba4a94bdca7ae9964cc40e7aba40f72beb5429
+ms.sourcegitcommit: e020e9a4d947368a68e4eeba1eea65e9b3a725af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1655219"
+ms.lasthandoff: 05/28/2018
+ms.locfileid: "1924353"
 ---
 # <a name="accessibility-testing"></a>Barrierefreiheitstests  
 
@@ -30,7 +30,9 @@ Testverfahren, mit denen Sie sicherstellen können, dass Ihre App für die unive
 Das Windows Software Development Kit (SDK) enthält verschiedene Tools zum Testen der Barrierefreiheit, z. B. [**EH-Viewer**](https://msdn.microsoft.com/library/windows/desktop/Dn433239), [**Inspect**](https://msdn.microsoft.com/library/windows/desktop/Dd318521) und [**UI-Barrierefreiheitsprüfung**](https://msdn.microsoft.com/library/windows/desktop/Hh920985). Mit diesen Tools können Sie die Barrierefreiheit Ihrer App überprüfen. Achten Sie darauf, dass Sie sämtliche App-Szenarien und UI-Elemente testen.
 
 Sie können die Tools zum Testen der Barrierefreiheit entweder über die Eingabeaufforderung von Microsoft Visual Studio oder über den Tools-Ordner des Windows SDK öffnen (bin-Unterverzeichnis des Ordners, in dem das Windows SDK auf dem Entwicklungscomputer installiert ist).
-
+  
+> [!VIDEO https://www.youtube.com/embed/ce0hKQfY9B8]
+  
 <span id="AccScope"/>
 <span id="accscope"/>
 <span id="ACCSCOPE"/>

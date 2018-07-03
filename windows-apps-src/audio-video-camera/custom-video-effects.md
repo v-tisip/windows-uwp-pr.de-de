@@ -14,11 +14,11 @@ keywords: Windows10, UWP
 ms.assetid: 40a6bd32-a756-400f-ba34-2c5f507262c0
 ms.localizationpriority: medium
 ms.openlocfilehash: 9a1f53bb1165561865124a960940fab3f4325061
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1655402"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1843320"
 ---
 # <a name="custom-video-effects"></a>Benutzerdefinierte Videoeffekte
 
@@ -30,9 +30,9 @@ In diesem Artikel wird beschrieben, wie Sie eine Komponente für Windows-Runtime
 ## <a name="add-a-custom-effect-to-your-app"></a>Hinzufügen eines benutzerdefinierten Effekts zu Ihrer App
 
 
-Sie definieren einen benutzerdefinierte Videoefekt in einer Klasse, die die [**IBasicVideoEffect**](https://msdn.microsoft.com/library/windows/apps/dn764788)-Schnittstelle implementiert. Diese Klasse kann nicht direkt in Ihr App-Projekt integriert werden. Stattdessen müssen Sie eine Komponente für Windows-Runtime verwenden, um Ihre Videoeffektklasse zu hosten.
+Sie definieren einen benutzerdefinierte Videoefekt in einer Klasse, die die [**IBasicVideoEffect**](https://msdn.microsoft.com/library/windows/apps/dn764788)-Schnittstelle implementiert. Diese Klasse kann nicht direkt in Ihr App-Projekt integriert werden. Stattdessen müssen Sie eine Windows-Runtime-Komponente verwenden, um Ihre Videoeffektklasse zu hosten.
 
-**Hinzufügen einer Komponente für Windows-Runtime für den Videoeffekt**
+**Hinzufügen einer Windows-Runtime-Komponente für den Videoeffekt**
 
 1.  Wechseln Sie in Microsoft Visual Studio bei geöffneter Projektmappe zum Menü **Datei**, und wählen Sie **Hinzufügen-&gt;Neues Projekt** aus.
 2.  Wählen Sie den Projekttyp **Komponente für Windows-Runtime (Universal Windows)** aus.

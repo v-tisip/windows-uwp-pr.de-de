@@ -12,15 +12,14 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 910920c1f5eb5bdc3e55b51d7886be1632559c14
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
+ms.openlocfilehash: f59675c3feaab47ee79eaf160c5592876b7564a2
+ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1396609"
+ms.lasthandoff: 05/09/2018
+ms.locfileid: "1862099"
 ---
 # <a name="interaction-primer"></a>Einführung in die Interaktion
-
 
 ![Windows-Eingabetypen](images/input-interactions/icons-inputdevices03.png)
 
@@ -30,14 +29,34 @@ Die UWP verwendet ein intelligentes, kontextbezogenes Interaktionssystem, mit de
 
 Machen Sie sich mit den verschiedenen Arten von Eingabegeräten sowie ihren Verhaltensweisen, Möglichkeiten und Einschränkungen in Verbindung mit bestimmten Formfaktoren vertraut. Dies erleichtert Ihnen die Entscheidung, ob die Steuerelemente und Angebote der Plattform für die App ausreichend sind oder ob Sie angepasste Funktionen für die Benutzerinteraktion bereitstellen müssen.
 
+## <a name="gaze"></a>Blickeingabe
+
+Mit dem **Windows 10-Update April 2018** haben wir die Unterstützung für die Blickeingabe mit Eye- und Head-Tracking-Eingabegeräten eingeführt. 
+
+> [!NOTE]
+> Die Unterstützung für Eye Tracking-Hardware wurde mit dem **Windows10 Fall Creators Update** zusammen mit der [Augensteuerung](https://support.microsoft.com/en-us/help/4043921/windows-10-get-started-eye-control) eingeführt, einem integrierten Feature, mit dem Sie Ihre Augen verwenden können, um den Bildschirmzeiger zu steuern, Text über die Bildschirmtastatur einzugeben und mit Personen über Text-zu-Sprache zu kommunizieren.
+
+### <a name="device-support"></a>Geräteunterstützung
+
+- Tablet
+- PCs und Laptops
+
+### <a name="typical-usage"></a>Typische Verwendung
+
+Verfolgen Sie den Blick, die Aufmerksamkeit und die Präsenz eines Benutzers anhand der Position und Bewegung seiner Augen. Diese leistungsstarke neue Methode zur Verwendung und Interaktion mit Ihren UWP-Apps ist besonders hilfreich als unterstützende Technologie für Benutzer mit neuromuskulären Erkrankungen (wie ALS) und anderen Behinderungen mit beeinträchtigten Muskel- oder Nervenfunktionen. Die Blickeingabe bietet zudem überzeugende Möglichkeiten für Spiele (einschließlich Zielerfassung und -verfolgung) und traditionelle Produktivitätsanwendungen, Kioske und andere interaktive Szenarien, in denen herkömmliche Eingabegeräte (Tastatur, Maus, Touch) nicht verfügbar sind oder in denen es nützlich/hilfreich sein kann, wenn die Hände des Benutzers für andere Aufgaben (z. B. das Halten von Einkaufstaschen) frei bleiben.
+
+### <a name="more-info"></a>Weitere Informationen
+
+[Blickinteraktionen und Eye Tracking](gaze-interactions.md)
+
 ## <a name="surface-dial"></a>Surface Dial
 
-Für das Windows10 Anniversary Update führen wir eine neue Kategorie von Eingabegeräten, Windows Wheel, ein. Surface Dial ist das erste Angebot dieser Art. 
+Mit dem **Windows 10 Anniversary Update** haben wir eine neue Kategorie von Eingabegeräten eingeführt: Windows Wheel. Surface Dial ist das erste Angebot dieser Art.
 
 ### <a name="device-support"></a>Unterstützung von Geräten
 
--   Tablet
--   PCs und Laptops
+- Tablet
+- PCs und Laptops
 
 ### <a name="typical-usage"></a>Typische Verwendung
 
@@ -46,7 +65,6 @@ Der Formfaktor von Surface Dial entspricht einer Drehaktion (oder -geste). Surfa
 ### <a name="more-info"></a>Weitere Informationen
 
 [Surface Dial-Entwurfsrichtlinien](windows-wheel-interactions.md)
-
 
 ## <a name="cortana"></a>Cortana
 

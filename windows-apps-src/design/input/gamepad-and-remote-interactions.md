@@ -13,17 +13,25 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 3713d74edd93f437726c04dd68b604cb8a22da8f
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
+ms.openlocfilehash: da1248937d8f7d1a5a1da27e376690cde2ac7ef6
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1392429"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1842850"
 ---
 # <a name="gamepad-and-remote-control-interactions"></a>Interaktionen von Gamepad und Fernbedienung
 
-Universelle Windows-Plattform (UWP)-Apps unterstützen jetzt die Eingabe per Gamepad und Fernbedienung. Gamepads und Remotesteuerungen sind die primären Eingabegeräte in Xbox- und TV-Umgebungen. UWP-Apps sollten für diese Eingabegerätetypen ebenso optimiert werden wie für die Eingabe per Tastatur und Maus auf einem PC oder für die Toucheingabe auf einem Smartphone oder Tablet. Der wichtigste Schritt bei der Optimierung für Xbox und Fernseher besteht darin, sicherzustellen, dass die App gut mit diesen Eingabegeräten funktioniert.
-Es ist jetzt möglich, das Gamepad an einen PC anzuschließen und mit UWP-Apps zu verwenden. Die Überprüfung Ihrer Arbeit wird somit erleichtert.
+![Fernbedienung und Steuerkreuz](images/dpad-remote/dpad-remote.png)
+
+Universelle Windows-Plattform Apps (UWP) unterstützen jetzt Eingaben von Gamepad- und Fernbedienung, welche die primären Eingabegeräte für Xbox und TV-Gerät sind.
+
+UWP-Apps sollten für diese Eingabegerätetypen ebenso optimiert werden wie für die Eingabe per Tastatur und Maus auf einem PC oder für die Toucheingabe auf einem Smartphone oder Tablet.
+
+Der wichtigste Schritt bei der Optimierung für Xbox und TV-Gerät besteht darin, sicherzustellen, dass die App gut mit diesen Eingabegeräten funktioniert.
+
+> [!NOTE] 
+> Es ist jetzt möglich, das Gamepad an einen PC anzuschließen und mit UWP-Apps zu verwenden. Die Überprüfung Ihrer Arbeit wird somit erleichtert.
 
 Um bei Verwendung eines Gamepads oder einer Fernbedienung eine funktionierende und praktische Benutzeroberfläche für Ihre UWP-App zu gewährleisten, sollten Sie Folgendes beachten:
 

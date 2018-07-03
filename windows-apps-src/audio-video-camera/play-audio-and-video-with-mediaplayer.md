@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 24b54e202835bb3dba9098591ae08527e12565bf
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: c06a4348ba1f974aaf7151456267ce7585b56a10
+ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832584"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "1983605"
 ---
 # <a name="play-audio-and-video-with-mediaplayer"></a>Wiedergeben von Audio- und Videoinhalten mit „MediaPlayer“
 
@@ -23,8 +23,10 @@ In diesem Artikel erfahren Sie, wie Sie in Ihrer universellen Windows-App mithil
 
 Dieser Artikel erläutert die Features von **MediaPlayer**, die von einer typischen App zur Medienwiedergabe verwendet werden. Beachten Sie, dass **MediaPlayer** die [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource)-Klasse als Container für alle Medienelemente verwendet. Diese Klasse ermöglicht Ihnen das Laden und Wiedergeben von Medien aus verschiedenen Quellen – z.B. aus lokalen Dateien, Speicherdatenströmen und Netzwerkquellen – über die gleiche Schnittstelle. Verschiedene Klassen auf höherer Ebene arbeiten ebenfalls mit **MediaSource**, z.B. [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem) und [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackList). Sie stellen erweiterte Features bereit wie Wiedergabelisten und die Möglichkeit, Medienquellen mit mehreren Audio-, Video- und Metadatentiteln zu verwalten, Weitere Informationen zu **MediaSource** und verwandten APIs finden Sie unter [Medienelemente, Wiedergabelisten und Titel](media-playback-with-mediasource.md).
 
+> [!NOTE] 
+> Windows10 N- und Windows10 KN-Editionen enthalten nicht die für die Verwendung von **MediaPlayer** für die Wiedergabe erforderlichen Medienfunktionen. Diese Features können manuell installiert werden. Weitere Informationen finden Sie unter [Media Feature Pack für Windows10 N- und Windows10 KN-Editionen](https://support.microsoft.com/en-us/help/3010081/media-feature-pack-for-windows-10-n-and-windows-10-kn-editions).
 
-## <a name="play-a-media-file-with-mediaplayer"></a>Wiedergeben einer Mediendatei mit „MediaPlayer“  
+## <a name="play-a-media-file-with-mediaplayer"></a>Wiedergeben einer Mediendatei mit MediaPlayer  
 Die grundlegende Medienwiedergabe mit **MediaPlayer** ist sehr einfach zu implementieren. Erstellen Sie zunächst eine neue Instanz der **MediaPlayer**-Klasse. In Ihrer App können mehrere **MediaPlayer**-Instanzen gleichzeitig aktiv sein. Legen Sie dann für die [**Source**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.Source)-Eigenschaft des Players ein Objekt fest, welches die [**IMediaPlaybackSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.IMediaPlaybackSource) implementiert, z.B. eine [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource), ein [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem) oder eine [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackList). In diesem Beispiel wird ein **MediaSource**-Objekt aus einer Datei im lokalen Speicher der App erstellt. Anschließend wird aus der Quelle ein **MediaPlaybackItem**-Objekt erstellt und der **Source**-Eigenschaft des Players zugewiesen.
 
 Anders als **MediaElement** startet **MediaPlayer** nicht standardmäßig automatisch mit der Wiedergabe. Sie können die Wiedergabe starten, indem Sie [**Play**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.Play) aufrufen, für die [**AutoPlay**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.AutoPlay) -Eigenschaft „true“ festlegen oder warten, bis der Benutzer die Wiedergabe mit den integrierten Media-Steuerelementen startet.
@@ -78,6 +80,10 @@ Das folgende Beispiel zeigt, wie Sie einen Klickhandler für Schaltflächen impl
 Das nächste Beispiel zeigt, wie durch Einstellen der [**PlaybackRate**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.PlaybackRate)-Eigenschaft der Sitzung mithilfe einer Schaltfläche zwischen der normalen Wiedergabegeschwindigkeit und zweifacher Geschwindigkeit gewechselt werden kann.
 
 [!code-cs[SpeedChecked](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSpeedChecked)]
+
+Ab Windows10, Version 1803, können Sie die Drehung, mit der ein Video in **MediaPlayer** angezeigt wird, in 90-Grad-Schritten festlegen.
+
+[!code-cs[SetRotation](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSetRotation)]
 
 ### <a name="detect-expected-and-unexpected-buffering"></a>Erkennen der erwarteten und unerwarteten Pufferung
 Das im vorherigen Abschnitt beschriebene **MediaPlaybackSession**-Objekt verfügt über zwei Ereignisse, um zu erkennen, wann die aktuell wiedergegebene Mediendatei das Puffern beginnt und endet, **[BufferingStarted](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacksession.BufferingStarted)** und **[BufferingEnded](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacksession.BufferingEnded)**. Dadurch können Sie die Benutzeroberfläche aktualisieren, um dem Benutzer anzuzeigen, das eine Pufferung durchgeführt wird. Die anfängliche Pufferung wird erwartet, wenn eine Mediendatei zuerst geöffnet wird oder wenn der Benutzer auf ein neues Element in einer Wiedergabeliste wechselt. Eine unerwartete Pufferung kann auftreten, wenn die Geschwindigkeit im Netzwerk beeinträchtigt wird oder wenn beim System für die Inhalte technische Probleme auftreten. Ab RS3 können Sie das **BufferingStarted**-Ereignis verwenden, um zu bestimmen, ob das Puffer-Ereignis erwartet oder nicht erwartet wird und die Wiedergabe unterbrochen wird. Sie können diese Informationen als Telemetriedaten für Ihrem Dienstanbieter-App oder ein Medium verwenden. 

@@ -3,35 +3,37 @@ author: TylerMSFT
 title: Bauen Sie Ihre App mit Diensten, Erweiterungen und Paketen aus
 description: Hier erfahren Sie, wie Sie eine Hintergrundaufgabe erstellen, die ausgeführt wird, wenn die Store-App Ihrer Universellen Windows-Plattform (UWP) aktualisiert wird.
 ms.author: twhitney
-ms.date: 05/21/2017
+ms.date: 05/7/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, erweitern, aufschlüsseln, App-Dienst, Paket, Erweiterung
 ms.localizationpriority: medium
-ms.openlocfilehash: 2721f9d8f768cabb0e07c0cd2cfcfcbf9255cd70
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.openlocfilehash: 6920b448146f25433335234ec67fde473e096cbd
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1689616"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1843653"
 ---
 # <a name="extend-your-app-with-services-extensions-and-packages"></a>Bauen Sie Ihre App mit Diensten, Erweiterungen und Paketen aus
 
 In Windows 10 stehen Ihnen verschiedene Technologien zur Verfügung, um Ihre App zu erweitern und aufzuschlüsseln. Anhand der nachfolgenden Tabelle können Sie ermitteln, welche Technologie für Ihr Szenario die richtige ist. Anschließend finden Sie eine kurze Beschreibung der jeweiligen Szenarien und Technologien.
 
+| Szenario                           | Ressourcenpaket   | Bestandspaket      | Optionales Paket   | Flat-Bundle        | App-Erweiterung      | App-Dienst        | Streaming-Installation  |
+|------------------------------------|:------------------:|:------------------:|:------------------:|:------------------:|:------------------:|:------------------:|:------------------:|
+| Code-Plugins von Drittanbietern            |                    |                    |                    |                    | :heavy_check_mark: |                    |                    |
+| In-Process Code-Plugins              |                    |                    | :heavy_check_mark: |                    |                    |                    |                    |
+| UX-Ressourcen (Zeichenfolgen/Images)         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    | :heavy_check_mark: |                    | :heavy_check_mark: |
+| On-Demand Inhalte <br/> (z. B. zusätzliche Spielstufen) |      |                    | :heavy_check_mark: |                    | :heavy_check_mark: |                    | :heavy_check_mark: |
+| Separate Lizenzierung und Erwerb |                    |                    | :heavy_check_mark: |                    | :heavy_check_mark: | :heavy_check_mark: |                    |
+| In-App-Erwerb                 |                    |                    | :heavy_check_mark: |                    | :heavy_check_mark: |                    |                    |
+| Optimierung der Installationszeit              | :heavy_check_mark: |                    | :heavy_check_mark: |                    | :heavy_check_mark: |                    | :heavy_check_mark: |
+| Verringern des Speicherbedarfs auf Datenträgern              | :heavy_check_mark: |                    | :heavy_check_mark: |                    |                    |                    |                    |
+| Optimieren der Verpackung                 |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    |                    |                    |
+| Reduzierung der Veröffentlichungszeit             | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    |                    |                    |
 
-| Szenario                           | Ressourcenpaket | Optionales Paket | App-Erweiterung    | App-Dienst      | Streaming installieren |
-|------------------------------------|:----------------:|:----------------:|:----------------:|:----------------:|:-----------------:|
-| Drittanbieter Code-Plugins            |                  |                  | :heavy_check_mark: |                  |                   |
-| In-Process Code-Plugins              |                  | :heavy_check_mark: |                  |                  |                   |
-| UX-Ressourcen (Zeichenfolgen/Images)         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                  | :heavy_check_mark: |
-| On-Demand Inhalte <br/> (z. B. zusätzliche Spielstufen) |    | :heavy_check_mark: | :heavy_check_mark: |                  | :heavy_check_mark: |
-| Separate Lizenzierung und Erwerb |                  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                   |
-| In-App-Erwerb                 |                  | :heavy_check_mark: | :heavy_check_mark: |                  |                   |
-| Optimierung der Installationszeit              | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                  | :heavy_check_mark: |
-
-## <a name="scenario-descriptions-rows-in-the-table"></a>Beschreibungen der Szenarien (Zeilen der Tabelle)
+## <a name="scenario-descriptions-the-rows-in-the-table-above"></a>Beschreibungen der Szenarien (die Zeilen der obigen Tabelle)
 
 **Drittanbieter-Plugins**  
 
@@ -59,17 +61,28 @@ Gibt an, ob eine Unterstützung seitens des Programms vorhanden ist, die Inhalte
 
 **Optimierung der Installationszeit**
 
-Stellt Funktionen zur Verfügung, die die benötigte Zeit verringern, um die App aus dem Store herunterzuladen und diese zu starten.
+Stellt Funktionen zur Verkürzung der Zeit bereit, die benötigt wird, um die App aus dem Store herunterzuladen und zu starten.
 
-## <a name="technology-descriptions-columns-in-the-table"></a>Beschreibung der Technologien (Spalten der Tabelle)
+**Reduzieren des Speicherbedarfs auf dem Datenträger** Reduziert die Größe einer App, indem nur notwendige Apps oder Ressourcen einbezogen werden.
+
+**Optimieren der Verpackung** Optimiert den Prozess zur Verpackung großer oder komplexer Apps.
+
+**Reduzierung der Veröffentlichungszeit** Minimiert den Zeitaufwand für die Veröffentlichung Ihrer App im Store, auf einer lokalen Freigabe oder auf dem Webserver.
+
+## <a name="technology-descriptions-the-columns-in-the-table-above"></a>Beschreibung der Technologien (die Spalten der obigen Tabelle)
 
 **Ressourcenpaket**
 
 Bei Ressourcenpaketen handelt es sich um an die Ressource gebundene Pakete, die Ihrer App eine Anpassung an zahlreiche Bildschirmgrößen und Systemsprachen ermöglichen. Das Ressourcenpaket zielt auf die Benutzersprache, die Systemskalierung sowie die DirectX-Funktionen ab und erlaubt der App dadurch eine Anpassung an zahlreiche Nutzerszenarien. Obwohl ein App-Paket mehrere Ressourcen enthalten kann, wird das Betriebssystem nur die für das Gerät des Benutzers notwendigen Ressourcen herunterladen. Dies spart Bandbreite und Festplattenspeicher.
 
+**Bestandpaket** Bestandspakete sind eine allgemeine, zentralisierte Quelle ausführbarer oder nicht ausführbarer Dateien, die von Ihrer App verwendet werden. Dies sind in der Regel keine Codedateien oder sprachspezifische Dateien. Es kann sich beispielsweise um eine Sammlung von Bildern in einem Bestandspaket und von Videos in einem anderen Bestandspaket handeln, die beide von der App verwendet werden. Es kann sich beispielsweise um eine Sammlung von Bildern in einem Bestandspaket und von Videos in einem anderen Bestandspaket handeln. Wenn Ihre App mehrere Architekturen und Sprachen unterstützt, könnten diese Assets im Architekturpaket oder Ressourcenpaket enthalten sein. Dies bedeutet jedoch auch, dass die Assets mehrfach in den verschiedenen Architekturpaketen dupliziert werden und somit entsprechend viel Speicherplatz belegen. Wenn Bestandspakete verwendet werden, müssen sie nur einmal im gesamten App-Paket enthalten sein. Weitere Informationen finden Sie unter [Einführung in Bestandspakete](../packaging/asset-packages.md).
+
 **Optionales Paket**
 
 Optionale Pakete dienen entweder der Ergänzung oder Erweiterung der Originalfunktionsweise eines App-Pakets. Es ist möglich, eine App zu veröffentlichen und die optionalen Pakete zu einem späteren Zeitpunkt zu veröffentlichen oder sowohl die App als auch die optionalen Pakete gleichzeitig zu veröffentlichen. Die Erweiterung Ihrer App um optionale Pakete hat zum Vorteil, dass Sie Inhalte als separates App-Paket verbreiten und vermarkten können. Optionale Pakete werden in der Regel vom ursprünglichen App-Entwickler entwickelt, da diese über die Identität der Haupt-App (im Gegensatz zu App-Erweiterungen) ausgeführt werden. Je nach Definition Ihres optionalen Pakets können Sie Code, Ressourcen oder Code und Ressourcen Ihres optionalen Pakets in Ihre Haupt-App laden. Wenn Sie Ihre App um Inhalte erweitern möchten, die separat vermarktet, lizenziert und verteilten werden können, sind optionale Pakete unter Umständen die richtige Wahl für Sie. Einzelheiten zur Implementierung, finden Sie unter [Optionale Pakete und die Erstellung zugehöriger Sets](https://docs.microsoft.com/windows/uwp/packaging/optional-packages).
+
+**Flat-Bundle**
+[Flat-Bundle-App-Pakete](../packaging/flat-bundles.md) ähneln regulären App Bundles, jedoch enthält ein Flat-Bundle nicht die App-Pakete aus dem Ordner, sondern nur *Referenzen* auf diese App-Pakete. Da nur Verweise auf App-Pakete anstelle der Dateien selbst enthalten sind, wird durch ein Flat-Bundle die Zeit verkürzt, die zum Packen und Herunterladen einer App nötig ist.
 
 **App-Erweiterung**
 
@@ -89,10 +102,14 @@ App-Dienste sind UWP-Apps, die Dienste für andere UWP-Apps bereitstellen. Sie e
 
 Die Installierung von Streaming ermöglicht Ihnen die Optimierung der Art und Weise, wie Ihre App Benutzern bereitgestellt wird. Anstatt darauf warten zu müssen, dass die gesamte App heruntergeladen ist, bevor sie verwenden werden kann, können Benutzer bereits mit der App interagieren, sobald ein notwendiger Teil heruntergeladen wurde. Es obliegt Ihnen, als Entwickler, Ihre App entsprechend in einen für die primäre Aktivierung und Initialisierung erforderlichen Bereich sowie einen Bereich für die restlichen Inhalte der App zu gliedern. Weitere Informationen sowie Einzelheiten zur Implementierung finden Sie unter [UWP-App-Streaming installieren](https://docs.microsoft.com/windows/uwp/packaging/streaming-install).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [Erstellen und Verwenden eines App-Dienstes](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)  
+[Einführung in Bestandspakete](../packaging/asset-packages.md)  
+[Paketerstellung mit dem Verpackungslayout](../packaging/packaging-layout.md)  
 [Optionale Pakete und die Erstellung zugehöriger Sets](https://docs.microsoft.com/windows/uwp/packaging/optional-packages)  
-[Namensraum von Windows.ApplicationModel.Extensions](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appextensions)  
-[UWP-App-Streaming installieren](https://docs.microsoft.com/windows/uwp/packaging/streaming-install)  
-[Namensraum von Windows.ApplicationModel.AppService](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.AppService)    
+[Entwickeln mit Bestandspaketen und Paketfaltung](../packaging/package-folding.md)  
+[Streaming-Installation von UWP-Apps](https://docs.microsoft.com/windows/uwp/packaging/streaming-install)  
+[Flat-Bundle-App-Pakete](../packaging/flat-bundles.md)  
+[Namespace Windows.ApplicationModel.AppService](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.AppService)  
+[Namespace Windows.ApplicationModel.Extensions](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appextensions)  

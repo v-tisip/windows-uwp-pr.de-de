@@ -8,36 +8,39 @@ ms.date: 04/08/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows10, UWP
+keywords: Windows 10, UWP
 pm-contact: stmoy
 ms.localizationpriority: medium
-ms.openlocfilehash: dc42199eba00071f5dbabd83a4ae524298a619ee
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: cba05cd9106d64f443e87b1e8373b2501d0ce451
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1818358"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1842237"
 ---
-# <a name="page-transitions"></a>Seitenübergang
+# <a name="page-transitions"></a>Seitenübergänge
 
 Seitenübergänge sind Animationen, die abgespielt werden, wenn Benutzer zwischen Seiten in einer App navigieren und Feedback als Beziehung zwischen Seiten liefern. Seitenübergänge zeigen dem Benutzer, ob er an der Spitze einer Navigationshierarchie steht, zwischen Geschwisterseiten wechselt oder tiefer in die Seitenhierarchie navigiert.
 
-Zwei verschiedene Animationen stehen für die Navigation zwischen den Seiten in einer App zur Verfügung: *Seitenaktualisierung* und *Drill*. Sie werden durch Unterklassen von [NavigationTransitionInfo](/uwp/api/windows.ui.xaml.media.animation.navigationtransitioninfo) dargestellt.
+Für die Navigation zwischen Seiten in einer App stehen zwei verschiedene Animationen zur Verfügung: *Seitenaktualisierung* und *Drill*. Sie werden durch Unterklassen von [**NavigationTransitionInfo**](/api/windows.ui.xaml.media.animation.navigationtransitioninfo) dargestellt.
 
 ## <a name="page-refresh"></a>Seite aktualisieren
 
-Die Seitenaktualisierung ist eine Kombination aus einer Folie Animation und eine Überblendung in die Animation für den eingehenden Inhalt. Der gewünschte Effekt ist ein Neubeginn für den Benutzer.
+Seitenaktualisierung ist eine Kombination aus einer Slide-Up-Animation und einer Einblendungsanimation für den eingehenden Inhalt. Verwenden Sie die Seitenaktualisierung, wenn der Benutzer an den Anfang eines Navigationsstapels gebracht wird, z. B. beim Navigieren zwischen Registerkarten oder Navigationselementen auf der linken Navigationsleiste.
 
-Verwenden Sie die Seitenaktualisierung, wenn der Benutzer an den Anfang eines Navigationsstapels gebracht wird, z. B. beim Navigieren zwischen [tab](../controls-and-patterns/tabs-pivot.md) oder [left-nav](../controls-and-patterns/navigationview.md)-Navigationselementen. [Frame.Navigate()](/uwp/api/windows.ui.xaml.controls.frame.navigate) verwendet standardmäßig die Seitenaktualisierung.
+Der gewünschte Effekt ist ein Neubeginn für den Benutzer.
 
 ![Seitenaktualisierungsanimation](images/page-refresh.gif)
 
-Die Animation zur Seitenaktualisierung wird durch [EntranceNavigationTransitionInfoClass](/uwp/api/windows.ui.xaml.media.animation.entrancenavigationtransitioninfo) dargestellt.
+Die Seitenaktualisierungsanimation wird durch die Klasse [**EntranceNavigationTransitionInfo**](/api/windows.ui.xaml.media.animation.entrancenavigationtransitioninfo) dargestellt.
 
 ```csharp
 // Explicitly play the page refresh animation
 myFrame.Navigate(typeof(Page2), null, new EntranceNavigationTransitionInfo());
+
 ```
+
+**Hinweis:**: Ein [**Frame**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame) verwendet automatisch [**NavigationThemeTransition**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.navigationthemetransition) zur Animation der Navigation zwischen zwei Seiten. Standardmäßig ist die Animation eine Seitenaktualisierung.
 
 ## <a name="drill"></a>Drill
 
@@ -47,7 +50,7 @@ Der gewünschte Effekt ist, dass der Benutzer tiefer in die App vorgedrungen ist
 
 ![Drill-Animation](images/drill.gif)
 
-Die Drill-Animation wird durch die Klasse [DrillInNavigationTransitionInfo](/uwp/api/windows.ui.xaml.media.animation.drillinnavigationtransitioninfo) repräsentiert.
+Die Drill-Animation wird durch die Klasse [**DrillInNavigationTransitionInfo**](/api/windows.ui.xaml.media.animation.drillinnavigationtransitioninfo) dargestellt.
 
 ```csharp
 // Play the drill in animation
@@ -56,20 +59,20 @@ myFrame.Navigate(typeof(Page2), null, new DrillInNavigationTransitionInfo());
 
 ## <a name="suppress"></a>Unterdrückung
 
-Das Unterdrücken der Animation ist hilfreich, wenn Sie Ihre eigenen Übergang mit [verbundenen Animationen](connected-animation.md) erstellen oder das implizite Einblenden/Ausblenden von Animationen nutzen.
-
-Um das Abspielen von Animationen während der Navigation zu vermeiden, verwenden Sie [SuppressNavigationTransitionInfo](/uwp/api/windows.ui.xaml.media.animation.suppressnavigationtransitioninfo) anstelle anderer [NavigationTransitionInfo](/uwp/api/windows.ui.xaml.media.animation.navigationtransitioninfo)-Subtypen.
+Um die Wiedergabe von Animationen während der Navigation zu vermeiden, verwenden Sie [**SuppressNavigationTransitionInfo**](/api/windows.ui.xaml.media.animation.suppressnavigationtransitioninfo) anstelle anderer **NavigationTransitionInfo**-Subtypen.
 
 ```csharp
 // Suppress the default animation
 myFrame.Navigate(typeof(Page2), null, new SuppressNavigationTransitionInfo());
 ```
 
+Das Unterdrücken der Animation ist hilfreich, wenn Sie Ihre eigenen Übergang mit [verbundenen Animationen](connected-animation.md) erstellen oder das implizite Einblenden/Ausblenden von Animationen nutzen.
+
 ## <a name="backwards-navigation"></a>Rückwärtsnavigation
 
-Standardmäßig spielt [Frame.GoBack()](/uwp/api/windows.ui.xaml.controls.frame.goback) die entsprechende „go back”-Animation auf Basis der abgespielten Animation ab, um zur Seite zu navigieren. Beispielsweise wird eine App, die Drill-In zur Navigation auf eine Seite verendet, einen Drill-Out bei der Rückwärtsnavigation verwenden.
+Um einen bestimmten Übergang bei der Rückwärtsnavigation darzustellen, verwenden Sie `Frame.GoBack(NavigationTransitionInfo)`.
 
-Um einen bestimmten Übergang bei der Rückwärtsnavigation abzuspielen, verwenden Sie `Frame.GoBack(NavigationTransitionInfo)`. Dies kann nützlich sein, wenn Sie das Navigationsverhalten dynamisch an die Bildschirmgröße anpassen – z. B. in einem dynamischen Master/Detail-Szenario.
+Dies kann nützlich sein, wenn Sie das Navigationsverhalten dynamisch an die Bildschirmgröße anpassen – z. B. in einem dynamischen Master/Detail-Szenario.
 
 ## <a name="related-topics"></a>Verwandte Themen
 

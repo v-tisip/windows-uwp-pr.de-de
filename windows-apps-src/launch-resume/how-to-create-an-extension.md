@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e54af14d23b255718f5247605b9bdd611f172308
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: 424ca52020bd5b9aeab745030dd6eef4cd4430b6
+ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663840"
+ms.lasthandoff: 05/09/2018
+ms.locfileid: "1862419"
 ---
 # <a name="create-and-host-an-app-extension"></a>Erstellen und Hosten einer App-Erweiterung
 
@@ -27,7 +27,7 @@ Dieser Artikel wird zusammen mit einem Codebeispiel angezeigt:
 
 ## <a name="introduction-to-app-extensions"></a>Einführung in App-Erweiterungen
 
-Plug-Ins, Add-Ins und Add-Ons sind unterschiedliche Namen, die Sie möglicherweise für die so genannten App-Erweiterungen in der universellen Windows-Plattform (UWP) gehört haben. Microsoft Edge-Erweiterungen UWP-App-Erweiterungen UWP-App-Erweiterungen wurden in der Windows10 Anniversary-Edition (Version 1607, Build 10.0.14393) eingeführt.
+In einer App für die Universelle Windows-Plattform (UWP) stellen Erweiterungen Funktionen bereit, die mit Plug-Ins, Add-Ins und Add-Ons auf anderen Plattformen vergleichbar sind. Microsoft Edge-Erweiterungen sind beispielsweise UWP-App-Erweiterungen. UWP-App-Erweiterungen wurden in der Windows10 Anniversary-Edition (Version 1607, Build 10.0.14393) eingeführt.
 
 UWP-App-Erweiterungen sind UWP-Apps mit einer Erweiterungsdeklaration, die ihnen ermöglicht, Inhalte und Bereitstellungsereignisse mit einer Host-App zu teilen. Eine App-Erweiterung stellt mehrere Erweiterungen bereit.
 
@@ -423,6 +423,7 @@ Dieses Thema stellt eine Einführung zur App-Erweiterungen bereit. Die wichtigst
 
 ## <a name="related-topics"></a>Verwandte Themen
 
+* [Einführung in App-Erweiterungen](https://blogs.msdn.microsoft.com/appinstaller/2017/05/01/introduction-to-app-extensions/)
 * [Build 2016-Sitzung zu App-Erweiterungen](https://channel9.msdn.com/Events/Build/2016/B808)
 * [Build 2016 App-Erweiterung – Codebeispiel](https://github.com/Microsoft/App-Extensibility-Sample)
 * [Unterstützen Ihrer App mit Hintergrundaufgaben](support-your-app-with-background-tasks.md)

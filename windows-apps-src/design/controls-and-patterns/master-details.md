@@ -12,12 +12,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 9c39243217f28dd4f88c4776c058a1b93c145c50
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
+ms.openlocfilehash: 68a8a812c6e5080630254014552a8bb05747749b
+ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1393529"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "1983521"
 ---
 # <a name="masterdetails-pattern"></a>Master/Details-Muster
 
@@ -99,7 +99,7 @@ Um ein adaptives Layout zu erstellen, definieren Sie verschiedene [**VisualState
 In den folgenden Beispielen implementieren Sie das Master/Detail-Muster mit adaptiven Layouts und veranschaulichen das Binden von Daten an statische, Datenbank- und Online-Ressourcen: 
 - [Master/Details-Beispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlMasterDetail) 
 - [Beispiel für Master/Details sowie Auswahl](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView)
-- [Master/Detail-Beispiel für Windows Template Studio](https://github.com/Microsoft/WindowsTemplateStudio/tree/master/templates/Pages/MasterDetail)
+- [Master/Detail-Beispiel für Windows Template Studio](https://github.com/Microsoft/WindowsTemplateStudio/tree/master/templates/Uwp/Pages/MasterDetail)
 - [Beispieldatenbank Kundenbestellung](https://github.com/Microsoft/Windows-appsample-customers-orders-database)
 - [RSS-Reader-Beispiel](https://github.com/Microsoft/Windows-appsample-rssreader)
 

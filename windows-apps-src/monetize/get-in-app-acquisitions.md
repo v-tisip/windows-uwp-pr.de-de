@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Add-On-Käufe
 ms.localizationpriority: medium
-ms.openlocfilehash: 6f6da2ae68ab2b40f11d1a9d092eb8ff447f2844
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: b881d3bdaa9adec28b78a72e127dcebd49ee1df6
+ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1664010"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "1976425"
 ---
 # <a name="get-add-on-acquisitions"></a>Abrufen von Add-On-Käufen
 
@@ -123,7 +123,7 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 | inAppProductId      | string  | Die Store-ID des Add-Ons, für das Sie Kaufdaten abrufen.                                                                                                                                                                 |
 | inAppProductName    | string  | Der Anzeigename des Add-Ons. Dieser Wert wird in den zurückgegebenen Daten nur angezeigt, wenn der Parameter *aggregationLevel* auf **day** festgelegt ist. Dies gilt nicht, wenn im *groupby*-Parameter das Feld **InAppProductName** angegeben wurde.                                                                                                                                                                                                            |
 | applicationId       | string  | Die Store-ID der App, für die Sie die Add-On-Kaufdaten abrufen möchten.                                                                                                                                                           |
-| applicationName     | string  | Der Anzeigename der App.                                                                                                                                                                                                             |
+| applicationName     | String  | Der Anzeigename der App.                                                                                                                                                                                                             |
 | deviceType          | string  | Der Typ des Geräts, auf dem der Kauf ausgeführt wurde. Eine Liste der unterstützten Zeichenfolgen finden Sie oben im Abschnitt [Filterfelder](#filter-fields).                                                                                                  |
 | orderName           | string  | Der Name der Bestellung.                                                                                                                                                                                                                   |
 | storeClient         | string  | Die Version des Store, in dem der Kauf erfolgte. Eine Liste der unterstützten Zeichenfolgen finden Sie oben im Abschnitt [Filterfelder](#filter-fields).                                                                                            |
@@ -132,7 +132,7 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 | gender              | string  | Das Geschlecht des Benutzers, der den Kauf ausgeführt hat. Eine Liste der unterstützten Zeichenfolgen finden Sie oben im Abschnitt [Filterfelder](#filter-fields).                                                                                                    |
 | ageGroup            | string  | Die Altersgruppe des Benutzers, der den Kauf ausgeführt hat. Eine Liste der unterstützten Zeichenfolgen finden Sie oben im Abschnitt [Filterfelder](#filter-fields).                                                                                                 |
 | acquisitionType     | string  | Der Typ des Kaufs (kostenlos, kostenpflichtig usw.). Eine Liste der unterstützten Zeichenfolgen finden Sie oben im Abschnitt [Filterfelder](#filter-fields).                                                                                                    |
-| acquisitionQuantity | inumber | Die Anzahl der Käufe, die ausgeführt wurden.                        |
+| acquisitionQuantity | Ganzzahl | Die Anzahl der Käufe, die ausgeführt wurden.                        |
 
 
 ### <a name="response-example"></a>Antwortbeispiel
