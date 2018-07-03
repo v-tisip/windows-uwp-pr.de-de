@@ -1,84 +1,60 @@
 ---
 author: TylerMSFT
-title: "Hinzufügen eines Begrüßungsbildschirms"
-description: "Hier erfahren Sie, wie Sie das Bild und die Hintergrundfarbe für den Begrüßungsbildschirm der App mit Microsoft Visual Studio 2015 festlegen."
+title: Hinzufügen eines Begrüßungsbildschirms
+description: Legen Sie das Bild für den Begrüßungsbildschirm und die Hintergrundfarbe Ihrer App mithilfe von Microsoft Visual Studio fest.
 ms.assetid: 41F53046-8AB7-4782-9E90-964D744B7D66
 ms.author: twhitney
-ms.date: 02/08/2017
+ms.date: 05/08/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 4b8d8b81b1807681d3aa3c5ed61359a5da64dfac
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.localizationpriority: medium
+ms.openlocfilehash: 1b6cff7ce434e219b0d502f384d202c3b708479a
+ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/09/2018
+ms.locfileid: "1861889"
 ---
+# <a name="add-a-splash-screen"></a><span data-ttu-id="1d7f2-104">Hinzufügen eines Begrüßungsbildschirms</span><span class="sxs-lookup"><span data-stu-id="1d7f2-104">Add a splash screen</span></span>
 
-# <a name="add-a-splash-screen"></a>Hinzufügen eines Begrüßungsbildschirms
+<span data-ttu-id="1d7f2-105">Legen Sie das Bild für den Begrüßungsbildschirm und die Hintergrundfarbe Ihrer App mithilfe von Microsoft Visual Studio fest.</span><span class="sxs-lookup"><span data-stu-id="1d7f2-105">Set your app's splash screen image and background color using Microsoft Visual Studio.</span></span>
 
+## <a name="set-the-splash-screen-image-and-background-color-in-visual-studio"></a><span data-ttu-id="1d7f2-106">Festlegen von Begrüßungsbildschirm und Hintergrundfarbe einer App mithilfe von Visual Studio</span><span class="sxs-lookup"><span data-stu-id="1d7f2-106">Set the splash screen image and background color in Visual Studio</span></span>
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+<span data-ttu-id="1d7f2-107">Wenn Sie eine Visual Studio-Vorlage zum Erstellen der App verwenden, wird dem Projekt ein Standardbild hinzugefügt und als Bild für den Begrüßungsbildschirm festgelegt.</span><span class="sxs-lookup"><span data-stu-id="1d7f2-107">When you use a Visual Studio template to create your app, a default image is added to your project and set as the splash screen image.</span></span> <span data-ttu-id="1d7f2-108">Als Hintergrundfarbe für den Begrüßungsbildschirm wird standardmäßig Hellgrau verwendet.</span><span class="sxs-lookup"><span data-stu-id="1d7f2-108">The background color for your splash screen defaults to a light gray.</span></span> <span data-ttu-id="1d7f2-109">Führen Sie die folgenden Schritte aus, wenn Sie das Standardbild oder die Farbe des App-Begrüßungsbildschirms ändern möchten:</span><span class="sxs-lookup"><span data-stu-id="1d7f2-109">If you want to change the default image or color of your app's splash screen, follow these steps:</span></span>
 
+1. <span data-ttu-id="1d7f2-110">Öffnen Sie das vorhandene App-Projekt für die Universelle Windows-Plattform (UWP) in Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="1d7f2-110">Open your existing Universal Windows Platform (UWP) app project in Visual Studio.</span></span>
+2. <span data-ttu-id="1d7f2-111">Öffnen Sie im **Projektmappen-Explorer** die Datei „Package.appxmanifest“.</span><span class="sxs-lookup"><span data-stu-id="1d7f2-111">From **Solution Explorer**, open the "Package.appxmanifest" file.</span></span> <span data-ttu-id="1d7f2-112">Sie können diese Datei auch über die Menüleiste öffnen, indem Sie **Projekt** &gt; **Store** &gt; **App-Manifest bearbeiten** auswählen.</span><span class="sxs-lookup"><span data-stu-id="1d7f2-112">You can also open this file from the menu bar by choosing **Project** &gt; **Store** &gt; **Edit App Manifest**.</span></span>
+3. <span data-ttu-id="1d7f2-113">Öffnen Sie die Registerkarte **Visuelle Anlagen**, und wählen Sie links im Fenster „Package.appxmanifest“ unter **Alle Bildanlagen** die Option **Begrüßungsbildschirm**.</span><span class="sxs-lookup"><span data-stu-id="1d7f2-113">Open the **Visual Assets** tab and select **Splash Screen** from the **All Visual Assets** pane on the left side of the "Package.appxmanifest" window.</span></span> <span data-ttu-id="1d7f2-114">Falls Sie den Begrüßungsbildschirm zum ersten Mal ändern, wird im Feld **Begrüßungsbildschirm** der Pfad „Assets\\SplashScreen.png“ angezeigt.</span><span class="sxs-lookup"><span data-stu-id="1d7f2-114">If you're changing your splash screen for the first time, you'll see the "Assets\\SplashScreen.png" path in the **Splash Screen** field.</span></span>
 
-Hier erfahren Sie, wie Sie das Bild und die Hintergrundfarbe für den Begrüßungsbildschirm der App mit Microsoft Visual Studio 2015 festlegen.
+    <span data-ttu-id="1d7f2-115">Im folgenden Screenshot ist das Fenster „Package.appxmanifest“ in Visual Studio dargestellt.</span><span class="sxs-lookup"><span data-stu-id="1d7f2-115">The following screen shot shows the "Package.appxmanifest" window in Visual Studio.</span></span> <span data-ttu-id="1d7f2-116">Je nach Art des Projekts werden leicht unterschiedliche Sätze von visuellen Ressourcen angezeigt.</span><span class="sxs-lookup"><span data-stu-id="1d7f2-116">Depending on the type of project, you will see a slightly different set of visual assets.</span></span>
 
-## <a name="set-the-splash-screen-image-and-background-color-in-visual-studio-2015"></a>Festlegen von Bild und Hintergrundfarbe für den Begrüßungsbildschirm mit Visual Studio 2015
+    ![Screenshot des Fensters „Package.appxmanifest“ in Visual Studio 2017](images/appmanifest.png)
 
-
-Wenn Sie eine Visual Studio 2015-Vorlage zum Erstellen der App verwenden, wird dem Projekt ein Standardbild hinzugefügt und als Bild für den Begrüßungsbildschirm festgelegt. Als Hintergrundfarbe für den Begrüßungsbildschirm wird standardmäßig Hellgrau verwendet. Führen Sie die folgenden Schritte aus, wenn Sie das Standardbild oder die Farbe des App-Begrüßungsbildschirms ändern möchten:
-
-1.  Öffnen Sie das vorhandene UWP-App-Projekt (Universelle Windows-Plattform) in Visual Studio 2015.
-2.  Öffnen Sie im **Projektmappen-Explorer** die Datei „Package.appxmanifest“. Sie können diese Datei auch über die Menüleiste öffnen, indem Sie **Projekt** &gt; **Store** &gt; **App-Manifest bearbeiten** auswählen.
-3.  Öffnen Sie die Registerkarte **Visuelle Anlagen**, und wählen Sie links im Fenster „Package.appxmanifest“ unter **Alle Bildanlagen** die Option **Begrüßungsbildschirm**. Falls Sie den Begrüßungsbildschirm zum ersten Mal ändern, wird im Feld **Begrüßungsbildschirm** der Pfad „Assets\\SplashScreen.png“ angezeigt.
-
-    Im folgenden Screenshot ist das Fenster „Package.appxmanifes“ in Visual Studio 2015 dargestellt. Je nach Art des Projekts werden leicht unterschiedliche Sätze von visuellen Ressourcen angezeigt.
-
-    ![Screenshot des Fensters „Package.appxmanifest“ in Visual Studio 2013](images/appmanifest.png)
-
-    Wenn Sie „Package.appxmanifest“ in einem Text-Editor öffnen, wird das [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br211467)-Element als untergeordnetes Element des [**VisualElements**](https://msdn.microsoft.com/library/windows/apps/br211471)-Elements angezeigt. Das standardmäßige Begrüßungsbildschirm-Markup in der Manifestdatei sieht in einem Text-Editor wie folgt aus:
+    <span data-ttu-id="1d7f2-118">Wenn Sie „Package.appxmanifest“ in einem Text-Editor öffnen, wird das [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br211467)-Element als untergeordnetes Element des [**VisualElements**](https://msdn.microsoft.com/library/windows/apps/br211471)-Elements angezeigt.</span><span class="sxs-lookup"><span data-stu-id="1d7f2-118">If you open "Package.appxmanifest" in a text editor, the [**SplashScreen element**](https://msdn.microsoft.com/library/windows/apps/br211467) appears as a child of the [**VisualElements element**](https://msdn.microsoft.com/library/windows/apps/br211471).</span></span> <span data-ttu-id="1d7f2-119">Das standardmäßige Begrüßungsbildschirm-Markup in der Manifestdatei sieht in einem Text-Editor wie folgt aus:</span><span class="sxs-lookup"><span data-stu-id="1d7f2-119">The default splash screen markup in the manifest file looks like this in a text editor:</span></span>
 
     ```xml
     <uap:SplashScreen Image="Assets\SplashScreen.png" />
     ```
 
-4.  Drücken Sie zum Auswählen eines neuen Begrüßungsbildschirm-Bilds für eine UWP-App die Schaltfläche mit den Auslassungspunkten, die neben der Bezeichnung **1240 x 600 px** unterhalb von **Skalierte Anlagen** angezeigt wird. Wählen Sie das Bild mit 1240 x 600 Pixeln (PNG, JPG oder JPEG) aus, das Sie für den Begrüßungsbildschirm verwenden möchten.
+4. <span data-ttu-id="1d7f2-120">Drücken Sie zum Auswählen eines neuen Begrüßungsbildschirm-Bilds für eine UWP-App die Schaltfläche mit den Auslassungspunkten, die neben der Bezeichnung **1240 x 600 px** unterhalb von **Skalierte Anlagen** angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="1d7f2-120">To select a new splash screen image for a UWP app, press the button with an ellipsis that appears next to the **1240 x 600 px** label below **Scaled Assets**.</span></span> <span data-ttu-id="1d7f2-121">Wählen Sie das Bild mit 1240 x 600 Pixeln (PNG, JPG oder JPEG) aus, das Sie für den Begrüßungsbildschirm verwenden möchten.</span><span class="sxs-lookup"><span data-stu-id="1d7f2-121">Choose the 1240 x 600 pixel image (.png, .jpg, or .jpeg) you'd like to use for your splash screen image.</span></span>
 
-    **Wichtig**  Das Bild für den Begrüßungsbildschirm muss 620 x 300 Pixel groß sein und einen einfachen Skalierungsfaktor aufweisen. Beachten Sie beim Entwerfen des Begrüßungsbildschirms zudem, dass er kleiner als der Bildschirm und zentriert angezeigt wird. Im Gegensatz zum Begrüßungsbildschirm einer Windows Phone Store-App füllt er den Bildschirm nicht komplett aus.
+    <span data-ttu-id="1d7f2-122">**Wichtig**  Das Bild für den Begrüßungsbildschirm muss 620x300 Pixel groß sein und einen einfachen Skalierungsfaktor aufweisen.</span><span class="sxs-lookup"><span data-stu-id="1d7f2-122">**Important**  The splash screen image you choose must be 620 x 300 pixels using a 1x scaling factor.</span></span> <span data-ttu-id="1d7f2-123">Beachten Sie beim Entwerfen des Begrüßungsbildschirms zudem, dass er kleiner als der Bildschirm und zentriert angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="1d7f2-123">Also, when designing your splash screen, note that it is smaller than the screen, and centered.</span></span> <span data-ttu-id="1d7f2-124">Im Gegensatz zum Begrüßungsbildschirm einer Windows Phone Store-App füllt er den Bildschirm nicht komplett aus.</span><span class="sxs-lookup"><span data-stu-id="1d7f2-124">It does not fill the screen like a splash screen for a Windows Phone Store app does.</span></span>
 
-     
+5. <span data-ttu-id="1d7f2-125">Drücken Sie zum Auswählen eines neuen Bilds für eine Windows Phone Store-App die Schaltfläche mit den Auslassungszeichen, die neben der Bezeichnung **1152 x 1920 px** unterhalb von **Skalierte Anlagen** angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="1d7f2-125">To select a new splash screen image for a Windows Phone Store app, press the button with an ellipsis that appears next to the **1152 x 1920 px** label below **Scaled Assets**.</span></span> <span data-ttu-id="1d7f2-126">Wählen Sie das Bild mit 1152 x 1920 Pixeln (.png, .jpg oder .jpeg) aus, das Sie für den Begrüßungsbildschirm verwenden möchten.</span><span class="sxs-lookup"><span data-stu-id="1d7f2-126">Choose the 1152 x 1920 pixel image (.png, .jpg, or .jpeg) you'd like to use for your splash screen image.</span></span>
 
-5.  Drücken Sie zum Auswählen eines neuen Bilds für eine Windows Phone Store-App die Schaltfläche mit den Auslassungszeichen, die neben der Bezeichnung **1152 x 1920 px** unterhalb von **Skalierte Anlagen** angezeigt wird. Wählen Sie das Bild mit 1152 x 1920 Pixeln (.png, .jpg oder .jpeg) aus, das Sie für den Begrüßungsbildschirm verwenden möchten.
+    <span data-ttu-id="1d7f2-127">**Wichtig**  Das Bild für den Begrüßungsbildschirm muss 1152x1920 Pixel aufweisen. Dabei handelt es sich um die richtige Größe für einen Skalierungsfaktor von 2,4.</span><span class="sxs-lookup"><span data-stu-id="1d7f2-127">**Important**  The splash screen image you choose must be 1152 x 1920 pixels which is the correct size for a 2.4x scaling factor.</span></span> <span data-ttu-id="1d7f2-128">Ist dies die einzige Ressource, die Sie bereitstellen, wird es auf die Skalierungsfaktoren 1.4x und 1x nach unten skaliert.</span><span class="sxs-lookup"><span data-stu-id="1d7f2-128">If this is the only asset you provide then it will be scaled down for 1.4x and 1x scaling factors.</span></span>
 
-    **Wichtig**  Das Bild für den Begrüßungsbildschirm muss 1152 x 1920 Pixel aufweisen. Dabei handelt es sich um die richtige Größe für einen Skalierungsfaktor von 2,4. Ist dies die einzige Ressource, die Sie bereitstellen, wird es auf die Skalierungsfaktoren 1.4x und 1x nach unten skaliert.
+6. <span data-ttu-id="1d7f2-129">Legen Sie im Abschnitt **Begrüßungsbildschirm** im Feld **Hintergrundfarbe** die Hintergrundfarbe fest, die zusammen mit Ihrem Bild angezeigt werden soll.</span><span class="sxs-lookup"><span data-stu-id="1d7f2-129">In the **Background Color** field of the **Splash Screen** section, set the background color displayed with your splash screen image.</span></span> <span data-ttu-id="1d7f2-130">Sie können entweder einen Farbnamen oder „\#“ und den Hexadezimalwert einer Farbe eingeben.</span><span class="sxs-lookup"><span data-stu-id="1d7f2-130">You can enter either the name of a color or '\#' and the hex value of a color.</span></span> <span data-ttu-id="1d7f2-131">Eine Liste mit den Namen der verfügbaren Farben finden Sie unter [**SplashScreen-Element**](https://msdn.microsoft.com/library/windows/apps/br211467).</span><span class="sxs-lookup"><span data-stu-id="1d7f2-131">For a list of the names of available colors, see [**SplashScreen element**](https://msdn.microsoft.com/library/windows/apps/br211467).</span></span> <span data-ttu-id="1d7f2-132">Das Festlegen einer Hintergrundfarbe für Ihren Begrüßungsbildschirm ist nicht unbedingt erforderlich.</span><span class="sxs-lookup"><span data-stu-id="1d7f2-132">Setting a background color for your splash screen is optional.</span></span> <span data-ttu-id="1d7f2-133">Wenn Sie keine Farbe für eine UWP-App (Universelle Windows-Plattform) angeben, wird als Hintergrundfarbe für den Begrüßungsbildschirm standardmäßig Hellgrau (Hexadezimalwert \#464646) verwendet.</span><span class="sxs-lookup"><span data-stu-id="1d7f2-133">If you don't specify a color for a UWP app, the splash screen background color defaults to a light gray (hex value \#464646).</span></span> <span data-ttu-id="1d7f2-134">Dies ist die gleiche Farbe wie die standardmäßige Hintergrundfarbe für eine **Kachel** (siehe Feld **Hintergrundfarbe** im Abschnitt **Bilder für Kacheln und Logos** auf der Registerkarte **Visuelle Anlagen**).</span><span class="sxs-lookup"><span data-stu-id="1d7f2-134">This is the same color as the default **Tile** background color (see the **Background Color** field of the **Tile Images and Logos** section in the **Visual Assets** tab).</span></span> <span data-ttu-id="1d7f2-135">Wenn Sie keine Farbe für ein Windows Phone angeben oder „transparent“ festlegen, wird die Hintergrundfarbe des Begrüßungsbildschirms transparent sein.</span><span class="sxs-lookup"><span data-stu-id="1d7f2-135">If you don't specify a color for a Windows Phone, or set it to "transparent", then the splash screen background color will be transparent.</span></span>
 
-     
+## <a name="summary-and-next-steps"></a><span data-ttu-id="1d7f2-136">Zusammenfassung und nächste Schritte</span><span class="sxs-lookup"><span data-stu-id="1d7f2-136">Summary and next steps</span></span>
 
-6.  Legen Sie im Abschnitt **Begrüßungsbildschirm** im Feld **Hintergrundfarbe** die Hintergrundfarbe fest, die zusammen mit Ihrem Bild angezeigt werden soll. Sie können entweder einen Farbnamen oder „\#“ und den Hexadezimalwert einer Farbe eingeben. Eine Liste mit den Namen der verfügbaren Farben finden Sie unter [**SplashScreen-Element**](https://msdn.microsoft.com/library/windows/apps/br211467).
+<span data-ttu-id="1d7f2-137">Falls das Laden der App einige Zeit dauert, können Sie erwägen, einen erweiterten Begrüßungsbildschirm hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="1d7f2-137">If your app takes a while to load, consider adding an extended splash screen.</span></span> <span data-ttu-id="1d7f2-138">Eine Schritt-für-Schritt-Anleitung finden Sie unter [Erstellen eines benutzerdefinierten Begrüßungsbildschirms](create-a-customized-splash-screen.md).</span><span class="sxs-lookup"><span data-stu-id="1d7f2-138">For step-by-step guidance, see [Create a customized splash screen](create-a-customized-splash-screen.md).</span></span>
 
-    Das Festlegen einer Hintergrundfarbe für Ihren Begrüßungsbildschirm ist nicht unbedingt erforderlich. Wenn Sie keine Farbe für eine UWP-App (Universelle Windows-Plattform) angeben, wird als Hintergrundfarbe für den Begrüßungsbildschirm standardmäßig Hellgrau (Hexadezimalwert \#464646) verwendet. Dies ist die gleiche Farbe wie die standardmäßige Hintergrundfarbe für eine **Kachel** (siehe Feld **Hintergrundfarbe** im Abschnitt **Bilder für Kacheln und Logos** auf der Registerkarte **Visuelle Anlagen**). Wenn Sie keine Farbe für ein Windows Phone angeben oder „transparent“ festlegen, wird die Hintergrundfarbe des Begrüßungsbildschirms transparent sein.
+## <a name="related-topics"></a><span data-ttu-id="1d7f2-139">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="1d7f2-139">Related topics</span></span>
 
-## <a name="summary-and-next-steps"></a>Zusammenfassung und nächste Schritte
-
-
-Falls das Laden der App einige Zeit dauert, können Sie erwägen, einen erweiterten Begrüßungsbildschirm hinzuzufügen. Eine Schritt-für-Schritt-Anleitung finden Sie unter [Erstellen eines benutzerdefinierten Begrüßungsbildschirms](create-a-customized-splash-screen.md).
-
-**Hinweis**  
-Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
-
- 
-
-## <a name="related-topics"></a>Verwandte Themen
-
-* [Erstellen eines benutzerdefinierten Begrüßungsbildschirms](create-a-customized-splash-screen.md)
-
-**Referenzen**
-
-* [**Schemareferenz zum Paketmanifest: SplashScreen-Element**](https://msdn.microsoft.com/library/windows/apps/br211467)
-* [**Windows.ApplicationModel.Activation.SplashScreen-Klasse**](https://msdn.microsoft.com/library/windows/apps/br224763)
-
- 
-
- 
-
+* [<span data-ttu-id="1d7f2-140">Erstellen eines benutzerdefinierten Begrüßungsbildschirms</span><span class="sxs-lookup"><span data-stu-id="1d7f2-140">Create a customized splash screen</span></span>](create-a-customized-splash-screen.md)
+* [<span data-ttu-id="1d7f2-141">Schemareferenz zum Paketmanifest: SplashScreen-Element</span><span class="sxs-lookup"><span data-stu-id="1d7f2-141">Package manifest schema reference: SplashScreen element</span></span>](https://msdn.microsoft.com/library/windows/apps/br211467)
+* [<span data-ttu-id="1d7f2-142">Windows.ApplicationModel.Activation.SplashScreen-Klasse</span><span class="sxs-lookup"><span data-stu-id="1d7f2-142">Windows.ApplicationModel.Activation.SplashScreen class</span></span>](https://msdn.microsoft.com/library/windows/apps/br224763)

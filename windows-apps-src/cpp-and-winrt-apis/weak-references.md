@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, schwache, referenz
 ms.localizationpriority: medium
-ms.openlocfilehash: 63ffad19c0ae8a52737ae13a54e5657df875d0b5
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 69294115af93ec464abfe908df948c8ff5504efc
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832604"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1842454"
 ---
 # <a name="weak-references-in-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a><span data-ttu-id="acf90-104">Schwache Referenzen in [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)</span><span class="sxs-lookup"><span data-stu-id="acf90-104">Weak references in [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)</span></span>
 <span data-ttu-id="acf90-105">Sie sollten in der Lage sein, Ihre eigenen C++/WinRT-APIs so zu gestalten, dass zyklische Referenzen und schwache Referenzen vermieden werden.</span><span class="sxs-lookup"><span data-stu-id="acf90-105">You should be able, more often than not, to design your own C++/WinRT APIs in such a way as to avoid the need for cyclic references and weak references.</span></span> <span data-ttu-id="acf90-106">Bei der nativen Implementierung des XAML-basierten UI-Frameworks ist der schwache Referenzmechanismus aufgrund des historischen Designs des Frameworks in C++/WinRT jedoch notwendig, um zyklische Referenzen zu verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="acf90-106">However, when it comes to the native implementation of the XAML-based UI frameworkL&mdash;because of the historic design of the framework&mdash;the weak reference mechanism in C++/WinRT is necessary to handle cyclic references.</span></span> <span data-ttu-id="acf90-107">Außerhalb von XAML ist es unwahrscheinlich, dass Sie schwache Referenzen verwenden müssen (obwohl es theoretisch nichts XAML-spezifisches an ihnen gibt).</span><span class="sxs-lookup"><span data-stu-id="acf90-107">Outside of XAML, it's unlikely you'll need to use weak references (although, there’s nothing XAML-specific about them in theory).</span></span>

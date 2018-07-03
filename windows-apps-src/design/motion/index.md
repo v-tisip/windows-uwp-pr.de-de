@@ -15,107 +15,65 @@ pm-contact: stmoy
 design-contact: jeffarn
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 1423aeff139758c780dcecb079141744931cdd7b
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: ffe26e949be254e85d28dde4a98a1730baa84a3e
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816535"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1843483"
 ---
-# <a name="motion-for-uwp-apps"></a><span data-ttu-id="3f055-103">Bewegung für UWP-Apps</span><span class="sxs-lookup"><span data-stu-id="3f055-103">Motion for UWP apps</span></span>
+# <a name="motion-for-uwp-apps"></a><span data-ttu-id="c87ed-103">Bewegung für UWP-Apps</span><span class="sxs-lookup"><span data-stu-id="c87ed-103">Motion for UWP apps</span></span>
 
-<span data-ttu-id="3f055-104">Gut gestaltete Bewegungen machen Apps lebhaft und lassen sie realistisch und perfekt erscheinen.</span><span class="sxs-lookup"><span data-stu-id="3f055-104">Purposeful, well-designed motion brings your app to life and makes the experience feel crafted and polished.</span></span> <span data-ttu-id="3f055-105">Bewegung hilft Benutzern dabei, Kontextänderungen zu verstehen, und sie zeigt Benutzern auch an, wo diese sich in der App befinden.</span><span class="sxs-lookup"><span data-stu-id="3f055-105">Motion helps your users understand context changes and where they are within your app’s navigation hierarchy.</span></span> <span data-ttu-id="3f055-106">Interaktionen werden mit visuellen Übergängen verbunden.</span><span class="sxs-lookup"><span data-stu-id="3f055-106">It ties experiences together with visual transitions.</span></span> <span data-ttu-id="3f055-107">Bewegung fügt der Oberfläche Geschwindigkeit und Mehrdimensionalität hinzu.</span><span class="sxs-lookup"><span data-stu-id="3f055-107">Motion adds a sense of pacing and dimensionality to the experience.</span></span>
+![Favoritenbild](images/header-motion2.svg)
 
-## <a name="benefits-of-motion"></a><span data-ttu-id="3f055-108">Vorteile von Bewegung</span><span class="sxs-lookup"><span data-stu-id="3f055-108">Benefits of motion</span></span>
+<span data-ttu-id="c87ed-105">In einer App sind fließende Bewegungen wichtig.</span><span class="sxs-lookup"><span data-stu-id="c87ed-105">Fluent motion serves a purpose in your app.</span></span> <span data-ttu-id="c87ed-106">Sie geben intelligentes Feedback basierend auf dem Verhalten des Benutzers, halten ein lebendiges Gefühl für die Benutzeroberfläche aufrecht und leiten die Navigation durch die App.</span><span class="sxs-lookup"><span data-stu-id="c87ed-106">It gives intelligent feedback based on the user's behavior, keeps the UI feeling alive, and guides the user's navigation through your app.</span></span> <span data-ttu-id="c87ed-107">Fließende Bewegung bewirkt eine emotionale Verbindung zwischen dem Benutzer und seiner digitalen Erfahrung.</span><span class="sxs-lookup"><span data-stu-id="c87ed-107">Fluent motion elicits an emotional connection between a user and their digital experience.</span></span> <span data-ttu-id="c87ed-108">Wir gehen von grundlegenden natürlichen Bewegungen aus, die der Benutzer bereits aus der physischen Welt kennt, und wir erweitern unser System von dort aus.</span><span class="sxs-lookup"><span data-stu-id="c87ed-108">We build on a foundation of natural movement the user already understands from the physical world, and we extend our system from there.</span></span>
 
-<span data-ttu-id="3f055-109">Bewegung bedeutet mehr, als nur Dinge beweglich zu machen.</span><span class="sxs-lookup"><span data-stu-id="3f055-109">Motion is more than making things move.</span></span> <span data-ttu-id="3f055-110">Bewegung ist ein Tool zum Erstellen eines physischen Ökosystems, das Benutzer mithilfe verschiedener Eingabetypen wie Maus, Tastatur, Toucheingabe und Stift aktiv bearbeiten können.</span><span class="sxs-lookup"><span data-stu-id="3f055-110">Motion is a tool for creating a physical ecosystem for the user to live inside and manipulate through a variety of input types, like mouse, keyboard, touch, and pen.</span></span> <span data-ttu-id="3f055-111">Die Qualität der Erfahrung hängt davon ab, wie gut die App auf den Benutzer reagiert und welche Art von Persönlichkeit die Benutzeroberfläche vermittelt.</span><span class="sxs-lookup"><span data-stu-id="3f055-111">The quality of the experience depends on how well the app responds to the user, and what kind of personality the UI communicates.</span></span>
+## <a name="fluent-motion-principles"></a><span data-ttu-id="c87ed-109">Prinzipien fließender Bewegungen</span><span class="sxs-lookup"><span data-stu-id="c87ed-109">Fluent motion principles</span></span>
 
-<span data-ttu-id="3f055-112">Stellen Sie sicher, dass die Bewegung einem Zweck in Ihrer App dient.</span><span class="sxs-lookup"><span data-stu-id="3f055-112">Make sure motion serves a purpose in your app.</span></span> <span data-ttu-id="3f055-113">Die besten UWP-Apps (Universelle Windows-Plattform) verwenden Bewegung, um die Benutzeroberfläche zum Leben zu erwecken.</span><span class="sxs-lookup"><span data-stu-id="3f055-113">The best Universal Windows Platform (UWP) apps use motion to bring the UI to life.</span></span> <span data-ttu-id="3f055-114">Bewegung sollte:</span><span class="sxs-lookup"><span data-stu-id="3f055-114">Motion should:</span></span>
+### <a name="physical"></a><span data-ttu-id="c87ed-110">Physisch</span><span class="sxs-lookup"><span data-stu-id="c87ed-110">Physical</span></span>
 
-- <span data-ttu-id="3f055-115">Feedback basierend auf dem Verhalten des Benutzers geben.</span><span class="sxs-lookup"><span data-stu-id="3f055-115">Give feedback based on the user's behavior.</span></span>
-- <span data-ttu-id="3f055-116">Dem Benutzer beibringen, wie er mit der Benutzeroberfläche interagieren kann.</span><span class="sxs-lookup"><span data-stu-id="3f055-116">Teach the user how to interact with the UI.</span></span>
-- <span data-ttu-id="3f055-117">Angeben, wie zu vorherigen oder folgenden Ansichten navigiert werden kann.</span><span class="sxs-lookup"><span data-stu-id="3f055-117">Indicate how to navigate to previous or succeeding views.</span></span>
+<span data-ttu-id="c87ed-111">Bewegte Objekte verhalten sich wie Objekte in der realen Welt.</span><span class="sxs-lookup"><span data-stu-id="c87ed-111">Objects in motion exhibit behaviors of objects in the real world.</span></span> <span data-ttu-id="c87ed-112">Durch fließende, reaktionsfähige Bewegungen wirken Benutzeroberflächen natürlich, und sie sorgen dafür, dass emotionale Verbindungen mit der Oberfläche entstehen.</span><span class="sxs-lookup"><span data-stu-id="c87ed-112">Fluid, responsive movement makes the experience feel natural, creating emotional connections and adding personality.</span></span>
 
-<span data-ttu-id="3f055-118">Wenn ein Benutzer mehr Zeit in Ihrer App verbringt oder Aufgaben in Ihrer App komplexer werden, wird qualitativ hochwertige Bewegung immer wichtiger: Mit Bewegung kann die Art und Weise verändert werden, wie der Benutzer die kognitive Belastung und die Benutzerfreundlichkeit Ihrer App wahrnimmt.</span><span class="sxs-lookup"><span data-stu-id="3f055-118">As a user spends more time inside your app, or as tasks in your app become more sophisticated, high-quality motion becomes increasingly important: it can be used to change how the user perceives their cognitive load and your app's ease of use.</span></span> <span data-ttu-id="3f055-119">Bewegung bringt viele weitere direkte Vorteile mit sich:</span><span class="sxs-lookup"><span data-stu-id="3f055-119">Motion has many other direct benefits:</span></span>
+![UI-Beispiel für fließende Bewegung](images/Physical.gif)
+> <span data-ttu-id="c87ed-114">Wenn Sie per Toucheingabe mit der UI interagieren, entspricht die Bewegung auf der Benutzeroberfläche direkt der Geschwindigkeit der Interaktion.</span><span class="sxs-lookup"><span data-stu-id="c87ed-114">When you interact with UI via touch, the movement of the UI is directly related to the velocity of the interaction.</span></span> <span data-ttu-id="c87ed-115">Und weil die Toucheingabe eine direkte Manipulation ist, wirkt sich das Objekt, mit dem Sie interagieren, auf die umgebenden Objekte aus.</span><span class="sxs-lookup"><span data-stu-id="c87ed-115">And because touch is direct manipulation, the object you interect with affects the objects around it.</span></span>
 
-- **<span data-ttu-id="3f055-120">Bewegung unterstützt die Interaktion und trägt dazu bei, dass sich Benutzer zurechtfinden.</span><span class="sxs-lookup"><span data-stu-id="3f055-120">Motion supports interaction and wayfinding.</span></span>**
+### <a name="functional"></a><span data-ttu-id="c87ed-116">Funktionell</span><span class="sxs-lookup"><span data-stu-id="c87ed-116">Functional</span></span>
 
-    <span data-ttu-id="3f055-121">Bewegung ist direktional: Sie bewegt sich vor und zurück, in den Inhalt hinein und aus ihm hinaus und hinterlässt gleichzeitig mentale „Brotkrümel“-Hinweise, wie der Benutzer zur aktuellen Ansicht gelangt ist.</span><span class="sxs-lookup"><span data-stu-id="3f055-121">Motion is directional: it moves forward and backward, in and out of content, leaving mental "breadcrumb" clues as to how the user arrived at the present view.</span></span> <span data-ttu-id="3f055-122">Übergänge können Benutzern beim Erlernen der Bedienung neuer Apps helfen, indem Analogien mit Aufgaben hergestellt werden, mit denen der Benutzer bereits vertraut ist.</span><span class="sxs-lookup"><span data-stu-id="3f055-122">Transitions can help users learn how to operate new applications by drawing analogies to tasks that the user is already familiar with.</span></span>
+<span data-ttu-id="c87ed-117">Bewegung dient einem Zweck und muss überzeugend sein.</span><span class="sxs-lookup"><span data-stu-id="c87ed-117">Motion serves a purpose and has conviction.</span></span> <span data-ttu-id="c87ed-118">Sie führt den Benutzer durch die Komplexität und hilft beim Aufbau der Hierarchie.</span><span class="sxs-lookup"><span data-stu-id="c87ed-118">It guides the user through complexity and helps establish hierarchy.</span></span> <span data-ttu-id="c87ed-119">Bewegung vermittelt den Eindruck verbesserter Leistung und optimiert das Benutzererlebnis, da keine Latenz wahrgenommen wird.</span><span class="sxs-lookup"><span data-stu-id="c87ed-119">Movement gives the impression of enhanced performance and optimizes the user experience by hiding perceived latency.</span></span>
 
-- **<span data-ttu-id="3f055-123">Bewegung kann den Eindruck verbesserter Leistung vermitteln.</span><span class="sxs-lookup"><span data-stu-id="3f055-123">Motion can give the impression of enhanced performance.</span></span>**
+![UI-Beispiel für funktionelle Bewegung](images/functional.gif)
+> <span data-ttu-id="c87ed-121">Seitenübergänge sind bewusst gestaltet.</span><span class="sxs-lookup"><span data-stu-id="c87ed-121">Page transitions are purpose-built.</span></span> <span data-ttu-id="c87ed-122">Sie geben Hinweise darauf, wie Seiten miteinander in Beziehung stehen sind.</span><span class="sxs-lookup"><span data-stu-id="c87ed-122">They give hints about how pages are related to each other.</span></span> <span data-ttu-id="c87ed-123">Sie verschieben Seiten in einer Weise, die selbst dann als schnell empfunden wird, wenn die Leistung nicht optimal ist.</span><span class="sxs-lookup"><span data-stu-id="c87ed-123">They move in a manner that's perceived as fast even when performance is not optimal.</span></span>
 
-    <span data-ttu-id="3f055-124">Wenn die Netzwerkgeschwindigkeit langsamer wird oder das System nicht reagiert, können Animationen dem Benutzer die Wartezeit kürzer erscheinen lassen.</span><span class="sxs-lookup"><span data-stu-id="3f055-124">When network speeds lag or the system pauses to work, animations can make the user's wait feel shorter.</span></span> <span data-ttu-id="3f055-125">Durch Animationen kann dem Benutzer mitgeteilt werden, dass die App noch mit der Verarbeitung beschäftigt und nicht eingefroren ist, und es können passiv neue Informationen angezeigt werden, die den Benutzer möglicherweise interessieren.</span><span class="sxs-lookup"><span data-stu-id="3f055-125">Animations can be used to let the user know that the app is processing, not frozen, and it can passively surface new information that the user may be interested in.</span></span>
+### <a name="continuous"></a><span data-ttu-id="c87ed-124">Kontinuierlich</span><span class="sxs-lookup"><span data-stu-id="c87ed-124">Continuous</span></span>
 
-- **<span data-ttu-id="3f055-126">Bewegung schafft Persönlichkeit.</span><span class="sxs-lookup"><span data-stu-id="3f055-126">Motion adds personality.</span></span>**
+<span data-ttu-id="c87ed-125">Eine fließende Bewegung von Punkt zu Punkt zieht auf natürliche Weise den Blick auf sich und führt den Benutzer.</span><span class="sxs-lookup"><span data-stu-id="c87ed-125">Fluid movement from point to point naturally draws the eye and guides the user.</span></span> <span data-ttu-id="c87ed-126">Sie fügt die Aufgabe eines Benutzers elegant zusammen, so dass sie sich konsumierbarer und freundlicher anfühlt.</span><span class="sxs-lookup"><span data-stu-id="c87ed-126">It elegantly stitches together a user’s task, making it feel more consumable and friendly.</span></span>
 
-    <span data-ttu-id="3f055-127">Bewegung ist häufig der allgemeine Thread, der die Persönlichkeit der Apps abbildet, wenn Benutzer durch eine Oberfläche navigieren.</span><span class="sxs-lookup"><span data-stu-id="3f055-127">Motion is often the common thread that communicates your apps personality as a user moves through an experience.</span></span>
+![UI-Beispiel für kontinuierliche Bewegung](images/continuous3.gif)
+> <span data-ttu-id="c87ed-128">Objekte können von Szene zu Szene wandern oder in einer Szene morphen, um Kontinuität zu schaffen und dem Benutzer dabei zu helfen, den Kontext zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="c87ed-128">Objects can travel from scene to scene or morph within a scene to provide continuity and help the user maintain context.</span></span>
 
-- **<span data-ttu-id="3f055-128">Bewegung schafft Eleganz.</span><span class="sxs-lookup"><span data-stu-id="3f055-128">Motion adds elegance.</span></span>**
+### <a name="contextual"></a><span data-ttu-id="c87ed-129">Kontextbezogen</span><span class="sxs-lookup"><span data-stu-id="c87ed-129">Contextual</span></span>
 
-    <span data-ttu-id="3f055-129">Durch fließende, reaktionsfähige Bewegungen wirken Benutzeroberflächen natürlich, und sie sorgen dafür, dass emotionale Verbindungen mit der Oberfläche entstehen.</span><span class="sxs-lookup"><span data-stu-id="3f055-129">Fluid, responsive, motion makes experiences feel natural, creating emotional connections to the experience.</span></span>
+<span data-ttu-id="c87ed-130">Intelligente Bewegung liefert dem Benutzer eine Rückmeldung in einer Weise, die sich danach richtet, wie der Benutzer die Benutzeroberfläche manipuliert hat.</span><span class="sxs-lookup"><span data-stu-id="c87ed-130">Intelligent motion provides feedback to the user in a manner that's aligned with how they manipulated the UI.</span></span> <span data-ttu-id="c87ed-131">Interaktion ist um den Benutzer herum zentriert.</span><span class="sxs-lookup"><span data-stu-id="c87ed-131">Interaction is centered around the user.</span></span> <span data-ttu-id="c87ed-132">Bewegung muss dem Formfaktor angemessen und dem Szenario entsprechend gestaltet sein.</span><span class="sxs-lookup"><span data-stu-id="c87ed-132">The movement feels appropriate to the form-factor and designed around the scenario.</span></span> <span data-ttu-id="c87ed-133">Sie sollte für jeden Benutzer vertraut sein.</span><span class="sxs-lookup"><span data-stu-id="c87ed-133">It should be comfortable for each user.</span></span>
 
-## <a name="examples-of-motion"></a><span data-ttu-id="3f055-130">Beispiele für Bewegung</span><span class="sxs-lookup"><span data-stu-id="3f055-130">Examples of motion</span></span>
+![UI-Beispiel für kontextuelle Bewegung](images/Contextual.gif)
+> <span data-ttu-id="c87ed-135">Eine Animation sollte mit der Benutzerinteraktion verknüpft sein.</span><span class="sxs-lookup"><span data-stu-id="c87ed-135">Animation should tie back to the user interaction.</span></span> <span data-ttu-id="c87ed-136">Ein Kontextmenü wird an dem Punkt bereitgestellt, an dem es der Benutzer aktiviert.</span><span class="sxs-lookup"><span data-stu-id="c87ed-136">A context menu is deployed from a point where the user activated it.</span></span> 
 
-<span data-ttu-id="3f055-131">Im Folgenden finden Sie einige Beispiele für Bewegung in einer App.</span><span class="sxs-lookup"><span data-stu-id="3f055-131">Here are some examples of motion in an app.</span></span>
+## <a name="motion-articles"></a><span data-ttu-id="c87ed-137">Artikel zu Bewegungen</span><span class="sxs-lookup"><span data-stu-id="c87ed-137">Motion articles</span></span>
 
-<span data-ttu-id="3f055-132">Hier verwendet eine App eine verbundene Animation, um ein Elementbild zu animieren, wenn es als Teil der Überschrift der nächsten Seite weiterbesteht.</span><span class="sxs-lookup"><span data-stu-id="3f055-132">Here, an app uses a connected animation to animate an item image as it “continues” to become part of the header of the next page.</span></span> <span data-ttu-id="3f055-133">Dieser Effekt trägt dazu bei, Benutzerkontext beim Übergang beizubehalten.</span><span class="sxs-lookup"><span data-stu-id="3f055-133">The effect helps maintain user context across the transition.</span></span>
-
-![Verbundene Animation](images/connected-animations/example.gif)
-
-<span data-ttu-id="3f055-135">Hier werden bei einem Bildlauf oder Schwenken der UI verschiedene Objekte mithilfe eines Parallax-Effekts unterschiedlich schnell verschoben. Dadurch entsteht ein Gefühl von Tiefe, Perspektive und Bewegung.</span><span class="sxs-lookup"><span data-stu-id="3f055-135">Here, a visual parallax effect moves different objects at different rates when the UI scrolls or pans to create a feeling of depth, perspective, and movement.</span></span>
-
-![Beispiel für Parallax mit einer Liste und einem Hintergrundbild](images/_Parallax_v2.gif)
-
-
-## <a name="types-of-motion"></a><span data-ttu-id="3f055-137">Arten von Bewegung</span><span class="sxs-lookup"><span data-stu-id="3f055-137">Types of motion</span></span>
-
-<table>
-    <tr>
-        <th align="left"><span data-ttu-id="3f055-138">Bewegungsart</span><span class="sxs-lookup"><span data-stu-id="3f055-138">Motion type</span></span></th>
-        <th align="left"><span data-ttu-id="3f055-139">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="3f055-139">Description</span></span></th>
-    </tr>
-    <tr>
-        <td><a href="motion-list.md"><span data-ttu-id="3f055-140">Hinzufügen und Löschen</span><span class="sxs-lookup"><span data-stu-id="3f055-140">Add and delete</span></span></a>
-        </td>
-        <td><span data-ttu-id="3f055-141">Mit Listenanimationen können Sie einzelne oder mehrere Elemente in einer Sammlung wie z. B. einem Fotoalbum oder einer Liste mit Suchergebnissen einfügen oder entfernen.</span><span class="sxs-lookup"><span data-stu-id="3f055-141">List animations let you insert or remove single or multiple items from a collection, such as a photo album or a list of search results.</span></span>
-        </td>
-    </tr>
-    <tr>
-        <td><a href="connected-animation.md"><span data-ttu-id="3f055-142">Verbundene Animation</span><span class="sxs-lookup"><span data-stu-id="3f055-142">Connected animation</span></span></a>
-        </td>
-        <td><span data-ttu-id="3f055-143">Mit verbundenen Animationen können Sie eine dynamische und ansprechende Navigationsfunktionalität erstellen, indem Sie den Übergang eines Elements zwischen zwei verschiedenen Ansichten animieren.</span><span class="sxs-lookup"><span data-stu-id="3f055-143">Connected animations let you create a dynamic and compelling navigation experience by animating the transition of an element between two different views.</span></span> <span data-ttu-id="3f055-144">So können Benutzer den Kontext beibehalten, und es entsteht Kontinuität zwischen den Ansichten.</span><span class="sxs-lookup"><span data-stu-id="3f055-144">This helps the user maintain their context and provides continuity between the views.</span></span> <span data-ttu-id="3f055-145">In einer verbundenen Animation scheint ein Element zwischen zwei Ansichten weiterzubestehen, während sich der UI-Inhalt ändert. Dabei fliegt das Element von seinem Standort in der Quellansicht über den Bildschirm zu seinem Ziel in der neuen Ansicht herüber.</span><span class="sxs-lookup"><span data-stu-id="3f055-145">In a connected animation, an element appears to “continue” between two views during a change in UI content, flying across the screen from its location in the source view to its destination in the new view.</span></span> <span data-ttu-id="3f055-146">Dadurch wird der gemeinsame Inhalt zwischen den beiden Ansichten unterstrichen, und es entsteht ein schöner, dynamischer Effekt als Teil eines Übergangs.</span><span class="sxs-lookup"><span data-stu-id="3f055-146">This emphasizes the common content in between the views and creates a beautiful and dynamic effect as part of a transition.</span></span> 
-        </td>
-    </tr>
-    <tr>
-        <td><a href="content-transition-animations.md"><span data-ttu-id="3f055-147">Inhaltsübergang</span><span class="sxs-lookup"><span data-stu-id="3f055-147">Content transition</span></span></a>
-        </td>
-        <td><span data-ttu-id="3f055-148">Mithilfe von Inhaltsübergangsanimationen können Sie den Inhalt eines Bildschirmbereichs ändern und gleichzeitig den Container oder Hintergrund unverändert lassen.</span><span class="sxs-lookup"><span data-stu-id="3f055-148">Content transition animations let you change the content of an area of the screen while keeping the container or background constant.</span></span> <span data-ttu-id="3f055-149">Neuer Inhalt wird eingeblendet.</span><span class="sxs-lookup"><span data-stu-id="3f055-149">New content fades in.</span></span> <span data-ttu-id="3f055-150">Muss vorhandener Inhalt ersetzt werden, wird dieser Inhalt ausgeblendet.</span><span class="sxs-lookup"><span data-stu-id="3f055-150">If there is existing content to be replaced, that content fades out.</span></span> </td>
-    </tr>
-    <tr>
-        <td><a href="motion-fade.md"><span data-ttu-id="3f055-151">Ein- und Ausblenden</span><span class="sxs-lookup"><span data-stu-id="3f055-151">Fade</span></span></a>
-        </td>
-        <td><span data-ttu-id="3f055-152">Verwenden Sie Ein- und Ausblendungsanimationen, um Elemente anzuzeigen oder nicht anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="3f055-152">Use fade animations to bring items into a view or to take items out of a view.</span></span> <span data-ttu-id="3f055-153">Die beiden üblichen Animationen dieser Art sind das Einblenden und das Ausblenden.</span><span class="sxs-lookup"><span data-stu-id="3f055-153">The two common fade animations are fade-in and fade-out.</span></span> </td>
-    </tr>
-    <tr>
-        <td><a href="page-transitions.md"><span data-ttu-id="3f055-154">Seitenübergang</span><span class="sxs-lookup"><span data-stu-id="3f055-154">Page transitions</span></span></a>
-        </td>
-        <td><span data-ttu-id="3f055-155">Seitenübergänge sind Animationen, die abgespielt werden, wenn Benutzer zwischen Seiten in einer App navigieren und Feedback als Beziehung zwischen Seiten liefern.</span><span class="sxs-lookup"><span data-stu-id="3f055-155">Page transitions navigate users between pages in an app, providing feedback as the relationship between pages.</span></span>
-        </td>
-    </tr>
-    <tr>
-        <td><a href="parallax.md"><span data-ttu-id="3f055-156">Parallax</span><span class="sxs-lookup"><span data-stu-id="3f055-156">Parallax</span></span></a>
-        </td>
-        <td><span data-ttu-id="3f055-157">Ein visueller Parallax-Effekt hilft dabei, ein Gefühl von Tiefe, Perspektive und Bewegung zu erzeugen.</span><span class="sxs-lookup"><span data-stu-id="3f055-157">A visual parallax effect helps create a feeling of depth, perspective, and movement.</span></span> <span data-ttu-id="3f055-158">Dieser Effekt wird erzielt, indem bei einem Bildlauf oder Schwenken der UI verschiedene Objekte unterschiedlich schnell verschoben werden.</span><span class="sxs-lookup"><span data-stu-id="3f055-158">It achieves this effect by moving different objects at different rates when the UI scrolls or pans.</span></span>
-        </td>
-    </tr> 
-    <tr>
-        <td><a href="motion-pointer.md"><span data-ttu-id="3f055-159">Feedback durch Drücken</span><span class="sxs-lookup"><span data-stu-id="3f055-159">Press feedback</span></span></a>
-        </td>
-        <td><span data-ttu-id="3f055-160">Zeigerdruckanimationen stellen visuelles Feedback für Benutzer bereit, wenn diese auf ein Element tippen.</span><span class="sxs-lookup"><span data-stu-id="3f055-160">Pointer press animations provide users with visual feedback when the user taps on an item.</span></span> <span data-ttu-id="3f055-161">Bei der Animation für „Zeiger nach unten“ wird das gedrückte Element leicht verkleinert und geneigt. Sie wird wiedergegeben, wenn erstmalig auf ein Element getippt wird.</span><span class="sxs-lookup"><span data-stu-id="3f055-161">The pointer down animation slightly shrinks and tilts the pressed item, and plays when an item is first tapped.</span></span> <span data-ttu-id="3f055-162">Die Animation für „Zeiger nach oben“, mit der der ursprüngliche Zustand des Elements wiederhergestellt wird, wird beim Loslassen des Zeigers wiedergegeben.</span><span class="sxs-lookup"><span data-stu-id="3f055-162">The pointer up animation, which restores the item to its original position, is played when the user releases the pointer.</span></span>
-        </td>
-    </tr>
-</table>
-
-## <a name="animations-in-xaml"></a><span data-ttu-id="3f055-163">Animationen in XAML</span><span class="sxs-lookup"><span data-stu-id="3f055-163">Animations in XAML</span></span>
-
-<span data-ttu-id="3f055-164">Weitere Informationen zur Verwendung von integrierten Animationen in XAML oder zur Erstellung Ihrer eigenen finden Sie unter [Animationen in XAML](xaml-animation.md).</span><span class="sxs-lookup"><span data-stu-id="3f055-164">To learn more about how to use built-in animations in XAML or create your own, check out [Animations in XAML](xaml-animation.md).</span></span> 
+<span data-ttu-id="c87ed-138">:::row::: :::column:::</span><span class="sxs-lookup"><span data-stu-id="c87ed-138">:::row::: :::column:::</span></span>
+        ### [Timing and easing](timing-and-easing.md)
+        Timing and easing are important elements that make motion feel natural for objects entering, exiting, or moving within the UI.
+    :::column-end:::
+    :::column:::
+        ### [Directionality and gravity](directionality-and-gravity.md)
+        Directional signals help provide a solid mental model of the journey a user takes across experiences. Directional movement is subject to forces like gravity, which reinforces the natural feel of the movement.
+    :::column-end:::
+<span data-ttu-id="c87ed-139">:::row-end::: :::row::: :::column:::</span><span class="sxs-lookup"><span data-stu-id="c87ed-139">:::row-end::: :::row::: :::column:::</span></span>
+        ### [Page transitions](page-transitions.md)
+        Page transitions navigate users between pages in an app, providing feedback about the relationship between pages. They help users understand where they are in the navigation hierarchy.
+    :::column-end:::
+    :::column:::
+        ### [Connected animation](connected-animation.md)
+        Connected animations let you create a dynamic and compelling navigation experience by animating the transition of an element between two different views.
+    :::column-end:::
+<span data-ttu-id="c87ed-140">:::row-end:::</span><span class="sxs-lookup"><span data-stu-id="c87ed-140">:::row-end:::</span></span>

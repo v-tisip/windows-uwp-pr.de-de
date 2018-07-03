@@ -1,0 +1,128 @@
+---
+author: stevewhims
+description: Damit Sie C++/WinRT schneller verwenden können, werden Ihnen in diesem Thema einige einfache Codebeispiele vorgestellt.
+title: Erste Schritte mit C++/WinRT
+ms.author: stwhi
+ms.date: 05/21/2018
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, erste schritte
+ms.localizationpriority: medium
+ms.openlocfilehash: 4ed578f40417f72adb080f41703711e47c858c1f
+ms.sourcegitcommit: f9690c33bb85f84466560efac6f23cca2daf5a02
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "1912948"
+---
+# <a name="get-started-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a><span data-ttu-id="7b8dc-104">Erste Schritte mit [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)</span><span class="sxs-lookup"><span data-stu-id="7b8dc-104">Get started with [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)</span></span>
+<span data-ttu-id="7b8dc-105">Damit Sie C++/WinRT schneller verwenden können, werden Ihnen in diesem Thema einige einfache Codebeispiele vorgestellt.</span><span class="sxs-lookup"><span data-stu-id="7b8dc-105">To get you up to speed with using C++/WinRT, this topic walks through a simple code example.</span></span>
+
+## <a name="a-cwinrt-quick-start"></a><span data-ttu-id="7b8dc-106">Schnelleinstieg zu C++/WinRT</span><span class="sxs-lookup"><span data-stu-id="7b8dc-106">A C++/WinRT quick-start</span></span>
+> [!NOTE]
+> <span data-ttu-id="7b8dc-107">Informationen zur Installation und Verwendung der C++/WinRT Visual Studio Extension (VSIX) (die Projektvorlagenunterstützung sowie C++/WinRT MSBuild-Eigenschaften und -Ziele bietet) finden Sie unter [Visual Studio-Unterstützung für C++/WinRT und VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).</span><span class="sxs-lookup"><span data-stu-id="7b8dc-107">For info about installing and using the C++/WinRT Visual Studio Extension (VSIX) (which provides project template support, as well as C++/WinRT MSBuild properties and targets) see [Visual Studio support for C++/WinRT, and the VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).</span></span>
+
+<span data-ttu-id="7b8dc-108">Erstellen Sie ein neues **Windows Console Application (C++/WinRT)**-Projekt.</span><span class="sxs-lookup"><span data-stu-id="7b8dc-108">Create a new **Windows Console Application (C++/WinRT)** project.</span></span> <span data-ttu-id="7b8dc-109">Bearbeiten Sie `pch.h` und `main.cpp` folgendermaßen.</span><span class="sxs-lookup"><span data-stu-id="7b8dc-109">Edit `pch.h` and `main.cpp` to look like this.</span></span>
+
+```cppwinrt
+// pch.h
+...
+#include <iostream>
+#include <winrt/Windows.Foundation.h>
+#include <winrt/Windows.Web.Syndication.h>
+...
+```
+
+```cppwinrt
+// main.cpp
+#include "pch.h"
+
+using namespace winrt;
+using namespace Windows::Foundation;
+using namespace Windows::Web::Syndication;
+
+int main()
+{
+    winrt::init_apartment();
+
+    Uri rssFeedUri{ L"https://blogs.windows.com/feed" };
+    SyndicationClient syndicationClient;
+    SyndicationFeed syndicationFeed = syndicationClient.RetrieveFeedAsync(rssFeedUri).get();
+    for (const SyndicationItem syndicationItem : syndicationFeed.Items())
+    {
+        hstring titleAsHstring = syndicationItem.Title().Text();
+        std::wcout << titleAsHstring.c_str() << std::endl;
+    }
+}
+```
+
+<span data-ttu-id="7b8dc-110">Wir nehmen uns das kurze Codebeispiel oben Stück für Stück vor und erläutern, was in jedem Teil passiert.</span><span class="sxs-lookup"><span data-stu-id="7b8dc-110">Let's take the short code example above piece by piece, and explain what's going on in each part.</span></span>
+
+```cppwinrt
+#include <winrt/Windows.Foundation.h>
+#include <winrt/Windows.Web.Syndication.h>
+```
+
+<span data-ttu-id="7b8dc-111">Die enthaltenen Header sind Teil des SDKs und befinden sich im Ordner `%WindowsSdkDir%Include<WindowsTargetPlatformVersion>\cppwinrt\winrt`.</span><span class="sxs-lookup"><span data-stu-id="7b8dc-111">The headers that we include are part of the SDK, inside the folder `%WindowsSdkDir%Include<WindowsTargetPlatformVersion>\cppwinrt\winrt`.</span></span> <span data-ttu-id="7b8dc-112">Visual Studio bezieht diesen Pfad in sein *IncludePath*-Makro ein.</span><span class="sxs-lookup"><span data-stu-id="7b8dc-112">Visual Studio includes that path in its *IncludePath* macro.</span></span> <span data-ttu-id="7b8dc-113">Die Header enthalten Windows-APIs, die in C++/WinRT projiziert werden.</span><span class="sxs-lookup"><span data-stu-id="7b8dc-113">The headers contain Windows APIs projected into C++/WinRT.</span></span> <span data-ttu-id="7b8dc-114">Anders ausgedrückt: Für jeden einzelnen Windows-Typ definiert C++/WinRT ein C++-freundliches Äquivalent (wird als *projizierter Typ* bezeichnet).</span><span class="sxs-lookup"><span data-stu-id="7b8dc-114">In other words, for each Windows type, C++/WinRT defines a C++-friendly equivalent (called the *projected type*).</span></span> <span data-ttu-id="7b8dc-115">Ein projizierter Typ verfügt über den gleichen vollqualifizierten Namen wie der Windows-Typ, befindet sich aber im C++/**winrt**-Namespace.</span><span class="sxs-lookup"><span data-stu-id="7b8dc-115">A projected type has the same fully-qualified name as the Windows type, but it's placed in the C++ **winrt** namespace.</span></span> <span data-ttu-id="7b8dc-116">Wenn Sie diese in Ihrem vorkompilierten Header platzieren, werden die inkrementellen Buildzeiten reduziert.</span><span class="sxs-lookup"><span data-stu-id="7b8dc-116">Putting these includes in your precompiled header reduces incremental build times.</span></span>
+
+> [!IMPORTANT]
+> <span data-ttu-id="7b8dc-117">Wann immer Sie einen Typ aus einem Windows-Namespace verwenden möchten, schließen Sie die entsprechende C++/WinRT-Windows-Namespace-Headerdatei wie gezeigt ein.</span><span class="sxs-lookup"><span data-stu-id="7b8dc-117">Whenever you want to use a type from a Windows namespaces, include the corresponding C++/WinRT Windows namespace header file, as shown.</span></span> <span data-ttu-id="7b8dc-118">Der *zugehörige* Header ist derjenige mit dem gleichen Namen wie der Namespace des Typs.</span><span class="sxs-lookup"><span data-stu-id="7b8dc-118">The *corresponding* header is the one with the same name as the type's namespace.</span></span> <span data-ttu-id="7b8dc-119">Um z.B. die C++/WinRT-Projektion für die Laufzeitklasse [**Windows::Foundation::Collections::PropertySet**](/uwp/api/windows.foundation.collections.propertyset) zu verwenden, fügen Sie Folgendes ein: `#include <winrt/Windows.Foundation.Collections.h>`.</span><span class="sxs-lookup"><span data-stu-id="7b8dc-119">For example, to use the C++/WinRT projection for the [**Windows::Foundation::Collections::PropertySet**](/uwp/api/windows.foundation.collections.propertyset) runtime class, `#include <winrt/Windows.Foundation.Collections.h>`.</span></span>
+
+```cppwinrt
+using namespace winrt;
+using namespace Windows::Foundation;
+using namespace Windows::Web::Syndication;
+```
+
+<span data-ttu-id="7b8dc-120">Die `using namespace`-Direktiven sind optional, aber praktisch.</span><span class="sxs-lookup"><span data-stu-id="7b8dc-120">The `using namespace` directives are optional, but convenient.</span></span> <span data-ttu-id="7b8dc-121">Das oben gezeigte Muster für diese Richtlinien (was die Suche nach unqualifizierten Namen für alles im**Winrt**-Namespace ermöglicht) eignet sich, wenn Sie ein neues Projekt beginnen und C++/WinRT die einzige Sprachprojektion ist, die Sie innerhalb dieses Projekts verwenden.</span><span class="sxs-lookup"><span data-stu-id="7b8dc-121">The pattern shown above for such directives (allowing unqualified name lookup for anything in the **winrt** namespace) is suitable for when you're beginning a new project and C++/WinRT is the only language projection you're using inside of that project.</span></span> <span data-ttu-id="7b8dc-122">Wenn Sie andererseits C++/WinRT-Code mit [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) und/oder SDK-ABI-Code (Application Binary Interface) kombinieren (Sie davon entweder portieren oder interagieren, eines oder beide dieser Modelle), dann lesen Sie die Themen [Interoperabilität zwischen C++/WinRT und C++/CX](interop-winrt-cx.md), [Wechsel zu C++/WinRT von C++/CX](move-to-winrt-from-cx.md) und [Interoperabilität zwischen C++/WinRT und der ABI](interop-winrt-abi.md).</span><span class="sxs-lookup"><span data-stu-id="7b8dc-122">If, on the other hand, you're mixing C++/WinRT code with [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) and/or SDK application binary interface (ABI) code (you're either porting from, or interoperating with, one or both of those models), then see the topics [Interop between C++/WinRT and C++/CX](interop-winrt-cx.md), [Move to C++/WinRT from C++/CX](move-to-winrt-from-cx.md), and [Interop between C++/WinRT and the ABI](interop-winrt-abi.md).</span></span>
+
+```cppwinrt
+winrt::init_apartment();
+```
+
+<span data-ttu-id="7b8dc-123">Der Aufruf von **winrt::init_apartment** initialisiert COM; standardmäßig in einem Multithread-Apartment.</span><span class="sxs-lookup"><span data-stu-id="7b8dc-123">The call to **winrt::init_apartment** initializes COM; by default, in a multithreaded apartment.</span></span>
+
+```cppwinrt
+Uri rssFeedUri{ L"https://blogs.windows.com/feed" };
+SyndicationClient syndicationClient;
+```
+
+<span data-ttu-id="7b8dc-124">Weisen Sie zwei Objekte mit Stapelzuordnung zu: Sie stellen den URI des Windows-Blogs dar, und einen Syndication-Client.</span><span class="sxs-lookup"><span data-stu-id="7b8dc-124">Stack-allocate two objects: they represent the uri of the Windows blog, and a syndication client.</span></span> <span data-ttu-id="7b8dc-125">Wir erstellen den URI mit einem einfachen Wide-String-Literal (unter [String-Verarbeitung in C++/WinRT](strings.md) finden Sie weitere Möglichkeiten zum Arbeiten mit Zeichenfolgen).</span><span class="sxs-lookup"><span data-stu-id="7b8dc-125">We construct the uri with a simple wide string literal (see [String handling in C++/WinRT](strings.md) for more ways you can work with strings).</span></span>
+
+```cppwinrt
+SyndicationFeed syndicationFeed = syndicationClient.RetrieveFeedAsync(rssFeedUri).get();
+```
+
+<span data-ttu-id="7b8dc-126">[**SyndicationClient::RetrieveFeedAsync**](/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync) ist ein Beispiel für eine asynchrone Windows-Runtime-Funktion.</span><span class="sxs-lookup"><span data-stu-id="7b8dc-126">[**SyndicationClient::RetrieveFeedAsync**](/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync) is an example of an asynchronous Windows Runtime function.</span></span> <span data-ttu-id="7b8dc-127">Das Codebeispiel erhält von **RetrieveFeedAsync** ein Objekt für einen asynchronen Vorgang. Es ruft **get** für dieses Objekt auf, um den aufrufenden Thread zu blockieren und auf das Ergebnis zu warten (in diesem Fall einen Syndication-Feed).</span><span class="sxs-lookup"><span data-stu-id="7b8dc-127">The code example receives an asynchronous operation object from **RetrieveFeedAsync**, and it calls **get** on that object to block the calling thread and wait for the result (which is a syndication feed, in this case).</span></span> <span data-ttu-id="7b8dc-128">Weitere Informationen über Parallelität und Non-Blocking-Techniken finden Sie unter [Parallelität und asynchrone Vorgänge mit C++/WinRT](concurrency.md).</span><span class="sxs-lookup"><span data-stu-id="7b8dc-128">For more about concurrency, and for non-blocking techniques, see [Concurrency and asynchronous operations with C++/WinRT](concurrency.md).</span></span>
+
+```cppwinrt
+for (const SyndicationItem syndicationItem : syndicationFeed.Items()) { ... }
+```
+
+<span data-ttu-id="7b8dc-129">[**SyndicationFeed.Items**](/uwp/api/windows.web.syndication.syndicationfeed.items) ist ein Bereich, der durch die Iteratoren definiert wird, die von den **begin**- und **end**-Funktionen (oder deren constant-, reverse- und constant-reverse-Varianten) zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="7b8dc-129">[**SyndicationFeed.Items**](/uwp/api/windows.web.syndication.syndicationfeed.items) is a range, defined by the iterators returned from **begin** and **end** functions (or their constant, reverse, and constant-reverse variants).</span></span> <span data-ttu-id="7b8dc-130">Aus diesem Grund können Sie **Items** entweder mit einer bereichsbasierten `for`-Anweisung oder mit der Template-Funktion **std::for_each** auflisten.</span><span class="sxs-lookup"><span data-stu-id="7b8dc-130">Because of this, you can enumerate **Items** with either a range-based `for` statement, or with the **std::for_each** template function.</span></span>
+
+```cppwinrt
+hstring titleAsHstring = syndicationItem.Title().Text();
+std::wcout << titleAsHstring.c_str() << std::endl;
+```
+
+<span data-ttu-id="7b8dc-131">Der Code erhält dann den Titeltext des Feeds als [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring)-Objekt (siehe [String-Verarbeitung in C++/WinRT](strings.md)).</span><span class="sxs-lookup"><span data-stu-id="7b8dc-131">Gets the feed's title text, as a [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) object (more details in [String handling in C++/WinRT](strings.md)).</span></span> <span data-ttu-id="7b8dc-132">**hstring** ist dann die Ausgabe, über die **c_str**-Funktion, die das Muster wiedergibt, das mit C++-Standardbibliothekzeichenfolgen verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="7b8dc-132">The **hstring** is then output, via the **c_str** function, which reflects the pattern used with C++ Standard Library strings.</span></span>
+
+<span data-ttu-id="7b8dc-133">Wie Sie sehen können, unterstützt C++/WinRT moderne, klassenähnliche C++ Ausdrücke wie `syndicationItem.Title().Text()`.</span><span class="sxs-lookup"><span data-stu-id="7b8dc-133">As you can see, C++/WinRT encourages modern, and class-like, C++ expressions such as `syndicationItem.Title().Text()`.</span></span> <span data-ttu-id="7b8dc-134">Dies ist ein anderer und saubererer Programmierstil als die traditionelle COM-Programmierung.</span><span class="sxs-lookup"><span data-stu-id="7b8dc-134">This is a different, and cleaner, programming style from traditional COM programming.</span></span> <span data-ttu-id="7b8dc-135">Sie müssen COM nicht direkt initialisieren, arbeiten Sie mit COM-Zeigern.</span><span class="sxs-lookup"><span data-stu-id="7b8dc-135">You don't need to directly initialize COM, work with COM pointers.</span></span>
+
+<span data-ttu-id="7b8dc-136">Sie müssen auch keine HRESULT-Rückgabecodes verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="7b8dc-136">Nor do you need to handle HRESULT return codes.</span></span> <span data-ttu-id="7b8dc-137">Für einen natürlichen und modernen Programmierstil konvertiert C++/WinRT Fehler-HRESULTs in Ausnahmen, wie z.B. [**winrt::hresult-error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error).</span><span class="sxs-lookup"><span data-stu-id="7b8dc-137">C++/WinRT converts error HRESULTs to exceptions such as [**winrt::hresult-error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) for a natural and modern programming style.</span></span> <span data-ttu-id="7b8dc-138">Weitere Informationen zur Fehlerbehandlung sowie Codebeispiele finden Sie unter [Fehlerbehandlung bei C++/WinRT](error-handling.md).</span><span class="sxs-lookup"><span data-stu-id="7b8dc-138">For more info about error-handling, and code examples, see [Error handling with C++/WinRT](error-handling.md).</span></span>
+
+## <a name="important-apis"></a><span data-ttu-id="7b8dc-139">Wichtige APIs</span><span class="sxs-lookup"><span data-stu-id="7b8dc-139">Important APIs</span></span>
+* [<span data-ttu-id="7b8dc-140">SyndicationClient::RetrieveFeedAsync</span><span class="sxs-lookup"><span data-stu-id="7b8dc-140">SyndicationClient::RetrieveFeedAsync</span></span>](/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)
+* [<span data-ttu-id="7b8dc-141">SyndicationFeed.Items</span><span class="sxs-lookup"><span data-stu-id="7b8dc-141">SyndicationFeed.Items</span></span>](/uwp/api/windows.web.syndication.syndicationfeed.items)
+* [<span data-ttu-id="7b8dc-142">winrt::hstring-Struktur</span><span class="sxs-lookup"><span data-stu-id="7b8dc-142">winrt::hstring struct</span></span>](/uwp/cpp-ref-for-winrt/hstring)
+* [<span data-ttu-id="7b8dc-143">winrt::hresult-error</span><span class="sxs-lookup"><span data-stu-id="7b8dc-143">winrt::hresult-error</span></span>](/uwp/cpp-ref-for-winrt/error-handling/hresult-error)
+
+## <a name="related-topics"></a><span data-ttu-id="7b8dc-144">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="7b8dc-144">Related topics</span></span>
+* [<span data-ttu-id="7b8dc-145">C++/CX</span><span class="sxs-lookup"><span data-stu-id="7b8dc-145">C++/CX</span></span>](/cpp/cppcx/visual-c-language-reference-c-cx)
+* [<span data-ttu-id="7b8dc-146">Fehlerbehandlung bei C++/WinRT</span><span class="sxs-lookup"><span data-stu-id="7b8dc-146">Error handling with C++/WinRT</span></span>](error-handling.md)
+* [<span data-ttu-id="7b8dc-147">Interoperabilität zwischen C++/WinRT und C++/CX</span><span class="sxs-lookup"><span data-stu-id="7b8dc-147">Interop between C++/WinRT and C++/CX</span></span>](interop-winrt-cx.md)
+* [<span data-ttu-id="7b8dc-148">Interoperabilität zwischen C++/WinRT und der ABI</span><span class="sxs-lookup"><span data-stu-id="7b8dc-148">Interop between C++/WinRT and the ABI</span></span>](interop-winrt-abi.md)
+* [<span data-ttu-id="7b8dc-149">Wechsel zu C++/WinRT von C++/CX</span><span class="sxs-lookup"><span data-stu-id="7b8dc-149">Move to C++/WinRT from C++/CX</span></span>](move-to-winrt-from-cx.md)
+* [<span data-ttu-id="7b8dc-150">String-Verarbeitung in C++/WinRT</span><span class="sxs-lookup"><span data-stu-id="7b8dc-150">String handling in C++/WinRT</span></span>](strings.md)

@@ -1,53 +1,58 @@
 ---
 author: mcleanbyron
-Description: "Sie können benutzerdefinierte Ereignisse von Ihrer UWP-App aus protokollieren und sie im Nutzungsbericht im Windows Dev Center-Dashboard überprüfen."
-title: "Protokollieren benutzerdefinierter Ereignisse für Dev Center"
+Description: You can log custom events from your UWP app and review those events in the Usage report on the Windows Dev Center dashboard.
+title: Protokollieren benutzerdefinierter Ereignisse für Dev Center
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 06/01/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Microsoft Store-Services-SDK, Ereignisse protokollieren"
+keywords: Windows10, UWP, Microsoft Store-Services-SDK, Ereignisse protokollieren
 ms.assetid: 4aa591e0-c22a-4c90-b316-0b5d0410af19
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 80cc3ec6aab90549c55ff8c8f78b54f5827f61ff
-ms.lasthandoff: 02/08/2017
-
+ms.localizationpriority: high
+ms.openlocfilehash: 9828f948d0245ee23a3e309951b38c61765973e9
+ms.sourcegitcommit: 929fa4b3273862dcdc76b083bf6c3b2c872dd590
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "1935570"
 ---
+# <a name="log-custom-events-for-dev-center"></a><span data-ttu-id="4ae7f-103">Protokollieren benutzerdefinierter Ereignisse für Dev Center</span><span class="sxs-lookup"><span data-stu-id="4ae7f-103">Log custom events for Dev Center</span></span>
 
-# <a name="log-custom-events-for-dev-center"></a>Protokollieren benutzerdefinierter Ereignisse für Dev Center
+<span data-ttu-id="4ae7f-104">Der [Nutzungsbericht](https://msdn.microsoft.com/windows/uwp/publish/usage-report) im Windows Dev Center-Dashboard informiert Sie über benutzerdefinierte Ereignisse, die Sie in Ihrer App für die universelle Windows-Plattform (UWP) definiert haben.</span><span class="sxs-lookup"><span data-stu-id="4ae7f-104">The [Usage report](https://msdn.microsoft.com/windows/uwp/publish/usage-report) in the Windows Dev Center dashboard lets you get info about custom events that you've defined in your Universal Windows Platform (UWP) app.</span></span> <span data-ttu-id="4ae7f-105">Ein benutzerdefiniertes Ereignis ist eine beliebige Zeichenfolge, die ein Ereignis oder eine Aktivität in Ihrer App repräsentiert.</span><span class="sxs-lookup"><span data-stu-id="4ae7f-105">A custom event is an arbitrary string that represents an event or activity in your app.</span></span> <span data-ttu-id="4ae7f-106">Beispielsweise kann ein Spiel benutzerdefinierte Ereignisse mit den Bezeichnungen *FirstLevelPassed*, *SecondLevelPassed*usw. definieren, die protokolliert werden, wenn der Benutzer die einzelnen Levels des Spiels durchläuft.</span><span class="sxs-lookup"><span data-stu-id="4ae7f-106">For example, a game might define custom events named *firstLevelPassed*, *secondLevelPassed*, and so on, which are logged when the user passes each level in the game.</span></span>
 
-Der [Nutzungsbericht](https://msdn.microsoft.com/windows/uwp/publish/usage-report) im Windows Dev Center-Dashboard informiert Sie über benutzerdefinierte Ereignisse, die Sie in Ihrer App für die universelle Windows-Plattform (UWP) definiert haben. Ein benutzerdefiniertes Ereignis ist eine beliebige Zeichenfolge, die ein Ereignis oder eine Aktivität in Ihrer App repräsentiert. Beispielsweise kann ein Spiel benutzerdefinierte Ereignisse mit den Bezeichnungen *FirstLevelPassed*, *SecondLevelPassed*usw. definieren, die protokolliert werden, wenn der Benutzer die einzelnen Levels des Spiels durchläuft.
+<span data-ttu-id="4ae7f-107">Um ein benutzerdefiniertes Ereignis aus Ihrer App zu protokollieren, übergeben Sie die Zeichenfolge des benutzerdefinierten Ereignisses an die [Log](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomeventlogger.log.aspx)-Methode des Microsoft Store Services SDK.</span><span class="sxs-lookup"><span data-stu-id="4ae7f-107">To log a custom event from your app, pass the custom event string to the [Log](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomeventlogger.log.aspx) method provided by the Microsoft Store Services SDK.</span></span> <span data-ttu-id="4ae7f-108">Sie können alle Instanzen für Ihre benutzerdefinierten Ereignisse im Abschnitt **Benutzerdefinierte Ereignisse** des [Nutzungsberichts](https://msdn.microsoft.com/windows/uwp/publish/usage-report) im Dev Center-Dashboard überprüfen.</span><span class="sxs-lookup"><span data-stu-id="4ae7f-108">You can review the total occurrences for your custom events in the **Custom events** section of the [Usage report](https://msdn.microsoft.com/windows/uwp/publish/usage-report) in the Dev Center dashboard.</span></span>
 
-Um ein benutzerdefiniertes Ereignis aus Ihrer App zu protokollieren, übergeben Sie die Zeichenfolge des benutzerdefinierten Ereignisses an die [Log](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomeventlogger.log.aspx)-Methode des Microsoft Store Services SDK. Sie können alle Instanzen für Ihre benutzerdefinierten Ereignisse im Abschnitt **Benutzerdefinierte Ereignisse** des [Nutzungsberichts](https://msdn.microsoft.com/windows/uwp/publish/usage-report) im Dev Center-Dashboard überprüfen.
+> [!NOTE]
+> <span data-ttu-id="4ae7f-109">Benutzerdefinierte Ereignisse, die Sie im Dev Center protokollieren, sind unabhängig von [Windows-Ereignissen](https://msdn.microsoft.com/library/windows/desktop/aa964766.aspx) und erscheinen nicht in der **Ereignisanzeige**.</span><span class="sxs-lookup"><span data-stu-id="4ae7f-109">Custom events that you log to Dev Center are unrelated to [Windows events](https://msdn.microsoft.com/library/windows/desktop/aa964766.aspx), and they do not appear in **Event Viewer**.</span></span>
 
->**Hinweis:**&nbsp;&nbsp;Benutzerdefinierte Ereignisse, die Sie im Dev Center protokollieren, sind unabhängig von [Windows-Ereignissen](https://msdn.microsoft.com/library/windows/desktop/aa964766.aspx) und erscheinen nicht in der **Ereignisanzeige**.
+## <a name="prerequisites"></a><span data-ttu-id="4ae7f-110">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="4ae7f-110">Prerequisites</span></span>
 
-## <a name="prerequisites"></a>Voraussetzungen
+<span data-ttu-id="4ae7f-111">Bevor Sie benutzerdefinierte Protokollereignisse im **Nutzungsbericht** für Ihre App im Dashboard überprüfen können, muss Ihre App im Store veröffentlicht werden.</span><span class="sxs-lookup"><span data-stu-id="4ae7f-111">Before you can review custom logging events in the **Usage report** for your app in the dashboard, your app must be published in the Store.</span></span>
 
-Bevor Sie benutzerdefinierte Protokollereignisse im **Nutzungsbericht** für Ihre App im Dashboard überprüfen können, muss Ihre App im Store veröffentlicht werden.
+## <a name="how-to-log-custom-events"></a><span data-ttu-id="4ae7f-112">Protokollieren von benutzerdefinierten Ereignissen</span><span class="sxs-lookup"><span data-stu-id="4ae7f-112">How to log custom events</span></span>
 
-## <a name="how-to-log-custom-events"></a>Protokollieren von benutzerdefinierten Ereignissen
+1. <span data-ttu-id="4ae7f-113">Falls noch nicht geschehen, [installieren Sie das Microsoft Store Services SDK](microsoft-store-services-sdk.md#install-the-sdk) auf Ihrem Entwicklungscomputer.</span><span class="sxs-lookup"><span data-stu-id="4ae7f-113">If you have not done so already, [Install the Microsoft Store Services SDK](microsoft-store-services-sdk.md#install-the-sdk) on your development computer.</span></span>
 
-1. Falls noch nicht geschehen, [installieren Sie das Microsoft Store Services SDK](microsoft-store-services-sdk.md#install-the-sdk) auf Ihrem Entwicklungscomputer. Neben der API zur Protokollierung benutzerdefinierter Ereignisse bietet dieses SDK auch APIs für andere Features, wie beispielsweise das Durchführen von Experimenten in Ihren Apps mit A/B-Tests und das Einblenden von Anzeigen.
-2. Öffnen Sie das Projekt in Visual Studio.
-3. Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf den Knoten **Verweise** für Ihr Projekt, und wählen Sie anschließend **Verweis hinzufügen** aus.
-4. Erweitern Sie im **Verweis-Manager** die Option **Universelle Windows-App**, und klicken Sie auf **Erweiterungen**.
-5. Klicken Sie in der Liste der SDKs auf das Kontrollkästchen neben **Microsoft Engagement Framework** und anschließend auf **OK**.
-7. Fügen Sie die folgende Anweisung am Anfang jeder Codedatei hinzu, in der Sie benutzerdefinierte Ereignisse protokollieren möchten.
+2. <span data-ttu-id="4ae7f-114">Öffnen Sie das Projekt in Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="4ae7f-114">Open your project in Visual Studio.</span></span>
 
-  > [!div class="tabbedCodeSnippets"]
-  [!code-cs[EventLogger](./code/StoreSDKSamples/cs/LogEvents.cs#EngagementNamespace)]
+3. <span data-ttu-id="4ae7f-115">Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf den Knoten **Verweise** für Ihr Projekt, und wählen Sie anschließend **Verweis hinzufügen** aus.</span><span class="sxs-lookup"><span data-stu-id="4ae7f-115">In Solution Explorer, right-click the **References** node for your project and click **Add Reference**.</span></span>
 
-8. Rufen Sie in jedem Abschnitt des Codes, in dem Sie ein benutzerdefiniertes Ereignis protokollieren möchten, ein [StoreServicesCustomEventLogger](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomeventlogger.log.aspx)-Objekt ab, und rufen Sie dann die [Protokoll](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomeventlogger.log.aspx)-Methode auf. Übergeben Sie die Zeichenfolge für das benutzerdefinierte Ereignis an die Methode.
+4. <span data-ttu-id="4ae7f-116">Erweitern Sie im **Verweis-Manager** die Option **Universelle Windows-App**, und klicken Sie auf **Erweiterungen**.</span><span class="sxs-lookup"><span data-stu-id="4ae7f-116">In **Reference Manager**, expand **Universal Windows** and click **Extensions**.</span></span>
 
-  > [!div class="tabbedCodeSnippets"]
-  [!code-cs[EventLogger](./code/StoreSDKSamples/cs/LogEvents.cs#Log)]
+5. <span data-ttu-id="4ae7f-117">Klicken Sie in der Liste der SDKs auf das Kontrollkästchen neben **Microsoft Engagement Framework** und anschließend auf **OK**.</span><span class="sxs-lookup"><span data-stu-id="4ae7f-117">In the list of SDKs, click the check box next to **Microsoft Engagement Framework** and click **OK**.</span></span>
 
-## <a name="related-topics"></a>Verwandte Themen
+6. <span data-ttu-id="4ae7f-118">Fügen Sie die folgende Anweisung am Anfang jeder Codedatei hinzu, in der Sie benutzerdefinierte Ereignisse protokollieren möchten.</span><span class="sxs-lookup"><span data-stu-id="4ae7f-118">Add the following statement to the top of each code file where you want to log custom events.</span></span>
+    [!code-cs[EventLogger](./code/StoreSDKSamples/cs/LogEvents.cs#EngagementNamespace)]
 
-* [Nutzungsbericht](https://msdn.microsoft.com/windows/uwp/publish/usage-report)
-* [Protokollierungsmethode](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomeventlogger.log.aspx)
-* [Microsoft Store Services SDK](https://msdn.microsoft.com/windows/uwp/monetize/microsoft-store-services-sdk)
+7. <span data-ttu-id="4ae7f-119">Rufen Sie in jedem Abschnittdes Codes, in dem Sie ein benutzerdefiniertes Ereignis protokollieren möchten, ein [StoreServicesCustomEventLogger](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomeventlogger.log.aspx)-Objekt ab, und rufen Sie dann die [Protokoll](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomeventlogger.log.aspx)-Methode auf.</span><span class="sxs-lookup"><span data-stu-id="4ae7f-119">In each section of your code where you want to log a custom event, get a [StoreServicesCustomEventLogger](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomeventlogger.log.aspx) object and then call the [Log](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomeventlogger.log.aspx) method.</span></span> <span data-ttu-id="4ae7f-120">Übergeben Sie die Zeichenfolge für das benutzerdefinierte Ereignis an die Methode.</span><span class="sxs-lookup"><span data-stu-id="4ae7f-120">Pass your custom event string to the method.</span></span>
+    [!code-cs[EventLogger](./code/StoreSDKSamples/cs/LogEvents.cs#Log)]
 
+    > [!NOTE]
+    > <span data-ttu-id="4ae7f-121">Möglicherweise dauert das Laden des [Nutzungsberichts](https://msdn.microsoft.com/windows/uwp/publish/usage-report) lange, wenn Ihre App viele benutzerdefinierte Ereignisse mit langen Namen protokolliert.</span><span class="sxs-lookup"><span data-stu-id="4ae7f-121">The [Usage report](https://msdn.microsoft.com/windows/uwp/publish/usage-report) may take a long time to load if your app logs many custom events with long names.</span></span> <span data-ttu-id="4ae7f-122">Es wird empfohlen, dass kurze Namen für Ihre benutzerdefinierten Ereignisse zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="4ae7f-122">We recommend that you use brief names for your custom events.</span></span> 
+
+## <a name="related-topics"></a><span data-ttu-id="4ae7f-123">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="4ae7f-123">Related topics</span></span>
+
+* [<span data-ttu-id="4ae7f-124">Nutzungsbericht</span><span class="sxs-lookup"><span data-stu-id="4ae7f-124">Usage report</span></span>](https://msdn.microsoft.com/windows/uwp/publish/usage-report)
+* [<span data-ttu-id="4ae7f-125">Protokollierungsmethode</span><span class="sxs-lookup"><span data-stu-id="4ae7f-125">Log method</span></span>](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomeventlogger.log.aspx)
+* [<span data-ttu-id="4ae7f-126">Microsoft Store Services SDK</span><span class="sxs-lookup"><span data-stu-id="4ae7f-126">Microsoft Store Services SDK</span></span>](https://msdn.microsoft.com/windows/uwp/monetize/microsoft-store-services-sdk)

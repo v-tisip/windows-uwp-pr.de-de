@@ -1,37 +1,45 @@
 ---
 author: v-angraf
-title: "UWP auf Xbox One – API-Referenz"
-description: "API-Referenz für UWP auf Xbox One."
+title: Geräteportal für Xbox– REST-API
+description: API-Referenz für UWP auf Xbox One.
 ms.author: v-angraf
-ms.date: 02/08/2017
+ms.date: 10/25/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
+keywords: Windows10, UWP
 ms.assetid: 5ae8e953-0465-487b-81dd-54a85c904daf
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 36a005bd4af09eac94f5b83dd8a2474d0580d556
-ms.lasthandoff: 02/08/2017
-
+ms.localizationpriority: medium
+ms.openlocfilehash: 5fc2ff964fdd5a03f2d507bcb38337fd4b370655
+ms.sourcegitcommit: c104b653601d9b81cfc8bb6032ca434cff8fe9b1
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/25/2018
+ms.locfileid: "1921158"
 ---
+# <a name="xbox-device-portal-rest-api"></a><span data-ttu-id="1d03e-104">Geräteportal für Xbox– REST-API</span><span class="sxs-lookup"><span data-stu-id="1d03e-104">Xbox Device Portal REST API</span></span>
 
-# <a name="uwp-on-xbox-one-api-reference"></a>UWP auf Xbox One – API-Referenz
+<span data-ttu-id="1d03e-105">Dieser Abschnitt enthält Referenzthemen für die REST-API für das Xbox-Geräteportal. Diese wird verwendet, um Ihre Konsole per Fernzugriff zu konfigurieren und zu verwalten.</span><span class="sxs-lookup"><span data-stu-id="1d03e-105">This section contains reference topics for the Xbox Device Portal REST API, used to remotely configure and manage your console.</span></span>
 
-Dieser Abschnitt enthält Referenzthemen für die APIs für UWP auf Xbox One.
-
-| URI        | Beschreibung |
+| <span data-ttu-id="1d03e-106">URI</span><span class="sxs-lookup"><span data-stu-id="1d03e-106">URI</span></span>        | <span data-ttu-id="1d03e-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="1d03e-107">Description</span></span> |
 |------------|-------------|
-|[/api/app/packagemanager/register](wdp-loose-folder-register-api.md)| Registriert eine App, die in einem losen Ordner enthalten ist. |
-|[/api/app/packagemanager/upload](wdp-folder-upload.md)| Lädt einen ganzen Ordner zur Konsole hoch. |
-|[/ext/screenshot](wdp-media-capture-api.md)| Erfasst eine PNG-Darstellung des Bildschirms, der zurzeit auf der Konsole angezeigt wird. |
-|[/ext/settings](wdp-xboxsettings-api.md)| Greift auf Xbox One-Entwicklereinstellungen zu. |
-|[/ext/smb/developerfolder](wdp-smb-api.md)| Greift über den Datei-Explorer auf Ihrem Entwicklungscomputer auf den Entwicklerordner auf Ihrer Konsole zu. |
-|[/ext/user](wdp-user-management.md)| Verwaltet Benutzer auf der Xbox One-Konsole. |
-|[/ext/Update/Policy](wdp-updatepolicy-api.md)| Legt fest, welche Aktualisierungsrichtlinie auf Ihre Konsole angewendet wird. |
-|[/ext/xboxlive/sandbox](wdp-sandbox-api.md)| Verwaltet Ihren Xbox Live-Sandkasten. |
+|[<span data-ttu-id="1d03e-108">/api/app/packagemanager/register</span><span class="sxs-lookup"><span data-stu-id="1d03e-108">/api/app/packagemanager/register</span></span>](wdp-loose-folder-register-api.md)| <span data-ttu-id="1d03e-109">Registriert eine App, die in einem losen Ordner enthalten ist.</span><span class="sxs-lookup"><span data-stu-id="1d03e-109">Registers an app that is contained in a loose folder.</span></span> |
+|[<span data-ttu-id="1d03e-110">/api/app/packagemanager/upload</span><span class="sxs-lookup"><span data-stu-id="1d03e-110">/api/app/packagemanager/upload</span></span>](wdp-folder-upload.md)| <span data-ttu-id="1d03e-111">Lädt einen ganzen Ordner zur Konsole hoch.</span><span class="sxs-lookup"><span data-stu-id="1d03e-111">Uploads an entire folder to the console.</span></span> |
+|[<span data-ttu-id="1d03e-112">/ext/App/sshpins</span><span class="sxs-lookup"><span data-stu-id="1d03e-112">/ext/app/sshpins</span></span>](uwp-sshpins-api.md)| <span data-ttu-id="1d03e-113">Löschen Sie alle vertrauenswürdigen SSH-PINs per Fernzugriff.</span><span class="sxs-lookup"><span data-stu-id="1d03e-113">Clear all trusted SSH pins remotely.</span></span> <span data-ttu-id="1d03e-114">Dies erfordert die erneute PIN-Kopplung für die UWP-Entwicklung in Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="1d03e-114">Will require doing pin pairing again for Visual Studio UWP development.</span></span> |
+|[<span data-ttu-id="1d03e-115">/ext/app/deployinfo</span><span class="sxs-lookup"><span data-stu-id="1d03e-115">/ext/app/deployinfo</span></span>](uwp-deployinfo-api.md)| <span data-ttu-id="1d03e-116">Fordert Bereitstellungsinformationen für ein oder mehrere installierte Pakete an.</span><span class="sxs-lookup"><span data-stu-id="1d03e-116">Requests deployment information for one or more installed packages.</span></span> |
+|[<span data-ttu-id="1d03e-117">/ext/fiddler</span><span class="sxs-lookup"><span data-stu-id="1d03e-117">/ext/fiddler</span></span>](wdp-fiddler-api.md)| <span data-ttu-id="1d03e-118">Zum Aktivieren und Deaktivieren der Fiddler-Netzwerkablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="1d03e-118">Enable and disable Fiddler network tracing.</span></span> |
+|[<span data-ttu-id="1d03e-119">/ext/httpmonitor/sessions</span><span class="sxs-lookup"><span data-stu-id="1d03e-119">/ext/httpmonitor/sessions</span></span>](wdp-httpMonitor-api.md)| <span data-ttu-id="1d03e-120">Abrufen des HTTP-Datenverkehrs aus der fokussierten App auf der Xbox</span><span class="sxs-lookup"><span data-stu-id="1d03e-120">Get HTTP traffic from the focused app on Xbox.</span></span> |
+|[<span data-ttu-id="1d03e-121">/ext/networkcredential</span><span class="sxs-lookup"><span data-stu-id="1d03e-121">/ext/networkcredential</span></span>](uwp-networkcredentials-api.md)| <span data-ttu-id="1d03e-122">Hinzufügen, Entfernen oder Aktualisieren der Netzwerkanmeldeinformationen</span><span class="sxs-lookup"><span data-stu-id="1d03e-122">Add, remove, or update network credentials.</span></span> |
+|[<span data-ttu-id="1d03e-123">/ext/remoteinput</span><span class="sxs-lookup"><span data-stu-id="1d03e-123">/ext/remoteinput</span></span>](uwp-remoteinput-api.md)| <span data-ttu-id="1d03e-124">Senden von Tastatur-, Maus- oder Controllereingaben auf einer Xbox per Fernzugriff</span><span class="sxs-lookup"><span data-stu-id="1d03e-124">Send keyboard, mouse, or controller input remotely to an Xbox.</span></span> |
+|[<span data-ttu-id="1d03e-125">/ext/remoteinput/controllers</span><span class="sxs-lookup"><span data-stu-id="1d03e-125">/ext/remoteinput/controllers</span></span>](uwp-remoteinput-controllers-api.md)| <span data-ttu-id="1d03e-126">Abrufen der Anzahl der angeschlossenen physischen Controller oder Deaktivieren aller physischen Controller</span><span class="sxs-lookup"><span data-stu-id="1d03e-126">Get the number of attached physical controllers or turn off all physical controllers.</span></span> |
+|[<span data-ttu-id="1d03e-127">/ext/screenshot</span><span class="sxs-lookup"><span data-stu-id="1d03e-127">/ext/screenshot</span></span>](wdp-media-capture-api.md)| <span data-ttu-id="1d03e-128">Erfasst eine PNG-Darstellung des Bildschirms, der zurzeit auf der Konsole angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="1d03e-128">Captures a PNG representation of the screen currently displayed on the console.</span></span> |
+|[<span data-ttu-id="1d03e-129">/ext/settings</span><span class="sxs-lookup"><span data-stu-id="1d03e-129">/ext/settings</span></span>](wdp-xboxsettings-api.md)| <span data-ttu-id="1d03e-130">Greift auf Xbox One-Entwicklereinstellungen zu.</span><span class="sxs-lookup"><span data-stu-id="1d03e-130">Accesses Xbox One developer settings.</span></span> |
+|[<span data-ttu-id="1d03e-131">/ext/smb/developerfolder</span><span class="sxs-lookup"><span data-stu-id="1d03e-131">/ext/smb/developerfolder</span></span>](wdp-smb-api.md)| <span data-ttu-id="1d03e-132">Greift über den Datei-Explorer auf Ihrem Entwicklungscomputer auf den Entwicklerordner auf Ihrer Konsole zu.</span><span class="sxs-lookup"><span data-stu-id="1d03e-132">Accesses the developer folder on your console through File Explorer on your development PC.</span></span> |
+|[<span data-ttu-id="1d03e-133">/ext/user</span><span class="sxs-lookup"><span data-stu-id="1d03e-133">/ext/user</span></span>](wdp-user-management.md)| <span data-ttu-id="1d03e-134">Verwaltet Benutzer auf der Xbox One Konsole.</span><span class="sxs-lookup"><span data-stu-id="1d03e-134">Manages users on the Xbox One console.</span></span> |
+|[<span data-ttu-id="1d03e-135">/ext/xbox/info</span><span class="sxs-lookup"><span data-stu-id="1d03e-135">/ext/xbox/info</span></span>](wdp-xboxinfo-api.md)| <span data-ttu-id="1d03e-136">Bietet Informationen zum Xbox One-Gerät</span><span class="sxs-lookup"><span data-stu-id="1d03e-136">Gives information about the Xbox One device.</span></span> |
+|[<span data-ttu-id="1d03e-137">/ext/xboxlive/sandbox</span><span class="sxs-lookup"><span data-stu-id="1d03e-137">/ext/xboxlive/sandbox</span></span>](wdp-sandbox-api.md)| <span data-ttu-id="1d03e-138">Verwaltet Ihren Xbox Live-Sandkasten.</span><span class="sxs-lookup"><span data-stu-id="1d03e-138">Manages your Xbox Live sandbox.</span></span> |
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a><span data-ttu-id="1d03e-139">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1d03e-139">See also</span></span>
 
-- [UWP auf Xbox One](index.md)
-
+- [<span data-ttu-id="1d03e-140">UWP auf Xbox One</span><span class="sxs-lookup"><span data-stu-id="1d03e-140">UWP on Xbox One</span></span>](index.md)
+- [<span data-ttu-id="1d03e-141">Windows-Geräteportal</span><span class="sxs-lookup"><span data-stu-id="1d03e-141">Windows Device Portal</span></span>](../debug-test-perf/device-portal.md)

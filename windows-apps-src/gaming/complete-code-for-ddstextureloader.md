@@ -1,7 +1,7 @@
 ---
 author: mtoepke
-title: "Vollständiger Code für „DDSTextureLoader“"
-description: "Vollständiger Code für eine Klasse und Methode, die eine DDS-Textur aus dem Speicher lädt."
+title: Vollständiger Code für „DDSTextureLoader“
+description: Vollständiger Code für eine Klasse und Methode, die eine DDS-Textur aus dem Speicher lädt.
 ms.assetid: ebaf4111-6235-0316-46cf-bc8643851493
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -9,46 +9,49 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Spiele, DDSTextureLoader
-ms.openlocfilehash: 7daf10ad577b2b67c6ca5554f6555deb89f16229
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: a06e3624ba7caed8f51a5ff9fe0c5b6100d0f77c
+ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
 ms.translationtype: HT
 ms.contentlocale: de-DE
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "1983300"
 ---
-# <a name="complete-code-for-ddstextureloader"></a><span data-ttu-id="1befa-104">Vollständiger Code für "DDSTextureLoader"</span><span class="sxs-lookup"><span data-stu-id="1befa-104">Complete code for DDSTextureLoader</span></span>
-
-
-<span data-ttu-id="1befa-105">\[ Aktualisiert für UWP-Apps unter Windows10.</span><span class="sxs-lookup"><span data-stu-id="1befa-105">\[ Updated for UWP apps on Windows 10.</span></span> <span data-ttu-id="1befa-106">Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span><span class="sxs-lookup"><span data-stu-id="1befa-106">For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span></span>
-
-<span data-ttu-id="1befa-107">Vollständiger Code für eine Klasse und Methode, die eine DDS-Textur aus dem Speicher lädt.</span><span class="sxs-lookup"><span data-stu-id="1befa-107">Complete code for a class and method that loads a DDS texture from memory.</span></span>
-
-<span data-ttu-id="1befa-108">Dieses Thema enthält die folgenden Abschnitte:</span><span class="sxs-lookup"><span data-stu-id="1befa-108">This topic contains these sections:</span></span>
-
--   [<span data-ttu-id="1befa-109">Technologien</span><span class="sxs-lookup"><span data-stu-id="1befa-109">Technologies</span></span>](#technologies)
--   [<span data-ttu-id="1befa-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="1befa-110">Requirements</span></span>](#requirements)
--   [<span data-ttu-id="1befa-111">Anzeigen des Codes (C++)</span><span class="sxs-lookup"><span data-stu-id="1befa-111">View the code (C++)</span></span>](#view-the-code-c)
-
-
-## <a name="download-location"></a><span data-ttu-id="1befa-112">Downloadort</span><span class="sxs-lookup"><span data-stu-id="1befa-112">Download location</span></span>
-
-
-<span data-ttu-id="1befa-113">Dieses Beispiel kann nicht heruntergeladen werden.</span><span class="sxs-lookup"><span data-stu-id="1befa-113">This sample is not available for download.</span></span>
-
-## <a name="technologies"></a><span data-ttu-id="1befa-114">Technologien</span><span class="sxs-lookup"><span data-stu-id="1befa-114">Technologies</span></span>
-
-<span data-ttu-id="1befa-115">**Programmiersprachen** – C++</span><span class="sxs-lookup"><span data-stu-id="1befa-115">**Programming languages** - C++</span></span>    
-<span data-ttu-id="1befa-116">**Programmiermodelle** – Windows-Runtime</span><span class="sxs-lookup"><span data-stu-id="1befa-116">**Programming models** - Windows Runtime</span></span>
-
-## <a name="requirements"></a><span data-ttu-id="1befa-117">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="1befa-117">Requirements</span></span>
-
-<span data-ttu-id="1befa-118">**Unterstützte Mindestversion (Client)** – Windows 10</span><span class="sxs-lookup"><span data-stu-id="1befa-118">**Minimum supported client** - Windows 10</span></span>                               
-<span data-ttu-id="1befa-119">**Unterstützte Mindestversion (Server)** – Windows Server 2016 Technical Preview</span><span class="sxs-lookup"><span data-stu-id="1befa-119">**Minimum supported server** - Windows Server 2016 Technical Preview</span></span>
+# <a name="complete-code-for-ddstextureloader"></a><span data-ttu-id="11f02-104">Vollständiger Code für DDSTextureLoader</span><span class="sxs-lookup"><span data-stu-id="11f02-104">Complete code for DDSTextureLoader</span></span>
 
 
 
-## <a name="view-the-code-c"></a><span data-ttu-id="1befa-120">Anzeigen des Codes (C++)</span><span class="sxs-lookup"><span data-stu-id="1befa-120">View the code (C++)</span></span>
+<span data-ttu-id="11f02-105">Vollständiger Code für eine Klasse und Methode, die eine DDS-Textur aus dem Speicher lädt.</span><span class="sxs-lookup"><span data-stu-id="11f02-105">Complete code for a class and method that loads a DDS texture from memory.</span></span>
+<span data-ttu-id="11f02-106">Weitere Informationen über Texturen und die Verwendung dieses Beispiels finden Sie unter [Laden von Ressourcen im DirectX-Spiel](load-a-game-asset.md).</span><span class="sxs-lookup"><span data-stu-id="11f02-106">See [Load resources in your DirectX game](load-a-game-asset.md) for a discussion about textures and using this example.</span></span>
+
+<span data-ttu-id="11f02-107">Dieses Thema enthält die folgenden Abschnitte:</span><span class="sxs-lookup"><span data-stu-id="11f02-107">This topic contains these sections:</span></span>
+
+-   [<span data-ttu-id="11f02-108">Technologien</span><span class="sxs-lookup"><span data-stu-id="11f02-108">Technologies</span></span>](#technologies)
+-   [<span data-ttu-id="11f02-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="11f02-109">Requirements</span></span>](#requirements)
+-   [<span data-ttu-id="11f02-110">Anzeigen des Codes (C++)</span><span class="sxs-lookup"><span data-stu-id="11f02-110">View the code (C++)</span></span>](#view-the-code-c)
 
 
-## <a name="ddstextureloaderh"></a><span data-ttu-id="1befa-121">DDSTextureLoader.h</span><span class="sxs-lookup"><span data-stu-id="1befa-121">DDSTextureLoader.h</span></span>
+## <a name="download-location"></a><span data-ttu-id="11f02-111">Downloadort</span><span class="sxs-lookup"><span data-stu-id="11f02-111">Download location</span></span>
+
+
+<span data-ttu-id="11f02-112">Dieses Beispiel kann nicht heruntergeladen werden.</span><span class="sxs-lookup"><span data-stu-id="11f02-112">This sample is not available for download.</span></span>
+
+## <a name="technologies"></a><span data-ttu-id="11f02-113">Technologien</span><span class="sxs-lookup"><span data-stu-id="11f02-113">Technologies</span></span>
+
+<span data-ttu-id="11f02-114">**Programmiersprachen** – C++</span><span class="sxs-lookup"><span data-stu-id="11f02-114">**Programming languages** - C++</span></span>    
+<span data-ttu-id="11f02-115">**Programmiermodelle** – Windows-Runtime</span><span class="sxs-lookup"><span data-stu-id="11f02-115">**Programming models** - Windows Runtime</span></span>
+
+## <a name="requirements"></a><span data-ttu-id="11f02-116">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="11f02-116">Requirements</span></span>
+
+<span data-ttu-id="11f02-117">**Unterstützte Mindestversion (Client)** – Windows 10</span><span class="sxs-lookup"><span data-stu-id="11f02-117">**Minimum supported client** - Windows 10</span></span>                               
+<span data-ttu-id="11f02-118">**Unterstützte Mindestversion (Server)** – Windows Server 2016 Technical Preview</span><span class="sxs-lookup"><span data-stu-id="11f02-118">**Minimum supported server** - Windows Server 2016 Technical Preview</span></span>
+
+
+
+## <a name="view-the-code-c"></a><span data-ttu-id="11f02-119">Anzeigen des Codes (C++)</span><span class="sxs-lookup"><span data-stu-id="11f02-119">View the code (C++)</span></span>
+
+
+## <a name="ddstextureloaderh"></a><span data-ttu-id="11f02-120">DDSTextureLoader.h</span><span class="sxs-lookup"><span data-stu-id="11f02-120">DDSTextureLoader.h</span></span>
 
 
 ```cpp
@@ -81,7 +84,7 @@ void CreateDDSTextureFromMemory(
     );
 ```
 
-## <a name="ddstextureloadercpp"></a><span data-ttu-id="1befa-122">DDSTextureLoader.cpp</span><span class="sxs-lookup"><span data-stu-id="1befa-122">DDSTextureLoader.cpp</span></span>
+## <a name="ddstextureloadercpp"></a><span data-ttu-id="11f02-121">DDSTextureLoader.cpp</span><span class="sxs-lookup"><span data-stu-id="11f02-121">DDSTextureLoader.cpp</span></span>
 
 
 ```cpp
