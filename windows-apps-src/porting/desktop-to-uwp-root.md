@@ -4,19 +4,19 @@ Description: Create a modern Windows app package for your existing Windows Forms
 Search.Product: eADQiWindows 10XVcnh
 title: Desktop-Brücke
 ms.author: normesta
-ms.date: 08/30/2017
+ms.date: 05/14/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
 ms.assetid: 74373c24-f948-43bb-aa85-01e2e8e87162
 ms.localizationpriority: high
-ms.openlocfilehash: 3c4285d6717c27e78c13ac6588fe634c566138d9
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 321fb71d44e1298b29b6119168f67207e6df4a8d
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832371"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989694"
 ---
 # <a name="desktop-bridge"></a>Desktop-Brücke
 
@@ -54,9 +54,7 @@ Eine vollständige Liste der Vorteile finden Sie unter [Desktop-Brücke](https:/
 
 ## <a name="prepare"></a>Vorbereiten
 
-Möchten Sie Ihre App auf dem [Windows App Store](https://www.microsoft.com/store/apps) veröffentlichen? Wenn ja, beginnen Sie mit dem Ausfüllen [dieses Formulars](https://developer.microsoft.com/windows/projects/campaigns/desktop-bridge). Microsoft nimmt mit Ihnen Kontakt auf und beginnt den Onboardingprozess. Im Rahmen dieses Prozesses reservieren Sie einen Namen im Store und erhalten Informationen, die Sie benötigen, um ein Windows-App-Paket zu erstellen.
-
-Lesen Sie dann den Artikel [Vorbereiten Ihrer Desktop-App](desktop-to-uwp-prepare.md), und beheben Sie alle ggf. vorhandenen Probleme Ihrer App, bevor Sie ein Windows-App-Paket für sie erstellen. Sie müssen eventuell nicht viele Änderungen an Ihrer App vornehmen, bevor Sie das Paket erstellen. Es gibt jedoch bestimmte Situationen, bei denen Sie Ihre App optimieren müssen, bevor Sie ein Paket erstellen können.
+Bereiten Sie zunächst Ihre Anwendung vor, indem Sie den Artikel [Vorbereiten Ihrer Desktop-App](desktop-to-uwp-prepare.md) lesen, und beheben Sie alle ggf. vorhandenen Probleme Ihrer App, bevor Sie ein Windows-App-Paket für sie erstellen. Sie müssen eventuell nicht viele Änderungen an Ihrer App vornehmen, bevor Sie das Paket erstellen. Es gibt jedoch bestimmte Situationen, bei denen Sie Ihre App optimieren müssen, bevor Sie ein Paket erstellen können.
 
 <a id="convert" />
 
@@ -188,6 +186,30 @@ Informationen zur Überprüfung aller Anwendungspaketfunktionen finden Sie unter
 
 Mehr unter [RAD Studio by Embarcadero](https://www.embarcadero.com/products/rad-studio/windows-10-store-desktop-bridge)
 
+#### <a name="raypack-studio"></a>RayPack Studio
+
+Die Paketerstellungslösung [RayPack Studio](https://raynet.de/Raynet-Products/RayPackStudio) von Raynet unterstützt die Desktop-Brücke als mögliches Ergebnis des effizienten und einfach zu konfigurierenden Konvertierungs- und Neuverpackungsframeworks.
+
+<img width="20%" src="images/desktop-to-uwp/RaynetLogo_v3.png">
+
+Vorhandene virtuelle Umgebungen (VMware Workstation, Hyper-V) können verwendet werden, um automatisierte/Massenkonvertierungsaufgaben ohne langwierige Umgebungseinrichtung durchzuführen. Eine Komponente des Studios ([RayQC Advanced](https://raynet.de/Raynet-Products/RayQCad)) ist in der Lage, Prüfungs- und Kompatibilitätstests vor der Konvertierung durchzuführen, um sicherzustellen, dass die Software zur Konvertierung geeignet ist. Darüber hinaus können Benutzer jetzt umfassende Kollisions- und Kompatibilitätschecks mit verschiedenen Windows10-Editionen, einschließlich Anniversary und Creators Update, durchführen.
+
+Neben der Erstellung von Softwarepaketen für Windows10 im APPX/UWP-Format kann RayPack Studio auch zum Erstellen von klassischen Windows Installer (MSI)-Paketen, Patches (MSP), Transformationen (MST) und App-V-Paketen verwendet werden. Diese Lösung enthält darüber hinaus eine Reihe von Softwareprodukten und Komponenten für die Erstellung professioneller Softwarepakete in Unternehmen. Neben Softwareverpackung und -virtualisierung berücksichtigt RayPack Studio alle weiteren verpackungsrelevanten Aufgaben: Konflikt- und Kompatibilitätsprüfungen von Softwareanwendungen und -paketen ([RayQC Advanced](https://raynet.de/Raynet-Products/RayQCad)), Software-Evaluierung ([RayEval](https://raynet.de/Raynet-Products/RayEval)) und Qualitätssicherung ([RayQC](https://raynet.de/Raynet-Products/RayQC)).
+
+Mithilfe von [RayFlow](https://raynet.de/Raynet-Products/RayFlow), dem Unternehmens-Workflowsystem von Raynet, können Benutzer über den gesamten Unternehmensanwendungs-Lebenszyklus hinweg effizient an der Software arbeiten, von der Paketbestellung über die Evaluierung, Analyse, Verpackung, Qualitätssicherung und Benutzerakzeptanztests bis hin zur Bereitstellung. Alle Pakete und Formate können direkt in SCCM oder anderen Lösungen gespeichert und bereitgestellt werden. Der gesamte Anwendungslebenszyklusprozess wird von RayFlow nachverfolgt und verwaltet. Darüber hinaus können beliebige Bestellsysteme, wie z.B. ServiceNow, integriert werden. Mit seinen Tools für Dienstanbieter beliefert Raynet Softwareverpackungsfactorys weltweit.
+
+Überzeugen Sie sich selbst und holen Sie sich die [kostenlose Testversion](https://raynet.de/contact?init=license) von Raynet RayPack Studio und RayFlow. Weitere Informationen finden Sie unter [www.raynet.de](https://raynet.de/home).
+
+**Verwandte Links**:
+
+* Raynet: [https://raynet.de/home](https://raynet.de/home)
+* RayPack Studio: [https://raynet.de/Raynet-Products/RayPackStudio](https://raynet.de/Raynet-Products/RayPackStudio)
+* RayFlow: [https://raynet.de/Raynet-Products/RayFlow](https://raynet.de/Raynet-Products/RayFlow)
+* RayEval: [https://raynet.de/Raynet-Products/RayEval](https://raynet.de/Raynet-Products/RayEval)
+* RayQC: [https://raynet.de/Raynet-Products/RayQC](https://raynet.de/Raynet-Products/RayQC)
+* RayQC Advanced: [https://raynet.de/Raynet-Products/RayQCad](https://raynet.de/Raynet-Products/RayQCad)
+* Kostenlose Testversion: [https://raynet.de/contact?init=license](https://raynet.de/contact?init=license)
+
 ### <a name="manual-packaging"></a>Manuelles Verpacken
 
 Als letzte Möglichkeit können Sie Ihre App ohne Verwendung eines dieser Tools konvertieren. Wenn Sie eine präzise Steuerung der Konvertierung bevorzugen, können Sie eine Manifestdatei erstellen und anschließend das **MakeAppx.exe**-Tool ausführen, um das Windows-App-Paket zu erstellen.
@@ -228,7 +250,7 @@ Weitere Informationen finden Sie unter [Teilen von Code zwischen einer Desktop-A
 Um Ihre App vor der Verteilung in einer realistischen Umgebung zu testen, empfiehlt es sich, Ihre App zu signieren und sie anschließend zu installieren. Mehr unter [Tests für Ihre App](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-debug#test-your-app).
 
 >[!IMPORTANT]
-> Wenn Sie Ihre App im Microsoft Store veröffentlichen möchten, stellen Sie sicher, dass Ihre App auf Geräten, auf denen Windows10 S ausgeführt wird, ordnungsgemäß ausgeführt wird. Dies ist eine Store-Anforderung. Weitere Informationen finden Sie unter [Testen Ihrer Windows-App für Windows10 S](desktop-to-uwp-test-windows-s.md).
+> Wenn Sie Ihre App im Microsoft Store veröffentlichen möchten, stellen Sie sicher, dass sie korrekt auf Geräten unter Windows10 im S Modus ausgeführt wird. Dies ist eine Anforderung für den Store. Weitere Informationen finden Sie unter [Testen Ihrer Windows-App für Windows10 im S Modus](desktop-to-uwp-test-windows-s.md).
 
 ## <a name="validate"></a>Überprüfen
 
