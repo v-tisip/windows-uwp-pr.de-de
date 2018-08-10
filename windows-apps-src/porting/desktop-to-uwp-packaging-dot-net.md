@@ -11,12 +11,12 @@ ms.technology: uwp
 keywords: windows10, UWP
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
 ms.localizationpriority: medium
-ms.openlocfilehash: 5e3dce1950de907462b62967291d456fb062bd9c
-ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
-ms.translationtype: HT
+ms.openlocfilehash: 75f7ff53aeffced746e78d8b27243469dc547097
+ms.sourcegitcommit: 6382f751f09e2f4aa8406c1ceeb25b5189e23da3
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "1989268"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "2410707"
 ---
 # <a name="package-an-app-by-using-visual-studio-desktop-bridge"></a>Verpacken einer App mit Visual Studio (Desktop-Brücke)
 
