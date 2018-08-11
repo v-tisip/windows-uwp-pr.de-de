@@ -1,7 +1,7 @@
 ---
 author: mtoepke
-title: "Swapchainskalierung und Überlagerungen"
-description: "Hier erfahren Sie, wie Sie skalierte Swapchains zum schnelleren Rendern auf mobilen Geräten erstellen und Überlagerungsswapchains (falls verfügbar) verwenden, um die visuelle Qualität zu steigern."
+title: Swapchainskalierung und Überlagerungen
+description: Hier erfahren Sie, wie Sie skalierte Swapchains zum schnelleren Rendern auf mobilen Geräten erstellen und Überlagerungsswapchains (falls verfügbar) verwenden, um die visuelle Qualität zu steigern.
 ms.assetid: 3e4d2d19-cac3-eebc-52dd-daa7a7bc30d1
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -11,8 +11,9 @@ ms.technology: uwp
 keywords: Windows10, UWP, Spiele, Swapketten-Skalierung, Einblendungen, directx
 ms.openlocfilehash: 02088fce03c88b4166d49cd36754ac956f254199
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
+ms.locfileid: "233696"
 ---
 # <a name="swap-chain-scaling-and-overlays"></a><span data-ttu-id="7cd75-104">Swapketten-Skalierung und Einblendungen</span><span class="sxs-lookup"><span data-stu-id="7cd75-104">Swap chain scaling and overlays</span></span>
 

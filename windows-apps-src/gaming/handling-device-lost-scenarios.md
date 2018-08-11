@@ -1,50 +1,49 @@
 ---
 author: mtoepke
-title: "Behandeln von Szenarien mit entfernten Geräten in Direct3D 11"
-description: "In diesem Thema wird erläutert, wie Sie die Geräteschnittstellenkette für Direct3D und DXGI neu erstellen, wenn die Grafikkarte entfernt oder neu initialisiert wird."
+title: Behandeln von Szenarien mit entfernten Geräten in Direct3D11
+description: In diesem Thema wird erläutert, wie Sie die Geräteschnittstellenkette für Direct3D und DXGI neu erstellen, wenn die Grafikkarte entfernt oder neu initialisiert wird.
 ms.assetid: 8f905acd-08f3-ff6f-85a5-aaa99acb389a
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Spiele, DirectX 11, Gerät verloren gegangen"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 2202d8ea4584f7755464fd3035829d348cfbff8d
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP, Spiele, DirectX 11, Gerät verloren gegangen
+ms.openlocfilehash: 3d7a93ed0b1ce78cba278232eb5325e463c12789
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.locfileid: "233752"
 ---
+# <a name="span-iddevgaminghandlingdevice-lostscenariosspanhandle-device-removed-scenarios-in-direct3d-11"></a><span data-ttu-id="d74c7-104"><span id="dev_gaming.handling_device-lost_scenarios"></span>Behandeln von Szenarien mit entfernten Geräten in Direct3D 11</span><span class="sxs-lookup"><span data-stu-id="d74c7-104"><span id="dev_gaming.handling_device-lost_scenarios"></span>Handle device removed scenarios in Direct3D 11</span></span>
 
-# <a name="span-iddevgaminghandlingdevice-lostscenariosspanhandle-device-removed-scenarios-in-direct3d-11"></a><span id="dev_gaming.handling_device-lost_scenarios"></span>Behandeln von Szenarien mit entfernten Geräten in Direct3D 11
 
+<span data-ttu-id="d74c7-105">\[ Aktualisiert für UWP-Apps unter Windows10.</span><span class="sxs-lookup"><span data-stu-id="d74c7-105">\[ Updated for UWP apps on Windows 10.</span></span> <span data-ttu-id="d74c7-106">Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]</span><span class="sxs-lookup"><span data-stu-id="d74c7-106">For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span></span>
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+<span data-ttu-id="d74c7-107">In diesem Thema wird erläutert, wie Sie die Geräteschnittstellenkette für Direct3D und DXGI neu erstellen, wenn die Grafikkarte entfernt oder neu initialisiert wird.</span><span class="sxs-lookup"><span data-stu-id="d74c7-107">This topic explains how to recreate the Direct3D and DXGI device interface chain when the graphics adapter is removed or reinitialized.</span></span>
 
-In diesem Thema wird erläutert, wie Sie die Geräteschnittstellenkette für Direct3D und DXGI neu erstellen, wenn die Grafikkarte entfernt oder neu initialisiert wird.
+<span data-ttu-id="d74c7-108">In DirectX9 kann für Anwendungen die Bedingung "[Gerät ist nicht mehr auffindbar](https://msdn.microsoft.com/library/windows/desktop/bb174714)" entstehen, bei der das D3D-Gerät nicht mehr betriebsbereit ist.</span><span class="sxs-lookup"><span data-stu-id="d74c7-108">In DirectX 9, applications could encounter a "[device lost](https://msdn.microsoft.com/library/windows/desktop/bb174714)" condition where the D3D device enters a non-operational state.</span></span> <span data-ttu-id="d74c7-109">Wenn eine Direct3D9-Vollbildanwendung den Fokus verliert, ist das Direct3D-Gerät „nicht mehr auffindbar“. Alle Versuche, mit einem nicht auffindbaren Gerät zu zeichnen, sind nicht erfolgreich (ohne Warnung).</span><span class="sxs-lookup"><span data-stu-id="d74c7-109">For example, when a full-screen Direct3D 9 application loses focus, the Direct3D device becomes "lost;" any attempts to draw with a lost device will silently fail.</span></span> <span data-ttu-id="d74c7-110">Für Direct3D11 werden virtuelle Grafikgerätschnittstellen verwendet, damit mehrere Programme dasselbe physische Grafikgerät nutzen können und keine Bedingungen entstehen, in denen Apps die Kontrolle über das Direct3D-Gerät verlieren.</span><span class="sxs-lookup"><span data-stu-id="d74c7-110">Direct3D 11 uses virtual graphics device interfaces, enabling multiple programs to share the same physical graphics device and eliminating conditions where apps lose control of the Direct3D device.</span></span> <span data-ttu-id="d74c7-111">Es ist jedoch weiterhin möglich, dass sich die Verfügbarkeit der Grafikkarte ändert.</span><span class="sxs-lookup"><span data-stu-id="d74c7-111">However, it is still possible for graphics adapter availability to change.</span></span> <span data-ttu-id="d74c7-112">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="d74c7-112">For example:</span></span>
 
-In DirectX 9 kann für Anwendungen die Bedingung "[Gerät ist nicht mehr auffindbar](https://msdn.microsoft.com/library/windows/desktop/bb174714)" entstehen, bei der das D3D-Gerät nicht mehr betriebsbereit ist. Wenn eine Direct3D 9-Vollbildanwendung den Fokus verliert, ist das Direct3D-Gerät „nicht mehr auffindbar“. Alle Versuche, mit einem nicht auffindbaren Gerät zu zeichnen, sind nicht erfolgreich (ohne Warnung). Für Direct3D 11 werden virtuelle Grafikgerätschnittstellen verwendet, damit mehrere Programme dasselbe physische Grafikgerät nutzen können und keine Bedingungen entstehen, in denen Apps die Kontrolle über das Direct3D-Gerät verlieren. Es ist jedoch weiterhin möglich, dass sich die Verfügbarkeit der Grafikkarte ändert. Beispiel:
+-   <span data-ttu-id="d74c7-113">Der Grafiktreiber wird aktualisiert.</span><span class="sxs-lookup"><span data-stu-id="d74c7-113">The graphics driver is upgraded.</span></span>
+-   <span data-ttu-id="d74c7-114">Das System führt eine Umstellung von einer energiesparenden Grafikkarte auf eine Grafikkarte mit hoher Leistung durch.</span><span class="sxs-lookup"><span data-stu-id="d74c7-114">The system changes from a power-saving graphics adapter to a performance graphics adapter.</span></span>
+-   <span data-ttu-id="d74c7-115">Das Grafikgerät reagiert nicht mehr und wird zurückgesetzt.</span><span class="sxs-lookup"><span data-stu-id="d74c7-115">The graphics device stops responding and is reset.</span></span>
+-   <span data-ttu-id="d74c7-116">Eine Grafikkarte wird physisch angeschlossen oder entfernt.</span><span class="sxs-lookup"><span data-stu-id="d74c7-116">A graphics adapter is physically attached or removed.</span></span>
 
--   Der Grafiktreiber wird aktualisiert.
--   Das System führt eine Umstellung von einer energiesparenden Grafikkarte auf eine Grafikkarte mit hoher Leistung durch.
--   Das Grafikgerät reagiert nicht mehr und wird zurückgesetzt.
--   Eine Grafikkarte wird physisch angeschlossen oder entfernt.
+<span data-ttu-id="d74c7-117">Unter diesen Umständen wird von DXGI ein Fehlercode zurückgegeben, der angibt, dass das Direct3D-Gerät neu initialisiert werden muss und die Geräteressourcen neu erstellt werden müssen.</span><span class="sxs-lookup"><span data-stu-id="d74c7-117">When such circumstances arise, DXGI returns an error code indicating that the Direct3D device must be reinitialized and device resources must be recreated.</span></span> <span data-ttu-id="d74c7-118">In dieser exemplarischen Vorgehensweise wird erläutert, wie Direct3D11-Apps und -Spiele Fälle, in denen die Grafikkarte zurückgesetzt, entfernt oder geändert wird, erkennen und darauf reagieren kann.</span><span class="sxs-lookup"><span data-stu-id="d74c7-118">This walkthrough explains how Direct3D 11 apps and games can detect and respond to any circumstance where the graphics adapter is reset, removed, or changed.</span></span> <span data-ttu-id="d74c7-119">Codebeispiele sind in der DirectX11-Vorlage für Apps (Universelle Windows-Plattform) in Microsoft Visual Studio2015 enthalten.</span><span class="sxs-lookup"><span data-stu-id="d74c7-119">Code examples are provided from the DirectX 11 App (Universal Windows) template provided with Microsoft Visual Studio 2015.</span></span>
 
-Unter diesen Umständen wird von DXGI ein Fehlercode zurückgegeben, der angibt, dass das Direct3D-Gerät neu initialisiert werden muss und die Geräteressourcen neu erstellt werden müssen. In dieser exemplarischen Vorgehensweise wird erläutert, wie Direct3D 11-Apps und -Spiele Fälle, in denen die Grafikkarte zurückgesetzt, entfernt oder geändert wird, erkennen und darauf reagieren kann. Codebeispiele sind in der DirectX 11-Vorlage für Apps (Universelle Windows-Plattform) in Microsoft Visual Studio 2015 enthalten.
+## <a name="instructions"></a><span data-ttu-id="d74c7-120">Anweisungen</span><span class="sxs-lookup"><span data-stu-id="d74c7-120">Instructions</span></span>
 
-# <a name="instructions"></a>Anweisungen
+### <a name="spanspanstep-1"></a><span data-ttu-id="d74c7-121"><span></span>Schritt1:</span><span class="sxs-lookup"><span data-stu-id="d74c7-121"><span></span>Step 1:</span></span>
 
-### <a name="spanspanstep-1"></a><span></span>Schritt 1:
+<span data-ttu-id="d74c7-122">Fügen Sie eine Überprüfung auf den Fehler „Gerät entfernt“ in die Renderschleife ein.</span><span class="sxs-lookup"><span data-stu-id="d74c7-122">Include a check for the device removed error in the rendering loop.</span></span> <span data-ttu-id="d74c7-123">Stellen Sie den Frame dar, indem Sie [**IDXGISwapChain::Present**](https://msdn.microsoft.com/library/windows/desktop/bb174576) (bzw. [**Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797) usw.) aufrufen.</span><span class="sxs-lookup"><span data-stu-id="d74c7-123">Present the frame by calling [**IDXGISwapChain::Present**](https://msdn.microsoft.com/library/windows/desktop/bb174576) (or [**Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797), and so on).</span></span> <span data-ttu-id="d74c7-124">Prüfen Sie anschließend, ob [**DXGI\_ERROR\_DEVICE\_REMOVED**](https://msdn.microsoft.com/library/windows/desktop/bb509553) or **DXGI\_ERROR\_DEVICE\_RESET** zurückgegeben wurde.</span><span class="sxs-lookup"><span data-stu-id="d74c7-124">Then, check whether it returned [**DXGI\_ERROR\_DEVICE\_REMOVED**](https://msdn.microsoft.com/library/windows/desktop/bb509553) or **DXGI\_ERROR\_DEVICE\_RESET**.</span></span>
 
-Fügen Sie eine Überprüfung auf den Fehler „Gerät entfernt“ in die Renderschleife ein. Stellen Sie den Frame dar, indem Sie [**IDXGISwapChain::Present**](https://msdn.microsoft.com/library/windows/desktop/bb174576) (bzw. [**Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797) usw.) aufrufen. Prüfen Sie anschließend, ob [**DXGI\_ERROR\_DEVICE\_REMOVED**](https://msdn.microsoft.com/library/windows/desktop/bb509553) or **DXGI\_ERROR\_DEVICE\_RESET** zurückgegeben wurde.
-
-Zuerst wird in der Vorlage der HRESULT-Wert gespeichert, der von der DXGI-Swapchain zurückgegeben wird:
+<span data-ttu-id="d74c7-125">Zuerst wird in der Vorlage der HRESULT-Wert gespeichert, der von der DXGI-Swapchain zurückgegeben wird:</span><span class="sxs-lookup"><span data-stu-id="d74c7-125">First, the template stores the HRESULT returned by the DXGI swap chain:</span></span>
 
 ```cpp
 HRESULT hr = m_swapChain->Present(1, 0);
 ```
 
-Nachdem Sie alle anderen Schritte zum Darstellen des Frames ausgeführt haben, führt die Vorlage eine Überprüfung auf den Fehler aufgrund eines entfernten Geräts durch. Bei Bedarf wird eine Methode zum Behandeln der Bedingung „Gerät entfernt“ aufgerufen:
+<span data-ttu-id="d74c7-126">Nachdem Sie alle anderen Schritte zum Darstellen des Frames ausgeführt haben, führt die Vorlage eine Überprüfung auf den Fehler aufgrund eines entfernten Geräts durch.</span><span class="sxs-lookup"><span data-stu-id="d74c7-126">After taking care of all other work for presenting the frame, the template checks for the device removed error.</span></span> <span data-ttu-id="d74c7-127">Bei Bedarf wird eine Methode zum Behandeln der Bedingung „Gerät entfernt“ aufgerufen:</span><span class="sxs-lookup"><span data-stu-id="d74c7-127">If necessary, it calls a method to handle the device removed condition:</span></span>
 
 ```cpp
 // If the device was removed either by a disconnection or a driver upgrade, we
@@ -59,15 +58,15 @@ else
 }
 ```
 
-### <a name="step-2"></a>Schritt 2:
+### <a name="step-2"></a><span data-ttu-id="d74c7-128">Schritt2:</span><span class="sxs-lookup"><span data-stu-id="d74c7-128">Step 2:</span></span>
 
-Fügen Sie auch eine Überprüfung auf den Fehler „Gerät entfernt“ ein, wenn Sie auf Änderungen der Fenstergröße reagieren. Dies ist aus mehreren Gründen ein guter Zeitpunkt zum Prüfen auf [**DXGI\_ERROR\_DEVICE\_REMOVED**](https://msdn.microsoft.com/library/windows/desktop/bb509553) oder **DXGI\_ERROR\_DEVICE\_RESET**:
+<span data-ttu-id="d74c7-129">Fügen Sie auch eine Überprüfung auf den Fehler „Gerät entfernt“ ein, wenn Sie auf Änderungen der Fenstergröße reagieren.</span><span class="sxs-lookup"><span data-stu-id="d74c7-129">Also, include a check for the device removed error when responding to window size changes.</span></span> <span data-ttu-id="d74c7-130">Dies ist aus mehreren Gründen ein guter Zeitpunkt zum Prüfen auf [**DXGI\_ERROR\_DEVICE\_REMOVED**](https://msdn.microsoft.com/library/windows/desktop/bb509553) oder **DXGI\_ERROR\_DEVICE\_RESET**:</span><span class="sxs-lookup"><span data-stu-id="d74c7-130">This is a good place to check for [**DXGI\_ERROR\_DEVICE\_REMOVED**](https://msdn.microsoft.com/library/windows/desktop/bb509553) or **DXGI\_ERROR\_DEVICE\_RESET** for several reasons:</span></span>
 
--   Das Ändern der Größe der Swapchain erfordert das Aufrufen des zugrunde liegenden DXGI-Adapters, von dem der Fehler „Gerät entfernt“ zurückgegeben werden kann.
--   Möglicherweise wurde die App auf einen Monitor verschoben, der an ein anderes Grafikgerät angeschlossen ist.
--   Wenn ein Grafikgerät entfernt oder zurückgesetzt wird, ändert sich häufig die Desktopauflösung. Dies führt zu einer Änderung der Fenstergröße.
+-   <span data-ttu-id="d74c7-131">Das Ändern der Größe der Swapchain erfordert das Aufrufen des zugrunde liegenden DXGI-Adapters, von dem der Fehler „Gerät entfernt“ zurückgegeben werden kann.</span><span class="sxs-lookup"><span data-stu-id="d74c7-131">Resizing the swap chain requires a call to the underlying DXGI adapter, which can return the device removed error.</span></span>
+-   <span data-ttu-id="d74c7-132">Möglicherweise wurde die App auf einen Monitor verschoben, der an ein anderes Grafikgerät angeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="d74c7-132">The app might have moved to a monitor that's attached to a different graphics device.</span></span>
+-   <span data-ttu-id="d74c7-133">Wenn ein Grafikgerät entfernt oder zurückgesetzt wird, ändert sich häufig die Desktopauflösung. Dies führt zu einer Änderung der Fenstergröße.</span><span class="sxs-lookup"><span data-stu-id="d74c7-133">When a graphics device is removed or reset, the desktop resolution often changes, resulting in a window size change.</span></span>
 
-Die Vorlage überprüft den HRESULT-Wert, der von [**ResizeBuffers**](https://msdn.microsoft.com/library/windows/desktop/bb174577) zurückgegeben wird:
+<span data-ttu-id="d74c7-134">Die Vorlage überprüft den HRESULT-Wert, der von [**ResizeBuffers**](https://msdn.microsoft.com/library/windows/desktop/bb174577) zurückgegeben wird:</span><span class="sxs-lookup"><span data-stu-id="d74c7-134">The template checks the HRESULT returned by [**ResizeBuffers**](https://msdn.microsoft.com/library/windows/desktop/bb174577):</span></span>
 
 ```cpp
 // If the swap chain already exists, resize it.
@@ -94,11 +93,11 @@ else
 }
 ```
 
-### <a name="step-3"></a>Schritt 3:
+### <a name="step-3"></a><span data-ttu-id="d74c7-135">Schritt3:</span><span class="sxs-lookup"><span data-stu-id="d74c7-135">Step 3:</span></span>
 
-Wenn die App den Fehler [**DXGI\_ERROR\_DEVICE\_REMOVED**](https://msdn.microsoft.com/library/windows/desktop/bb509553) empfängt, muss sie das Direct3D-Gerät neu initialisieren und alle geräteabhängigen Ressourcen neu erstellen. Geben Sie alle Verweise auf Ressourcen des Grafikgeräts frei, die mit dem vorherigen Direct3D-Gerät erstellt wurden. Diese Ressourcen sind jetzt ungültig, und alle Verweise auf die Swapchain müssen freigegeben werden, bevor eine neue erstellt werden kann.
+<span data-ttu-id="d74c7-136">Wenn die App den Fehler [**DXGI\_ERROR\_DEVICE\_REMOVED**](https://msdn.microsoft.com/library/windows/desktop/bb509553) empfängt, muss sie das Direct3D-Gerät neu initialisieren und alle geräteabhängigen Ressourcen neu erstellen.</span><span class="sxs-lookup"><span data-stu-id="d74c7-136">Any time your app receives the [**DXGI\_ERROR\_DEVICE\_REMOVED**](https://msdn.microsoft.com/library/windows/desktop/bb509553) error, it must reinitialize the Direct3D device and recreate any device-dependent resources.</span></span> <span data-ttu-id="d74c7-137">Geben Sie alle Verweise auf Ressourcen des Grafikgeräts frei, die mit dem vorherigen Direct3D-Gerät erstellt wurden. Diese Ressourcen sind jetzt ungültig, und alle Verweise auf die Swapchain müssen freigegeben werden, bevor eine neue erstellt werden kann.</span><span class="sxs-lookup"><span data-stu-id="d74c7-137">Release any references to graphics device resources created with the previous Direct3D device; those resources are now invalid, and all references to the swap chain must be released before a new one can be created.</span></span>
 
-Die HandleDeviceLost-Methode gibt die Swapchain frei und weist die App-Komponenten an, die Geräteressourcen freizugeben:
+<span data-ttu-id="d74c7-138">Die HandleDeviceLost-Methode gibt die Swapchain frei und weist die App-Komponenten an, die Geräteressourcen freizugeben:</span><span class="sxs-lookup"><span data-stu-id="d74c7-138">The HandleDeviceLost method releases the swap chain and notifies app components to release device resources:</span></span>
 
 ```cpp
 m_swapChain = nullptr;
@@ -111,7 +110,7 @@ if (m_deviceNotify != nullptr)
 }
 ```
 
-Anschließend erstellt sie eine neue Swapchain und initialisiert die geräteabhängigen Ressourcen neu, die von der Geräteverwaltungsklasse gesteuert werden:
+<span data-ttu-id="d74c7-139">Anschließend erstellt sie eine neue Swapchain und initialisiert die geräteabhängigen Ressourcen neu, die von der Geräteverwaltungsklasse gesteuert werden:</span><span class="sxs-lookup"><span data-stu-id="d74c7-139">Then, it creates a new swap chain and reinitializes the device-dependent resources controlled by the device management class:</span></span>
 
 ```cpp
 // Create the new device and swap chain.
@@ -120,7 +119,7 @@ m_d2dContext->SetDpi(m_dpi, m_dpi);
 CreateWindowSizeDependentResources();
 ```
 
-Nachdem das Gerät und die Swapchain neu eingerichtet wurden, werden die App-Komponenten angewiesen, geräteabhängige Ressourcen neu zu initialisieren:
+<span data-ttu-id="d74c7-140">Nachdem das Gerät und die Swapchain neu eingerichtet wurden, werden die App-Komponenten angewiesen, geräteabhängige Ressourcen neu zu initialisieren:</span><span class="sxs-lookup"><span data-stu-id="d74c7-140">After the device and swap chain have been re-established, it notifies app components to reinitialize device-dependent resources:</span></span>
 
 ```cpp
 // Create the new device and swap chain.
@@ -135,23 +134,23 @@ if (m_deviceNotify != nullptr)
 }
 ```
 
-Wenn die HandleDeviceLost-Methode beendet wird, geht die Steuerung wieder auf die Renderschleife über, die dann mit dem Zeichnen des nächsten Frames fortfährt.
+<span data-ttu-id="d74c7-141">Wenn die HandleDeviceLost-Methode beendet wird, geht die Steuerung wieder auf die Renderschleife über, die dann mit dem Zeichnen des nächsten Frames fortfährt.</span><span class="sxs-lookup"><span data-stu-id="d74c7-141">When the HandleDeviceLost method exits, control returns to the rendering loop, which continues on to draw the next frame.</span></span>
 
-## <a name="remarks"></a>Anmerkungen
+## <a name="remarks"></a><span data-ttu-id="d74c7-142">Anmerkungen</span><span class="sxs-lookup"><span data-stu-id="d74c7-142">Remarks</span></span>
 
 
-### <a name="investigating-the-cause-of-device-removed-errors"></a>Untersuchen der Ursache für Fehler vom Typ „Gerät entfernt“
+### <a name="investigating-the-cause-of-device-removed-errors"></a><span data-ttu-id="d74c7-143">Untersuchen der Ursache für Fehler vom Typ „Gerät entfernt“</span><span class="sxs-lookup"><span data-stu-id="d74c7-143">Investigating the cause of device removed errors</span></span>
 
-Wiederkehrende Probleme mit dem DXGI-Fehler „Gerät entfernt“ können darauf hinweisen, dass von Ihrem Grafikcode während einer Zeichenroutine ungültige Bedingungen erstellt werden. Außerdem können sie auf einen Hardwarefehler oder einen Fehler in der Grafikkarte hinweisen. Rufen Sie zum Untersuchen der Fehler vom Typ „Gerät entfernt“ [**ID3D11Device::GetDeviceRemovedReason**](https://msdn.microsoft.com/library/windows/desktop/ff476526) auf, bevor Sie das Direct3D-Gerät freigeben. Diese Methode gibt einen von sechs möglichen DXGI-Fehlercodes zurück, um die Ursache des Fehlers „Gerät entfernt“ anzugeben:
+<span data-ttu-id="d74c7-144">Wiederkehrende Probleme mit dem DXGI-Fehler „Gerät entfernt“ können darauf hinweisen, dass von Ihrem Grafikcode während einer Zeichenroutine ungültige Bedingungen erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="d74c7-144">Repeat issues with DXGI device removed errors can indicate that your graphics code is creating invalid conditions during a drawing routine.</span></span> <span data-ttu-id="d74c7-145">Außerdem können sie auf einen Hardwarefehler oder einen Fehler in der Grafikkarte hinweisen.</span><span class="sxs-lookup"><span data-stu-id="d74c7-145">It can also indicate a hardware failure or a bug in the graphics driver.</span></span> <span data-ttu-id="d74c7-146">Rufen Sie zum Untersuchen der Fehler vom Typ „Gerät entfernt“ [**ID3D11Device::GetDeviceRemovedReason**](https://msdn.microsoft.com/library/windows/desktop/ff476526) auf, bevor Sie das Direct3D-Gerät freigeben.</span><span class="sxs-lookup"><span data-stu-id="d74c7-146">To investigate the cause of device removed errors, call [**ID3D11Device::GetDeviceRemovedReason**](https://msdn.microsoft.com/library/windows/desktop/ff476526) before releasing the Direct3D device.</span></span> <span data-ttu-id="d74c7-147">Diese Methode gibt einen von sechs möglichen DXGI-Fehlercodes zurück, um die Ursache des Fehlers „Gerät entfernt“ anzugeben:</span><span class="sxs-lookup"><span data-stu-id="d74c7-147">This method returns one of six possible DXGI error codes indicating the reason for the device removed error:</span></span>
 
--   **DXGI\_ERROR\_DEVICE\_HUNG**: Der Grafiktreiber reagiert nicht mehr aufgrund einer ungültigen Kombination von Grafikbefehlen, die von der App gesendet wurden. Wenn Sie diesen Fehler häufiger erhalten, ist dies ein Hinweis darauf, dass Ihre App zum Hängen des Geräts geführt hat und ein Debugvorgang durchgeführt werden muss.
--   **DXGI\_ERROR\_DEVICE\_REMOVED**: Das Grafikgerät wurde physisch entfernt oder ausgeschaltet, oder es wurde ein Treiberupgrade durchgeführt. Dies geschieht von Zeit zu Zeit und ist normal. Die App bzw. das Spiel sollte die Geräteressourcen wie in diesem Thema beschrieben neu erstellen.
--   **DXGI\_ERROR\_DEVICE\_RESET**: Für das Grafikgerät ist aufgrund eines falsch formatierten Befehls ein Fehler aufgetreten. Wenn Sie diesen Fehler häufig erhalten, kann dies bedeuten, dass vom Code ungültige Zeichenbefehle gesendet werden.
--   **DXGI\_ERROR\_DRIVER\_INTERNAL\_ERROR**: Der Grafiktreiber hat einen Fehler erkannt und das Gerät zurückgesetzt.
--   **DXGI\_ERROR\_INVALID\_CALL**: Die Anwendung hat ungültige Parameterdaten bereitgestellt. Auch wenn Sie diesen Fehler nur einmal erhalten, bedeutet dies, dass Ihr Code die Bedingung „Gerät entfernt“ verursacht hat und ein Debugvorgang durchgeführt werden muss.
--   **S\_OK**: Wird zurückgegeben, wenn ein Grafikgerät aktiviert, deaktiviert oder zurückgesetzt wird, ohne das aktuelle Grafikgerät ungültig zu machen. Dieser Fehler kann beispielsweise zurückgegeben werden, wenn eine App die [Windows Advanced Rasterization Platform (WARP)](https://msdn.microsoft.com/library/windows/desktop/gg615082) verwendet und ein Hardwareadapter verfügbar wird.
+-   <span data-ttu-id="d74c7-148">**DXGI\_ERROR\_DEVICE\_HUNG**: Der Grafiktreiber reagiert nicht mehr aufgrund einer ungültigen Kombination von Grafikbefehlen, die von der App gesendet wurden.</span><span class="sxs-lookup"><span data-stu-id="d74c7-148">**DXGI\_ERROR\_DEVICE\_HUNG**: The graphics driver stopped responding because of an invalid combination of graphics commands sent by the app.</span></span> <span data-ttu-id="d74c7-149">Wenn Sie diesen Fehler häufiger erhalten, ist dies ein Hinweis darauf, dass Ihre App zum Hängen des Geräts geführt hat und ein Debugvorgang durchgeführt werden muss.</span><span class="sxs-lookup"><span data-stu-id="d74c7-149">If you get this error repeatedly, it is a likely indication that your app caused the device to hang and needs to be debugged.</span></span>
+-   <span data-ttu-id="d74c7-150">**DXGI\_ERROR\_DEVICE\_REMOVED**: Das Grafikgerät wurde physisch entfernt oder ausgeschaltet, oder es wurde ein Treiberupgrade durchgeführt.</span><span class="sxs-lookup"><span data-stu-id="d74c7-150">**DXGI\_ERROR\_DEVICE\_REMOVED**: The graphics device has been physically removed, turned off, or a driver upgrade has occurred.</span></span> <span data-ttu-id="d74c7-151">Dies geschieht von Zeit zu Zeit und ist normal. Die App bzw. das Spiel sollte die Geräteressourcen wie in diesem Thema beschrieben neu erstellen.</span><span class="sxs-lookup"><span data-stu-id="d74c7-151">This happens occasionally and is normal; your app or game should recreate device resources as described in this topic.</span></span>
+-   <span data-ttu-id="d74c7-152">**DXGI\_ERROR\_DEVICE\_RESET**: Für das Grafikgerät ist aufgrund eines falsch formatierten Befehls ein Fehler aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="d74c7-152">**DXGI\_ERROR\_DEVICE\_RESET**: The graphics device failed because of a badly formed command.</span></span> <span data-ttu-id="d74c7-153">Wenn Sie diesen Fehler häufig erhalten, kann dies bedeuten, dass vom Code ungültige Zeichenbefehle gesendet werden.</span><span class="sxs-lookup"><span data-stu-id="d74c7-153">If you get this error repeatedly, it may mean that your code is sending invalid drawing commands.</span></span>
+-   <span data-ttu-id="d74c7-154">**DXGI\_ERROR\_DRIVER\_INTERNAL\_ERROR**: Der Grafiktreiber hat einen Fehler erkannt und das Gerät zurückgesetzt.</span><span class="sxs-lookup"><span data-stu-id="d74c7-154">**DXGI\_ERROR\_DRIVER\_INTERNAL\_ERROR**: The graphics driver encountered an error and reset the device.</span></span>
+-   <span data-ttu-id="d74c7-155">**DXGI\_ERROR\_INVALID\_CALL**: Die Anwendung hat ungültige Parameterdaten bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="d74c7-155">**DXGI\_ERROR\_INVALID\_CALL**: The application provided invalid parameter data.</span></span> <span data-ttu-id="d74c7-156">Auch wenn Sie diesen Fehler nur einmal erhalten, bedeutet dies, dass Ihr Code die Bedingung „Gerät entfernt“ verursacht hat und ein Debugvorgang durchgeführt werden muss.</span><span class="sxs-lookup"><span data-stu-id="d74c7-156">If you get this error even once, it means that your code caused the device removed condition and must be debugged.</span></span>
+-   <span data-ttu-id="d74c7-157">**S\_OK**: Wird zurückgegeben, wenn ein Grafikgerät aktiviert, deaktiviert oder zurückgesetzt wird, ohne das aktuelle Grafikgerät ungültig zu machen.</span><span class="sxs-lookup"><span data-stu-id="d74c7-157">**S\_OK**: Returned when a graphics device was enabled, disabled, or reset without invalidating the current graphics device.</span></span> <span data-ttu-id="d74c7-158">Dieser Fehler kann beispielsweise zurückgegeben werden, wenn eine App die [Windows Advanced Rasterization Platform (WARP)](https://msdn.microsoft.com/library/windows/desktop/gg615082) verwendet und ein Hardwareadapter verfügbar wird.</span><span class="sxs-lookup"><span data-stu-id="d74c7-158">For example, this error code can be returned if an app is using [Windows Advanced Rasterization Platform (WARP)](https://msdn.microsoft.com/library/windows/desktop/gg615082) and a hardware adapter becomes available.</span></span>
 
-Mit dem folgenden Code wird der Fehlercode [**DXGI\_ERROR\_DEVICE\_REMOVED**](https://msdn.microsoft.com/library/windows/desktop/bb509553) abgerufen und in der Debugkonsole ausgegeben. Fügen Sie diesen Code am Anfang der HandleDeviceLost-Methode hinzu:
+<span data-ttu-id="d74c7-159">Mit dem folgenden Code wird der Fehlercode [**DXGI\_ERROR\_DEVICE\_REMOVED**](https://msdn.microsoft.com/library/windows/desktop/bb509553) abgerufen und in der Debugkonsole ausgegeben.</span><span class="sxs-lookup"><span data-stu-id="d74c7-159">The following code will retrieve the [**DXGI\_ERROR\_DEVICE\_REMOVED**](https://msdn.microsoft.com/library/windows/desktop/bb509553) error code and print it to the debug console.</span></span> <span data-ttu-id="d74c7-160">Fügen Sie diesen Code am Anfang der HandleDeviceLost-Methode hinzu:</span><span class="sxs-lookup"><span data-stu-id="d74c7-160">Insert this code at the beginning of the HandleDeviceLost method:</span></span>
 
 ```cpp
     HRESULT reason = m_d3dDevice->GetDeviceRemovedReason();
@@ -164,21 +163,10 @@ Mit dem folgenden Code wird der Fehlercode [**DXGI\_ERROR\_DEVICE\_REMOVED**](ht
 #endif
 ```
 
-Ausführlichere Informationen finden Sie unter [**GetDeviceRemovedReason**](https://msdn.microsoft.com/library/windows/desktop/ff476526) und [**DXGI\_ERROR**](https://msdn.microsoft.com/library/windows/desktop/bb509553).
+<span data-ttu-id="d74c7-161">Ausführlichere Informationen finden Sie unter [**GetDeviceRemovedReason**](https://msdn.microsoft.com/library/windows/desktop/ff476526) und [**DXGI\_ERROR**](https://msdn.microsoft.com/library/windows/desktop/bb509553).</span><span class="sxs-lookup"><span data-stu-id="d74c7-161">For more details, see [**GetDeviceRemovedReason**](https://msdn.microsoft.com/library/windows/desktop/ff476526) and [**DXGI\_ERROR**](https://msdn.microsoft.com/library/windows/desktop/bb509553).</span></span>
 
-### <a name="testing-device-removed-handling"></a>Testgerät hat Behandlung entfernt
+### <a name="testing-device-removed-handling"></a><span data-ttu-id="d74c7-162">Testgerät hat Behandlung entfernt</span><span class="sxs-lookup"><span data-stu-id="d74c7-162">Testing Device Removed Handling</span></span>
 
-Die Developer-Eingabeaufforderung für Visual Studio unterstützt das Befehlszeilenprogramm „dxcap“ für die Direct3D-Ereigniserfassung und -Wiedergabe im Zusammenhang mit der Visual Studio-Grafikdiagnose. Sie können die Befehlszeilenoption „-forcetdr“ verwenden, während Ihre App ausgeführt wird, die ein GPU-Timeout-Erkennungs- und Wiederherstellungsereignis erzwingt, wodurch DXGI\_ERROR\_DEVICE\_REMOVED ausgelöst wird und Sie Ihren Code zur Fehlerbehandlung testen können.
+<span data-ttu-id="d74c7-163">Die Developer-Eingabeaufforderung für Visual Studio unterstützt das Befehlszeilenprogramm „dxcap“ für die Direct3D-Ereigniserfassung und -Wiedergabe im Zusammenhang mit der Visual Studio-Grafikdiagnose.</span><span class="sxs-lookup"><span data-stu-id="d74c7-163">Visual Studio's Developer Command Prompt supports a command line tool 'dxcap' for Direct3D event capture and playback related to the Visual Studio Graphics Diagnostics.</span></span> <span data-ttu-id="d74c7-164">Sie können die Befehlszeilenoption „-forcetdr“ verwenden, während Ihre App ausgeführt wird, die ein GPU-Timeout-Erkennungs- und Wiederherstellungsereignis erzwingt, wodurch DXGI\_ERROR\_DEVICE\_REMOVED ausgelöst wird und Sie Ihren Code zur Fehlerbehandlung testen können.</span><span class="sxs-lookup"><span data-stu-id="d74c7-164">You can use the command line option "-forcetdr" while your app is running which will force a GPU Timeout Detection and Recovery event, thereby triggering DXGI\_ERROR\_DEVICE\_REMOVED and allowing you to test your error handling code.</span></span>
 
-> **Hinweis**  DXCap und die Unterstützungs-DLLs werden unter „system32/syswow64“ als Teil der Grafiktools für Windows 10 installiert, die nicht mehr über das Windows SDK verteilt werden. Stattdessen werden sie über das bei Bedarf verfügbare Feature „Grafiktools“ bereitgestellt. Dies ist eine optionale Betriebssystemkomponente, die installiert sein muss, um die Grafiktools unter Windows 10 zu aktivieren und zu verwenden. Weitere Informationen zum Installieren der Grafiktools für Windows 10 finden Sie hier: <https://msdn.microsoft.com/library/mt125501.aspx#InstallGraphicsTools>
-
- 
-
- 
-
- 
-
-
-
-
-
+> <span data-ttu-id="d74c7-165">**Hinweis** DXCap und die Unterstützungs-DLLs werden unter „system32/syswow64“ als Teil der Grafiktools für Windows 10 installiert, die nicht mehr über das Windows SDK verteilt werden.</span><span class="sxs-lookup"><span data-stu-id="d74c7-165">**Note** DXCap and its support DLLs are installed into system32/syswow64 as part of the Graphics Tools for Windows 10 which are no longer distributed via the Windows SDK.</span></span> <span data-ttu-id="d74c7-166">Stattdessen werden sie über das bei Bedarf verfügbare Feature „Grafiktools“ bereitgestellt. Dies ist eine optionale Betriebssystemkomponente, die installiert sein muss, um die Grafiktools unter Windows 10 zu aktivieren und zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="d74c7-166">Instead they are provided via the Graphics Tools Feature on Demand that is an optional OS component and must be installed in order to enable and use the Graphics Tools on Windows 10.</span></span> <span data-ttu-id="d74c7-167">Weitere Informationen zum Installieren der Grafiktools für Windows 10 finden Sie hier: <https://msdn.microsoft.com/library/mt125501.aspx#InstallGraphicsTools></span><span class="sxs-lookup"><span data-stu-id="d74c7-167">More information on how to Install the Graphics Tools for Windows 10 can be found here: <https://msdn.microsoft.com/library/mt125501.aspx#InstallGraphicsTools></span></span>

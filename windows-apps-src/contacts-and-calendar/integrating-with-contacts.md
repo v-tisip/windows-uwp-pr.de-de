@@ -1,6 +1,6 @@
 ---
 author: normesta
-description: "Veranschaulicht das Hinzufügen Ihrer App neben Aktionen in einer Visitenkarte"
+description: Veranschaulicht das Hinzufügen Ihrer App neben Aktionen in einer Visitenkarte
 MSHAttr: PreferredLib:/library/windows/apps
 title: Verbinden der App mit Aktionen auf einer Visitenkarte
 ms.author: normesta
@@ -12,8 +12,9 @@ keywords: Windows 10, UWP, Kontakte, Visitenkarte, Anmerkung
 ms.assetid: 0edabd9c-ecfb-4525-bc38-53f219d744ff
 ms.openlocfilehash: e882566fcc81941669dd4844235bcbd899ea3079
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
+ms.locfileid: "233740"
 ---
 # <a name="connect-your-app-to-actions-on-a-contact-card"></a><span data-ttu-id="fce47-104">Verbinden der App mit Aktionen auf einer Visitenkarte</span><span class="sxs-lookup"><span data-stu-id="fce47-104">Connect your app to actions on a contact card</span></span>
 
